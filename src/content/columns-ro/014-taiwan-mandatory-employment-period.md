@@ -15,7 +15,7 @@ faq:
   - q: "Dacă se demisionează anticipat, trebuie restituită în întregime prima de semnare (簽約金) sau prima de menținere în post (留任獎金)?"
     a: "Nu se restituie întotdeauna suma integrală. Dacă prima de semnare, prima de menținere în post sau o altă prestație anticipată (預付性給付) a fost virată ca contraprestație rezonabilă a clauzei de durată minimă a muncii, finalitatea sa trebuie comunicată clar lucrătorului. Orientarea Ministerului Muncii din Taiwan din 5 iunie 2026 explică că, la o demisie înainte de scadența perioadei, suma de restituit trebuie calculată în proporție cu perioada încă neîndeplinită și că nu trebuie cerută restituirea integrală. Concluzia reală trebuie să examineze împreună finalitatea viramentului, conținutul clauzei, perioada deja lucrată și cauza stingerii."
   - q: "Dacă contractul se stinge anticipat pentru o cauză neimputabilă lucrătorului, trebuie restituite cheltuielile de formare?"
-    a: "Art. 15-1 alineatul 4 din legea taiwaneză a standardelor muncii dispune că, dacă contractul de muncă se stinge înainte de sfârșitul perioadei minime de muncă pentru o cauză neimputabilă lucrătorului, lucrătorul nu asumă răspundere pentru încălcarea clauzei de durată minimă a muncii nici pentru restituirea cheltuielilor de formare. Totuși, cauza stingerii și imputarea răspunderii trebuie apreciate pornind de la probe concrete, precum notificarea concedierii, manifestarea de demisie și documentele de încălcare a condițiilor de muncă."
+    a: "Art. 15-1 alineatul 4 din legea taiwaneză a standardelor muncii dispune că, dacă contractul de muncă se stinge înainte de sfârșitul perioadei minime de muncă pentru o cauză neimputabilă lucrătorului, lucrătorul nu asumă răspundere pentru încălcarea clauzei de durată minimă a muncii nici pentru restituirea cheltuielilor de formare. Totuși, cauza stingerii și imputarea răspunderii trebuie apreciate pornind de la probe concrete, precum notificarea concedierii, notificarea de demisie și documentele de încălcare a condițiilor de muncă."
 ---
 
 # Clauza de durată minimă a muncii în Taiwan: criterii de valabilitate, cheltuieli de formare și clauză penală
@@ -31,9 +31,9 @@ La examinare, este important să nu se amestece următoarele 4 întrebări.
 3. Cui i se impută cauza stingerii contractului de muncă
 4. Cum se apreciază preavizul de demisie și întinderea restituirii
 
-Chiar dacă aceste 4 întrebări figurează împreună în același contract, dispoziția aplicabilă și proba necesară sunt distincte. Trebuie deci examinate separat dacă clauza este valabilă, când își produce efectele manifestarea de demisie, dacă există răspundere de a restitui prestația anticipată (預付性給付) sau cheltuielile de formare, și dacă un prejudiciu separat s-a produs realmente.
+Chiar dacă aceste 4 întrebări figurează împreună în același contract, dispoziția aplicabilă și proba necesară sunt distincte. Trebuie deci examinate separat dacă clauza este valabilă, când își produce efectele notificarea de demisie, dacă există răspundere de a restitui prestația anticipată (預付性給付) sau cheltuielile de formare, și dacă un prejudiciu separat s-a produs realmente.
 
-## 1. Când își produce efectele clauza de durată minimă a muncii?
+## 1. Când poate fi valabilă clauza de durată minimă a muncii?
 
 Nu, clauza nu este valabilă în mod automat. Potrivit art. 15-1 din legea taiwaneză a standardelor muncii (勞動基準法), dacă angajatorul oferă o formare tehnică specializată (專業技術培訓) și îi suportă costul, sau furnizează o contraprestație rezonabilă (合理補償) în schimbul angajamentului lucrătorului de a rămâne pe durata minimă de muncă, clauza poate reuni condițiile legale. Nu este necesar să se reunească ambele condiții deodată, dar, chiar dacă există una, clauza nu trebuie să depășească întinderea rezonabilă în lumina ansamblului împrejurărilor, precum durata și costul formării, posibilitatea de a înlocui personalul (人力替補可能性) și suma și întinderea contraprestației.
 
@@ -43,7 +43,7 @@ Art. 15-1 cere una dintre cele două condiții legale și, în plus, o examinare
 
 După confirmarea condiției legale, potrivit alineatului 2 se examinează separat dacă perioada convenită și întinderea răspunderii sunt rezonabile. Clauza care încalcă condiția legală a alineatului 1 sau criteriul de rezonabilitate al alineatului 2 este nulă potrivit alineatului 3. Totuși, această normă este un criteriu pentru a examina conținutul și faptele fiecărei clauze, nu o normă care declară de la început valabile sau nule toate clauzele de durată minimă a muncii.
 
-Împrejurarea că lucrătorul a semnat contractul poate fi un document care confirmă existența acordului, dar nu înlocuiește condițiile legale. Dimpotrivă, mai degrabă decât a concluziona de la început numai pentru că această clauză este de lungă durată, trebuie verificat ce investiție sau ce contraprestație a existat și de ce s-a fixat această perioadă.
+Împrejurarea că lucrătorul a semnat contractul poate fi un document care confirmă existența acordului, dar nu înlocuiește condițiile legale. Nu trebuie trasă concluzia numai din durata perioadei convenite; trebuie verificat ce investiție sau ce contraprestație a existat și de ce s-a fixat această perioadă.
 
 ## 2. Prima condiție legală: formare tehnică specializată și suportarea costului
 
@@ -98,7 +98,7 @@ Cursurile pe care un angajat nou le primește de obicei, precum explicarea regul
 
 Totuși, nu se exclude întotdeauna o formare numai pentru că a fost asigurată în interiorul întreprinderii. Într-un același program se pot amesteca o parte de adaptare generală și o parte tehnică specializată, astfel că tema, timpul, costul și dacă există obligație legală trebuie confirmate pe curs. Cine invocă partea tehnică specializată are nevoie să explice prin documente ce conținut se distinge de formarea obișnuită și cine a suportat realmente costul.
 
-În practică, nu se privește numai acoperirea materialului de formare, ci se confruntă indexul detaliat cu registrul real al formării. Trebuie verificat dacă este vorba de un curs periodic care se repetă, de un curs pentru o calificare sau o competență de mânuire a unor echipamente concrete, de o formare legal obligatorie, dacă lucrătorul a participat realmente și dacă suma cerută coincide cu justificările cheltuielilor de formare.
+În practică, nu se privește numai acoperirea materialului de formare, ci se confruntă indexul detaliat cu registrul real al formării. Trebuie verificat dacă este vorba de un curs periodic care se repetă, de un curs pentru o calificare sau o competență de operare a unor echipamente concrete, de o formare legal obligatorie, dacă lucrătorul a participat realmente și dacă suma cerută coincide cu justificările cheltuielilor de formare.
 
 ## 6. Restituirea primelor și demisia anticipată
 
@@ -112,11 +112,11 @@ Chestiunea restituirii trebuie confirmată în ordine: valabilitatea clauzei, ca
 
 Clauza de restituire integrală, clauza penală fixă străină de pierderea reală și reținerea unilaterală a salariului nu se apreciază ca o singură problemă. Temeiul juridic, conținutul acordului, limitele din dreptul muncii și legalitatea reținerii trebuie confirmate separat. Suma scrisă în somația angajatorului sau faptul că lucrătorul a plătit o parte nu fixează nici ele restul chestiunilor juridice.
 
-Trebuie distinse și restituirea cheltuielilor de formare și restituirea prestației anticipate. Prima privește formarea tehnică specializată efectuată efectiv și pe suportarea costului; a doua privește finalitatea plății, comunicarea, condițiile de consolidare a dreptului și proporția cu perioada neîndeplinită. Dacă se cer ambele capete împreună, trebuie confruntat separat dacă costul a fost calculat de 2 ori și justificările fiecărui post.
+Trebuie distinse și restituirea cheltuielilor de formare și restituirea prestației anticipate. Prima privește formarea tehnică specializată efectuată efectiv și pe suportarea costului; a doua privește finalitatea plății, comunicarea, condițiile de consolidare a dreptului și proporția cu perioada neîndeplinită. Dacă se cer ambele capete împreună, trebuie confruntat separat dacă costul a fost calculat de 2 ori și justificările fiecărui capăt.
 
 ## 7. Când contractul se stinge pentru o cauză neimputabilă lucrătorului
 
-Art. 15-1 alineatul 4 din legea taiwaneză a standardelor muncii dispune că, dacă contractul de muncă se stinge înainte de sfârșitul perioadei minime de muncă pentru o cauză neimputabilă lucrătorului, lucrătorul nu asumă răspundere pentru încălcarea clauzei de durată minimă a muncii nici pentru restituirea cheltuielilor de formare. Totuși, cauza stingerii și imputarea răspunderii trebuie apreciate pornind de la probe concrete, precum notificarea concedierii, manifestarea de demisie și documentele de încălcare a condițiilor de muncă.
+Art. 15-1 alineatul 4 din legea taiwaneză a standardelor muncii dispune că, dacă contractul de muncă se stinge înainte de sfârșitul perioadei minime de muncă pentru o cauză neimputabilă lucrătorului, lucrătorul nu asumă răspundere pentru încălcarea clauzei de durată minimă a muncii nici pentru restituirea cheltuielilor de formare. Totuși, cauza stingerii și imputarea răspunderii trebuie apreciate pornind de la probe concrete, precum notificarea concedierii, notificarea de demisie și documentele de încălcare a condițiilor de muncă.
 
 Nu se poate deci recunoaște încălcarea lucrătorului prin simplul fapt că raportul de muncă a luat sfârșit înainte de perioada convenită. Trebuie verificat cine a formulat ce manifestare de voință, care este temeiul juridic al stingerii contractului și cărei părți i se impută împrejurările reale care au produs-o.
 
@@ -142,7 +142,7 @@ Dacă perioada unui contract de muncă pe durată determinată pentru o muncă s
 
 Dacă vechimea continuă este mai mică de 3 luni, dacă este vorba de un alt tip de contract pe durată determinată sau dacă se invocă o cauză legală de stingere imediată, dispoziția aplicabilă și faptele trebuie examinate individual. Simplul fapt că contractul consemnează un preaviz mai lung sau cere o transmitere imediată a postului nu permite să se fixeze dinainte concluzia juridică.
 
-În practică, trebuie conservate conținutul și data transmiterii manifestării de demisie, ziua în care angajatorul a primit-o realmente și comunicările părților asupra ultimei zile de muncă. Dacă se separă momentul în care demisia își produce efectele, valabilitatea clauzei de durată minimă a muncii, restituirea cheltuielilor de formare sau a prestației anticipate și prejudiciul care se invocă separat, se reduce eroarea de a trage toate concluziile dintr-o singură clauză a contractului.
+În practică, trebuie conservate conținutul și data transmiterii notificării de demisie, ziua în care angajatorul a primit-o realmente și comunicările părților asupra ultimei zile de muncă. Dacă se separă momentul în care demisia își produce efectele, valabilitatea clauzei de durată minimă a muncii, restituirea cheltuielilor de formare sau a prestației anticipate și prejudiciul care se invocă separat, se reduce eroarea de a trage toate concluziile dintr-o singură clauză a contractului.
 
 ## 9. Listă de verificare pentru angajator și lucrător
 
@@ -169,16 +169,16 @@ Chiar dacă se folosește un contract-tip, nu trebuie aplicate mecanic aceeași 
 4. Se înregistrează separat temeiul de calcul al perioadei convenite, perioada deja lucrată, perioada rămasă și posibilitatea de a înlocui personal invocată de angajator.
 5. Se conservă notificarea de demisie, cea de concediere sau documentul de stingere de comun acord și proba de predare, precum poșta electronică și mesageria.
 6. Se ordonează în ordine temporală cauza reală de stingere și cursul, și se confirmă împreună somația de restituire a angajatorului, fișa de plată, comunicările părților și registrul de rețineri.
-7. Se examinează separat valabilitatea clauzei de durată minimă a muncii, manifestarea de demisie și preavizul, restituirea cheltuielilor de formare și a prestației anticipate, și prejudiciul care se invocă separat.
+7. Se examinează separat valabilitatea clauzei de durată minimă a muncii, notificarea de demisie și preavizul, restituirea cheltuielilor de formare și a prestației anticipate, și prejudiciul care se invocă separat.
 8. Nu se recunoaște răspunderea numai pentru că s-a semnat sau pentru că angajatorul cere o sumă determinată; se confirmă probele care corespund condițiilor legale, rezonabilității, imputării stingerii și formulei proporționale a art. 15-1.
 
 Ordonând documentele în ordine temporală, este potrivit să se indice împreună data încheierii contractului, datele de început și de sfârșit ale formării, fiecare dată de virament, datele de început și de sfârșit ale muncii și data transmiterii notificării. Dacă o parte a documentelor este deținută numai de angajator, se ordonează mai întâi documentele proprii și temeiul de calcul al sumei cerute, iar documentele suplimentare se confirmă potrivit procedurii necesare.
 
 ## 10. Surse oficiale
 
-- [Baza de date a reglementării naționale din Taiwan: art. 15-1 din Legea standardelor muncii](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
-- [Baza de date a reglementării naționale din Taiwan: art. 15 din Legea standardelor muncii](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
-- [Baza de date a reglementării naționale din Taiwan: art. 16 din Legea standardelor muncii](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
+- [Baza de date a legislației naționale din Taiwan: art. 15-1 din Legea standardelor muncii](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
+- [Baza de date a legislației naționale din Taiwan: art. 15 din Legea standardelor muncii](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
+- [Baza de date a legislației naționale din Taiwan: art. 16 din Legea standardelor muncii](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
 - [Ministerul Muncii din Taiwan: orientare din 5 iunie 2026 asupra perioadei minime de muncă și a restituirii clauzei penale](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)
 
 ## 11. Orientare legată

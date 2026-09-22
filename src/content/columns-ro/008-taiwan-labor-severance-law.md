@@ -96,7 +96,7 @@ să cheme pe rând la discuții salariații vechi și bine plătiți.
 
 La acea vreme, partea mea, domnul B, era angajat de mai bine de 10 ani la societatea A
 
-și comercialul cu cel mai bun rezultat din centrul Taiwanului.
+și era comercialul cu cele mai bune rezultate din centrul Taiwanului.
 
 Pentru că salariul și primele erau foarte ridicate,
 
@@ -164,7 +164,7 @@ că societatea voia să facă să plece salariații în mod nepotrivit,
 
 și observase aceasta de timpuriu
 
-și, pentru că descoperise deja oferte de muncă înainte de plecarea salariaților,
+și descoperise că societatea publica anunțuri de angajare încă înainte ca salariații să plece.
 
 În ziua în care s-a prezentat la interviu, B a înregistrat desfășurarea.
 

@@ -37,7 +37,7 @@ Există totuși **cazuri excepționale**.
 
 2. Când angajatorul, un membru al familiei angajatorului sau un reprezentant al angajatorului (代理人) exercită violență sau aduce o insultă gravă (重大侮辱) salariatului
 
-3. Când munca convenită în contract poate dăuna sănătății salariatului, s-a cerut angajatorului să o îmbunătățească și nu există efect
+3. Când munca convenită în contract poate dăuna sănătății salariatului, salariatul a cerut angajatorului să înlăture pericolul, iar angajatorul nu a făcut-o
 
 4. Când angajatorul, reprezentantul său sau un alt salariat este atins de o boală contagioasă legală (法定傳染病), există riscul de contagiere pentru salariații care lucrează împreună și aceasta constituie un pericol grav pentru sănătatea salariatului
 
@@ -65,7 +65,7 @@ dacă salariatul dorește să pună capăt contractului de muncă în temeiul pu
 
 trebuie să pună capăt contractului de muncă într-un termen de **30 de zile** de la ziua în care a cunoscut această situație,
 
-sau, pentru punctul 6, într-un termen de **30 de zile** de la ziua în care a cunoscut rezultatul prejudiciului.
+sau, pentru punctul 6, într-un termen de **30 de zile** de la ziua în care a cunoscut prejudiciul produs.
 
 Salariatul trebuie deci să stăpânească bine termenul.
 
@@ -73,11 +73,11 @@ Salariatul trebuie deci să stăpânească bine termenul.
 
 Cu alte cuvinte,
 
-dreptul taiwanez, fie că vina este de partea întreprinderii,
+dreptul taiwanez deosebește efectul după cine are vina:
 
-fie de partea salariatului,
+dacă vina este a angajatorului, salariatul poate pretinde indemnizația de concediere;
 
-recunoaște fiecăreia dintre părți dreptul de a nu plăti indemnizația de concediere sau de a o pretinde.
+dacă vina este a salariatului, angajatorul poate să nu o plătească.
 
 Uneori, când există vină de ambele părți în raportul de muncă,
 

@@ -1059,7 +1059,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
     columnsOriginalLanguageBadge: 'Limba originală',
     columnsOriginalLanguageNote:
       'Articolele următoare nu sunt încă disponibile în limba română. Lista rămâne în limba originală și deschide pagina în limba respectivă; conținutul nu este tradus automat.',
-    imageBandAlt: 'Curte tradițională taiwaneză sanheyuan (三合院) și un pavilion modern în lumina zilei',
+    imageBandAlt: 'Ansamblu tradițional taiwanez sanheyuan (三合院) și un pavilion modern în lumina zilei',
     videoPauseLabel: 'Opriți videoclipul',
     videoPlayLabel: 'Redați videoclipul',
     videoReplayLabel: 'Redați din nou videoclipul',
@@ -1175,7 +1175,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Date de bază despre acest cabinet de avocatură taiwanez, despre birourile sale și despre lucrul cu părți străine.',
       intro:
-        'Hovering International Law Firm este un cabinet de avocatură din Taiwan. Avocații cabinetului lucrează de la consultanța pentru întreprinderi până la procedura în fața instanței. Această parte descrie apariția cabinetului, sediile și lucrul cu părți străine.',
+        'Hovering International Law Firm este un cabinet de avocatură din Taiwan. Avocații cabinetului lucrează de la consultanța pentru întreprinderi până la procedura în fața instanței. Această parte descrie înființarea cabinetului, sediile și lucrul cu părți străine.',
       sections: [
         {
           heading: 'Înființare și structură',
@@ -1189,7 +1189,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lucrul cu părți străine',
           paragraphs: [
             'Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) asistă clienți din Coreea, din Japonia și alți clienți internaționali în domeniile arătate.',
-            'Dacă putem prelua o cauză depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în domeniile arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.',
+            'Preluarea unei cauze depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în domeniile arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.',
           ],
         },
         {
@@ -1220,7 +1220,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Mai întâi se stabilește obiectul mandatului',
           paragraphs: [
             'Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după faptul dacă a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce intră în mandat și ce nu.',
-            'Rezumatul pe care îl trimiteți la început este temeiul acestui obiect. Cu cât rezumatul descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact poate fi delimitat mandatul.',
+            'Rezumatul pe care îl trimiteți la început este baza de la care se stabilește acest obiect. Cu cât rezumatul descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact poate fi delimitat mandatul.',
           ],
         },
         {
@@ -1240,7 +1240,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'De ce această pagină nu arată tarife',
           paragraphs: [
-            'Costurile depind de cauza însăși: de efort, de numărul părților, de documente, de termene și de faptul dacă o procedură este deja în curs. Un număr stabilit dinainte nu ar arăta costurile dosarului dumneavoastră. De aceea stabilim mai întâi obiectul mandatului și vă comunicăm apoi onorariul, înainte ca lucrarea să înceapă.',
+            'Costurile depind de cauza însăși: de efort, de numărul părților, de documente, de termene și de faptul dacă o procedură este deja în curs. O sumă stabilită dinainte nu ar arăta costurile dosarului dumneavoastră. De aceea stabilim mai întâi obiectul mandatului și vă comunicăm apoi onorariul, înainte ca lucrarea să înceapă.',
             'Pe lângă onorariu pot apărea taxe de instanță, cheltuieli ale autorităților sau ale terților. Acestea sunt distincte de onorariu și depind de procedura respectivă.',
           ],
         },
@@ -1395,7 +1395,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Înștiințarea și numărul de înregistrare',
           paragraphs: [
             'Dacă o solicitare este trimisă cu succes, sistemul înștiințează cabinetul. Dacă această înștiințare nu ajunge la cabinet, textul dumneavoastră rămâne păstrat și nu se pierde.',
-            'Numărul de înregistrare servește la regăsirea solicitării dumneavoastră în evidențele noastre. Se arată după păstrare; îl puteți indica la un nou contact.',
+            'Numărul de înregistrare servește la regăsirea solicitării dumneavoastră în evidențele noastre. Numărul se afișează după salvarea solicitării; îl puteți indica la o nouă contactare.',
           ],
         },
         {

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Imagine principală](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Cei care au citit [Înființarea unei societăți în Taiwan – bazele](/ro/columns/taiwan-company-establishment-basics) și [Înființarea unei societăți în Taiwan – partea aprofundată 1](/ro/columns/taiwan-company-establishment-advanced-1) pot consulta și Înființarea unei societăți în Taiwan – partea aprofundată 2 (公司設立).
+Cei care au citit [Înființarea unei societăți în Taiwan – bazele](/ro/columns/taiwan-company-establishment-basics) și [Înființarea unei societăți în Taiwan – partea aprofundată 1](/ro/columns/taiwan-company-establishment-advanced-1) pot consulta și Înființarea unei societăți în Taiwan (公司設立) – partea aprofundată 2.
 
 ​
 

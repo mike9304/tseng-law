@@ -19,7 +19,7 @@ Dacă survine un accident de circulație (交通事故) în Taiwan, trebuie mai 
 
 ## Q1. Se poate părăsi locul după accident?
 
-Într-un accident cu răniți sau deces, conducătorul trebuie să adopte de îndată măsuri de salvare (救護措施), să înștiințeze poliția și să conserve vehiculul și probele locului (保全現場). Consimțământul informal al celeilalte părți sau o simplă înregistrare nu permit să se considere că se poate părăsi locul fără a fi încheiat măsurile cerute.
+Într-un accident cu răniți sau deces, conducătorul trebuie să adopte de îndată măsuri de salvare (救護措施), să înștiințeze poliția și să conserve vehiculul și probele locului (保全現場). Consimțământul informal al celeilalte părți sau o simplă înregistrare nu înseamnă că locul poate fi părăsit înainte de încheierea măsurilor cerute.
 
 Totuși, într-un accident cu răniți, dacă toate părțile sunt de acord, vehiculul poate fi mutat într-un loc care nu stânjenește circulația după marcarea poziției vehiculului și a urmelor locului. Aceasta nu înseamnă că aceste mărci se substituie măsurilor cerute, precum salvarea și semnalarea.
 
@@ -43,13 +43,13 @@ Art. 284 din Codul penal reglementează leziunile din imprudență (過失傷害
 
 Oricine suferă o daună din cauza unei infracțiuni poate, potrivit art. 487 din Codul de procedură penală, introduce o acțiune civilă alăturată procesului penal (刑事附帶民事訴訟). Cât timp instanța penală este în curs, această acțiune poate fi introdusă până înainte de închiderea dezbaterilor orale (言詞辯論終結) din apel, potrivit art. 488 din Codul de procedură penală, dar nu poate fi introdusă după închiderea dezbaterilor orale ale primei instanțe și înainte de interpunerea căii de atac. În general, plata unor cheltuieli de judecată (裁判費) distincte poate fi evitată, dar nu toate rezultatele se încheie fără cost. De exemplu, dacă cauza penală este respinsă și, la cererea reclamantului, trimisă tribunalului civil, potrivit art. 503 din Codul de procedură penală cheltuielile pot fi impuse, și trebuie verificate și regulile de trimitere și de procedură ale art. 504.
 
-Alegerea variază după întreruperea prescripției (時效中斷), cercul pârâților, probele, asigurarea și competența. Nu există deci o procedură uniform preferabilă pentru toate cauzele.
+Alegerea variază după întreruperea prescripției (時效中斷), cercul pârâților, probele, asigurarea și competența. Nu există deci o procedură care să convină tuturor cauzelor.
 
 ## Q4. Dacă există vină de ambele părți, cum se apreciază răspunderile penală și civilă?
 
 Răspunderea penală nu poate fi reținută decât când sunt recunoscute încălcarea datoriei de prudență a fiecăruia și legătura de cauzalitate între această încălcare și leziunile celeilalte părți. Singurul fapt că a existat o vină de ambele părți nu face să se nască automat răspunderea pentru leziuni din imprudență.
 
-Pe plan civil, potrivit art. 217 din Codul civil, dacă persoana vătămată are o vină care a contribuit la cauzarea sau agravarea daunei (與有過失), tribunalul poate reduce sau scuti despăgubirea. De exemplu, dacă dauna recunoscută în noul dolar taiwanez (新臺幣, TWD) este 1.000.000 TWD și vina persoanei vătămate este evaluată la 50%, suma poate fi redusă la 500.000 TWD înainte de alte ajustări.
+Pe plan civil, potrivit art. 217 din Codul civil, dacă persoana vătămată are o vină care a contribuit la cauzarea sau agravarea daunei (與有過失), tribunalul poate reduce despăgubirea sau poate scuti de răspundere persoana obligată. De exemplu, dacă dauna recunoscută în noul dolar taiwanez (新臺幣, TWD) este 1.000.000 TWD și vina persoanei vătămate este evaluată la 50%, suma poate fi redusă la 500.000 TWD înainte de alte ajustări.
 
 Expertiza (鑑定) sau tabloul de analiză preliminară pot fi documente importante, dar ele nu leagă tribunalul în mod mecanic. Tribunalul examinează ansamblul probelor, inclusiv declarațiile, imaginile și starea vehiculelor.
 
@@ -339,7 +339,7 @@ Din cauza rănilor sau a decesului victimei, aceasta sau familia sa suferă o du
 
 ​
 
-Autorul nu se preocupă adesea să telefoneze pentru a lua vești despre victimă nici să-i facă vizită, iar mulți autori cred că asigurătorul va regla totul și nu apar. În aceste cazuri, nici căința, nici buna-credință nu se percep.
+Autorul nu se preocupă adesea să telefoneze pentru a lua vești despre victimă nici să-i facă vizită, iar mulți autori cred că asigurătorul va regla totul și nu apar. În aceste cazuri, victima nu percepe nici căință, nici sinceritate din partea autorului.
 
 ​
 

@@ -33,7 +33,7 @@ Această ordine de semnale și de cedare pe aceeași bandă nu înseamnă că de
 
 ## Caz de accident anonimizat tratat de acest cabinet
 
-Într-o cauză anonimizată tratată de acest cabinet, motociclistul A circula pe un drum de munte cu pasagerul B. În față circulau 2 autoturisme; vehiculul nr. 1, cel mai din față, înainta încet, astfel că vehiculul nr. 2 și motocicleta progresau și ele cu viteză mică.
+Într-o cauză anonimizată tratată de acest cabinet, motociclistul A circula pe un drum de munte cu pasagerul B. În față circulau 2 autoturisme; vehiculul nr. 1, cel mai din față, înainta încet, astfel că vehiculul nr. 2 și motocicleta înaintau și ele cu viteză mică.
 
 ![Schemă de accident care arată traiectoria de depășire a motocicletei și a 2 vehicule din față pe un drum de munte](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 

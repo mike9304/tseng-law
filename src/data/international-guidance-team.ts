@@ -3268,7 +3268,7 @@ export const guidanceTeamBios: Record<
       education: [
         'Master (M.S.) în finanțe, Institute of Finance, National Taiwan University',
         'Licență (B.A.), dublă specializare în drept și finanțe, National Chengchi University',
-        'Studii de schimb la Kobe University și Waseda University',
+        'Studentă în program de schimb la Kobe University și Waseda University',
       ],
       experience: [
         'Trend Law Office',

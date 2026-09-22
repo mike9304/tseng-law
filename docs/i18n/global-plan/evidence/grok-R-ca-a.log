@@ -1,0 +1,25 @@
+[WO start 2026-09-22 10:12:48]
+The review is in `docs/i18n/global-plan/reviews/native/ca-a.md`.
+
+The guidance pack is professional Central Catalan (4/5). The columns are 3/5: 001, 002 and 007 read as usable legal Catalan, while 003 from Q16, 006, 008 and 009 still follow a Korean blog line by line. Wei Tseng is feminine throughout. Five items should be fixed before a client sees them: `aval` / `visibilitat garantida` for what is a recommendation and an advertisement, `Auditor associat` for a partner, `empresari lucratiu` for the company, `Estatut d’innovació industrial` (in Catalonia that word is the Statute of Autonomy), and the Hangul slugs on articles 008 and 009.
+
+Last 15 lines:
+
+```
+| 27 | P2 | A | columns-ca/003-taiwan-traffic-accident-procedure.md | "Reglament de gestió i sancions del trànsit per carretera (道路交通管理處罰條例)" | 條例 is an act; "reglament" is secondary legislation. The 辦法 titles in 002 and 003 are correctly "Reglament". | "Llei de gestió i sanció del trànsit per carretera (道路交通管理處罰條例)" |
+| 28 | P2 | D | columns-ca/003-taiwan-traffic-accident-procedure.md | "gastar TWD 500.000 o TWD 1.000.000" | The thousand dots are right for Catalonia; the currency code is prefixed in the English way. also 001, 004, 006 and 007. Keep the amounts. | "gastar 500.000 o 1.000.000 TWD" |
+| 29 | P2 | B | columns-ca/006-taiwan-massage-history-law.md | "TWD 20.000 en nou dòlar taiwanès" | Plural amounts with singular "dòlar". also 007 "TWD 30.000 en nou dòlar de Taiwan" | "40.000, 10.000 i 20.000 nous dòlars taiwanesos (新臺幣), respectivament" |
+| 30 | P2 | C | columns-ca/006-taiwan-massage-history-law.md | "Recorda l’època de les barberies tradicionals" | Tu imperative; the same article later uses vostè ("Si considera", "ha d’anar"). | "Recordi l’època de les barberies tradicionals (理髮廳) dels primers temps de Taiwan?" |
+| 31 | P2 | A | columns-ca/006-taiwan-massage-history-law.md | "el Tribunal Constitucional (大法官) va declarar inconstitucional" | 大法官 are the Grand Justices, not the name of the court; the gloss is attached to the wrong noun. | "els Grans Magistrats (大法官) van declarar inconstitucional" |
+| 32 | P2 | C | columns-ca/005-taiwan-company-establishment-advanced-2.md | "també pot consultar Constitució de societats a Taiwan — part avançada 2." | The sentence, on part 2, tells the reader to open the page they are already on. | "Aquest text és la part avançada 2, per a qui ja hagi llegit la part bàsica i la part avançada 1." |
+| 33 | P2 | D | columns-ca/005-taiwan-company-establishment-advanced-2.md | "des d’un compte bancari de Corea, no cal adjuntar" | Q2 is about a Taiwan personal account; this Korean-bank rule is stated as if it were the general case. The Korea label in Q1 does not cover this sentence. | "Si, en l’exemple coreà de la pregunta 1, la tramesa es fa des d’un compte bancari de Corea, no cal adjuntar documents relatius a l’origen dels fons." |
+| 34 | P2 | B | columns-ca/009-taiwan-voluntary-resignation-severance.md | "articles 14 de la Llei de normes laborals" | Plural "articles" with a single article number. The Chinese gloss is article 14. | "l’article 14 de la Llei de normes laborals, que aplica per analogia l’article 17" |
+| 35 | P2 | B | columns-ca/008-taiwan-labor-severance-law.md | "és més difícil de cobrar del que es pensa" | The sentence has no full stop before "No transigeixi". | "és més difícil de cobrar del que es pensa." |
+| 36 | P2 | C | columns-ca/008-taiwan-labor-severance-law.md | "amb base en les proves reunides" | Spanish "con base en", not Catalan. | "a partir de les proves reunides" |
+| 37 | P2 | G | columns-ca/008-taiwan-labor-severance-law.md | "«Jo, OOO, rebaixaré de forma voluntària el càrrec i el salari»." | "OOO" is a Korean or Chinese name blank; a Catalan reader cannot see that it stands for the worker’s name. | "«Jo, [nom], rebaixaré de forma voluntària el càrrec i el salari»." |
+| 38 | P2 | B | columns-ca/007-taiwan-divorce-lawsuit-qna.md | "no és el dies a quo comú" | Singular "el" with plural Latin "dies", and the Latinism is unnecessary on a client page. | "no és, en tots els assumptes, el dia a partir del qual es compta el termini" |
+| 39 | P2 | A | columns-ca/004-taiwan-company-subsidiary-vs-branch.md | "la societat comanditària limitada (有限合夥)" | 有限合夥 is a limited partnership (societat comanditària). "Comanditària limitada" looks like a company type that does not exist. | "la societat comanditària (有限合夥)" |
+| 40 | P2 | C | columns-ca/004-taiwan-company-subsidiary-vs-branch.md | "una societat conducte (導管公司)" | "Conducte" is a noun stuck onto "societat" like English "conduit company". | "una societat instrumental (導管公司)" |
+| 41 | P2 | A | columns-ca/008-taiwan-labor-severance-law.md | "Dificultat" | The row is Senzill / Difícil / Senzill and does not say for whom, so economic dismissal reads as an easy outcome. | "Càrrega de justificació de l’empresa: alta en l’acomiadament econòmic, molt alta en el disciplinari, i no escau en la dimissió perquè cessa el treballador" |
+```
+=== end code=0 2026-09-22 10:29:52 ===

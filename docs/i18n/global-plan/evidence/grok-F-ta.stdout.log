@@ -1,0 +1,5 @@
+[WO start 2026-09-22 11:18:39]
+Tamil native-review fixes are in the guidance pack, the 18 Tamil columns, and the two pinned test strings. Nothing was committed.
+
+The checker is `summary PASS 18/18`, review markers are 0, `TSC_OK`, and the unit tests are 160 files / 3202 passed. The row list, skips, and the verify output are in `docs/i18n/global-plan/evidence/grok-F-ta.log`.The typecheck and the unit-test re-run both finished cleanly: `TSC_OK`, and 160 test files / 3202 tests passed. That is the result recorded in `docs/i18n/global-plan/evidence/grok-F-ta.log`.
+=== end code=0 2026-09-22 11:44:39 ===

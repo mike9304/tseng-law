@@ -1,0 +1,23 @@
+[WO start 2026-09-22 11:05:01]
+The Latvian review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/lv-b.md`. Naturalness is **3/5**. Wei Tseng stays feminine throughout, and the no-consultation lines stay correctly negative. Nineteen items should be fixed before a client sees the text, mostly a district court called an appellate court, FAQ answers pasted under the wrong headings, and a few terms that change the legal meaning.
+
+Last 15 lines:
+
+```
+| 34 | P2 | A | columns-lv/012-taiwan-overtaking-accident-liability.md | jāpaiet pa kreisi | "Paiet" is to walk; a vehicle moves over | jāizbrauc pa kreisi |
+| 35 | P2 | D | columns-lv/013-taiwan-company-establishment-advanced-1.md | Taibei pilsēta | Latvian exonym is Taipeja; also throughout columns-lv/015 | Taipeja |
+| 36 | P2 | A | columns-lv/013-taiwan-company-establishment-advanced-1.md | Ekonomikas ministrijas izskatīšanas komisija | Same office as "Ieguldījumu izskatīšanas departaments (經濟部投資審議司)" earlier in the file; "komisija" is the abolished English name | Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments |
+| 37 | P2 | C | columns-lv/013-taiwan-company-establishment-advanced-1.md | Kādas Taivānas bankas darbinieks man kā advokātei teica, | One sentence is split so a paragraph ends on a comma; 013 and 015 are line-broken blog prose | Kādas Taivānas bankas darbinieks man kā advokātei teica, ka pēdējā laikā daudzi ārzemnieki pēc konta atvēršanas pazūd |
+| 38 | P2 | C | columns-lv/014-taiwan-mandatory-employment-period.md | Nolīgums par minimālo dienesta laiku | "Dienests" is civil or military service; a lock-in in an employment contract is time the worker must stay | Nolīgums par minimālo nostrādājamo laiku |
+| 39 | P2 | A | columns-lv/014-taiwan-mandatory-employment-period.md | dotais norādījums (函釋) | "Norādījums" is a tip or instruction; 函釋 is a ministry interpretation; also the FAQ and the official-sources link in this file | dotā interpretācija (函釋) |
+| 40 | P2 | C | columns-lv/010-taiwan-gym-injury-lawsuit.md | atlīdzības esība un apmērs var būt strīdīgi | "Esība" is a philosophical calque; also 014 "vienošanās esību", 016 "testamenta esība", 017 "spēkā esība" (the legal term is "spēkā esamība") | vai atlīdzība vispār pienākas un kādā apmērā, var būt strīdīgi |
+| 41 | P2 | B | columns-lv/015-taiwan-company-setup-pitch-location.md | aptuveni 10 nozares | From 10 upward Latvian uses the genitive plural | aptuveni 10 nozaru |
+| 42 | P2 | A | columns-lv/016-taiwan-inheritance-custody-analysis.md | nekustamo īpašumu un transportlīdzekļu vārda maiņa | "Vārda maiņa" is a change of personal name; EN is transfer of title | nekustamā īpašuma un transportlīdzekļu īpašnieka maiņa |
+| 43 | P2 | A | columns-lv/016-taiwan-inheritance-custody-analysis.md | testamenta pārbaudes (檢認) | 檢認 is probate of a will, not a mere check; 認證 in the same sentence is authentication, not only a notarial act | testamenta apstiprināšanas (檢認) |
+| 44 | P2 | B | columns-lv/016-taiwan-inheritance-custody-analysis.md | kā ar paša mantojuma daļu | "Paša" is masculine singular; the subject is plural "vecāki" | kā ar savu mantojuma daļu |
+| 45 | P2 | G | columns-lv/016-taiwan-inheritance-custody-analysis.md | Taivānas Tiesu juans | "Juans" reads as a surname; the Judicial Yuan in Latvian transcription is "juaņs" | Taivānas Tiesu juaņs |
+| 46 | P2 | B | columns-lv/017-taiwan-logistics-business-setup.md | līgumi, darbinieki, apdrošināšana un darbības atļauja jāpārbauda katra | "Katra" is feminine singular after a mixed list; also "jāpārbauda katra atsevišķi" in the capital paragraph | līgumi, darbinieki, apdrošināšana un darbības atļauja jāpārbauda katrs no šiem punktiem atsevišķi |
+| 47 | P2 | A | columns-lv/018-taiwan-semiconductor-market-entry.md | darba atļaujai nākamajam ārzemniekam | EN is a work permit for a second or any further foreign national, the quota rule, not only "the next" one | darba atļaujai otrajam un nākamajiem ārzemniekiem |
+| 48 | P2 | A | columns-lv/018-taiwan-semiconductor-market-entry.md | ne katrai akciju sabiedrībai jāliek pārbaudīt gada finanšu pārskatu | EN is a statutory financial-statement audit, not a generic check; the same file already says "zvērināts revidents" | ne katrai akciju sabiedrībai gada finanšu pārskats jārevidē |
+```
+=== end code=0 2026-09-22 11:17:59 ===

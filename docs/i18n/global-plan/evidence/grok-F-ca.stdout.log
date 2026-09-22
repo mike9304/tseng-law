@@ -1,0 +1,5 @@
+[WO start 2026-09-22 11:45:44]
+That notification is the earlier verification, from before the Q16–Q20 fix and before the missing MCP package was available. It reported the column checker at 17/18 and `tsc` failing on `@modelcontextprotocol/server`.
+
+The later run, already pasted in `docs/i18n/global-plan/evidence/grok-F-ca.log`, is the one that counts: checker **PASS 18/18**, markers **0**, **TSC_OK**, and **3202** tests passed.
+=== end code=0 2026-09-22 12:08:43 ===

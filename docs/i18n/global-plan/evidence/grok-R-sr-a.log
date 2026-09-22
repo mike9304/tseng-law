@@ -1,0 +1,22 @@
+[WO start 2026-09-22 10:34:59]
+The review is in `docs/i18n/global-plan/reviews/native/sr-a.md`. The guidance pack is professional ekavian Serbian (4/5). The columns are 3/5: five items should be fixed before a client sees them, and Wei Tseng is feminine throughout.
+
+Last 15 lines:
+
+```
+| 33 | P2 | B | sr-guidance.txt | "svoje dokumente razgovarajte posebno sa advokatkinjom ili advokatom" | razgovarati needs o. also „dokumente treba razgovarati“ | o svojim dokumentima razgovarajte posebno sa advokatkinjom ili advokatom |
+| 34 | P2 | B | sr-guidance.txt | "Vaš zahtev nije uspelo poslati." | zahtev is masculine; uspelo is neuter. | Slanje zahteva nije uspelo. |
+| 35 | P2 | B | columns-sr/002-withdraw-capital-taiwan-company.md | "treba svaki svoj osnov crpljen iz ugovora" | crpljen is a stray participle, so the sentence never says that each payment must have its own basis. | svaki mora da ima svoj osnov u ugovoru, odluci, dokazima i obustavi na izvoru |
+| 36 | P2 | C | sr-guidance.txt | "trebalo bi paralelno da tražite druge puteve na svom mestu." | „na svom mestu“ is a calque of „in your location“. | trebalo bi paralelno da tražite i drugi put tamo gde se nalazite. |
+| 37 | P2 | C | sr-guidance.txt | "ova stranica nije korak konsultacije." | „korak konsultacije“ is a calque of a consultation step. | ova stranica nije deo savetovanja. |
+| 38 | P2 | C | sr-guidance.txt | "po pravu drugog poretka osim tajvanskog" | pravni poredak is split, so this does not name another legal system. | po pravu nekog drugog pravnog poretka, a ne tajvanskog, uključujući pravo mesta Vašeg boravka |
+| 39 | P2 | C | columns-sr/002-withdraw-capital-taiwan-company.md | "kada prekidate društvo na Tajvanu" | prekidati društvo is not how Serbian says wind a company up. also „poslednje upisne napomene“ for registered particulars | kada gasite društvo na Tajvanu |
+| 40 | P2 | C | columns-sr/004-taiwan-company-subsidiary-vs-branch.md | "Ne zato što je glavna poslovnica platila mogu se svi troškovi" | „Ne zato što“ copies “Not because”; the same frame is repeated through §5 and §6. | To što je trošak platila glavna poslovnica ne znači da se sav taj trošak može odbiti kod tajvanskog ogranka |
+| 41 | P2 | C | columns-sr/004-taiwan-company-subsidiary-vs-branch.md | "kanalno društvo (導管公司)" | kanalno means channel-related; a conduit company is a provodno društvo. | provodno društvo (導管公司) |
+| 42 | P2 | C | columns-sr/005-taiwan-company-establishment-advanced-2.md | "A. Prvi zaposleni: zahtev se podnosi kao rukovodeći posao" | Leftover answer label „A.“ in front of the Serbian answer. also „B.“ on the next point | Prvi zaposleni: zahtev se podnosi kao rukovodeći posao |
+| 43 | P2 | C | columns-sr/006-taiwan-massage-history-law.md | "Time, iako to nije bila namera, odajem svoje godine." | The whole column is blog chat, including the salon opening. also 003 from Q16 („završavam“, „naduvava“) and the chopped anecdotes in 008 and 009 | Zakon o dobrobiti lica s invaliditetom (殘障福利法) iz 1980. godine rezervisao je zanimanje masera za lica s oštećenjem vida. |
+| 44 | P2 | C | columns-sr/009-taiwan-voluntary-resignation-severance.md | "Zaposleni zato mora dobro da vlada rokom." | vladati rokom means to command a deadline, not to watch one. | Zaposleni zato mora da pazi na taj rok. |
+| 45 | P2 | D | sr-guidance.txt | "presudu prvog stepena u iznosu TWD 1.57M." | English decimal and the abbreviation M. Serbia uses a comma and mil. | presudu prvog stepena u iznosu od 1,57 mil. TWD. |
+| 46 | P2 | G | sr-guidance.txt | "Paralegal" | The role line is only English. also „Senior Paralegal“ and the degree line „Master (M.S.), Institute of Finance, National Taiwan University“ | Pravni asistent |
+```
+=== end code=0 2026-09-22 10:41:54 ===

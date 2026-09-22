@@ -1,0 +1,27 @@
+[WO start 2026-09-22 10:34:41]
+The Urdu review is in `docs/i18n/global-plan/reviews/native/ur-a.md`. Guidance and columns both read at **3/5**: Pakistani Standard Urdu, consistent, with Wei Tseng feminine throughout (`وکیلہ`, `طالبہ`, `چاہتی ہوں`).
+
+Seven items should not reach a client. The bio calls a first-instance judgment `پہلی سماعت کی عدالت`. Sector requirements became `شعبے کی توقعیں`. The llms.txt line turns an advertisement into `نمائش`. In column 003, `ڈگری` means a civil decree in Pakistan, not a court level. `آرڈیننس` is a presidential ordinance, not the Statute for Industrial Innovation. Column 009 joins grounds 1 and 6 with `اور` where the English is either/or. Column 008 closes by calling severance an unconditional right.
+
+Columns 001, 002, 004 and 007 are usable legal Urdu. The no-Urdu-consultation lines stay correctly negative. Columns 005, 006, 008 and 009 still sound like the Korean blog.
+
+Last 15 lines:
+
+```
+| 32 | P2 | A | columns-ur/003-taiwan-traffic-accident-procedure.md | "سال 109 کے آسان فوجداری اپیل (上易字) بند 644" | بند is a clause, not the case number; ROC year 109 is opaque. Also 007 "آئینی فیصلے بند 4" (year 112 = 2023). | سال 109 (2020) کی آسان فوجداری اپیل (上易字) نمبر 644 |
+| 33 | P2 | A | columns-ur/003-taiwan-traffic-accident-procedure.md | "بلا قصور ضمانت کی ساخت رکھتا ہے" | No-fault benefits; ضمانت in this article’s criminal context is bail. | بلا قصور قانونی فائدے کا ڈھانچہ رکھتا ہے |
+| 34 | P2 | A | columns-ur/003-taiwan-traffic-accident-procedure.md | "مقدمہ دیوانی شاخ میں منتقل ہونے کے بعد" | Civil division called شاخ, which on this site is a corporate branch. | مقدمہ دیوانی عدالت میں منتقل ہونے کے بعد |
+| 35 | P2 | A | columns-ur/003-taiwan-traffic-accident-procedure.md | "دفعہ 195 کے مطابق ذہنی نقصان بھی" | Solatium (慰撫金) has no gloss; ذہنی نقصان is only “mental harm”. Also Q13. | دفعہ 195 کے مطابق تسلی / غیر مالی معاوضہ (慰撫金) بھی |
+| 36 | P2 | C | columns-ur/003-taiwan-traffic-accident-procedure.md | "قانونِ سزا (刑法) کی دفعہ 185-4" | With the gloss it is recoverable, but Pakistan criminal Urdu says فوجداری قانون, not “the law of punishment”. | تائیوان کے فوجداری قانون (刑法) کی دفعہ 185-4 |
+| 37 | P2 | C | columns-ur/003-taiwan-traffic-accident-procedure.md | "اس طرح ٹریفک حادثوں کے سوال و جواب ختم کرتی ہوں۔" | Q16–Q20 is a stack of one-line blog sentences. Same cadence in 005, 006, 008 and 009. | ان سوالوں کا جواب یہاں ختم ہوتا ہے۔ |
+| 38 | P2 | A | columns-ur/001-taiwan-company-establishment-basics.md | "تجارت کی ترقی — کمپنی و تجارتی اندراج" | Administration of Commerce rendered as a commerce-development programme. | وزارتِ اقتصادیات، تجارتی انتظامیہ — کمپنی و کاروباری اندراج |
+| 39 | P2 | C | columns-ur/001-taiwan-company-establishment-basics.md | "سمندر پار چینی (華僑)" | “Chinese from across the sea” for overseas Chinese. Also 005. | بیرونِ ملک مقیم چینی (華僑) |
+| 40 | P2 | A | columns-ur/002-withdraw-capital-taiwan-company.md | "آئینِ انجمن اونچی شرائط رکھ سکتا ہے" | Articles of incorporation with no (章程); انجمن is a society, not the company. Also 004. | کمپنی کا آئین (章程) سخت تر شرائط رکھ سکتا ہے |
+| 41 | P2 | D | columns-ur/005-taiwan-company-establishment-advanced-2.md | "جب سرمایہ (資本額) کوریا سے تائیوانی کمپنی کے تیاری کھاتے" | The advanced-setup Q&A opens on Korean bank and FX practice; the “not your country” line comes only after the question. | سوال سے پہلے لکھیں: یہ حصہ کوریا سے ترسیل اور کوریائی بینک کی مشق ہے، قارئے کے ملک سے نہیں۔ |
+| 42 | P2 | D | columns-ur/006-taiwan-massage-history-law.md | "کے مطابق 3 سال تک قید ہو سکتی ہے" | Korea’s licence crime is told as if it were the reader’s comparison case, with no Pakistan frame. | موازنے کے لیے، یہ کوریا کا قاعدہ ہے، پاکستان کا نہیں: بغیر قابلیت کے مساج پر تین سال تک قید ہو سکتی ہے۔ |
+| 43 | P2 | A | columns-ur/007-taiwan-divorce-lawsuit-qna.md | "سرحد پار لے جانا، روکنا یا واپس نہ لانا" | Hague retention rendered as bare روکنا (“to stop”), not keeping the child abroad. | سرحد پار لے جانا، بچے کو وہاں روکے رکھنا، یا واپس نہ لانا |
+| 44 | P2 | A | columns-ur/007-taiwan-divorce-lawsuit-qna.md | "مندرجہ ذیل 1 درجے کے بنیادی مصادر" | “Official primary sources were checked on 2026-07-25” became “grade-1 sources”. | مندرجہ ذیل سرکاری بنیادی مصادر 25 جولائی 2026 کو چیک کیے گئے |
+| 45 | P2 | C | columns-ur/008-taiwan-labor-severance-law.md | "وسطی تائیوان میں سب سے اونچی کارکردگی والا سیلز نمائندہ" | Blog superlative on a law-firm page. The masculine quote lower down is the male client, not Wei Tseng. | وسطی تائیوان میں اعلیٰ کارکردگی والا سیلز نمائندہ |
+| 46 | P2 | G | columns-ur/008-taiwan-labor-severance-law.md | "https://www.wei-wei-lawyer.com/post/대만-노동법" | Hangul, with a fullwidth colon, in the url of an Urdu article. Also the 009 url. Leave the url field as it is; do not show that path as the reader-facing link. | قارئے کو اردو عنوان دکھائیں؛ url فیلڈ نہ بدلیں |
+```
+=== end code=0 2026-09-22 10:45:48 ===

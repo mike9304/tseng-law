@@ -1,0 +1,22 @@
+[WO start 2026-09-22 10:54:35]
+The review is in `docs/i18n/global-plan/reviews/native/mn-b.md`. Columns 010–018 score **3/5**: Khalkha Cyrillic, with 51 findings (2 P1, 49 P2). The two must-fix items are a cosmetics gloss on the wrong word in 011, and 017 using insurance terms (`даатгагч`, `дахин даатгах`) for outsourcing. No masculine forms for Wei Tseng.
+
+Last 15 lines:
+
+```
+| 38 | P2 | C | columns-mn/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | гаргах өдрийг бэхлэхгүй | "Launch date" became "do not fasten the day of issue" | борлуулалт эхлэх өдрийг тогтмол хугацаагаар тогтоохгүй |
+| 39 | P2 | C | columns-mn/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | материал хадгалагдахаар шилжүүлэх объект, арга | объект calques "the thing handed over". Also 014 "буцаах объект", 015 "лавлагаа ... объект", 016 "тооцооны объект" and "өвлөх объект" | материал хадгалагдахаар аль материалыг хэрхэн шилжүүлэх |
+| 40 | P2 | C | columns-mn/012-taiwan-overtaking-accident-liability.md | Фирмийн хөтөлсөн нэрээ нууцалсан ослын хэрэг | фирм is a generic company. This register uses кантор. Also the footer "Фирмтэй хэрхэн холбогдох вэ" in 013 and 015, and 018 "Энэ фирм зөвлөгөөний сэдэв" | Канторын хөтөлсөн нэрээ нууцалсан ослын хэрэг |
+| 41 | P2 | C | columns-mn/012-taiwan-overtaking-accident-liability.md | B хүнд толгойн гэмтэл авч газарт нас барсан | "газарт" reads as on the soil; EN is died at the scene. "хүнд" is easy to read as the dative of хүн | B толгойгоороо хүнд гэмтэж, ослын газар дээрээ нас барсан |
+| 42 | P2 | C | columns-mn/012-taiwan-overtaking-accident-liability.md | Урд суудлын машин хоёр байсан | Word order makes this "two front-seat cars" | Урд талд хоёр суудлын автомашин явж байсан |
+| 43 | P2 | C | columns-mn/013-taiwan-company-establishment-advanced-1.md | Тайванийн банкны ажилтан надад өөрөө хэлсэн нь | 013 and 015 are one-line blog paragraphs, often split mid-sentence. The client pages 014, 016, and 018 are not | Тайванийн банкны ажилтан надад өөрөө хэлсэн нь, сүүлийн үед олон гадаадын иргэн данс нээгээд алга болсон тул данс нээх шалгалт улам чанга болж байна. |
+| 44 | P2 | C | columns-mn/013-taiwan-company-establishment-advanced-1.md | оффисын арилжааны орон зай түрээслэх бол | "арилжааны орон зай" calques "commercial space". Also the next "Жишээ нь" and Q5 | ердийн оффисын талбай түрээслэх бол |
+| 45 | P2 | C | columns-mn/016-taiwan-inheritance-custody-analysis.md | хуулийн өв залгамжлал (繼承)-ын 1 дүгээр дараалал | A Mongolian lawyer says ээлж for the statutory class of heirs. Also §1 | хуулийн өв залгамжлал (繼承)-ын эхний ээлж |
+| 46 | P2 | C | columns-mn/016-taiwan-inheritance-custody-analysis.md | Олон улсын элементтэй гэр бүлд | The statute in §8 is гадаад элемент (涉外). "олон улсын элемент" calques "international element". Also §5 | Гадаад элементтэй гэр бүлд |
+| 47 | P2 | C | columns-mn/016-taiwan-inheritance-custody-analysis.md | хүүхдийн хамгийн сайн ашиг (子女最佳利益) | ашиг alone is profit. This is the statutory best-interests test, not an advertising "best" claim. Also the FAQ and §6 | хүүхдийн дээд ашиг сонирхол (子女最佳利益) |
+| 48 | P2 | C | columns-mn/018-taiwan-semiconductor-market-entry.md | Тайваньд бүртгүүлсэн ажлын суурь (代表人辦事處) | The row heading already says төлөөлөгчийн газар; ажлын суурь reads as a work foundation | Тайваньд бүртгүүлсэн төлөөлөгчийн газар (代表人辦事處) |
+| 49 | P2 | D | columns-mn/010-taiwan-gym-injury-lawsuit.md | [TWD 1,579,589] | Code-first amount and a comma for thousands. Mongolia uses a space, with the code after. Also the TWD headlines in 010, the fine ranges in 011, TWD 25,000,000 in 017, and TWD 30,000,000 / TWD 100,000,000 in 018 | [1 579 589 TWD] |
+| 50 | P2 | D | columns-mn/010-taiwan-gym-injury-lawsuit.md | 109 оны хэрэглэгчийн хэрэг № 7 | ROC year 109 is opaque for a reader in Mongolia; the case year is 2020 | 109 оны (2020) хэрэглэгчийн хэрэг № 7 |
+| 51 | P2 | D | columns-mn/012-taiwan-overtaking-accident-liability.md | хамгийн багадаа 0.5 метрийн зай | The decimal mark in Mongolia is a comma | хамгийн багадаа 0,5 метрийн зай |
+```
+=== end code=0 2026-09-22 11:06:40 ===

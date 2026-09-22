@@ -1,0 +1,5 @@
+[WO start 2026-09-22 11:08:52]
+Urdu native-review fixes are in the worktree. The report is `docs/i18n/global-plan/evidence/grok-F-ur.log`. Nothing was committed.
+
+The verifier passed: column checker `summary PASS 18/18`, review markers 0, `TSC_OK`, and 3202 tests passed. Digit fractions stayed as `3 میں سے 2` / `3 میں سے 1` because the checker does not treat `دو تہائی` or `ایک تہائی` as those numbers. `TWD 1.57M`, lakh/crore regrouping, Hangul `url:` fields, and any claim about Pakistan’s own law were left unchanged.That earlier test run failed while the local package overlay was missing: one file could not load, and the other 3187 tests passed. After the overlay was restored, the official run passed all 3202 tests. The Urdu fixes and the log at `docs/i18n/global-plan/evidence/grok-F-ur.log` are unchanged.
+=== end code=0 2026-09-22 11:38:28 ===

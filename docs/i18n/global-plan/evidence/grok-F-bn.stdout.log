@@ -1,0 +1,7 @@
+[WO start 2026-09-22 11:19:14]
+Bengali native-review fixes are in the columns and the Bengali guidance strings. The log is `docs/i18n/global-plan/evidence/grok-F-bn.log`. Nothing was committed.
+
+The checker reports `summary PASS 18/18`, review markers are 0, typecheck prints `TSC_OK`, and vitest reports 160 files / 3202 tests passed. `006` had nothing to change.
+
+Skipped, and listed in the log: the pinned `TWD 1.57M` rewrite, lakh regrouping, added Gregorian years, Hangul `url` keys, and the Bangladesh/India bank sentence. ROC years are labeled `প্রজাতন্ত্র চীনের (民國)` with no new digits. In column 002, “one year at a time” is `1 বারে (একবারে) 1 বছরের` so both source `1`s stay and the checker still passes.
+=== end code=0 2026-09-22 11:45:10 ===

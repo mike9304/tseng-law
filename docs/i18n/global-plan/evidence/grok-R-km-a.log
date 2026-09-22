@@ -1,0 +1,26 @@
+[WO start 2026-09-22 10:12:28]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
+Retry attempt 2...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 3)...
+Retry attempt 3...
+The review is in `docs/i18n/global-plan/reviews/native/km-a.md`: guidance pack 4/5, columns 3/5, 4 P1 and 28 P2.
+
+```
+| 19 | P2 | C | km-guidance.txt | "ផ្នែកភាសាខ្មែរនេះ" | “This Khmer section” copies “dieser deutsche Teil”; the footer already says the pages. | "ទំព័រភាសាខ្មែរទាំងនេះ" |
+| 20 | P2 | C | km-guidance.txt | "ក្រុមការងារដែលយើងទទួលធ្វើជាក់ស្ដែង" | German “tatsächlich” left as an odd “actually we take on”. | "ក្រុមការងារដែលយើងទទួលធ្វើ" |
+| 21 | P2 | C | km-guidance.txt | "បើលោកអ្នកប្រើមិនបានភាសាណាមួយ" | Calque of “cannot use a language”; also the contact heading, FAQ question, inquiry note, and form option "ប្រើមិនបានភាសាណាមួយ". | "បើលោកអ្នកមិនចេះភាសាណាមួយក្នុង ៤ ភាសានេះ" |
+| 22 | P2 | C | km-guidance.txt | "ឃ្លាំងវត្ថុមិនបើកជាសាធារណៈ" | Objektspeicher rendered as a warehouse of physical objects. | "ឃ្លាំងផ្ទុកទិន្នន័យដែលមិនបើកជាសាធារណៈ" |
+| 23 | P2 | C | km-guidance.txt | "ជំនួយការផ្លូវច្បាប់ដែលធ្វើជាជំនួយការផ្លូវច្បាប់ជាន់ខ្ពស់" | The role title is stated twice in one clause. | "ជំនួយការផ្លូវច្បាប់ជាន់ខ្ពស់នៅការិយាល័យមេធាវីច្រើនកន្លែង" |
+| 24 | P2 | C | km-guidance.txt | "ការបដិសេធ" | Nav and page title read as a refusal; the page is a liability disclaimer. Also the page heading. | "សេចក្ដីបដិសេធទំនួលខុសត្រូវ" |
+| 25 | P2 | C | columns-km/003-taiwan-traffic-accident-procedure.md | "Q16. បន្ទាប់ពីគ្រោះថ្នាក់ លោកអ្នកអាចប្រគល់រឿងទាំងអស់ឱ្យក្រុមហ៊ុនធានារ៉ាប់រងបានដែរឬទេ?" | Q16–Q20 drop the ## heading of Q1–Q15 and pad the body with blank lines; the same one-line blog layout runs through 005, 006, 008, and 009. | "សរសេរ Q16–Q20 ជា ## ដូច Q1–Q15 ហើយប្រមូលឃ្លាឱ្យជាកថាខណ្ឌ។" |
+| 26 | P2 | C | columns-km/008-taiwan-labor-severance-law.md | "ភាគីនៃនាងខ្ញុំគឺលោក B" | Calque of 我方; a Khmer brief says the client, and លោក B stays. | "អតិថិជនរបស់នាងខ្ញុំគឺលោក B" |
+| 27 | P2 | C | columns-km/009-taiwan-voluntary-resignation-severance.md | "«**ពេលវេលា**» មានសារៈសំខាន់ណាស់។" | Guillemets plus bold are a leftover of the source’s «**Zeit**» emphasis. | "**ពេលវេលា** មានសារៈសំខាន់ណាស់។" |
+| 28 | P2 | C | columns-km/001-taiwan-company-establishment-basics.md | "នឹងឱ្យអង្គភាពទម្រង់ណាទទួលចំណូល" | Word order copies “will let which entity form receive the income”. | "ទម្រង់អង្គភាពណានឹងទទួលចំណូល" |
+| 29 | P2 | D | km-guidance.txt | "TWD 1.57M" | “M” is an English million abbreviation; the judgment sentence itself is already correct. | "TWD 1.57 លាន" |
+| 30 | P2 | D | columns-km/007-taiwan-divorce-lawsuit-qna.md | "ឆ្នាំ 112 ចំណុច 4 (112年憲判字第4號)" | ROC year 112 is left bare; a Cambodian reader counts in the common era. Also the body of section 4 and the source list. Keep the case number. | "ឆ្នាំ 112 (គ.ស. 2023) ចំណុច 4 (112年憲判字第4號)" |
+| 31 | P2 | G | km-guidance.txt | "Ministry of Education, Legal Affairs Division" | English institution phrases left in the bios; also "Legal Aid Foundation, Taichung Branch" and "Institute of Finance, National Taiwan University". Firm names can stay. | "នាយកដ្ឋានកិច្ចការផ្លូវច្បាប់ ក្រសួងអប់រំ (Ministry of Education, Legal Affairs Division)" |
+| 32 | P2 | G | columns-km/008-taiwan-labor-severance-law.md | "«ខ្ញុំ OOO សុខចិត្តបន្ថយតួនាទី និងប្រាក់ឈ្នួលដោយស្ម័គ្រចិត្ត»" | Korean ○○○ name blank left as Latin OOO inside the quoted statement. | "«ខ្ញុំ (ឈ្មោះ) សុខចិត្តបន្ថយតួនាទី និងប្រាក់ឈ្នួលដោយស្ម័គ្រចិត្ត»" |
+```
+=== end code=0 2026-09-22 10:30:38 ===

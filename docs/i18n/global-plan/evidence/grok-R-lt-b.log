@@ -1,0 +1,23 @@
+[WO start 2026-09-22 11:01:56]
+The review is in `docs/i18n/global-plan/reviews/native/lt-b.md`. Columns 010–018 score **3/5**: real legal Lithuanian, with calques and twelve must-fix items. Wei Tseng is feminine throughout. Consultation stays limited to English, Chinese, Japanese and Korean.
+
+Last 15 lines:
+
+```
+| 56 | P2 | A | columns-lt/016-taiwan-inheritance-custody-analysis.md | notarinio tvirtinimo (認證) bei testamento patvirtinimo (檢認) | 檢認 is court probate of a will, not a generic confirmation | notarinio tvirtinimo (認證) ir testamento teisminio patvirtinimo (檢認) |
+| 57 | P2 | B | columns-lt/016-taiwan-inheritance-custody-analysis.md | gali kilti tvarkos klausimas pirmiausia atspindėti jo rezultatą | The infinitive does not attach; English is that the claim’s result is reflected before the estate is identified | jo rezultatą gali tekti atspindėti prieš nustatant, kas palikėjui lieka kaip palikimo turtas |
+| 58 | P2 | G | columns-lt/016-taiwan-inheritance-custody-analysis.md | Taivano Teismų yuanas: nepilnamečio globėjo paskyrimo prašymo forma | “yuanas” is the English spelling and also reads as the currency; Lithuanian writes “juanas” (also “yuano forma”) | Taivano Teismų juanas: nepilnamečio globėjo paskyrimo prašymo forma |
+| 59 | P2 | C | columns-lt/016-taiwan-inheritance-custody-analysis.md | Laisvai juo naudotis negalima. | “juo” has no antecedent under the heading “turto apsauga”; it is the FAQ answer dropped in | Paveldėtu vaiko turtu laisvai naudotis negalima. |
+| 60 | P2 | C | columns-lt/017-taiwan-logistics-business-setup.md | pažymėjimo vardo paskolinimas (借牌) | “vardo paskolinimas” is lending a name; 借牌 is lending the licence itself (also later in §4) | pažymėjimo paskolinimas (借牌) |
+| 61 | P2 | D | columns-lt/017-taiwan-logistics-business-setup.md | namų ūkio registraciją (戶籍) kompetentingos institucijos apygardoje | “apygarda” is a Lithuanian region; English is household registration inside that authority’s area (also §2) | namų ūkio registraciją (戶籍) kompetentingos institucijos veiklos teritorijoje |
+| 62 | P2 | C | columns-lt/017-taiwan-logistics-business-setup.md | Investicijoms į biržos ar ne biržos vertybinius popierius | “ne biržos” is “not of the exchange”; Lithuanian securities law says “nebiržinius” | Investicijoms į biržinius ar nebiržinius vertybinius popierius |
+| 63 | P2 | A | columns-lt/018-taiwan-semiconductor-market-entry.md | metinį finansinių ataskaitų auditą ir patvirtinimą, kurį atlieka CPA | “CPA” is left in English, and the gloss 會計師查核簽證 is the audit, not the expansion of the acronym (also “CPA kapitalo patikrinimas”) | metinį finansinių ataskaitų auditą ir patvirtinimą, kurį atlieka auditorius (會計師查核簽證) |
+| 64 | P2 | A | columns-lt/018-taiwan-semiconductor-market-entry.md | pagrindinės buveinės ir įnašų davėjų pagrindinius duomenis | “įnašų davėjai” are donors of a contribution; English is “investors” | pagrindinės buveinės ir investuotojų pagrindinius duomenis |
+| 65 | P2 | A | columns-lt/018-taiwan-semiconductor-market-entry.md | sandorio nepadaro teisėto ir nežada nustatyto rezultato | English is “does not make the transaction lawful and does not prevent disputes”; the dispute point is lost | sandorio nepadaro teisėto ir neužkerta kelio ginčams |
+| 66 | P2 | A | columns-lt/018-taiwan-semiconductor-market-entry.md | Taivane įregistruota raštinės vieta; Taivane negali vykdyti | “raštinės vieta” is a clerical room; the heading and Article 386 mean a representative office | Taivane įregistruota atstovybė; ji Taivane negali vykdyti komercinės veiklos |
+| 67 | P2 | A | columns-lt/018-taiwan-semiconductor-market-entry.md | atskiro prižiūrėtojo (監察人) skirti nereikia | “prižiūrėtojas” is a caretaker; a company 監察人 is a “stebėtojas” (also “nenumatyti prižiūrėtojo”) | atskiro stebėtojo (監察人) skirti nereikia |
+| 68 | P2 | B | columns-lt/018-taiwan-semiconductor-market-entry.md | neįtraukta į biržos sąrašą bendrovė įstatuose gali nenumatyti | The participle is stranded in front of the noun | Į biržos sąrašą neįtraukta bendrovė įstatuose gali nenumatyti valdybos |
+| 69 | P2 | B | columns-lt/018-taiwan-semiconductor-market-entry.md | ne konkretaus įmonės faktinis pavedimas ir ne vienodi | “konkretaus” is masculine genitive with feminine “įmonės” | ne konkrečios įmonės faktinis pavedimas ir ne vienodi steigimo reikalavimai |
+| 70 | P2 | C | columns-lt/018-taiwan-semiconductor-market-entry.md | arba dislokuoti įrengimo ir priežiūros personalą | “dislokuoti” is a military deployment; English is to station staff | arba laikyti vietoje įrengimo ir priežiūros personalą |
+```
+=== end code=0 2026-09-22 11:17:35 ===

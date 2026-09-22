@@ -1,0 +1,23 @@
+[WO start 2026-09-22 10:55:08]
+The review is in `docs/i18n/global-plan/reviews/native/sk-b.md`. Columns 010–018 are standard Slovak, at about 3/5: usable legal prose, with calques and a few meaning slips. They are not the Czech dumps from part a. Wei Tseng stays feminine, and the four-language lock stays negative. One P1: in column 017, competent offices and the filing route both became „okno“.
+
+Last 15 lines:
+
+```
+| 26 | P2 | B | columns-sk/012-taiwan-overtaking-accident-liability.md | "vyčkať jasného prejavu uvoľnenia" | Czech genitive; Slovak vyčkať takes the accusative. | vyčkať jasný prejav uvoľnenia |
+| 27 | P2 | B | columns-sk/018-taiwan-semiconductor-market-entry.md | "nie je treba investičného povolenia" | Czech „není třeba“ plus a Czech genitive. also 013 „nie je treba uvádzať“, 015 „je však treba nahrať“ | investičné povolenie Odboru preskúmania investícií zásadne netreba |
+| 28 | P2 | B | columns-sk/016-taiwan-inheritance-custody-analysis.md | "vrátane povinného dielu (特留分)" | povinný diel is the Czech term; Slovak is povinný podiel. also the later mentions in the same article | vrátane povinného podielu (特留分) |
+| 29 | P2 | C | columns-sk/010-taiwan-gym-injury-lawsuit.md | "dokumenty, ktoré podopierajú škodu" | podopierať is to prop something up; supporting materials dokladajú the loss. | podklady, ktoré dokladajú uplatňovanú škodu |
+| 30 | P2 | C | columns-sk/010-taiwan-gym-injury-lawsuit.md | "pri nedbanlivosti až 1-násobok sumy skutočnej škody" | “Up to the amount of actual damages” became a hyphenated “1-times”. | pri nedbanlivosti najviac do výšky skutočnej škody |
+| 31 | P2 | C | columns-sk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Použiteľné povinnosti sa môžu líšiť" | použiteľný means usable; the obligations are those that apply. also 014, 016 and 017 | Povinnosti, ktoré sa na vec vzťahujú, sa môžu líšiť |
+| 32 | P2 | C | columns-sk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "prevádzkovať ako samostatné body súladu" | “Operate as compliance workstreams” is not a Slovak sentence. | viesť ako tri samostatné línie: registráciu, PIF a označenie s reklamou |
+| 33 | P2 | C | columns-sk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "TFDA — osobitná zóna registrácie kozmetických produktov" | A website resources section became a “special zone”, which in Slovak reads as a territorial regime. also the PIF „osobitná zóna“ | TFDA — stránka k registrácii kozmetických produktov |
+| 34 | P2 | C | columns-sk/014-taiwan-mandatory-employment-period.md | "Prvé sa posudzuje so stredom na skutočné" | “Centered on” and “see together” are calques. also „Treba spoločne vidieť“ in 014 and 016 | Prvé sa posudzuje so zameraním na skutočné špecializované technické školenie |
+| 35 | P2 | C | columns-sk/016-taiwan-inheritance-custody-analysis.md | "stredisko života v okamihu úmrtia" | Center of life is ťažisko životných záujmov in Slovak private international law. | ťažisko životných záujmov v okamihu úmrtia |
+| 36 | P2 | C | columns-sk/016-taiwan-inheritance-custody-analysis.md | "manželstvo alebo rozvod ustavené v zahraničí" | A marriage is uzavreté and a divorce is vykonaný; ustaviť is to constitute an organ. | manželstvo uzavreté alebo rozvod vykonaný v zahraničí |
+| 37 | P2 | C | columns-sk/016-taiwan-inheritance-custody-analysis.md | "a uchováte potvrdenie o prijatí a kópie" | The checklist switches from „Treba“ into a bare imperative. | a potvrdenie o prijatí aj kópie treba uchovať |
+| 38 | P2 | C | columns-sk/018-taiwan-semiconductor-market-entry.md | "Úradné miesto zapísané podľa článku 386 zákona o spoločnostiach" | A representative office is not an “official post”. | Zastúpenie zapísané podľa článku 386 zákona o spoločnostiach |
+| 39 | P2 | D | columns-sk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "40.000 až 200.000 taiwanských dolárov (新臺幣, TWD)" | Slovak thousands separator is a space; a single period is ambiguous. also 5.000.000 and 1.000.000 in 011, 1.579.589 and 1.570.000 in 010, 25.000.000 and 10.000.000 in 017, 30.000.000 and 100.000.000 in 018 | 40 000 až 200 000 taiwanských dolárov (新臺幣, TWD) |
+| 40 | P2 | D | columns-sk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Ministerstvo zdravotníctva a sociálnych vecí (衛生福利部)" | In Slovakia „sociálnych vecí“ names the labour ministry; this body is health and welfare. | Ministerstvo zdravotníctva a sociálnej starostlivosti (衛生福利部) |
+```
+=== end code=0 2026-09-22 11:06:09 ===

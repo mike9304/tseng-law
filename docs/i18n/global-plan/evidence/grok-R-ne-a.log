@@ -1,0 +1,22 @@
+[WO start 2026-09-22 10:34:50]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+नेपाली समीक्षा `docs/i18n/global-plan/reviews/native/ne-a.md` मा छ। मार्गदर्शन प्याक र स्तम्भ दुवै **4/5**: कानुनी नेपाली ठिक छ (देवानी, फौजदारी, हदम्याद, अपकृत्य), Wei Tseng जहाँ लिङ्ग लाग्छ त्यहाँ स्त्रीलिङ्गमै छन्। पठाउनुअघि मिलाउनुपर्ने ८ वटा अर्थ-त्रुटि छन्, जसमा `मध्यस्थता` (मध्यस्थता =仲裁), `क्षेत्रीय अनुमति`, र संस्थापकलाई एक जना पुरुष जस्तो लेखिएको वाक्य पर्छन्।
+
+```
+| 35 | P2 | B | columns-ne/004-taiwan-company-subsidiary-vs-branch.md | "शाखा आफैमा शेयरधनी (股東) हुँदैनन्" | Plural verb on singular शाखा, and the line reads as “the branch is not a shareholder” rather than “a branch has no shareholders”. | शाखाको आफ्नै शेयरधनी हुँदैन |
+| 36 | P2 | B | columns-ne/004-taiwan-company-subsidiary-vs-branch.md | "मूल कम्पनी कोरियाकी निवासी हो" | की makes the parent company a woman resident of Korea. | मूल कम्पनी कोरियाको निवासी हो |
+| 37 | P2 | D | columns-ne/004-taiwan-company-subsidiary-vs-branch.md | "ताइवानको कानुन मात्र हेर्नु हुँदैन" | The English signpost that Korea is one labelled example, not the only home country, is missing, while §2 opens "कोरियातर्फ". | मूल कम्पनी रहेको देशको लेखा र कर हेर्नुपर्छ। पछि आउने कोरियाली कर उदाहरण हो, सबै विदेशी मूल कम्पनीको नियम होइन। |
+| 38 | P2 | A | columns-ne/004-taiwan-company-subsidiary-vs-branch.md | "क्षेत्रीय वा विदेशी लगानी सीमा" | “Industry rules, foreign-investment restrictions” collapsed into regional-or-foreign investment caps. | उद्योगका नियम, विदेशी लगानीको सीमा |
+| 39 | P2 | C | columns-ne/004-taiwan-company-subsidiary-vs-branch.md | "कारोबारबीच नली कम्पनी (導管公司) छ" | नली is a water pipe; tax Nepali says माध्यम कम्पनी or leaves “conduit company”. | कारोबारबीच माध्यम कम्पनी (導管公司) छ |
+| 40 | P2 | G | columns-ne/004-taiwan-company-subsidiary-vs-branch.md | "Taiwan Stock Exchange — सूचीकरण मापदण्ड" | Link text stays English while neighbouring official links are Nepali; also "Invest Taiwan". | ताइवान स्टक एक्सचेन्ज — सूचीकरण मापदण्ड |
+| 41 | P2 | A | columns-ne/006-taiwan-massage-history-law.md | "दृष्टिविहीन व्यक्तिलाई वृद्धि, दैनिक गतिविधि" | Personal development became वृद्धि, which means growth or an increase. | दृष्टिविहीन व्यक्तिलाई व्यक्तिगत विकास, दैनिक गतिविधि |
+| 42 | P2 | B | columns-ne/007-taiwan-divorce-lawsuit-qna.md | "खालीपन घट्छ।" | ताकि needs the optative; the indicative घट्छ does not complete the purpose clause. | ताकि अनावश्यक दोहोरो प्रक्रिया र कार्यान्वयनको खालीपन घटून्। |
+| 43 | P2 | A | columns-ne/007-taiwan-divorce-lawsuit-qna.md | "भरणपोषण र व्यक्तिगत सम्बन्धमा" | Contact/visitation (the same file’s भेटघाट र सम्पर्क) is later called “personal relationship”; also "व्यक्तिगत सम्बन्ध कार्यान्वयन" and "व्यक्तिगत सम्बन्ध क्रम". | भरणपोषण र भेटघाट-सम्पर्कमा |
+| 44 | P2 | C | columns-ne/007-taiwan-divorce-lawsuit-qna.md | "सम्बन्धविच्छेदको स्थिति-प्रभाव जन्माउँदैन" | “Status effect” is not a phrase a Nepal lawyer uses for the legal effect of divorce. | ताइवानको आपसी सहमति सम्बन्धविच्छेद भएको कानुनी असर जन्माउँदैन |
+| 45 | P2 | E | columns-ne/008-taiwan-labor-severance-law.md | "र कम्पनीले स्पष्टतः दिनुपर्छ।" | The closer states a general duty to pay, which the same article denies for voluntary resignation. | विच्छेद भत्ता, कानुनले लाग्दा, कर्मचारीको अधिकार हो; राजीनामा दिएकै भरमा कम्पनीले दिनैपर्छ भन्ने होइन। |
+| 46 | P2 | B | columns-ne/008-taiwan-labor-severance-law.md | "**आर्थिक बर्खास्तगी**  **資遣** **員工(經濟解僱)**" | Bold markers split the Chinese gloss, so the comparison-table header does not read as one label. | आर्थिक बर्खास्तगी (資遣員工, 經濟解僱) |
+| 47 | P2 | A | columns-ne/009-taiwan-voluntary-resignation-severance.md | "श्रम सम्झौता सामान्य रूपमा अन्त्य गरे पनि" | “Even when the employee terminates” gained “in the ordinary way”, which fights the Article 14 exception. | कर्मचारीले श्रम सम्झौता अन्त्य गरे पनि |
+| 48 | P2 | B | columns-ne/009-taiwan-voluntary-resignation-severance.md | "कर्मचारीलाई विच्छेद भत्ता (資遣費) पाउन सजिलो छैन" | लाई + पाउन is readable as “hard to obtain an employee”; the subject of receiving severance needs ले. | कर्मचारीले विच्छेद भत्ता (資遣費) पाउन सजिलो छैन |
+```
+=== end code=0 2026-09-22 10:49:35 ===

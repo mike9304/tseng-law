@@ -1,0 +1,23 @@
+[WO start 2026-09-22 10:12:42]
+The review is in `docs/i18n/global-plan/reviews/native/lt-a.md`. Guidance reads as professional Lithuanian (4/5); columns are real legal prose with a few client-facing errors (3/5). Wei Tseng is consistently “advokatė” throughout this part.
+
+Nine items should be fixed before a client sees them: “be atlygio” read as unpaid, English “Paralegal” and “Ministry of Education” in the bios, “paleidimas” for company dissolution, “Taipjaus”/“Taijaus” for Taipei, ROC years written as “112 metų”, a broken sentence in column 009, “nesvarbu, ar” where the English means “depending on” fault, and an absolute “the company must pay” in column 008.
+
+```49:63:docs/i18n/global-plan/reviews/native/lt-a.md
+| 30 | P2 | C | columns-lt/002-withdraw-capital-taiwan-company.md | kapitalą mažinantis kapitalo mažinimas | Tautology; the list is trying to name the transaction type | kapitalo mažinimas, ar likutinio turto paskirstymas po likvidavimo |
+| 31 | P2 | A | columns-lt/003-taiwan-traffic-accident-procedure.md | pažymėjus priemonės padėtį ir vietos pėdsakus | “Priemonė” was just used for rescue measures; here it means the vehicle | pažymėjus transporto priemonės padėtį ir pėdsakus vietoje |
+| 32 | P2 | B | columns-lt/003-taiwan-traffic-accident-procedure.md | Kokią žalą galima reikalauti po įvykio? | “Reikalauti” takes the genitive | Kokios žalos galima reikalauti po įvykio? |
+| 33 | P2 | D | columns-lt/003-taiwan-traffic-accident-procedure.md | Dzjajaus apygardos teismo (嘉義) | “Dzjajus” is not the Lithuanian name of Chiayi | Dziayi apygardos teismo (嘉義) |
+| 34 | P2 | C | columns-lt/003-taiwan-traffic-accident-procedure.md | Iš savo patirties žinau, kad draudikai | Q1–Q15 are formal statute Q&A; Q16–Q20 switch to a first-person blog, and the questions are not headings | Iš kontoros praktikos: draudikai dažnai nepakankamai atsižvelgia į šalių padėtį |
+| 35 | P2 | B | columns-lt/004-taiwan-company-subsidiary-vs-branch.md | likusio turto paskirstymą reikia laikytis | “Laikytis” takes the genitive; the whole list is in the accusative | likusio turto paskirstymo reikia laikytis pagal dukterinei bendrovei taikomą eigą |
+| 36 | P2 | A | columns-lt/004-taiwan-company-subsidiary-vs-branch.md | Apyvartos mokesčio įstatymo 10 straipsnis | English link title is the Value-Added and Non-Value-Added Business Tax Act; “pridėtinės vertės” is dropped | Pridėtinės ir nepridėtinės vertės apyvartos mokesčio įstatymo 10 straipsnis |
+| 37 | P2 | D | columns-lt/005-taiwan-company-establishment-advanced-2.md | pervedant kapitalą (資本額) iš Korėjos | Lead how-to is still a Korean bank and Korean FX filing; the parenthetical caveat is right but the steps address a Korean remitter | pervedant kapitalą (資本額) iš užsienio į Taivano bendrovės parengiamąją sąskaitą (Korėjos bankų pavyzdys) |
+| 38 | P2 | B | columns-lt/006-taiwan-massage-history-law.md | asmens be regos negalia (非視障者) | “Be” takes the genitive “negalios”; also “darbuotojus be regos negalia”, “asmenų be regos negalia”, “asmuo be regos negalia” | asmens be regos negalios (非視障者) |
+| 39 | P2 | C | columns-lt/006-taiwan-massage-history-law.md | Ar prisimenate ankstyvojo Taivano tradicinių kirpyklų (理髮廳) laikus? | Asks a Lithuania reader to remember early-Taiwan barbershops | Ar žinomos ankstyvojo Taivano tradicinės kirpyklos (理髮廳)? |
+| 40 | P2 | D | columns-lt/006-taiwan-massage-history-law.md | Panašiai ir Korėjoje, kur daugelis asmenų su regos negalia pragyvena iš masažo | A long block of current Korean criminal penalties is written as the reader’s comparison | Panašiai kai kuriose valstybėse, tarp jų Korėjoje, masažuotojo veikla tebėra susieta su regos negalia |
+| 41 | P2 | B | columns-lt/007-taiwan-divorce-lawsuit-qna.md | yra kiekviena savarankiškos sąlygos | Agreement fails: “kiekviena” nominative feminine, “sąlygos” genitive | kiekviena yra savarankiška sąlyga |
+| 42 | P2 | B | columns-lt/008-taiwan-labor-severance-law.md | Sunkumas darbdaviui | The cells under this masculine noun are “Paprasta”, “Sunku”, “Paprasta” (feminine / adverb) | Sudėtingumas darbdaviui: paprastas / sudėtingas / paprastas |
+| 43 | P2 | G | columns-lt/008-taiwan-labor-severance-law.md | Aš, OOO, savo noru sumažinu pareigas ir atlyginimą | “OOO” is a Korean name blank left in Latin letters | Aš, (vardas, pavardė), savo noru sutinku su žemesnėmis pareigomis ir mažesniu atlyginimu |
+| 44 | P2 | C | columns-lt/008-taiwan-labor-severance-law.md | Daugelis Jūsų tai jau žinote. | Spoken blog, one sentence per line, on a law-firm page; the same layout runs through 006, 008 and 009 | Daugelis skaitytojų jau žino, kad kitose valstybėse išeitinė išmoka mokama ir išeinant savo noru. |
+```
+=== end code=0 2026-09-22 10:26:45 ===

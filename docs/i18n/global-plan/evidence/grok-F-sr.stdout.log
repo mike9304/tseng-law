@@ -1,0 +1,7 @@
+[WO start 2026-09-22 11:44:32]
+The Serbian native-review fixes are in the 18 columns and the Serbian guidance strings. The log is `docs/i18n/global-plan/evidence/grok-F-sr.log`. Nothing was committed.
+
+Checker `summary PASS 18/18`, review markers 0, `TSC_OK`, vitest 160 files / 3202 tests passed.
+
+Supervisor wording was used where it overrides the reviewer: evidencija prebivališta, matična kompanija / sedište, Odeljenje za pregled i odobravanje investicija, skladištenje u oblaku, and krivična prijava oštećenog. Left unchanged: Hangul `url` values, član 10 versus the `flno=3` link, the R3-softened severance sentence, and the pinned `TWD 1.57M`. `llms-txt.ts` was already acceptable and was not edited.
+=== end code=0 2026-09-22 12:09:40 ===

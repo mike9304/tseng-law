@@ -1,0 +1,7 @@
+[WO start 2026-09-22 11:49:23]
+Lithuanian native-review fixes are in the 18 columns and the Lithuanian guidance strings. No other locale was edited, and nothing was committed.
+
+The column checker is `summary PASS 18/18`, review markers are 0, `tsc` reports `TSC_OK`, and vitest reports 160 files / 3202 tests passed. The write-up is in `docs/i18n/global-plan/evidence/grok-F-lt.log`.
+
+Two reviewer suggestions were not taken because they conflict with the fix rules: space thousands and a rewritten `TWD 1.57M`, and extra Gregorian years on ROC citations. `解散` is **išformavimas** so it does not collide with `清算` (likvidavimas). The fine in column 006 stays `40.000 TWD`; the word order was adjusted because the checker was reading `atitinkamai 40.000` as a date.
+=== end code=0 2026-09-22 12:15:35 ===

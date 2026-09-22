@@ -1,0 +1,23 @@
+[WO start 2026-09-22 10:49:57]
+The review is in `docs/i18n/global-plan/reviews/native/ne-b.md`. Columns 010–018 score **3/5**: 014 and 016 read as professional Nepali, while 013 and 015 are line-broken notes and several legal terms shift the meaning. Thirteen P1 items, including mediation called मध्यस्थता, business items called शाखा, household moving called स्थानान्तरण, and mainland China called महादेश. No masculine form for Wei Tseng. The required consultation limits stay negative.
+
+Last 15 lines:
+
+```
+| 22 | P2 | A | columns-ne/012-taiwan-overtaking-accident-liability.md | "यस फर्मले निपटारेको बेनामी दुर्घटना मुद्दा" | निपटारेको is case disposal or settlement, not “handled”. | यस फर्मले हेरेको बेनामी दुर्घटना मुद्दा |
+| 23 | P2 | C | columns-ne/012-taiwan-overtaking-accident-liability.md | "मोटरसाइकलसँग पर्याप्त ब्रेक मार्जिन थिएन" | English “margin” left in a driving sentence; also "ब्रेक मार्जिन लगभग नरहने" and "सुरक्षा मार्जिन". | मोटरसाइकलसँग ब्रेक लगाउने पर्याप्त समय थिएन |
+| 24 | P2 | A | columns-ne/013-taiwan-company-establishment-advanced-1.md | "जमानत (押金) अपेक्षाकृत कम छ" | Rental security deposit is called जमानत, which in 016 and 018 correctly means a guarantee. | धरौटी (押金) अपेक्षाकृत कम छ |
+| 25 | P2 | C | columns-ne/013-taiwan-company-establishment-advanced-1.md | "आंशिककालीन काम सहित विविध कार्य अनुभव" | आंशिककालीन is not a Nepali word for part-time work. | आंशिक समयको काम सहित विविध कार्य अनुभव |
+| 26 | P2 | C | columns-ne/014-taiwan-mandatory-employment-period.md | "हुँदैन स्वतः शून्य।" | “It is not automatically void” is copied in English word order; the FAQ’s opening हुँदैन is fine. | स्वतः शून्य हुँदैन। |
+| 27 | P2 | C | columns-ne/014-taiwan-mandatory-employment-period.md | "पूर्व सूचना अवधि सादृश्य लागू हुन्छ।" | Apply-by-analogy (準用) is सरह लागू in Nepali statutes. | पूर्व सूचना अवधि सरह लागू हुन्छ। |
+| 28 | P2 | A | columns-ne/015-taiwan-company-setup-pitch-location.md | "ताइवानका स्थानीय सरकारका अपेक्षा फरक छन्" | Requirements became expectations; also 016 "नोटरी अपेक्षा", 018 "ग्राहकका अपेक्षा", "स्थापना अपेक्षा" and "दर्ता अपेक्षा". | ताइवानका स्थानीय सरकारका आवश्यकता फरक छन् |
+| 29 | P2 | C | columns-ne/016-taiwan-inheritance-custody-analysis.md | "बाँकी परिवारका लागि कानुनी मार्गदर्शन" | Surviving families became “the leftover family” in the title. | पछि रहेका परिवारका लागि कानुनी मार्गदर्शन |
+| 30 | P2 | G | columns-ne/016-taiwan-inheritance-custody-analysis.md | "जिन भुक्तानीका लाभार्थी छुट्टै निर्दिष्ट छन्" | जिन is the Hindi relative; Nepali is जुन or जसका. | जुन भुक्तानीका लाभार्थी छुट्टै तोकिएका छन् |
+| 31 | P2 | B | columns-ne/017-taiwan-logistics-business-setup.md | "फिर्ताबाट रद्दता र सवारी दर्तामा" | रद्दता is not a Nepali word for surrender-and-cancel of plates. | प्लेट फिर्ता गरेर रद्द गर्ने काम र सवारी दर्तामा |
+| 32 | P2 | G | columns-ne/017-taiwan-logistics-business-setup.md | "सूचीकृत वा ओभर-द-काउन्टर धितोपत्रमा लगानी" | Over-the-counter is left in English in a client-facing sentence. | सूचीकृत वा काउन्टरबाहिरको धितोपत्रमा लगानी |
+| 33 | P2 | A | columns-ne/018-taiwan-semiconductor-market-entry.md | "लेखापाल (會計師) ले पुँजी जाँच्छ" | The CPA who verifies capital is a bookkeeper here; the same file’s लेखा परीक्षण प्रमाणीकरण is the right role. | लेखापरीक्षक (會計師) ले पुँजी जाँच्छ |
+| 34 | P2 | A | columns-ne/018-taiwan-semiconductor-market-entry.md | "विलय, अधिग्रहण वा सूचीकरण अपेक्षा राख्ने" | Listing or emerging-market registration lost the emerging-market (興櫃) path. | विलय, अधिग्रहण, सूचीकरण वा उदीयमान बजार दर्ताको अपेक्षा राख्ने |
+| 35 | P2 | C | columns-ne/018-taiwan-semiconductor-market-entry.md | "शासन सरलतर, तर अंश हस्तान्तरण बढी बन्द" | सरलतर is a Sanskrit comparative; Nepali says अझ सरल. | शासन अझ सरल, तर अंश हस्तान्तरण बढी बन्द |
+| 36 | P2 | A | columns-ne/018-taiwan-semiconductor-market-entry.md | "माथिका कुरा दर्ता-मार्गका सामान्य रूपरेखा हुन्।" | “The foregoing is contract-design advice” became an outline of registration routes. | माथिको कुरा सम्झौताको ढाँचाबारे सल्लाह हो। |
+```
+=== end code=0 2026-09-22 10:58:22 ===

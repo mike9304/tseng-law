@@ -1,0 +1,25 @@
+[WO start 2026-09-22 10:42:10]
+Columns 010–018 are usable legal Bengali at about 3/5, with ten must-fix meaning errors. The review is in `docs/i18n/global-plan/reviews/native/bn-b.md`.
+
+The licensing test in 017 calls carriage for reward `প্রতিফল` (a reflection); the same word is payment in 011 and consideration in 014. Grandparents in 016 are only `দাদা-দাদি`, choice-of-law is written as articles of association, and over-the-counter securities are “outside the counter.” Wei Tseng stays `আইনজীবী`, and the consultation limits stay negative. Column 012 is the cleanest file.
+
+Last 15 lines of the file:
+
+```
+| 35 | P2 | A | columns-bn/016-taiwan-inheritance-custody-analysis.md | "দাবির কালসীমা জাতীয়" | “Expiration of a claim” coined as কালসীমা, which is not a Bengali legal word. | দাবির মেয়াদ শেষ হওয়া জাতীয় |
+| 36 | P2 | C | columns-bn/016-taiwan-inheritance-custody-analysis.md | "উত্তরাধিকার খোলা মাত্রে" | “When the succession opens” calqued as opening a door. Also “সংরক্ষকত্ব খোলার শর্ত”. | উত্তরাধিকার শুরু হওয়া মাত্রে |
+| 37 | P2 | A | columns-bn/016-taiwan-inheritance-custody-analysis.md | "নাবালকের সংরক্ষকত্ব (未成年人監護)" | The running term is সংরক্ষক; clients know অভিভাবক. The article itself once glosses হেফাজত ও অভিভাবকত্ব. | নাবালকের অভিভাবকত্ব (未成年人監護) |
+| 38 | P2 | C | columns-bn/017-taiwan-logistics-business-setup.md | "মাপ বদলায় এতে যে অর্পণকারী" | “The analysis turns on whether” does not parse. Also the same sentence in the body. | বিচার এখানে নির্ভর করে যে অর্পণকারী |
+| 39 | P2 | B | columns-bn/017-taiwan-logistics-business-setup.md | "প্রাকৃতিক ব্যক্তি চালানো ছোট মালবাহী যান" | Missing genitive; “individual-operated” does not attach. | প্রাকৃতিক ব্যক্তির চালানো ছোট মালবাহী যান |
+| 40 | P2 | A | columns-bn/017-taiwan-logistics-business-setup.md | "চীন মহাদেশ থেকে বিনিয়োগ" | Mainland Area became “the continent of China”, and the 大陸地區 gloss is missing. | মূল ভূখণ্ড (大陸地區) থেকে বিনিয়োগ |
+| 41 | P2 | A | columns-bn/017-taiwan-logistics-business-setup.md | "অনুমতির নাম ধার (借牌)" | License-plate lending became borrowing a name. | অনুমতির নম্বরপ্লেট ধার (借牌) |
+| 42 | P2 | A | columns-bn/017-taiwan-logistics-business-setup.md | "মঞ্চ পরিচালনা হিসেবে" | A digital platform became a stage. | প্ল্যাটফর্ম পরিচালনা হিসেবে |
+| 43 | P2 | C | columns-bn/017-taiwan-logistics-business-setup.md | "অবস্থানের যোগ্যতা আলাদা যাচাই" | Immigration status calqued as “location eligibility”. Also “পরের অবস্থান প্রক্রিয়া”. | অভিবাসন মর্যাদা আলাদা যাচাই |
+| 44 | P2 | B | columns-bn/017-taiwan-logistics-business-setup.md | "যান, মাল ও দায় বিমা" | বীমা misspelled বিমা. Also the other বিমা lines here and “শ্রম বিমা” in 018. 010 spells বীমা. | যান, মাল ও দায় বীমা |
+| 45 | P2 | A | columns-bn/018-taiwan-semiconductor-market-entry.md | "হিসাবরক্ষকের নিরীক্ষা সত্যায়ন (會計師查核簽證)" | A CPA audit became a bookkeeper’s certification. Also “হিসাবরক্ষক (會計師) মূলধন যাচাই”. | চার্টার্ড অ্যাকাউন্ট্যান্টের নিরীক্ষা সত্যায়ন (會計師查核簽證) |
+| 46 | P2 | G | columns-bn/018-taiwan-semiconductor-market-entry.md | "পাবলিক অফার না করা কোম্পানি" | Public offering left in English. The later gloss 公開發行公司 does not repair this line. | যে কোম্পানি প্রকাশ্যে শেয়ার ইস্যু করে না |
+| 47 | P2 | A | columns-bn/018-taiwan-semiconductor-market-entry.md | "তালিকাভুক্তি-নিবন্ধন মাথায় থাকা" | “Listing or emerging-market registration” collapsed, and the emerging market dropped out. | তালিকাভুক্তি বা উদীয়মান বাজারে নিবন্ধন মাথায় থাকা |
+| 48 | P2 | A | columns-bn/018-taiwan-semiconductor-market-entry.md | "প্রধান প্রতিষ্ঠান ও অবদানকারীদের মূল তথ্য" | Investors became “contributors”. | প্রধান প্রতিষ্ঠান ও বিনিয়োগকারীদের মূল তথ্য |
+| 49 | P2 | C | columns-bn/010-taiwan-gym-injury-lawsuit.md | "হুবহু লাগানো যায় না" | লাগানো is colloquial for “apply”. Also 014 “হুবহু লাগাবেন না” and 016 “হুবহু তুলে লাগালে”. | হুবহু প্রয়োগ করা যায় না |
+```
+=== end code=0 2026-09-22 10:57:00 ===

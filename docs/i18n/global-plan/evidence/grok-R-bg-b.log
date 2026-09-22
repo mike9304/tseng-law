@@ -1,0 +1,25 @@
+[WO start 2026-09-22 10:55:42]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+The review is in `docs/i18n/global-plan/reviews/native/bg-b.md`. Columns 010–018 score **4/5**: standard Bulgarian, formal Ви, with eight items that should be fixed before a client sees them. Column 012 has no findings. Wei Tseng stays feminine (`Адвокатка`, `съгласна съм`). The page does not offer a consultation in Bulgarian.
+
+Last 15 lines:
+
+```
+| 25 | P2 | C | columns-bg/014-taiwan-mandatory-employment-period.md | "професионалността и техничността" | "Техничността" is not a Bulgarian noun for technical character | професионалният и техническият характер |
+| 26 | P2 | B | columns-bg/015-taiwan-company-setup-pitch-location.md | "“(臺北市營業場所協助查詢服務作業須知)" | A no-break space stands before this closing quotation mark | FL080687)“ (臺北市營業場所協助查詢服務作業須知) |
+| 27 | P2 | C | columns-bg/015-taiwan-company-setup-pitch-location.md | "препис от регистрацията на сградата, втори вид (тип 2)" | "Вид" and "тип 2" say the same thing twice | препис от втория вид от регистъра на сградата (建物登記第二類謄本) |
+| 28 | P2 | C | columns-bg/016-taiwan-inheritance-custody-analysis.md | "упражняване или носене на правата и задълженията" | "Носене на права" calques a German split; rights are exercised and duties are borne. Also the opening | упражняване на правата и понасяне на задълженията |
+| 29 | P2 | A | columns-bg/016-taiwan-inheritance-custody-analysis.md | "законно изключените статии" | "Статии" means articles of a statute; EN statutory exclusions are excluded assets. Also the FAQ and §3 | законно изключените имущества |
+| 30 | P2 | C | columns-bg/016-taiwan-inheritance-custody-analysis.md | "върху отношението на представяне" | Opaque. The same article already says "наследяване по право на представяне" | върху наследяването по право на представяне |
+| 31 | P2 | D | columns-bg/016-taiwan-inheritance-custody-analysis.md | "органа по семейна регистрация / домакинска регистрация (戶籍)" | The slash offers two names; 戶籍 is household registration. Also "семейна/домакинска регистрация" in 017 | органа по домакинска регистрация (戶籍) |
+| 32 | P2 | A | columns-bg/017-taiwan-logistics-business-setup.md | "спедицията (експедиция на товари, 運送承攬)" | "Експедиция" is a dispatch or an expedition; "спедиция" is already the right word for freight forwarding. Also the opening | спедицията (превозно посредничество, 運送承攬) |
+| 33 | P2 | A | columns-bg/017-taiwan-logistics-business-setup.md | "най-малко 8 единици" | EN is eight freight trucks; "единици" does not say what is counted. Also "5 единици" | най-малко 8 товарни автомобила |
+| 34 | P2 | A | columns-bg/017-taiwan-logistics-business-setup.md | "нарушенията и недоимъците" | Arrears are unpaid sums; "недоимък" means a shortage of goods or means | нарушенията и непогасените задължения |
+| 35 | P2 | A | columns-bg/017-taiwan-logistics-business-setup.md | "удостоверението за вписване на търговеца (營業執照)" | 營業執照 is the operating license. Company registration is already a separate step in the same article | лицензът за извършване на дейността (營業執照) |
+| 36 | P2 | A | columns-bg/017-taiwan-logistics-business-setup.md | "предоставяне на удостоверението под чуждо име (借牌)" | 借牌 is letting someone haul under your plate or license, not a false personal name | заемане на чужд лиценз или чужда табела (借牌) |
+| 37 | P2 | A | columns-bg/018-taiwan-semiconductor-market-entry.md | "Посещават ли работници на главното седалище" | No destination. EN asks whether head-office staff will travel to Taiwan | Идват ли в Тайван работници на главното седалище |
+| 38 | P2 | A | columns-bg/018-taiwan-semiconductor-market-entry.md | "или листване и регистрация" | Drops the emerging-market registration; "регистрация" alone does not say which market | или листване, или регистрация на нововъзникващия пазар |
+| 39 | P2 | C | columns-bg/018-taiwan-semiconductor-market-entry.md | "не са еднообразно изискване за учредяване" | "Еднообразно" calques "uniform", and plural "те" is predicated with a singular "изискване" | и не важат еднакво за всяко учредяване |
+```
+=== end code=0 2026-09-22 11:07:32 ===

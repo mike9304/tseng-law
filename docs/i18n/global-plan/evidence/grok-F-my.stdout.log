@@ -1,0 +1,5 @@
+[WO start 2026-09-22 11:10:10]
+The Burmese fix lane is applied. The checker is `summary PASS 18/18`, review markers are 0, `tsc` reports `TSC_OK`, and vitest reports 160 files / 3202 tests passed. Nothing was committed.
+
+The report is in `docs/i18n/global-plan/evidence/grok-F-my.log`. Structural blog merges, extra Gregorian years, the pinned `TWD 1.57M` figure, and the Hangul `url` values were left as the rulebook requires.
+=== end code=0 2026-09-22 11:33:24 ===

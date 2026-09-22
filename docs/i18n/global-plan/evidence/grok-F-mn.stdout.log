@@ -1,0 +1,12 @@
+[WO start 2026-09-22 11:30:07]
+The Mongolian native-review fixes are in the columns and the Mongolian guidance strings. The log is `docs/i18n/global-plan/evidence/grok-F-mn.log`. Nothing was committed.
+
+Every P1 and P2 row is applied except the ones the supervisor or the checker rules out: the pinned `TWD 1.57M` figure, space-thousands and decimal commas, a Gregorian `(2020)` on the ROC year 109, Hangul `url` values, and merges that would change block counts. Consultation stays English, Chinese, Japanese, and Korean. Wei Tseng is not labelled with a forced feminine marker.
+
+Verification:
+
+- Column checker: `summary PASS 18/18`
+- `[변호사 검수 필요]`: 0
+- `TSC_OK`
+- Vitest: 160 files, 3202 tests passed
+=== end code=0 2026-09-22 11:59:31 ===

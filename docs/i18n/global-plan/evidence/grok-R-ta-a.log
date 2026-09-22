@@ -1,0 +1,26 @@
+[WO start 2026-09-22 10:12:24]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
+Retry attempt 2...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 3)...
+Retry attempt 3...
+தமிழ் மதிப்பாய்வு `docs/i18n/global-plan/reviews/native/ta-a.md` இல் உள்ளது. வழிகாட்டல் தொகுப்பும் கட்டுரைகள் 001–009-உம் 3/5. எட்டு P1: வாடிக்கையாளர் உறவு "கட்சிக்காரர்" ஆக மாறியது, சிறுவர் பாதுகாப்பு, நிறுவனம்/நிறுவல், இல்லாத சொல் "வழக்குரை", பயனாளி உரிமையாளர், அனுபவம் "பாதை" ஆக மாறியது, ஊட்டம் (பராமரிப்பு அல்ல), தாய் மசாஜ் (தாய்லாந்து மசாஜ் அல்ல). Wei Tseng-க்கு ஆண்பால் வடிவம் இல்லை. "பரிமாற்ற மாணவி" மற்றும் 003-இல் "கையாண்டவள்" சரியான பெண்பால்.
+
+```
+| 25 | P2 | C | ta-guidance.txt | "சட்டம் மற்றும் நிதி இரட்டைப் பாதையுடன்" | Doppelstudium calqued as a “double path”, not a double major. | சட்டமும் நிதியும் இரட்டை முதன்மைப் பாடமாக |
+| 26 | P2 | B | columns-ta/001-taiwan-company-establishment-basics.md | "நிலையா முடிவையும் வாக்குறுதி அளிக்காது." | நிலையா is not the adjective “fixed”. Also 002 "நிலையா காலத்தை", 007 "நிலையா முடிவு நேரத்தை" / "ஒரு நிலையா பட்டியல்". | உறுதியான முடிவையும் வாக்குறுதி அளிக்காது. |
+| 27 | P2 | B | columns-ta/001-taiwan-company-establishment-basics.md | "இடத்தின் ஏற்புடையை எழுத்துப்பூர்வமாகப் பதிவு செய்வது" | ஏற்புடைமை misspelled. Also 002 "விலையின் ஏற்புடையும்". | இடத்தின் ஏற்புடைமையை எழுத்துப்பூர்வமாகப் பதிவு செய்வது |
+| 28 | P2 | A | columns-ta/001-taiwan-company-establishment-basics.md | "பங்களிப்பின் பொருள் மற்றும் வணிகத் திட்டம்" | “Investee” became “the subject of the contribution”. | முதலீடு பெறும் நிறுவனம் மற்றும் வணிகத் திட்டம் |
+| 29 | P2 | D | columns-ta/001-taiwan-company-establishment-basics.md | "விற்பனை குறைந்தது TWD 3,000,000" | Western 3,000,000 grouping; Tamil Nadu / Sri Lanka group as 30,00,000. Also TWD 1,000,000 and TWD 2,500,000 in 002 and 003. | விற்பனை குறைந்தது TWD 30,00,000 |
+| 30 | P2 | D | columns-ta/007-taiwan-divorce-lawsuit-qna.md | "112 ஆம் ஆண்டு தீர்ப்புக் கூறு 4-இல்" | ROC year 112 reads as the year 112. Also 003 citations "ஆண்டு 109" and "ஆண்டு 112". | 112 ஆம் ஆண்டு (கி.பி. 2023) தீர்ப்புக் கூறு 4-இல் |
+| 31 | P2 | C | columns-ta/007-taiwan-divorce-lawsuit-qna.md | "உரிமைகளையும் கடமைகளையும் செலுத்துதல் அல்லது ஏற்றல்" | 行使或負擔 calqued as “driving/paying or loading”; custody is not recoverable without the gloss. | உரிமைகளையும் கடமைகளையும் செயல்படுத்துதல் அல்லது ஏற்றுக்கொள்ளுதல் |
+| 32 | P2 | A | columns-ta/003-taiwan-traffic-accident-procedure.md | "அது ஓட்டமாகக் கருதப்படாது." | Hit-and-run (逃逸) shortened to ஓட்டம், which means a drive or a flow. | அது விபத்து இடத்தை விட்டு ஓடுதலாகக் கருதப்படாது. |
+| 33 | P2 | D | columns-ta/005-taiwan-company-establishment-advanced-2.md | "கொரியாவிலுள்ள உங்கள் முதன்மை வங்கியிடம் தகவல் பெறுங்கள்." | The heading labels Korea, but “your bank” still addresses a Korea-based reader. | கொரியாவிலிருந்து அனுப்புவோர், கொரியாவிலுள்ள தங்கள் வங்கியிடம் தகவல் பெற வேண்டும். இந்தப் படி இந்திய அல்லது இலங்கை வங்கி வழி அல்ல. |
+| 34 | P2 | G | columns-ta/008-taiwan-labor-severance-law.md | "대만-노동법：대만에서-퇴직금-받기-어렵다고" | Public URL is Hangul with a fullwidth colon. Also 009 Hangul slug. Do not rewrite the url key here. | url புலத்தை மாற்ற வேண்டாம். வாசகருக்குத் தெரியும் இணைப்பில் கொரிய எழுத்தும் முழு அகல முக்கால்புள்ளியும் இருக்கின்றன; தனி slug முடிவு தேவை. |
+| 35 | P2 | B | columns-ta/008-taiwan-labor-severance-law.md | "員工(經濟解僱)" | Chinese gloss is split and jammed onto the Tamil header, so the term does not read. | பொருளாதார நீக்கம் (資遣，經濟解僱) |
+| 36 | P3 | C | ta-guidance.txt | "பெறுகை எண்" | Bureaucratic “receipt” a client will not recognise on a form. | ஒப்புகை எண் |
+| 37 | P3 | C | columns-ta/007-taiwan-divorce-lawsuit-qna.md | "தைவான் விவாகரத்தின் 3 பாதைகளும்" | Formal prose would write the number in words. | தைவான் விவாகரத்தின் மூன்று பாதைகளும் |
+| 38 | P3 | B | ta-guidance.txt | "உங்கள் உரை வைக்கப்பட்டிருக்கும்; தொலைவதில்லை." | Grammatical but telegrammatic; a native writes the perfect. | உங்கள் உரை வைக்கப்பட்டிருக்கும்; தொலைந்துவிடவில்லை. |
+```
+=== end code=0 2026-09-22 10:26:31 ===

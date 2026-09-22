@@ -1,0 +1,22 @@
+[WO start 2026-09-22 11:06:34]
+The review is in `docs/i18n/global-plan/reviews/native/et-b.md`. Columns 010–018 score 3/5: 13 things a client would misread, and 26 that a native editor would rewrite. No masculine form for Wei Tseng. The overtaking column (012) is the one closest to publishable Estonian.
+
+Last 15 lines:
+
+```
+| 26 | P2 | B | columns-et/016-taiwan-inheritance-custody-analysis.md | "kuidas lapsele kuuluva vara kaitstakse" | The impersonal verb needs a partitive object. “Kuuluva” is genitive, so the clause does not parse. | kuidas lapsele kuuluvat vara kaitstakse |
+| 27 | P2 | C | columns-et/016-taiwan-inheritance-custody-analysis.md | "jääkvara vahe jaotamisele" | In an inheritance article “jääkvara” is the residual estate. English is the marital residual-property claim (剩餘財產差額分配). | õigus abielu ajal soetatud vara jäägi vahe jaotamisele (剩餘財產差額分配) |
+| 28 | P2 | B | columns-et/010-taiwan-gym-injury-lawsuit.md | "juhtumi põhjal, kes sai Taiwanis jõusaalis" | “Kes” attaches to “juhtum”, so the case, not the student, is the one who was injured. | juhtumi põhjal, kus Korea üliõpilane sai Taiwanis jõusaalis |
+| 29 | P2 | C | columns-et/010-taiwan-gym-injury-lawsuit.md | "Milliseid hüvitise kirjeid võib jõusaalilt nõuda?" | “Kirje” is a ledger line. English is categories of damages. Also “hüvitise kirjed” in the title and the opening. | Milliseid kahjuliike võib jõusaalilt nõuda? |
+| 30 | P2 | A | columns-et/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "ravimvorm (劑型)" | “Ravimvorm” is a pharmaceutical dosage form. In a cosmetics article it makes the product sound like a medicine. | tootevorm (劑型) |
+| 31 | P2 | C | columns-et/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Välismaine kosmeetikamärk" | “Märk” alone is a sign. A brand in this register is “bränd”; “kaubamärk” is the trademark, already used later for 商標. Throughout 011. | Välismaine kosmeetikabränd |
+| 32 | P2 | C | columns-et/013-taiwan-company-establishment-advanced-1.md | "Viimasel ajal on paljud asutanud äriühingu (公司) Taiwanis ning saanud tööloa" | Each sentence is its own paragraph, leftover blog layout. The same layout runs through 015. | Viimasel ajal on paljud asutanud Taiwanis äriühingu (公司) ning saanud tööloa ja välismaalase elamiskaardi (外僑居留證). Asutamise käigus sageli esitatud küsimused on koondatud allpool. |
+| 33 | P2 | A | columns-et/017-taiwan-logistics-business-setup.md | "on aktsiate üleandmise tasu, mitte kapital" | “Üleandmise tasu” is a transfer fee. English: the funds remitted for the shares are the purchase price, not paid-in capital. | Aktsiate eest ülekantud summa on ostuhind, mitte sissemakstud kapital. |
+| 34 | P2 | A | columns-et/017-taiwan-logistics-business-setup.md | "kapitali-vara ja parkimisrajatiste muudatused" | The hyphen makes one compound. English is changes to capital or assets, and to parking facilities. | kapitali või vara ja parkimisrajatiste muudatused |
+| 35 | P2 | C | columns-et/018-taiwan-semiconductor-market-entry.md | "kehtib 1 hääl iga 1 osaniku kohta" | Digit-memo style. Also 012 (“2 või enam sõidukit”), 016 (“pärib 3 isikut”) and 018 (“1 või enama”, “1 või 2 juhatuse liiget”). | iga osaniku kohta on üks hääl |
+| 36 | P2 | A | columns-et/018-taiwan-semiconductor-market-entry.md | "Kui kaup Taiwani klientidega algab" | “Kaup” is goods. English: once sales to Taiwan customers begin. | Kui müük Taiwani klientidele algab |
+| 37 | P2 | B | columns-et/018-taiwan-semiconductor-market-entry.md | "või noteerimine on ette näha" | “On ette näha” is an infinitive, so the heading does not parse. English: a possible listing. | kui soovitakse kaasata teisi investoreid või noteerimine on kavas |
+| 38 | P2 | A | columns-et/018-taiwan-semiconductor-market-entry.md | "olla ilma juhatuseta ning tal võib olla ainult 1 või 2 juhatuse liiget" | A company with no board is then given board members. English “directors” here are juhatajad, not a juhatus. | põhikirjaga olla ilma juhatuseta ning tal võib olla ainult üks või kaks juhatajat |
+| 39 | P2 | A | columns-et/018-taiwan-semiconductor-market-entry.md | "või hilisemat ühinemist, omandamist või noteerimist" | English also names emerging-market registration beside listing. That second route is dropped. | või hilisemat ühinemist, omandamist, noteerimist või registreerimist tekkival väärtpaberiturul |
+```
+=== end code=0 2026-09-22 11:19:37 ===

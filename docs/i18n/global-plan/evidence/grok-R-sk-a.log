@@ -1,0 +1,29 @@
+[WO start 2026-09-22 10:12:32]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
+Retry attempt 2...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 3)...
+Retry attempt 3...
+The review is in `docs/i18n/global-plan/reviews/native/sk-a.md`. The guidance pack is usable legal Slovak (4/5). Columns 001, 002 and 004 are the strong set. Columns 003, 007 and the body of 008 are Czech, and 008–009 still have Hangul URLs.
+
+Last 15 lines:
+
+```
+| 23 | P2 | C | sk-guidance.txt | "od použiteľných predpisov a od okamihu" | „od okamihu“ has no complement, so the timing condition is unfinished. also the disclaimer | od použiteľných predpisov a od rozhodného času |
+| 24 | P2 | C | sk-guidance.txt | "hľadať ďalšie cesty vo svojom mieste" | „vo svojom mieste“ is a calque of „in your location“. | hľadať súbežne aj inú pomoc tam, kde sa nachádzate |
+| 25 | P2 | C | sk-guidance.txt | "podľa práva iného poriadku než taiwanského" | „právny poriadok“ is split, so the phrase sounds translated. | podľa iného právneho poriadku než taiwanského |
+| 26 | P2 | C | sk-guidance.txt | "táto stránka nie je krokom porady" | „krok porady“ is a calque of „a consultation step“. | táto stránka nenahrádza poradu |
+| 27 | P2 | C | sk-guidance.txt | "medziregionálnu výmenu prostredníctvom systémov dokumentov a pracovných postupov, na základe informatiky" | The bio sentence is a word-for-word stack and does not say what the person does. | Na základe vzdelania v informatike podporuje výmenu medzi regiónmi systémami dokumentov a pracovnými postupmi. |
+| 28 | P2 | C | columns-sk/002-withdraw-capital-taiwan-company.md | "posledné zápisové zmienky" | zmienka is a mention, not a registered particular. also „zmlúv v behu“ and „pohľadávky a dlhy v behu“ for ongoing items | posledné zapísané údaje |
+| 29 | P2 | C | columns-sk/004-taiwan-company-subsidiary-vs-branch.md | "Usporiadateľná stanovami, okruhom akcionárov a paktom akcionárov" | usporiadateľná is not a word a Slovak lawyer would write. | Možno ju upraviť stanovami, zložením akcionárov a akcionárskou zmluvou |
+| 30 | P2 | C | columns-sk/004-taiwan-company-subsidiary-vs-branch.md | "Podniky zamerané na zisk, ktorých sídlo sa nachádza mimo Taiwanu" | Calque of profit-seeking enterprise, beside the better „ziskových podnikov“ used for the tax name. also the same phrase in §2 | Ziskové podniky, ktorých sídlo sa nachádza mimo Taiwanu |
+| 31 | P2 | C | columns-sk/005-taiwan-company-establishment-advanced-2.md | "A. Prvý zamestnanec: žiadosť sa podáva ako vedúci" | Leftover answer label „A.“ in front of the Slovak answer. | Prvý zamestnanec: žiadosť sa podáva ako vedúci |
+| 32 | P2 | C | columns-sk/006-taiwan-massage-history-law.md | "Pamätáte si časy tradičných kaderníctiev (理髮廳) z počiatkov Taiwanu?" | Blog chat, not a firm column; also „s behom času“ (beh is a run) and „Pýtalo sa napríklad“. | Zákon o blahobyte osôb so zdravotným postihnutím (殘障福利法) z roku 1980 vyhradil povolanie maséra osobám so zrakovým postihnutím. |
+| 33 | P2 | C | columns-sk/009-taiwan-voluntary-resignation-severance.md | "ktorého odmena sa počíta od kusa (按件計酬)" | „od kusa“ is Czech genitive; Slovak piece-rate is podľa počtu kusov. | ktorého odmena sa počíta podľa počtu kusov (按件計酬) |
+| 34 | P2 | C | columns-sk/009-taiwan-voluntary-resignation-severance.md | "Zamestnanec preto musí dobre ovládať lehotu." | „ovládať lehotu“ is not how Slovak says watch a deadline. | Zamestnanec si preto musí túto lehotu ustrážiť. |
+| 35 | P2 | D | sk-guidance.txt | "vo výške TWD 1.57M" | English decimal and the abbreviation M; Slovak uses a comma and mil. also period thousands in 001 „TWD 500.000“, 002, 004, 006 | vo výške 1,57 mil. TWD |
+| 36 | P2 | D | sk-guidance.txt | "Súkromie" | Bare „Privacy“; a Slovak reader expects Ochrana osobných údajov on this page and in the form consent. | Ochrana osobných údajov |
+| 37 | P2 | G | sk-guidance.txt | "Paralegal" | The role line is only English. also „Senior Paralegal“, „(Managing Attorney)“, „(Korea Operations Manager)“ and the English degree line „Magister (M.S.), Institute of Finance, National Taiwan University“ | Právna asistentka |
+```
+=== end code=0 2026-09-22 10:27:25 ===

@@ -1,0 +1,21 @@
+[WO start 2026-09-22 10:46:20]
+کالم 010–018 کا جائزہ `docs/i18n/global-plan/reviews/native/ur-b.md` میں ہے۔ قدرتی پن **3/5** ہے۔ گیارہ P1 ہیں: `ڈگری` بطور عدالتی درجہ، مخالف قیاس کی جگہ ناموافق فیصلہ، تعزیری ہرجانہ، جرمانے کا «سوال بننا»، مقدمہ بطور غیر عدالتی معاملہ، 013 میں کامیاب قیام کا الٹ جانا، سجاوٹ کی مدت، غلط چینی gloss `人力替補困難`، وراثت کی شرط کا ٹوٹا جملہ، فریٹ فارورڈنگ کو وکالت کہنا، اور شاخ کا «کمپنی کے قانون» سے اندراج۔ Wei Tseng پورے حصے میں مؤنث ہیں۔ 012 سب سے صاف متن ہے۔
+
+```
+| 30 | P2 | A | columns-ur/016-taiwan-inheritance-custody-analysis.md | "عدالت کی شمولیت سوال بن سکتی ہے۔" | “May require” a special representative or the court became “may become a question”. The earlier FAQ correctly says درکار ہو سکتی ہے. | خاص نمائندہ یا عدالت کی شمولیت درکار ہو سکتی ہے۔ |
+| 31 | P2 | D | columns-ur/016-taiwan-inheritance-custody-analysis.md | "گھریلو اندراج (戶籍)" | Without the household-register sense, اندراج sounds like property registration. Also 017. | خاندانی رجسٹر (戶籍) |
+| 32 | P2 | B | columns-ur/017-taiwan-logistics-business-setup.md | "فرد کے چھوٹی مال گاڑی کے کاروبار کی تنگ الگ استثنا" | کے with feminine چھوٹی, and کی with masculine استثنا. | فرد کی چھوٹی مال گاڑی کے کاروبار کا تنگ اور الگ استثنا |
+| 33 | P2 | A | columns-ur/017-taiwan-logistics-business-setup.md | "1 سال واپسی سے ختم (繳銷)" | Plate cancellation (繳銷) rendered as “ending by return”, which does not say the plate cannot be surrendered. | اجرا کے دن سے ایک سال تک نمبر پلیٹ منسوخ (繳銷) نہیں کی جا سکتی |
+| 34 | P2 | D | columns-ur/017-taiwan-logistics-business-setup.md | "جنمین و لیانجیانگ (ماتسو)" | Jinmen is the Mandarin name; a Pakistan reader who knows the islands knows Kinmen. | کنمن اور لیانچیانگ (ماتسو) |
+| 35 | P2 | G | columns-ur/017-taiwan-logistics-business-setup.md | "اوور دی کاؤنٹر سکیورٹیز" | The English phrase is left untranslated in running Urdu. | او ٹی سی سکیورٹیز |
+| 36 | P2 | B | columns-ur/018-taiwan-semiconductor-market-entry.md | "الگ جائزہ چاہت۔" | چاہت is a noun; the verb is cut off. | الگ جائزہ چاہتے ہیں۔ |
+| 37 | P2 | A | columns-ur/018-taiwan-semiconductor-market-entry.md | "وزارتِ اقتصادیات کا تجارتی ترقی دفتر" | Department of Commerce rendered as a commerce-development office. | وزارتِ اقتصادیات کا محکمہِ تجارت |
+| 38 | P2 | C | columns-ur/018-taiwan-semiconductor-market-entry.md | "افرادی قوت ساتھ دیکھنی چاہیے۔" | The list of contracts, inventory, warranties and staff never forms one sentence; the verb hangs on the last noun. | موجودہ معاہدے، صارف کے معاہدے، ذخیرہ، ضمانت اور افرادی قوت اکٹھے دیکھنے چاہییں۔ |
+| 39 | P2 | D | columns-ur/018-taiwan-semiconductor-market-entry.md | "پسندیدہ مشاورت کی زبان بتائیں۔" | An Urdu page asks for a preferred consultation language and never names English, Chinese, Japanese and Korean. | پسندیدہ زبان بتائیں؛ مشاورت انگریزی، چینی، جاپانی یا کوریائی میں ہوتی ہے، اردو میں نہیں۔ |
+| 40 | P2 | C | columns-ur/016-taiwan-inheritance-custody-analysis.md | "ہر ایک کو 3 میں سے 1 حصہ" | Digit fraction. Also 018 "ڈائریکٹر کے لیے 3 میں سے 2 یا زیادہ". | ہر ایک کو ایک تہائی حصہ؛ ڈائریکٹر کے لیے دو تہائی یا اس سے زیادہ |
+| 41 | P2 | D | columns-ur/010-taiwan-gym-injury-lawsuit.md | "1,579,589 نئے تائیوانی ڈالر" | Pakistan groups as 15,79,589 or لاکھ/کروڑ. Also 011 "5,000,000", 017 "25,000,000", 018 "30,000,000" and "100,000,000". | 15,79,589؛ 50 لاکھ؛ ڈھائی کروڑ؛ تین کروڑ؛ دس کروڑ۔ رقم وہی رہے۔ |
+| 42 | P2 | C | columns-ur/014-taiwan-mandatory-employment-period.md | "چار سوال گڈمڈ نہ کرنا اہم ہے۔" | Colloquial mix-up verb in a client column. Also 011 "گڈمڈ ہونے کا خطرہ", 016 "گڈمڈ نہ کرنے", 018 "گڈمڈ نہ کریں". | چار سوال آپس میں ملا کر ایک نہ سمجھنا اہم ہے۔ |
+| 43 | P2 | A | columns-ur/018-taiwan-semiconductor-market-entry.md | "آئینِ انجمن میں اور بات نہ ہو تو" | انجمن is a society; the company’s articles need (章程). Also 017 "آئینِ انجمن، شیئر ہولڈرز کی فہرست". | کمپنی کے آئین (章程) میں اور بات نہ ہو تو |
+| 44 | P2 | B | columns-ur/017-taiwan-logistics-business-setup.md | "「سڑک کا قانون」" | East Asian corner brackets. Also 011 and 016 around statute titles. | «سڑک کا قانون» |
+```
+=== end code=0 2026-09-22 10:54:25 ===

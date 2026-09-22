@@ -1,0 +1,22 @@
+[WO start 2026-09-22 10:44:43]
+The review is in `docs/i18n/global-plan/reviews/native/fa-b.md`. Columns 010–018 score **3/5**: 011, 014, 016, 017 and 018 are careful Iranian legal prose; 013 and 015 still read like a translated blog. Eight items should be fixed before a client sees them, including «محل اقامت معتاد» (habitual residence read as a drug addict), «فروگذاشت» (the opposite of “consider”), and «فضای تجاری» for ordinary office space. Wei Tseng is unmarked, and the no-consultation limits stay negative.
+
+Last 15 lines:
+
+```
+| 28 | P2 | B | columns-fa/014-taiwan-mandatory-employment-period.md | "چه توانی می‌آموزاند" | می‌آموزاند is not a verb a Tehran lawyer uses. | چه مهارتی قرار است آموخته شود |
+| 29 | P2 | A | columns-fa/015-taiwan-company-setup-pitch-location.md | "باید جواز فعالیت را از راه نظام «استعلام پیشین مقر فعالیت» استعلام کند" | جواز فعالیت is an operating licence; the system only checks whether that use is allowed at the address. | باید از راه نظام «استعلام پیشین مقر فعالیت» بسنجد که آیا آن رشته در آن نشانی مجاز است |
+| 30 | P2 | B | columns-fa/016-taiwan-inheritance-custody-analysis.md | "وارثاً که می‌خواهد ارث را ترک کند" | Tanwin makes a non-word; the clause is “an heir who wants to waive”. | وارثی که می‌خواهد ارث را رد کند |
+| 31 | P2 | D | columns-fa/016-taiwan-inheritance-custody-analysis.md | "هر یک 1/3 ارث می‌برند" | Slash fraction. also the same FAQ answer. Keep the one-third share. | هر یک یک‌سوم ارث می‌برند |
+| 32 | P2 | C | columns-fa/017-taiwan-logistics-business-setup.md | "بررسی نافی جهل و اجرای معامله" | نافی جهل is a coined calque of due diligence; no Iranian lawyer uses it as a heading. | بررسی دقیق پیش از معامله و بستن معامله |
+| 33 | P2 | B | columns-fa/017-taiwan-logistics-business-setup.md | "نهاد صلاحیت پارک علمی یا ناحیهٔ صنعتی رسیدگی می‌کند" | نهاد صلاحیت is missing the plural and the adjective; English is the park authorities. | نهادهای صالح پارک علمی یا ناحیهٔ صنعتی رسیدگی می‌کنند |
+| 34 | P2 | A | columns-fa/017-taiwan-logistics-business-setup.md | "اجارهٔ تأمین مالی و تأمین مالی" | Ordinary leases disappeared, and financing is named twice. English is liens, leases, and financing. | حقوق وثیقه، اجاره‌ها و تأمین مالی |
+| 35 | P2 | A | columns-fa/017-taiwan-logistics-business-setup.md | "آیین تحویل داده، بار و رسیدگی به مشتری" | داده reads as “handed over”, not “data”; English is the handover of data, cargo, and customer service. | تحویل منظم داده‌ها، بار و رسیدگی به مشتری |
+| 36 | P2 | A | columns-fa/017-taiwan-logistics-business-setup.md | "در قبول فعالیت یا دارایی، پروانهٔ شرکت هدف لزوماً به قبول‌کننده منتقل نمی‌شود." | قبول is contractual acceptance; English is a purchase of the business or the assets. | در خرید فعالیت یا دارایی، پروانهٔ شرکت هدف لزوماً به خریدار منتقل نمی‌شود. |
+| 37 | P2 | A | columns-fa/018-taiwan-semiconductor-market-entry.md | "برگشت و جایگزین را می‌پردازد" | Without به, می‌پردازد means “pays”; English is “handles”. also «مسائل کار میدانی را می‌پردازد». | برگشت و جایگزین را رسیدگی می‌کند |
+| 38 | P2 | A | columns-fa/018-taiwan-semiconductor-market-entry.md | "یا ادغام و تملک یا عرضه یا ثبت بعدی را انتظار دارند" | “Emerging-market registration” became a vague later registration. | یا ادغام و تملک، یا عرضه، یا ثبت در بازار نوظهور را انتظار دارند |
+| 39 | P2 | B | columns-fa/018-taiwan-semiconductor-market-entry.md | "از نزاع پیشگیری را وعده نمی‌دهد" | را sits on the wrong phrase, so the clause is ungrammatical. The negation itself must stay. | پیشگیری از نزاع را وعده نمی‌دهد |
+| 40 | P2 | A | columns-fa/018-taiwan-semiconductor-market-entry.md | "می‌توان «نامعیّن» علامت زد" | نامعیّن means legally indefinite; English is a blank marked “to be determined”. | می‌توان «هنوز تعیین نشده» علامت زد |
+| 41 | P2 | B | columns-fa/010-taiwan-gym-injury-lawsuit.md | "چگونه تعیین میشود" | می‌ without ZWNJ. also «تیم بین المللی» and «اموری که میپذیریم» in the footers of 010–017. | چگونه تعیین می‌شود |
+```
+=== end code=0 2026-09-22 10:55:28 ===

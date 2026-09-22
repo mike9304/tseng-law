@@ -1,0 +1,5 @@
+[WO start 2026-09-22 11:24:58]
+Slovak native-review fixes are in the Slovak columns and the Slovak guidance strings. The checker is `summary PASS 18/18`, review markers are 0, `TSC_OK`, and vitest is 160 files / 3202 tests passed.
+
+The row log is `docs/i18n/global-plan/evidence/grok-F-sk.log`. Nothing was committed.
+=== end code=0 2026-09-22 12:15:44 ===

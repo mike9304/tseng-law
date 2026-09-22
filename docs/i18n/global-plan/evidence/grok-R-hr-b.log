@@ -1,0 +1,25 @@
+[WO start 2026-09-22 10:56:45]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+The review is in `docs/i18n/global-plan/reviews/native/hr-b.md`. Columns 010–018 score **3/5**: standard Croatian, with Wei Tseng kept feminine and the consultation limits kept negative. Four items should be fixed before a client sees them: „izdatnim podlogama“, „Statut“ for an act, „ostavinsko namještenje“ for a legacy, and „obrazac“ where the English says a form does not prevent disputes. Column 012 is the cleanest.
+
+Last 15 lines:
+
+```
+| 36 | P2 | C | columns-hr/010-taiwan-gym-injury-lawsuit.md | "Pad u poslovnici, zdravstvena šteta uzrokovana hranom i ozljeda pri stručnoj usluzi" | A machine list; „šteta uzrokovana hranom“ is not how a native names food-related harm. | Pad u poslovnom prostoru, zdravstvena šteta od hrane i ozljeda pri stručnoj usluzi |
+| 37 | P2 | C | columns-hr/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "sigurno elektroničko spremište ili spremište u oblaku" | „Spremište“ is a storeroom; cloud storage is pohrana. | sigurna elektronička pohrana ili pohrana u oblaku |
+| 38 | P2 | C | columns-hr/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "i pothvatu na strani Tajvana" | „Pothvat na strani“ is a calque of the Taiwan-side business. | i tajvanskom društvu |
+| 39 | P2 | C | columns-hr/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "samo prema naplatnoj prodaji" | „Naplatna prodaja“ is not how Croatian contrasts paid sales with free samples. | samo prema prodaji uz naplatu |
+| 40 | P2 | C | columns-hr/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Kćerinsko društvo ni podružnicu nije nužno uvijek osnivati." | Object-first word order copied from the source; also the same sentence in the FAQ. | Kćerinsko društvo ili podružnicu nije uvijek nužno osnovati. |
+| 41 | P2 | C | columns-hr/013-taiwan-company-establishment-advanced-1.md | "U posljednje vrijeme mnoge su osobe uspješno osnovale društvo (公司) na Tajvanu" | Each sentence is its own paragraph, as in a blog post. also 015 „Osim tržišne situacije“ / „daljnja je važna točka“ | U posljednje vrijeme mnoge su osobe na Tajvanu osnovale društvo i dobile radnu vizu te boravišnu iskaznicu, a česta pitanja slijede niže. |
+| 42 | P2 | C | columns-hr/014-taiwan-mandatory-employment-period.md | "Kad radnik prestane s ugovorom o radu na neodređeno vrijeme" | „Prestati s“ takes an activity, not a contract. also „može prestati s ugovorom“ | Kad radnik raskine ugovor o radu na neodređeno vrijeme |
+| 43 | P2 | C | columns-hr/015-taiwan-company-setup-pitch-location.md | "gradski ured upis možda neće primiti." | A city office does not „receive a registration“; it may refuse the application. | gradska uprava možda neće prihvatiti zahtjev za upis. |
+| 44 | P2 | C | columns-hr/016-taiwan-inheritance-custody-analysis.md | "izvršavati i nositi prava i dužnosti prema maloljetnom djetetu" | Both verbs are glued to both nouns; one exercises rights and assumes duties. also the FAQ and §§5–6 | izvršavati prava i preuzimati dužnosti prema maloljetnom djetetu |
+| 45 | P2 | C | columns-hr/016-taiwan-inheritance-custody-analysis.md | "prijava kućne prijave (戶籍)" | Doubled „prijava“; 戶籍 is an entry in the household register. also „kućna prijava“ in 017 | prijava u kućnu evidenciju (戶籍) |
+| 46 | P2 | C | columns-hr/016-taiwan-inheritance-custody-analysis.md | "nasljednik od otvaranja nasljeđivanja sveobuhvatno stupa u imovinska prava" | „Stupa u“ is a calque of succeeds into; Croatian says nasljeđuje. | nasljednik od otvaranja nasljeđivanja sveobuhvatno nasljeđuje imovinska prava i obveze |
+| 47 | P2 | C | columns-hr/016-taiwan-inheritance-custody-analysis.md | "To nije isto pravo." | The FAQ answer is pasted as the opening of §3, with no question. also §7 „Ne može je slobodno rabiti.“ | Pravo na diobu razlike ostatka imovine nije isto što i nasljedni dio. |
+| 48 | P2 | C | columns-hr/018-taiwan-semiconductor-market-entry.md | "Strana poduzeća dijelova poluvodiča koja stupaju na Tajvan" | Genitive stack plus „stupati“ for market entry. title and H1 | Strana poduzeća za dijelove poluvodiča koja ulaze na Tajvan |
+| 49 | P2 | D | columns-hr/010-taiwan-gym-injury-lawsuit.md | "u potrošačkoj stvari br. 7. godine 109. (109年度消字第7號)" | Year 109 with no marker reads as the year 109, not the Taiwanese year. | u potrošačkoj stvari br. 7. tajvanske godine 109. (109年度消字第7號) |
+| 50 | P2 | G | columns-hr/015-taiwan-company-setup-pitch-location.md | "**Q. Moraju li sve djelatnosti" | English question label left on a Croatian page. | **Pitanje. Moraju li sve djelatnosti |
+```
+=== end code=0 2026-09-22 11:08:44 ===

@@ -1,0 +1,29 @@
+[WO start 2026-09-22 10:52:31]
+The review is in `docs/i18n/global-plan/reviews/native/km-b.md`. Columns 010–018 score **3/5**. Wei Tseng stays feminine (`នាងខ្ញុំ`, `មេធាវីស្ត្រី`). The consultation limits stay negative. **014** is the cleanest piece. **018** is not ready for a client: sections 2–5 drop the rules and leave bare numbers and agency names.
+
+Eleven items should be fixed before publication. The ones that change what a reader would do:
+
+- **010** renders 告訴乃論 as ផ្ដួលបណ្ដឹង, which means quashing a complaint.
+- **016** calls the Judicial Yuan `យួនតុលាការ`, the everyday word for Vietnamese, and names the marital-property difference claim with ដាច់ខាត (“absolute”).
+- **018** cuts the comparison table mid-word and leaves shareholder counts and the TWD 30,000,000 / TWD 100,000,000 audit thresholds without their conditions.
+
+Last 15 lines of the file:
+
+```
+| 17 | P2 | C | columns-km/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "ពាក្យតវ៉ា និងផលមិនចង់បាន" | Adverse events became “results one does not want”. | "ពាក្យតវ៉ា និងផលរំខាន" |
+| 18 | P2 | A | columns-km/013-taiwan-company-establishment-advanced-1.md | "តារាងព័ត៌មានមូលដ្ឋាននៃលេខសម្គាល់ឯកភាព" | 統一 is “uniform”. ឯកភាព is unanimity or consensus. The Chinese gloss is present and correct. | "តារាងព័ត៌មានមូលដ្ឋាននៃលេខសម្គាល់ឯកសណ្ឋាន (統一證號基本資料表)" |
+| 19 | P2 | A | columns-km/013-taiwan-company-establishment-advanced-1.md | "ក៏មិនប្រើលក្ខណៈវិនិច្ឆ័យតែមួយជាការសម្រេច ហើយមិនសម្រេចពីកម្រិតសិក្សាតែឯងឡើយ" | “The review is not overly strict” became a rule that education is never the sole criterion. | "ប៉ុន្តែការពិនិត្យមិនតឹងរ៉ឹងពេកឡើយ" |
+| 20 | P2 | C | columns-km/013-taiwan-company-establishment-advanced-1.md | "ដោយលើកគោលបំណងផ្សេង" | “Under another pretext” is “raising a different purpose”. | "ក្រោមលេសផ្សេង" |
+| 21 | P2 | C | columns-km/013-taiwan-company-establishment-advanced-1.md | "ក្នុងរយៈពេលថ្មីៗនេះ មានមនុស្សជាច្រើនបានបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់" | 013 and 015 are one clause per line, with blank spacers and almost no ។. Also 015 from “ពេលចាប់ផ្ដើមអាជីវកម្មភោជនីយដ្ឋាន”. | "ប្រមូលឃ្លាឱ្យជាកថាខណ្ឌ ហើយបិទប្រយោគដោយ ។" |
+| 22 | P2 | C | columns-km/014-taiwan-mandatory-employment-period.md | "ដែលបង្ហាញក្នុងសំណុំរឿងដោយមិនធ្លាក់" | “Should be considered” gained ដោយមិនធ្លាក់, “without falling”, which does not parse. | "ដូច្នេះត្រូវពិនិត្យអង្គហេតុពាក់ព័ន្ធដែលបង្ហាញក្នុងសំណុំរឿងឱ្យគ្រប់" |
+| 23 | P2 | C | columns-km/014-taiwan-mandatory-employment-period.md | "រយៈពេលជូនដំណឹងជាមុនតាមអាយុការងារបន្ត" | Length of continuous service is called work-age, which a reader can take as the worker’s age. The bullets then state months of service. | "រយៈពេលជូនដំណឹងជាមុនតាមរយៈពេលធ្វើការបន្ត" |
+| 24 | P2 | C | columns-km/014-taiwan-mandatory-employment-period.md | "មានភាគីទីបី (第三人) ឧបត្ថម្ភ" | “A third party provided support” for who paid the training cost reads as patronage or a subsidy. | "មានភាគីទីបី (第三人) ជួយទទួលបន្ទុកថ្លៃ" |
+| 25 | P2 | C | columns-km/016-taiwan-inheritance-custody-analysis.md | "បានមកដោយមរតកបានតែភាគីម្ខាងដោយគ្មានដែនកំណត់" | “Unrestricted authority to use the property unilaterally” is stacked so the verb has two objects. Also the same sentence in section 7. | "មិនគួរយល់ថាឪពុកម្ដាយមានអំណាចគ្មានដែនកំណត់ ក្នុងការប្រើទ្រព្យសម្បត្តិដែលកូនបានមកដោយមរតកតែម្ខាងឯងឡើយ" |
+| 26 | P2 | A | columns-km/016-taiwan-inheritance-custody-analysis.md | "អាយុកាលផុតកំណត់ (消滅時效)" | Extinctive prescription reads as a shelf life. | "អាណត្តិរលត់ (消滅時效)" |
+| 27 | P2 | B | columns-km/017-taiwan-logistics-business-setup.md | "ប្រើរថយន្តដឹកទំនិញដឹកទំនិញរបស់អ្នកដទៃ" | “Cargo truck” and “carry cargo” are fused into one stutter. Also the FAQ answer. | "ប្រើរថយន្តដឹកទំនិញ ដឹកទំនិញរបស់អ្នកដទៃ" |
+| 28 | P2 | B | columns-km/017-taiwan-logistics-business-setup.md | "ការពន្យារពេលពេលមានកាលៈទេសៈពិសេស" | ពេល is doubled, so the extension clause does not parse. | "ការពន្យារពេល បើមានកាលៈទេសៈពិសេស" |
+| 29 | P2 | A | columns-km/017-taiwan-logistics-business-setup.md | "ការរំលោភនិងការជំពាក់" | Regulatory violations and arrears. Bare ការរំលោភ is the word for a personal assault. Also the body of the share-purchase answer. | "ការបំពានច្បាប់ និងបំណុលជំពាក់" |
+| 30 | P2 | B | columns-km/012-taiwan-overtaking-accident-liability.md | "មិនត្រូវប្រើស្នែង ឬពន្លឺមុខម្តងហើយម្តងទៀត" | ្ត beside ្ដ, and ឲ beside ឱ: also “ការសហការម្តងហើយម្តងទៀត” in 011 and “ការឲ្យខ្ចីលិខិតអនុញ្ញាត” in 017. | "មិនត្រូវប្រើស្នែង ឬពន្លឺមុខម្ដងហើយម្ដងទៀត" / "ការឱ្យខ្ចីលិខិតអនុញ្ញាត" |
+| 31 | P2 | B | columns-km/018-taiwan-semiconductor-market-entry.md | "ទិន្នន័យរចនាសម្ងាត់ និងកិច្ចសន្យាពេញលេញ" | “Confidential design materials” is one nonce word, and the contact paragraph never closes a sentence with ។. The opening of the article does the same. | "សម្ភារៈរចនាដែលជាសម្ងាត់ និងកិច្ចសន្យាពេញលេញ សូមផ្ញើក្រោយបានការណែនាំបន្ថែម។" |
+```
+=== end code=0 2026-09-22 11:04:47 ===

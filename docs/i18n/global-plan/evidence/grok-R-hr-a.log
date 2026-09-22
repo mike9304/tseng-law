@@ -1,0 +1,23 @@
+[WO start 2026-09-22 10:34:56]
+The Croatian review is in `docs/i18n/global-plan/reviews/native/hr-a.md`. The guidance pack reads as professional Croatian (4/5). The columns are real ijekavian Croatian, not a neighbouring-language dump (3/5), with four items that should not reach a client: Hangul URLs in columns 008 and 009, a reversed ownership rule in 002, and „obično“ inserted into the resignation rule in 009. Wei Tseng is feminine throughout.
+
+Last 15 lines:
+
+```
+| 30 | P2 | C | hr-guidance.txt | "o činjenicama, o mjerodavnim propisima i o trenutku" | „O trenutku“ has no complement. also the disclaimer | o činjenicama, o mjerodavnim propisima i o trenutku u kojem se stvar ocjenjuje |
+| 31 | P2 | C | columns-hr/002-withdraw-capital-taiwan-company.md | "pri promjeni upisnih spomena društva" | „Spomen“ is a mention, not a registered particular. | pri promjeni upisanih podataka društva |
+| 32 | P2 | C | columns-hr/003-taiwan-traffic-accident-procedure.md | "pa često ne ustupi u iznosu pregovaranja" | „Ustupiti u iznosu“ is not how Croatian says refuse to move on the settlement figure. | pa često ne popušta u visini nagodbe |
+| 33 | P2 | C | columns-hr/004-taiwan-company-subsidiary-vs-branch.md | "Poduzeća usmjerena na dobit čija se glavna poslovnica nalazi izvan Tajvana" | Calque of profit-seeking enterprise, beside the better „dobitnih poduzeća“ used for the tax. | Dobitna poduzeća čije je sjedište izvan Tajvana |
+| 34 | P2 | C | columns-hr/005-taiwan-company-establishment-advanced-2.md | "A. Prvi zaposlenik: zahtjev se podnosi kao voditeljski rad" | Leftover answer label „A.“ in front of the Croatian answer. | Prvi zaposlenik: zahtjev se podnosi kao voditeljski rad |
+| 35 | P2 | C | columns-hr/006-taiwan-massage-history-law.md | "Sjećate li se vremena tradicionalnih frizerskih salona (理髮廳) s početaka Tajvana?" | Blog chat, not a firm column; the legal point starts only at the 1980 act. also „Kako bilo“ | Zakon o dobrobiti osoba s invaliditetom (殘障福利法) iz 1980. zanimanje masera pridržao je osobama oštećena vida. |
+| 36 | P2 | C | columns-hr/007-taiwan-divorce-lawsuit-qna.md | "izvršavanje i nošenje prava i dužnosti" | 負擔 is snošenje (bearing a duty); „nošenje“ is carrying an object. also the FAQ and §8 | izvršavanje i snošenje prava i dužnosti |
+| 37 | P2 | C | columns-hr/007-taiwan-divorce-lawsuit-qna.md | "Ime upisano kod nekretnine samo po sebi o diobi imovine ne odlučuje." | „Kod“ means at someone’s place; title is registered on the property. also „kod stana“ | Upisano ime vlasnika nekretnine samo po sebi ne odlučuje o diobi imovine. |
+| 38 | P2 | C | columns-hr/009-taiwan-voluntary-resignation-severance.md | "ako radnik želi prestati s ugovorom o radu" | „Prestati s“ takes an activity, not a contract. also throughout 008 and 009 | ako radnik želi raskinuti ugovor o radu |
+| 39 | P2 | C | columns-hr/009-taiwan-voluntary-resignation-severance.md | "Radnik stoga mora dobro vladati rokom." | „Vladati“ means to rule; English is pay close attention to the deadline. | Radnik stoga mora dobro paziti na taj rok. |
+| 40 | P2 | D | hr-guidance.txt | "presudu prvog stupnja u iznosu TWD 1.57M" | English decimal point and the abbreviation M; Croatian uses a comma and mil. | presudu prvog stupnja u iznosu 1,57 mil. TWD |
+| 41 | P2 | D | hr-guidance.txt | "Odricanje" | Bare nav label means a waiver; a reader expects a liability disclaimer. also the eyebrow „ODRICANJE“ | Odricanje od odgovornosti |
+| 42 | P2 | D | hr-guidance.txt | "Privatnost" | Bare „Privacy“; the consent link should name personal-data protection. also „stranicu o privatnosti“ | Osobni podaci |
+| 43 | P2 | G | hr-guidance.txt | "Paralegal" | The role line is only English. also „Senior Paralegal“ in the same bio | Pravni asistent |
+| 44 | P2 | G | columns-hr/008-taiwan-labor-severance-law.md | "Ja, OOO, dobrovoljno snižavam dužnost i plaću" | „OOO“ is an untranslated blank and reads as the Russian company form ООО. | „Ja, (ime i prezime), dobrovoljno pristajem na nižu dužnost i plaću.“ |
+```
+=== end code=0 2026-09-22 10:41:22 ===

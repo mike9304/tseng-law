@@ -1,0 +1,7 @@
+[WO start 2026-09-22 11:38:53]
+Croatian native-review fixes are in the worktree. Nothing was committed.
+
+Seventeen columns and the Croatian guidance strings were rewritten: household registration is now evidencija kućanstava, statutes stay only for 章程, and employment endings use otkazati or dati otkaz. Hangul URLs and `TWD 1.57M` were left as specified. Column 012 and the Croatian `llms.txt` notice needed no change.
+
+The checker is `summary PASS 18/18`, review markers are 0, TypeScript is `TSC_OK`, and vitest is 160 files / 3202 tests passed. `git status --short` is 23. The row list, skips, and wording that was not followed are in `docs/i18n/global-plan/evidence/grok-F-hr.log`.
+=== end code=0 2026-09-22 12:00:48 ===

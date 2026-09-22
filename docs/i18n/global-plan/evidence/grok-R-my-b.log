@@ -1,0 +1,21 @@
+[WO start 2026-09-22 10:45:47]
+Columns 010–018 are reviewed in `docs/i18n/global-plan/reviews/native/my-b.md`. Naturalness is 3/5. Fourteen P1 rows cover meaning shifts a client could act on, including securities written as insurance, the Civil Code named ပြည်သူ့ဥပဒေ, and a deal closing written as shutting the business down. Wei Tseng stays feminine, and the consultation limits stay negative.
+
+```
+| 37 | P2 | A | columns-my/013-taiwan-company-establishment-advanced-1.md | "မှတ်ပုံတင်လုပ်ငန်းပစ္စည်းများ (營業項目)" | Registered business items became merchandise. Also 015 and 017. | မှတ်ပုံတင်လုပ်ငန်းအမျိုးအမည် (營業項目) |
+| 38 | P2 | D | columns-my/013-taiwan-company-establishment-advanced-1.md | "ဂျပန်နှင့် ကိုရီးယားဖြင့်သာ" | Japan and Korea are named as countries beside the languages English and Chinese. Also the same list in 018. The four-language limit itself must stay. | အင်္ဂလိပ်၊ တရုတ် (中文)၊ ဂျပန်ဘာသာနှင့် ကိုရီးယားဘာသာဖြင့်သာ |
+| 39 | P2 | A | columns-my/014-taiwan-mandatory-employment-period.md | "အရာဝတ္ထုအထောက်အထားနှင့် ကိုက်သည် မကိုက်သည်" | Objective evidence became evidence of physical objects. | ဓမ္မဓိဋ္ဌာန်ကျသော အထောက်အထားနှင့် ကိုက်သည် မကိုက်သည် |
+| 40 | P2 | A | columns-my/014-taiwan-mandatory-employment-period.md | "ပိုင်ဆိုင်မှုဆိုင်ရာ တာဝန် ရှိသည် မရှိသည်" | Financial liability on termination became liability over property. | ငွေကြေးဆိုင်ရာ တာဝန် ရှိသည် မရှိသည် |
+| 41 | P2 | A | columns-my/014-taiwan-mandatory-employment-period.md | "စောစီးစွာ ပြီးဆုံးမှုအပေါ် ပိတ်ပင်မှု အခြေခံ" | A sanction for leaving early became a ban on leaving. | စောစီးစွာ ပြီးဆုံးခြင်းအတွက် ဒဏ်ခတ်မှု၏ အခြေခံ |
+| 42 | P2 | C | columns-my/014-taiwan-mandatory-employment-period.md | "မကျေနပ်သေးသော ကာလ" | The unserved period is named with ကျေနပ်, which a reader hears as “not yet pleased”. Repeated through the repayment sections. | မလုပ်ရသေးသော ကာလ |
+| 43 | P2 | A | columns-my/015-taiwan-company-setup-pitch-location.md | "အဆောက်အအုံမှတ်ပုံတင် အမျိုးအစား 2 မိတ္တူ" | 謄本 is an official transcript. မိတ္တူ is any photocopy. | အဆောက်အအုံမှတ်ပုံတင် ဒုတိယအမျိုးအစား တရားဝင်ထုတ်နုတ်ချက် (建物登記第二類謄本) |
+| 44 | P2 | B | columns-my/015-taiwan-company-setup-pitch-location.md | "လုပ်ငန်းပစ္စည်းဟု စစ်ဆေးမှု ကင်းလွတ်သည် မဟုတ်ပါ" | The exemption sentence is ungrammatical, so the double negative is hard to parse. | ဤစာရင်းတွင် မပါသော လုပ်ငန်းအမျိုးအမည်သည် စစ်ဆေးမှုမှ ကင်းလွတ်သည် မဟုတ်ပါ။ |
+| 45 | P2 | A | columns-my/015-taiwan-company-setup-pitch-location.md | "ကုမ္ပဏီ သို့မဟုတ် ကုန်သွယ်ရေး (ရုံးခွဲ" | 商業 here is a registered business that is not a company. ကုန်သွယ်ရေး is the trade sector. Also ကုန်သွယ်ရေးမှတ်ပုံတင် in 017. | ကုမ္ပဏီ သို့မဟုတ် ကုမ္ပဏီမဟုတ်သော လုပ်ငန်း (商業) (ရုံးခွဲ |
+| 46 | P2 | C | columns-my/016-taiwan-inheritance-custody-analysis.md | "ဝေစာ (遺囑)" | A will is သေတမ်းစာ. ဝေစာ is not a word a Myanmar reader uses. Repeated through the article after one gloss. | သေတမ်းစာ (遺囑) |
+| 47 | P2 | A | columns-my/016-taiwan-inheritance-custody-analysis.md | "တက်ကြွပိုင်ဆိုင်မှု (積極財產)" | 積極財產 is the asset side of the estate. တက်ကြွ means vigorous or enthusiastic. | အပေါင်းပိုင်ဆိုင်မှု (積極財產) |
+| 48 | P2 | A | columns-my/016-taiwan-inheritance-custody-analysis.md | "နေရပ်လိပ်စာ (住所)" | 住所 in the choice-of-law sense is domicile, not a hometown street address. | တရားဝင်နေထိုင်ရာ (住所) |
+| 49 | P2 | A | columns-my/016-taiwan-inheritance-custody-analysis.md | "မောင်နှမ (兄弟姊妹)" | 兄弟姊妹 is siblings of every age. မောင်နှမ alone is often read as the younger ones. | ညီအစ်ကိုမောင်နှမ (兄弟姊妹) |
+| 50 | P2 | A | columns-my/018-taiwan-semiconductor-market-entry.md | "ကုန်သွယ်ရေးဖွံ့ဖြိုးဌာန (經濟部商業司)" | 商業司 is the Department of Commerce. ဖွံ့ဖြိုး adds a development ministry that is not in the name. | စီးပွားရေးဝန်ကြီးဌာန ကုန်သွယ်ရေးဌာန (經濟部商業司) |
+| 51 | P2 | A | columns-my/018-taiwan-semiconductor-market-entry.md | "စာရင်းကိုင် စစ်ဆေးအတည်ပြုခြင်း (會計師查核簽證)" | 會計師 is a certified public accountant. စာရင်းကိုင် alone is any bookkeeper. | လက်မှတ်ရစာရင်းကိုင်၏ စစ်ဆေးအတည်ပြုချက် (會計師查核簽證) |
+```
+=== end code=0 2026-09-22 10:56:29 ===

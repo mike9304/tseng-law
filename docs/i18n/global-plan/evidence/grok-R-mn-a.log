@@ -1,0 +1,24 @@
+[WO start 2026-09-22 10:34:53]
+The review is in `docs/i18n/global-plan/reviews/native/mn-a.md`. Guidance reads as professional Khalkha Mongolian (4/5). Columns 001, 002, 004 and 007 do too; 003 from Q16, plus 005, 006, 008 and 009, drop into a one-line blog (columns 3/5).
+
+Five items should be fixed before a client sees them: “дэмжлэг” where the German source means a recommendation; “хүндээр шархалж” for emotional hurt; “түр баривчлах” for provisional attachment (假扣押); “бичиж” where the phone recording was meant; and the divorce filing list that turns “who may apply” into a document. Wei Tseng is not given a masculine title. The consultation denials stay negative. Korea is already marked as an example.
+
+Last 15 lines:
+
+```
+| 26 | P2 | C | mn-guidance.txt | хаалттай объект хадгалалтад | Calque of "Objektspeicher" | хаалттай үүлэн хадгалалтад |
+| 27 | P2 | C | mn-guidance.txt | Газрын зургийн урьдчилан харах | Word order copied from "map preview" | Газрын зургийн урьдчилсан харагдац |
+| 28 | P2 | C | mn-guidance.txt | Мэдээллийн технологийн үндсэн дээр | Calque of "auf Grundlage der Informatik"; the sentence never says whose training | Мэдээллийн технологийн мэргэжлээрээ баримтын систем, ажлын урсгалаар нэгж хоорондын харилцааг дэмжинэ. |
+| 29 | P2 | C | mn-guidance.txt | Солонгосын үйл ажиллагааны чиглэл | A person is listed as a department. The role line "үйл ажиллагааны менежер" is the same calque | Солонгосын үйл ажиллагаа хариуцсан менежер |
+| 30 | P2 | C | mn-guidance.txt | акт бичгийн хэлбэр | "акт бичиг" doubles a Russian loanword; DE is the form of the instrument | баримт бичгийн хэлбэр |
+| 31 | P2 | C | columns-mn/001-taiwan-company-establishment-basics.md | үр дүн нэгээр бусад зөвшөөрөл | "нэгээр" calques "alone". Also 002 "дутагдал нэгээр" and "бүртгэл нэгээр" | үр дүн дангаараа бусад зөвшөөрөл |
+| 32 | P2 | C | columns-mn/003-taiwan-traffic-accident-procedure.md | Эмэгтэй өмгөөлөгчийн хувьд миний туршлагаар | Q1–Q15 are formal; Q16 switches to a first-person blog in one-line paragraphs. The noun needs no gender marker | Канторын практикаас: даатгалын компаниуд ослын оролцогчдын сэтгэл хөдлөлийн талд ихэвчлэн хангалттай анхаарал хандуулдаггүй. |
+| 33 | P2 | C | columns-mn/005-taiwan-company-establishment-advanced-2.md | гүнзгийрүүлэлт 2 (公司設立)-ийг ч үзэж болно | On this page, the opener tells the reader to go and read this same page | Үндэс болон гүнзгийрүүлэлт 1-ийг үзсэн бол энэ хэсэг капитал шилжүүлэх, банк, гадаадын ажилтан авах асуултад орно. |
+| 34 | P2 | C | columns-mn/006-taiwan-massage-history-law.md | (Би насныхаа ингэж илчилчихэв үү?) | An aside about the author's age, then "Ямар ч байсан", on a client-facing page. The verb is not masculine | Массажийн (按摩) тухайд Тайваньд массажийн гудамж ч цөөнгүй бий. |
+| 35 | P2 | C | columns-mn/008-taiwan-labor-severance-law.md | Сайн байна уу, би Эмэгтэй өмгөөлөгч Wei Tseng (曾雋崴), Тайванийн өмгөөлөгч байна. | A speaker does not introduce herself as "Female attorney". Also "Та бүхний олонх үүнийг аль хэдийн мэдэж байгаа байх." | Сайн байна уу, би Wei Tseng (曾雋崴), Тайванийн өмгөөлөгч. |
+| 36 | P2 | C | columns-mn/009-taiwan-voluntary-resignation-severance.md | Би өмнө нь эмэгтэй өмгөөлөгчийн хувьд хэлсэнчлэн | Opens as a sequel to a personal series. The gender marker is unnecessary; the page needs a cross-reference | Ажлаас чөлөөлөх төлбөрийн нийтлэлд тайлбарласны дагуу |
+| 37 | P2 | D | mn-guidance.txt | TWD 1.57M-ийн нэгдүгээр шатны шийдвэр | English "M" and a dot decimal. Mongolia writes 1,57 сая and a space as the thousands separator. Also TWD 500,000 / 0.5 сарын / TWD 30,000 in 001–004, 006–008. The amounts stay | 1,57 сая TWD-ийн нэгдүгээр шатны шийдвэр |
+| 38 | P2 | G | mn-guidance.txt | Legal Aid Foundation, Taichung Branch | English institution name with no Mongolian gloss. Also Institute of Finance, National Taiwan University; Ministry of Education, Legal Affairs Division; Trend Law Office | Тайжун салбар, Хууль зүйн туслалцааны сан (Legal Aid Foundation, Taichung Branch) |
+| 39 | P2 | G | columns-mn/003-taiwan-traffic-accident-procedure.md | Q1. Ослын дараа газрыг орхиж болох уу? | English "Q1–Q20" headings. 005 uses "A." / "B." The questions themselves are Mongolian | 1. Ослын дараа газрыг орхиж болох уу? |
+```
+=== end code=0 2026-09-22 10:48:03 ===

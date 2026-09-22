@@ -1,0 +1,22 @@
+[WO start 2026-09-22 10:34:47]
+မြန်မာစာ ပြန်လည်သုံးသပ်ချက်ကို `docs/i18n/global-plan/reviews/native/my-a.md` မှာ ရေးပြီးပါပြီ။ လမ်းညွှန်စာမျက်နှာ ၃/၅၊ ဆောင်းပါး ၃/၅ ဖြစ်ပါတယ်။ P1 ၁၀ ခု၊ P2 ၂၂ ခု ရှိပါတယ်။ Wei Tseng အတွက် ကျားလိင်သုံးစကား မတွေ့ပါ။ တိုင်ပင်ဆွေးနွေးမှု ကန့်သတ်ချက်က မြန်မာလို မဆွေးနွေးကြောင်း အနုတ်လက္ခဏာအတိုင်း ကျန်ပါတယ်။
+
+ဖိုင်ရဲ့ နောက်ဆုံး ၁၅ ကြောင်းက ဒီအတိုင်းပါ။
+
+```
+| 19 | P2 | E | columns-my/008-taiwan-labor-severance-law.md | "ကုမ္ပဏီက ပေးရန် တာဝန် ရှိသည်။" | The closer states an unconditional duty to pay. The FAQ in the same file limits that duty to employer termination. | ဤလျော်ကြေးသည် အလုပ်ရှင်က ရပ်စဲသည့်အခါမှသာ ပေါ်နိုင်သော အခွင့်အရေးဖြစ်ပြီး၊ ကုမ္ပဏီက အမြဲ ပေးရမည်ဟု မယူဆသင့်ပါ။ |
+| 20 | P2 | C | my-guidance.txt | "အုပ်စုခြောက်ခု" | Tätigkeitsgruppen left as bare “groups” beside the better word လုပ်ငန်းနယ်ပယ် on the same home page. Also services, FAQ, and the answers. | လုပ်ငန်းနယ်ပယ် ခြောက်ခု |
+| 21 | P2 | C | my-guidance.txt | "ဤစာမျက်နှာ မအာမခံသည်များ" | Nominalised “things this page does not guarantee”. No native heading is built that way. Also the contact description. | ဤစာမျက်နှာက အာမမခံသော အချက်များ |
+| 22 | P2 | C | my-guidance.txt | "ချည်နှောင်သော အဖြေလိုအပ်ပါက" | “Binding” calqued as tying with rope. Also 003 “တရားရုံးကို စက်ကဲ့သို့ မချည်နှောင်ပါ”. | သင့်အခြေအနေအတွက် စည်းနှောင်မှုရှိသော အဖြေ လိုအပ်ပါက |
+| 23 | P2 | C | my-guidance.txt | "အများပြည်သူ မဝင်ရသော အရာဝတ္ထုသိုလှောင်ရာ" | Objektspeicher rendered as a store of physical objects. | အများပြည်သူ မဝင်ရောက်နိုင်သော ဖိုင်သိုလှောင်ခန်း |
+| 24 | P2 | C | my-guidance.txt | "ဒေသတွင်း အမှုသည်များကို နေရာတွင် ကူညီရန်" | “For local demand” became “to help the local clients in the place”. | ဒေသတွင်း အမှုသည်များ၏ လိုအပ်ချက်အတွက် ဖွင့်ခဲ့သည်။ |
+| 25 | P2 | C | my-guidance.txt | "စန်ဟေယွမ် (三合院)" | A phonetic of Sanheyuan that a Myanmar reader cannot picture. The Chinese gloss is already there. | ထိုင်ဝမ်ရိုးရာ သုံးဘက်ဆက်အိမ် (三合院) |
+| 26 | P2 | C | columns-my/002-withdraw-capital-taiwan-company.md | "ကုန်ကျစရိတ် ဟုတ်ဟုတ်၊ တရားဝင် အတည်ပြုပြီး အမြတ်ဝေစု ဟုတ်ဟုတ်" | ဟုတ်ဟုတ် is not the Burmese “whether … or”. A native closes each alternative with ဖြစ်စေ. | ကုန်ကျစရိတ်ဖြစ်စေ၊ တရားဝင် အတည်ပြုပြီး အမြတ်ဝေစုဖြစ်စေ |
+| 27 | P2 | C | columns-my/003-taiwan-traffic-accident-procedure.md | "Q16. မတော်တဆမှု ဖြစ်ပြီးနောက် အာမခံကုမ္ပဏီထံ အားလုံး အပ်နိုင်ပါသလား။" | Q16–Q20, and the bodies of 005, 006, 008 and 009, are one clause per line with blank spacers. Q1–Q15 of 003 is normal prose. | Q16 မှ Q20 အထိ စာပိုဒ်ဆက်၍ ရေးပါ။ ဗလာကြောင်းခြားများကို ဖြုတ်ပါ။ |
+| 28 | P2 | D | my-guidance.txt | "TWD 1.57M" | M for million is English. Myanmar writes သန်း. Keep the figure. | TWD 1.57 သန်း |
+| 29 | P2 | D | columns-my/001-taiwan-company-establishment-basics.md | "2023 ခုနှစ် 12 လ 27 ရက်တွင် အသက်ဝင်" | Bare `12 လ 27 ရက်` also reads as “12 months and 27 days”. 003 already writes 29 မေ 2026. Also 004 and “2026 ခုနှစ် 7 လ 25 ရက်” in 007. | 2023 ခုနှစ် ဒီဇင်ဘာလ 27 ရက်တွင် အသက်ဝင် |
+| 30 | P2 | D | columns-my/007-taiwan-divorce-lawsuit-qna.md | "112 နှစ် စီရင်ချက် အမှတ် 4" | ROC year 112 with no ခုနှစ် and no CE year. 112 နှစ် also means “112 years”. Also the source list. | သမ္မတနိုင်ငံ 112 ခုနှစ် (ခရစ်နှစ် 2023) စီရင်ချက် အမှတ် 4 (112年憲判字第4號) |
+| 31 | P2 | G | columns-my/003-taiwan-traffic-accident-procedure.md | "109 ခုနှစ် ရှန်ရီဇီ အပိုဒ်ခွဲ 644" | 上易字 was sounded out. A reader cannot look the case up. Also “လီကျန်ဇီ” for 壢簡字. | 109 ခုနှစ် 上易字 အမှတ် 644 |
+| 32 | P2 | G | columns-my/008-taiwan-labor-severance-law.md | "ကျွန်ုပ် OOO သည် ရာထူးနှင့် လစာကို ဆန္ဒအလျောက် လျှော့ချမည်" | Korean placeholder OOO left inside the quoted resignation line. | ကျွန်ုပ် …… သည် ရာထူးနှင့် လစာကို ဆန္ဒအလျောက် လျှော့ချမည် |
+```
+=== end code=0 2026-09-22 10:45:31 ===

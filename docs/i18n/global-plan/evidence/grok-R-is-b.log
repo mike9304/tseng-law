@@ -1,0 +1,24 @@
+[WO start 2026-09-22 11:07:41]
+The Icelandic review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/is-b.md`. Naturalness is **3/5**. Five items should be fixed before a client sees them; 44 more are clear non-native or wrong wording.
+
+Wei Tseng is **ég** or **Lögmaður**, never **hann**. Column 012 is the cleanest. The Civil Code is called `einkamálalög` throughout 010 and 016, which an Icelandic lawyer reads as civil procedure.
+
+Last 15 lines:
+
+```
+| 36 | P2 | C | columns-is/018-taiwan-semiconductor-market-entry.md | "stjórnin þarf ekki að stemma við innleggshlutfall" | `stemma við` means to stop against; English is that control need not match the contribution ratio. Also 016 `stemmi` and 017 `stemma við raunverulegan rekstur`. | stjórnin þarf ekki að fara eftir innleggshlutfalli |
+| 37 | P2 | A | columns-is/017-taiwan-logistics-business-setup.md | "Félagið verður því ekki þegar vöruflutningar með vélknúnum ökutækjum" | A company is said to “become freight transports”, and `þegar` does not mean “thereby”. | Félagið verður því ekki, af því einu, flutningsaðili í vöruflutningum með vélknúnum ökutækjum. |
+| 38 | P2 | A | columns-is/017-taiwan-logistics-business-setup.md | "gildir TWD 10.000.000 og að minnsta kosti 8 einingar" | The moving-company minimum is eight new trucks, not eight unnamed “units”. Also the five units for Kinmen. | gildir 10.000.000 TWD og að minnsta kosti 8 nýir vörubílar |
+| 39 | P2 | D | columns-is/017-taiwan-logistics-business-setup.md | "lágmarkshlutafé TWD 25.000.000 (新臺幣)" | Currency code before the amount. 010 already uses the Icelandic order `1.579.589 TWD`. Also the fines in 011 and the audit thresholds in 018. | lágmarkshlutafé 25.000.000 TWD (新臺幣) |
+| 40 | P2 | B | columns-is/017-taiwan-logistics-business-setup.md | "leigja eigin séreinkaréttan bílastæði" | `séreinkaréttan` is not a word, and it does not agree with neuter `bílastæði`. | leigja eigið sérstakt bílastæði |
+| 41 | P2 | A | columns-is/017-taiwan-logistics-business-setup.md | "ekki komist hjá eftirliti með heitinu einu" | Reads as “avoid supervision of the title alone”; English is that the contract name alone does not avoid regulation. | ekki komist hjá eftirliti með því einu að samningurinn sé nefndur farmiðlun eða pallsrekstur |
+| 42 | P2 | A | columns-is/017-taiwan-logistics-business-setup.md | "stöðuaðstöðu, inngöngu í greinafélag, brot og vanskil" | `stöðuaðstaða` is built on `staða` (status), so the parking-facility requirement (停車設施) is not recognizable. | bílastæðaaðstöðu (停車設施), inngöngu í greinafélag, brot og vanskil |
+| 43 | P2 | B | columns-is/018-taiwan-semiconductor-market-entry.md | "3 stjórnarmenn, valda meðal hluthafa" | `valda` is accusative or the genitive of “power”; directors elected from the shareholders need nominative `valdir`. | 3 stjórnarmenn, valdir meðal hluthafa |
+| 44 | P2 | B | columns-is/018-taiwan-semiconductor-market-entry.md | "hvaða staðvera á Taívan verði sett á fót" | `staðvera` is not a word; English is the presence to establish. | hvaða viðvera á Taívan verði sett á fót |
+| 45 | P2 | A | columns-is/018-taiwan-semiconductor-market-entry.md | "100 starfsmenn í vinnutryggingu" | Coined noun, and the 勞工保險 gloss is missing, so the audit headcount is not identifiable as labour insurance. 監察人 and 會計師 are already kept apart. | 100 starfsmenn skráðir í launþegatryggingu (勞工保險) |
+| 46 | P2 | B | columns-is/018-taiwan-semiconductor-market-entry.md | "endurskoðunarviðmið almenns félags eru innborguðu hlutafé TWD 30.000.000" | `innborguðu` is dative; the predicate is nominative `innborgað hlutafé`. | endurskoðunarviðmið almenns félags eru innborgað hlutafé að fjárhæð 30.000.000 TWD |
+| 47 | P2 | C | columns-is/018-taiwan-semiconductor-market-entry.md | "Hver skuldar stuðninginn við viðskiptavininn" | `skulda` is to owe money; English is who owes the support duty. | Hver ber stuðningsskyldu gagnvart viðskiptavininum |
+| 48 | P2 | C | columns-is/018-taiwan-semiconductor-market-entry.md | "Raunveruleg samtalsmál sem í boði eru, enska, kínverska (中文), japanska og kóreska" | On a law-firm site `mál` is a case, so the four consultation languages read as matters on offer. | Ráðgjöf er aðeins í boði á ensku, kínversku (中文), japönsku og kóresku |
+| 49 | P2 | C | columns-is/018-taiwan-semiconductor-market-entry.md | "Að nafni gagnaðila til könnunar hagsmunaáreksturs veittu, eru nauðsynleg gögn" | Dative absolute; no Icelandic web page opens the conflict-check step this way. | Þegar nafn gagnaðila hefur verið gefið upp til könnunar á hagsmunaárekstri eru nauðsynleg gögn og sendingaraðferð ákveðin eftir leiðbeiningu ábyrgðarmannsins. |
+```
+=== end code=0 2026-09-22 11:24:28 ===

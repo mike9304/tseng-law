@@ -1,0 +1,20 @@
+[WO start 2026-09-22 10:41:33]
+The Estonian review is in `docs/i18n/global-plan/reviews/native/et-a.md`. Guidance and columns are both 3/5: readable legal Estonian, with ten items that should be fixed before a client sees them. Wei Tseng is referred to with epicene **ta** / **advokaat** throughout. The no-Estonian-consultation lines stay negative.
+
+Last 15 lines:
+
+```
+| 29 | P2 | C | columns-et/001-taiwan-company-establishment-basics.md | "põhimõtteliselt 1 järgmistest kriteeriumidest" | Digit where Estonian writes the word. Also “2. astme suulise arutelu” and “1. astme” in 003, and “registreerimine 1 nimele” in 007. | põhimõtteliselt üks järgmistest kriteeriumidest |
+| 30 | P2 | B | columns-et/003-taiwan-traffic-accident-procedure.md | "hinnati 50 %ks" | The translative cannot attach to the percent sign. | kannatanu hooletus hinnati 50 protsendiks |
+| 31 | P2 | A | columns-et/003-taiwan-traffic-accident-procedure.md | "taotleb aresti (假扣押) ja sissenõudmist" | 假扣押 is provisional attachment of assets. Bare “arest” reads as arrest of a person. | taotleb vara arestimist hagi tagamiseks (假扣押) ja sissenõudmist |
+| 32 | P2 | C | columns-et/008-taiwan-labor-severance-law.md | "Olen Wei Tseng (曾雋崴), Taiwani advokaat." | First-person blog greeting and one sentence per line. The same layout is in 003 Q16–Q20, 005, 006 and 009. 006 asks an Estonia reader whether they lived through Taiwan’s old barbershops. | Olen Wei Tseng (曾雋崴), advokaat Taiwanis. |
+| 33 | P2 | A | columns-et/004-taiwan-company-subsidiary-vs-branch.md | "Leping kohandab mõlema piirkonna residentide topeltmaksustamist" | English “coordinates double taxation”. “Kohandab” means the treaty tweaks the tax. | Leping leevendab kahe piirkonna residentide topeltmaksustamist |
+| 34 | P2 | A | columns-et/004-taiwan-company-subsidiary-vs-branch.md | "ärihinda toetavat ainest tuleb säilitada" | “Aine” is a school subject or a substance. English is records of the arm’s-length price. Also “ainest tegelikust töö teostamisest” later in the file. | Turuhinda toetavad dokumendid tuleb alles hoida. |
+| 35 | P2 | A | columns-et/007-taiwan-divorce-lawsuit-qna.md | "põhiseadusliku hinnangu seadusandmise aeg on möödunud" | English names Judgment 112-Hsien-Pan-4 and its legislative period. This sentence drops the case, so the deadline has no source. | Kuigi otsuses 112年憲判字第4號 (2023) nimetatud seadusandmise tähtaeg on möödunud, ei ole erandi sõnastust seisuga 25. juuli 2026 seadusest eemaldatud |
+| 36 | P2 | C | columns-et/006-taiwan-massage-history-law.md | "põhiseaduskohtu suurkohtunikud (大法官)" | “Suurkohtunik” is “the big judge”. 大法官 are the justices of the Constitutional Court. | põhiseaduskohtu kohtunikud (大法官) |
+| 37 | P2 | D | columns-et/004-taiwan-company-subsidiary-vs-branch.md | "Korea-poolne deklareerimine ja välismaise maksu mahaarvamine" | The checklist still treats a Korean home-country filing as every reader’s step. Korea is already marked as one example earlier in the file. | päritoluriigi deklareerimine (Korea on üks näide) ja välismaise maksu mahaarvamine |
+| 38 | P2 | A | columns-et/004-taiwan-company-subsidiary-vs-branch.md | "piiratud vastutusega usaldusühingud (有限合夥)" | 有限合夥 is a limited partnership. Estonian already calls that “usaldusühing”; “piiratud vastutusega” makes it sound like an osaühing. | usaldusühingud (有限合夥) |
+| 39 | P2 | B | columns-et/008-taiwan-labor-severance-law.md | "ilma et oleks mõistetud tingimisi karistus" | After “ilma et oleks mõistetud” the object is partitive. | ilma et oleks mõistetud tingimisi karistust (緩刑) |
+| 40 | P2 | A | et-guidance.txt | "Vastutus" | Nav label for the disclaimer. “Vastutus” is liability; a disclaimer is a limitation of it. | Lahtiütlus |
+```
+=== end code=0 2026-09-22 10:52:30 ===

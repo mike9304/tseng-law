@@ -1,0 +1,7 @@
+[WO start 2026-09-22 11:19:50]
+The accepted Khmer review fixes are in the Khmer columns and guidance pack. The log is `docs/i18n/global-plan/evidence/grok-F-km.log`. Nothing was committed.
+
+The checker reports `summary PASS 18/18`. Review markers are 0. Typecheck prints `TSC_OK`. Tests are 160 files, 3202 passed. Column 018 was restored from the English source inside the same blocks, and its number check is exact (`sourceCount=25 targetCount=25`).
+
+Skipped, as decided in the acceptance note: the Hangul frontmatter URLs, the pinned `TWD 1.57M` figure, merging the blog lines into new headings, and adding the year 2023. The Judicial Yuan name is `សភាតុលាការ`, and alimony, final judgments, and the acquisition-target wording were left as legal terms.
+=== end code=0 2026-09-22 11:44:25 ===

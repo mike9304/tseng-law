@@ -1,0 +1,23 @@
+[WO start 2026-09-22 10:48:24]
+Tamil columns 010–018 are reviewed in `docs/i18n/global-plan/reviews/native/ta-b.md`. Naturalness is 3/5. There are 13 P1 meaning errors and 41 P2 rows. Wei Tseng is not marked masculine, and the consultation disclaimers stay correctly negative. Columns 012 and 015 read the most naturally.
+
+Last 15 lines of the file:
+
+```
+| 40 | P2 | D | columns-ta/016-taiwan-inheritance-custody-analysis.md | "பாட்டன்–பாட்டி இந்த வரிசையில்" | பாட்டன்–பாட்டி is the paternal pair; the class is grandparents on both sides. | இரு தரப்பு தாத்தா–பாட்டி இந்த வரிசையில் |
+| 41 | P2 | A | columns-ta/016-taiwan-inheritance-custody-analysis.md | "பொருளாதார உரிமையாளராக மாறுவதில்லை" | Beneficial owner became “economic owner”. Also the repeat in section 7. | பயனாளி உரிமையாளராக மாறுவதில்லை |
+| 42 | P2 | A | columns-ta/016-taiwan-inheritance-custody-analysis.md | "அமைந்த பிணைப்பையும் தேடுங்கள்" | Security interests became an undefined “bond that was formed”. | அமைந்த பிணைய உரிமைகளையும் தேடுங்கள் |
+| 43 | P2 | A | columns-ta/016-taiwan-inheritance-custody-analysis.md | "செயலில் உள்ள மற்றும் எதிர்மறைச் சொத்தை உடன் தேடுங்கள்" | Assets and liabilities became “active property and negative property”. | சொத்துகளையும் கடன்களையும் உடன் தேடுங்கள் |
+| 44 | P2 | A | columns-ta/016-taiwan-inheritance-custody-analysis.md | "பூர்த்தி அமைப்பு தேவையா என்று பாருங்கள்" | Safeguards for a guardian candidate became a “completion structure”. | கூடுதல் பாதுகாப்பு ஏற்பாடு தேவையா என்று பாருங்கள் |
+| 45 | P2 | A | columns-ta/017-taiwan-logistics-business-setup.md | "இடமாற்றம் (搬家) மட்டும் எல்லையாக உள்ள வணிகத்திற்கு" | Household-goods moving reads as an office relocation, the sense used in 015. | வீட்டுப் பொருள் இடமாற்ற வணிகம் (搬家) மட்டும் எல்லையாக உள்ள வணிகத்திற்கு |
+| 46 | P2 | A | columns-ta/017-taiwan-logistics-business-setup.md | "சேமிப்பு, பொதி செய்தல், அமைப்பு இயக்கம்" | Systems operations became “structure movement”. | சேமிப்பு, பொதி செய்தல், தகவல் அமைப்பு இயக்கம் |
+| 47 | P2 | A | columns-ta/017-taiwan-logistics-business-setup.md | "போக்குவரத்து இடைநிலை அல்லது தள இயக்கம் என்று எழுதப்பட்டிருந்தாலும்" | Platform operations reads as yard or floor operations. | போக்குவரத்து இடைநிலை அல்லது தளச் சேவை என்று எழுதப்பட்டிருந்தாலும் |
+| 48 | P2 | A | columns-ta/017-taiwan-logistics-business-setup.md | "மேசைக்கு மேல் பத்திரங்களில் முதலீடு" | Over-the-counter securities is a literal “on top of the table”. | பட்டியலில் இல்லாத கவுன்டர்-வழிப் பத்திரங்களில் முதலீடு |
+| 49 | P2 | A | columns-ta/017-taiwan-logistics-business-setup.md | "பெயர் மாற்றம்-மாற்றம் (過戶轉讓)" | Title transfer and assignment collapsed into “change-change”. | உரிமை மாற்றம் அல்லது மாற்றித் தருதல் (過戶轉讓) |
+| 50 | P2 | A | columns-ta/017-taiwan-logistics-business-setup.md | "உரிமம் கடன் (借牌)" | Lending the operating license reads as a license debt. Also "இயக்க உரிமம் கடன்". | உரிமத்தை இரவல் விடுதல் (借牌) |
+| 51 | P2 | A | columns-ta/018-taiwan-semiconductor-market-entry.md | "நுண்பகுதிக் கூறு உற்பத்தியாளர்" | Precision-component maker became a “micro-region component” maker. | துல்லியக் கூறு உற்பத்தியாளர் |
+| 52 | P2 | A | columns-ta/018-taiwan-semiconductor-market-entry.md | "ஆண்டுக் கணக்குகளின் சான்றாதாரம் தேவையில்லை" | Financial-statement audit collides with சான்றாதாரம் “authentication” in 016. | ஆண்டு நிதி அறிக்கைத் தணிக்கை தேவையில்லை |
+| 53 | P2 | A | columns-ta/018-taiwan-semiconductor-market-entry.md | "கணக்காளர் (會計師) மூலதனத்தை ஆய்வு செய்த பிறகு" | CPA capital verification reduced to a general accountant. | பட்டயக் கணக்காளர் (會計師) மூலதனத்தை ஆய்வு செய்த பிறகு |
+| 54 | P2 | A | columns-ta/018-taiwan-semiconductor-market-entry.md | "கையகப்படுத்தல் அல்லது பட்டியலிடும் எதிர்பார்ப்புள்ள" | Listing or emerging-market registration (興櫃) lost the emerging-market route. | கையகப்படுத்தல், பட்டியலிடுதல் அல்லது வளர்ந்துவரும் சந்தைப் பதிவு எதிர்பார்ப்புள்ள |
+```
+=== end code=0 2026-09-22 11:01:41 ===

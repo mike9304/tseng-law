@@ -1,0 +1,23 @@
+[WO start 2026-09-22 10:41:37]
+The Icelandic review is in `docs/i18n/global-plan/reviews/native/is-a.md`. Naturalness is **3/5** for the guidance pack and **3/5** for columns 001–009: readable legal Icelandic, with Danish false friends and eight places where the legal meaning breaks. Wei Tseng is **hún** / **ég**; the consultation limits stay negative.
+
+Last 15 lines:
+
+```
+| 39 | P2 | B | columns-is/003-taiwan-traffic-accident-procedure.md | "Kvittanir, gjaldskrárskrár, leiðarskrár" | `skrá` is doubled: tariff-list-lists. | Kvittanir, gjaldskrár, leiðarskrár og meðferðargögn |
+| 40 | P2 | D | columns-is/003-taiwan-traffic-accident-procedure.md | "sem breytt var 2026-05-29, gildir um slys frá 1. júlí 2026" | ISO date in running prose. The same sentence already uses Icelandic day-month-year for July. | sem breytt var 29. maí 2026, gildir um slys frá 1. júlí 2026 |
+| 41 | P2 | D | columns-is/003-taiwan-traffic-accident-procedure.md | "Dómur áfrýjunardóms Taívan, ár 109, mál 上易字 nr. 644" | ROC year 109 is opaque in Iceland (2020). Column 007 already adds the Gregorian year for year 112. | Dómur áfrýjunardóms Taívan, ár 109 (2020), mál 上易字 nr. 644 |
+| 42 | P2 | D | columns-is/003-taiwan-traffic-accident-procedure.md | "Hegningarlög lýðveldisins Kína 185-4. gr." | Without `Taívan`, `Kína` is read as the PRC. Also the 284 and 287 link titles. | Hegningarlög Taívan (lýðveldið Kína) 185-4. gr. |
+| 43 | P2 | C | columns-is/003-taiwan-traffic-accident-procedure.md | "Samkvæmt reynslu minni meðhöndlar tryggingafélagið" | Q16–Q20 drop the headings and switch to first-person blog voice. Same shift in 006 and 008. | Reynsla af málum er sú að tryggingafélagið meðhöndlar oft ekki tilfinningalegu hliðina hjá slysaðilum nægilega. |
+| 44 | P2 | B | columns-is/004-taiwan-company-subsidiary-vs-branch.md | "yfir alla starfstíð fyrirtækisins" | `starfstíð` is not a word; the noun is `starfstími`. | yfir allan starfstíma fyrirtækisins |
+| 45 | P2 | A | columns-is/004-taiwan-company-subsidiary-vs-branch.md | "tiltekna reglugerða starfsemi (許可)" | `reglugerða` is the genitive of “regulation”; 許可 is a permit. Also `reglugerðrar starfsemi` later. | tiltekna leyfisskylda starfsemi (許可) |
+| 46 | P2 | A | columns-is/004-taiwan-company-subsidiary-vs-branch.md | "getur umsóknarfrestur eða sönnunarkröfur tapast" | `tapast` means “get lost”; English is that an application deadline or the proof may be missed. | getur umsóknarfrestur eða sönnunarkröfur fallið niður |
+| 47 | P2 | G | columns-is/004-taiwan-company-subsidiary-vs-branch.md | "Taiwan Stock Exchange (臺灣證券交易所)" | English name left in running Icelandic. The Chinese gloss is already there. Also the later bare “Taiwan Stock Exchange”. | Kauphöll Taívan (臺灣證券交易所) |
+| 48 | P2 | C | columns-is/007-taiwan-divorce-lawsuit-qna.md | "beiting og burður réttinda og skyldna" | Word-for-word 行使或負擔. The next sentence already says forsjá; `burður` is not how that term is introduced. | forsjá og foreldraábyrgð (未成年子女權利義務之行使或負擔); orðrétt er það beiting og byrði réttinda og skyldna |
+| 49 | P2 | B | columns-is/007-taiwan-divorce-lawsuit-qna.md | "fjárhagsleg burður og lífsaðstæður" | `burður` is masculine, so the adjective is `fjárhagslegur`. | fjárhagslegur burður og lífsaðstæður |
+| 50 | P2 | B | columns-is/007-taiwan-divorce-lawsuit-qna.md | "í hlutlaust tímalínu" | `tímalína` is feminine; `hlutlaust` is neuter. | í hlutlausa tímalínu |
+| 51 | P2 | C | columns-is/007-taiwan-divorce-lawsuit-qna.md | "kanna punkt fyrir punkt" | `punkt fyrir punkt` is a calque of “point by point”. Also the closing paragraph. | kanna atriði fyrir atriði |
+| 52 | P2 | A | columns-is/008-taiwan-labor-severance-law.md | "félagið á auðvitað að greiða hann" | `auðvitað` makes severance sound automatic, against the article’s own rule that it is not always owed. | og félaginu ber að greiða hann þegar lögbundin skilyrði eru uppfyllt. |
+| 53 | P2 | A | columns-is/009-taiwan-voluntary-resignation-severance.md | "vitneskju um tjónsleiðinguna" | `tjónsleiðing` is not a word; the 30-day trigger is knowledge of the harm or the damaging act. | vitneskju um tjónið |
+```
+=== end code=0 2026-09-22 10:54:37 ===

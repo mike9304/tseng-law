@@ -1,0 +1,22 @@
+[WO start 2026-09-22 10:34:44]
+The review is in `docs/i18n/global-plan/reviews/native/fa-a.md`. Guidance and columns both sit at 3/5: the long legal pages are usable Iranian Persian, while the footer, the llms notice, and columns 003 (from Q16), 005, 006, 008 and 009 still read as translation. Seven items are P1. Wei Tseng is not put in a masculine form.
+
+Last 15 lines:
+
+```
+| 20 | P2 | C | columns-fa/004-taiwan-company-subsidiary-vs-branch.md | "باید بر سراسر دورهٔ فعالیت حکم کرد" | حکم کردن is a court ruling. The stock verb for “assess” runs through 001–004. | باید سراسر دورهٔ فعالیت را سنجید |
+| 21 | P2 | C | columns-fa/003-taiwan-traffic-accident-procedure.md | "به تجربهٔ من، شرکت بیمه غالباً بُعد عاطفی طرف حادثه را به‌قدر کافی رسیدگی نمی‌کند." | Q16–Q20 drop into first person, blank lines, and “امیدوارم سودمند باشد”. Same blog lineation in 005, 006 (“نسبت بها به خدمت بسیار خوب بود”)، 008 (“سلام، من وکیل”) and 009. | شرکت بیمه اغلب به جنبهٔ عاطفی طرف‌های حادثه به‌قدر کافی رسیدگی نمی‌کند. |
+| 22 | P2 | A | columns-fa/003-taiwan-traffic-accident-procedure.md | "من در رسیدگی به حوادث رانندگی بسیار، نکته‌ای مهم می‌خواهم بگویم." | بسیار sits on the wrong word, so it no longer means “many cases”. | از میان حوادث رانندگی بسیاری که رسیدگی کرده‌ام، یک نکته را باید گفت. |
+| 23 | P2 | B | columns-fa/003-taiwan-traffic-accident-procedure.md | "3\*30\*1,000=TWD 90,000" | Asterisk formula and a bare TWD code in running Persian. Keep 3, 30, 1,000 and 90,000. | ۳ × ۳۰ × ۱٬۰۰۰ = ۹۰٬۰۰۰ دلار جدید تایوان |
+| 24 | P2 | A | columns-fa/003-taiwan-traffic-accident-procedure.md | "توقیف احتیاطی می‌خواهد و مال طرف مقابل را تا پایان توقیف می‌کند." | Provisional attachment (假扣押) is تأمین خواسته in Iranian procedure, not “precautionary seizure”. | تأمین خواسته می‌خواهد و مال طرف مقابل را تا پایان توقیف می‌کند. |
+| 25 | P2 | A | columns-fa/003-taiwan-traffic-accident-procedure.md | "ساختار تضمین بدون تقصیر" | تضمین reads as a guarantee; this is no-fault insurance cover, not the firm’s promise. | ساختار جبران بدون اثبات تقصیر |
+| 26 | P2 | D | columns-fa/003-taiwan-traffic-accident-procedure.md | "شماره 644 سال 109" | Minguo year with no Gregorian equivalent. also “سال 112” in 003 and in 007 “حکم قانون اساسی شماره 4 سال 112”. Keep the case numbers. | شماره ۶۴۴ سال ۱۰۹ (۲۰۲۰) |
+| 27 | P2 | D | columns-fa/001-taiwan-company-establishment-basics.md | "از 1/3 مجموع سهام منتشرشده" | English slash fraction. also 005. Keep the one-third threshold. | بیش از یک‌سوم مجموع سهام منتشرشده |
+| 28 | P2 | A | columns-fa/005-taiwan-company-establishment-advanced-2.md | "پس از دریافت مدارک ثبت شخص حقوقی عموماً،" | “Generally, the documents must first be issued” became “after receiving … generally,” and the sentence breaks. | معمولاً نخست باید مدارک ثبت شخص حقوقی صادر شود. |
+| 29 | P2 | G | columns-fa/005-taiwan-company-establishment-advanced-2.md | "A. نخستین کارمند" | Latin A/B labels in a Persian answer. also “B. از کارمند دوم”. | الف. نخستین کارمند |
+| 30 | P2 | A | columns-fa/006-taiwan-massage-history-law.md | "آقای لین این کیفر را بسیار ناعادلانه دانست" | کیفر is criminal punishment; the sum is an administrative fine (罰鍰). also 007 “کیفر مادهٔ 13” and “کیفر می‌تواند پی‌درپی اعمال شود”. | آقای لین این جریمه را بسیار ناعادلانه دانست |
+| 31 | P2 | C | columns-fa/007-taiwan-divorce-lawsuit-qna.md | "و عماد طلاق با حکم، قطعیت حکم است." | عماد is not a word a Tehran lawyer uses; the point is that judicial divorce turns on finality. | و اساس طلاق با حکم دادگاه، قطعیت رأی است. |
+| 32 | P2 | A | columns-fa/008-taiwan-labor-severance-law.md | "برخی شرکت‌های تایوانی بد" | بد is “bad”; English is unscrupulous. | برخی شرکت‌های بی‌ملاحظه در تایوان |
+| 33 | P2 | G | columns-fa/008-taiwan-labor-severance-law.md | "«من OOO، سمت و مزد را داوطلبانه پایین می‌آورم»." | Latin OOO left inside the quoted resignation form. | «من، ……، سمت و مزد را داوطلبانه پایین می‌آورم.» |
+```
+=== end code=0 2026-09-22 10:44:17 ===

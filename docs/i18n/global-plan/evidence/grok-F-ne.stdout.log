@@ -1,0 +1,9 @@
+[WO start 2026-09-22 11:18:01]
+Nepali native-review fixes are in the 18 columns and the Nepali guidance strings. The log is `docs/i18n/global-plan/evidence/grok-F-ne.log`. Nothing was committed.
+
+Verification passed: column checker `summary PASS 18/18`, review markers `0`, `TSC_OK`, vitest `160` files / `3202` tests passed. Pinned phrases (`TWD 1.57M`, consultation-language tokens, `अधिवक्ता तथा पक्षकार`) were left as they were, so no test expectations changed.
+
+Skipped, as the accepted sheet requires: the “यो फिल्ड आवश्यक छ” message, lakh/Indian regrouping of amounts, added Gregorian years, and the Hangul `url:` values in columns 008 and 009. Partner CPA is **साझेदार चार्टर्ड एकाउन्टेन्ट**, intermediary services are **मध्यस्थ सेवा**, and 調解 is **मेलमिलाप**.The Nepali fix lane is done. All 18 columns and the Nepali guidance strings are updated, and the log is at `docs/i18n/global-plan/evidence/grok-F-ne.log`.
+
+The checker reports `summary PASS 18/18`, review markers are `0`, typecheck prints `TSC_OK`, and vitest reports `160` files / `3202` tests passed. Nothing was committed.
+=== end code=0 2026-09-22 11:49:13 ===

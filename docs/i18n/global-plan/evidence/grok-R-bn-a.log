@@ -1,0 +1,23 @@
+[WO start 2026-09-22 10:34:38]
+The review is in `docs/i18n/global-plan/reviews/native/bn-a.md`. Guidance and columns both read as usable formal Bengali (3/5), with six meaning errors that a client could act on. Wei Tseng is not marked masculine. The consultation limits stay correctly negative.
+
+Last 15 lines:
+
+```
+| 26 | P2 | C | bn-guidance.txt | "আইন ও অর্থায়নের দ্বৈত পথে" | Doppelstudium calqued as a “dual path”, not a double major. | আইন ও অর্থায়নে দ্বৈত স্নাতক |
+| 27 | P2 | C | bn-guidance.txt | "বলা চার ভাষার বাইরে" | “the four languages mentioned” copied with the modifier in the wrong place. | উল্লিখিত চার ভাষার বাইরে |
+| 28 | P2 | C | bn-guidance.txt | "এই পাতা পরামর্শের ধাপ নয়" | Beratungsschritt calqued; no native calls a page a consultation step. | এই পাতা পরামর্শ নয় |
+| 29 | P2 | C | bn-guidance.txt | "আইনি প্রযোজ্য ক্ষেত্র" | Geltungsbereich calqued as a heading a client will not parse. | প্রযোজ্য আইনের পরিধি |
+| 30 | P2 | C | bn-guidance.txt | "ক্রম, আপনার চাহিদা ও সময়সীমা" | Ablauf (what happened) clipped to ক্রম, which reads as a queue. Also the FAQ. | ঘটনার ধারা, আপনার চাহিদা ও সময়সীমা |
+| 31 | P2 | C | bn-guidance.txt | "অবস্থান অনুমতি (居留) বা কর্ম অনুমতি (工作許可)" | Aufenthaltstitel calqued as “location permission”. | আবাসিক অনুমতি (居留) বা কর্ম অনুমতি (工作許可) |
+| 32 | P2 | C | columns-bn/001-taiwan-company-establishment-basics.md | "সব বিদেশি বিনিয়োগকারীর উপর লাগু" | লাগু is colloquial; a law-firm page says প্রযোজ্য. Also 004. | সব বিদেশি বিনিয়োগকারীর উপর প্রযোজ্য |
+| 33 | P2 | C | columns-bn/002-withdraw-capital-taiwan-company.md | "1 বারে 1 বছরের বেশি হতে পারে না" | Digit-plus-বারে is a numeral calque; a native writes একবারে এক বছর. | একবারে এক বছরের বেশি হতে পারে না |
+| 34 | P2 | C | columns-bn/007-taiwan-divorce-lawsuit-qna.md | "তামিলার দিন, চূড়ান্ত হওয়া" | Service of process hidden in an archaic court word many Bangladesh readers will not parse. | জারির দিন, চূড়ান্ত হওয়া |
+| 35 | P2 | D | bn-guidance.txt | "TWD 1.57M রায় আদায় করেছেন" | “M” is not a Bangladesh or West Bengal amount. প্রথম ধাপের আদালত itself is an acceptable first-instance gloss. Also Western 3,000,000 in 001–004, not 30,00,000. | নিম্ন আদালতে TWD 15,70,000 (প্রায় 15.7 লাখ) রায় আদায় করেছেন |
+| 36 | P2 | D | columns-bn/007-taiwan-divorce-lawsuit-qna.md | "112 সালের রায় সংখ্যা 4" | ROC year 112 reads as the year 112. Also 003 citations "109 সাল" and "112 সাল". | 112 সালের (খ্রিষ্টাব্দ 2023) রায় সংখ্যা 4 |
+| 37 | P2 | D | columns-bn/005-taiwan-company-establishment-advanced-2.md | "কোরিয়ার নিজ প্রধান ব্যাংক থেকে তথ্য নিন" | The heading labels Korea as an example, but the imperative still addresses a reader whose bank is in Korea. | কোরিয়া থেকে পাঠানোর ক্ষেত্রে কোরিয়ার ব্যাংক থেকে তথ্য নিতে হয়। এটি বাংলাদেশ বা ভারতের ব্যাংক-পথ নয়। |
+| 38 | P2 | G | bn-guidance.txt | "Paralegal" | The role line is only English; the bio also leaves “সিনিয়র paralegal”. | সিনিয়র আইনি সহকারী (paralegal) |
+| 39 | P2 | G | columns-bn/005-taiwan-company-establishment-advanced-2.md | "কোরিয়ান জাতীয়তার ব্যক্তি" | Korean is an English shape here; the rest of the site says কোরীয় / কোরিয়া. | কোরিয়ার নাগরিক |
+| 40 | P2 | G | columns-bn/008-taiwan-labor-severance-law.md | "대만-노동법：대만에서-퇴직금-받기-어렵다고" | Public URL is Hangul with a fullwidth colon. Also the 009 Hangul slug. Do not rewrite the url key in this review. | url ক্ষেত্র বদলাবেন না। পাঠকের দেখা লিঙ্কে কোরীয় অক্ষর ও পূর্ণ-প্রস্থ কোলন আছে; আলাদা স্লাগ দরকার। |
+```
+=== end code=0 2026-09-22 10:41:08 ===

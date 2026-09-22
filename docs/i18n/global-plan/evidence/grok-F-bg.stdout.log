@@ -1,0 +1,9 @@
+[WO start 2026-09-22 11:33:45]
+The accepted Bulgarian fixes are in this worktree only. Nothing was committed.
+
+The guidance pack and all 18 columns now use the supervisor’s wording: formal **Ви**, feminine forms for Wei Tseng, and the corrected legal terms (voluntary resignation, VAT-style 營業稅, household registration, punitive damages, shares versus quotas). Consultation stays English, Chinese, Japanese, and Korean. The pinned figure `TWD 1.57M` and the dotted thousands (`TWD 500.000`) are unchanged, because a space separator fails the number checker.
+
+Labels left for the ColumnsGrid sync: **Покажете всички**, **Прочетете още**, and the nav disclaimer **Правна бележка** (14 characters). `ColumnsGrid.tsx` still says `Прочети още`.
+
+Verification: column checker `summary PASS 18/18`, review markers 0, `TSC_OK`, unit tests `160` files / `3202` passed. The full record is in `docs/i18n/global-plan/evidence/grok-F-bg.log`.
+=== end code=0 2026-09-22 11:54:29 ===

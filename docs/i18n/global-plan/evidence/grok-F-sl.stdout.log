@@ -1,0 +1,16 @@
+[WO start 2026-09-22 11:45:09]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+The accepted Slovene fixes are in the columns and the `sl` guidance strings. Nothing was committed.
+
+The column checker is `summary PASS 18/18`, review markers are 0, `tsc` prints `TSC_OK`, and vitest reports 160 files / 3202 tests passed. The write-up is `docs/i18n/global-plan/evidence/grok-F-sl.log`.
+
+A few reviewer rows were not taken as written:
+
+- **17 ocen** stays. That word sits after the number 17, so the genitive plural is the right form.
+- **TWD 30.000** and **TWD 1.57M** stay. Space thousands and a rewrite of the pinned bio figure were rejected.
+- Wei Tseng’s feminine first person stays in the columns where the review wanted a third-person rewrite.
+- **大法官** is „ustavni sodniki Sodnega sveta“, as in the accepted note. **司法院** stays „Sodni juan“.
+- Hangul `url:` values were left alone.
+- Where Slovene „in“, „to“, or „čas“ would trip the English-stopword check, a later „in“ was put back to „ter“. Two citations in column 012 stay „Člen 101“, because a line starting with `101.` is counted as a list item and the number is dropped.The Slovene fix lane is done and the checks passed: column checker `summary PASS 18/18`, no review markers, `TSC_OK`, and 160 test files / 3202 tests passed. The write-up is in `docs/i18n/global-plan/evidence/grok-F-sl.log`. Nothing was committed.
+=== end code=0 2026-09-22 12:22:07 ===

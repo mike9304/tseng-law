@@ -1,0 +1,28 @@
+[WO start 2026-09-22 10:12:40]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
+Retry attempt 2...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 3)...
+Retry attempt 3...
+The Slovene review is in `docs/i18n/global-plan/reviews/native/sl-a.md`. Guidance reads as usable professional Slovene (4/5). Columns are 3/5: 001, 004 and 007 are the strongest; 002 names the wrong tax; 006, 008 and 009 still sound like a blog. Wei Tseng is feminine throughout. Nine items should be fixed before a client sees the text, including `uporaben` for “applicable”, `matične evidence` for household registration (戶籍), `dohodnina` for the company tax return, and Hangul URLs in columns 008 and 009.
+
+Last 15 lines:
+
+```
+| 62 | P2 | C | columns-sl/006-taiwan-massage-history-law.md | "razmerje kakovosti do cene odlično" | Value-for-money slogan in a law-firm column. The opening “Ali se spominjate časov tradicionalnih brivnic” is the same blog voice. | (Drop the barbershop nostalgia; start at the 1980 statute and the constitutional ruling.) |
+| 63 | P2 | C | columns-sl/007-taiwan-divorce-lawsuit-qna.md | "kdo lastninsko ima določeno premoženje" | lastninsko ima is not how Slovene says who the owner is. | kdo je lastnik določenega premoženja |
+| 64 | P2 | C | columns-sl/007-taiwan-divorce-lawsuit-qna.md | "Zaradi udobja je mogoče govoriti o starševski skrbi" | udobje is physical comfort; the sentence means for ease of expression. | Zaradi krajšega izražanja je mogoče govoriti o starševski skrbi (親權) |
+| 65 | P2 | C | columns-sl/008-taiwan-labor-severance-law.md | "Sledi zadeva, ki sem jo vodila." | The anecdote returns to a first-person blog. Feminine vodila for Wei Tseng is right. also 009 “Kot sem že navedla” | Sledi primer iz prakse. |
+| 66 | P2 | C | columns-sl/008-taiwan-labor-severance-law.md | "da ne padejo v namen družbe" | “Fall into the company’s intention” is not Slovene. | da ne nasedejo načrtu družbe |
+| 67 | P2 | C | columns-sl/009-taiwan-voluntary-resignation-severance.md | "V večini primerov so pravice tistega, ki se vnaprej pripravi, bolje zavarovane." | Closing slogan; a labour note should say what actually decides the claim. | V sporih o odpravnini odloča, katera stran prva konča pogodbo z zakonskim razlogom in z dokazi. |
+| 68 | P2 | D | sl-guidance.txt | "Gaosjungu (高雄), Tajdžongu (臺中) in Pingdongu (屏東)" | Ad-hoc spellings; Slovene usage is Kaohsiung, Taichung and Pingtung. Tajpej is already right. | v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東) |
+| 69 | P2 | D | sl-guidance.txt | "v višini TWD 1.57M" | English decimal and M-abbreviation. The amount stays. | v višini 1,57 milijona TWD |
+| 70 | P2 | D | columns-sl/001-taiwan-company-establishment-basics.md | "najmanj TWD 500.000 (新臺幣)" | Period as thousands separator and the code before the amount. also 002–004, 006 and 007 | najmanj 500 000 TWD (新臺幣) |
+| 71 | P2 | D | columns-sl/003-taiwan-traffic-accident-procedure.md | "okrožnega sodišča Taojuan" | Taoyuan is not Taojuan for a Slovenia reader. | okrožnega sodišča Taoyuan |
+| 72 | P2 | D | columns-sl/004-taiwan-company-subsidiary-vs-branch.md | "Na strani Koreje je treba skupaj potrditi odbitek tuje davčne obveznosti" | The intro says Korea is only an example, then this paragraph still instructs a Korean parent. | Na strani države sedeža (v zgledu: Koreja) je treba skupaj potrditi odbitek tuje davčne obveznosti |
+| 73 | P2 | D | columns-sl/006-taiwan-massage-history-law.md | "Podobno v Koreji, kjer se številne osebe z okvaro vida preživljajo z masažo" | The comparison country is still Korea, not a frame a Slovenia reader expects. | (Keep the Taiwan ruling. If a comparison stays, label it as Korean law, not as the reader’s home system.) |
+| 74 | P2 | G | sl-guidance.txt | "Vodilna odvetnica na Tajvanu (Managing Attorney)" | English role left on the Slovene page. also Taiwan Attorney, Paralegal, Senior Paralegal, Korea Operations Manager, Partner CPA | Vodilna odvetnica na Tajvanu |
+| 75 | P2 | G | columns-sl/004-taiwan-company-subsidiary-vs-branch.md | "Taiwan Stock Exchange — merila sprejema" | English product name left as the link label. also “Invest Taiwan — postopek naložbe” | Tajvanska borza — merila sprejema |
+```
+=== end code=0 2026-09-22 10:31:02 ===

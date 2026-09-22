@@ -1,0 +1,27 @@
+[WO start 2026-09-22 10:12:44]
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
+Retry attempt 2...
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 3)...
+Retry attempt 3...
+The Latvian review is in `docs/i18n/global-plan/reviews/native/lv-a.md`. Guidance pack and columns 001–009: **3/5** and **3/5**. Wei Tseng is consistently **advokāte**; the no-consultation and no-guarantee lines stay negative. 22 P1 and 32 P2 rows: agreement breaks (`Katra lietas`, `Pati fakts`), a few meaning shifts (settlement “atstātas”, “stādināja spēkā”, “B iedeva A4”), and German calques. Columns 006, 008 and 009 still read as a chopped blog.
+
+```
+| 40 | P2 | C | columns-lv/003-taiwan-traffic-accident-procedure.md | Ne noteikti. | One-line FAQ answer no native legal page would leave standing | Ne vienmēr. |
+| 41 | P2 | G | columns-lv/003-taiwan-traffic-accident-procedure.md | ## Q1. Vai pēc negadījuma var atstāt notikuma vietu? | English "Q" labels through Q20; the article title itself is already proper Latvian | 1. Vai pēc negadījuma var atstāt notikuma vietu? |
+| 42 | P2 | C | columns-lv/002-withdraw-capital-taiwan-company.md | Pretēji, ja pastāv patiess sabiedrības parāds | Bare "Pretēji," is a German "Umgekehrt"; also throughout 002, 003 and 007 | Turpretī, ja pastāv patiess sabiedrības parāds |
+| 43 | P2 | C | columns-lv/002-withdraw-capital-taiwan-company.md | parāda esība un atmaksas pamats | "esība" calques "Existenz"; also "juridiskās personas esība" in 001 and "fakta esība" in 007 | tas, ka parāds pastāv, un atmaksas pamats |
+| 44 | P2 | C | columns-lv/002-withdraw-capital-taiwan-company.md | nevar rēķināt pirmajā rindā | "pirmajā rindā" is a table row, not "first of all" | nevar rēķināt vispirms |
+| 45 | P2 | C | columns-lv/002-withdraw-capital-taiwan-company.md | no kā tiek barota atdodamā summa | "barota" calques "fed/gespeist" | no kā tiek segta atdodamā summa |
+| 46 | P2 | A | columns-lv/004-taiwan-company-subsidiary-vs-branch.md | jālemj visam darbības ilgumam | Dative with "jālemj" does not mean "over the whole life cycle of the business" | lēmums jāpieņem, ņemot vērā visu darbības laiku |
+| 47 | P2 | A | columns-lv/004-taiwan-company-subsidiary-vs-branch.md | sauc par palīguzņēmumu | EN is "local office", not an auxiliary enterprise | sarunvalodā to dažkārt sauc par vietējo biroju |
+| 48 | P2 | A | columns-lv/004-taiwan-company-subsidiary-vs-branch.md | ieejas nodokļa atskaitāmība | "ieejas nodoklis" is not the Latvian term for input VAT | priekšnodokļa atskaitāmība |
+| 49 | P2 | D | columns-lv/005-taiwan-company-establishment-advanced-2.md | pārskaitot kapitālu (資本額) no Korejas | Opening question still walks a Korean national through Korean banks; the parenthetical label helps but the reader is in Latvia | pārskaitot kapitālu (資本額) no ārvalstīm; Korejas banku prakse ir tikai piemērs |
+| 50 | P2 | C | columns-lv/006-taiwan-massage-history-law.md | Vai atceraties tradicionālo frizētavu (理髮廳) laikus Taivānas sākumposmā? | Asks a Latvia reader to remember early-Taiwan barbershops; the rest of the file is the same chopped blog | Vai zināt, kā agrāk Taivānā strādāja tradicionālās frizētavas (理髮廳)? |
+| 51 | P2 | A | columns-lv/007-taiwan-divorce-lawsuit-qna.md | bērna vislabāko interešu (子女最佳利益) mērauka | Latvian statute says "bērna labākās intereses"; "mērauka" is not the word "mēraukla". This is the legal standard, not a firm "best" claim | bērna labāko interešu (子女最佳利益) mērauklas |
+| 52 | P2 | D | columns-lv/007-taiwan-divorce-lawsuit-qna.md | 112. gada 4. spriedumā (112年憲判字第4號) | A Latvia reader reads year 112, not the Taiwan calendar year 2023 | 2023. gada (Taivānas 112. gada) 4. spriedumā (112年憲判字第4號) |
+| 53 | P2 | B | columns-lv/009-taiwan-voluntary-resignation-severance.md | Citiem vārdiem, | The idiom is "Citiem vārdiem sakot" | Citiem vārdiem sakot, |
+| 54 | P2 | C | columns-lv/009-taiwan-voluntary-resignation-severance.md | „**laiks**“ ir ļoti svarīgs. | Bold-and-quotes around one word, then the English closing line about preparing in advance is dropped | laiks šeit ir izšķirošs. Parasti labāk aizsargātas ir tās puses tiesības, kura sagatavojas laikus. |
+```
+=== end code=0 2026-09-22 10:29:33 ===

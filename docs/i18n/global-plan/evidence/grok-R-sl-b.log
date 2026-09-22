@@ -1,0 +1,22 @@
+[WO start 2026-09-22 10:58:52]
+The review is in `docs/i18n/global-plan/reviews/native/sl-b.md`. Columns 010–018 score **3/5**: standard Slovene, with Wei Tseng kept feminine and no win-rate or guarantee slip. Twelve items should be fixed before a client sees them, mostly in 014 and 016 (`pričiti` for “attributable”, `boniteta` for a retention bonus, succession by representation called `zastopanje`, and `戶籍` rendered as `matične evidence`).
+
+Last 15 lines:
+
+```
+| 34 | P2 | A | columns-sl/016-taiwan-inheritance-custody-analysis.md | "ne postanejo njegovi gospodarski lastniki" | English is beneficial owner. The Slovene AML term is dejanski lastnik. also §7 | ne postanejo njegovi dejanski lastniki |
+| 35 | P2 | C | columns-sl/016-taiwan-inheritance-custody-analysis.md | "pravni pregled za preostalo družino" | preostala reads as the family left over. A surviving family is preživela. also preostali zakonec / starš throughout | pravni pregled za preživelo družino |
+| 36 | P2 | B | columns-sl/016-taiwan-inheritance-custody-analysis.md | "Sodni jüan Tajvana" | ü is not Slovene spelling. also “Sodnega jüana” in the following paragraph | Sodni juan Tajvana |
+| 37 | P2 | B | columns-sl/016-taiwan-inheritance-custody-analysis.md | "organa, ki mu se predlaga" | Clitic se cannot follow mu. | organa, ki se mu vloga predlaga |
+| 38 | P2 | A | columns-sl/017-taiwan-logistics-business-setup.md | "odpremo v položaju pošiljatelja (貨主), posredovanje prevoza" | The FAQ correctly says špedicija (運送承攬); this repeat drops it, and odpremo is the wrong case in the list. | odprema v položaju pošiljatelja (貨主), špedicija (運送承攬) |
+| 39 | P2 | A | columns-sl/017-taiwan-logistics-business-setup.md | "izposoje licence (借牌)" | 借牌 is operating under another carrier’s plates or permit. licenca reads as a software licence. also §4 | posojanja dovoljenja oziroma tablic (借牌) |
+| 40 | P2 | B | columns-sl/017-taiwan-logistics-business-setup.md | "Ni se ustaviti pri pregledu splošne odobritve" | ni se + infinitive is not a Slovene prohibition. | Ni dovolj ostati pri splošni odobritvi tuje naložbe |
+| 41 | P2 | D | columns-sl/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "TWD 40.000 do TWD 200.000" | Currency code before the amount is English order. also 018 “TWD 30.000.000” and “TWD 100.000.000”. 017 already puts the amount first. | od 40.000 do 200.000 TWD |
+| 42 | P2 | A | columns-sl/018-taiwan-semiconductor-market-entry.md | "Navedeno je predlog pogodbene ureditve." | Neuter navedeno does not agree with predlog, and the next sentence drops “does not prevent disputes” (“ne naredi zakonitega” has no noun). | Zgornje je napotek za zasnovo pogodb. Sama izbira določene pravne oblike posla ga ne naredi zakonitega in ne prepreči sporov. |
+| 43 | P2 | D | columns-sl/018-taiwan-semiconductor-market-entry.md | "delničarji (股東) praviloma odgovarjajo v mejah višine vložka" | A Slovenia reader maps 有限公司 to a d.o.o., whose owners are družbeniki, not delničarji. Reserve delničar for 股份有限公司. | družbeniki (股東) praviloma odgovarjajo le do višine vložka |
+| 44 | P2 | C | columns-sl/018-taiwan-semiconductor-market-entry.md | "kakšno oporišče se na Tajvanu ustanovi" | oporišče is a military stronghold. The table header already says predstavništvo; the cell then calls that office an oporišče. | kakšno prisotnost se na Tajvanu vzpostavi |
+| 45 | P2 | B | columns-sl/018-taiwan-semiconductor-market-entry.md | "Kdo izdaja račune ter izterjuje ter kako" | izterjuje has no object. English is who invoices and collects payment. | Kdo izdaja račune in izterjuje plačila ter kako |
+| 46 | P2 | A | columns-sl/013-taiwan-company-establishment-advanced-1.md | "Kako pisarno pokličete" | poklicati is only a phone call. also the footer of 015, 016 and 017 | Kako stopiti v stik s pisarno |
+| 47 | P2 | C | columns-sl/016-taiwan-inheritance-custody-analysis.md | "Ta vprašanja se smejo medsebojno vplivati" | smejo is a stiff calque of may, repeated as the default modal in 011 and 014–018. | Ta vprašanja lahko vplivajo drugo na drugo |
+```
+=== end code=0 2026-09-22 11:09:47 ===

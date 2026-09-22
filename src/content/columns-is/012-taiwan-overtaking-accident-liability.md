@@ -21,7 +21,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 Ákvæði 101. gr. bannar framúrakstur á köflum með merki um beygju, bratta hækkun eða lækkun, þröngar brýr, göng eða gatnamót, svo og við járnbrautarvegamót og á vinnusvæðum.
 
-Enn fremur máttu ekki aka fram úr á stöðum eða köflum með skóla- eða sjúkrahúsmerki, á stöðum með öðrum bannmerkjum eða merkingum um framúrakstur, þegar ökutæki á móti nálgast, og ekki heldur þegar 2 eða fleiri ökutæki aka í röð á undan (超車).
+Enn fremur er óheimilt að aka fram úr á stöðum eða köflum með skóla- eða sjúkrahúsmerki, á stöðum með öðrum bannmerkjum eða merkingum um framúrakstur, þegar ökutæki á móti nálgast, og ekki heldur þegar 2 eða fleiri ökutæki aka í röð á undan (超車).
 
 Til að aka fram úr ökutæki á undan á sömu akrein skal ökumaðurinn að baki fyrst gefa 2 stutt flautumerki eða blikka ljósum 1 sinni. Flautu og ljósum má ekki beita ítrekað til að þvinga ökutækið á undan til að víkja (超車).
 
@@ -37,13 +37,13 @@ Síðan skal ökutækið sem ekur fram úr kveikja vinstra stefnuljósið, aka f
 
 ![Slysaskissa sem sýnir framúrakstursleið mótorhjólsins og 2 ökutækin á undan á fjallvegi](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A reyndi að aka fram úr 2 ökutækjunum, fór inn á akreinina á móti og jók hraðann. Einnig ökutæki nr. 2 bjó sig undir að aka fram úr ökutæki nr. 1: innan við 1 sekúndu eftir kveikingu stefnuljóssins fór það inn á akreinina á móti. Mótorhjólið hafði ófullnægjandi hemlunarfrávik og rakst á ökutæki nr. 2.
+A reyndi að aka fram úr 2 ökutækjunum, fór inn á akreinina á móti og jók hraðann. Einnig ökutæki nr. 2 bjó sig undir að aka fram úr ökutæki nr. 1: innan við 1 sekúndu eftir kveikingu stefnuljóssins fór það inn á akreinina á móti. Mótorhjólið hafði of skamman tíma til að hemla og rakst á ökutæki nr. 2.
 
 B hlaut alvarlega höfuðáverka og lést á staðnum; A missti meðvitund og var fluttur á sjúkrahús.
 
 Aðstandendur A og B litu fyrst skyndilega akreinaskiptingu ökutækis nr. 2 sem meginsök árekstursins. Málið leiddi til málshöfðunar, og í framvindu málsins voru gerðar nokkrar sérfræðiathuganir (鑑定) á slysinu.
 
-Samkvæmt niðurstöðu sérfræðiathugunarinnar bar A meginsökina á þessum árekstri. Þessi niðurstaða takmarkaðist við atvik þessa máls. Sérfræðiathugunin tók saman tillit til þess að A ætlaði að aka fram úr 2 ökutækjum á undan sem óku í röð, að hann fór inn á akreinina á móti, að hann ók á hraða sem nánast skildi ekkert hemlunarfrávik eftir, að lögbundin flautu- og ljósamerki vantaði, svo og akreinaskiptingu ökutækis nr. 2, uppbyggingu vegar og akreina og önnur varðveitt sönnunargögn (鑑定).
+Samkvæmt niðurstöðu sérfræðiathugunarinnar bar A meginsökina á þessum árekstri. Þessi niðurstaða takmarkaðist við atvik þessa máls. Sérfræðiathugunin tók tillit til þess að A ætlaði að aka fram úr 2 ökutækjum á undan sem óku í röð, að hann fór inn á akreinina á móti, að hann ók á hraða sem nánast skildi engan tíma til að hemla eftir, að lögbundin flautu- og ljósamerki vantaði, svo og akreinaskiptingu ökutækis nr. 2, uppbyggingu vegar og akreina og önnur varðveitt sönnunargögn (鑑定).
 
 Að slíkar sérfræðiniðurstöður komi í einstökum málum þýðir ekki að það að sleppa 1 sinni lögbundnu merki ráði ávallt ábyrgðinni (鑑定). Gáleysi (過失) við framúrakstursslys ræðst af slysstað, akreinaskipan, hraða, hreyfingu ökutækja, merkjum, tímabili, skyggni og öðrum sönnunargögnum.
 
@@ -62,4 +62,4 @@ Til viðbótar máttu skoða [skýringarmynd um reglur og málsmeðferð framúr
 > - [Alþjóðlegt teymi Hovering](/is/lawyers)
 > - [Spurningar og svör um meðferð umferðarslysa á Taívan](/is/columns/taiwan-traffic-accident-procedure)
 
-Þessi grein er almennar lagaupplýsingar um reglur um framúrakstur og mat slysábyrgðar á Taívan (超車); hún er ekki ráðgjöf um tiltekið mál og ekki loforð um tiltekna niðurstöðu. Raunveruleg ábyrgð getur verið mishlöð eftir slysstað, hreyfingu ökutækja, hraða, merkjum, sönnunargögnum, sérfræðiathugun (鑑定) og nýjustu rétti; tiltekin mál skal kanna sérstaklega á grundvelli viðkomandi gagna.
+Þessi grein er almennar lagaupplýsingar um reglur um framúrakstur og mat slysábyrgðar á Taívan (超車); hún er ekki ráðgjöf um tiltekið mál og ekki loforð um tiltekna niðurstöðu. Raunveruleg ábyrgð getur verið misjöfn eftir slysstað, hreyfingu ökutækja, hraða, merkjum, sönnunargögnum, sérfræðiathugun (鑑定) og nýjustu rétti; tiltekin mál skal kanna sérstaklega á grundvelli viðkomandi gagna.

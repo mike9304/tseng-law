@@ -1961,7 +1961,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
     about: 'Skrifstofan',
     lawyers: 'Lögmenn',
     pricing: 'Kostnaður',
-    contact: 'Samband',
+    contact: 'Hafa samband',
     faq: 'Spurningar',
     privacy: 'Persónuvernd',
     disclaimer: 'Fyrirvari',
@@ -1970,9 +1970,9 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
   contactCta: 'Senda beiðni um ráðgjöf',
   footerNotice:
     'Þessi síða á íslensku inniheldur aðeins almennar leiðbeiningar um störf skrifstofunnar samkvæmt rétti Taívan. Hún er ekki lögfræðileg ráðgjöf í tilteknu máli og sending skilaboða stofnar ein og sér ekki samband milli lögmanns og skjólstæðings.',
-  skipLink: 'Sleppa leiðarstýringu og fara í efnið',
+  skipLink: 'Sleppa valmynd og fara í efnið',
   menuLabel: 'Valmynd',
-  languageLabel: 'Birtingarmál',
+  languageLabel: 'Birtingartungumál',
   mega: {
     services: {
       description: 'Skrifstofan vinnur helstu málaflokka réttar Taívan.',
@@ -2005,7 +2005,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
     heroColumnsCtaLabel: 'Sjá greinarnar',
     servicesDetailLabel: 'Sjá nánar',
     servicesAssistanceBefore: 'Ef óljóst er hvaða málaflokki málið þitt tilheyrir útskýrir síðan ',
-    servicesAssistanceLinkLabel: 'Samband',
+    servicesAssistanceLinkLabel: 'Hafa samband',
     servicesAssistanceAfter:
       ' hvernig þú setur saman samantekt sem lögmaður metur.',
     columnsViewAllLabel: 'Sjá allar greinar',
@@ -2013,7 +2013,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Yfirfarið af lögmanninum Wei Tseng',
     columnsOriginalLanguageBadge: 'Frummál',
     columnsOriginalLanguageNote:
-      'Eftirfarandi greinar eru enn ekki tiltækar á íslensku. Listinn stendur á frummálinu og opnar viðkomandi málsíðu; efnið er ekki þýtt sjálfkrafa.',
+      'Eftirfarandi greinar eru enn ekki tiltækar á íslensku. Listinn stendur á frummálinu og opnar viðkomandi tungumálssíðu; efnið er ekki þýtt sjálfkrafa.',
     imageBandAlt: 'Hefðbundið taívanskt sanheyuan (三合院) og nútímalegur skáli í dagsbirtu',
     videoPauseLabel: 'Gera hlé á myndbandinu',
     videoPlayLabel: 'Spila myndbandið',
@@ -2024,7 +2024,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'LEIÐBEININGAR',
       title: 'Lögfræðiþjónusta á Taívan — leiðbeiningar á íslensku',
       description:
-        'Almennar skýringar á íslensku um starfssvið Hovering International Law Firm á Taívan, ráðgjafarmálin og fyrsta samband.',
+        'Almennar skýringar á íslensku um starfssvið Hovering International Law Firm á Taívan, tungumál ráðgjafarinnar og fyrsta samband.',
       intro:
         'Hovering International Law Firm aðstoðar skjólstæðinga erlendis frá, einnig þá sem tengjast Taívan, í málum samkvæmt rétti Taívan: fjárfestingu og félagastofnun, einkamál, hjúskap, fjölskyldu og erfðir, vinnurétt, refsirétt og hugverkarétt. Þessi íslenski hluti hjálpar þér að sjá hvaða vinna fellur innan sviðs okkar, hvað þú ættir að undirbúa og hvernig þú nærð til okkar. Þetta eru almennar upplýsingar, ekki lögfræðileg ráðgjöf í þínu eigin máli.',
       sections: [
@@ -2036,10 +2036,10 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Mál síðunnar og ráðgjafarmálið eru ekki það sama',
+          heading: 'Tungumál síðunnar og tungumál ráðgjafarinnar eru ekki það sama',
           paragraphs: [
-            'Þessi síða er skrifuð á íslensku, en ráðgjöf við lögmann fer einungis fram á fjórum ráðgjafarmálum: ensku, kínversku (中文), japönsku og kóresku. Að lesa leiðbeiningarnar á íslensku þýðir ekki að samtalið við lögmanninn fari fram á íslensku.',
-            'Við heitum ekki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú kannt ekkert af fjórum málunum útskýrir síðan „Samband“ hvernig við könnum samskiptaleið.',
+            'Þessi síða er skrifuð á íslensku, en ráðgjöf við lögmann fer einungis fram á fjórum tungumálum ráðgjafar: ensku, kínversku (中文), japönsku og kóresku. Að lesa leiðbeiningarnar á íslensku þýðir ekki að samtalið við lögmanninn fari fram á íslensku.',
+            'Við heitum ekki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú kannt ekkert af fjórum tungumálunum útskýrir síðan „Hafa samband“ hvernig við könnum samskiptaleið.',
           ],
         },
         {
@@ -2059,8 +2059,8 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hvar þú ættir að byrja',
           paragraphs: [
-            'Lestu síðuna „Þjónusta“ til að sjá hvort málið þitt falli innan sviðs okkar, síðan „Kostnaður“ og „Samband“ til að sjá hvernig umfangið er ákveðið og hvernig kostnaður er staðfestur áður en vinna hefst.',
-            'Þegar þú sendir skilaboð máttu skrifa samantektina á þínu eigin máli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa. Send skilaboð eru beiðni sem bíður mats: það er enn ekki ráðgjöf og enn ekki staðfestur tími.',
+            'Lestu síðuna „Þjónusta“ til að sjá hvort málið þitt falli innan sviðs okkar, síðan „Kostnaður“ og „Hafa samband“ til að sjá hvernig umfangið er ákveðið og hvernig kostnaður er staðfestur áður en vinna hefst.',
+            'Þegar þú sendir skilaboð máttu skrifa samantektina á þínu eigin tungumáli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa. Send skilaboð eru beiðni sem bíður mats: það er enn ekki ráðgjöf og enn ekki staðfestur tími.',
           ],
         },
       ],
@@ -2076,8 +2076,8 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Fjárfesting og félagastofnun á Taívan',
           paragraphs: [
-            'Við aðstoðum erlenda fjárfesta og fyrirtæki við stofnun eða rekstur félags á Taívan: val á félagaformi, undirbúning og skil gagna, innlegg hlutafjár, bankamál, mat á starfsstöð og greinarkröfur. Við aðstoðum einnig við bókhald og skatta sem leiðir af stofnun og rekstri á Taívan.',
-            'Ferli og tímalengd eru mishlöð eftir félagaformi, fjárfesti, grein, banka og þeim gögnum sem þegar eru til. Félagastofnun leiðir ekki af sjálfu sér til dvalarleyfis (居留) eða atvinnuleyfis (工作許可): það eru sérstök málsmeðferðir sem metin eru út frá stöðu hvers og eins.',
+            'Við aðstoðum erlenda fjárfesta og fyrirtæki við stofnun eða rekstur félags á Taívan: val á félagaformi, undirbúning og skil gagna, innlegg hlutafjár, bankamál, mat á starfsstöð og greinarkröfur. Við aðstoðum einnig við bókhald og skatta sem leiða af stofnun og rekstri á Taívan.',
+            'Ferli og tímalengd eru misjöfn eftir félagaformi, fjárfesti, grein, banka og þeim gögnum sem þegar eru til. Félagastofnun leiðir ekki af sjálfu sér til dvalarleyfis (居留) eða atvinnuleyfis (工作許可): það eru sérstök málsmeðferðir sem metin eru út frá stöðu hvers og eins.',
           ],
         },
         {
@@ -2097,7 +2097,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Vinnuréttardeilur',
           paragraphs: [
-            'Þessi flokkur nær til lokunar ráðningarsambands, lögbundins starfslokastyrks samkvæmt rétti Taívan (資遣費; ekki að jafna við sambærilegar reglur annarra ríkja), launa og deilna sem leiðir af ráðningarsamningi (勞動契約), bæði af hálfu launþega og vinnuveitanda. Við matið aðgreinum við ástæðu lokunar frá spurningum um uppsagnarfrest, greiðslu og fresti.',
+            'Þessi flokkur nær til lokunar ráðningarsambands, lögbundins starfslokastyrks samkvæmt rétti Taívan (資遣費; ekki að jafna við sambærilegar reglur annarra ríkja), launa og deilna sem leiða af ráðningarsamningi (勞動契約), bæði af hálfu launþega og vinnuveitanda. Við matið aðgreinum við ástæðu lokunar frá spurningum um uppsagnarfrest, greiðslu og fresti.',
             'Ráðningarsamningur, vinnureglur (工作規則), launaseðlar og bréfaskipti aðila eru yfirleitt lykilgögnin. Ef þú hefur þau enn, nefndu það í samantektinni.',
           ],
         },
@@ -2135,7 +2135,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Stofnun og uppbygging',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) var stofnuð árið 2016 af lögmönnum sem stunduðu nám við National Taiwan University (國立臺灣大學). Kínverska nafnið 昊鼎 sameinar táknið 昊 („himininn víði“) og 鼎 („traustur grunnur“) og lýsir stefnu stofunnar frá stofnun.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) var stofnuð árið 2016 af lögmönnum sem stunduðu nám við National Taiwan University (國立臺灣大學). Kínverska nafnið 昊鼎 sameinar táknið 昊 („hinn víði himinn“) og 鼎 („traustur grunnur“) og lýsir stefnu stofunnar frá stofnun.',
             'Við höfum skrifstofur í Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Skrifstofan í Kaohsiung leggur áherslu á stjórnun fyrirtækja og vinnur einkamála-, refsi- og stjórnsýsludeilur. Skrifstofan í Taichung vinnur byggingamál, hugverkarétt og mál sem tengjast Kóreu og Japan. Skrifstofan í Pingtung var opnuð árið 2017 til að þjóna skjólstæðingum á svæðinu.',
             'Til viðbótar við lögmannsstörfin starfar frá 2020 einnig Hovering Accounting Office, sem býður bókhald og skattáætlun fyrir atvinnurekendur og eignamikla einstaklinga.',
           ],
@@ -2144,14 +2144,14 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Vinna með erlendum aðilum',
           paragraphs: [
             'Starf yfir landamæri nær til félagastofnunar, vegabréfsáritana, vörumerkja- og einkaleyfisumsókna, mats á lagaáhættu og skattaráðgjafar fyrir fyrirtæki. Skrifstofan í Taichung vinnur einkum byggingamál, hugverkarétt og mál sem tengjast Kóreu og Japan. Lögmaðurinn Wei Tseng (曾雋崴) aðstoðar skjólstæðinga frá Kóreu og Japan og aðra alþjóðlega skjólstæðinga í tilgreindum flokkum.',
-            'Hvort við getum tekið mál ræðst af efninu og af málinu sem samskiptin geta farið fram á. Falli málið þitt innan tilgreindra flokka og megi ræða það á einu af fjórum ráðgjafarmálum geturðu sent samantekt til mats.',
+            'Hvort við getum tekið mál ræðst af efninu og af tungumálinu sem samskiptin geta farið fram á. Falli málið þitt innan tilgreindra flokka og megi ræða það á einu af fjórum tungumálum ráðgjafar geturðu sent samantekt til mats.',
           ],
         },
         {
           heading: 'Þegar þú hefur samband',
           paragraphs: [
-            'Að samantektinni þinni móttekinni metur lögmaður innihaldið og ræðir síðan mögulegt vinnuumfang, gögn sem enn vantar og næstu skref. Í skatta- eða bókhaldsmálum getur skrifstofan unnið með bókhaldsdeildinni í einu samfelldu ferli.',
-            'Úrslit hvers máls ráðast af málsatvikum og þeim gögnum sem eru til; við heitum ekki niðurstöðu. Ef þú þarft bindandi svar við þinni stöðu verða skjölin að vera rædd við lögmann á einu af fjórum ráðgjafarmálum.',
+            'Þegar samantektin þín hefur borist, metur lögmaður innihaldið og ræðir síðan mögulegt vinnuumfang, gögn sem enn vantar og næstu skref. Í skatta- eða bókhaldsmálum getur skrifstofan unnið með bókhaldsdeildinni í einu samfelldu ferli.',
+            'Úrslit hvers máls ráðast af málsatvikum og þeim gögnum sem eru til; við heitum ekki niðurstöðu. Ef þú þarft bindandi svar við þinni stöðu verða skjölin að vera rædd við lögmann á einu af fjórum tungumálum ráðgjafar.',
           ],
         },
       ],
@@ -2195,7 +2195,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hvers vegna þessi síða tilgreinir ekki gjaldskrá',
           paragraphs: [
-            'Kostnaður ræðst af málinu sjálfu: af vinnunni, fjölda aðila, gögnum, frestum og því hvort málsmeðferð er þegar í gangi. Tala sett fyrirfram sýndi ekki kostnað málsins þíns. Þess vegna ákveðum við fyrst vinnuumfangið og tilkynnum þér síðan kostnaðinn, áður en vinna hefst.',
+            'Kostnaður ræðst af málinu sjálfu: af vinnunni, fjölda aðila, gögnum, frestum og því hvort málsmeðferð er þegar í gangi. Fjárhæð sem sett er fram fyrir fram sýnir ekki kostnað málsins þíns. Þess vegna ákveðum við fyrst vinnuumfangið og tilkynnum þér síðan kostnaðinn, áður en vinna hefst.',
             'Til viðbótar við lögmannsþóknun geta komið dómstóla-, stjórnvalds- eða þriðja aðila kostnaður. Hann er aðskilinn frá þóknuninni og ræðst af viðkomandi málsmeðferð.',
           ],
         },
@@ -2205,26 +2205,26 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'SAMBAND',
       title: 'Hvernig þú nærð til skrifstofunnar',
       description:
-        'Mál síðunnar, ráðgjafarmálin, ferlið ef þú kannt ekkert af fjórum málunum, og það sem þessi síða heitir ekki.',
+        'Tungumál síðunnar, tungumál ráðgjafarinnar, ferlið ef þú kannt ekkert af fjórum tungumálunum, og það sem þessi síða heitir ekki.',
       intro:
         'Áður en þú skrifar okkur skaltu greina á milli þessara þriggja atriða. Þau eru oft blanduð saman en merkja ólíka hluti.',
       sections: [
         {
           heading: 'Þrír hlutir sem halda þarf aðskildum',
           paragraphs: [
-            'Birtingarmál síðunnar, málið sem ráðgjöf við lögmann fer fram á, og málið sem þú skrifar á, eru þrír aðskildir hlutir.',
+            'Birtingartungumál síðunnar, tungumálið sem ráðgjöf við lögmann fer fram á, og tungumálið sem þú skrifar á, eru þrír aðskildir hlutir.',
           ],
           items: [
-            'Mál síðunnar: þessar leiðbeiningar eru skrifaðar á íslensku.',
-            'Ráðgjafarmál: ráðgjöf fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.',
-            'Skrifmál þitt: þú mátt skrifa samantektina á þínu eigin máli; frumtextinn er vistaður óbreyttur.',
+            'Tungumál síðunnar: þessar leiðbeiningar eru skrifaðar á íslensku.',
+            'Tungumál ráðgjafar: ráðgjöf fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.',
+            'Skriftungumál þitt: þú mátt skrifa samantektina á þínu eigin tungumáli; frumtextinn er vistaður óbreyttur.',
           ],
         },
         {
-          heading: 'Ef þú kannt ekkert af fjórum ráðgjafarmálunum',
+          heading: 'Ef þú kannt ekkert af fjórum tungumálum ráðgjafarinnar',
           paragraphs: [
             'Í tengiliðaeyðublaðinu geturðu valið „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og enginn svarfrestur er lofað.',
-            'Þetta er aðeins könnunarþrep, ekki loforð. Við heitum ekki túlki, ekki þjónustu á íslensku eða á öðru máli utan fjögurra tilgreindra mála, og ekki að við tökum hvert mál.',
+            'Þetta er aðeins könnunarþrep, ekki loforð. Við heitum ekki túlki, ekki þjónustu á íslensku eða á öðru tungumáli utan fjögurra tilgreindra tungumála, og ekki að við tökum hvert mál.',
           ],
         },
         {
@@ -2249,12 +2249,12 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       description:
         'Skýringar á starfssviði, undirbúningi, málum, kostnaði og merkingu sendrar beiðni.',
       intro:
-        'Eftirfarandi spurningar eru svaraðar á stigi almennra upplýsinga. Svar við þínu eigin máli er fyrst mögulegt eftir að lögmaður hefur metið skjölin.',
+        'Eftirfarandi spurningum er svarað á stigi almennra upplýsinga. Svar við þínu eigin máli er fyrst mögulegt eftir að lögmaður hefur metið skjölin.',
       sections: [
         {
           heading: 'Hvernig þú notar þennan hluta',
           paragraphs: [
-            'Finnirðu ekki svar við þinni stöðu ræðst svarið að jafnaði af sérstökum málsatvikum. Skrifaðu þau þá í samantektina í stað þess að draga ályktanir af þessari síðu.',
+            'Ef þú finnur ekki svar við þinni stöðu, ræðst svarið að jafnaði af sérstökum málsatvikum. Skrifaðu þau þá í samantektina í stað þess að draga ályktanir af þessari síðu.',
           ],
         },
       ],
@@ -2275,14 +2275,14 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
             'Nei. Þessar leiðbeiningar eru skrifaðar á íslensku, en ráðgjöf við lögmann fer einungis fram á ensku, kínversku (中文), japönsku og kóresku. Við heitum ekki heldur túlki. Skrifleg þýðing er annað: frumtextinn sem þú skrifar er vistaður eins og hann er og er ekki þýddur sjálfkrafa.',
         },
         {
-          question: 'Hvað ef ég kann ekkert af fjórum málunum?',
+          question: 'Hvað ef ég kann ekkert af fjórum tungumálunum?',
           answer:
-            'Veldu „Samskiptaleiðina þarf að staðfesta“ þegar þú sendir beiðnina. Við svörum til að kanna samskiptaleið, en ráðgjöf á öðru máli er ekki heitið. Þetta er könnunarþrep, ekki loforð um að við getum unnið á öðru máli.',
+            'Veldu „Samskiptaleiðina þarf að staðfesta“ þegar þú sendir beiðnina. Við svörum til að kanna samskiptaleið, en ráðgjöf á öðru tungumáli er ekki heitið. Þetta er könnunarþrep, ekki loforð um að við getum unnið á öðru tungumáli.',
         },
         {
           question: 'Hvernig er farið með íslenska textann minn?',
           answer:
-            'Frumtextinn sem þú skrifar er vistaður eins og hann er og er ekki þýddur sjálfkrafa. Ef þörf krefur er mál áframhaldandi samskipta staðfest við þig.',
+            'Frumtextinn sem þú skrifar er vistaður eins og hann er og er ekki þýddur sjálfkrafa. Ef þörf krefur er tungumál áframhaldandi samskipta staðfest við þig.',
         },
         {
           question: 'Hefur ráðgjöfin þegar farið fram þegar beiðnin er send?',
@@ -2317,9 +2317,9 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Nafnið sem þú gefur upp',
             'Netfangið fyrir svarið',
-            'Birtingarmál síðunnar við sendingu',
-            'Málið sem þú skrifaðir á',
-            'Ráðgjafarmálið sem þú óskar',
+            'Birtingartungumál síðunnar við sendingu',
+            'Tungumálið sem þú skrifaðir á',
+            'Tungumál ráðgjafarinnar sem þú óskar',
             'Frumtextinn sem þú skrifaðir',
             'Samþykki þitt við sendingu beiðninnar',
             'Móttökunúmer til að finna beiðnina aftur',
@@ -2349,7 +2349,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tilkynning og móttökunúmer',
           paragraphs: [
-            'Þegar beiðni er send með góðum árangri tilkynnir kerfið skrifstofunni. Hafi þessi tilkynning ekki verið staðfest enn er textinn þinn áfram vistaður og tapast ekki.',
+            'Þegar sending beiðni tekst, tilkynnir kerfið skrifstofunni. Hafi þessi tilkynning ekki verið staðfest enn er textinn þinn áfram vistaður og tapast ekki.',
             'Móttökunúmerið þjónar því að finna beiðnina þína í gögnum okkar. Það birtist eftir vistun; þú getur tilgreint það við nýtt samband.',
           ],
         },
@@ -2402,7 +2402,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ekkert loforð um niðurstöðu',
           paragraphs: [
             'Enginn hluti þessarar síðu er loforð um úrslit máls, veitingu umsóknar eða dvalar- og atvinnustöðu.',
-            'Ytri tenglar eru til leiðsagnar; við heitum hvorki að efni þriðju aðila sé rétt né að það sé uppfært.',
+            'Ytri tenglar eru til leiðsagnar; við heitum hvorki að efni þriðja aðila sé rétt né að það sé uppfært.',
           ],
         },
       ],
@@ -2411,22 +2411,22 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'GREINAR',
       title: 'Greinar um rétt Taívan',
       description:
-        'Greinar á íslensku um algengar spurningar í rétti Taívan. Efnið er almenn upplýsing á birtingarstundu, ekki lögfræðileg ráðgjöf í þínu máli.',
+        'Greinar á íslensku um algengar spurningar í rétti Taívan. Efnið er almennar upplýsingar á birtingarstundu, ekki lögfræðileg ráðgjöf í þínu máli.',
       intro:
         'Skrifstofan birtir greinar um algengar spurningar í rétti Taívan. Greinar sem eru tiltækar á íslensku standa á þessari síðu; til viðbótar eru fjórir tenglar sem hver opnar greinalista eins frummáls.',
       sections: [
         {
-          heading: 'Fjórir listar eftir máli',
+          heading: 'Fjórir listar eftir tungumáli',
           paragraphs: [
-            'Þessi hluti inniheldur fjóra tengla: greinalistann á kóresku, á kínversku, á ensku og á japönsku. Hver tengill tilgreinir mál listans svo þú vitir fyrirfram á hvaða máli efnið opnast.',
+            'Þessi hluti inniheldur fjóra tengla: greinalistann á kóresku, á kínversku, á ensku og á japönsku. Hver tengill tilgreinir tungumál listans svo þú vitir fyrirfram á hvaða máli efnið opnast.',
             'Þessir fjórir listar eru listar eftir frummáli greinanna, ekki þýðingarlistar. Greinar sem eru tiltækar á íslensku standa sérstaklega á þessari síðu.',
           ],
         },
         {
           heading: 'Hvert tenglarnir leiða',
           paragraphs: [
-            'Þegar þú velur einn af fjórum tenglunum opnast greinalisti þess máls. Af listanum velurðu textann; allt innihaldið birtist á frummáli greinarinnar.',
-            'Þessi síða dregur ekki saman innihald greinanna og heitir ekki að tiltekið efni sé tiltækt á öllum fjórum málunum. Hver listi inniheldur aðeins texta sem hafa verið birtir á því máli.',
+            'Þegar þú velur einn af fjórum tenglunum opnast greinalisti þess tungumáls. Af listanum velurðu textann; allt innihaldið birtist á frummáli greinarinnar.',
+            'Þessi síða dregur ekki saman innihald greinanna og heitir ekki að tiltekið efni sé tiltækt á öllum fjórum tungumálunum. Hver listi inniheldur aðeins texta sem hafa verið birtir á því tungumáli.',
           ],
         },
         {

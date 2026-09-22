@@ -1357,11 +1357,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   is: {
-    label: 'LIÐIÐ',
+    label: 'TEYMIÐ',
     title: 'Alþjóðlegt teymi Hovering',
     description:
       'Prófílar lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis.',
-    representativeTitle: 'Aðallögmaður',
+    representativeTitle: 'Yfirlögmaður',
     teamTitle: 'Lögmenn og starfsfólk',
     partnerTitle: 'Tengt endurskoðunarfyrirtæki',
     introLabel: 'Kynning',
@@ -1373,15 +1373,15 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'Lögmaðurinn Wei Tseng — Lykilstaðreyndir',
     qualificationLabel: 'Réttindi og skrifstofa',
     qualificationSentence:
-      '{name} hefur lögmannsréttindi á Taívan og er aðallögmaður hjá {firm}.',
+      '{name} hefur lögmannsréttindi á Taívan og er yfirlögmaður hjá {firm}.',
     practiceLabel: 'Aðalsvið',
-    consultationLanguagesLabel: 'Ráðgjafarmál',
+    consultationLanguagesLabel: 'Tungumál ráðgjafar',
     roles: {
-      'tseng-junwei': 'Aðallögmaður á Taívan',
+      'tseng-junwei': 'Yfirlögmaður á Taívan',
       'chang-rongxuan': 'Lögmaður á Taívan',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Rekstrarstjórn, Kórea',
-      'huang-shengping': 'Tengdur löggiltur endurskoðandi',
+      'chang-fangyu': 'Lögfræðiaðstoðarmaður',
+      'son-jungmin': 'Rekstrarstjóri Kóreu-starfsemi',
+      'huang-shengping': 'Meðeigandi löggiltur endurskoðandi',
     },
   },
 };
@@ -4622,33 +4622,33 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Lögfræðiaðstoðarsjóðurinn, útibú í Taichung',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Áður við Ministry of Education, Legal Affairs Division, með áherslu á stjórnsýslu- og einkamál.',
+        'Áður í lagadeild menntamálaráðuneytisins, með áherslu á stjórnsýslu- og einkamál.',
         'Reynsla af málum háskóla, réttinda kennara og stjórnsýslukæra.',
       ],
       education: [
         'Bakkalárpróf í lögfræði (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Lagadeild menntamálaráðuneytisins',
         'Lögmaður, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal með langa reynslu; áður senior paralegal á nokkrum lögmannsstofum, með ábyrgð á málflutningsstuðningi, félagarétti og erlendum fjárfestingum.',
+        'Lögfræðiaðstoðarmaður með langa reynslu; áður yfirlögfræðiaðstoðarmaður á nokkrum lögmannsstofum, með ábyrgð á málflutningsstuðningi, félagarétti og erlendum fjárfestingum.',
         'Aðstoð við málflutning, félagastofnun, samþykki erlendra fjárfestinga, leyfisumsóknir og samskipti milli Kóreu og Taívan.',
       ],
       education: [
         'Bakkalárpróf í lögfræði (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Yfirlögfræðiaðstoðarmaður, Boyin Law Firm',
+        'Yfirlögfræðiaðstoðarmaður, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

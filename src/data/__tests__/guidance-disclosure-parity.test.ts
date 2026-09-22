@@ -431,7 +431,7 @@ const ELEMENTS = {
     lv: /četr/,
     et: /neljast nõustamiskeelest/,
     ca: /quatre idiomes de consulta/,
-    is: /fjórum ráðgjafarmál/,
+    is: /fjórum tungumálum ráðgjafar/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {

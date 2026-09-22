@@ -17,7 +17,7 @@ Nýlega hafa margir stofnað félag (公司) á Taívan og fengið atvinnuvegabr
 
 og spurningarnar sem oft koma upp við stofnunina eru teknar saman hér á eftir.
 
-Sá sem hefur lesið [**grunninn að félagastofnuninni**](/is/columns/taiwan-company-establishment-basics) getur síðan einnig kynnt sér þennan ítarlegri ítarhluta.
+Sá sem hefur lesið [**grunninn að félagastofnuninni**](/is/columns/taiwan-company-establishment-basics) getur síðan einnig kynnt sér þennan ítarhluta.
 
 Spurningarnar og svörin hér á eftir eiga að hjálpa þeim sem íhuga að stofna félag á Taívan.
 
@@ -75,7 +75,7 @@ en innflytjendastofnunin (移民署) hefur marga gesti; þú ættir því að ko
 
 Skoðunarnefnd efnahagsráðuneytisins skoðar að vísu bakgrunn fjárfestisins,
 
-en skoðunin er ekki of strangar.
+en skoðunin er ekki of ströng.
 
 Þú mátt tilgreina ólíka starfsreynslu, þar á meðal hlutastörf,
 
@@ -123,7 +123,7 @@ T.d.: Sé um skráðar starfsgreinar (營業項目) að ræða sem mögulegar er
 
 ættir þú að kanna þetta fyrir fram.
 
-*Hafir þú þörf fyrir aðstoð eða samtal um rétt Taívan máttu senda beiðni með tengiliðaeyðublaðinu; ekkert svar er heitið þegar í stað.*
+*Hafir þú þörf fyrir aðstoð máttu senda beiðni með tengiliðaeyðublaðinu. Ráðgjöf er ekki veitt á íslensku, og ekkert svar er heitið þegar í stað.*
 
 ---
 

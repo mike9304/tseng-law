@@ -37,7 +37,7 @@ Gerum ráð fyrir að erlendur framleiðandi nákvæmnihluta selji til viðskipt
 | Tilboð og pantanir | Hver staðfestir endanlega verð og afhendingartíma, og hversu langt nær vald ábyrgðarmannsins á Taívan? |
 | Vörur og birgðir | Hver flytur inn, heldur og stýrir birgðum og meðhöndlar skil og endurnýjun? |
 | Mannafli | Ferðast starfsmenn höfuðstöðvanna, er ráðið á Taívan, eða er vinnunni falið utanaðkomandi aðila? |
-| Uppsetning og tæknilegur stuðningur | Hver skuldar stuðninginn við viðskiptavininn og meðhöndlar vandamál við vinnu á staðnum? |
+| Uppsetning og tæknilegur stuðningur | Hver ber stuðningsskyldu gagnvart viðskiptavininum og meðhöndlar vandamál við vinnu á staðnum? |
 | Innheimta og kostnaður | Hver innheimtir og tekur við greiðslu, og hvernig er kostnaði gert upp milli höfuðstöðva og skipulagsins á Taívan? |
 | Gæði og ágreiningur | Hver staðfestir niðurstöðu skoðunar og tekur við kröfum um galla eða tjón? |
 
@@ -45,7 +45,7 @@ Einkum ef seljandi í kaupsamningnum er ekki sama fyrirtæki og veitir tæknileg
 
 ## 2. Munurinn á dótturfélagi, útibúi og umboðsskrifstofu erlends félags á Taívan
 
-Við skipulag innkomu skal hálfleiðarafyrirtækið greina hvaða staðvera á Taívan verði sett á fót, og hvernig sala og viðskiptaþjónusta verði skipulögð. Fyrra atriðið varðar lögaðilastöðu, skráningarskilyrði og starfssvið; síðara viðskiptaaðferð, vald og skiptingu ábyrgðar.
+Við skipulag innkomu skal hálfleiðarafyrirtækið greina hvaða viðvera á Taívan verði sett á fót, og hvernig sala og viðskiptaþjónusta verði skipulögð. Fyrra atriðið varðar lögaðilastöðu, skráningarskilyrði og starfssvið; síðara viðskiptaaðferð, vald og skiptingu ábyrgðar.
 
 Aðalmunurinn á dótturfélagi á Taívan (子公司) og útibúi erlends félags á Taívan (分公司) er hvort það hafi lögaðilastöðu aðskilda frá móðurfélaginu eða höfuðstöðvunum. Dreifing og umboðssala eru viðskipta- og samningsskipulag og má ekki blanda við félagaformið.
 
@@ -61,11 +61,11 @@ Hafi verið ákveðið að stofna sjálfstæðan lögaðila á Taívan, skal ein
 
 ### Einkahlutafélag (有限公司): einfaldara stjórnskipulag, en lokaðra framsal hluta
 
-Það má mynda með 1 eða fleiri einstaklingum, eða með hluthöfum sem eru lögaðilar á Taívan eða erlendir; hluthafar bera að jafnaði ábyrgð takmarkaða við innleggsfjárhæðina. Félagið hefur frá 1 til 3 stjórnarmenn, valda meðal hluthafa. Hluthafar sem ekki stjórna rekstri geta beitt eftirlitsrétti, án þess að sérstakur eftirlitamaður félags (監察人) þurfi að vera skipaður. Nema samþykktir kveði á um annað gildir 1 atkvæði á 1 hluthafa, svo stjórnin þarf ekki að stemma við innleggshlutfall. Framsal innleggs almenns hluthafa krefst að jafnaði samþykkis meira en helmings atkvæðisréttar hinna; fyrir stjórnarmann, 2/3 eða meira. Það hæfir betur einföldum hluthafasamböndum og stöðugri stjórn en tíðri fjármögnun eða viðskiptum með hluti. Síðar má umbreyta því í hlutafélag (股份有限公司).
+Það má mynda með 1 eða fleiri einstaklingum, eða með hluthöfum sem eru lögaðilar á Taívan eða erlendir; hluthafar bera að jafnaði ábyrgð takmarkaða við innleggsfjárhæðina. Félagið hefur frá 1 til 3 stjórnarmenn, valdir meðal hluthafa. Hluthafar sem ekki stjórna rekstri geta beitt eftirlitsrétti, án þess að sérstakur eftirlitamaður félags (監察人) þurfi að vera skipaður. Nema samþykktir kveði á um annað gildir 1 atkvæði á 1 hluthafa, svo stjórnin þarf ekki að fara eftir innleggshlutfalli. Framsal innleggs almenns hluthafa krefst að jafnaði samþykkis meira en helmings atkvæðisréttar hinna; fyrir stjórnarmann, 2/3 eða meira. Það hæfir betur einföldum hluthafasamböndum og stöðugri stjórn en tíðri fjármögnun eða viðskiptum með hluti. Síðar má umbreyta því í hlutafélag (股份有限公司).
 
 ### Hlutafélag (股份有限公司): hæfir ef aðrir fjárfestar eiga að koma inn, eða skráning er fyrirsjáanleg
 
-Hlutafé er skipt í hluti. Að jafnaði eru 2 hluthafar eða fleiri krafðir, en ríki eða lögaðili getur stofnað eitt og sér, og erlendur lögaðili getur átt 100 %. Hlutir eru að jafnaði frjálst framseljanlegir, með lögbundnum undantekningum; sérstaka hluti og kauprétt starfsmanna má móta samkvæmt lögum. Það hæfir fyrirtækjum sem búast við fjárfestum, hlutaviðskiptum, hlutahvata til starfsmanna eða síðari samruna, yfirtöku eða skráningu; það takmarkast ekki við stórfyrirtæki. Í stjórnskipulagi getur félag án opinbers útboðs samkvæmt samþykktum verið án stjórnar og aðeins haft 1 eða 2 stjórnarmenn. Félag með eitt ríki eða lögaðila sem einn hluthafa getur samkvæmt samþykktum verið án eftirlitsmanns félags (監察人). Ekki þarf hvert hlutafélag (股份有限公司) að láta ársreikning vottast. Helstu endurskoðunarviðmið almenns félags eru innborguðu hlutafé TWD 30.000.000 (新臺幣), eða, þar undir, rekstrartekjur TWD 100.000.000 eða 100 starfsmenn í vinnutryggingu; félög með opinbert útboð fylgja verðbréfareglum.
+Hlutafé er skipt í hluti. Að jafnaði eru 2 hluthafar eða fleiri krafðir, en ríki eða lögaðili getur stofnað eitt og sér, og erlendur lögaðili getur átt 100 %. Hlutir eru að jafnaði frjálst framseljanlegir, með lögbundnum undantekningum; sérstaka hluti og kauprétt starfsmanna má móta samkvæmt lögum. Það hæfir fyrirtækjum sem búast við fjárfestum, hlutaviðskiptum, hlutahvata til starfsmanna eða síðari samruna, yfirtöku eða skráningu; það takmarkast ekki við stórfyrirtæki. Í stjórnskipulagi getur félag án opinbers útboðs samkvæmt samþykktum verið án stjórnar og aðeins haft 1 eða 2 stjórnarmenn. Félag með eitt ríki eða lögaðila sem einn hluthafa getur samkvæmt samþykktum verið án eftirlitsmanns félags (監察人). Ekki þarf hvert hlutafélag (股份有限公司) að láta ársreikning vottast. Helstu endurskoðunarviðmið almenns félags eru innborgað hlutafé að fjárhæð 30.000.000 TWD (新臺幣), eða, þar undir, rekstrartekjur 100.000.000 TWD eða 100 starfsmenn skráðir í launþegatryggingu (勞工保險); félög með opinbert útboð fylgja verðbréfareglum.
 
 ## 4. Málsmeðferðir útibús og dótturfélags greinast; aðeins dótturfélagið fer í gegnum skoðun fjárfestingarathugunardeildarinnar
 
@@ -73,7 +73,7 @@ Hlutafé er skipt í hluti. Að jafnaði eru 2 hluthafar eða fleiri krafðir, e
 
 Hins vegar krefst stofnun útibús almenns erlends félags á Taívan að jafnaði ekki fjárfestingarheimildar fjárfestingarathugunardeildarinnar; verslunarþróunarstofa efnahagsráðuneytisins (經濟部商業發展署) meðhöndlar skráningu útibúsins og tengda ákvörðun fjárhæðar. Áfram nauðsynleg eru forathugun heitis, sending rekstrarfjár, könnun hlutafjár og skattaskráning; dagskráin er að jafnaði styttri.
 
-Ofangreint er almennur samanburður félagaforma, ekki ráðgjöf um tiltekin lögskipti. Að búa yfir einu tilteknu eyðublaði gerir lögskiptin hvorki lögmæt né kemur í veg fyrir ágreining.
+Ofangreint er almennur samanburður félagaforma, ekki ráðgjöf um tiltekin lögskipti. Það eitt að tiltekið félagaform sé valið gerir lögskiptin hvorki lögmæt né kemur í veg fyrir ágreining.
 
 ## 5. Félagaskráning og lögmæt vinna verkfræðings eru ekki það sama
 
@@ -95,7 +95,7 @@ Eftirfarandi aðstæður eru tilgátur til aðstoðar við íhugun; þær slá �
 
 Við fyrsta samtal má safna grunnupplýsingum um höfuðstöðvar og innleggjanda, almennri lýsingu á vöru eða þjónustu, fyrirhuguðu viðskiptaflæði, áætlunum um mannafla og aðstöðu á Taívan og samnings- og stuðningsskilmálum sem viðskiptavinir krefjast. Það sem enn er óákveðið má merkja sem „óákveðið“.
 
-Ekki er nauðsynlegt við fyrstu tengiliði að fylgja með öllum trúnaðargögnum viðskiptavina eða nákvæmum ferlisupplýsingum. Að nafni gagnaðila til könnunar hagsmunaáreksturs veittu, eru nauðsynleg gögn og sendingaraðferð ákveðin eftir leiðbeiningu ábyrgðarmannsins.
+Ekki er nauðsynlegt við fyrstu tengiliði að fylgja með öllum trúnaðargögnum viðskiptavina eða nákvæmum ferlisupplýsingum. Þegar nafn gagnaðila hefur verið gefið upp til könnunar á hagsmunaárekstri eru nauðsynleg gögn og sendingaraðferð ákveðin eftir leiðbeiningu ábyrgðarmannsins.
 
 ## Algengar spurningar
 
@@ -115,4 +115,4 @@ Stigskipta umbreytingu má skipuleggja, en einnig skal kanna lok eða breytingu 
 
 Viljir þú á Taívan selja, stýra birgðum, veita uppsetningarstuðning eða ráða staðbundið, skal fyrst skýra þá vinnu sem höfuðstöðvarnar innir af hendi og þá sem skipulagið á Taívan tekur við. Að samtalsefni og hagsmunaárekstrum staðfestum lýsir skrifstofan nauðsynlegum gögnum og umfangi þeirrar þjónustu sem veita má.
 
-Dæmi um efnislínu: samtal um innkomuskipulag hálfleiðarafyrirtækis á Taívan. Við fyrstu tengiliði eru félagsheiti, land höfuðstöðva, fyrirhuguð vara eða þjónusta, rekstraráætlun á Taívan og óskað samtalsmál tilgreind. Trúnaðarleg hönnunargögn og heilir samningar eru send fyrst að frekari leiðbeiningu fenginni. Raunveruleg samtalsmál sem í boði eru, enska, kínverska (中文), japanska og kóreska, og umfang hvers umboðs skal staðfesta við tengiliði.
+Dæmi um efnislínu: samtal um innkomuskipulag hálfleiðarafyrirtækis á Taívan. Við fyrstu tengiliði eru félagsheiti, land höfuðstöðva, fyrirhuguð vara eða þjónusta, rekstraráætlun á Taívan og óskað tungumál ráðgjafar tilgreind. Trúnaðarleg hönnunargögn og heilir samningar eru send fyrst að frekari leiðbeiningu fenginni. Ráðgjöf er aðeins í boði á ensku, kínversku (中文), japönsku og kóresku, og umfang hvers umboðs skal staðfesta við tengiliði.

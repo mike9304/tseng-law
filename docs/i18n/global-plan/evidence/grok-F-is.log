@@ -1,0 +1,80 @@
+WO-F-is — Icelandic native-review fixes (Grok 4.7)
+Workspace: /Users/son7/Projects/tseng-law-fix-is-20260922
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows applied
+is-a.md: 51 of 53 P1/P2 rows applied (a#1–a#24, a#26–a#40, a#42, a#44–a#53).
+is-b.md: 49 of 49 P1/P2 rows applied.
+Guidance pack (is only): baltic-atlantic icelandicGuidanceContent, team copy + is bios, answers lawyers sentence, inquiry `is`, llms GUIDANCE_LLMS_NOTICES.is.
+Test: src/data/__tests__/guidance-disclosure-parity.test.ts `is` regex only, `/fjórum ráðgjafarmál/` → `/fjórum tungumálum ráðgjafar/`.
+
+Modified rather than copied verbatim:
+- a#1: supervisor text in ACCEPTED-is.md says “fremur ólögmæta háttsemi”. That is not the verb. The subjunctive matching “Fyrirfari starfsmaðurinn…” is “Fremji”. Applied Fremji in all 3 places in 008 (FAQ, body, table).
+- a#4 / ACCEPTED “föst starfsstöð”: PE facility is feminine starfsstöð (fastar starfsstöðvar, föst starfsstöð, fastrar starfsstöðvar), equipment is búnaður. 013 innréttingartímabil (裝潢期間) left — that is a real fit-out period.
+- a#8: “Hann gat síðar, með aðstoð lögmanns, látið staðreyna réttinn til starfslokastyrks samkvæmt lögum” — entitlement under the statute, not a high payout (R3).
+- a#41: ROC year kept as “ár 109 lýðveldisins (民國)” (2 link titles). Did not add “(2020)” (R13: no new Gregorian digit).
+- b#2: 民法 → almenn borgaralög / almennra borgaralaga / almennum borgaralögum, including link text. Not the reviewer’s “einkaréttarlaga” (ACCEPTED: never civil-procedure wording).
+- b#14: kept the digit, “1 föstum fresti”, so the checker’s digit count stays put. Did not spell it “einum”.
+- b#16: the two 011 pastes “Þetta er ekki sama málsmeðferðin” rewritten to a self-standing first sentence. 016 §3 and 017 section bodies already open with a finite clause, not a dangling “Þetta”; left those openings.
+
+## Rows skipped
+- a#25 TWD 1.57M in the Wei Tseng bio. Test-pinned byte form. Not rewritten to “1,57 milljónir”.
+- a#43 suggested impersonal “Reynsla af málum er sú…”. ACCEPTED keeps “ég” + the name for the Q16–Q20 blog voice. Left “Samkvæmt reynslu minni…”. The closer “Ég vona að þau gagnist” was dropped; the sentence still says “Hér lýk ég…”.
+- a#41’s added year (2020), as above.
+- Frontmatter `url:` Hangul (R16) and the fullwidth colon inside that URL in 008. Not touched.
+- Offices `is` block: not flagged.
+- Not swept, because they are a different sense: 001 “umboð til fyrirsvars”; 011 “fyrirsvarsrétt”; 002/008 “staðgengill” = replacement employee; real paper “eyðublað”; 010 “faglegan eða tæknilegan mælikvarða” and 014 accusative “faglegan tæknihlutann”; “hvenær sem er” as a legal statement, not a 24/7 claim; 003’s already-correct 119/110/112 line.
+
+## Systemic patterns (instances changed)
+- mishlöð → misjöfn, then singular/gender retune (misjafn / misjafnt / misjafnar) where the subject is not neuter plural: 23 column hits plus 1 guidance (“Ferli og tímalengd eru misjöfn”). mishátt 1, mishár 1, mishá 2.
+- Hið eina að / hið eina að → Það eitt að / það eitt að: 7.
+- Fyrirfari → Fremji: 3.
+- einkamálalög family → almenn borgaralög (incl. link text): 79 (59 + 1 + 16 + 3).
+- stemma/stemmi “match” (not “stop”) → samræmast / vera í samræmi við / fara eftir: 11 phrase edits in 001, 002, 004, 016, 017, 018.
+- faglega tækniþjálfun: 5. “faglegur tæknihluti blandast” 1.
+- Kínverja búsettra erlendis (華僑): 5 (001 FAQ+body+link, 005).
+- fjárfestingarfjár: 3.
+- PE innrétting → starfsstöð, equipment → búnaður: 8 source hits, then 2 gender fixes to fastar starfsstöðvar. 013 innréttingartímabil kept.
+- brjósklos (椎間盤破裂) and remaining “rifinn millihryggjaþófi/þófa”: 14. Umsögn um dóm: 2.
+- 代位繼承 → erfð í stað niðja: 5. Ordinary “staðgengill” (substitute worker) kept.
+- 法定代理 → lögbundið fyrirsvar / lögbundins fyrirsvars / lögbundnu fyrirsvari: 7 in 016 only.
+- ráðgjafarmál and bare “mál” = language, in the is guidance, inquiry and llms surfaces only (tungumál ráðgjafar, Birtingartungumál, Hafa samband, Sendi…). Case-meaning mál, málaflokkur, samband lögmanns og skjólstæðings left.
+- TWD amount order (R14) in 011 (14), 017 (9) and the remaining 018 amount (1). 018’s 30.000.000 TWD was rewritten in the agreement sentence first. TWD 1.57M not touched.
+- R12 bios (is only): Yfirlögmaður, Lögfræðiaðstoðarmaður, Yfirlögfræðiaðstoðarmaður, lagadeild menntamálaráðuneytisins, Lögfræðiaðstoðarsjóðurinn, útibú í Taichung, Meðeigandi löggiltur endurskoðandi. Latin firm and university names kept.
+- R15: Ég, [nafn], (1).
+- R6: 2026-05-29 → 29. maí 2026 (1). Checker accepted it.
+- Consultation line on 013 and 015 closings: “Ráðgjöf er ekki veitt á íslensku” (not the contiguous forbidden string “ráðgjöf á íslensku”).
+
+## §Verify
+```
+=== CHECKER ===
+neighbour      PASS   
+hanzi          PASS   han=103
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      25
+```
+
+The commands were the ones in the work order (`tail -8` of the checker, marker grep, `tsc --noEmit`, vitest on src/lib/__tests__ and src/data/__tests__, `git status --short | wc -l`). Full checker run before the tail also printed `summary PASS 18/18`. Column 017 has a numbers WARN (`수사미해석 (2): 제3자`) with sourceCount=targetCount=44; it is not a fail. Markers 0. This log file is not in the count of 25.
+
+## Reviewer got wrong — not applied
+- a#25. “1,57 milljónir TWD” would break the pinned bio figure. Left `TWD 1.57M`.
+- a#41. Adding “(2020)” inserts a Gregorian year the checker counts as a new number (R13). Glossed the ROC year as lýðveldisins (民國) instead.
+- ACCEPTED-is a#1 “fremur”. That is not “commits”. Used Fremji, the reviewer’s own verb in is-a.md.
+- b#2 “einkaréttarlaga”. ACCEPTED requires almenn borgaralög for 民法. Applied that.
+- a#43 impersonal rewrite. ACCEPTED keeps first person (“ég” + name). lögmaður stays the ordinary professional title for Wei Tseng; it is not a gender error.
+- 013 “innréttingartímabil” is the fit-out period (裝潢期間), not the PE “fixed facility” error.
+- Not every “mál”, “eyðublað”, “staðgengill”, “fyrirsvar”, “einingar” or “faglegan” in these files is the flagged bug. Those other senses were left.

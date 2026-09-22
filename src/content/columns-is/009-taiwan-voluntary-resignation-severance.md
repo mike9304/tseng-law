@@ -53,7 +53,7 @@ greiði ekki laun (工資) á réttum tíma,
 
 greiði ekki yfirvinnukaup (加班費)
 
-eða skrái starfsmanninn ekki í vinnutryggingu (勞保) eða sjúkratryggingu (健保).
+eða skrái starfsmanninn ekki í launþegatryggingu (勞保) eða sjúkratryggingu (健保).
 
 Í slíkum tilvikum skal vinnuveitandi einnig greiða starfslokastyrk, þótt starfsmaðurinn slíti ráðningarsamningnum sjálfur.
 
@@ -65,7 +65,7 @@ að starfsmaður sem vill slíta ráðningarsamningnum samkvæmt 1. eða 6. lið
 
 skuli slíta ráðningarsamningnum innan **30 daga** frá þeim degi er hann fékk vitneskju um aðstæðurnar,
 
-eða (í tilviki 6. liðar) innan **30 daga** frá þeim degi er hann fékk vitneskju um tjónsleiðinguna.
+eða (í tilviki 6. liðar) innan **30 daga** frá þeim degi er hann fékk vitneskju um tjónið.
 
 Því þarf starfsmaðurinn að fylgjast nákvæmlega með frestinum.
 

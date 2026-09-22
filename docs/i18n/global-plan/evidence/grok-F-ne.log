@@ -1,0 +1,94 @@
+WO-F-ne — Nepali native-review fixes (Grok 4.7 fix lane)
+Workspace: /Users/son7/Projects/tseng-law-fix-ne-20260922
+Date: 2026-09-22
+No git add/commit/push.
+
+## Rows applied
+
+Part a P1: #1–#8.
+Part a P2: #9–#14, #16–#21, #23–#48.
+Part b P1: #1–#13.
+Part b P2: #14, #16–#36.
+No P3 rows in ne-a.md or ne-b.md.
+llms-txt.ts GUIDANCE_LLMS_NOTICES.ne left unchanged: consultation languages are already English / 中文 / Japanese / Korean, and the discovery line already denies ranking, endorsement, AI recommendation, and visibility promises.
+Pinned test strings were not rewritten (अङ्ग्रेजी / चिनियाँ / जापानी / कोरियाली, दायरा, जाँचको प्रतीक्षा, कानुनी राय होइन, अधिवक्ता तथा पक्षकार, TWD 1.57M). No test file was edited.
+
+Supervisor wording used instead of the reviewer’s suggestion (still applied):
+- a#3 Partner CPA → साझेदार चार्टर्ड एकाउन्टेन्ट (role line, partnerTitle, answers, bios). English “(Partner CPA)” dropped (R12). Not “साझेदार लेखापरीक्षक (Partner CPA)”.
+- a#4 intermediary services → मध्यस्थ सेवा. Not बिचौलिया and not मध्यस्थता.
+- a#31 Mandat → वारेसनामा (ACCEPTED: अधिकारपत्र/वारेसनामा). Not “मुद्दा जिम्मामा लिन”.
+- a#34 and b#14 ROC years → मिंगुओ वर्ष N plus the existing 民國 gloss. No Gregorian year added (R13).
+- b#8 → कर्मचारीलाई जिम्मेवार ठहराउन नमिल्ने कारण. Not “दोष दिन”.
+- b#10 搬家 → घरसामान सार्ने सेवा. Not “घर-सामान ओसारपसार”.
+- b#11 → चीनको मुख्य भूमि (大陸地區). Traditional Chinese gloss kept.
+- b#2 → शुरुवाती व्यक्ति (alt text and the matching link).
+- b#7 → व्यवसाय-वस्तु (營業項目) or दर्ता गरिएको व्यवसाय (營業項目). शाखा kept only for 分公司.
+
+## Rows skipped
+
+- a#15 “यो फिल्ड आवश्यक छ।” — ACCEPTED: this is acceptable Nepali. Left as is.
+- a#22 bio “TWD 1.57M” — test-pinned. Not rewritten to lakh or Devanagari digits.
+- b#15 Indian grouping (TWD 15,79,589 and the other column amounts) — R14. Western comma thousands left as they were. Checker numbers PASS sourceCount=25 targetCount=25.
+- a#34 / b#14 added CE years (ई. 2020 / सन् 2020) — R13 forbids a new Gregorian digit. ROC gloss applied instead; the digits already in the sentence stay.
+- Frontmatter url: Hangul in columns 008 and 009 — R16. Labels around those links were naturalised; the url values were not.
+- External link targets (Invest Taiwan, TWSE, and the ROC judgment URLs) — unchanged. Visible labels were translated where a#40 / the same pattern required it.
+- Geographic क्षेत्र left in place: Kinmen सञ्चालन क्षेत्र, household-registration सक्षम क्षेत्र, zoning “त्यस्तो क्षेत्रमा”, 012 चौबाटो / “बाटो दिनु” (give way), 013 “क्षेत्र लेख्नु” as the Taipei region.
+- Statutory “युक्तिसङ्गत अपेक्षा गर्न सकिने सुरक्षा” in 010 — this is the safety standard, not a requirements-calque. अपेक्षाकृत (“relatively”) left.
+- 018 listing sentence keeps अपेक्षा and adds उदीयमान बजार दर्ता (b#34). It is “companies that expect listing”, not a requirements noun.
+- 子女最佳利益 “सर्वोत्तम हित” left. It is the legal standard, not an advertising superlative.
+- Nav labels not lengthened (14-character cap).
+
+## Systemic patterns (diff counts)
+
+Counts are removals of the old token on deleted lines, or additions of the new token on inserted lines, across the 23 content files.
+
+- बाटो stock-calque → माध्यम / प्रक्रिया / उपाय, by context: 23 removed, 1 kept (012 “बाटो दिनु”, give way). Guidance pack included (सम्पर्क माध्यम, नसक्दाको प्रक्रिया, समानान्तर अन्य उपाय, सुरक्षित/आपत्कालीन/प्रसारण माध्यम).
+- मध्यस्थता where the source is 調解 or intermediary services: 22 removed, 0 left. 21 became मेलमिलाप (007 entire file, 20, plus 010). 001 intermediary became मध्यस्थ सेवा (1). Arbitration wording was not introduced.
+- क्षेत्रीय / industry क्षेत्र → उद्योग or उद्योग-विशेष or व्यवसाय-क्षेत्र स्वीकृति: क्षेत्रीय 10 removed. उद्योग appears on 23 inserted lines (001/002/004/011 and the guidance pack). Geographic uses listed above were not swept.
+- विषय meaning a legal person → कानुनी व्यक्ति/निकाय: कानुनी व्यक्ति net +12 on rewritten lines (001, 004, 011, 018). “Matter” uses (जाँचको विषय, लगानीको विषय) were not swept. 011 checklist was tightened from the doubled “कानुनी दायित्व लिने कानुनी व्यक्ति” to “दायित्व लिने कानुनी व्यक्ति”.
+- 營業項目 rendered as व्यवसाय शाखा: 10 removed. व्यवसाय-वस्तु +10, दर्ता गरिएको व्यवसाय +3. Glossed 分公司 शाखा kept.
+- अपेक्षा meaning requirements → आवश्यकता: अपेक्षा 21 removed, 3 kept (अपेक्षाकृत, the statutory safety expectation, the listing expectation).
+- Official ङ्: अंग (ं) 14 removed; युक्तिसंगत 9 removed. Columns only. अङ्ग्रेजी was already ङ् and was not retouched except where a whole line changed.
+- R12 roles/institutions in the ne bio object only: English parentheticals dropped on the five role lines; Legal Aid Foundation, Ministry of Education, Senior Paralegal, and Informatik → कम्प्युटर विज्ञान. Latin proper names kept (Trend Law Office, Boyin, Muyang, Chinshin, Hovering, National Taiwan University). साझेदार लेखापाल 6 removed. Hindi block in international-guidance-team.ts was not left changed (the shared role string was restored).
+- R13 मिंगुओ: 8 insertions (003 link labels for years 109 and 112, 007 constitutional decision, 010 consumer case). No new CE digits.
+- R15 sample name: “म, OOO,” → “म, [नाम],” (1, column 008).
+- R17 Hindi leakage: काफी → निकै (012); जिन → जुन (016).
+- R7 register: 003 closings are feminine “मैले … टुङ्ग्याएँ / हेरेकी छु”. 008 table headers unsplit; the severance closer is split across the two existing blocks so the block count stays. 013/015 chatty fragments raised where flagged, without merging lines. One-line blocks in 005/006/008/009 stay one line.
+
+## Reviewer points not applied (treated as wrong or overridden)
+
+- a#3 calling the partner CPA a लेखापरीक्षक and keeping “(Partner CPA)”. The partner heading is साझेदार चार्टर्ड एकाउन्टेन्ट. Column 018’s 會計師 who verifies capital is still लेखापरीक्षक (b#33); that is a different sentence.
+- a#4 बिचौलिया for intermediary services. मध्यस्थ सेवा is the product term; बिचौलिया is a broker, and मध्यस्थता is arbitration.
+- a#15 replacing “यो फिल्ड आवश्यक छ।” Supervisor says that sentence is fine.
+- a#22 and b#15 regrouping money into lakh/Indian digits. R14 and the pinned “TWD 1.57M” figure forbid it. The checker accepts the existing comma grouping.
+- a#34 and b#14 inserting 2020/2023 beside ROC years. R13: make the ROC calendar visible, do not add a Gregorian digit. Applied मिंगुओ वर्ष 109/112 (民國…) instead.
+- b#8 “दोष दिन”. The English is “not attributable”, which is जिम्मेवार ठहराउन नमिल्ने, not “one must not blame”.
+- b#10 “घर-सामान ओसारपसार”. ACCEPTED wording is घरसामान सार्ने सेवा, so the moving service is not the same verb as a business transfer.
+- b#11 “मुख्यभूमि चीन” without the 大陸地區 gloss. The hard rule keeps the Traditional Chinese gloss.
+- a#31 “मुद्दा जिम्मामा लिन” for Mandat. ACCEPTED maps that chip to वारेसनामा.
+
+## §Verify
+
+Command block run from /Users/son7/Projects/tseng-law-fix-ne-20260922 with PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH.
+Output verbatim:
+
+=== CHECKER ===
+forbidden      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      24
+
+The git count 24 is 23 modified content files plus the pre-existing untracked docs/i18n/global-plan/WO-F-ne.txt. This log was written after that count, so a later status line also lists docs/i18n/global-plan/evidence/grok-F-ne.log. No commit.

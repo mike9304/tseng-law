@@ -1024,10 +1024,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'टोली',
     title: 'Hovering को अन्तर्राष्ट्रिय टोली',
     description:
-      'Hovering का अधिवक्ता, सञ्चालन नेतृत्व र साझेदार लेखापालका प्रोफाइल।',
+      'Hovering का अधिवक्ता, सञ्चालन नेतृत्व र साझेदार चार्टर्ड एकाउन्टेन्टका प्रोफाइल।',
     representativeTitle: 'प्रबन्ध अधिवक्ता',
     teamTitle: 'अधिवक्ता र सहयोगी',
-    partnerTitle: 'साझेदार लेखापाल',
+    partnerTitle: 'साझेदार चार्टर्ड एकाउन्टेन्ट',
     introLabel: 'परिचय',
     educationLabel: 'शिक्षा',
     experienceLabel: 'अनुभव',
@@ -1041,11 +1041,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'मुख्य क्षेत्र',
     consultationLanguagesLabel: 'परामर्श भाषा',
     roles: {
-      'tseng-junwei': 'ताइवानकी प्रबन्ध अधिवक्ता (Managing Attorney)',
-      'chang-rongxuan': 'ताइवान अधिवक्ता (Taiwan Attorney)',
-      'chang-fangyu': 'कानुनी सहायक (Paralegal)',
-      'son-jungmin': 'कोरिया सञ्चालन व्यवस्थापन (Korea Operations Manager)',
-      'huang-shengping': 'साझेदार लेखापाल (Partner CPA)',
+      'tseng-junwei': 'ताइवानकी प्रबन्ध अधिवक्ता',
+      'chang-rongxuan': 'ताइवान अधिवक्ता',
+      'chang-fangyu': 'कानुनी सहायक',
+      'son-jungmin': 'कोरिया सञ्चालन व्यवस्थापक',
+      'huang-shengping': 'साझेदार चार्टर्ड एकाउन्टेन्ट',
     },
   },
   km: {
@@ -3837,49 +3837,49 @@ export const guidanceTeamBios: Record<
         'उहाँले जिममा लागेको चोटको क्षतिपूर्ति दाबीमा कोरियाली विद्यार्थीको प्रतिनिधित्व गर्नुभयो र प्रथम तहको अदालतबाट TWD 1.57M को फैसला दिलाउनुभयो।',
       ],
       education: [
-        'मास्टर उपाधि (M.S.), Institute of Finance, National Taiwan University',
-        'स्नातक (B.A.) कानुन र वित्तको दोहोरो बाटोसहित, National Chengchi University',
+        'स्नातकोत्तर (M.S.), Institute of Finance, National Taiwan University',
+        'स्नातक (B.A.) कानुन र वित्तको दोहोरो अध्ययनसहित, National Chengchi University',
         'Kobe University र Waseda University मा विनिमय छात्रा',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'कानुनी सहायता प्रतिष्ठान, ताइचुङ शाखा',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'पहिले Ministry of Education, Legal Affairs Division मा, प्रशासनिक र देवानी मुद्दामा केन्द्रित रहेर।',
+        'पहिले शिक्षा मन्त्रालयको कानुनी मामिला विभागमा काम गर्नुभयो, प्रशासनिक र देवानी मुद्दामा केन्द्रित रहेर।',
         'विश्वविद्यालय, शिक्षण कर्मचारीका अधिकार र प्रशासनिक पुनरावेदनसँग जोडिएका मुद्दाको अनुभव।',
       ],
       education: ['कानुन स्नातक (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'शिक्षा मन्त्रालय, कानुनी मामिला विभाग',
         'अधिवक्ता, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal जसले धेरै फर्ममा वरिष्ठ paralegal का रूपमा लामो समय काम गरे, प्रक्रिया सहयोग, कम्पनी कानुन र विदेशी लगानीका लागि जिम्मेवार।',
+        'धेरै फर्ममा वरिष्ठ कानुनी सहायकका रूपमा लामो अनुभव छ; काम प्रक्रिया सहयोग, कम्पनी कानुन र विदेशी लगानीमा केन्द्रित छ।',
         'कार्यवाही, कम्पनी स्थापना, विदेशी लगानी अनुमति, इजाजत आवेदन तथा कोरिया र ताइवानबीचको आदानप्रदानमा सहयोग।',
       ],
       education: ['कानुन स्नातक (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'वरिष्ठ कानुनी सहायक, Boyin Law Firm',
+        'वरिष्ठ कानुनी सहायक, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'कोरियाबाट आएका पक्षकारको परामर्श समय र सञ्चार समन्वय गर्छन्।',
-        'सूचना विज्ञानको आधारमा कागजात प्रणाली र कार्यप्रवाहबाट क्षेत्रबीचको आदानप्रदान समर्थन गर्छन्।',
+        'कम्प्युटर विज्ञानको आधारमा कागजात प्रणाली र कार्यप्रवाहबाट क्षेत्रबीचको आदानप्रदान समर्थन गर्छन्।',
       ],
-      education: ['स्नातक (B.S.) सूचना विज्ञान, National Cheng Kung University'],
-      experience: ['कोरिया सञ्चालन क्षेत्र, Hovering International Law Firm'],
+      education: ['स्नातक (B.S.) कम्प्युटर विज्ञान, National Cheng Kung University'],
+      experience: ['कोरिया सञ्चालन विभाग, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'National Chengchi University बाट लेखामा स्नातक र स्नातकोत्तर कार्यक्रम पूरा गरी हाल एउटा लेखा कार्यालयको नेतृत्व गर्छन्।',
+        'National Chengchi University बाट लेखामा स्नातक र स्नातकोत्तर कार्यक्रम पूरा गरी हाल एउटा चार्टर्ड एकाउन्टेन्ट फर्मको नेतृत्व गर्छन्।',
         'उद्यमी पक्षकारका लागि कानुनी, कर र वित्तीय जोखिमको एकीकृत विश्लेषण समर्थन गर्छन्।',
       ],
       education: [

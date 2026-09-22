@@ -117,7 +117,7 @@ Như đã trình bày ở trên, ngân hàng sẽ xem xét hợp đồng thuê v
 
 Ngoài ra, ở bước đăng ký công ty cuối cùng, chính quyền thành phố cũng yêu cầu địa chỉ đăng ký phải nằm trong khu vực được phép kinh doanh nhà hàng.
 
-Nếu là không gian văn phòng thương mại thông thường thì không thể đăng ký công ty.
+Nếu là không gian văn phòng thương mại thông thường thì có thể không đăng ký được công ty.
 
 Ví dụ: nếu là ngành nghề kinh doanh có thể thực hiện tại không gian văn phòng thương mại, như ngành quảng cáo hay ngành bán buôn, thì quý vị có thể thành lập công ty tại đó.
 

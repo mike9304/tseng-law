@@ -548,7 +548,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
     discoveryNotice:
-      'Tệp llms.txt này chỉ là bản đồ tra cứu các trang công khai; nó không hứa hẹn thứ hạng trên công cụ tìm kiếm, sự giới thiệu, khuyến nghị của trí tuệ nhân tạo hay việc đăng quảng cáo.',
+      'Tệp llms.txt này chỉ là mục lục để tìm các trang công khai; nó không hứa hẹn thứ hạng trên công cụ tìm kiếm, không phải lời giới thiệu hay khuyến nghị của trí tuệ nhân tạo, và cũng không bảo đảm mức độ hiển thị.',
     confidentialNotice:
       'Vì nội dung gốc được lưu giữ, xin đừng viết những thông tin chưa cần thiết ở bước đầu, chẳng hạn số hộ chiếu, số giấy tờ tùy thân hay thông tin tài khoản ngân hàng.',
   },

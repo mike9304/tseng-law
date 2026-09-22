@@ -235,7 +235,7 @@ Q17. Trách nhiệm hình sự về tội gây thương tích do vô ý của ng
 
 ​
 
-Trong một số bản án, hành vi gây thương tích do vô ý đã bị tuyên khoảng 3 tháng tù; đó không phải mức án điển hình hay được bảo đảm.
+Hiện nay tòa án thường tuyên khoảng 3 tháng tù đối với hành vi gây thương tích do vô ý; đó không phải mức án được bảo đảm cho vụ việc của quý vị.
 
 ​
 
@@ -247,7 +247,7 @@ Nếu chuyển sang nộp tiền thay thế hình phạt tù (易科罰金), Đi
 
 ​
 
-Trong một số bản án, hành vi gây thương tích nặng do vô ý đã bị tuyên khoảng 4 tháng và hành vi làm chết người do vô ý (過失致死) khoảng 6 tháng; đó cũng không phải mức án điển hình hay được bảo đảm.
+Hành vi gây thương tích nặng do vô ý thường bị tuyên khoảng 4 tháng tù, còn hành vi làm chết người do vô ý (過失致死) khoảng 6 tháng; đó cũng không phải mức án được bảo đảm cho vụ việc của quý vị.
 
 ​
 

@@ -412,7 +412,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   sv: 'Läs vidare',
   da: 'Læs videre',
   nb: 'Les videre',
-  fi: 'Lukekaa lisää',
+  fi: 'Lue lisää',
   cs: 'Číst dál',
   hu: 'Tovább olvasom',
   ro: 'Citiți mai departe',

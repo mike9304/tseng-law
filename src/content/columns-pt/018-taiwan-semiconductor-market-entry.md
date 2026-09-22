@@ -27,7 +27,7 @@ Este texto é uma explicação geral para as empresas estrangeiras de materiais,
 
 ## 1. Esclarecer a divisão das operações e do comércio antes de escolher a forma de inscrição
 
-Suponha-se que um fabricante estrangeiro de componentes de precisão vende a clientes taiwaneses. No início a sede expede diretamente, mas o cliente pede armazenar peças de substituição em Taiwan e um apoio de engenheiros no local. Um endereço não basta: precisa-se de um sujeito que possa vender, importar, armazenar, contratar, fornecer um apoio técnico e assumir a responsabilidade.
+Suponha-se que um fabricante estrangeiro de componentes de precisão vende a clientes taiwaneses. No início a sede expede diretamente, mas o cliente pede armazenar peças de substituição em Taiwan e um apoio de engenheiros no local. Um endereço não basta: precisa-se de alguém que possa vender, importar, armazenar, contratar, fornecer um apoio técnico e assumir a responsabilidade.
 
 Antes de decidir a estrutura de entrada, a sede pode esclarecer internamente:
 
@@ -37,7 +37,7 @@ Antes de decidir a estrutura de entrada, a sede pode esclarecer internamente:
 | Orçamentos e encomendas | Quem confirma de forma definitiva o preço e o prazo, e até onde vai a autoridade do responsável em Taiwan? |
 | Mercadoria e stocks | Quem importa, detém e gere os stocks, e trata as devoluções e as substituições? |
 | Pessoal | Os assalariados da sede deslocam-se, contrata-se em Taiwan ou confia-se o trabalho a um prestador exterior? |
-| Instalação e apoio técnico | Quem deve o apoio ao cliente e trata os problemas do trabalho no local? |
+| Instalação e apoio técnico | A quem cabem os deveres de apoio ao cliente, e quem trata os problemas do trabalho no local? |
 | Cobranças e custos | Quem fatura e cobra, e como se liquidam os custos entre a sede e a organização em Taiwan? |
 | Qualidade e litígios | Quem confirma o resultado da inspeção e recebe as reclamações de defeitos ou de danos? |
 
@@ -71,7 +71,7 @@ O capital divide-se em ações. Em princípio exigem-se 2 acionistas ou mais, ma
 
 Quando uma sociedade estrangeira constitui uma subsidiária taiwanesa, o nome verifica-se em princípio de antemão e uma autorização de investimento é pedida ao Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司). Depois da aprovação, os fundos são transferidos, o montante do investimento é determinado e um perito contabilista (會計師) verifica o capital, depois a constituição e o registo fiscal concluem-se.
 
-Pelo contrário, para constituir uma sucursal taiwanesa de uma sociedade estrangeira ordinária, uma autorização de investimento do Departamento de Revisão dos Investimentos não é em princípio exigida; o Departamento do comércio do Ministério da Economia (經濟部商業發展署) trata o registo de sucursal e a determinação de capital conexa. Continuam a ser necessárias a verificação prévia do nome, a transferência do capital de exploração e a verificação do capital, bem como o registo fiscal; o calendário é em geral mais curto.
+Em contrapartida, para constituir uma sucursal taiwanesa de uma sociedade estrangeira ordinária, uma autorização de investimento do Departamento de Revisão dos Investimentos não é em princípio exigida; o Departamento do comércio do Ministério da Economia (經濟部商業發展署) trata o registo de sucursal e a determinação de capital conexa. Continuam a ser necessárias a verificação prévia do nome, a transferência do capital de exploração e a verificação do capital, bem como o registo fiscal; o calendário é em geral mais curto.
 
 O que precede é uma proposta de conceção contratual. Dispor de uma forma concreta não torna a operação lícita e não evita os litígios.
 
@@ -95,7 +95,7 @@ Os cenários seguintes são hipotéticos e servem só para orientar a análise; 
 
 Na primeira consulta, podem reunir-se os dados de base da sede e dos investidores, uma descrição geral do produto ou do serviço, o fluxo de operações previsto, os planos de pessoal e de instalações em Taiwan, e as condições de contrato e de apoio que os clientes pedem. O que ainda não estiver decidido pode marcar-se como «por decidir».
 
-Não é necessário juntar ao primeiro contacto todos os materiais confidenciais do cliente ou dados de processo pormenorizados. Depois de fornecido o nome da contraparte para o controlo dos conflitos, os materiais necessários e o modo de envio determinam-se segundo as indicações da advogada responsável.
+Não é necessário juntar ao primeiro contacto todos os materiais confidenciais do cliente ou dados de processo pormenorizados. Depois de fornecido o nome da contraparte para a verificação de conflitos de interesses, os materiais necessários e o modo de envio determinam-se segundo as indicações da advogada responsável.
 
 ## Perguntas frequentes
 

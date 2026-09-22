@@ -11,9 +11,9 @@ faq:
   - q: "Em Taiwan, os trabalhadores percebem uma indemnização por despedimento se se demitirem por si próprios?"
     a: "Não. Ao contrário de alguns ordenamentos (por exemplo a Coreia), em Taiwan a obrigação de pagar a indemnização por despedimento (資遣費) só nasce quando a sociedade despede a pessoa empregada; se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar indemnização por despedimento."
   - q: "A sociedade deve também pagar uma indemnização por despedimento em caso de despedimento disciplinar?"
-    a: "Não. Se a pessoa empregada cometer um ato ilícito, violar o regulamento interno ou faltar sem motivo legítimo 3 dias seguidos (artigo 12 da lei sobre as normas do trabalho, 勞動基準法第12條), a sociedade pode despedir sem pré-aviso e não tem de pagar indemnização por despedimento. Pelo contrário, um despedimento económico (artigo 11) exige um pré-aviso e o pagamento da indemnização por despedimento."
+    a: "Não. Se a pessoa empregada cometer um ato ilícito, violar o regulamento interno ou faltar sem motivo legítimo 3 dias seguidos (artigo 12 da lei sobre as normas do trabalho, 勞動基準法第12條), a sociedade pode despedir sem pré-aviso e não tem de pagar indemnização por despedimento. Em contrapartida, um despedimento económico (artigo 11) exige um pré-aviso e o pagamento da indemnização por despedimento."
   - q: "Como se calcula a indemnização por despedimento em Taiwan?"
-    a: "Por cada 1 ano de antiguidade cumprido, o empregador deve pagar 0,5 mês de salário médio a título de indemnização por despedimento, no máximo 6 meses de salário. Esta fórmula aplica-se à antiguidade à qual o artigo 12 do lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por 1 ano, sem teto."
+    a: "Por cada 1 ano de antiguidade cumprido, o empregador deve pagar 0,5 mês de salário médio a título de indemnização por despedimento, no máximo 6 meses de salário. Esta fórmula aplica-se à antiguidade à qual o artigo 12 da lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por cada 1 ano, sem teto."
 ---
 
 # Direito do trabalho em Taiwan: a indemnização por despedimento é realmente difícil de obter em Taiwan?
@@ -62,7 +62,7 @@ Resumo-lhe isso num quadro simples.
 
 > Em Taiwan, por cada 1 ano de antiguidade (年資) cumprido,
 > o empregador deve pagar 0,5 mês de salário médio (平均工資) a título de indemnização por despedimento.
-> (no máximo 6 meses de salário) Esta fórmula aplica-se à antiguidade à qual o artigo 12 do lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por 1 ano, sem teto.
+> (no máximo 6 meses de salário) Esta fórmula aplica-se à antiguidade à qual o artigo 12 da lei da pensão de reforma dos trabalhadores (勞工退休金條例) se aplica; para a antiguidade à qual o artigo 17 da lei sobre as normas do trabalho (勞動基準法) se aplica, 1 mês de salário médio é pago por cada 1 ano, sem teto.
 
 ​
 
@@ -196,15 +196,15 @@ ou transferir os trabalhadores para postos estranhos,
 
 **deve conservar provas.**
 
-**Os seus registos de presença habituais,**
+**Conserve os registos de presença habituais.**
 
-**registos de horas extraordinárias, registos de desempenho,**
+**Conserve os registos de horas extraordinárias e de desempenho.**
 
-**regulamento interno, correspondência por correio eletrónico com os colegas e os superiores**
+**Conserve o regulamento interno e a correspondência por correio eletrónico com os colegas e os superiores.**
 
-**bem como as gravações de entrevista com os superiores —**
+**Grave as conversas com o superior.**
 
-**conserve as provas que lhe são favoráveis.**
+**Conserve qualquer prova que lhe seja favorável.**
 
 ​
 

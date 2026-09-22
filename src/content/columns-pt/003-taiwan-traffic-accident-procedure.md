@@ -43,13 +43,13 @@ Em matéria de indemnização civil dos danos (損害賠償), segundo o artigo 1
 
 Quem sofre um dano em virtude de uma infração pode, segundo o artigo 487 do Código de Processo Penal, formar uma ação civil acessória à instância penal (刑事附帶民事訴訟). Enquanto a instância penal estiver em curso, esta ação pode ser formada até antes do encerramento dos debates orais (言詞辯論終結) da segunda instância, segundo o artigo 488 do Código de Processo Penal, mas não pode ser formada depois do encerramento dos debates orais da primeira instância e antes da interposição do recurso. Em geral, o pagamento de custas judiciais (裁判費) distintas pode ser evitado, mas nem todos os resultados se concluem sem custo. Por exemplo, se o assunto penal vier a ser rejeitado e, a pedido do autor, remetido ao tribunal civil, segundo o artigo 503 do Código de Processo Penal as custas podem ser impostas, e devem também verificar-se as regras de remessa e de procedimento do artigo 504.
 
-A escolha varia segundo a interrupção da prescrição (時效中斷), o círculo dos réus, as provas, o seguro e a competência. Não existe portanto um procedimento uniformemente preferível para todos os assuntos.
+A escolha varia segundo a interrupção da prescrição (時效中斷), os réus, as provas, o seguro e a competência. Não existe portanto um procedimento que sirva para todos os assuntos.
 
 ## Q4. Se houver culpa de parte a parte, como se apreciam as responsabilidades penal e civil?
 
 A responsabilidade penal só se verifica quando se comprovam o incumprimento do dever de prudência de cada um e o nexo de causalidade com as lesões. O simples facto de uma culpa ter existido de parte a parte não faz nascer automaticamente a responsabilidade por lesões por imprudência.
 
-No plano civil, segundo o artigo 217 do Código Civil, se a pessoa lesada tiver uma culpa que contribuiu para causar ou agravar o dano (與有過失), o tribunal pode reduzir ou isentar a indemnização. Por exemplo, se o dano reconhecido em novo dólar de Taiwan (新臺幣, TWD) for TWD 1.000.000 e a culpa da pessoa lesada for avaliada em 50 %, o montante pode ser reduzido a TWD 500.000 antes de outros ajustamentos.
+No plano civil, segundo o artigo 217 do Código Civil, se a pessoa lesada tiver uma culpa que contribuiu para causar ou agravar o dano (與有過失), o tribunal pode reduzir ou isentar a indemnização. Por exemplo, se o dano reconhecido em novos dólares de Taiwan (新臺幣, TWD) for TWD 1.000.000 e a culpa da pessoa lesada for avaliada em 50 %, o montante pode ser reduzido a TWD 500.000 antes de outros ajustamentos.
 
 A perícia (鑑定) ou o quadro de análise preliminar podem ser peças importantes, mas não vinculam o tribunal de forma mecânica. O tribunal examina o conjunto das provas, incluindo as declarações, as imagens e o estado dos veículos.
 
@@ -151,7 +151,7 @@ O facto de o salário atual se manter sem variação não exclui automaticamente
 
 Se o distúrbio funcional persistente for contestado de forma substancial, uma perícia médica pode ser útil, mas não é obrigatória em todos os assuntos. Examinam-se também a compensação das culpas do artigo 217 do Código Civil e outros motivos de ajustamento.
 
-Quando o cálculo se faz num capital único, a dedução dos juros intercalares (中間利息扣除) pode ser ponderada. O calculador Hoffmann (霍夫曼) do Yuan Judicial não é senão uma ferramenta de cálculo, não um método legalmente obrigatório, e não promete o resultado. Segundo o artigo 193 do Código Civil, a pedido da parte o tribunal pode também ordenar o pagamento em renda periódica sob condição de uma caução.
+Quando o cálculo se faz num capital único, a dedução dos juros intercalares (中間利息扣除) pode ser ponderada. A calculadora Hoffmann (霍夫曼) do Yuan Judicial não é senão uma ferramenta de cálculo, não um método legalmente obrigatório, e não promete o resultado. Segundo o artigo 193 do Código Civil, a pedido da parte o tribunal pode também ordenar o pagamento em renda periódica sob condição de uma caução.
 
 ## Q13. Como se aprecia a indemnização por dano moral (慰撫金) a título dos danos não patrimoniais?
 
@@ -175,7 +175,7 @@ A obrigação de subscrever segundo o artigo 6 da lei sobre o seguro obrigatóri
 
 Num acidente de um só veículo, o condutor desse veículo não é, em geral, destinatário das prestações do seguro obrigatório desse veículo. Contudo, num acidente em que intervêm vários veículos, existem casos nos quais o condutor pode reclamar prestações ao segurador obrigatório de outro veículo implicado.
 
-A tabela de prestações (強制汽車責任保險給付標準) alterada em 29 de maio de 2026 aplica-se aos acidentes ocorridos a partir de 1 de julho de 2026. O teto dos encargos médicos razoáveis e necessários por ferimentos é TWD 200.000 em novo dólar de Taiwan; a prestação por invalidez (失能) vai de TWD 80.000 a TWD 3.000.000 segundo 15 graus legais; a prestação por morte é TWD 3.000.000, e o máximo conjunto de morte, de invalidez e de encargos médicos por 1 vítima e por 1 acidente é TWD 3.200.000. Aos acidentes anteriores pode aplicar-se a tabela precedente.
+A tabela de prestações (強制汽車責任保險給付標準) alterada em 29 de maio de 2026 aplica-se aos acidentes ocorridos a partir de 1 de julho de 2026. O teto das despesas médicas razoáveis e necessárias por ferimentos é de 200.000 novos dólares de Taiwan (TWD); a prestação por invalidez (失能) vai de TWD 80.000 a TWD 3.000.000 segundo 15 graus legais; a prestação por morte é TWD 3.000.000, e o máximo conjunto de morte, de invalidez e de despesas médicas por cada 1 vítima e por cada 1 acidente é TWD 3.200.000. Aos acidentes anteriores pode aplicar-se a tabela precedente.
 
 O seguro de responsabilidade civil perante terceiros (第三人責任險), o seguro de acidentes do condutor (駕駛人傷害險) e o seguro de danos no próprio veículo (車體損失險) são produtos facultativos de caráter contratual. A cobertura real varia segundo o segurado, o teto, a franquia (自負額), as exclusões, a culpa e as outras condições da apólice, de modo que a apólice e as condições devem ser verificadas caso a caso.
 

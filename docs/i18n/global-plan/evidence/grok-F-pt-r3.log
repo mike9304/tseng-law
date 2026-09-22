@@ -1,0 +1,103 @@
+WO-F-pt r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pt-r3
+date: 2026-09-23
+
+## Rows applied
+
+Part A (pt-a.md) 1–14, 16–25, 27–28.
+Part B (pt-b.md) 1–16, 18–30.
+
+Guidance pack (pt strings only):
+- A1 discoveryNotice: apoio → endosso. The token llms.txt is unchanged.
+- A4 資遣費: indemnização por cessação, and the parenthesis now says it does not equate to other countries’ dismissal indemnity or dismissal-protection rules.
+- A5 both the contact FAQ and the inquiry notice. “quando existir uma forma possível” → “para verificar se existe uma forma possível”. Kept “forma possível” (see constrained wording).
+- A6 double major; A11 armazenamento não público; A20 trâmites bancários; A21 one naming of Institute of Finance.
+- A7 household register in the family blurb.
+- A28 role “Assistente jurídico (Paralegal)” and the three Boyin/Muyang bio lines. Firm names stayed in Latin.
+- files: international-guidance-western.ts, international-inquiry-copy.ts, international-guidance-team.ts, llms-txt.ts
+
+Columns:
+- A2, A3, A8, A9, A10, A12, A13, A16–A19, A22–A25, A27
+- B1–B15, B18–B30
+- A14 and B16 in the checker-safe form below.
+
+Checker-constrained wording (applied, not the reviewer’s exact string):
+- A5: “via possível” would drop the disclosure phrase the parity test pins (`/forma possível/` on the contact answer and the inquiry notice). The conditional “quando” is gone; the noun stays “forma possível”.
+- A14: “por cada 1 vítima e por cada 1 acidente”, and “pago por cada 1 ano” (008, twice). “por cada vítima e cada acidente” drops the two source digits in 피해자 1명·사고 1건당. The digit 1 stays.
+- B16: the lease-start clause, the foreign-funds clause, and the 015 “outro ponto importante é” split were each rewritten as a sentence inside the existing block. Paragraphs were not joined (block count is checked against the Korean source). “cerca de **1 mês** a mais” keeps both digits.
+
+## Rows skipped
+
+- A15, and the verdict lines on U+200B in 003, 005, 006, 008 and 009, including 005 `**​**`.
+  Reason: heading levels and the zero-width count must match the Korean source (003:52, 005:8, 006:4, 008:10, 009:5). Promoting Q16–Q20 to `##`, or deleting the spacers, fails `blocks`. Q16–Q20 stay body lines. Zero-width characters removed: 0.
+- B17, and the verdict lines on U+200B in 013 and 015.
+  Reason: same pin (013:5, 015:3). The trailing spacer after “cidade de Taipé” was left.
+- A26, the request to drop “a disposição ligada não é o artigo 10 da lei do imposto sobre as vendas”.
+  Reason: the Korean link label is 영업세법 제10조. The number checker counts that 10. The URL stays `flno=3`. The label already names artigo 3 of 各類所得扣繳率標準 and keeps artigo 10 so both digits survive.
+- A14, the “ultrapassar 1 pessoa” instance in 005.
+  Reason: that 1 is the counted threshold “exceeds 1 person”, not a bare “each”. Replacing it with “uma pessoa” drops a source digit.
+
+No P3 rows in either review. No test expectation needed a wording edit; the disclosure regex still matches. “TWD 1.57M” was not in any edited sentence and was not touched. The bio “1,57 milhão de TWD” was already in that form and was not edited.
+
+## Systemic patterns and instances
+
+- Endorsement “apoio” in the llms.txt denial: 1 (discoveryNotice).
+- 資遣費 defined as indemnização por despedimento and then denied: 1 (guidance labour blurb).
+- 戶籍 “registo de agregados” / “Registo de Agregados” → “registo domiciliário” / “Registo Domiciliário”: 28 in 007 (25 lowercase, 3 title-case, including the office, the act, headings and the link label), 1 calendar line in 016, and 1 guidance family blurb. The masculine “pelo conservatória” in 007 was corrected in the same pass.
+- Bare statutory “each”, digit kept: 1 benefit sentence in 003 (“por cada 1 vítima e por cada 1 acidente”) and 2 formula lines in 008 (“pago por cada 1 ano”). “Por cada 1 ano” at the start of the 008 FAQ was already in that form.
+- Plural sum followed by singular “novo dólar”: 2 in 003 (the recognised-damage line and the benefit table) and 1 fine line in 006.
+- French-shaped “não se deve presumir que seguem”: 1 (001). “releva de” for a permanent establishment: 2 (004, fixed place and agency).
+- Medical “encargos” → “despesas”: the 003 benefit sentence (two “encargos médicos”) and 4 heads in 010 (recibos, médicas, cuidados, transporte), including “estabelecimento de saúde”. Tax-table “encargos”, “encargos de formação” and living-cost “encargos” were left; those are the ordinary names of those heads, not the medical calque.
+- “Sujeito” as the responsible person: 9 in 011 (title, H1, heading, FAQ and body), 3 “titular da autorização” in 017, 1 “alguém que possa” in 018. Left “sujeito de direito”, “sujeito de direitos”, “sujeito jurídico”, “ficam sujeitos” and “está sujeito”.
+- Sentence-initial “Pelo contrário” for a contrast: 6 (008 FAQ, 011, 017 ×3, 018) → “Em contrapartida”.
+- 013/015 mid-sentence paragraph breaks: 3 fragments rephrased inside their blocks (013 funds, 013 lease start, 015 zone). Blocks not merged. U+200B unchanged.
+- Statutory heir “lugar” → “ordem”: 8 in 016 (applicable rank ×3, anterior, posterior, same rank, rank inherited with, next rank). Left “no lugar de um descendente”, “lugar de situação” and “lugar onde”.
+- 運送承攬 “comissão de transporte” → “transitário”: 5 in 017. The lines that already said “transitário (運送承攬)” were left.
+- “reserva hereditária” → “legítima”: 4 in 016. The gloss 特留分 stays.
+- 華僑 “chineses do ultramar” → “chineses ultramarinos”: 5 in 001 and 2 in 005.
+- 變更登記 “inscrição modificativa” → “pedido de registo da alteração” / “registo da alteração”: 4 in 002.
+- U+200B characters removed: 0. Heading levels added: 0.
+
+R2–R10 already present from earlier rounds were left where they were already correct (Korea only as a labelled example, consultation languages EN/中文/JA/KO, feminine Wei Tseng, Traditional Chinese glosses, 119/110/112 in Taiwan, European Portuguese « » and dot-thousands). R12’s Paralegal lines were in this round’s A28 and were rewritten in the pt block only.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=75
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+       0
+```
+
+```
+TSC_OK
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+      25
+```
+
+That count is from the verify run, before this log file existed. This log is one further untracked path.
+
+Commands were the work-order set (`tail -8` of the checker is the last file, 018, plus the summary). Markers grep was `src/content/columns-pt` and `src/data`. No Hangul outside `url` values.
+
+## Reviewer got wrong (not applied)
+
+- A15 / B17 and the U+200B verdict lines. The zero-width lines and the Q16–Q20 body paragraphs match the Korean source. Deleting them, or turning Q16–Q20 into headings, fails the blocks and heading checks. They are source layout, not disposable Portuguese blank lines.
+- A26. The linked page is article 3, and the label already says so. The Korean anchor text is still article 10 of the business-tax act, and that digit has to remain in the Portuguese label. The URL was not changed.
+- A14’s “ultrapassar 1 pessoa”. That figure is the statutory threshold of more than one worker, not the “each victim / each accident” wording. Dropping the digit fails the number check.
+- 004 “é, pelo contrário, uma parte da sede” was left. It is the ordinary parenthetical “rather”, not the sentence-initial “Pelo contrário” that denies the previous sentence. The six openers were changed.
+- “delito” in 003 Q19 (criminal hit-and-run) and in 002 (a criminal analogue of breach of trust) was left. The civil Article 197 claim was the one that had to stop saying “delito”.

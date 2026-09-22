@@ -69,7 +69,7 @@ Certos bancos podem impor exigências suplementares, por exemplo uma duração d
 
 **5. A sociedade pode contratar trabalhadores de nacionalidade estrangeira?**
 
-A. Primeiro trabalhador: o pedido é apresentado como um trabalho de direção numa empresa de investimento ordinário de chineses do ultramar ou de estrangeiros (一般僑外投資事業主管工作). O critério do «trabalho de natureza especializada ou técnica» do ponto B abaixo não se aplica, mas aplicam-se as condições de destinatário, nomeadamente a de gerente (經理人) de uma sociedade cuja entrada de chineses do ultramar ou de estrangeiros ultrapassa um terço, bem como as condições de resultados do empregador relativas ao capital e ao volume de negócios (artigos 38 e 39 das normas de exame).
+A. Primeiro trabalhador: o pedido é apresentado como um trabalho de direção numa empresa de investimento ordinário de chineses ultramarinos ou de estrangeiros (一般僑外投資事業主管工作). O critério do «trabalho de natureza especializada ou técnica» do ponto B abaixo não se aplica, mas aplicam-se as condições de destinatário, nomeadamente a de gerente (經理人) de uma sociedade cuja entrada de chineses ultramarinos ou de estrangeiros ultrapassa um terço, bem como as condições de resultados do empregador relativas ao capital e ao volume de negócios (artigos 38 e 39 das normas de exame).
 
 B. A partir do segundo trabalhador, existem restrições: se o número de trabalhadores contratados ultrapassar 1 pessoa, a formação e a experiência pertinentes do trabalhador, as regras de remuneração média de contratação, bem como as regras de capital e de volume de negócios da sociedade, são tratadas em conformidade com o «trabalho especializado ou técnico» (專門性或技術性工作).
 

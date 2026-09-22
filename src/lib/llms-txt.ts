@@ -788,7 +788,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'این صفحهٔ راهنما به فارسی نوشته شده است. مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کره‌ای انجام می‌شود و مترجم شفاهی فراهم نمی‌کنیم.',
     discoveryNotice:
-      'فایل llms.txt فقط نقشه‌ای برای پیدا کردن صفحه‌های عمومی است؛ رتبه‌ای در نتایج جست‌وجو، توصیه‌ای، پیشنهاد هوش مصنوعی یا آگهی را وعده نمی‌دهد.',
+      'فایل llms.txt فقط نقشه‌ای برای پیدا کردن صفحه‌های عمومی است؛ رتبه‌ای در نتایج جست‌وجو، توصیه‌ای، پیشنهاد هوش مصنوعی یا دیده شدن تضمین‌شده را وعده نمی‌دهد.',
     // The published privacy-page sentence, with its leading connective dropped
     // so the line stands alone; the proposition is unchanged.
     confidentialNotice:

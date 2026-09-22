@@ -3661,23 +3661,23 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'کارشناسی ارشد (M.S.)، Institute of Finance, National Taiwan University',
-        'کارشناسی (B.A.) با دو رشتهٔ حقوق و مالیه، National Chengchi University',
+        'کارشناسی (B.A.) با دو رشتهٔ حقوق و مالی، National Chengchi University',
         'دانشجوی تبادل در Kobe University و Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'شعبهٔ تایچونگ بنیاد کمک حقوقی',
+        'بنیاد کمک حقوقی، شعبهٔ تایچونگ (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'پیش‌تر در بخش امور حقوقی وزارت آموزش کار کرده و بر اختلافات اداری و مدنی متمرکز بوده است.',
+        'پیش‌تر در وزارت آموزش، بخش امور حقوقی (Ministry of Education, Legal Affairs Division) کار کرده و بر اختلافات اداری و مدنی متمرکز بوده است.',
         'در پرونده‌های مربوط به دانشگاه‌ها، حقوق اعضای هیئت علمی و شکایت اداری سابقه دارد.',
       ],
       education: ['کارشناسی حقوق (LL.B.)، National Chung Hsing University'],
       experience: [
-        'بخش امور حقوقی وزارت آموزش',
+        'وزارت آموزش، بخش امور حقوقی (Ministry of Education, Legal Affairs Division)',
         'وکیل، Hovering International Law Firm',
       ],
     },

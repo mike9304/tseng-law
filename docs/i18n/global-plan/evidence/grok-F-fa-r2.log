@@ -1,0 +1,116 @@
+# WO-F-fa — Persian fix lane, campaign round 2 (Grok 4.7), 2026-09-22
+Worktree: /Users/son7/Projects/tseng-law-fix-fa-r2 (no git add/commit/push)
+Files touched: src/content/columns-fa/001–018 (all 18);
+src/data/international-guidance-south-asia.ts (persianGuidanceContent strings only);
+src/data/international-guidance-team.ts (fa bios only);
+src/data/international-guidance-offices.ts (fa alt only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.fa.discoveryNotice only);
+this log.
+No test file was edited. No pinned Persian expectation had to change. "TWD 1.57M" stays byte-identical. llms.txt token stays. consultationNotice and confidentialNotice were not rewritten.
+
+## Rows applied
+fa-a 17/21 applied in full; fa-a 15, 17 (deletion), and 21 adapted or skipped (below).
+fa-b 28/30 applied in full; fa-b 9 skipped; fa-b 10 and 11 adapted inside the existing blocks.
+
+fa-a
+1  003 dashcam: جعبهٔ سیاه → دوربین ثبت وقایع خودرو.
+2  003 close of oral argument: ختام مذاکرهٔ شفاهی → ختم رسیدگی شفاهی (3: appeal, first instance in the same sentence, and withdrawal of complaint).
+3  009 piece-rate: حق‌العمل هر معامله → مزد کارمزدی (بر اساس تعداد کار).
+4  llms discoveryNotice: آگهی → دیده شدن تضمین‌شده. Token llms.txt kept.
+5  004: نه تنها کشور مبدأ → نه یگانه کشور مبدأ.
+6  資遣費 label swept (see systemic). Quoted 008 sentence now: اگر کارمند داوطلبانه استعفا دهد، شرکت ملزم نیست… غرامت اخراج.
+7  007 FAQ question restored the five-year half: آیا توزیع مابه‌التفاوت اموال باقی‌مانده، خسارت طلاق و نفقهٔ پس از طلاق یک مطالبه است، یا همه مشمول یک مهلت پنج‌ساله می‌شوند؟
+8  005: سود سهام یا پاداش (紅利). Gloss is the Chinese character 利, not a Persian letter.
+9  Bio: مالیه → مالی (double major in law and finance).
+10 Privacy retention: تکالیف وابسته → تکالیف مرتبط با آن.
+11 Proviso swept (see systemic).
+12 سامانه دفتر → سامانهٔ دفتر.
+13 FAQ predicate: برای پروندهٔ خودتان تنها وقتی می‌توان پاسخ داد که وکیل مدارک را بررسی کرده باشد.
+14 «مواد» for records/evidence swept (see systemic). Statutory مواد and مواد خام / مواد اولیه left.
+16 008 conditions cells: هست → یکی از وضع‌های مادهٔ 11/12 باید محقق شود; resignation cell: شرطی از این دست در کار نیست.
+18 Office alt: سالن نشست → اتاق جلسهٔ دفتر تایپه.
+19 008 closer: شما هم باید از حق خود در تایوان دفاع کنید. Same calque in 006 (حق معیشت را حمایت کند → از … حمایت کند).
+20 008: انقباض کار → کاهش حجم فعالیت (業務緊縮).
+
+fa-b
+1  010: از باشگاه خواست تصویر را حفظ کند.
+2  010: خودبه‌خود مبلغی نیست که دادگاه احراز می‌کند.
+3  «روز علم» swept to روز اطلاع (see systemic).
+4  011 distributor: نمایندگی فروش / نمایندهٔ فروش → توزیع / توزیع‌کننده (4). Contractual title «نماینده» in the name list left.
+5  011: ماده‌ای که مدت را تعیین می‌کند از ماده‌ای که مکان را تعیین می‌کند در عمل متمایز شود. Also در دامنهٔ اداره باشد → در دامنهٔ بررسی باشد.
+6  011 handover sentence now says which records, how, and whether access survives.
+7  011: هم ادعاهای منفرد و هم تبلیغ نهاییِ تولیدشده.
+8  011: راهنمای اجرایی.
+12 013: از راه صفحهٔ تماس با وکیل تایوان مشورت شود. Language lock on the closing note unchanged.
+13 013: برگهٔ اطلاعات پایهٔ شمارهٔ شناسایی یکپارچه (統一證號基本資料表).
+14 013: شرکت تأسیس کرده‌اند و پروانه و کارت اقامت گرفته‌اند. No-promise sentence kept.
+15 014: رابطهٔ تناسب معقولی.
+16 014: ملازم ادارهٔ کسب‌وکار یا اجرای تکلیف قانونی.
+17 014 minimum-service sentence now states what the clause sets out.
+18 015: نتیجهٔ استعلام پیوست آن را ندارد.
+19 016: با فوت یکی از اعضای خانواده فقط یک آیین آغاز نمی‌شود.
+20 016: برخی از اموال.
+21 016: باید میان نیاز فعلی فرزند و معیشت آینده‌اش توازن برقرار شود.
+22 016: اسناد اثبات نسب.
+23 016 guardian candidate: شخص پیشنهادی (3: relationship, «نامزدی معیّن», residence abroad).
+24 016: نقش حمایت را از نقش ادارهٔ مال جدا و مشخص سنجید. 017: این روابط را جدا و مشخص مرتب کرد. «تفصیلی» meaning “detailed” (فهرست تفصیلی، اطلاعات تفصیلی، ضوابط تفصیلی، داده‌های تفصیلی) left.
+25 016: دسترسی به اطلاعات شخصی و مالی صغیر باید چنان محدود شود.
+26 017: قرارداد باید به این خطرها بپردازد (customer-service رسیدگی kept as the named risk).
+27 017: نمی‌توان قاطعانه گفت.
+28 018: درآمد عملیاتی 100,000,000 دلار جدید تایوان. Digits and worker count kept. Comma grouping kept (R14).
+29 018: انتقال آوردهٔ مدیر موافقت 2/3 یا بیشتر حق رأی سایر سهامداران را می‌خواهد. Digits kept.
+30 018: آنچه گذشت مقایسهٔ آیین ثبت شعبه با تأسیس شرکت تابعه است. صرف برگزیدن یک شکل معیّن… No-guarantee sentence kept.
+
+Adaptations (wording applied; structure not):
+- fa-a#17: the difficulty row was not deleted (table-row count). Cells no longer say آسان / دشوار. They say the degree of difficulty is not known in advance, depends on the evidence, and is not a promised result.
+- fa-b#10: the split sentence was not merged (block count and ZWSP). The orphan line is now همچنین باید احراز شود که طرف‌های خارجی وجوه را تحت عنوان دیگری وارد نمی‌کنند. Other sentence-initial و lines in 013 were made self-standing the same way.
+- fa-b#11: the duplicate lease sentence was not deleted. The block now says to confirm, before signing, that the business item is allowed at that premises.
+
+## Rows skipped
+- fa-a#15 (P2). Do not strip U+200B, do not promote Q16–Q20 from body lines to headings, do not merge the one-line paragraphs in 003, 005, 006, 008, 009. The checker compares heading levels, block counts, and ZWSP counts to the Korean source, which has the same spacers (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). R7 and ACCEPTED-ROUND forbid merging blocks or adding headings. Sentence-initial و inside those files was still rewritten (systemic below).
+- fa-a#21 (P2). "TWD 1.57M" stays byte-identical (R12 / ACCEPTED-ROUND). Suggested «1.57 میلیون دلار جدید تایوان» would drop the pinned token.
+- fa-b#9 (P2). Comma thousands (1,579,589, fine ranges, 25,000,000, 30,000,000, 100,000,000) and the decimal 0.5 stay. R14 requires that form for fa. Writing «نیم متر» would drop the digit 0.5. Part a’s verdict already says Western digits and comma thousands are consistent and are not findings.
+
+## Systemic patterns (instances changed)
+«مواد» for records, returns, or evidence                         28 phrase sites (001 ×1, 002 ×7, 003 ×5, 007 ×15). Left: وفق مواد + article numbers, مواد 11 تا 15, مواد 38 و 39, مواد خام, مواد اولیه, هزینهٔ مواد یا تجهیزات, شرکت‌های مواد.
+«حق سنوات» for 資遣費 → غرامت اخراج                              35 (008 ×24 including 3 with the gloss already attached, 009 ×8, 002 ×1, 014 link label ×1, guidance labor paragraph ×1).
+«قید استثنایی» for 但書 → قید اما (但書)                        6 (007 ×4, 002 ×2).
+Sentence-initial و chaining a clause                             50 lines (006 ×20, 008 ×23, 009 ×3, 013 ×4), plus 4 fragments given a finite verb so the block can stand (006 ×1, 008 ×3).
+«روز علم» → روز اطلاع                                            8 (003 ×2, 007 ×4, 010 ×1, 016 ×1).
+Distributor named as sales agent                                 4 (011).
+Guardian «نامزد»                                                 3 (016).
+R12 Latin institution names restored on the fa bios             3 lines (Legal Aid Foundation, Taichung Branch ×1; Ministry of Education, Legal Affairs Division ×2). Paralegal / Senior Paralegal / roles were already in Persian. "TWD 1.57M" untouched.
+«حقوق را حمایت کردن»                                             2 (008 closer, 006 livelihood sentence).
+
+R2 Korea-as-example, the four-language consultation lock, and feminine-unmarked وکیل were already in place; this pass did not loosen them. No Arabic kaf/yeh (ك/ي) in the Persian columns or the fa guidance slice. No [변호사 검수 필요]. OOO in 008 was already [نام].
+
+## §Verify
+```
+=== CHECKER ===
+neighbour      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      24
+```
+Command was the work-order block (checker tail -8, marker wc, tsc, vitest grep, git status --short | wc -l). The 24 count is before this log file. 017 numbers is PASS with a non-failing WARN 수사미해석 (2): 제3자; sourceCount=44 targetCount=44. That WARN was not introduced by a number-format change.
+
+## Reviewer points not applied
+- Comma thousands and 0.5 are not an English-format defect for fa. R14 and the part-a verdict require them. fa-b#9 was not applied.
+- Reformatting TWD 1.57M would break the pinned bio token. fa-a#21 was not applied.
+- U+200B line breaks and Q16–Q20 as body lines match the Korean source the checker uses. Removing them or turning them into headings would fail headings/blocks/ZWSP. fa-a#15 was not applied as a structural edit.
+- Deleting the 008 difficulty row, or deleting the 013 lease sentence, would change table-row or block counts. Softened or rephrased in place.
+- «دو سوم» for 2/3 would drop digits. Consent and voting-rights wording was restored around the digits 2/3.
+- The guidance dump prints discoveryNotice with «نمایانی»; the .ts source (and the review quote) said «آگهی». The .ts source was edited. The dump was not.

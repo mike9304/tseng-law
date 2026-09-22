@@ -1,0 +1,62 @@
+# grok-F-hu-r4 — Hungarian (hu) native-review fix lane, campaign round 4
+worker: Grok 4.7 · date: 2026-09-23 · workspace: /Users/son7/Projects/tseng-law-fix-hu-r4
+
+## §Verify (verbatim)
+$ cd /Users/son7/Projects/tseng-law-fix-hu-r4 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+$ node scripts/check-column-translation.mjs --dir src/content/columns-hu --lang hu 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-hu src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      21
+
+(git status = 21 at verify time, before this log. The count is the pre-existing WO-F-hu.txt and the two untracked review files, plus the edited sources. This log is one further untracked path.)
+
+## Rows applied
+hu-a: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 26, 27, 29, 30, 31, 32, 33, 34.
+hu-b: 1, 2, 3, 5, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22.
+Partial:
+- b#4: the cap now says the claim stops at the amount of the actual loss ("legfeljebb a tényleges kár összegéig, azaz annak 1-szereséig"). The digit stays. Korean counts that 1; deleting "1-szeres" FAILs numbers (same as round 3).
+- a#27: the blockquote cap is now inside the sentence ("fizetni, legfeljebb 6 havi bérig"). The two quote lines were joined into one line. Quote-block count is unchanged (contiguous `>` lines are one block).
+- a#30: Q19 now names "az elmenekülés bűncselekménye (肇事逃逸)". It stays a body line. Promoting it to `##` would change heading levels.
+- a#32: the two ungrammatical "Nem azért, mert X, következik/lehet Y" sentences were rewritten. The later "Nem azért tehát, mert a fióktelep eltűnt…" already parses and was left.
+- b#22: "hozzájárulás" for the capital interest is now "vagyoni betét", and "többségi hozzájárulása" is "szavazati jogának többsége". The director threshold stays "2/3-a", not "kétharmada", so the 2 and the 3 still parse.
+
+## Rows skipped (with reason)
+- a#1 (drop "(10. cikk)" on the Business Tax Act link in 004). The URL was not changed. The body's "10. cikk" for the industrial-innovation R&D credit is a different statute and was left. The link label's 10 matches the Korean link text the checker counts. Round 3 already showed that removing "(10. cikk)" produces `numbers FAIL missing from translation (1): 10`. The reviewer is right that flno=3; the digit has to stay.
+- a#22 and b#6 (space thousands, and "TWD" after every sum). ACCEPTED-ROUND skips "500 000". Hungarian number style in the checker is `dot`. Period grouping was kept. "TWD 1.57M" and "1,57 millió TWD" were not touched.
+- a#25, b#9, and b#10 (delete U+200B, turn Q16–Q20 into headings, join mid-sentence blocks in 013 and 015). ZWSP counts already match the Korean source. Deleting them FAILs `blocks`. Promoting Q16–Q20 to `##` changes heading levels. 005's `**​**` lines are those ZWSP blocks.
+- a#28 (spare "1" glued to "év" / "károsult" / "baleset" / "szolgálati év"). Hungarian has no word-numeral lexicon, so "év" or "egy" is not counted as 1. Removing the digit FAILs numbers. The digits already match the Korean number bag.
+- b#20 ("minden tagnak egy szavazata van"). The sentence's three 1s match the Korean bag ("1명" + "1인 1표"). Collapsing to one word drops counted 1s. Left as "minden tagnak 1 szavazata van, és 1 tagra 1 szavazat jut".
+
+No test expected-string was updated. No pinned Hungarian FAQ or title assertion matched a string that changed. `consultationNotice` and `confidentialNotice` were not rewritten. `discoveryNotice` still contains the literal `llms.txt`; only "támogatást" became "támogató kiállást". Disclosure-parity regexes were not touched.
+
+## Systemic patterns (pattern → instances changed)
+- *Székhely* where it means the foreign head office as a legal person (本公司 / head office), not a registered address → *külföldi központ* (and *központ–fióktelep*): 6 in 001 and 31 in 004. Left where it is a seat: "székhelye Tajvanon kívül van", "Tajvanon kívüli székhelyű", "a székhely szerinti állam", "az ügyvezetés székhelye", the company's registered office in 001, the registration-data seat in 002, and "székhelyáthelyezés" in 015.
+- *Haszonélvező* for a beneficial owner (實質受益人 / 受益所有人) → *tényleges tulajdonos*: 3 in 001 and 4 in 004. *Haszonélvezet* in 016 is usufruct and was left.
+- *Kelti* for a legal effect or risk → *keletkezteti* / *keletkeztethet*: 2 in 003 (negligent-injury liability; court costs) and 2 in 007 (household-registration effect; further risks).
+- *Felelős házastárs* for 有責配偶 → *vétkes házastárs*: the FAQ question, the section heading, and both copies of the constitutional paragraph (FAQ answer and body).
+- *Járműkiadás* for dispatch → *a járművek indítása* / *járműindítási utasítás*: 5 in 017.
+- *Felelősség hovatartozása* in 014 (attribution, not affiliation) → *kinek róható fel* / *felróhatóság*: the FAQ answer, the repeated body, the repayment sentence, and checklist items 7 and 8. Property *hovatartozás* in 016 was left.
+- Thousands with a space: 0. U+200B deleted: 0. Spare digits removed: 0.
+
+## What the reviewer got wrong, or what the checker will not allow
+- a#1: "(10. cikk)" does not match flno=3. It does match the Korean link label the checker counts. Dropping it fails numbers, so it stays.
+- a#22 / b#6: Hungarian does group thousands with a space, and the unit does follow the amount. The checker’s Hungarian style is the dot ("500.000"). ACCEPTED-ROUND already skips "500 000".
+- a#25 / b#9 / b#10: the zero-width spaces are not a Hungarian-only defect. The Korean source has the same counts. The checker requires that match. Q16–Q20 are body lines in the source as well.
+- a#28 / b#20: the "spare" digits are not spare against the Korean number bag. Writing them as words fails the checker because Hungarian has no numeral lexicon.
+- b#4: "1-szeres" is redundant next to the amount of the actual loss, but Korean states the negligence cap as 1배. The 1 stays; the sentence now says that 1-szeres is that amount.
+- b#1: the English source has the same sentence ("The foregoing is contract-design advice"). The paragraphs immediately above, in English and in Hungarian, compare branch and subsidiary registration. The Hungarian label was changed to that comparison. The following sentence, that choosing a form does not make the transaction lawful, was left.
+- a#32's third "Nem azért tehát…" is grammatical Hungarian and was not the broken pattern.

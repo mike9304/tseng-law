@@ -21,7 +21,7 @@ A baleset Tajcsung (臺中) egyik edzőtermében történt, az edző által veze
 
 A felperes, a koreai hallgató ügyvédnőjeként (訴訟代理人) jártam el. A tajcsungi járásbíróság 2022. január 24-én, a Kínai Köztársaság (Tajvan) 109. évének (2020) fogyasztói 7. számú ügyében (民國109年消字第7號) hozott elsőfokú ítéletében elrendelte, hogy az alperes fizessen [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) összeget, valamint az ítéletben feltüntetett kamatot.
 
-Ezt követően a sajtó arról számolt be, hogy a felek fellebbvitelen egyezséget (和解) kötöttek. Maga a hivatalos elsőfokú ítélet nem teszi lehetővé a fellebbvitel kimenetelének vagy az egyezségi összegnek az ellenőrzését; a sajtóban közölt egyezséget nem szabad az elsőfokú eljárás megerősített lezárásaként olvasni.
+Ezt követően a sajtó arról számolt be, hogy a felek fellebbvitelen egyezséget (和解) kötöttek. Maga a hivatalos elsőfokú ítélet nem teszi lehetővé a fellebbvitel kimenetelének vagy az egyezségi összegnek az ellenőrzését; a sajtóban közölt egyezséget nem szabad az elsőfokú ítélet megerősített lezárásának tekinteni.
 
 Az ügyre vonatkozó sajtóhírek, internetes közlések és jogi kommentárok címeinek fordítása a következő. Az alábbi címek csak az egyes hivatkozások tartalmának bemutatását szolgálják; nem jelentik azt, hogy ez a szöveg maga állapítaná meg a tényeket.
 
@@ -37,21 +37,21 @@ Az ügyre vonatkozó sajtóhírek, internetes közlések és jogi kommentárok c
 
 [Koreai férfi egyetemi hallgató, sérülés 90 kg-os felhúzás közben… elsőfokon 1.570.000 TWD kártérítés és híradás a fellebbviteli egyezségről](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
-![Egyetemi hallgató, porckorongrepedés 90 kg felhúzás után… kártérítést követel az edzőteremtől](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
+![Férfi egyetemi hallgató, porckorongrepedés 90 kg-os felhúzás után… kártérítést követel az edzőteremtől](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
-[Egyetemi hallgató, porckorongrepedés 90 kg felhúzás után… kártérítést követel az edzőteremtől](https://news.ebc.net.tw/news/living/362075)
+[Férfi egyetemi hallgató, porckorongrepedés 90 kg-os felhúzás után… kártérítést követel az edzőteremtől](https://news.ebc.net.tw/news/living/362075)
 
-![Közlés a PTT-n: koreai egyetemi hallgató, porckorongrepedés 90 kg felhúzás közben… elsőfokon az edzőteremnek 1.570.000 TWD megfizetését rendelték el](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Közlés a PTT-n: koreai férfi egyetemi hallgató, porckorongrepedés 90 kg-os felhúzás közben… elsőfokon az edzőteremnek 1.570.000 TWD megfizetését rendelték el](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Közlés a PTT-n: koreai egyetemi hallgató, porckorongrepedés 90 kg felhúzás közben… elsőfokon az edzőteremnek 1.570.000 TWD megfizetését rendelték el](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Közlés a PTT-n: koreai férfi egyetemi hallgató, porckorongrepedés 90 kg-os felhúzás közben… elsőfokon az edzőteremnek 1.570.000 TWD megfizetését rendelték el](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
 ![Blog: 70 kg-os koreai férfi egyetemi hallgató 90 kg-os felhúzás közben szerzett sérülése és 1.000.000 TWD-t meghaladó kártérítés… volt-e felelős az edzőterem? Milyen volt az edzést végző szemlélete?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
 [Blog: 70 kg-os koreai férfi egyetemi hallgató 90 kg-os felhúzás közben szerzett sérülése és 1.000.000 TWD-t meghaladó kártérítés… volt-e felelős az edzőterem? Milyen volt az edzést végző szemlélete?](https://blog.udn.com/blackjack/179081715)
 
-![Jogi kommentár: egyetemi hallgató, porckorongrepedés felhúzás közben… elsőfokon egy ismert edzőteremnek 1.570.000 TWD megfizetését rendelték el](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Jogi kommentár: férfi egyetemi hallgató, porckorongrepedés felhúzás közben… elsőfokon egy ismert edzőteremnek 1.570.000 TWD megfizetését rendelték el](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Jogi kommentár: egyetemi hallgató, porckorongrepedés felhúzás közben… elsőfokon egy ismert edzőteremnek 1.570.000 TWD megfizetését rendelték el](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Jogi kommentár: férfi egyetemi hallgató, porckorongrepedés felhúzás közben… elsőfokon egy ismert edzőteremnek 1.570.000 TWD megfizetését rendelték el](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Az ítélet ismertetése: akut porckorongrepedés, miután egy edzőtermi kezdő utasítást kapott 90 kg-os felhúzásra](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
@@ -99,7 +99,7 @@ A vizsgálható kártételek a következők. A tényleges elismerés és az öss
 4. **Munkaképesség-csökkenésből eredő kár (勞動能力減損)**: Ha utóhatások és tartós munkaképesség-csökkenés elismertek, orvosi és foglalkozási iratokkal, a károsodás fokával, a foglalkozással és a jövedelemmel, valamint a fennmaradó munkavégzési időszakkal együtt értékelhető. Maga a károsodási arány nem rögzíti a kártérítést, és a veszteséget nem számítják automatikusan a nyugdíjkorhatárig.
 5. **A felépülési időszak kieső jövedelme (收入損失)**: Azt az időszakot, amikor kezelés vagy pihenés miatt ténylegesen nem lehetett dolgozni, és az ebből eredő jövedelemcsökkenést bér-, adó- és munkaidő-nyilvántartási iratokkal kell bizonyítani.
 6. **Nem vagyoni kár (非財產上損害)**: A lelki szenvedés összegét a bíróság az ügy tényezői, például a sérülés foka, a kezelési idő, az utóhatások és a fél konkrét körülményei alapján állapítja meg.
-7. **Szankciós kártérítés (懲罰性賠償金)**: Van olyan szabály, hogy a fogyasztóvédelmi törvény hatálya alá tartozó perben, ha a kárt a vállalkozás szándéka okozta, a tényleges kár legfeljebb 5-szöröse, súlyos gondatlanság esetén legfeljebb 3-szorosa, gondatlanság esetén a tényleges kár legfeljebb 1-szereséig követelhető. Hogy a [tajvani fogyasztóvédelmi törvény 51. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) alkalmazandó-e az ügyre, valamint hogy jár-e szankciós kártérítés, és milyen összegben, a bíróságnak a konkrét feltételekre és bizonyítékokra vonatkozó értékelésétől függ.
+7. **Szankciós kártérítés (懲罰性賠償金)**: Van olyan szabály, hogy a fogyasztóvédelmi törvény hatálya alá tartozó perben, ha a kárt a vállalkozás szándéka okozta, a tényleges kár legfeljebb 5-szöröse, súlyos gondatlanság esetén legfeljebb 3-szorosa, gondatlanság esetén legfeljebb a tényleges kár összegéig, azaz annak 1-szereséig követelhető. Hogy a [tajvani fogyasztóvédelmi törvény 51. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) alkalmazandó-e az ügyre, valamint hogy jár-e szankciós kártérítés, és milyen összegben, a bíróságnak a konkrét feltételekre és bizonyítékokra vonatkozó értékelésétől függ.
 
 ## 5. Akkor is vitatható a kártérítés megléte vagy összege, ha az edzőteremnek van felelősségbiztosítása (責任保險)?
 

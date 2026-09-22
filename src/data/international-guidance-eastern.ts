@@ -643,7 +643,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Házasság, család és öröklés',
           paragraphs: [
-            'Válást (離婚), vagyonmegosztást, a szülői felügyeletet (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) érintő ügyekben járunk el, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik a háztartás-nyilvántartás (戶籍), az okiratok alakjának és tajvani bizonyító erejének további vizsgálatát.',
+            'Válást (離婚), vagyonmegosztást, a szülői felügyeletet (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) érintő ügyekben járunk el, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik a háztartás-nyilvántartás (戶籍), az okiratok formája és tajvani bizonyító ereje további vizsgálatát.',
             'Mivel a családi ügyekhez gyakran határidők és párhuzamos eljárások társulnak, az első összefoglalónak meg kell jelölnie a felek viszonyát, a jelenlegi lakóhelyet és a már folyamatban lévő eljárásokat.',
           ],
         },
@@ -683,14 +683,14 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Alapadatok erről a tajvani ügyvédi irodáról, annak irodáiról és a külföldi felekkel végzett munkáról.',
       intro:
-        'A Hovering International Law Firm tajvani ügyvédi iroda. Ügyvédei a vállalati tanácsadástól a peres eljárásig dolgoznak. Ez a rész az iroda létrejöttét, székhelyeit és a külföldi felekkel végzett munkát mutatja be.',
+        'A Hovering International Law Firm tajvani ügyvédi iroda. Ügyvédei vállalatoknak adnak tanácsot, és peres eljárásokban is eljárnak. Ez a rész az iroda létrejöttét, székhelyeit és a külföldi felekkel végzett munkát mutatja be.',
       sections: [
         {
           heading: 'Alapítás és felépítés',
           paragraphs: [
             'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University-n (國立臺灣大學) végzett ügyvédek. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítása óta követett irányát fejezi ki.',
             'Irodáink Tajpejben (臺北), Kaohsziungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. A kaohsziungi iroda a vállalatirányításra összpontosít, és polgári, büntető- és közigazgatási jogvitákban jár el. A tajcsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
-            'Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonnal rendelkező magánszemélyeknek.',
+            'Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonos magánszemélyeknek.',
           ],
         },
         {
@@ -941,7 +941,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jogi keret',
           paragraphs: [
             'Az iroda tajvani jog szerint működik, és ez az oldal csak az e keretben végzett munkáról szól.',
-            'A tartalom nem tanácsadás a tajvanitól eltérő más jogrend szerint, ideértve az Ön lakóhelyének jogát is. Ha ügyének egy része más jogrendet érint, tisztázzuk Önnel, milyen szakképzett személy szükséges ahhoz a részhez.',
+            'A tartalom nem tanácsadás a tajvanitól eltérő más jogrend szerint, ideértve az Ön lakóhelyének jogát is. Ha ügyének egy része más jogrendet érint, tisztázzuk Önnel, milyen szakember szükséges ahhoz a részhez.',
           ],
         },
         {

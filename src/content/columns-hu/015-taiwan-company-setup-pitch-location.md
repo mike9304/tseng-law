@@ -51,7 +51,7 @@ Ezért erre figyelni kell.
 
 ​
 
-**Q. Minden ágazatnak a „telephely előzetes lekérdezése” rendszerén keresztül kell ellenőriznie, hogy a tevékenység lehetséges-e?**
+**Kérdés. Minden ágazatnak a „telephely előzetes lekérdezése” rendszerén keresztül kell ellenőriznie, hogy a tevékenység lehetséges-e?**
 
 Minden ágazatnak ajánlott a „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerén keresztül ellenőrizni, hogy a tevékenység lehetséges-e.
 

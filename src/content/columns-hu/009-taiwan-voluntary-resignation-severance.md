@@ -31,7 +31,7 @@ Vannak azonban **kivételes esetek**.
 
 A következő különös helyzetekben, még ha a munkavállaló saját elhatározásából távozik is, a munkáltató köteles végkielégítést fizetni (a munkaügyi törvény 14. cikke, amely megfelelően alkalmazza a 17. cikket; 勞動基準法第14條):
 
-1. Ha a munkáltató a munkaszerződés (勞動契約) megkötésekor valótlan nyilatkozatot (虛偽意思表示) tesz, úgy hogy a munkavállaló tévedésbe esik, és kár bekövetkezésének kockázata áll fenn
+1. Ha a munkáltató a munkaszerződés (勞動契約) megkötésekor színlelt akaratnyilatkozatot (虛偽意思表示) tesz, úgy hogy a munkavállaló tévedésbe esik, és kár bekövetkezésének kockázata áll fenn
 
 (például ha a munkáltató azt mondja a munkavállalónak, hogy belépéskor olyan külföldi fióktelepre küldi, amely valójában nem létezik)
 
@@ -83,9 +83,9 @@ Néha, ha a munkaviszony mindkét oldalán van hiba,
 
 és vita robban ki,
 
-aszerint, hogy ki fejezi be először a szerződést elegendő alappal,
+Azt kell nézni, ki fejezi be először a szerződést elegendő alappal.
 
-a végkielégítés nem kerül kifizetésre, vagy követelhető.
+Az a fél, amely először fejezi be a szerződést elegendő alappal, megtagadhatja a végkielégítés kifizetését, vagy követelheti azt.
 
 Ezért a tajvani munkaügyi vitákban (勞資糾紛)
 

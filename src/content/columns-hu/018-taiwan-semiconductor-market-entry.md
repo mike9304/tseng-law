@@ -59,9 +59,9 @@ A tajvani leányvállalat és a külföldi társaság tajvani fióktelepe közö
 
 Ha Tajvanon önálló jogi személyt kívánnak tartani, a jogi forma is választandó. Tajvanon van korlátolt felelősségű társaság (有限公司) és részvénytársaság (股份有限公司).
 
-### Korlátolt felelősségű társaság (有限公司): a kormányzás tömörebb, de a részesedés-átruházás viszonylag zárt forma
+### Korlátolt felelősségű társaság (有限公司): egyszerűbb a társaságirányítás, a részesedés átruházása viszont viszonylag zárt
 
-A korlátolt felelősségű társaság 1 vagy több természetes személyből, vagy tajvani vagy külföldi jogi személy tagokból állhat, és a tagok elvben a hozzájárulásuk összegéig felelnek. Igazgató 1-től 3-ig állítható, a tagok közül választva. Az ügyvezetést nem ellátó tagok felügyeleti jogot gyakorolhatnak, ezért külön felügyelőt (監察人) nem kell tartani. Ha az alapszabály másként nem rendelkezik, minden tagnak 1 szavazata van, és 1 tagra 1 szavazat jut, ezért az irányítás nem feltétlenül egyezik a hozzájárulási aránnyal. Közönséges tag hozzájárulásának átruházásához elvben a többi tag szavazati jogának többségi hozzájárulása kell, igazgató vagyoni betétjének átruházásához pedig a többi tag szavazati jogának 2/3-a vagy annál több kell. Ezért egyszerű tagi viszonyú és stabil irányítású társasághoz illik inkább, gyakori tőkebevonáshoz vagy részesedés-ügyletekhez kevésbé. Később részvénytársasággá is átalakítható.
+A korlátolt felelősségű társaság 1 vagy több természetes személyből, vagy tajvani vagy külföldi jogi személy tagokból állhat, és a tagok elvben a hozzájárulásuk összegéig felelnek. Igazgató 1-től 3-ig állítható, a tagok közül választva. Az ügyvezetést nem ellátó tagok felügyeleti jogot gyakorolhatnak, ezért külön felügyelőt (監察人) nem kell tartani. Ha az alapszabály másként nem rendelkezik, minden tagnak 1 szavazata van, és 1 tagra 1 szavazat jut, ezért az irányítás nem feltétlenül egyezik a hozzájárulási aránnyal. Közönséges tag vagyoni betétjének átruházásához elvben a többi tag szavazati jogának többsége kell, igazgató vagyoni betétjének átruházásához pedig a többi tag szavazati jogának 2/3-a vagy annál több kell. Ezért egyszerű tagi viszonyú és stabil irányítású társasághoz illik inkább, gyakori tőkebevonáshoz vagy részesedés-ügyletekhez kevésbé. Később részvénytársasággá is átalakítható.
 
 ### Részvénytársaság (股份有限公司): más befektetők bevonását vagy a tőzsdei bevezetést fontolgató vállalkozáshoz illik
 
@@ -73,7 +73,7 @@ Amikor külföldi társaság tajvani leányvállalatot alapít, elvben a cégné
 
 Ezzel szemben közönséges külföldi társaság tajvani fióktelepének alapításakor elvben nem kell a Gazdasági Minisztérium Beruházásvizsgáló Főosztályának beruházási engedélye; a Gazdasági Minisztérium Kereskedelmi Fejlesztési Hivatala (經濟部商業發展署) végzi a fióktelep bejegyzését és a kapcsolódó tőke-megállapítást. A cégnév előzetes lekérdezése, a működő tőke átutalása, az ellenőrzés és az adóügyi nyilvántartásba vétel továbbra is szükséges, és az alapítási ütem általában rövidebb.
 
-A fentiek a szerződés tervezésére vonatkozó javaslat. Attól, hogy egy meghatározott jogi formát választanak, az ügylet nem válik jogszerűvé, és a vita nem kerülhető el.
+A fentiek csak a fióktelep és a leányvállalat bejegyzési eljárását vetik össze. Attól, hogy egy meghatározott jogi formát választanak, az ügylet nem válik jogszerűvé, és a vita nem kerülhető el.
 
 ## 5. A társasági bejegyzés és a mérnök jogszerű munkavégzése külön dolog
 

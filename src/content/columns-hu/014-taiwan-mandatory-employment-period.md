@@ -15,7 +15,7 @@ faq:
   - q: "Korai kilépéskor az aláírási bónuszt (簽約金) vagy a bentmaradási bónuszt (留任獎金) teljes egészében vissza kell adni?"
     a: "Nem mindig a teljes összeget kell visszaadni. Ha az aláírási bónusz, a bentmaradási bónusz vagy más előzetes juttatás (預付性給付) a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges kimenetel a kifizetés céljának, a megállapodás tartalmának, a már ledolgozott időszaknak és a megszűnés okának együttes vizsgálatától függ."
   - q: "Ha a szerződés a munkavállalónak nem felróható okból korán szűnik meg, vissza kell téríteni a képzési költséget?"
-    a: "A tajvani munkaügyi törvény 15-1. cikk 4. bekezdése úgy rendelkezik, hogy ha a munkaszerződés a minimális szolgálati idő vége előtt a munkavállalónak nem felróható okból szűnik meg, a munkavállaló nem visel felelősséget a minimális szolgálati időre vonatkozó kikötés megsértéséért, sem a képzési költség visszatérítéséért. A megszűnés okát és a felelősség hovatartozását azonban konkrét bizonyítékok, például felmondási értesítés, kilépési nyilatkozat és a munkafeltételek megsértésére vonatkozó iratok alapján kell megítélni."
+    a: "A tajvani munkaügyi törvény 15-1. cikk 4. bekezdése úgy rendelkezik, hogy ha a munkaszerződés a minimális szolgálati idő vége előtt a munkavállalónak nem felróható okból szűnik meg, a munkavállaló nem visel felelősséget a minimális szolgálati időre vonatkozó kikötés megsértéséért, sem a képzési költség visszatérítéséért. A megszűnés okát, és azt, hogy a felelősség kinek róható fel, azonban konkrét bizonyítékok, például felmondási értesítés, kilépési nyilatkozat és a munkafeltételek megsértésére vonatkozó iratok alapján kell megítélni."
 ---
 
 # Minimális szolgálati időre vonatkozó megállapodás Tajvanon: érvényesség, képzési költség és kötbér megítélési szempontjai
@@ -43,7 +43,7 @@ A 15-1. cikk a két törvényi feltétel egyikét és emellett külön észszer�
 
 A törvényi feltétel ellenőrzése után a 2. bekezdés szerint külön vizsgálják, hogy a kikötött időszak és a felelősség köre észszerű-e. Az 1. bekezdés törvényi feltételét vagy a 2. bekezdés észszerűségi mércéjét sértő megállapodás a 3. bekezdés szerint semmis. Ez a szabály azonban az egyes megállapodások tartalmának és tényeinek vizsgálati mércéje, nem olyan szabály, amely minden minimális szolgálati időre vonatkozó kikötést eleve érvényesnek vagy semmisnek nyilvánítana.
 
-Az, hogy a munkavállaló aláírta a szerződést, a megállapodás meglétét megerősítő irat lehet, de nem helyettesíti a törvényi feltételeket. Fordítva, ahelyett, hogy pusztán a kikötött időszak hosszából rögtön következtetnének, ellenőrizni kell, milyen beruházás vagy ellentételezés volt, és miért ezt az időszakot rögzítették.
+Az, hogy a munkavállaló aláírta a szerződést, a megállapodás meglétét megerősítő irat lehet, de nem helyettesíti a törvényi feltételeket. A kikötött időszak hossza önmagában nem döntheti el a kimenetelt; azt is ellenőrizni kell, milyen beruházás vagy ellentételezés történt, és miért ezt az időszakot rögzítették.
 
 ## 2. Első törvényi feltétel: szakmai-műszaki képzés és a költség viselése
 
@@ -116,7 +116,7 @@ A képzési költség visszatérítését és az előzetes juttatás visszatér�
 
 ## 7. Amikor a szerződés a munkavállalónak nem felróható okból szűnik meg
 
-A tajvani munkaügyi törvény 15-1. cikk 4. bekezdése úgy rendelkezik, hogy ha a munkaszerződés a minimális szolgálati idő vége előtt a munkavállalónak nem felróható okból szűnik meg, a munkavállaló nem visel felelősséget a minimális szolgálati időre vonatkozó kikötés megsértéséért, sem a képzési költség visszatérítéséért. A megszűnés okát és a felelősség hovatartozását azonban konkrét bizonyítékok, például felmondási értesítés, kilépési nyilatkozat és a munkafeltételek megsértésére vonatkozó iratok alapján kell megítélni.
+A tajvani munkaügyi törvény 15-1. cikk 4. bekezdése úgy rendelkezik, hogy ha a munkaszerződés a minimális szolgálati idő vége előtt a munkavállalónak nem felróható okból szűnik meg, a munkavállaló nem visel felelősséget a minimális szolgálati időre vonatkozó kikötés megsértéséért, sem a képzési költség visszatérítéséért. A megszűnés okát, és azt, hogy a felelősség kinek róható fel, azonban konkrét bizonyítékok, például felmondási értesítés, kilépési nyilatkozat és a munkafeltételek megsértésére vonatkozó iratok alapján kell megítélni.
 
 Ezért a munkavállaló szerződésszegését nem lehet megállapítani pusztán attól, hogy a munkaviszony a kikötött időszak előtt ért véget. Ellenőrizni kell, ki milyen akaratnyilatkozatot tett, mi a szerződés megszűnésének jogalapja, és a megszűnést előidéző tényleges körülmények melyik félnek róhatók fel.
 
@@ -124,11 +124,11 @@ A vizsgálati iratok közé tartozhat a felmondási értesítés, a kilépési l
 
 A felmondás, a közös megegyezéssel történő megszűnés és a munkafeltételek megsértésének állítása csak a vizsgálandó körülmények példái, nem a munkavállalónak nem felróható okok zárt felsorolása. Azonos nevű megszűnés is különbözhet a felek akaratában és a lefolyásban, és az iratban írt megnevezés nem feltétlenül egyezik a tényleges tényekkel.
 
-A megszűnés okának megítélése közvetlenül a visszatérítés körére is hat. Ha a 4. bekezdés alkalmazandó, a munkavállalótól nem követelhető a minimális szolgálati időre vonatkozó kikötés megsértésének felelőssége, sem a képzési költség visszatérítése, ezért a hovatartozást a képlet alkalmazása előtt kell ellenőrizni. Ha előzetes juttatás és más külön igények is vannak, minden igény jogi jellegét és alapját külön vizsgálják.
+A megszűnés okának megítélése közvetlenül a visszatérítés körére is hat. Ha a 4. bekezdés alkalmazandó, a munkavállalótól nem követelhető a minimális szolgálati időre vonatkozó kikötés megsértésének felelőssége, sem a képzési költség visszatérítése, ezért azt, hogy a felelősség kinek róható fel, a képlet alkalmazása előtt kell ellenőrizni. Ha előzetes juttatás és más külön igények is vannak, minden igény jogi jellegét és alapját külön vizsgálják.
 
 ## 8. A kilépési előzetes bejelentés külön kérdés
 
-A minimális szolgálati időre vonatkozó kikötés nem olyan eszköz, amely fizikailag vagy jogilag megakadályozná a munkavállaló kilépését. A kilépési nyilatkozat és az előzetes bejelentési időszak (預告期間) arra vonatkozik, mikor szűnik meg a munkaviszony; a kikötés érvényessége és a költség-visszatérítési felelősség arra, keletkezik-e a megszűnésből vagyoni felelősség.
+A minimális szolgálati időre vonatkozó kikötés nem olyan eszköz, amely a munkavállalót a kilépésben ténylegesen vagy jogilag megakadályozná. A kilépési nyilatkozat és az előzetes bejelentési időszak (預告期間) arra vonatkozik, mikor szűnik meg a munkaviszony; a kikötés érvényessége és a költség-visszatérítési felelősség arra, keletkezik-e a megszűnésből vagyoni felelősség.
 
 Amikor a munkavállaló határozatlan idejű munkaszerződést (不定期契約) szüntet meg, a tajvani munkaügyi törvény 15. cikke szerint a 16. cikk 1. bekezdésének előzetes bejelentési időszaka megfelelően alkalmazandó. A 16. cikk a munkáltató általi szerződésmegszüntetésre vonatkozó rendelkezés, a munkavállaló kilépésére ez az előzetes bejelentési időszak a 15. cikken keresztül vonatkozik.
 
@@ -156,7 +156,7 @@ Vita megelőzéséhez vagy már előterjesztett igény vizsgálatához nem elég
 4. Írásban egyértelműen összekapcsolják az ellentételezés célját, a kifizetés napját, az összeget, a keletkezési feltételeket, a munkavállalónak tett közlést és a nem teljesített időszak visszatérítési képletét.
 5. Dokumentálják a kikötött időszak számítási alapját, az azonos vagy hasonló munkakörű személyzet helyettesítési lehetőségét, valamint a munkáltató üzemeltetési szükséglete és a tényleges beruházás viszonyát.
 6. Vizsgálják, a kikötött időszak és a visszatérítési összeg arányos-e a képzési költség vagy az ellentételezés körével, és az elszámolásban tükrözik a már ledolgozott időszakot.
-7. A megszűnés okának és a felelősség hovatartozásának egyedi megállapítása után számítják a tényleges megszűnési napot, a teljesített és a nem teljesített időszakot.
+7. A megszűnés okának, és annak egyedi megállapítása után, hogy a felelősség kinek róható fel, számítják a tényleges megszűnési napot, a teljesített és a nem teljesített időszakot.
 8. Mielőtt a bérből levonnának vagy visszatérítést követelnének, összevetik a szerződést, a kifizetési iratokat, a bérjegyzéket, a felek közléseit, a felszólítást és a levonási nyilvántartást a jogalap és az eljárás ellenőrzésére.
 
 Még ha mintaszerződést használnak is, nem szabad mechanikusan ugyanazt az időszakot és összeget alkalmazni minden munkakörre és minden munkavállalóra. A záradékokat a tényleges képzési beruházás, az ellentételezés és a helyettesítési lehetőség tükrözésével kell megtervezni, a kifizetés célját és az arányos képletet pedig a szerződéskötés előtt érthetően közölni kell.
@@ -170,7 +170,7 @@ Még ha mintaszerződést használnak is, nem szabad mechanikusan ugyanazt az id
 5. Megőrzik a kilépési értesítést, a felmondási értesítést vagy a közös megegyezéssel történő megszűnés iratát, valamint a kézbesítés bizonyítékát, például az elektronikus levelet és az üzenetváltást.
 6. Időrendben rendezik a megszűnés tényleges okát és lefolyását, és együtt ellenőrzik a munkáltató visszatérítési felszólítását, a bérjegyzéket, a felek közléseit és a levonási nyilvántartást.
 7. Külön vizsgálják a minimális szolgálati időre vonatkozó kikötés érvényességét, a kilépési nyilatkozatot és az előzetes bejelentést, a képzési költség és az előzetes juttatás visszatérítését, valamint a külön állított kárt.
-8. Nem ismerik el a felelősséget pusztán azért, mert aláírtak, vagy mert a munkáltató meghatározott összeget követel; ellenőrzik a 15-1. cikk törvényi feltételeinek, észszerűségének, a megszűnés hovatartozásának és az arányos képletnek megfelelő bizonyítékokat.
+8. Nem ismerik el a felelősséget pusztán azért, mert aláírtak, vagy mert a munkáltató meghatározott összeget követel; ellenőrzik a 15-1. cikk törvényi feltételeinek, észszerűségének, a megszűnés felróhatóságának és az arányos képletnek megfelelő bizonyítékokat.
 
 Az iratok időrend szerinti rendezésekor együtt kell feltüntetni a szerződéskötés napját, a képzés kezdő- és zárónapját, az egyes kifizetési napokat, a munkavégzés kezdő- és zárónapját és az értesítés továbbításának napját. Ha az iratok egy része csak a munkáltatónál van, először a saját iratokat és a követelt összeg számítási alapját kell rendezni, a további iratokat a szükséges eljárás szerint kell ellenőrizni.
 

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![主图](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-读过[在台湾设立公司 — 基础篇](/zh-hans/columns/taiwan-company-establishment-basics)与[在台湾设立公司 — 深化篇1](/zh-hans/columns/taiwan-company-establishment-advanced-1)的人，也可再看在台湾设立公司 — 深化篇2。
+本文即《在台湾设立公司 — 深化篇2》，承接[在台湾设立公司 — 基础篇](/zh-hans/columns/taiwan-company-establishment-basics)与[在台湾设立公司 — 深化篇1](/zh-hans/columns/taiwan-company-establishment-advanced-1)。
 
 ​
 

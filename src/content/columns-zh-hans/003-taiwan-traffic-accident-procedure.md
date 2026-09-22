@@ -29,9 +29,9 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ## Q2. 应先保全哪些证据？
 
-先确保人身安全与警示号志。在台湾，若有伤患或需要救援，请拨打119（救护车与消防）；若涉及犯罪或紧急安全状况，请拨打110（报警），使用手机时也可拨打112。并依交通事故情形向警察通报。
+先确保人身安全，并采取警示措施。在台湾，若有伤患或需要救援，请拨打119（救护车与消防）；若涉及犯罪或紧急安全状况，请拨打110（报警），使用手机时也可拨打112。并依交通事故情形向警察通报。
 
-安全确保后，拍摄整体与细节照片，记录车辆位置与损坏、道路标线、号志及天气状况。不宜遗漏证人联络方式、监视器影像与行车记录器保全请求、当事人、车辆与保险资料，以及病历。个人照片有用，但不能取代伤亡事故所要求的警察处理。
+安全确保后，拍摄整体与细节照片，记录车辆位置与损坏、道路标线、交通信号（號誌）及天气状况。不宜遗漏证人联络方式、监视器影像与行车记录器保全请求、当事人、车辆与保险资料，以及病历。个人照片有用，但不能取代伤亡事故所要求的警察处理。
 
 关于警察文书，在事故现场可领取道路交通事故当事人登记联单。自事故日起满7日后，可申请现场图与现场照片（現場圖／現場照片）；自事故日起满30日后，可申请道路交通事故初步分析研判表。核发时点与申请条件须再向管辖警察机关确认。
 
@@ -177,18 +177,18 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 2026年5月29日修正的给付标准（強制汽車責任保險給付標準），适用于2026年7月1日以后发生的事故。伤害合理必要医疗费用上限为新台币200,000元；失能给付依15个法定等级自新台币80,000元至3,000,000元；死亡给付为新台币3,000,000元，且就1名受害人、1次事故，死亡、失能与医疗费用合计上限为新台币3,200,000元。此前事故可能适用先前标准。
 
-第三人责任险（第三人責任險）、驾驶人伤害险及车体损失险是契约性质的任意商品。实际保障依被保险人、上限、自负额、除外事项、过失及保单其他条件而有不同，故须按案核对保单与条款。
+第三人责任险（第三人責任險）、驾驶人伤害险及车体损失险是契约性质的任意商品。实际保障因被保险人、保险金额上限、免赔额（自負額）、除外事项、过失及保单其他条件而不同，故须按案核对保单与条款。
 
 ### Q11–Q15 的官方依据
 
 - [民法第193条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [民法第216条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [民法第217条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [台湾高等法院109年度上易字第644号判决](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [台湾高等法院109年度上易字第477号判决](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [台湾高等法院民国109年度上易字第644号判决](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [台湾高等法院民国109年度上易字第477号判决](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [司法院霍夫曼现值计算器](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [民法第195条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [桃园地方法院112年度坜简字第236号判决](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [桃园地方法院民国112年度坜简字第236号判决](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [民法第188条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [台湾刑法第284条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [强制汽车责任保险法](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)

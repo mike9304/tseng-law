@@ -14,7 +14,7 @@ import {
   FORBIDDEN_PHRASES,
   GUIDANCE_LANGS,
   checkPair,
-  main,,
+  main,
   checkNeighbourLeak,
 } from './check-column-translation.mjs';
 

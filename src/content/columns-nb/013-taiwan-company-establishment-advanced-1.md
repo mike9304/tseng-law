@@ -29,7 +29,7 @@ Når en utlending stifter et selskap i Taiwan, skal vedkommende inngi en investe
 
 Avdelingen for investeringsgjennomgang skal undersøke at kapitalen (資本額) faktisk skal brukes til investeringsformålet
 
-og om utenlandske aktører ikke innfører midler under et annet påskudd.
+og at utenlandske aktører ikke fører inn midler under et annet påskudd.
 
 Ved utarbeidelsen av investeringsplanen trenger den nøyaktige selskapsadressen ikke å opgis; angivelse av området er tilstrekkelig (eksempel: byen Taipei). ​
 
@@ -89,15 +89,15 @@ Om dette punktet bør du drøfte dette grundig med en advokat i Taiwan.
 
 Selskapsstiftelsen varer omkring **3 måneder**, oppnåelsen av arbeidstillatelsen (工作許可) og av oppholdskortet omkring **1 måned**.
 
-derfor bør du legge avtalens ikrafttredelsesdato så sent som mulig.
+Derfor bør du legge avtalens ikrafttredelsesdato så sent som mulig.
 
 Dessuten gir utleieren i leieavtaler for butikklokaler i Taiwan ofte leieren en «**innredningsperiode**» (裝潢期間).
 
 Dette er en periode uten leie; det kan du forhandle om.
 
-For en utlending er det ikke enkelt å leie et butikklokale, og depositumet (押金) i Taiwan er snarere lavt (vanligvis 2 måneder), så utleierens beskyttelse er begrenset.
+For en utlending er det ikke enkelt å leie et butikklokale, og depositumet (押金) i Taiwan er snarere lavt (vanligvis 2 måneders leie), så utleierens beskyttelse er begrenset.
 
-utleiere nøler derfor med å leie ut til utlendinger.
+Utleiere nøler derfor med å leie ut til utlendinger.
 
 Derfor anbefaler jeg å søke driftsadressen tidlig.
 

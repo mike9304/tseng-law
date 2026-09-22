@@ -39,7 +39,7 @@ I de følgende særlige situasjonene skal arbeidsgiveren utbetale sluttvederlag 
 
 3. Når det kontraktsmessige arbeidet kan skade arbeidstakerens helse, arbeidstakeren har anmodet arbeidsgiveren om forbedring, og dette forblir uten virkning
 
-4. Når arbeidsgiveren, dennes representant eller andre arbeidstakere lider av en lovbestemt smittsom sykdom (法定傳染病), det består smittefare for samarbeidende, og dette bringer arbeidstakerens helse alvorlig i fare
+4. Når arbeidsgiveren, dennes representant eller andre arbeidstakere lider av en lovbestemt smittsom sykdom (法定傳染病), det er smittefare for kolleger, og dette bringer arbeidstakerens helse alvorlig i fare
 
 5. Når arbeidsgiveren ikke utbetaler det kontraktsmessige arbeidsvederlaget (工作報酬) eller ikke tildeler arbeidstakere med akkordlønn (按件計酬) tilstrekkelig arbeid
 
@@ -53,7 +53,7 @@ ikke utbetaler lønnen (工資) rettidig,
 
 ikke utbetaler overarbeidsvederlag (加班費)
 
-eller ikke tilslutter arbeidstakeren til arbeidsforsikringen (勞保) eller sykeforsikringen (健保).
+eller ikke melder arbeidstakeren inn i arbeidsforsikringen (勞保) eller sykeforsikringen (健保).
 
 I slike tilfeller skal arbeidsgiveren også da utbetale sluttvederlag når arbeidstakeren selv bringer arbeidsavtalen til opphør.
 
@@ -79,7 +79,7 @@ eller hos arbeidstakeren,
 
 arbeidsgiveren rett til ikke å betale sluttvederlag og arbeidstakeren rett til å kreve det.
 
-Sommetider ligger skyld hos begge sider,
+Noen ganger ligger skylden hos begge sider,
 
 og når begge tvistes,
 

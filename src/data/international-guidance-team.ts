@@ -660,10 +660,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'VÅRT TEAM',
     title: 'Hoverings internasjonale team',
     description:
-      'Profiler for Hoverings advokater, den operative ledelsen og det tilknyttede revisjonskontoret.',
+      'Profiler for Hoverings advokater, den operative ledelsen og revisjonspartneren.',
     representativeTitle: 'Ledende advokat',
     teamTitle: 'Advokater og medarbeidere',
-    partnerTitle: 'Tilknyttet revisjonskontor',
+    partnerTitle: 'Revisjonspartner',
     introLabel: 'Presentasjon',
     educationLabel: 'Utdanning',
     experienceLabel: 'Erfaring',
@@ -681,7 +681,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Advokat i Taiwan',
       'chang-fangyu': 'Juridisk assistent',
       'son-jungmin': 'Operativ ledelse, Korea',
-      'huang-shengping': 'Tilknyttet revisor (CPA)',
+      'huang-shengping': 'Revisjonspartner (CPA)',
     },
   },
   fi: {
@@ -3017,7 +3017,7 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Rettshjelpfondet, avdelingen i Taichung (Legal Aid Foundation, Taichung Branch)',
+        'Stiftelsen for rettshjelp, avdelingen i Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
@@ -3045,10 +3045,10 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinerer rådgivningstider og kommunikasjonen for klienter fra Korea.',
-        'Støtter samhandlingen på tvers av landegrensene gjennom dokumentsystemer og arbeidsflyter, med bakgrunn i informatikk.',
+        'Støtter samhandlingen mellom fagområdene gjennom dokumentsystemer og arbeidsflyter, med bakgrunn i informatikk.',
       ],
       education: ['Bachelor (B.S.) i informatikk, National Cheng Kung University'],
-      experience: ['Korea-drift, Hovering International Law Firm'],
+      experience: ['Korea-forretningsteamet, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

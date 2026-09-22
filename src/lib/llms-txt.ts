@@ -705,7 +705,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk.',
     discoveryNotice:
-      'Filen llms.txt er bare et kart for å finne offentlige sider; den lover ingen plassering i søkeresultater, ingen godkjenning, ingen anbefaling fra kunstig intelligens og ingen lovet synlighet.',
+      'Filen llms.txt er bare en oversikt for å finne offentlige sider; den lover ingen plassering i søkeresultater, ingen anbefaling, ingen anbefaling fra kunstig intelligens og ingen garantert synlighet.',
     confidentialNotice:
       'Fordi originalteksten lagres, bør du i begynnelsen ikke skrive noe som ennå ikke trengs, for eksempel passnummer, identitetsnummer eller kontoopplysninger.',
   },

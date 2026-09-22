@@ -661,7 +661,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Denne siden viser profiler for Hoverings advokater, den operative ledelsen og det tilknyttede revisjonskontoret. Advokat Wei Tseng (曾雋崴) har advokatbevilling i Taiwan og er kontorets ledende advokat; hun arbeider med klienter fra Korea og Japan og andre internasjonale klienter. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Denne siden viser profiler for Hoverings advokater, den operative ledelsen og revisjonspartneren. Advokat Wei Tseng (曾雋崴) har advokatbevilling i Taiwan og er kontorets ledende advokat; hun arbeider med klienter fra Korea og Japan og andre internasjonale klienter. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/about', '/nb/contact'],
     },
     pricing: {
@@ -676,7 +676,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Denne delen besvarer vanlige spørsmål på et alminnelig informasjonsnivå: de seks fagområdene, forberedelsen før kontakt, hvordan kostnadene fastsettes, og hva en innsendt melding betyr. En innsendt forespørsel venter på gjennomgang hos en advokat; den er ikke en juridisk uttalelse, ikke en time, og den skaper ikke et forhold mellom advokat og klient. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Denne delen besvarer vanlige spørsmål på et alminnelig informasjonsnivå: de seks fagområdene, forberedelsen før kontakt, hvordan kostnadene fastsettes, og hva en innsendt melding betyr. En innsendt forespørsel venter på gjennomgang hos en advokat; den er ikke juridisk rådgivning, ikke en bekreftet time, og den skaper ikke et forhold mellom advokat og klient. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/contact', '/nb/services'],
     },
   },

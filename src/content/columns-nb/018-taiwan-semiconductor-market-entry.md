@@ -41,7 +41,7 @@ Før inntredelsesstrukturen besluttes, kan hovedsetet internt klarlegge:
 | Fakturering og kostnader | Hvem fakturerer og innkrever, og hvordan avregnes kostnadene mellom hovedsetet og organisasjonen i Taiwan? |
 | Kvalitet og tvister | Hvem bekrefter resultatet av kontrollen og mottar klager over mangler eller skade? |
 
-Særlig hvis selgeren i kjøpekontrakten ikke er den virksomheten som yter den tekniske støtten, skal bilagene skille av hvem kunden kan kreve hvilke plikter.
+Særlig hvis selgeren i kjøpekontrakten ikke er den virksomheten som yter den tekniske støtten, skal dokumentene gjøre det klart hvem kunden kan kreve hvilke plikter av.
 
 ## 2. Skillet mellom datterselskap, filial og representasjonskontor for et utenlandsk selskap i Taiwan
 
@@ -65,21 +65,21 @@ Det kan dannes med 1 eller flere fysiske personer (有限公司), eller med taiw
 
 ### Aksjeselskap (股份有限公司): passende hvis man vil ta inn andre investorer, eller en notering er forutsigbar
 
-Kapitalen deles i aksjer. I utgangspunktet kreves 2 deltakere eller mer (股份有限公司), men staten eller en juridisk person kan stifte det alene, og en utenlandsk juridisk person kan holde 100 %. Aksjer er i utgangspunktet fritt overdragelige, med lovbestemte unntak; særlige aksjer og opsjoner til arbeidstakere kan utformes i samsvar med loven. Det passer til virksomheter som forventer investorer, aksjehandel, kapitalinsentiver til arbeidstakere eller en senere fusjon, overtakelse, børsnotering eller registrering på en vekstbørs; det begrenser seg ikke til store virksomheter. I styringen kan et ikke-offentlig emitterende selskap ved vedtektene være uten styre og kun ha 1 eller 2 ledere. Et selskap med én stats- eller juridisk person som eneste deltaker kan ved vedtektene være uten tilsynsperson (監察人). Ikke hvert aksjeselskap (股份有限公司) skal få årsregnskapet revidert. De vesentligste revisjonsgrensene for et alminnelig selskap er en innbetalt kapital på TWD 30.000.000 (新臺幣), eller, derunder, driftsinntekter på TWD 100.000.000 eller 100 arbeidstakere meldt inn i den taiwanske arbeidstakertrygden (勞工保險); selskaper med offentlig utbud følger verdipapirreguleringen.
+Kapitalen deles i aksjer. I utgangspunktet kreves 2 deltakere eller mer (股份有限公司), men staten eller en juridisk person kan stifte det alene, og en utenlandsk juridisk person kan holde 100 %. Aksjer er i utgangspunktet fritt overdragelige, med lovbestemte unntak; særlige aksjer og opsjoner til arbeidstakere kan utformes i samsvar med loven. Det passer til virksomheter som forventer investorer, aksjehandel, kapitalinsentiver til arbeidstakere eller en senere fusjon, overtakelse, børsnotering eller registrering i den førbørslige handelen (興櫃); det begrenser seg ikke til store virksomheter. I styringen kan et ikke-offentlig emitterende selskap ved vedtektene være uten styre og kun ha 1 eller 2 ledere. Et selskap med én stats- eller juridisk person som eneste deltaker kan ved vedtektene være uten tilsynsperson (監察人). Ikke hvert aksjeselskap (股份有限公司) skal få årsregnskapet revidert. De vesentligste revisjonsgrensene for et alminnelig selskap er en innbetalt kapital på 30.000.000 TWD (新臺幣), eller, derunder, driftsinntekter på 100.000.000 TWD eller 100 arbeidstakere meldt inn i den taiwanske arbeidstakertrygden (勞工保險); selskaper med offentlig utbud følger verdipapirreguleringen.
 
-## 4. Prosedyrene for filial og datterselskap skiller seg; kun datterselskapet gjennomgår etterprøvingen hos Investeringskommisjonen
+## 4. Prosedyrene for filial og datterselskap skiller seg; kun datterselskapet gjennomgår etterprøvingen hos avdelingen for investeringsgjennomgang (經濟部投資審議司)
 
 Når et utenlandsk selskap stifter et taiwansk datterselskap, forhåndskontrolleres navnet i utgangspunktet, og det søkes om en investeringstillatelse hos avdelingen for investeringsgjennomgang i Taiwans økonomidepartement (經濟部投資審議司). Etter godkjenningen overføres midlene, investeringsbeløpet fastsettes, og en revisor (會計師) etterprøver kapitalen, hvoretter stiftelsen og den skattemessige registreringen fullføres.
 
-Derimot kreves til stiftelsen av en taiwansk filial av et alminnelig utenlandsk selskap i utgangspunktet ikke en investeringstillatelse fra Investeringskommisjonen; Handelsutviklingskontoret under Taiwans økonomidepartement (經濟部商業發展署) behandler registreringen av filialen og den tilhørende kapitalfastsettelsen. Den forutgående navnekontrollen, overføringen av driftskapitalen, kapitaletterprøvingen og skatteregistreringen er likevel nødvendige; tidsplanen er som regel kortere.
+Derimot kreves til stiftelsen av en taiwansk filial av et alminnelig utenlandsk selskap i utgangspunktet ikke en investeringstillatelse fra avdelingen for investeringsgjennomgang (經濟部投資審議司); Handelsutviklingskontoret under Taiwans økonomidepartement (經濟部商業發展署) behandler registreringen av filialen og den tilhørende kapitalfastsettelsen. Den forutgående navnekontrollen, overføringen av driftskapitalen, kapitaletterprøvingen og skatteregistreringen er likevel nødvendige; tidsplanen er som regel kortere.
 
-Avsnittet over er veiledning om hvordan kontrakten utformes. Å råde over én konkret formular gjør ikke transaksjonen rettmessig og forebygger ikke tvistene.
+Avsnittet over er veiledning om hvordan kontrakten utformes. At en bestemt selskapsform er valgt, gjør ikke transaksjonen lovlig og utelukker ikke tvister.
 
 ## 5. Selskapsregistreringen og ingeniørens rettmessige arbeid er ikke det samme
 
 Å fullføre registreringen i Taiwan innebærer ikke at personalet fra det utenlandske hovedsetet automatisk må arbeide i Taiwan. En utlending som arbeider i Taiwan, har behov for en rettmessig arbeidstillatelse og, ved et lengre opphold, en oppholdstillatelse. I utgangspunktet søker arbeidsgiveren om arbeidstillatelsen og den tilsvarende oppholdstillatelsen.
 
-Det er relativt enklere å erverve arbeidstillatelsen for en leder av det taiwanske datterselskapet eller av filialen av et utenlandsk selskap. For å søke om den for en annen utlending eller de følgende krever ministeriet for arbeid, etter bransjen, grenser for kapital, omsetning eller annet (子公司). Hvis man forutser at utenlandsk personale arbeider i Taiwan, skal man før stiftelsen av selskapet bekrefte om den påtenkte kapitalen når den gjeldende grensen.
+Det er relativt enklere å erverve arbeidstillatelsen for en leder av det taiwanske datterselskapet eller av filialen av et utenlandsk selskap. For å søke om arbeidstillatelse for en annen og hver ytterligere utenlandsk statsborger krever likevel arbeidsdepartementet (勞動部), avhengig av bransje, terskler for kapital, omsetning eller liknende (子公司). Hvis man forutser at utenlandsk personale arbeider i Taiwan, skal man før stiftelsen av selskapet bekrefte om den påtenkte kapitalen når den gjeldende grensen.
 
 ## 7. Strukturer som etter handelens fase kan passe
 

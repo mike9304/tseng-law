@@ -1009,7 +1009,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
   languageLabel: 'Visningsspråk',
   mega: {
     services: {
-      description: 'Kontoret behandler de viktigste fagområdene i taiwansk rett.',
+      description: 'Kontoret behandler de sentrale fagområdene i taiwansk rett.',
       viewAllLabel: 'Vis alle',
     },
     columns: {
@@ -1193,7 +1193,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOKATER',
       title: 'Hoverings internasjonale team',
-      description: 'Profiler for Hoverings advokater, den operative ledelsen og det tilknyttede revisjonskontoret.',
+      description: 'Profiler for Hoverings advokater, den operative ledelsen og revisjonspartneren.',
       intro: '',
       sections: [],
     },
@@ -1216,7 +1216,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kostnadene bekreftes før arbeidet begynner',
           paragraphs: [
             'Når arbeidsomfanget er klart, drøfter vi beløp og beregningsmåte med deg, og de bekreftes før arbeidet begynner. Endrer omfanget seg underveis, må det bekreftes på nytt.',
-            'Denne siden er ikke et pristilbud og skaper ingen betalingsplikt.',
+            'Denne siden er ikke et pristilbud og skaper ingen betalingsplikt. Å sende en forespørsel via denne siden er også kostnadsfritt.',
           ],
         },
         {
@@ -1271,7 +1271,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hva denne siden ikke lover',
           paragraphs: [
-            'Vi lover ingen svartid, bekrefter ingen time via denne siden, lover ikke en bestemt advokat og stiller ikke tolk. Skriftlig oversettelse er noe annet: meldingen din oversettes ikke automatisk.',
+            'Vi lover ingen svartid, bekrefter ingen time via denne siden, lover ikke en bestemt advokat og stiller ikke med tolk. Skriftlig oversettelse er noe annet: meldingen din oversettes ikke automatisk.',
             'Når du sender en forespørsel, lagres innholdet og venter på vurdering. Får du ikke svar etter en tid, kan du skrive på nytt til e-postadressen som er oppgitt på kontaktsiden.',
           ],
         },
@@ -1398,7 +1398,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lagringssted og leverandører',
           paragraphs: [
             'Dette nettstedet driftes hos Vercel, og det du sender inn, lagres i ikke-offentlig objektslagring hos denne tjenesten. E-post sendes via e-posttjenesten kontoret bruker.',
-            'Enkelte leverandørers servere kan stå utenfor Taiwan, slik at opplysningene dine kan lagres og behandles der. Når formålet med lagringen er oppfylt, slettes opplysningene uten opphold; opplysninger som må oppbevares etter gjeldende regler, beholdes i den perioden. Henvendelser om personopplysninger tas imot på wei@hoveringlaw.com.tw.',
+            'Enkelte leverandørers servere kan stå utenfor Taiwan, slik at opplysningene dine kan lagres og behandles der. Når formålet med lagringen er oppfylt, slettes opplysningene uten opphold; opplysninger som må oppbevares etter gjeldende regler, beholdes i den perioden. Henvendelser om personopplysninger sendes til wei@hoveringlaw.com.tw.',
           ],
         },
       ],

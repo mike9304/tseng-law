@@ -55,7 +55,7 @@ Denne loven sto ved lag til 2003; den gangen ansatte herr Lin, som drev en fris�
 
 medarbeidere uten synshemming til hårvask og massasje, og politiet slo ned på det.
 
-Etter datidens regler fikk herr Lin og de nevnte medarbeiderne hver sin administrative bot (罰鍰) på TWD 40.000, TWD 10.000 og TWD 20.000 i ny taiwansk dollar (新臺幣).
+Etter datidens regler fikk herr Lin og de nevnte medarbeiderne hver sin administrative bot (罰鍰) på 40.000 TWD, 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
 
 Herr Lin mente sanksjonen var svært urettferdig og ba om en grunnlovstolkning.
 

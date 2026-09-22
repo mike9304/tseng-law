@@ -11,9 +11,9 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 # Spørsmål og svar om behandlingen av trafikkulykker i Taiwan: tiltak på stedet, uaktsomhet, forlik og erstatning
 
-![Bilde, som forklarer sikkerhetstiltakene på stedet og sikringen av beviser umiddelbart etter en trafikkulykke i Taiwan](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
+![Bilde som forklarer sikkerhetstiltakene på stedet og sikringen av beviser umiddelbart etter en trafikkulykke i Taiwan](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
-![Eksempelbilde, som registrerer kjøretøyets posisjon og sporene på kjørebanen på stedet for en trafikkulykke](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
+![Eksempelbilde som registrerer kjøretøyets posisjon og sporene på kjørebanen på stedet for en trafikkulykke](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
 Etter en trafikkulykke (交通事故) i Taiwan skal du først sikre sikkerheten, foreta anmeldelse og bevissikring og deretter i rekkefølge undersøke kravfristene, uaktsomheten (過失) og omfanget av et forlik. Det følgende er en alminnelig handlingsrekkefølge på grunnlag av taiwanske forskrifter og veiledninger fra offentlige myndigheter; konkret ansvar og prosedyre kan avvike etter omstendighetene i hver ulykke.
 
@@ -21,17 +21,17 @@ Etter en trafikkulykke (交通事故) i Taiwan skal du først sikre sikkerheten,
 
 Ved ulykker med tilskadekomst eller dødsfall skal føreren straks treffe redningstiltak (救護措施), underrette politiet og sikre kjøretøyet samt bevisene på stedet (保全現場). Uformelt samtykke fra motparten eller bare bilder gir ikke rett til å forlate stedet, før de krevde tiltak er avsluttet.
 
-Ved personskadeulykker kan kjøretøyene imidlertid, hvis alle parter samtykker, etter merking av posisjon og spor flyttes til et sted, som ikke hindrer trafikken. Det erstatter ikke de krevde tiltak som hjelp og anmeldelse.
+Ved personskadeulykker kan kjøretøyene imidlertid hvis alle parter samtykker, etter merking av posisjon og spor flyttes til et sted som ikke hindrer trafikken. Det erstatter ikke de krevde tiltak som hjelp og anmeldelse.
 
-Foreligger det kun formuesskade, og kan kjøretøyene flyttes, er prinsippet å merke posisjon og spor, fastholde dem med foto eller video og hurtig kjøre til et sikkert sted. Forlater man stedet uten de krevde tiltak, kan administrative sanksjoner (行政處罰) true.
+Foreligger det kun formuesskade, og kan kjøretøyene flyttes, er prinsippet å merke posisjon og spor, dokumentere dem med foto eller video og hurtig kjøre til et sikkert sted. Forlater man stedet uten de krevde tiltak, kan administrative sanksjoner (行政處罰) true.
 
-Artikkel 185-4 i straffeloven (刑法) behandler det strafferettslige ansvar for den fører, som etter en trafikkulykke med tilskadekomst eller dødsfall forlater stedet. Den faktiske anvendelse bedømmes etter ulykkessituasjonen og de trufne tiltak.
+Artikkel 185-4 i straffeloven (刑法) behandler det strafferettslige ansvar for den fører som etter en trafikkulykke med tilskadekomst eller dødsfall forlater stedet. Den faktiske anvendelse bedømmes etter ulykkessituasjonen og de trufne tiltak.
 
 ## Q2. Hvilke beviser skal først sikres?
 
-Sikre først deg selv og sett ut varseltrekanten. Nødnumrene i Taiwan: 119 (ambulanse/brann), 110 (politi), 112 fra mobil (交通事故). Anmeld også trafikkulykken til politiet, for så vidt situasjonen krever det.
+Sikre først deg selv og sett ut varseltrekanten. Nødnumrene i Taiwan: 119 (ambulanse/brann), 110 (politi), 112 fra mobil. Anmeld også trafikkulykken (交通事故) til politiet når situasjonen krever det.
 
-Når sikkerheten er sikret, ta da oversikts- og næropptak for å fastholde kjøretøyets plassering og skader, veimerkingen, signaler og vær. Vitnekontakter, anmodning om sikring av CCTV (監視器影像) og dashcam (行車紀錄器), opplysninger om parter, kjøretøyer og forsikringer samt legejournaler (病歷) bør du ikke utelate. Private opptak er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfall ikke den krevde politibehandling.
+Når sikkerheten er sikret, ta da oversikts- og næropptak for å dokumentere kjøretøyets plassering og skader, veimerkingen, signaler og vær. Vitnekontakter, anmodning om sikring av CCTV (監視器影像) og dashcam (行車紀錄器), opplysninger om parter, kjøretøyer og forsikringer samt legejournaler (病歷) bør du ikke utelate. Private opptak er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfall ikke den krevde politibehandling.
 
 Hva politidokumentene angår, kan du på ulykkesstedet få utlevert registrerings- og kontaktskjemaet for partene i trafikkulykken (道路交通事故當事人登記聯單). Etter 7 dager fra ulykkesdagen kan situasjonsskisse og ulykkesfotos (現場圖 / 現場照片) søkes; etter 30 dager fra ulykkesdagen kan den foreløpige analysebedømmelse av veitrafikkulykken (道路交通事故初步分析研判表) søkes. Utstedelsestidspunkt og søknadsvilkår undersøker du på nytt hos den kompetente politimyndighet.
 
@@ -39,17 +39,17 @@ Hva politidokumentene angår, kan du på ulykkesstedet få utlevert registrering
 
 Artikkel 284 i straffeloven (刑法) regulerer uaktsom kroppsskade (過失傷害) og uaktsom grov kroppsskade (過失致重傷). Denne bestemmelsen er ifølge artikkel 287 i straffeloven en klageforbrytelse (告訴乃論之罪); ifølge artikkel 237 i straffeprosessloven (刑事訴訟法) skal klagen i prinsippet innleveres innenfor 6 måneder fra kjennskapet til gjerningsmannen.
 
-Sivilrettslig erstatning (損害賠償) kan ifølge artikkel 197 i sivilloven (民法) ikke lenger kreves, når 2 år fra kjennskapet til skaden og den erstatningspliktige eller 10 år fra den rettsstridige handling er forløpet. Hvilke kjensgjerninger det påvirker foreldelsen (消滅時效), skal undersøkes særskilt.
+Sivilrettslig erstatning (損害賠償) kan ifølge artikkel 197 i sivilloven (民法) ikke lenger kreves når 2 år fra kjennskapet til skaden og den erstatningspliktige eller 10 år fra den rettsstridige handling er forløpet. Hvilke kjensgjerninger det påvirker foreldelsen (消滅時效), skal undersøkes særskilt.
 
-Den, som har lidt skade ved en straffbar handling, kan ifølge artikkel 487 i straffeprosessloven anlegge et sivilt bisøksmål tilknyttet straffesaken (刑事附帶民事訴訟). Så lenge straffesaken verserer, kan det ifølge artikkel 488 anlegges inntil før avslutningen av den muntlige forhandling (言詞辯論終結) i andre instans, men ikke etter avslutningen av den muntlige forhandling i første instans og før iverksettelse av anke. Vanligvis kan en særskilt betaling av rettsgebyr (裁判費) unngås; ikke ethvert resultat ender uten omkostninger. Avvises for eksempel straffesaken og henvises den på saksøkerens begjæring til den sivile rett, kan det ifølge artikkel 503 i straffeprosessloven oppstå saksomkostninger; også henvisnings- og prosedyrebestemmelsene i artikkel 504 skal ettergås.
+Den som har lidt skade ved en straffbar handling, kan ifølge artikkel 487 i straffeprosessloven anlegge et sivilt bisøksmål tilknyttet straffesaken (刑事附帶民事訴訟). Så lenge straffesaken verserer, kan det ifølge artikkel 488 anlegges inntil før avslutningen av den muntlige forhandling (言詞辯論終結) i andre instans, men ikke etter avslutningen av den muntlige forhandling i første instans og før iverksettelse av anke. Vanligvis kan en særskilt betaling av rettsgebyr (裁判費) unngås; ikke ethvert resultat ender uten omkostninger. Avvises for eksempel straffesaken og henvises den på saksøkerens begjæring til den sivile rett, kan det ifølge artikkel 503 i straffeprosessloven oppstå saksomkostninger; også henvisnings- og prosedyrebestemmelsene i artikkel 504 skal ettergås.
 
 Valget avviker etter avbrytelse av foreldelsen (時效中斷), kretsen av saksøkte, beviser, forsikring og kompetanse. Derfor finnes det ingen ensartet beste prosedyre for alle saker.
 
-## Q4. Hvordan bedømmes det strafferettslige og sivilrettslige ansvar, når begge sider har uaktsomhet?
+## Q4. Hvordan bedømmes det strafferettslige og sivilrettslige ansvar når begge sider har uaktsomhet?
 
-Strafferettslig ansvar kan først bedømmes, når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenheng, som denne tilsidesettelse har med motpartens tilskadekomst, er anerkjent. Alene fordi begge sider har uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom kroppsskade.
+Strafferettslig ansvar kan først bedømmes når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenheng som denne tilsidesettelse har med motpartens tilskadekomst, er anerkjent. Alene fordi begge sider har uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom kroppsskade.
 
-Sivilrettslig kan retten ifølge artikkel 217 i sivilloven (民法) nedsette eller ettergi erstatningen, hvis den skadelidte har uaktsomhet ved skadens oppståen eller forøkelse (與有過失). Ble for eksempel anerkjente skader på TWD 1.000.000 (新臺幣) og den skadelidtes uaktsomhet vurdert til 50 %, kan beløpet før andre tilpasninger falle til TWD 500.000.
+Sivilrettslig kan retten ifølge artikkel 217 i sivilloven (民法) nedsette eller ettergi erstatningen hvis den skadelidte har uaktsomhet ved skadens oppståen eller forøkelse (與有過失). Ble for eksempel anerkjente skader på 1.000.000 TWD (新臺幣) og den skadelidtes uaktsomhet vurdert til 50 %, kan beløpet før andre tilpasninger falle til 500.000 TWD.
 
 Sakkyndig vurdering (鑑定) eller den foreløpige analysebedømmelse kan være viktige dokumenter, men binder ikke retten mekanisk. Retten betrakter forklaringer, opptak, kjøretøyets tilstand og samtlige beviser under ett.
 
@@ -57,7 +57,7 @@ Sakkyndig vurdering (鑑定) eller den foreløpige analysebedømmelse kan være 
 
 I forliksavtalen (和解書) skal ulykkestidspunkt, -sted og parter fastlegges, og betalingsbeløp og -tidspunkt, behandlingen av forsikringsytelsen samt innbefattet og forbeholdte krav medtas. Fremtidig behandling, senere oppdagede skader, overlevering av attester (診斷證明書) og forholdet mellom betaling og frafall av klage skal fastlegges klart.
 
-Forliket (和解) i artikkel 736 i sivilloven (民法) er en kontrakt, hvor partene ved gjensidig innrømmelse bringer tvisten til opphør eller forebygger den. Ifølge artikkel 737 i sivilloven bedømmes omfanget av rettstap kun etter det omfang, som er oppgitt i avtalen. Derfor må det ikke uten undersøkelse av ordlyden fastslås, at alle fremtidige krav utslukkes.
+Forliket (和解) i artikkel 736 i sivilloven (民法) er en kontrakt, hvor partene ved gjensidig innrømmelse bringer tvisten til opphør eller forebygger den. Ifølge artikkel 737 i sivilloven bedømmes omfanget av rettstap kun etter det omfang som er oppgitt i avtalen. Derfor må det ikke uten undersøkelse av ordlyden fastslås at alle fremtidige krav utslukkes.
 
 Ved klageforbrytelser kan klagen ifølge artikkel 238 i straffeprosessloven trekkes tilbake inntil før avslutningen av den muntlige forhandling i første instans; etter tilbaketrekning kan det ikke klages på ny. Ved ikke-klageforbrytelser opphører den offentlige forfølgning ikke automatisk alene ved privat forlik, og et forlik forplikter ikke alltid til tilbaketrekning av klagen.
 
@@ -83,27 +83,27 @@ Ved klageforbrytelser kan klagen ifølge artikkel 238 i straffeprosessloven trek
 
 ## Q6. Hvordan anerkjennes ulykkesansvaret?
 
-Politiets foreløpige analysebedømmelse av veitrafikkulykken er en forhåndsanalyse på grunnlag av dokumentene på stedet. Den er ikke en rettsavgjørelse, binder ikke retten og fastlegger heller ikke uaktsomhetsprosenten (過失比例). Fordi nødvendige dokumenter og tvistens omfang avviker pr. ulykke, er denne tabell, lovbestemt sakkyndig vurdering (鑑定) og fornyet prøving (覆議) verken automatisk prosedyre eller tvingende etappe.
+Politiets foreløpige analysebedømmelse av veitrafikkulykken er en forhåndsanalyse på grunnlag av dokumentene på stedet. Den er ikke en rettsavgjørelse, binder ikke retten og fastlegger heller ikke uaktsomhetsprosenten (過失比例). Fordi nødvendige dokumenter og tvistens omfang avviker pr. ulykke, er denne tabellen, en lovbestemt sakkyndig vurdering (鑑定) og fornyet prøving (覆議) verken automatisk prosedyre eller tvingende etappe.
 
-Ifølge de aktuelle forskrifter kan berettigede parter søke om sakkyndig vurdering av et kjøretøyuhell (車輛行車事故鑑定), den behandlende myndighet videresende saken, eller rettslige organer pålegge den. Partens anmodning skjer vanligvis innenfor 6 måneder fra ulykkesdagen; ved saker, som allerede er under etterforskning eller rettssak, løper den sakkyndige vurdering via pålegg fra de rettslige organer, ikke via en ny direkte anmodning.
+Ifølge de aktuelle forskrifter kan berettigede parter søke om sakkyndig vurdering av et kjøretøyuhell (車輛行車事故鑑定), den behandlende myndighet videresende saken, eller rettslige organer pålegge den. Partens anmodning skjer vanligvis innenfor 6 måneder fra ulykkesdagen; ved saker som allerede er under etterforskning eller rettssak, løper den sakkyndige vurdering via pålegg fra de rettslige organer, ikke via en ny direkte anmodning.
 
 Mot den sakkyndige uttalelse kan fornyet prøving søkes, imidlertid kun 1 gang. Sakkyndige uttalelser og uttalelser fra fornyet prøving er bevis- eller referansedokumenter; retten vurderer hele forløpet, herunder forklaringer, opptak og stedsopptak, selvstendig.
 
 ## Q7. Hvilke skader kan kreves etter ulykken?
 
-Krav ifølge artikkel 184 i sivilloven (民法) forutsetter rettsstridig krenkelse av en rett, årsakssammenheng med ulykken og bevis for skaden. Det at en ulykke er skjedd, betyr ikke, at alle følgende poster anerkjennes. Artikkel 216 i sivilloven er målestokk for omfanget av den faktiske skade og den tapte fortjeneste (所失利益).
+Krav ifølge artikkel 184 i sivilloven (民法) forutsetter rettsstridig krenkelse av en rett, årsakssammenheng med ulykken og bevis for skaden. Det at en ulykke er skjedd, betyr ikke at alle følgende poster anerkjennes. Artikkel 216 i sivilloven er målestokk for omfanget av den faktiske skade og den tapte fortjeneste (所失利益).
 
 - **Tilskadekomst**: Ifølge artikkel 193 i sivilloven kan nødvendige behandlingsutgifter (醫療費用), i livet forhøyede behovsutgifter som pleie (看護費用), transport til behandling (就醫交通費) og hjelpemidler samt inntektstap (收入損失) ved faktisk arbeidsudyktighet og nedsettelse av arbeidsevnen (勞動能力減損) undersøkes. Ifølge artikkel 195 i sivilloven kan også ikke-økonomisk skade undersøkes.
-- **Dødsfall**: Ifølge artikkel 192 i sivilloven kan, for så vidt det finner anvendelse, behandlingsutgifter og forhøyede livsbehovsutgifter før dødsfallet, begravelsesutgifter (殯葬費) og tap av forsørgelse (扶養利益損失) for den, som rettslig hadde krav på forsørgelse, undersøkes. Ifølge artikkel 194 i sivilloven kan også ikke-økonomisk skade for visse slektninger undersøkes.
+- **Dødsfall**: Ifølge artikkel 192 i sivilloven kan, for så vidt det finner anvendelse, behandlingsutgifter og forhøyede livsbehovsutgifter før dødsfallet, begravelsesutgifter (殯葬費) og tap av forsørgelse (扶養利益損失) for den som rettslig hadde krav på forsørgelse, undersøkes. Ifølge artikkel 194 i sivilloven kan også ikke-økonomisk skade for visse slektninger undersøkes.
 - **Formue**: Ifølge artikkel 196 i sivilloven kan beviste faktiske formuesskader, herunder kjøretøyreparasjon eller verdiforringelse, kreves.
 
-## Q8. Hvordan skal dokumenter om behandlingsutgifter innleveres, når behandlingen fortsetter?
+## Q8. Hvordan skal dokumenter om behandlingsutgifter innleveres når behandlingen fortsetter?
 
 Oppbevar kvitteringer (收據), attester og legejournaler, og ordn den medisinske nødvendighet av hver behandling og årsakssammenhengen med ulykken sammen. Fortsatte behandlingsdokumenter kan supplere beviser etter rettens prosedyrekalender og det allerede nedlagte krav; ikke alle sent innleverte dokumenter eller utvidede krav antas eller tillates.
 
 Tilføyelse av medisinske dokumenter og endring eller forhøyelse av kravbeløpet skal skilles. Etter anlegg av et sivilt bisøksmål tilknyttet straffesaken oppstår rettsgebyr ikke automatisk alene fordi ytterligere behandlingskvitteringer innleveres.
 
-Ifølge artikkel 504 i straffeprosessloven kan det imidlertid, etter at saken er henvist til den sivile avdeling, ved endring, tilføyelse eller utvidelse av kravet ut over omfanget før henvisningen oppstå omkostningsspørsmål for den overskytende del. Henvisningsfase, innleveringstidspunkt og kravets omfang skal undersøkes fra sak til sak.
+Ifølge artikkel 504 i straffeprosessloven kan det imidlertid, etter at saken er henvist til den sivile avdeling, ved endring, tilføyelse eller utvidelse av kravet utover omfanget før henvisningen oppstå omkostningsspørsmål for den overskytende del. Henvisningsfase, innleveringstidspunkt og kravets omfang skal undersøkes fra sak til sak.
 
 ## Q9. Hvormed bevises profesjonell pleie og familiens pleieutgifter?
 
@@ -137,9 +137,9 @@ Kvitteringer, takstopptegnelser, ruteopptegnelser og behandlingsdokumenter er mu
 
 ## Q11. Hvordan bevises inntektstapet i behandlings- og gjenopprettingsperioden?
 
-Inntektstap skal bevises ved dokumenter for, at det på grunn av ulykkesrelatert tilskadekomst i gjenopprettingsperioden (收入損失) helt eller delvis ikke kunne arbeides, og at inntekten derved faktisk er nedsatt. Attest eller hvileanbefaling er et viktig utgangspunkt, gjør imidlertid ikke alene kravet anerkjent.
+Inntektstap skal bevises ved dokumenter for at det på grunn av ulykkesrelatert tilskadekomst i gjenopprettingsperioden (收入損失) helt eller delvis ikke kunne arbeides, og at inntekten derved faktisk er nedsatt. Attest eller hvileanbefaling er et viktig utgangspunkt, gjør imidlertid ikke alene kravet anerkjent.
 
-Legejournaler, fremmøte- eller fraværsopptegnelser, lønns- og skattedokumenter samt arbeidsgiverens bekreftelse bør ordnes sammen. Selvstendige kan innlevere dokumenter, som passer til deres virksomhetsform, slik som omsetningsdata, forretningsopptegnelser og selvangivelser.
+Legejournaler, fremmøte- eller fraværsopptegnelser, lønns- og skattedokumenter samt arbeidsgiverens bekreftelse bør ordnes sammen. Selvstendige kan innlevere dokumenter som passer til deres virksomhetsform, slik som omsetningsdata, forretningsopptegnelser og selvangivelser.
 
 Omstendigheten fortsatt arbeid eller uendret utbetalt lønn vedrører bedømmelsen av inntektstapet i gjenopprettingsperioden, avgjør imidlertid ikke automatisk spørsmålet om skade på grunn av nedsettelse av arbeidsevnen. Denne omstendighet er heller ikke et selvstendig grunnlag til bedømmelse av den skade. Skaden på grunn av nedsettelse av arbeidsevnen undersøkes særskilt i Q12.
 
@@ -155,27 +155,27 @@ Ved beregning som engangsbeløp kan fradrag av mellomliggende renter (中間利�
 
 ## Q13. Hvordan bedømmes godtgjørelse (慰撫金) for ikke-økonomisk skade?
 
-Godtgjørelse for ikke-økonomisk skade bedømmes slik, at det ved rettsstridig krenkelse av legeme eller helbred ifølge artikkel 195 i sivilloven (民法) fastsettes et passende beløp.
+Godtgjørelse for ikke-økonomisk skade bedømmes slik at det ved rettsstridig krenkelse av legeme eller helbred ifølge artikkel 195 i sivilloven (民法) fastsettes et passende beløp.
 
 Retten betrakter tilskadekomst og behandling, vedvarende følge, lidelse og livspåvirkning, alder og stand, sosiale og økonomiske forhold samt partenes beviser samlet og undersøker omstendighetene i den enkelte sak. Derfor er resultatet vanskelig alene etter en typeinndelt ramme å fastlegge på forhånd.
 
 ## Q14. Kan arbeidsgiveren også sivilrettslig gjøres ansvarlig ved en ulykke under arbeidet?
 
-Artikkel 188 i sivilloven (民法) behandler det tilfeller, at en ansatt under utførelsen av oppgaven tilføyer en annen rettsstridig skade. Alene arbeidstiden grunnlegger ikke automatisk oppgaveforbindelsen; forbindelsen mellom faktisk arbeid og ulykke skal undersøkes.
+Artikkel 188 i sivilloven (民法) behandler det tilfeller at en ansatt under utførelsen av oppgaven tilføyer en annen rettsstridig skade. Alene arbeidstiden grunnlegger ikke automatisk oppgaveforbindelsen; forbindelsen mellom faktisk arbeid og ulykke skal undersøkes.
 
-Arbeidsgiveren kan innvende, at vedkommende har iakttatt den fornødne aktpågivenhet ved utvelgelse og tilsyn med den ansatte, eller at skaden heller ikke ved slik aktpågivenhet ville kunne unngås. Det kan undersøkes å gjøre arbeidsgiver og ansatt i fellesskap erstatningsansvarlige. Etter erleggelse av erstatningen kan arbeidsgiveren søke regress hos den ansatte.
+Arbeidsgiveren kan innvende at vedkommende har iakttatt den nødvendige aktpågivenhet ved utvelgelse og tilsyn med den ansatte, eller at skaden heller ikke ved slik aktpågivenhet ville kunne unngås. Det kan undersøkes å gjøre arbeidsgiver og ansatt i fellesskap erstatningsansvarlige. Etter erleggelse av erstatningen kan arbeidsgiveren søke regress hos den ansatte.
 
-Beviser arbeidsgiveren de nevnte fritaksvilkår, slik at den skadelidte ikke mottar erstatning ifølge ledd 1, kan retten ifølge artikkel 188 ledd 2 i sivilloven (民法) under hensyntaken til arbeidsgiverens og den skadelidtes økonomiske stilling pålegge full eller delvis erstatning.
+Beviser arbeidsgiveren de nevnte fritaksvilkår, slik at den skadelidte ikke mottar erstatning ifølge ledd 1, kan retten ifølge artikkel 188 ledd 2 i sivilloven (民法) under hensyn til arbeidsgiverens og den skadelidtes økonomiske stilling pålegge full eller delvis erstatning.
 
 Fastleggelsen av de sivilrettslige kravsmotparter og det strafferettslige ansvar skal skilles. Det strafferettslige ansvar ifølge artikkel 284 i straffeloven (刑法) bedømmes etter tilsidesettelse av hver fysisk persons aktpågivenhetsplikt og årsakssammenhengen av denne tilsidesettelse.
 
 ## Q15. Hvilke ytelser og dekninger i motorkjøretøyforsikringen skal undersøkes?
 
-Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring for motorkjøretøyer (強制汽車責任保險法) rammer i prinsippet kjøretøyets eier og i bestemte tilfeller også bruker eller forvalter av kjøretøyet. Dette system innretter en uaktsomhetsuavhengig ytelsesstruktur (無過失給付制度) for personer, som er kommet til skade eller er avgått ved døden ved motorkjøretøyulykker; den lovbestemte krets av passasjerer eller av tredjemann (第三人) utenfor kjøretøyet skal undersøkes.
+Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring for motorkjøretøyer (強制汽車責任保險法) rammer i prinsippet kjøretøyets eier og i bestemte tilfeller også bruker eller forvalter av kjøretøyet. Dette systemet innretter en uaktsomhetsuavhengig ytelsesstruktur (無過失給付制度) for personer som er kommet til skade eller er avgått ved døden ved motorkjøretøyulykker; den lovbestemte krets av passasjerer eller av tredjemann (第三人) utenfor kjøretøyet skal undersøkes.
 
 Ved eneulykker med 1 kjøretøy er dets fører som regel ikke ytelsesmottaker av den obligatoriske forsikring for det kjøretøy. Ved ulykker med flere kjøretøyer kan føreren imidlertid kreve ytelser hos den obligatoriske forsikringsgiver for et annet involvert kjøretøy.
 
-Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør TWD 200.000, invaliditetsytelser (失能) etter de lovbestemte 15 trinn TWD 80.000–3.000.000, dødsfallsytelsen TWD 3.000.000, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 tilskadekomne person og 1 ulykke utgjør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gjelde.
+Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør 200.000 TWD, invaliditetsytelser (失能) etter de lovbestemte 15 trinn 80.000 TWD–3.000.000, dødsfallsytelsen 3.000.000 TWD, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 tilskadekomne person og 1 ulykke utgjør 3.200.000 TWD. For tidligere ulykker kan den tidligere norm gjelde.
 
 Ansvarsforsikring overfor tredjemann (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktsmessige valgprodukter. Den faktiske dekning avviker etter forsikret, tak, egenandel (自負額), unntak, uaktsomhet og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøkes et for et.
 
@@ -203,11 +203,11 @@ Forsikringsselskapet behandler ofte ikke ulykkespartenes følelsesmessige side t
 
 ​
 
-Viktige dele, som vedrører motpartens følelser, slik som unnskyldning og trøst, kan bli forsømt.
+Viktige dele som vedrører motpartens følelser, slik som unnskyldning og trøst, kan bli forsømt.
 
 ​
 
-For forsikringsselskapet påvirker en ytterligere utgift på TWD 500.000 (新臺幣) eller TWD 1.000.000 i en enkelt sak neppe den samlede fortjeneste, for ulykkesparten kan den imidlertid avgjøre, om det oppstår en strafferegistrering (前科).
+For forsikringsselskapet påvirker en ytterligere utgift på 500.000 TWD (新臺幣) eller 1.000.000 TWD i en enkelt sak neppe den samlede fortjenesten, for ulykkesparten kan den imidlertid avgjøre, om det oppstår en strafferegistrering (前科).
 
 ​
 
@@ -239,7 +239,7 @@ Straffen for uaktsom kroppsskade (過失傷害) varierer med omstendighetene; i 
 
 ​
 
-Ved omregning til bot fastsetter artikkel 41, 1. ledd, i straffeloven (刑法) omregningen av TWD 1.000, TWD 2.000 eller TWD 3.000 (新臺幣) pr. 1 dag; beregner man på grunnlag av TWD 1.000 pr. dag, gir en straff på 3 måneder 3 × 30 × 1.000 = TWD 90.000.
+Ved omregning til bot fastsetter artikkel 41, 1. ledd, i straffeloven (刑法) omregningen av 1.000 TWD, 2.000 TWD eller 3.000 TWD (新臺幣) pr. 1 dag; beregner man på grunnlag av 1.000 TWD pr. dag, gir en straff på 3 måneder 3 × 30 × 1.000 = 90.000 TWD.
 
 ​
 
@@ -255,7 +255,7 @@ Ved uaktsom grov kroppsskade er det i enkelte dommer idømt omkring 4 måneder, 
 
 ​
 
-Q18. Kan den strafferettslige klage trekkes tilbake, hvis man inngår forlik med motparten?
+Q18. Kan den strafferettslige klage trekkes tilbake hvis man inngår forlik med motparten?
 
 ​
 
@@ -275,7 +275,7 @@ En betinget dom (緩刑) kan være mulig i enkelte saker; dette er ikke et løft
 
 ​
 
-Q19. Er den straffbare flukt alltid oppfylt, når man forlater ulykkesstedet?
+Q19. Er den straffbare flukt alltid oppfylt når man forlater ulykkesstedet?
 
 ​
 
@@ -283,7 +283,7 @@ Ikke nødvendigvis.
 
 ​
 
-Forutsetning for flukt fra ulykkesstedet (肇事逃逸) er, at noen har tilskadekomst eller er avgått ved døden.
+Forutsetning for flukt fra ulykkesstedet (肇事逃逸) er at noen har tilskadekomst eller er avgått ved døden.
 
 ​
 
@@ -311,11 +311,11 @@ Viktig er at advokaten går nøye gjennom hvert kravpunkt i saken og forklarer h
 
 ​
 
-Dessuten skal advokaten klart redegjøre for partens situasjon og klart meddele de risikoer, som kan forventes, hvis forlik uteblir.
+Dessuten skal advokaten klart redegjøre for partens situasjon og klart meddele de risikoer som kan forventes hvis forlik uteblir.
 
 ​
 
-Forsiktighet er påkrevd overfor advokater, som oppblåser saken, fraråder forlik og vil stride sivilt og strafferettslig til enden, alene med sikte på mandatet.
+Forsiktighet er påkrevd overfor advokater som oppblåser saken, fraråder forlik og vil stride sivilt og strafferettslig til enden, alene med sikte på mandatet.
 
 ​
 
@@ -339,7 +339,7 @@ Ved den skadelidtes tilskadekomst eller dødsfall lider de selv eller familien l
 
 ​
 
-Mange forårsakere bekymrer seg verken om telefonisk forespørsel om tilstanden eller om sykebesøk og tenker, at forsikringsselskapet vil ordne alt, så de selv uteblir. Da føles verken anger eller alvor.
+Mange forårsakere bekymrer seg verken om telefonisk forespørsel om tilstanden eller om sykebesøk og tenker at forsikringsselskapet vil ordne alt, så de selv uteblir. Da føles verken anger eller alvor.
 
 ​
 
@@ -347,7 +347,7 @@ Mange forårsakere bekymrer seg verken om telefonisk forespørsel om tilstanden 
 
 ​
 
-Derved lider den skadelidte stor krenkelse og vrede, gir ikke etter ved forhandlingsbeløpet eller begjærer arrest (假扣押) og beslaglegger motpartens formue til enden.
+Derved lider den skadelidte stor krenkelse og vrede, gir ikke etter ved forhandlingsbeløpet eller begjærer midlertidig sikring (假扣押) og beslaglegger motpartens formue til enden.
 
 ​
 

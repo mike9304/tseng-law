@@ -23,7 +23,7 @@ Jeg var i denne saken prosessfullmektig (訴訟代理人) for saksøkeren, den k
 
 Deretter meddelte pressen at partene i ankeinstansen hadde inngått et forlik (和解). Den eneste offisielle dommen i første instans tillater ikke å bekrefte resultatet av ankeinstansen eller forliksbeløpet; forliket som pressen har omtalt, må ikke leses som en bekreftet avslutning av saken i første instans.
 
-Titlene på pressemeldingene, nett-offentliggjøringene og de juridiske redegjørelsene om denne saken, overført til bokmål, er følgende. Titlene nedenfor tjener kun til å fremstille innholdet i hver lenke; de betyr ikke at denne teksten selv fastslår kjensgjerningene.
+Overskriftene på medieomtalen, nettinnleggene og de juridiske kommentarene om denne saken, gjengitt på bokmål, er følgende. Titlene nedenfor tjener kun til å fremstille innholdet i hver lenke; de betyr ikke at denne teksten selv fastslår kjensgjerningene.
 
 ![En mannlig student, diskusprolaps (椎間盤破裂) etter en deadlift på 90 kg… krever erstatning av treningssenteret](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
@@ -45,9 +45,9 @@ Titlene på pressemeldingene, nett-offentliggjøringene og de juridiske redegjø
 
 [PTT-innlegg: Koreansk mannlig student, diskusprolaps under en deadlift på 90 kg… i første instans, pålegg til treningssenteret om betaling av 1,57 millioner TWD (1.570.000)](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blogg: skade ved deadlift på 90 kg av en koreansk student på 70 kg og erstatning på over 1.000.000 TWD… var det skyld hos treningssenteret? Hvilket syn bør den som trener, ha på saken?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blogg: skade ved deadlift på 90 kg av en koreansk student på 70 kg og erstatning på over 1.000.000 TWD… var det skyld hos treningssenteret? Hva med innstillingen til den som trente?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blogg: skade ved deadlift på 90 kg av en koreansk student på 70 kg og erstatning på over 1.000.000 TWD… var det skyld hos treningssenteret? Hvilket syn bør den som trener, ha på saken?](https://blog.udn.com/blackjack/179081715)
+[Blogg: skade ved deadlift på 90 kg av en koreansk student på 70 kg og erstatning på over 1.000.000 TWD… var det skyld hos treningssenteret? Hva med innstillingen til den som trente?](https://blog.udn.com/blackjack/179081715)
 
 ![Juridisk redegjørelse: en mannlig student, diskusprolaps under deadlift… i første instans, pålegg til et kjent treningssenter om betaling av 1,57 millioner TWD (1.570.000)](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
@@ -75,11 +75,11 @@ Er de lovbestemte bestanddelene av forbrytelsen uaktsom kroppsskade (過失傷�
 
 ## 2. Hvilke frister gjelder for straffeanmeldelsen og den sivile erstatningen?
 
-Ifølge [artikkel 287 i den taiwanske straffeloven (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) er forbrytelsen uaktsom kroppsskade i artikkel 284 i straffeloven en forbrytelse som krever anmeldelse for å kunne rettsforfølges (告訴乃論之罪). Ifølge [artikkel 237 i den taiwanske rettspleieloven i straffesaker (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) skal den anmeldelsesberettigede i prinsippet inngi anmeldelsen innen 6 måneder fra den dagen da vedkommende kjenner gjerningsmannen.
+Ifølge [artikkel 287 i den taiwanske straffeloven (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) er forbrytelsen uaktsom kroppsskade i artikkel 284 i straffeloven en forbrytelse som krever anmeldelse for å kunne rettsforfølges (告訴乃論之罪). Ifølge [artikkel 237 i den taiwanske straffeprosessloven (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) skal den anmeldelsesberettigede i prinsippet inngi anmeldelsen innen 6 måneder fra den dagen da vedkommende kjenner gjerningsmannen.
 
 Retten til erstatning fra delikt (侵權行為) ifølge [artikkel 197 i den taiwanske sivilloven (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) opphører i prinsippet når den i 2 år ikke utøves fra det øyeblikket da offeret kjenner skaden og den erstatningspliktige, og opphører også når 10 år er forløpt siden den rettsstridige handlingen.
 
-Om et annet kravsgrunnlag, slik som kontraktsansvar, er aktuelt, eller om andre regler etter Taiwans sivile lov (民法) gjelder for begynnelsespunktet, forløpet, avbrytelsen m.v., kan etter de konkrete kjensgjerningene variere. Fristen må ikke alene fastlegges etter ulykkesdatoen eller diagnosedatoen; det er sikrere tidlig og individuelt å etterprøve de mulige kravsgrunnlagene og referansedatoene.
+Om et annet kravsgrunnlag, slik som kontraktsansvar, er aktuelt, eller om andre regler etter Taiwans sivile lov (民法) gjelder for utgangspunktet, forløpet, avbrytelsen m.v., kan etter de konkrete kjensgjerningene variere. Fristen må ikke alene fastlegges etter ulykkesdatoen eller diagnosedatoen; det er sikrere tidlig og individuelt å etterprøve de mulige kravsgrunnlagene og referansedatoene.
 
 ## 3. Hvilke bevis skal sikres straks etter ulykken, og hvordan?
 

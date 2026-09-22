@@ -69,7 +69,7 @@ Visse banker kan stille ytterligere krav, for eksempel en brukstid for kontoen p
 
 **5. Kan selskapet ansette utenlandske statsborgere som arbeidstakere?**
 
-A. Første medarbeider: anmodningen innleveres som ledende arbeid i en alminnelig virksomhet med investering fra oversjøiske kinesere eller utlendinger (一般僑外投資事業主管工作). Målestokken for «spesialisert eller teknisk arbeid» under punkt B nedenfor finner ikke anvendelse, men adressatvilkårene gjør, herunder vilkåret som leder (經理人) av et selskap, hvis innskudd fra oversjøiske kinesere eller utlendinger overstiger 1/3, samt arbeidsgiverens resultatvilkår vedrørende kapital og omsetning (bedømmelsesstandarder art. 38 og art. 39).
+A. Første medarbeider: anmodningen innleveres som ledende arbeid i en alminnelig virksomhet med investering fra oversjøiske kinesere eller utlendinger (一般僑外投資事業主管工作). Målestokken for «spesialisert eller teknisk arbeid» under punkt B nedenfor finner ikke anvendelse, men vilkårene for hvem som kan søke gjelder fortsatt, herunder vilkåret om å være leder (經理人) av et selskap, hvis innskudd fra oversjøiske kinesere eller utlendinger overstiger 1/3, samt arbeidsgiverens resultatvilkår vedrørende kapital og omsetning (bedømmelsesstandarder art. 38 og art. 39).
 
 B. Når selskapet ansetter mer enn 1 utenlandsk statsborger, vurderes medarbeiderens relevante utdanning og erfaring, kravet til gjennomsnittslønn og kravene til selskapets kapital og omsetning etter reglene for «spesialisert eller teknisk arbeid» (專門性或技術性工作).
 

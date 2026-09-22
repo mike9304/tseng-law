@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Når man begynner en serveringsvirksomhet, er det første problemet å finne driftsadressen (營業地址).
 
-Utover markedssituasjonen
+Utover markedssituasjonen kommer også beliggenheten.
 
-er et annet viktig punkt
+Et annet viktig punkt er om adressen kan brukes til virksomheten.
 
-om den gjeldende adressen (營業地址) ligger i en sone der utøvelse av «restaurantnæring» er mulig.
+Den gjeldende adressen (營業地址) må ligge i en sone der utøvelse av «restaurantnæring» er mulig.
 
 ​
 
@@ -71,7 +71,7 @@ Hvis man åpner på et sted der restaurantnæringen ikke er mulig, kan senere en
 
 «forretningsgrener som handelskontoret undersøker på eget initiativ» (主動查詢之營業項目)
 
-Dette er hovedpunktene; har du flere spørsmål, kan du rådføre deg med en advokat i Taiwan (rådgivning foregår bare på engelsk, kinesisk, japansk eller koreansk).
+Dermed er gjennomgangen avsluttet; har du flere spørsmål, kan du rådføre deg med en advokat i Taiwan (rådgivning foregår bare på engelsk, kinesisk, japansk eller koreansk).
 
 Myndighetenes regler kan ofte endres; før registreringen av den juridiske personen bør du bekrefte de nyeste forskriftene.
 

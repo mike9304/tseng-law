@@ -1,0 +1,99 @@
+WO-F-nb r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-nb-r2
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: nb-a 40, nb-b 46 (86). No P3 rows. P1 and P2 applied unless a skip rule below.
+
+Applied in full: 82.
+Partial (currency order only; space thousands not written): nb-a 24, nb-b 42.
+Skipped: nb-b 32, nb-b 41.
+
+Test pin updated: src/data/__tests__/guidance-disclosure-parity.test.ts, the `not-legal-advice` marker for nb, `/juridisk uttalelse/` → `/juridisk rådgivning/`. Nothing else in that test. No other pinned Norwegian string matched a change. The bio figure stays "1 570 000 TWD"; guidance-team-bios.test.ts does not cover nb, and "TWD 1.57M" was not inserted. consultationNotice and confidentialNotice in GUIDANCE_LLMS_NOTICES.nb were left; each is still a verbatim substring of the FAQ answer and the privacy paragraph. discoveryNotice still contains the token `llms.txt`.
+
+Offices, inquiry copy, and column 012 were not edited. No finding named them. 012's verdict is already native professional.
+
+### Applied
+nb-a 1–23, 25–40.
+nb-b 1–31, 33–40, 43–46.
+
+Adaptations (still applied):
+- nb-a 4. The public-company quorum sentence now has the missing negation. The 2/3 voting tail that was already in the paragraph was kept, so the sentence matches the FAQ in the same file.
+- nb-a 6. The exception is now a readable "med mindre" clause. The article number stays a digit ("ledd 1"), and (核備) stays.
+- nb-a 18. English is "Korea Business Team". The line is "Korea-forretningsteamet, Hovering International Law Firm", not the suggested "Virksomhet i Korea". Danish "Område Korea-drift" was not touched.
+- nb-a 19. partnerTitle "Revisjonspartner"; role "Revisjonspartner (CPA)"; "det tilknyttede revisjonskontoret" → "revisjonspartneren" in the nb team copy, the nb nordic services line, and the nb answers profile sentence. Danish "revisionskontor" was not matched.
+- nb-a 36. The reviewer's comma between subject and verb was not copied. The sentence is "men vilkårene for hvem som kan søke gjelder fortsatt, herunder vilkåret om å være leder".
+- nb-b 2. Kinmen (金門) eller i Lienchiang (Matsu, 連江、馬祖) on the two glossed sites; the unglossed site and "kriteriet for Kinmen eller Lienchiang" use "eller" without a second "i". Amounts unchanged.
+- nb-b 28. Work-permit sentence names arbeidsdepartementet (勞動部). The existing (子公司) gloss at the end of that sentence was kept.
+- nb-b 39. The three 015 blocks were each rewritten as a sentence. They were not merged. See Skipped for the rest of the one-clause layout.
+
+Guidance pack (Norwegian Bokmål strings only):
+- international-guidance-answers.ts: "juridisk rådgivning, ikke en bekreftet time"; "revisjonspartneren".
+- international-guidance-nordic.ts: "sentrale" (not "viktigste"); inquiry sentence "Å sende en forespørsel via denne siden er også kostnadsfritt." appended inside the existing pricing paragraph; "stiller ikke med tolk"; "sendes til wei@hoveringlaw.com.tw"; "revisjonspartneren".
+- international-guidance-team.ts: "mellom fagområdene"; "Korea-forretningsteamet"; "Stiftelsen for rettshjelp, avdelingen i Taichung (Legal Aid Foundation, Taichung Branch)"; partner title and CPA role as above.
+- llms-txt.ts discoveryNotice: "oversikt"; "ingen anbefaling, ingen anbefaling fra kunstig intelligens"; "ingen garantert synlighet".
+
+### Skipped
+- nb-a 24 and nb-b 42, the space thousands separator ("500 000", "40 000 til 200 000"). ACCEPTED-ROUND: the checker cannot parse a space thousands separator (NUMBER_THOUSAND_STYLE.nb is `dot`). The currency code was moved after the amount and the period was kept: "500.000 TWD", "40.000 TWD til 200.000 TWD". 55 amounts: 001 ×6, 002 ×3, 003 ×13, 004 ×2, 006 ×3, 007 ×3, 011 ×14, 017 ×9, 018 ×2. Figures unchanged. 010 was already amount-first.
+- nb-b 41. Same separator rule. 010 already writes the amount first ("1.579.589 TWD"). The period was left.
+- nb-b 32. The U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. The checker requires the same ZWSP count as the Korean source (013 has 5, 015 has 3, 008 has 10). Deleting them fails the block check.
+- Verdict pattern, not a numbered row: a digit where Bokmål would use a word ("1 stemme per 1 deltaker", "for 1 ulykke", "hos 1 part", "en 3. har båret", "blinke med frontlyktene 1 gang"). Replacing the digit drops a parsed number. Left.
+- Verdict pattern: merge the one-clause paragraphs in 013 and 015. ACCEPTED-ROUND forbids merging blocks. Flagged sentences were rephrased inside their blocks (nb-b 10, 11, 31, 39 and the 015 close). The rest of that layout was left.
+
+## Systemic patterns
+
+Counts are HEAD → working tree, Norwegian Bokmål columns only, unless noted.
+
+- Danish comma before at/som/hvis/når, and the same comma before om/hvor/hvem/hvilken when it was not a list comma. Net −311 across 001 (39→6), 002 (68→14), 003 (34→3), 004 (58→15), 007 (65→14), 014 (65→25), 016 (49→15), 017 (27→2). Parallel "om"-lists that the sweep had glued back together were restored in 004 (kontraktpart / hvem / om innskudd), 007 (skilsmissegrunnlag), 014 (kurs / utdanning / deltakelse), and 016 (endelig / prosedyre / anerkjennelse). Restrictive "som" stays without a comma ("kurs som gjentas", "personen som stiller kravet").
+- 停業 as "driftsstilstand". 22 in 002 → "driftsstans", including the heading and the sentence-initial "Driftsstansen".
+- Danish lexicon named in nb-a 25 and the same stems elsewhere: sker→skjer 004 ×2; Kernen→Kjernen 002 ×1; tilsammen→til sammen 001 ×1; lovbrud→lovbrudd 004 ×1; Princippet→Prinsippet 004 ×1; Ydes→Legges 004 ×1; falde→falle 004 ×1 (inside the PE sentence); gentagne→gjentatte 004 ×2; protokol→protokoll 007 ×1; retsbilag→rettsbilag 007 ×1; restance→restanse 007 ×1; Sommetider→Noen ganger 009 ×1; hensyntaken→hensyn 001 ×1, 003 ×1; pågjeldende→gjeldende 004 ×5, 007 ×3; fornødne→nødvendige 003 ×1, 004 ×3, 007 ×3; seneste→siste 002 ×2, 004 ×4; sektorspecifikke→sektorspesifikke 004 ×1; det nu→det nå 004 ×1; overdrages→overdras 007 ×1.
+- 實質受益人 / 受益所有人 as "begunstiget". 6 strings in 001 and 004 → "rettighetshaver". Insurance and trust "begunstiget" in 016 was left; that is a different term.
+- "Den/den rene kjensgjerning(en)". 6 → "Bare det" / "bare det" / "bare fordi": 014 ×3, 016 ×2, 017 ×1.
+- Ut over / ut over → Utover / utover. 6: 001 ×1, 002 ×2, 003 ×1, 011 ×1, 017 ×1.
+- begynnelsespunkt → utgangspunkt. 6: 007 ×3, 010 ×1, 016 ×2.
+- rettspleieloven for a procedure code. 5: 007 ×4 民事訴訟法 → sivilprosessloven; 010 ×1 刑事訴訟法 → straffeprosessloven. Same wrong Danish act-name; 010 was not a separate row.
+- fastholdelse* in 014. bindingsbonus ×7, bindingsperioden ×1, bindingsvarighet ×1, bindingsløftet ×1.
+- transportkommisjon → spedisjon ×5 and transportkommisjonær → speditør ×3 in 017; kundeoppmerksomhet → kundebehandling ×2.
+- Currency code after the amount, period thousands kept. 55, listed under nb-a 24. The guidance-pack space form "1 570 000 TWD" was left as the reviewer found it.
+- R2–R10. Consultation languages stay English, Chinese (中文), Japanese, Korean. No Norwegian consultation, no interpreter offer, no reply-time, no free first meeting, no result guarantee, no "best/only". The new pricing sentence says the inquiry on this page is free; it does not match the forbidden "kostnadsfri rådgivning". Wei Tseng stays "hun" in the bio. No masculine form for her was found. Traditional Chinese glosses kept. Frontmatter, urls, dates, and block order unchanged.
+
+## Reviewer points not followed
+
+- nb-a 24, nb-b 41, nb-b 42, the space as thousands separator. Right for Norwegian typography, and the guidance pack already uses it. Wrong for this checker: a space separator fails the number parse. Periods stayed. The code-after-amount half of nb-a 24 and nb-b 42 was applied.
+- nb-b 32, delete U+200B. Right for a clean paragraph. Wrong for this checker: the count is pinned to the Korean source.
+- The verdict's request to merge the one-clause paragraphs in 013 and 015, and the merged sentence suggested in nb-b 39. Block count is pinned. nb-b 39 was applied as three separate sentences.
+- The verdict's digit-to-word pattern. The digits are real counts the checker parses. Left.
+- nb-a 36, the comma in "vilkårene for hvem som kan søke, gjelder". That is the subject–verb comma the same review rejects in nb-a 23. The comma was not copied.
+- nb-a 18, "Virksomhet i Korea". The English title is a team name, "Korea Business Team", so the line is "Korea-forretningsteamet".
+
+Nothing else in the two verdicts looked factually wrong. "Å sende en forespørsel via denne siden er også kostnadsfritt" is the inquiry, not a free consultation, as the reviewer said.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nb --lang nb 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=144
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nb src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+The 25 was taken before this log existed. It includes the pre-existing dirty `docs/i18n/global-plan/WO-F-nb.txt` and the untracked review files `nb-a.md` and `nb-b.md`. This lane did not edit those. A later status count also includes this log.

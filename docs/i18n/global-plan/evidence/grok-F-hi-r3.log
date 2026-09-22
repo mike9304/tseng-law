@@ -1,0 +1,123 @@
+WO-F-hi r3 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-hi-r3
+scope: Hindi columns 001–018, Hindi guidance pack, inquiry copy was not touched (no hi row), llms.txt GUIDANCE_LLMS_NOTICES.hi only
+
+## Rows applied
+
+hi-a (21, of which #3 is partial):
+1 P1 001 — liability/tax/licences/procurement evaluated by chosen structure (FAQ + body, 2)
+3 P1 004 — link label names the withholding-rate standard (各類所得扣繳率標準), not the Business Tax Act. Article number kept as अनुच्छेद 10 (see skipped note). URL unchanged.
+4 P1 007 — Art. 1052(1) ground 4: actor and victim identified; 直系親屬 gloss kept
+5 P1 009 — the party who terminates first, on sufficient grounds (two existing lines rephrased, not merged)
+7 P2 guidance lawyers description — कोरिया संचालन के नेतृत्व
+8 P2 team bio experience — कोरिया संचालन का नेतृत्व
+9 P2 llms discoveryNotice — खोज में स्थान; token llms.txt kept
+11 P2 001 — उद्योग for industry
+12 P2 005 — employer capital and turnover conditions, not a performance test
+13 P2 002 — परंतुक for the proviso to Art. 3 para. 1 (FAQ + body, 2)
+14 P2 007 — 25 जुलाई 2026 की स्थिति में (proviso still in the text)
+15 P2 008 — table header कठिनाई; cells आसान / कठिन / आसान (procedural difficulty, not an outcome promise)
+16 P2 008 — बिना वैध कारण
+17 P2 009 — the party who prepares in advance is better placed; disclaimer kept (अधिकतर मामलों में … निश्चित परिणाम का वादा नहीं)
+18 P2 002 — अंतर्नियम … तय कर सकते हैं (FAQ + body, 2)
+19 P2 004 — विधिक व्यक्तित्व masculine (का / हो जाता)
+20 P2 007 — लापता घोषणा participle agrees
+21 P2 pricing — कार्य के दौरान
+22 P2 003 — route does not promise a cost-free result
+23 P2 008 — नियोक्ता के उद्यम में
+25 P2 007 — चीन की मुख्यभूमि, distinct from Hong Kong and Macao
+
+hi-b (28):
+1 P1 011 — which records are handed over
+2 P1 016 — surviving spouse and two children, each ordinarily 1/3 (FAQ question, FAQ answer, section 1)
+3 P2 016 — दादा-दादी तथा नाना-नानी (祖父母)
+4 P2 016 — गिरवी या बंधक जैसे भार (quoted sentence, plus the creditor-list and “creation of security” sentences in the same file)
+5 P2 016 — not safe merely because a contract exists
+6 P2 011 — प्रमुख विज्ञापन संदेश … आवश्यक रूप से नहीं मिटता
+7 P2 011 — आस-पास का संदर्भ
+8 P2 011 — जिम्मेदार इकाई / काम का जिम्मेदार व्यक्ति
+9 P2 010 — वाद-प्रतिनिधि (訴訟代理人); feminine थी kept
+10 P2 014 — heading is the enforceability question (R7b)
+11 P2 014 — धन वापसी का दायित्व
+12 P2 012 — this case’s expert finding; digit 1 kept
+13 P2 015 — कंपनी या व्यवसाय (商業), branches still included
+14 P2 018 — पंजीकृत प्रतिनिधि कार्यालय (cell’s “वाणिज्यिक गतिविधि” left)
+15 P2 011 — विनियम … संगठित करता है
+16 P2 010 — शिकायत करने का अधिकार रखने वाले व्यक्ति को
+17 P2 014 — पालन करने के बदले उचित प्रतिकर (FAQ + section 1, 2)
+20 P2 010 — डिस्क फट गई (image alt + bold question, 2)
+21 P2 010 — प्रत्येक मामले में अलग-अलग
+22 P2 010 — विषयवस्तु प्रमाणित डाक-पत्र (存證信函)
+23 P2 011 — ब्रांड की भागीदारी कितनी है
+24 P2 011 — उत्पाद का रूप (劑型)
+25 P2 014 — हिसाब में लाना / हिसाब रखना for “reflect” (see sweep)
+26 P2 016 — वसीयत से नियुक्ति होने पर भी
+28 P2 015 — लगभग/करीब 10 मदें लिखना आम है (digit 10 kept)
+29 P2 018 — बेहतर, denial kept
+30 P2 014 — नियुक्ति पर दी गई राशि (簽約金) (7)
+31 P2 017 — घरेलू सामान की ढुलाई (搬家) (FAQ, body, and the later sentence without the gloss)
+
+## Rows skipped
+
+hi-a 2 P1 — do not restore “courts generally impose about 3 / 4 / 6 months”. RULEBOOK R3 and ACCEPTED-ROUND forbid making that result sentence positive. Current Hindi already says some judgments imposed those terms and that they are not a guaranteed result.
+hi-a 6 P2 — कॉपीराइट (著作權) gloss not added. guidance-disclosure-parity.test.ts requires the Hindi services page to carry the same Chinese-term set as the reference locale; 著作權 is not in that set. Other locales are out of scope.
+hi-a 10 P2 — “इस पृष्ठ से अनुरोध भेजना भी निःशुल्क है” not added. That is a free-service sentence. ACCEPTED-ROUND: do not make a free-consultation / free-service sentence positive. The next section still denies a free first meeting. The existing sentence already says the page is not a fee quote and creates no payment obligation.
+hi-a 24 P2 — TWD 15,70,000 / lakh grouping not applied. ACCEPTED-ROUND skips lakh/crore grouping (checker does not parse it). Western commas kept, including the bio “TWD 1,570,000”. The pinned “TWD 1.57M” token was not touched.
+hi-b 18 P2 — U+200B not deleted. check-column-translation compares ZWSP counts with the Korean source (013: 5, 015: 3, and the same match in 003/005/006/008/009). Deleting them fails the checker.
+hi-b 19 P2 — headings ## 7 and ## 8 not renumbered. Korean and English sources have the same gap. ACCEPTED-ROUND: do not change numbers. Heading levels must stay aligned with the source.
+hi-b 27 P2 — the one-sentence paragraphs in 013/015 were not merged. ACCEPTED-ROUND: do not merge blocks. The fragment stays its own block.
+hi-b 32 P3 — same lakh-grouping skip as hi-a 24.
+
+hi-a 3 partial: the statute name was corrected, but “अनुच्छेद 3” was not substituted for “अनुच्छेद 10”. The Korean link text is 제10조; dropping 10 fails numbers (“missing from translation: 10”). URL flno=3 unchanged.
+
+## Systemic patterns
+
+- Industry written as क्षेत्र: 5 instances changed to उद्योग / प्रस्तावित व्यवसाय / पेशेवर उद्योग (001 ×2, 004, 011, 013). Geographic क्षेत्र left (मध्य क्षेत्र, क्षेत्राधिकार, परिचालन/अनुमत/औद्योगिक क्षेत्र, भूमि-use zoning).
+- Korea operations lead lost or called क्षेत्र: 5 strings (lawyers description, team description, lawyers answer, role line, experience line) → कोरिया संचालन का/के नेतृत्व. Latin “(Korea Operations Manager)” kept on the role line.
+- Masculine noun with a feminine verb: 4 agreement fixes (002 सकते हैं ×2, 004 व्यक्तित्व हो जाता, 011 संगठित करता है). Other सकती / हो जाती hits were left; the subject is feminine (कंपनी, योजना, संरक्षकता, जिम्मेदारी).
+- “X-दर-X”: 4 (010 मामले-दर-मामला ×1, 011 उत्पाद-दर-उत्पाद ×3) → प्रत्येक मामले/उत्पाद के लिए अलग-अलग.
+- विषय for a legal person, a bare “a contract exists”, or “terms/base”: 6 (011 responsible entity, 016 अनुबंध विषय, 016 नियुक्ति विषय, 016 गणना-आधार, 014 करार की शर्तें ×2). विषय-वस्तु, प्रशिक्षण विषय, and बातचीत के विषय left.
+- झलकाना for “reflect / take into account”: 7 (014 ×4, 016 ×3).
+- Usual-result denial: not swept back to “generally”. 003 Q sentence-lengths stay in the R3 form. 008 difficulty cells and 009 “prepares in advance” were meaning fixes, not a restoration of a promised sentence.
+- U+200B and one-sentence-per-paragraph: 0 structural changes (checker / block-count).
+- Amounts at or above one lakh: 0 (Western grouping kept).
+- R2–R10 were already in this pack from earlier rounds. This pass did not redo links (R1), did not add a reader-country rule, and did not loosen the consultation lock (English, Chinese, Japanese, Korean only; no interpreter, reply-time, free first meeting, or result promise).
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-hi-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-hi --lang hi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=74
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hi src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+
+The 24 count is from before this log file existed. It includes the pre-existing modification of docs/i18n/global-plan/WO-F-hi.txt and the two untracked review files hi-a.md and hi-b.md. No commit was made.
+
+## Reviewer got wrong (not applied)
+
+- hi-a #2 treats the R3 softening (“some judgments … not a guaranteed result”) as a mistranslation of “courts currently generally impose”. The English source does say “generally”, but this campaign already required that sentence to stay softened. Restoring सामान्यतः would make the result sentence positive.
+- hi-a #24 and hi-b #32 are right about Indian lakh grouping and wrong for this checker. ACCEPTED-ROUND says not to use lakh/crore grouping. Western commas stay.
+- hi-b #19 is not a translation defect. The reviewer notes that the English source skips from 5 to 7 as well. Renumbering Hindi would leave the Korean and English outlines.
+- hi-b #18 is right that U+200B is noise, and wrong as an edit: the checker requires the Korean source’s ZWSP count.
+- hi-b #27 is right that 013/015 are still one sentence per paragraph, and wrong as an edit: merging those blocks changes the block count.
+- hi-a #10 correctly reports that the German pricing sentence says sending an inquiry on this page is free of charge. Adding that Hindi sentence would state a free service. The product rule does not allow that sentence to be made positive. The ban on a free first meeting was left as it is.

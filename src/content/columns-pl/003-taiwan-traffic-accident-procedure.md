@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Obraz przykładowy rejestrujący położenie pojazdów i ślady na jezdni na miejscu wypadku drogowego](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Jeżeli na Tajwanie dojdzie do wypadku drogowego (交通事故), należy najpierw zapewnić bezpieczeństwo, dokonać zgłoszenia i zachowania dowodów, a następnie zbadać w kolejności termin roszczenia, winę (過失) i zakres ugody (和解). Poniżej przedstawiono ogólną kolejność działania opartą na przepisach Tajwanu i wskazówkach organów publicznych; odpowiedzialność i konkretna procedura mogą się różnić według okoliczności każdego wypadku.
+Jeżeli na Tajwanie dojdzie do wypadku drogowego (交通事故), należy najpierw zapewnić bezpieczeństwo, zgłosić wypadek i zabezpieczyć dowody, a następnie zbadać w kolejności termin roszczenia, winę (過失) i zakres ugody (和解). Poniżej przedstawiono ogólną kolejność działania opartą na przepisach Tajwanu i wskazówkach organów publicznych; odpowiedzialność i konkretna procedura mogą się różnić według okoliczności każdego wypadku.
 
 ## Q1. Czy po wypadku można opuścić miejsce zdarzenia?
 
@@ -147,7 +147,7 @@ Okoliczność dalszej pracy albo otrzymywania wynagrodzenia bez zmiany jest isto
 
 Szkoda ze zmniejszenia zdolności do pracy odróżnia się od dochodów rzeczywiście zmniejszonych w okresie powrotu do zdrowia z Q11. Według art. 193 i 216 Kodeksu cywilnego bada się łącznie związek przyczynowy z wypadkiem, trwałe zaburzenie czynnościowe (持續功能障礙), zawód i umiejętności osoby poszkodowanej, dochody, których można zwykle oczekiwać, oraz podstawę i dowód dotyczące okresu zdolności do pracy.
 
-Fakt, że bieżące wynagrodzenie utrzymuje się bez zmiany, nie wyłącza automatycznie roszczenia. Odwrotnie, kwoty szkody nie ustala się też w sposób mechaniczny tylko procentem inwalidztwa albo bieżącym wynagrodzeniem.
+Fakt, że bieżące wynagrodzenie utrzymuje się bez zmiany, nie wyłącza automatycznie roszczenia. Natomiast kwoty szkody nie ustala się też w sposób mechaniczny tylko procentem inwalidztwa albo bieżącym wynagrodzeniem.
 
 Jeżeli trwałe zaburzenie czynnościowe jest kwestionowane w sposób istotny, ekspertyza medyczna może być użyteczna, lecz nie jest obowiązkowa we wszystkich sprawach. Bada się też przyczynienie się poszkodowanego z art. 217 Kodeksu cywilnego i inne motywy korekty.
 

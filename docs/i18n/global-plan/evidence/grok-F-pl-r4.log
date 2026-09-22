@@ -1,0 +1,89 @@
+WO-F-pl r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pl-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: pl-a 28, pl-b 49 (77). No P3 rows in either review.
+
+Applied: 68 numbered rows, some with the adaptations below.
+Skipped: 9 numbered rows (pl-a 1, pl-a 13, pl-a 15, pl-a 18, pl-b 2, pl-b 24, pl-b 25, pl-b 48, pl-b 49).
+
+No test file was edited. No pinned Polish expectation in `src/lib/__tests__/guidance-*pl*.test.ts` matched a string that changed. `GUIDANCE_LLMS_NOTICES.pl` was not edited: `consultationNotice` is still the FAQ sentence, and `confidentialNotice` is still a substring of a privacy paragraph that was not rewritten. "TWD 1.57M" was not touched. Disclosure-parity regexes were not touched.
+
+### Applied
+pl-a 2–12, 14, 16–17, 19–28.
+pl-b 1, 3–23, 26–47.
+
+Adaptations (still applied):
+- pl-a 11. The block stays a one-line fragment. It now reads "że spółka ma kłopoty," so it continues the reported speech in the previous line. A second "mówiąc" would have doubled the verb already on that line.
+- pl-a 14. "za ostatni rok" drops a counted 1. The lexicon counts the exact phrase "jeden rok", so the two instances are "za ostatni jeden rok". "długość 1 okresu nie może przekroczyć 1 roku" is now "długość 1 okresu nie może przekroczyć jeden rok" (×2): "okres" is not a lexicon unit, so the first 1 stays a digit, and "jeden rok" keeps the second. "dla 1 poszkodowanego i 1 wypadku" was left; "jednego" is not in the lexicon.
+- pl-a 22. "Eksploatacja" as ordinary business activity is now "działalność" / "prowadzenie działalności" in 002 (12), 004 (19) and 001 "sposoby prowadzenia działalności" (1). 017 transport "eksploatacja" (vehicles, platform, licence) was left.
+- pl-a 27. Bare "B" after "pan B" is declined: pana B, panu B, pan B, Pan B on sentence-opening lines (10).
+- pl-a 28. ROC year is now "roku 112 kalendarza Republiki Chińskiej" in the FAQ, the body, and both source labels. The Gregorian year 2023 was not added (R13; the checker counts digits).
+- pl-b 10. "Siedziba" meaning the foreign head office (本公司) is "centrala" in 011 (2), throughout 018 (22 inflected forms), and throughout 004 (35 inflected forms, plus the listing "jako centrali" and the closing "miejsca inwestora i centrali"). Registered-office uses stay "siedziba": 001 seat/region, 002 registration particulars, 015 transfer of seat, 017 change of registered office.
+- pl-b 40. Applied where the checker still matched: "jednej procedury", "jednej kwestii", "jednym kalendarzu", "przez jeden rok". Restored, because the inflected word is not in the lexicon: "w 1 miesiącu", "ma 1 głos".
+- pl-b 42. The heading of that section is now "Staranność i zamknięcie transakcji", same block, same level.
+
+### Skipped
+- pl-a 1. ", art. 10" on the dividend-withholding link. The URL is `flno=3` and was not changed. Korean 영업세법 제10조 still contributes a counted 10; dropping it fails `numbers`. The label stays.
+- pl-a 13 and pl-b 49. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips them, and `NUMBER_THOUSAND_STYLE.pl` is `dot`. Every dotted amount was left.
+- pl-a 15, pl-b 24, pl-b 25. Q16–Q20 stay body lines. U+200B lines in 003, 005, 006, 008, 009, 013 and 015, and the one-clause breaks in 013 and 015, were left. Deleting a ZWSP fails `blocks`; promoting Q16 fails `headings`; merging the fragments fails `blocks`. They match the Korean source.
+- pl-a 18. "Za każdy ukończony jeden rok stażu" (body and blockquote). Dropping "jeden" fails `numbers`. The counted phrase stays.
+- pl-b 2. "(1-krotność)" stays beside "do wysokości rzeczywistej szkody". Korean "실제 손해액의 최대 1배" is a counted 1. The intent clauses in the same sentence were rewritten under pl-b 6.
+- pl-b 48. Headings stay "## 7." and "## 8.". Korean counts that 8. Renumbering to 6 and 7 failed `numbers` (missing 8, extra 6). The English source has the same skip.
+
+## Systemic patterns
+
+- Dot thousands (pl-a and pl-b verdicts). 0 changed to a space. The checker requires the dot.
+- Spare digit glued to a unit (pl-a; pl-b 40). 6 phrases now use a lexicon form or an inflected word the checker still accepted ("jeden rok" ×4 including the two "przekroczyć", plus "przez jeden rok", and the three 016 case forms). 5 digit-bearing phrases were left; see pl-a 14, pl-a 18 and pl-b 40.
+- U+200B blanks, and 005 `**​**` (pl-a verdict; pl-b 013/015). 0 deleted.
+- "Eksploatacja" for ordinary business activity (pl-a). 32 phrases in 001, 002 and 004. 017 transport uses were left.
+- Sentence-initial "Odwrotnie," (pl-a). 10 sentences, now "Natomiast" (002 ×3, 003 ×1, 004 ×1, 007 ×3, 014 ×1, 017 ×1).
+- "Przedsiębiorstwo nastawione na zysk" (pl-a verdict). 0 replaced. The only concrete rewrite that mentions the tax (pl-a 16) keeps the term, and 營利事業 is wider than a company-income tax on legal persons. The Chinese gloss stays on first use.
+- "Siedziba" for the head office (pl-b). 011 ×2, 018 ×22, 004 ×35 plus the listing label and the closing sentence. Registered-office "siedziba" was left (4 files, see pl-b 10).
+- "Na końcu umowy" as the end of the document (pl-b). 2: 011 handover of data, 017 customer-service handover.
+- "Wchodzić w" plus a legal category (pl-b). 3: overtaking ban, statutory exception in 011, and 017 "podejmuje samochodowy przewóz". "Wchodzi w grę", "wchodzi w rachubę" and "wchodzi w zakres" are ordinary Polish and were left.
+- "Operacja" as the acquisition or the closing (pl-b). 3 in 017, including the section heading.
+- R2–R10. Feminine Wei Tseng, Państwo, the four-language consultation lock, day–month–year dates, and the decimal comma already hold from round 3. This pass did not find a new Korea-as-default-reader, result-promise, or untranslated-chrome instance outside the rows above. The only fullwidth colon in columns-pl is inside the 008 frontmatter `url`, which is canonical source metadata and was not edited.
+
+## Reviewer points not followed
+
+- pl-a 1. The link parameter `flno=3` is not article 10 of the business-tax act. The Korean source still says 영업세법 제10조 on that URL, and the checker counts that 10. The article number in the label was kept.
+- pl-a 13 and pl-b 49. A space as the thousands separator is ordinary Polish. This campaign's checker does not parse it for `pl` (`dot` style). The dotted form was kept.
+- pl-a 15, pl-b 24 and pl-b 25. Q16–Q20 are body lines in the Korean source as well. The U+200B lines and the one-clause breaks in 013 and 015 match that source. Promoting Q16 or merging the fragments fails `headings` or `blocks`.
+- pl-a 18 and the digit forms left under pl-a 14 and pl-b 40. "Ukończony rok", "za ostatni rok", "w jednym miesiącu" and "jeden głos" do not carry the digit in the Polish lexicon. The form the checker accepts was kept.
+- pl-a 28, the year 2023. The reviewer is right that "roku 112" is the ROC calendar. Adding 2023 inserts a digit the source does not have. The calendar is named in Polish; the citation number is unchanged.
+- pl-b 2. The English sentence stops at actual damages. The Korean sentence says 1배, and that 1 is counted. "(1-krotność)" stays.
+- pl-b 48. The outline skip is in the English source and in the Korean headings. The digit 8 is counted. The headings stay 7 and 8.
+- pl-b 1. The English sentence is "The foregoing is contract-design advice." That label does not describe the two paragraphs above it, which compare branch and subsidiary registration. The Polish sentence now says that comparison. The following sentence, that choosing a form does not make a transaction lawful, was left.
+- The standing calque "przedsiębiorstwo nastawione na zysk" was not swapped for a shorter company-tax name. See Systemic patterns.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-pl --lang pl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-pl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+The 21 is the count before this log file was written. This log is the additional untracked file `docs/i18n/global-plan/evidence/grok-F-pl-r4.log`.

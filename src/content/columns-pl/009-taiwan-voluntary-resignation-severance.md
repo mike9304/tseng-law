@@ -85,7 +85,7 @@ jeśli spór wybucha,
 
 w zależności od tego, kto pierwszy kończy umowę z wystarczającą podstawą,
 
-odprawa może nie zostać wypłacona albo może zostać żądana.
+strona, która pierwsza kończy umowę z wystarczającą podstawą, może odmówić wypłaty odprawy albo jej żądać.
 
 Dlatego w sporach pracy (勞資糾紛) na Tajwanie
 

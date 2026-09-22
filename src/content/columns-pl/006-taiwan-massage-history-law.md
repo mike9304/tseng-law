@@ -53,7 +53,7 @@ Wykonywanie tego zawodu przez osobę bez niepełnosprawności wzroku (非視障�
 
 Ustawa ta obowiązywała do 2003 r.; wówczas pan Lin, który prowadził salon fryzjerski,
 
-zatrudnił pracowników bez niepełnosprawności wzroku do usług mycia włosów i masażu, i policja to stwierdziła.
+zatrudnił dwóch pracowników bez niepełnosprawności wzroku do usług mycia włosów i masażu, i policja to stwierdziła.
 
 Według ówczesnego prawa panu Linowi i tym pracownikom wymierzono odpowiednio administracyjną karę pieniężną (罰鍰) w wysokości 40.000 TWD, 10.000 TWD i 20.000 TWD w nowym dolarze tajwańskim (新臺幣).
 

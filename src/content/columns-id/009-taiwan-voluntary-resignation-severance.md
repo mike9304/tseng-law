@@ -3,7 +3,7 @@ title: "Pengecualian yang Memungkinkan Karyawan Tetap Menerima Pesangon (資遣�
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13 September 2025"
-read_time: "3 menit membaca"
+read_time: "3 menit baca"
 categories:
   - "Informasi Hukum Taiwan"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
@@ -91,7 +91,7 @@ Karena itu, dalam sengketa ketenagakerjaan (勞資糾紛) di Taiwan,
 
 **saat** sangat menentukan.
 
-Dalam sebagian besar kasus, pihak yang telah bersiap lebih dahulu yang haknya terlindungi.
+Saat pengakhiran perjanjian dapat memengaruhi siapa yang menanggung atau menuntut pesangon; ini bukan hasil yang tetap.
 
 ---
 

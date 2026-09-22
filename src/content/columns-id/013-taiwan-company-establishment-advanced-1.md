@@ -3,7 +3,7 @@ title: "Pendirian Perusahaan di Taiwan — Panduan Lanjutan 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
 lastmod: "2026-09-10"
 date_display: "13 September 2025"
-read_time: "4 menit membaca"
+read_time: "4 menit baca"
 categories:
   - "Pendirian Perusahaan di Taiwan"
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Gambar utama](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Belakangan ini banyak orang mendirikan perusahaan di Taiwan serta mengajukan visa kerja dan Kartu Izin Tinggal Orang Asing (外僑居留證, ARC),
+Belakangan ini banyak orang mendirikan perusahaan di Taiwan serta mengajukan visa kerja dan Kartu Izin Tinggal Orang Asing (外僑居留證, ARC).
 
-dan berikut ini saya rangkumkan pertanyaan-pertanyaan yang banyak ditanyakan pada saat pendirian perusahaan.
+Berikut ini saya rangkum pertanyaan yang sering muncul pada saat pendirian perusahaan.
 
 Bagi Anda yang telah membaca [**Dasar Pendirian Perusahaan**](/id/columns/taiwan-company-establishment-basics), silakan lanjutkan pula ke panduan lanjutan yang lebih rinci ini.
 
@@ -51,7 +51,7 @@ sebaiknya penyusunan rencana investasi dan pencarian alamat pendaftaran perusaha
 
 Menurut Pasal 9 Undang-Undang Penanaman Modal oleh Orang Asing (外國人投資條例), setoran modal yang telah disetujui harus tiba seluruhnya dalam jangka waktu yang ditetapkan instansi berwenang (核定期限); jangka waktu sebenarnya harus dipastikan pada dokumen persetujuan masing-masing (dalam praktik sering ditetapkan sekitar 1 tahun).
 
-sehingga setelah Anda mencari alamat perusahaan dan menandatangani perjanjian sewa,
+Sesudah itu masih ada waktu untuk mencari alamat perusahaan dan menandatangani perjanjian sewa.
 
 Anda masih memiliki cukup waktu untuk membuka rekening kantor persiapan perusahaan di bank dan mengirimkan modal tersebut.
 
@@ -121,7 +121,7 @@ dan apabila tempatnya berupa ruang perkantoran komersial, pendaftaran perusahaan
 
 Misalnya, apabila bidang usaha terdaftarnya termasuk yang dapat dijalankan di ruang perkantoran komersial, seperti usaha periklanan atau usaha perdagangan besar, perusahaan dapat didirikan di ruang perkantoran komersial. Sebelum menandatangani perjanjian sewa,
 
-sebaiknya Anda memastikan hal itu terlebih dahulu.
+Sebaiknya Anda memastikan hal itu terlebih dahulu.
 
 *Apabila Anda memerlukan pembahasan mengenai hukum Taiwan dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, atau bahasa Korea, gunakanlah halaman Kontak; bahasa Indonesia tidak termasuk bahasa konsultasi, dan waktu balasan tidak dijanjikan.*
 

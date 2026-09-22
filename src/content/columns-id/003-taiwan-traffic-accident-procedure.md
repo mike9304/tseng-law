@@ -3,7 +3,7 @@ title: "Tanya Jawab Kecelakaan Lalu Lintas di Taiwan: Tindakan di Lokasi, Kelala
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13 September 2025"
-read_time: "8 menit membaca"
+read_time: "8 menit baca"
 categories:
   - "Informasi Hukum Taiwan"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
@@ -151,7 +151,7 @@ Kenyataan bahwa gaji saat ini tetap dipertahankan tanpa perubahan tidak dengan s
 
 Apabila gangguan fungsi yang berkelanjutan benar-benar dipersengketakan, penilaian ahli di bidang kedokteran dapat berguna, tetapi tidak wajib dalam setiap perkara. Kelalaian pihak yang dirugikan menurut Pasal 217 Kitab Undang-Undang Hukum Perdata dan alasan penyesuaian lainnya turut dikaji.
 
-Apabila perhitungan dilakukan dalam bentuk pembayaran sekaligus, pemotongan bunga antara (中間利息扣除) dapat dipertimbangkan. Kalkulator Hoffmann (霍夫曼) milik Yuan Kehakiman hanyalah alat bantu perhitungan, bukan metode yang diwajibkan secara hukum, dan bukan pula kepastian atas hasil apa pun. Menurut Pasal 193 Kitab Undang-Undang Hukum Perdata, atas permohonan pihak yang bersangkutan pengadilan pun dapat memerintahkan pembayaran berkala dengan syarat adanya jaminan.
+Apabila perhitungan dilakukan dalam bentuk pembayaran sekaligus, pemotongan bunga antara (中間利息扣除) dapat dipertimbangkan. Kalkulator Hoffmann (霍夫曼) milik Lembaga Kehakiman (司法院) hanyalah alat bantu perhitungan, bukan metode yang diwajibkan secara hukum, dan bukan pula kepastian atas hasil apa pun. Menurut Pasal 193 Kitab Undang-Undang Hukum Perdata, atas permohonan pihak yang bersangkutan pengadilan pun dapat memerintahkan pembayaran berkala dengan syarat adanya jaminan.
 
 ## Q13. Bagaimana ganti rugi immateriil (慰撫金) atas kerugian non-materiil dinilai?
 
@@ -186,7 +186,7 @@ Asuransi tanggung jawab terhadap pihak ketiga (第三人責任險), asuransi kec
 - [Kitab Undang-Undang Hukum Perdata Pasal 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
 - [Putusan Pengadilan Tinggi Taiwan tahun 109 (2020) perkara 上易字 Nomor 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
 - [Putusan Pengadilan Tinggi Taiwan tahun 109 (2020) perkara 上易字 Nomor 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
-- [Kalkulator nilai kini Hoffmann milik Yuan Kehakiman](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
+- [Kalkulator nilai kini Hoffmann milik Lembaga Kehakiman (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Kitab Undang-Undang Hukum Perdata Pasal 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Putusan Pengadilan Distrik Taoyuan tahun 112 (2023) perkara 壢簡字 Nomor 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Kitab Undang-Undang Hukum Perdata Pasal 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
@@ -195,7 +195,7 @@ Asuransi tanggung jawab terhadap pihak ketiga (第三人責任險), asuransi kec
 - [Standar manfaat Asuransi Tanggung Jawab Kendaraan Bermotor Wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Kontrak baku asuransi kendaraan bermotor pribadi Komisi Pengawas Keuangan (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Setelah terjadi kecelakaan, dapatkah semuanya diserahkan kepada perusahaan asuransi?
+Pertanyaan 16. Setelah terjadi kecelakaan, dapatkah semuanya diserahkan kepada perusahaan asuransi?
 
 ​
 
@@ -231,7 +231,7 @@ Apabila Anda menyerahkannya kepada perusahaan asuransi, Anda harus terus-menerus
 
 ​
 
-Q17. Apa tanggung jawab pidana atas perbuatan melukai karena kelalaian bagi pihak yang bersalah dalam kecelakaan lalu lintas?
+Pertanyaan 17. Apa tanggung jawab pidana atas perbuatan melukai karena kelalaian bagi pihak yang bersalah dalam kecelakaan lalu lintas?
 
 ​
 
@@ -255,7 +255,7 @@ Untuk luka berat karena kelalaian pernah dijatuhkan pidana sekitar 4 bulan, seda
 
 ​
 
-Q18. Apabila berdamai dengan pihak lain, dapatkah pengaduan pidana dicabut?
+Pertanyaan 18. Apabila berdamai dengan pihak lain, dapatkah pengaduan pidana dicabut?
 
 ​
 
@@ -275,11 +275,11 @@ Dalam sebagian perkara, pidana bersyarat (緩刑) dapat dipertimbangkan sehingga
 
 ​
 
-Q19. Apabila meninggalkan lokasi setelah kecelakaan, apakah tindak pidana tabrak lari selalu terpenuhi?
+Pertanyaan 19. Apabila meninggalkan lokasi setelah kecelakaan, apakah tindak pidana tabrak lari selalu terpenuhi?
 
 ​
 
-Tidak selalu demikian.
+Meninggalkan lokasi setelah kecelakaan tidak selalu memenuhi tindak pidana tabrak lari.
 
 ​
 
@@ -295,7 +295,7 @@ Apabila yang terjadi hanya kerusakan kendaraan, hal itu tidak dipandang sebagai 
 
 ​
 
-Q20. Bagaimana cara mencari pengacara untuk perkara kecelakaan lalu lintas?
+Pertanyaan 20. Bagaimana cara mencari pengacara untuk perkara kecelakaan lalu lintas?
 
 ​
 
@@ -323,7 +323,7 @@ Anda perlu berhati-hati terhadap pengacara yang membesar-besarkan perkara dan me
 
 ​
 
-Demikianlah Tanya Jawab mengenai kecelakaan lalu lintas ini saya akhiri. Semoga bermanfaat bagi Anda.
+Demikian uraian tanya jawab mengenai kecelakaan lalu lintas di Taiwan.
 
 ​
 

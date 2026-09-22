@@ -78,7 +78,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     faxLabel: 'Faks',
     mapLinkLabel: 'Lihat di peta',
     photoAlts: [
-      'Ruang tamu kantor Taipei, Hovering International Law Firm',
+      'Ruang resepsi kantor Taipei, Hovering International Law Firm',
       'Ruang kerja advokat di kantor Taipei, Hovering International Law Firm',
       'Ruang rapat kantor Taipei, Hovering International Law Firm',
     ],

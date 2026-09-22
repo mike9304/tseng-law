@@ -90,7 +90,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Halaman ini tidak memuat daftar tarif. Lingkup pekerjaan ditetapkan lebih dulu berdasarkan ringkasan yang Anda kirim, lalu besaran dan cara penghitungan biaya dipastikan bersama Anda sebelum pekerjaan dimulai. Pertemuan dengan advokat dapat merupakan layanan berbayar, dan selain honorarium advokat dapat timbul pungutan untuk pengadilan atau instansi pemerintah. Konsultasi hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
+        'Halaman ini tidak memuat daftar tarif. Lingkup pekerjaan ditetapkan lebih dulu berdasarkan ringkasan yang Anda kirim, lalu besaran dan cara penghitungan biaya dipastikan bersama Anda sebelum pekerjaan dimulai. Pertemuan dengan advokat dapat merupakan layanan berbayar, dan selain honorarium advokat dapat timbul biaya untuk pengadilan atau instansi pemerintah. Konsultasi hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
       sources: ['/id/contact', '/id/faq'],
     },
     contact: {

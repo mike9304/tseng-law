@@ -3,7 +3,7 @@ title: "Bagaimana Tanggung Jawab Kecelakaan akibat Mendahului di Taiwan Dinilai?
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
 date_display: "13 September 2025"
-read_time: "5 menit membaca"
+read_time: "5 menit baca"
 categories:
   - "Informasi Hukum Taiwan"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
@@ -45,7 +45,7 @@ Keluarga A dan B pada mulanya berpendapat bahwa perpindahan jalur mobil nomor 2 
 
 Menurut hasil penilaian ahli tersebut, A dinilai memikul tanggung jawab utama atas tabrakan ini. Kesimpulan itu terbatas pada fakta-fakta dalam perkara ini. Penilaian ahli mempertimbangkan bersama-sama upaya A melewati dua kendaraan di depan yang berjalan beriringan, tindakannya masuk ke jalur berlawanan, kecepatan yang membuat kelonggaran untuk mengerem menjadi tidak memadai, tidak dilakukannya isyarat klakson maupun lampu utama sebagaimana ditentukan, gerakan perpindahan jalur mobil nomor 2, susunan jalan dan jalur, serta bukti lain yang tersedia.
 
-Munculnya hasil penilaian ahli menurut perkara masing-masing seperti ini tidak berarti bahwa satu kali kealpaan memberikan isyarat yang ditentukan akan selalu menentukan tanggung jawab. Kelalaian (過失) dalam kecelakaan akibat mendahului tetap bergantung pada lokasi kecelakaan, susunan jalur, kecepatan, gerakan kendaraan, isyarat, jarak waktu, jarak pandang, serta bukti lain.
+Munculnya hasil penilaian ahli menurut perkara masing-masing seperti ini tidak berarti bahwa satu kali tidak diberikannya isyarat yang ditentukan akan selalu menentukan tanggung jawab. Kelalaian (過失) dalam kecelakaan akibat mendahului tetap bergantung pada lokasi kecelakaan, susunan jalur, kecepatan, gerakan kendaraan, isyarat, jarak waktu, jarak pandang, serta bukti lain.
 
 ## Hal-hal yang perlu diperiksa saat menilai tanggung jawab kecelakaan
 

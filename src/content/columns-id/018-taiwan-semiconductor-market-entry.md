@@ -2,13 +2,13 @@
 title: "Perusahaan komponen semikonduktor masuk pasar Taiwan: menilai anak perusahaan, cabang, atau agen"
 lastmod: "2026-09-17"
 date_display: "17 September 2026"
-read_time: "8 menit membaca"
+read_time: "8 menit baca"
 categories:
   - "Pendirian Perusahaan di Taiwan"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Jika ada pelanggan Taiwan, apakah wajib mendirikan perusahaan di Taiwan?"
-    a: "Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Perlu melihat kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan, lalu memilih badan usaha yang paling sesuai."
+    a: "Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Perlu melihat kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan, lalu memilih badan usaha yang sesuai dengan fakta tersebut."
   - q: "Setelah mendirikan perusahaan Taiwan, apakah tanggung jawab kantor pusat hilang sepenuhnya?"
     a: "Jika yang didirikan adalah anak perusahaan, bukan cabang, kantor pusat pada prinsipnya tidak menanggung kewajiban kontrak yang ditandatangani atas nama anak perusahaan. Tetap harus memeriksa pengecualian penyalahgunaan badan hukum dan apakah kantor pusat menanggung jaminan atau kewajiban kontrak terpisah."
   - q: "Dapatkah memulai lewat distributor lalu beralih ke perusahaan di Taiwan?"
@@ -57,7 +57,7 @@ Perbedaan utama anak perusahaan Taiwan dan cabang Taiwan perusahaan asing adalah
 
 ## 3. Bentuk anak perusahaan Taiwan: perseroan terbatas dan perseroan terbatas berbentuk saham
 
-Jika memutuskan mendirikan badan hukum mandiri di Taiwan, bentuknya juga harus dipilih. Di Taiwan ada perseroan terbatas (有限公司) dan perseroan terbatas berbentuk saham (股份有限公司).
+Jika Anda memutuskan mendirikan badan hukum mandiri di Taiwan, bentuknya juga harus dipilih. Di Taiwan ada perseroan terbatas (有限公司) dan perseroan terbatas berbentuk saham (股份有限公司).
 
 ### Perseroan terbatas: tata kelola lebih ringkas, tetapi pengalihan modal lebih tertutup
 
@@ -65,21 +65,21 @@ Perseroan terbatas dapat dibentuk oleh 1 orang atau lebih, atau pemegang saham b
 
 ### Perseroan terbatas berbentuk saham: cocok jika ingin menarik investor lain atau berencana mencatatkan saham
 
-Ciri perseroan terbatas berbentuk saham adalah modal dibagi menjadi saham. Pada prinsipnya diperlukan 2 pemegang saham atau lebih, tetapi pemerintah atau badan hukum dapat mendirikan sendiri, dan badan hukum asing dapat memegang 100%. Saham pada prinsipnya dapat dialihkan bebas, dengan pengecualian menurut undang-undang, dan saham khusus serta opsi saham karyawan dapat dirancang menurut hukum. Karena itu cocok bagi perusahaan yang ingin menarik investor, transaksi saham, insentif ekuitas karyawan, atau merger, akuisisi, pencatatan saham di bursa, atau pendaftaran di pasar negara berkembang pada masa depan; tidak terbatas pada perusahaan besar. Dari sisi tata kelola, perusahaan nonpublik dapat menurut anggaran dasar tidak membentuk dewan, hanya menempatkan 1 atau 2 direktur. Perusahaan dengan satu pemegang saham pemerintah atau badan hukum juga dapat menurut anggaran dasar tidak menempatkan pengawas. Tidak semua perseroan terbatas berbentuk saham wajib audit laporan keuangan tahunan. Ambang audit utama perusahaan biasa adalah modal disetor TWD 30 juta, atau di bawah itu tetapi pendapatan usaha TWD 100 juta atau 100 pekerja peserta asuransi ketenagakerjaan (勞工保險); perusahaan yang telah melakukan penawaran umum saham (公開發行公司) mengikuti hukum sekuritas.
+Ciri perseroan terbatas berbentuk saham adalah modal dibagi menjadi saham. Pada prinsipnya diperlukan 2 pemegang saham atau lebih, tetapi pemerintah atau badan hukum dapat mendirikan sendiri, dan badan hukum asing dapat memegang 100%. Saham pada prinsipnya dapat dialihkan bebas, dengan pengecualian menurut undang-undang, dan saham khusus serta opsi saham karyawan dapat dirancang menurut hukum. Karena itu cocok bagi perusahaan yang ingin menarik investor, transaksi saham, insentif ekuitas karyawan, atau merger, akuisisi, pencatatan saham di bursa, atau pendaftaran di papan saham emerging Taiwan, pada masa depan; tidak terbatas pada perusahaan besar. Dari sisi tata kelola, perseroan yang tidak melakukan penawaran umum, menurut anggaran dasarnya, dapat tidak membentuk dewan dan hanya menempatkan 1 atau 2 direktur. Perusahaan dengan satu pemegang saham pemerintah atau badan hukum, menurut anggaran dasarnya, dapat tidak menempatkan pengawas. Tidak semua perseroan terbatas berbentuk saham wajib audit laporan keuangan tahunan. Ambang audit utama perusahaan biasa adalah modal disetor TWD 30 juta, atau di bawah itu tetapi pendapatan usaha TWD 100 juta atau 100 pekerja peserta asuransi ketenagakerjaan (勞工保險); perusahaan yang telah melakukan penawaran umum saham (公開發行公司) mengikuti hukum sekuritas.
 
 ## 4. Prosedur pendirian cabang dan anak perusahaan berbeda; hanya anak perusahaan yang melalui tinjauan Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi
 
-Ketika perusahaan asing mendirikan anak perusahaan di Taiwan, pada prinsipnya dilakukan prapemeriksaan nama, lalu permohonan izin investasi kepada Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司). Setelah disetujui, dana dikirim, penetapan jumlah investasi dan verifikasi modal akuntan diselesaikan, lalu pendirian perseroan dan pendaftaran pajak diselesaikan.
+Ketika perusahaan asing mendirikan anak perusahaan di Taiwan, pada prinsipnya dilakukan prapemeriksaan nama, lalu permohonan izin investasi kepada Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司). Setelah disetujui, dana dikirim, penetapan jumlah investasi dan verifikasi modal oleh akuntan publik diselesaikan, lalu pendirian perseroan dan pendaftaran pajak diselesaikan.
 
-Sebaliknya, ketika perusahaan asing biasa mendirikan cabang Taiwan, pada prinsipnya izin investasi Departemen Peninjauan Investasi tidak diperlukan; Departemen Perdagangan, Kementerian Urusan Ekonomi (經濟部商業發展署) menangani pendaftaran cabang dan penetapan dana terkait. Prapemeriksaan nama, pengiriman modal kerja, verifikasi modal, dan pendaftaran pajak tetap diperlukan; jadwal pendirian biasanya lebih cepat.
+Sebaliknya, ketika perusahaan asing biasa mendirikan cabang Taiwan, pada prinsipnya izin investasi Departemen Peninjauan Investasi tidak diperlukan; Badan Pengembangan Perdagangan, Kementerian Urusan Ekonomi (經濟部商業發展署) menangani pendaftaran cabang dan penetapan dana terkait. Prapemeriksaan nama, pengiriman modal kerja, verifikasi modal, dan pendaftaran pajak tetap diperlukan; jadwal pendirian biasanya lebih cepat.
 
-Hal di atas adalah usulan desain kontrak. Memiliki satu formulir tertentu tidak menjamin transaksi sah dan tidak menjamin terhindar dari sengketa.
+Uraian di atas merupakan saran perancangan kontrak. Sekadar memakai satu bentuk tertentu tidak membuat transaksi itu sah dan tidak mencegah sengketa.
 
 ## 5. Pendaftaran perseroan dan kerja sah seorang insinyur adalah dua hal berbeda
 
 Menyelesaikan pendaftaran perseroan di Taiwan tidak berarti karyawan kantor pusat luar negeri otomatis dapat bekerja di Taiwan. Warga negara asing yang bekerja di Taiwan harus memiliki izin kerja (工作許可) yang sah; untuk tinggal lama juga perlu mengajukan izin tinggal (居留). Pada dasarnya pemberi kerja mengajukan izin kerja dan izin tinggal terkait bagi karyawan asing.
 
-Manajer anak perusahaan dan cabang Taiwan perusahaan asing pada umumnya menempuh jalur permohonan izin kerja yang berbeda; hal itu bukan jaminan persetujuan. Namun untuk mengajukan izin kerja bagi orang asing kedua dan seterusnya, tergantung industri, Kementerian Tenaga Kerja mensyaratkan ambang modal, omzet, dan sejenisnya. Jika ada rencana menempatkan staf asing bekerja di Taiwan, sebelum mendirikan perseroan Taiwan harus dikonfirmasi apakah penetapan modal mencapai ambang tersebut.
+Manajer anak perusahaan dan cabang Taiwan perusahaan asing pada umumnya menempuh jalur permohonan izin kerja yang berbeda; hal itu bukan jaminan persetujuan. Namun untuk mengajukan izin kerja bagi orang asing kedua dan seterusnya, tergantung industri, Kementerian Tenaga Kerja mensyaratkan ambang modal, omzet, dan sejenisnya. Jika Anda berencana menempatkan staf asing untuk bekerja di Taiwan, sebelum mendirikan perseroan Taiwan Anda harus mengonfirmasi apakah penetapan modal mencapai ambang tersebut.
 
 ## 7. Struktur yang lebih sesuai menurut tahap perkembangan usaha
 
@@ -93,15 +93,15 @@ Berikut skenario penilaian hipotetis untuk membantu berpikir, bukan kesimpulan y
 
 ## 8. Untuk kontak pertama, siapkan ikhtisar operasi; tidak perlu menyerahkan seluruh data rahasia lebih dulu
 
-Pada kontak pertama melalui halaman Kontak, kumpulkan informasi dasar kantor pusat dan pemodal, penjelasan umum produk atau jasa, alur transaksi yang direncanakan, rencana tenaga kerja dan fasilitas di Taiwan, serta syarat kontrak dan dukungan yang diminta pelanggan. Hal yang belum diputuskan dapat ditandai “belum ditentukan”.
+Pada kontak pertama melalui halaman Kontak, Anda dapat mengumpulkan informasi dasar kantor pusat dan pemodal, penjelasan umum produk atau jasa, alur transaksi yang direncanakan, rencana tenaga kerja dan fasilitas di Taiwan, serta syarat kontrak dan dukungan yang diminta pelanggan. Hal yang belum diputuskan dapat ditandai “belum ditentukan”.
 
-Tidak perlu melampirkan seluruh data rahasia pelanggan atau data proses rinci pada kontak pertama. Setelah memberikan nama perusahaan pihak lawan untuk pemeriksaan benturan kepentingan, tentukan bahan yang diperlukan dan cara pengirimannya sesuai arahan penanggung jawab.
+Anda tidak perlu melampirkan seluruh data rahasia pelanggan atau data proses rinci pada kontak pertama. Setelah memberikan nama perusahaan pihak lawan untuk pemeriksaan benturan kepentingan, tentukan bahan yang diperlukan dan cara pengirimannya sesuai arahan penanggung jawab.
 
 ## Pertanyaan yang sering diajukan
 
 ### Jika ada pelanggan Taiwan, apakah wajib mendirikan perusahaan di Taiwan?
 
-Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Perlu melihat kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan, lalu memilih badan usaha yang paling sesuai.
+Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Perlu melihat kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan, lalu memilih badan usaha yang sesuai dengan fakta tersebut.
 
 ### Setelah mendirikan perusahaan Taiwan, apakah tanggung jawab kantor pusat hilang sepenuhnya?
 
@@ -113,6 +113,6 @@ Transisi bertahap dapat dirancang, tetapi pemutusan atau perubahan kontrak yang 
 
 ## Konsultasi struktur masuk pasar Taiwan
 
-Jika merencanakan penjualan, pengelolaan persediaan, dukungan pemasangan, atau rekrutmen lokal di Taiwan, susun lebih dulu pekerjaan yang dilakukan langsung oleh kantor pusat dan pekerjaan yang akan ditangani organisasi di Taiwan. Kantor ini akan mengonfirmasi pokok konsultasi dan benturan kepentingan, lalu menjelaskan bahan yang diperlukan dan lingkup layanan yang dapat diberikan.
+Jika Anda merencanakan penjualan, pengelolaan persediaan, dukungan pemasangan, atau rekrutmen lokal di Taiwan, susun lebih dulu pekerjaan yang dilakukan langsung oleh kantor pusat dan pekerjaan yang akan ditangani organisasi di Taiwan. Kantor ini akan mengonfirmasi pokok konsultasi dan benturan kepentingan, lalu menjelaskan bahan yang diperlukan dan lingkup layanan yang dapat diberikan.
 
-Contoh baris subjek surel: Konsultasi struktur masuk pasar Taiwan untuk perusahaan semikonduktor. Pada kontak pertama, berikan nama perusahaan, negara kantor pusat, produk atau jasa yang direncanakan, rencana operasi di Taiwan, dan bahasa konsultasi yang diinginkan. Data desain rahasia dan kontrak lengkap harap dikirim setelah menerima penjelasan terpisah. Bahasa konsultasi yang benar-benar tersedia dan lingkup penugasan harus dikonfirmasi saat menghubungi kami.
+Contoh baris subjek surel: Konsultasi struktur masuk pasar Taiwan untuk perusahaan semikonduktor. Pada kontak pertama, sampaikan nama perusahaan, negara kantor pusat, produk atau jasa yang direncanakan, rencana operasi di Taiwan, dan bahasa konsultasi yang dipilih di antara bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, atau bahasa Korea. Bahasa Indonesia tidak termasuk bahasa konsultasi, dan waktu balasan tidak dijanjikan. Data desain rahasia dan kontrak lengkap harap dikirim setelah menerima penjelasan terpisah. Bahasa yang benar-benar tersedia di antara keempat bahasa itu, serta lingkup penugasan, harus dikonfirmasi saat Anda menghubungi kami.

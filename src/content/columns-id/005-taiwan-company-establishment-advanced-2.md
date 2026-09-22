@@ -3,7 +3,7 @@ title: "Pendirian Perusahaan di Taiwan – Bagian Lanjutan 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
 date_display: "13 September 2025"
-read_time: "3 menit membaca"
+read_time: "3 menit baca"
 categories:
   - "Pendirian Perusahaan di Taiwan"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
@@ -21,7 +21,7 @@ Bagi Anda yang telah membaca [Pendirian Perusahaan di Taiwan – Dasar](/id/colu
 
 ​
 
-Tanya jawab berikut ini pun diharapkan dapat membantu Anda yang sedang mempertimbangkan pendirian perusahaan di Taiwan.
+Tanya jawab berikut ini memuat orientasi umum bagi Anda yang sedang mempertimbangkan pendirian perusahaan di Taiwan.
 
 ​
 

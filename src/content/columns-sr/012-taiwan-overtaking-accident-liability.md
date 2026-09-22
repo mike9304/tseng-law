@@ -33,7 +33,7 @@ Taj redosled signala i ustupanja u istoj traci ne znači da bi preticanje bilo d
 
 ## Anonimizovana stvar nezgode koju je vodila kancelarija
 
-U anonimizovanoj stvari koju je vodila ova kancelarija, motociklista A vozio je planinskim putem sa suvozačem B. Ispred su vozila 2 putnička vozila; vozilo broj 1, najdalje napred, kretalo se sporo, pa su i vozilo broj 2 i motocikl napredovali takođe malom brzinom.
+U anonimizovanoj stvari koju je vodila ova kancelarija, motociklista A vozio je planinskim putem s putnikom B. Ispred su vozila 2 putnička vozila; vozilo broj 1, najdalje napred, kretalo se sporo, pa su i vozilo broj 2 i motocikl napredovali takođe malom brzinom.
 
 ![Šema nezgode koja pokazuje putanju preticanja motocikla i 2 vozila ispred na planinskom putu](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -43,7 +43,7 @@ B je pretrpeo tešku povredu glave i preminuo na mestu; A je izgubio svest i pre
 
 Porodice A i B najpre su smatrale da je iznenadna promena trake vozila broj 2 glavni uzrok sudara. Stvar je prešla u sudski postupak; u njegovom toku izrađeno je više veštačenja (鑑定) o nezgodi.
 
-Prema ishodu veštačenja, glavnu odgovornost za ovaj sudar nosio je A. Taj zaključak bio je ograničen na činjenice ove stvari. Veštačenje je uzelo u obzir pokušaj A da pretekne 2 vozila ispred koja su vozila jedno za drugim, ulazak u traku suprotnog smera, brzinu koja gotovo nije ostavljala vremena za kočenje i izostanak propisanog zvučnog signala i svetala, kao i kretanje pri promeni trake vozila broj 2, raspored puta i traka i ostale obezbeđene dokaze.
+Prema ishodu veštačenja, glavnu odgovornost za ovaj sudar nosio je A. Taj zaključak bio je ograničen na činjenice ove stvari. Veštačenje je uzelo u obzir pokušaj A da pretekne 2 vozila ispred koja su vozila jedno za drugim, ulazak u traku suprotnog smera, brzinu koja gotovo nije ostavljala dovoljno vremena za kočenje i izostanak propisanog zvučnog signala i svetala, kao i kretanje pri promeni trake vozila broj 2, raspored puta i traka i ostale obezbeđene dokaze.
 
 Zaključak ograničen na ovu stvar ne znači da jedno izostavljanje propisanog signala uvek određuje odgovornost. Nehat (過失) pri nezgodi tokom preticanja zavisi od mesta nezgode, rasporeda traka, brzine, kretanja vozila, signala, vremenskih razmaka, preglednosti i ostalih dokaza.
 
@@ -62,4 +62,4 @@ Kao dopunu može se pogledati [prikaz pravila i postupka preticanja](https://gon
 > - [Međunarodni tim Hovering](/sr/lawyers)
 > - [Postupak nakon saobraćajnih nezgoda na Tajvanu](/sr/columns/taiwan-traffic-accident-procedure)
 
-Ovaj tekst opšta je pravna informacija o pravilima preticanja i oceni odgovornosti za nezgode na Tajvanu; nije savet o konkretnoj stvari i ne obećava određeni ishod. Stvarna odgovornost može se razlikovati prema mestu nezgode, kretanju vozila, brzini, signalima, dokazima, veštačenju (鑑定) i važećem pravu; konkretne stvari treba oceniti posebno na osnovu merodavne dokumentacije.
+Ovaj tekst je opšta pravna informacija o pravilima preticanja i oceni odgovornosti za nezgode na Tajvanu; nije savet o konkretnoj stvari i ne obećava određeni ishod. Stvarna odgovornost može se razlikovati prema mestu nezgode, kretanju vozila, brzini, signalima, dokazima, veštačenju (鑑定) i važećem pravu; konkretne stvari treba oceniti posebno na osnovu merodavne dokumentacije.

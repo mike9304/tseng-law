@@ -26,10 +26,10 @@ Klauzula obaveznog ostanka (最低服務年限約定) u ugovoru o radu (勞動�
 
 Pri pregledu je važno da se ne mešaju sledeća četiri pitanja.
 
-1. Da li sama klauzula ispunjava zakonske pretpostavke člana 15-1
-2. Da li su ugovoreni rok i teret zaposlenog u razumnom opsegu
-3. Kome se pripisuje razlog prestanka ugovora o radu
-4. Kako se ocenjuju otkazni rok odlaska i opseg vraćanja
+1. Da li sama klauzula ispunjava zakonske pretpostavke člana 15-1?
+2. Da li su ugovoreni rok i teret zaposlenog u razumnom opsegu?
+3. Kome se pripisuje razlog prestanka ugovora o radu?
+4. Kako se ocenjuju otkazni rok odlaska i opseg vraćanja?
 
 Čak i kada ova četiri pitanja stoje zajedno u istom ugovoru, merodavna odredba i potreban dokaz razlikuju se. Zato treba posebno oceniti da li je klauzula važeća, kada izjava volje o odlasku proizvodi dejstvo, da li postoji odgovornost vraćanja davanja unapred, odnosno predplate (預付性給付), ili troškova obuke i da li je stvarno nastala posebna šteta.
 
@@ -43,7 +43,7 @@ Klauzula nije automatski ništava. Prema članu 15-1 tajvanskog Zakona o radnim 
 
 Po potvrdi zakonske pretpostavke prema stavu 2 posebno se ocenjuje da li su ugovoreni rok i opseg odgovornosti razumni. Klauzula koja povredi zakonsku pretpostavku stava 1 ili merilo razumnosti stava 2 ništava je prema stavu 3. Ova norma međutim merilo je za ocenu sadržaja i činjenica svake klauzule, a ne norma koja od početka sve klauzule obaveznog ostanka proglašava važećim ili ništavim.
 
-Okolicnost da je zaposleni potpisao ugovor može biti dokaz koji potvrđuje postojanje sporazuma, ali ne zamenjuje zakonske pretpostavke. Nasuprot tome, umesto da se ishod odmah izvede samo iz dužine klauzule, treba proveriti kakva je investicija ili naknada postojala i zašto je taj rok određen.
+Okolicnost da je zaposleni potpisao ugovor može biti dokaz koji potvrđuje postojanje sporazuma, ali ne zamenjuje zakonske pretpostavke. Nasuprot tome, umesto da se ishod odmah izvede samo iz dužine ugovorenog roka, treba proveriti kakva je investicija ili naknada postojala i zašto je taj rok određen.
 
 ## 2. Prva zakonska pretpostavka: stručna obuka i snošenje troškova
 
@@ -84,7 +84,7 @@ Drugi element, mogućnost zamene, ne određuje se samo tvrdnjom poslodavca o te�
 
 Treći element vidi ne samo visinu naknade, već i opseg. Važno je kada se isplaćuje i pod kojim uslovima se zaposlenom konačno pripisuje, kako odgovara ugovorenom roku kao celini i da li se pri prestanku u toku odražava već ispunjeni period. Nagrada istog imena može se oceniti različito prema strukturi ugovora i stvarnosti.
 
-Četvrti element može da obuhvati razne okolnosti koje utiču na razumnost, kao tok zaključenja klauzule, prirodu posla, šta je stranama objašnjeno, stvarno odrađeni period i razlog prestanka. Značaj svakog elementa može da se razlikuje prema stvari, a okolnosti koje treba uzeti u obzir ne ograničavaju se na prethodne primere. Zato treba oceniti bez izostavljanja relevantne činjenice koje se pojavljuju u spisu.
+Četvrti element može da obuhvati razne okolnosti koje utiču na razumnost, kao tok zaključenja klauzule, prirodu posla, šta je stranama objašnjeno, stvarno odrađeni period i razlog prestanka. Značaj svakog elementa može da se razlikuje prema stvari, a okolnosti koje treba uzeti u obzir ne ograničavaju se na prethodne primere. Zato treba oceniti sve relevantne činjenice koje se pojavljuju u spisu.
 
 Na kraju je potreban razumljiv srazmer između ugovorenog roka, stvarne investicije poslodavca, teškoće zamene, naknade koju je zaposleni primio i tereta vraćanja. Ne sme se unapred odrediti važenje samo zato što je reč o određenom zanimanju, niti bez izmene primeniti zaključak iz druge stvari. Treba zajedno videti zasnovanost u trenutku zaključenja ugovora i stvarni stepen ispunjenja u trenutku prestanka.
 
@@ -92,13 +92,13 @@ Na kraju je potreban razumljiv srazmer između ugovorenog roka, stvarne investic
 
 Prema uputstvu tajvanskog Ministarstva rada od 5. 6. 2026. troškovi redovne obuke, opšte obuke za radno mesto, obuke za prilagođavanje novozaposlenih i obuke koju zakon nalaže da se sprovede ne mogu da budu osnov klauzule obaveznog ostanka ni zahteva za ugovornu kaznu ili vraćanje troškova. Ne treba gledati samo naziv obuke, već konkretan program, stručni i tehnički sadržaj, trajanje, troškove koje je poslodavac stvarno snosio i dokaze.
 
-Uputstvo 勞動關2字第1150141814號 Ministarstva rada razlikuje i uređuje obuku koja se sprovodi redovno, uobičajenu obuku za radno mesto, obuku da se novozaposleni upozna s okruženjem i postupcima rada, i obuku koju poslodavac mora da sprovede prema zakonu. Pošto ova obuka prati vođenje delatnosti ili ispunjenje zakonske obaveze, smisao je da se njeni troškovi ne mogu pretvoriti u osnov obaveze ostanka ili sankcije za rani prestanak.
+Uputstvo 勞動關2字第1150141814號 Ministarstva rada razlikuje i uređuje obuku koja se sprovodi redovno, uobičajenu obuku za radno mesto, obuku da se novozaposleni upozna s okruženjem i postupcima rada, i obuku koju poslodavac mora da sprovede prema zakonu. Pošto ova obuka prati vođenje delatnosti ili ispunjenje zakonske obaveze, njeni troškovi ne mogu da budu osnov obaveze ostanka ni sankcije za rani prestanak.
 
 Kurseve koje novi zaposleni obično primi, kao objašnjenje radnih pravila (工作規則), predstavljanje organizacije i sistema, uobičajenu predaju posla i uputstvo o osnovnim postupcima bezbednosti, treba potvrditi u njihovoj suštini. Opšti troškovi prijema i upravljanja ili troškovi predaje posla, koje je poslodavac prvobitno trebao da snosi, ne mogu se odrediti kao predmet vraćanja samim označavanjem kao posebne investicije.
 
 Obuka se međutim ne isključuje uvek samo zato što je sprovedena unutar preduzeća. U istom programu mogu se mešati deo opšteg prilagođavanja i stručni deo, zato treba temu, vreme, troškove i to da li postoji zakonska obaveza proveriti po kursu. Ko tvrdi stručni deo, treba dokazima da objasni koji se sadržaj razlikuje od uobičajene obuke i ko je stvarno snosio troškove.
 
-U praksi se ne gleda samo naslovnica materijala obuke, već se poredi detaljan sadržaj i stvarni zapis sprovođenja. Treba proveriti da li je reč o ponovljenom redovnom kursu, kursu za određenu kvalifikaciju ili rukovanje opremom, zakonski obaveznoj obuci, da li je zaposleni stvarno učestvovao i da li zahtevani iznos odgovara dokazima troškova obuke.
+U praksi se ne gleda samo naslovnica materijala obuke, već se poredi detaljan sadržaj i stvarni zapis sprovođenja. Treba proveriti da li je reč o ponovljenom redovnom kursu, kursu za određenu kvalifikaciju ili o rukovanju opremom, zakonski obaveznoj obuci, da li je zaposleni stvarno učestvovao i da li zahtevani iznos odgovara dokazima troškova obuke.
 
 ## 6. Vraćanje nagrada i rani odlazak
 
@@ -130,7 +130,7 @@ Ocena razloga prestanka utiče neposredno i na opseg vraćanja. Ako se primeni s
 
 Klauzula obaveznog ostanka nije institut koji bi fizički ili pravno sprečio odlazak zaposlenog. Izjava volje o odlasku i otkazni rok (預告期間) pitanje su kada prestaje radni odnos; važenje klauzule obaveznog ostanka i odgovornost za vraćanje troškova pitanje su da li postoji imovinska odgovornost izvedena iz prestanka.
 
-Kada zaposleni raskine ugovor o radu na neodređeno vreme (不定期契約), prema članu 15 tajvanskog Zakona o radnim standardima shodno se primenjuje otkazni rok člana 16 stava 1. Član 16 odredba je o prestanku ugovora od strane poslodavca, a na odlazak zaposlenog taj otkazni rok primenjuje se preko člana 15.
+Kada zaposleni raskine ugovor o radu na neodređeno vreme (不定期契約), prema članu 15 tajvanskog Zakona o radnim standardima shodno se primenjuje otkazni rok člana 16 stava 1. Član 16 je odredba o prestanku ugovora od strane poslodavca, a na odlazak zaposlenog taj otkazni rok primenjuje se preko člana 15.
 
 Otkazni rok prema neprekidnom stažu rada jeste sledeći.
 
@@ -150,7 +150,7 @@ Da bi se sprečio spor ili ocenio već podneti zahtev, ne sme se čitati samo ug
 
 ### Šta poslodavac treba da proveri
 
-1. Najpre se utvrđuje zakonska pretpostavka: da li je pružena stručna obuka i snoseni troškovi, ili da li je pružena razumna naknada za obećanje ostanka.
+1. Najpre se utvrđuje zakonska pretpostavka: da li je pružena stručna obuka i da li je poslodavac snosio njene troškove, ili da li je pružena razumna naknada za obećanje ostanka.
 2. Opšta, redovna i zakonski obavezna obuka odvajaju se od stručne obuke prema stvarnom sadržaju kursa, trajanju i svrsi.
 3. Čuvaju se program kursa, kalendar, zapis o završetku, računi, priznanice i dokumentacija o tome ko je snosio troškove, i posebno se beleži osnov spoljnih i unutrašnjih troškova.
 4. Pismeno se jasno povežu svrha naknade, dan isplate, iznos, uslovi pripisivanja, saopštenje učinjeno zaposlenom i formula vraćanja neispunjenog perioda.
@@ -163,7 +163,7 @@ Da bi se sprečio spor ili ocenio već podneti zahtev, ne sme se čitati samo ug
 
 ### Šta zaposleni treba da proveri
 
-1. Skupljaju se original potpisanog ugovora o radu i sporazuma o izmeni, objašnjavajući materijali prijema, materijali obuke, program, kalendar i zapis o završetku.
+1. Skupljaju se original potpisanog ugovora o radu i sporazuma o izmeni, materijali sa prijema na posao, materijali obuke, program, kalendar i zapis o završetku.
 2. Proveravaju se stručni i tehnički sadržaj obuke, da li je reč o opštoj obuci prilagođavanja ili zakonski obaveznoj obuci, iznosi računa i priznanica i ko je stvarno snosio troškove.
 3. Obezbeđuje se dokumentacija isplata nagrade za potpis, nagrade za zadržavanje i drugih davanja unapred, saopštenje o svrsi naknade, dan isplate, uslovi pripisivanja i formula vraćanja.
 4. Posebno se beleži osnov obračuna ugovorenog roka, već odrađeni period, preostali period i mogućnost zamene osoblja koju poslodavac tvrdi.
@@ -189,6 +189,6 @@ Pri uređivanju dokumentacije u vremenskom redosledu poželjno je zajedno navest
 
 ---
 
-Ovaj tekst obrazovni je materijal za opšte objašnjenje klauzule obaveznog ostanka na Tajvanu, vraćanja troškova obuke i davanja unapred i otkaznog roka odlaska; nije pravni savet o konkretnoj radnoj stvari. Važenje klauzule i opseg odgovornosti mogu se razlikovati prema vrsti i tekstu ugovora, stvarnoj obuci i troškovima, svrsi naknade i njenom saopštenju, periodu rada, razlogu prestanka i dokazima. Pre izjave volje o odlasku, prijema odbitka od plate, sporazuma o vraćanju ili odgovora na spor treba da proverite najnovije službene izvore i pojedinačne okolnosti.
+Ovaj tekst je obrazovni materijal za opšte objašnjenje klauzule obaveznog ostanka na Tajvanu, vraćanja troškova obuke i davanja unapred i otkaznog roka odlaska; nije pravni savet o konkretnoj radnoj stvari. Važenje klauzule i opseg odgovornosti mogu se razlikovati prema vrsti i tekstu ugovora, stvarnoj obuci i troškovima, svrsi naknade i njenom saopštenju, periodu rada, razlogu prestanka i dokazima. Pre izjave volje o odlasku, prijema odbitka od plate, sporazuma o vraćanju ili odgovora na spor treba da proverite najnovije službene izvore i pojedinačne okolnosti.
 
 **Advokatkinja Wei Tseng (曾雋崴)**

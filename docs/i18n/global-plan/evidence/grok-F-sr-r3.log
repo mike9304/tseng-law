@@ -1,0 +1,134 @@
+# WO-F-sr — Serbian (Latin script) fix lane, campaign round 3 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-sr-r3 (no git add/commit/push)
+Files touched: src/content/columns-sr/001–018;
+src/data/international-guidance-central-europe.ts (sr strings only);
+src/data/international-guidance-team.ts (sr bios only);
+src/data/international-guidance-offices.ts (sr photo alt only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.sr.discoveryNotice only);
+this log.
+No test file was edited. No pinned Serbian expectation had to change. "TWD 1.57M" stays byte-identical. consultationNotice and confidentialNotice were not rewritten, so they remain verbatim substrings of the FAQ and privacy copy.
+
+## Rows applied
+sr-a 32/36 and sr-b 32/33. No P3 rows in either review. 64 applied, 5 skipped.
+
+sr-a
+1  Team bio: međuregionalna razmena → komunikacija među timovima pomoću sistema dokumenata i tokova rada.
+2  Gym-injury bio: u zahtevu → u sporu. The figure stays "TWD 1.57M" (see skip 35).
+3  Pricing: broj strana → broj stranaka, in both the scope sentence and the cost sentence.
+4  discoveryNotice: podršku → odobravanje. Token `llms.txt` kept.
+5  002 accumulated losses: prenos gubitaka → akumulirane gubitke (累積虧損).
+6  002 conflict of interest: odobrenje odnosa interesa → odobrenje sukoba interesa. The earlier interests-of-directors sentence was disambiguated to "interese članova upravnog odbora i akcionara", not treated as a conflict.
+7  002 word order: troškovi društva koje je odgovorno lice (公司負責人) predujmilo.
+8  001 董事: odgovornost članova upravnog odbora (董事). Sweep below.
+9  003: oštećeni ne vidi ni kajanje ni iskrenu nameru.
+10 006: opscenih radnji (猥褻).
+11 005 permit category: rukovodilac preduzeća redovne investicije prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作).
+12 009: the fault paragraph now gives the employer the right not to pay and the employee the right to claim. The three lines stay three lines.
+13 007 registered title: heading "Upis vlasništva stana"; FAQ and body "Upis vlasništva nepokretnosti" / "Upis vlasništva stana". Existing "upis na ime" left.
+14 004 arm's length: cenu po načelu van dohvata ruke.
+15 004 duplicate benefits: ograničenja zajedničke primene, in the FAQ and in §4. The §5 sentence that already said ograničenje zajedničke primene was left.
+17 002 agreement: i dalje biti moguće redovno poslovanje i otplata dugova.
+18 007: ne zahteva svaki strani razvod istu tužbu.
+19 007: Samo potpisani sporazum ne dovršava razvod. FAQ and body.
+20 008 quote: the six-month cap is inside the wage sentence, and the next quote line starts "Ova formula". Digits 0,5 / 6 / 12 / 17 / 1 stay. Quote-block count unchanged.
+22 負擔 noun: vršenje ili snošenje (guidance pack once; 007 FAQ, body, and the definition sentence). Verb "vrši i nosi" left.
+23 Privacy: nejavnom skladištu podataka.
+24 Home intro: lica povezana sa Tajvanom.
+25 FAQ close: zaključak sami izvodite.
+26 About: sprovodimo klijente iz inostranstva kroz postupke.
+27 Paralegal bio: dugogodišnjim iskustvom.
+28 Taipei alt: Radna prostorija advokatkinje u kancelariji u Tajpeju.
+29 002: iz kojih sredstava se isplaćuje iznos za vraćanje.
+30 002: odgovornost članova upravnog odbora za tu procenu.
+31 004: To koji je oblik primeraniji zavisi od… (genitive after zavisi od; the full factor list kept).
+33 008 table: ako za zaposlenog postoji jedan od sledećih slučajeva.
+34 001 and 004: činjenična stanja s vezom na Koreju (koja ispunjavaju in 001).
+36 Degree line: Master nauka (M.S.), matching Huang's Master (M.A.).
+
+sr-b
+1  010 uslovima polise. Same Croatian insurance form in 003: uslovima polise, pa polisu.
+2  010: od dana kada je saznao ko je učinilac.
+3  010: Taj zahtev je praktična mera (copula and "spis" → "zahtev").
+4  011: lica ugovorno odgovorna za poverene poslove.
+5  012: dovoljno vremena za kočenje.
+6  013 approval window, rephrased inside the two existing paragraphs: the period is long enough to find the address and sign the lease, and long enough to open the preparatory account and remit the capital. Not merged.
+7  013: sticanje radne dozvole i isprave o boravku traje još oko jedan mesec. Digits and bold markers kept.
+8  014: dužine ugovorenog roka.
+9  015: Mora li se za svaku granu delatnosti … proveriti.
+10 016: Nijedno od tih ovlašćenja ne vrši se u ličnom interesu roditelja.
+11 016: radi zaštite ličnog i imovinskog interesa deteta.
+12 016: upisanog vlasnika i stvarnog vlasnika. Also "prema upisu u evidenciji", "poređenjem upisanog vlasništva", and "imovini sa zajedničkim upisom".
+13 016: međunarodne ugovore i pravo druge države.
+14 016: sredstva dobijena raspolaganjem.
+15 017: provera visine investicije posle doznake sredstava (投資額審定).
+16 017: obeštećenje, šta se predaje pri zaključenju; the outsourcing "naknadu" in that list → obeštećenje. Freight-charge "naknada" left.
+17 017 body: špediciju, odnosno posredovanje u prevozu (運送承攬). The FAQ already had this and was left.
+18 018: za člana upravnog odbora je potrebna saglasnost 2/3 ili više glasačkih prava ostalih članova. Fraction kept.
+19 Copula moved to second position. Quoted sites plus the same pattern elsewhere; count in the sweep.
+21 014: "?" on the four English questions. List-item count unchanged.
+22 014: sve relevantne činjenice koje se pojavljuju u spisu.
+23 014: ili o rukovanju opremom.
+24 014: da li je poslodavac snosio njene troškove.
+25 018: država ili pravno lice može da ga osnuje i samo.
+26 010: lice ovlašćeno da podnese predlog načelno mora to da učini.
+27 012: s putnikom B.
+28 013 continuations made self-standing inside the existing paragraphs ("i da li", "i izložiti", "to unapred proverite"). Not joined.
+29 014: njeni troškovi ne mogu da budu osnov obaveze ostanka ni sankcije.
+30 014: materijali sa prijema na posao.
+31 017: stvarni prevoz koji obavlja preduzetnik bez dozvole.
+32 017: upravne smernice (the ministry name after the gloss stays).
+33 018: ne obećavaju da je određeni način zakonit ili bolji. The negation stays.
+
+## Rows skipped
+sr-a 16 (004 link label "član 10"). Korean source is still `영업세법 제10조` on `pcode=G0340028&flno=3`. Dropping the digit fails the number check. The URL was not changed. 001's label for the same URL has no article number because the Korean 001 label has no 제10조.
+sr-a 21 and sr-b 20 (U+200B, and promoting 003 Q16–Q20 to headings). The checker compares ZWSP counts and heading levels to the Korean source, which has the same blanks and keeps Q16 as a body line. Deleting the blanks or adding `##` fails `blocks` or `headings`. Empty `**​**` lines in 005 were left for the same reason. 0 ZWSP removed.
+sr-a 32 (glued "1" → "jednog" / "jednu"). Korean `1명`/`1건`/`1년` are parsed digits (not in the R11 lexical exemption). "za 1 oštećenog i 1 nezgodu", "manje od 1 godine", "postoji 1 godinu", "navršenu 1 godinu", and "za 1 godinu" stay. 0 instances rewritten as words.
+sr-a 35 (bio figure). Suggested "1,57 miliona TWD" would break the byte pin on "TWD 1.57M". The lawsuit wording in row 2 was applied around the pinned figure.
+
+## Systemic patterns and how many instances changed
+U+200B blank lines (003, 005, 006, 008, 009, 013, 015)          0 changed (checker lock; see skips)
+spare digit glued to a count of one                                 0 changed (checker lock; see skip 32)
+董事 rendered as direktor, while 經理人 stays rukovodilac
+  and 董事會 stays odbor direktora                                  13 (001 ×1, 002 ×4, 004 ×4, 017 ×1, 018 ×3).
+  "odbor direktora" and "Generalnog direktorata" left.
+odnos interesa used for both an interest and a conflict             2 (002: sukob interesa; interese članova)
+負擔 as the noun nošenje                                            4 (guidance ×1, 007 ×3). Verb nosi left.
+copula "je" after the predicate                                     17 (001 ×1, 002 ×2, 007 ×5, 010 ×1, 012 ×1, 014 ×2, 015 ×1, 016 ×3, 018 ×1)
+"ime" where English means registered title                          7 (007 heading + FAQ + body; 016 ×4)
+Croatian insurance polica/police/policu                             2 sentences (010 genitive; 003 genitive and accusative → polisa/polisu). Policija left.
+013 one sentence split across paragraphs                            4 groups made self-standing; 0 paragraphs merged
+bare naknada / predaja for indemnification and closing deliverables 2 (017 agreement list and the outsourcing indemnification). Compensation "naknada" left.
+
+R2–R10 and R12–R17 were already in this corpus (prior rounds; this round's verdicts are 4/5 and confirm feminine forms for Wei Tseng, the consultation lock, and Korea as a labelled example). This pass applied the residual instances the reviews named. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered).
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-sr --lang sr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-sr src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      25
+```
+`git status --short | wc -l` was 25 before this log file existed. That count includes the pre-existing dirty `WO-F-sr.txt` and the untracked round-3 review files. 017 still WARNs `numbers 수사미해석 (2): 제3자; 제3자` with sourceCount=targetCount=44. That WARN does not fail the summary.
+
+## Reviewer disagreements (not applied)
+No wording was rejected as a wrong reading of the English. The five skipped rows are checker or pin constraints, not a disagreement about Serbian:
+
+- sr-a 16. The reviewer is right that `flno=3` does not open article 10. The Korean and English labels still say article 10, and removing "član 10" drops a digit the checker requires. The label and the URL were left.
+- sr-a 21 and sr-b 20. The blanks and the body-line Q16–Q20 are real, and they match the Korean source. Promoting them to headings or deleting U+200B fails the checker.
+- sr-a 32. "jednog oštećenog" would be more natural. The Korean counters are parsed as the digit 1, so the digit stays.
+- sr-a 35. "1,57 miliona TWD" is the Serbian form. The bio figure is pinned as "TWD 1.57M".
+- sr-b 28 (and the same split in sr-a 12 and sr-b 6). Joining the paragraphs would change the block count. Each block was rephrased so it stands on its own.

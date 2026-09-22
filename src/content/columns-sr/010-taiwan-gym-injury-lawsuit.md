@@ -63,7 +63,7 @@ Naslovi novinskih izveštaja, internetskih objava i pravnih komentara o ovoj stv
 
 Praktični značaj ove stvari leži u tome što pokazuje da se odgovornost ne određuje odmah samom činjenicom da je do povrede došlo u teretani. Sadržaj dužnosti bezbednosti (安全義務) koja tereti pružaoca usluge, konkretno dato uputstvo i povreda dužnosti pažnje (注意義務), uzročna veza između povrede i postupanja i obim štete ocenjuju se prema ispravama svake stvari. Pretpostavke i rokovi krivičnog postupka i parničnog postupka takođe se razlikuju, zato treba odmah posle nezgode dokumentaciju urediti odvojeno.
 
-U nastavku je opšta informacija radi objašnjenja sporova o povredi u teretani na Tajvanu; nije pravno mišljenje o konkretnoj stvari. Stvarna prava i način postupanja mogu se razlikovati prema ugovornom odnosu, okolnostima nezgode, uzroku i stepenu povrede, postupanju strana, uslovima police, obezbeđenim dokazima i merodavnom pravu.
+U nastavku je opšta informacija radi objašnjenja sporova o povredi u teretani na Tajvanu; nije pravno mišljenje o konkretnoj stvari. Stvarna prava i način postupanja mogu se razlikovati prema ugovornom odnosu, okolnostima nezgode, uzroku i stepenu povrede, postupanju strana, uslovima polise, obezbeđenim dokazima i merodavnom pravu.
 
 ## 1. Posle povrede u teretani na Tajvanu, koje pravne postupke je moguće razmotriti?
 
@@ -75,7 +75,7 @@ Ako su ispunjeni zakonska obeležja krivičnog dela telesne povrede iz nehata (�
 
 ## 2. Koji se rokovi primenjuju na krivični predlog oštećenog i građansku naknadu štete?
 
-Prema [članu 287 tajvanskog Krivičnog zakonika (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) krivično delo telesne povrede iz nehata prema članu 284 Krivičnog zakonika goni se samo po predlogu oštećenog (告訴乃論之罪). Prema [članu 237 tajvanskog Zakonika o krivičnom postupku (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) ovlašćeni na predlog mora predlog načelno podneti u roku od 6 meseci od dana kada je saznao učinioca.
+Prema [članu 287 tajvanskog Krivičnog zakonika (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) krivično delo telesne povrede iz nehata prema članu 284 Krivičnog zakonika goni se samo po predlogu oštećenog (告訴乃論之罪). Prema [članu 237 tajvanskog Zakonika o krivičnom postupku (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) lice ovlašćeno da podnese predlog načelno mora to da učini u roku od 6 meseci od dana kada je saznao ko je učinilac.
 
 Pravo na naknadu štete iz protivpravne radnje prema [članu 197 tajvanskog Građanskog zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) prestaje načelno ako se ne ostvari u roku od 2 godine od trenutka kada je oštećeni saznao i za štetu i za lice obavezno na naknadu, i prestaje i kada od protivpravne radnje protekne 10 godina.
 
@@ -85,7 +85,7 @@ Ako međutim dolazi u obzir drugi osnov zahteva, kao ugovorna odgovornost, ili a
 
 Da bi se mogli objasniti odgovornost, uzročna veza i šteta, valja zajedno prikupiti ne samo snimke nadzora (監視器影像) iz trenutka nezgode, već i medicinsku dokumentaciju (病歷) i lekarsko uverenje (診斷證明書), račune za troškove lečenja (醫療費用), prevoz radi lečenja (就醫交通費) i negu (看護費用), poruke razmenjene s teretanom i trenerom, iskaze svedoka, rezervaciju časova i evidenciju prisustva, plan vežbanja i zapis treninga. Valja u mogućem obimu fotografisati mesto povrede i stanje mesta nezgode i urediti prema datumu tok pre nezgode i posle nje, kao i sadržaj komunikacije, da bi kasnije bilo lakše isprave uporediti.
 
-Snimci mogu posle isteka roka čuvanja biti presnimljeni ili iz drugih razloga postati neupotrebljivi. Zato se može razmotriti zahtev teretani za očuvanje putem pisma s overom sadržaja (存證信函) ili pismenog zahteva advokatkinje (律師函), u kome se konkretno navede potreban vremenski odsek, mesto i položaj kamere. Taj spis praktična je mera da se zabeleži šta je i kada zahtevano. Sam po sebi, međutim, protivnoj strani ne nameće novu pravnu obavezu da snimke sačuva niti sprečava njihovo brisanje, a sama okolnost da snimci nisu ostali takođe ne vodi sud ka automatski nepovoljnoj oceni.
+Snimci mogu posle isteka roka čuvanja biti presnimljeni ili iz drugih razloga postati neupotrebljivi. Zato se može razmotriti zahtev teretani za očuvanje putem pisma s overom sadržaja (存證信函) ili pismenog zahteva advokatkinje (律師函), u kome se konkretno navede potreban vremenski odsek, mesto i položaj kamere. Taj zahtev je praktična mera da se zabeleži šta je i kada zahtevano. Sam po sebi, međutim, protivnoj strani ne nameće novu pravnu obavezu da snimke sačuva niti sprečava njihovo brisanje, a sama okolnost da snimci nisu ostali takođe ne vodi sud ka automatski nepovoljnoj oceni.
 
 Ako okolnosti nezgode mogu ispuniti obeležja krivičnog dela, može se brzo podneti predlog da organ istrage (偵查機關) oceni da li postoji zakonski osnov obezbeđenja ili očuvanja. Predlog ne znači da policija ili tužilaštvo nužno obezbede CCTV, zato treba prikupiti i isprave koje strana može sama sačuvati, kao medicinsku i komunikacionu dokumentaciju.
 

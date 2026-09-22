@@ -45,7 +45,7 @@ Naročito ako prodavac iz ugovora o kupovini nije preduzeće koje pruža tehnič
 
 ## 2. Razlika između zavisnog društva, ogranka i predstavništva stranog društva na Tajvanu
 
-Pri osmišljavanju ulaska preduzeće poluprovodnika treba odvojeno da oceni kakvo će se uporište ustanoviti na Tajvanu i kako će se urediti prodaja i usluge kupcima. Prva tačka usmerena je na pravni subjektivitet, uslove upisa i upisane delatnosti (營業項目); druga na način poslovanja, ovlašćenja i podelu odgovornosti.
+Pri osmišljavanju ulaska preduzeće poluprovodnika treba odvojeno da oceni kakvo će se uporište ustanoviti na Tajvanu i kako će se urediti prodaja i usluge kupcima. Prva tačka je usmerena na pravni subjektivitet, uslove upisa i upisane delatnosti (營業項目); druga na način poslovanja, ovlašćenja i podelu odgovornosti.
 
 Glavna razlika između tajvanskog zavisnog društva i tajvanskog ogranka stranog društva jeste da li ima pravni subjektivitet odvojen od matičnog društva (母公司) ili sedišta matične kompanije (本公司). Distribucija i zastupanje jesu ugovorna i poslovna uređenja i ne treba ih mešati s oblikom društva. Svaka struktura može da se razlikuje ovako:
 
@@ -61,11 +61,11 @@ Ako ste odlučili da na Tajvanu ustanovite samostalno pravno lice, treba izabrat
 
 ### Društvo sa ograničenom odgovornošću: upravljanje je jednostavnije, ali je prenos udela relativno zatvoren
 
-Može da se obrazuje s 1 ili više fizičkih lica, ili s tajvanskim ili stranim pravnim licima kao članovima (股東); članovi načelno odgovaraju do visine udela. Direktori su od 1 do 3 i biraju se između članova. Članovi koji ne izvršavaju poslove mogu da vrše pravo nadzora, pa nije potrebno posebno imenovati nadzornika (監察人). Ako statut ne predviđa drugačije, 1 član ima 1 glas, pa se kontrola ne mora poklapati s odnosom uloga. Prenos uloga običnog člana načelno zahteva saglasnost više od polovine glasačkih prava ostalih; za direktora je potrebno 2/3 ili više. Zato bolje odgovara jednostavnim odnosima članova i stabilnoj kontroli nego čestom prikupljanju kapitala ili prometu udelima. Kasnije se može pretvoriti u akcionarsko društvo.
+Može da se obrazuje s 1 ili više fizičkih lica, ili s tajvanskim ili stranim pravnim licima kao članovima (股東); članovi načelno odgovaraju do visine udela. Upravni odbor ima od 1 do 3 člana, koji se biraju između članova. Članovi koji ne izvršavaju poslove mogu da vrše pravo nadzora, pa nije potrebno posebno imenovati nadzornika (監察人). Ako statut ne predviđa drugačije, 1 član ima 1 glas, pa se kontrola ne mora poklapati s odnosom uloga. Prenos uloga običnog člana načelno zahteva saglasnost više od polovine glasačkih prava ostalih; za člana upravnog odbora je potrebna saglasnost 2/3 ili više glasačkih prava ostalih članova. Zato bolje odgovara jednostavnim odnosima članova i stabilnoj kontroli nego čestom prikupljanju kapitala ili prometu udelima. Kasnije se može pretvoriti u akcionarsko društvo.
 
 ### Akcionarsko društvo: primereno ako treba primiti druge investitore ili se razmatra uvrštenje
 
-Kapital se deli na akcije. Načelno su potrebna 2 ili više akcionara, ali država ili pravno lice mogu da ga osnuju sami, a strano pravno lice može da drži 100 %. Akcije su načelno slobodno prenosive, uz zakonske izuzetke; prema propisima mogu da se osmisle vrste akcija, opcije za zaposlene i slično. Zato odgovara preduzećima koja očekuju investitore, promet akcijama, akcione nagrade zaposlenima ili buduća spajanja, preuzimanja, uvrštenje ili upis u režim akcija u nastajanju (興櫃); ne ograničava se samo na velika preduzeća. U upravljanju društvo koje nije izvršilo javnu emisiju može statutom da ne ustanovi odbor direktora i da ima samo 1 ili 2 direktora. Društvo s jedinim državnim ili pravnim akcionarom može statutom da ne ustanovi nadzornika. Takođe nije svako akcionarsko društvo dužno da godišnje finansijske izveštaje podvrgne reviziji ovlašćenog računovođe (會計師). Glavni pragovi revizije običnog društva jesu uplaćeni kapital 30.000.000 TWD, ili, i ispod te granice, poslovni prihod 100.000.000 TWD ili 100 zaposlenih prijavljenih na radno osiguranje (勞工保險); društva javne emisije (公開發行公司) primenjuju propise o hartijama od vrednosti.
+Kapital se deli na akcije. Načelno su potrebna 2 ili više akcionara, ali država ili pravno lice može da ga osnuje i samo, a strano pravno lice može da drži 100 %. Akcije su načelno slobodno prenosive, uz zakonske izuzetke; prema propisima mogu da se osmisle vrste akcija, opcije za zaposlene i slično. Zato odgovara preduzećima koja očekuju investitore, promet akcijama, akcione nagrade zaposlenima ili buduća spajanja, preuzimanja, uvrštenje ili upis u režim akcija u nastajanju (興櫃); ne ograničava se samo na velika preduzeća. U upravljanju društvo koje nije izvršilo javnu emisiju može statutom da ne ustanovi odbor direktora i da ima samo 1 ili 2 člana upravnog odbora. Društvo s jedinim državnim ili pravnim akcionarom može statutom da ne ustanovi nadzornika. Takođe nije svako akcionarsko društvo dužno da godišnje finansijske izveštaje podvrgne reviziji ovlašćenog računovođe (會計師). Glavni pragovi revizije običnog društva jesu uplaćeni kapital 30.000.000 TWD, ili, i ispod te granice, poslovni prihod 100.000.000 TWD ili 100 zaposlenih prijavljenih na radno osiguranje (勞工保險); društva javne emisije (公開發行公司) primenjuju propise o hartijama od vrednosti.
 
 ## 4. Postupci ogranka i zavisnog društva razlikuju se; samo zavisno društvo prolazi ocenu Odeljenja za pregled i odobravanje investicija Ministarstva ekonomije
 
@@ -83,7 +83,7 @@ Za rukovodioca tajvanskog zavisnog društva i ogranka stranog društva zahtev za
 
 ## 7. Strukture koje mogu da se porede prema stepenu razvoja preduzeća
 
-Sledeće situacije jesu hipotetičke radi podrške razmišljanju; ne obećavaju određeni ishod da je određeni način zakonit ili bolji.
+Sledeće situacije jesu hipotetičke radi podrške razmišljanju; ne obećavaju da je određeni način zakonit ili bolji.
 
 **Strana preduzeća usmerena na početni izvoz.** Ako na Tajvanu još nema zaposlenih niti zaliha i želite da proverite potražnju preko nezavisnog distributera, može se najpre oceniti isporuka, odnos distribucije i obim delatnosti na Tajvanu. Sam ugovor o distribuciji međutim ne rešava sva pitanja regulacije na Tajvanu.
 

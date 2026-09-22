@@ -30,7 +30,7 @@ Ovaj članak razlikuje tri situacije: novo osnivanje automobilskog teretnog prev
 
 ## 1. Obim logističke delatnosti i automobilskog teretnog prevoza (汽車貨運業)
 
-Dozvola za automobilski teretni prevoz nije uvek potrebna. „Logistika“ je širok praktični pojam; potreba za dozvolom ne određuje se samo prema nazivu društva ili upisanim delatnostima (營業項目) u registru društva. Ako društvo prima naknadu i tuđi teret prevozi teretnim automobilom, delatnost može da spada u automobilski teretni prevoz. Nasuprot tome, skladištenje, pakovanje, rad sistema, otpremanje u svojstvu pošiljaoca (貨主), posredovanje u prevozu i slične delatnosti treba ocenjivati pojedinačno prema ugovornom odnosu, prevoznoj odgovornosti, sadržaju naknade i stvarnom stanju korišćenja vozila.
+Dozvola za automobilski teretni prevoz nije uvek potrebna. „Logistika“ je širok praktični pojam; potreba za dozvolom ne određuje se samo prema nazivu društva ili upisanim delatnostima (營業項目) u registru društva. Ako društvo prima naknadu i tuđi teret prevozi teretnim automobilom, delatnost može da spada u automobilski teretni prevoz. Nasuprot tome, skladištenje, pakovanje, rad sistema, otpremanje u svojstvu pošiljaoca (貨主), špediciju, odnosno posredovanje u prevozu (運送承攬), i slične delatnosti treba ocenjivati pojedinačno prema ugovornom odnosu, prevoznoj odgovornosti, sadržaju naknade i stvarnom stanju korišćenja vozila.
 
 Tajvanski Zakon o putevima (公路法) uređuje automobilsku prevoznu delatnost (汽車運輸業) kao delatnost koja uz naknadu prevozi putnike ili teret automobilom. Društvo zato ne postaje odmah automobilski teretni prevoz samo zato što pruža logističku uslugu u širem smislu. Nasuprot tome, čak i kada je ugovor sastavljen kao špedicija ili rad platforme, ako društvo stvarno prima vozarinu kao prevozilac (運送人) i snosi odgovornost za raspodelu vozila, korišćenje i štetu na teretu, samim nazivom ne može da izbegne primenu propisa.
 
@@ -84,7 +84,7 @@ Sticanjem akcija dozvola se ne prenosi. Pri sticanju akcija dozvola se ne stiče
 
 ### Razlika između sticanja akcija i prenosa delatnosti ili imovine
 
-Pri sticanju akcija kupac postaje akcionar, dok ciljno društvo, nosilac dozvole, i dalje postoji kao isto pravno lice. Iznos uplaćen radi sticanja akcija jeste cena prenosa akcija, a ne kapital. Prema okolnostima stvari posebno se sprovode prethodno odobrenje Ministarstva ekonomije, odobrenje grane prema članu 35 Zakona o putevima, utvrđivanje visine investicije (投資額審定) posle prenosa, promena društva kod akcionara, direktora i odgovornog lica i zahtev za izmenu kod nadležnog organa za puteve.
+Pri sticanju akcija kupac postaje akcionar, dok ciljno društvo, nosilac dozvole, i dalje postoji kao isto pravno lice. Iznos uplaćen radi sticanja akcija jeste cena prenosa akcija, a ne kapital. Prema okolnostima stvari posebno se sprovode prethodno odobrenje Ministarstva ekonomije, odobrenje grane prema članu 35 Zakona o putevima, provera visine investicije posle doznake sredstava (投資額審定), promena društva kod akcionara, članova upravnog odbora i odgovornog lica i zahtev za izmenu kod nadležnog organa za puteve.
 
 Nasuprot tome, čak i kada drugo pravno lice primi prenos delatnosti ili imovine, poslovna dozvola za prevoz prenosioca sama po sebi ne prelazi na sticaoca. Vozila, registarske tablice za komercijalnu upotrebu, parkirališne objekte, ugovore, zaposlene, osiguranje i poslovne dozvole treba potvrditi svaku, a dozvolu za pripremu osnivanja, poslovnu dozvolu za prevoz i ostala odobrenja potrebna sticaocu treba urediti pre izvršenja transakcije.
 
@@ -102,7 +102,7 @@ Najmanje sledeće tačke treba suštinski potvrditi poređenjem dokaza i izvorni
 - Osiguranje vozila, tereta i odgovornosti, prava obezbeđenja, lizing i finansiranje
 - Važne ugovore i klauzule o promeni kontrole koji se tiču pošiljalaca, preduzetnika kojima je posao poveren, sistema i skladišta
 
-U ugovoru se utvrđuju izjave i jemstva, odložni uslovi, postupanje ako dozvola nije pribavljena, usklađivanje cene, naknada, predaja, obrtna sredstva i način prenosa vozila i ugovora. Redosled potrebnog odobrenja strane investicije, odobrenja grane Ministarstva saobraćaja, odobrenja izmene nadležnog organa za puteve i korporativnih etapa treba uskladiti s uslovima zaključenja transakcije.
+U ugovoru se utvrđuju izjave i jemstva, odložni uslovi, postupanje ako dozvola nije pribavljena, usklađivanje cene, obeštećenje, šta se predaje pri zaključenju, obrtna sredstva i način prenosa vozila i ugovora. Redosled potrebnog odobrenja strane investicije, odobrenja grane Ministarstva saobraćaja, odobrenja izmene nadležnog organa za puteve i korporativnih etapa treba uskladiti s uslovima zaključenja transakcije.
 
 ## 4. Poveravanje prevoza i otpreme drugom i rad stranaca
 
@@ -112,13 +112,13 @@ To se ne može oceniti jedinstveno. Ocena se razlikuje prema tome da li onaj ko 
 
 Pošiljalac ili društvo logističkih usluga može i da poveri stvarni prevoz tajvanskom preduzetniku automobilskog teretnog prevoza koji ima dozvolu. Potreba za dozvolom i raspodela odgovornosti međutim razlikuju se prema tome da li onaj ko poverava jeste samo pošiljalac ili posrednik u prevozu, ili sam postaje prevozilac po ugovoru o prevozu i prima vozarinu. Ugovorna uloga, fakturisanje kupcu, nalog za raspodelu, upravljanje vozačima i vozilima i reagovanje na štetu na teretu moraju da se slažu sa stvarnim obavljanjem delatnosti.
 
-Treba potvrditi važenje poslovne dozvole za prevoz preduzetnika kome je posao poveren i obim dozvole, stvarno korišćena komercijalna vozila, vozače, osiguranje i preduzetnike daljeg poveravanja. Ne sme se dopustiti pozajmljivanje poslovne dozvole za prevoz niti stvarni prevoz preduzetnikom bez dozvole. Način poveravanja može zahtevati manju početnu stalnu investiciju nego priprema sopstvenih vozila i parkirališta, ali zavisnost od preduzetnika s dozvolom, nivo usluge, gubitak, oštećenje i zakašnjenje tereta, osiguranje, lične i logističke podatke, dalje poveravanje, naknadu i postupak predaje podataka, tereta i brige o kupcu pri prestanku ugovora, kao i povezane rizike, treba urediti u ugovoru.
+Treba potvrditi važenje poslovne dozvole za prevoz preduzetnika kome je posao poveren i obim dozvole, stvarno korišćena komercijalna vozila, vozače, osiguranje i preduzetnike daljeg poveravanja. Ne sme se dopustiti pozajmljivanje poslovne dozvole za prevoz niti stvarni prevoz koji obavlja preduzetnik bez dozvole. Način poveravanja može zahtevati manju početnu stalnu investiciju nego priprema sopstvenih vozila i parkirališta, ali zavisnost od preduzetnika s dozvolom, nivo usluge, gubitak, oštećenje i zakašnjenje tereta, osiguranje, lične i logističke podatke, dalje poveravanje, obeštećenje i postupak predaje podataka, tereta i brige o kupcu pri prestanku ugovora, kao i povezane rizike, treba urediti u ugovoru.
 
 ### Investicija, radna dozvola i boravak jesu različiti postupci
 
 Čak i kada stranac postane akcionar ili investitor ciljnog društva, ta činjenica mu sama po sebi ne daje pravo na rad niti boravišni status na Tajvanu. Ako na Tajvanu obavlja svakodnevni posao, kao upravljanje društvom, prodaju, raspodelu vozila i brigu o kupcu, mora pre početka rada da potvrdi da li mu je potrebna radna dozvola koja odgovara stvarnoj funkciji, i posebno da sprovede kasniji boravišni postupak.
 
-Na rad bez dozvole mogu se primeniti upravna novčana kazna i nalog za napuštanje Tajvana (限令出國). Važeće radne smernice o zabrani ulaska (禁止入國) Imigracione uprave Ministarstva unutrašnjih poslova (內政部移民署) utvrđuju načelno kod nedozvoljenog rada razdoblje zabrane ulaska od 3 godine, ali se mogu primeniti zahtevi za oslobođenje ili skraćenje razdoblja koje iste smernice utvrđuju. Ishod se ne određuje mehanički samo zato što postoji prijava trećeg lica, i nadležni organ ocenjuje činjenične okolnosti, merodavna pravila i okolnosti svake stvari.
+Na rad bez dozvole mogu se primeniti upravna novčana kazna i nalog za napuštanje Tajvana (限令出國). Važeće upravne smernice o zabrani ulaska (禁止入國) Imigracione uprave Ministarstva unutrašnjih poslova (內政部移民署) utvrđuju načelno kod nedozvoljenog rada razdoblje zabrane ulaska od 3 godine, ali se mogu primeniti zahtevi za oslobođenje ili skraćenje razdoblja koje iste smernice utvrđuju. Ishod se ne određuje mehanički samo zato što postoji prijava trećeg lica, i nadležni organ ocenjuje činjenične okolnosti, merodavna pravila i okolnosti svake stvari.
 
 ## Zvanični izvori
 

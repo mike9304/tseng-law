@@ -77,7 +77,7 @@ pravo Tajvana, prema tome da li je krivica na strani poslodavca,
 
 ili na strani zaposlenog,
 
-daje toj strani pravo da otpremninu ne isplati ili da je zahteva.
+daje poslodavcu pravo da otpremninu ne isplati, a zaposlenom pravo da je zahteva.
 
 Ponekad, ako krivica leži na obe strane radnog odnosa,
 

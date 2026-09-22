@@ -862,7 +862,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Ove informacije napisane su na srpskom, ali konsultacija sa advokatkinjom ili advokatom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom.',
     discoveryNotice:
-      'Datoteka llms.txt samo je mapa za pronalaženje javnih stranica; ne obećava plasman u pretrazi, podršku, preporuku veštačke inteligencije niti zagarantovanu vidljivost.',
+      'Datoteka llms.txt samo je mapa za pronalaženje javnih stranica; ne obećava plasman u pretrazi, odobravanje, preporuku veštačke inteligencije niti zagarantovanu vidljivost.',
     confidentialNotice:
       'Budući da se izvorni tekst čuva, u početnoj fazi ne pišite ono što još nije potrebno, na primer broj pasoša, broj isprave ili podatke o računu.',
   },

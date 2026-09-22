@@ -20,7 +20,7 @@ faq:
 
 ![Glavni prikaz ocene imovine društva i ostatka imovine u postupku prestanka društva na Tajvanu](../images/002-withdraw-capital-taiwan-company/featured-01.png)
 
-Nakon osnivanja društva na Tajvanu, kada padne odluka o prestanku delatnosti, prvo pitanje često biva da li se kapital (資本額) koji je prvobitno uplaćen može odmah preneti na račun člana društva sa ograničenom odgovornošću ili akcionara (股東). Čim je međutim ulog ušao na račun društva, taj novac čini imovinu društva. Imovina društva pripada društvu i nije privatna imovina akcionara. Ovo načelo se ne menja time što neko poseduje društvo u celini ili je jedini direktor (董事).
+Nakon osnivanja društva na Tajvanu, kada padne odluka o prestanku delatnosti, prvo pitanje često biva da li se kapital (資本額) koji je prvobitno uplaćen može odmah preneti na račun člana društva sa ograničenom odgovornošću ili akcionara (股東). Čim je međutim ulog ušao na račun društva, taj novac čini imovinu društva. Imovina društva pripada društvu i nije privatna imovina akcionara. Ovo načelo se ne menja time što neko poseduje društvo u celini ili je jedini član upravnog odbora (董事).
 
 Akcionari zato ne mogu slobodno da dižu sredstva ili imovinu društva samo zato što su ranije uneli ulog. Sredstva na ime društva, potraživanja, oprema, vozila, nepokretnosti, kaucije i prava intelektualne svojine moraju sva da se rešavaju u okviru prava i obaveza društva. Nasuprot tome, ako postoji stvarni dug društva prema akcionarima, postojanje i osnov otplate treba oceniti ugovorom, dokazima o prenosu, knjigama i odlukama.
 
@@ -50,7 +50,7 @@ U likvidaciji izmirenje poverilaca i poreza prethodi povratku investicije akcion
 
 Ostale građanske, krivične i poreske odgovornosti zavise od konkretnih činjenica, kao što su svrha kretanja sredstava, ovlašćenje, dokazi, knjigovodstveni prikaz i odnos strana. Iz same činjenice da je određeni posao nastupio ne može se izvoditi da je krivično delo povrede poverenja (背信) ili slično delo nužno ostvareno; nasuprot tome, jedno unutrašnje odobrenje ne isključuje svaku odgovornost. Treba oceniti, posao po posao, da li se odluka, ugovor, obračun i poreska prijava, bankarski prometi i knjige slažu.
 
-U praksi je korisno najpre odvojiti spisak imovine na ime društva od imovine na privatno ime akcionara i u posebnoj tabeli urediti potraživanja i dugove između društva i akcionara. Ako se privatni troškovi plaćeni karticom društva, troškovi društva koje je predujmilo odgovorno lice (公司負責人), iznosi koje je društvo pozajmilo od akcionara i iznosi koje su akcionari podigli iz društva prebiju na jednom računu, osnov poslova može postati nejasan. Datum nastanka, svrhu, lice koje je odobrilo, dokaze i poreski prikaz svakog iznosa treba povezati pojedinačno.
+U praksi je korisno najpre odvojiti spisak imovine na ime društva od imovine na privatno ime akcionara i u posebnoj tabeli urediti potraživanja i dugove između društva i akcionara. Ako se privatni troškovi plaćeni karticom društva, troškovi društva koje je odgovorno lice (公司負責人) predujmilo, iznosi koje je društvo pozajmilo od akcionara i iznosi koje su akcionari podigli iz društva prebiju na jednom računu, osnov poslova može postati nejasan. Datum nastanka, svrhu, lice koje je odobrilo, dokaze i poreski prikaz svakog iznosa treba povezati pojedinačno.
 
 ## 2. Postupak trajnog prestanka društva
 
@@ -76,7 +76,7 @@ Sledeći redosled opšti je okvir ocene. Stvarni organ podnošenja, isprave, obj
 
 Iste isprave i isti redosled ne primenjuju se na svako društvo. Raspuštanje zbog spajanja, podele ili stečaja može načelno biti oslobođeno likvidacije. Nasuprot tome čak i pri dobrovoljnom raspuštanju nedovršeni sporovi, dugoročna potraživanja, nepokretnosti, obezbeđenje, zaposleni, poreski zaostaci ili složena struktura strane investicije mogu zahtevati druge postupke. Vreme potrebno za likvidaciju zavisi od takvih činjenica; odluke se ne mogu donositi uz pretpostavku određenog trajanja.
 
-Pri otuđenju imovine društva pre raspuštanja ili nakon njega treba oceniti primerenu naknadu i cenu, odnos interesa s direktorima i akcionarima, potrebno unutrašnje odobrenje i poreske posledice. Naročito poslove koji prenose imovinu na povezana lica ili opraštaju potraživanja treba posebno oceniti u pogledu dejstva za društvo i poverioce. Tok od prijema cene do unosa u knjige i poreske prijave bitan je.
+Pri otuđenju imovine društva pre raspuštanja ili nakon njega treba oceniti primerenu naknadu i cenu, interese članova upravnog odbora i akcionara, potrebno unutrašnje odobrenje i poreske posledice. Naročito poslove koji prenose imovinu na povezana lica ili opraštaju potraživanja treba posebno oceniti u pogledu dejstva za društvo i poverioce. Tok od prijema cene do unosa u knjige i poreske prijave bitan je.
 
 ## 3. Pri nedostatku aktive ili nesposobnosti plaćanja
 
@@ -96,21 +96,21 @@ Ako akcionari ili rukovodstvo žele da unesu sredstva u društvo ili da urede du
 
 Ako se sama delatnost nastavlja, ali je potrebni kapital manji ili se struktura kapitala uređuje, smanjenje kapitala može se oceniti kao zakoniti put vraćanja dela uloga uz očuvanje postojanja društva. Smanjenje kapitala međutim nije neformalno sredstvo podizanja kojim bi akcionari u svakom trenutku uzimali sredstva društva, i nije uvek moguće. Imovinsko stanje i oblik društva, svrhu smanjenja kapitala, statut i dejstvo za poverioce treba najpre oceniti.
 
-Smanjenje kapitala postupak je zakona o društvima koji menja visinu kapitala društva. Nije završeno time što nastupi bankarski prenos i stavka kapitala se smanji u knjigama. Odluku prilagođenu obliku društva, zaštitu poverilaca, ocenu kapitala i knjigovodstveni prikaz, stranu investiciju, poreze, prenos i upis promena treba sve oceniti. Potrebni kvorum odluke, objavu i obaveštenje, postupak prigovora i isprave za podnošenje mogu se razlikovati prema društvu sa ograničenom odgovornošću, akcionarskom društvu i datoj strukturi.
+Smanjenje kapitala je postupak zakona o društvima koji menja visinu kapitala društva. Nije završeno time što nastupi bankarski prenos i stavka kapitala se smanji u knjigama. Odluku prilagođenu obliku društva, zaštitu poverilaca, ocenu kapitala i knjigovodstveni prikaz, stranu investiciju, poreze, prenos i upis promena treba sve oceniti. Potrebni kvorum odluke, objavu i obaveštenje, postupak prigovora i isprave za podnošenje mogu se razlikovati prema društvu sa ograničenom odgovornošću, akcionarskom društvu i datoj strukturi.
 
-Pri oceni smanjenja kapitala dalje treba razmotriti iz čega se napaja iznos za vraćanje. Čak i kada društvo ima gotovinu, mora nakon plaćanja plata, poreza, cene isporuka, zajmova, kaucija i očekivanih operativnih troškova moći da nastavi delatnost. Ako smanjenje kapitala oslabi zaštitu poverilaca ili oteža ispunjenje dugova, postupak i odgovornost ocene direktora treba oceniti tačnije.
+Pri oceni smanjenja kapitala dalje treba razmotriti iz kojih sredstava se isplaćuje iznos za vraćanje. Čak i kada društvo ima gotovinu, mora nakon plaćanja plata, poreza, cene isporuka, zajmova, kaucija i očekivanih operativnih troškova moći da nastavi delatnost. Ako smanjenje kapitala oslabi zaštitu poverilaca ili oteža ispunjenje dugova, postupak i odgovornost članova upravnog odbora za tu procenu treba oceniti tačnije.
 
 Kod društava koja imaju strane akcionare moraju da se slažu sadržaj odobrenja ili obaveštenja o investiciji, promena spiska akcionara i visine kapitala i devizne i bankarske isprave prenosa. Prenos iznosa smanjenja u inostranstvo ne završava se odlukom; može biti potrebno pripremiti upisne isprave koje zahteva banka, isprave povezane s investicijom, poreske isprave i objašnjenje prirode sredstava. Knjigovodstvene razlike prema kursu i trenutku prenosa treba uneti u knjige.
 
 Oporezivanje iznosa koji akcionari prime zbog smanjenja kapitala ne utvrđuje se samo prema oznaci vraćanja ulogovnog kapitala. Sastav kapitala društva, način smanjenja kapitala, nabavnu cenu akcionara, prirodu raspodeljenog iznosa i oporezivanje u državi rezidentnosti treba oceniti zajedno. Porez po odbitku, prijavu, porez plaćen u inostranstvu i primenu merodavnih sporazuma treba oceniti prema svakom akcionaru i strukturi posla.
 
-Redovni operativni troškovi razlikuju se od smanjenja kapitala. Ako društvo stvarno primi potrebnu robu ili usluge i plaća primerenu naknadu, ugovor, podaci posla, poreski dokazi i ovlašćenje za plaćanje osnova su. Ako je isporučilac akcionar ili direktor, dalje treba oceniti nužnost i cenu posla, odobrenje odnosa interesa i uslove priznavanja troškova.
+Redovni operativni troškovi razlikuju se od smanjenja kapitala. Ako društvo stvarno primi potrebnu robu ili usluge i plaća primerenu naknadu, ugovor, podaci posla, poreski dokazi i ovlašćenje za plaćanje osnova su. Ako je isporučilac akcionar ili član upravnog odbora, dalje treba oceniti nužnost i cenu posla, odobrenje sukoba interesa i uslove priznavanja troškova.
 
-Dividende se takođe razlikuju od smanjenja kapitala i raspodele nakon likvidacije. Dividende pretpostavljaju deljivu dobit, finansijske isprave i odluku zahtevanu prema obliku društva; plaćanje prema akcionaru, porez po odbitku i prijava mogu uslediti. Sama gotovina na računu društva ne znači deljivu dobit; treba oceniti prenos gubitaka (累積虧損), zakonsku rezervu (法定盈餘公積) i neraspoređenu dobit (未分配盈餘).
+Dividende se takođe razlikuju od smanjenja kapitala i raspodele nakon likvidacije. Dividende pretpostavljaju deljivu dobit, finansijske isprave i odluku zahtevanu prema obliku društva; plaćanje prema akcionaru, porez po odbitku i prijava mogu uslediti. Sama gotovina na računu društva ne znači deljivu dobit; treba oceniti akumulirane gubitke (累積虧損), zakonsku rezervu (法定盈餘公積) i neraspoređenu dobit (未分配盈餘).
 
 Otplata zajmova koje društvo stvarno snosi takođe je zaseban posao. Ako su akcionari pozajmili novac društvu, treba oceniti trenutak zaključenja ugovora, prenos glavnice, kamate, dospelost, unos i stvarnu upotrebu. U stadijumu otplate treba oceniti porez po odbitku od kamata ili pitanja poslova između povezanih lica; treba izbeći naknadno preklasifikovanje uloga u zajmove.
 
-Najzad smanjenje kapitala, troškovi, dividende i otplata zajma: svako od toga mora da ima svoj osnov u ugovoru, odluci, dokazima, porezu po odbitku i sličnim elementima. Čak i kada plaćanje nastupi istog dana istom akcionaru, pravnu prirodu i poreski prikaz treba zabeležiti posebno prema poslu. Ako se pretpostavlja očuvanje društva, u ispravama odluke odbora direktora (董事會) ili akcionara treba zabeležiti da li nakon plaćanja ostaju mogući redovno poslovanje i otplata dugova.
+Najzad smanjenje kapitala, troškovi, dividende i otplata zajma: svako od toga mora da ima svoj osnov u ugovoru, odluci, dokazima, porezu po odbitku i sličnim elementima. Čak i kada plaćanje nastupi istog dana istom akcionaru, pravnu prirodu i poreski prikaz treba zabeležiti posebno prema poslu. Ako se pretpostavlja očuvanje društva, u ispravama odluke odbora direktora (董事會) ili akcionara treba zabeležiti da li će nakon plaćanja i dalje biti moguće redovno poslovanje i otplata dugova.
 
 ## 5. Obustava delatnosti kada prekid ne nastupa odmah
 
@@ -145,6 +145,6 @@ Pre isteka obustave delatnosti treba odlučiti da li se delatnost obnavlja, da l
 
 ---
 
-Ovaj članak opšta je pravna informacija i obrazovni dokument o prestanku tajvanskog društva i postupanju s imovinom društva; nije pravno mišljenje u određenoj stvari. Prilagođeni postupak raspuštanja, likvidacije, smanjenja kapitala i obustave delatnosti i poreska prijava mogu se razlikovati prema obliku društva, statutu, imovinskom stanju, poveriocima, stranoj investiciji i posebnom poslu; pre stvarne odluke ili kretanja sredstava datu stvar treba oceniti posebno.
+Ovaj članak je opšta pravna informacija i obrazovni dokument o prestanku tajvanskog društva i postupanju s imovinom društva; nije pravno mišljenje u određenoj stvari. Prilagođeni postupak raspuštanja, likvidacije, smanjenja kapitala i obustave delatnosti i poreska prijava mogu se razlikovati prema obliku društva, statutu, imovinskom stanju, poveriocima, stranoj investiciji i posebnom poslu; pre stvarne odluke ili kretanja sredstava datu stvar treba oceniti posebno.
 
 **Advokatkinja Wei Tseng (曾雋崴)**

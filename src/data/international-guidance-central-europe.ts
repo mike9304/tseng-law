@@ -1536,12 +1536,12 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Opšte objašnjenje na srpskom o obimu rada Hovering International Law Firm na Tajvanu, o jezicima konsultacije i o prvom kontaktu.',
       intro:
-        'Hovering International Law Firm zastupa klijente iz inostranstva, uključujući osobe sa vezom sa Tajvanom, u stvarima tajvanskog prava: investicije i osnivanje društava, građanske sporove, brak, porodicu i nasleđe, radno pravo, krivične stvari i intelektualnu svojinu. Ovaj srpski deo pomaže Vam da prepoznate koji rad spada u naš obim, šta da pripremite i kako da nas kontaktirate. Reč je o opštim informacijama, a ne o pravnom savetu za Vaš slučaj.',
+        'Hovering International Law Firm zastupa klijente iz inostranstva, uključujući lica povezana sa Tajvanom, u stvarima tajvanskog prava: investicije i osnivanje društava, građanske sporove, brak, porodicu i nasleđe, radno pravo, krivične stvari i intelektualnu svojinu. Ovaj srpski deo pomaže Vam da prepoznate koji rad spada u naš obim, šta da pripremite i kako da nas kontaktirate. Reč je o opštim informacijama, a ne o pravnom savetu za Vaš slučaj.',
       sections: [
         {
           heading: 'Čime se bavimo',
           paragraphs: [
-            'Hovering International Law Firm je advokatska kancelarija sa sedištem na Tajvanu. Radi po tajvanskom pravu i ima kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savetujemo preduzeća, vodimo sudske postupke i pratimo klijente iz inostranstva kroz korake koje na Tajvanu treba preduzeti.',
+            'Hovering International Law Firm je advokatska kancelarija sa sedištem na Tajvanu. Radi po tajvanskom pravu i ima kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savetujemo preduzeća, vodimo sudske postupke i sprovodimo klijente iz inostranstva kroz postupke koje na Tajvanu treba preduzeti.',
             'Sav sadržaj ovde je opšti. Ishod stvari zavisi od činjenica, od primenjivih propisa i od trenutka. Ove informacije ne zamenjuju razgovor sa advokatkinjom ili advokatom o Vašim dokumentima.',
           ],
         },
@@ -1600,7 +1600,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Brak, porodica i nasleđe',
           paragraphs: [
-            'Vodimo razvod (離婚), deobu imovine, vršenje ili nošenje prava i dužnosti prema maloletnoj deci (未成年子女權利義務之行使或負擔), viđanje (會面交往) i nasleđe (繼承), i kada se strane ili imovina nalaze u različitim državama. Prekogranične porodične stvari često zahtevaju dodatnu ocenu evidencije prebivališta (戶籍), forme isprava i njihove dokazne snage na Tajvanu.',
+            'Vodimo razvod (離婚), deobu imovine, vršenje ili snošenje prava i dužnosti prema maloletnoj deci (未成年子女權利義務之行使或負擔), viđanje (會面交往) i nasleđe (繼承), i kada se strane ili imovina nalaze u različitim državama. Prekogranične porodične stvari često zahtevaju dodatnu ocenu evidencije prebivališta (戶籍), forme isprava i njihove dokazne snage na Tajvanu.',
             'Budući da porodične stvari često nose rokove i paralelne postupke, prvi sažetak treba da navede odnos među stranama, sadašnje prebivalište i već pokrenute postupke.',
           ],
         },
@@ -1684,7 +1684,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Najpre se utvrđuje obim rada',
           paragraphs: [
-            'Stvari iste vrste mogu zahtevati veoma različit trud, prema broju strana, raspoloživim dokumentima, rokovima koje treba poštovati i prema tome da li je postupak već pokrenut. Prvi korak je zato uvek utvrditi šta u rad spada, a šta ne.',
+            'Stvari iste vrste mogu zahtevati veoma različit trud, prema broju stranaka, raspoloživim dokumentima, rokovima koje treba poštovati i prema tome da li je postupak već pokrenut. Prvi korak je zato uvek utvrditi šta u rad spada, a šta ne.',
             'Sažetak koji na početku pošaljete osnova je tog obima. Što jasnije opisuje tok, Vaš zahtev i rokove, to se obim može tačnije odrediti.',
           ],
         },
@@ -1705,7 +1705,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Zašto ova stranica ne navodi tarife',
           paragraphs: [
-            'Troškovi zavise od same stvari: od truda, broja strana, dokumenata, rokova i od toga da li postupak već teče. Unapred utvrđen iznos ne bi pokazao troškove Vašeg predmeta. Zato najpre utvrđujemo obim rada i troškove Vam saopštavamo potom, pre nego što rad počne.',
+            'Troškovi zavise od same stvari: od truda, broja stranaka, dokumenata, rokova i od toga da li postupak već teče. Unapred utvrđen iznos ne bi pokazao troškove Vašeg predmeta. Zato najpre utvrđujemo obim rada i troškove Vam saopštavamo potom, pre nego što rad počne.',
             'Pored nagrade mogu nastati sudske takse, troškovi organa ili trećih lica. Oni su od nagrade odvojeni i zavise od konkretnog postupka.',
           ],
         },
@@ -1764,7 +1764,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kako koristiti ovaj deo',
           paragraphs: [
-            'Ako ne nađete odgovor za svoju situaciju, odgovor obično zavisi od posebnih činjenica. Napišite ih zato u sažetak, umesto da odgovor sami izvlačite iz ove stranice.',
+            'Ako ne nađete odgovor za svoju situaciju, odgovor obično zavisi od posebnih činjenica. Napišite ih zato u sažetak, umesto da zaključak sami izvodite iz ove stranice.',
           ],
         },
       ],
@@ -1873,7 +1873,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mesto čuvanja i pružaoci usluga',
           paragraphs: [
-            'Ove stranice smeštene su kod kompanije Vercel, a Vaš zahtev čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se preko servisa elektronske pošte koji kancelarija koristi.',
+            'Ove stranice smeštene su kod kompanije Vercel, a Vaš zahtev čuva se u nejavnom skladištu podataka te usluge. Poruke elektronske pošte šalju se preko servisa elektronske pošte koji kancelarija koristi.',
             'Serveri pojedinih pružalaca mogu se nalaziti van Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha čuvanja ispunjena, podaci se brišu bez nepotrebnog odlaganja; podaci koje treba čuvati prema primenjivim propisima ostaju za to vreme. Zahteve u vezi sa ličnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },

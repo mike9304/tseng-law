@@ -27,9 +27,9 @@ Navedena pitanja i odgovori neka budu od pomoći licima koja razmatraju osnivanj
 
 Kada stranac osniva društvo na Tajvanu, mora da podnese investicioni plan (投資計畫書) Odeljenju za pregled i odobravanje investicija Ministarstva ekonomije (經濟部投資審議司) na ocenu.
 
-Odeljenje za pregled i odobravanje investicija mora da proveri da li se dati kapital (資本額) stvarno koristi u investicione svrhe
+Odeljenje za pregled i odobravanje investicija mora da proveri da li se dati kapital (資本額) stvarno koristi u investicione svrhe.
 
-i da li strana lica ne unose sredstva pod drugim izgovorom.
+Odeljenje takođe proverava da strana lica ne unose sredstva pod drugim izgovorom.
 
 Pri sastavljanju investicionog plana nije potrebno navesti tačnu adresu društva; dovoljno je navesti područje (primer: grad Tajpej). ​
 
@@ -51,9 +51,9 @@ treba da istovremeno sastavljate investicioni plan i tražite adresu upisa druš
 
 Prema članu 9 Zakona o ulaganju stranaca (外國人投資條例) odobreni ulog mora da stigne u celosti u roku koji odredi nadležni organ (核定期限); rok treba proveriti u aktu odobrenja svake stvari (u praksi se često određuje na oko godinu dana).
 
-U tom roku, nakon što se pronađe adresa društva i zaključi ugovor o zakupu,
+U tom roku ima dovoljno vremena da se pronađe adresa društva i zaključi ugovor o zakupu.
 
-ostaje dovoljno vremena da se u banci otvori pripremni račun i prenese kapital.
+U istom roku ima dovoljno vremena i da se u banci otvori pripremni račun i prenese kapital.
 
 ​
 
@@ -77,9 +77,9 @@ Odeljenje za pregled i odobravanje investicija Ministarstva ekonomije ocenjuje p
 
 ali ocena nije pretirano stroga.
 
-Možete navesti raznovrsno radno iskustvo, uključujući poslove sa nepunim radnim vremenom,
+Možete navesti raznovrsno radno iskustvo, uključujući poslove sa nepunim radnim vremenom.
 
-i izložiti ga detaljno tako da se lica koja vrše ocenu mogu uveriti.
+Iskustvo izložite detaljno, tako da se lica koja vrše ocenu mogu uveriti.
 
 U ovoj tački stvar treba temeljno razmotriti s advokatkinjom ili advokatom na Tajvanu.
 
@@ -87,7 +87,7 @@ U ovoj tački stvar treba temeljno razmotriti s advokatkinjom ili advokatom na T
 
 **4. Na šta treba obratiti pažnju kada se zakupljuje adresa upisa društva (na primer ugostiteljski lokal)?**
 
-Osnivanje društva traje oko **3 meseca**, sticanje radne dozvole (工作許可) i isprave o boravku stranca oko **jedan mesec**,
+Osnivanje društva traje oko **3 meseca**, a sticanje radne dozvole (工作許可) i isprave o boravku stranca traje još oko **jedan mesec**,
 
 zato datum početka ugovora treba odrediti što kasnije.
 
@@ -119,9 +119,9 @@ Dalje, pri konačnom upisu društva i gradska uprava (市政府) zahteva da adre
 
 ako je reč o kancelarijskom prostoru, upis društva (公司登記) tada nije moguć.
 
-Npr. ako je reč o delatnostima mogućim u kancelarijskom prostoru, kao što su reklama ili veleprodaja, društvo se može osnovati u kancelarijskom prostoru. Pre zaključenja ugovora o zakupu
+Npr. ako je reč o delatnostima mogućim u kancelarijskom prostoru, kao što su reklama ili veleprodaja, društvo se može osnovati u kancelarijskom prostoru.
 
-to unapred proverite.
+To unapred proverite pre zaključenja ugovora o zakupu.
 
 *Ako Vam je potrebna pomoć u vezi s tajvanskim pravom, kancelarija radi na engleskom, kineskom (中文), japanskom i korejskom; na komentare na sajtu se ne odgovara.*
 

@@ -543,10 +543,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'يُرجى إدخال عنوان بريد إلكتروني صحيح.',
     tooLongMessage: 'النص طويل جدًا. يُرجى اختصاره ثم إعادة الإرسال.',
     sourceLanguageNotice:
-      'هذا المقال متاح بـ{language} فقط، والرابط يفتح الصفحة الأصلية بتلك اللغة.',
+      'هذا المقال متاح باللغة {language} فقط، والرابط يفتح الصفحة الأصلية بتلك اللغة.',
     unavailableTranslationNotice:
       'هذا العنصر غير مترجَم بعد إلى لغة هذه الصفحة. اضغط الرابط الذي يذكر اللغة الأصلية لقراءة النص الأصلي.',
-    unavailableLanguageNotice: 'هذه الصفحة غير متاحة بـ{language}.',
+    unavailableLanguageNotice: 'هذه الصفحة غير متاحة باللغة {language}.',
     languageOptions: {
       en: 'الإنجليزية (English)',
       'zh-hant': 'الصينية (中文)',

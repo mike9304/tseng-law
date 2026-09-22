@@ -43,7 +43,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ومن لحقه ضرر من الجريمة يمكن وفق المادة 487 من قانون الإجراءات الجزائية رفع دعوى مدنية تبعية في القضية الجزائية. وإذا كانت المحاكمة الجزائية قائمة أمكن الرفع حتى ختام المرافعة في الدرجة الثانية وفق المادة 488 من قانون الإجراءات الجزائية، غير أنه لا يمكن الرفع بعد ختام مرافعة الدرجة الأولى وقبل رفع الطعن. ويمكن عادة تجنّب دفع رسم قضائي منفصل، غير أن النتائج لا تنتهي كلها بلا نفقة. فمثلًا إذا رُفضت القضية الجزائية وأُحيلت إلى المحكمة المدنية بطلب المدعي، أمكن تحمّل نفقات الدعوى وفق المادة 503 من قانون الإجراءات الجزائية، وينبغي التحقق معها من أحكام الإحالة والإجراء في المادة 504.
 
-ويختلف الاختيار بحسب ما إذا انقطع التقادم، ونطاق المدعى عليهم، والأدلة، والتأمين، والاختصاص. لذلك لا يوجد إجراء هو الأفضل على نحو موحّد لكل القضايا.
+ويختلف الاختيار بحسب ما إذا انقطع التقادم، ونطاق المدعى عليهم، والأدلة، والتأمين، والاختصاص. لذلك لا يوجد إجراء واحد هو الأنسب لكل القضايا.
 
 ## Q4. إذا وُجد خطأ لدى الطرفين، كيف تُنظر المسؤولية الجزائية والمدنية؟
 
@@ -131,8 +131,8 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 - [المادة 216 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [المادة 504 من قانون الإجراءات الجزائية](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
 - [إرشاد اليوان القضائي (司法院) بشأن توسيع المطالبة بعد الإحالة](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
-- [حكم محكمة مقاطعة جيايي في نفقة رعاية الأسرة](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
-- [حكم محكمة مقاطعة تاينان في نفقة التنقل للعلاج](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
+- [حكم المحكمة الابتدائية في جيايي بشأن نفقة رعاية الأسرة](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
+- [حكم المحكمة الابتدائية في تاينان بشأن نفقة التنقل للعلاج](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
 ## Q11. كيف يُثبت الدخل الفائت في مدة العلاج والتعافي؟
@@ -184,11 +184,11 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 - [المادة 193 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [المادة 216 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [المادة 217 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [حكم المحكمة العليا في تايوان (臺灣高等法院) رقم 644 لسنة 109 (2020) في الاستئناف الجزائي الميسَّر (上易字)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [حكم المحكمة العليا في تايوان (臺灣高等法院) رقم 477 لسنة 109 (2020) في الاستئناف الجزائي الميسَّر (上易字)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [حكم المحكمة العالية في تايوان (臺灣高等法院) رقم 644 لسنة 109 (2020) في الاستئناف الجزائي الميسَّر (上易字)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [حكم المحكمة العالية في تايوان (臺灣高等法院) رقم 477 لسنة 109 (2020) في الاستئناف الجزائي الميسَّر (上易字)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [حاسبة القيمة الحالية لهوفمان لدى اليوان القضائي (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [المادة 195 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [حكم محكمة مقاطعة تاويوان رقم 236 لسنة 112](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [حكم المحكمة الابتدائية في تاويوان رقم 236 لسنة 112](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [المادة 188 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [المادة 284 من قانون العقوبات (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [قانون التأمين الإلزامي لمسؤولية السيارات](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)

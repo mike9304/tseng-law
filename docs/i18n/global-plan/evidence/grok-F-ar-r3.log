@@ -1,0 +1,127 @@
+WO-F-ar r3 — Grok 4.7 fix lane — 2026-09-23
+Locale: Arabic (Modern Standard, Gulf/Levant readers)
+Workspace: /Users/son7/Projects/tseng-law-fix-ar-r3
+No git add/commit/push.
+
+Reviews: docs/i18n/global-plan/reviews/native/rounds/r3/ar-a.md (28 rows), ar-b.md (26 rows).
+Rules applied: RULEBOOK-FIX R2–R10 where an instance remained; ACCEPTED-ROUND skip rules.
+Guidance edits are in international-guidance-content.ts (ar strings) and international-inquiry-copy.ts (ar). llms-txt ar notices were not rewritten: consultationNotice and confidentialNotice still match the published FAQ and privacy sentences.
+
+## Rows applied
+
+Part a
+1 P1 003: 高等法院 «المحكمة العليا» → «المحكمة العالية» (2 links). District-court sweep in the same file: مقاطعة جيايي / تاينان / تاويوان → المحكمة الابتدائية (3).
+2 P1 004 link label: «قانون ضريبة الأعمال» → the 001 wording for the same URL, «الأحكام المتعلقة بمعدل الخصم من المنبع على أرباح أسهم غير المقيم». Digit 10 kept as (المادة 10); see reviewer-wrong. URL unchanged.
+3 P1 009: «سواء / الطرفين» split across the existing three blocks so the right depends on who is at fault (employer may be excused; the worker may claim). Blocks not merged.
+4 P2 008 difficulty row: cells are now سهل / صعب / سهل. Header «الصعوبة». Row not deleted.
+5 P2 008 B anecdote: the open question is closed as «إثبات استحقاق B لبدل إنهاء الخدمة وفق القانون» plus «سرد لواقعة سابقة، لا وعد بنتيجة». «كبيرًا» not used; see reviewer-wrong.
+6 P2 009 closing: «أقدر على حماية حقه» (the extra «ضمان لنتيجة» hedge dropped). Same block.
+8 P2 004 issuer: FAQ + body + §4 «ليس مُصدِرًا مستقلًا» and cannot itself be listed. Gloss (公開發行公司) kept on the FAQ/body sentence.
+9 P2 004: «التطبيق المتكرر» → «تقييد الجمع بين الحوافز» (FAQ + body).
+10 P2 002: «حق طويل» → «ذمم مدينة طويلة الأجل».
+11 P2 007: ابن / أبناء for 未成年子女 → طفل / أطفال (69 sites: 51 الابن, 16 أبناء, 2 other ابن spellings including للابن). 016 «للابن» → «للطفل» (1).
+12 P2 007: unauthorized account access. Wording used is «الدخول إلى الحساب دون إذن». «غير المصرّح» contains the nationality token مصر and fails the checker.
+13 P2 guidance retention: «بحكم النظام» → «التزام قانوني» in the access sentence and the processors sentence (2).
+14 P2 001: «قيمة تصدير واستيراد لا تقل» (4: both thresholds, FAQ and body).
+17 P2 005: the split bank-account sentence was not merged. Each block now stands: «يبدأ ذلك بعد تسلم…» / «عندئذٍ يمكن للمسؤول…».
+18 P2 guidance: «ثلاثة أمور مستقلة» and «لكل منها معنى خاص».
+19 P2 guidance: «لا التزامٌ» after «خطوة تأكيد». The «ليس التزامًا» sentence (ليس + accusative) was left.
+20 P2 inquiry: «باللغة {language}» on both notices (2).
+21 P2 «على نحو موحّد» calque of universally/solely/categorically: 12 (001×2, 002×2, 003×1, 004×3, 014×1, 017×3). Unified-ID «الموحّد» and «شروط تأسيس موحّدة» left.
+23 P2 006: «يحمي فرص عمل المكفوفين وحق بقائهم».
+24 P2 custody term «تجاه»: 007 three phrases; 016 fourteen (title, H1, FAQ, body, §5 heading); guidance services page 1. Form used: «ممارسة حقوق الطفل القاصر وتحمّل واجباته» (gloss kept).
+25 P2 guidance: «الفعل الضار».
+26 P2 guidance: «إرشاد خاص من المحامي».
+27 P2 guidance: «مكان غير متاح للعموم».
+
+Part b
+1 P1 011: the contract must name which records are handed over, how, and whether access survives.
+2 P2 010: «ظروف أطراف القضية».
+3 P2 011: «موزّع» for the distributor (two phrases in that paragraph). The FAQ «من يتولى التوزيع» and the contractual label «الوكيل» were left.
+4 P2 011: «الغرض وشكل المستحضر».
+5 P2 012: assessment conclusion «اعتُبر» / «الاستنتاج», not a court «حكم».
+6 P2 013: «اختفاء أجانب» (كثير dropped next to كثرت).
+7 P2 016: «أساس حساب كل نظام».
+8 P2 016: «ولا تُحتسب نتيجة حساب أحد النظامين مرة أخرى في الآخر».
+9 P2 017: plate surrender for deregistration (繳銷), not a refund. Body sentence and the following «الشطب بسبب رد لوحة» (2).
+11 P2 010: «فقد يستلزم إثباتها مواد طبية أو مستندات دخل أو مواد مهنية أو رأي خبير».
+13 P2 014: «تمييز من تحمّل التكلفة النهائية» (في من not joined as فيمن; the في was dropped).
+14 P2 016: «ولا يحصل الزوج الباقي على قيد الحياة حتمًا» (FAQ + body).
+15 P2 016: «ومن المفيد متابعة إجراءات المحكمة…».
+16 P2 018: director share transfer is explicit. «ثلثين» kept as its own word («موافقة تبلغ ثلثين فأكثر») so the checker still sees 2 and 3. «ثلثي» is not in the Arabic number lexicon.
+18 P2 010: «ولا تحسم نسبة العاهة وحدها… ولا تُحسب الخسارة تلقائيًا حتى سن التقاعد».
+19 P2 filing «قضية» → «كل حالة»: 011 FAQ+body (2), 017 sequence, timetable, and share acquisition (3). Real lawsuits and «قضية فردية» disclaimers left.
+20 P2 011: «يرتبّان النتيجة نفسها».
+21 P2 011: «تُبقى إجراءات» for the checklist item.
+22 P2 013: «قال … مباشرة ما يلي» so «ذلك» is not a backward pointer. The next block still carries the tightened account-opening sentence. Blocks not merged.
+23 P2 016: «كلٌّ على حدة» for the two calculations.
+24 P2 016: «أو في الدعوى».
+25 P2 018: «وجود مسجَّل وفق المادة 386».
+26 P2 018: «تُقارَن … بحسب الوقائع».
+
+## Rows skipped
+
+a7 — Not applied. RULEBOOK R3 and ACCEPTED-ROUND forbid turning the 3-month / 4-month / 6-month sentences back into «courts generally impose». The current «في بعض الأحكام … وليست عقوبة نمطية ولا نتيجة مضمونة» is the required hedge. Digits 3, 4, and 6 stay.
+a15 / b12 — U+200B not deleted, including 005 `**​**` and the 013/015 spacer lines. checkBlocks compares the ZWSP count with the Korean source. Deleting them fails the checker. Block counts were not changed.
+a16 — Q16–Q20 were not promoted to headings. checkHeadings compares the heading-level list with the Korean source.
+a28 P3 — «TWD 1.57M» in the Arabic bio left byte-identical (pinned).
+b10 — Not applied. English §4 ends with «The foregoing is contract-design advice.» The no-guarantee sentence stays. Replacing the first sentence with a branch-vs-subsidiary comparison would change the English proposition.
+b17 — Not applied. English and Korean headings also jump from 5 to 7, then 8. Renumbering changes a digit the checker counts.
+
+a17 is applied only as two free-standing blocks, not as the reviewer’s merged sentence.
+
+## Systemic patterns and instance counts
+
+- «على نحو موحّد» for universally / solely / categorically: 12. «رقم الهوية الموحّد» and «شروط تأسيس موحّدة» left.
+- Minor child ابن/أبناء → طفل/أطفال: 69 in 007, plus 016 «للابن» 1.
+- Custody «تجاه» (rights pointed at the child): 3 in 007, 14 in 016, 1 on the guidance services page.
+- Court rank: 高等法院 2, 地方法院 «مقاطعة» 3. No other «المحكمة العليا» for 高等法院.
+- Filing «قضية» where the English is a matter/filing, not a lawsuit: 5. Lawsuit and disclaimer uses left.
+- Distributor «وكيل بيع» in the 011 operating-structure paragraph: 2 phrases. Contractual «وكيل» left.
+- Plate 繳銷 read as a refund: 2.
+- Gender of Wei Tseng was already feminine; no masculine title was introduced. السيد لين and السيد B stay male. «قال» in 013 agrees with the male bank employee.
+
+R2–R10 leftovers checked and not reopened: Korea tax note in 001/004 already framed as country-specific; consultation lock unchanged (four languages, no interpreter, no reply-time, no free meeting, no result promise); fullwidth colon remains only inside the 008 frontmatter url; «TWD 1.57M» untouched.
+
+## Reviewer got wrong (not applied)
+
+- a7: restoring «تقضي المحاكم … عامة» undoes R3. The hedge stays.
+- a5 suggested «قبض B بدل إنهاء خدمة كبيرًا». R3 rewrites that anecdote as establishing the entitlement under the law, not as a large payment. The open question was closed in that form, with an explicit «لا وعد بنتيجة».
+- a2 suggested «(المادة 3)». The Korean source link text is 영업세법 제10조, and the checker counts that 10. The act name was corrected to the withholding-rate label used in 001; the digit stays 10. The URL (flno=3) was not changed.
+- a15 / a16 / b12: zero-width lines and the Q16–Q20 body paragraphs match the Korean block and heading structure. They are not an Arabic-only defect the checker will allow to be deleted or promoted.
+- b10: the contract-design sentence is what the English says, even though the paragraphs above it compare registration routes.
+- b17: the missing section 6 is in the English and the Korean outlines.
+- b16 suggested «ثلثي». That construct is not parsed as 2 and 3. The clause uses «موافقة تبلغ ثلثين فأكثر», which is grammatical and keeps the token.
+- a12 suggested «غير المصرّح». The substring مصر is the Egypt nationality token and fails block[65]. Wording used: «دون إذن».
+- a28: reformatting «TWD 1.57M» is pinned by the bio test.
+
+Five files still WARN on extra numbers (003: 2020×2; 006: 1, 2×2; 007: 2023×3; 010: 2020; 014: 1×3, 2×2, 3, 4×6). This edit added and removed the same digit multiset; those warnings were already in the files. Extra numbers are warnings, so the summary stays PASS.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-ar-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ar --lang ar 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=6
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ar src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+
+Re-counted after this log was written: 23. The extra line is the untracked log itself. The 22 also included files already dirty before this lane: docs/i18n/global-plan/WO-F-ar.txt, and untracked reviews/native/rounds/r3/ar-a.md and ar-b.md. No commit.

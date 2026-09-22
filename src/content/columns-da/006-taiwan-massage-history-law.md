@@ -43,7 +43,7 @@ Der er massage ved personer med synshandicap (視障按摩), fodmassage, oliemas
 
 I princippet kan enhver vælge den massage, der passer til den personlige smag, for at lette spænding.
 
-Og grunden til, at der i dag findes så mange massageindretninger, kan hænge sammen med denne 1 anmodning om forfatningsfortolkning (釋憲).
+Og grunden til, at der i dag findes så mange massageindretninger, kan hænge sammen med denne anmodning om forfatningsfortolkning (釋憲).
 
 Da Taiwan i 1980 udstedte og satte loven om velfærd for personer med handicap (殘障福利法) i kraft,
 
@@ -55,7 +55,7 @@ Denne lov holdt stand indtil 2003; dengang ansatte hr. Lin, der drev en frisørf
 
 medarbejdere uden synshandicap til hårvask- og massageydelser, og politiet konstaterede det.
 
-Ifølge den daværende ret fik hr. Lin og de medarbejdere henholdsvis en administrativ bøde (罰鍰) på TWD 40.000, TWD 10.000 og TWD 20.000 i ny taiwansk dollar (新臺幣).
+Ifølge den daværende ret fik hr. Lin og de medarbejdere henholdsvis en administrativ bøde (罰鍰) på 40.000 TWD, 10.000 TWD og 20.000 TWD i ny taiwansk dollar (新臺幣).
 
 Hr. Lin fandt denne sanktion meget uretfærdig og anmodede om en forfatningsfortolkning.
 
@@ -77,7 +77,7 @@ lød imidlertid den opfattelse, hvorefter den blotte beskyttelse af rettighedern
 
 I debatten om erhvervsrettighederne for personer med og uden synshandicap fremkom talrige modstående meninger.
 
-Der blev eksempelvis spurgt, om den skrevne regel, der kun tillod personer med synshandicap massage, ikke var forskelsbehandling overfor personer uden synshandicap,
+Der blev eksempelvis spurgt, om den skrevne regel, der kun tillod personer med synshandicap massage, ikke var forskelsbehandling over for personer uden synshandicap,
 
 og der blev tvivlet på, om denne regel virkelig havde bidraget til beskyttelsen af arbejdet og eksistensen for personer med synshandicap.
 
@@ -89,7 +89,7 @@ På tilsvarende vis må i Korea, hvor talrige personer med synshandicap tjener t
 
 som regel kun personer med synshandicap, der har opnået et kompetencebevis, udøve massageerhvervet.
 
-Rigtignok har Koreas regering på et tidspunkt også udstedt massediplomer til personer uden synshandicap,
+Rigtignok har Koreas regering på et tidspunkt også udstedt bevillinger til massageerhvervet til personer uden synshandicap,
 
 og talrige personer med synshandicap har, af frygt for at miste deres eksistensgrundlag, organiseret intense protester.
 

@@ -629,7 +629,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Denne side viser profiler for Hoverings advokater, den operative ledelse og det tilknyttede revisionskontor. Advokat Wei Tseng (曾雋崴) er beskikket som advokat i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Denne side viser profiler for Hoverings advokater, den operative ledelse og det tilknyttede revisionskontor. Advokat Wei Tseng (曾雋崴) er advokat med ret til at praktisere i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/about', '/da/contact'],
     },
     pricing: {

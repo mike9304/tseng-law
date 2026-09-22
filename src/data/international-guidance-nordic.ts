@@ -516,7 +516,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
   contactCta: 'Send en anmodning om rådgivning',
   footerNotice:
     'Denne side på dansk indeholder kun almindelige vejledninger om kontorets arbejde efter Taiwans ret. Den er ikke juridisk rådgivning for en konkret sag, og afsendelse af en meddelelse skaber i sig selv ikke et forhold mellem advokat og klient.',
-  skipLink: 'Spring navigeringen over og gå til indholdet',
+  skipLink: 'Spring navigationen over og gå til indholdet',
   menuLabel: 'Menu',
   languageLabel: 'Visningssprog',
   mega: {
@@ -585,7 +585,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sidens sprog og rådgivningssproget er ikke det samme',
           paragraphs: [
             'Denne side er skrevet på dansk, men rådgivningen med en advokat foregår kun på de fire rådgivningssprog engelsk, kinesisk (中文), japansk og koreansk. At læse vejledningerne på dansk betyder ikke, at samtalen med advokaten foregår på dansk.',
-            'Vi lover ikke en tolk, en svartid eller en tid via denne side. Hvis du ikke kan bruge noget af de fire sprog, forklarer siden »Kontakt«, hvordan vi prøver en kommunikationsvej.',
+            'Vi lover ikke en tolk, en svartid eller en tid via denne side. Hvis du ikke behersker noget af de fire sprog, forklarer siden »Kontakt«, hvordan vi prøver en kommunikationsvej.',
           ],
         },
         {
@@ -715,7 +715,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Forklaring af rækkefølgen: først arbejdsomfanget, derefter omkostningsbekræftelsen, og hvorfor denne side ikke indeholder en prisliste.',
       intro:
-        'Denne side forklarer, hvordan omkostninger fastlægges, ikke deres beløb. Beløbet afhænger af arbejdsomfanget i den enkelte sag og er meningsfuldt først, når det omfang er klart.',
+        'Denne side forklarer, hvordan omkostninger fastlægges, ikke deres beløb. Beløbet afhænger af arbejdsomfanget i den enkelte sag og giver først mening, når det omfang er klart.',
       sections: [
         {
           heading: 'Først fastlægges arbejdsomfanget',
@@ -734,14 +734,14 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Rådgivningen kan være mod betaling',
           paragraphs: [
-            'Rådgivningen med en advokat kan være en ydelse mod betaling. Denne side siger ikke, at den første samtale er uden betaling, og ingen del må læses på den måde.',
+            'Rådgivningen med en advokat kan være en ydelse mod betaling. Denne side siger ikke, at den første samtale er uden betaling.',
             'Hvis rådgivningen er mod betaling, meddeles beløb og betalingsmåde, før den finder sted.',
           ],
         },
         {
           heading: 'Hvorfor denne side ikke angiver takster',
           paragraphs: [
-            'Omkostningerne afhænger af sagen selv: af indsatsen, antallet af parter, dokumenterne, fristerne og om et forløb allerede er i gang. Et tal sat på forhånd ville ikke vise omkostningerne for din sag. Derfor fastlægger vi først arbejdsomfanget og meddeler dig derefter omkostningerne, før arbejdet begynder.',
+            'Omkostningerne afhænger af sagen selv: af indsatsen, antallet af parter, dokumenterne, fristerne og om et forløb allerede er i gang. Et beløb fastsat på forhånd ville ikke vise omkostningerne for din sag. Derfor fastlægger vi først arbejdsomfanget og meddeler dig derefter omkostningerne, før arbejdet begynder.',
             'Ud over advokathonoraret kan der komme rets-, myndigheds- eller tredjepartsomkostninger. De er adskilt fra honoraret og afhænger af det pågældende forløb.',
           ],
         },
@@ -751,7 +751,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Sådan kontakter du kontoret',
       description:
-        'Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis du ikke kan bruge noget af de fire sprog, og hvad denne side ikke lover.',
+        'Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis du ikke behersker noget af de fire sprog, og hvad denne side ikke lover.',
       intro:
         'Før du skriver til os, bør du holde følgende tre punkter adskilt. De blandes ofte, men betyder forskellige ting.',
       sections: [
@@ -767,7 +767,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvis du ikke kan bruge noget af de fire rådgivningssprog',
+          heading: 'Hvis du ikke behersker noget af de fire rådgivningssprog',
           paragraphs: [
             'I kontaktformularen kan du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
             'Det er kun en afklaring, ikke et løfte. Vi lover ikke en tolk, ikke rådgivning på dansk eller på et andet sprog end de fire nævnte, og ikke at vi tager imod enhver sag.',
@@ -821,7 +821,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
             'Nej. Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversættelse er noget andet: den oprindelige tekst, du skriver, gemmes som den er og oversættes ikke automatisk.',
         },
         {
-          question: 'Hvad hvis jeg ikke kan bruge noget af de fire sprog?',
+          question: 'Hvad hvis jeg ikke behersker noget af de fire sprog?',
           answer:
             'Vælg ved afsendelsen »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej, men rådgivning på et andet sprog loves ikke. Det er kun en afklaring, ikke et løfte om, at vi kan arbejde på et andet sprog.',
         },
@@ -895,14 +895,14 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Underretning og modtagelsesnummer',
           paragraphs: [
-            'Når en anmodning går igennem, underretter systemet kontoret. Er denne underretning endnu ikke bekræftet, forbliver din tekst gemt og går ikke tabt.',
+            'Når en anmodning går igennem, underretter systemet kontoret. Er kontorets modtagelse af underretningen endnu ikke bekræftet, forbliver din tekst gemt og går ikke tabt.',
             'Modtagelsesnummeret tjener til at genfinde din anmodning i vores sagsakter. Det vises efter gemningen; du kan angive det ved en ny kontakt.',
           ],
         },
         {
           heading: 'Dine rettigheder og kontaktvejen',
           paragraphs: [
-            'Du kan begære indsigt, berigtigelse eller sletning af dine data eller tilbagekalde samtykket via den e-mailadresse, der er angivet på kontaktsiden. Findes en lovlig eller processuel pligt til at bevare, forklarer vi begrænsningen.',
+            'Du kan begære indsigt, berigtigelse eller sletning af dine data eller tilbagekalde samtykket via den e-mailadresse, der er angivet på kontaktsiden. Findes en lovbestemt eller processuel pligt til at opbevare oplysningerne, forklarer vi begrænsningen.',
             'Denne side angiver ingen fast bevaringsfrist, fordi den faktiske tid afhænger af, om sagen fortsættes, og af de dertil hørende pligter. Ønsker du en tidligere sletning, meddel det ved kontakten.',
           ],
         },
@@ -910,7 +910,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lagringssted og leverandører',
           paragraphs: [
             'Denne hjemmeside drives hos Vercel, og din indsendelse gemmes i et ikke-offentligt lager hos denne tjeneste. E-mails sendes via den e-mailtjeneste, kontoret bruger.',
-            'Enkelte leverandørers servere kan stå uden for Taiwan, så dine data kan gemmes og behandles dér. Når lagringsformålet er opfyldt, slettes dataene uden forsinkelse; data, der skal bevares efter gældende regler, bliver i den tid. Forespørgsler om persondata tages imod af wei@hoveringlaw.com.tw.',
+            'Enkelte leverandørers servere kan stå uden for Taiwan, så dine data kan gemmes og behandles dér. Når lagringsformålet er opfyldt, slettes dataene uden forsinkelse; data, der skal bevares efter gældende regler, bliver i den tid. Forespørgsler om persondata sendes til wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -933,7 +933,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Retligt anvendelsesområde',
           paragraphs: [
-            'Kontoret virker efter Taiwans ret, og denne side taler kun om arbejde inden for den ramme.',
+            'Kontoret arbejder efter taiwansk ret, og denne side handler kun om arbejde inden for den ramme.',
             'Indholdet er ikke rådgivning efter retten i en anden retsorden end Taiwan, herunder retten på din bopæl. Rører en del af din sag en anden retsorden, afklarer vi med dig, hvilken kvalificeret fagperson der behøves til den del.',
           ],
         },

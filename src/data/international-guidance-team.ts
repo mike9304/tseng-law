@@ -652,7 +652,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Ledende advokat i Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Operativ ledelse Korea (Korea Operations Manager)',
+      'son-jungmin': 'Leder af Korea-drift (Korea Operations Manager)',
       'huang-shengping': 'Tilknyttet revisor (Partner CPA)',
     },
   },
@@ -2979,8 +2979,8 @@ export const guidanceTeamBios: Record<
       ],
       education: ['Juridisk bachelor (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Senior paralegal, Boyin Law Firm',
+        'Senior paralegal, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2989,7 +2989,7 @@ export const guidanceTeamBios: Record<
         'Støtter udvekslingen mellem områder via dokumentsystemer og arbejdsgange, på grundlag af datalogi.',
       ],
       education: ['Bachelor (B.S.) i datalogi, National Cheng Kung University'],
-      experience: ['Område Korea-drift, Hovering International Law Firm'],
+      experience: ['Korea-drift, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

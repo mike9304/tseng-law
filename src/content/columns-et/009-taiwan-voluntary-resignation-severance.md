@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Kaanepilt](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Nagu ma varem selgitasin, ei ole Taiwanis töötajatel kerge saada seadusjärgset lahkumishüvitist (資遣費).
+Nagu varasemates artiklites on kirjeldatud, ei ole Taiwanis töötajatel kerge saada seadusjärgset lahkumishüvitist (資遣費).
 
 ​
 

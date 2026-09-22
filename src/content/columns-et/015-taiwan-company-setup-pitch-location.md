@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Kui restoranitegevus algab, on esimene probleem leida tegevuskoht (營業地址).
 
-Lisaks turuolukorrale
+Lisaks turuolukorrale tuleb arvestada ka lubatud tegevusega.
 
-on teine tähtis koht
+Teine oluline küsimus on see, kas aadress asub tsoonis, kus toitlustus on lubatud.
 
-kas kõnealune aadress (營業地址) asub tsoonis, kus „toitlustuse“ tegevus on võimalik.
+Kontrollida tuleb, kas kõnealune aadress (營業地址) asub tsoonis, kus „toitlustuse“ tegevus on võimalik.
 
 ​
 
@@ -45,7 +45,7 @@ Kui teil on raskusi isiklikult kinnistusametis (地政事務所) asjaajamisega,
 
 võite paluda abi tuttavalt Taiwanis, üürileandjalt, kinnisvaramaaklerilt või advokaadilt.
 
-Kui kontrolli tulemus näitab, et toitlustus ei ole võimalik, võib linnavalitsus hiljem äriühingu registreerimisel (公司登記) registreerimise keelduda.
+Kui kontrolli tulemus näitab, et toitlustus ei ole võimalik, võib linnavalitsus hiljem äriühingu registreerimist (公司登記) mitte vastu võtta.
 
 Võtke seetõttu see koht arvesse.
 
@@ -61,15 +61,15 @@ Praktikas ei ole seetõttu vaja kõiki tegevusalasid äriühingu registreerimise
 
 „[Taipei linna tegevuskohtade teabeteenuse töökorralduse](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) ja Taipei linna kehtiva juhise järgi
 
-tuleb alates 1. jaanuar 2023 äriühingu või kaubanduse (sealhulgas filiaal (分公司) ja haruettevõte (分支機構)) asutamise, asukoha üleviimise või tegevusalade lisamise registreerimist taotledes tegevuskoha eeluuringu tulemus **kohustuslikult** lisada registreerimistaotlusele, tegevusalast sõltumata.
+tuleb alates kuupäevast 1. jaanuar 2023 äriühingu või kaubanduse (sealhulgas filiaal (分公司) ja haruettevõte (分支機構)) asutamise, asukoha üleviimise või tegevusalade lisamise registreerimist taotledes tegevuskoha eeluuringu tulemus **kohustuslikult** lisada registreerimistaotlusele, tegevusalast sõltumata.
 
-Alljärgnev loetelu „ametiomase uurimise tegevusaladest“ (主動查詢之營業項目) tähendab tegevusalasid, mida kaubandusamet uurib ametiomase lisana registreerimise kontrolli ajal (隨案主動查詢), kui tegevusala on taotluses, kuid puudub lisatud tulemusest; see, et tegevusala ei ole selles loetelus, ei tähenda, et kontroll oleks vabastatud.
+Alljärgnev loetelu „omal algatusel kontrollitavatest tegevusaladest“ (主動查詢之營業項目) tähendab tegevusalasid, mida kaubandusamet kontrollib omal algatusel registreerimise käigus (隨案主動查詢), kui tegevusala on taotluses, kuid lisatud tulemus seda ei sisalda; see, et tegevusala ei ole selles loetelus, ei tähenda, et kontroll oleks vabastatud.
 
 Kui avatakse kohas, kus toitlustus ei ole võimalik, võib hiljem järgneda pädeva asutuse haldusrahve (罰鍰).
 
-![„ametiomase uurimise tegevusalad“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![„omal algatusel kontrollitavad tegevusalad“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-„ametiomase uurimise tegevusalad“ (主動查詢之營業項目)
+„omal algatusel kontrollitavad tegevusalad“ (主動查詢之營業項目)
 
 Sellega juhis lõpeb. Lisaküsimustes võite pöörduda Taiwani advokaadi poole.
 

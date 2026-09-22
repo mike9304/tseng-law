@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Kaanepilt](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Viimasel ajal on paljud asutanud äriühingu (公司) Taiwanis ning saanud tööloa ja välismaalase elamiskaardi (外僑居留證),
+Viimasel ajal on paljud asutanud äriühingu (公司) Taiwanis ning saanud tööloa ja välismaalase elamiskaardi (外僑居留證).
 
-ja asutamise käigus sageli esitatud küsimused on koondatud allpool.
+Asutamise käigus sageli esitatud küsimused on koondatud allpool.
 
 Kes on lugenud [**äriühingu asutamise aluseid**](/et/columns/taiwan-company-establishment-basics), võib seejärel tutvuda ka selle põhjalikuma süvendava osaga.
 
@@ -31,7 +31,7 @@ Investeeringute läbivaatamise osakonnal tuleb uurida, kas kõnealust kapitali (
 
 ning et välismaised osalised ei too vahendeid sisse muu ettekäände all.
 
-Investeerimiskava koostamisel ei ole vaja märkida äriühingu täpset aadressi; piirkonna märkimine piisab (näide: Taipei linn). ​
+Investeerimiskava koostamisel ei ole vaja märkida äriühingu täpset aadressi; piisab piirkonna märkimisest (näide: Taipei linn). ​
 
 Kui hiljem avatakse pangas äriühingu ettevalmistuskonto (公司籌備處帳戶), uurivad paljud pangad siiski üürilepingut (租賃契約) ja kontrollivad äriühingu aadressi kohapeal.
 
@@ -39,7 +39,7 @@ Kui hiljem avatakse pangas äriühingu ettevalmistuskonto (公司籌備處帳戶
 
 viimasel ajal on paljud välismaalased pärast konto avamist kadunud, seega käsitletakse konto avamist üha rangemalt.
 
-Juba aluste artikli juures märkis üks lugeja, et konto avamine osutus kõige raskemaks etapiks; olen sellega nõus.
+Konto avamine osutub praktikas sageli kõige raskemaks etapiks.
 
 Kuna rahapesujuhtumeid (洗錢) on Taiwanis väga palju, muutub pangakonto avamine üha rangemaks.
 

@@ -2452,7 +2452,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Jaapani (日本語)',
       ko: 'Korea (한국어)',
       'needs-method-confirmation':
-        'Ükski neljast keelest ei ole kasutatav — suhtlusviis tuleb kinnitada',
+        'Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada',
     },
   },
   ca: {

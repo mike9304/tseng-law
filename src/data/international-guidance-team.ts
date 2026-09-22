@@ -1304,7 +1304,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'MEESKOND',
     title: 'Hoveringi rahvusvaheline meeskond',
     description:
-      'Hoveringi advokaatide, tegevjuhtimise ja seotud audiitorbüroo profiilid.',
+      'Hoveringi advokaatide, Korea tegevjuhi ja seotud audiitorbüroo profiilid.',
     representativeTitle: 'Juhtiv advokaat',
     teamTitle: 'Advokaadid ja töötajad',
     partnerTitle: 'Seotud audiitorbüroo',
@@ -1315,7 +1315,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     workingLanguagesLabel: 'Töökeeled',
     fullProfileLabel: 'Täielik profiil (inglise keeles)',
     keyFactsHeading: 'Advokaat Wei Tseng — Põhiandmed',
-    qualificationLabel: 'Kutseõigus ja büroo',
+    qualificationLabel: 'Kvalifikatsioon ja büroo',
     qualificationSentence:
       '{name} on Taiwani advokatuuri liige ja {firm} juhtiv advokaat.',
     practiceLabel: 'Põhivaldkonnad',
@@ -1323,9 +1323,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Juhtiv advokaat Taiwanis',
       'chang-rongxuan': 'Advokaat Taiwanis',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Jurist-assistent',
       'son-jungmin': 'Korea tegevjuht',
-      'huang-shengping': 'Partneraudiitor',
+      'huang-shengping': 'Partner ja vandeaudiitor',
     },
   },
   ca: {
@@ -4484,43 +4484,43 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Büroo tegeleb Taiwanis ettevõtete ja eraisikute asjadega inglise, jaapani, korea ja hiina keeles.',
-        'Ta esindas korea üliõpilast treeningsaalis saadud vigastuse kahjuhüvitisnõudes ja sai esimese astme otsuse summas TWD 1.57M.',
+        'Ta esindas korea üliõpilast treeningsaalis saadud vigastuse kahjuhüvitisnõudes ja esimese astme kohus mõistis välja TWD 1.57M.',
       ],
       education: [
-        'Magister (M.S.), Institute of Finance, National Taiwan University',
-        'Bakalaureus (B.A.) õiguse ja rahanduse kaksikprogrammis, National Chengchi University',
+        'Magistrikraad (M.S.), National Taiwan University rahanduse instituut',
+        'Bakalaureusekraad (B.A.) õigusteaduse ja rahanduse kahe eriala õppes, National Chengchi University',
         'Vahetusüliõpilane Kobe Universitys ja Waseda Universitys',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Õigusabi sihtasutus, Taichungi filiaal',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Varem Ministry of Education, Legal Affairs Divisionis, rõhuasetusega haldus- ja tsiviilasjadele.',
+        'Varem Haridusministeeriumi õigusosakonnas, rõhuasetusega haldus- ja tsiviilasjadele.',
         'Kogemus ülikoole, õppejõudude õigusi ja halduskaebusi puudutavates asjades.',
       ],
       education: [
         'Õigusteaduse bakalaureus (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Haridusministeeriumi õigusosakond',
         'Advokaat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal pikaajalise kogemusega; varem vanem paralegal mitmes advokaadibüroos, rõhuasetusega protsessitoele, ühinguõigusele ja välisinvesteeringutele.',
+        'Jurist-assistent pikaajalise kogemusega; varem vanemjurist-assistent mitmes advokaadibüroos, rõhuasetusega protsessitoele, ühinguõigusele ja välisinvesteeringutele.',
         'Tugi kohtumenetlustes, äriühingu asutamisel, välisinvesteeringute lubades, loataotlustes ning Korea ja Taiwani suhtluses.',
       ],
       education: [
         'Õigusteaduse bakalaureus (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Vanemjurist-assistent, Boyin Law Firm',
+        'Vanemjurist-assistent, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

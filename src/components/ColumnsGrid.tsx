@@ -428,7 +428,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   km: 'អានបន្ដ',
   mn: 'Цааш унших',
   sk: 'Čítať ďalej',
-  bg: 'Прочети още',
+  bg: 'Прочетете още',
   hr: 'Čitajte dalje',
   sr: 'Čitajte dalje',
   sl: 'Berite dalje',

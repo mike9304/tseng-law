@@ -83,9 +83,9 @@ Bazen iş ilişkisinde karşılıklı kusur varken,
 
 uyuşmazlık çıkarsa,
 
-sözleşmeyi yeterli bir nedenle önce kimin sona erdirdiğine göre
+sözleşmeyi yeterli bir nedenle önce sona erdiren taraf
 
-kıdem tazminatı ödenmeyebilir veya istenebilir.
+kıdem tazminatını ödemeyebilir veya isteyebilir.
 
 Bu yüzden Tayvan’daki iş uyuşmazlıklarında (勞資糾紛)
 

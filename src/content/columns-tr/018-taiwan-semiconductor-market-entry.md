@@ -29,7 +29,7 @@ Bu yazı, yarı iletken malzeme, parça ve ekipman şirketlerinin Tayvan giriş 
 
 Örneğin yurt dışındaki bir hassas parça üreticisinin Tayvan müşterilerine ürün sattığını varsayalım. Başlangıçta merkez doğrudan sevk ederken, müşteri Tayvan içinde yedek parça depolama ve sahada mühendis desteği de talep eder. Gerekli olan yalnızca adres değil; satış, ithalat, stok, istihdam, teknik destek ve sorumluluğu üstlenebilecek bir işletmedir.
 
-Merkez Tayvan giriş yapısını belirlemeden önce içeride önce şu soruları netleştirebilir.
+Merkez, Tayvan giriş yapısını belirlemeden önce şu soruları kendi içinde netleştirebilir.
 
 | İşletme kalemi | Önce netleştirilecek soru |
 |---|---|
@@ -79,7 +79,7 @@ Yukarıdakiler sözleşme tasarımı önerisidir. Belirli bir şirket biçiminin
 
 Tayvan’da şirket tescili tamamlandı diye yurt dışı merkez çalışanı kendiliğinden Tayvan’da çalışamaz. Yabancı Tayvan’da çalışmak için yasal çalışma iznine (工作許可) ihtiyaç duyar; uzun süre kalmak için oturma belgesi (外僑居留證) için de başvurmalıdır. Esasen işveren yabancı çalışan için çalışma iznine ve buna karşılık gelen oturma belgesine başvurur.
 
-Yabancı şirketin Tayvan bağlı şirketi ve şube yöneticisi için çalışma izni başvurusu görece kolaydır. Ancak ikinci yabancıdan itibaren çalışma iznine başvururken sektörüne göre Çalışma Bakanlığı sermaye, ciro gibi eşikler ister. Bu yüzden yabancı çalışanı Tayvan’da çalıştırmak planlanıyorsa, Tayvan şirketi kurulmadan önce sermaye ayarının o eşiği karşılayıp karşılamadığı önceden doğrulanmalıdır.
+Yabancı şirketin Tayvan bağlı şirketi ve şube yöneticisi için çalışma izni başvurusu görece kolaydır. Ancak ikinci yabancıdan itibaren çalışma iznine başvururken sektörüne göre Çalışma Bakanlığı sermaye, ciro gibi eşikler ister. Bu yüzden yabancı çalışanı Tayvan’da çalıştırmak planlanıyorsa, Tayvan şirketi kurulmadan önce sermaye ayarının o eşiği karşılayıp karşılamadığı doğrulanmalıdır.
 
 ## 7. İş gelişme aşamasına göre karşılaştırılabilecek yapılar
 

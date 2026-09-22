@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Öne çıkan görsel](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-[Tayvan’da şirket kuruluşu – temeller](/tr/columns/taiwan-company-establishment-basics) ile [Tayvan’da şirket kuruluşu – derinlemesine bölüm 1](/tr/columns/taiwan-company-establishment-advanced-1) metinlerinin devamı olan ileri konular 2’dir. Konu şirket kuruluşudur (公司設立).
+[Tayvan’da şirket kuruluşu – temeller](/tr/columns/taiwan-company-establishment-basics) ile [Tayvan’da şirket kuruluşu – derinlemesine bölüm 1](/tr/columns/taiwan-company-establishment-advanced-1) metinlerinin devamıdır. Bu yazı, şirket kuruluşunun (公司設立) ileri konuları 2’yi ele alır.
 
 ​
 
@@ -69,7 +69,7 @@ Bazı bankalar ek gerekler koyabilir, örneğin kuruluştan sonra hesabın en az
 
 **5. Şirket yabancı uyruklu kişileri çalışan olarak istihdam edebilir mi?**
 
-A. İlk çalışan: başvuru, olağan yurt dışı Çinli veya yabancı yatırım işletmesinde yönetim işi (一般僑外投資事業主管工作) olarak sunulur. Aşağıdaki B noktasındaki “uzmanlık veya teknik nitelikte iş” ölçütü uygulanmaz, ancak yurt dışı Çinli veya yabancı koyulan sermayesi 1/3’ü aşan bir şirketin işletme sorumlusu (經理人) olmak gibi muhatap koşulları ile işverenin sermaye ve ciroya ilişkin sonuç koşulları uygulanır (inceleme ölçütleri madde 38 ve 39).
+A. İlk çalışan: başvuru, olağan yurt dışı Çinli veya yabancı yatırım işletmesinde yönetim işi (一般僑外投資事業主管工作) olarak sunulur. Aşağıdaki B noktasındaki “uzmanlık veya teknik nitelikte iş” ölçütü uygulanmaz, ancak yurt dışı Çinlilerin veya yabancıların elindeki hisse veya koyulan sermaye toplamının, çıkarılmış hisselerin veya toplam sermayenin 1/3’ünü aştığı bir şirketin işletme sorumlusu (經理人) olmak gibi uygunluk koşulları ile işverenin sermaye ve ciroya ilişkin sonuç koşulları uygulanır (inceleme ölçütleri madde 38 ve 39).
 
 B. İkinci çalışandan itibaren kısıtlar vardır: istihdam edilen yabancı uyruklu kişi sayısı 1 kişiyi aşarsa, çalışanın ilgili eğitimi ve deneyimi, ortalama ücret ile şirketin sermaye ve ciro kuralları “uzmanlık veya teknik iş”e (專門性或技術性工作) göre işlenir.
 

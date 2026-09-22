@@ -81,7 +81,7 @@ Görme engelli olan ve olmayan kişilerin meslek hakları tartışmasında çok 
 
 ve bu kuralın gerçekten görme engelli kişilerin istihdamını ve geçimini korumaya katkıda bulunup bulunmadığı kuşkuya düşürüldü.
 
-Sonunda Anayasa Mahkemesi (大法官), yalnızca görme engelli kişilerin masaj mesleğini icra edebileceğini söyleyen hükmü anayasaya aykırı (違憲) ilan etti.
+Sonunda büyük yargıçlar (大法官), yalnızca görme engelli kişilerin masaj mesleğini icra edebileceğini söyleyen hükmü anayasaya aykırı (違憲) ilan etti.
 
 ​
 

@@ -41,7 +41,7 @@ Ceza Kanununun 284. maddesi taksirle yaralamayı (過失傷害) ve taksirle ağ�
 
 Medeni tazminatta (損害賠償), Tayvan Medeni Kanununun (民法) 197. maddesine göre zarar ve tazmin yükümlüsünün öğrenildiği günden 2 yıl, veya haksız fiilin olduğu günden 10 yıl geçince talep mümkün olmaz. Hangi olguların zamanaşımını (消滅時效) etkilediği ayrı incelenmelidir.
 
-Bir suç nedeniyle zarar gören kişi, Ceza Muhakemesi Kanununun 487. maddesine göre ceza yargılamasına bağlı medeni dava (刑事附帶民事訴訟) açabilir. Ceza yargılaması sürerken bu dava, Ceza Muhakemesi Kanununun 488. maddesine göre istinaf duruşmasının sona ermesine (言詞辯論終結) kadar açılabilir, ancak ilk derece duruşması sona erdikten sonra ve temyiz yoluna gidilmeden önce açılamaz. Kural olarak ayrı yargılama gideri (裁判費) ödenmesi kaçınılabilir, ancak her sonuç maliyetsiz bitmez. Örneğin ceza dosyası reddedilip davacının talebiyle hukuk mahkemesine gönderilirse, Ceza Muhakemesi Kanununun 503. maddesine göre giderler yüklenebilir ve 504. maddenin gönderme ile usul kuralları da doğrulanmalıdır.
+Bir suç nedeniyle zarar gören kişi, Ceza Muhakemesi Kanununun 487. maddesine göre ceza yargılamasına bağlı medeni dava (刑事附帶民事訴訟) açabilir. Ceza yargılaması sürerken bu dava, Ceza Muhakemesi Kanununun 488. maddesine göre istinaf duruşmasının sona ermesine (言詞辯論終結) kadar açılabilir, ancak ilk derece duruşması sona erdikten sonra ve istinafa başvurulmadan önce açılamaz. Kural olarak ayrı yargılama gideri (裁判費) ödenmesi kaçınılabilir, ancak her sonuç maliyetsiz bitmez. Örneğin ceza dosyası reddedilip davacının talebiyle hukuk mahkemesine gönderilirse, Ceza Muhakemesi Kanununun 503. maddesine göre giderler yüklenebilir ve 504. maddenin gönderme ile usul kuralları da doğrulanmalıdır.
 
 Seçim, zamanaşımının kesilmesine (時效中斷), davalıların çevresine, kanıtlara, sigortaya ve yetkiye göre değişir. Bu yüzden bütün dosyalar için tek biçimde tercih edilen bir usul yoktur.
 
@@ -83,7 +83,7 @@ Medeni Kanunun 736. maddesindeki uzlaşma (和解), tarafların bir uyuşmazlı�
 
 ## Q6. Kaza sorumluluğu nasıl saptanır?
 
-Polisin kurduğu karayolu trafik kazası ön analiz tablosu, yerindeki belgelere dayanan ön bir çözümdür. Hüküm değildir, mahkemeyi bağlamaz ve kusur oranını (過失比例) saptamaz. Gereken belgeler ve uyuşmazlığın kapsamı kazaya göre değiştiğinden bu tablo, yasal bilirkişi incelemesi ve yeniden inceleme (覆議) ne kendiliğinden bir usul ne de zorunlu bir adımdır.
+Polisin kurduğu karayolu trafik kazası ön analiz tablosu, yerindeki belgelere dayanan ön bir çözümdür. Hüküm değildir, mahkemeyi bağlamaz ve kusur oranını (過失比例) saptamaz. Gereken belgeler ve uyuşmazlığın kapsamı kazaya göre değiştiğinden bu tablo, yasal bilirkişi incelemesi ve yeniden inceleme (覆議) kendiliğinden işleyen veya zorunlu bir sıra oluşturmaz.
 
 Uygulanacak kurallara göre yetkili taraf, araç kaza bilirkişi incelemesi (車輛行車事故鑑定) isteyebilir; dosyayı yürüten organ iletebilir ve yargı mercii emredebilir. Tarafın başvurusu kural olarak kaza tarihinden itibaren 6 ay içinde sunulur; zaten soruşturma veya yargılamada olan dosyalarda inceleme, yeni doğrudan başvuruyla değil yargı merciinin emriyle yürür.
 
@@ -113,7 +113,7 @@ Bir yakın ücretsiz olarak bakımı gerçekten sunmuş olsa da, uygun dosyada b
 
 ## Q10. Tedaviye gidiş giderleri neyle kanıtlanır?
 
-Gidiş giderleri, tedavi kaydı ile kazaya bağlı yaralanmaların bağından hareketle düzenlenir. Güzergâh, ziyaret sayısı, tarihler, ulaşım aracı, ücret ile o aracın kullanılmasının gerekliliği ve makullüğü değerlendirmeye ilgili olabilir.
+Gidiş giderleri, tedavi kaydı ile kazaya bağlı yaralanmaların bağından hareketle düzenlenir. Güzergâh, ziyaret sayısı, tarihler, ulaşım aracı, ücret ile o aracın kullanılmasının gerekliliği ve makullüğü değerlendirmeyle ilgili olabilir.
 
 Makbuzlar, ücret kayıtları, güzergâh kayıtları ve tedavi kayıtları olası kanıtlardır. Taksi makbuzu tek kanıt yolu değildir ve sunulmuş olması tek başına yeterli olduğu anlamına gelmez.
 
@@ -141,7 +141,7 @@ Gelir kaybı, kazaya bağlı yaralanmalar nedeniyle iyileşme döneminde çalı�
 
 Tedavi kayıtları, devam veya izin kayıtları, ücret ve vergi verileri ile işverenin teyidi birlikte düzenlenmelidir. Bağımsız çalışan, satış verileri, işlem kayıtları ve vergi beyanları gibi kendi faaliyet biçimine uyan veriler sunabilir.
 
-Çalışmaya devam edilmiş veya ücret değişmeden alınmış olması, iyileşme döneminin gelir kaybını değerlendirmeye ilgilidir, ancak bu olgu tek başına çalışma gücünün azalması zararını kendiliğinden karara bağlamaz. Bu olgu, çalışma gücünün azalması zararını tek başına değerlendirme dayanağı da değildir. Çalışma gücünün azalması zararı Q12’de ayrı incelenir.
+Çalışmaya devam edilmiş veya ücret değişmeden alınmış olması, iyileşme döneminin gelir kaybını değerlendirmeyle ilgilidir, ancak bu olgu tek başına çalışma gücünün azalması zararını kendiliğinden karara bağlamaz. Bu olgu, çalışma gücünün azalması zararını tek başına değerlendirme dayanağı da değildir. Çalışma gücünün azalması zararı Q12’de ayrı incelenir.
 
 ## Q12. Çalışma gücünün azalması zararı nasıl kanıtlanır?
 
@@ -165,7 +165,7 @@ Medeni Kanunun 188. maddesi, çalışanın görevini yerine getirirken başkası
 
 İşveren, çalışanın seçiminde ve gözetiminde gereken özeni gösterdiğini, veya bu özen gösterilse bile zararın kaçınılamayacağını ileri sürebilir. Tazminatın işveren ve çalışana karşı birlikte talep edilmesi tartılabilir. Tazmin ettikten sonra işveren çalışana rücu edebilir.
 
-İşveren bu bağışıklık koşullarını kanıtlar ve zarar gören 1. fıkradaki tazminatı alamazsa mahkeme, Medeni Kanunun 188. maddesi fıkra 2’ye göre işveren ile zarar görenin ekonomik durumunu dikkate alarak tam veya kısmi tazminat emredebilir.
+İşveren bu bağışıklık koşullarını kanıtlar ve zarar gören 1. fıkradaki tazminatı alamazsa mahkeme, Medeni Kanunun 188. maddesinin 2. fıkrasına göre işveren ile zarar görenin ekonomik durumunu dikkate alarak tam veya kısmi tazminat emredebilir.
 
 Medeni talebin kime yöneltileceği sorusu, ceza sorumluluğundan ayırt edilmelidir. Ceza Kanununun 284. maddesindeki ceza sorumluluğu, her gerçek kişinin özen yükümlülüğünü ihlali ve bu ihlalin nedensellik bağına göre değerlendirilir.
 
@@ -175,7 +175,7 @@ Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險�
 
 Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu sigortasının ödemelerinin muhatabı değildir. Ancak birden çok aracın karıştığı bir kazada, sürücünün karışan başka bir aracın zorunlu sigortacısından ödeme talep edebildiği haller vardır.
 
-29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve ölüm, sakatlık ve tıbbi giderlerin toplam azamisi, mağdur 1 kişi ve kaza 1 olay başına TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
+29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve ölüm, sakatlık ve tıbbi giderlerin toplam azamisi, her 1 mağdur ve her 1 kaza başına TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
 
 Üçüncü kişilere karşı mali sorumluluk sigortası (第三人責任險), sürücü kaza sigortası (駕駛人傷害險) ve kendi araç hasarı sigortası (車體損失險) sözleşmeye bağlı isteğe bağlı ürünlerdir. Gerçek teminat, sigortalıya, tavana, muafiyete (自負額), istisnalara, kusura ve poliçenin diğer koşullarına göre değişir, böylece poliçe ve koşullar dosya dosya doğrulanmalıdır.
 
@@ -239,7 +239,7 @@ Bazı kararlarda taksirle yaralama için yaklaşık 3 aylık hapis cezası gör�
 
 ​
 
-Para cezasına çevrilirse (易科罰金), Ceza Kanununun 41. maddesi fıkra 1, dönüşümü gün başına TWD 1.000, TWD 2.000 veya TWD 3.000 olarak saptar; gün başına TWD 1.000 üzerinden hesaplanırsa 3 aylık ceza 3 × 30 × TWD 1.000 = TWD 90.000 eder.
+Para cezasına çevrilirse (易科罰金), Ceza Kanununun 41. maddesinin 1. fıkrası, dönüşümü gün başına TWD 1.000, TWD 2.000 veya TWD 3.000 olarak saptar; gün başına TWD 1.000 üzerinden hesaplanırsa 3 aylık ceza 3 × 30 × TWD 1.000 = TWD 90.000 eder.
 
 ​
 

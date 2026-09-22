@@ -86,7 +86,7 @@ Medeni Kanun (民法) madde 1093’e göre velayet hak ve yükümlülüklerini e
 
 Vasiyetle geçerli atama yoksa veya atanan kişi görevi üstlenemiyorsa Medeni Kanun (民法) madde 1094’ün yasal sırası ile madde 1094-1’in mahkeme atama rejimi gündeme gelebilir. Mahkeme çocuğun üstün yararını somut olgulara göre inceler: küçüğün yaşı ve irade açıklama yeteneği, adayın ilişkisi ve bakım yeteneği, malvarlığı yönetiminin uygunluğu ve yaşamın istikrarı.
 
-Akrabalar ve kanunun saptadığı diğer başvuru ehliyetine sahip kişiler, yasal neden varsa mahkemeden vasi atama veya değiştirme ya da başka gereken tedbiri isteyebilir. Bu, yalnızca aile bağıyla belirli bir adayın kendiliğinden vasi olacağı anlamına gelmez. Vasi, velayeti kullanan ebeveynle aynı kavram değildir; yetki kapsamı, envanter düzenleme, rapor ve mahkeme denetimine dair ayrı yükümlülükler yüklenebilir.
+Akrabalar ve kanunun saptadığı diğer başvuru ehliyetine sahip kişiler, yasal neden varsa mahkemeden vasi atama veya değiştirme ya da başka gereken tedbiri isteyebilir. Bu, yalnızca aile bağıyla belirli bir adayın kendiliğinden vasi olacağı anlamına gelmez. Vasi, velayeti kullanan ebeveynle aynı kişi değildir; yetki kapsamı, envanter düzenleme, rapor ve mahkeme denetimine dair ayrı yükümlülükler yüklenebilir.
 
 Vasi incelenirken koruma rolü ile malvarlığı yönetimi somut ayrılmalıdır. Uzun süre yurt dışında oturan aday, çocukla ekonomik çıkar ilişkisi olan aday veya varlık yönetiminde deneyimi kıt aday için tamamlayıcı mekanizma gerekip gerekmediği bakılır. Mahkeme fiili olgulara göre denetim yöntemi veya gereken tedbirleri değerlendirebilir.
 

@@ -1,0 +1,44 @@
+# Simplified Chinese native review — round 3, part b (zh-hans)
+reviewer: Grok 4.7 · date: 2026-09-23 · scope: columns-zh-hans/010-taiwan-gym-injury-lawsuit.md, 011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md, 012-taiwan-overtaking-accident-liability.md, 013-taiwan-company-establishment-advanced-1.md, 014-taiwan-mandatory-employment-period.md, 015-taiwan-company-setup-pitch-location.md, 016-taiwan-inheritance-custody-analysis.md, 017-taiwan-logistics-business-setup.md, 018-taiwan-semiconductor-market-entry.md
+
+## Verdict
+naturalness (1 = machine, 5 = native professional): N/A for guidance pack (out of scope; part a), 4/5 for columns
+variety used: Simplified Chinese for mainland readers, consistent. Taiwan legal terms stay in Simplified with a Traditional gloss in parentheses. Dates are year–month–day (2022年1月24日, 2025年9月13日, 2026年2月4日, 2026年6月5日, 2026年6月25日, 2026年9月17日). Amounts still use a Western thousands comma.
+systemic patterns (max 6, each one line, with 1 example quote):
+- Exact amounts still use a Western thousands comma: "新台币1,579,589元" (010); the same pattern in 011, 017 and 018.
+- 013 and 015 are still one sentence per paragraph, and several of those breaks are only U+200B: "记载地区即可（例：台北市）。"
+- One company-law sentence still drops the noun the fraction attaches to: "董事则须2/3以上"; the same sentence writes "各股东1人1票".
+- Taiwan administrative wording is still unglossed where a mainland reader expects a familiar verb: "展延申请须在届期前3个月内提出"; "以文件连结训练主题".
+- 016 still doubles a connector and reverses a legal verb: "并一并核对"; "以书面向管辖法院表示意思".
+- A circumstance is still called a document: "这一情事，可以是确认合意存在的文件".
+
+012 is native professional apart from one sentence. 010, 011, 014, 016, 017 and 018 are professional with local defects. 013 and 015 are readable; the zero-width breaks remain. Attorney Wei Tseng is unnamed in 010 (first person, 诉讼代理人) and in 012, and 律师 / 台湾律师 / 负责律师 where she is signed (011, 014, 016, 017). 018 has no byline. No masculine form for her. 012’s A is the motorcyclist. The consultation lock holds where contact is invited (010, 013, 015, 018): English, Chinese (中文), Japanese and Korean; no reply-time promise. No win rate, no result guarantee, and no “best/only” claim for the firm. 子女最佳利益 is the child’s-best-interests standard. The section jump from 5 to 7 in 018 matches the English source.
+
+## Findings
+| # | sev | cat | file | quote (≤120 chars, verbatim) | problem (English, one line) | suggested Simplified Chinese rewrite |
+|---|-----|-----|------|------|------|------|
+| 1 | P1 | A | columns-zh-hans/018-taiwan-semiconductor-market-entry.md | "普通股东转让出资，原则上须经其他表决权过半数同意；董事则须2/3以上。" | 其他表决权 drops 股东, and the director clause has no voting-rights base and no 同意, so 2/3 does not say whose consent. Do not change the fractions. | 普通股东转让出资，原则上须经其他股东表决权过半数同意；董事转让出资，则须经其他股东表决权2/3以上同意。 |
+| 2 | P2 | A | columns-zh-hans/010-taiwan-gym-injury-lawsuit.md | "我是原告韩国学生的诉讼代理人。" | English is past (“I served”); 我是 reads as if she is still counsel in a case that has already gone to appeal. | 本案中，我担任原告韩国学生的诉讼代理人。 |
+| 3 | P2 | A | columns-zh-hans/010-taiwan-gym-injury-lawsuit.md | "一名大学生，90公斤硬拉后椎间盘破裂……向健身房请求损害赔偿" | The English headlines, and the linked titles, say a male student; 男 is dropped here and in the later headlines, including “韩国大学生是否在私人训练中做90公斤硬拉而椎间盘破裂？”. Do not change 90公斤. | 一名男大学生，90公斤硬拉后椎间盘破裂……向健身房请求损害赔偿 |
+| 4 | P2 | A | columns-zh-hans/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "若由台湾进口商或销售代理商办理进口与销售" | Distributor is 经销商; 销售代理商 is a sales agent. Also the FAQ “同时担任销售代理” and the next sentence “销售代理商可同时担任进口商”. The later triad 代理、独家经销或销售商 is already right. | 若由台湾进口商或经销商办理进口与销售，外国品牌也可选择在台湾不设自有子公司或分公司的结构。经销商可同时担任进口商 |
+| 5 | P2 | A | columns-zh-hans/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "支付对价、提供产品、销售链接、品牌对发布内容的指示以及反复合作" | English lists free products as a factor; 提供产品 drops “free”. | 支付对价、免费提供产品、销售链接、品牌对发布内容的指示以及反复合作，都是评价时会考虑的因素。 |
+| 6 | P2 | A | columns-zh-hans/013-taiwan-company-establishment-advanced-1.md | "曾有台湾的银行职员谈到开户审查。" | English is what the employee said; this sentence ends, and the tightening is a separate fact in the next paragraph. | 曾有台湾的银行职员直接谈到：近来许多外国人开户后失去联络，所以开户审查越来越严。 |
+| 7 | P2 | A | columns-zh-hans/014-taiwan-mandatory-employment-period.md | "劳工已签署契约这一情事，可以是确认合意存在的文件" | A circumstance is not a document; English is that the signature may help show an agreement exists. | 劳工已签署契约，可以用来证明合意存在，但不能替代法定要件。 |
+| 8 | P2 | A | columns-zh-hans/017-taiwan-logistics-business-setup.md | "不仅须确认契约草拟，也须确认实际营运方式" | English is to look beyond the contract’s wording; 确认契约草拟 is the act of drafting. | 审查具体事业计划时，不能只看契约怎么写，也须核对实际营运方式，如运费收取方式、货物事故责任、车辆调派，以及谁管理驾驶与车辆。 |
+| 9 | P2 | A | columns-zh-hans/017-taiwan-logistics-business-setup.md | "至少8辆新车的自有基准" | English is a different baseline; 自有 reads as a requirement that the trucks be owned. Do not change 10,000,000 or 8. | 仅专营搬家者，适用另一套基准：最低资本新台币1000万元及至少8辆新车。 |
+| 10 | P2 | B | columns-zh-hans/013-taiwan-company-establishment-advanced-1.md | "记载地区即可（例：台北市）。" | A U+200B follows this sentence. Other lines in 013, and three lines in 015, contain only U+200B. | 删去全部 U+200B。句子本身不动。 |
+| 11 | P2 | B | columns-zh-hans/015-taiwan-company-setup-pitch-location.md | "（臺北市營業場所協助查詢服務作業須知）及台北市现行指南，" | The sentence ends the paragraph on a comma and continues in the next paragraph with “自2023年1月1日起”. | 依该作业须知及台北市现行指南，自2023年1月1日起，申请公司或商业（含分公司及分支机构）的设立登记、迁址或追加营业项目时 |
+| 12 | P2 | B | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "并一并核对包括特留分在内的强行规定限制。" | 并 and 一并 are stacked. | 但仍须核对遗嘱方式、遗嘱能力、解释与执行可能性，并核对包括特留分在内的强行规定限制。 |
+| 13 | P2 | C | columns-zh-hans/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "不会仅因小字限制说明而自动消散" | An impression does not “消散”, and 小字限制说明 is not how a native names a small-print disclaimer. | 核心广告所形成的印象，不会仅因小字里的限制说明就当然消除，故须复查各段文字与最终广告成品。 |
+| 14 | P2 | C | columns-zh-hans/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "准备不得仅以有偿销售为基准" | “Preparations must not” reads like a statutory ban; English is not to plan around paid sales alone. | 准备工作不能只按有偿销售来安排；促销赠品或消费者试用的日程，也须与登录时点一并管理。 |
+| 15 | P2 | C | columns-zh-hans/012-taiwan-overtaking-accident-liability.md | "并不表示少做一次规定的喇叭或车灯信号，责任就一定归谁。" | 归谁 does not say that one omitted signal does not by itself decide liability. | 本案的鉴定结果，并不表示漏做一次规定的喇叭或车灯信号，责任归属就因此确定。 |
+| 16 | P2 | C | columns-zh-hans/013-taiwan-company-establishment-advanced-1.md | "但移民署非常拥挤，宜早到并取号。" | The agency is not crowded; its service counters are. | 但移民署窗口人非常多，宜早到并取号。 |
+| 17 | P2 | C | columns-zh-hans/014-taiwan-mandatory-employment-period.md | "故须审查卷宗中出现的相关事实，不予遗漏。" | 卷宗 is a litigation file, and 不予遗漏 has no subject; English is every relevant fact in the record. | 故须审查材料中已经出现的相关事实，不得遗漏。 |
+| 18 | P2 | C | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "以书面向管辖法院表示意思。" | 表示意思 reverses 意思表示 and does not say the declaration is the waiver. | 须自知悉继承权之日起3个月内，以书面向管辖法院为抛弃的意思表示。 |
+| 19 | P2 | C | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "不得拿这份指引直接算出本人的截止日期。" | 本人 is the speaker or the reader; English is an individual deadline. | 不得拿这份指引直接算出具体案件的截止日期。 |
+| 20 | P2 | C | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "未成年人的个人与金融资料须以访问控制管理" | 访问控制 is an IT calque of “access should be limited”. | 未成年人的个人与金融资料应限制查阅范围，只提供给有需要的人和机关。 |
+| 21 | P2 | C | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "而须以保护子女人格与财产利益的方向行使。" | “以……的方向行使” copies “in the direction of”; the powers are exercised for the child’s interests. | 各项权能并非为父母个人利益，而须为保护子女的人格与财产利益行使。 |
+| 22 | P2 | C | columns-zh-hans/017-taiwan-logistics-business-setup.md | "若预定商业模式是否构成汽车货运并不清楚" | 若 and 是否 and 并不清楚 are piled up; a native puts 尚不清楚 first. | 若尚不清楚预定商业模式是否构成汽车货运，应在确定登记业种前，向主管机关提出预定契约与营运方式以求得确认。 |
+| 23 | P2 | D | columns-zh-hans/010-taiwan-gym-injury-lawsuit.md | "命被告给付[新台币1,579,589元]" | Mainland running text groups by 万/亿, not a Western comma. Do not change the amounts. Also the 1,570,000 and 1,000,000 headlines in 010; 011 新台币40,000元至200,000元、600,000元至5,000,000元、10,000元至1,000,000元; 017 新台币25,000,000元、10,000,000元; 018 新台币30,000,000元、100,000,000元. | 命被告给付[新台币157万9589元] |
+| 24 | P2 | D | columns-zh-hans/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "展延申请须在届期前3个月内提出。" | 展延 and 届期 are Taiwan administrative words; a mainland reader expects 延期 and 到期. Do not change 3. | 若拟继续供货，延期申请须在到期前3个月内提出。 |
+| 25 | P2 | D | columns-zh-hans/014-taiwan-mandatory-employment-period.md | "须能以文件连结训练主题、岗位所需专业与技术性质、具体期间、是否完成以及实际支出。" | 连结 is Taiwan Mandarin for “connect”. Also the employer checklist “以书面清楚连结补偿目的”. | 须能用文件把训练主题、岗位所需的专业与技术性质、具体期间、是否完成以及实际支出对应起来。 |

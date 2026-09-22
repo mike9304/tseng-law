@@ -35,9 +35,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 其后在银行开立公司筹备处账户时，许多银行仍会审查租赁契约并实地检查公司地址。
 
-曾有台湾的银行职员谈到开户审查。
+曾有台湾的银行职员直接谈到：
 
-近来许多外国人在开户后失去联络，所以开户审查越来越严。
+近来许多外国人开户后失去联络，所以开户审查越来越严。
 
 实务上，开户往往是整个流程中最困难的一步。
 
@@ -67,7 +67,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 该表当天即可发给。
 
-但移民署非常拥挤，宜早到并取号。
+但移民署窗口人非常多，宜早到并取号。
 
 ​
 

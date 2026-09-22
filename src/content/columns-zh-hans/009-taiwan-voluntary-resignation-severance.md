@@ -83,7 +83,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 若争执发生，
 
-哪一方先以充分事由终止契约，该方就可以不给付资遣费，或请求资遣费。
+谁先以充分事由终止契约，权利就归谁：由雇主终止的，雇主可以不给付；由受雇人终止的，受雇人可以请求。
 
 也就是说，资遣费可能不给付，也可能被请求。
 

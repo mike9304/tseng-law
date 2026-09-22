@@ -1,0 +1,116 @@
+# WO-F-zh-hans — Simplified Chinese fix lane, campaign round 3 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-zh-hans-r3 (no git add/commit/push)
+Files touched: src/content/columns-zh-hans/001–018 (all 18);
+src/data/international-guidance-asia.ts (zh-hans strings only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.zh-hans.consultationNotice only);
+src/data/__tests__/guidance-disclosure-parity.test.ts (zh-hans expected pattern only: /咨询步骤/ → /不能代替咨询/);
+this log.
+"TWD 1.57M" was not in these strings and stays byte-identical. confidentialNotice was not rewritten.
+consultationNotice was rewritten together with the FAQ answer (and the home-page sentence) so the notice remains a verbatim substring of that FAQ answer. The denial stays: reading this Simplified Chinese page does not mean a consultation is conducted in written Simplified Chinese.
+
+## Rows applied
+zh-hans-a 25/26 and zh-hans-b 23/25. No P3 rows in either review.
+
+zh-hans-a
+1  005: 韩国银行 (Bank of Korea) → a commercial bank in Korea. "在韩国，银行一般要求投资人**本人**到银行，并从本人名下账户汇出资金。" Bold on 本人 kept.
+2  005: the顿号 list was one group. "韩国国民若设立外国法人或取得其股份，须提出“国外直接投资申报”。" The 韩国外汇管制规定 lead-in stays.
+3  009: the both-at-fault line no longer gives both remedies to whichever side acts first. The two preceding blocks already say both sides are at fault and a dispute has arisen, so that lead-in was not repeated (block count). The line is now: who terminates first on sufficient grounds takes the right that belongs to that side — the employer may withhold, the employee may claim.
+4  004: "并用" → "与其他优惠并用的限制". FAQ and body (2).
+5  002: consistent treatment, not ongoing management. "从收取价款到记入账册及税务申报，处理须前后一致。"
+6  006: 大法官 are the justices, not the organ. Parenthetical "即台湾的宪法审查机关" removed. "司法院大法官宣告…"
+7  006: 提出告诉 → 报案.
+9  008: the cap is its own sentence. "至多6个月工资。此公式…" Digit kept as "每满1年" (the suggestion's "每满一年" would drop a counted 1).
+10  guidance: "涵盖企业咨询至诉讼" → "从企业咨询到诉讼都有涉及".
+11–12  guidance columns page, one paragraph: "在真实事项中采取行动" and "本页不是咨询步骤" → "因此请不要仅凭一篇文章就采取行动。……本页不能代替咨询。" The denial stays. Disclosure-parity expectation updated to /不能代替咨询/.
+13  guidance: "您这一件" → "您这一事项".
+14  guidance: the double negative is now "也没有把第一次谈话说成免费". Still a denial.
+15  guidance home, FAQ, and llms consultationNotice, same last sentence: "并不表示咨询会以简体中文书面方式进行。"
+16  001: "市场观察、联络业务、协商支持" → "市场调查、联络、协助协商".
+17  001: "地方自治团体" glossed "地方政府（地方自治團體）".
+18  002: "按股东归属" → "在各股东之间如何分配".
+19  002: "作成" now has its object. "是否申请宣告破产，不得仅凭简单公式，或过时说明中的若干条件来决定。"
+20  003: "一律较优" → "并不存在对所有案件都最合适的单一程序". The denial of one route for every case stays.
+21  004: "都不是对一切进入台湾都较优" → "都不是对每一种进入台湾市场的方式都更合适".
+22  004: "分享同一事实的专业人士" → "的专业人士依据同一套事实审查".
+23  005: "可能适用……制裁" → "可能因违反外汇规定而受制裁".
+24  007: the second 本身 moved. "本身并不会排除分配请求权，也不会因此当然减少该权利。"
+25  007: "不得强制押到" → "不得拘提强制到场".
+26  007: script-only 罚锾（罰鍰） → 罚锾（罰鍰，即罚款）, including the FAQ that had no gloss.
+
+zh-hans-b
+1  018: "其他表决权过半数" / "董事则须2/3以上" → "其他股东表决权过半数同意" / "董事转让出资，则须经其他股东表决权2/3以上同意". Fractions unchanged. "各股东1人1票" left (see disagreements).
+2  010: "我是" → "本案中，我担任" (the representation is past).
+3  010: 男 restored on the headlines, alts, and link titles that the English marks as male (16 strings). The opening "一名韩国大学生" stays: the English intro does not say male.
+4  011: distributor is 经销商, not 销售代理商. FAQ and the repeated body sentence ("同时担任经销商"), plus "经销商可同时担任进口商". The later triad 代理、独家经销或销售商 stays.
+5  011: "提供产品" → "免费提供产品".
+6  013: the bank employee's remark is attributed, not stated as a separate fact. "曾有台湾的银行职员直接谈到：" and the next block is the remark. Paragraphs were not merged.
+7  014: a signature is evidence of agreement, not itself a document. "可以用来证明合意存在，但不能替代法定要件。"
+8  017: "不能只看契约怎么写，也须核对实际营运方式".
+9  017: "自有基准" was read as an ownership requirement. "适用另一套基准：最低资本新台币10,000,000元及至少8辆新车". Comma form kept (row 23).
+11  015: the guidelines sentence no longer ends on a comma. "所依据的是“[……作业须知]”（臺北市營業場所協助查詢服務作業須知）及台北市现行指南。" The next block already begins "自2023年1月1日起……" and stays its own block. Link unchanged.
+12  016: "并一并核对" → "并核对".
+13  011: an impression does not 消散. "不会仅因小字里的限制说明就当然消除".
+14  011: "准备工作不能只按有偿销售来安排".
+15  012: one omitted signal does not by itself decide liability. "并不表示漏做一次规定的喇叭或车灯信号，责任归属就因此确定。"
+16  013: "移民署窗口人非常多，宜早到并取号。"
+17  014: "故须审查材料中已经出现的相关事实，不得遗漏。"
+18  016: "以书面向管辖法院为抛弃的意思表示。"
+19  016: "算出具体案件的截止日期".
+20  016: "应限制查阅范围，只提供给有需要的人和机关。"
+21  016: "而须为保护子女的人格与财产利益行使。"
+22  017: "若尚不清楚预定商业模式是否构成汽车货运，应在确定登记业种前……"
+24  011: "延期申请须在到期前3个月内提出。" Digit 3 kept.
+25  014: "须能用文件把训练主题……对应起来。" Checklist item 4: "以书面把补偿目的……对应清楚。"
+
+## Rows skipped
+zh-hans-a #8 (003 Q16–Q20 and the close, and the same blanks in 005, 006, 008, 009). The lines are body text split by U+200B, and 005 has empty bold lines `**​**`. Promoting them to `##` headings changes heading levels. Deleting U+200B changes the ZWSP count. checkHeadings and checkBlocks require both to match the Korean source, which has the same blanks. Block count and ZWSP count were left unchanged. Q16's wording was already the question.
+
+zh-hans-b #10 (013 and 015 U+200B). Same checker constraint. "记载地区即可（例：台北市）。" and the blank-only lines were not deleted. Sentences in those blocks were not otherwise flagged.
+
+zh-hans-b #23 (万/亿 grouping of exact amounts in 010, 011, 017, 018). Tried, then reverted. The checker multiplies only 만/萬 and 억/億, not Simplified 万/亿, so "2500万元" was read as 2500 and "1亿元" dropped 100,000,000 (017 and 018 numbers FAIL; 010 and 011 failed the same way). "157万9589元" would also be the wrong amount: 157万 is 1,570,000 and 9589 is a second number, not 1,579,589. Comma form kept: 1,579,589; 1,570,000; 1,000,000; the 011 fine ranges; 25,000,000; 10,000,000; 30,000,000; 100,000,000. 0 instances changed.
+
+## Systemic patterns and how many instances changed
+U+200B one-line fragments (003 from Q16, 005, 006, 008, 009, 013, 015)     0 removed (skip above; checker pins the count)
+Guidance English calques (涵盖A至B, 咨询步骤, 真实事项, 您这一件, 双否定, 书面进行)  6 strings (home, columns page, pricing, FAQ, llms notice)
+韩国银行 used for a commercial bank                                         2 (005 remittance sentence, and "若自韩国的银行账户汇出")
+较优 with no comparison stated                                               2 (003, 004). No other 较优 in the zh-hans columns or pack.
+罚锾 gloss that only changed script                                          8 (006 ×1, 007 FAQ + two body sentences, 011 ×2, 015 ×1, 017 ×1). Later bare 行政罚锾 in the same articles left after the glossed first mention.
+Both-at-fault severance gives both remedies to whoever terminates first     1 (009). Lines 76–80 already split the remedies and were left.
+Exact amounts in Western comma grouping (010, 011, 017, 018)                0 (skip above). Comma amounts in 003, 004, and 006 were outside this pattern's file list and were left.
+Fraction missing its noun (董事则须2/3以上)                                  1 (018). "各股东1人1票" left.
+展延 / 届期 where a mainland reader expects 延期 / 到期                      3 (011 the quoted sentence; 001 "延期条件"; 002 "延期期限")
+连结 as "connect documents or facts"                                         3 (014 training sentence, "与留任期间的对应关系", employer checklist). 情感连结 and 课税连结 left; they are the legal nexus, not this verb.
+并 and 一并 stacked                                                          4 (016 ×3: 并核对 ×2, 并整理 ×1; 014 checklist "并确认")
+A circumstance called a document                                             1 (014)
+
+R2–R10 were already in this corpus (prior rounds). This pass did not reopen them except where an r3 pattern was the same rule (R3 softening was already in place; R6 number format could not move to 万; R8 罚锾 / 大法官 / 告诉 were the rows above). R9 emergency numbers in 003 already say 119, 110, and 112. Hangul remains only inside frontmatter `url` of 008 and 009. Attorney Wei Tseng is not marked masculine. Consultation languages stay English, Chinese (中文), Japanese, and Korean.
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-zh-hans --lang zh-hans 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=2795
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-zh-hans src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      24
+```
+`git status --short | wc -l` was 24 before this log file existed. 015 still WARNs `numbers extra in translation (2): 2×2`. This pass did not add a digit 2 in that file. The WARN does not fail the summary.
+
+## Reviewer disagreements (not applied)
+zh-hans-b #23, the form "157万9589元" for 新台币1,579,589元. That is not one amount. 157万 is 1,570,000, and 9589 is left over. The comma form is the judgment figure. The same row's round amounts (157万, 4万, 2500万, 1亿, and the rest) are natural mainland grouping, but this checker's magnitude step only multiplies 萬/億, so those strings failed numbers and were reverted.
+
+"各股东1人1票" in the same 018 sentence. The suggested rewrite does not replace it. "一人一票" would drop a counted 1. The phrase already says one shareholder, one vote, and was left.
+
+Nothing else in the two reviews was rejected as wrong. The U+200B rows and the paragraph-merge suggestions (013 bank employee, 015 guidelines) were adapted inside the existing blocks because the checker pins ZWSP count, heading levels, and block count to the Korean source.

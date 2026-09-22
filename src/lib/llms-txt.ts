@@ -623,7 +623,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   'zh-hans': {
     consultationNotice:
-      '律师咨询以英语、中文、日语和韩语进行。咨询使用的中文，指普通话与书面中文。阅读本简体中文页面，并不表示某次咨询会以简体中文书面进行。',
+      '律师咨询以英语、中文、日语和韩语进行。咨询使用的中文，指普通话与书面中文。阅读本简体中文页面，并不表示咨询会以简体中文书面方式进行。',
     discoveryNotice:
       '本 llms.txt 文件只是公开页面的查找索引；它不承诺搜索排名、背书或推荐，也不承诺一定会被展示。',
     confidentialNotice:

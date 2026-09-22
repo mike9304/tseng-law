@@ -2509,16 +2509,16 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Þessi síða er skrifuð á íslensku sem almenn leiðsögn, ekki sem lögfræðileg ráðgjöf í þínu máli.',
     consultationNotice:
-      'Ráðgjöf fer einungis fram á fjórum málum: ensku, kínversku (中文), japönsku og kóresku.',
+      'Ráðgjöf fer einungis fram á fjórum tungumálum ráðgjafar: ensku, kínversku (中文), japönsku og kóresku.',
     methodConfirmationNotice:
-      'Ef þú kannt ekkert af fjórum málunum skaltu velja „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og enginn svarfrestur er lofað.',
+      'Ef þú kannt ekkert af fjórum tungumálunum skaltu velja „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og enginn svarfrestur er lofað.',
     preparationNotice:
-      'Þú mátt skrifa samantektina á þínu eigin máli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa.',
+      'Þú mátt skrifa samantektina á þínu eigin tungumáli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa.',
     heading: 'Senda beiðni um ráðgjöf',
     intro:
       'Lýstu málinu þínu stuttlega. Lögmaður metur innihaldið áður en næsta skref er rætt.',
     submitLabel: 'Senda beiðnina',
-    submittingLabel: 'Sendist…',
+    submittingLabel: 'Sendi…',
     successMessage:
       'Við höfum móttekið beiðnina þína; hún bíður mats. Það þýðir ekki að ráðgjöf hafi farið fram eða að tími sé staðfestur.',
     savedNotificationPendingMessage:
@@ -2526,11 +2526,11 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     receiptIdLabel: 'Móttökunúmer',
     failureMessage:
       'Ekki tókst að senda beiðnina. Reyndu aftur eða skrifaðu á netfangið á tengiliðasíðunni.',
-    originalLanguageLabel: 'Málið sem þú skrifar á',
+    originalLanguageLabel: 'Tungumálið sem þú skrifar á',
     originalLanguagePlaceholder:
-      'Til dæmis íslenska, enska, kínverska eða annað mál',
-    preferredConsultationLanguageLabel: 'Málið sem þú óskar fyrir ráðgjöfina',
-    originalTextLabel: 'Stutt lýsing á málinu (á þínu máli)',
+      'Til dæmis íslenska, enska, kínverska eða annað tungumál',
+    preferredConsultationLanguageLabel: 'Tungumálið sem þú vilt nota í ráðgjöfinni',
+    originalTextLabel: 'Stutt lýsing á málinu (á þínu tungumáli)',
     originalTextPlaceholder:
       'Segðu frá því sem gerðist, hvers konar aðstoð þú þarft og frestinum ef einhver er. Ekki skrifa vegabréfsnúmer, kennitölu eða reikningsupplýsingar.',
     nameLabel: 'Nafn',
@@ -2542,17 +2542,17 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'Sláðu inn gilt netfang.',
     tooLongMessage: 'Textinn er of langur. Styttu hann og sendu aftur.',
     sourceLanguageNotice:
-      'Þessi grein er aðeins birt á málinu {language}; tengillinn opnar frumsíðuna.',
+      'Þessi grein er aðeins birt á tungumálinu {language}; tengillinn opnar frumsíðuna.',
     unavailableTranslationNotice:
-      'Þessi liður er enn ekki tiltækur á máli þessarar síðu. Tengill á frummálinu opnar frumtextann.',
-    unavailableLanguageNotice: 'Þessi síða er ekki í boði á málinu {language}.',
+      'Þessi liður er enn ekki tiltækur á tungumáli þessarar síðu. Tengill á frummálinu opnar frumtextann.',
+    unavailableLanguageNotice: 'Þessi síða er ekki í boði á tungumálinu {language}.',
     languageOptions: {
       en: 'Enska (English)',
       'zh-hant': 'Kínverska (中文)',
       ja: 'Japanska (日本語)',
       ko: 'Kóreska (한국어)',
       'needs-method-confirmation':
-        'Ég kann ekkert af fjórum málunum — samskiptaleiðina þarf að staðfesta',
+        'Ég kann ekkert af fjórum tungumálunum — samskiptaleiðina þarf að staðfesta',
     },
   },
 };

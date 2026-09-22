@@ -33,7 +33,7 @@ Millifærsla með netbanka eða í gegnum nákominn aðila í Kóreu (匯款) er
 
 Enn fremur skal sá sem hefur kóreskt ríkisfang og stofnar erlendan lögaðila eða öðlast hlut, samkvæmt kóreskri gjaldeyriseftirlitsreglu, skila „tilkynningu um beina fjárfestingu erlendis“. Tilkynningin skal skráð á þeim tíma sem hlutafé er millifært til taívanska lögaðilans (台灣法人); ef hún fellur niður geta viðurlög vegna brots á gjaldeyrisreglum fylgt.
 
-Aflaðu upplýsinga hjá bankanum þínum í því landi sem féð er sent frá, áður en hlutafjármillifærslan (資本金匯款) fer fram; í kóreska dæminu er það aðalbankinn þinn í Kóreu.
+Aflaðu upplýsinga hjá bankanum þínum í því landi sem féð er sent frá, áður en hlutafjármillifærslan (資本金匯款) fer fram; í kóreska dæminu er það aðalbanki fjárfestisins í Kóreu.
 
 **​**
 
@@ -61,7 +61,7 @@ farið í bankann og umbreytt undirbúningsreikningi félagsins í almennan reik
 
 **4. Er unnt að taka netbanka í notkun þegar í stað, eftir að undirbúningsreikningnum hefur verið umbreytt í almennan reikning?**
 
-Það er mishlöð eftir bönkum; að jafnaði er krafist að minnsta kosti farsímanúmers.
+Það er misjafnt eftir bönkum; að jafnaði er krafist að minnsta kosti farsímanúmers.
 
 Tilteknir bankar geta sett viðbótarkröfur, til dæmis notkunartíma reikningsins að lágmarki 6 mánuði eftir stofnun.
 
@@ -69,7 +69,7 @@ Tilteknir bankar geta sett viðbótarkröfur, til dæmis notkunartíma reiknings
 
 **5. Getur félagið ráðið erlenda ríkisborgara sem starfsmenn?**
 
-A. Fyrsti starfsmaður: beiðnin er lögð fram sem stjórnunarstarf í almennri fjárfestingarstarfsemi erlendra Kínverja eða útlendinga (一般僑外投資事業主管工作). Mælikvarði „sérhæfðrar eða tæknilegrar vinnu“ undir lið B hér á eftir á ekki við, en skilyrði viðtakanda gilda, þar á meðal skilyrðið sem framkvæmdastjóri (經理人) félags þar sem innlegg erlendra Kínverja eða útlendinga fer yfir 1/3, ásamt árangursskilyrðum vinnuveitanda um hlutafé og veltu (matsstaðlar 38. og 39. gr.).
+A. Fyrsti starfsmaður: beiðnin er lögð fram sem stjórnunarstarf í almennri fjárfestingarstarfsemi Kínverja búsettra erlendis (華僑) eða útlendinga (一般僑外投資事業主管工作). Mælikvarði „sérhæfðrar eða tæknilegrar vinnu“ undir lið B hér á eftir á ekki við, en skilyrði viðtakanda gilda, þar á meðal skilyrðið sem framkvæmdastjóri (經理人) félags þar sem innlegg Kínverja búsettra erlendis (華僑) eða útlendinga fer yfir 1/3, ásamt árangursskilyrðum vinnuveitanda um hlutafé og veltu (matsstaðlar 38. og 39. gr.).
 
 B. Frá næsta starfsmanni gilda takmarkanir: fari fjöldi ráðinna starfsmanna yfir 1 mann, er menntun og reynsla starfsmanns, reglur um meðalráðningarlaun og reglur um hlutafé og veltu félagsins meðhöndluð í samræmi við „sérhæfða eða tæknilega vinnu“ (專門性或技術性工作).
 

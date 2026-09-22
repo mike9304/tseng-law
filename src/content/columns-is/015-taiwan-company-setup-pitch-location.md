@@ -51,7 +51,7 @@ Ef könnunarniðurstaðan tilgreinir að veitingastarfsemi sé ekki möguleg get
 
 ​
 
-**Q. Skulu allar greinar, í gegnum kerfi „fyrirframfyrirspurnar um starfsstöð“, kanna hvort rekstur sé mögulegur?**
+**Spurning.** Þurfa allar starfsgreinar, í gegnum kerfi fyrirframfyrirspurnar um starfsstöð (營業場所預先查詢), að kanna hvort rekstur sé mögulegur?
 
 Mælt er með að allar greinar, í gegnum kerfi „fyrirframfyrirspurnar um starfsstöð“ (營業場所預先查詢), staðfesti hvort rekstur sé mögulegur.
 
@@ -71,7 +71,7 @@ Ef opnað er á stað þar sem veitingastarfsemi er ekki möguleg getur síðar 
 
 „greinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目)
 
-Þetta eru aðalatriðin; hafir þú fleiri spurningar máttu senda beiðni með tengiliðaeyðublaðinu, og ekkert svar er heitið þegar í stað.
+Þetta eru aðalatriðin. Hafir þú fleiri spurningar máttu senda beiðni með tengiliðaeyðublaðinu. Ráðgjöf er ekki veitt á íslensku, og ekkert svar er heitið þegar í stað.
 
 Reglur stjórnvalda geta oft breyst; áður en lögaðilinn er skráður ættir þú að staðfesta nýjustu reglur.
 

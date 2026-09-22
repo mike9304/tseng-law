@@ -11,7 +11,7 @@ faq:
   - q: "Fær starfsmaður á Taívan lögbundinn starfslokastyrk ef hann segir sjálfur upp?"
     a: "Nei. Ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — myndast skylda til greiðslu lögbundins starfslokastyrks samkvæmt rétti Taívan (資遣費) fyrst þegar félagið segir starfsmanninum upp; segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokastyrk."
   - q: "Á félagið einnig að greiða starfslokastyrk við agalega uppsögn?"
-    a: "Nei. Fyrirfari starfsmaðurinn ólögmæta háttsemi, brjóti hann vinnureglur eða sé fjarverandi án gildrar ástæðu 3 daga í röð (12. gr. laga um vinnustaðla, 勞動基準法第12條), má félagið segja upp án fyrirvara og þarf ekki að greiða starfslokastyrk. Efnahagsleg uppsögn (11. gr.) krefst hins vegar fyrirvara og greiðslu starfslokastyrks."
+    a: "Nei. Fremji starfsmaðurinn ólögmæta háttsemi, brjóti hann vinnureglur eða sé fjarverandi án gildrar ástæðu 3 daga í röð (12. gr. laga um vinnustaðla, 勞動基準法第12條), má félagið segja upp án fyrirvara og þarf ekki að greiða starfslokastyrk. Efnahagsleg uppsögn (11. gr.) krefst hins vegar fyrirvara og greiðslu starfslokastyrks."
   - q: "Hvernig er starfslokastyrkur á Taívan reiknaður?"
     a: "Fyrir hvert fullt 1 ár í starfi skal vinnuveitandi greiða 0,5 mánaðar meðallaun sem starfslokastyrk, þó að hámarki 6 mánaðarlaun. Þessi reikniregla gildir um starfsaldur sem 12. gr. reglugerðar um eftirlaun launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til er greiddur 1 mánaðar meðallaun á hvert 1 ár, án hámarks."
 ---
@@ -27,7 +27,7 @@ faq:
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Þetta vita margir þegar.
+Eftirfarandi er almenn skýring á fyrirkomulaginu.
 
 Í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — skal félagið greiða starfslokastyrk þegar starfsmaður lætur af störfum
 
@@ -39,7 +39,7 @@ Segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokast
 
 ​
 
-Fyrirfari starfsmaðurinn hins vegar ólögmæta háttsemi,
+Fremji starfsmaðurinn hins vegar ólögmæta háttsemi,
 
 **brjóti hann vinnureglur (工作規則),**
 
@@ -54,7 +54,7 @@ má félagið segja upp án þess að greiða starfslokastyrk.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | **Tegund** | **Efnahagsleg uppsögn**  **資遣** **員工(經濟解僱)** | **Agaleg uppsögn**  **解僱** **員工(懲戒解僱)** | **Sjálfviljug uppsögn starfsmanns**  **員工自請離職** |
-| Merking | Ef vinnuveitandi þarf, vegna rekstrarástands, að aðlaga mannafla, liggur ástæðan á sviði rekstrar vinnuveitandans og er ekki á ábyrgð starfsmannsins. Því skal vinnuveitandi virða uppsagnarfrest (預告期間) og greiða starfslokastyrk, svo óhagræði starfsmannsins sé jafnað. | Fyrirfari starfsmaðurinn ólögmæta eða ótilhlýðilega háttsemi, má vinnuveitandi þegar í stað slíta ráðningarsamningi (勞動契約) án fyrirvara og þarf ekki að greiða starfslokastyrk. Þetta er 1 af agaheimildum vinnuveitanda. | Starfsmaðurinn er frjáls til að slíta samningnum hvenær sem er, en skal eftir starfstíma virða uppsagnarfrestinn, svo vinnuveitandi geti tryggt afhendingu starfa og leitað staðgengils. |
+| Merking | Ef vinnuveitandi þarf, vegna rekstrarástands, að aðlaga mannafla, liggur ástæðan á sviði rekstrar vinnuveitandans og er ekki á ábyrgð starfsmannsins. Því skal vinnuveitandi virða uppsagnarfrest (預告期間) og greiða starfslokastyrk, svo óhagræði starfsmannsins sé jafnað. | Fremji starfsmaðurinn ólögmæta eða ótilhlýðilega háttsemi, má vinnuveitandi þegar í stað slíta ráðningarsamningi (勞動契約) án fyrirvara og þarf ekki að greiða starfslokastyrk. Þetta er 1 af agaheimildum vinnuveitanda. | Starfsmaðurinn er frjáls til að slíta samningnum hvenær sem er, en skal eftir starfstíma virða uppsagnarfrestinn, svo vinnuveitandi geti tryggt afhendingu starfa og leitað staðgengils. |
 | Skilyrði | Til staðar  (11. gr. laga um vinnustaðla á Taívan) | Til staðar  (12. gr. laga um vinnustaðla á Taívan) | Engin |
 | Fyrirvari | Krafist | Ekki krafist | Krafist |
 | Erfiðleiki | Einfalt | Erfitt | Einfalt |
@@ -119,7 +119,7 @@ Að öðrum kosti yrði B að yfirgefa félagið;
 
 hann afhenti B A4-blað
 
-og skipaði honum að skrifa: „Ég, OOO, lækka af fúsum vilja stöðu og laun“
+og skipaði honum að skrifa: „Ég, [nafn], lækka af fúsum vilja stöðu og laun“
 
 sem efni.
 
@@ -173,9 +173,9 @@ allan ganginn með farsímanum
 
 og gat sannað að hann hefði ekki sagt sjálfur upp.
 
-Því tókst honum síðar, með lögmannsumboði,
+Hann gat síðar, með aðstoð lögmanns,
 
-að staðfesta réttinn til starfslokastyrks samkvæmt lögum,
+látið staðreyna réttinn til starfslokastyrks samkvæmt lögum,
 
 en aðrir starfsmenn sem höfðu látið af störfum stóðu ekki jafn sterkt.
 
@@ -221,7 +221,7 @@ eða þrýsti á þig til að segja upp að eigin frumkvæði
 
 Starfslokastyrkur er lögbundinn réttur starfsmannsins,
 
-og félagið á auðvitað að greiða hann.
+og félaginu ber að greiða hann þegar lögbundin skilyrði eru uppfyllt.
 
 Þú ættir einnig að vernda réttindi þín á Taívan.
 

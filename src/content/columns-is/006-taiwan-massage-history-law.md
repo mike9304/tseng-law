@@ -1,5 +1,5 @@
 ---
-title: "Saga og lagaleg staða nuds á Taívan"
+title: "Saga og lagaleg staða nudds á Taívan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
 date_display: "13. september 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 ---
 
-# Saga og lagaleg staða nuds á Taívan
+# Saga og lagaleg staða nudds á Taívan
 
 ![Forsíðumynd](../images/006-taiwan-massage-history-law/featured-01.jpg)
 

@@ -29,7 +29,7 @@ Isso assemelhava-se muito à lavagem de cabelo de estilo vietnamita de hoje.
 
 E esses salões de estilo taiwanês permanecem uma memória cultural distintiva para numerosas pessoas em Taiwan.
 
-(Não estarei a revelar a minha idade sem o querer?)
+Esse pormenor pertence à memória dessa época.
 
 ​
 
@@ -57,7 +57,7 @@ empregou trabalhadores sem deficiência visual para serviços de lavagem de cabe
 
 Segundo o direito de então, o Sr. Lin e esses trabalhadores viram infligir-se respetivamente uma coima administrativa (罰鍰) de TWD 40.000, TWD 10.000 e TWD 20.000 em novo dólar de Taiwan (新臺幣).
 
-O Sr. Lin estimou esta sanção muito injusta e pediu uma interpretação constitucional.
+O Sr. Lin considerou esta sanção muito injusta e pediu uma interpretação constitucional.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 

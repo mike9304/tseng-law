@@ -45,7 +45,7 @@ Se tiver dificuldade em deslocar-se em pessoa ao gabinete da administração fun
 
 pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de uma advogada ou advogado.
 
-Se o resultado da verificação indicar que o estabelecimento de restauração não é possível, mais tarde, na inscrição da pessoa coletiva (公司登記), a municipalidade poderia não aceitar a inscrição.
+Se o resultado da verificação indicar que o estabelecimento de restauração não é possível, mais tarde, no registo da sociedade (公司登記), a municipalidade poderia não aceitar a inscrição.
 
 Preste portanto atenção a este ponto.
 
@@ -59,21 +59,21 @@ Contudo, na inscrição da sociedade, vários ramos são frequentemente inscrito
 
 Também, na prática, não é necessário verificar todos os ramos na inscrição da sociedade.
 
-Segundo as «[instruções de funcionamento do serviço de informação sobre os locais da cidade de Taipé](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)»(臺北市營業場所協助查詢服務作業須知) e o guia em vigor da cidade de Taipé,
+Segundo as «[instruções de funcionamento do serviço de consulta assistida de locais de negócio da cidade de Taipé](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) e o guia em vigor da cidade de Taipé,
 
 desde 1 de janeiro de 2023, no pedido de inscrição de constituição, de transferência de sede ou de adição de ramos de atividade de uma sociedade ou de um comércio (incluindo a sucursal (分公司) e o estabelecimento auxiliar (分支機構)), o resultado da consulta prévia do local **deve** ser junto ao pedido de inscrição, independentemente do setor.
 
-A lista abaixo dos «ramos objeto de uma verificação oficiosa» (主動查詢之營業項目) designa os ramos que o gabinete do comércio verifica oficiosamente a mais durante o exame da inscrição (隨案主動查詢) quando o ramo figura no pedido mas falta no resultado junto; o facto de um ramo não figurar nesta lista não significa que a verificação seja dispensada.
+A lista abaixo dos «ramos sujeitos a consulta por iniciativa do serviço» (主動查詢之營業項目) designa os ramos que o gabinete do comércio consulta por iniciativa própria durante o exame da inscrição (隨案主動查詢) quando o ramo figura no pedido mas falta no resultado junto; o facto de um ramo não figurar nesta lista não significa que a verificação seja dispensada.
 
 Se se abrir num lugar onde o estabelecimento de restauração não é possível, uma coima administrativa (罰鍰) da autoridade competente pode mais tarde ser infligida.
 
-![«ramos objeto de uma verificação oficiosa» (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![«ramos sujeitos a consulta por iniciativa do serviço» (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-«ramos objeto de uma verificação oficiosa» (主動查詢之營業項目)
+«ramos sujeitos a consulta por iniciativa do serviço» (主動查詢之營業項目)
 
 Tal é o essencial; para outras perguntas, pode escrever através da página Contacto; não é prometido um prazo de resposta.
 
-As regras das autoridades administrativas podem mudar com frequência; antes da inscrição da pessoa coletiva, convém confirmar a regulamentação mais recente.
+As regras das autoridades administrativas podem mudar com frequência; antes do registo da sociedade, convém confirmar a regulamentação mais recente.
 
 ---
 

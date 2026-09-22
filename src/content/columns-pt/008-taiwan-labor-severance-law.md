@@ -20,9 +20,9 @@ faq:
 
 ![Imagem principal](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Bom dia, sou Wei Tseng (曾雋崴), advogada em Taiwan.
+Sou Wei Tseng (曾雋崴), advogada em Taiwan.
 
-Hoje, gostaria de falar consigo da indemnização por despedimento (資遣費) em Taiwan.
+Este texto trata da indemnização por despedimento (資遣費) em Taiwan.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
@@ -154,7 +154,7 @@ baixou os salários de numerosos trabalhadores dirigentes
 
 e uma parte dos trabalhadores não suportou este tratamento
 
-e demitiu-se ela própria
+e alguns demitiram-se por sua iniciativa
 
 ​
 
@@ -168,7 +168,7 @@ e, porque já tinha descoberto ofertas de emprego antes da partida de trabalhado
 
 B, no dia em que se dirigiu à entrevista,
 
-gravou todo o desenrolar com o telefone móvel
+gravou todo o desenrolar com o telemóvel
 
 e pôde provar que não se tinha demitido ele próprio.
 

@@ -41,13 +41,13 @@ O artigo 284 do Código Penal rege as lesões por imprudência (過失傷害) e 
 
 Em matéria de indemnização civil dos danos (損害賠償), segundo o artigo 197 do Código Civil de Taiwan (民法) a reclamação deixa de ser possível uma vez decorridos 2 anos a contar do dia em que o dano e o devedor da indemnização foram conhecidos, ou 10 anos a contar do dia do ato ilícito. Que factos influem sobre a prescrição (消滅時效) deve examinar-se separadamente.
 
-Quem sofre um dano em virtude de uma infração pode, segundo o artigo 487 do Código de Processo Penal, formar uma ação civil acessória à instância penal (刑事附帶民事訴訟). Enquanto a instância penal estiver em curso, esta ação pode ser formada até antes do encerramento dos debates orais (言詞辯論終結) da segunda instância, segundo o artigo 488 do Código de Processo Penal, mas não pode ser formada depois do encerramento dos debates orais da primeira instância e antes da interposição do recurso. Em geral, o pagamento de custas judiciais (裁判費) distintas pode ser evitado, mas nem todos os resultados se concluem sem custo. Por exemplo, se o assunto penal vier a ser rejeitado e, a pedido do demandante, remetido ao tribunal civil, segundo o artigo 503 do Código de Processo Penal as custas podem ser impostas, e devem também verificar-se as regras de remessa e de procedimento do artigo 504.
+Quem sofre um dano em virtude de uma infração pode, segundo o artigo 487 do Código de Processo Penal, formar uma ação civil acessória à instância penal (刑事附帶民事訴訟). Enquanto a instância penal estiver em curso, esta ação pode ser formada até antes do encerramento dos debates orais (言詞辯論終結) da segunda instância, segundo o artigo 488 do Código de Processo Penal, mas não pode ser formada depois do encerramento dos debates orais da primeira instância e antes da interposição do recurso. Em geral, o pagamento de custas judiciais (裁判費) distintas pode ser evitado, mas nem todos os resultados se concluem sem custo. Por exemplo, se o assunto penal vier a ser rejeitado e, a pedido do autor, remetido ao tribunal civil, segundo o artigo 503 do Código de Processo Penal as custas podem ser impostas, e devem também verificar-se as regras de remessa e de procedimento do artigo 504.
 
-A escolha varia segundo a interrupção da prescrição (時效中斷), o círculo dos demandados, as provas, o seguro e a competência. Não existe portanto um procedimento uniformemente preferível para todos os assuntos.
+A escolha varia segundo a interrupção da prescrição (時效中斷), o círculo dos réus, as provas, o seguro e a competência. Não existe portanto um procedimento uniformemente preferível para todos os assuntos.
 
 ## Q4. Se houver culpa de parte a parte, como se apreciam as responsabilidades penal e civil?
 
-A responsabilidade penal só pode ser retida quando são reconhecidos o incumprimento do dever de prudência de cada um e o nexo de causalidade entre esse incumprimento e as lesões da outra parte. O simples facto de uma culpa ter existido de parte a parte não faz nascer automaticamente a responsabilidade por lesões por imprudência.
+A responsabilidade penal só se verifica quando se comprovam o incumprimento do dever de prudência de cada um e o nexo de causalidade com as lesões. O simples facto de uma culpa ter existido de parte a parte não faz nascer automaticamente a responsabilidade por lesões por imprudência.
 
 No plano civil, segundo o artigo 217 do Código Civil, se a pessoa lesada tiver uma culpa que contribuiu para causar ou agravar o dano (與有過失), o tribunal pode reduzir ou isentar a indemnização. Por exemplo, se o dano reconhecido em novo dólar de Taiwan (新臺幣, TWD) for TWD 1.000.000 e a culpa da pessoa lesada for avaliada em 50 %, o montante pode ser reduzido a TWD 500.000 antes de outros ajustamentos.
 
@@ -57,7 +57,7 @@ A perícia (鑑定) ou o quadro de análise preliminar podem ser peças importan
 
 No ato de transação (和解書), convém individualizar a data, o local e as partes do acidente, e consignar o montante e o momento do pagamento, o tratamento das prestações de seguro, as reclamações incluídas e as que ficam reservadas. Deve também fixar-se claramente o tratamento futuro, as lesões descobertas mais tarde, a entrega de documentos tais como o certificado médico (診斷證明書) e a relação entre o pagamento e o desistimento da queixa.
 
-A transação (和解) do artigo 736 do Código Civil é um contrato no qual as partes cedem reciprocamente para pôr termo a um litígio ou evitá-lo. Segundo o artigo 737 do Código Civil, a extensão na qual os direitos se extinguem aprecia-se também só nos limites do que foi abandonado no ato de transação. Não se deve portanto afirmar, sem examinar o texto, que todas as reclamações futuras desaparecem.
+A transação (和解) do artigo 736 do Código Civil é um contrato pelo qual as partes previnem ou põem termo a um litígio mediante concessões recíprocas. Segundo o artigo 737 do Código Civil, a extensão na qual os direitos se extinguem aprecia-se também só nos limites do que foi abandonado no ato de transação. Não se deve portanto afirmar, sem examinar o texto, que todas as reclamações futuras desaparecem.
 
 Se se tratar de uma infração perseguida mediante queixa, segundo o artigo 238 do Código de Processo Penal a queixa pode ser retirada até antes do encerramento dos debates orais da primeira instância, e uma vez retirada não pode ser apresentada de novo. Contudo, numa infração que não é perseguida mediante queixa, a acusação não termina automaticamente por uma transação privada, e o facto de se ter transigido não obriga sempre a desistir da queixa.
 
@@ -199,7 +199,7 @@ Q16. Depois do acidente, pode deixar-se tudo nas mãos da seguradora?
 
 ​
 
-Segundo a minha experiência, as seguradoras não tratam frequentemente de forma suficiente o aspeto emocional das partes no acidente.
+As seguradoras muitas vezes não tratam o bastante do lado humano das pessoas envolvidas no acidente.
 
 ​
 
@@ -211,7 +211,7 @@ Para a seguradora, gastar TWD 500.000 ou TWD 1.000.000 suplementares num assunto
 
 ​
 
-Um conflito de interesses entre a seguradora e a parte pode também surgir, e como a seguradora deve instruir numerosos assuntos, é-lhe difícil consagrar um tempo suficiente a cada um.
+Um conflito de interesses entre a seguradora e a parte pode também surgir, e como a seguradora tem de tratar numerosos casos, é-lhe difícil consagrar um tempo suficiente a cada um.
 
 ​
 
@@ -219,7 +219,7 @@ Um conflito de interesses entre a seguradora e a parte pode também surgir, e co
 
 ​
 
-Não recomendo portanto confiar o conjunto do litígio à seguradora.
+Não se recomenda, portanto, confiar o conjunto do litígio à seguradora.
 
 ​
 
@@ -299,7 +299,7 @@ Q20. Como se procura um advogado para um acidente de viação?
 
 ​
 
-Como os acidentes de viação são assuntos muito frequentes, um advogado litigante geral que acumulou alguns anos de experiência prática pode instruir um assunto de acidente de viação.
+Como os acidentes de viação são assuntos muito frequentes, um advogado de contencioso, com alguns anos de prática, pode tratar um caso de acidente de viação.
 
 ​
 
@@ -323,7 +323,7 @@ Deve desconfiar-se do advogado que inflaciona o assunto e sustenta que não se d
 
 ​
 
-Concluo assim as perguntas e respostas sobre os acidentes de viação. Espero que sejam úteis.
+Ficam assim reunidas as perguntas e respostas sobre os acidentes de viação.
 
 ​
 
@@ -331,7 +331,7 @@ Concluo assim as perguntas e respostas sobre os acidentes de viação. Espero qu
 
 ​
 
-Depois de ter instruído numerosos acidentes de viação, desejo assinalar um ponto importante.
+Depois de numerosos acidentes de viação tratados, convém assinalar um ponto importante.
 
 ​
 

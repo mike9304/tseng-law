@@ -1,0 +1,75 @@
+WO-F-pt — Grok 4.7 fix lane, campaign round 1
+Workspace: /Users/son7/Projects/tseng-law-fix-pt-r1
+Date: 2026-09-22
+
+## Rows
+Applied: 96 (pt-a #1–#39 and pt-b #1–#57). No P3 rows in this round.
+Skipped: 0 rows. Frontmatter `url:` values with Hangul (008, 009) were left as canonical metadata; the reviews already marked them pinned.
+
+Adaptations inside applied rows (suggested wording was not copied verbatim):
+- pt-a #15 and the duplicate body sentence in 002: "cada período" drops the digit in Korean 1회. The checker failed (`missing from translation (1): 1`, 53 vs 52). Kept the digit as "1 período de suspensão não pode ultrapassar 1 ano" in the FAQ and in the body. Numbers then PASS (53/53).
+- pt-b #7: "Não é possível concluir" became "Não é automático só porque o cliente está em Taiwan." The next sentence already states that the need depends on the client's requirements and the real activity, so that sentence was not duplicated.
+- pt-b #20: the suggested line still said "filial". Part a's systemic pattern is that a separate Taiwan company is not a filial. Wrote "subsidiária".
+- pt-b #28: the two opening blocks stay two blocks. The first now ends with a full stop; the second no longer begins with "e".
+- pt-b #50: kept the gloss (股份有限公司).
+- pt-b #53: kept "o registo fiscal", joined with "bem como", so the feminine series can agree.
+
+## Systemic patterns and instances
+- filial → subsidiária for the separate Taiwan company (子公司), sucursal left for 分公司: 102 (001: 13, 004: 63, 011: 8, 018: 18).
+- royalties no longer glossed as regalias: 2 (001, 004).
+- waiving a requirement ("é levantada" → "é dispensada"): 2 (001 FAQ and body).
+- comissão preparatória → conta preparatória: 1 (001).
+- posto de capital / posto de prejuízo / os dois postos → rubrica: 4 (002 ×2, 010 ×1, 014 ×1).
+- telefone móvel → telemóvel: 3 (005, 007, 008).
+- 準用 no longer "por analogia": 6 sites (007 ×4, 009 ×1, 014 ×1), written as remissão or "por força do artigo 15".
+- 項 labelled alínea before the number, in 014's article 15-1 / 16 citations: 10 sites retagged as n.º. 011 article 7(1)(7) reordered to "artigo 7.º, n.º 1, alínea 7".
+- «Relatório» standing for a relationship, beneficial ownership, or a list of points: 6 (016 ×3, 017 ×2, 018 ×1).
+- «Assunto» for a concrete case: 7 (010 ×5, 012 ×1, 016 ×2, plus the traffic-accident "assunto" in 003). Practice-area "assuntos" in the guidance pack were left.
+- Legal work "operar" / "Operar o procedimento": 3 (011).
+- Ex.) → "Por exemplo,": 2 (013).
+- Press titles in 010 that were comma-and-noun stacks, including the missing "sexo masculino" on 男大生 headlines and "mentalidade" for 心態: 7 headlines, each in the image alt and the link text (14 strings).
+- Blog register, rephrased inside the existing blocks (blank lines kept, so the block count does not change): greeting and topic line in 008; closing and "espero que sejam úteis" plus the insurer aside in 003; the age aside in 006; the bank anecdote, the "concordo", and the closing "troca" in 013.
+- English office names inside Portuguese bios: Ministry of Education, Legal Aid Foundation Taichung Branch, Institute of Finance. Firm names and National Taiwan University stay in Latin, with the office translated and the English name in parentheses.
+- Contabilista associado / contabilidade associada → contabilista sócio: role, partner title, lawyers description, lawyers answer.
+- carácter → caráter in the Portuguese guidance pack (the columns already used caráter): the firm-name gloss and the disclaimer heading.
+- 股東 of a company limited by shares → acionistas (018); members of the limited company in the same file → sócios (7). Company supervisor (監察人) → supervisor, not comissário (2).
+- Consultation (諮詢) was "entrevista" once in 018; now "consulta". Job interviews in 008 were left.
+- chapas → matrículas: 6 (017).
+- ROC year made explicit without a new Gregorian digit: 007 judgment 112 (gloss now 民國112年) and 010 case 109 (gloss now 民國109年).
+- R2–R10 already present and left: Korea-as-example framing and the Taiwan–Korea tax note in 001/004/008/009; softened criminal outcomes in 003; emergency numbers 119/110/112; feminine "advogada" for Wei Tseng; consultation languages still only English, Chinese, Japanese, and Korean.
+
+Test pin updated and nothing else in that test: `src/data/__tests__/guidance-disclosure-parity.test.ts` `pt: /passo de consulta/` → `/não é uma consulta/`, matching "esta página não é uma consulta."
+
+## §Verify
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-pt --lang pt 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-pt src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      27
+```
+The checker also prints WARNs that do not fail the file (unmatched Korean ordinals such as 제N항 / 제N호 / 1심 in 007, 009, 010, 011, 014). Summary is PASS 18/18. `git status --short | wc -l` is 27 with this log included.
+
+## Reviewer points not followed
+- pt-b #20's suggested "filial" for a company with its own legal personality. In Portugal and Brazil that word is a branch. The part-a pattern, and the gloss 子公司, call for subsidiária. Sucursal stays on 分公司.
+- "competência internacional do tribunal" and the statute name "elemento estrangeiro" (涉外民事法律適用法) are the right terms. Only the calque "elemento internacional" / "família internacional" was rewritten as transfronteiriço.
+- "estaleiro" in 004 is the tax-treaty construction permanent establishment, which is the European Portuguese term. The 012 roadwork "estaleiros" were changed to "zonas de obras"; that fix was not copied onto the construction-site PE.
+- pt-b #28 cannot be one paragraph. The checker compares block counts, so the comma-break was closed inside the two existing blocks.
+- "Se o interessado pretender explorar por si próprio" in 011 was left. "Próprio" agrees with "o interessado". The ungrammatical cases (the heading with no subject, and "constitui por si próprio") were rewritten.

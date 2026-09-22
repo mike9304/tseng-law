@@ -19,11 +19,11 @@ Quando o veículo da frente circula lentamente, ultrapassar (超車) pode parece
 
 O [artigo 101 do regulamento de segurança da circulação rodoviária de Taiwan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) rege ao mesmo tempo as condições nas quais a ultrapassagem é interdita e a ordem a seguir quando a ultrapassagem na mesma via é autorizada.
 
-O artigo 101 interdita a ultrapassagem nos troços providos de painéis que indiquem uma curva, uma rampa íngreme ou uma descida, uma ponte estreita, um túnel ou um cruzamento, bem como nas passagens de nível e nos estaleiros.
+O artigo 101 interdita a ultrapassagem nos troços providos de painéis que indiquem uma curva, uma rampa íngreme ou uma descida, uma ponte estreita, um túnel ou um cruzamento, bem como nas passagens de nível e nas zonas de obras.
 
 Além disso, não se pode ultrapassar nos locais ou troços providos de um painel de escola ou de hospital, nos sítios providos de outros painéis ou marcas de interdição de ultrapassar, quando um veículo se aproxima em sentido inverso, nem quando dois veículos ou mais circulam um atrás do outro à frente.
 
-Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de trás deve primeiro buzinar duas vezes brevemente ou fazer um apelo de faróis. A buzina e os faróis não devem ser utilizados de forma repetida para forçar o veículo da frente a ceder a via.
+Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de trás deve primeiro buzinar duas vezes brevemente ou fazer um sinal de luzes. A buzina e os faróis não devem ser utilizados de forma repetida para forçar o veículo da frente a ceder a via.
 
 O veículo de trás só pode ultrapassar depois de o veículo da frente ter abrandado e se ter afastado, ou ter manifestado a sua vontade de ceder a passagem por um sinal da mão ou pelo intermitente direito.
 
@@ -33,7 +33,7 @@ Esta ordem de sinais e de cedência de passagem na mesma via não significa que 
 
 ## Caso de acidente anonimizado tratado por este escritório
 
-Num assunto anonimizado tratado por este escritório, o motociclista A circulava numa estrada de montanha com o passageiro B. À frente circulavam 2 automóveis particulares; o veículo n.º 1, o mais à frente, avançava lentamente, de modo que o veículo n.º 2 e a motocicleta progrediam também a baixa velocidade.
+Num caso anonimizado tratado por este escritório, o motociclista A circulava numa estrada de montanha com o passageiro B. À frente circulavam 2 automóveis particulares; o veículo n.º 1, o mais à frente, avançava lentamente, de modo que o veículo n.º 2 e a motocicleta progrediam também a baixa velocidade.
 
 ![Esquema de acidente que mostra a trajetória de ultrapassagem da motocicleta e dos dois veículos da frente numa estrada de montanha](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -45,13 +45,13 @@ Os próximos de A e de B viram primeiro a mudança brusca de via do veículo n.�
 
 Segundo o resultado da perícia, A suportava a responsabilidade principal desta colisão. Esta conclusão estava limitada aos factos deste assunto. A perícia teve em conta em conjunto o facto de A querer ultrapassar dois veículos da frente que circulavam um atrás do outro, de se ter lançado na via oposta, de circular a uma velocidade que deixava apenas uma margem de travagem, de os sinais de buzina e de faróis prescritos terem faltado, bem como o movimento de mudança de via do veículo n.º 2, a estrutura da estrada e das vias e as outras provas recolhidas.
 
-Que, em certos assuntos, tais resultados de perícia intervenham não significa que uma só omissão de um sinal prescrito fixe sempre a responsabilidade. A culpa (過失) num acidente de ultrapassagem depende do local do acidente, da configuração das vias, da velocidade, dos movimentos dos veículos, dos sinais, dos intervalos de tempo, da visibilidade e das outras provas.
+O resultado da perícia deste caso não significa que a omissão de um só sinal prescrito fixe sempre a responsabilidade. A culpa (過失) num acidente de ultrapassagem depende do local do acidente, da configuração das vias, da velocidade, dos movimentos dos veículos, dos sinais, dos intervalos de tempo, da visibilidade e das outras provas.
 
 ## Pontos a verificar para apreciar a responsabilidade do acidente
 
 Antes de ultrapassar, deve primeiro verificar-se se o local ou a situação do tráfego entra na interdição de ultrapassar. Se o procedimento da mesma via se aplicar, dê o sinal de buzina ou de faróis prescrito, sem forçar o veículo da frente a ceder, aguarde um sinal claro de cedência de passagem e conclua a ultrapassagem com um afastamento suficiente e uma distância de regresso segura.
 
-O respeito do artigo 101 é importante, mas não assegura por si só nem evitar o acidente nem o resultado ulterior da perícia ou do processo. Os condutores devem reservar uma margem de segurança suplementar e adaptar-se à situação à frente.
+O respeito do artigo 101 é importante, mas não assegura, por si só, nem que o acidente seja evitado nem um resultado determinado da perícia ou do processo. Os condutores devem reservar uma margem de segurança suplementar e adaptar-se à situação à frente.
 
 A título de complemento, pode consultar-se [a ilustração das regras e do procedimento de ultrapassagem](https://gonews.com.tw/car/daily/21934/). Tratando-se de uma fonte secundária, na verificação das condições jurídicas, convém ler também as regras oficiais em vigor.
 

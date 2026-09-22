@@ -1064,7 +1064,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Czym się zajmujemy',
           paragraphs: [
-            'Hovering International Law Firm jest kancelarią adwokacką z siedzibą na Tajwanie. Pracuje według prawa Tajwanu i ma biura w Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Doradzamy przedsiębiorstwom i prowadzimy postępowania przed sądem oraz towarzyszymy klientom z zagranicy w krokach wymaganych na Tajwanie.',
+            'Hovering International Law Firm jest kancelarią adwokacką z siedzibą na Tajwanie. Pracuje według prawa Tajwanu i ma biura w Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Doradzamy przedsiębiorstwom i prowadzimy postępowania przed sądem oraz towarzyszymy klientom z zagranicy przy czynnościach wymaganych na Tajwanie.',
             'Cała treść tutaj jest ogólna. Wynik sprawy zależy od faktów, od stosowanych przepisów i od chwili, w której sprawa jest oceniana. Te informacje nie zastępują rozmowy z adwokatem o Państwa dokumentach.',
           ],
         },
@@ -1305,7 +1305,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Czy możliwa jest konsultacja po polsku?',
           answer:
-            'Nie. Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim. Nie obiecujemy też tłumacza ustnego. Tłumaczenie pisemne to coś innego: oryginalny tekst, który Państwo napiszą, jest zapisywany tak i nie jest tłumaczony automatycznie.',
+            'Nie. Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim. Nie obiecujemy też tłumacza ustnego. Tłumaczenie pisemne to coś innego: oryginalny tekst, który Państwo napiszą, jest zapisywany tak, jak został napisany, i nie jest tłumaczony automatycznie.',
         },
         {
           question: 'Co, jeśli nie posługują się Państwo żadnym z czterech języków?',
@@ -1396,7 +1396,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Miejsce przechowywania i dostawcy',
           paragraphs: [
-            'Ta witryna jest hostowana u Vercel, a wysyłka jest przechowywana w niepublicznej przestrzeni dyskowej tej usługi. Poczta elektroniczna jest wysyłana przez usługę poczty używaną przez kancelarię.',
+            'Ta witryna jest hostowana na platformie Vercel, a treść wniosku jest przechowywana w niepublicznej przestrzeni dyskowej tej usługi. Poczta elektroniczna jest wysyłana przez usługę poczty używaną przez kancelarię.',
             'Serwery poszczególnych dostawców mogą znajdować się poza Tajwanem, więc dane mogą tam być przechowywane i przetwarzane. Gdy cel przechowywania zostanie spełniony, dane usuwa się bez zwłoki; dane, które według stosowanych przepisów muszą być przechowywane, pozostają przez ten czas. Wnioski dotyczące danych osobowych przyjmuje wei@hoveringlaw.com.tw.',
           ],
         },

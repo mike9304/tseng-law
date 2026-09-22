@@ -84,7 +84,7 @@ Nie. Przy nabyciu akcji zezwolenia się nie uzyskuje ani nie przenosi; spółka 
 
 ### Różnica między nabyciem akcji a cesją przedsiębiorstwa lub aktywów
 
-Przy nabyciu akcji nabywca staje się akcjonariuszem, podczas gdy spółka docelowa, podmiot uprawniony z zezwolenia, nadal istnieje jako ta sama osoba prawna. Kwota wysłana za nabycie akcji jest ceną przeniesienia akcji, nie kapitałem. Według okoliczności sprawy wcześniejsze zatwierdzenie Ministerstwa Gospodarki, zatwierdzenie sektora według art. 35 ustawy o drogach, ustalenie kwoty inwestycji (投資額審定) po przelewie, zmiana spółkowa akcjonariuszy, dyrektorów i odpowiedzialnego oraz wniosek o zmianę do właściwego organu dróg obsługuje się każde z osobna.
+Przy nabyciu akcji nabywca staje się akcjonariuszem, podczas gdy spółka docelowa, podmiot uprawniony z zezwolenia, nadal istnieje jako ta sama osoba prawna. Kwota wysłana za nabycie akcji jest ceną przeniesienia akcji, nie kapitałem. Według okoliczności sprawy wcześniejsze zatwierdzenie Ministerstwa Gospodarki, zatwierdzenie sektora według art. 35 ustawy o drogach, weryfikacja przekazanej kwoty inwestycji (投資額審定) po przelewie, zmiana spółkowa akcjonariuszy, dyrektorów i odpowiedzialnego oraz wniosek o zmianę do właściwego organu dróg obsługuje się każde z osobna.
 
 Natomiast nawet jeśli inna osoba prawna przyjmuje cesję przedsiębiorstwa lub aktywów, licencja działalności cedenta nie przechodzi sama z siebie na cesjonariusza. Pojazdy, tablice użytku handlowego, instalacje parkingowe, umowy, pracowników, ubezpieczenia i zezwolenia eksploatacji trzeba sprawdzić każde, a zezwolenie na przygotowanie założenia, licencję działalności i inne zatwierdzenia potrzebne cesjonariuszowi trzeba uporządkować przed wykonaniem operacji.
 
@@ -102,7 +102,7 @@ Co najmniej następujące punkty trzeba potwierdzić w sposób istotny, zestawia
 - Ubezpieczenia pojazdu, towaru i odpowiedzialności, prawa zabezpieczenia, leasing i finansowanie
 - Ważne umowy i klauzule zmiany kontroli dotyczące nadawców, przedsiębiorców będących adresatami zlecenia, systemów i magazynów
 
-W umowie ustala się oświadczenia i zobowiązania, warunki zawieszające, postępowanie, jeśli zezwolenia nie uzyskano, korektę ceny, odszkodowanie, wydanie, kapitał obrotowy i sposób przeniesienia pojazdów i umów. Kolejność potrzebnego zatwierdzenia inwestycji zagranicznej, zatwierdzenia sektora Ministerstwa Transportu, zatwierdzenia zmiany właściwego organu dróg i czynności spółkowych trzeba zgrać z warunkami zamknięcia operacji.
+W umowie ustala się oświadczenia i zobowiązania, warunki zawieszające, postępowanie, jeśli zezwolenia nie uzyskano, korektę ceny, odszkodowanie, przedmioty wydania przy zamknięciu transakcji, kapitał obrotowy i sposób przeniesienia pojazdów i umów. Kolejność potrzebnego zatwierdzenia inwestycji zagranicznej, zatwierdzenia sektora Ministerstwa Transportu, zatwierdzenia zmiany właściwego organu dróg i czynności spółkowych trzeba zgrać z warunkami zamknięcia transakcji.
 
 ## 4. Powierzenie przewozu i wysyłki innemu oraz praca cudzoziemców
 
@@ -118,7 +118,7 @@ Trzeba potwierdzić ważność licencji działalności przedsiębiorcy będąceg
 
 Nawet jeśli cudzoziemiec staje się akcjonariuszem lub inwestorem spółki docelowej, sam ten fakt nie przyznaje mu prawa do pracy ani statusu pobytu na Tajwanie. Jeśli na Tajwanie wykonuje codzienną pracę, taką jak zarządzanie spółką, sprzedaż, przydział pojazdów i obsługa klienta, musi przed rozpoczęciem pracy potwierdzić, czy potrzebuje zezwolenia na pracę zgodnego z rzeczywistą funkcją, i osobno przeprowadzić późniejszą procedurę pobytu.
 
-Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz opuszczenia Tajwanu (限令出國). Obowiązująca wskazówka pracy o zakazie wjazdu (禁止入國) Administracji Imigracyjnej Ministerstwa Spraw Wewnętrznych (內政部移民署) ustala na ogół, dla pracy bezprawnej, okres zakazu wjazdu 3 lat, lecz mogą mieć zastosowanie wymogi zwolnienia lub skrócenia okresu, które ta sama wskazówka ustala. Wyniku nie ustala się mechanicznie tylko dlatego, że istnieje doniesienie osoby trzeciej, a właściwy organ bada fakty, normy stosowane i okoliczności każdej sprawy.
+Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz opuszczenia Tajwanu (限令出國). Obowiązujące wytyczne Administracji Imigracyjnej Ministerstwa Spraw Wewnętrznych (內政部移民署) w sprawie zakazu wjazdu (禁止入國) ustalają na ogół, dla pracy bezprawnej, okres zakazu wjazdu 3 lat, lecz mogą mieć zastosowanie wymogi zwolnienia lub skrócenia okresu, które te same wytyczne ustalają. Wyniku nie ustala się mechanicznie tylko dlatego, że istnieje doniesienie osoby trzeciej, a właściwy organ bada fakty, normy stosowane i okoliczności każdej sprawy.
 
 ## Źródła oficjalne
 
@@ -136,7 +136,7 @@ Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz op
 - [Ministerstwo Gospodarki: wskazówki wniosku o inwestycję zagraniczną](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Art. 43 ustawy o usługach zatrudnienia (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
 - [Art. 68 ustawy o usługach zatrudnienia](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
-- [Administracja Imigracyjna Ministerstwa Spraw Wewnętrznych: wskazówka administracyjna o okresie zakazu wjazdu](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
+- [Administracja Imigracyjna Ministerstwa Spraw Wewnętrznych: wytyczne w sprawie okresu zakazu wjazdu](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Wskazówki związane
 

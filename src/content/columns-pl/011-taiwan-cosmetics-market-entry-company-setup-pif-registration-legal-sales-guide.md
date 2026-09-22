@@ -52,7 +52,7 @@ To nie jest ta sama procedura. Rejestracja produktu jest odrębną formalności�
 
 ### Moment rejestracji produktu i okres ważności
 
-Rejestracja produktu kosmetycznego odbywa się na platformie rejestracji produktów kosmetycznych TFDA. Wytwórca lub importer kosmetyków musi zakończyć rejestrację produktu przed dostawą, sprzedażą, nieodpłatnym przekazaniem, wyłożeniem do sprzedaży (公開陳列) produktu lub udostępnieniem go konsumentowi do próby. Przygotowania nie należy organizować tylko przez odniesienie do sprzedaży odpłatnej; kalendarz darów promocyjnych lub udostępnienia do próby przez konsumenta też trzeba prowadzić łącznie z terminem rejestracji.
+Rejestracja produktu kosmetycznego odbywa się na platformie rejestracji produktów kosmetycznych TFDA. Wytwórca lub importer kosmetyków musi zakończyć rejestrację produktu przed dostawą, sprzedażą, nieodpłatnym przekazaniem, wyłożeniem do sprzedaży (公開陳列) produktu lub udostępnieniem go konsumentowi do próby. Przygotowania nie należy organizować tylko przez odniesienie do sprzedaży odpłatnej; kalendarz darów promocyjnych i próbnego udostępnienia produktu konsumentom też trzeba prowadzić łącznie z terminem rejestracji.
 
 Okres ważności rejestracji produktu wynosi 3 lata. Jeśli zamierza się kontynuować zaopatrzenie, wniosek o przedłużenie (展延) trzeba złożyć w ciągu 3 miesięcy poprzedzających upływ. Jeśli zmieniają się zarejestrowane pozycje, jak nazwa produktu, zastosowanie, postać (劑型), skład i miejsce wytwarzania, trzeba też potwierdzić, czy potrzebna jest formalność odpowiadająca treści zmiany.
 
@@ -72,7 +72,7 @@ Jeśli zmieniają się surowiec lub receptura, sposób i miejsce wytwarzania, oz
 
 Według art. 7 rozporządzenia o zarządzaniu teczką informacji o produktach kosmetycznych okres przechowywania wynosi co najmniej 5 lat, liczonych od dnia następującego po ostatnim zaopatrzeniu produktu na rynku. Według art. 8 tego samego rozporządzenia miejscem przechowywania jest adres wytwórcy lub importera kosmetyków wskazany w art. 7 ust. 1 pkt 7 ustawy o zarządzaniu higieną i bezpieczeństwem kosmetyków (化粧品衛生安全管理法). Przepis określający okres i przepis określający miejsce trzeba w praktyce rozróżniać.
 
-Nawet jeśli wytwórca pierwotny przechowuje oryginał albo jeśli używa się bezpiecznego przechowywania elektronicznego lub w chmurze, wytwórca lub importer musi móc uzyskać dostęp do kompletnych danych. Trzeba ustalić prawa dostępu, kopię zapasową, zarządzanie wersjami, format pliku i odpowiedzialnego, tak by dane mogły być szybko odnalezione i przedstawione, gdy organ właściwy ich zażąda. Ważne jest też uregulowanie w umowie odbiorcy przekazania, sposobu i tego, czy prawo dostępu trwa, aby dane utrzymywały się przez ustawowy okres przechowywania nawet po zakończeniu umowy z partnerem sprzedaży lub usługodawcą.
+Nawet jeśli wytwórca pierwotny przechowuje oryginał albo jeśli używa się bezpiecznego przechowywania elektronicznego lub w chmurze, wytwórca lub importer musi móc uzyskać dostęp do kompletnych danych. Trzeba ustalić prawa dostępu, kopię zapasową, zarządzanie wersjami, format pliku i odpowiedzialnego, tak by dane mogły być szybko odnalezione i przedstawione, gdy organ właściwy ich zażąda. Ważne jest też uregulowanie w umowie, które dane zostaną przekazane, w jaki sposób nastąpi przekazanie i czy prawo dostępu przetrwa, aby dane utrzymywały się przez ustawowy okres przechowywania nawet po zakończeniu umowy z partnerem sprzedaży lub usługodawcą.
 
 ### Inspekcja, korekta i środki administracyjne
 
@@ -88,7 +88,7 @@ Reklamę ocenia się nie tylko według zdania, lecz według całości przekazu, 
 
 ### Ocenia się według całości przekazu, nie według każdego słowa
 
-Czy oznakowanie, promocja (宣傳) lub reklama są fałszywe lub przesadne, albo czy zawierają twierdzenie o skuteczności medycznej (醫療效能), nie ocenia się tylko według jednego określonego słowa. Bada się łącznie nazwę produktu, zdania, obraz, symbol, dźwięk, kontekst wcześniejszy i późniejszy oraz wrażenie całości, jakie otrzymuje konsument. Wrażenie ukształtowane przez centralny przekaz reklamowy nie traci znaczenia przez samo zastrzeżenie drobnym drukiem, więc trzeba przejrzeć zarówno każdy tekst, jak i gotową reklamę.
+Czy oznakowanie, promocja (宣傳) lub reklama są fałszywe lub przesadne, albo czy zawierają twierdzenie o skuteczności medycznej (醫療效能), nie ocenia się tylko według jednego określonego słowa. Bada się łącznie nazwę produktu, zdania, obraz, symbol, dźwięk, kontekst wcześniejszy i późniejszy oraz ogólne wrażenie, jakie odnosi konsument. Dominujący przekaz reklamowy nie jest sam przez się niwelowany przez zastrzeżenie drobnym drukiem, więc trzeba przejrzeć zarówno każdy tekst, jak i gotową reklamę.
 
 Na przykład twierdzenie, że kosmetyk leczy trądzik, ma działanie przeciwzapalne lub bakteriobójcze, może stanowić twierdzenie o skuteczności medycznej. Trzeba też razem potwierdzić sposób łączenia nazwy choroby z produktem, obrazy przed i po użyciu, przekaz kojarzący się z pracownikiem ochrony zdrowia oraz kontekst, który wiąże wyjaśnienie składnika z efektem leczniczym produktu.
 
@@ -111,7 +111,7 @@ Przygotowanie sprzedaży na Tajwanie, jeśli sprawdza się je w następującej k
 5. Przejrzeć etykietę, stronę sprzedaży, reklamę i publikacje współpracy według kryterium całości przekazu.
 6. Prowadzić procedurę odpowiedzi na inspekcje i żądania korekty, reklamacje, informacje o bezpieczeństwie i potrzebne działania następcze.
 
-Podstawową strukturę spółki i oddziału można zobaczyć w [Podstawy zakładania spółek na Tajwanie](/pl/columns/taiwan-company-establishment-basics), zakres powiązanego wsparcia w [Jakie sprawy prowadzimy](/pl/services), a informacje o adwokacie prowadzącym w [Międzynarodowy zespół Hovering](/pl/lawyers).
+Podstawową strukturę spółki i oddziału można zobaczyć w [Podstawy zakładania spółek na Tajwanie](/pl/columns/taiwan-company-establishment-basics), zakres powiązanego wsparcia w [Jakie sprawy prowadzimy](/pl/services), a informacje o adwokatce prowadzącej w [Międzynarodowy zespół Hovering](/pl/lawyers).
 
 ### Źródła urzędowe
 
@@ -125,7 +125,7 @@ Podstawową strukturę spółki i oddziału można zobaczyć w [Podstawy zakład
 - [TFDA — serwis teczki informacji o produktach kosmetycznych](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
 - [Kryteria ustalania oznakowania, promocji i reklamy kosmetyków (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Urzędowy załącznik kryteriów ustalania reklamy kosmetyków](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
-- [Ministerstwo Zdrowia i Opieki (衛生福利部) — obwieszczenie o regulacji reklamy kosmetyków](https://www.mohw.gov.tw/cp-4256-48110-1.html)
+- [Ministerstwo Zdrowia i Opieki Społecznej (衛生福利部) — obwieszczenie o regulacji reklamy kosmetyków](https://www.mohw.gov.tw/cp-4256-48110-1.html)
 - [Invest Taiwan — wyjaśnienie o inwestycji zagranicznej](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Departament Przeglądu Inwestycji Ministerstwa Gospodarki — przewodnik](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 

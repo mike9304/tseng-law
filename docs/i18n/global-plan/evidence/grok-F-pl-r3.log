@@ -1,0 +1,97 @@
+WO-F-pl r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pl-r3
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: pl-a 24, pl-b 28 (52). No P3 rows in either review.
+
+Applied: 46 numbered rows, some with the adaptations below.
+Skipped: 6 numbered rows (pl-a 1, pl-a 8, pl-b 4, pl-b 10, pl-b 11, pl-b 28).
+
+No test file was edited. No pinned Polish expectation in `src/lib/__tests__/guidance-*pl*.test.ts` matched a string that changed. `GUIDANCE_LLMS_NOTICES.pl` was not edited: `consultationNotice` is still the opening of the FAQ answer, and `confidentialNotice` is still a substring of a privacy paragraph that was not rewritten. "TWD 1.57M" was not touched. `src/data/international-inquiry-copy.ts` was not edited: the inquiry sentence already says "zapisywany tak, jak został napisany".
+
+### Applied
+pl-a 2–7, 9–24.
+pl-b 1–3, 5–9, 12–27.
+
+Adaptations (still applied):
+- pl-a 2. The suggested sentence merges four blocks. Block count stays. The defective block now assigns the remedies: the employer may refuse payment, the employee may claim it. The surrounding lines already say the assignment depends on who is at fault.
+- pl-a 4. Chinese glosses on the quorum sentences stay. "wspólnicy reprezentujący" → "akcjonariusze reprezentujący" in the three spółka-akcyjna passages (6 phrases). The 有限公司 sentences still say "wspólników". 004 "Wspólników lokalnych można przyjąć jako akcjonariuszy" is now "Lokalnego inwestora można przyjąć jako wspólnika albo akcjonariusza, zależnie od formy spółki".
+- pl-a 5. FAQ "Imię wpisane przy mieszkaniu" → "Wpis własności mieszkania". The same mistranslation in the checklist, "wpisane imiona", is now "osobę wpisaną jako właściciela". The body paragraph already said "wpis własności mieszkania".
+- pl-a 7. "szczególne uznanie" → "zatwierdzenie w trybie szczególnym" in the FAQ and the body (2).
+- pl-a 8, partial only. The space separator was not applied (see Skipped). The unit-order half was: "USD 500.000" / "USD 200.000" → "500.000 USD" / "200.000 USD" (4 + 4). The dot stays, so `numbers` still parses them.
+- pl-a 10. The body sentence "pozostaje poniżej tej przesłanki obecności" is the same broken relative clause. It is now "która dokonała oferty publicznej akcji, nie spełnia tej przesłanki obecności". The FAQ and the repeated body sentence gained the comma before "nie spełnia".
+- pl-a 12. The cap stays on its own quote line. That line is now a sentence: "Pułap wynosi najwyżej 6 miesięcy wynagrodzenia." The digit 6 stays. The FAQ sentence that already put the cap inside the formula was left.
+- pl-a 13, wording only. Q16 is now "Czy po wypadku można wszystko zostawić ubezpieczycielowi?" It stays a body line. See Skipped for the heading and the U+200B.
+- pl-a 14, where the Polish lexicon carries the same 1. "jeden rok" / "jeden miesiąc" / "jeden dzień" are counted as 1. Applied: 001 "krócej niż jeden rok" ×4, "istnieje jeden rok" ×2, "istniejące jeden rok" ×2; 002 "na jeden miesiąc" ×2; 003 "za jeden dzień" ×1 (Korean 1일로 is stripped from the source count); 008 "ukończony jeden rok" ×2, "za jeden rok" ×2, "jeden miesiąc" ×2, "na jeden miesiąc" ×1; 014 "mniej niż jeden rok" ×1, "wynosi jeden rok" ×1. Left, because the genitive or the noun is not in the lexicon: "za ostatni 1 rok" ×2, "długość 1 okresu" ×2, "przekroczyć 1 roku" ×2, "1 poszkodowanego i 1 wypadku", "więcej niż 1 cudzoziemca". "jednego" does not count as 1.
+- pl-a 17. "alimenty konieczności" → "alimenty dla małżonka bez winy popadającego w niedostatek" in the FAQ (gloss kept) and the body repeat.
+- pl-a 20. "nie pociąga" → "nie oznacza" in 001 ×1, 002 ×1, 003 ×3, 007 ×1.
+- pl-a 22–24. Guidance only, `polish` strings in `international-guidance-it-nl-pl.ts`: "przy czynnościach wymaganych na Tajwanie"; "zapisywany tak, jak został napisany"; "treść wniosku jest przechowywana" and "hostowana na platformie Vercel".
+- pl-b 9. "trwa dodatkowo około **1 miesiąca**". Both bold numbers stay.
+- pl-b 21. The quoted sentence, and the later "forma operacji" / "się przeciwstawia" in the same file, now say "czynności" and "sprzeczny".
+- pl-b 22. 017 "weryfikacja przekazanej kwoty inwestycji". The same 投資額審定 in 001 is now "weryfikacja" in the overview, the numbered step, and the post-remittance sentence (3). 004 "ustalenie kwoty wkładu" is a different sentence and was left.
+- pl-b 25. The body now says "wytyczne … w sprawie zakazu wjazdu", and "te same wytyczne". The link label was aligned. The URL was not changed.
+- pl-b 27. The 2/3 stays a digit fraction (the lexicon has "dwie trzecie", not the genitive). The object is now "zgody 2/3 lub więcej praw głosu pozostałych wspólników".
+
+### Skipped
+- pl-a 1. ", art. 10" on the dividend-withholding link. The URL is `flno=3` and was not changed. Korean 영업세법 제10조 still contributes a counted 10; dropping it fails `numbers` (`missing from translation (1): 10`). The label stays.
+- pl-a 8. Space thousands ("500 000"). ACCEPTED-ROUND skips them, and `NUMBER_THOUSAND_STYLE.pl` is `dot`. Every dotted amount was left. The USD-after-amount half is under Applied.
+- pl-b 4. "(1-krotność)" stays. Korean "실제 손해액의 최대 1배" is a counted 1. "do wysokości rzeczywistej szkody" alone fails `numbers` (sourceCount 54 → 53). The "nakaz zapłaty" wording in the same file was applied.
+- pl-b 10. The trailing U+200B and the ZWSP-only lines in 013 and 015 were left. Deleting them changes the ZWSP count against the Korean source.
+- pl-b 11. The one-clause lines in 013 and 015 were not merged. The split matches the English and the Korean block count. Each fragment was left as its own block.
+- pl-b 28. Same as pl-a 8. "1.579.589 TWD" and the other dotted amounts stay.
+
+## Systemic patterns
+
+- Dot thousands (pl-a and pl-b verdicts). 0 changed to a space. The checker requires the dot.
+- Spare digit glued to a time unit (pl-a). 20 phrases now use "jeden rok", "jeden miesiąc", or "jeden dzień", which the lexicon counts as 1. 8 digit-bearing phrases were left; see pl-a 14.
+- "nie pociąga, iż/że" (pl-a). 6 sentences, listed under pl-a 20. No further "pociąga" in columns-pl.
+- Shareholders of a spółka akcyjna called "wspólnicy" (pl-a). 6 quorum phrases in 002, plus the mixed admission sentence in 004. 有限公司 "wspólnicy" and 018's limited-company "wspólnicy" were left; 018's "nie wykonują interesów" is now "nie prowadzą spraw spółki".
+- U+200B blanks, and 005 `**​**` (pl-a verdict; pl-b 013/015). 0 deleted. Counts unchanged: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3. They match the Korean source.
+- Guidance English calques (pl-a 22–24). 3 sentences. No further "w krokach wymaganych", "zapisywany tak i", or "wysyłka jest przechowywana" in the Polish pack.
+- 009 gives both remedies to each side (pl-a). 1 sentence rewritten inside its block.
+- 014 questions without "?" and the repayment-liability calques (pl-b). 4 question marks; the length, repayment, comma, "powinien wykazać", training-cost, and payslip sentences (payslip ×2).
+- Wrong object for a closing or a handover (pl-b). 011 handover clause; 017 "przedmioty wydania przy zamknięciu transakcji" and "zamknięcia transakcji"; 016 "czynności" ×2.
+- 投資額審定 read as the authority fixing the amount (pl-b 22). 4 phrases, 001 ×3 and 017 ×1.
+- Voting fraction with no object (pl-b). 1 sentence in 018.
+- R2–R10. The round-3 verdict says feminine Wei Tseng, Państwo, the four-language consultation lock, day–month–year dates, and the decimal comma already hold. The Taiwan–Korea tax passages in 001 and 004 already have the country-specific frame. This pass did not find a new Korea-as-default-reader, result-promise, or untranslated-chrome instance outside the rows above. The only fullwidth colon in columns-pl is inside the 008 frontmatter `url`, which is canonical source metadata and was not edited. 011 "adwokacie prowadzącym" is now "adwokatce prowadzącej". 013 "z adwokatem" and 015 "adwokata" are the generic profession noun and were left, as the verdict says.
+
+## Reviewer points not followed
+
+- pl-a 1. The link parameter `flno=3` is not the article number of that label. The Korean source still says 영업세법 제10조 on that URL, and the checker counts that 10. The article number in the label was kept. 001's copy of the link has no article number because its Korean source does not contribute a 10 there.
+- pl-a 8 and pl-b 28. A space as the thousands separator is ordinary Polish. This campaign's checker does not parse it for `pl` (`dot` style). The dotted form was kept. Currency codes that stood before the amount in 001 were moved after it.
+- pl-a 13, pl-b 10, and pl-b 11. Q16–Q20 are body lines in the Korean source as well, not headings that the Polish file dropped. The U+200B lines and the one-clause breaks in 013 and 015 match that source. Promoting Q16 or merging the fragments fails `headings` or `blocks`.
+- pl-b 4. The English sentence stops at actual damages. The Korean sentence says 1배, and that 1 is counted. "(1-krotność)" stays.
+- pl-a 14, the instances left. "za ostatni rok", "jednego okresu", "jednego roku", "jednego cudzoziemca", and "jednego poszkodowanego" do not carry the digit in the Polish lexicon. The digit-bearing form was kept there.
+
+Nothing else in the two verdicts looked factually wrong. The case in 010 is about a Korean student; that fact was not generalized.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-pl --lang pl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-pl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      19
+```
+
+The 19 is the count before this log file was written. This log is the additional untracked file `docs/i18n/global-plan/evidence/grok-F-pl-r3.log`.

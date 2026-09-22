@@ -41,17 +41,17 @@ Tytuły doniesień prasowych, publikacji internetowych i komentarzy prawnych dot
 
 [Student, pęknięcie krążka międzykręgowego po martwym ciągu 90 kg… żąda odszkodowania od siłowni](https://news.ebc.net.tw/news/living/362075)
 
-![Publikacja na PTT: koreański student, pęknięcie krążka międzykręgowego podczas martwego ciągu 90 kg… w pierwszej instancji nakaz siłowni zapłaty 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Publikacja na PTT: koreański student, pęknięcie krążka międzykręgowego podczas martwego ciągu 90 kg… w pierwszej instancji sąd nakazał siłowni zapłatę 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Publikacja na PTT: koreański student, pęknięcie krążka międzykręgowego podczas martwego ciągu 90 kg… w pierwszej instancji nakaz siłowni zapłaty 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Publikacja na PTT: koreański student, pęknięcie krążka międzykręgowego podczas martwego ciągu 90 kg… w pierwszej instancji sąd nakazał siłowni zapłatę 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
 ![Blog: uraz martwym ciągiem 90 kg koreańskiego studenta o wadze 70 kg i odszkodowanie powyżej 1.000.000 TWD… czy była wina siłowni? Jakie jest nastawienie osoby ćwiczącej?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
 [Blog: uraz martwym ciągiem 90 kg koreańskiego studenta o wadze 70 kg i odszkodowanie powyżej 1.000.000 TWD… czy była wina siłowni? Jakie jest nastawienie osoby ćwiczącej?](https://blog.udn.com/blackjack/179081715)
 
-![Komentarz prawny: student, pęknięcie krążka międzykręgowego podczas martwego ciągu… w pierwszej instancji nakaz znanej siłowni zapłaty 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Komentarz prawny: student, pęknięcie krążka międzykręgowego podczas martwego ciągu… w pierwszej instancji sąd nakazał znanej siłowni zapłatę 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Komentarz prawny: student, pęknięcie krążka międzykręgowego podczas martwego ciągu… w pierwszej instancji nakaz znanej siłowni zapłaty 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Komentarz prawny: student, pęknięcie krążka międzykręgowego podczas martwego ciągu… w pierwszej instancji sąd nakazał znanej siłowni zapłatę 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Lektura wyroku: sprawa ostrego pęknięcia krążka międzykręgowego po tym, jak początkujący na siłowni został poinstruowany, aby wykonać martwy ciąg 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 

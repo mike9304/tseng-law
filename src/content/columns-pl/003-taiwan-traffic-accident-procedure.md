@@ -87,11 +87,11 @@ Tabela wstępnej analizy wypadku drogowego sporządzona przez policję jest anal
 
 Według przepisów mających zastosowanie strona legitymowana może wnioskować o ekspertyzę wypadku pojazdów (車輛行車事故鑑定); organ, który prowadzi sprawę, może ją przekazać, a organ sądowy może ją zlecić. Wniosek strony składa się co do zasady w ciągu 6 miesięcy od daty wypadku; w sprawach już w śledztwie albo w toku postępowania sądowego ekspertyza przebiega przez zlecenie organu sądowego, a nie przez nowy wniosek bezpośredni.
 
-W razie braku zgody z opinią ekspertyzy można wnioskować o ponowne rozpatrzenie, lecz ponowne rozpatrzenie ogranicza się do jedynego razu. Opinia ekspertyzy i ponownego rozpatrzenia jest dowodem lub dokumentem odniesienia, a sąd ocenia niezależnie całokształt akt, w tym oświadczenia, obrazy i protokoły miejsca.
+W razie braku zgody z opinią ekspertyzy można wnioskować o ponowne rozpatrzenie, lecz o ponowne rozpatrzenie można wystąpić tylko raz. Opinia ekspertyzy i ponownego rozpatrzenia jest dowodem lub dokumentem odniesienia, a sąd ocenia niezależnie całokształt akt, w tym oświadczenia, obrazy i protokoły miejsca.
 
 ## Q7. Jakich szkód można dochodzić po wypadku?
 
-Roszczenie oparte na art. 184 Kodeksu cywilnego zakłada bezprawne naruszenie prawa, związek przyczynowy z wypadkiem i dowód szkody. Sam fakt, że doszło do wypadku, nie pociąga, iż wszystkie poniższe pozycje są uznane. Art. 216 Kodeksu cywilnego jest kryterium ustalenia zakresu szkody rzeczywistej i utraconej korzyści (所失利益).
+Roszczenie oparte na art. 184 Kodeksu cywilnego zakłada bezprawne naruszenie prawa, związek przyczynowy z wypadkiem i dowód szkody. Sam fakt, że doszło do wypadku, nie oznacza, że wszystkie poniższe pozycje zostaną uznane. Art. 216 Kodeksu cywilnego jest kryterium ustalenia zakresu szkody rzeczywistej i utraconej korzyści (所失利益).
 
 - **Obrażenia**: Według art. 193 Kodeksu cywilnego szkoda podlegająca naprawieniu może obejmować potrzebne koszty medyczne (醫療費用), dodatkowe koszty życia codziennego, takie jak koszty opieki (看護費用), transportu na leczenie (就醫交通費) i pomocy technicznej, a także utratę dochodów (收入損失) przez rzeczywistą niezdolność do pracy oraz zmniejszenie zdolności do pracy (勞動能力減損). Według art. 195 Kodeksu cywilnego można też dochodzić szkody niemajątkowej.
 - **Śmierć**: Według art. 192 Kodeksu cywilnego, gdy zachodzi podstawa, naprawienie szkody może obejmować koszty medyczne przed śmiercią i koszty zwiększonych potrzeb życiowych, koszty pogrzebu (殯葬費) oraz utratę alimentów (扶養利益損失) osoby, która miała ustawowe prawo do alimentów. Według art. 194 Kodeksu cywilnego szkody niemajątkowej mogą też dochodzić niektórzy krewni.
@@ -109,13 +109,13 @@ Jednak według art. 504 Kodeksu postępowania karnego, gdy sprawę przekazano wy
 
 Zaświadczenie lekarskie albo opinia medyczna są użyteczne, aby pokazać konieczność opieki, lecz same nie są podstawą rozstrzygającą. Należy wyjaśnić dokumentami związek przyczynowy z wypadkiem, konieczność opieki, czy faktycznie ją świadczono, czas trwania i kwotę rozsądną.
 
-Nawet jeżeli bliski faktycznie świadczył opiekę bez wynagrodzenia, w odpowiedniej sprawie można to ocenić jako szkodę. Jednak sama okoliczność, że opiekę świadczy bliski, nie pociąga jej automatycznego uznania; bada się też treść i czas trwania opieki oraz zwykły poziom kosztu.
+Nawet jeżeli bliski faktycznie świadczył opiekę bez wynagrodzenia, w odpowiedniej sprawie można to ocenić jako szkodę. Jednak sama okoliczność, że opiekę świadczy bliski, nie oznacza jej automatycznego uznania; bada się też treść i czas trwania opieki oraz zwykły poziom kosztu.
 
 ## Q10. Czym dowodzi się koszty dojazdu na leczenie?
 
 Koszty dojazdu porządkuje się na podstawie związku między rejestrem leczenia a obrażeniami związanymi z wypadkiem. Trasa, liczba wizyt, daty, środek transportu, taryfa oraz konieczność i rozsądność użycia tego środka mogą być istotne dla oceny.
 
-Pokwitowania, rejestry taryfy, rejestry trasy i dokumenty kliniczne są możliwymi dowodami. Pokwitowanie taksówki nie jest jedynym środkiem dowodu, a samo jego przedstawienie nie pociąga, że jest wystarczające.
+Pokwitowania, rejestry taryfy, rejestry trasy i dokumenty kliniczne są możliwymi dowodami. Pokwitowanie taksówki nie jest jedynym środkiem dowodu, a samo jego przedstawienie nie oznacza, że jest wystarczające.
 
 ### Oficjalne podstawy Q6–Q10
 
@@ -195,7 +195,7 @@ Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任�
 - [Taryfa świadczeń obowiązkowego ubezpieczenia odpowiedzialności cywilnej pojazdów](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Umowa wzorcowa ubezpieczenia komunikacyjnego użytku prywatnego Komisji Nadzoru Finansowego (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Po wypadku, czy można wszystko zostawić w rękach ubezpieczyciela?
+Q16. Czy po wypadku można wszystko zostawić ubezpieczycielowi?
 
 ​
 
@@ -239,7 +239,7 @@ W części wyroków za uszkodzenie ciała z nieostrożności orzekano karę oko�
 
 ​
 
-Jeżeli jest zamieniana na grzywnę (易科罰金), art. 41 ust. 1 Kodeksu karnego ustala zamianę na 1.000 TWD, 2.000 TWD albo 3.000 TWD za 1 dzień; liczone według 1.000 TWD za dzień, kara 3 miesięcy odpowiada 3 × 30 × 1.000 TWD = 90.000 TWD.
+Jeżeli jest zamieniana na grzywnę (易科罰金), art. 41 ust. 1 Kodeksu karnego ustala zamianę na 1.000 TWD, 2.000 TWD albo 3.000 TWD za jeden dzień; liczone według 1.000 TWD za dzień, kara 3 miesięcy odpowiada 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 

@@ -570,7 +570,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'VEJLEDNINGER',
       title: 'Juridiske tjenester i Taiwan — vejledninger på dansk',
       description:
-        'Almindelige forklaringer på dansk om Hovering International Law Firms arbejdsområde i Taiwan, rådgivningssprogene og den første kontakt.',
+        'Almindelige forklaringer på dansk om arbejdsområdet hos Hovering International Law Firm i Taiwan, rådgivningssprogene og den første kontakt.',
       intro:
         'Hovering International Law Firm bistår klienter i udlandet, også med tilknytning til Taiwan, i sager efter taiwansk ret: investering og selskabsstiftelse, civile tvister, ægteskab, familie og arv, arbejdsret, strafferet og immaterialret. Denne danske del hjælper dig med at se, hvilket arbejde der falder inden for vores område, hvad du skal forberede, og hvordan du kontakter os. Det er almindelige oplysninger, ikke juridisk rådgivning for din egen sag.',
       sections: [
@@ -636,7 +636,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ægteskab, familie og arv',
           paragraphs: [
-            'Vi behandler skilsmisse (離婚), bodeling, forældremyndighed og forældreansvar for mindreårige børn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue findes i forskellige stater. Grænseoverskridende familiesager kræver ofte yderligere kontrol af husstandsregistreringen (戶籍), dokumenternes form og deres bevisværdi i Taiwan.',
+            'Vi behandler skilsmisse (離婚), formuedeling, forældremyndighed og forældreansvar for mindreårige børn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue findes i forskellige stater. Grænseoverskridende familiesager kræver ofte yderligere kontrol af husstandsregistreringen (戶籍), dokumenternes form og deres bevisværdi i Taiwan.',
             'Fordi familiesager ofte medfører frister og parallelle forløb, bør det første resumé nævne parternes forhold, den aktuelle bopæl og allerede igangværende forløb.',
           ],
         },
@@ -665,7 +665,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Omfang og dets bekræftelse',
           paragraphs: [
             'Kontoret arbejder efter taiwansk ret og behandler sager inden for de nævnte områder. Omfanget af hver sag bekræftes særskilt, efter at en advokat har gennemgået din meddelelse.',
-            'Opholdsstatus, arbejdstilladelse og sammenlignelige spørgsmål vurderes ud fra dokumenterne og personens situation, ikke ud fra statsborgerskabet. Hvis en del af din sag rører sådanne spørgsmål, nævn det ved kontakten. Denne side lover hverken et resultat eller en svartid.',
+            'Opholdsstatus, arbejdstilladelse og sammenlignelige spørgsmål vurderes ud fra dokumenterne og personens situation, ikke ud fra statsborgerskabet. Hvis en del af din sag vedrører sådanne spørgsmål, så nævn det, når du kontakter os. Denne side lover hverken et resultat eller en svartid.',
           ],
         },
       ],
@@ -682,7 +682,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Stiftelse og opbygning',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) blev stiftet i 2016 af advokater, der har studeret ved National Taiwan University (國立臺灣大學). Det kinesiske navn 昊鼎 forener tegnet 昊 (»den vide himmel«) med 鼎 (»fast grund«) og beskriver kontorets retning siden stiftelsen.',
-            'Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung er indrettet på virksomhedsledelse og behandler civile, strafferetlige og forvaltningsretlige tvister. Kontoret i Taichung behandler byggesager, immaterialret og sager med tilknytning til Korea og Japan. Kontoret i Pingtung blev åbnet i 2017 for at dække det lokale behov.',
+            'Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung har fokus på virksomhedsledelse og behandler civile, strafferetlige og forvaltningsretlige tvister. Kontoret i Taichung behandler byggesager, immaterialret og sager med tilknytning til Korea og Japan. Kontoret i Pingtung blev åbnet i 2017 for at dække det lokale behov.',
             'Ved siden af det advokatmæssige arbejde findes siden 2020 også Hovering Accounting Office, som tilbyder bogføring og skatteplanlægning for erhvervsdrivende og formuende privatpersoner.',
           ],
         },
@@ -696,7 +696,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Når du kontakter os',
           paragraphs: [
-            'Når dit resumé er kommet ind, gennemgår en advokat indholdet og drøfter derefter det mulige arbejdsomfang, de dokumenter der endnu mangler, og de næste skridt. Ved skatte- eller bogføringsspørgsmål kan kontoret arbejde med bogføringsafdelingen i ét forløb.',
+            'Når dit resumé er kommet ind, gennemgår en advokat indholdet og drøfter derefter det mulige arbejdsomfang, de dokumenter der endnu mangler, og de næste skridt. Ved skatte- eller bogføringsspørgsmål kan kontoret arbejde sammen med bogføringsafdelingen.',
             'Resultatet af hver sag afhænger af fakta og de dokumenter, der findes; vi lover intet resultat. Hvis du har brug for et bindende svar for din situation, skal dokumenterne drøftes med en advokat på et af de fire rådgivningssprog.',
           ],
         },
@@ -741,8 +741,8 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hvorfor denne side ikke angiver takster',
           paragraphs: [
-            'Omkostningerne afhænger af sagen selv: af indsatsen, antallet af parter, dokumenterne, fristerne og om et forløb allerede er i gang. Et beløb fastsat på forhånd ville ikke vise omkostningerne for din sag. Derfor fastlægger vi først arbejdsomfanget og meddeler dig derefter omkostningerne, før arbejdet begynder.',
-            'Ud over advokathonoraret kan der komme rets-, myndigheds- eller tredjepartsomkostninger. De er adskilt fra honoraret og afhænger af det pågældende forløb.',
+            'Omkostningerne afhænger af sagen selv: af indsatsen, antallet af parter, dokumenterne, fristerne og om et forløb allerede er i gang. Et beløb fastsat på forhånd siger ikke, hvad din sag koster. Derfor fastlægger vi først arbejdsomfanget og meddeler dig derefter omkostningerne, før arbejdet begynder.',
+            'Ud over advokathonoraret kan der komme omkostninger til retten, til en myndighed eller til tredjemand. De er adskilt fra honoraret og afhænger af det pågældende forløb.',
           ],
         },
       ],
@@ -770,7 +770,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hvis du ikke behersker noget af de fire rådgivningssprog',
           paragraphs: [
             'I kontaktformularen kan du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
-            'Det er kun en afklaring, ikke et løfte. Vi lover ikke en tolk, ikke rådgivning på dansk eller på et andet sprog end de fire nævnte, og ikke at vi tager imod enhver sag.',
+            'Det er kun en afklaring, ikke et løfte. Vi lover ikke en tolk og ikke rådgivning på dansk eller på et andet sprog end de fire nævnte, og vi tager ikke enhver sag.',
           ],
         },
         {
@@ -795,7 +795,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Forklaringer om arbejdsområde, forberedelse, sprog, omkostninger og betydningen af en sendt anmodning.',
       intro:
-        'Spørgsmålene nedenfor besvares på niveauet almindelige oplysninger. Et svar på din egen sag er først muligt, efter at en advokat har gennemgået dokumenterne.',
+        'Spørgsmålene nedenfor besvares som almindelige oplysninger. Et svar på din egen sag er først muligt, efter at en advokat har gennemgået dokumenterne.',
       sections: [
         {
           heading: 'Hvordan du bruger denne del',
@@ -843,7 +843,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Hvad hvis min sag er meget hastende?',
           answer:
-            'Angiv fristen eller datoen på en officiel skrivelse i begyndelsen af dit resumé, så disse data er synlige ved gennemgangen. Denne side har ingen akut linje og lover ingen svartid; hvis din sag ikke kan vente, bør du parallelt søge andre muligheder dér, hvor du befinder dig.',
+            'Angiv fristen eller datoen på en officiel skrivelse i begyndelsen af dit resumé, så disse data er synlige ved gennemgangen. Denne side har ingen akuttelefon og lover ingen svartid; hvis din sag ikke kan vente, bør du parallelt søge andre muligheder dér, hvor du befinder dig.',
         },
       ],
     },
@@ -895,22 +895,22 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Underretning og modtagelsesnummer',
           paragraphs: [
-            'Når en anmodning går igennem, underretter systemet kontoret. Er kontorets modtagelse af underretningen endnu ikke bekræftet, forbliver din tekst gemt og går ikke tabt.',
-            'Modtagelsesnummeret tjener til at genfinde din anmodning i vores sagsakter. Det vises efter gemningen; du kan angive det ved en ny kontakt.',
+            'Når en anmodning er sendt, underretter systemet kontoret. Er kontorets modtagelse af underretningen endnu ikke bekræftet, forbliver din tekst gemt og går ikke tabt.',
+            'Modtagelsesnummeret bruges til at finde din anmodning hos os. Det vises efter gemningen; du kan angive det ved en ny kontakt.',
           ],
         },
         {
           heading: 'Dine rettigheder og kontaktvejen',
           paragraphs: [
             'Du kan begære indsigt, berigtigelse eller sletning af dine data eller tilbagekalde samtykket via den e-mailadresse, der er angivet på kontaktsiden. Findes en lovbestemt eller processuel pligt til at opbevare oplysningerne, forklarer vi begrænsningen.',
-            'Denne side angiver ingen fast bevaringsfrist, fordi den faktiske tid afhænger af, om sagen fortsættes, og af de dertil hørende pligter. Ønsker du en tidligere sletning, meddel det ved kontakten.',
+            'Denne side angiver ingen fast opbevaringsperiode, fordi varigheden afhænger af, om sagen fortsættes, og af de pligter, der følger med. Ønsker du, at oplysningerne slettes tidligere, så skriv det, når du kontakter os.',
           ],
         },
         {
           heading: 'Lagringssted og leverandører',
           paragraphs: [
             'Denne hjemmeside drives hos Vercel, og din indsendelse gemmes i et ikke-offentligt lager hos denne tjeneste. E-mails sendes via den e-mailtjeneste, kontoret bruger.',
-            'Enkelte leverandørers servere kan stå uden for Taiwan, så dine data kan gemmes og behandles dér. Når lagringsformålet er opfyldt, slettes dataene uden forsinkelse; data, der skal bevares efter gældende regler, bliver i den tid. Forespørgsler om persondata sendes til wei@hoveringlaw.com.tw.',
+            'Enkelte leverandørers servere kan stå uden for Taiwan, så dine data kan gemmes og behandles dér. Når lagringsformålet er opfyldt, slettes dataene uden forsinkelse; oplysninger, der skal opbevares efter gældende regler, opbevares i den periode. Forespørgsler om persondata sendes til wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -934,7 +934,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Retligt anvendelsesområde',
           paragraphs: [
             'Kontoret arbejder efter taiwansk ret, og denne side handler kun om arbejde inden for den ramme.',
-            'Indholdet er ikke rådgivning efter retten i en anden retsorden end Taiwan, herunder retten på din bopæl. Rører en del af din sag en anden retsorden, afklarer vi med dig, hvilken kvalificeret fagperson der behøves til den del.',
+            'Indholdet er ikke rådgivning efter retten i en anden retsorden end Taiwan, herunder retten på din bopæl. Vedrører en del af din sag en anden retsorden, afklarer vi med dig, hvilken kvalificeret fagperson der behøves til den del.',
           ],
         },
         {
@@ -948,7 +948,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Intet løfte om resultat',
           paragraphs: [
             'Ingen del af denne side er et løfte om resultatet af en sag, om imødekommelse af en ansøgning eller om opholds- og arbejdsstatus.',
-            'Eksterne links tjener til orientering; vi indestår hverken for rigtigheden eller aktualiteten af tredjepartsindhold.',
+            'Eksterne links tjener til orientering; vi indestår hverken for rigtigheden eller aktualiteten af indhold fra tredjemand.',
           ],
         },
       ],
@@ -965,7 +965,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fire lister efter sprog',
           paragraphs: [
             'Denne del indeholder fire links: artikellisten på koreansk, på kinesisk, på engelsk og på japansk. Hvert link angiver listens sprog, så du på forhånd ved, på hvilket sprog indholdet åbnes.',
-            'Disse fire lister er lister efter artiklernes originalsprog, ikke oversættelseslister. Artikler, der findes på dansk, står særskilt på denne side.',
+            'Disse fire lister følger artiklernes originalsprog. Det er ikke oversættelser. Artikler, der findes på dansk, står særskilt på denne side.',
           ],
         },
         {
@@ -976,10 +976,10 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvor langt en artikel kan tjene som orientering',
+          heading: 'Hvad en artikel kan bruges til som orientering',
           paragraphs: [
             'Artikler er almindelige oplysninger på tidspunktet for offentliggørelsen. Regler og deres anvendelse kan ændre sig, og en artikel indeholder ikke alle omstændigheder i din sag.',
-            'Byg derfor ikke en beslutning i en virkelig sag alene på en artikel. Brug den til overblik og drøft dine dokumenter særskilt med en advokat; denne side er ikke selve rådgivningen.',
+            'Træf derfor ikke en beslutning i en konkret sag alene ud fra en artikel. Brug den til overblik og drøft dine dokumenter særskilt med en advokat; denne side er ikke selve rådgivningen.',
           ],
         },
       ],

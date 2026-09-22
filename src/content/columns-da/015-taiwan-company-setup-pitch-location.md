@@ -19,9 +19,9 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Når man begynder en restaurationsvirksomhed, er det første problem at finde driftsadressen (營業地址).
 
-Ud over markedssituationen er zonens tilladelse et selvstændigt punkt.
+Ud over markedssituationen er der et selvstændigt punkt.
 
-Et andet vigtigt punkt er zonens tilladelse.
+Punktet er, om den pågældende adresse ligger i en zone, hvor der kan drives restaurant.
 
 Det skal afklares, om den pågældende adresse (營業地址) ligger i en zone, hvor der kan drives restaurant.
 

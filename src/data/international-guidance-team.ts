@@ -643,7 +643,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     workingLanguagesLabel: 'Arbejdssprog',
     fullProfileLabel: 'Fuld profil (på engelsk)',
     keyFactsHeading: 'Advokat Wei Tseng — Kerneoplysninger',
-    qualificationLabel: 'Bevilling og kontor',
+    qualificationLabel: 'Beskikkelse og kontor',
     qualificationSentence:
       '{name} er berettiget til at udøve advokaterhvervet i Taiwan og er ledende advokat ved {firm}.',
     practiceLabel: 'Hovedområder',
@@ -652,7 +652,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Ledende advokat i Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Leder af Korea-drift (Korea Operations Manager)',
+      'son-jungmin': 'Leder af Korea-forretningen (Korea Operations Manager)',
       'huang-shengping': 'Tilknyttet revisor (Partner CPA)',
     },
   },
@@ -2986,10 +2986,10 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinerer rådgivningstider og kommunikationen for klienter fra Korea.',
-        'Støtter udvekslingen mellem områder via dokumentsystemer og arbejdsgange, på grundlag af datalogi.',
+        'Støtter kommunikationen på tværs af teamene med dokumentsystemer og arbejdsgange og har en baggrund i datalogi.',
       ],
       education: ['Bachelor (B.S.) i datalogi, National Cheng Kung University'],
-      experience: ['Korea-drift, Hovering International Law Firm'],
+      experience: ['Korea-forretningen, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

@@ -35,9 +35,9 @@ Ved udarbejdelsen af investeringsplanen behøver den nøjagtige selskabsadresse 
 
 Når senere selskabets forberedelseskonto (公司籌備處帳戶) åbnes i banken, prøver talrige banker dog lejeaftalen (租賃契約) og inspicerer selskabsadressen på stedet.
 
-En medarbejder ved en taiwansk bank har oplyst, at
+En medarbejder ved en taiwansk bank har oplyst, at talrige udlændinge for nylig forsvinder efter kontoåbningen.
 
-talrige udlændinge for nylig forsvinder efter kontoåbningen, så kontoåbningen behandles stadig strengere.
+Kontoåbningen behandles derfor stadig strengere.
 
 Allerede i grundlagsteksten har en læser anført, at kontoåbningen viste sig at være det vanskeligste trin; den iagttagelse holder.
 
@@ -87,7 +87,7 @@ Dette punkt bør du drøfte grundigt med en advokat i Taiwan.
 
 **4. Hvad skal der tages hensyn til, når selskabets registreringsadresse (for eksempel et restaurationslokale) lejes?**
 
-Selskabsstiftelsen varer omkring **3 måneder**, opnåelsen af arbejdstilladelsen (工作許可) og af opholdskortet omkring **1 måned**,
+Selskabsstiftelsen varer omkring **3 måneder**, og opnåelsen af arbejdstilladelsen (工作許可) og opholdskortet tager yderligere omkring **1 måned**.
 
 Du bør derfor lægge aftalens ikrafttrædelsesdato så sent som muligt.
 
@@ -95,9 +95,9 @@ Desuden giver udlejeren i lejeaftaler for butikslokaler i Taiwan ofte lejeren en
 
 Dette er en lejefri periode, som du kan forhandle om.
 
-For en udlænding er det ikke enkelt at leje et butikslokale, og depositummet (押金) i Taiwan er forholdsvis lavt (sædvanligvis 2 måneders husleje), så udlejerens beskyttelse er begrænset;
+For en udlænding er det ikke enkelt at leje et butikslokale, og depositummet (押金) i Taiwan er forholdsvis lavt (sædvanligvis 2 måneders husleje), så udlejerens beskyttelse er begrænset.
 
-udlejere tøver derfor med at udleje til udlændinge.
+Udlejerne tøver derfor med at udleje til udlændinge.
 
 Driftsadressen bør derfor søges tidligt.
 
@@ -119,9 +119,9 @@ Desuden kræver stadsforvaltningen (市政府) ved den endelige selskabsregistre
 
 ved et kommercielt kontorlokale er selskabsregistreringen (公司登記) da ikke mulig.
 
-F.eks.: Drejer det sig om forretningsgrene (營業項目), der er mulige i et kommercielt kontorlokale, såsom reklame eller engros, kan selskabet stiftes i et kommercielt kontorlokale. Før indgåelsen af lejeaftalen
+F.eks.: Drejer det sig om forretningsgrene (營業項目), der er mulige i et kommercielt kontorlokale, såsom reklame eller engros, kan selskabet stiftes i et kommercielt kontorlokale.
 
-bør du kontrollere dette på forhånd.
+Før indgåelsen af lejeaftalen bør du kontrollere dette på forhånd.
 
 *Har du brug for hjælp eller en samtale om taiwansk ret, kan du sende en anmodning via kontaktformularen; der loves ikke svar med det samme.*
 

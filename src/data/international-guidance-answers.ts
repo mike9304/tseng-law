@@ -644,7 +644,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Denne del besvarer hyppige spørgsmål på niveauet almindelig information: de seks praksisområder, forberedelsen før kontakten, hvordan omkostningerne fastlægges, og hvad en sendt meddelelse betyder. En sendt anmodning venter på en advokats gennemgang; den er ikke en juridisk udtalelse, ikke en tid og skaber ikke et forhold mellem advokat og klient. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Denne del besvarer hyppige spørgsmål som almindelige oplysninger: de seks praksisområder, forberedelsen før kontakten, hvordan omkostningerne fastlægges, og hvad en sendt meddelelse betyder. En sendt anmodning venter på en advokats gennemgang; den er ikke en juridisk udtalelse, ikke en tid og skaber ikke et forhold mellem advokat og klient. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/contact', '/da/services'],
     },
   },

@@ -1,5 +1,5 @@
 ---
-title: "Fratrædelsesgodtgørelse i Taiwan: hvornår den udbetales, og hvornår den ikke gør"
+title: "Godtgørelse ved afskedigelse i Taiwan: hvornår den udbetales, og hvornår den ikke gør"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13. september 2025"
@@ -13,10 +13,10 @@ faq:
   - q: "Skal selskabet også ved en disciplinær afskedigelse udbetale godtgørelse ved afskedigelse?"
     a: "Nej. Begår arbejdstageren et retsbrud, krænker interne regler eller udebliver uden gyldig grund 3 dage i træk (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af godtgørelse ved afskedigelse."
   - q: "Hvordan beregnes godtgørelsen ved afskedigelse i Taiwan?"
-    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales pr. et år 1 måneds gennemsnitsløn uden maksimum."
+    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales for hvert fuldført 1 år 1 måneds gennemsnitsløn uden maksimum."
 ---
 
-# Fratrædelsesgodtgørelse (資遣費) i Taiwan: hvornår den udbetales, og hvornår den ikke gør
+# Godtgørelse ved afskedigelse (資遣費) i Taiwan: hvornår den udbetales, og hvornår den ikke gør
 
 ![Hovedbillede](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
@@ -62,7 +62,7 @@ Det sammenfattes i tabellen nedenfor.
 
 > I Taiwan skal arbejdsgiveren for hvert fuldført års anciennitet (年資)
 > udbetale 0,5 måneds gennemsnitsløn (平均工資) som godtgørelse ved afskedigelse.
-> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales pr. et år 1 måneds gennemsnitsløn uden maksimum.
+> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales for hvert fuldført 1 år 1 måneds gennemsnitsløn uden maksimum.
 
 ​
 
@@ -88,7 +88,7 @@ Der findes det kendte selskab A med filialer i hele Taiwan.
 
 Af en eller anden grund skiftede ledelsen,
 
-Den nye ledelse begyndte straks efter tiltrædelsen.
+Så snart den nye ledelse var tiltrådt, gik den i gang.
 
 Formålet var at sænke personaleomkostningerne.
 
@@ -176,7 +176,7 @@ Senere kunne han med advokathjælp få kravet fastslået.
 
 Det blev fastslået, at han efter loven havde krav på godtgørelse ved afskedigelse.
 
-mens andre fratrådte medarbejdere ikke stod lige så stærkt.
+De andre medarbejdere, der var fratrådt, stod derimod ikke lige så stærkt.
 
 ​
 

@@ -49,7 +49,7 @@ At der i enkelte sager kommer sådanne sagkyndige resultater, betyder ikke, at �
 
 ## Punkter, der skal undersøges ved vurderingen af ulykkesansvaret
 
-Før overhaling bør du først undersøge, om stedet eller trafiksituationen falder ind under overhalingsforbuddet. Gælder proceduren for samme vognbane, så giv det foreskrevne horn- eller forlygtesignal uden at tvinge det forankørende køretøj til at vige, vent på et tydeligt vigetegn og fuldfør overhalingen med tilstrækkelig afstand og sikker afstand til at komme tilbage (超車).
+Før overhaling bør du først undersøge, om stedet eller trafiksituationen falder ind under overhalingsforbuddet. Gælder proceduren for samme vognbane, så giv det foreskrevne horn- eller forlygtesignal uden at tvinge det forankørende køretøj til at vige, vent på et tydeligt tegn på, at det forankørende køretøj viger og fuldfør overhalingen med tilstrækkelig afstand og sikker afstand til at komme tilbage (超車).
 
 Overholdelsen af artikel 101 er vigtig, men sikrer i sig selv hverken undgåelse af en ulykke eller et senere resultat af sagkyndig undersøgelse eller retssag. Førere skal holde en ekstra sikkerhedsmargin og tilpasse sig situationen foran sig.
 

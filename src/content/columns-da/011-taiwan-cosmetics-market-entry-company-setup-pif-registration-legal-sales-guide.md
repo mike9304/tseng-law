@@ -22,7 +22,7 @@ faq:
 
 Et udenlandsk kosmetikmærke, der vil distribuere produkter i Taiwan, skal fastlægge, hvem importen overdrages til, hvornår produktregistreringen (產品登錄) afsluttes, hvem der forvalter produktinformationsfilen (產品資訊檔案, Product Information File, PIF) og på hvilket sted, og efter hvilken målestok mærkning (標示) og reklame (廣告) undersøges. Også et udenlandsk mærke kan bruge en lokal importør og kan selv drive den taiwanske virksomhed, så forberedelsen af salget ikke er afsluttet alene derved, at et selskab er stiftet.
 
-De anvendelige pligter kan variere efter produkttypen og fremstillingsstedet (製造場所), den faktiske importform, distributionsmåden og reklameindholdet. I det følgende belyses særskilt formen for adgang til Taiwan og den lovbestemte ansvarlige, produktregistreringen hos TFDA, udarbejdelsen, ajourføringen og opbevaringen af PIF, mærkning og reklame samt inspektion og afhjælpningsforanstaltninger. Før fastlæggelsen af den faktiske forsyningskalender anbefales det, produkt for produkt, på ny at bekræfte den nyeste regulering og vejledningen fra den kompetente myndighed (主管機關).
+De anvendelige pligter kan variere efter produkttypen og fremstillingsstedet (製造場所), den faktiske importform, distributionsmåden og reklameindholdet. I det følgende belyses særskilt formen for adgang til Taiwan og den lovbestemte ansvarlige, produktregistreringen hos TFDA, udarbejdelsen, ajourføringen og opbevaringen af PIF, mærkning og reklame samt inspektion og afhjælpningsforanstaltninger. Før den faktiske leveringsplan fastlægges anbefales det, produkt for produkt, på ny at bekræfte den nyeste regulering og vejledningen fra den kompetente myndighed (主管機關).
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
@@ -32,7 +32,7 @@ Stiftelse er ikke altid påkrævet. Det er også muligt at overdrage import og s
 
 ### Når man overdrager til en lokal importør
 
-Hvis en taiwansk importør eller en salgsagent (銷售代理商) varetager import og salg, kan det udenlandske mærke også vælge en struktur uden eget datterselskab eller filial i Taiwan. Salgsagenten kan samtidig optræde som importør, eller en anden importør kan deltage særskilt. Tilregningen af det juridiske ansvar fastlægges dog ikke alene efter den kontraktlige betegnelse, såsom agent, eneforhandler eller forhandler.
+Hvis en taiwansk importør eller en salgsagent (銷售代理商) varetager import og salg, kan det udenlandske mærke også vælge en struktur uden eget datterselskab eller filial i Taiwan. Salgsagenten kan samtidig optræde som importør, eller en anden importør kan deltage særskilt. Hvem det juridiske ansvar påhviler, fastlægges dog ikke alene efter den kontraktlige betegnelse, såsom agent, eneforhandler eller forhandler.
 
 Ved udformningen af den faktiske arbejdsdeling er det, man først skal bekræfte, hvem der importerer produktet og foretager produktregistreringen, og hvem der udarbejder, ajourfører og opbevarer PIF. Der skal også udpeges den ansvarlige for gennemgangen af mærkningen, for vedligeholdelsen af distributionsregistrene, for modtagelsen af forbrugerklager og sikkerhedsoplysninger og for reaktionen på inspektioner og dataanmodninger fra den kompetente myndighed (主管機關). Det anbefales samtidig at undersøge, om de lovbestemte pligter, der er pålagt fabrikanten eller importøren af kosmetik, og det arbejde, der er aftalt mellem mærke og salgspartner, falder sammen.
 
@@ -40,7 +40,7 @@ I aftalen anbefales det konkret at fastlægge brugsomfanget af intellektuel ejen
 
 ### Når man selv driver den taiwanske virksomhed
 
-Det taiwanske datterselskab og filialen af et udenlandsk selskab er ikke den samme organisation. Datterselskabet er en særskilt juridisk person stiftet efter taiwansk ret, mens filialen registreres som en del af hovedsædet (本公司) i det udenlandske selskab. De adskiller sig i retssubjektivitet, hovedsædets ansvar, bogførings- og skattemæssig behandling, overførsel af overskud, repræsentationsbeføjelse og intern kontrol, så organisationsformen ikke alene må vælges efter kontrollen over salget.
+Det taiwanske datterselskab og filialen af et udenlandsk selskab er ikke den samme organisation. Datterselskabet er en særskilt juridisk person stiftet efter taiwansk ret, mens filialen registreres som en del af hovedsædet (本公司) i det udenlandske selskab. De adskiller sig i retssubjektivitet, hovedsædets ansvar, bogførings- og skattemæssig behandling, overførsel af overskud, repræsentationsbeføjelse og intern kontrol, så organisationsformen ikke må vælges alene ud fra kontrollen over salget.
 
 Hvis proceduren for udenlandsk investering er nødvendig, skal vejledningen fra **Investeringsafdelingen under Ministeriet for Økonomiske Anliggender (經濟部投資審議司)** som nu kompetent myndighed bekræftes. Den tid, der er nødvendig til godkendelsen af investeringen, overførslen af midler, registreringen af selskab eller filial, åbningen af en bankkonto, skatteregistreringen (稅籍登記) og opnåelsen af importørkvalifikationen, adskiller sig efter investoren, branchen, organisationsformen, de indgivne dokumenter og om der sker rettelse eller supplering. Derfor skal man, i stedet for at fastlægge lanceringsdatoen ud fra en antagelse om én bestemt tidsramme, først bekræfte anvendelsen af hver formalitet og de nyeste indgivelseskrav.
 
@@ -60,11 +60,11 @@ Produktregistreringen er formaliteten til på platformen at angive de bestemte o
 
 ### Oplysningerne i PIF og anvendelsen i etaper
 
-PIF er et ordnet hele af oplysninger, så struktureret at produktets kvalitet og sikkerhed kan vedblive at belyses. Ud over kvalitet, sikkerhed, sammensætning, påstået funktion (宣稱功能), fremstillingsmåde, prøveresultater og sikkerhedsvurdering skal pr. produkt grundoplysningerne om produkt og fabrikant og støttedata, såsom etiketten, ordnes. Forskriften om forvaltning af produktinformationsfilen for kosmetik (化粧品產品資訊檔案管理辦法) ordner de nødvendige oplysninger i 16 kategorier, så oplysningerne i hver kategori og kravene til underskrift og kvalifikation skal bekræftes efter produkttypen.
+PIF er et ordnet hele af oplysninger, der løbende kan redegøre for produktets kvalitet og sikkerhed. Ud over kvalitet, sikkerhed, sammensætning, påstået funktion (宣稱功能), fremstillingsmåde, prøveresultater og sikkerhedsvurdering skal pr. produkt grundoplysningerne om produkt og fabrikant og støttedata, såsom etiketten, ordnes. Forskriften om forvaltning af produktinformationsfilen for kosmetik (化粧品產品資訊檔案管理辦法) ordner de nødvendige oplysninger i 16 kategorier, så oplysningerne i hver kategori og kravene til underskrift og kvalifikation skal bekræftes efter produkttypen.
 
 PIF-ordningen er i etaper anvendt efter produktgrupper. Fra 1. juli 2026 omfattes den øvrige kosmetik også, så den i princippet gælder al kosmetik. Undtagelsen begrænser sig til den faste håndlavede sæbe fremstillet på et produktionssted, der er fritaget for fabrikregistrering. Et produkt er ikke udelukket alene fordi det er håndlavet, eller fordi det bærer navnet sæbe; begge skal bekræftes, den faste form og betingelsen om fritagelse for fabrikregistrering (工廠登記) af produktionsstedet.
 
-Arbejdet med PIF, herunder sikkerhedsvurderingen, kan støttes af en tredjemand, der har den nødvendige kvalifikation og faglige dygtighed. Også når en tredjemand hjælper med at udarbejde materialet eller en tjeneste til dataopbevaring, forbliver det lovbestemte ansvar hos fabrikanten eller importøren af kosmetik. Der skal bygges en ordning, der tillader oprindelsesfabrikanten, prøvelaboratoriet, sikkerhedsvurdereren og virksomheden i Taiwan gensidigt at overføre ændringsoplysningerne og de nyest underskrevne data.
+Arbejdet med PIF, herunder sikkerhedsvurderingen, kan støttes af en tredjemand, der har den nødvendige kvalifikation og faglige dygtighed. Også når en tredjemand hjælper med at udarbejde materialet eller en tjeneste til dataopbevaring, forbliver det lovbestemte ansvar hos fabrikanten eller importøren af kosmetik. Der skal indrettes en ordning, der gør det muligt for oprindelsesfabrikanten, prøvelaboratoriet, sikkerhedsvurdereren og virksomheden i Taiwan at udveksle ændringsoplysninger og de senest underskrevne data.
 
 ### Ajourføring og opbevaring
 
@@ -80,7 +80,7 @@ Når den kompetente myndighed inspicerer PIF, underretter den i princippet fabri
 
 Angivelsen af falske oplysninger i produktregistreringen eller indførelsen af falske oplysninger i PIF kan være genstand for en administrativ bøde (罰鍰) på 10.000 TWD til 1.000.000 TWD (新臺幣). Er PIF-oplysningerne derimod ufuldstændige, påbyder den kompetente myndighed sædvanligvis afhjælpningen inden for en bestemt frist (限期改正), og den administrative bøde kommer først på tale, hvis der ikke afhjælpes inden for den frist. De falske oplysninger og den ufuldstændighed, der endnu kan suppleres, må ikke behandles, som om de fik samme retsfølge.
 
-Tilbagekaldelse eller tilintetgørelse (銷毀) er ikke en foranstaltning, der automatisk følger hver ufuldstændighed af PIF-oplysninger. Produktsikkerheden, overtrædelsens indhold, afhjælpningens stand og de på hver foranstaltning anvendelige lovbestemte betingelser skal vurderes adskilt. Foranstaltningen, når et sikkerhedsproblem er bekræftet, og anmodningen om supplering af dokumenter skal undersøges særskilt, og reaktionen følger underretningen fra den kompetente myndighed og den anvendte forskrift.
+Tilbagekaldelse eller tilintetgørelse (銷毀) er ikke en foranstaltning, der automatisk følger hver ufuldstændighed af PIF-oplysninger. Produktsikkerheden, overtrædelsens indhold, hvor langt afhjælpningen er nået og de på hver foranstaltning anvendelige lovbestemte betingelser skal vurderes adskilt. Foranstaltningen, når et sikkerhedsproblem er bekræftet, og anmodningen om supplering af dokumenter skal undersøges særskilt, og reaktionen følger underretningen fra den kompetente myndighed og den anvendte forskrift.
 
 ## 3. Regulering af mærkning, promovering og reklame
 
@@ -90,9 +90,9 @@ Reklame vurderes ikke alene efter meningen, men efter helheden af fremstillingen
 
 Om mærkning, promovering (宣傳) eller reklame er falsk eller overdreven, eller om de påstår en medicinsk virkning (醫療效能), vurderes ikke alene efter ét bestemt ord. Sammen undersøges produktnavnet, sætningerne, billedet, tegnet, lyden, den forudgående og efterfølgende kontekst og det samlede indtryk, som forbrugeren modtager. Det indtryk, der dannes af den centrale reklamefremstilling, fjernes ikke nødvendigvis af et forbehold med småt, så både hver enkelt tekst og den endelige reklame, som den faktisk bringes, skal gennemgås.
 
-Anføres det for eksempel, at et kosmetikum behandler acne, har en antiinflammatorisk virkning eller en bakteriedræbende virkning, kan dette udgøre en påstand om medicinsk virkning. Der skal også sammen bekræftes måden at kombinere navnet på en sygdom med produktet, billederne før og efter brugen, fremstillingen der fremkalder en sundhedsfaglig person, og den kontekst, der knytter forklaringen af ingrediensen til en terapeutisk virkning af produktet.
+Anføres det for eksempel, at et kosmetikum behandler acne, har en antiinflammatorisk virkning eller en bakteriedræbende virkning, kan dette udgøre en påstand om medicinsk virkning. Der skal også sammen bekræftes måden at kombinere navnet på en sygdom med produktet, billederne før og efter brugen, en fremstilling, der vækker indtryk af en sundhedsfaglig person, og den kontekst, der knytter forklaringen af ingrediensen til en terapeutisk virkning af produktet.
 
-Den administrative bøde for falsk eller overdreven reklame (虛偽誇大廣告) er 40.000 TWD til 200.000 TWD, og den administrative bøde for påstand om medicinsk virkning er 600.000 TWD til 5.000.000. TWD Fordi intervallet adskiller sig efter overtrædelsestypen, skal helheden af reklamefremstillingen før offentliggørelse sammenholdes med støttedataene.
+Den administrative bøde for falsk eller overdreven reklame (虛偽誇大廣告) er 40.000 TWD til 200.000 TWD, og den administrative bøde for påstand om medicinsk virkning er 600.000 TWD til 5.000.000 TWD. Fordi intervallet adskiller sig efter overtrædelsestypen, skal helheden af reklamefremstillingen før offentliggørelse sammenholdes med støttedataene.
 
 ### Influencere, anmeldere og salgspartnere
 

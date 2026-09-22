@@ -175,7 +175,7 @@ Obaveza zaključenja prema članu 6 Zakona o obaveznom osiguranju od autoodgovor
 
 Kod nezgode jednog vozila vozač tog vozila načelno nije adresat davanja obaveznog osiguranja tog vozila. Međutim, kod nezgode u kojoj učestvuje više vozila postoje slučajevi u kojima vozač može istaći davanje kod osiguravača obaveznog osiguranja drugog učestvujućeg vozila.
 
-Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi 200.000 novih tajvanskih dolara (TWD); davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stepeni; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenog i 1 nezgodu iznosi 3.200.000. TWD Na ranije nezgode može se primeniti prethodna tarifa.
+Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi 200.000 novih tajvanskih dolara (TWD); davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stepeni; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenog i 1 nezgodu iznosi 3.200.000 TWD. Na ranije nezgode može se primeniti prethodna tarifa.
 
 Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima police, pa policu i uslove treba proveriti stvar po stvar.
 
@@ -239,7 +239,7 @@ U nekim presudama za telesnu povredu iz nehata izrečeno je oko 3 meseca; nema t
 
 ​
 
-Ako se kazna pretvori u novčanu kaznu (易科罰金; 罰金, a ne upravna kazna 罰鍰), član 41 stav 1 Krivičnog zakonika utvrđuje preračun 1.000 TWD, 2.000 TWD ili 3.000 TWD za 1 dan; pri tarifi 1.000 TWD za dan kazna od 3 meseca odgovara iznosu 3 × 30 × 1.000 TWD = 90.000. TWD
+Ako se kazna pretvori u novčanu kaznu (易科罰金; 罰金, a ne upravna kazna 罰鍰), član 41 stav 1 Krivičnog zakonika utvrđuje preračun 1.000 TWD, 2.000 TWD ili 3.000 TWD za jedan dan; pri tarifi 1.000 TWD za dan kazna od 3 meseca odgovara iznosu 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 

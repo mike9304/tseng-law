@@ -55,7 +55,7 @@ Program, kalendar obuke, spisak prisustva, rezultat ocene, uverenje o završetku
 
 Granica između opšteg prilagođavanja poslu i stručne obuke ne deli se samo prema mestu obuke ili prema tome ko je organizuje. Unutrašnji kurs može da dokaže konkretan stručni i tehnički sadržaj i znatnu investiciju, a dugi kurs spoljne ustanove može u stvari biti opšta uvodna obuka. Zato se ne sme jedinstveno isključiti sva unutrašnja obuka niti priznati zakonska pretpostavka samo zato što je kurs skup ili dug.
 
-Treba umeti i da se objasni odnos između ugovorenog roka i investicije u obuku. Kakva se sposobnost stiče, kakav odnos ta sposobnost ima prema ciljnom mestu i zašto je predloženo trajanje zaposlenja potrebno u odnosu na trajanje i trošak obuke, ocenjuje se pojedinačno. Da li je posle završetka obuke taj posao stvarno obavljan i već odrađeni period takođe je dokumentacija za ocenu opsega tereta.
+Treba umeti i da se objasni odnos između ugovorenog roka i investicije u obuku. Kakva se sposobnost stiče, kako se ta sposobnost odnosi na radno mesto i zašto je predloženo trajanje zaposlenja potrebno u odnosu na trajanje i trošak obuke, ocenjuje se pojedinačno. To da li je zaposleni posle obuke taj posao stvarno obavljao, i koliko je već odrađeno, takođe utiče na ocenu opsega tereta.
 
 ## 3. Druga zakonska pretpostavka: razumna naknada
 
@@ -134,8 +134,8 @@ Kada zaposleni raskine ugovor o radu na neodređeno vreme (不定期契約), pre
 
 Otkazni rok prema neprekidnom stažu rada jeste sledeći.
 
-1. Ako iznosi 3 meseca ili više, a manje od 1 godine: 10 dana
-2. Ako iznosi 1 godinu ili više, a manje od 3 godine: 20 dana
+1. Ako iznosi 3 meseca ili više, a manje od jedne godine: 10 dana
+2. Ako iznosi godinu dana ili više, a manje od 3 godine: 20 dana
 3. Ako iznosi 3 godine ili više: 30 dana
 
 Ako trajanje ugovora o radu na određeno vreme za određeni posao (特定性定期契約) prelazi 3 godine, primenjuje se posebna norma člana 15. Zaposleni posle 3 godine rada može da raskine ugovor uz otkazni rok od 30 dana prema poslodavcu. Tu normu treba razlikovati od otkaza prema neprekidnom stažu koji se primenjuje na ugovor na neodređeno vreme.

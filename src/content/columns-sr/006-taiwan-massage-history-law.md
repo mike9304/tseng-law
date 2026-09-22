@@ -81,7 +81,7 @@ Pitalo se, na primer, da li pisana odredba, koja je dozvoljavala isključivo lic
 
 i osporavalo se da li je ta odredba zaista doprinela zaštiti zaposlenja i opstanka lica s oštećenjem vida.
 
-Na kraju su velike sudije Sudskog juana (大法官) odredbu koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju zanimanje masera proglasile protivustavnom (違憲).
+Na kraju su veliki sudije Sudskog juana (大法官) odredbu koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju zanimanje masera proglasile protivustavnom (違憲).
 
 ​
 

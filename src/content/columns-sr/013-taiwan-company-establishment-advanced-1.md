@@ -49,7 +49,7 @@ Pošto i ocena investicionog plana zahteva vreme,
 
 treba da istovremeno sastavljate investicioni plan i tražite adresu upisa društva.
 
-Prema članu 9 Zakona o ulaganju stranaca (外國人投資條例) odobreni ulog mora da stigne u celosti u roku koji odredi nadležni organ (核定期限); rok treba proveriti u aktu odobrenja svake stvari (u praksi se često određuje na oko 1 godinu).
+Prema članu 9 Zakona o ulaganju stranaca (外國人投資條例) odobreni ulog mora da stigne u celosti u roku koji odredi nadležni organ (核定期限); rok treba proveriti u aktu odobrenja svake stvari (u praksi se često određuje na oko godinu dana).
 
 U tom roku, nakon što se pronađe adresa društva i zaključi ugovor o zakupu,
 
@@ -87,7 +87,7 @@ U ovoj tački stvar treba temeljno razmotriti s advokatkinjom ili advokatom na T
 
 **4. Na šta treba obratiti pažnju kada se zakupljuje adresa upisa društva (na primer ugostiteljski lokal)?**
 
-Osnivanje društva traje oko **3 meseca**, sticanje radne dozvole (工作許可) i isprave o boravku stranca oko **1 mesec**,
+Osnivanje društva traje oko **3 meseca**, sticanje radne dozvole (工作許可) i isprave o boravku stranca oko **jedan mesec**,
 
 zato datum početka ugovora treba odrediti što kasnije.
 

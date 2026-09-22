@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Glavni prikaz](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Lica koja su čitala [Osnivanje društva na Tajvanu — osnove](/sr/columns/taiwan-company-establishment-basics) i [Osnivanje društva na Tajvanu — produbljeni pregled, 1. deo](/sr/columns/taiwan-company-establishment-advanced-1) mogu takođe da pogledaju Osnivanje društva na Tajvanu — produbljeni pregled, 2. deo (公司設立).
+Lica koja su čitala [Osnivanje društva na Tajvanu — osnove](/sr/columns/taiwan-company-establishment-basics) i [Osnivanje društva na Tajvanu — produbljeni pregled, 1. deo](/sr/columns/taiwan-company-establishment-advanced-1) ovde nalaze dalja pitanja o osnivanju društva na Tajvanu (公司設立).
 
 ​
 
@@ -21,7 +21,7 @@ Lica koja su čitala [Osnivanje društva na Tajvanu — osnove](/sr/columns/taiw
 
 ​
 
-Navedena pitanja i odgovori neka budu od pomoći licima koja razmatraju osnivanje društva (公司設立) na Tajvanu.
+Navedena pitanja i odgovori pripremila je advokatkinja Wei Tseng (曾雋崴); neka budu od pomoći licima koja razmatraju osnivanje društva (公司設立) na Tajvanu.
 
 ​
 
@@ -41,9 +41,9 @@ Pre prenosa kapitala (資本金匯款) obratite se svojoj glavnoj banci u Koreji
 
 Moguće je, ali treba podneti isprave koje potvrđuju poreklo sredstava u novom tajvanskom dolaru stečenih na Tajvanu.
 
-Ako je, na primer, reč o prihodima od plate stečenim na Tajvanu, treba podneti kopiju potvrde o obustavi na izvoru od tih prihoda od plate (薪資所得的扣繳憑單影本).
+Ako je, na primer, reč o prihodima od plate stečenim na Tajvanu, treba podneti kopiju potvrde o porezu po odbitku od tih prihoda od plate (薪資所得的扣繳憑單影本).
 
-Ako je reč o dividendama i dobiti od investicije u preduzeće na Tajvanu, treba podneti kopiju potvrde o obustavi na izvoru od tih dividendi i dobiti (股息和紅利的扣繳憑單影本).
+Ako je reč o dividendama i dobiti od investicije u preduzeće na Tajvanu, treba podneti kopiju potvrde o porezu po odbitku od tih dividendi i dobiti (股息和紅利的扣繳憑單影本).
 
 Ako se prenos vrši sa bankovnog računa u Koreji, nije potrebno priložiti isprave o poreklu sredstava.
 
@@ -69,9 +69,9 @@ Neke banke mogu da postave i dalje zahteve, na primer da se račun koristi najma
 
 **5. Može li društvo da zapošljava strance (uključujući lica s korejskim državljanstvom)?**
 
-Prvi zaposleni: zahtev se podnosi kao rukovodeći posao u preduzeću redovne investicije prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Merilo „posla stručne ili tehničke prirode“ iz tačke B ispod se ne primenjuje, ali se primenjuju uslovi adresata, uključujući uslov rukovodioca (經理人) društva čiji ulog prekomorskih Kineza ili stranaca prelazi 1/3, kao i uslovi rezultata poslodavca koji se tiču kapitala i prometa (članovi 38 i 39 standarda provere).
+Prvi zaposleni: zahtev se podnosi kao rukovodeći posao u preduzeću redovne investicije prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Merilo „posla stručne ili tehničke prirode“ iz tačke B ispod se ne primenjuje, ali se primenjuju uslovi podobnosti, uključujući uslov rukovodioca (經理人) društva čiji ulog prekomorskih Kineza ili stranaca prelazi 1/3, kao i uslovi rezultata poslodavca koji se tiču kapitala i prometa (članovi 38 i 39 standarda provere).
 
-Od drugog zaposlenog postoje ograničenja: ako broj zaposlenih stranaca prelazi 1 lice, obrazovanje i iskustvo zaposlenog, pravila prosečne plate pri zapošljavanju i pravila kapitala i prometa društva obrađuju se prema „stručnom ili tehničkom poslu“ (專門性或技術性工作).
+Od drugog zaposlenog postoje ograničenja: ako broj zaposlenih stranaca prelazi jedno lice, obrazovanje i iskustvo zaposlenog, pravila prosečne plate pri zapošljavanju i pravila kapitala i prometa društva obrađuju se prema „stručnom ili tehničkom poslu“ (專門性或技術性工作).
 
 Vidite stranicu Ministarstva rada Tajvana (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

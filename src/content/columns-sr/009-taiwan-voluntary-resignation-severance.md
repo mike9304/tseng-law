@@ -73,11 +73,11 @@ Zaposleni zato mora da pazi na taj rok.
 
 Drugim rečima,
 
-pravo Tajvana, bilo da krivica leži na strani preduzeća,
+pravo Tajvana, prema tome da li je krivica na strani poslodavca,
 
 ili na strani zaposlenog,
 
-daje jednoj ili drugoj strani, prema tome na čijoj je strani krivica, pravo da otpremninu ne isplati ili da je zahteva.
+daje toj strani pravo da otpremninu ne isplati ili da je zahteva.
 
 Ponekad, ako krivica leži na obe strane radnog odnosa,
 
@@ -85,13 +85,13 @@ ako izbije spor,
 
 prema tome ko prvi raskine ugovor s dovoljnim razlogom,
 
-otpremnina ne mora biti isplaćena, ili može biti zahtevana.
+ta strana može ili da ne isplati otpremninu, ili da je zahteva.
 
 U radnim sporovima (勞資糾紛) na Tajvanu vreme je odlučujuće.
 
 „**Vreme**“ je veoma važno.
 
-U sporovima o otpremnini zato odlučuje koja strana ranije raskine ugovor s urednim razlogom i s dokazima.
+U većini slučajeva bolje je zaštićena strana koja se pripremi unapred.
 
 ---
 

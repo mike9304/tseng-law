@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Sjećate li se vremena tradicionalnih frizerskih salona (理髮廳) s početaka Tajvana?
+Tradicionalni frizerski saloni (理髮廳) s početaka Tajvana imali su osobit način rada.
 
 Način pranja kose u tim salonima bio je vrlo osobit.
 
@@ -33,7 +33,7 @@ Danas se saloni u tom obliku gotovo više ne pojavljuju.
 
 ​
 
-Kako bilo, kada je riječ o masaži (按摩),
+Kada je riječ o masaži (按摩),
 
 na Tajvanu postoji i mnogo ulica masaže.
 
@@ -81,7 +81,7 @@ Pitalo se, na primjer, ne predstavlja li pisana odredba koja je dopuštala isklj
 
 i dovodilo se u pitanje je li ta odredba doista pridonijela zaštiti zaposlenja i opstanka osoba oštećena vida.
 
-Napokon su ustavni suci (大法官) proglasili protivustavnom (違憲) odredbu koja je dopuštala isključivo osobama oštećena vida obavljanje zanimanja masera.
+Napokon su suci Sudbenog yuana (大法官) proglasili su protivustavnom (違憲) odredbu koja je dopuštala isključivo osobama oštećena vida obavljanje zanimanja masera.
 
 ​
 

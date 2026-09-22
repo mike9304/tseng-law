@@ -987,8 +987,8 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
     pricing: 'Troškovi',
     contact: 'Kontakt',
     faq: 'Pitanja',
-    privacy: 'Privatnost',
-    disclaimer: 'Odricanje',
+    privacy: 'Osobni podaci',
+    disclaimer: 'Odgovornost',
     columns: 'Članci',
   },
   contactCta: 'Pošaljite zahtjev za pregled',
@@ -1055,7 +1055,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Čime se bavimo',
           paragraphs: [
             'Hovering International Law Firm odvjetnički je ured sa sjedištem na Tajvanu. Radi prema tajvanskom pravu i ima urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savjetujemo poduzeća, vodimo sudske postupke i zastupamo strane klijente u koracima koje na Tajvanu treba poduzeti.',
-            'Cjelokupni sadržaj ovdje opće je naravi. Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku. Ove informacije ne zamjenjuju savjetovanje s odvjetnicom ili odvjetnikom na temelju Vaših isprava.',
+            'Cjelokupni sadržaj ovdje opće je naravi. Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku u kojem se stvar ocjenjuje. Ove informacije ne zamjenjuju savjetovanje s odvjetnicom ili odvjetnikom na temelju Vaših isprava.',
           ],
         },
         {
@@ -1113,7 +1113,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Brak, obitelj i nasljeđivanje',
           paragraphs: [
-            'Vodimo razvod (離婚), diobu imovine, ostvarivanje i preuzimanje prava i dužnosti prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), i tada kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu kućne evidencije (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.',
+            'Vodimo razvod (離婚), diobu imovine, ostvarivanje i preuzimanje prava i dužnosti prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), i tada kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu evidencije kućanstava (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.',
             'Budući da obiteljski predmeti često nose rokove i paralelne postupke, prvi sažetak treba navesti odnos među strankama, trenutačno prebivalište i već pokrenute postupke.',
           ],
         },
@@ -1325,7 +1325,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     privacy: {
-      eyebrow: 'PRIVATNOST',
+      eyebrow: 'OSOBNI PODACI',
       title: 'Podaci koje prikuplja kontaktni obrazac',
       description:
         'Što prikuplja kontaktni obrazac u ovom hrvatskom dijelu, kako se postupa s izvornim tekstom i kako nas kontaktirati u vezi s Vašim podacima.',
@@ -1386,14 +1386,14 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mjesto pohrane i pružatelji usluga',
           paragraphs: [
-            'Ove stranice smještene su kod tvrtke Vercel, a Vaš se podnesak čuva u nejavnom objektnom spremištu te usluge. Poruke e-pošte šalju se poštanskom uslugom koju ured rabi.',
+            'Ove stranice smještene su kod tvrtke Vercel, a Vaš se podnesak čuva u nejavnoj pohrani te usluge. Poruke e-pošte šalju se poštanskom uslugom koju ured rabi.',
             'Poslužitelji pojedinih pružatelja mogu se nalaziti izvan Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha pohrane ispunjena, podaci se bez nepotrebne odgode brišu; podaci koje treba čuvati prema mjerodavnim propisima ostaju za to razdoblje. Zahtjeve u vezi s osobnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'ODRICANJE',
+      eyebrow: 'ODGOVORNOST',
       title: 'Opseg i granice informacija na ovoj stranici',
       description:
         'Opća narav informacija, pravni okvir i pretpostavke nastanka odnosa između odvjetnice ili odvjetnika i klijenta.',
@@ -1404,14 +1404,14 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Samo opće informacije',
           paragraphs: [
             'Sadržaj ovih stranica napisan je kao opća informacija. Nije pravni savjet za Vaš slučaj i ne zamjenjuje pregled Vaših isprava.',
-            'Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku; dvije naizgled slične situacije mogu završiti različito.',
+            'Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku u kojem se stvar ocjenjuje; dvije naizgled slične situacije mogu završiti različito.',
           ],
         },
         {
           heading: 'Pravni okvir',
           paragraphs: [
             'Ured djeluje prema tajvanskom pravu i ova stranica govori samo o radu u tom okviru.',
-            'Sadržaj nije savjetovanje prema pravu drugog poretka osim tajvanskog, uključujući pravo mjesta Vašeg boravka. Ako se dio Vašeg predmeta tiče drugog pravnog poretka, s Vama ćemo razjasniti koja je kvalificirana osoba za taj dio potrebna.',
+            'Sadržaj nije savjetovanje prema pravnom poretku koji nije tajvanski, uključujući pravo mjesta Vašeg boravka. Ako se dio Vašeg predmeta tiče drugog pravnog poretka, s Vama ćemo razjasniti koja je kvalificirana osoba za taj dio potrebna.',
           ],
         },
         {
@@ -1456,7 +1456,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Koliko članak može služiti orijentaciji',
           paragraphs: [
             'Članci su opće informacije u trenutku objave. Propisi i njihova primjena mogu se promijeniti, a članak ne sadrži sve okolnosti Vašeg slučaja.',
-            'Stoga nemojte u stvarnom predmetu postupati samo na temelju članka. Rabite ga za pregled i svoje isprave raspravite zasebno s odvjetnicom ili odvjetnikom; ova stranica nije korak savjetovanja.',
+            'Stoga nemojte u stvarnom predmetu postupati samo na temelju članka. Rabite ga za pregled i svoje isprave raspravite zasebno s odvjetnicom ili odvjetnikom; ova stranica nije savjetovanje.',
           ],
         },
       ],

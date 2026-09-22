@@ -29,7 +29,7 @@ Postoje međutim **iznimni slučajevi**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-U sljedećim posebnim situacijama, čak i kada radnik ode vlastitom voljom, poslodavac mu mora isplatiti zakonsku otpremninu (članak 14. Zakona o standardima rada, koji primjereno rabi članak 17.; 勞動基準法第14條):
+U sljedećim posebnim situacijama, čak i kada radnik ode vlastitom voljom, poslodavac mu mora isplatiti zakonsku otpremninu (članak 14. Zakona o standardima rada, uz odgovarajuću primjenu članka 17.; 勞動基準法第14條):
 
 1. Kada poslodavac pri sklapanju ugovora o radu (勞動契約) učini neistinitu izjavu volje (虛偽意思表示), pa se radnik prevari i postoji rizik pretrpljenja štete
 
@@ -37,7 +37,7 @@ U sljedećim posebnim situacijama, čak i kada radnik ode vlastitom voljom, posl
 
 2. Kada poslodavac, član obitelji poslodavca ili zastupnik poslodavca (代理人) rabi nasilje ili nanese tešku uvredu (重大侮辱) radniku
 
-3. Kada rad utvrđen u ugovoru može štetiti zdravlju radnika, zatražena je ispravka od poslodavca i nema učinka
+3. Kada rad utvrđen u ugovoru može štetiti zdravlju radnika, radnik je zatražio ispravak, a poslodavac ga nije proveo
 
 4. Kada poslodavac, njegov zastupnik ili drugi radnik oboli od zakonske zarazne bolesti (法定傳染病), postoji rizik zaraze radnika koji rade zajedno i riječ je o teškoj opasnosti za zdravlje radnika
 
@@ -55,19 +55,19 @@ ne isplaćuje dodatak za prekovremeni rad (加班費)
 
 ili ne upisuje radnika u radno osiguranje (勞保) ili zdravstveno osiguranje (健保).
 
-U takvim slučajevima, čak i kada radnik obično prestane s ugovorom o radu, poslodavac mu mora isplatiti zakonsku otpremninu.
+U takvim slučajevima, čak i kada radnik sam otkaže ugovor o radu, poslodavac mu mora isplatiti zakonsku otpremninu.
 
 ​
 
 Zakon o standardima rada (勞動基準法) međutim predviđa da
 
-ako radnik želi prestati s ugovorom o radu na temelju točke 1. ili 6. gore (na primjer kako bi prestao s ugovorom zbog neupisa u osiguranje),
+ako radnik želi otkazati ugovor o radu na temelju točke 1. ili 6. gore (na primjer kako bi dao otkaz zbog neupisa u osiguranje),
 
-mora prestati s ugovorom o radu u roku od **30 dana** od dana kada je spoznao tu situaciju,
+mora otkazati ugovor o radu u roku od **30 dana** od dana kada je spoznao tu situaciju,
 
 ili, kod točke 6., u roku od **30 dana** od dana kada je spoznao posljedicu štete.
 
-Radnik stoga mora dobro vladati rokom.
+Radnik stoga mora dobro paziti na taj rok.
 
 ​
 
@@ -77,13 +77,13 @@ pravo Tajvana, leži li krivnja na strani poduzeća,
 
 ili na strani radnika,
 
-priznaje svakoj od stranaka pravo da ne isplati zakonsku otpremninu, ili da je zahtijeva.
+jednoj strani daje mogućnost da otpremninu ne isplati, a drugoj da je zahtijeva.
 
 Ponekad, leži li krivnja na objema stranama radnog odnosa,
 
 izbije li spor,
 
-prema tome tko prvi prestane s ugovorom s dostatnim razlogom,
+prema tome tko prvi otkaže ugovor s dostatnim razlogom,
 
 zakonska otpremnina ne mora biti isplaćena, ili može biti zahtijevana.
 
@@ -91,7 +91,7 @@ Stoga u sporovima rada (勞資糾紛) na Tajvanu
 
 „**vrijeme**“ veoma je važno.
 
-U sporovima o zakonskoj otpremnini stoga odlučuje koja strana ranije prestane s ugovorom s valjanim razlogom i s dokazima.
+U sporovima o zakonskoj otpremnini odlučuje koja je strana ranije, s valjanim razlogom i dokazima, otkazala ugovor. U većini slučajeva bolje prolazi strana koja se unaprijed pripremila.
 
 ---
 

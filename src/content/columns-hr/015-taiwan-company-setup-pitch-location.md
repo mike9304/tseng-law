@@ -45,13 +45,13 @@ Ako je teško osobno doći u zemljišnoknjižni ured (地政事務所),
 
 može se zatražiti pomoć poznanika na Tajvanu, najmodavca, posrednika u prometu nekretnina ili odvjetnice odnosno odvjetnika.
 
-Ako rezultat provjere pokaže da restoran nije moguć, kasnije pri upisu pravne osobe (公司登記) gradski ured upis možda neće primiti.
+Ako rezultat provjere pokaže da restoran nije moguć, kasnije pri upisu društva (公司登記) gradska uprava možda neće prihvatiti zahtjev za upis.
 
 Stoga ovoj stvari posvetite pozornost.
 
 ​
 
-**Q. Moraju li sve djelatnosti sustavom „prethodne provjere mjesta poslovanja“ provjeravati je li pogon moguć?**
+**Pitanje. Moraju li sve djelatnosti sustavom „prethodne provjere mjesta poslovanja“ provjeravati je li pogon moguć?**
 
 Svim se djelatnostima preporučuje potvrditi sustavom „prethodne provjere mjesta poslovanja“ (營業場所預先查詢) je li pogon moguć.
 
@@ -61,7 +61,7 @@ Stoga u praksi nije nužno pri upisu društva provjeravati sve djelatnosti.
 
 Prema „[uputama o radu usluge obavijesti o mjestima poslovanja grada Taipeia](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) i važećoj obavijesti grada Taipeia,
 
-od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune djelatnosti društva ili pothvata (uključujući podružnicu (分公司) i pomoćnu jedinicu (分支機構)) rezultat prethodne provjere mjesta poslovanja **mora** biti priložen zahtjevu za upis, bez obzira na djelatnost.
+od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune djelatnosti društva ili samostalnog poslovnog subjekta (uključujući podružnicu (分公司) i pomoćnu jedinicu (分支機構)) rezultat prethodne provjere mjesta poslovanja **mora** biti priložen zahtjevu za upis, bez obzira na djelatnost.
 
 Niže navedeni popis „djelatnosti koje su predmetom službene provjere“ (主動查詢之營業項目) označuje djelatnosti koje Trgovački ured tijekom pregleda upisa provjerava po službenoj dužnosti dodatno (隨案主動查詢), kad djelatnost figurira u zahtjevu, a nedostaje u priloženom rezultatu; činjenica da djelatnost nije na tom popisu ne znači oslobođenje od provjere.
 
@@ -73,7 +73,7 @@ Ako se otvori na mjestu gdje restoran nije moguć, kasnije može uslijediti upra
 
 Time je sažet bitan postupak; konkretan predmet treba ocijeniti zasebno s odvjetnicom ili odvjetnikom. Ured savjetuje samo na engleskom, kineskom (中文), japanskom i korejskom.
 
-Pravila upravnih tijela mogu se često mijenjati; prije upisa pravne osobe korisno je provjeriti najnovije propise.
+Pravila upravnih tijela mogu se često mijenjati; prije upisa društva korisno je provjeriti najnovije propise.
 
 ---
 

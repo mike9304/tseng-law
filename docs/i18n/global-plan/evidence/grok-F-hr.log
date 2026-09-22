@@ -1,0 +1,170 @@
+# WO-F-hr — Croatian fix lane report (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-hr-20260922 (no git add/commit/push)
+Files touched: 17 × src/content/columns-hr/*.md (012 unchanged), src/data/international-guidance-central-europe.ts (hr block only), src/data/international-guidance-team.ts (hr roles + hr bios only), src/data/international-inquiry-copy.ts (hr key only), src/data/__tests__/guidance-disclosure-parity.test.ts (hr regex only: /korak savjetovanja/ → /nije savjetovanje/).
+src/lib/llms-txt.ts: no change. GUIDANCE_LLMS_NOTICES.hr was not flagged and already limits consultation languages.
+src/data/international-guidance-offices.ts and -answers.ts: no flagged hr string required a change.
+012: no review row, no Czech leakage, no flagged systemic token.
+
+## Rows applied — hr-a.md
+
+a#3  APPLIED  002: „Ovo se načelo ne mijenja osim što…“ → „To se načelo ne mijenja ni onda kada je jedan dioničar vlasnik cijelog društva ili njegov jedini direktor.“
+a#4  APPLIED  009: „obično prestane“ → „sam otkaže ugovor o radu“ (supervisor: otkazati, not raskinuti).
+a#5  APPLIED  hr role: „Partner, ovlašteni revizor (Partner CPA)“. Latin „Partner CPA“ kept.
+a#6  APPLIED with supervisor wording, not „obrazovni pregled“. See systemic „odgojna“.
+a#7  APPLIED  002 uredba/Uredba (公司登記辦法) → pravilnik/Pravilnik.
+a#8  APPLIED  002: „pa sam prekid ne oslobađa društvo poreznih prijava u cijelosti“. 004 adverb → paušalno.
+a#9  APPLIED  004 Statut industrijske inovacije → Zakon o industrijskoj inovaciji (FAQ + body).
+a#10 APPLIED  005: „mjerila za pregled zahtjeva“.
+a#11 APPLIED  005 „pretpostavke podobnosti“. Same calque in 001 „ocijeniti podobnost i pretpostavke dozvole za rad“.
+a#12 APPLIED  006: „suci Sudbenog yuana (大法官) proglasili su protivustavnom“.
+a#13 APPLIED with supervisor term „evidencija kućanstava (戶籍)“, not „red kućne evidencije“. Sweep 007/016/017 + hr family sentence in the guidance pack.
+a#14 APPLIED  007 ×2: „vodi do očito prestrogog ishoda“.
+a#15 APPLIED  008 Uredba o mirovini → Zakon o mirovini radnika (勞工退休金條例).
+a#16 APPLIED  009: „radnik je zatražio ispravak, a poslodavac ga nije proveo“.
+a#17 APPLIED  009: one side may withhold severance, the other may claim it.
+a#18 APPLIED  009: „uz odgovarajuću primjenu članka 17.“
+a#19 APPLIED  009 close, same block: the party who prepares in advance is better placed.
+a#20 APPLIED  inquiry hr: uporabljiv → upotrebljiv.
+a#21 APPLIED as „Ta 4 tipa“ (digit kept for the number checker; „četiri“ would drop 4).
+a#22 APPLIED as „posljednju 1 godinu poslovanja“ (digit kept). FAQ + body.
+a#23 APPLIED  002 quorum: „odluka se načelno donosi“ + „uz pristanak većine / 2/3 … glasova nazočnih dioničara“.
+a#24 APPLIED as „pojedini prekid djelatnosti ne smije 1 put trajati dulje od 1 godine“ (both digits kept).
+a#25 APPLIED  002: „Da bi društvo trajno prestalo postojati“.
+a#26 APPLIED  columns disclosure: „ova stranica nije savjetovanje“. Test regex updated.
+a#27 APPLIED as „prema pravnom poretku koji nije tajvanski“ (reviewer’s „a ne prema tajvanskom“ double-negates with „nije“).
+a#28 APPLIED  son-jungmin intro, reviewer’s sentence.
+a#29 APPLIED  „u nejavnoj pohrani te usluge“.
+a#30 APPLIED  home + disclaimer: „o trenutku u kojem se stvar ocjenjuje“.
+a#31 APPLIED  002 upisni spomeni → upisani podaci.
+a#32 APPLIED  003: „ne popušta u visini nagodbe“.
+a#33 APPLIED  004 FAQ/body/table: „Dobitna poduzeća čije je sjedište izvan Tajvana“.
+a#34 APPLIED  005: dropped leftover „A.“.
+a#35 APPLIED inside the same block: chatty opening rewritten; „Kako bilo“ dropped. Paragraphs not merged (block count).
+a#36 APPLIED  007: izvršavanje prava i snošenje dužnosti (nošenje → snošenje).
+a#37 APPLIED  007 title-on-the-property sentences.
+a#38 APPLIED  systemic „prestati s ugovorom“ → otkazati / dati otkaz (008, 009, 014). „ugovor prestane“ (the contract ends) left.
+a#39 APPLIED  009: „dobro paziti na taj rok“.
+a#42 APPLIED  nav privacy „Osobni podaci“, eyebrow „OSOBNI PODACI“, inquiry privacyLinkLabel and consent „stranicu o osobnim podacima“.
+a#43 APPLIED  Paralegal / Senior Paralegal → Pravni asistent / Viši pravni asistent. Boyin Law Firm and Muyang International Law Firm kept.
+a#44 APPLIED  008: „Ja, [ime i prezime], dobrovoljno pristajem na nižu dužnost i plaću“.
+
+## Rows applied — hr-b.md
+
+b#1  APPLIED  010: medicinska dokumentacija i dokazi o troškovima.
+b#2  APPLIED with supervisor name „Zakon o ulaganjima stranih osoba (外國人投資條例)“ in 013 body and the 017 link label. Not „stranih državljana“.
+b#3  APPLIED  016: „sadržaj legata, odnosno oporučnog ostavljanja (遺贈)“ (genitive required by the sentence).
+b#4  APPLIED  018: „Sam odabir jednog određenog oblika ne čini posao zakonitim i ne sprječava spor.“
+b#5  APPLIED  prepisati → prebrisati.
+b#6  APPLIED  zakonski znakovi → zakonska obilježja (headline and body).
+b#7  APPLIED  pucanje/pucanja → puknuće/puknuća (headlines, alts, body).
+b#8  APPLIED  „ne treba ih tretirati kao da vode istoj posljedici.“
+b#9  APPLIED  „ne otklanja se sam od sebe…“
+b#10 APPLIED with supervisor „informativne i obrazovne naravi“ (011/014/016/017), not „obrazovni pregled“.
+b#11 APPLIED  014 paušalno isključiti; 017 paušalno. See „jedinstveno rješenje“ under disagreements.
+b#12 APPLIED  „dio ulaganja koji je već nadoknađen.“
+b#13 APPLIED  015 公司登記 → upis društva. „法人登記文件“ and generic „pravna osoba“ left (not company registration).
+b#14 APPLIED  pothvat → samostalni poslovni subjekt.
+b#15 APPLIED  gospodarski vlasnici → stvarni vlasnici.
+b#16 APPLIED  title + H1: preživjelu obitelj.
+b#17 APPLIED  檢認 → postupak sudskog proglašenja oporuke pravovaljanom.
+b#18 APPLIED  body now has špedicija / posredovanje u prijevozu (運送承攬), matching the FAQ.
+b#19 APPLIED  izlučenje → rashodovanje vozila.
+b#20 APPLIED  osiguranja potraživanja → založna prava.
+b#21 APPLIED  100 % udjela → 100 % dionica.
+b#22 APPLIED as „ne imati odbor direktora, nego samo 1 ili 2 direktora“ (digits kept; statut stays because it is 章程).
+b#23 APPLIED  ovlašteni računovođa → ovlašteni revizor (會計師).
+b#24 APPLIED  kotacija ili uvrštenje na tržište u nastajanju.
+b#25 APPLIED  „sigurnost koja se“.
+b#26 APPLIED  „osobu dužnu naknaditi štetu“.
+b#27 APPLIED  014 risk sentence.
+b#28 APPLIED  „Osobito pomaže u tablici prikazati…“.
+b#29 APPLIED  instrumental „Osobnim i financijskim podacima…“.
+b#30 APPLIED  „Riječ je o savjetu o oblikovanju ugovora.“
+b#31 APPLIED  „ne obećavaju da je neki način zakonit ili poželjniji.“
+b#32 APPLIED  „pismom odvjetnice“. Feminine kept.
+b#33 APPLIED  platne liste, porezne prijave, evidencija o radu.
+b#34 APPLIED as „do 1-struke visine stvarne štete“ (multiplier digit kept).
+b#35 APPLIED  „U mjeri u kojoj je moguće“.
+b#36 APPLIED  pad u poslovnom prostoru, zdravstvena šteta od hrane.
+b#37 APPLIED  spremište → pohrana (electronic and cloud).
+b#38 APPLIED  tajvanskom društvu.
+b#39 APPLIED  prodaja uz naplatu.
+b#40 APPLIED  FAQ + body: „Kćerinsko društvo ili podružnicu nije uvijek nužno osnovati.“
+b#41 PARTLY  chatty „uspješno“ dropped and the comment-invitation clause removed, inside the existing one-line blocks. Paragraphs not merged (English is the same line-broken structure; merging changes the block count).
+b#42 APPLIED  014 otkazati (same sweep as a#38).
+b#43 APPLIED  „gradska uprava možda neće prihvatiti zahtjev za upis.“
+b#44 APPLIED  izvršavati prava i preuzimati dužnosti.
+b#45 APPLIED  kućna prijava → evidencija kućanstava (016/017).
+b#46 APPLIED  „sveobuhvatno nasljeđuje imovinska prava“ (following „i dužnosti ostavitelja“ kept).
+b#47 APPLIED  R7b, same heading: residual-property claim is not the inheritance share; minor’s special property cannot be freely used. FAQ kept in sync.
+b#48 APPLIED  title + H1: „za dijelove poluvodiča koja ulaze“.
+b#49 APPLIED as „godine Republike Kine 109.“ (and the same marker on other ROC years already written as bare „godina 109./112.“). No second 109/112 digit and no 民國 added.
+b#50 APPLIED  **Q.** → **Pitanje.**
+
+## Rows skipped
+
+a#1, a#2  SKIP  Hangul frontmatter urls in 008 and 009 (R16 / ACCEPTED). Fullwidth colon inside the 008 url left with the url.
+a#40      SKIP  „TWD 1.57M“ stays byte-identical (ACCEPTED; pinned figure).
+a#41 nav  MODIFIED  full „Odricanje od odgovornosti“ is 25 characters. Nav label is „Odgovornost“ (11), eyebrow „ODGOVORNOST“. Privacy nav „Osobni podaci“ is 13. hr is not in the current ≤14 nav tests; the cap was still respected.
+b#41 / 015 line breaks  NOT MERGED  block-count rule. 006 opening rephrased in place for the same reason (the suggested jump to the 1980 act would drop the 理髮廳 sentence).
+
+No P3 rows in hr-a.md or hr-b.md.
+
+## Systemic patterns
+
+- odgojna → informativne i obrazovne naravi / građa / podloga / isprava: 001, 002, 004, 007, 011, 014, 016, 017 (8 files).
+- 戶籍 matica / kućna prijava / kućna evidencija → evidencija kućanstava, ured/odjel za evidenciju kućanstava, Zakon o evidenciji kućanstava: 007, 016, 017, plus the hr family sentence in central-europe.ts. Residual „matični upis“ / „matičnom stanju“ in 007 also rewritten.
+- 條例 → zakon (statut kept only for 章程): 004 industrial innovation, 008 pension, 013/017 foreign investment. 002/011 辦法 already or now pravilnik.
+- jedinstveno (adverb „across the board“) → paušalno: 002 (rewritten as „u cijelosti“), 004, 014, 017. Adjective „jedinstveni“ (single statutory minimum; 統一證號) left.
+- prestati s ugovorom → otkazati / dati otkaz: 008, 009, 014.
+- R12 roles: English parentheticals dropped on the hr role lines (Managing Attorney, Taiwan Attorney, Korea Operations Manager). Institutions translated with the English preserved term still in the same line (Legal Aid Foundation, Taichung Branch; Ministry of Education, Legal Affairs Division). Firm names unchanged.
+- R15 OOO → [ime i prezime]: 1 instance, 008.
+- R17 Czech scan (společnost|který|není|podle) in columns-hr: none.
+- R2 Korea framing and R9 emergency numbers (119/110/112) were already in place; not rewritten.
+- Related cheap fix, not a quoted row: 003 „adresat davanja“ (insurance beneficiary) → „korisnik davanja“.
+- 012 unchanged. llms-txt hr unchanged.
+
+## Reviewer wording not followed
+
+- a#6 / b#10 „obrazovni pregled“: supervisor requires „informativne/obrazovne naravi“.
+- a#13 „red kućne evidencije“ / „matica“: supervisor requires one term, evidencija kućanstava, never matica.
+- b#2 „Zakon o ulaganju stranih državljana“: supervisor requires „Zakon o ulaganjima stranih osoba“.
+- b#3 bare „legat“: supervisor requires legat / oporučno ostavljanje. Written in the genitive the sentence needs.
+- a#27 „a ne prema tajvanskom“ after „nije“ is a double negative. Used „pravnom poretku koji nije tajvanski“.
+- a#38 / b#42 „raskinuti“: supervisor requires otkazati / dati otkaz.
+- a#21, a#22, a#24, b#22, b#34 digit-free rewrites would fail the number checker. Digits kept inside natural Croatian („Ta 4 tipa“, „posljednju 1 godinu“, „1 put … 1 godine“, „1 ili 2 direktora“, „1-struke visine“).
+- b#49 „tajvanske godine“: marked as „godine Republike Kine“ so a bare 109 is not read as 109 CE, without a second copy of the year.
+- 018 „jedinstveno rješenje“ is not the adverb error. English is „not automatically / choose the entity that fits“. Rewritten „ne određuje sama po sebi rješenje“, not „paušalno rješenje“.
+- Paralegal bio not switched to feminine. Only Wei Tseng is specified as a woman. Role title stays „Pravni asistent“ / „Viši pravni asistent“.
+- a#1, a#2, a#40 not applied (supervisor skip).
+- Blog paragraph merges not applied (block count).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-hr --lang hr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=145
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The worktree had no node_modules. Verification used a local `npm ci --ignore-scripts` (gitignored). First `tsc` before that install failed only on the missing `@modelcontextprotocol/server` package; after install, TSC_OK. No number/date checker failure, so no digit was restored after the fact.

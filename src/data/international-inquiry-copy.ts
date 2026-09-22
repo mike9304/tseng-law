@@ -2186,8 +2186,8 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Ime',
     emailLabel: 'E-pošta',
     consentLabel:
-      'Pročitao sam ili pročitala sam stranicu o privatnosti i pristajem na slanje ovog zahtjeva.',
-    privacyLinkLabel: 'Privatnost',
+      'Pročitao sam ili pročitala sam stranicu o osobnim podacima i pristajem na slanje ovog zahtjeva.',
+    privacyLinkLabel: 'Osobni podaci',
     requiredMessage: 'Ovo je polje obvezno.',
     invalidEmailMessage: 'Unesite valjanu adresu e-pošte.',
     tooLongMessage: 'Tekst je predug. Skratite ga i pošaljite ponovno.',
@@ -2202,7 +2202,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japanski (日本語)',
       ko: 'Korejski (한국어)',
       'needs-method-confirmation':
-        'Nijedan od četiri jezika nije uporabljiv — način komunikacije treba potvrditi',
+        'Nijedan od četiri jezika nije upotrebljiv — način komunikacije treba potvrditi',
     },
   },
   sr: {

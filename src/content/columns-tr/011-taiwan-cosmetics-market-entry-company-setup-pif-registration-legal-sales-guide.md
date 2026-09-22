@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Tayvan’da kozmetik satmak için bağlı şirket veya şube mutlaka kurulmalı mıdır?"
-    a: "Tayvan’da bağlı şirket veya şube kurulması zorunlu değildir. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin (子公司) kuruluş ve tescili, yabancı şirket şubesinin (分公司) kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı (僑外投資核准) ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı (化粧品製造或輸入業者) olarak sorumluluğu üstlenecek özne sabitlenmelidir."
+    a: "Tayvan’da bağlı şirket veya şube kurulması zorunlu değildir. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin (子公司) kuruluş ve tescili, yabancı şirket şubesinin (分公司) kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı (僑外投資核准) ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı (化粧品製造或輸入業者) olarak sorumluluğu üstlenecek taraf belirlenmelidir."
   - q: "PIF nedir ve TFDA ürün tescili ile aynı usul müdür?"
     a: "Aynı usul değildir. Ürün tescili (產品登錄), TFDA’nın (衛生福利部食品藥物管理署) kozmetik ürün tescil platformunda yürütülen ayrı bir işlemdir. PIF, kalite, güvenlik, bileşim, ileri sürülen işlev, üretim yöntemi, deneme sonuçları ve güvenlik değerlendirmesi vb. verileri toplayan ve kozmetik üreticisi veya ithalatçısının hazırladığı, güncellediği ve sakladığı bir dosyadır; PIF’in kendisi TFDA’ya önceden sunulması gereken bir belge değildir. 1 Temmuz 2026’dan itibaren kural olarak bütün kozmetikler PIF rejimine girer; fabrika tescilinden (工廠登記) muaf bir üretim yerinde üretilen katı el yapımı sabun istisnadır."
   - q: "Tayvan kozmetik reklamında hangi ifadelere dikkat edilmelidir?"
@@ -20,31 +20,31 @@ faq:
 
 ![Tayvan kozmetik pazarına giriş için gereken ürün verileri ve düzenleme incelemesi](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Tayvan’da ürün dağıtmak isteyen yabancı bir kozmetik markası, ithalatı kime bırakacağını, ürün tescilini (產品登錄) ne zaman tamamlayacağını, ürün bilgi dosyasını (產品資訊檔案, Product Information File, PIF) kimin nerede yöneteceğini ve etiketlemenin (標示) ve reklamın (廣告) hangi ölçüte göre inceleneceğini sabitlemelidir. Kore markaları da yerel bir ithalatçıya başvurabilir ve Tayvan işini bizzat işletebilir; bu yüzden satış hazırlığı yalnızca bir şirketin kurulmuş olmasıyla tamamlanmaz.
+Tayvan’da ürün dağıtmak isteyen yabancı bir kozmetik markası, ithalatı kime bırakacağını, ürün tescilini (產品登錄) ne zaman tamamlayacağını, ürün bilgi dosyasını (產品資訊檔案, Product Information File, PIF) kimin nerede yöneteceğini ve etiketlemenin (標示) ve reklamın (廣告) hangi ölçüte göre inceleneceğini belirlemelidir. Başka bir ülkenin markası da ya yerel bir ithalatçı kullanabilir ya da Tayvan’daki işini bizzat yürütebilir; bu yüzden satış hazırlığı yalnızca bir şirketin kurulmuş olmasıyla tamamlanmaz.
 
-Uygulanan yükümlülükler ürünün türüne ve üretim yerine (製造場所), gerçek ithalat biçimine, dağıtım tarzına ve reklam içeriğine göre değişebilir. Aşağıda Tayvan’a giriş biçimi ve yasal sorumluluğun kime ait olduğu, TFDA ürün tescili, PIF’in hazırlanması, güncellenmesi ve saklanması, etiketleme ve reklam ile denetim ve düzeltme tedbirleri ayrı açıklanır. Gerçek tedarik takvimini sabitlemeden önce en yeni mevzuat ve yetkili makamın (主管機關) rehberi ürüne göre yeniden doğrulanmalıdır.
+Uygulanan yükümlülükler ürünün türüne ve üretim yerine (製造場所), gerçek ithalat biçimine, dağıtım tarzına ve reklam içeriğine göre değişebilir. Aşağıda Tayvan’a giriş biçimi ve yasal sorumluluğun kime ait olduğu, TFDA ürün tescili, PIF’in hazırlanması, güncellenmesi ve saklanması, etiketleme ve reklam ile denetim ve düzeltme tedbirleri ayrı açıklanır. Gerçek tedarik takvimini belirlemeden önce en yeni mevzuat ve yetkili makamın (主管機關) rehberi ürüne göre yeniden doğrulanmalıdır.
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
 ## 1. Tayvan’a giriş biçimi ve ithalatçının seçimi
 
-Tayvan’da bağlı şirket veya şube kurulması zorunlu değildir. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin kuruluş ve tescili, yabancı şirket şubesinin kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı olarak sorumluluğu üstlenecek özne sabitlenmelidir.
+Tayvan’da bağlı şirket veya şube kurulması zorunlu değildir. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin kuruluş ve tescili, yabancı şirket şubesinin kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı olarak sorumluluğu üstlenecek taraf belirlenmelidir.
 
 ### Yerel ithalatçıya bırakıldığında
 
 Bir Tayvan ithalatçısı veya satış acentesi (銷售代理商) ithalat ve satışı üstlenirse, yabancı marka Tayvan’da kendi bağlı şirketi veya şubesi olmadan da bir yapı seçebilir. Satış acentesi aynı zamanda ithalatçı olabilir veya ayrı bir ithalatçı katılabilir. Ancak hukuki sorumluluğun yüklenmesi, acente, münhasır dağıtıcı veya ticari dağıtıcı gibi yalnızca sözleşmesel ada göre belirlenmez.
 
-Gerçek iş bölümü tasarlanırken önce kim ürünü ithal eder ve ürün tescilini yapar, kim PIF’i hazırlar, günceller ve saklar doğrulanmalıdır. Etiketleme incelemesi, dolaşım kayıtlarının tutulması, tüketici şikâyetleri ve güvenlik bilgilerinin alınması ile yetkili makamın denetim ve veri taleplerine yanıt için de sorumlu belirlenmelidir. Kozmetik üreticisi veya ithalatçısına yüklenen yasal yükümlülükler ile marka ve satış ortağı arasındaki sözleşmesel işin örtüşüp örtüşmediği birlikte incelenmelidir.
+Gerçek iş bölümü tasarlanırken önce kim ürünü ithal eder ve ürün tescilini yapar, kim PIF’i hazırlar, günceller ve saklar doğrulanmalıdır. Etiketleme incelemesi, dağıtım kayıtlarının tutulması, tüketici şikâyetleri ve güvenlik bilgilerinin alınması ile yetkili makamın denetim ve veri taleplerine yanıt için de sorumlu belirlenmelidir. Kozmetik üreticisi veya ithalatçısına yüklenen yasal yükümlülükler ile marka ve satış ortağı arasındaki sözleşmesel işin örtüşüp örtüşmediği birlikte incelenmelidir.
 
-Sözleşmede marka (商標) ve görüntüler gibi fikri mülkiyetin kullanım kapsamı, ürün tescili ve PIF için gereken asıl üretici (原製造者) verilerinin iletim, çeviri ve tamamlama yöntemi, güncel verilerin yönetimi ve sözleşme sonundaki teslim somut olarak sabitlenmelidir. Yayından önce reklamı gözden geçirme ve değiştirme yetkisi, şikâyet ve istenmeyen tepkiler gibi güvenlik bilgilerinin iletimi, gerekirse geri çağırma (回收) işbirliği ve deneme, çeviri ve saklama giderlerinin yüklenmesi de eklenebilir. Verilerin yalnızca bir tarafta kalmaması için iade veya kopya tesliminin kapsamı ve süresi de önceden sabitlenmelidir.
+Sözleşmede marka (商標) ve görüntüler gibi fikri mülkiyetin kullanım kapsamı, ürün tescili ve PIF için gereken asıl üretici (原製造者) verilerinin iletim, çeviri ve tamamlama yöntemi, güncel verilerin yönetimi ve sözleşme sonundaki teslim somut olarak belirlenmelidir. Yayından önce reklamı gözden geçirme ve değiştirme yetkisi, şikâyet ve istenmeyen tepkiler gibi güvenlik bilgilerinin iletimi, gerekirse geri çağırma (回收) işbirliği ve deneme, çeviri ve saklama giderlerinin yüklenmesi de eklenebilir. Verilerin yalnızca bir tarafta kalmaması için iade veya kopya tesliminin kapsamı ve süresi de önceden belirlenmelidir.
 
 ### Tayvan işi bizzat işletildiğinde
 
 Tayvan bağlı şirketi ile yabancı bir şirketin şubesi aynı örgüt değildir. Bağlı şirket, Tayvan hukukuna göre kurulan ayrı bir tüzel kişidir; şube ise yabancı şirketin merkezinin (本公司) bir parçası olarak tescil edilir. Tüzel kişilik, merkezin sorumluluğu, muhasebe ve vergi işlemi, kâr aktarımı, temsil yetkisi ve iç kontrol biçimi farklıdır; örgüt biçimi yalnızca satış kontrolüne göre seçilmemelidir.
 
-Yabancı yatırım usulü gerekiyorsa, hâlihazırda yetkili makam olarak **Ekonomi Bakanlığı Yatırım İnceleme Dairesi’nin (經濟部投資審議司)** rehberi doğrulanmalıdır. Yatırım onayı, fon transferi, şirket veya şube tescili, banka hesabı açılması, vergi kaydı (稅籍登記) ve ithalatçı niteliğinin elde edilmesi için gereken süre, yatırımcıya, sektöre, örgüt biçimine, sunulan belgelere ve düzeltme veya tamamlama olup olmadığına göre değişir. Bu yüzden belirli sabit bir süre varsayılarak lansman tarihi sabitlenmek yerine, her işlemin uygulanması ve en yeni kabul şartları önce doğrulanmalıdır.
+Yabancı yatırım usulü gerekiyorsa, hâlihazırda yetkili makam olarak **Ekonomi Bakanlığı Yatırım İnceleme Dairesi’nin (經濟部投資審議司)** rehberi doğrulanmalıdır. Yatırım onayı, fon transferi, şirket veya şube tescili, banka hesabı açılması, vergi kaydı (稅籍登記) ve ithalatçı niteliğinin elde edilmesi için gereken süre, yatırımcıya, sektöre, örgüt biçimine, sunulan belgelere ve düzeltme veya tamamlama olup olmadığına göre değişir. Bu yüzden belirli bir süre varsayarak lansman tarihini saptamak yerine, her işlemin uygulanması ve en yeni başvuru şartları önce doğrulanmalıdır.
 
-Hangi yapı seçilirse seçilsin, kozmetik düzenlemesinde asıl sorumlu **kozmetik üreticisi veya ithalatçısıdır**. Ürün verilerinin sıralanması veya güvenlik değerlendirmesi (安全性評估) dış uzmanlara bırakılabilir; ancak işin bırakılmış olması üreticinin veya ithalatçının hukuki sorumluluğunu devretmez. Sözleşmeye göre iş bölümünü, düzenlemeye göre kimin sorumlu olduğundan ayırmak, giriş yapısının incelenmesinin başlangıç noktasıdır.
+Hangi yapı seçilirse seçilsin, kozmetik düzenlemesinde asıl sorumlu **kozmetik üreticisi veya ithalatçısıdır**. Ürün belgelerinin düzenlenmesi veya güvenlik değerlendirmesi (安全性評估) dış uzmanlara bırakılabilir; ancak işin bırakılmış olması üreticinin veya ithalatçının hukuki sorumluluğunu devretmez. Sözleşmeye göre iş bölümünü, düzenlemeye göre kimin sorumlu olduğundan ayırmak, giriş yapısının incelenmesinin başlangıç noktasıdır.
 
 ## 2. Ürün tescili ile PIF ayrı rejimlerdir
 
@@ -70,9 +70,9 @@ Güvenlik değerlendirmesi dâhil PIF işi, gereken yeterlilik ve kapasiteye sah
 
 Hammadde veya formül, üretim yöntemi ve yeri, etiket dâhil etiketleme, ileri sürülen işlev veya güvenlik bilgisi değişirse etkilenen PIF verileri incelenmeli ve güncellenmelidir. Tüketici şikâyetlerinin, istenmeyen tepki olaylarının ve yeni deneme sonuçlarının mevcut değerlendirmeyi etkileyip etkilemediği de bakılmalıdır; bu yüzden ilk hazırlıktan sonra da değişiklik yönetimi usulü gerekir.
 
-Kozmetik ürün bilgi dosyası yönetim yönetmeliğinin 7. maddesine göre saklama süresi, ürünün piyasaya son tedarik edildiği günün ertesi gününden itibaren en az 5 yıldır. Aynı yönetmeliğin 8. maddesine göre saklama yeri, Kozmetik Hijyen ve Güvenlik Yönetimi Kanunu’nun (化粧品衛生安全管理法) 7. maddesinin 1. fıkrasının 7. bendinde belirlenen kozmetik üreticisi veya ithalatçısının etiketleme adresidir. Süreyi sabitleyen hüküm ile yeri sabitleyen hüküm ayrı işletilmelidir.
+Kozmetik ürün bilgi dosyası yönetim yönetmeliğinin 7. maddesine göre saklama süresi, ürünün piyasaya son tedarik edildiği günün ertesi gününden itibaren en az 5 yıldır. Aynı yönetmeliğin 8. maddesine göre saklama yeri, Kozmetik Hijyen ve Güvenlik Yönetimi Kanunu’nun (化粧品衛生安全管理法) 7. maddesinin 1. fıkrasının 7. bendinde belirlenen kozmetik üreticisi veya ithalatçısının etiketleme adresidir. Süreyi belirleyen hüküm ile yeri belirleyen hüküm ayrı işletilmelidir.
 
-Asıl üretici aslı saklasa veya güvenli elektronik ya da bulut depolama kullanılsa bile üretici veya ithalatçı tam verilere erişebilmelidir. Yetkili makam istediğinde verilerin hızla bulunup sunulabilmesi için erişim hakları, yedekleme, sürüm yönetimi, dosya biçimi ve sorumlu sabitlenmelidir. Satış ortağı veya hizmet sağlayıcıyla sözleşme bittikten sonra da yasal saklama süresi boyunca verilerin durması için teslim muhatabı, yöntem ve erişim hakkının sürüp sürmediği sözleşmede düzenlenmelidir.
+Asıl üretici aslı saklasa veya güvenli elektronik ya da bulut depolama kullanılsa bile üretici veya ithalatçı tam verilere erişebilmelidir. Yetkili makam istediğinde verilerin hızla bulunup sunulabilmesi için erişim hakları, yedekleme, sürüm yönetimi, dosya biçimi ve sorumlu belirlenmelidir. Satış ortağı veya hizmet sağlayıcıyla sözleşme bittikten sonra da yasal saklama süresi boyunca verilere erişilebilmesi için teslim muhatabı, yöntem ve erişim hakkının sürüp sürmediği sözleşmede düzenlenmelidir.
 
 ### Denetim, düzeltme ve idari tedbirler
 
@@ -88,7 +88,7 @@ Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret 
 
 ### Her kelimeye göre değil, bütün sunuma göre değerlendirilir
 
-Etiketleme, tanıtım (宣傳) veya reklamın yanlış veya abartılı olup olmadığı, ya da tıbbi etkinlik (醫療效能) iddia edip etmediği, belirli bir kelimeye göre tek başına yargılanmaz. Ürün adı, cümle, görüntü, işaret, ses, öncesi ve sonrası bağlam ile tüketicinin aldığı bütün izlenim birlikte incelenir. Merkezi reklam sunumunun oluşturduğu izlenim, küçük punto kısıtlayıcı ibareyle kendiliğinden dağılmaz; bu yüzden her metin ve nihai ürün incelenmelidir.
+Etiketleme, tanıtım (宣傳) veya reklamın yanlış veya abartılı olup olmadığı, ya da tıbbi etkinlik (醫療效能) iddia edip etmediği, belirli bir kelimeye göre tek başına yargılanmaz. Ürün adı, cümle, görüntü, işaret, ses, öncesi ve sonrası bağlam ile tüketicinin aldığı bütün izlenim birlikte incelenir. Merkezi reklam sunumunun oluşturduğu izlenim, küçük punto kısıtlayıcı ibareyle kendiliğinden dağılmaz; bu yüzden her iddia ve yayına hazır nihai reklam incelenmelidir.
 
 Örneğin bir kozmetiğin sivilceyi tedavi ettiği, iltihap giderici veya bakteri öldürücü etkisi olduğu ileri sürülürse bu tıbbi etkinlik iddiası olabilir. Bir hastalık adının ürünle birleştirilmesi, kullanım öncesi ve sonrası görüntüler, sağlık çalışanını çağrıştıran sahneleme ve bileşen açıklamasını ürünün tedavi etkisine bağlayan bağlam da birlikte doğrulanmalıdır.
 
@@ -98,20 +98,20 @@ Yanlış veya abartılı reklam (虛偽誇大廣告) için idari para cezası TW
 
 Influencer’ların, değerlendirme yazarlarının veya satış ortaklarının paylaşımları da içerik ve ticari bağlama göre özünde reklam sayılabilir. Karşılık ödemesi, ürün teslimi, satış bağlantısı, markanın yayımlama talimatı ve tekrarlayan işbirliği bu değerlendirmede dikkate alınan etkenlerdir. Buna karşılık her kişisel paylaşım kendiliğinden markanın reklamı olmaz; yayımlayan ile marka arasındaki ilişki, somut içerik ve markanın katılım derecesi doğrulanmalıdır.
 
-İşbirliği sözleşmesi ve işletme yönergelerinde izinli ifadelerin kapsamı ve dayanak veriler, yayından önce inceleme ile ihlal ifadelerinin düzeltilmesi ve silinmesi usulü sabitlenebilir. Yorumlarda eklenen ifadeler, canlı yayın veya kısa videolardaki sözlü açıklamalar ve satış sayfası ile etiket arasındaki uyumsuzluk da yönetim alanına alınmalıdır. İncelenen taslak, onay geçmişi, düzeltme talepleri ve nihai paylaşım, olguların sonradan doğrulanabilmesi için saklanmalıdır.
+İşbirliği sözleşmesi ve işletme yönergelerinde izinli ifadelerin kapsamı ve dayanak veriler, yayından önce inceleme ile ihlal ifadelerinin düzeltilmesi ve silinmesi usulü belirlenebilir. Yorumlarda eklenen ifadeler, canlı yayın veya kısa videolardaki sözlü açıklamalar ve satış sayfası ile etiket arasındaki uyumsuzluk da inceleme kapsamına alınmalıdır. İncelenen taslak, onay geçmişi, düzeltme talepleri ve nihai paylaşım, olguların sonradan doğrulanabilmesi için saklanmalıdır.
 
 ### Satış hazırlığının doğrulama sırası
 
 Tayvan satış hazırlığı aşağıdaki sırayla denetlenirse bir rejimin diğeriyle karıştırılması riski azalabilir.
 
-1. Tayvan’da bağlı şirket veya şube bizzat kurulacak mı, yoksa ithalat ve satış yerel ithalatçıya mı bırakılacak sabitleyin.
-2. Kozmetik üreticisi veya ithalatçısı olarak hukuki sorumluluğu üstlenen özneyi ve sözleşmeye göre iş sorumlusunu doğrulayın.
+1. Tayvan’da bağlı şirket veya şube bizzat kurulacak mı, yoksa ithalat ve satış yerel ithalatçıya mı bırakılacak belirleyin.
+2. Kozmetik üreticisi veya ithalatçısı olarak hukuki sorumluluğu üstlenen tarafı ve sözleşmeye göre iş sorumlusunu doğrulayın.
 3. Tedarik, satış, hediye, kamuya sergileme veya tüketiciye deneme sunumundan önce ürün tescilini tamamlayın.
 4. PIF’i ürüne göre hazırlayın, değişiklikleri güncelleyin ve yasal süre ile yere uygun saklayın.
 5. Etiketi, satış sayfasını, reklamı ve işbirliği paylaşımlarını bütün sunum ölçütüne göre inceleyin.
 6. Denetim ve düzeltme taleplerine, şikâyetlere, güvenlik bilgisine ve gereken izlemeye yanıt verecek usulü işletin.
 
-Şirket ve şubenin temel yapısı [Tayvan’da şirket kuruluşunun temelleri](/tr/columns/taiwan-company-establishment-basics) yazısında, bağlı destek kapsamı [Hangi işleri yürütürüz](/tr/services) sayfasında, sorumlu avukat bilgisi [Hovering uluslararası ekibi](/tr/lawyers) sayfasında görülebilir.
+Şirket ve şubenin temel yapısı [Tayvan’da şirket kuruluşunun temelleri](/tr/columns/taiwan-company-establishment-basics) yazısında, bağlı destek kapsamı [Hangi işleri yürütürüz](/tr/services) sayfasında, sorumlu avukat bilgisi [Hovering’in uluslararası ekibi](/tr/lawyers) sayfasında görülebilir.
 
 ### Resmi kaynaklar
 

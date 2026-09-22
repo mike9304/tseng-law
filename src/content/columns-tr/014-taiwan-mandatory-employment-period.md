@@ -31,7 +31,7 @@ Tayvan iş sözleşmesinin (勞動契約) asgari hizmet süresi sözleşmesi (�
 3. İş sözleşmesinin sona erme nedeni kime ait
 4. Ayrılış ön bildirimi ve iade kapsamı nasıl değerlendirilir
 
-Aynı sözleşmede bu 4 mesele birlikte yazılı olsa da uygulanacak hüküm ve gereken delil farklıdır. Bu yüzden sözleşmenin geçerli olup olmadığı, istifa iradesinin ne zaman hüküm doğurduğu, avans niteliğindeki ödemein (預付性給付) veya eğitim giderinin iade sorumluluğu olup olmadığı ve ayrıca bir zararın gerçekten doğup doğmadığı ayrı ayrı bakılmalıdır.
+Aynı sözleşmede bu 4 mesele birlikte yazılı olsa da uygulanacak hüküm ve gereken delil farklıdır. Bu yüzden sözleşmenin geçerli olup olmadığı, istifa iradesinin ne zaman hüküm doğurduğu, avans niteliğindeki ödemenin (預付性給付) veya eğitim giderinin iade sorumluluğu olup olmadığı ve ayrıca bir zararın gerçekten doğup doğmadığı ayrı ayrı bakılmalıdır.
 
 ## 1. Kısa yanıt: asgari hizmet süresi kaydı her zaman geçerli midir?
 
@@ -41,7 +41,7 @@ Madde 15-1 fıkra 1, 2 yasal şartı seçimlik olarak düzenler. İlki işvereni
 
 Madde 15-1, 2 yasal şarttan birini ve ayrıca ayrı bir makullük incelemesini ister. Bu, uzman teknik eğitim ile makul tazminatın her zaman aynı anda verilmesi gerektiği, ya da ikisinden birinin yalnızca biçimsel yazılmasıyla sözleşmenin bütününün kendiliğinden geçerli olduğu anlamına gelmez.
 
-Yasal şart doğrulandıktan sonra fıkra 2’ye göre kararlaştırılan süre ve sorumluluk kapsamının makul olup olduğu ayrıca incelenir. Fıkra 1’in yasal şartını veya fıkra 2’nin makullük ölçütünü ihlal eden sözleşme fıkra 3’e göre geçersizdir. Ancak bu kural her asgari hizmet süresi sözleşmesini baştan geçerli veya geçersiz sayan bir kural değil, her sözleşmenin içeriğini ve olgularını inceleyen bir ölçüttür.
+Yasal şart doğrulandıktan sonra fıkra 2’ye göre kararlaştırılan süre ve sorumluluk kapsamının makul olup olmadığı ayrıca incelenir. Fıkra 1’in yasal şartını veya fıkra 2’nin makullük ölçütünü ihlal eden sözleşme fıkra 3’e göre geçersizdir. Ancak bu kural her asgari hizmet süresi sözleşmesini baştan geçerli veya geçersiz sayan bir kural değil, her sözleşmenin içeriğini ve olgularını inceleyen bir ölçüttür.
 
 Çalışanın sözleşmeyi imzalamış olması anlaşmanın varlığını doğrulayan bir belge olabilir ama yasal şartların yerine geçmez. Tersine, sözleşmenin uzun süreli olması tek başına hemen sonuç çıkarılmamalı; hangi yatırım veya tazminatın olduğu ve bu sürenin neden belirlendiği doğrulanmalıdır.
 
@@ -53,7 +53,7 @@ Sözleşmeyi eğitime dayandırmak için işveren ilgili çalışana uzman tekni
 
 Program, eğitim takvimi, yoklama listesi, değerlendirme sonucu, bitirme belgesi, fatura ve makbuzlar, eğitimin gerçekliği ve gideri doğrulayan temel belgelerdir. İşveren ile eğitim kurumu arasındaki sözleşme, ödeme fişleri ve iade koşulları birlikte görülürse fiili yük daha tam kavranır. Çalışan giderin bir kısmını doğrudan ödemiş veya üçüncü kişi desteklemişse nihai gideri kimin üstlendiği de ayrılmalıdır.
 
-Genel işe uyum ile uzman teknik eğitim arasındaki sınır yalnızca eğitim yeri veya düzenleyen özneyle bölünmez. Şirket içi bir kurs somut mesleki ve teknik içerik ile kayda değer yatırım kanıtlayabilir; dış kurumun uzun kursu ise fiilen genel giriş eğitimi olabilir. Bu yüzden bütün iç eğitimler tek tip dışlanmamalı, yüksek tutarlı veya uzun kurs olduğu için yasal şartın dolduğu da kabul edilmemelidir.
+Genel işe uyum ile uzman teknik eğitim arasındaki sınır yalnızca eğitim yeri veya düzenleyen tarafla bölünmez. Şirket içi bir kurs somut mesleki ve teknik içerik ile kayda değer yatırım kanıtlayabilir; dış kurumun uzun kursu ise fiilen genel giriş eğitimi olabilir. Bu yüzden bütün iç eğitimler tek tip dışlanmamalı, yüksek tutarlı veya uzun kurs olduğu için yasal şartın gerçekleştiği de kabul edilmemelidir.
 
 Kararlaştırılan süre ile eğitim yatırımı ilişkisi de açıklanabilmelidir. Hangi yetkinliğin kazandırıldığı, bu yetkinliğin hedef görevle ilişkisi, eğitim süresi ve giderine göre önerilen çalışma süresinin neden gerektiği tek tek incelenir. Eğitim bittikten sonra o işin fiilen yapılıp yapılmadığı ve halihazırda çalışılmış süre de yük kapsamını değerlendirme belgesidir.
 
@@ -63,7 +63,7 @@ Kararlaştırılan süre ile eğitim yatırımı ilişkisi de açıklanabilmelid
 
 Önce ödeme amacı doğrulanmalıdır. İşe alıma ilişkin genel ücret koşulu mu, belirli süre görevde kalma vaadinin karşılığı mı, yoksa sonuçlara ulaşmanın ödülü mü olduğu sözleşme ve bildirim belgelerinde açık olmalıdır. Ödeme günü, tutar, bağlanma anı, görevde kalma süresiyle bağ, iade nedenleri ve formülün çalışan tarafından sözleşme öncesi anlaşılabilir biçimde sunulup sunulmadığı da bakılır.
 
-Tayvan Çalışma Bakanlığı’nın (勞動部) 5 Haziran 2026 tarihli rehberi (函釋), görevde kalma primi, imza primi veya başka avans niteliğindeki ödemein asgari hizmet süresi sözleşmesinin makul tazminatı sayılması için bu rolün açık bildirilmesini açıklar. İşverenin ödemeden sonra amacı yeniden yorumlaması veya ücretin bir kısmını tazminat diye yeniden sınıflandırması, sözleşme anındaki bildirimin yerine geçmez.
+Tayvan Çalışma Bakanlığı’nın (勞動部) 5 Haziran 2026 tarihli rehberi (函釋), görevde kalma primi, imza primi veya başka avans niteliğindeki ödemenin asgari hizmet süresi sözleşmesinin makul tazminatı sayılması için bu rolün açık bildirilmesini açıklar. İşverenin ödemeden sonra amacı yeniden yorumlaması veya ücretin bir kısmını tazminat diye yeniden sınıflandırması, sözleşme anındaki bildirimin yerine geçmez.
 
 Tazminatın makullüğü yalnızca tutara göre değerlendirilmez. Çalışanın gerçekten ek yarar elde edip etmediği, ödeme koşullarının açık olup olmadığı, halihazırda çalışılmış süreye karşılık gelen kısmın nasıl bağlandığı ve iade kapsamının aşırı olup olmadığı birlikte görülür. Tazminat olsa bile her uzunlukta görevde kalma süresi veya her tutarda iade sorumluluğu sınırsızca izinli değildir.
 
@@ -96,7 +96,7 @@ Tayvan Çalışma Bakanlığı’nın 5 Haziran 2026 tarihli rehberine göre per
 
 İş kuralı (工作規則) açıklaması, örgüt ve sistem tanıtımı, olağan görev devri, temel güvenlik usulü rehberi gibi yeni çalışanın olağan aldığı süreçler esastan doğrulanmalıdır. İşverenin zaten üstlenmesi gereken genel işe alım ve yönetim gideri veya görev devri gideri, ayrı yatırım diye adlandırılıp iade konusu yapılamaz.
 
-Ancak eğitim şirket içinde verildi diye her zaman dışlanmaz. Aynı programda genel uyum kısmı ile uzman teknik kısım karışabilir; bu yüzden kurs konusu, süre, gider ve yasal yükümlülük olup olmadığı kurs kurs doğrulanmalıdır. Uzman teknik kısmı ileri süren taraf, hangi içeriğin olağan eğitimden ayrıldığını ve gideri kimin fiilen üstlendiğini belgelerle açıklamalıdır.
+Ancak eğitim şirket içinde verildi diye her zaman dışlanmaz. Aynı programda genel uyum kısmı ile uzman teknik kısım karışabilir; bu yüzden kurs konusu, süre, gider ve yasal yükümlülük olup olmadığı her kurs ayrı ayrı doğrulanmalıdır. Uzman teknik kısmı ileri süren taraf, hangi içeriğin olağan eğitimden ayrıldığını ve gideri kimin fiilen üstlendiğini belgelerle açıklamalıdır.
 
 Uygulamada eğitim materyalinin kapağına bakılmamalı, ayrıntılı içindekiler ile fiili yürütme kaydı karşılaştırılmalıdır. Yinelenen periyodik kurs mu, belirli bir yeterlik veya ekipman kullanma yetkinliği için kurs mu, yasal zorunlu eğitim mi, çalışanın fiilen katılıp katılmadığı ve talep tutarının eğitim gideri belgeleriyle örtüşüp örtüşmediği doğrulanmalıdır.
 
@@ -120,11 +120,11 @@ Tayvan İş Standartları Kanunu madde 15-1 fıkra 4, asgari hizmet süresi bitm
 
 Bu yüzden iş ilişkisinin kararlaştırılan süreden önce bitmiş olması tek başına çalışanın ihlalini kabul ettirmez. Kimin hangi irade beyanını yaptığı, sözleşmenin hangi hukuki dayanakla sona erdiği ve sona ermeyi doğuran fiili olguların hangi tarafa ait olduğu doğrulanmalıdır.
 
-İnceleme belgelerine işten çıkarma bildirimi, istifa yazısı, anlaşarak sona erme belgesi, e-posta ve ileti kayıtları, çalışma koşulları değişikliği belgeleri, devam ve iş kayıtları girebilir. Sağlık veya iş olgularından söz edilse bile yalnızca o ifadeyle sonuç kesilmez; fiili seyir, yasal sona erme dayanağı ve ilgili deliller birlikte bakılır.
+İnceleme belgelerine işten çıkarma bildirimi, istifa yazısı, anlaşarak sona erme belgesi, e-posta ve ileti kayıtları, çalışma koşulları değişikliği belgeleri, devam ve iş kayıtları girebilir. Sağlık veya iş olgularından söz edilse bile yalnızca o ifadeyle sonuca varılmaz; fiili seyir, yasal sona erme dayanağı ve ilgili deliller birlikte bakılır.
 
 İşten çıkarma, anlaşarak sona erme, çalışma koşullarının ihlali iddiası inceleme olgularının örneğidir; çalışana yüklenemeyen nedenlerin kapalı sayımı değildir. Aynı adlı sona erme tarafların iradesi ve seyri bakımından farklı olabilir; belgede yazılı ad ile fiili olgular örtüşmeyebilir.
 
-Sona erme nedeninin değerlendirilmesi iade kapsamını da doğrudan etkiler. Fıkra 4 uygulanırsa asgari hizmet süresi sözleşmesini ihlal sorumluluğu ve eğitim gideri iadesi çalışandan istenemez; bu yüzden formül hesaplanmadan önce aidiyet doğrulanmalıdır. Peşin nitelikli edim ve başka ayrı talepler de varsa her talebin hukuki niteliği ve dayanağı ayrı incelenmelidir.
+Sona erme nedeninin değerlendirilmesi iade kapsamını da doğrudan etkiler. Fıkra 4 uygulanırsa asgari hizmet süresi sözleşmesini ihlal sorumluluğu ve eğitim gideri iadesi çalışandan istenemez; bu yüzden formül hesaplanmadan önce aidiyet doğrulanmalıdır. Avans niteliğindeki bir ödeme ve başka ayrı talepler de varsa her talebin hukuki niteliği ve dayanağı ayrı incelenmelidir.
 
 ## 8. Ayrılış ön bildirimi ayrı bir meseledir
 
@@ -142,7 +142,7 @@ Belirli iş için süreli iş sözleşmesinin (特定性定期契約) sözleşme
 
 Kesintisiz kıdem 3 aydan az ise, başka tür süreli sözleşme söz konusuysa veya yasal derhal sona erme nedeni ileri sürülüyorsa uygulanacak hüküm ve olgular tek tek incelenmelidir. Sözleşmede daha uzun ön bildirim yazılı olması veya derhal görev devri istenmesi tek başına hukuki sonucu önceden saptamaz.
 
-Uygulamada istifa iradesinin içeriği ve iletildiği gün, işverenin fiilen aldığı gün ve son çalışma gününe dair taraf iletişimi saklanmalıdır. Ayrılışın geçerli biçimde hüküm doğurduğu an, asgari hizmet süresi sözleşmesinin geçerliliği, eğitim gideri veya avans niteliğindeki ödemein iadesi ve ayrıca ileri sürülen zarar 4 soru olarak ayrılırsa, tek sözleşme hükmünden bütün sonuçları çıkarma hatası azaltılabilir.
+Uygulamada istifa iradesinin içeriği ve iletildiği gün, işverenin fiilen aldığı gün ve son çalışma gününe dair taraf iletişimi saklanmalıdır. Ayrılışın geçerli biçimde hüküm doğurduğu an, asgari hizmet süresi sözleşmesinin geçerliliği, eğitim gideri veya avans niteliğindeki ödemenin iadesi ve ayrıca ileri sürülen zarar 4 soru olarak ayrılırsa, tek sözleşme hükmünden bütün sonuçları çıkarma hatası azaltılabilir.
 
 ## 9. İşveren ve çalışan kontrol listesi
 
@@ -189,6 +189,6 @@ Belgeler zaman sırasına göre derlenirken sözleşme kurulma günü, eğitimin
 
 ---
 
-Bu yazı, Tayvan’daki asgari hizmet süresi sözleşmesi, eğitim gideri ve avans niteliğindeki ödemein iadesi ile ayrılış ön bildirimini genel açıklamak için eğitim amaçlı bir belgedir; tek tek iş dosyasına hukuki görüş değildir. Sözleşme türü ve metni, fiili eğitim ve gider, tazminatın amacı ve bildirimi, çalışma süresi, sona erme nedeni ve delillere göre sözleşmenin geçerliliği ve sorumluluk kapsamı değişebilir. İstifa iradesi, ücret kesintisi, iade anlaşması veya uyuşmazlığa yanıt vermeden önce en güncel resmi kaynaklar ve dosyanın olguları doğrulanmalıdır.
+Bu yazı, Tayvan’daki asgari hizmet süresi sözleşmesi, eğitim gideri ve avans niteliğindeki ödemenin iadesi ile ayrılış ön bildirimini genel olarak açıklamak için eğitim amaçlı bir belgedir; tek tek iş dosyasına hukuki görüş değildir. Sözleşme türü ve metni, fiili eğitim ve gider, tazminatın amacı ve bildirimi, çalışma süresi, sona erme nedeni ve delillere göre sözleşmenin geçerliliği ve sorumluluk kapsamı değişebilir. İstifa iradesi, ücret kesintisi, iade anlaşması veya uyuşmazlığa yanıt vermeden önce en güncel resmi kaynaklar ve dosyanın olguları doğrulanmalıdır.
 
 **Avukat Wei Tseng (曾雋崴)**

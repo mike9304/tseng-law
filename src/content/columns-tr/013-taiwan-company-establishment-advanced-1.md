@@ -63,7 +63,7 @@ Mümkündür.
 
 Banka genel olarak çifte kimlik doğrulaması ister,
 
-ve oturma belgesi yoksa Tayvan göç idaresinden “**temel veri formu**” (統一證號基本資料表) talep edilebilir.
+ve oturma belgesi yoksa Tayvan göç idaresinden “**birleşik kimlik numarası temel bilgi formu**” (統一證號基本資料表) talep edilebilir.
 
 Aynı gün teslim mümkün olmakla birlikte,
 
@@ -77,7 +77,7 @@ Ekonomi Bakanlığı inceleme komisyonu yatırımcının geçmişini gerçekten 
 
 ancak inceleme aşırı sıkı değildir.
 
-Yarı zamanlı iş dahil çeşitli iş deneyimleri anılabilir,
+Yarı zamanlı iş dâhil çeşitli iş deneyimleri anılabilir,
 
 ve incelemeden sorumlu kişileri ikna edebilecek biçimde ayrıntılı açıklanmalıdır.
 
@@ -111,23 +111,23 @@ gerektiğinde kira sözleşmesinin noter onayı (公證) veya ek teminat öneril
 
 Bu, şirketin faaliyet kalemlerine (營業項目) bağlıdır.
 
-Örn.) Faaliyet kalemi yeme-içme iken ofis tipi ticari mekân kiralanmak istenirse, banka hesabı açılışı çok zor olacaktır.
+Örnek: Faaliyet kalemi yeme-içme iken ofis tipi ticari mekân kiralanmak istenirse, banka hesabı açılışı çok zor olacaktır.
 
 Daha önce belirtildiği gibi banka kira sözleşmesini inceler ve şirket adresini yerinde denetler.
 
 Ayrıca nihai şirket tescilinde belediye (市政府) de tescil adresinin restoran işletmesinin serbest olduğu bir bölgede olmasını ister;
 
-ofis tipi ticari mekân ise şirket tescili (公司登記) mümkün olmaz.
+ofis tipi ticari mekân ise şirket tescili (公司登記) mümkün olmayabilir.
 
-Örn.) Reklamcılık veya toptan ticaret gibi ofis tipi ticari mekânda mümkün faaliyet kalemleri ise, ofis tipi ticari mekânda kuruluş yapılabilir. Kira sözleşmesi
+Örnek: Reklamcılık veya toptan ticaret gibi ofis tipi ticari mekânda mümkün faaliyet kalemleri ise, ofis tipi ticari mekânda kuruluş yapılabilir. Kira sözleşmesi
 
 imzalanmadan önce önceden doğrulanmalıdır.
 
-*Tayvan hukuku hakkında yardıma veya görüşmeye ihtiyacınız varsa İletişim sayfasından yazabilirsiniz; yanıt süresi vaat edilmez.*
+*Tayvan hukuku hakkında bir sorunuz varsa İletişim sayfasından İngilizce, Çince (中文), Japonca veya Korece yazabilirsiniz; yanıt süresi vaat edilmez.*
 
 ---
 
 > Daha fazla:
 > - [Hangi işleri yürütürüz](/tr/services)
-> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Hovering’in uluslararası ekibi](/tr/lawyers)
 > - [Büroya nasıl ulaşırsınız](/tr/contact)

@@ -36,7 +36,7 @@ Merkez Tayvan giriş yapısını belirlemeden önce içeride önce şu soruları
 | Müşteri sözleşmesi | Sözleşmenin tarafı kim olacak: yurt dışı merkez, Tayvan bağlı şirketi, yoksa yerel acente? |
 | Teklif ve sipariş | Fiyat ve teslim süresini nihai olarak kim teyit eder ve Tayvan’daki yetkilinin yetkisi nereye kadar uzanır? |
 | Mal ve stok | Kim ithal eder, stoku elinde tutup yönetir, iade ve değişimi işler? |
-| Personel | Merkez çalışanları mı gelir, Tayvan’da mı işe alınır, yoksa iş dış bir yükleniciye mi verilir? |
+| Personel | Merkez çalışanları mı gelir, Tayvan’da mı işe alınır, yoksa iş dışarıdaki bir yükleniciye mi verilir? |
 | Kurulum ve teknik destek | Müşteriye destek yükümlülüğünü kim üstlenir ve saha çalışmasındaki sorunlara kim yanıt verir? |
 | Tahsilat ve gider | Kim faturalandırır ve tahsil eder; merkez ile Tayvan örgütü arasında gider nasıl mahsup edilir? |
 | Kalite ve uyuşmazlık | Muayene sonucunu kim doğrular; ayıp iddiası veya tazminat talebini kim alır? |
@@ -45,7 +45,7 @@ Merkez Tayvan giriş yapısını belirlemeden önce içeride önce şu soruları
 
 ## 2. Bağlı şirket, şube ve yabancı şirket Tayvan temsilciliğinin farkı ve rolü
 
-Yarı iletken şirket Tayvan girişini tasarlarken ‘Tayvan’da hangi üssün kurulacağı’ ile ‘satış ve müşteri hizmetinin nasıl yerleştirileceği’ ayrı incelenmelidir. İlki tüzel kişilik, tescil şartları ve faaliyet kapsamına, ikincisi işlem biçimi, yetki ve sorumluluk paylaşımına odaklanır.
+Yarı iletken şirket Tayvan girişini tasarlarken ‘Tayvan’da nasıl bir yapılanma kurulacağı’ ile ‘satış ve müşteri hizmetinin nasıl yerleştirileceği’ ayrı incelenmelidir. İlki tüzel kişilik, tescil şartları ve faaliyet kapsamına, ikincisi işlem biçimi, yetki ve sorumluluk paylaşımına odaklanır.
 
 Tayvan bağlı şirketi ile yabancı şirketin Tayvan şubesinin temel farkı, ana şirket veya merkezden ayrı tüzel kişiliğe sahip olup olmadığıdır. Dağıtım ve acentelik işlem ve sözleşme yapısıdır; şirket örgüt biçimiyle karıştırılmamalıdır. Her yapı şöyle ayrılabilir.
 
@@ -53,7 +53,7 @@ Tayvan bağlı şirketi ile yabancı şirketin Tayvan şubesinin temel farkı, a
 |---|---|---|
 | Tayvan bağlı şirketi (子公司) | Tayvan hukukuna göre kurulur, bağımsız tüzel kişiliğe sahiptir ve yabancı ana şirketten ayrı bir tüzel kişidir. | Bağlı şirket bağımsız tüzel kişi olduğu için bağlı şirket ile ana şirket arasında ürün tedariki, hizmet sunumu, teknoloji lisansı ve gider paylaşımının nasıl belirleneceği doğrulanmalıdır. |
 | Yabancı şirket Tayvan şubesi (分公司) | Yabancı şirketin Tayvan’da mevzuata göre tescil ettiği şubedir; merkezden ayrı tüzel kişiliği yoktur ve ayrıca kurulmuş bağlı şirketten de farklıdır. | Şube yabancı merkezin bir parçasıdır, bağımsız tüzel kişi değildir; bu yüzden yabancı merkez sorumluluk ve yükümlülükleri doğrudan üstlenir. Şube sorumlusunun yetki kapsamı ile dış sözleşmeler, teslim, garanti ve satış sonrası hizmetin iç paylaşımı doğrulanmalıdır. |
-| Yabancı şirket Tayvan temsilciliği (代表人辦事處) | Yabancı şirketin şirket kanunu madde 386 uyarınca Tayvan’da tescil ettiği iş üssüdür; Tayvan’da ticari faaliyet yapamaz. | Temsilcilik ticari faaliyet yapamayacağı için fiili faaliyetin izin verilen kapsamda olup olmadığı doğrulanmalıdır. |
+| Yabancı şirket Tayvan temsilciliği (代表人辦事處) | Yabancı şirketin şirket kanunu madde 386 uyarınca Tayvan’da tescil ettiği yapılanmadır; Tayvan’da ticari faaliyet yapamaz. | Temsilcilik ticari faaliyet yapamayacağı için fiili faaliyetin izin verilen kapsamda olup olmadığı doğrulanmalıdır. |
 
 ## 3. Tayvan bağlı şirket biçimi: limited şirket ile anonim şirket farkı
 
@@ -65,11 +65,11 @@ Limited şirket 1 veya daha fazla gerçek kişi, ya da Tayvan veya yabancı tüz
 
 ### Anonim şirket (股份有限公司): başka yatırımcı alınması veya borsaya kote olma düşünülen işletmelere uygundur
 
-Anonim şirketin özelliği sermayenin paylara bölünmesidir. İlke olarak 2 veya daha fazla ortak gerekir; ancak devlet veya tüzel kişi tek başına kurabilir ve yabancı tüzel kişinin %100 pay tutması da mümkündür. Paylar ilke olarak serbestçe devredilebilir ancak yasal istisnalar vardır; mevzuata göre tür payları, çalışan pay alma seçeneği tasarlanabilir. Bu nedenle yatırımcı çekme, pay işlemi, çalışan pay ödülü, ileride birleşme ve devralma veya kote olma ve tescil düşünen işletmelere uygundur; yalnızca büyük şirketlere özgü değildir. Yönetişim açısından halka arz etmeyen şirket esas sözleşme ile yönetim kurulu koymayıp yalnızca 1 veya 2 yönetici bulundurabilir. Devlet veya tüzel kişi tek ortaklı şirket esas sözleşme ile denetçi koymayabilir. Ayrıca bütün anonim şirketlerin yıllık mali tabloları denetim onayı alması gerekmez. Olağan şirketin başlıca denetim eşiği ödenmiş sermaye TWD 30.000.000 (新臺幣), veya bu tutara ulaşmasa bile faaliyet geliri TWD 100.000.000 ya da iş sigortasına kayıtlı 100 çalışandır; halka arz şirketleri menkul kıymet mevzuatını izler.
+Anonim şirketin özelliği sermayenin paylara bölünmesidir. İlke olarak 2 veya daha fazla ortak gerekir; ancak devlet veya tüzel kişi tek başına kurabilir ve yabancı tüzel kişinin %100 pay tutması da mümkündür. Paylar ilke olarak serbestçe devredilebilir ancak yasal istisnalar vardır; mevzuata göre özel paylar, çalışanlara pay opsiyonu tasarlanabilir. Bu nedenle yatırımcı çekme, pay işlemi, çalışan pay ödülü, ileride birleşme ve devralma veya kote olma veya gelişen şirketler piyasasına kayıt düşünülen işletmelere uygundur; yalnızca büyük şirketlere özgü değildir. Yönetişim açısından halka arz etmeyen şirket esas sözleşme ile yönetim kurulu koymayıp yalnızca 1 veya 2 yönetici bulundurabilir. Devlet veya tüzel kişi tek ortaklı şirket esas sözleşme ile denetçi koymayabilir. Ayrıca bütün anonim şirketlerin yıllık mali tabloları denetim onayı alması gerekmez. Olağan şirketin başlıca denetim eşiği ödenmiş sermaye TWD 30.000.000 (新臺幣), veya bu tutara ulaşmasa bile faaliyet geliri TWD 100.000.000 ya da işçi sigortasına kayıtlı 100 çalışandır; halka arz şirketleri menkul kıymet mevzuatını izler.
 
 ## 4. Şube ve bağlı şirket kuruluş usulü farklıdır; yalnızca bağlı şirket kuruluşu Ekonomi Bakanlığı yatırım incelemesinden geçer
 
-Yabancı şirket Tayvan’da bağlı şirket kurarken ilke olarak unvan ön sorgusundan sonra Ekonomi Bakanlığı Yatırım İnceleme Dairesine (經濟部投資審議司) yatırım izni başvurur. Onaydan sonra fon gönderilir, yatırım tutarı tespiti ve mali müşavir (會計師) sermaye incelemesi tamamlanır, ardından şirket kuruluşu ve vergi tescili bitirilir.
+Yabancı şirket Tayvan’da bağlı şirket kurarken ilke olarak unvan ön sorgusundan sonra Ekonomi Bakanlığı Yatırım İnceleme Dairesine (經濟部投資審議司) yatırım iznine başvurur. Onaydan sonra fon gönderilir, yatırım tutarı tespiti ve mali müşavir (會計師) sermaye incelemesi tamamlanır, ardından şirket kuruluşu ve vergi tescili bitirilir.
 
 Buna karşılık olağan yabancı şirket Tayvan şubesi kurarken ilke olarak Ekonomi Bakanlığı Yatırım İnceleme Dairesi yatırım izni gerekmez; Ekonomi Bakanlığı Ticaret Geliştirme Dairesi (經濟部商業發展署) şube tescili ve ilgili fon tespitini yapar. Ancak unvan ön sorgusu, işletme sermayesi gönderimi, inceleme ve vergi tescili yine gerekir; kuruluş takvimi daha kısa olma eğilimindedir.
 
@@ -77,9 +77,9 @@ Yukarıdakiler sözleşme tasarımı önerisidir. Belirli bir formun doldurulmu�
 
 ## 5. Şirket tescili ile mühendisin yasal çalışması ayrıdır
 
-Tayvan’da şirket tescili tamamlandı diye yurt dışı merkez çalışanı kendiliğinden Tayvan’da çalışamaz. Yabancı Tayvan’da çalışmak için yasal çalışma iznine (工作許可) ihtiyaç duyar; uzun süre kalmak için oturma belgesi (外僑居留證) için de başvurmalıdır. Esasen işveren yabancı çalışan için çalışma izni ve buna karşılık gelen oturma belgesini başvurur.
+Tayvan’da şirket tescili tamamlandı diye yurt dışı merkez çalışanı kendiliğinden Tayvan’da çalışamaz. Yabancı Tayvan’da çalışmak için yasal çalışma iznine (工作許可) ihtiyaç duyar; uzun süre kalmak için oturma belgesi (外僑居留證) için de başvurmalıdır. Esasen işveren yabancı çalışan için çalışma iznine ve buna karşılık gelen oturma belgesine başvurur.
 
-Yabancı şirketin Tayvan bağlı şirketi ve şube yöneticisi için çalışma izni başvurusu görece kolaydır. Ancak ikinci yabancıdan itibaren çalışma izni başvururken sektörüne göre Çalışma Bakanlığı sermaye, ciro gibi eşikler ister. Bu yüzden yabancı çalışanı Tayvan’da çalıştırmak planlanıyorsa, Tayvan şirketi kurulmadan önce sermaye ayarının o eşiği karşılayıp karşılamadığı önceden doğrulanmalıdır.
+Yabancı şirketin Tayvan bağlı şirketi ve şube yöneticisi için çalışma izni başvurusu görece kolaydır. Ancak ikinci yabancıdan itibaren çalışma iznine başvururken sektörüne göre Çalışma Bakanlığı sermaye, ciro gibi eşikler ister. Bu yüzden yabancı çalışanı Tayvan’da çalıştırmak planlanıyorsa, Tayvan şirketi kurulmadan önce sermaye ayarının o eşiği karşılayıp karşılamadığı önceden doğrulanmalıdır.
 
 ## 7. İş gelişme aşamasına göre karşılaştırılabilecek yapılar
 
@@ -91,7 +91,7 @@ Aşağıdakiler düşünmeye yardımcı varsayımsal inceleme durumlarıdır; be
 
 **Pazar araştırması aşamasındaki şirket.** Satış örgütü kurulmadan önce yalnızca bilgi toplama ve irtibat işlevi isteniyorsa temsilcilik incelenebilir. Ancak gerçek plan stok mal satışı veya saha çalışmasını içeriyorsa, o faaliyetin yapılıp yapılamayacağı ayrıca doğrulanmalıdır.
 
-## 8. İlk görüşmede yalnızca işletme özeti yeterlidir; gizliliğin tamamını önce vermek gerekmez
+## 8. İlk görüşmede yalnızca işletme özeti yeterlidir; gizli belgelerin tamamını ilk yazışmada vermek gerekmez
 
 İlk görüşmede merkezin ve yatırımcıların temel bilgisi, ürün veya hizmetin genel açıklaması, öngörülen işlem akışı, Tayvan personel ve tesis planı, müşterinin istediği sözleşme ve destek koşulları derlenebilir. Henüz kararlaşmamış hususlar “belirsiz” diye işaretlenebilir.
 
@@ -115,4 +115,4 @@ Aşamalı geçiş tasarlanabilir. Ancak mevcut sözleşmelerin sona ermesi veya 
 
 Tayvan’da satış, stok yönetimi, kurulum desteği veya yerel işe alım planlanıyorsa, merkezin doğrudan yürüteceği iş ile Tayvan örgütünün üstleneceği iş önce derlenmelidir. Bu büro, görüşme konuları ve çıkar çatışmasını doğruladıktan sonra gereken evrakı ve sunulabilecek hizmet kapsamını bildirir.
 
-İletişim konusu örneği: Yarı iletken şirket Tayvan giriş yapısı görüşmesi. İlk iletişimde şirket unvanı, merkezin bulunduğu ülke, öngörülen ürün veya hizmet, Tayvan işletme planı ve tercih edilen görüşme dilini bildiriniz. Gizli tasarım evrakı ile tam sözleşmeler ayrıca rehber alındıktan sonra gönderilmelidir. Fiilen mümkün görüşme dilleri ve vekâlet kapsamı iletişim sırasında teyit edilir.
+İletişim konusu örneği: Yarı iletken şirket Tayvan giriş yapısı görüşmesi. İlk iletişimde şirket unvanı, merkezin bulunduğu ülke, öngörülen ürün veya hizmet, Tayvan işletme planı ve tercih edilen görüşme dilini bildiriniz. Görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır. Gizli tasarım evrakı ile tam sözleşmeler ayrıca rehber alındıktan sonra gönderilmelidir. Fiilen mümkün görüşme dilleri ve vekâlet kapsamı iletişim sırasında teyit edilir; yanıt süresi vaat edilmez.

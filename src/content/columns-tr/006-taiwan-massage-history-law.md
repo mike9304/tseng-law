@@ -63,7 +63,7 @@ Bay Lin bu yaptırımı çok haksız buldu ve anayasa yorumu istedi.
 
 Tayvan’da,
 
-görme engelli kişiler büyümede, faaliyette, öğrenmede ve eğitimde, diğerleri yanında, çok sayıda engelle karşılaşır
+görme engelli kişiler büyümede, faaliyette, öğrenmede ve eğitimde, başka hususların yanında, çok sayıda engelle karşılaşır
 
 ve icra edebilecekleri meslekler çok sınırlıdır.
 
@@ -97,9 +97,9 @@ ve çok sayıda görme engelli kişi, geçim aracını yitirme kaygısıyla yoğ
 
 ve bu nitelik olmadan başkasından masaj ücreti alan kişi,
 
-Kore tıbbi hizmetler kanununa (醫療法) göre en çok 3 yıla kadar hapis cezasına çarptırılabilir.
+Kore tıbbi hizmetler kanununa (醫療法) göre 3 yıla kadar hapis cezasına çarptırılabilir.
 
-Görme engelli olmayan kişi bir masaj ticareti işletirse, en çok 5 yıla kadar hapis cezası verilebilir.
+Görme engelli olmayan kişi bir masaj ticareti işletirse, 5 yıla kadar hapis cezası verilebilir.
 
 ​
 

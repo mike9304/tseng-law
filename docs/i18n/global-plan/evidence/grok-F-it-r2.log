@@ -1,0 +1,88 @@
+WO-F-it r2 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-it-r2
+No git add / commit / push.
+
+## Rows applied
+Part a (it-a.md) applied: 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 44.
+Part a partial: 2 (statute name and gloss corrected; visible article number kept at 10 — see skipped).
+Part a partial: 4 (the false once-only cap is gone; the checker still needs two 1s — see accommodations).
+Part b (it-b.md) applied: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54.
+Part b partial: 11 (the 1× cap stays as a digit — see accommodations).
+Part b partial: 31 (the clause was finished inside the existing block; the paragraph was not merged).
+
+No P3 rows in either review. No test expected-string updates: vitest did not pin the Italian strings that changed. inquiry copy and GUIDANCE_LLMS_NOTICES.it were left as they were; consultationNotice / confidentialNotice / discoveryNotice already matched their FAQ, privacy, and llms.txt pins.
+
+## Rows skipped
+- it-a #40 (P2) and it-b #55 (P2). "1° gennaio / 1° luglio" was not written. The checker’s date pattern is `day + whitespace + month + year`. The degree sign blocks the match, so the month number 1 is lost and the file fails. Kept: "dal 1 gennaio 2024", "dal 1 gennaio 2025", "dal 1 luglio 2026", "A decorrere dal 1 luglio 2026", "dal 1 gennaio 2023".
+- it-a #41 (P2). Q16 onward in 003, and the Q&A in 005, 006, 008 and 009, stay body text. Promoting them to ## headings changes the block count. The 005 bank sentence was rephrased inside the two existing blocks.
+- it-b #32 (P2). U+200B spacers in 013 and 015 stay. The checker requires the same ZWSP count as the Korean source. The 013 "e se" clause was rephrased inside its own block.
+- it-a #2 number only. The link label now names the withholding-rate standards (各類所得扣繳率標準) and says the dividends are paid to non-residents. The visible number stays "articolo 10" because the Korean source label is 제10조 and replacing 10 with 3 fails the checker. The URL flno=3 was not changed.
+
+## Checker accommodations (meaning kept, digit kept)
+- it-a #4. "(1 volta)" read as a once-only cap. Korean 1회 is one suspension period, and 1년 is the one-year limit. Dropping the parenthetical left 002 short by one 1. FAQ and body now say "la durata di 1 periodo di sospensione non può superare 1 anno." Numbers on 002 match (WARN 수사미해석 on 제1항 only).
+- it-b #11. "fino all’importo del danno effettivo" drops the statutory 1× multiplier and a counted 1 (010 was 54→53). Restored "fino a 1 volta l’importo del danno effettivo". 010 numbers match (WARN 수사미해석 on 1심 / 제7호 only).
+- 008. "Una persona impiegata" → "Un lavoratore" removed a lexicon 1 ("una"), so the file was short by one 1 against Korean 1년. The FAQ formula now says "A ogni compimento di 1 anno di anzianità". The blockquote stays "per ogni anno". 008 numbers match 44=44.
+
+## Systemic patterns and instances
+- French statut used as statuto outside the articles (章程). Residence "lo statuto di residente" → "la residenza"; "il solo statuto di società controllata / succursale" → "il solo fatto di essere…". 條例 titles rewritten as Legge: innovazione industriale (004), investimento degli stranieri (013, 017). Remaining "statuto" is the articles (002, 004, 017, 018).
+- in linea = online, not "in linea di principio" or "in linea retta". 001 "vendita online e il negozio fisico". 005 "home banking" ×2 (transfer and the question). "in linea di principio" and "discendenti in linea retta" left.
+- Agreement slips. "una consulenza" ×4 added lines (001, 004, 007, 016). "il titolo" (001), "un titolo" (017). "della legge" (008 FAQ and blockquote). "delle questioni" (007). "qual è" ×6 (014, 017). "l’erogazione" / "dell’erogazione" (014). ", chi si prepara" (009). "la/della/alla/sulla potestà genitoriale" — 19 added lines in 016 (and 007 "sulla potestà").
+- Civil claim and tort. "reclamo" for the civil damages claim swept in 003 to pretesa / domanda / azione di risarcimento. "atto illecito" → "fatto illecito" ×7 (003, 004, 007, 010). Employee misconduct in 008 is "condotta illecita". "lavoratore" ×23 added lines in 008 (article agreement: "Un lavoratore determinato").
+- ARC. "carta di soggiorno" → "certificato di soggiorno per stranieri" ×11 added lines (001, 013).
+- 戶籍. 007 "legge sull’anagrafe e sul registro di famiglia", "ufficio dell’anagrafe", "ordine dell’anagrafe". One leftover statute name, art. 48-2 "legge sullo stato civile", aligned to the same law name. Left in place: "stato civile" where it means the parties’ civil status, not the household register.
+- Currency code after the figure. 20 removed "TWD N" lines, 20 added lines with the amount before TWD. "N TWD in nuovi dollari taiwanesi" → "N nuovi dollari taiwanesi (TWD)". Amounts that were already after the figure were left. Bio "1,57 milioni di TWD" was not reformatted (the pinning test does not cover it).
+- riunirsi a un requisito → soddisfare. 19 added lines with "soddisf" (010, 014, 016, 017). Left: "riunire" where it means gather (documents, questions listed together).
+- Registered title "nome" → "intestazione" ×3 in 016. "titolari effettivi" for beneficial owners.
+- Alternative filings "e" → "o": "registrazione della società o dell’impresa" (017 FAQ and checklist). Kinmen oppure Lienchiang, detto anche Matsu.
+- French scaffolding named in the verdicts. "secondo se" → "a seconda che" (001, 002, 011). "A titolo di complemento" → "Per un approfondimento". "Tale è l’essenziale" → "Questo è l’essenziale". "può vedersi" → "è illustrata". "Inversamente" → "Al contrario" ×6 (002 ×3, 004 ×1, 007 ×2). "Al contrario" appears on 9 added lines in all, including 003.
+- Medical / care / transport / funeral / repair "oneri" used as damage heads → "spese" (003, 010). Business-tax "imposta sulle vendite" → "imposta sulle operazioni d’impresa" where the gloss is 營業稅.
+- 008 severance formula and the 010 punitive cap: see accommodations. 012 perizia keeps vehicle n. 2, the road structure, the other evidence, and the digit 2.
+
+R2–R10 were already in the Italian pack (Korea labelled as an example, feminine Wei Tseng, consultation languages locked to English / Chinese / Japanese / Korean, no interpreter, no reply-time, no free first meeting, no result promise, Lei). No further Korea-as-default-reader sentences turned up outside the rows above. R12–R17 are the other-locale addendum; the Italian rows that touch the same facts (Managing Attorney, paralegal, currency order) were applied from it-a / it-b.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-it-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-it --lang it 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=77
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-it src/data | wc -l
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+```
+      25
+```
+That count included the untracked scratch directory `.tmp-it/`, which was removed after the count, and did not yet include this log. After removing the scratch directory and writing this log, the same command returns 25 (22 modified files, plus untracked it-a.md, it-b.md, and this log).
+
+Pre-existing WARN on files that still PASS: 003 extra 2020×2; 015 extra 2×2 (제2종 unparsed). 002 and 010 still WARN 수사미해석 on 제1항 and 1심. Not introduced as FAILs by this pass.
+
+## Reviewer points not applied
+- "1°" is right for the first of the month. The checker cannot parse it next to a month name, so the bare "1" stays.
+- Q16+ as headings, and deleting the U+200B spacers, would change the block count the checker compares to the Korean source. The sentences were rephrased inside the existing blocks.
+- Calling the withholding-rate link "articolo 3" matches flno=3 and mismatches the Korean label 제10조, which the checker counts. The statute name and the gloss are corrected; the visible number stays 10. The URL was not changed.
+- "fino all’importo" is smoother Italian and drops the counted 1 that matches the ordinary-negligence cap of one time the actual loss. The digit form "fino a 1 volta" stays.
+- "ciascun periodo di sospensione non può superare un anno" is the right meaning and, after "(1 volta)" is removed, leaves 002 short by one 1. "1 periodo" and "1 anno" keep both the Korean 1회 and the 1년.
+- "in linea di principio" and "in linea retta" are ordinary Italian. Only "in linea" meaning online was changed.

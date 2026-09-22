@@ -29,7 +29,7 @@ Le domande e risposte seguenti mirano ad aiutare le persone che valutano la cost
 
 In generale, le banche della Corea esigono che l’investitore si rechi **di persona** a una banca in Corea e trasferisca i fondi da un conto a proprio nome.
 
-Il trasferimento per banca in linea o per tramite di un familiare in Corea non è possibile.
+Il trasferimento tramite home banking o per tramite di un familiare in Corea non è possibile.
 
 Inoltre, in conformità con la regolamentazione coreana sul controllo dei cambi, la persona di nazionalità coreana che costituisce una persona giuridica estera o acquisisce quote deve depositare una «dichiarazione di investimento diretto all’estero». La dichiarazione deve essere registrata al momento del trasferimento del capitale alla persona giuridica taiwanese (台灣法人); in mancanza, possono applicarsi sanzioni per violazione della regolamentazione sui cambi.
 
@@ -51,15 +51,15 @@ Se il trasferimento è effettuato da un conto bancario in Corea, non è necessar
 
 **3. Dopo l’arrivo del capitale al conto preparatorio, quando può essere convertito in conto sociale ordinario (正式公司帳戶)?**
 
-In generale, una volta ricevuti i documenti di iscrizione della persona giuridica (法人登記文件),
+In generale, i documenti di iscrizione della società (法人登記文件) devono prima essere rilasciati.
 
-il responsabile (負責人) può recarsi alla banca e convertire il conto preparatorio della società in conto ordinario.
+Il responsabile (負責人) può allora recarsi in banca e convertire il conto preparatorio della società in conto ordinario.
 
 Tuttavia, poiché le regole interne di ciascuna banca (銀行) differiscono, se occorre utilizzare il capitale d’urgenza, conviene recarsi prima alla banca.
 
 **​**
 
-**4. Dopo la conversione del conto preparatorio in conto ordinario, la banca in linea può essere utilizzata subito?**
+**4. Dopo la conversione del conto preparatorio in conto ordinario, l’home banking può essere utilizzato subito?**
 
 Ciò varia secondo le banche; in generale, un numero di telefono mobile almeno è necessario.
 

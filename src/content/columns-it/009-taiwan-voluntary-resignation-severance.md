@@ -91,7 +91,7 @@ l'indennità può non essere pagata o può essere richiesta.
 
 il «**tempo**» è molto importante.
 
-Nella maggior parte dei casi, Chi si prepara in anticipo è in una posizione migliore per far valere i propri diritti; da ciò non segue un esito determinato.
+Nella maggior parte dei casi, chi si prepara in anticipo è in una posizione migliore per far valere i propri diritti; da ciò non segue un esito determinato.
 
 ---
 

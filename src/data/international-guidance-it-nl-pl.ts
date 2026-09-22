@@ -61,7 +61,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
     heroScrollLabel: 'Scorrere verso il basso',
     heroColumnsCtaLabel: 'Vedere gli articoli',
     servicesDetailLabel: 'Vedere i dettagli',
-    servicesAssistanceBefore: 'Se non è chiaro a quale area di attività appartiene la Sua questione, la pagina ',
+    servicesAssistanceBefore: 'Se non è chiaro a quale area di attività appartenga la Sua questione, la pagina ',
     servicesAssistanceLinkLabel: 'Contatti',
     servicesAssistanceAfter:
       ' spiega come formulare un riassunto che un’avvocata o un avvocato esamina.',
@@ -96,7 +96,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'La lingua della pagina e la lingua di consulenza non sono la stessa cosa',
           paragraphs: [
             'Questa pagina è scritta in italiano, ma la consulenza con un’avvocata o un avvocato si svolge soltanto nelle quattro lingue di consulenza inglese, cinese (中文), giapponese e coreano. Leggere le indicazioni in italiano non significa che il colloquio con l’avvocata o l’avvocato avvenga in italiano.',
-            'Non promettiamo un interprete, un termine di risposta né un appuntamento tramite questa pagina. Se non può usare nessuna delle quattro lingue, la pagina «Contatti» spiega come esaminiamo un canale di comunicazione.',
+            'Non promettiamo un interprete, né un termine di risposta, né un appuntamento tramite questa pagina. Se non può usare nessuna delle quattro lingue, la pagina «Contatti» spiega come esaminiamo un canale di comunicazione.',
           ],
         },
         {
@@ -154,7 +154,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Controversie di lavoro',
           paragraphs: [
-            'Quest’area comprende la cessazione del rapporto di lavoro, l’indennità secondo il diritto di Taiwan (資遣費; non da equiparare a istituti di altri Stati), la retribuzione e le controversie dal contratto di lavoro (勞動契約), sia dal lato del lavoratore sia da quello del datore di lavoro. Nell’esame distinguiamo il motivo della cessazione dalle questioni di preavviso, di pagamento e di termini.',
+            'Quest’area comprende la cessazione del rapporto di lavoro, l’indennità secondo il diritto di Taiwan (資遣費; da non equiparare a istituti di altri Stati), la retribuzione e le controversie dal contratto di lavoro (勞動契約), sia dal lato del lavoratore sia da quello del datore di lavoro. Nell’esame distinguiamo il motivo della cessazione dalle questioni di preavviso, di pagamento e di termini.',
             'Il contratto di lavoro, il regolamento interno (工作規則), le buste paga e la corrispondenza delle parti sono di solito i documenti decisivi. Se li ha ancora, lo menzioni nel riassunto.',
           ],
         },
@@ -245,7 +245,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'La consulenza può essere a pagamento',
           paragraphs: [
-            'La consulenza con un’avvocata o un avvocato può essere una prestazione a pagamento. Questa pagina non dice che il primo colloquio è gratuito, e nessuna parte può essere letta in quel senso.',
+            'La consulenza con un’avvocata o un avvocato può essere una prestazione a pagamento. Questa pagina non dice che il primo colloquio è gratuito, e nulla in questa pagina va inteso in quel senso.',
             'Se la consulenza è a pagamento, l’importo e il modo di pagamento vengono comunicati prima che essa abbia luogo.',
           ],
         },
@@ -319,7 +319,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Quali questioni tratta lo studio?',
           answer:
-            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.',
+            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se accettare una questione si decide dopo l’esame del contenuto.',
         },
         {
           question: 'Che cosa dovrei preparare prima del contatto?',
@@ -420,7 +420,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Luogo di conservazione e fornitori',
           paragraphs: [
-            'Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio di oggetti non pubblico di questo servizio. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.',
+            'Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio a oggetti non accessibile al pubblico, presso questo fornitore. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.',
             'I server di singoli fornitori possono trovarsi fuori da Taiwan, così i Suoi dati possono essere ivi conservati e trattati. Quando lo scopo di conservazione è soddisfatto, i dati vengono cancellati senza ritardo; i dati che devono essere conservati secondo le norme applicabili restano per quella durata. Per le richieste sui dati personali si scriva a wei@hoveringlaw.com.tw.',
           ],
         },

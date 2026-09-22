@@ -493,7 +493,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Team internazionale di Hovering',
     description:
       'Profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering.',
-    representativeTitle: 'Avvocata dirigente',
+    representativeTitle: 'Avvocata responsabile',
     teamTitle: 'Avvocate, avvocati e collaboratori',
     partnerTitle: 'Commercialista partner',
     introLabel: 'Presentazione',
@@ -505,11 +505,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'Avvocata Wei Tseng — Dati essenziali',
     qualificationLabel: 'Qualifica e studio',
     qualificationSentence:
-      '{name} è abilitata all’esercizio della professione a Taiwan ed è l’avvocata dirigente di {firm}.',
+      '{name} è abilitata all’esercizio della professione a Taiwan ed è l’avvocata responsabile di {firm}.',
     practiceLabel: 'Ambiti principali',
     consultationLanguagesLabel: 'Lingue di consulenza',
     roles: {
-      'tseng-junwei': 'Avvocata dirigente a Taiwan (Managing Attorney)',
+      'tseng-junwei': 'Avvocata responsabile a Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Avvocato a Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Collaboratore legale (paralegal)',
       'son-jungmin': 'Responsabile operativo Corea (Korea Operations Manager)',
@@ -2657,7 +2657,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Master (M.S.) in finanza, Institute of Finance, National Taiwan University',
-        'Laurea (B.A.) con doppio percorso in diritto e finanza, National Chengchi University',
+        'Laurea (B.A.) con doppia laurea in diritto e finanza, National Chengchi University',
         'Studentessa in scambio alla Kobe University e alla Waseda University',
       ],
       experience: [
@@ -2679,8 +2679,8 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Collaboratore legale (paralegal), con lunga attività come senior paralegal in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.',
-        'Supporto a procedimenti, costituzione di società, autorizzazioni di investimenti esteri, domande di licenza e allo scambio tra Corea e Taiwan.',
+        'Collaboratore legale (paralegal), con lunga attività come collaboratore legale senior in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.',
+        'Supporto nei procedimenti, nella costituzione di società, nelle autorizzazioni di investimenti esteri, nelle domande di licenza e nello scambio tra Corea e Taiwan.',
       ],
       education: ['Laurea in giurisprudenza (LL.B.), Tunghai University'],
       experience: [

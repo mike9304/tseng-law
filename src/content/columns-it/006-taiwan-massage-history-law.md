@@ -55,7 +55,7 @@ Questa legge si è mantenuta fino al 2003; all’epoca, il Sig. Lin, che gestiva
 
 ha impiegato lavoratori senza disabilità visiva per servizi di lavaggio dei capelli e di massaggio, e la polizia lo ha constatato.
 
-Secondo il diritto di allora, il Sig. Lin e quei lavoratori hanno visto infliggersi rispettivamente una sanzione amministrativa pecuniaria (罰鍰) di TWD 40.000, TWD 10.000 e TWD 20.000 in nuovi dollari taiwanesi (新臺幣).
+Secondo il diritto di allora, il Sig. Lin e quei lavoratori hanno visto infliggersi rispettivamente una sanzione amministrativa pecuniaria (罰鍰) di 40.000, 10.000 TWD e 20.000 nuovi dollari taiwanesi (TWD) (新臺幣).
 
 Il Sig. Lin ha stimato questa sanzione molto ingiusta e ha chiesto un’interpretazione costituzionale.
 
@@ -113,7 +113,7 @@ e il legislatore si sforza di trovare una soluzione relativamente equilibrata pe
 
 Oggi, numerose persone scelgono il massaggio per alleviare la tensione,
 
-ma, in questo processo, casi di molestia sessuale (性騷擾) o di atti impudichi (猥褻) non cessano di prodursi.
+ma, in questo processo, casi di molestia sessuale (性騷擾) o di contatti sessuali non voluti (猥褻) non cessano di prodursi.
 
 Ciò che all’origine non era se non ricevere un massaggio per alleviare la tensione
 

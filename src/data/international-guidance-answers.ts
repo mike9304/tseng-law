@@ -469,7 +469,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Questa pagina mostra i profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering. L’avvocata Wei Tseng (曾雋崴) è abilitata a Taiwan ed è l’avvocata dirigente dello studio; lavora con clienti dalla Corea, dal Giappone e con altri clienti internazionali. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+        'Questa pagina mostra i profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering. L’avvocata Wei Tseng (曾雋崴) è abilitata a Taiwan ed è l’avvocata responsabile dello studio; lavora con clienti dalla Corea, dal Giappone e con altri clienti internazionali. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
       sources: ['/it/about', '/it/contact'],
     },
     pricing: {

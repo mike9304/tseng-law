@@ -17,7 +17,7 @@ Apabila kenderaan di hadapan bergerak perlahan, memotong (超車) boleh kelihata
 
 ## Syarat memotong yang ditetapkan perkara 101 peraturan keselamatan lalu lintas jalan raya (道路交通安全規則)
 
-[Perkara 101 peraturan keselamatan lalu lintas jalan raya Taiwan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) mengatur kedua syarat di mana pemotongan dilarang dan urutan yang mesti diikuti apabila pemotongan pada lorong yang sama dibenarkan.
+[Perkara 101 peraturan keselamatan lalu lintas jalan raya Taiwan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) mengatur kedua-dua perkara, iaitu syarat pemotongan dilarang dan urutan yang mesti diikuti apabila pemotongan pada lorong yang sama dibenarkan.
 
 Perkara 101 melarang pemotongan pada bahagian yang dilengkapi papan tanda yang menunjukkan selekoh, cerun curam atau menurun, jambatan sempit, terowong atau persimpangan, serta di lintasan kereta api dan di tapak pembinaan.
 
@@ -27,13 +27,13 @@ Untuk memotong kenderaan di hadapan pada lorong yang sama, pemandu kenderaan di 
 
 Kenderaan di belakang hanya boleh memotong selepas kenderaan di hadapan memperlahankan dan menyisih, atau telah menyatakan kehendaknya untuk menyerahkan laluan melalui isyarat tangan atau isyarat belok kanan.
 
-Kemudian, kenderaan yang memotong mesti menyalakan isyarat belok kiri, lalu di kiri sambil mengekalkan jarak sekurang-kurangnya 0.5 meter berbanding kenderaan di hadapan dan, jarak selamat sekali dijamin, menyalakan isyarat belok kanan dan kembali dengan selamat ke lorong asal.
+Di Taiwan kenderaan berada di sebelah kanan, jadi pemotongan ialah di kiri. Kemudian, kenderaan yang memotong mesti menyalakan isyarat belok kiri, lalu di kiri sambil mengekalkan jarak sekurang-kurangnya 0.5 meter berbanding kenderaan di hadapan dan, setelah jarak selamat diperoleh, menyalakan isyarat belok kanan dan kembali dengan selamat ke lorong asal.
 
 Urutan isyarat dan penyerahan pada lorong yang sama ini tidak bermakna bahawa pemotongan dibenarkan di tempat atau dalam syarat yang dilarang. Sebelum memulakan pemotongan, semua syarat perkara 101 mesti dinilai bersama.
 
 ## Kes kemalangan yang dianonimkan yang diurus pejabat ini
 
-Dalam kes yang dianonimkan yang diurus pejabat ini, penunggang motosikal A bergerak di jalan gunung bersama penumpang B. Di hadapan mereka bergerak 2 kereta penumpang; kenderaan nombor 1, yang paling di hadapan, maju perlahan, sehingga kenderaan nombor 2 dan motosikal juga maju pada kelajuan rendah.
+Dalam kes yang dianonimkan yang diurus pejabat ini, penunggang motosikal A bergerak di jalan gunung bersama penumpang B. Di hadapan mereka bergerak dua buah kereta; kenderaan nombor 1, yang paling di hadapan, maju perlahan, sehingga kenderaan nombor 2 dan motosikal juga maju pada kelajuan rendah.
 
 ![Rajah kemalangan yang menunjukkan trajektori pemotongan motosikal dan 2 kenderaan di hadapan di jalan gunung](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -43,7 +43,7 @@ B mengalami kecederaan berat di kepala dan meninggal di tempat; A hilang kesedar
 
 Keluarga A dan B melihat dahulu pertukaran lorong secara tiba-tiba kenderaan nombor 2 sebagai punca utama perlanggaran. Kes membawa kepada perbicaraan dan, semasa tatacara, beberapa penilaian pakar (鑑定) kemalangan dijalankan.
 
-Menurut hasil penilaian pakar, A menanggung tanggungjawab utama perlanggaran ini. Kesimpulan ini terhad kepada fakta kes ini. Kepakaran mengambil kira bersama hakikat bahawa A ingin memotong 2 kenderaan di hadapan yang bergerak satu di belakang yang lain, bahawa ia masuk ke lorong bertentangan, bahawa ia bergerak pada kelajuan yang hampir tidak meninggalkan ruang brek, bahawa isyarat hon dan lampu yang ditetapkan tidak ada, serta pergerakan pertukaran lorong kenderaan nombor 2, struktur jalan dan lorong dan bukti lain yang dikumpulkan.
+Menurut hasil penilaian pakar, A menanggung tanggungjawab utama perlanggaran ini. Kesimpulan ini terhad kepada fakta kes ini. Penilaian pakar itu mengambil kira bersama hakikat bahawa A ingin memotong 2 kenderaan di hadapan yang bergerak satu di belakang yang lain, bahawa ia masuk ke lorong bertentangan, bahawa ia bergerak pada kelajuan yang hampir tidak meninggalkan ruang brek, bahawa isyarat hon dan lampu yang ditetapkan tidak ada, serta pergerakan pertukaran lorong kenderaan nombor 2, struktur jalan dan lorong dan bukti lain yang dikumpulkan.
 
 Bahawa, dalam sesetengah kes, hasil penilaian pakar sedemikian berlaku tidak bermakna bahawa satu peninggalan isyarat yang ditetapkan sentiasa menetapkan tanggungjawab. Kecuaian (過失) dalam kemalangan memotong bergantung pada tempat kemalangan, konfigurasi lorong, kelajuan, pergerakan kenderaan, isyarat, selang masa, penglihatan dan bukti lain.
 

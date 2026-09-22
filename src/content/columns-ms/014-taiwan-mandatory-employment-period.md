@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
 faq:
   - q: "Adakah perjanjian tempoh kerja minimum (最低服務年限約定) kontrak kerja di Taiwan secara automatik batal?"
-    a: "Tidak. Menurut perkara 15-1 undang-undang piawaian buruh Taiwan (勞動基準法), jika majikan memberikan latihan teknikal khusus (專業技術培訓) dan menanggung kosnya, atau menyediakan balasan munasabah (合理補償) agar pekerja mematuhi tempoh kerja minimum, perjanjian boleh memenuhi syarat berkanun. Tidak perlu memenuhi kedua syarat pada masa yang sama, tetapi, walaupun wujud salah satunya, perjanjian tidak boleh melebihi skop munasabah memandang keseluruhan keadaan, seperti tempoh dan kos latihan, kemungkinan mengganti kakitangan (人力替補可能性) serta jumlah dan skop balasan."
+    a: "Tidak. Menurut perkara 15-1 undang-undang piawaian buruh Taiwan (勞動基準法), jika majikan memberikan latihan teknikal khusus (專業技術培訓) dan menanggung kosnya, atau menyediakan balasan munasabah (合理補償) agar pekerja mematuhi tempoh kerja minimum, perjanjian boleh memenuhi syarat berkanun. Tidak perlu memenuhi kedua-dua syarat pada masa yang sama, tetapi, walaupun wujud salah satunya, perjanjian tidak boleh melebihi skop munasabah memandang keseluruhan keadaan, seperti tempoh dan kos latihan, kemungkinan mengganti kakitangan (人力替補可能性) serta jumlah dan skop balasan."
   - q: "Adakah latihan pekerja baharu atau latihan yang wajib menurut undang-undang dianggap latihan teknikal khusus?"
     a: "Menurut panduan Kementerian Buruh Taiwan (勞動部) 5 Jun 2026, kos latihan berkala, latihan umum jawatan, penyesuaian kerja pekerja baharu dan latihan yang undang-undang mewajibkan diberikan tidak boleh diambil sebagai asas perjanjian tempoh kerja minimum mahupun tuntutan klausa penalti (違約金) atau pemulangan kos. Jangan lihat hanya nama latihan, tetapi program konkret, kandungan profesional dan teknikal, tempoh, kos yang benar-benar ditanggung majikan dan justifikasi."
   - q: "Jika meletakkan jawatan secara awal, adakah mesti memulangkan sepenuhnya bonus tandatangan (簽約金) atau bonus pengekalan (留任獎金)?"
@@ -35,7 +35,7 @@ Walaupun 4 soalan ini muncul bersama dalam kontrak yang sama, peruntukan yang te
 
 ## 1. Jawapan ringkas: bilakah perjanjian tempoh kerja minimum boleh berkuat kuasa?
 
-Ia tidak sah secara automatik. Menurut perkara 15-1 undang-undang piawaian buruh Taiwan (勞動基準法), jika majikan memberikan latihan teknikal khusus (專業技術培訓) dan menanggung kosnya, atau menyediakan balasan munasabah (合理補償) agar pekerja mematuhi tempoh kerja minimum, perjanjian boleh memenuhi syarat berkanun. Tidak perlu memenuhi kedua syarat pada masa yang sama, tetapi, walaupun wujud salah satunya, perjanjian tidak boleh melebihi skop munasabah memandang keseluruhan keadaan, seperti tempoh dan kos latihan, kemungkinan mengganti kakitangan (人力替補可能性) serta jumlah dan skop balasan.
+Ia tidak sah secara automatik. Menurut perkara 15-1 undang-undang piawaian buruh Taiwan (勞動基準法), jika majikan memberikan latihan teknikal khusus (專業技術培訓) dan menanggung kosnya, atau menyediakan balasan munasabah (合理補償) agar pekerja mematuhi tempoh kerja minimum, perjanjian boleh memenuhi syarat berkanun. Tidak perlu memenuhi kedua-dua syarat pada masa yang sama, tetapi, walaupun wujud salah satunya, perjanjian tidak boleh melebihi skop munasabah memandang keseluruhan keadaan, seperti tempoh dan kos latihan, kemungkinan mengganti kakitangan (人力替補可能性) serta jumlah dan skop balasan.
 
 Perkara 15-1, perenggan 1, mengatur secara alternatif 2 syarat berkanun. Yang pertama ialah bahawa majikan telah menyediakan kepada pekerja latihan teknikal khusus dan menanggung kosnya; yang kedua, bahawa ia telah menyediakan balasan munasabah sebagai ganti pematuhan tempoh kerja minimum. Perlu disahkan bukan nama apa yang diberikan dalam kontrak, tetapi asas apa yang benar-benar wujud.
 
@@ -49,7 +49,7 @@ Keadaan bahawa pekerja telah menandatangani kontrak boleh menjadi dokumen yang m
 
 Untuk mendasarkan perjanjian pada latihan, majikan mesti benar-benar telah menyediakan kepada pekerja latihan teknikal khusus dan menanggung kosnya. Tidak cukup menulis dalam pelan latihan bahawa ia kursus profesional atau merekod kos anggaran dalam kontrak. Perlu dapat menghubungkan melalui dokumen tema latihan, sifat profesional dan teknikal yang diperlukan untuk jawatan, tempoh konkret, sama ada ia disempurnakan dan belanja sebenar.
 
-Objek semakan merangkumi bukan sahaja kos yang boleh disahkan secara langsung, seperti honorarium pelatih luaran, yuran pendaftaran pusat latihan dan cukai bahan atau peralatan, tetapi juga asas pengiraan kos dalaman yang didakwa majikan. Jika ia melatih kakitangan dalaman, perlu dilihat siapa dan masa apa, dalam apa ia berbeza daripada pengawasan biasa atau penyerahan jawatan, dan sama ada wujud asas untuk mengaitkan kos itu kepada pekerja ini. Jumlah anggaran atau pembahagian keseluruhan tidak membuktikan dengan sendirinya tanggungan sebenar.
+Objek semakan merangkumi bukan sahaja kos yang boleh disahkan secara langsung, seperti honorarium pelatih luaran, yuran pendaftaran pusat latihan dan caj bahan atau peralatan, tetapi juga asas pengiraan kos dalaman yang didakwa majikan. Jika ia melatih kakitangan dalaman, perlu dilihat siapa dan masa apa, dalam apa ia berbeza daripada pengawasan biasa atau penyerahan jawatan, dan sama ada wujud asas untuk mengaitkan kos itu kepada pekerja ini. Jumlah anggaran atau pembahagian keseluruhan tidak membuktikan dengan sendirinya tanggungan sebenar.
 
 Program, jadual latihan, senarai kehadiran, hasil penilaian, perakuan penyempurnaan, invois dan resit ialah dokumen asas untuk mengesahkan realiti latihan dan kos. Kontrak antara majikan dan pusat latihan, justifikasi bayaran dan syarat bayaran balik, dilihat bersama, membenarkan memahami dengan lebih tepat tanggungan sebenar. Jika pekerja membayar sebahagian kos secara langsung atau jika pihak ketiga menanggungnya, perlu juga dibezakan siapa menanggung kos akhir.
 
@@ -128,7 +128,7 @@ Penilaian sebab terhapus mempengaruhi secara langsung juga skop pemulangan. Jika
 
 ## 8. Notis peletakan jawatan ialah soalan yang berasingan
 
-Perjanjian tempoh kerja minimum bukan alat yang menghalang pekerja meletakkan jawatan, sama ada dari segi fizikal atau dari segi undang-undang. Pernyataan peletakan jawatan dan tempoh notis (預告期間) ialah soalan bila hubungan kerja tamat; kesahan perjanjian tempoh kerja minimum dan tanggungjawab pemulangan kos ialah soalan sama ada terdapat tanggungjawab harta yang terbit daripada terhapus.
+Perjanjian tempoh kerja minimum bukan alat yang menghalang pekerja meletakkan jawatan, sama ada dari segi fizikal atau dari segi undang-undang. Pernyataan peletakan jawatan dan tempoh notis (預告期間) ialah soalan bila hubungan kerja tamat; kesahan perjanjian tempoh kerja minimum dan tanggungjawab pemulangan kos ialah soalan sama ada terdapat tanggungjawab kewangan yang timbul daripada penamatan.
 
 Apabila pekerja menamatkan kontrak kerja tanpa tempoh tertentu (不定期契約), menurut perkara 15 undang-undang piawaian buruh Taiwan terpakai secara analogi tempoh notis perkara 16, perenggan 1. Perkara 16 ialah peruntukan mengenai terhapusnya kontrak oleh majikan, dan kepada peletakan jawatan pekerja tempoh notis ini terpakai melalui perkara 15.
 
@@ -152,7 +152,7 @@ Untuk mencegah pertikaian atau meneliti tuntutan yang sudah dikemukakan, jangan 
 
 1. Diperincikan dahulu syarat berkanun: sama ada telah disediakan latihan teknikal khusus dan ditanggung kos, atau sama ada telah disediakan balasan munasabah bagi janji pengekalan.
 2. Dibezakan latihan umum, berkala dan yang wajib menurut undang-undang daripada latihan teknikal khusus, menurut kandungan sebenar kursus, tempoh dan tujuan.
-3. Dipelihara program kursus, kalendar, daftar penyempurnaan, invois, resit dan dokumen siapa menanggung kos, dan direkod secara berasingan asas kos luaran dan dalaman.
+3. Dipelihara program kursus, jadual, daftar penyempurnaan, invois, resit dan dokumen siapa menanggung kos, dan direkod secara berasingan asas kos luaran dan dalaman.
 4. Dihubungkan dengan jelas secara bertulis tujuan balasan, tarikh bayaran, jumlah, syarat pemberian, komunikasi yang dibuat kepada pekerja dan formula pemulangan tempoh yang belum disempurnakan.
 5. Didokumentasikan asas pengiraan tempoh yang dipersetujui, kemungkinan mengganti kakitangan jawatan yang sama atau jawatan serupa dan hubungan antara keperluan operasi majikan dan pelaburan sebenar.
 6. Diteliti sama ada tempoh yang dipersetujui dan jumlah pemulangan berkadar dengan skop kos latihan atau balasan, dan dicerminkan dalam pengiraan tempoh yang sudah bekerja.
@@ -163,9 +163,9 @@ Walaupun digunakan kontrak jenis, jangan diterapkan secara mekanikal tempoh yang
 
 ### Aspek yang mesti disahkan oleh pekerja
 
-1. Dikumpulkan asal kontrak kerja yang ditandatangani dan persetujuan pengubahsuaian, bahan penjelasan pengambilan, bahan latihan, program, kalendar dan daftar penyempurnaan.
+1. Dikumpulkan asal kontrak kerja yang ditandatangani dan persetujuan pengubahsuaian, bahan penjelasan pengambilan, bahan latihan, program, jadual dan daftar penyempurnaan.
 2. Disahkan kandungan profesional dan teknikal latihan, sama ada ia latihan umum penyesuaian atau latihan yang wajib menurut undang-undang, jumlah invois dan resit dan siapa yang benar-benar menanggung kos.
-3. Dijamin dokumen bayaran bonus tandatangan, bonus pengekalan dan bayaran pendahuluan lain, komunikasi mengenai tujuan balasan, tarikh bayaran, syarat pemberian dan formula pemulangan.
+3. Diperoleh dokumen bayaran bonus tandatangan, bonus pengekalan dan bayaran pendahuluan lain, komunikasi mengenai tujuan balasan, tarikh bayaran, syarat pemberian dan formula pemulangan.
 4. Direkod secara berasingan asas pengiraan tempoh yang dipersetujui, tempoh yang sudah bekerja, tempoh yang tinggal dan kemungkinan mengganti kakitangan yang didakwa majikan.
 5. Dipelihara pemberitahuan peletakan jawatan, pemberhentian atau dokumen terhapus secara persetujuan bersama dan bukti penyerahan, seperti e-mel dan mesej.
 6. Disusun dalam tertib masa sebab sebenar terhapus dan perjalanan, dan disahkan bersama notis pemulangan majikan, slip gaji, komunikasi pihak dan daftar potongan.

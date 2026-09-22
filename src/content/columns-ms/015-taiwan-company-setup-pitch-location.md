@@ -45,13 +45,13 @@ Jika anda sukar hadir secara peribadi di pejabat pentadbiran tanah (地政事務
 
 anda boleh memohon bantuan kenalan di Taiwan, tuan rumah, ejen hartanah atau peguam.
 
-Jika hasil pengesahan menunjukkan bahawa premis restoran tidak mungkin, kemudian, semasa pendaftaran badan undang-undang (公司登記), perbandaran mungkin tidak menerima pendaftaran.
+Jika hasil pengesahan menunjukkan bahawa premis restoran tidak mungkin, kemudian, semasa pendaftaran badan undang-undang (公司登記), kerajaan bandar mungkin tidak menerima pendaftaran.
 
 Maka berikan perhatian kepada titik ini.
 
 ​
 
-**S. Adakah semua sektor mesti mengesahkan, melalui sistem “semakan awal premis”, sama ada operasi mungkin?**
+**Adakah semua sektor mesti mengesahkan, melalui sistem “semakan awal premis”, sama ada operasi mungkin?**
 
 Disyorkan kepada semua sektor untuk mengesahkan, melalui sistem “semakan awal premis” (營業場所預先查詢), sama ada operasi mungkin.
 
@@ -59,7 +59,7 @@ Namun, semasa pendaftaran syarikat, beberapa item perniagaan kerap didaftarkan s
 
 Maka, dalam amalan, tidak perlu mengesahkan semua item perniagaan semasa pendaftaran syarikat.
 
-Menurut “[arahan operasi perkhidmatan maklumat premis bandar Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”(臺北市營業場所協助查詢服務作業須知) dan panduan yang berkuat kuasa bandar Taipei,
+Menurut “[arahan operasi perkhidmatan maklumat premis bandar Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) dan panduan yang berkuat kuasa bandar Taipei,
 
 sejak 1 Januari 2023, semasa permohonan pendaftaran penubuhan, pindahan pejabat utama atau penambahan item perniagaan syarikat atau perniagaan (termasuk cawangan (分公司) dan premis tambahan (分支機構)), hasil semakan awal premis **mesti** dilampirkan kepada permohonan pendaftaran, tanpa mengira sektor.
 

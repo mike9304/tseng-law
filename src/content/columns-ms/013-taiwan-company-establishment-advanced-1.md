@@ -15,7 +15,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 Baru-baru ini, ramai orang telah menubuhkan dengan jayanya syarikat (公司) di Taiwan dan telah memperoleh visa kerja serta kad kediaman (外僑居留證),
 
-dan soalan yang kerap diajukan pada saat penubuhan dikumpulkan di bawah.
+Soalan yang kerap diajukan semasa penubuhan dikumpulkan di bawah.
 
 Mereka yang telah membaca [**asas penubuhan syarikat**](/ms/columns/taiwan-company-establishment-basics) kemudian boleh merujuk juga kepada bahagian mendalam yang lebih terperinci ini.
 
@@ -49,7 +49,7 @@ Kerana semakan pelan pelaburan juga mengambil masa,
 
 anda patut menyediakan pelan pelaburan dan mencari alamat pendaftaran syarikat pada masa yang sama.
 
-Menurut perkara 9 Statut pelaburan orang asing (外國人投資條例), sumbangan yang diluluskan mesti tiba sepenuhnya dalam tempoh yang ditetapkan pihak berkuasa kompeten (核定期限); tempoh hendaklah disahkan dalam akta kelulusan setiap kes (dalam amalan, ia kerap ditetapkan sekitar 1 tahun).
+Menurut perkara 9 Ordinan Pelaburan oleh Warganegara Asing (外國人投資條例), sumbangan yang diluluskan mesti tiba sepenuhnya dalam tempoh yang ditetapkan pihak berkuasa kompeten (核定期限); tempoh hendaklah disahkan dalam akta kelulusan setiap kes (dalam amalan, ia kerap ditetapkan sekitar 1 tahun).
 
 Dalam tempoh ini, setelah alamat syarikat dijumpai dan kontrak sewa ditandatangani,
 
@@ -115,7 +115,7 @@ Contoh: jika item perniagaan ialah restoran dan ingin menyewa premis komersial p
 
 Seperti sudah dinyatakan, bank meneliti kontrak sewa dan memeriksa di tempat alamat syarikat.
 
-Selain itu, semasa pendaftaran akhir syarikat, perbandaran (市政府) juga menuntut bahawa alamat yang didaftarkan terletak dalam zon di mana operasi restoran dibenarkan;
+Selain itu, semasa pendaftaran akhir syarikat, kerajaan bandar (市政府) juga menuntut bahawa alamat yang didaftarkan terletak dalam zon di mana operasi restoran dibenarkan;
 
 jika ia premis komersial pejabat, pendaftaran syarikat (公司登記) maka tidak mungkin.
 

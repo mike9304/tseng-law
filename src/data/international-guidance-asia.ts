@@ -629,14 +629,14 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hal sivil dan ganti rugi',
           paragraphs: [
             'Bidang ini merangkumi pertikaian kontrak, ganti rugi daripada perbuatan salah, dan pertikaian pengguna. Kerja biasanya bermula dengan kronologi, semakan dokumen dan bukti yang ada, dan hanya kemudian langkah seterusnya.',
-            'Tempoh, termasuk tempoh saman berkanun, dan kelengkapan bukti membentuk perjalanan. Oleh itu nyatakan tarikh yang diketahui seawal mungkin. Simpan kontrak, mesej, resit bayaran atau foto keadaan di tempat, dan sebutkannya dalam mesej pertama.',
+            'Tempoh, termasuk had masa untuk memfailkan tuntutan, dan kelengkapan bukti membentuk perjalanan. Oleh itu nyatakan tarikh yang diketahui seawal mungkin. Simpan kontrak, mesej, resit bayaran atau foto keadaan di tempat, dan sebutkannya dalam mesej pertama.',
           ],
         },
         {
           heading: 'Perkahwinan, keluarga dan pusaka',
           paragraphs: [
-            'Kami mengendalikan penceraian (離婚), pembahagian harta, pelaksanaan dan tanggungjawab hak dan kewajipan terhadap anak bawah umur (未成年子女權利義務之行使或負擔), kunjungan (會面交往) dan pusaka (繼承), termasuk jika pihak atau harta berada di negara berlainan. Hal keluarga merentas sempadan sering memerlukan semakan tambahan dokumen daftar isi rumah (戶籍), bentuk surat cara, dan kebolehbuktiannya di Taiwan.',
-            'Kerana hal keluarga kerap membawa tempoh dan prosedur selari, ringkasan pertama sepatutnya menyatakan hubungan pihak, tempat tinggal semasa, dan prosedur yang sudah berjalan.',
+            'Kami mengendalikan penceraian (離婚), pembahagian harta, pelaksanaan atau penanggungan hak dan kewajipan terhadap anak bawah umur (未成年子女權利義務之行使或負擔), hak lawatan (會面交往) dan pusaka (繼承), termasuk jika pihak atau harta berada di negara berlainan. Hal keluarga merentas sempadan sering memerlukan semakan tambahan dokumen daftar isi rumah (戶籍), bentuk surat cara, dan kebolehbuktiannya di Taiwan.',
+            'Kerana hal keluarga kerap membawa tempoh dan prosedur pada masa yang sama, ringkasan pertama sepatutnya menyatakan hubungan pihak, tempat tinggal semasa, dan prosedur yang sudah berjalan.',
           ],
         },
         {
@@ -649,7 +649,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hal jenayah',
           paragraphs: [
-            'Kami mewakili klien dalam siasatan dan di mahkamah, bagi tertuduh atau terdakwa serta bagi orang yang tercedera, dan menilai risiko jenayah aktiviti perniagaan.',
+            'Kami mewakili klien dalam siasatan dan di mahkamah, bagi orang yang disyaki atau tertuduh serta bagi orang yang tercedera, dan menilai risiko jenayah dalam aktiviti perniagaan.',
             'Hal jenayah kerap mempunyai tempoh pendek dan peringkat yang ditetapkan. Jika anda sudah menerima surat daripada pihak pendakwaan atau mahkamah, nyatakan tarikh pada surat itu awal, supaya kandungannya disemak dalam urutan yang betul.',
           ],
         },
@@ -675,14 +675,14 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
       description:
         'Maklumat asas tentang firma peguam Taiwan ini, pejabatnya, dan kerja dengan pihak asing.',
       intro:
-        'Hovering International Law Firm ialah firma peguam di Taiwan. Peguam bekerja dari nasihat syarikat hingga prosedur mahkamah. Bahagian ini menerangkan penubuhan firma, lokasi, dan kerja dengan pihak asing.',
+        'Hovering International Law Firm ialah firma peguam di Taiwan. Kerja peguam merangkumi nasihat syarikat hingga prosiding mahkamah. Bahagian ini menerangkan penubuhan firma, lokasi, dan kerja dengan pihak asing.',
       sections: [
         {
           heading: 'Penubuhan dan struktur',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) ditubuhkan pada 2016 oleh peguam yang belajar di National Taiwan University (國立臺灣大學). Nama Cina 昊鼎 menggabungkan aksara 昊 (“langit luas”) dengan 鼎 (“asas kukuh”) dan menggambarkan hala tuju firma sejak penubuhan.',
             'Kami mempunyai pejabat di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) dan Pingtung (屏東). Pejabat Kaohsiung menumpukan tadbir urus syarikat dan mengendalikan pertikaian sivil, jenayah dan pentadbiran. Pejabat Taichung mengendalikan hal pembinaan, harta intelek, dan hal yang berkaitan dengan Korea dan Jepun. Pejabat Pingtung dibuka pada 2017 untuk keperluan setempat.',
-            'Selain kerja peguam, sejak 2020 wujud juga Hovering Accounting Office, yang menawarkan perakaunan dan perancangan cukai untuk usahawan dan individu beraset tinggi.',
+            'Selain kerja peguam, sejak 2020 wujud juga Hovering Accounting Office, yang menawarkan perakaunan dan perancangan cukai untuk usahawan dan individu bernilai bersih tinggi.',
           ],
         },
         {
@@ -695,7 +695,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Apabila anda menghubungi kami',
           paragraphs: [
-            'Selepas ringkasan anda tiba, peguam menyemak kandungannya, kemudian membincangkan skop kerja yang mungkin, dokumen yang masih diperlukan, dan langkah seterusnya. Bagi soalan cukai atau perakaunan, firma boleh bekerja dengan bahagian perakaunan dalam satu aliran.',
+            'Selepas ringkasan anda tiba, peguam menyemak kandungannya, kemudian membincangkan skop kerja yang mungkin, dokumen yang masih diperlukan, dan langkah seterusnya. Bagi soalan cukai atau perakaunan, firma boleh bekerja dengan bahagian perakaunan dalam satu proses yang sama.',
             'Hasil setiap hal bergantung pada fakta dan dokumen yang ada; kami tidak menjanjikan hasil. Jika anda memerlukan jawapan yang mengikat bagi keadaan anda, dokumen mesti dibincangkan dengan peguam dalam salah satu daripada empat bahasa perundingan.',
           ],
         },
@@ -733,7 +733,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perundingan boleh menjadi perkhidmatan berbayar',
           paragraphs: [
-            'Perundingan dengan peguam boleh menjadi perkhidmatan berbayar. Halaman ini tidak menyatakan bahawa perbualan pertama tanpa bayaran, dan tiada bahagian boleh dibaca sedemikian.',
+            'Perundingan dengan peguam boleh menjadi perkhidmatan berbayar. Halaman ini tidak menyatakan bahawa perbualan pertama tanpa bayaran, dan tiada bahagian halaman ini boleh dibaca seolah-olah perbualan pertama adalah tanpa bayaran.',
             'Jika perundingan berbayar, jumlah dan cara bayaran dimaklumkan sebelum ia berlangsung.',
           ],
         },
@@ -842,7 +842,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Apa jika hal saya sangat mendesak?',
           answer:
-            'Nyatakan tempoh atau tarikh pada surat rasmi di awal ringkasan anda, supaya tarikh itu kelihatan semasa semakan. Halaman ini tidak mempunyai saluran kecemasan dan tidak menjanjikan tempoh jawapan; jika hal anda tidak boleh menunggu, anda sepatutnya mencari jalan lain di tempat anda secara selari.',
+            'Nyatakan tempoh atau tarikh pada surat rasmi di awal ringkasan anda, supaya tarikh itu kelihatan semasa semakan. Halaman ini tidak mempunyai saluran kecemasan dan tidak menjanjikan tempoh jawapan; jika hal anda tidak boleh menunggu, anda sepatutnya mencari saluran lain di tempat anda pada masa yang sama.',
         },
       ],
     },
@@ -933,14 +933,14 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           heading: 'Skop undang-undang yang terpakai',
           paragraphs: [
             'Firma beramal di bawah undang-undang Taiwan, dan halaman ini hanya bercakap tentang kerja dalam rangka itu.',
-            'Kandungan bukan nasihat menurut undang-undang suatu bidang kuasa selain Taiwan, termasuk undang-undang tempat anda tinggal. Jika sebahagian hal anda menyentuh bidang kuasa lain, kami jelaskan bersama anda pakar berkelayakan yang diperlukan bagi bahagian itu.',
+            'Kandungan bukan nasihat menurut undang-undang suatu bidang kuasa selain Taiwan, termasuk undang-undang tempat anda tinggal. Jika sebahagian hal anda menyentuh bidang kuasa lain, kami jelaskan kepada anda siapa pakar berkelayakan yang diperlukan bagi bahagian itu.',
           ],
         },
         {
           heading: 'Hubungan antara peguam dan klien tidak timbul dengan sendirinya',
           paragraphs: [
             'Membaca halaman ini, menghantar borang atau e-mel dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.',
-            'Hubungan ini timbul hanya selepas hal disemak dan kedua-dua pihak mengesahkan secara bertulis bahawa firma menerima kes itu.',
+            'Hubungan ini timbul hanya selepas hal disemak dan kedua-dua pihak mengesahkan bahawa firma menerima kerja itu.',
           ],
         },
         {

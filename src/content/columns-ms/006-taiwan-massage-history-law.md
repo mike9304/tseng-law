@@ -49,7 +49,7 @@ Apabila Taiwan mengisytiharkan dan menguatkuasakan, pada 1980, undang-undang keb
 
 hanya orang kurang upaya penglihatan (視障者) yang benar-benar boleh menjalankan pekerjaan urutan (按摩業).
 
-Individu tanpa kurang upaya penglihatan (非視障者) yang menjalankan pekerjaan ini adalah haram.
+Individu tanpa kurang upaya penglihatan (非視障者) yang menjalankan pekerjaan ini adalah dilarang.
 
 Undang-undang ini kekal hingga 2003; pada masa itu, Encik Lin, yang mengurus salun gunting rambut,
 
@@ -71,7 +71,7 @@ Itulah sebabnya penggubal undang-undang masa itu, untuk melindungi orang kurang 
 
 menyediakan undang-undang yang melindungi pekerjaan dan hak hidup (生存權) orang kurang upaya penglihatan.
 
-Namun, dengan berlalunya masa dan perluasan pasaran penggunaan,
+Namun, dengan berlalunya masa dan perluasan pasaran pengguna,
 
 timbul pendapat bahawa melindungi hanya hak orang kurang upaya penglihatan terlalu menyekat hak kerja orang tanpa kurang upaya penglihatan.
 
@@ -81,7 +81,7 @@ Ditanyakan contohnya sama ada peraturan bertulis yang hanya membenarkan orang ku
 
 dan diragui sama ada peraturan ini benar-benar menyumbang untuk melindungi pekerjaan dan sara hidup orang kurang upaya penglihatan.
 
-Akhirnya, Hakim-hakim Besar Mahkamah Perlembagaan (大法官) mengisytiharkan tidak berperlembagaan (違憲) peruntukan yang hanya membenarkan orang kurang upaya penglihatan menjalankan pekerjaan urutan.
+Akhirnya, hakim perlembagaan (大法官) mengisytiharkan tidak berperlembagaan (違憲) peruntukan yang hanya membenarkan orang kurang upaya penglihatan menjalankan pekerjaan urutan.
 
 ​
 

@@ -49,9 +49,9 @@ Að slíkar sérfræðiniðurstöður komi í einstökum málum þýðir ekki a�
 
 ## Atriði sem kanna skal við mat á slysábyrgð
 
-Áður en framúrakstur hefst skaltu fyrst kanna hvort staðurinn eða umferðarástandið falli undir bann við framúrakstri. Gildi aðferðin við framúrakstur á sömu akrein, gefðu lögbundið flautu- eða ljósamerki án þess að þvinga ökutækið á undan til að víkja, bíddu eftir skýru vikunarmerki og ljúktu framúrakstrinum með nægilegri fjarlægð og öruggri fjarlægð til að komast aftur inn á akreinina (超車).
+Áður en framúrakstur hefst skaltu fyrst kanna hvort staðurinn eða umferðarástandið falli undir bann við framúrakstri. Gildi aðferðin við framúrakstur á sömu akrein, gefðu lögbundið flautu- eða ljósamerki án þess að þvinga ökutækið á undan til að víkja, bíddu eftir skýru vikunarmerki og ljúktu framúrakstrinum með nægilegu hliðarbili og öruggri fjarlægð til að komast aftur inn á akreinina (超車).
 
-Fylgni við 101. gr. er mikilvæg, en tryggir ekki eitt og sér að slys séu forðast né tiltekna niðurstöðu síðari sérfræðiathugunar eða málshöfðunar. Ökumenn skulu halda aukaöryggismörkum og laga sig að aðstæðum fram undan.
+Fylgni við 101. gr. er mikilvæg, en tryggir ekki eitt og sér að komist verði hjá slysi né tiltekna niðurstöðu síðari sérfræðiathugunar eða málshöfðunar. Ökumenn skulu halda aukaöryggismörkum og laga sig að aðstæðum fram undan.
 
 Til viðbótar máttu skoða [skýringarmynd um reglur og aðferð við framúrakstur](https://gonews.com.tw/car/daily/21934/). Þar sem þetta er aukaheimild ættir þú, við mat á lagalegum skilyrðum, einnig að lesa gildandi opinberar reglur (道路交通安全規則).
 

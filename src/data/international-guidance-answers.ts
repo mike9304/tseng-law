@@ -1461,7 +1461,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Þessi síða sýnir prófíla lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis. Lögmaðurinn Wei Tseng (曾雋崴) hefur lögmannsréttindi á Taívan og er yfirlögmaður stofunnar; hún vinnur með skjólstæðingum frá Kóreu og Japan og öðrum alþjóðlegum skjólstæðingum. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
+        'Þessi síða sýnir prófíla lögmanna Hovering, stjórnar Kóreureksturs og tengds endurskoðunarfyrirtækis. Lögmaðurinn Wei Tseng (曾雋崴) hefur lögmannsréttindi á Taívan og er yfirlögmaður stofunnar; hún vinnur með skjólstæðingum frá Kóreu og Japan og öðrum alþjóðlegum skjólstæðingum. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
       sources: ['/is/about', '/is/contact'],
     },
     pricing: {

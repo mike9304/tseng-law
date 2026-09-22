@@ -13,14 +13,14 @@ faq:
   - q: "Hvað er PIF, og er það sama málsmeðferð og vöruskráning hjá TFDA?"
     a: "Vöruskráning og PIF eru tvö aðskilin fyrirkomulög. Vöruskráning (產品登錄) er sérstök formleg meðferð á vöruskráningarvettvangi TFDA fyrir snyrtivörur (衛生福利部食品藥物管理署). PIF er skrá sem safnar gögnum um gæði, öryggi, samsetningu, fullyrta virkni, framleiðsluaðferð, prófunarniðurstöður og öryggismat o.fl., og sem framleiðandi eða innflytjandi snyrtivara semur, uppfærir og varðveitir; PIF sjálft er ekki skjal sem skal lagt fram fyrir fram til TFDA (產品資訊檔案). Frá 1. júlí 2026 falla að jafnaði allar snyrtivörur undir PIF-fyrirkomulagið, að undanskildum föstum handunnum sápum sem framleiddar eru á framleiðslustað sem er undanþeginn verksmiðjuskráningu (工廠登記)."
   - q: "Hvaða orðalagi skal gæta sérstaklega í auglýsingum snyrtivara á Taívan?"
-    a: "Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæf eða ofdrifin orðalag og fullyrðing um læknisvirkni eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin (罰鍰) er 40.000 TWD til 200.000 TWD (新臺幣) vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknisvirkni. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing."
+    a: "Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæft eða ofdrifið orðalag og fullyrðing um læknandi verkun eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin (罰鍰) er 40.000 TWD til 200.000 TWD (新臺幣) vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknandi verkun. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing."
 ---
 
 # Innkoma á snyrtivörumarkað Taívan: val á innflytjanda, vöruskráning, gerð og varðveisla PIF og auglýsingareglur
 
 ![Vörugögn og reglukönnun sem nauðsynleg eru til að koma inn á snyrtivörumarkað Taívan](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Erlent snyrtivörumerki sem ætlar að dreifa vörum á Taívan skal ákveða hverjum innflutningur er falinn, hvenær vöruskráningu (產品登錄) lýkur, hver stýrir vöruupplýsingaskránni (產品資訊檔案, Product Information File, PIF) og hvar, og eftir hvaða mælikvarða merking (標示) og auglýsing (廣告) eru skoðaðar. Erlent vörumerki getur annaðhvort notað staðbundinn innflytjanda eða rekið starfsemina á Taívan sjálft, svo undirbúningi sölu er ekki lokið við félagastofnunina eina.
+Erlent snyrtivörumerki sem ætlar að dreifa vörum á Taívan skal ákveða hverjum innflutningur er falinn, hvenær vöruskráningu (產品登錄) lýkur, hver stýrir vöruupplýsingaskránni (產品資訊檔案, Product Information File, PIF) og hvar, og eftir hvaða mælikvarða merking (標示) og auglýsing (廣告) eru skoðaðar. Erlent vörumerki getur annaðhvort notað staðbundinn innflytjanda eða rekið starfsemina á Taívan sjálft, og félagastofnun ein og sér lýkur ekki undirbúningi sölu.
 
 Gildandi skyldur geta verið misjafnar eftir vörutegund og framleiðslustað (製造場所), raunverulegu innflutningsformi, dreifingaraðferð og auglýsingainnihaldi. Hér á eftir er greint á milli forms innkomu á Taívan og lögbundins ábyrgðaraðila, vöruskráningar hjá TFDA, gerðar, uppfærslu og varðveislu PIF, merkingar og auglýsinga og skoðunar og úrbóta. Áður en raunveruleg afhendingaráætlun er ákveðin er ráðlegt, vöru fyrir vöru, að staðfesta að nýju nýjustu reglur og leiðbeiningar lögbærrar stofnunar (主管機關).
 
@@ -40,9 +40,9 @@ Við hönnun raunverulegrar verkaskiptingar er það sem fyrst skal staðfesta, 
 
 ### Þegar starfsemin á Taívan er rekin beint
 
-Taívanskt dótturfélag og útibú erlends félags eru ekki sama skipulagið. Dótturfélagið er sérstakur lögaðili stofnaður samkvæmt rétti Taívan, en útibúið er skráð sem hluti höfuðstöðva (本公司) hins erlenda félags. Þau greinast í lögaðilastöðu, ábyrgð höfuðstöðva, bókhalds- og skattalega meðferð, flutning hagnaðar, fyrirsvarsrétt og innra eftirlit, svo skipulagsformið má ekki velja eftir sölustjórninni einni.
+Taívanskt dótturfélag og útibú erlends félags eru ekki sama skipulagið. Dótturfélagið er sérstakur lögaðili stofnaður samkvæmt rétti Taívan, en útibúið er skráð sem hluti höfuðstöðva (本公司) hins erlenda félags. Þau greinast í lögaðilastöðu, ábyrgð höfuðstöðva, bókhalds- og skattalega meðferð, flutning hagnaðar, fyrirsvarsrétt og innra eftirlit, svo skipulagsformið má ekki velja einungis eftir því hversu mikilli stjórn á sölunni er óskað.
 
-Sé málsmeðferð erlendrar fjárfestingar nauðsynleg skal staðfesta leiðbeiningar **fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司)** sem nú er lögbær stofnun. Sá tími sem þarf til fjárfestingarheimildar, millifærslu fjár, skráningar félags eða útibús, opnunar bankareiknings, skattaskráningar (稅籍登記) og öflunar innflytjandastöðu er misjafn eftir fjárfesti, grein, skipulagsformi, fram lögðum gögnum og því hvort leiðrétting eða viðbót kemur til. Því skal, í stað þess að ákveða dagsetningu markaðssetningar út frá einum föstum tímaramma, fyrst staðfesta beitingu hverrar formlegrar meðferðar og nýjustu skilakröfur.
+Sé málsmeðferð erlendrar fjárfestingar nauðsynleg skal staðfesta leiðbeiningar **fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司)** sem nú er lögbær stofnun. Sá tími sem þarf til fjárfestingarheimildar, millifærslu fjár, skráningar félags eða útibús, opnunar bankareiknings, skattaskráningar (稅籍登記) og öflunar innflytjandastöðu er misjafn eftir fjárfesti, atvinnugrein, skipulagsformi, framlögðum gögnum og því hvort leiðrétting eða viðbót kemur til. Því skal, í stað þess að ákveða dagsetningu markaðssetningar út frá einum föstum tímaramma, fyrst staðfesta beitingu hverrar formlegrar meðferðar og nýjustu skilakröfur.
 
 Hvaða skipulag sem valið er, er miðlægi ábyrgðaraðilinn í snyrtivörureglunum **framleiðandi eða innflytjandi snyrtivara (化粧品製造或輸入業者)**. Röðun vörugagna eða öryggismat (安全性評估) má fela utanaðkomandi sérfræðingi, en það eitt að fela verkið flytur ekki lögbundna ábyrgð framleiðanda eða innflytjanda. Að greina milli verkaskiptingar samkvæmt samningi og ábyrgðaraðila samkvæmt reglunum er upphafspunktur könnunar innkomuskipulagsins.
 
@@ -54,7 +54,7 @@ Vöruskráning og PIF eru tvö aðskilin fyrirkomulög. Vöruskráning er sérst
 
 Vöruskráning snyrtivara fer fram á vöruskráningarvettvangi TFDA fyrir snyrtivörur. Framleiðandi eða innflytjandi snyrtivara skal ljúka vöruskráningu áður en varan er afhent, seld, gefin endurgjaldslaust, sýnd opinberlega (公開陳列) eða lögð neytanda til prufunotkunar. Undirbúninginn má ekki aðeins haga eftir sölu gegn endurgjaldi; áætlun kynningargjafa eða prufunotkunar neytanda skal einnig taka tillit til skráningartímans.
 
-Gildistími vöruskráningar er 3 ár. Ætlir þú að halda afhendingu áfram skal umsókn um framlengingu (展延) lögð fram innan 3 mánaða fyrir lokin. Breyti skráðar upplýsingar, svo sem vöruheiti, notkun, form vörunnar (劑型), innihaldsefni og framleiðslustaður, skal einnig staðfesta hvort formleg meðferð sem svarar innihaldi breytingarinnar sé nauðsynleg.
+Gildistími vöruskráningar er 3 ár. Ætlir þú að halda afhendingu áfram skal umsókn um framlengingu (展延) lögð fram innan 3 mánaða fyrir lokin. Breyti skráðar upplýsingar, svo sem vöruheiti, notkun, skammtaformið (劑型), innihaldsefni og framleiðslustaður, skal einnig staðfesta hvort formleg meðferð sem svarar innihaldi breytingarinnar sé nauðsynleg.
 
 Vöruskráning er formleg meðferð til að tilkynna tilteknar upplýsingar á vettvanginum. Það að skráningu sé lokið þýðir ekki að öll gögn sem PIF krefst séu fullkomin, og er ekki mat um að merking eða auglýsing vörunnar samræmist rétti. Áætlun vöruskráningar, stjórnun PIF og skoðun merkingar og auglýsinga skulu reknar sem aðskilin eftirfylgnisatriði.
 
@@ -64,7 +64,7 @@ PIF er skipulagt safn gagna, þannig uppbyggt að áfram megi lýsa gæðum og �
 
 PIF-fyrirkomulagið hefur verið beitt í áföngum eftir vöruhópum. Frá 1. júlí 2026 falla einnig þær snyrtivörur sem eftir eru undir beitingarsviðið, svo það gildir að jafnaði um allar snyrtivörur. Undanþágan takmarkast við fasta handunna sápu sem framleidd er á framleiðslustað sem er undanþeginn verksmiðjuskráningu. Vara er ekki undanþegin af því einu að hún sé handunnin, eða að hún beri heitið sápa; staðfesta skal hvort tveggja, fasta formið og skilyrði undanþágu framleiðslustaðarins frá verksmiðjuskráningu (工廠登記).
 
-Starf við PIF, þar á meðal öryggismat, má styðja þriðji aðili sem sameinar nauðsynlegt hæfi og getu. Einnig þegar þriðji aðili styður við gerð gagnanna eða hjálpar til við að varðveita þau, stendur lögbundin ábyrgð framleiðanda eða innflytjanda snyrtivara. Koma skal á skipulagi sem leyfir upprunaframleiðanda, prófunarstofu, öryggismatsaðila og fyrirtækinu á Taívan að miðla innbyrðis breytingaupplýsingum og nýjustu undirrituðu gögnum.
+Starf við PIF, þar á meðal öryggismat, má styðja þriðji aðili sem hefur nauðsynlegt hæfi og getu. Einnig þegar þriðji aðili styður við gerð gagnanna eða hjálpar til við að varðveita þau, stendur lögbundin ábyrgð framleiðanda eða innflytjanda snyrtivara. Koma skal á skipulagi sem leyfir upprunaframleiðanda, prófunarstofu, öryggismatsaðila og fyrirtækinu á Taívan að miðla innbyrðis breytingaupplýsingum og nýjustu undirrituðu gögnum.
 
 ### Uppfærsla og varðveisla
 
@@ -84,15 +84,15 @@ Endurköllun eða förgun (銷毀) er ekki ráðstöfun sem sjálfkrafa fylgir h
 
 ## 3. Reglur um merkingu, kynningu og auglýsingu
 
-Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæf eða ofdrifin orðalag og fullyrðing um læknisvirkni eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin er 40.000 TWD til 200.000 TWD vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknisvirkni. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing.
+Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæft eða ofdrifið orðalag og fullyrðing um læknandi verkun eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin er 40.000 TWD til 200.000 TWD vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknandi verkun. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing.
 
 ### Mat eftir heild framsetningarinnar, ekki eftir hverju orði
 
-Hvort merking, kynning (宣傳) eða auglýsing sé röng eða ofdrifin, eða hvort þær fullyrði læknisvirkni (醫療效能), er ekki metið eftir 1 tilteknu orði einu. Saman eru skoðuð vöruheiti, setning, mynd, tákn, hljóð, samhengi fyrir og eftir og heildarinntrykk sem neytandinn fær. Það inntrykk sem miðlæg auglýsingaframsetning myndar leysist ekki sjálfkrafa upp við takmarkandi texta með smáu letri einum, svo bæði hvern texta og auglýsinguna eins og hún birtist skal skoða.
+Hvort merking, kynning (宣傳) eða auglýsing sé röng eða ofdrifin, eða hvort þær fullyrði læknandi verkun (醫療效能), er ekki metið eftir einu tilteknu orði. Saman eru skoðuð vöruheiti, setning, mynd, tákn, hljóð, samhengi fyrir og eftir og heildarinntrykk sem neytandinn fær. Það inntrykk sem miðlæg auglýsingaframsetning myndar leysist ekki sjálfkrafa upp við takmarkandi texta með smáu letri einum, svo bæði hvern texta og auglýsinguna eins og hún birtist skal skoða.
 
-Sé til dæmis sagt að snyrtivara meðhöndli unglingabólur, hafi bólgueyðandi virkni eða bakteríudrepandi virkni, getur þetta verið fullyrðing um læknisvirkni. Einnig skal saman staðfesta háttinn á að sameina heiti sjúkdóms við vöruna, myndir fyrir og eftir notkun, framsetningu sem vekur hugmynd um heilbrigðisstarfsmann, og samhengið sem tengir skýringu innihaldsefnisins við lækningavirkni vörunnar.
+Sé til dæmis sagt að snyrtivara meðhöndli unglingabólur, hafi bólgueyðandi virkni eða bakteríudrepandi virkni, getur þetta verið fullyrðing um læknandi verkun. Einnig skal saman staðfesta háttinn á að sameina heiti sjúkdóms við vöruna, myndir fyrir og eftir notkun, framsetningu sem vekur hugmynd um heilbrigðisstarfsmann, og samhengið sem tengir skýringu innihaldsefnisins við lækningavirkni vörunnar.
 
-Stjórnvaldssekt vegna ranghæfra eða ofdrifinna auglýsinga (虛偽誇大廣告) er 40.000 TWD til 200.000 TWD, og stjórnvaldssekt vegna fullyrðingar um læknisvirkni er 600.000 TWD til 5.000.000 TWD. Vegna þess að bilið greinist eftir brotategund skal heild auglýsingaframsetningarinnar fyrir birtingu borin saman við stoðgögnin.
+Stjórnvaldssekt vegna ranghæfra eða ofdrifinna auglýsinga (虛偽誇大廣告) er 40.000 TWD til 200.000 TWD, og stjórnvaldssekt vegna fullyrðingar um læknandi verkun er 600.000 TWD til 5.000.000 TWD. Vegna þess að bilið greinist eftir brotategund skal heild auglýsingaframsetningarinnar fyrir birtingu borin saman við stoðgögnin.
 
 ### Áhrifavaldar, umsagnaraðilar og söluaðilar
 
@@ -104,7 +104,7 @@ Færslur áhrifavalda, umsagnaraðila eða söluaðila geta, eftir innihaldi og 
 
 Söluundirbúningurinn á Taívan, sé hann staðfestur í eftirfarandi röð, getur dregið úr hættu á að rugla 1 fyrirkomulagi saman við annað.
 
-1. Ákveða hvort stofna eigi dótturfélag (子公司) eða útibú (分公司) á Taívan sjálfur, eða fela staðbundnum innflytjanda innflutning og sölu.
+1. Ákveða hvort stofna eigi dótturfélag (子公司) eða útibú (分公司) á Taívan, eða fela staðbundnum innflytjanda innflutning og sölu.
 2. Staðfesta þann aðila sem ber lögbundna ábyrgð sem framleiðandi eða innflytjandi snyrtivara, og ábyrgðaraðila starfsins samkvæmt samningi.
 3. Ljúka vöruskráningu áður en afhending, sala, gjöf endurgjaldslaust, opinber sýning eða prufunotkun neytanda á sér stað.
 4. Semja PIF vöru fyrir vöru, uppfæra breytingar og varðveita það í lögbundinn tíma og á lögbundnum stað.

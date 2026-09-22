@@ -63,7 +63,7 @@ Hafi verið ákveðið að stofna sjálfstæðan lögaðila á Taívan, skal ein
 
 Það má mynda með 1 eða fleiri einstaklingum, eða með hluthöfum sem eru lögaðilar á Taívan eða erlendir; hluthafar bera að jafnaði ábyrgð takmarkaða við fjárhæð hlutafjárframlagsins. Félagið hefur frá 1 til 3 stjórnarmenn, valdir meðal hluthafa. Hluthafar sem ekki stjórna rekstri geta beitt eftirlitsrétti, án þess að sérstakur eftirlitamaður félags (監察人) þurfi að vera skipaður. Nema samþykktir kveði á um annað gildir eitt atkvæði á einn hluthafa, svo atkvæðavægið þarf ekki að fylgja hlutfalli hlutafjárframlags. Framsal hlutafjárframlags almenns hluthafa krefst að jafnaði samþykkis meira en helmings atkvæðisréttar hinna; fyrir stjórnarmann, 2/3 eða meira. Það hæfir betur einföldum hluthafasamböndum og stöðugri stjórn en tíðri fjármögnun eða viðskiptum með hluti. Síðar má umbreyta því í hlutafélag (股份有限公司).
 
-### Hlutafélag (股份有限公司): hæfir ef aðrir fjárfestar eiga að koma inn, eða skráning er fyrirsjáanleg
+### Hlutafélag (股份有限公司): hæfir ef aðrir fjárfestar eiga að koma inn, eða skráning í kauphöll kemur til greina
 
 Hlutafé er skipt í hluti. Að jafnaði eru 2 hluthafar eða fleiri krafðir, en ríki eða lögaðili getur stofnað eitt og sér, og erlendur lögaðili getur átt 100 %. Hlutir eru að jafnaði frjálst framseljanlegir, með lögbundnum undantekningum; sérstaka hluti og kauprétt starfsmanna má móta samkvæmt lögum. Það hæfir fyrirtækjum sem búast við fjárfestum, hlutaviðskiptum, hlutahvata til starfsmanna eða síðari samruna, yfirtöku, skráningu í kauphöll eða skráningu á verðbréfamarkaði fyrir skráningu (興櫃); það takmarkast ekki við stórfyrirtæki. Í stjórnskipulagi getur félag án opinbers útboðs samkvæmt samþykktum verið án stjórnar og aðeins haft 1 eða 2 stjórnarmenn. Félag með eitt ríki eða lögaðila sem einn hluthafa getur samkvæmt samþykktum verið án eftirlitsmanns félags (監察人). Ekki þarf hvert hlutafélag (股份有限公司) að láta ársreikning vottast. Helstu endurskoðunarviðmið almenns félags eru innborgað hlutafé að fjárhæð 30.000.000 TWD (新臺幣), eða, þar undir, rekstrartekjur 100.000.000 TWD eða 100 starfsmenn skráðir í launþegatryggingu (勞工保險); félög með opinbert útboð fylgja verðbréfareglum.
 
@@ -79,7 +79,7 @@ Ofangreint er leiðbeining um mótun félagaforms og samningsskipulags, ekki rá
 
 Að ljúka skráningu á Taívan merkir ekki að starfsfólk erlendra höfuðstöðva megi sjálfkrafa vinna á Taívan. Útlendingur sem vinnur á Taívan þarf lögmætt atvinnuleyfi og, við lengri dvöl, dvalarleyfi. Að jafnaði sækir vinnuveitandi um atvinnuleyfið og samsvarandi dvalarleyfi.
 
-Það er tiltölulega einfaldara að öðlast atvinnuleyfi fyrir stjórnanda dótturfélags á Taívan eða útibús erlends félags. Til að sækja um það fyrir annan útlending eða þá sem á eftir koma krefst vinnumálaráðuneytið, eftir grein, viðmiða um hlutafé, veltu eða annað. Sé gert ráð fyrir að erlent starfsfólk vinni á Taívan, skal áður en félagið er stofnað staðfesta hvort fyrirhugað hlutafé nái viðeigandi viðmiði.
+Það er tiltölulega einfaldara að öðlast atvinnuleyfi fyrir stjórnanda dótturfélags á Taívan eða útibús erlends félags. Til að sækja um það fyrir annan útlending eða þá sem á eftir koma krefst vinnumálaráðuneytið, eftir atvinnugrein, viðmiða um hlutafé, veltu eða annað. Sé gert ráð fyrir að erlent starfsfólk vinni á Taívan, skal áður en félagið er stofnað staðfesta hvort fyrirhugað hlutafé nái viðeigandi viðmiði.
 
 ## 7. Skipulag sem eftir þróunarstigi starfseminnar má bera saman
 

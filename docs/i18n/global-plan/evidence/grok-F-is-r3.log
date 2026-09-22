@@ -1,0 +1,133 @@
+WO-F-is r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-is-r3
+date: 2026-09-23
+
+## Rows applied
+
+Part A (is-a.md), applied:
+3 privacy store “óopinber” → gagnageymsla sem ekki er opin almenningi
+4 son-jungmin bio: samskipti milli teymanna + bakgrunnur í tölvunarfræði
+5 Legal Aid Foundation: Lögfræðiaðstoðarstofnunin (Legal Aid Foundation), útibú í Taichung
+6 “rekstrarstjórnarinnar” → “stjórnar Kóreureksturs” (team description, lawyers page description, lawyers answer)
+7 columns note + heading “Fjórir listar eftir frummáli”; body no longer says “þýðingarlistar”
+8 “skýrum við með þér” → “skýrum við fyrir þér”
+9 “skref sem krafist er” → “skref sem taka þarf”
+10 form field “Þennan reit verður að fylla út.”
+11 greinaleyfi / Greinareglur and the same industry sense of “grein” (see systemic)
+12 birgjaverðs / birgjaverði → skuldir við birgja
+13 misplaced (無力清償) on the assets-do-not-cover-debts clause removed; 資不抵債 / 無力清償 stay distinguished above
+14 eftir merkingu
+15 má … höfða (infinitive)
+16 route depends on whether limitation has been interrupted
+17 skilgreiningar laganna á farþegum og þriðja aðila
+18 Tekjutap (收入損失) gloss moved off the recovery period
+20 tilkynningunni ekki skilað (not “fellur niður”)
+21 þvegið á í
+22 modal “mega” so the plural subject parses
+23 four spare digits in 007: annarrar hliðar, eitt erlent skilnaðarvottorð, einn frest, eitt atvik
+24 second copy of the improper-means line restored to “Sama gildir …” (block kept)
+25 either the company or the employee, depending on fault, may withhold or claim severance (split across the existing three blocks)
+26 launþegatryggingu Taívan / sjúkratryggingu Taívan
+
+Part B (is-b.md), applied:
+1 first-instance judgment discloses nothing about the appeal outcome or the settlement amount
+2 ask the gym to preserve the footage
+3 skammtaformið (劑型)
+4 degree of sales control, not the sales department
+5 hliðarbil vs fjarlægð
+6 one additional month on top of the three-month formation (digits kept)
+7 time to fill the post
+8 tími eignunar
+9 staðfestingu erfðaskrár fyrir dómstóli (檢認)
+10 skal ákveða út frá bestu hagsmunum
+11 title, H1, heading and “Framsalsaðferðin” now mean entrusting the haul to a licensee; real transfers of the business or assets stay “framsal”
+12 geographic rekstrarsvæði
+13 staðfesting fjárfestingarfjárhæðarinnar (投資額審定)
+14 skráning í kauphöll kemur til greina
+15 mælikvarða þegar þjónustan er veitt / gera ráð fyrir
+16 finite verb restored on the evidence sentence
+17 fara í þær allar / fara í allar
+18 Ranghæft eða ofdrifið orðalag (FAQ and body)
+19 framlögðum
+20 checklist drops “sjálfur”
+21 að komist verði hjá slysi
+22 the questions sentence is self-standing
+23 the permitted-use sentence ends; the office-building sentence is self-standing
+25 skal kanna (agreement)
+26 háð leyfishafanum
+27 upptökur úr eftirlitsmyndavélum (010 and the same calque in 003)
+28 Karlkyns háskólanemi in headlines, alts and link texts
+29 rifinn / bráðan dropped; brjósklos kept
+30 hvaðan skaðabæturnar koma
+31 leita sér ráðgjafar
+32 hefur nauðsynlegt hæfi
+33 félagastofnun ein og sér lýkur ekki undirbúningi sölu
+34 fullyrðing/fullyrðingar/fullyrði um læknandi verkun (FAQ, body, fine)
+35 einu tilteknu orði
+36 the address point is a full sentence in each of the three existing blocks
+
+008/009 fragment lines that had no finite verb, or continued in lowercase after a paragraph break, were rewritten inside the same blocks (about 15 lines in 008, 6 in 009). The anecdote stays the softened entitlement wording already in the file.
+
+## Rows skipped
+
+A1 P1, 004 link “(10)”. Removing the digit failed numbers: missing 10, cited to the Korean link “영업세법 제10조” on the same URL (flno=3). Digit restored. The link text already named the nonresident dividend rule; the URL was not changed.
+A2 P2, “TWD 1.57M”. ACCEPTED-ROUND pins that figure byte-identical. Not rewritten as “1,57 milljónir TWD”.
+A19 P2, promote Q16–close to headings and delete U+200B in 003/005/006/008/009. Skipped. The checker compares heading levels and ZWSP counts with the Korean source. English Q16 is body text, not a heading. Empty bold lines `**​**` in 005 are the same ZWSP slots.
+A23, only the “í 1 mánuð” half in 002 and 008. Korean source is “1개월”. The digit stays. The four 007 phrases in the same row were applied.
+B24 P2, delete every U+200B in 013 and 015. Skipped. ZWSP count is pinned to the Korean source (including the lines that contain only U+200B).
+
+No P3 rows in is-a.md or is-b.md.
+
+## Systemic patterns and instances
+
+- “grein” meaning an industry or a sector licence, where it reads as a statutory article: about 34 instances. 001 (leyfi eftir atvinnugrein, atvinnugreinum, heading, fagsvið), 002 (leyfa eftir atvinnugrein, atvinnugrein), 004 (Reglur eftir atvinnugrein, leyfisskyldur, Atvinnugreina-), 011 and 018 (eftir atvinnugrein), 017 (atvinnugreinafélag ×7, atvinnugreinasamþykki/samþykkis ×5, samþykktra atvinnugreina ×2). Left unchanged: “þessi grein”, “greinast/greina/gera grein”, “starfsgrein” for 營業項目, and “gr.” for an article of a statute.
+- Spare digit where Icelandic wants a word: 5 instances applied (007 ×4, 011 “einu tilteknu orði”). Month digits that translate Korean “1개월” were not turned into words.
+- Finite verb missing, or a sentence continuing in lowercase after a paragraph break: about 24 instances in 008, 009 and 013. Blocks were not merged or split.
+- “læknisvirkni” → “læknandi verkun”: 7 instances in 011.
+- “karlmaður í háskóla” → “karlkyns háskólanemi”: 14 headline, alt and link texts in 010.
+- Outsourcing called “framsal”: 4 instances (title, H1, heading, method word) in 017. Transfers of the business, assets, shares or vehicles stay “framsal”.
+- “rekstrarstjórnarinnar” dropping Korea: 3 instances.
+- Supplier amounts called prices (“birgjaverð”): 2 instances in 002.
+- Footage calque “myndavélaefni”: 2 instances (003 request, 010 collection) plus the 010 notification sentence.
+- U+200B: 0 deleted.
+- “TWD 1.57M”: 0 changed.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-is --lang is 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=105
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-is src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      25
+
+No Icelandic test expectation had to be rewritten. Disclosure-parity regexes still match. llms.txt `is` notices were left unchanged because the FAQ and privacy sentences they quote were not rewritten. The literal token `llms.txt` stays.
+
+## Reviewer got wrong (not applied)
+
+- “TWD 1.57M” is not an Icelandic spelling error to fix in this lane. A test and ACCEPTED-ROUND pin that byte string. The German “1,57 Millionen” hint does not apply.
+- Q16 through the close are body lines in the English and Korean sources, not missing headings. Turning them into `##` headings would fail the heading-level check. The U+200B blanks, including lines that are only that character and the empty `**​**` lines in 005, are in the Korean source; deleting them fails the ZWSP count. The real prose defect in 008 and 009 (lines with no finite verb) was fixed inside the existing blocks.
+- “(10)” on the 004 dividend-rule link is a bad article number for flno=3, as the reviewer says. It is also the digit the checker still counts from Korean “제10조” on that same link. Dropping it fails the file. The digit stays.
+- “í 1 mánuð” in 002 and 008 is the Korean “1개월”, not a spare digit glued onto a word. “1 mánuð” in 013 was kept on purpose and only given “til viðbótar”.
+- No gender change for Wei Tseng. The reviewer’s own verdict is right: “lögmaður” stays the ordinary Icelandic title, grammatically masculine, for a woman lawyer. “Hún” is already used where the pronoun is marked.

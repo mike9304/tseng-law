@@ -2031,7 +2031,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hvað við gerum',
           paragraphs: [
-            'Hovering International Law Firm er lögmannsstofa með aðsetur á Taívan. Hún starfar samkvæmt rétti Taívan og hefur skrifstofur í Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Við ráðleggjum fyrirtækjum, flytjum mál fyrir dómstólum og fylgjum skjólstæðingum erlendis frá í gegnum þau skref sem krafist er á Taívan.',
+            'Hovering International Law Firm er lögmannsstofa með aðsetur á Taívan. Hún starfar samkvæmt rétti Taívan og hefur skrifstofur í Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Við ráðleggjum fyrirtækjum, flytjum mál fyrir dómstólum og fylgjum skjólstæðingum erlendis frá í gegnum þau skref sem taka þarf á Taívan.',
             'Allt efnið hér er almennt. Úrslit máls ráðast af málsatvikum, gildandi reglum og tímasetningu. Þessar leiðbeiningar koma ekki í stað samtals við lögmann um skjölin þín.',
           ],
         },
@@ -2159,7 +2159,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'LÖGMENN',
       title: 'Alþjóðlegt teymi Hovering',
-      description: 'Prófílar lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis.',
+      description: 'Prófílar lögmanna Hovering, stjórnar Kóreureksturs og tengds endurskoðunarfyrirtækis.',
       intro: '',
       sections: [],
     },
@@ -2363,7 +2363,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Geymslustaður og þjónustuaðilar',
           paragraphs: [
-            'Þessi vefur er hýstur hjá Vercel og sendingin þín er geymd í óopinberri gagnageymslu þessarar þjónustu. Tölvupóstur er sendur um póstþjónustuna sem skrifstofan notar.',
+            'Þessi vefur er hýstur hjá Vercel og sendingin þín er geymd í gagnageymslu þessarar þjónustu sem ekki er opin almenningi. Tölvupóstur er sendur um póstþjónustuna sem skrifstofan notar.',
             'Netþjónar einstakra þjónustuaðila geta staðið utan Taívan, svo gögnin þín geta verið geymd og unnin þar. Þegar geymslutilganginum er náð eru gögnin eydd án tafar; gögn sem varðveita ber samkvæmt gildandi reglum eru geymd þann tíma. Fyrirspurnir um persónuupplýsingar berast á wei@hoveringlaw.com.tw.',
           ],
         },
@@ -2388,7 +2388,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lagalegt gildissvið',
           paragraphs: [
             'Skrifstofan starfar samkvæmt rétti Taívan og þessi síða varðar einungis vinnu innan þess ramma.',
-            'Efnið er ekki ráðgjöf samkvæmt rétti annars lögsagnarumdæmis en Taívan, þar á meðal rétti búsetustaðar þíns. Snerti hluti málsins þíns annað lögsagnarumdæmi, skýrum við með þér hvaða hæfur fagaðili er nauðsynlegur fyrir þann hluta.',
+            'Efnið er ekki ráðgjöf samkvæmt rétti annars lögsagnarumdæmis en Taívan, þar á meðal rétti búsetustaðar þíns. Snerti hluti málsins þíns annað lögsagnarumdæmi, skýrum við fyrir þér hvaða hæfur fagaðili er nauðsynlegur fyrir þann hluta.',
           ],
         },
         {
@@ -2416,10 +2416,10 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         'Skrifstofan birtir greinar um algengar spurningar í rétti Taívan. Greinar sem eru tiltækar á íslensku standa á þessari síðu; til viðbótar eru fjórir tenglar sem hver opnar greinalista eins frummáls.',
       sections: [
         {
-          heading: 'Fjórir listar eftir tungumáli',
+          heading: 'Fjórir listar eftir frummáli',
           paragraphs: [
             'Þessi hluti inniheldur fjóra tengla: greinalistann á kóresku, á kínversku, á ensku og á japönsku. Hver tengill tilgreinir tungumál listans svo þú vitir fyrirfram á hvaða máli efnið opnast.',
-            'Þessir fjórir listar eru listar eftir frummáli greinanna, ekki þýðingarlistar. Greinar sem eru tiltækar á íslensku standa sérstaklega á þessari síðu.',
+            'Þessir fjórir listar fylgja frummáli greinanna; þeir eru ekki þýðingar. Greinar sem eru tiltækar á íslensku standa sérstaklega á þessari síðu.',
           ],
         },
         {

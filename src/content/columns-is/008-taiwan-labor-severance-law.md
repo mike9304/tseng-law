@@ -69,13 +69,13 @@ Eftirfarandi tafla dregur þetta saman.
 
 Séu laun starfsmannsins há og hafi tiltekinn starfsaldur náðst, hækka starfslokabæturnar.
 
-verða starfslokabæturnar einnig hlutfallslega hærri.
+Starfslokabæturnar verða einnig hlutfallslega hærri.
 
 Sum samviskulaus taívönsk félög grípa þá til ýmissa ráða.
 
 Tilgangurinn er að þurfa ekki að greiða háar starfslokabætur.
 
-og fá starfsmenn til að segja sjálfir upp.
+Markmiðið er einnig að fá starfsmenn til að segja sjálfir upp.
 
 Starfsmenn skulu vera varkárir.
 
@@ -93,7 +93,7 @@ Nýja stjórnin hóf strax eftir að hún tók við.
 
 Markmiðið var að lækka launakostnað.
 
-að kalla hálaunaða langtíma starfsmenn til samtals, einn af öðrum.
+Félagið hóf að kalla hálaunaða langtíma starfsmenn til samtals, einn af öðrum.
 
 Hr. B var starfsmaður í yfir 10 ár hjá félagi A.
 
@@ -101,13 +101,13 @@ Hann var sölumaðurinn með hæstu afköst á miðsvæði Taívan.
 
 Laun hans og bónus voru mjög há.
 
-tók félagið hr. B sem skotmark.
+Því tók félagið hr. B sem skotmark.
 
 ​
 
 Einn daginn kallaði æðri yfirmaður B til samtals.
 
-og hóf skyndilega að lasta B fyrir að vinna ekki samviskusamlega.
+Hann hóf skyndilega að lasta B fyrir að vinna ekki samviskusamlega.
 
 Hann sagði að félagið væri statt í erfiðleikum.
 
@@ -125,7 +125,7 @@ Hann skipaði honum að skrifa: „Ég, [nafn], lækka af fúsum vilja stöðu o
 
 Þennan samning ætlaði hann að sýna öllum hinum starfsmönnunum.
 
-svo þeir skyldu fylgja á eftir.
+Tilgangurinn var að þeir skyldu fylgja á eftir.
 
 ​
 
@@ -135,17 +135,17 @@ Hann hafði aflað félaginu mikils fjár.
 
 Hann vann hvern dag samviskusamlega.
 
-og því hafnaði hann þessari ósanngjörnu kröfu harðlega.
+Því hafnaði hann þessari ósanngjörnu kröfu harðlega.
 
 B neitaði að skrifa þetta.
 
-og að lokum bað yfirmaður félagsins hann reiður að fara.
+Að lokum bað yfirmaður félagsins hann reiður að fara.
 
 B yfirgaf félagið með tilfinningu um ranglæti og sorg.
 
 Þar hafði hann verið í 10 ár.
 
-og mætti síðan ekki lengur til vinnu.
+Hann mætti síðan ekki lengur til vinnu.
 
 ​
 
@@ -171,13 +171,13 @@ Hann hafði, áður en starfsmenn létu af störfum, fundið atvinnuauglýsingar
 
 Hann tók upp allan ganginn með farsímanum.
 
-og gat sannað að hann hefði ekki sagt sjálfur upp.
+Hann gat sannað að hann hefði ekki sagt sjálfur upp.
 
 Hann gat síðar, með aðstoð lögmanns, látið staðreyna réttinn.
 
 Rétturinn til starfslokabóta var staðfestur samkvæmt lögum.
 
-en aðrir starfsmenn sem höfðu látið af störfum stóðu ekki jafn sterkt.
+Aðrir starfsmenn sem höfðu látið af störfum stóðu hins vegar ekki jafn sterkt.
 
 ​
 
@@ -185,7 +185,7 @@ Vegna þess að slík mál eru mörg skalt þú varðveita sönnunargögn.
 
 Sama gildir þegar félagið grípur til ótilhlýðilegra ráða.
 
-þegar félagið grípur til ótilhlýðilegra ráða.
+Sama gildir þegar félagið grípur til ótilhlýðilegra ráða.
 
 Þegar félagið festir sig á smáum villum starfsmanna skalt þú varðveita sönnunargögn.
 
@@ -195,7 +195,7 @@ Sama gildir þegar það setur óhóflegar kröfur.
 
 Sama gildir þegar það flytur starfsmenn í einkennilegar stöður.
 
-**skalt þú varðveita sönnunargögn.**
+**Þá skalt þú varðveita sönnunargögn.**
 
 **Varðveittu venjulegar mætingaskrár þínar.**
 
@@ -205,13 +205,13 @@ Sama gildir þegar það flytur starfsmenn í einkennilegar stöður.
 
 **Varðveittu einnig upptökur af samtölum við yfirmenn.**
 
-**varðveittu þau sönnunargögn sem mæla með þér.**
+**Varðveittu þau sönnunargögn sem mæla með þér.**
 
 ​
 
 Þetta skiptir máli þegar þú vinnur á Taívan.
 
-er erfiðara að fá starfslokabætur en ætla mætti.
+Það er erfiðara að fá starfslokabætur en ætla mætti.
 
 Gerðu ekki auðveldlega málamiðlun við félagið.
 

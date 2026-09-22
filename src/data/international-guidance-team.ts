@@ -3076,29 +3076,29 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Oikeusapusäätiö, Taichungin toimipiste (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Aiemmin Ministry of Education, Legal Affairs Divisionissa, painotuksena hallinto- ja siviiliasiat.',
+        'Aiemmin opetusministeriössä, oikeudellisten asioiden yksikössä (Ministry of Education, Legal Affairs Division), painopisteenä hallinto- ja siviiliasiat.',
         'Kokemusta yliopistoja, opetushenkilöstön oikeuksia ja hallintovalituksia koskevista asioista.',
       ],
       education: ['Oikeustieteen kandidaatti (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Opetusministeriö, oikeudellisten asioiden yksikkö (Ministry of Education, Legal Affairs Division)',
         'Asianajaja, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal, jolla on pitkä toiminta vanhempana paralegalina useissa toimistoissa, vastuussa prosessituesta, yhtiöoikeudesta ja ulkomaisista investoinneista.',
-        'Tuki menettelyissä, yhtiön perustamisessa, ulkomaisten investointien luvissa, lupahakemuksissa sekä Korean ja Taiwanin vaihdossa.',
+        'Lakimiesavustaja, jolla on pitkä kokemus vanhempana lakimiesavustajana useissa toimistoissa, vastuualueinaan prosessituki, yhtiöoikeus ja ulkomaiset investoinnit.',
+        'Tukee menettelyissä, yhtiön perustamisessa, ulkomaisten investointien luvissa, lupahakemuksissa sekä Korean ja Taiwanin vaihdossa.',
       ],
       education: ['Oikeustieteen kandidaatti (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Vanhempi lakimiesavustaja, Boyin Law Firm',
+        'Vanhempi lakimiesavustaja, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -3107,12 +3107,12 @@ export const guidanceTeamBios: Record<
         'Tukee alueiden välistä vaihtoa asiakirjajärjestelmien ja työnkulkujen kautta, tietojenkäsittelytieteen pohjalta.',
       ],
       education: ['Kandidaatti (B.S.) tietojenkäsittelytieteessä, National Cheng Kung University'],
-      experience: ['Korean toimintojen alue, Hovering International Law Firm'],
+      experience: ['Korean toiminnot, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'On suorittanut kandidaatti- ja maisteriohjelmat kirjanpidossa National Chengchi Universityssä ja johtaa nyt tilitoimistoa.',
-        'Tukee oikeudellisten, verotuksellisten ja taloudellisten riskien integroitua analyysia yritysasiakkaille.',
+        'On suorittanut kirjanpidon kandidaatin ja maisterin tutkinnot National Chengchi Universityssä ja johtaa nyt tilitoimistoa.',
+        'Tukee yritysasiakkaiden oikeudellisten, verotuksellisten ja taloudellisten riskien kokonaisarviointia.',
       ],
       education: [
         'Maisteri (M.A.) kirjanpidossa, National Chengchi University',

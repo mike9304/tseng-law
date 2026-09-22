@@ -1312,7 +1312,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Neuvonta tapahtuu vain neljällä kielellä: englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
     methodConfirmationNotice:
-      'Jos ette voi käyttää mitään neljästä kielestä, valitkaa ”Viestintätapa on vahvistettava”. Otamme yhteyttä selvittääksemme, onko käyttökelpoista viestintätapaa olemassa; neuvontaa muulla kielellä ei luvata eikä vastausaikaa luvata.',
+      'Jos ette osaa mitään neljästä kielestä, valitkaa ”En osaa mitään neljästä kielestä — viestintätapa on vahvistettava”. Otamme yhteyttä selvittääksemme, onko käyttökelpoista viestintätapaa olemassa; neuvontaa muulla kielellä ei luvata eikä vastausaikaa luvata.',
     preparationNotice:
       'Voitte kirjoittaa yhteenvedon omalla kielellänne. Alkuperäinen teksti säilytetään sellaisena kuin olette sen kirjoittaneet, eikä sitä käännetä automaattisesti.',
     heading: 'Lähettäkää yhteydenottopyyntö',
@@ -1324,7 +1324,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Olemme vastaanottaneet pyyntönne; se odottaa tarkastusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.',
     savedNotificationPendingMessage:
       'Pyyntönne on tallennettu, mutta ilmoitus toimistolle ei ole vielä vahvistettu. Kirjoittamanne ei katoa. Jos ette saa vastausta, voitte myös kirjoittaa yhteyssivun sähköpostiosoitteeseen.',
-    receiptIdLabel: 'Vastaanotonumero',
+    receiptIdLabel: 'Vastaanottonumero',
     failureMessage:
       'Pyyntöänne ei voitu lähettää. Yrittäkää uudelleen tai kirjoittakaa yhteyssivun sähköpostiosoitteeseen.',
     originalLanguageLabel: 'Kieli, jolla kirjoitatte',

@@ -1,0 +1,83 @@
+WO-F-fi r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-fi-r1
+date: 2026-09-22
+
+## Rows applied
+
+117 finding rows (fi-a 52 + fi-b 65). Applied 113.
+
+fi-a applied: 1–43, 45, 46, 48, 50, 52, plus the in-block part of 44 and the in-row part of 49.
+fi-b applied: 1–22, 24–35, 37–65.
+
+Guidance pack (fi only): nordic.ts finnishGuidanceContent, team.ts fi bios/roles, inquiry-copy.ts fi, llms-txt.ts GUIDANCE_LLMS_NOTICES.fi. Test pin updated: guidance-hi-sv-da-nb-fi-content.test.ts FAQ question → "Voitteko saada neuvontaa suomeksi?".
+
+Columns touched: 001–005, 007–018. 006 had no wording row; left unchanged.
+
+## Rows skipped
+
+- fi-a #47 and fi-b #23 (thousands with a space, e.g. "500 000" / "1 579 589"). ACCEPTED-ROUND skips space thousands separators. Checker NUMBER_THOUSAND_STYLE.fi is "dot", so "500.000" stays. Finnish typography would use a space; the checker would not parse it.
+- fi-a #51. Frontmatter url with Hangul left byte-identical (canonical path, never rendered). Same for 009.
+- fi-a #44, structural half. Q16 was rephrased inside the existing body line ("Voiko onnettomuuden jälkeen jättää kaiken vakuutusyhtiön hoidettavaksi?"). Q16–Q20 were not promoted to ## headings, and U+200B blank lines in 003, 005, 006, 008 and 009 were not removed. English has the same heading levels and the same blank lines; the checker compares both.
+- fi-a #49, deletion half. The table row was not removed. Cells were relabelled inside the row: "Vaikeus | Yksinkertainen | Vaikea | Yksinkertainen" → "Menettelyn vaativuus | Vähemmän vaiheita | Enemmän vaiheita | Vähemmän vaiheita", so the row no longer reads as an easy outcome. English still has the Difficulty row.
+- fi-b #36. Paragraphs in 013 and 015 were not merged. They match the English block split ("and that foreign parties…", "In addition to considering market conditions,"). The 013 fragment was made grammatical inside its own block (row 37: "ja että ulkomaiset toimijat eivät tuo varoja Taiwaniin muun verukkeen nojalla.").
+
+Quantity digits the reviewer spelled out were kept, with the grammar fixed around them, so the number checker still sees the same digits: "6 kuukauden" (not "kuuden"), "alle 1 vuotta" (not "alle vuoden"), "1 jaksolla ylittää 1 vuotta", "1 päivältä", "1 täyttä palvelusvuotta", "1-kertaisena", "3 vuoden", "1 ääni kutakin 1 osakkeenomistajaa kohden". "TWD 1.57M" is not in the Finnish bio; the existing "1,57 miljoonaa TWD" was left as-is.
+
+## Systemic patterns
+
+- 資遣費 "irtisanomiskorvaus" → "eroraha" (and case forms). 30 stem replacements in 002/008/009, plus 2 close lines in 008 rewritten before the stem, plus 1 guidance services sentence. About 33.
+- 戶籍 "väestörekisteri*" → "kotitalousrekisteri*". 30 in 007/016/017, plus 1 guidance sentence ("kotitalousrekisteröinnistä"). 31.
+- 第三人 "kolmas kohta / kolmatta kohtaan" → third party. 2 (003 insurance heading, 007 claim).
+- Glued "1" in time phrases: grammar fixed, digit kept. 4× "alle 1 vuoden" → "alle 1 vuotta"; 2× suspension "1 kerralla"; 1× "1 päivää" → "1 päivältä"; 2× "täyttä 1 palvelusvuotta" → "1 täyttä palvelusvuotta"; 1× "1 kerta" → "1-kertaisena"; 1× "per 1".
+- "yksin" / "yhdessä" where they calqued only/also, and "tutkia/arvioida" where it calqued consider. About 11 (010, 011, 012). "oikeussubjektius" and "yhdessä … kanssa" left; those are ordinary Finnish.
+- Chinese gloss on the wrong word. 4 moves/removals: 損害賠償 off "neuvontaa", 民法 off "seikkojen", 化粧品 off the contract-end sentence, 監察人 moved onto "yhtiön valvojaa".
+- Responsible-entity "subjekti" → "taho". 2 (011 "vastuusubjekti", 018 "tarvitaan subjekti"). Legal personality "oikeussubjektius" kept.
+- 戶籍/evidence "liite" used for supporting documents in 016: 14 stem replacements (todisteliitteet, menettelyliitteet, veroliitteet, liitteet…). 014: the signature is no longer called a liite; one checklist "liite päättymisestä" → "asiakirja".
+- 公證 "notaari" (court clerk) → "julkinen notaari". 4 (007 ×2, 013, 016).
+- FAQ sinuttelu → teitittely. 5 questions (Voinko, minun, en voi, tekstiäni, asiani), plus "käyttää kieltä" → "osaa" on the contact heading, FAQ, home paragraph and inquiry notice. The form option stays first person ("En osaa…"), because the reader is describing themselves; the surrounding sentences now quote that full label.
+- R2. 005 remittance heading now addresses the investor's home country and labels the Korean bank rules as the example. 001/004 already had the Korea-treaty caveat. Hiring FAQ was already "ulkomaalaisia".
+- R5/R12 chrome in the fi bios: Ministry of Education and Legal Aid Foundation written in Finnish with the English name in parentheses; Paralegal → lakimiesavustaja; "Korean toimintojen alue" → "Korean toiminnot". Firm and university names kept in Latin.
+- U+200B blank lines: 0 removed (see skip).
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=123
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+       0
+```
+
+```
+TSC_OK
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+      25
+```
+
+Commands were the work-order set. Checker tail above is a re-run after the last period in 008; summary stayed PASS 18/18. tsc and vitest were run on the same tree immediately before that period (a markdown period only). git status --short | wc -l is 25 before this log file; the count includes the pre-existing dirty WO-F-fi.txt and untracked fi-a.md / fi-b.md. This log is an additional untracked file.
+
+Some files WARN on lexical "제3자" (third party written as words). Those warnings are not failures; every file is PASS.
+
+## Reviewer points not applied as written
+
+- Space as the thousands separator is right for Finnish and wrong for this checker. Not applied (fi-a 47, fi-b 23).
+- Turning Q16–Q20 into headings, and deleting U+200B lines, would change heading levels or block counts against the English source. Not applied (fi-a 44).
+- Deleting the Difficulty row would drop a table row the English article still has. Not applied (fi-a 49); the cells were reworded instead.
+- Spelling "1", "3", "4" and "6" out as words would drop digits the checker counts. Digits kept.
+- "oikeussubjektius" is the right Finnish term for legal personality. It was not swept into "taho". Only the responsible-entity calque "subjekti" was.
+- fi-b 13 was applied to match English ("The foregoing is contract-design advice"), even though that English sentence sits under the branch-versus-subsidiary procedure and is an odd fit. The Finnish denial was the mistranslation; the English meaning was restored.

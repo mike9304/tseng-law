@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
 faq:
   - q: "Onko sopimus vähimmäispalvelusajasta (最低服務年限約定) työsopimuksessa Taiwanissa automaattisesti pätemätön?"
-    a: "Ei. Taiwanin työelämän normeja koskevan lain (勞動基準法) 15-1 artiklan mukaan sopimus voi täyttää lakisääteiset vaatimukset, jos työnantaja antaa erikoistuneen teknisen koulutuksen (專業技術培訓) ja kantaa kustannuksen tai antaa kohtuullisen korvauksen (合理補償), jotta työntekijä noudattaa vähimmäispalvelusaikaa. Molempia vaatimuksia ei ole tarpeen täyttää samanaikaisesti, mutta vaikka yksi niistä täyttyisi, sopimus ei saa ylittää kohtuullista laajuutta kaikkien olosuhteiden valossa, kuten koulutuksen kesto ja kustannus, henkilöstön korvaamismahdollisuus (人力替補可能性) sekä korvauksen määrä ja laajuus."
+    a: "Ei. Taiwanin työelämän normeja koskevan lain (勞動基準法) 15-1 artiklan mukaan sopimus voi täyttää lakisääteiset vaatimukset, jos työnantaja antaa erikoistuneen teknisen koulutuksen (專業技術培訓) ja kantaa kustannuksen tai antaa kohtuullisen korvauksen (合理補償), jotta työntekijä noudattaa vähimmäispalvelusaikaa. Molempia vaatimuksia ei ole tarpeen täyttää samanaikaisesti, mutta vaikka yksi niistä täyttyisi, sopimus ei saa ylittää kohtuullista laajuutta kaikkien olosuhteiden valossa, kuten koulutuksen kesto ja kustannus, mahdollisuus saada sijainen samaan tai vastaavaan tehtävään (人力替補可能性) sekä korvauksen määrä ja laajuus."
   - q: "Lasketaanko uusien työntekijöiden koulutus tai lakisääteinen koulutus erikoistuneeksi tekniseksi koulutukseksi?"
     a: "Taiwanin työministeriön (勞動部) 5. kesäkuuta 2026 ohjeen mukaan määräaikaisen koulutuksen, tavanomaisen tehtäväkoulutuksen, uusien työntekijöiden työn sopeutuksen ja koulutuksen, jonka laki velvoittaa antamaan, kustannusta ei voida ottaa perustaksi sopimukselle vähimmäispalvelusajasta tai vaatimukselle sopimussakosta (違約金) tai kustannusten palautuksesta. Ei tule katsoa vain koulutuksen nimeä, vaan konkreettinen ohjelma, ammatillinen ja tekninen sisältö, kesto, kustannus, jonka työnantaja on tosiasiallisesti kantanut, ja liitteet."
   - q: "Jos irtisanoudutaan varhain, onko allekirjoitusbonus (簽約金) tai sitoutumisbonus (留任獎金) palautettava kokonaan?"
@@ -22,7 +22,7 @@ faq:
 
 ![Kuva, joka selittää työsopimuksen vähimmäispalvelusaikaa ja kustannusten palautusta](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Sopimusta vähimmäispalvelusajasta (最低服務年限約定) Taiwanin työsopimuksessa (勞動契約) käytetään, yhdessä lupauksen kanssa työskennellä tietty jakso, vahvistamaan, onko varhaisessa irtisanoutumisessa velvollisuus palauttaa koulutuskustannuksia, allekirjoitusbonus (簽約金) tai sitoutumisbonus (留任獎金) ja voidaanko erikseen vaatia sopimussakkoa (違約金). Pelkkä seikka, että allekirjoitettu teksti on olemassa, ei kuitenkaan vahvista sopimuksen pätevyyttä eikä palautettavaa määrää. Enemmän kuin sopimuksen nimeä on lakisääteiset vaatimukset ja maksujen, koulutuksen ja päättymisen tosiasiallinen kulku tutkittava vaiheittain.
+Taiwanin työsopimuksen (勞動契約) vähimmäispalvelusaikaa koskevalla ehdolla (最低服務年限約定) vahvistetaan työntekijän lupaus pysyä sovittu jakso, se, onko varhaisessa irtisanoutumisessa palautettava koulutuskustannuksia, allekirjoitusbonus (簽約金) tai sitoutumisbonus (留任獎金), ja voidaanko erikseen vaatia sopimussakkoa (違約金). Pelkkä seikka, että allekirjoitettu teksti on olemassa, ei kuitenkaan vahvista sopimuksen pätevyyttä eikä palautettavaa määrää. Enemmän kuin sopimuksen nimeä on lakisääteiset vaatimukset ja maksujen, koulutuksen ja päättymisen tosiasiallinen kulku tutkittava vaiheittain.
 
 Tutkimuksessa on tärkeää olla sekoittamatta seuraavia 4 kysymystä.
 
@@ -31,11 +31,11 @@ Tutkimuksessa on tärkeää olla sekoittamatta seuraavia 4 kysymystä.
 3. Kenelle työsopimuksen päättymissyy voidaan lukea.
 4. Miten irtisanoutumisen ennakkoilmoitus ja palautuksen laajuus arvioidaan.
 
-Vaikka nämä 4 kysymystä seisovat yhdessä samassa sopimuksessa, sovellettava säännös ja tarvittava todiste ovat erilaiset. Siksi on erikseen tutkittava, onko sopimus pätevä, milloin irtisanoutumistahdonilmaisu saa vaikutuksen, onko vastuuta palauttaa ennakkomaksu (預付性給付) tai koulutuskustannukset ja onko erillinen vahinko tosiasiallisesti syntynyt.
+Vaikka sama sopimus koskee kaikkia näitä 4 kysymystä, sovellettava säännös ja tarvittava näyttö ovat kussakin erilaiset. Siksi on erikseen tutkittava, onko sopimus pätevä, milloin irtisanoutumistahdonilmaisu saa vaikutuksen, onko vastuuta palauttaa ennakkomaksu (預付性給付) tai koulutuskustannukset ja onko erillinen vahinko tosiasiallisesti syntynyt.
 
 ## 1. Milloin sopimuksella vähimmäispalvelusajasta on vaikutusta?
 
-Sopimus ei ole automaattisesti pätemätön. Taiwanin työelämän normeja koskevan lain (勞動基準法) 15-1 artiklan mukaan sopimus voi täyttää lakisääteiset vaatimukset, jos työnantaja antaa erikoistuneen teknisen koulutuksen (專業技術培訓) ja kantaa kustannuksen tai antaa kohtuullisen korvauksen (合理補償), jotta työntekijä noudattaa vähimmäispalvelusaikaa. Molempia vaatimuksia ei ole tarpeen täyttää samanaikaisesti, mutta vaikka yksi niistä täyttyisi, sopimus ei saa ylittää kohtuullista laajuutta kaikkien olosuhteiden valossa, kuten koulutuksen kesto ja kustannus, henkilöstön korvaamismahdollisuus (人力替補可能性) sekä korvauksen määrä ja laajuus.
+Sopimus ei ole automaattisesti pätemätön. Taiwanin työelämän normeja koskevan lain (勞動基準法) 15-1 artiklan mukaan sopimus voi täyttää lakisääteiset vaatimukset, jos työnantaja antaa erikoistuneen teknisen koulutuksen (專業技術培訓) ja kantaa kustannuksen tai antaa kohtuullisen korvauksen (合理補償), jotta työntekijä noudattaa vähimmäispalvelusaikaa. Molempia vaatimuksia ei ole tarpeen täyttää samanaikaisesti, mutta vaikka yksi niistä täyttyisi, sopimus ei saa ylittää kohtuullista laajuutta kaikkien olosuhteiden valossa, kuten koulutuksen kesto ja kustannus, mahdollisuus saada sijainen samaan tai vastaavaan tehtävään (人力替補可能性) sekä korvauksen määrä ja laajuus.
 
 15-1 artiklan 1 kohta säätelee valinnaisesti 2 lakisääteistä vaatimusta. Ensimmäinen on, että työnantaja on antanut työntekijälle erikoistuneen teknisen koulutuksen (專業技術培訓) ja kantanut kustannuksen; toinen, että on annettu kohtuullinen korvaus (合理補償) vastineeksi vähimmäispalvelusajan noudattamisesta. On tutkittava ei sitä, minkä nimen sopimus on saanut, vaan mikä perusta tosiasiallisesti on olemassa (最低服務年限約定).
 
@@ -43,13 +43,13 @@ Sopimus ei ole automaattisesti pätemätön. Taiwanin työelämän normeja koske
 
 Lakisääteisen vaatimuksen vahvistamisen jälkeen tutkitaan 2 kohdan mukaan erikseen, ovatko sovittu jakso ja vastuun laajuus kohtuulliset. Sopimus, joka loukkaa 1 kohdan lakisääteistä vaatimusta tai 2 kohdan kohtuullisuuskriteeriä, on pätemätön 3 kohdan mukaan. Tämä normi on kuitenkin kriteeri kunkin sopimuksen sisällön ja tosiseikkojen tutkimiseen, ei normi, joka alusta alkaen julistaa kaikki sopimukset vähimmäispalvelusajasta päteviksi tai pätemättömiksi.
 
-Se seikka, että työntekijä on allekirjoittanut sopimuksen, voi olla liite, joka vahvistaa sopimuksen olemassaolon, mutta se ei korvaa lakisääteisiä vaatimuksia. Päinvastoin, sen sijaan että heti pääteltäisiin pelkästään siksi, että sopimus on pitkäkestoinen, on tutkittava, mikä sijoitus tai mikä korvaus oli ja miksi tämä jakso on asetettu (最低服務年限約定).
+Se, että työntekijä on allekirjoittanut sopimuksen, voi osoittaa sopimuksen olemassaolon, mutta se ei korvaa lakisääteisiä vaatimuksia. Päinvastoin, sen sijaan että heti pääteltäisiin pelkästään siksi, että sopimus on pitkäkestoinen, on tutkittava, mikä sijoitus tai mikä korvaus oli ja miksi tämä jakso on asetettu (最低服務年限約定).
 
 ## 2. Ensimmäinen lakisääteinen vaatimus: erikoistunut tekninen koulutus ja kustannuksen kantaminen
 
 Perustaakseen sopimuksen koulutukseen työnantajan on tosiasiallisesti pitänyt antaa työntekijälle erikoistunut tekninen koulutus (專業技術培訓) ja kantaa kustannus. Ei riitä koulutussuunnitelmassa kirjoittaa, että kyse on ammatillisesta kurssista, tai sopimuksessa merkitä arvioitu kustannus (專業技術培訓). Liitteillä on voitava yhdistää koulutuksen aihe, tehtävälle tarpeellinen ammatillinen ja tekninen luonne, konkreettinen kesto, onko se suoritettu, ja tosiasiallinen meno.
 
-Tutkimuskohde ei käsitä vain suoraan todennettavia kustannuksia, kuten palkkioita ulkoisille opettajille, kurssimaksuja koulutuskeskuksessa ja taksoja materiaaleista tai laitteista, vaan myös sisäisten kustannusten laskentaperustan, johon työnantaja vetoaa. Jos sisäistä henkilöstöä on opettanut, on katsottava, kenen aika ja mikä aika on kyseessä, missä se eroaa tavanomaisesta valvonnasta tai tehtävän luovutuksesta, ja onko perustetta lukea se kustannus kyseiselle työntekijälle (專業技術培訓). Arvioitu määrä tai globaali jako ei itsessään todista tosiasiallista taakkaa.
+Tutkimuskohde ei käsitä vain suoraan todennettavia kustannuksia, kuten palkkioita ulkoisille opettajille, kurssimaksuja koulutuskeskuksessa ja taksoja materiaaleista tai laitteista, vaan myös sisäisten kustannusten laskentaperustan, johon työnantaja vetoaa. Jos sisäistä henkilöstöä on opettanut, on katsottava, kenen aikaa koulutukseen on käytetty ja miten se eroaa tavanomaisesta valvonnasta tai tehtävän luovutuksesta, ja onko perustetta lukea se kustannus kyseiselle työntekijälle (專業技術培訓). Arvioitu määrä tai tasaisesti jaettu erä ei itsessään todista tosiasiallista kustannusta.
 
 Ohjelma, koulutuskalenteri, läsnäololista, arviointitulos, suoritustodistus, laskut ja kuitit ovat perusliitteitä koulutuksen todellisuuden ja kustannuksen vahvistamiseen. Sopimus työnantajan ja koulutuskeskuksen välillä, maksuliitteet ja palautusehdot, yhdessä katsottuna, tekevät mahdolliseksi käsittää tosiasiallisen taakan tarkemmin. Jos osan kustannuksesta on maksanut työntekijä itse tai kolmas osapuoli, täytyy myös erottaa, kuka vastasi loppukustannuksesta.
 
@@ -94,7 +94,7 @@ Taiwanin työministeriön (勞動部) 5. kesäkuuta 2026 ohjeen mukaan määräa
 
 Työministeriön ohje 勞動關2字第1150141814號 erottaa ja käsittelee koulutuksen, joka annetaan määräajoin, tavanomaisen tehtäväkoulutuksen, koulutuksen, jotta uusi työntekijä tutustuu työympäristöön ja menettelyihin, ja koulutuksen, jonka työnantajan on lain mukaan annettava. Koska tämä koulutus seuraa yrityksen toimintaa tai lakisääteisen velvoitteen täyttämistä, tarkoitus on, ettei sen kustannusta voida muuttaa perustaksi sitoutumisvelvoitteelle tai seuraamukselle varhaisesta päättymisestä (勞動部).
 
-Kurssit, jotka uusi työntekijä tavallisesti vastaanottaa, kuten työsääntöjen (工作規則) selitys, organisaation ja järjestelmien esittely, tavanomainen tehtävän luovutus ja ohjaus perus turvallisuusmenettelyihin, on vahvistettava olemukseltaan. Tavanomaista palkkaamis- ja johtamiskustannusta tai luovutuskustannusta, jonka työnantajan alun perin tuli kantaa, ei voida vahvistaa palautuskohteeksi pelkästään merkitsemällä ne erilliseksi sijoitukseksi.
+Kurssit, jotka uusi työntekijä tavallisesti vastaanottaa, kuten työsääntöjen (工作規則) selitys, organisaation ja järjestelmien esittely, tavanomainen tehtävän luovutus ja turvallisuuden perusmenettelyt, on vahvistettava olemukseltaan. Tavanomaista palkkaamis- ja johtamiskustannusta tai luovutuskustannusta, jonka työnantajan alun perin tuli kantaa, ei voida vahvistaa palautuskohteeksi pelkästään merkitsemällä ne erilliseksi sijoitukseksi.
 
 Kuitenkaan ei aina suljeta pois koulutusta pelkästään siksi, että se on annettu yrityksen sisällä. Yhdessä ja samassa ohjelmassa tavanomainen sopeutumisosa ja erikoistunut tekninen osa voivat olla sekoitettuina, joten aihe, aika, kustannus ja onko lakisääteinen velvoite, on vahvistettava kurssittain (專業技術培訓). Sen, joka vetoaa erikoistuneeseen tekniseen osaan, on liitteillä selitettävä, mikä sisältö eroaa tavanomaisesta koulutuksesta ja kuka on tosiasiallisesti kantanut kustannuksen.
 
@@ -110,7 +110,7 @@ Suhteellisuusperiaate täyttämättömään jaksoon (預付性給付) vaatii ens
 
 Palautuskysymys on vahvistettava järjestyksessä: sopimuksen pätevyys, maksetun määrän oikeudellinen luonne, jo suoritettu palvelusaika, päättymissyy ja palautuskaava; vaadittua määrää ei vahvisteta pelkästään siksi, että sopimus käyttää ilmaisua ”sopimussakko” (違約金).
 
-Lauseke täydestä palautuksesta, kiinteä sopimussakko ilman yhteyttä tosiasialliseen menetykseen ja yksipuolinen vähennys palkasta eivät arvioidu yhtenä ongelmana. Oikeudellinen perusta, sopimuksen sisältö, työoikeuden rajat ja vähennyksen lainmukaisuus on vahvistettava erikseen. Määrä, joka on kirjoitettu työnantajan vaatimukseen, tai seikka, että työntekijä on maksanut osan, ei myöskään vahvista muita oikeudellisia kysymyksiä.
+Lauseke täydestä palautuksesta, kiinteä sopimussakko ilman yhteyttä tosiasialliseen menetykseen ja yksipuolinen vähennys palkasta ei pidä käsitellä yhtenä kysymyksenä. Oikeudellinen perusta, sopimuksen sisältö, työoikeuden rajat ja vähennyksen lainmukaisuus on vahvistettava erikseen. Määrä, joka on kirjoitettu työnantajan vaatimukseen, tai seikka, että työntekijä on maksanut osan, ei myöskään vahvista muita oikeudellisia kysymyksiä.
 
 On myös erotettava koulutuskustannusten palautus ja ennakkomaksun palautus. Ensimmäistä katsotaan keskittyen tosiasialliseen erikoistuneeseen tekniseen koulutukseen ja kustannuksen kantamiseen; toista maksutarkoitukseen, ilmoitukseen, kohdentamisehtoihin ja suhteellisuuteen täyttämättömään jaksoon. Jos molempia eriä vaaditaan yhdessä, on erikseen tutkittava, onko kustannus laskettu kaksinkertaisesti, ja kunkin erän liitteet.
 
@@ -122,7 +122,7 @@ Siksi ei voida tunnustaa työntekijän rikkomusta pelkällä seikalla, että ty�
 
 Tutkimusliitteet voivat käsittää irtisanomisilmoituksen, irtisanoutumiskirjeen, liitteen päättymisestä yhteisymmärryksessä, sähköpostin ja ilmoitusrekisterin, liitteet työehtojen muutoksesta sekä läsnäolo- ja työkisterin. Vaikka terveyttä tai työoloja mainitaan, tulosta ei päätellä pelkästään ilmaisun mukaan, vaan katsotaan yhdessä tosiasiallinen kulku, lakisääteinen päättymisperusta ja liittyvät todisteet.
 
-Irtisanominen, päättyminen yhteisymmärryksessä ja väite työehtojen rikkomisesta ovat vain esimerkkejä olosuhteista, jotka on tutkittava, ei suljettu luettelo syistä, joita ei voida lukea työntekijän syyksi. Samanniminen päättyminen voi erota osapuolten tahdossa ja kulussa, eikä liitteeseen kirjoitettu nimi voi täsmätä tosiasiallisiin seikkoihin (勞動契約).
+Irtisanominen, päättyminen yhteisymmärryksessä ja väite työehtojen rikkomisesta ovat vain esimerkkejä olosuhteista, jotka on tutkittava, ei suljettu luettelo syistä, joita ei voida lukea työntekijän syyksi. Samanniminen päättyminen voi erota osapuolten tahdossa ja kulussa, eikä asiakirjaan kirjoitettu nimike välttämättä vastaa tosiasioita (勞動契約).
 
 Päättymissyyn arviointi vaikuttaa myös suoraan palautuksen laajuuteen. Jos 4 kohta tulee sovellettavaksi, ei voida vaatia työntekijältä vastuuta sopimuksen vähimmäispalvelusajasta rikkomisesta eikä koulutuskustannusten palautusta, joten kohdentaminen on vahvistettava ennen kaavan soveltamista. Jos on myös ennakkomaksu ja muita erillisiä vaatimuksia, tutkitaan kunkin vaatimuksen oikeudellinen luonne ja perusta.
 
@@ -142,7 +142,7 @@ Jos määräaikaisen työsopimuksen jakso erityistä työtä varten (特定性�
 
 Jos keskeytymätön palvelusaika on alle 3 kuukautta, jos kyse on toisen tyyppisestä määräaikaisesta sopimuksesta tai jos vedotaan lakisääteiseen syyhyn välittömään päättymiseen, sovellettava säännös ja tosiseikat on tutkittava yksilöllisesti (勞動基準法). Pelkkä seikka, että sopimus mainitsee pidemmän ennakkoilmoituksen tai vaatii välitöntä tehtävän luovutusta, ei salli oikeudellisen johtopäätöksen vahvistamista ennalta.
 
-Käytännössä irtisanoutumistahdonilmaisun sisältö ja lähetyspäivä, päivä, jona työnantaja on sen tosiasiallisesti vastaanottanut, ja osapuolten ilmoitukset viimeisestä työpäivästä on säilytettävä. Jos 4 kysymyksessä erotetaan ajankohta, jona irtisanoutuminen pätevästi saa vaikutuksen, sopimuksen vähimmäispalvelusajasta pätevyys, koulutuskustannusten tai ennakkomaksun palautus ja vahinko, johon vedotaan erikseen, vähennetään virhettä vetää kaikki johtopäätökset yhdestä sopimuslausekkeesta.
+Käytännössä irtisanoutumistahdonilmaisun sisältö ja lähetyspäivä, päivä, jona työnantaja on sen tosiasiallisesti vastaanottanut, ja osapuolten ilmoitukset viimeisestä työpäivästä on säilytettävä. Jos 4 kysymyksessä erotetaan ajankohta, jona irtisanoutuminen pätevästi saa vaikutuksen, sopimuksen vähimmäispalvelusajasta pätevyys, koulutuskustannusten tai ennakkomaksun palautus ja vahinko, johon vedotaan erikseen, pienennetään riskiä, että yhdestä sopimuslausekkeesta vedetään kaikki johtopäätökset.
 
 ## 9. Tarkistuslista työnantajalle ja työntekijälle
 
@@ -167,7 +167,7 @@ Vaikka käytetään mallisopimusta, ei saa mekaanisesti soveltaa samaa jaksoa ja
 2. Vahvistetaan koulutuksen ammatillinen ja tekninen sisältö, onko kyse tavanomaisesta sopeutumiskoulutuksesta vai lakisääteisestä koulutuksesta, määrä laskuissa ja kuiteissa sekä kuka on tosiasiallisesti kantanut kustannuksen.
 3. Varmistetaan maksuliitteet allekirjoitusbonuksesta, sitoutumisbonuksesta ja muista ennakkomaksuista (預付性給付), ilmoitus korvauksen tarkoituksesta, maksupäivä, kohdentamisehdot ja palautuskaava.
 4. Kirjataan erikseen laskentaperusta sovitulle jaksolle (最低服務年限約定), jo suoritettu palvelusaika, jäljellä oleva jakso ja henkilöstön korvaamismahdollisuus, johon työnantaja vetoaa.
-5. Säilytetään irtisanoutumisilmoitus, ilmoitus työnantajan irtisanomisesta tai liite päättymisestä yhteisymmärryksessä ja toimitustodiste, kuten sähköposti ja ilmoitukset.
+5. Säilytetään irtisanoutumisilmoitus, ilmoitus työnantajan irtisanomisesta tai asiakirja päättymisestä yhteisymmärryksessä ja toimitustodiste, kuten sähköposti ja ilmoitukset.
 6. Järjestetään aikajärjestykseen tosiasiallinen päättymissyy ja kulku, ja vahvistetaan yhdessä työnantajan palautusvaatimus, palkkalaskelma, osapuolten ilmoitukset ja vähennysrekisteri.
 7. Tutkitaan erikseen sopimuksen vähimmäispalvelusajasta pätevyys, irtisanoutumistahdonilmaisu ja ennakkoilmoitus, koulutuskustannusten ja ennakkomaksun palautus sekä vahinko, johon vedotaan erikseen.
 8. Ei tunnusteta vastuuta pelkästään siksi, että on allekirjoitettu tai että työnantaja vaatii annettua määrää; vahvistetaan todisteet, jotka vastaavat 15-1 artiklan lakisääteisiä vaatimuksia, kohtuullisuutta, päättymisen kohdentamista ja suhteellisuuskaavaa.

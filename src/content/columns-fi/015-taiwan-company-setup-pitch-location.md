@@ -29,7 +29,7 @@ sijaitseeko kyseinen osoite (營業地址) vyöhykkeellä, jossa ”ravintola-al
 
 Jos liiketoiminta aloitetaan Taipein kaupungissa,
 
-voidaan käyttää Taipein kaupungin kaupallisen toimiston (臺北市商業處) järjestelmää ”toimipaikan ennakkokysely” (營業場所預先查詢).
+voitte käyttää Taipein kaupungin kauppaosaston (臺北市商業處) järjestelmää ”toimipaikan ennakkokysely” (營業場所預先查詢).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 

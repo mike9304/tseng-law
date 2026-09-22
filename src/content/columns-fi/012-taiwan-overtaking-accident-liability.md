@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Kuva, joka selittää vastuun arvioinnin ohitusonnettomuuksissa Taiwanissa ja turvallisen ohitusmenettelyn](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Kun edellä ajava ajoneuvo kulkee hitaasti, ohittaminen (超車) voi vaikuttaa arkiselta valinnalta, mutta se on ajamista, johon liittyy huomattava riski. Ennen kuin aloitatte ohittamisen, teidän tulee arvioida yhdessä tieosuus, liikennetilanne molempiin suuntiin, edellä ajavien ajoneuvojen liike ja tila palata turvallisesti alkuperäiselle kaistalle (道路交通安全規則).
+Kun edellä ajava ajoneuvo kulkee hitaasti, ohittaminen (超車) voi vaikuttaa arkiselta, mutta se on ajamista, johon liittyy huomattava riski. Ennen kuin aloitatte ohittamisen, teidän on otettava huomioon tieosuus, liikennetilanne molempiin suuntiin, edellä ajavien ajoneuvojen liike ja tila palata turvallisesti alkuperäiselle kaistalle (道路交通安全規則).
 
 ## Ohitusehdot tieliikenneturvallisuussääntöjen 101 artiklan mukaan (道路交通安全規則)
 

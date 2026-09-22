@@ -1,5 +1,5 @@
 ---
-title: "Poikkeukset, joissa työntekijät voivat omasta irtisanoutumisestaan huolimatta saada irtisanomiskorvausta (資遣費)"
+title: "Poikkeukset, joissa työntekijät voivat omasta irtisanoutumisestaan huolimatta saada erorahaa (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
@@ -9,17 +9,17 @@ categories:
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 
-# Poikkeukset, joissa työntekijät voivat omasta irtisanoutumisestaan huolimatta saada irtisanomiskorvausta (資遣費)
+# Poikkeukset, joissa työntekijät voivat omasta irtisanoutumisestaan huolimatta saada erorahaa (資遣費)
 
 ![Pääkuva](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Kuten aiemmin on selostettu, Taiwanissa työntekijöiden ei ole helppoa saada irtisanomiskorvausta (資遣費).
+Kuten aiemmin on selostettu, Taiwanissa työntekijöiden ei ole helppoa saada erorahaa (資遣費).
 
 ​
 
 Erityisesti kun työntekijät irtisanoutuvat itse (自請離職),
 
-he eivät voi saada irtisanomiskorvausta (työstandardilain 18 artikla, 勞動基準法),
+he eivät voi saada erorahaa (työstandardilain 18 artikla, 勞動基準法),
 
 ja tämä eroaa eräiden muiden maiden, esimerkiksi Korean, järjestelmästä.
 
@@ -29,7 +29,7 @@ On kuitenkin **poikkeustapauksia**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Seuraavissa erityistilanteissa työnantajan on maksettava irtisanomiskorvaus työntekijälle myös silloin, kun tämä irtisanoutuu itse (työstandardilain 14 artikla, joka soveltaa 17 artiklaa vastaavasti, 勞動基準法第14條):
+Seuraavissa erityistilanteissa työnantajan on maksettava eroraha työntekijälle myös silloin, kun tämä irtisanoutuu itse (työstandardilain 14 artikla, joka soveltaa 17 artiklaa vastaavasti, 勞動基準法第14條):
 
 1. Kun työnantaja työsopimusta (勞動契約) solmittaessa antaa virheellisen tahdonilmaisun (虛偽意思表示), niin että työntekijä erehtyy siitä, ja vahingon vaara on olemassa
 
@@ -55,7 +55,7 @@ ei maksa ylityökorvausta (加班費)
 
 tai ei liitä työntekijää työntekijävakuutukseen (勞保) tai sairausvakuutukseen (健保).
 
-Tällaisissa tapauksissa työnantajan on maksettava irtisanomiskorvaus silloinkin, kun työntekijä itse päättää työsopimuksen.
+Tällaisissa tapauksissa työnantajan on maksettava eroraha silloinkin, kun työntekijä itse päättää työsopimuksen.
 
 ​
 
@@ -77,7 +77,7 @@ Taiwanin oikeus, sijaitsipa syy yhtiössä
 
 tai työntekijässä,
 
-tunnustaa kummallekin puolelle oikeuden olla maksamatta irtisanomiskorvausta tai vaatia irtisanomiskorvausta.
+tunnustaa kummallekin puolelle oikeuden olla maksamatta erorahaa tai vaatia erorahaa.
 
 Joskus syy sijaitsee molemmilla puolilla,
 
@@ -85,13 +85,13 @@ ja kun molemmat riitelevät,
 
 voidaan sen mukaan, kuka ensin riittävin perustein päättää sopimuksen,
 
-irtisanomiskorvaus evätä tai sitä vaatia.
+eroraha evätä tai sitä vaatia.
 
 Siksi taiwanilaisissa työriidoissa (勞資糾紛)
 
 **ajankohta** on hyvin tärkeä.
 
-Useimmissa tapauksissa suojataan se puoli, joka on valmistautunut etukäteen.
+Se, joka valmistautuu etukäteen, on yleensä vahvemmassa asemassa oikeuksiensa valvonnassa; tiettyä lopputulosta siitä ei seuraa.
 
 ---
 

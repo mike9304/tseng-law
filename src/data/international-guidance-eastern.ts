@@ -1058,7 +1058,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Verificat de avocata Wei Tseng',
     columnsOriginalLanguageBadge: 'Limba originală',
     columnsOriginalLanguageNote:
-      'Articolele următoare nu sunt încă disponibile în limba română. Lista rămâne în limba originală și deschide pagina lingvistică corespunzătoare; conținutul nu este tradus automat.',
+      'Articolele următoare nu sunt încă disponibile în limba română. Lista rămâne în limba originală și deschide pagina în limba respectivă; conținutul nu este tradus automat.',
     imageBandAlt: 'Curte tradițională taiwaneză sanheyuan (三合院) și un pavilion modern în lumina zilei',
     videoPauseLabel: 'Opriți videoclipul',
     videoPlayLabel: 'Redați videoclipul',
@@ -1071,12 +1071,12 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicații generale în limba română despre aria de lucru a Hovering International Law Firm în Taiwan, despre limbile de consultanță și despre primul contact.',
       intro:
-        'Hovering International Law Firm însoțește clienți din străinătate, inclusiv pe cei cu legătură cu Taiwanul, în chestiuni de drept taiwanez: investiții și înființare de societăți, litigii civile, căsătorie, familie și succesiuni, dreptul muncii, cauze penale și proprietate intelectuală. Această parte în limba română vă ajută să recunoașteți ce cauze intră în aria noastră, ce să pregătiți și cum ne puteți contacta. Sunt informații generale, nu consultanță juridică pentru cazul dumneavoastră.',
+        'Hovering International Law Firm asistă clienți din străinătate, inclusiv pe cei cu legătură cu Taiwanul, în chestiuni de drept taiwanez: investiții și înființare de societăți, litigii civile, căsătorie, familie și succesiuni, dreptul muncii, cauze penale și proprietate intelectuală. Această parte în limba română vă ajută să recunoașteți ce cauze intră în aria noastră, ce să pregătiți și cum ne puteți contacta. Sunt informații generale, nu consultanță juridică pentru cazul dumneavoastră.',
       sections: [
         {
           heading: 'Cu ce ne ocupăm',
           paragraphs: [
-            'Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Cabinetul consiliază întreprinderi, susține cauze în fața instanțelor și însoțește clienți din străinătate în pașii necesari în Taiwan.',
+            'Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Cabinetul consiliază întreprinderi, susține cauze în fața instanțelor și asistă clienți din străinătate în pașii necesari în Taiwan.',
             'Tot conținutul de aici este general. Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv. Aceste informații nu înlocuiesc discuția cu un avocat asupra documentelor dumneavoastră.',
           ],
         },
@@ -1084,7 +1084,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Limba paginii și limba consultanței nu sunt același lucru',
           paragraphs: [
             'Această pagină este scrisă în limba română, dar consultanța cu un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocatul va avea loc în limba română.',
-            'Nu promitem interpret, un termen de răspuns și nici o programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
+            'Nu promitem un interpret, un termen de răspuns și nicio programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
           ],
         },
         {
@@ -1105,7 +1105,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'De unde să începeți',
           paragraphs: [
             'Citiți pagina „Servicii” pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi „Costuri” și „Contact”, pentru a afla cum se stabilește obiectul mandatului și cum se confirmă onorariile înainte de începerea lucrării.',
-            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă o consultanță și nici o programare confirmată.',
+            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă o consultanță și nicio programare confirmată.',
           ],
         },
       ],
@@ -1121,7 +1121,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investiții și înființare de societăți în Taiwan',
           paragraphs: [
-            'Însoțim investitori și întreprinderi străine la înființarea sau conducerea unei societăți în Taiwan: alegerea formei juridice, pregătirea și depunerea documentelor, vărsarea capitalului, chestiuni bancare, examinarea sediului și cerințele specifice domeniului. Sprijinim și contabilitatea și impozitele care decurg din înființarea și funcționarea în Taiwan.',
+            'Asistăm investitori și întreprinderi străine la înființarea sau conducerea unei societăți în Taiwan: alegerea formei juridice, pregătirea și depunerea documentelor, vărsarea capitalului, chestiuni bancare, examinarea sediului și cerințele specifice domeniului. Sprijinim și contabilitatea și impozitele care decurg din înființarea și funcționarea în Taiwan.',
             'Parcursul și termenele diferă după formă, investitor, domeniu, bancă și după documentele deja disponibile. Înființarea unei societăți nu duce prin ea însăși la un drept de ședere (居留) sau la o autorizație de muncă (工作許可): acestea sunt proceduri distincte, apreciate după situația persoanei.',
           ],
         },
@@ -1135,7 +1135,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Căsătorie, familie și succesiuni',
           paragraphs: [
-            'Tratăm divorțul (離婚), împărțirea bunurilor, exercitarea și asumarea drepturilor și obligațiilor față de copiii minori (未成年子女權利義務之行使或負擔), legăturile personale (會面交往) și succesiunile (繼承), inclusiv atunci când părțile sau bunurile se află în state diferite. Cauzele de familie transfrontaliere cer adesea o examinare suplimentară a evidenței populației (戶籍), a formei înscrisurilor și a puterii lor doveditoare în Taiwan.',
+            'Tratăm divorțul (離婚), împărțirea bunurilor, autoritatea părintească asupra copiilor minori (未成年子女權利義務之行使或負擔), legăturile personale (會面交往) și succesiunile (繼承), inclusiv atunci când părțile sau bunurile se află în state diferite. Cauzele de familie transfrontaliere cer adesea o examinare suplimentară a evidenței populației (戶籍), a formei înscrisurilor și a puterii lor doveditoare în Taiwan.',
             'Întrucât cauzele de familie aduc adesea termene și proceduri paralele, primul rezumat ar trebui să arate raportul dintre părți, domiciliul actual și procedurile deja în curs.',
           ],
         },
@@ -1149,7 +1149,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Cauze penale',
           paragraphs: [
-            'Însoțim în faza de urmărire penală și în fața instanței, atât persoane suspectate sau inculpate, cât și persoane vătămate, și apreciem riscurile penale ale activității de afaceri.',
+            'Reprezentăm, în faza de urmărire penală și în fața instanței, atât suspecți sau inculpați, cât și persoane vătămate, și apreciem riscurile penale ale activității de afaceri.',
             'Cauzele penale au adesea termene scurte și etape fixe. Dacă ați primit deja un act de la organul de urmărire penală sau de la instanță, indicați din timp data de pe act, pentru ca conținutul să fie examinat în ordinea potrivită.',
           ],
         },
@@ -1164,7 +1164,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Obiectul mandatului și confirmarea lui',
           paragraphs: [
             'Cabinetul lucrează potrivit dreptului taiwanez și tratează cauze din domeniile arătate mai sus. Obiectul fiecărui mandat se confirmă separat, după ce un avocat a examinat mesajul dumneavoastră.',
-            'Statutul de ședere, autorizația de muncă și chestiunile asemănătoare se apreciază după documente și după situația persoanei, nu după cetățenie. Dacă o parte a cauzei dumneavoastră atinge aceste puncte, arătați acest lucru la contactare. Această pagină nu promite un rezultat și nici un termen de răspuns.',
+            'Statutul de ședere, autorizația de muncă și chestiunile asemănătoare se apreciază după documente și după situația persoanei, nu după cetățenie. Dacă o parte a cauzei dumneavoastră atinge aceste puncte, arătați acest lucru la contactare. Această pagină nu promite un rezultat și niciun termen de răspuns.',
           ],
         },
       ],
@@ -1181,14 +1181,14 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Înființare și structură',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) a fost înființat în 2016 de avocați care au studiat la National Taiwan University (國立臺灣大學). Denumirea chineză 昊鼎 unește caracterul 昊 („cer larg”) cu 鼎 („temelie solidă”) și descrie orientarea cabinetului încă de la înființare.',
-            'Avem birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Biroul din Kaohsiung se concentrează pe conducerea întreprinderilor și tratează litigii civile, penale și administrative. Biroul din Taichung tratează cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Biroul din Pingtung a fost deschis în 2017 pentru nevoile locale.',
+            'Avem birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Biroul din Kaohsiung se concentrează pe consultanța pentru conducerea societăților și tratează litigii civile, penale și administrative. Biroul din Taichung tratează cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Biroul din Pingtung a fost deschis în 2017 pentru nevoile locale.',
             'Pe lângă activitatea de avocatură există din 2020 și Hovering Accounting Office, care oferă contabilitate și planificare fiscală întreprinzătorilor și persoanelor fizice înstărite.',
           ],
         },
         {
           heading: 'Lucrul cu părți străine',
           paragraphs: [
-            'Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) însoțește clienți din Coreea, din Japonia și alți clienți internaționali în domeniile arătate.',
+            'Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) asistă clienți din Coreea, din Japonia și alți clienți internaționali în domeniile arătate.',
             'Dacă putem prelua o cauză depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în domeniile arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.',
           ],
         },
@@ -1219,8 +1219,8 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mai întâi se stabilește obiectul mandatului',
           paragraphs: [
-            'Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după cum a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce intră în mandat și ce nu.',
-            'Rezumatul pe care îl trimiteți la început este temeiul acestui obiect. Cu cât descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact poate fi delimitat mandatul.',
+            'Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după faptul dacă a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce intră în mandat și ce nu.',
+            'Rezumatul pe care îl trimiteți la început este temeiul acestui obiect. Cu cât rezumatul descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact poate fi delimitat mandatul.',
           ],
         },
         {
@@ -1262,14 +1262,14 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Limba paginii: aceste informații sunt scrise în limba română.',
             'Limba consultanței: consultanța se desfășoară în engleză, chineză (中文), japoneză și coreeană.',
-            'Limba dumneavoastră de scriere: puteți scrie rezumatul în limba dumneavoastră; textul original se păstrează nemodificat.',
+            'Limba în care scrieți: puteți scrie rezumatul în limba dumneavoastră; textul original se păstrează nemodificat.',
           ],
         },
         {
           heading: 'Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță',
           paragraphs: [
             'În formularul de contact puteți alege „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
-            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem interpret, o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
+            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem un interpret, o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
           ],
         },
         {
@@ -1282,7 +1282,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ce nu promite această pagină',
           paragraphs: [
-            'Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem un anumit avocat și nu punem la dispoziție interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.',
+            'Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem un anumit avocat și nu punem la dispoziție un interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.',
             'Dacă trimiteți o solicitare, conținutul se păstrează și așteaptă examinarea. Dacă după un timp nu primiți răspuns, puteți scrie din nou la adresa de e-mail arătată pe pagina de contact.',
           ],
         },
@@ -1299,7 +1299,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Cum să folosiți această parte',
           paragraphs: [
-            'Dacă nu găsiți un răspuns pentru situația dumneavoastră, răspunsul depinde de regulă de fapte deosebite. Scrieți-le atunci în rezumat, în loc să le deduceți din această pagină.',
+            'Dacă nu găsiți un răspuns pentru situația dumneavoastră, răspunsul depinde, de regulă, de fapte deosebite. Scrieți-le atunci în rezumat, în loc să le deduceți din această pagină.',
           ],
         },
       ],
@@ -1307,7 +1307,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ce cauze tratează cabinetul?',
           answer:
-            'Tratăm șase domenii: investiții și înființare de societăți în Taiwan, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Dacă o cauză este preluată se hotărăște după examinarea conținutului.',
+            'Tratăm șase domenii: investiții și înființare de societăți în Taiwan, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Preluarea unei cauze se hotărăște după examinarea conținutului.',
         },
         {
           question: 'Ce ar trebui să pregătesc înainte de contactare?',
@@ -1317,7 +1317,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Este posibilă o consultanță în limba română?',
           answer:
-            'Nu. Aceste informații sunt scrise în limba română, dar consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Nu promitem nici interpret. Traducerea scrisă este altceva: textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat.',
+            'Nu. Aceste informații sunt scrise în limba română, dar consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Nu promitem niciun interpret. Traducerea scrisă este altceva: textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat.',
         },
         {
           question: 'Ce fac dacă nu pot folosi niciuna dintre cele patru limbi?',
@@ -1381,7 +1381,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Locul păstrării și accesul',
           paragraphs: [
             'Conținutul trimiterii dumneavoastră se păstrează într-un loc care nu este accesibil publicului. Numai persoanele autorizate din cabinet au acces la el, pentru soluționarea solicitării.',
-            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; documentele sensibile ar trebui de aceea trimise abia după o îndrumare anume din partea avocatului.',
+            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; de aceea, documentele sensibile ar trebui trimise abia după o îndrumare anume din partea avocatului.',
           ],
         },
         {
@@ -1478,7 +1478,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'În ce măsură un articol poate servi drept orientare',
           paragraphs: [
             'Articolele sunt informații generale la momentul publicării. Normele și aplicarea lor se pot schimba, iar un articol nu cuprinde toate împrejurările cazului dumneavoastră.',
-            'De aceea nu întemeiați un demers într-o cauză reală numai pe un articol. Folosiți-l pentru privirea de ansamblu și discutați documentele dumneavoastră separat cu un avocat; această pagină nu este pasul consultanței.',
+            'De aceea nu întemeiați un demers într-o cauză reală numai pe un articol. Folosiți-l pentru o privire de ansamblu și discutați documentele dumneavoastră separat cu un avocat; această pagină nu ține loc de consultanță.',
           ],
         },
       ],

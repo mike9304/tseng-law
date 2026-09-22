@@ -458,7 +458,7 @@ const ELEMENTS = {
     fi: /neuvontavaihe/,
     cs: /krokem porady|krok porady/,
     hu: /nem helyettesíti a tanácsadást/,
-    ro: /pasul consultanței/,
+    ro: /nu ține loc de consultanță/,
     uk: /не є консультацією/,
     el: /βήμα της συμβουλευτικής/,
     he: /שלב הייעוץ/,

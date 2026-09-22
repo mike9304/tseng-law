@@ -113,7 +113,7 @@ iar legiuitorul se străduiește să găsească o soluție relativ echilibrată 
 
 Astăzi, multe persoane aleg masajul pentru a destinde tensiunea,
 
-dar, în acest proces, cazuri de hărțuire sexuală (性騷擾) sau de acte obscene (猥褻) continuă să se producă.
+dar, în acest proces, cazuri de hărțuire sexuală (性騷擾) sau de atingeri sexuale nedorite (猥褻) continuă să se producă.
 
 Ceea ce la origine era doar a primi un masaj pentru a destinde tensiunea
 

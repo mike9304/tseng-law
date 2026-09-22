@@ -804,7 +804,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este o opinie juridică și nici o programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
+        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este o opinie juridică și nicio programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/services', '/ro/contact'],
     },
   },

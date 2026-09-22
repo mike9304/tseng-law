@@ -94,7 +94,7 @@ om de personeelskosten te verlagen,
 
 hoogbetaalde langdurige werknemers achtereenvolgens tot gesprekken te ontbieden
 
-Toen was mijn partij, de heer B, meer dan 10 jaar bij vennootschap A tewerkgesteld
+De heer B was toen meer dan 10 jaar bij vennootschap A tewerkgesteld
 
 en de verkoper met het hoogste resultaat in de regio Midden-Taiwan.
 

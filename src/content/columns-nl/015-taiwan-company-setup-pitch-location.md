@@ -59,9 +59,9 @@ Bij de vennootschapsinschrijving worden echter vaak meerdere bedrijfsactiviteite
 
 In de praktijk hoeven daarom bij de vennootschapsinschrijving niet alle bedrijfsactiviteiten te worden nagegaan.
 
-Volgens de “[Werkingsrichtlijnen van de raadplegingsdienst voor bedrijfsruimten van de stad Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) en de geldende bekendmaking van de stad Taipei
+De “[Werkinstructies van de raadplegingsdienst voor bedrijfsruimten van de stad Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) en de geldende bekendmaking van de stad Taipei leggen het volgende vast.
 
-moet sinds 1 januari 2023 bij de aanvraag tot inschrijving van oprichting, van zetelverplaatsing of van toevoeging van bedrijfsactiviteiten van een vennootschap of van een handel (inclusief het bijkantoor (分公司) en de nevenvestiging (分支機構)) het resultaat van de voorafgaande raadpleging van de bedrijfsruimte **verplicht** bij de inschrijvingsaanvraag worden gevoegd, ongeacht de sector.
+Sinds 1 januari 2023 moet bij de aanvraag tot inschrijving van oprichting, van zetelverplaatsing of van toevoeging van bedrijfsactiviteiten van een vennootschap of van een handel (inclusief het bijkantoor (分公司) en de nevenvestiging (分支機構)) het resultaat van de voorafgaande raadpleging van de bedrijfsruimte **verplicht** bij de inschrijvingsaanvraag worden gevoegd, ongeacht de sector.
 
 De lijst hieronder van de “bedrijfsactiviteiten die ambtshalve worden nagegaan” (主動查詢之營業項目) duidt de bedrijfsactiviteiten aan die het handelsbureau ambtshalve extra nagaat tijdens de inschrijvingstoetsing (隨案主動查詢) wanneer de tak in de aanvraag staat maar in het bijgevoegde resultaat ontbreekt; het feit dat een tak niet op deze lijst staat, betekent niet dat de controle is vrijgesteld.
 

@@ -73,11 +73,11 @@ Daarom moeten werknemers de termijn nauwkeurig in het oog houden.
 
 Met andere woorden:
 
-het recht van Taiwan geeft, naargelang de schuld bij de werkgever ligt
+Ligt de schuld bij de werkgever, dan kan de werknemer de ontslagvergoeding vorderen.
 
-of bij de werknemer,
+Ligt de schuld bij de werknemer, dan kan de werkgever die weigeren.
 
-de werkgever het recht de ontslagvergoeding niet te betalen en de werknemer het recht die te vorderen.
+Het Taiwanese recht geeft dus niet beide rechten tegelijk.
 
 Soms ligt de schuld bij beide partijen,
 

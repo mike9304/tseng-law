@@ -449,7 +449,7 @@ const ELEMENTS = {
     ru: /не заменяет консультацию/,
     tr: /görüşmenin yerini tutmaz/,
     it: /non sostituisce la consulenza/,
-    nl: /consultatiestap/,
+    nl: /vervangt de consultatie niet/,
     pl: /nie jest konsultacją/,
     hi: /परामर्श चरण/,
     sv: /rådgivningssteget/,

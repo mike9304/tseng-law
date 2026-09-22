@@ -2750,7 +2750,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Coördineert consultatieafspraken en de communicatie voor cliënten uit Korea.',
-        'Ondersteunt de uitwisseling tussen afdelingen via documentsystemen en werkstromen, op grond van een opleiding informatica.',
+        'Ondersteunt de afstemming tussen afdelingen met document- en werkprocessen, op grond van een opleiding informatica.',
       ],
       education: ['Bachelordiploma (B.S.) informatica, National Cheng Kung University'],
       experience: ['Werkzaamheden Korea, Hovering International Law Firm'],

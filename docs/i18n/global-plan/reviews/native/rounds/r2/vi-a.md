@@ -1,0 +1,28 @@
+# Vietnamese native review — round 2, part a (vi)
+reviewer: Grok 4.7 · date: 2026-09-22 · scope: vi-guidance.txt (365 strings); columns-vi/001-taiwan-company-establishment-basics.md, 002-withdraw-capital-taiwan-company.md, 003-taiwan-traffic-accident-procedure.md, 004-taiwan-company-subsidiary-vs-branch.md, 005-taiwan-company-establishment-advanced-2.md, 006-taiwan-massage-history-law.md, 007-taiwan-divorce-lawsuit-qna.md, 008-taiwan-labor-severance-law.md, 009-taiwan-voluntary-resignation-severance.md
+
+## Verdict
+naturalness (1 = machine, 5 = native professional): 4/5 for guidance pack, 4/5 for columns
+variety used: Vietnamese (Vietnam, chữ Quốc ngữ), consistent. Thousands use `.` (`500.000`, `1.000.000`, `3.000.000`) and the decimal comma appears in `0,5 tháng`. Dates in running text are `ngày … tháng … năm …`. The bio figure `TWD 1.57M` is the remaining English number.
+systemic patterns (max 6, each one line, with 1 example quote):
+- A source link still names the wrong article: "cổ tức trả cho người không cư trú (Điều 10)" on the flno=3 withholding-rate URL
+- "Tín dụng thuế" for an offset against tax payable (投資抵減): "tín dụng thuế đầu tư"
+- Docket syllables translated as if they were words: "Bản án Thượng Dị số 644 năm 109"
+- "Cán bộ" for a company executive, which a Vietnam reader hears as a state cadre: "một cán bộ cấp cao của công ty"
+- English million abbreviation on the only case figure: "buộc bồi thường TWD 1.57M."
+- "Trung tâm cuộc sống" calques "center of life": "nơi có trung tâm cuộc sống hiện tại"
+Gender of attorney Wei Tseng: no masculine form, pronoun, or title. `luật sư` / `luật sư điều hành` are epicene; bios and bylines use `là luật sư`, `Luật sư Wei Tseng (曾雋崴)`, and `tôi` with no `ông` or `anh`. `ông B` in 008 and `ông Lâm` in 006 are other men. Consultation lock stays negative (`chỉ`, no interpreter, no reply-time promise, no free first meeting) on the home, contact, FAQ, inquiry form, and llms notice. The guidance pack is client-ready apart from the rows below. 001, 002, 005, and 009 are native professional Vietnamese; 005 keeps the Korea bank steps labeled as one country's example, and 009's severance exceptions now track who may withhold or claim. 007 is dense and accurate once "trung tâm cuộc sống" is fixed. 006 is genuinely native blog prose. 003 Q16–Q20, 005, 006, 008, and 009 are still one sentence per line; the wording inside those lines is ordinary Vietnamese, so that layout is not listed again.
+
+## Findings
+| # | sev | cat | file | quote (≤120 chars, verbatim) | problem (English, one line) | suggested Vietnamese rewrite |
+|---|-----|-----|------|------|------|------|
+| 1 | P1 | A | columns-vi/004-taiwan-company-subsidiary-vs-branch.md | "cổ tức trả cho người không cư trú (Điều 10)" | The URL is `pcode=G0340028&flno=3`, Article 3 of the Standards of Withholding Rates (各類所得扣繳率標準), which sets the 21% non-resident dividend rate. Do not change the URL. `(Điều 10)` is the wrong article. | "Tiêu chuẩn thuế suất khấu trừ các loại thu nhập (各類所得扣繳率標準), Điều 3 — cổ tức trả cho người không cư trú" |
+| 2 | P1 | D | vi-guidance.txt | "buộc bồi thường TWD 1.57M." | English `M` and a dot decimal; in Vietnam the dot is the thousands separator, so the amount is easy to misread. Keep the token. | "buộc bồi thường 1,57 triệu TWD (TWD 1.57M)." |
+| 3 | P2 | A | vi-guidance.txt | "hành chính thông thường" | German lists civil, criminal, and administrative disputes with no "ordinary"; the extra word narrows the Kaohsiung office. | "các tranh chấp dân sự, hình sự và hành chính" |
+| 4 | P2 | A | vi-guidance.txt | "cách duy nhất là trao đổi trực tiếp với luật sư về hồ sơ đó" | The source only says the file must be discussed with a lawyer; "the only way" is an added absolute, not a claim that the firm is the only one. | "hồ sơ đó phải được trao đổi trực tiếp với luật sư bằng một trong bốn ngôn ngữ tư vấn" |
+| 5 | P2 | A | columns-vi/003-taiwan-traffic-accident-procedure.md | "Bản án Thượng Dị số 644 năm 109 (2020)" | `Thượng Dị` is a character-by-character reading of the docket code 上易, not a case type. also "Bản án Thượng Dị số 477" and "Bản án Lịch Giản số 236" (壢簡, Zhongli summary). | "Bản án phúc thẩm giản dị số 644 năm 109 (2020) của Tòa án Cấp cao Đài Loan (109年度上易字第644號)" / "Bản án sơ thẩm giản dị số 236 năm 112 của phân viện Trung Lịch, Tòa án Địa phương Đào Viên (112年度壢簡字第236號)" |
+| 6 | P2 | C | columns-vi/004-taiwan-company-subsidiary-vs-branch.md | "tín dụng thuế đầu tư (投資抵減)" | `Tín dụng` is a bank loan; 投資抵減 is an offset against tax payable. also the FAQ, §5, and "phương thức tín dụng thuế". | "khoản được trừ vào số thuế phải nộp khi đầu tư (投資抵減)" |
+| 7 | P2 | D | columns-vi/008-taiwan-labor-severance-law.md | "một cán bộ cấp cao của công ty" | `Cán bộ` is a state or party cadre. also "vị cán bộ của công ty". The English is a company executive. | "một quản lý cấp cao của công ty" |
+| 8 | P2 | C | columns-vi/007-taiwan-divorce-lawsuit-qna.md | "nơi có trung tâm cuộc sống hiện tại" | Calque of "center of life". also "trung tâm cuộc sống trên thực tế" in the evidence checklist. | "nơi cuộc sống hiện đang tập trung" |
+| 9 | P2 | C | vi-guidance.txt | "Trợ lý pháp lý kỳ cựu với nhiều năm ở vị trí trợ lý pháp lý cao cấp" | The job title is said twice in one line. | "Trợ lý pháp lý cao cấp, nhiều năm hỗ trợ tố tụng, pháp chế doanh nghiệp và đầu tư nước ngoài tại nhiều văn phòng luật" |
+| 10 | P3 | C | vi-guidance.txt | "phần đó cần đến chuyên gia có tư cách phù hợp nào" | The question word sits after a long noun phrase, so the sentence is hard to parse. | "cần chuyên gia có tư cách phù hợp nào cho phần đó" |

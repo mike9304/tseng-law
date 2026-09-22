@@ -1,0 +1,107 @@
+# WO-F-vi — Vietnamese fix lane, campaign round 2 (Grok 4.7), 2026-09-22
+Worktree: /Users/son7/Projects/tseng-law-fix-vi-r2 (no git add/commit/push)
+Files touched: src/content/columns-vi/001, 003, 004, 007, 008, 010, 011, 013, 014, 015, 016, 017, 018;
+src/data/international-guidance-content.ts (vi strings only);
+src/data/international-guidance-team.ts (vi bios only); this log.
+No test file was edited. No pinned Vietnamese expectation had to change; "TWD 1.57M" stays byte-identical inside the bio.
+
+## Rows applied
+vi-a (10/10) and vi-b (27/27). P3 vi-a#10 applied.
+
+vi-a
+1  004 link label: the URL is Article 3 of 各類所得扣繳率標準 (21% non-resident dividends). Citation is now "Tiêu chuẩn thuế suất khấu trừ các loại thu nhập (各類所得扣繳率標準), Điều 3". The digit 10 is kept only as "(nhãn nguồn: Điều 10)" because the Korean source still says 제10조; dropping it would unbalance the number bag. URL unchanged.
+2  Team bio: "buộc bồi thường 1,57 triệu TWD (TWD 1.57M)." Token TWD 1.57M unchanged.
+3  Kaohsiung office: "dân sự, hình sự và hành chính" (dropped "thông thường").
+4  "cách duy nhất là trao đổi…" → "hồ sơ đó phải được trao đổi trực tiếp với luật sư bằng một trong bốn ngôn ngữ tư vấn."
+5  003 docket syllables: 上易 → "bản án phúc thẩm giản dị" (644, with existing gloss; 477, gloss 109年度上易字第477號 added); 壢簡 → "bản án sơ thẩm giản dị … phân viện Trung Lịch".
+6  投資抵減: "tín dụng thuế" replaced by "khoản được trừ vào số thuế phải nộp" (see sweep).
+7  008 "cán bộ" → "quản lý" (2).
+8  007 "trung tâm cuộc sống" → "nơi cuộc sống … đang tập trung" (2).
+9  Paralegal bio: title said once — "Trợ lý pháp lý cao cấp, nhiều năm hỗ trợ tố tụng, pháp chế doanh nghiệp và các vụ việc đầu tư nước ngoài tại nhiều văn phòng luật."
+10 P3: "xác nhận cần chuyên gia có tư cách phù hợp nào cho phần đó."
+
+vi-b
+1  018 "khách hàng có thể yêu cầu ai thực hiện nghĩa vụ nào."
+2  司法院 → "Tư pháp viện" (016 link + "Mẫu đơn của Tư pháp viện"; also 003, same name — see sweep).
+3  "kiểm nhận di chúc (檢認) hay thi hành di chúc."
+4  商業登記 → "đăng ký cơ sở kinh doanh" (017 FAQ, body, numbered step; also 001 — see sweep).
+5  事實關係 "quan hệ sự việc" → "sự việc" (011 ×1, 010 ×2).
+6  "không làm chuyển trách nhiệm pháp lý."
+7  018 "giấy phép làm việc hợp pháp (工作許可)" and "thẻ cư trú (居留證)".
+8  "tùy ngành, Bộ Lao động yêu cầu … vốn, doanh thu hoặc tiêu chí tương đương."
+9  "khi việc chia đều rõ ràng là không công bằng."
+10 013 gloss spacing: "thời gian thi công nội thất" (裝潢期間).
+11 "có thể đủ yếu tố cấu thành tội phạm."
+12 Heading "Đánh giá theo toàn bộ biểu đạt, không theo từng từ ngữ riêng lẻ."
+13 "kho lưu trữ điện tử hoặc kho lưu trữ đám mây bảo mật."
+14 013 clause-sized paragraphs made into self-standing sentences inside the existing blocks (not merged — see below).
+15 015 same: each dependent clause is now a sentence in its own block.
+16 "dù trên thực tế hay về mặt pháp lý."
+17 "khả năng bày tỏ nguyện vọng của người chưa thành niên."
+18 "Không phải doanh nghiệp nào cũng bắt buộc phải tự thuê một bãi đỗ xe riêng." FAQ opener: "Không có câu trả lời chung cho mọi trường hợp."
+19 "các tình huống giả định để cân nhắc, không bảo đảm rằng một cách làm cụ thể là hợp pháp hay đáng ưu tiên hơn."
+20 "tên công ty đối tác để kiểm tra xung đột lợi ích."
+21 "xin giấy phép làm việc dễ hơn" (dropped "tương đối … hơn").
+22 "đương nhiên được làm việc."
+23 "Về nguyên tắc, người sử dụng lao động xin giấy phép làm việc…"
+24 "Nếu dự định cho nhân viên nước ngoài làm việc…"
+25 "30 triệu Đài tệ mới (新臺幣, TWD)" and "100 triệu Đài tệ mới (TWD)". Digits unchanged.
+26 "mua bán và sáp nhập (M&A)".
+27 "chứng nhận apostille hoặc hợp pháp hóa lãnh sự, kèm bản dịch."
+
+## Rows skipped
+None. No P1/P2/P3 row was refused.
+
+Adaptations (still applied):
+- vi-b#14 and #15: the suggested rewrites pull the next paragraph into the first. ACCEPTED-ROUND forbids merging blocks, and the checker compares block counts. Each fragment was rewritten as its own sentence. 013: 27 blocks (26 completions + the gloss space). 015: 9 blocks.
+- vi-a#1: Điều 3 is the real article; "(nhãn nguồn: Điều 10)" keeps the Korean source digit. Number bag for 004 stayed sourceCount=93 targetCount=94, the same extra 0 WARN as before this edit.
+
+## Systemic patterns (instances changed)
+Wrong article on the flno=3 withholding URL                          1 (004)
+"tín dụng thuế" for 投資抵減                                         17 (004 FAQ, outline, §5, body)
+Docket syllables read as words (上易, 壢簡)                          3 (003)
+"cán bộ" for a company executive                                     2 (008)
+"trung tâm cuộc sống"                                                2 (007)
+"TWD 1.57M" left bare                                                1 (bio; token kept, "1,57 triệu TWD" added)
+"quan hệ sự việc" where the sentence means the facts                 3 (010 ×2, 011 ×1)
+"một cách nhất loạt" / "một cách nào đó"                             6 (004 ×3, 017 ×2, 018 ×1)
+"giấy phép lao động" for 工作許可                                    3 (018; glosses added once)
+"Viện Tư pháp" for 司法院                                            5 (016 ×2, 003 ×3)
+"đăng ký thương mại" for 商業登記                                    5 (017 ×3, 001 ×2)
+013/015 one sentence split across paragraphs                         36 blocks made self-standing
+Bare "TWD" / "M&A" in 018 running text                               3 (30 triệu, 100 triệu, M&A)
+"Phán đoán" heading after the body had moved to "đánh giá"           1 (011)
+
+R2–R10 were already in this corpus (prior Opus pass; this round's reviews scored 4/5 and confirmed gender, the consultation lock, and Korea-as-example). This pass did not reopen them except where a row above is the same pattern. "một cách cụ thể" and "một cách tuyệt đối" were left; they are ordinary Vietnamese, not the "một cách + abstract noun" calque. "Về cơ bản" in 006 (massage, casual "basically") was left; only 018's legal "in principle" was changed.
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-vi --lang vi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=31
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-vi src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      17
+```
+`git status --short | wc -l` was 17 before this log file existed.
+
+004 still WARNs `numbers extra in translation (1): 0` and a pre-existing nationality hit on "Việt". Both were present on HEAD before this edit (same sourceCount=93 targetCount=94). They do not fail the summary.
+
+## Reviewer disagreements (not applied as stated)
+None of the findings were rejected as wrong.
+
+The withholding-rate URL was checked against the live statute: pcode=G0340028&flno=3 is 各類所得扣繳率標準 §3, and subparagraph 1 is the 21% non-resident dividend rate. The reviewer is right. The Korean/English link label ("Article 10" of the business-tax act) is the label that is wrong. Điều 10 was kept only as a source-digit gloss so the checker still sees 10.
+
+vi-b#14/#15 ask for one sentence that swallows the following paragraphs. Those paragraphs were completed in place instead, so the block count stays equal to the English/Korean source.

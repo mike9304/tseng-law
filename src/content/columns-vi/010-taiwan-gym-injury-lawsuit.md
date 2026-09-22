@@ -71,7 +71,7 @@ Nội dung dưới đây là thông tin nhằm giải thích một cách khái q
 
 Điều đó không có nghĩa là cứ mỗi lần có người bị chấn thương ở phòng tập thì chủ thể kinh doanh hoặc huấn luyện viên đương nhiên phải chịu trách nhiệm. Từng vụ việc vẫn phải đánh giá nghĩa vụ cẩn trọng cụ thể là gì, nghĩa vụ đó có bị vi phạm hay không, giữa việc vi phạm và chấn thương có quan hệ nhân quả hay không, thiệt hại thực tế có phát sinh hay không, phía đối phương có những lập luận phản bác (抗辯) nào, và có chứng cứ nào chứng minh cho từng yêu cầu cũng như từng lập luận phản bác đó.
 
-Nếu đủ yếu tố cấu thành tội gây thương tích do vô ý (過失傷害), quý vị có thể xem xét nộp đơn yêu cầu khởi tố (告訴) về hình sự. Quý vị cũng có thể xem xét yêu cầu bồi thường thiệt hại về dân sự, nhưng việc căn cứ nào được áp dụng trong số trách nhiệm theo hợp đồng (契約責任), trách nhiệm do hành vi xâm phạm quyền (侵權行為責任) và trách nhiệm theo Luật Bảo vệ Người tiêu dùng, cũng như phạm vi trách nhiệm, sẽ khác nhau tùy theo quan hệ sự việc cụ thể. Việc có thể xem xét nhiều thủ tục đối với một vụ tai nạn không có nghĩa là phải tiến hành toàn bộ các thủ tục đó, cũng không bảo đảm rằng một bên nhất định sẽ thắng kiện.
+Nếu đủ yếu tố cấu thành tội gây thương tích do vô ý (過失傷害), quý vị có thể xem xét nộp đơn yêu cầu khởi tố (告訴) về hình sự. Quý vị cũng có thể xem xét yêu cầu bồi thường thiệt hại về dân sự, nhưng việc căn cứ nào được áp dụng trong số trách nhiệm theo hợp đồng (契約責任), trách nhiệm do hành vi xâm phạm quyền (侵權行為責任) và trách nhiệm theo Luật Bảo vệ Người tiêu dùng, cũng như phạm vi trách nhiệm, sẽ khác nhau tùy theo sự việc cụ thể. Việc có thể xem xét nhiều thủ tục đối với một vụ tai nạn không có nghĩa là phải tiến hành toàn bộ các thủ tục đó, cũng không bảo đảm rằng một bên nhất định sẽ thắng kiện.
 
 ## 2. Đơn yêu cầu khởi tố về hình sự và yêu cầu bồi thường thiệt hại về dân sự chịu những thời hạn nào?
 
@@ -79,7 +79,7 @@ Theo [Điều 287 Bộ luật Hình sự Đài Loan (刑法)](https://law.moj.go
 
 Theo [Điều 197 Bộ luật Dân sự Đài Loan (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001), quyền yêu cầu bồi thường thiệt hại do hành vi xâm phạm quyền về nguyên tắc sẽ chấm dứt nếu không được thực hiện trong 2 năm kể từ thời điểm người bị thiệt hại biết được cả thiệt hại lẫn người có nghĩa vụ bồi thường, và cũng chấm dứt khi đã quá 10 năm kể từ khi hành vi xâm phạm quyền xảy ra.
 
-Tuy nhiên, việc có căn cứ yêu cầu khác như trách nhiệm theo hợp đồng hay không, hoặc có áp dụng những quy định khác về thời điểm bắt đầu tính, về việc thời hạn tiếp tục chạy, hay về việc thời hạn bị gián đoạn (中斷) hay không, còn tùy thuộc vào quan hệ sự việc. Quý vị không nên chỉ nhìn vào ngày xảy ra tai nạn hoặc ngày chẩn đoán mà kết luận ngay về thời hạn; thận trọng hơn cả là sớm xác nhận riêng từng căn cứ yêu cầu có thể có và ngày làm mốc tính thời hạn.
+Tuy nhiên, việc có căn cứ yêu cầu khác như trách nhiệm theo hợp đồng hay không, hoặc có áp dụng những quy định khác về thời điểm bắt đầu tính, về việc thời hạn tiếp tục chạy, hay về việc thời hạn bị gián đoạn (中斷) hay không, còn tùy thuộc vào sự việc cụ thể. Quý vị không nên chỉ nhìn vào ngày xảy ra tai nạn hoặc ngày chẩn đoán mà kết luận ngay về thời hạn; thận trọng hơn cả là sớm xác nhận riêng từng căn cứ yêu cầu có thể có và ngày làm mốc tính thời hạn.
 
 ## 3. Ngay sau khi xảy ra tai nạn, quý vị cần bảo toàn những chứng cứ nào và bảo toàn ra sao?
 
@@ -87,7 +87,7 @@ Tuy nhiên, việc có căn cứ yêu cầu khác như trách nhiệm theo hợp
 
 Hình ảnh camera có thể bị ghi đè sau khi hết thời hạn lưu trữ, hoặc không sử dụng được vì lý do khác. Vì vậy, quý vị có thể xem xét gửi cho phòng tập một thư bảo đảm có xác nhận nội dung (存證信函) hoặc một thư luật sư (律師函) ghi rõ khung giờ, địa điểm và vị trí camera cần thiết để yêu cầu lưu giữ. Loại văn bản này là biện pháp thực tiễn nhằm ghi nhận đã yêu cầu điều gì và vào lúc nào. Tuy nhiên, bản thân nó không tạo ra cho phía đối phương một nghĩa vụ pháp lý mới phải lưu giữ hình ảnh và cũng không ngăn được việc xóa dữ liệu; hơn nữa, chỉ riêng việc hình ảnh không còn được lưu lại cũng không khiến tòa án đương nhiên suy đoán bất lợi cho phòng tập.
 
-Nếu diễn biến tai nạn có khả năng thỏa mãn các yếu tố cấu thành tội phạm, quý vị có thể trình báo nhanh chóng để cơ quan điều tra đánh giá xem có căn cứ hợp pháp để thu thập hoặc bảo toàn hay không. Việc trình báo không có nghĩa là cảnh sát hay cơ quan công tố nhất định sẽ lấy được hình ảnh camera giám sát, nên quý vị vẫn phải giữ cả những tài liệu mà bản thân có thể tự bảo toàn như hồ sơ y tế và bản ghi liên lạc.
+Nếu diễn biến tai nạn có thể đủ yếu tố cấu thành tội phạm, quý vị có thể trình báo nhanh chóng để cơ quan điều tra đánh giá xem có căn cứ hợp pháp để thu thập hoặc bảo toàn hay không. Việc trình báo không có nghĩa là cảnh sát hay cơ quan công tố nhất định sẽ lấy được hình ảnh camera giám sát, nên quý vị vẫn phải giữ cả những tài liệu mà bản thân có thể tự bảo toàn như hồ sơ y tế và bản ghi liên lạc.
 
 ## 4. Quý vị có thể yêu cầu phòng tập thể hình bồi thường những khoản thiệt hại nào?
 

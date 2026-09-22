@@ -41,7 +41,7 @@ Trước khi quyết định cấu trúc vào Đài Loan, tổng công ty có th
 | Thanh toán và chi phí | Ai xuất hóa đơn và thu tiền? Chi phí giữa tổng công ty và tổ chức tại Đài Loan được quyết toán thế nào? |
 | Chất lượng và tranh chấp | Ai xác nhận kết quả nghiệm thu và nhận khiếu nại lỗi hay yêu cầu bồi thường? |
 
-Đặc biệt khi bên bán trong hợp đồng mua khác với công ty thực tế hỗ trợ kỹ thuật, tài liệu cần phân biệt khách hàng được yêu cầu ai thực hiện nghĩa vụ nào.
+Đặc biệt khi bên bán trong hợp đồng mua khác với công ty thực tế hỗ trợ kỹ thuật, tài liệu cần phân biệt khách hàng có thể yêu cầu ai thực hiện nghĩa vụ nào.
 
 ## 2. Khác biệt giữa công ty con, chi nhánh và văn phòng đại diện của công ty nước ngoài tại Đài Loan
 
@@ -65,7 +65,7 @@ Công ty hữu hạn có thể do 1 cá nhân trở lên, hoặc cổ đông ph�
 
 ### Công ty cổ phần: phù hợp khi muốn đưa nhà đầu tư khác vào hoặc có thể niêm yết
 
-Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 cổ đông trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy hình thức này phù hợp với doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, đãi ngộ bằng cổ phần cho nhân viên hoặc M&A, niêm yết hoặc đăng ký giao dịch tại sàn chứng khoán mới (興櫃) sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp 30 triệu TWD, hoặc chưa đạt mức đó nhưng doanh thu 100 triệu TWD hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
+Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 cổ đông trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy hình thức này phù hợp với doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, đãi ngộ bằng cổ phần cho nhân viên, mua bán và sáp nhập (M&A), niêm yết hoặc đăng ký giao dịch tại sàn chứng khoán mới (興櫃) sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp 30 triệu Đài tệ mới (新臺幣, TWD), hoặc chưa đạt mức đó nhưng doanh thu 100 triệu Đài tệ mới (TWD) hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
 
 ## 4. Thủ tục lập chi nhánh và công ty con khác nhau; chỉ lập công ty con mới phải qua thẩm định của Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)
 
@@ -77,13 +77,13 @@ Trên đây là so sánh chung về các hình thức công ty, không phải t�
 
 ## 5. Đăng ký công ty và việc kỹ sư làm việc hợp pháp là hai việc khác nhau
 
-Hoàn tất đăng ký công ty tại Đài Loan không có nghĩa nhân viên tổng công ty nước ngoài tự động được làm việc tại Đài Loan. Người nước ngoài làm việc tại Đài Loan phải có giấy phép lao động hợp pháp; nếu ở lâu cũng cần xin thẻ cư trú. Về cơ bản, người sử dụng lao động xin giấy phép lao động và thẻ cư trú tương ứng cho nhân viên nước ngoài.
+Hoàn tất đăng ký công ty tại Đài Loan không có nghĩa là nhân viên tổng công ty nước ngoài đương nhiên được làm việc tại Đài Loan. Người nước ngoài làm việc tại Đài Loan phải có giấy phép làm việc hợp pháp (工作許可); nếu ở lâu cũng cần xin thẻ cư trú (居留證). Về nguyên tắc, người sử dụng lao động xin giấy phép làm việc và thẻ cư trú tương ứng cho nhân viên nước ngoài.
 
-Người quản lý của công ty con và chi nhánh Đài Loan của công ty nước ngoài xin giấy phép lao động tương đối dễ hơn. Nhưng để xin giấy phép cho người nước ngoài thứ hai trở đi, tùy ngành Bộ Lao động yêu cầu công ty đạt ngưỡng vốn, doanh thu. Nếu có kế hoạch để nhân viên nước ngoài làm việc tại Đài Loan, trước khi lập công ty Đài Loan phải xác nhận mức vốn có đạt ngưỡng hay không.
+Người quản lý của công ty con và chi nhánh Đài Loan của công ty nước ngoài xin giấy phép làm việc dễ hơn. Nhưng để xin giấy phép cho người nước ngoài thứ hai trở đi, tùy ngành, Bộ Lao động yêu cầu công ty đạt ngưỡng về vốn, doanh thu hoặc tiêu chí tương đương. Nếu dự định cho nhân viên nước ngoài làm việc tại Đài Loan, trước khi lập công ty Đài Loan phải xác nhận mức vốn có đạt ngưỡng hay không.
 
 ## 7. Cấu trúc phù hợp hơn theo giai đoạn phát triển kinh doanh
 
-Sau đây là tình huống đánh giá giả định để hỗ trợ suy nghĩ, không phải kết luận bảo đảm một cách nào đó hợp pháp hay tốt hơn.
+Sau đây là các tình huống giả định để cân nhắc, không bảo đảm rằng một cách làm cụ thể là hợp pháp hay đáng ưu tiên hơn.
 
 **Doanh nghiệp xuất khẩu giai đoạn đầu.** Nếu chưa có nhân viên hay tồn kho tại Đài Loan và muốn xác nhận nhu cầu qua nhà phân phối độc lập, có thể xem trước cung ứng, quan hệ phân phối và phạm vi hoạt động tại Đài Loan. Nhưng bản thân hợp đồng phân phối không loại trừ mọi vấn đề pháp lý tại Đài Loan.
 
@@ -95,7 +95,7 @@ Sau đây là tình huống đánh giá giả định để hỗ trợ suy nghĩ
 
 Khi tư vấn lần đầu, có thể sắp xếp thông tin cơ bản về tổng công ty và nhà góp vốn, mô tả chung về sản phẩm hoặc dịch vụ, luồng giao dịch dự kiến, kế hoạch nhân sự và cơ sở tại Đài Loan, cùng điều kiện hợp đồng và hỗ trợ mà khách hàng yêu cầu. Việc chưa quyết định có thể ghi “chưa xác định”.
 
-Không cần đính kèm toàn bộ tài liệu mật của khách hàng hay dữ liệu quy trình chi tiết ngay lần liên hệ đầu. Sau khi cung cấp tên công ty đối tác phục vụ kiểm tra xung đột lợi ích, hãy theo hướng dẫn của người phụ trách để quyết định tài liệu cần thiết và cách gửi.
+Không cần đính kèm toàn bộ tài liệu mật của khách hàng hay dữ liệu quy trình chi tiết ngay lần liên hệ đầu. Sau khi cung cấp tên công ty đối tác để kiểm tra xung đột lợi ích, hãy theo hướng dẫn của người phụ trách để quyết định tài liệu cần thiết và cách gửi.
 
 ## Câu hỏi thường gặp
 

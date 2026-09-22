@@ -380,7 +380,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Thành lập và cơ cấu',
             paragraphs: [
               'Hovering International Law Firm (昊鼎國際法律事務所) được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學). Tên gọi trong tiếng Trung ghép chữ 昊 mang nghĩa “bầu trời rộng lớn” và chữ 鼎 mang nghĩa “nền móng vững chắc”, thể hiện định hướng của văn phòng khi thành lập.',
-              'Văn phòng có trụ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự, hành chính thông thường. Văn phòng Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Văn phòng Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.',
+              'Văn phòng có trụ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự và hành chính. Văn phòng Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Văn phòng Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.',
               'Bên cạnh hoạt động luật sư, năm 2020 văn phòng kế toán Hovering Accounting Office được thành lập, cung cấp dịch vụ kế toán và hoạch định thuế cho chủ doanh nghiệp và cá nhân có tài sản lớn.',
             ],
           },
@@ -395,7 +395,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Khi quý vị liên hệ với văn phòng',
             paragraphs: [
               'Sau khi nhận được tóm tắt của quý vị, luật sư sẽ xem xét nội dung rồi trao đổi về phạm vi công việc có thể thực hiện, tài liệu cần bổ sung và các bước tiếp theo. Với những vụ việc phát sinh vấn đề kế toán hoặc thuế, văn phòng có thể phối hợp cùng bộ phận kế toán để xử lý trong cùng một quy trình.',
-              'Kết quả của mỗi vụ việc phụ thuộc vào tình tiết và hồ sơ cụ thể, nên chúng tôi không đưa ra cam kết về kết quả. Khi quý vị cần một câu trả lời chắc chắn cho trường hợp của mình, cách duy nhất là trao đổi trực tiếp với luật sư về hồ sơ đó bằng một trong bốn ngôn ngữ tư vấn.',
+              'Kết quả của mỗi vụ việc phụ thuộc vào tình tiết và hồ sơ cụ thể, nên chúng tôi không đưa ra cam kết về kết quả. Khi quý vị cần một câu trả lời chắc chắn cho trường hợp của mình, hồ sơ đó phải được trao đổi trực tiếp với luật sư bằng một trong bốn ngôn ngữ tư vấn.',
             ],
           },
         ],
@@ -638,7 +638,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Phạm vi pháp luật',
             paragraphs: [
               'Văn phòng hành nghề theo pháp luật Đài Loan, và các trang này chỉ nói về công việc trong phạm vi đó.',
-              'Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật của bất kỳ thẩm quyền nào khác ngoài Đài Loan, kể cả pháp luật nơi quý vị cư trú. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.',
+              'Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật của bất kỳ thẩm quyền nào khác ngoài Đài Loan, kể cả pháp luật nơi quý vị cư trú. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận cần chuyên gia có tư cách phù hợp nào cho phần đó.',
             ],
           },
           {

@@ -45,7 +45,7 @@ Nakon potvrde zakonske pretpostavke prema stavku 2. zasebno se ocjenjuje jesu li
 
 Okolnost da je radnik ugovor potpisao može biti podloga koja potvrđuje postojanje sporazuma, ali ne zamjenjuje zakonske pretpostavke. Nasuprot tomu, umjesto da se odmah zaključi samo zato što je klauzula dugoročna, treba provjeriti koja je ulaganja ili naknada postojala i zašto je to razdoblje utvrđeno.
 
-## 2. Prva zakonska pretpostavka: stručno-tehnička obuka i ssnošenje troškova
+## 2. Prva zakonska pretpostavka: stručno-tehnička obuka i snošenje troškova
 
 Da bi se klauzula temeljila na obuci, poslodavac mora radniku stvarno pružiti stručno-tehničku obuku i snositi njezine troškove. Nije dovoljno u planu obuke napisati da je riječ o stručnom tečaju, ili u ugovor upisati procijenjeni trošak. Podloge treba povezati s temom obuke, sa stručnošću i tehničkošću potrebnom za mjesto, konkretnim trajanjem, je li obuka dovršena, i stvarnim izdatkom.
 
@@ -53,7 +53,7 @@ Predmet ocjene nisu samo izravno provjerivi troškovi, kao honorari vanjskih pre
 
 Program, kalendar obuke, popis nazočnosti, rezultat ocjene, svjedodžba o dovršetku, računi i potvrde o plaćanju temeljne su podloge za potvrdu stvarnosti obuke i troškova. Ugovor između poslodavca i obrazovne ustanove, isprave o isplati i uvjeti povrata, viđeni zajedno, omogućuju točnije zahvatiti stvarni teret. Ako je radnik dio troškova platio izravno ili ih je snosila treća osoba, treba također razlikovati tko je snosio konačne troškove.
 
-Granica između opće prilagodbe na rad i stručno-tehničke obuke ne dijeli se samo prema mjestu obuke ili prema tome tko je organizira. Unutarnji tečaj može dokazati konkretan stručni i tehnički sadržaj i znatno ulaganje, a dugi tečaj vanjske ustanove može u stvari biti opća uvodna obuka. Stoga se sva unutarnja obuka ne smije paušalno isključiti niti se zakonska pretpostavka smije priznati samo zato što je tečaj skup ili dug.
+Granica između opće prilagodbe na rad i stručno-tehničke obuke ne ovisi samo o mjestu obuke ni o tome tko je organizira. Unutarnji tečaj može dokazati konkretan stručni i tehnički sadržaj i znatno ulaganje, a dugi tečaj vanjske ustanove može u stvari biti opća uvodna obuka. Stoga se sva unutarnja obuka ne smije paušalno isključiti niti se zakonska pretpostavka smije priznati samo zato što je tečaj skup ili dug.
 
 Treba također moći objasniti odnos između ugovorenog razdoblja i ulaganja u obuku. Koja se sposobnost stječe, kakav odnos ta sposobnost ima prema ciljanom mjestu i zašto je predloženo trajanje radnog odnosa potrebno prema trajanju i trošku obuke, ocjenjuje se pojedinačno. Je li se nakon završetka obuke taj rad stvarno obavljao i već odrađeno razdoblje također su podloge za ocjenu opsega tereta.
 
@@ -112,7 +112,7 @@ Pitanje povrata treba provjeriti redom: valjanost klauzule, pravna narav isplać
 
 Odredba o povratu cijelog iznosa, čvrsta ugovorna kazna bez veze sa stvarnim gubitkom i jednostrani odbitak od plaće ne ocjenjuju se kao jedan problem. Pravni temelj, sadržaj sporazuma, ograničenja radnog prava i zakonitost odbitka treba provjeriti zasebno. Iznos upisan u pozivu poslodavca ili činjenica da je radnik platio dio također ne utvrđuju preostala pravna pitanja.
 
-Treba također razlikovati povrat troškova obuke i povrat davanja isplaćenog unaprijed. Prvi se ocjenjuje sa središtem na stvarnoj stručno-tehničkoj obuci i snošenju troškova; drugi na svrsi isplate, priopćenju, uvjetima pripadanja i razmjeru prema neispunjenom razdoblju. Ako se obje stavke zahtijevaju zajedno, treba zasebno usporediti nije li trošak izračunan dvaput, i dokaze svake stavke.
+Treba također razlikovati povrat troškova obuke i povrat davanja isplaćenog unaprijed. Prvi se ocjenjuje prema stvarno provedenoj stručno-tehničkoj obuci i snošenju troškova; drugi na svrsi isplate, priopćenju, uvjetima pripadanja i razmjeru prema neispunjenom razdoblju. Ako se obje stavke zahtijevaju zajedno, treba zasebno usporediti nije li trošak izračunan dvaput, i dokaze svake stavke.
 
 ## 7. Kad ugovor prestane iz razloga koji se ne može pripisati radniku
 
@@ -146,7 +146,7 @@ U praksi treba sačuvati sadržaj i dan predaje izjave volje o odlasku, dan kada
 
 ## 9. Kontrolni popis za poslodavca i radnika
 
-Radi sprječavanja spora ili ocjene već istaknutog zahtjeva ne smije se čitati samo ugovor, nego zajedno urediti podloge obuke, isplata, rada i prestanka u vremenskom slijedu. Osobito pomaže u tablici prikazati koliko je ugovorenog razdoblja ispunjeno i koliko preostaje i kojim podlogama odgovaraju tvrđeni troškovi i naknada pomaže odvojiti sporne točke.
+Radi sprječavanja spora ili ocjene već istaknutog zahtjeva ne smije se čitati samo ugovor, nego zajedno urediti podloge obuke, isplata, rada i prestanka u vremenskom slijedu. Osobito pomaže u tablici prikazati koliko je ugovorenog razdoblja ispunjeno i koliko preostaje te kojim podlogama odgovaraju tvrđeni troškovi i naknada, kako bi se odvojile sporne točke.
 
 ### Točke koje poslodavac treba provjeriti
 

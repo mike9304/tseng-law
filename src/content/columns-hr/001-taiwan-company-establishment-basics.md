@@ -10,8 +10,8 @@ featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.j
 faq:
   - q: "Pri osnivanju društva na Tajvanu čime se razlikuju kćerinsko društvo, podružnica i predstavništvo?"
     a: "Tajvansko kćerinsko društvo (有限公司 ili 股份有限公司) prema tajvanskom je pravu samostalna pravna osoba. Tajvanska podružnica (分公司) stranog društva nema vlastitu pravnu osobnost i na Tajvanu posluje kao dio stranog društva. Predstavništvo (代表人辦事處) nije poslovnica koja obavlja djelatnost usmjerenu na dobit; opseg njegova rada ograničen je na pravne radnje i veznu (kontaktnu) djelatnost u korist stranog društva. Odgovornost, poreze, dopuštenja i sudjelovanje u javnoj nabavi (政府採購) treba ocjenjivati prema obliku organizacije i okolnostima svakog predmeta."
-  - q: "Daje li samo osnivanje društva dozvolu za rad ili boravišni naslov na Tajvanu?"
-    a: "Samo osnivanje društva ne daje ni dozvolu za rad (工作許可) ni boravišni naslov. Stranac koji društvo na Tajvanu vodi ili njime upravlja mora ispuniti pretpostavke dozvole za rad koje se tiču funkcije, odnosa uloga i rezultata poslodavca te nakon izdavanja dozvole zasebno zatražiti boravišnu iskaznicu za strance (外僑居留證) prilagođenu svrsi boravka."
+  - q: "Daje li samo osnivanje društva dozvolu za rad ili status boravka na Tajvanu?"
+    a: "Samo osnivanje društva ne daje ni dozvolu za rad (工作許可) ni status boravka. Stranac koji društvo na Tajvanu vodi ili njime upravlja mora ispuniti pretpostavke dozvole za rad koje se tiču predložene funkcije, ulagačkog odnosa i poslovnih rezultata poslodavca te nakon izdavanja dozvole zasebno zatražiti boravišnu iskaznicu za strance (外僑居留證) prilagođenu svrsi boravka."
   - q: "Je li za dozvolu za rad i boravišnu iskaznicu potreban najmanji kapital?"
     a: "Ne postoji jedinstveni zakonski najmanji kapital koji se primjenjuje na samo osnivanje društva. Najmanji kapital pojedine djelatnosti, primjerenost poslovnog plana, bankovni pregled i pretpostavke poslodavca u okviru dozvole za rad treba međutim provjeravati zasebno. Dozvola za rad odgovorne osobe stranog državljanstva u pothvatu ulaganja prekomorskih Kineza ili stranaca (僑外投資事業主管工作許可) odnosi se, među inim, na voditelja (經理人) društva čiji zbroj dionica ili uloga koje drže prekomorski Kinezi (華僑) ili stranci premašuje 1/3 izdanih dionica ili ukupnog kapitala, na voditelja tajvanske podružnice stranog društva i na zastupnika predstavništva. Ako u tim slučajevima poslodavac — društvo ili podružnica — postoji manje od 1 godine, načelno se primjenjuje jedno od ovih mjerila: uplaćeni kapital ili operativna sredstva na Tajvanu (在臺營運資金) najmanje TWD 500.000 (新臺幣), promet najmanje TWD 3.000.000, rezultati uvoza i izvoza najmanje USD 500.000 ili posredničke provizije najmanje USD 200.000. Ako postoji 1 godinu ili dulje, načelno se primjenjuje jedno od ovih mjerila, računato za posljednju 1 godinu poslovanja na Tajvanu ili prema prosjeku posljednje 3 godine: promet najmanje TWD 3.000.000, rezultati uvoza i izvoza najmanje USD 500.000 ili posredničke provizije najmanje USD 200.000. Predstavništvo koje postoji 1 godinu ili dulje mora dokazati rezultat djelatnosti na Tajvanu (ako postoji manje od 1 godine, taj zahtjev otpada). Ako pothvat donosi stvarnu korist gospodarskom razvoju Tajvana ili nastupe osobite okolnosti, ostaje moguće posebno priznanje."
 ---
@@ -74,7 +74,7 @@ Prethodni pregled kineskog naziva društva i djelatnosti prije upisa potvrđuje 
 
 Isprave sastavljene u inozemstvu, kao što su punomoć, potvrda o postojanju pravne osobe (法人存續證明) i isprave o ovlaštenju za zastupanje, mogu prema mjestu sastavljanja i naravi isprave zahtijevati javnobilježnički zapis, legalizaciju ili ovjeru tajvanskim predstavništvom u inozemstvu. Nadalje treba provjeriti slažu li se prijevod, osoba ovlaštena za potpis i naziv pravne osobe sa zahtjevom. Prema državljanstvu ulagača i prema tome je li riječ o fizičkoj ili pravnoj osobi, isprave se mogu razlikovati; prije izdavanja korisno je urediti rok valjanosti i put legalizacije.
 
-Pri otvaranju pripremnog računa i prijenosu ulagačkih sredstava banka u okviru identifikacije klijenta može ocijeniti stvarnog korisnika (實質受益人) i podrijetlo sredstava. Ako se nalogodavac, svrha prijenosa, sadržaj odobrenja ulaganja i račun primatelja ne slažu, mogu biti potrebna dodatna objašnjenja ili ispravci. Nakon prijenosa slijedi utvrđivanje stvarno uloženog iznosa, zatim upis društva i porezna registracija te prema bankovnom postupku pretvorba pripremnog računa u redoviti račun.
+Pri otvaranju pripremnog računa i prijenosu ulagačkih sredstava banka u okviru identifikacije klijenta može ocijeniti stvarnog vlasnika (實質受益人) i podrijetlo sredstava. Ako se nalogodavac, svrha prijenosa, sadržaj odobrenja ulaganja i račun primatelja ne slažu, mogu biti potrebna dodatna objašnjenja ili ispravci. Nakon prijenosa slijedi utvrđivanje stvarno uloženog iznosa, zatim upis društva i porezna registracija te prema bankovnom postupku pretvorba pripremnog računa u redoviti račun.
 
 Redoslijed, nužnost i trajanje etapa razlikuju se prema obliku organizacije, iznosu ulaganja, djelatnosti, sadržaju pregleda, tijeku bankovnog postupka i eventualnim ispravcima. Postoje postupci koji slijede nakon osnivanja društva, na primjer registracija uvoza i izvoza, dopuštenja koja se tiču pogona, proizvoda i stručne djelatnosti te zahtjev za dozvolu za rad i boravak za strance. Pri određivanju datuma sklapanja ugovora ili početka djelatnosti treba uzeti u obzir ne samo upis društva, nego i trenutak dovršetka tih kasnijih etapa.
 
@@ -90,13 +90,13 @@ Sjedište društva nije puka adresa za primitak korespondencije, nego temelj upi
 
 Grad Taipej za mjerodavne upise društava i trgovine vodi sustav prethodne ocjene mjesta poslovanja (營業場所預先查詢). Sam rezultat tog upita međutim istodobno ne ispunjava druga dopuštenja ni zahtjeve stručnih propisa. Ako sjedište treba biti u drugoj regiji, treba ocijeniti postupke mjerodavne samouprave i nadležnog tijela; prije sklapanja dugoročnog najma ili prije ulaganja u uređaje preporučuje se potvrditi podobnost mjesta pismeno.
 
-## 4. Dozvola za rad, boravišni naslov i kapital
+## 4. Dozvola za rad, status boravka i kapital
 
 Podnositelj zahtjeva za osnivanje društva, dioničari, osoba koja stvarno djeluje na Tajvanu i podnositelj zahtjeva za boravak mogu biti ista osoba, no u pravu ih treba razlikovati. Odobrenje ulaganja ocjenjuje ulazak sredstava, dozvola za rad (工作許可) djelatnost strane osobe, boravišna iskaznica (外僑居留證, ARC) svrhu i trajanje boravka.
 
-### Osnivanje društva te dozvola za rad i boravišni naslov
+### Osnivanje društva te dozvola za rad i status boravka
 
-Samo osnivanje društva ne daje ni dozvolu za rad ni boravišni naslov. Stranac koji društvo na Tajvanu vodi ili njime upravlja mora ispuniti pretpostavke dozvole za rad koje se tiču funkcije, odnosa uloga i rezultata poslodavca te nakon izdavanja dozvole zasebno zatražiti boravišnu iskaznicu prilagođenu svrsi boravka.
+Samo osnivanje društva ne daje ni dozvolu za rad ni status boravka. Stranac koji društvo na Tajvanu vodi ili njime upravlja mora ispuniti pretpostavke dozvole za rad koje se tiču predložene funkcije, ulagačkog odnosa i poslovnih rezultata poslodavca te nakon izdavanja dozvole zasebno zatražiti boravišnu iskaznicu prilagođenu svrsi boravka.
 
 Studenti mogu podnijeti zahtjev za ulaganje i osnivanje društva. Činjenica da su postali ulagač ili dioničar međutim ne znači da sadašnji boravišni status dopušta rad ili vođenje društva na Tajvanu. Tko stvarno sklapa ugovore, vodi zaposlenike ili preuzima redovito vođenje, mora prije početka djelatnosti ocijeniti podobnost i pretpostavke dozvole za rad.
 
@@ -108,7 +108,7 @@ Ne postoji jedinstveni zakonski najmanji kapital (最低資本額) koji se primj
 
 Navedeni brojevi nisu najmanji kapital koji se općenito primjenjuje na osnivanje društva, nego pretpostavke poslodavca za dozvolu za rad stranih voditelja. Sektorsko pravo može zahtijevati zaseban kapital ili jamčevinu, a banka može neovisno ocjenjivati poslovni plan i rizik operacija. I pri ispunjenju navedenih pragova dozvola za rad ne izdaje se automatski. Druge pretpostavke, kao stvarna funkcija, tijek i predložene isprave podnositelja, ocjenjuju se istodobno.
 
-Supružnik i maloljetna djeca strane osobe koja je stekla boravišnu iskaznicu na temelju dozvole za rad ili slične dozvole mogu, ako su pretpostavke ispunjene, zasebno zatražiti boravak zbog obiteljske veze (依親居留). Mogu biti potrebne isprave za dokaz braka ili podrijetla, uzdržavanja i svrhe boravka; boravišni naslov obitelji ne dodjeljuje se automatski.
+Supružnik i maloljetna djeca strane osobe koja je stekla boravišnu iskaznicu na temelju dozvole za rad ili slične dozvole mogu, ako su pretpostavke ispunjene, zasebno zatražiti boravak zbog obiteljske veze (依親居留). Mogu biti potrebne isprave za dokaz braka ili podrijetla, uzdržavanja i svrhe boravka; status boravka obitelji ne dodjeljuje se automatski.
 
 Zahtjev za stalni boravak (永久居留) od stranih osoba načelno zahtijeva, među inim, neprekinuti i zakoniti boravak na Tajvanu tijekom 5 godina i zadržavanje tamo najmanje 183 dana svake godine. Za strane stručnjake (外國專業人才) i slične osobe mogu se primijeniti druga mjerila izračuna; ocjenjuju se i druge zakonske pretpostavke, kao ponašanje, imovina i sposobnosti. Razdoblja boravka isključena iz izračuna stalnog boravka i pretpostavke u trenutku zahtjeva treba ocjenjivati pojedinačno; samo držanje dozvole za rad ili boravišne iskaznice tijekom 5 godina ne vodi automatski do stalnog boravka.
 
@@ -122,7 +122,7 @@ Porez na promet i porez na dohodak dobitnih poduzeća razlikuju se prema predmet
 
 Sporazum o porezu na dohodak Tajvan–Koreja stupio je na snagu 27. 12. 2023. i primjenjuje se od 1. 1. 2024.; na kamate i licencijske naknade koje ispunjavaju pretpostavke također se primjenjuje najviša stopa u državi izvora 10 %. Pri ocjeni prava oporezivanja dobiti poduzeća treba uzeti u obzir svih 4 tipova stalne poslovne jedinice navedenih gore. Osim dana usluga treba zajedno ocijeniti stalna postrojenja, trajanje radova, ovlaštenje zastupnika za sklapanje ugovora i stvarnu djelatnost.
 
-Ograničena stopa sporazuma ne primjenjuje se automatski zbog same činjenice da sporazum postoji. Treba ocijeniti rezidenciju u smislu sporazuma osobe koja podliježe porezu i kakvoću stvarnog vlasnika, pravnu narav prihoda i potvrdu o rezidentnosti (居住者證明) koju treba predložiti, te isprave zahtjeva. Strukturu operacije, ugovor, račun, stvarni rad i tok plaćanja treba održavati u skladu; rokove prijave i čuvanje obrazloženja treba ocjenjivati zasebno.
+Ograničena stopa sporazuma ne primjenjuje se automatski zbog same činjenice da sporazum postoji. Treba ocijeniti rezidenciju u smislu sporazuma osobe koja podliježe porezu i to je li stvarni vlasnik, pravnu narav prihoda i potvrdu o rezidentnosti (居住者證明) koju treba predložiti, te isprave zahtjeva. Strukturu operacije, ugovor, račun, stvarni rad i tok plaćanja treba održavati u skladu; rokove prijave i čuvanje obrazloženja treba ocjenjivati zasebno.
 
 ## Službeni izvori
 
@@ -140,6 +140,6 @@ Ograničena stopa sporazuma ne primjenjuje se automatski zbog same činjenice da
 
 Opseg mjerodavne djelatnosti možete vidjeti u [U čemu zastupamo klijente](/hr/services), tijek i jezike mjerodavne odvjetnice u [Međunarodni tim Hovering](/hr/lawyers). U stvarima koje se tiču konkretnog predmeta koristite [Kontakt](/hr/contact).
 
-Ovaj je članak isprava opće informacije informativne i obrazovne naravi o osnivanju društva na Tajvanu i povezanim pravilima; nije pravno ni porezno savjetovanje u konkretnom predmetu i ne obećava određeni ishod. Potrebni postupci i rezultati mogu se razlikovati prema strukturi ulaganja, djelatnosti, državljanstvu i boravišnom statusu podnositelja i najnovijoj praksi nadležnog tijela; prije izvršenja ulaganja, ugovora ili zaposlenja treba ocijeniti najnovije službene izvore i okolnosti vlastitog predmeta.
+Ovaj je članak opće informativne i obrazovne naravi o osnivanju društva na Tajvanu i povezanim pravilima; nije pravno ni porezno savjetovanje u konkretnom predmetu i ne obećava određeni ishod. Potrebni postupci i rezultati mogu se razlikovati prema strukturi ulaganja, djelatnosti, državljanstvu i boravišnom statusu podnositelja i najnovijoj praksi nadležnog tijela; prije izvršenja ulaganja, ugovora ili zaposlenja treba ocijeniti najnovije službene izvore i okolnosti vlastitog predmeta.
 
 **Odvjetnica Wei Tseng (曾雋崴)**

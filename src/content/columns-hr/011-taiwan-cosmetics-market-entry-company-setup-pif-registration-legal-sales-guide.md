@@ -36,7 +36,7 @@ Ako tajvanski uvoznik ili prodajni zastupnik (銷售代理商) obavlja uvoz i pr
 
 Pri oblikovanju stvarne podjele rada najprije treba provjeriti tko uvozi proizvod i provodi registraciju proizvoda te tko sastavlja, ažurira i čuva PIF. Treba također odrediti odgovornu osobu za pregled označavanja, vođenje evidencije o prometu, primitak pritužbi potrošača i sigurnosnih informacija te za odgovor na inspekcije i zahtjeve za podloge od strane nadležnog tijela. Treba istodobno ocijeniti slažu li se zakonske obveze naložene proizvođaču ili uvozniku kozmetike i ugovorni posao između marke i prodajnog partnera.
 
-U ugovoru je primjereno konkretno utvrditi opseg uporabe intelektualnog vlasništva, kao što su žig (商標) i slike, način davanja, prijevoda i dopune podloga izvornog proizvođača (原製造者) potrebnih za registraciju proizvoda i za PIF, upravljanje aktualnim podlogama i predaju pri prestanku ugovora. Može se također obuhvatiti ovlaštenje za prethodni pregled i izmjenu reklame, prosljeđivanje sigurnosnih informacija, kao što su pritužbe i neželjeni učinci, suradnja pri povlačenju (回收), ako je nužno, i ssnošenje troškova ispitivanja, prijevoda i čuvanja. Da podloge ne ostanu samo kod jedne strane, unaprijed treba utvrditi i opseg te rok vraćanja ili davanja preslika.
+U ugovoru je primjereno konkretno utvrditi opseg uporabe intelektualnog vlasništva, kao što su žig (商標) i slike, način davanja, prijevoda i dopune podloga izvornog proizvođača (原製造者) potrebnih za registraciju proizvoda i za PIF, upravljanje aktualnim podlogama i predaju pri prestanku ugovora. Može se također obuhvatiti ovlaštenje za prethodni pregled i izmjenu reklame, prosljeđivanje sigurnosnih informacija, kao što su pritužbe i neželjeni učinci, suradnja pri povlačenju (回收), ako je nužno, i snošenje troškova ispitivanja, prijevoda i čuvanja. Da podloge ne ostanu samo kod jedne strane, unaprijed treba utvrditi i opseg te rok vraćanja ili davanja preslika.
 
 ### Kad djelatnost na Tajvanu vodite sami
 
@@ -78,7 +78,7 @@ Prema članku 7. Pravilnika o upravljanju informacijskim spisom kozmetičkih pro
 
 Kad nadležno tijelo pregledava PIF, načelno o tome obavješćuje proizvođača ili uvoznika kozmetike najkasnije 7 dana prije dana inspekcije. Ako međutim slučaj spada pod zakonsku iznimku utvrđenu u povezanim propisima, inspekcija se može provesti bez prethodne obavijesti. Neovisno o tome je li obavijest dana, treba trajno održavati stanje koje omogućuje pronaći i predložiti potpune aktualne podloge.
 
-Prijava neistinitih podataka pri registraciji proizvoda ili upis neistinitih podataka u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 tajvanskih dolara (新臺幣, TWD). Ako su naprotiv podloge PIF-a nepotpune, nadležno tijelo obično naloži ispravak u utvrđenom roku (限期改正), a upravna novčana kazna postaje pitanje tek tada kad se u tom roku ne ispravi. Neistinite podatke i još dopunjivu nepotpunost podloga ne treba ih tretirati kao da vode istoj posljedici.
+Prijava neistinitih podataka pri registraciji proizvoda ili upis neistinitih podataka u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 tajvanskih dolara (新臺幣, TWD). Ako su naprotiv podloge PIF-a nepotpune, nadležno tijelo obično naloži ispravak u utvrđenom roku (限期改正), a upravna novčana kazna postaje pitanje tek tada kad se u tom roku ne ispravi. Neistinite podatke i nepotpunost podloga koju još treba dopuniti ne treba tretirati kao da vode istoj posljedici.
 
 Povlačenje ili uništenje (銷毀) nije mjera koja bi automatski slijedila svaku nepotpunost podloga PIF-a. Sigurnost proizvoda, sadržaj povrede, stanje ispravka i zakonske pretpostavke koje se primjenjuju na svaku mjeru treba ocijeniti odvojeno. Mjere kad je potvrđen sigurnosni problem i zahtjev za dopunu isprava treba ocijeniti zasebno, a postupanje se vodi prema obavijesti nadležnog tijela i primijenjenoj odredbi.
 
@@ -88,7 +88,7 @@ Reklama se ocjenjuje ne samo prema rečenici, nego prema cijelom izrazu, uključ
 
 ### Ocjenjuje se prema cijelom izrazu, a ne prema svakoj riječi
 
-Je li označavanje, promocija (宣傳) ili reklama neistinita ili pretjerana, ili tvrdnja o terapijskom učinku (醫療效能), ne ocjenjuje se samo prema jednoj određenoj riječi. Zajedno se ocjenjuju naziv robe, rečenica, slika, simbol, zvuk, prethodni i sljedeći kontekst te cjelokupni dojam koji potrošač prima. Dojam koji je stvorio središnji reklamni izraz ne otklanja se sam od sebe ograničenjem sitnim slovima, pa treba pregledati i pojedine formulacije i konačni oglasni materijal.
+Je li označavanje, promocija (宣傳) ili reklama neistinita ili pretjerana, ili tvrdnja o terapijskom učinku (醫療效能), ne ocjenjuje se samo prema jednoj određenoj riječi. Zajedno se ocjenjuju naziv robe, rečenica, slika, simbol, zvuk, prethodni i sljedeći kontekst te cjelokupni dojam koji potrošač prima. Dojam koji je stvorio središnji reklamni izraz ne otklanja se samim ograničenjem sitnim slovima, pa treba pregledati i pojedine formulacije i konačni oglasni materijal.
 
 Na primjer, tvrdnja da kozmetika liječi akne, da ima protuupalni učinak ili baktericidno djelovanje, može biti tvrdnja o terapijskom učinku. Treba zajedno provjeriti i način povezivanja naziva bolesti s proizvodom, slike prije uporabe i nakon nje, prikaz koji evocira zdravstvenog djelatnika te kontekst koji tumačenje sastojka povezuje s terapijskim učinkom proizvoda.
 
@@ -129,6 +129,6 @@ Osnovnu strukturu društva i podružnice možete vidjeti u [Osnove osnivanja dru
 - [Invest Taiwan — pregled stranog ulaganja](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Odjel za pregled ulaganja Ministarstva gospodarstva — upute](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
-Ovaj je tekst isprava opće informacije informativne i obrazovne naravi o režimu povezanom sa stupanjem na tržište kozmetike na Tajvanu; nije pravno mišljenje o pojedinom proizvodu ili reklami i ne obećava određeni ishod, dopuštenje, registraciju, mogućnost prodaje ni poštovanje roka rješavanja. Oblik stupanja, podloge o proizvodu, sadržaj označavanja i reklame te najnoviju praksu nadležnog tijela treba provjeriti u svakom predmetu zasebno.
+Ovaj je tekst opća informacija obrazovne naravi o režimu stupanja na tržište kozmetike na Tajvanu; nije pravno mišljenje o pojedinom proizvodu ili reklami i ne obećava određeni ishod, dopuštenje, registraciju, mogućnost prodaje ni poštovanje roka rješavanja. Oblik stupanja, podloge o proizvodu, sadržaj označavanja i reklame te najnoviju praksu nadležnog tijela treba provjeriti u svakom predmetu zasebno.
 
 **Odvjetnica Wei Tseng (曾雋崴)**

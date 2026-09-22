@@ -1107,27 +1107,27 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Građanskopravni sporovi i naknada štete',
           paragraphs: [
             'Ovo područje obuhvaća sporove iz ugovora, naknadu štete iz protupravnog djelovanja i potrošačke sporove. Rad u pravilu započinje vremenskim slijedom, procjenom isprava i postojećih dokaza, a tek potom slijede sljedeći koraci.',
-            'Tijek određuju rokovi, uključujući zastarne, i potpunost dokaza. Stoga navedite poznate datume što ranije. Sačuvajte ugovore, poruke, dokaze o plaćanju ili fotografije stanja na mjestu i spomenite ih u prvoj poruci.',
+            'Tijek određuju rokovi, uključujući zastarne, i potpunost dokaza. Stoga navedite poznate datume što ranije. Sačuvajte ugovore, poruke, dokaze o plaćanju ili fotografije s mjesta događaja i spomenite ih u prvoj poruci.',
           ],
         },
         {
           heading: 'Brak, obitelj i nasljeđivanje',
           paragraphs: [
-            'Vodimo razvod (離婚), diobu imovine, ostvarivanje i preuzimanje prava i dužnosti prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), i tada kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu evidencije kućanstava (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.',
+            'Vodimo razvod (離婚), diobu imovine, izvršavanje prava i snošenje dužnosti prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), i tada kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu evidencije kućanstava (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.',
             'Budući da obiteljski predmeti često nose rokove i paralelne postupke, prvi sažetak treba navesti odnos među strankama, trenutačno prebivalište i već pokrenute postupke.',
           ],
         },
         {
           heading: 'Radnopravni sporovi',
           paragraphs: [
-            'Ovo područje obuhvaća prestanak radnog odnosa, zakonsku otpremninu prema tajvanskom pravu (資遣費; ne smije se poistovjećivati sa sličnim institutima drugih država), naknadu i sporove iz ugovora o radu (勞動契約), i na strani radnika i na strani poslodavca. Pri procjeni razlikujemo razlog prestanka od pitanja otkaznog roka, isplate i rokova.',
+            'Ovo područje obuhvaća prestanak radnog odnosa, zakonsku otpremninu prema tajvanskom pravu (資遣費; ne smije se poistovjećivati sa sličnim institutima drugih država), plaću i sporove iz ugovora o radu (勞動契約), i na strani radnika i na strani poslodavca. Pri procjeni razlikujemo razlog prestanka od pitanja otkaznog roka, isplate i rokova.',
             'Odlučujuće isprave obično su ugovor o radu, pravila rada (工作規則), platne liste i korespondencija stranaka. Ako ih još imate, spomenite to u sažetku.',
           ],
         },
         {
           heading: 'Kazneni predmeti',
           paragraphs: [
-            'Zastupamo u predistražnom postupku i pred sudom osumnjičene i okrivljenike te oštećenike i procjenjujemo kaznene rizike poslovne djelatnosti.',
+            'Zastupamo u istrazi i pred sudom osumnjičenike, okrivljenike i oštećenike te procjenjujemo kaznene rizike poslovne djelatnosti.',
             'Kazneni predmeti često imaju kratke rokove i čvrsto određene faze. Ako ste već primili pismeno tijela kaznenog progona ili suda, navedite datum na pismenu na vrijeme, kako bi se sadržaj pregledao u ispravnom redoslijedu.',
           ],
         },
@@ -1158,9 +1158,9 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Osnivanje i struktura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) osnovale su 2016. odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.',
-            'Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na vođenje poduzeća i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. za lokalnu potrebu.',
-            'Uz odvjetnički rad od 2020. djeluje i Hovering Accounting Office, koji nudi računovodstvo i porezno planiranje poduzetnicima i privatnim osobama s imovinom.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) 2016. su ga osnovali odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.',
+            'Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na vođenje poduzeća i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. kako bi se skrbilo o strankama u toj regiji.',
+            'Uz odvjetnički rad od 2020. djeluje i Hovering Accounting Office, koji nudi računovodstvo i porezno planiranje poduzetnicima i imućnim privatnim osobama.',
           ],
         },
         {
@@ -1173,7 +1173,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kada nas kontaktirate',
           paragraphs: [
-            'Nakon primitka Vašeg sažetka odvjetnica ili odvjetnik pregledava sadržaj i zatim govori o mogućem opsegu rada, o još potrebnim ispravama i o sljedećim koracima. Kod poreznih ili računovodstvenih pitanja ured može postupati s računovodstvenim odjelom u jednom povezanom postupku.',
+            'Nakon primitka Vašeg sažetka odvjetnica ili odvjetnik pregledava sadržaj i zatim govori o mogućem opsegu rada, o još potrebnim ispravama i o sljedećim koracima. Kod poreznih ili računovodstvenih pitanja ured može s računovodstvenim odjelom raditi u jednom zajedničkom postupku.',
             'Ishod svakog predmeta ovisi o činjenicama i o dostupnim ispravama; ishod ne obećavamo. Ako trebate obvezujući odgovor za svoju situaciju, isprave se moraju raspraviti s odvjetnicom ili odvjetnikom na jednom od četiri jezika savjetovanja.',
           ],
         },
@@ -1320,7 +1320,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Što učiniti ako je moj predmet vrlo hitan?',
           answer:
-            'Navedite rok ili datum s službenog pismena odmah na početku sažetka, kako bi ti datumi pri pregledu bili vidljivi. Ova stranica nema hitni kanal i ne osigurava rok za odgovor; ako Vaš predmet ne trpi odgodu, trebali biste usporedno tražiti i druge putove na svojem mjestu.',
+            'Navedite rok ili datum na službenom pismenu odmah na početku sažetka, kako bi ti datumi pri pregledu bili vidljivi. Ova stranica nema hitni kanal i ne osigurava rok za odgovor; ako Vaš predmet ne trpi odgodu, trebali biste usporedno tražiti i druge putove ondje gdje se nalazite.',
         },
       ],
     },
@@ -1386,7 +1386,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mjesto pohrane i pružatelji usluga',
           paragraphs: [
-            'Ove stranice smještene su kod tvrtke Vercel, a Vaš se podnesak čuva u nejavnoj pohrani te usluge. Poruke e-pošte šalju se poštanskom uslugom koju ured rabi.',
+            'Ove stranice smještene su kod tvrtke Vercel, a Vaš se podnesak čuva u nejavnoj pohrani te usluge. Poruke e-pošte šalju se uslugom e-pošte koju ured rabi.',
             'Poslužitelji pojedinih pružatelja mogu se nalaziti izvan Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha pohrane ispunjena, podaci se bez nepotrebne odgode brišu; podaci koje treba čuvati prema mjerodavnim propisima ostaju za to razdoblje. Zahtjeve u vezi s osobnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },

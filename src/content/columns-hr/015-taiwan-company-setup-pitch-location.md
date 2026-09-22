@@ -19,17 +19,17 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Kad započinjete ugostiteljsku djelatnost, prvi je problem pronaći adresu mjesta poslovanja (營業地址).
 
-Osim tržišne situacije
+Osim tržišne situacije treba provjeriti i namjenu zone.
 
-daljnja je važna točka
+Daljnja je važna točka dopušta li zona restoran.
 
-leži li ta adresa u zoni u kojoj je pogon „restorana“ moguć.
+Treba provjeriti leži li ta adresa u zoni u kojoj je pogon „restorana“ moguć.
 
 ​
 
-Ako započinjete djelatnost u gradu Taipei,
+Ako započinjete djelatnost u gradu Taipeiu, na raspolaganju je gradska usluga prethodne provjere.
 
-možete rabiti sustav „prethodne provjere mjesta poslovanja“ (營業場所預先查詢) Trgovačkog ureda grada Taipeia (臺北市商業處).
+Možete rabiti sustav „prethodne provjere mjesta poslovanja“ (營業場所預先查詢) Trgovačkog ureda grada Taipeia (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Za tu je provjeru međutim potrebno učitati „izvadak iz evidencije zgrade vrs
 
 Svatko može u zemljišnoknjižnom uredu (地政事務所) zatražiti „izvadak iz evidencije zgrade vrste 2“ bilo koje adrese.
 
-Ako je teško osobno doći u zemljišnoknjižni ured (地政事務所),
+Ako je teško osobno doći u zemljišnoknjižni ured (地政事務所), izvadak se može pribaviti i na drugi način.
 
-može se zatražiti pomoć poznanika na Tajvanu, najmodavca, posrednika u prometu nekretnina ili odvjetnice odnosno odvjetnika.
+Može se zatražiti pomoć poznanika na Tajvanu, najmodavca, posrednika u prometu nekretnina ili odvjetnice odnosno odvjetnika.
 
 Ako rezultat provjere pokaže da restoran nije moguć, kasnije pri upisu društva (公司登記) gradska uprava možda neće prihvatiti zahtjev za upis.
 
@@ -59,9 +59,9 @@ Pri upisu društva međutim se često upisuje više djelatnosti odjednom i čest
 
 Stoga u praksi nije nužno pri upisu društva provjeravati sve djelatnosti.
 
-Prema „[uputama o radu usluge obavijesti o mjestima poslovanja grada Taipeia](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) i važećoj obavijesti grada Taipeia,
+Prema „[uputama o radu usluge potpomognute provjere mjesta poslovanja grada Taipeia](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) i prema važećoj obavijesti grada Taipeia vrijedi sljedeće.
 
-od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune djelatnosti društva ili samostalnog poslovnog subjekta (uključujući podružnicu (分公司) i pomoćnu jedinicu (分支機構)) rezultat prethodne provjere mjesta poslovanja **mora** biti priložen zahtjevu za upis, bez obzira na djelatnost.
+Od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune djelatnosti društva ili samostalnog poslovnog subjekta (uključujući podružnicu (分公司) i pomoćnu jedinicu (分支機構)) rezultat prethodne provjere mjesta poslovanja **mora** biti priložen zahtjevu za upis, bez obzira na djelatnost.
 
 Niže navedeni popis „djelatnosti koje su predmetom službene provjere“ (主動查詢之營業項目) označuje djelatnosti koje Trgovački ured tijekom pregleda upisa provjerava po službenoj dužnosti dodatno (隨案主動查詢), kad djelatnost figurira u zahtjevu, a nedostaje u priloženom rezultatu; činjenica da djelatnost nije na tom popisu ne znači oslobođenje od provjere.
 

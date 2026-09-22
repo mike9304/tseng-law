@@ -73,13 +73,13 @@ Radnik stoga mora dobro paziti na taj rok.
 
 Drugim riječima,
 
-pravo Tajvana, leži li krivnja na strani poduzeća,
+tajvansko pravo, ovisno o tome je li krivnja na strani poslodavca,
 
 ili na strani radnika,
 
 jednoj strani daje mogućnost da otpremninu ne isplati, a drugoj da je zahtijeva.
 
-Ponekad, leži li krivnja na objema stranama radnog odnosa,
+Ponekad, kada je krivnja na objema stranama radnog odnosa,
 
 izbije li spor,
 
@@ -91,7 +91,7 @@ Stoga u sporovima rada (勞資糾紛) na Tajvanu
 
 „**vrijeme**“ veoma je važno.
 
-U sporovima o zakonskoj otpremnini odlučuje koja je strana ranije, s valjanim razlogom i dokazima, otkazala ugovor. U većini slučajeva bolje prolazi strana koja se unaprijed pripremila.
+U sporovima o zakonskoj otpremnini odlučuje koja je strana ranije, s valjanim razlogom i dokazima, otkazala ugovor. U većini slučajeva strana koja se unaprijed pripremila u boljem je položaju da zaštiti svoja prava; sama priprema ne određuje ishod.
 
 ---
 

@@ -4181,7 +4181,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinira termine savjetovanja i komunikaciju za klijente iz Koreje.',
-        'Na temelju obrazovanja iz informatike podržava razmjenu među regijama sustavima dokumenata i radnih postupaka.',
+        'Na temelju obrazovanja iz informatike podržava razmjenu među područjima putem sustava dokumenata i radnih postupaka.',
       ],
       education: [
         'Prvostupnik (B.S.) informatike, National Cheng Kung University',

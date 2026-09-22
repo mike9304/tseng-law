@@ -75,7 +75,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
     columnsOriginalLanguageBadge: 'Původní jazyk',
     columnsOriginalLanguageNote:
       'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
-    imageBandAlt: 'Tradiční tchajwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
+    imageBandAlt: 'Tradiční tchajwanský dům typu sanheyuan (三合院) a moderní pavilon za denního světla',
     videoPauseLabel: 'Pozastavit video',
     videoPlayLabel: 'Přehrát video',
     videoReplayLabel: 'Přehrát video znovu',
@@ -93,7 +93,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
           heading: 'Čím se zabýváme',
           paragraphs: [
             'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
-            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
+            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku, v němž se věc posuzuje. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
           ],
         },
         {
@@ -197,8 +197,8 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
           heading: 'Založení a struktura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 („širé nebe“) se znakem 鼎 („pevný základ“) a vystihuje zaměření kanceláře od jejího založení.',
-            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
-            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na korporátní agendu a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
+            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a movitým soukromým osobám.',
           ],
         },
         {
@@ -211,7 +211,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Když nás oslovíte',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
+            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dokumentech, které jsou ještě potřeba, a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
             'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
           ],
         },
@@ -358,20 +358,20 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Co dělat, je-li má věc velmi naléhavá?',
           answer:
-            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty tam, kde se nacházíte.',
         },
       ],
     },
     privacy: {
       eyebrow: 'SOUKROMÍ',
-      title: 'Údaje sbírané kontaktním formulářem',
+      title: 'Osobní údaje shromažďované kontaktním formulářem',
       description:
-        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+        'Co shromažďuje kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
       intro:
         'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
       sections: [
         {
-          heading: 'Které údaje se sbírají',
+          heading: 'Které údaje se shromažďují',
           paragraphs: [
             'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
           ],
@@ -442,14 +442,14 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
           heading: 'Pouze obecné informace',
           paragraphs: [
             'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
-            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku, v němž se věc posuzuje; dvě zdánlivě podobné situace mohou skončit různě.',
           ],
         },
         {
           heading: 'Právní rámec',
           paragraphs: [
             'Kancelář působí podle tchajwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
-            'Obsah není poradenstvím podle práva jiného řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+            'Obsah není poradenstvím podle jiného právního řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
           ],
         },
         {

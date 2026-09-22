@@ -37,7 +37,7 @@ Tak či onak, když je řeč o masáži (按摩),
 
 na Tchaj-wanu existuje také mnoho ulic masáže.
 
-Stavějí se tam masážní provozovny všeho druhu.
+Lemují je masážní provozovny všeho druhu.
 
 Je masáž prováděná osobami se zrakovým postižením (視障按摩), masáž nohou, olejová masáž, thajská masáž a jiné formy.
 

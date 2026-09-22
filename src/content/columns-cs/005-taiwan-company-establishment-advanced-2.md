@@ -71,7 +71,7 @@ Některé banky mohou ukládat další požadavky, například dobu používán�
 
 A. První zaměstnanec: žádost se podává jako vedoucí práce v podniku běžné investice zámořských Číňanů nebo cizinců (一般僑外投資事業主管工作). Kritérium „práce odborné nebo technické povahy“ z bodu B níže se neuplatní, avšak uplatní se předpoklady adresáta, včetně předpokladu vedoucího (經理人) společnosti, jejíž vklad zámořských Číňanů nebo cizinců přesahuje 1/3, a také předpoklady výsledků zaměstnavatele týkající se kapitálu a obratu (články 38 a 39 norem přezkumu).
 
-B. Od druhého zaměstnance existují omezení: přesahuje-li počet zaměstnaných osob 1 osobu, vzdělání a zkušenost zaměstnance, pravidla průměrné mzdy při zaměstnání a pravidla kapitálu a obratu společnosti se zpracovávají podle „odborné nebo technické práce“ (專門性或技術性工作).
+B. Od druhého zaměstnance existují omezení: přesahuje-li počet zaměstnaných cizinců 1 osobu, posuzují se vzdělání a praxe, průměrná mzda a kapitál a obrat společnosti podle „odborné nebo technické práce“ (專門性或技術性工作).
 
 Viz stránku Ministerstva práce Tchaj-wanu (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

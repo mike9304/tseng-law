@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Snímek vysvětlující posouzení odpovědnosti při nehodě při předjíždění na Tchaj-wanu a bezpečný postup předjíždění](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Když vozidlo vpředu jede pomalu, může předjíždění (超車) vypadat jako běžná volba, avšak jde o jízdní jednání se značným rizikem. Před zahájením předjíždění je třeba společně posoudit úsek silnice, dopravní situaci v obou směrech, pohyb vozidel vpředu a to, zda je prostor k bezpečnému návratu na původní jízdní pruh.
+Když vozidlo vpředu jede pomalu, může předjíždění (超車) působit jako něco běžného, avšak jde o jízdní jednání se značným rizikem. Před zahájením předjíždění je třeba společně posoudit úsek silnice, dopravní situaci v obou směrech, pohyb vozidel vpředu a to, zda je prostor k bezpečnému návratu na původní jízdní pruh.
 
 ## Podmínky předjíždění stanovené čl. 101 pravidel bezpečnosti silničního provozu (道路交通安全規則)
 
@@ -37,13 +37,13 @@ V anonymizované věci vedené touto kanceláří jel motocyklista A po horské 
 
 ![Schéma nehody ukazující dráhu předjíždění motocyklu a 2 vozidel vpředu na horské silnici](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A se pokusil předjet obě vozidla, vjel do protisměrného pruhu a zrychlil. Vozidlo č. 2 se rovněž chystalo předjet vozidlo č. 1: méně než 1 sekundu po zapnutí blinkru vjelo do protisměrného pruhu. Motocykl neměl dostatečnou rezervu k brzdění a srazil se s vozidlem č. 2.
+A se pokusil předjet obě vozidla, vjel do protisměrného pruhu a zrychlil. Vozidlo č. 2 se rovněž chystalo předjet vozidlo č. 1: méně než 1 sekundu po zapnutí blinkru vjelo do protisměrného pruhu. Motocykl neměl dost času zabrzdit a srazil se s vozidlem č. 2.
 
 B utrpěl těžké poranění hlavy a zemřel na místě; A ztratil vědomí a byl převezen do nemocnice.
 
 Rodiny A a B nejprve považovaly náhlou změnu pruhu vozidla č. 2 za hlavní příčinu srážky. Věc přešla do soudního řízení; v jeho průběhu bylo vypracováno několik znaleckých posudků (鑑定) k nehodě.
 
-Podle výsledku posudku nesl hlavní odpovědnost za tuto srážku A. Tento závěr byl omezen na skutkové okolnosti této věci. Posudek zohlednil společně to, že A chtěl předjet 2 vozidla vpředu jedoucí za sebou, že vjel do protisměrného pruhu, že jel rychlostí, která téměř nenechávala rezervu k brzdění, že chyběly předepsané signály klaksonu a světel, jakož i pohyb změny pruhu vozidla č. 2, uspořádání silnice a pruhů a ostatní zajištěné důkazy.
+Podle výsledku posudku nesl hlavní odpovědnost za tuto srážku A. Tento závěr byl omezen na skutkové okolnosti této věci. Posudek zohlednil společně to, že A chtěl předjet 2 vozidla vpředu jedoucí za sebou, že vjel do protisměrného pruhu, že jel rychlostí, která téměř nenechávala čas zabrzdit, že chyběly předepsané signály klaksonu a světel, jakož i pohyb změny pruhu vozidla č. 2, uspořádání silnice a pruhů a ostatní zajištěné důkazy.
 
 To, že v některých věcech takové výsledky posudku nastanou, neznamená, že jedno vynechání předepsaného signálu vždy určí odpovědnost. Zavinění (過失) při nehodě při předjíždění závisí na místě nehody, uspořádání pruhů, rychlosti, pohybech vozidel, signálech, časových intervalech, výhledu a ostatních důkazech.
 

@@ -37,11 +37,11 @@ V následujících zvláštních situacích, i když zaměstnanec odejde z vlast
 
 2. Když zaměstnavatel, člen rodiny zaměstnavatele nebo zástupce zaměstnavatele (代理人) užije násilí nebo způsobí závažnou urážku (重大侮辱) zaměstnanci
 
-3. Když práce stanovená ve smlouvě může škodit zdraví zaměstnance, byla požadována náprava od zaměstnavatele a není účinek
+3. Když práce stanovená ve smlouvě může škodit zdraví zaměstnance, byla od zaměstnavatele požadována náprava, a k nápravě nedošlo
 
 4. Když zaměstnavatel, jeho zástupce nebo jiný zaměstnanec onemocní zákonnou nakažlivou nemocí (法定傳染病), existuje riziko nákazy zaměstnanců pracujících spolu a jde o závažné nebezpečí pro zdraví zaměstnance
 
-5. Když zaměstnavatel nevyplácí odměnu (工作報酬) podle pracovní smlouvy, nebo nezajišťuje dostatečné množství práce zaměstnanci, jehož odměna se počítá od kusu (按件計酬)
+5. Když zaměstnavatel nevyplácí odměnu (工作報酬) podle pracovní smlouvy, nebo nezajišťuje dostatečné množství práce zaměstnanci, jehož odměna se počítá podle počtu kusů (按件計酬)
 
 6. Když zaměstnavatel poruší pracovní smlouvu nebo pracovní právo, takže existuje riziko porušení práv a zájmů zaměstnance
 
@@ -87,7 +87,7 @@ podle toho, kdo první ukončí smlouvu s dostatečným důvodem,
 
 odstupné nemusí být vyplaceno, nebo může být žádáno.
 
-Proto ve sporech práce (勞資糾紛) na Tchaj-wanu
+Proto v pracovněprávních sporech (勞資糾紛) na Tchaj-wanu
 
 je „**čas**“ velmi důležitý.
 

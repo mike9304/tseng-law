@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Hlavní snímek](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-V poslední době mnoho osob úspěšně založilo společnost (公司) na Tchaj-wanu a získalo pracovní vízum i průkaz k pobytu (外僑居留證),
+V poslední době mnoho osob úspěšně založilo společnost (公司) na Tchaj-wanu a získalo pracovní vízum i průkaz k pobytu (外僑居留證).
 
-a otázky často kladené při zakládání jsou sebrány níže.
+Otázky, které se při zakládání často opakují, jsou shrnuty níže.
 
 Osoby, které si přečetly [**základy založení společnosti**](/cs/columns/taiwan-company-establishment-basics), mohou následně nahlédnout i do této podrobnější prohloubené části.
 
@@ -49,7 +49,7 @@ Protože posouzení investičního plánu také zabere čas,
 
 měli byste sestavovat investiční plán a hledat adresu zápisu společnosti současně.
 
-Podle čl. 9 Statutu investic cizinců (外國人投資條例) musí schválený vklad dorazit v plné výši ve lhůtě stanovené příslušným orgánem (核定期限); lhůtu je třeba ověřit v aktu schválení každé věci (v praxi se často stanoví přibližně na 1 rok).
+Podle čl. 9 zákona o investicích cizinců (外國人投資條例) musí schválený vklad dorazit v plné výši ve lhůtě stanovené příslušným orgánem (核定期限); lhůtu je třeba ověřit v aktu schválení každé věci (v praxi se často stanoví přibližně na 1 rok).
 
 V této lhůtě, po nalezení adresy společnosti a uzavření nájemní smlouvy,
 
@@ -103,7 +103,7 @@ Je proto vhodné hledat provozovnu včas.
 
 Pokud jednání s pronajímatelem neprobíhá hladce,
 
-lze v případě potřeby navrhnout ověření nájemní smlouvy (公證) nebo dodatečnou kauci.
+lze v případě potřeby navrhnout notářský zápis nájemní smlouvy (公證) nebo dodatečnou kauci.
 
 ​
 

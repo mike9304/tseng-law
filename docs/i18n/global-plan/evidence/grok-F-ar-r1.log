@@ -1,0 +1,75 @@
+WO-F-ar r1 — Grok 4.7 fix lane — 2026-09-22
+Locale: Arabic (Modern Standard, Gulf/Levant readers) / ar
+Scope: 18 columns + guidance pack (ar strings only). No commit.
+
+## Rows applied
+Part a (33 rows): 1–14, 16–21, 23–29, 31–33 applied in full.
+Part a 15, 22, 30 applied as in-block rephrases only (structure kept; see skipped).
+Part b (40 rows): 1–18, 21–40 applied in full.
+Part b 19 applied as a rephrase of that block (not a deletion).
+Part b 20 not applied (ZWSP).
+
+Guidance pack (part a rows 3–6 plus the مجموعات / ولاية sweep):
+- object-store calque → مستودع بيانات غير علني
+- ولاية قضائية → نظام قانوني
+- practice-area مجموعة/مجموعات → مجال/مجالات (home, services body, FAQ, answers)
+- Ministry of Education, Legal Affairs Division and Legal Aid Foundation, Taichung Branch written in Arabic with the Latin name kept in parentheses
+TWD 1.57M left byte-identical. Consultation sentence left byte-identical.
+
+## Rows skipped
+- ar-a 15 (ZWSP + turn Q16–Q20 into headings): checker requires the same ZWSP count and the same heading levels as the Korean source. Opener rephrased inside the existing paragraphs («لا يُستحسن ترك الدعوى كلها لشركة التأمين…»، closing wish, first-person aside).
+- ar-a 22 (delete the one-line shampoo paragraphs and start with السيد لين): would change block count. Opening question and «على أي حال» rephrased inside their own paragraphs. The rest of 006 kept.
+- ar-a 30 (delete the الصعوبة row): would change the table-row count. Cells rephrased so they name the statutory conditions and do not read as «economic dismissal is easy».
+- ar-b 20 (delete U+200B in 013 and 015): checker fails if ZWSP count diverges from the source. Spaces left in place.
+- 001 suggested «الاسم الصيني»: the nationality check treats the substring الصين inside الصيني as a China mention, and the Korean source block does not name China. Shipped «اسم الشركة بالحروف (漢字)» instead. Same three sites (intro, numbered step, following paragraph).
+
+## Systemic patterns and instances
+- Practice-area مجموعة → مجال: 9 (guidance content + answers). «شركات المجموعة» in 004 left (a group of companies, not a practice area).
+- Read-time agreement: 13 frontmatter values. 2 → دقيقتان للقراءة (005, 006, 009, 013, 015). 3–10 → N دقائق قراءة (001, 003, 008, 010, 011, 012, 017, 018). 11+ left as N دقيقة قراءة (002, 004, 007, 014, 016), which is the correct singular.
+- 條例 called لائحة → قانون: 8 (004 الابتكار الصناعي ×5, 008 معاشات العمال ×2, 003 إدارة المرور وجزاؤه ×1). 辦法 called طريقة → قواعد in 002 (×4) and لائحة in 011 (إدارة الملف ×3, تسجيل المنتجات ×1).
+- Jurisdiction ولاية → اختصاص / نظام قانوني: 8 (guidance 1, 007 6, 016 المحكمة 1). «الولاية على الأبناء القصر (親權)» left: that is parental authority, not a governorate.
+- ملموس calque: 33 tokens across 002, 003, 004, 007, 010, 011, 014, 016, 017, 018.
+- Surviving parent narrowed to الأب/الوالد: 18 in 016 (FAQ question, FAQ answer, §5, §6 Art. 1093, §7, checklist). Husband/wife الزوج المخطئ → الطرف المخطئ in 007 (heading + 2 body/FAQ sentences).
+- Reference-date calque يوم الأساس / يوم المعيار: 6 (010 ×1, 016 ×5).
+- Bare «لا» under a non-yes/no heading: 1 (017 §3 body). FAQ answer kept its «لا».
+- 018 plural imperatives → impersonal: title, H1 twin, §1 heading, worked example, table imperatives, entity choice, audit/branch sentences, FAQ pair (×2), closing, and the responsible-attorney line (المحامية المسؤولة). Tanwin-on-alef normalized to the 010–017 spelling (حتمًا / أيضًا): 45 tokens in 018 only.
+- OOO → [الاسم]: 1 (008).
+- Blog register inside existing blocks: 003 Q16 opener, closing wish, first-person aside, fine formula; 006 opening and transition; 008 hello, table intro, case intro, result sentence, «right as a matter of course». 009 had no chatty opener left; only the read-time changed.
+- Korea-as-default parent: 1 (004 opening). The Korea treaty caveats already in 001/004 were left. 005’s remittance answer stays labelled as Korean banking practice. 006’s Korean massage statute stays the comparison topic.
+
+## §Verify (verbatim)
+
+```
+neighbour      PASS   
+hanzi          PASS   han=6
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+       0
+```
+
+```
+TSC_OK
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+      24
+```
+
+Commands were the work-order set (checker tail -8, marker wc -l, tsc, vitest grep, git status --short | wc -l). No test expected-string had to change. The status count included a helper directory `.tmp-ar/` and the pre-existing WO-F-ar.txt / rounds entries; the helper directory was removed after the snapshot and is not part of the deliverable.
+
+## Reviewer points not followed as written
+- ar-b 19 calls «يُستحسن التحقق مسبقًا قبل إبرام العقد» a duplicate of the lease sentence. In the English file that block is the italic «leave a comment or contact us at any time» line. The block was kept and rewritten as a contact-page sentence with no reply-time promise. «رد فوري» was then dropped because the checker’s ar-immediate rule matches it.
+- ar-a 15 / ar-b 20 are right that the zero-width spaces are phantom blog spacers, and ar-a 22 / ar-a 30 are right that those passages are still blog-shaped. They were not applied as deletions or new headings, because ACCEPTED-ROUND and the checker both pin block, heading, table-row, and ZWSP counts.
+- Suggested «الاسم الصيني» (ar-a 9) is the right gloss of the company’s Chinese name. It was not shipped: «الصيني» contains «الصين», and the nationality check fails on the source block that only says 중문명.

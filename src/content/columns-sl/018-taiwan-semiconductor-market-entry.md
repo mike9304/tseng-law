@@ -1,5 +1,5 @@
 ---
-title: "Tuja podjetja sestavnih delov za polprevodnike, ki vstopajo na Tajvan: kako presoditi hčerinsko družbo, podružnico ali zastopnika"
+title: "Tuja podjetja za sestavne dele polprevodnikov, ki vstopajo na Tajvan: kako presoditi hčerinsko družbo, podružnico ali zastopnika"
 lastmod: "2026-09-17"
 date_display: "17. septembra 2026"
 read_time: "8 min branja"
@@ -15,7 +15,7 @@ faq:
     a: "Stopnjevit prehod je mogoče načrtovati, vendar je treba skupaj presoditi prenehanje ali spremembo obstoječih pogodb, pogodbe s strankami, zaloge, obravnavo jamstev in osebje."
 ---
 
-# Tuja podjetja sestavnih delov za polprevodnike, ki vstopajo na Tajvan: kako presoditi hčerinsko družbo, podružnico ali zastopnika
+# Tuja podjetja za sestavne dele polprevodnikov, ki vstopajo na Tajvan: kako presoditi hčerinsko družbo, podružnico ali zastopnika
 
 ![Slika k presoji strukture vstopa podjetja polprevodnikov na Tajvan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
@@ -23,7 +23,7 @@ Ko se začnejo posli s tajvanskimi strankami, lahko sedež v tujini prejme razli
 
 Najprej je treba razjasniti, kdo na Tajvanu kaj opravlja. Struktura, ki jo je treba presoditi, se spremeni glede na to, ali sedež v tujini še naprej sklepa kupoprodajne pogodbe, ali tajvanska družba blago kupi in ga naprej proda, ali krajevno osebje nudi le tehnično podporo.
 
-Ta članek je splošen napotek za tuja podjetja materialov, sestavnih delov in opreme za polprevodnike, ki načrtujejo strukturo vstopa na Tajvan. Spodnje operativne situacije in točke pregleda so hipotetični zgledi in predlogi za presojo, ne pa dejanski mandat določenega podjetja niti enotna zahteva ustanovitve. Davke, nadzor izvoza, dovoljenja po izdelku in razvrstitev vlagatelja je treba presoditi ločeno.
+Ta članek je splošen napotek za tuja podjetja za materiale, sestavne dele in opremo za polprevodnike, ki načrtujejo strukturo vstopa na Tajvan. Spodnje operativne situacije in točke pregleda so hipotetični zgledi in predlogi za presojo, ne pa dejanski mandat določenega podjetja niti enotna zahteva ustanovitve. Davke, nadzor izvoza, dovoljenja po izdelku in razvrstitev vlagatelja je treba presoditi ločeno.
 
 ## 1. Pred izbiro oblike vpisa je treba najprej urediti »delitev prodaje in poslovanja«
 
@@ -61,17 +61,17 @@ Osrednja razlika med tajvansko hčerinsko družbo (子公司) in tajvansko podru
 
 ### Družba z omejeno odgovornostjo: upravljanje je enostavnejše, prenos deležev pa je razmeroma zaprt
 
-Družbo z omejeno odgovornostjo (有限公司) je mogoče ustanoviti z 1 ali več fizičnimi osebami ali s tajvanskimi in tujimi pravnimi osebami kot družbeniki; družbeniki (股東) praviloma odgovarjajo le do višine vložka. Direktorjev je od 1 do 3 in se izvolijo izmed družbenikov. Družbeniki, ki ne izvršujejo poslov, lahko uveljavljajo pravico nadzora, zato posebnega nadzornika družbe (監察人) ni treba imenovati. Če statut ne določa drugače, ima 1 družbenik 1 glas, zato se obvladovanje ne ujema nujno z razmerjem vložkov. Prenos vložka navadnega družbenika praviloma zahteva pristanek večine glasovalnih pravic drugih družbenikov; pri direktorju je treba 2/3 ali več. Zato je oblika primernejša za preprosta razmerja med družbeniki in stabilno obvladovanje kot za pogosto zbiranje kapitala ali trgovanje z deleži. Pozneje jo je mogoče preoblikovati v delniško družbo.
+Družbo z omejeno odgovornostjo (有限公司) je mogoče ustanoviti z 1 ali več fizičnimi osebami ali s tajvanskimi in tujimi pravnimi osebami kot družbeniki; družbeniki (股東) praviloma odgovarjajo le do višine vložka. Članov uprave je od 1 do 3 in se izvolijo izmed družbenikov. Družbeniki, ki ne izvršujejo poslov, lahko uveljavljajo pravico nadzora, zato posebnega nadzornika družbe (監察人) ni treba imenovati. Če statut ne določa drugače, ima 1 družbenik 1 glas, zato se obvladovanje ne ujema nujno z razmerjem vložkov. Prenos vložka navadnega družbenika praviloma zahteva pristanek večine glasovalnih pravic drugih družbenikov; pri članu uprave je potreben pristanek 2/3 ali več glasovalnih pravic drugih družbenikov. Zato je oblika primernejša za preprosta razmerja med družbeniki in stabilno obvladovanje kot za pogosto zbiranje kapitala ali trgovanje z deleži. Pozneje jo je mogoče preoblikovati v delniško družbo.
 
 ### Delniška družba: primerna, kadar naj se sprejmejo drugi vlagatelji ali se predvideva kotacija
 
-Delniška družba (股份有限公司) deli kapital na delnice. Praviloma so potrebni dva ali več delničarjev, vendar lahko država ali pravna oseba družbo ustanovi sama, tuja pravna oseba pa lahko ima 100 % delnic. Delnice so praviloma prosto prenosljive, z zakonskimi izjemami; po predpisih je mogoče oblikovati vrste delnic, delniške opcije zaposlenih in podobno. Zato oblika ustreza podjetjem, ki pričakujejo vlagatelje, posle z deleži, nagrade v delnicah za zaposlene ali prihodnjo združitev, prevzem ali kotacijo; se ne omejuje le na velika podjetja. Pri upravljanju lahko družba, ki ni javno ponudila delnic, s statutom ne ustanovi upravnega odbora in ima le 1 ali 2 direktorja. Družba z edinim državnim ali pravnoosebnim delničarjem lahko s statutom ne imenuje nadzornika družbe. Prav tako ni treba, da vsaka delniška družba pridobi letno revizijo računovodskih izkazov. Glavni pragovi revizije navadne družbe so vplačani kapital TWD 30.000.000 ali, tudi pod to mejo, poslovni prihodek TWD 100.000.000 ali 100 delavcev, vpisanih v delovno zavarovanje (勞工保險); družbe, ki so javno ponudile delnice (公開發行公司), se ravnajo po predpisih o vrednostnih papirjih.
+Delniška družba (股份有限公司) deli kapital na delnice. Praviloma so potrebni dva ali več delničarjev, vendar lahko država ali pravna oseba družbo ustanovi sama, tuja pravna oseba pa lahko ima 100 % delnic. Delnice so praviloma prosto prenosljive, z zakonskimi izjemami; po predpisih je mogoče oblikovati vrste delnic, delniške opcije zaposlenih in podobno. Zato oblika ustreza podjetjem, ki pričakujejo vlagatelje, posle z deleži, nagrade v delnicah za zaposlene ali prihodnjo združitev, prevzem, kotacijo ali vpis na nastajajoči trg; se ne omejuje le na velika podjetja. Pri upravljanju lahko družba, ki ni javno ponudila delnic, s statutom ne ustanovi upravnega odbora in ima le 1 ali 2 člana uprave. Družba z edinim državnim ali pravnoosebnim delničarjem lahko s statutom ne imenuje nadzornika družbe. Prav tako ni treba, da vsaka delniška družba pridobi letno revizijo računovodskih izkazov. Glavni pragovi revizije navadne družbe so vplačani kapital TWD 30.000.000 ali, tudi pod to mejo, poslovni prihodek TWD 100.000.000 ali 100 delavcev, vpisanih v delovno zavarovanje (勞工保險); družbe, ki so javno ponudile delnice (公開發行公司), se ravnajo po predpisih o vrednostnih papirjih.
 
 ## 4. Postopka podružnice in hčerinske družbe se razlikujeta; le hčerinska družba gre skozi pregled Oddelka za pregled naložb Ministrstva za gospodarstvo
 
 Kadar tuja družba ustanavlja tajvansko hčerinsko družbo, se ime praviloma predhodno preveri, nato pa se pri Oddelku za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司) zaprosi za naložbeno dovoljenje. Po odobritvi se nakažejo sredstva, določi se višina naložbe in pooblaščeni računovodja (會計師) overi kapital, nato se dokončata ustanovitev in davčna registracija.
 
-Nasprotno pri ustanavljanju tajvanske podružnice navadne tuje družbe naložbeno dovoljenje Oddelka za pregled naložb praviloma ni potrebno; Uprava za razvoj trgovine Ministrstva za gospodarstvo (經濟部商業發展署) opravi vpis podružnice in s tem povezano določitev kapitala. Še vedno so potrebni predhodni pregled imena, nakazilo operativnih sredstev, overitev kapitala in davčna registracija; koledar je običajno krajši.
+Po drugi strani pri ustanavljanju tajvanske podružnice navadne tuje družbe naložbeno dovoljenje Oddelka za pregled naložb praviloma ni potrebno; Uprava za razvoj trgovine Ministrstva za gospodarstvo (經濟部商業發展署) opravi vpis podružnice in s tem povezano določitev kapitala. Še vedno so potrebni predhodni pregled imena, nakazilo operativnih sredstev, overitev kapitala in davčna registracija; koledar je običajno krajši.
 
 Zgornje je napotek za zasnovo pogodb. Sama izbira določene pravne oblike posla ga ne naredi zakonitega in ne prepreči sporov.
 

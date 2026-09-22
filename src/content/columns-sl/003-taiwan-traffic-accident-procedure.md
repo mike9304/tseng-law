@@ -49,7 +49,7 @@ Izbira se razlikuje glede na pretrganje zastaranja (時效中斷), krog tožence
 
 Kazenska odgovornost je mogoča le, če sta priznani kršitev dolžnosti skrbnosti vsakega ter vzročna zveza med to kršitvijo ter poškodbo nasprotne strani. Sama okoliščina, da je krivda obstajala na obeh straneh, samodejno ne utemelji odgovornosti za malomarno telesno poškodbo.
 
-Na civilni ravni, po 217. členu civilnega zakonika, če ima oškodovanec krivdo, ki je prispevala k nastanku ali povečanju škode (與有過失), sme sodišče znižati ali oprostiti odškodnino. Če denimo škoda, priznana v novem tajvanskem dolarju (新臺幣, TWD), znaša TWD 1.000.000 ter je krivda oškodovanca ocenjena na 50 %, se sme znesek pred drugimi prilagoditvami znižati na TWD 500.000.
+Na civilni ravni, po 217. členu civilnega zakonika, če ima oškodovanec krivdo, ki je prispevala k nastanku ali povečanju škode (與有過失), sme sodišče znižati ali oprostiti odškodnino. Če denimo škoda, priznana v novem tajvanskem dolarju (新臺幣, TWD), znaša 1.000.000 TWD ter je krivda oškodovanca ocenjena na 50 %, se sme znesek pred drugimi prilagoditvami znižati na 500.000 TWD.
 
 Izvedensko mnenje (鑑定) ali preglednica predhodne analize sta lahko pomembna podlaga, vendar sodišča ne vežeta mehansko. Sodišče presoja celoto dokazov, vključno z izjavami, posnetki ter stanjem vozil.
 
@@ -147,11 +147,11 @@ Okoliščina nadaljnjega dela ali prejemanja plače brez spremembe je bistvena z
 
 Škoda iz zmanjšanja delovne zmožnosti se razlikuje od dohodkov, ki so se v obdobju okrevanja iz Q11 dejansko znižali. Po 193. ter 216. členu civilnega zakonika se skupaj presojajo vzročna zveza z nesrečo, trajna funkcijska motnja (持續功能障礙), poklic ter zmožnosti oškodovanca, dohodki, ki jih je mogoče običajno pričakovati, ter podlaga in dokaz o času delovne zmožnosti.
 
-Okoliščina, da se tekoča plača ohranja brez spremembe, zahtevka samodejno ne izključi. Nasprotno, višina škode se tudi ne določi mehansko le z odstotkom invalidnosti ali tekočo plačo.
+Okoliščina, da se tekoča plača ohranja brez spremembe, zahtevka samodejno ne izključi. Po drugi strani, višina škode se tudi ne določi mehansko le z odstotkom invalidnosti ali tekočo plačo.
 
 Če je trajna funkcijska motnja bistveno sporna, je lahko medicinsko izvedensko mnenje koristno, vendar ni obvezno v vseh zadevah. Presoja se tudi lastna krivda oškodovanca iz 217. člena civilnega zakonika ter drugi razlogi prilagoditve.
 
-Ko se izračun opravi v enem kapitalskem znesku, je mogoče pretehtati odbitje vmesnih obresti (中間利息扣除). Hoffmanov kalkulator sedanje vrednosti, ki ga objavlja Judicial Yuan (司法院), je le računski pripomoček, ne pa pravno obvezna metoda, niti ne obljublja izida. Po 193. členu civilnega zakonika sme sodišče na predlog strani naložiti tudi plačilo v redni renti pod pogojem zavarovanja.
+Ko se izračun opravi v enem kapitalskem znesku, je mogoče pretehtati odbitje vmesnih obresti (中間利息扣除). Hoffmanov kalkulator sedanje vrednosti, ki ga objavlja Sodni juan (司法院), je le računski pripomoček, ne pa pravno obvezna metoda, niti ne obljublja izida. Po 193. členu civilnega zakonika sme sodišče na predlog strani naložiti tudi plačilo v redni renti pod pogojem zavarovanja.
 
 ## Q13. Kako se presoja denarna odškodnina za nepremoženjsko škodo (慰撫金)?
 
@@ -175,7 +175,7 @@ Obveznost sklenitve po 6. členu zakona o obveznem zavarovanju avtomobilske odgo
 
 Pri nesreči enega vozila voznik tega vozila načeloma ni naslovnik dajatve obveznega zavarovanja tega vozila. Pri nesreči, v kateri sodeluje več vozil, pa obstajajo primeri, v katerih voznik sme uveljavljati dajatev pri zavarovatelju obveznega zavarovanja drugega udeleženega vozila.
 
-Tarifa dajatev (強制汽車責任保險給付標準), spremenjena 29. 5. 2026, se uporabi za nesreče, ki so nastale od 1. 7. 2026. Zgornja meja primernih ter potrebnih zdravstvenih stroškov za poškodbo znaša TWD 200.000 v novem tajvanskem dolarju; dajatev za invalidnost (失能) znaša od TWD 80.000 do TWD 3.000.000 po 15 zakonskih stopnjah; dajatev za smrt znaša TWD 3.000.000, skupni maksimum smrti, invalidnosti ter zdravstvenih stroškov za 1 oškodovanca ter 1 nesrečo pa znaša TWD 3.200.000. Za prejšnje nesreče se sme uporabiti prejšnja tarifa.
+Tarifa dajatev (強制汽車責任保險給付標準), spremenjena 29. 5. 2026, se uporabi za nesreče, ki so nastale od 1. 7. 2026. Zgornja meja primernih ter potrebnih zdravstvenih stroškov za poškodbo znaša 200.000 TWD v novem tajvanskem dolarju; dajatev za invalidnost (失能) znaša od 80.000 TWD do 3.000.000 TWD po 15 zakonskih stopnjah; dajatev za smrt znaša 3.000.000 TWD, skupni maksimum smrti, invalidnosti ter zdravstvenih stroškov za enega oškodovanca ter eno nesrečo pa znaša 3.200.000 TWD. Za prejšnje nesreče se sme uporabiti prejšnja tarifa.
 
 Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarovanje voznika (駕駛人傷害險) ter zavarovanje škode lastnega vozila (車體損失險) so fakultativni produkti pogodbene narave. Dejansko kritje se razlikuje glede na zavarovanca, zgornjo mejo, odbitno franšizo (自負額), izključitve, krivdo ter druge pogoje police, zato je polico ter pogoje treba preveriti zadevo za zadevo.
 
@@ -186,7 +186,7 @@ Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarova
 - [Civilni zakonik, 217. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
 - [Sodba pritožbenega sodišča Tajvana, leto 109 po koledarju Republike Kitajske, zadeva 上易字 številka 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
 - [Sodba pritožbenega sodišča Tajvana, leto 109 po koledarju Republike Kitajske, zadeva 上易字 številka 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
-- [Kalkulator sedanje vrednosti Hoffmana, ki ga objavlja Judicial Yuan (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
+- [Kalkulator sedanje vrednosti Hoffmana, ki ga objavlja Sodni juan (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civilni zakonik, 195. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Sodba okrožnega sodišča Taoyuan, leto 112 po koledarju Republike Kitajske, zadeva 壢簡字 številka 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civilni zakonik, 188. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
@@ -207,7 +207,7 @@ Lahko zanemarijo tudi tisto, kar je za nasprotno stran bistveno — opravičilo 
 
 ​
 
-Za zavarovalnico izplačilo dodatnih TWD 500.000 ali TWD 1.000.000 v posamezni zadevi nima bistvenega vpliva na skupni gospodarski izid; za udeleženca nesreče pa sme tak znesek odločati o tem, ali bo imel vpis v kazenski evidenci (前科).
+Za zavarovalnico izplačilo dodatnih 500.000 TWD ali 1.000.000 TWD v posamezni zadevi nima bistvenega vpliva na skupni gospodarski izid; za udeleženca nesreče pa sme tak znesek odločati o tem, ali bo imel vpis v kazenski evidenci (前科).
 
 ​
 
@@ -239,7 +239,7 @@ V nekaterih sodbah je bila za malomarno telesno poškodbo (過失傷害) izreče
 
 ​
 
-Če se kazen pretvori v denarno kazen (易科罰金), 41. člen, 1. odstavek, kazenskega zakonika določa pretvorbo TWD 1.000, TWD 2.000 ali TWD 3.000 za 1 dan; pri stopnji TWD 1.000 na dan kazen 3 mesecev ustreza 3 × 30 × TWD 1.000 = TWD 90.000.
+Če se kazen pretvori v denarno kazen (易科罰金), 41. člen, 1. odstavek, kazenskega zakonika določa pretvorbo 1.000 TWD, 2.000 TWD ali 3.000 TWD za en dan; pri stopnji 1.000 TWD na dan kazen 3 mesecev ustreza 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -339,7 +339,7 @@ Poškodba ali smrt oškodovanca prinaša njemu samemu ter njegovi družini teles
 
 ​
 
-Storilec pogosto ne skrbi za klic z vprašanjem o stanju žrtve niti za njen obisk, številni storilci pa predvidevajo, da bo zavarovalnica vse uredila, ter se sami ne pojavijo. V teh primerih se ne zaznata niti kesanje niti dobra vera.
+Storilec pogosto ne pokliče, da bi vprašal za stanje žrtve, niti je ne obišče v bolnišnici, številni storilci pa predvidevajo, da bo zavarovalnica vse uredila, ter se sami ne pojavijo. V teh primerih žrtev ne vidi niti kesanja niti iskrenosti storilca.
 
 ​
 

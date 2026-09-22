@@ -28,7 +28,7 @@ Besedilo pojasnjuje, kdaj pravica do odpravnine nastane ter kdaj ne.
 
 Ureditev se od države do države razlikuje.
 
-V nekaterih pravnih ureditvah, na primer v Koreji, mora družba izplačati odpravnino tudi tedaj, ko delavec sam odide
+V nekaterih pravnih ureditvah, na primer v Koreji, mora družba izplačati odpravnino tudi tedaj, ko delavec sam odide.
 
 Na Tajvanu je to drugače:
 
@@ -52,7 +52,7 @@ Spodnja preglednica to strne.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Vrsta** | **Gospodarska odpoved (資遣員工, 經濟解僱)** | **Disciplinska odpoved (解僱員工, 懲戒解僱)** | **Prostovoljni odhod delavca**  **員工自請離職** |
+| **Vrsta** | **Gospodarska odpoved (資遣員工, 經濟解僱)** | **Disciplinska odpoved (解僱員工, 懲戒解僱)** | **Prostovoljni odhod delavca (員工自請離職)** |
 | Pomen | Če ima delodajalec zaradi poslovnih razmer potrebo po prilagoditvi osebja, je razlog v gospodarskem področju delodajalca, ne pa v odgovornosti delavca. Zato mora delodajalec spoštovati odpovedni rok (預告期間) ter izplačati odpravnino, da uravnoteži neugodnosti delavca. | Če delavec stori protipravno ali neprimerno dejanje, sme delodajalec takoj končati pogodbo o zaposlitvi (勞動契約) brez predhodne odpovedi ter odpravnine ni dolžan izplačati. Gre za eno od disciplinskih pooblastil delodajalca. | Delavec sme kadar koli končati pogodbo, vendar mora glede na dobo zaposlitve spoštovati odpovedni rok, da lahko delodajalec opravi predajo ter iskanje nadomestnega delavca. |
 | Pogoji | So  (11. člen tajvanskega zakona o temeljnih delovnih standardih) | So  (12. člen tajvanskega zakona o temeljnih delovnih standardih) | Jih ni |
 | Predhodna odpoved | Potrebna | Ni potrebna | Potrebna |
@@ -172,9 +172,9 @@ posnel celoten potek z mobilnim telefonom
 
 ter lahko dokazal, da sam ni odšel.
 
-Z zastopanjem je v tej opisani zadevi
+Z odvetniško pomočjo je B v tej zadevi
 
-uveljavljal pravico do odpravnine po zakonu.
+prejel zakonsko odpravnino.
 
 Opis ene zadeve ni obljuba enakega izida.
 

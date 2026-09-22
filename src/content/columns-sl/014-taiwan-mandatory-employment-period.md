@@ -15,23 +15,23 @@ faq:
   - q: "Ali je ob predčasnem odhodu treba vrniti celotno podpisnino (簽約金) ali nagrado za ostanek (留任獎金)?"
     a: "Celotnega zneska ni treba vedno vrniti. Če je podpisnina, nagrada za ostanek ali druga vnaprej plačana dajatev (預付性給付) izplačana kot razumno nadomestilo za dogovor o najmanjšem obdobju trajanja delovnega razmerja, mora biti njen namen delavcu jasno sporočen. Napotek tajvanskega Ministrstva za delo z dne 5. junija 2026 pojasnjuje, da se ob odhodu pred potekom obdobja znesek vračila izračuna v sorazmerju z še neizpolnjenim obdobjem in da ni mogoče zahtevati vračila celotnega zneska. Dejanski sklep je treba sprejeti ob skupni presoji namena izplačila, vsebine dogovora, že odsluženega obdobja in razloga prenehanja."
   - q: "Ali je treba vrniti stroške usposabljanja, če pogodba predčasno preneha iz razloga, ki ga ni mogoče pripisati delavcu?"
-    a: "Odstavek 4 člena 15-1 tajvanskega zakona o temeljnih delovnih standardih določa, da delavec, če pogodba o zaposlitvi preneha pred koncem najmanjšega obdobja trajanja delovnega razmerja iz razloga, ki ga ni mogoče pripisati delavcu, ne nosi odgovornosti za kršitev dogovora o najmanjšem obdobju trajanja delovnega razmerja niti za vračilo stroškov usposabljanja. Razlog prenehanja in pripis odgovornosti pa je treba presoditi iz konkretnih dokazov, kot so obvestilo o odpustu, izjava o odhodu in dokumentacija o kršitvi delovnih pogojev."
+    a: "Odstavek 4 člena 15-1 tajvanskega zakona o temeljnih delovnih standardih določa, da delavec, če pogodba o zaposlitvi preneha pred koncem najmanjšega obdobja trajanja delovnega razmerja iz razloga, ki ga ni mogoče pripisati delavcu, ne nosi odgovornosti za kršitev dogovora o najmanjšem obdobju trajanja delovnega razmerja niti za vračilo stroškov usposabljanja. Razlog prenehanja in pripis odgovornosti pa je treba presoditi iz konkretnih dokazov, kot so obvestilo o odpustu, izjava o odhodu in dokumentacija o zatrjevani kršitvi delovnih pogojev."
 ---
 
 # Dogovor o najmanjšem obdobju trajanja delovnega razmerja na Tajvanu: merila veljavnosti, stroški usposabljanja in pogodbena kazen
 
 ![Slika, ki pojasnjuje najmanjše obdobje trajanja delovnega razmerja v pogodbi o zaposlitvi in vprašanje vračila stroškov](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Dogovor o najmanjšem obdobju trajanja delovnega razmerja (最低服務年限約定) v pogodbi o zaposlitvi (勞動契約) na Tajvanu se uporablja skupaj z obljubo, da bo delavec delal določeno obdobje, za določitev, ali ob predčasnem odhodu obstaja dolžnost vrniti stroške usposabljanja, podpisnino (簽約金) ali nagrado za ostanek (留任獎金) in ali je mogoče posebej zahtevati pogodbeno kazen (違約金). Sama okoliščina, da obstaja podpisan tekst, pa ne določi veljavnosti dogovora niti zneska vračila. Bolj kot ime pogodbe je treba po korakih preveriti zakonske predpostavke in dejanski potek izplačil, usposabljanja in prenehanja.
+Dogovor o najmanjšem obdobju trajanja delovnega razmerja (最低服務年限約定) v pogodbi o zaposlitvi (勞動契約) na Tajvanu določa obljubo delavca, da bo določeno obdobje delal, ali mora ob predčasnem odhodu kaj vrniti in ali je mogoče posebej zahtevati pogodbeno kazen (違約金). Sama okoliščina, da obstaja podpisan tekst, pa ne določi veljavnosti dogovora niti zneska vračila. Bolj kot ime pogodbe je treba po korakih preveriti zakonske predpostavke in dejanski potek izplačil, usposabljanja in prenehanja.
 
 Pri presoji je pomembno, da se naslednjih štirih vprašanj ne zmeša.
 
-1. Ali dogovor sam izpolnjuje zakonske predpostavke člena 15-1
-2. Ali sta dogovorjeno obdobje in breme delavca v razumnem obsegu
-3. Komu se pripiše razlog prenehanja pogodbe o zaposlitvi
-4. Kako se presojata izjava o odhodu in obseg vračila
+1. Ali dogovor sam izpolnjuje zakonske predpostavke člena 15-1?
+2. Ali sta dogovorjeno obdobje in breme delavca v razumnem obsegu?
+3. Komu se pripiše razlog prenehanja pogodbe o zaposlitvi?
+4. Kako se presojata izjava o odhodu in obseg vračila?
 
-Tudi če ta štiri vprašanja stojijo skupaj v isti pogodbi, sta uporabljena določba in potrebni dokaz različna. Zato je treba posebej presoditi, ali je dogovor veljaven, kdaj začne učinkovati izjava o odhodu, ali obstaja odgovornost vrniti dajatev, plačana vnaprej (預付性給付), ali stroške usposabljanja, in ali je dejansko nastala posebej uveljavljana škoda.
+Tudi če ta štiri vprašanja stojijo skupaj v isti pogodbi, se uporabljajo različne določbe in različni dokazi. Zato je treba posebej presoditi, ali je dogovor veljaven, kdaj začne učinkovati izjava o odhodu, ali obstaja odgovornost vrniti dajatev, plačana vnaprej (預付性給付), ali stroške usposabljanja, in ali je dejansko nastala posebej uveljavljana škoda.
 
 ## 1. Ali je dogovor o najmanjšem obdobju trajanja delovnega razmerja samodejno neveljaven?
 
@@ -43,9 +43,9 @@ Odstavek 1 člena 15-1 ureja izbirno dve zakonski predpostavki. Prva je, da je d
 
 Po potrditvi zakonske predpostavke se po 2. odstavku posebej presoja, ali sta dogovorjeno obdobje in obseg odgovornosti razumna. Dogovor, ki krši zakonsko predpostavko 1. odstavka ali merilo razumnosti 2. odstavka, je po 3. odstavku neveljaven. Ta norma pa je merilo za presojo vsebine in dejanskih okoliščin vsakega dogovora, ne pa norma, ki bi od začetka vse dogovore o najmanjšem obdobju trajanja delovnega razmerja razglasila za veljavne ali neveljavne.
 
-Okoliščina, da je delavec pogodbo podpisal, je lahko podlaga, ki potrjuje obstoj sporazuma, vendar ne nadomesti zakonskih predpostavk. Nasprotno, namesto da bi se takoj sklepalo le zato, ker je dogovor dolgotrajen, je treba preveriti, katera naložba ali nadomestilo je obstajalo in zakaj je bilo to obdobje določeno.
+Okoliščina, da je delavec pogodbo podpisal, je lahko podlaga, ki potrjuje obstoj sporazuma, vendar ne nadomesti zakonskih predpostavk. Samo trajanje dogovora ne sme odločiti izida; preveriti je treba, katera naložba ali nadomestilo je obstajalo in zakaj je bilo to obdobje določeno.
 
-## 2. Prva zakonska predpostavka: strokovno tehnično usposabljanje in nositev stroškov
+## 2. Prva zakonska predpostavka: strokovno tehnično usposabljanje in kritje stroškov
 
 Da bi bil dogovor utemeljen z usposabljanjem, mora delodajalec delavcu dejansko zagotoviti strokovno tehnično usposabljanje in nositi njegove stroške. Ni dovolj v načrtu usposabljanja napisati, da gre za strokovni tečaj, ali v pogodbo vpisati ocenjene stroške. Dokazila je treba povezati s temo usposabljanja, s strokovnimi ali tehničnimi veščinami, ki jih delovno mesto zahteva, s konkretnim trajanjem, s tem, ali je bilo končano, in z dejanskim izdatkom.
 
@@ -55,13 +55,13 @@ Program, koledar usposabljanja, lista prisotnosti, izid ocene, potrdilo o konča
 
 Meja med splošno prilagoditvijo na delo in strokovnim tehničnim usposabljanjem ni odvisna le od kraja usposabljanja niti od tega, kdo ga prireja. Notranji tečaj lahko izkaže konkretno strokovno in tehnično vsebino in precejšnjo naložbo, dolg tečaj zunanje ustanove pa je lahko v resnici splošno uvodno usposabljanje. Zato ni mogoče enotno izključiti vsega notranjega usposabljanja niti priznati zakonske predpostavke le zato, ker je tečaj drag ali dolg.
 
-Treba je tudi znati pojasniti razmerje med dogovorjenim obdobjem in naložbo v usposabljanje. Kakšna zmožnost se pridobi, kakšno razmerje ima ta zmožnost do delovnega mesta, na katerem naj bi se uporabljala in zakaj je predlagano obdobje trajanja delovnega razmerja potrebno glede na trajanje in stroške usposabljanja, se presoja posamično. Ali je delavec po usposabljanju to delo dejansko opravljal in kako dolgo je že služil, sta prav tako podlagi za presojo obsega bremena.
+Treba je tudi znati pojasniti razmerje med dogovorjenim obdobjem in naložbo v usposabljanje. Kakšna zmožnost se pridobi, kakšno razmerje ima ta zmožnost do delovnega mesta, na katerem naj bi se uporabljala, in zakaj je predlagano obdobje trajanja delovnega razmerja potrebno glede na trajanje in stroške usposabljanja, se presoja posamično. Ali je delavec po usposabljanju to delo dejansko opravljal in kako dolgo je že služil, sta prav tako podlagi za presojo obsega bremena.
 
 ## 3. Druga zakonska predpostavka: razumno nadomestilo
 
 Druga zakonska predpostavka je, da delodajalec zagotovi razumno nadomestilo za obljubo delavca, da bo spoštoval najmanjše obdobje trajanja delovnega razmerja. Tu mora imeti nadomestilo namen in zgradbo, ločena od običajne plače ali protidajatve za delo, ki ju je že treba zagotoviti. Pravna narava se ne določi le zato, ker je bilo na plačilni listi označeno kot podpisnina, nagrada za ostanek ali dajatev, plačana vnaprej.
 
-Najprej je treba preveriti namen izplačila. Ali gre za splošni plačni pogoj zaposlitve, protidajatev za obljubo ostati določeno obdobje, ali nagrado za dosego rezultatov, mora biti razvidno iz pogodbe in iz obvestilnih podlag. Presoja se tudi, ali so dan izplačila, znesek, trenutek pridobitve pravice, zveza z obdobjem ostanka, razlogi vračila in formula predloženi tako, da jih je delavec mogel razumeti pred pogodbo.
+Najprej je treba preveriti namen izplačila. Ali gre za splošni plačni pogoj zaposlitve, protidajatev za obljubo ostati določeno obdobje, ali nagrado za dosego rezultatov, mora biti razvidno iz pogodbe in iz obvestil. Presoja se tudi, ali so dan izplačila, znesek, trenutek pridobitve pravice, zveza z obdobjem ostanka, razlogi vračila in formula predloženi tako, da jih je delavec mogel razumeti pred pogodbo.
 
 Napotek (函釋) tajvanskega Ministrstva za delo (勞動部) z dne 5. junija 2026 pojasnjuje, da mora biti vloga jasno sporočena, če naj se kot razumno nadomestilo dogovora o najmanjšem obdobju trajanja delovnega razmerja vzame nagrada za ostanek, podpisnina ali druga dajatev, plačana vnaprej. Da delodajalec naknadno znova razloži namen izplačila ali znova uvrsti del plače kot nadomestilo, težko nadomesti sporočilo v trenutku pogodbe.
 
@@ -92,7 +92,7 @@ Nazadnje mora obstajati razumno sorazmerje med dogovorjenim obdobjem, dejansko n
 
 Po napotku tajvanskega Ministrstva za delo z dne 5. junija 2026 stroškov rednega izobraževanja, splošnega usposabljanja na delovnem mestu, prilagoditvenega usposabljanja novincev in usposabljanja, ki ga zakon nalaga izvesti, ni mogoče vzeti za podlago dogovora o najmanjšem obdobju trajanja delovnega razmerja niti zahtevka za pogodbeno kazen ali vračilo stroškov. Ni mogoče gledati le na ime usposabljanja, temveč na konkretni program, strokovno in tehnično vsebino, trajanje, stroške, ki jih je delodajalec dejansko nosil, in dokazila.
 
-Napotek 勞動關2字第1150141814號 Ministrstva za delo razločuje in ureja usposabljanje, ki se izvaja redno, običajno usposabljanje za mesto, usposabljanje, da se novinec seznani z okoljem in postopki dela, in usposabljanje, ki ga mora delodajalec izvesti po zakonu. Ker to usposabljanje spremlja opravljanje dejavnosti ali izpolnitev zakonske dolžnosti, je smisel, da njegovih stroškov ni mogoče preoblikovati v podlago dolžnosti ostanka ali sankcije za predčasno prenehanje.
+Napotek 勞動關2字第1150141814號 Ministrstva za delo razločuje in ureja usposabljanje, ki se izvaja redno, običajno usposabljanje za mesto, usposabljanje, da se novinec seznani z okoljem in postopki dela, in usposabljanje, ki ga mora delodajalec izvesti po zakonu. Ker to usposabljanje spremlja opravljanje dejavnosti ali izpolnitev zakonske dolžnosti, njegovih stroškov ni mogoče preoblikovati v podlago dolžnosti ostanka ali sankcije za predčasno prenehanje.
 
 Tečaje, ki jih novi zaposleni običajno prejme, kot so razlaga delovnega reda (工作規則), predstavitev organizacije in sistemov, običajna predaja mesta in napotek k osnovnim varnostnim postopkom, je treba potrditi v njihovi vsebini. Splošnih stroškov zaposlovanja in vodenja ali stroškov predaje mesta, ki jih je delodajalec prvotno moral nositi, ni mogoče določiti kot predmet vračila zgolj z označbo za posebno naložbo.
 
@@ -112,11 +112,11 @@ Vprašanje vračila je treba preveriti po vrsti: veljavnost dogovora, pravna nar
 
 Določba o vračilu celotnega zneska, fiksna pogodbena kazen, ki ni v zvezi z dejansko izgubo, in enostranski odtegljaj od plače se ne presojajo kot en problem. Pravno podlago, vsebino sporazuma, omejitve delovnega prava in zakonitost odtegljaja je treba preveriti posebej. Znesek, zapisan v pozivu delodajalca, ali okoliščina, da je delavec plačal del, prav tako ne določi preostalih pravnih vprašanj.
 
-Treba je tudi razločiti vračilo stroškov usposabljanja in vračilo dajatve, plačane vnaprej. Prvo se presoja predvsem po dejanskem strokovnem tehničnem usposabljanju in nositvi stroškov; drugo na namenu izplačila, sporočilu, pogojih pripisa in sorazmerju z neizpolnjenim obdobjem. Če se obe postavki zahtevata skupaj, je treba posebej primerjati, ali strošek ni bil izračunan dvakrat, in dokazila vsake postavke.
+Treba je tudi razločiti vračilo stroškov usposabljanja in vračilo dajatve, plačane vnaprej. Prvo se presoja predvsem po dejanskem strokovnem tehničnem usposabljanju in kritju stroškov; drugo po namenu izplačila, sporočilu, pogojih pripisa in sorazmerju z neizpolnjenim obdobjem. Če se obe postavki zahtevata skupaj, je treba posebej primerjati, ali strošek ni bil izračunan dvakrat, in dokazila vsake postavke.
 
 ## 7. Kaj velja, če pogodba preneha iz razloga, ki ga ni mogoče pripisati delavcu?
 
-Odstavek 4 člena 15-1 tajvanskega zakona o temeljnih delovnih standardih določa, da delavec, če pogodba o zaposlitvi preneha pred koncem najmanjšega obdobja trajanja delovnega razmerja iz razloga, ki ga ni mogoče pripisati delavcu, ne nosi odgovornosti za kršitev dogovora o najmanjšem obdobju trajanja delovnega razmerja niti za vračilo stroškov usposabljanja. Razlog prenehanja in pripis odgovornosti pa je treba presoditi iz konkretnih dokazov, kot so obvestilo o odpustu, izjava o odhodu in dokumentacija o kršitvi delovnih pogojev.
+Odstavek 4 člena 15-1 tajvanskega zakona o temeljnih delovnih standardih določa, da delavec, če pogodba o zaposlitvi preneha pred koncem najmanjšega obdobja trajanja delovnega razmerja iz razloga, ki ga ni mogoče pripisati delavcu, ne nosi odgovornosti za kršitev dogovora o najmanjšem obdobju trajanja delovnega razmerja niti za vračilo stroškov usposabljanja. Razlog prenehanja in pripis odgovornosti pa je treba presoditi iz konkretnih dokazov, kot so obvestilo o odpustu, izjava o odhodu in dokumentacija o zatrjevani kršitvi delovnih pogojev.
 
 Zato ni mogoče priznati kršitve delavca le zato, ker je delovno razmerje prenehalo pred dogovorjenim obdobjem. Preveriti je treba, kdo je podal kakšno izjavo volje, kakšna je pravna podlaga prenehanja pogodbe in kateri stranki se pripisujejo dejanske okoliščine, ki so ga sprožile.
 
@@ -140,7 +140,7 @@ Odpovedni rok po neprekinjenem obdobju dela je naslednji.
 
 Če obdobje pogodbe o zaposlitvi za določen čas za določeno delo (特定性定期契約) presega 3 leta, se uporabi posebna norma 15. člena. Delavec lahko po 3 letih dela pogodbo odpove z 30-dnevnim odpovednim rokom. To normo je treba ločiti od odpovedi po neprekinjenem obdobju dela, ki se uporablja za pogodbo za nedoločen čas.
 
-Če je neprekinjeno obdobje dela krajše od 3 mesecev, gre za drug tip pogodbe za določen čas ali se trdi zakonski razlog takojšnjega prenehanja, je treba uporabljeno določbo in dejstva presoditi posamično. Sama okoliščina, da pogodba zapisuje daljši odpovedni rok ali zahteva takojšnjo predajo mesta, ne omogoča vnaprej določiti pravnega sklepa.
+Če je neprekinjeno obdobje dela krajše od 3 mesecev, gre za drug tip pogodbe za določen čas ali se trdi zakonski razlog takojšnjega prenehanja, je treba uporabljeno določbo in dejstva presoditi posamično. Sama okoliščina, da pogodba zapisuje daljši odpovedni rok ali zahteva takojšnjo predajo mesta, ne omogoča, da bi se pravni sklep določil vnaprej.
 
 V praksi je treba ohraniti vsebino in dan predaje izjave o odhodu, dan, ko jo je delodajalec dejansko prejel, in komunikacijo strank o zadnjem delovnem dnevu. Če se ločijo trenutek, ko odhod veljavno začne učinkovati, veljavnost dogovora o najmanjšem obdobju trajanja delovnega razmerja, vračilo stroškov usposabljanja ali dajatve, plačane vnaprej, in posebej uveljavljana škoda, se zmanjša tveganje, da se vsi sklepi izpeljejo iz ene določbe pogodbe.
 

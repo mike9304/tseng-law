@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Na zgodnjem Tajvanu so tradicionalne brivnice (理髮廳) ponujale tudi masažo.
+Na Tajvanu so v preteklosti tradicionalne brivnice (理髮廳) ponujale tudi masažo.
 
 Način umivanja las v teh salonih je bil zelo poseben.
 
@@ -55,7 +55,7 @@ Ta zakon je veljal do leta 2003; tedaj je gospod Lin, ki je vodil brivnico,
 
 zaposlil delavce brez okvare vida za storitve umivanja las ter masaže, policija pa je zadevo odkrila.
 
-Po tedanjem pravu je bila gospodu Linu izrečena upravna denarna kazen (罰鍰) TWD 40.000, delavcema pa TWD 10.000 ter TWD 20.000 v novem tajvanskem dolarju (新臺幣).
+Po tedanjem pravu je bila gospodu Linu izrečena upravna denarna kazen (罰鍰) 40.000 TWD, delavcema pa 10.000 TWD ter 20.000 TWD v novem tajvanskem dolarju (新臺幣).
 
 Gospod Lin je to sankcijo štel za zelo nepravično ter zaprosil za ustavno razlago.
 

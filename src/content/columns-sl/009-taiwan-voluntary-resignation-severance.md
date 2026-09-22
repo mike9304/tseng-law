@@ -73,7 +73,7 @@ Delavec mora zato rok skrbno spremljati.
 
 Z drugimi besedami,
 
-Tajvansko pravo glede na to, ali je krivda na strani podjetja
+tajvansko pravo glede na to, ali je krivda na strani podjetja
 
 ali na strani delavca,
 

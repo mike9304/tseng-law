@@ -2087,7 +2087,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Zakonska zveza, družina in dedovanje',
           paragraphs: [
-            'Vodimo ločitev (離婚), delitev premoženja, izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok (未成年子女權利義務之行使或負擔), stike z otrokom (會面交往) in dedovanje (繼承), tudi kadar so stranke ali premoženje v različnih državah. Čezmejne družinske zadeve pogosto zahtevajo nadaljnjo oceno tajvanskega registra prebivalstva (戶籍), oblike listin in njihove dokazne moči na Tajvanu.',
+            'Vodimo ločitev (離婚), delitev premoženja, izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok (未成年子女權利義務之行使或負擔), stike z otrokom (會面交往) in dedovanje (繼承), tudi kadar so stranke ali premoženje v različnih državah. Čezmejne družinske zadeve pogosto zahtevajo nadaljnjo oceno tajvanske evidence gospodinjstev (戶籍), oblike listin in njihove dokazne moči na Tajvanu.',
             'Ker družinske zadeve pogosto prinašajo roke in vzporedne postopke, naj prvi povzetek navede razmerje med strankami, trenutno prebivališče in že potekajoče postopke.',
           ],
         },
@@ -2127,7 +2127,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Osnovni podatki o tej tajvanski odvetniški pisarni, o njenih pisarnah in o delu s tujimi strankami.',
       intro:
-        'Hovering International Law Firm je odvetniška pisarna na Tajvanu. Odvetnice in odvetniki delajo od svetovanja podjetjem do sodnih postopkov. Ta del opisuje nastanek pisarne, sedeže in delo s tujimi strankami.',
+        'Hovering International Law Firm je odvetniška pisarna na Tajvanu. Odvetnice in odvetniki svetujejo podjetjem in vodijo sodne postopke. Ta del opisuje nastanek pisarne, sedeže in delo s tujimi strankami.',
       sections: [
         {
           heading: 'Ustanovitev in zgradba',
@@ -2185,7 +2185,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Posvet je lahko plačljiv',
           paragraphs: [
-            'Posvet z odvetnico ali odvetnikom je lahko plačljiva storitev. Ta stran ne pravi, da je prvi posvet brezplačen, in nobenega njenega dela ni mogoče razumeti v tem smislu.',
+            'Posvet z odvetnico ali odvetnikom je lahko plačljiva storitev. Ta stran ne navaja, da je prvi posvet brezplačen, in nobenega njenega dela ni mogoče razumeti v tem smislu.',
             'Če je posvet plačljiv, se višina in način plačila sporočita, preden se posvet opravi.',
           ],
         },
@@ -2221,7 +2221,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Če ne obvladate nobenega od štirih jezikov posveta',
           paragraphs: [
             'V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
-            'Gre le za korak ocene, ne za obljubo. Ne obljubljamo tolmača, storitve v slovenščini niti v drugem jeziku zunaj štirih navedenih jezikov, niti tega, da vsako zadevo sprejmemo.',
+            'Gre le za oceno, ne za obljubo. Ne obljubljamo tolmača, storitve v slovenščini niti v drugem jeziku zunaj štirih navedenih jezikov, niti tega, da vsako zadevo sprejmemo.',
           ],
         },
         {
@@ -2274,7 +2274,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kaj storiti, če ne morem uporabiti nobenega od štirih jezikov?',
           answer:
-            'Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za korak ocene, ne za obljubo, da lahko delamo v drugem jeziku.',
+            'Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za oceno, ne za obljubo, da lahko delamo v drugem jeziku.',
         },
         {
           question: 'Kako se ravna z mojim besedilom v slovenščini?',
@@ -2289,12 +2289,12 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kako se izračunajo stroški?',
           answer:
-            'Najprej se določi obseg dela, nato se z vami potrdita višina in način izračuna stroškov, preden se delo začne. Ta stran ne navaja zneskov in ne pravi, da je prvi posvet brezplačen.',
+            'Najprej se določi obseg dela, nato se z vami potrdita višina in način izračuna stroškov, preden se delo začne. Ta stran ne navaja zneskov in ne navaja, da je prvi posvet brezplačen.',
         },
         {
           question: 'Kaj storiti, če je moja zadeva zelo nujna?',
           answer:
-            'Navedite rok ali datum z uradnega pisanja takoj na začetku povzetka, da bodo ti podatki pri oceni vidni. Ta stran nima nujnega kanala in ne zagotavlja roka za odgovor; če vaša zadeva ne more čakati, bi morali vzporedno iskati nadaljnje poti v svojem kraju.',
+            'Navedite rok ali datum z uradnega pisanja takoj na začetku povzetka, da bodo ti podatki pri oceni vidni. Ta stran nima stika za nujne primere in ne zagotavlja roka za odgovor; če vaša zadeva ne more čakati, poiščite vzporedno tudi drugo pomoč v svojem kraju.',
         },
       ],
     },
@@ -2332,7 +2332,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kraj hrambe in dostop',
           paragraphs: [
-            'Vsebina vaše pošiljke se hrani na mestu, ki ni javno dostopno. Dostop do nje imajo samo pooblaščene osebe v pisarni, in sicer zaradi obravnave prošnje.',
+            'Vsebina, ki ste jo poslali, se hrani na mestu, ki ni javno dostopno. Dostop do nje imajo samo pooblaščene osebe v pisarni, in sicer zaradi obravnave prošnje.',
             'Ta stran ne daje absolutnega jamstva varnosti. Nobena pot prenosa in nobeno mesto hrambe ni povsem varno; občutljive dokumente je zato treba pošiljati šele po posebnem navodilu odvetnice ali odvetnika.',
           ],
         },
@@ -2360,7 +2360,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kraj hrambe in ponudniki',
           paragraphs: [
-            'Te strani gosti družba Vercel in vaša pošiljka se hrani v nejavni shrambi v oblaku te storitve. E-pošta se pošilja prek e-poštne storitve, ki jo pisarna uporablja.',
+            'Te strani gosti družba Vercel in kar ste poslali, se hrani v nejavni shrambi v oblaku te storitve. E-pošta se pošilja prek e-poštne storitve, ki jo pisarna uporablja.',
             'Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po predpisih, ki se uporabljajo, ostanejo za to obdobje. Prošnje za osebne podatke sprejema wei@hoveringlaw.com.tw.',
           ],
         },
@@ -2430,7 +2430,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'V kolikšni meri lahko članek služi za orientacijo',
           paragraphs: [
             'Članki so splošne informacije v trenutku objave. Predpisi in njihova uporaba se lahko spremenijo in članek ne vsebuje vseh okoliščin vašega primera.',
-            'Zato se v resnični zadevi ne opirajte samo na članek. Uporabite ga za pregled in svoje dokumente obravnavajte posebej z odvetnico ali odvetnikom; ta stran ni korak posveta.',
+            'Zato se v resnični zadevi ne opirajte samo na članek. Uporabite ga za pregled in o svojih dokumentih se posebej pogovorite z odvetnico ali odvetnikom; ta stran ni korak posveta.',
           ],
         },
       ],

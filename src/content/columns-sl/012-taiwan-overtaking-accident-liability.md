@@ -33,7 +33,7 @@ To zaporedje signalov in sprostitve na istem pasu ne pomeni, da bi bilo prehitev
 
 ## Anonimizirana zadeva nesreče, ki jo je vodila pisarna
 
-V anonimizirani zadevi, ki jo je vodila ta pisarna, je motorist A po gorski cesti vozil s sopotnikom B. Spredaj sta vozili 2 osebni vozili; vozilo št. 1, najbolj spredaj, se je gibalo počasi, zato sta tudi vozilo št. 2 in motor napredovala z nizko hitrostjo.
+V anonimizirani zadevi, ki jo je vodila ta pisarna, je motorist A po gorski cesti vozil s sopotnikom B. Spredaj sta vozili 2 osebni vozili; vozilo št. 1, najbolj spredaj, se je gibalo počasi, zato sta tudi vozilo št. 2 in motor vozila počasi.
 
 ![Shema nesreče, ki kaže pot prehitevanja motorja in 2 vozil spredaj na gorski cesti](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -43,9 +43,9 @@ B je utrpel hudo poškodbo glave in umrl na mestu; A je izgubil zavest in so ga 
 
 Družini A in B sta najprej šteli nenadno spremembo pasu vozila št. 2 za glavni vzrok trčenja. Zadeva je prešla v sodni postopek; v njegovem poteku je bilo izdelanih več izvedenskih mnenj (鑑定) k nesreči.
 
-Po izidu teh mnenj je glavno odgovornost za to trčenje nosil A. Ta zaključek je bil omejen na dejanske okoliščine te zadeve. Mnenje je skupaj upoštevalo to, da je A hotel prehiteti 2 vozili spredaj, ki sta vozili zapored, da je zapeljal na nasprotni pas, da je vozil s hitrostjo, ki skoraj ni puščala dovolj časa za zaviranje, da so manjkali predpisani signali hupe in luči, kakor tudi gibanje spremembe pasu vozila št. 2, ureditev ceste in pasov in ostale zagotovljene dokaze.
+Po izidu teh mnenj je glavno odgovornost za to trčenje nosil A. Ta zaključek je bil omejen na dejanske okoliščine te zadeve. Mnenja so skupaj upoštevala to, da je A hotel prehiteti 2 vozili spredaj, ki sta vozili zapored, da je zapeljal na nasprotni pas, da je vozil s hitrostjo, ki ni puščala dovolj časa za zaviranje, da so manjkali predpisani signali hupe in luči, kakor tudi spremembo pasu vozila št. 2, ureditev ceste in pasov in ostale zagotovljene dokaze.
 
-Ta zaključek, omejen na to zadevo, ne pomeni, da ena izpustitev predpisanega signala vedno določi odgovornost. Krivda (過失) pri nesreči ob prehitevanju je odvisna od kraja nesreče, ureditve pasov, hitrosti, gibanj vozil, signalov, časovnih razmikov, preglednosti in ostalih dokazov.
+Ta zaključek, omejen na to zadevo, ne pomeni, da ena opustitev predpisanega signala vedno določi odgovornost. Krivda (過失) pri nesreči ob prehitevanju je odvisna od kraja nesreče, ureditve pasov, hitrosti, gibanj vozil, signalov, časovnih razmikov, preglednosti in ostalih dokazov.
 
 ## Točke za preverjanje pri presoji odgovornosti za nesrečo
 

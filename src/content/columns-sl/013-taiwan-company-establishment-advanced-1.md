@@ -29,7 +29,7 @@ Ko tujec ustanavlja družbo na Tajvanu, mora naložbeni načrt (投資計畫書)
 
 Oddelek za pregled naložb mora preveriti, ali se dani kapital (資本額) dejansko uporablja za naložbene namene
 
-in ali tuji subjekti ne uvajajo sredstev pod drugo pretvezo.
+in ali tuji subjekti ne prinašajo sredstev na Tajvan pod drugo pretvezo.
 
 Pri sestavi naložbenega načrta ni treba navesti točnega naslova družbe; zadostuje navedba območja (primer: mesto Tajpej). ​
 
@@ -61,9 +61,9 @@ odprete pripravljalni račun in nakažete kapital.
 
 Mogoče je.
 
-Banka praviloma zahteva dvojno preverjanje istovetnosti,
+Banka praviloma zahteva dva identifikacijska dokumenta.
 
-brez dovoljenja za prebivanje pa je pri tajvanski imigracijski upravi mogoče zaprositi za »**obrazec z osnovnimi podatki o enotni identifikacijski številki**« (統一證號基本資料表).
+Brez dovoljenja za prebivanje pa je pri tajvanski imigracijski upravi mogoče zaprositi za »**obrazec z osnovnimi podatki o enotni identifikacijski številki**« (統一證號基本資料表).
 
 Izdaja je mogoča še isti dan,
 
@@ -119,7 +119,7 @@ Poleg tega pri končnem vpisu družbe mestna uprava (市政府) prav tako zahtev
 
 če gre za pisarniški prostor, vpis družbe (公司登記) tedaj ni mogoč.
 
-Nasprotno, če gre za panoge, ki jih je mogoče opravljati v pisarniškem prostoru, na primer oglaševanje ali trgovina na debelo, je družbo mogoče ustanoviti v pisarniškem prostoru. Pred sklenitvijo najemne pogodbe
+Po drugi strani, če gre za panoge, ki jih je mogoče opravljati v pisarniškem prostoru, na primer oglaševanje ali trgovina na debelo, je družbo mogoče ustanoviti v pisarniškem prostoru. Pred sklenitvijo najemne pogodbe
 
 to vnaprej preverite.
 

@@ -1,0 +1,76 @@
+WO-F-sl r3 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-sl-r3
+Date: 2026-09-23
+
+## Rows applied
+
+sl-a (46 rows): applied 1–2, 4–27, 29–43, 45 (currency order only), 46.
+sl-a 28: applied only the 009 capitalisation (`tajvansko pravo` after `Z drugimi besedami,`). Heading promotion not applied (see skipped).
+sl-a 33: both the pricing sentence and the FAQ (`in ne navaja, da je prvi posvet brezplačen`).
+sl-a 35: calque fixed; `ta stran ni korak posveta` kept so the disclosure marker still matches.
+sl-a 38: both fragments (`Prej je delal …` and `Ima izkušnje z zadevami univerz …`).
+
+sl-b (47 rows): applied 1–21, 23–37, 39–47.
+sl-b 44: the restaurant-zone point is no longer repeated three times. The three existing blocks now follow the English split (`Poleg tržnih razmer` / `je pomembno preveriti še,` / `ali naslov leži v coni …`). Blocks were not merged.
+
+Guidance pack (sl only): qualification label, Wei Tseng gym-case wording (figure left as `TWD 1.57M`), M.S. line, exchange-student line, cross-team line, NCCU accounting line, Chang Rongxuan’s two intro fragments, discovery notice (`odobritve` → `uradnega priporočila`, token `llms.txt` kept), assessment-step, free-consultation, urgent-contact, document-review, about-page verbs, and both `pošiljka` sentences. `consultationNotice` and `confidentialNotice` were not rewritten; their source sentences were not changed.
+
+No test expected-string was pinned to a wording I changed. Disclosure regexes still match (`korak posveta`, `izvedljiv`, `rok za odgovor`, and the rest).
+
+## Rows skipped
+
+| row | reason |
+|---|---|
+| sl-a 3 | Reverted. Suggested label drops `člen 10`. English link text is “Article 10” (URL stays `flno=3`). Checker: `missing from translation (1): 10`. Kept `3. člen … (各類所得扣繳率標準), člen 10` and the URL. |
+| sl-a 28 (structure) | Did not turn Q16–Q20 into `##` headings. English 003 keeps them as body lines. Adding headings would change the heading inventory. |
+| sl-a 44 | `TWD 1.57M` stays byte-identical (pinned bio term). Row 4’s `zahtevku` → `zadevi` was applied around it. |
+| sl-a 45 (spaces) | Space thousands (`500 000`) are not parsed for `sl` (R14, ACCEPTED-ROUND). Dot grouping kept. |
+| sl-b 22 | Did not delete U+200B. English columns carry the same characters. Removing them failed the checker (`ZWSP 52 → 0` and block-count mismatches on 003, 005, 006, 008, 009, 013, 015). Characters restored. |
+| sl-b 38 | Did not join the second half to the previous paragraph. English 013 splits the same sentence across two blocks. Wording fixed inside the block (row 39: `ne prinašajo sredstev na Tajvan`). |
+
+## Systemic patterns
+
+- Currency code after a dot-grouped amount in 001, 002, 003, 004, 006, 007: 40 swaps (`TWD 500.000` → `500.000 TWD`, same for USD). 010–018 left as they were unless a row edited the sentence. `TWD 1.57M` untouched.
+- 董事 `direktor` → `član uprave` (and case forms): 001, 002, 004, 017, 018. Net +13 `član` hits on changed lines. `Generalnega direktorata` in 003 left (it is the highway directorate).
+- 戶籍 `register prebivalstva` → `evidenca gospodinjstev` with case: about 30 sites in 007, 016, 017, plus the guidance family paragraph. One genitive after `za` corrected (`Oddelka za evidenco`).
+- `Nasprotno,` / sentence-initial Conversely → `Po drugi strani`: 11 (002 three, plus 003, 004, 013, 014’s rewrite, 017 two, 018). Mid-sentence `Nasprotno pa` / `Nasprotno ni` left; those are ordinary Slovene contrast.
+- `podlaga` where it meant a record or file: 011 (the file’s record uses), 010 `podlage škode`, 014 `obvestilnih podlag`. Legal `podlaga` (“basis”) elsewhere left. Net about 15 `dokumentac` additions.
+- `nositev stroškov` → `kritje stroškov`: 011, 014 heading and body, 002 closing line.
+- 股東 in the 002 liquidation sentence: `družbenike, pri delniški družbi pa med delničarje` (FAQ and body). Other `delničarji` left where the passage is about a company limited by shares.
+- Distributor vs agent in 011: 4 `prodajni zastopnik` → `distributer` (the later list `zastopnik, glavni distributer ali distributer` kept).
+- Judicial Yuan → `Sodni juan`: 016 link and both 003 mentions (3).
+
+R2–R10 / R12–R17: consultation stays negative (EN / 中文 / JA / KO only); Wei Tseng stays feminine; no sister-language (Czech) paragraph found by the checker (`langid PASS`, `neighbour PASS`); `OUR TEAM` / `OFFICES` / Paralegal were already Slovene (`EKIPA`, `PISARNE`, `pravna asistentka`). No new Hangul. Frontmatter keys, urls, image paths, and block counts unchanged after the ZWSP restore.
+
+## §Verify
+
+```
+=== CHECKER ===
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      23
+```
+
+Commands were the work-order set (`tail -8` on the checker, marker `wc -l`, `tsc`, `vitest` grep, `git status --short | wc -l`). The 23 status lines include 3 paths that were already dirty before this lane (`WO-F-sl.txt`, `sl-a.md`, `sl-b.md`). This log is not in that count.
+
+## Reviewer got wrong (not applied)
+
+- Q16–Q20 should become `##` headings, and every U+200B should be deleted (sl-a 28, sl-b 22). The English sources use the same body lines and the same zero-width spaces. The checker fails block count and `ZWSP n → 0` if they go. Restored.
+- Thousands should be `500 000` (sl-a 45 and the part-a verdict). For `sl` the checker accepts dot grouping only. Part b’s own verdict already treats the dot as accepted Slovene orthography. Dots kept; the code was moved after the figure.
+- Bio figure should become `1,57 milijona TWD` (sl-a 44). The test pins the bytes `TWD 1.57M`.
+- The withholding-standards link should drop `člen 10` (sl-a 3). The reviewer is right that the label fights the URL (`flno=3`) and that 001 does not call this instrument article 10. The English label is still “Article 10”, and deleting the digit failed `numbers` (`missing … 10`). Digit restored; URL not touched.
+- 013 sentence halves should be joined (sl-b 38). The English file splits them the same way. Joining would change the block count. The second block was reworded so it is no longer `uvajajo`.

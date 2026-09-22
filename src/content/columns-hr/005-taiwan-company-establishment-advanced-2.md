@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Naslovna slika](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Osobe koje su pročitale [Osnove osnivanja društva na Tajvanu](/hr/columns/taiwan-company-establishment-basics) i [Osnivanje društva na Tajvanu — detaljnije objašnjenje, 1. dio](/hr/columns/taiwan-company-establishment-advanced-1) mogu također pogledati Osnivanje društva na Tajvanu — detaljnije objašnjenje, 2. dio (公司設立).
+Osobe koje su pročitale [Osnove osnivanja društva na Tajvanu](/hr/columns/taiwan-company-establishment-basics) i [Osnivanje društva na Tajvanu — detaljnije objašnjenje, 1. dio](/hr/columns/taiwan-company-establishment-advanced-1) ovdje nalaze daljnja pitanja o osnivanju društva na Tajvanu (公司設立).
 
 ​
 
@@ -37,9 +37,9 @@ Prije prijenosa kapitala (資本金匯款) informirajte se kod svoje glavne bank
 
 **​**
 
-**2. Pri uplati temeljnog kapitala, može li se prenijeti tajvanske dolare (新臺幣, TWD) s osobnog računa na Tajvanu na pripremni račun tajvanskog društva?**
+**2. Pri uplati temeljnog kapitala, može li se prenijeti nove tajvanske dolare (新臺幣, TWD) s osobnog računa na Tajvanu na pripremni račun tajvanskog društva?**
 
-Moguće je, no treba predložiti isprave koje potvrđuju podrijetlo sredstava u tajvanskim dolarima stečenih na Tajvanu.
+Moguće je, no treba predložiti isprave koje potvrđuju podrijetlo sredstava u novim tajvanskim dolarima stečenih na Tajvanu.
 
 Ako je, na primjer, riječ o prihodima od plaće stečenim na Tajvanu, treba predložiti presliku potvrde o obustavi na izvoru od tih prihoda od plaće (薪資所得的扣繳憑單影本).
 
@@ -82,6 +82,6 @@ Ako imate daljnja pitanja, možete poslati zahtjev za pregled putem kontaktnog o
 ---
 
 > Vidi također:
-> - [U čemu zastupamo klijente](/hr/services)
+> - [Koje predmete vodimo](/hr/services)
 > - [Međunarodni tim Hovering](/hr/lawyers)
 > - [Kako kontaktirati ured](/hr/contact)

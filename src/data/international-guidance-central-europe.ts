@@ -1049,13 +1049,13 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Opće objašnjenje na hrvatskom o opsegu rada Hovering International Law Firm na Tajvanu, o jezicima savjetovanja i o prvom kontaktu.',
       intro:
-        'Hovering International Law Firm zastupa strane klijente, uključujući osobe s vezom s Tajvanom, u predmetima tajvanskog prava: ulaganja i osnivanje društava, građanskopravni sporovi, brak, obitelj i nasljeđivanje, radno pravo, kazneni predmeti i intelektualno vlasništvo. Ovaj hrvatski dio pomaže Vam prepoznati koji posao spada u naš opseg, što pripremiti i kako nas kontaktirati. Riječ je o općim informacijama, a ne o pravnom savjetu za Vaš slučaj.',
+        'Hovering International Law Firm zastupa strane klijente, uključujući osobe povezane s Tajvanom, u predmetima tajvanskog prava: ulaganja i osnivanje društava, građanskopravni sporovi, brak, obitelj i nasljeđivanje, radno pravo, kazneni predmeti i intelektualno vlasništvo. Ovaj hrvatski dio pomaže Vam prepoznati koji posao spada u naš opseg, što pripremiti i kako nas kontaktirati. Riječ je o općim informacijama, a ne o pravnom savjetu za Vaš slučaj.',
       sections: [
         {
           heading: 'Čime se bavimo',
           paragraphs: [
-            'Hovering International Law Firm odvjetnički je ured sa sjedištem na Tajvanu. Radi prema tajvanskom pravu i ima urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savjetujemo poduzeća, vodimo sudske postupke i zastupamo strane klijente u koracima koje na Tajvanu treba poduzeti.',
-            'Cjelokupni sadržaj ovdje opće je naravi. Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku u kojem se stvar ocjenjuje. Ove informacije ne zamjenjuju savjetovanje s odvjetnicom ili odvjetnikom na temelju Vaših isprava.',
+            'Hovering International Law Firm odvjetnički je ured sa sjedištem na Tajvanu. Radi prema tajvanskom pravu i ima urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savjetujemo poduzeća, vodimo sudske postupke i pratimo strane klijente kroz korake koje na Tajvanu treba poduzeti.',
+            'Cjelokupni je sadržaj ovdje opće naravi. Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku u kojem se stvar ocjenjuje. Ove informacije ne zamjenjuju savjetovanje s odvjetnicom ili odvjetnikom na temelju Vaših isprava.',
           ],
         },
         {
@@ -1083,18 +1083,18 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Gdje početi',
           paragraphs: [
             'Pročitajte stranicu „Područja rada“ i provjerite spada li Vaš predmet u naš opseg, zatim „Troškovi“ i „Kontakt“, kako biste znali kako se utvrđuje opseg i kako se troškovi potvrđuju prije početka rada.',
-            'Pri slanju poruke sažetak možete napisati na svojem jeziku. Izvorni se tekst čuva točno onako kako ste ga napisali i ne prevodi se automatski. Poslana poruka zahtjev je koji čeka pregled: to još nije savjetovanje ni potvrđeni sastanak.',
+            'Pri slanju poruke sažetak možete napisati na svojem jeziku. Izvorni se tekst čuva točno onako kako ste ga napisali i ne prevodi se automatski. Poslana poruka je zahtjev koji čeka pregled: to još nije savjetovanje ni potvrđeni sastanak.',
           ],
         },
       ],
     },
     services: {
       eyebrow: 'PODRUČJA RADA',
-      title: 'U čemu zastupamo klijente',
+      title: 'Koje predmete vodimo',
       description:
         'Šest područja koja ured na Tajvanu vodi i granice koje je korisno znati unaprijed.',
       intro:
-        'U nastavku su područja koja stvarno vodimo i pitanja koja se u početnoj fazi postavljaju najčešće. Objašnjenje Vam pomaže procijeniti spada li Vaš predmet u naš opseg; opće je naravi i nije pravna analiza pojedinog spisa.',
+        'U nastavku su područja koja stvarno vodimo i pitanja koja se u početnoj fazi postavljaju najčešće. Objašnjenje Vam pomaže procijeniti spada li Vaš predmet u naš opseg; ono je opće naravi i nije pravna analiza pojedinog spisa.',
       sections: [
         {
           heading: 'Ulaganja i osnivanje društava na Tajvanu',
@@ -1158,7 +1158,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Osnivanje i struktura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) 2016. su ga osnovali odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.',
+            'Odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學) osnovali su 2016. Hovering International Law Firm (昊鼎國際法律事務所). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.',
             'Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na vođenje poduzeća i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. kako bi se skrbilo o strankama u toj regiji.',
             'Uz odvjetnički rad od 2020. djeluje i Hovering Accounting Office, koji nudi računovodstvo i porezno planiranje poduzetnicima i imućnim privatnim osobama.',
           ],
@@ -1260,7 +1260,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Što ova stranica ne obećava',
           paragraphs: [
-            'Ne obećavamo rok za odgovor, ne potvrđujemo sastanak putem ove stranice, ne obećavamo određenu odvjetnicu ni određenog odvjetnika i ne osiguravamo tumača. Pisani prijevod nešto je drugo: Vaša se poruka ne prevodi automatski.',
+            'Ne obećavamo rok za odgovor, ne potvrđujemo sastanak putem ove stranice, ne obećavamo određenu odvjetnicu ni određenog odvjetnika i ne osiguravamo tumača. Pisani prijevod je nešto drugo: Vaša se poruka ne prevodi automatski.',
             'Ako pošaljete zahtjev, sadržaj se čuva i čeka pregled. Ako nakon nekog vremena ne primite odgovor, možete ponovno napisati na adresu e-pošte navedenu na kontaktnoj stranici.',
           ],
         },
@@ -1277,7 +1277,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kako rabiti ovaj dio',
           paragraphs: [
-            'Ako ne nađete odgovor za svoju situaciju, odgovor u pravilu ovisi o posebnim činjenicama. Napišite ih stoga u sažetak, umjesto da ih izvodite s ove stranice.',
+            'Ako ne nađete odgovor za svoju situaciju, odgovor u pravilu ovisi o posebnim činjenicama. Napišite ih stoga u sažetak, umjesto da ih izvodite iz ove stranice.',
           ],
         },
       ],
@@ -1295,10 +1295,10 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Mogu li dobiti savjet na hrvatskom?',
           answer:
-            'Ne. Ove su informacije napisane na hrvatskom, ali savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Ne obećavamo ni tumača. Pisani prijevod nešto je drugo: izvorni tekst koji napišete čuva se kakav jest i ne prevodi se automatski.',
+            'Ne. Ove su informacije napisane na hrvatskom, ali savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Ne obećavamo ni tumača. Pisani prijevod je nešto drugo: izvorni tekst koji napišete čuva se kakav jest i ne prevodi se automatski.',
         },
         {
-          question: 'Što učiniti ako ne mogu rabiti nijedan od četiri jezika?',
+          question: 'Što učiniti ako se ne mogu služiti nijednim od četiri jezika?',
           answer:
             'Pri slanju zahtjeva odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili način komunikacije, ali usluga na drugom jeziku nije zajamčena. Riječ je o koraku procjene, a ne o obećanju da možemo raditi na drugom jeziku.',
         },
@@ -1418,7 +1418,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Odnos između odvjetnice ili odvjetnika i klijenta ne nastaje sam od sebe',
           paragraphs: [
             'Čitanje ove stranice, slanje obrasca ili e-pošte samo po sebi ne uspostavlja odnos između odvjetnice ili odvjetnika i klijenta.',
-            'Taj odnos nastaje tek nakon što je predmet pregledan i obje strane potvrdile preuzimanje rada.',
+            'Taj odnos nastaje tek nakon što je predmet pregledan i nakon što su obje strane potvrdile preuzimanje rada.',
           ],
         },
         {
@@ -1442,7 +1442,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Četiri popisa prema jeziku',
           paragraphs: [
             'Ovaj dio sadrži četiri poveznice: popis članaka na korejskom, na kineskom, na engleskom i na japanskom. Svaka poveznica navodi jezik popisa, tako da unaprijed znate na kojemu će se jeziku sadržaj otvoriti.',
-            'Ta četiri popisa popisi su prema izvornom jeziku članaka, a ne popisi prijevoda. Članci dostupni na hrvatskom nalaze se zasebno na ovoj stranici.',
+            'Ta su četiri popisa sastavljena prema izvornom jeziku članaka, a ne prema jeziku prijevoda. Članci dostupni na hrvatskom nalaze se zasebno na ovoj stranici.',
           ],
         },
         {

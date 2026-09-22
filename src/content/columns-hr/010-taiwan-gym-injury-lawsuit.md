@@ -17,9 +17,9 @@ Na temelju predmeta u kojemu se korejski sveučilišni student ozlijedio dok je 
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Nesreća se dogodila u teretani u Taichungu (臺中) tijekom vježbe mrtvog dizanja (硬舉) koju je vodio trener. Nakon ozljede nije dovoljno ostati samo pri činjenici da se nesreća zbila unutar teretane; treba zajedno ocijeniti sportsko iskustvo i zdravstveno stanje korisnika, vrstu vježbe i opterećenje, objašnjenja i upute trenera, pokret i reakciju u tom trenutku, uzročnu vezu (因果關係) između ozljede i vježbe te isprave koje podupiru štetu.
+Nesreća se dogodila u teretani u Taichungu (臺中) tijekom vježbe mrtvog dizanja (硬舉) koju je vodio trener. Nakon ozljede nije dovoljno ostati samo pri činjenici da se nesreća zbila unutar teretane; treba zajedno ocijeniti sportsko iskustvo i zdravstveno stanje korisnika, vrstu vježbe i opterećenje, objašnjenja i upute trenera, pokret i reakciju u tom trenutku, uzročnu vezu (因果關係) između ozljede i vježbe te isprave koje potkrepljuju potraživanu štetu.
 
-U ovom sam predmetu sudjelovala kao parnična zastupnica (訴訟代理人) tužitelja, korejskog studenta. Okružni sud u Taichungu 24. siječnja 2022. u prvostupanjskoj presudi u potrošačkoj stvari br. 7. godine Republike Kine 109. (109年度消字第7號) naredio je tuženiku da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamate navedene u presudi.
+U ovom sam predmetu sudjelovala kao parnična zastupnica (訴訟代理人) tužitelja, korejskog studenta. Okružni sud u Taichungu 24. siječnja 2022. u prvostupanjskoj presudi u potrošačkoj stvari br. 7 iz 109. godine Republike Kine (109年度消字第7號) naredio je tuženiku da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamate navedene u presudi.
 
 Potom je tisak izvijestio da su stranke sklopile nagodbu (和解) u 2. stupnju. Sama službena prvostupanjska presuda ne omogućuje potvrditi ishod 2. stupnja ni iznos nagodbe; prijavljenu nagodbu ne treba uzimati kao potvrđen završetak prvostupanjskog predmeta.
 
@@ -45,9 +45,9 @@ Naslovi tiskovnih izvještaja, internetskih objava i pravnih komentara o ovom pr
 
 [Objava na PTT-u: korejski sveučilišni student, puknuće intervertebralnog diska pri mrtvom dizanju 90 kg… u 1. stupnju nalog teretani da plati 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blog: ozljeda mrtvim dizanjem 90 kg kod korejskog sveučilišnog studenta mase 70 kg i naknada veća od 1.000.000 TWD… je li krivnja teretane? Kakav je stav osobe koja vježba?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blog: ozljeda mrtvim dizanjem 90 kg kod korejskog sveučilišnog studenta mase 70 kg i naknada veća od 1.000.000 TWD… je li krivnja teretane? Kakvo je razmišljanje osobe koja vježba?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blog: ozljeda mrtvim dizanjem 90 kg kod korejskog sveučilišnog studenta mase 70 kg i naknada veća od 1.000.000 TWD… je li krivnja teretane? Kakav je stav osobe koja vježba?](https://blog.udn.com/blackjack/179081715)
+[Blog: ozljeda mrtvim dizanjem 90 kg kod korejskog sveučilišnog studenta mase 70 kg i naknada veća od 1.000.000 TWD… je li krivnja teretane? Kakvo je razmišljanje osobe koja vježba?](https://blog.udn.com/blackjack/179081715)
 
 ![Pravni komentar: sveučilišni student, puknuće intervertebralnog diska pri mrtvom dizanju… u 1. stupnju nalog poznatoj teretani da plati 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
@@ -61,7 +61,7 @@ Naslovi tiskovnih izvještaja, internetskih objava i pravnih komentara o ovom pr
 
 **Je li kod korejskog sveučilišnog studenta došlo do puknuća intervertebralnog diska dok je na osobnom treningu izvodio mrtvo dizanje 90 kg?**
 
-Praktično značenje ovog predmeta jest u tome što pokazuje da se odgovornost ne utvrđuje odmah samom činjenicom da je do ozljede došlo u teretani. Sadržaj dužnosti osiguranja sigurnosti (安全義務) koja tereti pružatelja usluge, konkretni čin upute i povreda dužnosti pažnje (注意義務), uzročna veza između ozljede i ponašanja te opseg štete ocjenjuju se prema ispravama svakog predmeta. Pretpostavke i rokovi kaznenog postupka i građanskog postupka također se razlikuju, pa zapise odmah nakon nesreće valja urediti odvojeno, prema vrsti postupka.
+Praktično značenje ovog predmeta jest u tome što pokazuje da se odgovornost ne utvrđuje odmah samom činjenicom da je do ozljede došlo u teretani. Sadržaj dužnosti osiguranja sigurnosti (安全義務) koja tereti pružatelja usluge, konkretna dana uputa i povreda dužnosti pažnje (注意義務), uzročna veza između ozljede i ponašanja te opseg štete ocjenjuju se prema ispravama svakog predmeta. Pretpostavke i rokovi kaznenog postupka i građanskog postupka također se razlikuju, pa zapise odmah nakon nesreće valja urediti odvojeno, prema vrsti postupka.
 
 Niže navedeno opća je informacija za objašnjenje sporova o ozljedi u teretani na Tajvanu; nije pravno mišljenje o konkretnom predmetu. Stvarna prava i način postupanja mogu se razlikovati prema ugovornom odnosu, okolnostima nesreće, uzroku i stupnju ozljede, ponašanju stranaka, uvjetima police, osiguranim dokazima i mjerodavnom pravu.
 
@@ -69,7 +69,7 @@ Niže navedeno opća je informacija za objašnjenje sporova o ozljedi u teretani
 
 [Članak 7. tajvanskog Zakona o zaštiti potrošača (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) određuje da, kada poduzetnik pruža uslugu, mora osigurati da ta usluga ima sigurnost koja se razumno može očekivati prema stručnom ili tehničkom mjerilu u trenutku pružanja.
 
-To ne znači da se odgovornost poduzetnika ili trenera priznaje svaki put kad do ozljede dođe u teretani. Treba ocjenjivati predmet po predmet, koja je konkretna dužnost pažnje postojala, je li povrijeđena, postoji li uzročna veza između povrede i ozljede, je li nastala stvarna šteta, koje prigovore ima protivna strana i postoji li dokaz koji podupire svaku tvrdnju i svaki prigovor.
+To ne znači da se odgovornost poduzetnika ili trenera priznaje svaki put kad do ozljede dođe u teretani. Treba ocjenjivati predmet po predmet, koja je konkretna dužnost pažnje postojala, je li povrijeđena, postoji li uzročna veza između povrede i ozljede, je li nastala stvarna šteta, koje prigovore ima protivna strana i postoji li dokaz koji potkrepljuje svaku tvrdnju i svaki prigovor.
 
 Ako su ispunjeni zakonska obilježja kaznenog djela nehajne tjelesne ozljede (過失傷害), može se ocijeniti kaznena prijava (告訴). Može se također ocijeniti građanskopravni zahtjev za naknadu štete, no koji se pravni temelj primjenjuje — ugovorna odgovornost, delikt (侵權行為) ili zaštita potrošača — i opseg odgovornosti razlikuju se prema konkretnim činjeničnim okolnostima. To što se kod jedne nesreće može ocijeniti više postupaka ne znači da ih treba sve poduzeti, niti da je uspjeh jedne od stranaka unaprijed dan.
 
@@ -79,7 +79,7 @@ Prema [članku 287. tajvanskog Kaznenog zakona (刑法)](https://law.moj.gov.tw/
 
 Pravo zahtijevati naknadu štete iz delikta prema [članku 197. tajvanskog Građanskog zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) gasi se načelno ako se ne ostvari u roku od 2 godine od trenutka kad je oštećenik spoznao i štetu i osobu dužnu naknaditi štetu, a gasi se i kad od delikta protekne 10 godina.
 
-Ako međutim dolazi u obzir drugi temelj zahtjeva, kao ugovorna odgovornost, ili ako se primjenjuju druga pravila o početku tijeka, tijeku, prekidu i sl., to se može razlikovati prema činjeničnim okolnostima. Rok se ne smije određivati samo prema datumu nesreće ili dijagnoze; sigurnije je rano i pojedinačno provjeriti moguće temelje zahtjeva i referentne datume.
+Ako međutim dolazi u obzir drugi temelj zahtjeva, kao ugovorna odgovornost, ili ako se primjenjuju druga pravila o početku tijeka, tijeku, prekidu i sl., to se može razlikovati prema činjeničnim okolnostima. Rok se ne smije određivati samo prema datumu nesreće ili dijagnoze; sigurnije je rano i pojedinačno provjeriti svaki mogući temelj zahtjeva i dan od kojega mu počinje teći rok.
 
 ## 3. Odmah nakon nesreće, koje dokaze treba sačuvati i kako?
 
@@ -99,7 +99,7 @@ Stavke štete čije se ostvarenje može ocijeniti sljedeće su. Stvarno priznanj
 4. **Šteta zbog smanjenja radne sposobnosti (勞動能力減損)**: Ako se priznaju posljedice i trajno smanjenje radne sposobnosti, može se ocijeniti zajedno prema medicinskim i profesionalnim podlogama, stupnju oštećenja, zanimanju i prihodu te preostalom razdoblju radne sposobnosti. Sam postotak oštećenja naknadu ne određuje i gubitak se ne računa automatski do trenutka umirovljenja.
 5. **Izgubljeni prihod u razdoblju oporavka (收入損失)**: Razdoblje u kojemu zbog liječenja ili oporavka stvarno nije bilo moguće raditi i iz toga proizašlo smanjenje prihoda treba dokazati platnim listama, poreznim prijavama i evidencijom o radu.
 6. **Nematerijalna šteta (非財產上損害)**: Iznos za duševne boli određuje sud prema čimbenicima svakog predmeta, kao što su stupanj ozljede, trajanje liječenja, posljedice i konkretne okolnosti stranke.
-7. **Kaznena naknada štete (懲罰性賠償金)**: Postoji pravilo prema kojemu se u postupku na koji se primjenjuje Zakon o zaštiti potrošača, ako je šteta nastala namjerom poduzetnika, može zahtijevati do 5 puta stvarne štete; pri grubom nehaju do 3 puta; a pri nehaju do visine 1 puta stvarne štete. Primjenjuje li se [članak 51. tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na predmet te je li i u kojem iznosu stvarna naknada, ovisi o ocjeni suda o konkretnim pretpostavkama i dokazima.
+7. **Kaznena naknada štete (懲罰性賠償金)**: Postoji pravilo prema kojemu se u postupku na koji se primjenjuje Zakon o zaštiti potrošača, ako je šteta nastala namjerom poduzetnika, može zahtijevati do 5 puta stvarne štete; pri grubom nehaju do 3 puta; a pri nehaju do visine stvarne štete. Primjenjuje li se [članak 51. tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na predmet te jesu li kaznena naknada stvarno dosuđena i u kojem iznosu, ovisi o ocjeni suda o konkretnim pretpostavkama i dokazima.
 
 ## 5. Čak i kad teretana ima osiguranje odgovornosti (責任保險), mogu li postojanje naknade i visina biti sporni?
 

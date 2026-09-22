@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Kad započinjete ugostiteljsku djelatnost, prvi je problem pronaći adresu mjesta poslovanja (營業地址).
 
-Osim tržišne situacije treba provjeriti i namjenu zone.
+Osim tržišnih uvjeta valja uzeti u obzir i sljedeće.
 
-Daljnja je važna točka dopušta li zona restoran.
+Daljnja je važna točka ova:
 
-Treba provjeriti leži li ta adresa u zoni u kojoj je pogon „restorana“ moguć.
+leži li adresa u zoni u kojoj je pogon restorana dopušten.
 
 ​
 
@@ -78,6 +78,6 @@ Pravila upravnih tijela mogu se često mijenjati; prije upisa društva korisno j
 ---
 
 > Vidi također:
-> - [U čemu zastupamo klijente](/hr/services)
+> - [Koje predmete vodimo](/hr/services)
 > - [Međunarodni tim Hovering](/hr/lawyers)
 > - [Kako kontaktirati ured](/hr/contact)

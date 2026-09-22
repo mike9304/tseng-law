@@ -56,9 +56,9 @@ Sljedeća tablica to sažima.
 | Značenje | Ako kod poslodavca postoji potreba usklađivanja osoblja zbog stanja poduzeća, razlog leži u gospodarskom području poslodavca, a ne u odgovornosti radnika. Stoga poslodavac mora poštovati otkazni rok (預告期間) i isplatiti zakonsku otpremninu, kako bi uravnotežio nepovoljnosti radnika. | Ako radnik počini protupravnu ili neprikladnu radnju, poslodavac može odmah otkazati ugovor o radu (勞動契約) bez prethodne obavijesti i zakonsku otpremninu ne mora isplatiti. Riječ je o jednoj od stegovnih ovlasti poslodavca. | Radnik može u svakom trenutku dati otkaz, ali mora prema trajanju zaposlenja poštovati otkazni rok, kako bi poslodavac mogao obaviti predaju i traženje zamjene. |
 | Uvjeti | Postoje  (članak 11. tajvanskog Zakona o standardima rada) | Postoje  (članak 12. tajvanskog Zakona o standardima rada) | Nema |
 | Prethodna obavijest | Potrebna | Nije potrebna | Potrebna |
-| Težina u predmetu | Ne može se unaprijed nazvati lakom | Ne može se unaprijed nazvati lakom | Ne može se unaprijed nazvati lakom |
+| Težina u predmetu | Laka | Teška | Laka |
 | Mora li društvo isplatiti zakonsku otpremninu (資遣費) | Potrebno | Nije potrebno | Nije potrebno |
-|  | Tajvanski Zakon o standardima rada, članak 11. (勞動基準法第11條): Ako ne nastupi jedan od sljedećih slučajeva, poslodavac ne može otkazati ugovor o radu, čak ni nakon prethodne obavijesti radniku.  1. Obustava djelatnosti (歇業) ili prijenos poduzeća (轉讓)  2. Gubitak (虧損) ili stezanje djelatnosti (業務緊縮)  3. Viša sila zahtijeva prekid djelatnosti na 1 mjesec ili dulje  4. Narav djelatnosti zahtijeva smanjenje osoblja i otpuštenoga se ne može premjestiti na drugo prikladno mjesto  5. Određeni radnik ne može zadovoljavajuće obavljati rad koji mjesto zahtijeva | Tajvanski Zakon o standardima rada, članak 12. (勞動基準法第12條): Poslodavac može otpustiti bez prethodne obavijesti ako radnik spada u jedan od sljedećih slučajeva.  1. Tko pri sklapanju ugovora o radu da neistinite podatke, uvede poslodavca u zabludu i izloži poduzeće riziku štete  2. Tko uporabi nasilje ili teško uvrijedi poslodavca, njegovu obitelj, njegova zastupnika (代理人) ili druge suradnike  3. Koga pravomoćno osude na kaznu zatvora na određeno vrijeme (有期徒刑) ili na strožu kaznu, bez uvjetne odgode izvršenja kazne (緩刑) i bez dopuštenja pretvorbe u novčanu kaznu (易科罰金)  4. Teška povreda ugovora o radu ili radnih pravila  5. Tko namjerno potroši strojeve, alate, sirovine, proizvode ili drugu imovinu poslodavca, ili namjerno odaje tehničke i poslovne tajne poslodavca i prouzroči poslodavcu štetu  6. Neopravdani izostanak (曠工) bez opravdanog razloga 3 dana uzastopce, ili 6 dana ili više u mjesecu |  |
+|  | Tajvanski Zakon o standardima rada, članak 11. (勞動基準法第11條): Ako ne nastupi jedan od sljedećih slučajeva, poslodavac ne može otkazati ugovor o radu, čak ni nakon prethodne obavijesti radniku.  1. Obustava djelatnosti (歇業) ili prijenos poduzeća (轉讓)  2. Gubitak (虧損) ili stezanje djelatnosti (業務緊縮)  3. Viša sila zahtijeva prekid djelatnosti na rok od 1 mjeseca ili dulje  4. Narav djelatnosti zahtijeva smanjenje osoblja i otpuštenoga se ne može premjestiti na drugo prikladno mjesto  5. Određeni radnik ne može zadovoljavajuće obavljati rad koji mjesto zahtijeva | Tajvanski Zakon o standardima rada, članak 12. (勞動基準法第12條): Poslodavac može otpustiti bez prethodne obavijesti ako radnik spada u jedan od sljedećih slučajeva.  1. Tko pri sklapanju ugovora o radu da neistinite podatke, uvede poslodavca u zabludu i izloži poduzeće riziku štete  2. Tko uporabi nasilje ili teško uvrijedi poslodavca, njegovu obitelj, njegova zastupnika (代理人) ili druge suradnike  3. Koga pravomoćno osude na kaznu zatvora na određeno vrijeme (有期徒刑) ili na strožu kaznu, bez uvjetne odgode izvršenja kazne (緩刑) i bez dopuštenja pretvorbe u novčanu kaznu (易科罰金)  4. Teška povreda ugovora o radu ili radnih pravila  5. Tko namjerno potroši strojeve, alate, sirovine, proizvode ili drugu imovinu poslodavca, ili namjerno odaje tehničke i poslovne tajne poslodavca i prouzroči poslodavcu štetu  6. Neopravdani izostanak (曠工) bez opravdanog razloga 3 dana uzastopce, ili 6 dana ili više u mjesecu |  |
 
 > Na Tajvanu, za svaku navršenu 1 godinu staža (年資),
 > poslodavac mora isplatiti 0,5 mjeseca prosječne plaće (平均工資) kao zakonsku otpremninu.
@@ -210,9 +210,9 @@ ili premješta radnike na čudna mjesta,
 
 Ako radite na Tajvanu,
 
-Zakonsku je otpremninu teže ostvariti nego što se misli.
+zakonsku je otpremninu teže ostvariti nego što se misli.
 
-Ne sklapajte lako nagodbu s društvom.
+Ne sklapajte lako nagodbu s društvom
 
 i pazite da Vas društvo ne otpusti neprikladnim načinom,
 
@@ -229,4 +229,4 @@ I Vi morate na Tajvanu štititi svoja prava.
 > Vidi također:
 > - [Kako se utvrđuju opseg rada i troškovi](/hr/pricing)
 > - [Međunarodni tim Hovering](/hr/lawyers)
-> - [U čemu zastupamo klijente](/hr/services)
+> - [Koje predmete vodimo](/hr/services)

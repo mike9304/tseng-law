@@ -29,7 +29,7 @@ Le véhicule de derrière ne peut dépasser qu’après que le véhicule de deva
 
 Ensuite, le véhicule qui dépasse doit allumer le clignotant gauche, passer à gauche en maintenant une distance d’au moins 0,5 mètre par rapport au véhicule de devant et, une fois la distance de sécurité assurée, allumer le clignotant droit et revenir en sécurité sur la voie d’origine.
 
-Cet ordre de signaux et l’obligation de céder le passage sur la même voie ne signifie pas que le dépassement serait autorisé en un lieu ou dans une condition interdits. Avant de commencer le dépassement, toutes les conditions de l’article 101 doivent être appréciées ensemble.
+Cet ordre de signaux et l’obligation de céder le passage sur la même voie ne signifient pas que le dépassement serait autorisé en un lieu ou dans une condition interdits. Avant de commencer le dépassement, toutes les conditions de l’article 101 doivent être appréciées ensemble.
 
 ## Cas d’accident anonymisé traité par ce cabinet
 
@@ -49,7 +49,7 @@ Que, dans certaines affaires, de tels résultats d’expertise interviennent ne 
 
 ## Points à vérifier pour apprécier la responsabilité de l’accident
 
-Avant de dépasser, vous devez d’abord vérifier si le lieu ou la situation du trafic entre dans l’interdiction de dépasser. Si la procédure de la même voie s’applique, donnez le signal de klaxon ou de phares prescrit, sans forcer le véhicule de devant à céder, attendez un signe clair de cession et achevez le dépassement avec un écart suffisant et une distance de retour sûre.
+Avant de dépasser, vous devez d’abord vérifier si le lieu ou la situation du trafic entre dans l’interdiction de dépasser. Si la procédure de la même voie s’applique, donnez le signal de klaxon ou de phares prescrit, sans forcer le véhicule de devant à céder, attendez un signe clair que le véhicule de devant cède le passage et achevez le dépassement avec un écart suffisant et une distance de retour sûre.
 
 Le respect de l’article 101 est important, mais il ne garantit à lui seul ni que l’accident sera évité, ni un résultat déterminé de l’expertise ou du procès. Les conducteurs doivent réserver une marge de sécurité supplémentaire et s’adapter à la situation devant eux.
 

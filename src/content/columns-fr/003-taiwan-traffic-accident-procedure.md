@@ -39,7 +39,7 @@ Quant aux documents de police, sur les lieux de l’accident vous pouvez recevoi
 
 L’article 284 du Code pénal régit les blessures involontaires (過失傷害) et les blessures involontaires graves (過失致重傷). Comme, selon l’article 287 du Code pénal, il s’agit d’une infraction poursuivie sur plainte (告訴乃論之罪), conformément à l’article 237 du Code de procédure pénale de Taïwan (刑事訴訟法) la plainte doit en principe être déposée dans les 6 mois suivant le jour où l’auteur a été connu.
 
-En matière d’indemnisation civile des dommages (損害賠償), selon l’article 197 du Code civil de Taïwan (民法) la réclamation n’est plus possible une fois écoulés 2 ans à compter du jour où le dommage et le débiteur de l’indemnisation ont été connus, ou 10 ans à compter du jour de l’acte illicite. Quels faits influent sur la prescription (消滅時效) doit s’examiner séparément.
+En matière d’indemnisation civile des dommages (損害賠償), selon l’article 197 du Code civil de Taïwan (民法) la réclamation n’est plus possible une fois écoulés 2 ans à compter du jour où le dommage et le débiteur de l’indemnisation ont été connus, ou 10 ans à compter du jour de l’acte illicite. Il faut examiner séparément si certains faits interrompent la prescription (消滅時效) ou l’affectent autrement.
 
 Quiconque subit un dommage du fait d’une infraction peut, selon l’article 487 du Code de procédure pénale, former une action civile accessoire à l’instance pénale (刑事附帶民事訴訟). Tant que l’instance pénale est en cours, cette action peut être formée jusqu’avant la clôture des débats en deuxième instance (言詞辯論終結), selon l’article 488 du Code de procédure pénale, mais elle ne peut pas être formée après la clôture des débats en première instance et avant l’interjection du recours. En général, le paiement de frais de justice (裁判費) distincts peut être évité, mais tous les résultats ne s’achèvent pas sans coût. Par exemple, si l’affaire pénale est rejetée et, à la demande du demandeur, renvoyée au tribunal civil, selon l’article 503 du Code de procédure pénale les dépens peuvent être imposés, et il faut aussi vérifier les règles de renvoi et de procédure de l’article 504.
 
@@ -175,7 +175,7 @@ L’obligation de souscrire selon l’article 6 de la loi sur l’assurance obli
 
 Dans un accident d’un seul véhicule, le conducteur de ce véhicule n’est, en général, pas destinataire des prestations de l’assurance obligatoire de ce véhicule. Toutefois, dans un accident où interviennent plusieurs véhicules, il existe des cas dans lesquels le conducteur peut réclamer des prestations à l’assureur obligatoire d’un autre véhicule impliqué.
 
-Le barème de prestations (強制汽車責任保險給付標準) modifié le 29 mai 2026 s’applique aux accidents survenus à compter du 1 juillet 2026. Le plafond des frais médicaux raisonnables et nécessaires pour blessures est TWD 200.000 en nouveaux dollars de Taïwan ; la prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux ; la prestation pour décès est TWD 3.000.000, et le maximum conjoint de décès, d’invalidité et de frais médicaux pour 1 victime et 1 accident est TWD 3.200.000. Aux accidents antérieurs peut s’appliquer le barème précédent.
+Le barème de prestations (強制汽車責任保險給付標準) modifié le 29 mai 2026 s’applique aux accidents survenus à compter du 1 juillet 2026. Le plafond des frais médicaux raisonnables et nécessaires pour blessures est TWD 200.000 en nouveaux dollars de Taïwan ; la prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux ; la prestation pour décès est TWD 3.000.000, et le maximum conjoint de décès, d’invalidité et de frais médicaux par 1 victime et par 1 accident est TWD 3.200.000. Aux accidents antérieurs peut s’appliquer le barème précédent.
 
 L’assurance de responsabilité civile envers les tiers (第三人責任險), l’assurance accidents du conducteur (駕駛人傷害險) et l’assurance dommages au véhicule propre (車體損失險) sont des produits facultatifs de caractère contractuel. La couverture réelle varie selon l’assuré, le plafond, la franchise (自負額), les exclusions, la faute et les autres conditions de la police, de sorte que la police et les conditions doivent être vérifiées cas par cas.
 
@@ -247,7 +247,7 @@ Si elle est convertie en amende (易科罰金), l’article 41, alinéa 1, du Co
 
 ​
 
-Les blessures involontaires graves sont en général d’environ 4 mois, et l’homicide involontaire (過失致死) d’environ 6 mois ; là non plus, ce n’est pas un résultat promis.
+Les blessures involontaires graves sont en général punies d’environ 4 mois d’emprisonnement, et l’homicide involontaire (過失致死) d’environ 6 mois d’emprisonnement ; là non plus, ce n’est pas un résultat promis.
 
 ​
 

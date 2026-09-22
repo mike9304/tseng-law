@@ -33,9 +33,9 @@ Et ces salons de style taïwanais restent un souvenir culturel distinctif pour d
 
 ​
 
-Quoi qu’il en soit, lorsqu’on parle de massage (按摩),
+Quoi qu’il en soit, parlons du massage (按摩).
 
-il existe aussi à Taïwan de nombreuses rues de massage.
+Il existe aussi à Taïwan de nombreuses rues de massage.
 
 Des établissements de massage de toutes sortes s’y alignent.
 

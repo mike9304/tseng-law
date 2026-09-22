@@ -35,9 +35,9 @@ Dans les situations particulières suivantes, même si le salarié démissionne 
 
 (par exemple lorsque l’employeur dit au salarié que, dès l’entrée, il l’enverra dans une succursale à l’étranger qui n’existe pas en réalité)
 
-2. Lorsque l’employeur, un membre de la famille de l’employeur ou un représentant de l’employeur (代理人) exerce une violence ou inflige une insulte grave (重大侮辱) au salarié
+2. Lorsque l’employeur, un membre de la famille de l’employeur ou un représentant de l’employeur (代理人) exerce une violence contre le salarié ou l’insulte gravement (重大侮辱)
 
-3. Lorsque le travail convenu au contrat peut nuire à la santé du salarié, qu’il a été demandé à l’employeur de l’améliorer et qu’il n’y a pas d’effet
+3. Lorsque le travail convenu au contrat peut nuire à la santé du salarié, qu’il a été demandé à l’employeur d’y remédier et qu’il ne l’a pas fait
 
 4. Lorsque l’employeur, son représentant ou un autre salarié est atteint d’une maladie infectieuse à déclaration obligatoire (法定傳染病), qu’il existe un risque de contagion pour les salariés qui travaillent ensemble et que cela constitue un danger grave pour la santé du salarié
 

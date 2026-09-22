@@ -73,7 +73,7 @@ Lorsqu’une société étrangère constitue une filiale taïwanaise, le nom se 
 
 En revanche, pour constituer une succursale taïwanaise d’une société étrangère ordinaire, une autorisation d’investissement du Département de l’examen des investissements n’est en principe pas exigée ; le Département du commerce du ministère de l’Économie (經濟部商業發展署) traite l’enregistrement de succursale et la détermination de capital connexe. Restent nécessaires la vérification préalable du nom, le virement du capital d’exploitation, la vérification du capital et l’enregistrement fiscal ; le calendrier est en général plus court.
 
-Ce qui précède est une proposition de conception contractuelle. Le seul fait d’avoir arrêté une forme ne rend pas l’opération licite et n’évite pas les litiges.
+Ce qui précède est un conseil relatif à la conception du contrat. Le seul fait d’avoir arrêté une forme ne rend pas l’opération licite et n’évite pas les litiges.
 
 ## 5. L’enregistrement sociétaire et le travail licite d’un ingénieur ne sont pas la même chose
 

@@ -1142,7 +1142,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Affaires pénales',
           paragraphs: [
             'Nous intervenons au stade de l’enquête et devant le tribunal, pour la personne mise en cause ou accusée comme pour la victime, et nous évaluons le risque pénal de l’activité d’entreprise.',
-            'Les affaires pénales ont souvent des délais courts et des étapes déjà fixées. Si vous avez déjà reçu un écrit de l’autorité de poursuite ou du tribunal, indiquez tôt la date de cet écrit afin que le contenu soit examiné dans le bon ordre.',
+            'Les affaires pénales ont souvent des délais courts et des étapes déjà fixées. Si vous avez déjà reçu un écrit de l’autorité de poursuite ou du tribunal, indiquez sans tarder la date de cet écrit afin que le contenu soit examiné dans le bon ordre.',
           ],
         },
         {
@@ -1173,7 +1173,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Création et organisation',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) a été fondé en 2016 par des avocates et avocats formés à la National Taiwan University (國立臺灣大學). Le nom chinois 昊鼎 unit le caractère 昊 (« ciel vaste ») et le caractère 鼎 (« base solide ») et décrit l’orientation du cabinet depuis sa création.',
-            'Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la direction et le droit des sociétés, et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour répondre aux besoins de la région.',
+            'Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la gouvernance d’entreprise et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour répondre aux besoins de la région.',
             'Outre le travail d’avocat, Hovering Accounting Office existe depuis 2020 et propose comptabilité et planification fiscale aux entrepreneurs et aux particuliers fortunés.',
           ],
         },
@@ -1187,7 +1187,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lorsque vous nous contactez',
           paragraphs: [
-            'Après réception de votre résumé, une avocate ou un avocat examine le contenu, puis précise l’étendue possible, les pièces encore nécessaires et les étapes suivantes. Pour des questions fiscales ou comptables, le cabinet peut travailler avec le service de comptabilité de manière intégrée.',
+            'Après réception de votre résumé, une avocate ou un avocat examine le contenu, puis précise l’étendue possible, les pièces encore nécessaires et les étapes suivantes. Pour des questions fiscales ou comptables, le cabinet peut travailler en coordination avec le service de comptabilité.',
             'Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse sur laquelle vous puissiez vous fonder pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.',
           ],
         },

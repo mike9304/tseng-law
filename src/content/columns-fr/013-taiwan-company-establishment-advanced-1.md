@@ -63,7 +63,7 @@ C’est possible.
 
 La banque exige en général deux pièces d’identité.
 
-et sans carte de séjour, vous pouvez demander auprès de l’administration de l’immigration de Taïwan le « formulaire de données de base du numéro d’identification unique » (統一證號基本資料表).
+À défaut de carte de séjour, vous pouvez demander auprès de l’administration de l’immigration de Taïwan le « formulaire de données de base du numéro d’identification unique » (統一證號基本資料表).
 
 La délivrance est possible le jour même,
 
@@ -107,21 +107,21 @@ vous pouvez, s’il y a lieu, proposer de faire notarier le contrat de bail (公
 
 ​
 
-**5. Peut-on, lors de la constitution de la société, prendre à bail un local commercial de bureaux ?**
+**5. Peut-on, lors de la constitution de la société, prendre à bail un local à usage de bureaux ?**
 
 Cela dépend des branches d’activité (營業項目) de la société.
 
-Exemple : si la branche d’activité est la restauration et que l’on entend prendre à bail un local commercial de bureaux, l’ouverture du compte bancaire sera très difficile.
+Exemple : si la branche d’activité est la restauration et que l’on entend prendre à bail un local à usage de bureaux, l’ouverture du compte bancaire sera très difficile.
 
 Comme déjà indiqué, la banque examine le contrat de bail et inspecte sur place l’adresse de la société.
 
 En outre, lors de l’immatriculation finale de la société, la municipalité (市政府) exige aussi que l’adresse immatriculée se situe dans une zone où l’exploitation d’un restaurant est autorisée ;
 
-s’il s’agit d’un local commercial de bureaux, l’immatriculation de la société (公司登記) n’est alors pas possible.
+s’il s’agit d’un local à usage de bureaux, l’immatriculation de la société (公司登記) n’est alors pas possible.
 
-Exemple : s’il s’agit de branches d’activité possibles dans un local commercial de bureaux, telles que la publicité ou le commerce de gros, la société peut être constituée dans un local commercial de bureaux. Avant la conclusion du contrat de bail
+Exemple : s’il s’agit de branches d’activité possibles dans un local à usage de bureaux, telles que la publicité ou le commerce de gros, la société peut être constituée dans un local à usage de bureaux.
 
-vous devriez le vérifier au préalable.
+Avant de conclure le contrat de bail, vous devriez vérifier ce point.
 
 *Si vous avez besoin d’aide ou d’un échange sur le droit de Taïwan, utilisez la page Contact ; aucun délai de réponse n’est promis.*
 

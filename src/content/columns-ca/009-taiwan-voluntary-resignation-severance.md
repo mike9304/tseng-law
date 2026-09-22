@@ -65,7 +65,7 @@ si el treballador desitja posar fi al contracte de treball pels apartats 1 o 6 a
 
 ha de posar fi al contracte de treball dins de **30 dies** des del dia en què va conèixer aquesta situació,
 
-o, en el cas de l’incís 6, dins de **30 dies** des del dia en què va conèixer el resultat del dany.
+o, en el cas de l’apartat 6, dins de **30 dies** des del dia en què va conèixer el resultat del dany.
 
 Per això el treballador ha de controlar bé el termini.
 

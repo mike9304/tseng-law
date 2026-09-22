@@ -113,13 +113,13 @@ i el legislador procura trobar una solució relativament equilibrada per resoldr
 
 Avui moltes persones trien el massatge per alleujar l’estrès,
 
-però en aquest procés no deixen de produir-se casos d’assetjament sexual (性騷擾) o d’actes impúdics (猥褻).
+però en aquest procés no deixen de produir-se casos d’assetjament sexual (性騷擾) o de tocaments sexuals no consentits (猥褻).
 
 El que en origen era només rebre un massatge per alleujar l’estrès
 
 es pot convertir en un trauma de per vida en patir assetjament sexual.
 
-Si durant un massatge a Taiwan se sent incomoditat o alguna cosa estranya,
+Si durant un massatge a Taiwan se sent incòmode o nota alguna cosa estranya,
 
 cal comunicar-ho de seguida o demanar que s’aturi, per protegir-se.
 

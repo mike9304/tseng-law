@@ -64,9 +64,9 @@ Mantiniekam, kurš vēlas atteikties no mantojuma, saskaņā ar Civillikuma (民
 
 Pirms rīcības ar mantojuma mantu vai parādu izpildes kopīgi jāizmeklē aktīvi un pasīvi. Jāpārbauda tas, vai pastāv kreditori, nodrošinājums, galvojuma parādi, turpinātie līgumi un tas, vai nodokļi ir deklarēti, un, ja vajadzīgs, jāizvērtē mantas saraksta (遺產清冊) iesniegšana un kreditoru gaita. Jāizvairās arī no apstākļiem, kas var ietekmēt likumā noteikto atbildības ierobežojumu, piemēram, mantas slēpšana vai tās izlaišana no saraksta.
 
-Taivānas Finanšu ministrijas (財政部) nodokļu portāla norādījumi par pieteikuma gaitu mantojuma lietās tika atjaunināti 2026. gada 25. jūnijā un skaidro vispārīgo 3 mēnešu tiesas termiņu saraksta iesniegšanai un mantojuma atteikšanai, kā arī vispārīgo 6 mēnešu mantojuma nodokļa (遺產稅) deklarācijas termiņu. Tomēr termiņa sākums, pagarinājums, izņēmumi un piekritība jāpārbauda katrā lietā, un to nedrīkst lietot kā personīgā galīgā termiņa aprēķinu.
+Taivānas Finanšu ministrijas (財政部) nodokļu portāla norādījumi par pieteikuma gaitu mantojuma lietās tika atjaunināti 2026. gada 25. jūnijā un skaidro vispārīgo 3 mēnešu tiesas termiņu saraksta iesniegšanai un mantojuma atteikšanai, kā arī vispārīgo 6 mēnešu mantojuma nodokļa (遺產稅) deklarācijas termiņu. Tomēr termiņa sākums, pagarinājums, izņēmumi un piekritība jāpārbauda katrā lietā, un pēc šiem norādījumiem nedrīkst aprēķināt personīgo galīgo termiņu.
 
-Mantojuma nodokļa deklarācija, paziņojums mājsaimniecības reģistrā (戶籍), nekustamā īpašuma un transportlīdzekļu īpašnieka maiņa un finanšu iestāžu izmaksas gaita var būt citas iestādes un citi dokumenti. Nedrīkst uzskatīt, ka tiesai iesniegtais atteikšanās raksts un mantojuma nodokļa deklarācija nodokļu iestādē ir viena un tā pati gaita. Tā kā var vienlaikus tecēt vairāki termiņi, drošāk ir katras gaitas sākumu un apliecinājumus pārvaldīt atsevišķā kalendārā.
+Mantojuma nodokļa deklarācija, paziņojums mājsaimniecības reģistrā (戶籍), nekustamā īpašuma un transportlīdzekļu īpašnieka maiņa un finanšu iestāžu izmaksas gaita var prasīt citas iestādes un citus dokumentus. Nedrīkst uzskatīt, ka tiesai iesniegtais atteikšanās raksts un mantojuma nodokļa deklarācija nodokļu iestādē ir viena un tā pati gaita. Tā kā var vienlaikus tecēt vairāki termiņi, drošāk ir katras gaitas sākumu un apliecinājumus pārvaldīt atsevišķā grafikā.
 
 ## 5. Palikušā vecāka aizgādības tiesības un pienākumi
 
@@ -82,7 +82,7 @@ Aizgādība un mantošana ir tiesiski atšķirīgi jautājumi. Pat ja palikušai
 
 Nepilngadīgā aizbildnība saskaņā ar Taivānas Civillikuma (民法) 1091. pantu piemērojama tad, kad nepilngadīgajam nav vecāku vai kad abi nevar īstenot aizgādības tiesības un pienākumus. Nedrīkst apgalvot, ka nepilngadīgā aizbildnība sākas uzreiz tikai tāpēc, ka viens vecāks miris. Vispirms jāpārbauda palikušā vecāka aizgādības stāvoklis, esošie nolēmumi un tas, vai tiesības faktiski var īstenot.
 
-Saskaņā ar Civillikuma (民法) 1093. pantu vecāks, kurš pēdējais īsteno aizgādības tiesības un pienākumus, ar testamentu var iecelt nepilngadīgā aizbildni (監護人). Lai šī norma piemērotos, testamentam jāatbilst likumiskajai formai, un vecākam, kurš ieceļ, jābūt pilnvarai iecelt nepilngadīgā aizbildni. Pat ja iecelšanas saturs pastāv, kopīgi jāvērtē aizbildnības sākšanas priekšnoteikumi, aizbildņa kvalifikācija un tas, vai viņš pieņem, kā arī paziņojums tiesai un pārējās uzraudzības gaitas.
+Saskaņā ar Civillikuma (民法) 1093. pantu vecāks, kurš pēdējais īsteno aizgādības tiesības un pienākumus, ar testamentu var iecelt nepilngadīgā aizbildni (監護人). Lai šī norma piemērotos, testamentam jāatbilst likumiskajai formai, un vecākam, kurš ieceļ, jābūt pilnvarai iecelt nepilngadīgā aizbildni. Pat ja aizbildnis testamentā ir iecelts, kopīgi jāvērtē aizbildnības sākšanas priekšnoteikumi, aizbildņa kvalifikācija un tas, vai viņš pieņem, kā arī paziņojums tiesai un pārējās uzraudzības gaitas.
 
 Ja nav spēkā esošas iecelšanas ar testamentu vai ieceltā persona nevar uzņemties uzdevumu, piemērojama Civillikuma (民法) 1094. panta likumiskā kārta un 1094-1. panta tiesas iecelšanas režīms. Tiesa vērtē bērna labākās intereses pēc konkrētiem faktiem: nepilngadīgā vecuma un spējas izteikt gribu, kandidāta attiecībām un aprūpes spējas, mantas pārvaldības piemērotības un dzīves stabilitātes.
 
@@ -129,7 +129,7 @@ Turpmākā kārtība ir pamata ietvars, lai savāktu lietas apstākļus, neizlai
 
 Savācot materiālus, ir lietderīgi fiksēt oriģināla glabāšanas vietu un izsniegšanas un atskaites dienas un sakārtot elektroniskos failus un papīra dokumentus pēc tās pašas klasifikācijas sistēmas. Ja ir vairāki kopmantinieki vai mantas pārvaldītāji, jāfiksē, kurš kurus materiālus glabā un kuras darbības tika apstiprinātas. Nepilngadīgā personiskie un finanšu dati jāpārvalda ar piekļuves kontroli, lai tos sniegtu tikai personām un iestādēm, kurām tie vajadzīgi.
 
-Jānošķir arī manta, kas prasa steidzamu saglabāšanu, un parastā deklarācijas gaita. Vispirms jāizvērtē, vai pastāv apstākļi tūlītējai pārbaudei, piemēram, konta vai uzņēmuma darbības pārtraukuma risks, nekustamā īpašuma bojājums vai prasījuma noilgums, taču nedrīkst rīkoties bez pilnvaras, slēpjoties aiz steidzamības. Noderīgi vienā kalendārā kopīgi pārvaldīt tiesvedības gaitu un nodokļu, reģistra un ieraksta gaitas.
+Jānošķir arī manta, kas prasa steidzamu saglabāšanu, un parastā deklarācijas gaita. Vispirms jāizvērtē, vai pastāv apstākļi tūlītējai pārbaudei, piemēram, konta vai uzņēmuma darbības pārtraukuma risks, nekustamā īpašuma bojājums vai prasījuma noilgums, taču nedrīkst rīkoties bez pilnvaras, slēpjoties aiz steidzamības. Noderīgi vienā grafikā kopīgi pārvaldīt tiesvedības gaitu un nodokļu, reģistra un ieraksta gaitas.
 
 ## 10. Oficiālie materiāli
 

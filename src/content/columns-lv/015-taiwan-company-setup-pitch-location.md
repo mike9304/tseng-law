@@ -19,9 +19,9 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Sākot ēdināšanas darbību, pirmais jautājums ir atrast darbības adresi (營業地址).
 
-Līdzās tirgus situācijai ir vēl viens svarīgs jautājums.
+Līdzās tirgus situācijai jānoskaidro, vai adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
 
-Vēl viens svarīgs apsvērums ir tas, vai izvēlētā adrese vispār pieļauj ēdināšanas darbību.
+Atsevišķi jāpārbauda, vai izvēlētā adrese vispār pieļauj ēdināšanas darbību.
 
 Jānoskaidro, vai šī adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
 
@@ -65,7 +65,7 @@ no 2023. gada 1. janvāra, piesakot sabiedrības vai komercdarbības (tostarp fi
 
 Turpmākais saraksts „nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目) apzīmē nozares, kuras Tirdzniecības pārvalde reģistrācijas izskatīšanas gaitā pārbauda pēc amata papildus (隨案主動查詢), kad nozare figūrē pieteikumā, bet pievienotajā iznākumā tās trūkst; apstāklis, ka nozares šajā sarakstā nav, nenozīmē atbrīvojumu no pārbaudes.
 
-Ja atver vietā, kur restorāns nav iespējams, vēlāk var sekot kompetentās iestādes administratīvais naudas sods (罰鍰).
+Ja restorānu atver vietā, kur restorāna darbība nav iespējama, vēlāk var sekot kompetentās iestādes administratīvais naudas sods (罰鍰).
 
 ![„nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 

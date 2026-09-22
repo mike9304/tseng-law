@@ -104,19 +104,19 @@ sabiedrība ņēma B kungu par mērķi.
 
 ​
 
-Kādu dienu sabiedrības augstākā līmeņa vadītājs izsauca B uz pārrunām
+Kādu dienu sabiedrības augstākā līmeņa vadītājs izsauca B kungu uz pārrunām
 
 un pēkšņi sāka viņam pārmest, ka viņš nestrādā apzinīgi.
 
 Sabiedrībai esot grūtības,
 
-B vajagot ziedoties un rādīt piemēru
+B kungam vajagot ziedoties un rādīt piemēru
 
 un pazemināt algu un amatu.
 
-Citādi B vajagot sabiedrību atstāt;
+Citādi B kungam vajagot sabiedrību atstāt;
 
-Vadītājs iedeva B A4 formāta lapu
+Vadītājs iedeva B kungam A4 formāta lapu
 
 un lika uz tās uzrakstīt: „Es, [vārds], brīvprātīgi pazeminu amatu un algu“
 
@@ -128,7 +128,7 @@ lai tie sekotu.
 
 ​
 
-B bija darbinieks ar vislabāko rezultātu Taivānas vidusreģionā,
+B kungs bija darbinieks ar vislabāko rezultātu Taivānas vidusreģionā,
 
 bija sabiedrībai ienesis daudz naudas
 
@@ -136,11 +136,11 @@ un katru dienu strādāja apzinīgi,
 
 tāpēc šo nesaprātīgo prasību stingri noraidīja.
 
-B atteicās to uzrakstīt,
+B kungs atteicās to uzrakstīt,
 
 un sabiedrības vadītājs beidzot dusmās lika viņam iet.
 
-B ar pāridarījuma un skumju sajūtu atstāja
+B kungs ar pāridarījuma un skumju sajūtu atstāja
 
 sabiedrību, kurā bija 10 gadus,
 
@@ -158,7 +158,7 @@ un aizgāja paši
 
 ​
 
-B tomēr pēc vadības maiņas
+B kungs tomēr pēc vadības maiņas
 
 atpazina, ka sabiedrība grib darbiniekus aizvākt neatbilstošā veidā,
 
@@ -166,7 +166,7 @@ un to pamanīja agri
 
 un tāpēc, ka jau bija atklājis darbā pieņemšanas sludinājumus pirms darbinieku aiziešanas,
 
-B dienā, kad gāja uz pārrunām,
+B kungs dienā, kad gāja uz pārrunām,
 
 ierakstīja visu gaitu ar mobilo tālruni
 

@@ -4430,7 +4430,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Iepriekš Izglītības ministrijas Juridisko lietu nodaļā, ar uzsvaru uz administratīvajām un civillietām.',
+        'Iepriekš strādājis Izglītības ministrijas Juridisko lietu nodaļā, ar uzsvaru uz administratīvajām un civillietām.',
         'Pieredze lietās par universitātēm, pedagogu tiesībām un administratīvajām sūdzībām.',
       ],
       education: [
@@ -4457,7 +4457,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinē konsultāciju laikus un saziņu klientiem no Korejas.',
-        'Atbalsta apmaiņu starp darbības jomām, izmantojot dokumentu sistēmas un darba procesus, un balstās uz informātikas izglītību.',
+        'Viņš atbalsta saskaņošanu starp darbības jomām ar dokumentu un procesu sistēmām; pamatā ir informātikas izglītība.',
       ],
       education: [
         'Bakalaurs (B.S.) informātikā, National Cheng Kung University',

@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Ja klienti ir Taivānā, vai tur vienmēr jādibina sabiedrība?"
-    a: "To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktiskā tirdzniecības, iekārtu, personāla darbība un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts."
+    a: "To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktisko uzņēmējdarbību, iekārtas, personālu un darījumu struktūru Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts."
   - q: "Vai mātes sabiedrības atbildība pilnībā izzūd, kad dibināta Taivānas sabiedrība?"
     a: "Ja dibināt meitas sabiedrību, nevis filiāli, galvenais birojs principā nenes pienākumus no līgumiem, kas parakstīti meitas sabiedrības vārdā. Tomēr jāpārbauda izņēmumi par juridiskās personības ļaunprātīgu izmantošanu un tas, vai galvenais birojs ir devis galvojumu vai uzņēmies pašus līgumiskos pienākumus."
   - q: "Vai var sākt ar izplatītāju un pēc tam pāriet uz sabiedrību Taivānā?"
@@ -71,9 +71,9 @@ Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk akcionāri, taču va
 
 Kad ārvalstu sabiedrība dibina Taivānas meitas sabiedrību, nosaukumu principā iepriekš pārbauda un pieteicas ieguldījuma atļaujai pie Ekonomikas ministrijas Ieguldījumu izskatīšanas departamenta (經濟部投資審議司). Pēc apstiprinājuma pārskaita līdzekļus, nosaka ieguldījuma apjomu un zvērināts revidents (會計師) pārbauda kapitālu, pēc tam pabeidz dibināšanu un nodokļu reģistrāciju.
 
-Turpretī, dibinot parastas ārvalstu sabiedrības Taivānas filiāli, principā nav vajadzīga Ieguldījumu izskatīšanas departamenta ieguldījuma atļauja; Ekonomikas ministrijas Komercdarbības attīstības pārvalde (經濟部商業發展署) veic filiāles reģistrāciju un saistīto kapitāla noteikšanu. Joprojām vajadzīga nosaukuma iepriekšēja pārbaude, apgrozāmā kapitāla pārskaitījums, kapitāla pārbaude un nodokļu reģistrācija; kalendārs parasti ir īsāks.
+Turpretī, dibinot parastas ārvalstu sabiedrības Taivānas filiāli, principā nav vajadzīga Ieguldījumu izskatīšanas departamenta ieguldījuma atļauja; Ekonomikas ministrijas Komercdarbības attīstības pārvalde (經濟部商業發展署) veic filiāles reģistrāciju un saistīto kapitāla noteikšanu. Joprojām vajadzīga nosaukuma iepriekšēja pārbaude, apgrozāmā kapitāla pārskaitījums, kapitāla pārbaude un nodokļu reģistrācija; reģistrācijas grafiks parasti ir īsāks.
 
-Iepriekš minētais ir ieteikums līgumu kārtošanai. Tikai vienas tiesiskās formas izvēle darījumu nepadara par likumīgu, strīdu neizslēdz un noteiktu iznākumu nesola.
+Iepriekš minētais salīdzina tikai filiāles un meitas sabiedrības reģistrācijas kārtību. Tikai vienas tiesiskās formas izvēle darījumu nepadara par likumīgu, strīdu neizslēdz un noteiktu iznākumu nesola.
 
 ## 5. Sabiedrības reģistrācija un inženiera likumīgais darbs nav tas pats
 
@@ -95,13 +95,13 @@ Turpmākās situācijas ir hipotētiskas, lai atbalstītu pārdomas; tās nesola
 
 Pirmajā konsultācijā var sakārtot galvenā biroja un ieguldītāju pamatdatus, vispārīgu izstrādājuma vai pakalpojuma aprakstu, paredzēto darījumu plūsmu, personāla un iekārtu plānu Taivānā un līguma un atbalsta nosacījumus, ko prasa klienti. Kas vēl nav nolemts, var apzīmēt kā „nenoteikts“.
 
-Pirmajā saziņā nav vajadzīgs pievienot visus klienta konfidenciālos materiālus vai sīkus procesa datus. Pēc pretējās puses nosaukuma sniegšanas, kas vajadzīgs interešu konflikta pārbaudei, vajadzīgos materiālus un nodošanas veidu nosaka pēc atbildīgās personas norādījumiem.
+Pirmajā saziņā nav vajadzīgs pievienot visus klienta konfidenciālos materiālus vai sīkus procesa datus. Pēc pretējās puses nosaukuma sniegšanas, kas vajadzīgs interešu konflikta pārbaudei, vajadzīgos materiālus un nodošanas veidu nosaka pēc atbildīgās advokātes norādījumiem.
 
 ## Bieži uzdotie jautājumi
 
 ### Ja klienti ir Taivānā, vai tur vienmēr jādibina sabiedrība?
 
-To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktiskā tirdzniecības, iekārtu, personāla darbība un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts.
+To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktisko uzņēmējdarbību, iekārtas, personālu un darījumu struktūru Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts.
 
 ### Vai mātes sabiedrības atbildība pilnībā izzūd, kad dibināta Taivānas sabiedrība?
 

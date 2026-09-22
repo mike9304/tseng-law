@@ -45,11 +45,11 @@ Ikviens, kas nozieguma dēļ cietis zaudējumus, saskaņā ar Kriminālprocesa l
 
 Izvēle atšķiras pēc noilguma pārtraukšanas (時效中斷), atbildētāju loka, pierādījumiem, apdrošināšanas un piekritības. Tāpēc nav vienas visām lietām vienādi ieteicamas gaitas.
 
-## 4. Ja neuzmanība ir abu pušu pusē, kā vērtē kriminālatbildību un civiltiesisko atbildību?
+## 4. Ja neuzmanība ir abām pusēm, kā vērtē kriminālatbildību un civiltiesisko atbildību?
 
 Kriminālatbildību var pieņemt tikai tad, ja atzīts katra piesardzības pienākuma pārkāpums un cēloņsakarība starp šo pārkāpumu un otras puses ievainojumu. Pats fakts, ka neuzmanība bijusi abām pusēm, automātiski nerada atbildību par aiz neuzmanības nodarītu miesas bojājumu.
 
-Civiltiesiskajā plaknē saskaņā ar Civillikuma 217. pantu, ja cietušajam ir neuzmanība, kas veicinājusi zaudējumu rašanos vai palielināšanos (與有過失), tiesa var samazināt vai atcelt atlīdzību. Piemēram, ja jaunajā Taivānas dolārā (新臺幣, TWD) atzītie zaudējumi ir TWD 1.000.000 un cietušā neuzmanība novērtēta ar 50 %, summa pirms citām korekcijām var tikt samazināta līdz TWD 500.000.
+Civiltiesiskajā plaknē saskaņā ar Civillikuma 217. pantu, ja cietušajam ir neuzmanība, kas veicinājusi zaudējumu rašanos vai palielināšanos (與有過失), tiesa var samazināt vai atcelt atlīdzību. Piemēram, ja atzītie zaudējumi ir 1.000.000 jauno Taivānas dolāru (新臺幣, TWD) un cietušā neuzmanība novērtēta ar 50 %, summa pirms citām korekcijām var tikt samazināta līdz TWD 500.000.
 
 Ekspertīze (鑑定) vai sākotnējās analīzes tabula var būt svarīgi materiāli, taču tie mehāniski nesaista tiesu. Tiesa vērtē pierādījumu kopumu, tostarp liecības, ierakstus un transportlīdzekļu stāvokli.
 
@@ -99,7 +99,7 @@ Prasījums, kas balstīts uz Civillikuma 184. pantu, pieņem prettiesisku tiesī
 
 ## 8. Ja ārstēšana turpinās, kā iesniegt medicīnisko izdevumu dokumentus?
 
-Saglabājiet kvītis (收據), ārsta izziņas un medicīnisko dokumentāciju un kopā ar tām sakārtojiet katras ārstēšanas medicīnisko nepieciešamību un tās cēloņsakarību ar negadījumu. Turpinātās ārstēšanas dokumenti var papildināt pierādījumu saskaņā ar tiesas procesuālo kalendāru un jau iesniegtā prasījuma saturu, taču tas negarantē, ka visi vēlāk iesniegtie dokumenti vai katrs prasījuma paplašinājums tiks pieņemts vai atļauts.
+Saglabājiet kvītis (收據), ārsta izziņas un medicīnisko dokumentāciju un kopā ar tām sakārtojiet katras ārstēšanas medicīnisko nepieciešamību un tās cēloņsakarību ar negadījumu. Turpinātās ārstēšanas dokumenti var papildināt pierādījumu saskaņā ar tiesas procesuālo grafiku un jau iesniegtā prasījuma saturu, taču tas negarantē, ka visi vēlāk iesniegtie dokumenti vai katrs prasījuma paplašinājums tiks pieņemts vai atļauts.
 
 Jānošķir medicīnisko dokumentu pievienošana no prasītās summas grozīšanas vai palielināšanas. Pēc kriminālprocesam pievienotas civillietas celšanas pats fakts, ka iesniedz vairāk medicīnisko kvīšu, automātiski nerada tiesas izdevumus.
 
@@ -175,7 +175,7 @@ Pienākums slēgt līgumu saskaņā ar Obligātās automašīnu civiltiesiskās 
 
 Viena transportlīdzekļa negadījumā šā transportlīdzekļa vadītājs principā nav šā transportlīdzekļa obligātās apdrošināšanas pabalsta adresāts. Tomēr negadījumā, kurā piedalās vairāki transportlīdzekļi, ir gadījumi, kuros vadītājs var prasīt pabalstu pie cita iesaistītā transportlīdzekļa obligātā apdrošinātāja.
 
-Pabalstu standarts (強制汽車責任保險給付標準), kas grozīts 2026. gada 29. maijā, piemērojams negadījumiem, kuri notikuši 2026. gada 1. jūlijā vai pēc tam. Samērīgo un nepieciešamo medicīnisko izdevumu griesti par ievainojumu ir TWD 200.000 jaunajā Taivānas dolārā; pabalsts par invaliditāti (失能) ir no TWD 80.000 līdz TWD 3.000.000 pēc 15 likumā noteiktajām pakāpēm; pabalsts par nāvi ir TWD 3.000.000, un kopējais nāves, invaliditātes un medicīnisko izdevumu maksimums 1 cietušajam un 1 negadījumam ir TWD 3.200.000. Uz agrākiem negadījumiem var piemērot iepriekšējo standartu.
+Pabalstu standarts (強制汽車責任保險給付標準), kas grozīts 2026. gada 29. maijā, piemērojams negadījumiem, kuri notikuši 2026. gada 1. jūlijā vai pēc tam. Samērīgo un nepieciešamo medicīnisko izdevumu griesti par ievainojumu ir TWD 200.000 jauno Taivānas dolāru; pabalsts par invaliditāti (失能) ir no TWD 80.000 līdz TWD 3.000.000 pēc 15 likumā noteiktajām pakāpēm; pabalsts par nāvi ir TWD 3.000.000, un kopējais nāves, invaliditātes un medicīnisko izdevumu maksimums 1 cietušajam un 1 negadījumam ir TWD 3.200.000. Uz agrākiem negadījumiem var piemērot iepriekšējo standartu.
 
 Trešo personu civiltiesiskās atbildības apdrošināšana (第三人責任險), vadītāja nelaimes gadījumu apdrošināšana (駕駛人傷害險) un paša transportlīdzekļa bojājumu apdrošināšana (車體損失險) ir fakultatīvi līgumiska rakstura produkti. Faktiskais segums atšķiras pēc apdrošinātā, griestiem, pašriska (自負額), izņēmumiem, neuzmanības un citiem polises nosacījumiem, tāpēc polise un nosacījumi jāpārbauda katrā lietā atsevišķi.
 

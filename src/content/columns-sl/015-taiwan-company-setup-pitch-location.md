@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Ko začenjate gostinsko dejavnost, je prvi problem najti naslov kraja dejavnosti (營業地址).
 
-Poleg tržnih razmer
+Poleg tržnih razmer je treba preveriti še, ali je obratovanje na naslovu mogoče.
 
-je nadaljnja pomembna točka
+Nadaljnja pomembna točka je cona, v kateri je dejavnost dovoljena.
 
-to, ali ta naslov leži v coni, kjer je obratovanje »restavracije« mogoče.
+Preveriti je treba, ali ta naslov leži v coni, kjer je obratovanje »restavracije« mogoče.
 
 ​
 
@@ -61,11 +61,11 @@ Zato v praksi pri vpisu družbe ni nujno preverjati vseh panog.
 
 Po »[operativnih navodilih storitve pomoči pri poizvedbi o kraju dejavnosti mesta Tajpej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)« (臺北市營業場所協助查詢服務作業須知) in veljavnem napotku mesta Tajpej,
 
-od 1. 1. 2023 pri vlogi za vpis ustanovitve, premestitve sedeža ali dopolnitve panog dejavnosti družbe ali podjetja (vključno s podružnico (分公司) in pomožno enoto (分支機構)) rezultat predhodnega preverjanja kraja dejavnosti **mora** biti priložen vlogi za vpis, ne glede na panogo.
+od 1. 1. 2023 pri vlogi za vpis ustanovitve, premestitve sedeža ali dopolnitve panog dejavnosti družbe ali podjetja (vključno s podružnico (分公司) in izpostavo (分支機構)) rezultat predhodnega preverjanja kraja dejavnosti **mora** biti priložen vlogi za vpis, ne glede na panogo.
 
 Spodnji seznam »panog dejavnosti, ki so predmet uradnega preverjanja« (主動查詢之營業項目) označuje panoge, ki jih Trgovinski urad med pregledom vpisa dodatno preveri po uradni dolžnosti (隨案主動查詢), kadar panoga figurira v vlogi, v priloženem rezultatu pa manjka; okoliščina, da panoge na tem seznamu ni, ne pomeni oprostitve preverjanja.
 
-Če se odpre na kraju, kjer restavracija ni mogoča, lahko pozneje sledi upravna globa (罰鍰) pristojnega organa.
+Če se restavracija odpre na kraju, kjer obratovanje ni mogoče, lahko pozneje sledi upravna globa (罰鍰) pristojnega organa.
 
 ![»panoge dejavnosti, ki so predmet uradnega preverjanja« (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
@@ -73,7 +73,7 @@ Spodnji seznam »panog dejavnosti, ki so predmet uradnega preverjanja« (主動�
 
 S tem je povzet bistveni postopek; konkretno zadevo je treba presoditi posebej z odvetnico ali odvetnikom. Posvet v pisarni poteka le v angleščini, kitajščini (中文), japonščini in korejščini.
 
-Pravila upravnih organov se lahko pogosto spreminjajo; pred vpisom pravne osebe je smiselno preveriti najnovejše predpise.
+Pravila upravnih organov se lahko pogosto spreminjajo; pred vpisom družbe je smiselno preveriti najnovejše predpise.
 
 ---
 

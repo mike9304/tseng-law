@@ -1226,7 +1226,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     partnerTitle: 'Pridruženo računovodstvo',
     introLabel: 'Predstavitev',
     educationLabel: 'Izobrazba',
-    experienceLabel: 'Praksa',
+    experienceLabel: 'Delovne izkušnje',
     photoAltPrefix: 'Fotografija',
     workingLanguagesLabel: 'Delovni jeziki',
     fullProfileLabel: 'Celoten profil (v angleščini)',
@@ -4287,7 +4287,7 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Fundacija za pravno pomoč, podružnica Taichung',
+        'Fundacija za pravno pomoč, podružnica Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
@@ -4299,7 +4299,7 @@ export const guidanceTeamBios: Record<
         'Diplomirani pravnik (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Oddelek za pravne zadeve, Ministrstvo za izobraževanje',
+        'Oddelek za pravne zadeve, Ministrstvo za izobraževanje (Ministry of Education, Legal Affairs Division)',
         'Odvetnik, Hovering International Law Firm',
       ],
     },
@@ -4330,7 +4330,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Opravil je dodiplomski in magistrski program računovodstva na National Chengchi University in zdaj vodi računovodsko pisarno.',
+        'Diplomiral je iz računovodstva in magistriral na National Chengchi University ter zdaj vodi računovodsko pisarno.',
         'Podpira celostno analizo pravnih, davčnih in finančnih tveganj za poslovne stranke.',
       ],
       education: [

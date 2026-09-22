@@ -37,7 +37,7 @@ V naslednjih posebnih okoliščinah mora delodajalec delavcu izplačati odpravni
 
 2. Kadar delodajalec, družinski član delodajalca ali zastopnik delodajalca (代理人) uporabi nasilje ali povzroči hudo žalitev (重大侮辱) delavcu
 
-3. Kadar delo, določeno v pogodbi, lahko škoduje zdravju delavca, je bila od delodajalca zahtevana izboljšava, učinka pa ni
+3. Kadar delo, določeno v pogodbi, lahko škoduje zdravju delavca, je bila od delodajalca zahtevana izboljšava, do nje pa ni prišlo
 
 4. Kadar delodajalec, njegov zastopnik ali drug delavec zboli za zakonsko nalezljivo boleznijo (法定傳染病), obstaja tveganje okužbe delavcev, ki delajo skupaj, ter gre za hudo nevarnost za zdravje delavca
 
@@ -73,11 +73,11 @@ Delavec mora zato rok skrbno spremljati.
 
 Z drugimi besedami,
 
-tajvansko pravo, naj leži krivda na strani podjetja
+Tajvansko pravo glede na to, ali je krivda na strani podjetja
 
 ali na strani delavca,
 
-obema strankama priznava pravico, da odpravnine ne izplača ali da jo zahteva.
+podjetju priznava pravico, da odpravnine ne izplača, delavcu pa pravico, da jo zahteva.
 
 Včasih, kadar leži krivda na obeh straneh delovnega razmerja,
 

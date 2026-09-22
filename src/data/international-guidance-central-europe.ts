@@ -1962,14 +1962,14 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
     contact: 'Stik',
     faq: 'Vprašanja',
     privacy: 'Zasebnost',
-    disclaimer: 'Izjava',
+    disclaimer: 'Omejitev',
     columns: 'Članki',
   },
   contactCta: 'Pošljite prošnjo za pregled',
   footerNotice:
     'Ta slovenska stran vsebuje le splošne informacije o delu pisarne po tajvanskem pravu. Ni pravni nasvet za posamezno zadevo in samo pošiljanje sporočila ne vzpostavi razmerja med odvetnico ali odvetnikom in stranko.',
-  skipLink: 'Preskočite krmarjenje in pojdite na vsebino',
-  menuLabel: 'Pregled strani',
+  skipLink: 'Preskočite navigacijo in pojdite na vsebino',
+  menuLabel: 'Meni',
   languageLabel: 'Jezik prikaza',
   mega: {
     services: {
@@ -2023,13 +2023,13 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Splošna pojasnila v slovenščini o obsegu dela Hovering International Law Firm na Tajvanu, o jezikih posveta in o prvem stiku.',
       intro:
-        'Hovering International Law Firm zastopa tuje stranke, tudi osebe z vezjo na Tajvan, v zadevah tajvanskega prava: naložbe in ustanavljanje družb, civilni spori, zakonska zveza, družina in dedovanje, delovno pravo, kazenske zadeve in intelektualna lastnina. Ta slovenski del vam pomaga prepoznati, katero delo spada v naš obseg, kaj pripraviti in kako stopiti v stik z nami. Gre za splošne informacije, ne za pravni nasvet za vaš primer.',
+        'Hovering International Law Firm zastopa tuje stranke, tudi osebe, povezane s Tajvanom, v zadevah tajvanskega prava: naložbe in ustanavljanje družb, civilni spori, zakonska zveza, družina in dedovanje, delovno pravo, kazenske zadeve in intelektualna lastnina. Ta slovenski del vam pomaga prepoznati, katero delo spada v naš obseg, kaj pripraviti in kako stopiti v stik z nami. Gre za splošne informacije, ne za pravni nasvet za vaš primer.',
       sections: [
         {
           heading: 'S čim se ukvarjamo',
           paragraphs: [
             'Hovering International Law Firm je odvetniška pisarna s sedežem na Tajvanu. Deluje po tajvanskem pravu in ima pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Svetujemo podjetjem, vodimo sodne postopke in zastopamo tuje stranke pri korakih, ki jih je treba opraviti na Tajvanu.',
-            'Vsa vsebina tukaj je splošna. Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo in od trenutka. Ti napotki ne nadomeščajo pogovora z odvetnico ali odvetnikom o vaših dokumentih.',
+            'Vsa vsebina tukaj je splošna. Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo, in od trenutka presoje. Ti napotki ne nadomeščajo pogovora z odvetnico ali odvetnikom o vaših dokumentih.',
           ],
         },
         {
@@ -2133,21 +2133,21 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ustanovitev in zgradba',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) so leta 2016 ustanovili odvetnice in odvetniki, ki so študirali na National Taiwan University (國立臺灣大學). Kitajsko ime 昊鼎 povezuje znak 昊 (»široko nebo«) z znakom 鼎 (»trdna podlaga«) in izraža usmeritev pisarne od njene ustanovitve.',
-            'Imamo pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Pisarna v Kaohsiungu se osredotoča na vodenje podjetij in vodi civilne, kazenske in upravne spore. Pisarna v Taichungu vodi gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Pisarna v Pingtungu je bila odprta leta 2017 za lokalne potrebe.',
-            'Poleg odvetniškega dela od leta 2020 deluje tudi Hovering Accounting Office, ki ponuja računovodstvo in davčno načrtovanje podjetnikom in zasebnim osebam s premoženjem.',
+            'Imamo pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Pisarna v Kaohsiungu se osredotoča na korporativno pravo in vodi civilne, kazenske in upravne spore. Pisarna v Taichungu vodi gradbene zadeve, intelektualno lastnino in zadeve, povezane s Korejo in Japonsko. Pisarna v Pingtungu je bila odprta leta 2017, da bi stranke v regiji sprejemala na kraju samem.',
+            'Poleg odvetniškega dela od leta 2020 deluje tudi Hovering Accounting Office, ki ponuja računovodstvo in davčno načrtovanje podjetnikom in premožnim zasebnim osebam.',
           ],
         },
         {
           heading: 'Delo s tujimi strankami',
           paragraphs: [
-            'Čezmejno delo obsega ustanavljanje družb, vizume, prijave znamk in patentov, oceno pravnega tveganja in davčno svetovanje podjetjem. Pisarna v Taichungu vodi zlasti gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Odvetnica Wei Tseng (曾雋崴) zastopa stranke iz Koreje, z Japonske in druge mednarodne stranke na navedenih področjih.',
+            'Čezmejno delo obsega ustanavljanje družb, vizume, prijave znamk in patentov, oceno pravnega tveganja in davčno svetovanje podjetjem. Pisarna v Taichungu vodi zlasti gradbene zadeve, intelektualno lastnino in zadeve, povezane s Korejo in Japonsko. Odvetnica Wei Tseng (曾雋崴) zastopa stranke iz Koreje, z Japonske in druge mednarodne stranke na navedenih področjih.',
             'Ali lahko zadevo prevzamemo, je odvisno od vsebine in od jezika sporazumevanja. Če vaša zadeva spada na navedena področja in jo je mogoče obravnavati v enem od štirih jezikov posveta, lahko pošljete povzetek v oceno.',
           ],
         },
         {
           heading: 'Ko stopite v stik z nami',
           paragraphs: [
-            'Po prejemu vašega povzetka odvetnica ali odvetnik oceni vsebino in nato govori o morebitnem obsegu dela, o še potrebnih dokumentih in o nadaljnjih korakih. Pri davčnih ali računovodskih vprašanjih lahko pisarna sodeluje z računovodskim oddelkom v enem povezanem postopku.',
+            'Po prejemu vašega povzetka odvetnica ali odvetnik oceni vsebino in nato z vami pretehta morebitni obseg dela, dokumente, ki so še potrebni, in nadaljnje korake. Pri davčnih ali računovodskih vprašanjih lahko pisarna sodeluje z računovodskim oddelkom v enem skupnem postopku.',
             'Izid vsake zadeve je odvisen od dejanskega stanja in od razpoložljivih dokumentov; izida ne obljubljamo. Če potrebujete zavezujoč odgovor za svoj položaj, morajo biti dokumenti obravnavani z odvetnico ali odvetnikom v enem od štirih jezikov posveta.',
           ],
         },
@@ -2172,7 +2172,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Najprej se določi obseg dela',
           paragraphs: [
             'Zadeve iste vrste lahko zahtevajo zelo različno prizadevanje, glede na število strank, razpoložljive dokumente, roke, ki jih je treba upoštevati, in glede na to, ali je postopek že začet. Prvi korak je zato vedno določiti, kaj spada v delo in kaj ne.',
-            'Povzetek, ki ga na začetku pošljete, je podlaga tega obsega. Bolj ko jasno opiše potek, vašo zahtevo in roke, natančneje je mogoče obseg določiti.',
+            'Povzetek, ki ga na začetku pošljete, je podlaga tega obsega. Čim jasneje povzetek opiše potek, vašo zahtevo in roke, tem natančneje je mogoče obseg določiti.',
           ],
         },
         {
@@ -2360,14 +2360,14 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kraj hrambe in ponudniki',
           paragraphs: [
-            'Te strani gosti družba Vercel in vaša pošiljka se hrani v nejavni objektni shrambi te storitve. E-pošta se pošilja prek e-poštne storitve, ki jo pisarna uporablja.',
+            'Te strani gosti družba Vercel in vaša pošiljka se hrani v nejavni shrambi v oblaku te storitve. E-pošta se pošilja prek e-poštne storitve, ki jo pisarna uporablja.',
             'Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po predpisih, ki se uporabljajo, ostanejo za to obdobje. Prošnje za osebne podatke sprejema wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'IZJAVA',
+      eyebrow: 'OMEJITEV',
       title: 'Obseg in meje informacij na tej strani',
       description:
         'Splošna narava informacij, pravni okvir in predpostavke nastanka razmerja med odvetnico ali odvetnikom in stranko.',
@@ -2378,14 +2378,14 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Samo splošne informacije',
           paragraphs: [
             'Vsebina teh strani je napisana kot splošna informacija. Ni pravni nasvet za vaš primer in ne nadomešča ocene vaših dokumentov.',
-            'Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo in od trenutka; dve navidezno podobni situaciji se lahko končata različno.',
+            'Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo, in od trenutka presoje; dve navidezno podobni situaciji se lahko končata različno.',
           ],
         },
         {
           heading: 'Pravni okvir',
           paragraphs: [
             'Pisarna deluje po tajvanskem pravu in ta stran govori samo o delu v tem okviru.',
-            'Vsebina ni svetovanje po pravu drugega pravnega reda, ne po tajvanskem, vključno s pravom kraja vašega prebivanja. Če se del vaše zadeve nanaša na drug pravni red, z vami pojasnimo, katera usposobljena oseba je za ta del potrebna.',
+            'Vsebina ni svetovanje po pravu drugega pravnega reda kot tajvanskega, vključno s pravom kraja vašega prebivanja. Če se del vaše zadeve nanaša na drug pravni red, z vami pojasnimo, katera usposobljena oseba je za ta del potrebna.',
           ],
         },
         {
@@ -2408,7 +2408,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ČLANKI',
       title: 'Članki o tajvanskem pravu',
       description:
-        'Članki v slovenščini o pogostih vprašanjih tajvanskega prava. Vsebina je splošna informacija ob trenutku objave, ne pravni nasvet za vaš primer.',
+        'Članki v slovenščini o pogostih vprašanjih tajvanskega prava. Vsebina je splošna informacija v trenutku objave, ne pravni nasvet za vaš primer.',
       intro:
         'Pisarna objavlja članke o pogostih vprašanjih tajvanskega prava. Članki, ki so na voljo v slovenščini, so na tej strani; poleg njih so štiri povezave, od katerih vsaka odpre seznam člankov v enem izvirnem jeziku.',
       sections: [
@@ -2429,7 +2429,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'V kolikšni meri lahko članek služi za orientacijo',
           paragraphs: [
-            'Članki so splošne informacije ob trenutku objave. Predpisi in njihova uporaba se lahko spremenijo in članek ne vsebuje vseh okoliščin vašega primera.',
+            'Članki so splošne informacije v trenutku objave. Predpisi in njihova uporaba se lahko spremenijo in članek ne vsebuje vseh okoliščin vašega primera.',
             'Zato se v resnični zadevi ne opirajte samo na članek. Uporabite ga za pregled in svoje dokumente obravnavajte posebej z odvetnico ali odvetnikom; ta stran ni korak posveta.',
           ],
         },

@@ -37,13 +37,13 @@ Tämän toimiston anonymisoidussa asiassa moottoripyöräilijä A ajoi matkustaj
 
 ![Onnettomuuspiirros, joka näyttää moottoripyörän ohitusreitin ja 2 edellä ajavaa ajoneuvoa vuoristotiellä](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A yritti ohittaa 2 ajoneuvoa, ajoi vastakkaiselle kaistalle ja kiihdytti. Myös ajoneuvo 2 valmistautui ohittamaan ajoneuvon 1: alle 1 sekunti vilkun sytyttämisen jälkeen se ajoi vastakkaiselle kaistalle. Moottoripyörällä ei ollut riittävästi aikaa jarruttaa, ja se törmäsi ajoneuvoon 2.
+A yritti ohittaa 2 ajoneuvoa, ajoi vastakkaiselle kaistalle ja kiihdytti. Myös ajoneuvo 2 valmistautui ohittamaan ajoneuvon 1: alle 1 sekunnin kuluttua vilkun sytyttämisestä se ajoi vastakkaiselle kaistalle. Moottoripyörällä ei ollut riittävästi aikaa jarruttaa, ja se törmäsi ajoneuvoon 2.
 
 B sai vakavia pään vammoja ja kuoli paikalla; A menetti tajuntansa ja vietiin sairaalaan.
 
 A:n läheiset ja B:n omaiset pitivät aluksi ajoneuvon 2 äkillistä kaistanvaihtoa törmäyksen olennaisimpana syynä. Asia johti oikeudenkäyntiin, ja asian kuluessa onnettomuudesta tehtiin useita asiantuntijatutkimuksia (鑑定).
 
-Asiantuntijatutkimuksen tuloksen mukaan A kantoi olennaisimman vastuun tästä törmäyksestä. Tämä johtopäätös rajoittui tämän asian tosiseikkoihin. Asiantuntijatutkimus otti yhdessä huomioon, että A aikoi ohittaa 2 edellä ajavaa ajoneuvoa, jotka ajoivat jonossa, että hän ajoi vastakkaiselle kaistalle, että hän ajoi nopeudella, joka ei juuri jättänyt aikaa jarruttaa, että määrätyt äänimerkki- ja ajovalomerkit puuttuivat, sekä ajoneuvon 2 kaistanvaihdon, tien ja kaistojen rakenteen ja muut varmistetut todisteet (鑑定).
+Asiantuntijatutkimuksen tuloksen mukaan A:n katsottiin kantavan päävastuun tästä törmäyksestä. Tämä johtopäätös rajoittui tämän asian tosiseikkoihin. Asiantuntijatutkimus otti yhdessä huomioon, että A yritti ohittaa 2 jonossa ajanutta ajoneuvoa, että hän ajoi vastakkaiselle kaistalle, että hän ajoi nopeudella, joka ei juuri jättänyt aikaa jarruttaa, että määrätyt äänimerkki- ja ajovalomerkit puuttuivat, sekä ajoneuvon 2 kaistanvaihdon, tien ja kaistojen rakenteen ja muut varmistetut todisteet (鑑定).
 
 Se, että yksittäisissä asioissa tulee tällaisia asiantuntijatuloksia, ei merkitse, että merkinantovelvollisuuden yksittäinen laiminlyönti aina vahvistaisi vastuun (鑑定). Tuottamus (過失) ohitusonnettomuudessa riippuu onnettomuuspaikasta, kaistajaosta, nopeudesta, ajoneuvojen liikkeistä, merkeistä, aikaväleistä, näkyvyydestä ja muista todisteista.
 
@@ -51,7 +51,7 @@ Se, että yksittäisissä asioissa tulee tällaisia asiantuntijatuloksia, ei mer
 
 Ennen ohittamista teidän tulee ensin selvittää, kuuluuko paikka tai liikennetilanne ohituskieltoon. Jos saman kaistan menettely pätee, antakaa määrätty äänimerkki tai ajovalomerkki pakottamatta edellä ajavaa ajoneuvoa väistämään, odottakaa selkeää väistömerkkiä ja saattakaa ohitus päätökseen riittävällä etäisyydellä ja turvallisella paluuetäisyydellä (超車).
 
-101 artiklan noudattaminen on tärkeää, mutta se ei itsessään varmista onnettomuuden välttämistä eikä myöhempää asiantuntijatutkimuksen tai oikeudenkäynnin tulosta. Kuljettajien on pidettävä lisäturvamarginaali ja sopeuduttava edessä olevaan tilanteeseen.
+101 artiklan noudattaminen on tärkeää, mutta se ei itsessään varmista onnettomuuden välttämistä eikä takaa tiettyä lopputulosta myöhemmässä asiantuntijatutkimuksessa tai oikeudenkäynnissä. Kuljettajien on pidettävä lisäturvamarginaali ja sopeuduttava edessä olevaan tilanteeseen.
 
 Lisätietoa saatte [kuvasta ohitussäännöistä ja -menettelystä](https://gonews.com.tw/car/daily/21934/). Koska se on toissijainen lähde, oikeudellisten ehtojen selvittämisessä on luettava myös voimassa olevat viralliset säännökset (道路交通安全規則).
 

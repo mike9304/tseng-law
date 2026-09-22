@@ -51,9 +51,9 @@ teidän kannattaa laatia sijoitussuunnitelma ja etsiä yhtiön rekisteröintioso
 
 Ulkomaisten sijoitusten lain (外國人投資條例) 9 artiklan mukaan hyväksytyn sijoituksen on saavuttava kokonaisuudessaan toimivaltaisen viranomaisen asettamassa määräajassa (核定期限); määräaika on vahvistettava hyväksymisasiakirjassa kussakin asiassa (käytännössä se asetetaan usein noin 1 vuodeksi).
 
-Tämän määräajan kuluessa jää riittävästi aikaa sen jälkeen, kun yhtiön osoite on löydetty ja vuokrasopimus on tehty.
+Tämän määräajan puitteissa ehtii etsiä osoitteen ja tehdä vuokrasopimuksen.
 
-Silloin ehditään avata valmistelutili pankissa ja siirtää pääoma.
+Samassa määräajassa ehtii avata valmistelutilin pankissa ja siirtää pääoman.
 
 ​
 
@@ -61,7 +61,7 @@ Silloin ehditään avata valmistelutili pankissa ja siirtää pääoma.
 
 Se on mahdollista.
 
-Pankki vaatii yleensä kaksinkertaisen henkilöllisyyden tarkastuksen,
+Pankki vaatii yleensä kaksi henkilöllisyysasiakirjaa,
 
 ja ilman oleskelukorttia voitte hakea Taiwanin maahanmuuttoviranomaiselta **yhtenäisen tunnusnumeron perustietolomakkeen** (統一證號基本資料表).
 

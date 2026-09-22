@@ -701,7 +701,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'Asianajaja Wei Tseng — Keskeiset tiedot',
     qualificationLabel: 'Kelpoisuus ja toimisto',
     qualificationSentence:
-      '{name} on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on toimiston {firm} johtava asianajaja.',
+      '{name} on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on {firm} -toimiston johtava asianajaja.',
     practiceLabel: 'Pääalueet',
     consultationLanguagesLabel: 'Neuvontakielet',
     roles: {
@@ -709,7 +709,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Asianajaja Taiwanissa',
       'chang-fangyu': 'Lakimiesavustaja',
       'son-jungmin': 'Korean toimintojen johtaja',
-      'huang-shengping': 'Osakkaana toimiva tilintarkastaja',
+      'huang-shengping': 'Tilintarkastajaosakas',
     },
   },
   cs: {
@@ -3081,8 +3081,8 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Aiemmin opetusministeriössä, oikeudellisten asioiden yksikössä (Ministry of Education, Legal Affairs Division), painopisteenä hallinto- ja siviiliasiat.',
-        'Kokemusta yliopistoja, opetushenkilöstön oikeuksia ja hallintovalituksia koskevista asioista.',
+        'Hän työskenteli aiemmin opetusministeriössä, oikeudellisten asioiden yksikössä (Ministry of Education, Legal Affairs Division), painopisteenä hallinto- ja siviiliasiat.',
+        'Hänellä on kokemusta yliopistoja, opetushenkilöstön oikeuksia ja hallintovalituksia koskevista asioista.',
       ],
       education: ['Oikeustieteen kandidaatin tutkinto (LL.B.) National Chung Hsing Universitystä'],
       experience: [
@@ -3093,7 +3093,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'Lakimiesavustaja, jolla on pitkä kokemus vanhempana lakimiesavustajana useissa toimistoissa, vastuualueinaan prosessituki, yhtiöoikeus ja ulkomaiset investoinnit.',
-        'Tukee menettelyissä, yhtiön perustamisessa, ulkomaisten investointien luvissa, lupahakemuksissa sekä Korean ja Taiwanin vaihdossa.',
+        'Hän tukee menettelyissä, yhtiön perustamisessa, ulkomaisten investointien luvissa, lupahakemuksissa sekä Korean ja Taiwanin välisessä asioinnissa.',
       ],
       education: ['Oikeustieteen kandidaatin tutkinto (LL.B.) Tunghai Universitystä'],
       experience: [
@@ -3103,16 +3103,16 @@ export const guidanceTeamBios: Record<
     },
     'son-jungmin': {
       intro: [
-        'Koordinoi neuvonta-aikoja ja viestintää Koreasta tuleville päämiehille.',
-        'Tukee toimintojen välistä tiedonvaihtoa asiakirjajärjestelmien ja työnkulkujen avulla, tietojenkäsittelytieteen pohjalta.',
+        'Hän koordinoi neuvonta-aikoja ja viestintää Koreasta tuleville päämiehille.',
+        'Hän tukee toimintojen välistä tiedonvaihtoa asiakirjajärjestelmien ja työnkulkujen avulla, tietojenkäsittelytieteen pohjalta.',
       ],
       education: ['Kandidaatintutkinto (B.S.) tietojenkäsittelytieteessä National Cheng Kung Universityssä'],
       experience: ['Korean toiminnot, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'On suorittanut kirjanpidon kandidaatin ja maisterin tutkinnot National Chengchi Universityssä ja johtaa nyt tilintarkastustoimistoa.',
-        'Tukee yritysasiakkaiden oikeudellisten, verotuksellisten ja taloudellisten riskien kokonaisarviointia.',
+        'Hän on suorittanut kirjanpidon kandidaatin ja maisterin tutkinnot National Chengchi Universityssä ja johtaa nyt tilintarkastustoimistoa.',
+        'Hän tukee yritysasiakkaiden oikeudellisten, verotuksellisten ja taloudellisten riskien kokonaisarviointia.',
       ],
       education: [
         'Maisterintutkinto (M.A.) kirjanpidossa National Chengchi Universityssä',

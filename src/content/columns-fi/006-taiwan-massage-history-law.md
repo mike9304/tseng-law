@@ -69,7 +69,7 @@ ja alat, joita he voivat harjoittaa, ovat hyvin rajoitetut.
 
 Siksi silloinen lainsäätäjä, suojellakseen näkövammaisia, jotka olivat heikommassa asemassa,
 
-sääti lain, joka suojeli näkövammaisten työtä ja olemassaolo-oikeutta (生存權).
+sääti lain, joka suojeli näkövammaisten työn ja toimeentulon oikeutta (生存權).
 
 Ajan kulun ja kulutusmarkkinan laajenemisen myötä
 

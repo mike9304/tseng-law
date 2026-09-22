@@ -49,7 +49,7 @@ Valinta poikkeaa vanhentumisen katkeamisen (時效中斷), vastaajien piirin, to
 
 Rikosoikeudellinen vastuu edellyttää, että kummankin puolen huolellisuusvelvollisuuden laiminlyönti ja sen syy-yhteys vastapuolen vammautumiseen on näytetty. Pelkästään siksi, että molemmilla puolilla on tuottamusta (過失), ei automaattisesti synny vastuuta tuottamuksellisesta ruumiinvammasta.
 
-Siviilioikeudellisesti tuomioistuin voi siviililain (民法) 217 artiklan mukaan alentaa korvausta tai evätä sen, jos vahingonkärsijällä on tuottamusta vahingon syntymisessä tai lisääntymisessä (與有過失). Jos esimerkiksi tunnustetut vahingot olivat TWD 1.000.000 (新臺幣) ja vahingonkärsijän tuottamus arvioitiin 50 %:ksi, määrä voi ennen muita sovituksia laskea TWD 500.000:een.
+Siviilioikeudellisesti tuomioistuin voi siviililain (民法) 217 artiklan mukaan alentaa korvausta tai evätä sen, jos vahingonkärsijällä on tuottamusta vahingon syntymisessä tai lisääntymisessä (與有過失). Jos esimerkiksi vahingoksi todettiin TWD 1.000.000 (新臺幣) ja vahingonkärsijän tuottamus arvioitiin 50 %:ksi, määrä voi ennen muita sovituksia laskea TWD 500.000:een.
 
 Asiantuntija-arvio (鑑定) tai alustava analyysiarvio voi olla tärkeitä asiakirjoja, mutta ei sido tuomioistuinta mekaanisesti. Tuomioistuin tarkastelee selityksiä, tallenteita, ajoneuvon tilaa ja kaikkia todisteita yhdessä.
 
@@ -81,7 +81,7 @@ Asianomistajarikoksissa rangaistusvaatimus voidaan rikosprosessilain 238 artikla
 - [Poliisiviranomaisen opas todisteista ja asiakirjoista liikenneonnettomuuksissa](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
 - [Poliisiviranomaisen usein kysytyt kysymykset liikenneonnettomuuksista](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
-## Q6. Miten onnettomuusvastuu tunnustetaan?
+## Q6. Miten onnettomuusvastuu määräytyy?
 
 Poliisin tieliikenneonnettomuuden alustava analyysiarvio on ennakkoanalyysi paikan päällä olevien asiakirjojen perusteella. Se ei ole tuomioistuimen päätös, ei sido tuomioistuinta eikä myöskään vahvista tuottamusprosenttia (過失比例). Koska tarvittavat asiakirjat ja riidan laajuus poikkeavat onnettomuuksittain, tämä taulukko, lakisääteinen asiantuntija-arvio (鑑定) ja uudelleentarkastus (覆議) eivät ole automaattinen menettely eivätkä pakottava vaihe.
 
@@ -137,7 +137,7 @@ Kuitit, taksakirjaukset, reittikirjaukset ja hoitoasiakirjat ovat mahdollisia to
 
 ## Q11. Miten ansiomenetys hoito- ja toipumisajalta näytetään?
 
-Ansiomenetys on näytettävä asiakirjoin siitä, että onnettomuuteen liittyvän vammautumisen vuoksi toipumisajalla (收入損失) ei voitu kokonaan tai osittain työskennellä, ja että tulo siten tosiasiallisesti aleni. Todistus tai leposuositus on tärkeä lähtökohta, ei kuitenkaan yksin tee vaatimusta tunnustetuksi.
+Ansiomenetys on näytettävä asiakirjoin siitä, että onnettomuuteen liittyvän vammautumisen vuoksi toipumisajalla (收入損失) ei voitu kokonaan tai osittain työskennellä, ja että tulo siten tosiasiallisesti aleni. Todistus tai leposuositus on tärkeä lähtökohta, ei kuitenkaan yksin tee vaatimusta näytetyksi.
 
 Potilasasiakirjat, läsnäolo- tai poissaolokirjaukset, palkka- ja veroasiakirjat sekä työnantajan vahvistus on järjestettävä yhdessä. Itsenäiset elinkeinonharjoittajat voivat jättää yrityksen muotoon sopivia asiakirjoja, kuten liikevaihtotietoja, liiketoimintakirjauksia ja veroilmoituksia.
 
@@ -175,7 +175,7 @@ Vakuutusvelvollisuus moottoriajoneuvojen pakollisen vastuuvakuutuslain (強制�
 
 Yhden ajoneuvon yksittäisonnettomuuksissa sen kuljettaja ei yleensä ole kyseisen ajoneuvon pakollisen vakuutuksen korvauksensaaja. Onnettomuuksissa, joissa on useita ajoneuvoja, kuljettaja voi kuitenkin vaatia korvausta toisen osallisen ajoneuvon pakolliselta vakuuttajalta.
 
-Korvausnormia (強制汽車責任保險給付標準) muutettiin 29. toukokuuta 2026, ja muutos pätee onnettomuuksiin 1. heinäkuuta 2026 alkaen. Katto tarvittaville asianmukaisille hoitokuluille vammautuessa on TWD 200.000, työkyvyttömyyskorvaukset (失能) lakisääteisten 15 portaan mukaan TWD 80.000–3.000.000, kuolemantapauskorvaus TWD 3.000.000, ja kuoleman, työkyvyttömyyden ja hoitokulujen enimmäismäärä yhtä vammautunutta henkilöä ja yhtä onnettomuutta kohti on TWD 3.200.000. Aiemmille onnettomuuksille voi päteä aiempi normi.
+Korvausnormia (強制汽車責任保險給付標準) muutettiin 29. toukokuuta 2026, ja muutos pätee onnettomuuksiin 1. heinäkuuta 2026 alkaen. Katto tarvittaville asianmukaisille hoitokuluille vammautuessa on TWD 200.000, työkyvyttömyyskorvaukset (失能) lakisääteisten 15 luokan mukaan TWD 80.000–3.000.000, kuolemantapauskorvaus TWD 3.000.000, ja kuoleman, työkyvyttömyyden ja hoitokulujen enimmäismäärä yhtä vammautunutta henkilöä ja yhtä onnettomuutta kohti on TWD 3.200.000. Aiemmille onnettomuuksille voi päteä aiempi normi.
 
 Kolmannen osapuolen vastuuvakuutus (第三人責任險), kuljettajan tapaturmavakuutus (駕駛人傷害險) ja kaskovakuutus (車體損失險) ovat sopimuksenmukaisia valintatuotteita. Tosiasiallinen turva poikkeaa vakuutetun, katon, omavastuun (自負額), poikkeuksen, tuottamuksen ja muiden vakuutusehtojen mukaan; vakuutustodistus ja ehdot on tutkittava yksi kerrallaan.
 
@@ -211,7 +211,7 @@ Vakuutusyhtiölle lisämeno TWD 500.000 (新臺幣) tai TWD 1.000.000 yksittäis
 
 ​
 
-Eturistiriitoja vakuutusyhtiön ja osapuolen välillä voi myös syntyä, ja koska vakuutusyhtiön on käsiteltävä monia asioita, yhtiön on vaikea omistaa kullekin asialle riittävästi aikaa.
+Eturistiriitoja vakuutusyhtiön ja osapuolen välillä voi myös syntyä, ja koska vakuutusyhtiön on käsiteltävä monia asioita, yhtiön on vaikea käyttää kuhunkin asiaan riittävästi aikaa.
 
 ​
 

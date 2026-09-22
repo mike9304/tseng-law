@@ -44,7 +44,7 @@ Kaupan laajuutta vahvistettaessa on vähintään seuraavat suhteet järjestettä
 
 Keskeinen toimivaltainen viranomainen tielain 3 artiklan mukaan on liikenneministeriö (交通部). Koska tosiasiallinen hakemusten vastaanotto ja hallinnollinen ohje käsitellään liikenneministeriön tiehallinnossa (交通部公路局) ja sen liittyvissä elimissä, uusin ohje on vahvistettava. Jos ei ole selvää, että suunniteltu liiketoimintamalli muodostaa moottoriajoneuvojen tavaraliikenteen (汽車貨運業), on tärkeää esittää suunniteltu sopimus ja toimintatapa toimivaltaiselle viranomaiselle varmuuden saamiseksi ennen alojen vahvistamista rekisteröinnissä.
 
-## 2. Perustaa kauppa moottoriajoneuvojen tavaraliikenteeseen uutena
+## 2. Moottoriajoneuvojen tavaraliikenteen perustaminen uutena
 
 Tavanomaiseen moottoriajoneuvojen tavaraliikenteeseen pätee lähtökohtaisesti vähimmäispääoma 25.000.000 TWD (新臺幣) ja vähintään 20 uutta kuorma-autoa. Kauppaan, joka koskee vain muuttoja (搬家), pätee 10.000.000 TWD ja vähintään 8 yksikköä, ja kauppaan, jota harjoitetaan Kinmenissä (金門) tai Lienchiangissa (Matsu, 連江、馬祖), 10.000.000 TWD ja vähintään 5 yksikköä, jälkimmäisessä tapauksessa toiminta-alueen rajoituksella. Pienen kuorma-auton kuljetukseen, jota luonnollinen henkilö harjoittaa, on omia rajoitettuja poikkeuksia, nimittäin 1 pieni kuorma-auto omistuksessa, ajoneuvon ikä, joka ei ylitä 2 vuotta, pienten ajoneuvojen ammattiajokortti (小型車職業駕駛執照) ja kotitalousrekisteri (戶籍) toimivaltaisessa piirissä. Ulkomainen sijoitus, liikenneministeriön hyväksyntä, valmistelulupa (籌設許可), yhtiö- ja kaupparekisteröinti, ajoneuvojen ja laitosten valmistelu, elinkeinolupa (營業執照) ja liittyminen alan yhdistykseen (同業公會) on kukin vahvistettava erikseen.
 
@@ -76,9 +76,9 @@ Vaiheiden järjestys ja jättöelin on kussakin asiassa vahvistettava uudelleen,
 
 Toimipaikan ja pysäköintilaitteiden on täytettävä kyseiseen kauppaan pätevä kriteeri, ja on esitettävä aineistoja, jotka todistavat omistuksen tai käyttöoikeuden. Ei ole mahdollista yhtenäisesti vahvistaa, että jokaisen elinkeinonharjoittajan välttämättä olisi vuokrattava oma yksinomainen pysäköintipaikka. Yhtiöjärjestys, osakasluettelo, hyväksyntäaineistot pysäköintilaitteille (停車設施), todiste omistuksesta tai käytöstä toimipaikkaan ja pysäköintiin, huoltosopimus, ostotodiste ajoneuvoista ja ajoneuvoluettelo on tutkittava tiehallinnon voimassa olevaa tarkistuslistaa vasten hakemusajankohtana.
 
-Valmisteluluvan hankkimisen jälkeen valmistelu on lähtökohtaisesti saatettava päätökseen 6 kuukaudessa. Pidennys, kun erityisiä olosuhteita on, on mahdollinen enintään 6 lisäkuukaudeksi. Elinkeinoluvan antamisen jälkeen toiminta on lähtökohtaisesti aloitettava 1 kuukaudessa, ja tämä ilmoitetaan toimivaltaiselle tieviranomaiselle liittäen jäljennös voimassa olevasta jäsenkortista, jonka vastaava alan yhdistys on antanut. Koska aika, joka tarvitaan asian, maan ja laitosten, ajoneuvojen ja vakuutusten täydentämiseen, vaihtelee asian mukaan, koko menettelyn päättämisajankohtaa ei voida vahvistaa ennalta. Vaikka objektiivinen määräaika hallinnolliselle tutkimukselle ulkomaisen sijoituksen normien mukaan julkaistaan, se ei merkitse koko uuden moottoriajoneuvojen tavaraliikenteen perustamisen kestoa.
+Valmisteluluvan hankkimisen jälkeen valmistelu on lähtökohtaisesti saatettava päätökseen 6 kuukaudessa. Pidennys, kun erityisiä olosuhteita on, on mahdollinen enintään 6 lisäkuukaudeksi. Elinkeinoluvan antamisen jälkeen toiminta on lähtökohtaisesti aloitettava 1 kuukaudessa, ja tämä ilmoitetaan toimivaltaiselle tieviranomaiselle liittäen jäljennös voimassa olevasta jäsentodistuksesta, jonka vastaava alan yhdistys on antanut. Koska aika, joka tarvitaan asian täydentämiseen sekä maan, laitosten, ajoneuvojen ja vakuutusten hankkimiseen, vaihtelee asian mukaan, koko menettelyn päättämisajankohtaa ei voida vahvistaa ennalta. Vaikka objektiivinen määräaika hallinnolliselle tutkimukselle ulkomaisen sijoituksen normien mukaan julkaistaan, se ei merkitse koko uuden moottoriajoneuvojen tavaraliikenteen perustamisen kestoa.
 
-## 3. Ostaa olemassa oleva elinkeinonharjoittaja
+## 3. Olemassa olevan elinkeinonharjoittajan ostaminen
 
 Lupa ei siirry kaupan mukana. Osakeostossa lupaa ei hankita eikä luovuteta; kohdeyhtiö, jolla lupa on, säilyy samana oikeushenkilönä ja pitää luvan. Kaupan tai varojen luovutuksessa kohdeyhtiön lupa ei itsestään siirry hankkijalle. On tutkittava elinkeinoluvan pätevyys ja hyväksyttyjen alojen laajuus, ajoneuvot ja kilvet elinkeinokäyttöön (營業用車輛牌照), pysäköintilaitteet, liittyminen alan yhdistykseen, rikkomukset ja rästit, vakuutukset, vakuudet ja lausekkeet määräysvallan muutoksesta sopimuksessa. Sen jälkeen seuraa ulkomaisen sijoituksen hyväksyntä ja tarvittava hyväksymis- tai muutosmenettely toimivaltaisessa tieviranomaisessa.
 
@@ -104,7 +104,7 @@ Vähintään seuraavat kohdat on sisällöllisesti vahvistettava tutkimalla todi
 
 Sopimuksessa vahvistetaan tiedonantovastuut ja vakuutukset, lykkäävät ehdot, käsittely jos lupaa ei hankita, kauppahinnan tarkistus, korvaus, toimitus, käyttöpääoma ja tapa luovuttaa ajoneuvot ja sopimukset. Tarvittavan ulkomaisen sijoituksen hyväksynnän, liikenneministeriön alan hyväksynnän, toimivaltaisen tieviranomaisen muutoshyväksynnän ja yhtiövaiheiden järjestys on sovitettava transaktion päättämisen ehtoihin.
 
-## 4. Antaa kuljetus ja lähettäminen toiselle ja ulkomaalaisten työ
+## 4. Kuljetuksen ja lähettämisen antaminen toiselle ja ulkomaalaisten työ
 
 Sitä ei voida arvioida yhtenäisesti. Arviointi eroaa sen mukaan, onko työn antaja rahdinantaja tai kuljetusvälittäjä vai vastaanottaako hän vastikkeen suoraan rahdinkuljettajana kuljetussopimuksessa (運送人). On tutkittava vastapuolen elinkeinolupa ja elinkeinoajoneuvot ja saatettava sopimuksen rooli yhteen tosiasiallisen toiminnan kanssa, jotta ei synny luvan lainaamista (借牌) eikä kuljetusta ilman lupaa. Lisäksi pelkkä ominaisuus osakkeenomistajana tai sijoittajana ei luo oikeutta työskennellä Taiwanissa. Ulkomaalaisen, joka tosiasiallisesti työskentelee tai harjoittaa kaupan johtamista, on ennen työn alkamista erikseen vahvistettava, tarvitseeko hän työlupaa (工作許可) ja millainen oleskeluoikeus tarvitaan.
 
@@ -112,7 +112,7 @@ Sitä ei voida arvioida yhtenäisesti. Arviointi eroaa sen mukaan, onko työn an
 
 Rahdinantaja tai logistiikkapalveluyhtiö voi myös antaa tosiasiallisen kuljetuksen taiwanilaiselle elinkeinonharjoittajalle moottoriajoneuvojen tavaraliikenteessä, jolla on lupa. Kuitenkin lupatarve ja vastuun jako eroavat sen mukaan, onko antaja vain rahdinantaja tai kuljetusvälittäjä vai tuleeko hän itse rahdinkuljettajaksi kuljetussopimuksessa (運送人) ja vastaanottaa rahdin. Sopimuksen roolin, asiakaslaskutuksen, ajo-ohjeiden, kuljettajien ja ajoneuvojen johdon sekä tavaravahinkoon reagoinnin on vastattava tosiasiallista toimintaa.
 
-On vahvistettava elinkeinoluvan pätevyys elinkeinonharjoittajalla, joka vastaanottaa tehtävän, ja luvan laajuus, tosiasiallisesti käytetyt elinkeinoajoneuvot, kuljettajat, vakuutukset ja elinkeinonharjoittajat alihankinnassa. Ei saa sallia elinkeinoluvan lainaamista eikä tosiasiallista kuljetusta elinkeinonharjoittajalta ilman lupaa. Luovutustapa voi vaatia pienemmän alkuinvestoinnin kuin itse valmistella ajoneuvot ja pysäköinti, mutta riippuvuus elinkeinonharjoittajaan, jolla on lupa, palvelutaso, tavaran katoaminen, vahingoittuminen ja viivästys, vakuutus, henkilö- ja logistiikkatiedot, alihankinta, korvaus ja luovutusmenettely tiedoille, tavaralle ja asiakaspalvelulle sopimuksen päättyessä sekä liittyvät riskit on käsiteltävä sopimuksessa (運送人).
+On vahvistettava elinkeinoluvan pätevyys elinkeinonharjoittajalla, joka vastaanottaa tehtävän, ja luvan laajuus, tosiasiallisesti käytetyt elinkeinoajoneuvot, kuljettajat, vakuutukset ja elinkeinonharjoittajat alihankinnassa. Ei saa sallia elinkeinoluvan lainaamista eikä tosiasiallista kuljetusta elinkeinonharjoittajalta ilman lupaa. Luovutustapa voi vaatia pienemmän alkuinvestoinnin kuin ajoneuvojen ja pysäköinnin valmistelu itse, mutta riippuvuus elinkeinonharjoittajasta, jolla on lupa, palvelutaso, tavaran katoaminen, vahingoittuminen ja viivästys, vakuutus, henkilö- ja logistiikkatiedot, alihankinta, korvaus ja luovutusmenettely tiedoille, tavaralle ja asiakaspalvelulle sopimuksen päättyessä sekä liittyvät riskit on käsiteltävä sopimuksessa (運送人).
 
 ### Sijoitus, työlupa ja oleskelu ovat erillisiä vaiheita
 
@@ -146,6 +146,6 @@ Työhön ilman lupaa voidaan soveltaa hallinnollista sakkoa ja määräystä lä
 
 ---
 
-Tämä artikkeli on yleisesitys, joka on tarkoitettu yleisesti selittämään oikeudellista järjestelyä, eikä neuvontaa konkreettiseen asiaan. Koska lupakriteerit, hakemuslomakkeet ja toimivaltaisen viranomaisen käytäntö voivat muuttua, ajantasaiset viralliset lähteet ja asian olosuhteet vahvistetaan ennen sijoituksen tai sopimuksen toteuttamista.
+Tämä artikkeli on yleisesitys oikeudellisesta järjestelystä, eikä neuvontaa konkreettiseen asiaan. Koska lupakriteerit, hakemuslomakkeet ja toimivaltaisen viranomaisen käytäntö voivat muuttua, ajantasaiset viralliset lähteet ja asian olosuhteet vahvistetaan ennen sijoituksen tai sopimuksen toteuttamista.
 
 **Asianajaja Wei Tseng (曾雋崴)**

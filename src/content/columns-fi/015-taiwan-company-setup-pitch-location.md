@@ -59,7 +59,7 @@ Yhtiörekisteröinnissä rekisteröidään kuitenkin usein useita aloja samanaik
 
 Käytännössä kaikkia aloja ei siksi tarvitse tutkia yhtiörekisteröinnissä.
 
-”[Taipein kaupungin toimipaikkojen tietopalvelun työohjeiden](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”(臺北市營業場所協助查詢服務作業須知) ja Taipein kaupungin voimassa olevan ohjeen mukaan
+”[Taipein kaupungin toimipaikan avustetun kyselypalvelun toimintaohjeiden](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”(臺北市營業場所協助查詢服務作業須知) ja Taipein kaupungin voimassa olevan ohjeen mukaan
 
 on 1. tammikuuta 2023 alkaen yhtiön tai kaupan (mukaan lukien sivuliike (分公司) ja sivutoimipaikka (分支機構)) perustamisen, kotipaikan siirron tai toimialojen lisäämisen rekisteröintiä haettaessa toimipaikan ennakkokyselyn tulos **pakollisesti** liitettävä rekisteröintihakemukseen, alasta riippumatta.
 

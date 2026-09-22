@@ -13,7 +13,7 @@ faq:
   - q: "Mikä PIF on, ja onko se sama menettely kuin tuoterekisteröinti TFDA:lla?"
     a: "Se ei ole sama menettely. Tuoterekisteröinti (產品登錄) on erillinen muodollisuus, joka tapahtuu TFDA:n (衛生福利部食品藥物管理署) kosmetiikan tuoterekisteröintialustalla. PIF on tiedosto, joka kokoaa tietoja laadusta, turvallisuudesta, koostumuksesta, väitetystä toiminnosta, valmistustavasta, koetuloksista ja turvallisuusarviosta tms. ja jonka kosmetiikan valmistaja tai maahantuoja laatii, saattaa ajan tasalle ja säilyttää; PIF itse ei ole asiakirja, joka olisi etukäteen toimitettava TFDA:lle (產品資訊檔案). 1. heinäkuuta 2026 alkaen kuuluu periaatteessa kaikki kosmetiikka PIF-järjestelmän piiriin, lukuun ottamatta kiinteää käsityösaippuaa, joka on valmistettu tuotantopaikassa, joka on vapautettu tehtaan rekisteröinnistä (工廠登記)."
   - q: "Mihin ilmauksiin kosmetiikan mainonnassa Taiwanissa on kiinnitettävä huomiota?"
-    a: "Mainontaa ei arvioida pelkän sanamuodon mukaan, vaan esityksen kokonaisuuden mukaan, mukaan lukien tuotenimi, teksti, kuva, merkki ja ääni. Valheelliset tai liioittelevat ilmaukset ja väite lääketieteellisestä tehosta ovat kiellettyjä, ja erityistä huomiota on kiinnitettävä lääketieteellisiin ilmauksiin kuten että valmiste hoitaa aknea, ehkäisee tulehdusta tai tappaa bakteereja. Hallinnollinen sakko (罰鍰) on 40.000–200.000 TWD (新臺幣) valheellisesta tai liioittelevasta mainonnasta ja 600.000–5.000.000 TWD väitteestä lääketieteellisestä tehosta. Influenssereiden ja muiden julkaisut on samoin tutkittava saman mittapuun mukaan, jos ne ytimeltään ovat mainontaa."
+    a: "Mainontaa ei arvioida pelkän sanamuodon mukaan, vaan esityksen kokonaisuuden mukaan, mukaan lukien tuotenimi, teksti, kuva, tunnus ja ääni. Valheelliset tai liioittelevat ilmaukset ja väite lääketieteellisestä tehosta ovat kiellettyjä, ja erityistä huomiota on kiinnitettävä lääketieteellisiin ilmauksiin kuten että valmiste hoitaa aknea, ehkäisee tulehdusta tai tappaa bakteereja. Hallinnollinen sakko (罰鍰) on 40.000–200.000 TWD (新臺幣) valheellisesta tai liioittelevasta mainonnasta ja 600.000–5.000.000 TWD väitteestä lääketieteellisestä tehosta. Influenssereiden ja muiden julkaisut on samoin tutkittava saman mittapuun mukaan, jos ne ytimeltään ovat mainontaa."
 ---
 
 # Pääsy kosmetiikkamarkkinoille Taiwanissa: maahantuojan valinta, tuoterekisteröinti, PIF:n laatiminen ja säilytys sekä mainonnan sääntely
@@ -22,11 +22,11 @@ faq:
 
 Ulkomaisen kosmetiikkamerkin, joka haluaa jakaa tuotteita Taiwanissa, on päätettävä, kenelle maahantuonti annetaan, milloin tuoterekisteröinti (產品登錄) saatetaan päätökseen, kuka hallinnoi tuotetiedostoa (產品資訊檔案, Product Information File, PIF) ja missä paikassa, ja minkä mittapuun mukaan merkinnät (標示) ja mainonta (廣告) tutkitaan. Ulkomainen merkki voi käyttää paikallista maahantuojaa tai hoitaa taiwanilaista liiketoimintaa itse, joten myynnin valmistelu ei pääty yksin siihen, että yhtiö on perustettu.
 
-Sovellettavat velvollisuudet voivat vaihdella tuotetyypin ja valmistuspaikan (製造場所), tosiasiallisen maahantuontimuodon, jakelutavan ja mainonnan sisällön mukaan. Seuraavassa selostetaan erikseen muoto pääsylle Taiwaniin ja se taho, jolle laki asettaa vastuun, tuoterekisteröinti TFDA:lla, PIF:n laatiminen, ajan tasalle saattaminen ja säilytys, merkinnät ja mainonta sekä tarkastus ja korjaustoimenpiteet. Ennen tosiasiallisen toimituskalenterin määräämistä suositellaan, tuote tuotteelta, vahvistamaan uudelleen uusin sääntely ja toimivaltaisen viranomaisen (主管機關) ohjeistus.
+Sovellettavat velvollisuudet voivat vaihdella tuotetyypin ja valmistuspaikan (製造場所), tosiasiallisen maahantuontimuodon, jakelutavan ja mainonnan sisällön mukaan. Seuraavassa selostetaan erikseen markkinoilletulon rakenne ja se taho, jolle laki asettaa vastuun, tuoterekisteröinti TFDA:lla, PIF:n laatiminen, ajan tasalle saattaminen ja säilytys, merkinnät ja mainonta sekä tarkastus ja korjaustoimenpiteet. Ennen tosiasiallisen toimitusaikataulun määräämistä suositellaan, tuote tuotteelta, vahvistamaan uudelleen uusin sääntely ja toimivaltaisen viranomaisen (主管機關) ohjeistus.
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
-## 1. Muoto pääsylle Taiwaniin ja maahantuojan valinta
+## 1. Markkinoilletulon rakenne ja maahantuojan valinta
 
 Perustaminen ei ole aina vaadittua. On myös mahdollista luovuttaa maahantuonti ja myynti taiwanilaiselle maahantuojalle, joka voi samalla toimia myyntiedustajana. Jos haluatte itse hoitaa taiwanilaista liiketoimintaa, taiwanilaisen tytäryhtiön perustaminen ja rekisteröinti eroavat ulkomaisen yhtiön sivuliikkeen perustamisesta ja rekisteröinnistä, ja vastuu- ja verorakenne eroavat samoin; ulkomaisen sijoituksen hyväksyntään sekä yhtiön tai sivuliikkeen rekisteröintiin tarvittava aika vaihtelee asian ja sen mukaan, joudutaanko asiakirjoja oikaisemaan tai täydentämään. Ensin on päätettävä liiketoimintamalli ja se taho, jonka on kannettava vastuu kosmetiikan valmistajana tai maahantuojana.
 
@@ -36,15 +36,15 @@ Jos taiwanilainen maahantuoja tai myyntiedustaja (銷售代理商) hoitaa maahan
 
 Tosiasiallisen työnjaon muotoilussa on ensin vahvistettava, kuka tuo tuotteen maahan ja tekee tuoterekisteröinnin, ja kuka laatii, saattaa ajan tasalle ja säilyttää PIF:n. On myös nimettävä vastuullinen merkintöjen tarkastuksesta, jakelutietojen ylläpidosta, kuluttajavalitusten ja turvallisuustietojen vastaanotosta sekä reagoinnista toimivaltaisen viranomaisen (主管機關) tarkastuksiin ja tietopyyntöihin. Suositellaan samalla tutkimaan, osuvatko kosmetiikan valmistajalle tai maahantuojalle asetetut lakisääteiset velvollisuudet ja merkin ja myyntikumppanin välillä sovittu työ yhteen.
 
-Sopimuksessa suositellaan konkreettisesti määräämään immateriaalioikeuden käyttölaajuus, kuten tavaramerkki (商標) ja kuvat, tapa ilmoittaa, kääntää ja täydentää alkuperäisvalmistajan (原製造者) tietoja, jotka ovat tarpeen tuoterekisteröintiin ja PIF:ään, ajan tasalla olevien tietojen hallinta ja luovutus sopimuksen päättyessä. Voidaan myös ottaa mukaan valtuus tarkastaa ja muuttaa mainontaa ennen julkaisua, turvallisuustietojen siirto kuten valitukset ja ei-toivotut reaktiot, yhteistyö takaisinvedossa (回收) tarvittaessa sekä vastuu kokeen, käännöksen ja säilytyksen kustannuksista. Jotta tiedot eivät jäisi vain yhdelle osapuolelle, suositellaan myös etukäteen määräämään jäljennösten palautuksen tai luovutuksen laajuus ja määräaika (契約).
+Sopimuksessa suositellaan konkreettisesti määräämään immateriaalioikeuden käyttölaajuus, kuten tavaramerkki (商標) ja kuvat, tapa, jolla alkuperäisvalmistajan (原製造者) tuoterekisteröintiin ja PIF:ään tarvittavat tiedot toimitetaan, käännetään ja täydennetään, ajan tasalla olevien tietojen hallinta ja luovutus sopimuksen päättyessä. Voidaan myös ottaa mukaan valtuus tarkastaa ja muuttaa mainontaa ennen julkaisua, turvallisuustietojen siirto kuten valitukset ja ei-toivotut reaktiot, yhteistyö takaisinvedossa (回收) tarvittaessa sekä vastuu kokeen, käännöksen ja säilytyksen kustannuksista. Jotta tiedot eivät jäisi vain yhdelle osapuolelle, suositellaan myös etukäteen määräämään jäljennösten palautuksen tai luovutuksen laajuus ja määräaika.
 
 ### Kun itse hoidetaan taiwanilaista liiketoimintaa
 
 Taiwanilainen tytäryhtiö ja ulkomaisen yhtiön sivuliike eivät ole sama organisaatio. Tytäryhtiö on Taiwanin oikeuden mukaan perustettu erillinen oikeushenkilö, kun taas sivuliike rekisteröidään osana ulkomaisen yhtiön päätoimipaikkaa (本公司). Ne eroavat oikeushenkilöllisyydessä, päätoimipaikan vastuussa, kirjanpidollisessa ja verotuksellisessa käsittelyssä, voiton siirrossa, edustusvaltuudessa ja sisäisessä valvonnassa, joten organisaatiomuotoa ei saa valita yksin myynnin kontrollin mukaan.
 
-Jos ulkomaisen sijoituksen menettely on tarpeen, on vahvistettava **talousministeriön sijoitustarkastusosaston (經濟部投資審議司)** ohjeistus nykyisenä toimivaltaisena viranomaisena. Sijoituksen hyväksyntään, varojen siirtoon, yhtiön tai sivuliikkeen rekisteröintiin, pankkitilin avaamiseen, verorekisteröintiin (稅籍登記) ja maahantuojakelpoisuuden saamiseen tarvittava aika vaihtelee sijoittajan, toimialan, organisaatiomuodon, toimitettujen asiakirjojen ja sen mukaan, joudutaanko asiakirjoja oikaisemaan tai täydentämään. Siksi on, sen sijaan että markkinoilletulopäivä sidottaisiin oletukseen yhdestä kiinteästä ajanjaksosta, ensin vahvistettava kunkin muodollisuuden soveltaminen ja uusimmat vastaanottoehdot.
+Jos ulkomaisen sijoituksen menettely on tarpeen, on vahvistettava **talousministeriön sijoitustarkastusosaston (經濟部投資審議司)** ohjeistus nykyisenä toimivaltaisena viranomaisena. Sijoituksen hyväksyntään, varojen siirtoon, yhtiön tai sivuliikkeen rekisteröintiin, pankkitilin avaamiseen, verorekisteröintiin (稅籍登記) ja maahantuojakelpoisuuden saamiseen tarvittava aika vaihtelee sijoittajan, toimialan, organisaatiomuodon, toimitettujen asiakirjojen ja sen mukaan, joudutaanko asiakirjoja oikaisemaan tai täydentämään. Siksi on, sen sijaan että markkinoilletulopäivä sidottaisiin oletukseen yhdestä kiinteästä ajanjaksosta, ensin vahvistettava kunkin muodollisuuden soveltaminen ja uusimmat jättämisvaatimukset.
 
-Mikä rakenne tahansa valitaan, keskeinen vastuutaho kosmetiikkasääntelyssä on **kosmetiikan valmistaja tai maahantuoja (化粧品製造或輸入業者)**. Tuotetietojen järjestäminen tai turvallisuusarvio (安全性評估) voidaan luovuttaa ulkoiselle asiantuntijalle, mutta pelkkä työn luovuttaminen ei siirrä valmistajan tai maahantuojan lakisääteistä vastuuta. Erottelu sopimuksen mukaisen työnjaon ja sääntelyn mukaisen vastuutahon välillä on lähtökohta pääsyrakenteen tutkimiselle.
+Mikä rakenne tahansa valitaan, keskeinen vastuutaho kosmetiikkasääntelyssä on **kosmetiikan valmistaja tai maahantuoja (化粧品製造或輸入業者)**. Tuotetietojen järjestäminen tai turvallisuusarvio (安全性評估) voidaan luovuttaa ulkoiselle asiantuntijalle, mutta pelkkä työn luovuttaminen ei siirrä valmistajan tai maahantuojan lakisääteistä vastuuta. Erottelu sopimuksen mukaisen työnjaon ja sääntelyn mukaisen vastuutahon välillä on lähtökohta markkinoilletulon rakenteen tutkimiselle.
 
 ## 2. Tuoterekisteröinti ja PIF ovat 2 erillistä järjestelmää
 
@@ -52,11 +52,11 @@ Tuoterekisteröinti ja PIF eivät ole sama menettely. Tuoterekisteröinti on eri
 
 ### Tuoterekisteröinnin ajankohta ja voimassaoloaika
 
-Kosmetiikan tuoterekisteröinti tapahtuu TFDA:n kosmetiikan tuoterekisteröintialustalla. Kosmetiikan valmistajan tai maahantuojan on saatettava tuoterekisteröinti päätökseen, ennen kuin tuote toimitetaan, myydään, luovutetaan vastikkeetta, asetetaan julkisesti näytteille (公開陳列) tai asetetaan kuluttajan käyttöön kokeeksi. Valmistelua ei pidä rajata pelkkään vastikkeelliseen myyntiin; kalenteri myynninedistämislahjoille tai kuluttajan kokeeksi asettamiselle on myös ohjattava yhdessä rekisteröintiajankohdan kanssa.
+Kosmetiikan tuoterekisteröinti tapahtuu TFDA:n kosmetiikan tuoterekisteröintialustalla. Kosmetiikan valmistajan tai maahantuojan on saatettava tuoterekisteröinti päätökseen, ennen kuin tuote toimitetaan, myydään, luovutetaan vastikkeetta, asetetaan julkisesti näytteille (公開陳列) tai asetetaan kuluttajan käyttöön kokeeksi. Valmistelua ei pidä rajata pelkkään vastikkeelliseen myyntiin; rekisteröintiaikataulussa on otettava huomioon myös myynninedistämislahjat ja kuluttajille annettavat kokeiluerät.
 
 Tuoterekisteröinnin voimassaoloaika on 3 vuotta. Jos toimitusta halutaan jatkaa, pidennyspyyntö (展延) on toimitettava päättymistä edeltävien 3 kuukauden aikana. Jos rekisteröidyt ilmoitukset, kuten tuotenimi, käyttö, valmistemuoto (劑型), koostumus ja valmistuspaikka, muuttuvat, on myös vahvistettava, onko muutoksen sisältöä vastaava muodollisuus tarpeen.
 
-Tuoterekisteröinti on muodollisuus ilmoittaa alustalla määrätyt tiedot. Rekisteröinnin päättäminen ei merkitse, että kaikki PIF:ään tarvittavat asiakirjat olisivat täydellisiä, eikä sekään ole arvio, jonka mukaan tuotteen merkinnät tai mainonta olisivat lainmukaisia. Tuoterekisteröinnin kalenteri, PIF:n hallinta sekä merkintöjen ja mainonnan tarkastus on vietävä erillisinä noudattamiskohtina.
+Tuoterekisteröinti on muodollisuus ilmoittaa alustalla määrätyt tiedot. Rekisteröinnin päättäminen ei merkitse, että kaikki PIF:ään tarvittavat asiakirjat olisivat täydellisiä, eikä sekään ole arvio, jonka mukaan tuotteen merkinnät tai mainonta olisivat lainmukaisia. Tuoterekisteröinnin aikataulu, PIF:n hallinta sekä merkintöjen ja mainonnan tarkastus on hoidettava erillisinä noudattamisen työkokonaisuuksina.
 
 ### PIF:n tiedot ja soveltaminen vaiheittain
 
@@ -84,15 +84,15 @@ Takaisinveto tai hävittäminen (銷毀) ei ole toimenpide, joka automaattisesti
 
 ## 3. Merkintöjen, promootion ja mainonnan sääntely
 
-Mainontaa ei arvioida pelkän sanamuodon mukaan, vaan esityksen kokonaisuuden mukaan, mukaan lukien tuotenimi, teksti, kuva, merkki ja ääni. Valheelliset tai liioittelevat ilmaukset ja väite lääketieteellisestä tehosta ovat kiellettyjä, ja erityistä huomiota on kiinnitettävä lääketieteellisiin ilmauksiin kuten että valmiste hoitaa aknea, ehkäisee tulehdusta tai tappaa bakteereja. Hallinnollinen sakko on 40.000–200.000 TWD valheellisesta tai liioittelevasta mainonnasta ja 600.000–5.000.000 TWD väitteestä lääketieteellisestä tehosta. Influenssereiden ja muiden julkaisut on samoin tutkittava saman mittapuun mukaan, jos ne ytimeltään ovat mainontaa.
+Mainontaa ei arvioida pelkän sanamuodon mukaan, vaan esityksen kokonaisuuden mukaan, mukaan lukien tuotenimi, teksti, kuva, tunnus ja ääni. Valheelliset tai liioittelevat ilmaukset ja väite lääketieteellisestä tehosta ovat kiellettyjä, ja erityistä huomiota on kiinnitettävä lääketieteellisiin ilmauksiin kuten että valmiste hoitaa aknea, ehkäisee tulehdusta tai tappaa bakteereja. Hallinnollinen sakko on 40.000–200.000 TWD valheellisesta tai liioittelevasta mainonnasta ja 600.000–5.000.000 TWD väitteestä lääketieteellisestä tehosta. Influenssereiden ja muiden julkaisut on samoin tutkittava saman mittapuun mukaan, jos ne ytimeltään ovat mainontaa.
 
 ### Arviointi esityksen kokonaisuuden mukaan, ei kunkin sanan mukaan
 
-Onko merkintä, promootio (宣傳) tai mainonta valheellista tai liioittelevaa, tai väittävätkö ne lääketieteellistä tehoa (醫療效能), ei arvioida pelkästään yhden tietyn sanan mukaan. On tutkittava myös tuotteen nimitys, lauseet, kuvat, merkit ja ääni, edeltävä ja seuraava konteksti ja kokonaisvaikutelma, jonka kuluttaja vastaanottaa. Vaikutelmaa, jonka keskeinen mainosesitys muodostaa, ei automaattisesti pura pelkkä rajoittava ilmoitus pienin kirjaimin, joten sekä kukin väite että valmis mainos on tarkastettava.
+Onko merkintä, promootio (宣傳) tai mainonta valheellista tai liioittelevaa, tai väittävätkö ne lääketieteellistä tehoa (醫療效能), ei arvioida pelkästään yhden tietyn sanan mukaan. On tutkittava myös tuotteen nimitys, lauseet, kuvat, tunnukset ja ääni, edeltävä ja seuraava konteksti ja kokonaisvaikutelma, jonka kuluttaja vastaanottaa. Vaikutelmaa, jonka keskeinen mainosesitys muodostaa, ei automaattisesti pura pelkkä rajoittava ilmoitus pienin kirjaimin, joten sekä kukin väite että valmis mainos on tarkastettava.
 
 Jos esimerkiksi ilmoitetaan, että kosmetiikkavalmiste hoitaa aknea, sillä on tulehdusta ehkäisevä vaikutus tai bakteereja tappava toiminta, tämä voi muodostaa väitteen lääketieteellisestä tehosta. On myös yhdessä vahvistettava tapa yhdistää sairauden nimi tuotteeseen, kuvat ennen käyttöä ja sen jälkeen, esitys, joka herättää mielikuvan terveydenhuollon ammattilaisesta, ja konteksti, joka kytkee ainesosan selityksen tuotteen terapeuttiseen vaikutukseen.
 
-Hallinnollinen sakko valheellisesta tai liioittelevasta mainonnasta (虛偽誇大廣告) on 40.000–200.000 TWD, ja hallinnollinen sakko väitteestä lääketieteellisestä tehosta on 600.000–5.000.000 TWD. Koska väli eroaa rikkomustyypin mukaan, on mainosesityksen kokonaisuus ennen julkaisua rinnastettava tukitietoihin.
+Hallinnollinen sakko valheellisesta tai liioittelevasta mainonnasta (虛偽誇大廣告) on 40.000–200.000 TWD, ja hallinnollinen sakko väitteestä lääketieteellisestä tehosta on 600.000–5.000.000 TWD. Koska sakon suuruus vaihtelee rikkomustyypin mukaan, on mainosesityksen kokonaisuus ennen julkaisua rinnastettava tukitietoihin.
 
 ### Influensserit, arvioijat ja myyntikumppanit
 
@@ -102,7 +102,7 @@ Yhteistyösopimuksessa ja toiminnallisissa ohjeissa voidaan määrätä sallittu
 
 ### Myynnin valmistelun varmistusjärjestys
 
-Myynnin valmistelu Taiwanissa, jos se varmistetaan seuraavassa järjestyksessä, voi pienentää vaaraa sekoittaa järjestelmät toisiinsa.
+Myynnin valmistelu Taiwanissa, jos se varmistetaan seuraavassa järjestyksessä, voi pienentää vaaraa, että järjestelmät sekoittuvat toisiinsa.
 
 1. Päättää, perustetaanko itse tytäryhtiö (子公司) tai sivuliike (分公司) Taiwaniin, vai luovutetaanko maahantuonti ja myynti paikalliselle maahantuojalle.
 2. Vahvistaa taho, joka kantaa lakisääteisen vastuun kosmetiikan valmistajana tai maahantuojana, ja vastuullinen sopimuksen mukaisesta työstä.
@@ -129,6 +129,6 @@ Yhtiön ja sivuliikkeen (分公司) perusrakennetta käsitellään artikkelissa 
 - [Invest Taiwan — selostus ulkomaisesta sijoituksesta](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Talousministeriön sijoitustarkastusosasto — ohjeistus](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
-Tämä artikkeli on yleisesitys, joka yleisesti selostaa merkin kosmetiikkamarkkinoille pääsyyn Taiwanissa liittyvää järjestelmää; se ei ole oikeudellinen arvio konkreettisesta tuotteesta tai konkreettisesta mainonnasta (廣告) eikä totea, että lupa tai rekisteröinti saataisiin, että myynti olisi mahdollista tai että käsittelyaikaa noudatettaisiin. Pääsymuoto, tuotetiedot, merkintöjen ja mainonnan sisältö sekä toimivaltaisen viranomaisen uusin käytäntö on vahvistettava kussakin asiassa.
+Tämä artikkeli on yleisesitys Taiwanin kosmetiikkamarkkinoille pääsyyn liittyvästä järjestelmästä; se ei ole oikeudellinen arvio konkreettisesta tuotteesta tai konkreettisesta mainonnasta (廣告) eikä totea, että lupa tai rekisteröinti saataisiin, että myynti olisi mahdollista tai että käsittelyaikaa noudatettaisiin. Markkinoilletulon rakenne, tuotetiedot, merkintöjen ja mainonnan sisältö sekä toimivaltaisen viranomaisen uusin käytäntö on vahvistettava kussakin asiassa.
 
 **Asianajaja Wei Tseng (曾雋崴)**

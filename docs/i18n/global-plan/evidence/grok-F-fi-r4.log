@@ -1,0 +1,89 @@
+WO-F-fi r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-fi-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: fi-a 24, fi-b 55 (79). No P3 rows.
+
+Applied: 75.
+Skipped: 4 numbered rows. Checker or test adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned Finnish expectation in `src/lib/__tests__/` or `src/data/__tests__/` matched a string this round changed. `GUIDANCE_LLMS_NOTICES.fi` still contains the literal `llms.txt`. `consultationNotice` and `confidentialNotice` were not rewritten. "TWD 1.57M" was not touched. Disclosure-parity regexes were not rewritten.
+
+### Applied
+fi-a 1–10, 12, 14–24.
+fi-b 1–3, 6–55.
+
+Adaptations (still applied):
+- fi-a 12. "alle 1 vuotta" → "alle 1 vuoden" ×3 (001 FAQ, 001 body, 014 severance band). The digit stays. "alle vuoden" drops a counted 1. The other quoted "1"s stay digits: "1 seuraavista", "viimeiseltä 1 vuodelta", "1 kuukaudeksi", "1 jaksolla", "1 tilillä", "1 ilmoituksella", "2 yhtiön … 1 oikeushenkilöksi", "enemmän kuin 1 ulkomaan kansalaisen", "1 puolen", "1 nimeen", "1 asiassa", "1 seikka", "1 palvelusvuotta", "1 vuotta kohden", "3 peräkkäisenä päivänä". Bare "yksi" is not in the Finnish number lexicon; "yksi" plus a unit is only the nominative/partitive pairs (`yksi vuosi`, `yksi vuotta`, …), not the inflected forms those sentences need.
+- fi-a 15. The comma is fixed inside the existing block ("antaa sen mukaan, sijaitsiko syy työnantajassa"). The following blocks "tai työntekijässä," and "jommallekummalle osapuolelle…" stay. Merging them would change the block count.
+- fi-a 16. "turvallisuuslupausta" → "ehdotonta lupausta turvallisuudesta". The denial stays. "turvallisuustakuuta" contains `takuu`, which `FI_FORBIDDEN` in `guidance-hi-sv-da-nb-fi-content.test.ts` rejects anywhere in the Finnish pack, and the column checker rejects `/takuu/i` as well.
+- fi-b 6. "enintään 1 kertaa tosiasiallisen vahingon määrä" → "enintään 1-kertaisesti tosiasiallisen vahingon suuruisena". Korean is 최대 1배. Dropping the 1 fails `numbers`. The 3- and 5-fold caps stay beside it.
+- fi-b 11. "kuluttaja-asiassa 109年度消字第7號" → "kuluttaja-asiassa numero 7 Kiinan tasavallan kalenterivuonna 109 (109年度消字第7號)". No Gregorian year was added. The repeated 109 and 7 sit beside the gloss; the checker still matches (010 numbers are not an extra-digit failure).
+- fi-b 29. The deadline is two blocks. Block 1 now says the period is time to find the address and sign the lease. Block 2 now says the same period is time to open the preparatory account and remit the capital. The suggested single sentence would have merged the blocks.
+- fi-b 50. "kullakin 1 osakkeenomistajalla on 1 ääni" → "1 osakkeenomistajaa kohden on 1 ääni". Korean is 주주 1인 1표 (two 1s). "yksi ääni" is not a lexicon phrase, so both digits stay.
+
+Guidance pack (Finnish strings only):
+- `international-guidance-nordic.ts`: privacy sentence as in fi-a 16.
+- `international-guidance-team.ts` `fi`: qualification sentence "{firm} -toimiston"; role "Tilintarkastajaosakas"; "Korean ja Taiwanin välisessä asioinnissa"; subject restored on the finite-verb bios (Huang ×2, Fangyu ×1, Chang ×2, Son ×2).
+
+### Skipped
+- fi-a 11 and fi-b 4. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips space separators. `NUMBER_THOUSAND_STYLE.fi` is `dot`. Period thousands stay (`500.000`, `1.579.589`, `1.000.000`, `2.000.000.000`, and the other figures the rows listed). Decimal commas (`1,57`, `0,5`) were already right.
+- fi-a 13 and fi-b 5. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003, 005, 006, 008, 009, 013 and 015 were not removed. Heading levels and the ZWSP count match the Korean source. 005 `**​**` stays for the same reason. 0 instances deleted.
+
+## Systemic patterns
+
+- Thousands still use a period (fi-a and fi-b). 0 changed. See Skipped.
+- A bare "1" that does not inflect or agree (fi-a). 3 changed ("alle 1 vuoden"). The other quoted counts stay digits. See fi-a 12.
+- U+200B blanks and 005 `**​**` (fi-a; fi-b 013/015). 0 deleted.
+- 004 leftovers that 001 had already fixed (fi-a). 2: "johtavaa paikkaa" → "liikkeenjohdon sijaintipaikkaa"; "asuintodistus" → "asuinvaltiotodistus" (and "luotava" → "hoidettava" in that same sentence).
+- 虛偽意思表示 still called "virheellinen tahdonilmaisu" (fi-a). 1 → "totuudenvastaisen tahdonilmaisun". The 008 table "antaa virheellisiä tietoja" is article 12's false-information ground, not that gloss, and was left.
+- Guidance lines that drop the subject (fi-a). 7 sentences, listed above. "osakkaiden tai elinten jäsenten vaihdossa" in 002 was left: that "vaihto" is a change of members, not the Korea–Taiwan exchange.
+- A court finding called "tunnustaa" (fi-b, and the 003 damages example). 11: 003 ×3 (the example, Q6 "määräytyy", "vaatimusta näytetyksi"), 010 ×5, 014 ×3 (the statutory requirement, the worker's breach, checklist item 8). Foreign-judgment "tunnustaminen" in 007 and 016 was left; that is the term for recognition of a foreign decision. 002 "kulujen tunnustamisen ehdot" was left; that is accounting recognition of an expense, not a court finding.
+- "Harkita" plus a bare A-infinitive (fi-b). 1 ("harkita, että kuntosalia pyydetään"). The same paragraph's "voidaan tutkia" for a complaint, a civil claim, and several procedures, and the damages-category "voidaan tutkia", became "harkita" (4). "suositellaan … vahvistamaan / määräämään" is the MA-infinitive, which is grammatical, and was left.
+- "Kalenteri" where the meaning is a timetable (fi-b). 4: 011 delivery schedule, registration timeline, and the giveaway sentence; 018 "perustamisaikataulu on yleensä lyhyempi". Course calendars, a court calendar, and the 016 deadline calendars were left; those name a calendar, not a duration.
+- Closing "yleisesitys, joka yleisesti…" (fi-b). 4: 011, 014, 016, 017.
+- "90 kg" / "70 kg" before a noun (fi-b 14). 16 → "kg:n" (deadlift after/in/from, and the 70 kg student). The line that already said "90 kg:n" was left.
+- Vesting "kohdentaa" in 014 (fi-b 33). 7: the earned portion, ansainta-ajankohta, two "ansaitaan", ansaintaehtoihin, ansaintaehdot ×2. "vastuun kohdentaminen" and "päättymisen kohdentamista" stay; those are allocation, not vesting. Inheritance "kohdentaminen" in 016 stays.
+- Market-entry "muoto pääsylle" / "pääsyrakenne" / "Pääsymuoto" (fi-b 16). 4, including the heading.
+- "merkki" for a symbol beside text and sound (fi-b 21). 3 (the list ×2, and "merkit ja ääni"). "tavaramerkki" and "ulkomainen merkki" (the brand) stay.
+- R2–R10. The round-4 verdicts say teitittely, feminine or untitled Wei Tseng, Finnish day–month dates, the decimal comma, and the four-language consultation lock already hold. This pass did not find a new Korea-as-default-reader, result promise, untranslated chrome (`TIIMIMME`, `TOIMISTOT`, "Koko profiili (englanniksi)" already), or a fullwidth-punctuation leak outside Chinese glosses. Glossary glosses already in place were left. The only Hangul in columns-fi is inside the 008 and 009 frontmatter `url` values, which were not edited.
+
+## Reviewer points not followed
+
+- fi-a 11 and fi-b 4. A space as the thousands separator is normal Finnish. The checker groups `fi` with a period, and ACCEPTED-ROUND says to skip the space. Period thousands stay.
+- fi-a 13 and fi-b 5. The U+200B lines match the Korean source. Promoting Q16–Q20 would also change heading levels. They are not disposable blank lines.
+- fi-a 12, in part, and fi-b 6 and fi-b 50. The suggested wording is the better Finnish. It deletes digits the checker counts against the Korean source (statutory 1s, 최대 1배, 주주 1인 1표). "1-kertaisesti" is that negligence cap, not a surplus next to the 3- and 5-fold caps.
+- fi-a 16. "turvallisuustakuu" is what the reviewer asked for, and it is the right word. The pack test bans the substring `takuu` even inside a denial. The denial was rewritten without that substring. The verdict's claim that the privacy intro already denies a "tekninen takuu" does not match the file: the sentence was "turvallisuuslupausta", and the next clause is "täysin turvallinen". There was no "takuu" to keep.
+
+Nothing else in the two verdicts looked factually wrong. The 018 English sentence really is "The foregoing is contract-design advice" over paragraphs that compare branch and subsidiary registration; that rewrite was applied. fi-a 2's URL `flno=3` was not changed; the label is now "Liikevaihtoverolain 10 artikla", and the digit 10 stays.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-fi --lang fi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=121
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-fi src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+`git status --short | wc -l` was 22 before this log file was written. 015 still has a pre-existing numbers WARN (`extra in translation (2): 2×2`, Korean 제2종 unparsed). It does not fail the summary, and this round did not add a digit there. Other number WARNs are 수사미해석 only.

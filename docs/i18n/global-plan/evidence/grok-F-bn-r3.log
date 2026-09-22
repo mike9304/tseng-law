@@ -1,0 +1,74 @@
+WO-F-bn r3 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-bn-r3
+Scope: Bengali columns 001–018, bengaliGuidanceContent, guidance team/answers `bn`, no other locale.
+
+## Rows applied
+bn-a: 28 of 31 (P1 #2–#3, P2 #4–#29).
+bn-b: 30 of 34 (P2 #1–#14, #16, #18–#21, #23–#33).
+Total applied: 58.
+
+Notable wording choices (reviewer text used as a hint):
+- 007 Art. 1052(1) ground 4 now names the other spouse’s lineal relative (直系親屬), both directions, and tells the reader to separate actor and victim. Descendants-only “বংশধর” is gone from that ground.
+- 009 keeps the two one-line blocks. “পর্যাপ্ত কারণে আগে” (before sufficient cause) is now “যথেষ্ট কারণে প্রথমে” inside the first block; the next block still says that party may withhold or claim statutory severance.
+- 009 preparation sentence restores “better placed to protect its rights” and keeps the explicit “not a promise of a specific result”.
+- 008 difficulty cells are সহজ / কঠিন / সহজ, inside the existing table row.
+- “প্রথম কথাবার্তা” stays a denial: the page does not say the first conversation is বিনামূল্যে (customs word নিঃশুল্ক removed; নিঃশুষ্ক not used). Pricing paragraph and the FAQ answer both updated. llms consultationNotice was not that sentence, so it was left.
+- Lawyers blurb (page description, team description, lawyers answer) restores Korea operations: “কোরিয়া পরিচালনা”. Role title “কোরিয়া পরিচালনা ব্যবস্থাপক” was already correct and was not edited. No parentheses added to descriptions.
+- 項 is দফা throughout 002, 003, 004, 007, and 014, matching 011’s দফা / উপদফা (款). 002’s 但書 is শর্তাংশ on both the FAQ and the body. Part-a’s suggested sentence had kept উপধারা; the part-b systemic split was resolved toward 011.
+- Competent-authority “সক্ষম” (capable) is উপযুক্ত, including “সক্ষম কর কর্তৃপক্ষ” and “সক্ষম পুলিশ কর্তৃপক্ষ”. সক্ষমতা (skill/ability to pay) was left.
+
+## Rows skipped
+- bn-a #1 (P1, 003 sentencing). R3 requires “in some judgments about 3 / 4 / 6 months; not a typical or guaranteed outcome.” The current Bengali already says that. The suggested “সাধারণত … কারাদণ্ড দেন” puts the usual term back. Not applied.
+- bn-a #30 (P2, bio “TWD 1.57M”). Pinned byte-identical by the test and by ACCEPTED-ROUND / R12. Not applied.
+- bn-a #31 (P2, lakh grouping 5,00,000 / 2,00,00,00,000). R14 and ACCEPTED-ROUND: lakh/crore grouping is not parsed. Western commas kept.
+- bn-b #15 (P2, U+200B in 013 and 015). The checker requires the target ZWSP count to equal the Korean source, which has the same characters, including lines whose only character is U+200B. Removing them fails `ZWSP`. Not applied.
+- bn-b #17 (P2, 018 headings 7 and 8). The English source has the same 5-then-7 gap. Renumbering would change heading numbers and diverge from that outline. Not applied.
+- bn-b #22 (P2, 013/015 one-sentence paragraphs). The suggested rewrite merges the quoted sentence with the next paragraph. The checker compares block counts to the Korean source. The next block already says to write the investment plan and look for the registered address together. Not merged.
+- bn-b #34 (P3, TWD 15,79,589 and the other lakh regroupings in 017/018). Same checker limit as bn-a #31. Not applied.
+
+## Systemic patterns
+- “Leitung Korea” dropped from the team blurb: 3 strings (lawyers description, team description, lawyers answer).
+- নিঃশুল্ক for “not free of charge”: 2 (pricing section, pricing FAQ).
+- “takes the place of” (স্থান নেয় না): 3 (home, disclaimer, 014 statutory conditions).
+- “assess” written as মাপা/মাপি: 11 (guidance intro, criminal-risk line, residence line; 004 liability limit, misjudged limit, own conditions, withholding, applicant sentence; 002 solvency; 017 logistics FAQ and body).
+- Usual/comparative result flattened to a denial: 008 difficulty row (3 cells) and 009 preparation sentence. 003 sentencing left as the R3 form (see skipped #1).
+- Legal effect “is born”: 4 (004 service PE, 016 conflict of interest, 003 damage “জন্মানো”, 007 status proceedings “জন্মা”). Before-and-after photos and “family relationships before and after the death” were left; those match the English.
+- সক্ষম = competent authority: 43 (কর্তৃপক্ষ 27, সড়ক কর্তৃপক্ষ 7, এলাকা 3, আদালত 1, দপ্তর 1, গৃহনিবন্ধন কার্যালয় 1, 013 genitive deadline 1, tax authority 1, police authority 1).
+- Vesting নিহিত / অর্পিত: 8 in 014 (6 নিহিত, 2 অর্পিত that meant the benefit vesting in the worker).
+- 項 উপধারা → দফা: 29 occurrences (002: 2, 003: 3, 004: 2, 007: 12, 014: 10).
+- Western grouping and `TWD 1.57M`: 0 changed (checker / pin).
+- U+200B and one-sentence paragraph layout: 0 changed (checker block/ZWSP parity).
+
+005 and 012 had no remaining instance of these patterns. 012 was already native in the review. Consultation languages stay English, Chinese, Japanese, and Korean. Wei Tseng stays unmarked-feminine where Bengali marks gender (বিনিময় ছাত্রী); no masculine title was found to change.
+
+## §Verify
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-bn --lang bn 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=99
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-bn src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+23
+```
+017 numbers check is WARN `수사미해석 (2): 제3자` with sourceCount=targetCount=44, and the file still PASSes. That warning was already the R11 Korean digit-word; this lane did not rewrite it.
+
+## Reviewer got wrong (not applied)
+- bn-a #1. “Courts currently generally impose about 3 months / 4 months / 6 months” is the advertising-rule sentence R3 tells this lane to soften. The published Bengali already says some judgments imposed about those terms and that the term is not a guaranteed or usual result. Restoring সাধারণত would put a typical sentence length back in front of the reader.
+- bn-a #30–#31 and bn-b #34. Lakh grouping and spelling out TWD 1.57M are standing skips. The bio figure is pinned. The checker does not parse 5,00,000 or 15,79,589.
+- bn-b #17. The heading gap is in the English source. It is not a Bengali numbering error to close on this lane.

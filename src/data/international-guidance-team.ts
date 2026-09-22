@@ -884,7 +884,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'দল',
     title: 'Hovering-এর আন্তর্জাতিক দল',
     description:
-      'Hovering-এর আইনজীবী, পরিচালনা ব্যবস্থাপনা ও অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্টের পরিচিতি।',
+      'Hovering-এর আইনজীবী, কোরিয়া পরিচালনা ও অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্টের পরিচিতি।',
     representativeTitle: 'প্রধান আইনজীবী',
     teamTitle: 'আইনজীবী ও সহকর্মী',
     partnerTitle: 'অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্ট',
@@ -3585,7 +3585,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'National Chengchi University-এ হিসাবে স্নাতক ও স্নাতকোত্তর কর্মসূচি শেষ করেছেন এবং বর্তমানে একটি চার্টার্ড অ্যাকাউন্ট্যান্টের কার্যালয় পরিচালনা করেন।',
-        'উদ্যোক্তা মক্কেলদের জন্য আইনি, কর ও আর্থিক ঝুঁকির সমন্বিত বিশ্লেষণ সমর্থন করেন।',
+        'উদ্যোক্তা মক্কেলদের আইনি, কর ও আর্থিক ঝুঁকির সমন্বিত বিশ্লেষণে সহায়তা করেন।',
       ],
       education: [
         'স্নাতকোত্তর (M.A.) হিসাব, National Chengchi University',

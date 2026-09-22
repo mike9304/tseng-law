@@ -1,0 +1,80 @@
+WO-F-uk r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-uk-r1
+date: 2026-09-22
+
+## Rows applied
+
+uk-a: 1–6, 8–19, 22–23, 25–43, 44 (rephrased inside the existing table row), 45–47.
+uk-b: 1–8, 10–36, 38–48.
+
+44 was not deleted. The checker counts table rows against the Korean source, so the label and cells were rewritten as the complexity of the employer’s ground (Відносно проста / Складна / Відносно проста), and the next row still says whether severance is owed.
+
+25 (uk-b) and the 013 approval-period sentence were rephrased inside the existing paragraphs. The comma-splice and the “after the lease is signed, only the bank steps remain” reading are gone; the paragraphs were not merged.
+
+48 names only English, Chinese (中文), Japanese, and Korean on the contact lines in 003, 005, 013, 015, and 018, and keeps «строку відповіді ми не обіцяємо».
+
+## Rows skipped
+
+- uk-a 7. Hangul `url` in 008 and 009. Canonical source metadata, never rendered.
+- uk-a 20 and uk-b 9. Space as the thousands separator («500 000», «1 579 589»). The column checker’s Ukrainian style is a dot (`NUMBER_THOUSAND_STYLE.uk = 'dot'`). ACCEPTED-ROUND skips space grouping. Amounts stay `TWD 500.000` / `TWD 1.579.589`.
+- uk-a 21. Guidance bio figure `TWD 1.57M` left byte-identical (test pin).
+- uk-a 24. Q16–Q20 turned into `##` headings, and the U+200B spacer lines removed. Those lines are non-empty blocks. Korean 003 has the same block count only with the spacers; English does not. Headings and ZWSP counts were left as they are. The chatty close in that section was rewritten inside its own block (row 27).
+- uk-b 37. Merging the short paragraphs in 015 (and the same layout in 013) into one paragraph. Block count is locked to the Korean source. 013’s comma-splice was fixed inside the two blocks (row 25). 015’s three clauses stay separate.
+
+No P3 rows in uk-a or uk-b.
+
+## Systemic patterns
+
+- «Якість» for a status or a mere capacity: 3. 001 «та якість бенефіціарного власника», 004 «сама якість дочірнього товариства», 007 «якість іноземця». «якість» for product quality in 011 was left.
+- A digit glued into the year phrase: 6, digits kept. 001 «за останній 1 рік» ×2 → «за 1 рік, що щойно минув». 002 «за 1 раз перевищувати 1 рік» ×2 → «за 1 період» (Korean 1회 and 1년). 008 «за кожен 1 рік» ×2 → «щоразу, коли виповнюється 1 рік».
+- Column sums with a dot and `TWD` before the figure: 0. Skipped; see rows 20 and uk-b 9.
+- U+200B one-line padding in 003, 005, 006, 008, 009, 013, 015: 0 lines removed. Chatty lines inside real blocks were rewritten: 003 close; 008 greeting, «Багато хто з Вас це вже знає», table lead-in, and the unpunctuated close. 006 had no separate finding and was not edited.
+- «Не тому, що…»: 3, all in 004 (§2 payment, §6 sector name, §7 183 days / 6 months).
+- Hangul slugs in `url`: 0. Not rewritten.
+- Registered title / 過戶 rendered as a change of name: 5. 017 both transfer sentences; 016 «з імені в реєстрі чи рахунку», «порівнянням імен», «зміна імені нерухомості та транспортних засобів». Spelling-of-the-person matches («збіг написання імені») were left.
+- Vesting as accounting «віднесення»: 8. момент, «як віднесено частину», «остаточно віднесена», «коли вона йому віднесена», «поетапним віднесенням», «умови віднесення» ×2, «умовах віднесення» ×1. «віднесення відповідальності», «Кому віднесено причину», and cost allocation to a trainee were left.
+- «у принципі» / «в принципі» as the legal default: 50 (18 «в принципі», 32 «у принципі») across the columns, replaced with «за загальним правилом».
+- Contact lines that did not name the four consultation languages: 5 (003, 005, 013, 015, 018).
+- 營業稅 as «податок з обороту»: 12 (001, 002, 004, including link labels; hrefs unchanged).
+- 監察人 as «ревізор» in 018: 2, now «наглядач (監察人)». «аудиторське засвідчення» for the financial-statement audit was left.
+- Employee «відставка» (自請離職): 009 title and H1, 008 table header, 014 will / letter / notice / link label.
+
+R2 Korea-as-labelled-example framing, the Taiwan–Korea treaty caveat, R9’s Taiwan 119/110/112 line, feminine forms for Wei Tseng, and Ви-address were already in place and were kept. R5 `НАША КОМАНДА`, `ОФІСИ`, and «Повний профіль (англійською)» were already Ukrainian. The team intro label «Представлення» is now «Ознайомлення».
+
+006 was not edited.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-uk --lang uk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=59
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-uk src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+No column test pinned a Ukrainian string that changed. Guidance tests still pass with `TWD 1.57M` and the four consultation-language names unchanged.
+
+## Reviewer wording not applied as written
+
+- «консультація українською не проводиться» (uk-b 48, and the same clause I first added on 003/005/013/015) matches the column forbidden pattern `консультація українською` even when the sentence is negative, so the file fails `uk-consult-lang`. The four languages are named, and the negation bigram is not used.
+- Dropping the digit from «за останній 1 рік», «за кожен 1 рік», and «до 1 раза» would fail the number check. Korean has 최근 1년, 1년, 1회, and 1배. The digit stays inside the new phrase.
+- «до 1 раза суми реальної шкоди» is the statute’s cap of one times actual damages (소비자보호법 1배), which is the same ceiling as “not above the actual loss.” The Russian genitive «раза» is gone; the sentence now says the cap is the actual loss and keeps «1».
+- Space thousands and «1,57 млн» for the pinned bio figure are normal Ukrainian typography. The checker and the bio test do not accept them, so the previous forms stay.

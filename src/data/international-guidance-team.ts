@@ -804,7 +804,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     representativeTitle: 'Керівна адвокатка',
     teamTitle: 'Адвокати та співробітники',
     partnerTitle: 'Партнерська бухгалтерія',
-    introLabel: 'Представлення',
+    introLabel: 'Ознайомлення',
     educationLabel: 'Освіта',
     experienceLabel: 'Досвід',
     photoAltPrefix: 'Світлина',
@@ -821,7 +821,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Адвокат на Тайвані (Taiwan Attorney)',
       'chang-fangyu': 'Помічник адвоката (paralegal)',
       'son-jungmin': 'Керівництво операціями в Кореї (Korea Operations Manager)',
-      'huang-shengping': 'Партнерський бухгалтер (Partner CPA)',
+      'huang-shengping': 'Партнер бухгалтерської фірми (Partner CPA)',
     },
   },
   el: {
@@ -3342,19 +3342,19 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Фонд правової допомоги, відділення в Тайчжуні (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Раніше в Ministry of Education, Legal Affairs Division, з акцентом на адміністративні та цивільні справи.',
+        'Раніше — у Міністерстві освіти, у відділі правових питань (Ministry of Education, Legal Affairs Division), з акцентом на адміністративні та цивільні справи.',
         'Досвід у справах щодо університетів, прав викладачів та адміністративних оскаржень.',
       ],
       education: [
         'Бакалавр права (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Міністерство освіти, відділ правових питань (Ministry of Education, Legal Affairs Division)',
         'Адвокат, Hovering International Law Firm',
       ],
     },
@@ -3367,8 +3367,8 @@ export const guidanceTeamBios: Record<
         'Бакалавр права (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Старший помічник адвоката (Senior Paralegal), Boyin Law Firm',
+        'Старший помічник адвоката (Senior Paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

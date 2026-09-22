@@ -50,6 +50,11 @@ export interface SeoDashboardCopy {
   savingChecklistLabel: string;
   checklistSaveFailedLabel: string;
   savedLabel: string;
+  settingsLoadingLabel: string;
+  settingsLoadFailedLabel: string;
+  overviewRefreshFailedLabel: string;
+  saveUnknownLabel: string;
+  newerEditsLabel: string;
   savingDefaultsLabel: string;
   defaultsSaveFailedLabel: string;
   defaultsSavedLabel: string;
@@ -144,6 +149,11 @@ export function getSeoDashboardCopy(localeInput: string | Locale): SeoDashboardC
       savingChecklistLabel: '檢查清單儲存中...',
       checklistSaveFailedLabel: '檢查清單儲存失敗',
       savedLabel: '已儲存',
+      settingsLoadingLabel: 'SEO 設定載入中...',
+      settingsLoadFailedLabel: '無法載入 SEO 設定。請重新整理頁面後再編輯預設值或 robots.txt。',
+      overviewRefreshFailedLabel: '總覽更新失敗。儲存已確認，請重新整理頁面以查看最新結果。',
+      saveUnknownLabel: '無法確認儲存結果。請先檢查已儲存的值，再決定是否重試。',
+      newerEditsLabel: '您之後的修改尚未儲存。',
       savingDefaultsLabel: 'SEO 設定儲存中...',
       defaultsSaveFailedLabel: 'SEO 設定儲存失敗',
       defaultsSavedLabel: 'SEO 設定已儲存',
@@ -228,6 +238,11 @@ export function getSeoDashboardCopy(localeInput: string | Locale): SeoDashboardC
       savingChecklistLabel: 'Saving checklist...',
       checklistSaveFailedLabel: 'Checklist save failed',
       savedLabel: 'Saved',
+      settingsLoadingLabel: 'Loading SEO settings...',
+      settingsLoadFailedLabel: 'SEO settings could not be loaded. Reload the page before editing defaults or robots.txt.',
+      overviewRefreshFailedLabel: 'Overview refresh failed. The save is confirmed; reload the page for the latest results.',
+      saveUnknownLabel: 'Save outcome could not be confirmed. Check the saved values before deciding whether to retry.',
+      newerEditsLabel: 'Your newer edits are not saved yet.',
       savingDefaultsLabel: 'Saving SEO settings...',
       defaultsSaveFailedLabel: 'SEO settings save failed',
       defaultsSavedLabel: 'SEO settings saved',
@@ -311,6 +326,11 @@ export function getSeoDashboardCopy(localeInput: string | Locale): SeoDashboardC
     savingChecklistLabel: '체크리스트 저장 중...',
     checklistSaveFailedLabel: '체크리스트 저장 실패',
     savedLabel: '저장됨',
+    settingsLoadingLabel: 'SEO 설정 불러오는 중...',
+    settingsLoadFailedLabel: 'SEO 설정을 불러오지 못했습니다. 기본값이나 robots.txt를 편집하려면 페이지를 새로고침하세요.',
+    overviewRefreshFailedLabel: '현황 새로고침에 실패했습니다. 저장은 확인됐으며, 최신 결과는 페이지를 새로고침해 확인하세요.',
+    saveUnknownLabel: '저장 결과를 확인하지 못했습니다. 저장된 값을 확인한 뒤 재시도 여부를 결정하세요.',
+    newerEditsLabel: '이후에 수정한 내용은 아직 저장되지 않았습니다.',
     savingDefaultsLabel: 'SEO 설정 저장 중...',
     defaultsSaveFailedLabel: 'SEO 설정 저장 실패',
     defaultsSavedLabel: 'SEO 설정 저장됨',

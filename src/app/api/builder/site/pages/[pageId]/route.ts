@@ -1,3 +1,5 @@
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
+import { changedNativeRoute, isBuilderOwnedSlug, hasNativeDescendant, nativeRedirectWarning } from '@/lib/builder/site/public-route-ownership';
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
 import { normalizeLocale, type Locale } from '@/lib/locales';
@@ -221,9 +223,17 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
 
     const now = new Date().toISOString();
     const nextSlug = payload.slug !== undefined ? normalizeSeoSlugInput(payload.slug) : page.slug;
-    const previousSlug = page.slug;
+    const localizedPatch = payload.slugByLocale !== undefined
+      ? normalizeLocalizedSlugs(payload.slugByLocale, page, site) : undefined;
+    const nextSlugByLocale = localizedPatch === undefined ? page.slugByLocale
+      : localizedPatch === null ? undefined : { ...page.slugByLocale, ...localizedPatch };
+    if (changedNativeRoute(page, { ...page, slug: nextSlug, slugByLocale: nextSlugByLocale })) {
+      return errorResponse(locale, 'invalid_slug', 400);
+    }
+    const previousSlug = page.isHomePage ? '' : resolveLocaleSlug(page, page.locale);
+    const nextPublicSlug = page.isHomePage ? '' : resolveLocaleSlug({ ...page, slug: nextSlug, slugByLocale: nextSlugByLocale }, page.locale);
     const previousPath = pageHref(page.locale, previousSlug, page.isHomePage);
-    const nextPath = pageHref(page.locale, nextSlug, page.isHomePage);
+    const nextPath = pageHref(page.locale, nextPublicSlug, page.isHomePage);
     const validation = validateBuilderPageSeo({
       page: { ...page, slug: nextSlug },
       site,
@@ -247,17 +257,7 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
       page.title[locale] = payload.title;
     }
     page.slug = nextSlug;
-    if (payload.slugByLocale !== undefined) {
-      const nextSlugByLocale = normalizeLocalizedSlugs(payload.slugByLocale, page, site);
-      if (nextSlugByLocale) {
-        page.slugByLocale = {
-          ...(page.slugByLocale ?? {}),
-          ...nextSlugByLocale,
-        };
-      } else {
-        delete page.slugByLocale;
-      }
-    }
+    if (payload.slugByLocale !== undefined) page.slugByLocale = nextSlugByLocale;
     if (payload.memberAccess !== undefined) {
       if (payload.memberAccess === null) {
         delete page.memberAccess;
@@ -269,7 +269,10 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
     site.updatedAt = now;
     let redirectCreated = false;
     const redirectWarnings: RedirectCreationWarning[] = [];
-    if (payload.createRedirect === true && !page.isHomePage && previousPath !== nextPath) {
+    if (payload.createRedirect === true && !page.isHomePage && previousPath !== nextPath && !isBuilderOwnedSlug(page.locale, previousSlug)) {
+      redirectWarnings.push(nativeRedirectWarning(page.locale, previousSlug, nextPublicSlug));
+    }
+    if (payload.createRedirect === true && !page.isHomePage && previousPath !== nextPath && isBuilderOwnedSlug(page.locale, previousSlug)) {
       const exactRedirect = appendRedirectIfValid(site, {
         from: previousPath,
         to: nextPath,
@@ -280,7 +283,10 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
       redirectCreated = exactRedirect.created || redirectCreated;
       if (exactRedirect.warning) redirectWarnings.push(exactRedirect.warning);
 
-      if (page.dynamicItem) {
+      if (page.dynamicItem && hasNativeDescendant(previousSlug)) {
+        redirectWarnings.push(nativeRedirectWarning(page.locale, previousSlug, nextPublicSlug, true));
+      }
+      if (page.dynamicItem && !hasNativeDescendant(previousSlug)) {
         const wildcardRedirect = appendRedirectIfValid(site, {
           from: `${previousPath}/*`,
           to: `${nextPath}/*`,
@@ -295,7 +301,7 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
     site.navigation = updateNavigationPageReference(
       site.navigation,
       page,
-      pageHref(page.locale, nextSlug, page.isHomePage),
+      pageHref(page.locale, nextPublicSlug, page.isHomePage),
     );
 
     await writeSiteDocument(site);

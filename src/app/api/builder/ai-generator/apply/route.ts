@@ -1,3 +1,4 @@
+import { isBuilderOwnedSlug } from '@/lib/builder/site/public-route-ownership';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
@@ -197,7 +198,7 @@ function collectSitemapTargets(
       skipped.push({ title: page.title, slug, reason: 'invalid_slug' });
       continue;
     }
-    if (RESERVED_SLUGS.has(slug)) {
+    if (RESERVED_SLUGS.has(slug) || !isBuilderOwnedSlug(normalizeLocale(draft.spec.locale), slug)) {
       skipped.push({ title: page.title, slug, reason: 'reserved_slug' });
       continue;
     }
@@ -246,7 +247,7 @@ export async function POST(request: NextRequest) {
 
   if (scope === 'single') {
     const slug = normalizeDraftSlug(parsed.data.slug ?? '');
-    if (!slug || !PAGE_SLUG_PATTERN.test(slug) || RESERVED_SLUGS.has(slug)) {
+    if (!slug || !PAGE_SLUG_PATTERN.test(slug) || RESERVED_SLUGS.has(slug) || !isBuilderOwnedSlug(locale, slug)) {
       return NextResponse.json(
         {
           ok: false,

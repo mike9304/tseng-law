@@ -6,13 +6,8 @@ import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { buildSeoMetadata } from '@/lib/seo';
-import { loadFreshSearchIndex } from '@/lib/builder/search/index-runtime';
-import { retainPublicPageHits } from '@/lib/builder/search/public-eligibility';
-import { runSearchQuery } from '@/lib/builder/search/query-engine';
-import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
-import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
+import { searchCurrentPublication } from '@/lib/builder/search/current-search';
 import type { SearchDocKind } from '@/lib/builder/search/types';
-import { countPublicSearchDocsByKind, visiblePublicSearchKindIds } from './visible-search-kinds';
 import styles from './SearchPage.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
@@ -98,23 +93,14 @@ export default async function SearchPage(
       : locale === 'ja'
         ? 'キーワードを入力するか、下のおすすめのテーマを選んでください。'
         : 'Enter a keyword or choose a suggested topic below.';
-  const nativeIndex = (await loadFreshSearchIndex()).index;
-  const index = augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale));
-  const kindCounts = countPublicSearchDocsByKind(index.byLocale[locale] ?? []);
-  const visibleKindIds = visiblePublicSearchKindIds(kindCounts);
   const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
-  const hits = query
-    ? await retainPublicPageHits(
-        runSearchQuery({
-          index,
-          query,
-          locale,
-          limit: 50,
-          kinds: activeKind === 'all' ? undefined : [activeKind],
-        }),
-        locale,
-      )
-    : [];
+  const { hits, availableKinds } = await searchCurrentPublication({
+    query,
+    locale,
+    limit: 50,
+    kinds: activeKind === 'all' ? undefined : [activeKind],
+  });
+  const visibleKindIds: Array<SearchDocKind | 'all'> = ['all', ...availableKinds];
 
   const results = hits.slice(0, 12);
   const totalLabel = locale === 'ko'

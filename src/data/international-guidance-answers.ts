@@ -282,7 +282,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Cette page ne publie pas de liste de prix. L’étendue du travail est d’abord fixée à partir du résumé que vous envoyez, puis le montant et le mode de calcul sont confirmés avec vous avant le début du travail. La consultation avec une avocate ou un avocat peut être une prestation payante ; outre les honoraires, des frais de tribunal ou d’autorité peuvent naître. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+        'Cette page ne publie pas de liste de prix. L’étendue du travail est d’abord fixée à partir du résumé que vous envoyez, puis le montant et le mode de calcul sont confirmés avec vous avant le début du travail. La consultation avec une avocate ou un avocat peut être une prestation payante ; outre les honoraires, des frais de tribunal ou d’autorités peuvent s’y ajouter. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
       sources: ['/fr/contact', '/fr/faq'],
     },
     contact: {

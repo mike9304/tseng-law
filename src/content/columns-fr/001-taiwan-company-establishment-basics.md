@@ -22,7 +22,7 @@ faq:
 
 ![](../images/001-taiwan-company-establishment-basics/img-01.jpg)
 
-Les voies par lesquelles les entreprises étrangères et les entrepreneurs individuels entrent sur le marché taïwanais varient selon le contenu de l’activité, comme la fabrication, la distribution, les technologies de l’information et de la communication ou les services professionnels. Même lorsque l’objectif — commencer une activité à Taïwan — est le même, les rapports juridiques à préparer diffèrent selon avec qui et quels contrats sont conclus, par quelle organisation les recettes sont obtenues et qui exécute le travail sur place.
+Les voies par lesquelles les entreprises étrangères et les entrepreneurs individuels entrent sur le marché taïwanais varient selon le contenu de l’activité, comme la fabrication, la distribution, les technologies de l’information et de la communication ou les services professionnels. Même lorsque l’objectif — commencer une activité à Taïwan — est le même, les rapports juridiques à préparer diffèrent selon les personnes avec lesquelles les contrats sont conclus, selon l’entité par laquelle les recettes sont obtenues et selon qui exécute le travail sur place.
 
 La création de société (公司設立), l’investissement étranger, le compte bancaire, la fiscalité, le lieu d’activité, le permis de travail (工作許可) et la procédure de séjour sont liés, mais ne constituent pas la même procédure. L’achèvement de l’immatriculation de la société ne signifie pas que l’examen des fonds d’investissement ou les autorisations sectorielles sont entièrement terminés, ni que les associés ou le dirigeant peuvent aussitôt travailler à Taïwan.
 
@@ -66,7 +66,7 @@ La création d’une filiale taïwanaise commence en général par l’examen pr
 
 8. Enregistrement fiscal (稅籍登記)
 
-9. Conversion du compte préparatoire en compte ordinaire
+9. Conversion du compte de la société en formation en compte ordinaire
 
 10. Autres étapes telles que l’importation et l’exportation, les autorisations sectorielles, le permis de travail et le séjour (le cas échéant)
 
@@ -74,7 +74,7 @@ L’examen préalable du nom chinois de la société et des branches d’activit
 
 Les actes établis à l’étranger, tels que la procuration, l’attestation de continuité de la personne morale (法人存續證明) et les pièces relatives au pouvoir de représentation, peuvent, selon le lieu d’établissement et la nature de l’acte, nécessiter un acte authentique, une légalisation ou une authentification par une représentation de Taïwan à l’étranger. Il faut en outre vérifier si la traduction, la personne habilitée à signer et la dénomination de la personne morale coïncident avec la demande. Selon la nationalité de l’investisseur et selon qu’il s’agit d’une personne physique ou morale, les pièces peuvent différer ; avant l’établissement, il convient de mettre en ordre la durée de validité et la voie de légalisation.
 
-Lors de l’ouverture du compte préparatoire et du virement des fonds d’investissement, la banque peut, dans le cadre de l’identification du client, examiner le bénéficiaire effectif (實質受益人) et l’origine des fonds. Si le donneur d’ordre, l’objet du virement, le contenu de l’approbation d’investissement et le compte destinataire ne coïncident pas, des explications ou des corrections supplémentaires peuvent être nécessaires. Après le virement suivent la fixation du montant réellement investi, puis l’immatriculation de la société et l’enregistrement fiscal, ainsi que, selon la procédure bancaire, la conversion du compte préparatoire en compte ordinaire.
+Lors de l’ouverture du compte de la société en formation et du virement des fonds d’investissement, la banque peut, dans le cadre de l’identification du client, examiner le bénéficiaire effectif (實質受益人) et l’origine des fonds. Si le donneur d’ordre, l’objet du virement, le contenu de l’approbation d’investissement et le compte destinataire ne coïncident pas, des explications ou des corrections supplémentaires peuvent être nécessaires. Après le virement suivent la fixation du montant réellement investi, puis l’immatriculation de la société et l’enregistrement fiscal, ainsi que, selon la procédure bancaire, la conversion du compte de la société en formation en compte ordinaire.
 
 L’ordre, la nécessité et la durée des étapes diffèrent selon la forme d’organisation, le montant de l’investissement, le secteur, le contenu de l’examen, l’avancement de la procédure bancaire et d’éventuelles corrections. Il existe des procédures qui suivent la création de la société, par exemple l’enregistrement à l’importation et à l’exportation, les autorisations relatives à l’usine, au produit et au secteur professionnel, ainsi que la demande de permis de travail et de séjour pour les étrangers. Lors de la fixation de la date de conclusion d’un contrat ou d’ouverture de l’activité, il faut prendre en compte non seulement l’immatriculation de la société, mais aussi le moment d’achèvement de ces étapes ultérieures.
 

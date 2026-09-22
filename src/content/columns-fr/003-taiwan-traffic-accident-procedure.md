@@ -31,7 +31,7 @@ L’article 185-4 du Code pénal de Taïwan (刑法) régit la responsabilité p
 
 Assurez d’abord la sécurité personnelle et les signaux d’avertissement ; s’il y a des blessés ou un besoin de sauvetage, appelez à Taïwan le 119 (secours et pompiers) et, s’il y a une infraction ou une situation de sécurité urgente, le 110 (police) ou, depuis un mobile, le 112. Effectuez aussi le signalement à la police selon les circonstances de l’accident de la circulation.
 
-Une fois la sécurité assurée, prenez des photographies d’ensemble et de détail pour enregistrer la position et les dommages des véhicules, les marques routières, les feux et les conditions météorologiques. Il convient de ne pas omettre les coordonnées des témoins, la demande de conservation des images de CCTV (監視器影像) et de la caméra de bord (行車紀錄器), les données des parties, du véhicule et de l’assurance, et le dossier médical (病歷). Les photos personnelles sont utiles, mais elles ne se substituent pas à l’intervention policière exigée en cas d’accident avec blessures ou décès.
+Une fois la sécurité assurée, prenez des photographies d’ensemble et de détail pour enregistrer la position et les dommages des véhicules, les marques routières, les feux et les conditions météorologiques. Il convient de ne pas omettre les coordonnées des témoins, la demande de conservation des images de vidéosurveillance (監視器影像) et de la caméra de bord (行車紀錄器), les données des parties, du véhicule et de l’assurance, et le dossier médical (病歷). Les photos personnelles sont utiles, mais elles ne se substituent pas à l’intervention policière exigée en cas d’accident avec blessures ou décès.
 
 Quant aux documents de police, sur les lieux de l’accident vous pouvez recevoir le talon d’enregistrement des parties à l’accident de la circulation (道路交通事故當事人登記聯單). Passés 7 jours à compter de la date de l’accident, le croquis et les photos des lieux (現場圖 / 現場照片) peuvent être demandés ; passés 30 jours à compter de la date de l’accident, le tableau d’analyse préliminaire de l’accident de la circulation (道路交通事故初步分析研判表) peut être demandé. Le moment de délivrance et les conditions de demande doivent être confirmés de nouveau auprès de l’autorité de police compétente.
 
@@ -235,7 +235,7 @@ Q17. Quelle est la responsabilité pénale pour blessures involontaires de l’a
 
 ​
 
-En cas de blessures involontaires, une peine d’environ 3 mois a été prononcée dans certains jugements ; il n’existe ni résultat typique ni résultat garanti.
+En cas de blessures involontaires, les tribunaux prononcent actuellement, en général, une peine d’environ 3 mois d’emprisonnement. Ce n’est pas un résultat promis pour votre affaire.
 
 ​
 
@@ -247,7 +247,7 @@ Si elle est convertie en amende (易科罰金), l’article 41, alinéa 1, du Co
 
 ​
 
-Pour les blessures involontaires graves, une peine de 4 mois a été prononcée dans certains jugements, et une peine de 6 mois pour l’homicide involontaire (過失致死) ; là encore, aucun résultat n’est garanti.
+Les blessures involontaires graves sont en général d’environ 4 mois, et l’homicide involontaire (過失致死) d’environ 6 mois ; là non plus, ce n’est pas un résultat promis.
 
 ​
 
@@ -267,7 +267,7 @@ Dans l’homicide involontaire, le désistement de la plainte n’est pas possib
 
 ​
 
-Dans certains cas, un sursis (緩刑) peut être prononcé ; ce n’est pas une promesse d’éviter la prison.
+Dans certains cas, un sursis (緩刑) peut être prononcé, et la peine d’emprisonnement n’est alors pas exécutée. Ce n’est pas un résultat assuré pour votre affaire.
 
 ​
 
@@ -299,7 +299,7 @@ Q20. Comment cherche-t-on un avocat pour un accident de la circulation ?
 
 ​
 
-Comme les accidents de la circulation sont des affaires très fréquentes, un avocat plaidant général qui a accumulé quelques années d’expérience pratique peut instruire une affaire d’accident de la circulation.
+Comme les accidents de la circulation sont des affaires très fréquentes, un avocat ayant une pratique générale du contentieux et quelques années d’expérience peut instruire une affaire d’accident de la circulation.
 
 ​
 

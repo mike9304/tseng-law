@@ -81,7 +81,7 @@ On se demanda par exemple si la règle écrite qui n’autorisait que les person
 
 et l’on mit en doute que cette règle eût réellement contribué à protéger l’emploi et la subsistance des personnes en situation de handicap visuel.
 
-Finalement, la Cour constitutionnelle (大法官) déclara inconstitutionnelle (違憲) la disposition qui n’autorisait que les personnes en situation de handicap visuel à exercer le métier de massage.
+Finalement, les juges constitutionnels (大法官) ont déclaré inconstitutionnelle (違憲) la disposition qui n’autorisait que les personnes en situation de handicap visuel à exercer le métier de massage.
 
 ​
 

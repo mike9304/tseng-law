@@ -65,7 +65,7 @@ Może powstać z 1 lub więcej osób fizycznych albo ze wspólników będących 
 
 ### Spółka akcyjna (股份有限公司): odpowiednia, jeśli chce się włączyć innych inwestorów lub jeśli notowanie jest możliwe do rozważenia
 
-Kapitał dzieli się na akcje. Co do zasady wymaganych jest co najmniej 2 akcjonariuszy, lecz państwo lub osoba prawna mogą założyć ją same, a zagraniczna osoba prawna może posiadać 100 %. Akcje są co do zasady swobodnie zbywalne, z wyjątkami ustawowymi; akcje specjalne i opcje pracownicze można zaprojektować zgodnie z ustawą. Pasuje to do przedsiębiorstw, które oczekują inwestorów, obrotu akcjami, zachęt kapitałowych dla pracowników albo przyszłej fuzji, przejęcia, notowania albo rejestracji na rynku wschodzącym; nie ogranicza się to do dużych przedsiębiorstw. W zarządzaniu spółka niepubliczna może, przez statut, nie mieć rady dyrektorów i mieć tylko 1 albo 2 dyrektorów. Spółka z 1 akcjonariuszem państwowym lub osobą prawną może, przez statut, nie mieć organu nadzoru (監察人). Nie każda spółka akcyjna (股份有限公司) musi poddawać roczne sprawozdania badaniu przez biegłego rewidenta. Główne progi badania spółki zwykłej to kapitał wpłacony 30.000.000 TWD albo, poniżej tego, przychody operacyjne 100.000.000 TWD lub 100 pracowników w reżimie ubezpieczenia pracy; spółki oferty publicznej stosują regulację papierów wartościowych.
+Kapitał dzieli się na akcje. Co do zasady wymaganych jest co najmniej 2 akcjonariuszy, lecz państwo lub osoba prawna mogą założyć ją same, a zagraniczna osoba prawna może posiadać 100 %. Akcje są co do zasady swobodnie zbywalne, z wyjątkami ustawowymi; akcje specjalne i opcje pracownicze można zaprojektować zgodnie z ustawą. Pasuje to do przedsiębiorstw, które oczekują inwestorów, obrotu akcjami, zachęt kapitałowych dla pracowników albo przyszłej fuzji, przejęcia, notowania albo rejestracji w obrocie przedgiełdowym (興櫃); nie ogranicza się to do dużych przedsiębiorstw. W zarządzaniu spółka niepubliczna może, przez statut, nie mieć rady dyrektorów i mieć tylko 1 albo 2 dyrektorów. Spółka z 1 akcjonariuszem państwowym lub osobą prawną może, przez statut, nie mieć organu nadzoru (監察人). Nie każda spółka akcyjna (股份有限公司) musi poddawać roczne sprawozdania badaniu przez biegłego rewidenta. Główne progi badania spółki zwykłej to kapitał wpłacony 30.000.000 TWD albo, poniżej tego, przychody operacyjne 100.000.000 TWD lub 100 pracowników w reżimie ubezpieczenia pracy; spółki oferty publicznej stosują regulację papierów wartościowych.
 
 ## 4. Procedury oddziału i spółki zależnej różnią się; tylko spółka zależna przechodzi przez kontrolę Departamentu Przeglądu Inwestycji
 
@@ -73,7 +73,7 @@ Gdy spółka zagraniczna zakłada tajwańską spółkę zależną, nazwę co do 
 
 Natomiast aby założyć tajwański oddział zwykłej spółki zagranicznej, zezwolenie inwestycyjne Departamentu Przeglądu Inwestycji co do zasady nie jest wymagane; Departament Handlu Ministerstwa Gospodarki (經濟部商業發展署) obsługuje rejestrację oddziału i związane ustalenie kapitału. Nadal konieczne są wcześniejsze sprawdzenie nazwy, przelew kapitału obrotowego, weryfikacja kapitału i rejestracja podatkowa; kalendarz jest na ogół krótszy.
 
-Powyższe jest propozycją konstrukcji umownej. Posiadanie konkretnego formularza nie czyni operacji legalną i nie unika sporów.
+Powyższe jest propozycją konstrukcji umownej. Sam wybór określonej formy prawnej nie czyni transakcji legalną i nie zapobiega sporom.
 
 ## 5. Rejestracja spółkowa i legalna praca inżyniera to nie to samo
 

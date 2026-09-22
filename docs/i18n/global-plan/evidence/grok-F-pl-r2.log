@@ -1,0 +1,143 @@
+WO-F-pl r2 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-pl-r2
+No git add/commit/push.
+
+## Rows applied
+
+Part a (pl-a.md), applied:
+1 P1 009 — „niezależnie” (the right exists either way) → „zależnie od tego, czy winę ponosi pracodawca / czy pracownik” inside the existing four blocks; „odmowy wypłaty” for withhold-or-claim.
+2 P1 004 — anchor no longer names the Business Tax Act. Label is the non-resident dividend withholding rule. URL unchanged (flno=3). Digit „art. 10” kept: the Korean anchor is 제10조 and dropping it failed numbers. See skipped/adjusted.
+3 P2 008 — table cells „Obecne” → „Tak” (art. 11 and art. 12).
+4 P2 003 — rozporządzenie → Ustawa o zarządzaniu ruchem drogowym i sankcjach (道路交通管理處罰條例), art. 62. URL unchanged.
+5 P2 003 — ekspertyza prawna → ekspertyza wypadku; sequence wording.
+6 P2 003 — „w osądzeniu” → „w toku postępowania sądowego”.
+7 P2 003 — kompensacja win → przyczynienie się poszkodowanego (art. 217).
+8 P2 004 — 有限公司 members are wspólnicy (liability paragraphs). Table and the branch FAQ now say wspólnicy lub akcjonariusze where the form is not yet the joint-stock company. 股份有限公司 stays akcjonariusze.
+9 P2 004 — urządzenie → rozwiązanie prawne.
+10 P2 004 — „pcha się zbycie” → „planuje się zbycie”.
+11 P2 005 — dolary tajwańskie → nowe dolary tajwańskie, including the next sentence on the source of the funds. Same term in 011 (two fine amounts).
+12 P2 inquiry option — „Nie posługuję się żadnym z czterech języków…”.
+13 P2 llms discoveryNotice — „ani gwarantowanej widoczności”; token llms.txt kept. consultationNotice and confidentialNotice left byte-identical (they are pinned substrings).
+14 P2 doubled „równolegle” removed.
+15 P2 001 — comma no longer splits the subject. „jeżeli spółka lub oddział istnieje krócej niż 1 rok, pracodawca co do zasady musi spełnić…”. Digit 1 kept. Both the FAQ and §4.
+17 P2 003 — franszyzy → franczyzy.
+18 P2 004 — zapobiegać + dative, „przez kontrolę wewnętrzną”.
+19 P2 004 — „może wymagać zgody kontrahenta…”.
+20 P2 008 — the jeśli-clause now finishes: the next block starts with lowercase „odprawę”. Blocks not merged.
+22 P2 każdy/każda after a plural verb — swept (see systemic).
+23 P2 spare „jeden” — see adjusted digits below. „ten 1 okres” → „długość 1 okresu” (digit kept).
+24 P2 „na imię” — 002 majątek spółki / majątek wspólników; 007 wpis na nazwisko / wpis na cudze nazwisko / wpisany tytuł własności.
+25 P2 005 intro — the reader is already in part 2: „znajdą tutaj, w części 2, dalsze pytania…”. Links kept. Digit 2 kept (dropping it failed numbers).
+26 P2 007 — „nie dokańcza rozwodu” → „nie doprowadza jeszcze do skutku rozwodu” (FAQ and §2).
+27 P2 „korzystać z języka” → „posługują się Państwo” / „Nie posługuję się” across the pack and the inquiry notice.
+28 P2 stacked „prawa porządku prawnego” → „prawa innego porządku prawnego”.
+29 P2 „krok badania” → „wstępne ustalenie”. Kept „nie jest obietnicą” because the disclosure-parity marker pins that token.
+30 P2 „Kierownictwo ds. operacji w Korei” (role and bio experience line).
+31 P2 „Język, w którym Państwo chcą odbyć konsultację”.
+32 P2 the firm confirms receipt of the notice.
+33 P2 „w konkretnej sprawie”.
+34 P2 „ta strona nie jest konsultacją”. Test marker updated (below).
+
+Part b (pl-b.md), applied:
+1 P1 010 — rażące niedbalstwo (3×) / zwykłe niedbalstwo. „(mnożnik 1)” → „(1-krotność)” so the Korean 1배 still parses.
+2 P1 017 — Kinmen albo Lienchiang (Matsu), including the FAQ, the body, „działa na…”, and „kryterium Kinmen albo Lienchiang”. Amounts unchanged.
+3 P1 018 — forma prawna, transakcja, „nie zapobiega sporom”.
+4 P2 010 — photograph the injured body part; the site only „w miarę możliwości”.
+5 P2 010 — „nastawienie osoby ćwiczącej” in the image alt and the link label. Image path and URL unchanged.
+6 P2 010 — wezwanie do zachowania nagrań; „zajęcia lub zachowania nagrań”; „zabezpieczenia dowodów (保全證據)”. Conduct uses of „zachowanie” (the gym’s behaviour, the parties) left.
+7 P2 012 — „Sam ten wynik nie oznacza…”.
+8 P2 012 — „nie gwarantuje … określonego wyniku”.
+9 P2 013 — „zwykle czynsz za 2 miesiące”. Digit 2 kept.
+10 P2 014 — facts inform the burden; they are not called documents.
+11 P2 016 — „wniosek co do 1 kwestii”. Digit 1 kept.
+12 P2 016 — prowadzenie gospodarstwa domowego.
+13 P2 016 — trust, not fiducja: majątek objęty trustem, umowa trustu, dokumenty trustu, powiernik (受託人), and the checklist item.
+14 P2 016 — whether a Taiwan determination will be recognised at the situs.
+15 P2 017 — uszkodzenie, not zepsucie (both cargo sentences).
+16 P2 018 — obrót przedgiełdowy (興櫃).
+17 P2 010 — genitive with „dowodzi się” (medical costs and travel costs).
+18 P2 010 — „właściwe dla każdego przypadku”.
+19 P2 011 — stacked „wytwarzanego” removed in the FAQ and both body sentences; the gloss (固態手工香皂) stays between the remaining participle and the place.
+20 P2 011 — „prowadzić łącznie z terminem rejestracji”.
+21 P2 011 — „zawierają twierdzenie o skuteczności medycznej”.
+23 P2 014 — „obowiązek zwrotu” (the prepaid benefit and the training-cost sentence).
+24 P2 017 — „w obrocie pozagiełdowym”.
+25 P2 010 — multiplier calque replaced by 1-krotność (digit required).
+26 P2 010 — „Wyniku sprawy siłowni nie można jednak przenosić wprost”.
+27 P2 010 — „są środkami, z których można skorzystać zależnie od sprawy”.
+28 P2 „na poparcie” — 010, 011 (dane / danymi), 004 (transfer-pricing documents).
+29 P2 010 — „osobę obowiązaną do naprawienia szkody”.
+30 P2 011 — period rule and place rule „trzeba w praktyce rozróżniać”.
+31 P2 011 — „Zakres obowiązków może się różnić w zależności od rodzaju produktu”.
+32 P2 011 — „odpowiedź powinna być zgodna z zawiadomieniem”.
+33 P2 011 — address of the manufacturer or importer indicated in art. 7 ust. 1 pkt 7.
+34 P2 014 — „na pasku płacowym”.
+35 P2 014 — „ze stanowiskiem, na którym ta kompetencja ma być wykorzystywana”.
+37 P2 016 — result reflected first, then what remains is the estate.
+39 P2 013 — reader questions are gender-neutral: „nie mam jeszcze”, „Podobno”.
+
+Also, inside the existing §5 paragraph of 001, the Korea-treaty sentence now includes the R2b check: whether a tax agreement exists between Taiwan and the investor’s own country, and that it is not a rule for every investor. The FAQ in 001 and §6 of 004 already had that framing. R3 softenings, R9 emergency numbers (119 / 110 / 112), feminine forms for Wei Tseng, and the four-language consultation lock were already in place and were not loosened.
+
+Test expected string (only the pinned marker):
+src/data/__tests__/guidance-disclosure-parity.test.ts
+  pl not-the-consultation-step: /etapem konsultacji/ → /nie jest konsultacją/
+
+## Rows skipped
+
+16 (a) and 38 (b) — space as the thousands separator („500 000”, „1 579 589”). ACCEPTED-ROUND skip. NUMBER_THOUSAND_STYLE for pl is `dot`. Amounts left as 500.000 / 1.579.589 and the rest.
+21 (a) — do not turn Q16–Q20 into new ## headings, and do not delete U+200B. checkHeadings requires the Korean heading-level list; checkBlocks requires the same ZWSP count (003: 52, 005: 8, 006: 4, 008: 10, 009: 5). The blanks are in the Korean source.
+22 (b) — do not delete the U+200B in 013/015. Same ZWSP parity (013: 5, 015: 3).
+35 (a) — Hangul in frontmatter `url` of 008 and 009. ACCEPTED-ROUND / R16. Not edited.
+36 (b) — do not merge the three 015 clauses („Oprócz sytuacji rynkowej / innym ważnym punktem jest / to, czy…”) into one block. They already continue in lowercase and match the Korean block count. The same one-clause layout in 013 was not merged.
+23 (a), in part — „za każdy ukończony 1 rok stażu” and the other statutory „1 rok” figures stay. Dropping the digit fails numbers. „za ostatni jeden rok” could not become „za ostatni rok”: the checker lexicon counts „jeden” as 1 (missing 1×2). Final form: „za ostatni 1 rok”.
+2 (a), in part — „art. 10” remains at the end of the corrected withholding-rule label. Removing it failed numbers (missing 10, source anchor 영업세법 제10조). The false act name and the gloss 營業稅法 are gone.
+25 (a), in part — „w części 2” stays inside the new sentence. Removing 2 failed numbers.
+1 (b), in part — „1-krotność” stays. Korean is 최대 1배.
+
+## Systemic patterns and how many instances changed
+
+- Plural verb + bare każdy/każda: 8. 001 ×2, 002 ×3 (wymagają ×2, potrzebują ×1), 004 ×1, 007 ×2.
+- „korzystać z” a language / the firm „does not offer” the four languages: 6 strings (inquiry notice, option, contact paragraph, description, heading, FAQ question).
+- „podpierający” for supporting evidence: 4 (010, 011 ×2, 004).
+- Kinmen oraz/lub/i joining the islands: 4 (FAQ, body threshold, „działa na”, kryterium).
+- „zepsucie” for cargo damage: 2.
+- fiducja for a trust (信託): 6 in 016.
+- stacked „wytwarzanego ręcznie wytwarzanego”: 3 in 011.
+- „dolary tajwańskie” for 新臺幣: 4 (005 ×2, 011 ×2).
+- „na imię” for title or company property: 2 sentences in 002; in 007 every „wpis na imię jednej strony”, both „wpis na imię innej osoby”, and „wpisanego imienia”.
+- Footage „zachowanie” read as conduct: 3 in 010 (the demand, the seizure basis, 保全證據). Other „zachowanie” = conduct, left.
+- Dot thousands separators: 0 changed (skip).
+- U+200B blanks: 0 deleted (skip).
+- Hangul url: 0 changed (skip).
+
+## §Verify
+
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      24
+
+The block above is the work-order commands as run, before this log file existed. `git status --short | wc -l` after writing this log is 25, because the log itself is untracked. The 24 already included this lane’s edits plus files that were dirty or untracked before the lane (WO-F-pl.txt, the r2 review files). Nothing was staged.
+
+## What I believe the reviewer got wrong — not applied
+
+- Space-grouped thousands are normal Polish, but they are not a checker-safe form here. Not a legal error; left as dots on the skip rule.
+- The U+200B lines and the Q16–Q20 body lines are the Korean source structure, not leftover Polish blanks. Promoting them to headings or deleting the blanks fails the checker. Not applied.
+- Merging 013 and 015 into full paragraphs would drop blocks. The 015 sentence already continues in lowercase across three blocks. Not merged.
+- „nie dokańcza wszystkich procedur Tajwanu” (007) is not the same sentence as „nie dokańcza rozwodu”. It says a foreign divorce paper does not finish every Taiwan procedure. Left.
+- 007 „powiernictwo (信託)” is not the fiducja false friend (fiduciary transfer). The 016 fiducja sweep is the finding. powiernictwo left.
+- I agree with the P1 legal calls (009 zależnie, 004 mislabeled anchor, 010 negligence tiers, 017 Kinmen albo Lienchiang, 018 forma prawna). The anchor still shows „art. 10” only because the checker counts that digit; the Business Tax Act name is what was wrong.

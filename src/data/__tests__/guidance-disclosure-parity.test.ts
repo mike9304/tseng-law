@@ -450,7 +450,7 @@ const ELEMENTS = {
     tr: /görüşme adımı/,
     it: /passo di consulenza/,
     nl: /consultatiestap/,
-    pl: /etapem konsultacji/,
+    pl: /nie jest konsultacją/,
     hi: /परामर्श चरण/,
     sv: /rådgivningssteget/,
     da: /selve rådgivningen/,

@@ -45,13 +45,13 @@ Rodziny A i B uznały najpierw nagłą zmianę pasa pojazdu nr 2 za główną pr
 
 Według wyniku ekspertyzy główną odpowiedzialność za to zderzenie ponosił A. Ten wniosek był ograniczony do faktów tej sprawy. Ekspertyza uwzględniła razem to, że A chciał wyprzedzić dwa pojazdy z przodu jadące jeden za drugim, że wjechał na przeciwny pas, że jechał z prędkością, przy której prawie nie było czasu na hamowanie, że brakowało przepisanych sygnałów klaksonu i świateł, a także ruch zmiany pasa pojazdu nr 2, strukturę drogi i pasów oraz inne zebrane dowody.
 
-To, że w niektórych sprawach takie wyniki ekspertyzy następują, nie oznacza, że jedno pominięcie przepisanego sygnału zawsze ustala odpowiedzialność. Wina (過失) w wypadku przy wyprzedzaniu zależy od miejsca wypadku, układu pasów, prędkości, ruchów pojazdów, sygnałów, odstępów czasu, widoczności i innych dowodów.
+Sam ten wynik nie oznacza, że jedno pominięcie przepisanego sygnału zawsze ustala odpowiedzialność. Wina (過失) w wypadku przy wyprzedzaniu zależy od miejsca wypadku, układu pasów, prędkości, ruchów pojazdów, sygnałów, odstępów czasu, widoczności i innych dowodów.
 
 ## Punkty do sprawdzenia przy ocenie odpowiedzialności za wypadek
 
 Przed wyprzedzaniem należy najpierw sprawdzić, czy miejsce lub sytuacja ruchu wchodzą w zakaz wyprzedzania. Jeśli stosuje się procedurę tego samego pasa, należy dać przepisany sygnał klaksonu lub świateł, nie zmuszając pojazdu z przodu do ustąpienia, poczekać na wyraźny znak ustąpienia i dokończyć wyprzedzanie z wystarczającym odstępem i bezpieczną odległością powrotu.
 
-Przestrzeganie art. 101 jest ważne, lecz samo w sobie nie zapewnia ani uniknięcia wypadku, ani późniejszego wyniku ekspertyzy lub procesu. Kierowcy muszą zostawiać dodatkowy zapas bezpieczeństwa i dostosowywać się do sytuacji z przodu.
+Przestrzeganie art. 101 jest ważne, lecz samo w sobie nie gwarantuje ani uniknięcia wypadku, ani określonego wyniku późniejszej ekspertyzy lub procesu. Kierowcy muszą zostawiać dodatkowy zapas bezpieczeństwa i dostosowywać się do sytuacji z przodu.
 
 Jako uzupełnienie można zobaczyć [ilustrację przepisów i procedury wyprzedzania](https://gonews.com.tw/car/daily/21934/). Ponieważ jest to źródło wtórne, przy sprawdzaniu warunków prawnych należy czytać także aktualne przepisy urzędowe.
 

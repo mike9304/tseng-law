@@ -673,7 +673,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim.',
     discoveryNotice:
-      'Plik llms.txt jest jedynie mapą do znajdowania stron publicznych; nie obiecuje miejsca w wyszukiwaniu, poparcia, rekomendacji sztucznej inteligencji ani wyświetlenia.',
+      'Plik llms.txt jest jedynie mapą do znajdowania stron publicznych; nie obiecuje pozycji w wynikach wyszukiwania, poparcia, rekomendacji przez sztuczną inteligencję ani gwarantowanej widoczności.',
     confidentialNotice:
       'Ponieważ oryginalny tekst jest zapisywany, na pierwszym etapie nie należy wpisywać tego, co jeszcze nie jest potrzebne, na przykład numeru paszportu, numeru dokumentu tożsamości ani danych rachunku.',
   },

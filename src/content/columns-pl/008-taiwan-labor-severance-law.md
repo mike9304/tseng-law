@@ -54,7 +54,7 @@ Podsumowuję to w prostej tabeli.
 | --- | --- | --- | --- |
 | **Rodzaj** | **Zwolnienie ekonomiczne (資遣員工, 經濟解僱)** | **Zwolnienie dyscyplinarne (解僱員工, 懲戒解僱)** | **Własna rezygnacja zatrudnionej osoby (員工自請離職)** |
 | Znaczenie | Jeśli u pracodawcy istnieje potrzeba korekty personelu z powodu sytuacji przedsiębiorstwa, przyczyna leży w sferze gospodarczej pracodawcy, a nie w odpowiedzialności zatrudnionej osoby. Dlatego pracodawca musi przestrzegać terminu wypowiedzenia (預告期間) i wypłacić odprawę, aby zrównoważyć niekorzyści zatrudnionej osoby. | Jeśli zatrudniona osoba popełnia czyn bezprawny lub niewłaściwy, pracodawca może natychmiast zakończyć umowę o pracę (勞動契約) bez wcześniejszego wypowiedzenia i nie musi wypłacać odprawy. Jest to jedna z prerogatyw dyscyplinarnych pracodawcy. | Zatrudniona osoba może w każdej chwili zakończyć umowę, lecz musi, według czasu zatrudnienia, przestrzegać terminu wypowiedzenia, aby pracodawca mógł przeprowadzić przekazanie i poszukiwanie zastępstwa. |
-| Warunki | Obecne  (art. 11 tajwańskiej ustawy o normach pracy) | Obecne  (art. 12 tajwańskiej ustawy o normach pracy) | Brak |
+| Warunki | Tak (art. 11 tajwańskiej ustawy o normach pracy) | Tak (art. 12 tajwańskiej ustawy o normach pracy) | Brak |
 | Wcześniejsze wypowiedzenie | Wymagane | Niewymagane | Wymagane |
 | Trudność (bez obietnicy wyniku) | Porównawczo mniejsza | Porównawczo większa | Porównawczo mniejsza |
 | Czy spółka musi wypłacić odprawę (資遣費) | Wymagane | Niewymagane | Niewymagane |
@@ -210,7 +210,7 @@ albo przenosi pracowników na dziwne stanowiska,
 
 Jeśli pracują Państwo na Tajwanie,
 
-Odprawę trudniej uzyskać, niż się myśli.
+odprawę trudniej uzyskać, niż się myśli.
 
 Prosimy nie zawierać pochopnie ugody ze spółką.
 

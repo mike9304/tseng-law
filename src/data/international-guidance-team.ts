@@ -568,7 +568,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Adwokatka kierująca kancelarią na Tajwanie (Managing Attorney)',
       'chang-rongxuan': 'Adwokat na Tajwanie (Taiwan Attorney)',
       'chang-fangyu': 'Asystent prawny (paralegal)',
-      'son-jungmin': 'Kierownictwo operacyjne Korei (Korea Operations Manager)',
+      'son-jungmin': 'Kierownictwo ds. operacji w Korei (Korea Operations Manager)',
       'huang-shengping': 'Wspólnik biura rachunkowego (Partner CPA)',
     },
   },
@@ -2812,7 +2812,7 @@ export const guidanceTeamBios: Record<
         'Wspiera wymianę między działami przez systemy dokumentów i tok pracy, na podstawie wykształcenia informatycznego.',
       ],
       education: ['Licencjat (B.S.) informatyki, National Cheng Kung University'],
-      experience: ['Obszar operacji Korei, Hovering International Law Firm'],
+      experience: ['Kierownictwo ds. operacji w Korei, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

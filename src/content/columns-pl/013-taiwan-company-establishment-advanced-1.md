@@ -23,7 +23,7 @@ Poniższe pytania i odpowiedzi mają pomóc osobom, które rozważają założen
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Chcę założyć spółkę, ale nie znalazłem jeszcze adresu rejestracji. Czy założenie jest mimo to możliwe?**
+**1. Chcę założyć spółkę, ale nie mam jeszcze adresu rejestracji. Czy założenie jest mimo to możliwe?**
 
 Gdy cudzoziemiec zakłada spółkę na Tajwanie, musi złożyć plan inwestycji (投資計畫書) do Departamentu Przeglądu Inwestycji Ministerstwa Gospodarki (經濟部投資審議司) w celu kontroli.
 
@@ -71,7 +71,7 @@ jednak administracja imigracyjna (移民署) jest bardzo oblegana; należy więc
 
 ​
 
-**3. Słyszałem, że przy kontroli planu inwestycji trzeba podać wykształcenie i doświadczenie zawodowe, i obawiam się, że moje wykształcenie i doświadczenie nie odpowiadają branży spółki, którą chcę założyć.**
+**3. Podobno przy kontroli planu inwestycji trzeba podać wykształcenie i doświadczenie zawodowe, i obawiam się, że moje wykształcenie i doświadczenie nie odpowiadają branży spółki, którą chcę założyć.**
 
 Departament Przeglądu Inwestycji Ministerstwa Gospodarki bada wprawdzie zaplecze inwestora,
 
@@ -95,7 +95,7 @@ Ponadto w umowach najmu lokali handlowych na Tajwanie wynajmujący często przyz
 
 Jest to okres zwolniony z czynszu; można o niego negocjować.
 
-Cudzoziemcowi niełatwo jest wynająć lokal handlowy, a kaucja (押金) na Tajwanie jest raczej niska (zwykle 2 miesiące), więc ochrona wynajmującego jest ograniczona;
+Cudzoziemcowi niełatwo jest wynająć lokal handlowy, a kaucja (押金) na Tajwanie jest raczej niska (zwykle czynsz za 2 miesiące), więc ochrona wynajmującego jest ograniczona;
 
 wynajmujący wahają się więc przed wynajmem cudzoziemcom.
 

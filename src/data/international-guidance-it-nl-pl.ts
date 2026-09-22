@@ -1072,7 +1072,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Język strony i język konsultacji to nie to samo',
           paragraphs: [
             'Ta strona jest napisana po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w czterech językach konsultacji: angielskim, chińskim (中文), japońskim i koreańskim. Czytanie informacji po polsku nie oznacza, że rozmowa z adwokatem odbywa się po polsku.',
-            'Nie obiecujemy tłumacza ustnego, terminu odpowiedzi ani spotkania za pośrednictwem tej strony. Jeśli nie można korzystać z żadnego z czterech języków, strona „Kontakt” wyjaśnia, jak ustalamy sposób komunikacji.',
+            'Nie obiecujemy tłumacza ustnego, terminu odpowiedzi ani spotkania za pośrednictwem tej strony. Jeśli nie posługują się Państwo żadnym z czterech języków, strona „Kontakt” wyjaśnia, jak ustalamy sposób komunikacji.',
           ],
         },
         {
@@ -1238,7 +1238,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Jak skontaktować się z kancelarią',
       description:
-        'Język strony, języki konsultacji, postępowanie, gdy nie można korzystać z żadnego z czterech języków, oraz to, czego ta strona nie obiecuje.',
+        'Język strony, języki konsultacji, postępowanie, gdy nie posługują się Państwo żadnym z czterech języków, oraz to, czego ta strona nie obiecuje.',
       intro:
         'Zanim Państwo do nas napiszą, prosimy rozróżnić trzy poniższe punkty. Często się je miesza, ale oznaczają coś innego.',
       sections: [
@@ -1254,10 +1254,10 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Jeśli nie można korzystać z żadnego z czterech języków konsultacji',
+          heading: 'Jeśli nie posługują się Państwo żadnym z czterech języków konsultacji',
           paragraphs: [
             'W formularzu kontaktowym można wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić możliwy sposób komunikacji, jeśli taki sposób istnieje; nie świadczymy usług w innym języku i nie obiecujemy terminu odpowiedzi.',
-            'To tylko krok badania, nie jest obietnicą. Nie obiecujemy tłumacza ustnego, świadczenia po polsku ani w innym języku poza czterema wskazanymi językami, i nie obiecujemy, że przyjmiemy każdą sprawę.',
+            'To jedynie wstępne ustalenie i nie jest obietnicą. Nie obiecujemy tłumacza ustnego, świadczenia po polsku ani w innym języku poza czterema wskazanymi językami, i nie obiecujemy, że przyjmiemy każdą sprawę.',
           ],
         },
         {
@@ -1308,9 +1308,9 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
             'Nie. Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim. Nie obiecujemy też tłumacza ustnego. Tłumaczenie pisemne to coś innego: oryginalny tekst, który Państwo napiszą, jest zapisywany tak i nie jest tłumaczony automatycznie.',
         },
         {
-          question: 'Co, jeśli nie można korzystać z żadnego z czterech języków?',
+          question: 'Co, jeśli nie posługują się Państwo żadnym z czterech języków?',
           answer:
-            'Przy wysyłaniu wniosku prosimy wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić sposób komunikacji, ale nie świadczymy usług w innym języku. To krok badania, nie jest obietnicą, że możemy pracować w innym języku.',
+            'Przy wysyłaniu wniosku prosimy wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić sposób komunikacji, ale nie świadczymy usług w innym języku. To jedynie wstępne ustalenie i nie jest obietnicą, że możemy pracować w innym języku.',
         },
         {
           question: 'Jak traktowany jest mój tekst po polsku?',
@@ -1330,7 +1330,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Co, jeśli sprawa jest bardzo pilna?',
           answer:
-            'Prosimy podać termin lub datę widniejącą na piśmie urzędowym na początku streszczenia, aby te daty były widoczne przy rozpatrzeniu. Ta strona nie ma kanału awaryjnego i nie zapewnia terminu odpowiedzi; jeśli sprawa nie może czekać, należy równolegle szukać równolegle innych dróg tam, gdzie Państwo przebywają.',
+            'Prosimy podać termin lub datę widniejącą na piśmie urzędowym na początku streszczenia, aby te daty były widoczne przy rozpatrzeniu. Ta strona nie ma kanału awaryjnego i nie zapewnia terminu odpowiedzi; jeśli sprawa nie może czekać, należy równolegle szukać innych dróg tam, gdzie Państwo przebywają.',
         },
       ],
     },
@@ -1382,7 +1382,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Powiadomienie i numer zgłoszenia',
           paragraphs: [
-            'Jeśli wniosek zostanie pomyślnie wysłany, system powiadamia kancelarię. Jeśli to powiadomienie nie jest jeszcze potwierdzone, tekst pozostaje zapisany i nie zostaje utracony.',
+            'Jeśli wniosek zostanie pomyślnie wysłany, system powiadamia kancelarię. Jeśli kancelaria nie potwierdziła jeszcze odbioru tego powiadomienia, tekst pozostaje zapisany i nie zostaje utracony.',
             'Numer zgłoszenia służy do odnalezienia wniosku w naszych aktach. Jest pokazywany po zapisaniu; można go podać przy ponownym kontakcie.',
           ],
         },
@@ -1421,7 +1421,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Zakres prawny',
           paragraphs: [
             'Kancelaria prowadzi sprawy według prawa Tajwanu, a ta strona mówi wyłącznie o pracy w tych ramach.',
-            'Treść nie jest doradztwem według prawa porządku prawnego innego niż tajwański, w tym prawa miejsca zamieszkania. Jeśli część sprawy dotyczy innego porządku prawnego, wyjaśnimy z Państwem, jaka wykwalifikowana osoba jest potrzebna do tej części.',
+            'Treść nie jest doradztwem według prawa innego porządku prawnego niż tajwański, w tym prawa miejsca zamieszkania. Jeśli część sprawy dotyczy innego porządku prawnego, wyjaśnimy z Państwem, jaka wykwalifikowana osoba jest potrzebna do tej części.',
           ],
         },
         {
@@ -1466,7 +1466,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jak dalece artykuł może służyć orientacji',
           paragraphs: [
             'Artykuły są informacjami ogólnymi w chwili publikacji. Przepisy i ich stosowanie mogą się zmieniać, a artykuł nie zawiera wszystkich okoliczności Państwa sprawy.',
-            'Dlatego prosimy nie opierać działania w prawdziwej sprawie wyłącznie na artykule. Prosimy użyć go do przeglądu i omówić dokumenty osobno z adwokatem; ta strona nie jest etapem konsultacji.',
+            'Dlatego prosimy nie opierać działania w konkretnej sprawie wyłącznie na artykule. Prosimy użyć go do przeglądu i omówić dokumenty osobno z adwokatem; ta strona nie jest konsultacją.',
           ],
         },
       ],

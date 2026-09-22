@@ -31,7 +31,7 @@ Przy badaniu ważne jest, aby nie mieszać następujących 4 pytań.
 3. Komu przypisuje się przyczynę rozwiązania umowy o pracę
 4. Jak ocenia się wypowiedzenie złożone przez pracownika i zakres zwrotu
 
-Nawet jeśli te 4 pytania figurują razem w tej samej umowie, stosowany przepis i potrzebny dowód są odrębne. Trzeba więc osobno zbadać, czy porozumienie jest ważne, kiedy wywołuje skutki oświadczenie o rezygnacji, czy jest odpowiedzialność zwrotu świadczenia wypłaconego z góry (預付性給付) lub kosztów szkolenia oraz czy osobna szkoda rzeczywiście powstała.
+Nawet jeśli te 4 pytania figurują razem w tej samej umowie, stosowany przepis i potrzebny dowód są odrębne. Trzeba więc osobno zbadać, czy porozumienie jest ważne, kiedy wywołuje skutki oświadczenie o rezygnacji, czy istnieje obowiązek zwrotu świadczenia wypłaconego z góry (預付性給付) lub kosztów szkolenia oraz czy osobna szkoda rzeczywiście powstała.
 
 ## 1. Czy porozumienie o minimalnym okresie pracy jest automatycznie nieważne?
 
@@ -55,11 +55,11 @@ Program, kalendarz szkolenia, lista obecności, wynik oceny, zaświadczenie uko�
 
 Granica między ogólną adaptacją do pracy a specjalistycznym szkoleniem technicznym nie zależy wyłącznie od miejsca szkolenia ani od tego, kto je prowadzi. Kurs wewnętrzny może ustalić konkretną treść zawodową i techniczną oraz znaczącą inwestycję, a długi kurs ośrodka zewnętrznego może być w rzeczywistości ogólnym szkoleniem wstępnym. Nie należy więc jednolicie wyłączać każdego szkolenia wewnętrznego ani uznawać przesłanki ustawowej tylko dlatego, że kurs jest kosztowny lub długi.
 
-Trzeba też móc objaśnić związek między uzgodnionym okresem a inwestycją szkolenia. Jaką kompetencję się nabywa, jaki związek ta kompetencja ma ze stanowiskiem przeznaczenia i dlaczego proponowany okres pracy jest potrzebny wobec czasu i kosztu szkolenia, bada się indywidualnie. Czy po zakończeniu szkolenia tę pracę rzeczywiście wykonywano oraz okres już przepracowany są też dokumentami do oceny zakresu obciążenia.
+Trzeba też móc objaśnić związek między uzgodnionym okresem a inwestycją szkolenia. Jaką kompetencję się nabywa, jaki związek ta kompetencja ma ze stanowiskiem, na którym ta kompetencja ma być wykorzystywana i dlaczego proponowany okres pracy jest potrzebny wobec czasu i kosztu szkolenia, bada się indywidualnie. To, czy po zakończeniu szkolenia tę pracę rzeczywiście wykonywano, oraz długość okresu już przepracowanego też mają znaczenie dla oceny zakresu obciążenia.
 
 ## 3. Druga przesłanka ustawowa: rozsądne świadczenie
 
-Druga przesłanka ustawowa polega na tym, że pracodawca zapewnia rozsądne świadczenie za obietnicę pracownika przestrzegania minimalnego okresu pracy. Tutaj świadczenie musi mieć cel i strukturę odrębne od zwykłego wynagrodzenia lub od świadczenia wzajemnego pracy, które już ma być dostarczone. Charakter prawny nie rozstrzyga się tylko dlatego, że na odcinku płacy nazwano wypłatę premią za podpisanie, premią za pozostanie na stanowisku albo świadczeniem wypłaconym z góry.
+Druga przesłanka ustawowa polega na tym, że pracodawca zapewnia rozsądne świadczenie za obietnicę pracownika przestrzegania minimalnego okresu pracy. Tutaj świadczenie musi mieć cel i strukturę odrębne od zwykłego wynagrodzenia lub od świadczenia wzajemnego pracy, które już ma być dostarczone. Charakter prawny nie rozstrzyga się tylko dlatego, że na pasku płacowym nazwano wypłatę premią za podpisanie, premią za pozostanie na stanowisku albo świadczeniem wypłaconym z góry.
 
 Najpierw trzeba potwierdzić cel wypłaty. Czy jest to ogólny warunek płacowy zatrudnienia, świadczenie wzajemne obietnicy pozostania przez oznaczony okres, czy nagroda za osiągnięcie wyników, musi być jasne w umowie i w dokumentach komunikacji. Bada się też, czy data wypłaty, kwota, data nabycia uprawnienia, związek z okresem pozostania, przyczyny zwrotu i wzór zostały przedstawione tak, aby pracownik mógł je zrozumieć przed umową.
 
@@ -128,7 +128,7 @@ Ocena przyczyny wygaśnięcia wpływa bezpośrednio także na zakres zwrotu. Je�
 
 ## 8. Wypowiedzenie złożone przez pracownika jest kwestią odrębną
 
-Porozumienie o minimalnym okresie pracy nie jest mechanizmem, który fizycznie lub prawnie uniemożliwia odejście pracownika. Oświadczenie o rezygnacji i okres wypowiedzenia (預告期間) to kwestia, kiedy kończy się stosunek pracy; ważność porozumienia o minimalnym okresie pracy i odpowiedzialność zwrotu kosztów to kwestia, czy jest odpowiedzialność majątkowa wynikająca z wygaśnięcia.
+Porozumienie o minimalnym okresie pracy nie jest mechanizmem, który fizycznie lub prawnie uniemożliwia odejście pracownika. Oświadczenie o rezygnacji i okres wypowiedzenia (預告期間) to kwestia, kiedy kończy się stosunek pracy; ważność porozumienia o minimalnym okresie pracy i obowiązek zwrotu kosztów to kwestia, czy jest odpowiedzialność majątkowa wynikająca z wygaśnięcia.
 
 Gdy pracownik wypowiada umowę o pracę na czas nieokreślony (不定期契約), według art. 15 tajwańskiej ustawy o standardach pracy stosuje się okresy wypowiedzenia z art. 16 ust. 1. Art. 16 jest przepisem o wypowiedzeniu umowy przez pracodawcę, a do rezygnacji pracownika ten okres wypowiedzenia stosuje się przez art. 15.
 

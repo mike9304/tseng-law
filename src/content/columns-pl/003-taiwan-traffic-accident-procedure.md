@@ -63,7 +63,7 @@ Jeżeli chodzi o przestępstwo ścigane z oskarżenia prywatnego, według art. 2
 
 ### Oficjalne podstawy Q1–Q5
 
-- [Rozporządzenie o zarządzaniu i sankcjach ruchu drogowego (道路交通管理處罰條例), art. 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Ustawa o zarządzaniu ruchem drogowym i sankcjach (道路交通管理處罰條例), art. 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Kodeks karny Tajwanu, art. 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Kodeks karny Tajwanu, art. 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Kodeks karny Tajwanu, art. 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -83,9 +83,9 @@ Jeżeli chodzi o przestępstwo ścigane z oskarżenia prywatnego, według art. 2
 
 ## Q6. Jak ustalana jest odpowiedzialność za wypadek?
 
-Tabela wstępnej analizy wypadku drogowego sporządzona przez policję jest analizą wstępną opartą na dokumentach miejsca. Nie jest wyrokiem, nie wiąże sądu i nie ustala proporcji winy (過失比例). Ponieważ potrzebne dokumenty i zakres sporu różnią się według wypadku, ta tabela, ekspertyza prawna i ponowne rozpatrzenie (覆議) nie są ani procedurą automatyczną, ani etapem obowiązkowym.
+Tabela wstępnej analizy wypadku drogowego sporządzona przez policję jest analizą wstępną opartą na dokumentach miejsca. Nie jest wyrokiem, nie wiąże sądu i nie ustala proporcji winy (過失比例). Ponieważ potrzebne dokumenty i zakres sporu różnią się według wypadku, wstępna analiza, ekspertyza wypadku i ponowne rozpatrzenie (覆議) nie tworzą automatycznej ani obowiązkowej sekwencji.
 
-Według przepisów mających zastosowanie strona legitymowana może wnioskować o ekspertyzę wypadku pojazdów (車輛行車事故鑑定); organ, który prowadzi sprawę, może ją przekazać, a organ sądowy może ją zlecić. Wniosek strony składa się co do zasady w ciągu 6 miesięcy od daty wypadku; w sprawach już w śledztwie lub w osądzeniu ekspertyza przebiega przez zlecenie organu sądowego, a nie przez nowy wniosek bezpośredni.
+Według przepisów mających zastosowanie strona legitymowana może wnioskować o ekspertyzę wypadku pojazdów (車輛行車事故鑑定); organ, który prowadzi sprawę, może ją przekazać, a organ sądowy może ją zlecić. Wniosek strony składa się co do zasady w ciągu 6 miesięcy od daty wypadku; w sprawach już w śledztwie albo w toku postępowania sądowego ekspertyza przebiega przez zlecenie organu sądowego, a nie przez nowy wniosek bezpośredni.
 
 W razie braku zgody z opinią ekspertyzy można wnioskować o ponowne rozpatrzenie, lecz ponowne rozpatrzenie ogranicza się do jedynego razu. Opinia ekspertyzy i ponownego rozpatrzenia jest dowodem lub dokumentem odniesienia, a sąd ocenia niezależnie całokształt akt, w tym oświadczenia, obrazy i protokoły miejsca.
 
@@ -149,7 +149,7 @@ Szkoda ze zmniejszenia zdolności do pracy odróżnia się od dochodów rzeczywi
 
 Fakt, że bieżące wynagrodzenie utrzymuje się bez zmiany, nie wyłącza automatycznie roszczenia. Odwrotnie, kwoty szkody nie ustala się też w sposób mechaniczny tylko procentem inwalidztwa albo bieżącym wynagrodzeniem.
 
-Jeżeli trwałe zaburzenie czynnościowe jest kwestionowane w sposób istotny, ekspertyza medyczna może być użyteczna, lecz nie jest obowiązkowa we wszystkich sprawach. Bada się też kompensację win z art. 217 Kodeksu cywilnego i inne motywy korekty.
+Jeżeli trwałe zaburzenie czynnościowe jest kwestionowane w sposób istotny, ekspertyza medyczna może być użyteczna, lecz nie jest obowiązkowa we wszystkich sprawach. Bada się też przyczynienie się poszkodowanego z art. 217 Kodeksu cywilnego i inne motywy korekty.
 
 Gdy obliczenie następuje w jednej kwocie kapitałowej, można rozważyć potrącenie odsetek pośrednich (中間利息扣除). Kalkulator Hoffmanna (霍夫曼) Yuanu Sądowego jest tylko narzędziem obliczeniowym, nie metodą prawnie obowiązkową, i nie obiecuje wyniku. Według art. 193 Kodeksu cywilnego, na wniosek strony, sąd może też orzec płatność w rencie okresowej pod warunkiem zabezpieczenia.
 
@@ -177,7 +177,7 @@ W wypadku jednego pojazdu kierowca tego pojazdu nie jest co do zasady adresatem 
 
 Taryfa świadczeń (強制汽車責任保險給付標準) zmieniona 29 maja 2026 r. stosuje się do wypadków, które nastąpiły od 1 lipca 2026 r. Pułap rozsądnych i potrzebnych kosztów medycznych za obrażenia wynosi 200.000 TWD w nowym dolarze tajwańskim; świadczenie za inwalidztwo (失能) wynosi od 80.000 TWD do 3.000.000 TWD według 15 stopni ustawowych; świadczenie za śmierć wynosi 3.000.000 TWD, a łączne maksimum śmierci, inwalidztwa i kosztów medycznych dla 1 poszkodowanego i 1 wypadku wynosi 3.200.000 TWD. Do wypadków wcześniejszych może stosować się taryfa poprzednia.
 
-Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任險), ubezpieczenie wypadków kierowcy (駕駛人傷害險) i ubezpieczenie szkód własnego pojazdu (車體損失險) są produktami fakultatywnymi o charakterze umownym. Rzeczywiste pokrycie różni się według ubezpieczonego, pułapu, franszyzy (自負額), wyłączeń, winy i innych warunków polisy, dlatego polisę i warunki należy sprawdzić w każdej sprawie osobno.
+Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任險), ubezpieczenie wypadków kierowcy (駕駛人傷害險) i ubezpieczenie szkód własnego pojazdu (車體損失險) są produktami fakultatywnymi o charakterze umownym. Rzeczywiste pokrycie różni się według ubezpieczonego, pułapu, franczyzy (自負額), wyłączeń, winy i innych warunków polisy, dlatego polisę i warunki należy sprawdzić w każdej sprawie osobno.
 
 ### Oficjalne podstawy Q11–Q15
 

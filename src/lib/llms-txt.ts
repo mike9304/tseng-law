@@ -633,7 +633,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Maklumat ini ditulis dalam bahasa Melayu, tetapi perundingan dengan peguam hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.',
     discoveryNotice:
-      'Fail llms.txt ini hanyalah peta untuk mencari halaman awam; ia tidak menjanjikan kedudukan carian, pengendorsan, cadangan AI atau paparan.',
+      'Fail llms.txt ini hanyalah peta untuk mencari halaman awam; ia tidak menjanjikan kedudukan carian, sokongan rasmi, cadangan AI atau paparan.',
     confidentialNotice:
       'Kerana teks asal disimpan, pada peringkat awal jangan tulis apa yang belum diperlukan, misalnya nombor pasport, nombor pengenalan atau data akaun.',
   },

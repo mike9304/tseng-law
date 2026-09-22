@@ -40,9 +40,9 @@ Semasa menetapkan skop perdagangan, sekurang-kurangnya hubungan berikut mesti di
 - Siapa menanggung tanggungjawab kehilangan, kemerosotan dan kelewatan barang serta kerugian yang disebabkan kepada pihak ketiga
 - Siapa mengurus kenderaan, plat penggunaan komersial (營業用車輛牌照), pemandu, penempatan dan peredaran
 - Bagaimana dipisahkan daripada pengangkutan sebenar kerja tambahan seperti gudang, pembungkusan, sistem maklumat dan perantaraan pengangkutan
-- Dalam kes submandat, skop kerja apa yang usahawan pemegang kebenaran benar-benar laksanakan
+- Jika pengangkutan disubkontrakkan, skop kerja apa yang usahawan pemegang kebenaran benar-benar laksanakan
 
-Pihak berkuasa pusat kompeten menurut perkara 3 undang-undang jalan raya ialah Kementerian Pengangkutan (交通部). Kerana kemasukan sebenar permohonan dan panduan pentadbiran dirawat oleh Jabatan Am Jalan Raya Kementerian Pengangkutan (交通部公路局) dan organ berkaitan, anda mesti mengesahkan panduan terbaharu. Jika tidak jelas bahawa model perniagaan yang dirancang membentuk pengangkutan barang dengan kenderaan bermotor, penting mengemukakan kepada pihak berkuasa kompeten kontrak dan cara operasi yang dirancang untuk memperoleh kepastian sebelum menetapkan item perniagaan di daftar.
+Pihak berkuasa pusat kompeten menurut perkara 3 undang-undang jalan raya ialah Kementerian Pengangkutan (交通部). Kerana kemasukan sebenar permohonan dan panduan pentadbiran dirawat oleh Pentadbiran Jalan Raya Kementerian Pengangkutan (交通部公路局) dan organ berkaitan, anda mesti mengesahkan panduan terbaharu. Jika tidak jelas bahawa model perniagaan yang dirancang membentuk pengangkutan barang dengan kenderaan bermotor, penting mengemukakan kepada pihak berkuasa kompeten kontrak dan cara operasi yang dirancang untuk memperoleh kepastian sebelum menetapkan item perniagaan di daftar.
 
 ## 2. Menubuhkan semula perdagangan pengangkutan barang dengan kenderaan bermotor
 
@@ -70,11 +70,11 @@ Urutan langkah dan organisasi pengemukaan mesti disahkan semula menurut setiap k
 
 1. Tetapkan skop perdagangan menurut kontrak, balasan, tanggungjawab pengangkutan dan peredaran kenderaan, dan pilih laluan pelaburan yang sesuai, seperti syarikat atau cawangan.
 2. Peroleh kelulusan pelaburan asing yang terpakai dan kelulusan sektor Kementerian Pengangkutan menurut perkara 35 undang-undang jalan raya.
-3. Mohon kebenaran persediaan penubuhan pengangkutan barang dengan kenderaan bermotor menurut panduan Jabatan Am Jalan Raya Kementerian Pengangkutan.
+3. Mohon kebenaran persediaan penubuhan pengangkutan barang dengan kenderaan bermotor menurut panduan Pentadbiran Jalan Raya Kementerian Pengangkutan.
 4. Sempurnakan daftar syarikat dan perdagangan, dan sediakan premis yang diluluskan, kemudahan parkir (停車設施), sistem penyelenggaraan, kenderaan, insurans dan organisasi.
 5. Mohon lesen operasi, sertai persatuan industri yang sepadan dan, kemudian, mulakan operasi menurut skop perdagangan yang diluluskan.
 
-Premis dan kemudahan parkir mesti memenuhi kriteria yang terpakai kepada perdagangan berkenaan, dan anda mesti mengemukakan bahan yang membuktikan pemilikan atau hak penggunaan. Tidak mungkin ditegaskan secara seragam bahawa setiap usahawan mesti semestinya menyewa parkir eksklusif sendiri. Statut, buku pemegang saham, bahan kelulusan kemudahan parkir, bukti pemilikan atau penggunaan premis dan parkir, kontrak penyelenggaraan, bukti pembelian kenderaan dan senarai kenderaan mesti dibandingkan dengan senarai semakan yang berkuat kuasa Jabatan Am Jalan Raya pada saat permohonan.
+Premis dan kemudahan parkir mesti memenuhi kriteria yang terpakai kepada perdagangan berkenaan, dan anda mesti mengemukakan bahan yang membuktikan pemilikan atau hak penggunaan. Tidak mungkin ditegaskan secara seragam bahawa setiap usahawan mesti semestinya menyewa parkir eksklusif sendiri. Perlembagaan syarikat, buku pemegang saham, bahan kelulusan kemudahan parkir, bukti pemilikan atau penggunaan premis dan parkir, kontrak penyelenggaraan, bukti pembelian kenderaan dan senarai kenderaan mesti dibandingkan dengan senarai semakan yang berkuat kuasa Pentadbiran Jalan Raya pada saat permohonan.
 
 Selepas pemerolehan kebenaran persediaan penubuhan, persediaan mesti, pada prinsipnya, disempurnakan dalam 6 bulan. Pelanjutan apabila terdapat keadaan khas mungkin paling banyak 6 bulan tambahan. Selepas pengeluaran lesen operasi, operasi mesti, pada prinsipnya, bermula dalam 1 bulan, dan anda memberitahu pihak berkuasa jalan raya kompeten dengan melampirkan salinan kad ahli yang berkuat kuasa yang dikeluarkan persatuan industri yang sepadan. Kerana masa yang diperlukan untuk melengkapkan fail, menyediakan tanah dan kemudahan, kenderaan dan insurans berbeza menurut kes, saat penyempurnaan seluruh prosedur tidak boleh ditetapkan terlebih dahulu. Walaupun tempoh objektif semakan pentadbiran menurut norma pelaburan asing diumumkan, ini tidak bermakna tempoh seluruh penubuhan baharu pengangkutan barang dengan kenderaan bermotor.
 
@@ -112,7 +112,7 @@ Ini tidak boleh dinilai secara seragam. Penilaian berbeza menurut sama ada orang
 
 Penghantar atau syarikat perkhidmatan logistik juga boleh menyerahkan pengangkutan sebenar kepada usahawan Taiwan pengangkutan barang dengan kenderaan bermotor pemegang kebenaran. Namun, keperluan kebenaran dan pembahagian tanggungjawab berbeza menurut sama ada orang yang menyerahkan hanya penghantar atau perantara pengangkutan, atau menurut sama ada ia sendiri menjadi pengangkut kontrak pengangkutan dan menerima tambang. Peranan menurut kontrak, pengebilan kepada pelanggan, perintah penempatan, pengurusan pemandu dan kenderaan serta jawapan kepada kerugian barang mesti bertepatan dengan operasi sebenar.
 
-Anda mesti mengesahkan kesahan lesen operasi usahawan penerima mandat dan skop kebenaran, kenderaan komersial yang benar-benar digunakan, pemandu, insurans dan usahawan submandat. Jangan dibenarkan pinjaman lesen operasi mahupun pengangkutan sebenar oleh usahawan tanpa kebenaran. Cara mandat boleh menuntut pelaburan tetap awal yang lebih kecil daripada menyediakan sendiri kenderaan dan parkir, tetapi kebergantungan terhadap usahawan pemegang kebenaran, tahap perkhidmatan, kehilangan, kemerosotan dan kelewatan barang, insurans, data peribadi dan logistik, submandat, pampasan dan prosedur penyerahan data, barang dan perkhidmatan pelanggan pada tamatnya kontrak, serta risiko berkaitan, mesti dirawat dalam kontrak.
+Anda mesti mengesahkan kesahan lesen operasi usahawan penerima mandat dan skop kebenaran, kenderaan komersial yang benar-benar digunakan, pemandu, insurans dan usahawan yang disubkontrakkan. Jangan dibenarkan pinjaman lesen operasi mahupun pengangkutan sebenar oleh usahawan tanpa kebenaran. Cara mandat boleh menuntut pelaburan tetap awal yang lebih kecil daripada menyediakan sendiri kenderaan dan parkir, tetapi kebergantungan terhadap usahawan pemegang kebenaran, tahap perkhidmatan, kehilangan, kemerosotan dan kelewatan barang, insurans, data peribadi dan logistik, subkontrak, pampasan dan prosedur penyerahan data, barang dan perkhidmatan pelanggan pada tamatnya kontrak, serta risiko berkaitan, mesti dirawat dalam kontrak.
 
 ### Pelaburan, lesen kerja dan kediaman ialah langkah yang berasingan
 
@@ -125,13 +125,13 @@ Kepada kerja tanpa lesen boleh terpakai denda pentadbiran dan perintah meninggal
 - [Undang-undang jalan raya](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040001)
 - [Peraturan terperinci semakan pengangkutan dengan kenderaan bermotor (汽車運輸業審核細則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040004)
 - [Peraturan pengurusan pengangkutan dengan kenderaan bermotor](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040003)
-- [Jabatan Am Jalan Raya Kementerian Pengangkutan: permohonan kebenaran persediaan penubuhan pengangkutan dengan kenderaan bermotor](https://www.thb.gov.tw/cp.aspx?n=392)
-- [Jabatan Am Jalan Raya Kementerian Pengangkutan: permohonan lesen operasi dan dokumen yang dikemukakan](https://www.thb.gov.tw/cp.aspx?n=507)
-- [Jabatan Am Jalan Raya Kementerian Pengangkutan: kriteria modal dan kenderaan pengangkutan barang dengan kenderaan bermotor](https://cyi2.thb.gov.tw/cp.aspx?n=1962)
-- [Jabatan Am Jalan Raya Kementerian Pengangkutan: prosedur pertukaran pengangkutan dengan kenderaan bermotor](https://www.thb.gov.tw/cl.aspx?n=259)
-- [Jabatan Am Jalan Raya Kementerian Pengangkutan: pindahan kenderaan komersial dan serupa](https://www.thb.gov.tw/cp.aspx?n=356)
+- [Pentadbiran Jalan Raya Kementerian Pengangkutan: permohonan kebenaran persediaan penubuhan pengangkutan dengan kenderaan bermotor](https://www.thb.gov.tw/cp.aspx?n=392)
+- [Pentadbiran Jalan Raya Kementerian Pengangkutan: permohonan lesen operasi dan dokumen yang dikemukakan](https://www.thb.gov.tw/cp.aspx?n=507)
+- [Pentadbiran Jalan Raya Kementerian Pengangkutan: kriteria modal dan kenderaan pengangkutan barang dengan kenderaan bermotor](https://cyi2.thb.gov.tw/cp.aspx?n=1962)
+- [Pentadbiran Jalan Raya Kementerian Pengangkutan: prosedur pertukaran pengangkutan dengan kenderaan bermotor](https://www.thb.gov.tw/cl.aspx?n=259)
+- [Pentadbiran Jalan Raya Kementerian Pengangkutan: pindahan kenderaan komersial dan serupa](https://www.thb.gov.tw/cp.aspx?n=356)
 - [Bahan mengenai kriteria premis dan kemudahan parkir](https://www.mvdis.gov.tw/webMvdisLaw/Download.aspx?ID=22746&type=Law)
-- [Statut pelaburan orang asing (外國人投資條例)](https://law.moea.gov.tw/LawContent.aspx?id=FL011158&media=print)
+- [Ordinan Pelaburan oleh Warganegara Asing (外國人投資條例)](https://law.moea.gov.tw/LawContent.aspx?id=FL011158&media=print)
 - [Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
 - [Kementerian Hal Ehwal Ekonomi: panduan permohonan pelaburan asing](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
 - [Perkara 43 undang-undang perkhidmatan pekerjaan (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)

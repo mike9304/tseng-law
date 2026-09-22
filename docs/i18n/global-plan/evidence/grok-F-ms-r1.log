@@ -1,0 +1,188 @@
+WO-F-ms — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-ms-r1
+date: 2026-09-22
+inputs: RULEBOOK-FIX.md R2–R10, ACCEPTED-ROUND.md, rounds/r1/ms-a.md, rounds/r1/ms-b.md
+no git add / commit / push
+
+## Rows applied (105 of 108 finding rows)
+
+ms-a
+1 P1 guidance — tempoh saman berkanun → had masa untuk memfailkan tuntutan.
+2 P1 guidance — tertuduh atau terdakwa → orang yang disyaki atau tertuduh.
+3 P1 bios — Ministry of Education, Legal Aid Foundation, and Institute of Finance translated, with the English names kept in parentheses. Firm names left.
+4 P1 002 — Tarikh lahir → Tarikh (date of each amount).
+5 P1 001 + 004 — pejabat kekal → pertubuhan tetap (常設機構, PE), including the 004 §6 heading and the sentence-initial “Pejabat kekal”.
+6 P1 001 — the PE sentence now has a subject: “Menurut perjanjian, pertubuhan tetap boleh merangkumi kemudahan tetap…”.
+7 P1 001 — Akta sahih → pengakusaksian notari.
+8 P1 003 — 10 tahun dari hari perbuatan tort. 004 and 007 “perbuatan haram” for tort → perbuatan tort. 008 employee misconduct → perbuatan yang dilarang undang-undang (not tort).
+9 P1 003 — gangguan preskripsi / preskripsi → pemotongan had masa / had masa (時效中斷, 消滅時效). 007 peraturan preskripsi → peraturan had masa. 016 preskripsi piutang → had masa piutang.
+10 P1 004 — syarikat pengeluar → syarikat penerbit (發行公司), including “bukan syarikat penerbit yang berasingan”.
+11 P1 004 — pasaran nilai → pasaran sekuriti Taiwan.
+12 P1 004 — negara 3 → pelabur dari Taiwan atau dari negara ketiga.
+13 P1 005 — modal kecemasan → jika modal perlu digunakan dengan segera.
+14 P1 006 — Hakim-hakim Besar Mahkamah Perlembagaan (大法官) → hakim perlembagaan (大法官).
+15 P2 guidance — engagement confirmation no longer adds a writing requirement: firma menerima kerja itu.
+16 P2 guidance — kunjungan (會面交往) → hak lawatan (會面交往).
+17 P2 003 — faedah bagi ketidakupayaan/kematian and Skala faedah → manfaat. Interest “potongan faedah perantaraan” left.
+18 P2 003 — Kalkulator Hoffmann (霍夫曼) Lembaga Kehakiman (司法院), including the link label.
+19 P2 guidance — kami jelaskan kepada anda siapa pakar berkelayakan…
+20 P2 guidance — risiko jenayah dalam aktiviti perniagaan.
+21 P2 percent — space before % removed in 001, 003, 004, and 018 (10%, 5%, 20%, 21%, 50%, 30%).
+22 P2 002 — pelikuidasi mesti dengan segera memohon pengisytiharan muflis. Remaining isytihar muflis → pengisytiharan muflis.
+23 P2 003 — doubled pampasan pampasan penderitaan → pampasan penderitaan. Same doubling in 007 and 016.
+24 P2 003 — Q16–Q20 rewritten in place. Not promoted to ## headings (see skipped).
+25 P2 guidance — pelaksanaan atau penanggungan hak dan kewajipan terhadap anak bawah umur.
+26 P2 guidance — individu bernilai bersih tinggi.
+27 P2 guidance — dalam satu proses yang sama.
+28 P2 guidance — the “read that way” sentence now says what it must not be read as. Wording is “tanpa bayaran”, not the suggested “percuma” (see reviewer points).
+29 P2 guidance — secara selari → pada masa yang sama. prosedur selari → prosedur pada masa yang sama.
+30 P2 guidance — Kerja peguam merangkumi nasihat syarikat hingga prosiding mahkamah.
+31 P2 llms discoveryNotice — pengendorsan → sokongan rasmi. consultationNotice and confidentialNotice unchanged.
+32 P2 bio — Paralegal kanan dengan pengalaman bertahun-tahun… Experience lines: Paralegal kanan, Boyin / Muyang. Role label “Paralegal” left (reviewer kept the loanword).
+33 P2 001 — berbeza mengikut pihak yang dikontrak dan jenis kontrak yang dimeterai.
+34 P2 tax name — cukai pendapatan perniagaan (營利事業所得稅) in 001, 002, and 004, including “Perusahaan pencari keuntungan yang…”.
+35 P2 withholding — cukai pegangan in 001 (3), 002 (6), 004 (4), and 005 (2).
+36 P2 002 — Semakin lama penggantungan aktiviti berlangsung, semakin rumit prosedur penamatan kemudiannya.
+38 P2 003 close — Demikian soal jawab mengenai kemalangan jalan raya di Taiwan.
+39 P2 003 — kesakitan fizikal dan mental. 007 penyakit psikik → penyakit mental. 010 penderitaan mental.
+40 P2 bios — Ijazah Sarjana Muda on the B.A. double major, both LL.B. lines, the B.S. line, and the B.A. accounting line (5). The CPA line is “program ijazah sarjana muda dan sarjana perakaunan”. Sarjana (M.S.)/(M.A.) left.
+41 P2 001 — orang Cina perantauan (華僑), including the work-permit heading and the manual link. 005 work-permit answer the same.
+42 P2 003 — 29 Mei 2026 / 1 Julai 2026 in running text.
+43 P2 004 — Akta Inovasi Perindustrian (產業創新條例) (5).
+44 P2 004 — perkongsian komandit (有限合夥).
+45 P2 004 — saraan ekuiti kepada pengarah dan kakitangan, including the later checklist line.
+46 P2 006 — adalah dilarang.
+47 P2 004 — untuk menjelaskan. 007 and 008 agar mengurangkan → untuk mengurangkan.
+48 P2 004 — Korea ialah satu contoh yang disebut kemudian.
+49 P2 004 — Perlu ditambah pada titik permulaan itu jaminan, tort, … (list item left as the suggested bare “tort”).
+50 P2 006 — pasaran pengguna.
+51 P2 008 — Kesukaran row kept (table-row count). Cells no longer say Mudah / Sukar / Mudah.
+52 P2 008 — dan syarikat berkewajipan membayarnya apabila syarat undang-undang dipenuhi.
+53 P2 007 — dibuat secara bertulis (FAQ + body).
+54 P2 007 — pasangan mesti bermediasi bersama dalam bilik yang sama (FAQ + body).
+55 P2 007 — §3, §6, and §7 openers made self-standing in the body and the matching FAQ. 011, 014, and 017 “Tidak sentiasa” left: those lines answer real yes/no questions.
+56 P2 009 — Seperti dinyatakan dalam rencana terdahulu, di Taiwan tidak mudah.
+57 P2 007 — doubled pendaftaran dropped (2).
+58 P2 007 — urusan keluarga tanpa pertikaian.
+59 P2 008 — OOO → [nama].
+60 P2 007 — pampasan penderitaan (慰撫金).
+
+ms-b
+1 P1 010 — menyusun rekod secara berasingan.
+2 P1 010 — hospital atau klinik untuk rawatan.
+3 P1 010 — ordinary negligence is “sehingga 1 kali jumlah kerugian sebenar”. “ganda” dropped. The digit 1 kept (see reviewer points). 5 kali and 3 kali unchanged.
+4 P1 011 — pihak ketiga yang mempunyai kelayakan dan keupayaan yang diperlukan.
+5 P1 012 — Taiwan drives on the right, so passing is on the left, then the existing sequence. The word Malaysia is not in the sentence (see reviewer points).
+6 P1 014 — caj bahan atau peralatan.
+7 P1 016 — pampasan penderitaan (慰撫金).
+8 P1 018 — ## Perundingan mengenai struktur masuk ke Taiwan (heading level unchanged).
+9 P1 018 — the four consultation languages are named (Inggeris, Cina (中文), Jepun, Korea). Malay is excluded and no reply time is promised. Wording avoids the forbidden pattern “perundingan dalam bahasa Melayu”: “Bahasa Melayu tidak termasuk bahasa perundingan, dan tempoh jawapan tidak dijanjikan.”
+10 P2 010 — bila tempoh mula berjalan, terus berjalan, atau terputus.
+11 P2 010 — penderitaan mental.
+12 P2 010 — ganti rugi bukan wang boleh menuntut.
+13 P2 010 — untuk konsultasi, pemeriksaan, rawatan (medical). Later legal “Rundingan, aduan” left.
+14 P2 010 — bahan yang masih ada, sebelum ia hilang. 014 Diperoleh dokumen bayaran.
+15 P2 010 — asas yang sah untuk mendapatkan atau memelihara rakaman.
+16 P2 010 — supaya dokumen itu kemudian boleh disemak silang.
+17 P2 010 — kemerosotan kekal (2).
+18 P2 010 — boleh sama-sama menimbulkan isu kewajipan keselamatan.
+19 P2 010 — pihak berkuasa penyiasatan (偵查機關). 016 organ bertanggungjawab / organ cukai / organ prosedur kehakiman → pihak berkuasa. Company-law “organ” (shareholders’ meeting and the like) not rewritten.
+20 P2 011 — menyediakannya untuk cubaan pengguna.
+21 P2 011 — Siaran influencer (2).
+22 P2 011 — mencari dan mengemukakan.
+23 P2 schedule — jadual sebenar bekalan, jadual hadiah promosi, Jadual pendaftaran (011); checklist jadual (014, 2); 018 “jadual pada umumnya lebih pendek”. 003 “kalendar tatacara mahkamah” left: that one is a court calendar.
+24 P2 011 — mesej pengiklanan yang dominan.
+25 P2 011 — the negation stays: tidak menegaskan … bahawa jualan akan layak dijalankan, mahupun bahawa tempoh pemprosesan akan ditepati.
+26 P2 011 — laman maklumat (2 TFDA links).
+27 P2 012 — Penilaian pakar itu mengambil kira bersama.
+28 P2 012 — mengatur kedua-dua perkara, iaitu syarat pemotongan dilarang… 014 kedua-dua syarat (FAQ + body).
+29 P2 012 — dua buah kereta.
+30 P2 012 — setelah jarak selamat diperoleh.
+32 P2 013 — Soalan yang kerap diajukan semasa penubuhan dikumpulkan di bawah. One-clause paragraphs not merged (see skipped).
+33 P2 013 — Ordinan Pelaburan oleh Warganegara Asing (外國人投資條例). 017 source label the same. 017 “Statut, buku pemegang saham” is articles of incorporation → Perlembagaan syarikat, buku pemegang saham (not the investment ordinance).
+34 P2 013 and 015 — perbandaran (市政府) → kerajaan bandar (市政府).
+35 P2 014 — tanggungjawab kewangan yang timbul daripada penamatan.
+36 P2 015 — **S. Adakah → **Adakah (still bold, not a new heading).
+37 P2 015 — the Chinese gloss sits after the link text, with a space. The href is unchanged.
+38 P2 016 — perwalian anak bawah umur (未成年人監護), including “perwalian anak bawah umur bermula” and “pembukaan perwalian”.
+39 P2 016 — kemasukan semula atau bahagian wajib waris. Remaining rizab waris → bahagian wajib waris.
+40 P2 016 — penggunaan, pengambilan hasil, perwakilan berkanun (FAQ, body, and the Kuasa pentadbiran line).
+41 P2 016 — pemilik benefisialnya (3).
+42 P2 016 — Faedah yang benefisiarinya ditetapkan secara berasingan.
+43 P2 017 — Pentadbiran Jalan Raya Kementerian Pengangkutan (交通部公路局), including the shorter checklist line (8 in 017). 003 already used that name.
+44 P2 017 — Jika pengangkutan disubkontrakkan. Remaining submandat → subkontrak.
+45 P2 018 — Pentadbiran Pembangunan Perniagaan, Kementerian Hal Ehwal Ekonomi (經濟部商業發展署), matching 001.
+46 P2 018 — the previous sentence “Nasihat di atas berkaitan reka bentuk kontrak.” kept. Next sentence: Sekadar memakai satu bentuk tertentu tidak menjadikan transaksi itu sah…
+48 P2 018 — peruntukan berkanun.
+
+001 representative office: “bukan tapak yang menjalankan perniagaan yang mencari keuntungan” (FAQ + body). Not a separate finding row; it is the same 營利事業 calque as row 34.
+
+## Rows skipped (3)
+
+- ms-a #37 and ms-b #31 — delete U+200B lines. The Korean source has the same zero-width counts. checkBlocks fails if the counts diverge. Lines left as they are.
+- ms-b #47 — renumber heading 7 to 6. Korean and English both skip from 5 to 7, and the checker counts the digit. Left as 7.
+- Structure inside rows that were still applied: ms-a #24 (do not promote Q16–Q20 to headings), ms-a #51 (do not delete the Kesukaran row), ms-b #32 (do not merge one-clause paragraphs in 013 or 015). Wording inside those blocks was fixed and those rows are counted above as applied.
+
+Not touched, because no accepted row required a string change: international-inquiry-copy.ts, international-guidance-offices.ts, international-guidance-answers.ts. The Malay consultation FAQ in the guidance pack already starts with “Tidak.” and names English, Chinese (中文), Japanese, and Korean. No test expectation was rewritten.
+
+## Systemic patterns (beyond the single quoted hit)
+
+- pertubuhan tetap: 001 (3) and 004 §6, including the heading and the capitalised sentence start.
+- cukai pegangan: 001 (3), 002 (6), 004 (4), 005 (2).
+- cukai pendapatan perniagaan / Perusahaan pencari keuntungan: 001, 002, 004.
+- orang Cina perantauan: 001 (3), 005 (1).
+- Akta Inovasi Perindustrian: 5 in 004.
+- Pentadbiran Jalan Raya: 8 in 017 (003 already had the name).
+- Ijazah Sarjana Muda: 5 bio lines, plus the CPA “ijazah sarjana muda dan sarjana” sentence.
+- Percent sign: the space before % removed wherever the same pattern occurred (001, 003, 004, 018).
+- Tort vs misconduct kept apart: perbuatan tort in 003, 004, and 007; perbuatan yang dilarang undang-undang in 008.
+- Schedule calque kalendar → jadual in 011, 014, and 018. The court-procedure calendar in 003 was not that calque and was left.
+- R2: 001 and 004 already label the Korea treaty as a Korea example. 005 bank/FX sentences stay labelled Korea facts. 007 family example already says Taiwan and another country. 012 states Taiwan’s driving side without naming the reader’s country.
+- R3/R9 left as they were: no Malay consultation, no interpreter, no reply time, no free first meeting, no result. Gender: Malay does not inflect. No Encik added for Wei Tseng. Encik Lin, Encik B, and the male client in 010 left.
+- R1/R11 not redone. R12–R17 are for the 18 locales added 2026-09-22, not Malay. English office names were translated because ms-a #3, #32, and #40 asked for it, with the English gloss kept. TWD 1,570,000 left as it was (not reformatted to TWD 1.57M).
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-ms --lang ms 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ms src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      24
+
+(The 24 was counted before this log existed. It includes this lane’s edits plus files already dirty at the start: docs/i18n/global-plan/WO-F-ms.txt and the untracked rounds/r1/ms-a.md and ms-b.md. Hangul remains only inside url values.)
+
+Checker WARNs above the tail, which do not fail the summary: unmatched Korean ordinals (제1항, 제3자, and the like) on several files; 007 extra 2023×3 and 010 extra 2020, both already in the file and not added by this pass; 014 extra 2×2 because kedua-dua is counted by the Malay lexicon as the numeral 2. Those kedua-dua forms were required by ms-b #28 and were kept.
+
+## Reviewer points not followed
+
+- Zero-width lines are in the Korean source, not only in the Malay. Deleting them fails the block checker.
+- Q16–Q20 are body lines in the Korean and English articles as well. Turning them into headings would change the heading-level sequence.
+- Heading “7” after “5” is the source outline. Changing it to 6 changes a counted digit.
+- The difficulty table row cannot be removed without changing the table-row count. The cells were rewritten so they no longer read as an easy dismissal or an easy severance.
+- One clause per paragraph in 013 and 015 matches the Korean block count. Merging them would fail the checker. The “dan soalan…” opener in 013 was repaired without merging blocks.
+- The suggested 012 sentence names Malaysia. The nationality check treats Malaysia as a reader-country token, and R2 says not to add a claim about the reader’s law. The page now states the Taiwan fact only: vehicles keep to the right, so passing is on the left.
+- The suggested 018 denial “perundingan bahasa Melayu tidak ditawarkan” matches the forbidden-phrase rule that flags “perundingan dalam bahasa Melayu” as an offer of Malay consultation. The negative formula already used in the pack was used instead.
+- The suggested guidance sentence uses “percuma”. The Malay pack test forbids that token even inside a denial. The sentence says “tanpa bayaran” instead, which is the word the same paragraph already uses.
+- Dropping the digit from “1 kali ganda” would risk a missing-number failure. “ganda” was the error (sekali ganda means double). Ordinary negligence now reads “sehingga 1 kali jumlah kerugian sebenar”.

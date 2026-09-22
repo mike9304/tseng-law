@@ -2479,36 +2479,36 @@ export const guidanceTeamBios: Record<
         'Mewakili seorang pelajar Korea dalam tuntutan ganti rugi kerana kecederaan di pusat kecergasan dan memperoleh penghakiman peringkat pertama sebanyak TWD 1,570,000.',
       ],
       education: [
-        'Sarjana (M.S.), Institute of Finance, National Taiwan University',
-        'Ijazah (B.A.) dengan pengajian berganda undang-undang dan kewangan, National Chengchi University',
+        'Sarjana (M.S.), Institut Kewangan (Institute of Finance), National Taiwan University',
+        'Ijazah Sarjana Muda (B.A.) dengan dua pengkhususan, undang-undang dan kewangan, National Chengchi University',
         'Pelajar pertukaran di Kobe University dan Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Yayasan Bantuan Guaman, Cawangan Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Sebelum ini di Ministry of Education, Legal Affairs Division, dengan tumpuan pada hal pentadbiran dan sivil.',
+        'Sebelum ini di Kementerian Pendidikan, Bahagian Hal Ehwal Undang-undang (Ministry of Education, Legal Affairs Division), dengan tumpuan pada hal pentadbiran dan sivil.',
         'Pengalaman dalam hal universiti, hak tenaga pengajar dan rayuan pentadbiran.',
       ],
-      education: ['Ijazah Undang-undang (LL.B.), National Chung Hsing University'],
+      education: ['Ijazah Sarjana Muda Undang-undang (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Kementerian Pendidikan, Bahagian Hal Ehwal Undang-undang (Ministry of Education, Legal Affairs Division)',
         'Peguam, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal dengan bertahun-tahun sebagai paralegal kanan di beberapa firma, bertanggungjawab atas sokongan prosedur, undang-undang syarikat dan pelaburan asing.',
+        'Paralegal kanan dengan pengalaman bertahun-tahun di beberapa firma, bertanggungjawab atas sokongan prosedur, undang-undang syarikat dan pelaburan asing.',
         'Sokongan bagi prosedur, penubuhan syarikat, kelulusan pelaburan asing, permohonan lesen dan pertukaran antara Korea dan Taiwan.',
       ],
-      education: ['Ijazah Undang-undang (LL.B.), Tunghai University'],
+      education: ['Ijazah Sarjana Muda Undang-undang (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Paralegal kanan, Boyin Law Firm',
+        'Paralegal kanan, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2516,17 +2516,17 @@ export const guidanceTeamBios: Record<
         'Menyelaras janji temu perundingan dan komunikasi untuk klien dari Korea.',
         'Menyokong pertukaran antara pasukan melalui sistem dokumen dan aliran kerja, berasaskan sains komputer.',
       ],
-      education: ['Ijazah (B.S.) sains komputer, National Cheng Kung University'],
+      education: ['Ijazah Sarjana Muda (B.S.) sains komputer, National Cheng Kung University'],
       experience: ['Bahagian operasi Korea, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Telah menamatkan program ijazah dan sarjana perakaunan di National Chengchi University dan kini mengetuai sebuah firma perakaunan.',
+        'Telah menamatkan program ijazah sarjana muda dan sarjana perakaunan di National Chengchi University dan kini mengetuai sebuah firma perakaunan.',
         'Menyokong analisis bersepadu risiko undang-undang, cukai dan kewangan untuk klien syarikat.',
       ],
       education: [
         'Sarjana (M.A.) perakaunan, National Chengchi University',
-        'Ijazah (B.A.) perakaunan, National Chengchi University',
+        'Ijazah Sarjana Muda (B.A.) perakaunan, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

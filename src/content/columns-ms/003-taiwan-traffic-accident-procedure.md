@@ -39,17 +39,17 @@ Mengenai dokumen polis, di tempat kejadian anda boleh menerima talon pendaftaran
 
 Perkara 284 Kanun Jenayah mengatur kecederaan kerana kecuaian (過失傷害) dan kecederaan berat kerana kecuaian (過失致重傷). Kerana, menurut perkara 287 Kanun Jenayah, ia ialah kesalahan yang didakwa atas aduan (告訴乃論之罪), selaras dengan perkara 237 Kanun Tatacara Jenayah Taiwan (刑事訴訟法) aduan pada prinsipnya mesti difailkan dalam 6 bulan selepas hari pelaku diketahui.
 
-Mengenai pampasan sivil kerosakan (損害賠償), menurut perkara 197 Kanun Sivil Taiwan (民法) tuntutan tidak lagi mungkin setelah berlalu 2 tahun dari hari kerosakan dan penghutang pampasan diketahui, atau 10 tahun dari hari perbuatan haram. Fakta apa yang mempengaruhi preskripsi (消滅時效) mesti diteliti secara berasingan.
+Mengenai pampasan sivil kerosakan (損害賠償), menurut perkara 197 Kanun Sivil Taiwan (民法) tuntutan tidak lagi mungkin setelah berlalu 2 tahun dari hari kerosakan dan penghutang pampasan diketahui, atau 10 tahun dari hari perbuatan tort. Fakta apa yang mempengaruhi had masa (消滅時效) mesti diteliti secara berasingan.
 
 Sesiapa yang mengalami kerosakan kerana kesalahan boleh, menurut perkara 487 Kanun Tatacara Jenayah, membentuk tindakan sivil sampingan kepada perbicaraan jenayah (刑事附帶民事訴訟). Selagi perbicaraan jenayah sedang berjalan, tindakan ini boleh dibentuk hingga sebelum penutupan hujah lisan (言詞辯論終結) peringkat kedua, menurut perkara 488 Kanun Tatacara Jenayah, tetapi ia tidak boleh dibentuk selepas penutupan hujah lisan peringkat pertama dan sebelum pengajuan rayuan. Pada umumnya, pembayaran yuran mahkamah (裁判費) yang berasingan boleh dielakkan, tetapi tidak semua hasil selesai tanpa kos. Contohnya, jika kes jenayah ditolak dan, atas permintaan plaintif, dihantar ke mahkamah sivil, menurut perkara 503 Kanun Tatacara Jenayah belanja mahkamah boleh dikenakan, dan perlu juga disemak peraturan penghantaran dan tatacara perkara 504.
 
-Pilihan berbeza menurut gangguan preskripsi (時效中斷), kalangan defendan, bukti, insurans dan bidang kuasa. Maka tiada prosedur yang seragam lebih diutamakan untuk semua kes.
+Pilihan berbeza menurut pemotongan had masa (時效中斷), kalangan defendan, bukti, insurans dan bidang kuasa. Maka tiada prosedur yang seragam lebih diutamakan untuk semua kes.
 
 ## Q4. Jika terdapat kecuaian di kedua pihak, bagaimana dinilai tanggungjawab jenayah dan sivil?
 
 Tanggungjawab jenayah hanya boleh dikenakan apabila diakui kegagalan kewajipan berjaga-jaga setiap orang dan kaitan sebab antara kegagalan itu dengan kecederaan pihak lain. Hakikat bahawa kecuaian wujud di kedua pihak semata-mata tidak secara automatik menimbulkan tanggungjawab bagi kecederaan kerana kecuaian.
 
-Dari segi sivil, menurut perkara 217 Kanun Sivil, jika orang yang cedera mempunyai kecuaian yang menyumbang kepada menyebabkan atau memburukkan kerosakan (與有過失), mahkamah boleh mengurangkan atau mengecualikan pampasan. Contohnya, jika kerosakan yang diakui dalam dolar Taiwan baharu (新臺幣, TWD) ialah TWD 1,000,000 dan kecuaian orang yang cedera dinilai 50 %, jumlah boleh dikurangkan kepada TWD 500,000 sebelum pelarasan lain.
+Dari segi sivil, menurut perkara 217 Kanun Sivil, jika orang yang cedera mempunyai kecuaian yang menyumbang kepada menyebabkan atau memburukkan kerosakan (與有過失), mahkamah boleh mengurangkan atau mengecualikan pampasan. Contohnya, jika kerosakan yang diakui dalam dolar Taiwan baharu (新臺幣, TWD) ialah TWD 1,000,000 dan kecuaian orang yang cedera dinilai 50%, jumlah boleh dikurangkan kepada TWD 500,000 sebelum pelarasan lain.
 
 Kepakaran (鑑定) atau jadual analisis awal boleh menjadi dokumen penting, tetapi ia tidak mengikat mahkamah secara mekanikal. Mahkamah meneliti keseluruhan bukti, termasuk pernyataan, imej dan keadaan kenderaan.
 
@@ -130,7 +130,7 @@ Resit, daftar tambang, daftar laluan dan dokumen klinikal ialah bukti yang mungk
 - [Kanun Sivil, perkara 196](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
 - [Kanun Sivil, perkara 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Kanun Tatacara Jenayah, perkara 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
-- [Panduan Yuan Kehakiman (司法院) mengenai peluasan tuntutan selepas penghantaran](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
+- [Panduan Lembaga Kehakiman (司法院) mengenai peluasan tuntutan selepas penghantaran](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
 - [Keputusan mahkamah daerah Chiayi (嘉義) mengenai kos jagaan oleh saudara](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Keputusan mahkamah daerah Tainan (臺南) mengenai kos perjalanan untuk rawatan](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
@@ -151,9 +151,9 @@ Hakikat gaji semasa kekal tanpa perubahan tidak menolak secara automatik tuntuta
 
 Jika gangguan fungsi yang berterusan dipertikaikan secara substantif, penilaian pakar perubatan boleh berguna, tetapi ia tidak wajib dalam semua kes. Diteliti juga pampasan kecuaian perkara 217 Kanun Sivil dan sebab pelarasan lain.
 
-Apabila pengiraan dibuat dalam satu modal tunggal, potongan faedah perantaraan (中間利息扣除) boleh dipertimbangkan. Pengira Hoffmann (霍夫曼) Yuan Kehakiman hanyalah alat pengiraan, bukan kaedah yang wajib secara berkanun, dan ia tidak menjanjikan hasil. Menurut perkara 193 Kanun Sivil, atas permintaan pihak mahkamah juga boleh memerintahkan bayaran dalam anuiti berkala tertakluk kepada cagaran.
+Apabila pengiraan dibuat dalam satu modal tunggal, potongan faedah perantaraan (中間利息扣除) boleh dipertimbangkan. Kalkulator Hoffmann (霍夫曼) Lembaga Kehakiman (司法院) hanyalah alat pengiraan, bukan kaedah yang wajib secara berkanun, dan ia tidak menjanjikan hasil. Menurut perkara 193 Kanun Sivil, atas permintaan pihak mahkamah juga boleh memerintahkan bayaran dalam anuiti berkala tertakluk kepada cagaran.
 
-## Q13. Bagaimana dinilai pampasan pampasan penderitaan (慰撫金) bagi kerosakan bukan harta?
+## Q13. Bagaimana dinilai pampasan penderitaan (慰撫金) bagi kerosakan bukan harta?
 
 Pampasan pampasan penderitaan bagi kerosakan bukan harta dinilai dengan menetapkan jumlah yang sesuai apabila terdapat pelanggaran haram terhadap tubuh atau kesihatan, menurut perkara 195 Kanun Sivil.
 
@@ -175,7 +175,7 @@ Kewajipan untuk menyertai menurut perkara 6 undang-undang insurans liabiliti siv
 
 Dalam kemalangan satu kenderaan, pemandu kenderaan itu pada umumnya bukan penerima faedah insurans wajib kenderaan itu. Namun, dalam kemalangan yang melibatkan beberapa kenderaan, terdapat kes di mana pemandu boleh menuntut faedah daripada penanggung insurans wajib kenderaan lain yang terlibat.
 
-Skala faedah (強制汽車責任保險給付標準) yang diubah pada 2026-05-29 terpakai kepada kemalangan yang berlaku mulai 2026-07-01. Siling kos perubatan yang munasabah dan diperlukan bagi kecederaan ialah TWD 200,000 dalam dolar Taiwan baharu; faedah bagi ketidakupayaan (失能) merangkumi dari TWD 80,000 hingga TWD 3,000,000 menurut 15 darjah berkanun; faedah bagi kematian ialah TWD 3,000,000, dan maksimum bersama kematian, ketidakupayaan dan kos perubatan bagi 1 mangsa dan 1 kemalangan ialah TWD 3,200,000. Bagi kemalangan terdahulu skala sebelumnya boleh terpakai.
+Skala manfaat (強制汽車責任保險給付標準) yang diubah pada 29 Mei 2026 terpakai kepada kemalangan yang berlaku mulai 1 Julai 2026. Siling kos perubatan yang munasabah dan diperlukan bagi kecederaan ialah TWD 200,000 dalam dolar Taiwan baharu; manfaat bagi ketidakupayaan (失能) merangkumi dari TWD 80,000 hingga TWD 3,000,000 menurut 15 darjah berkanun; manfaat bagi kematian ialah TWD 3,000,000, dan maksimum bersama kematian, ketidakupayaan dan kos perubatan bagi 1 mangsa dan 1 kemalangan ialah TWD 3,200,000. Bagi kemalangan terdahulu skala sebelumnya boleh terpakai.
 
 Insurans liabiliti sivil terhadap pihak ketiga (第三人責任險), insurans kemalangan pemandu (駕駛人傷害險) dan insurans kerosakan kenderaan sendiri (車體損失險) ialah produk pilihan bersifat kontrak. Perlindungan sebenar berbeza menurut tertanggung, siling, potongan sendiri (自負額), pengecualian, kecuaian dan syarat lain polisi, sehingga polisi dan syarat mesti disemak kes demi kes.
 
@@ -186,13 +186,13 @@ Insurans liabiliti sivil terhadap pihak ketiga (第三人責任險), insurans ke
 - [Kanun Sivil, perkara 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
 - [Keputusan mahkamah rayuan Taiwan, tahun 109, kes 上易字 nombor 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
 - [Keputusan mahkamah rayuan Taiwan, tahun 109, kes 上易字 nombor 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
-- [Pengira nilai semasa Hoffmann Yuan Kehakiman](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
+- [Kalkulator nilai semasa Hoffmann Lembaga Kehakiman (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Kanun Sivil, perkara 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Keputusan mahkamah daerah Taoyuan, tahun 112, kes 壢簡字 nombor 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Kanun Sivil, perkara 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Kanun Jenayah Taiwan (中華民國刑法), perkara 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Undang-undang insurans liabiliti sivil kenderaan wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
-- [Skala faedah insurans liabiliti sivil kenderaan wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
+- [Skala manfaat insurans liabiliti sivil kenderaan wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Kontrak jenis insurans kenderaan penggunaan khas Suruhanjaya Penyeliaan Kewangan (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 Q16. Selepas kemalangan, bolehkah semuanya dibiarkan di tangan penanggung insurans?
@@ -219,7 +219,7 @@ Konflik kepentingan antara penanggung insurans dan pihak juga boleh timbul, dan 
 
 ​
 
-Saya maka tidak mengesyorkan menyerahkan keseluruhan pertikaian kepada penanggung insurans.
+Oleh itu, keseluruhan pertikaian tidak sepatutnya diserahkan kepada penanggung insurans.
 
 ​
 
@@ -323,7 +323,7 @@ Perlu berhati-hati terhadap peguam yang membesarkan kes dan menyokong bahawa tid
 
 ​
 
-Saya menamatkan dengan ini soalan dan jawapan mengenai kemalangan jalan raya. Saya harap ia berguna kepada anda.
+Demikian soal jawab mengenai kemalangan jalan raya di Taiwan.
 
 ​
 
@@ -335,7 +335,7 @@ Selepas menyiasat banyak kemalangan jalan raya, saya ingin menandakan satu perka
 
 ​
 
-Kerana kecederaan atau kematian mangsa, mangsa atau keluarganya mengalami kesakitan fizikal dan psikik.
+Kerana kecederaan atau kematian mangsa, mangsa atau keluarganya mengalami kesakitan fizikal dan mental.
 
 ​
 

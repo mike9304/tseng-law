@@ -341,7 +341,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        '本页介绍 Hovering 的律师、运营主管与合作会计师。律师曾雋崴（Wei Tseng）具有台湾执业资格，为事务所主任律师，与来自韩国、日本及其他国家的委托人合作。事务所的咨询以英语、中文、日语和韩语四种语言进行。',
+        '本页介绍 Hovering 的律师、运营主管与合作会计师。律师曾雋崴（Wei Tseng）具有台湾执业资格，为事务所主任律师，与来自韩国、日本及其他国际委托人合作。事务所的咨询以英语、中文、日语和韩语四种语言进行。',
       sources: ['/zh-hans/about', '/zh-hans/contact'],
     },
     pricing: {

@@ -26,7 +26,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
   },
   contactCta: '提交咨询请求',
   footerNotice:
-    '本简体中文页面仅提供关于本所依台湾法律所从事工作的一般说明。它不是针对具体案件的法律意见。仅提交表单，本身并不成立律师与委托人关系。',
+    '本简体中文页面仅提供关于本所依台湾法律所从事工作的一般说明。它不是针对具体案件的法律意见，仅提交表单本身，并不成立律师与委托人关系。',
   skipLink: '跳过导航，前往正文',
   menuLabel: '页面目录',
   languageLabel: '显示语言',
@@ -61,8 +61,8 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
     heroScrollLabel: '向下滚动',
     heroColumnsCtaLabel: '查看文章',
     servicesDetailLabel: '查看详情',
-    servicesAssistanceBefore: '若不清楚您的事项属于哪一组，',
-    servicesAssistanceLinkLabel: '联系页面',
+    servicesAssistanceBefore: '若不清楚您的事项属于哪一组，联系页面',
+    servicesAssistanceLinkLabel: '联系',
     servicesAssistanceAfter:
       '说明如何撰写摘要，以便律师审阅。',
     columnsViewAllLabel: '查看全部文章',
@@ -95,7 +95,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: '页面语言与咨询语言',
           paragraphs: [
-            '本页面以简体中文撰写。律师咨询以英语、中文、日语和韩语进行。咨询使用的中文，指普通话与书面中文。阅读本简体中文页面，并不表示某次咨询会以简体中文这一书面形式进行。',
+            '本页面以简体中文撰写。律师咨询以英语、中文、日语和韩语进行。咨询时使用的中文包括普通话与书面中文。阅读本页并不等于某一次咨询将以某一种书面形式进行。',
             '本页不承诺口译、回复时限或预约。若您无法使用这四种咨询语言中的任何一种，联系页面说明我们将如何评估可行的沟通安排。',
           ],
         },
@@ -147,7 +147,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: '婚姻、家庭与继承',
           paragraphs: [
-            '我们处理离婚、财产分配、未成年子女权利义务之行使或负担（未成年子女權利義務之行使或負擔，即亲权）、会面交往（會面交往）与继承，即使当事人或财产位于不同国家。跨境家事案件往往需要额外审查户籍资料、文书形式及其在台湾的证明力。',
+            '我们处理离婚、财产分配、未成年子女权利义务之行使或负担（未成年子女權利義務之行使或負擔，即亲权与抚养）、会面交往（會面交往）与继承，即使当事人或财产位于不同国家。跨境家事案件往往需要额外审查户籍资料、文书形式及其在台湾的证明力。',
             '家事案件常伴随期限与并行程序，第一次摘要应写明当事人关系、目前居住地以及已经进行的程序。',
           ],
         },
@@ -155,7 +155,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           heading: '劳动争议',
           paragraphs: [
             '本组包括劳动关系终止、依台湾法律的资遣费（資遣費；不可与其他法域的经济补偿或离职金制度等同）、工资以及劳动合同（勞動契約）争议，劳资双方均可能涉及。审查时，我们把终止原因与预告、给付及期限问题分开看待。',
-            '劳动合同、工作规则、薪资单以及双方往来函件通常是关键文件。若您仍持有，请在摘要中提及。',
+            '劳动合同、工作规则、薪资单与当事人往来书面通常是关键文件。若您仍持有，请在摘要中提及。',
           ],
         },
         {
@@ -200,7 +200,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: '与境外当事人的合作',
           paragraphs: [
-            '跨境工作包括公司设立、签证、商标与专利申请、法律风险审查以及企业税务咨询。台中办公室尤其处理营建、知识产权以及与韩国、日本有关的事项。律师曾雋崴（Wei Tseng）在上述各组中协助来自韩国、日本及其他国家的委托人。',
+            '跨境工作包括公司设立、签证、商标与专利申请、法律风险审查以及企业税务咨询。台中办公室尤其处理营建、知识产权以及与韩国、日本有关的事项。律师曾雋崴（Wei Tseng）在上述各组中协助来自韩国、日本及其他国际委托人。',
             '能否承接取决于内容与沟通语言。若您的事项属于上述各组，并可以四种咨询语言之一讨论，您可以提交摘要供审阅。',
           ],
         },
@@ -329,7 +329,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
         {
           question: '可以用中文咨询吗？',
           answer:
-            '可以。律师咨询以英语、中文、日语和韩语进行。咨询使用的中文，指普通话与书面中文。阅读本简体中文页面，并不表示某次咨询会以简体中文这一书面形式进行。本页不承诺口译。书面翻译是另外的安排：您写下的原文会按原样保存，不会被自动翻译。',
+            '可以。律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写，咨询时使用的中文包括普通话与书面中文。本页不承诺口译。书面翻译是另外的安排：您写下的原文会按原样保存，不会被自动翻译。',
         },
         {
           question: '若我无法使用这四种语言怎么办？',

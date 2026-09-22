@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-台湾早期的传统理发厅，客人坐着剪发，同时接受洗发以及头皮、肩颈按摩。
+您是否经历过台湾早期传统理发厅的年代？
 
 那些理发厅洗头的方式非常特别。
 
@@ -125,4 +125,4 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 若您认为遭受性骚扰，
 
-请在可信任的友人陪同下前往派出所提出告诉；是否委任律师，可另行通过联系页确认。咨询仅以英语、中文、日语和韩语进行，本所不承诺回复时间。
+请在可信任的友人陪同下前往派出所提出告诉；是否委任律师，可另行通过联系页确认。

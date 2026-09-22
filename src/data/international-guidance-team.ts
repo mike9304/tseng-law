@@ -2443,31 +2443,31 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        '任律师助理多年，曾在多家事务所担任资深律师助理，负责诉讼辅助、公司法与外资事务。',
+        '律师助理，多年在多家事务所担任资深律师助理，负责诉讼支持、公司法与外资。',
         '协助程序、公司设立、外资核准、证照申请以及韩国与台湾之间的往来。',
       ],
       education: ['法学学士（LL.B.），东海大学（Tunghai University）'],
       experience: [
-        '资深律师助理，Boyin Law Firm',
-        '资深律师助理，Muyang International Law Firm',
+        'Senior Paralegal, Boyin Law Firm',
+        'Senior Paralegal, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         '协调韩国委托人的咨询行程与沟通。',
-        '具备信息科学背景，借助文档系统与工作流程，支持部门之间的协作。',
+        '以信息科学为背景，通过文件系统与工作流程支持部门之间的往来。',
       ],
       education: ['信息科学学士（B.S.），国立成功大学（National Cheng Kung University）'],
       experience: ['韩国运营部门，Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        '国立政治大学会计学学士、硕士，现主持一家会计师事务所。',
+        '完成国立政治大学会计学学士与硕士课程，目前主持一家会计师事务所。',
         '协助企业客户进行法律、税务与财务风险的综合分析。',
       ],
       education: [
-        '会计学硕士（M.A.），国立政治大学（National Chengchi University）',
-        '会计学学士（B.A.），国立政治大学（National Chengchi University）',
+        '硕士（M.A.）会计，National Chengchi University',
+        '学士（B.A.）会计，National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

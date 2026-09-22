@@ -699,7 +699,7 @@ export const burmeseGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ရှေ့နေများ',
       title: 'Hovering ၏ နိုင်ငံတကာအဖွဲ့',
       description:
-        'Hovering ၏ ရှေ့နေများ၊ လုပ်ငန်းစီမံခန့်ခွဲမှုနှင့် မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
+        'Hovering ၏ ရှေ့နေများ၊ ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲမှုနှင့် မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
       intro: '',
       sections: [],
     },

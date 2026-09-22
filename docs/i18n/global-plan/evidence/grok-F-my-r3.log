@@ -1,0 +1,108 @@
+WO-F-my r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-my-r3
+date: 2026-09-23
+
+## Rows applied (35)
+
+Part A
+1 P1 llms discoveryNotice — ကြော်ငြာ → မြင်သာမှု; first အကြံပြုချက် → ထောက်ခံချက်. Token `llms.txt` kept.
+2 P1 004 legal person — တရားဝင် ပိုင်ရှင် → ဥပဒေပုဂ္ဂိုလ် in all four sentences (ultimate entity, separate persons, the foreign company as legal person, same legal person). “တရားဝင် ချုပ်သော” (lawfully entered) left.
+3 P2 002 inclusive ceilings — ထောင်ဒဏ် 5 နှစ်အောက်, ထောင်ဒဏ် 1 နှစ်အောက်, TWD 60,000 အောက် ဒဏ်ငွေ → အထိ.
+4 P2 003 employer defense — first sentence now states the due-care / unavoidable-damage defense, not “can protect” those facts.
+5 P2 007 adverse to the child — both sentences (mediation confirmation; Art. 1055 modification). 009 “အကျိုးမရှိခြင်း” is “to no avail” and was left.
+6 P2 007 cross-border removal — advice and analysis in every relevant jurisdiction; treaty label or one country’s cost table is not enough. Gloss (留置) kept.
+7 P2 guidance Korea leadership — “လုပ်ငန်းစီမံခန့်ခွဲမှု” → “ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲမှု” in guidanceTeamCopy.my.description, lawyers page description, and guidanceAnswers.my.lawyers.answer. Experience line “ကိုရီးယားလုပ်ငန်းဌာန” → “ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲသူ” (same post as the role line; German reference is Leitung Korea).
+10 P3 003 benefit-standard dates — “2026 ခုနှစ် မေ 29 ရက်” and “2026 ခုနှစ် ဇူလိုင် 1 ရက်”. Digits unchanged. Checker accepted this form.
+
+Part B
+1 P1 011 inspection notice — at least seven days before, not “up to” seven days.
+2 P1 011 criteria link — ဖြန့်ဝေမှု → အရောင်းမြှင့်တင်ခြင်း (labeling, promotion, advertising). URL unchanged. Other “distribution” uses left.
+3 P2 010 ROC year — “ထိုင်ဝမ်သမ္မတနိုင်ငံ (民國)” → “ထိုင်ဝမ်ပြက္ခဒိန် (民國)”. No Gregorian year added. Same glue swept (see systemic).
+4 P2 010 limitation — continues to run / is interrupted: ဆက်လက်ရေတွက်ခြင်း / ပြတ်တောက်ခြင်း.
+5 P2 notarization (公證) — နိုတြီအတည်ပြု, not registration. 013 lease, 016 will, plus the same gloss in 001 (2) and 007 (3). 認證 stays စစ်မှန်ကြောင်းအတည်ပြု.
+6 P2 014 early-termination sanction — ဒဏ်ခတ်မှု → ဒဏ်ကြေး.
+7 P2 015 謄本 — တရားဝင်ထုတ်နုတ်ချက် → တရားဝင်မိတ္တူ (2).
+8 P2 016 marital-property result — reflected before the remainder is identified as the estate; “sequence problem” removed.
+9 P2 017 借牌 — လုပ်ငန်းသုံး နံပါတ်ပြား ငှားခြင်း (FAQ with gloss, repeated body, and section 4 “လုပ်ငန်းမှတ်ပုံတင်လက်မှတ် ငှားခြင်း”).
+10 P2 017 representations and warranties — အချက်အလက်ဖော်ပြချက်နှင့် အာမခံကတိ.
+11 P2 018 precision-component manufacturer — တိကျမှုမြင့်မားသော.
+12 P2 018 director transfer — consent of two-thirds or more of the other shareholders’ voting rights. Fraction “3 ပုံ 2 ပုံ” kept.
+13 P2 electronic — 011 repository and 016 file → အီလက်ထရွန်နစ်. 014 email/messenger is row 23.
+15 P2 014 vesting — အတည်အကျ → အပြီးအပိုင်.
+16 P2 015 Chinese gloss — which-clause moved outside (建物登記第二類謄本); the upload verb stays on the transcript.
+17 P2 011 PIF — the file itself is not filed with TFDA in advance (FAQ and section 2). “စနစ်” dropped.
+18 P2 011 incomplete PIF — an administrative fine may be imposed, not “a fine problem arises”.
+19 P2 013 uniform-ID form — ဘုံအထောက်အထားနံပါတ်. Gloss (統一證號基本資料表) kept.
+20 P2 014 length of the period — “ချက်ချင်း” removed; length alone does not decide the outcome.
+21 P2 014 attribution — bare ရောက်ရာ → တာဝန် မည်သူ့တွင် ရှိသည် (FAQ, body, pre-calculation sentence, items 7 and 8).
+22 P2 014 reimbursement — ပြန်ပေးပစ္စည်း → ပြန်တောင်းရမည့် အရာ.
+23 P2 014 records — အီးမေးလ်နှင့် မက်ဆေ့ချ်အက်ပ် (body and item 5).
+24 P2 016 guardian — not the same as a parent exercising parental rights; “အယူအဆ” dropped.
+25 P2 016 trust/insurance — cannot be assumed safe from the contract alone.
+26 P2 016 net estate — အသားတင် အမွေပိုင်ဆိုင်မှု. 007 “သန့်ပိုင်ဆိုင်မှု” is the marital surplus (剩餘財產), a different term, and was left.
+27 P2 017 acquired company — ဝယ်ယူခံကုမ္ပဏီ → ဝယ်ယူခံရသော ကုမ္ပဏီ (6).
+28 P2 018 on-site work — လုပ်ငန်းခွင်၌ (table cell and section 7).
+
+No test expected-string needed a change. Disclosure-parity regexes still match. TWD 1.57M untouched. Frontmatter urls untouched.
+
+## Rows skipped (3)
+
+A8 P2 and B14 P2 — delete U+200B lines in 003, 005, 006, 008, 009, 013, 015.
+Reason: checkBlocks requires the target ZWSP count to equal the Korean source. Those lines are in src/content/columns as well. Deleting them fails the checker and changes the block inventory. Left byte-for-byte.
+
+A9 P2 004 link label “ပုဒ်မ 3၊ ပုဒ်မ 10 မဟုတ်”.
+Reason: the suggested label drops the digit 10. The Korean source link is “영업세법 제10조” on the same URL (flno=3). Removing 10 failed numbers (`missing from translation (1): 10`). Label restored. URL was never changed.
+
+## Systemic patterns and instances changed
+
+- Legal person written as lawful owner (တရားဝင် ပိုင်ရှင်): 4 in 004. No other file.
+- llms visibility vs paid advertising: 1 (discoveryNotice only).
+- Inclusive statutory “up to” written as အောက်: 3 in 002. Not applied to 014 “3 လနှင့်အထက် 1 နှစ်အောက်” / “1 နှစ်နှင့်အထက် 3 နှစ်အောက်” — those are exclusive “less than” notice brackets, not an included ceiling.
+- Adverse to the child written as အကျိုးမရှိ: 2 in 007.
+- Zero-width spacers: 0 changed (see skipped rows).
+- Editor denial inside the public link label: 0 changed (digit 10; see skipped row).
+- အီလက်ထရွန် (electron) for “electronic”: 2 rewritten to အီလက်ထရွန်နစ် (011, 016). 014’s two “အီလက်ထရွန်စာ / စကားပြောပရိုဂရမ်” instances rewritten as email and messenger records instead.
+- Notarization (公證) written as registration: 7 (001×2, 007×3, 013×1, 016×1).
+- Attribution as bare ရောက်ရာ: 5 in 014. 016 “ရောက်ရာ” is where inherited property ends up, not attribution of fault, and was left.
+- ဝယ်ယူခံကုမ္ပဏီ: 6 in 017.
+- နေရာအလုပ်: 2 in 018.
+- (民國) glued to the country name: 8 (010×1 flagged; same string in 007×4 and 003 link labels ×3). No Gregorian year added.
+- Korea leadership vs generic operations management: 4 strings (3 descriptions + 1 experience line).
+- Plate-lending (借牌) written as renting a license: 3 in 017.
+
+R2–R12, R14–R17 were already in the Burmese pack and columns aside from the patterns above. Consultation stays English, Chinese (中文), Japanese, Korean. No new result, reply-time, interpreter, or free-meeting promise. Wei Tseng stays ကျွန်မ / ဒေါ် / သူမ. ဦး B in 008 untouched.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-my --lang my 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=72
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-my src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      20
+
+## Reviewer points not applied
+
+- Invisible U+200B lines (A8, B14). They are real, and they are also in the Korean source the checker diffs against. Removing them changes zwsp= and would fail blocks. Not a Burmese wording error this lane can delete.
+- 004 public link “ပုဒ်မ 10 မဟုတ်” (A9). The reviewer’s statute name is the right reading of the URL (withholding-rate standards, article 3, flno=3). The Korean and English labels still say Business Tax Act article 10, and the checker counts that 10. The suggested label was reverted after `numbers FAIL missing from translation (1): 10`.

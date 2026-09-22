@@ -968,7 +968,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'အဖွဲ့',
     title: 'Hovering ၏ နိုင်ငံတကာအဖွဲ့',
     description:
-      'Hovering ၏ ရှေ့နေများ၊ လုပ်ငန်းစီမံခန့်ခွဲမှုနှင့် မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
+      'Hovering ၏ ရှေ့နေများ၊ ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲမှုနှင့် မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
     representativeTitle: 'ဦးဆောင်ရှေ့နေ',
     teamTitle: 'ရှေ့နေများနှင့် ဝန်ထမ်းများ',
     partnerTitle: 'မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်',
@@ -3757,7 +3757,7 @@ export const guidanceTeamBios: Record<
         'ကွန်ပျူတာသိပ္ပံ နောက်ခံအပေါ် အခြေခံ၍ စာရွက်စာတမ်းစနစ်နှင့် လုပ်ငန်းစဉ်များဖြင့် အဖွဲ့များအကြား ဆက်သွယ်ရေးကို ကူညီသည်။',
       ],
       education: ['သိပ္ပံဘွဲ့ (B.S.) ကွန်ပျူတာသိပ္ပံ, National Cheng Kung University'],
-      experience: ['ကိုရီးယားလုပ်ငန်းဌာန, Hovering International Law Firm'],
+      experience: ['ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲသူ, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

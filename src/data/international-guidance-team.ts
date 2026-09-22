@@ -1945,7 +1945,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kantor menangani perkara korporasi dan perorangan di Taiwan dalam bahasa Inggris, bahasa Jepang, bahasa Korea, dan bahasa Mandarin.',
-        'Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M (1,57 juta dolar Taiwan baru).',
+        'Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M (1,57 juta dolar baru Taiwan).',
       ],
       education: [
         'Magister (M.S.), Institute of Finance, National Taiwan University',

@@ -13,7 +13,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![Gambar utama](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
-(Persyaratan pemerintah daerah di Taiwan berbeda-beda, dan tulisan berikut merupakan contoh membuka usaha rumah makan di Kota Taipei.)
+(Persyaratan pemerintah daerah di Taiwan berbeda-beda, dan tulisan berikut mengambil pembukaan usaha rumah makan di Kota Taipei sebagai contoh.)
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 

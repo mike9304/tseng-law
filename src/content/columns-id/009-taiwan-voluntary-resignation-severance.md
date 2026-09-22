@@ -17,11 +17,11 @@ Di Taiwan pada umumnya tidak mudah bagi karyawan untuk memperoleh pesangon (資�
 
 ​
 
-Khususnya apabila karyawan mengundurkan diri atas kemauan sendiri (自請離職),
+Hal ini terutama berlaku apabila karyawan mengundurkan diri atas kemauan sendiri (自請離職).
 
-karyawan tersebut tidak dapat memperoleh pesangon (Pasal 18 Undang-Undang Standar Ketenagakerjaan Taiwan),
+Karyawan tersebut tidak dapat memperoleh pesangon (Pasal 18 Undang-Undang Standar Ketenagakerjaan Taiwan).
 
-dan hal ini berbeda dari anggapan umum bahwa pesangon otomatis diterima setiap kali seseorang berhenti bekerja.
+Hal ini berbeda dari anggapan umum bahwa pesangon otomatis diterima setiap kali seseorang berhenti bekerja.
 
 ​
 
@@ -47,45 +47,45 @@ Dalam keadaan khusus berikut ini, sekalipun pekerja mengundurkan diri atas kemau
 
 ​
 
-Contoh yang paling sering dijumpai adalah pemberi kerja yang
+Contoh yang paling sering dijumpai adalah pemberi kerja yang melakukan pelanggaran berikut.
 
-tidak membayar upah (工資) tepat waktu,
+Pemberi kerja itu tidak membayar upah (工資) tepat waktu.
 
-tidak membayar upah lembur (加班費),
+Pemberi kerja itu tidak membayar upah lembur (加班費).
 
-atau tidak mendaftarkan pekerjanya pada asuransi ketenagakerjaan (勞保) atau asuransi kesehatan (健保).
+Pemberi kerja itu juga tidak mendaftarkan pekerjanya pada asuransi ketenagakerjaan (勞保) atau asuransi kesehatan (健保).
 
 Dalam keadaan seperti ini, sekalipun pekerja sendiri yang mengakhiri perjanjian kerja, pemberi kerja tetap wajib membayar pesangon kepada pekerja tersebut.
 
 ​
 
-Namun Undang-Undang Standar Ketenagakerjaan menentukan bahwa
+Namun Undang-Undang Standar Ketenagakerjaan menentukan tenggat yang ketat.
 
-apabila pekerja hendak mengakhiri perjanjian kerja berdasarkan angka 1 atau angka 6 di atas (misalnya karena hendak mengakhiri perjanjian kerja akibat tidak didaftarkan pada asuransi),
+Apabila pekerja hendak mengakhiri perjanjian kerja berdasarkan angka 1 atau angka 6 di atas (misalnya karena hendak mengakhiri perjanjian kerja akibat tidak didaftarkan pada asuransi), tenggat itu harus ditaati.
 
-pekerja harus mengakhiri perjanjian kerja dalam waktu **30 hari** sejak hari ia mengetahui keadaan tersebut,
+Pekerja harus mengakhiri perjanjian kerja dalam waktu **30 hari** sejak hari ia mengetahui keadaan tersebut.
 
-atau, dalam hal angka 6, dalam waktu **30 hari** sejak hari ia mengetahui akibat kerugian tersebut.
+Dalam hal angka 6, tenggatnya adalah **30 hari** sejak hari ia mengetahui akibat kerugian tersebut.
 
 Karena itu pekerja harus mencermati tenggat waktunya dengan baik.
 
 ​
 
-Dengan kata lain,
+Dengan kata lain, aturannya seperti ini.
 
-hukum Taiwan membedakan akibatnya menurut pihak yang bersalah.
+Hukum Taiwan membedakan akibatnya menurut pihak yang bersalah.
 
-Apabila kesalahan ada pada pihak perusahaan, pemberi kerja dapat terbebas dari kewajiban membayar pesangon.
+Apabila kesalahan ada pada pihak perusahaan, pekerja dapat menuntut pesangon.
 
-Apabila kesalahan ada pada pihak karyawan, pekerja dapat menuntut pesangon.
+Apabila kesalahan ada pada pihak karyawan, pemberi kerja dapat terbebas dari kewajiban membayar pesangon.
 
-Adakalanya kesalahan ada pada kedua belah pihak, yaitu pemberi kerja maupun pekerja,
+Adakalanya kesalahan ada pada kedua belah pihak, yaitu pemberi kerja maupun pekerja.
 
-dan begitu timbul perselisihan di antara keduanya,
+Begitu timbul perselisihan di antara keduanya, akibatnya mengikuti pihak yang bertindak lebih dahulu.
 
-pihak yang lebih dahulu mengakhiri perjanjian dengan alasan yang memadai
+Yang menentukan adalah pihak yang lebih dahulu mengakhiri perjanjian dengan alasan yang memadai.
 
-dapat terbebas dari kewajiban membayar pesangon atau justru dapat menuntut pesangon.
+Pihak itu dapat terbebas dari kewajiban membayar pesangon atau justru dapat menuntut pesangon.
 
 Karena itu, dalam sengketa ketenagakerjaan (勞資糾紛) di Taiwan,
 

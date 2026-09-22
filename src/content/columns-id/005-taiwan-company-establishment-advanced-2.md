@@ -37,9 +37,9 @@ Sebelum mengirimkan modal, tanyakan lebih dahulu kepada bank utama tempat Anda b
 
 **​**
 
-**2. Ketika modal perusahaan disetorkan, dapatkah dolar Taiwan baru (新臺幣, TWD) dikirimkan dari rekening pribadi Anda di Taiwan ke rekening kantor persiapan perusahaan Taiwan?**
+**2. Ketika modal perusahaan disetorkan, dapatkah dolar baru Taiwan (新臺幣, TWD) dikirimkan dari rekening pribadi Anda di Taiwan ke rekening kantor persiapan perusahaan Taiwan?**
 
-Hal itu dimungkinkan, tetapi Anda harus menyerahkan dokumen bukti sumber dana atas dolar Taiwan baru yang diperoleh di Taiwan.
+Hal itu dimungkinkan, tetapi Anda harus menyerahkan dokumen bukti sumber dana atas dolar baru Taiwan yang diperoleh di Taiwan.
 
 Sebagai contoh, apabila dana itu berupa penghasilan gaji yang diperoleh di Taiwan, Anda harus menyerahkan salinan bukti potong pajak atas penghasilan gaji itu (薪資所得的扣繳憑單影本).
 

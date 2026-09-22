@@ -33,7 +33,7 @@ Trước khi quyết định cấu trúc vào Đài Loan, tổng công ty có th
 
 | Hạng mục vận hành | Câu hỏi cần làm rõ trước |
 |---|---|
-| Hợp đồng khách hàng | Tổng công ty nước ngoài, công ty con Đài Loan hay đại lý địa phương ai sẽ là bên ký kết? |
+| Hợp đồng khách hàng | Bên ký là tổng công ty nước ngoài, công ty con tại Đài Loan hay đại lý tại chỗ? |
 | Báo giá và đơn hàng | Ai xác nhận cuối cùng giá và thời hạn giao? Thẩm quyền của người phụ trách tại Đài Loan đến đâu? |
 | Hàng hóa và tồn kho | Ai nhập khẩu, nắm giữ và quản lý tồn kho, xử lý trả hàng và hàng thay thế? |
 | Nhân sự | Nhân viên tổng công ty sang Đài Loan, tuyển tại chỗ, hay thuê nhà thầu bên ngoài? |
@@ -61,19 +61,19 @@ Nếu quyết định lập pháp nhân độc lập tại Đài Loan, cũng ph�
 
 ### Công ty hữu hạn: quản trị gọn, nhưng chuyển nhượng phần vốn khép kín hơn
 
-Công ty hữu hạn có thể do 1 cá nhân trở lên, hoặc cổ đông pháp nhân Đài Loan hay nước ngoài cấu thành; cổ đông về nguyên tắc chịu trách nhiệm trong phạm vi phần góp vốn. Công ty có 1 đến 3 giám đốc, bầu từ cổ đông. Cổ đông không điều hành có quyền giám sát, không cần đặt giám sát viên riêng. Trừ khi điều lệ quy định khác, mỗi cổ đông có 1 phiếu biểu quyết, nên quyền kiểm soát không nhất thiết khớp với tỷ lệ góp vốn. Việc chuyển nhượng phần vốn của cổ đông thông thường về nguyên tắc cần sự đồng ý hơn một nửa số quyền biểu quyết của cổ đông khác; đối với giám đốc thì từ 2/3 trở lên. Vì vậy phù hợp công ty có quan hệ cổ đông đơn giản, cấu trúc kiểm soát ổn định hơn là gọi vốn hay giao dịch phần vốn thường xuyên. Sau này có thể chuyển thành công ty cổ phần.
+Công ty hữu hạn có thể do 1 cá nhân trở lên, hoặc cổ đông pháp nhân Đài Loan hay nước ngoài cấu thành; cổ đông về nguyên tắc chịu trách nhiệm trong phạm vi phần góp vốn. Công ty có 1 đến 3 giám đốc, bầu từ cổ đông. Cổ đông không điều hành có quyền kiểm tra, nên không cần đặt giám sát viên riêng. Trừ khi điều lệ quy định khác, mỗi cổ đông có 1 phiếu biểu quyết, nên quyền kiểm soát không nhất thiết khớp với tỷ lệ góp vốn. Việc chuyển nhượng phần vốn của cổ đông thông thường về nguyên tắc cần sự đồng ý hơn một nửa số quyền biểu quyết của cổ đông khác; đối với giám đốc thì từ 2/3 trở lên. Vì vậy hình thức này phù hợp với công ty có quan hệ cổ đông đơn giản, cấu trúc kiểm soát ổn định hơn là gọi vốn hay giao dịch phần vốn thường xuyên. Sau này có thể chuyển thành công ty cổ phần.
 
 ### Công ty cổ phần: phù hợp khi muốn đưa nhà đầu tư khác vào hoặc có thể niêm yết
 
-Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 cổ đông trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy phù hợp doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, khích lệ cổ phần nhân viên hoặc M&A, niêm yết sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp 30 triệu TWD, hoặc chưa đạt mức đó nhưng doanh thu 100 triệu TWD hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
+Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 cổ đông trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy hình thức này phù hợp với doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, đãi ngộ bằng cổ phần cho nhân viên hoặc M&A, niêm yết hoặc đăng ký giao dịch tại sàn chứng khoán mới (興櫃) sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp 30 triệu TWD, hoặc chưa đạt mức đó nhưng doanh thu 100 triệu TWD hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
 
 ## 4. Thủ tục lập chi nhánh và công ty con khác nhau; chỉ lập công ty con mới phải qua thẩm định của Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)
 
-Khi công ty nước ngoài lập công ty con tại Đài Loan, về nguyên tắc phải tra cứu trước tên công ty, rồi xin phép đầu tư tại Vụ Thẩm định Đầu tư, Bộ Kinh tế. Sau khi được duyệt, chuyển vốn, hoàn tất thẩm định số vốn đầu tư và kiểm tra vốn do kế toán viên công chứng (會計師, CPA) thực hiện, rồi hoàn tất thành lập công ty và đăng ký thuế.
+Khi công ty nước ngoài lập công ty con tại Đài Loan, về nguyên tắc phải tra cứu trước tên công ty, rồi xin phép đầu tư tại Vụ Thẩm định Đầu tư, Bộ Kinh tế. Sau khi được duyệt, chuyển vốn, hoàn tất thẩm định số vốn đầu tư và kiểm tra vốn do kế toán sư (會計師, CPA) thực hiện, rồi hoàn tất thành lập công ty và đăng ký thuế.
 
-Ngược lại, khi công ty nước ngoài thông thường lập chi nhánh Đài Loan, về nguyên tắc không cần phép đầu tư của Vụ Thẩm định Đầu tư, mà Vụ Thương mại, Bộ Kinh tế (商業發展署) xử lý đăng ký chi nhánh và thẩm định vốn liên quan. Vẫn phải hoàn tất tra cứu tên, chuyển vốn lưu động, kiểm tra vốn và đăng ký thuế; thời gian thành lập thường nhanh hơn.
+Ngược lại, khi công ty nước ngoài thông thường lập chi nhánh Đài Loan, về nguyên tắc không cần phép đầu tư của Vụ Thẩm định Đầu tư, mà Cục Phát triển Thương mại, Bộ Kinh tế (商業發展署) xử lý đăng ký chi nhánh và thẩm định vốn liên quan. Vẫn phải hoàn tất tra cứu tên, chuyển vốn lưu động, kiểm tra vốn và đăng ký thuế; thời gian thành lập thường nhanh hơn.
 
-Trên đây là so sánh chung về các hình thức công ty, không phải tư vấn cho một giao dịch cụ thể. Chỉ có một biểu mẫu nhất định không bảo đảm giao dịch hợp pháp, cũng không bảo đảm tránh tranh chấp.
+Trên đây là so sánh chung về các hình thức công ty, không phải tư vấn cho một giao dịch cụ thể. Chỉ chọn một hình thức công ty nhất định không bảo đảm giao dịch hợp pháp, cũng không bảo đảm tránh tranh chấp.
 
 ## 5. Đăng ký công ty và việc kỹ sư làm việc hợp pháp là hai việc khác nhau
 

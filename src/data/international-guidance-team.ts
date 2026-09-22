@@ -128,10 +128,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ĐỘI NGŨ CỦA CHÚNG TÔI',
     title: 'Đội ngũ quốc tế Hovering',
     description:
-      'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên công chứng hợp tác của Hovering.',
+      'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán sư hợp tác của Hovering.',
     representativeTitle: 'Luật sư điều hành',
     teamTitle: 'Luật sư và nhân viên',
-    partnerTitle: 'Kế toán viên công chứng hợp tác',
+    partnerTitle: 'Kế toán sư hợp tác',
     introLabel: 'Giới thiệu',
     educationLabel: 'Học vấn',
     experienceLabel: 'Kinh nghiệm',
@@ -149,7 +149,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Luật sư tại Đài Loan',
       'chang-fangyu': 'Trợ lý pháp lý',
       'son-jungmin': 'Quản lý nghiệp vụ Hàn Quốc',
-      'huang-shengping': 'Kế toán viên công chứng hợp tác (CPA)',
+      'huang-shengping': 'Kế toán sư hợp tác (會計師, CPA)',
     },
   },
   id: {
@@ -1889,24 +1889,24 @@ export const guidanceTeamBios: Record<
         'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường TWD 1.57M.',
       ],
       education: [
-        'Thạc sĩ (M.S.), Institute of Finance, National Taiwan University',
+        'Thạc sĩ (M.S.), Viện Tài chính (Institute of Finance, National Taiwan University)',
         'Cử nhân (B.A.) song ngành Luật và Tài chính, National Chengchi University',
         'Sinh viên trao đổi, Kobe University và Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Quỹ Trợ giúp Pháp lý, chi nhánh Đài Trung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Từng công tác tại Ministry of Education, Legal Affairs Division, tập trung vào tranh chấp hành chính và dân sự.',
+        'Từng công tác tại Vụ Pháp chế, Bộ Giáo dục, tập trung vào tranh chấp hành chính và dân sự.',
         'Có kinh nghiệm với các vụ việc về trường đại học, quyền của giảng viên và khiếu nại hành chính.',
       ],
       education: ['Cử nhân Luật (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Vụ Pháp chế, Bộ Giáo dục (Ministry of Education, Legal Affairs Division)',
         'Luật sư, Hovering International Law Firm',
       ],
     },
@@ -1924,7 +1924,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Điều phối lịch tư vấn và việc liên lạc cho khách hàng Hàn Quốc.',
-        'Hỗ trợ trao đổi giữa các bộ phận bằng hệ thống tài liệu và quy trình công việc, trên nền tảng khoa học máy tính.',
+        'Hỗ trợ trao đổi giữa các bộ phận bằng hệ thống tài liệu và quy trình công việc, với nền tảng khoa học máy tính.',
       ],
       education: ['Cử nhân (B.S.) Khoa học máy tính, National Cheng Kung University'],
       experience: ['Bộ phận nghiệp vụ Hàn Quốc, Hovering International Law Firm'],

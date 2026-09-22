@@ -324,10 +324,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     successMessage:
       'Chúng tôi đã nhận được yêu cầu của quý vị và đang chờ xem xét. Điều này không có nghĩa là buổi tư vấn đã diễn ra hay lịch hẹn đã được xác nhận.',
     savedNotificationPendingMessage:
-      'Yêu cầu của quý vị đã được lưu, nhưng chưa xác nhận được thông báo gửi tới văn phòng. Nội dung quý vị viết không bị mất. Nếu chưa nhận được phản hồi, quý vị cũng có thể gửi thư tới địa chỉ email trên trang liên hệ.',
+      'Yêu cầu của quý vị đã được lưu, nhưng chưa xác nhận được thông báo gửi tới văn phòng. Nội dung quý vị viết không bị mất. Nếu chưa nhận được phản hồi, quý vị cũng có thể gửi thư tới địa chỉ thư điện tử trên trang liên hệ.',
     receiptIdLabel: 'Mã tiếp nhận',
     failureMessage:
-      'Không gửi được yêu cầu của quý vị. Vui lòng thử lại, hoặc gửi tới địa chỉ email trên trang liên hệ.',
+      'Không gửi được yêu cầu của quý vị. Vui lòng thử lại, hoặc gửi tới địa chỉ thư điện tử trên trang liên hệ.',
     originalLanguageLabel: 'Ngôn ngữ quý vị dùng để viết',
     originalLanguagePlaceholder:
       'Ví dụ: tiếng Việt, tiếng Indonesia, tiếng Thái, tiếng Filipino hoặc ngôn ngữ khác',
@@ -341,7 +341,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Tôi đã đọc chính sách quyền riêng tư và đồng ý gửi yêu cầu này.',
     privacyLinkLabel: 'Chính sách quyền riêng tư',
     requiredMessage: 'Mục này là bắt buộc.',
-    invalidEmailMessage: 'Vui lòng nhập địa chỉ email hợp lệ.',
+    invalidEmailMessage: 'Vui lòng nhập địa chỉ thư điện tử hợp lệ.',
     tooLongMessage: 'Nội dung quá dài. Vui lòng rút ngắn rồi gửi lại.',
     sourceLanguageNotice:
       'Bài viết này chỉ có bằng {language}, và liên kết sẽ mở trang gốc đó.',

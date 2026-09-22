@@ -546,9 +546,9 @@ type GuidanceLlmsNotices = {
 export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices> = {
   vi: {
     consultationNotice:
-      'Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
+      'Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
     discoveryNotice:
-      'Tệp llms.txt này chỉ là bản đồ tra cứu các trang công khai; nó không hứa hẹn thứ hạng trên công cụ tìm kiếm, sự bảo trợ, khuyến nghị của trí tuệ nhân tạo hay việc bảo đảm được hiển thị.',
+      'Tệp llms.txt này chỉ là bản đồ tra cứu các trang công khai; nó không hứa hẹn thứ hạng trên công cụ tìm kiếm, sự giới thiệu, khuyến nghị của trí tuệ nhân tạo hay việc đăng quảng cáo.',
     confidentialNotice:
       'Vì nội dung gốc được lưu giữ, xin đừng viết những thông tin chưa cần thiết ở bước đầu, chẳng hạn số hộ chiếu, số giấy tờ tùy thân hay thông tin tài khoản ngân hàng.',
   },

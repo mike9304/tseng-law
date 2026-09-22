@@ -1,0 +1,75 @@
+WO-F-vi — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-vi-r1
+date: 2026-09-22
+scope: Vietnamese guidance pack + columns-vi 001–018. No commit. Column 012 had no finding row and was not edited.
+
+## Rows applied
+Part a P1: a#1–a#5.
+Part a P2: a#7–a#28, a#30–a#34. a#29 rephrased inside the existing table row (see skipped).
+Part b P1: b#1.
+Part b P2: b#2–b#37.
+R2: 001 opening no longer addresses a Vietnamese company as the default reader; 004 parent company is “ngoài Đài Loan”; 011 “Thương hiệu Việt Nam” is “thương hiệu từ một nước khác”. Korea tax-treaty and bank passages were already labelled examples and were left.
+R5/R6: consultation lists that name Chinese now include (中文), except the attorney bio (Han is banned there). “email” in the inquiry errors is “thư điện tử”.
+R7: chatty closings in 003, 005, 006, 008, 009, and the same well-wish / first-person asides in 013, rephrased inside the existing blocks.
+R8 sweeps that were the same pattern as a flagged row: 公司登記辦法 one name (“Quy chế đăng ký công ty”); 營業稅 “Luật Thuế kinh doanh”; 商業發展署 “Cục Phát triển Thương mại” in 001 as well as 018; 判斷 “phán đoán” → “đánh giá” (or “kết luận” / “suy đoán” where that was the finding).
+
+## Rows skipped or modified
+- a#6 and any gloss beside “TWD 1.57M”: skipped. The bio test requires that token byte-identical.
+- a#29: did not delete the “Mức độ khó” table row. ACCEPTED forbids merging or dropping table rows. The cells were rewritten as relative procedural complexity, and the row stayed.
+- a#4 link label: the reviewer’s sentence drops the digit 10. The checker then reported numbers FAIL, missing 10. The label is now the withholding-rate description plus “(Điều 10)”. The URL is unchanged, and the label no longer calls that URL Điều 10 Luật Thuế Kinh doanh.
+- b#19: the closing quote was moved to the end of the markdown link. The URL is unchanged.
+- b#26 and b#34: the bare “Không” was removed only from the section body. The FAQ entries still answer a real question, which the review said they may keep. 007 §6 body no longer opens with “Không phải như vậy”; the FAQ for that question still does, because its heading is a question.
+- Frontmatter url: with Hangul (008, 009): skipped.
+- English institution lines in the bios: Vietnamese is in front, and the canonical English name stays in parentheses. The bio test requires “Institute of Finance, National Taiwan University”, “Legal Aid Foundation, Taichung Branch”, and “Ministry of Education, Legal Affairs Division” as substrings, and it forbids Han in any bio line, so (中文) was not added to the bio.
+- “會計師” stays on the partner role line only. Putting it in the lawyers-page description made vi the only one of the four guidance languages with that gloss, and the parity test failed. The description still drops “công chứng” (“kế toán sư hợp tác”). The page description and the team description stay the same string, which a test requires.
+- About, pricing, and contact answers were one word over the 80-word cap after “chỉ” and “(中文)”. One word was cut in each of those three answers. The lock sentence itself was kept.
+
+## Systemic patterns and instance counts
+- phán đoán (判斷) rewritten: 33 remaining hits replaced with “đánh giá”, plus 4 earlier targeted hits (adverse inference → “suy đoán bất lợi”; the custody scrutiny sentence; “một kết luận có hiệu lực”; the two advertising sentences). Files: 001, 002, 004, 010, 011, 016.
+- tiến vào → gia nhập: 5 in 011, title and h1 in 004, one body sentence in 004, the 001 opening.
+- Rốt cuộc dropped at a paragraph opening: 001, 004, 014 (3).
+- quá bán → hơn một nửa: 3 in 002.
+- người quản trị as a second role beside 董事: 4 in 002, 3 in 004.
+- ngày kế tiếp ngày → ngày liền sau ngày: 011 and 002 (2).
+- tiền công for a carriage charge: 2 “tiền cước” (FAQ and §4), 1 intro “tiền cước”, 1 Highway Act “thu thù lao”. Wages in 014 were left.
+- Vì vậy phù hợp (missing với): 2 in 018.
+- biểu thị ý chí: 009 hiring misrepresentation, 014 notice heading, 016 renunciation (3).
+- Consultation-language “chỉ” added on the three stand-alone answers (pricing, contact, faq) and the contact-page language bullet. (中文) added on the home, contact, and FAQ language lists, the six answer summaries, and the llms notice.
+- Law-firm “cơ sở” → “văn phòng”: home, about (including Cao Hùng, Đài Trung, Bình Đông), and the about answer. “trên cơ sở hồ sơ” was left.
+- Statute name “Quy tắc” / “Biện pháp đăng ký công ty” → “Quy chế đăng ký công ty (公司登記辦法)”: 2 body/FAQ citations in 002, the Điều 4 citation, and the link label.
+- Personal-blog tails rephrased, one block each: 003 close and “tôi muốn nhấn mạnh”; 005 and 013 well-wishes; 006 pivot; 008 table intro, anecdote opener, and “phải không?”; 013 bank-employee aside, reader aside, and “tôi khuyến nghị”.
+
+## §Verify
+node scripts/check-column-translation.mjs --dir src/content/columns-vi --lang vi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=21
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-vi src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+
+(The count 24 is before this log file. Column 012 is unchanged. No other locale’s strings were edited. docs/i18n/global-plan/WO-F-vi.txt and the untracked reviews/native/rounds/ directory were already dirty at the start of this lane.)
+
+## Reviewer points not applied
+- a#6: do not append a Vietnamese reading to “TWD 1.57M”. A test pins that token.
+- a#29: do not delete the difficulty row. The checker compares block structure, and ACCEPTED forbids dropping a table row.
+- a#4 suggested label with no “10”: the checker counts that digit against the English source. “(Điều 10)” stays in the label; the wrong statute name does not.
+- Translating the three institution lines by deleting the English names: the bio contract requires those names byte-identical, and it rejects Han in bios. Vietnamese sits in front of the English name.
+- “會計師” on the lawyers-page description: the four-language gloss test requires vi, id, th, and fil to annotate the same characters. The gloss is on the role line, which is not that surface.
+- 006: no sentence about the writer’s age was in the file. Only the flagged pivot was rewritten.
+- 018 “1 phiếu” and “2/3”: no row asked to spell them out, and adding words would not remove the digits the checker already accepts.

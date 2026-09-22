@@ -31,7 +31,7 @@ Tuy nhiên, vẫn có **những trường hợp ngoại lệ**.
 
 Trong những tình huống đặc biệt sau đây, dù người lao động tự xin nghỉ việc, người sử dụng lao động vẫn phải chi trả trợ cấp thôi việc cho người lao động (Điều 14 Luật Tiêu chuẩn Lao động (勞動基準法), điều này áp dụng tương tự Điều 17):
 
-1. Khi giao kết hợp đồng lao động (勞動契約), người sử dụng lao động biểu thị ý chí không đúng sự thật (虛偽意思表示), khiến người lao động tin nhầm và có nguy cơ phải chịu thiệt hại
+1. Khi giao kết hợp đồng lao động (勞動契約), người sử dụng lao động cung cấp thông tin giả khi giao kết hợp đồng (虛偽意思表示), khiến người lao động tin nhầm và có nguy cơ phải chịu thiệt hại
 
 (ví dụ: người sử dụng lao động nói với người lao động rằng sau khi vào làm sẽ được cử sang một chi nhánh ở nước ngoài vốn không hề tồn tại)
 
@@ -77,7 +77,7 @@ pháp luật Đài Loan, dù lỗi thuộc về phía công ty
 
 hay lỗi thuộc về phía người lao động,
 
-đều trao cho cả hai bên quyền không phải chi trả trợ cấp thôi việc hoặc quyền yêu cầu được nhận khoản trợ cấp đó.
+thì một bên có thể không phải chi trả trợ cấp thôi việc, còn bên kia có thể yêu cầu được nhận khoản đó.
 
 Đôi khi, cả người sử dụng lao động và người lao động đều có lỗi,
 
@@ -89,7 +89,7 @@ có thể không phải chi trả trợ cấp thôi việc hoặc có quyền y�
 
 Do đó, trong các tranh chấp lao động tại Đài Loan,
 
-''**thời điểm**'' là yếu tố hết sức quan trọng.
+**thời điểm** là yếu tố hết sức quan trọng.
 
 Trong phần lớn trường hợp, bên nào chuẩn bị trước thì bên đó bảo vệ được quyền lợi của mình.
 

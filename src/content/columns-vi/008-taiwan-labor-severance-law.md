@@ -48,7 +48,7 @@ công ty có thể sa thải người lao động mà không phải chi trả tr
 
 ​
 
-Tôi xin tổng hợp lại bằng một bảng đơn giản như sau.
+Bảng dưới đây tóm tắt các hình thức chấm dứt hợp đồng.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ Tôi xin tổng hợp lại bằng một bảng đơn giản như sau.
 | Ý nghĩa | Khi người sử dụng lao động cần điều chỉnh nhân sự do tình hình kinh doanh, nguyên nhân đó phát sinh từ phạm vi kinh doanh của người sử dụng lao động chứ không thuộc trách nhiệm của người lao động. Vì vậy, người sử dụng lao động phải tuân thủ thời hạn báo trước (預告期間) và có nghĩa vụ chi trả trợ cấp thôi việc, qua đó bù đắp một cách cân bằng những bất lợi mà người lao động phải gánh chịu. | Khi người lao động có hành vi vi phạm pháp luật hoặc hành vi không đúng đắn, người sử dụng lao động được chấm dứt hợp đồng lao động (勞動契約) ngay lập tức mà không cần báo trước, và không phải chi trả trợ cấp thôi việc. Đây là một biểu hiện của quyền kỷ luật của người sử dụng lao động. | Người lao động có quyền tự do chấm dứt hợp đồng vào bất cứ lúc nào, nhưng phải tuân thủ thời hạn báo trước tương ứng với thâm niên công tác (年資) của mình, để người sử dụng lao động có thể sắp xếp bàn giao công việc và tìm người thay thế. |
 | Điều kiện | Có  (Điều 11 Luật Tiêu chuẩn Lao động Đài Loan) | Có  (Điều 12 Luật Tiêu chuẩn Lao động Đài Loan) | Không |
 | Báo trước | Cần báo trước | Không cần báo trước | Cần báo trước |
-| Mức độ khó | Đơn giản | Khó | Đơn giản |
+| Mức độ phức tạp khi áp dụng | Căn cứ luật định tương đối rõ | Phải chứng minh từng hành vi vi phạm | Thời hạn báo trước theo thâm niên |
 | Công ty có phải chi trả trợ cấp thôi việc (資遣費) hay không | Phải chi trả | Không phải chi trả | Không phải chi trả |
 |  | Điều 11 Luật Tiêu chuẩn Lao động Đài Loan (勞動基準法第11條): Nếu không thuộc một trong các trường hợp sau đây, người sử dụng lao động không được chấm dứt hợp đồng lao động với người lao động, kể cả khi đã báo trước.  1. Khi người sử dụng lao động đóng cửa, ngừng kinh doanh (歇業) hoặc chuyển nhượng doanh nghiệp  2. Khi doanh nghiệp của người sử dụng lao động bị thua lỗ hoặc phải thu hẹp hoạt động kinh doanh (業務緊縮)  3. Khi vì lý do bất khả kháng mà doanh nghiệp phải tạm ngừng hoạt động (暫停工作) từ 1 tháng trở lên  4. Khi tính chất hoạt động kinh doanh (業務性質) thay đổi, có nhu cầu giảm số lượng người lao động, và không có công việc phù hợp khác để bố trí cho người lao động bị cho thôi việc  5. Khi một người lao động cụ thể thực sự không thể đảm đương công việc được giao | Điều 12 Luật Tiêu chuẩn Lao động Đài Loan (勞動基準法第12條): Người sử dụng lao động được sa thải người lao động mà không cần báo trước nếu người lao động thuộc một trong các trường hợp sau đây.  1. Khi giao kết hợp đồng lao động đã đưa ra thông tin không đúng sự thật, khiến người sử dụng lao động hiểu sai và có nguy cơ gây thiệt hại cho hoạt động kinh doanh  2. Có hành vi bạo lực hoặc lăng mạ nghiêm trọng đối với người sử dụng lao động, người thân của người sử dụng lao động, người đại diện của người sử dụng lao động hoặc những người lao động khác cùng làm việc  3. Bị tuyên án tù có thời hạn trở lên và bản án đã có hiệu lực, mà không được hưởng án treo và cũng không được nộp tiền thay thế hình phạt tù (易科罰金)  4. Vi phạm hợp đồng lao động hoặc nội quy lao động (工作規則) với tình tiết nghiêm trọng  5. Cố ý làm hư hỏng, tiêu hao máy móc, công cụ, nguyên vật liệu, sản phẩm hoặc các tài sản khác thuộc sở hữu của người sử dụng lao động, hoặc cố ý tiết lộ bí mật kỹ thuật, bí mật kinh doanh của người sử dụng lao động, gây thiệt hại cho người sử dụng lao động  6. Vắng mặt không có lý do chính đáng liên tục 3 ngày, hoặc vắng mặt không có lý do chính đáng từ 6 ngày trở lên trong 1 tháng |  |
 
@@ -82,7 +82,7 @@ và đề phòng để không sập bẫy mà công ty sắp đặt.
 
 ​
 
-Tôi xin kể lại một vụ việc mà chính tôi từng xử lý.
+Dưới đây là một vụ việc đã xử lý.
 
 Có một công ty A nổi tiếng, có chi nhánh trên khắp Đài Loan.
 
@@ -120,7 +120,7 @@ người này đưa cho ông B một tờ giấy A4,
 
 và chỉ thị ông viết vào đó nội dung sau:
 
-"Tôi là OOO, tự nguyện chấp nhận hạ chức vụ và giảm lương".
+"Tôi là [họ tên], tự nguyện chấp nhận hạ chức vụ và giảm lương".
 
 Người này còn nói sẽ đưa bản thỏa thuận này cho toàn bộ những người lao động khác xem,
 
@@ -200,7 +200,7 @@ hoặc điều chuyển người lao động sang một vị trí bất thườn
 
 **bảng ghi giờ làm thêm, hồ sơ về thành tích công việc,**
 
-**nội quy công ty, các thư điện tử (email) trao đổi với đồng nghiệp và cấp trên,**
+**nội quy công ty, các thư điện tử trao đổi với đồng nghiệp và cấp trên,**
 
 **cùng với việc ghi âm các cuộc nói chuyện với cấp trên,**
 
@@ -210,7 +210,7 @@ hoặc điều chuyển người lao động sang một vị trí bất thườn
 
 Nếu quý vị đang làm việc tại Đài Loan,
 
-thì trợ cấp thôi việc khó nhận được hơn quý vị vẫn tưởng, phải không?
+thì trợ cấp thôi việc không phải lúc nào cũng dễ nhận.
 
 Xin đừng dễ dàng thỏa hiệp với công ty,
 

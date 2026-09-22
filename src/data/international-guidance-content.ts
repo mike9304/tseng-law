@@ -275,14 +275,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Văn phòng hỗ trợ những gì',
             paragraphs: [
-              'Hovering International Law Firm là văn phòng luật sư có trụ sở tại Đài Loan, hành nghề theo pháp luật Đài Loan và có các cơ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng nhận cả công việc tư vấn cho doanh nghiệp lẫn các vụ việc tranh tụng, và hỗ trợ khách hàng nước ngoài trong những thủ tục cần thực hiện tại Đài Loan.',
+              'Hovering International Law Firm là văn phòng luật sư có trụ sở tại Đài Loan, hành nghề theo pháp luật Đài Loan và có các văn phòng tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng nhận cả công việc tư vấn cho doanh nghiệp lẫn các vụ việc tranh tụng, và hỗ trợ khách hàng nước ngoài trong những thủ tục cần thực hiện tại Đài Loan.',
               'Toàn bộ nội dung ở đây mang tính tham khảo chung. Kết luận của một vụ việc phụ thuộc vào tình tiết cụ thể, quy định được áp dụng và thời điểm phát sinh, nên phần hướng dẫn này không thay thế cho việc trao đổi trực tiếp với luật sư về hồ sơ của quý vị.',
             ],
           },
           {
             heading: 'Ngôn ngữ của trang và ngôn ngữ tư vấn là hai việc khác nhau',
             paragraphs: [
-              'Trang này được viết bằng tiếng Việt, nhưng việc tư vấn thực tế với luật sư chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Đọc được hướng dẫn bằng tiếng Việt không có nghĩa là buổi trao đổi với luật sư sẽ diễn ra bằng tiếng Việt.',
+              'Trang này được viết bằng tiếng Việt, nhưng việc tư vấn thực tế với luật sư chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn. Đọc được hướng dẫn bằng tiếng Việt không có nghĩa là buổi trao đổi với luật sư sẽ diễn ra bằng tiếng Việt.',
               'Chúng tôi không cam kết bố trí phiên dịch, không cam kết trả lời trong một khoảng thời gian nhất định và không xác nhận lịch hẹn qua trang này. Nếu quý vị không sử dụng được cả bốn ngôn ngữ nêu trên, phần “Liên hệ” giải thích cách chúng tôi xác nhận phương thức trao đổi.',
             ],
           },
@@ -341,7 +341,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Tranh chấp lao động và việc làm',
             paragraphs: [
-              'Nhóm này gồm chấm dứt hợp đồng lao động (勞動契約), trợ cấp thôi việc theo pháp luật Đài Loan (資遣費; xin đừng coi là đồng nhất với các chế độ tương tự của nước khác), tiền lương và các tranh chấp phát sinh từ điều khoản của hợp đồng lao động, cho cả phía người lao động và phía người sử dụng lao động. Khi xem xét, chúng tôi tách bạch căn cứ chấm dứt quan hệ lao động với các vấn đề về thông báo, khoản phải trả và thời hạn.',
+              'Nhóm này gồm chấm dứt hợp đồng lao động (勞動契約), trợ cấp thôi việc theo pháp luật Đài Loan (資遣費; không đồng nhất với khoản trợ cấp thôi việc theo pháp luật nước khác), tiền lương và các tranh chấp phát sinh từ điều khoản của hợp đồng lao động, cho cả phía người lao động và phía người sử dụng lao động. Khi xem xét, chúng tôi tách bạch căn cứ chấm dứt quan hệ lao động với các vấn đề về thông báo, khoản phải trả và thời hạn.',
               'Hợp đồng lao động, nội quy lao động (工作規則), bảng lương và trao đổi giữa hai bên thường là tài liệu quyết định. Nếu quý vị còn giữ những tài liệu này, hãy nêu trong phần tóm tắt để việc xem xét ban đầu chính xác hơn.',
             ],
           },
@@ -372,22 +372,22 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'VỀ VĂN PHÒNG',
         title: 'Về Hovering International Law Firm',
         description:
-          'Thông tin cơ bản về văn phòng luật sư tại Đài Loan, các cơ sở của văn phòng và công việc có yếu tố nước ngoài.',
+          'Thông tin cơ bản về văn phòng luật sư tại Đài Loan, các văn phòng và công việc có yếu tố nước ngoài.',
         intro:
-          'Hovering International Law Firm là văn phòng luật sư tại Đài Loan với đội ngũ luật sư làm việc ở nhiều lĩnh vực khác nhau, từ tư vấn doanh nghiệp đến tranh tụng. Phần này giới thiệu quá trình hình thành, các cơ sở và mảng công việc có yếu tố nước ngoài của văn phòng.',
+          'Hovering International Law Firm là văn phòng luật sư tại Đài Loan với đội ngũ luật sư làm việc ở nhiều lĩnh vực khác nhau, từ tư vấn doanh nghiệp đến tranh tụng. Phần này giới thiệu quá trình hình thành, các văn phòng và mảng công việc có yếu tố nước ngoài của văn phòng.',
         sections: [
           {
             heading: 'Thành lập và cơ cấu',
             paragraphs: [
               'Hovering International Law Firm (昊鼎國際法律事務所) được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學). Tên gọi trong tiếng Trung ghép chữ 昊 mang nghĩa “bầu trời rộng lớn” và chữ 鼎 mang nghĩa “nền móng vững chắc”, thể hiện định hướng của văn phòng khi thành lập.',
-              'Văn phòng có các cơ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Cơ sở Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự, hành chính thông thường. Cơ sở Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Cơ sở Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.',
+              'Văn phòng có trụ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự, hành chính thông thường. Văn phòng Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Văn phòng Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.',
               'Bên cạnh hoạt động luật sư, năm 2020 văn phòng kế toán Hovering Accounting Office được thành lập, cung cấp dịch vụ kế toán và hoạch định thuế cho chủ doanh nghiệp và cá nhân có tài sản lớn.',
             ],
           },
           {
             heading: 'Công việc có yếu tố nước ngoài',
             paragraphs: [
-              'Công việc có yếu tố nước ngoài của văn phòng gồm thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp. Cơ sở Đài Trung chuyên trách các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Luật sư Wei Tseng (曾雋崴) phụ trách khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong các nhóm việc nêu trên.',
+              'Công việc có yếu tố nước ngoài của văn phòng gồm thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp. Văn phòng Đài Trung chuyên trách các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Luật sư Wei Tseng (曾雋崴) phụ trách khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong các nhóm việc nêu trên.',
               'Việc chúng tôi có thể tiếp nhận một vụ việc hay không phụ thuộc vào nội dung vụ việc và ngôn ngữ trao đổi. Nếu vụ việc của quý vị thuộc các lĩnh vực công việc nêu trên và có thể trao đổi bằng một trong bốn ngôn ngữ tư vấn, quý vị có thể gửi tóm tắt để luật sư xem xét.',
             ],
           },
@@ -404,7 +404,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'LUẬT SƯ',
         title: 'Đội ngũ quốc tế Hovering',
         description:
-          'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên công chứng hợp tác của Hovering.',
+          'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán sư hợp tác của Hovering.',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a
@@ -466,7 +466,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
             items: [
               'Ngôn ngữ của trang: phần hướng dẫn này được viết bằng tiếng Việt.',
-              'Ngôn ngữ tư vấn: việc tư vấn với luật sư được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
+              'Ngôn ngữ tư vấn: việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
               'Ngôn ngữ quý vị viết: quý vị có thể viết tóm tắt bằng ngôn ngữ của mình, và nội dung gốc được giữ nguyên.',
             ],
           },
@@ -522,7 +522,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Tôi có thể được tư vấn bằng tiếng Việt không?',
             answer:
-              'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.',
+              'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.',
           },
           {
             question: 'Nếu tôi không dùng được cả bốn ngôn ngữ đó thì sao?',

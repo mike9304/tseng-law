@@ -22,7 +22,7 @@ Nếu quý vị đã đọc [Thành lập công ty tại Đài Loan — Phần c
 
 ​
 
-Chúng tôi mong phần Hỏi–Đáp dưới đây cũng hữu ích cho quý vị đang cân nhắc thành lập công ty tại Đài Loan.
+Phần hỏi đáp dưới đây dành cho quý vị đang cân nhắc thành lập công ty tại Đài Loan.
 
 ​
 

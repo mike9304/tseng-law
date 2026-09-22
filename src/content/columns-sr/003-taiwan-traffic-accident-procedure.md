@@ -37,7 +37,7 @@ Kada je bezbednost obezbeđena, napravite ukupne i detaljne snimke da zabeležit
 
 ## Q3. Pri povredi, koja potraživanja i koje rokove treba proveriti?
 
-Član 284 Krivičnog zakonika uređuje telesnu povredu iz nehata (過失傷害) i tešku telesnu povredu iz nehata (過失致重傷). Pošto je prema članu 287 Krivičnog zakonika reč o krivičnom delu koje se goni po privatnoj tužbi (告訴乃論之罪), prema članu 237 Zakonika o krivičnom postupku (Tajvan) (刑事訴訟法) tužbu treba načelno podneti u roku od 6 meseci od dana kada je učinilac postao poznat.
+Član 284 Krivičnog zakonika uređuje telesnu povredu iz nehata (過失傷害) i tešku telesnu povredu iz nehata (過失致重傷). Pošto je prema članu 287 Krivičnog zakonika reč o krivičnom delu koje se goni po prijavi oštećenog (告訴乃論之罪), prema članu 237 Zakonika o krivičnom postupku (Tajvan) (刑事訴訟法) prijavu treba načelno podneti u roku od 6 meseci od dana kada je učinilac postao poznat.
 
 Kod građanske naknade štete (損害賠償), prema članu 197 Građanskog zakonika (Tajvan) (民法) potraživanje više nije moguće po isteku 2 godine od dana kada su šteta i dužnik naknade postali poznati, ili 10 godina od dana protivpravne radnje (侵權行為). Koje činjenice utiču na zastarelost (消滅時效), treba oceniti posebno.
 
@@ -49,21 +49,21 @@ Izbor se razlikuje prema prekidu zastarelosti (時效中斷), krugu tuženih, do
 
 Krivična odgovornost može se utvrditi samo ako su priznati povreda dužnosti pažnje svakog i uzročna veza između te povrede i povrede druge strane. Sama činjenica da je nehat postojao na obe strane ne zasniva automatski odgovornost za telesnu povredu iz nehata.
 
-Na građanskoj ravni, prema članu 217 Građanskog zakonika, ako oštećeni ima krivicu koja je doprinela nastanku ili povećanju štete (與有過失), sud može da smanji ili otpusti naknadu. Na primer, ako šteta priznata u novom tajvanskom dolaru (新臺幣, TWD) iznosi TWD 1.000.000, a krivica oštećenog ocenjena je na 50 %, iznos može biti smanjen na TWD 500.000 pre drugih usklađivanja.
+Na građanskoj ravni, prema članu 217 Građanskog zakonika, ako oštećeni ima krivicu koja je doprinela nastanku ili povećanju štete (與有過失), sud može da umanji naknadu ili da dužnika oslobodi obaveze. Na primer, ako šteta priznata u novom tajvanskom dolaru (新臺幣, TWD) iznosi TWD 1.000.000, a krivica oštećenog ocenjena je na 50 %, iznos može biti smanjen na TWD 500.000 pre drugih usklađivanja.
 
 Veštačenje (鑑定) ili tabela preliminarne analize mogu biti važni podaci, ali sud ne vezuju mehanički. Sud ocenjuje celinu dokaza, uključujući iskaze, snimke i stanje vozila.
 
 ## Q5. Šta treba navesti u ispravi o poravnanju?
 
-U ispravi o poravnanju (和解書) treba individualizovati datum, mesto i strane nezgode i upisati iznos i trenutak plaćanja, rešavanje osiguranih davanja, potraživanja koja su obuhvaćena i ona koja su zadržana. Treba i jasno utvrditi dalje lečenje, povrede otkrivene kasnije, izdavanje isprava, kao što je lekarsko uverenje (診斷證明書), i odnos između plaćanja i povlačenja tužbe.
+U ispravi o poravnanju (和解書) treba individualizovati datum, mesto i strane nezgode i upisati iznos i trenutak plaćanja, rešavanje osiguranih davanja, potraživanja koja su obuhvaćena i ona koja su zadržana. Treba i jasno utvrditi dalje lečenje, povrede otkrivene kasnije, izdavanje isprava, kao što je lekarsko uverenje (診斷證明書), i odnos između plaćanja i povlačenja prijave oštećenog.
 
 Poravnanje (和解) iz člana 736 Građanskog zakonika ugovor je u kojem strane uzajamno ustupaju da bi okončale spor ili mu preduhitrile. Prema članu 737 Građanskog zakonika obim u kojem prava prestaju ocenjuje se takođe samo u granicama onoga što je u ispravi o poravnanju napušteno. Zato se, bez ocene teksta, ne može tvrditi da sva buduća potraživanja nestaju.
 
-Ako je reč o krivičnom delu koje se goni po privatnoj tužbi, prema članu 238 Zakonika o krivičnom postupku tužba se može povući do završetka usmene rasprave prvog stepena, a nakon povlačenja ne može se podneti ponovo. Kod krivičnog dela koje se ne goni po privatnoj tužbi, međutim, optužba se ne okončava automatski privatnim poravnanjem, a činjenica poravnanja ne obavezuje uvek na povlačenje tužbe.
+Ako je reč o krivičnom delu koje se goni po prijavi oštećenog, prema članu 238 Zakonika o krivičnom postupku prijava se može povući do završetka usmene rasprave prvog stepena, a nakon povlačenja ne može se podneti ponovo. Kod krivičnog dela koje se ne goni po prijavi oštećenog, međutim, optužba se ne okončava automatski privatnim poravnanjem, a činjenica poravnanja ne obavezuje uvek na povlačenje prijave.
 
 ### Zvanični izvori Q1–Q5
 
-- [Uredba o upravljanju i sankcijama u drumskom saobraćaju (道路交通管理處罰條例), član 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Zakon o upravljanju i sankcijama u drumskom saobraćaju (道路交通管理處罰條例), član 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Krivični zakonik (Tajvan), član 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Krivični zakonik (Tajvan), član 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Krivični zakonik (Tajvan), član 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -177,18 +177,18 @@ Kod nezgode jednog vozila vozač tog vozila načelno nije adresat davanja obavez
 
 Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi TWD 200.000 u novom tajvanskom dolaru; davanje za invalidnost (失能) iznosi od TWD 80.000 do TWD 3.000.000 prema 15 zakonskih stepeni; davanje za smrt iznosi TWD 3.000.000, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenog i 1 nezgodu iznosi TWD 3.200.000. Na ranije nezgode može se primeniti prethodna tarifa.
 
-Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, učešću (自負額), isključenjima, nehatu i drugim uslovima police, pa policu i uslove treba proveriti stvar po stvar.
+Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima police, pa policu i uslove treba proveriti stvar po stvar.
 
 ### Zvanični izvori Q11–Q15
 
 - [Građanski zakonik, član 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Građanski zakonik, član 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Građanski zakonik, član 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Presuda Apelacionog suda Tajvana, godina 109, stvar 上易字 broj 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Presuda Apelacionog suda Tajvana, godina 109, stvar 上易字 broj 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Presuda Apelacionog suda Tajvana, godina 109. po kalendaru Republike Kine, stvar 上易字 broj 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Presuda Apelacionog suda Tajvana, godina 109. po kalendaru Republike Kine, stvar 上易字 broj 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Kalkulator sadašnje vrednosti Hofmana Sudskog juana](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Građanski zakonik, član 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Presuda okružnog suda Taojuan, godina 112, stvar 壢簡字 broj 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Presuda okružnog suda Taojuan, godina 112. po kalendaru Republike Kine, stvar 壢簡字 broj 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Građanski zakonik, član 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Krivični zakonik (Tajvan), član 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zakon o obaveznom osiguranju od autoodgovornosti](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -199,7 +199,7 @@ Q16. Može li se nakon nezgode sve ostaviti osiguravaču?
 
 ​
 
-Prema mom iskustvu, osiguravači često ne rešavaju dovoljno pažljivo emotivnu stranu stvari kod učesnika nezgode.
+Osiguravači često ne rešavaju dovoljno pažljivo emotivnu stranu stvari kod učesnika nezgode.
 
 ​
 
@@ -255,15 +255,15 @@ U nekim presudama za tešku telesnu povredu iz nehata izrečeno je oko 4 meseca,
 
 ​
 
-Q18. Ako zaključite poravnanje s drugom stranom, može li se krivična tužba povući?
+Q18. Ako zaključite poravnanje s drugom stranom, može li se krivična prijava oštećenog povući?
 
 ​
 
-Telesna povreda iz nehata i teška telesna povreda iz nehata krivično su delo koje se goni po privatnoj tužbi (告訴乃論之罪), pa se krivična tužba može povući.
+Telesna povreda iz nehata i teška telesna povreda iz nehata krivično su delo koje se goni po prijavi oštećenog (告訴乃論之罪), pa se krivična prijava oštećenog može povući.
 
 ​
 
-Pri smrti iz nehata povlačenje tužbe nije moguće; međutim, ako zaključite poravnanje s porodicom druge strane, sud može kaznu ublažiti.
+Pri smrti iz nehata povlačenje prijave nije moguće; međutim, ako zaključite poravnanje s porodicom druge strane, sud može kaznu ublažiti.
 
 ​
 
@@ -315,7 +315,7 @@ Advokat treba dalje razumljivo da objasni situaciju klijenta i upozori na predvi
 
 ​
 
-Valja izbegavati advokata koji stvar naduvava i samo zbog dobijanja naloga tvrdi da se poravnanje ne može zaključiti i da je nužno parničiti do kraja na građanskoj i krivičnoj ravni.
+Valja izbegavati advokata koji stvar preuveličava i samo zbog dobijanja naloga tvrdi da se poravnanje ne može zaključiti i da je nužno parničiti do kraja na građanskoj i krivičnoj ravni.
 
 ​
 
@@ -323,7 +323,7 @@ Valja izbegavati advokata koji stvar naduvava i samo zbog dobijanja naloga tvrdi
 
 ​
 
-Time ovaj pregled pitanja i odgovora o saobraćajnim nezgodama završavam.
+Time je sažet ovaj pregled pitanja i odgovora o saobraćajnim nezgodama.
 
 ​
 
@@ -347,7 +347,7 @@ Učinilac često ne mari za telefoniranje s pitanjem o stanju oštećenog ni za 
 
 ​
 
-Oštećeni tako ostaje veoma povređen i pada u gnev, pa često ne ustupa u iznosu pregovaranja ili predlaže obezbeđujuće zaplenjenje (假扣押) i vodi zaplenjenje imovine druge strane do kraja.
+Oštećeni tako ostaje veoma povređen i pada u gnev, pa često ne ustupa u iznosu pregovaranja ili predlaže privremenu meru obezbeđenja potraživanja (假扣押) i vodi obezbeđenje imovine druge strane do kraja.
 
 ​
 

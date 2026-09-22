@@ -1209,11 +1209,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Glavne oblasti',
     consultationLanguagesLabel: 'Jezici konsultacije',
     roles: {
-      'tseng-junwei': 'Rukovodeća advokatkinja na Tajvanu (Managing Attorney)',
-      'chang-rongxuan': 'Advokat na Tajvanu (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Rukovodstvo operacija u Koreji (Korea Operations Manager)',
-      'huang-shengping': 'Partnerski računovođa (Partner CPA)',
+      'tseng-junwei': 'Rukovodeća advokatkinja na Tajvanu',
+      'chang-rongxuan': 'Advokat na Tajvanu',
+      'chang-fangyu': 'Pravni asistent',
+      'son-jungmin': 'Rukovodilac operacija za Koreju',
+      'huang-shengping': 'Partner, ovlašćeni računovođa (Partner CPA)',
     },
   },
   sl: {
@@ -4211,40 +4211,40 @@ export const guidanceTeamBios: Record<
         'Zastupala je korejskog studenta u zahtevu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.',
       ],
       education: [
-        'Master (M.S.), Institute of Finance, National Taiwan University',
-        'Diploma (B.A.) u dvostrukom programu prava i finansija, National Chengchi University',
+        'Magistarka nauka (M.S.), Institut za finansije, National Taiwan University',
+        'Diplomirala (B.A.) na dvostrukom programu prava i finansija, National Chengchi University',
         'Studentkinja na razmeni na Kobe University i Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fondacija pravne pomoći, podružnica u Tajčungu',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Ranije u Ministry of Education, Legal Affairs Division, sa težištem na upravnim i građanskim stvarima.',
+        'Ranije u Ministarstvu prosvete, odeljenju za pravne poslove, sa težištem na upravnim i građanskim stvarima.',
         'Iskustvo u stvarima univerziteta, prava nastavnika i upravnih žalbi.',
       ],
       education: [
         'Diploma prava (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministarstvo prosvete, odeljenje za pravne poslove',
         'Advokat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal sa dugogodišnjim radom; ranije senior paralegal u više advokatskih kancelarija, sa težištem na procesnoj podršci, korporativnoj oblasti i stranim investicijama.',
+        'Pravni asistent sa dugogodišnjim radom; ranije stariji pravni asistent u više advokatskih kancelarija, sa težištem na procesnoj podršci, korporativnoj oblasti i stranim investicijama.',
         'Podrška u sudskim postupcima, pri osnivanju društava, kod dozvola za strane investicije, kod zahteva za licence i u komunikaciji između Koreje i Tajvana.',
       ],
       education: [
         'Diploma prava (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Stariji pravni asistent, Boyin Law Firm',
+        'Stariji pravni asistent, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

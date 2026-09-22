@@ -2225,7 +2225,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Vaš zahtev je sačuvan, ali obaveštenje kancelariji još nije evidentirano kao dostavljeno. Ono što ste napisali ne gubi se. Ako ne dobijete odgovor, možete pisati i na adresu elektronske pošte sa kontaktne stranice.',
     receiptIdLabel: 'Broj predaje',
     failureMessage:
-      'Vaš zahtev nije uspelo poslati. Pokušajte ponovo ili pišite na adresu elektronske pošte sa kontaktne stranice.',
+      'Slanje zahteva nije uspelo. Pokušajte ponovo ili pišite na adresu elektronske pošte sa kontaktne stranice.',
     originalLanguageLabel: 'Jezik na kojem pišete',
     originalLanguagePlaceholder:
       'Na primer srpski, engleski, kineski ili drugi jezik',

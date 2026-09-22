@@ -1,0 +1,65 @@
+WO-F-sv round 3 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-sv-r3
+
+## Rows applied
+64 finding rows (sv-a 41 + sv-b 23). Applied 60. Skipped 4.
+
+sv-a applied: 1–15, 18–41.
+sv-b applied: 1–5, 7–14, 16–23.
+
+Wording follows the review where it is natural Swedish and keeps the English sense. Digits that the checker counts were kept (4 PE types, 1× punitive cap, artikel 10). "1 gånger" became "1 gång". The 014 question keeps "till last" ("Till vem upphörandeskälet för anställningsavtalet kan läggas till last").
+
+sv-a 6–7 and the llms notice deny a technical warranty and promised visibility without the token "garanti" (the Swedish pack test rejects that substring even inside a denial): "inte en teknisk utfästelse"; "inte utlovad synlighet". The disclosure regex for the columns sentence was updated to /ersätter inte rådgivningen/.
+
+sv-a 1: the 004 link label is now "artikel 10 i lagen om omsättningsskatt". URL unchanged. See reviewer disagreements.
+
+## Rows skipped
+- sv-a 16 and sv-b 6 (thousands as spaces, "500 000" / "1 579 589"). ACCEPTED-ROUND skips space thousands separators. The checker only groups with "." or ",". Period grouping left as-is in all 18 columns. 0 instances changed.
+- sv-a 17 and sv-b 15 (delete U+200B; turn 003 Q16–Q20 into headings). Korean and Swedish ZWSP counts already match (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). Deleting them, or promoting body lines to ## headings, changes the checker block count, ZWSP count, or heading levels. Left in place. 0 instances changed.
+- sv-a 19, the other quoted "1"s: "för 1 skadad person och 1 olycka" (003), "per 1 år" (008, two places), "mer än 1 utländsk medborgare" (005). Korean counts those as real quantities (피해자 1명·사고 1건, 1년당, 1명). Only "per 1 dag" → "per dag" (2), because Korean 1일로 is stripped before the number compare. "1 gånger" → "1 gång" keeps 1배.
+
+## Systemic patterns
+- "sluta/slutas" for conclude or determine: 7. Two "avgöras" (001 participation, 004 licence). Five "dra slutsatsen" (002 breach of trust, 002 insolvency procedure, 004 subsidiary-only, 004 same tax, 004 excluded from relief). "sluta avtal" and "sluta" = resign left.
+- "utseende" for appointment: 3 (004 directors, 002 after appointment of the liquidator, 004 appointment of the liquidator).
+- "Om dock": 2 (010 and the same calque in 002).
+- "leverantörspriser" → "leverantörsskulder": 2 (002).
+- "restförmögenhet" for 剩餘財產差額分配: 9 in 007 (FAQ, headings, body). 016 still says restförmögenhet; part b did not flag it.
+- "per 1 dag" → "per dag": 2 (003).
+- PIF "akt" / "produktinformationsakt": 7 (2 definition sentences, 1 "produktinformationsfilen", 4 "produktinformationsfiler" including the two link labels; URLs unchanged).
+- bare "påstående" with plural agreement or as the fine category: 6 (2 "är förbjudna", 3 fine lines, 1 "ett påstående").
+- Paralegal → juristassistent: 4 Swedish strings (role, intro, two experience lines). Other locales untouched.
+- Korea leadership dropped from "område": 4 (experience line, team description, lawyers page description, lawyers answer). Role line already said "Operativ ledning Korea".
+- Thousands spaces: 0. U+200B: 0.
+- R2–R10 residue from earlier rounds was not reopened except where a round-3 row or one of these patterns hit it. No new masculine form for Wei Tseng, no Swedish consultation, no new result or availability promise.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=82
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      22
+```
+
+Commands were the work-order set. `tail -8` is the last file plus the summary. Markers 0. TSC_OK. 3202 tests passed. `git status --short | wc -l` was 22 before this log file was written.
+
+## Reviewer disagreements (not applied as suggested)
+- sv-a 1. The suggested label is the nonresident dividend rule with no article number, matching 001. English and Korean 004 name Article 10 of the business-tax act (영업세법 제10조). 001’s Korean label for the same URL has no 10, which is why 001 can omit it. Dropping 10 fails the checker (`missing from translation (1): 10`). Label is "artikel 10 i lagen om omsättningsskatt". URL unchanged. flno=3 was not treated as the article number.
+- sv-a 16 and sv-b 6. Space thousands are what Swedish typography wants. The checker and ACCEPTED-ROUND do not accept them. Period grouping kept.
+- sv-a 17 and sv-b 15. The fragments are real in the Korean source (same ZWSP counts). Removing them or making new headings fails the checker. Layout left.
+- sv-a 19, except "per 1 dag". The other "1"s are statutory counts, not the 1일로 calque. sv-b 4 keeps "1 gång" for 1배 rather than deleting the digit.
+- sv-a 6–7. "garanti" / "garanterad" is the right word, and the Swedish forbidden-token test rejects it. Denial is "utfästelse" and "utlovad synlighet".
+- sv-b 17. The suggestion stops at "kan läggas" and drops "till last". The idiom is kept: "läggas till last".

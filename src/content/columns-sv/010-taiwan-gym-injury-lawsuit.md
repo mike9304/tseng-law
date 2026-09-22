@@ -61,7 +61,7 @@ Rubrikerna på nyhetsartiklar, nätinlägg och rättskommentarer om detta ärend
 
 **Fick en koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?**
 
-Det praktiska intresset i det här ärendet är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisningshandlingen och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att handlingarna redan efter olyckan bör ordnas var för sig.
+Det praktiska intresset i det här ärendet är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisning som gavs och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att handlingarna redan efter olyckan bör ordnas var för sig.
 
 Det som följer är allmän information för att förklara tvister om gymskador i Taiwan; det är inte ett rättsutlåtande för ett konkret ärende. De faktiska rättigheterna och tillvägagångssättet kan variera beroende på avtalsförhållandet, olycksförloppet, skadans orsak och grad, parternas beteende, försäkringsvillkoren, den bevarade bevisningen och tillämplig rätt.
 
@@ -79,13 +79,13 @@ Enligt [artikel 287 i Taiwans strafflag (刑法)](https://law.moj.gov.tw/LawClas
 
 Rätten att yrka utomobligatoriskt skadestånd (侵權行為) enligt [artikel 197 i Taiwans civillag (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) upphör i princip om den inte utövas under 2 år från det att den skadelidande har fått kännedom om skadan och den som är skyldig att ersätta, och den upphör också när 10 år har gått från gärningen.
 
-Om dock en annan yrkandegrund, som avtalsansvar, kommer i fråga, eller om andra regler gäller för fristens början, lopp, avbrott med mera, kan det variera beroende på fakta. Fristen får inte fastställas bara utifrån olycksdatum eller diagnosdatum; det är säkrare att tidigt och individuellt kontrollera de möjliga yrkandegrunderna och referensdatumen.
+Om däremot en annan grund för yrkandet, såsom avtalsansvar, kommer i fråga, eller om andra regler gäller för fristens början, lopp, avbrott med mera, kan det variera beroende på fakta. Fristen får inte fastställas bara utifrån olycksdatum eller diagnosdatum; det är säkrare att tidigt och individuellt kontrollera de möjliga yrkandegrunderna och referensdatumen.
 
 ## 3. Direkt efter olyckan, vilka bevis ska bevaras och hur?
 
 För att förklara ansvar, orsakssamband och skada bör man samla inte bara CCTV-bilder (監視器影像) från olycksögonblicket, utan också journal (病歷) och läkarintyg (診斷證明書), kvitton för vårdkostnader (醫療費用), resor (就醫交通費) och omvårdnad (看護費用), meddelanden med gymmet och tränaren, vittnesuppgifter, lektionsbokning och närvarolista, träningsplan och träningsanteckningar. Det är lämpligt att, så långt det går, fotografera det skadade området och olycksplatsens skick, och att ordna förloppet före och efter olyckan samt kommunikationsinnehållet i datumordning, så att handlingarna sedan lättare kan jämföras.
 
-Bilder kan skrivas över när förvaringstiden löper ut eller bli oanvändbara av andra skäl. Man kan därför överväga att begära bevarande av gymmet genom ett rekommenderat brev med innehållsbevis (存證信函) eller ett advokatbrev (律師函) som konkret anger nödvändig tidsperiod, plats och kameraposition. Denna skrivelse är en praktisk åtgärd för att dokumentera vad som begärts och när. Den lägger dock inte i sig en ny rättslig skyldighet på motparten att bevara bilderna och hindrar inte radering, och enbart det faktum att bilderna inte finns kvar leder inte heller till att domstolen automatiskt gör en ogynnsam bedömning.
+Bilder kan skrivas över när förvaringstiden löper ut eller bli oanvändbara av andra skäl. Man kan därför överväga att begära att gymmet bevarar bilderna, genom ett rekommenderat brev med innehållsbevis (存證信函) eller ett advokatbrev (律師函) som konkret anger nödvändig tidsperiod, plats och kameraposition. Denna skrivelse är en praktisk åtgärd för att dokumentera vad som begärts och när. Den lägger dock inte i sig en ny rättslig skyldighet på motparten att bevara bilderna och hindrar inte radering, och enbart det faktum att bilderna inte finns kvar leder inte heller till att domstolen automatiskt gör en ogynnsam bedömning.
 
 Om olycksförloppet kan uppfylla rekvisiten för ett brott kan man snabbt anmäla så att utredningsorganet (偵查機關) bedömer om det finns laglig grund för beslag eller bevarande. Att anmäla betyder inte att polis eller åklagare nödvändigtvis tar hand om CCTV, så man måste också samla handlingar som parten själv kan bevara, som vård- och kommunikationshandlingar.
 
@@ -99,7 +99,7 @@ De skadeposter vars yrkande kan prövas är följande. Det faktiska erkännandet
 4. **Skada för nedsatt arbetsförmåga (勞動能力減損)**: Om följdskador och varaktig nedsättning av arbetsförmågan erkänns kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetsliv. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
 5. **Inkomstbortfall under återhämtningsperioden (收入損失)**: Den period då man faktiskt inte kunde arbeta på grund av behandling eller vila, och den inkomstminskning som följde, måste bevisas med lönehandlingar, skattedokument, närvarouppgifter med mera.
 6. **Icke-ekonomisk skada (非財產上損害)**: Beloppet för det psykiska lidandet fastställs av domstolen utifrån faktorer i varje ärende, som skadans grad, behandlingstid, följdtillstånd och partens konkreta omständigheter.
-7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till 1 gånger den faktiska skadan. Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
+7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till 1 gång den faktiska skadan. Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
 
 ## 5. Även om gymmet har ansvarsförsäkring (責任保險), kan ersättningens existens och belopp bestridas?
 
@@ -109,7 +109,7 @@ Särskilt nedsatt arbetsförmåga, inkomstminskning under återhämtningsperiode
 
 Om du har skadats på gymmet är det viktigt att först få den vård som behövs, bevara handlingar som ännu kan säkras innan de försvinner och, tidigt, inhämta individuell vägledning om de frister och förfaranden som kan gälla för ärendet. Förhandling, konsumentklagomål (消費申訴) eller medling (調解), straffrättslig anmälan och civilt skadeståndsyrkande är alla medel som kan väljas beroende på ärendet, och det är inte förfaranden som alltid måste följas i sin helhet.
 
-Fall i en affärslokal, hälsoskada av livsmedel och skada vid en yrkesmässig tjänst kan också väcka frågor om säkerhetsplikt, orsakssamband, skada och bevis. Slutsatsen i ett gymärende kan dock inte tillämpas oförändrad på en annan olycka, så varje falls avtal, beteende och tillämpliga normer måste granskas separat.
+Fallolyckor i en affärslokal, hälsoskada av livsmedel och skada vid en yrkesmässig tjänst kan också väcka frågor om säkerhetsplikt, orsakssamband, skada och bevis. Slutsatsen i ett gymärende kan dock inte tillämpas oförändrad på en annan olycka, så varje falls avtal, beteende och tillämpliga normer måste granskas separat.
 
 ---
 

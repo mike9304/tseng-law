@@ -175,9 +175,9 @@ Die Versicherungspflicht nach Artikel 6 des Gesetzes über die obligatorische Kr
 
 Bei Alleinunfällen eines Fahrzeugs ist dessen Fahrer in der Regel nicht Leistungsempfänger der obligatorischen Versicherung dieses Fahrzeugs. Bei Unfällen mit mehreren Fahrzeugen kann der Fahrer jedoch Leistungen beim obligatorischen Versicherer eines anderen beteiligten Fahrzeugs verlangen.
 
-Der am 29. Mai 2026 geänderte Leistungsmaßstab (強制汽車責任保險給付標準) gilt für Unfälle ab dem 1. Juli 2026. Die Obergrenze erforderlicher angemessener Heilbehandlungskosten bei Verletzung beträgt TWD 200.000, Invaliditätsleistungen (失能) nach den gesetzlichen 15 Stufen TWD 80.000–3.000.000, die Todesleistung TWD 3.000.000, und der Höchstbetrag aus Tod, Invalidität und Heilbehandlungskosten je 1 verletzte Person und 1 Unfall beträgt TWD 3.200.000. Für frühere Unfälle kann der frühere Maßstab gelten.
+Der am 29. Mai 2026 geänderte Leistungsmaßstab (強制汽車責任保險給付標準) gilt für Unfälle ab dem 1. Juli 2026. Die Obergrenze erforderlicher angemessener Heilbehandlungskosten bei Verletzung beträgt TWD 200.000, Invaliditätsleistungen (失能) nach den gesetzlichen 15 Stufen TWD 80.000–3.000.000, die Todesleistung TWD 3.000.000, und der Höchstbetrag aus Tod, Invalidität und Heilbehandlungskosten je 1 verletzter Person und je 1 Unfall beträgt TWD 3.200.000. Für frühere Unfälle kann der frühere Maßstab gelten.
 
-Haftpflichtversicherung gegenüber Dritten (第三人責任險), Fahrerunfallversicherung (駕駛人傷害險) und Kaskoversicherung (車體損失險) sind vertragliche Wahlprodukte. Die tatsächliche Deckung weicht nach Versichertem, Limit, Selbstbehalt (自負額), Ausschluss, Fahrlässigkeit und sonstigen Bedingungen der Police ab; Versicherungsschein und Bedingungen sind einzeln zu prüfen.
+Haftpflichtversicherung gegenüber Dritten (第三人責任險), Fahrerunfallversicherung (駕駛人傷害險) und Kaskoversicherung (車體損失險) sind vertragliche Wahlprodukte. Die tatsächliche Deckung hängt von der versicherten Person, der Deckungssumme, dem Selbstbehalt (自負額), den Ausschlüssen, der Fahrlässigkeit und den sonstigen Bedingungen der Police ab; Versicherungsschein und Bedingungen sind einzeln zu prüfen.
 
 ### Amtliche Grundlagen Q11–Q15
 

@@ -190,7 +190,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       description:
         'Grundangaben zu dieser taiwanesischen Anwaltskanzlei, ihren Büros und der Arbeit mit ausländischen Beteiligten.',
       intro:
-        'Hovering International Law Firm ist eine Anwaltskanzlei in Taiwan. Die Anwältinnen und Anwälte arbeiten von der Unternehmensberatung bis zum Gerichtsverfahren. Dieser Teil beschreibt die Entstehung der Kanzlei, die Standorte und die Arbeit mit ausländischen Beteiligten.',
+        'Hovering International Law Firm ist eine Anwaltskanzlei in Taiwan. Die Anwältinnen und Anwälte beraten Unternehmen und vertreten sie im Gerichtsverfahren. Dieser Teil beschreibt die Entstehung der Kanzlei, die Standorte und die Arbeit mit ausländischen Beteiligten.',
       sections: [
         {
           heading: 'Gründung und Aufbau',

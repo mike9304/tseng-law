@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Beitragsbild](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Dieser Teil setzt die Beiträge [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](/de/columns/taiwan-company-establishment-advanced-1) fort (Teil 2). 公司設立 bezeichnet die Gesellschaftsgründung.
+Dieser Teil setzt die Beiträge [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](/de/columns/taiwan-company-establishment-advanced-1) fort (Teil 2).
 
 ​
 

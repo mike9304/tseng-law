@@ -31,7 +31,7 @@ Es gibt jedoch **Ausnahmefälle**.
 
 In den folgenden besonderen Lagen muss der Arbeitgeber der beschäftigten Person auch dann Abfindung zahlen, wenn sie selbst kündigt (Artikel 14 des Arbeitsstandardsgesetzes, der Artikel 17 entsprechend anwendet, 勞動基準法第14條):
 
-1. Wenn der Arbeitgeber beim Abschluss des Arbeitsvertrags (勞動契約) vorsätzlich falsche Angaben macht (虛偽意思表示), sodass die beschäftigte Person irrtümlich darauf vertraut und die Gefahr eines Schadens besteht
+1. Wenn der Arbeitgeber beim Abschluss des Arbeitsvertrags (勞動契約) eine falsche Willenserklärung abgibt (虛偽意思表示), sodass die beschäftigte Person irrtümlich darauf vertraut und die Gefahr eines Schadens besteht
 
 (zum Beispiel wenn der Arbeitgeber verspricht, die beschäftigte Person nach Eintritt in eine tatsächlich nicht vorhandene Auslandsfiliale zu entsenden)
 
@@ -75,7 +75,7 @@ Mit anderen Worten gilt Folgendes.
 
 Das taiwanesische Recht unterscheidet, ob das Verschulden bei der Gesellschaft liegt.
 
-Oder das Verschulden liegt bei der beschäftigten Person.
+Das Verschulden kann auch bei der beschäftigten Person liegen.
 
 Liegt das Verschulden bei der Gesellschaft, kann die beschäftigte Person die Abfindung verlangen; liegt es bei der beschäftigten Person, kann die Gesellschaft die Abfindung verweigern.
 
@@ -85,7 +85,7 @@ Und wenn beide streiten, kommt es auf die Reihenfolge an.
 
 Es kann darauf ankommen, wer zuerst mit hinreichendem Grund den Vertrag beendet.
 
-Dann kann die Abfindung verweigert oder verlangt werden.
+Streiten beide, kann die Seite, die den Vertrag zuerst aus hinreichendem Grund beendet, die Abfindung verweigern oder sie verlangen.
 
 Deshalb ist in taiwanesischen Arbeitsstreitigkeiten (勞資糾紛)
 

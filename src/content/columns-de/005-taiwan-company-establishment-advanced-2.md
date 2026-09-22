@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Beitragsbild](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Wer [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](/de/columns/taiwan-company-establishment-advanced-1) gelesen hat, kann auch Gesellschaftsgründung in Taiwan – Vertiefung Teil 2 (公司設立) zur Kenntnis nehmen.
+Dieser Teil setzt die Beiträge [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](/de/columns/taiwan-company-establishment-advanced-1) fort (Teil 2, 公司設立).
 
 ​
 
@@ -37,7 +37,7 @@ Bitte holen Sie vor der Kapitalüberweisung (資本金匯款) Auskunft bei Ihrer
 
 **​**
 
-**2. Kann man bei der Einzahlung des Gesellschaftskapitals Neue Taiwan-Dollar (新臺幣, TWD) vom eigenen taiwanesischen Konto auf das Vorbereitungskonto der taiwanesischen Gesellschaft überweisen?**
+**2. Kann man bei der Einzahlung des Gesellschaftskapitals Beträge in Neuen Taiwan-Dollar (新臺幣, TWD) vom eigenen taiwanesischen Konto auf das Vorbereitungskonto der taiwanesischen Gesellschaft überweisen?**
 
 Das ist möglich; Sie müssen jedoch Nachweise über die Herkunft der in Taiwan erworbenen TWD-Mittel vorlegen.
 

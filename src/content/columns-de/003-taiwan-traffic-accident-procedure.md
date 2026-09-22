@@ -31,7 +31,7 @@ Artikel 185-4 des Strafgesetzbuchs (刑法) behandelt die strafrechtliche Verant
 
 Sichern Sie zuerst die persönliche Sicherheit und Warnzeichen; in Taiwan rufen Sie bei Verletzung oder Rettungsbedarf 119 (Rettung und Feuerwehr), bei einer Straftat oder eiliger Sicherheitslage 110 (Polizei) und vom Mobiltelefon 112. Melden Sie den Verkehrsunfall auch der Polizei, soweit die Lage es erfordert.
 
-Ist die Sicherheit gewährleistet, fertigen Sie Übersichts- und Nahaufnahmen, um Fahrzeugposition und Beschädigung, Straßenmarkierung, Signale und Wetter festzuhalten. Zeugenkontakte, Ersuchen um Sicherung von CCTV (監視器影像) und Dashcam (行車紀錄器), Daten der Parteien, Fahrzeuge und Versicherungen sowie Krankenakten (病歷) sollten Sie nicht auslassen. Private Aufnahmen sind nützlich, ersetzen aber bei Verletzungs- oder Todesunfällen nicht die erforderliche Polizeibearbeitung.
+Ist die Sicherheit gewährleistet, fertigen Sie Übersichts- und Nahaufnahmen, um Fahrzeugposition und Beschädigung, Straßenmarkierung, Signale und Wetter festzuhalten. Zeugenkontakte, Ersuchen um Sicherung von Überwachungsaufnahmen (CCTV, 監視器影像) und Dashcam (行車紀錄器), Daten der Parteien, Fahrzeuge und Versicherungen sowie Krankenakten (病歷) sollten Sie nicht auslassen. Private Aufnahmen sind nützlich, ersetzen aber bei Verletzungs- oder Todesunfällen nicht die erforderliche Polizeibearbeitung.
 
 Polizeiunterlagen: am Unfallort können Sie den Registrierungs-Kontaktzettel der Verkehrsunfallparteien (道路交通事故當事人登記聯單) erhalten. Nach 7 Tagen ab Unfalltag können Lageplan und Unfallfotos (現場圖 / 現場照片) beantragt werden; nach 30 Tagen ab Unfalltag kann die vorläufige Analysebewertung des Straßenverkehrsunfalls (道路交通事故初步分析研判表) beantragt werden. Ausstellungszeitpunkt und Antragsvoraussetzungen prüfen Sie bitte erneut bei der zuständigen Polizeibehörde.
 
@@ -63,7 +63,7 @@ Bei Antragsdelikten kann die Anzeige nach Artikel 238 der Strafprozessordnung bi
 
 ### Amtliche Grundlagen Q1–Q5
 
-- [Straßenverkehrsverwaltungs- und Sanktionsverordnung (道路交通管理處罰條例) Artikel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Gesetz über Straßenverkehrsverwaltung und Sanktionen (道路交通管理處罰條例) Artikel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Taiwanesisches Strafgesetzbuch (中華民國刑法) Artikel 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Taiwanesisches Strafgesetzbuch (中華民國刑法) Artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Taiwanesisches Strafgesetzbuch (中華民國刑法) Artikel 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -79,7 +79,7 @@ Bei Antragsdelikten kann die Anzeige nach Artikel 238 der Strafprozessordnung bi
 - [Zivilgesetzbuch Artikel 737](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001)
 - [Verkehrssicherheitshinweise des Verkehrsministeriums (交通部)](https://168.motc.gov.tw/theme/car/post/2002211806152)
 - [Hinweise der Polizeibehörde zu Beweisen und Dokumenten bei Verkehrsunfällen](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
-- [FAQ der Polizeibehörde zu Verkehrsunfällen](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
+- [Fragen und Antworten der Polizeibehörde zu Verkehrsunfällen](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
 ## Q6. Wie wird die Unfallverantwortung anerkannt?
 
@@ -199,7 +199,7 @@ Q16. Kann nach dem Unfall alles der Versicherungsgesellschaft überlassen werden
 
 ​
 
-Nach meiner Erfahrung behandelt die Versicherungsgesellschaft die Gefühlslage der Unfallparteien häufig nicht ausreichend.
+Versicherer gehen auf die Gefühlslage der Unfallbeteiligten häufig nicht ausreichend ein.
 
 ​
 
@@ -219,7 +219,7 @@ Es kann auch Interessenkonflikte zwischen Versicherungsgesellschaft und Partei g
 
 ​
 
-Deshalb empfehle ich nicht, den gesamten Prozess der Versicherungsgesellschaft zu überlassen.
+Es ist nicht ratsam, den gesamten Prozess der Versicherungsgesellschaft zu überlassen.
 
 ​
 
@@ -239,7 +239,7 @@ Bei fahrlässiger Körperverletzung (過失傷害) ist in manchen Urteilen etwa 
 
 ​
 
-Bei Umwandlung in Geldstrafe bestimmt Artikel 41 Absatz 1 des Strafgesetzbuchs (刑法) die Umrechnung von TWD 1.000, TWD 2.000 oder TWD 3.000 (新臺幣) je 1 Tag; berechnet man auf Grundlage von TWD 1.000 pro Tag, ergibt eine Strafe von 3 Monaten 3 × 30 × 1.000 = TWD 90.000.
+Bei Umwandlung in Geldstrafe bestimmt Artikel 41 Absatz 1 des Strafgesetzbuchs (刑法) die Umrechnung von TWD 1.000, TWD 2.000 oder TWD 3.000 (新臺幣) je Tag; berechnet man auf Grundlage von TWD 1.000 pro Tag, ergibt eine Strafe von 3 Monaten 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 
@@ -331,7 +331,7 @@ Damit schließen die Fragen und Antworten zu Verkehrsunfällen.
 
 ​
 
-Nach Bearbeitung vieler Verkehrsunfälle möchte ich einen wichtigen Punkt nennen.
+Nach der Bearbeitung vieler Verkehrsunfälle ist ein Punkt hervorzuheben.
 
 ​
 
@@ -347,7 +347,7 @@ Viele Verursacher kümmern sich nicht darum, telefonisch nach dem Befinden zu fr
 
 ​
 
-Dadurch erleidet die geschädigte Person große Verletzung und Zorn, gibt bei der Verhandlungssumme nicht nach oder beantragt Arrest (假扣押) und pfändet das Vermögen der Gegenseite bis zum Ende.
+Dadurch fühlt sich die geschädigte Person tief gekränkt und reagiert mit Zorn, gibt bei der Verhandlungssumme nicht nach oder beantragt Arrest (假扣押) und pfändet das Vermögen der Gegenseite bis zum Ende.
 
 ​
 

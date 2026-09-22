@@ -27,33 +27,33 @@ Die folgenden Fragen und Antworten sollen Personen helfen, die eine Gesellschaft
 
 Wenn Ausländerinnen und Ausländer in Taiwan eine Gesellschaft gründen, müssen sie der Abteilung für Investitionsprüfung des Wirtschaftsministeriums (經濟部投資審議司) einen Investitionsplan (投資計畫書) zur Prüfung vorlegen.
 
-Die Abteilung für Investitionsprüfung muss feststellen, ob das betreffende Kapital (資本額) tatsächlich für Investitionszwecke verwendet wird
+Die Abteilung für Investitionsprüfung muss feststellen, ob das betreffende Kapital (資本額) tatsächlich für Investitionszwecke verwendet wird.
 
-und ob ausländische Personen Mittel nicht unter einem anderen Vorwand einführen.
+Zu prüfen ist auch, ob ausländische Personen Mittel nicht unter einem anderen Vorwand einführen.
 
 Bei der Abfassung des Investitionsplans muss die genaue Gesellschaftsadresse nicht angegeben werden; die Angabe der Region genügt (Beispiel: Stadt Taipeh). ​
 
 Wenn später bei der Bank das Vorbereitungskonto der Gesellschaft (公司籌備處帳戶) eröffnet wird, prüfen jedoch viele Banken den Mietvertrag (租賃契約) und nehmen die Gesellschaftsadresse vor Ort in Augenschein.
 
-Eine Mitarbeiterin oder ein Mitarbeiter einer taiwanesischen Bank hat mir selbst gesagt,
+Eine Mitarbeiterin oder ein Mitarbeiter einer taiwanesischen Bank hat die strengere Prüfung erläutert.
 
-dass in jüngerer Zeit viele Ausländerinnen und Ausländer nach der Kontoeröffnung untertauchen, weshalb die Kontoeröffnung zunehmend strenger gehandhabt wird.
+In jüngerer Zeit tauchen viele Ausländerinnen und Ausländer nach der Kontoeröffnung unter, weshalb die Kontoeröffnung zunehmend strenger gehandhabt wird.
 
-Bereits in der Grundlagenfassung hat jemand angemerkt, dass die Kontoeröffnung der schwierigste Schritt sei; dem stimme ich zu.
+Bereits in der Grundlagenfassung wurde angemerkt, dass die Kontoeröffnung der schwierigste Schritt sei; dieser Einschätzung ist zuzustimmen.
 
 Weil es in Taiwan sehr viele Fälle von Geldwäsche (洗錢) gibt, wird die Eröffnung von Bankkonten zunehmend strenger.
 
 **Hinweis:**
 
-Da die Prüfung des Investitionsplans Zeit in Anspruch nimmt,
+Da die Prüfung des Investitionsplans Zeit in Anspruch nimmt, ist parallel zu planen.
 
-sollten Sie die Abfassung des Investitionsplans und die Suche nach der Eintragungsadresse der Gesellschaft gleichzeitig betreiben.
+Sie sollten die Abfassung des Investitionsplans und die Suche nach der Eintragungsadresse der Gesellschaft gleichzeitig betreiben.
 
 Nach Artikel 9 des Gesetzes über ausländische Investitionen (外國人投資條例) muss die genehmigte Einlage innerhalb der von der zuständigen Behörde festgesetzten Frist (核定期限) vollständig eingehen; die Frist ist dem jeweiligen Genehmigungsbescheid zu entnehmen (in der Praxis wird sie häufig auf rund 1 Jahr festgesetzt).
 
-Innerhalb dieser Frist bleibt nach Auffinden der Gesellschaftsadresse und Abschluss des Mietvertrags
+Innerhalb dieser Frist bleibt nach Auffinden der Gesellschaftsadresse und Abschluss des Mietvertrags noch Spielraum.
 
-ausreichend Zeit, bei der Bank das Vorbereitungskonto zu eröffnen und das Kapital zu überweisen.
+Es bleibt ausreichend Zeit, bei der Bank das Vorbereitungskonto zu eröffnen und das Kapital zu überweisen.
 
 ​
 
@@ -61,25 +61,25 @@ ausreichend Zeit, bei der Bank das Vorbereitungskonto zu eröffnen und das Kapit
 
 Das ist möglich.
 
-Die Bank verlangt in der Regel eine doppelte Identitätsprüfung,
+Die Bank verlangt in der Regel eine doppelte Identitätsprüfung.
 
-und ohne Aufenthaltskarte können Sie bei der taiwanesischen Einwanderungsbehörde das „Grunddatenblatt zur einheitlichen Identifikationsnummer“ (統一證號基本資料表) beantragen.
+Ohne Aufenthaltskarte können Sie bei der taiwanesischen Einwanderungsbehörde das „Grunddatenblatt zur einheitlichen Identifikationsnummer“ (統一證號基本資料表) beantragen.
 
-Die Ausstellung ist am selben Tag möglich,
+Die Ausstellung ist am selben Tag möglich.
 
-die Einwanderungsbehörde (移民署) ist jedoch sehr überlaufen, daher sollten Sie früh erscheinen und eine Wartenummer ziehen.
+Die Einwanderungsbehörde (移民署) ist jedoch sehr überlaufen, daher sollten Sie früh erscheinen und eine Wartenummer ziehen.
 
 ​
 
 **3. Ich habe gehört, dass bei der Prüfung des Investitionsplans Ausbildung und Berufserfahrung anzugeben sind, und sorge mich, dass meine Ausbildung und Berufserfahrung nicht zur Branche der zu gründenden Gesellschaft passen.**
 
-Die Prüfungskommission des Wirtschaftsministeriums prüft zwar den Hintergrund der Investorin oder des Investors,
+Die Prüfungskommission des Wirtschaftsministeriums prüft zwar den Hintergrund der Investorin oder des Investors.
 
-die Prüfung beschränkt sich jedoch nicht auf ein einziges formales Kriterium; jeder Antrag wird anhand der Unterlagen beurteilt.
+Die Prüfung beschränkt sich jedoch nicht auf ein einziges formales Kriterium; jeder Antrag wird anhand der Unterlagen beurteilt.
 
-Sie können vielfältige Berufserfahrungen einschließlich Aushilfstätigkeiten anführen
+Sie können vielfältige Berufserfahrungen einschließlich Aushilfstätigkeiten anführen.
 
-und sie so ausführlich erläutern, dass die prüfenden Personen überzeugt werden können.
+Sie können sie so ausführlich erläutern, dass die prüfenden Personen überzeugt werden können.
 
 Zu diesem Punkt sollten Sie sich mit einer taiwanesischen Anwältin oder einem taiwanesischen Anwalt eingehend austauschen.
 
@@ -87,23 +87,23 @@ Zu diesem Punkt sollten Sie sich mit einer taiwanesischen Anwältin oder einem t
 
 **4. Worauf ist zu achten, wenn die Eintragungsadresse der Gesellschaft (zum Beispiel ein Restaurantlokal) gemietet wird?**
 
-Die Gesellschaftsgründung dauert etwa **3 Monate**, die Erlangung der Arbeitserlaubnis (工作許可) und der Aufenthaltskarte etwa **1 Monat**,
+Die Gesellschaftsgründung dauert etwa **3 Monate**, die Erlangung der Arbeitserlaubnis (工作許可) und der Aufenthaltskarte etwa **1 Monat**.
 
-daher sollten Sie den Vertragsbeginn möglichst spät ansetzen.
+Daher sollten Sie den Vertragsbeginn möglichst spät ansetzen.
 
 In taiwanesischen Mietverträgen für Ladenlokale gewährt die Vermieterseite der Mietpartei häufig eine mietzinsfreie „**Ausbaufrist**“ (裝潢期間).
 
 Dies ist ein von der Miete befreiter Zeitraum; Sie können darüber verhandeln.
 
-Ausländerinnen und Ausländern fällt die Anmietung eines Ladenlokals nicht leicht, und die Kaution (押金) in Taiwan ist eher niedrig (gewöhnlich 2 Monate), sodass der Schutz der Vermieterseite begrenzt ist;
+Ausländerinnen und Ausländern fällt die Anmietung eines Ladenlokals nicht leicht, und die Kaution (押金) in Taiwan ist eher niedrig (gewöhnlich 2 Monatsmieten), sodass der Schutz der Vermieterseite begrenzt ist.
 
 Vermieterinnen und Vermieter zögern daher, an Ausländerinnen und Ausländer zu vermieten.
 
-Deshalb empfehle ich, den Geschäftsort frühzeitig zu suchen.
+Deshalb ist es ratsam, den Geschäftsort frühzeitig zu suchen.
 
-Verläuft die Verhandlung mit der Vermieterseite nicht reibungslos,
+Verläuft die Verhandlung mit der Vermieterseite nicht reibungslos, kommen zusätzliche Sicherungen in Betracht.
 
-können Sie erforderlichenfalls eine Beurkundung des Mietvertrags (公證) oder eine zusätzliche Kaution vorschlagen.
+Sie können erforderlichenfalls eine Beurkundung des Mietvertrags (公證) oder eine zusätzliche Kaution vorschlagen.
 
 ​
 
@@ -119,9 +119,9 @@ Außerdem verlangt die Stadtverwaltung (市政府) bei der endgültigen Gesellsc
 
 bei einem gewerblichen Büroraum ist die Gesellschaftseintragung (公司登記) dann nicht möglich.
 
-Zum Beispiel: Handelt es sich um Geschäftszweige, die in gewerblichen Büroräumen möglich sind, etwa Werbung oder Großhandel, kann die Gesellschaft in einem gewerblichen Büroraum gegründet werden. Vor Abschluss des Mietvertrags
+Zum Beispiel: Handelt es sich um Geschäftszweige, die in gewerblichen Büroräumen möglich sind, etwa Werbung oder Großhandel, kann die Gesellschaft in einem gewerblichen Büroraum gegründet werden. Vor Abschluss des Mietvertrags ist dies zu prüfen.
 
-sollten Sie dies vorab prüfen.
+Sie sollten dies vorab prüfen.
 
 *Wenn Sie eine Frage zum taiwanesischen Recht haben, schreiben Sie über die Seite „Kontakt“ auf Englisch, Chinesisch (中文), Japanisch oder Koreanisch; eine Antwortfrist wird nicht zugesagt.*
 

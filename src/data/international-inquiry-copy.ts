@@ -562,7 +562,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Die Beratung erfolgt nur in vier Sprachen: Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
     methodConfirmationNotice:
-      'Wenn Sie keine der vier Sprachen nutzen können, wählen Sie „Kommunikationsweise muss bestätigt werden“. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
+      'Wenn Sie keine der vier Sprachen sprechen können, wählen Sie „Kommunikationsweise muss bestätigt werden“. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
     preparationNotice:
       'Sie dürfen die Zusammenfassung in Ihrer eigenen Sprache schreiben. Der Originaltext wird so gespeichert, wie Sie ihn geschrieben haben, und nicht automatisch übersetzt.',
     heading: 'Beratungsanfrage senden',

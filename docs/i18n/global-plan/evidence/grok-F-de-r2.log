@@ -1,0 +1,97 @@
+WO-F-de r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-de-r2
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: de-a 25, de-b 34 (59).
+
+Applied: 54.
+Skipped: 5 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned German expectation matched a string that changed. "TWD 1.57M" was not in the German bio and was not touched. `src/lib/llms-txt.ts` German notices were already free of the flagged wording and were not edited. Column 006 had no wording row; only the ZWSP pattern, which was not deleted.
+
+### Applied
+de-a 1–4, 6–7, 9–18, 20–25.
+de-b 1–12, 14–21, 23–34.
+
+Adaptations (still applied):
+- de-a 2. Link label no longer calls the target the Business Tax Act. The URL is unchanged (`pcode=G0340028&flno=3`). "(Artikel 10)" stays in the label because the Korean source line is 영업세법 제10조; dropping 10 failed `numbers`.
+- de-a 10. "je 1 Tag" → "je Tag" (checker still PASS). "je 1 verletzte Person und 1 Unfall" was restored: those two 1s are in the Korean bag.
+- de-a 13. The self-reference is gone, both hrefs stay, and "(Teil 2, 公司設立)" stays so the Korean 2 is still in the block.
+- de-a 17 and de-b 27. Suggested rewrites merge the next blocks into the first. Block counts are locked. Each fragment was made a sentence inside its own block. 009: opening, the three example lines, the 30-day pair, and the fault sequence. 013: the one-clause stack (investition plan through the office-lease close). 015: the Marktlage chain, the Taipeh query, and the land-registry help line.
+- de-b 12. "hat jeder Gesellschafter eine Stimme" drops both 1s ("eine Stimme" is not in the German number lexicon). Now "hat je 1 Gesellschafter 1 Stimme".
+- de-b 32. Every code-before-amount in 011 and 017 is now amount then TWD (`40.000 bis 200.000 TWD`, `25.000.000 TWD`, gloss 新臺幣 left in place). No `TWD <digit>` left in those two files. 010 and 018 were already amount-first.
+
+Guidance pack (German strings only):
+- "nutzen" where it means speaking a language → "sprechen": home paragraph, contact description, contact heading, FAQ question (western.ts), inquiry method notice. "Wie Sie diesen Teil nutzen" stays: that "nutzen" means "use this section".
+- Pricing sentence completed: "und kein Teil dieser Seite darf so verstanden werden."
+- Urgent FAQ: "anderweitig Hilfe an Ihrem Wohnort suchen."
+- Privacy notice: "Ist der Eingang dieser Meldung bei der Kanzlei noch nicht bestätigt". Does not match the privacy test's banned "noch nicht bestätigt durch die Kanzlei".
+- "Betriebsleitung" / "Bereich Korea-Betrieb" → "Leitung Korea" (team description, role, experience, lawyers page description, lawyers answer).
+- Credential lines in the German bios: Masterabschluss (M.S.), Bachelorabschlüsse (B.A./B.S.), Bachelor der Rechtswissenschaft (LL.B.) ×2, role "Juristische Fachkraft", experience "Leitende juristische Fachkraft" ×2. Firm names and university names stay in Latin. English institution names that were already glossed in parentheses were left.
+
+### Skipped
+- de-a 5. "das letzte Jahr (1 Jahr)" ×2 and, with it, 008 "jedes vollendete Jahr (1 Jahr)" ×2 and "pro 1 Jahr 1 Monatsbetrag" ×2. Dropping those 1s failed `numbers` (Korean 최근 1년 / 1년 / 1년당). Restored. Other "1 Jahr" / "1 Monat" thresholds were not the glued leftover and were not touched.
+- de-a 8. Q16–Q20 were not promoted to `##` headings, and the U+200B lines were not removed. Heading levels, block counts and ZWSP counts match the Korean source (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). The blog sentences in that stretch are de-a 9 and were rephrased inside the existing blocks.
+- de-a 19. 008 and 009 frontmatter `url` Hangul slugs. Canonical source metadata. Not rewritten.
+- de-b 13. The trailing U+200B after the Taipeh sentence, and the ZWSP-only lines in 013 and 015, were left. Deleting them changes the ZWSP count.
+- de-b 22. "(1-fach)" restored. Korean 1배 is a counted 1; "bis zur Höhe des tatsächlichen Schadens" alone failed `numbers`.
+
+## Systemic patterns
+
+- Languages one "nutzt" (de-a verdict). 5 sites changed to "sprechen", listed above. The "use this section" heading was not part of the pattern.
+- Personal blog inside a client article (de-a verdict: 003 close, 008, 009; de-b: 013 and 015 one-clause layout). 003: three first-person lines plus "große Verletzung und Zorn". 008: "Das wissen bereits viele von Ihnen.", the table lead-in, "Ich schildere einen Fall", the missing period after "ausscheiden", and the unfinished "Wenn Sie in Taiwan arbeiten,". 009 and the 013/015 clause stacks: self-standing sentences, block count unchanged. First-person case narration that was already a complete sentence (Herr B in 008, the client in 010) was left; Herr B stays male.
+- English credential lines (de-a 24). 11 German bio strings, listed above. Other locales in the same files were not edited.
+- Aufenthaltsberechtigung (de-a 4, same false friend). 001: FAQ question, FAQ answer, both §4 headings, both body sentences, and "der Aufenthaltsstatus der Familie". 017: three "einen Aufenthaltsstatus" plus the heading. 001 lines that already said Aufenthaltsstatus were left.
+- Glued "je 1 Tag" (de-a 10). 1 instance → "je Tag". The severance "(1 Jahr)" / "pro 1 Jahr" pattern could not drop the digit; see Skipped.
+- Kinmen und/oder (de-b 1). 4: the FAQ and the body "in Kinmen … oder in Lienchiang (Matsu)", "für den Betrieb in Kinmen oder in Lienchiang (Matsu)", and "Maßstäbe von Kinmen oder Lienchiang". Amounts unchanged.
+- Currency code before the amount (de-b 32). All such instances in 011 and 017. See adaptation.
+- False friends named in the de-b verdict. Formular → Rechtsform (1). Bremsweg → Zeit zum Bremsen (2). Posten → Frage (1). Genitive "Betriebsweise der zuständigen Behörde" (1). "das/beim Abteilung" → "die/bei der Abteilung" (001 ×1, 017 ×1).
+- R2–R10. Round-1 framing, feminine Wei Tseng, Sie, emergency numbers, and the softened result lines were already in place; this round's verdict says they hold. One leftover R5 label: 003 "FAQ der Polizeibehörde" → "Fragen und Antworten der Polizeibehörde" (URL unchanged). "UNSER TEAM", "BÜROS", and "Vollständiges Profil (auf Englisch)" were already German.
+- 016 戶籍. "Personenstands- und Registerverfahren" and "Steuer-, Personenstands- und Registerverfahren" now say Meldung im Haushaltsregister (戶籍). 007 "Personenstandsordnung (戶籍)" → "Haushaltsregister (戶籍)", and the next sentence's Eintragung / Stand im Haushaltsregister, matching the English household-registration wording.
+
+## Checker and digits
+
+Natural forms that drop a source digit fail `numbers`. The checker compares to the Korean file. Restored the previous digit-bearing form and noted it above: 001 "(1 Jahr)" ×2, 008 "(1 Jahr)" ×2 and "pro 1 Jahr" ×2, 003 "je 1 verletzte Person und 1 Unfall", 004 "(Artikel 10)", 005 "(Teil 2, 公司設立)", 010 "(1-fach)", 018 both 1s in the voting rule.
+
+"je 1 Tag" → "je Tag" did not fail. 013 "gewöhnlich 2 Monatsmieten" keeps the digit 2.
+
+Pre-existing number WARNs, files still PASS, not introduced by this edit: 003 extra 2020×2 and 2023; 006 extra 2×2 (006 was not edited); 007 extra 2023×4; 010 extra 2020.
+
+## Reviewer points not followed
+
+- de-a 8 and de-b 13. The U+200B lines are not disposable German blank lines. The counts match the Korean source. Promoting Q16–Q20 would also change heading levels.
+- de-a 5, de-a 10's second phrase, de-b 12, and de-b 22. The suggested wording is the better German. It deletes digits the checker counts against the Korean source, so the digit-bearing form was kept. "je 1 Tag" was the exception and was changed.
+- de-a 19. The Hangul `url` values are live source metadata. The reviewer already said not to edit them.
+
+Nothing else in the two verdicts looked factually wrong. `taiwanesisch` (the reviewer notes the Duden headword `taiwanisch`) was already consistent and was not a finding; left as it is.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-de --lang de 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-de src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+```
+
+That 24 is the run before this log existed. Re-running only `git status --short | wc -l` after the file was written prints 25 (this log, untracked). No test expectation needed a wording update.

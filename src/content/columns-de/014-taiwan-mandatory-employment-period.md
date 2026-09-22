@@ -37,7 +37,7 @@ Auch wenn diese vier Fragen in demselben Vertrag stehen, unterscheiden sich anwe
 
 Die Vereinbarung ist nicht automatisch unwirksam. Nach Artikel 15-1 des taiwanesischen Arbeitsstandardsgesetzes (勞動基準法) können die gesetzlichen Voraussetzungen der Vereinbarung über eine Mindestbeschäftigungsdauer erfüllt sein, wenn der Arbeitgeber fachlich-technische Schulung (專業技術培訓) durchführt und die Kosten trägt oder eine angemessene Gegenleistung (合理補償) dafür gewährt, dass die beschäftigte Person die Mindestbeschäftigungsdauer einhält. Beide Voraussetzungen müssen nicht zugleich vorliegen; liegt jedoch eine vor, darf die Vereinbarung nach den gesamten Umständen wie Schulungsdauer und -kosten, Ersetzbarkeit der Arbeitskraft (人力替補可能性) sowie Betrag und Umfang der Gegenleistung den angemessenen Rahmen nicht überschreiten.
 
-Artikel 15-1 Absatz 1 regelt zwei gesetzliche Voraussetzungen wahlweise. Die erste ist, dass der Arbeitgeber der beschäftigten Person fachlich-technische Schulung gewährt und deren Kosten trägt; die zweite ist, dass er als Gegenleistung für die Einhaltung der Mindestbeschäftigungsdauer eine angemessene Kompensation gewährt. Nicht die Bezeichnung im Vertrag, sondern welche Grundlage tatsächlich besteht, ist zu prüfen.
+Artikel 15-1 Absatz 1 regelt zwei gesetzliche Voraussetzungen wahlweise. Die erste ist, dass der Arbeitgeber der beschäftigten Person fachlich-technische Schulung gewährt und deren Kosten trägt; die zweite ist, dass er für die Einhaltung der Mindestbeschäftigungsdauer eine angemessene Gegenleistung gewährt. Nicht die Bezeichnung im Vertrag, sondern welche Grundlage tatsächlich besteht, ist zu prüfen.
 
 Artikel 15-1 verlangt eine der beiden gesetzlichen Voraussetzungen und eine gesonderte Angemessenheitsprüfung. Das bedeutet weder, dass fachlich-technische Schulung und angemessene Gegenleistung stets zugleich zu gewähren sind, noch, dass die bloße formelle Nennung einer von beiden die gesamte Vereinbarung automatisch wirksam macht.
 
@@ -55,7 +55,7 @@ Lehrplan, Schulungszeitplan, Anwesenheitslisten, Bewertungsergebnisse, Teilnahme
 
 Die Grenze zwischen allgemeiner Einarbeitung und fachlich-technischer Schulung richtet sich nicht allein nach Schulungsort oder Träger. Auch ein interner Lehrgang kann konkreten fachlich-technischen Inhalt und erhebliche Investition belegen; ein langer externer Lehrgang kann tatsächlich allgemeine Einführung sein. Deshalb dürfen weder alle internen Schulungen pauschal ausgeschlossen noch allein wegen hoher Beträge und langer Dauer die gesetzlichen Voraussetzungen als erfüllt anerkannt werden.
 
-Auch das Verhältnis von vereinbarter Dauer und Schulungsinvestition muss erklärt werden können. Welche Fähigkeiten vermittelt werden, wie sie mit der Zielaufgabe zusammenhängen und warum gegenüber Schulungsdauer und -kosten die genannte Beschäftigungsdauer nötig ist, ist einzeln zu prüfen. Ob nach Schulungsende die betreffende Arbeit tatsächlich ausgeübt wurde und wie lange bereits gearbeitet wurde, sind Unterlagen zur Beurteilung des Belastungsumfangs.
+Auch das Verhältnis von vereinbarter Dauer und Schulungsinvestition muss erklärt werden können. Welche Fähigkeiten vermittelt werden, wie sie mit der Zielaufgabe zusammenhängen und warum gegenüber Schulungsdauer und -kosten die genannte Beschäftigungsdauer nötig ist, ist einzeln zu prüfen. Ob nach Schulungsende die betreffende Arbeit tatsächlich ausgeübt wurde und wie lange bereits gearbeitet wurde, ist für die Beurteilung des Belastungsumfangs von Bedeutung.
 
 ## 3. Zweite gesetzliche Voraussetzung: angemessene Gegenleistung
 
@@ -71,7 +71,7 @@ Auch die Übereinstimmung von Vertragsklausel und tatsächlicher Zahlung ist wic
 
 ## 4. Angemessener Rahmen und vier Prüfungsfaktoren
 
-Auch wenn eine der gesetzlichen Voraussetzungen vorliegt, müssen vereinbarte Dauer und Haftung im angemessenen Rahmen liegen. Artikel 15-1 Absatz 2 gibt keine feste Antwort nach Bezeichnung oder Beruf, sondern bestimmt, konkreten Vertrag und Investitions- bzw. Gegenleistungsstruktur anhand der folgenden vier Faktoren zu prüfen.
+Auch wenn eine der gesetzlichen Voraussetzungen vorliegt, müssen vereinbarte Dauer und Haftung im angemessenen Rahmen liegen. Artikel 15-1 Absatz 2 gibt keine feste Antwort nach Bezeichnung oder Beruf, sondern verlangt, den konkreten Vertrag und die Investitions- bzw. Gegenleistungsstruktur anhand der folgenden vier Faktoren zu prüfen.
 
 1. Dauer und Kosten der fachlich-technischen Schulung
 2. Ersetzbarkeit von Beschäftigten derselben oder ähnlicher Aufgabe
@@ -110,7 +110,7 @@ Um den Grundsatz der Verhältnismäßigkeit zur nichterfüllten Zeit anzuwenden,
 
 Die Rückzahlungsfrage erfordert nacheinander Prüfung von Wirksamkeit der Vereinbarung, rechtlicher Natur der gezahlten Mittel, bereits geleisteter Zeit, Beendigungsgrund und Rückzahlungsformel; allein weil der Vertrag das Wort „Vertragsstrafe“ enthält, ist der geforderte Betrag nicht festgelegt.
 
-Klauseln voller Rückzahlung, von tatsächlichem Verlust unabhängige feste Vertragsstrafen und einseitige Abzüge vom Gehalt sind nicht als ein einziges Problem zu beurteilen. Jeweilige Rechtsgrundlage, Vereinbarungsinhalt, arbeitsrechtliche Schranken und Rechtmäßigkeit des Abzugs sind gesondert zu prüfen. Allein der auf der Aufforderung des Arbeitgebers genannte Betrag oder die Tatsache, dass die beschäftigte Person einen Teil gezahlt hat, legt die übrigen Rechtsfragen nicht fest.
+Klauseln voller Rückzahlung, von tatsächlichem Verlust unabhängige feste Vertragsstrafen und einseitige Abzüge vom Gehalt sind nicht als ein einziges Problem zu beurteilen. Die jeweilige Rechtsgrundlage, der Vereinbarungsinhalt, die arbeitsrechtlichen Schranken und die Rechtmäßigkeit des Abzugs sind gesondert zu prüfen. Allein der auf der Aufforderung des Arbeitgebers genannte Betrag oder die Tatsache, dass die beschäftigte Person einen Teil gezahlt hat, legt die übrigen Rechtsfragen nicht fest.
 
 Erstattung von Schulungskosten und Erstattung im Voraus gezahlter Leistungen sind ebenfalls zu unterscheiden. Erstere betrifft die tatsächlich durchgeführte fachlich-technische Schulung und die Kostentragung, letztere betrifft Zahlungszweck, Mitteilung, Zuordnungsbedingungen und die Verhältnismäßigkeit zur nichterfüllten Zeit. Werden beide Posten gemeinsam gefordert, sind Doppelberechnung der Kosten und Belege jedes Postens getrennt abzugleichen.
 
@@ -128,7 +128,7 @@ Die Beurteilung der Beendigungsursache beeinflusst unmittelbar auch den Rückzah
 
 ## 8. Kündigungserklärung und Ankündigungsfrist sind eine gesonderte Frage
 
-Die Vereinbarung über eine Mindestbeschäftigungsdauer ist keine Vorrichtung, die das Ausscheiden der beschäftigten Person physisch oder rechtlich verhindert. Kündigungserklärung und Ankündigungsfrist betreffen, wann das Arbeitsverhältnis endet; Wirksamkeit der Mindestbeschäftigungsdauer und Haftung auf Kostenerstattung betreffen, ob mit der Beendigung vermögensrechtliche Haftung verbunden ist.
+Die Vereinbarung über eine Mindestbeschäftigungsdauer ist kein Mittel, das das Ausscheiden der beschäftigten Person physisch oder rechtlich verhindert. Kündigungserklärung und Ankündigungsfrist betreffen, wann das Arbeitsverhältnis endet; Wirksamkeit der Mindestbeschäftigungsdauer und Haftung auf Kostenerstattung betreffen, ob mit der Beendigung vermögensrechtliche Haftung verbunden ist.
 
 Beendet die beschäftigte Person einen unbefristeten Arbeitsvertrag, gilt nach Artikel 15 des taiwanesischen Arbeitsstandardsgesetzes die Ankündigungsfrist des Artikels 16 Absatz 1 entsprechend. Artikel 16 ist eine Vorschrift über die Vertragsbeendigung durch den Arbeitgeber; auf die Kündigung durch die beschäftigte Person findet diese Ankündigungsfrist über Artikel 15 Anwendung.
 
@@ -142,7 +142,7 @@ Für befristete Arbeitsverträge zu einer bestimmten Aufgabe, deren Vertragsdaue
 
 Bei ununterbrochener Beschäftigung unter 3 Monaten, anderen Arten befristeter Verträge und geltend gemachten gesetzlichen Gründen sofortiger Beendigung sind anwendbare Vorschriften und Tatsachen einzeln zu prüfen. Allein weil der Vertrag eine längere Ankündigungsfrist nennt oder sofortige Übergabe verlangt, kann die gesetzliche Schlussfolgerung nicht vorab festgelegt werden.
 
-In der Praxis sind Inhalt und Übermittlungsdatum der Kündigungserklärung, der tatsächliche Empfangstag durch den Arbeitgeber und die Kommunikation der Parteien zum letzten Arbeitstag zu sichern. Trennt man den Zeitpunkt wirksamen Ausscheidens, die Wirksamkeit der Mindestbeschäftigungsdauer, die Erstattung von Schulungskosten oder im Voraus gezahlten Leistungen und gesondert behaupteten Schaden in vier Fragen, verringert man den Fehler, aus einer Vertragsklausel alle Schlüsse zu ziehen.
+In der Praxis sind Inhalt und Übermittlungsdatum der Kündigungserklärung, der tatsächliche Empfangstag durch den Arbeitgeber und die Kommunikation der Parteien zum letzten Arbeitstag zu sichern. Trennt man den Zeitpunkt wirksamen Ausscheidens, die Wirksamkeit der Mindestbeschäftigungsdauer, die Erstattung von Schulungskosten oder im Voraus gezahlten Leistungen und den gesondert behaupteten Schaden in vier Fragen, verringert man den Fehler, aus einer Vertragsklausel alle Schlüsse zu ziehen.
 
 ## 9. Prüfliste für Arbeitgeber und Beschäftigte
 
@@ -169,7 +169,7 @@ Auch bei Verwendung von Standardverträgen dürfen Dauer und Betrag nicht mechan
 4. Berechnungsgrundlage der vereinbarten Dauer, bereits geleistete Zeit, verbleibende Zeit und die vom Arbeitgeber behauptete Ersetzbarkeit getrennt aufzeichnen.
 5. Kündigungserklärung der beschäftigten Person, Kündigungsschreiben des Arbeitgebers oder einvernehmliche Beendigungsdokumente sowie Zustellungsbeweise wie E-Mail und Messenger aufbewahren.
 6. Tatsächliche Beendigungsursache und Hergang zeitlich ordnen und Rückzahlungsaufforderung des Arbeitgebers, Gehaltsabrechnung, Parteikommunikation und Abzugsaufzeichnungen gemeinsam prüfen.
-7. Wirksamkeit der Mindestbeschäftigungsdauer, Kündigungserklärung und Ankündigung, Erstattung von Schulungskosten und im Voraus gezahlten Leistungen sowie gesondert behaupteten Schaden jeweils prüfen.
+7. Wirksamkeit der Mindestbeschäftigungsdauer, Kündigungserklärung und Ankündigung, Erstattung von Schulungskosten und im Voraus gezahlten Leistungen sowie den gesondert behaupteten Schaden jeweils prüfen.
 8. Haftung nicht allein wegen Unterzeichnung oder weil der Arbeitgeber einen bestimmten Betrag fordert, anerkennen, sondern Beweise zu den gesetzlichen Voraussetzungen, der Angemessenheit, der Beendigungszurechnung und der Verhältnismäßigkeitsformel des Artikels 15-1 prüfen.
 
 Beim zeitlichen Ordnen der Unterlagen sollten Vertragsschlussdatum, Schulungsbeginn und -ende, jedes Zahlungsdatum, Beschäftigungsbeginn und -ende sowie das Datum, an dem die Kündigungserklärung übermittelt wurde, gemeinsam gekennzeichnet werden. Liegen einige Unterlagen nur beim Arbeitgeber, sind zunächst vorhandene Unterlagen und die Berechnungsgrundlage des geforderten Betrags zu ordnen und nach dem erforderlichen Verfahren zusätzliche Unterlagen zu prüfen.

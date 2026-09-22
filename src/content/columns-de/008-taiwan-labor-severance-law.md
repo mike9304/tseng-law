@@ -26,9 +26,9 @@ Dieser Beitrag behandelt die Abfindung (資遣費) in Taiwan.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Das wissen bereits viele von Ihnen.
+Der Unterschied zu anderen Rechtsordnungen ist der Ausgangspunkt.
 
-Im Vergleich zu manchen anderen Rechtsordnungen — Korea ist ein gekennzeichnetes Beispiel — muss die Gesellschaft dort in der Regel Abfindung zahlen, wenn Beschäftigte ausscheiden
+Im Vergleich zu manchen anderen Rechtsordnungen — Korea ist ein gekennzeichnetes Beispiel — muss die Gesellschaft dort in der Regel Abfindung zahlen, wenn Beschäftigte ausscheiden.
 
 In Taiwan ist es jedoch anders:
 
@@ -48,7 +48,7 @@ kann die Gesellschaft kündigen, ohne Abfindung zu zahlen.
 
 ​
 
-Ich fasse dies für Sie in einer einfachen Tabelle zusammen.
+Die folgende Tabelle fasst die Unterschiede zusammen.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ und darauf achten, nicht auf die Absicht der Gesellschaft hereinzufallen.
 
 ​
 
-Ich schildere einen Fall, den ich bearbeitet habe.
+Ein von der Verfasserin bearbeiteter Fall verdeutlicht das.
 
 Es gibt die bekannte Gesellschaft A mit Niederlassungen in ganz Taiwan.
 
@@ -208,9 +208,9 @@ oder Beschäftigte auf merkwürdige Stellen versetzt,
 
 ​
 
-Wenn Sie in Taiwan arbeiten,
+Wenn Sie in Taiwan arbeiten, ist die Abfindung schwerer zu erhalten, als man denkt.
 
-Die Abfindung ist schwerer zu erhalten, als man denkt.
+Dieser Unterschied wird häufig unterschätzt.
 
 Schließen Sie nicht leicht Kompromisse mit der Gesellschaft.
 

@@ -13,15 +13,15 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Titelbild](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Wie bereits erläutert, ist es in Taiwan für Beschäftigte nicht leicht, eine Abfindung (資遣費) zu erhalten.
+In Taiwan ist es für Beschäftigte nicht leicht, eine Abfindung (資遣費) zu erhalten.
 
 ​
 
-Insbesondere wenn Beschäftigte von sich aus kündigen (自請離職),
+Das gilt insbesondere, wenn Beschäftigte von sich aus kündigen (自請離職).
 
-können sie keine Abfindung erhalten (Artikel 18 des Arbeitsstandardsgesetzes, 勞動基準法),
+Dann können sie keine Abfindung erhalten (Artikel 18 des Arbeitsstandardsgesetzes, 勞動基準法).
 
-und dies unterscheidet sich von manchen anderen Rechtsordnungen; Korea ist ein Beispiel.
+Das unterscheidet sich von manchen anderen Rechtsordnungen; Korea ist ein gekennzeichnetes Beispiel.
 
 ​
 
@@ -31,7 +31,7 @@ Es gibt jedoch **Ausnahmefälle**.
 
 In den folgenden besonderen Lagen muss der Arbeitgeber der beschäftigten Person auch dann Abfindung zahlen, wenn sie selbst kündigt (Artikel 14 des Arbeitsstandardsgesetzes, der Artikel 17 entsprechend anwendet, 勞動基準法第14條):
 
-1. Wenn der Arbeitgeber beim Abschluss des Arbeitsvertrags (勞動契約) eine unrichtige Willenserklärung (虛偽意思表示) abgibt, sodass die beschäftigte Person irrtümlich darauf vertraut und die Gefahr eines Schadens besteht
+1. Wenn der Arbeitgeber beim Abschluss des Arbeitsvertrags (勞動契約) vorsätzlich falsche Angaben macht (虛偽意思表示), sodass die beschäftigte Person irrtümlich darauf vertraut und die Gefahr eines Schadens besteht
 
 (zum Beispiel wenn der Arbeitgeber verspricht, die beschäftigte Person nach Eintritt in eine tatsächlich nicht vorhandene Auslandsfiliale zu entsenden)
 
@@ -47,45 +47,45 @@ In den folgenden besonderen Lagen muss der Arbeitgeber der beschäftigten Person
 
 ​
 
-Die häufigsten Beispiele sind, dass der Arbeitgeber
+Die häufigsten Beispiele betreffen Pflichten des Arbeitgebers.
 
-den Lohn (工資) nicht rechtzeitig zahlt,
+Der Arbeitgeber zahlt den Lohn (工資) nicht rechtzeitig.
 
-keine Überstundenvergütung (加班費) zahlt
+Er zahlt keine Überstundenvergütung (加班費).
 
-oder die beschäftigte Person nicht in die Arbeitnehmerversicherung (勞保) oder die Krankenversicherung (健保) aufnimmt.
+Oder er nimmt die beschäftigte Person nicht in die Arbeitnehmerversicherung (勞保) oder die Krankenversicherung (健保) auf.
 
 In solchen Fällen muss der Arbeitgeber auch dann Abfindung zahlen, wenn die beschäftigte Person den Arbeitsvertrag selbst beendet.
 
 ​
 
-Das Arbeitsstandardsgesetz bestimmt jedoch,
+Das Arbeitsstandardsgesetz bestimmt jedoch eine Frist.
 
-dass beschäftigte Personen, die den Arbeitsvertrag nach Ziffer 1 oder Ziffer 6 oben beenden wollen (etwa wegen fehlender Versicherungsanmeldung),
+Beschäftigte Personen, die den Arbeitsvertrag nach Ziffer 1 oder Ziffer 6 oben beenden wollen (etwa wegen fehlender Versicherungsanmeldung), müssen die Frist einhalten.
 
-den Arbeitsvertrag innerhalb von **30 Tagen** ab dem Tag, an dem sie die Lage kennen,
+Sie müssen den Arbeitsvertrag innerhalb von **30 Tagen** ab dem Tag, an dem sie die Lage kennen, beenden.
 
-oder (bei Ziffer 6) innerhalb von **30 Tagen** ab dem Tag, an dem sie den Schadenseintritt kennen, beenden müssen.
+Oder sie müssen ihn (bei Ziffer 6) innerhalb von **30 Tagen** ab dem Tag, an dem sie den Schadenseintritt kennen, beenden.
 
 Deshalb müssen beschäftigte Personen die Frist genau im Blick behalten.
 
 ​
 
-Mit anderen Worten:
+Mit anderen Worten gilt Folgendes.
 
-Das taiwanesische Recht gibt — je nachdem, ob das Verschulden bei der Gesellschaft
+Das taiwanesische Recht unterscheidet, ob das Verschulden bei der Gesellschaft liegt.
 
-oder bei der beschäftigten Person liegt —
+Oder das Verschulden liegt bei der beschäftigten Person.
 
-der einen oder der anderen Seite das Recht, die Abfindung zu verweigern oder sie zu verlangen.
+Der einen oder der anderen Seite steht dann das Recht zu, die Abfindung zu verweigern oder sie zu verlangen.
 
-Manchmal liegt Verschulden auf beiden Seiten,
+Manchmal liegt Verschulden auf beiden Seiten.
 
-und wenn beide streiten,
+Und wenn beide streiten, kommt es auf die Reihenfolge an.
 
-kann je nachdem, wer zuerst mit hinreichendem Grund den Vertrag beendet,
+Es kann darauf ankommen, wer zuerst mit hinreichendem Grund den Vertrag beendet.
 
-die Abfindung verweigert oder verlangt werden.
+Dann kann die Abfindung verweigert oder verlangt werden.
 
 Deshalb ist in taiwanesischen Arbeitsstreitigkeiten (勞資糾紛)
 

@@ -39,7 +39,7 @@ Cât privește documentele de poliție, la locul accidentului puteți primi talo
 
 Art. 284 din Codul penal reglementează leziunile din imprudență (過失傷害) și leziunile grave din imprudență (過失致重傷). Cum, potrivit art. 287 din Codul penal, este vorba de o infracțiune urmărită la plângere (告訴乃論之罪), potrivit art. 237 din Codul de procedură penală al Taiwanului (刑事訴訟法) plângerea trebuie în principiu depusă în 6 luni de la ziua în care autorul a fost cunoscut.
 
-În materie de despăgubire civilă a daunelor (損害賠償), potrivit art. 197 din Codul civil al Taiwanului (民法) dreptul la despăgubire se prescrie odată împliniți 2 ani de la ziua în care dauna și persoana obligată la despăgubire au fost cunoscute, sau 10 ani de la ziua faptei ilicite. Ce fapte influențează prescripția (消滅時效) trebuie examinat separat.
+În materie de despăgubire civilă a daunelor (損害賠償), potrivit art. 197 din Codul civil al Taiwanului (民法) dreptul la despăgubire se prescrie odată împliniți 2 ani de la ziua în care dauna și persoana obligată la despăgubire au fost cunoscute, sau 10 ani de la ziua faptei ilicite. Trebuie examinat separat dacă anumite fapte întrerup prescripția (消滅時效) sau o influențează în alt fel.
 
 Oricine suferă o daună din cauza unei infracțiuni poate, potrivit art. 487 din Codul de procedură penală, introduce o acțiune civilă alăturată procesului penal (刑事附帶民事訴訟). Cât timp instanța penală este în curs, această acțiune poate fi introdusă până înainte de închiderea dezbaterilor orale (言詞辯論終結) din apel, potrivit art. 488 din Codul de procedură penală, dar nu poate fi introdusă după închiderea dezbaterilor orale ale primei instanțe și înainte de interpunerea căii de atac. În general, plata unor cheltuieli de judecată (裁判費) distincte poate fi evitată, dar nu toate rezultatele se încheie fără cost. De exemplu, dacă cauza penală este respinsă și, la cererea reclamantului, trimisă tribunalului civil, potrivit art. 503 din Codul de procedură penală cheltuielile pot fi impuse, și trebuie verificate și regulile de trimitere și de procedură ale art. 504.
 
@@ -203,7 +203,7 @@ După experiența mea, asigurătorii nu tratează adesea în mod suficient aspec
 
 ​
 
-Ei pot neglija părți importante care privesc sentimentele celeilalte părți, precum scuzele și semnele de mângâiere.
+Ei pot neglija părți importante care privesc sentimentele celeilalte părți, precum scuzele și semnele de solicitudine.
 
 ​
 

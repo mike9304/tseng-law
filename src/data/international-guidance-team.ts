@@ -791,7 +791,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Avocată coordonatoare în Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Avocat în Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Asistent juridic',
+      'chang-fangyu': 'Asistentă juridică',
       'son-jungmin': 'Conducerea operațiunilor din Coreea (Korea Operations Manager)',
       'huang-shengping': 'Contabil asociat (Partner CPA)',
     },
@@ -3291,15 +3291,15 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Asistent juridic (paralegal), cu o activitate îndelungată ca asistent juridic senior în mai multe cabinete, cu atribuții de sprijin procedural, drept societar și investiții străine.',
+        'Asistentă juridică (paralegal), cu o activitate îndelungată ca asistentă juridică senior în mai multe cabinete, cu atribuții de sprijin procedural, drept societar și investiții străine.',
         'Sprijin în proceduri, la înființarea de societăți, la aprobările pentru investiții străine, la cererile de licență și în schimburile dintre Coreea și Taiwan.',
       ],
       education: [
         'Licență în drept (LL.B.), Tunghai University',
       ],
       experience: [
-        'Asistent juridic senior (paralegal), Boyin Law Firm',
-        'Asistent juridic senior (paralegal), Muyang International Law Firm',
+        'Asistentă juridică senior (paralegal), Boyin Law Firm',
+        'Asistentă juridică senior (paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

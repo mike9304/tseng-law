@@ -9,9 +9,9 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "În Taiwan, salariații primesc o indemnizație de concediere dacă demisionează ei înșiși?"
-    a: "Nu. Spre deosebire de unele state — de exemplu Coreea —, în Taiwan obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu trebuie să plătească indemnizație de concediere."
+    a: "Nu. Spre deosebire de unele state — de exemplu Coreea —, în Taiwan obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu are obligația de a plăti indemnizație de concediere."
   - q: "Societatea trebuie să plătească o indemnizație de concediere și în caz de concediere disciplinară?"
-    a: "Nu. Dacă persoana angajată săvârșește o faptă ilicită, încalcă regulamentul intern sau lipsește fără motiv legitim 3 zile la rând (art. 12 din legea standardelor muncii, 勞動基準法第12條), societatea poate concedia fără preaviz și nu trebuie să plătească indemnizație de concediere. În schimb, o concediere economică (art. 11) cere un preaviz și plata indemnizației de concediere."
+    a: "Nu. Dacă persoana angajată săvârșește o faptă ilicită, încalcă regulamentul intern sau lipsește fără motiv legitim 3 zile la rând (art. 12 din legea standardelor muncii, 勞動基準法第12條), societatea poate concedia fără preaviz și nu are obligația de a plăti indemnizație de concediere. În schimb, o concediere economică (art. 11) cere un preaviz și plata indemnizației de concediere."
   - q: "Cum se calculează indemnizația de concediere în Taiwan?"
     a: "Pentru fiecare 1 an de vechime împlinit, angajatorul trebuie să plătească 0,5 luni de salariu mediu ca indemnizație de concediere, cel mult 6 luni de salariu. Această formulă se aplică vechimii căreia i se aplică art. 12 din Legea privind pensia lucrătorilor (勞工退休金條例); pentru vechimea căreia i se aplică art. 17 din legea standardelor muncii (勞動基準法), se plătește 1 lună de salariu mediu pe 1 an, fără plafon."
 ---
@@ -34,7 +34,7 @@ Prin comparație cu unele state — Coreea fiind un exemplu —, acolo societate
 
 Obligația de a plăti indemnizația de concediere se naște numai când societatea concediază persoana angajată.
 
-Dacă persoana angajată demisionează ea însăși, societatea nu trebuie să plătească indemnizație de concediere.
+Dacă persoana angajată demisionează ea însăși, societatea nu are obligația de a plăti indemnizație de concediere.
 
 ​
 
@@ -42,7 +42,7 @@ Dacă persoana angajată săvârșește totuși o faptă ilicită,
 
 **încalcă regulamentul intern (工作規則),**
 
-**sau lipsește de la muncă fără motiv 3 zile la rând (曠工),**
+**sau lipsește de la muncă fără motiv legitim 3 zile la rând (曠工),**
 
 societatea poate concedia fără a plăti indemnizație de concediere.
 
@@ -53,7 +53,7 @@ Vă rezum aceasta într-un tablou simplu.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | **Tip** | **Concediere economică (資遣員工, 經濟解僱)** | **Concediere disciplinară (解僱員工, 懲戒解僱)** | **Demisia proprie a persoanei angajate**  **員工自請離職** |
-| Semnificație | Dacă există, la angajator, o nevoie de ajustare a personalului din cauza situației întreprinderii, motivul se situează în domeniul antreprenorial al angajatorului, nu în răspunderea persoanei angajate. De aceea angajatorul trebuie să respecte termenul de preaviz (預告期間) și să plătească o indemnizație de concediere, pentru a compensa în mod echilibrat inconvenientele persoanei angajate. | Dacă persoana angajată săvârșește o faptă ilicită sau nepotrivită, angajatorul poate pune capăt de îndată contractului de muncă (勞動契約) fără preaviz și nu trebuie să plătească indemnizație de concediere. Aceasta este una dintre prerogativele disciplinare ale angajatorului. | Persoana angajată este liberă să pună capăt contractului oricând, dar trebuie, după durata de angajare, să respecte termenul de preaviz, pentru ca angajatorul să poată proceda la predare și la căutarea unui înlocuitor. |
+| Semnificație | Dacă există, la angajator, o nevoie de ajustare a personalului din cauza situației întreprinderii, motivul se situează în domeniul antreprenorial al angajatorului, nu în răspunderea persoanei angajate. De aceea angajatorul trebuie să respecte termenul de preaviz (預告期間) și să plătească o indemnizație de concediere, pentru a compensa în mod echilibrat inconvenientele persoanei angajate. | Dacă persoana angajată săvârșește o faptă ilicită sau nepotrivită, angajatorul poate pune capăt de îndată contractului de muncă (勞動契約) fără preaviz și nu are obligația de a plăti indemnizație de concediere. Aceasta este una dintre prerogativele disciplinare ale angajatorului. | Persoana angajată este liberă să pună capăt contractului oricând, dar trebuie, după durata de angajare, să respecte termenul de preaviz, pentru ca angajatorul să poată proceda la predare și la căutarea unui înlocuitor. |
 | Condiții | Prezente  (art. 11 din legea taiwaneză a standardelor muncii) | Prezente  (art. 12 din legea taiwaneză a standardelor muncii) | Niciuna |
 | Preaviz | Cerut | Nu este cerut | Cerut |
 | Dificultate pentru angajator | Redusă | Ridicată | Redusă |
@@ -78,7 +78,7 @@ pentru a nu trebui să plătească indemnizații de concediere ridicate,
 
 Salariații trebuie să fie prudenți
 
-și să vegheze să nu cadă în intenția societății.
+și să vegheze să nu cadă în această manevră.
 
 ​
 

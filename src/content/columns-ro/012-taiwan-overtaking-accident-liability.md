@@ -27,7 +27,7 @@ Pentru a depăși vehiculul din față pe aceeași bandă, conducătorul vehicul
 
 Vehiculul din spate poate depăși abia după ce vehiculul din față a încetinit și s-a dat la o parte, sau a manifestat voința de a ceda printr-un semn al mâinii sau prin semnalizatorul drept.
 
-Apoi, vehiculul care depășește trebuie să aprindă semnalizatorul stâng, să treacă la stânga menținând o distanță de cel puțin 0,5 metri față de vehiculul din față și, o distanță de siguranță odată asigurată, să aprindă semnalizatorul drept și să revină în siguranță pe banda de origine.
+Apoi, vehiculul care depășește trebuie să aprindă semnalizatorul stâng, să treacă la stânga menținând o distanță de cel puțin 0,5 metri față de vehiculul din față și, după ce a asigurat o distanță de siguranță, să aprindă semnalizatorul drept și să revină în siguranță pe banda de origine.
 
 Această ordine de semnale și de cedare pe aceeași bandă nu înseamnă că depășirea ar fi permisă într-un loc sau într-o condiție interzise. Înainte de a începe depășirea, toate condițiile art. 101 trebuie apreciate împreună.
 
@@ -49,7 +49,7 @@ Acest rezultat, propriu cauzei, nu înseamnă că o singură omisiune a unui sem
 
 ## Puncte de verificat pentru a aprecia răspunderea accidentului
 
-Înainte de a depăși, trebuie mai întâi verificat dacă locul sau situația traficului intra în interdicția de depășire. Dacă se aplică procedura aceleiași benzi, dați semnalul de claxon sau de faruri prescris, fără a forța vehiculul din față să cedeze, așteptați un semn clar de cedare și încheiați depășirea cu un interval suficient și o distanță de revenire sigură.
+Înainte de a depăși, trebuie mai întâi verificat dacă locul sau situația traficului cade sub interdicția de depășire. Dacă se aplică procedura aceleiași benzi, dați semnalul de claxon sau de faruri prescris, fără a forța vehiculul din față să cedeze, așteptați un semn clar de cedare și încheiați depășirea cu un interval suficient și o distanță de revenire sigură.
 
 Respectarea art. 101 este importantă, dar nu garantează nici evitarea accidentului, nici un anumit rezultat al expertizei sau al procesului. Conducătorii trebuie să lase o marjă de siguranță suplimentară și să se adapteze situației din față.
 

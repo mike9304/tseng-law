@@ -107,19 +107,19 @@ puteți, dacă este cazul, să propuneți autentificarea contractului de locați
 
 ​
 
-**5. Se poate, la înființarea societății, lua în locațiune un local comercial de birouri?**
+**5. Se poate, la înființarea societății, lua în locațiune un spațiu de birouri?**
 
 Aceasta depinde de ramurile de activitate (營業項目) ale societății.
 
-De exemplu, dacă obiectul de activitate este alimentația și se intenționează luarea în locațiune a unui local comercial de birouri, deschiderea contului bancar va fi foarte dificilă.
+De exemplu, dacă obiectul de activitate este alimentația și se intenționează luarea în locațiune a unui spațiu de birouri, deschiderea contului bancar va fi foarte dificilă.
 
 După cum s-a indicat deja, banca examinează contractul de locațiune și inspectează pe loc adresa societății.
 
 În plus, la înregistrarea finală a societății, municipalitatea (市政府) cere și ea ca adresa înregistrată să se situeze într-o zonă unde exploatarea unui restaurant este autorizată;
 
-dacă este vorba de un local comercial de birouri, înregistrarea societății (公司登記) nu este atunci posibilă.
+dacă este vorba de un spațiu de birouri, înregistrarea societății (公司登記) nu este atunci posibilă.
 
-De exemplu, dacă este vorba de obiecte de activitate posibile într-un local comercial de birouri, precum publicitatea sau comerțul en-gros, societatea poate fi înființată într-un local comercial de birouri. Înainte de încheierea contractului de locațiune
+De exemplu, dacă este vorba de obiecte de activitate posibile într-un spațiu de birouri, precum publicitatea sau comerțul en-gros, societatea poate fi înființată într-un spațiu de birouri. Înainte de încheierea contractului de locațiune
 
 ar trebui să verificați dinainte.
 

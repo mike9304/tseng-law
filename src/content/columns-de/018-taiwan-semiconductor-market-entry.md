@@ -61,7 +61,7 @@ Wird eine selbständige juristische Person in Taiwan errichtet, ist auch deren F
 
 ### GmbH-ähnliche Gesellschaft (有限公司): schlankere Leitungsstruktur, aber geschlossenere Anteilsübertragung
 
-Eine GmbH-ähnliche Gesellschaft (有限公司) kann von 1 oder mehr natürlichen Personen oder von taiwanesischen oder ausländischen juristischen Gesellschaftern gebildet werden; Gesellschafter haften grundsätzlich nur in Höhe der Einlage. Die Gesellschaft hat 1 bis 3 Direktoren, gewählt aus den Gesellschaftern. Nicht geschäftsführende Gesellschafter können Kontrollrechte ausüben, eine gesonderte Aufsichtsperson der Gesellschaft (監察人) ist nicht erforderlich. Sofern die Satzung nichts anderes bestimmt, hat je 1 Gesellschafter 1 Stimme; die Kontrolle muss nicht dem Einlageverhältnis entsprechen. Die Übertragung der Einlage eines gewöhnlichen Gesellschafters bedarf grundsätzlich der Zustimmung der Mehrheit der Stimmrechte der übrigen Gesellschafter; bei einem Direktor sind es zwei Drittel oder mehr der Stimmrechte der übrigen Gesellschafter. Das passt eher zu einfachen Gesellschafterverhältnissen und stabiler Kontrolle als zu häufiger Kapitalaufnahme oder zu häufigem Anteilshandel. Später ist eine Umwandlung in eine kapitalgesellschaftsähnliche Form auf Aktien (股份有限公司) möglich.
+Eine GmbH-ähnliche Gesellschaft (有限公司) kann von 1 oder mehr natürlichen Personen oder von taiwanesischen oder ausländischen juristischen Gesellschaftern gebildet werden; Gesellschafter haften grundsätzlich nur in Höhe der Einlage. Die Gesellschaft hat 1 bis 3 Direktoren, gewählt aus den Gesellschaftern. Nicht geschäftsführende Gesellschafter können Kontrollrechte ausüben, eine gesonderte Aufsichtsperson der Gesellschaft (監察人) ist nicht erforderlich. Sofern die Satzung nichts anderes bestimmt, hat 1 Gesellschafter 1 Stimme; die Kontrolle muss nicht dem Einlageverhältnis entsprechen. Die Übertragung der Einlage eines gewöhnlichen Gesellschafters bedarf grundsätzlich der Zustimmung der Mehrheit der Stimmrechte der übrigen Gesellschafter; bei einem Direktor sind es zwei Drittel oder mehr der Stimmrechte der übrigen Gesellschafter. Das passt eher zu einfachen Gesellschafterverhältnissen und stabiler Kontrolle als zu häufiger Kapitalaufnahme oder zu häufigem Anteilshandel. Später ist eine Umwandlung in eine kapitalgesellschaftsähnliche Form auf Aktien (股份有限公司) möglich.
 
 ### Kapitalgesellschaftsähnliche Form auf Aktien (股份有限公司): geeignet, wenn weitere Investoren oder eine Notierung in Betracht kommen
 
@@ -73,7 +73,7 @@ Bei Gründung einer taiwanesischen Tochter durch eine ausländische Gesellschaft
 
 Bei Gründung einer taiwanesischen Zweigniederlassung einer gewöhnlichen ausländischen Gesellschaft ist grundsätzlich keine Investitionsgenehmigung der Abteilung für Investitionsprüfung erforderlich; die Handelsentwicklungsbehörde des Wirtschaftsministeriums (商業發展署) führt Zweigniederlassungsregister und zugehörige Kapitalfeststellung. Namensvorprüfung, Transfer von Betriebskapital, Kapitalprüfung und Steuerregistrierung bleiben erforderlich; der Zeitplan ist meist kürzer.
 
-Das Vorstehende ist ein Hinweis zur Vertragsgestaltung. Die Wahl einer bestimmten Rechtsform macht ein Geschäft nicht rechtmäßig und verhindert Streit nicht.
+Das Vorstehende vergleicht nur die Eintragungsverfahren von Zweigniederlassung und Tochter. Die Wahl einer bestimmten Rechtsform macht ein Geschäft nicht rechtmäßig und verhindert Streit nicht.
 
 ## 5. Gesellschaftsregister und rechtmäßige Arbeit eines Ingenieurs sind nicht dasselbe
 

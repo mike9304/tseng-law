@@ -22,7 +22,7 @@ faq:
 
 ![Bild zur Erläuterung von Mindestbeschäftigungsdauer und Kostenerstattung im Arbeitsvertrag](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Die Vereinbarung über eine Mindestbeschäftigungsdauer (最低服務年限約定) in taiwanesischen Arbeitsverträgen (勞動契約) wird verwendet, um neben dem Versprechen, eine bestimmte Zeit zu arbeiten, festzulegen, ob bei vorzeitigem Ausscheiden Schulungskosten, Antrittsprämie (簽約金) oder Bindungsbonus (留任獎金) zurückzuzahlen sind und ob eine gesonderte Vertragsstrafe (違約金) verlangt werden kann. Allein die Existenz einer unterzeichneten Klausel legt Wirksamkeit der Vereinbarung oder Rückzahlungsbetrag nicht fest. Statt der Bezeichnung im Vertrag sind gesetzliche Voraussetzungen und tatsächlicher Ablauf von Zahlung, Schulung und Beendigung schrittweise zu prüfen.
+Die Vereinbarung über eine Mindestbeschäftigungsdauer (最低服務年限約定) in taiwanesischen Arbeitsverträgen (勞動契約) dient dazu, das Versprechen einer bestimmten Beschäftigungsdauer festzuhalten und zu regeln, ob bei vorzeitigem Ausscheiden Schulungskosten, Antrittsprämie (簽約金) oder Bindungsbonus (留任獎金) zurückzuzahlen sind und ob eine gesonderte Vertragsstrafe (違約金) verlangt werden kann. Allein die Existenz einer unterzeichneten Klausel legt Wirksamkeit der Vereinbarung oder Rückzahlungsbetrag nicht fest. Statt der Bezeichnung im Vertrag sind gesetzliche Voraussetzungen und tatsächlicher Ablauf von Zahlung, Schulung und Beendigung schrittweise zu prüfen.
 
 Bei der Prüfung ist es wichtig, die folgenden vier Fragen nicht zu vermengen.
 
@@ -84,7 +84,7 @@ Der zweite Faktor, die Ersetzbarkeit, wird nicht allein durch Behauptungen des A
 
 Der dritte Faktor betrachtet nicht nur den Betrag der Gegenleistung, sondern ihren Umfang. Wann gezahlt wird, unter welchen Bedingungen sie der beschäftigten Person endgültig zugeordnet wird, wie sie der gesamten vereinbarten Dauer entspricht und ob bei vorzeitiger Beendigung die bereits erfüllte Zeit berücksichtigt wird, ist wichtig. Auch bei gleichnamigem Bonus kann die Bewertung nach Vertragsstruktur und Substanz abweichen.
 
-Zum vierten Faktor können mehrere die Angemessenheit beeinflussende Umstände gehören, wie Abschlusshergang, Art der Arbeit, der Partei erläuterter Inhalt, tatsächliche Beschäftigungsdauer und Beendigungsgrund. Die Bedeutung jedes Faktors kann fallweise abweichen, und die zu berücksichtigenden Umstände sind nicht auf die genannten Beispiele beschränkt. Deshalb sind die in den Unterlagen erscheinenden relevanten Tatsachen ohne Auslassung zu prüfen.
+Zum vierten Faktor können mehrere die Angemessenheit beeinflussende Umstände gehören, wie Abschlusshergang, Art der Arbeit, den Parteien erläuterter Inhalt, tatsächliche Beschäftigungsdauer und Beendigungsgrund. Die Bedeutung jedes Faktors kann fallweise abweichen, und die zu berücksichtigenden Umstände sind nicht auf die genannten Beispiele beschränkt. Deshalb sind die in den Unterlagen erscheinenden relevanten Tatsachen ohne Auslassung zu prüfen.
 
 Letztlich ist zwischen vereinbarter Dauer, tatsächlicher Investition des Arbeitgebers, Ersetzungsschwierigkeit, von der beschäftigten Person erhaltener Gegenleistung und Rückzahlungsbelastung ein nachvollziehbares Verhältnis erforderlich. Allein wegen einer bestimmten Berufsgruppe darf die Wirksamkeit nicht vorab festgelegt oder die Schlussfolgerung eines anderen Falls unverändert übernommen werden. Gestaltung bei Vertragsschluss und tatsächlicher Erfüllungsgrad zum Beendigungszeitpunkt sind gemeinsam zu betrachten.
 
@@ -92,7 +92,7 @@ Letztlich ist zwischen vereinbarter Dauer, tatsächlicher Investition des Arbeit
 
 Nach den Hinweisen des taiwanesischen Arbeitsministeriums vom 5. Juni 2026 können Kosten regelmäßiger Schulungen, allgemeiner Aufgabenschulungen, der Einarbeitung neuer Beschäftigter und gesetzlich durchzuführender Pflichtschulungen nicht als Grundlage für eine Mindestbeschäftigungsdauer oder für Vertragsstrafe und Kostenerstattung dienen. Nicht nur die Bezeichnung der Schulung ist zu betrachten, sondern konkreter Lehrgang, fachlich-technischer Inhalt, Dauer, tatsächlich vom Arbeitgeber getragene Kosten und Belege.
 
-Der Hinweis 勞動關2字第1150141814號 des Arbeitsministeriums unterscheidet regelmäßig durchgeführte Schulungen, übliche aufgabenbezogene Unterweisung, Schulungen, damit neu eingestellte Personen sich an Arbeitsumfeld und Verfahren gewöhnen, und Schulungen, die der Arbeitgeber nach dem Gesetz durchführen muss. Solche Schulungen gehören zum Geschäftsbetrieb oder zur Erfüllung gesetzlicher Pflichten; ihre Kosten dürfen nicht in eine Bindungspflicht oder Sanktion für vorzeitige Beendigung umgewandelt werden.
+Das Schreiben des Arbeitsministeriums mit dem Aktenzeichen 勞動關2字第1150141814號 unterscheidet regelmäßig durchgeführte Schulungen, übliche aufgabenbezogene Unterweisung, Schulungen, damit neu eingestellte Personen sich an Arbeitsumfeld und Verfahren gewöhnen, und Schulungen, die der Arbeitgeber nach dem Gesetz durchführen muss. Solche Schulungen gehören zum Geschäftsbetrieb oder zur Erfüllung gesetzlicher Pflichten; ihre Kosten dürfen nicht in eine Bindungspflicht oder Sanktion für vorzeitige Beendigung umgewandelt werden.
 
 Lehrgänge, die neue Beschäftigte üblicherweise erhalten, wie Erläuterung von Arbeitsregeln, Vorstellung von Organisation und System, allgemeine Übergabe und grundlegende Sicherheitshinweise, sind nach ihrer Substanz zu prüfen. Allgemeine Einstellungs- und Verwaltungskosten oder Übergabekosten, die der Arbeitgeber ohnehin trägt, können nicht unter der Bezeichnung gesonderter Investition zum Rückzahlungsgegenstand gemacht werden.
 
@@ -128,7 +128,7 @@ Die Beurteilung der Beendigungsursache beeinflusst unmittelbar auch den Rückzah
 
 ## 8. Kündigungserklärung und Ankündigungsfrist sind eine gesonderte Frage
 
-Die Vereinbarung über eine Mindestbeschäftigungsdauer ist kein Mittel, das das Ausscheiden der beschäftigten Person physisch oder rechtlich verhindert. Kündigungserklärung und Ankündigungsfrist betreffen, wann das Arbeitsverhältnis endet; Wirksamkeit der Mindestbeschäftigungsdauer und Haftung auf Kostenerstattung betreffen, ob mit der Beendigung vermögensrechtliche Haftung verbunden ist.
+Die Vereinbarung über eine Mindestbeschäftigungsdauer ist kein Mittel, das die beschäftigte Person tatsächlich oder rechtlich am Ausscheiden hindert. Kündigungserklärung und Ankündigungsfrist betreffen, wann das Arbeitsverhältnis endet; Wirksamkeit der Mindestbeschäftigungsdauer und Haftung auf Kostenerstattung betreffen, ob mit der Beendigung vermögensrechtliche Haftung verbunden ist.
 
 Beendet die beschäftigte Person einen unbefristeten Arbeitsvertrag, gilt nach Artikel 15 des taiwanesischen Arbeitsstandardsgesetzes die Ankündigungsfrist des Artikels 16 Absatz 1 entsprechend. Artikel 16 ist eine Vorschrift über die Vertragsbeendigung durch den Arbeitgeber; auf die Kündigung durch die beschäftigte Person findet diese Ankündigungsfrist über Artikel 15 Anwendung.
 

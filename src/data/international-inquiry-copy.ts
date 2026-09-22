@@ -595,7 +595,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Dieser Beitrag ist nur auf {language} veröffentlicht; der Link öffnet die Originalseite.',
     unavailableTranslationNotice:
-      'Dieser Punkt liegt in der Sprache dieser Seite noch nicht vor. Ein Link mit der Originalsprache öffnet den Originaltext.',
+      'Dieser Inhalt liegt in der Sprache dieser Seite noch nicht vor. Ein Link mit der Originalsprache öffnet den Originaltext.',
     unavailableLanguageNotice: 'Diese Seite wird nicht auf {language} angeboten.',
     languageOptions: {
       en: 'Englisch (English)',

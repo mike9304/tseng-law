@@ -81,7 +81,7 @@ So entstand etwa der Gedanke, ob die ausdrückliche Regelung, dass nur sehbehind
 
 und es wurde bezweifelt, ob diese Regelung wirklich zum Schutz von Arbeitsplätzen und Existenz sehbehinderter Personen beitrug.
 
-Schließlich erklärte das Verfassungsgericht (大法官) die Gesetzesvorschrift, nach der nur sehbehinderte Personen im Massagegewerbe tätig sein durften, für verfassungswidrig (違憲).
+Schließlich erklärten die Großen Richter (大法官) die Gesetzesvorschrift, nach der nur sehbehinderte Personen im Massagegewerbe tätig sein durften, für verfassungswidrig (違憲).
 
 ​
 

@@ -1,0 +1,88 @@
+WO-F-de r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-de-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: de-a 16, de-b 19 (35). No P3 rows.
+
+Applied: 31.
+Skipped: 4 numbered rows. Checker adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned German expectation in `src/lib/__tests__/` or `src/data/__tests__/` matched a string this round changed. `src/lib/llms-txt.ts` was not edited: `GUIDANCE_LLMS_NOTICES.de` still quotes the unchanged FAQ and privacy sentences, and `llms.txt` stays in `discoveryNotice`. "TWD 1.57M" was not touched.
+
+### Applied
+de-a 2–7, 9–16.
+de-b 1–11, 13–18.
+
+Adaptations (still applied):
+- de-a 6. The parenthetical "(ein Jahr)" is gone (001 ×2, 008 ×2). "das letzte Jahr" alone drops the Korean 1 (최근 1년). Now "1 Jahr, das letzte Jahr in Taiwan" ×2. 008 "jedes vollendete Jahr (ein Jahr)" is now "je 1 vollendetes Jahr" ×2 (FAQ and blockquote).
+- de-a 7. "je verletzte Person und Unfall" drops both 1s (피해자 1명·사고 1건). Now "je 1 verletzter Person und je 1 Unfall". Digits stay; "je" takes the dative.
+- de-a 10. "pro einem Jahr" is the wrong case after "pro". Now "je einem Jahr 1 Monat" ×2. "ein Monatsbetrag" is not in the lexicon, so the second 1 stays as a digit. "einem Jahr" is.
+- de-a 14. "Börsenzulassungssubjekt" ×3 (FAQ, body, and the securities-market sentence). The third had no (上市) gloss and did not gain one.
+- de-a 15. The leftover "公司設立 bezeichnet die Gesellschaftsgründung." is gone. The suggested sentence would have dropped the two column links and "(Teil 2)". Both links and "(Teil 2)" stay. The next paragraph already glosses 公司設立.
+- de-b 1. The sentence above the close compares branch and subsidiary registration, so it no longer says "Hinweis zur Vertragsgestaltung". The English file has the same false label. The following denial (a form does not make a transaction lawful) stays.
+- de-b 6. "(1-fach)" is gone. "bis zur Höhe des tatsächlichen Schadens" alone drops Korean 1배. Now "bis zum 1-Fachen des tatsächlichen Schadens".
+- de-b 13. "neben" no longer buries the commitment. Schulungskosten, Antrittsprämie (簽約金), Bindungsbonus (留任獎金) and Vertragsstrafe (違約金) stay; the suggested sentence dropped them.
+- de-b 17. "fällt selbstverständlich in die Berechnung" → "fällt automatisch in die Berechnung" ×2 (FAQ and body). Other "selbstverständlich" (016 guardian "as a matter of course"; 017 licence transfer) were not this sentence and were left.
+- de-b 18. "hat jeder Gesellschafter eine Stimme" drops both 1s ("eine Stimme" is not in the lexicon). Now "hat 1 Gesellschafter 1 Stimme".
+
+Guidance pack (German strings only):
+- `germanGuidanceContent` about: "von der Unternehmensberatung bis zum Gerichtsverfahren" → "beraten Unternehmen und vertreten sie im Gerichtsverfahren."
+- `international-inquiry-copy.ts` `de.unavailableTranslationNotice`: "Dieser Punkt" → "Dieser Inhalt".
+
+### Skipped
+- de-a 1. "(Artikel 10)" on the dividend-withholding link in 004. The URL is `flno=3` and was not changed. Korean 영업세법 제10조 and the English label are Article 10; dropping 10 fails `numbers` (`missing 10`). The label stays. 001's label for the same URL has no article number because that file's source count does not include this 10.
+- de-a 8. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003, 005, 006, 008 and 009 were not removed. Heading levels and the ZWSP count match the Korean source. 005 `**​**` stays for the same reason.
+- de-b 12. Trailing U+200B and the ZWSP-only lines in 013 and 015 were left. Deleting them changes the ZWSP count and the block count.
+- de-b 19. "## 7." and "## 8." were not renumbered to 6 and 7. The English source has the same skip. Changing the digits fails `numbers` (missing 8, extra 6). Heading count and levels stay.
+
+## Systemic patterns
+
+- U+200B blanks and 005 `**​**` (de-a verdict; de-b 013/015). 0 deleted. Counts unchanged: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3.
+- Parenthetical that repeats a period already named (de-a). 4 "(ein Jahr)" removed. The counted 1 remains as "1 Jahr" / "je 1 vollendetes Jahr", not as a second "(ein Jahr)".
+- 009 closer opens with "Oder" and then drops who may refuse or claim (de-a). 2 sentences. "Oder das Verschulden liegt bei der beschäftigten Person." is now a sentence with its own subject. "Dann kann die Abfindung verweigert oder verlangt werden." now names the side that terminates first on sufficient grounds. The earlier "Oder" lines (insurance enrolment; the 30-day deadline) already have a subject and are separate blocks; they were left.
+- 018 false contract-drafting label (de-b). 1 sentence, see de-b 1. The heading skip was not changed, see Skipped.
+- Multiplier and digit telegram where the English is ordinary prose (de-b, also de-a 7 and 10). 6 spots adapted, digits kept where the lexicon has no word for that 1: 003 the per-victim/per-accident pair; 008 the Art. 17 month; 010 the negligence cap; 018 one shareholder, one vote. See adaptations.
+- Wrong genitive "Erben der ausschlagenden Person" (de-b). 1 sentence → "Erben des nachfolgenden Ranges" / "Eintrittserbrecht".
+- A neighbouring German word names the wrong idea (de-b). 2: "Ersatzmittel" → "mögliche Quelle für den Ersatz"; "Verkaufskontrolle" → "Maß an Kontrolle über den Verkauf".
+- R2–R10. The round-4 verdicts say feminine Wei Tseng, Sie, ß, dot-thousands, decimal comma, day–month–year dates, and the four-language consultation lock already hold. This pass did not find a new Korea-as-default-reader, result promise, untranslated chrome, or fullwidth-punctuation leak outside the rows above. The only Hangul in columns-de is inside the 008 and 009 frontmatter `url` values, which were not edited.
+
+## Reviewer points not followed
+
+- de-a 1. The link parameter `flno=3` is not Article 10 of the statute the label names. The Korean source and the English file both put Article 10 on that same URL, and the checker counts that 10. The article number in the label was kept.
+- de-a 6, de-a 7, de-a 10, de-b 6, and de-b 18. The suggested wording is the better German. It deletes digits the checker counts against the Korean source. Where a lexicon spelling carries the value ("einem Jahr"), that spelling was used. Where it does not ("eine Stimme", "ein Monatsbetrag", "eine verletzte Person"), the digit-bearing form was kept.
+- de-a 8 and de-b 12. The U+200B lines match the Korean source. Promoting Q16–Q20 would also change heading levels. They are not disposable blank lines.
+- de-b 19. The outline does skip 6, in German and in English. Renumbering changes counted heading digits.
+- de-a 15 and de-b 13. The suggested sentences drop links, "(Teil 2)", or the named payments and their Chinese glosses. Those were kept; only the flagged wording was rewritten.
+
+Nothing else in the two verdicts looked factually wrong.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-de --lang de 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-de src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      18
+```
+
+The count 18 was taken before this log existed. This file is the additional untracked path. Pre-existing in that 18, not written by this lane: `docs/i18n/global-plan/WO-F-de.txt` and the two untracked round-4 review files.

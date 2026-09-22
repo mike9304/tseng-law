@@ -73,7 +73,7 @@ När ett utländskt bolag bildar taiwanesiskt dotterbolag görs i princip förha
 
 Däremot krävs vid bildande av taiwanesisk filial för ett vanligt utländskt bolag i princip inte investeringstillstånd från den avdelningen; ekonomiministeriets avdelning för handelsutveckling (經濟部商業發展署) handlägger filialregistrering och relaterad kapitalfastställelse. Förhandskontroll av firma, överföring av rörelsekapital, kapitalgranskning och skatteregistrering krävs dock fortfarande, och tidplanen är i allmänhet kortare.
 
-Ovanstående är vägledning om hur avtalet utformas. Att en viss bolagsform valts gör inte transaktionen laglig och utesluter inte tvister.
+Ovanstående jämför bara registreringsförfarandena för filial och dotterbolag. Att en viss bolagsform valts gör inte transaktionen laglig och utesluter inte tvister.
 
 ## 5. Bolagsregistrering och ingenjörens lagliga arbete är skilda saker
 

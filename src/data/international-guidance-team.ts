@@ -624,7 +624,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Ledande advokat i Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Juristassistent',
-      'son-jungmin': 'Operativ ledning Korea (Korea Operations Manager)',
+      'son-jungmin': 'Operativ ledning för Korea (Korea Operations Manager)',
       'huang-shengping': 'Anknuten revisor (Partner CPA)',
     },
   },
@@ -2938,7 +2938,7 @@ export const guidanceTeamBios: Record<
         'Stödjer den integrerade analysen av juridiska, skattemässiga och finansiella risker för företagsklienter.',
       ],
       education: [
-        'Master (M.A.) i redovisning, National Chengchi University',
+        'Masterexamen (M.A.) i redovisning, National Chengchi University',
         'Kandidatexamen (B.A.) i redovisning, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],

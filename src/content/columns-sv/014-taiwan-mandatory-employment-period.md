@@ -28,7 +28,7 @@ Vid prövningen är det viktigt att inte blanda de följande 4 frågorna.
 
 1. Om avtalet i sig uppfyller de lagstadgade kraven i artikel 15-1
 2. Om den avtalade perioden och arbetstagarens börda ligger inom skälig ram
-3. Till vem upphörandeskälet för anställningsavtalet kan läggas till last
+3. Vem man kan lägga upphörandeskälet för anställningsavtalet till last
 4. Hur avgångsbeskedet och återbetalningens omfång ska bedömas
 
 Även om dessa 4 frågor står tillsammans i samma avtal är tillämpligt stadgande och nödvändig bevisning skilda. Det ska därför prövas var för sig om avtalet är giltigt, när avgångsförklaringen får verkan, om det finns ansvar att återbetala förskottsbetalning (預付性給付) eller utbildningskostnad, och om en separat skada faktiskt har uppstått.
@@ -37,7 +37,7 @@ Vid prövningen är det viktigt att inte blanda de följande 4 frågorna.
 
 Avtalet är inte automatiskt ogiltigt. Enligt artikel 15-1 i Taiwans lag om arbetsnormer (勞動基準法) kan avtalet uppfylla de lagstadgade kraven om arbetsgivaren ger yrkesinriktad teknisk utbildning (專業技術培訓) och bär kostnaden, eller tillhandahåller skälig ersättning (合理補償) för att arbetstagaren ska iaktta den minsta tjänstgöringstiden. Båda kraven behöver inte uppfyllas samtidigt, men även om ett av dem finns ska avtalet inte överskrida skälig ram mot bakgrund av samtliga omständigheter, såsom utbildningens längd och kostnad, möjligheten att ersätta personal (人力替補可能性) samt ersättningens belopp och omfång.
 
-Artikel 15-1 stycke 1 reglerar 2 lagstadgade krav alternativt. Det första är att arbetsgivaren gett arbetstagaren yrkesinriktad teknisk utbildning och burit kostnaden; det andra att skälig ersättning getts mot iakttagande av den minsta tjänstgöringstiden. Det avgörande är inte vilket namn som satts i avtalet, utan vilken grund som faktiskt finns.
+Artikel 15-1 stycke 1 anger två lagstadgade grunder som alternativ till varandra. Det första är att arbetsgivaren gett arbetstagaren yrkesinriktad teknisk utbildning och burit kostnaden; det andra att skälig ersättning getts mot iakttagande av den minsta tjänstgöringstiden. Det avgörande är inte vilket namn som satts i avtalet, utan vilken grund som faktiskt finns.
 
 Artikel 15-1 kräver ett av de 2 lagstadgade kraven och dessutom en separat skälighetsprövning. Det betyder varken att yrkesinriktad teknisk utbildning och skälig ersättning alltid måste ges samtidigt, eller att hela avtalet automatiskt blir giltigt bara för att ett av de 2 formellt antecknats.
 
@@ -118,7 +118,7 @@ Klausulen om återbetalning av hela beloppet, det fasta avtalsvitet som saknar s
 
 Artikel 15-1 stycke 4 i Taiwans lag om arbetsnormer föreskriver att om anställningsavtalet upphör innan den minsta tjänstgöringstiden löpt ut av skäl som inte kan läggas arbetstagaren till last, bär arbetstagaren varken ansvar för avtalsbrott mot avtalet om minsta tjänstgöringstid eller för återbetalning av utbildningskostnad. Upphörandeskäl och ansvarsfördelning ska dock bedömas utifrån konkret bevisning, såsom uppsägningsmeddelande, avgångsförklaring och material om brott mot arbetsvillkor.
 
-Arbetstagarens avtalsbrott kan därför inte erkännas bara för att anställningsförhållandet upphört före den avtalade perioden. Det ska bekräftas vem som gjort vilken viljeförklaring, vilken den rättsliga grunden för avtalets upphörande är, och till vilken part de faktiska omständigheter som framkallade upphörandet kan läggas.
+Arbetstagarens avtalsbrott kan därför inte erkännas bara för att anställningsförhållandet upphört före den avtalade perioden. Det ska bekräftas vem som gjort vilken viljeförklaring, vilken den rättsliga grunden för avtalets upphörande är, och till vilken part de faktiska omständigheter som framkallade upphörandet kan läggas till last.
 
 Prövningsmaterialet kan omfatta uppsägningsmeddelande, avgångsskrivelse, handling om överenskommet upphörande, e-post och meddelandelogg, material om ändring av arbetsvillkor samt närvaro- och arbetsregister. Även om hälsa eller arbetsomständigheter nämns dras inte slutsatsen bara utifrån det uttrycket, utan det faktiska förloppet, den lagliga grunden för upphörande och relaterad bevisning ses tillsammans.
 
@@ -128,7 +128,7 @@ Bedömningen av upphörandeskäl påverkar också direkt återbetalningens omfå
 
 ## 8. Avgångsbeskedet är en skild fråga
 
-Avtalet om minsta tjänstgöringstid är inte något som fysiskt eller rättsligt hindrar arbetstagaren från att säga upp sig. Avgångsförklaring och uppsägningstid (預告期間) är frågan om när anställningsförhållandet upphör; giltigheten av avtalet om minsta tjänstgöringstid och ansvaret att återbetala kostnader är frågan om det finns förmögenhetsansvar till följd av upphörandet.
+Avtalet om minsta tjänstgöringstid hindrar inte arbetstagaren från att säga upp sig, vare sig i praktiken eller rättsligt. Avgångsförklaring och uppsägningstid (預告期間) är frågan om när anställningsförhållandet upphör; giltigheten av avtalet om minsta tjänstgöringstid och ansvaret att återbetala kostnader är frågan om det finns förmögenhetsansvar till följd av upphörandet.
 
 När arbetstagaren avslutar ett anställningsavtal utan bestämd tid (不定期契約) tillämpas enligt artikel 15 i Taiwans lag om arbetsnormer analogt uppsägningstiden i artikel 16 stycke 1. Artikel 16 är ett stadgande om arbetsgivarens avtalsupphörande, och vid arbetstagarens avgång tillämpas den uppsägningstiden genom artikel 15.
 

@@ -70,7 +70,7 @@ Bildandet av ett taiwanesiskt dotterbolag börjar i allmänhet med förhandsgran
 
 10. Ytterligare steg såsom import och export, branschtillstånd, arbetstillstånd och vistelse (i tillämpliga fall)
 
-Förhandsgranskningen av bolagets kinesiska namn och verksamhetsgrenar bekräftar före registreringen den beteckning som ska användas och den planerade verksamheten. Att denna granskning godkänts betyder inte att det branschtillstånd som behövs redan har meddelats, och inte heller att man genast får verka på den avsedda platsen. Om en ansökan om utländsk investering behövs måste investerare, investeringsbelopp, insatsföremål och affärsplan stämma med prövningshandlingarna.
+Förhandsgranskningen av bolagets kinesiska namn och verksamhetsgrenar bekräftar före registreringen den beteckning som ska användas och den planerade verksamheten. Att denna granskning godkänts betyder inte att det branschtillstånd som behövs redan har meddelats, och inte heller att man genast får verka på den avsedda platsen. Om en ansökan om utländsk investering behövs måste investerare, investeringsbelopp, det bolag som tar emot investeringen och affärsplanen stämma med prövningshandlingarna.
 
 Handlingar som upprättats utomlands, såsom fullmakt, intyg om den juridiska personens fortbestånd (法人存續證明) och handlingar om företrädanderätt, kan beroende på utfärdandeort och handlingens art kräva offentlig handling, legalisering eller autentisering genom en taiwanesisk utlandsmyndighet. Det ska vidare prövas om översättningen, den som får underteckna och den juridiska personens beteckning stämmer med ansökan. Beroende på investerarens nationalitet och om det är en fysisk eller juridisk person kan handlingarna skilja sig; före utfärdandet bör giltighetstid och legaliseringsväg ordnas.
 
@@ -88,7 +88,7 @@ Att verksamhetsgrenar kan anges i bolagsregistreringen betyder inte att den ber�
 
 Bolagets säte är inte bara en postadress, utan grunden för registrering, skatter och faktisk verksamhet. Före ingående av hyresavtalet (租賃契約) ska, för den avsedda adressen och verksamhetsgrenarna, markens användningszonering (土地使用分區), byggregleringen (建築管理), hyresvillkoren och lämpligheten för skatteregistrering prövas. Om byggnadens tillåtna användning eller förvaltningsregler inte passar den faktiska verksamheten, eller om den erforderliga hyresvärdens samtycke saknas, kan platsbyte eller ett ytterligare förfarande bli nödvändigt efter registreringen.
 
-Taipei stad driver, för berörda bolags- och handelsregistreringar, systemet för förhandsgranskning av verksamhetsstället (營業場所預先查詢). Enbart detta sökresultat uppfyller dock inte samtidigt andra tillstånd eller krav i yrkesbestämmelser. Om sätet tas i en annan region ska den berörda lokala enhetens och den behöriga myndighetens förfaranden prövas; före ingående av ett långsiktigt hyresavtal eller före investeringar i anläggningar rekommenderas att platsens lämplighet dokumenteras skriftligen.
+Taipei stad driver, för berörda bolags- och handelsregistreringar, systemet för förhandsgranskning av verksamhetsstället (營業場所預先查詢). Enbart detta sökresultat visar dock inte att andra tillståndskrav eller krav i yrkesbestämmelser är uppfyllda. Om sätet tas i en annan region ska den berörda lokala enhetens och den behöriga myndighetens förfaranden prövas; före ingående av ett långsiktigt hyresavtal eller före investeringar i anläggningar rekommenderas att platsens lämplighet dokumenteras skriftligen.
 
 ## 4. Arbetstillstånd, uppehållstillstånd och kapital
 

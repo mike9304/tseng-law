@@ -296,10 +296,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'NUESTRO EQUIPO',
     title: 'Equipo internacional de Hovering',
     description:
-      'Perfiles de los abogados, de la dirección de operaciones y del auditor asociado de Hovering.',
+      'Perfiles de los abogados, de la dirección de operaciones y del socio auditor (Partner CPA) de Hovering.',
     representativeTitle: 'Abogada directora',
     teamTitle: 'Abogados y personal',
-    partnerTitle: 'Auditor asociado',
+    partnerTitle: 'Socio auditor (Partner CPA)',
     introLabel: 'Presentación',
     educationLabel: 'Formación',
     experienceLabel: 'Experiencia',
@@ -315,9 +315,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Abogada directora en Taiwán',
       'chang-rongxuan': 'Abogado en Taiwán',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Asistente jurídico (Paralegal)',
       'son-jungmin': 'Dirección de operaciones de Corea',
-      'huang-shengping': 'Auditor asociado',
+      'huang-shengping': 'Socio auditor (Partner CPA)',
     },
   },
   fr: {
@@ -2266,13 +2266,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal sénior, con años de experiencia en varios despachos, a cargo del apoyo procesal, del derecho societario y de la inversión extranjera.',
+        'Asistente jurídico sénior (Paralegal), con años de experiencia en varios despachos, a cargo del apoyo procesal, del derecho societario y de la inversión extranjera.',
         'Apoya litigios, constitución de sociedades, trámites de aprobación de inversión extranjera, solicitudes de licencia y el intercambio entre Corea y Taiwán.',
       ],
       education: ['Grado en Derecho (LL.B.), Tunghai University'],
       experience: [
-        'Paralegal sénior, Boyin Law Firm',
-        'Paralegal sénior, Muyang International Law Firm',
+        'Asistente jurídico sénior (Paralegal), Boyin Law Firm',
+        'Asistente jurídico sénior (Paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

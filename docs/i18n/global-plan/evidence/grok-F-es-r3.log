@@ -1,0 +1,111 @@
+WO-F-es r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-es-r3
+date: 2026-09-23
+
+## Rows applied
+
+es-a (guidance + columns 001–009): 16 of 22
+- #1 Partner CPA was “Auditor asociado” (junior rank). Now “Socio auditor (Partner CPA)” in partnerTitle, the Huang role, the team description, the lawyers-page description, and the lawyers FAQ answer. 5 strings.
+- #2 “la integridad de las pruebas” → “la completitud de las pruebas” (completeness, not untampered integrity).
+- #3 llms discoveryNotice now denies an AI recommendation as well as a general recommendation. Token `llms.txt` kept. Wording is not the suggested replacement: the bare “recomendación” stays, and “incluida la de una inteligencia artificial” is added inside it. Round 2 had already rejected dropping the general recommendation. consultationNotice and confidentialNotice were not rewritten.
+- #4 009 the either-party severance right was split across the three existing blocks: fault of the employer lets the worker claim severance; fault of the worker lets the employer withhold it. Blocks not merged.
+- #5 “para atender la demanda local” → “para atender a la clientela de la zona”.
+- #6 004 FAQ and the matching body sentence: “la aplicación concurrente y el límite de cuota” → “las restricciones a la acumulación de beneficios y los límites del crédito fiscal”. 2 instances. The later “limitaciones de aplicación concurrente” sentences were left.
+- #7 “menciónelo” → “menciónelos” (contratos, mensajes, justificantes, fotos).
+- #8 columns intro comma splice → “además hay cuatro enlaces, y cada uno abre…”.
+- #11 005 the account sentence now starts with “El responsable (負責人) puede entonces…”.
+- #13 008 the five bold evidence lines are now usted imperatives inside the same five blocks (conserve asistencia, horas y resultados, reglamento y correos, grabe las conversaciones, conserve cualquier prueba).
+- #14 singular “nuevo dólar taiwanés” after an amount → “dólares de Taiwán”. 5 instances: 003 the recognized-damage line and the TWD 200.000 medical cap; 006 the three fines; 007 FAQ and body (TWD 30.000). Digits and the 新臺幣 gloss kept. 003 medical cap is “200.000 dólares de Taiwán (TWD)”.
+- #15 “banca” in the incorporation list → “trámites bancarios”.
+- #16 “ninguna parte debe leerse en ese sentido” → “nada en esta página debe entenderse en ese sentido”. Same false friend one section later: “Ninguna parte de esta página es una promesa” → “Nada en esta página es una promesa”. 2 instances.
+- #17 “un almacenamiento de objetos no público” → “un almacenamiento no público de ese servicio”.
+- #19 003 “no existe un procedimiento uniformemente mejor” → “no hay un procedimiento que sea el más adecuado para todos los asuntos”.
+- #20 Paralegal → “Asistente jurídico (Paralegal)” on the role, and “Asistente jurídico sénior (Paralegal)” on the intro and the two firm lines. Firm names left in Latin. 4 strings. Portuguese bios in the same file were not touched.
+
+es-b (columns 010–018): 19 of 20
+- #1 劑型 “forma de presentación” → “forma de dosificación (劑型)”.
+- #2 013 “el examen no se limita a un único criterio formal…” → “pero el examen no es excesivamente estricto.” Same block.
+- #3 014 “período habitual de cobertura” → “cuánto se tarda habitualmente en cubrir el puesto”.
+- #4 律師函 “escrito de abogado” → “carta de abogado”. The following “Ese escrito” → “Ese requerimiento escrito”, so it still covers both the certified letter and the lawyer’s letter.
+- #5 016 “impuesto de sucesiones y donaciones (贈與稅)” → “el impuesto de sucesiones o el de donaciones (遺產稅、贈與稅) del extranjero”.
+- #6 011 “o de ponerlo a disposición” → “o ponerlo a disposición”. Gloss 公開陳列 kept.
+- #7 011 “deben confirmarse ambos, la forma sólida…” → “deben confirmarse tanto la forma sólida como la exención de registro de fábrica…”.
+- #9 016 “pueden influirse mutuamente” → “pueden influir unas en otras”.
+- #10 017 “pueden aplicarse multa administrativa y orden de salida” → “pueden imponerse una multa administrativa y la orden de salida de Taiwán (限令出國)”.
+- #11 010 “ordenó al demandado pagar” → “condenó al demandado a pagar”. The judgment link is unchanged. Sweep: the only other “ordenar” is 007 “puede ordenar … que comparezca”, already a subjunctive, left.
+- #12 010 “los médicos y los de comunicación” → “los datos médicos y los de las comunicaciones”.
+- #13 010 the 告訴乃論 paraphrase → “delito perseguible a instancia de parte (告訴乃論之罪)”, matching 003.
+- #14 011 “objeto de aplicación” → “ámbito de aplicación” (“entran en el ámbito”).
+- #15 011 “sucesos de reacciones adversas” → “acontecimientos adversos”.
+- #16 012 “hacer dos toques… o un destello” → “dar dos toques cortos de claxon o una ráfaga con los faros delanteros”.
+- #17 “papel” where English “role” is the function of a payment or of the contract: 014 “esa función debe comunicarse con claridad”; 017 FAQ and the repeated paragraph “alinear las funciones contractuales” (2); 017 “Las funciones contractuales, la facturación…”. 4 instances. Not changed: 001 “el papel que desempeñará” (a person’s post) and 016 “el papel de protección” (the guardian’s role); “documentos en papel” is paper.
+- #18 014 “no debe rebasar el alcance razonable” → “debe mantenerse dentro de un alcance razonable”. FAQ and body. 2 instances.
+- #19 016 “puede plantearse el orden de reflejar primero” → “puede hacer falta reflejar primero su resultado…”.
+- #20 017 “El importe enviado” → “El importe remitido”.
+
+No test expected-string needed updating. TWD 1.57M left byte-identical.
+
+## Rows skipped
+
+- es-a #9 — “por cada 1 víctima y cada 1 accidente” → drop the digits. Korean source is “피해자 1명·사고 1건당”. Those two 1s are real digits, not a lexical 제N호. Dropping them fails numbers. Left as is.
+- es-a #10 and es-b #8 — delete U+200B blank lines, and (es-a #10) promote Q16–Q20 to `##` headings. The checker requires the same ZWSP count and the same heading levels as the Korean source, which has the same padding. Characters removed: 0. Headings added: 0.
+- es-a #12 — “inciso 6” → “apartado 6”. Not applied. See disagreements. Also, the checker maps Spanish “inciso” to 호 and “apartado” to 항; swapping them would unmatch 제6호 and fail numbers on the digit 6.
+- es-a #18 — delete “(la fuente lo cita como artículo 10)”. The URL is already flno=3 and was not touched. The Korean link text is 영업세법 제10조. Removing the parenthetical fails numbers (`missing from translation (1): 10`). Parenthetical restored. The visible statute name stays artículo 3 de las Normas sobre los tipos de retención (各類所得扣繳率標準).
+- es-a #21 — reformat “TWD 1.57M”. ACCEPTED-ROUND: the bio figure stays byte-identical.
+- es-a #22 — remove a leading space on servicesAssistanceAfter. See disagreements. The space was added, not removed.
+
+## Systemic patterns and instances changed
+
+- Partner CPA titled as an associate (“Auditor asociado”): 5 strings, all in the es pack (title, Huang role, team description, lawyers description, lawyers answer).
+- “integridad” for completeness of the evidence: 1.
+- llms.txt notice missing the AI denial: 1. General “recomendación” kept; AI denial added inside the same clause.
+- U+200B padding in 003, 005, 006, 008, 009, 013, 015: 0 removed.
+- Either party holding both the right to withhold and the right to claim: 3 lines in 009 (one paragraph, blocks kept).
+- A plural sum followed by singular “nuevo dólar taiwanés”: 5 (003 ×2, 006 ×1, 007 ×2).
+- English “role” of a payment or a contract rendered as “papel”: 4 (014 ×1, 017 ×3).
+- A judgment as a bare infinitive “ordenó … pagar”: 1. No other judgment of that shape.
+- 劑型 as “forma de presentación”: 1.
+- English “Paralegal” left untranslated in the es bios: 4.
+- “parte” meaning “no part of this page”: 2.
+
+R2–R10 leftovers the reviews did not flag (Korea-as-default-reader, result promises, Wei Tseng gender, Q&A chrome, fullwidth punctuation outside glosses) were already in the Spain-leaning formal register. No further sweep hits were rewritten.
+
+## Reviewer disagreements (not applied)
+
+- es-a #12. Korean “제1、6항” and “제6호” are different citation levels. Spanish already tracks that: “apartados 1 o 6” for 항, “inciso 6” for 호. Calling both “apartado” would collapse them. The checker agrees (apartado = paragraph, inciso = item).
+- es-a #18 is not a disagreement about the statute. flno=3 is article 3 of 各類所得扣繳率標準. The digit 10 stays only because the checker counts the Korean source’s 제10조. Noted under skipped.
+- es-a #10 / es-b #8. The zero-width lines do pad the spoken columns. Deleting them, or turning Q16–Q20 into headings, fails the blocks/headings checks against the Korean source.
+- es-a #22. The three strings are before + link label + after. Before already ends with a space. After had no leading space, so the link rendered as “Contactoexplica”. The suggested deletion assumes a leading space that was not there and would leave the words glued. A leading space was added so the line reads “la página de Contacto explica cómo…”. One space on each side of the link, not two.
+- es-a #3 suggested wording replaces “recomendación” with only “recomendación de una inteligencia artificial”. That is the change round 2 rejected. The AI denial was added without dropping the general recommendation. English still denies endorsement and recommendation; “respaldo” covers endorsement.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-es --lang es 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-es src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      21
+
+The count 21 is the worktree before this log file existed (WO-F-es.txt was already modified; es-a.md and es-b.md were already untracked). This log is an additional untracked file.

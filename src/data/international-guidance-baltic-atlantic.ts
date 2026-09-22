@@ -2356,7 +2356,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Réttindi þín og tengiliðaleiðin',
           paragraphs: [
-            'Þú getur óskað aðgangs, leiðréttingar eða eyðingar gagna þinna, eða afturkallað samþykki, í gegnum netfangið sem er tilgreint á tengiliðasíðunni. Sé lögbundin eða málsmeðferðarskylda til varðveislu, skýrum við takmörkunina.',
+            'Þú getur óskað aðgangs, leiðréttingar eða eyðingar gagna þinna, eða afturkallað samþykki, í gegnum netfangið sem er tilgreint á tengiliðasíðunni. Sé til staðar lögbundin eða málsmeðferðarbundin varðveisluskylda, skýrum við takmörkunina.',
             'Þessi síða tilgreinir ekki fastan varðveislutíma vegna þess að raunverulegur tími ræðst af því hvort málið er haldið áfram og af skyldum sem því fylgja. Óskirðu eftir fyrri eyðingu, tilkynntu það þegar þú hefur samband.',
           ],
         },

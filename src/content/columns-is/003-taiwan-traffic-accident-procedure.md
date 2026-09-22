@@ -87,7 +87,7 @@ Bráðabirgðagreiningarmat lögreglu á umferðarslysi er forgreining á grundv
 
 Samkvæmt viðkomandi reglum geta bærir aðilar sótt um sérfræðiathugun ökutækjaslyss (車輛行車事故鑑定), meðferðaraðili vísað málinu áfram, eða dómsyfirvöld lagt fyrir. Beiðni aðila fer að jafnaði fram innan 6 mánaða frá slysdegi; við mál sem þegar eru til rannsóknar eða dóms fer sérfræðiathugunin fram með fyrirmælum dómsyfirvalda, ekki með nýrri beinni beiðni.
 
-Gegn sérfræðiálitinu má sækja um endurmat, þó aðeins 1 sinni. Sérfræðiálit og álit endurmats eru sönnunar- eða viðmiðunargögn; dómstóllinn metur allt ferlið, þar á meðal skýringar, tökur og vettvangstökur, sjálfstætt.
+Gegn sérfræðiálitinu má sækja um endurmat, þó aðeins eitt sinn. Sérfræðiálit og álit endurmats eru sönnunar- eða viðmiðunargögn; dómstóllinn metur allt ferlið, þar á meðal skýringar, tökur og vettvangstökur, sjálfstætt.
 
 ## Q7. Hvaða tjón má krefjast eftir slysið?
 
@@ -103,7 +103,7 @@ Varðveittu kvittanir (收據), vottorð og sjúkraskrár, og raðaðu læknisfr
 
 Viðbót læknisfræðilegra gagna og breyting eða hækkun kröfufjárhæðar skal greina. Eftir höfðun einkamáls tengds sakamáli koma dómstólsgjöld ekki sjálfkrafa til af því einu að viðbótarmeðferðarkvittunum sé skilað.
 
-Samkvæmt 504. gr. laga um meðferð sakamála getur þó, eftir að málinu er vísað til einkamálaeiningar, við breytingu, viðbót eða víkkun kröfu umfram umfangið fyrir vísun, kostnaðarspurning komið til vegna umframpáttarins. Vísunarstig, skilastund og umfang kröfu skal kanna frá máli til máls.
+Samkvæmt 504. gr. laga um meðferð sakamála getur þó, eftir að málinu er vísað til einkamálaeiningar, við breytingu, viðbót eða víkkun kröfu umfram umfangið fyrir vísun, kostnaðarspurning komið til vegna umframpáttarins. Vísunarstig, skilatími og umfang kröfu skal kanna frá máli til máls.
 
 ## Q9. Með hverju er fagleg hjúkrun og hjúkrunarkostnaður fjölskyldu sannaður?
 

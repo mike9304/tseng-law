@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Þegar veitingarekstur er hafinn er fyrsta vandamálið að finna rekstrarheimili (營業地址).
 
-Auk markaðsaðstæðna þarf að staðfesta hvort heimilisfangið (營業地址) sé á svæði þar sem veitingastarfsemi er heimil.
+Auk markaðsaðstæðna
 
-Þetta atriði er óháð markaðsaðstæðunum.
+skiptir annað atriði máli,
 
-Staðfesta skal hvort viðkomandi heimilisfang (營業地址) sé á svæði þar sem unnt er að stunda veitingastarfsemi.
+hvort heimilisfangið (營業地址) sé á svæði þar sem veitingastarfsemi er heimil.
 
 ​
 
@@ -53,23 +53,23 @@ Ef könnunarniðurstaðan tilgreinir að veitingastarfsemi sé ekki möguleg get
 
 **Spurning.** Þurfa allar starfsgreinar, í gegnum kerfi fyrirframfyrirspurnar um starfsstöð (營業場所預先查詢), að kanna hvort rekstur sé mögulegur?
 
-Mælt er með að allar greinar, í gegnum kerfi „fyrirframfyrirspurnar um starfsstöð“ (營業場所預先查詢), staðfesti hvort rekstur sé mögulegur.
+Mælt er með að allar starfsgreinar, í gegnum kerfi „fyrirframfyrirspurnar um starfsstöð“ (營業場所預先查詢), staðfesti hvort rekstur sé mögulegur.
 
-Við félagaskráningu eru þó oft skráðar fleiri greinar samtímis, og oft er ætlunin að skrá um 10 greinar í einu.
+Við félagaskráningu eru þó oft skráðar fleiri starfsgreinar samtímis, og oft er ætlunin að skrá um 10 starfsgreinar í einu.
 
-Í framkvæmd þarf því ekki að kanna allar greinar við félagaskráninguna.
+Í framkvæmd þarf því ekki að kanna allar starfsgreinar við félagaskráninguna.
 
-Samkvæmt „[vinnuleiðbeiningum um upplýsingaþjónustu um starfsstöðvar í borginni Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“(臺北市營業場所協助查詢服務作業須知) og gildandi leiðbeiningum borgarinnar Taipei
+Samkvæmt „[vinnuleiðbeiningum um aðstoð við fyrirspurn um starfsstöð í borginni Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“(臺北市營業場所協助查詢服務作業須知) og gildandi leiðbeiningum borgarinnar Taipei
 
-skal, frá 1. janúar 2023, við umsókn um skráningu stofnunar, flutnings aðseturs eða viðbótar skráðra starfsgreina fyrir félag eða verslun (þar á meðal útibú (分公司) og aðrar starfseiningar (分支機構)) niðurstaða fyrirframfyrirspurnar um starfsstöð **skyldubundin** fylgja skráningarumsókninni, án tillits til greinar.
+skal, frá 1. janúar 2023, við umsókn um skráningu stofnunar, flutnings aðseturs eða viðbótar skráðra starfsgreina fyrir félag eða verslun (þar á meðal útibú (分公司) og aðrar starfseiningar (分支機構)) niðurstaða fyrirframfyrirspurnar um starfsstöð **skyldubundin** fylgja skráningarumsókninni, án tillits til starfsgreinar.
 
-Listinn hér á eftir yfir „greinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目) merkir þær greinar sem verslunarstofan kannar að eigin frumkvæði við skráningarskoðun (隨案主動查詢), þegar greinin stendur í umsókninni en vantar í meðfylgjandi niðurstöðu; það að grein standi ekki á þessum lista þýðir ekki að könnunin sé undanþegin.
+Listinn hér á eftir yfir „starfsgreinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目) merkir þær starfsgreinar sem verslunarstofan kannar að eigin frumkvæði við skráningarskoðun (隨案主動查詢), þegar starfsgreinin stendur í umsókninni en vantar í meðfylgjandi niðurstöðu; það að starfsgrein standi ekki á þessum lista þýðir ekki að könnunin sé undanþegin.
 
 Ef opnað er á stað þar sem veitingastarfsemi er ekki möguleg getur síðar fylgt stjórnvaldssekt (罰鍰) frá lögbærri stofnun.
 
-![„greinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![„starfsgreinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-„greinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目)
+„starfsgreinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目)
 
 Hér lýkur yfirferðinni. Hafir þú fleiri spurningar máttu senda beiðni með tengiliðaeyðublaðinu. Ráðgjöf er ekki veitt á íslensku, og ekkert svar er heitið þegar í stað.
 

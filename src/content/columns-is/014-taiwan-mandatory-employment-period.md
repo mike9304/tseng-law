@@ -47,7 +47,7 @@ Að lögbundnu skilyrði staðfestu er samkvæmt 2. mgr. sérstaklega kannað hv
 
 ## 2. Fyrsta lögbundna skilyrðið: fagleg tækniþjálfun og greiðsla kostnaðar
 
-Til að grundvalla samkomulagið á þjálfuninni skal vinnuveitandi raunverulega hafa veitt starfsmanninum faglega tækniþjálfun (專業技術培訓) og borið kostnaðinn. Það nægir ekki í þjálfunaráætluninni að skrifa að um faglegt námskeið sé að ræða, eða í samningnum að tilgreina áætlaðan kostnað (專業技術培訓). Með fylgiskjölum skal unnt að tengja viðfangsefni þjálfunarinnar, þá faglegu og tæknilegu færni sem starfið krefst, tiltekið tímabil, hvort henni var lokið, og raunveruleg útgjöld.
+Til að grundvalla samkomulagið á þjálfuninni skal vinnuveitandi raunverulega hafa veitt starfsmanninum faglega tækniþjálfun (專業技術培訓) og borið kostnaðinn. Það nægir ekki í þjálfunaráætluninni að skrifa að um faglegt námskeið sé að ræða, eða í samningnum að tilgreina áætlaðan kostnað (專業技術培訓). Með fylgiskjölum skal unnt að tengja viðfangsefni þjálfunarinnar, þá faglegu og tæknilegu færni sem starfið krefst, tiltekið tímabil, hvort þjálfuninni var lokið, og raunveruleg útgjöld.
 
 Könnunarefnið nær ekki aðeins til beint sannanlegs kostnaðar, svo sem þóknunar utanaðkomandi kennara, námskeiðsgjalda hjá þjálfunarstofnun og gjalda fyrir efni eða búnað, heldur einnig til útreikningsgrundvallar innri kostnaðar sem vinnuveitandi ber fyrir sig. Hafi innri starfsmenn kennt skal skoða hvers tími var notaður, og hvernig hann greinist frá venjulegu eftirliti eða starfsskilum, og hvort grundvöllur sé til að rekja þann kostnað til viðkomandi starfsmanns. Áætluð fjárhæð eða heildarúthlutun sanna ekki eitt og sér raunverulega byrði.
 
@@ -67,7 +67,7 @@ Leiðbeiningarnar (函釋) vinnumálaráðuneytis Taívan (勞動部) frá 5. j�
 
 Sanngirni bótanna er ekki metin eftir fjárhæðinni einni. Saman er skoðað hvort starfsmaðurinn fái raunverulega viðbótarávinning, hvort greiðsluskilmálar séu skýrir, hvernig sá hluti sem svarar til þegar unnins tímabils er eignað, og hvort umfang endurgreiðslu sé ekki ósanngjarnt (合理補償). Jafnvel þótt bætur séu til staðar er ekki án takmarkana leyfð hvaða dvalarlengd sem er eða hvaða fjárhæð sem er vegna endurgreiðsluábyrgðar.
 
-Einnig er mikilvægt að samningstextinn og raunveruleg greiðsla fari saman. Að kanna hvort greiðslan sé sein eða dreifð, hvort hún sé skilyrt, hver fjárhæðin sem raunverulega barst eftir skatta og frádrátt sé, og hvort sérstök skrifleg tilkynning hafi verið, hjálpar til að meta umfang bótanna og raunverulegan ávinning starfsmannsins (預付性給付).
+Einnig er mikilvægt að samningstextinn og raunveruleg greiðsla fari saman. Að kanna hvort greiðslan hafi dregist eða verið greidd í áföngum, hvort hún sé skilyrt, hver fjárhæðin sem raunverulega barst eftir skatta og frádrátt sé, og hvort sérstök skrifleg tilkynning hafi verið, hjálpar til að meta umfang bótanna og raunverulegan ávinning starfsmannsins (預付性給付).
 
 ## 4. Hæfilegt umfang og 4 skoðunarþættir
 
@@ -94,7 +94,7 @@ Samkvæmt leiðbeiningum vinnumálaráðuneytis Taívan (勞動部) frá 5. jún
 
 Leiðbeiningarnar 勞動關2字第1150141814號 frá vinnumálaráðuneytinu greina og meðhöndla þá fræðslu sem veitt er reglulega, venjulega starfsþjálfun, þjálfun til að nýráðinn verði kunnugur vinnuumhverfinu og verklaginu, og þá þjálfun sem vinnuveitandi skal samkvæmt lögum veita. Vegna þess að þessi þjálfun leiðir af rekstri fyrirtækisins eða uppfyllingu lögbundinnar skyldu má kostnaði hennar ekki breyta í grundvöll starfsskyldu eða viðurlaga við snemmbúinni lokun.
 
-Þau námskeið sem nýr starfsmaður fær að jafnaði, svo sem skýringu vinnureglna (工作規則), kynningu á skipulagi og kerfum, venjuleg starfsskil og leiðbeiningu um grunnöryggisreglur, skal staðfesta í kjarna sínum. Almennan ráðningar- og stjórnunarkostnað eða skilakostnað, sem vinnuveitandi bar upprunalega, má ekki ákveða sem endurgreiðsluviðfang með því einu að merkja hann sem sérstaka fjárfestingu.
+Þau námskeið sem nýr starfsmaður fær að jafnaði, svo sem skýringu vinnureglna (工作規則), kynningu á skipulagi og kerfum, venjuleg starfsskil og leiðbeiningu um grunnöryggisreglur, skal kanna að efni til. Almennan ráðningar- og stjórnunarkostnað eða skilakostnað, sem vinnuveitandi bar upprunalega, má ekki ákveða sem endurgreiðsluviðfang með því einu að merkja hann sem sérstaka fjárfestingu.
 
 Þó er þjálfun ekki alltaf útilokuð af því einu að hún hafi verið veitt innanhúss. Í einu og sama námskeiði geta almennur aðlögunarhluti og faglegur tæknihluti blandast, svo viðfangsefni, tími, kostnaður og hvort lögbundin skylda sé til staðar, skal staðfesta námskeið fyrir námskeið (專業技術培訓). Sá sem ber fyrir sig faglegan tæknihlutann skal með fylgiskjölum skýra hvaða innihald greinist frá venjulegri þjálfun, og hver bar kostnaðinn raunverulega.
 
@@ -106,7 +106,7 @@ Ekki er alltaf endurgreitt að fullu. Hafi undirritunarbónus, starfshaldsbónus
 
 Tilkynningin má ekki fyrst vera lögð fram þegar deilan rís eftir greiðsluna. Starfsmaðurinn skal á gerðartíma samningsins og við móttöku greiðslunnar geta vitað hvaða fjárhæð er bætur fyrir loforðið um lágmarksstarfstímabil, hvert umsamið tímabil í heild sé, hvenær hún er eignuð honum, og eftir hvaða formúlu gert er upp ef ráðningu lýkur áður en tímabilinu er lokið (最低服務年限約定).
 
-Hlutfallsreglan um óuppfyllta tímabilið (預付性給付) krefst fyrst ákvörðunar upphafs- og lokadags samkomulagsins, raunverulega unninna daga og grunnfjárhæðar til endurgreiðsluútreiknings. Til dæmis skal föst fjárhæð, sem endurspeglar alls ekki þegar uppfyllt tímabil, könnuð gagnvart hlutfallsviðmiði leiðbeininganna. Sé skipulagið dreifð greiðsla eða eignun í þrepum, skal einnig sérstaklega reikna hvaða tímabili hver greiðsla svarar (預付性給付).
+Hlutfallsreglan um óuppfyllta tímabilið (預付性給付) krefst fyrst ákvörðunar upphafs- og lokadags samkomulagsins, raunverulega unninna daga og grunnfjárhæðar til endurgreiðsluútreiknings. Til dæmis skal föst fjárhæð, sem endurspeglar alls ekki þegar uppfyllt tímabil, könnuð gagnvart hlutfallsviðmiði leiðbeininganna. Sé skipulagið greiðsla í áföngum eða eignun í þrepum, skal einnig sérstaklega reikna hvaða tímabili hver greiðsla svarar (預付性給付).
 
 Endurgreiðsluspurningin skal staðfest í röð: gildi samkomulagsins, lagalegt eðli greiddrar fjárhæðar, þegar unnið tímabil, ástæða lokunar og endurgreiðsluformúla; sú fjárhæð sem krafist er ræðst ekki af því einu að samningurinn noti orðið „samningssekt“ (違約金).
 
@@ -142,7 +142,7 @@ Fari tímabil tímabundins ráðningarsamnings vegna tiltekins verks (特定性�
 
 Sé samfelldur starfsaldur skemur en 3 mánuðir, sé um aðra tegund tímabundins samnings að ræða, eða sé lögbundin ástæða til þegar-í-stað-lokunar borin fyrir, skal gildandi ákvæði og atvikin könnuð hvert um sig. Það eitt að samningurinn nefni lengri fyrirvara eða krefjist þegar-í-stað-starfsskila leyfir ekki að slá lagalegri niðurstöðu föstu fyrir fram.
 
-Í framkvæmd skal varðveita innihald og sendingardag uppsagnarinnar, þann dag sem vinnuveitandi tók hana raunverulega við, og samskipti aðila um síðasta vinnudag. Sé í 4 spurningum greint á milli þess tíma er starfslokin öðlast gilt gildi, gildis samkomulagsins um lágmarksstarfstímabil, endurgreiðslu þjálfunarkostnaðar eða fyrirframgreiddra hlunninda og tjónsins sem borið er sérstaklega fyrir, minnkar villan að draga allar niðurstöður af einu samningsákvæði.
+Í framkvæmd skal varðveita innihald og sendingardag uppsagnarinnar, þann dag sem vinnuveitandi tók hana raunverulega við, og samskipti aðila um síðasta vinnudag. Sé í 4 spurningum greint á milli þess tíma er starfslokin öðlast gildi, gildis samkomulagsins um lágmarksstarfstímabil, endurgreiðslu þjálfunarkostnaðar eða fyrirframgreiddra hlunninda og tjónsins sem borið er sérstaklega fyrir, minnkar villan að draga allar niðurstöður af einu samningsákvæði.
 
 ## 9. Gátlisti fyrir vinnuveitanda og starfsmann
 
@@ -189,6 +189,6 @@ Við röðun gagna í tímaröð ætti saman að tilgreina gerðardag samningsin
 
 ---
 
-Þessi texti er fræðsluefni til að lýsa almennt samkomulagi um lágmarksstarfstímabil á Taívan, endurgreiðslu þjálfunarkostnaðar og fyrirframgreiddra hlunninda og uppsagnarfresti; hann er ekki lögfræðileg ráðgjöf um tiltekið vinnuréttarmál (最低服務年限約定). Gildi samkomulagsins og umfang ábyrgðar geta verið misjöfn eftir gerð og innihaldi samningsins, raunverulegri þjálfun og kostnaði, tilgangi bótanna og tilkynningu þeirra, starfstímabili, ástæðu lokunar og sönnunargögnum. Áður en uppsögn er sett fram, launadráttur samþykktur, endurgreiðsla samin eða deilu svarað ætti að staðfesta nýjustu opinberu heimildir og einstaklingsbundin atvik.
+Þessi texti er fræðsluefni til að lýsa almennt samkomulagi um lágmarksstarfstímabil á Taívan, endurgreiðslu þjálfunarkostnaðar og fyrirframgreiddra hlunninda og uppsagnarfresti; hann er ekki lögfræðileg ráðgjöf um tiltekið vinnuréttarmál (最低服務年限約定). Gildi samkomulagsins og umfang ábyrgðar geta verið misjöfn eftir gerð og innihaldi samningsins, raunverulegri þjálfun og kostnaði, tilgangi bótanna og tilkynningu þeirra, starfstímabili, ástæðu lokunar og sönnunargögnum. Áður en uppsögn er sett fram, frádráttur af launum samþykktur, endurgreiðsla samin eða deilu svarað ætti að staðfesta nýjustu opinberu heimildir og einstaklingsbundin atvik.
 
 **Lögmaður Wei Tseng (曾雋崴)**

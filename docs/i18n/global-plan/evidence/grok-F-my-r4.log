@@ -1,0 +1,98 @@
+WO-F-my r4 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-my-r4
+
+## Rows
+
+Review rows: 36 (my-a 11 + my-b 25). Applied 32. Skipped 4.
+
+Applied
+- my-a 1 P1 001 investee: ထည့်ဝင်မည့် အရာ → ရင်းနှီးမြှုပ်နှံခံ လုပ်ငန်း. Sweep of that phrase: 1 instance, only 001.
+- my-a 2 P2 004 local office: ခွဲရုံး → ဒေသခံရုံး. Sweep: 1 instance.
+- my-a 3 P2 guidance statutory period: ဥပဒေကြောင်း တရားစွဲကာလ → ဥပဒေအရ တရားစွဲဆိုခွင့်သက်တမ်း. Sweep of that phrase: 1 instance (contact guidance only).
+- my-a 7 P2 team bio, both strings: intro and experience line now say ထိုင်ဝမ် ပညာရေးဝန်ကြီးဌာန. The long intro also keeps the English institution gloss the reviewer gave. 2 instances.
+- my-a 8 P2 003 Chiayi: ကျားရီ → ချားရီ. 1 instance.
+- my-a 9 P3 guidance double object marker ကို…ကို: rephrased to အာမမခံသည့်အချက်များကိုလည်း ဖော်ပြသည်. 1 instance.
+- my-a 10 P3 guidance “binding answer”: စည်းနှောင်မှုရှိသော အဖြေ → တရားဝင် အကျိုးသက်ရောက်သော အဖြေ. The consultation-language clause after it is unchanged, so the disclosure-parity regex still matches. 1 instance.
+- my-a 11 P3 “owner of rights and duties”: 2 instances. 001 now holds rights and obligations in its own name (မိမိအမည်ဖြင့် … ခံယူသည်), matching the English. 004 keeps “distinct from the parent” and only drops ပိုင်ရှင် (ကိုယ်တိုင် ခံယူသည်). The reviewer’s 001 sentence was not copied onto 004, because English 004 is “has rights and obligations distinct from those of its parent,” not the contracting-in-its-own-name sentence.
+- my-b 1 P1 013 ordinary office space: မရနိုင်ပါ → မရနိုင်ခြင်း ဖြစ်နိုင်သည်.
+- my-b 2 P1 011 distributor: ရောင်းကိုယ်စားလှယ် → ဖြန့်ဖြူးသူ, 4 instances (FAQ, repeated body, and both uses on the importer/distributor paragraph). The contract-label ကိုယ်စားလှယ် (“agent”) was left.
+- my-b 3 P1 016 conflicting economic interest: applied the reviewer’s contrast (သားသမီး၏ အကျိုးနှင့် စီးပွားရေးအရ ဆန့်ကျင်သော).
+- my-b 4 P2 010 receipts: ငွေတောင်းခံလက်မှတ် → ပြေစာ in the three flagged places (gather-evidence sentence, medical expenses, transportation). Chinese glosses 就醫交通費 and 看護費用 kept.
+- my-b 5 P2 011 heading: သီးခြား စနစ်များ → သီးခြား လိုအပ်ချက်များ.
+- my-b 6 P2 013 foreign parties: ပြည်ပလူပုဂ္ဂိုလ်များ → နိုင်ငံခြားပါဝင်သူများ, and ထိုင်ဝမ်သို့ added. “သူများ” alone can still be read as natural persons; ပါဝင်သူ matches “parties.”
+- my-b 7 P2 013: a reader, not the earlier article, called account opening the hardest step. ကျွန်မ kept.
+- my-b 8 P2 016: bare စာချုပ် → နိုင်ငံတကာစာချုပ်နှင့် အခြားနိုင်ငံ၏ ဥပဒေ.
+- my-b 9 P2 018 distributor FAQ: FAQ question and the matching heading, 2 instances, ကိုယ်စားလှယ် → ဖြန့်ဖြူးသူမှတစ်ဆင့်. Title “agent,” local agent, and representative office were left.
+- my-b 10 P2 018 liability limited to the contribution.
+- my-b 11 P2 018 particular form → အဖွဲ့အစည်းပုံစံ. The reviewer’s ငွေကြေးလွှဲပြောင်းမှု for “transaction” in this sentence was kept.
+- my-b 12 P2 018 sales start: ထိုင်ဝမ် ဖောက်သည်ထံ ရောင်းချမှု စတင်ပါက.
+- my-b 14 P2 015 stray quote: closing quote now sits against the link, then (臺北市…). URL unchanged.
+- my-b 15 P2 018 possessive ၏ on the other shareholders’ voting rights (the majority clause only; the two-thirds clause already had ၏).
+- my-b 16 P2 014 attribution: TOC item, and line 121 “which party the ending circumstances are attributable to.”
+- my-b 17 P2 014 ရောက်ပမာဏ → အလုပ်သမားတစ်ဦးချင်းနှင့် သက်ဆိုင်သော ပမာဏ.
+- my-b 18 P2 014 whose time was used, and how much.
+- my-b 19 P2 014 served portion vests in the worker. ရောက် kept only with the worker as recipient, as in the suggested rewrite.
+- my-b 20 P2 014 equipment-operation skill: လည်ပတ်ကျွမ်းကျင်မှု.
+- my-b 21 P2 014 mechanically: စက်ကဲ့သို့ → တစ်ပုံစံတည်း.
+- my-b 22 P2 015 real-estate agent: အိမ်ခြံမြေအကျိုးဆောင်.
+- my-b 23 P2 016 allocation: three phrases (individual-asset allocation, final allocation, will does not already allocate the whole estate).
+- my-b 24 P2 016 due process: တရားမျှတသော လုပ်ထုံး လိုက်နာသည် မလိုက်နာသည်.
+- my-b 25 P2 018 operating body: the noun stack is now a verb series ending in လုပ်ငန်းအဖွဲ့.
+
+Skipped
+- my-a 4 P2 004 link label “ပုဒ်မ 3၊ ပုဒ်မ 10 မဟုတ်”. The diagnosis is right: it is an editor’s denial, and the URL is flno=3. Removing “10” failed the number checker: Korean source label is 영업세법 제10조, so the file was missing one 10 (sourceCount 95 → targetCount 94). The previous label was restored. URL not changed.
+- my-a 5 P2 and my-b 13 P2 zero-width lines in 003, 005, 006, 008, 009, 013, 015. Not deleted. checkBlocks counts U+200B and requires the same count as the Korean source; a line that is only U+200B is still a block. Deleting them would fail both ZWSP parity and block count.
+- my-a 6 P2 “TWD 1.57M”. ACCEPTED-ROUND and R12: the token is pinned and must stay byte-identical. The Myanmar “1.57 သန်း” already sits beside it. Not reformatted.
+
+## Systemic patterns
+
+- Investee as the thing contributed (ထည့်ဝင်မည့် အရာ): 1 changed (001). No other hit in columns-my or the my guidance strings.
+- Local office as a synonym of branch (ခွဲရုံး): 1 changed (004).
+- Statutory period as “legal-side lawsuit period”: 1 changed (guidance). No column hit.
+- Editor denial inside the 004 link label: 1 found, 0 changed (skip above).
+- Bio “TWD 1.57M”: 0 changed (skip above).
+- Distributor written as sales representative or agent: 6 changed (011 ×4 ရောင်းကိုယ်စားလှယ်; 018 FAQ question and heading). Agent, representative office, and branch representative were not rewritten.
+- Attribution and allocation as “arrival” (ရောက်): 9 changed.
+  014: TOC “who is responsible,” cost that can be tied to that worker (ရောက်စေသော), amount attributable to the worker, how the served portion vests, which party the ending facts are attributable to.
+  016: allocation of a particular asset, final allocation, will does not already allocate the estate, and “property that belongs to the minor” (ကိုယ်၌ ရောက်သော → ကိုယ်ပိုင်သော).
+  Left on purpose: vesting that already names the worker (ရောက်ချိန်, ရောက်စည်းကမ်း, အပြီးအပိုင် ရောက်သည်, staged vesting). The reviewer’s own vesting rewrite still uses ရောက် once the recipient is the worker.
+- 018 sales and mode of dealing written as money transfer: 4 changed (opening “once sales begin,” section-1 heading “division of sales and operations,” “mode of dealing,” and “transactional and contractual arrangements”). Left: real remittances, “transaction structure,” “intended transaction flow,” and the “transaction” in the corporate-form sentence, which the reviewer kept as ငွေကြေးလွှဲပြောင်းမှု.
+- Invisible U+200B lines: 0 changed (skip above).
+- Same calque as my-b 21, not listed in the verdict but the same word: စက်ကဲ့သို့ for “mechanically.” 3 changed (014 flagged sentence; 003 “does not mechanically bind the court”; 003 “do not mechanically fix damages”).
+- Taiwan ministry, so it is not read as Myanmar’s: 2 changed.
+- ပိုင်ရှင် of rights and duties: 2 changed (001, 004).
+
+R2–R10 were already in this locale from earlier rounds. This round’s verdicts confirm feminine ကျွန်မ / သူမ / ဒေါ် for Wei Tseng, male ဦး B and မစ္စတာ လင်း left male, and the consultation lock still negative (four languages, no interpreter, no reply-time, no free first meeting, no result promise). No further unflagged sentences were rewritten. llms.txt my notices were not rewritten; consultationNotice and confidentialNotice still match the pack. No test expected-string needed changing.
+
+## §Verify
+
+```
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=72
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      15
+```
+
+Commands were the work-order set (checker tail -8, marker grep wc -l, tsc, vitest grep, git status --short wc -l). The git count 15 was taken before this log file existed. WO-F-my.txt was already modified, and my-a.md / my-b.md were already untracked, at the start of the session.
+
+## Reviewer disagreements (not applied, or not applied as worded)
+
+- my-a 4: the denial should not be in a public label. Agreed. The suggested label has no digit 10, and the checker then fails. Kept the old label. See skipped rows.
+- my-a 5 and my-b 13: the zero-width lines are real. They cannot be deleted without failing the checker’s ZWSP and block counts against the Korean source.
+- my-a 6: “M” is English finance shorthand. The campaign rule still requires the bytes TWD 1.57M. Not a factual mistake about the amount; the rewrite is disallowed.
+- my-a 11 suggested one sentence for both 001 and 004. Applied to 001. Not applied verbatim to 004, because that English sentence is about rights and obligations distinct from the parent. The ပိုင်ရှင် error in 004 was still fixed.

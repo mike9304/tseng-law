@@ -1953,7 +1953,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'जापानी (日本語)',
       ko: 'कोरियाली (한국어)',
       'needs-method-confirmation':
-        'चार भाषा मध्ये कुनै उपयोगी छैन — सञ्चार मार्ग पुष्टि गर्नुपर्छ',
+        'चार भाषा मध्ये कुनै प्रयोग गर्न मिल्दैन — सञ्चार मार्ग पुष्टि गर्नुपर्छ',
     },
   },
   km: {

@@ -1544,7 +1544,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
   ne: {
     officeLabel: 'कार्यालय',
     officeQuickLinksLabel: 'कार्यालयका छिटो कडी',
-    followLabel: 'फलो गर्नुहोस्',
+    followLabel: 'पछ्याउनुहोस्',
     blogLabel: 'ब्लग',
     websiteLabel: 'आधिकारिक वेबसाइट',
     sitemapLabel: 'साइट नक्सा',

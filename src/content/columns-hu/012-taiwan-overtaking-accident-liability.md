@@ -25,9 +25,9 @@ Továbbá nem lehet előzni iskolát vagy kórházat jelző táblával ellátott
 
 Ugyanazon sávban az elöl haladó jármű előzéséhez a hátul haladó jármű vezetőjének először kétszer röviden dudálnia kell, vagy egyszer fel kell villantania a fényszórót. A dudát és a fényszórót nem szabad ismételten használni, hogy az elöl haladót kényszerítsék a helyátadásra.
 
-A hátul haladó jármű csak azután előzhet, hogy az elöl haladó lassított és félrehúzódott, vagy kézjelzéssel vagy jobb indexszel kinyilvánította az elsőbbségátadási szándékot.
+A hátul haladó jármű csak azután előzhet, hogy az elöl haladó lassított és félrehúzódott, vagy kézjelzéssel vagy a jobb irányjelzővel kinyilvánította az elsőbbségátadási szándékot.
 
-Ezután az előző járműnek be kell kapcsolnia a bal indexet, balra elhaladnia úgy, hogy az elöl haladóhoz képest legalább 0,5 méter távolságot tart, és a biztonságos távolság biztosítása után bekapcsolni a jobb indexet, majd biztonságosan visszatérni az eredeti sávra.
+Ezután az előzést végző járműnek be kell kapcsolnia a bal irányjelzőt, balra elhaladnia úgy, hogy az elöl haladóhoz képest legalább 0,5 méter távolságot tart, és a biztonságos távolság biztosítása után be kell kapcsolnia a jobb irányjelzőt, majd biztonságosan vissza kell térnie az eredeti sávra.
 
 Ez az ugyanazon sávbeli jelzés- és elsőbbségátadási sorrend nem jelenti azt, hogy tiltott helyen vagy feltétel mellett az előzés megengedett lenne. Az előzés megkezdése előtt a 101. cikk minden feltételét együtt kell megítélni.
 
@@ -37,7 +37,7 @@ Az iroda által kezelt, anonimizált ügyben A motorkerékpár-vezető B utassal
 
 ![Baleseti ábra, amely a motorkerékpár és az elöl haladó két jármű előzési pályáját mutatja hegyi úton](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-„A” mindkét járművet meg akarta előzni, az ellenkező sávba hajtott és gyorsított. A 2. számú jármű is készült az 1. számú jármű előzésére: az index bekapcsolása után 1 másodperc sem telt el, amikor az ellenkező sávba lépett. A motorkerékpárnak nem volt elég ideje a fékezésre, és összeütközött a 2. számú járművel.
+„A” mindkét járművet meg akarta előzni, az ellenkező sávba hajtott és gyorsított. A 2. számú jármű is készült az 1. számú jármű előzésére: az irányjelző bekapcsolása után 1 másodperc sem telt el, amikor az ellenkező sávba lépett. A motorkerékpárnak nem volt elég ideje a fékezésre, és összeütközött a 2. számú járművel.
 
 B súlyos fejsérülést szenvedett, és a helyszínen meghalt; A eszméletét vesztette, és kórházba szállították.
 
@@ -49,7 +49,7 @@ Az, hogy egyes ügyekben ilyen szakértői eredmény születik, nem jelenti azt,
 
 ## A baleseti felelősség megítélésekor ellenőrizendő pontok
 
-Előzés előtt először meg kell erősíteni, hogy a hely vagy a forgalmi helyzet előzési tilalom alá esik-e. Ha az ugyanazon sávra vonatkozó eljárás alkalmazandó, az előírt duda- vagy fényszórójelzést az elöl haladó kényszerítése nélkül kell adni, egyértelmű elsőbbségátadási jelet kell várni, és az előzést elegendő távolsággal és biztonságos visszatérési távolsággal kell befejezni.
+Előzés előtt először ellenőrizni kell, hogy a hely vagy a forgalmi helyzet előzési tilalom alá esik-e. Ha az ugyanazon sávra vonatkozó eljárás alkalmazandó, az előírt duda- vagy fényszórójelzést az elöl haladó kényszerítése nélkül kell adni, egyértelmű elsőbbségátadási jelet kell várni, és az előzést elegendő távolsággal és biztonságos visszatérési távolsággal kell befejezni.
 
 A 101. cikk betartása fontos, de önmagában nem ígér meghatározott eredményt a baleset elkerüléséről, sem a későbbi szakértői vagy peres kimenetről. A vezetőnek további biztonsági tartalékot kell hagynia, és az előtte lévő helyzethez kell igazodnia.
 

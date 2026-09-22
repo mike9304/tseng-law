@@ -1,5 +1,5 @@
 ---
-title: "Minimális munkavégzési időszakra vonatkozó megállapodás Tajvanon: érvényesség, képzési költség és kötbér megítélési szempontjai"
+title: "Minimális szolgálati időre vonatkozó megállapodás Tajvanon: érvényesség, képzési költség és kötbér megítélési szempontjai"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "2025. szeptember 13."
@@ -12,24 +12,24 @@ faq:
     a: "Nem. A tajvani munkaügyi törvény (勞動基準法) 15-1. cikke szerint, ha a munkáltató szakmai-műszaki képzést (專業技術培訓) tart és viseli a költséget, vagy észszerű ellentételezést (合理補償) nyújt, hogy a munkavállaló tartsa a minimális szolgálati időt, a megállapodás teljesítheti a törvényi feltételeket. Nem kell a két feltételt egyszerre teljesíteni, de ha bármelyik fennáll is, a megállapodás a körülmények összessége, például a képzés időtartama és költsége, a helyettesítési lehetőség (人力替補可能性), valamint az ellentételezés összege és köre alapján nem lépheti túl az észszerű kört."
   - q: "Az újonnan belépők képzése vagy a törvényileg kötelező képzés szakmai-műszaki képzésnek minősül?"
     a: "A tajvani Munkaügyi Minisztérium (勞動部) 2026. június 5-i iránymutatása szerint a rendszeres képzés, az általános munkaköri képzés, az újonnan belépők munkahelyi beilleszkedési képzése és a törvény által elrendelt kötelező képzés költsége nem alapja a minimális szolgálati időre vonatkozó kikötésnek, sem kötbér (違約金) vagy költség-visszatérítés iránti igénynek. Nemcsak a képzés megnevezését kell nézni, hanem a konkrét tanmenetet, a szakmai-műszaki tartalmat, az időtartamot, a munkáltató által ténylegesen viselt költséget és a bizonylatokat."
-  - q: "Korai kilépéskor a szerződéskötési díjat (簽約金) vagy a bentmaradási bónuszt (留任獎金) teljes egészében vissza kell adni?"
-    a: "Nem mindig a teljes összeget kell visszaadni. Ha a szerződéskötési díj, a bentmaradási bónusz vagy más előzetes juttatás (預付性給付) a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges kimenetel a kifizetés céljának, a megállapodás tartalmának, a már ledolgozott időszaknak és a megszűnés okának együttes vizsgálatától függ."
+  - q: "Korai kilépéskor az aláírási bónuszt (簽約金) vagy a bentmaradási bónuszt (留任獎金) teljes egészében vissza kell adni?"
+    a: "Nem mindig a teljes összeget kell visszaadni. Ha az aláírási bónusz, a bentmaradási bónusz vagy más előzetes juttatás (預付性給付) a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges kimenetel a kifizetés céljának, a megállapodás tartalmának, a már ledolgozott időszaknak és a megszűnés okának együttes vizsgálatától függ."
   - q: "Ha a szerződés a munkavállalónak nem felróható okból korán szűnik meg, vissza kell téríteni a képzési költséget?"
     a: "A tajvani munkaügyi törvény 15-1. cikk 4. bekezdése úgy rendelkezik, hogy ha a munkaszerződés a minimális szolgálati idő vége előtt a munkavállalónak nem felróható okból szűnik meg, a munkavállaló nem visel felelősséget a minimális szolgálati időre vonatkozó kikötés megsértéséért, sem a képzési költség visszatérítéséért. A megszűnés okát és a felelősség hovatartozását azonban konkrét bizonyítékok, például felmondási értesítés, kilépési nyilatkozat és a munkafeltételek megsértésére vonatkozó iratok alapján kell megítélni."
 ---
 
-# Minimális munkavégzési időszakra vonatkozó megállapodás Tajvanon: érvényesség, képzési költség és kötbér megítélési szempontjai
+# Minimális szolgálati időre vonatkozó megállapodás Tajvanon: érvényesség, képzési költség és kötbér megítélési szempontjai
 
 ![A munkaszerződés minimális szolgálati idejét és a költség-visszatérítés kérdését ismertető kép](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-A tajvani munkaszerződés (勞動契約) minimális szolgálati időre vonatkozó kikötése (最低服務年限約定) meghatározott ideig tartó munkavégzés ígéretével együtt azt rögzíti, hogy korai kilépéskor van-e kötelezettség a képzési költség, a szerződéskötési díj (簽約金) vagy a bentmaradási bónusz (留任獎金) visszatérítésére, és kérhető-e külön kötbér (違約金). Az aláírt szöveg megléte önmagában azonban nem rögzíti a megállapodás érvényességét, sem a visszatérítendő összeget. A szerződés megnevezésénél fontosabb lépésenként ellenőrizni a törvényi feltételeket, valamint a kifizetés, a képzés és a megszűnés tényleges lefolyását.
+A tajvani munkaszerződés (勞動契約) minimális szolgálati időre vonatkozó kikötése (最低服務年限約定) meghatározott ideig tartó munkavégzés ígéretével együtt azt rögzíti, hogy korai kilépéskor van-e kötelezettség a képzési költség, az aláírási bónusz (簽約金) vagy a bentmaradási bónusz (留任獎金) visszatérítésére, és kérhető-e külön kötbér (違約金). Az aláírt szöveg megléte önmagában azonban nem rögzíti a megállapodás érvényességét, sem a visszatérítendő összeget. A szerződés elnevezésétől függetlenül lépésről lépésre kell ellenőrizni a törvényi feltételeket, valamint a kifizetés, a képzés és a megszűnés tényleges lefolyását.
 
 A vizsgálatkor fontos, hogy a következő négy kérdést ne keverjük.
 
-1. Maga a megállapodás teljesíti-e a 15-1. cikk törvényi feltételeit
-2. A kikötött időszak és a munkavállaló terhe észszerű körben van-e
-3. Kinek róható fel a munkaszerződés megszűnésének oka
-4. Hogyan ítélendő meg a kilépési előzetes bejelentés és a visszatérítés köre
+1. Maga a megállapodás teljesíti-e a 15-1. cikk törvényi feltételeit?
+2. A kikötött időszak és a munkavállaló terhe észszerű körben van-e?
+3. Kinek róható fel a munkaszerződés megszűnésének oka?
+4. Hogyan ítélendő meg a kilépési előzetes bejelentés és a visszatérítés köre?
 
 Még ha e négy kérdés ugyanabban a szerződésben együtt szerepel is, az alkalmazandó rendelkezés és a szükséges bizonyíték különbözik. Ezért külön kell vizsgálni, érvényes-e a megállapodás, mikor hatályosul a kilépési nyilatkozat, van-e felelősség az előzetes juttatás (預付性給付) vagy a képzési költség visszatérítésére, és keletkezett-e ténylegesen külön kár.
 
@@ -41,9 +41,9 @@ A 15-1. cikk 1. bekezdése két törvényi feltételt választólagosan szabály
 
 A 15-1. cikk a két törvényi feltétel egyikét és emellett külön észszerűségi vizsgálatot követel. Ez nem jelenti azt, hogy mindig egyszerre kell szakmai-műszaki képzést és észszerű ellentételezést nyújtani, sem azt, hogy a megállapodás egésze automatikusan érvényes pusztán attól, hogy a kettő egyikét formálisan feljegyezték.
 
-A törvényi feltétel megerősítése után a 2. bekezdés szerint külön vizsgálják, hogy a kikötött időszak és a felelősség köre észszerű-e. Az 1. bekezdés törvényi feltételét vagy a 2. bekezdés észszerűségi mércéjét sértő megállapodás a 3. bekezdés szerint semmis. Ez a szabály azonban az egyes megállapodások tartalmának és tényeinek vizsgálati mércéje, nem olyan szabály, amely minden minimális szolgálati időre vonatkozó kikötést eleve érvényesnek vagy semmisnek nyilvánítana.
+A törvényi feltétel ellenőrzése után a 2. bekezdés szerint külön vizsgálják, hogy a kikötött időszak és a felelősség köre észszerű-e. Az 1. bekezdés törvényi feltételét vagy a 2. bekezdés észszerűségi mércéjét sértő megállapodás a 3. bekezdés szerint semmis. Ez a szabály azonban az egyes megállapodások tartalmának és tényeinek vizsgálati mércéje, nem olyan szabály, amely minden minimális szolgálati időre vonatkozó kikötést eleve érvényesnek vagy semmisnek nyilvánítana.
 
-Az, hogy a munkavállaló aláírta a szerződést, a megállapodás meglétét megerősítő irat lehet, de nem helyettesíti a törvényi feltételeket. Fordítva, ahelyett, hogy pusztán a hosszú időtartam miatt rögtön következtetnének, ellenőrizni kell, milyen beruházás vagy ellentételezés volt, és miért ezt az időszakot rögzítették.
+Az, hogy a munkavállaló aláírta a szerződést, a megállapodás meglétét megerősítő irat lehet, de nem helyettesíti a törvényi feltételeket. Fordítva, ahelyett, hogy pusztán a kikötött időszak hosszából rögtön következtetnének, ellenőrizni kell, milyen beruházás vagy ellentételezés volt, és miért ezt az időszakot rögzítették.
 
 ## 2. Első törvényi feltétel: szakmai-műszaki képzés és a költség viselése
 
@@ -55,15 +55,15 @@ A tanmenet, a képzési ütemezés, a jelenléti ív, az értékelés eredménye
 
 Az általános munkahelyi beilleszkedés és a szakmai-műszaki képzés határa nem attól függ önmagában, hogy hol tartották a képzést, vagy ki szervezte. Belső tanfolyam is igazolhat konkrét szakmai-műszaki tartalmat és jelentős beruházást, külső intézet hosszú tanfolyama pedig valójában általános bevezető képzés lehet. Ezért nem szabad minden belső képzést egységesen kizárni, sem pusztán a magas összeg vagy a hosszú időtartam miatt elismerni a törvényi feltételt.
 
-A kikötött időszak és a képzési beruházás viszonyát is ismertetni kell. Milyen képesség sajátítható el, e képesség milyen kapcsolatban van a célzott munkakörrel, és a képzés időtartamához és költségéhez képest miért szükséges a javasolt munkavégzési időszak, egyedileg vizsgálandó. A teher körének megítéléséhez az is hozzátartozik, hogy a képzés vége után ténylegesen végezték-e az adott munkát, és mennyi időt dolgoztak már.
+A kikötött időszak és a képzési beruházás viszonyát is ismertetni kell. Milyen képesség sajátítható el, e képesség milyen kapcsolatban van a célzott munkakörrel, és a képzés időtartamához és költségéhez képest miért szükséges a javasolt szolgálati idő, egyedileg vizsgálandó. A teher körének megítéléséhez az is hozzátartozik, hogy a képzés vége után ténylegesen végezték-e az adott munkát, és mennyi időt dolgoztak már.
 
 ## 3. Második törvényi feltétel: észszerű ellentételezés
 
-A második törvényi feltétel az, hogy a munkáltató észszerű ellentételezést nyújt a munkavállaló azon ígéretéért, hogy tartja a minimális szolgálati időt. Itt az ellentételezésnek a szokásos bértől vagy a már járó munkavégzés ellenértékétől elkülönülő céllal és szerkezettel kell rendelkeznie. A jogi jelleg nem dől el pusztán attól, hogy a bérjegyzéken szerződéskötési díjnak, bentmaradási bónusznak vagy előzetes juttatásnak címkézték.
+A második törvényi feltétel az, hogy a munkáltató észszerű ellentételezést nyújt a munkavállaló azon ígéretéért, hogy tartja a minimális szolgálati időt. Itt az ellentételezésnek a szokásos bértől vagy a már járó munkavégzés ellenértékétől elkülönülő céllal és szerkezettel kell rendelkeznie. A jogi jelleg nem dől el pusztán attól, hogy a bérjegyzéken aláírási bónusznak, bentmaradási bónusznak vagy előzetes juttatásnak címkézték.
 
-Először a kifizetés célját kell megerősíteni. Általános felvételi bérfeltétel-e, meghatározott idejű bentmaradási ígéret ellenértéke-e, vagy teljesítmény elérésének jutalma, annak a szerződésben és a tájékoztató iratokban egyértelműnek kell lennie. Azt is vizsgálják, hogy a munkavállaló a szerződéskötés előtt megérthette-e a kifizetés napját, az összeget, a keletkezés időpontját, a bentmaradási időszakkal való kapcsolatot, a visszatérítés okait és a képletet.
+Először a kifizetés célját kell ellenőrizni. Általános felvételi bérfeltétel-e, meghatározott idejű bentmaradási ígéret ellenértéke-e, vagy teljesítmény elérésének jutalma, annak a szerződésben és a tájékoztató iratokban egyértelműnek kell lennie. Azt is vizsgálják, hogy a munkavállaló a szerződéskötés előtt megérthette-e a kifizetés napját, az összeget, a keletkezés időpontját, a bentmaradási időszakkal való kapcsolatot, a visszatérítés okait és a képletet.
 
-A tajvani Munkaügyi Minisztérium (勞動部) 2026. június 5-i iránymutatása (函釋) szerint, ha bentmaradási bónuszt, szerződéskötési díjat vagy más előzetes juttatást a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként vesznek, e szerepet egyértelműen közölni kell. Az, hogy a munkáltató utólag újraértelmezi a kifizetés célját, vagy a bér egy részét ellentételezésként újraosztályozza, nehezen helyettesíti a szerződéskori közlést.
+A tajvani Munkaügyi Minisztérium (勞動部) 2026. június 5-i iránymutatása (函釋) szerint, ha bentmaradási bónuszt, aláírási bónuszt vagy más előzetes juttatást a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként vesznek, e szerepet egyértelműen közölni kell. Az, hogy a munkáltató utólag újraértelmezi a kifizetés célját, vagy a bér egy részét ellentételezésként újraosztályozza, nehezen helyettesíti a szerződéskori közlést.
 
 Az ellentételezés észszerűsége nem ítélhető meg csak az összeg alapján. Együtt nézik, kap-e a munkavállaló ténylegesen többletelőnyt, egyértelműek-e a kifizetési feltételek, hogyan keletkezik a jogosultság a már ledolgozott időszaknak megfelelő részre, és nem túlzó-e a visszatérítés köre. Még ha van is ellentételezés, nem engedélyezett korlátlanul bármilyen bentmaradási időtartam vagy bármilyen összegű visszatérítési felelősség.
 
@@ -78,9 +78,9 @@ Ha a törvényi feltételek egyike fennáll is, a kikötött időszaknak és a f
 3. Az ellentételezés összege és köre
 4. Egyéb, az észszerűséget befolyásoló körülmények
 
-Az első tényezőnél azt nézik, mennyi ideig tartott ténylegesen a képzés, és mennyit viselt a munkáltató. Nem elég a végösszeget bemutatni; együtt kell megerősíteni a tételenkénti bizonylatokat, a munkavállalónkénti hozzárendelt összeget, a képzés által nyújtott képességet és a már megtérült beruházási részt.
+Az első tényezőnél azt nézik, mennyi ideig tartott ténylegesen a képzés, és mennyit viselt a munkáltató. Nem elég a végösszeget bemutatni; együtt kell ellenőrizni a tételenkénti bizonylatokat, a munkavállalónkénti hozzárendelt összeget, a képzés által nyújtott képességet és a már megtérült beruházási részt.
 
-A második tényező, a helyettesítési lehetőség, nem dől el pusztán a munkáltató toborzási nehézségre vonatkozó állításával. Vizsgálják, szerezhető-e azonos vagy hasonló munkakörű személyzet, milyen képesítés és jártassági szint szükséges, mennyi a szokásos betöltési idő, és a munkáltató által állított üzemeltetési szükség egyezik-e objektív iratokkal.
+A második tényező, a helyettesítési lehetőség, nem dől el pusztán a munkáltató toborzási nehézségre vonatkozó állításával. Vizsgálják, szerezhető-e azonos vagy hasonló munkakörű személyzet, milyen képesítés és jártassági szint szükséges, mennyi a szokásos betöltési idő, és a munkáltató által állított üzemeltetési szükséglet egyezik-e objektív iratokkal.
 
 A harmadik tényező nemcsak az ellentételezés összegét, hanem a körét is nézi. Fontos, mikor fizetik, milyen feltételekkel kerül véglegesen a munkavállalóhoz, hogyan felel meg a kikötött időszak egészének, és a közbenső megszűnéskor tükröződik-e a már teljesített időszak. Azonos nevű bónusz a szerződés szerkezete és a valóság szerint eltérően értékelhető.
 
@@ -94,23 +94,23 @@ A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint a r
 
 A Munkaügyi Minisztérium 勞動關2字第1150141814號 iránymutatása megkülönbözteti és kezeli a rendszeresen tartott képzést, a szokásos munkaköri képzést, azt a képzést, amellyel az újonnan belépő megismeri a munkakörnyezetet és az eljárásokat, valamint a törvény szerint a munkáltató által tartandó képzést. Mivel e képzés a tevékenység üzemeltetéséhez vagy törvényi kötelezettség teljesítéséhez kapcsolódik, e költség nem fordítható bentmaradási kötelezettség vagy korai megszűnés szankciójának alapjává.
 
-Azokat a tanfolyamokat, amelyeket új munkavállaló általában kap, például a munkaszabályzat (工作規則) ismertetését, a szervezet és a rendszerek bemutatását, a szokásos munkakör-átadást és az alapvető biztonsági eljárások útmutatóját, a lényegük szerint kell megerősíteni. A munkáltató által eredetileg viselendő általános felvételi és kezelési költség vagy a munkakör-átadás költsége nem tehető visszatérítés tárgyává pusztán azzal, hogy külön beruházásnak címkézik.
+Azokat a tanfolyamokat, amelyeket új munkavállaló általában kap, például a munkaszabályzat (工作規則) ismertetését, a szervezet és a rendszerek bemutatását, a szokásos munkakör-átadást és az alapvető biztonsági eljárások útmutatóját, a lényegük szerint kell ellenőrizni. A munkáltató által eredetileg viselendő általános felvételi és kezelési költség vagy a munkakör-átadás költsége nem tehető visszatérítés tárgyává pusztán azzal, hogy külön beruházásnak címkézik.
 
-A képzés azonban nem mindig zárható ki pusztán azért, mert a vállalaton belül tartották. Ugyanazon programban keveredhet általános beilleszkedési és szakmai-műszaki rész, ezért a témát, az időt, a költséget és a törvényi kötelezettség meglétét tanfolyamonként kell megerősíteni. Aki a szakmai-műszaki részt állítja, irattal kell ismertetnie, milyen tartalom különbözik a szokásos képzéstől, és ki viselte ténylegesen a költséget.
+A képzés azonban nem mindig zárható ki pusztán azért, mert a vállalaton belül tartották. Ugyanazon programban keveredhet általános beilleszkedési és szakmai-műszaki rész, ezért a témát, az időt, a költséget és a törvényi kötelezettség meglétét tanfolyamonként kell ellenőrizni. Aki a szakmai-műszaki részt állítja, irattal kell ismertetnie, milyen tartalom különbözik a szokásos képzéstől, és ki viselte ténylegesen a költséget.
 
 A gyakorlatban nem csak a képzési anyag borítóját nézik, hanem összevetik a részletes tartalomjegyzéket és a képzés lebonyolításának nyilvántartását. Ellenőrizni kell, ismétlődő rendszeres tanfolyam-e, konkrét képesítés vagy berendezéskezelési képesség tanfolyama-e, törvényileg kötelező képzés-e, a munkavállaló ténylegesen részt vett-e, és a követelt összeg egyezik-e a képzési költség bizonylataival.
 
 ## 6. Bónusz-visszatérítés és korai kilépés
 
-Nem mindig a teljes összeget kell visszaadni. Ha a szerződéskötési díj, a bentmaradási bónusz vagy más előzetes juttatás a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges kimenetel a kifizetés céljának, a megállapodás tartalmának, a már ledolgozott időszaknak és a megszűnés okának együttes vizsgálatától függ.
+Nem mindig a teljes összeget kell visszaadni. Ha az aláírási bónusz, a bentmaradási bónusz vagy más előzetes juttatás a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges kimenetel a kifizetés céljának, a megállapodás tartalmának, a már ledolgozott időszaknak és a megszűnés okának együttes vizsgálatától függ.
 
 A közlés nem jelenhet meg először akkor, amikor a kifizetés után vita keletkezik. A munkavállalónak a szerződéskötéskor és a kifizetéskor tudnia kell, mely összeg a minimális szolgálati időre vonatkozó ígéret ellentételezése, mennyi a kikötött időszak egésze, mikor keletkezik rá a jogosultság, és milyen képlet szerint számolnak el, ha a megszűnés közben következik be.
 
 A nem teljesített időszakra vonatkozó arányosság elvének alkalmazásához először rögzíteni kell a megállapodás kezdő- és zárónapját, a ténylegesen ledolgozott napokat és a visszatérítés számításának alapösszegét. Például a már teljesített időszakot egyáltalán nem tükröző rögzített összeget az iránymutatás arányossági mércéje fényében kell vizsgálni. Ha a szerkezet részletfizetéses vagy szakaszos keletkezésű, külön kell számítani, melyik részlet melyik időszaknak felel meg.
 
-A visszatérítés kérdését sorban kell megerősíteni: a megállapodás érvényessége, a kifizetett összeg jogi jellege, a már ledolgozott időszak, a megszűnés oka és a visszatérítési képlet; a követelt összeg nem dől el pusztán attól, hogy a szerződés a „kötbér” kifejezést használja.
+A visszatérítés kérdését sorban kell ellenőrizni: a megállapodás érvényessége, a kifizetett összeg jogi jellege, a már ledolgozott időszak, a megszűnés oka és a visszatérítési képlet; a követelt összeg nem dől el pusztán attól, hogy a szerződés a „kötbér” kifejezést használja.
 
-A teljes visszatérítési záradék, a tényleges veszteségtől idegen rögzített kötbér és a bér egyoldalú levonása nem egyetlen problémaként ítélendő meg. A jogalapot, a megállapodás tartalmát, a munkajogi korlátokat és a levonás jogszerűségét külön kell megerősíteni. A munkáltató felszólításában írt összeg vagy az, hogy a munkavállaló egy részt kifizetett, a többi jogi kérdést sem rögzíti.
+A teljes visszatérítési záradék, a tényleges veszteségtől idegen rögzített kötbér és a bér egyoldalú levonása nem egyetlen problémaként ítélendő meg. A jogalapot, a megállapodás tartalmát, a munkajogi korlátokat és a levonás jogszerűségét külön kell ellenőrizni. A munkáltató felszólításában írt összeg vagy az, hogy a munkavállaló egy részt kifizetett, a többi jogi kérdést sem rögzíti.
 
 A képzési költség visszatérítését és az előzetes juttatás visszatérítését is meg kell különböztetni. Az előbbi a tényleges szakmai-műszaki képzésre és a költség viselésére összpontosít; az utóbbi a kifizetés céljára, a közlésre, a keletkezési feltételekre és a nem teljesített időszak arányára. Ha a két tételt együtt követelik, külön kell összevetni, nem számolták-e kétszer a költséget, és az egyes tételek bizonylatait.
 
@@ -124,7 +124,7 @@ A vizsgálati iratok közé tartozhat a felmondási értesítés, a kilépési l
 
 A felmondás, a közös megegyezéssel történő megszűnés és a munkafeltételek megsértésének állítása csak a vizsgálandó körülmények példái, nem a munkavállalónak nem felróható okok zárt felsorolása. Azonos nevű megszűnés is különbözhet a felek akaratában és a lefolyásban, és az iratban írt megnevezés nem feltétlenül egyezik a tényleges tényekkel.
 
-A megszűnés okának megítélése közvetlenül a visszatérítés körére is hat. Ha a 4. bekezdés alkalmazandó, a munkavállalótól nem követelhető a minimális szolgálati időre vonatkozó kikötés megsértésének felelőssége, sem a képzési költség visszatérítése, ezért a hovatartozást a képlet alkalmazása előtt kell megerősíteni. Ha előzetes juttatás és más külön igények is vannak, minden igény jogi jellegét és alapját külön vizsgálják.
+A megszűnés okának megítélése közvetlenül a visszatérítés körére is hat. Ha a 4. bekezdés alkalmazandó, a munkavállalótól nem követelhető a minimális szolgálati időre vonatkozó kikötés megsértésének felelőssége, sem a képzési költség visszatérítése, ezért a hovatartozást a képlet alkalmazása előtt kell ellenőrizni. Ha előzetes juttatás és más külön igények is vannak, minden igény jogi jellegét és alapját külön vizsgálják.
 
 ## 8. A kilépési előzetes bejelentés külön kérdés
 
@@ -156,23 +156,23 @@ Vita megelőzéséhez vagy már előterjesztett igény vizsgálatához nem elég
 4. Írásban egyértelműen összekapcsolják az ellentételezés célját, a kifizetés napját, az összeget, a keletkezési feltételeket, a munkavállalónak tett közlést és a nem teljesített időszak visszatérítési képletét.
 5. Dokumentálják a kikötött időszak számítási alapját, az azonos vagy hasonló munkakörű személyzet helyettesítési lehetőségét, valamint a munkáltató üzemeltetési szükséglete és a tényleges beruházás viszonyát.
 6. Vizsgálják, a kikötött időszak és a visszatérítési összeg arányos-e a képzési költség vagy az ellentételezés körével, és az elszámolásban tükrözik a már ledolgozott időszakot.
-7. A megszűnés okának és a felelősség hovatartozásának egyedi megerősítése után számítják a tényleges megszűnési napot, a teljesített és a nem teljesített időszakot.
+7. A megszűnés okának és a felelősség hovatartozásának egyedi megállapítása után számítják a tényleges megszűnési napot, a teljesített és a nem teljesített időszakot.
 8. Mielőtt a bérből levonnának vagy visszatérítést követelnének, összevetik a szerződést, a kifizetési iratokat, a bérjegyzéket, a felek közléseit, a felszólítást és a levonási nyilvántartást a jogalap és az eljárás ellenőrzésére.
 
 Még ha mintaszerződést használnak is, nem szabad mechanikusan ugyanazt az időszakot és összeget alkalmazni minden munkakörre és minden munkavállalóra. A záradékokat a tényleges képzési beruházás, az ellentételezés és a helyettesítési lehetőség tükrözésével kell megtervezni, a kifizetés célját és az arányos képletet pedig a szerződéskötés előtt érthetően közölni kell.
 
 ### A munkavállaló által ellenőrizendő szempontok
 
-1. Egybegyűjtik az aláírt munkaszerződés és a módosító megállapodások eredetijét, a felvételkori ismertető anyagot, a képzési anyagot, a tanmenetet, az ütemezést és az elvégzési nyilvántartást.
-2. Megerősítik a képzés szakmai-műszaki tartalmát, általános beilleszkedési képzés-e vagy törvényileg kötelező képzés, a számlák és nyugták összegét, és ki viselte ténylegesen a költséget.
-3. Biztosítják a szerződéskötési díj, a bentmaradási bónusz és más előzetes juttatások kifizetési iratait, az ellentételezés céljáról szóló közlést, a kifizetés napját, a keletkezési feltételeket és a visszatérítési képletet.
+1. Egybegyűjtik az aláírt munkaszerződés és a módosító megállapodások eredeti példányait, a felvételkori ismertető anyagot, a képzési anyagot, a tanmenetet, az ütemezést és az elvégzési nyilvántartást.
+2. Ellenőrzik a képzés szakmai-műszaki tartalmát, általános beilleszkedési képzés-e vagy törvényileg kötelező képzés, a számlák és nyugták összegét, és ki viselte ténylegesen a költséget.
+3. Biztosítják az aláírási bónusz, a bentmaradási bónusz és más előzetes juttatások kifizetési iratait, az ellentételezés céljáról szóló közlést, a kifizetés napját, a keletkezési feltételeket és a visszatérítési képletet.
 4. Külön rögzítik a kikötött időszak számítási alapját, a már ledolgozott időszakot, a fennmaradó időszakot és a munkáltató által állított helyettesítési lehetőséget.
 5. Megőrzik a kilépési értesítést, a felmondási értesítést vagy a közös megegyezéssel történő megszűnés iratát, valamint a kézbesítés bizonyítékát, például az elektronikus levelet és az üzenetváltást.
-6. Időrendben rendezik a megszűnés tényleges okát és lefolyását, és együtt megerősítik a munkáltató visszatérítési felszólítását, a bérjegyzéket, a felek közléseit és a levonási nyilvántartást.
+6. Időrendben rendezik a megszűnés tényleges okát és lefolyását, és együtt ellenőrzik a munkáltató visszatérítési felszólítását, a bérjegyzéket, a felek közléseit és a levonási nyilvántartást.
 7. Külön vizsgálják a minimális szolgálati időre vonatkozó kikötés érvényességét, a kilépési nyilatkozatot és az előzetes bejelentést, a képzési költség és az előzetes juttatás visszatérítését, valamint a külön állított kárt.
-8. Nem ismerik el a felelősséget pusztán azért, mert aláírtak, vagy mert a munkáltató meghatározott összeget követel; megerősítik a 15-1. cikk törvényi feltételeinek, észszerűségének, a megszűnés hovatartozásának és az arányos képletnek megfelelő bizonyítékokat.
+8. Nem ismerik el a felelősséget pusztán azért, mert aláírtak, vagy mert a munkáltató meghatározott összeget követel; ellenőrzik a 15-1. cikk törvényi feltételeinek, észszerűségének, a megszűnés hovatartozásának és az arányos képletnek megfelelő bizonyítékokat.
 
-Az iratok időrend szerinti rendezésekor együtt kell feltüntetni a szerződéskötés napját, a képzés kezdő- és zárónapját, az egyes kifizetési napokat, a munkavégzés kezdő- és zárónapját és az értesítés továbbításának napját. Ha az iratok egy része csak a munkáltatónál van, először a saját iratokat és a követelt összeg számítási alapját kell rendezni, a további iratokat a szükséges eljárás szerint kell megerősíteni.
+Az iratok időrend szerinti rendezésekor együtt kell feltüntetni a szerződéskötés napját, a képzés kezdő- és zárónapját, az egyes kifizetési napokat, a munkavégzés kezdő- és zárónapját és az értesítés továbbításának napját. Ha az iratok egy része csak a munkáltatónál van, először a saját iratokat és a követelt összeg számítási alapját kell rendezni, a további iratokat a szükséges eljárás szerint kell ellenőrizni.
 
 ## 10. Hivatalos források
 
@@ -189,6 +189,6 @@ Az iratok időrend szerinti rendezésekor együtt kell feltüntetni a szerződé
 
 ---
 
-Ez a cikk a tajvani minimális szolgálati időre vonatkozó kikötést, a képzési költség és az előzetes juttatás visszatérítését, valamint a kilépési előzetes bejelentést általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi munkaügyi ügyben, és nem ígér meghatározott eredményt. A megállapodás érvényessége és a felelősség köre a szerződés típusától és szövegétől, a tényleges képzéstől és költségektől, az ellentételezés céljától és közlésétől, a munkavégzési időszaktól, a megszűnés okától és a bizonyítékoktól függően változhat. Kilépési nyilatkozat, bérlevonás, visszatérítési megállapodás vagy vita megválaszolása előtt a legújabb hivatalos forrásokat és az egyedi körülményeket kell megerősíteni.
+Ez a cikk a tajvani minimális szolgálati időre vonatkozó kikötést, a képzési költség és az előzetes juttatás visszatérítését, valamint a kilépési előzetes bejelentést általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi munkaügyi ügyben, és nem ígér meghatározott eredményt. A megállapodás érvényessége és a felelősség köre a szerződés típusától és szövegétől, a tényleges képzéstől és költségektől, az ellentételezés céljától és közlésétől, a szolgálati időtől, a megszűnés okától és a bizonyítékoktól függően változhat. Kilépési nyilatkozat, bérlevonás, visszatérítési megállapodás vagy vita megválaszolása előtt a legújabb hivatalos forrásokat és az egyedi körülményeket kell ellenőrizni.
 
 **Wei Tseng ügyvédnő (曾雋崴)**

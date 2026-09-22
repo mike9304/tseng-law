@@ -1453,7 +1453,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japán (日本語)',
       ko: 'Koreai (한국어)',
       'needs-method-confirmation':
-        'A négy nyelv egyike sem használható — a kommunikáció módját meg kell erősíteni',
+        'A négy nyelv egyikét sem tudom használni — a kommunikáció módját meg kell erősíteni',
     },
   },
   ro: {

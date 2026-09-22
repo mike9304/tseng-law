@@ -49,11 +49,11 @@ Mivel a beruházási terv vizsgálata is időt vesz igénybe,
 
 a beruházási tervet és a társaság bejegyzési címének keresését egyszerre kell végezni.
 
-A külföldiek befektetéséről szóló törvény (外國人投資條例) 9. cikke szerint a jóváhagyott tőkehozzájárulásnak az illetékes szerv által rögzített határidőn (核定期限) belül teljes egészében meg kell érkeznie; a határidőt az egyes ügy jóváhagyási iratában kell megerősíteni (a gyakorlatban gyakran körülbelül 1 évre rögzítik).
+A külföldiek befektetéséről szóló törvény (外國人投資條例) 9. cikke szerint a jóváhagyott tőkehozzájárulásnak az illetékes szerv által rögzített határidőn (核定期限) belül teljes egészében meg kell érkeznie; a határidőt az egyes ügy jóváhagyási iratában kell ellenőrizni (a gyakorlatban gyakran körülbelül 1 évre rögzítik).
 
-E határidőn belül, miután megtalálták a társaság címét és aláírták a bérleti szerződést,
+E határidőn belül van elég idő a cím megtalálására és a bérleti szerződés aláírására,
 
-van elég idő a banknál az előkészítő számla megnyitására és a tőke átutalására.
+a banknál az előkészítő számla megnyitására és a tőke átutalására.
 
 ​
 
@@ -87,7 +87,7 @@ Ezen a ponton alaposan egyeztetni kell tajvani ügyvéddel; a tanácsadás nem m
 
 **4. Mire kell ügyelni, amikor a társaság bejegyzési címét (például vendéglátóhelyiséget) bérlik?**
 
-A társaságalapítás körülbelül **3 hónapot**, a munkavállalási engedély (工作許可) és a tartózkodási igazolvány megszerzése körülbelül **1 hónapot** vesz igénybe,
+A társaságalapítás körülbelül **3 hónapot**, a munkavállalási engedély (工作許可) és a tartózkodási igazolvány megszerzése további körülbelül **1 hónapot** vesz igénybe,
 
 ezért a szerződés kezdőnapját a lehető legkésőbbre kell tenni.
 
@@ -119,9 +119,9 @@ Emellett a végső társasági bejegyzéskor a városi önkormányzat (市政府
 
 ha irodaházi irodahelyiségről van szó, a társaság bejegyzése (公司登記) akkor nem lehetséges.
 
-Például ha olyan tevékenységi ágakról van szó, amelyek irodaházi irodahelyiségben is folytathatók — például reklám vagy nagykereskedelem —, a társaság irodahelyiségben is megalapítható. A bérleti szerződés megkötése előtt
+Például ha olyan tevékenységi ágakról van szó, amelyek irodaházi irodahelyiségben is folytathatók — például reklám vagy nagykereskedelem —, a társaság irodahelyiségben is megalapítható.
 
-ezt előzetesen ellenőrizni kell.
+A bérleti szerződés megkötése előtt ezt előzetesen ellenőrizni kell.
 
 *Ha tajvani jogban segítségre van szüksége, a Kapcsolat oldalon küldhet megkeresést. A tanácsadás nem magyarul, hanem angolul, kínaiul (中文), japánul és koreaiul zajlik.*
 

@@ -33,7 +33,7 @@ Először a személyes biztonságot és a figyelmeztető jeleket kell biztosíta
 
 Ha a biztonság biztosítva van, általános és részletes fényképeket kell készíteni a járművek helyzetének és sérüléseinek, az útjelzéseknek, a világításnak és az időjárási körülményeknek a rögzítésére. Nem szabad kihagyni a tanúk elérhetőségét, a CCTV-képek (監視器影像) és a fedélzeti kamera (行車紀錄器) megőrzésére vonatkozó kérelmet, a felek, a jármű és a biztosítás adatait, valamint az orvosi dokumentációt (病歷). A saját fényképek hasznosak, de nem helyettesítik a sérüléses vagy halálos balesetnél szükséges rendőri intézkedést.
 
-A rendőrségi iratok tekintetében a baleset helyszínén megkapható a közúti baleset feleinek nyilvántartási szelvénye (道路交通事故當事人登記聯單). A baleset napjától számított 7 nap elteltével kérhető a helyszínrajz és a helyszíni fényképek (現場圖 / 現場照片); a baleset napjától számított 30 nap elteltével kérhető a közúti baleset előzetes elemzési táblázata (道路交通事故初步分析研判表). A kiadás időpontját és a kérelem feltételeit az illetékes rendőri szervnél kell újra megerősíteni.
+A rendőrségi iratok tekintetében a baleset helyszínén megkapható a közúti baleset feleinek nyilvántartási szelvénye (道路交通事故當事人登記聯單). A baleset napjától számított 7 nap elteltével kérhető a helyszínrajz és a helyszíni fényképek (現場圖 / 現場照片); a baleset napjától számított 30 nap elteltével kérhető a közúti baleset előzetes elemzési táblázata (道路交通事故初步分析研判表). A kiadás időpontját és a kérelem feltételeit az illetékes rendőri szervnél újra ellenőrizni kell.
 
 ## Q3. Sérülés esetén milyen igényeket és milyen határidőket kell ellenőrizni?
 

@@ -744,7 +744,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'CSAPATUNK',
     title: 'A Hovering nemzetközi csapata',
     description:
-      'A Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgáló profilja.',
+      'A Hovering ügyvédeinek, a működési vezetőnek és a társult könyvvizsgálónak a profilja.',
     representativeTitle: 'Vezető ügyvédnő',
     teamTitle: 'Ügyvédek és munkatársak',
     partnerTitle: 'Társult könyvvizsgáló',
@@ -3236,7 +3236,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Egyezteti a tanácsadási időpontokat és a kommunikációt a koreai ügyfelek számára.',
-        'Dokumentumrendszerekkel és munkafolyamatokkal támogatja a régiók közötti együttműködést, informatikai háttérrel.',
+        'Dokumentumrendszerekkel és munkafolyamatokkal támogatja a csapatok közötti egyeztetést; a háttere informatikai végzettség.',
       ],
       education: [
         'Alapfokozat (B.S.) informatikából, National Cheng Kung University',

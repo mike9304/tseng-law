@@ -21,7 +21,7 @@ Kecelakaan itu terjadi di sebuah pusat kebugaran di Taichung (臺中), saat maha
 
 Saya bertindak sebagai kuasa hukum (訴訟代理人) penggugat, yaitu mahasiswa asal Korea tersebut, dalam perkara ini. Pengadilan Distrik Taichung, Taiwan (臺灣臺中地方法院) pada 24 Januari 2022 menjatuhkan putusan tingkat pertama dalam perkara konsumen tahun 109 (2020) Nomor 7 (109年度消字第7號), yang memerintahkan tergugat membayar [1.579.589 dolar Taiwan baru (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) beserta bunga sebagaimana tercantum dalam putusan tersebut.
 
-Setelah itu, pemberitaan media menyebutkan bahwa para pihak mencapai perdamaian (和解) pada tingkat banding. Karena putusan resmi tingkat pertama saja tidak dapat memastikan hasil pemeriksaan tingkat banding maupun jumlah uang perdamaiannya, hal tersebut tidak boleh dianggap sebagai hasil putusan tingkat pertama yang berkekuatan hukum tetap.
+Setelah itu, pemberitaan media menyebutkan bahwa para pihak mencapai perdamaian (和解) pada tingkat banding. Pemberitaan itu tidak boleh dianggap sebagai hasil akhir yang sudah pasti atas putusan tingkat pertama, karena putusan resmi tingkat pertama saja tidak mengungkapkan hasil pemeriksaan tingkat banding maupun jumlah uang perdamaian.
 
 Berikut adalah judul pemberitaan media, unggahan daring, dan ulasan hukum mengenai perkara ini, yang diterjemahkan ke dalam bahasa Indonesia. Judul-judul di bawah ini hanya dimaksudkan untuk memperkenalkan isi pemberitaan atau unggahan pada masing-masing tautan, dan tidak berarti artikel ini menetapkan sendiri kebenaran fakta di dalamnya.
 

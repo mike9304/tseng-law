@@ -1,0 +1,90 @@
+WO-F-id r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-id-r3
+date: 2026-09-23
+no git add/commit/push
+
+## Rows applied (23)
+
+id-a
+1 P2 008 — difficulty row restored to Mudah / Sulit / Mudah (three cells). The prior hedge had erased the Easy / Difficult / Easy comparison.
+2 P2 009 — "kedua belah pihak" close rewritten inside the three existing lines: fault on the company frees the employer from severance; fault on the employee lets the worker claim it.
+3 P2 009 — closing line restored to the party who prepares evidence and steps earlier being better placed to protect its rights.
+4 P2 004 — "penerapan berganda" → "pembatasan manfaat ganda" (4: FAQ, body repeat, and two "pembatasan penerapan berganda").
+5 P2 007 — evidence item 1 now says the real residence, or the address for service, differs from the documents.
+8 P2 005 — the split bank-account sentence was repaired inside the two existing blocks (not merged). Each block is now a full sentence: the registration documents must be issued first; the responsible person may then convert the account.
+9 P2 005 — "pekerjaan yang bersifat khusus atau teknis" aligned to "pekerjaan spesialis atau teknis (專門性或技術性工作)".
+10 P2 guidance disclaimer — "tenaga profesional berkualifikasi mana" reordered so "mana" is no longer parked inside the statement.
+11 P2 007 — heading "Akses" → "Hak Kunjungan dan Hak Bertemu" (only instance).
+13 P2 003 — "secara seragam paling baik" → "paling sesuai" (denies a single best route; drops the "best" wording).
+15 P3 guidance — leading space removed from servicesAssistanceAfter ("menjelaskan cara menyusun…").
+
+id-b
+1 P1 011 — the agreement now covers which records are handed over, how, and whether access survives.
+2 P2 010 — the reported appeal settlement is no longer called a final-and-binding first-instance judgment. The (和解) gloss stays.
+3 P2 015 — "usaha dagang" → "usaha (商業)"; "cabang pembantu (分支機構)" → "cabang usaha (分支機構)", with 公司 on perusahaan. One sentence.
+5 P2 018 — a manager of a foreign company's Taiwan subsidiary or branch is described as generally finding a work permit easier, with approval still not guaranteed.
+8 P2 018 — "tergantung industri" → "bergantung pada industri" (same paragraph as row 5).
+9 P2 perkara-for-a-filing — see systemic count below.
+10 P2 015 — covered with row 3.
+11 P2 016 — the surviving spouse is outside the Article 1138 kinship order and inherits with the rank that actually applies under Article 1144. Gloss (民法) kept. Lower-rank heirs elsewhere in the file were left as "urutan berikutnya".
+12 P2 016 — "salah satu pihak dari orang tua" → "salah satu orang tua" (4: FAQ question, FAQ answer, and two body repeats).
+13 P2 018 — "Titik urusan" → "Kantor yang didaftarkan menurut Pasal 386".
+14 P3 014 — mismatched ‘denda wanprestasi' → "denda wanprestasi".
+15 P3 018 — "papan saham emerging" → "papan saham pra-pencatatan" with the (興櫃) gloss kept.
+
+## Rows skipped (7)
+
+id-a 6 P2 and id-b 6 P2 — do not delete U+200B blank lines or 005 `**​**`. checkBlocks requires the Indonesian ZWSP count to equal the Korean source. Removing them also changes block count. The one-sentence-per-paragraph layout in 005, 006, 008, 009, 013, and 015 is the same source shape.
+id-a 7 P2 — do not promote Pertanyaan 16–20 to ## headings. English and Korean keep Q16–Q20 as body paragraphs. Adding ## fails the heading-level check. See reviewer-wrong.
+id-a 12 P2 — the correction note "(bukan Pasal 10 Undang-Undang Pajak Usaha)" was removed, the checker then failed `numbers missing 10` (Korean link label is 영업세법 제10조), and the note was restored. The visible statute name was already the withholding-rate standard, Pasal 3; the URL was not touched.
+id-a 14 P3 — "TWD 1.57M" left byte-identical (ACCEPTED-ROUND pin). The Indonesian gloss "1,57 juta dolar Taiwan baru" stays beside it.
+id-b 4 P2 — "Uraian di atas merupakan saran perancangan kontrak" left as written. See reviewer-wrong.
+id-b 7 P2 — headings stay numbered 7 then 8. See reviewer-wrong.
+
+## Systemic patterns
+
+- "Perkara" used for a filing, an administrative matter, or a set of facts, not a court case: 13 instances.
+  001 ×2 (FAQ + body) "keadaan masing-masing perkara" → "bentuk organisasi yang dipilih dan keadaannya".
+  002 ×1 "fakta masing-masing perkara" → "fakta yang konkret".
+  004 ×1 "keadaan perkara yang sama" → "rangkaian fakta yang sama" (English: the same set of facts).
+  011 ×3 "menurut/untuk masing-masing perkara" → "keadaan".
+  017 ×5 science-park "perkara" → "urusan"; filing order → "bagi setiap urusan"; timing → "menurut urusannya"; share acquisition → "Menurut transaksinya"; immigration "keadaan masing-masing perkara" → "keadaan masing-masing".
+  018 ×1 "bukan perkara aktual" → "bukan penugasan nyata" (English: not an actual engagement).
+  Left in place: court-case "perkara" (003, 007, 010, 012, 016 inheritance/family proceedings), the standard closer "perkara tertentu" / "keadaan perkara Anda", and the link label "Bidang perkara yang kami tangani".
+- "Penerapan berganda" for restrictions on duplicate benefits: 4.
+- "Salah satu pihak dari orang tua": 4.
+- Over-hedged difficulty cells: 3.
+- "Akses" as visitation: 1.
+- Guidance double space: 1.
+- U+200B / empty bold lines: 0 removed (checker).
+- R2–R10 otherwise already held: consultation languages stay English, Mandarin (中文), Japanese, Korean; no interpreter, reply-time, free-meeting, or result promise was turned positive; Wei Tseng stays unmarked (Indonesian does not inflect; no Bapak); Korea remains a labelled example; "Paralegal" stays (loanword pinned in the team-copy comment for Indonesian); "TIM KAMI" / "KANTOR" / "Profil lengkap (bahasa Inggris)" already translated; fullwidth punctuation only inside the Hangul url of 008.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      18
+```
+
+Commands were the work-order set. Checker tail above is the last 8 lines (018 PASS details + summary PASS 18/18). Markers 0. TSC_OK. Tests 160 files / 3202 passed, no × lines. git status --short | wc -l = 18 at verify time, before this log file existed. No test expectation needed updating.
+
+## Reviewer got wrong (not applied)
+
+- id-a 7. Q16–Q20 are body lines in the English file ("Q16. After an accident…") and in the Korean file ("Q16. 사고 발생 후…"), not markdown headings. The outline break is in the source. Promoting them would fail checkHeadings.
+- id-b 4. English: "The foregoing is contract-design advice." Korean: "이상은 계약 설계 제안입니다." The Indonesian sentence matches both. The preceding paragraphs are about branch versus subsidiary registration in the source as well. Replacing the sentence with "hanya membandingkan jalur pendirian" would drop the source's characterization. The next sentence already says that choosing a form does not make a transaction lawful and does not prevent disputes.
+- id-b 7. English and Korean headings also jump from section 5 to section 7, then 8. Renumbering 7→6 and 8→7 would diverge from the source and change digits the checker counts.

@@ -43,7 +43,7 @@ Untuk ganti rugi perdata (損害賠償), menurut Pasal 197 Kitab Undang-Undang H
 
 Orang yang dirugikan oleh suatu tindak pidana dapat mengajukan gugatan perdata yang digabung dalam perkara pidana (刑事附帶民事訴訟) berdasarkan Pasal 487 Kitab Undang-Undang Hukum Acara Pidana. Selama pemeriksaan perkara pidana masih berlangsung, gugatan itu dapat diajukan paling lambat sebelum penutupan persidangan lisan (言詞辯論終結) tingkat banding sebagaimana ditentukan Pasal 488 Kitab Undang-Undang Hukum Acara Pidana, tetapi tidak dapat diajukan setelah penutupan persidangan lisan tingkat pertama dan sebelum banding diajukan. Pada umumnya cara ini dapat menghindarkan pembayaran biaya perkara (裁判費) tersendiri, tetapi tidak semua hasilnya berakhir tanpa biaya. Misalnya, apabila perkara pidana ditolak dan atas permohonan penggugat perkara dilimpahkan ke pengadilan perdata, berdasarkan Pasal 503 Kitab Undang-Undang Hukum Acara Pidana biaya perkara dapat dibebankan kepada Anda, dan ketentuan mengenai pelimpahan serta prosedur dalam Pasal 504 juga perlu diperiksa bersamaan.
 
-Pilihan yang tepat berbeda-beda menurut ada tidaknya terputusnya daluwarsa (時效中斷), lingkup pihak tergugat, bukti, asuransi, dan kewenangan mengadili. Karena itu tidak ada satu prosedur yang secara seragam paling baik untuk semua perkara.
+Pilihan yang tepat berbeda-beda menurut ada tidaknya terputusnya daluwarsa (時效中斷), lingkup pihak tergugat, bukti, asuransi, dan kewenangan mengadili. Karena itu tidak ada satu prosedur yang paling sesuai untuk semua perkara.
 
 ## Q4. Apabila kedua pihak sama-sama lalai, bagaimana tanggung jawab pidana dan perdatanya dinilai?
 

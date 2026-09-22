@@ -745,7 +745,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         'Jika Anda belum yakin perkara Anda termasuk bidang layanan yang mana, halaman ',
       servicesAssistanceLinkLabel: 'Kontak',
       servicesAssistanceAfter:
-        ' menjelaskan cara menyusun ringkasan yang akan ditinjau advokat.',
+        'menjelaskan cara menyusun ringkasan yang akan ditinjau advokat.',
       columnsViewAllLabel: 'Lihat semua artikel',
       columnsReadMoreLabel: 'Baca selengkapnya',
       columnsReviewLabel: 'Ditinjau oleh Advokat Wei Tseng',
@@ -1133,7 +1133,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Lingkup hukum',
             paragraphs: [
               'Kantor kami berpraktik menurut hukum Taiwan, dan halaman ini hanya membicarakan pekerjaan dalam lingkup itu.',
-              'Isi halaman-halaman ini bukan nasihat menurut hukum yurisdiksi mana pun selain Taiwan, termasuk hukum tempat Anda tinggal. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, tenaga profesional berkualifikasi mana yang diperlukan untuk bagian itu kami pastikan bersama Anda.',
+              'Isi halaman-halaman ini bukan nasihat menurut hukum yurisdiksi mana pun selain Taiwan, termasuk hukum tempat Anda tinggal. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami pastikan bersama Anda tenaga profesional berkualifikasi yang diperlukan untuk bagian itu.',
             ],
           },
           {

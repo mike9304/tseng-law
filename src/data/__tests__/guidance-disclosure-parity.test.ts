@@ -446,7 +446,7 @@ const ELEMENTS = {
     pt: /não é uma consulta/,
     'zh-hans': /咨询步骤/,
     ms: /langkah perundingan/,
-    ru: /шагом консультации/,
+    ru: /не заменяет консультацию/,
     tr: /görüşme adımı/,
     it: /passo di consulenza/,
     nl: /consultatiestap/,

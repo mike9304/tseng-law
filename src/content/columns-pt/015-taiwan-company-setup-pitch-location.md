@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Quando se começa uma atividade de restauração, o primeiro problema é encontrar o endereço do local (營業地址).
 
-Além da situação do mercado,
+Além da situação do mercado, há outro ponto importante.
 
-outro ponto importante é
+Esse ponto é o seguinte.
 
-saber se esse endereço se situa numa zona onde a exploração de um «estabelecimento de restauração» é possível.
+Há que saber se esse endereço se situa numa zona onde a exploração de um «estabelecimento de restauração» é possível.
 
 ​
 
@@ -43,7 +43,7 @@ Qualquer pessoa pode pedir junto do gabinete da administração fundiária (地�
 
 Se tiver dificuldade em deslocar-se em pessoa ao gabinete da administração fundiária (地政事務所),
 
-pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de uma advogada ou advogado.
+pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de uma advogada ou de um advogado.
 
 Se o resultado da verificação indicar que o estabelecimento de restauração não é possível, mais tarde, no registo da sociedade (公司登記), a municipalidade poderia não aceitar a inscrição.
 

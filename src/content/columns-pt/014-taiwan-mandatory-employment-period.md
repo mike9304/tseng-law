@@ -10,8 +10,8 @@ featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jp
 faq:
   - q: "O pacto de período mínimo de trabalho (最低服務年限約定) do contrato de trabalho em Taiwan é automaticamente nulo?"
     a: "Não. Segundo o artigo 15-1 da lei taiwanesa sobre as normas do trabalho (勞動基準法), se o empregador ministrar uma formação técnica especializada (專業技術培訓) e assumir o custo, ou fornecer uma contrapartida razoável (合理補償) para que o trabalhador observe o período mínimo de trabalho, o pacto pode reunir os requisitos legais. Não é necessário reunir os dois requisitos ao mesmo tempo, mas, mesmo existindo um deles, o pacto não deve ultrapassar a extensão razoável à luz do conjunto das circunstâncias, como a duração e o custo da formação, a possibilidade de substituir o pessoal (人力替補可能性) e o montante e a extensão da contrapartida."
-  - q: "A formação dos recém-chegados ou a formação legalmente obrigatória consideram-se formação técnica especializada?"
-    a: "Segundo a orientação do Ministério do Trabalho de Taiwan (勞動部) de 5 de junho de 2026, o custo da formação periódica, da formação geral do posto, da adaptação ao trabalho dos recém-chegados e da formação que a lei obriga a ministrar não pode ser tomado como fundamento do pacto de período mínimo de trabalho nem de um pedido de cláusula penal (違約金) ou de restituição de encargos. Não se deve ver só o nome da formação, mas o programa concreto, o conteúdo profissional e técnico, a duração, o custo realmente assumido pelo empregador e os comprovativos."
+  - q: "A formação dos trabalhadores recém-admitidos ou a formação legalmente obrigatória consideram-se formação técnica especializada?"
+    a: "Segundo a orientação do Ministério do Trabalho de Taiwan (勞動部) de 5 de junho de 2026, o custo da formação periódica, da formação geral do posto, da adaptação ao trabalho dos trabalhadores recém-admitidos e da formação que a lei obriga a ministrar não pode ser tomado como fundamento do pacto de período mínimo de trabalho nem de um pedido de cláusula penal (違約金) ou de restituição de encargos. Não se deve ver só o nome da formação, mas o programa concreto, o conteúdo profissional e técnico, a duração, o custo realmente assumido pelo empregador e os comprovativos."
   - q: "Se se demitir de forma antecipada, deve restituir-se por inteiro o prémio de assinatura (簽約金) ou o prémio de permanência no posto (留任獎金)?"
     a: "Não se restitui sempre o montante integral. Se o prémio de assinatura, o prémio de permanência ou uma outra prestação antecipada (預付性給付) tiver sido pago como contrapartida razoável do pacto de período mínimo de trabalho, a sua finalidade deve ser comunicada de forma clara ao trabalhador. A orientação do Ministério do Trabalho de Taiwan de 5 de junho de 2026 explica que, numa demissão antes do termo do período, o montante a restituir deve calcular-se em proporção do período ainda não cumprido e não se deve exigir a restituição integral. A conclusão real deve examinar em conjunto a finalidade do pagamento, o conteúdo do pacto, o período já trabalhado e a causa da extinção."
   - q: "Se o contrato se extinguir de forma antecipada por uma causa não imputável ao trabalhador, deve restituir-se o encargo de formação?"
@@ -26,10 +26,10 @@ O pacto de período mínimo de trabalho (最低服務年限約定) do contrato d
 
 No exame, é importante não misturar as quatro perguntas seguintes.
 
-1. Se o pacto em si reúne os requisitos legais do artigo 15-1.
-2. Se o período convencionado e a carga do trabalhador estão numa extensão razoável.
-3. A quem se imputa a causa de extinção do contrato de trabalho.
-4. Como se apreciam o pré-aviso de demissão e a extensão da restituição.
+1. O próprio pacto reúne os requisitos legais do artigo 15-1?
+2. O período convencionado e a carga do trabalhador estão numa extensão razoável?
+3. A quem se imputa a causa de extinção do contrato de trabalho?
+4. Como se apreciam o pré-aviso de demissão e a extensão da restituição?
 
 Mesmo se estas 4 questões figurarem juntas no mesmo contrato, o preceito aplicável e a prova necessária são distintos. Deve-se portanto examinar em separado se o pacto é válido, quando produz efeitos a manifestação de demissão, se há responsabilidade de restituir a prestação antecipada (預付性給付) ou os encargos de formação, e se um prejuízo separado se produziu realmente.
 
@@ -43,7 +43,7 @@ O artigo 15-1 exige um dos dois requisitos legais e, além disso, um exame separ
 
 Depois da confirmação do requisito legal, segundo o n.º 2 examina-se em separado se o período convencionado e a extensão da responsabilidade são razoáveis. O pacto que infringe o requisito legal do n.º 1 ou o critério de razoabilidade do n.º 2 é nulo segundo o n.º 3. Contudo, esta norma é um critério para examinar o conteúdo e os factos de cada pacto, não uma norma que declare à partida válidos ou nulos todos os pactos de período mínimo de trabalho.
 
-A circunstância de o trabalhador ter assinado o contrato pode ser um documento que confirma a existência do acordo, mas não substitui os requisitos legais. Inversamente, em vez de o dar por decidido à partida só porque o pacto é de longa duração, deve verificar-se que investimento ou que contrapartida houve e por que este período foi fixado.
+A circunstância de o trabalhador ter assinado o contrato pode ser um documento que confirma a existência do acordo, mas não substitui os requisitos legais. Inversamente, a duração convencionada, por si só, não deve decidir o resultado; deve verificar-se que investimento ou que contrapartida houve e por que este período foi fixado.
 
 ## 2. Primeiro requisito legal: formação técnica especializada e assunção do custo
 
@@ -80,7 +80,7 @@ Mesmo existindo um dos requisitos legais, o período convencionado e a responsab
 
 No primeiro fator, vê-se quanto tempo durou realmente a formação e quanto o empregador assumiu. Não basta apresentar o total; convém confirmar em conjunto os comprovativos por posto, o montante imputado a cada trabalhador, a competência que a formação forneceu e a parte de investimento já recuperada.
 
-O segundo fator, a possibilidade de substituição, não se fixa só com a alegação do empregador de dificuldade de recrutamento. Examina-se se é possível obter pessoal do mesmo posto ou de um posto similar, que qualificação e que nível de perícia são necessários, qual é o período habitual de cobertura e se a necessidade operacional que o empregador alega se acorda com documentos objetivos.
+O segundo fator, a possibilidade de substituição, não se fixa só com a alegação do empregador de dificuldade de recrutamento. Examina-se se é possível obter pessoal do mesmo posto ou de um posto similar, que qualificação e que nível de perícia são necessários, qual é o período habitual de cobertura e se a necessidade operacional que o empregador alega é sustentada por documentos objetivos.
 
 O terceiro fator vê não só o montante da contrapartida, mas também a extensão. Importam quando se paga e em que condições se atribui de forma definitiva ao trabalhador, como corresponde ao período convencionado no seu conjunto e se, na extinção a meio do percurso, se reflete o período já cumprido. Um prémio do mesmo nome pode apreciar-se de forma distinta segundo a estrutura do contrato e a realidade.
 
@@ -90,9 +90,9 @@ No final, precisa-se de uma relação de proporcionalidade compreensível entre 
 
 ## 5. Formação que não pode fundar o pacto
 
-Segundo a orientação do Ministério do Trabalho de Taiwan de 5 de junho de 2026, o custo da formação periódica, da formação geral do posto, da adaptação ao trabalho dos recém-chegados e da formação que a lei obriga a ministrar não pode ser tomado como fundamento do pacto de período mínimo de trabalho nem de um pedido de cláusula penal ou de restituição de encargos. Não se deve ver só o nome da formação, mas o programa concreto, o conteúdo profissional e técnico, a duração, o custo realmente assumido pelo empregador e os comprovativos.
+Segundo a orientação do Ministério do Trabalho de Taiwan de 5 de junho de 2026, o custo da formação periódica, da formação geral do posto, da adaptação ao trabalho dos trabalhadores recém-admitidos e da formação que a lei obriga a ministrar não pode ser tomado como fundamento do pacto de período mínimo de trabalho nem de um pedido de cláusula penal ou de restituição de encargos. Não se deve ver só o nome da formação, mas o programa concreto, o conteúdo profissional e técnico, a duração, o custo realmente assumido pelo empregador e os comprovativos.
 
-A orientação 勞動關2字第1150141814號 do Ministério do Trabalho distingue e trata a formação que se ministra de forma periódica, a formação habitual do posto, a formação para que o recém-chegado se familiarize com o ambiente e os procedimentos de trabalho, e a formação que o empregador deve ministrar segundo a lei. Como esta formação acompanha a exploração da atividade ou o cumprimento de uma obrigação legal, o sentido é que o seu custo não pode converter-se em fundamento de uma obrigação de permanência ou de uma sanção por extinção antecipada.
+A orientação 勞動關2字第1150141814號 do Ministério do Trabalho distingue e trata a formação que se ministra de forma periódica, a formação habitual do posto, a formação para que o trabalhador recém-admitido se familiarize com o ambiente e os procedimentos de trabalho, e a formação que o empregador deve ministrar segundo a lei. Como esta formação acompanha a exploração da atividade ou o cumprimento de uma obrigação legal, o sentido é que o seu custo não pode converter-se em fundamento de uma obrigação de permanência ou de uma sanção por extinção antecipada.
 
 Os cursos que um empregado novo recebe de ordinário, como a explicação do regulamento de trabalho (工作規則), a apresentação da organização e dos sistemas, a transmissão habitual do posto e o guia dos procedimentos de base de segurança, devem ser confirmados na sua substância. O custo geral de contratação e de gestão ou o custo de transmissão do posto que o empregador já devia assumir no curso normal da atividade não podem fixar-se como objeto de restituição etiquetando-os só como investimento separado.
 

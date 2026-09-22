@@ -19,9 +19,9 @@ Quando o veículo da frente circula lentamente, ultrapassar (超車) pode parece
 
 O [artigo 101 do regulamento de segurança da circulação rodoviária de Taiwan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) rege ao mesmo tempo as condições nas quais a ultrapassagem é interdita e a ordem a seguir quando a ultrapassagem na mesma via é autorizada.
 
-O artigo 101 interdita a ultrapassagem nos troços providos de painéis que indiquem uma curva, uma rampa íngreme ou uma descida, uma ponte estreita, um túnel ou um cruzamento, bem como nas passagens de nível e nas zonas de obras.
+O artigo 101 interdita a ultrapassagem nos troços providos de sinais que indiquem uma curva, uma rampa íngreme ou uma descida, uma ponte estreita, um túnel ou um cruzamento, bem como nas passagens de nível e nas zonas de obras.
 
-Além disso, não se pode ultrapassar nos locais ou troços providos de um painel de escola ou de hospital, nos sítios providos de outros painéis ou marcas de interdição de ultrapassar, quando um veículo se aproxima em sentido inverso, nem quando dois veículos ou mais circulam um atrás do outro à frente.
+Além disso, não se pode ultrapassar nos locais ou troços providos de um sinal de escola ou de hospital, nos sítios providos de outros sinais ou marcas de interdição de ultrapassar, quando um veículo se aproxima em sentido inverso, nem quando dois veículos ou mais circulam um atrás do outro à frente.
 
 Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de trás deve primeiro buzinar duas vezes brevemente ou fazer um sinal de luzes. A buzina e os faróis não devem ser utilizados de forma repetida para forçar o veículo da frente a ceder a via.
 
@@ -49,7 +49,7 @@ O resultado da perícia deste caso não significa que a omissão de um só sinal
 
 ## Pontos a verificar para apreciar a responsabilidade do acidente
 
-Antes de ultrapassar, deve primeiro verificar-se se o local ou a situação do tráfego entra na interdição de ultrapassar. Se o procedimento da mesma via se aplicar, deve dar-se o sinal de buzina ou de faróis prescrito, sem forçar o veículo da frente a ceder, aguarde um sinal claro de cedência de passagem e conclua a ultrapassagem com um afastamento suficiente e uma distância de regresso segura.
+Antes de ultrapassar, deve primeiro verificar-se se o local ou a situação do tráfego entra na interdição de ultrapassar. Se o procedimento da mesma via se aplicar, deve dar-se o sinal de buzina ou de faróis prescrito, sem forçar o veículo da frente a ceder, deve aguardar-se um sinal claro de cedência de passagem e concluir-se a ultrapassagem com um afastamento suficiente e uma distância de regresso segura.
 
 O respeito do artigo 101 é importante, mas não assegura, por si só, nem que o acidente seja evitado nem um resultado determinado da perícia ou do processo. Os condutores devem reservar uma margem de segurança suplementar e adaptar-se à situação à frente.
 

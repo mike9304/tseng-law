@@ -27,9 +27,9 @@ As perguntas e respostas seguintes visam ajudar as pessoas que ponderam constitu
 
 Quando um estrangeiro constitui uma sociedade em Taiwan, deve apresentar um plano de investimento (投資計畫書) ao Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司) para exame.
 
-O Departamento de Revisão dos Investimentos deve verificar se o capital (資本額) em causa é realmente utilizado para fins de investimento
+O Departamento de Revisão dos Investimentos deve verificar se o capital (資本額) em causa é realmente utilizado para fins de investimento.
 
-e se as partes estrangeiras não introduzem fundos sob outro pretexto.
+Deve também verificar-se se as partes estrangeiras não introduzem fundos sob outro pretexto.
 
 Na redação do plano de investimento, não é necessário indicar o endereço exato da sociedade; a indicação da região basta (exemplo: cidade de Taipé). ​
 
@@ -75,7 +75,7 @@ mas a administração da imigração (移民署) está muito frequentada; convé
 
 A comissão de exame do Ministério da Economia examina de facto os antecedentes do investidor,
 
-mas o exame não se limita a um único critério formal: cada pedido é apreciado a partir dos documentos apresentados.
+mas o exame não é excessivamente estrito.
 
 Podem mencionar-se experiências profissionais variadas, incluindo o trabalho a tempo parcial,
 
@@ -87,9 +87,9 @@ Sobre este ponto, convém tratar o assunto em pormenor com uma advogada ou um ad
 
 **4. Que pontos devem observar-se quando o endereço de inscrição da sociedade (por exemplo um local de restauração) é tomado de arrendamento?**
 
-A constituição da sociedade dura cerca de **3 meses**, a obtenção da autorização de trabalho (工作許可) e do cartão de residência cerca de **1 mês**,
+A constituição da sociedade dura cerca de **3 meses**, e a obtenção da autorização de trabalho (工作許可) e do cartão de residência cerca de **1 mês** a mais.
 
-também se deve fixar o início do contrato o mais tarde possível.
+Por isso, também se deve fixar o início do contrato o mais tarde possível.
 
 Além disso, nos contratos de arrendamento de locais comerciais em Taiwan, o senhorio concede frequentemente ao arrendatário um «**período de obras e de instalação**» (裝潢期間).
 

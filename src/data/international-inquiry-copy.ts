@@ -712,7 +712,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'A consulta realiza-se apenas em quatro línguas: inglês, chinês (中文), japonês e coreano.',
     methodConfirmationNotice:
-      'Se não puder usar nenhuma dessas quatro línguas, escolha «É preciso confirmar a forma de comunicar». Responderemos para examinar uma via possível de comunicação quando existir uma forma possível; não se assegura o serviço noutra língua e não se promete um prazo de resposta.',
+      'Se não puder usar nenhuma dessas quatro línguas, escolha «É preciso confirmar a forma de comunicar». Responderemos para verificar se existe uma forma possível de comunicação; não se assegura o serviço noutra língua e não se promete um prazo de resposta.',
     preparationNotice:
       'Pode escrever o resumo do seu assunto na sua própria língua. O texto original é guardado tal como o escreve e não é traduzido de forma automática.',
     heading: 'Enviar um pedido de consulta',

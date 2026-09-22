@@ -29,7 +29,7 @@ Existem, contudo, **casos excecionais**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Nas situações particulares seguintes, mesmo se o trabalhador se demitir por sua própria iniciativa, o empregador deve pagar-lhe a indemnização por despedimento (artigos 14 da lei sobre as normas do trabalho, que manda aplicar, por remissão, o artigo 17; 勞動基準法第14條):
+Nas situações particulares seguintes, mesmo se o trabalhador se demitir por sua própria iniciativa, o empregador deve pagar-lhe a indemnização por despedimento (artigo 14 da lei sobre as normas do trabalho, que manda aplicar, por remissão, o artigo 17; 勞動基準法第14條):
 
 1. Quando o empregador, na celebração do contrato de trabalho (勞動契約), faz uma declaração de vontade mentirosa (虛偽意思表示) de modo que o trabalhador se engana e existe um risco de sofrer um prejuízo
 
@@ -73,11 +73,11 @@ O trabalhador deve portanto dominar bem o prazo.
 
 Por outras palavras,
 
-o direito de Taiwan, quer a culpa esteja do lado da empresa
+o direito de Taiwan distingue o efeito segundo quem tem a culpa.
 
-quer do lado do trabalhador,
+Se a tiver o empregador, o trabalhador pode exigir a indemnização por despedimento.
 
-reconhece a cada uma das partes o direito de não pagar a indemnização por despedimento ou de a exigir.
+Se a tiver o trabalhador, o empregador pode não a pagar.
 
 Por vezes, quando há culpa de parte a parte na relação de trabalho,
 

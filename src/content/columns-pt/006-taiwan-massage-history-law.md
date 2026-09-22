@@ -55,7 +55,7 @@ Esta lei manteve-se até 2003; na época, o Sr. Lin, que geria um salão de cabe
 
 empregou trabalhadores sem deficiência visual para serviços de lavagem de cabelo e de massagem, e a polícia constatou-o.
 
-Segundo o direito de então, o Sr. Lin e esses trabalhadores viram infligir-se respetivamente uma coima administrativa (罰鍰) de TWD 40.000, TWD 10.000 e TWD 20.000 em novo dólar de Taiwan (新臺幣).
+Segundo o direito de então, o Sr. Lin e esses trabalhadores viram infligir-se respetivamente uma coima administrativa (罰鍰) de TWD 40.000, TWD 10.000 e TWD 20.000 em novos dólares de Taiwan (新臺幣).
 
 O Sr. Lin considerou esta sanção muito injusta e pediu uma interpretação constitucional.
 

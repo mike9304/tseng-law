@@ -371,7 +371,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Advogada diretora em Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advogado em Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Assistente jurídico (Paralegal)',
       'son-jungmin': 'Direção de operações da Coreia (Korea Operations Manager)',
       'huang-shengping': 'Contabilista sócio (Partner CPA)',
     },
@@ -2361,8 +2361,8 @@ export const guidanceTeamBios: Record<
         'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhão de TWD.',
       ],
       education: [
-        'Mestrado (M.S.), Instituto de Finanças, National Taiwan University (Institute of Finance, National Taiwan University)',
-        'Licenciatura (B.A.) com formação em Direito e em Finanças, National Chengchi University',
+        'Mestrado (M.S.), Institute of Finance, National Taiwan University',
+        'Licenciatura (B.A.) em dupla formação de Direito e Finanças, National Chengchi University',
         'Aluna de intercâmbio na Kobe University e na Waseda University',
       ],
       experience: [
@@ -2384,13 +2384,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal sénior, com anos de experiência em vários escritórios, a cargo do apoio processual, do direito das sociedades e do investimento estrangeiro.',
+        'Assistente jurídico sénior (Paralegal), com anos de experiência em vários escritórios, a cargo do apoio processual, do direito das sociedades e do investimento estrangeiro.',
         'Apoia litígios, constituição de sociedades, trâmites de aprovação de investimento estrangeiro, pedidos de licença e o intercâmbio entre a Coreia e Taiwan.',
       ],
       education: ['Licenciatura em Direito (LL.B.), Tunghai University'],
       experience: [
-        'Paralegal sénior, Boyin Law Firm',
-        'Paralegal sénior, Muyang International Law Firm',
+        'Assistente jurídico sénior (Paralegal), Boyin Law Firm',
+        'Assistente jurídico sénior (Paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

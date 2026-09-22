@@ -1601,7 +1601,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investimento e constituição de sociedades em Taiwan',
           paragraphs: [
-            'Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, banca, verificação do local de atividade e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes da constituição e do funcionamento em Taiwan.',
+            'Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, trâmites bancários, verificação do local de atividade e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes da constituição e do funcionamento em Taiwan.',
             'A ordem e a duração do processo variam segundo a forma societária, o investidor, o setor, o banco e os documentos disponíveis. Constituir uma sociedade não produz, por si só, um título de residência (居留) nem uma autorização de trabalho (工作許可): são trâmites distintos, apreciados segundo a situação de cada pessoa.',
           ],
         },
@@ -1615,14 +1615,14 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Casamento, família e sucessões',
           paragraphs: [
-            'Tratamos divórcio (離婚), partilha de bens, o exercício das responsabilidades parentais relativamente aos filhos menores (未成年子女權利義務之行使或負擔), regime de visitas (會面交往) e sucessões (繼承), também quando as partes ou os bens estão em países distintos. Os assuntos de família transfronteiriços exigem muitas vezes um exame adicional de documentos do registo de agregados (戶籍), da forma dos documentos e do seu valor probatório em Taiwan.',
+            'Tratamos divórcio (離婚), partilha de bens, o exercício das responsabilidades parentais relativamente aos filhos menores (未成年子女權利義務之行使或負擔), regime de visitas (會面交往) e sucessões (繼承), também quando as partes ou os bens estão em países distintos. Os assuntos de família transfronteiriços exigem muitas vezes um exame adicional de documentos do registo domiciliário (戶籍), da forma dos documentos e do seu valor probatório em Taiwan.',
             'Como os assuntos de família costumam ir ligados a prazos e a vários trâmites em paralelo, o resumo inicial deve indicar a relação entre as partes, o local de residência atual e os procedimentos já iniciados.',
           ],
         },
         {
           heading: 'Conflitos laborais',
           paragraphs: [
-            'Este grupo cobre a cessação do contrato de trabalho, a indemnização por despedimento segundo o direito de Taiwan (資遣費; não se confunde com a indemnização por despedimento nem com as regras de proteção no despedimento de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.',
+            'Este grupo cobre a cessação do contrato de trabalho, a indemnização por cessação segundo o direito de Taiwan (資遣費; não equivale à indemnização por despedimento nem às regras de proteção no despedimento de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.',
             'O contrato de trabalho, o regulamento interno (工作規則), os recibos de vencimento e a troca escrita entre as partes são, em regra, os documentos decisivos. Se ainda os conserva, indique-o no resumo.',
           ],
         },
@@ -1748,7 +1748,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Se não puder usar nenhuma das quatro línguas de consulta',
           paragraphs: [
-            'No formulário de contacto pode escolher «É preciso confirmar a forma de comunicar». Responderemos para examinar uma via possível de comunicação quando existir uma forma possível; não se assegura o serviço noutra língua e não se promete um prazo de resposta.',
+            'No formulário de contacto pode escolher «É preciso confirmar a forma de comunicar». Responderemos para verificar se existe uma forma possível de comunicação; não se assegura o serviço noutra língua e não se promete um prazo de resposta.',
             'Isto é apenas um passo de verificação, não é uma promessa. Não prometemos serviço de interpretação, não prometemos serviço em português nem noutra língua fora das quatro indicadas, e não prometemos que possamos aceitar todos os assuntos.',
           ],
         },
@@ -1888,7 +1888,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lugar de armazenamento e prestadores',
           paragraphs: [
-            'Este sítio aloja-se na Vercel, e o seu envio guarda-se num armazenamento de objetos não público desse serviço. O correio envia-se através do serviço de correio que o escritório utiliza.',
+            'Este sítio aloja-se na Vercel, e o seu envio guarda-se num armazenamento não público desse serviço. O correio envia-se através do serviço de correio que o escritório utiliza.',
             'Os servidores de alguns prestadores podem estar fora de Taiwan, de modo que os seus dados podem armazenar-se e tratar-se aí. Cumprida a finalidade do armazenamento, os dados suprimem-se sem demora; os dados que devam conservar-se segundo as normas aplicáveis conservam-se durante esse prazo. Os pedidos relativos a dados pessoais recebem-se em wei@hoveringlaw.com.tw.',
           ],
         },

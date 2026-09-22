@@ -2342,10 +2342,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'Įveskite galiojantį el. pašto adresą.',
     tooLongMessage: 'Tekstas per ilgas. Sutrumpinkite jį ir siųskite iš naujo.',
     sourceLanguageNotice:
-      'Šis straipsnis paskelbtas tik kalba {language}; nuoroda atveria originalų puslapį.',
+      'Šis straipsnis paskelbtas tik {language} kalba; nuoroda atveria originalų puslapį.',
     unavailableTranslationNotice:
       'Ši dalis šio puslapio kalba dar nepateikiama. Nuoroda originalo kalba atveria originalų tekstą.',
-    unavailableLanguageNotice: 'Šis puslapis kalba {language} nesiūlomas.',
+    unavailableLanguageNotice: 'Šis puslapis {language} kalba nėra siūlomas.',
     languageOptions: {
       en: 'Anglų (English)',
       'zh-hant': 'Kinų (中文)',

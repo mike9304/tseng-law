@@ -56,13 +56,13 @@ Fizinio asmens vykdoma mažųjų krovininių automobilių (小貨車) vežimo ve
 
 Naujai įsteigtam automobilių vežimo veiklos vykdytojui išduotų komercinių transporto priemonių numerių (車輛牌照) 1 metus nuo išdavimo dienos negalima panaikinti grąžinant (繳銷) ar perleisti keičiant registruotą savininką (過戶轉讓).
 
-Šis apribojimas taikomas komercinių numerių panaikinimui juos grąžinant ir perleidimui keičiant registruotą savininką. Kitą tvarkymą, įskaitant nurašymą ir pakeitimą, reikia atskirai tikrinti pagal kelių kompetentingos institucijos galiojančias normas.
+Šis apribojimas taikomas komercinių numerių panaikinimui juos grąžinant ir perleidimui keičiant registruotą savininką. Kitą tvarkymą, įskaitant utilizavimą ir pakeitimą kita transporto priemone, reikia atskirai tikrinti pagal kelių kompetentingos institucijos galiojančias normas.
 
 ### Užsienio investicija ir šakos patvirtinimas
 
 Pagal Kelių įstatymo 35 straipsnį užsienietis arba užsienio juridinis asmuo, ketinantis Taivane investuoti ir vykdyti automobilių krovinių vežimo veiklą, pirmiausia turi gauti Transporto ministerijos, to paties įstatymo nustatyto centrinio kompetentingo organo, patvirtinimą. Negalima apsiriboti bendru užsienio investicijos patvirtinimu; į verslo planą atskirai reikia įtraukti Transporto ministerijos šakos patvirtinimą dėl automobilių krovinių vežimo veiklos.
 
-Dabartinė bendros užsienio investicijos kompetentinga institucija yra Ekonomikos ministerijos Investicijų peržiūros departamentas (經濟部投資審議司). Tačiau ne kiekviena užsienio investicija eina tuo pačiu langu ir ta pačia eiga. Investicijoms į biržinius ar nebiržinius vertybinius popierius, užsienio bendrovės filialui, klausimams, kuriuos tvarko mokslo parkų ir pramonės zonų institucijos, ir investicijoms iš žemyninės Kinijos gali būti taikomi kiti langai ar atskiras režimas. Investuojant į automobilių krovinių vežimo veiklą, be taikytino investicijos kelio patvirtinimo, reikia turėti ir Kelių įstatymo 35 straipsnio šakos patvirtinimą.
+Dabartinė bendros užsienio investicijos kompetentinga institucija yra Ekonomikos ministerijos Investicijų peržiūros departamentas (經濟部投資審議司). Tačiau ne kiekviena užsienio investicija eina per tą pačią instituciją ir ta pačia eiga. Investicijoms į biržinius ar nebiržinius vertybinius popierius, užsienio bendrovės filialui, klausimams, kuriuos tvarko mokslo parkų ir pramonės zonų institucijos, ir investicijoms iš žemyninės Kinijos gali būti taikomos kitos institucijos ar atskiras teisinis režimas. Investuojant į automobilių krovinių vežimo veiklą, be taikytino investicijos kelio patvirtinimo, reikia turėti ir Kelių įstatymo 35 straipsnio šakos patvirtinimą.
 
 ### Naujo steigimo procedūros eilės tvarka
 

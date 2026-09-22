@@ -42,7 +42,7 @@ Sutartyje tikslinga konkrečiai nustatyti intelektinės nuosavybės, pavyzdžiui
 
 Taivano dukterinė bendrovė ir užsienio bendrovės filialas nėra ta pati organizacija. Dukterinė bendrovė yra savarankiškas juridinis asmuo, įsteigtas pagal Taivano teisę, o filialas registruojamas kaip užsienio bendrovės pagrindinės buveinės (本公司) dalis. Skiriasi juridinio asmens statusas, pagrindinės buveinės atsakomybė, apskaitos ir mokestinis vertinimas, pelno pervedimas, atstovavimo teisė ir vidaus kontrolės būdas, todėl organizacijos formos negalima rinktis vien pagal pardavimo kontrolę.
 
-Jei reikalinga užsienio investicijos eiga, reikia patikrinti **Ekonomikos ministerijos Investicijų peržiūros departamento (經濟部投資審議司)** kaip šiuo metu kompetentingos institucijos gaires. Investicijos leidimui, lėšų pervedimui, bendrovės ar filialo registracijai, banko sąskaitos atidarymui, mokestinei registracijai (稅籍登記) ir importuotojo kvalifikacijai gauti reikalingas laikotarpis skiriasi pagal investuotoją, šaką, organizacijos formą, pateiktus dokumentus ir tai, ar jie taisomi ar papildomi. Todėl vietoj įvedimo į rinką datos nustatymo darant prielaidą apie tam tikrą fiksuotą terminą pirmiausia reikia patikrinti, ar kiekvienas veiksmas taikomas, ir naujausias priėmimo sąlygas.
+Jei reikalinga užsienio investicijos eiga, reikia patikrinti **Ekonomikos ministerijos Investicijų peržiūros departamento (經濟部投資審議司)** kaip šiuo metu kompetentingos institucijos gaires. Investicijos leidimui, lėšų pervedimui, bendrovės ar filialo registracijai, banko sąskaitos atidarymui, mokestinei registracijai (稅籍登記) ir importuotojo kvalifikacijai gauti reikalingas laikotarpis skiriasi pagal investuotoją, šaką, organizacijos formą, pateiktus dokumentus ir tai, ar jie taisomi ar papildomi. Užuot įėjimo datą fiksavus pagal tariamai nustatytą terminą, pirmiausia reikia patikrinti, kurie veiksmai taikomi, ir naujausias pateikimo sąlygas.
 
 Kad ir kuri struktūra būtų pasirinkta, kosmetikos reguliavimo centrinis atsakomybės subjektas yra **kosmetikos gamintojas arba importuotojas**. Gaminio dokumentų sutvarkymą ar saugos vertinimą (安全性評估) galima pavesti išorės specialistui, tačiau vien pavedimas neperkelia gamintojo arba importuotojo teisinės atsakomybės. Sutartinį darbų pasidalijimą atskirti nuo įstatyminio atsakomybės subjekto yra įėjimo struktūros peržiūros išeities taškas.
 
@@ -56,7 +56,7 @@ Kosmetikos produkto registracija atliekama TFDA kosmetikos produktų registracij
 
 Produkto registracijos galiojimo trukmė yra 3 metai. Jei tiekimą ketinama tęsti, pratęsimo (展延) prašymą reikia pateikti per 3 mėnesius iki galiojimo pabaigos. Jei keičiasi registruoti duomenys, pavyzdžiui, gaminio pavadinimas, paskirtis, preparato forma (劑型), sudedamosios dalys ir gamybos vieta, taip pat reikia patikrinti, ar reikalinga pakeitimo turinį atitinkanti eiga.
 
-Produkto registracija yra nustatytų duomenų pranešimas platformoje. Registracijos baigtis nereiškia, kad PIF reikalingi visi dokumentai jau yra, ir nėra vertinimo, kad gaminio ženklinimas ar reklama atitinka teisę. Produkto registracijos kalendorių, PIF tvarkymą ir ženklinimo bei reklamos peržiūrą reikia vykdyti kaip atskirus atitikties darbus.
+Produkto registracija yra nustatytų duomenų pranešimas platformoje. Tai, kad registracija baigta, nereiškia, jog jau yra visi PIF reikalingi dokumentai, ir nėra vertinimo, kad gaminio ženklinimas ar reklama atitinka teisę. Produkto registracijos kalendorių, PIF tvarkymą ir ženklinimo bei reklamos peržiūrą reikia vykdyti kaip atskirus atitikties darbus.
 
 ### PIF dokumentai ir laipsniškas taikymas
 
@@ -78,7 +78,7 @@ Net jei pirminis gamintojas saugo originalą arba naudojama saugi elektroninė a
 
 Kai kompetentinga institucija tikrina PIF, ji iš esmės praneša kosmetikos gamintojui arba importuotojui ne vėliau kaip prieš 7 dienas iki patikros dienos. Tačiau jei atvejis patenka į susijusiuose teisės aktuose nustatytą įstatyminę išimtį, patikrą galima atlikti be išankstinio pranešimo. Nepriklausomai nuo to, ar pranešimas buvo, nuolat reikia palaikyti būklę, leidžiančią surasti ir pateikti visus naujausius dokumentus.
 
-Tikrovės neatitinkančios informacijos pranešimas produkto registracijoje arba tokios informacijos įrašymas į PIF gali būti administracinės baudos (罰鍰) 10.000 TWD–1.000.000 TWD (新臺幣) objektas. Jei PIF dokumentai priešingai yra neišsamūs, kompetentinga institucija paprastai nurodo ištaisyti per nustatytą terminą (限期改正), o administracinė bauda tampa klausimu tik tada, kai per tą terminą neištaisoma. Tikrovės neatitinkančios informacijos o ištaisomo dokumentų trūkumo negalima laikyti ta pačia pažeidimo pasekme.
+Tikrovės neatitinkančios informacijos pranešimas produkto registracijoje arba tokios informacijos įrašymas į PIF gali būti administracinės baudos (罰鍰) 10.000 TWD–1.000.000 TWD (新臺幣) objektas. Jei PIF dokumentai priešingai yra neišsamūs, kompetentinga institucija paprastai nurodo ištaisyti per nustatytą terminą (限期改正), o administracinė bauda tampa klausimu tik tada, kai per tą terminą neištaisoma. Tikrovės neatitinkančios informacijos ir ištaisomo dokumentų trūkumo negalima laikyti ta pačia pažeidimo pasekme.
 
 Išėmimas iš rinkos ar sunaikinimas (銷毀) nėra priemonė, kuri automatiškai sektų kiekvieną PIF dokumentų neišsamumą. Gaminio saugą, pažeidimo turinį, ištaisymo būklę ir kiekvienai priemonei taikytinas įstatymines sąlygas reikia vertinti atskirai. Priemones, kai saugos problema patvirtinta, ir dokumentų papildymo reikalavimą reikia nagrinėti skyrium, o reagavimą tvarkyti pagal kompetentingos institucijos pranešimą ir taikytą nuostatą.
 
@@ -88,7 +88,7 @@ Reklama vertinama ne tik pagal sakinį, bet pagal visą raišką, įskaitant gam
 
 ### Vertinama pagal visą raišką, o ne pagal kiekvieną žodį
 
-Ar ženklinimas, populiarinimas (宣傳) ar reklama yra tikrovės neatitinkantys ar perdėti, arba ar teigiamas gydomasis poveikis (醫療效能), nesprendžiama vien pagal vieną tam tikrą žodį. Kartu vertinamas prekės pavadinimas, sakinys, vaizdas, simbolis, garsas, prieš tai ir po to einantis kontekstas ir bendras įspūdis, kurį gauna vartotojas. Centrinės reklamos sukeltą įspūdį automatiškai neišsklaido vien mažu šriftu parašytas apribojimas, todėl reikia peržiūrėti ir atskiras formuluotes, ir galutinį kūrinį.
+Ar ženklinimas, populiarinimas (宣傳) ar reklama yra tikrovės neatitinkantys ar perdėti, arba ar teigiamas gydomasis poveikis (醫療效能), nesprendžiama vien pagal vieną tam tikrą žodį. Kartu vertinamas prekės pavadinimas, sakinys, vaizdas, simbolis, garsas, prieš tai ir po to einantis kontekstas ir bendras įspūdis, kurį gauna vartotojas. Centrinės reklamos sukeltą įspūdį automatiškai neišsklaido vien mažu šriftu parašytas apribojimas, todėl reikia peržiūrėti ir atskiras formuluotes, ir galutinę reklamą, kokia ji parengta.
 
 Pavyzdžiui, teiginys, kad kosmetika gydo spuogus, turi priešuždegiminį poveikį arba baktericidinį veikimą, gali būti gydomojo poveikio teiginys. Kartu reikia patikrinti ir ligos pavadinimo sujungimą su gaminiu, vaizdus prieš naudojimą ir po jo, medicinos darbuotoją primenantį pateikimą ir kontekstą, kuris sudedamosios dalies aiškinimą sieja su gaminio gydomuoju poveikiu.
 

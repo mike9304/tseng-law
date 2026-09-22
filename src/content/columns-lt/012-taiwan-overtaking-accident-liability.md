@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Vaizdas, paaiškinantis atsakomybės vertinimą po lenkimo eismo įvykio Taivane ir saugią lenkimo eigą](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Kai priekyje važiuojanti transporto priemonė juda lėtai, lenkimas (超車) gali atrodyti kaip įprastas pasirinkimas, tačiau tai yra vairavimo veiksmas su nemaža rizika. Prieš pradėdamas lenkti vairuotojas kartu turi įvertinti kelio ruožą, eismo padėtį abiem kryptimis, priekyje esančių transporto priemonių judėjimą ir tai, ar yra erdvės saugiai sugrįžti į pradinę eismo juostą.
+Kai priekyje važiuojanti transporto priemonė juda lėtai, lenkimas (超車) gali atrodyti įprastas, tačiau tai yra vairavimo veiksmas su nemaža rizika. Prieš pradėdamas lenkti vairuotojas kartu turi įvertinti kelio ruožą, eismo padėtį abiem kryptimis, priekyje esančių transporto priemonių judėjimą ir tai, ar yra erdvės saugiai sugrįžti į pradinę eismo juostą.
 
 ## Lenkimo sąlygos, kurias nustato Kelių eismo saugumo taisyklių (道路交通安全規則) 101 straipsnis
 
@@ -37,19 +37,19 @@ Anonimizuotoje byloje, kurią nagrinėjo ši kontora, motociklininkas A važiavo
 
 ![Eismo įvykio schema, rodanti motociklo ir dviejų priekyje važiavusių automobilių lenkimo kelią kalnų kelyje](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A bandė aplenkti abu automobilius, įvažiavo į priešpriešinio eismo juostą ir padidino greitį. 2-oji transporto priemonė taip pat ruošėsi lenkti 1-ąją: praėjus mažiau nei 1 sekundei po posūkio signalo įjungimo įvažiavo į priešpriešinio eismo juostą. Motociklas neturėjo pakankamos atsargos stabdyti ir susidūrė su 2-ąja transporto priemone.
+A bandė aplenkti abu automobilius, įvažiavo į priešpriešinio eismo juostą ir padidino greitį. 2-oji transporto priemonė taip pat ruošėsi lenkti 1-ąją: praėjus mažiau nei 1 sekundei po posūkio signalo įjungimo įvažiavo į priešpriešinio eismo juostą. Motociklas turėjo per mažai laiko stabdyti ir susidūrė su 2-ąja transporto priemone.
 
 B patyrė sunkų galvos sužalojimą ir mirė vietoje; A prarado sąmonę ir buvo nuvežtas į ligoninę.
 
 A ir B šeimos iš pradžių laikė staigų 2-osios transporto priemonės juostos keitimą pagrindine susidūrimo priežastimi. Byla perėjo į teismo procesą; jo metu buvo parengtos kelios eismo įvykio ekspertizės (鑑定).
 
-Pagal ekspertizės rezultatą pagrindinė atsakomybė už šį susidūrimą teko A. Ši išvada apsiribojo šios bylos faktinėmis aplinkybėmis. Ekspertizė kartu įvertino tai, kad A ketino lenkti dvi priekyje iš eilės važiavusias transporto priemones, kad įvažiavo į priešpriešinio eismo juostą, kad važiavo greičiu, kuris beveik nepaliko atsargos stabdyti, kad trūko nustatytų garso ir žibintų signalų, taip pat 2-osios transporto priemonės juostos keitimo judesį, kelio ir juostų sandarą bei kitus užtikrintus įrodymus.
+Pagal ekspertizės rezultatą pagrindinė atsakomybė už šį susidūrimą teko A. Ši išvada apsiribojo šios bylos faktinėmis aplinkybėmis. Ekspertizė kartu įvertino tai, kad A ketino lenkti dvi priekyje iš eilės važiavusias transporto priemones, kad įvažiavo į priešpriešinio eismo juostą, kad važiavo greičiu, kuris beveik nepaliko laiko stabdyti, kad trūko nustatytų garso ir žibintų signalų, taip pat 2-osios transporto priemonės juostos keitimo judesį, kelio ir juostų sandarą bei kitus užtikrintus įrodymus.
 
 Tai, kad atskirose bylose tokie ekspertizės rezultatai pasitaiko, nereiškia, kad vieno nustatyto signalo praleidimas visada nustato atsakomybę. Kaltė (過失) lenkimo eismo įvykyje priklauso nuo įvykio vietos, juostų sandaros, greičio, transporto priemonių judėjimo, signalų, laiko intervalų, matomumo ir kitų įrodymų.
 
 ## Ką patikrinti vertinant atsakomybę už eismo įvykį
 
-Prieš lenkiant pirmiausia reikia patikrinti, ar vieta ar eismo padėtis patenka į lenkimo draudimą. Jei taikoma tos pačios juostos eiga, reikia duoti nustatytą garso ar žibintų signalą neverčiant priekyje esančios transporto priemonės užleisti kelio, palaukti aiškaus parodymo, kad kelias užleidžiamas ir lenkimą baigti su pakankamu tarpu ir saugiu sugrįžimo atstumu.
+Prieš lenkiant pirmiausia reikia patikrinti, ar vieta ar eismo padėtis patenka į lenkimo draudimą. Jei taikoma tos pačios juostos eiga, reikia duoti nustatytą garso ar žibintų signalą neverčiant priekyje esančios transporto priemonės užleisti kelio, palaukti aiškaus parodymo, kad kelias užleidžiamas, ir baigti lenkimą paliekant pakankamą tarpą bei saugų grįžimo atstumą.
 
 101 straipsnio laikymasis yra svarbus, tačiau pats savaime neužtikrina nei eismo įvykio išvengimo, nei vėlesnės ekspertizės ar proceso baigties. Vairuotojai turi palikti papildomą saugos atsargą ir prisitaikyti prie padėties priekyje.
 

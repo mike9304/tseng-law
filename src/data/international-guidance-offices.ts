@@ -1631,11 +1631,11 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
   },
   lt: {
     officeLabel: 'Biurai',
-    officeQuickLinksLabel: 'Sparčiosios biurų nuorodos',
+    officeQuickLinksLabel: 'Greitosios nuorodos į biurus',
     followLabel: 'Sekite mus',
     blogLabel: 'Tinklaraštis',
     websiteLabel: 'Oficiali svetainė',
-    sitemapLabel: 'Svetainės medis',
+    sitemapLabel: 'Svetainės žemėlapis',
     copyEmailLabel: 'Kopijuoti el. pašto adresą',
     emailCopiedMessage: 'El. pašto adresas nukopijuotas.',
     officialConsultationEmailLabel: 'Oficialus el. paštas užklausoms',

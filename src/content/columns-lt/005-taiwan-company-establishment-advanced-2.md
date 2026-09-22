@@ -31,7 +31,7 @@ Korėjos bankų pavyzdyje bankai paprastai reikalauja, kad investuotojas **pats*
 
 Tame Korėjos pavyzdyje pervedimas internetine bankininkyste arba per giminaitį negalimas.
 
-Be to, pagal Korėjos užsienio valiutos kontrolės teisės aktus asmuo, turintis Korėjos pilietybę, kuris steigia užsienio juridinį asmenį arba įgyja dalių, privalo pateikti „pranešimą apie tiesioginę užsienio investiciją“. Pranešimas turi būti įregistruotas kapitalo pervedimo į Taivano juridinį asmenį (台灣法人) metu; nepranešus gali kilti sankcijos už užsienio valiutos kontrolės taisyklių pažeidimą.
+Be to, pagal Korėjos užsienio valiutos kontrolės teisės aktus asmuo, turintis Korėjos pilietybę, kuris steigia užsienio juridinį asmenį arba įgyja dalių, privalo pateikti „pranešimą apie tiesioginę užsienio investiciją“. Pranešimas turi būti įregistruotas kapitalo pervedimo į Taivano juridinį asmenį (臺灣法人) metu; nepranešus gali kilti sankcijos už užsienio valiutos kontrolės taisyklių pažeidimą.
 
 Prieš pervedant kapitalą (資本金匯款) pasikonsultuokite su savo banku investuotojo valstybėje; toliau pateiktas Korėjos bankų pavyzdys.
 
@@ -71,7 +71,7 @@ Kai kurie bankai gali kelti papildomų reikalavimų, pavyzdžiui, kad sąskaita 
 
 A. Pirmasis darbuotojas: prašymas teikiamas kaip vadovo darbas paprastoje užjūrio kinų arba užsieniečių investicijos įmonėje (一般僑外投資事業主管工作). Toliau B punkte nurodytas „specializuoto arba techninio darbo“ kriterijus netaikomas, tačiau taikomos adresato sąlygos, įskaitant vadovo (經理人) sąlygą bendrovėje, kurios užjūrio kinų arba užsieniečių įnašas viršija 1/3, ir darbdavio kapitalo bei apyvartos rezultatų sąlygos (peržiūros standartų 38 ir 39 straipsniai).
 
-B. Nuo antrojo darbuotojo taikomi apribojimai: jei įdarbinamų asmenų skaičius viršija 1 asmenį, darbuotojo atitinkamas išsilavinimas ir patirtis, vidutinio darbo užmokesčio įdarbinant taisyklės ir bendrovės kapitalo bei apyvartos taisyklės tvarkomos pagal „specializuotą arba techninį darbą“ (專門性或技術性工作).
+B. Nuo antrojo darbuotojo taikomi apribojimai: jei įdarbinamų užsieniečių skaičius viršija 1, darbuotojo išsilavinimas ir patirtis, vidutinio darbo užmokesčio taisyklė bei bendrovės kapitalo ir apyvartos taisyklės tvarkomi pagal „specializuotą arba techninį darbą“ (專門性或技術性工作).
 
 Žr. Taivano Darbo ministerijos (勞動部) svetainę: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

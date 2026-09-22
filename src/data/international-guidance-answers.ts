@@ -1328,7 +1328,7 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm yra Taivano advokatų kontora, kurią 2016 m. įsteigė National Taiwan University (國立臺灣大學) absolventai, su biurais miestuose Taipėjus, Gaosiongas, Taidžongas ir Pingdongas. Nuo 2020 m. veikia ir apskaitos padalinys; Taidžongo biuras veda bylas, susijusias su Korėja ir Japonija. Kontora nežada rezultato. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+        'Hovering International Law Firm yra Taivano advokatų kontora, kurią 2016 m. įsteigė National Taiwan University (國立臺灣大學) absolventai, su biurais Taipėjuje, Gaosionge, Taidžonge ir Pingdonge. Nuo 2020 m. veikia ir apskaitos padalinys; Taidžongo biuras veda bylas, susijusias su Korėja ir Japonija. Kontora nežada rezultato. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
       sources: ['/lt/lawyers', '/lt/services'],
     },
     lawyers: {

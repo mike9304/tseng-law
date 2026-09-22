@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Pagrindinis vaizdas](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Pastaruoju metu daugelis asmenų įsteigė įmonę (公司) Taivane ir gavo darbo vizą bei užsieniečio leidimo gyventi pažymėjimą (外僑居留證),
+Pastaruoju metu daugelis asmenų Taivane įsteigė įmonę (公司) ir gavo darbo vizą bei užsieniečio leidimą gyventi (外僑居留證).
 
 Toliau pateikiame klausimus, kurie dažnai kyla steigiant įmonę.
 
@@ -51,9 +51,9 @@ investicijų planą ir įmonės registracijos adreso paiešką reikia vykdyti ka
 
 Pagal Užsieniečių investicijų įstatymo (外國人投資條例) 9 straipsnį patvirtintas įnašas turi būti įmokėtas visa suma kompetentingos institucijos nustatytu terminu (核定期限); terminą reikia patvirtinti kiekvieno reikalo patvirtinimo akte (praktikoje dažnai nustatomas apie 1 metus).
 
-Šiuo terminu, radus įmonės adresą ir sudarius nuomos sutartį,
+Per šį terminą spėsite rasti įmonės adresą ir sudaryti nuomos sutartį.
 
-lieka pakankamai laiko banke atidaryti parengiamąją sąskaitą ir pervesti kapitalą.
+Lieka pakankamai laiko banke atidaryti parengiamąją sąskaitą ir pervesti kapitalą.
 
 ​
 

@@ -37,7 +37,7 @@ Vis dėlto yra **išimtinių atvejų**.
 
 2. Kai darbdavys, darbdavio šeimos narys arba darbdavio atstovas (代理人) smurtauja arba padaro sunkų įžeidimą (重大侮辱) darbuotojui
 
-3. Kai sutartyje nustatytas darbas gali kenkti darbuotojo sveikatai, iš darbdavio buvo reikalauta padėtį pataisyti, tačiau poveikio nebuvo
+3. Kai sutartyje nustatytas darbas gali kenkti darbuotojo sveikatai, iš darbdavio buvo reikalauta padėtį pataisyti, tačiau darbdavys padėties nepataisė
 
 4. Kai darbdavys, jo atstovas arba kitas darbuotojas serga įstatyme nurodyta užkrečiamąja liga (法定傳染病), kyla rizika užkrėsti kartu dirbančius darbuotojus ir tai yra rimtas pavojus darbuotojo sveikatai
 
@@ -91,7 +91,7 @@ Todėl Taivano darbo ginčuose (勞資糾紛)
 
 „**laikas**“ yra labai svarbus.
 
-Daugeliu atvejų iš anksto pasirengusi šalis geriau apsaugo savo teises.
+Daugeliu atvejų iš anksto pasirengusi šalis yra geresnėje padėtyje ginti savo teises; pats pasirengimas rezultato nežada.
 
 ---
 

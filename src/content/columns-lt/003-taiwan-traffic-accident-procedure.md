@@ -63,7 +63,7 @@ Jei tai nusikaltimas, persekiojamas tik pagal skundą, pagal Baudžiamojo proces
 
 ### Oficialūs Q1–Q5 pagrindai
 
-- [Kelių eismo valdymo ir sankcijų reglamentas (道路交通管理處罰條例), 62 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Kelių eismo valdymo ir sankcijų įstatymas (道路交通管理處罰條例), 62 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Taivano Baudžiamasis kodeksas, 185-4 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Taivano Baudžiamasis kodeksas, 284 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Taivano Baudžiamasis kodeksas, 287 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)

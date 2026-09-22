@@ -79,8 +79,8 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kuo užsiimame',
           paragraphs: [
-            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus žingsniais, kuriuos Taivane reikia atlikti.',
-            'Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir momento. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.',
+            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus per žingsnius, kuriuos Taivane reikia atlikti.',
+            'Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir to, kada byla vertinama. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.',
           ],
         },
         {
@@ -132,7 +132,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Civiliniai ginčai ir žalos atlyginimas',
           paragraphs: [
             'Ši sritis apima ginčus iš sutarčių, žalos atlyginimą dėl neteisėtų veiksmų ir vartotojų ginčus. Darbas paprastai prasideda chronologija, turimų dokumentų ir įrodymų vertinimu, ir tik tada seka tolesni žingsniai.',
-            'Eigą lemia terminai, įskaitant senaties terminus, ir įrodymų visuma. Todėl žinomas datas nurodykite kuo anksčiau. Išsaugokite sutartis, pranešimus, mokėjimo dokumentus arba vietos būklės nuotraukas ir paminėkite juos pirmajame pranešime.',
+            'Eigą lemia terminai, įskaitant senaties terminus, ir įrodymų visuma. Todėl žinomas datas nurodykite kuo anksčiau. Išsaugokite sutartis, pranešimus, mokėjimo dokumentus arba nuotraukas iš įvykio vietos ir paminėkite juos pirmajame pranešime.',
           ],
         },
         {
@@ -159,7 +159,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Intelektinė nuosavybė',
           paragraphs: [
-            'Padedame registruoti prekių ženklus (商標) ir patentus (專利), autorių teisės ir ginčų dėl šių teisių Taivane klausimais.',
+            'Padedame registruoti prekių ženklus (商標) ir patentus (專利) bei spręsti autorių teisių ir ginčų dėl šių teisių Taivane klausimus.',
             'Šioje srityje lemia žingsnių eilė: apsaugos apimtis, paraiškos pateikimo momentas ir faktinis naudojimas daro įtaką pasirinkimui. Paraiškos pateikimas savaime nereiškia, kad jai bus pritarta.',
           ],
         },
@@ -176,9 +176,9 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTORA',
       title: 'Apie Hovering International Law Firm',
       description:
-        'Pagrindiniai duomenys apie šią Taivano advokatų kontorą, jos biurus ir darbą su užsienio šalimis.',
+        'Pagrindiniai duomenys apie šią Taivano advokatų kontorą, jos biurus ir tarptautinį darbą.',
       intro:
-        'Hovering International Law Firm yra advokatų kontora Taivane. Advokatės ir advokatai dirba nuo konsultacijų įmonėms iki teismo proceso. Ši dalis aprašo kontoros atsiradimą, buveines ir darbą su užsienio šalimis.',
+        'Hovering International Law Firm yra advokatų kontora Taivane. Advokatės ir advokatai dirba nuo konsultacijų įmonėms iki teismo proceso. Ši dalis aprašo kontoros atsiradimą, buveines ir tarptautinį darbą.',
       sections: [
         {
           heading: 'Įsteigimas ir struktūra',
@@ -189,7 +189,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Darbas su užsienio šalimis',
+          heading: 'Tarptautinis darbas',
           paragraphs: [
             'Tarpvalstybinis darbas apima įmonių steigimą, vizas, prekių ženklų ir patentų paraiškas, teisinės rizikos vertinimą ir mokesčių konsultacijas įmonėms. Taidžongo biuras ypač veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Advokatė Wei Tseng (曾雋崴) atstovauja klientams iš Korėjos, iš Japonijos ir kitiems tarptautiniams klientams nurodytose srityse.',
             'Ar galime bylą priimti, priklauso nuo turinio ir bendravimo kalbos. Jei Jūsų byla patenka į nurodytas sritis ir ją galima aptarti viena iš keturių konsultacijos kalbų, galite atsiųsti santrauką įvertinti.',
@@ -236,7 +236,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Konsultacija gali būti mokama',
           paragraphs: [
-            'Konsultacija su advokate arba advokatu gali būti mokama paslauga. Šis puslapis nesako, kad pirmoji konsultacija nemokama, ir jokios jo dalies negalima taip skaityti.',
+            'Konsultacija su advokate arba advokatu gali būti mokama paslauga. Šis puslapis nesako, kad pirmoji konsultacija nemokama, ir jokios šio puslapio dalies nereikėtų taip suprasti.',
             'Jei konsultacija mokama, dydis ir mokėjimo būdas pranešami prieš jai įvykstant.',
           ],
         },
@@ -278,7 +278,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ką turėtų apimti pirmasis pranešimas',
           paragraphs: [
-            'Nurodykite, kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Jei jau gavote teismo ar institucijos raštą, nurodykite datą rašte.',
+            'Nurodykite, kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Jei jau gavote teismo ar institucijos raštą, nurodykite datą, įrašytą rašte.',
             'Pradiniame etape dar nereikia siųsti paso numerio, dokumento numerio, sąskaitos duomenų, sveikatos dokumentacijos ar viso įrodymų rinkinio. Palaukite advokatės arba advokato nurodymų ir jautrius dokumentus tada siųskite saugiu keliu.',
           ],
         },
@@ -302,7 +302,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kaip naudotis šia dalimi',
           paragraphs: [
-            'Jei atsakymo savo padėčiai nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne išveskite juos iš šio puslapio.',
+            'Jei atsakymo savo padėčiai nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne spręskite apie juos vien iš šio puslapio.',
           ],
         },
       ],
@@ -345,7 +345,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ką daryti, jei mano byla labai skubi?',
           answer:
-            'Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis neturi skubos kanalo ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, lygiagrečiai turėtumėte ieškoti kitų kelių savo vietoje.',
+            'Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis neturi skubos kanalo ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, lygiagrečiai turėtumėte ieškoti kitų kelių ten, kur esate.',
         },
       ],
     },
@@ -355,7 +355,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Ką renka kontaktinė forma šioje lietuviškoje dalyje, kaip elgiamasi su originaliu tekstu ir kaip kreiptis dėl Jūsų duomenų.',
       intro:
-        'Ši dalis taikoma tik kontaktinei formai šiuose informaciniuose puslapiuose. Ji aprašo elgesį su duomenimis, o ne techninę garantiją.',
+        'Ši dalis taikoma tik kontaktinei formai šiuose informaciniuose puslapiuose. Ji aprašo duomenų tvarkymą, o ne techninę garantiją.',
       sections: [
         {
           heading: 'Kokie duomenys renkami',
@@ -404,7 +404,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Jūsų teisės ir kreipimosi kelias',
           paragraphs: [
-            'Galite prašyti prieigos prie savo duomenų, jų taisymo ar ištrynimo, arba atšaukti sutikimą, per el. pašto adresą, nurodytą kontaktų puslapyje. Jei yra įstatyminė ar procesinė saugojimo pareiga, paaiškinsime apribojimą.',
+            'Galite prašyti prieigos prie savo duomenų, jų taisymo ar ištrynimo arba atšaukti sutikimą el. pašto adresu, nurodytu kontaktų puslapyje. Jei yra įstatyminė ar procesinė saugojimo pareiga, paaiškinsime apribojimą.',
             'Šis puslapis nenumato fiksuoto saugojimo termino, nes faktinė trukmė priklauso nuo tolesnės bylos eigos ir susijusių pareigų. Jei pageidaujate ankstesnio ištrynimo, nurodykite tai kreipdamiesi.',
           ],
         },
@@ -429,14 +429,14 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Tik bendra informacija',
           paragraphs: [
             'Šių puslapių turinys parašytas kaip bendra informacija. Tai nėra teisinė konsultacija Jūsų byloje ir nepakeičia Jūsų dokumentų vertinimo.',
-            'Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir momento; dvi panašiai atrodančios padėtys gali baigtis skirtingai.',
+            'Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir to, kada byla vertinama; dvi panašiai atrodančios padėtys gali baigtis skirtingai.',
           ],
         },
         {
           heading: 'Teisinė sistema',
           paragraphs: [
             'Kontora veikia pagal Taivano teisę ir šis puslapis kalba tik apie darbą šioje sistemoje.',
-            'Turinys nėra konsultacija pagal kitos nei Taivano teisės sistemos teisę, įskaitant Jūsų gyvenamosios vietos teisę. Jei dalis Jūsų bylos liečia kitą teisės sistemą, su Jumis išsiaiškinsime, koks kvalifikuotas asmuo šiai daliai reikalingas.',
+            'Turinys nėra konsultacija pagal kitos valstybės teisę, ne Taivano, įskaitant Jūsų gyvenamosios vietos teisę. Jei dalis Jūsų bylos liečia kitą teisės sistemą, su Jumis išsiaiškinsime, koks kvalifikuotas asmuo šiai daliai reikalingas.',
           ],
         },
         {

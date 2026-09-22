@@ -1259,17 +1259,17 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     workingLanguagesLabel: 'Darbo kalbos',
     fullProfileLabel: 'Visas profilis (anglų kalba)',
     keyFactsHeading: 'Advokatė Wei Tseng — pagrindiniai duomenys',
-    qualificationLabel: 'Įgaliojimas ir kontora',
+    qualificationLabel: 'Kvalifikacija ir kontora',
     qualificationSentence:
       '{name} turi teisę verstis advokatės praktika Taivane ir yra vadovaujančioji advokatė kontoroje {firm}.',
     practiceLabel: 'Pagrindinės sritys',
     consultationLanguagesLabel: 'Konsultacijos kalbos',
     roles: {
-      'tseng-junwei': 'Vadovaujančioji advokatė Taivane (Managing Attorney)',
-      'chang-rongxuan': 'Advokatas Taivane (Taiwan Attorney)',
+      'tseng-junwei': 'Vadovaujančioji advokatė Taivane',
+      'chang-rongxuan': 'Advokatas Taivane',
       'chang-fangyu': 'Teisininko padėjėjas',
-      'son-jungmin': 'Korėjos operacijų vadovas (Korea Operations Manager)',
-      'huang-shengping': 'Partneris, atestuotas buhalteris (Partner CPA)',
+      'son-jungmin': 'Korėjos operacijų vadovas',
+      'huang-shengping': 'Partneris, atestuotas buhalteris',
     },
   },
   lv: {
@@ -4388,7 +4388,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinuoja konsultacijų terminus ir komunikaciją klientams iš Korėjos.',
-        'Palaiko dokumentų ir darbo eigų mainus tarp padalinių, remdamasis informatika.',
+        'Koordinuoja dokumentų ir darbo eigų mainus tarp padalinių, remdamasis informatikos išsilavinimu.',
       ],
       education: [
         'Bakalauras (B.S.) informatikoje, National Cheng Kung University',
@@ -4399,8 +4399,8 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Baigė bakalauro ir magistro apskaitos programas National Chengchi University ir dabar vadovauja apskaitos kontorai.',
-        'Palaiko integruotą teisinės, mokestinės ir finansinės rizikos analizę įmonių klientams.',
+        'Baigė bakalauro ir magistro apskaitos studijas National Chengchi University ir dabar vadovauja apskaitos kontorai.',
+        'Rengia integruotą teisinės, mokestinės ir finansinės rizikos analizę įmonių klientams.',
       ],
       education: [
         'Magistras (M.A.) apskaitoje, National Chengchi University',

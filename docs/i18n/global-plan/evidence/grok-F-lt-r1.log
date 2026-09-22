@@ -1,0 +1,81 @@
+# WO-F-lt — Lithuanian fix lane report (Grok 4.7, 2026-09-22, round r1)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-lt-r1
+No git add/commit/push. No test file needed updating (vitest 3202 passed; no pinned Lithuanian string was rewritten).
+TWD 1.57M left byte-identical. Frontmatter url values left untouched (Hangul slugs in 008 and 009 stay).
+
+## Rows applied
+
+lt-a 40/45, lt-b 33/34. Total applied 73 / 79.
+
+lt-a applied: 1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 44, 45.
+lt-b applied: 1–33.
+
+Checker constraints inside applied rows (wording fixed, digit kept):
+- a#5: "užsieniečių" and the rest of the sentence applied; "viršija 1" kept because the Korean source is "1명을 넘는".
+- a#18: "pagal paskutinių 1 metų duomenis" (001, FAQ + body) and "už kiekvienus ištisus 1 darbo stažo metus" (008, FAQ + blockquote). Dropping the digit would miss Korean "최근 1년" / "1년이 찰 때마다".
+- b#8: "ne daugiau kaip faktinės žalos dydis (1 kartas)". Korean is "최대 1배"; the figure stays.
+
+## Rows skipped
+
+- lt-a #3. Bio figure "TWD 1.57M" is pinned byte-identical. Not rewritten as "1,57 mln. TWD".
+- lt-a #7 (and the 009 url named in the same row). Frontmatter url Hangul is canonical metadata (R16 / ACCEPTED-ROUND). Not rendered.
+- lt-a #20. Q16–Q20 are body lines in the Korean and English sources as well. Turning them into ## headings fails the headings check. U+200B spacer lines stay so the block count matches. Periods in the 008 close were applied under a#22, inside the existing blocks.
+- lt-a #42 and lt-b #34. Space thousands ("500 000", "1 579 589") are not parsed for lt (R14). Dot thousands kept ("500.000 TWD", "1.579.589 TWD"). Decimal comma in "0,5 mėnesio" / "0,5 metro" left as it was.
+- lt-a #43. Adding "(2020 m.)" next to ROC year 109 would insert a new Gregorian number (R13 / ACCEPTED-ROUND). The lines already say "Kinijos Respublikos 109 metai" / "112 metai". 007 already carries the 民國 gloss.
+
+## Systemic patterns
+
+- kokybė standing for status, not quality. 2: 001 "tikrojo savininko kokybę" → "tai, ar jis yra tikrasis savininkas"; 004 "dukterinės bendrovės kokybė" → "vien tai, kad tai … dukterinė bendrovė". "kainos ir kokybės santykis" in 006 and product "kokybė" in 011 left (they mean quality).
+- A statute (條例) named as secondary rules. 3: 008 "Darbuotojų pensijų nuostatų" → "Darbuotojų pensijų įstatymo" (FAQ + blockquote); 003 "reglamentas" → "įstatymas" for 道路交通管理處罰條例. "Pramonės inovacijų įstatymas" in 004 was already an act. Contract "nuostata" and "sutarties nuostatos" left (they are clauses, not the statute).
+- Vesting called allocation. 6 in 014: "priskyrimo momentas", "kada suma jam priskiriama", "priskyrimas etapais", "priskyrimo sąlygos" ×2, "priskyrimo sąlygas" ×1 → teisių įgijimas / teisių įgijimo diena / sąlygos. "atsakomybės priskyrimas" and "pasibaigimo priskyrimas" left (attribution of cause, not vesting).
+- Bare momentas / savo vietoje / išveskite. 2 "momento" in the guidance disclaimer pair → "to, kada byla vertinama". 1 "savo vietoje", 1 "išveskite juos iš šio puslapio". Filing-moment "pateikimo momentas" left.
+- English role chrome in the lt roster (R12). 4 role lines: dropped "(Managing Attorney)", "(Taiwan Attorney)", "(Korea Operations Manager)", "(Partner CPA)". Bios already had Lithuanian for the legal-aid foundation and the ministry; the English glosses stay because GUIDANCE_BIO_PRESERVED_TERMS pins them. "TWD 1.57M" untouched.
+- "Darbas su užsienio šalimis" → "tarptautinis darbas". 3: about description, intro, and the section heading.
+- 代位繼承 as "atstovavimo tvarka" (wrong case, and not the term). 4: the genitive list in FAQ + body, plus "atstovaujamojo paveldėjimo buvimą" and "atstovaujamasis paveldėjimas".
+- "langas" for a competent office. 2 in 017: "kiti langai" → "kitos institucijos"; "tuo pačiu langu" → "per tą pačią instituciją".
+- "1 iš tėvų" → "vienas iš tėvų". 2 (016 FAQ question and the guardianship sentence). Korean there is "한쪽" / "한 명", so the digit was extra.
+- "atsargos stabdyti" → "per mažai laiko / nepaliko laiko stabdyti". 2 in 012.
+- "tiekėjų kainos" → "mokėjimus tiekėjams". 2 in 002.
+- 013 opening comma → period, and the capital-remittance block made a free-standing sentence. Not merged with the next block. 015 "Šalia rinkos padėties" → "Be rinkos sąlygų" inside its own line; the one-clause lines were not merged (they match the English block count).
+- 台灣 → 臺灣 in the 005 gloss (臺灣法人). 1.
+
+R2–R10 already largely in the Lithuanian pack: Korea only as a labelled example (001 and 004 already carry the country-specific treaty sentence), consultation lock stays negative, Wei Tseng is feminine (advokatė, Tvarkydama, pati), R9 emergency numbers already say "Taivane: 119 / 110 / 112", Investicijų peržiūros departamentas is one name in 001/011/013/017/018. No Czech leakage (R17). No OOO. No Hangul outside the two url values. Markers 0. Column 006 had no row and no status-kokybė hit, so it was not edited.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-lt --lang lt 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=66
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lt src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      26
+```
+
+The 26 is this lane's 23 edited content files plus three paths that were already dirty before the edit (WO-F-lt.txt, untracked lt-a.md, untracked lt-b.md). This log is written after that count.
+
+## Reviewer points not followed as worded
+
+- lt-a #3 is right that "M" and a dot are not Lithuanian for 1.57 million. Not applied: the bio figure "TWD 1.57M" is pinned byte-identical.
+- lt-a #42 and lt-b #34 are right about ordinary Lithuanian typography (space as the thousands separator, currency after the amount). Not applied: R14 says a space fails the checker for lt. Dot thousands kept.
+- lt-a #43 is right that ROC year 109 is 2020 and 112 is 2023. Not applied: adding the Gregorian year inserts digits the checker counts, and ACCEPTED-ROUND forbids it. The ROC label is already in the sentence.
+- lt-a #20 and the one-clause lines in 013 and 015 (lt-b #17) are right that the blog line breaks are hard to read. Not applied as new headings or merged paragraphs: the Korean source has the same blocks, and the checker compares heading levels and block counts. The comma that ended the 013 opening was changed to a period inside that block.
+- lt-b #8 is right that "1 kartas" is a stiff calque, but "iki faktinės žalos dydžio" alone would drop the source digit in "최대 1배". The multiplier stays in parentheses.
+- lt-a #18 is right that "paskutinius 1 metus" is glued, but "pagal paskutinius metus" alone would drop Korean "1년". The digit stays inside "paskutinių 1 metų duomenis" and "ištisus 1 darbo stažo metus".

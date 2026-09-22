@@ -19,7 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Pradedant maitinimo veiklą pirmasis klausimas — rasti veiklos adresą (營業地址).
 
-Šalia rinkos padėties
+Be rinkos sąlygų
 
 kitas svarbus dalykas yra
 
@@ -59,7 +59,7 @@ Tačiau registruojant bendrovę dažnai įrašomos kelios registruotos veiklos s
 
 Todėl praktikoje registruojant bendrovę nebūtina tikrinti visų veiklos sričių.
 
-Pagal „[Taipėjaus miesto veiklos vietų užklausos paslaugos veiklos nurodymus](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) ir galiojantį Taipėjaus miesto nurodymą,
+Pagal „[Taipėjaus miesto veiklos vietų pagalbinės užklausos paslaugos nurodymus](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) ir galiojantį Taipėjaus miesto nurodymą,
 
 nuo 2023 m. sausio 1 d. teikiant prašymą įregistruoti bendrovės ar komercinės veiklos steigimą, buveinės perkėlimą ar registruotų veiklos sričių papildymą (įskaitant bendrovės filialą (分公司) ir padalinį (分支機構)) išankstinės veiklos vietos patikros rezultatą **būtina** pridėti prie registracijos prašymo, nepriklausomai nuo veiklos srities.
 

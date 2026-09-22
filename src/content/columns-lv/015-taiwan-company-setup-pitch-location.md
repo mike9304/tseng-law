@@ -2,7 +2,7 @@
 title: "Sabiedrības dibināšana Taivānā — padziļināts izklāsts, 3. daļa: darbības vietas meklēšana"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "2 min"
 categories:
   - "Sabiedrību dibināšana Taivānā"
@@ -21,7 +21,7 @@ Sākot ēdināšanas darbību, pirmais jautājums ir atrast darbības adresi (�
 
 Līdzās tirgus situācijai ir vēl viens svarīgs jautājums.
 
-Šis jautājums ir šāds.
+Vēl viens svarīgs apsvērums ir zonējums.
 
 Jānoskaidro, vai šī adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
 
@@ -59,9 +59,9 @@ Tomēr, reģistrējot sabiedrību, bieži reģistrē vairākas nozares uzreiz un
 
 Tāpēc praksē, reģistrējot sabiedrību, nav jāpārbauda visas nozares.
 
-Saskaņā ar „[Taipejas pilsētas darbības vietu palīdzības pārbaudes pakalpojuma darbības norādījumu](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) un Taipejas pilsētas spēkā esošo norādi,
+Saskaņā ar „[Taipejas pilsētas darbības vietu palīdzības pārbaudes pakalpojuma darbības norādījumu](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“(臺北市營業場所協助查詢服務作業須知) un Taipejas pilsētas spēkā esošo norādi,
 
-no 2023. gada 1. janvāra, piesakot sabiedrības vai komercdarbības (ieskaitot filiāli (分公司) un palīgvienību (分支機構)) dibināšanas, atrašanās vietas pārcelšanas vai darbības nozaru papildināšanas reģistrāciju, darbības vietas iepriekšējās pārbaudes iznākums **jāpievieno** reģistrācijas pieteikumam, neatkarīgi no nozares.
+no 2023. gada 1. janvāra, piesakot sabiedrības vai komercdarbības (tostarp filiāli (分公司) un palīgvienību (分支機構)) dibināšanas, atrašanās vietas pārcelšanas vai darbības nozaru papildināšanas reģistrāciju, darbības vietas iepriekšējās pārbaudes iznākums **jāpievieno** reģistrācijas pieteikumam, neatkarīgi no nozares.
 
 Turpmākais saraksts „nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目) apzīmē nozares, kuras Tirdzniecības pārvalde reģistrācijas izskatīšanas gaitā pārbauda pēc amata papildus (隨案主動查詢), kad nozare figūrē pieteikumā, bet pievienotajā iznākumā tās trūkst; apstāklis, ka nozares šajā sarakstā nav, nenozīmē atbrīvojumu no pārbaudes.
 

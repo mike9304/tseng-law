@@ -2,7 +2,7 @@
 title: "Sabiedrības dibināšana Taivānā — padziļināts izklāsts, 2. daļa"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "4 min"
 categories:
   - "Sabiedrību dibināšana Taivānā"
@@ -21,7 +21,7 @@ Personas, kuras lasījušas [Sabiedrības dibināšanas pamati Taivānā](/lv/co
 
 ​
 
-Turpmākie jautājumi un atbildes palīdzēs personām, kuras apsver sabiedrības dibināšanu (公司設立) Taivānā.
+Turpmākos jautājumus un atbildes sagatavojusi advokāte Wei Tseng (曾雋崴); tās palīdzēs personām, kuras apsver sabiedrības dibināšanu (公司設立) Taivānā.
 
 ​
 
@@ -37,9 +37,9 @@ Pirms kapitāla pārskaitījuma (資本金匯款) informējieties savā galvenaj
 
 **​**
 
-**2. Iemaksājot pamatkapitālu, vai var pārskaitīt Taivānas dolārus (新臺幣, TWD) no personīgā konta Taivānā uz Taivānas sabiedrības sagatavošanas kontu?**
+**2. Iemaksājot pamatkapitālu, vai var pārskaitīt jaunos Taivānas dolārus (新臺幣, TWD) no personīgā konta Taivānā uz Taivānas sabiedrības sagatavošanas kontu?**
 
-Tas ir iespējams, tomēr jāiesniedz dokumenti, kas apstiprina Taivānā iegūto Taivānas dolāru izcelsmi.
+Tas ir iespējams, tomēr jāiesniedz dokumenti, kas apstiprina Taivānā iegūto jauno Taivānas dolāru izcelsmi.
 
 Ja, piemēram, tas ir algas ienākums, kas iegūts Taivānā, jāiesniedz šā algas ienākuma ieturējuma apliecinājuma kopija (薪資所得的扣繳憑單影本).
 

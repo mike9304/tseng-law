@@ -2,7 +2,7 @@
 title: "Kā vērtē atbildību apdzīšanas negadījumā Taivānā?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "4 min"
 categories:
   - "Juridiskā informācija par Taivānu"
@@ -23,7 +23,7 @@ Ceļu satiksmes drošības noteikumu 101. pants aizliedz apdzīšanu posmos, kur
 
 Turklāt nedrīkst apdzīt vietās vai posmos ar skolas vai slimnīcas zīmi, vietās ar citām apdzīšanas aizlieguma zīmēm vai apzīmējumiem, kad tuvojas pretī braucošs transportlīdzeklis, un arī tad, kad priekšā pēc kārtas brauc 2 vai vairāk transportlīdzekļi.
 
-Lai tajā pašā joslā apdzītu priekšējo transportlīdzekli, aizmugurējā transportlīdzekļa vadītājam vispirms īsi 2 reizes jāiedod signāls ar skaņas signālu vai 1 reizi jāmirgo tālās gaismas. Skaņas signālu un gaismas nedrīkst atkārtoti lietot, lai piespiestu priekšējo transportlīdzekli atbrīvot ceļu.
+Lai tajā pašā joslā apdzītu priekšējo transportlīdzekli, aizmugurējā transportlīdzekļa vadītājam vispirms 2 reizes īsi jādod skaņas signāls vai 1 reizi jāmirkšķina tālās gaismas. Skaņas signālu un gaismas nedrīkst atkārtoti lietot, lai piespiestu priekšējo transportlīdzekli atbrīvot ceļu.
 
 Aizmugurējais transportlīdzeklis drīkst apdzīt tikai pēc tam, kad priekšējais transportlīdzeklis ir samazinājis ātrumu un novirzījies malā vai ar roku vai labo virzienrādītāju ir parādījis gribu atbrīvot ceļu.
 

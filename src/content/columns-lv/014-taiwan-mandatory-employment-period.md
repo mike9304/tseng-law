@@ -2,7 +2,7 @@
 title: "Nolīgums par minimālo nostrādājamo laiku Taivānā: spēkā esamība, apmācības izmaksas un līgumsods"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "14 min"
 categories:
   - "Juridiskā informācija par Taivānu"
@@ -22,7 +22,7 @@ faq:
 
 ![Attēls, kas skaidro minimālo nostrādājamo laiku darba līgumā un izmaksu atdošanas jautājumu](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Nolīgums par minimālo nostrādājamo laiku (最低服務年限約定) darba līgumā (勞動契約) Taivānā tiek lietots kopā ar solījumu strādāt noteiktu laiku, lai noteiktu, vai, priekšlaicīgi aizejot, pastāv pienākums atdot apmācības izmaksas, parakstīšanas prēmiju (簽約金) vai palikšanas prēmiju (留任獎金) un vai var atsevišķi prasīt līgumsodu (違約金). Tomēr pats apstāklis, ka ir parakstīts teksts, nenosaka nolīguma spēkā esamību un arī atdodamo summu. Vairāk nekā līguma nosaukums pēc soļiem jāpārbauda likumā noteiktie priekšnoteikumi un faktiskā izmaksu, apmācības un izbeigšanas gaita.
+Nolīgums par minimālo nostrādājamo laiku (最低服務年限約定) darba līgumā (勞動契約) Taivānā tiek lietots kopā ar solījumu strādāt noteiktu laiku, lai noteiktu, vai, priekšlaicīgi aizejot, pastāv pienākums atdot apmācības izmaksas, parakstīšanas prēmiju (簽約金) vai palikšanas prēmiju (留任獎金) un vai var atsevišķi prasīt līgumsodu (違約金). Tomēr pats apstāklis, ka ir parakstīts teksts, nenosaka nolīguma spēkā esamību un arī atdodamo summu. Likumā noteiktie priekšnoteikumi un faktiskā izmaksu, apmācības un izbeigšanas gaita jāpārbauda soli pa solim neatkarīgi no tā, kā līgums šo kārtību nosauc.
 
 Pārskatot ir svarīgi nesajaukt šādus četrus jautājumus.
 
@@ -47,7 +47,7 @@ Apstāklis, ka darbinieks līgumu parakstījis, var būt materiāls, kas apstipr
 
 ## 2. Pirmais likumā noteiktais priekšnoteikums: profesionālo prasmju apmācība un izmaksu segšana
 
-Lai nolīgumu balstītu uz apmācību, darba devējam darbiniekam patiešām jāsniedz profesionālo prasmju apmācība un jāsedz tās izmaksas. Nepietiek apmācības plānā rakstīt, ka tas ir profesionāls kurss, vai līgumā ierakstīt paredzamās izmaksas. Materiāli jāsasaista ar apmācības tēmu, ar amatam vajadzīgo profesionalitāti un tehniskumu, konkrēto laiku, to, vai kurss pabeigts, un faktisko izdevumu.
+Lai nolīgumu balstītu uz apmācību, darba devējam darbiniekam patiešām jāsniedz profesionālo prasmju apmācība un jāsedz tās izmaksas. Nepietiek apmācības plānā rakstīt, ka tas ir profesionāls kurss, vai līgumā ierakstīt paredzamās izmaksas. Materiāli jāsasaista ar apmācības tēmu, ar amatam vajadzīgajām profesionālajām vai tehniskajām prasmēm, konkrēto laiku, to, vai kurss pabeigts, un faktisko izdevumu.
 
 Pārskatīšanas priekšmets ir ne tikai tieši pārbaudāmās izmaksas, piemēram, ārējo lektoru honorāri, mācību iestādes maksa un maksa par materiāliem vai iekārtām, bet arī iekšējo izmaksu aprēķina pamats, ko darba devējs apgalvo. Ja apmācīja iekšējais personāls, jāvērtē, kura un kāds laiks tika ieguldīts, ar ko tas atšķiras no parastās uzraudzības vai amata nodošanas un vai pastāv pamats šīs izmaksas pieskaitīt konkrētajam darbiniekam. Aprēķināta summa vai vienota sadale pati par sevi faktisko slogu nepierāda.
 
@@ -55,7 +55,7 @@ Programma, apmācības kalendārs, apmeklējuma saraksts, vērtējuma iznākums,
 
 Robeža starp vispārīgu pielāgošanos darbam un profesionālo prasmju apmācību nedalās tikai pēc apmācības vietas vai pēc tā, kurš to rīko. Iekšējs kurss var pierādīt konkrētu profesionālo un tehnisko saturu un ievērojamu ieguldījumu, un ārējas iestādes garš kurss faktiski var būt vispārīga ievada apmācība. Tāpēc nedrīkst vienoti izslēgt visu iekšējo apmācību un arī atzīt likumā noteikto priekšnoteikumu tikai tāpēc, ka kurss ir dārgs vai garš.
 
-Jāspēj arī izskaidrot saikni starp nolīgto laiku un ieguldījumu apmācībā. Kāda spēja tiek iegūta, kāda saikne šai spējai ir ar mērķa amatu un kāpēc ierosinātais nostrādājamais laiks ir vajadzīgs pret apmācības laiku un izmaksām, vērtē atsevišķi. Vai pēc apmācības beigām šis darbs faktiski tika veikts un cik ilgi darbinieks jau bija nostrādājis, arī ietekmē sloga apjoma vērtējumu.
+Jāspēj arī izskaidrot saikni starp nolīgto laiku un ieguldījumu apmācībā. Kāda spēja tiek iegūta, kāda saikne šai spējai ir ar amatu, kurā tā jāizmanto un kāpēc ierosinātais nostrādājamais laiks ir vajadzīgs, ņemot vērā apmācības laiku un izmaksas, vērtē atsevišķi. Vai pēc apmācības beigām šis darbs faktiski tika veikts un cik ilgi darbinieks jau bija nostrādājis, arī ietekmē sloga apjoma vērtējumu.
 
 ## 3. Otrais likumā noteiktais priekšnoteikums: saprātīga kompensācija
 
@@ -63,7 +63,7 @@ Otrais likumā noteiktais priekšnoteikums ir tas, ka darba devējs sniedz sapr�
 
 Vispirms jāpārbauda izmaksas mērķis. Vai tas ir vispārīgs algas nosacījums pieņemšanai darbā, pretizpildījums par solījumu palikt noteiktu laiku, vai atlīdzība par rezultāta sasniegšanu, jābūt skaidram no līguma un paziņojuma materiāliem. Vērtē arī, vai izmaksas diena, summa, brīdis, kad labums kļūst neatņemams, saikne ar palikšanas laiku, atdošanas iemesli un formula tika iesniegti tā, lai darbinieks tos varētu saprast pirms līguma.
 
-Taivānas Darba ministrijas (勞動部) 2026. gada 5. jūnijā dotā interpretācija (函釋) skaidro, ka tad, ja kā saprātīgu kompensāciju nolīgumam par minimālo nostrādājamo laiku ņem palikšanas prēmiju, parakstīšanas prēmiju vai citu avansā izmaksātu labumu, šī loma skaidri jāpaziņo. Tas, ka darba devējs pēc tam no jauna iztulko izmaksas mērķi vai no jauna daļu algas klasificē kā kompensāciju, grūti aizstāj paziņojumu līguma brīdī.
+Taivānas Darba ministrijas (勞動部) 2026. gada 5. jūnijā dotā interpretācija (函釋) skaidro, ka tad, ja kā saprātīgu kompensāciju nolīgumam par minimālo nostrādājamo laiku ņem palikšanas prēmiju, parakstīšanas prēmiju vai citu avansā izmaksātu labumu, šī loma skaidri jāpaziņo. Tas, ka darba devējs pēc tam no jauna iztulko izmaksas mērķi vai no jauna daļu algas klasificē kā kompensāciju, nevar viegli aizstāt paziņojumu, kas dots, slēdzot līgumu.
 
 Kompensācijas saprātīgumu nevērtē tikai pēc summas. Kopīgi vērtē, vai darbinieks faktiski iegūst papildu labumu, vai izmaksas nosacījumi ir skaidri, kā pieskaita daļu, kas atbilst jau nostrādātajam laikam, un vai atdošanas apjoms nav pārmērīgs. Pat ja kompensācija pastāv, bez ierobežojuma nav atļauts jebkurš palikšanas garums un arī jebkurš atdošanas atbildības apmērs.
 

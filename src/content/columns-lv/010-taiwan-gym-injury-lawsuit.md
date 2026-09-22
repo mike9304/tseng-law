@@ -2,7 +2,7 @@
 title: "Zaudējumu atlīdzība par traumu sporta zālē Taivānā: 1. instances lieta, termiņi, pierādījumi un atlīdzības posteņi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "7 min"
 categories:
   - "Lietas izklāsts"
@@ -21,47 +21,47 @@ Negadījums notika sporta zālē Taidžunā (臺中) trenera vadītā stieņa pa
 
 Šajā lietā es kā procesuālā pārstāve (訴訟代理人) pārstāvēju prasītāju, korejiešu studentu. Taidžunas rajona tiesa 2022. gada 24. janvārī 1. instances spriedumā par 109. gada patērētāju lietu Nr. 7 (109年度消字第7號) uzdeva atbildētājam samaksāt [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) un spriedumā norādītos procentus.
 
-Pēc tam presē tika ziņots, ka puses 2. instancē noslēgušas izlīgumu (和解). Tikai oficiālais 1. instances spriedums neļauj apstiprināt 2. instances iznākumu vai izlīguma summu; presē minēto izlīgumu nedrīkst uzskatīt par apstiprinātu 1. instances lietas galīgo iznākumu.
+Pēc tam presē tika ziņots, ka puses 2. instancē noslēgušas izlīgumu (和解). Oficiālais 1. instances spriedums pats par sevi neatklāj 2. instances iznākumu vai izlīguma summu; presē minēto izlīgumu nedrīkst uzskatīt par apstiprinātu 1. instances lietas galīgo iznākumu.
 
 Tālāk ir šīs lietas preses ziņojumu, interneta ierakstu un juridisko komentāru virsraksti tulkojumā. Virsraksti zemāk kalpo tikai katra saites satura iepazīstināšanai; tie nenozīmē, ka šis raksts pats nosaka faktus.
 
-![Students vīrietis, starpskriemeļu diska plīsums (椎間盤破裂) pēc 90 kg stieņa pacelšanas no zemes… prasa zaudējumu atlīdzību no sporta zāles](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
+![Vīrietis, students, pēc 90 kg stieņa pacelšanas no zemes guvis starpskriemeļu diska plīsumu (椎間盤破裂)… prasa zaudējumu atlīdzību no sporta zāles](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
-[Students vīrietis, starpskriemeļu diska plīsums (椎間盤破裂) pēc 90 kg stieņa pacelšanas no zemes… prasa zaudējumu atlīdzību no sporta zāles](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
+[Vīrietis, students, pēc 90 kg stieņa pacelšanas no zemes guvis starpskriemeļu diska plīsumu (椎間盤破裂)… prasa zaudējumu atlīdzību no sporta zāles](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Korejiešu students vīrietis, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē atlīdzība TWD 1.570.000 un ziņas par izlīgumu 2. instancē](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Vīrietis, korejiešu students, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē atlīdzība TWD 1.570.000 un ziņas par izlīgumu 2. instancē](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Korejiešu students vīrietis, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē atlīdzība TWD 1.570.000 un ziņas par izlīgumu 2. instancē](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Vīrietis, korejiešu students, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē atlīdzība TWD 1.570.000 un ziņas par izlīgumu 2. instancē](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Korejiešu students vīrietis, trauma 90 kg stieņa pacelšanā no zemes… 1. instance TWD 1.570.000 atlīdzības un ziņas par izlīgumu 2. instancē](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Vīrietis, korejiešu students, trauma 90 kg stieņa pacelšanā no zemes… 1. instance TWD 1.570.000 atlīdzības un ziņas par izlīgumu 2. instancē](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Korejiešu students vīrietis, trauma 90 kg stieņa pacelšanā no zemes… 1. instance TWD 1.570.000 atlīdzības un ziņas par izlīgumu 2. instancē](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Vīrietis, korejiešu students, trauma 90 kg stieņa pacelšanā no zemes… 1. instance TWD 1.570.000 atlīdzības un ziņas par izlīgumu 2. instancē](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
-![Students vīrietis, starpskriemeļu diska plīsums pēc 90 kg stieņa pacelšanas no zemes… prasa zaudējumu atlīdzību no sporta zāles](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
+![Vīrietis, students, pēc 90 kg stieņa pacelšanas no zemes guvis starpskriemeļu diska plīsumu… prasa zaudējumu atlīdzību no sporta zāles](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
-[Students vīrietis, starpskriemeļu diska plīsums pēc 90 kg stieņa pacelšanas no zemes… prasa zaudējumu atlīdzību no sporta zāles](https://news.ebc.net.tw/news/living/362075)
+[Vīrietis, students, pēc 90 kg stieņa pacelšanas no zemes guvis starpskriemeļu diska plīsumu… prasa zaudējumu atlīdzību no sporta zāles](https://news.ebc.net.tw/news/living/362075)
 
-![PTT ieraksts: korejiešu students vīrietis, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē rīkojums sporta zālei samaksāt TWD 1.570.000](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![PTT ieraksts: vīrietis, korejiešu students, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē rīkojums sporta zālei samaksāt TWD 1.570.000](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[PTT ieraksts: korejiešu students vīrietis, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē rīkojums sporta zālei samaksāt TWD 1.570.000](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[PTT ieraksts: vīrietis, korejiešu students, starpskriemeļu diska plīsums 90 kg stieņa pacelšanā no zemes… 1. instancē rīkojums sporta zālei samaksāt TWD 1.570.000](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
 ![Emuārs: 70 kg smaga korejiešu studenta trauma 90 kg stieņa pacelšanā no zemes un atlīdzība virs TWD 1.000.000… vai vaina bija sporta zālei? Kāda ir vingrotāja attieksme (心態)?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
 [Emuārs: 70 kg smaga korejiešu studenta trauma 90 kg stieņa pacelšanā no zemes un atlīdzība virs TWD 1.000.000… vai vaina bija sporta zālei? Kāda ir vingrotāja attieksme (心態)?](https://blog.udn.com/blackjack/179081715)
 
-![Juridisks komentārs: students vīrietis, starpskriemeļu diska plīsums stieņa pacelšanā no zemes… 1. instancē rīkojums pazīstamai sporta zālei samaksāt TWD 1.570.000](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Juridisks komentārs: vīrietis, students, starpskriemeļu diska plīsums stieņa pacelšanā no zemes… 1. instancē rīkojums pazīstamai sporta zālei samaksāt TWD 1.570.000](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Juridisks komentārs: students vīrietis, starpskriemeļu diska plīsums stieņa pacelšanā no zemes… 1. instancē rīkojums pazīstamai sporta zālei samaksāt TWD 1.570.000](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Juridisks komentārs: vīrietis, students, starpskriemeļu diska plīsums stieņa pacelšanā no zemes… 1. instancē rīkojums pazīstamai sporta zālei samaksāt TWD 1.570.000](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Sprieduma lasījums: akūta starpskriemeļu diska plīsuma lieta pēc tam, kad iesācējam sporta zālē tika dots norādījums vilkt no zemes 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
 [Sprieduma lasījums: akūta starpskriemeļu diska plīsuma lieta pēc tam, kad iesācējam sporta zālē tika dots norādījums vilkt no zemes 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
 
-![Vai korejiešu studentam vīrietim starpskriemeļu disks plīsa, kad personīgajā treniņā viņš veica 90 kg stieņa pacelšanu no zemes?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
+![Vai vīrietim, korejiešu studentam, starpskriemeļu disks plīsa, kad personīgajā treniņā viņš veica 90 kg stieņa pacelšanu no zemes?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Vai korejiešu studentam vīrietim starpskriemeļu disks plīsa, kad personīgajā treniņā viņš veica 90 kg stieņa pacelšanu no zemes?**
+**Vai vīrietim, korejiešu studentam, starpskriemeļu disks plīsa, kad personīgajā treniņā viņš veica 90 kg stieņa pacelšanu no zemes?**
 
-Šīs lietas praktiskā nozīme ir tā, ka tā rāda: atbildība netiek noteikta uzreiz tikai ar faktu, ka trauma notika sporta zālē. Drošības pienākuma (安全義務) saturs, kas gulstas uz pakalpojuma sniedzēju, konkrētais norādījuma akts un rūpības pienākuma (注意義務) pārkāpums, cēloņsakarība starp traumu un rīcību, kā arī zaudējumu apjoms tiek vērtēti pēc katras lietas dokumentiem. Kriminālprocesa un civilprocesa priekšnoteikumi un termiņi arī atšķiras, tāpēc tūlīt pēc negadījuma materiāli jāsakārto atsevišķi.
+Šīs lietas praktiskā nozīme ir tā, ka tā rāda: atbildība netiek noteikta uzreiz tikai ar faktu, ka trauma notika sporta zālē. Drošības pienākuma (安全義務) saturs, kas gulstas uz pakalpojuma sniedzēju, konkrētais dotais norādījums un rūpības pienākuma (注意義務) pārkāpums, cēloņsakarība starp traumu un rīcību, kā arī zaudējumu apjoms tiek vērtēti pēc katras lietas dokumentiem. Kriminālprocesa un civilprocesa priekšnoteikumi un termiņi arī atšķiras, tāpēc tūlīt pēc negadījuma materiāli jāsakārto atsevišķi.
 
 Turpmākais ir vispārīga informācija, lai skaidrotu strīdus par traumām sporta zālē Taivānā; tas nav juridisks atzinums par konkrētu lietu. Faktiskās tiesības un rīcības veids var atšķirties pēc līgumiskajām attiecībām, negadījuma apstākļiem, traumas cēloņa un pakāpes, pušu rīcības, apdrošināšanas polises noteikumiem, iegūtajiem pierādījumiem un piemērojamām tiesībām.
 
@@ -79,13 +79,13 @@ Saskaņā ar [Taivānas Krimināllikuma (刑法) 287. pantu](https://law.moj.gov
 
 Prasījums par zaudējumu atlīdzību no delikta saskaņā ar [Taivānas Civillikuma (民法) 197. pantu](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) principā izbeidzas, ja tas netiek īstenots 2 gadu laikā no brīža, kad cietušais uzzināja gan par zaudējumiem, gan par personu, kurai jāatlīdzina, un izbeidzas arī tad, kad no delikta pagājuši 10 gadi.
 
-Ja tomēr iespējams cits prasījuma pamats, piemēram, līgumiskā atbildība, vai ja piemērojami citi noteikumi par termiņa sākumu, gaitu, pārtraukšanu u. tml., tas var atšķirties pēc lietas apstākļiem. Termiņu nedrīkst noteikt tikai pēc negadījuma vai diagnozes datuma; drošāk ir laikus un atsevišķi pārbaudīt iespējamos prasījuma pamatus un atskaites datumus.
+Ja tomēr iespējams cits prasījuma pamats, piemēram, līgumiskā atbildība, vai ja piemērojami citi noteikumi par termiņa sākumu, gaitu, pārtraukšanu u. tml., tas var atšķirties pēc lietas apstākļiem. Termiņu nedrīkst noteikt tikai pēc negadījuma vai diagnozes datuma; drošāk ir laikus un atsevišķi pārbaudīt katra iespējamā prasījuma pamatu un dienu, no kuras sāk tecēt tā termiņš.
 
 ## 3. Tūlīt pēc negadījuma — kādus pierādījumus un kā jāsaglabā?
 
 Lai varētu izskaidrot atbildību, cēloņsakarību un zaudējumus, ieteicams kopā savākt ne tikai novērošanas kameru ierakstus (監視器影像) no negadījuma brīža, bet arī medicīnisko dokumentāciju (病歷) un medicīnisko izziņu (診斷證明書), kvītis par medicīniskos izdevumus (醫療費用), transportu uz ārstniecības iestādi (就醫交通費) un aprūpes izmaksas (看護費用), ziņas, kas apmainītas ar sporta zāli un treneri, liecinieku paziņojumus, nodarbību rezervāciju un apmeklējuma uzskaiti, treniņa plānu un treniņa ierakstu. Ieteicams iespējamā apjomā nofotografēt traumas vietu un negadījuma vietas stāvokli un pēc datuma sakārtot gaitu pirms negadījuma un pēc tā, kā arī saziņas saturu, lai vēlāk būtu vieglāk dokumentus salīdzināt.
 
-Ieraksti pēc glabāšanas termiņa var tikt pārrakstīti vai citu iemeslu dēļ kļūt neizmantojami. Tāpēc var izvērtēt lūgumu sporta zālei saglabāt tos ar vēstuli ar satura apliecinājumu (存證信函) vai rakstveida pieprasījumu advokātes vārdā (律師函), kurā konkrēti norādīts vajadzīgais laika posms, vieta un kameras novietojums. Šāds rakstisks lūgums ir praktisks pasākums, lai fiksētu, kas un kad tika lūgts. Pats par sevi tas pretējai pusei neuzliek jaunu tiesisku pienākumu ierakstus saglabāt un neliedz to dzēšanu, un arī apstāklis, ka ieraksti nav palikuši, pats par sevi nenoved pie tā, ka tiesa automātiski izdara nelabvēlīgu slēdzienu.
+Ieraksti pēc glabāšanas termiņa var tikt pārrakstīti vai citu iemeslu dēļ kļūt neizmantojami. Tāpēc var izvērtēt lūgumu sporta zālei saglabāt tos ar satura apliecinājuma vēstuli (存證信函) vai ar advokātes rakstveida pieprasījumu (律師函), kurā konkrēti norādīts vajadzīgais laika posms, vieta un kameras novietojums. Šāds rakstisks lūgums ir praktisks pasākums, lai fiksētu, kas un kad tika lūgts. Pats par sevi tas pretējai pusei neuzliek jaunu tiesisku pienākumu ierakstus saglabāt un neliedz to dzēšanu, un arī apstāklis, ka ieraksti nav palikuši, pats par sevi nenoved pie tā, ka tiesa automātiski izdara nelabvēlīgu slēdzienu.
 
 Ja negadījuma apstākļi var atbilst noziedzīga nodarījuma pazīmēm, var ātri iesniegt ziņojumu, lai izmeklēšanas iestāde (偵查機關) izvērtētu, vai pastāv likumīgs pamats nodrošināšanai vai saglabāšanai. Ziņojums nenozīmē, ka policija vai prokuratūra noteikti iegūs novērošanas kameru ierakstus, tāpēc jāsavāc arī dokumenti, ko puse var saglabāt pati, piemēram, medicīniskie un saziņas materiāli.
 
@@ -99,7 +99,7 @@ Zaudējumu posteņi, kuru izvirzīšanu var izvērtēt, ir šādi. Faktiskā atz
 4. **Zaudējumi no darbspējas zuduma (勞動能力減損)**: Ja atzītas sekas un pastāvīgs darbspējas samazinājums, var vērtēt kopā pēc medicīniskajiem un profesionālajiem materiāliem, invaliditātes pakāpes, nodarbošanās un ienākumiem un atlikušā darbspējīgā laika. Pats invaliditātes procents atlīdzību nenosaka, un zudums netiek automātiski rēķināts līdz aiziešanai pensijā.
 5. **Zaudētie ienākumi atveseļošanās laikā (收入損失)**: Laiku, kurā ārstēšanās vai atveseļošanās dēļ faktiski nebija iespējams strādāt, un no tā izrietošo ienākumu samazinājumu jāpierāda ar algas, nodokļu un darba uzskaites materiāliem.
 6. **Nemantiskie zaudējumi (非財產上損害)**: Summu par garīgām ciešanām nosaka tiesa pēc katras lietas elementiem, piemēram, traumas pakāpes, ārstēšanās laika, seku un puses konkrētajiem apstākļiem.
-7. **Soda rakstura zaudējumu atlīdzība (懲罰性賠償金)**: Pastāv noteikums, ka procesā, uz kuru attiecas Patērētāju aizsardzības likums, ja zaudējumi radušies uzņēmuma tīša nodoma dēļ, var prasīt līdz 5-kārtīgai faktisko zaudējumu summai; rupjas neuzmanības gadījumā — līdz 3 reizēm; un neuzmanības gadījumā — līdz 1 reizei faktisko zaudējumu summai. Vai [Taivānas Patērētāju aizsardzības likuma 51. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) uz lietu attiecas un vai un kādā apmērā atlīdzība faktiski tiek piespriesta, ir atkarīgs no tiesas vērtējuma par konkrētajiem priekšnoteikumiem un pierādījumiem.
+7. **Soda rakstura zaudējumu atlīdzība (懲罰性賠償金)**: Pastāv noteikums, ka procesā, uz kuru attiecas Patērētāju aizsardzības likums, ja zaudējumi radušies uzņēmuma tīša nodoma dēļ, var prasīt līdz 5-kārtīgai faktisko zaudējumu summai; rupjas neuzmanības gadījumā — līdz 3 reizēm; un neuzmanības gadījumā — ne vairāk kā 1 reizi no faktisko zaudējumu summas. Vai [Taivānas Patērētāju aizsardzības likuma 51. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) uz lietu attiecas un vai soda rakstura atlīdzība faktiski tiek piespriesta un kādā apmērā, ir atkarīgs no tiesas vērtējuma par konkrētajiem priekšnoteikumiem un pierādījumiem.
 
 ## 5. Vai arī tad, ja sporta zālei ir civiltiesiskās atbildības apdrošināšana (責任保險), vai atlīdzība vispār pienākas un kādā apmērā, var būt strīdīgi?
 

@@ -2,7 +2,7 @@
 title: "Sabiedrības dibināšanas pamati Taivānā: meitas sabiedrība, filiāle, pārstāvniecība, gaita un darba atļauja"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "14 min"
 categories:
   - "Sabiedrību dibināšana Taivānā"
@@ -26,7 +26,7 @@ Ceļi, pa kuriem ārvalstu uzņēmumi un pašnodarbinātie ienāk Taivānas tirg
 
 Sabiedrības dibināšana (公司設立), ārvalstu ieguldījums, bankas konts, nodokļi, darbības vieta, darba atļauja (工作許可) un uzturēšanās gaita ir saistīti, taču tie nav viena un tā pati procedūra. Sabiedrības reģistrācijas pabeigšana nenozīmē, ka ieguldījumu līdzekļu pārbaude vai nozares atļaujas ir pilnībā pabeigtas, un arī to, ka akcionāri (股東) vai pārvaldnieki var uzreiz strādāt Taivānā.
 
-Tāpēc no paša sākuma drošāk ir kopīgi izvērtēt uzņēmējdarbības modeli, ieguldītāju un galvenā biroja atrašanās vietas, gaidāmās operācijas, līdzekļu plūsmu, personāla izvietojumu un darbības vietu. Šajā rakstā vispirms nošķirta ienākšana Taivānā pēc formas, pēc tam pēc kārtas izklāstīta meitas sabiedrības dibināšanas vispārīgā gaita, iepriekšējas pārbaudes par nozari un vietu, darba atļauja, uzturēšanās un ārvalstnieku kapitāls, kā arī būtiskie nodokļi.
+Tāpēc no paša sākuma drošāk ir kopīgi izvērtēt uzņēmējdarbības modeli, ieguldītāju un galvenā biroja atrašanās vietas, gaidāmos darījumus, līdzekļu plūsmu, personāla izvietojumu un darbības vietu. Šajā rakstā vispirms nošķirta ienākšana Taivānā pēc formas, pēc tam pēc kārtas izklāstīta meitas sabiedrības dibināšanas vispārīgā gaita, iepriekšējas pārbaudes par nozari un vietu, darba atļauja, uzturēšanās un ārvalstnieku kapitāls, kā arī būtiskie nodokļi.
 
 ## 1. Ienākšanas formas Taivānā: meitas sabiedrība, filiāle, pārstāvniecība
 
@@ -40,7 +40,7 @@ Pārstāvniecība ir atbalsta punkts, kas atļautajā ietvarā veic tirgus novē
 
 Salīdzinot organizācijas formu, tātad jāņem vērā ne tikai atbildības apjoms, bet arī kapitāla struktūra, peļņas sadale un pārskaitījumi, nodokļi, nozares atļaujas, darba tiesiskās attiecības un dalības priekšnoteikumi valsts iepirkumā. Ja konkrēts konkurss vai atļauja prasa Taivānas juridisko personu, kapitālu, references vai reģistrāciju, dalību nedrīkst atvasināt tikai no organizācijas formas nosaukuma; jāizvērtē attiecīgā norma un izsludinājums.
 
-Piezīme par konkrētām valstīm — Taivānas–Korejas ienākuma nodokļa līgums (所得稅協定): Līgums starp Taivānu un Koreju stājās spēkā 2023. gada 27. decembrī un piemērojams no 2024. gada 1. janvāra. Ja līguma piemērošanas priekšnoteikumi ir izpildīti, maksimālā avota valsts likme dividendēm, procentiem un licenču maksājumiem katrā gadījumā ir 10 %. Uzņēmumu peļņu principā apliek rezidences valsts pusē, izņemot jo īpaši tad, ja otrā teritorijā pastāv līguma izpratnē pastāvīgā pārstāvniecība (常設機構, PE); faktiskais darbības veikšanas veids tomēr vispirms jāizvērtē. Šis izklāsts attiecas uz lietas apstākļiem ar saikni ar Koreju, kas atbilst līguma nosacījumiem; tas nav visiem ieguldītājiem visā pasaulē spēkā esošs noteikums. Vai starp Taivānu un Jūsu izcelsmes valsti tāds līgums pastāv un ko tas satur, jāpārbauda atsevišķi.
+Piezīme par konkrētām valstīm — Taivānas–Korejas ienākuma nodokļa līgums (所得稅協定): Līgums starp Taivānu un Koreju stājās spēkā 2023. gada 27. decembrī un piemērojams no 2024. gada 1. janvāra. Ja līguma piemērošanas priekšnoteikumi ir izpildīti, maksimālā avota valsts likme dividendēm, procentiem un licenču maksājumiem katrā gadījumā ir 10 %. Uzņēmumu peļņu principā apliek tikai rezidences valsts pusē, izņemot citus gadījumus un jo īpaši tad, ja otrā teritorijā pastāv pastāvīgā pārstāvniecība (常設機構, PE) līguma izpratnē; faktiskais darbības veikšanas veids tomēr vispirms jāizvērtē. Šis izklāsts attiecas uz lietas apstākļiem ar saikni ar Koreju, kas atbilst līguma nosacījumiem; tas nav visiem ieguldītājiem visā pasaulē spēkā esošs noteikums. Vai starp Taivānu un Jūsu izcelsmes valsti tāds līgums pastāv un ko tas satur, jāpārbauda atsevišķi.
 
 Līguma izpratnē pastāvīgajā pārstāvniecībā var ietilpt pastāvīgas iekārtas, piemēram, vadības vieta, filiāle un birojs, būvdarbi, kas ilgst vairāk nekā 6 mēnešus, pakalpojumi, kas jebkurā 12 mēnešu periodā kopā pārsniedz 183 dienas, un pārstāvji, kuri atkārtoti izmanto pilnvaru slēgt līgumus. Šiem 4 veidiem katram ir citi priekšnoteikumi; ja pastāv pastāvīga vieta vai pārstāvja darbība, izvērtējums vajadzīgs neatkarīgi no pakalpojumu dienām. Tāpēc pašu skaitli 183 dienas nedrīkst uzskatīt par izšķirošu pastāvīgās pārstāvniecības rašanās vai uzņēmumu peļņas aplikšanas jautājumā.
 
@@ -108,7 +108,7 @@ Uz pašu sabiedrības dibināšanu vispārēji piemērojama likumā noteikta min
 
 Iepriekš minētie skaitļi nav minimālais kapitāls, ko vispārēji piemēro sabiedrības dibināšanai, bet gan darba devēja priekšnoteikumi ārvalstu vadītāju darba atļaujai. Nozares tiesības var prasīt atsevišķu kapitālu vai depozītu, un banka var neatkarīgi vērtēt uzņēmējdarbības plānu un operāciju risku. Arī tad, ja minētie sliekšņi ir sasniegti, darba atļauja netiek izsniegta automātiski. Citi priekšnoteikumi, piemēram, pieteicēja faktiskie pienākumi, pieredze un iesniegtie dokumenti, tiek vērtēti vienlaikus.
 
-Ārvalstnieka, kurš uzturēšanās apliecību ieguvis, pamatojoties uz darba atļauju vai līdzīgu atļauju, laulātais un nepilngadīgie bērni, ja priekšnoteikumi ir izpildīti, var atsevišķi pieteikties uzturēšanās ģimenes saiknes dēļ (依親居留). Var būt vajadzīgi dokumenti laulības vai izcelšanās, uzturēšanas un uzturēšanās mērķa pierādīšanai; ģimenes uzturēšanās statuss netiek piešķirts automātiski.
+Ārvalstnieka, kurš uzturēšanās apliecību ieguvis, pamatojoties uz darba atļauju vai līdzīgu atļauju, laulātais un nepilngadīgie bērni, ja priekšnoteikumi ir izpildīti, var atsevišķi pieteikties uzturēšanās ģimenes saiknes dēļ (依親居留). Var būt vajadzīgi dokumenti laulības vai vecāka un bērna attiecību, uzturēšanas un uzturēšanās mērķa pierādīšanai; ģimenes uzturēšanās statuss netiek piešķirts automātiski.
 
 Ārzemnieka pieteikums pastāvīgajai uzturēšanās atļaujai (永久居留) principā prasa cita starpā nepārtrauktu un likumīgu uzturēšanos Taivānā 5 gadus un uzturēšanos tur vismaz 183 dienas katru gadu. Ārvalstu speciālistiem (外國專業人才) un līdzīgām personām var piemērot citus aprēķina kritērijus; vērtē arī citus likumā noteiktos priekšnoteikumus, piemēram, uzvedību, mantu un spējas. Uzturēšanās periodi, kas izslēgti no pastāvīgās uzturēšanās aprēķina, un priekšnoteikumi pieteikuma brīdī jāvērtē atsevišķi; pati darba atļaujas vai uzturēšanās apliecības turēšana 5 gadus automātiski nenoved pie pastāvīgās uzturēšanās.
 
@@ -138,7 +138,7 @@ Līguma ierobežotā likme nepiemērojas automātiski tikai tāpēc, ka līgums 
 - [Taivānas Imigrācijas pārvaldes (內政部移民署) norādījums par pastāvīgo uzturēšanos](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Taipejas pilsētas norādījums par darbības vietas iepriekšēju pārbaudi](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Attiecīgo darba jomu varat aplūkot lapā [Kādās lietās mēs palīdzam](/lv/services), attiecīgās advokātes gaitu un valodas — lapā [Hovering starptautiskā komanda](/lv/lawyers). Konkrētas lietas jautājumos izmantojiet [Kā sazināties ar biroju](/lv/contact).
+Attiecīgo darba jomu varat aplūkot lapā [Kādās lietās mēs palīdzam](/lv/services), attiecīgās advokātes pieredzi un valodas — lapā [Hovering starptautiskā komanda](/lv/lawyers). Konkrētas lietas jautājumos izmantojiet [Kā sazināties ar biroju](/lv/contact).
 
 Šis raksts ir vispārīgas izglītojošas informācijas dokuments par sabiedrības dibināšanu Taivānā un saistītajiem noteikumiem; tas nav juridisks vai nodokļu padoms konkrētā lietā un nesola noteiktu iznākumu. Vajadzīgās gaitas un rezultāti var atšķirties pēc ieguldījuma struktūras, nozares, pieteicēja valstspiederības un uzturēšanās statusa un kompetentās iestādes jaunākās prakses; pirms ieguldījuma, līguma vai nodarbināšanas veikšanas jāizvērtē jaunākie oficiālie avoti un pašas lietas apstākļi.
 

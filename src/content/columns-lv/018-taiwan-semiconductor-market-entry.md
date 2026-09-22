@@ -1,7 +1,7 @@
 ---
 title: "Pusvadītāju sastāvdaļu uzņēmumi, kas ienāk Taivānā: kā vērtēt meitas sabiedrību, filiāli vai pārstāvi"
 lastmod: "2026-09-17"
-date_display: "17. septembrī 2026"
+date_display: "17. septembrī 2026. gadā"
 read_time: "8 min"
 categories:
   - "Sabiedrību dibināšana Taivānā"
@@ -65,7 +65,7 @@ To var veidot ar 1 vai vairākām fiziskām personām vai ar Taivānas vai ārva
 
 ### Akciju sabiedrība: piemērota, ja jāpiesaista citi ieguldītāji vai apsver kotēšanu
 
-Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk akcionāri, taču valsts vai juridiskā persona to var dibināt pati, un ārvalstu juridiskā persona var turēt 100 %. Akcijas principā ir brīvi pārņemamas, ar likumā noteiktiem izņēmumiem; saskaņā ar noteikumiem var izstrādāt sugu akcijas, darbinieku opcijas un tamlīdzīgi. Tāpēc tā der uzņēmumiem, kas gaida ieguldītājus, daļu darījumus, darbinieku akciju atlīdzības vai turpmāku apvienošanos, iegādi vai kotēšanu; tā neaprobežojas tikai ar lieliem uzņēmumiem. Pārvaldībā nekotēta sabiedrība statūtos var neizveidot direktoru padomi un turēt tikai 1 vai 2 direktorus. Sabiedrība ar vienīgo valsts vai juridisko akcionāru statūtos var neizveidot uzraugu. Tāpat ne katrai akciju sabiedrībai gada finanšu pārskats jārevidē. Parastas sabiedrības galvenie revīzijas sliekšņi ir iemaksātais kapitāls TWD 30.000.000 vai, arī zem šīs robežas, darbības ieņēmumi TWD 100.000.000 vai 100 darbinieki darba apdrošināšanā; sabiedrības, kas publiski laidušas apgrozībā akcijas, vadās pēc vērtspapīru noteikumiem.
+Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk akcionāri, taču valsts vai juridiskā persona to var dibināt pati, un ārvalstu juridiskā persona var turēt 100 %. Akcijas principā ir brīvi pārņemamas, ar likumā noteiktiem izņēmumiem; saskaņā ar noteikumiem var izstrādāt īpašās akcijas, darbinieku opcijas un tamlīdzīgi. Tāpēc tā der uzņēmumiem, kas gaida ieguldītājus, daļu darījumus, darbinieku akciju atlīdzības vai turpmāku apvienošanos, iegādi vai kotēšanu; tā neaprobežojas tikai ar lieliem uzņēmumiem. Pārvaldībā nekotēta sabiedrība statūtos var neizveidot direktoru padomi un turēt tikai 1 vai 2 direktorus. Sabiedrība ar vienīgo valsts vai juridisko akcionāru statūtos var neizveidot uzraugu. Tāpat ne katrai akciju sabiedrībai gada finanšu pārskats jārevidē. Parastas sabiedrības galvenie revīzijas sliekšņi ir iemaksātais kapitāls TWD 30.000.000 vai, arī zem šīs robežas, darbības ieņēmumi TWD 100.000.000 vai 100 darbinieki darba apdrošināšanā; sabiedrības, kas publiski laidušas apgrozībā akcijas, vadās pēc vērtspapīru noteikumiem.
 
 ## 4. Filiāles un meitas sabiedrības gaitas atšķiras; tikai meitas sabiedrība iet caur Ekonomikas ministrijas ieguldījumu departamenta izskatīšanu
 
@@ -79,7 +79,7 @@ Iepriekš minētais ir ieteikums līgumu kārtošanai. Tikai vienas tiesiskās f
 
 Reģistrācijas pabeigšana Taivānā nenozīmē, ka ārvalstu galvenā biroja darbinieki Taivānā var automātiski strādāt. Ārzemniekam, kurš strādā Taivānā, vajadzīga likumīga darba atļauja (工作許可), un ilgākai uzturēšanai vajadzīga arī ārvalstnieka uzturēšanās apliecība (外僑居留證). Principā darba devējs piesakās darba atļaujai un atbilstošajai uzturēšanās apliecībai.
 
-Taivānas meitas sabiedrības un ārvalstu sabiedrības filiāles vadītājam darba atļaujas pieteikums ir relatīvi vieglāks. Ja tomēr jāpiesakās darba atļaujai otrajam un nākamajiem ārzemniekiem, Darba ministrija pēc nozares prasa kapitāla, apgrozījuma un tamlīdzīgus sliekšņus. Ja plānojat, ka ārvalstu darbinieki strādās Taivānā, pirms Taivānas sabiedrības dibināšanas iepriekš jāpārbauda, vai kapitāla iestatījums atbilst attiecīgajam slieksnim.
+Taivānas meitas sabiedrības un ārvalstu sabiedrības filiāles vadītājam darba atļaujas pieteikums ir relatīvi vieglāks. Ja tomēr jāpiesakās darba atļaujai otrajam un nākamajiem ārzemniekiem, Darba ministrija pēc nozares prasa kapitāla, apgrozījuma un tamlīdzīgus sliekšņus. Ja plānojat, ka ārvalstu darbinieki strādās Taivānā, pirms Taivānas sabiedrības dibināšanas iepriekš jāpārbauda, vai paredzētais kapitāls atbilst attiecīgajam slieksnim.
 
 ## 7. Struktūras, ko var salīdzināt pēc uzņēmuma attīstības pakāpes
 

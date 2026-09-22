@@ -1,0 +1,86 @@
+WO-F-uk r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-uk-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: uk-a 27, uk-b 22 (49). No P3 rows in either review.
+
+Applied: 43 numbered rows, some with the adaptations below.
+Skipped in full: 6 numbered rows (uk-a 2, uk-a 12, uk-a 13, uk-a 14, uk-b 19, uk-b 22).
+
+No test file was edited. No pinned Ukrainian expectation in `src/lib/__tests__/guidance-*uk*.test.ts` or `src/data/__tests__/` matched a string that changed. `GUIDANCE_LLMS_NOTICES.uk` was not edited. `src/data/international-inquiry-copy.ts` was not edited. "TWD 1.57M" was not touched. Frontmatter keys, urls, and block counts were not changed.
+
+### Applied
+uk-a 1, 3–11, 15–27.
+uk-b 1–18, 20, 21.
+
+Adaptations (still applied):
+- uk-a 8. "За кожен повний рік" carries the "each year" meaning. The digit stays in "(1 рік)" beside it, in the FAQ and in the blockquote, and again beside "за кожен повний рік (1 рік) виплачується 1 місяць". Both 1s in "за 1 рік … 1 місяць" remain. The comma in 0,5 stays.
+- uk-a 10 and 11. The lines were not merged. "Інакше кажучи," stays its own line. The next three lines now give either party, depending on fault, the right to refuse severance or to claim it. The both-at-fault close stays two lines: the subject on one, the remedy on the next.
+- uk-a 27. The three 003 link labels now lead with the Chinese docket number and say the year is the Republic of China calendar. No Gregorian year was added. 109 and 644, 109 and 477, 112 and 236 stay.
+- uk-b 9. "1-кратний" is gone. The cap is "до 1 разу від фактичної шкоди", in series with "до 5 разів" and "до 3 разів". The digit from Korean 1배 stays.
+- uk-b 17. The Chinese docket number now leads. The existing "2020" stays inside the parenthesis; no new year was added. "наказав" in that sentence is "зобов’язав".
+- uk-b 18. The two breaks were not merged. Each line is now its own sentence. The U+200B after "місто Тайбей)." stays.
+
+### Skipped
+- uk-a 2. The label already names article 3 of the withholding-rate standards, and the URL stays `flno=3`. Deleting "(підпис джерела: стаття 10)" drops the only 10 that matches Korean "영업세법 제10조" on that link, and the checker then FAILs `numbers` (missing 10). The parenthetical was restored.
+- uk-a 12. The bio figure stays byte-identical "TWD 1.57M".
+- uk-a 13 and uk-b 22. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips them, and `NUMBER_THOUSAND_STYLE.uk` is `dot`. Every dotted amount was left.
+- uk-a 14 and uk-b 19. Q16–Q20 were not promoted to headings. No U+200B was deleted in 003, 005, 006, 008, 009, 013, or 015, and 005’s empty bold lines `**​**` stay. The ZWSP count is pinned to the Korean source; a new heading level fails `headings`.
+
+## Systemic patterns
+
+- Dot thousands (uk-a and uk-b verdicts). 0 changed to a space. The checker requires the dot.
+- U+200B blanks, and 005 `**​**` (uk-a verdict; uk-b 013/015). 0 deleted.
+- Permanent establishment called an installation (uk-a). 6 phrases: 001 "фіксовані установки" and "фіксовану установку"; 004 "фіксовані установки", "фіксованої установки", "Окрім фіксованої установки", "відсутність фіксованої установки". All are now a fixed place of business ("постійне місце діяльності"). "Фіксоване місце" that was already a place, and "фіксованих інвестицій", were left.
+- "Об’єктом лістингу" (uk-a). 3 phrases in 004, now "допущена до лістингу".
+- "Змінювальна реєстрація" (uk-a). 5 phrases in 002, now "реєстрація змін" / "заява про реєстрацію змін". The gloss 變更登記 stays on the first statutory mention.
+- Ordinary court years read as "рік 109" / "рік 112" (uk-a). 3 link labels in 003. No Gregorian year added.
+- Advertising claims called "вислови" (uk-b). 6 phrases in 011: the FAQ question, the FAQ answer, the repeated body sentence, and three "вислов" forms in the collaboration paragraph. 014 "з цього вислову" is a remark about health or working conditions, not an advertising claim, and was left.
+- "Статті" for categories of loss or statutory exclusions (uk-b). 3 in 010 ("види відшкодування", "Які види шкоди", "кожного виду шкоди") and 4 in 016 (two "законно виключених статей", one "законно виключені статті", one checklist "виключені статті"). Code "стаття" was left.
+- Surviving spouse "подружжя, що вижило" (uk-b). 5 phrases in 016, now "подружжя, яке пережило". "Той із батьків, хто вижив" is the surviving parent, not this phrase, and was left.
+- License lending called "позика ліцензії" (uk-b). 3 phrases in 017 (FAQ, the repeated body, and "позику ліцензії на провадження діяльності"). 004 "договори послуг, позики та ліцензії" is loans and licences as contract types, and was left.
+- R2–R10. The round-4 verdicts say feminine Wei Tseng, Ви, the four-language consultation lock, day–month–year dates, the decimal comma, guillemets, and the apostrophe already hold. This pass did not find a new Korea-as-default-reader, result-promise, or untranslated-chrome instance outside the rows above. 015 "безкоштовно перевірити" is the municipal inquiry, as the verdict says, and was left. The fullwidth colon is only inside the 008 canonical `url`, which stays.
+
+## Reviewer points not followed
+
+- uk-a 13 and uk-b 22. A space as the thousands separator is ordinary Ukrainian. This campaign’s checker does not parse it for `uk` (`dot` style). The dotted form was kept.
+- uk-a 14 and uk-b 19. Q16–Q20 are body lines in the Korean source as well. The U+200B lines match that source. Promoting Q16 or deleting the characters fails `headings` or the ZWSP count.
+- uk-a 12. "1,57 млн TWD" is ordinary Ukrainian. A test pins the bytes "TWD 1.57M". The figure was left.
+- uk-a 2. The opened page is article 3, and the label already says so. The Korean link label still counts a 10 ("영업세법 제10조"). Dropping that 10 fails `numbers`. The parenthetical stays.
+- uk-a 27. "тобто 2020" would add a Gregorian year the checker counts, and ACCEPTED-ROUND skips that. The docket number now leads, and the year is named as the Republic of China calendar, without a new digit.
+- uk-b 9. "не вище розміру фактичної шкоди" alone drops the 1 in Korean "1배". The cap is "до 1 разу", parallel to "до 5 разів" and "до 3 разів".
+- uk-b 17. The suggested "тобто 2020" was already in the sentence. It was kept while the docket number was moved forward. No second 2020 was added.
+- uk-b 18. The English source splits the same points across lines. Merging them changes the block count. Each line was made to stand as its own sentence instead.
+
+Nothing else in the two verdicts looked factually wrong. The case in 010 is about a Korean student; that fact was not generalized. "Найкращі інтереси дитини" is the statutory test and was left. "Кадрові" as staffing (008 "кадровому коригуванні", 018 "кадрові питання") is not the person the reviewer called "кадр".
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-uk --lang uk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=59
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-uk src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+The 21 is the count before this log file was written. This log is the additional untracked file `docs/i18n/global-plan/evidence/grok-F-uk-r4.log`.

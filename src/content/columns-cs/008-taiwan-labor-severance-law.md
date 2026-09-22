@@ -61,8 +61,8 @@ Následující tabulka to shrnuje.
 |  | Tchajwanský zákon o pracovních normách, článek 11 (勞動基準法第11條): Pokud nenastane jeden z následujících případů, zaměstnavatel nemůže ukončit pracovní smlouvu, ani po předchozím oznámení zaměstnanci.  1. Zastavení činnosti (歇業) nebo převod podniku (轉讓)  2. Ztráty (虧損) nebo omezení činnosti (業務緊縮)  3. Vyšší moc vyžaduje přerušení činnosti na 1 měsíc nebo déle  4. Povaha činnosti vyžaduje snížení personálu a propuštěného nelze převést na jiné vhodné místo  5. Určený zaměstnanec nemůže uspokojivě vykonat práci požadovanou místem | Tchajwanský zákon o pracovních normách, článek 12 (勞動基準法第12條): Zaměstnavatel může propustit bez předchozího oznámení, pokud zaměstnanec spadá do jednoho z následujících případů.  1. Kdo při uzavření pracovní smlouvy podá nepravdivé údaje, uvede zaměstnavatele v omyl a vystaví podnik riziku škody  2. Kdo užije násilí nebo těžce urazí zaměstnavatele, jeho rodinu, jeho zástupce (代理人) nebo jiné spolupracovníky  3. Koho pravomocně odsoudili k trestu odnětí svobody na dobu určitou (有期徒刑) nebo k trestu přísnějšímu, bez podmíněného odkladu výkonu trestu (緩刑) a bez povolení přeměny na peněžitý trest (易科罰金)  4. Závažné porušení pracovní smlouvy nebo pracovního řádu  5. Kdo úmyslně spotřebuje stroje, nástroje, suroviny, výrobky nebo jiný majetek zaměstnavatele, nebo úmyslně vyzradí technická a obchodní tajemství zaměstnavatele a způsobí zaměstnavateli škodu  6. Neomluvená absence (曠工) bez oprávněného důvodu 3 dny po sobě, nebo 6 dní nebo více v měsíci |  |
 
 > Na Tchaj-wanu, za každý dokončený 1 rok praxe (年資),
-> musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy (平均工資) jako odstupné.
-> (nejvýše 6 měsíců mzdy) Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu.
+> musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy (平均工資) jako odstupné, nejvýše za 6 měsíců mzdy.
+> Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu.
 
 ​
 
@@ -176,7 +176,7 @@ Díky zastoupení advokátem mohl později
 
 prokázat svůj zákonný nárok na odstupné;
 
-ostatní zaměstnanci, kteří odešli bez důkazů, v tomto popisu jedné věci stejný postup nezvolili; nejde o příslib výsledku.
+ostatní zaměstnanci, kteří odešli bez důkazů, v této věci stejný postup nezvolili; nejde o příslib výsledku.
 
 ​
 

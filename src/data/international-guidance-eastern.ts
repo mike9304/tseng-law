@@ -92,7 +92,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Čím se zabýváme',
           paragraphs: [
-            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
+            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a provázíme zahraniční klienty při úkonech, které je na Tchaj-wanu třeba učinit.',
             'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku, v němž se věc posuzuje. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
           ],
         },
@@ -121,7 +121,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kde začít',
           paragraphs: [
             'Přečtěte si stránku „Služby“ a ověřte, zda Vaše věc spadá do našeho rozsahu, poté „Náklady“ a „Kontakt“, abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
-            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsal(a), a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
           ],
         },
       ],
@@ -285,7 +285,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
           heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
           paragraphs: [
             'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+            'Jde pouze o posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
           ],
         },
         {
@@ -338,7 +338,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Co dělat, neovládám-li žádný ze čtyř jazyků?',
           answer:
-            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
         },
         {
           question: 'Jak se nakládá s mým textem v češtině?',
@@ -379,9 +379,9 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
             'Jméno, které uvedete',
             'E-mailová adresa pro odpověď',
             'Jazyk zobrazení stránky v okamžiku odeslání',
-            'Jazyk, v němž jste psali',
+            'Jazyk, v němž jste psal(a)',
             'Jazyk konzultace, který si přejete',
-            'Původní text, který jste napsali',
+            'Původní text, který jste napsal(a)',
             'Váš souhlas s odesláním žádosti',
             'Číslo podání pro dohledání žádosti',
           ],
@@ -389,7 +389,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Původní text se uchová beze změny',
           paragraphs: [
-            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
+            'Váš text se uchová přesně tak, jak jste jej napsal(a), a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
             'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
           ],
         },
@@ -424,7 +424,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Místo uchování a poskytovatelé',
           paragraphs: [
-            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
+            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají e-mailovou službou, kterou kancelář užívá.',
             'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
           ],
         },

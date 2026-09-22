@@ -27,17 +27,17 @@ Následující otázky a odpovědi mají pomoci osobám, které zvažují založ
 
 Když cizinec zakládá společnost na Tchaj-wanu, musí předložit investiční plán (投資計畫書) Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司) k posouzení.
 
-Odbor přezkumu investic musí ověřit, zda se daný kapitál (資本額) skutečně používá k investičním účelům
+Odbor přezkumu investic musí ověřit, zda se daný kapitál (資本額) skutečně používá k investičním účelům.
 
-a zda zahraniční subjekty nezavádějí prostředky pod jinou záminkou.
+Ověřit je třeba i to, zda zahraniční subjekty nezavádějí prostředky pod jinou záminkou.
 
 Při sestavování investičního plánu není třeba uvádět přesnou adresu společnosti; stačí uvést oblast (příklad: město Tchaj-pej). ​
 
 Když se později v bance otevírá přípravný účet společnosti (公司籌備處帳戶), mnoho bank však přezkoumává nájemní smlouvu (租賃契約) a provádí místní prohlídku adresy společnosti.
 
-Podle sdělení pracovnice jedné tchajwanské banky platí, že
+Podle sdělení pracovnice jedné tchajwanské banky platí toto.
 
-v poslední době mnoho cizinců po otevření účtu zmizí, proto se otevírání účtů posuzuje stále přísněji.
+V poslední době mnoho cizinců po otevření účtu zmizí, proto se otevírání účtů posuzuje stále přísněji.
 
 Již u základní části čtenářky a čtenáři uváděli, že otevření účtu je nejtěžší etapou; praxe to potvrzuje.
 
@@ -51,9 +51,9 @@ měli byste sestavovat investiční plán a hledat adresu zápisu společnosti s
 
 Podle čl. 9 zákona o investicích cizinců (外國人投資條例) musí schválený vklad dorazit v plné výši ve lhůtě stanovené příslušným orgánem (核定期限); lhůtu je třeba ověřit v aktu schválení každé věci (v praxi se často stanoví přibližně na 1 rok).
 
-V této lhůtě, po nalezení adresy společnosti a uzavření nájemní smlouvy,
+V této lhůtě je dost času najít adresu společnosti a uzavřít nájemní smlouvu.
 
-zbývá dostatek času k otevření přípravného účtu v bance a k převodu kapitálu.
+Ve stejné lhůtě je také dost času otevřít přípravný účet v bance a převést kapitál.
 
 ​
 
@@ -63,7 +63,7 @@ Je to možné.
 
 Banka obecně vyžaduje dvojí ověření totožnosti,
 
-a bez průkazu k pobytu lze u tchajwanské imigrační správy požádat o „**výpis základních údajů k jednotnému identifikačnímu číslu**“ (統一證號基本資料表).
+Nemáte-li průkaz k pobytu, lze u tchajwanské imigrační správy požádat o „**výpis základních údajů k jednotnému identifikačnímu číslu**“ (統一證號基本資料表).
 
 Vydání je možné téhož dne,
 
@@ -79,7 +79,7 @@ posouzení však není nadměrně přísné.
 
 Lze uvést různorodé pracovní zkušenosti, včetně brigád,
 
-a vyložit je podrobně tak, aby bylo možné přesvědčit osoby provádějící posouzení.
+Vyložte je podrobně tak, aby bylo možné přesvědčit osoby provádějící posouzení.
 
 V tomto bodě je vhodné věc důkladně probrat s advokátkou nebo advokátem na Tchaj-wanu.
 
@@ -87,7 +87,7 @@ V tomto bodě je vhodné věc důkladně probrat s advokátkou nebo advokátem n
 
 **4. Na co dávat pozor, když se pronajímá adresa zápisu společnosti (například restaurační provozovna)?**
 
-Založení společnosti trvá přibližně **3 měsíce**, získání pracovního povolení (工作許可) a průkazu k pobytu přibližně **1 měsíc**,
+Založení společnosti trvá přibližně **3 měsíce** a získání pracovního povolení (工作許可) a průkazu k pobytu trvá navíc přibližně **1 měsíc**,
 
 proto je třeba začátek smlouvy stanovit co nejpozději.
 

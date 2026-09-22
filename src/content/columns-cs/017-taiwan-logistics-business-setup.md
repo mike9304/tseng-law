@@ -30,9 +30,9 @@ Tento článek rozlišuje tři situace: nově založit automobilovou nákladní 
 
 ## 1. Rozsah logistické činnosti a automobilové nákladní dopravy (汽車貨運業)
 
-Povolení automobilové nákladní dopravy není potřeba vždy. „Logistika“ je široký praktický pojem; potřeba povolení se neurčuje jen podle názvu společnosti nebo odvětví zapsaných v rejstříku. Pokud společnost přijímá protiplnění a dopravuje cizí náklad nákladním automobilem, může tato činnost tvořit automobilovou nákladní dopravu. Naproti tomu skladování, balení, provoz systémů, odeslání v postavení odesílatele (貨主), zprostředkování dopravy a obdobné činnosti je třeba posoudit jednotlivě podle smluvního vztahu, dopravní odpovědnosti, obsahu protiplnění a skutečného stavu provozu vozidel.
+Povolení automobilové nákladní dopravy není potřeba vždy. „Logistika“ je široký praktický pojem; potřeba povolení se neurčuje jen podle názvu společnosti nebo odvětví zapsaných v rejstříku. Pokud společnost přijímá protiplnění a dopravuje cizí náklad nákladním automobilem, může tato činnost tvořit automobilovou nákladní dopravu. Naproti tomu skladování, balení, provoz systémů, odeslání v postavení odesílatele (貨主), zasílatelství (運送承攬) nebo jiné zprostředkování dopravy a obdobné činnosti je třeba posoudit jednotlivě podle smluvního vztahu, dopravní odpovědnosti, obsahu protiplnění a skutečného stavu provozu vozidel.
 
-Tchajwanský zákon o silnicích (公路法) upravuje automobilovou dopravní činnost (汽車運輸業) jako činnost, která za protiplnění dopravuje cestující nebo náklad automobilem. Společnost se proto nestává ihned automobilovou nákladní dopravou jen proto, že poskytuje logistickou službu v širším smyslu. Naopak, i když byla smlouva sepsána jako zprostředkování dopravy nebo provoz platformy, pokud společnost skutečně přijímá dopravné jako dopravce (運送人) a nese odpovědnost za přidělování vozidel, provoz a škody na nákladu, nemůže dohledu uniknout pouhým označením.
+Tchajwanský zákon o silnicích (公路法) upravuje automobilovou dopravní činnost (汽車運輸業) jako činnost, která za protiplnění dopravuje cestující nebo náklad automobilem. Společnost se proto nestává ihned automobilovou nákladní dopravou jen proto, že poskytuje logistickou službu v širším smyslu. Naopak, i když byla smlouva sepsána jako zasílatelství nebo jiné zprostředkování dopravy, popřípadě jako provoz platformy, pokud společnost skutečně přijímá dopravné jako dopravce (運送人) a nese odpovědnost za přidělování vozidel, provoz a škody na nákladu, nemůže dohledu uniknout pouhým označením.
 
 Při stanovení rozsahu činnosti je třeba konkrétně uspořádat alespoň následující vztahy.
 
@@ -84,7 +84,7 @@ Nabytím akcií se povolení nepřevádí. Při nabytí akcií se povolení nez�
 
 ### Rozdíl mezi nabytím akcií a převodem podniku nebo aktiv
 
-Při nabytí akcií se kupující stává akcionářem, zatímco cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba. Částka zaslaná k nabytí akcií je cenou převodu akcií, nikoli kapitálem. Podle okolností věci se zvlášť provádí předchozí schválení Ministerstva hospodářství, schválení odvětví podle čl. 35 zákona o silnicích, určení výše investice (投資額審定) po převodu, změna společnosti u akcionářů, jednatelů a odpovědné osoby a žádost o změnu u příslušného silničního orgánu.
+Při nabytí akcií se kupující stává akcionářem, zatímco cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba. Částka zaslaná k nabytí akcií je cenou převodu akcií, nikoli kapitálem. Podle okolností věci se zvlášť provádí předchozí schválení Ministerstva hospodářství, schválení odvětví podle čl. 35 zákona o silnicích, ověření výše investice po převodu peněz (投資額審定), změna společnosti u akcionářů, jednatelů a odpovědné osoby a žádost o změnu u příslušného silničního orgánu.
 
 Naproti tomu, i když jiná právnická osoba přijme převod podniku nebo aktiv, provozní licence převodce se na nabyvatele sama o sobě nepřenáší. Vozidla, registrační značky k obchodnímu použití, parkovací zařízení, smlouvy, pracovníky, pojištění a provozní povolení je třeba ověřit každé a povolení přípravy založení, provozní licenci a ostatní schválení potřebná nabyvateli je třeba uspořádat před provedením transakce.
 
@@ -102,7 +102,7 @@ Alespoň následující body je třeba podstatně ověřit porovnáním důkazů
 - Pojištění vozidel, nákladu a odpovědnosti, práva zajištění, leasing a financování
 - Důležité smlouvy a doložky změny ovládání týkající se odesílatelů, podnikatelů, kterým je práce svěřena, systémů a skladů
 
-Ve smlouvě se stanoví prohlášení a závazky, odkládací podmínky, zacházení, pokud povolení není získáno, úprava ceny, náhrada, předání, provozní kapitál a způsob převodu vozidel a smluv. Pořadí potřebného schválení zahraniční investice, schválení odvětví Ministerstva dopravy, schválení změny příslušného silničního orgánu a firemních kroků je třeba sladit s podmínkami uzavření transakce.
+Ve smlouvě se stanoví prohlášení a závazky, odkládací podmínky, zacházení, pokud povolení není získáno, úprava ceny, odškodnění, předměty předání při uzavření transakce, provozní kapitál a způsob převodu vozidel a smluv. Pořadí potřebného schválení zahraniční investice, schválení odvětví Ministerstva dopravy, schválení změny příslušného silničního orgánu a firemních kroků je třeba sladit s podmínkami uzavření transakce.
 
 ## 4. Svěření dopravy a odesílání jinému a práce cizinců
 
@@ -118,7 +118,7 @@ Je třeba ověřit platnost provozní licence podnikatele, jemuž je práce svě
 
 I když se cizinec stane akcionářem nebo investorem cílové společnosti, tato skutečnost mu sama o sobě neuděluje právo pracovat ani pobytový status na Tchaj-wanu. Pokud na Tchaj-wanu vykonává každodenní práci, jako řízení společnosti, prodej, přidělování vozidel a péči o zákazníka, musí před zahájením práce ověřit, zda potřebuje pracovní povolení odpovídající skutečné funkci, a zvlášť provést pozdější pobytový postup.
 
-Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tchaj-wan (限令出國). Platné pracovní pokyny k zákazu vstupu (禁止入國) Imigrační správy Ministerstva vnitra (內政部移民署) stanoví obecně u nedovolené práce dobu zákazu vstupu 3 roky, avšak mohou se uplatnit požadavky na osvobození nebo zkrácení doby, které tytéž pokyny stanoví. Výsledek se neurčuje mechanicky jen proto, že existuje oznámení třetí osoby, a příslušný orgán posuzuje skutkové okolnosti, použitelné normy a okolnosti každé věci.
+Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tchaj-wan (限令出國). Platné správní pokyny Imigrační správy k zákazu vstupu (禁止入國) Ministerstva vnitra (內政部移民署) stanoví obecně u nedovolené práce dobu zákazu vstupu 3 roky, avšak mohou se uplatnit požadavky na osvobození nebo zkrácení doby, které tytéž pokyny stanoví. Výsledek se neurčuje mechanicky jen proto, že existuje oznámení třetí osoby, a příslušný orgán posuzuje skutkové okolnosti, použitelné normy a okolnosti každé věci.
 
 ## Oficiální podklady
 

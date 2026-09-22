@@ -1364,7 +1364,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     methodConfirmationNotice:
       'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
     preparationNotice:
-      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsal(a), a automaticky se nepřekládá.',
     heading: 'Odeslat žádost o posouzení',
     intro:
       'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
@@ -1373,7 +1373,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     successMessage:
       'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
     savedNotificationPendingMessage:
-      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsal(a), se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
     receiptIdLabel: 'Číslo podání',
     failureMessage:
       'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',

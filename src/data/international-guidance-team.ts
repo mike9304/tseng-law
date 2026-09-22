@@ -3125,7 +3125,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelář vede věci podniků a soukromých osob na Tchaj-wanu v angličtině, japonštině, korejštině a čínštině.',
-        'Zastupovala korejského studenta v nároku na náhradu škody za úraz v posilovně a dosáhla rozsudku prvního stupně ve výši 1,57 mil. TWD.',
+        'Zastupovala korejského studenta v řízení o náhradu škody za úraz v posilovně a dosáhla rozsudku prvního stupně ve výši 1,57 mil. TWD.',
       ],
       education: [
         'Magistr (M.S.), Institute of Finance, National Taiwan University',
@@ -3173,7 +3173,7 @@ export const guidanceTeamBios: Record<
         'Bakalář (B.S.) v informatice, National Cheng Kung University',
       ],
       experience: [
-        'Úsek korejských operací, Hovering International Law Firm',
+        'Vedení provozu v Koreji, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {

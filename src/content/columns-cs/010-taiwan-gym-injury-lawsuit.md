@@ -41,17 +41,17 @@ Názvy tiskových zpráv, internetových příspěvků a právních komentářů
 
 [Vysokoškolský student, prasknutí meziobratlové ploténky po mrtvém tahu 90 kg… žádá náhradu škody od posilovny](https://news.ebc.net.tw/news/living/362075)
 
-![Příspěvek na PTT: korejský vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu 90 kg… v 1. instanci příkaz posilovně zaplatit 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Příspěvek na PTT: korejský vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu 90 kg… v 1. instanci soud uložil posilovně zaplatit 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Příspěvek na PTT: korejský vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu 90 kg… v 1. instanci příkaz posilovně zaplatit 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Příspěvek na PTT: korejský vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu 90 kg… v 1. instanci soud uložil posilovně zaplatit 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
 ![Blog: úraz mrtvým tahem 90 kg u korejského vysokoškolského studenta o hmotnosti 70 kg a náhrada přes 1.000.000 TWD… byla vina posilovny? Jaký je přístup osoby, která cvičí?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
 [Blog: úraz mrtvým tahem 90 kg u korejského vysokoškolského studenta o hmotnosti 70 kg a náhrada přes 1.000.000 TWD… byla vina posilovny? Jaký je přístup osoby, která cvičí?](https://blog.udn.com/blackjack/179081715)
 
-![Právní komentář: vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu… v 1. instanci příkaz známé posilovně zaplatit 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Právní komentář: vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu… v 1. instanci soud uložil známé posilovně zaplatit 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Právní komentář: vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu… v 1. instanci příkaz známé posilovně zaplatit 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Právní komentář: vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu… v 1. instanci soud uložil známé posilovně zaplatit 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Čtení rozsudku: věc akutního prasknutí meziobratlové ploténky poté, co začátečník v posilovně dostal pokyn k mrtvému tahu 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
@@ -96,7 +96,7 @@ Položky škody, jejichž uplatnění lze posoudit, jsou následující. Skuteč
 1. **Léčebné výdaje**: Výdaje skutečně vynaložené na konzultaci, vyšetření, léčbu, léčiva a rehabilitaci se prokazují stvrzenkami a zdravotní dokumentací.
 2. **Náklady na ošetřování nebo péči**: Zda byla s ohledem na stupeň úrazu a průběh léčby péče nutná a zda jsou doba a náklady přiměřené, se posuzuje zdravotními a výdajovými podklady.
 3. **Dopravné**: Výdaje nutné k dojíždění do zdravotnického zařízení kvůli léčbě se prokazují evidencí přesunů, stvrzenkami a podobnými doklady.
-4. **Škoda ztráty pracovní schopnosti (勞動能力減損)**: Jsou-li uznány následky a trvalé snížení pracovní schopnosti, lze hodnotit společně podle lékařských a profesních podkladů, stupně postižení, povolání a příjmu a zbývající doby pracovní způsobilosti. Samotné procento postižení náhradu neurčuje a ztráta se nepočítá automaticky až do okamžiku odchodu do důchodu.
+4. **Ztráta pracovní schopnosti (勞動能力減損)**: Jsou-li uznány následky a trvalé snížení pracovní schopnosti, lze hodnotit společně podle lékařských a profesních podkladů, stupně postižení, povolání a příjmu a zbývající doby pracovní způsobilosti. Samotné procento postižení náhradu neurčuje a ztráta se nepočítá automaticky až do okamžiku odchodu do důchodu.
 5. **Ušlý příjem v době zotavení (收入損失)**: Dobu, po kterou skutečně nebylo možné pracovat kvůli léčbě nebo rekonvalescenci, a z toho vyplývající snížení příjmu je třeba prokázat mzdovými, daňovými a docházkovými podklady.
 6. **Nemajetková škoda (非財產上損害)**: Částku za duševní útrapy stanoví soud podle prvků každé věci, jako je stupeň úrazu, doba léčby, následky a konkrétní okolnosti strany.
 7. **Sankční náhrada škody (懲罰性賠償金)**: Existuje pravidlo, podle kterého v řízení, na něž se vztahuje zákon o ochraně spotřebitele, lze, vznikla-li škoda úmyslem podniku, žádat až 5násobek skutečné škody; při hrubé nedbalosti až 3násobek; a při nedbalosti až do výše skutečné škody. Zda se [čl. 51 tchajwanského zákona o ochraně spotřebitele](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na věc vztahuje a zda a v jaké výši je skutečná náhrada, závisí na posouzení soudu ohledně konkrétních předpokladů a důkazů.
@@ -107,7 +107,7 @@ Ano. Skutečnost, že pojištění existuje, může být významná při posuzov
 
 Zejména ztráta pracovní schopnosti, snížení příjmu v době zotavení a nemajetková škoda mohou vyžadovat zdravotní, příjmové a profesní podklady nebo stanovisko znalce. Částka, kterou navrhne pojistitel, nebo ta, kterou žádá poškozený, se nestává ihned částkou uznanou soudem a výsledek posouzení postižení také náhradu automaticky neurčuje. Ve skutečném postupu je třeba společně ověřit pojistku a podmínky, obsah oznámení nehody, odpověď pojistitele, průběh léčby a podklady škody.
 
-Pokud jste utrpěli úraz v posilovně, je důležité nejprve získat potřebné ošetření, zachovat dokumenty, které ještě lze zajistit, než zmizí, a včas získat individuální právní radu k lhůtám a postupům, které se na věc mohou vztahovat. Vyjednávání, spotřebitelská stížnost (消費申訴) nebo smírčí řízení (調解), trestní oznámení a občanský nárok na náhradu škody jsou všechny prostředky, které lze podle věci zvolit, a nejsou postupy, které by bylo vždy nutné podstoupit vcelku.
+Pokud jste utrpěl(a) úraz v posilovně, je důležité nejprve získat potřebné ošetření, zachovat dokumenty, které ještě lze zajistit, než zmizí, a včas získat individuální právní radu k lhůtám a postupům, které se na věc mohou vztahovat. Vyjednávání, spotřebitelská stížnost (消費申訴) nebo smírčí řízení (調解), trestní oznámení a občanský nárok na náhradu škody jsou všechny prostředky, které lze podle věci zvolit, a nejsou postupy, které by bylo vždy nutné podstoupit vcelku.
 
 Pád v provozovně, újma na zdraví způsobená jídlem a úraz při odborné službě mohou rovněž otevřít spor o povinnost bezpečnosti, příčinnou souvislost, škodu a důkazy. Závěr z věci posilovny však nelze beze změny uplatnit na jinou nehodu, proto je třeba smlouvu, jednání a příslušné normy každého případu posoudit zvlášť.
 

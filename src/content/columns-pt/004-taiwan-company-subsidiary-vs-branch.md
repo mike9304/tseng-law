@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
 faq:
   - q: "Pode fazer-se participar um taiwanês ou uma pessoa coletiva taiwanesa como acionista de uma sucursal em Taiwan?"
-    a: "A sucursal (分公司) faz parte da sociedade estrangeira, de modo que não existem acionistas (股東) na sucursal em si. Se se quiser aportar capital em conjunto com um terceiro para uma atividade em Taiwan, convém nomeadamente examinar a via que consiste em constituir uma subsidiária (子公司) taiwanesa e em fixar o seu círculo de acionistas. A responsabilidade, o direito de voto, o financiamento, as autorizações e a fiscalidade devem confirmar-se segundo a relação de entrada e o plano de atividade."
+    a: "A sucursal (分公司) faz parte da sociedade estrangeira, de modo que não existem acionistas (股東) na sucursal em si. Se se quiser aportar capital em conjunto com um terceiro para uma atividade em Taiwan, convém nomeadamente examinar a via que consiste em constituir uma subsidiária (子公司) taiwanesa e em fixar o seu círculo de acionistas. A responsabilidade, o direito de voto, o financiamento, as autorizações e a fiscalidade devem confirmar-se segundo a relação de investimento e o plano de atividade."
   - q: "Em que difere a carga fiscal de uma subsidiária taiwanesa e de uma sucursal taiwanesa?"
     a: "A subsidiária e a sucursal estão em regra geral sujeitas ao imposto sobre as vendas (營業稅) de 5 % e ao imposto sobre o rendimento das empresas com fins lucrativos (營利事業所得稅) de 20 %. Quando a subsidiária taiwanesa distribui dividendos (股利) à sociedade-mãe no estrangeiro, a taxa de retenção na fonte (扣繳率) segundo o direito interno de Taiwan é de 21 %; se as condições de aplicação do Acordo de imposto sobre o rendimento (所得稅協定) Taiwan–Coreia estiverem preenchidas, a taxa máxima é de 10 %. A transferência para a sede, pela sucursal taiwanesa de uma sociedade estrangeira, do lucro depois de imposto não é um dividendo, de modo que em princípio não há retenção na fonte suplementar. As empresas com fins lucrativos cuja sede se encontra fora de Taiwan estão excluídas do objeto de declaração da majoração de 5 % sobre os lucros não distribuídos (未分配盈餘加徵稅額)."
   - q: "Para uma introdução em bolsa em Taiwan ou para obter um crédito de imposto ao investimento, que forma deve escolher-se, subsidiária ou sucursal?"
@@ -30,7 +30,7 @@ Que forma é mais apropriada difere segundo o setor, a composição dos investid
 
 ## 1. Personalidade jurídica e estrutura de entrada
 
-A sucursal faz parte da sociedade estrangeira, de modo que não existem acionistas (股東) na sucursal em si. Se se quiser aportar capital em conjunto com um terceiro para uma atividade em Taiwan, convém nomeadamente examinar a constituição de uma subsidiária taiwanesa e a fixação do seu círculo de acionistas. A responsabilidade, o direito de voto, o financiamento, as autorizações e a fiscalidade devem confirmar-se segundo a relação de entrada e o plano de atividade.
+A sucursal faz parte da sociedade estrangeira, de modo que não existem acionistas (股東) na sucursal em si. Se se quiser aportar capital em conjunto com um terceiro para uma atividade em Taiwan, convém nomeadamente examinar a constituição de uma subsidiária taiwanesa e a fixação do seu círculo de acionistas. A responsabilidade, o direito de voto, o financiamento, as autorizações e a fiscalidade devem confirmar-se segundo a relação de investimento e o plano de atividade.
 
 O artigo 1 da Lei das sociedades de Taiwan (公司法) define como sociedade a pessoa coletiva organizada, inscrita e constituída em conformidade com esta lei com um fim lucrativo. A subsidiária taiwanesa constituída segundo estas regras é uma pessoa coletiva taiwanesa distinta da sociedade-mãe estrangeira. A subsidiária pode, em seu próprio nome, arrendar escritórios, celebrar contratos comerciais e de trabalho, adquirir bens e ser parte num litígio. Os créditos e dívidas nascidos dos contratos incumbem em princípio à subsidiária. Mesmo se a sociedade-mãe fixar a política de gestão ou designar administradores, as personalidades jurídicas das duas sociedades não se fundem por isso.
 
@@ -41,7 +41,7 @@ Se uma sociedade estrangeira pretender exercer em Taiwan em seu próprio nome, d
 | Ponto de comparação | Subsidiária taiwanesa | Sucursal taiwanesa de uma sociedade estrangeira |
 | --- | --- | --- |
 | Posição jurídica | Pessoa coletiva independente constituída segundo o direito de Taiwan | Parte da sede estrangeira, sem personalidade jurídica própria |
-| Estrutura de entrada e de acionistas | O círculo de acionistas e a relação de entrada fixam-se segundo a forma social | Sem ações, partes nem estrutura de acionistas próprias |
+| Estrutura de investimento e de acionistas | O círculo de acionistas e a relação de investimento fixam-se segundo a forma social | Sem ações, partes nem estrutura de acionistas próprias |
 | Investimento conjunto de um terceiro | Organizável pelos estatutos, o círculo de acionistas e um pacto de acionistas | Uma entrada de capital sobre a sucursal em si é impossível; outras estruturas lícitas de atividade conjunta devem ser examinadas |
 | Sujeito de responsabilidade | Os contratos e dívidas incumbem em princípio à subsidiária | Os contratos e dívidas da sucursal incumbem à sociedade estrangeira |
 | Decisões essenciais e controlo da exploração | Segundo os órgãos e regras internas da forma social escolhida, tais como a assembleia dos acionistas e os administradores | Segundo o sistema de decisão da sede estrangeira e os poderes do responsável em Taiwan |
@@ -92,7 +92,7 @@ As obrigações dos administradores, do gerente (經理人) e do responsável em
 
 No estádio contratual, a limitação de responsabilidade, a indemnização, a fiança, as garantias, a lei aplicável e as cláusulas de resolução dos diferendos devem regular-se segundo o risco da atividade. Os riscos que podem ser transferidos por um seguro e os que devem prevenir-se pelo controlo interno devem distinguir-se. Se os poderes relativos ao selo e à assinatura eletrónica, a aprovação das despesas, a identificação do cliente, o cálculo e a declaração do imposto, a comunicação à autoridade de vigilância e o sistema de comunicação em caso de acidente forem clarificados, a separação jurídica que a forma de organização oferece pode também manter-se na exploração real.
 
-A comparação de responsabilidade não pode enfim encerrar-se pela só frase segundo a qual «a subsidiária é segura e a sucursal é perigosa». Na sucursal, a estrutura é clara: a sociedade estrangeira responde diretamente; na subsidiária, o ponto de partida é o princípio de pessoa coletiva independente e de responsabilidade limitada dos acionistas. Deve sobrepor-se-lhe a fiança, o ato ilícito, o abuso da personalidade jurídica, a responsabilidade regulamentar e os contratos de grupo para apreciar a exposição real e os meios de domínio.
+A comparação de responsabilidade não pode enfim encerrar-se pela só frase segundo a qual «a subsidiária é segura e a sucursal é perigosa». Na sucursal, a estrutura é clara: a sociedade estrangeira responde diretamente; na subsidiária, o ponto de partida é o princípio de pessoa coletiva independente e de responsabilidade limitada dos acionistas. Devem ter-se também em conta a fiança, o ato ilícito, o abuso da personalidade jurídica, a responsabilidade regulamentar e os contratos de grupo para apreciar a exposição real e os meios de domínio.
 
 ## 4. Financiamento e cotação em Taiwan
 
@@ -172,7 +172,7 @@ A escolha final é mais segura se for examinada por especialistas em Taiwan e no
 ## Fontes oficiais
 
 - [Base de dados normativa do Ministério da Justiça de Taiwan — Lei das sociedades](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Base de dados normativa do Ministério da Justiça de Taiwan — artigo 10 da Lei do imposto sobre as vendas (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Base de dados normativa do Ministério da Justiça de Taiwan — artigo 3 das Normas sobre as taxas de retenção na fonte por categoria de rendimentos (各類所得扣繳率標準) — dividendos pagos a não residentes; a disposição ligada não é o artigo 10 da lei do imposto sobre as vendas](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Base de dados normativa do Ministério da Justiça de Taiwan — Lei do imposto sobre o rendimento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministério das Finanças de Taiwan — indicação sobre a retenção na fonte dos dividendos pagos aos acionistas no estrangeiro](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministério das Finanças de Taiwan — interpretação relativa ao lucro da sucursal de uma sociedade estrangeira](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

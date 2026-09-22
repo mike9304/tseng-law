@@ -43,11 +43,11 @@ O artigo 15-1 exige um dos dois requisitos legais e, além disso, um exame separ
 
 Depois da confirmação do requisito legal, segundo o n.º 2 examina-se em separado se o período convencionado e a extensão da responsabilidade são razoáveis. O pacto que infringe o requisito legal do n.º 1 ou o critério de razoabilidade do n.º 2 é nulo segundo o n.º 3. Contudo, esta norma é um critério para examinar o conteúdo e os factos de cada pacto, não uma norma que declare à partida válidos ou nulos todos os pactos de período mínimo de trabalho.
 
-A circunstância de o trabalhador ter assinado o contrato pode ser um documento que confirma a existência do acordo, mas não substitui os requisitos legais. Inversamente, em vez de concluir à partida só porque o pacto é de longa duração, deve verificar-se que investimento ou que contrapartida houve e por que este período foi fixado.
+A circunstância de o trabalhador ter assinado o contrato pode ser um documento que confirma a existência do acordo, mas não substitui os requisitos legais. Inversamente, em vez de o dar por decidido à partida só porque o pacto é de longa duração, deve verificar-se que investimento ou que contrapartida houve e por que este período foi fixado.
 
 ## 2. Primeiro requisito legal: formação técnica especializada e assunção do custo
 
-Para fundar o pacto na formação, o empregador deve ter fornecido realmente ao trabalhador uma formação técnica especializada e ter assumido o custo. Não basta escrever no plano de formação que se trata de um curso profissional ou consignar um custo estimado no contrato. Deve poder ligar-se por documentos o tema da formação, o caráter profissional e técnico necessário para o posto, a duração concreta, se foi concluída e o desembolso real.
+Para fundar o pacto na formação, o empregador deve ter fornecido realmente ao trabalhador uma formação técnica especializada e ter assumido o custo. Não basta escrever no plano de formação que se trata de um curso profissional ou consignar um custo estimado no contrato. Deve poder ligar-se por documentos o tema da formação, a competência profissional ou técnica que o posto exige, a duração concreta, se foi concluída e o desembolso real.
 
 O objeto de exame compreende não só custos diretamente verificáveis, como os honorários de formadores externos, as propinas de um centro de formação e as taxas de materiais ou de equipamentos, mas também o fundamento de cálculo dos custos internos que o empregador alega. Se formou pessoal interno, deve ver-se de quem e de que tempo se trata, em que isso se distingue da supervisão habitual ou da transmissão do posto, e se há um fundamento para imputar esse custo a esse trabalhador. Um montante estimado ou uma repartição global não provam por si a carga real.
 
@@ -98,7 +98,7 @@ Os cursos que um empregado novo recebe de ordinário, como a explicação do reg
 
 Contudo, não se exclui sempre uma formação só porque foi ministrada no interior da empresa. Num mesmo programa podem misturar-se uma parte de adaptação geral e uma parte técnica especializada, de modo que o tema, o tempo, o custo e se há obrigação legal devem confirmar-se por curso. Quem alega a parte técnica especializada precisa de explicar por documentos que conteúdo se distingue da formação habitual e quem assumiu realmente o custo.
 
-Na prática, não se olha só para a capa do material de formação, mas aproximam-se o índice pormenorizado e o registo efetivo da formação ministrada. Deve verificar-se se se trata de um curso periódico que se repete, de um curso para uma qualificação ou uma competência de manuseamento de equipamentos concretos, de uma formação legalmente obrigatória, se o trabalhador participou realmente e se o montante pedido coincide com os comprovativos dos encargos de formação.
+Na prática, não se olha só para a capa do material de formação, mas examinam-se o índice pormenorizado e o registo efetivo da formação ministrada. Deve verificar-se se se trata de um curso periódico que se repete, de um curso para uma qualificação ou uma competência de manuseamento de equipamentos concretos, de uma formação legalmente obrigatória, se o trabalhador participou realmente e se o montante pedido coincide com os comprovativos dos encargos de formação.
 
 ## 6. Restituição de prémios e demissão antecipada
 
@@ -120,7 +120,7 @@ O artigo 15-1, n.º 4, da lei taiwanesa sobre as normas do trabalho dispõe que,
 
 Não se pode portanto reconhecer a infração do trabalhador pelo só facto de a relação de trabalho ter terminado antes do período convencionado. Deve verificar-se quem formulou que manifestação de vontade, qual é o fundamento jurídico da extinção do contrato e a que parte se imputam as circunstâncias reais que a produziram.
 
-Os documentos de exame podem incluir a notificação de despedimento, a carta de demissão, o documento de extinção de comum acordo, o correio eletrónico e o registo de mensagens, os documentos de alteração de condições de trabalho e o registo de presença e de trabalho. Mesmo se se mencionarem a saúde ou as circunstâncias do trabalho, não se conclui o resultado só segundo essa expressão, mas vê-se em conjunto o curso real, o fundamento legal da extinção e as provas ligadas.
+Os documentos de exame podem incluir a notificação de despedimento, a carta de demissão, o documento de extinção de comum acordo, o correio eletrónico e o registo de mensagens, os documentos de alteração de condições de trabalho e o registo de presença e de trabalho. Mesmo se se mencionarem a saúde ou as circunstâncias do trabalho, essa só expressão não deve determinar o resultado; vê-se em conjunto o curso real, o fundamento legal da extinção e as provas ligadas.
 
 O despedimento, a extinção de comum acordo e a alegação de infração das condições de trabalho são só exemplos de circunstâncias a examinar, não uma enumeração fechada das causas não imputáveis ao trabalhador. Uma extinção do mesmo nome pode diferir na vontade das partes e no curso, e o nome escrito no documento pode não coincidir com os factos reais.
 
@@ -157,7 +157,7 @@ Para prevenir um litígio ou examinar um pedido já colocado, não se deve ler s
 5. Documenta-se o fundamento de cálculo do período convencionado, a possibilidade de substituir pessoal do mesmo posto ou de um posto similar e a relação entre a necessidade operacional do empregador e o investimento real.
 6. Examina-se se o período convencionado e o montante de restituição são proporcionais à extensão dos encargos de formação ou da contrapartida, e reflete-se na liquidação o período já trabalhado.
 7. Depois da confirmação individual da causa de extinção e da imputação de responsabilidade, calculam-se a data real de extinção, o período cumprido e o não cumprido.
-8. Antes de reter sobre o salário ou de exigir a restituição, aproximam-se o contrato, os documentos de pagamento, a ficha de vencimento, as comunicações das partes, a interpelação e o registo de retenções para verificar o fundamento jurídico e o procedimento.
+8. Antes de reter sobre o salário ou de exigir a restituição, comparam-se o contrato, os documentos de pagamento, a ficha de vencimento, as comunicações das partes, a interpelação e o registo de retenções para verificar o fundamento jurídico e o procedimento.
 
 Mesmo se se utilizar um contrato-tipo, não se deve aplicar de forma mecânica o mesmo período e o mesmo montante a cada posto e a cada trabalhador. As cláusulas devem conceber-se refletindo o investimento de formação real, a contrapartida e a possibilidade de substituição, e a finalidade do pagamento e a fórmula proporcional devem comunicar-se de forma compreensível antes de concluir o contrato.
 

@@ -1,5 +1,5 @@
 ---
-title: "Indemnização por um ferimento em ginásio em Taiwan: assunto de primeira instância, prazos, provas e rubricas de indemnização"
+title: "Indemnização por um ferimento em ginásio em Taiwan: estudo de caso, prazos, provas e rubricas de indemnização"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "13 de setembro de 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
-# Indemnização por um ferimento em ginásio em Taiwan: assunto de primeira instância, prazos, provas e rubricas de indemnização
+# Indemnização por um ferimento em ginásio em Taiwan: estudo de caso, prazos, provas e rubricas de indemnização
 
 ![Imagem principal](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
@@ -71,7 +71,7 @@ O [artigo 7 da lei taiwanesa de proteção dos consumidores (消費者保護法)
 
 Isso não significa que a responsabilidade da empresa ou do treinador seja reconhecida cada vez que um ferimento ocorre em ginásio. Deve apreciar-se, assunto a assunto, que dever de diligência existia concretamente, se foi violado, se há um nexo de causalidade entre a violação e o ferimento, se um prejuízo real se produziu, que defesas tem a parte adversa, e se existe uma prova que sustente cada alegação e cada defesa.
 
-Se as condições legais do crime de ofensa à integridade física por negligência (過失傷害) estiverem reunidas, pode examinar-se a queixa penal (告訴). Pode também examinar-se o pedido civil de indemnização, mas que fundamento se aplica entre a responsabilidade contratual, a responsabilidade delitual (侵權行為) e a responsabilidade de proteção do consumidor, bem como a extensão da responsabilidade, variam segundo os factos concretos. Que vários procedimentos possam ser examinados para um mesmo acidente não significa que se devam seguir todos, nem que o êxito de uma das partes esteja adquirido.
+Se as condições legais do crime de ofensa à integridade física por negligência (過失傷害) estiverem reunidas, pode examinar-se a queixa penal (告訴). Pode também examinar-se o pedido civil de indemnização, mas que fundamento se aplica entre a responsabilidade contratual, a responsabilidade delitual (侵權行為) e a responsabilidade de proteção do consumidor, bem como a extensão da responsabilidade, variam segundo os factos concretos. Que vários procedimentos possam ser examinados para um mesmo acidente não significa que se devam seguir todos, nem que o êxito de alguma das partes fique assegurado.
 
 ## 2. Que prazos se aplicam à queixa penal e à indemnização civil?
 
@@ -79,7 +79,7 @@ Segundo o [artigo 287 do Código Penal taiwanês (刑法)](https://law.moj.gov.t
 
 O direito de pedir indemnização por delito segundo o [artigo 197 do Código Civil taiwanês (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) extingue-se, em princípio, se não for exercido durante 2 anos a contar do momento em que a vítima conheceu o prejuízo e o devedor da indemnização, e extingue-se também quando 10 anos se escoaram desde o delito.
 
-Contudo, se outra causa de pedir, como a responsabilidade contratual, entrar em jogo, ou se outras regras se aplicarem ao ponto de partida, ao curso, à interrupção, etc., isso pode variar segundo os factos. Não se deve fixar o prazo só segundo a data do acidente ou do diagnóstico; é mais seguro verificar de forma precoce e individual os fundamentos possíveis do pedido e as datas de referência.
+Contudo, se outra causa de pedir, como a responsabilidade contratual, entrar em jogo, ou se outras regras se aplicarem ao ponto de partida, ao curso, à interrupção, etc., isso pode variar segundo os factos. Não se deve fixar o prazo só segundo a data do acidente ou do diagnóstico; é mais seguro identificar desde cedo, e caso a caso, os fundamentos possíveis do pedido e as datas de referência.
 
 ## 3. Logo depois do acidente, que provas devem conservar-se e como?
 
@@ -91,11 +91,11 @@ Se as circunstâncias do acidente puderem preencher os elementos de uma infraç�
 
 ## 4. Que rubricas de prejuízo se podem pedir ao ginásio?
 
-As rubricas de prejuízo cujo pedido se pode examinar são os seguintes. O reconhecimento real e o montante dependem da necessidade de cada despesa, do nexo de causalidade com o acidente, dos comprovativos, da proporção de responsabilidade e da apreciação do tribunal.
+As rubricas de prejuízo cujo pedido se pode examinar são as seguintes. O reconhecimento real e o montante dependem da necessidade de cada despesa, do nexo de causalidade com o acidente, dos comprovativos, da proporção de responsabilidade e da apreciação do tribunal.
 
-1. **Encargos médicos**: Os encargos realmente desembolsados para a consulta, os exames, o tratamento, os medicamentos e a reabilitação provam-se pelos recibos e o processo clínico.
+1. **Encargos médicos**: Os encargos realmente desembolsados para a consulta, os exames, o tratamento, os medicamentos e a reabilitação provam-se pelos recibos e pelo processo clínico.
 2. **Encargos de cuidados ou de assistência**: Se, face ao grau do ferimento e à evolução do tratamento, os cuidados eram necessários, e se o período e o custo são adequados, examina-se com os documentos médicos e de despesa.
-3. **Encargos de transporte**: Os encargos necessários para ir e voltar ao centro de cuidados para o tratamento provam-se pelo registo dos deslocamentos, os recibos e documentos similares.
+3. **Encargos de transporte**: Os encargos necessários das deslocações de ida e volta ao centro de cuidados, para o tratamento, provam-se pelo registo dos trajetos, pelos recibos e por documentos semelhantes.
 4. **Prejuízo por perda de capacidade de trabalho (勞動能力減損)**: Se sequelas e uma diminuição persistente da capacidade de trabalho forem reconhecidas, pode avaliar-se de forma conjunta com documentos médicos e profissionais, o grau de incapacidade, a profissão e os rendimentos, e o período de trabalho restante. A simples percentagem de incapacidade não fixa a indemnização, e a perda não é calculada automaticamente até ao momento da reforma.
 5. **Perda de rendimentos durante o período de restabelecimento (收入損失)**: O período durante o qual realmente não se pôde trabalhar em razão do tratamento ou do repouso, e a redução de rendimentos que daí resultou, devem ser provados por documentos de salário, fiscais, de presença no trabalho, etc.
 6. **Prejuízo extrapatrimonial (非財產上損害)**: O montante para o sofrimento moral é fixado pelo tribunal a partir de fatores de cada assunto, como o grau do ferimento, o período de tratamento, as sequelas e as circunstâncias concretas da parte.
@@ -105,9 +105,9 @@ As rubricas de prejuízo cujo pedido se pode examinar são os seguintes. O recon
 
 Sim. O facto de existir um seguro pode ser pertinente quando se examina a fonte da indemnização, mas por si mesmo não reconhece a responsabilidade jurídica do ginásio ou do treinador nem fixa o montante a pagar. Controvérsias podem nascer entre o segurador (保險人) e as partes sobre o limite de cobertura e as cláusulas de exclusão, o nexo de causalidade entre o acidente e o ferimento, e a necessidade e o montante de cada rubrica de prejuízo.
 
-Em particular, a perda de capacidade de trabalho, a redução de rendimentos durante o período de restabelecimento e o prejuízo extrapatrimonial podem exigir documentos médicos, de rendimentos e de profissão, ou um parecer de perito. O montante que o segurador propõe ou o que a vítima pede não se torna de imediato o montante reconhecido pelo tribunal, e o resultado da avaliação da incapacidade também não determina automaticamente a indemnização. Na ação real, devem verificar-se em conjunto a apólice e as condições, o conteúdo da notificação do acidente, a resposta do segurador, a evolução do tratamento e os documentos do prejuízo.
+Em particular, a perda de capacidade de trabalho, a redução de rendimentos durante o período de restabelecimento e o prejuízo extrapatrimonial podem exigir documentos médicos, de rendimentos e de profissão, ou um parecer de perito. O montante que o segurador propõe ou o que a vítima pede não se torna de imediato o montante reconhecido pelo tribunal, e o resultado da avaliação da incapacidade também não determina automaticamente a indemnização. Na prática, devem verificar-se em conjunto a apólice e as condições, o conteúdo da notificação do acidente, a resposta do segurador, a evolução do tratamento e os documentos do prejuízo.
 
-Se sofreu um ferimento em ginásio, o importante é receber primeiro os cuidados médicos necessários, conservar os documentos que ainda se possam preservar antes de desaparecerem e, de forma precoce, recolher uma orientação individual sobre os prazos e procedimentos que podem aplicar-se ao assunto. A negociação, a reclamação de consumo (消費申訴) ou a mediação (調解), a queixa penal e o pedido civil de indemnização são todos meios que se pode escolher segundo o assunto, e não são procedimentos que seria preciso seguir sempre na totalidade.
+Se sofreu um ferimento em ginásio, o importante é receber primeiro os cuidados médicos necessários, conservar os documentos que ainda se possam preservar antes de desaparecerem e recolher desde cedo uma orientação caso a caso sobre os prazos e procedimentos que podem aplicar-se ao assunto. A negociação, a reclamação de consumo (消費申訴) ou a mediação (調解), a queixa penal e o pedido civil de indemnização são todos meios que se pode escolher segundo o assunto, e não são procedimentos que seria preciso seguir sempre na totalidade.
 
 Uma queda no solo de um estabelecimento, um prejuízo à saúde por alimentos e um ferimento ocorrido ao utilizar um serviço profissional podem também suscitar controvérsia sobre a obrigação de segurança, o nexo de causalidade, o prejuízo e a prova. Contudo, a conclusão de um caso de ginásio não pode aplicar-se tal qual a outro acidente, de modo que o contrato, o comportamento e as normas aplicáveis de cada caso devem ser examinados separadamente.
 

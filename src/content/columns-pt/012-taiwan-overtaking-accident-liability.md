@@ -27,7 +27,7 @@ Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de tr
 
 O veículo de trás só pode ultrapassar depois de o veículo da frente ter abrandado e se ter afastado, ou ter manifestado a sua vontade de ceder a passagem por um sinal da mão ou pelo intermitente direito.
 
-Em seguida, o veículo que ultrapassa deve acender o intermitente esquerdo, passar à esquerda mantendo uma distância de pelo menos 0,5 metro relativamente ao veículo da frente e, uma distância de segurança uma vez assegurada, acender o intermitente direito e regressar em segurança à via de origem.
+Em seguida, o veículo que ultrapassa deve acender o intermitente esquerdo, passar à esquerda mantendo uma distância de pelo menos 0,5 metro relativamente ao veículo da frente e, uma vez assegurada uma distância de segurança, acender o intermitente direito e regressar em segurança à via de origem.
 
 Esta ordem de sinais e de cedência de passagem na mesma via não significa que a ultrapassagem seria autorizada num local ou numa condição interditos. Antes de começar a ultrapassagem, todas as condições do artigo 101 devem ser apreciadas em conjunto.
 
@@ -41,15 +41,15 @@ A tentou ultrapassar os dois veículos, entrou na via oposta e acelerou. O veíc
 
 B sofreu lesões graves na cabeça e faleceu no local; A perdeu a consciência e foi transportado para o hospital.
 
-Os próximos de A e de B viram primeiro a mudança brusca de via do veículo n.º 2 como a causa principal da colisão. O assunto deu lugar a um processo e, no curso do procedimento, várias perícias (鑑定) do acidente foram praticadas.
+Os familiares de A e de B viram primeiro a mudança brusca de via do veículo n.º 2 como a causa principal da colisão. O assunto deu lugar a um processo e, no curso do procedimento, foram realizadas várias perícias (鑑定) do acidente.
 
-Segundo o resultado da perícia, A suportava a responsabilidade principal desta colisão. Esta conclusão estava limitada aos factos deste assunto. A perícia teve em conta em conjunto o facto de A querer ultrapassar dois veículos da frente que circulavam um atrás do outro, de se ter lançado na via oposta, de circular a uma velocidade que deixava apenas uma margem de travagem, de os sinais de buzina e de faróis prescritos terem faltado, bem como o movimento de mudança de via do veículo n.º 2, a estrutura da estrada e das vias e as outras provas recolhidas.
+Segundo o resultado da perícia, A suportava a responsabilidade principal desta colisão. Esta conclusão estava limitada aos factos deste assunto. A perícia teve em conta em conjunto o facto de A querer ultrapassar dois veículos da frente que circulavam um atrás do outro, de se ter lançado na via oposta, de circular a uma velocidade que mal deixava tempo para travar, de os sinais de buzina e de faróis prescritos terem faltado, bem como o movimento de mudança de via do veículo n.º 2, a estrutura da estrada e das vias e as outras provas recolhidas.
 
 O resultado da perícia deste caso não significa que a omissão de um só sinal prescrito fixe sempre a responsabilidade. A culpa (過失) num acidente de ultrapassagem depende do local do acidente, da configuração das vias, da velocidade, dos movimentos dos veículos, dos sinais, dos intervalos de tempo, da visibilidade e das outras provas.
 
 ## Pontos a verificar para apreciar a responsabilidade do acidente
 
-Antes de ultrapassar, deve primeiro verificar-se se o local ou a situação do tráfego entra na interdição de ultrapassar. Se o procedimento da mesma via se aplicar, dê o sinal de buzina ou de faróis prescrito, sem forçar o veículo da frente a ceder, aguarde um sinal claro de cedência de passagem e conclua a ultrapassagem com um afastamento suficiente e uma distância de regresso segura.
+Antes de ultrapassar, deve primeiro verificar-se se o local ou a situação do tráfego entra na interdição de ultrapassar. Se o procedimento da mesma via se aplicar, deve dar-se o sinal de buzina ou de faróis prescrito, sem forçar o veículo da frente a ceder, aguarde um sinal claro de cedência de passagem e conclua a ultrapassagem com um afastamento suficiente e uma distância de regresso segura.
 
 O respeito do artigo 101 é importante, mas não assegura, por si só, nem que o acidente seja evitado nem um resultado determinado da perícia ou do processo. Os condutores devem reservar uma margem de segurança suplementar e adaptar-se à situação à frente.
 

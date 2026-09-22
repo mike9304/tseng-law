@@ -1556,7 +1556,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'O que fazemos',
           paragraphs: [
-            'Hovering International Law Firm é um escritório de advogados estabelecido em Taiwan. Trabalha segundo o direito taiwanês e tem escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Aconselhamos empresas e conduzimos procedimentos perante os tribunais, e acompanhamos clientes do estrangeiro nos trâmites que devem seguir-se em Taiwan.',
+            'Hovering International Law Firm é um escritório de advogados estabelecido em Taiwan. Trabalha segundo o direito taiwanês e tem escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Aconselhamos empresas e conduzimos procedimentos perante os tribunais, e acompanhamos clientes do estrangeiro nos trâmites exigidos em Taiwan.',
             'Todo o conteúdo destas páginas é geral. O resultado de um assunto depende dos factos, das normas aplicáveis e do momento. Estas indicações não substituem uma conversa com uma advogada ou um advogado sobre o seu processo.',
           ],
         },
@@ -1601,7 +1601,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investimento e constituição de sociedades em Taiwan',
           paragraphs: [
-            'Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, banca, verificação do local de atividade e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes de constituir e operar em Taiwan.',
+            'Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, banca, verificação do local de atividade e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes da constituição e do funcionamento em Taiwan.',
             'A ordem e a duração do processo variam segundo a forma societária, o investidor, o setor, o banco e os documentos disponíveis. Constituir uma sociedade não produz, por si só, um título de residência (居留) nem uma autorização de trabalho (工作許可): são trâmites distintos, apreciados segundo a situação de cada pessoa.',
           ],
         },
@@ -1609,7 +1609,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'Litígios civis e indemnizações',
           paragraphs: [
             'Este grupo cobre conflitos contratuais, pedidos de indemnização por ato ilícito e conflitos de consumo. O trabalho costuma começar por uma cronologia dos factos, a revisão de documentos e provas existentes e, só depois, os passos seguintes.',
-            'Os prazos, incluindo os prazos legais para demandar, e a integridade das provas marcam o curso do assunto civil, pelo que deve indicar desde o início as datas que conheça. Se conservar contratos, mensagens, comprovativos de pagamento ou fotografias do local, mencione-os na primeira mensagem.',
+            'Os prazos, incluindo os prazos legais para demandar, e o caráter completo das provas marcam o curso do assunto civil, pelo que deve indicar desde o início as datas que conheça. Se conservar contratos, mensagens, comprovativos de pagamento ou fotografias do local, mencione-os na primeira mensagem.',
           ],
         },
         {
@@ -1622,7 +1622,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Conflitos laborais',
           paragraphs: [
-            'Este grupo cobre a cessação do contrato de trabalho, a indemnização por despedimento segundo o direito de Taiwan (資遣費; não se confunde com as figuras de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.',
+            'Este grupo cobre a cessação do contrato de trabalho, a indemnização por despedimento segundo o direito de Taiwan (資遣費; não se confunde com a indemnização por despedimento nem com as regras de proteção no despedimento de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.',
             'O contrato de trabalho, o regulamento interno (工作規則), os recibos de vencimento e a troca escrita entre as partes são, em regra, os documentos decisivos. Se ainda os conserva, indique-o no resumo.',
           ],
         },
@@ -1661,7 +1661,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fundação e estrutura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) foi fundado em 2016 por advogadas e advogados formados na National Taiwan University (國立臺灣大學). O nome chinês 昊鼎 une o caráter 昊 («céu amplo») e o caráter 鼎 («base sólida») e descreve a orientação do escritório desde a fundação.',
-            'Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na governação de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para responder às necessidades locais.',
+            'Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na gestão de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para responder às necessidades locais.',
             'Além do trabalho de advocacia, em 2020 criou-se Hovering Accounting Office, que oferece contabilidade e planeamento fiscal a empresários e a particulares com património elevado.',
           ],
         },
@@ -1676,7 +1676,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'Quando nos contacta',
           paragraphs: [
             'Após receber o seu resumo, uma advogada ou um advogado examina o conteúdo e fala depois do âmbito possível, dos documentos ainda necessários e dos passos seguintes. Se o assunto colocar questões contabilísticas ou fiscais, o escritório pode trabalhar com a área de contabilidade de forma integrada.',
-            'O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta concreta para a sua situação, esse processo deve ser discutido diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.',
+            'O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta em que possa basear-se para a sua situação, os documentos devem ser discutidos diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.',
           ],
         },
       ],
@@ -1861,7 +1861,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'Onde se guarda e quem pode vê-lo',
           paragraphs: [
             'O conteúdo do seu envio guarda-se num lugar que não é de acesso público, e só as pessoas autorizadas do escritório podem aceder a ele para tramitar esse pedido.',
-            'Esta página não oferece uma segurança absoluta. Nenhuma via de envio nem de armazenamento é de todo segura, pelo que o material sensível convém enviá-lo apenas segundo as indicações concretas da advogada ou do advogado.',
+            'Esta página não oferece uma segurança absoluta. Nenhuma via de envio nem de armazenamento é de todo segura, pelo que convém enviar o material sensível apenas segundo as indicações concretas da advogada ou do advogado.',
           ],
         },
         {
@@ -1938,7 +1938,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       description:
         'Artigos em português que explicam temas frequentes do direito de Taiwan. O conteúdo é informação geral no momento da sua publicação, não um parecer jurídico para o seu caso.',
       intro:
-        'O escritório publica artigos que explicam temas frequentes do direito de Taiwan. Os artigos disponíveis em português encontram-se nesta página; além disso há quatro ligações, cada uma abre a lista de artigos de uma língua original.',
+        'O escritório publica artigos que explicam temas frequentes do direito de Taiwan. Os artigos disponíveis em português encontram-se nesta página; além disso há quatro ligações; cada uma abre a lista de artigos de uma língua original.',
       sections: [
         {
           heading: 'Quatro listas segundo a língua',

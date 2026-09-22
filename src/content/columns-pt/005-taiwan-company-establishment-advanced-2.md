@@ -25,7 +25,7 @@ As perguntas e respostas seguintes visam ajudar as pessoas que ponderam uma cons
 
 ​
 
-**1. Na transferência do capital (資本額) desde a Coreia para a conta preparatória de uma sociedade taiwanesa (公司籌備處帳戶), a que se deve prestar atenção? (este ponto concerne o regime coreano e a prática bancária da Coreia)**
+**1. Na transferência do capital (資本額) desde a Coreia para a conta da sociedade taiwanesa em formação (公司籌備處帳戶), a que se deve prestar atenção? (este ponto concerne o regime coreano e a prática bancária da Coreia)**
 
 Em geral, os bancos da Coreia exigem que o investidor se dirija **em pessoa** a um banco na Coreia e transfira os fundos a partir de uma conta em seu próprio nome.
 
@@ -37,29 +37,29 @@ Antes de transferir o capital (資本金匯款), informe-se junto do banco no pa
 
 **​**
 
-**2. No pagamento do capital social, podem transferir-se dólares de Taiwan (新臺幣, TWD) da conta pessoal em Taiwan para a conta preparatória da sociedade taiwanesa?**
+**2. No pagamento do capital social, podem transferir-se dólares de Taiwan (新臺幣, TWD) da conta pessoal em Taiwan para a conta da sociedade taiwanesa em formação?**
 
 É possível, mas devem produzir-se peças que justifiquem a origem dos fundos em dólares de Taiwan adquiridos em Taiwan.
 
-Se se tratar por exemplo de rendimentos salariais obtidos em Taiwan, deve apresentar-se uma cópia da comprovativo de retenção na fonte sobre esses rendimentos salariais (薪資所得的扣繳憑單影本).
+Se se tratar por exemplo de rendimentos salariais obtidos em Taiwan, deve apresentar-se uma cópia do comprovativo de retenção na fonte sobre esses rendimentos salariais (薪資所得的扣繳憑單影本).
 
-Se se tratar de dividendos e de lucros provenientes de um investimento numa empresa em Taiwan, deve apresentar-se uma cópia da comprovativo de retenção na fonte sobre esses dividendos e lucros (股息和紅利的扣繳憑單影本).
+Se se tratar de dividendos e de lucros provenientes de um investimento numa empresa em Taiwan, deve apresentar-se uma cópia do comprovativo de retenção na fonte sobre esses dividendos e lucros (股息和紅利的扣繳憑單影本).
 
 Se a transferência for efetuada a partir de uma conta bancária na Coreia, não é necessário juntar peças relativas à origem dos fundos.
 
 **​**
 
-**3. Depois da chegada do capital à conta preparatória, quando pode ser convertida em conta social ordinária (正式公司帳戶)?**
+**3. Depois da chegada do capital à conta da sociedade em formação, quando pode ser convertida em conta bancária ordinária da sociedade (正式公司帳戶)?**
 
-Em geral, uma vez recebidos os documentos de inscrição da pessoa coletiva (法人登記文件),
+Em geral, os documentos de inscrição da pessoa coletiva (法人登記文件) são primeiro recebidos.
 
-o responsável (負責人) pode dirigir-se ao banco e converter a conta preparatória da sociedade em conta ordinária.
+O responsável (負責人) pode então dirigir-se ao banco e converter a conta da sociedade em formação em conta ordinária.
 
 Contudo, como as regras internas de cada banco (銀行) diferem, se for preciso utilizar o capital de urgência, convém dirigir-se primeiro ao banco.
 
 **​**
 
-**4. Depois da conversão da conta preparatória em conta ordinária, o banco em linha pode ser utilizado de imediato?**
+**4. Depois da conversão da conta da sociedade em formação em conta ordinária, o banco em linha pode ser utilizado de imediato?**
 
 Isso varia segundo os bancos; em geral, é necessário pelo menos um número de telemóvel.
 

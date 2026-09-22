@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Bild som förklarar bedömningen av ansvar vid omkörningsolycka i Taiwan och det säkra omkörningsförfarandet](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-När fordonet framför kör långsamt kan omkörning (超車) verka som ett vanligt val, men det är ett körbeteende med betydande risk. Innan omkörningen påbörjas måste vägavsnittet, trafikläget i båda riktningarna, rörelsen hos fordonen framför och utrymmet för att tryggt återgå till ursprungligt körfält undersökas tillsammans.
+När fordonet framför kör långsamt kan omkörning (超車) verka som något vardagligt, men det är ett körbeteende med betydande risk. Innan omkörningen påbörjas måste vägavsnittet, trafikläget i båda riktningarna, rörelsen hos fordonen framför och utrymmet för att tryggt återgå till ursprungligt körfält undersökas tillsammans.
 
 ## Omkörningsvillkor enligt artikel 101 i förordningen om trafiksäkerhet (道路交通安全規則)
 

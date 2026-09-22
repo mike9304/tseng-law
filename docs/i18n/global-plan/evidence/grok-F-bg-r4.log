@@ -1,0 +1,112 @@
+WO-F-bg r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-bg-r4
+date: 2026-09-23
+
+## Rows applied
+
+46 of 52 P1/P2 rows. P3: none in this round.
+
+Part a
+1 P1 001/004 常設機構: постоянно представителство → място на стопанска дейност (liaison office 代表人辦事處 left as представителство).
+2 P1 001/004 居住者證明: удостоверение за местно лице. ARC (外僑居留證) stays удостоверение за пребиваване. The unglossed treaty sentence in 004 was the same certificate and was changed with it.
+4 P1 007 holding, FAQ answer and the repeated body: significant time since the cause arose, or the cause lasting long enough, and a manifestly harsh result.
+5 P2 guidance Kaohsiung: корпоративната практика → корпоративното управление.
+6 P2 001/002/004 營利事業 → предприятия, насочени към печалба. 015 търговско предприятие (sole proprietorship / 商業) left.
+7 P2 001/004 受益所有人 → притежател на дохода. 003 vehicle ползвател and 010 gym ползвател left. 實質受益人 stays действителен собственик.
+8 P2 004 liquidator list: appointing a liquidator, and the list is what the procedure requires.
+9 P2 007 有責配偶 and издръжка за съпруг без вина: страната, която носи вина / страната без вина (FAQ question, heading, both holdings, both „без вина“ answers, Art. 1057 sentence). Other съпруг/съпруга pairs left.
+10 P2 007 the at-fault spouse’s petition is neither always open nor always barred (both copies).
+11 P2 008 difficulty row: absolute Малка / Голяма / Малка, with the no-promised-outcome clause kept in the row header.
+12 P2 offices reviewCountWord: отзиви → отзива (17 отзива).
+14 P2 003 waiver: отказ is masculine; the extinguished rights are those waived by the wording of the instrument.
+15 P2 003 hospital visit takes an object.
+17 P2 008: the conditional now opens „Ако работите в Тайван,“ and the next block stays the main clause. Blocks were not merged.
+18 P2 009: the four existing lines now continue one sentence (employer and worker both at fault; a dispute; the party who terminates first on sufficient grounds may withhold or claim). Blocks were not merged.
+19 P2 five mega-menu viewAllLabel: Покажете всички → Вижте всички. The pinning test expected string was updated and nothing else in that test.
+20 P2 004 issuer/listing: самостоятелен емитент (發行公司); допуснат до листване (上市); форма на емитент, годна за листване. The doubled „самият клон сам“ was cleaned.
+21 P2 007 child-support change is not limited to an unforeseeable event.
+
+Part b
+1 P1 010 punitive damages are actually awarded, and in what amount.
+2 P1 014 разумна съразмерност. The (人力替補困難) gloss stays.
+3 P1 016 transfer of title, not a change of a person’s name.
+4 P1 018 the paragraph compares branch and subsidiary registration, not contract design. The next sentence stays.
+5+12 P2 010 comma after „статия“, and the trainer was instructing him.
+6+9 P2 010 the trader must provide the safety reasonably expected under the professional or technical standards then in force.
+7 P2 010 съставът на телесна повреда по непредпазливост. Same indicia calque in that article’s punitive sentence: конкретните признаци → конкретните изисквания.
+8 P2 010 the gym outcome is not carried over wholesale.
+10 P2 010 конкретното указание.
+11 P2 010 confirmed final disposition of the first-instance case.
+13 P2 010 and 016, and the same calque in 007: начало, not начална точка.
+14 P2 010 своевременно (early stage), both sentences. 013 „отидете рано“ is early in the day at the immigration office and stays. „по-рано“ / „забеляза рано“ are not the stage calque.
+15 P2 011 договорно разпределените задължения.
+16 P2 011 quality and safety can still be substantiated.
+18 P2 014 who ultimately bore each cost.
+19 P2 014 the resignation takes effect (поражда действие). Other действително in the file are „actually“ and stay.
+20 P2 014 the repayment centers on purpose, disclosure, vesting, and proportion.
+21 P2 014 фактически или правно, not bodily restraint.
+22 P2 014 the file number is a letter: Писмо … № 勞動關2字第1150141814號. The number is unchanged. The other „указания от 5 юни 2026 г.“ lines stay.
+23 P2 016 наследяване по заместване (代位繼承), five times (FAQ, sections 1 and 4). Inventory „представяне на опис“ stays. Wording follows the verdict’s Inheritance Act term „заместване“, not the row’s „по право на заместване“, which still kept the calque frame.
+24 P2 016 самостоятелно имущество на детето (特有財產), both copies.
+25 P2 016 a guardian is not the same as a parent exercising parental rights.
+26 P2 016 the guidance is not used to compute a deadline in a particular case.
+27 P2 017 сключване на договор.
+28 P2 018 срокът за учредяване.
+29 P2 018 указанията на отговорната адвокатка. Branch „отговорното лице“ in the tables stays the company’s responsible person.
+
+## Rows skipped
+
+a-3 P1 004 link label „член 10“ on the flno=3 withholding-rate link. Removing „10“ makes the number checker report missing 10 against the Korean source. URL unchanged. The label is restored. The reviewer’s point (flno=3 is not article 10) is right; the digit cannot come out.
+a-13 P2 and b-30 P2, and the thousands systemic pattern in both verdicts. ACCEPTED-ROUND and R14: bg must keep dot-thousands (500.000). A space separator fails the checker. Decimal comma 0,5 unchanged. No instances rewritten.
+a-16 P2 and b-17 P2, and the U+200B systemic pattern (003, 005, 006, 008, 009, 013, 015, including 005 **​**). The Korean source has the same zero-width spaces and the checker compares the count. New ## Q16 headings would also change heading levels. 0 instances removed.
+a-22 P2 guidance „TWD 1.57M“. ACCEPTED-ROUND: the token stays byte-identical. Not rewritten to „1,57 млн. TWD“.
+
+## Systemic patterns and instances changed
+
+- 常設機構 / постоянно представителство → място на стопанска дейност: 20 (001: 4, of which 1 definite; 004: 16, of which 4 definite, including the heading, fixed-place, construction, services, and agency).
+- 營利事業 / търговско предприятие as the profit-seeking enterprise → предприятие, насочено към печалба: 13 (001: 3, 002: 1, 004: 9).
+- 受益所有人 / ползвател → притежател на дохода: 7 (001: 2, 004: 5).
+- 有責配偶 and the innocent-spouse support gendered as the husband only: 7 sites in 007 (question, heading, two holdings, two „без вина“, Art. 1057 sentence).
+- начална точка → начало: 7 (007: 3, 010: 1, 016: 3).
+- наследяване по право на представяне → наследяване по заместване: 5 in 016.
+- рано = at an early stage → своевременно: 2 in 010.
+- issuer / субект на листване: 3 емитент phrases that were „самостоятелно емитиращо дружество“, 1 „форма на емитент“, 3 „допуснат до листване“.
+- Покажете всички → Вижте всички: 5 guidance labels.
+- Thousands grouped with a dot, and U+200B layout: pattern confirmed, 0 changed (see skipped).
+- R2–R13, R15–R17 already held in this pack (consultation lock, feminine Wei Tseng, ROC year gloss, no Russian paragraphs, no English Paralegal/OUR TEAM/OFFICES chrome, no Hangul outside url). Not reopened except where a row above required it.
+- R6 quotation marks, dates, and the decimal comma were already Bulgarian. Not restyled.
+
+## Verify
+
+cd /Users/son7/Projects/tseng-law-fix-bg-r4 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-bg --lang bg 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-bg src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      19
+
+The 19 is the count before this log file existed. This log is an additional untracked path. A comma was added to the 009 continuation after the typecheck and vitest run; the checker above was re-run on the final text and is the tail shown.
+
+## Reviewer points not applied because they conflict with the product, not because the Bulgarian is wrong
+
+- Space thousands separators and „1,57 млн.“ for the pinned TWD 1.57M figure. Bulgarian grouping and „млн.“ are what a native editor would write. This pipeline cannot parse a space separator, and a test pins the byte string TWD 1.57M.
+- Deleting U+200B and turning Q16–Q20 into new headings. The fragment layout is the Korean source’s, including the empty bold lines in 005. The English file does not use ## Q16 either. The checker pins the zero-width count and the heading levels.
+- „Член 10“ on the flno=3 link is the wrong article, as the reviewer says. The digit is in the Korean source, so the checker rejects a label that drops it.

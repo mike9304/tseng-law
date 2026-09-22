@@ -60,7 +60,7 @@ Skráningarmerki ökutækja (車輛牌照) til atvinnunota, sem gefin eru út ti
 
 ### Erlend fjárfesting og atvinnugreinasamþykki
 
-Samkvæmt 35. gr. vegalaga (公路法) skal útlendingur eða erlendur lögaðili, sem á Taívan vill fjárfesta í og reka vöruflutninga með vélknúnum ökutækjum, fyrst öðlast samþykki samgönguráðuneytisins, miðlægs lögbærs yfirvalds samkvæmt sömu lögum. Ekki má staðnæmast við könnun almenns samþykkis erlendrar fjárfestingar, heldur skal í viðskiptaáætlun sérstaklega taka inn samþykki samgönguráðuneytisins varðandi greinina vöruflutninga með vélknúnum ökutækjum.
+Samkvæmt 35. gr. vegalaga (公路法) skal útlendingur eða erlendur lögaðili, sem á Taívan vill fjárfesta í og reka vöruflutninga með vélknúnum ökutækjum, fyrst öðlast samþykki samgönguráðuneytisins, miðlægs lögbærs yfirvalds samkvæmt sömu lögum. Ekki má staðnæmast við könnun almenns samþykkis erlendrar fjárfestingar, heldur skal í viðskiptaáætlun sérstaklega taka inn samþykki samgönguráðuneytisins varðandi atvinnugreinina vöruflutninga með vélknúnum ökutækjum.
 
 Núverandi lögbært yfirvald almennrar erlendrar fjárfestingar er fjárfestingarathugunardeild efnahagsráðuneytisins (經濟部投資審議司). Þó fylgir ekki hver erlend fjárfesting sama afgreiðslustað og sömu málsmeðferð. Fjárfesting í verðbréfum í kauphöll eða á opnum tilboðsmarkaði, útibú (分公司) erlends félags, mál sem yfirvöld vísinda- og iðnaðargarða meðhöndla, og fjárfesting frá meginlandi Kína geta lotið ólíkum afgreiðslustöðum eða sérstöku skipulagi. Við fjárfestingu í vöruflutningum með vélknúnum ökutækjum skal, auk staðfestingar viðeigandi fjárfestingarleiðar, atvinnugreinasamþykki samkvæmt 35. gr. vegalaga innt af hendi.
 
@@ -74,7 +74,7 @@ Röðun skrefanna og framlagningaryfirvald skal staðfesta að nýju eftir hverj
 4. Ljúkið félaga- og verslunarskráningu, og undirbúið samþykkta starfsstöð, bílastæðaaðstöðu (停車設施), viðhaldskerfi, ökutæki, tryggingar og skipulag.
 5. Sækið um rekstrarleyfi, gangið í viðeigandi atvinnugreinafélag og hefjið síðan rekstur eftir samþykktu starfssviði.
 
-Starfsstöð og bílastæðaaðstaða skulu uppfylla viðmið sem gildir um viðkomandi starfsemi, og gögn sem votta eignarrétt eða notkunarrétt skulu lögð fram. Ekki má slá því föstu eins í öllum tilvikum að hver rekstraraðili verði nauðsynlega að leigja eigið sérstakt bílastæði. Samþykktir, hluthafaskrá, samþykkisgögn bílastæðaaðstöðu (停車設施), sönnun um eign eða notkun starfsstöðvar og bílastæðaaðstöðu, viðhaldssamningur, kaupvottorð ökutækja og ökutækjalisti skulu bornir saman við gildandi gátlista vegamálastofnunarinnar á umsóknarstund.
+Starfsstöð og bílastæðaaðstaða skulu uppfylla viðmið sem gildir um viðkomandi starfsemi, og gögn sem votta eignarrétt eða notkunarrétt skulu lögð fram. Ekki má slá því föstu eins í öllum tilvikum að hver rekstraraðili verði nauðsynlega að leigja eigið sérstakt bílastæði. Samþykktir, hluthafaskrá, samþykkisgögn bílastæðaaðstöðu (停車設施), sönnun um eign eða notkun starfsstöðvar og bílastæðaaðstöðu, viðhaldssamningur, kaupvottorð ökutækja og ökutækjalisti skulu bornir saman við gildandi gátlista vegamálastofnunarinnar á umsóknartíma.
 
 Að undirbúningsleyfi fengnu skal undirbúningnum að jafnaði vera lokið á 6 mánuðum. Framlenging, þegar sérstakar aðstæður eru fyrir hendi, er möguleg í að hámarki 6 viðbótarmánuði. Að rekstrarleyfi gefnu út skal rekstur að jafnaði hefjast á 1 mánuði, og tilkynnt er til lögbærs vegaeftirlits með afriti gilds félagsskírteinis sem viðeigandi atvinnugreinafélag hefur gefið út. Þar sem sá tími sem þarf til að ljúka málinu, lóð og aðstöðu, ökutækjum og tryggingum er misjafn eftir máli, má ekki fyrirfram ákveða lokatíma allrar málsmeðferðarinnar. Þótt hlutlægur frestur stjórnsýsluskoðunar samkvæmt reglum um erlenda fjárfestingu sé kynntur, merkir hann ekki tímalengd allrar nýrrar stofnunar vöruflutninga með vélknúnum ökutækjum.
 
@@ -94,7 +94,7 @@ Framsal starfsemi og breyting skipulags, heitis, heimilisfangs, ábyrgðarmanns,
 
 Að minnsta kosti eftirfarandi atriði skal efnislega staðfesta með því að bera sönnunargögn og frumgögn saman við skrár lögbærs yfirvalds.
 
-- Gildi rekstrarleyfisins, samþykktar greinar, svæði og skilmálar, og breytingar sem enn eru ómeðhöndlaðar.
+- Gildi rekstrarleyfisins, samþykktar starfsgreinar, svæði og skilmálar, og breytingar sem enn eru ómeðhöndlaðar.
 - Samband eignar og notkunar ökutækja, skráningarmerki til atvinnunota, aldur, lotubundin skoðun, slys og brot.
 - Samþykki starfsstöðvar og bílastæðaaðstöðu, eignarréttur eða notkunarréttur, og viðhaldskerfi.
 - Innganga í atvinnugreinafélag, stjórnvaldsákvarðanir (行政處分) og hvort vanskil skatta, gjalda og stjórnvaldssekta (罰鍰) séu fyrir hendi.
@@ -112,7 +112,7 @@ Ekki má dæma eins í öllum tilvikum. Matið greinist eftir því hvort sá se
 
 Sendingaraðili eða flutningsþjónustufélag getur einnig falið raunverulegan flutning leyfishafa vöruflutninga með vélknúnum ökutækjum á Taívan. Leyfisþörf og ábyrgðarskipting greinast þó eftir því hvort sá sem felur sé aðeins sendingaraðili eða farmiðlari, eða hvort hann sjálfur verði flutningsaðili í flutningssamningnum (運送人) og taki við farmgjaldi. Samningshlutverk, innheimta gagnvart viðskiptavini, úthlutunarfyrirmæli, stýring ökumanna og ökutækja og viðbrögð við vörutjóni skulu samræmast raunverulegum rekstri.
 
-Staðfesta skal gildi rekstrarleyfis rekstraraðilans sem tekur við verkefninu og umfang leyfisins, ökutæki til atvinnunota sem raunverulega eru notuð, ökumenn, tryggingar og rekstraraðila við undirverktöku. Hvorki má leyfa nafnlán rekstrarleyfis né raunverulegan flutning rekstraraðila án leyfis. Aðferðin að fela flutninginn getur krafist minni upphaflegrar fastrar fjárfestingar en að undirbúa sjálfur ökutæki og bílastæðaaðstöðu, en háð leyfishafanum, þjónustustig, tap, skemmd og töf vörunnar, trygging, persónu- og flutningsgögn, undirverkakaup, skaðabætur og afhendingarmeðferð gagna, vöru og viðskiptaþjónustu við lok samningsins sem og tengd áhætta skulu meðhöndluð í samningnum.
+Staðfesta skal gildi rekstrarleyfis rekstraraðilans sem tekur við verkefninu og umfang leyfisins, ökutæki til atvinnunota sem raunverulega eru notuð, ökumenn, tryggingar og rekstraraðila við undirverktöku. Hvorki má leyfa nafnlán rekstrarleyfis né raunverulegan flutning rekstraraðila án leyfis. Aðferðin að fela flutninginn getur krafist minni upphaflegrar fastrar fjárfestingar en að undirbúa sjálfur ökutæki og bílastæðaaðstöðu, en í samningnum skal meðhöndla háð við leyfishafann, þjónustustig, tap, skemmd og töf vörunnar, tryggingu, persónu- og flutningsgögn, undirverkakaup, skaðabætur og afhendingarmeðferð gagna, vöru og viðskiptaþjónustu við lok samningsins, sem og tengda áhættu.
 
 ### Fjárfesting, atvinnuleyfi og dvöl eru sérstök skref
 

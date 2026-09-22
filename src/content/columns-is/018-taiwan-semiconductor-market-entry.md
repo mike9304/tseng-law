@@ -73,7 +73,7 @@ Hlutafé er skipt í hluti. Að jafnaði eru 2 hluthafar eða fleiri krafðir, e
 
 Hins vegar krefst stofnun útibús almenns erlends félags á Taívan að jafnaði ekki fjárfestingarheimildar fjárfestingarathugunardeildarinnar; verslunarþróunarstofa efnahagsráðuneytisins (經濟部商業發展署) meðhöndlar skráningu útibúsins og tengda ákvörðun fjárhæðar. Áfram nauðsynleg eru forathugun heitis, sending rekstrarfjár, könnun hlutafjár og skattaskráning; dagskráin er að jafnaði styttri.
 
-Ofangreint er leiðbeining um mótun félagaforms og samningsskipulags, ekki ráðgjöf um tiltekin lögskipti. Það eitt að tiltekið félagaform sé valið gerir lögskiptin hvorki lögmæt né kemur í veg fyrir ágreining.
+Ofangreint ber saman skráningarferli útibús og dótturfélags og er ekki ráðgjöf um tiltekin lögskipti. Það eitt að tiltekið félagaform sé valið gerir lögskiptin hvorki lögmæt né kemur í veg fyrir ágreining.
 
 ## 5. Félagaskráning og lögmæt vinna verkfræðings eru ekki það sama
 

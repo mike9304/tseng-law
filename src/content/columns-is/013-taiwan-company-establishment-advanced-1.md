@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Forsíðumynd](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Nýlega hafa margir stofnað félag (公司) á Taívan og fengið atvinnuáritun og dvalarleyfisskírteini útlendinga (外僑居留證),
+Nýlega hafa margir stofnað félag (公司) á Taívan og fengið atvinnuáritun og dvalarleyfisskírteini útlendinga (外僑居留證).
 
 Hér á eftir eru teknar saman spurningar sem oft koma upp við stofnunina.
 
@@ -71,7 +71,7 @@ en innflytjendastofnunin (移民署) hefur marga gesti; þú ættir því að ko
 
 ​
 
-**3. Ég hef heyrt að við skoðun fjárfestingaráætlunarinnar (投資計畫書) skuli tilgreina menntun og starfsreynslu, og ég óttast að menntun mín og reynsla passi ekki við grein þess félags sem stofna á.**
+**3. Ég hef heyrt að við skoðun fjárfestingaráætlunarinnar (投資計畫書) skuli tilgreina menntun og starfsreynslu, og ég óttast að menntun mín og reynsla passi ekki við starfsgrein þess félags sem stofna á.**
 
 Skoðunarnefnd efnahagsráðuneytisins skoðar að vísu bakgrunn fjárfestisins,
 
@@ -87,7 +87,7 @@ og lýsa svo nákvæmlega að þeir sem skoða geti sannfærst.
 
 **4. Að hverju skal gæta þegar skráningarheimili félagsins (til dæmis veitingastaður) er leigt?**
 
-Félagastofnunin tekur um **3 mánuði**, og það tekur um **1 mánuð** til viðbótar að fá atvinnuleyfi (工作許可) og dvalarleyfisskírteini.
+Félagastofnunin tekur um **3 mánuði**, og það tekur um **einn mánuð** til viðbótar að fá atvinnuleyfi (工作許可) og dvalarleyfisskírteini.
 
 Því ættir þú að ákveða gildistökudag samningsins eins seint og unnt er.
 

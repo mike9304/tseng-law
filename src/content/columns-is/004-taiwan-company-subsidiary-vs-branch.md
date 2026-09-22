@@ -62,13 +62,13 @@ Tekjuskattur atvinnufyrirtækja (營利事業所得稅) er reiknaður af skattsk
 
 | Skattaliður | Dótturfélag á Taívan | Útibú erlends félags á Taívan |
 | --- | --- | --- |
-| Söluskattur (營業稅) | Almennt hlutfall 5 %, að jafnaði 2 mánaða skilahringur | Almennt hlutfall 5 %, að jafnaði 2 mánaða skilahringur |
+| Söluskattur (營業稅) | Almennt hlutfall 5 %, að jafnaði skil á 2 mánaða fresti | Almennt hlutfall 5 %, að jafnaði skil á 2 mánaða fresti |
 | Tekjuskattur atvinnufyrirtækja (營利事業所得稅) | Almennt hlutfall 20 %, fari skattskyldar tekjur yfir viðmiðunarupphæð | Almennt hlutfall 20 % á skattskyldum tekjum sem rekja má til útibúsins á Taívan |
 | Sending hagnaðar til útlanda | Arður (股利) til erlends móðurfélags: innlend staðgreiðsla 21 %; séu samningsskilmálar uppfylltir hámarkshlutfall 10 % samkvæmt tvísköttunarsamningi um tekjuskatt Taívan–Kórea (所得稅協定) | Sending hagnaðar eftir skatt til höfuðstöðva er ekki arður, svo að jafnaði er engin sérstök staðgreiðsla arðs |
 | Viðbótarskattur á óráðstafaðan hagnað (未分配盈餘加徵稅額) | Við varðveislu hagnaðar skal 5 % viðbótarskattur samkvæmt tekjuskattslögum kannaður | Atvinnufyrirtæki með höfuðstöðvar utan Taívan eru undanþegin skilunum |
-| Kjarnaspurningar útreiknings | Kostnaður, tap, varðveisla, arðstund, raunverulegur eigandi | Tekjur rekjanlegar til Taívan, kostnaðarskipting höfuðstöðva og útibús, milliverðlagning, sendingargögn |
+| Kjarnaspurningar útreiknings | Kostnaður, tap, óráðstafaður hagnaður, tímasetning arðs, raunverulegur eigandi | Tekjur rekjanlegar til Taívan, kostnaðarskipting höfuðstöðva og útibús, milliverðlagning, sendingargögn |
 
-Þegar dótturfélag á Taívan greiðir hagnað eftir skatt sem arð til erlends móðurfélags eru dótturfélag og hluthafi aðskildir réttaraðilar. Samkvæmt innlendum rétti Taívan er staðgreiðsluhlutfall arðs til erlendra hluthafa 21 %. Sé móðurfélagið heimilisfast í Kóreu, falli það undir tvísköttunarsamninginn um tekjuskatt Taívan–Kórea og sé raunverulegur eigandi (受益所有人) arðsins, og uppfylli það önnur beitingarskilyrði, má kanna hámarkshlutfall samningsins 10 %. Samningshlutfallið gildir ekki sjálfkrafa af því einu að viðtakandi sé í Kóreu. Vottorð um heimilisfesti (居住者證明), mat á raunverulegum eiganda, greiðslu- og skilastund og nauðsynlega umsóknar- eða endurgreiðslumeðferð skal kanna eftir nýjustu framkvæmd.
+Þegar dótturfélag á Taívan greiðir hagnað eftir skatt sem arð til erlends móðurfélags eru dótturfélag og hluthafi aðskildir réttaraðilar. Samkvæmt innlendum rétti Taívan er staðgreiðsluhlutfall arðs til erlendra hluthafa 21 %. Sé móðurfélagið heimilisfast í Kóreu, falli það undir tvísköttunarsamninginn um tekjuskatt Taívan–Kórea og sé raunverulegur eigandi (受益所有人) arðsins, og uppfylli það önnur beitingarskilyrði, má kanna hámarkshlutfall samningsins 10 %. Samningshlutfallið gildir ekki sjálfkrafa af því einu að viðtakandi sé í Kóreu. Vottorð um heimilisfesti (居住者證明), mat á raunverulegum eiganda, greiðslu- og skilatíma og nauðsynlega umsóknar- eða endurgreiðslumeðferð skal kanna eftir nýjustu framkvæmd.
 
 Hagnaður sem verður til við útibú erlends félags á Taívan er ekki hagnaður sérstaks félags sem skipt er milli hluthafa, heldur hluti þess hagnaðar sem tilheyrir erlendu höfuðstöðvunum. Sending hagnaðar eftir skatt til höfuðstöðva, að loknum skilum og greiðslu tekjuskatts atvinnufyrirtækja á Taívan, greinist því frá arði (股利); á útibússtigi er að jafnaði engin viðbótarstaðgreiðsla arðs. Þó fær ekki hver greiðsla milli útibús og höfuðstöðva alltaf sömu meðferð. Séu vextir, notkunarleyfisgjöld, þóknun fyrir þjónustu, greiðsla fyrir eignir eða greiðslur til þriðja aðila (第三人) blandaðar, skal eðli hverrar greiðslu og staðgreiðsluskylda metin sérstaklega.
 
@@ -78,7 +78,7 @@ Við samanburð forma skal horfa á ferlið þar sem hagnaður verður til og er
 
 Á viðskipti milli dótturfélags og móðurfélags og á kostnaðarskiptingu milli útibús og höfuðstöðva geta reglur milliverðlagningar (移轉訂價) átt við. Samningur, reikningur, útreikningsgrundvöllur, raunveruleg vinna starfsfólks, notkun eigna og fjármagnsflutningar skulu samræmast. Af því einu að höfuðstöðvarnar hafi greitt má ekki telja allan kostnað rekstrarkostnað útibúsins á Taívan; af því einu að fjárhæð standi í innri samstæðusamningi er kostnaður dótturfélagsins ekki sjálfkrafa viðurkenndur. Fylgiskjöl sem styðja eðli viðskipta og verð við óháðan aðila skal varðveita.
 
-Í heimalandi fjárfestisins skal frádráttur erlends skatts (外國稅額扣抵), arður frá erlendum dótturfélögum, tekjur og tap útibús, samstæðu- eða aðskilið bókhald og gjaldeyrisskil könnuð saman. Hvernig upphafstap útibús á Taívan er meðhöndlað gagnvart höfuðstöðvunum getur verið misjafnt eftir skattarétti og bókhaldsreglum heimalandsins. Því má ekki fyrir fram ráða að val útibús lækki skattbyrði erlenda móðurfélagsins. Skattfjárhæð á Taívan og endanlega byrði í heimalandinu, stund heimtsendingar fjár og sönnunarkostnað ætti að bera saman í einni útreikningstöflu (計算表).
+Í heimalandi fjárfestisins skal frádráttur erlends skatts (外國稅額扣抵), arður frá erlendum dótturfélögum, tekjur og tap útibús, samstæðu- eða aðskilið bókhald og gjaldeyrisskil könnuð saman. Hvernig upphafstap útibús á Taívan er meðhöndlað gagnvart höfuðstöðvunum getur verið misjafnt eftir skattarétti og bókhaldsreglum heimalandsins. Því má ekki fyrir fram ráða að val útibús lækki skattbyrði erlenda móðurfélagsins. Skattfjárhæð á Taívan og endanlega byrði í heimalandinu, tímasetningu heimtsendingar fjár og sönnunarkostnað ætti að bera saman í einni útreikningstöflu (計算表).
 
 ## 3. Skuldir og lagaleg ábyrgð
 
@@ -110,15 +110,15 @@ Skráning á kauphöll á Taívan er svið þar sem skipulagsmunur útibús og d
 
 ## 5. Fjárfestingarskattafrádráttur
 
-Skattaívilnanir ráðast ekki einhliða af félagaheitinu dótturfélag á Taívan eða útibú. Hæfi skattaðila, raunverulegt fjárfestingarinnihald, fjárhæð, ástand og notkunartilgangur eigna, fjárfestingarstund, umsóknarfrestur, staðfestingarmeðferð, frádráttaraðferð og takmörkun tvítekningar með öðrum ívilnunum skal allt kannað. Skattafrádrátt skal greina frá útreikningi skattskyldra tekna; hann má ekki skilja sem fyrirkomulag sem dregur strax alla útgjaldarfjárhæðina frá skatti sem greiða ber.
+Skattaívilnanir ráðast ekki einhliða af félagaheitinu dótturfélag á Taívan eða útibú. Hæfi skattaðila, raunverulegt fjárfestingarinnihald, fjárhæð, ástand og notkunartilgangur eigna, tímasetning fjárfestingar, umsóknarfrestur, staðfestingarmeðferð, frádráttaraðferð og takmörkun tvítekningar með öðrum ívilnunum skal allt kannað. Skattafrádrátt skal greina frá útreikningi skattskyldra tekna; hann má ekki skilja sem fyrirkomulag sem dregur strax alla útgjaldarfjárhæðina frá skatti sem greiða ber.
 
 Gildandi 10-1. gr. laga um iðnaðarnýsköpun (產業創新條例) nær til tiltekinna fjárfestinga frá 1. janúar 2025 til 31. desember 2029. Félög eða sameignarfélög með takmarkaðri ábyrgð (有限合夥) sem á sama skattaári fjárfesta að lágmarki TWD 1.000.000 (新臺幣) og að hámarki TWD 2.000.000.000 geta kannað beitingu undir lögbundnum skilyrðum og staðfestingarmeðferð. Fjárfestirinn skal afla markeignarinnar til eigin nota; nýmæli og raunverulega notkun skal einnig kanna.
 
-Marksvæði eru ný greindar vélar, 5G-kerfi, vörur eða þjónusta á sviði netöryggis, vörur eða þjónusta á sviði gervigreindar, og vélbúnaður, hugbúnaður, tækni eða tæknileg þjónusta til orkusparnaðar og kolefnislækkunar (節能減碳). Af því einu að eitthvað virðist svara til svæðisheitisins fylgir engin sjálfvirk staðfesting. Samning, skattagögn, greiðslusannanir, eignaskrá, tæknilegt innihald, notkunaráætlun og umsóknargögn skal kanna hvert um sig, hvort þau hæfi lögbundnum ramma og málsmeðferð.
+Marksvæði eru nýr snjallvélbúnaður, 5G-kerfi, vörur eða þjónusta á sviði netöryggis, vörur eða þjónusta á sviði gervigreindar, og vélbúnaður, hugbúnaður, tækni eða tæknileg þjónusta til orkusparnaðar og kolefnislækkunar (節能減碳). Af því einu að eitthvað virðist svara til svæðisheitisins fylgir engin sjálfvirk staðfesting. Samning, skattagögn, greiðslusannanir, eignaskrá, tæknilegt innihald, notkunaráætlun og umsóknargögn skal kanna hvert um sig, hvort þau hæfi lögbundnum ramma og málsmeðferð.
 
 Samkvæmt lögbundnu vali má kanna hvort að hámarki 5 % fjárfestingarfjárhæðar viðkomandi árs séu dregin frá tekjuskatti atvinnufyrirtækja það skattaár, eða hvort að hámarki 3 % fjárfestingarfjárhæðar séu dregin frá árlega í 3 ár. Árleg frádráttarfjárhæð samkvæmt 10-1. gr. er takmörkuð við 30 % tekjuskatts atvinnufyrirtækja það ár. Við sameiginlega beitingu með öðrum fjárfestingarskattafrádrætti sama ár skal heildarþak og tvítekningartakmörkun könnuð sérstaklega. Tilvísunin „30 %“ merkir ekki að 30 % rannsókna- og þróunarkostnaðar séu sjálfkrafa endurgreidd.
 
-Sérstakt kerfi vegna rannsókna- og þróunarstarfsemi getur verið viðfang annarra ákvæða, svo sem 10. gr. laga um iðnaðarnýsköpun. Sé rannsóknartengdum frádrætti 10. gr. og frádrætti vegna tiltekinna fjárfestinga í búnaði og tækni samkvæmt 10-1. gr. blandað saman, geta markútgjöld, umsóknarstund og þak verið rangt metin. Fyrir fjárfestingu skal fyrirtækið sérstaklega kanna hvaða ákvæði eigi að beita, hver umsóknarstofnun og tímaáætlun sé, og hvort unnt sé að nota það saman með öðrum styrkjum eða frádrætti.
+Sérstakt kerfi vegna rannsókna- og þróunarstarfsemi getur verið viðfang annarra ákvæða, svo sem 10. gr. laga um iðnaðarnýsköpun. Sé rannsóknartengdum frádrætti 10. gr. og frádrætti vegna tiltekinna fjárfestinga í búnaði og tækni samkvæmt 10-1. gr. blandað saman, geta markútgjöld, umsóknartími og þak verið rangt metin. Fyrir fjárfestingu skal fyrirtækið sérstaklega kanna hvaða ákvæði eigi að beita, hver umsóknarstofnun og tímaáætlun sé, og hvort unnt sé að nota það saman með öðrum styrkjum eða frádrætti.
 
 Hvort útibú geti sótt um, eða hvort dótturfélag uppfylli skilyrðin, skal meta eftir þeim umsækjanda sem viðkomandi regla ákveður og raunverulegu fjárfestingarsambandi. Staðan sem dótturfélag ein og sér veitir enga ívilnun, og staðan sem útibú ein og sér leyfir ekki þá ályktun að vera útilokað frá allri skattalegri stoð. Sé skipulaginu lagað eftir gerð fjárfestingarsamnings og öflun eigna, getur umsóknarfrestur eða sönnunarkröfur fallið niður; könnun á stigi fjárfestingaráætlunar (投資規劃) er varkárari.
 
@@ -149,7 +149,7 @@ Fyrir valið er ráðlegt að raða og bera saman eftirfarandi atriði skriflega
 - Hver sé aðili hlutafjárframlagsins, og hvernig atkvæðisrétti og ákvörðunarvaldi um mikilvæg atriði sé skipt (股東)
 - Að hvaða marki erlendar höfuðstöðvar eða móðurfélag beri samningsbundna og lagalega ábyrgð
 - Til hvaða aðila viðskiptasamningar, ráðning, hugverkaréttindi, starfsstöð og leyfi séu rakin
-- Hvar velta og kostnaður séu færð, og hvernig varðveisla, arður eða sending til höfuðstöðva fari fram
+- Hvar velta og kostnaður séu færð, og hvernig óráðstafaður hagnaður, arður eða sending til höfuðstöðva fari fram
 - Hvernig fjárfestingarheimild, bankareikningur, innstreymi fjár og gjaldeyris- og sendingargögn séu undirbúin
 - Hvernig bækur, endurskoðun, gögn milliverðlagningar og skil og frádráttur erlends skatts í heimalandi fjárfestisins séu stýrð (移轉訂價)
 - Hvort hlutafjárhækkun, staðbundnir hluthafar, hlutabréfatengd þóknun, skráning á kauphöll, samruni og endurskipulagning og framsal eignarhluta séu áætluð
@@ -172,7 +172,7 @@ Endanlegt val er varkárara að kanna, ef sérfræðingar á Taívan og í þeir
 ## Opinberar heimildir
 
 - [Lagagrunnur dómsmálaráðuneytis Taívan — félagalögin](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Regla um staðgreiðsluhlutfall arðs til aðila sem ekki eru heimilisfastir (10)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Lagagrunnur dómsmálaráðuneytis Taívan — 10. gr. laga um virðisaukaskatt](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Lagagrunnur dómsmálaráðuneytis Taívan — tekjuskattslögin](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Fjármálaráðuneyti Taívan — leiðbeiningar um staðgreiðslu arðs til erlendra hluthafa](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Fjármálaráðuneyti Taívan — túlkun um hagnað útibús erlends félags](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

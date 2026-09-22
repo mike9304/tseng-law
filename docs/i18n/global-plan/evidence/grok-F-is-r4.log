@@ -1,0 +1,80 @@
+WO-F-is r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-is-r4
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: is-a 17, is-b 18 (35). No P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 32.
+Skipped: 3 numbered rows (is-a 4, is-a 10, is-b 12). Adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No Icelandic FAQ question or title pin in src/lib/__tests__/ or src/data/__tests__/ matched a string that changed. consultationNotice and confidentialNotice in llms-txt.ts were left; the FAQ sentence and the privacy paragraph they copy were not rewritten. The privacy sentence that changed is the retention-duty sentence, which is not the confidentialNotice substring. discoveryNotice still contains the token llms.txt. "TWD 1.57M" in the Icelandic bio was left byte-identical.
+
+### Applied
+is-a 1–3, 5–9, 11–17.
+is-b 1–11, 13–18.
+
+Adaptations (still applied):
+- is-a 3. The "(10)" glued to the dividend-rule label is gone. The Korean anchor in 004 is 영업세법 제10조 and the English anchor is "Article 10 of the Value-Added and Non-Value-Added Business Tax Act", so the label is now "10. gr. laga um virðisaukaskatt". Dropping the digit failed numbers (missing 10). The URL (pcode=G0340028&flno=3) is unchanged. Column 001's same URL keeps the dividend-rule label, which matches the Korean anchor in 001 (비거주자 배당 원천징수율 관련 규정) and has no article number.
+- is-a 9. Accusative "1" that the Icelandic lexicon parses became a word: 002 "í einn mánuð eða lengur" ×2, 008 table "í einn mánuð eða lengur" ×1, 003 "aðeins eitt sinn" ×1, 013 "**einn mánuð**" ×1 ("einn"/"eitt" = 1). Left as digits because the inflected form is not in the lexicon: 002 "allt að 1 ári" (einu), 007 "í 1 máli" (einu), 008 "1 mánaðar meðallaun" ×2 (eins; FAQ and blockquote), 017 "á 1 mánuði" (einum). "tveggja" is also absent; see is-a 12.
+- is-a 12. "2 mánaða skilahringur" ×2 is now "skil á 2 mánaða fresti". The digit 2 stays. The 001 link "skilahring söluskatts" is now "skil söluskatts" (that anchor had no digit).
+- is-a 17. The improper-methods sentence is no longer printed twice. The second block is the next Korean block (증거를 남겨야 합니다): "Þá skalt þú varðveita sönnunargögn." The block was not deleted.
+- is-b 7. The false label "leiðbeining um mótun félagaforms og samningsskipulags" is now "ber saman skráningarferli útibús og dótturfélags". The clause "og er ekki ráðgjöf um tiltekin lögskipti" and the following sentence (choosing a form does not make the transaction lawful) stay. The reviewer's one-sentence rewrite dropped that disclaimer.
+- is-b 17. The address check is no longer stated three times. The three existing blocks now follow the English split: "Auk markaðsaðstæðna" / "skiptir annað atriði máli," / "hvort heimilisfangið (營業地址) sé á svæði þar sem veitingastarfsemi er heimil." Blocks were not merged.
+
+### Skipped
+- is-a 4. The bio figure "TWD 1.57M" stays byte-identical. ACCEPTED-ROUND and R12 pin it. The suggested "1,57 milljónir TWD" was not written.
+- is-a 10. Q16 through the close of 003 were not promoted to `##` headings, and the U+200B lines in 003 (from Q16), 005 (including `**​**`), 006, 008 and 009 were not removed. Heading levels and ZWSP counts must match the Korean source. 0 instances removed.
+- is-b 12. The trailing U+200B after the Taipei sentence in 013, and the ZWSP-only lines in 013 (lines that contain only that character) and 015, were left. Deleting them changes the ZWSP count. 0 instances removed. The comma-to-period on the residence-certificate sentence is is-b 11 and was applied.
+
+## Systemic patterns
+
+- "grein" where the English is an industry or a registered business item, not "this article" and not "N. gr.". 17: 001 "atvinnugrein og starfsstöð", "Lög einstakra atvinnugreina", "laga um fagstarfsemi"; 013 "starfsgrein þess félags"; 015 starfsgrein/starfsgreinar in the inquiry answer, the 10-item sentence, "án tillits til starfsgreinar", the proactive-inquiry sentence, the image alt, and the caption (11); 017 "atvinnugreinina" and "samþykktar starfsgreinar". Left on purpose: "þessi grein" / "þessarar greinar" / "Í þessari grein", which mean this article.
+- "stund" and "hringur" as a calque of timing or a filing cycle. 12: 001 link "skil söluskatts" and "skilyrði við umsókn"; 003 "skilatími"; 004 "skil á 2 mánaða fresti" ×2, "tímasetning arðs", "greiðslu- og skilatíma", "tímasetningu heimtsendingar fjár", "tímasetning fjárfestingar", "umsóknartími"; 007 "á umsóknartíma"; 017 "á umsóknartíma". Left: "slysstund", "slysastund", "á þessari stundu", "slitunarstund", "millifærslustund", and the verb "hringja" (to call 119/110). Those are ordinary Icelandic, not the nonce compounds.
+- "varðveisla" where the English is retained earnings. 2, both in 004: the calculation-issues cell ("óráðstafaður hagnaður") and the checklist bullet. Record-retention "varðveisla" elsewhere was left.
+- Spare digit "1" where "einn"/"eitt" parses. 5, listed under is-a 9. Four inflected forms kept as digits, also listed there.
+- "í kjarna" for "in substance". 4: 011 FAQ and body "í raun auglýsing", 011 "í raun verið metnar sem auglýsing", 014 "kanna að efni til".
+- U+200B blanks (003 from Q16, 005 including `**​**`, 006, 008, 009, 013, 015). 0 deleted. See Skipped.
+- R2–R17. Prior rounds already hold: þú-address, Wei Tseng with "hún" where a pronoun is used, "lögmaður"/"löggiltur" left grammatically masculine (ordinary Icelandic title; the review found no gender error), consultation languages enska / kínverska (中文) / japanska / kóreska, no interpreter, no reply-time promise, no free first meeting, no result promise. This round did not turn any of those sentences positive. 005, 006 and 009 had no wording finding beyond the zero-width spaces, which were left. Team label is already "TEYMIÐ", offices "SKRIFSTOFUR", full profile "Heildarprófíll (á ensku)". Role lines are already Icelandic. No Czech leakage was found in the columns or the is pack.
+
+## Reviewer points not followed
+
+- is-a 3, as suggested. Dropping "(10)" and keeping the dividend-rule label treats 004's anchor as 001's. Korean and English 004 name Article 10 of the business-tax act. The opened URL is still flno=3; the URL was not changed. The digit stays because the checker counts 제10조.
+- is-a 4. "TWD 1.57M" is pinned. The standing decision skips reformatting it. The reviewer is right that a reader meets the English suffix first; the pin wins.
+- is-a 10 and is-b 12. The U+200B lines match the Korean source. Promoting Q16 to a heading fails headings. Deleting a zero-width space fails blocks. They are source layout.
+- is-a 9 and is-a 12, where the suggested word ("einu", "eins", "tveggja") is not in the Icelandic number lexicon. "einn" and "eitt" are. The meaning is the reviewer's; the digit shape is the one that still passes.
+- is-a 17. Deleting the second line would drop a block. That line is the Korean "keep the evidence" sentence, not a second copy to remove.
+- is-b 7. The one-sentence rewrite is true of the paragraphs above and matches the reviewer's point that the old label was false. It also drops "not advice on a specific transaction", which the English second sentence and the current Icelandic both carry. That disclaimer stays.
+- is-b 17. One sentence in place of three blocks would change the block count. The three blocks now say the check once, in the English order.
+- Nothing else in the two reviews was left undone because the legal reading looked wrong.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-is --lang is 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=105
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-is src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      19
+```
+
+The count 19 is the snapshot before this log file. It includes the pre-existing dirty WO-F-is.txt and the untracked review files is-a.md and is-b.md. This log is an additional untracked file written after that command.

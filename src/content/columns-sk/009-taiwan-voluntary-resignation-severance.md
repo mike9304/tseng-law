@@ -37,11 +37,11 @@ V nasledujúcich osobitných situáciách, aj keď zamestnanec odíde z vlastnej
 
 2. Keď zamestnávateľ, člen rodiny zamestnávateľa alebo zástupca zamestnávateľa (代理人) použije násilie alebo spôsobí závažnú urážku (重大侮辱) zamestnancovi
 
-3. Keď práca stanovená v zmluve môže škodiť zdraviu zamestnanca, bola požadovaná náprava od zamestnávateľa a nie je účinok
+3. Keď práca stanovená v zmluve môže škodiť zdraviu zamestnanca, zamestnanec požiadal o nápravu a zamestnávateľ ju nevykonal
 
 4. Keď zamestnávateľ, jeho zástupca alebo iný zamestnanec ochorie zákonnou nákazlivou chorobou (法定傳染病), existuje riziko nákazy zamestnancov pracujúcich spolu a ide o závažné nebezpečenstvo pre zdravie zamestnanca
 
-5. Keď zamestnávateľ nevypláca odmenu (工作報酬) podľa pracovnej zmluvy, alebo nezabezpečuje dostatočné množstvo práce zamestnancovi, ktorého odmena sa počíta od kusa (按件計酬)
+5. Keď zamestnávateľ nevypláca odmenu (工作報酬) podľa pracovnej zmluvy, alebo nezabezpečuje dostatočné množstvo práce zamestnancovi, ktorého odmena sa počíta podľa počtu kusov (按件計酬)
 
 6. Keď zamestnávateľ poruší pracovnú zmluvu alebo pracovné právo, takže existuje riziko porušenia práv a záujmov zamestnanca
 
@@ -55,7 +55,7 @@ nevypláca príplatok za nadčas (加班費)
 
 alebo nezapíše zamestnanca do pracovného poistenia (勞保) alebo zdravotného poistenia (健保).
 
-V takých prípadoch, aj keď zamestnanec obyčajne ukončí pracovnú zmluvu, musí mu zamestnávateľ vyplatiť odstupné.
+V takých prípadoch, aj vtedy, keď pracovnú zmluvu ukončí sám zamestnanec, musí mu zamestnávateľ vyplatiť odstupné.
 
 ​
 
@@ -67,7 +67,7 @@ musí ukončiť pracovnú zmluvu v lehote **30 dní** odo dňa, keď poznal tút
 
 alebo, pri bode 6, v lehote **30 dní** odo dňa, keď poznal následok škody.
 
-Zamestnanec preto musí dobre ovládať lehotu.
+Zamestnanec si preto musí túto lehotu ustrážiť.
 
 ​
 

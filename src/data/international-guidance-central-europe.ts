@@ -9,10 +9,10 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
     services: 'Právne služby',
     about: 'Kancelária',
     lawyers: 'Náš tím',
-    pricing: 'Náklady práce',
+    pricing: 'Odmena',
     contact: 'Napíšte nám',
     faq: 'Časté otázky',
-    privacy: 'Súkromie',
+    privacy: 'Ochrana údajov',
     disclaimer: 'Upozornenie',
     columns: 'Príspevky',
   },
@@ -80,7 +80,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Čím sa zaoberáme',
           paragraphs: [
             'Hovering International Law Firm je advokátska kancelária so sídlom na Taiwane. Pracuje podľa taiwanského práva a má sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Radíme podnikom, vedieme súdne konania a zastupujeme zahraničných klientov v krokoch, ktoré je na Taiwane potrebné urobiť.',
-            'Celý tu uvedený obsah je všeobecný. Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu. Tieto informácie nenahrádzajú konzultáciu s advokátkou alebo advokátom nad Vašimi dokumentmi.',
+            'Celý tu uvedený obsah je všeobecný. Výsledok veci závisí od skutkového stavu, od uplatniteľných predpisov a od rozhodného času. Tieto informácie nenahrádzajú konzultáciu s advokátkou alebo advokátom nad Vašimi dokumentmi.',
           ],
         },
         {
@@ -107,7 +107,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kde začať',
           paragraphs: [
-            'Prečítajte si stránku „Právne služby“ a overte, či Vaša vec spadá do nášho rozsahu, potom „Náklady práce“ a „Napíšte nám“, aby ste vedeli, ako sa stanoví rozsah a ako sa náklady potvrdzujú pred začatím práce.',
+            'Prečítajte si stránku „Právne služby“ a overte, či Vaša vec spadá do nášho rozsahu, potom „Odmena“ a „Napíšte nám“, aby ste vedeli, ako sa stanoví rozsah a ako sa náklady potvrdzujú pred začatím práce.',
             'Pri odoslaní správy môžete zhrnutie napísať vo svojom jazyku. Pôvodný text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Odoslaná správa je žiadosťou čakajúcou na posúdenie: nie je to ešte porada ani potvrdené stretnutie.',
           ],
         },
@@ -138,7 +138,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Manželstvo, rodina a dedenie',
           paragraphs: [
-            'Vedeme rozvod (離婚), vysporiadanie majetku, výkon a prevzatie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie matričných záznamov (戶籍), formy listín a ich preukaznosti na Taiwane.',
+            'Vedeme rozvod (離婚), vysporiadanie majetku, výkon a prevzatie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie záznamov evidencie obyvateľov (戶籍), formy listín a ich preukaznosti na Taiwane.',
             'Pretože rodinné veci so sebou často nesú lehoty a súbežné konania, prvé zhrnutie by malo uviesť vzťah medzi stranami, súčasné bydlisko a už prebiehajúce konania.',
           ],
         },
@@ -212,7 +212,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
       sections: [],
     },
     pricing: {
-      eyebrow: 'NÁKLADY PRÁCE',
+      eyebrow: 'ODMENA',
       title: 'Ako sa stanoví rozsah práce a náklady',
       description:
         'Vysvetlenie poradia: najprv rozsah práce, potom potvrdenie nákladov, a prečo táto stránka neobsahuje cenník.',
@@ -345,12 +345,12 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Čo robiť, ak je moja vec veľmi naliehavá?',
           answer:
-            'Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nemá núdzový kanál a nezabezpečuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať ďalšie cesty vo svojom mieste.',
+            'Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nemá núdzový kanál a nezabezpečuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať aj inú pomoc tam, kde sa nachádzate.',
         },
       ],
     },
     privacy: {
-      eyebrow: 'SÚKROMIE',
+      eyebrow: 'OCHRANA ÚDAJOV',
       title: 'Údaje zbierané kontaktným formulárom',
       description:
         'Čo zbiera kontaktný formulár v tejto slovenskej časti, ako sa nakladá s pôvodným textom a ako nás osloviť vo veci Vašich údajov.',
@@ -412,7 +412,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Miesto uchovania a poskytovatelia',
           paragraphs: [
             'Tieto stránky sú hostované u spoločnosti Vercel a Vaše podanie sa uchováva v neverejnom objektovom úložisku tejto služby. E-maily sa odosielajú poštovou službou, ktorú kancelária používa.',
-            'Servery jednotlivých poskytovateľov sa môžu nachádzať mimo Taiwanu, takže Vaše údaje tam môžu byť uchovávané a spracúvané. Ak je účel uchovania naplnený, údaje sa bez zbytočného odkladu vymažú; údaje, ktoré treba uchovávať podľa použiteľných predpisov, ostávajú po túto dobu. Žiadosti o osobné údaje prijíma wei@hoveringlaw.com.tw.',
+            'Servery jednotlivých poskytovateľov sa môžu nachádzať mimo Taiwanu, takže Vaše údaje tam môžu byť uchovávané a spracúvané. Ak je účel uchovania naplnený, údaje sa bez zbytočného odkladu vymažú; údaje, ktoré treba uchovávať podľa uplatniteľných predpisov, ostávajú po túto dobu. Žiadosti o osobné údaje prijíma wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -429,14 +429,14 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Iba všeobecné informácie',
           paragraphs: [
             'Obsah týchto stránok je napísaný ako všeobecná informácia. Nie je právnou radou k Vášmu prípadu a nenahrádza posúdenie Vašich dokumentov.',
-            'Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu; dve zdanlivo podobné situácie môžu skončiť rôzne.',
+            'Výsledok veci závisí od skutkového stavu, od uplatniteľných predpisov a od rozhodného času; dve zdanlivo podobné situácie môžu skončiť rôzne.',
           ],
         },
         {
           heading: 'Právny rámec',
           paragraphs: [
             'Kancelária pôsobí podľa taiwanského práva a táto stránka hovorí iba o práci v tomto rámci.',
-            'Obsah nie je poradenstvom podľa práva iného poriadku než taiwanského, vrátane práva miesta Vášho pobytu. Ak sa časť Vašej veci týka iného právneho poriadku, ujasníme s Vami, aká kvalifikovaná osoba je pre túto časť potrebná.',
+            'Obsah nie je poradenstvom podľa iného právneho poriadku než taiwanského, vrátane práva miesta Vášho pobytu. Ak sa časť Vašej veci týka iného právneho poriadku, ujasníme s Vami, aká kvalifikovaná osoba je pre túto časť potrebná.',
           ],
         },
         {
@@ -474,14 +474,14 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kam odkazy vedú',
           paragraphs: [
             'Ak zvolíte jeden zo štyroch odkazov, otvorí sa zoznam príspevkov v danom jazyku. Zo zoznamu si text vyberiete sami; celý obsah sa zobrazí v pôvodnom jazyku príspevku.',
-            'Táto stránka obsah príspevkov nezhrňuje a nezaručuje, že určité téma je k dispozícii vo všetkých štyroch jazykoch. Každý zoznam obsahuje iba texty zverejnené v danom jazyku.',
+            'Táto stránka obsah príspevkov nezhrňuje a nezaručuje, že určitá téma je k dispozícii vo všetkých štyroch jazykoch. Každý zoznam obsahuje iba texty zverejnené v danom jazyku.',
           ],
         },
         {
           heading: 'Nakoľko môže príspevok slúžiť na orientáciu',
           paragraphs: [
             'Príspevky sú všeobecnými informáciami k okamihu zverejnenia. Predpisy a ich používanie sa môžu zmeniť a príspevok neobsahuje všetky okolnosti Vášho prípadu.',
-            'Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nie je krokom porady.',
+            'Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nenahrádza poradu.',
           ],
         },
       ],

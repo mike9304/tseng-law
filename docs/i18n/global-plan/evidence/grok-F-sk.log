@@ -1,0 +1,120 @@
+WO-F-sk — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-sk-20260922
+Date: 2026-09-22
+No git add / commit / push.
+
+Sources read: RULEBOOK-FIX.md (R2–R10, R12–R17), ACCEPTED-sk.md, sk-a.md, sk-b.md.
+English sense checked against src/content/columns-en for the full rewrites (003, 007, 008).
+Slovak strings edited in the .ts sources, not in the sk-guidance.txt dump.
+
+## Rows applied
+
+Part a (sk-a.md), P1/P2 except the skips below:
+1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37.
+
+Part b (sk-b.md), P1/P2 except the skip below:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 (wording only), 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40.
+
+Supervisor overrides inside applied rows:
+- a#6 label is „Odmena“ (6 characters), not the reviewer’s „Rozsah a náklady“. Same word on the home „Kde začať“ sentence and the pricing eyebrow „ODMENA“. Body „náklady“ (costs) left. Services answer that pins „Rozsah“ left.
+- a#7 term is „evidencia obyvateľov (戶籍)“ / „úrad evidencie obyvateľov (戶政機關)“ / „zákon o evidencii obyvateľov (戶籍法)“ / „úradovňa evidencie obyvateľov (戶政事務所)“. Part b overrides part a’s „registrácia domácnosti“ / „záznamy evidencie domácností“. Not matrika. Swept the Slovak guidance pack and 007.
+- a#8 role is „Partner (audítor)“ (R12), not „Partner audítorskej kancelárie“.
+- a#23 kept „rozhodného času“ and also changed „použiteľných“ to „uplatniteľných“ because that is the same applicable-law calque as b#31.
+- a#32 chatty opening rephrased inside the block („Tradičné kaderníctva … spájali strihanie vlasov s masážou.“, „časom“, „Nastolila sa napríklad otázka“). The reviewer’s 1980-statute sentence was not inserted (see disagreements).
+- a#36 nav is „Ochrana údajov“ (14 characters) and the eyebrow is „OCHRANA ÚDAJOV“. The consent and the form link use the longer „Ochrana osobných údajov“.
+
+R17 first: 003, 007 and 008 rewritten in Slovak from the first image alt through the close, including FAQ answers and both alt texts. Block counts, heading levels, image paths, hrefs, ZWSP lines and Chinese glosses kept. 003 Q16–Q20 stay softened; first person is feminine („som viedla“). 008 economic dismissal is a statutory claim; voluntary exit and Article 12 disciplinary dismissal are not an unconditional payout. 119 / 110 / 112 stated in 003. ROC years labelled „kalendára Čínskej republiky“ without a new digit (003 link labels, 007, 010 judgment).
+
+## Rows skipped
+
+- a#3 and a#5: Hangul frontmatter `url` in 008 and 009. R16. Bytes unchanged.
+- a#35: bio figure stays `TWD 1.57M` (test-pinned). Confirmed at international-guidance-team.ts sk intro.
+- b#39: space thousands. R14 and the checker keep the dot (40.000, 5.000.000, 1.579.589, 10.000.000, 30.000 and the rest).
+- b#19 thousands half: „8/5 nových nákladných automobilov“ applied; „10.000.000“ kept with the dot, not „10 000 000“.
+- a#32 full suggested replacement (new year 1980 and a sentence that would orphan the following barbershop blocks). Rephrased inside the block instead.
+- Rows that would add the reader’s national law: not applied; Korea stays a labelled example.
+- `src/lib/llms-txt.ts` GUIDANCE_LLMS_NOTICES.sk: already states Slovak text with consultation only in English, Chinese (中文), Japanese and Korean, feminine „advokátkou“, and no reply-time or visibility promise. No edit.
+
+## Systemic patterns and instances
+
+- Czech/Czech–Slovak mash: full rewrite of 003, 007, 008.
+- Token scan after the rewrite (word-boundary, not prefixes of Slovak words such as zdanenie / nebolo / takéto): no remaining Czech hits for nejen, kdy, který, jsou, obrázek, manželství, pokud, nebo, již, zda, abyste, ústavní, Koreje, od kusa. Two scanner hits left on purpose: 002 „také opatrenia“ is the Slovak neuter plural of „taký“; 014 „diel všeobecnej adaptácie“ is Slovak „part“, not the Czech forced share.
+- „je/nie je treba“ → „treba/netreba“: the 010–018 residues named in ACCEPTED, plus the same pattern in 001 (3: two „treba však overovať“, one „treba však posudzovať“) and the Slovak answers string „zatiaľ netreba zasielať“ (international-guidance-answers.ts).
+- „použiteľný“ (applicable) → „uplatniteľný“: 27 added diff lines across 001, 002, 003, 004, 007, 011, 014, 016, 017 and the Slovak disclaimer / retention sentences. Not changed: 010 „nepoužiteľnými“ (footage that cannot be used) and the inquiry option „Žiadny zo štyroch jazykov nie je použiteľný“ (no consultation language is usable).
+- 辦法 / 規則 „nariadenie“ → „pravidlá“: 002 body (3) and the official-source link label; 011 body, articles 7–8, and both link labels; 017 transport rules. 條例 in 008 is „zákon o dôchodku pracovníkov“, not nariadenie.
+- „spoznať“ as learning a legal fact → „dozvedieť sa“ (010 offender, 016 heirship). Anecdote „spoznal, že“ = realized, left.
+- „povinný diel“ → „povinný podiel“ in 016 (podiel / podielu / podielom).
+- Stock calques: „so stredom na“ → „so zameraním na“; „treba spoločne vidieť“ → „treba posúdiť spolu“; „sa položí“ (becomes relevant) → „prichádza do úvahy“. „môže sa položiť otázka“ left.
+- 戶籍 family: evidencia obyvateľov throughout the Slovak pack and 007.
+- Fee chrome: nav, home sentence, eyebrow → Odmena. Privacy nav → Ochrana údajov.
+- R5 / R12 roles: Riadiaca advokátka; Advokát na Taiwane; Právna asistentka; Vedenie prevádzky pre Kóreu; Partner (audítor). Bios: degree lines „Magisterský titul (M.S.)“ / „Bakalársky titul“, Nadácia právnej pomoci, ministerstvo školstva, vedúca právna asistentka, audítorská kancelária. Latin firm and university names kept (Boyin, Muyang, Hovering, Trend, National Taiwan University).
+- R15: 008 agreement line uses „[meno]“.
+- Wei Tseng feminine wherever the rewrite marks gender. Chang Rongxuan and Huang Shengping stay masculine. The male manager in 008 and pán B stay masculine.
+- Test pin updated only for the disclosure string that changed: guidance-disclosure-parity.test.ts sk `/krokom porady|krok porady/` → `/nenahrádza poradu/`.
+
+## Reviewer points not applied (disagreements)
+
+- Space as the thousands separator (b#39, and that half of b#19). The checker and R14 keep the dot. Decimal comma stays („0,5“).
+- Reformatting `TWD 1.57M` to „1,57 mil. TWD“ (a#35). Pinned.
+- Replacing Hangul `url` values with an English slug (a#3, a#5). R16.
+- Part a’s 戶籍 gloss „záznamy evidencie domácností“ / „registrácia domácnosti“. Later instruction is evidencia obyvateľov.
+- a#6 „Rozsah a náklady“ as the nav label. Supervisor cap is a fee word of at most 14 characters: Odmena.
+- a#8 „Partner audítorskej kancelárie“. R12 form used: Partner (audítor).
+- a#32 opening replaced by a 1980 statute sentence. That adds a year the current block does not carry and drops the barbershop lead the next paragraphs depend on.
+- 002 „také“ and 014 „diel“ are Slovak, not the Czech tokens the scan list names.
+- „nepoužiteľný“ for overwritten footage, and „použiteľný“ for a consultation language, are the usable sense, not the applicable-law calque.
+
+Checker notes (WARN, not FAIL, overall PASS): 006 has an extra digit 1 and 015 has an extra 2×2. Those diffs add no new digits; the warnings are pre-existing. Korean ordinal phrases the checker does not parse (`수사미해석`) also WARN. Dropping „1-krát“ (002) and „1-násobok“ (010) did not produce a missing-number FAIL.
+
+## §Verify
+
+```
+cd /Users/son7/Projects/tseng-law-fix-sk-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -8
+```
+
+```
+forbidden      PASS   
+hanzi          PASS   han=52
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sk src/data | wc -l
+```
+
+```
+       0
+```
+
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+
+```
+TSC_OK
+```
+
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+git status --short | wc -l
+```
+
+```
+      24
+```
+
+That count is 23 modified paths plus the pre-existing untracked `docs/i18n/global-plan/WO-F-sk.txt`. This log file is written after that count.

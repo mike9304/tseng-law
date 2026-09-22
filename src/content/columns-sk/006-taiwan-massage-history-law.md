@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Pamätáte si časy tradičných kaderníctiev (理髮廳) z počiatkov Taiwanu?
+Tradičné kaderníctva (理髮廳) z počiatkov Taiwanu spájali strihanie vlasov s masážou.
 
 Spôsob umývania vlasov v týchto salónoch bol veľmi osobitný.
 
@@ -71,17 +71,17 @@ Preto vtedajší zákonodarca, aby chránil osoby so zrakovým postihnutím, kto
 
 vypracoval zákon, ktorý chránil zamestnanie a právo na existenciu (生存權) osôb so zrakovým postihnutím.
 
-Avšak s behom času a rozšírením spotrebného trhu
+Avšak časom a rozšírením spotrebného trhu
 
 sa objavil názor, že ochrana výhradne práv osôb so zrakovým postihnutím príliš obmedzuje právo na prácu osôb bez zrakového postihnutia.
 
 V debate o profesijných právach osôb so zrakovým postihnutím a bez neho sa objavilo mnoho protichodných názorov.
 
-Pýtalo sa napríklad, či písané ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať masáž, nepredstavuje diskrimináciu voči osobám bez zrakového postihnutia,
+Nastolila sa napríklad otázka, či písané ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať masáž, nepredstavuje diskrimináciu voči osobám bez zrakového postihnutia,
 
 a spochybňovalo sa, či toto ustanovenie skutočne prispelo k ochrane zamestnania a existencie osôb so zrakovým postihnutím.
 
-Nakoniec ústavní sudcovia (大法官) vyhlásili za protiústavné (違憲) ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať povolanie maséra.
+Nakoniec sudcovia Súdneho jüanu (大法官) vyhlásili za protiústavné (違憲) ustanovenie, ktoré dovolovalo výhradne osobám so zrakovým postihnutím vykonávať povolanie maséra.
 
 ​
 

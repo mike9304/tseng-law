@@ -8,139 +8,139 @@ categories:
   - "Právne informácie o Taiwane"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
-  - q: "Na Taiwane dostane zamestnanec odstupné, ak sám odejde?"
-    a: "Ne. Na rozdiel od niektorých jurisdikcií (napríklad Koreje) vzniká na Taiwane povinnosť vyplatiť odstupné (資遣費) až vtedy, keď spoločnosť zamestnanca prepustí; ak zamestnanec sám odejde, spoločnosť odstupné vyplácať nemusí."
+  - q: "Dostane na Taiwane zamestnanec odstupné, ak odíde sám?"
+    a: "Nie. Na rozdiel od niektorých právnych poriadkov (napríklad Kórey) vzniká na Taiwane povinnosť vyplatiť odstupné (資遣費) až vtedy, keď spoločnosť zamestnanca prepustí; ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí."
   - q: "Musí spoločnosť vyplatiť odstupné aj pri kárnom prepustení?"
-    a: "Ne. Ak sa dopustí zamestnanec protiprávneho činu, poruší vnútorný poriadok, alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (článok 12 zákona o pracovných normách, 勞動基準法第12條), môže spoločnosť prepustiť bez výpovede a odstupné vyplácať nemusí. Naproti tomu hospodárske prepustenie (článok 11) vyžaduje predchádzajúcu výpoveď a výplatu odstupného."
+    a: "Nie. Ak sa zamestnanec dopustí protiprávneho činu, poruší pracovný poriadok (工作規則), alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (článok 12 zákona o pracovných normách, 勞動基準法第12條), môže ho spoločnosť prepustiť bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Naproti tomu hospodárske prepustenie (článok 11) vyžaduje predchádzajúcu výpoveď a výplatu odstupného."
   - q: "Ako sa na Taiwane odstupné počíta?"
-    a: "Za každý dokončený 1 rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemerné mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 nariadenia o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za 1 rok vypláca 1 mesiac priemerné mzdy, bez stropu."
+    a: "Za každý dokončený 1 rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemernej mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za 1 rok vypláca 1 mesiac priemernej mzdy, bez stropu."
 ---
 
 # Pracovné právo na Taiwane: je odstupné na Taiwane naozaj ťažké získať?
 
-![Hlavní obrázek](../images/008-taiwan-labor-severance-law/featured-01.jpg)
+![Hlavný obrázok: kedy na Taiwane vzniká nárok na odstupné](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Advokátka Wei Tseng (曾雋崴) nižšie zhŕňa pravidla odstupného (資遣費) na Taiwane.
+Advokátka Wei Tseng (曾雋崴) nižšie zhŕňa pravidlá odstupného (資遣費) na Taiwane.
 
-Text vysvetluje, kdy nárok na odstupné vzniká a kdy nie.
+Text vysvetľuje, kedy nárok na odstupné vzniká a kedy nie.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Úprava sa štát od štátu líši.
+Úprava sa líši podľa právneho poriadku.
 
-V niektorých jurisdikcích, napríklad v Koreji, musí spoločnosť vyplatiť odstupné i tehdy, keď zamestnanec odejde sám
+V niektorých právnych poriadkoch, napríklad v Kórei, musí spoločnosť vyplatiť odstupné aj vtedy, keď zamestnanec odíde sám.
 
-Na Taiwane je to iné:
+Na Taiwane je to inak:
 
-Povinnost vyplatiť odstupné vzniká až vtedy, keď spoločnosť zamestnanca prepustí.
+Povinnosť vyplatiť odstupné vzniká až vtedy, keď spoločnosť zamestnanca prepustí.
 
-Ak zamestnanec sám odejde, spoločnosť odstupné vyplácať nemusí.
-
-​
-
-Ak sa dopustí však zamestnanec protiprávneho činu,
-
-**poruší vnútorný poriadok (工作規則),**
-
-**alebo sa bez dôvodu nedostaví 3 dni po sebe (曠工),**
-
-môže spoločnosť prepustiť bez výplaty odstupného.
+Ak zamestnanec odíde sám, spoločnosť odstupné vyplácať nemusí.
 
 ​
 
-Nasledujúce tabulka to shrnuje.
+Ak sa však zamestnanec dopustí protiprávneho činu,
+
+**poruší pracovný poriadok (工作規則),**
+
+**alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (曠工),**
+
+môže ho spoločnosť prepustiť bez výplaty odstupného.
+
+​
+
+Nasledujúca tabuľka to zhŕňa.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Druh** | **Hospodárské prepustenie**  **資遣** **員工(經濟解僱)** | **Kárné prepustenie**  **解僱** **員工(懲戒解僱)** | **Vlastní odchod zamestnanca**  **員工自請離職** |
-| Význam | Ak existuje u zamestnávateľa potreba úpravy personálu kvôli situácii podniku, leží dôvod v hospodárske oblasti zamestnávateľa, nie v zodpovednosti zamestnanca. Preto musí zamestnávateľ dodržať výpovedná dobu (預告期間) a vyplatiť odstupné, aby vyvážil nevýhody zamestnanca. | Ak sa dopustí zamestnanec protiprávneho alebo nevhodného činu, môže zamestnávateľ okamžite ukončiť pracovnú zmluvu (勞動契約) bez predchádzajúce výpovede a odstupné vyplácať nemusí. Ide o jednu z kárnych pravomocí zamestnávateľa. | Zamestnanec môže kedykoľvek ukončiť zmluvu, avšak musí podľa doby zamestnanie dodržať výpovedná dobu, aby zamestnávateľ mohol vykonať predanie a hľadanie náhrady. |
-| Podmienky | Sú  (článok 11 taiwanského zákona o pracovných normách) | Sú  (článok 12 taiwanského zákona o pracovných normách) | Nie sú |
-| Predchádzajúce výpoveď | Nutná | Nie je nutná | Nutná |
-| Obtížnost pre zamestnávateľa | Nižší | Vyšší | Netýká sa |
-| Či spoločnosť musí vyplatiť odstupné (資遣費) | Nutné | Nie je nutné | Nie je nutné |
-|  | Taiwanský zákon o pracovných normách, článok 11 (勞動基準法第11條): Ak nenastane jeden z nasledujúcich prípadov, zamestnávateľ nemôže ukončiť pracovnú zmluvu, ani po predchádzajúcom oznámenie zamestnanci.  1. Zastavení činnosti (歇業) alebo prevod podniku (轉讓)  2. Ztráty (虧損) alebo omezení činnosti (業務緊縮)  3. Vyšší moc vyžaduje prerušenie činnosti na 1 mesiac alebo dlhšie  4. Povaha činnosti vyžaduje zníženie personálu a prepusteného nemožno previesť na iné vhodné miesto  5. Určený zamestnanec nemôže uspokojivo vykonať práci požadovanou místem | Taiwanský zákon o pracovných normách, článok 12 (勞動基準法第12條): Zamestnávateľ môže prepustiť bez predchádzajúceho oznámenie, ak zamestnanec spadá do jednoho z nasledujúcich prípadov.  1. Kto pri uzatvorenie pracovnej zmluvy podá nepravdivé údaje, uvede zamestnávateľa v omyl a vystaví podnik riziku škody  2. Kto použije násilí alebo ťažko urazí zamestnávateľa, jeho rodinu, jeho zástupce (代理人) alebo iné spolupracovníky  3. Koho právoplatne odsoudili k trestu odňatia svobody na dobu určitou (有期徒刑) alebo k trestu prísnejšiemu, bez podmienečného odkladu výkonu trestu (緩刑) a bez povolení premeny na peňažný trest (易科罰金)  4. Závažné porušení pracovnej zmluvy alebo pracovního poriadku  5. Kto úmyslne spotrebuje stroje, nástroje, suroviny, výrobky alebo iný majetok zamestnávateľa, alebo úmyslne vyzradí technická a obchodní tajemství zamestnávateľa a spôsobí zamestnávateľovi škodu  6. Neomluvená absence (曠工) bez oprávneného dôvodu 3 dni po sebe, alebo 6 dní alebo viac v mesiaci |  |
+| **Druh** | **Hospodárske prepustenie**  **資遣** **員工(經濟解僱)** | **Kárne prepustenie**  **解僱** **員工(懲戒解僱)** | **Vlastný odchod zamestnanca**  **員工自請離職** |
+| Význam | Ak zamestnávateľ potrebuje upraviť počet zamestnancov kvôli situácii podniku, dôvod je v hospodárskej oblasti zamestnávateľa, nie v zodpovednosti zamestnanca. Zamestnávateľ preto musí dodržať výpovednú dobu (預告期間) a vyplatiť odstupné, aby vyvážil nevýhodu zamestnanca. | Ak sa zamestnanec dopustí protiprávneho alebo nevhodného konania, môže zamestnávateľ okamžite ukončiť pracovnú zmluvu (勞動契約) bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Ide o výkon kárnej právomoci zamestnávateľa. | Zamestnanec môže zmluvu ukončiť, musí však podľa dĺžky zamestnania dodržať výpovednú dobu, aby zamestnávateľ stihol odovzdanie agendy a hľadanie náhrady. |
+| Podmienky | Áno  (článok 11 taiwanského zákona o pracovných normách) | Áno  (článok 12 taiwanského zákona o pracovných normách) | Žiadne |
+| Predchádzajúca výpoveď | Vyžaduje sa | Nevyžaduje sa | Vyžaduje sa |
+| Náročnosť | Ľahká | Ťažká | Ľahká |
+| Či spoločnosť musí vyplatiť odstupné (資遣費) | Vyžaduje sa | Nevyžaduje sa | Nevyžaduje sa |
+|  | Taiwanský zákon o pracovných normách, článok 11 (勞動基準法第11條): Ak nenastane jeden z nasledujúcich prípadov, zamestnávateľ nemôže ukončiť pracovnú zmluvu ani po predchádzajúcom oznámení zamestnancovi.  1. Zastavenie činnosti (歇業) alebo prevod podniku (轉讓)  2. Straty (虧損) alebo obmedzenie činnosti (業務緊縮)  3. Vyššia moc vyžaduje prerušenie činnosti na 1 mesiac alebo dlhšie  4. Povaha činnosti vyžaduje zníženie personálu a prepusteného nemožno preradiť na iné vhodné miesto  5. Určený zamestnanec nemôže uspokojivo vykonávať prácu, ktorú miesto vyžaduje | Taiwanský zákon o pracovných normách, článok 12 (勞動基準法第12條): Zamestnávateľ môže prepustiť bez predchádzajúceho oznámenia, ak zamestnanec spadá do jedného z nasledujúcich prípadov.  1. Kto pri uzatváraní pracovnej zmluvy uvedie nepravdivé údaje, uvedie zamestnávateľa do omylu a vystaví podnik riziku škody  2. Kto použije násilie alebo ťažko urazí zamestnávateľa, jeho rodinu, jeho zástupcu (代理人) alebo iných spolupracovníkov  3. Koho právoplatne odsúdili na trest odňatia slobody na dobu určitú (有期徒刑) alebo na prísnejší trest, bez podmienečného odkladu výkonu trestu (緩刑) a bez povolenia premeny na peňažný trest (易科罰金)  4. Závažné porušenie pracovnej zmluvy alebo pracovného poriadku  5. Kto úmyselne spotrebuje stroje, nástroje, suroviny, výrobky alebo iný majetok zamestnávateľa, alebo úmyselne vyzradí technické a obchodné tajomstvo zamestnávateľa a spôsobí zamestnávateľovi škodu  6. Neospravedlnená absencia (曠工) bez oprávneného dôvodu 3 dni po sebe, alebo 6 dní alebo viac v mesiaci |  |
 
-> Na Taiwane, za každý dokončený 1 rok praxe (年資),
-> musí zamestnávateľ vyplatiť 0,5 mesiaca priemerné mzdy (平均工資) ako odstupné.
-> (najviac 6 mesiacov mzdy) Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 nariadenia o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za 1 rok vypláca 1 mesiac priemerné mzdy, bez stropu.
-
-​
-
-Ak je mzda zamestnanca vysoká a bola dosažena určitá praxe,
-
-je odstupné tiež pomerne vyšší.
-
-Tehdy niektoré málo svedomité taiwanské spoločnosti užívají rôzne prostriedky,
-
-aby nemusely vyplácať vysoká odstupná,
-
-a vedou zamestnanca k vlastnímu odchodu.
-
-Zamestnanci musí byť opatrní
-
-a dbát, aby nepadli do zámeru spoločnosti.
+> Na Taiwane musí zamestnávateľ za každý dokončený 1 rok praxe (年資)
+> vyplatiť 0,5 mesiaca priemernej mzdy (平均工資) ako odstupné.
+> (najviac 6 mesiacov mzdy) Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za 1 rok vypláca 1 mesiac priemernej mzdy, bez stropu.
 
 ​
 
-Nasledujúce vec kancelária skutočne vedla.
+Ak je mzda zamestnanca vysoká a dosiahol už dlhšiu prax,
 
-Existuje spoločnosť A, známá, s pobočkami po celom Taiwane.
+je aj odstupné pomerne vyššie.
 
-Z nejakého dôvodu sa zmenilo vedení,
+Vtedy niektoré málo svedomité taiwanské spoločnosti používajú rôzne prostriedky,
 
-a nové vedení začalo ihneď po nástupu,
+aby nemuseli vyplácať vysoké odstupné,
 
-aby snížilo personální náklady,
+a vedú zamestnanca k vlastnému odchodu.
 
-postupne volat dobre placené a dlouholeté zamestnanca na pohovory
+Zamestnanci musia byť opatrní
 
-Klient, pan B, bol v spoločnosti A zamestnaný viac než 10 rokov
-
-a obchodníkem s najlepším výsledkem v strednom regionu Taiwanu.
-
-Pretože mzda a prémie boli velmi vysoké,
-
-spoločnosť vzala pana B za cíl.
+a dávať pozor, aby do takého zámeru spoločnosti nepadli.
 
 ​
 
-Jednoho dne vedoucí pracovníci povolali B na pohovor
+Uvediem vec, ktorú som skutočne viedla.
 
-a náhle mu začali vytýkat, že nepracuje svedomite.
+Spoločnosť A je známa a má pobočky po celom Taiwane.
 
-Spoločnosť by mala obtíže,
+Z nejakého dôvodu sa zmenilo vedenie
 
-B by sa mal obetovať a dát príklad
+a nové vedenie začalo hneď po nástupe,
 
-a snížit mzdu a funkci.
+aby znížilo personálne náklady,
 
-Jinak by B mal spoločnosť opustit;
+postupne volať dobre platených a dlhoročných zamestnancov na pohovory.
 
-predložili B list formátu A4
+Klient, pán B, bol v spoločnosti A zamestnaný viac než 10 rokov
 
-a vyzvali ho, aby na neho napsal: „Já, OOO, dobrovoľne snižuji funkci a mzdu“
+a bol obchodníkom s najlepším výsledkom v strednom regióne Taiwanu.
+
+Pretože mzda a prémie boli veľmi vysoké,
+
+spoločnosť si pána B vybrala za cieľ.
+
+​
+
+Jedného dňa vedúci pracovník povolal B na pohovor
+
+a náhle mu začal vyčítať, že nepracuje svedomito.
+
+Spoločnosť vraj má ťažkosti,
+
+B sa má obetovať a dať príklad
+
+a prijať nižšiu mzdu aj funkciu.
+
+Inak má B spoločnosť opustiť.
+
+Predložili B hárok formátu A4
+
+a vyzvali ho, aby naň napísal: „Ja, [meno], dobrovoľne súhlasím so znížením funkcie a mzdy“
 
 ako obsah.
 
-Tuto dohodu chceli ukázat všetkým ostatním zamestnancom,
+Túto dohodu chceli ukázať všetkým ostatným zamestnancom,
 
-aby je nasledovali.
+aby ich nasledovali.
 
 ​
 
-B bol zamestnancom s najlepším výsledkem v strednom regionu Taiwanu,
+B bol zamestnancom s najlepším výsledkom v strednom regióne Taiwanu,
 
-priniesol spoločnosti mnoho peňazí
+priniesol spoločnosti veľa peňazí
 
-a pracoval každý den svedomite,
+a každý deň pracoval svedomito,
 
-preto tieto nerozumné požadavky silno odmítl.
+preto tieto nerozumné požiadavky rozhodne odmietol.
 
-B odmítl toto napsat,
+B odmietol to napísať
 
-a vedoucí pracovníci spoločnosti mu nakonec v hnevu povedali, ať odejde.
+a vedúci pracovník spoločnosti mu napokon v hneve povedal, nech odíde.
 
-B opustil, s pocitem krivdy a smutku,
+B opustil, s pocitom krivdy a smútku,
 
 spoločnosť, v ktorej bol 10 rokov,
 
@@ -148,61 +148,61 @@ a potom už do práce nechodil.
 
 ​
 
-Týmž spôsobom spoločnosť
+Tým istým spôsobom spoločnosť
 
-snížila mzdy mnoha vedoucím zamestnancom
+znížila mzdy mnohým vedúcim zamestnancom
 
-a část zamestnancov toto zacházení nenesla
+a časť zamestnancov toto zaobchádzanie nezniesla
 
-a sama odešla
-
-​
-
-B však po zmene vedení
-
-rozpoznal, že spoločnosť chce odstraňovat zamestnanca nevhodným spôsobom,
-
-a zistil to brzy
-
-a pretože už objevil nabídky práce pred odchodem zamestnancov,
-
-B v den, kdy šel na pohovor,
-
-nahrál celý priebeh mobilním telefonem
-
-a mohol preukázať, že sám neodešel.
-
-Díky tomu mohol neskôr sa zastoupením advokátom
-
-preukázať svoj zákonný nárok na odstupné;
-
-ostatní zamestnanci, ktorí odešli bez dôkazov, stejný nárok neprosadili.
+a sama odišla
 
 ​
 
-Pretože takových prípadov je mnoho,
+B však po zmene vedenia
 
-treba zachovávat dôkazy,
+spoznal, že spoločnosť chce zamestnancov odstraňovať nevhodným spôsobom,
 
-ak používa spoločnosť nevhodné prostriedky.
+a zistil to zavčasu.
 
-Ak zaznamenáva spoločnosť drobné chyby zamestnancov,
+Pretože už pred odchodom zamestnancov našiel ponuky práce,
 
-stanoví cíle ťažké k dosažení,
+B v deň, keď šiel na pohovor,
 
-klade nadmerné požadavky
+nahral celý priebeh mobilným telefónom
 
-alebo prevádza zamestnanca na podivná miesta,
+a mohol preukázať, že sám neodišiel.
 
-**treba zachovávat dôkazy.**
+Vďaka právnemu zastúpeniu sa mu neskôr podarilo
 
-**Vaše bežné záznamy docházky,**
+preukázať zákonný nárok na odstupné;
+
+ostatní zamestnanci, ktorí odišli bez dôkazov, rovnaký nárok nepresadili.
+
+​
+
+Pretože takých prípadov je veľa,
+
+treba si dôkazy uchovať,
+
+ak spoločnosť používa nevhodné prostriedky.
+
+Ak spoločnosť zaznamenáva drobné chyby zamestnancov,
+
+stanovuje ciele ťažké na dosiahnutie,
+
+kladie nadmerné požiadavky
+
+alebo preraďuje zamestnanca na nezvyčajné miesta,
+
+**treba si dôkazy uchovať.**
+
+**Vaše bežné záznamy dochádzky,**
 
 **záznamy nadčasov, záznamy výsledkov,**
 
-**vnútorný poriadok, e-mailovou korešpondenciu so spolupracovníky a nadriadenými**
+**pracovný poriadok, e-mailovú korešpondenciu so spolupracovníkmi a nadriadenými**
 
-**i nahrávky rozhovorov s nadriadenými —**
+**aj nahrávky rozhovorov s nadriadenými —**
 
 **uchovávajte dôkazy, ktoré sú pre vás priaznivé.**
 
@@ -210,19 +210,19 @@ alebo prevádza zamestnanca na podivná miesta,
 
 Ak pracujete na Taiwane,
 
-je odstupné ťažšie získať, než sa myslí
+odstupné sa získava ťažšie, než sa často predpokladá.
 
-Neuzatvárajte ľahko zmier so spoločnosťou
+Neuzatvárajte so spoločnosťou zmier unáhlene
 
-a dbejte, aby spoločnosť neprepúšťala nevhodným spôsobom
+a dávajte pozor, aby spoločnosť neprepúšťala nevhodným spôsobom
 
-ani nevedla k vlastnímu odchodu
+ani neprivádzala zamestnanca k vlastnému odchodu.
 
-Odstupné je zákonným právem zamestnanca,
+Pri hospodárskom prepustení je odstupné zákonným nárokom zamestnanca.
 
-a spoločnosť je samozrejme musí vyplatiť.
+Pri dobrovoľnom odchode a pri kárnom prepustení podľa článku 12 ho zamestnávateľ zásadne nevypláca.
 
-I vy musíte na Taiwane chrániť svoje práva.
+Aj vy si na Taiwane musíte strážiť svoje práva.
 
 ---
 

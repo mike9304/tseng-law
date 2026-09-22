@@ -37,7 +37,7 @@ môžete použiť systém „predbežného overenia prevádzkarne“ (營業場�
 
 Bez poplatku možno overiť, či na požadovanej adrese je otvorenie „reštaurácie“ možné.
 
-Na toto overenie je však treba nahrať „výpis z evidencie budovy typu 2“ (建物登記第二類謄本, ktorý obsahuje podrobné informácie o budove) adresy prevádzkarne.
+Na toto overenie treba však nahrať „výpis z evidencie budovy typu 2“ (建物登記第二類謄本, ktorý obsahuje podrobné informácie o budove) adresy prevádzkarne.
 
 Každý môže na katastrálnom úrade (地政事務所) požiadať o „výpis z evidencie budovy typu 2“ akejkoľvek adresy.
 
@@ -45,7 +45,7 @@ Ak je ťažké dostaviť sa osobne na katastrálny úrad (地政事務所),
 
 možno požiadať o pomoc známeho na Taiwane, prenajímateľa, realitného sprostredkovateľa alebo advokáta.
 
-Ak výsledok overenia ukáže, že reštaurácia nie je možná, neskôr pri zápise právnickej osoby (公司登記) nemusí mestský úrad zápis prijať.
+Ak výsledok overenia ukáže, že reštaurácia nie je možná, neskôr pri zápise spoločnosti (公司登記) nemusí mestský úrad zápis prijať.
 
 Venujte preto tejto veci pozornosť.
 
@@ -61,7 +61,7 @@ Preto v praxi nie je nutné pri zápise spoločnosti overovať všetky odvetvia.
 
 Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) a platného návodu mesta Taipei,
 
-od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a pomocného útvaru (分支機構)) výsledok predbežného overenia prevádzkarne **musí** byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
+od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a podriadenej prevádzky (分支機構)) výsledok predbežného overenia prevádzkarne **musí** byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
 
 Nižšie uvedený zoznam „odvetví, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目) označuje odvetvia, ktoré Obchodný úrad v priebehu preskúmania zápisu overuje z úradnej moci navyše (隨案主動查詢), keď odvetvie figuruje v žiadosti, ale chýba v pripojenom výsledku; skutočnosť, že odvetvie na tomto zozname nie je, neznamená oslobodenie od overenia.
 
@@ -73,7 +73,7 @@ Ak sa otvorí v mieste, kde reštaurácia nie je možná, môže neskôr nasledo
 
 Tým je zhrnutý podstatný postup; konkrétnu vec treba posúdiť osobitne s advokátkou alebo advokátom. Kancelária konzultuje iba po anglicky, čínsky (中文), japonsky a kórejsky.
 
-Pravidlá správnych orgánov sa môžu často meniť; pred zápisom právnickej osoby je vhodné overiť najnovšie predpisy.
+Pravidlá správnych orgánov sa môžu často meniť; pred zápisom spoločnosti je vhodné overiť najnovšie predpisy.
 
 ---
 

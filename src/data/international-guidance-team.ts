@@ -1111,7 +1111,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'Profily advokátok a advokátov, prevádzkového vedenia a pridruženého účtovníctva a auditu Hovering.',
     representativeTitle: 'Riadiaca advokátka',
     teamTitle: 'Právnici a spolupracovníci',
-    partnerTitle: 'Pridružené účtovníctvo',
+    partnerTitle: 'Partner (audítor)',
     introLabel: 'Predstavenie',
     educationLabel: 'Vzdelanie',
     experienceLabel: 'Prax',
@@ -1125,11 +1125,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Hlavné oblasti',
     consultationLanguagesLabel: 'Jazyky konzultácie',
     roles: {
-      'tseng-junwei': 'Riadiaca advokátka na Taiwane (Managing Attorney)',
-      'chang-rongxuan': 'Advokát na Taiwane (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Vedenie prevádzky v Kórei (Korea Operations Manager)',
-      'huang-shengping': 'Partnerský účtovník (Partner CPA)',
+      'tseng-junwei': 'Riadiaca advokátka na Taiwane',
+      'chang-rongxuan': 'Advokát na Taiwane',
+      'chang-fangyu': 'Právna asistentka',
+      'son-jungmin': 'Vedenie prevádzky pre Kóreu',
+      'huang-shengping': 'Partner (audítor)',
     },
   },
   bg: {
@@ -4014,49 +4014,49 @@ export const guidanceTeamBios: Record<
         'Zastupovala kórejského študenta v nároku na náhradu škody za úraz v posilňovni a dosiahla rozsudok prvého stupňa vo výške TWD 1.57M.',
       ],
       education: [
-        'Magister (M.S.), Institute of Finance, National Taiwan University',
-        'Bakalár (B.A.) v dvojodborovom programe práva a financií, National Chengchi University',
+        'Magisterský titul (M.S.), Institute of Finance, National Taiwan University',
+        'Bakalársky titul (B.A.) v dvojodborovom programe práva a financií, National Chengchi University',
         'Výmenné štúdium na Kobe University a Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Nadácia právnej pomoci, pobočka Taichung',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Predtým pôsobil na Ministry of Education, Legal Affairs Division, so zameraním na správne a občianskoprávne veci.',
+        'Predtým pôsobil na ministerstve školstva, v odbore právnych vecí, so zameraním na správne a občianskoprávne veci.',
         'Skúsenosť s vecami univerzít, práv pedagógov a správnych odvolaní.',
       ],
       education: [
         'Bakalár práv (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministerstvo školstva, odbor právnych vecí',
         'Advokát, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal s dlhoročnou praxou; predtým senior paralegal vo viacerých advokátskych kanceláriách, so zameraním na procesnú podporu, korporátnu agendu a zahraničné investície.',
+        'Právna asistentka s dlhoročnou praxou; predtým vedúca právna asistentka vo viacerých advokátskych kanceláriách, so zameraním na procesnú podporu, korporátnu agendu a zahraničné investície.',
         'Podpora v súdnych konaniach, pri zakladaní spoločností, pri povoleniach zahraničných investícií, pri žiadostiach o licencie a pri komunikácii medzi Kóreou a Taiwanom.',
       ],
       education: [
         'Bakalár práv (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Vedúca právna asistentka, Boyin Law Firm',
+        'Vedúca právna asistentka, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Koordinuje termíny porád a komunikáciu pre klientov z Kórey.',
-        'Podporuje medziregionálnu výmenu prostredníctvom systémov dokumentov a pracovných postupov, na základe informatiky.',
+        'Na základe vzdelania v informatike podporuje výmenu medzi regiónmi systémami dokumentov a pracovnými postupmi.',
       ],
       education: [
-        'Bakalár (B.S.) v informatike, National Cheng Kung University',
+        'Bakalársky titul (B.S.) v informatike, National Cheng Kung University',
       ],
       experience: [
         'Úsek kórejských operácií, Hovering International Law Firm',
@@ -4064,7 +4064,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Absolvoval bakalársky a magisterský program účtovníctva na National Chengchi University a teraz vedie účtovnú kanceláriu.',
+        'Absolvoval bakalársky a magisterský program účtovníctva na National Chengchi University a teraz vedie audítorskú kanceláriu.',
         'Podporuje integrovanú analýzu právnych, daňových a finančných rizík pre firemných klientov.',
       ],
       education: [

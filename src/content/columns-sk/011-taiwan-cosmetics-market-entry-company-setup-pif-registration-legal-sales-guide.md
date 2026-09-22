@@ -11,7 +11,7 @@ faq:
   - q: "Aby bolo možné predávať kozmetiku na Taiwane, je nutné vždy založiť dcérsku spoločnosť alebo pobočku?"
     a: "Dcérsku spoločnosť ani pobočku nie je nutné vždy zakladať. Je tiež možné zveriť dovoz a predaj taiwanskému dovozcovi (vrátane prípadu, keď zároveň pôsobí ako predajný zástupca). Ak hodláte činnosť na Taiwane prevádzkovať sami, založenie a zápis taiwanskej dcérskej spoločnosti (子公司) sa líši od založenia a zápisu pobočky (分公司) zahraničnej spoločnosti a líši sa i štruktúra zodpovednosti a daní; lehota potrebná na povolenie zahraničnej investície (僑外投資核准) a na zápis spoločnosti alebo pobočky sa líši podľa každej veci a podľa toho, či dochádza k oprave alebo doplneniu dokladov. Najprv treba stanoviť obchodný model a subjekt, ktorý ponesie zodpovednosť ako výrobca alebo dovozca kozmetiky (化粧品製造或輸入業者)."
   - q: "Čo je PIF a ide o ten istý postup ako registrácia produktu u TFDA?"
-    a: "Registrácia produktu a PIF nie sú tým istým postupom. Registrácia produktu (產品登錄) je samostatný úkon, ktorý sa vykonáva na platforme registrácie kozmetických produktov TFDA (衛生福利部食品藥物管理署). PIF je spis, ktorý spája údaje o akosti, bezpečnosti, zložení, tvrdené funkcii, spôsobe výroby, výsledkoch skúšok a hodnotení bezpečnosti a ktorý výrobca alebo dovozca kozmetiky zostavuje, aktualizuje a uchováva; samotný PIF nie je dokumentom, ktorý by sa musel vopred predkladať TFDA. Od 1. 7. 2026 zásadne všetky kozmetické prípravky spadajú pod režim PIF, s výnimkou tuhého ručne vyrábaného mydla vyrobeného v mieste výroby oslobodenom od registrácie závodu (工廠登記)."
+    a: "Registrácia produktu a PIF nie sú tým istým postupom. Registrácia produktu (產品登錄) je samostatný úkon, ktorý sa vykonáva na platforme registrácie kozmetických produktov TFDA (衛生福利部食品藥物管理署). PIF je spis, ktorý spája údaje o akosti, bezpečnosti, zložení, tvrdených funkciách, spôsobe výroby, výsledkoch skúšok a hodnotení bezpečnosti a ktorý výrobca alebo dovozca kozmetiky zostavuje, aktualizuje a uchováva; samotný PIF nie je dokumentom, ktorý by sa musel vopred predkladať TFDA. Od 1. 7. 2026 zásadne všetky kozmetické prípravky spadajú pod režim PIF, s výnimkou tuhého ručne vyrábaného mydla vyrobeného v mieste výroby oslobodenom od registrácie závodu (工廠登記)."
   - q: "Na aké výrazy treba dávať pozor v reklame na kozmetiku na Taiwane?"
     a: "Reklama sa posudzuje nielen podľa vety, ale podľa celého vyjadrenia, vrátane názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázané sú nepravdivé alebo nadsadené výrazy a tvrdenia liečebného účinku a osobitnú pozornosť treba venovať lekárskym výrazom, ako je liečba akné, protizápalové pôsobenie alebo baktericídne pôsobenie. Správna pokuta (罰鍰) činí 40.000 až 200.000 taiwanských dolárov (新臺幣, TWD) za nepravdivú alebo nadsadenú reklamu a 600.000 až 5.000.000 TWD za tvrdenie liečebného účinku. Príspevky influencerov a ďalších je takisto treba posúdiť podľa toho istého meradla, ak sú v podstate reklamou."
 ---
@@ -22,7 +22,7 @@ faq:
 
 Zahraničná značka kozmetiky, ktorá hodlá na Taiwane uvádzať výrobky do obehu, musí určiť, komu zverí dovoz, kedy dokončí registráciu produktu (產品登錄), kto spravuje informačný spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podľa akého meradla sa posudzuje označenie (標示) a reklama (廣告). Zahraničné značky môžu využiť miestneho dovozcu a môžu činnosť na Taiwane prevádzkovať samy, takže príprava predaja nie je dokončená len tým, že bola založená spoločnosť.
 
-Použiteľné povinnosti sa môžu líšiť podľa druhu výrobku a miesta výroby (製造場所), skutočnej formy dovozu, spôsobu obehu a obsahu reklamy. Nižšie sa oddelene vysvetľujú forma vstupu a zákonný subjekt zodpovednosti, registrácia produktu u TFDA, zostavenie, aktualizácia a uchovanie PIF, označenie a reklama a kontrola a nápravné opatrenie. Pred stanovením skutočného dodacieho kalendára treba znovu, výrobok po výrobku, overiť najnovšie predpisy a pokyny príslušného orgánu (主管機關).
+Uplatniteľné povinnosti sa môžu líšiť podľa druhu výrobku a miesta výroby (製造場所), skutočnej formy dovozu, spôsobu obehu a obsahu reklamy. Nižšie sa oddelene vysvetľujú forma vstupu a zákonný subjekt zodpovednosti, registrácia produktu u TFDA, zostavenie, aktualizácia a uchovanie PIF, označenie a reklama a kontrola a nápravné opatrenie. Pred stanovením skutočného dodacieho kalendára treba znovu, výrobok po výrobku, overiť najnovšie predpisy a pokyny príslušného orgánu (主管機關).
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
@@ -48,7 +48,7 @@ Nech je zvolená ktorákoľvek štruktúra, ústredným subjektom zodpovednosti 
 
 ## 2. Registrácia produktu a PIF sú dva odlišné režimy
 
-Registrácia produktu a PIF nie sú tým istým postupom. Registrácia produktu je samostatný úkon, ktorý sa vykonáva na platforme registrácie kozmetických produktov TFDA (衛生福利部食品藥物管理署). PIF je spis, ktorý spája údaje o akosti, bezpečnosti, zložení, tvrdené funkcii, spôsobe výroby, výsledkoch skúšok a hodnotení bezpečnosti a ktorý výrobca alebo dovozca kozmetiky zostavuje, aktualizuje a uchováva; samotný PIF nie je dokumentom, ktorý by sa musel vopred predkladať TFDA. Od 1. 7. 2026 zásadne všetky kozmetické prípravky spadajú pod režim PIF, s výnimkou tuhého ručne vyrábaného mydla (固態手工香皂) vyrobeného v mieste výroby oslobodenom od registrácie závodu (工廠登記).
+Registrácia produktu a PIF nie sú tým istým postupom. Registrácia produktu je samostatný úkon, ktorý sa vykonáva na platforme registrácie kozmetických produktov TFDA (衛生福利部食品藥物管理署). PIF je spis, ktorý spája údaje o akosti, bezpečnosti, zložení, tvrdených funkciách, spôsobe výroby, výsledkoch skúšok a hodnotení bezpečnosti a ktorý výrobca alebo dovozca kozmetiky zostavuje, aktualizuje a uchováva; samotný PIF nie je dokumentom, ktorý by sa musel vopred predkladať TFDA. Od 1. 7. 2026 zásadne všetky kozmetické prípravky spadajú pod režim PIF, s výnimkou tuhého ručne vyrábaného mydla (固態手工香皂) vyrobeného v mieste výroby oslobodenom od registrácie závodu (工廠登記).
 
 ### Okamih registrácie produktu a doba platnosti
 
@@ -56,11 +56,11 @@ Registrácia kozmetického produktu sa vykonáva na platforme registrácie kozme
 
 Doba platnosti registrácie produktu je 3 roky. Ak sa má v dodávkach pokračovať, treba požiadať o predĺženie (展延) do 3 mesiacov pred uplynutím platnosti. Ak sa zmenia zapísané údaje, ako je názov výrobku, použitie, forma prípravku (劑型), zložky a miesto výroby, treba tiež overiť, či je nutný postup zodpovedajúci obsahu zmeny.
 
-Registrácia produktu je úkonom ohlásenia stanovených údajov na platforme. Dokončenie registrácie neznamená, že sú kompletné všetky podklady potrebné na PIF, ani nie je posúdením, že označenie alebo reklama výrobku sú v súlade s právom. Kalendár registrácie produktu, správa PIF a preskúmanie označenia a reklamy sa musia prevádzkovať ako samostatné body súladu.
+Registrácia produktu je úkonom ohlásenia stanovených údajov na platforme. Dokončenie registrácie neznamená, že sú kompletné všetky podklady potrebné na PIF, ani nie je posúdením, že označenie alebo reklama výrobku sú v súlade s právom. Kalendár registrácie produktu, správa PIF a preskúmanie označenia a reklamy sa musia viesť ako tri samostatné línie: registráciu, PIF a označenie s reklamou.
 
 ### Podklady PIF a stupňovité uplatnenie
 
-PIF je súbor podkladov usporiadaný tak, aby bolo možné naďalej vysvetľovať akosť a bezpečnosť výrobku. Okrem akosti, bezpečnosti, zloženia, tvrdené funkcie (宣稱功能), spôsobu výroby, výsledkov skúšok a hodnotenia bezpečnosti treba podľa výrobku usporiadať základné informácie o výrobku a výrobcovi a podporné podklady, napríklad etiketu. Nariadenie o správe informačného spisu kozmetických produktov (化粧品產品資訊檔案管理辦法) usporadúva potrebné podklady do 16 kategórií, preto treba podľa typu výrobku overiť podklady každej kategórie a požiadavky na podpis a kvalifikáciu.
+PIF je súbor podkladov usporiadaný tak, aby bolo možné naďalej vysvetľovať akosť a bezpečnosť výrobku. Okrem akosti, bezpečnosti, zloženia, tvrdených funkcií (宣稱功能), spôsobu výroby, výsledkov skúšok a hodnotenia bezpečnosti treba podľa výrobku usporiadať základné informácie o výrobku a výrobcovi a podporné podklady, napríklad etiketu. Pravidlá správy informačného spisu kozmetických produktov (化粧品產品資訊檔案管理辦法) usporadúva potrebné podklady do 16 kategórií, preto treba podľa typu výrobku overiť podklady každej kategórie a požiadavky na podpis a kvalifikáciu.
 
 Režim PIF sa uplatňoval stupňovite podľa skupín výrobkov. Od 1. 7. 2026 sú do predmetu uplatnenia zahrnuté i zvyšné kozmetické prípravky, takže sa zásadne vzťahuje na všetku kozmetiku. Výnimka sa obmedzuje na tuhé ručne vyrábané mydlo vyrobené v mieste výroby oslobodenom od registrácie závodu. Výrobok nie je vylúčený len preto, že je ručný alebo že používa názov mydla; treba overiť oboje, tuhú formu i podmienku oslobodenia miesta výroby od registrácie závodu.
 
@@ -70,7 +70,7 @@ Prácu PIF, vrátane hodnotenia bezpečnosti, môže podporiť tretia osoba, kto
 
 Ak sa zmení surovina alebo receptúra, spôsob a miesto výroby, označenie vrátane etikety, tvrdená funkcia alebo bezpečnostné informácie, treba preskúmať a aktualizovať dotknuté podklady PIF. Treba tiež posúdiť, či sťažnosti spotrebiteľov, nežiaduce príhody a nové výsledky skúšok ovplyvňujú existujúce hodnotenie, preto je i po prvom zostavení nutný postup konania zmien.
 
-Podľa článku 7 nariadenia o správe informačného spisu kozmetických produktov je doba uchovania najmenej 5 rokov počítaných odo dňa nasledujúceho po dni posledného dodania výrobku na trh. Podľa článku 8 toho istého nariadenia je miestom uchovania adresa označenia výrobcu alebo dovozcu kozmetiky stanovená v článku 7 odseku 1 bode 7 zákona o správe hygieny a bezpečnosti kozmetiky (化粧品衛生安全管理法). Ustanovenie, ktoré stanoví dobu, a ustanovenie, ktoré stanoví miesto, treba prevádzkovať oddelene.
+Podľa článku 7 pravidiel o správe informačného spisu kozmetických produktov je doba uchovania najmenej 5 rokov počítaných odo dňa nasledujúceho po dni posledného dodania výrobku na trh. Podľa článku 8 tých istých pravidiel je miestom uchovania adresa označenia výrobcu alebo dovozcu kozmetiky stanovená v článku 7 odseku 1 bode 7 zákona o správe hygieny a bezpečnosti kozmetiky (化粧品衛生安全管理法). Ustanovenie, ktoré stanoví dobu, a ustanovenie, ktoré stanoví miesto, treba prevádzkovať oddelene.
 
 Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné elektronické alebo cloudové úložisko, výrobca alebo dovozca musí mať prístup k úplným podkladom. Treba stanoviť prístupové oprávnenie, zálohy, správu verzií, formát súborov a zodpovednú osobu tak, aby bolo možné podklady rýchlo vyhľadať a predložiť, keď ich príslušný orgán požaduje. Je tiež dôležité v zmluve upraviť príjemcu odovzdania, spôsob a to, či prístupové oprávnenie trvá, aby sa podklady udržali po zákonnú dobu uchovania i po skončení zmluvy s predajným partnerom alebo poskytovateľom služieb.
 
@@ -80,7 +80,7 @@ Keď príslušný orgán kontroluje PIF, oznámi to zásadne výrobcovi alebo do
 
 Ohlásenie nepravdivých informácií pri registrácii produktu alebo zapísanie nepravdivých informácií do PIF môže byť predmetom správnej pokuty (罰鍰) 10.000 až 1.000.000 taiwanských dolárov (新臺幣, TWD). Ak sú naopak podklady PIF neúplné, príslušný orgán zvyčajne nariadi nápravu v stanovenej lehote (限期改正) a správna pokuta sa stáva otázkou až vtedy, keď sa v tejto lehote nenapraví. Nepravdivé informácie a ešte doplniteľná neúplnosť podkladov sa nemajú uzatvárať ako ten istý výsledok porušenia.
 
-Stiahnutie alebo zničenie (銷毀) nie je opatrením, ktoré by automaticky nasledovalo každú neúplnosť podkladov PIF. Bezpečnosť výrobku, obsah porušenia, stav nápravy a zákonné podmienky použiteľné na každé opatrenie treba posúdiť oddelene. Opatrenie, keď bol potvrdený bezpečnostný problém, a požiadavku na doplnenie dokumentov treba posúdiť osobitne a postup sa riadi oznámením príslušného orgánu a použitým ustanovením.
+Stiahnutie alebo zničenie (銷毀) nie je opatrením, ktoré by automaticky nasledovalo každú neúplnosť podkladov PIF. Bezpečnosť výrobku, obsah porušenia, stav nápravy a zákonné podmienky uplatniteľné na každé opatrenie treba posúdiť oddelene. Opatrenie, keď bol potvrdený bezpečnostný problém, a požiadavku na doplnenie dokumentov treba posúdiť osobitne a postup sa riadi oznámením príslušného orgánu a použitým ustanovením.
 
 ## 3. Úprava označenia, propagácie a reklamy
 
@@ -116,16 +116,16 @@ Základnú štruktúru spoločnosti a pobočky možno vidieť v [Základy zaklad
 ### Oficiálne podklady
 
 - [Zákon o správe hygieny a bezpečnosti kozmetiky](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030013)
-- [Nariadenie o registrácii kozmetických produktov (化粧品產品登錄辦法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030097)
-- [Nariadenie o správe informačného spisu kozmetických produktov](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098)
+- [Pravidlá o registrácii kozmetických produktov (化粧品產品登錄辦法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030097)
+- [Pravidlá o správe informačného spisu kozmetických produktov](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098)
 - [TFDA — oznámenie o rozsahu predmetu registrácie kozmetických produktov](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30612)
 - [TFDA — oznámenie o stupňovitom uplatnení PIF](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614)
 - [TFDA — pokyny na zostavenie PIF](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384)
-- [TFDA — osobitná zóna registrácie kozmetických produktov](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
-- [TFDA — osobitná zóna informačného spisu kozmetických produktov](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
+- [TFDA — stránka k registrácii kozmetických produktov](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
+- [TFDA — stránka k informačnému spisu kozmetických produktov](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
 - [Kritériá posúdenia označenia, propagácie a reklamy kozmetiky (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Oficiálna príloha kritérií posúdenia reklamy na kozmetiku](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
-- [Ministerstvo zdravotníctva a sociálnych vecí (衛生福利部) — oznámenie o úprave reklamy na kozmetiku](https://www.mohw.gov.tw/cp-4256-48110-1.html)
+- [Ministerstvo zdravotníctva a sociálnej starostlivosti (衛生福利部) — oznámenie o úprave reklamy na kozmetiku](https://www.mohw.gov.tw/cp-4256-48110-1.html)
 - [Invest Taiwan — výklad zahraničnej investície](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Odbor preskúmania investícií Ministerstva hospodárstva — pokyny](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 

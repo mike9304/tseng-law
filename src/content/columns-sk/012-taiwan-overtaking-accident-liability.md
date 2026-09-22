@@ -45,11 +45,11 @@ Rodiny A a B najprv považovali náhlu zmenu pruhu vozidla č. 2 za hlavnú prí
 
 Podľa výsledku posudku niesol hlavnú zodpovednosť za túto zrážku A. Tento záver bol obmedzený na skutkové okolnosti tejto veci. Posudok zohľadnil spoločne to, že A chcel predísť 2 vozidlá vpredu idúce za sebou, že vošiel do protismerného pruhu, že išiel rýchlosťou, ktorá takmer nenechávala rezervu na brzdenie, že chýbali predpísané signály klaksónu a svetiel, ako aj pohyb zmeny pruhu vozidla č. 2, usporiadanie cesty a pruhov a ostatné zaistené dôkazy.
 
-To, že v niektorých veciach takéto výsledky posudku nastanú, neznamená, že jedno vynechanie predpísaného signálu vždy určí zodpovednosť. Zavinenie (過失) pri nehode pri predchádzaní závisí od miesta nehody, usporiadania pruhov, rýchlosti, pohybov vozidiel, signálov, časových intervalov, výhľadu a ostatných dôkazov.
+To, že v niektorých veciach takéto výsledky posudku nastanú, neznamená, že jedno vynechanie predpísaného signálu vždy určí zodpovednosť. Nedbanlivosť (過失) pri nehode pri predchádzaní závisí od miesta nehody, usporiadania pruhov, rýchlosti, pohybov vozidiel, signálov, časových intervalov, výhľadu a ostatných dôkazov.
 
 ## Body na overenie pri posudzovaní zodpovednosti za nehodu
 
-Pred predchádzaním treba najprv overiť, či miesto alebo dopravná situácia spadajú pod zákaz predchádzania. Ak sa uplatní postup toho istého pruhu, treba dať predpísaný signál klaksónu alebo svetiel, bez toho, aby sa vozidlo vpredu nútilo k uvoľneniu, vyčkať jasného prejavu uvoľnenia a dokončiť predchádzanie s dostatočným odstupom a bezpečnou vzdialenosťou návratu.
+Pred predchádzaním treba najprv overiť, či miesto alebo dopravná situácia spadajú pod zákaz predchádzania. Ak sa uplatní postup toho istého pruhu, treba dať predpísaný signál klaksónu alebo svetiel, bez toho, aby sa vozidlo vpredu nútilo k uvoľneniu, vyčkať jasný prejav uvoľnenia a dokončiť predchádzanie s dostatočným odstupom a bezpečnou vzdialenosťou návratu.
 
 Dodržiavanie článku 101 je dôležité, ale samo osebe nezabezpečuje ani vyhnutie sa nehode, ani neskorší výsledok posudku alebo konania. Vodiči musia ponechať dodatočnú bezpečnostnú rezervu a prispôsobiť sa situácii vpredu.
 

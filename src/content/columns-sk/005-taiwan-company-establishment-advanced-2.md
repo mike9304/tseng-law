@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Hlavný obrázok](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Osoby, ktoré čítali [Založenie spoločnosti na Taiwane – základy](/sk/columns/taiwan-company-establishment-basics) a [Založenie spoločnosti na Taiwane – podrobnejší výklad, 1. časť](/sk/columns/taiwan-company-establishment-advanced-1), môžu takisto nahliadnuť do Založenie spoločnosti na Taiwane – podrobnejší výklad, 2. časť (公司設立).
+Osoby, ktoré čítali [Založenie spoločnosti na Taiwane – základy](/sk/columns/taiwan-company-establishment-basics) a [Založenie spoločnosti na Taiwane – podrobnejší výklad, 1. časť](/sk/columns/taiwan-company-establishment-advanced-1), môžu pokračovať týmto textom (公司設立).
 
 ​
 
@@ -45,7 +45,7 @@ Ak ide napríklad o príjmy zo mzdy získané na Taiwane, treba predložiť kóp
 
 Ak ide o dividendy a zisky z investície do podniku na Taiwane, treba predložiť kópiu osvedčenia o zrážke pri zdroji z týchto dividend a ziskov (股息和紅利的扣繳憑單影本).
 
-Ak nastane prevod z bankového účtu v Kórei, nie je treba pripojiť listiny o pôvode prostriedkov.
+Ak nastane prevod z bankového účtu v Kórei, netreba pripojiť listiny o pôvode prostriedkov.
 
 **​**
 
@@ -69,7 +69,7 @@ Niektoré banky môžu ukladať ďalšie požiadavky, napríklad dobu používan
 
 **5. Môže spoločnosť zamestnávať cudzincov (vrátane osôb s kórejskou štátnou príslušnosťou)?**
 
-A. Prvý zamestnanec: žiadosť sa podáva ako vedúci práce v podniku bežnej investície zámorských Číňanov alebo cudzincov (一般僑外投資事業主管工作). Kritérium „práce odbornej alebo technickej povahy“ z bodu B nižšie sa neuplatní, avšak uplatnia sa predpoklady adresáta, vrátane predpokladu vedúceho (經理人) spoločnosti, ktorej vklad zámorských Číňanov alebo cudzincov presahuje 1/3, a tiež predpoklady výsledkov zamestnávateľa týkajúce sa kapitálu a obratu (články 38 a 39 noriem prieskumu).
+Prvý zamestnanec: žiadosť sa podáva ako vedúci práce v podniku bežnej investície zámorských Číňanov alebo cudzincov (一般僑外投資事業主管工作). Kritérium „práce odbornej alebo technickej povahy“ z bodu B nižšie sa neuplatní, avšak uplatnia sa predpoklady adresáta, vrátane predpokladu vedúceho (經理人) spoločnosti, ktorej vklad zámorských Číňanov alebo cudzincov presahuje 1/3, a tiež predpoklady výsledkov zamestnávateľa týkajúce sa kapitálu a obratu (články 38 a 39 preskúmavacích noriem).
 
 B. Od druhého zamestnanca existujú obmedzenia: ak presahuje počet zamestnaných osôb 1 osobu, vzdelanie a skúsenosť zamestnanca, pravidlá priemernej mzdy pri zamestnaní a pravidlá kapitálu a obratu spoločnosti sa spracúvajú podľa „odbornej alebo technickej práce“ (專門性或技術性工作).
 

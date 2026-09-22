@@ -88,7 +88,7 @@ Việc có thể ghi một ngành nghề vào đăng ký công ty tự nó khôn
 
 Địa chỉ trụ sở của công ty không đơn thuần là nơi nhận thư từ, mà là nền tảng của việc đăng ký, của nghĩa vụ thuế và của hoạt động kinh doanh trên thực tế. Trước khi ký hợp đồng thuê, quý vị phải xác nhận phân khu sử dụng đất (土地使用分區), quản lý xây dựng, điều kiện thuê và mức độ phù hợp cho việc đăng ký thuế, xét theo địa chỉ dự kiến và ngành nghề kinh doanh. Nếu mục đích sử dụng được phép của công trình (建物用途) hoặc quy chế quản lý tòa nhà không phù hợp với hoạt động kinh doanh thực tế, hoặc nếu không xin được văn bản đồng ý cần thiết của bên cho thuê, thì ngay cả sau khi đã đăng ký, quý vị vẫn có thể phải đổi địa điểm hoặc làm thêm thủ tục.
 
-Tại thành phố Đài Bắc có cơ chế tra cứu trước địa điểm kinh doanh (營業場所預先查詢) áp dụng cho những hồ sơ đăng ký công ty và đăng ký thương mại (公司及商業登記) thuộc phạm vi áp dụng. Tuy nhiên, chỉ riêng kết quả tra cứu này không có nghĩa là các giấy phép khác hay điều kiện theo pháp luật chuyên ngành cũng đã được đáp ứng. Đây là cơ chế của riêng thành phố Đài Bắc chứ không phải cơ chế áp dụng trên toàn Đài Loan, nên khi đặt trụ sở tại địa phương khác, quý vị phải xác nhận thủ tục của chính quyền địa phương và cơ quan có thẩm quyền nơi đó, và nên xác nhận bằng văn bản mức độ phù hợp của địa điểm trước khi ký hợp đồng thuê dài hạn hoặc đầu tư vào cơ sở vật chất.
+Tại thành phố Đài Bắc có cơ chế tra cứu trước địa điểm kinh doanh (營業場所預先查詢) áp dụng cho những hồ sơ đăng ký công ty và đăng ký cơ sở kinh doanh (公司及商業登記) thuộc phạm vi áp dụng. Tuy nhiên, chỉ riêng kết quả tra cứu này không có nghĩa là các giấy phép khác hay điều kiện theo pháp luật chuyên ngành cũng đã được đáp ứng. Đây là cơ chế của riêng thành phố Đài Bắc chứ không phải cơ chế áp dụng trên toàn Đài Loan, nên khi đặt trụ sở tại địa phương khác, quý vị phải xác nhận thủ tục của chính quyền địa phương và cơ quan có thẩm quyền nơi đó, và nên xác nhận bằng văn bản mức độ phù hợp của địa điểm trước khi ký hợp đồng thuê dài hạn hoặc đầu tư vào cơ sở vật chất.
 
 ## 4. Giấy phép làm việc, tư cách cư trú và vốn công ty
 
@@ -128,7 +128,7 @@ Thuế suất giới hạn theo hiệp định không tự động được áp 
 
 - [Quy định pháp luật về đầu tư nước ngoài của Bộ Kinh tế Đài Loan (bản tiếng Anh)](https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E)
 - [Hướng dẫn nghiệp vụ đầu tư của Bộ Kinh tế Đài Loan](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
-- [Hướng dẫn đăng ký công ty và đăng ký thương mại của Cục Phát triển Thương mại, Bộ Kinh tế (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
+- [Hướng dẫn đăng ký công ty và đăng ký cơ sở kinh doanh của Cục Phát triển Thương mại, Bộ Kinh tế (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Sổ tay nghiệp vụ về giấy phép làm việc cho người quản lý doanh nghiệp có vốn đầu tư của Hoa kiều hoặc người nước ngoài](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Hướng dẫn của Bộ Tài chính Đài Loan (財政部) về Hiệp định thuế thu nhập Đài Loan–Hàn Quốc](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
 - [Quy định về thuế suất khấu trừ tại nguồn đối với cổ tức trả cho người không cư trú](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)

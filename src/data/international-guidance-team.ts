@@ -1886,7 +1886,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Văn phòng nhận các vụ việc doanh nghiệp và cá nhân tại Đài Loan, làm việc bằng tiếng Anh, tiếng Nhật, tiếng Hàn và tiếng Trung.',
-        'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường TWD 1.57M.',
+        'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường 1,57 triệu TWD (TWD 1.57M).',
       ],
       education: [
         'Thạc sĩ (M.S.), Viện Tài chính (Institute of Finance, National Taiwan University)',
@@ -1912,7 +1912,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Trợ lý pháp lý kỳ cựu với nhiều năm ở vị trí trợ lý pháp lý cao cấp tại nhiều văn phòng luật, phụ trách hỗ trợ tố tụng, pháp chế doanh nghiệp và các vụ việc đầu tư nước ngoài.',
+        'Trợ lý pháp lý cao cấp, nhiều năm hỗ trợ tố tụng, pháp chế doanh nghiệp và các vụ việc đầu tư nước ngoài tại nhiều văn phòng luật.',
         'Hỗ trợ tố tụng, thành lập công ty, thủ tục chấp thuận đầu tư nước ngoài, xin giấy phép và việc trao đổi giữa Hàn Quốc và Đài Loan.',
       ],
       education: ['Cử nhân Luật (LL.B.), Tunghai University'],

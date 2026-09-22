@@ -27,17 +27,17 @@ Phần hỏi đáp dưới đây dành cho quý vị đang cân nhắc thành l�
 
 Khi người nước ngoài thành lập công ty tại Đài Loan, quý vị phải nộp bản kế hoạch đầu tư (投資計畫書) lên Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司) của Đài Loan để được thẩm định.
 
-Bởi vì Vụ Thẩm định Đầu tư phải xác nhận xem số vốn điều lệ đó có thực sự được sử dụng vào mục đích đầu tư hay không,
+Vụ Thẩm định Đầu tư phải xác nhận số vốn điều lệ đó có thực sự được sử dụng vào mục đích đầu tư hay không.
 
-và xem có phải bên nước ngoài đang đưa nguồn tiền vào Đài Loan dưới một danh nghĩa khác hay không.
+Cơ quan này cũng phải xem bên nước ngoài có đang đưa nguồn tiền vào Đài Loan dưới một danh nghĩa khác hay không.
 
 Khi lập bản kế hoạch đầu tư, quý vị không nhất thiết phải ghi địa chỉ chính xác của công ty, chỉ cần ghi khu vực là được (ví dụ: thành phố Đài Bắc (臺北市)). ​
 
 Tuy nhiên, sau đó khi mở tài khoản văn phòng chuẩn bị thành lập công ty (公司籌備處帳戶) tại ngân hàng, nhiều ngân hàng sẽ xem xét hợp đồng thuê (租賃契約) và đến tận nơi kiểm tra địa chỉ công ty.
 
-Một nhân viên ngân hàng Đài Loan cho biết rằng,
+Một nhân viên ngân hàng Đài Loan cho biết như sau.
 
-gần đây có nhiều trường hợp người nước ngoài mở tài khoản xong rồi biến mất, nên việc mở tài khoản ngày càng bị siết chặt hơn.
+Gần đây có nhiều trường hợp người nước ngoài mở tài khoản xong rồi biến mất, nên việc mở tài khoản ngày càng bị siết chặt hơn.
 
 Trong bài viết cơ bản trước đây cũng có người nêu rằng mở tài khoản ngân hàng là công đoạn khó khăn nhất, và thực tiễn hiện nay cũng cho thấy như vậy.
 
@@ -45,15 +45,15 @@ Do các vụ rửa tiền (洗錢) tại Đài Loan rất nhiều, việc mở t
 
 **Lời khuyên:**
 
-Vì việc thẩm định kế hoạch đầu tư cũng mất thời gian,
+Việc thẩm định kế hoạch đầu tư cũng mất thời gian.
 
-quý vị nên vừa soạn bản kế hoạch đầu tư vừa đồng thời tìm địa chỉ đăng ký của công ty.
+Quý vị nên vừa soạn bản kế hoạch đầu tư vừa đồng thời tìm địa chỉ đăng ký của công ty.
 
 Theo Điều 9 Luật Đầu tư của Người nước ngoài (外國人投資條例), phần vốn góp đã được chấp thuận phải về đủ trong thời hạn do cơ quan chủ quản ấn định (核定期限); thời hạn thực tế cần được xác nhận trong văn bản chấp thuận riêng (trên thực tế thường được ấn định khoảng 1 năm).
 
-Nhờ thời hạn đó, sau khi tìm được địa chỉ công ty và ký hợp đồng thuê,
+Nhờ thời hạn đó, quý vị có thể tìm địa chỉ công ty và ký hợp đồng thuê.
 
-quý vị vẫn còn đủ thời gian để mở tài khoản văn phòng chuẩn bị thành lập công ty tại ngân hàng và chuyển vốn điều lệ vào.
+Quý vị vẫn còn đủ thời gian để mở tài khoản văn phòng chuẩn bị thành lập công ty tại ngân hàng và chuyển vốn điều lệ vào.
 
 ​
 
@@ -61,25 +61,25 @@ quý vị vẫn còn đủ thời gian để mở tài khoản văn phòng chu�
 
 Quý vị vẫn có thể mở được tài khoản công ty.
 
-Thông thường ngân hàng yêu cầu hai loại giấy tờ chứng minh nhân thân,
+Thông thường ngân hàng yêu cầu hai loại giấy tờ chứng minh nhân thân.
 
-nếu không có thẻ cư trú thì quý vị có thể xin cấp Bảng thông tin cơ bản về mã số thống nhất (統一證號基本資料表) tại Sở Di dân, Bộ Nội chính (內政部移民署) của Đài Loan.
+Nếu không có thẻ cư trú thì quý vị có thể xin cấp Bảng thông tin cơ bản về mã số thống nhất (統一證號基本資料表) tại Sở Di dân, Bộ Nội chính (內政部移民署) của Đài Loan.
 
-Giấy tờ này có thể được cấp ngay trong ngày,
+Giấy tờ này có thể được cấp ngay trong ngày.
 
-nhưng Sở Di dân rất đông người, nên quý vị hãy đến sớm để lấy phiếu số thứ tự.
+Sở Di dân rất đông người, nên quý vị hãy đến sớm để lấy phiếu số thứ tự.
 
 ​
 
 **3. Tôi nghe nói khi thẩm định kế hoạch đầu tư thì phải ghi học vấn và kinh nghiệm làm việc. Tôi lo rằng học vấn và kinh nghiệm của mình không phù hợp với ngành nghề của công ty dự định thành lập.**
 
-Vụ Thẩm định Đầu tư có xem xét lý lịch học vấn và kinh nghiệm của nhà đầu tư,
+Vụ Thẩm định Đầu tư có xem xét lý lịch học vấn và kinh nghiệm của nhà đầu tư.
 
-nhưng việc thẩm định không quá khắt khe.
+Việc thẩm định không quá khắt khe.
 
-Quý vị có thể nêu nhiều loại kinh nghiệm làm việc khác nhau, kể cả công việc bán thời gian,
+Quý vị có thể nêu nhiều loại kinh nghiệm làm việc khác nhau, kể cả công việc bán thời gian.
 
-và trình bày chi tiết sao cho thuyết phục được người thẩm định.
+Hãy trình bày chi tiết sao cho thuyết phục được người thẩm định.
 
 Về điểm này, quý vị nên trao đổi kỹ với luật sư Đài Loan.
 
@@ -87,23 +87,23 @@ Về điểm này, quý vị nên trao đổi kỹ với luật sư Đài Loan.
 
 **4. Khi thuê địa chỉ đăng ký của công ty (ví dụ: mặt bằng nhà hàng) thì có điều gì cần lưu ý không?**
 
-Trong một số trường hợp, việc thành lập công ty mất khoảng **3 tháng**, còn việc xin giấy phép làm việc (工作許可) cùng thẻ cư trú mất khoảng **1 tháng**; đó không phải thời hạn được bảo đảm,
+Trong một số trường hợp, việc thành lập công ty mất khoảng **3 tháng**, còn việc xin giấy phép làm việc (工作許可) cùng thẻ cư trú mất khoảng **1 tháng**; đó không phải thời hạn được bảo đảm.
 
-nên quý vị hãy đặt ngày bắt đầu hợp đồng muộn nhất có thể.
+Vì vậy quý vị hãy đặt ngày bắt đầu hợp đồng muộn nhất có thể.
 
-Ngoài ra, trong hợp đồng thuê mặt bằng kinh doanh tại Đài Loan, bên cho thuê thường dành cho bên thuê một "**thời gian thi công nội thất**"(裝潢期間).
+Ngoài ra, trong hợp đồng thuê mặt bằng kinh doanh tại Đài Loan, bên cho thuê thường dành cho bên thuê một "**thời gian thi công nội thất**" (裝潢期間).
 
 Đây là khoảng thời gian được miễn tiền thuê, quý vị hãy thử thương lượng.
 
-Người nước ngoài không dễ thuê được mặt bằng, và tiền đặt cọc (押金) tại Đài Loan tương đối thấp (thường là 2 tháng) nên bên cho thuê ít được bảo vệ,
+Người nước ngoài không dễ thuê được mặt bằng, và tiền đặt cọc (押金) tại Đài Loan tương đối thấp (thường là 2 tháng) nên bên cho thuê ít được bảo vệ.
 
-vì vậy nhiều bên cho thuê ngần ngại cho người nước ngoài thuê.
+Vì vậy nhiều bên cho thuê ngần ngại cho người nước ngoài thuê.
 
 Do đó, nên tìm địa điểm kinh doanh (營業場所) từ sớm.
 
-Nếu việc thương lượng với bên cho thuê không thuận lợi,
+Việc thương lượng với bên cho thuê có thể không thuận lợi.
 
-khi cần thiết quý vị có thể đề xuất công chứng (公證) hợp đồng thuê hoặc nộp thêm một khoản đặt cọc bổ sung.
+Khi cần thiết, quý vị có thể đề xuất công chứng (公證) hợp đồng thuê hoặc nộp thêm một khoản đặt cọc bổ sung.
 
 ​
 
@@ -115,13 +115,13 @@ Ví dụ: nếu ngành nghề kinh doanh là dịch vụ ăn uống mà quý v�
 
 Như đã trình bày ở trên, ngân hàng sẽ xem xét hợp đồng thuê và đến tận nơi kiểm tra địa chỉ công ty.
 
-Ngoài ra, ở bước đăng ký công ty cuối cùng, chính quyền thành phố cũng yêu cầu địa chỉ đăng ký phải nằm trong khu vực được phép kinh doanh nhà hàng,
+Ngoài ra, ở bước đăng ký công ty cuối cùng, chính quyền thành phố cũng yêu cầu địa chỉ đăng ký phải nằm trong khu vực được phép kinh doanh nhà hàng.
 
-và nếu là không gian văn phòng thương mại thông thường thì không thể đăng ký công ty.
+Nếu là không gian văn phòng thương mại thông thường thì không thể đăng ký công ty.
 
-Ví dụ: nếu là ngành nghề kinh doanh có thể thực hiện tại không gian văn phòng thương mại, như ngành quảng cáo hay ngành bán buôn, thì quý vị có thể thành lập công ty tại đó. Trước khi ký hợp đồng thuê,
+Ví dụ: nếu là ngành nghề kinh doanh có thể thực hiện tại không gian văn phòng thương mại, như ngành quảng cáo hay ngành bán buôn, thì quý vị có thể thành lập công ty tại đó.
 
-quý vị hãy xác nhận trước điều này.
+Trước khi ký hợp đồng thuê, quý vị hãy xác nhận trước điều này.
 
 *Nếu quý vị cần hỗ trợ hoặc cần trao đổi về pháp luật Đài Loan, xin gửi qua trang Liên hệ; văn phòng không cam kết thời gian phản hồi.*
 

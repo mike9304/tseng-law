@@ -130,7 +130,7 @@ Biên lai, ghi chép giá cước, ghi chép lộ trình và tài liệu khám c
 - [Điều 196 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
 - [Điều 216 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Điều 504 Bộ luật Tố tụng Hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
-- [Hướng dẫn của Viện Tư pháp (司法院) về việc mở rộng yêu cầu sau khi chuyển hồ sơ](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
+- [Hướng dẫn của Tư pháp viện (司法院) về việc mở rộng yêu cầu sau khi chuyển hồ sơ](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
 - [Bản án của Tòa án Địa phương Gia Nghĩa (嘉義) về chi phí thân nhân chăm sóc](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Bản án của Tòa án Địa phương Đài Nam (臺南) về chi phí đi lại khám chữa bệnh](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
@@ -151,7 +151,7 @@ Việc tiền lương hiện tại vẫn được giữ nguyên thì không đư
 
 Nếu tình trạng rối loạn chức năng kéo dài thực sự bị tranh chấp thì giám định y khoa có thể hữu ích, nhưng không bắt buộc trong mọi vụ việc. Việc khấu trừ do lỗi của người bị thiệt hại (與有過失) theo Điều 217 Bộ luật Dân sự và các lý do điều chỉnh khác cũng được xem xét.
 
-Trường hợp tính theo phương thức chi trả một lần, việc khấu trừ tiền lãi trung gian (中間利息扣除) có thể được cân nhắc. Máy tính Hoffmann (霍夫曼) của Viện Tư pháp chỉ là công cụ hỗ trợ tính toán, không phải phương pháp bắt buộc về mặt pháp lý, và cũng không bảo đảm kết quả. Theo Điều 193 Bộ luật Dân sự, nếu đương sự có đề nghị thì tòa án cũng có khả năng ra lệnh chi trả theo định kỳ với điều kiện có bảo đảm.
+Trường hợp tính theo phương thức chi trả một lần, việc khấu trừ tiền lãi trung gian (中間利息扣除) có thể được cân nhắc. Máy tính Hoffmann (霍夫曼) của Tư pháp viện chỉ là công cụ hỗ trợ tính toán, không phải phương pháp bắt buộc về mặt pháp lý, và cũng không bảo đảm kết quả. Theo Điều 193 Bộ luật Dân sự, nếu đương sự có đề nghị thì tòa án cũng có khả năng ra lệnh chi trả theo định kỳ với điều kiện có bảo đảm.
 
 ## Q13. Tiền bù đắp tổn thất tinh thần đối với thiệt hại phi tài sản được phán định thế nào?
 
@@ -184,11 +184,11 @@ Bảo hiểm trách nhiệm đối với người thứ ba (第三人責任險),
 - [Điều 193 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Điều 216 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Điều 217 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Bản án Thượng Dị số 644 năm 109 (2020) của Tòa án Cấp cao Đài Loan (109年度上易字第644號)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Bản án Thượng Dị số 477 năm 109 của Tòa án Cấp cao Đài Loan](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
-- [Máy tính giá trị hiện tại Hoffmann của Viện Tư pháp](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
+- [Bản án phúc thẩm giản dị số 644 năm 109 (2020) của Tòa án Cấp cao Đài Loan (109年度上易字第644號)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Bản án phúc thẩm giản dị số 477 năm 109 của Tòa án Cấp cao Đài Loan (109年度上易字第477號)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Máy tính giá trị hiện tại Hoffmann của Tư pháp viện](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Điều 195 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Bản án Lịch Giản số 236 năm 112 của Tòa án Địa phương Đào Viên (112年度壢簡字第236號)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Bản án sơ thẩm giản dị số 236 năm 112 của phân viện Trung Lịch, Tòa án Địa phương Đào Viên (112年度壢簡字第236號)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Điều 188 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Điều 284 Bộ luật Hình sự Đài Loan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Luật Bảo hiểm Trách nhiệm Dân sự Bắt buộc của Chủ xe Cơ giới](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)

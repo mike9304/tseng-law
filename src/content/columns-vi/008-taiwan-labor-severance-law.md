@@ -104,7 +104,7 @@ nên công ty đã nhắm vào ông B.
 
 ​
 
-Một hôm, một cán bộ cấp cao của công ty gọi ông B lên gặp riêng,
+Một hôm, một quản lý cấp cao của công ty gọi ông B lên gặp riêng,
 
 rồi bất ngờ bắt đầu chỉ trích rằng ông B đã làm việc thiếu nghiêm túc đến mức nào.
 
@@ -138,7 +138,7 @@ nên ông vô cùng bất bình trước yêu cầu vô lý này.
 
 Ông B từ chối viết những nội dung như vậy,
 
-và cuối cùng vị cán bộ của công ty đã nổi giận, đuổi ông B ra ngoài.
+và cuối cùng vị quản lý của công ty đã nổi giận, đuổi ông B ra ngoài.
 
 Mang theo nỗi oan ức và buồn bã,
 

@@ -44,7 +44,7 @@ Công ty con tại Đài Loan và chi nhánh của công ty nước ngoài khôn
 
 Trường hợp cần thực hiện thủ tục đầu tư của người nước ngoài thì phải xác nhận hướng dẫn của cơ quan phụ trách hiện hành là **Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)**. Thời gian cần cho việc chấp thuận đầu tư, chuyển vốn, đăng ký công ty hoặc chi nhánh, mở tài khoản ngân hàng, đăng ký thuế (稅籍登記) và có được tư cách nhập khẩu sẽ khác nhau tùy theo nhà đầu tư, ngành nghề, hình thức tổ chức, tài liệu nộp và việc có phải bổ sung hồ sơ hay không. Do đó, thay vì ấn định ngày ra mắt sản phẩm trên giả định về một khoảng thời gian cố định, trước hết phải xác nhận từng thủ tục có được áp dụng hay không cùng các điều kiện tiếp nhận hồ sơ mới nhất.
 
-Dù chọn cấu trúc nào thì chủ thể chịu trách nhiệm trung tâm theo quy định pháp luật về mỹ phẩm vẫn là **cơ sở sản xuất hoặc nhập khẩu mỹ phẩm**. Quý vị có thể giao việc sắp xếp tài liệu sản phẩm hoặc việc đánh giá tính an toàn cho chuyên gia bên ngoài, nhưng chỉ riêng việc ủy thác thì không làm chuyển dịch trách nhiệm pháp lý của cơ sở sản xuất hoặc nhập khẩu. Việc phân biệt giữa phân chia công việc theo hợp đồng và chủ thể chịu trách nhiệm theo pháp luật chính là điểm xuất phát khi xem xét cấu trúc gia nhập thị trường.
+Dù chọn cấu trúc nào thì chủ thể chịu trách nhiệm trung tâm theo quy định pháp luật về mỹ phẩm vẫn là **cơ sở sản xuất hoặc nhập khẩu mỹ phẩm**. Quý vị có thể giao việc sắp xếp tài liệu sản phẩm hoặc việc đánh giá tính an toàn cho chuyên gia bên ngoài, nhưng chỉ riêng việc ủy thác thì không làm chuyển trách nhiệm pháp lý của cơ sở sản xuất hoặc nhập khẩu. Việc phân biệt giữa phân chia công việc theo hợp đồng và chủ thể chịu trách nhiệm theo pháp luật chính là điểm xuất phát khi xem xét cấu trúc gia nhập thị trường.
 
 ## 2. Đăng ký sản phẩm và PIF là hai chế độ khác nhau
 
@@ -72,7 +72,7 @@ Khi nguyên liệu hoặc công thức, phương pháp sản xuất và địa �
 
 Về thời hạn lưu giữ, theo Điều 7 Biện pháp Quản lý Hồ sơ Thông tin Sản phẩm Mỹ phẩm, PIF phải được lưu giữ tối thiểu năm năm kể từ ngày liền sau ngày sản phẩm đó được cung ứng ra thị trường lần cuối. Về nơi lưu giữ, theo Điều 8 của cùng biện pháp, tài liệu phải được quản lý tại địa chỉ ghi trên nhãn của cơ sở sản xuất hoặc nhập khẩu mỹ phẩm theo quy định tại điểm 7 khoản 1 Điều 7 Luật Quản lý An toàn Vệ sinh Mỹ phẩm (化粧品衛生安全管理法). Điều khoản quy định thời hạn và điều khoản quy định nơi lưu giữ phải được vận hành một cách phân biệt.
 
-Ngay cả khi nhà sản xuất gốc giữ bản gốc hoặc khi sử dụng kho lưu trữ điện tử hay đám mây an toàn, cơ sở sản xuất hoặc nhập khẩu vẫn phải tiếp cận được tài liệu đầy đủ. Để có thể tra cứu và xuất trình tài liệu nhanh chóng khi cơ quan chủ quản yêu cầu, phải ấn định quyền truy cập, việc sao lưu, việc quản lý phiên bản, định dạng tệp và người phụ trách. Điều quan trọng là hợp đồng phải xử lý đối tượng bàn giao, phương thức bàn giao và việc quyền truy cập có tiếp tục tồn tại hay không, để tài liệu vẫn được duy trì trong thời hạn lưu giữ luật định ngay cả sau khi hợp đồng với đối tác bán hàng hoặc nhà cung cấp dịch vụ đã kết thúc.
+Ngay cả khi nhà sản xuất gốc giữ bản gốc hoặc khi sử dụng kho lưu trữ điện tử hoặc kho lưu trữ đám mây bảo mật, cơ sở sản xuất hoặc nhập khẩu vẫn phải tiếp cận được tài liệu đầy đủ. Để có thể tra cứu và xuất trình tài liệu nhanh chóng khi cơ quan chủ quản yêu cầu, phải ấn định quyền truy cập, việc sao lưu, việc quản lý phiên bản, định dạng tệp và người phụ trách. Điều quan trọng là hợp đồng phải xử lý đối tượng bàn giao, phương thức bàn giao và việc quyền truy cập có tiếp tục tồn tại hay không, để tài liệu vẫn được duy trì trong thời hạn lưu giữ luật định ngay cả sau khi hợp đồng với đối tác bán hàng hoặc nhà cung cấp dịch vụ đã kết thúc.
 
 ### Kiểm tra, cải chính và biện pháp hành chính
 
@@ -86,7 +86,7 @@ Việc thu hồi hay tiêu hủy không phải là biện pháp tự động đi
 
 Quảng cáo được đánh giá theo toàn bộ biểu đạt, tức là không chỉ theo câu chữ mà còn theo tên gọi, chữ viết, hình ảnh, ký hiệu và âm thanh. Biểu đạt sai sự thật hoặc phóng đại và việc công bố công dụng chữa bệnh đều bị cấm, nên phải đặc biệt thận trọng với các biểu đạt mang tính y tế như trị mụn, kháng viêm hoặc diệt khuẩn. Về tiền phạt hành chính, quảng cáo sai sự thật hoặc phóng đại bị phạt từ 40.000 đến 200.000 TWD, còn việc công bố công dụng chữa bệnh bị phạt từ 600.000 đến 5.000.000 TWD. Bài đăng của những người có sức ảnh hưởng và của những chủ thể tương tự, nếu về thực chất là quảng cáo, cũng phải được xem xét theo cùng một tiêu chuẩn.
 
-### Phán đoán theo toàn bộ biểu đạt chứ không theo từng từ ngữ riêng lẻ
+### Đánh giá theo toàn bộ biểu đạt, không theo từng từ ngữ riêng lẻ
 
 Việc nhãn mác, quảng bá hay quảng cáo có sai sự thật, phóng đại hoặc có công bố công dụng chữa bệnh hay không thì không được đánh giá chỉ bằng một từ ngữ nhất định. Phải xem xét đồng thời tên hàng hóa, câu văn, hình ảnh, ký hiệu, âm thanh, ngữ cảnh trước sau và ấn tượng tổng thể mà người tiêu dùng tiếp nhận. Ấn tượng do thông điệp quảng cáo chủ đạo tạo ra không đương nhiên được xóa bỏ chỉ bằng một dòng chú thích giới hạn in chữ nhỏ, vì vậy phải rà soát cả từng câu chữ riêng lẻ lẫn bản quảng cáo hoàn chỉnh.
 
@@ -98,7 +98,7 @@ Tiền phạt hành chính đối với quảng cáo sai sự thật hoặc phó
 
 Bài đăng của người có sức ảnh hưởng (網紅), người viết đánh giá hoặc đối tác bán hàng cũng có thể bị nhận định về thực chất là quảng cáo, tùy theo nội dung và bối cảnh thương mại. Việc trả thù lao, việc cung cấp sản phẩm, đường dẫn bán hàng, chỉ thị đăng bài của thương hiệu và sự hợp tác lặp đi lặp lại đều là những yếu tố được cân nhắc khi đánh giá. Ngược lại, không phải mọi bài đăng cá nhân đều tự động trở thành quảng cáo của thương hiệu; phải xác nhận quan hệ giữa người đăng và thương hiệu, nội dung cụ thể và mức độ tham gia của thương hiệu.
 
-Trong hợp đồng hợp tác và hướng dẫn vận hành, có thể quy định phạm vi các biểu đạt được phép sử dụng và tài liệu chứng minh, việc rà soát trước khi đăng, quy trình sửa đổi và gỡ bỏ các biểu đạt vi phạm. Cũng nên đưa vào phạm vi quản lý những biểu đạt được thêm vào trong phần bình luận, phần giải thích bằng lời trong buổi phát trực tiếp hoặc video ngắn, và sự không thống nhất giữa trang bán hàng với nhãn sản phẩm. Bản rà soát, lịch sử phê duyệt, yêu cầu sửa đổi và bài đăng cuối cùng phải được lưu giữ để về sau có thể xác nhận được quan hệ sự việc.
+Trong hợp đồng hợp tác và hướng dẫn vận hành, có thể quy định phạm vi các biểu đạt được phép sử dụng và tài liệu chứng minh, việc rà soát trước khi đăng, quy trình sửa đổi và gỡ bỏ các biểu đạt vi phạm. Cũng nên đưa vào phạm vi quản lý những biểu đạt được thêm vào trong phần bình luận, phần giải thích bằng lời trong buổi phát trực tiếp hoặc video ngắn, và sự không thống nhất giữa trang bán hàng với nhãn sản phẩm. Bản rà soát, lịch sử phê duyệt, yêu cầu sửa đổi và bài đăng cuối cùng phải được lưu giữ để về sau có thể kiểm chứng được sự việc.
 
 ### Trình tự kiểm tra khi chuẩn bị bán hàng
 

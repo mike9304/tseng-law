@@ -28,7 +28,7 @@ faq:
 
 Trong các vụ ly hôn tại Đài Loan, ngoài cách thức chấm dứt quan hệ hôn nhân, quý vị còn phải phân biệt việc chỉnh lý hộ khẩu, hiệu lực ở nước ngoài, tài sản vợ chồng, bồi thường thiệt hại, khoản cấp dưỡng cho vợ/chồng sau ly hôn (贍養費), các quyết định liên quan đến con chưa thành niên và tiền cấp dưỡng nuôi con (扶養費). Dù cùng một tình tiết có thể trở thành tài liệu cho nhiều yêu cầu khác nhau, điều kiện và hiệu lực của mỗi quyền, đối tượng phải chứng minh và thời hạn của chúng đều không giống nhau.
 
-Đặc biệt, với những gia đình có liên hệ với từ hai quốc gia hoặc khu vực trở lên, chẳng hạn giữa Đài Loan và một quốc gia khác, quý vị khó có thể quyết định toàn bộ thủ tục nếu chỉ nhìn vào quốc tịch của một bên hoặc nơi đăng ký kết hôn. Trước hết phải xác nhận nơi có trung tâm cuộc sống hiện tại, tình trạng các bản án và đăng ký đã có, nơi lập văn bản, nơi cư trú của con và nơi có tài sản, thì mới giảm được các thủ tục trùng lặp không cần thiết và khoảng trống trong việc thi hành.
+Đặc biệt, với những gia đình có liên hệ với từ hai quốc gia hoặc khu vực trở lên, chẳng hạn giữa Đài Loan và một quốc gia khác, quý vị khó có thể quyết định toàn bộ thủ tục nếu chỉ nhìn vào quốc tịch của một bên hoặc nơi đăng ký kết hôn. Trước hết phải xác nhận nơi cuộc sống hiện đang tập trung, tình trạng các bản án và đăng ký đã có, nơi lập văn bản, nơi cư trú của con và nơi có tài sản, thì mới giảm được các thủ tục trùng lặp không cần thiết và khoảng trống trong việc thi hành.
 
 ## 1. Ba con đường ly hôn tại Đài Loan và những điểm cần xác nhận đầu tiên trong vụ việc có yếu tố nước ngoài
 
@@ -159,7 +159,7 @@ Không được mặc định rằng Công ước La Hay năm 1980 về các kh�
 
 Tài liệu không phải là thứ thu thập để gây sức ép với bên kia, mà được chỉnh lý như hồ sơ nhằm trình bày chính xác thẩm quyền tài phán, thủ tục, các tình tiết và nhu cầu của con. Nếu quý vị chuẩn bị chín nhóm sau đây sao cho thể hiện được trình tự thời gian của vụ việc và nguồn gốc bản gốc của từng văn bản, quý vị sẽ giảm được nguy cơ nhầm lẫn giữa các yêu cầu và các thời hạn khác nhau.
 
-1. Chỉnh lý giấy chứng nhận kết hôn và tài liệu hộ khẩu Đài Loan, cùng quốc tịch, nơi cư trú, nơi cư trú thường xuyên và địa chỉ hiện tại của từng đương sự. Hãy ghi rõ cả việc trung tâm cuộc sống trên thực tế và địa chỉ có thể tống đạt được có khác với nội dung ghi trên giấy tờ hay không.
+1. Chỉnh lý giấy chứng nhận kết hôn và tài liệu hộ khẩu Đài Loan, cùng quốc tịch, nơi cư trú, nơi cư trú thường xuyên và địa chỉ hiện tại của từng đương sự. Hãy ghi rõ cả nơi cuộc sống trên thực tế đang tập trung, cũng như địa chỉ có thể tống đạt, có khác với nội dung ghi trên giấy tờ hay không.
 2. Thu thập theo từng thủ tục: bản thỏa thuận ly hôn bằng văn bản và diễn biến việc người làm chứng xác nhận ý chí ly hôn thực sự, hồ sơ của tòa án, biên bản tống đạt, biên bản hòa giải, biên bản thỏa thuận tại tòa, bản án cùng tài liệu chứng minh bản án đã có hiệu lực pháp luật.
 3. Xác nhận hồ sơ kết hôn, ly hôn ở nước ngoài và bản án hay giấy chứng nhận của nước ngoài, việc chứng nhận của cơ quan đại diện Đài Loan ở nước ngoài hay của cơ quan có thẩm quyền, bản dịch tiếng Trung cùng việc đã được chứng nhận hay công chứng hay chưa, và tình trạng công nhận, hiệu lực cũng như đăng ký tại Đài Loan.
 4. Kết nối vào một danh mục tổng thể: hợp đồng về tài sản vợ chồng và chế độ tài sản được áp dụng, tài sản có, các khoản nợ, tên người đứng đăng ký, nguyên nhân và thời điểm xác lập quyền, cùng tài liệu về chuyển khoản, định đoạt, vay, trả nợ, thuế và định giá.

@@ -20,3 +20,4 @@ Applies to every locale and every round of the campaign (rounds r1–r5, all 45 
 ## llms.txt notice block (added after round 2, ar/zh-hans gate failures)
 - `GUIDANCE_LLMS_NOTICES.<loc>.discoveryNotice` must keep the literal token `llms.txt` (a test pins it); rephrase around it.
 - `consultationNotice` must remain a verbatim substring of one FAQ answer of the pack, and `confidentialNotice` a verbatim substring of a privacy-page paragraph. If you rewrite the FAQ/privacy sentence, rewrite the notice identically (or leave both).
+- Page `description` strings (home/services/about/lawyers/pricing/contact/faq/privacy/disclaimer/columns) and the lawyers/answers descriptions must not contain parentheses, brackets, `#`, `|`, backticks or angle brackets — the llms.txt catalog strips them and a test compares the bullet with the description verbatim. Write "socio auditor, Partner CPA," not "socio auditor (Partner CPA)".

@@ -848,8 +848,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Διευθύνουσα δικηγόρος στην Ταϊβάν (Managing Attorney)',
       'chang-rongxuan': 'Δικηγόρος στην Ταϊβάν (Taiwan Attorney)',
       'chang-fangyu': 'Δικηγορικός συνεργάτης (Paralegal)',
-      'son-jungmin': 'Διεύθυνση λειτουργιών Κορέας (Korea Operations Manager)',
-      'huang-shengping': 'Συνεργαζόμενος ορκωτός λογιστής (Partner CPA)',
+      'son-jungmin': 'Επικεφαλής λειτουργιών για την Κορέα (Korea Operations Manager)',
+      'huang-shengping': 'Συνεργαζόμενος λογιστής (Partner CPA)',
     },
   },
   he: {
@@ -1668,7 +1668,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan investment counsel': 'Συμβουλευτική επενδύσεων στην Ταϊβάν',
     'Civil litigation and damages': 'Αστικές δίκες και αποζημίωση',
     'Trademark and patent filings': 'Καταθέσεις σημάτων και διπλωμάτων ευρεσιτεχνίας',
-    'Visa and residency': 'Θεώρηση και διαμονή',
+    'Visa and residency': 'Θεώρηση εισόδου και διαμονή',
     'Family and labor disputes': 'Οικογενειακές και εργατικές διαφορές',
   },
   he: {
@@ -3406,38 +3406,38 @@ export const guidanceTeamBios: Record<
       education: [
         'Μεταπτυχιακό (M.S.), Institute of Finance, National Taiwan University',
         'Πτυχίο (B.A.) σε διπλό πρόγραμμα νομικής και χρηματοοικονομικών, National Chengchi University',
-        'Ανταλλαγή σπουδών στο Kobe University και στο Waseda University',
+        'Φοιτήτρια ανταλλαγής στο Kobe University και στο Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Ίδρυμα Νομικής Αρωγής, παράρτημα Ταϊτσούνγκ (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Παλαιότερα στο Ministry of Education, Legal Affairs Division, με έμφαση σε διοικητικές και αστικές υποθέσεις.',
+        'Παλαιότερα στο Υπουργείο Παιδείας, Τμήμα Νομικών Υποθέσεων (Ministry of Education, Legal Affairs Division), με έμφαση σε διοικητικές και αστικές υποθέσεις.',
         'Εμπειρία σε υποθέσεις πανεπιστημίων, δικαιωμάτων διδακτικού προσωπικού και διοικητικών προσφυγών.',
       ],
       education: [
         'Πτυχίο νομικής (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Υπουργείο Παιδείας, Τμήμα Νομικών Υποθέσεων (Ministry of Education, Legal Affairs Division)',
         'Δικηγόρος, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal με μακρά θητεία ως ανώτερος paralegal σε περισσότερα γραφεία, με ευθύνη για δικονομική υποστήριξη, εταιρικό δίκαιο και ξένες επενδύσεις.',
+        'Νομικός συνεργάτης (paralegal) με μακρά θητεία ως ανώτερος νομικός συνεργάτης (senior paralegal) σε διάφορα γραφεία, με ευθύνη για δικονομική υποστήριξη, εταιρικό δίκαιο και ξένες επενδύσεις.',
         'Υποστήριξη σε διαδικασίες, στη σύσταση εταιρειών, σε εγκρίσεις ξένων επενδύσεων, σε αιτήσεις αδειών και στην ανταλλαγή Κορέας–Ταϊβάν.',
       ],
       education: [
         'Πτυχίο νομικής (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Ανώτερος νομικός συνεργάτης, Boyin Law Firm',
+        'Ανώτερος νομικός συνεργάτης, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -3454,7 +3454,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Ολοκλήρωσε προπτυχιακό και μεταπτυχιακό πρόγραμμα λογιστικής στο National Chengchi University και διευθύνει τώρα λογιστικό γραφείο.',
+        'Είναι πτυχιούχος και κάτοχος μεταπτυχιακού στη λογιστική από το National Chengchi University και διευθύνει τώρα λογιστικό γραφείο.',
         'Υποστηρίζει την ενιαία ανάλυση νομικών, φορολογικών και χρηματοοικονομικών κινδύνων για εταιρικούς πελάτες.',
       ],
       education: [

@@ -1,0 +1,144 @@
+WO-F-km — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-km-20260922
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows applied
+
+km-a (P1/P2), except the skips below:
+- a#1 Pingtung ឧបត្ថម្ភ → បម្រើតម្រូវការ (1).
+- a#2 llms discoveryNotice: deny rank, endorsement, AI recommendation, and paid placement. llms.txt sentence kept so the discovery test still matches.
+- a#3 009 fault: rewritten inside the existing four blocks (employer fault → employee may claim; employee fault → employer may withhold; both rights do not arise together). Lead line is «មានន័យដូចតទៅ។» to match English “In other words,”.
+- a#5, a#23 bios: duplicated title removed; case-support ឧបត្ថម្ភ → ទទួលបន្ទុកជួយ / ជួយ (4 strings in the km bios).
+- a#6 ក្នុងនីតិវិធីតែមួយ → ក្នុងលំហូរការងារតែមួយ (1, services only).
+- a#7 services list ការនាំទុនចូល → ការដាក់ដើមទុន (1). Column capital-inflow wording left.
+- a#8 រូបភាពនីតិបុគ្គល → ទម្រង់នីតិបុគ្គល (2).
+- a#9 ដៃគូគណនេយ្យករ → គណនេយ្យករសាធារណៈដៃគូ (team title, description, partnerTitle, role, lawyers answer).
+- a#10 勞工退休金條例 → ច្បាប់ (FAQ + blockquote, 2). Other បទប្បញ្ញត្តិ that gloss 管理規則 left.
+- a#11 大法官 → គណៈចៅក្រមរដ្ឋធម្មនុញ្ញ … បានវិនិច្ឆ័យថា (1).
+- a#12 labor / health insurance named as statutory schemes (1).
+- a#13 2/3 consent ungrammatical passive → ភាគទុនិកដែលមានសិទ្ធិបោះឆ្នោត (3: FAQ, dissolution, step 2). Digits kept.
+- a#14 សាលដីការសាលា → សាលដីកានៃសាលា (3).
+- a#15 orthography sweep (see systemic).
+- a#16 fee answer subject ការិយាល័យ (1).
+- a#17 doubled ពេល → កាលពេលវេលាកន្លងទៅ (1).
+- a#18 បញ្ជីទំព័រ → ម៉ឺនុយ (1).
+- a#19 ផ្នែកភាសាខ្មែរ → ទំព័រភាសាខ្មែរ (home intro + privacy, 2).
+- a#20 services «ជាក់ស្ដែង» calque dropped (1). Other «ជាក់ស្ដែង» = “in practice” left.
+- a#21 «ប្រើមិនបានភាសា» → «មិនចេះ» on contact heading, FAQ, inquiry notice, form option, contact description.
+- a#22 ឃ្លាំងវត្ថុ → ឃ្លាំងផ្ទុកទិន្នន័យ (1).
+- a#24 disclaimer: nav «សេចក្ដីបដិសេធ» (13); eyebrow «សេចក្ដីបដិសេធទំនួលខុសត្រូវ». See reviewer notes.
+- a#26 ភាគីនៃនាងខ្ញុំ → អតិថិជន (1). លោក B stays male.
+- a#27 guillemets around **ពេលវេលា** removed (1).
+- a#28 income-receiving entity word order (1).
+- a#30 ROC year marked «ឆ្នាំសាធារណរដ្ឋចិន 112» and 民國 added inside the existing gloss (3). No new digit. See reviewer notes.
+- a#31 km bios: Khmer institution name first, pinned English kept in parentheses (Institute of Finance, National Taiwan University; Legal Aid Foundation, Taichung Branch; Ministry of Education, Legal Affairs Division — intro and experience). Firm names and TWD 1.57M unchanged.
+- a#32 OOO → (ឈ្មោះ) (1).
+
+km-b (P1/P2):
+- b#1 告訴乃論 → ACCEPTED wording «ត្រូវចោទប្រកាន់តែពេលមានពាក្យបណ្ដឹង» (3: 010 plus two in 003).
+- b#2 finished advertisement, not product (1).
+- b#3 «ចូលទៅការប្ដឹងផ្ដល់» → «ចូលដល់នីតិវិធីតុលាការ» (1).
+- b#4 យួនតុលាការ → សភាតុលាការ (2 in 016). Gloss 司法院 kept.
+- b#5 差額 «ផលដាច់ខាត» → ភាពខុសគ្នា in 016 and the same error in 007 (claim, FAQ, heading, checklist, knowledge-date). Final-judgment «សាលដីកាជាដាច់ខាត» not touched.
+- b#6 បណ្ដិត as English statute text or a translation → អត្ថបទ / ការបកប្រែដែលបានផ្ទៀងផ្ទាត់ (016 two; 007 two more of the same mistranslation).
+- b#7–11 column 018 sections 2–5 restored from English inside the same blocks: table cells completed (none end mid-word), limited-company paragraph, share-company / audit thresholds, Investment Commission rule vs ordinary branch, work permit + ARC. Block count unchanged. numbers PASS sourceCount=25 targetCount=25 (2/3, 100%, TWD 30,000,000, TWD 100,000,000, 100, Article 386, 新臺幣). No new digit for “a further foreign national”.
+- b#12 ឥរិយាបថ (心態) → ផ្នត់គំនិត (2). Movement line → ចលនា (1), not mindset.
+- b#13 adverse inference, not “bad conclusion” (1).
+- b#14 ការព្យាបាលមុន → ការព្យាបាលជំងឺមុន (3, longer string first).
+- b#15 registration validity, not a person’s age (3 in that sentence). Vehicle age in 017 left.
+- b#16 scope គោលដៅ → វិសាលភាព (011) and រយៈពេលកំណត់ (017 administrative benchmark). Acquisition target «ក្រុមហ៊ុនគោលដៅ» kept (ACCEPTED).
+- b#17 ផលមិនចង់បាន → ផលរំខាន (2).
+- b#18 ឯកភាព → ឯកសណ្ឋាន (1).
+- b#19 education-criterion sentence → review is not overly strict (1).
+- b#20 លើកគោលបំណងផ្សេង → ក្រោមលេសផ្សេង (1).
+- b#22 ដោយមិនធ្លាក់ → ឱ្យគ្រប់ (1).
+- b#23 notice period តាមអាយុការងារ → តាមរយៈពេលធ្វើការបន្ត (2). Other 年資 left.
+- b#24 third-party ឧបត្ថម្ភ of fees → ជួយទទួលបន្ទុកថ្លៃ (1).
+- b#25 unilateral use of inherited property (2).
+- b#26 消滅時效 → អាណត្តិរលត់ (016, and the same gloss in 007).
+- b#27 cargo-truck stutter (2).
+- b#28 delay «ពេលពេល» → «បើមាន» (1).
+- b#29 ការរំលោភនិងការជំពាក់ → ការបំពានច្បាប់ និងបំណុលជំពាក់ (3, including the bullet).
+- b#30 orthography (included in the sweep).
+- b#31 confidential design materials, not “secret data” (1).
+- R3 cheap: 013 opening no longer says a company formation automatically yields a work visa and ARC. 018 “most suitable entity” → the entity that fits the facts (FAQ + body).
+
+R7 periods: final ។ added on blog prose in 003, 005, 006, 008, 009, 013, 015, 018 that lacked it. Question lines in 005 (3), 013 (5), 015 (1) and the three stage paragraphs in 018 closed. Blocks, headings, images, tables, frontmatter, and 008 clause-fragments that are not sentences were not merged or split. Q16–Q20 stay plain lines, matching English.
+
+Test pin: src/data/__tests__/guidance-disclosure-parity.test.ts km regex updated from coeng-ត to coeng-ដ so it still matches «បកប្រែដោយស្វ័យប្រវត្ដិ». No other test change. consultationNotice and confidentialNotice remain substrings of the FAQ answer and the privacy paragraph.
+
+## Rows skipped
+
+- a#4 Hangul frontmatter urls in 008 and 009 (R16). url values unchanged, including the fullwidth colon inside the 008 url.
+- a#25 and b#21 “merge into ## paragraphs” (R7). English 003 Q16+ is also not ##. Heading levels and block counts would change. Periods added inside the existing lines instead.
+- a#29 “TWD 1.57M” → “TWD 1.57 លាន”. Test-pinned preserved term. Left byte-identical.
+- a#30 Gregorian “គ.ស. 2023” not inserted (R13; a new digit would fail the number check). ROC year is marked without a new digit.
+
+## Systemic patterns
+
+- Orthography, pack + all 18 columns, Khmer lines only in shared .ts files: ឲ្យ → ឱ្យ, 7 instances (017 ×3, inquiry ×3, southeast-central ×1). coeng-ត (U+17D2 U+178F) → coeng-ដ (U+17D2 U+178A), 1,411 sequences in sources. ឪពុក not rewritten. អាណត្តិ keeps coeng-ត: that cluster is the consonant of the word the reviewer wrote, not the ម្តង/ម្ដង error.
+- German bones: menu, “Khmer section”, single workflow, object-store, Rechtsform, “cannot use a language” — all instances in the km pack and inquiry copy (counts under the rows above).
+- ឧបត្ថម្ភ as professional support / third-party fee sponsorship: 5. Alimony (贍養費), child support (扶養), dependent residence (依親居留), and R&D subsidy wording left. Those are the real legal terms.
+- 差額 «ផលដាច់ខាត»: 20 phrase hits in 007 and 016. Absolute judgment left.
+- បណ្ដិត used for a translation or English statute text: 5. Doctorate is not in these sentences.
+- 告訴乃論: 3.
+- 司法院 «យួន»: 2 → សភាតុលាការ.
+- 018 sections 2–5: 3 table rows, limited-company paragraph, shares/audit paragraph, subsidiary procedure, branch procedure, work-permit rule, manager rule.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-km --lang km 2>&1 | tail -8
+
+```
+forbidden      PASS   
+hanzi          PASS   han=176
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-km src/data | wc -l
+
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+
+```
+      26
+```
+
+017 numbers WARN only (ordinal «제3자» unmatched); overall file PASS. 018 numbers exact. This log file is not in the count of 26.
+
+## Reviewer points not applied
+
+- a#4 “do not display the Hangul path” — the url is source frontmatter. R16 says leave it. No Khmer page label was rewritten into Hangul.
+- a#25 / b#21 collect blog lines into new ## paragraphs. Same layout as the English source; block count and heading levels are locked.
+- a#29 reformatting TWD 1.57M. The figure is a preserved substring.
+- a#30 adding 2023. ROC year 112 is now labeled as a Republic of China year; the case number is unchanged.
+- b#1 suggested «ចោទប្រកាន់បាន». ACCEPTED requires «ត្រូវចោទប្រកាន់».
+- b#4 suggested «ស្ថាប័នតុលាការ». ACCEPTED requires សភាតុលាការ or តុលាការកំពូល. Used សភាតុលាការ. យួន is gone.
+- b#9 suggested «រាជរដ្ឋាភិបាល». English is “the government”; Taiwan is not a monarchy. Used រដ្ឋាភិបាល. Later in the same paragraph the single government or corporate shareholder stays រដ្ឋាភិបាល.
+- b#16 “also change ក្រុមហ៊ុនគោលដៅ”. ACCEPTED keeps គោលដៅ for an acquisition target. Scope and the administrative time benchmark were reworded; the target company was not.
+- a#24 full nav label «សេចក្ដីបដិសេធទំនួលខុសត្រូវ» was not put in the menu. Nav is «សេចក្ដីបដិសេធ»; the disclaimer eyebrow uses the full phrase.
+- ឧបត្ថម្ភបន្ទាប់ពីលែងលះ (贍養費), ការបាត់ផលឧបត្ថម្ភ (扶養利益損失), and ការស្នាក់នៅតាមអ្នកឧបត្ថម្ភ (依親居留) are maintenance, lost support, and dependent residence, not the German Unterstützung calque.
+- «សាលដីកាជាដាច់ខាត» is a final judgment, not 差額.
+- «ប្រយោជន៍ខ្ពស់បំផុតរបស់កូន» and statutory «អតិបរមា» caps were left. They are not firm advertising.

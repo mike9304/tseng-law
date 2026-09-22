@@ -61,7 +61,7 @@ Karena itu, dalam praktiknya tidak semua bidang usaha perlu diperiksa pada saat 
 
 Hal ini mengikuti "[Petunjuk Pelaksanaan Layanan Bantuan Pemeriksaan Lokasi Usaha Kota Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) dan pengumuman terkini Kota Taipei.
 
-Sejak 1 Januari 2023, permohonan pendaftaran pendirian, pemindahan lokasi, atau penambahan bidang usaha perusahaan maupun usaha dagang (termasuk kantor cabang (分公司) dan cabang pembantu (分支機構)) **wajib** melampirkan hasil pemeriksaan awal lokasi usaha, tanpa memandang bidang usahanya.
+Sejak 1 Januari 2023, permohonan pendaftaran pendirian, pemindahan lokasi, atau penambahan bidang usaha perusahaan (公司) maupun usaha (商業) (termasuk kantor cabang (分公司) dan cabang usaha (分支機構)) **wajib** melampirkan hasil pemeriksaan awal lokasi usaha, tanpa memandang bidang usahanya.
 
 Daftar "bidang usaha yang menjadi objek pemeriksaan atas inisiatif instansi" (主動查詢之營業項目) di bawah ini adalah bidang usaha yang diperiksa sendiri oleh Dinas Perdagangan Kota Taipei (臺北市商業處) dalam proses penelaahan pendaftaran (隨案主動查詢) apabila permohonan mencantumkan bidang usaha tersebut tetapi hasil pemeriksaan yang dilampirkan tidak memuatnya; bidang usaha yang tidak ada dalam daftar ini tidak berarti bebas dari kewajiban pemeriksaan.
 

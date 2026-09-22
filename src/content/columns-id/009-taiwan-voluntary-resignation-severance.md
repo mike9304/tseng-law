@@ -73,11 +73,11 @@ Karena itu pekerja harus mencermati tenggat waktunya dengan baik.
 
 Dengan kata lain,
 
-hukum Taiwan, baik ketika kesalahan ada pada pihak perusahaan
+hukum Taiwan membedakan akibatnya menurut pihak yang bersalah.
 
-maupun ketika kesalahan ada pada pihak karyawan,
+Apabila kesalahan ada pada pihak perusahaan, pemberi kerja dapat terbebas dari kewajiban membayar pesangon.
 
-memberikan kepada kedua belah pihak hak untuk tidak membayar pesangon atau untuk menuntut pesangon.
+Apabila kesalahan ada pada pihak karyawan, pekerja dapat menuntut pesangon.
 
 Adakalanya kesalahan ada pada kedua belah pihak, yaitu pemberi kerja maupun pekerja,
 
@@ -91,7 +91,7 @@ Karena itu, dalam sengketa ketenagakerjaan (勞資糾紛) di Taiwan,
 
 **saat** sangat menentukan.
 
-Saat pengakhiran perjanjian dapat memengaruhi siapa yang menanggung atau menuntut pesangon; ini bukan hasil yang tetap.
+Pada umumnya, pihak yang menyiapkan bukti dan langkahnya lebih dahulu lebih mampu menjaga haknya.
 
 ---
 

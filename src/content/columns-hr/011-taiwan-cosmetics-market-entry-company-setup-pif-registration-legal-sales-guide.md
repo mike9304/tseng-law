@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Da bi se kozmetika mogla prodavati na Tajvanu, mora li se nužno osnovati kćerinsko društvo ili podružnica?"
-    a: "Kćerinsko društvo ni podružnicu nije nužno uvijek osnivati. Uvoz i prodaju moguće je povjeriti i tajvanskom uvozniku (uključujući slučaj kad istodobno djeluje kao prodajni zastupnik). Ako namjeravate djelatnost na Tajvanu voditi sami, osnivanje i upis tajvanskog kćerinskog društva (子公司) razlikuju se od osnivanja i upisa podružnice (分公司) stranog društva, a razlikuje se i struktura odgovornosti i poreza; rok potreban za odobrenje stranog ulaganja (僑外投資核准) i za upis društva ili podružnice razlikuje se prema svakom predmetu i prema tome dolazi li do ispravka ili dopune isprava. Najprije treba utvrditi poslovni model i subjekt koji će snositi odgovornost kao proizvođač ili uvoznik kozmetike (化粧品製造或輸入業者)."
+    a: "Kćerinsko društvo ili podružnicu nije uvijek nužno osnovati. Uvoz i prodaju moguće je povjeriti i tajvanskom uvozniku (uključujući slučaj kad istodobno djeluje kao prodajni zastupnik). Ako namjeravate djelatnost na Tajvanu voditi sami, osnivanje i upis tajvanskog kćerinskog društva (子公司) razlikuju se od osnivanja i upisa podružnice (分公司) stranog društva, a razlikuje se i struktura odgovornosti i poreza; rok potreban za odobrenje stranog ulaganja (僑外投資核准) i za upis društva ili podružnice razlikuje se prema svakom predmetu i prema tome dolazi li do ispravka ili dopune isprava. Najprije treba utvrditi poslovni model i subjekt koji će snositi odgovornost kao proizvođač ili uvoznik kozmetike (化粧品製造或輸入業者)."
   - q: "Što je PIF i je li to isti postupak kao registracija proizvoda kod TFDA-a?"
     a: "Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda (產品登錄) zasebna je radnja koja se provodi na platformi registracije kozmetičkih proizvoda TFDA-a (衛生福利部食品藥物管理署). PIF je spis koji okuplja podatke o kakvoći, sigurnosti, sastavu, tvrdnji o funkciji, načinu proizvodnje, rezultatima ispitivanja i ocjeni sigurnosti te koji proizvođač ili uvoznik kozmetike sastavlja, ažurira i čuva; sam PIF nije isprava koju bi trebalo unaprijed podnijeti TFDA-u. Od 1. srpnja 2026. načelno svi kozmetički pripravci spadaju pod režim PIF-a, s iznimkom krutog ručno izrađenog sapuna proizvedenog na mjestu proizvodnje oslobođenom od upisa tvornice (工廠登記)."
   - q: "Na koje izraze treba paziti u reklami kozmetike na Tajvanu?"
@@ -28,7 +28,7 @@ Primjenjive se obveze mogu razlikovati prema vrsti proizvoda i mjestu proizvodnj
 
 ## 1. Oblik stupanja na Tajvan i izbor uvoznika
 
-Kćerinsko društvo ni podružnicu nije nužno uvijek osnivati. Uvoz i prodaju moguće je povjeriti i tajvanskom uvozniku (uključujući slučaj kad istodobno djeluje kao prodajni zastupnik). Ako namjeravate djelatnost na Tajvanu voditi sami, osnivanje i upis tajvanskog kćerinskog društva razlikuju se od osnivanja i upisa podružnice stranog društva, a razlikuje se i struktura odgovornosti i poreza; rok potreban za odobrenje stranog ulaganja i za upis društva ili podružnice razlikuje se prema svakom predmetu i prema tome dolazi li do ispravka ili dopune isprava. Najprije treba utvrditi poslovni model i subjekt koji će snositi odgovornost kao proizvođač ili uvoznik kozmetike.
+Kćerinsko društvo ili podružnicu nije uvijek nužno osnovati. Uvoz i prodaju moguće je povjeriti i tajvanskom uvozniku (uključujući slučaj kad istodobno djeluje kao prodajni zastupnik). Ako namjeravate djelatnost na Tajvanu voditi sami, osnivanje i upis tajvanskog kćerinskog društva razlikuju se od osnivanja i upisa podružnice stranog društva, a razlikuje se i struktura odgovornosti i poreza; rok potreban za odobrenje stranog ulaganja i za upis društva ili podružnice razlikuje se prema svakom predmetu i prema tome dolazi li do ispravka ili dopune isprava. Najprije treba utvrditi poslovni model i subjekt koji će snositi odgovornost kao proizvođač ili uvoznik kozmetike.
 
 ### Kad se povjerava mjesnom uvozniku
 
@@ -36,7 +36,7 @@ Ako tajvanski uvoznik ili prodajni zastupnik (銷售代理商) obavlja uvoz i pr
 
 Pri oblikovanju stvarne podjele rada najprije treba provjeriti tko uvozi proizvod i provodi registraciju proizvoda te tko sastavlja, ažurira i čuva PIF. Treba također odrediti odgovornu osobu za pregled označavanja, vođenje evidencije o prometu, primitak pritužbi potrošača i sigurnosnih informacija te za odgovor na inspekcije i zahtjeve za podloge od strane nadležnog tijela. Treba istodobno ocijeniti slažu li se zakonske obveze naložene proizvođaču ili uvozniku kozmetike i ugovorni posao između marke i prodajnog partnera.
 
-U ugovoru je primjereno konkretno utvrditi opseg uporabe intelektualnog vlasništva, kao što su žig (商標) i slike, način davanja, prijevoda i dopune podloga izvornog proizvođača (原製造者) potrebnih za registraciju proizvoda i za PIF, upravljanje aktualnim podlogama i predaju pri prestanku ugovora. Može se također obuhvatiti ovlaštenje za prethodni pregled i izmjenu reklame, prosljeđivanje sigurnosnih informacija, kao što su pritužbe i neželjeni učinci, suradnja pri povlačenju (回收), ako je nužno, i snošenje troškova ispitivanja, prijevoda i čuvanja. Da podloge ne ostanu samo kod jedne strane, unaprijed treba utvrditi i opseg te rok vraćanja ili davanja preslika.
+U ugovoru je primjereno konkretno utvrditi opseg uporabe intelektualnog vlasništva, kao što su žig (商標) i slike, način davanja, prijevoda i dopune podloga izvornog proizvođača (原製造者) potrebnih za registraciju proizvoda i za PIF, upravljanje aktualnim podlogama i predaju pri prestanku ugovora. Može se također obuhvatiti ovlaštenje za prethodni pregled i izmjenu reklame, prosljeđivanje sigurnosnih informacija, kao što su pritužbe i neželjeni učinci, suradnja pri povlačenju (回收), ako je nužno, i ssnošenje troškova ispitivanja, prijevoda i čuvanja. Da podloge ne ostanu samo kod jedne strane, unaprijed treba utvrditi i opseg te rok vraćanja ili davanja preslika.
 
 ### Kad djelatnost na Tajvanu vodite sami
 
@@ -52,7 +52,7 @@ Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda zasebna 
 
 ### Trenutak registracije proizvoda i razdoblje valjanosti
 
-Registracija kozmetičkog proizvoda provodi se na platformi registracije kozmetičkih proizvoda TFDA-a. Proizvođač ili uvoznik kozmetike mora dovršiti registraciju proizvoda prije nego što proizvod isporuči, proda, daruje, javno izloži (公開陳列) ili da potrošaču na isprobavanje. Priprema se ne smije voditi samo prema naplatnoj prodaji; raspored promotivnih darova ili davanja na isprobavanje potrošaču treba voditi zajedno s trenutkom registracije.
+Registracija kozmetičkog proizvoda provodi se na platformi registracije kozmetičkih proizvoda TFDA-a. Proizvođač ili uvoznik kozmetike mora dovršiti registraciju proizvoda prije nego što proizvod isporuči, proda, daruje, javno izloži (公開陳列) ili da potrošaču na isprobavanje. Priprema se ne smije voditi samo prema prodaji uz naplatu; raspored promotivnih darova ili davanja na isprobavanje potrošaču treba voditi zajedno s trenutkom registracije.
 
 Razdoblje valjanosti registracije proizvoda iznosi 3 godine. Ako se opskrba ima nastaviti, zahtjev za produljenje (展延) treba podnijeti u roku od 3 mjeseca prije isteka valjanosti. Ako se promijene upisani podaci, kao što su naziv proizvoda, namjena, oblik pripravka (劑型), sastojci i mjesto proizvodnje, treba također provjeriti je li potreban postupak koji odgovara sadržaju izmjene.
 
@@ -64,7 +64,7 @@ PIF je zbirka podloga uređena tako da se i nadalje mogu objasniti kakvoća i si
 
 Režim PIF-a primjenjivao se stupnjevito prema skupinama proizvoda. Od 1. srpnja 2026. u predmet primjene uključeni su i preostali kozmetički pripravci, pa se načelno odnosi na svu kozmetiku. Iznimka se ograničava na kruti ručno izrađeni sapun proizveden na mjestu proizvodnje oslobođenom od upisa tvornice. Proizvod nije izuzet samo zato što je ručni ili što rabi naziv sapuna; treba provjeriti oboje, kruti oblik i pretpostavku oslobođenja mjesta proizvodnje od upisa tvornice.
 
-Posao PIF-a, uključujući ocjenu sigurnosti, može potpomognuti treća osoba koja ima potrebnu kvalifikaciju i sposobnost. Čak i kad se rabi potpora sastavljanja trećom osobom ili usluga čuvanja podloga, pravna odgovornost proizvođača ili uvoznika kozmetike ostaje. Treba izgraditi sustav koji izvornom proizvođaču, ispitnom laboratoriju, ocjenjivatelju sigurnosti i pothvatu na strani Tajvana omogućuje međusobno prosljeđivanje informacija o izmjenama i najnovijih potpisanih podloga.
+Posao PIF-a, uključujući ocjenu sigurnosti, može potpomognuti treća osoba koja ima potrebnu kvalifikaciju i sposobnost. Čak i kad se rabi potpora sastavljanja trećom osobom ili usluga čuvanja podloga, pravna odgovornost proizvođača ili uvoznika kozmetike ostaje. Treba izgraditi sustav koji izvornom proizvođaču, ispitnom laboratoriju, ocjenjivatelju sigurnosti i tajvanskom društvu omogućuje međusobno prosljeđivanje informacija o izmjenama i najnovijih potpisanih podloga.
 
 ### Ažuriranje i čuvanje
 
@@ -72,13 +72,13 @@ Ako se promijene sirovina ili receptura, način i mjesto proizvodnje, označavan
 
 Prema članku 7. Pravilnika o upravljanju informacijskim spisom kozmetičkih proizvoda razdoblje čuvanja iznosi najmanje 5 godina računajući od dana sljedećeg nakon dana posljednje isporuke proizvoda na tržište. Prema članku 8. istog pravilnika mjesto čuvanja adresa je označavanja proizvođača ili uvoznika kozmetike utvrđena u članku 7. stavku 1. točki 7. Zakona o upravljanju higijenom i sigurnošću kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje razdoblje i odredbu koja utvrđuje mjesto treba voditi odvojeno.
 
-Čak i kad izvorni proizvođač čuva izvornik ili se rabi sigurno elektroničko spremište ili spremište u oblaku, proizvođač ili uvoznik mora imati pristup potpunim podlogama. Treba utvrditi prava pristupa, sigurnosne kopije, upravljanje inačicama, oblik datoteka i odgovornu osobu tako da se podloge mogu brzo pronaći i predložiti kad ih nadležno tijelo zatraži. U ugovoru je također važno urediti primatelja predaje, način i to ostaje li pravo pristupa na snazi, kako bi se podloge održale tijekom zakonskog razdoblja čuvanja i nakon prestanka ugovora s prodajnim partnerom ili davateljem usluge.
+Čak i kad izvorni proizvođač čuva izvornik ili se rabi sigurna elektronička pohrana ili pohrana u oblaku, proizvođač ili uvoznik mora imati pristup potpunim podlogama. Treba utvrditi prava pristupa, sigurnosne kopije, upravljanje inačicama, oblik datoteka i odgovornu osobu tako da se podloge mogu brzo pronaći i predložiti kad ih nadležno tijelo zatraži. U ugovoru je također važno urediti primatelja predaje, način i to ostaje li pravo pristupa na snazi, kako bi se podloge održale tijekom zakonskog razdoblja čuvanja i nakon prestanka ugovora s prodajnim partnerom ili davateljem usluge.
 
 ### Inspekcija, ispravak i upravne mjere
 
 Kad nadležno tijelo pregledava PIF, načelno o tome obavješćuje proizvođača ili uvoznika kozmetike najkasnije 7 dana prije dana inspekcije. Ako međutim slučaj spada pod zakonsku iznimku utvrđenu u povezanim propisima, inspekcija se može provesti bez prethodne obavijesti. Neovisno o tome je li obavijest dana, treba trajno održavati stanje koje omogućuje pronaći i predložiti potpune aktualne podloge.
 
-Prijava neistinitih podataka pri registraciji proizvoda ili upis neistinitih podataka u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 tajvanskih dolara (新臺幣, TWD). Ako su naprotiv podloge PIF-a nepotpune, nadležno tijelo obično naloži ispravak u utvrđenom roku (限期改正), a upravna novčana kazna postaje pitanje tek tada kad se u tom roku ne ispravi. Neistinite podatke i još dopunjivu nepotpunost podloga ne treba zatvarati kao isti rezultat povrede.
+Prijava neistinitih podataka pri registraciji proizvoda ili upis neistinitih podataka u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 tajvanskih dolara (新臺幣, TWD). Ako su naprotiv podloge PIF-a nepotpune, nadležno tijelo obično naloži ispravak u utvrđenom roku (限期改正), a upravna novčana kazna postaje pitanje tek tada kad se u tom roku ne ispravi. Neistinite podatke i još dopunjivu nepotpunost podloga ne treba ih tretirati kao da vode istoj posljedici.
 
 Povlačenje ili uništenje (銷毀) nije mjera koja bi automatski slijedila svaku nepotpunost podloga PIF-a. Sigurnost proizvoda, sadržaj povrede, stanje ispravka i zakonske pretpostavke koje se primjenjuju na svaku mjeru treba ocijeniti odvojeno. Mjere kad je potvrđen sigurnosni problem i zahtjev za dopunu isprava treba ocijeniti zasebno, a postupanje se vodi prema obavijesti nadležnog tijela i primijenjenoj odredbi.
 
@@ -88,7 +88,7 @@ Reklama se ocjenjuje ne samo prema rečenici, nego prema cijelom izrazu, uključ
 
 ### Ocjenjuje se prema cijelom izrazu, a ne prema svakoj riječi
 
-Je li označavanje, promocija (宣傳) ili reklama neistinita ili pretjerana, ili tvrdnja o terapijskom učinku (醫療效能), ne ocjenjuje se samo prema jednoj određenoj riječi. Zajedno se ocjenjuju naziv robe, rečenica, slika, simbol, zvuk, prethodni i sljedeći kontekst te cjelokupni dojam koji potrošač prima. Dojam koji je stvorio središnji reklamni izraz ne raspršuje se automatski samo ograničenjem sitnim slovima, pa treba pregledati i pojedine formulacije i konačni oglasni materijal.
+Je li označavanje, promocija (宣傳) ili reklama neistinita ili pretjerana, ili tvrdnja o terapijskom učinku (醫療效能), ne ocjenjuje se samo prema jednoj određenoj riječi. Zajedno se ocjenjuju naziv robe, rečenica, slika, simbol, zvuk, prethodni i sljedeći kontekst te cjelokupni dojam koji potrošač prima. Dojam koji je stvorio središnji reklamni izraz ne otklanja se sam od sebe ograničenjem sitnim slovima, pa treba pregledati i pojedine formulacije i konačni oglasni materijal.
 
 Na primjer, tvrdnja da kozmetika liječi akne, da ima protuupalni učinak ili baktericidno djelovanje, može biti tvrdnja o terapijskom učinku. Treba zajedno provjeriti i način povezivanja naziva bolesti s proizvodom, slike prije uporabe i nakon nje, prikaz koji evocira zdravstvenog djelatnika te kontekst koji tumačenje sastojka povezuje s terapijskim učinkom proizvoda.
 
@@ -129,6 +129,6 @@ Osnovnu strukturu društva i podružnice možete vidjeti u [Osnove osnivanja dru
 - [Invest Taiwan — pregled stranog ulaganja](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Odjel za pregled ulaganja Ministarstva gospodarstva — upute](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
-Ovaj je tekst isprava opće informacije odgojne naravi o režimu povezanom sa stupanjem na tržište kozmetike na Tajvanu; nije pravno mišljenje o pojedinom proizvodu ili reklami i ne obećava određeni ishod, dopuštenje, registraciju, mogućnost prodaje ni poštovanje roka rješavanja. Oblik stupanja, podloge o proizvodu, sadržaj označavanja i reklame te najnoviju praksu nadležnog tijela treba provjeriti u svakom predmetu zasebno.
+Ovaj je tekst isprava opće informacije informativne i obrazovne naravi o režimu povezanom sa stupanjem na tržište kozmetike na Tajvanu; nije pravno mišljenje o pojedinom proizvodu ili reklami i ne obećava određeni ishod, dopuštenje, registraciju, mogućnost prodaje ni poštovanje roka rješavanja. Oblik stupanja, podloge o proizvodu, sadržaj označavanja i reklame te najnoviju praksu nadležnog tijela treba provjeriti u svakom predmetu zasebno.
 
 **Odvjetnica Wei Tseng (曾雋崴)**

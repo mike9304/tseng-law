@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Naslovna slika](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-U posljednje vrijeme mnoge su osobe uspješno osnovale društvo (公司) na Tajvanu i stekle radnu vizu te boravišnu iskaznicu za strance (外僑居留證),
+U posljednje vrijeme mnoge su osobe osnovale društvo (公司) na Tajvanu i stekle radnu vizu te boravišnu iskaznicu za strance (外僑居留證),
 
 a pitanja koja se pri osnivanju često postavljaju prikupljena su niže.
 
@@ -49,7 +49,7 @@ Budući da i pregled ulagačkog plana oduzima vrijeme,
 
 ulagački plan valja sastavljati i adresu upisa društva tražiti istodobno.
 
-Prema članku 9. Statuta o ulaganjima stranih osoba (外國人投資條例) odobreni ulog mora u cijelosti stići u roku koji utvrdi nadležno tijelo (核定期限); rok treba potvrditi u aktu odobrenja svakog predmeta (u praksi se često utvrđuje na oko 1 godinu).
+Prema članku 9. Zakona o ulaganjima stranih osoba (外國人投資條例) odobreni ulog mora u cijelosti stići u roku koji utvrdi nadležno tijelo (核定期限); rok treba potvrditi u aktu odobrenja svakog predmeta (u praksi se često utvrđuje na oko 1 godinu).
 
 U tom roku, nakon pronalaženja adrese društva i sklapanja ugovora o najmu,
 
@@ -123,7 +123,7 @@ Npr. ako je riječ o djelatnostima mogućima u uredskom prostoru, kao što su og
 
 to unaprijed provjerite.
 
-*Ako trebate savjetovanje o tajvanskom pravu, ured savjetuje samo na engleskom, kineskom (中文), japanskom i korejskom; komentari se na stranici ne vode.*
+*Ako trebate savjetovanje o tajvanskom pravu, ured savjetuje samo na engleskom, kineskom (中文), japanskom i korejskom.*
 
 ---
 

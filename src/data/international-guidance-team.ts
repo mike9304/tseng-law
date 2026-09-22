@@ -1181,11 +1181,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Glavna područja',
     consultationLanguagesLabel: 'Jezici savjetovanja',
     roles: {
-      'tseng-junwei': 'Vodeća odvjetnica na Tajvanu (Managing Attorney)',
-      'chang-rongxuan': 'Odvjetnik na Tajvanu (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Operativno vodstvo za Koreju (Korea Operations Manager)',
-      'huang-shengping': 'Partnerski računovođa (Partner CPA)',
+      'tseng-junwei': 'Vodeća odvjetnica na Tajvanu',
+      'chang-rongxuan': 'Odvjetnik na Tajvanu',
+      'chang-fangyu': 'Pravni asistent',
+      'son-jungmin': 'Operativno vodstvo za Koreju',
+      'huang-shengping': 'Partner, ovlašteni revizor (Partner CPA)',
     },
   },
   sr: {
@@ -4149,39 +4149,39 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Zaklada za pravnu pomoć, podružnica u Taichungu (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Ranije na Ministry of Education, Legal Affairs Division, s naglaskom na upravne i građanskopravne predmete.',
+        'Ranije u odjelu za pravne poslove Ministarstva obrazovanja (Ministry of Education, Legal Affairs Division), s naglaskom na upravne i građanskopravne predmete.',
         'Iskustvo s predmetima sveučilišta, prava nastavnika i upravnih žalbi.',
       ],
       education: [
         'Prvostupnik prava (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Odjel za pravne poslove Ministarstva obrazovanja (Ministry of Education, Legal Affairs Division)',
         'Odvjetnik, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal s dugogodišnjim iskustvom; ranije senior paralegal u više odvjetničkih ureda, s naglaskom na postupovnu potporu, korporativne predmete i strana ulaganja.',
+        'Pravni asistent s dugogodišnjim iskustvom; ranije viši pravni asistent u više odvjetničkih ureda, s naglaskom na postupovnu potporu, korporativne predmete i strana ulaganja.',
         'Potpora u sudskim postupcima, pri osnivanju društava, kod dozvola za strana ulaganja, kod zahtjeva za licence i u komunikaciji između Koreje i Tajvana.',
       ],
       education: [
         'Prvostupnik prava (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Viši pravni asistent, Boyin Law Firm',
+        'Viši pravni asistent, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Koordinira termine savjetovanja i komunikaciju za klijente iz Koreje.',
-        'Podržava međuregionalnu razmjenu putem sustava dokumenata i radnih postupaka, na temelju informatike.',
+        'Na temelju obrazovanja iz informatike podržava razmjenu među regijama sustavima dokumenata i radnih postupaka.',
       ],
       education: [
         'Prvostupnik (B.S.) informatike, National Cheng Kung University',

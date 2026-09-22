@@ -63,7 +63,7 @@ Ako je riječ o kaznenom djelu koje se goni samo na prijavu, prema članku 238. 
 
 ### Službeni izvori Q1–Q5
 
-- [Uredba o upravljanju cestovnim prometom i sankcijama (道路交通管理處罰條例), članak 62.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Zakon o upravljanju cestovnim prometom i sankcijama (道路交通管理處罰條例), članak 62.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Kazneni zakon Tajvana, članak 185-4.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Kazneni zakon Tajvana, članak 284.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Kazneni zakon Tajvana, članak 287.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -173,7 +173,7 @@ Pitanje protiv koga se građanskopravni zahtjev usmjerava treba razlikovati od k
 
 Obveza sklapanja prema članku 6. Zakona o obveznom osiguranju odgovornosti za vozila (強制汽車責任保險法) načelno leži na vlasniku vozila, a u predviđenim slučajevima i na korisniku ili upravitelju toga vozila. Taj režim uspostavlja strukturu pokrića bez obzira na krivnju (無過失給付制度) za osobu ozlijeđenu ili umrlu uslijed automobilske nesreće, ali treba provjeriti opseg putnika ili trećih osoba (第三人) izvan vozila koji utvrđuje zakon.
 
-Kod nesreće jednog vozila vozač toga vozila načelno nije adresat davanja obveznog osiguranja toga vozila. Međutim, kod nesreće u kojoj sudjeluje više vozila postoje slučajevi u kojima vozač može zahtijevati davanje kod osiguravatelja obveznog osiguranja drugog sudjelujućeg vozila.
+Kod nesreće jednog vozila vozač toga vozila načelno nije korisnik davanja obveznog osiguranja toga vozila. Međutim, kod nesreće u kojoj sudjeluje više vozila postoje slučajevi u kojima vozač može zahtijevati davanje kod osiguravatelja obveznog osiguranja drugog sudjelujućeg vozila.
 
 Tarifa davanja (強制汽車責任保險給付標準) izmijenjena 29. 5. 2026. primjenjuje se na nesreće koje su nastale od 1. 7. 2026. Strop razumnih i potrebnih medicinskih troškova za ozljedu iznosi TWD 200.000 u novom tajvanskom dolaru; davanje za invalidnost (失能) iznosi od TWD 80.000 do TWD 3.000.000 prema 15 zakonskih stupnjeva; davanje za smrt iznosi TWD 3.000.000, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenika i 1 nesreću iznosi TWD 3.200.000. Na ranije nesreće može se primijeniti prethodna tarifa.
 
@@ -184,11 +184,11 @@ Osiguranje odgovornosti prema trećim osobama (第三人責任險), osiguranje o
 - [Građanski zakonik, članak 193.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Građanski zakonik, članak 216.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Građanski zakonik, članak 217.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Presuda Visokog suda Tajvana, godina 109., stvar 上易字 broj 644.](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Presuda Visokog suda Tajvana, godina 109., stvar 上易字 broj 477.](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Presuda Visokog suda Tajvana, godina Republike Kine 109., stvar 上易字 broj 644.](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Presuda Visokog suda Tajvana, godina Republike Kine 109., stvar 上易字 broj 477.](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Hoffmanov kalkulator sadašnje vrijednosti Sudbenog yuana](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Građanski zakonik, članak 195.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Presuda okružnog suda Taoyuan, godina 112., stvar 壢簡字 broj 236.](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Presuda okružnog suda Taoyuan, godina Republike Kine 112., stvar 壢簡字 broj 236.](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Građanski zakonik, članak 188.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Kazneni zakon Tajvana, članak 284.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zakon o obveznom osiguranju odgovornosti za vozila](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -347,7 +347,7 @@ Počinitelj često ne mari za telefoniranje s upitom o stanju žrtve ni za njezi
 
 ​
 
-Žrtva tako ostaje veoma povrijeđena i pada u srdžbu, pa često ne ustupi u iznosu pregovaranja ili predloži privremenu mjeru osiguranja (假扣押) i vodi zapljenu imovine druge strane do kraja.
+Žrtva tako ostaje veoma povrijeđena i pada u srdžbu, pa često ne popušta u visini nagodbe ili predloži privremenu mjeru osiguranja (假扣押) i vodi zapljenu imovine druge strane do kraja.
 
 ​
 

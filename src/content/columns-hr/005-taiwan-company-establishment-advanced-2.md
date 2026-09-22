@@ -69,7 +69,7 @@ Neke banke mogu postavljati dodatne zahtjeve, na primjer vrijeme uporabe računa
 
 **5. Može li društvo zapošljavati strance (uključujući osobe s korejskim državljanstvom)?**
 
-A. Prvi zaposlenik: zahtjev se podnosi kao voditeljski rad u pothvatu redovitog ulaganja prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Mjerilo „rada stručne ili tehničke naravi“ iz točke B niže ne primjenjuje se, no primjenjuju se pretpostavke adresata, uključujući pretpostavku voditelja (經理人) društva čiji ulog prekomorskih Kineza ili stranaca premašuje 1/3, te pretpostavke rezultata poslodavca koje se tiču kapitala i prometa (članci 38. i 39. normi pregleda).
+Prvi zaposlenik: zahtjev se podnosi kao voditeljski rad u pothvatu redovitog ulaganja prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Mjerilo „rada stručne ili tehničke naravi“ iz točke B niže ne primjenjuje se, no primjenjuju se pretpostavke podobnosti, uključujući pretpostavku voditelja (經理人) društva čiji ulog prekomorskih Kineza ili stranaca premašuje 1/3, te pretpostavke rezultata poslodavca koje se tiču kapitala i prometa (članci 38. i 39. mjerila za pregled zahtjeva).
 
 B. Od drugog zaposlenika postoje ograničenja: ako broj zaposlenih osoba premašuje 1 osobu, obrazovanje i iskustvo zaposlenika, pravila prosječne plaće pri zaposlenju i pravila kapitala i prometa društva obrađuju se prema „stručnom ili tehničkom radu“ (專門性或技術性工作).
 

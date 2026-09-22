@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Naslovna slika](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-U posljednje vrijeme mnoge su osobe osnovale društvo (公司) na Tajvanu i stekle radnu vizu te boravišnu iskaznicu za strance (外僑居留證),
+U posljednje vrijeme mnoge su osobe osnovale društvo (公司) na Tajvanu i stekle radnu vizu te boravišnu iskaznicu za strance (外僑居留證).
 
-a pitanja koja se pri osnivanju često postavljaju prikupljena su niže.
+Pitanja koja se pri osnivanju često postavljaju prikupljena su niže.
 
 Osobe koje su pročitale [**Osnove osnivanja društva na Tajvanu**](/hr/columns/taiwan-company-establishment-basics) mogu zatim pogledati i ovaj detaljniji dio (公司設立).
 
@@ -51,9 +51,9 @@ Ulagački plan valja sastavljati i adresu upisa društva tražiti istodobno.
 
 Prema članku 9. Zakona o ulaganjima stranih osoba (外國人投資條例) odobreni ulog mora u cijelosti stići u roku koji utvrdi nadležno tijelo (核定期限); rok treba potvrditi u aktu odobrenja svakog predmeta (u praksi se često utvrđuje na oko 1 godinu).
 
-U tom roku, nakon pronalaženja adrese društva i sklapanja ugovora o najmu, slijedi bankovni dio.
+U tom je roku dovoljno vremena pronaći adresu i sklopiti ugovor o najmu.
 
-Ostaje dovoljno vremena za otvaranje pripremnog računa u banci i za prijenos kapitala.
+U tom je roku također dovoljno vremena otvoriti pripremni račun društva i prenijeti kapital.
 
 ​
 
@@ -101,7 +101,7 @@ Najmodavci se stoga ustručavaju iznajmljivati strancima.
 
 Stoga preporučujem da se mjesto poslovanja potraži rano.
 
-Ako pregovori s najmodavcem ne teku glatko, valja razmotriti dodatno osiguranje ugovora.
+Ako pregovori s najmodavcem ne teku glatko,
 
 Po potrebi se može predložiti javnobilježnička ovjera ugovora o najmu (公證) ili dodatna jamčevina.
 

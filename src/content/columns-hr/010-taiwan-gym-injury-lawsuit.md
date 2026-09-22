@@ -91,7 +91,7 @@ Ako okolnosti nesreće mogu ispuniti obilježja kaznenog djela, može se brzo po
 
 ## 4. Koje stavke štete se mogu zahtijevati od teretane?
 
-Stavke štete čije se ostvarenje može ocijeniti sljedeće su. Stvarno priznanje i visina ovise o nužnosti svakog izdatka, uzročnoj vezi s nesrećom, ispravama, omjeru odgovornosti i ocjeni suda.
+Stavke štete koje dolaze u obzir sljedeće su. Stvarno priznanje i visina ovise o nužnosti svakog izdatka, uzročnoj vezi s nesrećom, ispravama, omjeru odgovornosti i ocjeni suda.
 
 1. **Medicinski troškovi**: Izdaci stvarno učinjeni na pregled, pretrage, liječenje, lijekove i rehabilitaciju dokazuju se potvrdama o plaćanju i medicinskom dokumentacijom.
 2. **Troškovi njege ili skrbi**: Je li s obzirom na stupanj ozljede i tijek liječenja njega bila nužna te jesu li trajanje i trošak primjereni, ocjenjuje se medicinskom dokumentacijom i dokazima o troškovima.
@@ -99,7 +99,7 @@ Stavke štete čije se ostvarenje može ocijeniti sljedeće su. Stvarno priznanj
 4. **Šteta zbog smanjenja radne sposobnosti (勞動能力減損)**: Ako se priznaju posljedice i trajno smanjenje radne sposobnosti, može se ocijeniti zajedno prema medicinskim i profesionalnim podlogama, stupnju oštećenja, zanimanju i prihodu te preostalom razdoblju radne sposobnosti. Sam postotak oštećenja naknadu ne određuje i gubitak se ne računa automatski do trenutka umirovljenja.
 5. **Izgubljeni prihod u razdoblju oporavka (收入損失)**: Razdoblje u kojemu zbog liječenja ili oporavka stvarno nije bilo moguće raditi i iz toga proizašlo smanjenje prihoda treba dokazati platnim listama, poreznim prijavama i evidencijom o radu.
 6. **Nematerijalna šteta (非財產上損害)**: Iznos za duševne boli određuje sud prema čimbenicima svakog predmeta, kao što su stupanj ozljede, trajanje liječenja, posljedice i konkretne okolnosti stranke.
-7. **Kaznena naknada štete (懲罰性賠償金)**: Postoji pravilo prema kojemu se u postupku na koji se primjenjuje Zakon o zaštiti potrošača, ako je šteta nastala namjerom poduzetnika, može zahtijevati do 5 puta stvarne štete; pri grubom nehaju do 3 puta; a pri nehaju do visine stvarne štete. Primjenjuje li se [članak 51. tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na predmet te jesu li kaznena naknada stvarno dosuđena i u kojem iznosu, ovisi o ocjeni suda o konkretnim pretpostavkama i dokazima.
+7. **Kaznena naknada štete (懲罰性賠償金)**: Postoji pravilo prema kojemu se u postupku na koji se primjenjuje Zakon o zaštiti potrošača, ako je šteta nastala namjerom poduzetnika, može zahtijevati do 5 puta stvarne štete; pri grubom nehaju do 3 puta; a pri nehaju do visine stvarne štete. Primjenjuje li se [članak 51. tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na predmet te je li kaznena naknada stvarno dosuđena i u kojem iznosu, ovisi o ocjeni suda o konkretnim pretpostavkama i dokazima.
 
 ## 5. Čak i kad teretana ima osiguranje odgovornosti (責任保險), mogu li postojanje naknade i visina biti sporni?
 

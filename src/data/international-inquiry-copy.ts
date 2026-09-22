@@ -2173,7 +2173,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Primili smo Vaš zahtjev; čeka pregled. To ne znači da je savjetovanje održano ili da je sastanak potvrđen.',
     savedNotificationPendingMessage:
       'Vaš je zahtjev spremljen, ali obavijest uredu još nije potvrđena. Ono što ste napisali ne gubi se. Ako ne primite odgovor, možete napisati i na adresu e-pošte s kontaktne stranice.',
-    receiptIdLabel: 'Broj podneska',
+    receiptIdLabel: 'Broj primitka',
     failureMessage:
       'Vaš zahtjev nije bilo moguće poslati. Pokušajte ponovno ili napišite na adresu e-pošte s kontaktne stranice.',
     originalLanguageLabel: 'Jezik na kojemu pišete',

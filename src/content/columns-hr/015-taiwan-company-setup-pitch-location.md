@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Kad započinjete ugostiteljsku djelatnost, prvi je problem pronaći adresu mjesta poslovanja (營業地址).
 
-Osim tržišnih uvjeta valja uzeti u obzir i sljedeće.
+Osim tržišnih uvjeta valja uzeti u obzir i zoniranje.
 
-Daljnja je važna točka ova:
+Daljnja važna točka jest dopuštenost restoranskog pogona.
 
-leži li adresa u zoni u kojoj je pogon restorana dopušten.
+Treba provjeriti leži li adresa u zoni u kojoj je pogon restorana dopušten.
 
 ​
 

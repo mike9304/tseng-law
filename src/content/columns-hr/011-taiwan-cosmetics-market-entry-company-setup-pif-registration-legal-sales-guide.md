@@ -72,11 +72,11 @@ Ako se promijene sirovina ili receptura, način i mjesto proizvodnje, označavan
 
 Prema članku 7. Pravilnika o upravljanju informacijskim spisom kozmetičkih proizvoda razdoblje čuvanja iznosi najmanje 5 godina računajući od dana sljedećeg nakon dana posljednje isporuke proizvoda na tržište. Prema članku 8. istog pravilnika mjesto čuvanja jest adresa proizvođača ili uvoznika kozmetike utvrđena u članku 7. stavku 1. točki 7. Zakona o upravljanju higijenom i sigurnošću kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje razdoblje i odredbu koja utvrđuje mjesto treba voditi odvojeno.
 
-Čak i kad izvorni proizvođač čuva izvornik ili se rabi sigurna elektronička pohrana ili pohrana u oblaku, proizvođač ili uvoznik mora imati pristup potpunim podlogama. Treba utvrditi prava pristupa, sigurnosne kopije, upravljanje inačicama, oblik datoteka i odgovornu osobu tako da se podloge mogu brzo pronaći i predložiti kad ih nadležno tijelo zatraži. U ugovoru je također važno urediti primatelja predaje, način i to ostaje li pravo pristupa na snazi, kako bi se podloge održale tijekom zakonskog razdoblja čuvanja i nakon prestanka ugovora s prodajnim partnerom ili davateljem usluge.
+Čak i kad izvorni proizvođač čuva izvornik ili se rabi sigurna elektronička pohrana ili pohrana u oblaku, proizvođač ili uvoznik mora imati pristup potpunim podlogama. Treba utvrditi prava pristupa, sigurnosne kopije, upravljanje inačicama, oblik datoteka i odgovornu osobu tako da se podloge mogu brzo pronaći i predočiti kad ih nadležno tijelo zatraži. U ugovoru je također važno urediti koje se podloge predaju, kako predaja teče i ostaje li pravo pristupa na snazi, kako bi se podloge održale tijekom zakonskog razdoblja čuvanja i nakon prestanka ugovora s prodajnim partnerom ili davateljem usluge.
 
 ### Inspekcija, ispravak i upravne mjere
 
-Kad nadležno tijelo pregledava PIF, načelno o tome obavješćuje proizvođača ili uvoznika kozmetike najkasnije 7 dana prije dana inspekcije. Ako međutim slučaj spada pod zakonsku iznimku utvrđenu u povezanim propisima, inspekcija se može provesti bez prethodne obavijesti. Neovisno o tome je li obavijest dana, treba trajno održavati stanje koje omogućuje pronaći i predložiti potpune aktualne podloge.
+Kad nadležno tijelo pregledava PIF, načelno o tome obavješćuje proizvođača ili uvoznika kozmetike najkasnije 7 dana prije dana inspekcije. Ako međutim slučaj spada pod zakonsku iznimku utvrđenu u povezanim propisima, inspekcija se može provesti bez prethodne obavijesti. Neovisno o tome je li obavijest dana, treba trajno održavati stanje u kojemu se potpune aktualne podloge mogu pronaći i predočiti.
 
 Prijava neistinitih podataka pri registraciji proizvoda ili upis neistinitih podataka u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 novih tajvanskih dolara (新臺幣, TWD). Ako su naprotiv podloge PIF-a nepotpune, nadležno tijelo obično naloži ispravak u utvrđenom roku (限期改正), a upravna novčana kazna postaje pitanje tek tada kad se u tom roku ne ispravi. Neistinite podatke i nepotpunost podloga koju još treba dopuniti ne treba tretirati kao da vode istoj posljedici.
 
@@ -105,7 +105,7 @@ U ugovoru o suradnji i u operativnim uputama može se utvrditi opseg dopuštenih
 Ako se priprema prodaje na Tajvanu provjeri ovim redoslijedom, smanjuje se opasnost miješanja jednog režima s drugim.
 
 1. Utvrditi hoćete li sami osnovati kćerinsko društvo ili podružnicu na Tajvanu, ili hoćete li uvoz i prodaju povjeriti mjesnom uvozniku.
-2. Provjeriti subjekt koji snosi pravnu odgovornost kao proizvođač ili uvoznik kozmetike i ugovorno odgovornog za posao.
+2. Provjeriti subjekt koji snosi pravnu odgovornost kao proizvođač ili uvoznik kozmetike i osobe ugovorno odgovorne za dodijeljene poslove.
 3. Dovršiti registraciju proizvoda prije isporuke, prodaje, darivanja, javnog izlaganja ili davanja proizvoda potrošaču na isprobavanje.
 4. Sastaviti PIF prema proizvodu, ažurirati izmjene i čuvati ga u skladu sa zakonskim razdobljem i mjestom.
 5. Pregledati etiketu, prodajnu stranicu, reklamu i objave iz suradnje prema mjerilu cijelog izraza.

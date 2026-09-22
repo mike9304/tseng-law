@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Slika koja objašnjava ocjenu odgovornosti kod nesreće pri pretjecanju na Tajvanu i siguran postupak pretjecanja](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Kad vozilo ispred vozi sporo, pretjecanje (超車) može izgledati uobičajeno, no riječ je o vožnji sa znatnim rizikom. Prije početka pretjecanja treba zajedno ocijeniti dionicu ceste, prometnu situaciju u oba smjera, kretanje vozila ispred i postoji li prostor za siguran povratak na izvorni prometni trak.
+Kad vozilo ispred vozi sporo, pretjecanje (超車) može izgledati uobičajeno, no riječ je o vožnji sa znatnim rizikom. Prije početka pretjecanja treba zajedno ocijeniti dionicu ceste, prometnu situaciju u oba smjera, kretanje vozila ispred i postoji li dovoljno prostora za pretjecanje i za siguran povratak na izvorni prometni trak.
 
 ## Pretpostavke pretjecanja utvrđene člankom 101. Pravila o sigurnosti cestovnog prometa (道路交通安全規則)
 
@@ -33,7 +33,7 @@ Taj redoslijed signala i ustupanja u istom traku ne znači da je pretjecanje dop
 
 ## Anonimizirani predmet nesreće koji je vodio ured
 
-U anonimiziranom predmetu koji je vodio ovaj ured, motociklist A vozio se planinskom cestom sa suvozačem B. Ispred su vozila 2 osobna vozila; vozilo broj 1, najviše sprijeda, kretalo se sporo, pa su i vozilo broj 2 i motocikl napredovali malom brzinom.
+U anonimiziranom predmetu koji je vodio ovaj ured, motociklist A vozio se planinskom cestom sa suvozačem B. Ispred su se kretala 2 osobna vozila; vozilo broj 1, najviše sprijeda, kretalo se sporo, pa su i vozilo broj 2 i motocikl napredovali malom brzinom.
 
 ![Shema nesreće koja pokazuje putanju pretjecanja motocikla i 2 vozila ispred na planinskoj cesti](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -49,7 +49,7 @@ Taj zaključak, ograničen na ovaj predmet, ne znači da jedan izostanak propisa
 
 ## Točke koje valja provjeriti pri ocjeni odgovornosti za nesreću
 
-Prije pretjecanja treba najprije provjeriti spadaju li mjesto ili prometna situacija pod zabranu pretjecanja. Ako se primjenjuje postupak istog traka, treba dati propisani signal trubom ili svjetlima, bez prisiljavanja vozila ispred da ustupi, pričekati jasan izraz ustupanja i dovršiti pretjecanje uz dostatan razmak i sigurnu udaljenost povratka.
+Prije pretjecanja treba najprije provjeriti spadaju li mjesto ili prometna situacija pod zabranu pretjecanja. Ako se primjenjuje postupak istog traka, treba dati propisani signal trubom ili svjetlima, bez prisiljavanja vozila ispred da ustupi, pričekati jasan znak da vozilo ispred ustupa put i dovršiti pretjecanje uz dostatan razmak i sigurnu udaljenost povratka.
 
 Poštivanje članka 101. važno je, ali samo po sebi ne jamči ni da će se nesreća izbjeći ni određeni ishod kasnijeg vještačenja ili postupka. Vozači moraju ostaviti dodatnu sigurnosnu rezervu i prilagoditi se situaciji ispred.
 

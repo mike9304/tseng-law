@@ -37,7 +37,7 @@ Prije prijenosa kapitala (資本金匯款) informirajte se kod svoje glavne bank
 
 **​**
 
-**2. Pri uplati temeljnog kapitala, može li se prenijeti nove tajvanske dolare (新臺幣, TWD) s osobnog računa na Tajvanu na pripremni račun tajvanskog društva?**
+**2. Pri uplati temeljnog kapitala, mogu li se novi tajvanski dolari (新臺幣, TWD) prenijeti s osobnog računa na Tajvanu na pripremni račun tajvanskog društva?**
 
 Moguće je, no treba predložiti isprave koje potvrđuju podrijetlo sredstava u novim tajvanskim dolarima stečenih na Tajvanu.
 
@@ -51,7 +51,7 @@ Ako prijenos nastane s bankovnog računa u Koreji, nije potrebno priložiti ispr
 
 **3. Nakon pripisa kapitala na pripremni račun, kada ga se može pretvoriti u redoviti račun društva (正式公司帳戶)?**
 
-Načelno to je moguće nakon primitka isprava o upisu pravne osobe (法人登記文件).
+Načelno je to moguće nakon primitka isprava o upisu pravne osobe (法人登記文件).
 
 Odgovorna osoba (負責人) zatim u banci pretvara pripremni račun društva u redoviti račun.
 

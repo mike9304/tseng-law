@@ -13,7 +13,7 @@ faq:
   - q: "Mora li društvo isplatiti zakonsku otpremninu i pri stegovnom otkazu?"
     a: "Ne. Ako radnik počini protupravnu radnju, povrijedi radna pravila ili se bez opravdanog razloga ne pojavi 3 dana uzastopce (članak 12. Zakona o standardima rada, 勞動基準法第12條), društvo može otpustiti bez prethodne obavijesti i zakonsku otpremninu ne mora isplatiti. Nasuprot tomu, gospodarski otkaz (članak 11.) zahtijeva prethodnu obavijest i isplatu zakonske otpremnine."
   - q: "Kako se na Tajvanu računa zakonska otpremnina?"
-    a: "Za svaku navršenu 1 godinu staža poslodavac mora isplatiti 0,5 mjeseca prosječne plaće kao zakonsku otpremninu, najviše 6 mjeseci plaće. Ta se formula odnosi na staž na koji se primjenjuje članak 12. Zakona o mirovini radnika (勞工退休金條例); za staž na koji se primjenjuje članak 17. Zakona o standardima rada (勞動基準法), za 1 godinu isplaćuje se 1 mjesec prosječne plaće, bez gornje granice."
+    a: "Za svaku navršenu 1 godinu staža poslodavac mora isplatiti 0,5 mjeseca prosječne plaće kao zakonsku otpremninu, najviše 6 mjeseci plaće. Ta se formula odnosi na staž na koji se primjenjuje članak 12. Zakona o mirovini radnika (勞工退休金條例); za staž na koji se primjenjuje članak 17. Zakona o standardima rada (勞動基準法), za 1 godinu isplaćuje se jedan mjesec prosječne plaće, bez gornje granice."
 ---
 
 # Radno pravo na Tajvanu: je li zakonsku otpremninu na Tajvanu doista teško ostvariti?
@@ -62,7 +62,7 @@ Sljedeća tablica to sažima.
 
 > Na Tajvanu, za svaku navršenu 1 godinu staža (年資),
 > poslodavac mora isplatiti 0,5 mjeseca prosječne plaće (平均工資) kao zakonsku otpremninu.
-> (najviše 6 mjeseci plaće) Ta se formula odnosi na staž na koji se primjenjuje članak 12. Zakona o mirovini radnika (勞工退休金條例); za staž na koji se primjenjuje članak 17. Zakona o standardima rada (勞動基準法), za 1 godinu isplaćuje se 1 mjesec prosječne plaće, bez gornje granice.
+> (najviše 6 mjeseci plaće) Ta se formula odnosi na staž na koji se primjenjuje članak 12. Zakona o mirovini radnika (勞工退休金條例); za staž na koji se primjenjuje članak 17. Zakona o standardima rada (勞動基準法), za 1 godinu isplaćuje se jedan mjesec prosječne plaće, bez gornje granice.
 
 ​
 
@@ -86,7 +86,7 @@ Sljedeći je predmet ured doista vodio.
 
 Postoji društvo A, poznato, s poslovnicama diljem Tajvana.
 
-Z nekog se razloga promijenilo vodstvo,
+Iz nekog se razloga promijenilo vodstvo,
 
 a novi je voditelj odmah po stupanju na dužnost,
 

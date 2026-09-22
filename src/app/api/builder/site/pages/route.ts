@@ -1,3 +1,4 @@
+import { isBuilderOwnedSlug } from '@/lib/builder/site/public-route-ownership';
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { normalizeLocale, type Locale } from '@/lib/locales';
@@ -182,7 +183,7 @@ export async function POST(request: NextRequest) {
   const rawSlug = normalizeSeoSlugInput(body.slug ?? '');
   const slug = rawSlug || `page-${Date.now().toString(36)}`;
 
-  if (slug.length > 200 || (rawSlug && !isValidBuilderSlug(slug))) {
+  if (slug.length > 200 || (rawSlug && !isValidBuilderSlug(slug)) || !isBuilderOwnedSlug(locale, slug)) {
     return pageRouteErrorResponse(locale, 'invalid_slug', 400);
   }
 

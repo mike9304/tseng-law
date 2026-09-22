@@ -51,7 +51,21 @@ import type {
   BuilderCollectionRecordPreview,
   BuilderCollectionSummary,
 } from '@/lib/builder/cms';
-import type { Locale } from '@/lib/locales';
+import { isLocale, type Locale } from '@/lib/locales';
+import { createMutationController, type MutationController, type MutationTicket, type OperationView, type WriteResult } from './mutation-controller.mjs';
+
+type RecordSaveTarget = Readonly<{ collectionId: string; detailUrl: string; listUrl: string }>;
+type RecordSaveInput = Readonly<{
+  target: RecordSaveTarget; endpoint: string; method: 'POST' | 'PATCH'; actor: BuilderCmsPermissionActor;
+  body: string; recordId: string | null;
+}>;
+type RecordSaveAck = { input: RecordSaveInput; result: ApiRecordMutation & { record: BuilderCmsRecord } };
+type RecordSaveSnapshot = { detail: BuilderCmsCollectionDetail; list: ApiCollectionList };
+type RecordSaveSession = {
+  controller: MutationController; owner: object; edit: object; key: object; targetKey: string;
+  ticket: MutationTicket; target: RecordSaveTarget;
+};
+type RecordSavePresentation = { phase: OperationView['phase'] | null; refresh?: string; observation?: string; reason?: string };
 
 type ApiCollectionList = {
   ok: boolean;
@@ -596,7 +610,7 @@ export default function ContentManagerClient({
   const [detail, setDetail] = useState<BuilderCmsCollectionDetail | null>(null);
   const [permissionDraft, setPermissionDraft] = useState<BuilderCmsPermissions>(() => defaultCmsPermissionDraft());
   const [cmsActor, setCmsActor] = useState<BuilderCmsPermissionActor>('admin');
-  const [recordForm, setRecordForm] = useState<RecordFormState>({});
+  const [recordForm, updateRecordForm] = useState<RecordFormState>({});
   const [editingRecordId, setEditingRecordId] = useState<string | null>(null);
   const [focusedRecordFieldKey, setFocusedRecordFieldKey] = useState<string | null>(null);
   const [recordQuery, setRecordQuery] = useState('');
@@ -630,7 +644,10 @@ export default function ContentManagerClient({
   const [referencePickerLoading, setReferencePickerLoading] = useState(false);
   const [referencePickerError, setReferencePickerError] = useState<string | null>(null);
   const [dynamicItemPages, setDynamicItemPages] = useState<DynamicItemPageReference[]>([]);
-  const [busy, setBusy] = useState(false);
+  const [otherBusy, setBusy] = useState(false);
+  const [recordSave, setRecordSave] = useState<RecordSavePresentation>({ phase: null });
+  const [saveAttempt, setSaveAttempt] = useState(0);
+  const busy = otherBusy || recordSave.phase === 'pending';
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
@@ -648,6 +665,131 @@ export default function ContentManagerClient({
   } | null>(null);
   const selectionAnchorRecordIdRef = useRef<string | null>(null);
   const selectionRangeShiftKeyRef = useRef(false);
+  const recordSaveControllerRef = useRef<MutationController | null>(null);
+  const recordSaveSessionRef = useRef<RecordSaveSession | null>(null);
+  const recordSaveKeysRef = useRef(new Map<string, object>());
+  const detailLoadRef = useRef(0);
+  const detailOwnerRef = useRef<string | null>(null);
+  const committedDetailRef = useRef(detail);
+  const cmsOwner = JSON.stringify([siteId, locale]);
+  const committedCmsOwnerRef = useRef(cmsOwner);
+  const saveOwner = useMemo(() => ({ siteId, locale, cmsActor, selectedCollectionId, queryCollectionId, queryRecordId }), [siteId, locale, cmsActor, selectedCollectionId, queryCollectionId, queryRecordId]);
+  const saveEdit = useMemo(() => ({ recordForm, editingRecordId, saveAttempt }), [recordForm, editingRecordId, saveAttempt]);
+  const saveOperation = useMemo(() => ({ owner: saveOwner, edit: saveEdit }), [saveOwner, saveEdit]);
+  const detailCollectionId = detail?.collectionId;
+
+  const closeRecordSave = useCallback(() => {
+    recordSaveControllerRef.current?.close();
+    recordSaveSessionRef.current = null;
+    setRecordSave({ phase: null });
+    setMessage(null);
+    setError(null);
+  }, []);
+  const setRecordForm = useCallback((next: React.SetStateAction<RecordFormState>) => {
+    closeRecordSave();
+    updateRecordForm(next);
+  }, [closeRecordSave]);
+
+  // Create in the committed lifecycle: StrictMode cleanup disposes only its own
+  // instance, and its second setup receives a fresh, usable controller.
+  useLayoutEffect(() => {
+    const controller = createMutationController({
+      write: writeCmsRecord,
+      refresh: readCmsRecordSaveSnapshot,
+      onAck(value) {
+        const session = recordSaveSessionRef.current;
+        if (!session) return;
+        const ack = value as RecordSaveAck;
+        const { record } = ack.result;
+        const created = ack.input.method === 'POST';
+        const recordCount = committedDetailRef.current
+          ? mergeAcknowledgedRecord(committedDetailRef.current, ack).recordCount : undefined;
+        setDetail((current) => recordSaveSessionRef.current === session && current
+          ? mergeAcknowledgedRecord(current, ack) : current);
+        setCollections((current) => recordSaveSessionRef.current === session
+          ? current.map((collection) => collection.collectionId === ack.input.target.collectionId
+            ? { ...collection, recordCount: recordCount ?? collection.recordCount, updatedAt: record.updatedAt }
+            : collection) : current);
+        setMessage(buildRecordSaveMessage(created ? 'Record created.' : 'Record updated.', ack.result));
+      },
+      onRefresh(value, context) {
+        const session = recordSaveSessionRef.current;
+        if (!session) return;
+        const snapshot = value as RecordSaveSnapshot;
+        const operation = controller.getState().operations.find((entry) => entry.key === (context.key ?? session.key));
+        const ack = operation?.outcome?.kind === 'ack' ? operation.outcome.value as RecordSaveAck : null;
+        const refreshedDetail = ack ? mergeAcknowledgedRecord(snapshot.detail, ack, true) : snapshot.detail;
+        setDetail((current) => recordSaveSessionRef.current === session ? refreshedDetail : current);
+        setSourceCollections((current) => recordSaveSessionRef.current === session ? snapshot.list.collections : current);
+        setCollections((current) => recordSaveSessionRef.current === session
+          ? snapshot.list.editableCollections.map((collection) => collection.collectionId === refreshedDetail.collectionId
+            ? { ...collection, recordCount: refreshedDetail.recordCount, updatedAt: refreshedDetail.updatedAt } : collection)
+          : current);
+      },
+      onState(state, context) {
+        const session = recordSaveSessionRef.current;
+        if (!session || session.controller !== controller) return;
+        const operation = state.operations.find((entry) => entry.key === session.key);
+        setRecordSave({
+          phase: operation?.phase ?? null,
+          refresh: context.source === 'observe' ? 'ready' : operation?.refresh.status,
+          observation: state.observation?.status,
+          reason: operation?.outcome?.kind === 'rejected' ? String(operation.outcome.reason) : undefined,
+        });
+      },
+    });
+    recordSaveControllerRef.current = controller;
+    recordSaveKeysRef.current = new Map();
+    return () => {
+      controller.close();
+      controller.dispose();
+      recordSaveSessionRef.current = null;
+      recordSaveControllerRef.current = null;
+      detailLoadRef.current += 1;
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    if (committedCmsOwnerRef.current !== cmsOwner) {
+      detailLoadRef.current += 1;
+      detailOwnerRef.current = null;
+      setDetail(null);
+      setBusy(false);
+      setCollections(initialEditableCollections);
+      setSourceCollections(initialSourceCollections);
+      setSelectedCollectionId(initialEditableCollections[0]?.collectionId ?? '');
+      setMessage(null);
+      setError(null);
+    }
+    committedDetailRef.current = detail;
+    committedCmsOwnerRef.current = cmsOwner;
+  }, [detail, cmsOwner, initialEditableCollections, initialSourceCollections]);
+
+  useLayoutEffect(() => {
+    const controller = recordSaveControllerRef.current;
+    if (!controller) return;
+    controller.close();
+    recordSaveSessionRef.current = null;
+    setRecordSave({ phase: null });
+    if (!detailCollectionId || detailCollectionId !== selectedCollectionId || detailOwnerRef.current !== cmsOwner || otherBusy) return;
+    const targetKey = JSON.stringify([cmsOwner, detailCollectionId, editingRecordId]);
+    const previousKey = recordSaveKeysRef.current.get(targetKey);
+    const previous = controller.getState().operations.find((entry) => entry.key === previousKey);
+    // Unresolved writes keep their key even across close/reopen or draft changes.
+    // Only an explicit new attempt may replace an unknown operation.
+    const key = previous && (previous.phase === 'pending' || previous.phase === 'unknown') ? previous.key as object : saveOperation;
+    const base = `${apiBase(siteId)}/${encodeURIComponent(detailCollectionId)}`;
+    controller.commit({ owner: saveOwner, edit: saveEdit });
+    const issued = controller.issueTicket();
+    if (!issued.ok) return;
+    recordSaveKeysRef.current.set(targetKey, key);
+    recordSaveSessionRef.current = {
+      controller, owner: saveOwner, edit: saveEdit, key, targetKey, ticket: issued.ticket,
+      target: Object.freeze({ collectionId: detailCollectionId, detailUrl: `${base}?locale=${locale}`, listUrl: `${apiBase(siteId)}?locale=${locale}` }),
+    };
+    setRecordSave({ phase: previous && previous.key === key ? previous.phase : null });
+    return () => { controller.close(); recordSaveSessionRef.current = null; };
+  }, [saveOwner, saveEdit, saveOperation, detailCollectionId, selectedCollectionId, cmsOwner, siteId, locale, editingRecordId, otherBusy]);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -1192,6 +1334,10 @@ export default function ContentManagerClient({
     collectionId: string,
     options?: { preserveEditingState?: boolean },
   ) => {
+    closeRecordSave();
+    const load = ++detailLoadRef.current;
+    const owner = JSON.stringify([siteId, locale]);
+    const isCurrent = () => detailLoadRef.current === load && committedCmsOwnerRef.current === owner;
     if (!collectionId) {
       setDetail(null);
       return;
@@ -1206,6 +1352,8 @@ export default function ContentManagerClient({
       if (!response.ok || !payload.ok || !payload.detail) {
         throw new Error(payload.error ?? 'Failed to load collection.');
       }
+      if (!isCurrent()) return;
+      detailOwnerRef.current = owner;
       setDetail(payload.detail);
       if (!options?.preserveEditingState) {
         setRecordForm(createEmptyRecordForm(payload.detail.fields));
@@ -1214,11 +1362,11 @@ export default function ContentManagerClient({
       setCsvColumnMap({});
       setCsvImportSummary(null);
     } catch (loadError) {
-      setError(loadError instanceof Error ? loadError.message : 'Failed to load collection.');
+      if (isCurrent()) setError(loadError instanceof Error ? loadError.message : 'Failed to load collection.');
     } finally {
-      setBusy(false);
+      if (isCurrent()) setBusy(false);
     }
-  }, [locale, siteId]);
+  }, [closeRecordSave, locale, setRecordForm, siteId]);
 
   async function createCollection(formData: FormData) {
     setBusy(true);
@@ -1242,6 +1390,7 @@ export default function ContentManagerClient({
         throw new Error(result.issues?.join('\n') || result.error || 'Failed to create collection.');
       }
       await refreshCollections(result.detail.collectionId);
+      detailOwnerRef.current = JSON.stringify([siteId, locale]);
       setDetail(result.detail);
       setRecordForm(createEmptyRecordForm(result.detail.fields));
       setMessage(`Created ${result.detail.name}.`);
@@ -1687,40 +1836,51 @@ export default function ContentManagerClient({
     }
   }
 
-  async function saveRecord() {
-    if (!detail) return;
-    setBusy(true);
+  function saveRecord() {
+    const session = recordSaveSessionRef.current;
+    if (!detail || busy || !session || session.owner !== saveOwner || session.edit !== saveEdit) return;
+    let body: string;
+    try {
+      body = JSON.stringify({ fields: recordForm });
+    } catch {
+      setError('Record fields could not be serialized. Nothing was sent.');
+      return;
+    }
+    if (recordSaveSessionRef.current !== session) return;
+    const base = `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records`;
+    const input: RecordSaveInput = Object.freeze({
+      target: session.target,
+      endpoint: `${base}${editingRecordId ? `/${encodeURIComponent(editingRecordId)}` : ''}?locale=${locale}`,
+      method: editingRecordId ? 'PATCH' : 'POST', actor: cmsActor, body, recordId: editingRecordId,
+    });
+    const admission = session.controller.submit(session.ticket, { key: session.key, input, refreshTarget: session.target });
+    if (admission.admitted) {
+      setError(null);
+      setMessage(null);
+    }
+  }
+
+  function observeRecordSave() {
+    const session = recordSaveSessionRef.current;
+    if (!session || session.owner !== saveOwner || session.edit !== saveEdit) return;
+    if (session.controller.observe(session.target).started) {
+      const operation = session.controller.getState().operations.find((entry) => entry.key === session.key);
+      setRecordSave((current) => ({ ...current, phase: operation?.phase ?? null, observation: 'pending' }));
+    }
+  }
+
+  function startNewRecordSaveAttempt() {
+    const session = recordSaveSessionRef.current;
+    if (!session || session.owner !== saveOwner || session.edit !== saveEdit) return;
+    const operation = session.controller.getState().operations.find((entry) => entry.key === session.key);
+    if (!operation || !['unknown', 'rejected', 'ack'].includes(operation.phase)) return;
+    // This is a deliberate new operation, not an adjudication of the old write.
+    // Keep the old unknown outcome in the native ledger; never infer it from GET.
+    recordSaveKeysRef.current.delete(session.targetKey);
+    closeRecordSave();
+    setSaveAttempt((current) => current + 1);
     setError(null);
     setMessage(null);
-    try {
-      const endpoint = editingRecordId
-        ? `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/${encodeURIComponent(editingRecordId)}?locale=${locale}`
-        : `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records?locale=${locale}`;
-      const response = await fetch(endpoint, {
-        method: editingRecordId ? 'PATCH' : 'POST',
-        credentials: 'same-origin',
-        headers: cmsActorJsonHeaders(cmsActor),
-        body: JSON.stringify({ fields: recordForm }),
-      });
-      const result = await response.json() as {
-        ok: boolean;
-        record?: BuilderCmsRecord;
-        redirectCreated?: boolean;
-        redirectWarnings?: string[];
-        error?: string;
-        issues?: string[];
-      };
-      if (!response.ok || !result.ok || !result.record) {
-        throw new Error(result.issues?.join('\n') || result.error || 'Failed to save record.');
-      }
-      await loadDetail(detail.collectionId);
-      await refreshCollections(detail.collectionId);
-      setMessage(buildRecordSaveMessage(editingRecordId ? 'Record updated.' : 'Record created.', result));
-    } catch (saveError) {
-      setError(saveError instanceof Error ? saveError.message : 'Failed to save record.');
-    } finally {
-      setBusy(false);
-    }
   }
 
   function handleRecordEditorKeyDown(event: ReactKeyboardEvent<HTMLDivElement>) {
@@ -2175,7 +2335,8 @@ export default function ContentManagerClient({
   }
 
   const beginEditRecord = useCallback((record: BuilderCmsRecord, focusFieldKey?: string) => {
-    if (!detail) return;
+    const session = recordSaveSessionRef.current;
+    if (!detail || !session || session.owner !== saveOwner || session.edit !== saveEdit) return;
     setEditingRecordId(record.recordId);
     setRecordForm(createRecordFormFromRecord(detail.fields, record));
     setFocusedRecordFieldKey(focusFieldKey ?? null);
@@ -2183,12 +2344,14 @@ export default function ContentManagerClient({
       collectionId: detail.collectionId,
       recordId: record.recordId,
     });
-  }, [detail, updateCmsQueryState]);
+  }, [detail, saveEdit, saveOwner, setRecordForm, updateCmsQueryState]);
 
   useEffect(() => {
-    if (!queryCollectionId || busy) return;
+    if (!queryCollectionId || otherBusy) return;
     const sourceCollection = sourceCollections.find((collection) => collection.id === queryCollectionId);
     if (sourceCollection) {
+      closeRecordSave();
+      detailLoadRef.current += 1;
       setSelectedCollectionId('');
       setDetail(null);
       setEditingRecordId(null);
@@ -2203,7 +2366,8 @@ export default function ContentManagerClient({
       void loadDetail(queryCollectionId, { preserveEditingState: Boolean(queryRecordId) });
     }
   }, [
-    busy,
+    closeRecordSave,
+    otherBusy,
     detail,
     loadDetail,
     queryCollectionId,
@@ -2221,10 +2385,10 @@ export default function ContentManagerClient({
     const syncKey = `${queryCollectionId}:${queryRecordId}`;
     if (cmsQueryOpenKeyRef.current === syncKey) return;
     const record = detail.records.find((candidate) => candidate.recordId === queryRecordId);
-    if (!record || editingRecordId === record.recordId) return;
+    if (!record) return;
     cmsQueryOpenKeyRef.current = syncKey;
     beginEditRecord(record);
-  }, [beginEditRecord, detail, editingRecordId, queryCollectionId, queryRecordId]);
+  }, [beginEditRecord, detail, queryCollectionId, queryRecordId]);
 
   return (
     <>
@@ -2465,7 +2629,10 @@ export default function ContentManagerClient({
                   Record actor
                   <select
                     value={cmsActor}
-                    onChange={(event) => setCmsActor(event.target.value as BuilderCmsPermissionActor)}
+                    onChange={(event) => {
+                      closeRecordSave();
+                      setCmsActor(event.target.value as BuilderCmsPermissionActor);
+                    }}
                     style={inputStyle}
                     disabled={busy}
                   >
@@ -2795,11 +2962,23 @@ export default function ContentManagerClient({
                   >
                     {editingRecordId ? 'Save record' : 'Create record'}
                   </button>
+                  {recordSave.phase === 'unknown' || recordSave.phase === 'rejected' ? (
+                    <button type="button" className="builder-action-btn" onClick={startNewRecordSaveAttempt} disabled={busy}>
+                      {recordSave.phase === 'unknown' ? 'Start a new save attempt (may duplicate)' : 'Try a new save attempt'}
+                    </button>
+                  ) : null}
+                  {recordSave.phase === 'pending' || recordSave.phase === 'unknown' || recordSave.refresh === 'error' ? (
+                    <button type="button" className="builder-action-btn" onClick={observeRecordSave} disabled={recordSave.observation === 'pending'}>
+                      Check records
+                    </button>
+                  ) : null}
                   {editingRecordId ? (
                     <button
                       type="button"
                       className="builder-action-btn"
                       onClick={() => {
+                        const session = recordSaveSessionRef.current;
+                        if (!session || session.owner !== saveOwner || session.edit !== saveEdit) return;
                         setEditingRecordId(null);
                         setRecordForm(createEmptyRecordForm(detail.fields));
                         updateCmsQueryState({
@@ -2813,6 +2992,13 @@ export default function ContentManagerClient({
                       Cancel edit
                     </button>
                   ) : null}
+                </div>
+                <div role="status" aria-live="polite">
+                  {recordSave.phase === 'unknown' ? 'Save outcome is unknown. Check records before starting another attempt; another create may duplicate a record.' : null}
+                  {recordSave.phase === 'rejected' ? `Record was not saved: ${recordSave.reason ?? 'Request rejected before writing.'}` : null}
+                  {recordSave.refresh === 'error' ? 'The record was saved. Collection refresh is unavailable; check records to refresh.' : null}
+                  {recordSave.observation === 'ready' && recordSave.phase === 'unknown' ? ' Records refreshed. This does not confirm whether the earlier save succeeded.' : null}
+                  {recordSave.observation === 'error' ? ' Records could not be refreshed.' : null}
                 </div>
               </div>
             </section>
@@ -6016,6 +6202,87 @@ function parseCsvHeaderRow(csv: string): string[] {
   }
   headers.push(cell.trim());
   return headers.filter(Boolean);
+}
+
+function isCmsRecord(value: unknown): value is BuilderCmsRecord {
+  if (!value || typeof value !== 'object') return false;
+  const record = value as BuilderCmsRecord;
+  return typeof record.recordId === 'string' && record.recordId.length > 0
+    && builderCmsRecordStatuses.includes(record.status)
+    && Boolean(record.fields) && typeof record.fields === 'object' && !Array.isArray(record.fields)
+    && typeof record.createdAt === 'string' && Number.isFinite(Date.parse(record.createdAt))
+    && typeof record.updatedAt === 'string' && Number.isFinite(Date.parse(record.updatedAt))
+    && (record.revisions === undefined || (Array.isArray(record.revisions) && record.revisions.every((revision) => revision
+      && typeof revision.revisionId === 'string' && typeof revision.createdAt === 'string'
+      && revision.fields && typeof revision.fields === 'object' && revision.diff && Array.isArray(revision.diff.fields))))
+    && (record.moderation === undefined || (record.moderation && Array.isArray(record.moderation.history)
+      && record.moderation.history.every((event) => event && typeof event.createdAt === 'string' && builderCmsRecordStatuses.includes(event.status))))
+    && (record.locale === undefined || isLocale(record.locale));
+}
+
+async function writeCmsRecord(value: unknown): Promise<WriteResult> {
+  const input = value as RecordSaveInput;
+  // All transport inputs are primitives captured before native admission.
+  // Throws (including JSON parsing or an interrupted response) remain unknown.
+  const response = await fetch(input.endpoint, {
+    method: input.method, credentials: 'same-origin', headers: cmsActorJsonHeaders(input.actor), body: input.body,
+  });
+  const result = await response.json() as ApiRecordMutation;
+  if (response.ok && result?.ok === true && isCmsRecord(result.record)
+    && (!input.recordId || result.record.recordId === input.recordId)
+    && (result.redirectCreated === undefined || typeof result.redirectCreated === 'boolean')
+    && (result.redirectWarnings === undefined || (Array.isArray(result.redirectWarnings) && result.redirectWarnings.every((item) => typeof item === 'string')))) {
+    return { kind: 'ack', value: { input, result: { ...result, record: result.record } } satisfies RecordSaveAck };
+  }
+  // These are the route's explicit pre-write rejection contracts. A generic 500
+  // can occur after persistence (audit/event handling), and is never a rejection.
+  const rejected = result?.ok === false && typeof result.error === 'string' && (
+    (response.status === 400 && Array.isArray(result.issues) && result.issues.every((issue) => typeof issue === 'string'))
+    || (response.status === 403 && /^CMS permission denied for (public|member|staff|admin) to (create|update) records\.$/.test(result.error))
+    || (response.status === 404 && ['Unknown builder site.', 'Unknown builder collection.', 'Unknown CMS record.'].includes(result.error))
+    || (response.status === 409 && result.error === 'Static source collection records cannot be edited here.')
+  );
+  return rejected
+    ? { kind: 'rejected', reason: result.issues?.join('\n') || result.error }
+    : { kind: 'unknown', reason: 'No verifiable write acknowledgement.' };
+}
+
+async function readCmsRecordSaveSnapshot(value: unknown): Promise<RecordSaveSnapshot> {
+  const target = value as RecordSaveTarget;
+  const detailResponse = await fetch(target.detailUrl, { credentials: 'same-origin' });
+  const detailPayload = await detailResponse.json() as ApiCollectionDetail;
+  const loaded = detailPayload?.detail;
+  if (!detailResponse.ok || detailPayload?.ok !== true || !loaded || loaded.collectionId !== target.collectionId
+    || !Array.isArray(loaded.records) || !loaded.records.every(isCmsRecord) || !Array.isArray(loaded.fields)
+    || !Array.isArray(loaded.indexes) || !Number.isInteger(loaded.recordCount) || !loaded.permissions) {
+    throw new Error('Collection refresh unavailable.');
+  }
+  const listResponse = await fetch(target.listUrl, { credentials: 'same-origin' });
+  const list = await listResponse.json() as ApiCollectionList;
+  if (!listResponse.ok || list?.ok !== true || !Array.isArray(list.collections) || !Array.isArray(list.editableCollections)
+    || !list.editableCollections.some((collection) => collection?.collectionId === target.collectionId)
+    || !list.editableCollections.every((collection) => collection && typeof collection.collectionId === 'string' && Number.isInteger(collection.recordCount))
+    || !list.collections.every((collection) => collection && typeof collection.id === 'string' && Array.isArray(collection.fields)
+      && Array.isArray(collection.bindableTargets) && Array.isArray(collection.routeBindings))) {
+    throw new Error('Collection list refresh unavailable.');
+  }
+  return { detail: loaded, list };
+}
+
+function mergeAcknowledgedRecord(detail: BuilderCmsCollectionDetail, ack: RecordSaveAck, refreshing = false): BuilderCmsCollectionDetail {
+  if (detail.collectionId !== ack.input.target.collectionId) return detail;
+  const saved = ack.result.record;
+  const existing = detail.records.find((record) => record.recordId === saved.recordId);
+  // A stale read cannot erase the ACK. A later server revision may supersede it.
+  if (refreshing && existing && Date.parse(existing.updatedAt) > Date.parse(saved.updatedAt)) return detail;
+  const records = existing
+    ? detail.records.map((record) => record.recordId === saved.recordId ? saved : record)
+    : [...detail.records, saved];
+  return {
+    ...detail, records,
+    recordCount: records.length,
+    updatedAt: Date.parse(detail.updatedAt) > Date.parse(saved.updatedAt) ? detail.updatedAt : saved.updatedAt,
+  };
 }
 
 function apiBase(siteId: string) {

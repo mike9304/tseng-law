@@ -1,13 +1,18 @@
 import { describe, expect, it, vi } from 'vitest';
 import type { Locale } from '@/lib/locales';
-import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
-import { listPages } from '@/lib/builder/site/persistence';
+import { collectAllSearchDocs, readCurrentBuilderSearchDoc } from '@/lib/builder/search/source-collector';
+import { listPages, readExistingSiteDocument, readPageCanvas } from '@/lib/builder/site/persistence';
 import { listBlogPosts } from '@/lib/builder/blog/column-adapter';
 import { listPortfolioSearchDocs } from '@/lib/builder/portfolio/portfolio-engine';
 
+
+// Unit boundary only; actual renderer/revision recovery is exercised by current-publication.test.tsx.
+vi.mock('@/lib/builder/site/published-canvas', () => ({readPublishedPageCanvas:vi.fn(async (page,siteId)=>readPageCanvas(siteId,page.pageId,'published'))}));
+
 vi.mock('@/lib/builder/site/persistence', () => ({
   listPages: vi.fn(async () => []),
-  readPageCanvas: vi.fn(async () => null),
+  readExistingSiteDocument: vi.fn(async () => ({ pages: (await Promise.all(['ko','en','zh-hant'].map(locale => mockedListPages('default', locale as Locale)))).flat() })),
+  readPageCanvas: vi.fn(async (_site, pageId) => ({locale:pageId==='page-en-1'?'en':'ko',nodes:[{content:{text:'published body'}}]})),
 }));
 
 const mockedListPages = vi.mocked(listPages);
@@ -217,4 +222,19 @@ describe('search source collector', () => {
     expect(pageDocs.find((doc) => doc.id === 'page:ko:leak-template')).toBeUndefined();
     expect(pageDocs.find((doc) => doc.id === 'page:ko:leak-preview')).toBeUndefined();
   });
+});
+
+
+describe('legacy publication eligibility',()=>{
+ it.each(['member','password','noIndex','unpublishedMarker','internal','unpublished','wrongLocale','englishSuppressed'])('does not collect or return %s legacy page',async control=>{
+  const locale=control==='englishSuppressed'?'en':'ko';
+  const page={pageId:'safe-page',locale,slug:control==='englishSuppressed'?'faq':control==='internal'?'public-animation-mqzrfcqb':'about',title:{ko:'Title',en:'Title','zh-hant':'Title'},...(control==='member'?{memberAccess:{requireLogin:true}}:{}),...(control==='password'?{password:'secret'}:{}),...(control==='noIndex'?{seo:{noIndex:true}}:{}),publishedAt:control==='unpublishedMarker'?undefined:'2026-09-22T00:00:00.000Z'};
+  vi.mocked(readExistingSiteDocument).mockResolvedValue({pages:[page]} as never);
+  vi.mocked(readPageCanvas).mockResolvedValue(control==='unpublished'?null:{locale:control==='wrongLocale'?'en':locale,nodes:[{content:{text:'published'}}]} as never);
+  try {
+   const candidate={id:`page:${locale}:safe-page`,kind:'page' as const,locale:locale as Locale,title:'old',url:'/old',body:'old'};
+   expect(await readCurrentBuilderSearchDoc(candidate)).toBeNull();
+   expect((await collectAllSearchDocs()).filter(doc=>doc.kind==='page')).toEqual([]);
+  } finally {vi.mocked(readExistingSiteDocument).mockReset();vi.mocked(readPageCanvas).mockReset();}
+ });
 });

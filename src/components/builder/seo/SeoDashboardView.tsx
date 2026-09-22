@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type {
   BuilderSeoChecklistSettings,
   BuilderSeoDefaults,
@@ -9,6 +9,7 @@ import type { BuilderSeoOverview } from '@/lib/builder/seo/overview';
 import { getDefaultBuilderSeoPatterns } from '@/lib/builder/seo/defaults';
 import { normalizeLocale } from '@/lib/locales';
 import { getSeoDashboardCopy } from './seo-dashboard-copy';
+import { createMutationController, type MutationController, type MutationTicket, type WriteResult } from '../cms/mutation-controller.mjs';
 
 type DashboardTab = 'checklist' | 'defaults' | 'pages' | 'tools';
 
@@ -18,6 +19,59 @@ interface SeoSettingsResponse {
   robotsTxt?: string;
   preview?: Array<{ pageId: string; title: string; description: string; publicPath: string }>;
   error?: string;
+}
+
+type SaveAction = 'checklist' | 'defaults' | 'robots' | 'bulk';
+type SaveKey = { action: SaveAction; revision: number };
+type SaveInput = { url: string; body: string };
+type SaveSession = { controller: MutationController; ticket: MutationTicket };
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function isDefaults(value: unknown): value is BuilderSeoDefaults {
+  return isRecord(value)
+    && (value.patterns === undefined || (isRecord(value.patterns) && Object.values(value.patterns).every((item) => typeof item === 'string')))
+    && (value.twitterCard === undefined || value.twitterCard === 'summary' || value.twitterCard === 'summary_large_image');
+}
+
+function isPreview(value: unknown): value is NonNullable<SeoSettingsResponse['preview']> {
+  return Array.isArray(value) && value.every((row) => isRecord(row)
+    && ['pageId', 'title', 'description', 'publicPath'].every((key) => typeof row[key] === 'string'));
+}
+
+function isOverview(value: unknown): value is BuilderSeoOverview {
+  return isRecord(value) && isRecord(value.checklistSettings) && isRecord(value.totals)
+    && ['pages', 'publishedPages', 'indexablePages', 'blockers', 'warnings', 'averageScore'].every((key) => typeof (value.totals as Record<string, unknown>)[key] === 'number')
+    && Array.isArray(value.checklist) && value.checklist.every((item) => isRecord(item)
+      && ['id', 'label', 'detail'].every((key) => typeof item[key] === 'string')
+      && ['done', 'todo', 'warning'].includes(String(item.status)))
+    && Array.isArray(value.pages) && value.pages.every((page) => isRecord(page)
+      && ['pageId', 'title', 'publicPath'].every((key) => typeof page[key] === 'string')
+      && typeof page.score === 'number' && typeof page.indexable === 'boolean'
+      && isRecord(page.issueCounts) && typeof page.issueCounts.blockers === 'number' && typeof page.issueCounts.warnings === 'number'
+      && Array.isArray(page.keywordHits) && page.keywordHits.every((keyword) => typeof keyword === 'string')
+      && Array.isArray(page.assistantTasks) && page.assistantTasks.every((task) => isRecord(task) && typeof task.status === 'string'));
+}
+
+async function writeSeo(input: unknown): Promise<WriteResult> {
+  const request = input as SaveInput;
+  try {
+    const response = await fetch(request.url, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin', body: request.body,
+    });
+    const payload: unknown = await response.json();
+    if (response.ok && isRecord(payload) && payload.ok === true) return { kind: 'ack', value: payload };
+    // These route responses precede writes. A 5xx can follow persistence (for
+    // example bulk overview construction), so it cannot prove an unsaved state.
+    if ([400, 401, 403].includes(response.status) && isRecord(payload) && payload.ok === false) {
+      return { kind: 'rejected', reason: payload };
+    }
+    return { kind: 'unknown', reason: payload };
+  } catch (reason) {
+    return { kind: 'unknown', reason };
+  }
 }
 
 const shellStyle: React.CSSProperties = {
@@ -100,10 +154,6 @@ function scoreColor(score: number): string {
   return '#dc2626';
 }
 
-function isErrorStatusMessage(status: string): boolean {
-  return /failed|실패|失敗|error|錯誤/i.test(status);
-}
-
 function parseKeywords(value: string): string[] {
   return value
     .split(',')
@@ -146,144 +196,208 @@ export default function SeoDashboardView({
   const [resetTitle, setResetTitle] = useState(true);
   const [resetDescription, setResetDescription] = useState(true);
   const [status, setStatus] = useState('');
+  const [statusTone, setStatusTone] = useState<'pending' | 'success' | 'error' | 'unknown'>('pending');
+  const [refreshFailed, setRefreshFailed] = useState(false);
+  const [settingsState, setSettingsState] = useState<'loading' | 'ready' | 'error'>('loading');
+  const [busy, setBusy] = useState(false);
+  const [session, setSession] = useState<SaveSession | null>(null);
+  const sessionRef = useRef<SaveSession | null>(null);
+  const pending = useRef<SaveKey | null>(null);
+  const revisions = useRef<Record<SaveAction, number>>({ checklist: 0, defaults: 0, robots: 0, bulk: 0 });
+  const initialOverviewRef = useRef(initialOverview);
+  useLayoutEffect(() => { initialOverviewRef.current = initialOverview; });
+  const revisionAtRender = { ...revisions.current };
+  // A retained handler keeps its original operation key, including after ACK or
+  // unknown. Fresh rendered handlers represent a subsequent explicit attempt.
+  const keys: Record<SaveAction, SaveKey> = {
+    checklist: { action: 'checklist', revision: revisionAtRender.checklist },
+    defaults: { action: 'defaults', revision: revisionAtRender.defaults },
+    robots: { action: 'robots', revision: revisionAtRender.robots },
+    bulk: { action: 'bulk', revision: revisionAtRender.bulk },
+  };
   const sortedPages = useMemo(
     () => [...overview.pages].sort((left, right) => left.score - right.score || left.title.localeCompare(right.title)),
     [overview.pages],
   );
   const selectedSet = useMemo(() => new Set(selectedPageIds), [selectedPageIds]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const ownerCopy = getSeoDashboardCopy(locale);
+    const initial = initialOverviewRef.current;
+    setOverview(initial);
+    setBusinessName(initial.checklistSettings.businessName ?? '');
+    setKeywords((initial.checklistSettings.keywords ?? []).join(', '));
+    setServiceMode(initial.checklistSettings.serviceMode ?? 'both');
+    setDefaults(emptyDefaults(locale));
+    setRobotsTxt('');
+    setPreview([]);
+    setSelectedPageIds([]);
+    setResetTitle(true);
+    setResetDescription(true);
+    setSettingsState('loading');
+    setStatus('');
+    setRefreshFailed(false);
+    setBusy(false);
+    pending.current = null;
+    revisions.current = { checklist: 0, defaults: 0, robots: 0, bulk: 0 };
+    const messages = {
+      checklist: { pending: ownerCopy.savingChecklistLabel, saved: ownerCopy.savedLabel, rejected: ownerCopy.checklistSaveFailedLabel },
+      defaults: { pending: ownerCopy.savingDefaultsLabel, saved: ownerCopy.defaultsSavedLabel, rejected: ownerCopy.defaultsSaveFailedLabel },
+      robots: { pending: ownerCopy.savingRobotsLabel, saved: ownerCopy.robotsSavedLabel, rejected: ownerCopy.robotsSaveFailedLabel },
+      bulk: { pending: ownerCopy.savingBulkLabel, saved: ownerCopy.bulkSavedLabel, rejected: ownerCopy.bulkSaveFailedLabel },
+    };
+    const controller = createMutationController({
+      write: writeSeo,
+      refresh: async (target) => {
+        if (typeof target !== 'string') return null;
+        const response = await fetch(target, { credentials: 'same-origin' });
+        const payload: unknown = await response.json();
+        if (!response.ok || !isRecord(payload) || payload.ok !== true || !isOverview(payload.overview)) {
+          throw new Error('SEO overview unavailable');
+        }
+        return payload.overview;
+      },
+      onAck: (value, context) => {
+        const key = context.key as SaveKey;
+        const payload = value as Record<string, unknown>;
+        const unchanged = revisions.current[key.action] === key.revision;
+        setStatus(messages[key.action].saved + (unchanged ? '' : ` ${ownerCopy.newerEditsLabel}`));
+        setStatusTone('success');
+        if (key.action === 'defaults' && unchanged) {
+          if (isDefaults(payload.defaults)) {
+            revisions.current.defaults += 1;
+            setDefaults(payload.defaults);
+          }
+          if (isPreview(payload.preview)) setPreview(payload.preview);
+        }
+        if (key.action === 'robots' && unchanged && typeof payload.robotsTxt === 'string') {
+          revisions.current.robots += 1;
+          setRobotsTxt(payload.robotsTxt);
+        }
+        if (key.action === 'bulk') {
+          if (isOverview(payload.overview)) setOverview(payload.overview);
+          if (unchanged) {
+            revisions.current.bulk += 1;
+            setSelectedPageIds([]);
+          }
+        }
+      },
+      onRefresh: (snapshot) => { if (isOverview(snapshot)) setOverview(snapshot); },
+      onState: (state, context) => {
+        if (!context.key) return;
+        const key = context.key as SaveKey;
+        const operation = state.operations.find((item) => item.key === key);
+        if (!operation) return;
+        if (context.source === 'submit') {
+          pending.current = key;
+          setBusy(true);
+          setStatus(messages[key.action].pending);
+          setStatusTone('pending');
+          setRefreshFailed(false);
+        } else if (operation.phase !== 'pending') {
+          pending.current = null;
+          setBusy(false);
+          if (operation.phase === 'rejected') {
+            setStatus(messages[key.action].rejected);
+            setStatusTone('error');
+          } else if (operation.phase === 'unknown') {
+            setStatus(ownerCopy.saveUnknownLabel);
+            setStatusTone('unknown');
+          }
+          if (context.source === 'refresh-error') setRefreshFailed(true);
+        }
+      },
+    });
+    // Draft revisions are guarded separately so newer typing cannot suppress
+    // settlement, strand the busy lock, or overwrite the newer input on ACK.
+    controller.commit({ owner: {}, edit: {} });
+    const issued = controller.issueTicket();
+    if (!issued.ok) return;
+    const currentSession = { controller, ticket: issued.ticket };
+    sessionRef.current = currentSession;
+    setSession(currentSession);
     let cancelled = false;
     async function loadSettings() {
-      const response = await fetch(`/api/builder/site/seo-settings?locale=${encodeURIComponent(locale)}`, {
-        credentials: 'same-origin',
-      });
-      const payload = (await response.json().catch(() => ({}))) as SeoSettingsResponse;
-      if (!cancelled && response.ok) {
-        setDefaults(payload.defaults ?? emptyDefaults(locale));
-        setRobotsTxt(payload.robotsTxt ?? '');
-        setPreview(payload.preview ?? []);
+      try {
+        const response = await fetch(`/api/builder/site/seo-settings?locale=${encodeURIComponent(locale)}`, {
+          credentials: 'same-origin',
+        });
+        const payload: unknown = await response.json();
+        if (!response.ok || !isRecord(payload) || payload.ok !== true
+          || !isDefaults(payload.defaults) || typeof payload.robotsTxt !== 'string' || !isPreview(payload.preview)) {
+          throw new Error('SEO settings unavailable');
+        }
+        if (cancelled) return;
+        revisions.current.defaults += 1;
+        revisions.current.robots += 1;
+        setDefaults(payload.defaults);
+        setRobotsTxt(payload.robotsTxt);
+        setPreview(payload.preview);
+        setSettingsState('ready');
+      } catch {
+        if (!cancelled) setSettingsState('error');
       }
     }
     void loadSettings();
     return () => {
       cancelled = true;
+      controller.dispose();
+      if (sessionRef.current === currentSession) sessionRef.current = null;
     };
   }, [locale]);
 
-  const saveChecklist = async () => {
-    setStatus(copy.savingChecklistLabel);
-    const response = await fetch(`/api/builder/site/seo-checklist?locale=${encodeURIComponent(locale)}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'same-origin',
-      body: JSON.stringify({
-        businessName,
-        keywords: parseKeywords(keywords),
-        serviceMode,
-      }),
-    });
-    if (!response.ok) {
-      setStatus(copy.checklistSaveFailedLabel);
-      return;
-    }
-    await refreshOverview();
-    setStatus(copy.savedLabel);
+  const canUseSession = () => session !== null && sessionRef.current === session;
+  const markEdited = (action: SaveAction) => {
+    if (!canUseSession() || ((action === 'defaults' || action === 'robots') && settingsState !== 'ready')) return false;
+    revisions.current[action] += 1;
+    return true;
   };
-
-  const refreshOverview = async () => {
-    const overviewResponse = await fetch(`/api/builder/site/seo-overview?locale=${encodeURIComponent(locale)}`, {
-      credentials: 'same-origin',
+  const submit = (action: SaveAction, route: string, body: unknown) => {
+    if (!session || !canUseSession() || pending.current || revisions.current[action] !== revisionAtRender[action]) return;
+    if ((action === 'defaults' || action === 'robots') && settingsState !== 'ready') return;
+    session.controller.submit(session.ticket, {
+      key: keys[action],
+      input: Object.freeze({ url: `/api/builder/site/${route}?locale=${encodeURIComponent(locale)}`, body: JSON.stringify(body) }),
+      refreshTarget: action === 'checklist' || action === 'defaults'
+        ? `/api/builder/site/seo-overview?locale=${encodeURIComponent(locale)}` : null,
     });
-    if (overviewResponse.ok) {
-      const payload = (await overviewResponse.json()) as { overview?: BuilderSeoOverview };
-      if (payload.overview) setOverview(payload.overview);
-    }
   };
-
-  const saveDefaults = async () => {
-    setStatus(copy.savingDefaultsLabel);
-    const response = await fetch(`/api/builder/site/seo-settings?locale=${encodeURIComponent(locale)}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'same-origin',
-      body: JSON.stringify(defaults),
-    });
-    const payload = (await response.json().catch(() => ({}))) as SeoSettingsResponse;
-    if (!response.ok) {
-      setStatus(payload.error || copy.defaultsSaveFailedLabel);
-      return;
-    }
-    setDefaults(payload.defaults ?? defaults);
-    setPreview(payload.preview ?? []);
-    await refreshOverview();
-    setStatus(copy.defaultsSavedLabel);
-  };
-
-  const saveRobots = async () => {
-    setStatus(copy.savingRobotsLabel);
-    const response = await fetch(`/api/builder/site/seo-settings?locale=${encodeURIComponent(locale)}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'same-origin',
-      body: JSON.stringify({ robotsTxt }),
-    });
-    const payload = (await response.json().catch(() => ({}))) as SeoSettingsResponse;
-    if (!response.ok) {
-      setStatus(payload.error || copy.robotsSaveFailedLabel);
-      return;
-    }
-    setRobotsTxt(payload.robotsTxt ?? '');
-    setStatus(copy.robotsSavedLabel);
-  };
-
-  const applyBulk = async (setIndexable?: boolean) => {
+  const saveChecklist = () => submit('checklist', 'seo-checklist', {
+    businessName, keywords: parseKeywords(keywords), serviceMode,
+  });
+  const saveDefaults = () => submit('defaults', 'seo-settings', defaults);
+  const saveRobots = () => submit('robots', 'seo-settings', { robotsTxt });
+  const applyBulk = (setIndexable?: boolean) => {
+    if (!canUseSession() || pending.current || revisions.current.bulk !== revisionAtRender.bulk) return;
     if (selectedPageIds.length === 0) {
       setStatus(copy.selectPagesFirstLabel);
+      setStatusTone('error');
       return;
     }
-    setStatus(copy.savingBulkLabel);
     const resetFields = [
       ...(resetTitle ? ['title' as const] : []),
       ...(resetDescription ? ['description' as const] : []),
     ];
-    const response = await fetch(`/api/builder/site/seo-bulk?locale=${encodeURIComponent(locale)}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'same-origin',
-      body: JSON.stringify({
-        pageIds: selectedPageIds,
-        ...(setIndexable !== undefined ? { setIndexable } : {}),
-        ...(resetFields.length > 0 ? { resetFields } : {}),
-      }),
+    submit('bulk', 'seo-bulk', {
+      pageIds: selectedPageIds,
+      ...(setIndexable !== undefined ? { setIndexable } : {}),
+      ...(resetFields.length > 0 ? { resetFields } : {}),
     });
-    const payload = (await response.json().catch(() => ({}))) as { overview?: BuilderSeoOverview; error?: string };
-    if (!response.ok) {
-      setStatus(payload.error || copy.bulkSaveFailedLabel);
-      return;
-    }
-    if (payload.overview) setOverview(payload.overview);
-    setSelectedPageIds([]);
-    setStatus(copy.bulkSavedLabel);
   };
 
   const updatePattern = (key: keyof NonNullable<BuilderSeoDefaults['patterns']>, value: string) => {
-    setDefaults((current) => ({
-      ...current,
-      patterns: {
-        ...(current.patterns ?? {}),
-        [key]: value,
-      },
-    }));
+    if (!markEdited('defaults')) return;
+    setDefaults((current) => ({ ...current, patterns: { ...(current.patterns ?? {}), [key]: value } }));
   };
 
   const toggleSelected = (pageId: string, checked: boolean) => {
+    if (!markEdited('bulk')) return;
     setSelectedPageIds((current) => (
-      checked
-        ? [...new Set([...current, pageId])]
-        : current.filter((id) => id !== pageId)
+      checked ? [...new Set([...current, pageId])] : current.filter((id) => id !== pageId)
     ));
   };
+  const saveDisabled = busy || !session;
+  const settingsDisabled = settingsState !== 'ready';
 
   return (
     <main style={shellStyle}>
@@ -329,7 +443,9 @@ export default function SeoDashboardView({
         ))}
       </nav>
 
-      {status ? <div style={{ color: isErrorStatusMessage(status) ? '#dc2626' : '#15803d', fontSize: '0.82rem', fontWeight: 800 }}>{status}</div> : null}
+      {status ? <div role="status" aria-live="polite" style={{ color: statusTone === 'error' ? '#dc2626' : statusTone === 'unknown' ? '#b45309' : statusTone === 'success' ? '#15803d' : '#64748b', fontSize: '0.82rem', fontWeight: 800 }}>{status}</div> : null}
+      {refreshFailed ? <div role="status" style={{ color: '#b45309', fontSize: '0.82rem' }}>{copy.overviewRefreshFailedLabel}</div> : null}
+      {settingsState !== 'ready' ? <div role="status" style={{ color: settingsState === 'error' ? '#dc2626' : '#64748b', fontSize: '0.82rem' }}>{settingsState === 'error' ? copy.settingsLoadFailedLabel : copy.settingsLoadingLabel}</div> : null}
 
       {activeTab === 'checklist' ? (
         <section style={sectionStyle}>
@@ -340,21 +456,21 @@ export default function SeoDashboardView({
                 {copy.checklistDescription}
               </p>
             </div>
-            <button type="button" style={buttonStyle} onClick={saveChecklist}>{copy.saveChecklistLabel}</button>
+            <button type="button" style={buttonStyle} disabled={saveDisabled} onClick={saveChecklist}>{copy.saveChecklistLabel}</button>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 1fr) minmax(220px, 1.4fr) 170px', gap: 10 }}>
             <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.businessNameLabel}
-              <input value={businessName} onChange={(event) => setBusinessName(event.target.value)} style={inputStyle} />
+              <input value={businessName} onChange={(event) => { if (markEdited('checklist')) setBusinessName(event.target.value); }} style={inputStyle} />
             </label>
             <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.keywordsLabel}
-              <input value={keywords} onChange={(event) => setKeywords(event.target.value)} placeholder={copy.keywordsPlaceholder} style={inputStyle} />
+              <input value={keywords} onChange={(event) => { if (markEdited('checklist')) setKeywords(event.target.value); }} placeholder={copy.keywordsPlaceholder} style={inputStyle} />
             </label>
             <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.serviceModeLabel}
-              <select value={serviceMode} onChange={(event) => setServiceMode(event.target.value as typeof serviceMode)} style={inputStyle}>
+              <select value={serviceMode} onChange={(event) => { if (markEdited('checklist')) setServiceMode(event.target.value as typeof serviceMode); }} style={inputStyle}>
                 <option value="both">{copy.serviceModeBothLabel}</option>
                 <option value="physical">{copy.serviceModePhysicalLabel}</option>
                 <option value="online">{copy.serviceModeOnlineLabel}</option>
@@ -385,29 +501,29 @@ export default function SeoDashboardView({
                 {copy.defaultsDescription}
               </p>
             </div>
-            <button type="button" style={buttonStyle} onClick={saveDefaults}>{copy.saveDefaultsLabel}</button>
+            <button type="button" style={buttonStyle} disabled={saveDisabled || settingsDisabled} onClick={saveDefaults}>{copy.saveDefaultsLabel}</button>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
               <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.titlePatternLabel}
-              <input value={defaults.patterns?.titleTemplate ?? ''} onChange={(event) => updatePattern('titleTemplate', event.target.value)} style={inputStyle} />
+              <input disabled={settingsDisabled} value={defaults.patterns?.titleTemplate ?? ''} onChange={(event) => updatePattern('titleTemplate', event.target.value)} style={inputStyle} />
             </label>
             <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.descriptionPatternLabel}
-              <textarea value={defaults.patterns?.descriptionTemplate ?? ''} onChange={(event) => updatePattern('descriptionTemplate', event.target.value)} style={{ ...inputStyle, minHeight: 84 }} />
+              <textarea disabled={settingsDisabled} value={defaults.patterns?.descriptionTemplate ?? ''} onChange={(event) => updatePattern('descriptionTemplate', event.target.value)} style={{ ...inputStyle, minHeight: 84 }} />
             </label>
             <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.ogTitlePatternLabel}
-              <input value={defaults.patterns?.ogTitleTemplate ?? ''} onChange={(event) => updatePattern('ogTitleTemplate', event.target.value)} style={inputStyle} />
+              <input disabled={settingsDisabled} value={defaults.patterns?.ogTitleTemplate ?? ''} onChange={(event) => updatePattern('ogTitleTemplate', event.target.value)} style={inputStyle} />
             </label>
             <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.ogDescriptionPatternLabel}
-              <input value={defaults.patterns?.ogDescriptionTemplate ?? ''} onChange={(event) => updatePattern('ogDescriptionTemplate', event.target.value)} style={inputStyle} />
+              <input disabled={settingsDisabled} value={defaults.patterns?.ogDescriptionTemplate ?? ''} onChange={(event) => updatePattern('ogDescriptionTemplate', event.target.value)} style={inputStyle} />
             </label>
             <label style={{ display: 'grid', gap: 5, fontSize: '0.78rem', fontWeight: 800 }}>
               {copy.twitterCardLabel}
-              <select value={defaults.twitterCard ?? 'summary_large_image'} onChange={(event) => setDefaults((current) => ({ ...current, twitterCard: event.target.value as BuilderSeoDefaults['twitterCard'] }))} style={inputStyle}>
+              <select disabled={settingsDisabled} value={defaults.twitterCard ?? 'summary_large_image'} onChange={(event) => { if (markEdited('defaults')) setDefaults((current) => ({ ...current, twitterCard: event.target.value as BuilderSeoDefaults['twitterCard'] })); }} style={inputStyle}>
                 <option value="summary_large_image">{copy.twitterSummaryLargeLabel}</option>
                 <option value="summary">{copy.twitterSummaryLabel}</option>
               </select>
@@ -433,16 +549,16 @@ export default function SeoDashboardView({
             <h2 style={{ margin: 0, fontSize: '1rem' }}>{copy.editByPageTitle}</h2>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               <label style={{ display: 'flex', gap: 6, alignItems: 'center', fontSize: '0.78rem', fontWeight: 800 }}>
-                <input type="checkbox" checked={resetTitle} onChange={(event) => setResetTitle(event.target.checked)} />
+                <input type="checkbox" checked={resetTitle} onChange={(event) => { if (markEdited('bulk')) setResetTitle(event.target.checked); }} />
                 {copy.resetTitleLabel}
               </label>
               <label style={{ display: 'flex', gap: 6, alignItems: 'center', fontSize: '0.78rem', fontWeight: 800 }}>
-                <input type="checkbox" checked={resetDescription} onChange={(event) => setResetDescription(event.target.checked)} />
+                <input type="checkbox" checked={resetDescription} onChange={(event) => { if (markEdited('bulk')) setResetDescription(event.target.checked); }} />
                 {copy.resetDescriptionLabel}
               </label>
-              <button type="button" style={ghostButtonStyle} onClick={() => void applyBulk(true)}>{copy.allowIndexingLabel}</button>
-              <button type="button" style={ghostButtonStyle} onClick={() => void applyBulk(false)}>{copy.blockIndexingLabel}</button>
-              <button type="button" style={buttonStyle} onClick={() => void applyBulk(undefined)}>{copy.resetSelectedLabel}</button>
+              <button type="button" style={ghostButtonStyle} disabled={saveDisabled} onClick={() => void applyBulk(true)}>{copy.allowIndexingLabel}</button>
+              <button type="button" style={ghostButtonStyle} disabled={saveDisabled} onClick={() => void applyBulk(false)}>{copy.blockIndexingLabel}</button>
+              <button type="button" style={buttonStyle} disabled={saveDisabled} onClick={() => void applyBulk(undefined)}>{copy.resetSelectedLabel}</button>
             </div>
           </div>
           <div style={{ color: '#64748b', fontSize: '0.78rem' }}>{copy.selectedCountLabel(selectedPageIds.length)}</div>
@@ -454,7 +570,7 @@ export default function SeoDashboardView({
                     <input
                       type="checkbox"
                       checked={selectedPageIds.length === sortedPages.length && sortedPages.length > 0}
-                      onChange={(event) => setSelectedPageIds(event.target.checked ? sortedPages.map((page) => page.pageId) : [])}
+                      onChange={(event) => { if (markEdited('bulk')) setSelectedPageIds(event.target.checked ? sortedPages.map((page) => page.pageId) : []); }}
                     />
                   </th>
                   <th style={{ padding: '9px 8px' }}>{copy.pageColumnLabel}</th>
@@ -519,12 +635,13 @@ export default function SeoDashboardView({
                   {copy.customRobotsDescription}
                 </p>
               </div>
-              <button type="button" style={buttonStyle} onClick={saveRobots}>{copy.saveRobotsLabel}</button>
+              <button type="button" style={buttonStyle} disabled={saveDisabled || settingsDisabled} onClick={saveRobots}>{copy.saveRobotsLabel}</button>
             </div>
             <textarea
               aria-label={copy.customRobotsAriaLabel}
+              disabled={settingsDisabled}
               value={robotsTxt}
-              onChange={(event) => setRobotsTxt(event.target.value)}
+              onChange={(event) => { if (markEdited('robots')) setRobotsTxt(event.target.value); }}
               placeholder={copy.robotsPlaceholder}
               style={{ ...inputStyle, minHeight: 150, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', lineHeight: 1.55 }}
             />

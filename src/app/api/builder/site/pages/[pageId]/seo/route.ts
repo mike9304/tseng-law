@@ -1,3 +1,5 @@
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
+import { changedNativeRoute, isBuilderOwnedSlug, hasNativeDescendant, nativeRedirectWarning } from '@/lib/builder/site/public-route-ownership';
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
@@ -94,8 +96,8 @@ export async function GET(request: NextRequest, props: { params: Promise<{ pageI
         locale,
       }),
       defaults: {
-        publicPath: buildSitePagePath(page.locale, page.slug),
-        canonical: `${siteUrl.replace(/\/+$/, '')}${buildSitePagePath(page.locale, page.slug)}`,
+        publicPath: buildSitePagePath(page.locale, page.isHomePage ? '' : resolveLocaleSlug(page, page.locale)),
+        canonical: `${siteUrl.replace(/\/+$/, '')}${buildSitePagePath(page.locale, page.isHomePage ? '' : resolveLocaleSlug(page, page.locale))}`,
       },
       hreflang,
       siblings,
@@ -140,9 +142,11 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
       ? applySeoPatch(page.seo, seoPayload, rawSeoBody)
       : applyLocalizedSeoPatch(page.seo, seoPayload, rawSeoBody, locale);
     const nextSlug = slug !== undefined ? slug : page.slug;
-    const previousSlug = page.slug;
+    if (changedNativeRoute(page, { ...page, slug: nextSlug })) return errorResponse(locale, 'validation_error', 400);
+    const previousSlug = page.isHomePage ? '' : resolveLocaleSlug(page, page.locale);
+    const nextPublicSlug = page.isHomePage ? '' : resolveLocaleSlug({ ...page, slug: nextSlug }, page.locale);
     const previousPath = buildSitePagePath(page.locale, previousSlug);
-    const nextPath = buildSitePagePath(page.locale, page.isHomePage ? '' : nextSlug);
+    const nextPath = buildSitePagePath(page.locale, nextPublicSlug);
     const effectiveSeoForValidation = locale === sourceLocale
       ? nextSeo
       : resolveLocaleSeo({ ...page, seo: nextSeo }, locale);
@@ -168,7 +172,10 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
     site.updatedAt = now;
     let redirectCreated = false;
     const redirectWarnings: RedirectCreationWarning[] = [];
-    if (createRedirect && !page.isHomePage && previousPath !== nextPath) {
+    if (createRedirect && !page.isHomePage && previousPath !== nextPath && !isBuilderOwnedSlug(page.locale, previousSlug)) {
+      redirectWarnings.push(nativeRedirectWarning(page.locale, previousSlug, nextPublicSlug));
+    }
+    if (createRedirect && !page.isHomePage && previousPath !== nextPath && isBuilderOwnedSlug(page.locale, previousSlug)) {
       const redirectResult = appendRedirectIfValid(site, {
         from: previousPath,
         to: nextPath,
@@ -179,7 +186,10 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
       redirectCreated = redirectResult.created || redirectCreated;
       if (redirectResult.warning) redirectWarnings.push(redirectResult.warning);
 
-      if (page.dynamicItem) {
+      if (page.dynamicItem && hasNativeDescendant(previousSlug)) {
+        redirectWarnings.push(nativeRedirectWarning(page.locale, previousSlug, nextPublicSlug, true));
+      }
+      if (page.dynamicItem && !hasNativeDescendant(previousSlug)) {
         const wildcardRedirectResult = appendRedirectIfValid(site, {
           from: `${previousPath}/*`,
           to: `${nextPath}/*`,
@@ -194,7 +204,7 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
     site.navigation = updateNavigationHref(
       site.navigation,
       page.pageId,
-      buildSitePagePath(page.locale, page.isHomePage ? '' : nextSlug),
+      buildSitePagePath(page.locale, nextPublicSlug),
     );
 
     await writeSiteDocument(site);
@@ -218,8 +228,8 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
         locale,
       }),
       defaults: {
-        publicPath: buildSitePagePath(page.locale, page.slug),
-        canonical: `${getSiteUrl().replace(/\/+$/, '')}${buildSitePagePath(page.locale, page.slug)}`,
+        publicPath: buildSitePagePath(page.locale, page.isHomePage ? '' : resolveLocaleSlug(page, page.locale)),
+        canonical: `${getSiteUrl().replace(/\/+$/, '')}${buildSitePagePath(page.locale, page.isHomePage ? '' : resolveLocaleSlug(page, page.locale))}`,
       },
       validation,
       redirectCreated,

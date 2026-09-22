@@ -7,18 +7,15 @@ import {
   getPublicSearchApiErrorPayload,
   type PublicSearchApiErrorCode,
 } from '@/lib/builder/search/search-api-copy';
-import { runSearchQuery } from '@/lib/builder/search/query-engine';
+import { searchCurrentPublication, SearchIndexUnavailableError } from '@/lib/builder/search/current-search';
 import { appendQueryLog } from '@/lib/builder/search/index-storage';
-import { loadFreshSearchIndex } from '@/lib/builder/search/index-runtime';
-import { retainPublicPageHits } from '@/lib/builder/search/public-eligibility';
-import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
-import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
 import { SEARCH_DOC_KINDS, type SearchDocKind } from '@/lib/builder/search/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const MAX_SEARCH_QUERY_LENGTH = 200;
+
 
 function normalizeSearchQuery(value: string): string {
   return Array.from(value.trim()).slice(0, MAX_SEARCH_QUERY_LENGTH).join('');
@@ -72,39 +69,19 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ ok: true, query, hits: [], total: 0 });
   }
 
-  let storedIndex: Awaited<ReturnType<typeof loadFreshSearchIndex>>['storedIndex'];
-  let index: Awaited<ReturnType<typeof loadFreshSearchIndex>>['index'];
-  try {
-    const loaded = await loadFreshSearchIndex();
-    storedIndex = loaded.storedIndex;
-    index = loaded.index;
-  } catch (error) {
-    console.error('[public/search] index load failed:', error);
-    return errorResponse(locale, 'search_index_failed', 500);
-  }
-
   const kinds = kindsParam
     .split(',')
     .map((s) => s.trim())
     .filter((s): s is SearchDocKind => SEARCH_DOC_KINDS.includes(s as SearchDocKind));
 
-  let hits: ReturnType<typeof runSearchQuery>;
+  let result: Awaited<ReturnType<typeof searchCurrentPublication>>;
   try {
-    const indexForQuery = augmentStaticDocs(index, locale, getPublicIntentSearchDocs(locale));
-    hits = await retainPublicPageHits(
-      runSearchQuery({
-        index: indexForQuery,
-        query,
-        locale,
-        limit,
-        kinds: kinds.length > 0 ? kinds : undefined,
-      }),
-      locale,
-    );
+    result = await searchCurrentPublication({query, locale, limit, kinds: kinds.length > 0 ? kinds : undefined});
   } catch (error) {
-    console.error('[public/search] query failed:', error);
-    return errorResponse(locale, 'search_query_failed', 500);
+    console.error(error instanceof SearchIndexUnavailableError ? '[public/search] index load failed:' : '[public/search] query failed:', error);
+    return errorResponse(locale, error instanceof SearchIndexUnavailableError ? 'search_index_failed' : 'search_query_failed', 500);
   }
+  const {hits, indexMissing} = result;
 
   // Fire-and-forget query logging.
   void appendQueryLog({
@@ -122,7 +99,7 @@ export async function GET(request: NextRequest) {
     ok: true,
     query,
     locale,
-    indexMissing: !storedIndex,
+    indexMissing,
     total: hits.length,
     hits: hits.map((h) => ({
       id: h.doc.id,

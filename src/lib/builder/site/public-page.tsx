@@ -1,3 +1,5 @@
+import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
+import { checkAccess } from '@/lib/builder/members/members-engine';
 // allow: SIZE_OK - pre-existing public page renderer; legacy composites share published dataset preload wiring here.
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/locales';
@@ -619,6 +621,24 @@ export async function buildPublishedSitePageMetadata(
 ): Promise<Metadata | null> {
   const resolved = await resolvePublishedSitePage(locale, slugPath);
   if (!resolved) return null;
+
+  // Apply the same current member gate as the page before deriving any SEO
+  // fields. A non-null safe result also prevents builder-first static fallback.
+  const access = resolved.pageMeta.memberAccess;
+  if (access?.requireLogin) {
+    const member = await getCurrentSiteMember();
+    if (!checkAccess({
+      pageId: resolved.pageMeta.pageId,
+      requireLogin: true,
+      allowedRoles: access.allowedRoles ?? [],
+      redirectUrl: access.redirectPath,
+    }, member)) {
+      return {
+        title: { absolute: getOrganizationName(locale) },
+        robots: { index: false, follow: false },
+      };
+    }
+  }
 
   const siteUrl = getSiteUrl();
   const seoData = buildPageSeo(resolved.pageMeta, siteUrl, locale, resolved.site.pages, resolved.site);

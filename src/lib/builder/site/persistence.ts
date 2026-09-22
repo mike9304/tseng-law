@@ -156,7 +156,21 @@ function sitePathname(siteId: string): string {
   return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/site.json`;
 }
 
-async function loadSiteDocument(siteId: string): Promise<BuilderSiteDocument | null> {
+function parseSiteForRead(text: string, siteId: string, strict: boolean): BuilderSiteDocument {
+  const site = JSON.parse(text) as BuilderSiteDocument;
+  if (strict && (!site || site.siteId !== siteId || !Array.isArray(site.pages)
+    || new Set(site.pages.map(page => page?.pageId)).size !== site.pages.length
+    || site.pages.some(page => !page || typeof page.pageId !== 'string'
+      || !['ko', 'en', 'zh-hant'].includes(page.locale) || typeof page.slug !== 'string'
+      || !page.title || ['ko', 'en', 'zh-hant'].some(locale => typeof page.title[locale as Locale] !== 'string')
+      || !Number.isFinite(Date.parse(page.updatedAt))
+      || (page.isHomePage !== undefined && typeof page.isHomePage !== 'boolean')))) {
+    throw new Error('publication_site_invalid');
+  }
+  return normalizeSiteDocumentLifecycle(site, siteId);
+}
+
+async function loadSiteDocument(siteId: string, strict = false): Promise<BuilderSiteDocument | null> {
   const normalizedSiteId = normalizeBuilderSiteId(siteId);
   const pathname = sitePathname(normalizedSiteId);
   if (isBlobBackend()) {
@@ -166,17 +180,20 @@ async function loadSiteDocument(siteId: string): Promise<BuilderSiteDocument | n
       throw new Error(`Unexpected builder site Blob response status: ${result.statusCode}`);
     }
     const text = await new Response(result.stream).text();
-    return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument, normalizedSiteId);
+    return parseSiteForRead(text, normalizedSiteId, strict);
   } else {
     const allowedRoot = await prepareLocalJsonRoot();
     const targetPath = path.join(allowedRoot, normalizedSiteId, 'site.json');
     const snapshot = await readLocalJsonFile(targetPath, { allowedRoot });
     if (snapshot.kind === 'missing') return null;
-    return normalizeSiteDocumentLifecycle(
-      JSON.parse(snapshot.bytes.toString('utf8')) as BuilderSiteDocument,
-      normalizedSiteId,
-    );
+    return parseSiteForRead(snapshot.bytes.toString('utf8'), normalizedSiteId, strict);
   }
+}
+
+/** Existing-only durable policy input; never infer a publish target from default metadata. */
+export async function readExistingSiteDocument(siteId: string): Promise<BuilderSiteDocument | null> {
+  const normalized = requireBuilderSiteIdForMutation(siteId);
+  return loadSiteDocument(normalized, true);
 }
 
 export async function readSiteDocument(siteId: string, locale: Locale): Promise<BuilderSiteDocument> {

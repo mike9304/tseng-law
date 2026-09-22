@@ -26,9 +26,7 @@ vi.mock('@/lib/builder/search/index-builder', () => ({
   buildSearchIndex: vi.fn(),
 }));
 
-vi.mock('@/lib/builder/search/source-collector', () => ({
-  collectAllSearchDocs: vi.fn(),
-}));
+vi.mock('@/lib/builder/search/source-collector', async original => ({ ...await original<object>(), collectAllSearchDocs: vi.fn() }));
 
 vi.mock('@/lib/builder/search/query-engine', () => ({
   runSearchQuery: vi.fn(),
@@ -85,14 +83,41 @@ describe('/api/search', () => {
     buildSearchIndexMock.mockReturnValue(storedIndex);
     collectAllSearchDocsMock.mockResolvedValue([doc] as never);
     loadSearchIndexMock.mockResolvedValue(storedIndex);
-    runSearchQueryMock.mockReturnValue([
-      {
-        doc,
-        score: 1.234,
-        highlights: ['Portfolio body'],
-      },
-    ]);
+    runSearchQueryMock.mockImplementation(({locale}) => ([
+      { doc: {...doc, locale}, score: 1.234, highlights: ['Portfolio body'] },
+    ]));
     saveSearchIndexMock.mockResolvedValue(undefined as never);
+  });
+
+  it('rejects a corrupt non-builder locale instead of leaking another locale bucket', async () => {
+    runSearchQueryMock.mockReturnValueOnce([{doc:{...doc,locale:'en'},score:1,highlights:['stale']}]);
+    const response=await GET(request('locale=ko&q=portfolio'));expect(response.status).toBe(500);expect(await response.json()).toMatchObject({errorCode:'search_query_failed'});expect(appendQueryLogMock).not.toHaveBeenCalled();
+  });
+  it('enforces the fifty-candidate cap even if an engine returns more', async () => {
+    runSearchQueryMock.mockReturnValueOnce(Array.from({length:75},(_,i)=>({doc:{...doc,id:`portfolio:ko:${i}`},score:75-i,highlights:['Portfolio body']})));
+    const response=await GET(request('locale=ko&q=portfolio&limit=50'));const payload=await response.json();expect(payload.total).toBe(50);expect(payload.hits).toHaveLength(50);expect(appendQueryLogMock).toHaveBeenCalledWith(expect.objectContaining({hits:50}));
+  });
+  it('Japanese API keeps file-backed column locale and query-log identity', async () => {
+    const jaDoc: SearchDoc = { ...doc, id:'blog:ja:column', kind:'blog', locale:'ja', title:'会社案内', body:'会社案内', url:'/ja/columns/column' };
+    const actualBuild=(await vi.importActual<typeof import('@/lib/builder/search/index-builder')>('@/lib/builder/search/index-builder')).buildSearchIndex;
+    buildSearchIndexMock.mockImplementation(actualBuild);
+    runSearchQueryMock.mockImplementation((await vi.importActual<typeof import('@/lib/builder/search/query-engine')>('@/lib/builder/search/query-engine')).runSearchQuery);
+    loadSearchIndexMock.mockResolvedValue(actualBuild([jaDoc]));
+    const response=await GET(request('locale=ja&kinds=blog&q='+encodeURIComponent('会社')));expect(response.status).toBe(200);
+    expect(await response.json()).toMatchObject({locale:'ja',total:1,hits:[{url:'/ja/columns/column'}]});
+    expect(appendQueryLogMock).toHaveBeenCalledWith(expect.objectContaining({locale:'ja',hits:1}));
+  });
+  it.each([
+    ['too_many_requests',429,'検索リクエストが多すぎます。しばらくしてからもう一度お試しください。'],
+    ['rate_limit_unavailable',503,'検索保護システムを一時的に利用できません。しばらくしてからもう一度お試しください。'],
+    ['search_index_failed',500,'検索インデックスを読み込めませんでした。'],
+    ['search_query_failed',500,'検索を完了できませんでした。'],
+  ] as const)('Japanese API localizes %s', async (code,status,error) => {
+    if(code==='too_many_requests')checkRateLimitMock.mockResolvedValueOnce({allowed:false,retryAfterMs:1000} as never);
+    if(code==='rate_limit_unavailable')checkRateLimitMock.mockResolvedValueOnce({allowed:false,retryAfterMs:0,reason:'backend_unavailable'} as never);
+    if(code==='search_index_failed')loadSearchIndexMock.mockRejectedValueOnce(new Error('private detail'));
+    if(code==='search_query_failed')runSearchQueryMock.mockImplementationOnce(()=>{throw new Error('private detail');});
+    const response=await GET(request('locale=ja&q=query'));expect(response.status).toBe(status);expect(await response.json()).toEqual({ok:false,errorCode:code,error});
   });
 
   it('returns empty hits for blank queries without loading the index', async () => {
@@ -136,7 +161,7 @@ describe('/api/search', () => {
       index: storedIndex,
       query: 'portfolio',
       locale: 'ko',
-      limit: 5,
+      limit: 50, // Shared service bounds candidates before applying requested output limit.
       kinds: ['portfolio'],
     });
     expect(appendQueryLogMock).toHaveBeenCalledWith(expect.objectContaining({

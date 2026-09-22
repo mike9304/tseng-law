@@ -95,7 +95,7 @@ Ayrıca Tayvan’daki dükkân kira sözleşmelerinde ev sahibi kiracıya sıkl�
 
 Bu, kiranın muaf tutulduğu bir süredir; müzakere edilebilir.
 
-Yabancının dükkân kiralaması kolay değildir ve Tayvan’da teminat (押金) oldukça düşüktür (genellikle 2 ay), bu yüzden ev sahibinin koruması sınırlıdır;
+Yabancının dükkân kiralaması kolay değildir ve Tayvan’da teminat (押金) oldukça düşüktür (genellikle iki aylık kira), bu yüzden ev sahibinin koruması sınırlıdır;
 
 ev sahipleri bu nedenle yabancılara kiralamakta tereddüt eder.
 

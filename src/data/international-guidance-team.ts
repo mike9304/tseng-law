@@ -473,7 +473,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Deneyim',
     photoAltPrefix: 'Fotoğraf',
     workingLanguagesLabel: 'Çalışma dilleri',
-    fullProfileLabel: 'Tam profil (İngilizce)',
+    fullProfileLabel: 'Tam profil (İngilizce olarak)',
     keyFactsHeading: 'Avukat Wei Tseng — Temel bilgiler',
     qualificationLabel: 'Yetki ve büro',
     qualificationSentence:
@@ -2597,8 +2597,8 @@ export const guidanceTeamBios: Record<
         'Spor salonunda yaralanma nedeniyle bir Koreli öğrenciyi tazminat isteminde temsil etti ve TWD 1.57M tutarında ilk derece tazminat kararı elde etti.',
       ],
       education: [
-        'Yüksek lisans (M.S.), Institute of Finance, National Taiwan University',
-        'Lisans (B.A.), National Chengchi University’de hukuk ve finans çift programı',
+        'National Taiwan University Institute of Finance’de yüksek lisans (M.S.)',
+        'National Chengchi University’de hukuk ve finans çift lisans programı (B.A.)',
         'Kobe University ve Waseda University’de değişim öğrencisi',
       ],
       experience: [
@@ -2612,7 +2612,7 @@ export const guidanceTeamBios: Record<
         'Daha önce Millî Eğitim Bakanlığının hukuk işleri biriminde (Ministry of Education, Legal Affairs Division), idari ve hukuki uyuşmazlıklara odaklanarak çalıştı.',
         'Üniversiteler, öğretim elemanı hakları ve idari başvurular konusunda deneyimi vardır.',
       ],
-      education: ['Hukuk lisansı (LL.B.), National Chung Hsing University'],
+      education: ['National Chung Hsing University’de hukuk lisansı (LL.B.)'],
       experience: [
         'Millî Eğitim Bakanlığı, hukuk işleri birimi (Ministry of Education, Legal Affairs Division)',
         'Avukat, Hovering International Law Firm',
@@ -2623,7 +2623,7 @@ export const guidanceTeamBios: Record<
         'Birden fazla büroda uzun yıllar kıdemli hukuk asistanı olarak çalıştı; usul desteği, şirket hukuku ve yabancı yatırımdan sorumluydu.',
         'Usullere, şirket kuruluşuna, yabancı yatırım onaylarına, ruhsat başvurularına ve Kore ile Tayvan arasındaki iletişime destek verir.',
       ],
-      education: ['Hukuk lisansı (LL.B.), Tunghai University'],
+      education: ['Tunghai University’de hukuk lisansı (LL.B.)'],
       experience: [
         'Kıdemli hukuk asistanı, Boyin Law Firm',
         'Kıdemli hukuk asistanı, Muyang International Law Firm',
@@ -2634,8 +2634,8 @@ export const guidanceTeamBios: Record<
         'Kore’den gelen müvekkiller için görüşme randevularını ve iletişimi koordine eder.',
         'Bilgisayar bilimi eğitimiyle belge sistemleri ve iş akışları üzerinden ekipler arası iletişimi destekler.',
       ],
-      education: ['Lisans (B.S.) bilgisayar bilimi, National Cheng Kung University'],
-      experience: ['Kore operasyonları alanı, Hovering International Law Firm'],
+      education: ['National Cheng Kung University’de bilgisayar bilimi lisansı (B.S.)'],
+      experience: ['Kore operasyonları, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
@@ -2643,8 +2643,8 @@ export const guidanceTeamBios: Record<
         'Kurumsal müvekkiller için hukuki, vergi ve mali risklerin bütünleşik analizini destekler.',
       ],
       education: [
-        'Yüksek lisans (M.A.) muhasebe, National Chengchi University',
-        'Lisans (B.A.) muhasebe, National Chengchi University',
+        'National Chengchi University’de muhasebe yüksek lisansı (M.A.)',
+        'National Chengchi University’de muhasebe lisansı (B.A.)',
       ],
       experience: ['Chinshin CPA Firm'],
     },

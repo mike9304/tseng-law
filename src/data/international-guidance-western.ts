@@ -2850,7 +2850,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Bildirim ve alındı numarası',
           paragraphs: [
-            'Bir talep başarıyla gönderilirse sistem büroyu bilgilendirir. Bu bildirim henüz doğrulanmamışsa metniniz saklı kalır ve kaybolmaz.',
+            'Bir talep başarıyla gönderilirse sistem büroyu bilgilendirir. Bu bildirimin büroya ulaştığı henüz teyit edilmemişse, metniniz saklı kalır ve kaybolmaz.',
             'Alındı numarası, talebinizi kayıtlarımızda yeniden bulmaya yarar. Saklandıktan sonra gösterilir; yeniden iletişimde belirtebilirsiniz.',
           ],
         },

@@ -1,0 +1,88 @@
+WO-F-tr r2 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-tr-r2
+No git add/commit/push.
+
+## Rows applied
+
+tr-a (19 of 22): 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+tr-b (31 of 32): 1–15, 17–32
+
+Guidance pack (not only the quoted line):
+- privacy notice (tr-a 19): who must confirm the notice is the firm
+- team role line (tr-a 20): Kore operasyonları, not “alan”
+- education lines (tr-a 21), all Turkish bios: M.S., B.A. double major, both LL.B., B.S., M.A., B.A. accounting rewritten as Turkish credential sentences; university names and degree abbreviations kept
+- R5: fullProfileLabel → Tam profil (İngilizce olarak)
+
+Checker adaptations (wording applied, digit kept because the number bag must match the Korean source):
+- tr-a 13: the self-reference is gone; the sentence still says this page is ileri konular 2, and both column links stay
+- tr-a 14: “1 mağdur ve 1 kaza başına” (both 1s kept; “başına” supplies “per”)
+- tr-a 15: “1 kezlik her durma süresi 1 yılı” (both 1s kept; “her 1 kezlik” unglued)
+- tr-b 8: “genellikle iki aylık kira” (“iki” is in the Turkish number lexicon)
+- tr-b 15: “her ortağın 1 kişi 1 oy hakkı vardır” (both 1s kept; “her” added)
+- tr-b 19: “gerçek zarar tutarının 1 katı” (the 1 stays; the telegraphic parenthesis is gone)
+- tr-a 2: the link no longer names Satış Vergisi Kanunu madde 10. The label is the withholding-rate rule, plus “(%10 azami oran)” so the source’s single 10 is still in the file. The URL is unchanged.
+- 001 “son 1 yıl” → “son bir yıl” (lexicon: bir yıl = 1), both FAQ and body
+- 008 “her tam yıl (1 yıl)” → “her bir yıl”, FAQ and blockquote
+
+## Rows skipped
+
+- tr-a 1 (P1, TWD 1.57M): ACCEPTED-ROUND pins that figure byte-identical. Not rewritten as “1,57 milyon TWD”.
+- tr-a 11 (P2, Q16–Q20 as ## headings, and the U+200B blank lines in 003, 005, 006, 008, 009): the checker compares heading levels and the ZWSP count with the Korean source. Adding headings or deleting the zero-width lines fails `headings` / `blocks`. Sentences were not merged.
+- tr-a 22 (P2, Hangul in `url` of 008 and 009): R16 / ACCEPTED-ROUND. Frontmatter `url` left as-is.
+- tr-b 16 (P2, delete U+200B in 013 and 015): same ZWSP count rule. Those lines were left in place.
+
+tr-a 12 and 18 were applied inside the existing blocks (lowercase continuation and a comma before “ve”; “müvekkilim” → “müvekkil”). The one-line paragraph breaks were not merged.
+
+## Systemic patterns
+
+- Glued digit in a count or time unit: 9 instances. 001 “son 1 yıl” ×2; 002 “her 1 kezlik” ×2; 008 “her tam yıl (1 yıl)” ×2; 003 “1 mağdur ile 1 kaza” ×1; 010 “(1 kat)” ×1; 018 “ortak 1 kişi 1 oy” ×1.
+- U+200B blank lines (003 Q16+, 005, 006, 008, 009, 013, 015): 0 changed. Checker pins the count. See skipped rows.
+- Spoken one-line blog (008, 009): 4 instances inside existing blocks. “müvekkilim” ×1; the unfinished “-sanız” line and the period before “ve” ×2; 009 “Yani,” → “Başka bir deyişle,” ×1. Other one-line fragments were left, because joining them would change the block count.
+- English credential-list syntax in the Turkish bios: 9 strings (8 education lines + the Korea-desk experience line).
+- Hangul slug in `url`: 0 changed (008, 009). Skip.
+- 條例 named as yönetmelik: 1 (003 link label → Yasa). 017 規則 “kuralı” → “kuralları” ×2 (body and link label).
+- Currency code before the amount, only in 011, 017, 018 as the verdict named: 011 seven “X ile Y TWD” ranges (14 amounts); 017 nine amounts; 018 two amounts. Amounts unchanged. Other columns still use “TWD” before the amount; that was not this pattern.
+- False friend / wrong institution, swept past the quoted line: mirastan yoksunluk ×2; mütevelli ×1; şirket biçimi ×1; dozaj şekli ×1; mesele ×1; malik (gerçek hak sahibi dropped) ×2; fren zamanı ×2; tedavi kayıtları ×1; incinir ×1; kayda alınmış ×2; ihraç biçimi gerekir ×1; ancak hükmü / ancak hükmün metni ×4; işçi sigortası and ulusal sağlık sigortası ×1; ana dağıtıcı ×1; ruhsat veya plaka ödünç verme ×3; Kinmen ya da Lienchiang ×1; tröst ×2.
+- 合理補償 called tazminat in 014: 2 glosses “makul bir karşılık (合理補償)” plus 27 further tazminat stems in that file → karşılık. “kıdem tazminatı” and “cezai şart” left.
+- ROC year left as English “Minguo” (R13): 6. 003 ×3, 007 ×2, 010 ×1 → “(民國 …)”. No Gregorian year added.
+- R8 audit “onayı”: 018 “denetim onayı” → “denetim ve tasdik” ×1.
+- R2–R7, R9–R10: the round-2 verdict says the round-1 fixes still hold (Korea only as a labelled example, consultation lock, no result promise). No further Korea-as-default-reader sentence was rewritten. Consultation languages were not touched. llms.txt `tr` notices were not rewritten: `llms.txt` stays, and consultationNotice / confidentialNotice were already verbatim substrings of the pack.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-tr --lang tr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-tr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The 23 includes this log, the pre-existing WO-F-tr.txt edit, and the two untracked review files. A helper under `.tmp-tr/` was removed before this count.
+
+Number WARNs that did not fail the summary (pre-existing extras, not introduced as FAILs): 002 extra 6; 003 extra 2020×2 and 2023; 007 extra 2023×2; 010 extra 2020; 014 extra 2×2; plus unmatched Korean ordinals (제3자 and similar) on several files. No test expected-string was updated; nothing in src/lib/__tests__ or src/data/__tests__ pinned the Turkish strings that changed.
+
+## Reviewer got wrong — not applied
+
+- tr-a 1: “1,57 milyon TWD” is natural Türkiye notation, and the dot-as-decimal reading of “1.57M” is a real problem. The campaign pin forbids changing that token. Left byte-identical.
+- tr-a 11 and tr-b 16: the lines really are split by U+200B, and Q16–Q20 really are body lines. Turning them into headings, or deleting the zero-width lines, fails the checker against the Korean source. Not a wording error to “fix” by changing structure.
+- tr-a 15 suggested “her bir durma süresi 1 yılı aşamaz”, which drops the source’s 1회. Applied as “1 kezlik her durma süresi 1 yılı aşamaz” instead.
+- tr-b 15 suggested “her ortağın bir oy hakkı vardır”, which drops both 1s in “1인 1표”. Applied as “her ortağın 1 kişi 1 oy hakkı vardır”.
+- tr-a 2’s suggested label drops the 10 that the Korean link text contributes. The wrong act name was removed; one 10 remains as the treaty ceiling already stated in the article.

@@ -67,11 +67,11 @@ Aşağıdaki “resen sorgu konusu faaliyet kalemleri” (主動查詢之營業�
 
 Restoran işletmesinin imkânsız olduğu yerde açılış yapılırsa, daha sonra yetkili makamın idari para cezası (罰鍰) gelebilir.
 
-!['resen sorgu konusu faaliyet kalemleri' (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![“resen sorgu konusu faaliyet kalemleri” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
 “resen sorgu konusu faaliyet kalemleri” (主動查詢之營業項目)
 
-Özet budur; başka sorularınız varsa İletişim formundan İngilizce, Çince (中文), Japonca veya Korece yazabilirsiniz; yanıt süresi vaat edilmez.
+Rehber burada biter. Başka sorularınız varsa İletişim formundan İngilizce, Çince (中文), Japonca veya Korece yazabilirsiniz; yanıt süresi vaat edilmez.
 
 İdare kurumlarının kuralları sıklıkla değişebilir; tüzel kişi tescilinden önce en güncel düzenlemeyi doğrulamak uygun olur.
 

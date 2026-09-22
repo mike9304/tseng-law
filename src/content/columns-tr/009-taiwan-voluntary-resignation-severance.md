@@ -53,7 +53,7 @@ En sık örnek, işverenin
 
 fazla mesai ücretini (加班費) ödememesi,
 
-veya çalışanı iş sigortasına (勞保) ya da hastalık sigortasına (健保) kaydettirmemesidir.
+veya çalışanı işçi sigortasına (勞保) ya da ulusal sağlık sigortasına (健保) kaydettirmemesidir.
 
 Bu hallerde çalışan iş sözleşmesini olağan biçimde sona erdirse bile işveren kıdem tazminatı ödemelidir.
 
@@ -71,7 +71,7 @@ veya (6. bent için) zarar sonucunu öğrendiği günden itibaren **30 gün** i�
 
 ​
 
-Yani,
+Başka bir deyişle,
 
 Tayvan hukuku, kusur şirkette olsa da
 

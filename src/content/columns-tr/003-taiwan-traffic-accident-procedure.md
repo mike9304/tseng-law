@@ -63,7 +63,7 @@ Medeni Kanunun 736. maddesindeki uzlaşma (和解), tarafların bir uyuşmazlı�
 
 ### Q1–Q5 resmi dayanakları
 
-- [Karayolu trafiği yönetimi ve yaptırım yönetmeliği (道路交通管理處罰條例), madde 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Karayolu Trafiği Yönetimi ve Yaptırım Yasası (道路交通管理處罰條例), madde 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Tayvan Ceza Kanunu (中華民國刑法), madde 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Tayvan Ceza Kanunu (中華民國刑法), madde 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Tayvan Ceza Kanunu (中華民國刑法), madde 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -99,7 +99,7 @@ Medeni Kanunun 184. maddesine dayanan talep, bir hakka hukuka aykırı saldırı
 
 ## Q8. Tedavi sürerse tıbbi gider belgelerini nasıl sunmalı?
 
-Makbuzları (收據), hekim raporlarını ve hasta dosyasıyı saklayınız ve her tedavinin tıbbi gerekliliği ile kaza ile nedensellik bağını bunlarla düzenleyiniz. Süren bir tedavinin belgeleri, mahkemenin usul takvimine ve zaten sunulmuş talebin içeriğine göre kanıtı tamamlayabilir, ancak geç sunulan bütün belgelerin veya talebin bütün genişlemesinin kabul edileceği veya izin verileceği güvence altına alınmaz.
+Makbuzları (收據), hekim raporlarını ve hasta dosyasını saklayınız ve her tedavinin tıbbi gerekliliği ile kaza ile nedensellik bağını bunlarla düzenleyiniz. Süren bir tedavinin belgeleri, mahkemenin usul takvimine ve zaten sunulmuş talebin içeriğine göre kanıtı tamamlayabilir, ancak geç sunulan bütün belgelerin veya talebin bütün genişlemesinin kabul edileceği veya izin verileceği güvence altına alınmaz.
 
 Tıbbi belge eklemek, talep tutarını değiştirmek veya artırmaktan ayırt edilmelidir. Ceza yargılamasına bağlı medeni dava açıldıktan sonra yalnızca daha fazla tıbbi makbuz sunulması kendiliğinden yargılama gideri doğurmaz.
 
@@ -139,7 +139,7 @@ Makbuzlar, ücret kayıtları, güzergâh kayıtları ve klinik belgeler olası 
 
 Gelir kaybı, kazaya bağlı yaralanmalar nedeniyle iyileşme döneminde çalışmanın bütünüyle veya kısmen imkânsız olduğu ve bunun sonucunda gerçek bir gelir azalması bulunduğu belgelerle kanıtlanmalıdır. Hekim raporu veya dinlenme önerisi önemli bir başlangıçtır, ancak tek başına talebin tanınması için yetmez.
 
-Klinik dosya, devam veya izin kayıtları, ücret ve vergi verileri ile işverenin teyidi birlikte düzenlenmelidir. Bağımsız çalışan, satış verileri, işlem kayıtları ve vergi beyanları gibi kendi faaliyet biçimine uyan veriler sunabilir.
+Tedavi kayıtları, devam veya izin kayıtları, ücret ve vergi verileri ile işverenin teyidi birlikte düzenlenmelidir. Bağımsız çalışan, satış verileri, işlem kayıtları ve vergi beyanları gibi kendi faaliyet biçimine uyan veriler sunabilir.
 
 Çalışmaya devam edilmiş veya ücret değişmeden alınmış olması, iyileşme döneminin gelir kaybını değerlendirmeye ilgilidir, ancak bu olgu tek başına çalışma gücünün azalması zararını kendiliğinden karara bağlamaz. Bu olgu, çalışma gücünün azalması zararını tek başına değerlendirme dayanağı da değildir. Çalışma gücünün azalması zararı Q12’de ayrı incelenir.
 
@@ -175,7 +175,7 @@ Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險�
 
 Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu sigortasının ödemelerinin muhatabı değildir. Ancak birden çok aracın karıştığı bir kazada, sürücünün karışan başka bir aracın zorunlu sigortacısından ödeme talep edebildiği haller vardır.
 
-29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve 1 mağdur ile 1 kaza için ölüm, sakatlık ve tıbbi giderlerin toplam azamisi TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
+29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve ölüm, sakatlık ve tıbbi giderlerin toplam azamisi, 1 mağdur ve 1 kaza başına TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
 
 Üçüncü kişilere karşı mali sorumluluk sigortası (第三人責任險), sürücü kaza sigortası (駕駛人傷害險) ve kendi araç hasarı sigortası (車體損失險) sözleşmeye bağlı isteğe bağlı ürünlerdir. Gerçek teminat, sigortalıya, tavana, muafiyete (自負額), istisnalara, kusura ve poliçenin diğer koşullarına göre değişir, böylece poliçe ve koşullar dosya dosya doğrulanmalıdır.
 
@@ -184,11 +184,11 @@ Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu si
 - [Medeni Kanun, madde 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Medeni Kanun, madde 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Medeni Kanun, madde 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Tayvan İstinaf Mahkemesinin 2020 (Minguo 109) yılı 上易字 644 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Tayvan İstinaf Mahkemesinin 2020 (Minguo 109) yılı 上易字 477 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Tayvan İstinaf Mahkemesinin 2020 (民國 109) yılı 上易字 644 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Tayvan İstinaf Mahkemesinin 2020 (民國 109) yılı 上易字 477 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Yargı Yuanının Hoffmann bugünkü değer hesaplayıcısı](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Medeni Kanun, madde 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taoyuan bölge mahkemesinin 2023 (Minguo 112) yılı 壢簡字 236 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taoyuan bölge mahkemesinin 2023 (民國 112) yılı 壢簡字 236 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Medeni Kanun, madde 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Tayvan Ceza Kanunu (中華民國刑法), madde 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zorunlu otomobil mali sorumluluk sigortası kanunu](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -347,7 +347,7 @@ Fail sık sık mağdurun hâlini sormak için aramaz veya ziyaret etmez ve birç
 
 ​
 
-Mağdur böylece çok yaralı kalır ve öfkelenir, böylece sık sık müzakere tutarında ödün vermez, veya ihtiyati haciz (假扣押) ister ve karşı tarafın mallarının haczini sonuna kadar sürdürür.
+Mağdur böylece derin biçimde incinir ve öfkelenir, böylece sık sık müzakere tutarında ödün vermez, veya ihtiyati haciz (假扣押) ister ve karşı tarafın mallarının haczini sonuna kadar sürdürür.
 
 ​
 

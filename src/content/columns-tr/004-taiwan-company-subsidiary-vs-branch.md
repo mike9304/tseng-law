@@ -104,7 +104,7 @@ Tayvan bağlı şirketi, seçilen şirket biçimine ve yasal usule göre hisse i
 
 Tayvan’da kotasyon, şube ile bağlı şirket arasındaki yapı farkının açık göründüğü bir alandır. Yabancı bir şirketin Tayvan şubesi bağımsız bir ihraç şirketi değildir ve kendi hissesi yoktur, böylece şubenin kendisi Tayvan menkul kıymetler piyasasının kotasyon konusu olamaz. Yabancı şirketin ana kuruluş olarak kotasyon imkânı ile Tayvan şubesinin kendisinin kotasyon imkânı ayrı sorulardır.
 
-Yalnızca bir Tayvan bağlı şirketinin varlığı da kotasyona elverişliliği kendiliğinden kurmaz. Kotasyon öngörülüyorsa önce kotasyona elverişli bir ihraç şirketi biçimi toplanmalı ve Tayvan Borsasının ilgili piyasa ölçütü karşılanmalıdır. Kuruluştan beri süre, sermaye, kârlılık, hisselerin dağılması, şirket yönetimi, iç denetim, muhasebe denetimi ve kamuya bilgi ile uygulanacak bütün koşullar hazırlanmalıdır. Sektör veya yabancı yatırım kısıtları, grubun yeniden örgütlenmesi ve ortak çevresi kotasyon planını etkileyebilir.
+Yalnızca bir Tayvan bağlı şirketinin varlığı da kotasyona elverişliliği kendiliğinden kurmaz. Kotasyon öngörülüyorsa önce kotasyona elverişli bir ihraç şirketi biçimi gerekir ve Tayvan Borsasının ilgili piyasa ölçütü karşılanmalıdır. Kuruluştan beri süre, sermaye, kârlılık, hisselerin dağılması, şirket yönetimi, iç denetim, muhasebe denetimi ve kamuya bilgi ile uygulanacak bütün koşullar hazırlanmalıdır. Sektör veya yabancı yatırım kısıtları, grubun yeniden örgütlenmesi ve ortak çevresi kotasyon planını etkileyebilir.
 
 Bu yüzden yalnızca bugünkü işletme fonu ihtiyacı değil, gelecekteki fon kaynakları ve yurda dönüş yolları da zaman sırasına göre çizilmelidir. Ana kuruluşun bütünü sağlayıp sağlamayacağı, Tayvan’dan veya 3. ülkeden yatırımcı alınıp alınmayacağı, banka borcu ve teminatların gerekip gerekmediği, organlar ve personele pay karşılığı verilip verilmeyeceği ve ileride pay devri veya kotasyonun itilip itilmeyeceği, uygun yapıyı daha net kılar. Kısa vadeli girişe uygun yapı ile uzun vadeli sermaye piyasası planına uygun yapı sapabilir.
 
@@ -172,7 +172,7 @@ Son seçim, Tayvan’da ve ana kuruluşun yerindeki uzmanların aynı olguları 
 ## Resmi kaynaklar
 
 - [Tayvan Adalet Bakanlığı kural veritabanı — Şirket Kanunu](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Tayvan Adalet Bakanlığı kural veritabanı — Satış Vergisi Kanununun (營業稅法) 10. maddesi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Tayvan Adalet Bakanlığı kural veritabanı — Yerleşik olmayana ödenen temettüde kaynakta kesinti oranına ilişkin kural (%10 azami oran)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Tayvan Adalet Bakanlığı kural veritabanı — Gelir Vergisi Kanunu](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Tayvan Maliye Bakanlığı — yurt dışındaki ortaklara ödenen temettüde kaynakta kesintiye ilişkin açıklama](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Tayvan Maliye Bakanlığı — yabancı bir şirketin şube kârına ilişkin yorum](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

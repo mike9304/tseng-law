@@ -996,10 +996,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'குழு',
     title: 'Hovering-இன் பன்னாட்டுக் குழு',
     description:
-      'Hovering வழக்கறிஞர்கள், செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் கணக்காளரின் சுயவிவரங்கள்.',
+      'Hovering வழக்கறிஞர்கள், செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் பட்டயக் கணக்காளரின் சுயவிவரங்கள்.',
     representativeTitle: 'நிர்வாக வழக்கறிஞர்',
     teamTitle: 'வழக்கறிஞர்கள் மற்றும் உதவியாளர்கள்',
-    partnerTitle: 'கூட்டாளர் கணக்காளர்',
+    partnerTitle: 'கூட்டாளர் பட்டயக் கணக்காளர்',
     introLabel: 'அறிமுகம்',
     educationLabel: 'கல்வி',
     experienceLabel: 'அனுபவம்',
@@ -1013,11 +1013,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'முதன்மைத் துறைகள்',
     consultationLanguagesLabel: 'ஆலோசனை மொழிகள்',
     roles: {
-      'tseng-junwei': 'தைவானில் நிர்வாக வழக்கறிஞர் (Managing Attorney)',
-      'chang-rongxuan': 'தைவான் வழக்கறிஞர் (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'கொரியா செயல்பாட்டு நிர்வாகம் (Korea Operations Manager)',
-      'huang-shengping': 'கூட்டாளர் கணக்காளர் (Partner CPA)',
+      'tseng-junwei': 'தைவானில் நிர்வாக வழக்கறிஞர்',
+      'chang-rongxuan': 'தைவான் வழக்கறிஞர்',
+      'chang-fangyu': 'சட்ட உதவியாளர்',
+      'son-jungmin': 'கொரியா செயல்பாட்டு நிர்வாகி',
+      'huang-shengping': 'கூட்டாளர் பட்டயக் கணக்காளர்',
     },
   },
   ne: {
@@ -1427,7 +1427,7 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   ur: { Korean: 'کوریائی', Chinese: 'چینی', Japanese: 'جاپانی' },
   fa: { Korean: 'کره‌ای', Chinese: 'چینی', Japanese: 'ژاپنی' },
   my: { Korean: 'ကိုရီးယား', Chinese: 'တရုတ်', Japanese: 'ဂျပန်' },
-  ta: { Korean: 'கொரியன்', Chinese: 'சீனம்', Japanese: 'ஜப்பானியம்' },
+  ta: { Korean: 'கொரிய மொழி', Chinese: 'சீனம்', Japanese: 'ஜப்பானியம்' },
   ne: { Korean: 'कोरियाली', Chinese: 'चिनियाँ', Japanese: 'जापानी' },
   km: { Korean: 'ភាសាកូរ៉េ', Chinese: 'ភាសាចិន', Japanese: 'ភាសាជប៉ុន' },
   mn: { Korean: 'солонгос', Chinese: 'хятад', Japanese: 'япон' },
@@ -3774,45 +3774,45 @@ export const guidanceTeamBios: Record<
   ta: {
     'tseng-junwei': {
       intro: [
-        'அலுவலகம் தைவானில் நிறுவனங்கள் மற்றும் தனிநபர்களின் வழக்குகளை ஆங்கிலம், ஜப்பானியம், கொரியன் மற்றும் சீனம் ஆகியவற்றில் கையாள்கிறது.',
+        'அலுவலகம் தைவானில் நிறுவனங்கள் மற்றும் தனிநபர்களின் வழக்குகளை ஆங்கிலம், ஜப்பானியம், கொரிய மொழி மற்றும் சீனம் ஆகியவற்றில் கையாள்கிறது.',
         'உடற்பயிற்சிக் கூடத்தில் ஏற்பட்ட காயத்திற்கான இழப்பீட்டு வழக்கில் ஒரு கொரிய மாணவரை அவர் பிரதிநிதித்துவப்படுத்தி, முதல் நிலை நீதிமன்றத்தில் TWD 1.57M வழங்கும் தீர்ப்பைப் பெற்றார்.',
       ],
       education: [
         'முதுகலை (M.S.), Institute of Finance, National Taiwan University',
-        'இளங்கலை (B.A.) சட்டம் மற்றும் நிதி இரட்டைப் பாதையுடன், National Chengchi University',
+        'இளங்கலை (B.A.) சட்டமும் நிதியும் இரட்டை முதன்மைப் பாடமாக, National Chengchi University',
         'Kobe University மற்றும் Waseda University-இல் பரிமாற்ற மாணவி',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'சட்ட உதவி அறக்கட்டளை, தைச்சுங் கிளை',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'முன்பு Ministry of Education, Legal Affairs Division-இல், நிர்வாக மற்றும் உரிமையியல் வழக்குகளில் கவனத்துடன்.',
+        'முன்பு கல்வி அமைச்சகத்தின் சட்ட விவகாரப் பிரிவில், நிர்வாக மற்றும் உரிமையியல் வழக்குகளில் கவனத்துடன்.',
         'பல்கலைக்கழகங்கள், கற்பித்தல் பணியாளர்களின் உரிமைகள் மற்றும் நிர்வாக மேல்முறையீடுகள் தொடர்பான வழக்குகளில் அனுபவம்.',
       ],
       education: ['சட்ட இளங்கலை (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'கல்வி அமைச்சகம், சட்ட விவகாரப் பிரிவு',
         'வழக்கறிஞர், Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'பல அலுவலகங்களில் மூத்த paralegal ஆக நீண்ட காலம் பணி செய்த சட்ட உதவியாளர்; நடைமுறை உதவி, நிறுவனச் சட்டம் மற்றும் வெளிநாட்டு முதலீட்டுக்குப் பொறுப்பு.',
+        'பல அலுவலகங்களில் மூத்த சட்ட உதவியாளராக (paralegal) நீண்ட காலம் பணி செய்தவர்; நடைமுறை உதவி, நிறுவனச் சட்டம் மற்றும் வெளிநாட்டு முதலீட்டுக்குப் பொறுப்பு.',
         'நடவடிக்கைகள், நிறுவனம் அமைத்தல், வெளிநாட்டு முதலீட்டு அனுமதி, உரிம விண்ணப்பங்கள் மற்றும் கொரியா–தைவான் பரிமாற்றத்தில் உதவி.',
       ],
       education: ['சட்ட இளங்கலை (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'மூத்த சட்ட உதவியாளர், Boyin Law Firm',
+        'மூத்த சட்ட உதவியாளர், Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
-        'கொரியாவிலிருந்து வரும் கட்சிக்காரர்களின் ஆலோசனை நேரத்தையும் தகவல் தொடர்பையும் ஒருங்கிணைக்கிறார்.',
+        'கொரியாவிலிருந்து வரும் வாடிக்கையாளர்களின் ஆலோசனை நேரத்தையும் தகவல் தொடர்பையும் ஒருங்கிணைக்கிறார்.',
         'கணினி அறிவியல் அடிப்படையில் ஆவண அமைப்புகள் மற்றும் பணி ஓட்டம் மூலம் பிரிவுகளுக்கு இடையே பரிமாற்றத்தை ஆதரிக்கிறார்.',
       ],
       education: ['இளங்கலை (B.S.) கணினி அறிவியல், National Cheng Kung University'],
@@ -3821,7 +3821,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'National Chengchi University-இல் கணக்கியல் இளங்கலை மற்றும் முதுகலைத் திட்டங்களை முடித்து, தற்போது ஒரு கணக்கியல் அலுவலகத்தை நடத்துகிறார்.',
-        'நிறுவனக் கட்சிக்காரர்களுக்குச் சட்ட, வரி மற்றும் நிதி அபாயங்களின் ஒருங்கிணைந்த பகுப்பாய்வை ஆதரிக்கிறார்.',
+        'நிறுவன வாடிக்கையாளர்களுக்குச் சட்ட, வரி மற்றும் நிதி அபாயங்களின் ஒருங்கிணைந்த பகுப்பாய்வை ஆதரிக்கிறார்.',
       ],
       education: [
         'முதுகலை (M.A.) கணக்கியல், National Chengchi University',

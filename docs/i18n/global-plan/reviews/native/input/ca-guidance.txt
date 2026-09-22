@@ -1,0 +1,1096 @@
+# ca guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.ca.languageName
+    Català
+
+guidanceContent.ca.nav.home
+    Inici
+
+guidanceContent.ca.nav.services
+    Serveis
+
+guidanceContent.ca.nav.about
+    El despatx
+
+guidanceContent.ca.nav.lawyers
+    Advocats
+
+guidanceContent.ca.nav.pricing
+    Honoraris
+
+guidanceContent.ca.nav.contact
+    Contacte
+
+guidanceContent.ca.nav.faq
+    Preguntes
+
+guidanceContent.ca.nav.privacy
+    Privadesa
+
+guidanceContent.ca.nav.disclaimer
+    Avís legal
+
+guidanceContent.ca.nav.columns
+    Articles
+
+guidanceContent.ca.contactCta
+    Enviar una sol·licitud de consulta
+
+guidanceContent.ca.footerNotice
+    Aquesta pàgina en català només ofereix orientació general sobre el treball del despatx segons el dret de Taiwan. No és assessorament jurídic per a un assumpte concret, i l’enviament d’un missatge no crea per si sol una relació entre advocada o advocat i client.
+
+guidanceContent.ca.skipLink
+    Saltar la navegació i anar al contingut
+
+guidanceContent.ca.menuLabel
+    Menú
+
+guidanceContent.ca.languageLabel
+    Idioma de la pàgina
+
+guidanceContent.ca.mega.services.description
+    El despatx atén les principals àrees de pràctica segons el dret de Taiwan.
+
+guidanceContent.ca.mega.services.viewAllLabel
+    Veure-ho tot
+
+guidanceContent.ca.mega.columns.description
+    Articles que expliquen qüestions freqüents del dret de Taiwan.
+
+guidanceContent.ca.mega.columns.viewAllLabel
+    Veure-ho tot
+
+guidanceContent.ca.mega.lawyers.description
+    Presentació dels advocats que atenen els assumptes i de les vies de contacte.
+
+guidanceContent.ca.mega.lawyers.viewAllLabel
+    Veure-ho tot
+
+guidanceContent.ca.mega.pricing.description
+    Aquesta pàgina explica l’abast del treball i com es confirmen els honoraris.
+
+guidanceContent.ca.mega.pricing.viewAllLabel
+    Veure-ho tot
+
+guidanceContent.ca.mega.faq.description
+    Preguntes freqüents sobre el treball del despatx a Taiwan.
+
+guidanceContent.ca.mega.faq.viewAllLabel
+    Veure-ho tot
+
+guidanceContent.ca.notFoundTitle
+    Pàgina no trobada
+
+guidanceContent.ca.notFoundText
+    La pàgina que cerca no existeix o s’ha traslladat. Pot tornar a l’inici en català per veure l’orientació disponible.
+
+guidanceContent.ca.backHomeLabel
+    Tornar a l’inici
+
+guidanceContent.ca.readSourceLabel
+    Obrir la llista d’articles en l’idioma original
+
+guidanceContent.ca.home.heroScrollLabel
+    Desplaçar-se cap avall
+
+guidanceContent.ca.home.heroColumnsCtaLabel
+    Veure articles
+
+guidanceContent.ca.home.servicesDetailLabel
+    Veure detalls
+
+guidanceContent.ca.home.servicesAssistanceBefore
+    Si encara no té clar a quina àrea pertany el seu assumpte, la pàgina de 
+
+guidanceContent.ca.home.servicesAssistanceLinkLabel
+    Contacte
+
+guidanceContent.ca.home.servicesAssistanceAfter
+     explica com redactar un resum que una advocada o un advocat revisarà.
+
+guidanceContent.ca.home.columnsViewAllLabel
+    Veure tots els articles
+
+guidanceContent.ca.home.columnsReadMoreLabel
+    Continuar llegint
+
+guidanceContent.ca.home.columnsReviewLabel
+    Revisat per l’advocada Wei Tseng
+
+guidanceContent.ca.home.columnsOriginalLanguageBadge
+    Idioma original
+
+guidanceContent.ca.home.columnsOriginalLanguageNote
+    Els articles següents encara no estan en català. Aquesta llista roman en l’idioma original i obre aquella pàgina; el contingut no es tradueix de forma automàtica.
+
+guidanceContent.ca.home.imageBandAlt
+    Casa tradicional taiwanesa (三合院) i un pavelló contemporani a plena llum del dia
+
+guidanceContent.ca.home.videoPauseLabel
+    Posar el vídeo en pausa
+
+guidanceContent.ca.home.videoPlayLabel
+    Reproduir el vídeo
+
+guidanceContent.ca.home.videoReplayLabel
+    Tornar a reproduir el vídeo
+
+guidanceContent.ca.pages.home.eyebrow
+    ORIENTACIÓ
+
+guidanceContent.ca.pages.home.title
+    Serveis jurídics a Taiwan — orientació en català
+
+guidanceContent.ca.pages.home.description
+    Explicació general en català sobre l’abast de Hovering International Law Firm a Taiwan, els idiomes de consulta i el primer contacte.
+
+guidanceContent.ca.pages.home.intro
+    Hovering International Law Firm acompanya clients de l’estranger, també qui té un vincle amb Taiwan, en assumptes de dret taiwanès: inversió i constitució de societats, litigis civils, matrimoni, família i successions, laboral, penal i propietat intel·lectual. Aquesta part en català l’ajuda a saber quin treball entra en el nostre abast, què convé preparar i com contactar-nos. Són indicacions generals, no assessorament jurídic per al seu propi cas.
+
+guidanceContent.ca.pages.home.sections[0].heading
+    Què fem
+
+guidanceContent.ca.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm és un despatx d’advocats establert a Taiwan. Treballa segons el dret taiwanès i té oficines a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Assessorem empreses i tramitem procediments davant els tribunals, i acompanyem clients de l’estranger en els tràmits que cal seguir a Taiwan.
+
+guidanceContent.ca.pages.home.sections[0].paragraphs[1]
+    Tot el contingut d’aquestes pàgines és general. El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que aquesta orientació no substitueix una conversa directa amb una advocada o un advocat sobre el seu expedient.
+
+guidanceContent.ca.pages.home.sections[1].heading
+    L’idioma de la pàgina i l’idioma de la consulta no són el mateix
+
+guidanceContent.ca.pages.home.sections[1].paragraphs[0]
+    Aquesta pàgina està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en els quatre idiomes de consulta: anglès, xinès (中文), japonès i coreà. Llegir l’orientació en català no vol dir que la conversa amb l’advocada o l’advocat se celebri en català.
+
+guidanceContent.ca.pages.home.sections[1].paragraphs[1]
+    No prometem intèrpret, no prometem un termini de resposta i no confirmem cites a través d’aquesta pàgina. Si no pot fer servir cap d’aquests quatre idiomes, la pàgina «Contacte» explica com comprovem una forma de comunicar-nos.
+
+guidanceContent.ca.pages.home.sections[2].heading
+    Àrees de pràctica que atenem
+
+guidanceContent.ca.pages.home.sections[2].paragraphs[0]
+    L’abast del despatx cobreix les sis àrees següents. La pàgina «Serveis» descriu cadascuna amb més detall i assenyala el que no es garanteix.
+
+guidanceContent.ca.pages.home.sections[2].items[0]
+    Inversió i constitució de societats a Taiwan
+
+guidanceContent.ca.pages.home.sections[2].items[1]
+    Litigis civils i reclamacions de danys
+
+guidanceContent.ca.pages.home.sections[2].items[2]
+    Matrimoni, família i successions
+
+guidanceContent.ca.pages.home.sections[2].items[3]
+    Conflictes laborals
+
+guidanceContent.ca.pages.home.sections[2].items[4]
+    Assumptes penals
+
+guidanceContent.ca.pages.home.sections[2].items[5]
+    Propietat intel·lectual: marques, patents i drets d’autor
+
+guidanceContent.ca.pages.home.sections[3].heading
+    Per on convé començar
+
+guidanceContent.ca.pages.home.sections[3].paragraphs[0]
+    Llegeixi la pàgina «Serveis» per comprovar si el seu assumpte entra en el nostre abast i, tot seguit, «Honoraris» i «Contacte» per saber com es fixa l’abast i es confirmen els honoraris abans de començar el treball.
+
+guidanceContent.ca.pages.home.sections[3].paragraphs[1]
+    En enviar un missatge pot escriure el resum en el seu propi idioma. El text original es guarda tal com l’escriu i no es tradueix de forma automàtica. Un missatge enviat és una sol·licitud que espera revisió: encara no és una consulta ni una cita confirmada.
+
+guidanceContent.ca.pages.services.eyebrow
+    SERVEIS
+
+guidanceContent.ca.pages.services.title
+    Assumptes que atenem
+
+guidanceContent.ca.pages.services.description
+    Les sis àrees de pràctica del despatx a Taiwan i els límits que convé conèixer d’entrada.
+
+guidanceContent.ca.pages.services.intro
+    A continuació, els assumptes dels quals ens ocupem i les qüestions que solen plantejar-se a l’inici. Aquesta descripció l’ajuda a valorar si el seu assumpte entra en el nostre abast; és informació general, no l’anàlisi jurídica d’un expedient concret.
+
+guidanceContent.ca.pages.services.sections[0].heading
+    Inversió i constitució de societats a Taiwan
+
+guidanceContent.ca.pages.services.sections[0].paragraphs[0]
+    Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, banca, valoració del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.
+
+guidanceContent.ca.pages.services.sections[0].paragraphs[1]
+    L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sola un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.
+
+guidanceContent.ca.pages.services.sections[1].heading
+    Litigis civils i danys
+
+guidanceContent.ca.pages.services.sections[1].paragraphs[0]
+    Aquesta àrea cobreix conflictes contractuals, reclamacions de danys per acte il·lícit i conflictes de consum. El treball sol començar per una cronologia dels fets, la revisió de documents i proves existents i, només després, els passos següents.
+
+guidanceContent.ca.pages.services.sections[1].paragraphs[1]
+    Els terminis, inclosos els terminis legals per demandar, i la integritat de les proves influeixen molt en el curs de l’assumpte civil, així que indiqui des del principi les dates que conegui. Si conserva contractes, missatges, justificants de pagament o fotos del lloc, esmenti-ho en el primer missatge.
+
+guidanceContent.ca.pages.services.sections[2].heading
+    Matrimoni, família i successions
+
+guidanceContent.ca.pages.services.sections[2].paragraphs[0]
+    Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte de fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països distints. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre de domicili (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.
+
+guidanceContent.ca.pages.services.sections[2].paragraphs[1]
+    Com que els assumptes de família solen anar units a terminis i a diversos tràmits en paral·lel, el resum inicial hauria d’indicar la relació entre les parts, el lloc de residència actual i els procediments ja iniciats.
+
+guidanceContent.ca.pages.services.sections[3].heading
+    Conflictes laborals
+
+guidanceContent.ca.pages.services.sections[3].paragraphs[0]
+    Aquesta àrea cobreix l’extinció del contracte de treball, la indemnització segons el dret de Taiwan (資遣費; no s’identifica amb institucions d’altres països), salaris i conflictes derivats del contracte de treball (勞動契約), tant del costat de la persona treballadora com de l’ocupador. En revisar l’assumpte separem el fonament de l’extinció de les qüestions de preavís, pagament i terminis.
+
+guidanceContent.ca.pages.services.sections[3].paragraphs[1]
+    El contracte de treball, el reglament intern (工作規則), les nòmines i l’intercanvi escrit entre les parts solen ser els documents decisius. Si encara els conserva, indiqui-ho en el resum.
+
+guidanceContent.ca.pages.services.sections[4].heading
+    Assumptes penals
+
+guidanceContent.ca.pages.services.sections[4].paragraphs[0]
+    Acompanyem en la investigació i davant el tribunal, tant la persona investigada o acusada com la víctima, i valorem el risc penal de l’activitat empresarial.
+
+guidanceContent.ca.pages.services.sections[4].paragraphs[1]
+    Els assumptes penals solen tenir terminis curts i etapes ja definides, de manera que si ja ha rebut un escrit de l’autoritat o del tribunal, indiqui la data d’aquest escrit des del principi perquè el contingut es revisi en l’ordre adequat.
+
+guidanceContent.ca.pages.services.sections[5].heading
+    Propietat intel·lectual
+
+guidanceContent.ca.pages.services.sections[5].paragraphs[0]
+    Ajudem en el registre de marques (商標) i patents (專利), en drets d’autor i en conflictes sobre aquests drets a Taiwan.
+
+guidanceContent.ca.pages.services.sections[5].paragraphs[1]
+    En aquesta àrea l’ordre dels passos és decisiu: l’abast de la protecció, el moment de la presentació i l’ús efectiu influeixen en l’estratègia. Presentar una sol·licitud no garanteix per si sola que es concedeixi.
+
+guidanceContent.ca.pages.services.sections[6].heading
+    Abast i com es confirma
+
+guidanceContent.ca.pages.services.sections[6].paragraphs[0]
+    El despatx treballa segons el dret de Taiwan i atén assumptes de les àrees anteriors. L’abast de cada assumpte es confirma per separat després que una advocada o un advocat revisi el contingut que vostè envia.
+
+guidanceContent.ca.pages.services.sections[6].paragraphs[1]
+    L’estatut de residència, el permís de treball i qüestions similars es valoren a partir de l’expedient i de la situació de cada persona, no a partir de la nacionalitat. Si alguna part del seu assumpte toca aquests temes, indiqui-ho en contactar-nos. Aquesta pàgina no promet un resultat ni un termini de resposta.
+
+guidanceContent.ca.pages.about.eyebrow
+    EL DESPATX
+
+guidanceContent.ca.pages.about.title
+    Sobre Hovering International Law Firm
+
+guidanceContent.ca.pages.about.description
+    Informació bàsica sobre aquest despatx d’advocats a Taiwan, les seves oficines i el treball amb parts estrangeres.
+
+guidanceContent.ca.pages.about.intro
+    Hovering International Law Firm és un despatx d’advocats a Taiwan. Les advocades i els advocats treballen des de l’assessorament a empreses fins a l’actuació davant els tribunals. Aquesta part explica com es va fundar el despatx, les seves seus i el treball amb parts estrangeres.
+
+guidanceContent.ca.pages.about.sections[0].heading
+    Fundació i estructura
+
+guidanceContent.ca.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) es va fundar el 2016 per advocats titulats per la National Taiwan University (國立臺灣大學). El nom xinès 昊鼎 uneix el caràcter 昊 («cel ampli») i el caràcter 鼎 («base sòlida»), i expressa l’orientació del despatx des del seu origen.
+
+guidanceContent.ca.pages.about.sections[0].paragraphs[1]
+    Tenim oficines a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). L’oficina de Kaohsiung se centra en el govern corporatiu i atén conflictes civils, penals i administratius. L’oficina de Taichung atén construcció, propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’oficina de Pingtung es va obrir el 2017 per atendre la demanda local.
+
+guidanceContent.ca.pages.about.sections[0].paragraphs[2]
+    A més del treball d’advocacia, el 2020 es va crear Hovering Accounting Office, que ofereix comptabilitat i planificació fiscal a empresaris i a particulars amb patrimoni elevat.
+
+guidanceContent.ca.pages.about.sections[1].heading
+    Treball amb parts estrangeres
+
+guidanceContent.ca.pages.about.sections[1].paragraphs[0]
+    El treball transfronterer cobreix constitució de societats, visats, registre de marques i patents, avaluació de riscos jurídics i assessorament fiscal empresarial. L’oficina de Taichung atén en particular construcció, propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’advocada Wei Tseng (曾雋崴) acompanya clients de Corea, del Japó i altres clients internacionals en les àrees anteriors.
+
+guidanceContent.ca.pages.about.sections[1].paragraphs[1]
+    Si podem o no atendre un assumpte depèn del seu contingut i de l’idioma de la comunicació. Si el seu assumpte entra en les àrees anteriors i es pot parlar en un dels quatre idiomes de consulta, pot enviar un resum perquè una advocada o un advocat el revisi.
+
+guidanceContent.ca.pages.about.sections[2].heading
+    Quan ens contacta
+
+guidanceContent.ca.pages.about.sections[2].paragraphs[0]
+    Després de rebre el seu resum, una advocada o un advocat revisa el contingut i parla després de l’abast possible, dels documents que encara calen i dels passos següents. Si l’assumpte planteja qüestions comptables o fiscals, el despatx pot treballar de forma integrada amb l’àrea de comptabilitat.
+
+guidanceContent.ca.pages.about.sections[2].paragraphs[1]
+    El resultat de cada assumpte depèn dels fets i dels documents existents, de manera que no prometem un resultat. Si necessita una resposta concreta per a la seva situació, aquest expedient s’ha de parlar directament amb una advocada o un advocat en un dels quatre idiomes de consulta.
+
+guidanceContent.ca.pages.lawyers.eyebrow
+    ADVOCATS
+
+guidanceContent.ca.pages.lawyers.title
+    Equip internacional de Hovering
+
+guidanceContent.ca.pages.lawyers.description
+    Perfils dels advocats, de la direcció d’operacions i de l’auditor associat de Hovering.
+
+guidanceContent.ca.pages.lawyers.intro
+    
+
+guidanceContent.ca.pages.pricing.eyebrow
+    HONORARIS
+
+guidanceContent.ca.pages.pricing.title
+    Com es fixen l’abast del treball i els honoraris
+
+guidanceContent.ca.pages.pricing.description
+    Explicació de l’ordre: primer l’abast, després la confirmació d’honoraris, i per què aquesta pàgina no publica una llista de tarifes.
+
+guidanceContent.ca.pages.pricing.intro
+    Aquesta pàgina explica com es fixen els honoraris, no la quantia. La quantia depèn de l’abast de cada assumpte i només té sentit quan aquest abast és clar.
+
+guidanceContent.ca.pages.pricing.sections[0].heading
+    El primer pas és fixar l’abast del treball
+
+guidanceContent.ca.pages.pricing.sections[0].paragraphs[0]
+    Assumptes del mateix tipus poden exigir un treball molt distint, segons el nombre de parts, els documents disponibles, els terminis que calgui complir i si un procediment ja ha començat. Per això el primer pas és sempre aclarir què entra en el treball i què no.
+
+guidanceContent.ca.pages.pricing.sections[0].paragraphs[1]
+    El resum que envia a l’inici és la base d’aquest abast. Com més clar descrigui els fets, el que espera i els terminis, més precís podrà ser l’abast.
+
+guidanceContent.ca.pages.pricing.sections[1].heading
+    Els honoraris es confirmen abans de començar el treball
+
+guidanceContent.ca.pages.pricing.sections[1].paragraphs[0]
+    Quan l’abast és clar, la quantia i el mode de càlcul es parlen i es confirmen amb vostè abans de començar. Si l’abast canvia a mig camí, aquest canvi també s’ha de confirmar de nou.
+
+guidanceContent.ca.pages.pricing.sections[1].paragraphs[1]
+    Aquesta pàgina no és una oferta de preu i no genera cap obligació de pagament. Enviar una sol·licitud a través d’aquesta pàgina tampoc no té cost.
+
+guidanceContent.ca.pages.pricing.sections[2].heading
+    La consulta pot ser un servei de pagament
+
+guidanceContent.ca.pages.pricing.sections[2].paragraphs[0]
+    La consulta amb una advocada o un advocat pot ser un servei de pagament. Aquesta pàgina no afirma que la primera consulta sigui gratuïta, i cap part no s’ha de llegir en aquest sentit.
+
+guidanceContent.ca.pages.pricing.sections[2].paragraphs[1]
+    Si la consulta té cost, la quantia i la forma de pagament es comuniquen abans que tingui lloc.
+
+guidanceContent.ca.pages.pricing.sections[3].heading
+    Per què aquesta pàgina no publica tarifes
+
+guidanceContent.ca.pages.pricing.sections[3].paragraphs[0]
+    La quantia depèn de l’assumpte mateix: del treball que calgui fer, del nombre de parts, dels documents, dels terminis i de si un procediment ja ha començat. Un import indicat d’entrada no reflectiria el cost del seu expedient; per això, en lloc d’una llista de tarifes, fixem primer l’abast del seu assumpte i li comuniquem després els honoraris perquè els valori abans de començar.
+
+guidanceContent.ca.pages.pricing.sections[3].paragraphs[1]
+    A més dels honoraris de l’advocada o l’advocat, un assumpte pot generar taxes que s’hagin de pagar al tribunal, a una autoritat o a un tercer. Aquestes taxes són distintes dels honoraris i depenen del procediment que se segueixi.
+
+guidanceContent.ca.pages.contact.eyebrow
+    CONTACTE
+
+guidanceContent.ca.pages.contact.title
+    Com contactar amb el despatx
+
+guidanceContent.ca.pages.contact.description
+    Idioma de la pàgina, idiomes de consulta, què passa si no pot fer servir aquests quatre idiomes, i el que aquesta pàgina no garanteix.
+
+guidanceContent.ca.pages.contact.intro
+    Abans d’escriure’ns, tingui en compte aquests tres punts per separat. Sovint es confonen, però no volen dir el mateix.
+
+guidanceContent.ca.pages.contact.sections[0].heading
+    Tres coses que convé distingir
+
+guidanceContent.ca.pages.contact.sections[0].paragraphs[0]
+    L’idioma de visualització de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses distintes.
+
+guidanceContent.ca.pages.contact.sections[0].items[0]
+    Idioma de la pàgina: aquesta orientació està escrita en català.
+
+guidanceContent.ca.pages.contact.sections[0].items[1]
+    Idioma de consulta: la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà.
+
+guidanceContent.ca.pages.contact.sections[0].items[2]
+    Idioma del seu text: pot escriure el resum en el seu propi idioma, i el text original es guarda tal qual.
+
+guidanceContent.ca.pages.contact.sections[1].heading
+    Si no pot fer servir cap dels quatre idiomes de consulta
+
+guidanceContent.ca.pages.contact.sections[1].paragraphs[0]
+    Al formulari de contacte pot triar «Cal confirmar la forma de comunicar-se». Respondrem per comprovar si existeix una via possible de comunicació; no es garanteix el servei en un altre idioma i no es promet un termini de resposta.
+
+guidanceContent.ca.pages.contact.sections[1].paragraphs[1]
+    Això és només un pas de comprovació, no és una promesa. No prometem intèrpret, no prometem servei en català ni en un altre idioma fora dels quatre indicats, i no prometem que puguem acceptar tots els assumptes.
+
+guidanceContent.ca.pages.contact.sections[2].heading
+    Què convé escriure en el primer missatge
+
+guidanceContent.ca.pages.contact.sections[2].paragraphs[0]
+    Indiqui què va passar, quina ajuda necessita, quina relació té l’assumpte amb Taiwan i el termini si el coneix. Si ja ha rebut un escrit d’un tribunal o d’una autoritat, indiqui la data d’aquest escrit.
+
+guidanceContent.ca.pages.contact.sections[2].paragraphs[1]
+    En aquesta primera fase encara no cal enviar número de passaport, número d’identitat, dades bancàries, historial mèdic ni l’expedient complet de proves. Esperi les indicacions de l’advocada o l’advocat i enviï aleshores el material sensible per un mitjà segur.
+
+guidanceContent.ca.pages.contact.sections[3].heading
+    El que aquesta pàgina no garanteix
+
+guidanceContent.ca.pages.contact.sections[3].paragraphs[0]
+    No prometem un termini de resposta, no confirmem una cita a través d’aquesta pàgina, no prometem una advocada o un advocat concret i no posem intèrpret. La traducció escrita és una altra cosa: el missatge que envia no es tradueix de forma automàtica.
+
+guidanceContent.ca.pages.contact.sections[3].paragraphs[1]
+    Quan envia una sol·licitud, el contingut es guarda i espera revisió. Si al cap d’un temps no rep resposta, pot tornar a escriure a l’adreça de correu que figura a la pàgina de contacte.
+
+guidanceContent.ca.pages.faq.eyebrow
+    PREGUNTES
+
+guidanceContent.ca.pages.faq.title
+    Preguntes freqüents
+
+guidanceContent.ca.pages.faq.description
+    Explicació de l’abast, de la preparació, dels idiomes, dels honoraris i del significat d’enviar una sol·licitud.
+
+guidanceContent.ca.pages.faq.intro
+    Les respostes següents són informació general. La resposta per al seu propi cas només pot donar-se després que una advocada o un advocat revisi l’expedient.
+
+guidanceContent.ca.pages.faq.sections[0].heading
+    Com usar aquesta part
+
+guidanceContent.ca.pages.faq.sections[0].paragraphs[0]
+    Si no troba una resposta per a la seva situació, sol ser senyal que la resposta depèn de fets particulars. En aquest cas, escrigui aquests fets en el resum en contactar-nos, en lloc de deduir-los pel seu compte d’aquesta pàgina.
+
+guidanceContent.ca.pages.faq.faqs[0].question
+    Quin tipus d’assumptes atén aquest despatx?
+
+guidanceContent.ca.pages.faq.faqs[0].answer
+    Atenem sis àrees de pràctica: inversió i constitució de societats a Taiwan, litigis civils i danys, matrimoni, família i successions, conflictes laborals, assumptes penals i propietat intel·lectual. Si un assumpte s’accepta o no es decideix després de revisar-ne el contingut.
+
+guidanceContent.ca.pages.faq.faqs[1].question
+    Què he de preparar abans de contactar amb el despatx?
+
+guidanceContent.ca.pages.faq.faqs[1].answer
+    Prepari un resum breu del que va passar, del que espera, del vincle amb Taiwan i del termini si n’hi ha. Si ja hi ha un escrit d’un tribunal o d’una autoritat, indiqui la data. En aquesta fase encara no cal enviar documents d’identitat ni totes les proves.
+
+guidanceContent.ca.pages.faq.faqs[2].question
+    Puc consultar en català?
+
+guidanceContent.ca.pages.faq.faqs[2].answer
+    No. Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Tampoc no prometem intèrpret. La traducció escrita és una altra cosa: el text original que vostè escriu es guarda tal qual i no es tradueix de forma automàtica.
+
+guidanceContent.ca.pages.faq.faqs[3].question
+    Què passa si no puc fer servir cap d’aquests quatre idiomes?
+
+guidanceContent.ca.pages.faq.faqs[3].answer
+    Triï «Cal confirmar la forma de comunicar-se» en enviar la sol·licitud. Respondrem per comprovar una forma de comunicar-nos, però no es garanteix el servei en un altre idioma. És un pas de comprovació, no una promesa que puguem atendre en un altre idioma.
+
+guidanceContent.ca.pages.faq.faqs[4].question
+    Com es tracta el text que escric en català?
+
+guidanceContent.ca.pages.faq.faqs[4].answer
+    El text original que vostè escriu es guarda tal qual i no es tradueix de forma automàtica. Si cal, l’idioma de la comunicació posterior es confirma amb vostè.
+
+guidanceContent.ca.pages.faq.faqs[5].question
+    Si ja he enviat la sol·licitud, la consulta ja ha tingut lloc?
+
+guidanceContent.ca.pages.faq.faqs[5].answer
+    No. Una sol·licitud enviada espera la revisió d’una advocada o un advocat. No és assessorament jurídic, no és una cita confirmada, i l’enviament no crea per si sol una relació entre advocada o advocat i client.
+
+guidanceContent.ca.pages.faq.faqs[6].question
+    Com es calculen els honoraris?
+
+guidanceContent.ca.pages.faq.faqs[6].answer
+    Primer es fixa l’abast del treball i després se’n confirmen amb vostè la quantia i el mode de càlcul abans de començar. Aquesta pàgina no publica xifres i no afirma que la primera consulta sigui gratuïta.
+
+guidanceContent.ca.pages.faq.faqs[7].question
+    Què faig si el meu assumpte és urgent?
+
+guidanceContent.ca.pages.faq.faqs[7].answer
+    Indiqui el termini o la data d’un escrit oficial a l’inici del resum perquè l’advocada o l’advocat vegi aquestes dates en revisar. Aquesta pàgina no té un canal d’emergència i no garanteix un termini de resposta; si el seu assumpte no pot esperar, convé cercar alhora altres vies allà on vostè es trobi.
+
+guidanceContent.ca.pages.privacy.eyebrow
+    PRIVADESA
+
+guidanceContent.ca.pages.privacy.title
+    Dades que es recullen a través del formulari de contacte
+
+guidanceContent.ca.pages.privacy.description
+    Què recull el formulari d’aquesta part en català, com es tracta el text original i com contactar-nos sobre les seves dades.
+
+guidanceContent.ca.pages.privacy.intro
+    Aquesta part es refereix només al formulari de contacte d’aquestes pàgines d’orientació. Descriu el tractament de les dades, no una garantia tècnica.
+
+guidanceContent.ca.pages.privacy.sections[0].heading
+    Dades que es recullen
+
+guidanceContent.ca.pages.privacy.sections[0].paragraphs[0]
+    Quan envia una sol·licitud a través del formulari d’aquesta part, es registren els elements següents:
+
+guidanceContent.ca.pages.privacy.sections[0].items[0]
+    El nom que indica
+
+guidanceContent.ca.pages.privacy.sections[0].items[1]
+    L’adreça de correu per respondre
+
+guidanceContent.ca.pages.privacy.sections[0].items[2]
+    L’idioma de visualització de la pàgina en el moment de l’enviament
+
+guidanceContent.ca.pages.privacy.sections[0].items[3]
+    L’idioma en què va escriure
+
+guidanceContent.ca.pages.privacy.sections[0].items[4]
+    L’idioma de consulta que desitja
+
+guidanceContent.ca.pages.privacy.sections[0].items[5]
+    El text original que va escriure
+
+guidanceContent.ca.pages.privacy.sections[0].items[6]
+    El seu consentiment per enviar la sol·licitud
+
+guidanceContent.ca.pages.privacy.sections[0].items[7]
+    Un número de recepció per tornar a localitzar la sol·licitud
+
+guidanceContent.ca.pages.privacy.sections[1].heading
+    El text original es guarda tal qual
+
+guidanceContent.ca.pages.privacy.sections[1].paragraphs[0]
+    El seu escrit es guarda exactament com el va redactar i no es tradueix de forma automàtica. Si cal una traducció per tramitar l’assumpte, se’n parla amb vostè per separat.
+
+guidanceContent.ca.pages.privacy.sections[1].paragraphs[1]
+    Com que el text original es guarda, no escrigui en aquesta primera fase dades que encara no calen, com el número de passaport, el número d’identitat o dades d’un compte bancari.
+
+guidanceContent.ca.pages.privacy.sections[2].heading
+    On es guarda i qui pot veure-ho
+
+guidanceContent.ca.pages.privacy.sections[2].paragraphs[0]
+    El contingut del seu enviament es guarda en un lloc que no és d’accés públic, i només les persones autoritzades del despatx hi poden accedir per tramitar aquesta sol·licitud.
+
+guidanceContent.ca.pages.privacy.sections[2].paragraphs[1]
+    Aquesta pàgina no ofereix una garantia absoluta de seguretat. Cap via d’enviament ni d’emmagatzematge no és del tot segura, de manera que el material sensible convé enviar-lo només segons les indicacions concretes de l’advocada o l’advocat.
+
+guidanceContent.ca.pages.privacy.sections[3].heading
+    Finalitat de l’ús
+
+guidanceContent.ca.pages.privacy.sections[3].paragraphs[0]
+    Les dades que envia s’usen per revisar la sol·licitud, tornar a contactar-lo, confirmar la forma de comunicar-se i tramitar l’assumpte si el treball arriba a començar.
+
+guidanceContent.ca.pages.privacy.sections[3].paragraphs[1]
+    Aquestes dades no s’usen per a màrqueting sense un consentiment seu donat per separat per a aquesta finalitat.
+
+guidanceContent.ca.pages.privacy.sections[4].heading
+    Avís i número de recepció
+
+guidanceContent.ca.pages.privacy.sections[4].paragraphs[0]
+    Quan una sol·licitud s’envia amb èxit, el sistema avisa el despatx. Si aquest avís encara no està confirmat, el que vostè va escriure continua guardat i no es perd.
+
+guidanceContent.ca.pages.privacy.sections[4].paragraphs[1]
+    El número de recepció serveix per tornar a trobar la seva sol·licitud en els nostres registres. Es mostra després de guardar la sol·licitud, i pot esmentar-lo si torna a contactar-nos.
+
+guidanceContent.ca.pages.privacy.sections[5].heading
+    Els seus drets i com contactar-nos
+
+guidanceContent.ca.pages.privacy.sections[5].paragraphs[0]
+    Pot demanar accés, rectificació o supressió de les seves dades, o retirar el consentiment, a través de l’adreça de correu que figura a la pàgina de contacte. Si existeix una obligació de conservació segons les normes aplicables o per un assumpte en curs, n’explicarem el motiu de la limitació.
+
+guidanceContent.ca.pages.privacy.sections[5].paragraphs[1]
+    Aquesta pàgina no indica un termini fix de conservació, perquè la durada real depèn de si l’assumpte continua i de les obligacions de conservació associades. Si desitja que se suprimeixin abans, indiqui-ho en contactar-nos.
+
+guidanceContent.ca.pages.privacy.sections[6].heading
+    Lloc d’emmagatzematge i prestadors
+
+guidanceContent.ca.pages.privacy.sections[6].paragraphs[0]
+    Aquest lloc s’allotja a Vercel, i el seu enviament es guarda en un emmagatzematge d’objectes no públic d’aquest servei. El correu s’envia a través del servei de correu que utilitza el despatx.
+
+guidanceContent.ca.pages.privacy.sections[6].paragraphs[1]
+    Els servidors d’alguns prestadors poden ser fora de Taiwan, de manera que les seves dades poden emmagatzemar-s’hi i tractar-s’hi. Un cop acomplerta la finalitat de l’emmagatzematge, les dades se suprimeixen sense demora; les dades que s’hagin de conservar segons les normes aplicables es conserven durant aquest termini. Les sol·licituds relatives a dades personals es reben a wei@hoveringlaw.com.tw.
+
+guidanceContent.ca.pages.disclaimer.eyebrow
+    AVÍS LEGAL
+
+guidanceContent.ca.pages.disclaimer.title
+    Abast i límits de la informació d’aquesta pàgina
+
+guidanceContent.ca.pages.disclaimer.description
+    El caràcter general de la informació, l’àmbit jurídic i les condicions perquè existeixi una relació entre advocada o advocat i client.
+
+guidanceContent.ca.pages.disclaimer.intro
+    Aquesta part aclareix què poden i què no poden fer per vostè aquestes pàgines d’orientació en català.
+
+guidanceContent.ca.pages.disclaimer.sections[0].heading
+    Només informació general
+
+guidanceContent.ca.pages.disclaimer.sections[0].paragraphs[0]
+    El contingut d’aquestes pàgines està escrit com a informació general. No és assessorament jurídic per al seu cas i no substitueix la revisió del seu propi expedient.
+
+guidanceContent.ca.pages.disclaimer.sections[0].paragraphs[1]
+    El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que dues situacions que semblen similars poden acabar de forma distinta.
+
+guidanceContent.ca.pages.disclaimer.sections[1].heading
+    Àmbit jurídic
+
+guidanceContent.ca.pages.disclaimer.sections[1].paragraphs[0]
+    El despatx exerceix segons el dret de Taiwan, i aquesta pàgina només parla del treball en aquest marc.
+
+guidanceContent.ca.pages.disclaimer.sections[1].paragraphs[1]
+    El contingut no és assessorament segons el dret de cap jurisdicció distinta de Taiwan, inclòs el dret del lloc on vostè resideix. Si alguna part del seu assumpte es regeix per una altra jurisdicció, confirmarem amb vostè quin professional qualificat cal per a aquesta part.
+
+guidanceContent.ca.pages.disclaimer.sections[2].heading
+    La relació entre advocada o advocat i client no neix per si sola
+
+guidanceContent.ca.pages.disclaimer.sections[2].paragraphs[0]
+    Llegir aquesta pàgina, enviar el formulari o enviar un correu no crea per si sol una relació entre advocada o advocat i client.
+
+guidanceContent.ca.pages.disclaimer.sections[2].paragraphs[1]
+    Aquesta relació només neix després de revisar l’assumpte i que ambdues parts confirmin l’acceptació del treball.
+
+guidanceContent.ca.pages.disclaimer.sections[3].heading
+    No hi ha garantia de resultat
+
+guidanceContent.ca.pages.disclaimer.sections[3].paragraphs[0]
+    Cap part d’aquesta pàgina no és una promesa sobre el resultat d’un assumpte, sobre la concessió d’una sol·licitud o sobre l’estatut de residència i de treball.
+
+guidanceContent.ca.pages.disclaimer.sections[3].paragraphs[1]
+    Els enllaços externs s’ofereixen per a la seva comoditat; no en garantim l’exactitud ni l’actualitat del contingut publicat per tercers.
+
+guidanceContent.ca.pages.columns.eyebrow
+    ARTICLES
+
+guidanceContent.ca.pages.columns.title
+    Articles sobre el dret de Taiwan
+
+guidanceContent.ca.pages.columns.description
+    Articles en català que expliquen qüestions freqüents del dret de Taiwan. El contingut és informació general en el moment de la publicació, no assessorament jurídic per al seu cas.
+
+guidanceContent.ca.pages.columns.intro
+    El despatx publica articles que expliquen qüestions freqüents del dret de Taiwan. Els articles disponibles en català figuren en aquesta pàgina; a més hi ha quatre enllaços, cadascun obre la llista d’articles d’un idioma original.
+
+guidanceContent.ca.pages.columns.sections[0].heading
+    Quatre llistes segons l’idioma
+
+guidanceContent.ca.pages.columns.sections[0].paragraphs[0]
+    Aquesta part conté quatre enllaços: la llista d’articles en coreà, la llista en xinès, la llista en anglès i la llista en japonès. Cada enllaç indica l’idioma de la seva llista, perquè sàpiga d’entrada en quin idioma s’obrirà el contingut.
+
+guidanceContent.ca.pages.columns.sections[0].paragraphs[1]
+    Aquestes quatre llistes són llistes segons l’idioma original de l’article, no llistes de traduccions. Els articles ja disponibles en català figuren per separat en aquesta mateixa pàgina.
+
+guidanceContent.ca.pages.columns.sections[1].heading
+    On porten els enllaços
+
+guidanceContent.ca.pages.columns.sections[1].paragraphs[0]
+    En triar un dels quatre enllaços s’obre la llista d’articles d’aquest idioma. En aquesta llista vostè tria el text que vol llegir, i tot el contingut apareix en l’idioma original de l’article.
+
+guidanceContent.ca.pages.columns.sections[1].paragraphs[1]
+    Aquesta pàgina no resumeix el contingut dels articles i no garanteix que un tema existeixi en els quatre idiomes. Cada llista només inclou els textos publicats en aquella llengua.
+
+guidanceContent.ca.pages.columns.sections[2].heading
+    Fins on el pot orientar un article
+
+guidanceContent.ca.pages.columns.sections[2].paragraphs[0]
+    Els articles es van escriure com a informació general en el moment de la publicació. Les normes i la seva aplicació poden canviar, i un article no recull totes les circumstàncies del seu cas.
+
+guidanceContent.ca.pages.columns.sections[2].paragraphs[1]
+    Per això, no prengui un article com a base per actuar en un assumpte real. Usi’l per entendre el panorama general i parli després del seu expedient amb una advocada o un advocat; aquesta pàgina no és el pas de consulta.
+
+guidanceTeamCopy.ca.label
+    EL NOSTRE EQUIP
+
+guidanceTeamCopy.ca.title
+    Equip internacional de Hovering
+
+guidanceTeamCopy.ca.description
+    Perfils dels advocats, de la direcció d’operacions i de l’auditor associat de Hovering.
+
+guidanceTeamCopy.ca.representativeTitle
+    Advocada directora
+
+guidanceTeamCopy.ca.teamTitle
+    Advocats i personal
+
+guidanceTeamCopy.ca.partnerTitle
+    Auditor associat
+
+guidanceTeamCopy.ca.introLabel
+    Presentació
+
+guidanceTeamCopy.ca.educationLabel
+    Formació
+
+guidanceTeamCopy.ca.experienceLabel
+    Experiència
+
+guidanceTeamCopy.ca.photoAltPrefix
+    Foto
+
+guidanceTeamCopy.ca.workingLanguagesLabel
+    Idiomes de treball
+
+guidanceTeamCopy.ca.fullProfileLabel
+    Perfil complet (en anglès)
+
+guidanceTeamCopy.ca.keyFactsHeading
+    Advocada Wei Tseng — Dades essencials
+
+guidanceTeamCopy.ca.qualificationLabel
+    Qualificació i despatx
+
+guidanceTeamCopy.ca.qualificationSentence
+    {name} és advocada habilitada per exercir a Taiwan i l’advocada directora de {firm}.
+
+guidanceTeamCopy.ca.practiceLabel
+    Àrees principals
+
+guidanceTeamCopy.ca.consultationLanguagesLabel
+    Idiomes de consulta
+
+guidanceTeamCopy.ca.roles.tseng-junwei
+    Advocada directora a Taiwan
+
+guidanceTeamCopy.ca.roles.chang-rongxuan
+    Advocat a Taiwan
+
+guidanceTeamCopy.ca.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.ca.roles.son-jungmin
+    Direcció d’operacions de Corea
+
+guidanceTeamCopy.ca.roles.huang-shengping
+    Auditor associat
+
+guidanceTeamBios.ca.tseng-junwei.intro[0]
+    El despatx atén assumptes d’empreses i de particulars a Taiwan en anglès, japonès, coreà i xinès.
+
+guidanceTeamBios.ca.tseng-junwei.intro[1]
+    Va representar un estudiant coreà en una reclamació de danys per una lesió en un gimnàs i va obtenir una sentència de primera instància de TWD 1.57M (1,57 milions de dòlars taiwanesos).
+
+guidanceTeamBios.ca.tseng-junwei.education[0]
+    Màster (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.ca.tseng-junwei.education[1]
+    Grau (B.A.) amb doble especialitat en Dret i Finances, National Chengchi University
+
+guidanceTeamBios.ca.tseng-junwei.education[2]
+    Estudianta d’intercanvi a Kobe University i Waseda University
+
+guidanceTeamBios.ca.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.ca.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.ca.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.ca.chang-rongxuan.intro[0]
+    Va treballar abans al Ministry of Education, Legal Affairs Division, centrat en conflictes administratius i civils.
+
+guidanceTeamBios.ca.chang-rongxuan.intro[1]
+    Té experiència en assumptes d’universitats, drets del professorat i reclamacions administratives.
+
+guidanceTeamBios.ca.chang-rongxuan.education[0]
+    Grau en Dret (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.ca.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.ca.chang-rongxuan.experience[1]
+    Advocat, Hovering International Law Firm
+
+guidanceTeamBios.ca.chang-fangyu.intro[0]
+    Paralegal amb anys de treball com a paralegal sènior en diversos despatxos, a càrrec del suport processal, del dret d’empresa i de la inversió estrangera.
+
+guidanceTeamBios.ca.chang-fangyu.intro[1]
+    Dona suport a litigis, constitució de societats, tràmits d’aprovació d’inversió estrangera, sol·licituds de llicència i l’intercanvi entre Corea i Taiwan.
+
+guidanceTeamBios.ca.chang-fangyu.education[0]
+    Grau en Dret (LL.B.), Tunghai University
+
+guidanceTeamBios.ca.chang-fangyu.experience[0]
+    Paralegal sènior, Boyin Law Firm
+
+guidanceTeamBios.ca.chang-fangyu.experience[1]
+    Paralegal sènior, Muyang International Law Firm
+
+guidanceTeamBios.ca.son-jungmin.intro[0]
+    Coordina les cites de consulta i la comunicació per a clients de Corea.
+
+guidanceTeamBios.ca.son-jungmin.intro[1]
+    Dona suport a l’intercanvi entre equips mitjançant sistemes de documentació i fluxos de treball, amb formació en informàtica.
+
+guidanceTeamBios.ca.son-jungmin.education[0]
+    Grau (B.S.) en Informàtica, National Cheng Kung University
+
+guidanceTeamBios.ca.son-jungmin.experience[0]
+    Àrea d’operacions de Corea, Hovering International Law Firm
+
+guidanceTeamBios.ca.huang-shengping.intro[0]
+    Va completar els programes de grau i màster en comptabilitat a National Chengchi University i dirigeix actualment un despatx de comptabilitat.
+
+guidanceTeamBios.ca.huang-shengping.intro[1]
+    Dona suport a l’anàlisi integrada de riscos jurídics, fiscals i financers per a clients empresarials.
+
+guidanceTeamBios.ca.huang-shengping.education[0]
+    Màster (M.A.) en Comptabilitat, National Chengchi University
+
+guidanceTeamBios.ca.huang-shengping.education[1]
+    Grau (B.A.) en Comptabilitat, National Chengchi University
+
+guidanceTeamBios.ca.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.ca.Korean
+    coreà
+
+guidanceLanguageNames.ca.Chinese
+    xinès
+
+guidanceLanguageNames.ca.Japanese
+    japonès
+
+guidancePracticeAreaNames.ca.Taiwan company setup
+    Constitució de societats a Taiwan
+
+guidancePracticeAreaNames.ca.Taiwan investment counsel
+    Assessorament jurídic per invertir a Taiwan
+
+guidancePracticeAreaNames.ca.Civil litigation and damages
+    Litigis civils i danys
+
+guidancePracticeAreaNames.ca.Trademark and patent filings
+    Presentació de marques i patents
+
+guidancePracticeAreaNames.ca.Visa and residency
+    Visat i residència
+
+guidancePracticeAreaNames.ca.Family and labor disputes
+    Conflictes de família i laborals
+
+guidanceOfficeCopy.ca.label
+    OFICINES
+
+guidanceOfficeCopy.ca.title
+    Oficines
+
+guidanceOfficeCopy.ca.description
+    Adreces de les oficines de Hovering International Law Firm a Taiwan.
+
+guidanceOfficeCopy.ca.officeLabel
+    Oficina
+
+guidanceOfficeCopy.ca.mapPreviewLabel
+    Vista prèvia del mapa
+
+guidanceOfficeCopy.ca.koreaOfficeTitle
+    Oficina de Corea
+
+guidanceOfficeCopy.ca.koreaAddressCardLabel
+    Adreça de l’oficina de Corea
+
+guidanceOfficeCopy.ca.koreaMapLinkLabel
+    Veure a Naver Map
+
+guidanceOfficeCopy.ca.reviewCountWord
+    opinions
+
+guidanceOfficeCopy.ca.phoneLabel
+    Telèfon
+
+guidanceOfficeCopy.ca.faxLabel
+    Fax
+
+guidanceOfficeCopy.ca.mapLinkLabel
+    Veure al mapa
+
+guidanceOfficeCopy.ca.photoAlts[0]
+    Sala de recepció de l’oficina de Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.ca.photoAlts[1]
+    Despatx d’advocats a l’oficina de Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.ca.photoAlts[2]
+    Sala de reunions de l’oficina de Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.ca.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.ca.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.ca.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.ca.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.ca.officeLabel
+    Oficines
+
+guidanceFooterCopy.ca.officeQuickLinksLabel
+    Enllaços ràpids a les oficines
+
+guidanceFooterCopy.ca.followLabel
+    Seguiu-nos
+
+guidanceFooterCopy.ca.blogLabel
+    Blog
+
+guidanceFooterCopy.ca.websiteLabel
+    Lloc web oficial
+
+guidanceFooterCopy.ca.sitemapLabel
+    Mapa del lloc
+
+guidanceFooterCopy.ca.copyEmailLabel
+    Copiar l’adreça de correu
+
+guidanceFooterCopy.ca.emailCopiedMessage
+    S’ha copiat l’adreça de correu.
+
+guidanceFooterCopy.ca.officialConsultationEmailLabel
+    Correu oficial per a consultes
+
+internationalInquiryCopy.ca.guidanceNotice
+    Aquesta pàgina està escrita en català com a orientació general, no com a assessorament jurídic per al seu propi cas.
+
+internationalInquiryCopy.ca.consultationNotice
+    La consulta es fa únicament en quatre idiomes: anglès, xinès (中文), japonès i coreà.
+
+internationalInquiryCopy.ca.methodConfirmationNotice
+    Si no pot fer servir cap dels quatre idiomes de consulta, triï «Cal confirmar la forma de comunicar-se». Respondrem per comprovar si existeix una via possible de comunicació; no es garanteix el servei en un altre idioma i no es promet un termini de resposta.
+
+internationalInquiryCopy.ca.preparationNotice
+    Pot escriure el resum del seu assumpte en el seu propi idioma. El text original es guarda tal com l’escriu i no es tradueix de forma automàtica.
+
+internationalInquiryCopy.ca.heading
+    Enviar una sol·licitud de consulta
+
+internationalInquiryCopy.ca.intro
+    Descrigui el seu assumpte de forma breu. Una advocada o un advocat revisa el contingut abans de parlar del pas següent.
+
+internationalInquiryCopy.ca.submitLabel
+    Enviar la sol·licitud
+
+internationalInquiryCopy.ca.submittingLabel
+    S’està enviant…
+
+internationalInquiryCopy.ca.successMessage
+    Hem rebut la seva sol·licitud i espera revisió. Això no vol dir que la consulta hagi tingut lloc ni que s’hagi confirmat una cita.
+
+internationalInquiryCopy.ca.savedNotificationPendingMessage
+    La seva sol·licitud està guardada, però l’avís al despatx encara no està confirmat. El que va escriure no es perd. Si no rep resposta, també pot escriure a l’adreça de correu de la pàgina de contacte.
+
+internationalInquiryCopy.ca.receiptIdLabel
+    Número de recepció
+
+internationalInquiryCopy.ca.failureMessage
+    No s’ha pogut enviar la seva sol·licitud. Torni-ho a provar o escrigui a l’adreça de correu de la pàgina de contacte.
+
+internationalInquiryCopy.ca.originalLanguageLabel
+    Idioma en què escriu
+
+internationalInquiryCopy.ca.originalLanguagePlaceholder
+    Per exemple: català, anglès, xinès o un altre idioma
+
+internationalInquiryCopy.ca.preferredConsultationLanguageLabel
+    Idioma que prefereix per a la consulta
+
+internationalInquiryCopy.ca.originalTextLabel
+    Resum de l’assumpte (en el seu idioma)
+
+internationalInquiryCopy.ca.originalTextPlaceholder
+    Indiqui què va passar, quina ajuda necessita i el termini si n’hi ha. No escrigui número de passaport, número d’identitat ni dades d’un compte bancari.
+
+internationalInquiryCopy.ca.nameLabel
+    Nom
+
+internationalInquiryCopy.ca.emailLabel
+    Correu electrònic
+
+internationalInquiryCopy.ca.consentLabel
+    He llegit la pàgina de privadesa i accepto enviar aquesta sol·licitud.
+
+internationalInquiryCopy.ca.privacyLinkLabel
+    Privadesa
+
+internationalInquiryCopy.ca.requiredMessage
+    Aquest camp és obligatori.
+
+internationalInquiryCopy.ca.invalidEmailMessage
+    Introdueixi una adreça de correu vàlida.
+
+internationalInquiryCopy.ca.tooLongMessage
+    El text és massa llarg. Escurci’l i torni a enviar-lo.
+
+internationalInquiryCopy.ca.sourceLanguageNotice
+    Aquest article només està publicat en {language}; l’enllaç obre la pàgina original.
+
+internationalInquiryCopy.ca.unavailableTranslationNotice
+    Aquesta part encara no està disponible en l’idioma d’aquesta pàgina. Un enllaç en l’idioma original obre el text original.
+
+internationalInquiryCopy.ca.unavailableLanguageNotice
+    Aquesta pàgina no s’ofereix en {language}.
+
+internationalInquiryCopy.ca.languageOptions.en
+    Anglès (English)
+
+internationalInquiryCopy.ca.languageOptions.zh-hant
+    Xinès (中文)
+
+internationalInquiryCopy.ca.languageOptions.ja
+    Japonès (日本語)
+
+internationalInquiryCopy.ca.languageOptions.ko
+    Coreà (한국어)
+
+internationalInquiryCopy.ca.languageOptions.needs-method-confirmation
+    No puc fer servir cap dels quatre idiomes — cal confirmar la forma de comunicar-se
+
+guidanceAnswers.ca.services.answer
+    El despatx atén sis àrees de pràctica segons el dret de Taiwan: inversió i constitució de societats, litigis civils i danys, matrimoni, família i successions, conflictes laborals, assumptes penals i propietat intel·lectual. L’abast de cada assumpte es confirma per separat després que una advocada o un advocat revisi el contingut enviat. La consulta es fa únicament en anglès, xinès, japonès i coreà.
+
+guidanceAnswers.ca.services.sources[0]
+    /ca/faq
+
+guidanceAnswers.ca.services.sources[1]
+    /ca/contact
+
+guidanceAnswers.ca.about.answer
+    Hovering International Law Firm és un despatx d’advocats de Taiwan, fundat el 2016 per titulats de National Taiwan University (國立臺灣大學), amb oficines a Taipei, Kaohsiung, Taichung i Pingtung. Des del 2020 també hi ha una àrea de comptabilitat; l’oficina de Taichung atén assumptes relacionats amb Corea i el Japó. El despatx no promet un resultat. La consulta es fa únicament en anglès, xinès, japonès i coreà.
+
+guidanceAnswers.ca.about.sources[0]
+    /ca/lawyers
+
+guidanceAnswers.ca.about.sources[1]
+    /ca/services
+
+guidanceAnswers.ca.lawyers.answer
+    Aquesta pàgina mostra els perfils dels advocats de Hovering, de la direcció d’operacions i de l’auditor associat. L’advocada Wei Tseng (曾雋崴) està habilitada per exercir a Taiwan i és l’advocada directora del despatx; treballa amb clients de Corea, del Japó i amb altres clients internacionals. La consulta es fa únicament en anglès, xinès, japonès i coreà.
+
+guidanceAnswers.ca.lawyers.sources[0]
+    /ca/about
+
+guidanceAnswers.ca.lawyers.sources[1]
+    /ca/contact
+
+guidanceAnswers.ca.pricing.answer
+    Aquesta pàgina no publica una llista de tarifes. Primer es confirma l’abast del treball a partir del seu resum i després se’n confirmen amb vostè la quantia i el mode de càlcul, abans de començar. La consulta amb una advocada o un advocat pot ser un servei de pagament; a més dels honoraris poden sorgir taxes judicials o administratives. La consulta es fa únicament en anglès, xinès, japonès i coreà.
+
+guidanceAnswers.ca.pricing.sources[0]
+    /ca/contact
+
+guidanceAnswers.ca.pricing.sources[1]
+    /ca/faq
+
+guidanceAnswers.ca.contact.answer
+    Enviï un resum pel formulari de contacte: què va passar, quina ajuda necessita, quin vincle té l’assumpte amb Taiwan i el termini, si el coneix. En la fase inicial encara no cal enviar documents d’identitat ni tot el material de prova. El despatx no promet un termini de resposta i no confirma una cita a través d’aquesta pàgina. La consulta es fa únicament en anglès, xinès, japonès i coreà.
+
+guidanceAnswers.ca.contact.sources[0]
+    /ca/faq
+
+guidanceAnswers.ca.contact.sources[1]
+    /ca/pricing
+
+guidanceAnswers.ca.faq.answer
+    Aquesta part respon preguntes freqüents com a informació general: les sis àrees del despatx, la preparació abans del contacte, la confirmació d’honoraris i el significat d’un missatge enviat. Un missatge enviat espera revisió, no és assessorament jurídic ni una cita confirmada, i per si sol no crea una relació entre advocada o advocat i client. La consulta es fa únicament en quatre idiomes: anglès, xinès, japonès i coreà.
+
+guidanceAnswers.ca.faq.sources[0]
+    /ca/services
+
+guidanceAnswers.ca.faq.sources[1]
+    /ca/contact
+
+GUIDANCE_LLMS_NOTICES.ca.consultationNotice
+    Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà.
+
+GUIDANCE_LLMS_NOTICES.ca.discoveryNotice
+    El fitxer llms.txt és només un mapa per localitzar pàgines públiques; no promet posicionament en cercadors, aval, recomanació per part d’una intel·ligència artificial ni visibilitat garantida.
+
+GUIDANCE_LLMS_NOTICES.ca.confidentialNotice
+    Com que el text original es guarda, no escrigui en aquesta primera fase dades que encara no calen, com el número de passaport, el número d’identitat o dades d’un compte bancari.

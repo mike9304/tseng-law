@@ -1,0 +1,1096 @@
+# sr guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.sr.languageName
+    Srpski
+
+guidanceContent.sr.nav.home
+    Početna
+
+guidanceContent.sr.nav.services
+    Usluge
+
+guidanceContent.sr.nav.about
+    Kancelarija
+
+guidanceContent.sr.nav.lawyers
+    Advokati
+
+guidanceContent.sr.nav.pricing
+    Troškovi
+
+guidanceContent.sr.nav.contact
+    Kontakt
+
+guidanceContent.sr.nav.faq
+    Pitanja
+
+guidanceContent.sr.nav.privacy
+    Privatnost
+
+guidanceContent.sr.nav.disclaimer
+    Odricanje
+
+guidanceContent.sr.nav.columns
+    Članci
+
+guidanceContent.sr.contactCta
+    Pošaljite zahtev za ocenu
+
+guidanceContent.sr.footerNotice
+    Ova srpska stranica sadrži samo opšte informacije o radu kancelarije po tajvanskom pravu. Nije pravni savet za pojedinačan slučaj, a samo slanje poruke ne zasniva odnos između advokatkinje ili advokata i klijenta.
+
+guidanceContent.sr.skipLink
+    Preskočite navigaciju i pređite na sadržaj
+
+guidanceContent.sr.menuLabel
+    Pregled stranica
+
+guidanceContent.sr.languageLabel
+    Jezik prikaza
+
+guidanceContent.sr.mega.services.description
+    Kancelarija vodi glavne oblasti tajvanskog prava.
+
+guidanceContent.sr.mega.services.viewAllLabel
+    Prikaži sve
+
+guidanceContent.sr.mega.columns.description
+    Članci o čestim pitanjima tajvanskog prava.
+
+guidanceContent.sr.mega.columns.viewAllLabel
+    Prikaži sve
+
+guidanceContent.sr.mega.lawyers.description
+    Predstavljanje advokatkinja i advokata i načina kontakta.
+
+guidanceContent.sr.mega.lawyers.viewAllLabel
+    Prikaži sve
+
+guidanceContent.sr.mega.pricing.description
+    Ova stranica objašnjava obim rada i način utvrđivanja troškova.
+
+guidanceContent.sr.mega.pricing.viewAllLabel
+    Prikaži sve
+
+guidanceContent.sr.mega.faq.description
+    Česta pitanja o radu kancelarije na Tajvanu.
+
+guidanceContent.sr.mega.faq.viewAllLabel
+    Prikaži sve
+
+guidanceContent.sr.notFoundTitle
+    Stranica nije pronađena
+
+guidanceContent.sr.notFoundText
+    Tražena stranica ne postoji ili je premeštena. Možete se vratiti na srpsku početnu stranicu i pogledati dostupne informacije.
+
+guidanceContent.sr.backHomeLabel
+    Na početnu stranicu
+
+guidanceContent.sr.readSourceLabel
+    Otvorite spisak članaka na izvornom jeziku
+
+guidanceContent.sr.home.heroScrollLabel
+    Pomerite nadole
+
+guidanceContent.sr.home.heroColumnsCtaLabel
+    Pogledajte članke
+
+guidanceContent.sr.home.servicesDetailLabel
+    Pogledajte detalje
+
+guidanceContent.sr.home.servicesAssistanceBefore
+    Ako nije jasno u koju oblast spada Vaša stvar, stranica 
+
+guidanceContent.sr.home.servicesAssistanceLinkLabel
+    Kontakt
+
+guidanceContent.sr.home.servicesAssistanceAfter
+     objašnjava kako sastaviti sažetak koji advokatkinja ili advokat pregleda.
+
+guidanceContent.sr.home.columnsViewAllLabel
+    Pogledajte sve članke
+
+guidanceContent.sr.home.columnsReadMoreLabel
+    Čitajte dalje
+
+guidanceContent.sr.home.columnsReviewLabel
+    Pregledala advokatkinja Wei Tseng
+
+guidanceContent.sr.home.columnsOriginalLanguageBadge
+    Izvorni jezik
+
+guidanceContent.sr.home.columnsOriginalLanguageNote
+    Sledeći članci još nisu dostupni na srpskom. Spisak ostaje na izvornom jeziku i otvara odgovarajuću jezičku stranicu; sadržaj se automatski ne prevodi.
+
+guidanceContent.sr.home.imageBandAlt
+    Tradicionalno tajvansko dvorište sanheyuan (三合院) i savremeni paviljon pri dnevnom svetlu
+
+guidanceContent.sr.home.videoPauseLabel
+    Pauzirajte video
+
+guidanceContent.sr.home.videoPlayLabel
+    Pustite video
+
+guidanceContent.sr.home.videoReplayLabel
+    Pustite video ponovo
+
+guidanceContent.sr.pages.home.eyebrow
+    INFORMACIJE
+
+guidanceContent.sr.pages.home.title
+    Pravne usluge na Tajvanu — informacije na srpskom
+
+guidanceContent.sr.pages.home.description
+    Opšte objašnjenje na srpskom o obimu rada Hovering International Law Firm na Tajvanu, o jezicima konsultacije i o prvom kontaktu.
+
+guidanceContent.sr.pages.home.intro
+    Hovering International Law Firm zastupa klijente iz inostranstva, uključujući osobe sa vezom sa Tajvanom, u stvarima tajvanskog prava: investicije i osnivanje društava, građanske sporove, brak, porodicu i nasleđe, radno pravo, krivične stvari i intelektualnu svojinu. Ovaj srpski deo pomaže Vam da prepoznate koji rad spada u naš obim, šta da pripremite i kako da nas kontaktirate. Reč je o opštim informacijama, a ne o pravnom savetu za Vaš slučaj.
+
+guidanceContent.sr.pages.home.sections[0].heading
+    Čime se bavimo
+
+guidanceContent.sr.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm je advokatska kancelarija sa sedištem na Tajvanu. Radi po tajvanskom pravu i ima kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savetujemo preduzeća, vodimo sudske postupke i pratimo klijente iz inostranstva kroz korake koje na Tajvanu treba preduzeti.
+
+guidanceContent.sr.pages.home.sections[0].paragraphs[1]
+    Sav sadržaj ovde je opšti. Ishod stvari zavisi od činjenica, od primenjivih propisa i od trenutka. Ove informacije ne zamenjuju razgovor sa advokatkinjom ili advokatom o Vašim dokumentima.
+
+guidanceContent.sr.pages.home.sections[1].heading
+    Jezik stranice i jezik konsultacije nisu isto
+
+guidanceContent.sr.pages.home.sections[1].paragraphs[0]
+    Ova stranica je napisana na srpskom, ali konsultacija sa advokatkinjom ili advokatom odvija se samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom. Čitanje informacija na srpskom ne znači da će razgovor sa advokatkinjom ili advokatom biti na srpskom.
+
+guidanceContent.sr.pages.home.sections[1].paragraphs[1]
+    Ne obećavamo tumača, rok za odgovor niti sastanak preko ove stranice. Ako ne možete da koristite nijedan od četiri jezika konsultacije, stranica „Kontakt“ objašnjava kako ocenjujemo način komunikacije.
+
+guidanceContent.sr.pages.home.sections[2].heading
+    Oblasti rada
+
+guidanceContent.sr.pages.home.sections[2].paragraphs[0]
+    Obim rada obuhvata sledećih šest oblasti. Stranica „Usluge“ svaku opisuje tačnije i navodi šta se ne obećava.
+
+guidanceContent.sr.pages.home.sections[2].items[0]
+    Investicije i osnivanje društava na Tajvanu
+
+guidanceContent.sr.pages.home.sections[2].items[1]
+    Građanski sporovi i naknada štete
+
+guidanceContent.sr.pages.home.sections[2].items[2]
+    Brak, porodica i nasleđe
+
+guidanceContent.sr.pages.home.sections[2].items[3]
+    Radnopravni sporovi
+
+guidanceContent.sr.pages.home.sections[2].items[4]
+    Krivične stvari
+
+guidanceContent.sr.pages.home.sections[2].items[5]
+    Intelektualna svojina: žigovi, patenti i autorsko pravo
+
+guidanceContent.sr.pages.home.sections[3].heading
+    Gde početi
+
+guidanceContent.sr.pages.home.sections[3].paragraphs[0]
+    Pročitajte stranicu „Usluge“ da proverite da li Vaša stvar spada u naš obim, zatim „Troškovi“ i „Kontakt“, da biste znali kako se utvrđuje obim i kako se troškovi potvrđuju pre početka rada.
+
+guidanceContent.sr.pages.home.sections[3].paragraphs[1]
+    Pri slanju poruke sažetak možete napisati na svom jeziku. Izvorni tekst se čuva tačno onako kako ste ga napisali i automatski se ne prevodi. Poslata poruka je zahtev koji čeka ocenu: to još nije konsultacija niti potvrđen sastanak.
+
+guidanceContent.sr.pages.services.eyebrow
+    USLUGE
+
+guidanceContent.sr.pages.services.title
+    U kojim stvarima zastupamo klijente
+
+guidanceContent.sr.pages.services.description
+    Šest oblasti koje kancelarija vodi na Tajvanu i granice koje je korisno znati najpre.
+
+guidanceContent.sr.pages.services.intro
+    Ispod su oblasti koje zaista vodimo i pitanja koja se na početku najčešće postavljaju. Opis Vam pomaže da ocenite da li Vaša stvar spada u naš obim; opšti je i nije pravna analiza pojedinačnog predmeta.
+
+guidanceContent.sr.pages.services.sections[0].heading
+    Investicije i osnivanje društava na Tajvanu
+
+guidanceContent.sr.pages.services.sections[0].paragraphs[0]
+    Pratimo strane investitore i preduzeća pri osnivanju ili vođenju društva na Tajvanu: izbor pravne forme, priprema i podnošenje dokumenata, unos kapitala, bankarska pitanja, ocena sedišta i zahtevi pojedinih grana. Podržavamo i računovodstvo i poreze koji proizlaze iz osnivanja i poslovanja na Tajvanu.
+
+guidanceContent.sr.pages.services.sections[0].paragraphs[1]
+    Tok i trajanje razlikuju se prema formi, investitoru, grani, banci i već raspoloživim dokumentima. Osnivanje društva samo po sebi ne vodi boravišnoj dozvoli (居留) niti radnoj dozvoli (工作許可): to su posebni postupci koji se ocenjuju prema situaciji konkretne osobe.
+
+guidanceContent.sr.pages.services.sections[1].heading
+    Građanski sporovi i naknada štete
+
+guidanceContent.sr.pages.services.sections[1].paragraphs[0]
+    Ova oblast obuhvata sporove iz ugovora, naknadu štete iz delikta i potrošačke sporove. Rad obično počinje hronologijom, pregledom dokumenata i postojećih dokaza, a tek potom slede dalji koraci.
+
+guidanceContent.sr.pages.services.sections[1].paragraphs[1]
+    Tok određuju rokovi, uključujući zakonske rokove za tužbu, i potpunost dokaza. Zato navedite poznate datume što ranije. Sačuvajte ugovore, poruke, dokaze o plaćanju ili fotografije stanja na licu mesta i pomenite ih u prvoj poruci.
+
+guidanceContent.sr.pages.services.sections[2].heading
+    Brak, porodica i nasleđe
+
+guidanceContent.sr.pages.services.sections[2].paragraphs[0]
+    Vodimo razvod (離婚), deobu imovine, vršenje i preuzimanje prava i dužnosti prema maloletnoj deci (未成年子女權利義務之行使或負擔), viđanje (會面交往) i nasleđe (繼承), i kada se strane ili imovina nalaze u različitim državama. Prekogranične porodične stvari često zahtevaju dodatnu ocenu evidencije prebivališta (戶籍), forme isprava i njihove dokazne snage na Tajvanu.
+
+guidanceContent.sr.pages.services.sections[2].paragraphs[1]
+    Budući da porodične stvari često nose rokove i paralelne postupke, prvi sažetak treba da navede odnos među stranama, sadašnje prebivalište i već pokrenute postupke.
+
+guidanceContent.sr.pages.services.sections[3].heading
+    Radnopravni sporovi
+
+guidanceContent.sr.pages.services.sections[3].paragraphs[0]
+    Ova oblast obuhvata prestanak radnog odnosa, otpremninu po tajvanskom pravu (資遣費; ne poistovećuje se sa sličnim institutima drugih država), naknadu i sporove iz ugovora o radu (勞動契約), kako na strani zaposlenog tako i na strani poslodavca. Pri oceni razdvajamo razlog prestanka od pitanja otkaznog roka, isplate i rokova.
+
+guidanceContent.sr.pages.services.sections[3].paragraphs[1]
+    Odlučujući dokumenti obično su ugovor o radu, pravilnik o radu (工作規則), platni listići i prepiska strana. Ako ih još imate, pomenite to u sažetku.
+
+guidanceContent.sr.pages.services.sections[4].heading
+    Krivične stvari
+
+guidanceContent.sr.pages.services.sections[4].paragraphs[0]
+    Zastupamo u istrazi i pred sudom osumnjičene i okrivljene, kao i oštećene, i ocenjujemo krivične rizike privredne delatnosti.
+
+guidanceContent.sr.pages.services.sections[4].paragraphs[1]
+    Krivične stvari često imaju kratke rokove i utvrđene faze. Ako ste već primili pismeno organa gonjenja ili suda, navedite datum na pismenu na vreme, da bi se sadržaj ocenio u pravom redosledu.
+
+guidanceContent.sr.pages.services.sections[5].heading
+    Intelektualna svojina
+
+guidanceContent.sr.pages.services.sections[5].paragraphs[0]
+    Podržavamo upis žigova (商標) i patenata (專利), autorsko pravo i sporove o tim pravima na Tajvanu.
+
+guidanceContent.sr.pages.services.sections[5].paragraphs[1]
+    U ovoj oblasti odlučuje redosled koraka: obim zaštite, trenutak podnošenja prijave i stvarno korišćenje utiču na izbor. Podnošenje prijave samo po sebi ne znači da će biti usvojena.
+
+guidanceContent.sr.pages.services.sections[6].heading
+    Obim i njegova potvrda
+
+guidanceContent.sr.pages.services.sections[6].paragraphs[0]
+    Kancelarija radi po tajvanskom pravu i vodi stvari iz navedenih oblasti. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda Vašu poruku.
+
+guidanceContent.sr.pages.services.sections[6].paragraphs[1]
+    Boravišni status, radna dozvola i slična pitanja ocenjuju se prema dokumentima i prema situaciji konkretne osobe, a ne prema državljanstvu. Ako deo Vaše stvari dira te tačke, navedite to pri kontaktu. Ova stranica ne obećava ishod niti rok za odgovor.
+
+guidanceContent.sr.pages.about.eyebrow
+    KANCELARIJA
+
+guidanceContent.sr.pages.about.title
+    O Hovering International Law Firm
+
+guidanceContent.sr.pages.about.description
+    Osnovni podaci o ovoj tajvanskoj advokatskoj kancelariji, njenim kancelarijama i radu sa stranim strankama.
+
+guidanceContent.sr.pages.about.intro
+    Hovering International Law Firm je advokatska kancelarija na Tajvanu. Advokatkinje i advokati rade od savetovanja preduzeća do sudskog postupka. Ovaj deo opisuje nastanak kancelarije, sedišta i rad sa stranim strankama.
+
+guidanceContent.sr.pages.about.sections[0].heading
+    Osnivanje i struktura
+
+guidanceContent.sr.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) osnovale su 2016. godine advokatkinje i advokati koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmerenje kancelarije od osnivanja.
+
+guidanceContent.sr.pages.about.sections[0].paragraphs[1]
+    Imamo kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Kancelarija u Kaohsiungu usredsređena je na upravljanje preduzećima i vodi građanske, krivične i upravne sporove. Kancelarija u Taichungu vodi građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Kancelarija u Pingtungu otvorena je 2017. godine zbog lokalne potrebe.
+
+guidanceContent.sr.pages.about.sections[0].paragraphs[2]
+    Pored advokatskog rada od 2020. godine deluje i Hovering Accounting Office, koje nudi računovodstvo i poresko planiranje preduzetnicima i privatnim licima sa imovinom.
+
+guidanceContent.sr.pages.about.sections[1].heading
+    Rad sa stranim strankama
+
+guidanceContent.sr.pages.about.sections[1].paragraphs[0]
+    Prekogranični rad obuhvata osnivanje društava, vize, prijave žigova i patenata, ocenu pravnog rizika i poresko savetovanje preduzeća. Kancelarija u Taichungu vodi naročito građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Advokatkinja Wei Tseng (曾雋崴) prati klijente iz Koreje, iz Japana i druge međunarodne klijente u navedenim oblastima.
+
+guidanceContent.sr.pages.about.sections[1].paragraphs[1]
+    Da li možemo da preuzmemo stvar zavisi od sadržaja i od jezika komunikacije. Ako Vaša stvar spada u navedene oblasti i može da se razgovara na jednom od četiri jezika konsultacije, možete poslati sažetak na ocenu.
+
+guidanceContent.sr.pages.about.sections[2].heading
+    Kada nas kontaktirate
+
+guidanceContent.sr.pages.about.sections[2].paragraphs[0]
+    Nakon prijema Vašeg sažetka advokatkinja ili advokat pregleda sadržaj i zatim govori o mogućem obimu rada, o još potrebnim dokumentima i o daljim koracima. Kod poreskih ili računovodstvenih pitanja kancelarija može da postupa sa računovodstvenim odeljenjem u jednom povezanom postupku.
+
+guidanceContent.sr.pages.about.sections[2].paragraphs[1]
+    Ishod svake stvari zavisi od činjenica i od raspoloživih dokumenata; ishod ne obećavamo. Ako Vam je potrebna obavezujuća ocena Vaše situacije, dokumente treba razgovarati sa advokatkinjom ili advokatom na jednom od četiri jezika konsultacije.
+
+guidanceContent.sr.pages.lawyers.eyebrow
+    ADVOKATI
+
+guidanceContent.sr.pages.lawyers.title
+    Međunarodni tim Hovering
+
+guidanceContent.sr.pages.lawyers.description
+    Profili advokatkinja i advokata, operativnog rukovodstva i pridruženog računovodstva i revizije Hovering.
+
+guidanceContent.sr.pages.lawyers.intro
+    
+
+guidanceContent.sr.pages.pricing.eyebrow
+    TROŠKOVI
+
+guidanceContent.sr.pages.pricing.title
+    Kako se utvrđuju obim rada i troškovi
+
+guidanceContent.sr.pages.pricing.description
+    Objašnjenje redosleda: najpre obim rada, zatim potvrda troškova, i zašto ova stranica nema cenovnik.
+
+guidanceContent.sr.pages.pricing.intro
+    Ova stranica objašnjava kako se troškovi utvrđuju, a ne njihov iznos. Iznos zavisi od obima rada u pojedinoj stvari i ima smisla tek kada je taj obim jasan.
+
+guidanceContent.sr.pages.pricing.sections[0].heading
+    Najpre se utvrđuje obim rada
+
+guidanceContent.sr.pages.pricing.sections[0].paragraphs[0]
+    Stvari iste vrste mogu zahtevati veoma različit trud, prema broju strana, raspoloživim dokumentima, rokovima koje treba poštovati i prema tome da li je postupak već pokrenut. Prvi korak je zato uvek utvrditi šta u rad spada, a šta ne.
+
+guidanceContent.sr.pages.pricing.sections[0].paragraphs[1]
+    Sažetak koji na početku pošaljete osnova je tog obima. Što jasnije opisuje tok, Vaš zahtev i rokove, to se obim može tačnije odrediti.
+
+guidanceContent.sr.pages.pricing.sections[1].heading
+    Troškovi se potvrđuju pre početka rada
+
+guidanceContent.sr.pages.pricing.sections[1].paragraphs[0]
+    Kada je obim rada jasan, visina i način obračuna troškova razgovaraju se sa Vama i potvrđuju pre nego što rad počne. Ako se obim u toku promeni, mora se ponovo potvrditi.
+
+guidanceContent.sr.pages.pricing.sections[1].paragraphs[1]
+    Ova stranica nije ponuda cene i ne zasniva obavezu plaćanja. Slanje zahteva preko ove stranice takođe je besplatno.
+
+guidanceContent.sr.pages.pricing.sections[2].heading
+    Konsultacija može biti uz naknadu
+
+guidanceContent.sr.pages.pricing.sections[2].paragraphs[0]
+    Konsultacija sa advokatkinjom ili advokatom može biti usluga uz naknadu. Ova stranica ne kaže da je prva konsultacija besplatna, i nijedan njen deo ne sme se tako čitati.
+
+guidanceContent.sr.pages.pricing.sections[2].paragraphs[1]
+    Ako je konsultacija uz naknadu, visina i način plaćanja saopštavaju se pre nego što se konsultacija održi.
+
+guidanceContent.sr.pages.pricing.sections[3].heading
+    Zašto ova stranica ne navodi tarife
+
+guidanceContent.sr.pages.pricing.sections[3].paragraphs[0]
+    Troškovi zavise od same stvari: od truda, broja strana, dokumenata, rokova i od toga da li postupak već teče. Broj unapred određen ne bi pokazao troškove Vašeg predmeta. Zato najpre utvrđujemo obim rada i troškove Vam saopštavamo potom, pre nego što rad počne.
+
+guidanceContent.sr.pages.pricing.sections[3].paragraphs[1]
+    Pored nagrade mogu nastati sudske takse, troškovi organa ili trećih lica. Oni su od nagrade odvojeni i zavise od konkretnog postupka.
+
+guidanceContent.sr.pages.contact.eyebrow
+    KONTAKT
+
+guidanceContent.sr.pages.contact.title
+    Kako se obratiti kancelariji
+
+guidanceContent.sr.pages.contact.description
+    Jezik stranice, jezici konsultacije, postupak ako ne možete da koristite nijedan od četiri jezika, i šta ova stranica ne obećava.
+
+guidanceContent.sr.pages.contact.intro
+    Pre nego što nam pišete, razlikujte sledeće tri tačke. Često se mešaju, ali znače različite stvari.
+
+guidanceContent.sr.pages.contact.sections[0].heading
+    Tri stvari koje treba držati odvojeno
+
+guidanceContent.sr.pages.contact.sections[0].paragraphs[0]
+    Jezik prikaza stranice, jezik konsultacije sa advokatkinjom ili advokatom i jezik na kojem pišete tri su različite stvari.
+
+guidanceContent.sr.pages.contact.sections[0].items[0]
+    Jezik stranice: ove informacije napisane su na srpskom.
+
+guidanceContent.sr.pages.contact.sections[0].items[1]
+    Jezik konsultacije: konsultacija se odvija samo na engleskom, kineskom (中文), japanskom i korejskom.
+
+guidanceContent.sr.pages.contact.sections[0].items[2]
+    Vaš jezik pisanja: sažetak možete napisati na svom jeziku; izvorni tekst se čuva bez izmene.
+
+guidanceContent.sr.pages.contact.sections[1].heading
+    Ako ne možete da koristite nijedan od četiri jezika konsultacije
+
+guidanceContent.sr.pages.contact.sections[1].paragraphs[0]
+    U kontaktnom obrascu možete izabrati „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.
+
+guidanceContent.sr.pages.contact.sections[1].paragraphs[1]
+    To je samo korak ocene, a nije obećanje. Ne obećavamo tumača, uslugu na srpskom niti na drugom jeziku van navedena četiri jezika, niti da ćemo prihvatiti svaku stvar.
+
+guidanceContent.sr.pages.contact.sections[2].heading
+    Šta treba da sadrži prva poruka
+
+guidanceContent.sr.pages.contact.sections[2].paragraphs[0]
+    Navedite šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. Ako ste već primili pismeno suda ili organa, navedite datum na pismenu.
+
+guidanceContent.sr.pages.contact.sections[2].paragraphs[1]
+    U početnoj fazi još ne morate slati broj pasoša, broj isprave, podatke o računu, medicinsku dokumentaciju niti celokupne dokaze. Sačekajte uputstva advokatkinje ili advokata i osetljive dokumente pošaljite tek potom bezbednim putem.
+
+guidanceContent.sr.pages.contact.sections[3].heading
+    Šta ova stranica ne obećava
+
+guidanceContent.sr.pages.contact.sections[3].paragraphs[0]
+    Ne obećavamo rok za odgovor, ne potvrđujemo sastanak preko ove stranice, ne obećavamo određenu advokatkinju niti određenog advokata i ne obezbeđujemo tumača. Pismeni prevod je nešto drugo: Vaša poruka se automatski ne prevodi.
+
+guidanceContent.sr.pages.contact.sections[3].paragraphs[1]
+    Ako pošaljete zahtev, sadržaj se čuva i čeka ocenu. Ako posle izvesnog vremena ne dobijete odgovor, možete ponovo pisati na adresu elektronske pošte navedenu na kontaktnoj stranici.
+
+guidanceContent.sr.pages.faq.eyebrow
+    PITANJA
+
+guidanceContent.sr.pages.faq.title
+    Česta pitanja
+
+guidanceContent.sr.pages.faq.description
+    Objašnjenja o obimu rada, pripremi, jezicima, troškovima i o tome šta znači poslat zahtev.
+
+guidanceContent.sr.pages.faq.intro
+    Sledeća pitanja odgovorena su na nivou opštih informacija. Odgovor za Vaš slučaj moguć je tek nakon što advokatkinja ili advokat pregleda dokumente.
+
+guidanceContent.sr.pages.faq.sections[0].heading
+    Kako koristiti ovaj deo
+
+guidanceContent.sr.pages.faq.sections[0].paragraphs[0]
+    Ako ne nađete odgovor za svoju situaciju, odgovor obično zavisi od posebnih činjenica. Napišite ih zato u sažetak, umesto da ih izvodite sa ove stranice.
+
+guidanceContent.sr.pages.faq.faqs[0].question
+    Koje stvari kancelarija vodi?
+
+guidanceContent.sr.pages.faq.faqs[0].answer
+    Vodimo šest oblasti: investicije i osnivanje društava na Tajvanu, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Da li će stvar biti prihvaćena odlučuje se nakon ocene sadržaja.
+
+guidanceContent.sr.pages.faq.faqs[1].question
+    Šta pripremiti pre kontakta?
+
+guidanceContent.sr.pages.faq.faqs[1].answer
+    Pripremite kratak sažetak toka, svog zahteva, veze sa Tajvanom i roka, ako postoji. Ako je već dostupno pismeno suda ili organa, navedite datum. U ovoj fazi još ne morate slati isprave identiteta niti celokupne dokaze.
+
+guidanceContent.sr.pages.faq.faqs[2].question
+    Da li je moguća konsultacija na srpskom?
+
+guidanceContent.sr.pages.faq.faqs[2].answer
+    Ne. Ove informacije napisane su na srpskom, ali konsultacija sa advokatkinjom ili advokatom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Ne obećavamo ni tumača. Pismeni prevod je nešto drugo: izvorni tekst koji napišete čuva se kakav jeste i automatski se ne prevodi.
+
+guidanceContent.sr.pages.faq.faqs[3].question
+    Šta ako ne mogu da koristim nijedan od četiri jezika?
+
+guidanceContent.sr.pages.faq.faqs[3].answer
+    Pri slanju zahteva izaberite „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili način komunikacije, ali usluga na drugom jeziku nije zagarantovana. To je korak ocene, a nije obećanje da možemo raditi na drugom jeziku.
+
+guidanceContent.sr.pages.faq.faqs[4].question
+    Kako se postupa sa mojim tekstom na srpskom?
+
+guidanceContent.sr.pages.faq.faqs[4].answer
+    Izvorni tekst koji napišete čuva se kakav jeste i automatski se ne prevodi. Ako je potrebno, jezik dalje komunikacije potvrđuje se sa Vama.
+
+guidanceContent.sr.pages.faq.faqs[5].question
+    Da li je konsultacija već obavljena time što je zahtev poslat?
+
+guidanceContent.sr.pages.faq.faqs[5].answer
+    Ne. Poslat zahtev čeka ocenu advokatkinje ili advokata. To nije pravno mišljenje, nije potvrđen sastanak i samo slanje ne zasniva odnos između advokatkinje ili advokata i klijenta.
+
+guidanceContent.sr.pages.faq.faqs[6].question
+    Kako se računaju troškovi?
+
+guidanceContent.sr.pages.faq.faqs[6].answer
+    Najpre se utvrđuje obim rada, zatim se sa Vama potvrđuju visina i način obračuna troškova, pre nego što rad počne. Ova stranica ne navodi iznose i ne kaže da je prva konsultacija besplatna.
+
+guidanceContent.sr.pages.faq.faqs[7].question
+    Šta ako je moja stvar veoma hitna?
+
+guidanceContent.sr.pages.faq.faqs[7].answer
+    Navedite rok ili datum sa službenog pismena odmah na početku sažetka, da bi ti podaci bili vidljivi pri oceni. Ova stranica nema hitni kanal i ne obezbeđuje rok za odgovor; ako Vaša stvar ne trpi odlaganje, trebalo bi paralelno da tražite druge puteve na svom mestu.
+
+guidanceContent.sr.pages.privacy.eyebrow
+    PRIVATNOST
+
+guidanceContent.sr.pages.privacy.title
+    Podaci koje prikuplja kontaktni obrazac
+
+guidanceContent.sr.pages.privacy.description
+    Šta prikuplja kontaktni obrazac u ovom srpskom delu, kako se postupa sa izvornim tekstom i kako nas kontaktirati u vezi sa Vašim podacima.
+
+guidanceContent.sr.pages.privacy.intro
+    Ovaj deo odnosi se samo na kontaktni obrazac na ovim informativnim stranicama. Opisuje postupanje sa podacima, a ne tehničku garanciju.
+
+guidanceContent.sr.pages.privacy.sections[0].heading
+    Koji se podaci prikupljaju
+
+guidanceContent.sr.pages.privacy.sections[0].paragraphs[0]
+    Ako pošaljete zahtev preko obrasca u ovom delu, beleže se sledeći podaci:
+
+guidanceContent.sr.pages.privacy.sections[0].items[0]
+    Ime koje navedete
+
+guidanceContent.sr.pages.privacy.sections[0].items[1]
+    Adresa elektronske pošte za odgovor
+
+guidanceContent.sr.pages.privacy.sections[0].items[2]
+    Jezik prikaza stranice u trenutku slanja
+
+guidanceContent.sr.pages.privacy.sections[0].items[3]
+    Jezik na kojem ste pisali
+
+guidanceContent.sr.pages.privacy.sections[0].items[4]
+    Jezik konsultacije koji želite
+
+guidanceContent.sr.pages.privacy.sections[0].items[5]
+    Izvorni tekst koji ste napisali
+
+guidanceContent.sr.pages.privacy.sections[0].items[6]
+    Vaša saglasnost za slanje zahteva
+
+guidanceContent.sr.pages.privacy.sections[0].items[7]
+    Broj predaje radi pronalaženja zahteva
+
+guidanceContent.sr.pages.privacy.sections[1].heading
+    Izvorni tekst čuva se bez izmene
+
+guidanceContent.sr.pages.privacy.sections[1].paragraphs[0]
+    Vaš tekst čuva se tačno onako kako ste ga napisali i automatski se ne prevodi. Ako je za obradu potreban prevod, to se sa Vama posebno razgovara.
+
+guidanceContent.sr.pages.privacy.sections[1].paragraphs[1]
+    Budući da se izvorni tekst čuva, u početnoj fazi ne pišite ono što još nije potrebno, na primer broj pasoša, broj isprave ili podatke o računu.
+
+guidanceContent.sr.pages.privacy.sections[2].heading
+    Mesto čuvanja i pristup
+
+guidanceContent.sr.pages.privacy.sections[2].paragraphs[0]
+    Sadržaj Vaše predaje čuva se na mestu koje nije javno dostupno. Pristup imaju samo ovlašćene osobe u kancelariji, i to radi obrade zahteva.
+
+guidanceContent.sr.pages.privacy.sections[2].paragraphs[1]
+    Ova stranica ne daje apsolutnu garanciju bezbednosti. Nijedan put prenosa i nijedno mesto čuvanja nisu potpuno bezbedni; osetljive dokumente zato treba slati tek po posebnom uputstvu advokatkinje ili advokata.
+
+guidanceContent.sr.pages.privacy.sections[3].heading
+    Svrha korišćenja
+
+guidanceContent.sr.pages.privacy.sections[3].paragraphs[0]
+    Poslati podaci služe oceni zahteva, odgovoru Vama, razjašnjavanju načina komunikacije i obradi, ako se rad preuzme.
+
+guidanceContent.sr.pages.privacy.sections[3].paragraphs[1]
+    Podaci se bez posebne saglasnosti ne koriste za marketing.
+
+guidanceContent.sr.pages.privacy.sections[4].heading
+    Obaveštenje i broj predaje
+
+guidanceContent.sr.pages.privacy.sections[4].paragraphs[0]
+    Ako je zahtev uspešno poslat, sistem obaveštava kancelariju. Ako to obaveštenje još nije evidentirano kao dostavljeno, Vaš tekst ostaje sačuvan i ne gubi se.
+
+guidanceContent.sr.pages.privacy.sections[4].paragraphs[1]
+    Broj predaje služi da se Vaš zahtev pronađe u našim evidencijama. Prikazuje se nakon čuvanja; možete ga navesti pri novom kontaktu.
+
+guidanceContent.sr.pages.privacy.sections[5].heading
+    Vaša prava i put kontakta
+
+guidanceContent.sr.pages.privacy.sections[5].paragraphs[0]
+    Možete tražiti pristup svojim podacima, njihovu ispravku ili brisanje, ili povući saglasnost, preko adrese elektronske pošte navedene na kontaktnoj stranici. Ako postoji zakonska ili procesna dužnost čuvanja, objasnićemo ograničenje.
+
+guidanceContent.sr.pages.privacy.sections[5].paragraphs[1]
+    Ova stranica ne navodi fiksni rok čuvanja, jer stvarno trajanje zavisi od daljeg toka stvari i od povezanih dužnosti. Ako želite ranije brisanje, navedite to pri kontaktu.
+
+guidanceContent.sr.pages.privacy.sections[6].heading
+    Mesto čuvanja i pružaoci usluga
+
+guidanceContent.sr.pages.privacy.sections[6].paragraphs[0]
+    Ove stranice hostovane su kod kompanije Vercel, a Vaša predaja čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se poštanskom uslugom koju kancelarija koristi.
+
+guidanceContent.sr.pages.privacy.sections[6].paragraphs[1]
+    Serveri pojedinih pružalaca mogu se nalaziti van Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha čuvanja ispunjena, podaci se brišu bez nepotrebnog odlaganja; podaci koje treba čuvati prema primenjivim propisima ostaju za to vreme. Zahteve u vezi sa ličnim podacima prima wei@hoveringlaw.com.tw.
+
+guidanceContent.sr.pages.disclaimer.eyebrow
+    ODRICANJE
+
+guidanceContent.sr.pages.disclaimer.title
+    Obim i granice informacija na ovoj stranici
+
+guidanceContent.sr.pages.disclaimer.description
+    Opšti karakter informacija, pravni okvir i pretpostavke nastanka odnosa između advokatkinje ili advokata i klijenta.
+
+guidanceContent.sr.pages.disclaimer.intro
+    Ovaj deo razjašnjava šta ovaj srpski informativni deo može da učini za Vas, a šta ne.
+
+guidanceContent.sr.pages.disclaimer.sections[0].heading
+    Samo opšte informacije
+
+guidanceContent.sr.pages.disclaimer.sections[0].paragraphs[0]
+    Sadržaj ovih stranica napisan je kao opšta informacija. Nije pravni savet za Vaš slučaj i ne zamenjuje ocenu Vaših dokumenata.
+
+guidanceContent.sr.pages.disclaimer.sections[0].paragraphs[1]
+    Ishod stvari zavisi od činjenica, od primenjivih propisa i od trenutka; dve naizgled slične situacije mogu se završiti različito.
+
+guidanceContent.sr.pages.disclaimer.sections[1].heading
+    Pravni okvir
+
+guidanceContent.sr.pages.disclaimer.sections[1].paragraphs[0]
+    Kancelarija deluje po tajvanskom pravu i ova stranica govori samo o radu u tom okviru.
+
+guidanceContent.sr.pages.disclaimer.sections[1].paragraphs[1]
+    Sadržaj nije savetovanje po pravu drugog poretka osim tajvanskog, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koja kvalifikovana osoba je za taj deo potrebna.
+
+guidanceContent.sr.pages.disclaimer.sections[2].heading
+    Odnos između advokatkinje ili advokata i klijenta ne nastaje sam od sebe
+
+guidanceContent.sr.pages.disclaimer.sections[2].paragraphs[0]
+    Čitanje ove stranice, slanje obrasca ili poruke elektronske pošte samo po sebi ne zasniva odnos između advokatkinje ili advokata i klijenta.
+
+guidanceContent.sr.pages.disclaimer.sections[2].paragraphs[1]
+    Taj odnos nastaje tek nakon što je stvar ocenjena i obe strane potvrdile preuzimanje rada.
+
+guidanceContent.sr.pages.disclaimer.sections[3].heading
+    Nema obećanja ishoda
+
+guidanceContent.sr.pages.disclaimer.sections[3].paragraphs[0]
+    Nijedan deo ove stranice nije obećanje u pogledu ishoda stvari, usvajanja prijave ili zahteva, niti u pogledu boravišnog i radnog statusa.
+
+guidanceContent.sr.pages.disclaimer.sections[3].paragraphs[1]
+    Spoljašnji linkovi služe orijentaciji; ne garantujemo tačnost niti ažurnost sadržaja trećih lica.
+
+guidanceContent.sr.pages.columns.eyebrow
+    ČLANCI
+
+guidanceContent.sr.pages.columns.title
+    Članci o tajvanskom pravu
+
+guidanceContent.sr.pages.columns.description
+    Članci na srpskom o čestim pitanjima tajvanskog prava. Sadržaj je opšta informacija u trenutku objavljivanja, a ne pravni savet za Vaš slučaj.
+
+guidanceContent.sr.pages.columns.intro
+    Kancelarija objavljuje članke o čestim pitanjima tajvanskog prava. Članci dostupni na srpskom nalaze se na ovoj stranici; pored njih su četiri linka, od kojih svaki otvara spisak članaka na jednom izvornom jeziku.
+
+guidanceContent.sr.pages.columns.sections[0].heading
+    Četiri spiska prema jeziku
+
+guidanceContent.sr.pages.columns.sections[0].paragraphs[0]
+    Ovaj deo sadrži četiri linka: spisak članaka na korejskom, na kineskom, na engleskom i na japanskom. Svaki link navodi jezik spiska, da unapred znate na kom jeziku se sadržaj otvara.
+
+guidanceContent.sr.pages.columns.sections[0].paragraphs[1]
+    Ta četiri spiska su spiskovi prema izvornom jeziku članaka, a ne spiskovi prevoda. Članci dostupni na srpskom posebno su na ovoj stranici.
+
+guidanceContent.sr.pages.columns.sections[1].heading
+    Kuda vode linkovi
+
+guidanceContent.sr.pages.columns.sections[1].paragraphs[0]
+    Ako izaberete jedan od četiri linka, otvara se spisak članaka na tom jeziku. Sa spiska tekst birate sami; ceo sadržaj prikazuje se na izvornom jeziku članka.
+
+guidanceContent.sr.pages.columns.sections[1].paragraphs[1]
+    Ova stranica ne sažima sadržaj članaka i ne garantuje da je određena tema dostupna na sva četiri jezika. Svaki spisak sadrži samo tekstove objavljene na tom jeziku.
+
+guidanceContent.sr.pages.columns.sections[2].heading
+    Koliko članak može da posluži orijentaciji
+
+guidanceContent.sr.pages.columns.sections[2].paragraphs[0]
+    Članci su opšte informacije u trenutku objavljivanja. Propisi i njihova primena mogu se promeniti, a članak ne sadrži sve okolnosti Vašeg slučaja.
+
+guidanceContent.sr.pages.columns.sections[2].paragraphs[1]
+    Zato ne zasnivajte postupak u stvarnoj stvari samo na članku. Koristite ga za pregled i svoje dokumente razgovarajte posebno sa advokatkinjom ili advokatom; ova stranica nije korak konsultacije.
+
+guidanceTeamCopy.sr.label
+    TIM
+
+guidanceTeamCopy.sr.title
+    Međunarodni tim Hovering
+
+guidanceTeamCopy.sr.description
+    Profili advokatkinja i advokata, operativnog rukovodstva i pridruženog računovodstva i revizije Hovering.
+
+guidanceTeamCopy.sr.representativeTitle
+    Rukovodeća advokatkinja
+
+guidanceTeamCopy.sr.teamTitle
+    Advokati i saradnici
+
+guidanceTeamCopy.sr.partnerTitle
+    Pridruženo računovodstvo
+
+guidanceTeamCopy.sr.introLabel
+    Predstavljanje
+
+guidanceTeamCopy.sr.educationLabel
+    Obrazovanje
+
+guidanceTeamCopy.sr.experienceLabel
+    Iskustvo
+
+guidanceTeamCopy.sr.photoAltPrefix
+    Fotografija
+
+guidanceTeamCopy.sr.workingLanguagesLabel
+    Radni jezici
+
+guidanceTeamCopy.sr.fullProfileLabel
+    Pun profil (na engleskom)
+
+guidanceTeamCopy.sr.keyFactsHeading
+    Advokatkinja Wei Tseng — Osnovni podaci
+
+guidanceTeamCopy.sr.qualificationLabel
+    Ovlašćenje i kancelarija
+
+guidanceTeamCopy.sr.qualificationSentence
+    {name} je ovlašćena da obavlja advokatsku delatnost na Tajvanu i rukovodeća je advokatkinja kancelarije {firm}.
+
+guidanceTeamCopy.sr.practiceLabel
+    Glavne oblasti
+
+guidanceTeamCopy.sr.consultationLanguagesLabel
+    Jezici konsultacije
+
+guidanceTeamCopy.sr.roles.tseng-junwei
+    Rukovodeća advokatkinja na Tajvanu (Managing Attorney)
+
+guidanceTeamCopy.sr.roles.chang-rongxuan
+    Advokat na Tajvanu (Taiwan Attorney)
+
+guidanceTeamCopy.sr.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.sr.roles.son-jungmin
+    Rukovodstvo operacija u Koreji (Korea Operations Manager)
+
+guidanceTeamCopy.sr.roles.huang-shengping
+    Partnerski računovođa (Partner CPA)
+
+guidanceTeamBios.sr.tseng-junwei.intro[0]
+    Kancelarija vodi stvari preduzeća i privatnih lica na Tajvanu na engleskom, japanskom, korejskom i kineskom.
+
+guidanceTeamBios.sr.tseng-junwei.intro[1]
+    Zastupala je korejskog studenta u zahtevu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.
+
+guidanceTeamBios.sr.tseng-junwei.education[0]
+    Master (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.sr.tseng-junwei.education[1]
+    Diploma (B.A.) u dvostrukom programu prava i finansija, National Chengchi University
+
+guidanceTeamBios.sr.tseng-junwei.education[2]
+    Studentkinja na razmeni na Kobe University i Waseda University
+
+guidanceTeamBios.sr.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.sr.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.sr.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.sr.chang-rongxuan.intro[0]
+    Ranije u Ministry of Education, Legal Affairs Division, sa težištem na upravnim i građanskim stvarima.
+
+guidanceTeamBios.sr.chang-rongxuan.intro[1]
+    Iskustvo u stvarima univerziteta, prava nastavnika i upravnih žalbi.
+
+guidanceTeamBios.sr.chang-rongxuan.education[0]
+    Diploma prava (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.sr.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.sr.chang-rongxuan.experience[1]
+    Advokat, Hovering International Law Firm
+
+guidanceTeamBios.sr.chang-fangyu.intro[0]
+    Paralegal sa dugogodišnjim radom; ranije senior paralegal u više advokatskih kancelarija, sa težištem na procesnoj podršci, korporativnoj oblasti i stranim investicijama.
+
+guidanceTeamBios.sr.chang-fangyu.intro[1]
+    Podrška u sudskim postupcima, pri osnivanju društava, kod dozvola za strane investicije, kod zahteva za licence i u komunikaciji između Koreje i Tajvana.
+
+guidanceTeamBios.sr.chang-fangyu.education[0]
+    Diploma prava (LL.B.), Tunghai University
+
+guidanceTeamBios.sr.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.sr.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.sr.son-jungmin.intro[0]
+    Koordinira termine konsultacija i komunikaciju za klijente iz Koreje.
+
+guidanceTeamBios.sr.son-jungmin.intro[1]
+    Podržava međuregionalnu razmenu preko sistema dokumenata i tokova rada, na osnovu informatike.
+
+guidanceTeamBios.sr.son-jungmin.education[0]
+    Diploma (B.S.) informatike, National Cheng Kung University
+
+guidanceTeamBios.sr.son-jungmin.experience[0]
+    Odeljenje korejskih operacija, Hovering International Law Firm
+
+guidanceTeamBios.sr.huang-shengping.intro[0]
+    Završio je osnovne i master programe računovodstva na National Chengchi University i sada vodi računovodstvenu kancelariju.
+
+guidanceTeamBios.sr.huang-shengping.intro[1]
+    Podržava integrisanu analizu pravnih, poreskih i finansijskih rizika za korporativne klijente.
+
+guidanceTeamBios.sr.huang-shengping.education[0]
+    Master (M.A.) računovodstva, National Chengchi University
+
+guidanceTeamBios.sr.huang-shengping.education[1]
+    Diploma (B.A.) računovodstva, National Chengchi University
+
+guidanceTeamBios.sr.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.sr.Korean
+    korejski
+
+guidanceLanguageNames.sr.Chinese
+    kineski
+
+guidanceLanguageNames.sr.Japanese
+    japanski
+
+guidancePracticeAreaNames.sr.Taiwan company setup
+    Osnivanje društava na Tajvanu
+
+guidancePracticeAreaNames.sr.Taiwan investment counsel
+    Savetovanje o investicijama na Tajvanu
+
+guidancePracticeAreaNames.sr.Civil litigation and damages
+    Građanski sporovi i naknada štete
+
+guidancePracticeAreaNames.sr.Trademark and patent filings
+    Prijave žigova i patenata
+
+guidancePracticeAreaNames.sr.Visa and residency
+    Viza i boravak
+
+guidancePracticeAreaNames.sr.Family and labor disputes
+    Porodični i radnopravni sporovi
+
+guidanceOfficeCopy.sr.label
+    KANCELARIJE
+
+guidanceOfficeCopy.sr.title
+    Kancelarije
+
+guidanceOfficeCopy.sr.description
+    Adrese tajvanskih kancelarija Hovering International Law Firm.
+
+guidanceOfficeCopy.sr.officeLabel
+    Kancelarija
+
+guidanceOfficeCopy.sr.mapPreviewLabel
+    Pregled mape
+
+guidanceOfficeCopy.sr.koreaOfficeTitle
+    Kancelarija u Koreji
+
+guidanceOfficeCopy.sr.koreaAddressCardLabel
+    Adresa kancelarije u Koreji
+
+guidanceOfficeCopy.sr.koreaMapLinkLabel
+    Pogledajte na Naver Map
+
+guidanceOfficeCopy.sr.reviewCountWord
+    ocena
+
+guidanceOfficeCopy.sr.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.sr.faxLabel
+    Faks
+
+guidanceOfficeCopy.sr.mapLinkLabel
+    Pogledajte na mapi
+
+guidanceOfficeCopy.sr.photoAlts[0]
+    Recepcija kancelarije u Tajpeju, Hovering International Law Firm
+
+guidanceOfficeCopy.sr.photoAlts[1]
+    Kancelarija advokatkinje u kancelariji u Tajpeju, Hovering International Law Firm
+
+guidanceOfficeCopy.sr.photoAlts[2]
+    Sala za sastanke u kancelariji u Tajpeju, Hovering International Law Firm
+
+guidanceOfficeCopy.sr.officeTitles.taipei
+    Tajpej
+
+guidanceOfficeCopy.sr.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.sr.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.sr.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.sr.officeLabel
+    Kancelarije
+
+guidanceFooterCopy.sr.officeQuickLinksLabel
+    Brzi linkovi ka kancelarijama
+
+guidanceFooterCopy.sr.followLabel
+    Pratite nas
+
+guidanceFooterCopy.sr.blogLabel
+    Blog
+
+guidanceFooterCopy.sr.websiteLabel
+    Zvanični sajt
+
+guidanceFooterCopy.sr.sitemapLabel
+    Mapa sajta
+
+guidanceFooterCopy.sr.copyEmailLabel
+    Kopirajte adresu elektronske pošte
+
+guidanceFooterCopy.sr.emailCopiedMessage
+    Adresa elektronske pošte je kopirana.
+
+guidanceFooterCopy.sr.officialConsultationEmailLabel
+    Zvanična elektronska pošta za upite
+
+internationalInquiryCopy.sr.guidanceNotice
+    Ova stranica napisana je na srpskom kao opšta orijentacija, a ne kao pravni savet u Vašoj stvari.
+
+internationalInquiryCopy.sr.consultationNotice
+    Konsultacija se odvija samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom.
+
+internationalInquiryCopy.sr.methodConfirmationNotice
+    Ako ne možete da koristite nijedan od četiri jezika konsultacije, izaberite „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.
+
+internationalInquiryCopy.sr.preparationNotice
+    Sažetak možete napisati na svom jeziku. Izvorni tekst čuva se onako kako ste ga napisali i automatski se ne prevodi.
+
+internationalInquiryCopy.sr.heading
+    Pošaljite zahtev za ocenu
+
+internationalInquiryCopy.sr.intro
+    Opišite svoju stvar ukratko. Advokatkinja ili advokat pregleda sadržaj pre nego što se pređe na sledeći korak.
+
+internationalInquiryCopy.sr.submitLabel
+    Pošaljite zahtev
+
+internationalInquiryCopy.sr.submittingLabel
+    Šalje se…
+
+internationalInquiryCopy.sr.successMessage
+    Primili smo Vaš zahtev; čeka ocenu. To ne znači da je konsultacija obavljena niti da je sastanak potvrđen.
+
+internationalInquiryCopy.sr.savedNotificationPendingMessage
+    Vaš zahtev je sačuvan, ali obaveštenje kancelariji još nije evidentirano kao dostavljeno. Ono što ste napisali ne gubi se. Ako ne dobijete odgovor, možete pisati i na adresu elektronske pošte sa kontaktne stranice.
+
+internationalInquiryCopy.sr.receiptIdLabel
+    Broj predaje
+
+internationalInquiryCopy.sr.failureMessage
+    Vaš zahtev nije uspelo poslati. Pokušajte ponovo ili pišite na adresu elektronske pošte sa kontaktne stranice.
+
+internationalInquiryCopy.sr.originalLanguageLabel
+    Jezik na kojem pišete
+
+internationalInquiryCopy.sr.originalLanguagePlaceholder
+    Na primer srpski, engleski, kineski ili drugi jezik
+
+internationalInquiryCopy.sr.preferredConsultationLanguageLabel
+    Jezik koji želite za konsultaciju
+
+internationalInquiryCopy.sr.originalTextLabel
+    Kratak opis stvari (na Vašem jeziku)
+
+internationalInquiryCopy.sr.originalTextPlaceholder
+    Napišite šta se dogodilo, kakva Vam je pomoć potrebna i rok, ako postoji. Ne pišite broj pasoša, broj isprave niti podatke o računu.
+
+internationalInquiryCopy.sr.nameLabel
+    Ime
+
+internationalInquiryCopy.sr.emailLabel
+    Elektronska pošta
+
+internationalInquiryCopy.sr.consentLabel
+    Pročitao sam ili pročitala sam stranicu o privatnosti i saglasan sam ili saglasna sam sa slanjem ovog zahteva.
+
+internationalInquiryCopy.sr.privacyLinkLabel
+    Privatnost
+
+internationalInquiryCopy.sr.requiredMessage
+    Ovo polje je obavezno.
+
+internationalInquiryCopy.sr.invalidEmailMessage
+    Unesite važeću adresu elektronske pošte.
+
+internationalInquiryCopy.sr.tooLongMessage
+    Tekst je predugačak. Skraćujte ga i pošaljite ponovo.
+
+internationalInquiryCopy.sr.sourceLanguageNotice
+    Ovaj članak objavljen je samo na jeziku {language}; link otvara izvornu stranicu.
+
+internationalInquiryCopy.sr.unavailableTranslationNotice
+    Ovaj deo još nije dostupan na jeziku ove stranice. Link na izvornom jeziku otvara izvorni tekst.
+
+internationalInquiryCopy.sr.unavailableLanguageNotice
+    Ova stranica se ne nudi na jeziku {language}.
+
+internationalInquiryCopy.sr.languageOptions.en
+    Engleski (English)
+
+internationalInquiryCopy.sr.languageOptions.zh-hant
+    Kineski (中文)
+
+internationalInquiryCopy.sr.languageOptions.ja
+    Japanski (日本語)
+
+internationalInquiryCopy.sr.languageOptions.ko
+    Korejski (한국어)
+
+internationalInquiryCopy.sr.languageOptions.needs-method-confirmation
+    Nijedan od četiri jezika nije upotrebljiv — način komunikacije treba potvrditi
+
+guidanceAnswers.sr.services.answer
+    Kancelarija vodi šest oblasti po tajvanskom pravu: investicije i osnivanje društava, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda poslati sadržaj. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.
+
+guidanceAnswers.sr.services.sources[0]
+    /sr/faq
+
+guidanceAnswers.sr.services.sources[1]
+    /sr/contact
+
+guidanceAnswers.sr.about.answer
+    Hovering International Law Firm je tajvanska advokatska kancelarija koju su 2016. osnovali diplomci National Taiwan University (國立臺灣大學), sa kancelarijama u Tajpeju, Kaohsiungu, Taichungu i Pingtungu. Od 2020. deluje i računovodstveno odeljenje; kancelarija u Taichungu vodi stvari sa vezom na Koreju i Japan. Kancelarija ne obećava ishod. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.
+
+guidanceAnswers.sr.about.sources[0]
+    /sr/lawyers
+
+guidanceAnswers.sr.about.sources[1]
+    /sr/services
+
+guidanceAnswers.sr.lawyers.answer
+    Ova stranica pokazuje profile advokatkinja i advokata Hovering, operativnog rukovodstva i pridruženog računovodstva i revizije. Advokatkinja Wei Tseng (曾雋崴) ovlašćena je da obavlja advokatsku delatnost na Tajvanu i rukovodeća je advokatkinja kancelarije; radi sa klijentima iz Koreje, iz Japana i sa drugim međunarodnim klijentima. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.
+
+guidanceAnswers.sr.lawyers.sources[0]
+    /sr/about
+
+guidanceAnswers.sr.lawyers.sources[1]
+    /sr/contact
+
+guidanceAnswers.sr.pricing.answer
+    Ova stranica ne objavljuje cenovnik. Najpre se iz Vašeg sažetka potvrđuje obim rada, zatim se sa Vama potvrđuju visina i način obračuna, pre nego što rad počne. Konsultacija sa advokatkinjom ili advokatom može biti uz naknadu; pored nagrade mogu nastati sudske ili upravne takse. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.
+
+guidanceAnswers.sr.pricing.sources[0]
+    /sr/contact
+
+guidanceAnswers.sr.pricing.sources[1]
+    /sr/faq
+
+guidanceAnswers.sr.contact.answer
+    Pošaljite sažetak kontaktnim obrascem: šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati isprave identiteta niti celokupne dokaze. Kancelarija ne obećava rok za odgovor i ne potvrđuje sastanak preko ove stranice. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.
+
+guidanceAnswers.sr.contact.sources[0]
+    /sr/faq
+
+guidanceAnswers.sr.contact.sources[1]
+    /sr/pricing
+
+guidanceAnswers.sr.faq.answer
+    Ovaj deo odgovara na česta pitanja na nivou opštih informacija: šest oblasti kancelarije, priprema pre kontakta, potvrda troškova i značenje poslate poruke. Poslat zahtev čeka ocenu, nije pravno mišljenje niti potvrđen sastanak i samo po sebi ne zasniva odnos između advokatkinje ili advokata i klijenta. Konsultacija se odvija samo na četiri jezika: engleskom, kineskom, japanskom i korejskom.
+
+guidanceAnswers.sr.faq.sources[0]
+    /sr/services
+
+guidanceAnswers.sr.faq.sources[1]
+    /sr/contact
+
+GUIDANCE_LLMS_NOTICES.sr.consultationNotice
+    Ove informacije napisane su na srpskom, ali konsultacija sa advokatkinjom ili advokatom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom.
+
+GUIDANCE_LLMS_NOTICES.sr.discoveryNotice
+    Datoteka llms.txt samo je mapa za pronalaženje javnih stranica; ne obećava redosled u pretrazi, podršku, preporuku veštačke inteligencije niti vidljivost.
+
+GUIDANCE_LLMS_NOTICES.sr.confidentialNotice
+    Budući da se izvorni tekst čuva, u početnoj fazi ne pišite ono što još nije potrebno, na primer broj pasoša, broj isprave ili podatke o računu.

@@ -1,0 +1,1096 @@
+# mn guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.mn.languageName
+    Монгол
+
+guidanceContent.mn.nav.home
+    Нүүр хуудас
+
+guidanceContent.mn.nav.services
+    Үйлчилгээ
+
+guidanceContent.mn.nav.about
+    Фирм
+
+guidanceContent.mn.nav.lawyers
+    Өмгөөлөгч
+
+guidanceContent.mn.nav.pricing
+    Хэмжээ, хөлс
+
+guidanceContent.mn.nav.contact
+    Холбоо
+
+guidanceContent.mn.nav.faq
+    Асуулт хариулт
+
+guidanceContent.mn.nav.privacy
+    Нууцлал
+
+guidanceContent.mn.nav.disclaimer
+    Татгалзал
+
+guidanceContent.mn.nav.columns
+    Нийтлэл
+
+guidanceContent.mn.contactCta
+    Зөвлөгөөний хүсэлт илгээх
+
+guidanceContent.mn.footerNotice
+    Энэ монгол хуудас нь фирмийн Тайванийн эрх зүйн дагуух ажлын ерөнхий мэдээлэл юм. Энэ нь тодорхой хэргийн эрх зүйн зөвлөгөө биш бөгөөд мессеж илгээх нь өөрөө өмгөөлөгч ба үйлчлүүлэгчийн харилцаа үүсгэхгүй.
+
+guidanceContent.mn.skipLink
+    Навигацийг алгасаад агуулга руу орох
+
+guidanceContent.mn.menuLabel
+    Хуудсын жагсаалт
+
+guidanceContent.mn.languageLabel
+    Харуулах хэл
+
+guidanceContent.mn.mega.services.description
+    Фирм Тайванийн эрх зүйн үндсэн чиглэлүүдийг хөтөлнө.
+
+guidanceContent.mn.mega.services.viewAllLabel
+    Бүгдийг харах
+
+guidanceContent.mn.mega.columns.description
+    Тайванийн эрх зүйн түгээмэл асуултын нийтлэл.
+
+guidanceContent.mn.mega.columns.viewAllLabel
+    Бүгдийг харах
+
+guidanceContent.mn.mega.lawyers.description
+    Өмгөөлөгчид болон холбоо барих замын танилцуулга.
+
+guidanceContent.mn.mega.lawyers.viewAllLabel
+    Бүгдийг харах
+
+guidanceContent.mn.mega.pricing.description
+    Энэ хуудас ажлын хэмжээ болон хөлсийг хэрхэн тогтоодыг тайлбарлана.
+
+guidanceContent.mn.mega.pricing.viewAllLabel
+    Бүгдийг харах
+
+guidanceContent.mn.mega.faq.description
+    Тайвань дахь фирмийн ажлын түгээмэл асуулт.
+
+guidanceContent.mn.mega.faq.viewAllLabel
+    Бүгдийг харах
+
+guidanceContent.mn.notFoundTitle
+    Хуудас олдсонгүй
+
+guidanceContent.mn.notFoundText
+    Таны хайсан хуудас байхгүй эсвэл нүүлгэсэн байна. Боломжтой мэдээллийг харахын тулд монгол нүүр хуудас руу буцаж болно.
+
+guidanceContent.mn.backHomeLabel
+    Нүүр хуудас руу
+
+guidanceContent.mn.readSourceLabel
+    Эх хэл дээрх нийтлэлийн жагсаалтыг нээх
+
+guidanceContent.mn.home.heroScrollLabel
+    Доош гүйлгэх
+
+guidanceContent.mn.home.heroColumnsCtaLabel
+    Нийтлэл харах
+
+guidanceContent.mn.home.servicesDetailLabel
+    Дэлгэрэнгүй харах
+
+guidanceContent.mn.home.servicesAssistanceBefore
+    Таны асуудал аль бүлэгт хамаарах нь тодорхойгүй бол 
+
+guidanceContent.mn.home.servicesAssistanceLinkLabel
+    Холбоо
+
+guidanceContent.mn.home.servicesAssistanceAfter
+     хуудас өмгөөлөгчийн хянах товч тоймыг хэрхэн бичихийг тайлбарлана.
+
+guidanceContent.mn.home.columnsViewAllLabel
+    Бүх нийтлэлийг харах
+
+guidanceContent.mn.home.columnsReadMoreLabel
+    Цааш унших
+
+guidanceContent.mn.home.columnsReviewLabel
+    Эмэгтэй өмгөөлөгч Wei Tseng хянасан
+
+guidanceContent.mn.home.columnsOriginalLanguageBadge
+    Эх хэл
+
+guidanceContent.mn.home.columnsOriginalLanguageNote
+    Дараах нийтлэл монгол хэлээр хараахан бэлэн биш. Жагсаалт эх хэл дээр үлдэж, тухайн хэлний хуудсыг нээнэ; агуулгыг автоматаар орчуулахгүй.
+
+guidanceContent.mn.home.imageBandAlt
+    Өдрийн гэрэлд уламжлалт тайвань санхэюань (三合院) болон орчин үеийн павильон
+
+guidanceContent.mn.home.videoPauseLabel
+    Видеог түр зогсоох
+
+guidanceContent.mn.home.videoPlayLabel
+    Видеог тоглуулах
+
+guidanceContent.mn.home.videoReplayLabel
+    Видеог дахин тоглуулах
+
+guidanceContent.mn.pages.home.eyebrow
+    МЭДЭЭЛЭЛ
+
+guidanceContent.mn.pages.home.title
+    Тайвань дахь эрх зүйн үйлчилгээ — монгол хэлээрх мэдээлэл
+
+guidanceContent.mn.pages.home.description
+    Hovering International Law Firm-ийн Тайвань дахь ажлын хүрээ, зөвлөгөөний хэл, анхны холбоо барих тухай монгол хэлээрх ерөнхий тайлбар.
+
+guidanceContent.mn.pages.home.intro
+    Hovering International Law Firm гадаадаас ирсэн үйлчлүүлэгчдийг, түүний дотор Тайваньтай холбоотой хүмүүсийг, Тайванийн эрх зүйн дагуух хэрэгт дагалдана: хөрөнгө оруулалт ба компани байгуулах, иргэний маргаан, гэрлэлт, гэр бүл, өв залгамжлал, хөдөлмөрийн эрх зүй, эрүүгийн хэрэг, оюуны өмч. Энэ монгол хэсэг ямар ажил манай хүрээнд багтах, юу бэлтгэх, хэрхэн холбогдохоо ойлгоход тусална. Энэ нь ерөнхий мэдээлэл бөгөөд таны хэргийн эрх зүйн зөвлөгөө биш.
+
+guidanceContent.mn.pages.home.sections[0].heading
+    Бид юу хийдэг вэ
+
+guidanceContent.mn.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm нь Тайваньд байгуулагдсан өмгөөллийн фирм. Фирм Тайванийн эрх зүйн дагуу ажиллаж, Тайбэй (臺北), Гаосюн (高雄), Тайжун (臺中), Пиндун (屏東) хотод оффистой. Бид компаниудад зөвлөгөө өгч, шүүхэд хэрэг хөтөлж, гадаадын үйлчлүүлэгчдийг Тайваньд шаардлагатай алхмуудаар дагалдана.
+
+guidanceContent.mn.pages.home.sections[0].paragraphs[1]
+    Эндхийн бүх агуулга ерөнхий шинжтэй. Хэргийн үр дүн баримт, хэрэглэх хэм хэмжээ, цаг хугацаанаас хамаарна. Эдгээр мэдээлэл таны баримт бичгийн талаар өмгөөлөгчтэй ярилцахыг орлохгүй.
+
+guidanceContent.mn.pages.home.sections[1].heading
+    Хуудсын хэл болон зөвлөгөөний хэл нь нэг зүйл биш
+
+guidanceContent.mn.pages.home.sections[1].paragraphs[0]
+    Энэ хуудсыг монгол хэлээр бичсэн боловч өмгөөлөгчийн зөвлөгөө зөвхөн дөрвөн зөвлөгөөний хэлээр явагдана: англи, хятад (中文), япон, солонгос. Монгол мэдээллийг унших нь өмгөөлөгчтэй монгол хэлээр ярина гэсэн үг биш.
+
+guidanceContent.mn.pages.home.sections[1].paragraphs[1]
+    Бид энэ хуудсаар орчуулагч, хариу өгөх хугацаа, цаг товлолт амлахгүй. Дөрвөн хэлний алийг нь ч ашиглаж чадахгүй бол «Холбоо» хуудас холбоо барих аргыг хэрхэн шалгахыг тайлбарлана.
+
+guidanceContent.mn.pages.home.sections[2].heading
+    Ажлын чиглэл
+
+guidanceContent.mn.pages.home.sections[2].paragraphs[0]
+    Ажлын хүрээ дараах зургаан бүлгийг хамарна. «Үйлчилгээ» хуудас бүлэг бүрийг дэлгэрэнгүй тайлбарлаж, юу амлагдахгүйг заана.
+
+guidanceContent.mn.pages.home.sections[2].items[0]
+    Тайвань дахь хөрөнгө оруулалт ба компани байгуулах
+
+guidanceContent.mn.pages.home.sections[2].items[1]
+    Иргэний хэрэг ба хохирол нөхөн төлүүлэх
+
+guidanceContent.mn.pages.home.sections[2].items[2]
+    Гэрлэлт, гэр бүл, өв залгамжлал
+
+guidanceContent.mn.pages.home.sections[2].items[3]
+    Хөдөлмөрийн маргаан
+
+guidanceContent.mn.pages.home.sections[2].items[4]
+    Эрүүгийн хэрэг
+
+guidanceContent.mn.pages.home.sections[2].items[5]
+    Оюуны өмч: барааны тэмдэг, патент, зохиогчийн эрх
+
+guidanceContent.mn.pages.home.sections[3].heading
+    Хаанаас эхлэх вэ
+
+guidanceContent.mn.pages.home.sections[3].paragraphs[0]
+    Таны асуудал манай хүрээнд багтах эсэхийг шалгахын тулд «Үйлчилгээ» хуудсыг уншаад, дараа нь ажлын хэмжээг хэрхэн тогтоож, ажил эхлэхээс өмнө хөлсийг хэрхэн баталгаажуулдыг мэдэхийн тулд «Хэмжээ, хөлс» болон «Холбоо» хуудсыг үзнэ үү.
+
+guidanceContent.mn.pages.home.sections[3].paragraphs[1]
+    Мессеж илгээхдээ товч тоймоо өөрийн хэлээр бичиж болно. Эх бичвэрийг таны бичсэнээр хадгалж, автоматаар орчуулахгүй. Илгээсэн мессеж нь хяналт хүлээж буй хүсэлт: энэ нь хараахан зөвлөгөө биш, баталгаажсан цаг товлолт ч биш.
+
+guidanceContent.mn.pages.services.eyebrow
+    ҮЙЛЧИЛГЭЭ
+
+guidanceContent.mn.pages.services.title
+    Бид ямар хэргийг хөтөлнө
+
+guidanceContent.mn.pages.services.description
+    Фирмийн Тайвань дахь зургаан ажлын бүлэг болон эхэнд мэдэх ёстой хязгаар.
+
+guidanceContent.mn.pages.services.intro
+    Доор бид үнэхээр хөтөлдөг бүлгүүд болон эхний шатанд түгээмэл асуудаг асуултууд байна. Энэ тайлбар таны асуудал манай хүрээнд багтах эсэхийг үнэлэхэд тусална; ерөнхий шинжтэй бөгөөд нэг хэргийн эрх зүйн шинжилгээ биш.
+
+guidanceContent.mn.pages.services.sections[0].heading
+    Тайвань дахь хөрөнгө оруулалт ба компани байгуулах
+
+guidanceContent.mn.pages.services.sections[0].paragraphs[0]
+    Бид гадаадын хөрөнгө оруулагч, компаниудыг Тайваньд компани байгуулах эсвэл ажиллуулахдаа дагалдана: эрх зүйн хэлбэр сонгох, баримт бичиг бэлтгэх, илгээх, капитал оруулах, банкны асуудал, үйл ажиллагааны газрыг шалгах, салбарын шаардлага. Тайваньд байгуулалт, үйл ажиллагаанаас үүсэх нягтлан бодох бүртгэл, татварт ч тусална.
+
+guidanceContent.mn.pages.services.sections[0].paragraphs[1]
+    Дараалал, хугацаа нь эрх зүйн хэлбэр, хөрөнгө оруулагч, салбар, банк, байгаа баримтаас хамаарч өөр байна. Компани байгуулах нь өөрөө оршин суух зөвшөөрөл (居留) эсвэл хөдөлмөр эрхлэх зөвшөөрөл (工作許可) авчирдаггүй: эдгээр нь тухайн хүний байдлаар үнэлэгдэх тусдаа журам.
+
+guidanceContent.mn.pages.services.sections[1].heading
+    Иргэний хэрэг ба хохирол нөхөн төлүүлэх
+
+guidanceContent.mn.pages.services.sections[1].paragraphs[0]
+    Энэ бүлэгт гэрээний маргаан, зөрчлийн хохирол нөхөн төлүүлэх, хэрэглэгчийн маргаан багтана. Ажил ихэвчлэн цаг хугацааны дараалал, байгаа баримт, нотлох баримтыг шалгахаас эхэлж, дараа нь дараагийн алхам руу орно.
+
+guidanceContent.mn.pages.services.sections[1].paragraphs[1]
+    Хугацаа, түүний дотор хуулийн нэхэмжлэлийн хугацаа, нотлох баримтын бүтэн байдал хэргийн явцыг тодорхойлно. Тиймээс мэдэгдэж буй огноог аль болох эрт нэрлэнэ үү. Гэрээ, мессеж, төлбөрийн баримт, газар дээрх байдлын зургийг хадгалж, эхний мессеждээ дурдна уу.
+
+guidanceContent.mn.pages.services.sections[2].heading
+    Гэрлэлт, гэр бүл, өв залгамжлал
+
+guidanceContent.mn.pages.services.sections[2].paragraphs[0]
+    Бид гэрлэлт цуцлалт (離婚), эд хөрөнгө хуваах, насанд хүрээгүй хүүхдийн эрх, үүргийг хэрэгжүүлэх, хүлээх (未成年子女權利義務之行使或負擔), уулзалт харилцаа (會面交往), өв залгамжлал (繼承)-ыг хөтөлнө, түүний дотор талууд эсвэл эд хөрөнгө өөр өөр улсад байсан ч. Хил дамнасан гэр бүлийн хэрэгт өрхийн бүртгэл (戶籍), акт бичгийн хэлбэр, Тайвань дахь нотолгооны хүчийг нэмж шалгах шаардлагатай байдаг.
+
+guidanceContent.mn.pages.services.sections[2].paragraphs[1]
+    Гэр бүлийн хэрэгт хугацаа, зэрэгцээ журам давхцах нь элбэг тул эхний товч тоймд талуудын харилцаа, одоогийн оршин суух газар, аль хэдийн явагдаж буй журмыг нэрлэнэ үү.
+
+guidanceContent.mn.pages.services.sections[3].heading
+    Хөдөлмөрийн маргаан
+
+guidanceContent.mn.pages.services.sections[3].paragraphs[0]
+    Энэ бүлэгт хөдөлмөрийн харилцаа дуусгавар болгох, Тайванийн эрх зүйн дагуух ажлаас чөлөөлөх төлбөр (資遣費; бусад улсын институттэй адилтгаж болохгүй), цалин, хөдөлмөрийн гэрээ (勞動契約)-нээс үүссэн маргаан багтана — ажилтны талд ч, ажил олгогчийн талд ч. Хянахдаа дуусгавар болгох үндэслэлийг мэдэгдэл, төлбөр, хугацааны асуудлаас тусгаарлана.
+
+guidanceContent.mn.pages.services.sections[3].paragraphs[1]
+    Хөдөлмөрийн гэрээ, ажлын журам (工作規則), цалингийн хуудас, талуудын захидал харилцаа ихэвчлэн гол баримт болно. Хэрэв танд эдгээр байгаа бол товч тоймдоо дурдна уу.
+
+guidanceContent.mn.pages.services.sections[4].heading
+    Эрүүгийн хэрэг
+
+guidanceContent.mn.pages.services.sections[4].paragraphs[0]
+    Бид мөрдөн шалгалт, шүүхэд сэжигтэн, яллагдагч, хохирогчийг дагалдаж, бизнесийн үйл ажиллагааны эрүүгийн эрсдэлийг үнэлнэ.
+
+guidanceContent.mn.pages.services.sections[4].paragraphs[1]
+    Эрүүгийн хэрэгт хугацаа богино, шат тогтоосон байдаг. Хэрэв та аль хэдийн эрүүгийн мөрдөн байцаах байгууллага эсвэл шүүхийн захидал авсан бол агуулгыг зөв дарааллаар хянахын тулд захидлын огноог аль болох эрт заана уу.
+
+guidanceContent.mn.pages.services.sections[5].heading
+    Оюуны өмч
+
+guidanceContent.mn.pages.services.sections[5].paragraphs[0]
+    Бид барааны тэмдэг (商標), патент (專利) бүртгүүлэх, зохиогчийн эрх, эдгээр эрхийн Тайвань дахь маргаанд тусална.
+
+guidanceContent.mn.pages.services.sections[5].paragraphs[1]
+    Энэ бүлэгт алхмын дараалал чухал: хамгаалалтын хүрээ, өргөдөл гаргасан мөч, бодит хэрэглээ сонголтод нөлөөлнө. Өргөдөл гаргах нь өөрөө хангагдана гэсэн үг биш.
+
+guidanceContent.mn.pages.services.sections[6].heading
+    Хэмжээ ба түүний баталгаажуулалт
+
+guidanceContent.mn.pages.services.sections[6].paragraphs[0]
+    Фирм Тайванийн эрх зүйн дагуу ажиллаж, дээрх бүлгийн хэргийг хөтөлнө. Хэрэг бүрийн хэмжээг өмгөөлөгч таны мессежийг хянасны дараа тусад нь баталгаажуулна.
+
+guidanceContent.mn.pages.services.sections[6].paragraphs[1]
+    Оршин суух байдал, хөдөлмөр эрхлэх зөвшөөрөл, төстэй асуудлыг иргэншлээр биш, баримт болон тухайн хүний байдлаар үнэлнэ. Таны асуудлын нэг хэсэг ийм сэдэвт хүрвэл холбогдохдоо нэрлэнэ үү. Энэ хуудас үр дүн ч, хариу өгөх хугацаа ч амлахгүй.
+
+guidanceContent.mn.pages.about.eyebrow
+    ФИРМ
+
+guidanceContent.mn.pages.about.title
+    Hovering International Law Firm-ийн тухай
+
+guidanceContent.mn.pages.about.description
+    Энэ тайвань өмгөөллийн фирм, түүний оффис, гадаадын оролцогчидтой хийх ажлын үндсэн мэдээлэл.
+
+guidanceContent.mn.pages.about.intro
+    Hovering International Law Firm нь Тайвань дахь өмгөөллийн фирм. Өмгөөлөгчид компанийн зөвлөөгөөс шүүхийн хэрэг хүртэл ажиллана. Энэ хэсэг фирмийн үүсэл, байршил, гадаадын оролцогчидтой хийх ажлыг тайлбарлана.
+
+guidanceContent.mn.pages.about.sections[0].heading
+    Үүсгэн байгуулалт ба бүтэц
+
+guidanceContent.mn.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所)-ийг 2016 онд National Taiwan University (國立臺灣大學)-д суралцсан өмгөөлөгчид байгуулсан. Хятад нэр 昊鼎 нь 昊 («өргөн тэнгэр») тэмдгийг 鼎 («бат суурь») тэмдэгтэй холбож, үүсгэн байгуулалтаас хойших чиглэлийг илэрхийлнэ.
+
+guidanceContent.mn.pages.about.sections[0].paragraphs[1]
+    Бид Тайбэй (臺北), Гаосюн (高雄), Тайжун (臺中), Пиндун (屏東) хотод оффистой. Гаосюн оффис корпорацийн практикт төвлөрч, иргэний, эрүүгийн, захиргааны маргаан хөтөлнө. Тайжун оффис барилгын хэрэг, оюуны өмч, Солонгос, Японтой холбоотой хэргийг хөтөлнө. Пиндун оффисыг 2017 онд тус бүсийн хэрэгцээнд нээсэн.
+
+guidanceContent.mn.pages.about.sections[0].paragraphs[2]
+    Өмгөөллийн ажлаас гадна 2020 оноос Hovering Accounting Office ч байгаа бөгөөд энэ нь бизнес эрхлэгч, хөрөнгөтэй хувь хүмүүст нягтлан бодох бүртгэл, татварын төлөвлөлт санал болгоно.
+
+guidanceContent.mn.pages.about.sections[1].heading
+    Гадаадын оролцогчидтой хийх ажил
+
+guidanceContent.mn.pages.about.sections[1].paragraphs[0]
+    Хил дамнасан ажилд компани байгуулах, виз, барааны тэмдэг, патентын өргөдөл, эрх зүйн эрсдэлийг шалгах, компанийн татварын зөвлөгөө багтана. Тайжун оффис ялангуяа барилгын хэрэг, оюуны өмч, Солонгос, Японтой холбоотой хэргийг хөтөлнө. Эмэгтэй өмгөөлөгч Wei Tseng (曾雋崴) Солонгос, Япон болон бусад олон улсын үйлчлүүлэгчдийг нэрлэгдсэн бүлэгт дагалдана.
+
+guidanceContent.mn.pages.about.sections[1].paragraphs[1]
+    Хэргийг хүлээн авах эсэх нь агуулга, харилцааны хэлээс хамаарна. Таны асуудал нэрлэгдсэн бүлэгт багтаж, дөрвөн зөвлөгөөний хэлний нэгээр ярилцаж болох бол хянуулахаар товч тойм илгээж болно.
+
+guidanceContent.mn.pages.about.sections[2].heading
+    Та бидэнтэй холбогдох үед
+
+guidanceContent.mn.pages.about.sections[2].paragraphs[0]
+    Таны товч тойм ирсний дараа өмгөөлөгч агуулгыг хянаж, дараа нь боломжит ажлын хэмжээ, дахин хэрэгтэй баримт, дараагийн алхмыг ярилцана. Татвар, нягтлан бодох бүртгэлийн асуудалд фирм нягтлан бодох бүртгэлийн нэгжтэй хамт хөтөлж болно.
+
+guidanceContent.mn.pages.about.sections[2].paragraphs[1]
+    Хэрэг бүрийн үр дүн баримт, байгаа баримт бичгээс хамаарна; бид үр дүн амлахгүй. Таны нөхцөлд хүчин төгөлдөр хариу хэрэгтэй бол баримт бичгийг дөрвөн зөвлөгөөний хэлний нэгээр өмгөөлөгчтэй ярилцах шаардлагатай.
+
+guidanceContent.mn.pages.lawyers.eyebrow
+    ӨМГӨӨЛӨГЧ
+
+guidanceContent.mn.pages.lawyers.title
+    Hovering-ийн олон улсын баг
+
+guidanceContent.mn.pages.lawyers.description
+    Hovering-ийн өмгөөлөгч, үйл ажиллагааны менежер, түнш нягтлан бодогчийн танилцуулга.
+
+guidanceContent.mn.pages.lawyers.intro
+    
+
+guidanceContent.mn.pages.pricing.eyebrow
+    ХЭМЖЭЭ, ХӨЛС
+
+guidanceContent.mn.pages.pricing.title
+    Ажлын хэмжээ, хөлсийг хэрхэн тогтоодог вэ
+
+guidanceContent.mn.pages.pricing.description
+    Дарааллын тайлбар: эхлээд ажлын хэмжээ, дараа нь хөлсийн баталгаажуулалт, энэ хуудсанд үнийн жагсаалт яагаад байхгүй вэ.
+
+guidanceContent.mn.pages.pricing.intro
+    Энэ хуудас хөлсийг хэрхэн тогтоодыг тайлбарлана, хэмжээг нь биш. Хэмжээ нь тухайн хэргийн ажлын хэмжээнээс хамаарч, энэ хэмжээ тодорхой болсны дараа л утгатай.
+
+guidanceContent.mn.pages.pricing.sections[0].heading
+    Эхлээд ажлын хэмжээг тогтооно
+
+guidanceContent.mn.pages.pricing.sections[0].paragraphs[0]
+    Ижил төрлийн хэрэг оролцогчдын тоо, байгаа баримт, мөрдөх хугацаа, журам аль хэдийн эхэлсэн эсэхээс хамаарч маш өөр хөдөлмөр шаардаж болно. Тиймээс эхний алхам үргэлж юу ажилд багтах, юу багтахгүйг тогтоох явдал.
+
+guidanceContent.mn.pages.pricing.sections[0].paragraphs[1]
+    Таны эхэнд илгээх товч тойм энэ хэмжээний үндэс. Явц, таны хүсэлт, хугацааг хэдий чинээ тодорхой бичив, төдий чинээ хэмжээг нарийн тогтоож болно.
+
+guidanceContent.mn.pages.pricing.sections[1].heading
+    Хөлсийг ажил эхлэхээс өмнө баталгаажуулна
+
+guidanceContent.mn.pages.pricing.sections[1].paragraphs[0]
+    Ажлын хэмжээ тодорхой болсны дараа хөлсний хэмжээ, тооцох аргыг ажил эхлэхээс өмнө тантай ярилцаж баталгаажуулна. Явцын дунд хэмжээ өөрчлөгдвөл дахин баталгаажуулах шаардлагатай.
+
+guidanceContent.mn.pages.pricing.sections[1].paragraphs[1]
+    Энэ хуудас үнийн санал биш, төлөх үүрэг үүсгэхгүй. Энэ хуудсаар хүсэлт илгээхэд төлбөр шаардахгүй.
+
+guidanceContent.mn.pages.pricing.sections[2].heading
+    Зөвлөгөө төлбөртэй үйлчилгээ байж болно
+
+guidanceContent.mn.pages.pricing.sections[2].paragraphs[0]
+    Өмгөөлөгчийн зөвлөгөө төлбөртэй үйлчилгээ байж болно. Энэ хуудас эхний яриа төлбөргүй гэж хэлэхгүй, аль ч хэсгийг тийн уншиж болохгүй.
+
+guidanceContent.mn.pages.pricing.sections[2].paragraphs[1]
+    Зөвлөгөө төлбөртэй бол хэмжээ, төлөх аргыг яриа болохоос өмнө мэдэгдэнэ.
+
+guidanceContent.mn.pages.pricing.sections[3].heading
+    Энэ хуудас яагаад тариф нэрлэхгүй вэ
+
+guidanceContent.mn.pages.pricing.sections[3].paragraphs[0]
+    Хөлс хэргээс өөрөө хамаарна: хөдөлмөр, оролцогчдын тоо, баримт, хугацаа, журам аль хэдийн явагдаж байгаа эсэх. Урьдчилан нэрлэсэн тоо таны хэргийн хөлсийг харуулахгүй. Тиймээс бид эхлээд ажлын хэмжээг тогтоож, дараа нь ажил эхлэхээс өмнө хөлсийг мэдэгдэнэ.
+
+guidanceContent.mn.pages.pricing.sections[3].paragraphs[1]
+    Өмгөөлөгчийн хөлснөөс гадна шүүх, захиргааны зардал, гуравдагч этгээдийн зардал гарч болно. Эдгээр нь хөлснөөс тусдаа бөгөөд тухайн журмаас хамаарна.
+
+guidanceContent.mn.pages.contact.eyebrow
+    ХОЛБОО
+
+guidanceContent.mn.pages.contact.title
+    Фирмтэй хэрхэн холбогдох вэ
+
+guidanceContent.mn.pages.contact.description
+    Хуудсын хэл, зөвлөгөөний хэл, дөрвөн хэлний алийг нь ч ашиглаж чадахгүй үеийн журам, энэ хуудас юу амлахгүй вэ.
+
+guidanceContent.mn.pages.contact.intro
+    Бидэнд бичихээсээ өмнө дараах гурван зүйлийг ялгана уу. Тэднийг ихэвчлэн хольдог ч өөр өөр утгатай.
+
+guidanceContent.mn.pages.contact.sections[0].heading
+    Тусдаа байлгах гурван зүйл
+
+guidanceContent.mn.pages.contact.sections[0].paragraphs[0]
+    Хуудсын харуулах хэл, өмгөөлөгчийн зөвлөгөөний хэл, таны бичих хэл нь гурван өөр зүйл.
+
+guidanceContent.mn.pages.contact.sections[0].items[0]
+    Хуудсын хэл: эдгээр мэдээллийг монгол хэлээр бичсэн.
+
+guidanceContent.mn.pages.contact.sections[0].items[1]
+    Зөвлөгөөний хэл: зөвлөгөө англи, хятад (中文), япон, солонгос хэлээр явагдана.
+
+guidanceContent.mn.pages.contact.sections[0].items[2]
+    Таны захидлын хэл: товч тоймоо өөрийн хэлээр бичиж болно; эх бичвэрийг өөрчлөхгүй хадгална.
+
+guidanceContent.mn.pages.contact.sections[1].heading
+    Дөрвөн зөвлөгөөний хэлний алийг нь ч ашиглаж чадахгүй бол
+
+guidanceContent.mn.pages.contact.sections[1].paragraphs[0]
+    Холбоо барих маягтаас та «Холбоо барих аргыг баталгаажуулах шаардлагатай» гэснийг сонгож болно. Бид хариу өгч, хэрэгжүүлж болох холбоо барих арга байгаа эсэхийг шалгана; өөр хэл дээрх үйлчилгээ баталгаажихгүй бөгөөд хариу өгөх хугацааг амлахгүй.
+
+guidanceContent.mn.pages.contact.sections[1].paragraphs[1]
+    Энэ бол зөвхөн шалгах алхам, амлалт биш. Бид орчуулагч амлахгүй, монгол хэлээр ч, нэрлэгдсэн дөрвөн хэлээс өөр хэлээр ч үйлчилгээ амлахгүй, мөн ямар ч хэргийг хүлээн авна гэж амлахгүй.
+
+guidanceContent.mn.pages.contact.sections[2].heading
+    Эхний мессежид юу байх ёстой вэ
+
+guidanceContent.mn.pages.contact.sections[2].paragraphs[0]
+    Юу болсныг, ямар тусламж хэрэгтэйг, хэрэг Тайваньтай ямар холбоотойг, мэддэг хугацаагаа нэрлэнэ үү. Шүүх эсвэл байгууллагын захидал аль хэдийн авсан бол захидлын огноог заана уу.
+
+guidanceContent.mn.pages.contact.sections[2].paragraphs[1]
+    Эхний шатанд паспортын дугаар, үнэмлэхийн дугаар, дансны мэдээлэл, эмнэлгийн карт, бүх нотлох баримтыг илгээх шаардлагагүй. Өмгөөлөгчийн зааврыг хүлээгээд, эмзэг баримтыг аюулгүй замаар илгээнэ үү.
+
+guidanceContent.mn.pages.contact.sections[3].heading
+    Энэ хуудас юу амлахгүй вэ
+
+guidanceContent.mn.pages.contact.sections[3].paragraphs[0]
+    Бид хариу өгөх хугацаа амлахгүй, энэ хуудсаар цаг товлолт баталгаажуулахгүй, тодорхой өмгөөлөгч амлахгүй, орчуулагч өгөхгүй. Аман орчуулагч болон бичгийн орчуулга нь өөр зүйл: таны мессежийг автоматаар орчуулахгүй.
+
+guidanceContent.mn.pages.contact.sections[3].paragraphs[1]
+    Хүсэлт илгээвэл агуулгыг хадгалж, хяналт хүлээнэ. Хариу ирэхгүй бол холбоо барих хуудсанд заасан цахим шуудангийн хаяг руу дахин бичиж болно.
+
+guidanceContent.mn.pages.faq.eyebrow
+    АСУУЛТ ХАРИУЛТ
+
+guidanceContent.mn.pages.faq.title
+    Түгээмэл асуулт
+
+guidanceContent.mn.pages.faq.description
+    Ажлын хүрээ, бэлтгэл, хэл, хөлс, илгээсэн хүсэлтийн утгын тайлбар.
+
+guidanceContent.mn.pages.faq.intro
+    Доорх хариу ерөнхий мэдээллийн түвшинд өгөгдсөн. Таны хэргийн хариу өмгөөлөгч баримтыг хянасны дараа л боломжтой.
+
+guidanceContent.mn.pages.faq.sections[0].heading
+    Энэ хэсгийг хэрхэн ашиглах вэ
+
+guidanceContent.mn.pages.faq.sections[0].paragraphs[0]
+    Таны нөхцөлд хариу олдохгүй бол хариу ихэвчлэн тусгай баримтаас хамаарна. Тэгвэл тэдгээр баримтыг энэ хуудаснаас өөрөө дүгнэхгүйгээр товч тоймдоо бичнэ үү.
+
+guidanceContent.mn.pages.faq.faqs[0].question
+    Фирм ямар хэргийг хөтөлнө вэ?
+
+guidanceContent.mn.pages.faq.faqs[0].answer
+    Бид зургаан бүлэг хөтөлнө: Тайвань дахь хөрөнгө оруулалт ба компани байгуулах, иргэний хэрэг ба хохирол нөхөн төлүүлэх, гэрлэлт, гэр бүл, өв залгамжлал, хөдөлмөрийн маргаан, эрүүгийн хэрэг, оюуны өмч. Хэргийг хүлээн авах эсэхийг агуулгыг хянасны дараа шийднэ.
+
+guidanceContent.mn.pages.faq.faqs[1].question
+    Холбогдохоос өмнө юу бэлтгэх вэ?
+
+guidanceContent.mn.pages.faq.faqs[1].answer
+    Явц, таны хүсэлт, Тайваньтай холбоо, хугацаа байвал түүнийг товч тоймлон бэлтгэнэ үү. Шүүх эсвэл байгууллагын захидал аль хэдийн байвал огноог нэрлэнэ үү. Энэ шатанд иргэний үнэмлэх, бүх нотлох баримтыг илгээх шаардлагагүй.
+
+guidanceContent.mn.pages.faq.faqs[2].question
+    Би монгол хэлээр зөвлөгөө авч болох уу?
+
+guidanceContent.mn.pages.faq.faqs[2].answer
+    Үгүй. Эдгээр мэдээллийг монгол хэлээр бичсэн боловч өмгөөлөгчийн зөвлөгөө зөвхөн англи, хятад (中文), япон, солонгос хэлээр явагдана. Бид орчуулагч ч амлахгүй. Аман орчуулагч болон бичгийн орчуулга нь өөр зүйл: таны бичсэн эх бичвэрийг хэвээр нь хадгалж, автоматаар орчуулахгүй.
+
+guidanceContent.mn.pages.faq.faqs[3].question
+    Дөрвөн хэлний алийг нь ч ашиглаж чадахгүй бол яах вэ?
+
+guidanceContent.mn.pages.faq.faqs[3].answer
+    Хүсэлт илгээхдээ «Холбоо барих аргыг баталгаажуулах шаардлагатай» гэснийг сонгоно уу. Бид холбоо барих аргыг шалгахаар хариулна, гэхдээ өөр хэл дээрх үйлчилгээ баталгаажихгүй. Энэ бол шалгах алхам, өөр хэлээр ажиллаж чадна гэсэн амлалт биш.
+
+guidanceContent.mn.pages.faq.faqs[4].question
+    Миний монгол бичвэрийг хэрхэн боловсруулах вэ?
+
+guidanceContent.mn.pages.faq.faqs[4].answer
+    Таны бичсэн эх бичвэрийг хэвээр нь хадгалж, автоматаар орчуулахгүй. Шаардлагатай бол цаашдын харилцааны хэлийг тантай хамт баталгаажуулна.
+
+guidanceContent.mn.pages.faq.faqs[5].question
+    Хүсэлт илгээсэн бол зөвлөгөө болсон гэж үү?
+
+guidanceContent.mn.pages.faq.faqs[5].answer
+    Үгүй. Илгээсэн хүсэлт өмгөөлөгчийн хяналтыг хүлээнэ. Энэ нь эрх зүйн зөвлөгөө биш, баталгаажсан цаг товлолт биш, илгээх нь өөрөө өмгөөлөгч ба үйлчлүүлэгчийн харилцаа үүсгэхгүй.
+
+guidanceContent.mn.pages.faq.faqs[6].question
+    Хөлсийг хэрхэн тооцох вэ?
+
+guidanceContent.mn.pages.faq.faqs[6].answer
+    Эхлээд ажлын хэмжээг тогтоож, дараа нь хөлсний хэмжээ, тооцох аргыг ажил эхлэхээс өмнө тантай баталгаажуулна. Энэ хуудас тоо нэрлэхгүй, эхний яриа төлбөргүй гэж хэлэхгүй.
+
+guidanceContent.mn.pages.faq.faqs[7].question
+    Миний асуудал маш яаралтай бол яах вэ?
+
+guidanceContent.mn.pages.faq.faqs[7].answer
+    Товч тоймын эхэнд хугацаа эсвэл албан захидал дээрх огноог нэрлэж, хянах үед эдгээр огноо харагдахаар болгоно уу. Энэ хуудсанд яаралтай холбоо байхгүй, хариу өгөх хугацааг хангахгүй; таны асуудал хүлээж чадахгүй бол байгаа газраасаа өөр замыг зэрэгцээ хайх хэрэгтэй.
+
+guidanceContent.mn.pages.privacy.eyebrow
+    НУУЦЛАЛ
+
+guidanceContent.mn.pages.privacy.title
+    Холбоо барих маягтаар цуглуулдаг өгөгдөл
+
+guidanceContent.mn.pages.privacy.description
+    Энэ монгол хэсгийн холбоо барих маягт юу цуглуулах, эх бичвэрийг хэрхэн боловсруулах, таны өгөгдлийн талаар хэрхэн холбогдох вэ.
+
+guidanceContent.mn.pages.privacy.intro
+    Энэ хэсэг зөвхөн эдгээр мэдээллийн хуудас дээрх холбоо барих маягтад хамаарна. Энэ нь өгөгдөлтэй харьцахыг тайлбарлах бөгөөд техникийн бүрэн хамгаалалт биш.
+
+guidanceContent.mn.pages.privacy.sections[0].heading
+    Ямар өгөгдөл цуглуулах вэ
+
+guidanceContent.mn.pages.privacy.sections[0].paragraphs[0]
+    Та энэ хэсгийн маягтаар хүсэлт илгээхэд дараах мэдээллийг тэмдэглэнэ:
+
+guidanceContent.mn.pages.privacy.sections[0].items[0]
+    Таны заасан нэр
+
+guidanceContent.mn.pages.privacy.sections[0].items[1]
+    Хариу өгөх цахим шуудангийн хаяг
+
+guidanceContent.mn.pages.privacy.sections[0].items[2]
+    Илгээх үеийн хуудсын харуулах хэл
+
+guidanceContent.mn.pages.privacy.sections[0].items[3]
+    Таны бичсэн хэл
+
+guidanceContent.mn.pages.privacy.sections[0].items[4]
+    Таны хүссэн зөвлөгөөний хэл
+
+guidanceContent.mn.pages.privacy.sections[0].items[5]
+    Таны бичсэн эх бичвэр
+
+guidanceContent.mn.pages.privacy.sections[0].items[6]
+    Хүсэлт илгээх зөвшөөрөл
+
+guidanceContent.mn.pages.privacy.sections[0].items[7]
+    Хүсэлтийг дахин олох дугаар
+
+guidanceContent.mn.pages.privacy.sections[1].heading
+    Эх бичвэрийг өөрчлөхгүй хадгална
+
+guidanceContent.mn.pages.privacy.sections[1].paragraphs[0]
+    Таны бичвэрийг таны бичсэнээр хадгалж, автоматаар орчуулахгүй. Боловсруулахад орчуулга хэрэгтэй бол үүнийг тантай тусад нь ярилцана.
+
+guidanceContent.mn.pages.privacy.sections[1].paragraphs[1]
+    Эх бичвэрийг хадгалдаг тул эхний шатанд одоо хэрэггүй зүйл, тухайлбал паспортын дугаар, үнэмлэхийн дугаар эсвэл дансны мэдээлэл бичихгүй байгаарай.
+
+guidanceContent.mn.pages.privacy.sections[2].heading
+    Хадгалах газар ба хандалт
+
+guidanceContent.mn.pages.privacy.sections[2].paragraphs[0]
+    Таны илгээсэн өгөгдлийг олон нийтэд нээлттэй биш газар хадгална. Хүсэлтийг боловсруулахын тулд зөвхөн фирмийн эрх бүхий хүмүүс хандаж болно.
+
+guidanceContent.mn.pages.privacy.sections[2].paragraphs[1]
+    Энэ хуудас аюулгүй байдлын бүрэн амлалт өгөхгүй. Ямар ч дамжуулах зам, хадгалах газар бүрэн аюулгүй биш; тиймээс эмзэг баримтыг зөвхөн өмгөөлөгчийн тусгай зааврын дараа илгээнэ үү.
+
+guidanceContent.mn.pages.privacy.sections[3].heading
+    Ашиглах зорилго
+
+guidanceContent.mn.pages.privacy.sections[3].paragraphs[0]
+    Илгээсэн өгөгдөл хүсэлтийг хянах, танд хариулах, холбоо барих аргыг тодруулах, ажил эхэлбэл боловсруулахад зориулагдана.
+
+guidanceContent.mn.pages.privacy.sections[3].paragraphs[1]
+    Өгөгдлийг тусдаа зөвшөөрөлгүйгээр маркетингийн зорилгоор ашиглахгүй.
+
+guidanceContent.mn.pages.privacy.sections[4].heading
+    Мэдэгдэл ба хүсэлтийн дугаар
+
+guidanceContent.mn.pages.privacy.sections[4].paragraphs[0]
+    Хүсэлт амжилттай илгээгдвэл систем фирмд мэдэгдэнэ. Хэрэв энэ мэдэгдэл хараахан баталгаажаагүй бол таны бичвэр хадгалагдсан хэвээр үлдэж, алдагдахгүй.
+
+guidanceContent.mn.pages.privacy.sections[4].paragraphs[1]
+    Хүсэлтийн дугаар нь таны хүсэлтийг манай бүртгэлээс олоход зориулагдана. Хадгалсны дараа харагдана; дахин холбогдохдоо нэрлэж болно.
+
+guidanceContent.mn.pages.privacy.sections[5].heading
+    Таны эрх ба холбоо барих зам
+
+guidanceContent.mn.pages.privacy.sections[5].paragraphs[0]
+    Та холбоо барих хуудсанд заасан цахим шуудангийн хаягаар өгөгдлийнхөө тухай мэдээлэл, залруулга, устгал хүсэх эсвэл зөвшөөрлөө буцааж болно. Хууль эсвэл журмын хадгалах үүрэг байвал хязгаарлалтыг тайлбарлана.
+
+guidanceContent.mn.pages.privacy.sections[5].paragraphs[1]
+    Энэ хуудас тогтсон хадгалах хугацаа нэрлэхгүй, учир нь бодит үргэлжлэл хэрэг үргэлжлэх эсэх, холбоотой үүргээс хамаарна. Эрт устгахыг хүсвэл холбогдохдоо мэдэгдэнэ үү.
+
+guidanceContent.mn.pages.privacy.sections[6].heading
+    Хадгалах газар ба үйлчилгээ үзүүлэгч
+
+guidanceContent.mn.pages.privacy.sections[6].paragraphs[0]
+    Энэ сайтыг Vercel дээр байрлуулсан бөгөөд таны илгээсэн өгөгдлийг энэ үйлчилгээний хаалттай объект хадгалалтад хадгална. Захидлыг фирмийн ашигладаг шуудангийн үйлчилгээгээр илгээнэ.
+
+guidanceContent.mn.pages.privacy.sections[6].paragraphs[1]
+    Зарим үйлчилгээ үзүүлэгчийн сервер Тайваниас гадна байж болох тул таны өгөгдөл тэнд хадгалагдаж, боловсруулагдаж болно. Хадгалах зорилго биелмэгц өгөгдлийг хойшлуулалгүй устгана; хүчин төгөлдөр хэм хэмжээгээр хадгалах ёстой өгөгдөл энэ хугацаанд үлдэнэ. Хувийн өгөгдлийн хүсэлтийг wei@hoveringlaw.com.tw хүлээн авна.
+
+guidanceContent.mn.pages.disclaimer.eyebrow
+    ТАТГАЛЗАЛ
+
+guidanceContent.mn.pages.disclaimer.title
+    Энэ хуудас дээрх мэдээллийн хэмжээ ба хязгаар
+
+guidanceContent.mn.pages.disclaimer.description
+    Мэдээллийн ерөнхий шинж, эрх зүйн үйлчлэх хүрээ, өмгөөлөгч ба үйлчлүүлэгчийн харилцаа үүсэх нөхцөл.
+
+guidanceContent.mn.pages.disclaimer.intro
+    Энэ хэсэг эдгээр монгол мэдээллийн хуудас танд юу хийж чадах, юу хийж чадахгүйг тодорхойлно.
+
+guidanceContent.mn.pages.disclaimer.sections[0].heading
+    Зөвхөн ерөнхий мэдээлэл
+
+guidanceContent.mn.pages.disclaimer.sections[0].paragraphs[0]
+    Эдгээр хуудсын агуулгыг ерөнхий мэдээлэл болгон бичсэн. Энэ нь таны хэргийн эрх зүйн зөвлөгөө биш, өөрийн баримтыг шалгахыг орлохгүй.
+
+guidanceContent.mn.pages.disclaimer.sections[0].paragraphs[1]
+    Хэргийн үр дүн баримт, хэрэглэх хэм хэмжээ, цаг хугацаанаас хамаарна; гаднаасаа төстэй хоёр нөхцөл өөрөөр төгсөж болно.
+
+guidanceContent.mn.pages.disclaimer.sections[1].heading
+    Эрх зүйн үйлчлэх хүрээ
+
+guidanceContent.mn.pages.disclaimer.sections[1].paragraphs[0]
+    Фирм Тайванийн эрх зүйн дагуу хэрэг хөтөлдөг бөгөөд энэ хуудас зөвхөн энэ хүрээний ажлын тухай ярина.
+
+guidanceContent.mn.pages.disclaimer.sections[1].paragraphs[1]
+    Агуулга нь Тайванаас өөр эрх зүйн тогтолцооны, түүний дотор таны оршин суух газрын эрх зүйн зөвлөгөө биш. Таны хэргийн нэг хэсэг өөр эрх зүйн тогтолцоонд хүрвэл энэ хэсэгт ямар мэргэшсэн мэргэжилтэн хэрэгтэйг тантай тодруулна.
+
+guidanceContent.mn.pages.disclaimer.sections[2].heading
+    Өмгөөлөгч ба үйлчлүүлэгчийн харилцаа өөрөө үүсэхгүй
+
+guidanceContent.mn.pages.disclaimer.sections[2].paragraphs[0]
+    Энэ хуудсыг унших, маягт эсвэл захидал илгээх нь өөрөө өмгөөлөгч ба үйлчлүүлэгчийн харилцаа үүсгэхгүй.
+
+guidanceContent.mn.pages.disclaimer.sections[2].paragraphs[1]
+    Энэ харилцаа хэрэг хянагдаж, хоёр тал ажлыг хүлээн авснаа баталгаажуулсны дараа л үүснэ.
+
+guidanceContent.mn.pages.disclaimer.sections[3].heading
+    Үр дүнгийн амлалт байхгүй
+
+guidanceContent.mn.pages.disclaimer.sections[3].paragraphs[0]
+    Энэ хуудсын аль ч хэсэг хэргийн үр дүн, өргөдөл хангагдах, оршин суух, ажиллах байдлын амлалт биш.
+
+guidanceContent.mn.pages.disclaimer.sections[3].paragraphs[1]
+    Гадаад холбоос чиглүүлэхэд зориулагдана; бид гуравдагч этгээдийн агуулгын зөв, шинэ байдлыг амлахгүй.
+
+guidanceContent.mn.pages.columns.eyebrow
+    НИЙТЛЭЛ
+
+guidanceContent.mn.pages.columns.title
+    Тайванийн эрх зүйн нийтлэл
+
+guidanceContent.mn.pages.columns.description
+    Тайванийн эрх зүйн түгээмэл асуултын монгол нийтлэл. Агуулга нь нийтэлсэн үеийн ерөнхий мэдээлэл бөгөөд таны хэргийн эрх зүйн зөвлөгөө биш.
+
+guidanceContent.mn.pages.columns.intro
+    Фирм Тайванийн эрх зүйн түгээмэл асуултаар нийтлэл гаргана. Монгол хэлээр байгаа нийтлэл энэ хуудсанд байна; хажууд эх хэлний нийтлэлийн жагсаалтыг нээдэг дөрвөн холбоос бий.
+
+guidanceContent.mn.pages.columns.sections[0].heading
+    Хэлээр нь дөрвөн жагсаалт
+
+guidanceContent.mn.pages.columns.sections[0].paragraphs[0]
+    Энэ хэсэгт дөрвөн холбоос бий: солонгос, хятад, англи, япон хэл дээрх нийтлэлийн жагсаалт. Холбоос бүр жагсаалтын хэлийг нэрлэж, агуулга ямар хэлээр нээгдэхийг урьдчилан мэдэгдэнэ.
+
+guidanceContent.mn.pages.columns.sections[0].paragraphs[1]
+    Эдгээр дөрвөн жагсаалт нь нийтлэлийн эх хэлээрх жагсаалт, орчуулгын жагсаалт биш. Монгол хэлээр байгаа нийтлэлийг энэ хуудсанд тусад нь оруулсан.
+
+guidanceContent.mn.pages.columns.sections[1].heading
+    Холбоос хаашаа хөтлөх вэ
+
+guidanceContent.mn.pages.columns.sections[1].paragraphs[0]
+    Дөрвөн холбоосын нэгийг сонговол тухайн хэлний нийтлэлийн жагсаалт нээгдэнэ. Жагсаалтаас та өөрөө бичвэр сонгоно; бүх агуулга нийтлэлийн эх хэлээр харагдана.
+
+guidanceContent.mn.pages.columns.sections[1].paragraphs[1]
+    Энэ хуудас нийтлэлийн агуулгыг хураангуйлахгүй, сэдэв дөрвөн хэл дээр байгааг амлахгүй. Жагсаалт бүр зөвхөн тухайн хэлээр нийтэлсэн бичвэрийг агуулна.
+
+guidanceContent.mn.pages.columns.sections[2].heading
+    Нийтлэл хэр хэмжээнд чиглүүлж чадах вэ
+
+guidanceContent.mn.pages.columns.sections[2].paragraphs[0]
+    Нийтлэл нь нийтэлсэн үеийн ерөнхий мэдээлэл. Хэм хэмжээ, түүний хэрэглээ өөрчлөгдөж болно, нийтлэл таны хэргийн бүх нөхцөлийг агуулахгүй.
+
+guidanceContent.mn.pages.columns.sections[2].paragraphs[1]
+    Тиймээс бодит хэрэгт үйл ажиллагааны үндэс болгон нийтлэлд бүү тулгуурла. Тоймд ашиглаад, баримтаа өмгөөлөгчтэй тусад нь ярилцана уу; энэ хуудас зөвлөгөөний алхам биш.
+
+guidanceTeamCopy.mn.label
+    БАГ
+
+guidanceTeamCopy.mn.title
+    Hovering-ийн олон улсын баг
+
+guidanceTeamCopy.mn.description
+    Hovering-ийн өмгөөлөгч, үйл ажиллагааны менежер, түнш нягтлан бодогчийн танилцуулга.
+
+guidanceTeamCopy.mn.representativeTitle
+    Удирдах өмгөөлөгч
+
+guidanceTeamCopy.mn.teamTitle
+    Өмгөөлөгч ба ажилтан
+
+guidanceTeamCopy.mn.partnerTitle
+    Түнш нягтлан бодогч (CPA)
+
+guidanceTeamCopy.mn.introLabel
+    Танилцуулга
+
+guidanceTeamCopy.mn.educationLabel
+    Боловсрол
+
+guidanceTeamCopy.mn.experienceLabel
+    Туршлага
+
+guidanceTeamCopy.mn.photoAltPrefix
+    Зураг
+
+guidanceTeamCopy.mn.workingLanguagesLabel
+    Ажлын хэл
+
+guidanceTeamCopy.mn.fullProfileLabel
+    Бүрэн танилцуулга (англи хэлээр)
+
+guidanceTeamCopy.mn.keyFactsHeading
+    Эмэгтэй өмгөөлөгч Wei Tseng (曾雋崴) — үндсэн мэдээлэл
+
+guidanceTeamCopy.mn.qualificationLabel
+    Эрх ба фирм
+
+guidanceTeamCopy.mn.qualificationSentence
+    {name} Тайваньд өмгөөлөгчөөр ажиллах эрхтэй эмэгтэй өмгөөлөгч бөгөөд {firm}-ийн удирдах өмгөөлөгч юм.
+
+guidanceTeamCopy.mn.practiceLabel
+    Үндсэн чиглэл
+
+guidanceTeamCopy.mn.consultationLanguagesLabel
+    Зөвлөгөөний хэл
+
+guidanceTeamCopy.mn.roles.tseng-junwei
+    Тайвань дахь удирдах өмгөөлөгч (Managing Attorney)
+
+guidanceTeamCopy.mn.roles.chang-rongxuan
+    Тайвань дахь өмгөөлөгч (Taiwan Attorney)
+
+guidanceTeamCopy.mn.roles.chang-fangyu
+    Хуулийн туслах (Paralegal)
+
+guidanceTeamCopy.mn.roles.son-jungmin
+    Солонгосын үйл ажиллагааны менежер (Korea Operations Manager)
+
+guidanceTeamCopy.mn.roles.huang-shengping
+    Түнш нягтлан бодогч (Partner CPA)
+
+guidanceTeamBios.mn.tseng-junwei.intro[0]
+    Фирм Тайвань дахь компани болон хувь хүний хэргийг англи, япон, солонгос, хятад хэлээр хөтөлнө.
+
+guidanceTeamBios.mn.tseng-junwei.intro[1]
+    Тэрбээр спорт зааланд бэртсэн Солонгосын оюутны хохирол нөхөн төлүүлэх нэхэмжлэлд төлөөлж, TWD 1.57M-ийн нэгдүгээр шатны шийдвэр гаргуулсан.
+
+guidanceTeamBios.mn.tseng-junwei.education[0]
+    Магистр (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.mn.tseng-junwei.education[1]
+    Хууль, санхүүгийн хоёр мэргэжлээр бакалавр (B.A.), National Chengchi University
+
+guidanceTeamBios.mn.tseng-junwei.education[2]
+    Kobe University болон Waseda University-д солилцооны суралцагч
+
+guidanceTeamBios.mn.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.mn.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.mn.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.mn.chang-rongxuan.intro[0]
+    Өмнө нь Ministry of Education, Legal Affairs Division-д захиргааны болон иргэний хэрэгт төвлөрч ажилласан.
+
+guidanceTeamBios.mn.chang-rongxuan.intro[1]
+    Их сургуулийн хэрэг, багш нарын эрх, захиргааны гомдолд туршлагатай.
+
+guidanceTeamBios.mn.chang-rongxuan.education[0]
+    Хуулийн бакалавр (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.mn.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.mn.chang-rongxuan.experience[1]
+    Өмгөөлөгч, Hovering International Law Firm
+
+guidanceTeamBios.mn.chang-fangyu.intro[0]
+    Олон жил хэд хэдэн фирмд ахлах хуулийн туслахаар ажилласан хуулийн туслах; шүүхийн дэмжлэг, корпорацийн эрх зүй, гадаадын хөрөнгө оруулалтыг хариуцна.
+
+guidanceTeamBios.mn.chang-fangyu.intro[1]
+    Шүүхийн журам, компани байгуулах, гадаадын хөрөнгө оруулалтын зөвшөөрөл, лицензийн өргөдөл, Солонгос–Тайванийн харилцааг дэмжинэ.
+
+guidanceTeamBios.mn.chang-fangyu.education[0]
+    Хуулийн бакалавр (LL.B.), Tunghai University
+
+guidanceTeamBios.mn.chang-fangyu.experience[0]
+    Ахлах хуулийн туслах, Boyin Law Firm
+
+guidanceTeamBios.mn.chang-fangyu.experience[1]
+    Ахлах хуулийн туслах, Muyang International Law Firm
+
+guidanceTeamBios.mn.son-jungmin.intro[0]
+    Солонгосоос ирсэн үйлчлүүлэгчдийн зөвлөгөөний цаг, харилцааг зохицуулна.
+
+guidanceTeamBios.mn.son-jungmin.intro[1]
+    Мэдээллийн технологийн үндсэн дээр баримтын систем, ажлын урсгалаар нэгж хоорондын харилцааг дэмжинэ.
+
+guidanceTeamBios.mn.son-jungmin.education[0]
+    Мэдээллийн технологийн бакалавр (B.S.), National Cheng Kung University
+
+guidanceTeamBios.mn.son-jungmin.experience[0]
+    Солонгосын үйл ажиллагааны чиглэл, Hovering International Law Firm
+
+guidanceTeamBios.mn.huang-shengping.intro[0]
+    National Chengchi University-д нягтлан бодох бүртгэлийн бакалавр, магистрын хөтөлбөрийг төгсөж, одоо нягтлан бодох бүртгэлийн фирм удирдана.
+
+guidanceTeamBios.mn.huang-shengping.intro[1]
+    Корпорацийн үйлчлүүлэгчдэд эрх зүй, татвар, санхүүгийн эрсдэлийн цогц шинжилгээг дэмжинэ.
+
+guidanceTeamBios.mn.huang-shengping.education[0]
+    Нягтлан бодох бүртгэлийн магистр (M.A.), National Chengchi University
+
+guidanceTeamBios.mn.huang-shengping.education[1]
+    Нягтлан бодох бүртгэлийн бакалавр (B.A.), National Chengchi University
+
+guidanceTeamBios.mn.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.mn.Korean
+    солонгос
+
+guidanceLanguageNames.mn.Chinese
+    хятад
+
+guidanceLanguageNames.mn.Japanese
+    япон
+
+guidancePracticeAreaNames.mn.Taiwan company setup
+    Тайваньд компани байгуулах
+
+guidancePracticeAreaNames.mn.Taiwan investment counsel
+    Тайванийн хөрөнгө оруулалтын эрх зүйн зөвлөгөө
+
+guidancePracticeAreaNames.mn.Civil litigation and damages
+    Иргэний хэрэг ба хохирол нөхөн төлүүлэх
+
+guidancePracticeAreaNames.mn.Trademark and patent filings
+    Барааны тэмдэг, патентын бүртгэл
+
+guidancePracticeAreaNames.mn.Visa and residency
+    Виз ба оршин суух
+
+guidancePracticeAreaNames.mn.Family and labor disputes
+    Гэр бүлийн болон хөдөлмөрийн маргаан
+
+guidanceOfficeCopy.mn.label
+    ОФИСУУД
+
+guidanceOfficeCopy.mn.title
+    Оффисууд
+
+guidanceOfficeCopy.mn.description
+    Hovering International Law Firm-ийн Тайвань дахь оффисын хаяг.
+
+guidanceOfficeCopy.mn.officeLabel
+    Оффис
+
+guidanceOfficeCopy.mn.mapPreviewLabel
+    Газрын зургийн урьдчилан харах
+
+guidanceOfficeCopy.mn.koreaOfficeTitle
+    Солонгос дахь оффис
+
+guidanceOfficeCopy.mn.koreaAddressCardLabel
+    Солонгос дахь оффисын хаяг
+
+guidanceOfficeCopy.mn.koreaMapLinkLabel
+    Naver Map дээр харах
+
+guidanceOfficeCopy.mn.reviewCountWord
+    сэтгэгдэл
+
+guidanceOfficeCopy.mn.phoneLabel
+    Утас
+
+guidanceOfficeCopy.mn.faxLabel
+    Факс
+
+guidanceOfficeCopy.mn.mapLinkLabel
+    Газрын зураг дээр харах
+
+guidanceOfficeCopy.mn.photoAlts[0]
+    Тайбэй оффисын хүлээн авах хэсэг, Hovering International Law Firm
+
+guidanceOfficeCopy.mn.photoAlts[1]
+    Тайбэй оффисын өмгөөлөгчийн өрөө, Hovering International Law Firm
+
+guidanceOfficeCopy.mn.photoAlts[2]
+    Тайбэй оффисын хэлэлцээрийн өрөө, Hovering International Law Firm
+
+guidanceOfficeCopy.mn.officeTitles.taipei
+    Тайбэй
+
+guidanceOfficeCopy.mn.officeTitles.taichung
+    Тайжун
+
+guidanceOfficeCopy.mn.officeTitles.kaohsiung
+    Гаосюн
+
+guidanceOfficeCopy.mn.officeTitles.pingtung
+    Пиндун
+
+guidanceFooterCopy.mn.officeLabel
+    Оффисууд
+
+guidanceFooterCopy.mn.officeQuickLinksLabel
+    Оффисын шуурхай холбоос
+
+guidanceFooterCopy.mn.followLabel
+    Дагах
+
+guidanceFooterCopy.mn.blogLabel
+    Блог
+
+guidanceFooterCopy.mn.websiteLabel
+    Албан ёсны сайт
+
+guidanceFooterCopy.mn.sitemapLabel
+    Сайтын бүтэц
+
+guidanceFooterCopy.mn.copyEmailLabel
+    Цахим шуудангийн хаягийг хуулах
+
+guidanceFooterCopy.mn.emailCopiedMessage
+    Цахим шуудангийн хаягийг хуулсан.
+
+guidanceFooterCopy.mn.officialConsultationEmailLabel
+    Зөвлөгөөний албан ёсны шуудан
+
+internationalInquiryCopy.mn.guidanceNotice
+    Энэ хуудсыг монгол хэлээр ерөнхий мэдээлэл болгон бичсэн бөгөөд таны хэргийн эрх зүйн зөвлөгөө биш.
+
+internationalInquiryCopy.mn.consultationNotice
+    Зөвлөгөө зөвхөн дөрвөн хэлээр явагдана: англи, хятад (中文), япон, солонгос.
+
+internationalInquiryCopy.mn.methodConfirmationNotice
+    Дөрвөн хэлний алийг нь ч ашиглаж чадахгүй бол «Холбоо барих аргыг баталгаажуулах шаардлагатай» гэснийг сонгоно уу. Бид хариу өгч, хэрэгжүүлж болох холбоо барих арга байгаа эсэхийг шалгана; өөр хэл дээрх үйлчилгээ баталгаажихгүй бөгөөд хариу өгөх хугацааг амлахгүй.
+
+internationalInquiryCopy.mn.preparationNotice
+    Хэргийн товч тоймоо өөрийн хэлээр бичиж болно. Эх бичвэрийг таны бичсэнээр хадгалж, автоматаар орчуулахгүй.
+
+internationalInquiryCopy.mn.heading
+    Зөвлөгөөний хүсэлт илгээх
+
+internationalInquiryCopy.mn.intro
+    Хэргээ товч тайлбарлана уу. Өмгөөлөгч дараагийн алхмыг ярилцахаас өмнө агуулгыг хянана.
+
+internationalInquiryCopy.mn.submitLabel
+    Хүсэлт илгээх
+
+internationalInquiryCopy.mn.submittingLabel
+    Илгээж байна…
+
+internationalInquiryCopy.mn.successMessage
+    Таны хүсэлтийг хүлээн авсан; хяналт хүлээнэ. Энэ нь зөвлөгөө болсон эсвэл цаг товлолт баталгаажсан гэсэн үг биш.
+
+internationalInquiryCopy.mn.savedNotificationPendingMessage
+    Таны хүсэлтийг хадгалсан боловч фирмд очсон мэдэгдэл хараахан баталгаажаагүй. Таны бичсэн зүйл алдагдахгүй. Хариу ирэхгүй бол холбоо барих хуудсын цахим шуудангийн хаяг руу ч бичиж болно.
+
+internationalInquiryCopy.mn.receiptIdLabel
+    Хүсэлтийн дугаар
+
+internationalInquiryCopy.mn.failureMessage
+    Таны хүсэлтийг илгээж чадсангүй. Дахин оролдоорой эсвэл холбоо барих хуудсын цахим шуудангийн хаяг руу бичнэ үү.
+
+internationalInquiryCopy.mn.originalLanguageLabel
+    Таны бичиж буй хэл
+
+internationalInquiryCopy.mn.originalLanguagePlaceholder
+    Жишээ нь: монгол, англи, хятад эсвэл өөр хэл
+
+internationalInquiryCopy.mn.preferredConsultationLanguageLabel
+    Хүссэн зөвлөгөөний хэл
+
+internationalInquiryCopy.mn.originalTextLabel
+    Хэргийн товч тойм (таны хэлээр)
+
+internationalInquiryCopy.mn.originalTextPlaceholder
+    Юу болсныг, ямар тусламж хэрэгтэйг, хугацаа байвал түүнийг бичнэ үү. Паспортын дугаар, үнэмлэхийн дугаар, дансны мэдээлэл бичихгүй.
+
+internationalInquiryCopy.mn.nameLabel
+    Нэр
+
+internationalInquiryCopy.mn.emailLabel
+    Цахим шуудан
+
+internationalInquiryCopy.mn.consentLabel
+    Би нууцлалын хуудсыг уншиж, энэ хүсэлтийг илгээхийг зөвшөөрч байна.
+
+internationalInquiryCopy.mn.privacyLinkLabel
+    Нууцлал
+
+internationalInquiryCopy.mn.requiredMessage
+    Энэ талбар заавал бөглөх ёстой.
+
+internationalInquiryCopy.mn.invalidEmailMessage
+    Хүчинтэй цахим шуудангийн хаяг оруулна уу.
+
+internationalInquiryCopy.mn.tooLongMessage
+    Бичвэр хэт урт байна. Богиносгоод дахин илгээнэ үү.
+
+internationalInquiryCopy.mn.sourceLanguageNotice
+    Энэ материалыг зөвхөн {language} хэлээр нийтэлсэн; холбоос эх хуудсыг нээнэ.
+
+internationalInquiryCopy.mn.unavailableTranslationNotice
+    Энэ зүйлийг энэ хуудсын хэл рүү хараахан орчуулаагүй. Эх хэлийг заасан холбоос эх бичвэрийг нээнэ.
+
+internationalInquiryCopy.mn.unavailableLanguageNotice
+    Энэ хуудсыг {language} хэлээр санал болгохгүй.
+
+internationalInquiryCopy.mn.languageOptions.en
+    Англи (English)
+
+internationalInquiryCopy.mn.languageOptions.zh-hant
+    Хятад (中文)
+
+internationalInquiryCopy.mn.languageOptions.ja
+    Япон (日本語)
+
+internationalInquiryCopy.mn.languageOptions.ko
+    Солонгос (한국어)
+
+internationalInquiryCopy.mn.languageOptions.needs-method-confirmation
+    Дөрвөн хэлний аль нь ч боломжгүй — холбоо барих аргыг баталгаажуулах шаардлагатай
+
+guidanceAnswers.mn.services.answer
+    Фирм Тайванийн эрх зүйн дагуу зургаан бүлэг ажил хөтөлнө: хөрөнгө оруулалт ба компани байгуулах, иргэний хэрэг ба хохирол нөхөн төлүүлэх, гэрлэлт, гэр бүл, өв залгамжлал, хөдөлмөрийн маргаан, эрүүгийн хэрэг, оюуны өмч. Хэрэг бүрийн хэмжээг өмгөөлөгч таны илгээсэн агуулгыг хянасны дараа тусад нь баталгаажуулна. Зөвлөгөө зөвхөн англи, хятад, япон, солонгос хэлээр явагдана.
+
+guidanceAnswers.mn.services.sources[0]
+    /mn/faq
+
+guidanceAnswers.mn.services.sources[1]
+    /mn/contact
+
+guidanceAnswers.mn.about.answer
+    Hovering International Law Firm нь 2016 онд National Taiwan University (國立臺灣大學)-ийн төгсөгчдийн байгуулсан Тайвань дахь өмгөөллийн фирм бөгөөд Тайбэй, Гаосюн, Тайжун, Пиндун хотод оффистой. 2020 оноос нягтлан бодох бүртгэлийн нэгж бий; Тайжун оффис Солонгос, Японтой холбоотой хэрэг хөтөлнө. Фирм үр дүн амлахгүй. Зөвлөгөө зөвхөн англи, хятад, япон, солонгос хэлээр явагдана.
+
+guidanceAnswers.mn.about.sources[0]
+    /mn/lawyers
+
+guidanceAnswers.mn.about.sources[1]
+    /mn/services
+
+guidanceAnswers.mn.lawyers.answer
+    Энэ хуудас Hovering-ийн өмгөөлөгч, үйл ажиллагааны менежер, түнш нягтлан бодогчийн танилцуулгыг харуулна. Эмэгтэй өмгөөлөгч Wei Tseng (曾雋崴) Тайваньд өмгөөлөгчөөр ажиллах эрхтэй, фирмийг удирдана; Солонгос, Япон болон бусад олон улсын үйлчлүүлэгчидтэй ажиллана. Өмгөөлөгчтэй хийх зөвлөгөө зөвхөн англи, хятад (中文), япон, солонгос хэлээр явагдана; бусад хэлээр зөвлөгөө өгдөггүй.
+
+guidanceAnswers.mn.lawyers.sources[0]
+    /mn/about
+
+guidanceAnswers.mn.lawyers.sources[1]
+    /mn/contact
+
+guidanceAnswers.mn.pricing.answer
+    Энэ хуудас үнийн жагсаалт нийтлэхгүй. Ажлын хэмжээг эхлээд таны илгээсэн товч тоймоор тогтоож, дараа нь хэмжээ, тооцох аргыг ажил эхлэхээс өмнө тантай баталгаажуулна. Өмгөөлөгчийн зөвлөгөө төлбөртэй үйлчилгээ байж болно; хөлснөөс гадна шүүх, захиргааны зардал гарч болно. Зөвлөгөө зөвхөн англи, хятад, япон, солонгос хэлээр явагдана.
+
+guidanceAnswers.mn.pricing.sources[0]
+    /mn/contact
+
+guidanceAnswers.mn.pricing.sources[1]
+    /mn/faq
+
+guidanceAnswers.mn.contact.answer
+    Холбоо барих маягтаар товч тойм илгээнэ үү: юу болсон, ямар тусламж хэрэгтэй, хэрэг Тайваньтай ямар холбоотой, хугацаа байвал түүнийг. Энэ шатанд иргэний үнэмлэх, бүх нотлох баримтыг илгээх шаардлагагүй. Фирм хариу өгөх хугацаа амлахгүй, энэ хуудсаар цаг товлолт баталгаажуулахгүй. Зөвлөгөө зөвхөн англи, хятад, япон, солонгос хэлээр явагдана.
+
+guidanceAnswers.mn.contact.sources[0]
+    /mn/faq
+
+guidanceAnswers.mn.contact.sources[1]
+    /mn/pricing
+
+guidanceAnswers.mn.faq.answer
+    Энэ хэсэг түгээмэл асуултад ерөнхий мэдээллийн түвшинд хариулна: зургаан ажлын бүлэг, холбогдохоос өмнөх бэлтгэл, хөлсийг тогтоох арга, илгээсэн мессежийн утга. Илгээсэн хүсэлт өмгөөлөгчийн хяналтыг хүлээнэ; энэ нь эрх зүйн зөвлөгөө биш, цаг товлолт биш, өмгөөлөгч ба үйлчлүүлэгчийн харилцаа үүсгэхгүй. Зөвлөгөө зөвхөн англи, хятад, япон, солонгос хэлээр явагдана.
+
+guidanceAnswers.mn.faq.sources[0]
+    /mn/contact
+
+guidanceAnswers.mn.faq.sources[1]
+    /mn/services
+
+GUIDANCE_LLMS_NOTICES.mn.consultationNotice
+    Эдгээр мэдээллийг монгол хэлээр бичсэн боловч өмгөөлөгчийн зөвлөгөө зөвхөн англи, хятад (中文), япон, солонгос хэлээр явагдана.
+
+GUIDANCE_LLMS_NOTICES.mn.discoveryNotice
+    llms.txt файл нь зөвхөн нээлттэй хуудсыг олоход зориулсан газрын зураг юм; энэ нь хайлтын байр, дэмжлэг, хиймэл оюуны зөвлөмж, харагдах байдлыг амлахгүй.
+
+GUIDANCE_LLMS_NOTICES.mn.confidentialNotice
+    Эх бичвэрийг хадгалдаг тул эхний шатанд одоо хэрэггүй зүйл, тухайлбал паспортын дугаар, үнэмлэхийн дугаар эсвэл дансны мэдээлэл бичихгүй байгаарай.

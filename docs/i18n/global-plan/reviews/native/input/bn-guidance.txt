@@ -1,0 +1,1096 @@
+# bn guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.bn.languageName
+    বাংলা
+
+guidanceContent.bn.nav.home
+    মূলপাতা
+
+guidanceContent.bn.nav.services
+    সেবাসমূহ
+
+guidanceContent.bn.nav.about
+    পরিচিতি
+
+guidanceContent.bn.nav.lawyers
+    আইনজীবী
+
+guidanceContent.bn.nav.pricing
+    ব্যয়
+
+guidanceContent.bn.nav.contact
+    যোগাযোগ
+
+guidanceContent.bn.nav.faq
+    প্রশ্নোত্তর
+
+guidanceContent.bn.nav.privacy
+    গোপনীয়তা
+
+guidanceContent.bn.nav.disclaimer
+    অস্বীকৃতি
+
+guidanceContent.bn.nav.columns
+    প্রবন্ধ
+
+guidanceContent.bn.contactCta
+    পরামর্শের অনুরোধ পাঠান
+
+guidanceContent.bn.footerNotice
+    এই বাংলা পাতা তাইওয়ানের আইন অনুসারে কার্যালয়ের কাজের কেবল সাধারণ তথ্য দেয়। এটি কোনো নির্দিষ্ট মামলার আইনি মতামত নয়, আর বার্তা পাঠালেই আইনজীবী ও মক্কেলের সম্পর্ক তৈরি হয় না।
+
+guidanceContent.bn.skipLink
+    নেভিগেশন এড়িয়ে মূল বিষয়ে যান
+
+guidanceContent.bn.menuLabel
+    পাতার তালিকা
+
+guidanceContent.bn.languageLabel
+    প্রদর্শনের ভাষা
+
+guidanceContent.bn.mega.services.description
+    কার্যালয় তাইওয়ানের আইন অনুসারে প্রধান কর্মক্ষেত্রে সেবা দেয়।
+
+guidanceContent.bn.mega.services.viewAllLabel
+    সব দেখুন
+
+guidanceContent.bn.mega.columns.description
+    তাইওয়ানের আইন নিয়ে সাধারণ প্রশ্নের প্রবন্ধ।
+
+guidanceContent.bn.mega.columns.viewAllLabel
+    সব দেখুন
+
+guidanceContent.bn.mega.lawyers.description
+    কর্মরত আইনজীবী ও যোগাযোগের পথের পরিচিতি।
+
+guidanceContent.bn.mega.lawyers.viewAllLabel
+    সব দেখুন
+
+guidanceContent.bn.mega.pricing.description
+    এই পাতা কাজের পরিধি ও ব্যয় কীভাবে ঠিক হয়, তা বলে।
+
+guidanceContent.bn.mega.pricing.viewAllLabel
+    সব দেখুন
+
+guidanceContent.bn.mega.faq.description
+    তাইওয়ানে কার্যালয়ের কাজ নিয়ে সাধারণ প্রশ্ন।
+
+guidanceContent.bn.mega.faq.viewAllLabel
+    সব দেখুন
+
+guidanceContent.bn.notFoundTitle
+    পাতা পাওয়া যায়নি
+
+guidanceContent.bn.notFoundText
+    আপনি যে পাতা খুঁজছেন তা নেই, অথবা সরিয়ে নেওয়া হয়েছে। উপলব্ধ তথ্য দেখতে আপনি বাংলা মূলপাতায় ফিরতে পারেন।
+
+guidanceContent.bn.backHomeLabel
+    মূলপাতায় যান
+
+guidanceContent.bn.readSourceLabel
+    মূল ভাষায় প্রবন্ধের তালিকা খুলুন
+
+guidanceContent.bn.home.heroScrollLabel
+    নিচে স্ক্রল করুন
+
+guidanceContent.bn.home.heroColumnsCtaLabel
+    প্রবন্ধ দেখুন
+
+guidanceContent.bn.home.servicesDetailLabel
+    বিস্তারিত দেখুন
+
+guidanceContent.bn.home.servicesAssistanceBefore
+    আপনার বিষয় কোন দলে পড়ে তা যদি স্পষ্ট না হয়, তবে পাতা 
+
+guidanceContent.bn.home.servicesAssistanceLinkLabel
+    যোগাযোগ
+
+guidanceContent.bn.home.servicesAssistanceAfter
+     বলে কীভাবে এমন সারসংক্ষেপ লিখবেন যা কোনো আইনজীবী যাচাই করবেন।
+
+guidanceContent.bn.home.columnsViewAllLabel
+    সব প্রবন্ধ দেখুন
+
+guidanceContent.bn.home.columnsReadMoreLabel
+    আরও পড়ুন
+
+guidanceContent.bn.home.columnsReviewLabel
+    আইনজীবী Wei Tseng কর্তৃক পরীক্ষিত
+
+guidanceContent.bn.home.columnsOriginalLanguageBadge
+    মূল ভাষা
+
+guidanceContent.bn.home.columnsOriginalLanguageNote
+    নিচের প্রবন্ধগুলো এখনও বাংলায় নেই। তালিকা মূল ভাষায় থাকে এবং সংশ্লিষ্ট ভাষার পাতা খোলে; বিষয়বস্তুর স্বয়ংক্রিয় অনুবাদ হয় না।
+
+guidanceContent.bn.home.imageBandAlt
+    দিনের আলোয় ঐতিহ্যবাহী তাইওয়ানি সানহেয়ুয়ান (三合院) ও একটি আধুনিক মণ্ডপ
+
+guidanceContent.bn.home.videoPauseLabel
+    ভিডিও থামান
+
+guidanceContent.bn.home.videoPlayLabel
+    ভিডিও চালান
+
+guidanceContent.bn.home.videoReplayLabel
+    ভিডিও আবার চালান
+
+guidanceContent.bn.pages.home.eyebrow
+    তথ্য
+
+guidanceContent.bn.pages.home.title
+    তাইওয়ানে আইনি সেবা — বাংলায় নির্দেশনা
+
+guidanceContent.bn.pages.home.description
+    Hovering International Law Firm-এর তাইওয়ানে কর্মক্ষেত্র, পরামর্শের ভাষা ও প্রথম যোগাযোগ নিয়ে বাংলায় সাধারণ ব্যাখ্যা।
+
+guidanceContent.bn.pages.home.intro
+    Hovering International Law Firm তাইওয়ানের আইন-সংক্রান্ত বিষয়ে বিদেশ থেকে আসা মক্কেলদের — যাদের তাইওয়ানের সঙ্গে যোগও আছে — সহায়তা করে: বিনিয়োগ ও কোম্পানি গঠন, দেওয়ানি বিরোধ, বিবাহ, পরিবার ও উত্তরাধিকার, শ্রম আইন, ফৌজদারি মামলা এবং মেধাস্বত্ব। এই বাংলা পাতাগুলো আপনাকে চিনতে সাহায্য করে কোন কাজ আমাদের পরিধিতে পড়ে, কী প্রস্তুত করতে হয় এবং আমাদের কাছে কীভাবে পৌঁছাবেন। এটি সাধারণ তথ্য, আপনার নিজের মামলার আইনি মতামত নয়।
+
+guidanceContent.bn.pages.home.sections[0].heading
+    আমরা কী করি
+
+guidanceContent.bn.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm তাইওয়ানে প্রতিষ্ঠিত একটি আইন কার্যালয়। এটি তাইওয়ানের আইন অনুসারে কাজ করে এবং তাইপেই (臺北), কাওসিউং (高雄), তাইচুং (臺中) ও পিংতুং (屏東)-এ কার্যালয় রাখে। আমরা উদ্যোগকে পরামর্শ দিই, আদালতে মামলা চালাই এবং বিদেশ থেকে আসা মক্কেলদের তাইওয়ানে প্রয়োজনীয় ধাপে সঙ্গ দিই।
+
+guidanceContent.bn.pages.home.sections[0].paragraphs[1]
+    এখানকার সব বিষয়বস্তু সাধারণ। কোনো মামলার ফলাফল তথ্য, প্রযোজ্য নিয়ম ও সময়ের উপর নির্ভর করে। এই তথ্য আপনার কাগজপত্র নিয়ে আইনজীবীর সঙ্গে আলোচনার স্থান নেয় না।
+
+guidanceContent.bn.pages.home.sections[1].heading
+    পাতার ভাষা ও পরামর্শের ভাষা এক নয়
+
+guidanceContent.bn.pages.home.sections[1].paragraphs[0]
+    এই পাতা বাংলায় লেখা, কিন্তু আইনজীবীর পরামর্শ কেবল চার পরামর্শ ভাষায় — ইংরেজি, চীনা (中文), জাপানি ও কোরীয়তে — হয়। বাংলায় তথ্য পড়ার অর্থ এই নয় যে আইনজীবীর সঙ্গে কথা বাংলায় হবে।
+
+guidanceContent.bn.pages.home.sections[1].paragraphs[1]
+    এই পাতার মাধ্যমে আমরা দোভাষী, উত্তরের সময়সীমা বা সাক্ষাৎ নির্ধারণের প্রতিশ্রুতি দিই না। চার ভাষার কোনোটি যদি আপনার কাজে না লাগে, পাতা “যোগাযোগ” বলে আমরা যোগাযোগপথ কীভাবে যাচাই করি।
+
+guidanceContent.bn.pages.home.sections[2].heading
+    কর্মক্ষেত্রের দল
+
+guidanceContent.bn.pages.home.sections[2].paragraphs[0]
+    কর্মক্ষেত্রে নিচের ছয়টি দল আছে। পাতা “সেবাসমূহ” প্রতিটি দল আরও স্পষ্ট করে এবং বলে কী প্রতিশ্রুতি দেওয়া হয় না।
+
+guidanceContent.bn.pages.home.sections[2].items[0]
+    তাইওয়ানে বিনিয়োগ ও কোম্পানি গঠন
+
+guidanceContent.bn.pages.home.sections[2].items[1]
+    দেওয়ানি বিরোধ ও ক্ষতিপূরণ
+
+guidanceContent.bn.pages.home.sections[2].items[2]
+    বিবাহ, পরিবার ও উত্তরাধিকার
+
+guidanceContent.bn.pages.home.sections[2].items[3]
+    শ্রম-সংক্রান্ত বিরোধ
+
+guidanceContent.bn.pages.home.sections[2].items[4]
+    ফৌজদারি মামলা
+
+guidanceContent.bn.pages.home.sections[2].items[5]
+    মেধাস্বত্ব: ট্রেডমার্ক, পেটেন্ট ও কপিরাইট
+
+guidanceContent.bn.pages.home.sections[3].heading
+    কোথা থেকে শুরু করবেন
+
+guidanceContent.bn.pages.home.sections[3].paragraphs[0]
+    আপনার বিষয় আমাদের পরিধিতে পড়ে কি না দেখতে পাতা “সেবাসমূহ” পড়ুন; তারপর “ব্যয়” ও “যোগাযোগ” পড়ুন, যাতে বোঝা যায় পরিধি কীভাবে ঠিক হয় এবং কাজ শুরুর আগে ব্যয় কীভাবে নিশ্চিত হয়।
+
+guidanceContent.bn.pages.home.sections[3].paragraphs[1]
+    বার্তা পাঠানোর সময় আপনি সারসংক্ষেপ নিজের ভাষায় লিখতে পারেন। মূল পাঠ্য আপনি যেমন লিখেছেন তেমনই রাখা হয় এবং স্বয়ংক্রিয়ভাবে অনুবাদ হয় না। পাঠানো বার্তা যাচাইয়ের অপেক্ষায় থাকা অনুরোধ: এটি এখনও পরামর্শ নয়, নিশ্চিত সাক্ষাৎ নির্ধারণও নয়।
+
+guidanceContent.bn.pages.services.eyebrow
+    সেবাসমূহ
+
+guidanceContent.bn.pages.services.title
+    আমরা কোন বিষয়ে কাজ করি
+
+guidanceContent.bn.pages.services.description
+    তাইওয়ানে কার্যালয়ের ছয়টি কর্মদল এবং যে সীমা আগে জানা দরকার।
+
+guidanceContent.bn.pages.services.intro
+    নিচে সেই দলগুলো আছে যেগুলোর আমরা সত্যিই কাজ করি, আর যে প্রশ্নগুলো শুরুর ধাপে প্রায়ই ওঠে। এই বিবরণ আপনাকে মাপতে সাহায্য করে আপনার বিষয় আমাদের পরিধিতে পড়ে কি না; এটি সাধারণ এবং কোনো একটি নথির আইনি বিশ্লেষণ নয়।
+
+guidanceContent.bn.pages.services.sections[0].heading
+    তাইওয়ানে বিনিয়োগ ও কোম্পানি গঠন
+
+guidanceContent.bn.pages.services.sections[0].paragraphs[0]
+    আমরা বিদেশি বিনিয়োগকারী ও উদ্যোগকে তাইওয়ানে কোম্পানি গঠন বা চালাতে সঙ্গ দিই: আইনি রূপ বেছে নেওয়া, কাগজপত্র তৈরি ও জমা, মূলধন রাখা, ব্যাংক-সংক্রান্ত প্রশ্ন, স্থান যাচাই এবং খাতের শর্ত। তাইওয়ানে গঠন ও পরিচালনা থেকে যে হিসাব ও কর ওঠে, তাতেও আমরা সহায়তা করি।
+
+guidanceContent.bn.pages.services.sections[0].paragraphs[1]
+    প্রক্রিয়া ও সময় রূপ, বিনিয়োগকারী, খাত, ব্যাংক ও মজুদ কাগজপত্র অনুসারে বদলায়। কোম্পানি গঠন নিজে থেকে অবস্থান অনুমতি (居留) বা কর্ম অনুমতি (工作許可) দেয় না: এগুলো আলাদা প্রক্রিয়া, যা ব্যক্তির অবস্থা অনুসারে দেখা হয়।
+
+guidanceContent.bn.pages.services.sections[1].heading
+    দেওয়ানি বিরোধ ও ক্ষতিপূরণ
+
+guidanceContent.bn.pages.services.sections[1].paragraphs[0]
+    এই দলে চুক্তি বিরোধ, অন্যায় কৃতকর্ম থেকে ক্ষতিপূরণ এবং ভোক্তা বিরোধ পড়ে। কাজ সাধারণত ঘটনার কালক্রম, বিদ্যমান কাগজপত্র ও প্রমাণ যাচাই দিয়ে শুরু হয়; তারপরেই পরের ধাপ আসে।
+
+guidanceContent.bn.pages.services.sections[1].paragraphs[1]
+    সময়সীমা — যার মধ্যে দাবির মেয়াদও আছে — এবং প্রমাণের পূর্ণতা পথ ঠিক করে। তাই জানা তারিখ যথাসম্ভব তাড়াতাড়ি বলুন। চুক্তি, বার্তা, পরিশোধের রসিদ বা স্থানের ছবি রেখে দিন এবং প্রথম বার্তায় সেগুলোর উল্লেখ করুন।
+
+guidanceContent.bn.pages.services.sections[2].heading
+    বিবাহ, পরিবার ও উত্তরাধিকার
+
+guidanceContent.bn.pages.services.sections[2].paragraphs[0]
+    আমরা বিবাহবিচ্ছেদ (離婚), সম্পত্তি ভাগাভাগি, নাবালক সন্তানের অভিভাবকত্ব ও পিতামাতার অধিকার-কর্তব্য (未成年子女權利義務之行使或負擔), সাক্ষাৎ ও যোগাযোগের অধিকার (會面交往) এবং উত্তরাধিকার (繼承)-এর কাজ করি, পক্ষ বা সম্পত্তি ভিন্ন রাষ্ট্রে থাকলেও। সীমান্ত-পার পারিবারিক বিষয়ে প্রায়ই গৃহনিবন্ধন (戶籍), দলিলের রূপ এবং তাইওয়ানে সেগুলোর প্রমাণযোগ্যতা আলাদা করে যাচাই করতে হয়।
+
+guidanceContent.bn.pages.services.sections[2].paragraphs[1]
+    পারিবারিক বিষয়ে প্রায়ই সময়সীমা ও সমান্তরাল প্রক্রিয়া থাকে বলে প্রথম সারসংক্ষেপে পক্ষদের সম্পর্ক, বর্তমান বাসস্থান এবং আগে থেকে চলা প্রক্রিয়া বলা উচিত।
+
+guidanceContent.bn.pages.services.sections[3].heading
+    শ্রম-সংক্রান্ত বিরোধ
+
+guidanceContent.bn.pages.services.sections[3].paragraphs[0]
+    এই দলে চাকরির অবসান, তাইওয়ানের আইন অনুসারে সংবিধিবদ্ধ ছাঁটাই ভাতা (資遣費; অন্য রাষ্ট্রের প্রতিষ্ঠানের সঙ্গে এক করে দেখা যায় না), মজুরি এবং শ্রম চুক্তি (勞動契約) থেকে বিরোধ পড়ে — কর্মী ও নিয়োগকর্তা উভয় পক্ষে। যাচাইয়ে আমরা অবসানের কারণকে নোটিশ, পরিশোধ ও সময়সীমার প্রশ্ন থেকে আলাদা রাখি।
+
+guidanceContent.bn.pages.services.sections[3].paragraphs[1]
+    শ্রম চুক্তি, কর্মবিধি (工作規則), বেতন পাতা এবং পক্ষদের চিঠিচালাচালি প্রায়ই নির্ণায়ক কাগজ। সেগুলো যদি এখনও আপনার কাছে থাকে, সারসংক্ষেপে বলুন।
+
+guidanceContent.bn.pages.services.sections[4].heading
+    ফৌজদারি মামলা
+
+guidanceContent.bn.pages.services.sections[4].paragraphs[0]
+    আমরা তদন্ত ও আদালতে সঙ্গ দিই — অভিযুক্ত বা আসামির পক্ষে এবং ক্ষতিগ্রস্তের পক্ষেও — এবং উদ্যোগের কাজের ফৌজদারি ঝুঁকি মাপি।
+
+guidanceContent.bn.pages.services.sections[4].paragraphs[1]
+    ফৌজদারি মামলায় প্রায়ই ছোট সময়সীমা ও নির্ধারিত ধাপ থাকে। যদি আপনি ইতিমধ্যে অভিযোগপক্ষ বা আদালতের চিঠি পেয়ে থাকেন, চিঠির তারিখ তাড়াতাড়ি বলুন যাতে বিষয়বস্তু সঠিক ক্রমে যাচাই হয়।
+
+guidanceContent.bn.pages.services.sections[5].heading
+    মেধাস্বত্ব
+
+guidanceContent.bn.pages.services.sections[5].paragraphs[0]
+    আমরা ট্রেডমার্ক (商標) ও পেটেন্ট (專利) নিবন্ধন, কপিরাইট এবং তাইওয়ানে এই অধিকারের বিরোধে সহায়তা করি।
+
+guidanceContent.bn.pages.services.sections[5].paragraphs[1]
+    এই দলে ধাপের ক্রম নির্ণায়ক: সুরক্ষার পরিধি, আবেদনের সময় এবং বাস্তব ব্যবহার নির্বাচনকে প্রভাবিত করে। আবেদন জমা দেওয়া নিজে থেকে এটা দেখায় না যে তা মঞ্জুর হবে।
+
+guidanceContent.bn.pages.services.sections[6].heading
+    পরিধি ও তার নিশ্চিতকরণ
+
+guidanceContent.bn.pages.services.sections[6].paragraphs[0]
+    কার্যালয় তাইওয়ানের আইন অনুসারে কাজ করে এবং উপরের দলগুলোর বিষয়ে কাজ করে। প্রতিটি মামলার পরিধি আলাদা করে নিশ্চিত হয়, কোনো আইনজীবী আপনার বার্তা যাচাই করার পরে।
+
+guidanceContent.bn.pages.services.sections[6].paragraphs[1]
+    অবস্থানের অবস্থা, কর্ম অনুমতি এবং তুলনীয় প্রশ্ন কাগজপত্র ও ব্যক্তির অবস্থা থেকে মাপা হয়, নাগরিকত্ব থেকে নয়। আপনার বিষয়ের কোনো অংশ যদি এমন প্রশ্নে জোড়ে, যোগাযোগের সময় বলুন। এই পাতা ফলাফলের প্রতিশ্রুতি দেয় না, উত্তরের সময়সীমারও নয়।
+
+guidanceContent.bn.pages.about.eyebrow
+    পরিচিতি
+
+guidanceContent.bn.pages.about.title
+    Hovering International Law Firm সম্পর্কে
+
+guidanceContent.bn.pages.about.description
+    এই তাইওয়ানি আইন কার্যালয়, তার কার্যালয়গুলো এবং বিদেশি পক্ষের সঙ্গে কাজের মূল তথ্য।
+
+guidanceContent.bn.pages.about.intro
+    Hovering International Law Firm তাইওয়ানের একটি আইন কার্যালয়। আইনজীবীরা উদ্যোগ পরামর্শ থেকে আদালতের কার্যক্রম পর্যন্ত কাজ করেন। এই অংশ কার্যালয়ের প্রতিষ্ঠা, স্থান এবং বিদেশি পক্ষের সঙ্গে কাজ বর্ণনা করে।
+
+guidanceContent.bn.pages.about.sections[0].heading
+    প্রতিষ্ঠা ও গঠন
+
+guidanceContent.bn.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) 2016 সালে সেই আইনজীবীরা প্রতিষ্ঠা করেন যাঁরা National Taiwan University (國立臺灣大學)-এ পড়েছেন। চীনা নাম 昊鼎 অক্ষর 昊 (“প্রশস্ত আকাশ”)-কে 鼎 (“দৃঢ় ভিত্তি”)-এর সঙ্গে জোড়ে এবং প্রতিষ্ঠা থেকে কার্যালয়ের দিক নির্দেশ করে।
+
+guidanceContent.bn.pages.about.sections[0].paragraphs[1]
+    আমাদের কার্যালয় তাইপেই (臺北), কাওসিউং (高雄), তাইচুং (臺中) ও পিংতুং (屏東)-এ। কাওসিউং কার্যালয় উদ্যোগ পরিচালনায় মন দেয় এবং দেওয়ানি, ফৌজদারি ও প্রশাসনিক বিরোধের কাজ করে। তাইচুং কার্যালয় নির্মাণ, মেধাস্বত্ব এবং কোরিয়া ও জাপান-সংক্রান্ত বিষয়ে কাজ করে। পিংতুং কার্যালয় 2017 সালে স্থানীয় প্রয়োজনে খোলা হয়।
+
+guidanceContent.bn.pages.about.sections[0].paragraphs[2]
+    আইনজীবীর কাজের পাশাপাশি 2020 থেকে Hovering Accounting Office-ও আছে, যা উদ্যোক্তা ও সচ্ছল ব্যক্তিদের জন্য হিসাব ও কর পরিকল্পনা দেয়।
+
+guidanceContent.bn.pages.about.sections[1].heading
+    বিদেশি পক্ষের সঙ্গে কাজ
+
+guidanceContent.bn.pages.about.sections[1].paragraphs[0]
+    সীমান্ত-পার কাজে কোম্পানি গঠন, ভিসা, ট্রেডমার্ক ও পেটেন্ট আবেদন, আইনি ঝুঁকি যাচাই এবং উদ্যোগের কর পরামর্শ পড়ে। তাইচুং কার্যালয় বিশেষ করে নির্মাণ, মেধাস্বত্ব এবং কোরিয়া ও জাপান-সংক্রান্ত বিষয়ে কাজ করে। আইনজীবী Wei Tseng (曾雋崴) কোরিয়া, জাপান ও অন্য আন্তর্জাতিক মক্কেলদের উপরের দলগুলোতে সঙ্গ দেন।
+
+guidanceContent.bn.pages.about.sections[1].paragraphs[1]
+    আমরা কোনো বিষয় নিতে পারি কি না, তা বিষয়বস্তু ও যোগাযোগের ভাষার উপর নির্ভর করে। আপনার বিষয় উপরের দলগুলোতে পড়লে এবং চার পরামর্শ ভাষার কোনো একটিতে আলোচনা করা গেলে, যাচাইয়ের জন্য সারসংক্ষেপ পাঠাতে পারেন।
+
+guidanceContent.bn.pages.about.sections[2].heading
+    আপনি যখন আমাদের সঙ্গে যোগাযোগ করেন
+
+guidanceContent.bn.pages.about.sections[2].paragraphs[0]
+    আপনার সারসংক্ষেপ আসার পর কোনো আইনজীবী বিষয়বস্তু যাচাই করেন এবং তারপর সম্ভাব্য কাজের পরিধি, এখন দরকারি কাগজপত্র ও পরের ধাপ নিয়ে কথা বলেন। কর বা হিসাবের প্রশ্নে কার্যালয় হিসাব বিভাগের সঙ্গে একই প্রবাহে কাজ করতে পারে।
+
+guidanceContent.bn.pages.about.sections[2].paragraphs[1]
+    প্রতিটি মামলার ফলাফল তথ্য ও মজুদ কাগজপত্রের উপর নির্ভর করে; আমরা ফলাফলের প্রতিশ্রুতি দিই না। আপনার অবস্থার জন্য বাধ্যতামূলক উত্তর চাইলে কাগজপত্র চার পরামর্শ ভাষার কোনো একটিতে আইনজীবীর সঙ্গে আলোচনা করতে হবে।
+
+guidanceContent.bn.pages.lawyers.eyebrow
+    আইনজীবী
+
+guidanceContent.bn.pages.lawyers.title
+    Hovering-এর আন্তর্জাতিক দল
+
+guidanceContent.bn.pages.lawyers.description
+    Hovering-এর আইনজীবী, পরিচালনা ব্যবস্থাপনা ও অংশীদার হিসাবরক্ষকের পরিচিতি।
+
+guidanceContent.bn.pages.lawyers.intro
+    
+
+guidanceContent.bn.pages.pricing.eyebrow
+    ব্যয়
+
+guidanceContent.bn.pages.pricing.title
+    কাজের পরিধি ও ব্যয় কীভাবে ঠিক হয়
+
+guidanceContent.bn.pages.pricing.description
+    ক্রমের ব্যাখ্যা: আগে কাজের পরিধি, তারপর ব্যয়ের নিশ্চিতকরণ, এবং এই পাতায় মূল্যতালিকা কেন নেই।
+
+guidanceContent.bn.pages.pricing.intro
+    এই পাতা বলে ব্যয় কীভাবে ঠিক হয়, তার অঙ্ক নয়। অঙ্ক প্রতিটি বিষয়ের কাজের পরিধির উপর নির্ভর করে এবং সেই পরিধি স্পষ্ট হলেই অর্থবহ।
+
+guidanceContent.bn.pages.pricing.sections[0].heading
+    আগে কাজের পরিধি ঠিক হয়
+
+guidanceContent.bn.pages.pricing.sections[0].paragraphs[0]
+    একই ধরনের বিষয়ে শ্রম খুব আলাদা হতে পারে — পক্ষের সংখ্যা, মজুদ কাগজপত্র, মানতে হবে এমন সময়সীমা এবং প্রক্রিয়া আগেই শুরু হয়েছে কি না, তার উপর। তাই প্রথম ধাপ সবসময় এটা ঠিক করা যে কাজে কী পড়ে আর কী পড়ে না।
+
+guidanceContent.bn.pages.pricing.sections[0].paragraphs[1]
+    শুরুতে আপনার পাঠানো সারসংক্ষেপ এই পরিধির ভিত্তি। ক্রম, আপনার চাহিদা ও সময়সীমা যত স্পষ্ট বলা থাকবে, পরিধি তত নির্ভুলভাবে নির্ধারণ করা যায়।
+
+guidanceContent.bn.pages.pricing.sections[1].heading
+    কাজ শুরুর আগে ব্যয় নিশ্চিত হয়
+
+guidanceContent.bn.pages.pricing.sections[1].paragraphs[0]
+    কাজের পরিধি স্পষ্ট হলে অঙ্ক ও হিসাবের পদ্ধতি আপনার সঙ্গে আলোচনা করে কাজ শুরুর আগে নিশ্চিত করা হয়। পথে পরিধি বদলালে তা আবার নিশ্চিত করতে হয়।
+
+guidanceContent.bn.pages.pricing.sections[1].paragraphs[1]
+    এই পাতা মূল্য প্রস্তাব নয় এবং পরিশোধের দায় তৈরি করে না। এখান থেকে অনুরোধ পাঠাতে কোনো ফি লাগে না।
+
+guidanceContent.bn.pages.pricing.sections[2].heading
+    পরামর্শ মূল্য পরিশোধসাপেক্ষ হতে পারে
+
+guidanceContent.bn.pages.pricing.sections[2].paragraphs[0]
+    আইনজীবীর পরামর্শ মূল্য পরিশোধসাপেক্ষ সেবা হতে পারে। এই পাতা বলে না যে প্রথম কথাবার্তা নিঃশুল্ক, এবং কোনো অংশ সেই অর্থে পড়া উচিত নয়।
+
+guidanceContent.bn.pages.pricing.sections[2].paragraphs[1]
+    পরামর্শ যদি মূল্য পরিশোধসাপেক্ষ হয়, অঙ্ক ও পরিশোধের পদ্ধতি তা হওয়ার আগে জানানো হয়।
+
+guidanceContent.bn.pages.pricing.sections[3].heading
+    এই পাতা হার কেন বলে না
+
+guidanceContent.bn.pages.pricing.sections[3].paragraphs[0]
+    ব্যয় বিষয়টির উপরই নির্ভর করে: শ্রম, পক্ষের সংখ্যা, কাগজপত্র, সময়সীমা এবং প্রক্রিয়া আগে থেকে চলছে কি না। আগে থেকে বাঁধা একটি অঙ্ক আপনার বিষয়ের ব্যয় দেখাবে না। তাই আমরা আগে কাজের পরিধি ঠিক করি এবং কাজ শুরুর আগে আপনাকে ব্যয় জানাই।
+
+guidanceContent.bn.pages.pricing.sections[3].paragraphs[1]
+    আইনজীবীর পারিশ্রমিকের বাইরে আদালত, কর্তৃপক্ষ বা তৃতীয় পক্ষের খরচ উঠতে পারে। এগুলো পারিশ্রমিক থেকে আলাদা এবং সংশ্লিষ্ট প্রক্রিয়ার উপর নির্ভর করে।
+
+guidanceContent.bn.pages.contact.eyebrow
+    যোগাযোগ
+
+guidanceContent.bn.pages.contact.title
+    কার্যালয়ে কীভাবে পৌঁছাবেন
+
+guidanceContent.bn.pages.contact.description
+    পাতার ভাষা, পরামর্শের ভাষা, চার ভাষার কোনোটি কাজে না লাগলে কী করবেন, এবং এই পাতা কী বলে না।
+
+guidanceContent.bn.pages.contact.intro
+    লেখার আগে নিচের তিনটি বিষয় আলাদা রাখুন। এগুলোকে প্রায়ই মিলিয়ে ফেলা হয়, কিন্তু অর্থ আলাদা।
+
+guidanceContent.bn.pages.contact.sections[0].heading
+    তিন বিষয় যা আলাদা থাকতে হবে
+
+guidanceContent.bn.pages.contact.sections[0].paragraphs[0]
+    পাতার প্রদর্শন ভাষা, আইনজীবীর সঙ্গে পরামর্শের ভাষা এবং আপনি যে ভাষায় লেখেন — এ তিনটি আলাদা বিষয়।
+
+guidanceContent.bn.pages.contact.sections[0].items[0]
+    পাতার ভাষা: এই তথ্য বাংলায় লেখা।
+
+guidanceContent.bn.pages.contact.sections[0].items[1]
+    পরামর্শের ভাষা: পরামর্শ ইংরেজি, চীনা (中文), জাপানি ও কোরীয়তে হয়।
+
+guidanceContent.bn.pages.contact.sections[0].items[2]
+    আপনার লেখার ভাষা: আপনি সারসংক্ষেপ নিজের ভাষায় লিখতে পারেন; মূল পাঠ্য অপরিবর্তিত রাখা হয়।
+
+guidanceContent.bn.pages.contact.sections[1].heading
+    চার পরামর্শ ভাষার কোনোটি যদি আপনার কাজে না লাগে
+
+guidanceContent.bn.pages.contact.sections[1].paragraphs[0]
+    যোগাযোগ ফর্মে আপনি “যোগাযোগপথ নিশ্চিত করা প্রয়োজন” বেছে নিতে পারেন। আমরা উত্তর দিই যাতে ব্যবহারযোগ্য যোগাযোগপথ যাচাই করা যায়, যদি এমন পথ থাকে; অন্য ভাষায় সেবা নিশ্চিত নয় এবং উত্তরের সময়সীমা বলা হয় না।
+
+guidanceContent.bn.pages.contact.sections[1].paragraphs[1]
+    এটি কেবল যাচাইয়ের ধাপ, প্রতিশ্রুতি নয়। আমরা দোভাষীর প্রতিশ্রুতি দিই না, বাংলা বা বলা চার ভাষার বাইরে অন্য ভাষায় সেবার প্রতিশ্রুতি দিই না, এবং এটাও বলি না যে আমরা প্রতিটি মামলা নেব।
+
+guidanceContent.bn.pages.contact.sections[2].heading
+    প্রথম বার্তায় কী থাকা উচিত
+
+guidanceContent.bn.pages.contact.sections[2].paragraphs[0]
+    বলুন কী ঘটেছে, আপনার কী সহায়তা দরকার, বিষয়টির তাইওয়ানের সঙ্গে কী যোগ এবং সময়সীমা — যদি জানেন। আদালত বা কর্তৃপক্ষের চিঠি যদি আগেই পেয়ে থাকেন, চিঠির তারিখ বলুন।
+
+guidanceContent.bn.pages.contact.sections[2].paragraphs[1]
+    শুরুর ধাপে আপনাকে এখনই পাসপোর্ট নম্বর, পরিচয় নম্বর, হিসাবের তথ্য, চিকিৎসা নথি বা সম্পূর্ণ প্রমাণ পাঠাতে হয় না। আইনজীবীর নির্দেশের অপেক্ষা করুন এবং তখন সংবেদনশীল কাগজপত্র নিরাপদ পথে পাঠান।
+
+guidanceContent.bn.pages.contact.sections[3].heading
+    এই পাতা কী বলে না
+
+guidanceContent.bn.pages.contact.sections[3].paragraphs[0]
+    আমরা উত্তরের সময়সীমা বলি না, এই পাতা থেকে সাক্ষাৎ নির্ধারণ নিশ্চিত করি না, কোনো নির্দিষ্ট আইনজীবীর প্রতিশ্রুতি দিই না এবং দোভাষী দিই না। লিখিত অনুবাদ আলাদা কথা: আপনার বার্তার স্বয়ংক্রিয় অনুবাদ হয় না।
+
+guidanceContent.bn.pages.contact.sections[3].paragraphs[1]
+    অনুরোধ পাঠালে বিষয়বস্তু রাখা হয় এবং যাচাইয়ের অপেক্ষা করে। কিছুক্ষণ পরে উত্তর না এলে আপনি যোগাযোগ পাতায় বলা ই-মেইল ঠিকানায় আবার লিখতে পারেন।
+
+guidanceContent.bn.pages.faq.eyebrow
+    প্রশ্নোত্তর
+
+guidanceContent.bn.pages.faq.title
+    প্রায় জিজ্ঞাস্য প্রশ্ন
+
+guidanceContent.bn.pages.faq.description
+    কর্মক্ষেত্র, প্রস্তুতি, ভাষা, ব্যয় এবং পাঠানো অনুরোধের অর্থ নিয়ে ব্যাখ্যা।
+
+guidanceContent.bn.pages.faq.intro
+    নিচের প্রশ্নের উত্তর সাধারণ তথ্যের স্তরে দেওয়া হয়। আপনার নিজের মামলার উত্তর তখনই সম্ভব, যখন কোনো আইনজীবী কাগজপত্র যাচাই করেন।
+
+guidanceContent.bn.pages.faq.sections[0].heading
+    এই অংশ কীভাবে ব্যবহার করবেন
+
+guidanceContent.bn.pages.faq.sections[0].paragraphs[0]
+    আপনার অবস্থার উত্তর যদি না পান, উত্তর প্রায়ই বিশেষ তথ্যের উপর নির্ভর করে। তখন সেই তথ্য সারসংক্ষেপে লিখুন, এই পাতা থেকে নিজে সিদ্ধান্ত টানার বদলে।
+
+guidanceContent.bn.pages.faq.faqs[0].question
+    কার্যালয় কোন বিষয়ে কাজ করে?
+
+guidanceContent.bn.pages.faq.faqs[0].answer
+    আমরা ছয়টি দলের কাজ করি: তাইওয়ানে বিনিয়োগ ও কোম্পানি গঠন, দেওয়ানি বিরোধ ও ক্ষতিপূরণ, বিবাহ, পরিবার ও উত্তরাধিকার, শ্রম-সংক্রান্ত বিরোধ, ফৌজদারি মামলা এবং মেধাস্বত্ব। কোনো বিষয় নেওয়া হবে কি না, তা বিষয়বস্তু যাচাইয়ের পরে ঠিক হয়।
+
+guidanceContent.bn.pages.faq.faqs[1].question
+    যোগাযোগের আগে আমার কী প্রস্তুত করা উচিত?
+
+guidanceContent.bn.pages.faq.faqs[1].answer
+    ক্রম, আপনার চাহিদা, তাইওয়ানের সঙ্গে যোগ এবং সময়সীমা — যদি থাকে — তার সংক্ষিপ্ত সার তৈরি করুন। আদালত বা কর্তৃপক্ষের চিঠি আগে থেকে থাকলে তারিখ বলুন। এই ধাপে আপনাকে এখনই পরিচয়পত্র বা সম্পূর্ণ প্রমাণ পাঠাতে হয় না।
+
+guidanceContent.bn.pages.faq.faqs[2].question
+    বাংলায় কি পরামর্শ পাওয়া যায়?
+
+guidanceContent.bn.pages.faq.faqs[2].answer
+    না। এই পাতাগুলো বাংলায় লেখা, কিন্তু আইনজীবীর পরামর্শ কেবল ইংরেজি, চীনা (中文), জাপানি ও কোরীয়তে হয়। আমরা দোভাষীরও প্রতিশ্রুতি দিই না। লিখিত অনুবাদ আলাদা কথা: আপনার লেখা মূল পাঠ্য যেমন আছে তেমনই রাখা হয় এবং স্বয়ংক্রিয়ভাবে অনুবাদ হয় না।
+
+guidanceContent.bn.pages.faq.faqs[3].question
+    চার ভাষার কোনোটি যদি আমার কাজে না লাগে?
+
+guidanceContent.bn.pages.faq.faqs[3].answer
+    অনুরোধ পাঠানোর সময় “যোগাযোগপথ নিশ্চিত করা প্রয়োজন” বেছে নিন। আমরা যোগাযোগপথ যাচাই করতে উত্তর দিই, কিন্তু অন্য ভাষায় সেবা নিশ্চিত নয়। এটি যাচাইয়ের ধাপ, এই প্রতিশ্রুতি নয় যে আমরা অন্য ভাষায় কাজ করতে পারি।
+
+guidanceContent.bn.pages.faq.faqs[4].question
+    আমার বাংলা লেখার কী হয়?
+
+guidanceContent.bn.pages.faq.faqs[4].answer
+    আপনার লেখা মূল পাঠ্য যেমন আছে তেমনই রাখা হয় এবং স্বয়ংক্রিয়ভাবে অনুবাদ হয় না। প্রয়োজন হলে পরের যোগাযোগের ভাষা আপনার সঙ্গে নিশ্চিত করা হয়।
+
+guidanceContent.bn.pages.faq.faqs[5].question
+    অনুরোধ পাঠালেই কি পরামর্শ হয়ে গেছে ধরা হয়?
+
+guidanceContent.bn.pages.faq.faqs[5].answer
+    না। পাঠানো অনুরোধ আইনজীবীর যাচাইয়ের অপেক্ষা করে। এটি আইনি মতামত নয়, নিশ্চিত সাক্ষাৎ নির্ধারণ নয়, আর পাঠালেই আইনজীবী ও মক্কেলের সম্পর্ক তৈরি হয় না।
+
+guidanceContent.bn.pages.faq.faqs[6].question
+    ব্যয় কীভাবে বের হয়?
+
+guidanceContent.bn.pages.faq.faqs[6].answer
+    আগে কাজের পরিধি ঠিক হয়, তারপর অঙ্ক ও হিসাবের পদ্ধতি আপনার সঙ্গে নিশ্চিত হয়, কাজ শুরুর আগে। এই পাতা অঙ্ক বলে না এবং বলে না যে প্রথম কথাবার্তা নিঃশুল্ক।
+
+guidanceContent.bn.pages.faq.faqs[7].question
+    আমার বিষয় যদি খুব জরুরি হয়?
+
+guidanceContent.bn.pages.faq.faqs[7].answer
+    সময়সীমা বা সরকারি চিঠির তারিখ আপনার সারসংক্ষেপের শুরুতে বলুন, যাতে যাচাইয়ে সেই তারিখ দেখা যায়। এই পাতায় জরুরি পথ নেই এবং উত্তরের সময়সীমা বলা হয় না; আপনার বিষয় যদি অপেক্ষা না চলে, আপনার স্থানে সমান্তরাল অন্য পথও দেখা উচিত।
+
+guidanceContent.bn.pages.privacy.eyebrow
+    গোপনীয়তা
+
+guidanceContent.bn.pages.privacy.title
+    যোগাযোগ ফর্ম থেকে যে তথ্য নেওয়া হয়
+
+guidanceContent.bn.pages.privacy.description
+    এই বাংলা পাতার যোগাযোগ ফর্ম কী সংগ্রহ করে, আপনার মূল পাঠ্যের কী হয়, এবং নিজের ব্যক্তিগত তথ্য নিয়ে আমাদের কাছে কীভাবে পৌঁছাবেন।
+
+guidanceContent.bn.pages.privacy.intro
+    এই অংশ কেবল এই তথ্য পাতার যোগাযোগ ফর্ম নিয়ে। এটি ব্যক্তিগত তথ্যের ব্যবস্থাপনা বর্ণনা করে, কারিগরি প্রতিশ্রুতি নয়।
+
+guidanceContent.bn.pages.privacy.sections[0].heading
+    কোন তথ্য সংগ্রহ করা হয়
+
+guidanceContent.bn.pages.privacy.sections[0].paragraphs[0]
+    আপনি এই অংশের ফর্ম থেকে অনুরোধ পাঠালে নিচের বিষয়গুলো লেখা হয়:
+
+guidanceContent.bn.pages.privacy.sections[0].items[0]
+    আপনার দেওয়া নাম
+
+guidanceContent.bn.pages.privacy.sections[0].items[1]
+    উত্তরের জন্য ই-মেইল ঠিকানা
+
+guidanceContent.bn.pages.privacy.sections[0].items[2]
+    পাঠানোর সময় পাতার প্রদর্শন ভাষা
+
+guidanceContent.bn.pages.privacy.sections[0].items[3]
+    যে ভাষায় আপনি লিখেছেন
+
+guidanceContent.bn.pages.privacy.sections[0].items[4]
+    আপনার কাঙ্ক্ষিত পরামর্শের ভাষা
+
+guidanceContent.bn.pages.privacy.sections[0].items[5]
+    আপনার লেখা মূল পাঠ্য
+
+guidanceContent.bn.pages.privacy.sections[0].items[6]
+    অনুরোধ পাঠানোর আপনার সম্মতি
+
+guidanceContent.bn.pages.privacy.sections[0].items[7]
+    অনুরোধ আবার খুঁজে পেতে প্রাপ্তি নম্বর
+
+guidanceContent.bn.pages.privacy.sections[1].heading
+    মূল পাঠ্য অপরিবর্তিত রাখা হয়
+
+guidanceContent.bn.pages.privacy.sections[1].paragraphs[0]
+    আপনার পাঠ্য ঠিক যেমন লিখেছেন তেমনই রাখা হয় এবং স্বয়ংক্রিয়ভাবে অনুবাদ হয় না। কাজের জন্য অনুবাদ দরকার হলে তা আপনার সঙ্গে আলাদা করে আলোচনা করা হয়।
+
+guidanceContent.bn.pages.privacy.sections[1].paragraphs[1]
+    মূল পাঠ্য রাখা হয় বলে শুরুর ধাপে যা এখন দরকার নয় তা লিখবেন না, যেমন পাসপোর্ট নম্বর, পরিচয় নম্বর বা হিসাবের তথ্য।
+
+guidanceContent.bn.pages.privacy.sections[2].heading
+    সংরক্ষণের স্থান ও প্রবেশাধিকার
+
+guidanceContent.bn.pages.privacy.sections[2].paragraphs[0]
+    আপনার পাঠানো বিষয়বস্তু এমন স্থানে রাখা হয় যা সর্বসমক্ষে খোলা নয়। কেবল কার্যালয়ের অনুমোদিত ব্যক্তি অনুরোধের কাজ করতে সেখানে যেতে পারেন।
+
+guidanceContent.bn.pages.privacy.sections[2].paragraphs[1]
+    এই পাতা পূর্ণ নিরাপত্তার প্রতিশ্রুতি দেয় না। কোনো সঞ্চার পথ ও কোনো সংরক্ষণ স্থান সম্পূর্ণ নিরাপদ নয়; তাই সংবেদনশীল কাগজপত্র আইনজীবীর বিশেষ নির্দেশের পরেই পাঠানো উচিত।
+
+guidanceContent.bn.pages.privacy.sections[3].heading
+    ব্যবহারের উদ্দেশ্য
+
+guidanceContent.bn.pages.privacy.sections[3].paragraphs[0]
+    পাঠানো তথ্য অনুরোধ যাচাই, আপনাকে উত্তর দেওয়া, যোগাযোগপথ ঠিক করা এবং কাজ গৃহীত হলে তা চালানোর জন্য ব্যবহার হয়।
+
+guidanceContent.bn.pages.privacy.sections[3].paragraphs[1]
+    আলাদা সম্মতি ছাড়া এই তথ্য বাজারজাতকরণে ব্যবহার হয় না।
+
+guidanceContent.bn.pages.privacy.sections[4].heading
+    বিজ্ঞপ্তি ও প্রাপ্তি নম্বর
+
+guidanceContent.bn.pages.privacy.sections[4].paragraphs[0]
+    অনুরোধ সফলভাবে পাঠানো হলে ব্যবস্থা কার্যালয়কে জানায়। এই বিজ্ঞপ্তি যদি এখনও নিশ্চিত না হয়, আপনার পাঠ্য থেকে যায় এবং হারিয়ে যায় না।
+
+guidanceContent.bn.pages.privacy.sections[4].paragraphs[1]
+    প্রাপ্তি নম্বর আমাদের নথিতে আপনার অনুরোধ খুঁজতে। সংরক্ষণের পরে এটি দেখানো হয়; নতুন যোগাযোগে আপনি এটি বলতে পারেন।
+
+guidanceContent.bn.pages.privacy.sections[5].heading
+    আপনার অধিকার ও যোগাযোগপথ
+
+guidanceContent.bn.pages.privacy.sections[5].paragraphs[0]
+    যোগাযোগ পাতায় বলা ই-মেইল ঠিকানা থেকে আপনি নিজের ব্যক্তিগত তথ্য জানতে, সংশোধন বা মুছে ফেলতে চাইতে পারেন অথবা সম্মতি ফিরিয়ে নিতে পারেন। আইনি বা প্রক্রিয়াগত সংরক্ষণ কর্তব্য থাকলে আমরা সীমা বুঝিয়ে বলি।
+
+guidanceContent.bn.pages.privacy.sections[5].paragraphs[1]
+    এই পাতা নির্দিষ্ট সংরক্ষণকাল বলে না, কারণ প্রকৃত সময় এই উপর নির্ভর করে যে বিষয়টি এগোয় কি না, এবং তার সঙ্গে জড়ানো কর্তব্যের উপর। আগে মুছে ফেলতে চাইলে যোগাযোগে বলুন।
+
+guidanceContent.bn.pages.privacy.sections[6].heading
+    সংরক্ষণের স্থান ও সেবা প্রদানকারী
+
+guidanceContent.bn.pages.privacy.sections[6].paragraphs[0]
+    এই ওয়েবসাইট Vercel-এ হোস্ট করা হয়েছে, এবং আপনার পাঠানো বার্তা এই সেবার অ-সর্বজনীন সংরক্ষণাগারে রাখা হয়। ই-মেইল কার্যালয় যে ই-মেইল সেবা ব্যবহার করে, সেই পথে পাঠানো হয়।
+
+guidanceContent.bn.pages.privacy.sections[6].paragraphs[1]
+    কোনো কোনো সেবা প্রদানকারীর সার্ভার তাইওয়ানের বাইরে থাকতে পারে, ফলে আপনার তথ্য সেখানে রাখা ও প্রক্রিয়া করা যেতে পারে। সংরক্ষণের উদ্দেশ্য পূরণ হলে তথ্য বিলম্ব না করে মুছে ফেলা হয়; প্রযোজ্য নিয়ম অনুসারে যা রাখা আবশ্যক, তা সেই সময় পর্যন্ত থাকে। ব্যক্তিগত তথ্য-সংক্রান্ত অনুরোধ wei@hoveringlaw.com.tw-এ নেওয়া হয়।
+
+guidanceContent.bn.pages.disclaimer.eyebrow
+    অস্বীকৃতি
+
+guidanceContent.bn.pages.disclaimer.title
+    এই পাতার তথ্যের পরিধি ও সীমা
+
+guidanceContent.bn.pages.disclaimer.description
+    তথ্যের সাধারণ রূপ, আইনি প্রযোজ্য ক্ষেত্র এবং আইনজীবী-মক্কেল সম্পর্কের শর্ত।
+
+guidanceContent.bn.pages.disclaimer.intro
+    এই অংশ স্পষ্ট করে এই বাংলা তথ্য পাতা আপনার জন্য কী করতে পারে আর কী পারে না।
+
+guidanceContent.bn.pages.disclaimer.sections[0].heading
+    কেবল সাধারণ তথ্য
+
+guidanceContent.bn.pages.disclaimer.sections[0].paragraphs[0]
+    এই পাতার বিষয়বস্তু সাধারণ তথ্য হিসেবে লেখা। এটি আপনার মামলার আইনি মতামত নয় এবং আপনার নিজের কাগজপত্র যাচাইয়ের স্থান নেয় না।
+
+guidanceContent.bn.pages.disclaimer.sections[0].paragraphs[1]
+    কোনো মামলার ফলাফল তথ্য, প্রযোজ্য নিয়ম ও সময়ের উপর নির্ভর করে; দুটি একরকম দেখতে অবস্থা ভিন্নভাবে শেষ হতে পারে।
+
+guidanceContent.bn.pages.disclaimer.sections[1].heading
+    আইনি প্রযোজ্য ক্ষেত্র
+
+guidanceContent.bn.pages.disclaimer.sections[1].paragraphs[0]
+    কার্যালয় তাইওয়ানের আইন অনুসারে কাজ করে, এবং এই পাতা কেবল সেই কাঠামোর কাজের কথা বলে।
+
+guidanceContent.bn.pages.disclaimer.sections[1].paragraphs[1]
+    বিষয়বস্তু তাইওয়ান ছাড়া অন্য কোনো ব্যবস্থার আইন অনুসারে পরামর্শ নয়, যার মধ্যে আপনার বাসস্থানের আইনও পড়ে। আপনার বিষয়ের কোনো অংশ অন্য ব্যবস্থায় জোড়লে আমরা আপনার সঙ্গে স্পষ্ট করব সেই অংশের জন্য কোন যোগ্য বিশেষজ্ঞ দরকার।
+
+guidanceContent.bn.pages.disclaimer.sections[2].heading
+    আইনজীবী ও মক্কেলের সম্পর্ক নিজে থেকে তৈরি হয় না
+
+guidanceContent.bn.pages.disclaimer.sections[2].paragraphs[0]
+    এই পাতা পড়া, ফর্ম বা ই-মেইল পাঠানো নিজে থেকে আইনজীবী ও মক্কেলের সম্পর্ক তৈরি করে না।
+
+guidanceContent.bn.pages.disclaimer.sections[2].paragraphs[1]
+    এই সম্পর্ক তখনই তৈরি হয় যখন বিষয়টি যাচাই হয়ে যায় এবং উভয় পক্ষ কাজ নেওয়ার নিশ্চিতকরণ করে।
+
+guidanceContent.bn.pages.disclaimer.sections[3].heading
+    ফলাফলের কোনো প্রতিশ্রুতি নেই
+
+guidanceContent.bn.pages.disclaimer.sections[3].paragraphs[0]
+    এই পাতার কোনো অংশ কোনো মামলার ফলাফল, আবেদনের মঞ্জুরি অথবা অবস্থান ও কর্ম অবস্থার প্রতিশ্রুতি নয়।
+
+guidanceContent.bn.pages.disclaimer.sections[3].paragraphs[1]
+    বাহিরের লিঙ্ক দিকনির্দেশের জন্য; আমরা তৃতীয় পক্ষের বিষয়বস্তুর শুদ্ধতা বা হালনাগাদ বলি না।
+
+guidanceContent.bn.pages.columns.eyebrow
+    প্রবন্ধ
+
+guidanceContent.bn.pages.columns.title
+    তাইওয়ানের আইন নিয়ে প্রবন্ধ
+
+guidanceContent.bn.pages.columns.description
+    তাইওয়ানের আইন-সংক্রান্ত সাধারণ প্রশ্নে বাংলা প্রবন্ধ। বিষয়বস্তু প্রকাশের সময়ের সাধারণ তথ্য, আপনার মামলার আইনি মতামত নয়।
+
+guidanceContent.bn.pages.columns.intro
+    কার্যালয় তাইওয়ানের আইন-সংক্রান্ত সাধারণ প্রশ্নে প্রবন্ধ প্রকাশ করে। বাংলায় যে প্রবন্ধ আছে সেগুলো এই পাতায়; সঙ্গে চারটি লিঙ্ক আছে যা প্রতিটি একটি মূল ভাষার প্রবন্ধ তালিকা খোলে।
+
+guidanceContent.bn.pages.columns.sections[0].heading
+    ভাষা অনুসারে চারটি তালিকা
+
+guidanceContent.bn.pages.columns.sections[0].paragraphs[0]
+    এই অংশে চারটি লিঙ্ক আছে: কোরীয়, চীনা, ইংরেজি ও জাপানিতে প্রবন্ধের তালিকা। প্রতিটি লিঙ্ক তালিকার ভাষা বলে, যাতে আপনি আগে থেকে জানেন বিষয়বস্তু কোন ভাষায় খুলবে।
+
+guidanceContent.bn.pages.columns.sections[0].paragraphs[1]
+    এই চার তালিকা প্রবন্ধের মূল ভাষা অনুসারে তালিকা, অনুবাদের তালিকা নয়। বাংলায় যে প্রবন্ধ আছে সেগুলো এই পাতায় আলাদা।
+
+guidanceContent.bn.pages.columns.sections[1].heading
+    লিঙ্কগুলো কোথায় নিয়ে যায়
+
+guidanceContent.bn.pages.columns.sections[1].paragraphs[0]
+    চার লিঙ্কের একটি বেছে নিলে সেই ভাষার প্রবন্ধ তালিকা খোলে। তালিকা থেকে আপনি নিজে পাঠ্য বেছে নেন; পুরো বিষয়বস্তু প্রবন্ধের মূল ভাষায় দেখা যায়।
+
+guidanceContent.bn.pages.columns.sections[1].paragraphs[1]
+    এই পাতা প্রবন্ধের বিষয়বস্তুর সার দেয় না এবং বলে না যে কোনো বিষয় চার ভাষাতেই আছে। প্রতিটি তালিকায় কেবল সেই পাঠ্য আছে যা সেই ভাষায় প্রকাশিত।
+
+guidanceContent.bn.pages.columns.sections[2].heading
+    প্রবন্ধ দিকনির্দেশ হিসেবে কতদূর কাজে লাগে
+
+guidanceContent.bn.pages.columns.sections[2].paragraphs[0]
+    প্রবন্ধ প্রকাশের সময়ের সাধারণ তথ্য। নিয়ম ও তার প্রয়োগ বদলাতে পারে, আর কোনো প্রবন্ধ আপনার মামলার সব পরিস্থিতি ধরে না।
+
+guidanceContent.bn.pages.columns.sections[2].paragraphs[1]
+    তাই বাস্তব বিষয়ে কোনো পদক্ষেপ কেবল প্রবন্ধের উপর ভিত্তি করে নেবেন না। তাকে পরিদর্শনের জন্য ব্যবহার করুন এবং নিজের কাগজপত্র আইনজীবীর সঙ্গে আলাদা করে আলোচনা করুন; এই পাতা পরামর্শের ধাপ নয়।
+
+guidanceTeamCopy.bn.label
+    দল
+
+guidanceTeamCopy.bn.title
+    Hovering-এর আন্তর্জাতিক দল
+
+guidanceTeamCopy.bn.description
+    Hovering-এর আইনজীবী, পরিচালনা ব্যবস্থাপনা ও অংশীদার হিসাবরক্ষকের পরিচিতি।
+
+guidanceTeamCopy.bn.representativeTitle
+    প্রধান আইনজীবী
+
+guidanceTeamCopy.bn.teamTitle
+    আইনজীবী ও সহকর্মী
+
+guidanceTeamCopy.bn.partnerTitle
+    অংশীদার হিসাবরক্ষক
+
+guidanceTeamCopy.bn.introLabel
+    পরিচিতি
+
+guidanceTeamCopy.bn.educationLabel
+    শিক্ষা
+
+guidanceTeamCopy.bn.experienceLabel
+    অভিজ্ঞতা
+
+guidanceTeamCopy.bn.photoAltPrefix
+    ছবি
+
+guidanceTeamCopy.bn.workingLanguagesLabel
+    কর্ম ভাষা
+
+guidanceTeamCopy.bn.fullProfileLabel
+    পূর্ণ পরিচিতি (ইংরেজিতে)
+
+guidanceTeamCopy.bn.keyFactsHeading
+    আইনজীবী Wei Tseng — মূল তথ্য
+
+guidanceTeamCopy.bn.qualificationLabel
+    যোগ্যতা ও কার্যালয়
+
+guidanceTeamCopy.bn.qualificationSentence
+    {name} তাইওয়ানে আইনপেশা চর্চার অনুমতিপ্রাপ্ত এবং {firm}-এর প্রধান আইনজীবী।
+
+guidanceTeamCopy.bn.practiceLabel
+    প্রধান ক্ষেত্র
+
+guidanceTeamCopy.bn.consultationLanguagesLabel
+    পরামর্শের ভাষা
+
+guidanceTeamCopy.bn.roles.tseng-junwei
+    তাইওয়ানে প্রধান আইনজীবী (Managing Attorney)
+
+guidanceTeamCopy.bn.roles.chang-rongxuan
+    তাইওয়ানের আইনজীবী (Taiwan Attorney)
+
+guidanceTeamCopy.bn.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.bn.roles.son-jungmin
+    কোরিয়া পরিচালনা ব্যবস্থাপক (Korea Operations Manager)
+
+guidanceTeamCopy.bn.roles.huang-shengping
+    অংশীদার হিসাবরক্ষক (Partner CPA)
+
+guidanceTeamBios.bn.tseng-junwei.intro[0]
+    কার্যালয় তাইওয়ানে উদ্যোগ ও ব্যক্তিগত বিষয়ে ইংরেজি, জাপানি, কোরীয় ও চীনায় কাজ করে।
+
+guidanceTeamBios.bn.tseng-junwei.intro[1]
+    তিনি জিমে আঘাতজনিত ক্ষতিপূরণের দাবিতে একজন কোরীয় শিক্ষার্থীর প্রতিনিধিত্ব করেছেন এবং প্রথম ধাপের আদালত থেকে TWD 1.57M রায় আদায় করেছেন।
+
+guidanceTeamBios.bn.tseng-junwei.education[0]
+    স্নাতকোত্তর (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.bn.tseng-junwei.education[1]
+    স্নাতক (B.A.) আইন ও অর্থায়নের দ্বৈত পথে, National Chengchi University
+
+guidanceTeamBios.bn.tseng-junwei.education[2]
+    Kobe University ও Waseda University-এ বিনিময় ছাত্রী
+
+guidanceTeamBios.bn.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.bn.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.bn.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.bn.chang-rongxuan.intro[0]
+    আগে Ministry of Education, Legal Affairs Division-এ, প্রশাসনিক ও দেওয়ানি বিষয়ে মন দিয়ে।
+
+guidanceTeamBios.bn.chang-rongxuan.intro[1]
+    বিশ্ববিদ্যালয়, শিক্ষকদের অধিকার এবং প্রশাসনিক আপিল-সংক্রান্ত বিষয়ের অভিজ্ঞতা।
+
+guidanceTeamBios.bn.chang-rongxuan.education[0]
+    আইন স্নাতক (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.bn.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.bn.chang-rongxuan.experience[1]
+    আইনজীবী, Hovering International Law Firm
+
+guidanceTeamBios.bn.chang-fangyu.intro[0]
+    Paralegal যিনি বেশ কয়েকটি কার্যালয়ে সিনিয়র paralegal হিসেবে দীর্ঘদিন কাজ করেছেন, কার্যক্রম সহায়তা, কোম্পানি আইন ও বিদেশি বিনিয়োগের দায়িত্বে।
+
+guidanceTeamBios.bn.chang-fangyu.intro[1]
+    মামলা, কোম্পানি গঠন, বিদেশি বিনিয়োগ অনুমতি, লাইসেন্স আবেদন এবং কোরিয়া ও তাইওয়ানের মধ্যে আদান-প্রদানে সহায়তা।
+
+guidanceTeamBios.bn.chang-fangyu.education[0]
+    আইন স্নাতক (LL.B.), Tunghai University
+
+guidanceTeamBios.bn.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.bn.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.bn.son-jungmin.intro[0]
+    কোরিয়া থেকে আসা মক্কেলদের পরামর্শের সময় ও যোগাযোগ সমন্বয় করেন।
+
+guidanceTeamBios.bn.son-jungmin.intro[1]
+    তথ্যবিজ্ঞানের ভিত্তিতে নথি ব্যবস্থা ও কর্মপ্রবাহ দিয়ে ক্ষেত্রগুলোর মধ্যে আদান-প্রদান সমর্থন করেন।
+
+guidanceTeamBios.bn.son-jungmin.education[0]
+    স্নাতক (B.S.) তথ্যবিজ্ঞান, National Cheng Kung University
+
+guidanceTeamBios.bn.son-jungmin.experience[0]
+    কোরিয়া পরিচালনা ক্ষেত্র, Hovering International Law Firm
+
+guidanceTeamBios.bn.huang-shengping.intro[0]
+    National Chengchi University-এ হিসাবে স্নাতক ও স্নাতকোত্তর কর্মসূচি শেষ করেছেন এবং বর্তমানে একটি হিসাব কার্যালয় পরিচালনা করেন।
+
+guidanceTeamBios.bn.huang-shengping.intro[1]
+    উদ্যোক্তা মক্কেলদের জন্য আইনি, কর ও আর্থিক ঝুঁকির সমন্বিত বিশ্লেষণ সমর্থন করেন।
+
+guidanceTeamBios.bn.huang-shengping.education[0]
+    স্নাতকোত্তর (M.A.) হিসাব, National Chengchi University
+
+guidanceTeamBios.bn.huang-shengping.education[1]
+    স্নাতক (B.A.) হিসাব, National Chengchi University
+
+guidanceTeamBios.bn.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.bn.Korean
+    কোরীয়
+
+guidanceLanguageNames.bn.Chinese
+    চীনা
+
+guidanceLanguageNames.bn.Japanese
+    জাপানি
+
+guidancePracticeAreaNames.bn.Taiwan company setup
+    তাইওয়ানে কোম্পানি গঠন
+
+guidancePracticeAreaNames.bn.Taiwan investment counsel
+    তাইওয়ান বিনিয়োগের আইনি পরামর্শ
+
+guidancePracticeAreaNames.bn.Civil litigation and damages
+    দেওয়ানি মামলা ও ক্ষতিপূরণ
+
+guidancePracticeAreaNames.bn.Trademark and patent filings
+    ট্রেডমার্ক ও পেটেন্ট আবেদন
+
+guidancePracticeAreaNames.bn.Visa and residency
+    ভিসা ও অবস্থান
+
+guidancePracticeAreaNames.bn.Family and labor disputes
+    পরিবার ও শ্রম বিরোধ
+
+guidanceOfficeCopy.bn.label
+    অফিস
+
+guidanceOfficeCopy.bn.title
+    কার্যালয়
+
+guidanceOfficeCopy.bn.description
+    Hovering International Law Firm-এর তাইওয়ানস্থ কার্যালয়গুলোর ঠিকানা।
+
+guidanceOfficeCopy.bn.officeLabel
+    কার্যালয়
+
+guidanceOfficeCopy.bn.mapPreviewLabel
+    মানচিত্রের পূর্বরূপ
+
+guidanceOfficeCopy.bn.koreaOfficeTitle
+    কোরিয়া কার্যালয়
+
+guidanceOfficeCopy.bn.koreaAddressCardLabel
+    কোরিয়া কার্যালয়ের ঠিকানা
+
+guidanceOfficeCopy.bn.koreaMapLinkLabel
+    Naver Map-এ দেখুন
+
+guidanceOfficeCopy.bn.reviewCountWord
+    পর্যালোচনা
+
+guidanceOfficeCopy.bn.phoneLabel
+    ফোন
+
+guidanceOfficeCopy.bn.faxLabel
+    ফ্যাক্স
+
+guidanceOfficeCopy.bn.mapLinkLabel
+    মানচিত্রে দেখুন
+
+guidanceOfficeCopy.bn.photoAlts[0]
+    তাইপেই কার্যালয়ের অভ্যর্থনা কক্ষ, Hovering International Law Firm
+
+guidanceOfficeCopy.bn.photoAlts[1]
+    তাইপেই কার্যালয়ে আইনজীবীর কক্ষ, Hovering International Law Firm
+
+guidanceOfficeCopy.bn.photoAlts[2]
+    তাইপেই কার্যালয়ের বৈঠককক্ষ, Hovering International Law Firm
+
+guidanceOfficeCopy.bn.officeTitles.taipei
+    তাইপেই
+
+guidanceOfficeCopy.bn.officeTitles.taichung
+    তাইচুং
+
+guidanceOfficeCopy.bn.officeTitles.kaohsiung
+    কাওসিউং
+
+guidanceOfficeCopy.bn.officeTitles.pingtung
+    পিংতুং
+
+guidanceFooterCopy.bn.officeLabel
+    কার্যালয়
+
+guidanceFooterCopy.bn.officeQuickLinksLabel
+    কার্যালয়ের দ্রুত লিঙ্ক
+
+guidanceFooterCopy.bn.followLabel
+    অনুসরণ করুন
+
+guidanceFooterCopy.bn.blogLabel
+    ব্লগ
+
+guidanceFooterCopy.bn.websiteLabel
+    দাপ্তরিক ওয়েবসাইট
+
+guidanceFooterCopy.bn.sitemapLabel
+    সাইট মানচিত্র
+
+guidanceFooterCopy.bn.copyEmailLabel
+    ই-মেইল ঠিকানা কপি করুন
+
+guidanceFooterCopy.bn.emailCopiedMessage
+    ই-মেইল ঠিকানা কপি হয়েছে।
+
+guidanceFooterCopy.bn.officialConsultationEmailLabel
+    পরামর্শের দাপ্তরিক ই-মেইল
+
+internationalInquiryCopy.bn.guidanceNotice
+    এই পাতা বাংলায় সাধারণ তথ্য হিসেবে লেখা, আপনার মামলার আইনি মতামত হিসেবে নয়।
+
+internationalInquiryCopy.bn.consultationNotice
+    পরামর্শ চার ভাষায় হয়: ইংরেজি, চীনা (中文), জাপানি ও কোরীয়।
+
+internationalInquiryCopy.bn.methodConfirmationNotice
+    চার ভাষার কোনোটি যদি আপনার কাজে না লাগে, “যোগাযোগপথ নিশ্চিত করা প্রয়োজন” বেছে নিন। আমরা ব্যবহারযোগ্য যোগাযোগপথ যাচাই করতে উত্তর দিই, যদি এমন পথ থাকে; অন্য ভাষায় সেবা নিশ্চিত নয় এবং উত্তরের সময়সীমার প্রতিশ্রুতি নেই।
+
+internationalInquiryCopy.bn.preparationNotice
+    আপনি সারসংক্ষেপ নিজের ভাষায় লিখতে পারেন। মূল পাঠ্য আপনি যেমন লিখেছেন তেমনই রাখা হয় এবং স্বয়ংক্রিয়ভাবে অনুবাদ হয় না।
+
+internationalInquiryCopy.bn.heading
+    পরামর্শের অনুরোধ পাঠান
+
+internationalInquiryCopy.bn.intro
+    আপনার বিষয় সংক্ষেপে বর্ণনা করুন। পরের ধাপের আলোচনার আগে আইনজীবী বিষয়বস্তু যাচাই করেন।
+
+internationalInquiryCopy.bn.submitLabel
+    অনুরোধ পাঠান
+
+internationalInquiryCopy.bn.submittingLabel
+    পাঠানো হচ্ছে…
+
+internationalInquiryCopy.bn.successMessage
+    আমরা আপনার অনুরোধ পেয়েছি; তা যাচাইয়ের অপেক্ষা করছে। এর অর্থ এই নয় যে পরামর্শ হয়ে গেছে বা সাক্ষাৎ নির্ধারণ নিশ্চিত হয়েছে।
+
+internationalInquiryCopy.bn.savedNotificationPendingMessage
+    আপনার অনুরোধ সংরক্ষিত, কিন্তু কার্যালয়ে বিজ্ঞপ্তি এখনও নিশ্চিত হয়নি। আপনি যা লিখেছেন তা হারায় না। উত্তর না এলে যোগাযোগ পাতার ই-মেইল ঠিকানায়ও লিখতে পারেন।
+
+internationalInquiryCopy.bn.receiptIdLabel
+    প্রাপ্তি নম্বর
+
+internationalInquiryCopy.bn.failureMessage
+    আপনার অনুরোধ পাঠানো যায়নি। আবার চেষ্টা করুন অথবা যোগাযোগ পাতার ই-মেইল ঠিকানায় লিখুন।
+
+internationalInquiryCopy.bn.originalLanguageLabel
+    যে ভাষায় আপনি লেখেন
+
+internationalInquiryCopy.bn.originalLanguagePlaceholder
+    যেমন বাংলা, ইংরেজি, চীনা বা অন্য কোনো ভাষা
+
+internationalInquiryCopy.bn.preferredConsultationLanguageLabel
+    পরামর্শের জন্য কাঙ্ক্ষিত ভাষা
+
+internationalInquiryCopy.bn.originalTextLabel
+    বিষয়ের সংক্ষিপ্ত বিবরণ (নিজের ভাষায়)
+
+internationalInquiryCopy.bn.originalTextPlaceholder
+    বলুন কী ঘটেছে, কী সহায়তা দরকার এবং থাকলে সময়সীমা। পাসপোর্ট নম্বর, পরিচয় নম্বর বা হিসাবের তথ্য লিখবেন না।
+
+internationalInquiryCopy.bn.nameLabel
+    নাম
+
+internationalInquiryCopy.bn.emailLabel
+    ই-মেইল
+
+internationalInquiryCopy.bn.consentLabel
+    আমি গোপনীয়তা পাতা পড়েছি এবং এই অনুরোধ পাঠানোর সম্মতি দিচ্ছি।
+
+internationalInquiryCopy.bn.privacyLinkLabel
+    গোপনীয়তা
+
+internationalInquiryCopy.bn.requiredMessage
+    এই ঘরটি আবশ্যক।
+
+internationalInquiryCopy.bn.invalidEmailMessage
+    অনুগ্রহ করে সঠিক ই-মেইল ঠিকানা দিন।
+
+internationalInquiryCopy.bn.tooLongMessage
+    পাঠ্য খুব লম্বা। ছোট করে আবার পাঠান।
+
+internationalInquiryCopy.bn.sourceLanguageNotice
+    এই প্রবন্ধ কেবল {language}-এ প্রকাশিত; লিঙ্ক মূল পাতা খোলে।
+
+internationalInquiryCopy.bn.unavailableTranslationNotice
+    এই বিষয় এই পাতার ভাষায় এখন উপলব্ধ নয়। মূল ভাষার লিঙ্ক মূল পাঠ্য খোলে।
+
+internationalInquiryCopy.bn.unavailableLanguageNotice
+    এই পাতা {language}-এ উপলব্ধ নয়।
+
+internationalInquiryCopy.bn.languageOptions.en
+    ইংরেজি (English)
+
+internationalInquiryCopy.bn.languageOptions.zh-hant
+    চীনা (中文)
+
+internationalInquiryCopy.bn.languageOptions.ja
+    জাপানি (日本語)
+
+internationalInquiryCopy.bn.languageOptions.ko
+    কোরীয় (한국어)
+
+internationalInquiryCopy.bn.languageOptions.needs-method-confirmation
+    চার ভাষার কোনোটিই কাজে লাগে না — যোগাযোগপথ নিশ্চিত করা প্রয়োজন
+
+guidanceAnswers.bn.services.answer
+    কার্যালয় তাইওয়ানের আইন অনুসারে ছয় কর্মক্ষেত্রে সেবা দেয়: বিনিয়োগ ও কোম্পানি গঠন, দেওয়ানি বিরোধ ও ক্ষতিপূরণ, বিবাহ, পরিবার ও উত্তরাধিকার, শ্রম, ফৌজদারি এবং মেধাস্বত্ব। প্রতিটি বিষয়ের পরিধি আপনার পাঠানো বিষয়বস্তু যাচাইয়ের পরে আলাদা করে নিশ্চিত হয়। পরামর্শ কেবল ইংরেজি, চীনা, জাপানি ও কোরীয়তে হয়।
+
+guidanceAnswers.bn.services.sources[0]
+    /bn/faq
+
+guidanceAnswers.bn.services.sources[1]
+    /bn/contact
+
+guidanceAnswers.bn.about.answer
+    Hovering International Law Firm তাইওয়ানের একটি আইন কার্যালয়, 2016 সালে National Taiwan University (國立臺灣大學)-এর স্নাতকদের প্রতিষ্ঠিত, তাইপেই, কাওসিউং, তাইচুং ও পিংতুং-এ কার্যালয়সহ। 2020 থেকে হিসাব বিভাগ আছে; তাইচুং কার্যালয় কোরিয়া ও জাপান-সংক্রান্ত বিষয়ে কাজ করে। কার্যালয় ফলাফলের প্রতিশ্রুতি দেয় না। পরামর্শ কেবল ইংরেজি, চীনা, জাপানি ও কোরীয়তে হয়।
+
+guidanceAnswers.bn.about.sources[0]
+    /bn/lawyers
+
+guidanceAnswers.bn.about.sources[1]
+    /bn/services
+
+guidanceAnswers.bn.lawyers.answer
+    এই পাতা Hovering-এর আইনজীবী, পরিচালনা ব্যবস্থাপনা ও অংশীদার হিসাবরক্ষকের পরিচিতি দেখায়। আইনজীবী Wei Tseng (曾雋崴) তাইওয়ানে অনুমতিপ্রাপ্ত এবং কার্যালয়ের প্রধান আইনজীবী; তিনি কোরিয়া, জাপান ও অন্য আন্তর্জাতিক মক্কেলদের সঙ্গে কাজ করেন। আইনজীবীর সঙ্গে পরামর্শ কেবল ইংরেজি, চীনা (中文), জাপানি ও কোরীয় ভাষায় হয়; অন্য কোনো ভাষায় পরামর্শ দেওয়া হয় না।
+
+guidanceAnswers.bn.lawyers.sources[0]
+    /bn/about
+
+guidanceAnswers.bn.lawyers.sources[1]
+    /bn/contact
+
+guidanceAnswers.bn.pricing.answer
+    এই পাতা মূল্যতালিকা প্রকাশ করে না। আগে আপনার পাঠানো সার থেকে কাজের পরিধি ঠিক হয়, তারপর ব্যয়ের অঙ্ক ও হিসাবের পদ্ধতি কাজ শুরুর আগে আপনার সঙ্গে নিশ্চিত হয়। আইনজীবীর সঙ্গে কথা মূল্য পরিশোধসাপেক্ষ হতে পারে; আইনজীবীর পারিশ্রমিকের বাইরে আদালত বা কর্তৃপক্ষের খরচও লাগতে পারে। পরামর্শ কেবল ইংরেজি, চীনা, জাপানি ও কোরীয়তে হয়।
+
+guidanceAnswers.bn.pricing.sources[0]
+    /bn/contact
+
+guidanceAnswers.bn.pricing.sources[1]
+    /bn/faq
+
+guidanceAnswers.bn.contact.answer
+    যোগাযোগ ফর্ম থেকে আপনার সার পাঠান: কী ঘটেছে, কী সহায়তা দরকার, বিষয়টির তাইওয়ানের সঙ্গে কী যোগ এবং জানা থাকলে সময়সীমা। শুরুতে পরিচয়পত্র বা সম্পূর্ণ প্রমাণ পাঠানো আবশ্যক নয়। কার্যালয় উত্তরের সময়সীমার প্রতিশ্রুতি দেয় না এবং এই পাতা থেকে সাক্ষাৎ নির্ধারণ নিশ্চিত করে না। পরামর্শ কেবল ইংরেজি, চীনা, জাপানি ও কোরীয়তে হয়।
+
+guidanceAnswers.bn.contact.sources[0]
+    /bn/faq
+
+guidanceAnswers.bn.contact.sources[1]
+    /bn/pricing
+
+guidanceAnswers.bn.faq.answer
+    এই অংশ সাধারণ তথ্যের স্তরে বারবার জিজ্ঞাস্য প্রশ্নের উত্তর দেয়: ছয় কর্মদল, যোগাযোগের আগে প্রস্তুতি, ব্যয় ঠিক হওয়ার পদ্ধতি এবং পাঠানো বার্তার অর্থ। পাঠানো অনুরোধ আইনজীবীর যাচাইয়ের অপেক্ষা করে; এটি আইনি মতামত নয়, সাক্ষাৎ নির্ধারণ নয় এবং আইনজীবী ও মক্কেলের সম্পর্ক তৈরি করে না। পরামর্শ কেবল ইংরেজি, চীনা, জাপানি ও কোরীয়তে হয়।
+
+guidanceAnswers.bn.faq.sources[0]
+    /bn/contact
+
+guidanceAnswers.bn.faq.sources[1]
+    /bn/services
+
+GUIDANCE_LLMS_NOTICES.bn.consultationNotice
+    এই পাতাগুলো বাংলায় লেখা, কিন্তু আইনজীবীর পরামর্শ কেবল ইংরেজি, চীনা (中文), জাপানি ও কোরীয়তে হয়।
+
+GUIDANCE_LLMS_NOTICES.bn.discoveryNotice
+    llms.txt ফাইল কেবল সর্বজনীন পাতা খুঁজে পাওয়ার মানচিত্র; এটি অনুসন্ধান ক্রম, সমর্থন, কৃত্রিম বুদ্ধিমত্তার সুপারিশ বা দৃশ্যমানতার প্রতিশ্রুতি দেয় না।
+
+GUIDANCE_LLMS_NOTICES.bn.confidentialNotice
+    মূল পাঠ্য রাখা হয় বলে শুরুর ধাপে যা এখন দরকার নয় তা লিখবেন না, যেমন পাসপোর্ট নম্বর, পরিচয় নম্বর বা হিসাবের তথ্য।

@@ -1,0 +1,1096 @@
+# is guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.is.languageName
+    Íslenska
+
+guidanceContent.is.nav.home
+    Forsíða
+
+guidanceContent.is.nav.services
+    Þjónusta
+
+guidanceContent.is.nav.about
+    Skrifstofan
+
+guidanceContent.is.nav.lawyers
+    Lögmenn
+
+guidanceContent.is.nav.pricing
+    Kostnaður
+
+guidanceContent.is.nav.contact
+    Samband
+
+guidanceContent.is.nav.faq
+    Spurningar
+
+guidanceContent.is.nav.privacy
+    Persónuvernd
+
+guidanceContent.is.nav.disclaimer
+    Fyrirvari
+
+guidanceContent.is.nav.columns
+    Greinar
+
+guidanceContent.is.contactCta
+    Senda beiðni um ráðgjöf
+
+guidanceContent.is.footerNotice
+    Þessi síða á íslensku inniheldur aðeins almennar leiðbeiningar um störf skrifstofunnar samkvæmt rétti Taívan. Hún er ekki lögfræðileg ráðgjöf í tilteknu máli og sending skilaboða stofnar ein og sér ekki samband milli lögmanns og skjólstæðings.
+
+guidanceContent.is.skipLink
+    Sleppa leiðarstýringu og fara í efnið
+
+guidanceContent.is.menuLabel
+    Valmynd
+
+guidanceContent.is.languageLabel
+    Birtingarmál
+
+guidanceContent.is.mega.services.description
+    Skrifstofan vinnur helstu málaflokka réttar Taívan.
+
+guidanceContent.is.mega.services.viewAllLabel
+    Sýna allt
+
+guidanceContent.is.mega.columns.description
+    Greinar um algengar spurningar í rétti Taívan.
+
+guidanceContent.is.mega.columns.viewAllLabel
+    Sýna allt
+
+guidanceContent.is.mega.lawyers.description
+    Kynning á lögmönnunum og hvernig þú hefur samband.
+
+guidanceContent.is.mega.lawyers.viewAllLabel
+    Sýna allt
+
+guidanceContent.is.mega.pricing.description
+    Þessi síða útskýrir umfang vinnunnar og hvernig kostnaður er ákveðinn.
+
+guidanceContent.is.mega.pricing.viewAllLabel
+    Sýna allt
+
+guidanceContent.is.mega.faq.description
+    Algengar spurningar um störf skrifstofunnar á Taívan.
+
+guidanceContent.is.mega.faq.viewAllLabel
+    Sýna allt
+
+guidanceContent.is.notFoundTitle
+    Síðan fannst ekki
+
+guidanceContent.is.notFoundText
+    Síðan sem leitað var að er ekki til eða hefur verið færð. Þú getur farið aftur á forsíðuna á íslensku til að sjá leiðbeiningarnar sem eru tiltækar.
+
+guidanceContent.is.backHomeLabel
+    Á forsíðuna
+
+guidanceContent.is.readSourceLabel
+    Opna greinalistann á frummálinu
+
+guidanceContent.is.home.heroScrollLabel
+    Fletta niður
+
+guidanceContent.is.home.heroColumnsCtaLabel
+    Sjá greinarnar
+
+guidanceContent.is.home.servicesDetailLabel
+    Sjá nánar
+
+guidanceContent.is.home.servicesAssistanceBefore
+    Ef óljóst er hvaða málaflokki málið þitt tilheyrir útskýrir síðan 
+
+guidanceContent.is.home.servicesAssistanceLinkLabel
+    Samband
+
+guidanceContent.is.home.servicesAssistanceAfter
+     hvernig þú setur saman samantekt sem lögmaður metur.
+
+guidanceContent.is.home.columnsViewAllLabel
+    Sjá allar greinar
+
+guidanceContent.is.home.columnsReadMoreLabel
+    Lesa áfram
+
+guidanceContent.is.home.columnsReviewLabel
+    Yfirfarið af lögmanninum Wei Tseng
+
+guidanceContent.is.home.columnsOriginalLanguageBadge
+    Frummál
+
+guidanceContent.is.home.columnsOriginalLanguageNote
+    Eftirfarandi greinar eru enn ekki tiltækar á íslensku. Listinn stendur á frummálinu og opnar viðkomandi málsíðu; efnið er ekki þýtt sjálfkrafa.
+
+guidanceContent.is.home.imageBandAlt
+    Hefðbundið taívanskt sanheyuan (三合院) og nútímalegur skáli í dagsbirtu
+
+guidanceContent.is.home.videoPauseLabel
+    Gera hlé á myndbandinu
+
+guidanceContent.is.home.videoPlayLabel
+    Spila myndbandið
+
+guidanceContent.is.home.videoReplayLabel
+    Spila myndbandið aftur
+
+guidanceContent.is.pages.home.eyebrow
+    LEIÐBEININGAR
+
+guidanceContent.is.pages.home.title
+    Lögfræðiþjónusta á Taívan — leiðbeiningar á íslensku
+
+guidanceContent.is.pages.home.description
+    Almennar skýringar á íslensku um starfssvið Hovering International Law Firm á Taívan, ráðgjafarmálin og fyrsta samband.
+
+guidanceContent.is.pages.home.intro
+    Hovering International Law Firm aðstoðar skjólstæðinga erlendis frá, einnig þá sem tengjast Taívan, í málum samkvæmt rétti Taívan: fjárfestingu og félagastofnun, einkamál, hjúskap, fjölskyldu og erfðir, vinnurétt, refsirétt og hugverkarétt. Þessi íslenski hluti hjálpar þér að sjá hvaða vinna fellur innan sviðs okkar, hvað þú ættir að undirbúa og hvernig þú nærð til okkar. Þetta eru almennar upplýsingar, ekki lögfræðileg ráðgjöf í þínu eigin máli.
+
+guidanceContent.is.pages.home.sections[0].heading
+    Hvað við gerum
+
+guidanceContent.is.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm er lögmannsstofa með aðsetur á Taívan. Hún starfar samkvæmt rétti Taívan og hefur skrifstofur í Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Við ráðleggjum fyrirtækjum, flytjum mál fyrir dómstólum og fylgjum skjólstæðingum erlendis frá í gegnum þau skref sem krafist er á Taívan.
+
+guidanceContent.is.pages.home.sections[0].paragraphs[1]
+    Allt efnið hér er almennt. Úrslit máls ráðast af málsatvikum, gildandi reglum og tímasetningu. Þessar leiðbeiningar koma ekki í stað samtals við lögmann um skjölin þín.
+
+guidanceContent.is.pages.home.sections[1].heading
+    Mál síðunnar og ráðgjafarmálið eru ekki það sama
+
+guidanceContent.is.pages.home.sections[1].paragraphs[0]
+    Þessi síða er skrifuð á íslensku, en ráðgjöf við lögmann fer einungis fram á fjórum ráðgjafarmálum: ensku, kínversku (中文), japönsku og kóresku. Að lesa leiðbeiningarnar á íslensku þýðir ekki að samtalið við lögmanninn fari fram á íslensku.
+
+guidanceContent.is.pages.home.sections[1].paragraphs[1]
+    Við heitum ekki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú kannt ekkert af fjórum málunum útskýrir síðan „Samband“ hvernig við könnum samskiptaleið.
+
+guidanceContent.is.pages.home.sections[2].heading
+    Málaflokkar
+
+guidanceContent.is.pages.home.sections[2].paragraphs[0]
+    Starfið nær til eftirfarandi sex málaflokka. Síðan „Þjónusta“ lýsir hverjum flokki nánar og tilgreinir það sem ekki er heitið.
+
+guidanceContent.is.pages.home.sections[2].items[0]
+    Fjárfesting og félagastofnun á Taívan
+
+guidanceContent.is.pages.home.sections[2].items[1]
+    Einkamál og skaðabætur
+
+guidanceContent.is.pages.home.sections[2].items[2]
+    Hjúskapur, fjölskylda og erfðir
+
+guidanceContent.is.pages.home.sections[2].items[3]
+    Vinnuréttardeilur
+
+guidanceContent.is.pages.home.sections[2].items[4]
+    Refsiréttarmál
+
+guidanceContent.is.pages.home.sections[2].items[5]
+    Hugverkaréttur: vörumerki, einkaleyfi og höfundarréttur
+
+guidanceContent.is.pages.home.sections[3].heading
+    Hvar þú ættir að byrja
+
+guidanceContent.is.pages.home.sections[3].paragraphs[0]
+    Lestu síðuna „Þjónusta“ til að sjá hvort málið þitt falli innan sviðs okkar, síðan „Kostnaður“ og „Samband“ til að sjá hvernig umfangið er ákveðið og hvernig kostnaður er staðfestur áður en vinna hefst.
+
+guidanceContent.is.pages.home.sections[3].paragraphs[1]
+    Þegar þú sendir skilaboð máttu skrifa samantektina á þínu eigin máli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa. Send skilaboð eru beiðni sem bíður mats: það er enn ekki ráðgjöf og enn ekki staðfestur tími.
+
+guidanceContent.is.pages.services.eyebrow
+    ÞJÓNUSTA
+
+guidanceContent.is.pages.services.title
+    Hvaða mál við tökum til vinnslu
+
+guidanceContent.is.pages.services.description
+    Sex málaflokkar skrifstofunnar á Taívan og mörkin sem þú ættir fyrst að þekkja.
+
+guidanceContent.is.pages.services.intro
+    Hér á eftir eru flokkarnir sem við vinnum raunverulega, og spurningar sem oft koma upp í upphafi. Framsetningin hjálpar þér að meta hvort málið þitt falli innan sviðs okkar; hún er almenn og ekki lögfræðileg greining á einstöku máli.
+
+guidanceContent.is.pages.services.sections[0].heading
+    Fjárfesting og félagastofnun á Taívan
+
+guidanceContent.is.pages.services.sections[0].paragraphs[0]
+    Við aðstoðum erlenda fjárfesta og fyrirtæki við stofnun eða rekstur félags á Taívan: val á félagaformi, undirbúning og skil gagna, innlegg hlutafjár, bankamál, mat á starfsstöð og greinarkröfur. Við aðstoðum einnig við bókhald og skatta sem leiðir af stofnun og rekstri á Taívan.
+
+guidanceContent.is.pages.services.sections[0].paragraphs[1]
+    Ferli og tímalengd eru mishlöð eftir félagaformi, fjárfesti, grein, banka og þeim gögnum sem þegar eru til. Félagastofnun leiðir ekki af sjálfu sér til dvalarleyfis (居留) eða atvinnuleyfis (工作許可): það eru sérstök málsmeðferðir sem metin eru út frá stöðu hvers og eins.
+
+guidanceContent.is.pages.services.sections[1].heading
+    Einkamál og skaðabætur
+
+guidanceContent.is.pages.services.sections[1].paragraphs[0]
+    Þessi flokkur nær til samningsdeilna, skaðabóta vegna skaðaverka (侵權行為) og neytendadeilna. Vinna hefst að jafnaði með tímalínu, yfirferð gagna og fyrirliggjandi sönnunargagna og síðan fyrst með næstu skrefum.
+
+guidanceContent.is.pages.services.sections[1].paragraphs[1]
+    Frestir, þar á meðal lögbundnir málshöfðunarfrestir, og hve fullkomin sönnunargögnin eru, móta framvinduna. Tilgreindu því þekktar dagsetningar sem fyrst. Varðveittu samninga, skilaboð, greiðslukvittanir eða ljósmyndir af staðnum og nefndu þau í fyrstu skilaboðunum.
+
+guidanceContent.is.pages.services.sections[2].heading
+    Hjúskapur, fjölskylda og erfðir
+
+guidanceContent.is.pages.services.sections[2].paragraphs[0]
+    Við vinnum skilnað (離婚), skiptingu eigna, forsjá og foreldraábyrgð gagnvart ólögráða börnum (未成年子女權利義務之行使或負擔), umgengni (會面交往) og erfðir (繼承), einnig þegar aðilar eða eignir eru í ólíkum ríkjum. Fjölskyldumál yfir landamæri krefjast oft auka athugunar á heimilisskrá (戶籍), formi skjala og sönnunargildi þeirra á Taívan.
+
+guidanceContent.is.pages.services.sections[2].paragraphs[1]
+    Vegna þess að fjölskyldumál hafa oft fresti og samhliða málsmeðferðir ætti fyrsta samantektin að nefna tengsl aðila, núverandi búsetu og mál sem þegar eru í gangi.
+
+guidanceContent.is.pages.services.sections[3].heading
+    Vinnuréttardeilur
+
+guidanceContent.is.pages.services.sections[3].paragraphs[0]
+    Þessi flokkur nær til lokunar ráðningarsambands, lögbundins starfslokastyrks samkvæmt rétti Taívan (資遣費; ekki að jafna við sambærilegar reglur annarra ríkja), launa og deilna sem leiðir af ráðningarsamningi (勞動契約), bæði af hálfu launþega og vinnuveitanda. Við matið aðgreinum við ástæðu lokunar frá spurningum um uppsagnarfrest, greiðslu og fresti.
+
+guidanceContent.is.pages.services.sections[3].paragraphs[1]
+    Ráðningarsamningur, vinnureglur (工作規則), launaseðlar og bréfaskipti aðila eru yfirleitt lykilgögnin. Ef þú hefur þau enn, nefndu það í samantektinni.
+
+guidanceContent.is.pages.services.sections[4].heading
+    Refsiréttarmál
+
+guidanceContent.is.pages.services.sections[4].paragraphs[0]
+    Við flytjum mál sakborninga, ákærðra og brotaþola í rannsókn og fyrir dómi og metum refsiréttaráhættu atvinnurekstrar.
+
+guidanceContent.is.pages.services.sections[4].paragraphs[1]
+    Refsimál hafa oft stutta fresti og fastar stigskiptingar. Ef þú hefur þegar fengið bréf frá ákæruvaldi eða dómstóli, nefndu dagsetninguna á bréfinu snemma svo innihaldið sé metið í réttri röð.
+
+guidanceContent.is.pages.services.sections[5].heading
+    Hugverkaréttur
+
+guidanceContent.is.pages.services.sections[5].paragraphs[0]
+    Við aðstoðum við skráningu vörumerkja (商標) og einkaleyfa (專利), við höfundarrétt og við deilur um þessi réttindi á Taívan.
+
+guidanceContent.is.pages.services.sections[5].paragraphs[1]
+    Í þessum flokki skiptir röð skrefanna máli: verndarsvið, umsóknartími og raunveruleg notkun hafa áhrif á valið. Að skila umsókn þýðir ekki af sjálfu sér að henni verði veitt.
+
+guidanceContent.is.pages.services.sections[6].heading
+    Umfang og staðfesting þess
+
+guidanceContent.is.pages.services.sections[6].paragraphs[0]
+    Skrifstofan starfar samkvæmt rétti Taívan og vinnur mál í ofangreindum flokkum. Umfang hvers máls er staðfest sérstaklega eftir að lögmaður hefur metið skilaboðin þín.
+
+guidanceContent.is.pages.services.sections[6].paragraphs[1]
+    Dvalarstaða, atvinnuleyfi og sambærilegar spurningar eru metnar út frá gögnum og stöðu hvers og eins, ekki út frá ríkisfangi. Ef hluti málsins þíns snertir slíkar spurningar, nefndu það þegar þú hefur samband. Þessi síða heitir hvorki niðurstöðu né svarfresti.
+
+guidanceContent.is.pages.about.eyebrow
+    SKRIFSTOFAN
+
+guidanceContent.is.pages.about.title
+    Um Hovering International Law Firm
+
+guidanceContent.is.pages.about.description
+    Grunnupplýsingar um þessa taívönsku lögmannsstofu, skrifstofur hennar og vinnu með erlendum aðilum.
+
+guidanceContent.is.pages.about.intro
+    Hovering International Law Firm er lögmannsstofa á Taívan. Lögmennirnir vinna allt frá ráðgjöf til fyrirtækja til málflutnings fyrir dómstólum. Þessi hluti lýsir tilurð stofunnar, staðsetningum og vinnu með erlendum aðilum.
+
+guidanceContent.is.pages.about.sections[0].heading
+    Stofnun og uppbygging
+
+guidanceContent.is.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) var stofnuð árið 2016 af lögmönnum sem stunduðu nám við National Taiwan University (國立臺灣大學). Kínverska nafnið 昊鼎 sameinar táknið 昊 („himininn víði“) og 鼎 („traustur grunnur“) og lýsir stefnu stofunnar frá stofnun.
+
+guidanceContent.is.pages.about.sections[0].paragraphs[1]
+    Við höfum skrifstofur í Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Skrifstofan í Kaohsiung leggur áherslu á stjórnun fyrirtækja og vinnur einkamála-, refsi- og stjórnsýsludeilur. Skrifstofan í Taichung vinnur byggingamál, hugverkarétt og mál sem tengjast Kóreu og Japan. Skrifstofan í Pingtung var opnuð árið 2017 til að þjóna skjólstæðingum á svæðinu.
+
+guidanceContent.is.pages.about.sections[0].paragraphs[2]
+    Til viðbótar við lögmannsstörfin starfar frá 2020 einnig Hovering Accounting Office, sem býður bókhald og skattáætlun fyrir atvinnurekendur og eignamikla einstaklinga.
+
+guidanceContent.is.pages.about.sections[1].heading
+    Vinna með erlendum aðilum
+
+guidanceContent.is.pages.about.sections[1].paragraphs[0]
+    Starf yfir landamæri nær til félagastofnunar, vegabréfsáritana, vörumerkja- og einkaleyfisumsókna, mats á lagaáhættu og skattaráðgjafar fyrir fyrirtæki. Skrifstofan í Taichung vinnur einkum byggingamál, hugverkarétt og mál sem tengjast Kóreu og Japan. Lögmaðurinn Wei Tseng (曾雋崴) aðstoðar skjólstæðinga frá Kóreu og Japan og aðra alþjóðlega skjólstæðinga í tilgreindum flokkum.
+
+guidanceContent.is.pages.about.sections[1].paragraphs[1]
+    Hvort við getum tekið mál ræðst af efninu og af málinu sem samskiptin geta farið fram á. Falli málið þitt innan tilgreindra flokka og megi ræða það á einu af fjórum ráðgjafarmálum geturðu sent samantekt til mats.
+
+guidanceContent.is.pages.about.sections[2].heading
+    Þegar þú hefur samband
+
+guidanceContent.is.pages.about.sections[2].paragraphs[0]
+    Að samantektinni þinni móttekinni metur lögmaður innihaldið og ræðir síðan mögulegt vinnuumfang, gögn sem enn vantar og næstu skref. Í skatta- eða bókhaldsmálum getur skrifstofan unnið með bókhaldsdeildinni í einu samfelldu ferli.
+
+guidanceContent.is.pages.about.sections[2].paragraphs[1]
+    Úrslit hvers máls ráðast af málsatvikum og þeim gögnum sem eru til; við heitum ekki niðurstöðu. Ef þú þarft bindandi svar við þinni stöðu verða skjölin að vera rædd við lögmann á einu af fjórum ráðgjafarmálum.
+
+guidanceContent.is.pages.lawyers.eyebrow
+    LÖGMENN
+
+guidanceContent.is.pages.lawyers.title
+    Alþjóðlegt teymi Hovering
+
+guidanceContent.is.pages.lawyers.description
+    Prófílar lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis.
+
+guidanceContent.is.pages.lawyers.intro
+    
+
+guidanceContent.is.pages.pricing.eyebrow
+    KOSTNAÐUR
+
+guidanceContent.is.pages.pricing.title
+    Hvernig vinnuumfang og kostnaður eru ákveðin
+
+guidanceContent.is.pages.pricing.description
+    Skýring á röðinni: fyrst vinnuumfangið, síðan staðfesting kostnaðar, og hvers vegna þessi síða inniheldur ekki gjaldskrá.
+
+guidanceContent.is.pages.pricing.intro
+    Þessi síða útskýrir hvernig kostnaður er ákveðinn, ekki fjárhæðina. Fjárhæðin ræðst af vinnuumfangi hvers máls og hefur merkingu fyrst þegar það umfang er ljóst.
+
+guidanceContent.is.pages.pricing.sections[0].heading
+    Fyrst er vinnuumfangið ákveðið
+
+guidanceContent.is.pages.pricing.sections[0].paragraphs[0]
+    Mál af sömu gerð geta krafist mjög ólíkrar vinnu, eftir fjölda aðila, fyrirliggjandi gögnum, frestum sem halda þarf og því hvort málsmeðferð er þegar hafin. Fyrsta skrefið er því alltaf að ákveða hvað tilheyrir vinnunni og hvað ekki.
+
+guidanceContent.is.pages.pricing.sections[0].paragraphs[1]
+    Samantektin sem þú sendir í upphafi er grundvöllur þessa umfangs. Því skýrar sem hún lýsir framvindu, beiðni þinni og frestum, því nákvæmar má ákveða umfangið.
+
+guidanceContent.is.pages.pricing.sections[1].heading
+    Kostnaður er staðfestur áður en vinna hefst
+
+guidanceContent.is.pages.pricing.sections[1].paragraphs[0]
+    Þegar vinnuumfangið er ljóst eru fjárhæð og útreikningsaðferð ræddar við þig og staðfestar áður en vinna hefst. Breyti umfangið í vinnslunni verður það að vera staðfest að nýju.
+
+guidanceContent.is.pages.pricing.sections[1].paragraphs[1]
+    Þessi síða er ekki tilboð og stofnar ekki greiðsluskyldu. Að senda beiðni í gegnum þessa síðu er einnig án greiðslu.
+
+guidanceContent.is.pages.pricing.sections[2].heading
+    Ráðgjöfin getur verið greidd
+
+guidanceContent.is.pages.pricing.sections[2].paragraphs[0]
+    Ráðgjöf lögmanns getur verið greidd þjónusta. Þessi síða segir ekki að fyrsta samtalið sé án greiðslu og engan hluta hennar má lesa þannig.
+
+guidanceContent.is.pages.pricing.sections[2].paragraphs[1]
+    Sé ráðgjöfin greidd eru fjárhæð og greiðsluháttur tilkynnt áður en hún fer fram.
+
+guidanceContent.is.pages.pricing.sections[3].heading
+    Hvers vegna þessi síða tilgreinir ekki gjaldskrá
+
+guidanceContent.is.pages.pricing.sections[3].paragraphs[0]
+    Kostnaður ræðst af málinu sjálfu: af vinnunni, fjölda aðila, gögnum, frestum og því hvort málsmeðferð er þegar í gangi. Tala sett fyrirfram sýndi ekki kostnað málsins þíns. Þess vegna ákveðum við fyrst vinnuumfangið og tilkynnum þér síðan kostnaðinn, áður en vinna hefst.
+
+guidanceContent.is.pages.pricing.sections[3].paragraphs[1]
+    Til viðbótar við lögmannsþóknun geta komið dómstóla-, stjórnvalds- eða þriðja aðila kostnaður. Hann er aðskilinn frá þóknuninni og ræðst af viðkomandi málsmeðferð.
+
+guidanceContent.is.pages.contact.eyebrow
+    SAMBAND
+
+guidanceContent.is.pages.contact.title
+    Hvernig þú nærð til skrifstofunnar
+
+guidanceContent.is.pages.contact.description
+    Mál síðunnar, ráðgjafarmálin, ferlið ef þú kannt ekkert af fjórum málunum, og það sem þessi síða heitir ekki.
+
+guidanceContent.is.pages.contact.intro
+    Áður en þú skrifar okkur skaltu greina á milli þessara þriggja atriða. Þau eru oft blanduð saman en merkja ólíka hluti.
+
+guidanceContent.is.pages.contact.sections[0].heading
+    Þrír hlutir sem halda þarf aðskildum
+
+guidanceContent.is.pages.contact.sections[0].paragraphs[0]
+    Birtingarmál síðunnar, málið sem ráðgjöf við lögmann fer fram á, og málið sem þú skrifar á, eru þrír aðskildir hlutir.
+
+guidanceContent.is.pages.contact.sections[0].items[0]
+    Mál síðunnar: þessar leiðbeiningar eru skrifaðar á íslensku.
+
+guidanceContent.is.pages.contact.sections[0].items[1]
+    Ráðgjafarmál: ráðgjöf fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.
+
+guidanceContent.is.pages.contact.sections[0].items[2]
+    Skrifmál þitt: þú mátt skrifa samantektina á þínu eigin máli; frumtextinn er vistaður óbreyttur.
+
+guidanceContent.is.pages.contact.sections[1].heading
+    Ef þú kannt ekkert af fjórum ráðgjafarmálunum
+
+guidanceContent.is.pages.contact.sections[1].paragraphs[0]
+    Í tengiliðaeyðublaðinu geturðu valið „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og enginn svarfrestur er lofað.
+
+guidanceContent.is.pages.contact.sections[1].paragraphs[1]
+    Þetta er aðeins könnunarþrep, ekki loforð. Við heitum ekki túlki, ekki þjónustu á íslensku eða á öðru máli utan fjögurra tilgreindra mála, og ekki að við tökum hvert mál.
+
+guidanceContent.is.pages.contact.sections[2].heading
+    Hvað ætti að standa í fyrstu skilaboðunum
+
+guidanceContent.is.pages.contact.sections[2].paragraphs[0]
+    Segðu frá því sem gerðist, hvers konar aðstoð þú þarft, hvaða tengsl málið hefur við Taívan og frestinum, ef þú þekkir hann. Ef þú hefur þegar fengið bréf frá dómstóli eða stjórnvaldi, nefndu dagsetninguna á bréfinu.
+
+guidanceContent.is.pages.contact.sections[2].paragraphs[1]
+    Í upphafi þarftu enn ekki að senda vegabréfsnúmer, kennitölu, reikningsupplýsingar, sjúkraskrá eða öll sönnunargögn. Bíddu eftir leiðbeiningum lögmanns og sendu viðkvæm gögn þá um örugga leið.
+
+guidanceContent.is.pages.contact.sections[3].heading
+    Það sem þessi síða heitir ekki
+
+guidanceContent.is.pages.contact.sections[3].paragraphs[0]
+    Við heitum engum svarfresti, staðfestum engan tíma í gegnum þessa síðu, heitum ekki tilteknum lögmanni og útvegum ekki túlk. Skrifleg þýðing er annað: skilaboðin þín eru ekki þýdd sjálfkrafa.
+
+guidanceContent.is.pages.contact.sections[3].paragraphs[1]
+    Þegar þú sendir beiðni er innihaldið vistað og bíður mats. Fáirðu ekki svar að einhverjum tíma liðnum geturðu skrifað að nýju á netfangið sem er tilgreint á tengiliðasíðunni.
+
+guidanceContent.is.pages.faq.eyebrow
+    SPURNINGAR
+
+guidanceContent.is.pages.faq.title
+    Algengar spurningar
+
+guidanceContent.is.pages.faq.description
+    Skýringar á starfssviði, undirbúningi, málum, kostnaði og merkingu sendrar beiðni.
+
+guidanceContent.is.pages.faq.intro
+    Eftirfarandi spurningar eru svaraðar á stigi almennra upplýsinga. Svar við þínu eigin máli er fyrst mögulegt eftir að lögmaður hefur metið skjölin.
+
+guidanceContent.is.pages.faq.sections[0].heading
+    Hvernig þú notar þennan hluta
+
+guidanceContent.is.pages.faq.sections[0].paragraphs[0]
+    Finnirðu ekki svar við þinni stöðu ræðst svarið að jafnaði af sérstökum málsatvikum. Skrifaðu þau þá í samantektina í stað þess að draga ályktanir af þessari síðu.
+
+guidanceContent.is.pages.faq.faqs[0].question
+    Hvaða mál vinnur skrifstofan?
+
+guidanceContent.is.pages.faq.faqs[0].answer
+    Við vinnum sex málaflokka: fjárfestingu og félagastofnun á Taívan, einkamál og skaðabætur, hjúskap, fjölskyldu og erfðir, vinnuréttardeilur, refsimál og hugverkarétt. Hvort mál er tekið ræðst eftir mat á innihaldinu.
+
+guidanceContent.is.pages.faq.faqs[1].question
+    Hvað ætti ég að undirbúa áður en ég hef samband?
+
+guidanceContent.is.pages.faq.faqs[1].answer
+    Undirbúðu stutta samantekt á framvindu, beiðni þinni, tengslum við Taívan og fresti, ef einhver er. Sé þegar til bréf frá dómstóli eða stjórnvaldi, nefndu dagsetninguna. Á þessu stigi þarftu enn ekki að senda persónuskilríki eða öll sönnunargögn.
+
+guidanceContent.is.pages.faq.faqs[2].question
+    Get ég fengið ráðgjöf á íslensku?
+
+guidanceContent.is.pages.faq.faqs[2].answer
+    Nei. Þessar leiðbeiningar eru skrifaðar á íslensku, en ráðgjöf við lögmann fer einungis fram á ensku, kínversku (中文), japönsku og kóresku. Við heitum ekki heldur túlki. Skrifleg þýðing er annað: frumtextinn sem þú skrifar er vistaður eins og hann er og er ekki þýddur sjálfkrafa.
+
+guidanceContent.is.pages.faq.faqs[3].question
+    Hvað ef ég kann ekkert af fjórum málunum?
+
+guidanceContent.is.pages.faq.faqs[3].answer
+    Veldu „Samskiptaleiðina þarf að staðfesta“ þegar þú sendir beiðnina. Við svörum til að kanna samskiptaleið, en ráðgjöf á öðru máli er ekki heitið. Þetta er könnunarþrep, ekki loforð um að við getum unnið á öðru máli.
+
+guidanceContent.is.pages.faq.faqs[4].question
+    Hvernig er farið með íslenska textann minn?
+
+guidanceContent.is.pages.faq.faqs[4].answer
+    Frumtextinn sem þú skrifar er vistaður eins og hann er og er ekki þýddur sjálfkrafa. Ef þörf krefur er mál áframhaldandi samskipta staðfest við þig.
+
+guidanceContent.is.pages.faq.faqs[5].question
+    Hefur ráðgjöfin þegar farið fram þegar beiðnin er send?
+
+guidanceContent.is.pages.faq.faqs[5].answer
+    Nei. Send beiðni bíður mats lögmanns. Þetta er ekki lögfræðilegt álit, ekki staðfestur tími, og sendingin ein og sér stofnar ekki samband milli lögmanns og skjólstæðings.
+
+guidanceContent.is.pages.faq.faqs[6].question
+    Hvernig er kostnaður reiknaður?
+
+guidanceContent.is.pages.faq.faqs[6].answer
+    Fyrst er vinnuumfangið ákveðið, síðan eru fjárhæð og útreikningsaðferð staðfestar við þig áður en vinna hefst. Þessi síða tilgreinir ekki fjárhæðir og segir ekki að fyrsta samtalið sé án greiðslu.
+
+guidanceContent.is.pages.faq.faqs[7].question
+    Hvað ef málið mitt er mjög brýnt?
+
+guidanceContent.is.pages.faq.faqs[7].answer
+    Tilgreindu frestinn eða dagsetninguna á opinberu bréfi efst í samantektinni svo þær upplýsingar séu sýnilegar við matið. Þessi síða hefur enga neyðarlínu og heitir engum svarfresti; þoli málið þitt enga bið ættirðu samhliða að leita annarra leiða þar sem þú ert.
+
+guidanceContent.is.pages.privacy.eyebrow
+    PERSÓNUVERND
+
+guidanceContent.is.pages.privacy.title
+    Gögn sem safnað er með tengiliðaeyðublaðinu
+
+guidanceContent.is.pages.privacy.description
+    Hvað tengiliðaeyðublaðið í þessum íslenska hluta safnar, hvernig frumtextinn er meðhöndlaður og hvernig þú nærð til okkar vegna gagna þinna.
+
+guidanceContent.is.pages.privacy.intro
+    Þessi hluti varðar einungis tengiliðaeyðublaðið á þessum leiðbeiningarsíðum. Hann lýsir meðferð gagna, ekki tæknilegri tryggingu.
+
+guidanceContent.is.pages.privacy.sections[0].heading
+    Hvaða gögnum er safnað
+
+guidanceContent.is.pages.privacy.sections[0].paragraphs[0]
+    Þegar þú sendir beiðni í gegnum eyðublaðið í þessum hluta eru eftirfarandi atriði skráð:
+
+guidanceContent.is.pages.privacy.sections[0].items[0]
+    Nafnið sem þú gefur upp
+
+guidanceContent.is.pages.privacy.sections[0].items[1]
+    Netfangið fyrir svarið
+
+guidanceContent.is.pages.privacy.sections[0].items[2]
+    Birtingarmál síðunnar við sendingu
+
+guidanceContent.is.pages.privacy.sections[0].items[3]
+    Málið sem þú skrifaðir á
+
+guidanceContent.is.pages.privacy.sections[0].items[4]
+    Ráðgjafarmálið sem þú óskar
+
+guidanceContent.is.pages.privacy.sections[0].items[5]
+    Frumtextinn sem þú skrifaðir
+
+guidanceContent.is.pages.privacy.sections[0].items[6]
+    Samþykki þitt við sendingu beiðninnar
+
+guidanceContent.is.pages.privacy.sections[0].items[7]
+    Móttökunúmer til að finna beiðnina aftur
+
+guidanceContent.is.pages.privacy.sections[1].heading
+    Frumtextinn er vistaður óbreyttur
+
+guidanceContent.is.pages.privacy.sections[1].paragraphs[0]
+    Textinn þinn er vistaður nákvæmlega eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa. Sé þýðing nauðsynleg til vinnslu er það rætt sérstaklega við þig.
+
+guidanceContent.is.pages.privacy.sections[1].paragraphs[1]
+    Vegna þess að frumtextinn er vistaður skaltu í upphafi ekki skrifa það sem enn er óþarft, til dæmis vegabréfsnúmer, kennitölu eða reikningsupplýsingar.
+
+guidanceContent.is.pages.privacy.sections[2].heading
+    Geymslustaður og aðgangur
+
+guidanceContent.is.pages.privacy.sections[2].paragraphs[0]
+    Innihald sendingarinnar er geymt á stað sem er ekki opinn almenningi. Aðeins heimilaðir aðilar á skrifstofunni mega nálgast það til að vinna beiðnina.
+
+guidanceContent.is.pages.privacy.sections[2].paragraphs[1]
+    Þessi síða veitir enga algjöra öryggistryggingu. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.
+
+guidanceContent.is.pages.privacy.sections[3].heading
+    Tilgangur notkunar
+
+guidanceContent.is.pages.privacy.sections[3].paragraphs[0]
+    Send gögn eru notuð til að meta beiðnina, svara þér, skýra samskiptaleiðina og vinna málið ef vinnan er tekin upp.
+
+guidanceContent.is.pages.privacy.sections[3].paragraphs[1]
+    Gögnin eru ekki notuð til markaðssetningar án sérstaks samþykkis.
+
+guidanceContent.is.pages.privacy.sections[4].heading
+    Tilkynning og móttökunúmer
+
+guidanceContent.is.pages.privacy.sections[4].paragraphs[0]
+    Þegar beiðni er send með góðum árangri tilkynnir kerfið skrifstofunni. Hafi þessi tilkynning ekki verið staðfest enn er textinn þinn áfram vistaður og tapast ekki.
+
+guidanceContent.is.pages.privacy.sections[4].paragraphs[1]
+    Móttökunúmerið þjónar því að finna beiðnina þína í gögnum okkar. Það birtist eftir vistun; þú getur tilgreint það við nýtt samband.
+
+guidanceContent.is.pages.privacy.sections[5].heading
+    Réttindi þín og tengiliðaleiðin
+
+guidanceContent.is.pages.privacy.sections[5].paragraphs[0]
+    Þú getur óskað aðgangs, leiðréttingar eða eyðingar gagna þinna, eða afturkallað samþykki, í gegnum netfangið sem er tilgreint á tengiliðasíðunni. Sé lögbundin eða málsmeðferðarskylda til varðveislu, skýrum við takmörkunina.
+
+guidanceContent.is.pages.privacy.sections[5].paragraphs[1]
+    Þessi síða tilgreinir ekki fastan varðveislutíma vegna þess að raunverulegur tími ræðst af því hvort málið er haldið áfram og af skyldum sem því fylgja. Óskirðu fyrr eyðingu, tilkynntu það við samband.
+
+guidanceContent.is.pages.privacy.sections[6].heading
+    Geymslustaður og þjónustuaðilar
+
+guidanceContent.is.pages.privacy.sections[6].paragraphs[0]
+    Þessi vefur er hýstur hjá Vercel og sendingin þín er geymd í óopinberri hlutageymslu þeirrar þjónustu. Tölvupóstur er sendur um póstþjónustuna sem skrifstofan notar.
+
+guidanceContent.is.pages.privacy.sections[6].paragraphs[1]
+    Netþjónar einstakra þjónustuaðila geta staðið utan Taívan, svo gögnin þín geta verið geymd og unnin þar. Þegar geymslutilganginum er náð eru gögnin eydd án tafar; gögn sem varðveita ber samkvæmt gildandi reglum eru geymd þann tíma. Fyrirspurnir um persónuupplýsingar berast á wei@hoveringlaw.com.tw.
+
+guidanceContent.is.pages.disclaimer.eyebrow
+    FYRIRVARI
+
+guidanceContent.is.pages.disclaimer.title
+    Umfang og mörk upplýsinganna á þessari síðu
+
+guidanceContent.is.pages.disclaimer.description
+    Almennt eðli upplýsinganna, lagalegt gildissvið og forsendur sambands milli lögmanns og skjólstæðings.
+
+guidanceContent.is.pages.disclaimer.intro
+    Þessi hluti skýrir hvað þessar íslensku leiðbeiningarsíður geta gert fyrir þig og hvað þær geta ekki.
+
+guidanceContent.is.pages.disclaimer.sections[0].heading
+    Aðeins almennar upplýsingar
+
+guidanceContent.is.pages.disclaimer.sections[0].paragraphs[0]
+    Efni þessara síðna er skrifað sem almennar upplýsingar. Það er ekki lögfræðileg ráðgjöf í þínu máli og kemur ekki í stað mats á skjölum þínum.
+
+guidanceContent.is.pages.disclaimer.sections[0].paragraphs[1]
+    Úrslit máls ráðast af málsatvikum, gildandi reglum og tímasetningu; tvær að því er virðist svipaðar aðstæður geta endað ólíkt.
+
+guidanceContent.is.pages.disclaimer.sections[1].heading
+    Lagalegt gildissvið
+
+guidanceContent.is.pages.disclaimer.sections[1].paragraphs[0]
+    Skrifstofan starfar samkvæmt rétti Taívan og þessi síða varðar einungis vinnu innan þess ramma.
+
+guidanceContent.is.pages.disclaimer.sections[1].paragraphs[1]
+    Efnið er ekki ráðgjöf samkvæmt rétti annars lögsagnarumdæmis en Taívan, þar á meðal rétti búsetustaðar þíns. Snerti hluti málsins þíns annað lögsagnarumdæmi, skýrum við með þér hvers konar hæfur fagaðili þarf fyrir þann hluta.
+
+guidanceContent.is.pages.disclaimer.sections[2].heading
+    Samband milli lögmanns og skjólstæðings verður ekki til af sjálfu sér
+
+guidanceContent.is.pages.disclaimer.sections[2].paragraphs[0]
+    Að lesa þessa síðu, senda eyðublað eða tölvupóst stofnar ein og sér ekki samband milli lögmanns og skjólstæðings.
+
+guidanceContent.is.pages.disclaimer.sections[2].paragraphs[1]
+    Þetta samband verður fyrst til eftir að málið hefur verið metið og báðir aðilar hafa staðfest að vinnan sé tekin upp.
+
+guidanceContent.is.pages.disclaimer.sections[3].heading
+    Ekkert loforð um niðurstöðu
+
+guidanceContent.is.pages.disclaimer.sections[3].paragraphs[0]
+    Enginn hluti þessarar síðu er loforð um úrslit máls, veitingu umsóknar eða dvalar- og atvinnustöðu.
+
+guidanceContent.is.pages.disclaimer.sections[3].paragraphs[1]
+    Ytri tenglar eru til leiðsagnar; við heitum hvorki að efni þriðju aðila sé rétt né að það sé uppfært.
+
+guidanceContent.is.pages.columns.eyebrow
+    GREINAR
+
+guidanceContent.is.pages.columns.title
+    Greinar um rétt Taívan
+
+guidanceContent.is.pages.columns.description
+    Greinar á íslensku um algengar spurningar í rétti Taívan. Efnið er almenn upplýsing á birtingarstundu, ekki lögfræðileg ráðgjöf í þínu máli.
+
+guidanceContent.is.pages.columns.intro
+    Skrifstofan birtir greinar um algengar spurningar í rétti Taívan. Greinar sem eru tiltækar á íslensku standa á þessari síðu; til viðbótar eru fjórir tenglar sem hver opnar greinalista eins frummáls.
+
+guidanceContent.is.pages.columns.sections[0].heading
+    Fjórir listar eftir máli
+
+guidanceContent.is.pages.columns.sections[0].paragraphs[0]
+    Þessi hluti inniheldur fjóra tengla: greinalistann á kóresku, á kínversku, á ensku og á japönsku. Hver tengill tilgreinir mál listans svo þú vitir fyrirfram á hvaða máli efnið opnast.
+
+guidanceContent.is.pages.columns.sections[0].paragraphs[1]
+    Þessir fjórir listar eru listar eftir frummáli greinanna, ekki þýðingarlistar. Greinar sem eru tiltækar á íslensku standa sérstaklega á þessari síðu.
+
+guidanceContent.is.pages.columns.sections[1].heading
+    Hvert tenglarnir leiða
+
+guidanceContent.is.pages.columns.sections[1].paragraphs[0]
+    Þegar þú velur einn af fjórum tenglunum opnast greinalisti þess máls. Af listanum velurðu textann; allt innihaldið birtist á frummáli greinarinnar.
+
+guidanceContent.is.pages.columns.sections[1].paragraphs[1]
+    Þessi síða dregur ekki saman innihald greinanna og heitir ekki að tiltekið efni sé tiltækt á öllum fjórum málunum. Hver listi inniheldur aðeins texta sem hafa verið birtir á því máli.
+
+guidanceContent.is.pages.columns.sections[2].heading
+    Hve langt grein getur þjónað sem leiðsögn
+
+guidanceContent.is.pages.columns.sections[2].paragraphs[0]
+    Greinar eru almennar upplýsingar á birtingarstundu. Reglur og beiting þeirra geta breyst og grein inniheldur ekki allar aðstæður málsins þíns.
+
+guidanceContent.is.pages.columns.sections[2].paragraphs[1]
+    Ekki byggðu ákvörðun í raunverulegu máli einungis á grein. Notaðu hana til yfirlits og ræddu skjölin þín sérstaklega við lögmann; þessi síða er ekki ráðgjafarþrepið.
+
+guidanceTeamCopy.is.label
+    LIÐIÐ
+
+guidanceTeamCopy.is.title
+    Alþjóðlegt teymi Hovering
+
+guidanceTeamCopy.is.description
+    Prófílar lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis.
+
+guidanceTeamCopy.is.representativeTitle
+    Aðallögmaður
+
+guidanceTeamCopy.is.teamTitle
+    Lögmenn og starfsfólk
+
+guidanceTeamCopy.is.partnerTitle
+    Tengt endurskoðunarfyrirtæki
+
+guidanceTeamCopy.is.introLabel
+    Kynning
+
+guidanceTeamCopy.is.educationLabel
+    Menntun
+
+guidanceTeamCopy.is.experienceLabel
+    Starfsreynsla
+
+guidanceTeamCopy.is.photoAltPrefix
+    Ljósmynd
+
+guidanceTeamCopy.is.workingLanguagesLabel
+    Vinnutungumál
+
+guidanceTeamCopy.is.fullProfileLabel
+    Heildarprófíll (á ensku)
+
+guidanceTeamCopy.is.keyFactsHeading
+    Lögmaðurinn Wei Tseng — Lykilstaðreyndir
+
+guidanceTeamCopy.is.qualificationLabel
+    Réttindi og skrifstofa
+
+guidanceTeamCopy.is.qualificationSentence
+    {name} hefur lögmannsréttindi á Taívan og er aðallögmaður hjá {firm}.
+
+guidanceTeamCopy.is.practiceLabel
+    Aðalsvið
+
+guidanceTeamCopy.is.consultationLanguagesLabel
+    Ráðgjafarmál
+
+guidanceTeamCopy.is.roles.tseng-junwei
+    Aðallögmaður á Taívan
+
+guidanceTeamCopy.is.roles.chang-rongxuan
+    Lögmaður á Taívan
+
+guidanceTeamCopy.is.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.is.roles.son-jungmin
+    Rekstrarstjórn, Kórea
+
+guidanceTeamCopy.is.roles.huang-shengping
+    Tengdur löggiltur endurskoðandi
+
+guidanceTeamBios.is.tseng-junwei.intro[0]
+    Skrifstofan vinnur mál fyrirtækja og einstaklinga á Taívan á ensku, japönsku, kóresku og kínversku.
+
+guidanceTeamBios.is.tseng-junwei.intro[1]
+    Hún fór með mál kóresks námsmanns um skaðabætur vegna meiðsla í líkamsræktarstöð og fékk dóm í fyrsta dómstigi um TWD 1.57M.
+
+guidanceTeamBios.is.tseng-junwei.education[0]
+    Meistarapróf (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.is.tseng-junwei.education[1]
+    Bakkalárpróf (B.A.) í tvöföldu námi í lögfræði og fjármálum, National Chengchi University
+
+guidanceTeamBios.is.tseng-junwei.education[2]
+    Skiptinemi við Kobe University og Waseda University
+
+guidanceTeamBios.is.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.is.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.is.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.is.chang-rongxuan.intro[0]
+    Áður við Ministry of Education, Legal Affairs Division, með áherslu á stjórnsýslu- og einkamál.
+
+guidanceTeamBios.is.chang-rongxuan.intro[1]
+    Reynsla af málum háskóla, réttinda kennara og stjórnsýslukæra.
+
+guidanceTeamBios.is.chang-rongxuan.education[0]
+    Bakkalárpróf í lögfræði (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.is.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.is.chang-rongxuan.experience[1]
+    Lögmaður, Hovering International Law Firm
+
+guidanceTeamBios.is.chang-fangyu.intro[0]
+    Paralegal með langa reynslu; áður senior paralegal á nokkrum lögmannsstofum, með ábyrgð á málflutningsstuðningi, félagarétti og erlendum fjárfestingum.
+
+guidanceTeamBios.is.chang-fangyu.intro[1]
+    Aðstoð við málflutning, félagastofnun, samþykki erlendra fjárfestinga, leyfisumsóknir og samskipti milli Kóreu og Taívan.
+
+guidanceTeamBios.is.chang-fangyu.education[0]
+    Bakkalárpróf í lögfræði (LL.B.), Tunghai University
+
+guidanceTeamBios.is.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.is.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.is.son-jungmin.intro[0]
+    Samræmir ráðgjafartíma og samskipti fyrir skjólstæðinga frá Kóreu.
+
+guidanceTeamBios.is.son-jungmin.intro[1]
+    Styður samskipti yfir landamæri með skjalakerfum og vinnuferlum, á grundvelli tölvunarfræði.
+
+guidanceTeamBios.is.son-jungmin.education[0]
+    Bakkalárpróf (B.S.) í tölvunarfræði, National Cheng Kung University
+
+guidanceTeamBios.is.son-jungmin.experience[0]
+    Kóreu-rekstur, Hovering International Law Firm
+
+guidanceTeamBios.is.huang-shengping.intro[0]
+    Hann lauk bakkalár- og meistaranámi í reikningshaldi við National Chengchi University og stýrir nú endurskoðunarskrifstofu.
+
+guidanceTeamBios.is.huang-shengping.intro[1]
+    Styður samþætta greiningu á laga-, skatta- og fjárhagsáhættu fyrir fyrirtækjaskjólstæðinga.
+
+guidanceTeamBios.is.huang-shengping.education[0]
+    Meistarapróf (M.A.) í reikningshaldi, National Chengchi University
+
+guidanceTeamBios.is.huang-shengping.education[1]
+    Bakkalárpróf (B.A.) í reikningshaldi, National Chengchi University
+
+guidanceTeamBios.is.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.is.Korean
+    kóreska
+
+guidanceLanguageNames.is.Chinese
+    kínverska
+
+guidanceLanguageNames.is.Japanese
+    japanska
+
+guidancePracticeAreaNames.is.Taiwan company setup
+    Félagastofnun á Taívan
+
+guidancePracticeAreaNames.is.Taiwan investment counsel
+    Lögfræðiráðgjöf um fjárfestingu á Taívan
+
+guidancePracticeAreaNames.is.Civil litigation and damages
+    Einkamál og skaðabætur
+
+guidancePracticeAreaNames.is.Trademark and patent filings
+    Vörumerkja- og einkaleyfisumsóknir
+
+guidancePracticeAreaNames.is.Visa and residency
+    Vegabréfsáritun og dvöl
+
+guidancePracticeAreaNames.is.Family and labor disputes
+    Fjölskyldu- og vinnuréttarmál
+
+guidanceOfficeCopy.is.label
+    SKRIFSTOFUR
+
+guidanceOfficeCopy.is.title
+    Skrifstofur
+
+guidanceOfficeCopy.is.description
+    Heimilisföng skrifstofa Hovering International Law Firm á Taívan.
+
+guidanceOfficeCopy.is.officeLabel
+    Skrifstofa
+
+guidanceOfficeCopy.is.mapPreviewLabel
+    Forskoðun korts
+
+guidanceOfficeCopy.is.koreaOfficeTitle
+    Skrifstofan í Kóreu
+
+guidanceOfficeCopy.is.koreaAddressCardLabel
+    Heimilisfang skrifstofunnar í Kóreu
+
+guidanceOfficeCopy.is.koreaMapLinkLabel
+    Sjá á Naver Map
+
+guidanceOfficeCopy.is.reviewCountWord
+    umsagnir
+
+guidanceOfficeCopy.is.phoneLabel
+    Sími
+
+guidanceOfficeCopy.is.faxLabel
+    Fax
+
+guidanceOfficeCopy.is.mapLinkLabel
+    Sjá á korti
+
+guidanceOfficeCopy.is.photoAlts[0]
+    Móttaka skrifstofunnar í Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.is.photoAlts[1]
+    Vinnuherbergi lögmanna á skrifstofunni í Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.is.photoAlts[2]
+    Fundarherbergi á skrifstofunni í Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.is.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.is.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.is.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.is.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.is.officeLabel
+    Skrifstofur
+
+guidanceFooterCopy.is.officeQuickLinksLabel
+    Flýtitenglar á skrifstofurnar
+
+guidanceFooterCopy.is.followLabel
+    Fylgja
+
+guidanceFooterCopy.is.blogLabel
+    Blogg
+
+guidanceFooterCopy.is.websiteLabel
+    Opinber vefsíða
+
+guidanceFooterCopy.is.sitemapLabel
+    Vefkort
+
+guidanceFooterCopy.is.copyEmailLabel
+    Afrita netfangið
+
+guidanceFooterCopy.is.emailCopiedMessage
+    Netfangið hefur verið afritað.
+
+guidanceFooterCopy.is.officialConsultationEmailLabel
+    Opinbert netfang fyrir ráðgjöf
+
+internationalInquiryCopy.is.guidanceNotice
+    Þessi síða er skrifuð á íslensku sem almenn leiðsögn, ekki sem lögfræðileg ráðgjöf í þínu máli.
+
+internationalInquiryCopy.is.consultationNotice
+    Ráðgjöf fer einungis fram á fjórum málum: ensku, kínversku (中文), japönsku og kóresku.
+
+internationalInquiryCopy.is.methodConfirmationNotice
+    Ef þú kannt ekkert af fjórum málunum skaltu velja „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og enginn svarfrestur er lofað.
+
+internationalInquiryCopy.is.preparationNotice
+    Þú mátt skrifa samantektina á þínu eigin máli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa.
+
+internationalInquiryCopy.is.heading
+    Senda beiðni um ráðgjöf
+
+internationalInquiryCopy.is.intro
+    Lýstu málinu þínu stuttlega. Lögmaður metur innihaldið áður en næsta skref er rætt.
+
+internationalInquiryCopy.is.submitLabel
+    Senda beiðnina
+
+internationalInquiryCopy.is.submittingLabel
+    Sendist…
+
+internationalInquiryCopy.is.successMessage
+    Við höfum móttekið beiðnina þína; hún bíður mats. Það þýðir ekki að ráðgjöf hafi farið fram eða að tími sé staðfestur.
+
+internationalInquiryCopy.is.savedNotificationPendingMessage
+    Beiðnin þín er vistuð, en tilkynningin til skrifstofunnar er enn óstaðfest. Það sem þú skrifaðir tapast ekki. Fáirðu ekki svar geturðu einnig skrifað á netfangið á tengiliðasíðunni.
+
+internationalInquiryCopy.is.receiptIdLabel
+    Móttökunúmer
+
+internationalInquiryCopy.is.failureMessage
+    Ekki tókst að senda beiðnina. Reyndu aftur eða skrifaðu á netfangið á tengiliðasíðunni.
+
+internationalInquiryCopy.is.originalLanguageLabel
+    Málið sem þú skrifar á
+
+internationalInquiryCopy.is.originalLanguagePlaceholder
+    Til dæmis íslenska, enska, kínverska eða annað mál
+
+internationalInquiryCopy.is.preferredConsultationLanguageLabel
+    Málið sem þú óskar fyrir ráðgjöfina
+
+internationalInquiryCopy.is.originalTextLabel
+    Stutt lýsing á málinu (á þínu máli)
+
+internationalInquiryCopy.is.originalTextPlaceholder
+    Segðu frá því sem gerðist, hvers konar aðstoð þú þarft og frestinum ef einhver er. Ekki skrifa vegabréfsnúmer, kennitölu eða reikningsupplýsingar.
+
+internationalInquiryCopy.is.nameLabel
+    Nafn
+
+internationalInquiryCopy.is.emailLabel
+    Netfang
+
+internationalInquiryCopy.is.consentLabel
+    Ég hef lesið persónuverndarsíðuna og samþykki að þessi beiðni verði send.
+
+internationalInquiryCopy.is.privacyLinkLabel
+    Persónuvernd
+
+internationalInquiryCopy.is.requiredMessage
+    Þessi reitur er skyldubundinn.
+
+internationalInquiryCopy.is.invalidEmailMessage
+    Sláðu inn gilt netfang.
+
+internationalInquiryCopy.is.tooLongMessage
+    Textinn er of langur. Styttu hann og sendu aftur.
+
+internationalInquiryCopy.is.sourceLanguageNotice
+    Þessi grein er aðeins birt á málinu {language}; tengillinn opnar frumsíðuna.
+
+internationalInquiryCopy.is.unavailableTranslationNotice
+    Þessi liður er enn ekki tiltækur á máli þessarar síðu. Tengill á frummálinu opnar frumtextann.
+
+internationalInquiryCopy.is.unavailableLanguageNotice
+    Þessi síða er ekki í boði á málinu {language}.
+
+internationalInquiryCopy.is.languageOptions.en
+    Enska (English)
+
+internationalInquiryCopy.is.languageOptions.zh-hant
+    Kínverska (中文)
+
+internationalInquiryCopy.is.languageOptions.ja
+    Japanska (日本語)
+
+internationalInquiryCopy.is.languageOptions.ko
+    Kóreska (한국어)
+
+internationalInquiryCopy.is.languageOptions.needs-method-confirmation
+    Ég kann ekkert af fjórum málunum — samskiptaleiðina þarf að staðfesta
+
+guidanceAnswers.is.services.answer
+    Skrifstofan vinnur sex málaflokka samkvæmt rétti Taívan: fjárfestingu og félagastofnun, einkamál og skaðabætur, hjúskap, fjölskyldu og erfðir, vinnurétt, refsirétt og hugverkarétt. Umfang hvers máls er staðfest sérstaklega eftir að lögmaður hefur metið sent efni. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.
+
+guidanceAnswers.is.services.sources[0]
+    /is/faq
+
+guidanceAnswers.is.services.sources[1]
+    /is/contact
+
+guidanceAnswers.is.about.answer
+    Hovering International Law Firm er lögmannsstofa á Taívan, stofnuð árið 2016 af lögmönnum menntuðum við National Taiwan University (國立臺灣大學), með skrifstofur í Taipei, Kaohsiung, Taichung og Pingtung. Frá 2020 starfar einnig bókhaldsdeild; skrifstofan í Taichung vinnur mál sem tengjast Kóreu og Japan. Skrifstofan heitir ekki niðurstöðu. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.
+
+guidanceAnswers.is.about.sources[0]
+    /is/lawyers
+
+guidanceAnswers.is.about.sources[1]
+    /is/services
+
+guidanceAnswers.is.lawyers.answer
+    Þessi síða sýnir prófíla lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis. Lögmaðurinn Wei Tseng (曾雋崴) hefur lögmannsréttindi á Taívan og er aðallögmaður stofunnar; hún vinnur með skjólstæðingum frá Kóreu og Japan og öðrum alþjóðlegum skjólstæðingum. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.
+
+guidanceAnswers.is.lawyers.sources[0]
+    /is/about
+
+guidanceAnswers.is.lawyers.sources[1]
+    /is/contact
+
+guidanceAnswers.is.pricing.answer
+    Þessi síða birtir ekki gjaldskrá. Fyrst er vinnuumfangið ákveðið út frá samantektinni sem þú sendir, síðan eru fjárhæð og útreikningsaðferð staðfestar við þig áður en vinna hefst. Samtal við lögmann getur verið greidd þjónusta; til viðbótar við þóknun geta komið dómstóla- eða stjórnvaldsgjöld. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.
+
+guidanceAnswers.is.pricing.sources[0]
+    /is/contact
+
+guidanceAnswers.is.pricing.sources[1]
+    /is/faq
+
+guidanceAnswers.is.contact.answer
+    Sendu samantektina með tengiliðaeyðublaðinu: hvað gerðist, hvers konar aðstoð þú þarft, hvaða tengsl málið hefur við Taívan og frestinn ef þú þekkir hann. Í fyrsta skrefi þarftu enn ekki að senda persónuskilríki eða öll sönnunargögn. Skrifstofan heitir engum svarfresti og staðfestir engan tíma í gegnum þessa síðu. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.
+
+guidanceAnswers.is.contact.sources[0]
+    /is/faq
+
+guidanceAnswers.is.contact.sources[1]
+    /is/pricing
+
+guidanceAnswers.is.faq.answer
+    Þessi hluti svarar algengum spurningum á stigi almennra upplýsinga: sex málaflokkarnir, undirbúningur fyrir samband, hvernig kostnaður er ákveðinn og merking sendrar beiðni. Send beiðni bíður mats lögmanns; hún er ekki lögfræðilegt álit, ekki staðfestur tími, og stofnar ekki samband milli lögmanns og skjólstæðings. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.
+
+guidanceAnswers.is.faq.sources[0]
+    /is/contact
+
+guidanceAnswers.is.faq.sources[1]
+    /is/services
+
+GUIDANCE_LLMS_NOTICES.is.consultationNotice
+    Þessar leiðbeiningar eru skrifaðar á íslensku, en ráðgjöf við lögmann fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.
+
+GUIDANCE_LLMS_NOTICES.is.discoveryNotice
+    Skráin llms.txt er aðeins kort til að finna opinberar síður; hún heitir ekki sæti í leitarvélum, stuðningi, tillögu gervigreindar né sýnileika.
+
+GUIDANCE_LLMS_NOTICES.is.confidentialNotice
+    Vegna þess að frumtextinn er vistaður skaltu í upphafi ekki skrifa það sem enn er óþarft, til dæmis vegabréfsnúmer, kennitölu eða reikningsupplýsingar.

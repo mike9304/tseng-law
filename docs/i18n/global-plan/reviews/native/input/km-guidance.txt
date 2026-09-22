@@ -1,0 +1,1096 @@
+# km guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.km.languageName
+    ភាសាខ្មែរ
+
+guidanceContent.km.nav.home
+    ទំព័រដើម
+
+guidanceContent.km.nav.services
+    វិស័យសេវា
+
+guidanceContent.km.nav.about
+    ការិយាល័យ
+
+guidanceContent.km.nav.lawyers
+    មេធាវី
+
+guidanceContent.km.nav.pricing
+    វិសាលភាពថ្លៃ
+
+guidanceContent.km.nav.contact
+    ទំនាក់ទំនង
+
+guidanceContent.km.nav.faq
+    សំណួរញឹកញាប់
+
+guidanceContent.km.nav.privacy
+    ឯកជនភាព
+
+guidanceContent.km.nav.disclaimer
+    ការបដិសេធ
+
+guidanceContent.km.nav.columns
+    អត្ថបទ
+
+guidanceContent.km.contactCta
+    ផ្ញើសំណើពិគ្រោះយោបល់
+
+guidanceContent.km.footerNotice
+    ទំព័រភាសាខ្មែរទាំងនេះផ្ដល់តែព័ត៌មានណែនាំទូទៅអំពីការងាររបស់ការិយាល័យតាមច្បាប់តៃវ៉ាន់។ នេះមិនមែនជាយោបល់ផ្លូវច្បាប់សម្រាប់រឿងជាក់លាក់ទេ ហើយការផ្ញើសារតែឯងមិនបង្កើតទំនាក់ទំនងមេធាវីនិងអតិថិជនឡើយ។
+
+guidanceContent.km.skipLink
+    រំលងការរុករក ទៅកាន់ខ្លឹមសារសំខាន់
+
+guidanceContent.km.menuLabel
+    បញ្ជីទំព័រ
+
+guidanceContent.km.languageLabel
+    ភាសាបង្ហាញ
+
+guidanceContent.km.mega.services.description
+    ការិយាល័យទទួលធ្វើវិស័យការងារសំខាន់ៗតាមច្បាប់តៃវ៉ាន់។
+
+guidanceContent.km.mega.services.viewAllLabel
+    មើលទាំងអស់
+
+guidanceContent.km.mega.columns.description
+    អត្ថបទពន្យល់ប្រធានបទច្បាប់តៃវ៉ាន់ដែលគេសួរញឹកញាប់។
+
+guidanceContent.km.mega.columns.viewAllLabel
+    មើលទាំងអស់
+
+guidanceContent.km.mega.lawyers.description
+    សេចក្ដីណែនាំអំពីមេធាវីទទួលបន្ទុក និងមធ្យោបាយទំនាក់ទំនង។
+
+guidanceContent.km.mega.lawyers.viewAllLabel
+    មើលទាំងអស់
+
+guidanceContent.km.mega.pricing.description
+    ទំព័រនេះពន្យល់វិសាលភាពការងារ និងរបៀបបញ្ជាក់ថ្លៃសេវា។
+
+guidanceContent.km.mega.pricing.viewAllLabel
+    មើលទាំងអស់
+
+guidanceContent.km.mega.faq.description
+    សំណួរញឹកញាប់អំពីការងាររបស់ការិយាល័យនៅតៃវ៉ាន់។
+
+guidanceContent.km.mega.faq.viewAllLabel
+    មើលទាំងអស់
+
+guidanceContent.km.notFoundTitle
+    រកមិនឃើញទំព័រ
+
+guidanceContent.km.notFoundText
+    ទំព័រដែលលោកអ្នកកំពុងស្វែងរកមិនមាន ឬត្រូវបានផ្លាស់ទីទៅអាសយដ្ឋានផ្សេង។ លោកអ្នកអាចត្រឡប់ទៅទំព័រដើមភាសាខ្មែរ ដើម្បីមើលប្រធានបទណែនាំដែលមាននាពេលនេះ។
+
+guidanceContent.km.backHomeLabel
+    ត្រឡប់ទៅទំព័រដើម
+
+guidanceContent.km.readSourceLabel
+    បើកបញ្ជីអត្ថបទជាភាសាដើម
+
+guidanceContent.km.home.heroScrollLabel
+    រំកិលចុះក្រោម
+
+guidanceContent.km.home.heroColumnsCtaLabel
+    មើលអត្ថបទ
+
+guidanceContent.km.home.servicesDetailLabel
+    មើលលម្អិត
+
+guidanceContent.km.home.servicesAssistanceBefore
+    បើមិនទាន់ច្បាស់ថារឿងរបស់លោកអ្នកស្ថិតក្នុងក្រុមណា ទំព័រ 
+
+guidanceContent.km.home.servicesAssistanceLinkLabel
+    ទំនាក់ទំនង
+
+guidanceContent.km.home.servicesAssistanceAfter
+     ពន្យល់របៀបសរសេរសេចក្ដីសង្ខេបសម្រាប់មេធាវីពិនិត្យ។
+
+guidanceContent.km.home.columnsViewAllLabel
+    មើលអត្ថបទទាំងអស់
+
+guidanceContent.km.home.columnsReadMoreLabel
+    អានបន្ត
+
+guidanceContent.km.home.columnsReviewLabel
+    ពិនិត្យដោយមេធាវីស្ត្រី Wei Tseng
+
+guidanceContent.km.home.columnsOriginalLanguageBadge
+    ភាសាដើម
+
+guidanceContent.km.home.columnsOriginalLanguageNote
+    អត្ថបទខាងក្រោមមិនទាន់មានជាភាសាខ្មែរទេ។ បញ្ជីនេះនៅជាភាសាដើម ហើយបើកទំព័រនៃភាសានោះ។ ខ្លឹមសារមិនត្រូវបានបកប្រែដោយស្វ័យប្រវត្តិឡើយ។
+
+guidanceContent.km.home.imageBandAlt
+    ផ្ទះលានបីជ្រុងបែបប្រពៃណីតៃវ៉ាន់ (三合院) និងព្រះពន្លាសម័យទំនើបក្នុងពន្លឺថ្ងៃ
+
+guidanceContent.km.home.videoPauseLabel
+    ផ្អាកវីដេអូ
+
+guidanceContent.km.home.videoPlayLabel
+    ចាក់វីដេអូ
+
+guidanceContent.km.home.videoReplayLabel
+    ចាក់វីដេអូម្ដងទៀត
+
+guidanceContent.km.pages.home.eyebrow
+    សេចក្ដីណែនាំ
+
+guidanceContent.km.pages.home.title
+    សេវាផ្លូវច្បាប់នៅតៃវ៉ាន់ — សេចក្ដីណែនាំជាភាសាខ្មែរ
+
+guidanceContent.km.pages.home.description
+    ការពន្យល់ទូទៅជាភាសាខ្មែរអំពីវិសាលភាពការងាររបស់ Hovering International Law Firm នៅតៃវ៉ាន់ ភាសានៃការពិគ្រោះយោបល់ និងរបៀបចាប់ផ្ដើមទំនាក់ទំនង។
+
+guidanceContent.km.pages.home.intro
+    Hovering International Law Firm ជួយអតិថិជនពីបរទេស រួមទាំងអ្នកដែលពាក់ព័ន្ធនឹងតៃវ៉ាន់ ក្នុងរឿងតាមច្បាប់តៃវ៉ាន់៖ ការវិនិយោគ និងការបង្កើតក្រុមហ៊ុន វិវាទរដ្ឋប្បវេណី អាពាហ៍ពិពាហ៍ គ្រួសារ និងមរតក វិវាទពលកម្ម សំណុំរឿងព្រហ្មទណ្ឌ និងកម្មសិទ្ធិបញ្ញា។ ផ្នែកភាសាខ្មែរនេះជួយឱ្យលោកអ្នកដឹងថាការងារណាស្ថិតក្នុងវិសាលភាពដែលយើងទទួលធ្វើ អ្វីគួរត្រៀម និងរបៀបទាក់ទង។ នេះជាព័ត៌មានទូទៅ មិនមែនជាយោបល់ផ្លូវច្បាប់សម្រាប់រឿងរបស់លោកអ្នកទេ។
+
+guidanceContent.km.pages.home.sections[0].heading
+    ការិយាល័យធ្វើអ្វីខ្លះ
+
+guidanceContent.km.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm គឺជាការិយាល័យមេធាវីដែលបង្កើតនៅតៃវ៉ាន់។ វាធ្វើការតាមច្បាប់តៃវ៉ាន់ ហើយមានទីតាំងនៅតៃប៉ិ (臺北) កៅស៊ុង (高雄) តៃជុង (臺中) និងពីងតុង (屏東)។ យើងផ្ដល់យោបល់ដល់សហគ្រាស ដំណើរការសំណុំរឿងនៅតុលាការ និងអមដំណើរអតិថិជនពីបរទេសតាមជំហានដែលត្រូវធ្វើនៅតៃវ៉ាន់។
+
+guidanceContent.km.pages.home.sections[0].paragraphs[1]
+    ខ្លឹមសារទាំងអស់នៅទីនេះជាព័ត៌មានទូទៅ។ លទ្ធផលនៃរឿងនីមួយៗអាស្រ័យលើអង្គហេតុ វិធានដែលអនុវត្ត និងពេលវេលា។ សេចក្ដីណែនាំនេះមិនអាចជំនួសការពិភាក្សាជាមួយមេធាវីអំពីឯកសាររបស់លោកអ្នកឡើយ។
+
+guidanceContent.km.pages.home.sections[1].heading
+    ភាសាទំព័រ និងភាសាពិគ្រោះយោបល់មិនដូចគ្នាទេ
+
+guidanceContent.km.pages.home.sections[1].paragraphs[0]
+    ទំព័រនេះសរសេរជាភាសាខ្មែរ ប៉ុន្តែការពិគ្រោះយោបល់ជាមួយមេធាវីធ្វើឡើងតែក្នុង ៤ ភាសានៃការពិគ្រោះយោបល់ គឺភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។ ការអានសេចក្ដីណែនាំជាភាសាខ្មែរមិនមានន័យថាការពិភាក្សាជាមួយមេធាវីនឹងធ្វើជាភាសាខ្មែរឡើយ។
+
+guidanceContent.km.pages.home.sections[1].paragraphs[1]
+    យើងមិនសន្យាផ្ដល់អ្នកបកប្រែផ្ទាល់មាត់ មិនសន្យារយៈពេលឆ្លើយតប និងមិនបញ្ជាក់ការណាត់ជួបតាមទំព័រនេះ។ បើលោកអ្នកប្រើមិនបានភាសាណាមួយក្នុង ៤ ភាសានោះ ទំព័រ «ទំនាក់ទំនង» ពន្យល់របៀបដែលយើងពិនិត្យវិធីសាស្ត្រទំនាក់ទំនង។
+
+guidanceContent.km.pages.home.sections[2].heading
+    វិស័យការងារ
+
+guidanceContent.km.pages.home.sections[2].paragraphs[0]
+    វិសាលភាពការងាររួមមាន ៦ ក្រុមខាងក្រោម។ ទំព័រ «វិស័យសេវា» ពណ៌នាក្រុមនីមួយៗឲ្យលម្អិតជាងនេះ ហើយបញ្ជាក់អ្វីដែលមិនត្រូវបានសន្យា។
+
+guidanceContent.km.pages.home.sections[2].items[0]
+    ការវិនិយោគ និងការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់
+
+guidanceContent.km.pages.home.sections[2].items[1]
+    វិវាទរដ្ឋប្បវេណី និងសំណងការខូចខាត
+
+guidanceContent.km.pages.home.sections[2].items[2]
+    អាពាហ៍ពិពាហ៍ គ្រួសារ និងមរតក
+
+guidanceContent.km.pages.home.sections[2].items[3]
+    វិវាទពលកម្ម
+
+guidanceContent.km.pages.home.sections[2].items[4]
+    សំណុំរឿងព្រហ្មទណ្ឌ
+
+guidanceContent.km.pages.home.sections[2].items[5]
+    កម្មសិទ្ធិបញ្ញា៖ សញ្ញាពាណិជ្ជ ប៉ាតង់ និងរក្សាសិទ្ធិ
+
+guidanceContent.km.pages.home.sections[3].heading
+    គួរចាប់ផ្ដើមពីណា
+
+guidanceContent.km.pages.home.sections[3].paragraphs[0]
+    សូមអានទំព័រ «វិស័យសេវា» ដើម្បីពិនិត្យថារឿងរបស់លោកអ្នកស្ថិតក្នុងវិសាលភាពការងារដែរឬទេ បន្ទាប់មកទំព័រ «វិសាលភាពថ្លៃ» និង «ទំនាក់ទំនង» ដើម្បីដឹងរបៀបកំណត់វិសាលភាព និងបញ្ជាក់ថ្លៃសេវាមុនចាប់ផ្ដើមការងារ។
+
+guidanceContent.km.pages.home.sections[3].paragraphs[1]
+    ពេលផ្ញើសារ លោកអ្នកអាចសរសេរសេចក្ដីសង្ខេបជាភាសារបស់ខ្លួន។ អត្ថបទដើមត្រូវបានរក្សាទុកដូចដែលលោកអ្នកសរសេរ ហើយមិនត្រូវបានបកប្រែដោយស្វ័យប្រវត្តិឡើយ។ សារដែលបានផ្ញើគឺជាសំណើរង់ចាំការពិនិត្យ៖ នេះមិនទាន់ជាការពិគ្រោះយោបល់ និងមិនទាន់ជាការណាត់ជួបដែលបានបញ្ជាក់ទេ។
+
+guidanceContent.km.pages.services.eyebrow
+    វិស័យសេវា
+
+guidanceContent.km.pages.services.title
+    រឿងដែលការិយាល័យទទួលធ្វើ
+
+guidanceContent.km.pages.services.description
+    វិស័យការងារ ៦ ក្រុមរបស់ការិយាល័យនៅតៃវ៉ាន់ និងដែនកំណត់ដែលលោកអ្នកគួរដឹងមុនទាក់ទង។
+
+guidanceContent.km.pages.services.intro
+    ខាងក្រោមគឺក្រុមការងារដែលយើងទទួលធ្វើជាក់ស្ដែង និងសំណួរដែលគេសួរញឹកញាប់នៅដំណាក់កាលដំបូង។ ការពន្យល់នេះជួយឱ្យលោកអ្នកវាយតម្លៃថារឿងរបស់ខ្លួនស្ថិតក្នុងវិសាលភាពដែរឬទេ។ វាជាព័ត៌មានទូទៅ មិនមែនជាការវិភាគផ្លូវច្បាប់នៃឯកសារជាក់លាក់ទេ។
+
+guidanceContent.km.pages.services.sections[0].heading
+    ការវិនិយោគ និងការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់
+
+guidanceContent.km.pages.services.sections[0].paragraphs[0]
+    យើងអមដំណើរវិនិយោគិន និងក្រុមហ៊ុនបរទេសក្នុងការបង្កើត ឬដំណើរការសហគ្រាសនៅតៃវ៉ាន់៖ ការជ្រើសរូបភាពនីតិបុគ្គល ការរៀបចំ និងដាក់ឯកសារ ការនាំទុនចូល កិច្ចការធនាគារ ការពិនិត្យទីតាំងប្រតិបត្តិការ និងលក្ខខណ្ឌជាក់លាក់តាមប្រភេទអាជីវកម្ម។ យើងជួយទាំងគណនេយ្យ និងពន្ធដែលកើតពីការបង្កើត និងប្រតិបត្តិការនៅតៃវ៉ាន់។
+
+guidanceContent.km.pages.services.sections[0].paragraphs[1]
+    លំដាប់ជំហាន និងរយៈពេលខុសគ្នាតាមរូបភាពនីតិបុគ្គល វិនិយោគិន ប្រភេទអាជីវកម្ម ធនាគារ និងឯកសារដែលមាន។ ការបង្កើតក្រុមហ៊ុនមិនធ្វើឱ្យបានស្ថានភាពស្នាក់នៅ (居留) ឬលិខិតអនុញ្ញាតការងារ (工作許可) ដោយស្វ័យប្រវត្តិទេ៖ ទាំងនេះជានីតិវិធីដាច់ដោយឡែក ដែលត្រូវពិចារណាតាមស្ថានភាពរបស់បុគ្គលនីមួយៗ។
+
+guidanceContent.km.pages.services.sections[1].heading
+    វិវាទរដ្ឋប្បវេណី និងសំណងការខូចខាត
+
+guidanceContent.km.pages.services.sections[1].paragraphs[0]
+    ក្រុមនេះរួមមានវិវាទតាមកិច្ចសន្យា សំណងពីអំពើល្មើស និងវិវាទអ្នកប្រើប្រាស់។ ការងារច្រើនតែចាប់ពីការរៀបព្រឹត្តិការណ៍តាមពេលវេលា ការពិនិត្យឯកសារ និងភស្តុតាងដែលមាន បន្ទាប់មកទើបពិចារណាជំហានបន្ត។
+
+guidanceContent.km.pages.services.sections[1].paragraphs[1]
+    អាយុកាលតាមច្បាប់ និងភាពគ្រប់គ្រាន់នៃភស្តុតាងមានឥទ្ធិពលខ្លាំងលើដំណើរសំណុំរឿង។ សូមបញ្ជាក់កាលបរិច្ឆេទដែលលោកអ្នកដឹងតាំងពីដើម។ បើនៅមានកិច្ចសន្យា សារ បង្កាន់ដៃបង់ប្រាក់ ឬរូបថតស្ថានភាព សូមរៀបរាប់ក្នុងសារដំបូង។
+
+guidanceContent.km.pages.services.sections[2].heading
+    អាពាហ៍ពិពាហ៍ គ្រួសារ និងមរតក
+
+guidanceContent.km.pages.services.sections[2].paragraphs[0]
+    ការិយាល័យទទួលធ្វើរឿងលែងលះ (離婚) ការបែងចែកទ្រព្យសម្បត្តិ អំណាចឪពុកម្តាយលើកូនមិនគ្រប់អាយុ (未成年子女權利義務之行使或負擔) សិទ្ធិជួបនិងទាក់ទង (會面交往) និងមរតក (繼承) រួមទាំងករណីដែលភាគី ឬទ្រព្យសម្បត្តិស្ថិតនៅប្រទេសផ្សេងគ្នា។ រឿងគ្រួសារឆ្លងដែនច្រើនតែត្រូវពិនិត្យបន្ថែមអំពីឯកសារបញ្ជីគ្រួសារ (戶籍) ទម្រង់ឯកសារ និងវិធីបញ្ជាក់ភស្តុតាងនៅតៃវ៉ាន់។
+
+guidanceContent.km.pages.services.sections[2].paragraphs[1]
+    ដោយរឿងគ្រួសារច្រើនមានកាលកំណត់ និងនីតិវិធីដំណើរការស្របគ្នា សេចក្ដីសង្ខេបដំបូងគួរបញ្ជាក់ទំនាក់ទំនងរវាងភាគី ទីលំនៅបច្ចុប្បន្ន និងនីតិវិធីដែលកំពុងដំណើរការ។
+
+guidanceContent.km.pages.services.sections[3].heading
+    វិវាទពលកម្ម និងការងារ
+
+guidanceContent.km.pages.services.sections[3].paragraphs[0]
+    ក្រុមនេះរួមមានការបញ្ចប់ទំនាក់ទំនងការងារ ប្រាក់ឈប់ការងារតាមច្បាប់តៃវ៉ាន់ (資遣費 ដែលមិនគួរចាត់ទុកដូចប្រព័ន្ធស្រដៀងគ្នានៃប្រទេសផ្សេង) ប្រាក់ឈ្នួល និងវិវាទពីកិច្ចសន្យាការងារ (勞動契約) ទាំងខាងកម្មករ និងខាងនិយោជក។ ពេលពិនិត្យ យើងញែកមូលហេតុនៃការបញ្ចប់ចេញពីបញ្ហាការជូនដំណឹង ប្រាក់ត្រូវបង់ និងកាលកំណត់។
+
+guidanceContent.km.pages.services.sections[3].paragraphs[1]
+    កិច្ចសន្យាការងារ បទប្បញ្ញត្តិការងារ (工作規則) សន្លឹកប្រាក់ខែ និងសាររវាងភាគី ច្រើនតែជាឯកសារសំខាន់។ បើលោកអ្នកនៅមានឯកសារទាំងនេះ សូមបញ្ជាក់ក្នុងសេចក្ដីសង្ខេប។
+
+guidanceContent.km.pages.services.sections[4].heading
+    សំណុំរឿងព្រហ្មទណ្ឌ
+
+guidanceContent.km.pages.services.sections[4].paragraphs[0]
+    ការិយាល័យជួយទាំងក្នុងដំណាក់កាលស៊ើបអង្កេត និងមុខតុលាការ ទាំងខាងជនត្រូវចោទ ឬចុងចោទ និងខាងជនរងគ្រោះ រួមទាំងការវាយតម្លៃហានិភ័យព្រហ្មទណ្ឌក្នុងសកម្មភាពអាជីវកម្ម។
+
+guidanceContent.km.pages.services.sections[4].paragraphs[1]
+    សំណុំរឿងព្រហ្មទណ្ឌច្រើនមានកាលកំណត់ខ្លី និងដំណាក់កាលកំណត់រួច។ បើលោកអ្នកបានទទួលលិខិតពីអាជ្ញាធរឬតុលាការហើយ សូមបញ្ជាក់កាលបរិច្ឆេទលើលិខិតនោះតាំងពីដើម ដើម្បីឱ្យខ្លឹមសារត្រូវបានពិនិត្យតាមលំដាប់ភាពបន្ទាន់។
+
+guidanceContent.km.pages.services.sections[5].heading
+    កម្មសិទ្ធិបញ្ញា
+
+guidanceContent.km.pages.services.sections[5].paragraphs[0]
+    ការិយាល័យជួយចុះបញ្ជីសញ្ញាពាណិជ្ជ (商標) និងប៉ាតង់ (專利) រឿងរក្សាសិទ្ធិ និងវិវាទពាក់ព័ន្ធសិទ្ធិទាំងនេះនៅតៃវ៉ាន់។
+
+guidanceContent.km.pages.services.sections[5].paragraphs[1]
+    ក្នុងក្រុមនេះ លំដាប់ជំហានមានសារៈសំខាន់៖ វិសាលភាពការពារ ពេលដាក់ពាក្យ និងការប្រើប្រាស់ជាក់ស្ដែង មានឥទ្ធិពលលើវិធីដែលជ្រើស។ ការដាក់ពាក្យមិនមានន័យថាពាក្យនោះនឹងត្រូវបានអនុម័តដោយស្វ័យប្រវត្តិឡើយ។
+
+guidanceContent.km.pages.services.sections[6].heading
+    វិសាលភាព និងការបញ្ជាក់
+
+guidanceContent.km.pages.services.sections[6].paragraphs[0]
+    ការិយាល័យធ្វើការតាមច្បាប់តៃវ៉ាន់ និងទទួលរឿងក្នុងក្រុមខាងលើ។ វិសាលភាពនៃរឿងនីមួយៗត្រូវបានបញ្ជាក់ជាលក្ខណៈដាច់ដោយឡែក បន្ទាប់ពីមេធាវីពិនិត្យសារដែលលោកអ្នកផ្ញើ។
+
+guidanceContent.km.pages.services.sections[6].paragraphs[1]
+    ស្ថានភាពស្នាក់នៅ លិខិតអនុញ្ញាតការងារ និងបញ្ហាស្រដៀងគ្នា ត្រូវពិចារណាពីឯកសារ និងស្ថានភាពរបស់បុគ្គលនីមួយៗ មិនមែនពីសញ្ជាតិទេ។ បើផ្នែកណាមួយនៃរឿងរបស់លោកអ្នកពាក់ព័ន្ធបញ្ហាទាំងនេះ សូមបញ្ជាក់ពេលទាក់ទង។ ទំព័រនេះមិនធានាលទ្ធផល និងមិនសន្យារយៈពេលឆ្លើយតបឡើយ។
+
+guidanceContent.km.pages.about.eyebrow
+    ការិយាល័យ
+
+guidanceContent.km.pages.about.title
+    អំពី Hovering International Law Firm
+
+guidanceContent.km.pages.about.description
+    ព័ត៌មានមូលដ្ឋានអំពីការិយាល័យមេធាវីតៃវ៉ាន់នេះ ទីតាំងសាខា និងការងារពាក់ព័ន្ធភាគីបរទេស។
+
+guidanceContent.km.pages.about.intro
+    Hovering International Law Firm គឺជាការិយាល័យមេធាវីនៅតៃវ៉ាន់។ មេធាវីធ្វើការពីយោបល់សហគ្រាសរហូតដល់សំណុំរឿងនៅតុលាការ។ ផ្នែកនេះពណ៌នាប្រវត្តិបង្កើត សាខា និងការងារជាមួយភាគីបរទេស។
+
+guidanceContent.km.pages.about.sections[0].heading
+    ការបង្កើត និងរចនាសម្ព័ន្ធ
+
+guidanceContent.km.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) បង្កើតឡើងក្នុងឆ្នាំ 2016 ដោយក្រុមមេធាវីដែលបានសិក្សានៅ National Taiwan University (國立臺灣大學)។ ឈ្មោះចិន 昊鼎 ផ្សំតួអក្សរ 昊 («មេឃធំទូលាយ») ជាមួយ 鼎 («គ្រឹះរឹងមាំ») ហើយពណ៌នាទិសដៅរបស់ការិយាល័យតាំងពីបង្កើត។
+
+guidanceContent.km.pages.about.sections[0].paragraphs[1]
+    យើងមានទីតាំងនៅតៃប៉ិ (臺北) កៅស៊ុង (高雄) តៃជុង (臺中) និងពីងតុង (屏東)។ សាខាកៅស៊ុងផ្ដោតលើអភិបាលកិច្ចសហគ្រាស ហើយទទួលវិវាទរដ្ឋប្បវេណី ព្រហ្មទណ្ឌ និងរដ្ឋបាល។ សាខាតៃជុងទទួលរឿងសំណង់ កម្មសិទ្ធិបញ្ញា និងរឿងពាក់ព័ន្ធកូរ៉េ និងជប៉ុន។ សាខាពីងតុងបើកក្នុងឆ្នាំ 2017 ដើម្បីឧបត្ថម្ភអតិថិជនក្នុងតំបន់។
+
+guidanceContent.km.pages.about.sections[0].paragraphs[2]
+    ក្រៅពីការងារមេធាវី តាំងពីឆ្នាំ 2020 មាន Hovering Accounting Office ដែលផ្ដល់សេវាគណនេយ្យ និងផែនការពន្ធដល់ម្ចាស់អាជីវកម្ម និងបុគ្គលមានទ្រព្យ។
+
+guidanceContent.km.pages.about.sections[1].heading
+    ការងារជាមួយភាគីបរទេស
+
+guidanceContent.km.pages.about.sections[1].paragraphs[0]
+    ការងារឆ្លងដែនរួមមានការបង្កើតក្រុមហ៊ុន ទិដ្ឋាការ ការដាក់សញ្ញាពាណិជ្ជ និងប៉ាតង់ ការវាយតម្លៃហានិភ័យផ្លូវច្បាប់ និងយោបល់ពន្ធសហគ្រាស។ សាខាតៃជុងទទួលជាពិសេសរឿងសំណង់ កម្មសិទ្ធិបញ្ញា និងរឿងពាក់ព័ន្ធកូរ៉េ និងជប៉ុន។ មេធាវីស្ត្រី Wei Tseng (曾雋崴) អមដំណើរអតិថិជនពីកូរ៉េ ពីជប៉ុន និងអតិថិជនអន្តរជាតិផ្សេងទៀតក្នុងក្រុមខាងលើ។
+
+guidanceContent.km.pages.about.sections[1].paragraphs[1]
+    ថាតើយើងអាចទទួលរឿងណាមួយបាន អាស្រ័យលើខ្លឹមសារ និងភាសាទំនាក់ទំនង។ បើរឿងរបស់លោកអ្នកស្ថិតក្នុងក្រុមខាងលើ ហើយអាចពិភាក្សាជាភាសាណាមួយក្នុង ៤ ភាសានៃការពិគ្រោះយោបល់ លោកអ្នកអាចផ្ញើសេចក្ដីសង្ខេបឱ្យមេធាវីពិនិត្យ។
+
+guidanceContent.km.pages.about.sections[2].heading
+    ពេលលោកអ្នកទាក់ទងមក
+
+guidanceContent.km.pages.about.sections[2].paragraphs[0]
+    បន្ទាប់ពីទទួលសេចក្ដីសង្ខេប មេធាវីពិនិត្យខ្លឹមសារ បន្ទាប់មកពិភាក្សាវិសាលភាពការងារដែលអាចធ្វើបាន ឯកសារដែលនៅខ្វះ និងជំហានបន្ត។ សម្រាប់បញ្ហាពន្ធ ឬគណនេយ្យ ការិយាល័យអាចធ្វើការជាមួយផ្នែកគណនេយ្យក្នុងនីតិវិធីតែមួយ។
+
+guidanceContent.km.pages.about.sections[2].paragraphs[1]
+    លទ្ធផលនៃរឿងនីមួយៗអាស្រ័យលើអង្គហេតុ និងឯកសារដែលមាន។ យើងមិនធានាលទ្ធផលឡើយ។ បើលោកអ្នកត្រូវការចម្លើយច្បាស់លាស់សម្រាប់ស្ថានភាពរបស់ខ្លួន ឯកសារត្រូវបានពិភាក្សាជាមួយមេធាវីក្នុងភាសាណាមួយនៃ ៤ ភាសានៃការពិគ្រោះយោបល់។
+
+guidanceContent.km.pages.lawyers.eyebrow
+    មេធាវី
+
+guidanceContent.km.pages.lawyers.title
+    ក្រុមអន្តរជាតិ Hovering
+
+guidanceContent.km.pages.lawyers.description
+    ប្រវត្តិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្តិ និងដៃគូគណនេយ្យករនៃ Hovering
+
+guidanceContent.km.pages.lawyers.intro
+    
+
+guidanceContent.km.pages.pricing.eyebrow
+    វិសាលភាពថ្លៃ
+
+guidanceContent.km.pages.pricing.title
+    របៀបកំណត់វិសាលភាពការងារ និងថ្លៃសេវា
+
+guidanceContent.km.pages.pricing.description
+    ការពន្យល់លំដាប់៖ កំណត់វិសាលភាពការងារជាមុន បន្ទាប់មកបញ្ជាក់ថ្លៃសេវា និងមូលហេតុដែលទំព័រនេះមិនបង្ហាញតារាងថ្លៃ។
+
+guidanceContent.km.pages.pricing.intro
+    ទំព័រនេះពន្យល់របៀបកំណត់ថ្លៃសេវា មិនមែនចំនួនទឹកប្រាក់ទេ។ ចំនួនអាស្រ័យលើវិសាលភាពការងារនៃរឿងនីមួយៗ ហើយមានន័យតែពេលវិសាលភាពនោះច្បាស់។
+
+guidanceContent.km.pages.pricing.sections[0].heading
+    ជំហានដំបូងគឺកំណត់វិសាលភាពការងារ
+
+guidanceContent.km.pages.pricing.sections[0].paragraphs[0]
+    រឿងប្រភេទដូចគ្នាអាចមានបរិមាណការងារខុសគ្នាខ្លាំង តាមចំនួនភាគី ឯកសារដែលមាន កាលកំណត់ដែលត្រូវគោរព និងថាតើនីតិវិធីបានចាប់ផ្ដើមហើយឬនៅ។ ដូច្នេះជំហានដំបូងតែងតែជាការធ្វើឱ្យច្បាស់ថាការងាររួមមានអ្វីខ្លះ និងមិនរួមមានអ្វីខ្លះ។
+
+guidanceContent.km.pages.pricing.sections[0].paragraphs[1]
+    សេចក្ដីសង្ខេបដែលលោកអ្នកផ្ញើដំបូងគឺជាមូលដ្ឋាននៃវិសាលភាពនេះ។ កាន់តែច្បាស់អំពីអ្វីដែលកើតឡើង អ្វីដែលលោកអ្នកត្រូវការ និងកាលកំណត់ ការកំណត់វិសាលភាពកាន់តែត្រឹមត្រូវ។
+
+guidanceContent.km.pages.pricing.sections[1].heading
+    ថ្លៃសេវាត្រូវបានបញ្ជាក់មុនចាប់ផ្ដើមការងារ
+
+guidanceContent.km.pages.pricing.sections[1].paragraphs[0]
+    ពេលវិសាលភាពការងារច្បាស់ហើយ ចំនួនទឹកប្រាក់ និងវិធីគិតថ្លៃនឹងត្រូវបានពិភាក្សា និងបញ្ជាក់ជាមួយលោកអ្នកមុនចាប់ផ្ដើមការងារ។ បើវិសាលភាពផ្លាស់ប្ដូរពេលកំពុងធ្វើ ផ្នែកដែលផ្លាស់ប្ដូរត្រូវបានបញ្ជាក់ម្ដងទៀត។
+
+guidanceContent.km.pages.pricing.sections[1].paragraphs[1]
+    ទំព័រនេះមិនមែនជាសម្រង់ថ្លៃ និងមិនបង្កកាតព្វកិច្ចបង់ប្រាក់ឡើយ។ ការផ្ញើសំណើតាមទំព័រនេះក៏មិនមានថ្លៃដែរ។
+
+guidanceContent.km.pages.pricing.sections[2].heading
+    ការពិគ្រោះយោបល់អាចជាសេវាដែលមានថ្លៃ
+
+guidanceContent.km.pages.pricing.sections[2].paragraphs[0]
+    ការពិគ្រោះយោបល់ជាមួយមេធាវីអាចជាសេវាដែលមានថ្លៃ។ ទំព័រនេះមិនបានសរសេរថាការពិភាក្សាលើកដំបូងឥតគិតថ្លៃទេ ហើយមិនគួរអានផ្នែកណាមួយតាមន័យនោះឡើយ។
+
+guidanceContent.km.pages.pricing.sections[2].paragraphs[1]
+    បើការពិគ្រោះយោបល់មានថ្លៃ ចំនួន និងវិធីបង់នឹងត្រូវបានជូនដំណឹងមុនការពិគ្រោះយោបល់ចាប់ផ្ដើម។
+
+guidanceContent.km.pages.pricing.sections[3].heading
+    មូលហេតុដែលទំព័រនេះមិនបង្ហាញអត្រាថ្លៃ
+
+guidanceContent.km.pages.pricing.sections[3].paragraphs[0]
+    ថ្លៃសេវាអាស្រ័យលើរឿងនីមួយៗ៖ បរិមាណការងារ ចំនួនភាគី ឯកសារ កាលកំណត់ និងថាតើនីតិវិធីកំពុងដំណើរការឬទេ។ លេខដែលប្រកាសជាមុនមិនអាចប្រាប់ថ្លៃសម្រាប់រឿងរបស់លោកអ្នកបានទេ។ ដូច្នេះយើងកំណត់វិសាលភាពការងារជាមុន បន្ទាប់មកជូនដំណឹងថ្លៃសេវាមុនចាប់ផ្ដើមការងារ។
+
+guidanceContent.km.pages.pricing.sections[3].paragraphs[1]
+    ក្រៅពីថ្លៃមេធាវី រឿងមួយអាចមានថ្លៃសេវាតុលាការ អាជ្ញាធរ ឬភាគីទីបី។ ថ្លៃទាំងនេះដាច់ដោយឡែកពីថ្លៃមេធាវី ហើយអាស្រ័យលើនីតិវិធីដែលដំណើរការ។
+
+guidanceContent.km.pages.contact.eyebrow
+    ទំនាក់ទំនង
+
+guidanceContent.km.pages.contact.title
+    របៀបទាក់ទងការិយាល័យ
+
+guidanceContent.km.pages.contact.description
+    ភាសាទំព័រ ភាសាពិគ្រោះយោបល់ វិធីធ្វើពេលលោកអ្នកប្រើមិនបាន ៤ ភាសានោះ និងអ្វីដែលទំព័រនេះមិនសន្យា។
+
+guidanceContent.km.pages.contact.intro
+    មុនសរសេរមក សូមញែកចំណុចបីខាងក្រោមចេញពីគ្នា។ ពួកវាច្រើនតែត្រូវបានយល់ច្រឡំថាដូចគ្នា ប៉ុន្តែមានន័យខុសគ្នា។
+
+guidanceContent.km.pages.contact.sections[0].heading
+    រឿងបីដែលត្រូវញែកចេញពីគ្នា
+
+guidanceContent.km.pages.contact.sections[0].paragraphs[0]
+    ភាសាបង្ហាញនៃទំព័រ ភាសាពិគ្រោះយោបល់ជាមួយមេធាវី និងភាសាដែលលោកអ្នកសរសេរ គឺជារឿងបីដាច់ដោយឡែក។
+
+guidanceContent.km.pages.contact.sections[0].items[0]
+    ភាសាទំព័រ៖ សេចក្ដីណែនាំនេះសរសេរជាភាសាខ្មែរ
+
+guidanceContent.km.pages.contact.sections[0].items[1]
+    ភាសាពិគ្រោះយោបល់៖ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ
+
+guidanceContent.km.pages.contact.sections[0].items[2]
+    ភាសាដែលលោកអ្នកសរសេរ៖ លោកអ្នកអាចសរសេរសេចក្ដីសង្ខេបជាភាសារបស់ខ្លួន ហើយអត្ថបទដើមត្រូវបានរក្សាទុកដូចដើម
+
+guidanceContent.km.pages.contact.sections[1].heading
+    បើលោកអ្នកប្រើមិនបានភាសាណាមួយក្នុង ៤ ភាសានៃការពិគ្រោះយោបល់
+
+guidanceContent.km.pages.contact.sections[1].paragraphs[0]
+    ក្នុងទម្រង់ទំនាក់ទំនង លោកអ្នកអាចជ្រើស «ត្រូវបញ្ជាក់វិធីទំនាក់ទំនង»។ យើងនឹងឆ្លើយតបដើម្បីពិនិត្យថាតើមានវិធីសាស្ត្រទំនាក់ទំនងដែលអាចប្រើបានដែរឬទេ។ យើងមិនធានាសេវាក្នុងភាសាផ្សេង និងមិនសន្យារយៈពេលឆ្លើយតបឡើយ។
+
+guidanceContent.km.pages.contact.sections[1].paragraphs[1]
+    នេះគឺជាជំហានពិនិត្យ មិនមែនជាការសន្យា។ យើងមិនសន្យាផ្ដល់អ្នកបកប្រែផ្ទាល់មាត់ មិនសន្យាផ្ដល់សេវាជាភាសាខ្មែរ ឬភាសាផ្សេងក្រៅពី ៤ ភាសាខាងលើ និងមិនសន្យាថានឹងទទួលគ្រប់រឿងឡើយ។
+
+guidanceContent.km.pages.contact.sections[2].heading
+    សារដំបូងគួរសរសេរអ្វី
+
+guidanceContent.km.pages.contact.sections[2].paragraphs[0]
+    សូមបញ្ជាក់ថាអ្វីបានកើតឡើង លោកអ្នកត្រូវការជំនួយអ្វី រឿងនេះពាក់ព័ន្ធតៃវ៉ាន់យ៉ាងណា និងកាលកំណត់បើលោកអ្នកដឹង។ បើបានទទួលលិខិតពីតុលាការ ឬអាជ្ញាធរហើយ សូមបញ្ជាក់កាលបរិច្ឆេទលើលិខិតនោះ។
+
+guidanceContent.km.pages.contact.sections[2].paragraphs[1]
+    នៅដំណាក់កាលដំបូង មិនចាំបាច់ផ្ញើលេខលិខិតឆ្លងដែន លេខអត្តសញ្ញាណប័ណ្ណ ទិន្នន័យគណនីធនាគារ កំណត់ត្រាពេទ្យ ឬភស្តុតាងទាំងអស់ទេ។ សូមរង់ចាំការណែនាំពីមេធាវី បន្ទាប់មកផ្ញើឯកសាររសើបតាមវិធីសុវត្ថិភាព។
+
+guidanceContent.km.pages.contact.sections[3].heading
+    អ្វីដែលទំព័រនេះមិនសន្យា
+
+guidanceContent.km.pages.contact.sections[3].paragraphs[0]
+    យើងមិនសន្យារយៈពេលឆ្លើយតប មិនបញ្ជាក់ការណាត់ជួបតាមទំព័រនេះ មិនសន្យាថាមេធាវីណាម្នាក់នឹងទទួលបន្ទុករឿង និងមិនផ្ដល់អ្នកបកប្រែផ្ទាល់មាត់ឡើយ។ ការបកប្រែជាលាយលក្ខណ៍អក្សរជារឿងផ្សេង៖ សាររបស់លោកអ្នកមិនត្រូវបានបកប្រែដោយស្វ័យប្រវត្តិឡើយ។
+
+guidanceContent.km.pages.contact.sections[3].paragraphs[1]
+    ពេលលោកអ្នកផ្ញើសំណើ ខ្លឹមសារត្រូវបានរក្សាទុក និងរង់ចាំការពិនិត្យ។ បើកន្លងពេលមួយហើយមិនទាន់បានទាក់ទងតប លោកអ្នកអាចផ្ញើម្ដងទៀតទៅអាសយដ្ឋានអ៊ីមែលនៅទំព័រទំនាក់ទំនង។
+
+guidanceContent.km.pages.faq.eyebrow
+    សំណួរញឹកញាប់
+
+guidanceContent.km.pages.faq.title
+    សំណួរដែលគេសួរញឹកញាប់
+
+guidanceContent.km.pages.faq.description
+    ការពន្យល់អំពីវិសាលភាពការងារ ការត្រៀម ភាសា ថ្លៃសេវា និងន័យនៃការផ្ញើសំណើ។
+
+guidanceContent.km.pages.faq.intro
+    សំណួរខាងក្រោមត្រូវបានឆ្លើយនៅកម្រិតព័ត៌មានទូទៅ។ ចម្លើយសម្រាប់រឿងជាក់លាក់របស់លោកអ្នកអាចផ្ដល់បានតែបន្ទាប់ពីមេធាវីបានពិនិត្យឯកសារ និងអង្គហេតុ។
+
+guidanceContent.km.pages.faq.sections[0].heading
+    របៀបប្រើផ្នែកនេះ
+
+guidanceContent.km.pages.faq.sections[0].paragraphs[0]
+    បើលោកអ្នករកមិនឃើញចម្លើយសម្រាប់ស្ថានភាពរបស់ខ្លួន ជាទូទៅនោះមានន័យថាចម្លើយអាស្រ័យលើអង្គហេតុជាក់លាក់។ ក្នុងករណីនោះ សូមសរសេរអង្គហេតុទាំងនោះក្នុងសេចក្ដីសង្ខេបពេលទាក់ទង កុំសន្និដ្ឋានពីខ្លឹមសារទំព័រនេះតែឯង។
+
+guidanceContent.km.pages.faq.faqs[0].question
+    ការិយាល័យទទួលរឿងប្រភេទណាខ្លះ?
+
+guidanceContent.km.pages.faq.faqs[0].answer
+    ការិយាល័យទទួលធ្វើ ៦ ក្រុម៖ ការវិនិយោគ និងការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់ វិវាទរដ្ឋប្បវេណី និងសំណងការខូចខាត អាពាហ៍ពិពាហ៍ គ្រួសារ និងមរតក វិវាទពលកម្ម សំណុំរឿងព្រហ្មទណ្ឌ និងកម្មសិទ្ធិបញ្ញា។ ថាតើទទួលរឿងណាមួយ សម្រេចបន្ទាប់ពីពិនិត្យខ្លឹមសារ។
+
+guidanceContent.km.pages.faq.faqs[1].question
+    គួរត្រៀមអ្វីមុនទាក់ទង?
+
+guidanceContent.km.pages.faq.faqs[1].answer
+    សូមត្រៀមសេចក្ដីសង្ខេបខ្លីអំពីលំដាប់ព្រឹត្តិការណ៍ អ្វីដែលលោកអ្នកត្រូវការ ទំនាក់ទំនងនៃរឿងជាមួយតៃវ៉ាន់ និងកាលកំណត់បើមាន។ បើមានលិខិតពីតុលាការ ឬអាជ្ញាធរហើយ សូមបញ្ជាក់កាលបរិច្ឆេទលើលិខិត។ នៅដំណាក់កាលនេះ មិនចាំបាច់ផ្ញើឯកសារអត្តសញ្ញាណ ឬភស្តុតាងទាំងអស់ទេ។
+
+guidanceContent.km.pages.faq.faqs[2].question
+    តើអាចពិគ្រោះយោបល់ជាភាសាខ្មែរបានទេ?
+
+guidanceContent.km.pages.faq.faqs[2].answer
+    ទេ។ សេចក្ដីណែនាំនេះសរសេរជាភាសាខ្មែរ ប៉ុន្តែការពិគ្រោះយោបល់ជាមួយមេធាវីធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។ យើងមិនសន្យាផ្ដល់អ្នកបកប្រែផ្ទាល់មាត់ឡើយ។ ការបកប្រែជាលាយលក្ខណ៍អក្សរជារឿងផ្សេង៖ អត្ថបទដើមដែលលោកអ្នកសរសេរត្រូវបានរក្សាទុកដូចដើម ហើយមិនត្រូវបានបកប្រែដោយស្វ័យប្រវត្តិឡើយ។
+
+guidanceContent.km.pages.faq.faqs[3].question
+    បើប្រើមិនបានភាសាណាមួយក្នុង ៤ ភាសានោះ ធ្វើដូចម្ដេច?
+
+guidanceContent.km.pages.faq.faqs[3].answer
+    សូមជ្រើស «ត្រូវបញ្ជាក់វិធីទំនាក់ទំនង» ពេលផ្ញើសំណើ។ យើងនឹងឆ្លើយតបដើម្បីពិនិត្យវិធីសាស្ត្រទំនាក់ទំនងដែលអាចប្រើបាន ប៉ុន្តែមិនធានាសេវាក្នុងភាសាផ្សេងឡើយ។ នេះគឺជាជំហានពិនិត្យ មិនមែនជាការសន្យាថាយើងអាចធ្វើការជាភាសាផ្សេងបានទេ។
+
+guidanceContent.km.pages.faq.faqs[4].question
+    អត្ថបទដែលសរសេរជាភាសាខ្មែរត្រូវបានដោះស្រាយយ៉ាងណា?
+
+guidanceContent.km.pages.faq.faqs[4].answer
+    អត្ថបទដើមដែលលោកអ្នកសរសេរត្រូវបានរក្សាទុកដូចដើម ហើយមិនត្រូវបានបកប្រែដោយស្វ័យប្រវត្តិឡើយ។ បើចាំបាច់ ភាសានៃការទំនាក់ទំនងជំហានបន្តនឹងត្រូវបានបញ្ជាក់ជាមួយលោកអ្នក។
+
+guidanceContent.km.pages.faq.faqs[5].question
+    ផ្ញើសំណើហើយ តើបានទទួលការពិគ្រោះយោបល់ហើយឬ?
+
+guidanceContent.km.pages.faq.faqs[5].answer
+    ទេ។ សំណើដែលបានផ្ញើគឺជារឿងរង់ចាំមេធាវីពិនិត្យ។ នេះមិនមែនជាយោបល់ផ្លូវច្បាប់ មិនមែនជាការណាត់ជួបដែលបានបញ្ជាក់ ហើយការផ្ញើតែឯងមិនបង្កើតទំនាក់ទំនងមេធាវីនិងអតិថិជនឡើយ។
+
+guidanceContent.km.pages.faq.faqs[6].question
+    ថ្លៃសេវាគិតយ៉ាងណា?
+
+guidanceContent.km.pages.faq.faqs[6].answer
+    នឹងកំណត់វិសាលភាពការងារជាមុន បន្ទាប់មកចំនួន និងវិធីគិតថ្លៃនឹងត្រូវបានបញ្ជាក់ជាមួយលោកអ្នកមុនចាប់ផ្ដើមការងារ។ ទំព័រនេះមិនបង្ហាញលេខ និងមិនបានសរសេរថាការពិភាក្សាលើកដំបូងឥតគិតថ្លៃទេ។
+
+guidanceContent.km.pages.faq.faqs[7].question
+    បើរឿងរបស់លោកអ្នកបន្ទាន់ខ្លាំង ធ្វើដូចម្ដេច?
+
+guidanceContent.km.pages.faq.faqs[7].answer
+    សូមបញ្ជាក់កាលកំណត់ ឬកាលបរិច្ឆេទលើលិខិតផ្លូវការនៅដើមសេចក្ដីសង្ខេប ដើម្បីឱ្យមេធាវីមើលឃើញកាលកំណត់ទាំងនោះពេលពិនិត្យ។ ទំព័រនេះគ្មានខ្សែបន្ទាន់ និងមិនសន្យារយៈពេលឆ្លើយតបឡើយ។ បើរឿងមិនអាចរង់ចាំបាន លោកអ្នកគួរស្វែងរកមធ្យោបាយផ្សេងនៅទីកន្លែងរបស់ខ្លួនស្របគ្នា។
+
+guidanceContent.km.pages.privacy.eyebrow
+    ឯកជនភាព
+
+guidanceContent.km.pages.privacy.title
+    ទិន្នន័យដែលប្រមូលតាមទម្រង់ទំនាក់ទំនង
+
+guidanceContent.km.pages.privacy.description
+    ទម្រង់ទំនាក់ទំនងក្នុងផ្នែកភាសាខ្មែរប្រមូលអ្វីខ្លះ អត្ថបទដើមត្រូវបានដោះស្រាយយ៉ាងណា និងរបៀបទាក់ទងអំពីទិន្នន័យរបស់លោកអ្នក។
+
+guidanceContent.km.pages.privacy.intro
+    ផ្នែកនេះនិយាយតែអំពីទម្រង់ទំនាក់ទំនងលើទំព័រណែនាំទាំងនេះ។ ខ្លឹមសារពណ៌នារបៀបគ្រប់គ្រងទិន្នន័យ មិនមែនជាការធានាបច្ចេកទេសទេ។
+
+guidanceContent.km.pages.privacy.sections[0].heading
+    ទិន្នន័យដែលប្រមូល
+
+guidanceContent.km.pages.privacy.sections[0].paragraphs[0]
+    ពេលលោកអ្នកផ្ញើសំណើតាមទម្រង់ក្នុងផ្នែកនេះ ប្រព័ន្ធរក្សាទុកព័ត៌មានខាងក្រោម
+
+guidanceContent.km.pages.privacy.sections[0].items[0]
+    ឈ្មោះដែលលោកអ្នកបំពេញ
+
+guidanceContent.km.pages.privacy.sections[0].items[1]
+    អាសយដ្ឋានអ៊ីមែលសម្រាប់ឆ្លើយតប
+
+guidanceContent.km.pages.privacy.sections[0].items[2]
+    ភាសាបង្ហាញនៃទំព័រពេលផ្ញើ
+
+guidanceContent.km.pages.privacy.sections[0].items[3]
+    ភាសាដែលលោកអ្នកសរសេរ
+
+guidanceContent.km.pages.privacy.sections[0].items[4]
+    ភាសាពិគ្រោះយោបល់ដែលលោកអ្នកចង់ប្រើ
+
+guidanceContent.km.pages.privacy.sections[0].items[5]
+    អត្ថបទដើមដែលលោកអ្នកសរសេរ
+
+guidanceContent.km.pages.privacy.sections[0].items[6]
+    ការយល់ព្រមផ្ញើសំណើរបស់លោកអ្នក
+
+guidanceContent.km.pages.privacy.sections[0].items[7]
+    លេខទទួលសំណើសម្រាប់ស្វែងរករឿងរបស់លោកអ្នក
+
+guidanceContent.km.pages.privacy.sections[1].heading
+    អត្ថបទដើមត្រូវបានរក្សាទុកដូចដើម
+
+guidanceContent.km.pages.privacy.sections[1].paragraphs[0]
+    អត្ថបទដែលលោកអ្នកសរសេរត្រូវបានរក្សាទុកដូចដែលសរសេរ ហើយមិនត្រូវបានបកប្រែដោយស្វ័យប្រវត្តិឡើយ។ បើត្រូវការការបកប្រែដើម្បីដំណើរការរឿង យើងនឹងពិភាក្សាជាមួយលោកអ្នកជាលក្ខណៈដាច់ដោយឡែក។
+
+guidanceContent.km.pages.privacy.sections[1].paragraphs[1]
+    ដោយអត្ថបទដើមត្រូវបានរក្សាទុក សូមកុំសរសេរព័ត៌មានដែលមិនទាន់ចាំបាច់នៅដំណាក់កាលដំបូង ដូចជាលេខលិខិតឆ្លងដែន លេខអត្តសញ្ញាណប័ណ្ណ ឬទិន្នន័យគណនីធនាគារ។
+
+guidanceContent.km.pages.privacy.sections[2].heading
+    ទុកនៅណា និងអ្នកណាចូលបាន
+
+guidanceContent.km.pages.privacy.sections[2].paragraphs[0]
+    ខ្លឹមសារដែលលោកអ្នកផ្ញើត្រូវបានរក្សាទុកនៅកន្លែងមិនបើកជាសាធារណៈ។ មានតែអ្នកដែលមានសិទ្ធិក្នុងការិយាល័យទេដែលអាចចូលដើម្បីដំណើរការសំណើ។
+
+guidanceContent.km.pages.privacy.sections[2].paragraphs[1]
+    ទំព័រនេះមិនផ្ដល់ការធានាសុវត្ថិភាពដាច់ខាតឡើយ។ គ្មានមាគ៌ាផ្ញើ ឬកន្លែងផ្ទុកណាដែលមានសុវត្ថិភាពពេញលេញទេ ដូច្នេះឯកសាររសើបគួរផ្ញើតាមការណែនាំជាក់លាក់របស់មេធាវីប៉ុណ្ណោះ។
+
+guidanceContent.km.pages.privacy.sections[3].heading
+    គោលបំណងនៃការប្រើ
+
+guidanceContent.km.pages.privacy.sections[3].paragraphs[0]
+    ទិន្នន័យដែលផ្ញើប្រើដើម្បីពិនិត្យសំណើ ឆ្លើយតបទៅលោកអ្នក បញ្ជាក់វិធីទំនាក់ទំនង និងដំណើរការរឿង បើការងារត្រូវបានចាប់ផ្ដើម។
+
+guidanceContent.km.pages.privacy.sections[3].paragraphs[1]
+    ទិន្នន័យនេះមិនត្រូវបានប្រើសម្រាប់ទីផ្សារទេ បើលោកអ្នកមិនបានយល់ព្រមជាពិសេសសម្រាប់គោលបំណងនោះ។
+
+guidanceContent.km.pages.privacy.sections[4].heading
+    ការជូនដំណឹង និងលេខទទួលសំណើ
+
+guidanceContent.km.pages.privacy.sections[4].paragraphs[0]
+    ពេលផ្ញើសំណើបានសម្រេច ប្រព័ន្ធជូនដំណឹងទៅការិយាល័យ។ បើការជូនដំណឹងនោះមិនទាន់បញ្ជាក់បាន អត្ថបទដែលលោកអ្នកសរសេរនៅតែត្រូវបានរក្សាទុក និងមិនបាត់បង់។
+
+guidanceContent.km.pages.privacy.sections[4].paragraphs[1]
+    លេខទទួលសំណើបង្កើតឡើងដើម្បីស្វែងរករឿងរបស់លោកអ្នកក្នុងកំណត់ត្រារបស់យើង។ វាបង្ហាញបន្ទាប់ពីរក្សាទុកហើយ លោកអ្នកអាចបញ្ជាក់លេខនេះពេលទាក់ទងមកម្ដងទៀត។
+
+guidanceContent.km.pages.privacy.sections[5].heading
+    សិទ្ធិរបស់លោកអ្នក និងមាគ៌ាទំនាក់ទំនង
+
+guidanceContent.km.pages.privacy.sections[5].paragraphs[0]
+    លោកអ្នកអាចស្នើសុំចូលមើល កែ លុបទិន្នន័យរបស់ខ្លួន ឬដកការយល់ព្រម តាមអាសយដ្ឋានអ៊ីមែលនៅទំព័រទំនាក់ទំនង។ បើមានកាតព្វកិច្ចរក្សាទុកតាមវិធានដែលអនុវត្ត ឬដោយសាររឿងកំពុងដំណើរការ យើងនឹងពន្យល់មូលហេតុនៃដែនកំណត់នោះ។
+
+guidanceContent.km.pages.privacy.sections[5].paragraphs[1]
+    ទំព័រនេះមិនបញ្ជាក់រយៈពេលរក្សាទុកថេរទេ ព្រោះរយៈពេលជាក់ស្ដែងអាស្រ័យលើថាតើរឿងបន្តឬទេ និងកាតព្វកិច្ចរក្សាទុកពាក់ព័ន្ធ។ បើលោកអ្នកចង់ឱ្យលុបមុននោះ សូមជូនដំណឹងពេលទាក់ទង។
+
+guidanceContent.km.pages.privacy.sections[6].heading
+    ទីកន្លែងផ្ទុកទិន្នន័យ និងអ្នកផ្ដល់សេវា
+
+guidanceContent.km.pages.privacy.sections[6].paragraphs[0]
+    គេហទំព័រនេះត្រូវបានបង្ហោះលើ Vercel ហើយសំណើដែលលោកអ្នកផ្ញើត្រូវបានរក្សាទុកក្នុងឃ្លាំងវត្ថុមិនបើកជាសាធារណៈនៃសេវានោះ។ អ៊ីមែលត្រូវបានផ្ញើតាមសេវាអ៊ីមែលដែលការិយាល័យកំពុងប្រើ។
+
+guidanceContent.km.pages.privacy.sections[6].paragraphs[1]
+    ម៉ាស៊ីនមេរបស់អ្នកផ្ដល់សេវាមួយចំនួនអាចស្ថិតនៅក្រៅតៃវ៉ាន់ ហើយក្នុងករណីនោះទិន្នន័យរបស់លោកអ្នកអាចត្រូវបានរក្សាទុក និងដំណើរការនៅទីនោះ។ ពេលគោលបំណងនៃការរក្សាទុកបានសម្រេច ទិន្នន័យនឹងត្រូវលុបដោយមិនពន្យារពេល។ ទិន្នន័យដែលត្រូវរក្សាទុកតាមវិធានដែលអនុវត្ត នឹងត្រូវរក្សាទុកពេញរយៈពេលនោះ។ សំណើអំពីទិន្នន័យផ្ទាល់ខ្លួនអាចផ្ញើទៅ wei@hoveringlaw.com.tw
+
+guidanceContent.km.pages.disclaimer.eyebrow
+    ការបដិសេធ
+
+guidanceContent.km.pages.disclaimer.title
+    វិសាលភាព និងដែនកំណត់នៃព័ត៌មានលើទំព័រនេះ
+
+guidanceContent.km.pages.disclaimer.description
+    លក្ខណៈទូទៅនៃព័ត៌មាន វិសាលភាពនៃច្បាប់ដែលអនុវត្ត និងលក្ខខណ្ឌនៃការកើតទំនាក់ទំនងមេធាវីនិងអតិថិជន។
+
+guidanceContent.km.pages.disclaimer.intro
+    ផ្នែកនេះធ្វើឱ្យច្បាស់ថាទំព័រណែនាំភាសាខ្មែរទាំងនេះធ្វើអ្វីបានសម្រាប់លោកអ្នក និងធ្វើអ្វីមិនបាន។
+
+guidanceContent.km.pages.disclaimer.sections[0].heading
+    ជាព័ត៌មានទូទៅប៉ុណ្ណោះ
+
+guidanceContent.km.pages.disclaimer.sections[0].paragraphs[0]
+    ខ្លឹមសារនៅទំព័រទាំងនេះសរសេរឡើងជាព័ត៌មានទូទៅ។ វាមិនមែនជាយោបល់ផ្លូវច្បាប់សម្រាប់រឿងរបស់លោកអ្នក ហើយមិនអាចជំនួសការពិនិត្យឯកសារ និងអង្គហេតុជាក់លាក់ឡើយ។
+
+guidanceContent.km.pages.disclaimer.sections[0].paragraphs[1]
+    លទ្ធផលនៃរឿងនីមួយៗអាស្រ័យលើអង្គហេតុ វិធានដែលអនុវត្ត និងពេលវេលា។ ដូច្នេះស្ថានភាពពីរដែលមើលទៅស្រដៀងគ្នាអាចមានលទ្ធផលខុសគ្នា។
+
+guidanceContent.km.pages.disclaimer.sections[1].heading
+    វិសាលភាពនៃច្បាប់
+
+guidanceContent.km.pages.disclaimer.sections[1].paragraphs[0]
+    ការិយាល័យអនុវត្តវិជ្ជាជីវៈតាមច្បាប់តៃវ៉ាន់ ហើយទំព័រទាំងនេះនិយាយតែអំពីការងារក្នុងក្របខណ្ឌនោះ។
+
+guidanceContent.km.pages.disclaimer.sections[1].paragraphs[1]
+    ខ្លឹមសារនេះមិនមែនជាយោបល់តាមច្បាប់នៃយុត្តាធិការផ្សេងក្រៅពីតៃវ៉ាន់ រួមទាំងច្បាប់នៃទីលំនៅរបស់លោកអ្នក។ បើផ្នែកណាមួយនៃរឿងស្ថិតក្រោមយុត្តាធិការផ្សេង យើងនឹងបញ្ជាក់ជាមួយលោកអ្នកថាផ្នែកនោះត្រូវការអ្នកជំនាញមានសមត្ថភាពប្រភេទណា។
+
+guidanceContent.km.pages.disclaimer.sections[2].heading
+    ទំនាក់ទំនងមេធាវីនិងអតិថិជនមិនកើតដោយស្វ័យប្រវត្តិ
+
+guidanceContent.km.pages.disclaimer.sections[2].paragraphs[0]
+    ការអានទំព័រនេះ ការផ្ញើទម្រង់ ឬការផ្ញើអ៊ីមែល តែឯងមិនបង្កើតទំនាក់ទំនងមេធាវីនិងអតិថិជនឡើយ។
+
+guidanceContent.km.pages.disclaimer.sections[2].paragraphs[1]
+    ទំនាក់ទំនងនោះកើតឡើងតែបន្ទាប់ពីរឿងត្រូវបានពិនិត្យ ហើយភាគីទាំងពីរបញ្ជាក់ការទទួលធ្វើការងាររួមគ្នា។
+
+guidanceContent.km.pages.disclaimer.sections[3].heading
+    គ្មានការធានាលទ្ធផល
+
+guidanceContent.km.pages.disclaimer.sections[3].paragraphs[0]
+    គ្មានផ្នែកណានៃទំព័រទាំងនេះជាការសន្យាអំពីលទ្ធផលនៃរឿងណាមួយ ការអនុម័តពាក្យសុំ ឬស្ថានភាពស្នាក់នៅ និងស្ថានភាពការងារឡើយ។
+
+guidanceContent.km.pages.disclaimer.sections[3].paragraphs[1]
+    តំណទៅគេហទំព័រខាងក្រៅរៀបចំសម្រាប់ភាពងាយស្រួល។ យើងមិនធានាភាពត្រឹមត្រូវ ឬភាពទាន់សម័យនៃខ្លឹមសារដែលភាគីទីបីផ្សព្វផ្សាយឡើយ។
+
+guidanceContent.km.pages.columns.eyebrow
+    អត្ថបទ
+
+guidanceContent.km.pages.columns.title
+    អត្ថបទអំពីច្បាប់តៃវ៉ាន់
+
+guidanceContent.km.pages.columns.description
+    អត្ថបទភាសាខ្មែរពន្យល់ប្រធានបទច្បាប់តៃវ៉ាន់ដែលគេសួរញឹកញាប់។ ខ្លឹមសារជាព័ត៌មានទូទៅនៅពេលផ្សព្វផ្សាយ មិនមែនជាយោបល់ផ្លូវច្បាប់សម្រាប់រឿងរបស់លោកអ្នកទេ។
+
+guidanceContent.km.pages.columns.intro
+    ការិយាល័យផ្សព្វផ្សាយអត្ថបទពន្យល់ប្រធានបទច្បាប់តៃវ៉ាន់ដែលគេសួរញឹកញាប់។ អត្ថបទដែលមានជាភាសាខ្មែរហើយបង្ហាញនៅទំព័រនេះ។ ក្រៅពីនេះមានតំណ ៤ ដែលបើកបញ្ជីអត្ថបទនៃភាសាដើមនីមួយៗ។
+
+guidanceContent.km.pages.columns.sections[0].heading
+    បញ្ជី ៤ ភាសា
+
+guidanceContent.km.pages.columns.sections[0].paragraphs[0]
+    ផ្នែកនេះមានតំណ ៤៖ បញ្ជីអត្ថបទភាសាកូរ៉េ ភាសាចិន ភាសាអង់គ្លេស និងភាសាជប៉ុន។ តំណនីមួយៗបញ្ជាក់ភាសានៃបញ្ជីនោះ ដើម្បីឱ្យលោកអ្នកដឹងជាមុនថាខ្លឹមសារនឹងបើកជាភាសាណា។
+
+guidanceContent.km.pages.columns.sections[0].paragraphs[1]
+    បញ្ជី ៤ នេះជាបញ្ជីតាមភាសាដើមនៃអត្ថបទ មិនមែនជាបញ្ជីបកប្រែទេ។ អត្ថបទដែលមានជាភាសាខ្មែរហើយបង្ហាញដាច់ដោយឡែកនៅទំព័រនេះ។
+
+guidanceContent.km.pages.columns.sections[1].heading
+    តំណនាំលោកអ្នកទៅណា
+
+guidanceContent.km.pages.columns.sections[1].paragraphs[0]
+    ពេលលោកអ្នកជ្រើសតំណណាមួយក្នុង ៤ នោះ បញ្ជីអត្ថបទនៃភាសានោះនឹងបើក។ ពីបញ្ជី លោកអ្នកជ្រើសអត្ថបទដែលចង់អានដោយខ្លួនឯង ហើយខ្លឹមសារទាំងអស់បង្ហាញជាភាសាដើមនៃអត្ថបទ។
+
+guidanceContent.km.pages.columns.sections[1].paragraphs[1]
+    ទំព័រនេះមិនសង្ខេបខ្លឹមសារអត្ថបទ និងមិនធានាថាប្រធានបទណាមួយមានគ្រប់ ៤ ភាសាឡើយ។ បញ្ជីនីមួយៗមានតែអត្ថបទដែលបានផ្សព្វផ្សាយក្នុងភាសានោះ។
+
+guidanceContent.km.pages.columns.sections[2].heading
+    អត្ថបទអាចប្រើជាឯកសារយោងបានប៉ុណ្ណា
+
+guidanceContent.km.pages.columns.sections[2].paragraphs[0]
+    អត្ថបទសរសេរជាព័ត៌មានទូទៅនៅពេលផ្សព្វផ្សាយ។ វិធាន និងវិធីអនុវត្តអាចផ្លាស់ប្ដូរ ហើយអត្ថបទមួយមិនគ្របដណ្ដប់អង្គហេតុទាំងអស់ក្នុងរឿងរបស់លោកអ្នកឡើយ។
+
+guidanceContent.km.pages.columns.sections[2].paragraphs[1]
+    ដូច្នេះសូមកុំប្រើអត្ថបទតែឯងជាមូលដ្ឋានសម្រេចចិត្តក្នុងរឿងជាក់ស្ដែង។ សូមប្រើវាដើម្បីយល់រូបភាពទូទៅ បន្ទាប់មកពិភាក្សាឯកសារ និងអង្គហេតុរបស់លោកអ្នកជាលក្ខណៈដាច់ដោយឡែក។ ទំព័រនេះមិនមែនជានីតិវិធីពិគ្រោះយោបល់ឡើយ។
+
+guidanceTeamCopy.km.label
+    ក្រុម
+
+guidanceTeamCopy.km.title
+    ក្រុមអន្តរជាតិ Hovering
+
+guidanceTeamCopy.km.description
+    ប្រវត្តិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្តិ និងដៃគូគណនេយ្យករនៃ Hovering
+
+guidanceTeamCopy.km.representativeTitle
+    មេធាវីគ្រប់គ្រង
+
+guidanceTeamCopy.km.teamTitle
+    មេធាវី និងបុគ្គលិក
+
+guidanceTeamCopy.km.partnerTitle
+    ដៃគូគណនេយ្យករ
+
+guidanceTeamCopy.km.introLabel
+    សេចក្ដីណែនាំ
+
+guidanceTeamCopy.km.educationLabel
+    ការសិក្សា
+
+guidanceTeamCopy.km.experienceLabel
+    បទពិសោធន៍
+
+guidanceTeamCopy.km.photoAltPrefix
+    រូប
+
+guidanceTeamCopy.km.workingLanguagesLabel
+    ភាសាធ្វើការ
+
+guidanceTeamCopy.km.fullProfileLabel
+    ប្រវត្តិពេញ (ជាភាសាអង់គ្លេស)
+
+guidanceTeamCopy.km.keyFactsHeading
+    មេធាវីស្ត្រី Wei Tseng — ព័ត៌មានមូលដ្ឋាន
+
+guidanceTeamCopy.km.qualificationLabel
+    គុណវុឌ្ឍិ និងស្ថាប័ន
+
+guidanceTeamCopy.km.qualificationSentence
+    {name} ជាមេធាវីស្ត្រីមានសិទ្ធិអនុវត្តវិជ្ជាជីវៈនៅតៃវ៉ាន់ និងជាមេធាវីគ្រប់គ្រងនៃ {firm}
+
+guidanceTeamCopy.km.practiceLabel
+    វិស័យទទួលធ្វើសំខាន់
+
+guidanceTeamCopy.km.consultationLanguagesLabel
+    ភាសានៃការពិគ្រោះយោបល់
+
+guidanceTeamCopy.km.roles.tseng-junwei
+    មេធាវីគ្រប់គ្រងនៅតៃវ៉ាន់
+
+guidanceTeamCopy.km.roles.chang-rongxuan
+    មេធាវីនៅតៃវ៉ាន់
+
+guidanceTeamCopy.km.roles.chang-fangyu
+    ជំនួយការផ្លូវច្បាប់
+
+guidanceTeamCopy.km.roles.son-jungmin
+    អ្នកគ្រប់គ្រងប្រតិបត្តិសម្រាប់កូរ៉េ
+
+guidanceTeamCopy.km.roles.huang-shengping
+    ដៃគូគណនេយ្យករ
+
+guidanceTeamBios.km.tseng-junwei.intro[0]
+    ការិយាល័យទទួលរឿងរបស់សហគ្រាស និងបុគ្គលនៅតៃវ៉ាន់ ជាភាសាអង់គ្លេស ភាសាជប៉ុន ភាសាកូរ៉េ និងភាសាចិន
+
+guidanceTeamBios.km.tseng-junwei.intro[1]
+    លោកស្រីធ្លាប់តំណាងឱ្យនិស្សិតជនជាតិកូរ៉េក្នុងរឿងសំណងពីរបួសនៅកន្លែងហាត់ប្រាណ ហើយសាលាដំបូងបានកាត់ឱ្យនិស្សិតនោះទទួលបានសំណង TWD 1.57M
+
+guidanceTeamBios.km.tseng-junwei.education[0]
+    បរិញ្ញាបត្រជាន់ខ្ពស់ (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.km.tseng-junwei.education[1]
+    បរិញ្ញាបត្រ (B.A.) ពីរសាខា ច្បាប់ និងហិរញ្ញវត្ថុ, National Chengchi University
+
+guidanceTeamBios.km.tseng-junwei.education[2]
+    និស្សិតស្រីផ្លាស់ប្តូរ នៅ Kobe University និង Waseda University
+
+guidanceTeamBios.km.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.km.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.km.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.km.chang-rongxuan.intro[0]
+    ធ្លាប់ធ្វើការនៅ Ministry of Education, Legal Affairs Division ផ្ដោតលើវិវាទរដ្ឋបាល និងរដ្ឋប្បវេណី
+
+guidanceTeamBios.km.chang-rongxuan.intro[1]
+    មានបទពិសោធន៍ក្នុងរឿងសាកលវិទ្យាល័យ សិទ្ធិគ្រូបង្រៀន និងពាក្យបណ្ដឹងរដ្ឋបាល
+
+guidanceTeamBios.km.chang-rongxuan.education[0]
+    បរិញ្ញាបត្រច្បាប់ (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.km.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.km.chang-rongxuan.experience[1]
+    មេធាវី, Hovering International Law Firm
+
+guidanceTeamBios.km.chang-fangyu.intro[0]
+    ជំនួយការផ្លូវច្បាប់ដែលធ្វើជាជំនួយការផ្លូវច្បាប់ជាន់ខ្ពស់នៅការិយាល័យមេធាវីច្រើនកន្លែង គ្របដណ្ដប់ការឧបត្ថម្ភសំណុំរឿង ច្បាប់សហគ្រាស និងវិនិយោគបរទេស
+
+guidanceTeamBios.km.chang-fangyu.intro[1]
+    ឧបត្ថម្ភសំណុំរឿង ការបង្កើតក្រុមហ៊ុន ការអនុម័តវិនិយោគបរទេស ការដាក់ពាក្យអាជ្ញាប័ណ្ណ និងការទំនាក់ទំនងរវាងកូរ៉េ និងតៃវ៉ាន់
+
+guidanceTeamBios.km.chang-fangyu.education[0]
+    បរិញ្ញាបត្រច្បាប់ (LL.B.), Tunghai University
+
+guidanceTeamBios.km.chang-fangyu.experience[0]
+    ជំនួយការផ្លូវច្បាប់ជាន់ខ្ពស់, Boyin Law Firm
+
+guidanceTeamBios.km.chang-fangyu.experience[1]
+    ជំនួយការផ្លូវច្បាប់ជាន់ខ្ពស់, Muyang International Law Firm
+
+guidanceTeamBios.km.son-jungmin.intro[0]
+    សម្របសម្រួលការណាត់ពិគ្រោះយោបល់ និងការទំនាក់ទំនងសម្រាប់អតិថិជនពីកូរ៉េ
+
+guidanceTeamBios.km.son-jungmin.intro[1]
+    ឧបត្ថម្ភការទំនាក់ទំនងរវាងក្រុមតាមប្រព័ន្ធឯកសារ និងលំហូរការងារ ដោយផ្អែកលើមូលដ្ឋានវិទ្យាសាស្ត្រកុំព្យូទ័រ
+
+guidanceTeamBios.km.son-jungmin.education[0]
+    បរិញ្ញាបត្រវិទ្យាសាស្ត្រ (B.S.) វិទ្យាសាស្ត្រកុំព្យូទ័រ, National Cheng Kung University
+
+guidanceTeamBios.km.son-jungmin.experience[0]
+    ក្រុមប្រតិបត្តិកូរ៉េ, Hovering International Law Firm
+
+guidanceTeamBios.km.huang-shengping.intro[0]
+    បានបញ្ចប់កម្មវិធីបរិញ្ញាបត្រ និងបរិញ្ញាបត្រជាន់ខ្ពស់ផ្នែកគណនេយ្យនៅ National Chengchi University ហើយបច្ចុប្បន្នដឹកនាំការិយាល័យគណនេយ្យមួយ
+
+guidanceTeamBios.km.huang-shengping.intro[1]
+    ឧបត្ថម្ភការវិភាគហានិភ័យផ្លូវច្បាប់ ពន្ធ និងហិរញ្ញវត្ថុជារួមសម្រាប់អតិថិជនសហគ្រាស
+
+guidanceTeamBios.km.huang-shengping.education[0]
+    បរិញ្ញាបត្រជាន់ខ្ពស់ (M.A.) គណនេយ្យ, National Chengchi University
+
+guidanceTeamBios.km.huang-shengping.education[1]
+    បរិញ្ញាបត្រ (B.A.) គណនេយ្យ, National Chengchi University
+
+guidanceTeamBios.km.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.km.Korean
+    ភាសាកូរ៉េ
+
+guidanceLanguageNames.km.Chinese
+    ភាសាចិន
+
+guidanceLanguageNames.km.Japanese
+    ភាសាជប៉ុន
+
+guidancePracticeAreaNames.km.Taiwan company setup
+    ការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់
+
+guidancePracticeAreaNames.km.Taiwan investment counsel
+    យោបល់វិនិយោគនៅតៃវ៉ាន់
+
+guidancePracticeAreaNames.km.Civil litigation and damages
+    វិវាទរដ្ឋប្បវេណី និងសំណង
+
+guidancePracticeAreaNames.km.Trademark and patent filings
+    ការដាក់សញ្ញាពាណិជ្ជ និងប៉ាតង់
+
+guidancePracticeAreaNames.km.Visa and residency
+    ទិដ្ឋាការ និងការស្នាក់នៅ
+
+guidancePracticeAreaNames.km.Family and labor disputes
+    វិវាទគ្រួសារ និងពលកម្ម
+
+guidanceOfficeCopy.km.label
+    ការិយាល័យ
+
+guidanceOfficeCopy.km.title
+    ការិយាល័យ
+
+guidanceOfficeCopy.km.description
+    អាសយដ្ឋានការិយាល័យរបស់ Hovering International Law Firm នៅតៃវ៉ាន់
+
+guidanceOfficeCopy.km.officeLabel
+    ការិយាល័យ
+
+guidanceOfficeCopy.km.mapPreviewLabel
+    មើលផែនទីជាមុន
+
+guidanceOfficeCopy.km.koreaOfficeTitle
+    ការិយាល័យកូរ៉េ
+
+guidanceOfficeCopy.km.koreaAddressCardLabel
+    អាសយដ្ឋានការិយាល័យកូរ៉េ
+
+guidanceOfficeCopy.km.koreaMapLinkLabel
+    មើលលើ Naver Map
+
+guidanceOfficeCopy.km.reviewCountWord
+    មតិ
+
+guidanceOfficeCopy.km.phoneLabel
+    ទូរស័ព្ទ
+
+guidanceOfficeCopy.km.faxLabel
+    ទូរសារ
+
+guidanceOfficeCopy.km.mapLinkLabel
+    មើលលើផែនទី
+
+guidanceOfficeCopy.km.photoAlts[0]
+    បន្ទប់ទទួលភ្ញៀវនៃការិយាល័យតៃប៉ិ Hovering International Law Firm
+
+guidanceOfficeCopy.km.photoAlts[1]
+    បន្ទប់ធ្វើការរបស់មេធាវីនៅការិយាល័យតៃប៉ិ Hovering International Law Firm
+
+guidanceOfficeCopy.km.photoAlts[2]
+    បន្ទប់ប្រជុំនៃការិយាល័យតៃប៉ិ Hovering International Law Firm
+
+guidanceOfficeCopy.km.officeTitles.taipei
+    តៃប៉ិ
+
+guidanceOfficeCopy.km.officeTitles.taichung
+    តៃជុង
+
+guidanceOfficeCopy.km.officeTitles.kaohsiung
+    កៅស៊ុង
+
+guidanceOfficeCopy.km.officeTitles.pingtung
+    ពីងតុង
+
+guidanceFooterCopy.km.officeLabel
+    ការិយាល័យ
+
+guidanceFooterCopy.km.officeQuickLinksLabel
+    តំណរហ័សទៅទីតាំងការិយាល័យ
+
+guidanceFooterCopy.km.followLabel
+    តាមដាន
+
+guidanceFooterCopy.km.blogLabel
+    ប្លុក
+
+guidanceFooterCopy.km.websiteLabel
+    គេហទំព័រផ្លូវការ
+
+guidanceFooterCopy.km.sitemapLabel
+    ផែនទីគេហទំព័រ
+
+guidanceFooterCopy.km.copyEmailLabel
+    ចម្លងអាសយដ្ឋានអ៊ីមែល
+
+guidanceFooterCopy.km.emailCopiedMessage
+    បានចម្លងអាសយដ្ឋានអ៊ីមែលហើយ
+
+guidanceFooterCopy.km.officialConsultationEmailLabel
+    អ៊ីមែលផ្លូវការសម្រាប់ពិគ្រោះយោបល់
+
+internationalInquiryCopy.km.guidanceNotice
+    ទំព័រនេះសរសេរជាភាសាខ្មែរជាសេចក្ដីណែនាំទូទៅ មិនមែនជាយោបល់ផ្លូវច្បាប់សម្រាប់រឿងជាក់លាក់របស់លោកអ្នកទេ
+
+internationalInquiryCopy.km.consultationNotice
+    ការពិគ្រោះយោបល់ជាក់ស្ដែងធ្វើឡើងតែក្នុង ៤ ភាសា គឺភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ
+
+internationalInquiryCopy.km.methodConfirmationNotice
+    បើលោកអ្នកប្រើមិនបានភាសាណាមួយក្នុង ៤ ភាសានេះ សូមជ្រើស «ត្រូវបញ្ជាក់វិធីទំនាក់ទំនង»។ យើងនឹងឆ្លើយតបដើម្បីពិនិត្យវិធីសាស្ត្រទំនាក់ទំនងដែលអាចប្រើបាន ប៉ុន្តែមិនធានាសេវាក្នុងភាសាផ្សេង និងមិនសន្យារយៈពេលឆ្លើយតបឡើយ
+
+internationalInquiryCopy.km.preparationNotice
+    លោកអ្នកអាចសរសេរសេចក្ដីសង្ខេបជាភាសារបស់ខ្លួន។ អត្ថបទដើមត្រូវបានរក្សាទុកដូចដែលសរសេរ ហើយមិនត្រូវបានបកប្រែដោយស្វ័យប្រវត្តិឡើយ
+
+internationalInquiryCopy.km.heading
+    ផ្ញើសំណើពិគ្រោះយោបល់
+
+internationalInquiryCopy.km.intro
+    សូមពណ៌នារឿងរបស់លោកអ្នកដោយសង្ខេប។ មេធាវីនឹងពិនិត្យខ្លឹមសារមុនជូនដំណឹងជំហានបន្ត។
+
+internationalInquiryCopy.km.submitLabel
+    ផ្ញើសំណើ
+
+internationalInquiryCopy.km.submittingLabel
+    កំពុងផ្ញើ…
+
+internationalInquiryCopy.km.successMessage
+    យើងបានទទួលសំណើរបស់លោកអ្នកហើយ ហើយកំពុងរង់ចាំការពិនិត្យ។ នេះមិនមានន័យថាការពិគ្រោះយោបល់បានសម្រេច ឬការណាត់ជួបត្រូវបានបញ្ជាក់ទេ។
+
+internationalInquiryCopy.km.savedNotificationPendingMessage
+    សំណើរបស់លោកអ្នកត្រូវបានរក្សាទុកហើយ ប៉ុន្តែមិនទាន់បញ្ជាក់បានថាការជូនដំណឹងដល់ការិយាល័យបានសម្រេច។ អត្ថបទដែលលោកអ្នកសរសេរមិនបាត់បង់។ បើមិនទាន់បានទាក់ទងតប លោកអ្នកអាចផ្ញើអ៊ីមែលតាមអាសយដ្ឋាននៅទំព័រទំនាក់ទំនង។
+
+internationalInquiryCopy.km.receiptIdLabel
+    លេខទទួលសំណើ
+
+internationalInquiryCopy.km.failureMessage
+    មិនអាចផ្ញើសំណើរបស់លោកអ្នកបានទេ។ សូមព្យាយាមម្ដងទៀត ឬផ្ញើអ៊ីមែលតាមអាសយដ្ឋាននៅទំព័រទំនាក់ទំនង។
+
+internationalInquiryCopy.km.originalLanguageLabel
+    ភាសាដែលលោកអ្នកសរសេរ
+
+internationalInquiryCopy.km.originalLanguagePlaceholder
+    ឧទាហរណ៍៖ ភាសាខ្មែរ ភាសាវៀតណាម ភាសាឥណ្ឌូនេស៊ី ភាសាហ្វីលីពីន ឬភាសាផ្សេង
+
+internationalInquiryCopy.km.preferredConsultationLanguageLabel
+    ភាសាដែលលោកអ្នកចង់ប្រើក្នុងការពិគ្រោះយោបល់
+
+internationalInquiryCopy.km.originalTextLabel
+    សេចក្ដីសង្ខេបនៃរឿងរបស់លោកអ្នក (សរសេរជាភាសារបស់ខ្លួនបាន)
+
+internationalInquiryCopy.km.originalTextPlaceholder
+    សូមបញ្ជាក់ថាអ្វីបានកើតឡើង លោកអ្នកត្រូវការជំនួយអ្វី និងមានកាលកំណត់ឬទេ។ សូមកុំបញ្ចូលលេខលិខិតឆ្លងដែន លេខអត្តសញ្ញាណប័ណ្ណ ឬទិន្នន័យគណនីធនាគារ។
+
+internationalInquiryCopy.km.nameLabel
+    ឈ្មោះ
+
+internationalInquiryCopy.km.emailLabel
+    អ៊ីមែល
+
+internationalInquiryCopy.km.consentLabel
+    ខ្ញុំបានអានគោលការណ៍ឯកជនភាពហើយ ហើយយល់ព្រមផ្ញើសំណើនេះ
+
+internationalInquiryCopy.km.privacyLinkLabel
+    គោលការណ៍ឯកជនភាព
+
+internationalInquiryCopy.km.requiredMessage
+    សូមបំពេញប្រអប់នេះ
+
+internationalInquiryCopy.km.invalidEmailMessage
+    សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលឲ្យត្រឹមត្រូវ
+
+internationalInquiryCopy.km.tooLongMessage
+    អត្ថបទវែងពេក។ សូមធ្វើឲ្យខ្លីរួចផ្ញើម្ដងទៀត។
+
+internationalInquiryCopy.km.sourceLanguageNotice
+    អត្ថបទនេះមានតែជាភាសា {language} ប៉ុណ្ណោះ ហើយតំណនឹងបើកទំព័រដើមនោះ
+
+internationalInquiryCopy.km.unavailableTranslationNotice
+    ធាតុនេះមិនទាន់ត្រូវបានបកប្រែជាភាសានៃទំព័រនេះទេ។ តំណដែលសម្គាល់ភាសាដើមច្បាស់លាស់នឹងបើកទំព័រដើមឲ្យលោកអ្នកអាន។
+
+internationalInquiryCopy.km.unavailableLanguageNotice
+    ទំព័រនេះមិនមានជាភាសា {language} ទេ
+
+internationalInquiryCopy.km.languageOptions.en
+    ភាសាអង់គ្លេស (English)
+
+internationalInquiryCopy.km.languageOptions.zh-hant
+    ភាសាចិន (中文)
+
+internationalInquiryCopy.km.languageOptions.ja
+    ភាសាជប៉ុន (日本語)
+
+internationalInquiryCopy.km.languageOptions.ko
+    ភាសាកូរ៉េ (한국어)
+
+internationalInquiryCopy.km.languageOptions.needs-method-confirmation
+    ប្រើមិនបានភាសាណាមួយក្នុង ៤ ភាសានេះ — ត្រូវបញ្ជាក់វិធីទំនាក់ទំនង
+
+guidanceAnswers.km.services.answer
+    ការិយាល័យទទួលធ្វើការងារ ៦ ក្រុមតាមច្បាប់តៃវ៉ាន់ គឺការវិនិយោគនិងការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់ វិវាទរដ្ឋប្បវេណីនិងសំណងការខូចខាត អាពាហ៍ពិពាហ៍ គ្រួសារ និងមរតក វិវាទពលកម្ម សំណុំរឿងព្រហ្មទណ្ឌ និងកម្មសិទ្ធិបញ្ញា។ វិសាលភាពនៃរឿងនីមួយៗត្រូវបានបញ្ជាក់ជាលក្ខណៈដាច់ដោយឡែក បន្ទាប់ពីមេធាវីពិនិត្យខ្លឹមសារដែលលោកអ្នកផ្ញើ។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។
+
+guidanceAnswers.km.services.sources[0]
+    /km/faq
+
+guidanceAnswers.km.services.sources[1]
+    /km/contact
+
+guidanceAnswers.km.about.answer
+    Hovering International Law Firm គឺជាការិយាល័យមេធាវីនៅតៃវ៉ាន់ បង្កើតឆ្នាំ 2016 ដោយមេធាវីដែលសិក្សានៅ National Taiwan University (國立臺灣大學) មានទីតាំងនៅតៃប៉ិ កៅស៊ុង តៃជុង និងពីងតុង ហើយមានផ្នែកគណនេយ្យតាំងពីឆ្នាំ 2020។ សាខាតៃជុងទទួលរឿងពាក់ព័ន្ធកូរ៉េ និងជប៉ុន។ យើងមិនធានាលទ្ធផលឡើយ។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។
+
+guidanceAnswers.km.about.sources[0]
+    /km/lawyers
+
+guidanceAnswers.km.about.sources[1]
+    /km/services
+
+guidanceAnswers.km.lawyers.answer
+    ទំព័រនេះណែនាំប្រវត្តិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្តិ និងដៃគូគណនេយ្យករនៃ Hovering។ មេធាវីស្ត្រី Wei Tseng (曾雋崴) មានសិទ្ធិអនុវត្តវិជ្ជាជីវៈនៅតៃវ៉ាន់ និងជាមេធាវីគ្រប់គ្រងនៃការិយាល័យ។ លោកស្រីធ្វើការជាមួយអតិថិជនពីកូរ៉េ ពីជប៉ុន និងអតិថិជនអន្តរជាតិផ្សេងទៀត។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។
+
+guidanceAnswers.km.lawyers.sources[0]
+    /km/about
+
+guidanceAnswers.km.lawyers.sources[1]
+    /km/contact
+
+guidanceAnswers.km.pricing.answer
+    ទំព័រនេះមិនបង្ហាញអត្រាថ្លៃសេវាទេ។ ការិយាល័យកំណត់វិសាលភាពការងារជាមុនពីសេចក្ដីសង្ខេបដែលលោកអ្នកផ្ញើ បន្ទាប់មកចំនួននិងវិធីគិតថ្លៃនឹងត្រូវបានបញ្ជាក់មុនចាប់ផ្ដើមការងារ។ ការពិគ្រោះយោបល់ជាមួយមេធាវីអាចជាសេវាដែលមានថ្លៃ ហើយក្រៅពីថ្លៃមេធាវីអាចមានថ្លៃតុលាការ ឬអាជ្ញាធរ។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។
+
+guidanceAnswers.km.pricing.sources[0]
+    /km/contact
+
+guidanceAnswers.km.pricing.sources[1]
+    /km/faq
+
+guidanceAnswers.km.contact.answer
+    សូមផ្ញើសេចក្ដីសង្ខេបតាមទម្រង់ទំនាក់ទំនង ដោយបញ្ជាក់ថាអ្វីបានកើតឡើង លោកអ្នកត្រូវការជំនួយអ្វី រឿងនេះពាក់ព័ន្ធតៃវ៉ាន់យ៉ាងណា និងកាលកំណត់បើមាន។ នៅដំណាក់កាលដំបូងមិនចាំបាច់ផ្ញើឯកសារអត្តសញ្ញាណ ឬភស្តុតាងទាំងអស់ទេ។ ការិយាល័យមិនសន្យារយៈពេលឆ្លើយតប និងមិនបញ្ជាក់ការណាត់ជួបតាមទំព័រនេះ។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។
+
+guidanceAnswers.km.contact.sources[0]
+    /km/faq
+
+guidanceAnswers.km.contact.sources[1]
+    /km/pricing
+
+guidanceAnswers.km.faq.answer
+    ផ្នែកសំណួរញឹកញាប់ឆ្លើយនៅកម្រិតព័ត៌មានទូទៅ ទាំងក្រុមការងារ ៦ ការត្រៀមមុនទាក់ទង របៀបកំណត់ថ្លៃសេវា និងន័យនៃការផ្ញើសំណើ។ សំណើដែលបានផ្ញើរង់ចាំមេធាវីពិនិត្យ មិនមែនជាយោបល់ផ្លូវច្បាប់ មិនមែនជាការណាត់ជួប និងមិនបង្កើតទំនាក់ទំនងមេធាវីនិងអតិថិជន។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។
+
+guidanceAnswers.km.faq.sources[0]
+    /km/contact
+
+guidanceAnswers.km.faq.sources[1]
+    /km/services
+
+GUIDANCE_LLMS_NOTICES.km.consultationNotice
+    សេចក្ដីណែនាំនេះសរសេរជាភាសាខ្មែរ ប៉ុន្តែការពិគ្រោះយោបល់ជាមួយមេធាវីធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ
+
+GUIDANCE_LLMS_NOTICES.km.discoveryNotice
+    ឯកសារ llms.txt នេះគ្រាន់តែជាផែនទីសម្រាប់រកទំព័រសាធារណៈ។ វាមិនធានាលំដាប់ក្នុងលទ្ធផលស្វែងរក ការគាំទ្រ ការណែនាំដោយ AI ឬការបង្ហាញនៅទំព័រណាមួយឡើយ។
+
+GUIDANCE_LLMS_NOTICES.km.confidentialNotice
+    ដោយអត្ថបទដើមត្រូវបានរក្សាទុក សូមកុំសរសេរព័ត៌មានដែលមិនទាន់ចាំបាច់នៅដំណាក់កាលដំបូង ដូចជាលេខលិខិតឆ្លងដែន លេខអត្តសញ្ញាណប័ណ្ណ ឬទិន្នន័យគណនីធនាគារ។

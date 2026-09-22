@@ -1,0 +1,1096 @@
+# ur guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.ur.languageName
+    اردو
+
+guidanceContent.ur.nav.home
+    صفحہ اول
+
+guidanceContent.ur.nav.services
+    خدمات
+
+guidanceContent.ur.nav.about
+    ہمارے بارے میں
+
+guidanceContent.ur.nav.lawyers
+    وکلا
+
+guidanceContent.ur.nav.pricing
+    لاگت
+
+guidanceContent.ur.nav.contact
+    رابطہ
+
+guidanceContent.ur.nav.faq
+    عام سوالات
+
+guidanceContent.ur.nav.privacy
+    رازداری
+
+guidanceContent.ur.nav.disclaimer
+    دستبرداری
+
+guidanceContent.ur.nav.columns
+    مضامین
+
+guidanceContent.ur.contactCta
+    مشورے کی درخواست بھیجیں
+
+guidanceContent.ur.footerNotice
+    یہ اردو صفحہ تائیوان کے قانون کے مطابق دفتر کے کام کی صرف عام معلومات دیتا ہے۔ یہ کسی مخصوص معاملے کی قانونی رائے نہیں ہے، اور پیغام بھیجنا اپنے آپ وکیل اور موکل کے درمیان تعلق نہیں بناتا۔
+
+guidanceContent.ur.skipLink
+    نیویگیشن چھوڑ کر اصل مواد پر جائیں
+
+guidanceContent.ur.menuLabel
+    فہرست صفحات
+
+guidanceContent.ur.languageLabel
+    نمائش کی زبان
+
+guidanceContent.ur.mega.services.description
+    دفتر تائیوان کے قانون کے مطابق بنیادی کام کے شعبوں میں خدمت دیتا ہے۔
+
+guidanceContent.ur.mega.services.viewAllLabel
+    سب دیکھیں
+
+guidanceContent.ur.mega.columns.description
+    تائیوان کے قانون سے جڑے عام سوالات پر مضامین۔
+
+guidanceContent.ur.mega.columns.viewAllLabel
+    سب دیکھیں
+
+guidanceContent.ur.mega.lawyers.description
+    کام کرنے والے وکلا اور رابطے کے راستوں کا تعارف۔
+
+guidanceContent.ur.mega.lawyers.viewAllLabel
+    سب دیکھیں
+
+guidanceContent.ur.mega.pricing.description
+    یہ صفحہ کام کے دائرے اور لاگت طے ہونے کا طریقہ بتاتا ہے۔
+
+guidanceContent.ur.mega.pricing.viewAllLabel
+    سب دیکھیں
+
+guidanceContent.ur.mega.faq.description
+    تائیوان میں دفتر کے کام سے جڑے عام سوالات۔
+
+guidanceContent.ur.mega.faq.viewAllLabel
+    سب دیکھیں
+
+guidanceContent.ur.notFoundTitle
+    صفحہ نہیں ملا
+
+guidanceContent.ur.notFoundText
+    جس صفحے کی آپ تلاش کر رہے ہیں وہ موجود نہیں یا منتقل ہو گیا ہے۔ دستیاب معلومات دیکھنے کے لیے آپ اردو صفحہ اول پر واپس جا سکتے ہیں۔
+
+guidanceContent.ur.backHomeLabel
+    صفحہ اول پر جائیں
+
+guidanceContent.ur.readSourceLabel
+    اصل زبان میں مضامین کی فہرست کھولیں
+
+guidanceContent.ur.home.heroScrollLabel
+    نیچے سکرول کریں
+
+guidanceContent.ur.home.heroColumnsCtaLabel
+    مضامین دیکھیں
+
+guidanceContent.ur.home.servicesDetailLabel
+    تفصیل دیکھیں
+
+guidanceContent.ur.home.servicesAssistanceBefore
+    اگر یہ واضح نہ ہو کہ آپ کا معاملہ کس گروہ میں آتا ہے تو صفحہ 
+
+guidanceContent.ur.home.servicesAssistanceLinkLabel
+    رابطہ
+
+guidanceContent.ur.home.servicesAssistanceAfter
+     بتاتا ہے کہ آپ ایسا خلاصہ کیسے لکھیں جسے کوئی وکیل جانچے۔
+
+guidanceContent.ur.home.columnsViewAllLabel
+    سب مضامین دیکھیں
+
+guidanceContent.ur.home.columnsReadMoreLabel
+    آگے پڑھیں
+
+guidanceContent.ur.home.columnsReviewLabel
+    وکیلہ Wei Tseng کی جانچ شدہ
+
+guidanceContent.ur.home.columnsOriginalLanguageBadge
+    اصل زبان
+
+guidanceContent.ur.home.columnsOriginalLanguageNote
+    مندرجہ ذیل مضامین ابھی اردو میں دستیاب نہیں ہیں۔ فہرست اصل زبان میں رہتی ہے اور متعلقہ زبان کا صفحہ کھولتی ہے؛ مواد کا خودکار ترجمہ نہیں ہوتا۔
+
+guidanceContent.ur.home.imageBandAlt
+    دن کی روشنی میں روایتی تائیوانی سانہے یوان (三合院) اور ایک جدید چبوترہ
+
+guidanceContent.ur.home.videoPauseLabel
+    ویڈیو روکیں
+
+guidanceContent.ur.home.videoPlayLabel
+    ویڈیو چلائیں
+
+guidanceContent.ur.home.videoReplayLabel
+    ویڈیو پھر چلائیں
+
+guidanceContent.ur.pages.home.eyebrow
+    معلومات
+
+guidanceContent.ur.pages.home.title
+    تائیوان میں قانونی خدمات — اردو میں معلومات
+
+guidanceContent.ur.pages.home.description
+    Hovering International Law Firm کے تائیوان میں کام کے دائرے، مشورے کی زبانوں اور پہلی رابطے پر اردو میں عام وضاحت۔
+
+guidanceContent.ur.pages.home.intro
+    Hovering International Law Firm تائیوان کے قانون سے جڑے معاملات میں بیرون ملک سے آنے والے موکلوں کی — ان میں وہ بھی جن کا تائیوان سے تعلق ہے — مدد کرتی ہے: سرمایہ کاری اور کمپنی کا قیام، دیوانی تنازعات، شادی، خاندان اور وراثت، ملازمت کا قانون، فوجداری مقدمات اور دانشورانہ ملکیت۔ یہ اردو صفحات آپ کو یہ پہچاننے میں مدد کرتے ہیں کہ کون سا کام ہمارے دائرے میں آتا ہے، کیا تیار کرنا ہے اور ہم تک کیسے پہنچیں۔ یہ عام معلومات ہے، آپ کے اپنے معاملے کی قانونی رائے نہیں۔
+
+guidanceContent.ur.pages.home.sections[0].heading
+    ہم کیا کرتے ہیں
+
+guidanceContent.ur.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm تائیوان میں قائم ایک قانون دفتر ہے۔ یہ تائیوان کے قانون کے مطابق کام کرتا ہے اور تائپے (臺北)، کاؤشنگ (高雄)، تائچونگ (臺中) اور پنگٹنگ (屏東) میں دفاتر رکھتا ہے۔ ہم کاروباروں کو صلاح دیتے ہیں، عدالت میں کارروائی چلاتے ہیں اور بیرون ملک سے آئے موکلوں کو تائیوان میں درکار مرحلوں میں ساتھ دیتے ہیں۔
+
+guidanceContent.ur.pages.home.sections[0].paragraphs[1]
+    یہاں سارا مواد عام ہے۔ کسی معاملے کا نتیجہ حقائق، لاگو قواعد اور وقت پر منحصر ہوتا ہے۔ یہ معلومات آپ کے کاغذات پر وکیل سے بات کا بدل نہیں۔
+
+guidanceContent.ur.pages.home.sections[1].heading
+    صفحے کی زبان اور مشورے کی زبان ایک نہیں ہیں
+
+guidanceContent.ur.pages.home.sections[1].paragraphs[0]
+    یہ صفحہ اردو میں لکھا گیا ہے، مگر وکیل سے مشورہ صرف چار مشورے کی زبانوں — انگریزی، چینی (中文)، جاپانی اور کوریائی — میں ہوتا ہے۔ اردو میں معلومات پڑھنے کا مطلب یہ نہیں کہ وکیل سے بات اردو میں ہو گی۔
+
+guidanceContent.ur.pages.home.sections[1].paragraphs[1]
+    ہم اس صفحے کے ذریعے ترجمان، جواب کی مدت یا ملاقات کا وقت کا وعدہ نہیں کرتے۔ اگر آپ چار زبانوں میں سے کسی کا استعمال نہ کر سکیں تو صفحہ "رابطہ" بتاتا ہے کہ ہم رابطے کا راستہ کیسے جانچتے ہیں۔
+
+guidanceContent.ur.pages.home.sections[2].heading
+    کام کے شعبے
+
+guidanceContent.ur.pages.home.sections[2].paragraphs[0]
+    کام کے دائرے میں مندرجہ ذیل چھ گروہ ہیں۔ صفحہ "خدمات" ہر گروہ کی زیادہ درست وضاحت کرتا ہے اور بتاتا ہے کہ کیا وعدہ نہیں کیا جاتا۔
+
+guidanceContent.ur.pages.home.sections[2].items[0]
+    تائیوان میں سرمایہ کاری اور کمپنی کا قیام
+
+guidanceContent.ur.pages.home.sections[2].items[1]
+    دیوانی تنازعات اور تلافی
+
+guidanceContent.ur.pages.home.sections[2].items[2]
+    شادی، خاندان اور وراثت
+
+guidanceContent.ur.pages.home.sections[2].items[3]
+    ملازمت سے جڑے تنازعات
+
+guidanceContent.ur.pages.home.sections[2].items[4]
+    فوجداری مقدمات
+
+guidanceContent.ur.pages.home.sections[2].items[5]
+    دانشورانہ ملکیت: تجارتی علامت، پیٹنٹ اور حقِ تصنیف
+
+guidanceContent.ur.pages.home.sections[3].heading
+    آپ کو کہاں سے شروع کرنا چاہیے
+
+guidanceContent.ur.pages.home.sections[3].paragraphs[0]
+    یہ دیکھنے کے لیے کہ آپ کا معاملہ ہمارے دائرے میں آتا ہے یا نہیں، صفحہ "خدمات" پڑھیں؛ پھر "لاگت" اور "رابطہ" پڑھیں تاکہ پتہ چلے کہ دائرہ کیسے طے ہوتا ہے اور کام شروع ہونے سے پہلے لاگت کیسے تصدیق ہوتی ہے۔
+
+guidanceContent.ur.pages.home.sections[3].paragraphs[1]
+    پیغام بھیجتے وقت آپ خلاصہ اپنی زبان میں لکھ سکتے ہیں۔ اصل متن اسی شکل میں رکھا جاتا ہے جسے آپ نے لکھا اور خودکار ترجمہ نہیں کیا جاتا۔ بھیجا گیا پیغام جانچ کا انتظار کرنے والی درخواست ہے: یہ ابھی مشورہ نہیں ہے اور تصدیق شدہ ملاقات کا وقت بھی نہیں ہے۔
+
+guidanceContent.ur.pages.services.eyebrow
+    خدمات
+
+guidanceContent.ur.pages.services.title
+    ہم کن معاملات کا کام کرتے ہیں
+
+guidanceContent.ur.pages.services.description
+    تائیوان میں دفتر کے چھ کام کے گروہ اور وہ حدود جنہیں پہلے جاننا مفید ہے۔
+
+guidanceContent.ur.pages.services.intro
+    نیچے وہ گروہ ہیں جن کا ہم حقیقت میں کام کرتے ہیں، اور وہ سوال جو ابتدائی مرحلے میں اکثر پوچھے جاتے ہیں۔ یہ بیان آپ کو یہ جانچنے میں مدد دیتا ہے کہ آپ کا معاملہ ہمارے دائرے میں آتا ہے یا نہیں؛ یہ عام ہے اور کسی ایک فائل کا قانونی تجزیہ نہیں۔
+
+guidanceContent.ur.pages.services.sections[0].heading
+    تائیوان میں سرمایہ کاری اور کمپنی کا قیام
+
+guidanceContent.ur.pages.services.sections[0].paragraphs[0]
+    ہم غیر ملکی سرمایہ کاروں اور کاروباروں کو تائیوان میں کمپنی قائم کرنے یا چلانے میں ساتھ دیتے ہیں: قانونی شکل کا انتخاب، کاغذات تیار کرنا اور جمع کرنا، سرمایہ لگانا، بینک سے جڑے سوال، مقام کی جانچ اور شعبے کی توقعیں۔ ہم تائیوان میں قیام اور چلانے سے پیدا ہونے والے اکاؤنٹنگ اور ٹیکس میں بھی مدد کرتے ہیں۔
+
+guidanceContent.ur.pages.services.sections[0].paragraphs[1]
+    طریقہ کار اور مدت شکل، سرمایہ کار، شعبہ، بینک اور دستیاب کاغذات کے مطابق مختلف ہوتے ہیں۔ کمپنی کا قیام اپنے آپ رہائش کی اجازت (居留) یا کام کی اجازت (工作許可) نہیں دیتا: یہ الگ طریقہ کار ہیں، جنہیں شخص کی صورت کے مطابق دیکھا جاتا ہے۔
+
+guidanceContent.ur.pages.services.sections[1].heading
+    دیوانی تنازعات اور تلافی
+
+guidanceContent.ur.pages.services.sections[1].paragraphs[0]
+    اس گروہ میں معاہدے کے تنازعات، ناجائز فعل سے تلافی اور صارف کے تنازعات آتے ہیں۔ کام عام طور پر ترتیبِ واقعات، موجودہ کاغذات اور ثبوت کی جانچ سے شروع ہوتا ہے اور اس کے بعد ہی اگلے مرحلے آتے ہیں۔
+
+guidanceContent.ur.pages.services.sections[1].paragraphs[1]
+    مہلتیں، جن میں قانونی حدِ مدت بھی شامل ہے، اور ثبوت کی تکمیل راستہ طے کرتی ہیں۔ اس لیے معلوم تاریخیں جتنی جلد ممکن ہو بتائیں۔ معاہدے، پیغامات، ادائیگی کی رسیدیں یا مقام کی صورتحال کی تصاویر محفوظ رکھیں اور پہلے پیغام میں ان کا ذکر کریں۔
+
+guidanceContent.ur.pages.services.sections[2].heading
+    شادی، خاندان اور وراثت
+
+guidanceContent.ur.pages.services.sections[2].paragraphs[0]
+    ہم طلاق (離婚)، جائیداد کی تقسیم، نابالغ بچوں کی نگرانی اور والدین کے حقوق و فرائض (未成年子女權利義務之行使或負擔)، ملاقات اور رابطے کا حق (會面交往) اور وراثت (繼承) کا کام کرتے ہیں، تب بھی جب فریق یا جائیداد مختلف ریاستوں میں ہوں۔ سرحد پار خاندانی معاملات میں اکثر گھریلو رجسٹریشن (戶籍)، دستاویزوں کی شکل اور تائیوان میں ان کی ثبوتیت کی اضافی جانچ چاہیے۔
+
+guidanceContent.ur.pages.services.sections[2].paragraphs[1]
+    کیونکہ خاندانی معاملات میں اکثر مہلتیں اور متوازی طریقہ کار ہوتے ہیں، پہلے خلاصے میں فریقوں کا تعلق، موجودہ رہائش اور پہلے سے چل رہے طریقہ کار بتانے چاہییں۔
+
+guidanceContent.ur.pages.services.sections[3].heading
+    ملازمت سے جڑے تنازعات
+
+guidanceContent.ur.pages.services.sections[3].paragraphs[0]
+    اس گروہ میں ملازمت کا خاتمہ، تائیوان کے قانون کے مطابق قانونی علیحدگی معاوضہ (資遣費؛ اسے دوسرے ممالک کے اداروں کے برابر نہ سمجھا جائے)، اجرت اور ملازمت کے معاہدے (勞動契約) سے تنازعات آتے ہیں، ملازم اور آجر دونوں طرف۔ جانچ میں ہم خاتمے کی وجہ کو اطلاع، ادائیگی اور مہلت کے سوالوں سے الگ رکھتے ہیں۔
+
+guidanceContent.ur.pages.services.sections[3].paragraphs[1]
+    ملازمت کا معاہدہ، کام کے قواعد (工作規則)، تنخواہ کی پرچی اور فریقوں کا خط و کتابت اکثر فیصلہ کن کاغذات ہوتے ہیں۔ اگر وہ ابھی آپ کے پاس ہیں تو خلاصے میں بتائیں۔
+
+guidanceContent.ur.pages.services.sections[4].heading
+    فوجداری مقدمات
+
+guidanceContent.ur.pages.services.sections[4].paragraphs[0]
+    ہم تفتیش اور عدالت میں ساتھ دیتے ہیں، ملزم یا الزام رسیدہ کے لیے اور متاثرہ کے لیے بھی، اور کاروباری سرگرمی کے فوجداری خطرات کا اندازہ لگاتے ہیں۔
+
+guidanceContent.ur.pages.services.sections[4].paragraphs[1]
+    فوجداری مقدمات میں اکثر چھوٹی مہلتیں اور مقررہ مرحلے ہوتے ہیں۔ اگر آپ کو استغاثہ یا عدالت کا خط پہلے ہی مل چکا ہے تو خط کی تاریخ جلد بتائیں تاکہ مواد صحیح ترتیب میں جانچا جائے۔
+
+guidanceContent.ur.pages.services.sections[5].heading
+    دانشورانہ ملکیت
+
+guidanceContent.ur.pages.services.sections[5].paragraphs[0]
+    ہم تجارتی علامت (商標) اور پیٹنٹ (專利) کے اندراج، حقِ تصنیف اور تائیوان میں ان حقوق کے تنازعات میں مدد کرتے ہیں۔
+
+guidanceContent.ur.pages.services.sections[5].paragraphs[1]
+    اس گروہ میں مرحلوں کی ترتیب فیصلہ کن ہوتی ہے: حفاظت کا دائرہ، درخواست کا وقت اور حقیقی استعمال انتخاب کو متاثر کرتے ہیں۔ درخواست جمع کرنا اپنے آپ یہ نہیں دکھاتا کہ وہ منظور ہو گی۔
+
+guidanceContent.ur.pages.services.sections[6].heading
+    دائرہ اور اس کی تصدیق
+
+guidanceContent.ur.pages.services.sections[6].paragraphs[0]
+    دفتر تائیوان کے قانون کے مطابق کام کرتا ہے اور مندرجہ بالا گروہوں کے معاملات کا کام کرتا ہے۔ ہر معاملے کا دائرہ الگ سے تصدیق ہوتا ہے، جب کوئی وکیل آپ کے پیغام کی جانچ کر لے۔
+
+guidanceContent.ur.pages.services.sections[6].paragraphs[1]
+    رہائشی حیثیت، کام کی اجازت اور ملتے جلتے سوال کاغذات اور شخص کی صورت سے جانچے جاتے ہیں، شہریت سے نہیں۔ اگر آپ کے معاملے کا کوئی حصہ ایسے سوالوں سے جڑتا ہے تو رابطہ کرتے وقت بتائیں۔ یہ صفحہ نہ نتیجے کا وعدہ کرتا ہے اور نہ جواب کی مدت کا۔
+
+guidanceContent.ur.pages.about.eyebrow
+    ہمارے بارے میں
+
+guidanceContent.ur.pages.about.title
+    Hovering International Law Firm کے بارے میں
+
+guidanceContent.ur.pages.about.description
+    اس تائیوانی قانون دفتر، اس کے دفاتر اور غیر ملکی فریقوں کے ساتھ کام کی بنیادی معلومات۔
+
+guidanceContent.ur.pages.about.intro
+    Hovering International Law Firm تائیوان کا ایک قانون دفتر ہے۔ وکلا کاروباری صلاح سے عدالت کی کارروائی تک کام کرتے ہیں۔ یہ حصہ دفتر کی بنیاد، مقامات اور غیر ملکی فریقوں کے ساتھ کام بیان کرتا ہے۔
+
+guidanceContent.ur.pages.about.sections[0].heading
+    بنیاد اور ساخت
+
+guidanceContent.ur.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) کی بنیاد 2016 میں ان وکلا نے رکھی جو National Taiwan University (國立臺灣大學) میں پڑھے۔ چینی نام 昊鼎 حرف 昊 ("وسیع آسمان") کو 鼎 ("مضبوط بنیاد") سے جوڑتا ہے اور بنیاد سے دفتر کی سمت بتاتا ہے۔
+
+guidanceContent.ur.pages.about.sections[0].paragraphs[1]
+    ہمارے دفاتر تائپے (臺北)، کاؤشنگ (高雄)، تائچونگ (臺中) اور پنگٹنگ (屏東) میں ہیں۔ کاؤشنگ دفتر کاروباری چلانے پر مرکوز ہے اور دیوانی، فوجداری اور انتظامی تنازعات کا کام کرتا ہے۔ تائچونگ دفتر تعمیرات، دانشورانہ ملکیت اور کوریا و جاپان سے جڑے معاملات کا کام کرتا ہے۔ پنگٹنگ دفتر 2017 میں مقامی ضرورت کے لیے کھولا گیا۔
+
+guidanceContent.ur.pages.about.sections[0].paragraphs[2]
+    وکالت کے کام کے علاوہ 2020 سے Hovering Accounting Office بھی ہے، جو کاروباریوں اور مالدار نجی افراد کے لیے اکاؤنٹنگ اور ٹیکس منصوبہ دیتا ہے۔
+
+guidanceContent.ur.pages.about.sections[1].heading
+    غیر ملکی فریقوں کے ساتھ کام
+
+guidanceContent.ur.pages.about.sections[1].paragraphs[0]
+    سرحد پار کام میں کمپنی کا قیام، ویزا، تجارتی علامت اور پیٹنٹ کی درخواستیں، قانونی خطرے کی جانچ اور کاروباروں کی ٹیکس صلاح شامل ہے۔ تائچونگ دفتر خاص طور پر تعمیرات، دانشورانہ ملکیت اور کوریا و جاپان سے جڑے معاملات کا کام کرتا ہے۔ وکیلہ Wei Tseng (曾雋崴) کوریا، جاپان اور دیگر بین الاقوامی موکلوں کا مندرجہ بالا گروہوں میں ساتھ دیتی ہیں۔
+
+guidanceContent.ur.pages.about.sections[1].paragraphs[1]
+    کیا ہم کوئی معاملہ لے سکتے ہیں، یہ مواد اور رابطے کی زبان پر منحصر ہے۔ اگر آپ کا معاملہ مندرجہ بالا گروہوں میں آتا ہے اور چار مشورے کی زبانوں میں سے کسی میں بات ہو سکتی ہے تو آپ جانچ کے لیے خلاصہ بھیج سکتے ہیں۔
+
+guidanceContent.ur.pages.about.sections[2].heading
+    جب آپ ہم سے رابطہ کرتے ہیں
+
+guidanceContent.ur.pages.about.sections[2].paragraphs[0]
+    آپ کا خلاصہ آنے کے بعد کوئی وکیل مواد جانچتا ہے اور پھر ممکنہ کام کے دائرے، ابھی درکار کاغذات اور اگلے مرحلوں پر بات کرتا ہے۔ ٹیکس یا اکاؤنٹنگ کے سوالوں میں دفتر اکاؤنٹنگ شعبے کے ساتھ ایک ہی بہاؤ میں کام کر سکتا ہے۔
+
+guidanceContent.ur.pages.about.sections[2].paragraphs[1]
+    ہر معاملے کا نتیجہ حقائق اور دستیاب کاغذات پر منحصر ہوتا ہے؛ ہم نتیجے کا وعدہ نہیں کرتے۔ اگر آپ کو اپنی صورت کا پابند جواب چاہیے تو کاغذات چار مشورے کی زبانوں میں سے کسی میں وکیل سے بات کرنے ہوں گے۔
+
+guidanceContent.ur.pages.lawyers.eyebrow
+    وکلا
+
+guidanceContent.ur.pages.lawyers.title
+    Hovering کی بین الاقوامی ٹیم
+
+guidanceContent.ur.pages.lawyers.description
+    Hovering کے وکلا، آپریشنز کی قیادت اور شراکت دار محاسب کی پروفائلز۔
+
+guidanceContent.ur.pages.lawyers.intro
+    
+
+guidanceContent.ur.pages.pricing.eyebrow
+    لاگت
+
+guidanceContent.ur.pages.pricing.title
+    کام کا دائرہ اور لاگت کیسے طے ہوتے ہیں
+
+guidanceContent.ur.pages.pricing.description
+    ترتیب کی وضاحت: پہلے کام کا دائرہ، پھر لاگت کی تصدیق، اور یہ صفحہ نرخ نامہ کیوں نہیں رکھتا۔
+
+guidanceContent.ur.pages.pricing.intro
+    یہ صفحہ بتاتا ہے کہ لاگت کیسے طے ہوتی ہے، اس کی رقم نہیں۔ رقم ہر معاملے کے کام کے دائرے پر منحصر ہوتی ہے اور تبھی معنی رکھتی ہے جب وہ دائرہ واضح ہو۔
+
+guidanceContent.ur.pages.pricing.sections[0].heading
+    پہلے کام کا دائرہ طے ہوتا ہے
+
+guidanceContent.ur.pages.pricing.sections[0].paragraphs[0]
+    ایک ہی قسم کے معاملات میں محنت بہت مختلف ہو سکتی ہے، فریقوں کی تعداد، دستیاب کاغذات، پوری کی جانے والی مہلتوں اور اس پر منحصر کہ طریقہ کار پہلے ہی شروع ہو چکا ہے یا نہیں۔ اس لیے پہلا مرحلہ ہمیشہ یہ طے کرنا ہے کہ کام میں کیا آتا ہے اور کیا نہیں۔
+
+guidanceContent.ur.pages.pricing.sections[0].paragraphs[1]
+    شروع میں آپ کا بھیجا خلاصہ اسی دائرے کی بنیاد ہے۔ جتنا واضح وہ ترتیب، آپ کی مانگ اور مہلتیں بتائے، اتنا ہی درست دائرہ مقرر ہو سکتا ہے۔
+
+guidanceContent.ur.pages.pricing.sections[1].heading
+    کام شروع ہونے سے پہلے لاگت تصدیق ہوتی ہے
+
+guidanceContent.ur.pages.pricing.sections[1].paragraphs[0]
+    جب کام کا دائرہ واضح ہو تو رقم اور حساب کا طریقہ آپ کے ساتھ بات کر کے کام شروع ہونے سے پہلے تصدیق کیا جاتا ہے۔ راستے میں دائرہ بدلنے پر اسے پھر تصدیق کرنا ہوتا ہے۔
+
+guidanceContent.ur.pages.pricing.sections[1].paragraphs[1]
+    یہ صفحہ قیمت کی پیشکش نہیں ہے اور ادائیگی کا فرض نہیں بناتا۔
+
+guidanceContent.ur.pages.pricing.sections[2].heading
+    مشورہ معاوضے والی خدمت ہو سکتا ہے
+
+guidanceContent.ur.pages.pricing.sections[2].paragraphs[0]
+    وکیل سے مشورہ معاوضے والی خدمت ہو سکتی ہے۔ یہ صفحہ یہ نہیں کہتا کہ پہلی بات مفت ہے، اور کوئی حصہ اس معنی میں نہیں پڑھا جانا چاہیے۔
+
+guidanceContent.ur.pages.pricing.sections[2].paragraphs[1]
+    اگر مشورہ معاوضے والی خدمت ہے تو رقم اور ادائیگی کا طریقہ اس کے ہونے سے پہلے بتایا جاتا ہے۔
+
+guidanceContent.ur.pages.pricing.sections[3].heading
+    یہ صفحہ نرخ کیوں نہیں بتاتا
+
+guidanceContent.ur.pages.pricing.sections[3].paragraphs[0]
+    لاگت معاملے پر ہی منحصر ہوتی ہے: محنت، فریقوں کی تعداد، کاغذات، مہلتیں اور اس پر کہ طریقہ کار پہلے سے چل رہا ہے یا نہیں۔ پہلے سے طے شدہ عدد آپ کے معاملے کی لاگت نہیں دکھائے گا۔ اس لیے ہم پہلے کام کا دائرہ طے کرتے ہیں اور پھر کام شروع ہونے سے پہلے آپ کو لاگت بتاتے ہیں۔
+
+guidanceContent.ur.pages.pricing.sections[3].paragraphs[1]
+    وکیل کی فیس کے علاوہ عدالت، ادارے یا تیسرے فریق کی لاگتیں پیدا ہو سکتی ہیں۔ یہ فیس سے الگ ہیں اور متعلقہ طریقہ کار پر منحصر ہیں۔
+
+guidanceContent.ur.pages.contact.eyebrow
+    رابطہ
+
+guidanceContent.ur.pages.contact.title
+    دفتر تک کیسے پہنچیں
+
+guidanceContent.ur.pages.contact.description
+    صفحے کی زبان، مشورے کی زبانیں، وہ راستہ جب آپ چار زبانوں میں سے کسی کا استعمال نہ کر سکیں، اور یہ صفحہ کیا نہیں کہتا۔
+
+guidanceContent.ur.pages.contact.intro
+    لکھنے سے پہلے مندرجہ ذیل تین نکات الگ رکھیں۔ انہیں اکثر ملا دیا جاتا ہے، مگر معنی مختلف ہیں۔
+
+guidanceContent.ur.pages.contact.sections[0].heading
+    تین باتیں جو الگ رہنی چاہییں
+
+guidanceContent.ur.pages.contact.sections[0].paragraphs[0]
+    صفحے کی نمائش کی زبان، وکیل سے مشورے کی زبان اور وہ زبان جس میں آپ لکھتے ہیں — یہ تین الگ باتیں ہیں۔
+
+guidanceContent.ur.pages.contact.sections[0].items[0]
+    صفحے کی زبان: یہ معلومات اردو میں لکھی گئی ہے۔
+
+guidanceContent.ur.pages.contact.sections[0].items[1]
+    مشورے کی زبان: مشورہ انگریزی، چینی (中文)، جاپانی اور کوریائی میں ہوتا ہے۔
+
+guidanceContent.ur.pages.contact.sections[0].items[2]
+    آپ کی لکھنے کی زبان: آپ خلاصہ اپنی زبان میں لکھ سکتے ہیں؛ اصل متن بغیر تبدیلی رکھا جاتا ہے۔
+
+guidanceContent.ur.pages.contact.sections[1].heading
+    اگر آپ چار مشورے کی زبانوں میں سے کسی کا استعمال نہیں کر سکتے
+
+guidanceContent.ur.pages.contact.sections[1].paragraphs[0]
+    رابطہ فارم میں آپ "رابطے کے راستے کی تصدیق ضروری ہے" منتخب کر سکتے ہیں۔ ہم جواب دیتے ہیں تاکہ یہ دیکھا جا سکے کہ کوئی قابلِ عمل رابطے کا راستہ ہے یا نہیں؛ کسی اور زبان میں خدمت نہیں دی جاتی اور جواب کی مدت نہیں کہی جاتی۔
+
+guidanceContent.ur.pages.contact.sections[1].paragraphs[1]
+    یہ صرف جانچ کا مرحلہ ہے، وعدہ نہیں۔ ہم ترجمان کا وعدہ نہیں کرتے، اردو یا چار کہی گئی زبانوں کے باہر کسی اور زبان میں خدمت کا وعدہ نہیں کرتے، اور یہ بھی نہیں کہتے کہ ہم ہر مقدمہ لیں گے۔
+
+guidanceContent.ur.pages.contact.sections[2].heading
+    پہلے پیغام میں کیا ہونا چاہیے
+
+guidanceContent.ur.pages.contact.sections[2].paragraphs[0]
+    بتائیں کہ کیا ہوا، آپ کو کس مدد کی ضرورت ہے، معاملے کا تائیوان سے کیا تعلق ہے اور مہلت، اگر آپ جانتے ہیں۔ اگر آپ کو عدالت یا ادارے کا خط پہلے ہی مل چکا ہے تو خط کی تاریخ بتائیں۔
+
+guidanceContent.ur.pages.contact.sections[2].paragraphs[1]
+    ابتدائی مرحلے میں آپ کو ابھی پاسپورٹ نمبر، شناختی نمبر، اکاؤنٹ کی تفصیل، طبی ریکارڈ یا مکمل ثبوت نہیں بھیجنے ہوتے۔ وکیل کی ہدایت کا انتظار کریں اور پھر حساس کاغذات محفوظ راستے سے بھیجیں۔
+
+guidanceContent.ur.pages.contact.sections[3].heading
+    یہ صفحہ کیا نہیں کہتا
+
+guidanceContent.ur.pages.contact.sections[3].paragraphs[0]
+    ہم جواب کی مدت نہیں کہتے، اس صفحے سے ملاقات کا وقت تصدیق نہیں کرتے، کسی مقرر وکیل کا وعدہ نہیں کرتے اور ترجمان نہیں دیتے۔ تحریری ترجمہ الگ بات ہے: آپ کے پیغام کا خودکار ترجمہ نہیں ہوتا۔
+
+guidanceContent.ur.pages.contact.sections[3].paragraphs[1]
+    جب آپ درخواست بھیجتے ہیں، مواد رکھا جاتا ہے اور جانچ کا انتظار کرتا ہے۔ اگر کچھ وقت بعد جواب نہ آئے تو آپ رابطہ صفحے پر بتائے گئے ای میل پتے پر پھر لکھ سکتے ہیں۔
+
+guidanceContent.ur.pages.faq.eyebrow
+    عام سوالات
+
+guidanceContent.ur.pages.faq.title
+    اکثر پوچھے جانے والے سوالات
+
+guidanceContent.ur.pages.faq.description
+    کام کے دائرے، تیاری، زبانوں، لاگت اور بھیجی گئی درخواست کے معنی پر وضاحت۔
+
+guidanceContent.ur.pages.faq.intro
+    مندرجہ ذیل سوالوں کا جواب عام معلومات کی سطح پر دیا جاتا ہے۔ آپ کے اپنے معاملے کا جواب تب ہی ممکن ہے جب کوئی وکیل کاغذات جانچ لے۔
+
+guidanceContent.ur.pages.faq.sections[0].heading
+    اس حصے کا استعمال کیسے کریں
+
+guidanceContent.ur.pages.faq.sections[0].paragraphs[0]
+    اگر آپ کو اپنی صورت کا جواب نہیں ملتا تو جواب اکثر خاص حقائق پر منحصر ہوتا ہے۔ تب وہ حقائق خلاصے میں لکھیں، اس صفحے سے خود نتیجہ نکالنے کی بجائے۔
+
+guidanceContent.ur.pages.faq.faqs[0].question
+    دفتر کن معاملات کا کام کرتا ہے؟
+
+guidanceContent.ur.pages.faq.faqs[0].answer
+    ہم چھ گروہوں کا کام کرتے ہیں: تائیوان میں سرمایہ کاری اور کمپنی کا قیام، دیوانی تنازعات اور تلافی، شادی، خاندان اور وراثت، ملازمت سے جڑے تنازعات، فوجداری مقدمات اور دانشورانہ ملکیت۔ کوئی معاملہ لیا جائے گا یا نہیں، یہ مواد کی جانچ کے بعد طے ہوتا ہے۔
+
+guidanceContent.ur.pages.faq.faqs[1].question
+    رابطے سے پہلے مجھے کیا تیار کرنا چاہیے؟
+
+guidanceContent.ur.pages.faq.faqs[1].answer
+    ترتیب، اپنی مانگ، تائیوان سے تعلق اور مہلت، اگر ہو، کا مختصر خلاصہ تیار کریں۔ اگر عدالت یا ادارے کا خط پہلے سے ہے تو تاریخ بتائیں۔ اس مرحلے میں آپ کو ابھی شناختی کارڈ یا مکمل ثبوت نہیں بھیجنے ہوتے۔
+
+guidanceContent.ur.pages.faq.faqs[2].question
+    کیا اردو میں مشورہ ممکن ہے؟
+
+guidanceContent.ur.pages.faq.faqs[2].answer
+    نہیں۔ یہ صفحات اردو میں لکھے گئے ہیں، مگر وکیل سے مشورہ صرف انگریزی، چینی (中文)، جاپانی اور کوریائی میں ہوتا ہے۔ ہم ترجمان کا وعدہ بھی نہیں کرتے۔ تحریری ترجمہ الگ بات ہے: آپ کا لکھا اصل متن ویسا ہی رکھا جاتا ہے اور خودکار ترجمہ نہیں کیا جاتا۔
+
+guidanceContent.ur.pages.faq.faqs[3].question
+    اگر میں چار زبانوں میں سے کسی کا استعمال نہ کر سکوں تو کیا؟
+
+guidanceContent.ur.pages.faq.faqs[3].answer
+    درخواست بھیجتے وقت "رابطے کے راستے کی تصدیق ضروری ہے" منتخب کریں۔ ہم رابطے کا راستہ جانچنے کے لیے جواب دیتے ہیں، مگر کسی اور زبان میں خدمت نہیں دی جاتی۔ یہ جانچ کا مرحلہ ہے، یہ وعدہ نہیں کہ ہم کسی اور زبان میں کام کر سکتے ہیں۔
+
+guidanceContent.ur.pages.faq.faqs[4].question
+    میرے اردو متن کا کیا ہوتا ہے؟
+
+guidanceContent.ur.pages.faq.faqs[4].answer
+    آپ کا لکھا اصل متن ویسا ہی رکھا جاتا ہے اور خودکار ترجمہ نہیں کیا جاتا۔ ضرورت ہونے پر آگے کے رابطے کی زبان آپ کے ساتھ تصدیق کی جاتی ہے۔
+
+guidanceContent.ur.pages.faq.faqs[5].question
+    کیا درخواست بھیجتے ہی مشورہ ہو چکا سمجھا جاتا ہے؟
+
+guidanceContent.ur.pages.faq.faqs[5].answer
+    نہیں۔ بھیجی گئی درخواست وکیل کی جانچ کا انتظار کرتی ہے۔ یہ قانونی رائے نہیں ہے، تصدیق شدہ ملاقات کا وقت نہیں ہے، اور بھیجنا اپنے آپ وکیل اور موکل کے درمیان تعلق نہیں بناتا۔
+
+guidanceContent.ur.pages.faq.faqs[6].question
+    لاگت کیسے نکالی جاتی ہے؟
+
+guidanceContent.ur.pages.faq.faqs[6].answer
+    پہلے کام کا دائرہ طے ہوتا ہے، اس کے بعد رقم اور حساب کا طریقہ آپ کے ساتھ تصدیق ہوتا ہے، کام شروع ہونے سے پہلے۔ یہ صفحہ اعداد نہیں بتاتا اور یہ نہیں کہتا کہ پہلی بات مفت ہے۔
+
+guidanceContent.ur.pages.faq.faqs[7].question
+    اگر میرا معاملہ بہت فوری ہو تو کیا؟
+
+guidanceContent.ur.pages.faq.faqs[7].answer
+    مہلت یا سرکاری خط کی تاریخ اپنے خلاصے کے شروع میں بتائیں، تاکہ جانچ میں یہ تاریخیں دکھیں۔ اس صفحے پر ہنگامی راستہ نہیں ہے اور جواب کی مدت نہیں کہی جاتی؛ اگر آپ کا معاملہ انتظار نہیں کر سکتا تو آپ کو اپنے مقام پر متوازی دیگر راستے بھی دیکھنے چاہییں۔
+
+guidanceContent.ur.pages.privacy.eyebrow
+    رازداری
+
+guidanceContent.ur.pages.privacy.title
+    رابطہ فارم سے جمع کی جانے والی معلومات
+
+guidanceContent.ur.pages.privacy.description
+    ان اردو صفحات کا رابطہ فارم کیا جمع کرتا ہے، آپ کے اصل متن کے ساتھ کیا ہوتا ہے، اور اپنے ذاتی ڈیٹا کے بارے میں آپ ہم تک کیسے پہنچیں۔
+
+guidanceContent.ur.pages.privacy.intro
+    یہ حصہ صرف ان معلومات کے صفحات کے رابطہ فارم سے متعلق ہے۔ یہ ذاتی ڈیٹا کے انتظام کی وضاحت کرتا ہے، تکنیکی وعدہ نہیں۔
+
+guidanceContent.ur.pages.privacy.sections[0].heading
+    کون سی معلومات جمع کی جاتی ہے
+
+guidanceContent.ur.pages.privacy.sections[0].paragraphs[0]
+    جب آپ اس حصے کے فارم سے درخواست بھیجتے ہیں، مندرجہ ذیل درج کیے جاتے ہیں:
+
+guidanceContent.ur.pages.privacy.sections[0].items[0]
+    آپ کا بتایا نام
+
+guidanceContent.ur.pages.privacy.sections[0].items[1]
+    جواب کے لیے ای میل پتہ
+
+guidanceContent.ur.pages.privacy.sections[0].items[2]
+    بھیجتے وقت صفحے کی نمائش کی زبان
+
+guidanceContent.ur.pages.privacy.sections[0].items[3]
+    وہ زبان جس میں آپ نے لکھا
+
+guidanceContent.ur.pages.privacy.sections[0].items[4]
+    آپ کی مطلوبہ مشورے کی زبان
+
+guidanceContent.ur.pages.privacy.sections[0].items[5]
+    آپ کا لکھا اصل متن
+
+guidanceContent.ur.pages.privacy.sections[0].items[6]
+    درخواست بھیجنے کی آپ کی رضامندی
+
+guidanceContent.ur.pages.privacy.sections[0].items[7]
+    درخواست دوبارہ تلاش کرنے کے لیے وصولی نمبر
+
+guidanceContent.ur.pages.privacy.sections[1].heading
+    اصل متن بغیر تبدیلی رکھا جاتا ہے
+
+guidanceContent.ur.pages.privacy.sections[1].paragraphs[0]
+    آپ کا متن ٹھیک اسی شکل میں رکھا جاتا ہے جسے آپ نے لکھا اور خودکار ترجمہ نہیں کیا جاتا۔ اگر کام کے لیے ترجمہ درکار ہو تو یہ آپ کے ساتھ الگ سے بات کی جاتی ہے۔
+
+guidanceContent.ur.pages.privacy.sections[1].paragraphs[1]
+    چونکہ اصل متن رکھا جاتا ہے، ابتدائی مرحلے میں وہ نہ لکھیں جس کی ابھی ضرورت نہیں، جیسے پاسپورٹ نمبر، شناختی نمبر یا اکاؤنٹ کی تفصیل۔
+
+guidanceContent.ur.pages.privacy.sections[2].heading
+    جمع کی جگہ اور رسائی
+
+guidanceContent.ur.pages.privacy.sections[2].paragraphs[0]
+    آپ کی ارسال کی مواد ایسی جگہ رکھا جاتا ہے جو عوامی طور پر دستیاب نہیں ہے۔ صرف دفتر کے مجاز افراد درخواست کا کام کرنے کے لیے اس تک پہنچ سکتے ہیں۔
+
+guidanceContent.ur.pages.privacy.sections[2].paragraphs[1]
+    یہ صفحہ مکمل حفاظت کا وعدہ نہیں کرتا۔ کوئی بھی ترسیل کا راستہ اور کوئی بھی جمع کی جگہ پوری طرح محفوظ نہیں؛ اس لیے حساس کاغذات وکیل کی خاص ہدایت کے بعد ہی بھیجنے چاہییں۔
+
+guidanceContent.ur.pages.privacy.sections[3].heading
+    استعمال کا مقصد
+
+guidanceContent.ur.pages.privacy.sections[3].paragraphs[0]
+    بھیجی گئی معلومات درخواست کی جانچ، آپ کو جواب دینے، رابطے کا راستہ طے کرنے اور کام قبول ہونے پر اسے چلانے کے لیے استعمال ہوتی ہے۔
+
+guidanceContent.ur.pages.privacy.sections[3].paragraphs[1]
+    الگ رضامندی کے بغیر اس معلومات کا بازاریابی کے لیے استعمال نہیں ہوتا۔
+
+guidanceContent.ur.pages.privacy.sections[4].heading
+    اطلاع اور وصولی نمبر
+
+guidanceContent.ur.pages.privacy.sections[4].paragraphs[0]
+    درخواست کامیابی سے بھیجے جانے پر نظام دفتر کو مطلع کرتا ہے۔ اگر یہ اطلاع ابھی تصدیق نہ ہوئی ہو تو آپ کا متن رکھا رہتا ہے اور کھو نہیں جاتا۔
+
+guidanceContent.ur.pages.privacy.sections[4].paragraphs[1]
+    وصولی نمبر ہمارے ریکارڈ میں آپ کی درخواست تلاش کرنے کے لیے ہے۔ جمع کے بعد یہ دکھائی جاتی ہے؛ نئے رابطے میں آپ اسے بتا سکتے ہیں۔
+
+guidanceContent.ur.pages.privacy.sections[5].heading
+    آپ کے حقوق اور رابطے کا راستہ
+
+guidanceContent.ur.pages.privacy.sections[5].paragraphs[0]
+    آپ رابطہ صفحے پر بتائے گئے ای میل پتے سے اپنے ذاتی ڈیٹا کی معلومات، اصلاح یا حذف مانگ سکتے ہیں یا رضامندی واپس لے سکتے ہیں۔ اگر قانونی یا طریقہ کار کا جمع کا فرض ہو تو ہم حد سمجھاتے ہیں۔
+
+guidanceContent.ur.pages.privacy.sections[5].paragraphs[1]
+    یہ صفحہ مقرر جمع کی مدت نہیں بتاتا، کیونکہ حقیقی مدت اس پر منحصر ہوتی ہے کہ معاملہ آگے بڑھتا ہے یا نہیں، اور اس سے جڑے فرائض پر۔ اگر آپ پہلے حذف چاہتے ہیں تو رابطے میں بتائیں۔
+
+guidanceContent.ur.pages.privacy.sections[6].heading
+    جمع کی جگہ اور خدمت فراہم کنندگان
+
+guidanceContent.ur.pages.privacy.sections[6].paragraphs[0]
+    یہ ویب سائٹ Vercel پر میزبانی کی گئی ہے، اور آپ کا بھیجا ہوا پیغام اس خدمت کے غیر عوامی ذخیرے میں رکھا جاتا ہے۔ ای میل دفتر کے استعمال کردہ ای میل خدمت سے بھیجے جاتے ہیں۔
+
+guidanceContent.ur.pages.privacy.sections[6].paragraphs[1]
+    کچھ خدمت فراہم کنندگان کے سرور تائیوان سے باہر ہو سکتے ہیں، جس سے آپ کا ڈیٹا وہاں رکھا اور پروسیس ہو سکتا ہے۔ جب ذخیرے کا مقصد پورا ہو جاتا ہے، ڈیٹا بلا تاخیر مٹا دیا جاتا ہے؛ لاگو قواعد کے مطابق جو رکھنا ضروری ہو، وہ اس مدت تک رہتا ہے۔ ذاتی ڈیٹا سے جڑی درخواستیں wei@hoveringlaw.com.tw پر لی جاتی ہیں۔
+
+guidanceContent.ur.pages.disclaimer.eyebrow
+    دستبرداری
+
+guidanceContent.ur.pages.disclaimer.title
+    اس صفحے کی معلومات کا دائرہ اور حدود
+
+guidanceContent.ur.pages.disclaimer.description
+    معلومات کی عام شکل، قانونی اطلاق کا دائرہ اور وکیل-موکل تعلق کی شرائط۔
+
+guidanceContent.ur.pages.disclaimer.intro
+    یہ حصہ واضح کرتا ہے کہ یہ اردو معلومات کے صفحات آپ کے لیے کیا کر سکتے ہیں اور کیا نہیں۔
+
+guidanceContent.ur.pages.disclaimer.sections[0].heading
+    صرف عام معلومات
+
+guidanceContent.ur.pages.disclaimer.sections[0].paragraphs[0]
+    ان صفحات کا مواد عام معلومات کے طور پر لکھا گیا ہے۔ یہ آپ کے معاملے کی قانونی رائے نہیں ہے اور آپ کے اپنے کاغذات کی جانچ کا بدل نہیں۔
+
+guidanceContent.ur.pages.disclaimer.sections[0].paragraphs[1]
+    کسی معاملے کا نتیجہ حقائق، لاگو قواعد اور وقت پر منحصر ہوتا ہے؛ دو ملتی جلتی صورتیں مختلف ختم ہو سکتی ہیں۔
+
+guidanceContent.ur.pages.disclaimer.sections[1].heading
+    قانونی اطلاق کا دائرہ
+
+guidanceContent.ur.pages.disclaimer.sections[1].paragraphs[0]
+    دفتر تائیوان کے قانون کے مطابق کام کرتا ہے، اور یہ صفحہ صرف اسی ڈھانچے میں کام کی بات کرتا ہے۔
+
+guidanceContent.ur.pages.disclaimer.sections[1].paragraphs[1]
+    مواد تائیوان سے مختلف کسی اور نظام کے قانون کے مطابق صلاح نہیں ہے، جس میں آپ کی رہائش کے مقام کا قانون بھی شامل ہے۔ اگر آپ کے معاملے کا کوئی حصہ دوسرے نظام سے جڑتا ہے تو ہم آپ کے ساتھ واضح کریں گے کہ اس حصے کے لیے کون سا اہل ماہر درکار ہے۔
+
+guidanceContent.ur.pages.disclaimer.sections[2].heading
+    وکیل اور موکل کا تعلق اپنے آپ نہیں بنتا
+
+guidanceContent.ur.pages.disclaimer.sections[2].paragraphs[0]
+    اس صفحے کو پڑھنا، فارم یا ای میل بھیجنا اپنے آپ وکیل اور موکل کے درمیان تعلق نہیں بناتا۔
+
+guidanceContent.ur.pages.disclaimer.sections[2].paragraphs[1]
+    یہ تعلق تب بنتا ہے جب معاملہ جانچ لیا گیا ہو اور دونوں فریقوں نے کام لینے کی تصدیق کر دی ہو۔
+
+guidanceContent.ur.pages.disclaimer.sections[3].heading
+    نتیجے کا کوئی وعدہ نہیں
+
+guidanceContent.ur.pages.disclaimer.sections[3].paragraphs[0]
+    اس صفحے کا کوئی حصہ کسی معاملے کے نتیجے، درخواست کی منظوری یا رہائش اور کام کی حیثیت کا وعدہ نہیں ہے۔
+
+guidanceContent.ur.pages.disclaimer.sections[3].paragraphs[1]
+    بیرونی روابط سمت کے لیے ہیں؛ ہم تیسرے فریق کے مواد کی درستگی یا تازگی نہیں کہتے۔
+
+guidanceContent.ur.pages.columns.eyebrow
+    مضامین
+
+guidanceContent.ur.pages.columns.title
+    تائیوان کے قانون پر مضامین
+
+guidanceContent.ur.pages.columns.description
+    تائیوان کے قانون سے جڑے عام سوالات پر اردو مضامین۔ مواد اشاعت کے وقت کی عام معلومات ہے، آپ کے معاملے کی قانونی رائے نہیں۔
+
+guidanceContent.ur.pages.columns.intro
+    دفتر تائیوان کے قانون سے جڑے عام سوالات پر مضامین شائع کرتا ہے۔ اردو میں دستیاب مضامین اس صفحے پر ہیں؛ ساتھ میں چار روابط ہیں جو ہر ایک اصل زبان کی مضامین کی فہرست کھولتے ہیں۔
+
+guidanceContent.ur.pages.columns.sections[0].heading
+    زبان کے مطابق چار فہرستیں
+
+guidanceContent.ur.pages.columns.sections[0].paragraphs[0]
+    اس حصے میں چار روابط ہیں: کوریائی، چینی، انگریزی اور جاپانی میں مضامین کی فہرست۔ ہر ربط فہرست کی زبان بتاتا ہے، تاکہ آپ پہلے سے جان سکیں کہ مواد کس زبان میں کھلے گا۔
+
+guidanceContent.ur.pages.columns.sections[0].paragraphs[1]
+    یہ چار فہرستیں مضامین کی اصل زبان کے مطابق فہرستیں ہیں، ترجمہ فہرستیں نہیں۔ اردو میں دستیاب مضامین اس صفحے پر الگ ہیں۔
+
+guidanceContent.ur.pages.columns.sections[1].heading
+    روابط کہاں لے جاتے ہیں
+
+guidanceContent.ur.pages.columns.sections[1].paragraphs[0]
+    جب آپ چار روابط میں سے ایک چنتے ہیں، اس زبان کی مضامین کی فہرست کھلتی ہے۔ فہرست سے آپ خود متن چنتے ہیں؛ پورا مواد مضمون کی اصل زبان میں دکھائی دیتا ہے۔
+
+guidanceContent.ur.pages.columns.sections[1].paragraphs[1]
+    یہ صفحہ مضامین کے مواد کا خلاصہ نہیں دیتا اور یہ نہیں کہتا کہ کوئی موضوع چاروں زبانوں میں دستیاب ہے۔ ہر فہرست میں صرف وہ متن ہیں جو اس زبان میں شائع ہیں۔
+
+guidanceContent.ur.pages.columns.sections[2].heading
+    مضمون سمت کے طور پر کہاں تک کام آ سکتا ہے
+
+guidanceContent.ur.pages.columns.sections[2].paragraphs[0]
+    مضامین اشاعت کے وقت کی عام معلومات ہیں۔ قواعد اور ان کا استعمال بدل سکتے ہیں، اور کوئی مضمون آپ کے معاملے کے تمام حالات نہیں سمیٹتا۔
+
+guidanceContent.ur.pages.columns.sections[2].paragraphs[1]
+    اس لیے حقیقی معاملے میں کوئی قدم صرف مضمون پر نہ رکھیں۔ اسے جائزے کے لیے استعمال کریں اور اپنے کاغذات وکیل سے الگ بات کریں؛ یہ صفحہ مشورے کا مرحلہ نہیں ہے۔
+
+guidanceTeamCopy.ur.label
+    ٹیم
+
+guidanceTeamCopy.ur.title
+    Hovering کی بین الاقوامی ٹیم
+
+guidanceTeamCopy.ur.description
+    Hovering کے وکلا، آپریشنز کی قیادت اور شراکت دار محاسب کی پروفائلز۔
+
+guidanceTeamCopy.ur.representativeTitle
+    منتظم وکیلہ
+
+guidanceTeamCopy.ur.teamTitle
+    وکلا اور عملہ
+
+guidanceTeamCopy.ur.partnerTitle
+    شراکت دار محاسب
+
+guidanceTeamCopy.ur.introLabel
+    تعارف
+
+guidanceTeamCopy.ur.educationLabel
+    تعلیم
+
+guidanceTeamCopy.ur.experienceLabel
+    تجربہ
+
+guidanceTeamCopy.ur.photoAltPrefix
+    تصویر
+
+guidanceTeamCopy.ur.workingLanguagesLabel
+    کام کی زبانیں
+
+guidanceTeamCopy.ur.fullProfileLabel
+    مکمل پروفائل (انگریزی میں)
+
+guidanceTeamCopy.ur.keyFactsHeading
+    وکیلہ Wei Tseng — بنیادی حقائق
+
+guidanceTeamCopy.ur.qualificationLabel
+    اہلیت اور دفتر
+
+guidanceTeamCopy.ur.qualificationSentence
+    {name} تائیوان میں وکالت کی مجاز ہیں اور {firm} کی منتظم وکیلہ ہیں۔
+
+guidanceTeamCopy.ur.practiceLabel
+    اہم شعبے
+
+guidanceTeamCopy.ur.consultationLanguagesLabel
+    مشورے کی زبانیں
+
+guidanceTeamCopy.ur.roles.tseng-junwei
+    تائیوان میں منتظم وکیلہ (Managing Attorney)
+
+guidanceTeamCopy.ur.roles.chang-rongxuan
+    تائیوان وکیل (Taiwan Attorney)
+
+guidanceTeamCopy.ur.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.ur.roles.son-jungmin
+    کوریا آپریشنز کی قیادت (Korea Operations Manager)
+
+guidanceTeamCopy.ur.roles.huang-shengping
+    شراکت دار محاسب (Partner CPA)
+
+guidanceTeamBios.ur.tseng-junwei.intro[0]
+    دفتر تائیوان میں کاروباروں اور افراد کے معاملات کا انگریزی، جاپانی، کوریائی اور چینی میں کام کرتا ہے۔
+
+guidanceTeamBios.ur.tseng-junwei.intro[1]
+    انہوں نے جم میں لگی چوٹ کے ہرجانے کے ایک دعوے میں کوریائی طالب علم کی نمائندگی کی اور پہلی سماعت کی عدالت سے TWD 1.57M کا فیصلہ دلایا۔
+
+guidanceTeamBios.ur.tseng-junwei.education[0]
+    ماسٹر (M.S.)، Institute of Finance, National Taiwan University
+
+guidanceTeamBios.ur.tseng-junwei.education[1]
+    بیچلر (B.A.) قانون اور مالیات کے دوہرے راستے کے ساتھ، National Chengchi University
+
+guidanceTeamBios.ur.tseng-junwei.education[2]
+    Kobe University اور Waseda University میں تبادلے کی طالبہ
+
+guidanceTeamBios.ur.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.ur.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.ur.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.ur.chang-rongxuan.intro[0]
+    پہلے Ministry of Education, Legal Affairs Division میں، انتظامی اور دیوانی معاملات پر توجہ کے ساتھ۔
+
+guidanceTeamBios.ur.chang-rongxuan.intro[1]
+    یونیورسٹیوں، تدریسی عملے کے حقوق اور انتظامی اپیلوں سے جڑے معاملات کا تجربہ۔
+
+guidanceTeamBios.ur.chang-rongxuan.education[0]
+    قانون میں بیچلر (LL.B.)، National Chung Hsing University
+
+guidanceTeamBios.ur.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.ur.chang-rongxuan.experience[1]
+    وکیل، Hovering International Law Firm
+
+guidanceTeamBios.ur.chang-fangyu.intro[0]
+    Paralegal جنہوں نے کئی دفاتر میں سینئر paralegal کے طور پر طویل عرصہ کام کیا، طریقہ کار کی مدد، کمپنی قانون اور غیر ملکی سرمایہ کاری کے لیے ذمہ دار۔
+
+guidanceTeamBios.ur.chang-fangyu.intro[1]
+    کارروائی، کمپنی کا قیام، غیر ملکی سرمایہ کاری کی اجازت، لائسنس کی درخواستیں اور کوریا و تائیوان کے درمیان تبادلے میں مدد۔
+
+guidanceTeamBios.ur.chang-fangyu.education[0]
+    قانون میں بیچلر (LL.B.)، Tunghai University
+
+guidanceTeamBios.ur.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.ur.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.ur.son-jungmin.intro[0]
+    کوریا سے آئے موکلوں کے مشورے کے وقت اور رابطے کا ہم آہنگ کرتے ہیں۔
+
+guidanceTeamBios.ur.son-jungmin.intro[1]
+    معلوماتی سائنس کی بنیاد پر دستاویزی نظاموں اور کام کے بہاؤ سے شعبوں کے درمیان تبادلے کی حمایت کرتے ہیں۔
+
+guidanceTeamBios.ur.son-jungmin.education[0]
+    بیچلر (B.S.) معلوماتی سائنس، National Cheng Kung University
+
+guidanceTeamBios.ur.son-jungmin.experience[0]
+    کوریا آپریشنز کا شعبہ، Hovering International Law Firm
+
+guidanceTeamBios.ur.huang-shengping.intro[0]
+    National Chengchi University سے اکاؤنٹنگ میں بیچلر اور ماسٹر پروگرام پورے کیے اور اس وقت ایک اکاؤنٹنگ دفتر کی قیادت کرتے ہیں۔
+
+guidanceTeamBios.ur.huang-shengping.intro[1]
+    کاروباری موکلوں کے لیے قانونی، ٹیکس اور مالی خطرات کا متحد تجزیہ سہارا دیتے ہیں۔
+
+guidanceTeamBios.ur.huang-shengping.education[0]
+    ماسٹر (M.A.) اکاؤنٹنگ، National Chengchi University
+
+guidanceTeamBios.ur.huang-shengping.education[1]
+    بیچلر (B.A.) اکاؤنٹنگ، National Chengchi University
+
+guidanceTeamBios.ur.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.ur.Korean
+    کوریائی
+
+guidanceLanguageNames.ur.Chinese
+    چینی
+
+guidanceLanguageNames.ur.Japanese
+    جاپانی
+
+guidancePracticeAreaNames.ur.Taiwan company setup
+    تائیوان میں کمپنی کا قیام
+
+guidancePracticeAreaNames.ur.Taiwan investment counsel
+    تائیوان سرمایہ کاری کی قانونی صلاح
+
+guidancePracticeAreaNames.ur.Civil litigation and damages
+    دیوانی مقدمے اور تلافی
+
+guidancePracticeAreaNames.ur.Trademark and patent filings
+    تجارتی علامت اور پیٹنٹ کی درخواستیں
+
+guidancePracticeAreaNames.ur.Visa and residency
+    ویزا اور رہائش
+
+guidancePracticeAreaNames.ur.Family and labor disputes
+    خاندان اور ملازمت کے تنازعات
+
+guidanceOfficeCopy.ur.label
+    دفاتر
+
+guidanceOfficeCopy.ur.title
+    دفاتر
+
+guidanceOfficeCopy.ur.description
+    Hovering International Law Firm کے تائیوان میں واقع دفاتر کے پتے۔
+
+guidanceOfficeCopy.ur.officeLabel
+    دفتر
+
+guidanceOfficeCopy.ur.mapPreviewLabel
+    نقشے کا پیش منظر
+
+guidanceOfficeCopy.ur.koreaOfficeTitle
+    کوریا دفتر
+
+guidanceOfficeCopy.ur.koreaAddressCardLabel
+    کوریا دفتر کا پتہ
+
+guidanceOfficeCopy.ur.koreaMapLinkLabel
+    Naver Map پر دیکھیں
+
+guidanceOfficeCopy.ur.reviewCountWord
+    جائزے
+
+guidanceOfficeCopy.ur.phoneLabel
+    فون
+
+guidanceOfficeCopy.ur.faxLabel
+    فیکس
+
+guidanceOfficeCopy.ur.mapLinkLabel
+    نقشے پر دیکھیں
+
+guidanceOfficeCopy.ur.photoAlts[0]
+    تائپے دفتر کا استقبالیہ کمرہ، Hovering International Law Firm
+
+guidanceOfficeCopy.ur.photoAlts[1]
+    تائپے دفتر میں وکیل کا کمرہ، Hovering International Law Firm
+
+guidanceOfficeCopy.ur.photoAlts[2]
+    تائپے دفتر کا اجلاس کمرہ، Hovering International Law Firm
+
+guidanceOfficeCopy.ur.officeTitles.taipei
+    تائپے
+
+guidanceOfficeCopy.ur.officeTitles.taichung
+    تائچونگ
+
+guidanceOfficeCopy.ur.officeTitles.kaohsiung
+    کاؤشنگ
+
+guidanceOfficeCopy.ur.officeTitles.pingtung
+    پنگٹنگ
+
+guidanceFooterCopy.ur.officeLabel
+    دفاتر
+
+guidanceFooterCopy.ur.officeQuickLinksLabel
+    دفاتر کے فوری روابط
+
+guidanceFooterCopy.ur.followLabel
+    پیروی کریں
+
+guidanceFooterCopy.ur.blogLabel
+    بلاگ
+
+guidanceFooterCopy.ur.websiteLabel
+    سرکاری ویب سائٹ
+
+guidanceFooterCopy.ur.sitemapLabel
+    سائٹ کا نقشہ
+
+guidanceFooterCopy.ur.copyEmailLabel
+    ای میل پتہ نقل کریں
+
+guidanceFooterCopy.ur.emailCopiedMessage
+    ای میل پتہ نقل ہو گیا۔
+
+guidanceFooterCopy.ur.officialConsultationEmailLabel
+    مشورے کے لیے سرکاری ای میل
+
+internationalInquiryCopy.ur.guidanceNotice
+    یہ صفحہ اردو میں عام معلومات کے طور پر لکھا گیا ہے، آپ کے معاملے کی قانونی رائے کے طور پر نہیں۔
+
+internationalInquiryCopy.ur.consultationNotice
+    مشورہ چار زبانوں میں ہوتا ہے: انگریزی، چینی (中文)، جاپانی اور کوریائی۔
+
+internationalInquiryCopy.ur.methodConfirmationNotice
+    اگر آپ چار زبانوں میں سے کسی کا استعمال نہ کر سکیں تو "رابطے کے راستے کی تصدیق ضروری ہے" منتخب کریں۔ ہم جواب دیتے ہیں تاکہ دیکھا جا سکے کہ کوئی قابلِ عمل رابطے کا راستہ ہے یا نہیں؛ کسی اور زبان میں خدمت کی ضمانت نہیں اور جواب کی مدت کا وعدہ نہیں ہے۔
+
+internationalInquiryCopy.ur.preparationNotice
+    آپ خلاصہ اپنی زبان میں لکھ سکتے ہیں۔ اصل متن ویسا ہی رکھا جاتا ہے جسے آپ نے لکھا اور خودکار ترجمہ نہیں کیا جاتا۔
+
+internationalInquiryCopy.ur.heading
+    مشورے کی درخواست بھیجیں
+
+internationalInquiryCopy.ur.intro
+    اپنے معاملے کا مختصر بیان کریں۔ اگلے مرحلے کی بات سے پہلے وکیل مواد کی جانچ کرتے ہیں۔
+
+internationalInquiryCopy.ur.submitLabel
+    درخواست بھیجیں
+
+internationalInquiryCopy.ur.submittingLabel
+    بھیجا جا رہا ہے…
+
+internationalInquiryCopy.ur.successMessage
+    ہم نے آپ کی درخواست وصول کر لی؛ وہ جانچ کا انتظار کرتی ہے۔ اس کا مطلب یہ نہیں کہ مشورہ ہو چکا یا ملاقات کا وقت تصدیق ہوا۔
+
+internationalInquiryCopy.ur.savedNotificationPendingMessage
+    آپ کی درخواست محفوظ ہے، مگر دفتر کو اطلاع ابھی تصدیق نہیں ہوئی۔ جو آپ نے لکھا وہ نہیں کھو تا۔ اگر جواب نہ ملے تو رابطہ صفحے کے ای میل پتے پر بھی لکھ سکتے ہیں۔
+
+internationalInquiryCopy.ur.receiptIdLabel
+    وصولی نمبر
+
+internationalInquiryCopy.ur.failureMessage
+    آپ کی درخواست نہیں بھیجی جا سکی۔ دوبارہ کوشش کریں یا رابطہ صفحے کے ای میل پتے پر لکھیں۔
+
+internationalInquiryCopy.ur.originalLanguageLabel
+    جس زبان میں آپ لکھتے ہیں
+
+internationalInquiryCopy.ur.originalLanguagePlaceholder
+    مثال کے طور پر اردو، انگریزی، چینی یا کوئی اور زبان
+
+internationalInquiryCopy.ur.preferredConsultationLanguageLabel
+    مشورے کے لیے مطلوبہ زبان
+
+internationalInquiryCopy.ur.originalTextLabel
+    معاملے کا مختصر بیان (اپنی زبان میں)
+
+internationalInquiryCopy.ur.originalTextPlaceholder
+    بتائیں کیا ہوا، کس مدد کی ضرورت ہے اور اگر ہو تو مہلت۔ پاسپورٹ نمبر، شناختی نمبر یا اکاؤنٹ کی تفصیل نہ لکھیں۔
+
+internationalInquiryCopy.ur.nameLabel
+    نام
+
+internationalInquiryCopy.ur.emailLabel
+    ای میل
+
+internationalInquiryCopy.ur.consentLabel
+    میں نے رازداری کا صفحہ پڑھ لیا ہے اور اس درخواست کو بھیجنے کی رضامندی دیتا/دیتی ہوں۔
+
+internationalInquiryCopy.ur.privacyLinkLabel
+    رازداری
+
+internationalInquiryCopy.ur.requiredMessage
+    یہ خانہ ضروری ہے۔
+
+internationalInquiryCopy.ur.invalidEmailMessage
+    براہِ کرم درست ای میل پتہ دیں۔
+
+internationalInquiryCopy.ur.tooLongMessage
+    متن بہت لمبا ہے۔ اسے چھوٹا کر پھر بھیجیں۔
+
+internationalInquiryCopy.ur.sourceLanguageNotice
+    یہ مضمون صرف {language} میں شائع ہے؛ ربط اصل صفحہ کھولتا ہے۔
+
+internationalInquiryCopy.ur.unavailableTranslationNotice
+    یہ نکتہ اس صفحے کی زبان میں ابھی دستیاب نہیں ہے۔ اصل زبان کا ربط اصل متن کھولتا ہے۔
+
+internationalInquiryCopy.ur.unavailableLanguageNotice
+    یہ صفحہ {language} میں دستیاب نہیں ہے۔
+
+internationalInquiryCopy.ur.languageOptions.en
+    انگریزی (English)
+
+internationalInquiryCopy.ur.languageOptions.zh-hant
+    چینی (中文)
+
+internationalInquiryCopy.ur.languageOptions.ja
+    جاپانی (日本語)
+
+internationalInquiryCopy.ur.languageOptions.ko
+    کوریائی (한국어)
+
+internationalInquiryCopy.ur.languageOptions.needs-method-confirmation
+    چار زبانوں میں سے کوئی کارآمد نہیں — رابطے کے راستے کی تصدیق ضروری ہے
+
+guidanceAnswers.ur.services.answer
+    دفتر تائیوان کے قانون کے مطابق چھ کام کے شعبوں میں خدمت دیتا ہے: سرمایہ کاری اور کمپنی کا قیام، دیوانی تنازعات اور تلافی، شادی، خاندان اور وراثت، ملازمت، فوجداری اور دانشورانہ ملکیت۔ ہر معاملے کا دائرہ اس مواد کی جانچ کے بعد الگ سے تصدیق ہوتا ہے جو آپ بھیجتے ہیں۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔
+
+guidanceAnswers.ur.services.sources[0]
+    /ur/faq
+
+guidanceAnswers.ur.services.sources[1]
+    /ur/contact
+
+guidanceAnswers.ur.about.answer
+    Hovering International Law Firm تائیوان کا ایک قانون دفتر ہے، 2016 میں National Taiwan University (國立臺灣大學) کے فارغ التحصیل وکلا نے قائم کیا، تائپے، کاؤشنگ، تائچونگ اور پنگٹنگ میں دفاتر کے ساتھ۔ 2020 سے اکاؤنٹنگ شعبہ ہے؛ تائچونگ دفتر کوریا اور جاپان سے جڑے معاملات کا کام کرتا ہے۔ دفتر نتیجے کا وعدہ نہیں کرتا۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔
+
+guidanceAnswers.ur.about.sources[0]
+    /ur/lawyers
+
+guidanceAnswers.ur.about.sources[1]
+    /ur/services
+
+guidanceAnswers.ur.lawyers.answer
+    یہ صفحہ Hovering کے وکلا، آپریشنز کی قیادت اور شراکت دار محاسب کی پروفائلز دکھاتا ہے۔ وکیلہ Wei Tseng (曾雋崴) تائیوان میں مجاز ہیں اور دفتر کی منتظم وکیلہ ہیں؛ وہ کوریا، جاپان اور دیگر بین الاقوامی موکلوں کے ساتھ کام کرتی ہیں۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔
+
+guidanceAnswers.ur.lawyers.sources[0]
+    /ur/about
+
+guidanceAnswers.ur.lawyers.sources[1]
+    /ur/contact
+
+guidanceAnswers.ur.pricing.answer
+    یہ صفحہ نرخ نامہ شائع نہیں کرتا۔ پہلے آپ کے بھیجے خلاصے سے کام کا دائرہ طے ہوتا ہے، پھر لاگت کی رقم اور حساب کا طریقہ کام شروع ہونے سے پہلے آپ کے ساتھ تصدیق ہوتا ہے۔ وکیل سے بات معاوضے والی خدمت ہو سکتی ہے؛ وکیل کی فیس کے علاوہ عدالت یا ادارے کی لاگتیں بھی لگ سکتی ہیں۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔
+
+guidanceAnswers.ur.pricing.sources[0]
+    /ur/contact
+
+guidanceAnswers.ur.pricing.sources[1]
+    /ur/faq
+
+guidanceAnswers.ur.contact.answer
+    رابطہ فارم سے اپنا خلاصہ بھیجیں: کیا ہوا، کس مدد کی ضرورت ہے، معاملے کا تائیوان سے کیا تعلق ہے اور اگر معلوم ہو تو مہلت۔ شروع میں شناختی دستاویز یا مکمل ثبوت بھیجنا ضروری نہیں۔ دفتر جواب کی مدت کا وعدہ نہیں کرتا اور اس صفحے سے ملاقات کا وقت تصدیق نہیں کرتا۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔
+
+guidanceAnswers.ur.contact.sources[0]
+    /ur/faq
+
+guidanceAnswers.ur.contact.sources[1]
+    /ur/pricing
+
+guidanceAnswers.ur.faq.answer
+    یہ حصہ عام معلومات کی سطح پر بار بار پوچھے جانے والے سوالات کا جواب دیتا ہے: چھ کام کے گروہ، رابطے سے پہلے تیاری، لاگت طے ہونے کا طریقہ اور بھیجے گئے پیغام کا مطلب۔ بھیجی گئی درخواست وکیل کی جانچ کا انتظار کرتی ہے؛ یہ قانونی رائے نہیں ہے، ملاقات کا وقت نہیں ہے اور وکیل اور موکل کے درمیان تعلق نہیں بناتا۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔
+
+guidanceAnswers.ur.faq.sources[0]
+    /ur/contact
+
+guidanceAnswers.ur.faq.sources[1]
+    /ur/services
+
+GUIDANCE_LLMS_NOTICES.ur.consultationNotice
+    یہ صفحات اردو میں لکھے گئے ہیں، مگر وکیل سے مشورہ صرف انگریزی، چینی (中文)، جاپانی اور کوریائی میں ہوتا ہے۔
+
+GUIDANCE_LLMS_NOTICES.ur.discoveryNotice
+    llms.txt فائل صرف عوامی صفحات تلاش کرنے کا نقشہ ہے؛ یہ تلاش کی ترتیب، حمایت، مصنوعی ذہانت کی سفارش یا نمائش کا وعدہ نہیں کرتی۔
+
+GUIDANCE_LLMS_NOTICES.ur.confidentialNotice
+    چونکہ اصل متن رکھا جاتا ہے، ابتدائی مرحلے میں وہ نہ لکھیں جس کی ابھی ضرورت نہیں، جیسے پاسپورٹ نمبر، شناختی نمبر یا اکاؤنٹ کی تفصیل۔

@@ -1,0 +1,1096 @@
+# ta guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.ta.languageName
+    தமிழ்
+
+guidanceContent.ta.nav.home
+    முகப்பு
+
+guidanceContent.ta.nav.services
+    சேவைகள்
+
+guidanceContent.ta.nav.about
+    அலுவலகம்
+
+guidanceContent.ta.nav.lawyers
+    வழக்கறிஞர்கள்
+
+guidanceContent.ta.nav.pricing
+    செலவு
+
+guidanceContent.ta.nav.contact
+    தொடர்பு
+
+guidanceContent.ta.nav.faq
+    வினாக்கள்
+
+guidanceContent.ta.nav.privacy
+    தனியுரிமை
+
+guidanceContent.ta.nav.disclaimer
+    மறுப்புரை
+
+guidanceContent.ta.nav.columns
+    கட்டுரைகள்
+
+guidanceContent.ta.contactCta
+    ஆலோசனைக் கோரிக்கை அனுப்பவும்
+
+guidanceContent.ta.footerNotice
+    இந்தத் தமிழ்ப் பக்கம் தைவான் சட்டத்தின்படி அலுவலகத்தின் பணி குறித்த பொதுவான தகவலை மட்டுமே தருகிறது. இது ஒரு குறிப்பிட்ட வழக்கின் சட்டக் கருத்து அல்ல; ஒரு செய்தியை அனுப்புவதால் வழக்கறிஞருக்கும் கட்சிக்காரருக்கும் இடையே உறவு ஏற்படுவதில்லை.
+
+guidanceContent.ta.skipLink
+    வழிசெலுத்தலைத் தவிர்த்து முதன்மை உள்ளடக்கத்திற்குச் செல்லவும்
+
+guidanceContent.ta.menuLabel
+    பக்கப் பட்டியல்
+
+guidanceContent.ta.languageLabel
+    காட்சி மொழி
+
+guidanceContent.ta.mega.services.description
+    அலுவலகம் தைவான் சட்டத்தின்படி முதன்மைப் பணித்துறைகளில் சேவை செய்கிறது.
+
+guidanceContent.ta.mega.services.viewAllLabel
+    அனைத்தும் காண்க
+
+guidanceContent.ta.mega.columns.description
+    தைவான் சட்டம் தொடர்பான பொதுவான கேள்விகளுக்கான கட்டுரைகள்.
+
+guidanceContent.ta.mega.columns.viewAllLabel
+    அனைத்தும் காண்க
+
+guidanceContent.ta.mega.lawyers.description
+    பணியில் உள்ள வழக்கறிஞர்கள் மற்றும் தொடர்பு வழிகளின் அறிமுகம்.
+
+guidanceContent.ta.mega.lawyers.viewAllLabel
+    அனைத்தும் காண்க
+
+guidanceContent.ta.mega.pricing.description
+    இந்தப் பக்கம் பணியின் எல்லை மற்றும் செலவு எப்படி உறுதிப்படுகிறது என்பதை விளக்குகிறது.
+
+guidanceContent.ta.mega.pricing.viewAllLabel
+    அனைத்தும் காண்க
+
+guidanceContent.ta.mega.faq.description
+    தைவானில் அலுவலகத்தின் பணி தொடர்பான பொதுவான கேள்விகள்.
+
+guidanceContent.ta.mega.faq.viewAllLabel
+    அனைத்தும் காண்க
+
+guidanceContent.ta.notFoundTitle
+    பக்கம் கிடைக்கவில்லை
+
+guidanceContent.ta.notFoundText
+    நீங்கள் தேடும் பக்கம் இல்லை அல்லது இடம் மாற்றப்பட்டுள்ளது. கிடைக்கும் தகவலைக் காண தமிழ் முகப்புக்குத் திரும்பலாம்.
+
+guidanceContent.ta.backHomeLabel
+    முகப்புக்குச் செல்லவும்
+
+guidanceContent.ta.readSourceLabel
+    மூல மொழியில் கட்டுரைப் பட்டியலைத் திறக்கவும்
+
+guidanceContent.ta.home.heroScrollLabel
+    கீழே உருட்டவும்
+
+guidanceContent.ta.home.heroColumnsCtaLabel
+    கட்டுரைகளைக் காண்க
+
+guidanceContent.ta.home.servicesDetailLabel
+    விவரங்களைக் காண்க
+
+guidanceContent.ta.home.servicesAssistanceBefore
+    உங்கள் விஷயம் எந்தக் குழுவில் வருகிறது என்பது தெளிவில்லையெனில், பக்கம் 
+
+guidanceContent.ta.home.servicesAssistanceLinkLabel
+    தொடர்பு
+
+guidanceContent.ta.home.servicesAssistanceAfter
+     ஒரு வழக்கறிஞர் ஆய்வு செய்யக்கூடிய சுருக்கத்தை எப்படி எழுதுவது என்பதை விளக்குகிறது.
+
+guidanceContent.ta.home.columnsViewAllLabel
+    அனைத்துக் கட்டுரைகளையும் காண்க
+
+guidanceContent.ta.home.columnsReadMoreLabel
+    மேலும் படிக்க
+
+guidanceContent.ta.home.columnsReviewLabel
+    வழக்கறிஞர் Wei Tseng அவர்களால் சரிபார்க்கப்பட்டது
+
+guidanceContent.ta.home.columnsOriginalLanguageBadge
+    மூல மொழி
+
+guidanceContent.ta.home.columnsOriginalLanguageNote
+    பின்வரும் கட்டுரைகள் இன்னும் தமிழில் இல்லை. பட்டியல் மூல மொழியிலேயே இருக்கும்; அந்த மொழிப் பக்கத்தைத் திறக்கும். உள்ளடக்கம் தானியங்கியாக மொழிபெயர்க்கப்படாது.
+
+guidanceContent.ta.home.imageBandAlt
+    பகலொளியில் பாரம்பரிய தைவான் சான்ஹேயுவான் (三合院) மற்றும் ஒரு நவீன மண்டபம்
+
+guidanceContent.ta.home.videoPauseLabel
+    காணொளியை இடைநிறுத்தவும்
+
+guidanceContent.ta.home.videoPlayLabel
+    காணொளியை இயக்கவும்
+
+guidanceContent.ta.home.videoReplayLabel
+    காணொளியை மீண்டும் இயக்கவும்
+
+guidanceContent.ta.pages.home.eyebrow
+    குறிப்புகள்
+
+guidanceContent.ta.pages.home.title
+    தைவானில் சட்டச் சேவைகள் — தமிழில் குறிப்புகள்
+
+guidanceContent.ta.pages.home.description
+    Hovering International Law Firm-இன் தைவான் பணித்துறை, ஆலோசனை மொழிகள் மற்றும் முதல் தொடர்பு குறித்து தமிழில் பொதுவான விளக்கம்.
+
+guidanceContent.ta.pages.home.intro
+    Hovering International Law Firm தைவான் சட்டம் தொடர்பான வழக்குகளில் வெளிநாட்டிலிருந்து வரும் கட்சிக்காரர்களுக்கு — தைவானுடன் தொடர்புள்ளவர்களுக்கும் — உதவுகிறது: முதலீடு மற்றும் நிறுவனம் அமைத்தல், உரிமையியல் தகராறுகள், திருமணம், குடும்பம் மற்றும் வாரிசுரிமை, தொழிலாளர் சட்டம், குற்றவியல் வழக்குகள் மற்றும் அறிவுசார் சொத்து. இந்தத் தமிழ்ப் பக்கங்கள் எந்தப் பணி எங்கள் எல்லைக்குள் வருகிறது, என்ன தயார் செய்ய வேண்டும், எங்களை எப்படி அணுகுவது என்பதை அறிய உதவுகின்றன. இது பொதுவான தகவல்; உங்கள் வழக்கின் சட்டக் கருத்து அல்ல.
+
+guidanceContent.ta.pages.home.sections[0].heading
+    நாங்கள் என்ன செய்கிறோம்
+
+guidanceContent.ta.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm தைவானில் நிறுவப்பட்ட ஒரு சட்ட அலுவலகம். இது தைவான் சட்டத்தின்படி பணி செய்கிறது; தைப்பே (臺北), காவோசியூங் (高雄), தைச்சுங் (臺中) மற்றும் பிங்துங் (屏東) ஆகிய இடங்களில் அலுவலகங்கள் உள்ளன. நாங்கள் நிறுவனங்களுக்கு ஆலோசனை வழங்குகிறோம், நீதிமன்ற நடவடிக்கைகளை நடத்துகிறோம், வெளிநாட்டிலிருந்து வரும் கட்சிக்காரர்களுக்கு தைவானில் தேவையான படிகளை உடன் செல்கிறோம்.
+
+guidanceContent.ta.pages.home.sections[0].paragraphs[1]
+    இங்குள்ள அனைத்து உள்ளடக்கமும் பொதுவானது. ஒரு வழக்கின் முடிவு உண்மைகள், பொருந்தும் விதிகள் மற்றும் நேரத்தைப் பொறுத்தது. இந்தத் தகவல் உங்கள் ஆவணங்கள் குறித்து வழக்கறிஞருடன் பேசுவதற்குப் பதிலாக அமையாது.
+
+guidanceContent.ta.pages.home.sections[1].heading
+    பக்க மொழியும் ஆலோசனை மொழியும் ஒன்றல்ல
+
+guidanceContent.ta.pages.home.sections[1].paragraphs[0]
+    இந்தப் பக்கம் தமிழில் எழுதப்பட்டுள்ளது; ஆனால் வழக்கறிஞரின் ஆலோசனை நான்கு ஆலோசனை மொழிகளில் மட்டுமே நடைபெறும் — ஆங்கிலம், சீனம் (中文), ஜப்பானியம் மற்றும் கொரியன். தமிழில் குறிப்புகளைப் படிப்பதால் வழக்கறிஞருடனான உரையாடல் தமிழில் நடைபெறும் என்று பொருளல்ல.
+
+guidanceContent.ta.pages.home.sections[1].paragraphs[1]
+    இந்தப் பக்கத்தின் வழியாக மொழிபெயர்ப்பாளர், பதிலளிக்கும் காலக்கெடு அல்லது சந்திப்பை வாக்குறுதி அளிக்க மாட்டோம். நான்கு மொழிகளில் எதையும் பயன்படுத்த முடியாவிட்டால், பக்கம் “தொடர்பு” தகவல் தொடர்பு வழியை நாங்கள் எப்படி ஆய்வு செய்கிறோம் என்பதை விளக்குகிறது.
+
+guidanceContent.ta.pages.home.sections[2].heading
+    பணிக் குழுக்கள்
+
+guidanceContent.ta.pages.home.sections[2].paragraphs[0]
+    பணித்துறையில் பின்வரும் ஆறு குழுக்கள் உள்ளன. பக்கம் “சேவைகள்” ஒவ்வொரு குழுவையும் துல்லியமாக விவரிக்கிறது; என்ன வாக்குறுதி அளிக்கப்படுவதில்லை என்பதையும் கூறுகிறது.
+
+guidanceContent.ta.pages.home.sections[2].items[0]
+    தைவானில் முதலீடு மற்றும் நிறுவனம் அமைத்தல்
+
+guidanceContent.ta.pages.home.sections[2].items[1]
+    உரிமையியல் தகராறுகள் மற்றும் இழப்பீடு
+
+guidanceContent.ta.pages.home.sections[2].items[2]
+    திருமணம், குடும்பம் மற்றும் வாரிசுரிமை
+
+guidanceContent.ta.pages.home.sections[2].items[3]
+    தொழிலாளர் தகராறுகள்
+
+guidanceContent.ta.pages.home.sections[2].items[4]
+    குற்றவியல் வழக்குகள்
+
+guidanceContent.ta.pages.home.sections[2].items[5]
+    அறிவுசார் சொத்து: வணிகச் சின்னம், காப்புரிமை மற்றும் பதிப்புரிமை
+
+guidanceContent.ta.pages.home.sections[3].heading
+    எங்கிருந்து தொடங்க வேண்டும்
+
+guidanceContent.ta.pages.home.sections[3].paragraphs[0]
+    உங்கள் விஷயம் எங்கள் எல்லைக்குள் வருகிறதா என்று பார்க்க “சேவைகள்” பக்கத்தைப் படியுங்கள்; பிறகு எல்லை எப்படி தீர்மானிக்கப்படுகிறது, பணி தொடங்கும் முன் செலவு எப்படி உறுதிப்படுகிறது என்பதை அறிய “செலவு” மற்றும் “தொடர்பு” பக்கங்களைப் படியுங்கள்.
+
+guidanceContent.ta.pages.home.sections[3].paragraphs[1]
+    செய்தி அனுப்பும்போது சுருக்கத்தை உங்கள் மொழியில் எழுதலாம். மூல உரை நீங்கள் எழுதியபடியே வைக்கப்படும்; தானியங்கியாக மொழிபெயர்க்கப்படாது. அனுப்பிய செய்தி ஆய்வுக்காகக் காத்திருக்கும் கோரிக்கை: இது இன்னும் ஆலோசனை அல்ல, உறுதிப்படுத்தப்பட்ட சந்திப்பும் அல்ல.
+
+guidanceContent.ta.pages.services.eyebrow
+    பணித்துறைகள்
+
+guidanceContent.ta.pages.services.title
+    நாங்கள் எந்த வழக்குகளைக் கையாளுகிறோம்
+
+guidanceContent.ta.pages.services.description
+    தைவானில் அலுவலகத்தின் ஆறு பணிக் குழுக்கள் மற்றும் முதலில் அறிந்துகொள்ள வேண்டிய எல்லைகள்.
+
+guidanceContent.ta.pages.services.intro
+    கீழே நாங்கள் உண்மையில் கையாளும் குழுக்களும், தொடக்கக் கட்டத்தில் அடிக்கடி கேட்கப்படும் கேள்விகளும் உள்ளன. இந்த விளக்கம் உங்கள் விஷயம் எங்கள் எல்லைக்குள் வருகிறதா என்று மதிப்பிட உதவுகிறது; இது பொதுவானது, ஒரு தனிக் கோப்பின் சட்டப் பகுப்பாய்வு அல்ல.
+
+guidanceContent.ta.pages.services.sections[0].heading
+    தைவானில் முதலீடு மற்றும் நிறுவனம் அமைத்தல்
+
+guidanceContent.ta.pages.services.sections[0].paragraphs[0]
+    வெளிநாட்டு முதலீட்டாளர்களுக்கும் நிறுவனங்களுக்கும் தைவானில் நிறுவனம் அமைக்க அல்லது நடத்த உடன் செல்கிறோம்: சட்ட வடிவம் தேர்வு, ஆவணங்களைத் தயாரித்து சமர்ப்பித்தல், மூலதனம் செலுத்துதல், வங்கித் தொடர்பானவை, இட ஆய்வு மற்றும் துறை சார்ந்த தேவைகள். தைவானில் அமைப்பு மற்றும் இயக்கத்திலிருந்து எழும் கணக்கியல் மற்றும் வரியிலும் உதவுகிறோம்.
+
+guidanceContent.ta.pages.services.sections[0].paragraphs[1]
+    நடைமுறையும் காலமும் வடிவம், முதலீட்டாளர், துறை, வங்கி மற்றும் உள்ள ஆவணங்களைப் பொறுத்து வேறுபடும். நிறுவனம் அமைப்பது தானாகத் தங்கல் அனுமதி (居留) அல்லது பணி அனுமதி (工作許可) தராது: இவை தனி நடைமுறைகள்; அந்த நபரின் நிலைமையைப் பொறுத்து பார்க்கப்படும்.
+
+guidanceContent.ta.pages.services.sections[1].heading
+    உரிமையியல் தகராறுகள் மற்றும் இழப்பீடு
+
+guidanceContent.ta.pages.services.sections[1].paragraphs[0]
+    இந்தக் குழுவில் ஒப்பந்தத் தகராறுகள், சட்டவிரோதச் செயலால் இழப்பீடு மற்றும் நுகர்வோர் தகராறுகள் அடங்கும். பணி பொதுவாக காலவரிசை, உள்ள ஆவணங்கள் மற்றும் சான்று ஆய்விலிருந்து தொடங்கி, அதன்பிறகே அடுத்த படிகள் வரும்.
+
+guidanceContent.ta.pages.services.sections[1].paragraphs[1]
+    காலக்கெடுகள் — வழக்குக் காலாவதி உட்பட — மற்றும் சான்றின் முழுமை பாதையைத் தீர்மானிக்கும். எனவே தெரிந்த தேதிகளை முடிந்தவரை விரைவில் கூறுங்கள். ஒப்பந்தங்கள், செய்திகள், கட்டணச் சீட்டுகள் அல்லது இடத்தின் நிலை படங்களைப் பாதுகாத்து, முதல் செய்தியில் அவற்றைக் குறிப்பிடுங்கள்.
+
+guidanceContent.ta.pages.services.sections[2].heading
+    திருமணம், குடும்பம் மற்றும் வாரிசுரிமை
+
+guidanceContent.ta.pages.services.sections[2].paragraphs[0]
+    விவாகரத்து (離婚), சொத்துப் பிரிப்பு, சிறுவர் பாதுகாப்பு மற்றும் பெற்றோர் பொறுப்பு (未成年子女權利義務之行使或負擔), சந்திப்பு உரிமை (會面交往) மற்றும் வாரிசுரிமை (繼承) ஆகியவற்றைக் கையாளுகிறோம்; தரப்பினர் அல்லது சொத்து வெவ்வேறு நாடுகளில் இருந்தாலும். எல்லை தாண்டிய குடும்ப வழக்குகளில் பெரும்பாலும் குடும்பப் பதிவு (戶籍), ஆவணங்களின் வடிவம் மற்றும் தைவானில் அவற்றின் சான்றாதாரம் குறித்த கூடுதல் ஆய்வு தேவை.
+
+guidanceContent.ta.pages.services.sections[2].paragraphs[1]
+    குடும்ப வழக்குகளில் பெரும்பாலும் காலக்கெடுகளும் இணையான நடைமுறைகளும் இருப்பதால், முதல் சுருக்கத்தில் தரப்பினரின் உறவு, தற்போதைய வசிப்பிடம் மற்றும் ஏற்கனவே நடக்கும் நடைமுறைகளைக் கூற வேண்டும்.
+
+guidanceContent.ta.pages.services.sections[3].heading
+    தொழிலாளர் தகராறுகள்
+
+guidanceContent.ta.pages.services.sections[3].paragraphs[0]
+    இந்தக் குழுவில் பணி முடிவு, தைவான் சட்டத்தின்படி சட்டப்பூர்வ பிரிவினை ஊதியம் (資遣費; பிற நாடுகளின் அதே பெயரிலான நிறுவனங்களுடன் சமமாக்கக் கூடாது), ஊதியம் மற்றும் தொழிலாளர் ஒப்பந்தம் (勞動契約) தொடர்பான தகராறுகள் அடங்கும் — தொழிலாளர் மற்றும் முதலாளி இரு தரப்பிலும். ஆய்வில் முடிவுக்கான காரணத்தை அறிவிப்பு, செலுத்துதல் மற்றும் காலக்கெடு கேள்விகளிலிருந்து தனியாக வைக்கிறோம்.
+
+guidanceContent.ta.pages.services.sections[3].paragraphs[1]
+    தொழிலாளர் ஒப்பந்தம், பணி விதிகள் (工作規則), ஊதியச் சீட்டுகள் மற்றும் தரப்பினரின் கடிதப் போக்குவரத்து பெரும்பாலும் தீர்மானிக்கும் ஆவணங்கள். அவை இன்னும் உங்களிடம் இருந்தால், சுருக்கத்தில் கூறுங்கள்.
+
+guidanceContent.ta.pages.services.sections[4].heading
+    குற்றவியல் வழக்குகள்
+
+guidanceContent.ta.pages.services.sections[4].paragraphs[0]
+    விசாரணை மற்றும் நீதிமன்றத்தில் குற்றம் சாட்டப்பட்டவர் அல்லது பாதிக்கப்பட்டவர் தரப்பில் உடன் செல்கிறோம்; நிறுவனச் செயல்பாட்டின் குற்றவியல் அபாயங்களையும் மதிப்பிடுகிறோம்.
+
+guidanceContent.ta.pages.services.sections[4].paragraphs[1]
+    குற்றவியல் வழக்குகளில் பெரும்பாலும் குறுகிய காலக்கெடுகளும் நிர்ணயிக்கப்பட்ட படிகளும் உண்டு. வழக்குரை அல்லது நீதிமன்றக் கடிதம் ஏற்கனவே வந்திருந்தால், கடிதத் தேதியை விரைவில் கூறுங்கள்; உள்ளடக்கம் சரியான வரிசையில் ஆய்வு செய்யப்படும்.
+
+guidanceContent.ta.pages.services.sections[5].heading
+    அறிவுசார் சொத்து
+
+guidanceContent.ta.pages.services.sections[5].paragraphs[0]
+    வணிகச் சின்னம் (商標) மற்றும் காப்புரிமை (專利) பதிவு, பதிப்புரிமை மற்றும் தைவானில் இந்த உரிமைகள் குறித்த தகராறுகளில் உதவுகிறோம்.
+
+guidanceContent.ta.pages.services.sections[5].paragraphs[1]
+    இந்தக் குழுவில் படிகளின் வரிசை தீர்மானிக்கும்: பாதுகாப்பின் எல்லை, விண்ணப்ப நேரம் மற்றும் உண்மையான பயன்பாடு தேர்வை பாதிக்கும். விண்ணப்பத்தைச் சமர்ப்பிப்பது தானாக அது அங்கீகரிக்கப்படும் என்று காட்டாது.
+
+guidanceContent.ta.pages.services.sections[6].heading
+    எல்லை மற்றும் அதன் உறுதிப்படுத்தல்
+
+guidanceContent.ta.pages.services.sections[6].paragraphs[0]
+    அலுவலகம் தைவான் சட்டத்தின்படி பணி செய்கிறது; மேற்கண்ட குழுக்களின் வழக்குகளைக் கையாளுகிறது. ஒவ்வொரு வழக்கின் எல்லையும் தனித்தனியாக உறுதிப்படுகிறது — ஒரு வழக்கறிஞர் உங்கள் செய்தியை ஆய்வு செய்த பிறகு.
+
+guidanceContent.ta.pages.services.sections[6].paragraphs[1]
+    தங்கல் நிலை, பணி அனுமதி மற்றும் ஒப்பான கேள்விகள் ஆவணங்கள் மற்றும் அந்த நபரின் நிலைமையிலிருந்து மதிப்பிடப்படும்; குடியுரிமையிலிருந்து அல்ல. உங்கள் விஷயத்தின் ஒரு பகுதி இத்தகைய கேள்விகளுடன் இணைந்தால், தொடர்பு கொள்ளும்போது கூறுங்கள். இந்தப் பக்கம் முடிவை உறுதி செய்வதில்லை; பதிலளிக்கும் காலக்கெடும் இல்லை.
+
+guidanceContent.ta.pages.about.eyebrow
+    அலுவலகம்
+
+guidanceContent.ta.pages.about.title
+    Hovering International Law Firm பற்றி
+
+guidanceContent.ta.pages.about.description
+    இந்தத் தைவான் சட்ட அலுவலகம், அதன் அலுவலகங்கள் மற்றும் வெளிநாட்டுத் தரப்பினருடனான பணி குறித்த அடிப்படைத் தகவல்.
+
+guidanceContent.ta.pages.about.intro
+    Hovering International Law Firm தைவானின் ஒரு சட்ட அலுவலகம். வழக்கறிஞர்கள் நிறுவன ஆலோசனையிலிருந்து நீதிமன்ற நடவடிக்கை வரை பணி செய்கிறார்கள். இந்தப் பகுதி அலுவலகத்தின் தோற்றம், இடங்கள் மற்றும் வெளிநாட்டுத் தரப்பினருடனான பணியை விவரிக்கிறது.
+
+guidanceContent.ta.pages.about.sections[0].heading
+    நிறுவனமும் அமைப்பும்
+
+guidanceContent.ta.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) 2016-இல் National Taiwan University (國立臺灣大學) படித்த வழக்கறிஞர்களால் நிறுவப்பட்டது. சீனப் பெயர் 昊鼎 எழுத்து 昊 (“விரிந்த வானம்”)ஐ 鼎 (“உறுதியான அடித்தளம்”) உடன் இணைக்கிறது; நிறுவனத்திலிருந்து அலுவலகத்தின் திசையைக் காட்டுகிறது.
+
+guidanceContent.ta.pages.about.sections[0].paragraphs[1]
+    எங்கள் அலுவலகங்கள் தைப்பே (臺北), காவோசியூங் (高雄), தைச்சுங் (臺中) மற்றும் பிங்துங் (屏東) ஆகிய இடங்களில் உள்ளன. காவோசியூங் அலுவலகம் நிறுவன நிர்வாகத்தில் கவனம் செலுத்துகிறது; உரிமையியல், குற்றவியல் மற்றும் நிர்வாகத் தகராறுகளைக் கையாளுகிறது. தைச்சுங் அலுவலகம் கட்டுமானம், அறிவுசார் சொத்து மற்றும் கொரியா மற்றும் ஜப்பான் தொடர்பான வழக்குகளைக் கையாளுகிறது. பிங்துங் அலுவலகம் 2017-இல் உள்ளூர் தேவைக்காகத் திறக்கப்பட்டது.
+
+guidanceContent.ta.pages.about.sections[0].paragraphs[2]
+    வழக்கறிஞர் பணிக்கு அப்பால் 2020 முதல் Hovering Accounting Office உள்ளது; தொழில்முனைவோருக்கும் செல்வமுள்ள தனிநபர்களுக்கும் கணக்கியல் மற்றும் வரித் திட்டம் தருகிறது.
+
+guidanceContent.ta.pages.about.sections[1].heading
+    வெளிநாட்டுத் தரப்பினருடனான பணி
+
+guidanceContent.ta.pages.about.sections[1].paragraphs[0]
+    எல்லை தாண்டிய பணியில் நிறுவனம் அமைத்தல், விசா, வணிகச் சின்னம் மற்றும் காப்புரிமை விண்ணப்பங்கள், சட்ட அபாய ஆய்வு மற்றும் நிறுவனங்களின் வரி ஆலோசனை அடங்கும். தைச்சுங் அலுவலகம் குறிப்பாகக் கட்டுமானம், அறிவுசார் சொத்து மற்றும் கொரியா மற்றும் ஜப்பான் தொடர்பான வழக்குகளைக் கையாளுகிறது. வழக்கறிஞர் Wei Tseng (曾雋崴) கொரியா, ஜப்பான் மற்றும் பிற பன்னாட்டுக் கட்சிக்காரர்களுக்கு மேற்கண்ட குழுக்களில் உடன் செல்கிறார்.
+
+guidanceContent.ta.pages.about.sections[1].paragraphs[1]
+    ஒரு வழக்கை ஏற்க முடியுமா என்பது உள்ளடக்கம் மற்றும் தகவல் தொடர்பு மொழியைப் பொறுத்தது. உங்கள் விஷயம் மேற்கண்ட குழுக்களில் வந்து, நான்கு ஆலோசனை மொழிகளில் ஒன்றில் விவாதிக்க முடியுமானால், ஆய்வுக்காகச் சுருக்கத்தை அனுப்பலாம்.
+
+guidanceContent.ta.pages.about.sections[2].heading
+    நீங்கள் தொடர்பு கொள்ளும்போது
+
+guidanceContent.ta.pages.about.sections[2].paragraphs[0]
+    உங்கள் சுருக்கம் வந்த பிறகு ஒரு வழக்கறிஞர் உள்ளடக்கத்தை ஆய்வு செய்து, பிறகு சாத்தியமான பணி எல்லை, இன்னும் தேவையான ஆவணங்கள் மற்றும் அடுத்த படிகள் குறித்து பேசுகிறார். வரி அல்லது கணக்கியல் கேள்விகளில் அலுவலகம் கணக்கியல் பிரிவுடன் ஒரே ஓட்டத்தில் பணி செய்யலாம்.
+
+guidanceContent.ta.pages.about.sections[2].paragraphs[1]
+    ஒவ்வொரு வழக்கின் முடிவும் உண்மைகள் மற்றும் உள்ள ஆவணங்களைப் பொறுத்தது; முடிவை உறுதி செய்ய மாட்டோம். உங்கள் நிலைக்குக் கட்டுப்படும் பதில் வேண்டுமானால், ஆவணங்களை நான்கு ஆலோசனை மொழிகளில் ஒன்றில் வழக்கறிஞருடன் விவாதிக்க வேண்டும்.
+
+guidanceContent.ta.pages.lawyers.eyebrow
+    வழக்கறிஞர்கள்
+
+guidanceContent.ta.pages.lawyers.title
+    Hovering-இன் பன்னாட்டுக் குழு
+
+guidanceContent.ta.pages.lawyers.description
+    Hovering வழக்கறிஞர்கள், செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் கணக்காளரின் சுயவிவரங்கள்.
+
+guidanceContent.ta.pages.lawyers.intro
+    
+
+guidanceContent.ta.pages.pricing.eyebrow
+    செலவு
+
+guidanceContent.ta.pages.pricing.title
+    பணி எல்லை மற்றும் செலவு எப்படி தீர்மானிக்கப்படுகின்றன
+
+guidanceContent.ta.pages.pricing.description
+    வரிசையின் விளக்கம்: முதலில் பணி எல்லை, பிறகு செலவின் உறுதிப்படுத்தல், மற்றும் இந்தப் பக்கம் விலைப் பட்டியலை ஏன் வைக்கவில்லை.
+
+guidanceContent.ta.pages.pricing.intro
+    இந்தப் பக்கம் செலவு எப்படி தீர்மானிக்கப்படுகிறது என்பதை விளக்குகிறது; தொகையை அல்ல. தொகை ஒவ்வொரு வழக்கின் பணி எல்லையைப் பொறுத்தது; அந்த எல்லை தெளிவாக இருக்கும்போதே பொருளுள்ளது.
+
+guidanceContent.ta.pages.pricing.sections[0].heading
+    முதலில் பணி எல்லை தீர்மானிக்கப்படுகிறது
+
+guidanceContent.ta.pages.pricing.sections[0].paragraphs[0]
+    ஒரே வகையான வழக்குகளிலும் உழைப்பு மிகவும் வேறுபடலாம் — தரப்பினர் எண்ணிக்கை, உள்ள ஆவணங்கள், பின்பற்ற வேண்டிய காலக்கெடுகள் மற்றும் நடைமுறை ஏற்கனவே தொடங்கிவிட்டதா என்பதைப் பொறுத்து. எனவே முதல் படி எப்போதும் பணியில் என்ன வருகிறது, என்ன வராது என்பதைத் தீர்மானிப்பதே.
+
+guidanceContent.ta.pages.pricing.sections[0].paragraphs[1]
+    தொடக்கத்தில் நீங்கள் அனுப்பும் சுருக்கம் இந்த எல்லைக்கான அடிப்படை. அது வரிசை, உங்கள் தேவை மற்றும் காலக்கெடுகளை எவ்வளவு தெளிவாகக் கூறுகிறதோ, அவ்வளவு துல்லியமாக எல்லையைத் தீர்மானிக்க முடியும்.
+
+guidanceContent.ta.pages.pricing.sections[1].heading
+    பணி தொடங்கும் முன் செலவு உறுதிப்படுகிறது
+
+guidanceContent.ta.pages.pricing.sections[1].paragraphs[0]
+    பணி எல்லை தெளிவாக இருக்கும்போது, தொகையும் கணக்கீட்டு முறையும் உங்களுடன் பேசி பணி தொடங்கும் முன் உறுதிப்படுத்தப்படும். பாதையில் எல்லை மாறினால் அதை மீண்டும் உறுதிப்படுத்த வேண்டும்.
+
+guidanceContent.ta.pages.pricing.sections[1].paragraphs[1]
+    இந்தப் பக்கம் விலை முன்மொழிவு அல்ல; செலுத்தும் கடமையையும் உருவாக்காது. இந்தப் பக்கத்தின் வழியாகக் கோரிக்கை அனுப்புவதும் கட்டணமில்லை.
+
+guidanceContent.ta.pages.pricing.sections[2].heading
+    ஆலோசனை கட்டணச் சேவையாக இருக்கலாம்
+
+guidanceContent.ta.pages.pricing.sections[2].paragraphs[0]
+    வழக்கறிஞரின் ஆலோசனை கட்டணச் சேவையாக இருக்கலாம். முதல் உரையாடல் இலவசம் என்று இந்தப் பக்கம் சொல்லவில்லை; எந்தப் பகுதியையும் அவ்வாறு படிக்கவும் கூடாது.
+
+guidanceContent.ta.pages.pricing.sections[2].paragraphs[1]
+    ஆலோசனை கட்டணச் சேவையாக இருந்தால், தொகையும் செலுத்தும் முறையும் அது நடைபெறும் முன் தெரிவிக்கப்படும்.
+
+guidanceContent.ta.pages.pricing.sections[3].heading
+    இந்தப் பக்கம் விகிதங்களை ஏன் கூறவில்லை
+
+guidanceContent.ta.pages.pricing.sections[3].paragraphs[0]
+    செலவு வழக்கையே பொறுத்தது: உழைப்பு, தரப்பினர் எண்ணிக்கை, ஆவணங்கள், காலக்கெடுகள் மற்றும் நடைமுறை ஏற்கனவே நடக்கிறதா என்பதை. முன்கூட்டிய எண் உங்கள் வழக்கின் செலவைக் காட்டாது. எனவே முதலில் பணி எல்லையைத் தீர்மானித்து, பணி தொடங்கும் முன் செலவை உங்களுக்குத் தெரிவிக்கிறோம்.
+
+guidanceContent.ta.pages.pricing.sections[3].paragraphs[1]
+    வழக்கறிஞர் கட்டணத்திற்கு அப்பால் நீதிமன்றம், அதிகார அமைப்பு அல்லது மூன்றாம் தரப்பின் செலவுகள் எழலாம். இவை கட்டணத்திலிருந்து தனி; தொடர்புடைய நடைமுறையைப் பொறுத்தவை.
+
+guidanceContent.ta.pages.contact.eyebrow
+    தொடர்பு
+
+guidanceContent.ta.pages.contact.title
+    அலுவலகத்தை எப்படி அணுகுவது
+
+guidanceContent.ta.pages.contact.description
+    பக்க மொழி, ஆலோசனை மொழிகள், நான்கு மொழிகளில் எதையும் பயன்படுத்த முடியாதபோதான வழி, மற்றும் இந்தப் பக்கம் என்ன சொல்லவில்லை.
+
+guidanceContent.ta.pages.contact.intro
+    எழுதுவதற்கு முன் பின்வரும் மூன்று புள்ளிகளைத் தனியாக வையுங்கள். இவை பெரும்பாலும் கலக்கப்படுகின்றன; பொருள் வேறு.
+
+guidanceContent.ta.pages.contact.sections[0].heading
+    தனியாக இருக்க வேண்டிய மூன்று விஷயங்கள்
+
+guidanceContent.ta.pages.contact.sections[0].paragraphs[0]
+    பக்கத்தின் காட்சி மொழி, வழக்கறிஞருடனான ஆலோசனை மொழி, நீங்கள் எழுதும் மொழி — இவை மூன்றும் தனி.
+
+guidanceContent.ta.pages.contact.sections[0].items[0]
+    பக்க மொழி: இந்தக் குறிப்புகள் தமிழில் எழுதப்பட்டுள்ளன.
+
+guidanceContent.ta.pages.contact.sections[0].items[1]
+    ஆலோசனை மொழி: ஆலோசனை ஆங்கிலம், சீனம் (中文), ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றில் நடைபெறும்.
+
+guidanceContent.ta.pages.contact.sections[0].items[2]
+    உங்கள் எழுத்து மொழி: சுருக்கத்தை உங்கள் மொழியில் எழுதலாம்; மூல உரை மாற்றப்படாமல் வைக்கப்படும்.
+
+guidanceContent.ta.pages.contact.sections[1].heading
+    நான்கு ஆலோசனை மொழிகளில் எதையும் பயன்படுத்த முடியாவிட்டால்
+
+guidanceContent.ta.pages.contact.sections[1].paragraphs[0]
+    தொடர்புப் படிவத்தில் “தகவல் தொடர்பு வழியை உறுதிப்படுத்த வேண்டும்” என்பதைத் தேர்ந்தெடுக்கலாம். சாத்தியமான தகவல் தொடர்பு வழி உள்ளதா என்று ஆய்வு செய்ய நாங்கள் பதிலளிக்கிறோம்; பிற மொழியில் சேவை உறுதி செய்யப்படவில்லை, பதிலளிக்கும் காலக்கெடும் கூறப்படவில்லை.
+
+guidanceContent.ta.pages.contact.sections[1].paragraphs[1]
+    இது ஆய்வுப் படி மட்டுமே; வாக்குறுதி அல்ல. மொழிபெயர்ப்பாளரை வாக்குறுதி அளிக்க மாட்டோம், தமிழிலோ நான்கு கூறிய மொழிகளுக்கு வெளியே வேறொரு மொழியிலோ சேவையை வாக்குறுதி அளிக்க மாட்டோம், ஒவ்வொரு வழக்கையும் ஏற்போம் என்றும் சொல்ல மாட்டோம்.
+
+guidanceContent.ta.pages.contact.sections[2].heading
+    முதல் செய்தியில் என்ன இருக்க வேண்டும்
+
+guidanceContent.ta.pages.contact.sections[2].paragraphs[0]
+    என்ன நடந்தது, எந்த உதவி தேவை, வழக்கிற்கும் தைவானுக்கும் உள்ள தொடர்பு, தெரிந்தால் காலக்கெடு ஆகியவற்றைக் கூறுங்கள். நீதிமன்றம் அல்லது அதிகார அமைப்பின் கடிதம் ஏற்கனவே வந்திருந்தால், கடிதத் தேதியைக் கூறுங்கள்.
+
+guidanceContent.ta.pages.contact.sections[2].paragraphs[1]
+    தொடக்கக் கட்டத்தில் கடவுச்சீட்டு எண், அடையாள எண், கணக்கு விவரங்கள், மருத்துவப் பதிவுகள் அல்லது முழுச் சான்றையும் இப்போதே அனுப்ப வேண்டியதில்லை. வழக்கறிஞரின் அறிவுறுத்தலுக்காகக் காத்திருந்து, உணர்திறன் ஆவணங்களைப் பாதுகாப்பான வழியில் அனுப்புங்கள்.
+
+guidanceContent.ta.pages.contact.sections[3].heading
+    இந்தப் பக்கம் என்ன சொல்லவில்லை
+
+guidanceContent.ta.pages.contact.sections[3].paragraphs[0]
+    பதிலளிக்கும் காலக்கெடுவைக் கூற மாட்டோம், இந்தப் பக்கத்திலிருந்து சந்திப்பை உறுதிப்படுத்த மாட்டோம், குறிப்பிட்ட வழக்கறிஞரை வாக்குறுதி அளிக்க மாட்டோம், மொழிபெயர்ப்பாளரைத் தர மாட்டோம். எழுத்து மொழிபெயர்ப்பு வேறு: உங்கள் செய்தி தானியங்கியாக மொழிபெயர்க்கப்படாது.
+
+guidanceContent.ta.pages.contact.sections[3].paragraphs[1]
+    கோரிக்கையை அனுப்பினால் உள்ளடக்கம் வைக்கப்பட்டு ஆய்வுக்காகக் காத்திருக்கும். சிறிது நேரத்திற்குப் பிறகும் பதில் வராவிட்டால், தொடர்புப் பக்கத்தில் கூறிய மின்னஞ்சல் முகவரியில் மீண்டும் எழுதலாம்.
+
+guidanceContent.ta.pages.faq.eyebrow
+    வினாக்கள்
+
+guidanceContent.ta.pages.faq.title
+    அடிக்கடி கேட்கப்படும் கேள்விகள்
+
+guidanceContent.ta.pages.faq.description
+    பணித்துறை, தயாரிப்பு, மொழிகள், செலவு மற்றும் அனுப்பிய கோரிக்கையின் பொருள் குறித்த விளக்கங்கள்.
+
+guidanceContent.ta.pages.faq.intro
+    பின்வரும் கேள்விகளுக்குப் பொதுவான தகவல் மட்டத்தில் பதில் தரப்படுகிறது. உங்கள் வழக்கின் பதில் ஒரு வழக்கறிஞர் ஆவணங்களை ஆய்வு செய்த பிறகே சாத்தியம்.
+
+guidanceContent.ta.pages.faq.sections[0].heading
+    இந்தப் பகுதியை எப்படிப் பயன்படுத்துவது
+
+guidanceContent.ta.pages.faq.sections[0].paragraphs[0]
+    உங்கள் நிலைக்குப் பதில் கிடைக்கவில்லை என்றால், பதில் பெரும்பாலும் சிறப்பு உண்மைகளைப் பொறுத்தது. அப்போது அந்த உண்மைகளைச் சுருக்கத்தில் எழுதுங்கள்; இந்தப் பக்கத்திலிருந்து நீங்களே முடிவு எடுக்காதீர்கள்.
+
+guidanceContent.ta.pages.faq.faqs[0].question
+    அலுவலகம் எந்த வழக்குகளைக் கையாளுகிறது?
+
+guidanceContent.ta.pages.faq.faqs[0].answer
+    ஆறு குழுக்களைக் கையாளுகிறோம்: தைவானில் முதலீடு மற்றும் நிறுவனம் அமைத்தல், உரிமையியல் தகராறுகள் மற்றும் இழப்பீடு, திருமணம், குடும்பம் மற்றும் வாரிசுரிமை, தொழிலாளர் தகராறுகள், குற்றவியல் வழக்குகள் மற்றும் அறிவுசார் சொத்து. ஒரு வழக்கு ஏற்கப்படுமா என்பது உள்ளடக்க ஆய்வுக்குப் பிறகு தீர்மானிக்கப்படும்.
+
+guidanceContent.ta.pages.faq.faqs[1].question
+    தொடர்புக்கு முன் நான் என்ன தயார் செய்ய வேண்டும்?
+
+guidanceContent.ta.pages.faq.faqs[1].answer
+    வரிசை, உங்கள் தேவை, தைவானுடனான தொடர்பு மற்றும் காலக்கெடு இருந்தால் அதன் சுருக்கத்தைத் தயார் செய்யுங்கள். நீதிமன்றம் அல்லது அதிகார அமைப்பின் கடிதம் ஏற்கனவே இருந்தால் தேதியைக் கூறுங்கள். இந்தக் கட்டத்தில் அடையாள ஆவணங்கள் அல்லது முழுச் சான்றையும் இப்போதே அனுப்ப வேண்டியதில்லை.
+
+guidanceContent.ta.pages.faq.faqs[2].question
+    தமிழில் ஆலோசனை பெற முடியுமா?
+
+guidanceContent.ta.pages.faq.faqs[2].answer
+    இல்லை. இந்தப் பக்கங்கள் தமிழில் எழுதப்பட்டுள்ளன; ஆனால் வழக்கறிஞரின் ஆலோசனை ஆங்கிலம், சீனம் (中文), ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றிலேயே நடைபெறும். மொழிபெயர்ப்பாளரையும் வாக்குறுதி அளிக்க மாட்டோம். எழுத்து மொழிபெயர்ப்பு வேறு: நீங்கள் எழுதிய மூல உரை அப்படியே வைக்கப்படும்; தானியங்கியாக மொழிபெயர்க்கப்படாது.
+
+guidanceContent.ta.pages.faq.faqs[3].question
+    நான்கு மொழிகளில் எதையும் பயன்படுத்த முடியாவிட்டால் என்ன?
+
+guidanceContent.ta.pages.faq.faqs[3].answer
+    கோரிக்கை அனுப்பும்போது “தகவல் தொடர்பு வழியை உறுதிப்படுத்த வேண்டும்” என்பதைத் தேர்ந்தெடுங்கள். தகவல் தொடர்பு வழியை ஆய்வு செய்ய நாங்கள் பதிலளிக்கிறோம்; பிற மொழியில் சேவை உறுதி செய்யப்படவில்லை. இது ஆய்வுப் படி; வேறொரு மொழியில் பணி செய்ய முடியும் என்ற வாக்குறுதி அல்ல.
+
+guidanceContent.ta.pages.faq.faqs[4].question
+    நான் எழுதிய தமிழ் உரைக்கு என்ன ஆகும்?
+
+guidanceContent.ta.pages.faq.faqs[4].answer
+    நீங்கள் எழுதிய மூல உரை அப்படியே வைக்கப்படும்; தானியங்கியாக மொழிபெயர்க்கப்படாது. தேவைப்பட்டால் மேல் தகவல் தொடர்பின் மொழி உங்களுடன் உறுதிப்படுத்தப்படும்.
+
+guidanceContent.ta.pages.faq.faqs[5].question
+    கோரிக்கை அனுப்பினாலே ஆலோசனை முடிந்துவிட்டதா?
+
+guidanceContent.ta.pages.faq.faqs[5].answer
+    இல்லை. அனுப்பிய கோரிக்கை வழக்கறிஞரின் ஆய்வுக்காகக் காத்திருக்கிறது. இது சட்டக் கருத்து அல்ல, உறுதிப்படுத்தப்பட்ட சந்திப்பு அல்ல; அனுப்புவதால் வழக்கறிஞருக்கும் கட்சிக்காரருக்கும் இடையே உறவு ஏற்படுவதில்லை.
+
+guidanceContent.ta.pages.faq.faqs[6].question
+    செலவு எப்படிக் கணக்கிடப்படுகிறது?
+
+guidanceContent.ta.pages.faq.faqs[6].answer
+    முதலில் பணி எல்லை தீர்மானிக்கப்படுகிறது; அதன்பிறகு தொகையும் கணக்கீட்டு முறையும் உங்களுடன் உறுதிப்படுத்தப்படும் — பணி தொடங்கும் முன். இந்தப் பக்கம் எண்களைக் கூறவில்லை; முதல் உரையாடல் இலவசம் என்றும் சொல்லவில்லை.
+
+guidanceContent.ta.pages.faq.faqs[7].question
+    என் விஷயம் மிகவும் அவசரமானால் என்ன?
+
+guidanceContent.ta.pages.faq.faqs[7].answer
+    காலக்கெடு அல்லது அதிகாரக் கடிதத் தேதியைச் சுருக்கத்தின் தொடக்கத்திலேயே கூறுங்கள்; ஆய்வில் இந்தத் தேதிகள் தெரியும். இந்தப் பக்கத்தில் அவசர வழி இல்லை; பதிலளிக்கும் காலக்கெடும் கூறப்படவில்லை. உங்கள் விஷயம் காத்திருக்க முடியாவிட்டால், உங்கள் இடத்தில் இணையான பிற வழிகளையும் பார்க்க வேண்டும்.
+
+guidanceContent.ta.pages.privacy.eyebrow
+    தனியுரிமை
+
+guidanceContent.ta.pages.privacy.title
+    தொடர்புப் படிவத்தின் வழியாகச் சேகரிக்கப்படும் தகவல்
+
+guidanceContent.ta.pages.privacy.description
+    இந்தத் தமிழ்ப் பக்கங்களின் தொடர்புப் படிவம் என்ன சேகரிக்கிறது, உங்கள் மூல உரையுடன் என்ன ஆகும், உங்கள் தனிப்பட்ட தரவு குறித்து எங்களை எப்படி அணுகுவது.
+
+guidanceContent.ta.pages.privacy.intro
+    இந்தப் பகுதி இந்தக் குறிப்புப் பக்கங்களின் தொடர்புப் படிவத்தை மட்டுமே பற்றியது. இது தனிப்பட்ட தரவின் கையாளுதலை விவரிக்கிறது; தொழில்நுட்ப வாக்குறுதி அல்ல.
+
+guidanceContent.ta.pages.privacy.sections[0].heading
+    எந்தத் தகவல் சேகரிக்கப்படுகிறது
+
+guidanceContent.ta.pages.privacy.sections[0].paragraphs[0]
+    இந்தப் பகுதியின் படிவத்தின் வழியாகக் கோரிக்கை அனுப்பும்போது பின்வருவன பதிவு செய்யப்படும்:
+
+guidanceContent.ta.pages.privacy.sections[0].items[0]
+    நீங்கள் கூறிய பெயர்
+
+guidanceContent.ta.pages.privacy.sections[0].items[1]
+    பதிலுக்கான மின்னஞ்சல் முகவரி
+
+guidanceContent.ta.pages.privacy.sections[0].items[2]
+    அனுப்பும்போது பக்கத்தின் காட்சி மொழி
+
+guidanceContent.ta.pages.privacy.sections[0].items[3]
+    நீங்கள் எழுதிய மொழி
+
+guidanceContent.ta.pages.privacy.sections[0].items[4]
+    நீங்கள் விரும்பும் ஆலோசனை மொழி
+
+guidanceContent.ta.pages.privacy.sections[0].items[5]
+    நீங்கள் எழுதிய மூல உரை
+
+guidanceContent.ta.pages.privacy.sections[0].items[6]
+    கோரிக்கையை அனுப்ப உங்கள் ஒப்புதல்
+
+guidanceContent.ta.pages.privacy.sections[0].items[7]
+    கோரிக்கையை மீண்டும் கண்டறியப் பெறுகை எண்
+
+guidanceContent.ta.pages.privacy.sections[1].heading
+    மூல உரை மாற்றப்படாமல் வைக்கப்படும்
+
+guidanceContent.ta.pages.privacy.sections[1].paragraphs[0]
+    உங்கள் உரை நீங்கள் எழுதியபடியே வைக்கப்படும்; தானியங்கியாக மொழிபெயர்க்கப்படாது. பணிக்கு மொழிபெயர்ப்பு தேவைப்பட்டால், அது உங்களுடன் தனியாகப் பேசப்படும்.
+
+guidanceContent.ta.pages.privacy.sections[1].paragraphs[1]
+    மூல உரை வைக்கப்படுவதால், தொடக்கக் கட்டத்தில் இப்போது தேவையில்லாதவற்றை எழுதாதீர்கள் — கடவுச்சீட்டு எண், அடையாள எண் அல்லது கணக்கு விவரங்கள் போன்றவை.
+
+guidanceContent.ta.pages.privacy.sections[2].heading
+    சேமிப்பு இடமும் அணுகலும்
+
+guidanceContent.ta.pages.privacy.sections[2].paragraphs[0]
+    உங்கள் அனுப்பிய உள்ளடக்கம் பொதுவில் கிடைக்காத இடத்தில் வைக்கப்படும். கோரிக்கையைக் கையாள அலுவலகத்தின் அனுமதி பெற்றவர்கள் மட்டுமே அதை அணுகலாம்.
+
+guidanceContent.ta.pages.privacy.sections[2].paragraphs[1]
+    இந்தப் பக்கம் முழுப் பாதுகாப்பை வாக்குறுதி அளிக்கவில்லை. எந்தப் பரிமாற்ற வழியும் எந்தச் சேமிப்பு இடமும் முழுமையாகப் பாதுகாப்பானதல்ல; எனவே உணர்திறன் ஆவணங்களை வழக்கறிஞரின் சிறப்பு அறிவுறுத்தலுக்குப் பிறகே அனுப்ப வேண்டும்.
+
+guidanceContent.ta.pages.privacy.sections[3].heading
+    பயன்பாட்டின் நோக்கம்
+
+guidanceContent.ta.pages.privacy.sections[3].paragraphs[0]
+    அனுப்பிய தகவல் கோரிக்கை ஆய்வு, உங்களுக்குப் பதில் தருதல், தகவல் தொடர்பு வழியைத் தீர்மானித்தல் மற்றும் பணி ஏற்கப்பட்டால் அதை நடத்துதல் ஆகியவற்றிற்குப் பயன்படும்.
+
+guidanceContent.ta.pages.privacy.sections[3].paragraphs[1]
+    தனி ஒப்புதல் இல்லாமல் இந்தத் தகவல் சந்தைப்படுத்தலுக்குப் பயன்படுத்தப்படாது.
+
+guidanceContent.ta.pages.privacy.sections[4].heading
+    அறிவிப்பும் பெறுகை எண்ணும்
+
+guidanceContent.ta.pages.privacy.sections[4].paragraphs[0]
+    கோரிக்கை வெற்றிகரமாக அனுப்பப்பட்டால் அமைப்பு அலுவலகத்திற்கு அறிவிக்கும். இந்த அறிவிப்பு இன்னும் உறுதிப்படவில்லை என்றாலும், உங்கள் உரை வைக்கப்பட்டிருக்கும்; தொலைவதில்லை.
+
+guidanceContent.ta.pages.privacy.sections[4].paragraphs[1]
+    பெறுகை எண் எங்கள் பதிவுகளில் உங்கள் கோரிக்கையைக் கண்டறிய. சேமிப்புக்குப் பிறகு அது காட்டப்படும்; புதிய தொடர்பில் அதைக் கூறலாம்.
+
+guidanceContent.ta.pages.privacy.sections[5].heading
+    உங்கள் உரிமைகளும் தொடர்பு வழியும்
+
+guidanceContent.ta.pages.privacy.sections[5].paragraphs[0]
+    தொடர்புப் பக்கத்தில் கூறிய மின்னஞ்சல் முகவரியின் வழியாக உங்கள் தனிப்பட்ட தரவின் தகவல், திருத்தம் அல்லது நீக்கத்தைக் கேட்கலாம்; ஒப்புதலைத் திரும்பப் பெறலாம். சட்ட அல்லது நடைமுறைச் சேமிப்புக் கடமை இருந்தால், எல்லையை விளக்குவோம்.
+
+guidanceContent.ta.pages.privacy.sections[5].paragraphs[1]
+    இந்தப் பக்கம் நிலையான சேமிப்புக் காலத்தைக் கூறவில்லை; உண்மையான காலம் வழக்கு தொடர்கிறதா மற்றும் அதனுடன் இணைந்த கடமைகளைப் பொறுத்தது. முந்தைய நீக்கம் வேண்டுமானால், தொடர்பில் கூறுங்கள்.
+
+guidanceContent.ta.pages.privacy.sections[6].heading
+    சேமிப்பு இடமும் சேவை வழங்குநரும்
+
+guidanceContent.ta.pages.privacy.sections[6].paragraphs[0]
+    இந்த இணையதளம் Vercel-இல் வழங்கப்படுகிறது; நீங்கள் அனுப்பிய செய்தி இந்தச் சேவையின் பொதுவல்லாத சேமிப்பில் வைக்கப்படும். மின்னஞ்சல்கள் அலுவலகம் பயன்படுத்தும் மின்னஞ்சல் சேவையின் வழியாக அனுப்பப்படும்.
+
+guidanceContent.ta.pages.privacy.sections[6].paragraphs[1]
+    சில சேவை வழங்குநர்களின் சேவையகங்கள் தைவானுக்கு வெளியே இருக்கலாம்; உங்கள் தரவு அங்கு வைக்கப்பட்டு செயலாக்கப்படலாம். சேமிப்பின் நோக்கம் நிறைவேறியதும் தரவு தாமதமின்றி அழிக்கப்படும்; பொருந்தும் விதிகளின்படி வைக்க வேண்டியவை அந்தக் காலம் வரை இருக்கும். தனிப்பட்ட தரவு தொடர்பான கோரிக்கைகள் wei@hoveringlaw.com.tw-இல் ஏற்கப்படும்.
+
+guidanceContent.ta.pages.disclaimer.eyebrow
+    மறுப்புரை
+
+guidanceContent.ta.pages.disclaimer.title
+    இந்தப் பக்கத் தகவலின் எல்லையும் வரம்புகளும்
+
+guidanceContent.ta.pages.disclaimer.description
+    தகவலின் பொதுவான தன்மை, சட்டப் பொருந்தும் எல்லை மற்றும் வழக்கறிஞர்–கட்சிக்காரர் உறவின் நிபந்தனைகள்.
+
+guidanceContent.ta.pages.disclaimer.intro
+    இந்தத் தமிழ்க் குறிப்புப் பக்கங்கள் உங்களுக்கு என்ன செய்ய முடியும், என்ன செய்ய முடியாது என்பதை இந்தப் பகுதி தெளிவுபடுத்துகிறது.
+
+guidanceContent.ta.pages.disclaimer.sections[0].heading
+    பொதுவான தகவல் மட்டுமே
+
+guidanceContent.ta.pages.disclaimer.sections[0].paragraphs[0]
+    இந்தப் பக்கங்களின் உள்ளடக்கம் பொதுவான தகவலாக எழுதப்பட்டுள்ளது. இது உங்கள் வழக்கின் சட்டக் கருத்து அல்ல; உங்கள் ஆவணங்களின் ஆய்வுக்குப் பதிலாக அமையாது.
+
+guidanceContent.ta.pages.disclaimer.sections[0].paragraphs[1]
+    ஒரு வழக்கின் முடிவு உண்மைகள், பொருந்தும் விதிகள் மற்றும் நேரத்தைப் பொறுத்தது; ஒரே மாதிரி தோன்றும் இரண்டு நிலைகளும் வேறு முடியலாம்.
+
+guidanceContent.ta.pages.disclaimer.sections[1].heading
+    சட்டப் பொருந்தும் எல்லை
+
+guidanceContent.ta.pages.disclaimer.sections[1].paragraphs[0]
+    அலுவலகம் தைவான் சட்டத்தின்படி பணி செய்கிறது; இந்தப் பக்கம் இந்தக் கட்டமைப்பில் உள்ள பணியை மட்டுமே பற்றியது.
+
+guidanceContent.ta.pages.disclaimer.sections[1].paragraphs[1]
+    உள்ளடக்கம் தைவானைத் தவிர வேறொரு சட்ட அமைப்பின் சட்டத்தின்படியான ஆலோசனை அல்ல; உங்கள் வசிப்பிடச் சட்டமும் அதில் அடங்கும். உங்கள் வழக்கின் ஒரு பகுதி வேறொரு அமைப்புடன் இணைந்தால், அந்தப் பகுதிக்கு எந்தத் தகுதியான நிபுணர் தேவை என்பதை உங்களுடன் தெளிவுபடுத்துவோம்.
+
+guidanceContent.ta.pages.disclaimer.sections[2].heading
+    வழக்கறிஞருக்கும் கட்சிக்காரருக்கும் இடையே உறவு தானாக ஏற்படாது
+
+guidanceContent.ta.pages.disclaimer.sections[2].paragraphs[0]
+    இந்தப் பக்கத்தைப் படிப்பது, படிவம் அல்லது மின்னஞ்சல் அனுப்புவது தானாக வழக்கறிஞருக்கும் கட்சிக்காரருக்கும் இடையே உறவை உருவாக்காது.
+
+guidanceContent.ta.pages.disclaimer.sections[2].paragraphs[1]
+    வழக்கு ஆய்வு செய்யப்பட்டு இரு தரப்பும் பணியை ஏற்பதை உறுதிப்படுத்திய பிறகே இந்த உறவு ஏற்படும்.
+
+guidanceContent.ta.pages.disclaimer.sections[3].heading
+    முடிவின் உறுதிமொழி இல்லை
+
+guidanceContent.ta.pages.disclaimer.sections[3].paragraphs[0]
+    இந்தப் பக்கத்தின் எந்தப் பகுதியும் ஒரு வழக்கின் முடிவு, விண்ணப்ப அங்கீகாரம் அல்லது தங்கல் மற்றும் பணி நிலை குறித்த வாக்குறுதி அல்ல.
+
+guidanceContent.ta.pages.disclaimer.sections[3].paragraphs[1]
+    வெளி இணைப்புகள் திசைக்காக; மூன்றாம் தரப்பின் உள்ளடக்கத்தின் துல்லியத்தையோ புதுப்பிப்பையோ உறுதி செய்ய மாட்டோம்.
+
+guidanceContent.ta.pages.columns.eyebrow
+    கட்டுரைகள்
+
+guidanceContent.ta.pages.columns.title
+    தைவான் சட்டம் குறித்த கட்டுரைகள்
+
+guidanceContent.ta.pages.columns.description
+    தைவான் சட்டம் தொடர்பான பொதுவான கேள்விகளுக்கான தமிழ்க் கட்டுரைகள். உள்ளடக்கம் வெளியிடப்பட்ட நேரத்தின் பொதுவான தகவல்; உங்கள் வழக்கின் சட்டக் கருத்து அல்ல.
+
+guidanceContent.ta.pages.columns.intro
+    அலுவலகம் தைவான் சட்டம் தொடர்பான பொதுவான கேள்விகளுக்குக் கட்டுரைகளை வெளியிடுகிறது. தமிழில் உள்ள கட்டுரைகள் இந்தப் பக்கத்தில் உள்ளன; உடன் நான்கு இணைப்புகள் ஒவ்வொன்றும் ஒரு மூல மொழியின் கட்டுரைப் பட்டியலைத் திறக்கும்.
+
+guidanceContent.ta.pages.columns.sections[0].heading
+    மொழி வாரியாக நான்கு பட்டியல்கள்
+
+guidanceContent.ta.pages.columns.sections[0].paragraphs[0]
+    இந்தப் பகுதியில் நான்கு இணைப்புகள் உள்ளன: கொரியன், சீனம், ஆங்கிலம் மற்றும் ஜப்பானியம் ஆகியவற்றில் கட்டுரைப் பட்டியல். ஒவ்வொரு இணைப்பும் பட்டியலின் மொழியைக் கூறுகிறது; உள்ளடக்கம் எந்த மொழியில் திறக்கும் என்பதை முன்கூட்டியே அறியலாம்.
+
+guidanceContent.ta.pages.columns.sections[0].paragraphs[1]
+    இந்த நான்கு பட்டியல்களும் கட்டுரைகளின் மூல மொழி வாரியான பட்டியல்கள்; மொழிபெயர்ப்புப் பட்டியல்கள் அல்ல. தமிழில் உள்ள கட்டுரைகள் இந்தப் பக்கத்தில் தனியாக உள்ளன.
+
+guidanceContent.ta.pages.columns.sections[1].heading
+    இணைப்புகள் எங்கு அழைத்துச் செல்கின்றன
+
+guidanceContent.ta.pages.columns.sections[1].paragraphs[0]
+    நான்கு இணைப்புகளில் ஒன்றைத் தேர்ந்தெடுத்தால் அந்த மொழியின் கட்டுரைப் பட்டியல் திறக்கும். பட்டியலிலிருந்து நீங்களே உரையைத் தேர்ந்தெடுக்கிறீர்கள்; முழு உள்ளடக்கமும் கட்டுரையின் மூல மொழியில் தோன்றும்.
+
+guidanceContent.ta.pages.columns.sections[1].paragraphs[1]
+    இந்தப் பக்கம் கட்டுரைகளின் உள்ளடக்கச் சுருக்கத்தைத் தரவில்லை; ஒரு தலைப்பு நான்கு மொழிகளிலும் உள்ளது என்றும் சொல்லவில்லை. ஒவ்வொரு பட்டியலிலும் அந்த மொழியில் வெளியிடப்பட்ட உரைகள் மட்டுமே உள்ளன.
+
+guidanceContent.ta.pages.columns.sections[2].heading
+    கட்டுரை திசையாக எவ்வளவு தூரம் பயன்படும்
+
+guidanceContent.ta.pages.columns.sections[2].paragraphs[0]
+    கட்டுரைகள் வெளியிடப்பட்ட நேரத்தின் பொதுவான தகவல். விதிகளும் அவற்றின் பயன்பாடும் மாறலாம்; எந்தக் கட்டுரையும் உங்கள் வழக்கின் அனைத்துச் சூழல்களையும் அடக்காது.
+
+guidanceContent.ta.pages.columns.sections[2].paragraphs[1]
+    எனவே உண்மையான வழக்கில் ஒரு படியைக் கட்டுரையை மட்டுமே அடிப்படையாகக் கொண்டு எடுக்காதீர்கள். மேலோட்டத்திற்குப் பயன்படுத்தி, உங்கள் ஆவணங்களை வழக்கறிஞருடன் தனியாக விவாதியுங்கள்; இந்தப் பக்கம் ஆலோசனைப் படி அல்ல.
+
+guidanceTeamCopy.ta.label
+    குழு
+
+guidanceTeamCopy.ta.title
+    Hovering-இன் பன்னாட்டுக் குழு
+
+guidanceTeamCopy.ta.description
+    Hovering வழக்கறிஞர்கள், செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் கணக்காளரின் சுயவிவரங்கள்.
+
+guidanceTeamCopy.ta.representativeTitle
+    நிர்வாக வழக்கறிஞர்
+
+guidanceTeamCopy.ta.teamTitle
+    வழக்கறிஞர்கள் மற்றும் உதவியாளர்கள்
+
+guidanceTeamCopy.ta.partnerTitle
+    கூட்டாளர் கணக்காளர்
+
+guidanceTeamCopy.ta.introLabel
+    அறிமுகம்
+
+guidanceTeamCopy.ta.educationLabel
+    கல்வி
+
+guidanceTeamCopy.ta.experienceLabel
+    அனுபவம்
+
+guidanceTeamCopy.ta.photoAltPrefix
+    புகைப்படம்
+
+guidanceTeamCopy.ta.workingLanguagesLabel
+    பணி மொழிகள்
+
+guidanceTeamCopy.ta.fullProfileLabel
+    முழு சுயவிவரம் (ஆங்கிலத்தில்)
+
+guidanceTeamCopy.ta.keyFactsHeading
+    வழக்கறிஞர் Wei Tseng — முதன்மைத் தகவல்
+
+guidanceTeamCopy.ta.qualificationLabel
+    தகுதியும் அலுவலகமும்
+
+guidanceTeamCopy.ta.qualificationSentence
+    {name} தைவானில் வழக்கறிஞர் தொழில் செய்யத் தகுதி பெற்றவர்; {firm}-இன் நிர்வாக வழக்கறிஞர் ஆவார்.
+
+guidanceTeamCopy.ta.practiceLabel
+    முதன்மைத் துறைகள்
+
+guidanceTeamCopy.ta.consultationLanguagesLabel
+    ஆலோசனை மொழிகள்
+
+guidanceTeamCopy.ta.roles.tseng-junwei
+    தைவானில் நிர்வாக வழக்கறிஞர் (Managing Attorney)
+
+guidanceTeamCopy.ta.roles.chang-rongxuan
+    தைவான் வழக்கறிஞர் (Taiwan Attorney)
+
+guidanceTeamCopy.ta.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.ta.roles.son-jungmin
+    கொரியா செயல்பாட்டு நிர்வாகம் (Korea Operations Manager)
+
+guidanceTeamCopy.ta.roles.huang-shengping
+    கூட்டாளர் கணக்காளர் (Partner CPA)
+
+guidanceTeamBios.ta.tseng-junwei.intro[0]
+    அலுவலகம் தைவானில் நிறுவனங்கள் மற்றும் தனிநபர்களின் வழக்குகளை ஆங்கிலம், ஜப்பானியம், கொரியன் மற்றும் சீனம் ஆகியவற்றில் கையாள்கிறது.
+
+guidanceTeamBios.ta.tseng-junwei.intro[1]
+    உடற்பயிற்சிக் கூடத்தில் ஏற்பட்ட காயத்திற்கான இழப்பீட்டு வழக்கில் ஒரு கொரிய மாணவரை அவர் பிரதிநிதித்துவப்படுத்தி, முதல் நிலை நீதிமன்றத்தில் TWD 1.57M வழங்கும் தீர்ப்பைப் பெற்றார்.
+
+guidanceTeamBios.ta.tseng-junwei.education[0]
+    முதுகலை (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.ta.tseng-junwei.education[1]
+    இளங்கலை (B.A.) சட்டம் மற்றும் நிதி இரட்டைப் பாதையுடன், National Chengchi University
+
+guidanceTeamBios.ta.tseng-junwei.education[2]
+    Kobe University மற்றும் Waseda University-இல் பரிமாற்ற மாணவி
+
+guidanceTeamBios.ta.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.ta.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.ta.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.ta.chang-rongxuan.intro[0]
+    முன்பு Ministry of Education, Legal Affairs Division-இல், நிர்வாக மற்றும் உரிமையியல் வழக்குகளில் கவனத்துடன்.
+
+guidanceTeamBios.ta.chang-rongxuan.intro[1]
+    பல்கலைக்கழகங்கள், கற்பித்தல் பணியாளர்களின் உரிமைகள் மற்றும் நிர்வாக மேல்முறையீடுகள் தொடர்பான வழக்குகளில் அனுபவம்.
+
+guidanceTeamBios.ta.chang-rongxuan.education[0]
+    சட்ட இளங்கலை (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.ta.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.ta.chang-rongxuan.experience[1]
+    வழக்கறிஞர், Hovering International Law Firm
+
+guidanceTeamBios.ta.chang-fangyu.intro[0]
+    பல அலுவலகங்களில் மூத்த paralegal ஆக நீண்ட காலம் பணி செய்த சட்ட உதவியாளர்; நடைமுறை உதவி, நிறுவனச் சட்டம் மற்றும் வெளிநாட்டு முதலீட்டுக்குப் பொறுப்பு.
+
+guidanceTeamBios.ta.chang-fangyu.intro[1]
+    நடவடிக்கைகள், நிறுவனம் அமைத்தல், வெளிநாட்டு முதலீட்டு அனுமதி, உரிம விண்ணப்பங்கள் மற்றும் கொரியா–தைவான் பரிமாற்றத்தில் உதவி.
+
+guidanceTeamBios.ta.chang-fangyu.education[0]
+    சட்ட இளங்கலை (LL.B.), Tunghai University
+
+guidanceTeamBios.ta.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.ta.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.ta.son-jungmin.intro[0]
+    கொரியாவிலிருந்து வரும் கட்சிக்காரர்களின் ஆலோசனை நேரத்தையும் தகவல் தொடர்பையும் ஒருங்கிணைக்கிறார்.
+
+guidanceTeamBios.ta.son-jungmin.intro[1]
+    கணினி அறிவியல் அடிப்படையில் ஆவண அமைப்புகள் மற்றும் பணி ஓட்டம் மூலம் பிரிவுகளுக்கு இடையே பரிமாற்றத்தை ஆதரிக்கிறார்.
+
+guidanceTeamBios.ta.son-jungmin.education[0]
+    இளங்கலை (B.S.) கணினி அறிவியல், National Cheng Kung University
+
+guidanceTeamBios.ta.son-jungmin.experience[0]
+    கொரியா செயல்பாட்டுப் பிரிவு, Hovering International Law Firm
+
+guidanceTeamBios.ta.huang-shengping.intro[0]
+    National Chengchi University-இல் கணக்கியல் இளங்கலை மற்றும் முதுகலைத் திட்டங்களை முடித்து, தற்போது ஒரு கணக்கியல் அலுவலகத்தை நடத்துகிறார்.
+
+guidanceTeamBios.ta.huang-shengping.intro[1]
+    நிறுவனக் கட்சிக்காரர்களுக்குச் சட்ட, வரி மற்றும் நிதி அபாயங்களின் ஒருங்கிணைந்த பகுப்பாய்வை ஆதரிக்கிறார்.
+
+guidanceTeamBios.ta.huang-shengping.education[0]
+    முதுகலை (M.A.) கணக்கியல், National Chengchi University
+
+guidanceTeamBios.ta.huang-shengping.education[1]
+    இளங்கலை (B.A.) கணக்கியல், National Chengchi University
+
+guidanceTeamBios.ta.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.ta.Korean
+    கொரியன்
+
+guidanceLanguageNames.ta.Chinese
+    சீனம்
+
+guidanceLanguageNames.ta.Japanese
+    ஜப்பானியம்
+
+guidancePracticeAreaNames.ta.Taiwan company setup
+    தைவானில் நிறுவனம் அமைத்தல்
+
+guidancePracticeAreaNames.ta.Taiwan investment counsel
+    தைவான் முதலீட்டுச் சட்ட ஆலோசனை
+
+guidancePracticeAreaNames.ta.Civil litigation and damages
+    உரிமையியல் வழக்குகளும் இழப்பீடும்
+
+guidancePracticeAreaNames.ta.Trademark and patent filings
+    வணிகச் சின்னம் மற்றும் காப்புரிமை விண்ணப்பங்கள்
+
+guidancePracticeAreaNames.ta.Visa and residency
+    விசா மற்றும் தங்கல்
+
+guidancePracticeAreaNames.ta.Family and labor disputes
+    குடும்ப மற்றும் தொழிலாளர் தகராறுகள்
+
+guidanceOfficeCopy.ta.label
+    அலுவலகங்கள்
+
+guidanceOfficeCopy.ta.title
+    அலுவலகங்கள்
+
+guidanceOfficeCopy.ta.description
+    Hovering International Law Firm-இன் தைவான் அலுவலகங்களின் முகவரிகள்.
+
+guidanceOfficeCopy.ta.officeLabel
+    அலுவலகம்
+
+guidanceOfficeCopy.ta.mapPreviewLabel
+    வரைபட முன்னோட்டம்
+
+guidanceOfficeCopy.ta.koreaOfficeTitle
+    கொரியா அலுவலகம்
+
+guidanceOfficeCopy.ta.koreaAddressCardLabel
+    கொரியா அலுவலக முகவரி
+
+guidanceOfficeCopy.ta.koreaMapLinkLabel
+    Naver Map-இல் காண்க
+
+guidanceOfficeCopy.ta.reviewCountWord
+    மதிப்புரைகள்
+
+guidanceOfficeCopy.ta.phoneLabel
+    தொலைபேசி
+
+guidanceOfficeCopy.ta.faxLabel
+    தொலைநகல்
+
+guidanceOfficeCopy.ta.mapLinkLabel
+    வரைபடத்தில் காண்க
+
+guidanceOfficeCopy.ta.photoAlts[0]
+    தைப்பே அலுவலக வரவேற்பு அறை, Hovering International Law Firm
+
+guidanceOfficeCopy.ta.photoAlts[1]
+    தைப்பே அலுவலகத்தில் வழக்கறிஞர் அறை, Hovering International Law Firm
+
+guidanceOfficeCopy.ta.photoAlts[2]
+    தைப்பே அலுவலகக் கூட்ட அறை, Hovering International Law Firm
+
+guidanceOfficeCopy.ta.officeTitles.taipei
+    தைப்பே
+
+guidanceOfficeCopy.ta.officeTitles.taichung
+    தைச்சுங்
+
+guidanceOfficeCopy.ta.officeTitles.kaohsiung
+    காவோசியூங்
+
+guidanceOfficeCopy.ta.officeTitles.pingtung
+    பிங்துங்
+
+guidanceFooterCopy.ta.officeLabel
+    அலுவலகம்
+
+guidanceFooterCopy.ta.officeQuickLinksLabel
+    அலுவலகங்களுக்கான விரைவு இணைப்புகள்
+
+guidanceFooterCopy.ta.followLabel
+    பின்தொடரவும்
+
+guidanceFooterCopy.ta.blogLabel
+    வலைப்பதிவு
+
+guidanceFooterCopy.ta.websiteLabel
+    அதிகாரப்பூர்வ இணையதளம்
+
+guidanceFooterCopy.ta.sitemapLabel
+    தள வரைபடம்
+
+guidanceFooterCopy.ta.copyEmailLabel
+    மின்னஞ்சல் முகவரியை நகலெடுக்கவும்
+
+guidanceFooterCopy.ta.emailCopiedMessage
+    மின்னஞ்சல் முகவரி நகலெடுக்கப்பட்டது.
+
+guidanceFooterCopy.ta.officialConsultationEmailLabel
+    ஆலோசனைக்கான அதிகாரப்பூர்வ மின்னஞ்சல்
+
+internationalInquiryCopy.ta.guidanceNotice
+    இந்தப் பக்கம் தமிழில் பொதுவான தகவலாக எழுதப்பட்டுள்ளது; உங்கள் வழக்கின் சட்டக் கருத்தாக அல்ல.
+
+internationalInquiryCopy.ta.consultationNotice
+    ஆலோசனை நான்கு மொழிகளில் நடைபெறும்: ஆங்கிலம், சீனம் (中文), ஜப்பானியம் மற்றும் கொரியன்.
+
+internationalInquiryCopy.ta.methodConfirmationNotice
+    நான்கு மொழிகளில் எதையும் பயன்படுத்த முடியாவிட்டால், “தகவல் தொடர்பு வழியை உறுதிப்படுத்த வேண்டும்” என்பதைத் தேர்ந்தெடுங்கள். சாத்தியமான தகவல் தொடர்பு வழி உள்ளதா என்று ஆய்வு செய்ய நாங்கள் பதிலளிக்கிறோம்; பிற மொழியில் சேவை உறுதி செய்யப்படவில்லை, பதிலளிக்கும் காலக்கெடும் வாக்குறுதி அல்ல.
+
+internationalInquiryCopy.ta.preparationNotice
+    சுருக்கத்தை உங்கள் மொழியில் எழுதலாம். மூல உரை நீங்கள் எழுதியபடியே வைக்கப்படும்; தானியங்கியாக மொழிபெயர்க்கப்படாது.
+
+internationalInquiryCopy.ta.heading
+    ஆலோசனைக் கோரிக்கை அனுப்பவும்
+
+internationalInquiryCopy.ta.intro
+    உங்கள் வழக்கைச் சுருக்கமாக விவரியுங்கள். அடுத்த படி குறித்துப் பேசுவதற்கு முன் வழக்கறிஞர் உள்ளடக்கத்தை ஆய்வு செய்கிறார்.
+
+internationalInquiryCopy.ta.submitLabel
+    கோரிக்கையை அனுப்பவும்
+
+internationalInquiryCopy.ta.submittingLabel
+    அனுப்பப்படுகிறது…
+
+internationalInquiryCopy.ta.successMessage
+    உங்கள் கோரிக்கையைப் பெற்றுள்ளோம்; அது ஆய்வுக்காகக் காத்திருக்கிறது. ஆலோசனை முடிந்துவிட்டது அல்லது சந்திப்பு உறுதிப்பட்டது என்று இதற்குப் பொருளல்ல.
+
+internationalInquiryCopy.ta.savedNotificationPendingMessage
+    உங்கள் கோரிக்கை பாதுகாக்கப்பட்டுள்ளது, ஆனால் அலுவலகத்திற்கு அறிவிப்பு இன்னும் உறுதிப்படவில்லை. நீங்கள் எழுதியது தொலைவதில்லை. பதில் வராவிட்டால், தொடர்புப் பக்கத்தின் மின்னஞ்சல் முகவரியிலும் எழுதலாம்.
+
+internationalInquiryCopy.ta.receiptIdLabel
+    பெறுகை எண்
+
+internationalInquiryCopy.ta.failureMessage
+    உங்கள் கோரிக்கையை அனுப்ப முடியவில்லை. மீண்டும் முயலுங்கள் அல்லது தொடர்புப் பக்கத்தின் மின்னஞ்சல் முகவரியில் எழுதுங்கள்.
+
+internationalInquiryCopy.ta.originalLanguageLabel
+    நீங்கள் எழுதும் மொழி
+
+internationalInquiryCopy.ta.originalLanguagePlaceholder
+    எடுத்துக்காட்டாகத் தமிழ், ஆங்கிலம், சீனம் அல்லது வேறொரு மொழி
+
+internationalInquiryCopy.ta.preferredConsultationLanguageLabel
+    ஆலோசனைக்கு விரும்பும் மொழி
+
+internationalInquiryCopy.ta.originalTextLabel
+    வழக்கின் சுருக்க விவரம் (உங்கள் மொழியில்)
+
+internationalInquiryCopy.ta.originalTextPlaceholder
+    என்ன நடந்தது, எந்த உதவி தேவை, காலக்கெடு இருந்தால் அதைக் கூறுங்கள். கடவுச்சீட்டு எண், அடையாள எண் அல்லது கணக்கு விவரங்கள் எழுதாதீர்கள்.
+
+internationalInquiryCopy.ta.nameLabel
+    பெயர்
+
+internationalInquiryCopy.ta.emailLabel
+    மின்னஞ்சல்
+
+internationalInquiryCopy.ta.consentLabel
+    தனியுரிமைப் பக்கத்தைப் படித்துள்ளேன்; இந்தக் கோரிக்கையை அனுப்ப ஒப்புதல் அளிக்கிறேன்.
+
+internationalInquiryCopy.ta.privacyLinkLabel
+    தனியுரிமை
+
+internationalInquiryCopy.ta.requiredMessage
+    இந்தப் புலம் தேவை.
+
+internationalInquiryCopy.ta.invalidEmailMessage
+    செல்லுபடியான மின்னஞ்சல் முகவரியைத் தரவும்.
+
+internationalInquiryCopy.ta.tooLongMessage
+    உரை மிக நீளம். சுருக்கி மீண்டும் அனுப்புங்கள்.
+
+internationalInquiryCopy.ta.sourceLanguageNotice
+    இந்தக் கட்டுரை {language} மொழியில் மட்டுமே வெளியிடப்பட்டுள்ளது; இணைப்பு மூலப் பக்கத்தைத் திறக்கும்.
+
+internationalInquiryCopy.ta.unavailableTranslationNotice
+    இந்தப் புள்ளி இந்தப் பக்கத்தின் மொழியில் இன்னும் இல்லை. மூல மொழி இணைப்பு மூல உரையைத் திறக்கும்.
+
+internationalInquiryCopy.ta.unavailableLanguageNotice
+    இந்தப் பக்கம் {language} மொழியில் இல்லை.
+
+internationalInquiryCopy.ta.languageOptions.en
+    ஆங்கிலம் (English)
+
+internationalInquiryCopy.ta.languageOptions.zh-hant
+    சீனம் (中文)
+
+internationalInquiryCopy.ta.languageOptions.ja
+    ஜப்பானியம் (日本語)
+
+internationalInquiryCopy.ta.languageOptions.ko
+    கொரியன் (한국어)
+
+internationalInquiryCopy.ta.languageOptions.needs-method-confirmation
+    நான்கு மொழிகளில் எதுவும் பயன்படவில்லை — தகவல் தொடர்பு வழியை உறுதிப்படுத்த வேண்டும்
+
+guidanceAnswers.ta.services.answer
+    அலுவலகம் தைவான் சட்டத்தின்படி ஆறு பணித்துறைகளில் சேவை செய்கிறது: முதலீடு மற்றும் நிறுவனம் அமைத்தல், உரிமையியல் தகராறுகள் மற்றும் இழப்பீடு, திருமணம், குடும்பம் மற்றும் வாரிசுரிமை, தொழிலாளர், குற்றவியல் மற்றும் அறிவுசார் சொத்து. ஒவ்வொரு வழக்கின் எல்லையும் நீங்கள் அனுப்பும் உள்ளடக்கத்தை வழக்கறிஞர் ஆய்வு செய்த பிறகு தனித்தனியாக உறுதிப்படுகிறது. ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றிலேயே நடைபெறும்.
+
+guidanceAnswers.ta.services.sources[0]
+    /ta/faq
+
+guidanceAnswers.ta.services.sources[1]
+    /ta/contact
+
+guidanceAnswers.ta.about.answer
+    Hovering International Law Firm தைவானின் ஒரு சட்ட அலுவலகம்; 2016-இல் National Taiwan University (國立臺灣大學) பட்டதாரிகளால் நிறுவப்பட்டது; தைப்பே, காவோசியூங், தைச்சுங் மற்றும் பிங்துங் அலுவலகங்களுடன். 2020 முதல் கணக்கியல் பிரிவு உள்ளது; தைச்சுங் அலுவலகம் கொரியா மற்றும் ஜப்பான் தொடர்பான வழக்குகளைக் கையாளுகிறது. அலுவலகம் முடிவை உறுதி செய்வதில்லை. ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றிலேயே நடைபெறும்.
+
+guidanceAnswers.ta.about.sources[0]
+    /ta/lawyers
+
+guidanceAnswers.ta.about.sources[1]
+    /ta/services
+
+guidanceAnswers.ta.lawyers.answer
+    இந்தப் பக்கம் Hovering வழக்கறிஞர்கள், செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் கணக்காளரின் சுயவிவரங்களைக் காட்டுகிறது. வழக்கறிஞர் Wei Tseng (曾雋崴) தைவானில் தகுதி பெற்றவர் மற்றும் அலுவலகத்தின் நிர்வாக வழக்கறிஞர்; அவர் கொரியா, ஜப்பான் மற்றும் பிற பன்னாட்டுக் கட்சிக்காரர்களுடன் பணி செய்கிறார். வழக்கறிஞருடனான ஆலோசனை ஆங்கிலம், சீனம் (中文), ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றில் மட்டுமே நடைபெறும்; பிற மொழிகளில் ஆலோசனை வழங்கப்படுவதில்லை.
+
+guidanceAnswers.ta.lawyers.sources[0]
+    /ta/about
+
+guidanceAnswers.ta.lawyers.sources[1]
+    /ta/contact
+
+guidanceAnswers.ta.pricing.answer
+    இந்தப் பக்கம் விலைப் பட்டியலை வெளியிடவில்லை. முதலில் நீங்கள் அனுப்பும் சுருக்கத்திலிருந்து பணி எல்லை தீர்மானிக்கப்படுகிறது; பிறகு செலவின் தொகையும் கணக்கீட்டு முறையும் பணி தொடங்கும் முன் உங்களுடன் உறுதிப்படுத்தப்படும். வழக்கறிஞருடனான உரையாடல் கட்டணச் சேவையாக இருக்கலாம்; வழக்கறிஞர் கட்டணத்திற்கு அப்பால் நீதிமன்றம் அல்லது அதிகார அமைப்பின் செலவுகளும் வரலாம். ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றிலேயே நடைபெறும்.
+
+guidanceAnswers.ta.pricing.sources[0]
+    /ta/contact
+
+guidanceAnswers.ta.pricing.sources[1]
+    /ta/faq
+
+guidanceAnswers.ta.contact.answer
+    தொடர்புப் படிவத்தின் வழியாக உங்கள் சுருக்கத்தை அனுப்புங்கள்: என்ன நடந்தது, எந்த உதவி தேவை, வழக்கிற்கும் தைவானுக்கும் உள்ள தொடர்பு, தெரிந்தால் காலக்கெடு. தொடக்கத்தில் அடையாள ஆவணங்கள் அல்லது முழுச் சான்றையும் அனுப்ப வேண்டியதில்லை. அலுவலகம் பதிலளிக்கும் காலக்கெடுவை வாக்குறுதி அளிக்கவில்லை; இந்தப் பக்கத்திலிருந்து சந்திப்பையும் உறுதிப்படுத்தவில்லை. ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றிலேயே நடைபெறும்.
+
+guidanceAnswers.ta.contact.sources[0]
+    /ta/faq
+
+guidanceAnswers.ta.contact.sources[1]
+    /ta/pricing
+
+guidanceAnswers.ta.faq.answer
+    இந்தப் பகுதி பொதுவான தகவல் மட்டத்தில் அடிக்கடி கேட்கப்படும் கேள்விகளுக்குப் பதில் தருகிறது: ஆறு பணிக் குழுக்கள், தொடர்புக்கு முன் தயாரிப்பு, செலவு தீர்மானிக்கப்படும் முறை மற்றும் அனுப்பிய செய்தியின் பொருள். அனுப்பிய கோரிக்கை வழக்கறிஞரின் ஆய்வுக்காகக் காத்திருக்கிறது; இது சட்டக் கருத்து அல்ல, உறுதிப்படுத்தப்பட்ட சந்திப்பு அல்ல, வழக்கறிஞருக்கும் கட்சிக்காரருக்கும் இடையே உறவையும் உருவாக்காது. ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றிலேயே நடைபெறும்.
+
+guidanceAnswers.ta.faq.sources[0]
+    /ta/contact
+
+guidanceAnswers.ta.faq.sources[1]
+    /ta/services
+
+GUIDANCE_LLMS_NOTICES.ta.consultationNotice
+    இந்தப் பக்கங்கள் தமிழில் எழுதப்பட்டுள்ளன; ஆனால் வழக்கறிஞரின் ஆலோசனை ஆங்கிலம், சீனம் (中文), ஜப்பானியம் மற்றும் கொரியன் ஆகியவற்றிலேயே நடைபெறும்.
+
+GUIDANCE_LLMS_NOTICES.ta.discoveryNotice
+    llms.txt கோப்பு பொதுப் பக்கங்களைக் கண்டறிய உதவும் வரைபடம் மட்டுமே; தேடல் வரிசை, ஆதரவு, செயற்கை நுண்ணறிவு பரிந்துரை அல்லது காட்சிப்படுத்தலை வாக்குறுதி அளிக்காது.
+
+GUIDANCE_LLMS_NOTICES.ta.confidentialNotice
+    மூல உரை வைக்கப்படுவதால், தொடக்கக் கட்டத்தில் இப்போது தேவையில்லாதவற்றை எழுதாதீர்கள் — கடவுச்சீட்டு எண், அடையாள எண் அல்லது கணக்கு விவரங்கள் போன்றவை.

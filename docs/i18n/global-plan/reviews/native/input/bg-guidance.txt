@@ -1,0 +1,1096 @@
+# bg guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.bg.languageName
+    Български
+
+guidanceContent.bg.nav.home
+    Начало
+
+guidanceContent.bg.nav.services
+    Направления
+
+guidanceContent.bg.nav.about
+    Кантората
+
+guidanceContent.bg.nav.lawyers
+    Екипът
+
+guidanceContent.bg.nav.pricing
+    Обхват и цена
+
+guidanceContent.bg.nav.contact
+    Контакт
+
+guidanceContent.bg.nav.faq
+    Въпроси
+
+guidanceContent.bg.nav.privacy
+    Поверителност
+
+guidanceContent.bg.nav.disclaimer
+    Уговорки
+
+guidanceContent.bg.nav.columns
+    Статии
+
+guidanceContent.bg.contactCta
+    Изпратете запитване за консултация
+
+guidanceContent.bg.footerNotice
+    Тази страница на български съдържа само общи сведения за работата на кантората по тайванско право. Тя не е правна консултация по конкретно дело и самото изпращане на съобщение не създава отношения между адвокатка или адвокат и клиент.
+
+guidanceContent.bg.skipLink
+    Прескочете навигацията и преминете към съдържанието
+
+guidanceContent.bg.menuLabel
+    Страници
+
+guidanceContent.bg.languageLabel
+    Език на показване
+
+guidanceContent.bg.mega.services.description
+    Кантората води основните направления по тайванско право.
+
+guidanceContent.bg.mega.services.viewAllLabel
+    Покажи всички
+
+guidanceContent.bg.mega.columns.description
+    Статии по чести въпроси на тайванското право.
+
+guidanceContent.bg.mega.columns.viewAllLabel
+    Покажи всички
+
+guidanceContent.bg.mega.lawyers.description
+    Представяне на адвокатките и адвокатите и на начините за връзка.
+
+guidanceContent.bg.mega.lawyers.viewAllLabel
+    Покажи всички
+
+guidanceContent.bg.mega.pricing.description
+    Тази страница обяснява обхвата на работата и начина, по който се определя възнаграждението.
+
+guidanceContent.bg.mega.pricing.viewAllLabel
+    Покажи всички
+
+guidanceContent.bg.mega.faq.description
+    Чести въпроси за работата на кантората в Тайван.
+
+guidanceContent.bg.mega.faq.viewAllLabel
+    Покажи всички
+
+guidanceContent.bg.notFoundTitle
+    Страницата не е намерена
+
+guidanceContent.bg.notFoundText
+    Търсената страница не съществува или е преместена. Можете да се върнете на българската начална страница, за да видите наличните сведения.
+
+guidanceContent.bg.backHomeLabel
+    Към началото
+
+guidanceContent.bg.readSourceLabel
+    Отворете списъка със статии на езика на оригинала
+
+guidanceContent.bg.home.heroScrollLabel
+    Превъртете надолу
+
+guidanceContent.bg.home.heroColumnsCtaLabel
+    Вижте статиите
+
+guidanceContent.bg.home.servicesDetailLabel
+    Вижте подробности
+
+guidanceContent.bg.home.servicesAssistanceBefore
+    Ако не е ясно към кое направление спада въпросът Ви, страницата 
+
+guidanceContent.bg.home.servicesAssistanceLinkLabel
+    Контакт
+
+guidanceContent.bg.home.servicesAssistanceAfter
+     обяснява как да съставите кратко изложение, което адвокатка или адвокат ще прегледа.
+
+guidanceContent.bg.home.columnsViewAllLabel
+    Вижте всички статии
+
+guidanceContent.bg.home.columnsReadMoreLabel
+    Прочети още
+
+guidanceContent.bg.home.columnsReviewLabel
+    Проверено от адвокатка Wei Tseng (曾雋崴)
+
+guidanceContent.bg.home.columnsOriginalLanguageBadge
+    Език на оригинала
+
+guidanceContent.bg.home.columnsOriginalLanguageNote
+    Следните статии още не са подготвени на български. Списъкът остава на езика на оригинала и отваря съответната езикова страница; съдържанието не се превежда автоматично.
+
+guidanceContent.bg.home.imageBandAlt
+    Традиционен тайвански санхеюан (三合院) и съвременен павилион при дневна светлина
+
+guidanceContent.bg.home.videoPauseLabel
+    Пауза на видеото
+
+guidanceContent.bg.home.videoPlayLabel
+    Пуснете видеото
+
+guidanceContent.bg.home.videoReplayLabel
+    Пуснете видеото отново
+
+guidanceContent.bg.pages.home.eyebrow
+    СВЕДЕНИЯ
+
+guidanceContent.bg.pages.home.title
+    Правни услуги в Тайван — сведения на български
+
+guidanceContent.bg.pages.home.description
+    Общи пояснения на български за сферата на работа на Hovering International Law Firm в Тайван, за езиците на консултация и за първото обръщение.
+
+guidanceContent.bg.pages.home.intro
+    Hovering International Law Firm съпровожда клиенти от чужбина, включително свързани с Тайван, в дела по тайванско право: инвестиции и учредяване на дружества, граждански спорове, брак, семейство и наследство, трудово право, наказателни дела и интелектуална собственост. Този български раздел помага да се разбере коя работа влиза в нашата сфера, какво да подготвите и как да се свържете с нас. Това са общи сведения, а не правна консултация по Вашето дело.
+
+guidanceContent.bg.pages.home.sections[0].heading
+    С какво се занимаваме
+
+guidanceContent.bg.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm е адвокатска кантора, учредена в Тайван. Работи по тайванско право и има офиси в градовете Тайпе (臺北), Гаосюн (高雄), Тайджун (臺中) и Пиндун (屏東). Консултираме дружества, водим дела в съд и съпровождаме клиенти от чужбина през стъпките, необходими в Тайван.
+
+guidanceContent.bg.pages.home.sections[0].paragraphs[1]
+    Цялото съдържание тук е с общ характер. Изходът на делото зависи от фактите, приложимите норми и момента във времето. Тези сведения не заместват разговор с адвокатка или адвокат върху Вашите документи.
+
+guidanceContent.bg.pages.home.sections[1].heading
+    Езикът на страницата и езикът на консултацията не са едно и също
+
+guidanceContent.bg.pages.home.sections[1].paragraphs[0]
+    Тази страница е написана на български, но консултацията с адвокатка или адвокат се провежда само на четирите езика за консултация: английски, китайски (中文), японски и корейски. Четенето на българските сведения не означава, че разговорът с адвокатката или адвоката ще се проведе на български.
+
+guidanceContent.bg.pages.home.sections[1].paragraphs[1]
+    Не обещаваме преводач, срок за отговор и среща чрез тази страница. Ако не можете да ползвате нито един от четирите езика, страницата „Контакт“ обяснява как разглеждаме начина на връзка.
+
+guidanceContent.bg.pages.home.sections[2].heading
+    Направления на работа
+
+guidanceContent.bg.pages.home.sections[2].paragraphs[0]
+    Сферата на работа включва следните шест направления. Страницата „Направления“ описва всяко от тях по-подробно и посочва какво не се обещава.
+
+guidanceContent.bg.pages.home.sections[2].items[0]
+    Инвестиции и учредяване на дружество в Тайван
+
+guidanceContent.bg.pages.home.sections[2].items[1]
+    Граждански дела и обезщетение за вреди
+
+guidanceContent.bg.pages.home.sections[2].items[2]
+    Брак, семейство и наследство
+
+guidanceContent.bg.pages.home.sections[2].items[3]
+    Трудови спорове
+
+guidanceContent.bg.pages.home.sections[2].items[4]
+    Наказателни дела
+
+guidanceContent.bg.pages.home.sections[2].items[5]
+    Интелектуална собственост: търговски марки, патенти и авторско право
+
+guidanceContent.bg.pages.home.sections[3].heading
+    Откъде да започнете
+
+guidanceContent.bg.pages.home.sections[3].paragraphs[0]
+    Прочетете страницата „Направления“, за да проверите дали въпросът Ви влиза в нашата сфера, след това „Обхват и цена“ и „Контакт“, за да научите как се определя обхватът и как възнаграждението се потвърждава преди началото на работата.
+
+guidanceContent.bg.pages.home.sections[3].paragraphs[1]
+    При изпращане на съобщение можете да напишете кратко изложение на своя език. Изходният текст се запазва така, както сте го написали, и не се превежда автоматично. Изпратеното съобщение е запитване, което чака преглед: това още не е консултация и още не е потвърдена среща.
+
+guidanceContent.bg.pages.services.eyebrow
+    НАПРАВЛЕНИЯ
+
+guidanceContent.bg.pages.services.title
+    Какви дела водим
+
+guidanceContent.bg.pages.services.description
+    Шест направления на работа на кантората в Тайван и границите, които трябва да знаете най-напред.
+
+guidanceContent.bg.pages.services.intro
+    По-долу са направленията, които действително водим, и въпроси, които често се задават в началния етап. Изложението помага да прецените дали въпросът Ви влиза в нашата сфера; то е с общ характер и не е правен разбор на отделно дело.
+
+guidanceContent.bg.pages.services.sections[0].heading
+    Инвестиции и учредяване на дружество в Тайван
+
+guidanceContent.bg.pages.services.sections[0].paragraphs[0]
+    Съпровождаме чуждестранни инвеститори и дружества при учредяване или водене на дружество в Тайван: избор на правна форма, подготовка и подаване на документи, внасяне на капитал, банкови въпроси, проверка на мястото на дейност и отраслови изисквания. Помагаме също със счетоводство и данъци, които възникват от учредяването и дейността в Тайван.
+
+guidanceContent.bg.pages.services.sections[0].paragraphs[1]
+    Редът и сроковете се различават според правната форма, инвеститора, отрасъла, банката и наличните документи. Учредяването на дружество само по себе си не води до разрешение за пребиваване (居留) или разрешение за работа (工作許可): това са отделни процедури, които се преценяват според положението на конкретното лице.
+
+guidanceContent.bg.pages.services.sections[1].heading
+    Граждански дела и обезщетение за вреди
+
+guidanceContent.bg.pages.services.sections[1].paragraphs[0]
+    Това направление включва договорни спорове, обезщетение за вреди от деликт и потребителски спорове. Работата обикновено започва с хронология, проверка на наличните документи и доказателства и едва след това — със следващите стъпки.
+
+guidanceContent.bg.pages.services.sections[1].paragraphs[1]
+    Сроковете, включително законните срокове за предявяване на иск, и пълнотата на доказателствата оформят хода на делото. Затова известните дати следва да се посочат възможно най-рано. Пазете договори, съобщения, платежни документи или снимки на обстановката на място и ги споменете в първото съобщение.
+
+guidanceContent.bg.pages.services.sections[2].heading
+    Брак, семейство и наследство
+
+guidanceContent.bg.pages.services.sections[2].paragraphs[0]
+    Водим развод (離婚), делба на имущество, упражняване и носене на правата и задълженията спрямо ненавършили пълнолетие деца (未成年子女權利義務之行使或負擔), контакти (會面交往) и наследяване (繼承), включително когато страните или имуществото се намират в различни държави. Трансграничните семейни дела често изискват допълнителна проверка на документите за регистрация по местоживеене (戶籍), на формата на актовете и на доказателствената им сила в Тайван.
+
+guidanceContent.bg.pages.services.sections[2].paragraphs[1]
+    Тъй като семейните дела често са свързани със срокове и успоредни процедури, първото кратко изложение трябва да посочи отношенията между страните, настоящото местоживеене и вече започналите процедури.
+
+guidanceContent.bg.pages.services.sections[3].heading
+    Трудови спорове
+
+guidanceContent.bg.pages.services.sections[3].paragraphs[0]
+    Това направление включва прекратяване на трудовите отношения, законно обезщетение при освобождаване по тайванско право (資遣費; то не следва да се отъждествява с институтите на други държави), трудово възнаграждение и спорове от трудовия договор (勞動契約) — както на страна на работника, така и на страна на работодателя. При прегледа отделяме основанието за прекратяване от въпросите за предизвестие, плащане и срокове.
+
+guidanceContent.bg.pages.services.sections[3].paragraphs[1]
+    Трудовият договор, вътрешният трудов правилник (工作規則), фишовете за заплата и кореспонденцията между страните обикновено са решаващите документи. Ако все още ги имате, споменете това в краткото изложение.
+
+guidanceContent.bg.pages.services.sections[4].heading
+    Наказателни дела
+
+guidanceContent.bg.pages.services.sections[4].paragraphs[0]
+    Представляваме заподозрени, обвиняеми и пострадали в разследването и пред съда и преценяваме наказателните рискове на стопанската дейност.
+
+guidanceContent.bg.pages.services.sections[4].paragraphs[1]
+    При наказателните дела често има кратки срокове и установени стадии. Ако вече сте получили писмо от орган на наказателното преследване или от съд, посочете датата върху писмото възможно най-рано, за да се прегледа съдържанието в верния ред.
+
+guidanceContent.bg.pages.services.sections[5].heading
+    Интелектуална собственост
+
+guidanceContent.bg.pages.services.sections[5].paragraphs[0]
+    Помагаме при регистрация на търговски марки (商標) и патенти (專利), при авторско право и при спорове за тези права в Тайван.
+
+guidanceContent.bg.pages.services.sections[5].paragraphs[1]
+    В това направление е важен редът на стъпките: обхватът на закрилата, моментът на подаване и фактическото използване влияят върху избора. Подаването на заявление само по себе си не означава, че то ще бъде уважено.
+
+guidanceContent.bg.pages.services.sections[6].heading
+    Обхватът и неговото потвърждение
+
+guidanceContent.bg.pages.services.sections[6].paragraphs[0]
+    Кантората работи по тайванско право и води дела от посочените направления. Обхватът на всяко дело се потвърждава отделно, след като адвокатка или адвокат прегледа съобщението Ви.
+
+guidanceContent.bg.pages.services.sections[6].paragraphs[1]
+    Статусът на пребиваване, разрешението за работа и сходни въпроси се преценяват по документите и положението на конкретното лице, а не по гражданството. Ако част от въпроса Ви засяга такива теми, посочете това при обръщението. Тази страница не обещава нито резултат, нито срок за отговор.
+
+guidanceContent.bg.pages.about.eyebrow
+    КАНТОРАТА
+
+guidanceContent.bg.pages.about.title
+    За Hovering International Law Firm
+
+guidanceContent.bg.pages.about.description
+    Основни сведения за тази тайванска адвокатска кантора, нейните офиси и работата с чуждестранни участници.
+
+guidanceContent.bg.pages.about.intro
+    Hovering International Law Firm е адвокатска кантора в Тайван. Адвокатките и адвокатите водят работа от консултиране на дружества до съдебни производства. Този раздел описва възникването на кантората, местата и работата с чуждестранни участници.
+
+guidanceContent.bg.pages.about.sections[0].heading
+    Основаване и структура
+
+guidanceContent.bg.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) е основана през 2016 г. от адвокатки и адвокати, учили в National Taiwan University (國立臺灣大學). Китайското име 昊鼎 свързва знака 昊 („широко небе“) със знака 鼎 („здрава основа“) и описва насоката на кантората от основаването.
+
+guidanceContent.bg.pages.about.sections[0].paragraphs[1]
+    Имаме офиси в градовете Тайпе (臺北), Гаосюн (高雄), Тайджун (臺中) и Пиндун (屏東). Офисът в Гаосюн е съсредоточен върху корпоративната практика и води граждански, наказателни и административни спорове. Офисът в Тайджун води строителни дела, интелектуална собственост и дела, свързани с Корея и Япония. Офисът в Пиндун е открит през 2017 г. за местните нужди.
+
+guidanceContent.bg.pages.about.sections[0].paragraphs[2]
+    Освен адвокатската работа от 2020 г. съществува и Hovering Accounting Office, което предлага счетоводство и данъчно планиране на предприемачи и на състоятелни частни лица.
+
+guidanceContent.bg.pages.about.sections[1].heading
+    Работа с чуждестранни участници
+
+guidanceContent.bg.pages.about.sections[1].paragraphs[0]
+    Трансграничната работа включва учредяване на дружества, визи, подаване на заявки за търговски марки и патенти, проверка на правни рискове и данъчно консултиране на дружества. Офисът в Тайджун особено води строителни дела, интелектуална собственост и дела, свързани с Корея и Япония. Адвокатка Wei Tseng (曾雋崴) съпровожда клиенти от Корея, Япония и други международни клиенти в посочените направления.
+
+guidanceContent.bg.pages.about.sections[1].paragraphs[1]
+    Дали можем да приемем дело, зависи от съдържанието и от езика на общуване. Ако въпросът Ви влиза в посочените направления и може да се обсъди на един от четирите езика за консултация, можете да изпратите кратко изложение за преглед.
+
+guidanceContent.bg.pages.about.sections[2].heading
+    Когато се обръщате към нас
+
+guidanceContent.bg.pages.about.sections[2].paragraphs[0]
+    След постъпване на Вашето кратко изложение адвокатка или адвокат преглежда съдържанието и след това обсъжда възможния обхват на работата, още нужните документи и следващите стъпки. При данъчни или счетоводни въпроси кантората може да ги води заедно със счетоводното подразделение.
+
+guidanceContent.bg.pages.about.sections[2].paragraphs[1]
+    Изходът на всяко дело зависи от фактите и наличните документи; не обещаваме резултат. Ако Ви е нужен обвързващ отговор за Вашето положение, документите трябва да се обсъдят с адвокатка или адвокат на един от четирите езика за консултация.
+
+guidanceContent.bg.pages.lawyers.eyebrow
+    ЕКИПЪТ
+
+guidanceContent.bg.pages.lawyers.title
+    Международен екип Hovering
+
+guidanceContent.bg.pages.lawyers.description
+    Профили на адвокатките и адвокатите, на оперативното ръководство и на партньорското счетоводство на Hovering.
+
+guidanceContent.bg.pages.lawyers.intro
+    
+
+guidanceContent.bg.pages.pricing.eyebrow
+    ОБХВАТ И ЦЕНА
+
+guidanceContent.bg.pages.pricing.title
+    Как се определят обхватът на работата и възнаграждението
+
+guidanceContent.bg.pages.pricing.description
+    Пояснение на реда: най-напред обхватът на работата, след това потвърждение на възнаграждението, и защо на тази страница няма ценоразпис.
+
+guidanceContent.bg.pages.pricing.intro
+    Тази страница обяснява как се определя възнаграждението, а не неговия размер. Размерът зависи от обхвата на работата по конкретното дело и има смисъл едва когато този обхват е ясен.
+
+guidanceContent.bg.pages.pricing.sections[0].heading
+    Най-напред се определя обхватът на работата
+
+guidanceContent.bg.pages.pricing.sections[0].paragraphs[0]
+    Дела от един вид могат да изискват много различен труд според броя на участниците, наличните документи, сроковете, които трябва да се спазят, и това дали вече е започнала процедура. Затова първата стъпка винаги е да се определи какво влиза в работата и какво не.
+
+guidanceContent.bg.pages.pricing.sections[0].paragraphs[1]
+    Краткото изложение, което изпращате в началото, е основата на този обхват. Колкото по-ясно описва хода на събитията, искането Ви и сроковете, толкова по-точно може да се определи обхватът.
+
+guidanceContent.bg.pages.pricing.sections[1].heading
+    Възнаграждението се потвърждава преди началото на работата
+
+guidanceContent.bg.pages.pricing.sections[1].paragraphs[0]
+    Когато обхватът на работата е ясен, размерът и начинът на изчисляване на възнаграждението се обсъждат и потвърждават с Вас преди началото на работата. Ако обхватът се промени в хода на работата, това трябва да се потвърди отново.
+
+guidanceContent.bg.pages.pricing.sections[1].paragraphs[1]
+    Тази страница не е ценово предложение и не създава задължение за плащане. Изпращането на запитване чрез тази страница също не изисква заплащане.
+
+guidanceContent.bg.pages.pricing.sections[2].heading
+    Консултацията може да бъде платена услуга
+
+guidanceContent.bg.pages.pricing.sections[2].paragraphs[0]
+    Консултацията с адвокатка или адвокат може да бъде платена услуга. Тази страница не казва, че първият разговор се провежда без заплащане, и никоя част не трябва да се чете така.
+
+guidanceContent.bg.pages.pricing.sections[2].paragraphs[1]
+    Ако консултацията е платена, размерът и начинът на плащане се съобщават преди провеждането ѝ.
+
+guidanceContent.bg.pages.pricing.sections[3].heading
+    Защо тази страница не посочва тарифи
+
+guidanceContent.bg.pages.pricing.sections[3].paragraphs[0]
+    Възнаграждението зависи от самото дело: от труда, броя на участниците, документите, сроковете и това дали вече тече процедура. Предварително посочена цифра не би показала цената на Вашето дело. Затова най-напред определяме обхвата на работата и след това Ви съобщаваме възнаграждението преди началото на работата.
+
+guidanceContent.bg.pages.pricing.sections[3].paragraphs[1]
+    Освен хонорара на адвокатката или адвоката могат да възникнат съдебни и административни разноски, както и разноски на трети лица. Те са отделени от хонорара и зависят от съответната процедура.
+
+guidanceContent.bg.pages.contact.eyebrow
+    КОНТАКТ
+
+guidanceContent.bg.pages.contact.title
+    Как да се свържете с кантората
+
+guidanceContent.bg.pages.contact.description
+    Език на страницата, езици за консултация, редът, ако не можете да ползвате нито един от четирите езика, и какво тази страница не обещава.
+
+guidanceContent.bg.pages.contact.intro
+    Преди да ни пишете, разграничете следните три пункта. Често ги смесват, но те означават различно нещо.
+
+guidanceContent.bg.pages.contact.sections[0].heading
+    Три неща, които трябва да се държат отделно
+
+guidanceContent.bg.pages.contact.sections[0].paragraphs[0]
+    Езикът на показване на страницата, езикът на консултацията с адвокатка или адвокат и езикът, на който пишете, са три различни неща.
+
+guidanceContent.bg.pages.contact.sections[0].items[0]
+    Език на страницата: тези сведения са написани на български.
+
+guidanceContent.bg.pages.contact.sections[0].items[1]
+    Език на консултацията: консултацията се провежда на английски, китайски (中文), японски и корейски.
+
+guidanceContent.bg.pages.contact.sections[0].items[2]
+    Език на писмото Ви: можете да напишете кратко изложение на своя език; изходният текст се запазва без промяна.
+
+guidanceContent.bg.pages.contact.sections[1].heading
+    Ако не можете да ползвате нито един от четирите езика за консултация
+
+guidanceContent.bg.pages.contact.sections[1].paragraphs[0]
+    Във формуляра за контакт можете да изберете „Начинът на комуникация трябва да бъде потвърден“. Отговаряме, за да разгледаме приложим начин на комуникация, ако има такъв; услуга на друг език не се осигурява и срок за отговор не се обещава.
+
+guidanceContent.bg.pages.contact.sections[1].paragraphs[1]
+    Това е само стъпка на проверка, а не обещание. Не обещаваме преводач, не обещаваме услуга на български или на друг език извън четирите посочени и не обещаваме, че ще приемем всяко дело.
+
+guidanceContent.bg.pages.contact.sections[2].heading
+    Какво трябва да има в първото съобщение
+
+guidanceContent.bg.pages.contact.sections[2].paragraphs[0]
+    Посочете какво се е случило, каква помощ Ви е нужна, какво отношение има делото към Тайван и срока, ако го знаете. Ако вече сте получили писмо от съд или орган, посочете датата върху писмото.
+
+guidanceContent.bg.pages.contact.sections[2].paragraphs[1]
+    В началния етап още не е нужно да изпращате номер на паспорт, номер на документ за самоличност, данни за сметка, медицинско досие или всички доказателства. Изчакайте указания на адвокатката или адвоката и след това изпратете чувствителните документи по сигурен път.
+
+guidanceContent.bg.pages.contact.sections[3].heading
+    Какво тази страница не обещава
+
+guidanceContent.bg.pages.contact.sections[3].paragraphs[0]
+    Не обещаваме срок за отговор, не потвърждаваме среща чрез тази страница, не обещаваме конкретна адвокатка или адвокат и не осигуряваме преводач. Устният преводач и писменият превод на обръщението са различни неща: съобщението Ви не се превежда автоматично.
+
+guidanceContent.bg.pages.contact.sections[3].paragraphs[1]
+    Ако изпратите запитване, съдържанието се запазва и чака преглед. Ако няма отговор, можете отново да пишете на адреса на електронна поща, посочен на страницата за контакт.
+
+guidanceContent.bg.pages.faq.eyebrow
+    ВЪПРОСИ
+
+guidanceContent.bg.pages.faq.title
+    Често задавани въпроси
+
+guidanceContent.bg.pages.faq.description
+    Пояснения за сферата на работа, подготовката, езиците, възнаграждението и за значението на изпратеното запитване.
+
+guidanceContent.bg.pages.faq.intro
+    Отговорите по-долу са дадени на ниво общи сведения. Отговор по Вашето дело е възможен едва след като адвокатка или адвокат прегледа документите.
+
+guidanceContent.bg.pages.faq.sections[0].heading
+    Как да ползвате този раздел
+
+guidanceContent.bg.pages.faq.sections[0].paragraphs[0]
+    Ако не намирате отговор за Вашето положение, отговорът обикновено зависи от особени факти. Тогава запишете тези факти в кратко изложение, вместо да ги извеждате сами от тази страница.
+
+guidanceContent.bg.pages.faq.faqs[0].question
+    Какви дела води кантората?
+
+guidanceContent.bg.pages.faq.faqs[0].answer
+    Водим шест направления: инвестиции и учредяване на дружество в Тайван, граждански дела и обезщетение за вреди, брак, семейство и наследство, трудови спорове, наказателни дела и интелектуална собственост. Дали делото се приема, се решава след преглед на съдържанието.
+
+guidanceContent.bg.pages.faq.faqs[1].question
+    Какво да подготвя преди обръщението?
+
+guidanceContent.bg.pages.faq.faqs[1].answer
+    Подгответе кратко изложение на хода на събитията, искането Ви, връзката с Тайван и срока, ако има такъв. Ако вече има писмо от съд или орган, посочете датата. На този етап още не е нужно да изпращате документи за самоличност или всички доказателства.
+
+guidanceContent.bg.pages.faq.faqs[2].question
+    Възможна ли е консултация на български?
+
+guidanceContent.bg.pages.faq.faqs[2].answer
+    Не. Тези сведения са написани на български, но консултацията с адвокатка или адвокат се провежда само на английски, китайски (中文), японски и корейски. Не обещаваме и преводач. Устният преводач и писменият превод на обръщението са различни неща: изходният текст, който пишете, се запазва без промяна и не се превежда автоматично.
+
+guidanceContent.bg.pages.faq.faqs[3].question
+    Какво, ако не мога да ползвам нито един от четирите езика?
+
+guidanceContent.bg.pages.faq.faqs[3].answer
+    При изпращане на запитването изберете „Начинът на комуникация трябва да бъде потвърден“. Отговаряме, за да разгледаме начин на комуникация, но услуга на друг език не се осигурява. Това е стъпка на проверка, а не обещание, че можем да работим на друг език.
+
+guidanceContent.bg.pages.faq.faqs[4].question
+    Как се обработва моят български текст?
+
+guidanceContent.bg.pages.faq.faqs[4].answer
+    Изходният текст, който пишете, се запазва без промяна и не се превежда автоматично. При нужда езикът на по-нататъшното общуване се потвърждава заедно с Вас.
+
+guidanceContent.bg.pages.faq.faqs[5].question
+    Състояла ли се е консултацията, ако запитването вече е изпратено?
+
+guidanceContent.bg.pages.faq.faqs[5].answer
+    Не. Изпратеното запитване чака преглед от адвокатка или адвокат. Това не е правна консултация, не е потвърдена среща и самото изпращане не създава отношения между адвокатка или адвокат и клиент.
+
+guidanceContent.bg.pages.faq.faqs[6].question
+    Как се изчислява възнаграждението?
+
+guidanceContent.bg.pages.faq.faqs[6].answer
+    Най-напред се определя обхватът на работата, след това размерът и начинът на изчисляване на възнаграждението се потвърждават с Вас преди началото на работата. Тази страница не посочва цифри и не казва, че първият разговор се провежда без заплащане.
+
+guidanceContent.bg.pages.faq.faqs[7].question
+    Какво, ако въпросът ми е много спешен?
+
+guidanceContent.bg.pages.faq.faqs[7].answer
+    Посочете срока или датата върху официално писмо в началото на краткото изложение, за да бъдат тези дати видими при прегледа. Тази страница няма канал за неотложни случаи и не осигурява срок за отговор; ако въпросът Ви не може да чака, следва успоредно да потърсите други пътища по местонахождението си.
+
+guidanceContent.bg.pages.privacy.eyebrow
+    ПОВЕРИТЕЛНОСТ
+
+guidanceContent.bg.pages.privacy.title
+    Данни, събирани чрез формуляра за контакт
+
+guidanceContent.bg.pages.privacy.description
+    Какво събира формулярът за контакт в този български раздел, как се обработва изходният текст и как да се свържете с нас относно Вашите данни.
+
+guidanceContent.bg.pages.privacy.intro
+    Този раздел засяга само формуляра за контакт на тези информационни страници. Той описва отношението към данните, а не техническа абсолютна защита.
+
+guidanceContent.bg.pages.privacy.sections[0].heading
+    Какви данни се събират
+
+guidanceContent.bg.pages.privacy.sections[0].paragraphs[0]
+    Когато изпратите запитване чрез формуляра в този раздел, се записват следните сведения:
+
+guidanceContent.bg.pages.privacy.sections[0].items[0]
+    Посоченото от Вас име
+
+guidanceContent.bg.pages.privacy.sections[0].items[1]
+    Адресът на електронна поща за отговор
+
+guidanceContent.bg.pages.privacy.sections[0].items[2]
+    Езикът на показване на страницата в момента на изпращане
+
+guidanceContent.bg.pages.privacy.sections[0].items[3]
+    Езикът, на който сте писали
+
+guidanceContent.bg.pages.privacy.sections[0].items[4]
+    Желаният от Вас език за консултация
+
+guidanceContent.bg.pages.privacy.sections[0].items[5]
+    Изходният текст, който сте написали
+
+guidanceContent.bg.pages.privacy.sections[0].items[6]
+    Съгласието Ви за изпращане на запитването
+
+guidanceContent.bg.pages.privacy.sections[0].items[7]
+    Номер на обръщение, за да се намери запитването отново
+
+guidanceContent.bg.pages.privacy.sections[1].heading
+    Изходният текст се запазва без промяна
+
+guidanceContent.bg.pages.privacy.sections[1].paragraphs[0]
+    Текстът Ви се запазва точно така, както сте го написали, и не се превежда автоматично. Ако за обработката е нужен превод, това се обсъжда отделно с Вас.
+
+guidanceContent.bg.pages.privacy.sections[1].paragraphs[1]
+    Тъй като изходният текст се запазва, на първия етап не пишете това, което още не е нужно: номер на паспорт, номер на документ за самоличност или данни за сметка.
+
+guidanceContent.bg.pages.privacy.sections[2].heading
+    Място на съхранение и достъп
+
+guidanceContent.bg.pages.privacy.sections[2].paragraphs[0]
+    Изпратените от Вас данни се съхраняват на място, недостъпно публично. Само оправомощени лица в кантората могат да получават достъп до тях за обработка на запитването.
+
+guidanceContent.bg.pages.privacy.sections[2].paragraphs[1]
+    Тази страница не дава абсолютно обещание за сигурност. Нито един път на предаване и нито едно място на съхранение не са напълно сигурни; затова чувствителни документи следва да се изпращат само след особено указание на адвокатката или адвоката.
+
+guidanceContent.bg.pages.privacy.sections[3].heading
+    Цел на използването
+
+guidanceContent.bg.pages.privacy.sections[3].paragraphs[0]
+    Изпратените данни служат за преглед на запитването, за отговор към Вас, за изясняване на начина на комуникация и за обработка, ако работата бъде започната.
+
+guidanceContent.bg.pages.privacy.sections[3].paragraphs[1]
+    Данните не се използват за маркетинг без отделно съгласие.
+
+guidanceContent.bg.pages.privacy.sections[4].heading
+    Уведомление и номер на обръщение
+
+guidanceContent.bg.pages.privacy.sections[4].paragraphs[0]
+    Ако запитването е изпратено успешно, системата уведомява кантората. Ако това уведомление още не е потвърдено, текстът Ви остава записан и не се губи.
+
+guidanceContent.bg.pages.privacy.sections[4].paragraphs[1]
+    Номерът на обръщение служи да се намери запитването Ви в нашите записи. Показва се след запазването; можете да го посочите при повторно обръщение.
+
+guidanceContent.bg.pages.privacy.sections[5].heading
+    Вашите права и начинът за връзка
+
+guidanceContent.bg.pages.privacy.sections[5].paragraphs[0]
+    Можете да поискате сведения, поправка или изтриване на Вашите данни или да оттеглите съгласието чрез адреса на електронна поща, посочен на страницата за контакт. Ако има законно или процесуално задължение за съхранение, ще обясним ограничението.
+
+guidanceContent.bg.pages.privacy.sections[5].paragraphs[1]
+    Тази страница не посочва фиксиран срок за съхранение, защото фактическата продължителност зависи от това дали делото продължава и от свързаните задължения. Ако желаете по-ранно изтриване, съобщете това при обръщението.
+
+guidanceContent.bg.pages.privacy.sections[6].heading
+    Място на съхранение и доставчици на услуги
+
+guidanceContent.bg.pages.privacy.sections[6].paragraphs[0]
+    Този сайт е хостван при Vercel и изпратените от Вас данни се съхраняват в затворено облачно хранилище на тази служба. Писмата се изпращат чрез пощенската служба, която кантората ползва.
+
+guidanceContent.bg.pages.privacy.sections[6].paragraphs[1]
+    Сървърите на отделни доставчици могат да се намират извън Тайван, затова Вашите данни могат там да се съхраняват и обработват. Когато целта на съхранението е постигната, данните се изтриват без забавяне; данни, които по действащите норми трябва да се съхраняват, остават за този срок. Запитвания за лични данни приема wei@hoveringlaw.com.tw.
+
+guidanceContent.bg.pages.disclaimer.eyebrow
+    УГОВОРКИ
+
+guidanceContent.bg.pages.disclaimer.title
+    Обхват и граници на сведенията на тази страница
+
+guidanceContent.bg.pages.disclaimer.description
+    Общият характер на сведенията, правната сфера на действие и условията за възникване на отношения между адвокатка или адвокат и клиент.
+
+guidanceContent.bg.pages.disclaimer.intro
+    Този раздел изяснява какво тези информационни страници на български могат и не могат да направят за Вас.
+
+guidanceContent.bg.pages.disclaimer.sections[0].heading
+    Само общи сведения
+
+guidanceContent.bg.pages.disclaimer.sections[0].paragraphs[0]
+    Съдържанието на тези страници е написано като обща информация. То не е правна консултация по Вашето дело и не замества проверката на Вашите собствени документи.
+
+guidanceContent.bg.pages.disclaimer.sections[0].paragraphs[1]
+    Изходът на делото зависи от фактите, приложимите норми и момента във времето; две външно сходни положения могат да завършат различно.
+
+guidanceContent.bg.pages.disclaimer.sections[1].heading
+    Правна сфера на действие
+
+guidanceContent.bg.pages.disclaimer.sections[1].paragraphs[0]
+    Кантората води дела по тайванско право и тази страница говори само за работа в тези рамки.
+
+guidanceContent.bg.pages.disclaimer.sections[1].paragraphs[1]
+    Съдържанието не е консултация по правото на друга правна система освен Тайван, включително правото на мястото на пребиваването Ви. Ако част от делото Ви засяга друга правна система, ще изясним с Вас кой квалифициран специалист е нужен за тази част.
+
+guidanceContent.bg.pages.disclaimer.sections[2].heading
+    Отношенията между адвокатка или адвокат и клиент не възникват сами
+
+guidanceContent.bg.pages.disclaimer.sections[2].paragraphs[0]
+    Четенето на тази страница, изпращането на формуляр или на писмо сами по себе си не създават отношения между адвокатка или адвокат и клиент.
+
+guidanceContent.bg.pages.disclaimer.sections[2].paragraphs[1]
+    Тези отношения възникват едва след като делото е прегледано и двете страни са потвърдили поемането на работата.
+
+guidanceContent.bg.pages.disclaimer.sections[3].heading
+    Няма обещание за резултат
+
+guidanceContent.bg.pages.disclaimer.sections[3].paragraphs[0]
+    Никоя част от тази страница не е обещание за резултат на дело, за уважаване на заявление или за статус на пребиваване и работа.
+
+guidanceContent.bg.pages.disclaimer.sections[3].paragraphs[1]
+    Външните връзки служат за ориентир; не обещаваме нито правилността, нито актуалността на съдържанието на трети лица.
+
+guidanceContent.bg.pages.columns.eyebrow
+    СТАТИИ
+
+guidanceContent.bg.pages.columns.title
+    Статии за тайванското право
+
+guidanceContent.bg.pages.columns.description
+    Статии на български по чести въпроси на тайванското право. Съдържанието е обща информация към момента на публикуване, а не правна консултация по Вашето дело.
+
+guidanceContent.bg.pages.columns.intro
+    Кантората публикува статии по чести въпроси на тайванското право. Статиите, налични на български, са на тази страница; до тях има четири връзки, всяка от които отваря списъка със статии на езика на оригинала.
+
+guidanceContent.bg.pages.columns.sections[0].heading
+    Четири списъка по езици
+
+guidanceContent.bg.pages.columns.sections[0].paragraphs[0]
+    В този раздел има четири връзки: списъкът със статии на корейски, китайски, английски и японски. Всяка връзка назовава езика на списъка, за да знаете предварително на кой език ще се отвори съдържанието.
+
+guidanceContent.bg.pages.columns.sections[0].paragraphs[1]
+    Тези четири списъка са списъци по езика на оригинала на статиите, а не списъци с преводи. Статиите, налични на български, са дадени отделно на тази страница.
+
+guidanceContent.bg.pages.columns.sections[1].heading
+    Накъде водят връзките
+
+guidanceContent.bg.pages.columns.sections[1].paragraphs[0]
+    Ако изберете една от четирите връзки, се отваря списъкът със статии на този език. От списъка сами избирате текста; цялото съдържание се появява на езика на оригинала на статията.
+
+guidanceContent.bg.pages.columns.sections[1].paragraphs[1]
+    Тази страница не излага съдържанието на статиите и не обещава, че темата има на всичките четири езика. Всеки списък съдържа само текстове, публикувани на този език.
+
+guidanceContent.bg.pages.columns.sections[2].heading
+    Доколко статията може да служи за ориентир
+
+guidanceContent.bg.pages.columns.sections[2].paragraphs[0]
+    Статиите са общи сведения към момента на публикуване. Нормите и прилагането им могат да се променят и статията не съдържа всички обстоятелства на Вашето дело.
+
+guidanceContent.bg.pages.columns.sections[2].paragraphs[1]
+    Затова не се опирайте на статията като на основание за действия в реално дело. Използвайте я за преглед и обсъдете отделно документите си с адвокатка или адвокат; тази страница не е стъпка от консултацията.
+
+guidanceTeamCopy.bg.label
+    ЕКИПЪТ
+
+guidanceTeamCopy.bg.title
+    Международен екип Hovering
+
+guidanceTeamCopy.bg.description
+    Профили на адвокатките и адвокатите, на оперативното ръководство и на партньорското счетоводство на Hovering.
+
+guidanceTeamCopy.bg.representativeTitle
+    Ръководна адвокатка
+
+guidanceTeamCopy.bg.teamTitle
+    Адвокатки, адвокати и сътрудници
+
+guidanceTeamCopy.bg.partnerTitle
+    Партньорско счетоводство (CPA)
+
+guidanceTeamCopy.bg.introLabel
+    Представяне
+
+guidanceTeamCopy.bg.educationLabel
+    Образование
+
+guidanceTeamCopy.bg.experienceLabel
+    Практика
+
+guidanceTeamCopy.bg.photoAltPrefix
+    Снимка
+
+guidanceTeamCopy.bg.workingLanguagesLabel
+    Работни езици
+
+guidanceTeamCopy.bg.fullProfileLabel
+    Пълен профил (на английски)
+
+guidanceTeamCopy.bg.keyFactsHeading
+    Адвокатка Wei Tseng (曾雋崴) — основни данни
+
+guidanceTeamCopy.bg.qualificationLabel
+    Правоспособност и кантора
+
+guidanceTeamCopy.bg.qualificationSentence
+    {name} е оправомощена да упражнява адвокатска дейност в Тайван и е ръководна адвокатка на {firm}.
+
+guidanceTeamCopy.bg.practiceLabel
+    Основни направления
+
+guidanceTeamCopy.bg.consultationLanguagesLabel
+    Езици за консултация
+
+guidanceTeamCopy.bg.roles.tseng-junwei
+    Ръководна адвокатка в Тайван (Managing Attorney)
+
+guidanceTeamCopy.bg.roles.chang-rongxuan
+    Адвокат в Тайван (Taiwan Attorney)
+
+guidanceTeamCopy.bg.roles.chang-fangyu
+    Паралегал
+
+guidanceTeamCopy.bg.roles.son-jungmin
+    Оперативно ръководство за Корея (Korea Operations Manager)
+
+guidanceTeamCopy.bg.roles.huang-shengping
+    Партньор-счетоводител (Partner CPA)
+
+guidanceTeamBios.bg.tseng-junwei.intro[0]
+    Кантората води дела на дружества и частни лица в Тайван на английски, японски, корейски и китайски.
+
+guidanceTeamBios.bg.tseng-junwei.intro[1]
+    Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала първоинстанционно решение за TWD 1.57M.
+
+guidanceTeamBios.bg.tseng-junwei.education[0]
+    Магистър (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.bg.tseng-junwei.education[1]
+    Бакалавър (B.A.) с две специалности — право и финанси, National Chengchi University
+
+guidanceTeamBios.bg.tseng-junwei.education[2]
+    Студентка по обмен в Kobe University и Waseda University
+
+guidanceTeamBios.bg.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.bg.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.bg.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.bg.chang-rongxuan.intro[0]
+    Преди това в Ministry of Education, Legal Affairs Division, с акцент върху административни и граждански дела.
+
+guidanceTeamBios.bg.chang-rongxuan.intro[1]
+    Опит в дела на висши училища, права на преподаватели и административни жалби.
+
+guidanceTeamBios.bg.chang-rongxuan.education[0]
+    Бакалавър по право (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.bg.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.bg.chang-rongxuan.experience[1]
+    Адвокат, Hovering International Law Firm
+
+guidanceTeamBios.bg.chang-fangyu.intro[0]
+    Паралегал с дългогодишна работа като старши паралегал в няколко кантори, отговаря за процесуална подкрепа, дружествено право и чуждестранни инвестиции.
+
+guidanceTeamBios.bg.chang-fangyu.intro[1]
+    Подкрепа при процедури, учредяване на дружества, разрешения за чуждестранни инвестиции, заявки за лицензи и обмена между Корея и Тайван.
+
+guidanceTeamBios.bg.chang-fangyu.education[0]
+    Бакалавър по право (LL.B.), Tunghai University
+
+guidanceTeamBios.bg.chang-fangyu.experience[0]
+    Старши паралегал, Boyin Law Firm
+
+guidanceTeamBios.bg.chang-fangyu.experience[1]
+    Старши паралегал, Muyang International Law Firm
+
+guidanceTeamBios.bg.son-jungmin.intro[0]
+    Координира часовете за консултация и общуването за клиенти от Корея.
+
+guidanceTeamBios.bg.son-jungmin.intro[1]
+    Подпомага обмена между звената чрез системи за документи и работни процеси, въз основа на информатика.
+
+guidanceTeamBios.bg.son-jungmin.education[0]
+    Бакалавър (B.S.) по информатика, National Cheng Kung University
+
+guidanceTeamBios.bg.son-jungmin.experience[0]
+    Оперативно направление за Корея, Hovering International Law Firm
+
+guidanceTeamBios.bg.huang-shengping.intro[0]
+    Завършил е бакалавърска и магистърска програма по счетоводство в National Chengchi University и понастоящем ръководи счетоводна кантора.
+
+guidanceTeamBios.bg.huang-shengping.intro[1]
+    Подпомага комплексен анализ на правни, данъчни и финансови рискове за корпоративни клиенти.
+
+guidanceTeamBios.bg.huang-shengping.education[0]
+    Магистър (M.A.) по счетоводство, National Chengchi University
+
+guidanceTeamBios.bg.huang-shengping.education[1]
+    Бакалавър (B.A.) по счетоводство, National Chengchi University
+
+guidanceTeamBios.bg.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.bg.Korean
+    корейски
+
+guidanceLanguageNames.bg.Chinese
+    китайски
+
+guidanceLanguageNames.bg.Japanese
+    японски
+
+guidancePracticeAreaNames.bg.Taiwan company setup
+    Учредяване на дружество в Тайван
+
+guidancePracticeAreaNames.bg.Taiwan investment counsel
+    Правна консултация по инвестиции в Тайван
+
+guidancePracticeAreaNames.bg.Civil litigation and damages
+    Граждански дела и обезщетение за вреди
+
+guidancePracticeAreaNames.bg.Trademark and patent filings
+    Подаване на заявки за търговски марки и патенти
+
+guidancePracticeAreaNames.bg.Visa and residency
+    Виза и пребиваване
+
+guidancePracticeAreaNames.bg.Family and labor disputes
+    Семейни и трудови спорове
+
+guidanceOfficeCopy.bg.label
+    ОФИСИ
+
+guidanceOfficeCopy.bg.title
+    Офиси
+
+guidanceOfficeCopy.bg.description
+    Адреси на офисите на Hovering International Law Firm в Тайван.
+
+guidanceOfficeCopy.bg.officeLabel
+    Офис
+
+guidanceOfficeCopy.bg.mapPreviewLabel
+    Преглед на картата
+
+guidanceOfficeCopy.bg.koreaOfficeTitle
+    Офис в Корея
+
+guidanceOfficeCopy.bg.koreaAddressCardLabel
+    Адрес на офиса в Корея
+
+guidanceOfficeCopy.bg.koreaMapLinkLabel
+    Вижте в Naver Map
+
+guidanceOfficeCopy.bg.reviewCountWord
+    отзива
+
+guidanceOfficeCopy.bg.phoneLabel
+    Телефон
+
+guidanceOfficeCopy.bg.faxLabel
+    Факс
+
+guidanceOfficeCopy.bg.mapLinkLabel
+    Вижте на картата
+
+guidanceOfficeCopy.bg.photoAlts[0]
+    Приемна на офиса в Тайпе, Hovering International Law Firm
+
+guidanceOfficeCopy.bg.photoAlts[1]
+    Кабинет на адвокатката в офиса в Тайпе, Hovering International Law Firm
+
+guidanceOfficeCopy.bg.photoAlts[2]
+    Зала за срещи на офиса в Тайпе, Hovering International Law Firm
+
+guidanceOfficeCopy.bg.officeTitles.taipei
+    Тайпе
+
+guidanceOfficeCopy.bg.officeTitles.taichung
+    Тайджун
+
+guidanceOfficeCopy.bg.officeTitles.kaohsiung
+    Гаосюн
+
+guidanceOfficeCopy.bg.officeTitles.pingtung
+    Пиндун
+
+guidanceFooterCopy.bg.officeLabel
+    Офиси
+
+guidanceFooterCopy.bg.officeQuickLinksLabel
+    Бързи връзки към офисите
+
+guidanceFooterCopy.bg.followLabel
+    Последвайте ни
+
+guidanceFooterCopy.bg.blogLabel
+    Блог
+
+guidanceFooterCopy.bg.websiteLabel
+    Официален сайт
+
+guidanceFooterCopy.bg.sitemapLabel
+    Карта на сайта
+
+guidanceFooterCopy.bg.copyEmailLabel
+    Копирайте адреса на електронната поща
+
+guidanceFooterCopy.bg.emailCopiedMessage
+    Адресът на електронната поща е копиран.
+
+guidanceFooterCopy.bg.officialConsultationEmailLabel
+    Официална поща за консултация
+
+internationalInquiryCopy.bg.guidanceNotice
+    Тази страница е написана на български като общи сведения, а не като правна консултация по Вашето дело.
+
+internationalInquiryCopy.bg.consultationNotice
+    Консултацията се провежда само на четири езика: английски, китайски (中文), японски и корейски.
+
+internationalInquiryCopy.bg.methodConfirmationNotice
+    Ако не можете да ползвате нито един от четирите езика, изберете „Начинът на комуникация трябва да бъде потвърден“. Отговаряме, за да разгледаме приложим начин на комуникация, ако има такъв; услуга на друг език не се осигурява и срок за отговор не се обещава.
+
+internationalInquiryCopy.bg.preparationNotice
+    Можете да напишете кратко изложение на делото на своя език. Изходният текст се запазва така, както сте го написали, и не се превежда автоматично.
+
+internationalInquiryCopy.bg.heading
+    Изпратете запитване за консултация
+
+internationalInquiryCopy.bg.intro
+    Опишете накратко делото си. Адвокатка или адвокат преглежда съдържанието, преди да се обсъди следващата стъпка.
+
+internationalInquiryCopy.bg.submitLabel
+    Изпратете запитването
+
+internationalInquiryCopy.bg.submittingLabel
+    Изпраща се…
+
+internationalInquiryCopy.bg.successMessage
+    Получихме запитването Ви; то чака преглед. Това не означава, че консултацията се е състояла или че е потвърдена среща.
+
+internationalInquiryCopy.bg.savedNotificationPendingMessage
+    Запитването Ви е запазено, но уведомлението към кантората още не е потвърдено. Написаното от Вас не се губи. Ако няма отговор, можете също да пишете на адреса на електронна поща от страницата за контакт.
+
+internationalInquiryCopy.bg.receiptIdLabel
+    Номер на обръщение
+
+internationalInquiryCopy.bg.failureMessage
+    Запитването Ви не можа да бъде изпратено. Опитайте отново или пишете на адреса на електронна поща от страницата за контакт.
+
+internationalInquiryCopy.bg.originalLanguageLabel
+    Езикът, на който пишете
+
+internationalInquiryCopy.bg.originalLanguagePlaceholder
+    Например: български, английски, китайски или друг език
+
+internationalInquiryCopy.bg.preferredConsultationLanguageLabel
+    Желан език за консултация
+
+internationalInquiryCopy.bg.originalTextLabel
+    Кратко изложение на делото (на Вашия език)
+
+internationalInquiryCopy.bg.originalTextPlaceholder
+    Посочете какво се е случило, каква помощ е нужна и срока, ако има такъв. Не пишете номер на паспорт, номер на документ за самоличност или данни за сметка.
+
+internationalInquiryCopy.bg.nameLabel
+    Име
+
+internationalInquiryCopy.bg.emailLabel
+    Електронна поща
+
+internationalInquiryCopy.bg.consentLabel
+    Прочетох страницата за поверителност и се съгласявам да изпратя това запитване.
+
+internationalInquiryCopy.bg.privacyLinkLabel
+    Поверителност
+
+internationalInquiryCopy.bg.requiredMessage
+    Това поле е задължително.
+
+internationalInquiryCopy.bg.invalidEmailMessage
+    Посочете валиден адрес на електронна поща.
+
+internationalInquiryCopy.bg.tooLongMessage
+    Текстът е твърде дълъг. Съкратете го и изпратете отново.
+
+internationalInquiryCopy.bg.sourceLanguageNotice
+    Тази статия е публикувана само на езика {language}; връзката отваря изходната страница.
+
+internationalInquiryCopy.bg.unavailableTranslationNotice
+    Този елемент още не е преведен на езика на тази страница. Връзката, която посочва езика на оригинала, отваря изходния текст.
+
+internationalInquiryCopy.bg.unavailableLanguageNotice
+    Тази страница не се предлага на езика {language}.
+
+internationalInquiryCopy.bg.languageOptions.en
+    Английски (English)
+
+internationalInquiryCopy.bg.languageOptions.zh-hant
+    Китайски (中文)
+
+internationalInquiryCopy.bg.languageOptions.ja
+    Японски (日本語)
+
+internationalInquiryCopy.bg.languageOptions.ko
+    Корейски (한국어)
+
+internationalInquiryCopy.bg.languageOptions.needs-method-confirmation
+    Нито един от четирите езика не е приложим — начинът на комуникация трябва да бъде потвърден
+
+guidanceAnswers.bg.services.answer
+    Кантората води шест направления по тайванско право: инвестиции и учредяване на дружества, граждански дела и обезщетение за вреди, брак, семейство и наследство, трудови спорове, наказателни дела и интелектуална собственост. Обхватът на всяко дело се потвърждава отделно, след като адвокатка или адвокат прегледа съдържанието, което изпращате. Консултацията се провежда само на английски, китайски, японски и корейски.
+
+guidanceAnswers.bg.services.sources[0]
+    /bg/faq
+
+guidanceAnswers.bg.services.sources[1]
+    /bg/contact
+
+guidanceAnswers.bg.about.answer
+    Hovering International Law Firm е адвокатска кантора в Тайван, основана през 2016 г. от възпитаници на National Taiwan University (國立臺灣大學), с офиси в градовете Тайпе, Гаосюн, Тайджун и Пиндун. От 2020 г. има счетоводно подразделение; офисът в Тайджун води дела, свързани с Корея и Япония. Кантората не обещава резултат. Консултацията се провежда само на английски, китайски, японски и корейски.
+
+guidanceAnswers.bg.about.sources[0]
+    /bg/lawyers
+
+guidanceAnswers.bg.about.sources[1]
+    /bg/services
+
+guidanceAnswers.bg.lawyers.answer
+    Тази страница представя адвокатките и адвокатите, оперативното ръководство и партньорското счетоводство на Hovering. Адвокатка Wei Tseng (曾雋崴) е оправомощена да упражнява адвокатска дейност в Тайван и ръководи кантората; работи с клиенти от Корея, Япония и с други международни клиенти. Консултацията се провежда само на английски, китайски, японски и корейски.
+
+guidanceAnswers.bg.lawyers.sources[0]
+    /bg/about
+
+guidanceAnswers.bg.lawyers.sources[1]
+    /bg/contact
+
+guidanceAnswers.bg.pricing.answer
+    Тази страница не публикува ценоразпис. Обхватът на работата най-напред се определя по краткото изложение, което изпращате, след това размерът и начинът на изчисляване се потвърждават с Вас преди началото на работата. Консултацията с адвокатка или адвокат може да бъде платена услуга; освен хонорара могат да възникнат съдебни или административни разноски. Консултацията се провежда само на английски, китайски, японски и корейски.
+
+guidanceAnswers.bg.pricing.sources[0]
+    /bg/contact
+
+guidanceAnswers.bg.pricing.sources[1]
+    /bg/faq
+
+guidanceAnswers.bg.contact.answer
+    Изпратете кратко изложение чрез формуляра за контакт: какво се е случило, каква помощ е нужна, каква връзка има делото с Тайван и срока, ако има такъв. На този етап още не е нужно да изпращате документи за самоличност или всички доказателства. Кантората не обещава срок за отговор и не потвърждава среща чрез тази страница. Консултацията се провежда само на английски, китайски, японски и корейски.
+
+guidanceAnswers.bg.contact.sources[0]
+    /bg/faq
+
+guidanceAnswers.bg.contact.sources[1]
+    /bg/pricing
+
+guidanceAnswers.bg.faq.answer
+    Този раздел отговаря на чести въпроси на ниво общи сведения: шестте направления на работа, подготовката преди обръщението, начинът за определяне на хонорара и смисълът на изпратеното съобщение. Изпратеното запитване чака преглед от адвокатка или адвокат; това не е правна консултация, не е потвърдена среща и не създава отношения между адвокатка или адвокат и клиент. Консултацията се провежда само на четирите езика: английски, китайски, японски и корейски.
+
+guidanceAnswers.bg.faq.sources[0]
+    /bg/contact
+
+guidanceAnswers.bg.faq.sources[1]
+    /bg/services
+
+GUIDANCE_LLMS_NOTICES.bg.consultationNotice
+    Тези сведения са написани на български, но консултацията с адвокатка или адвокат се провежда само на английски, китайски (中文), японски и корейски.
+
+GUIDANCE_LLMS_NOTICES.bg.discoveryNotice
+    Файлът llms.txt е само карта за намиране на открити страници; той не обещава място в търсенето, поддръжка, препоръка на изкуствен интелект или показване.
+
+GUIDANCE_LLMS_NOTICES.bg.confidentialNotice
+    Тъй като изходният текст се запазва, на първия етап не пишете това, което още не е нужно: номер на паспорт, номер на документ за самоличност или данни за сметка.

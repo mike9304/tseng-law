@@ -1,0 +1,1096 @@
+# lv guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.lv.languageName
+    Latviešu
+
+guidanceContent.lv.nav.home
+    Sākums
+
+guidanceContent.lv.nav.services
+    Pakalpojumi
+
+guidanceContent.lv.nav.about
+    Par mums
+
+guidanceContent.lv.nav.lawyers
+    Advokāti
+
+guidanceContent.lv.nav.pricing
+    Izmaksas
+
+guidanceContent.lv.nav.contact
+    Saziņa
+
+guidanceContent.lv.nav.faq
+    Jautājumi
+
+guidanceContent.lv.nav.privacy
+    Privātums
+
+guidanceContent.lv.nav.disclaimer
+    Atruna
+
+guidanceContent.lv.nav.columns
+    Raksti
+
+guidanceContent.lv.contactCta
+    Nosūtīt izvērtēšanas pieteikumu
+
+guidanceContent.lv.footerNotice
+    Šī latviešu lapa sniedz tikai vispārīgu informāciju par biroja darbu saskaņā ar Taivānas tiesībām. Tā nav juridisks padoms konkrētā lietā, un ziņojuma nosūtīšana pati par sevi nerada attiecības starp advokāti vai advokātu un klientu.
+
+guidanceContent.lv.skipLink
+    Izlaist navigāciju un pāriet pie satura
+
+guidanceContent.lv.menuLabel
+    Izvēlne
+
+guidanceContent.lv.languageLabel
+    Attēlošanas valoda
+
+guidanceContent.lv.mega.services.description
+    Birojs strādā Taivānas tiesību galvenajās jomās.
+
+guidanceContent.lv.mega.services.viewAllLabel
+    Rādīt visus
+
+guidanceContent.lv.mega.columns.description
+    Raksti par biežiem Taivānas tiesību jautājumiem.
+
+guidanceContent.lv.mega.columns.viewAllLabel
+    Rādīt visus
+
+guidanceContent.lv.mega.lawyers.description
+    Advokāšu un advokātu, kā arī saziņas veidu iepazīstināšana.
+
+guidanceContent.lv.mega.lawyers.viewAllLabel
+    Rādīt visus
+
+guidanceContent.lv.mega.pricing.description
+    Šī lapa izskaidro darba apjomu un to, kā tiek noskaidrotas izmaksas.
+
+guidanceContent.lv.mega.pricing.viewAllLabel
+    Rādīt visus
+
+guidanceContent.lv.mega.faq.description
+    Bieži jautājumi par biroja darbu Taivānā.
+
+guidanceContent.lv.mega.faq.viewAllLabel
+    Rādīt visus
+
+guidanceContent.lv.notFoundTitle
+    Lapa nav atrasta
+
+guidanceContent.lv.notFoundText
+    Meklētā lapa nepastāv vai ir pārvietota. Varat atgriezties pie latviešu sākumlapas un apskatīt pieejamo informāciju.
+
+guidanceContent.lv.backHomeLabel
+    Uz sākumlapu
+
+guidanceContent.lv.readSourceLabel
+    Atvērt rakstu sarakstu sākotnējā valodā
+
+guidanceContent.lv.home.heroScrollLabel
+    Ritināt lejup
+
+guidanceContent.lv.home.heroColumnsCtaLabel
+    Skatīt rakstus
+
+guidanceContent.lv.home.servicesDetailLabel
+    Skatīt sīkāku informāciju
+
+guidanceContent.lv.home.servicesAssistanceBefore
+    Ja nav skaidrs, kurai jomai Jūsu lieta pieder, lapa 
+
+guidanceContent.lv.home.servicesAssistanceLinkLabel
+    Saziņa
+
+guidanceContent.lv.home.servicesAssistanceAfter
+     izskaidro, kā sagatavot kopsavilkumu, ko izvērtēs advokāte vai advokāts.
+
+guidanceContent.lv.home.columnsViewAllLabel
+    Skatīt visus rakstus
+
+guidanceContent.lv.home.columnsReadMoreLabel
+    Lasīt tālāk
+
+guidanceContent.lv.home.columnsReviewLabel
+    Pārbaudījusi advokāte Wei Tseng
+
+guidanceContent.lv.home.columnsOriginalLanguageBadge
+    Sākotnējā valoda
+
+guidanceContent.lv.home.columnsOriginalLanguageNote
+    Turpmākie raksti latviešu valodā vēl nav pieejami. Saraksts paliek sākotnējā valodā un atver attiecīgo valodas lapu; saturs netiek tulkots automātiski.
+
+guidanceContent.lv.home.imageBandAlt
+    Tradicionāla Taivānas sanheyuan (三合院) sēta un mūsdienīgs paviljons dienasgaismā
+
+guidanceContent.lv.home.videoPauseLabel
+    Apturēt video
+
+guidanceContent.lv.home.videoPlayLabel
+    Atskaņot video
+
+guidanceContent.lv.home.videoReplayLabel
+    Atskaņot video no sākuma
+
+guidanceContent.lv.pages.home.eyebrow
+    INFORMĀCIJA
+
+guidanceContent.lv.pages.home.title
+    Juridiskie pakalpojumi Taivānā — informācija latviešu valodā
+
+guidanceContent.lv.pages.home.description
+    Vispārīgs skaidrojums latviešu valodā par Hovering International Law Firm darba jomu Taivānā, par konsultācijas valodām un par pirmo saziņu.
+
+guidanceContent.lv.pages.home.intro
+    Hovering International Law Firm palīdz ārvalstu klientiem, arī tiem, kam ir saikne ar Taivānu, lietās saskaņā ar Taivānas tiesībām: ieguldījumi un sabiedrību dibināšana, civillietas, laulība, ģimene un mantojums, darba tiesības, krimināllietas un intelektuālais īpašums. Šī latviešu daļa palīdz Jums saprast, kurš darbs ietilpst mūsu jomā, kas jāsagatavo un kā mūs sasniegt. Tā ir vispārīga informācija, nevis juridisks padoms Jūsu lietā.
+
+guidanceContent.lv.pages.home.sections[0].heading
+    Ko mēs darām
+
+guidanceContent.lv.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm ir advokātu birojs, kas dibināts Taivānā. Tas strādā saskaņā ar Taivānas tiesībām un uztur birojus Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) un Pingtung (屏東). Mēs konsultējam uzņēmumus, vedam tiesvedību un palīdzam ārvalstu klientiem veikt soļus, kas Taivānā ir nepieciešami.
+
+guidanceContent.lv.pages.home.sections[0].paragraphs[1]
+    Viss šeit sniegtais saturs ir vispārīgs. Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un laika. Šī informācija neaizstāj pārrunas ar advokāti vai advokātu par Jūsu dokumentiem.
+
+guidanceContent.lv.pages.home.sections[1].heading
+    Lapas valoda un konsultācijas valoda nav viens un tas pats
+
+guidanceContent.lv.pages.home.sections[1].paragraphs[0]
+    Šī lapa ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu. Tas, ka lasāt informāciju latviešu valodā, nenozīmē, ka saruna ar advokāti vai advokātu notiks latviski.
+
+guidanceContent.lv.pages.home.sections[1].paragraphs[1]
+    Mēs nesolām tulku, atbildes termiņu un tikšanos, izmantojot šo lapu. Ja nevarat lietot nevienu no četrām konsultācijas valodām, lapa „Saziņa“ izskaidro, kā mēs izvērtējam saziņas veidu.
+
+guidanceContent.lv.pages.home.sections[2].heading
+    Biroja jomas
+
+guidanceContent.lv.pages.home.sections[2].paragraphs[0]
+    Darba joma aptver šīs sešas grupas. Lapa „Pakalpojumi“ katru no tām apraksta precīzāk un nosauc to, kas netiek solīts.
+
+guidanceContent.lv.pages.home.sections[2].items[0]
+    Ieguldījumi un sabiedrību dibināšana Taivānā
+
+guidanceContent.lv.pages.home.sections[2].items[1]
+    Civillietas un zaudējumu atlīdzība
+
+guidanceContent.lv.pages.home.sections[2].items[2]
+    Laulība, ģimene un mantojums
+
+guidanceContent.lv.pages.home.sections[2].items[3]
+    Darba strīdi
+
+guidanceContent.lv.pages.home.sections[2].items[4]
+    Krimināllietas
+
+guidanceContent.lv.pages.home.sections[2].items[5]
+    Intelektuālais īpašums: preču zīmes, patenti un autortiesības
+
+guidanceContent.lv.pages.home.sections[3].heading
+    Kur sākt
+
+guidanceContent.lv.pages.home.sections[3].paragraphs[0]
+    Izlasiet lapu „Pakalpojumi“ un pārbaudiet, vai Jūsu lieta ietilpst mūsu jomā, pēc tam „Izmaksas“ un „Saziņa“, lai saprastu, kā tiek noteikts apjoms un kā izmaksas apstiprina pirms darba sākšanas.
+
+guidanceContent.lv.pages.home.sections[3].paragraphs[1]
+    Nosūtot ziņojumu, kopsavilkumu varat rakstīt savā valodā. Sākotnējais teksts tiek saglabāts tieši tā, kā to uzrakstījāt, un netiek tulkots automātiski. Nosūtīts ziņojums ir pieteikums, kas gaida izvērtējumu: tā vēl nav konsultācija un nav apstiprināta tikšanās.
+
+guidanceContent.lv.pages.services.eyebrow
+    PAKALPOJUMI
+
+guidanceContent.lv.pages.services.title
+    Kādās lietās mēs palīdzam
+
+guidanceContent.lv.pages.services.description
+    Sešas jomas, kurās birojs strādā Taivānā, un robežas, kas vispirms ir noderīgi zināt.
+
+guidanceContent.lv.pages.services.intro
+    Zemāk ir jomas, kurās mēs patiešām strādājam, un jautājumi, kas sākumposmā tiek uzdoti visbiežāk. Izklāsts palīdz novērtēt, vai Jūsu lieta ietilpst mūsu jomā; tas ir vispārīgs un nav atsevišķas lietas juridiskā analīze.
+
+guidanceContent.lv.pages.services.sections[0].heading
+    Ieguldījumi un sabiedrību dibināšana Taivānā
+
+guidanceContent.lv.pages.services.sections[0].paragraphs[0]
+    Mēs palīdzam ārvalstu ieguldītājiem un uzņēmumiem dibināt vai vadīt sabiedrību Taivānā: tiesiskās formas izvēle, dokumentu sagatavošana un iesniegšana, kapitāla iemaksa, bankas jautājumi, atrašanās vietas izvērtējums un nozares prasības. Atbalstām arī grāmatvedību un nodokļus, kas izriet no dibināšanas un darbības Taivānā.
+
+guidanceContent.lv.pages.services.sections[0].paragraphs[1]
+    Gaita un termiņi atšķiras pēc formas, ieguldītāja, nozares, bankas un jau pieejamajiem dokumentiem. Sabiedrības dibināšana pati par sevi nenodrošina uzturēšanās atļauju (居留) un darba atļauju (工作許可): tās ir atsevišķas procedūras, ko izvērtē pēc konkrētās personas situācijas.
+
+guidanceContent.lv.pages.services.sections[1].heading
+    Civillietas un zaudējumu atlīdzība
+
+guidanceContent.lv.pages.services.sections[1].paragraphs[0]
+    Šī joma aptver strīdus no līgumiem, zaudējumu atlīdzību no prettiesiskas rīcības un patērētāju strīdus. Darbs parasti sākas ar hronoloģiju, dokumentu un jau esošo pierādījumu izvērtējumu, un tikai pēc tam seko nākamie soļi.
+
+guidanceContent.lv.pages.services.sections[1].paragraphs[1]
+    Gaitu nosaka termiņi, tostarp noilgums, un pierādījumu pilnīgums. Tāpēc zināmos datumus nosauciet pēc iespējas agri. Saglabājiet līgumus, ziņojumus, maksājumu apliecinājumus vai vietas fotogrāfijas un miniet tos pirmajā ziņojumā.
+
+guidanceContent.lv.pages.services.sections[2].heading
+    Laulība, ģimene un mantojums
+
+guidanceContent.lv.pages.services.sections[2].paragraphs[0]
+    Mēs vedam laulības šķiršanu (離婚), mantas sadali, aizgādību un vecāku atbildību par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔), saskarsmes tiesības (會面交往) un mantojumu (繼承), arī tad, ja puses vai manta atrodas dažādās valstīs. Pārrobežu ģimenes lietās bieži vajadzīgs papildu izvērtējums mājsaimniecības reģistra (戶籍) ierakstiem, aktu formai un to pierādīšanas spējai Taivānā.
+
+guidanceContent.lv.pages.services.sections[2].paragraphs[1]
+    Tā kā ģimenes lietām bieži ir termiņi un paralēlas procedūras, pirmajam kopsavilkumam jānorāda pušu attiecības, pašreizējā dzīvesvieta un jau notiekošās procedūras.
+
+guidanceContent.lv.pages.services.sections[3].heading
+    Darba strīdi
+
+guidanceContent.lv.pages.services.sections[3].paragraphs[0]
+    Šī joma aptver darba attiecību izbeigšanu, likumā noteikto atlaišanas pabalstu saskaņā ar Taivānas tiesībām (資遣費; to nedrīkst pielīdzināt līdzīgiem institūtiem citās valstīs), atlīdzību un strīdus no darba līguma (勞動契約), gan darbinieka, gan darba devēja pusē. Izvērtējumā nošķiram izbeigšanas iemeslu no uzteikuma, izmaksas un termiņu jautājumiem.
+
+guidanceContent.lv.pages.services.sections[3].paragraphs[1]
+    Bieži izšķirošie dokumenti ir darba līgums, iekšējie darba noteikumi (工作規則), algas lapiņas un pušu sarakste. Ja tie Jums joprojām ir, miniet to kopsavilkumā.
+
+guidanceContent.lv.pages.services.sections[4].heading
+    Krimināllietas
+
+guidanceContent.lv.pages.services.sections[4].paragraphs[0]
+    Mēs pārstāvam aizdomās turētos un apsūdzētos, kā arī cietušos pirmstiesas izmeklēšanā un tiesā un izvērtējam uzņēmējdarbības krimināltiesiskos riskus.
+
+guidanceContent.lv.pages.services.sections[4].paragraphs[1]
+    Krimināllietām bieži ir īsi termiņi un noteikti posmi. Ja jau esat saņēmuši kriminālprocesa iestādes vai tiesas rakstu, nosauciet rakstā norādīto datumu laikus, lai saturu izvērtētu pareizā secībā.
+
+guidanceContent.lv.pages.services.sections[5].heading
+    Intelektuālais īpašums
+
+guidanceContent.lv.pages.services.sections[5].paragraphs[0]
+    Mēs atbalstām preču zīmju (商標) un patentu (專利) reģistrāciju, autortiesības un strīdus par šīm tiesībām Taivānā.
+
+guidanceContent.lv.pages.services.sections[5].paragraphs[1]
+    Šajā jomā izšķir soļu secība: aizsardzības apjoms, pieteikuma iesniegšanas brīdis un faktiskā lietošana ietekmē izvēli. Pieteikuma iesniegšana pati par sevi nenozīmē, ka tas tiks apstiprināts.
+
+guidanceContent.lv.pages.services.sections[6].heading
+    Apjoms un tā apstiprināšana
+
+guidanceContent.lv.pages.services.sections[6].paragraphs[0]
+    Birojs strādā saskaņā ar Taivānas tiesībām un ved lietas no iepriekš minētajām jomām. Katra lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis Jūsu ziņojumu.
+
+guidanceContent.lv.pages.services.sections[6].paragraphs[1]
+    Uzturēšanās statusu, darba atļauju un līdzīgus jautājumus izvērtē pēc dokumentiem un konkrētās personas situācijas, nevis pēc valstspiederības. Ja daļa Jūsu lietas skar šos punktus, miniet to, sazinoties ar mums. Šī lapa nesola iznākumu un atbildes termiņu.
+
+guidanceContent.lv.pages.about.eyebrow
+    BIROJS
+
+guidanceContent.lv.pages.about.title
+    Par Hovering International Law Firm
+
+guidanceContent.lv.pages.about.description
+    Pamatinformācija par šo Taivānas advokātu biroju, tā birojiem un darbu ar ārvalstu pusēm.
+
+guidanceContent.lv.pages.about.intro
+    Hovering International Law Firm ir advokātu birojs Taivānā. Advokātes un advokāti strādā no uzņēmumu konsultācijām līdz tiesvedībai. Šī daļa apraksta biroja izveidi, atrašanās vietas un darbu ar ārvalstu pusēm.
+
+guidanceContent.lv.pages.about.sections[0].heading
+    Dibināšana un uzbūve
+
+guidanceContent.lv.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) 2016. gadā dibināja advokātes un advokāti, kuri studēja National Taiwan University (國立臺灣大學). Ķīniešu nosaukums 昊鼎 savieno zīmi 昊 („plašās debesis“) ar zīmi 鼎 („stabils pamats“) un raksturo biroja ievirzi kopš dibināšanas.
+
+guidanceContent.lv.pages.about.sections[0].paragraphs[1]
+    Mums ir biroji Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) un Pingtung (屏東). Kaohsiung birojs koncentrējas uz uzņēmumu vadību un ved civillietas, krimināllietas un administratīvos strīdus. Taichung birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pingtung birojs tika atvērts 2017. gadā vietējām vajadzībām.
+
+guidanceContent.lv.pages.about.sections[0].paragraphs[2]
+    Līdzās advokātu darbam kopš 2020. gada darbojas arī Hovering Accounting Office, kas piedāvā grāmatvedību un nodokļu plānošanu uzņēmējiem un privātpersonām ar mantu.
+
+guidanceContent.lv.pages.about.sections[1].heading
+    Darbs ar ārvalstu pusēm
+
+guidanceContent.lv.pages.about.sections[1].paragraphs[0]
+    Pārrobežu darbs aptver sabiedrību dibināšanu, vīzas, preču zīmju un patentu pieteikumus, tiesiskā riska izvērtējumu un nodokļu konsultācijas uzņēmumiem. Taichung birojs jo īpaši ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Advokāte Wei Tseng (曾雋崴) palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem minētajās jomās.
+
+guidanceContent.lv.pages.about.sections[1].paragraphs[1]
+    Vai lietu varam uzņemties, ir atkarīgs no satura un saziņas valodas. Ja Jūsu lieta ietilpst minētajās jomās un to var pārrunāt kādā no četrām konsultācijas valodām, varat nosūtīt kopsavilkumu izvērtēšanai.
+
+guidanceContent.lv.pages.about.sections[2].heading
+    Kad sazināties ar mums
+
+guidanceContent.lv.pages.about.sections[2].paragraphs[0]
+    Pēc Jūsu kopsavilkuma saņemšanas advokāte vai advokāts izvērtē saturu un pēc tam runā par iespējamo darba apjomu, vēl vajadzīgajiem dokumentiem un nākamajiem soļiem. Nodokļu vai grāmatvedības jautājumos birojs var rīkoties kopā ar grāmatvedības daļu vienā secīgā gaitā.
+
+guidanceContent.lv.pages.about.sections[2].paragraphs[1]
+    Katra lietas iznākums ir atkarīgs no faktiem un pieejamajiem dokumentiem; iznākumu nesolām. Ja Jums vajadzīga saistoša atbilde savai situācijai, dokumenti jāpārrunā ar advokāti vai advokātu kādā no četrām konsultācijas valodām.
+
+guidanceContent.lv.pages.lawyers.eyebrow
+    ADVOKĀTI
+
+guidanceContent.lv.pages.lawyers.title
+    Hovering starptautiskā komanda
+
+guidanceContent.lv.pages.lawyers.description
+    Hovering advokāšu un advokātu, darbības vadības un partnera grāmatvedības un revīzijas profili.
+
+guidanceContent.lv.pages.lawyers.intro
+    
+
+guidanceContent.lv.pages.pricing.eyebrow
+    IZMAKSAS
+
+guidanceContent.lv.pages.pricing.title
+    Kā nosaka darba apjomu un izmaksas
+
+guidanceContent.lv.pages.pricing.description
+    Skaidrojums par secību: vispirms darba apjoms, pēc tam izmaksu apstiprinājums, un kāpēc šajā lapā nav cenrāža.
+
+guidanceContent.lv.pages.pricing.intro
+    Šī lapa izskaidro, kā izmaksas nosaka, nevis to apmēru. Apmērs ir atkarīgs no darba apjoma konkrētajā lietā un ir jēgpilns tikai tad, kad šis apjoms ir skaidrs.
+
+guidanceContent.lv.pages.pricing.sections[0].heading
+    Vispirms nosaka darba apjomu
+
+guidanceContent.lv.pages.pricing.sections[0].paragraphs[0]
+    Viena veida lietas var prasīt ļoti atšķirīgu piepūli atkarībā no pušu skaita, pieejamajiem dokumentiem, termiņiem, kas jāievēro, un no tā, vai procedūra jau ir sākusies. Tāpēc pirmais solis vienmēr ir noteikt, kas darbā ietilpst un kas ne.
+
+guidanceContent.lv.pages.pricing.sections[0].paragraphs[1]
+    Kopsavilkums, ko nosūtāt sākumā, ir šā apjoma pamats. Jo skaidrāk tas apraksta gaitu, Jūsu lūgumu un termiņus, jo precīzāk apjomu var noteikt.
+
+guidanceContent.lv.pages.pricing.sections[1].heading
+    Izmaksas apstiprina pirms darba sākšanas
+
+guidanceContent.lv.pages.pricing.sections[1].paragraphs[0]
+    Kad darba apjoms ir skaidrs, izmaksu apmēru un aprēķina veidu ar Jums pārrunā un apstiprina, pirms darbs sākas. Ja apjoms gaitā mainās, tas jāapstiprina no jauna.
+
+guidanceContent.lv.pages.pricing.sections[1].paragraphs[1]
+    Šī lapa nav cenu piedāvājums un nerada maksāšanas pienākumu.
+
+guidanceContent.lv.pages.pricing.sections[2].heading
+    Konsultācija var būt pret samaksu
+
+guidanceContent.lv.pages.pricing.sections[2].paragraphs[0]
+    Konsultācija ar advokāti vai advokātu var būt maksas pakalpojums. Šī lapa nesaka, ka pirmā konsultācija ir bez maksas, un nevienu tās daļu nedrīkst tā saprast.
+
+guidanceContent.lv.pages.pricing.sections[2].paragraphs[1]
+    Ja konsultācija ir pret samaksu, apmēru un maksāšanas veidu paziņo, pirms tā notiek.
+
+guidanceContent.lv.pages.pricing.sections[3].heading
+    Kāpēc šajā lapā nav tarifu
+
+guidanceContent.lv.pages.pricing.sections[3].paragraphs[0]
+    Izmaksas ir atkarīgas no lietas pašas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikts skaitlis Jūsu lietas izmaksas neparādītu. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.
+
+guidanceContent.lv.pages.pricing.sections[3].paragraphs[1]
+    Līdzās honorāram var rasties tiesas nodevas, iestāžu vai trešo personu izmaksas. Tās ir nošķirtas no honorāra un ir atkarīgas no attiecīgās procedūras.
+
+guidanceContent.lv.pages.contact.eyebrow
+    SAZIŅA
+
+guidanceContent.lv.pages.contact.title
+    Kā sazināties ar biroju
+
+guidanceContent.lv.pages.contact.description
+    Lapas valoda, konsultācijas valodas, rīcība, ja nevarat lietot nevienu no četrām valodām, un tas, ko šī lapa nesola.
+
+guidanceContent.lv.pages.contact.intro
+    Pirms mums rakstāt, nošķiriet šos trīs punktus. Tos bieži sajauc, taču tie nozīmē atšķirīgas lietas.
+
+guidanceContent.lv.pages.contact.sections[0].heading
+    Trīs lietas, kas jātur nošķirti
+
+guidanceContent.lv.pages.contact.sections[0].paragraphs[0]
+    Lapas attēlošanas valoda, konsultācijas valoda ar advokāti vai advokātu un valoda, kurā rakstāt, ir trīs atšķirīgas lietas.
+
+guidanceContent.lv.pages.contact.sections[0].items[0]
+    Lapas valoda: šī informācija ir rakstīta latviešu valodā.
+
+guidanceContent.lv.pages.contact.sections[0].items[1]
+    Konsultācijas valoda: konsultācija notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.
+
+guidanceContent.lv.pages.contact.sections[0].items[2]
+    Jūsu rakstīšanas valoda: kopsavilkumu varat rakstīt savā valodā; sākotnējais teksts tiek saglabāts bez izmaiņām.
+
+guidanceContent.lv.pages.contact.sections[1].heading
+    Ja nevarat lietot nevienu no četrām konsultācijas valodām
+
+guidanceContent.lv.pages.contact.sections[1].paragraphs[0]
+    Saziņas veidlapā varat izvēlēties „Saziņas veids ir jāapstiprina“. Mēs atbildēsim, lai izvērtētu, vai pastāv izmantojams saziņas veids; pakalpojums citā valodā nav garantēts, un atbildes termiņš netiek solīts.
+
+guidanceContent.lv.pages.contact.sections[1].paragraphs[1]
+    Tas ir tikai izvērtēšanas solis, nevis solījums. Mēs nesolām tulku, pakalpojumu latviešu valodā vai citā valodā ārpus četrām minētajām valodām un nesolām, ka pieņemsim katru lietu.
+
+guidanceContent.lv.pages.contact.sections[2].heading
+    Kas jāietver pirmajā ziņojumā
+
+guidanceContent.lv.pages.contact.sections[2].paragraphs[0]
+    Nosauciet, kas ir noticis, kāda palīdzība Jums vajadzīga, kāda saikne lietai ir ar Taivānu, un termiņu, ja to zināt. Ja jau esat saņēmuši tiesas vai iestādes rakstu, nosauciet rakstā norādīto datumu.
+
+guidanceContent.lv.pages.contact.sections[2].paragraphs[1]
+    Sākumposmā vēl nav jānosūta pases numurs, personas dokumenta numurs, konta dati, medicīniskā dokumentācija vai visa pierādījumu kopa. Gaidiet advokātes vai advokāta norādījumus un sensitīvos dokumentus pēc tam sūtiet drošā ceļā.
+
+guidanceContent.lv.pages.contact.sections[3].heading
+    Ko šī lapa nesola
+
+guidanceContent.lv.pages.contact.sections[3].paragraphs[0]
+    Mēs nesolām atbildes termiņu, neapstiprinām tikšanos, izmantojot šo lapu, nesolām konkrētu advokāti vai konkrētu advokātu un nenodrošinām tulku. Rakstisks tulkojums ir kas cits: Jūsu ziņojums netiek tulkots automātiski.
+
+guidanceContent.lv.pages.contact.sections[3].paragraphs[1]
+    Ja nosūtāt pieteikumu, saturs tiek saglabāts un gaida izvērtējumu. Ja pēc kāda laika atbildi nesaņemat, varat rakstīt no jauna uz e-pasta adresi, kas norādīta saziņas lapā.
+
+guidanceContent.lv.pages.faq.eyebrow
+    JAUTĀJUMI
+
+guidanceContent.lv.pages.faq.title
+    Bieži uzdotie jautājumi
+
+guidanceContent.lv.pages.faq.description
+    Skaidrojumi par darba jomu, sagatavošanos, valodām, izmaksām un to, ko nozīmē nosūtīts pieteikums.
+
+guidanceContent.lv.pages.faq.intro
+    Turpmākie jautājumi ir atbildēti vispārīgas informācijas līmenī. Atbilde Jūsu lietai ir iespējama tikai pēc tam, kad advokāte vai advokāts ir izvērtējis dokumentus.
+
+guidanceContent.lv.pages.faq.sections[0].heading
+    Kā lietot šo daļu
+
+guidanceContent.lv.pages.faq.sections[0].paragraphs[0]
+    Ja neatrodat atbildi savai situācijai, atbilde parasti ir atkarīga no īpašiem faktiem. Tāpēc ierakstiet tos kopsavilkumā, nevis izseciniet tos no šīs lapas.
+
+guidanceContent.lv.pages.faq.faqs[0].question
+    Kādas lietas birojs ved?
+
+guidanceContent.lv.pages.faq.faqs[0].answer
+    Mēs vedam sešas jomas: ieguldījumus un sabiedrību dibināšanu Taivānā, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Vai lieta tiks pieņemta, izlemj pēc satura izvērtējuma.
+
+guidanceContent.lv.pages.faq.faqs[1].question
+    Kas jāsagatavo pirms saziņas?
+
+guidanceContent.lv.pages.faq.faqs[1].answer
+    Sagatavojiet īsu kopsavilkumu par gaitu, savu lūgumu, saikni ar Taivānu un termiņu, ja tāds ir. Ja jau ir tiesas vai iestādes raksts, nosauciet datumu. Šajā posmā vēl nav jānosūta personas dokumenti vai visa pierādījumu kopa.
+
+guidanceContent.lv.pages.faq.faqs[2].question
+    Vai konsultācija ir iespējama latviešu valodā?
+
+guidanceContent.lv.pages.faq.faqs[2].answer
+    Nē. Šī informācija ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā. Mēs nesolām arī tulku. Rakstisks tulkojums ir kas cits: sākotnējais teksts, ko uzrakstāt, tiek saglabāts tāds, kāds tas ir, un netiek tulkots automātiski.
+
+guidanceContent.lv.pages.faq.faqs[3].question
+    Ko darīt, ja nevaru lietot nevienu no četrām valodām?
+
+guidanceContent.lv.pages.faq.faqs[3].answer
+    Nosūtot pieteikumu, izvēlieties „Saziņas veids ir jāapstiprina“. Mēs atbildēsim, lai izvērtētu saziņas veidu, taču pakalpojums citā valodā nav garantēts. Tas ir izvērtēšanas solis, nevis solījums, ka varam strādāt citā valodā.
+
+guidanceContent.lv.pages.faq.faqs[4].question
+    Kā rīkojas ar manu tekstu latviešu valodā?
+
+guidanceContent.lv.pages.faq.faqs[4].answer
+    Sākotnējais teksts, ko uzrakstāt, tiek saglabāts tāds, kāds tas ir, un netiek tulkots automātiski. Ja tas ir vajadzīgs, turpmākās saziņas valodu apstiprina ar Jums.
+
+guidanceContent.lv.pages.faq.faqs[5].question
+    Vai konsultācija jau ir notikusi, ja pieteikums ir nosūtīts?
+
+guidanceContent.lv.pages.faq.faqs[5].answer
+    Nē. Nosūtīts pieteikums gaida advokātes vai advokāta izvērtējumu. Tas nav juridisks atzinums, nav apstiprināta tikšanās, un pats nosūtījums nerada attiecības starp advokāti vai advokātu un klientu.
+
+guidanceContent.lv.pages.faq.faqs[6].question
+    Kā aprēķina izmaksas?
+
+guidanceContent.lv.pages.faq.faqs[6].answer
+    Vispirms nosaka darba apjomu, pēc tam ar Jums apstiprina izmaksu apmēru un aprēķina veidu, pirms darbs sākas. Šī lapa nenosauc summas un nesaka, ka pirmā konsultācija ir bez maksas.
+
+guidanceContent.lv.pages.faq.faqs[7].question
+    Ko darīt, ja mana lieta ir ļoti steidzama?
+
+guidanceContent.lv.pages.faq.faqs[7].answer
+    Nosauciet termiņu vai datumu no iestādes raksta tūlīt kopsavilkuma sākumā, lai šie datumi izvērtējumā būtu redzami. Šai lapai nav ārkārtas kanāla, un tā nenodrošina atbildes termiņu; ja Jūsu lieta nevar gaidīt, Jums paralēli jāmeklē citi ceļi savā vietā.
+
+guidanceContent.lv.pages.privacy.eyebrow
+    PRIVĀTUMS
+
+guidanceContent.lv.pages.privacy.title
+    Dati, ko vāc saziņas veidlapa
+
+guidanceContent.lv.pages.privacy.description
+    Ko vāc saziņas veidlapa šajā latviešu daļā, kā rīkojas ar sākotnējo tekstu un kā mūs sasniegt par Jūsu datiem.
+
+guidanceContent.lv.pages.privacy.intro
+    Šī daļa attiecas tikai uz saziņas veidlapu šajās informatīvajās lapās. Tā apraksta rīcību ar datiem, nevis tehnisku garantiju.
+
+guidanceContent.lv.pages.privacy.sections[0].heading
+    Kādus datus vāc
+
+guidanceContent.lv.pages.privacy.sections[0].paragraphs[0]
+    Ja nosūtāt pieteikumu, izmantojot veidlapu šajā daļā, tiek fiksēti šādi dati:
+
+guidanceContent.lv.pages.privacy.sections[0].items[0]
+    Vārds, ko norādāt
+
+guidanceContent.lv.pages.privacy.sections[0].items[1]
+    E-pasta adrese atbildei
+
+guidanceContent.lv.pages.privacy.sections[0].items[2]
+    Lapas attēlošanas valoda nosūtīšanas brīdī
+
+guidanceContent.lv.pages.privacy.sections[0].items[3]
+    Valoda, kurā rakstījāt
+
+guidanceContent.lv.pages.privacy.sections[0].items[4]
+    Konsultācijas valoda, ko vēlaties
+
+guidanceContent.lv.pages.privacy.sections[0].items[5]
+    Sākotnējais teksts, ko uzrakstījāt
+
+guidanceContent.lv.pages.privacy.sections[0].items[6]
+    Jūsu piekrišana pieteikuma nosūtīšanai
+
+guidanceContent.lv.pages.privacy.sections[0].items[7]
+    Iesnieguma numurs pieteikuma atrašanai
+
+guidanceContent.lv.pages.privacy.sections[1].heading
+    Sākotnējais teksts tiek saglabāts bez izmaiņām
+
+guidanceContent.lv.pages.privacy.sections[1].paragraphs[0]
+    Jūsu teksts tiek saglabāts tieši tā, kā to uzrakstījāt, un netiek tulkots automātiski. Ja izskatīšanai vajadzīgs tulkojums, to ar Jums pārrunā atsevišķi.
+
+guidanceContent.lv.pages.privacy.sections[1].paragraphs[1]
+    Tā kā sākotnējais teksts tiek saglabāts, sākumposmā nerakstiet to, kas vēl nav vajadzīgs, piemēram, pases numuru, personas dokumenta numuru vai konta datus.
+
+guidanceContent.lv.pages.privacy.sections[2].heading
+    Glabāšanas vieta un piekļuve
+
+guidanceContent.lv.pages.privacy.sections[2].paragraphs[0]
+    Jūsu iesnieguma saturs tiek glabāts vietā, kas nav publiski pieejama. Tam drīkst piekļūt tikai pilnvarotas personas birojā, lai izskatītu pieteikumu.
+
+guidanceContent.lv.pages.privacy.sections[2].paragraphs[1]
+    Šī lapa nedod absolūtu drošības garantiju. Neviens pārraides ceļš un neviena glabāšanas vieta nav pilnīgi droša; tāpēc sensitīvie dokumenti jāsūta tikai pēc īpaša advokātes vai advokāta norādījuma.
+
+guidanceContent.lv.pages.privacy.sections[3].heading
+    Izmantošanas mērķis
+
+guidanceContent.lv.pages.privacy.sections[3].paragraphs[0]
+    Nosūtītie dati kalpo pieteikuma izvērtēšanai, atbildei Jums, saziņas veida noskaidrošanai un izskatīšanai, ja darbs tiek uzņemts.
+
+guidanceContent.lv.pages.privacy.sections[3].paragraphs[1]
+    Datus bez atsevišķas piekrišanas neizmanto mārketingam.
+
+guidanceContent.lv.pages.privacy.sections[4].heading
+    Paziņojums un iesnieguma numurs
+
+guidanceContent.lv.pages.privacy.sections[4].paragraphs[0]
+    Ja pieteikums ir sekmīgi nosūtīts, sistēma paziņo birojam. Ja šis paziņojums vēl nav saņemts, Jūsu teksts paliek saglabāts un nezūd.
+
+guidanceContent.lv.pages.privacy.sections[4].paragraphs[1]
+    Iesnieguma numurs kalpo Jūsu pieteikuma atrašanai mūsu uzskaitē. Tas parādās pēc saglabāšanas; varat to minēt, sazinoties no jauna.
+
+guidanceContent.lv.pages.privacy.sections[5].heading
+    Jūsu tiesības un saziņas ceļš
+
+guidanceContent.lv.pages.privacy.sections[5].paragraphs[0]
+    Varat lūgt piekļuvi saviem datiem, to labošanu vai dzēšanu, vai atsaukt piekrišanu, izmantojot e-pasta adresi, kas norādīta saziņas lapā. Ja pastāv likumā vai procesā noteikts glabāšanas pienākums, izskaidrosim ierobežojumu.
+
+guidanceContent.lv.pages.privacy.sections[5].paragraphs[1]
+    Šī lapa nenosauc fiksētu glabāšanas termiņu, jo faktiskais ilgums ir atkarīgs no lietas tālākās gaitas un saistītajiem pienākumiem. Ja vēlaties agrāku dzēšanu, pasakiet to, sazinoties ar mums.
+
+guidanceContent.lv.pages.privacy.sections[6].heading
+    Glabāšanas vieta un pakalpojumu sniedzēji
+
+guidanceContent.lv.pages.privacy.sections[6].paragraphs[0]
+    Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskā objektu krātuvē. E-pastus sūta pasta pakalpojums, ko birojs lieto.
+
+guidanceContent.lv.pages.privacy.sections[6].paragraphs[1]
+    Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, paliek šajā laikā. Personu datu pieprasījumus pieņem wei@hoveringlaw.com.tw.
+
+guidanceContent.lv.pages.disclaimer.eyebrow
+    ATRUNA
+
+guidanceContent.lv.pages.disclaimer.title
+    Informācijas apjoms un robežas šajā lapā
+
+guidanceContent.lv.pages.disclaimer.description
+    Informācijas vispārīgais raksturs, tiesiskais ietvars un priekšnoteikumi attiecībām starp advokāti vai advokātu un klientu.
+
+guidanceContent.lv.pages.disclaimer.intro
+    Šī daļa skaidro, ko šīs latviešu informatīvās lapas Jums var darīt un ko ne.
+
+guidanceContent.lv.pages.disclaimer.sections[0].heading
+    Tikai vispārīga informācija
+
+guidanceContent.lv.pages.disclaimer.sections[0].paragraphs[0]
+    Šo lapu saturs ir rakstīts kā vispārīga informācija. Tas nav juridisks padoms Jūsu lietā un neaizstāj Jūsu dokumentu izvērtējumu.
+
+guidanceContent.lv.pages.disclaimer.sections[0].paragraphs[1]
+    Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un laika; divas šķietami līdzīgas situācijas var beigties atšķirīgi.
+
+guidanceContent.lv.pages.disclaimer.sections[1].heading
+    Tiesiskais ietvars
+
+guidanceContent.lv.pages.disclaimer.sections[1].paragraphs[0]
+    Birojs darbojas saskaņā ar Taivānas tiesībām, un šī lapa runā tikai par darbu šajā ietvarā.
+
+guidanceContent.lv.pages.disclaimer.sections[1].paragraphs[1]
+    Saturs nav konsultācija saskaņā ar citas kārtības tiesībām, izņemot Taivānas, tostarp Jūsu uzturēšanās vietas tiesībām. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.
+
+guidanceContent.lv.pages.disclaimer.sections[2].heading
+    Attiecības starp advokāti vai advokātu un klientu nerodas pašas no sevis
+
+guidanceContent.lv.pages.disclaimer.sections[2].paragraphs[0]
+    Šīs lapas izlasīšana, veidlapas vai e-pasta nosūtīšana pati par sevi nerada attiecības starp advokāti vai advokātu un klientu.
+
+guidanceContent.lv.pages.disclaimer.sections[2].paragraphs[1]
+    Šīs attiecības rodas tikai pēc tam, kad lieta ir izvērtēta un abas puses ir apstiprinājušas darba uzņemšanos.
+
+guidanceContent.lv.pages.disclaimer.sections[3].heading
+    Nekāds iznākuma solījums
+
+guidanceContent.lv.pages.disclaimer.sections[3].paragraphs[0]
+    Neviena šīs lapas daļa nav solījums par lietas iznākumu, pieteikuma apstiprināšanu vai uzturēšanās un darba statusu.
+
+guidanceContent.lv.pages.disclaimer.sections[3].paragraphs[1]
+    Ārējās saites kalpo orientācijai; mēs negarantējam trešo personu satura pareizību un aktualitāti.
+
+guidanceContent.lv.pages.columns.eyebrow
+    RAKSTI
+
+guidanceContent.lv.pages.columns.title
+    Raksti par Taivānas tiesībām
+
+guidanceContent.lv.pages.columns.description
+    Raksti latviešu valodā par biežiem Taivānas tiesību jautājumiem. Saturs ir vispārīga informācija publicēšanas brīdī, nevis juridisks padoms Jūsu lietā.
+
+guidanceContent.lv.pages.columns.intro
+    Birojs publicē rakstus par biežiem Taivānas tiesību jautājumiem. Raksti, kas pieejami latviešu valodā, ir šajā lapā; blakus ir četras saites, no kurām katra atver rakstu sarakstu vienā sākotnējā valodā.
+
+guidanceContent.lv.pages.columns.sections[0].heading
+    Četri saraksti pēc valodas
+
+guidanceContent.lv.pages.columns.sections[0].paragraphs[0]
+    Šajā daļā ir četras saites: rakstu saraksts korejiešu, ķīniešu, angļu un japāņu valodā. Katra saite nosauc saraksta valodu, lai Jūs iepriekš zinātu, kādā valodā saturs atvērsies.
+
+guidanceContent.lv.pages.columns.sections[0].paragraphs[1]
+    Šie četri saraksti ir saraksti pēc rakstu sākotnējās valodas, nevis tulkojumu saraksti. Raksti, kas pieejami latviešu valodā, ir atsevišķi šajā lapā.
+
+guidanceContent.lv.pages.columns.sections[1].heading
+    Kur saites ved
+
+guidanceContent.lv.pages.columns.sections[1].paragraphs[0]
+    Ja izvēlaties vienu no četrām saitēm, atveras rakstu saraksts attiecīgajā valodā. No saraksta tekstu izvēlaties paši; viss saturs parādās raksta sākotnējā valodā.
+
+guidanceContent.lv.pages.columns.sections[1].paragraphs[1]
+    Šī lapa rakstu saturu neapkopo un negarantē, ka kāds temats ir pieejams visās četrās valodās. Katrā sarakstā ir tikai teksti, kas publicēti attiecīgajā valodā.
+
+guidanceContent.lv.pages.columns.sections[2].heading
+    Cik tālu raksts var kalpot orientācijai
+
+guidanceContent.lv.pages.columns.sections[2].paragraphs[0]
+    Raksti ir vispārīga informācija publicēšanas brīdī. Noteikumi un to piemērošana var mainīties, un raksts neietver visus Jūsu lietas apstākļus.
+
+guidanceContent.lv.pages.columns.sections[2].paragraphs[1]
+    Tāpēc nerīkojieties īstā lietā, balstoties tikai uz rakstu. Izmantojiet to pārskatam un savus dokumentus pārrunājiet atsevišķi ar advokāti vai advokātu; šī lapa nav konsultācijas solis.
+
+guidanceTeamCopy.lv.label
+    KOMANDA
+
+guidanceTeamCopy.lv.title
+    Hovering starptautiskā komanda
+
+guidanceTeamCopy.lv.description
+    Hovering advokāšu un advokātu, darbības vadības un partnera grāmatvedības un revīzijas profili.
+
+guidanceTeamCopy.lv.representativeTitle
+    Vadošā advokāte
+
+guidanceTeamCopy.lv.teamTitle
+    Advokāti un līdzstrādnieki
+
+guidanceTeamCopy.lv.partnerTitle
+    Partnera grāmatvedība
+
+guidanceTeamCopy.lv.introLabel
+    Iepazīstināšana
+
+guidanceTeamCopy.lv.educationLabel
+    Izglītība
+
+guidanceTeamCopy.lv.experienceLabel
+    Prakse
+
+guidanceTeamCopy.lv.photoAltPrefix
+    Fotogrāfija
+
+guidanceTeamCopy.lv.workingLanguagesLabel
+    Darba valodas
+
+guidanceTeamCopy.lv.fullProfileLabel
+    Pilns profils (angļu valodā)
+
+guidanceTeamCopy.lv.keyFactsHeading
+    Advokāte Wei Tseng — pamatfakti
+
+guidanceTeamCopy.lv.qualificationLabel
+    Pilnvarojums un birojs
+
+guidanceTeamCopy.lv.qualificationSentence
+    {name} ir tiesīga praktizēt advokatūru Taivānā un ir {firm} vadošā advokāte.
+
+guidanceTeamCopy.lv.practiceLabel
+    Galvenās jomas
+
+guidanceTeamCopy.lv.consultationLanguagesLabel
+    Konsultācijas valodas
+
+guidanceTeamCopy.lv.roles.tseng-junwei
+    Vadošā advokāte Taivānā (Managing Attorney)
+
+guidanceTeamCopy.lv.roles.chang-rongxuan
+    Advokāts Taivānā (Taiwan Attorney)
+
+guidanceTeamCopy.lv.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.lv.roles.son-jungmin
+    Korejas operāciju vadītājs (Korea Operations Manager)
+
+guidanceTeamCopy.lv.roles.huang-shengping
+    Partnera zvērināts revidents (Partner CPA)
+
+guidanceTeamBios.lv.tseng-junwei.intro[0]
+    Birojs ved uzņēmumu un privātpersonu lietas Taivānā angļu, japāņu, korejiešu un ķīniešu valodā.
+
+guidanceTeamBios.lv.tseng-junwei.intro[1]
+    Viņa pārstāvēja korejiešu studentu zaudējumu atlīdzības prasībā par traumu sporta zālē un ieguva pirmās instances spriedumu TWD 1.57M apmērā.
+
+guidanceTeamBios.lv.tseng-junwei.education[0]
+    Maģistre (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.lv.tseng-junwei.education[1]
+    Bakalaura grāds (B.A.) tiesību un finanšu dubultajā programmā, National Chengchi University
+
+guidanceTeamBios.lv.tseng-junwei.education[2]
+    Apmaiņas studijas Kobe University un Waseda University
+
+guidanceTeamBios.lv.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.lv.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.lv.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.lv.chang-rongxuan.intro[0]
+    Iepriekš Ministry of Education, Legal Affairs Division, ar uzsvaru uz administratīvajām un civillietām.
+
+guidanceTeamBios.lv.chang-rongxuan.intro[1]
+    Pieredze lietās par universitātēm, pedagogu tiesībām un administratīvajām sūdzībām.
+
+guidanceTeamBios.lv.chang-rongxuan.education[0]
+    Tiesību bakalaurs (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.lv.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.lv.chang-rongxuan.experience[1]
+    Advokāts, Hovering International Law Firm
+
+guidanceTeamBios.lv.chang-fangyu.intro[0]
+    Paralegal ar ilggadēju praksi; iepriekš vecākā paralegal vairākos advokātu birojos, ar uzsvaru uz procesuālo atbalstu, sabiedrību lietām un ārvalstu ieguldījumiem.
+
+guidanceTeamBios.lv.chang-fangyu.intro[1]
+    Atbalsts tiesvedībā, sabiedrību dibināšanā, ārvalstu ieguldījumu atļaujās, licences pieteikumos un saziņā starp Koreju un Taivānu.
+
+guidanceTeamBios.lv.chang-fangyu.education[0]
+    Tiesību bakalaura grāds (LL.B.), Tunghai University
+
+guidanceTeamBios.lv.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.lv.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.lv.son-jungmin.intro[0]
+    Koordinē konsultāciju laikus un saziņu klientiem no Korejas.
+
+guidanceTeamBios.lv.son-jungmin.intro[1]
+    Atbalsta starpreģionu apmaiņu ar dokumentu sistēmām un darba gaitām, balstoties uz informātiku.
+
+guidanceTeamBios.lv.son-jungmin.education[0]
+    Bakalaurs (B.S.) informātikā, National Cheng Kung University
+
+guidanceTeamBios.lv.son-jungmin.experience[0]
+    Korejas operāciju daļa, Hovering International Law Firm
+
+guidanceTeamBios.lv.huang-shengping.intro[0]
+    Beidzis bakalaura un maģistra programmu grāmatvedībā National Chengchi University un tagad vada grāmatvedības biroju.
+
+guidanceTeamBios.lv.huang-shengping.intro[1]
+    Atbalsta tiesisko, nodokļu un finanšu risku integrētu analīzi uzņēmumu klientiem.
+
+guidanceTeamBios.lv.huang-shengping.education[0]
+    Maģistrs (M.A.) grāmatvedībā, National Chengchi University
+
+guidanceTeamBios.lv.huang-shengping.education[1]
+    Bakalaurs (B.A.) grāmatvedībā, National Chengchi University
+
+guidanceTeamBios.lv.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.lv.Korean
+    korejiešu
+
+guidanceLanguageNames.lv.Chinese
+    ķīniešu
+
+guidanceLanguageNames.lv.Japanese
+    japāņu
+
+guidancePracticeAreaNames.lv.Taiwan company setup
+    Sabiedrību dibināšana Taivānā
+
+guidancePracticeAreaNames.lv.Taiwan investment counsel
+    Ieguldījumu konsultācijas Taivānā
+
+guidancePracticeAreaNames.lv.Civil litigation and damages
+    Civillietas un zaudējumu atlīdzība
+
+guidancePracticeAreaNames.lv.Trademark and patent filings
+    Preču zīmju un patentu pieteikumi
+
+guidancePracticeAreaNames.lv.Visa and residency
+    Vīza un uzturēšanās
+
+guidancePracticeAreaNames.lv.Family and labor disputes
+    Ģimenes un darba strīdi
+
+guidanceOfficeCopy.lv.label
+    BIROJI
+
+guidanceOfficeCopy.lv.title
+    Biroji
+
+guidanceOfficeCopy.lv.description
+    Hovering International Law Firm Taivānas biroju adreses.
+
+guidanceOfficeCopy.lv.officeLabel
+    Birojs
+
+guidanceOfficeCopy.lv.mapPreviewLabel
+    Kartes priekšskatījums
+
+guidanceOfficeCopy.lv.koreaOfficeTitle
+    Korejas birojs
+
+guidanceOfficeCopy.lv.koreaAddressCardLabel
+    Korejas biroja adrese
+
+guidanceOfficeCopy.lv.koreaMapLinkLabel
+    Skatīt Naver Map
+
+guidanceOfficeCopy.lv.reviewCountWord
+    vērtējumi
+
+guidanceOfficeCopy.lv.phoneLabel
+    Tālrunis
+
+guidanceOfficeCopy.lv.faxLabel
+    Fakss
+
+guidanceOfficeCopy.lv.mapLinkLabel
+    Skatīt kartē
+
+guidanceOfficeCopy.lv.photoAlts[0]
+    Hovering International Law Firm Taipei biroja reģistratūra
+
+guidanceOfficeCopy.lv.photoAlts[1]
+    Advokātes kabinets Hovering International Law Firm Taipei birojā
+
+guidanceOfficeCopy.lv.photoAlts[2]
+    Sanāksmju telpa Hovering International Law Firm Taipei birojā
+
+guidanceOfficeCopy.lv.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.lv.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.lv.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.lv.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.lv.officeLabel
+    Biroji
+
+guidanceFooterCopy.lv.officeQuickLinksLabel
+    Ātrās saites uz birojiem
+
+guidanceFooterCopy.lv.followLabel
+    Sekojiet mums
+
+guidanceFooterCopy.lv.blogLabel
+    Emuārs
+
+guidanceFooterCopy.lv.websiteLabel
+    Oficiālā vietne
+
+guidanceFooterCopy.lv.sitemapLabel
+    Vietnes karte
+
+guidanceFooterCopy.lv.copyEmailLabel
+    Kopēt e-pasta adresi
+
+guidanceFooterCopy.lv.emailCopiedMessage
+    E-pasta adrese ir nokopēta.
+
+guidanceFooterCopy.lv.officialConsultationEmailLabel
+    Oficiālais e-pasts jautājumiem
+
+internationalInquiryCopy.lv.guidanceNotice
+    Šī lapa ir rakstīta latviešu valodā kā vispārīga orientācija, nevis kā juridisks padoms Jūsu lietā.
+
+internationalInquiryCopy.lv.consultationNotice
+    Konsultācija notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu.
+
+internationalInquiryCopy.lv.methodConfirmationNotice
+    Ja nevarat lietot nevienu no četrām konsultācijas valodām, izvēlieties „Saziņas veids ir jāapstiprina“. Mēs atbildēsim, lai izvērtētu, vai pastāv izmantojams saziņas veids; pakalpojums citā valodā nav garantēts, un atbildes termiņš netiek solīts.
+
+internationalInquiryCopy.lv.preparationNotice
+    Kopsavilkumu varat rakstīt savā valodā. Sākotnējais teksts tiek saglabāts tā, kā to uzrakstījāt, un netiek tulkots automātiski.
+
+internationalInquiryCopy.lv.heading
+    Nosūtīt izvērtēšanas pieteikumu
+
+internationalInquiryCopy.lv.intro
+    Aprakstiet savu lietu īsi. Advokāte vai advokāts izvērtēs saturu, pirms tiek sperts nākamais solis.
+
+internationalInquiryCopy.lv.submitLabel
+    Nosūtīt pieteikumu
+
+internationalInquiryCopy.lv.submittingLabel
+    Notiek nosūtīšana…
+
+internationalInquiryCopy.lv.successMessage
+    Esam saņēmuši Jūsu pieteikumu; tas gaida izvērtējumu. Tas nenozīmē, ka konsultācija ir notikusi vai ka tikšanās ir apstiprināta.
+
+internationalInquiryCopy.lv.savedNotificationPendingMessage
+    Jūsu pieteikums ir saglabāts, taču paziņojums birojam vēl nav saņemts. Tas, ko uzrakstījāt, nezūd. Ja atbildi nesaņemat, varat rakstīt arī uz e-pasta adresi no saziņas lapas.
+
+internationalInquiryCopy.lv.receiptIdLabel
+    Iesnieguma numurs
+
+internationalInquiryCopy.lv.failureMessage
+    Jūsu pieteikumu neizdevās nosūtīt. Mēģiniet vēlreiz vai rakstiet uz e-pasta adresi no saziņas lapas.
+
+internationalInquiryCopy.lv.originalLanguageLabel
+    Valoda, kurā rakstāt
+
+internationalInquiryCopy.lv.originalLanguagePlaceholder
+    Piemēram, latviešu, angļu, ķīniešu vai cita valoda
+
+internationalInquiryCopy.lv.preferredConsultationLanguageLabel
+    Valoda, ko vēlaties konsultācijai
+
+internationalInquiryCopy.lv.originalTextLabel
+    Īss lietas apraksts (Jūsu valodā)
+
+internationalInquiryCopy.lv.originalTextPlaceholder
+    Uzrakstiet, kas ir noticis, kāda palīdzība Jums vajadzīga, un termiņu, ja tāds ir. Nerakstiet pases numuru, personas dokumenta numuru un konta datus.
+
+internationalInquiryCopy.lv.nameLabel
+    Vārds
+
+internationalInquiryCopy.lv.emailLabel
+    E-pasts
+
+internationalInquiryCopy.lv.consentLabel
+    Esmu izlasījis(-usi) privātuma lapu un piekrītu šā pieteikuma nosūtīšanai.
+
+internationalInquiryCopy.lv.privacyLinkLabel
+    Privātums
+
+internationalInquiryCopy.lv.requiredMessage
+    Šis lauks ir obligāts.
+
+internationalInquiryCopy.lv.invalidEmailMessage
+    Ievadiet derīgu e-pasta adresi.
+
+internationalInquiryCopy.lv.tooLongMessage
+    Teksts ir pārāk garš. Saīsiniet to un nosūtiet no jauna.
+
+internationalInquiryCopy.lv.sourceLanguageNotice
+    Šis raksts ir publicēts tikai valodā {language}; saite atver sākotnējo lapu.
+
+internationalInquiryCopy.lv.unavailableTranslationNotice
+    Šī daļa šīs lapas valodā vēl nav pieejama. Saite sākotnējā valodā atver sākotnējo tekstu.
+
+internationalInquiryCopy.lv.unavailableLanguageNotice
+    Šī lapa valodā {language} netiek piedāvāta.
+
+internationalInquiryCopy.lv.languageOptions.en
+    Angļu (English)
+
+internationalInquiryCopy.lv.languageOptions.zh-hant
+    Ķīniešu (中文)
+
+internationalInquiryCopy.lv.languageOptions.ja
+    Japāņu (日本語)
+
+internationalInquiryCopy.lv.languageOptions.ko
+    Korejiešu (한국어)
+
+internationalInquiryCopy.lv.languageOptions.needs-method-confirmation
+    Neviena no četrām valodām nav lietojama — saziņas veids ir jāapstiprina
+
+guidanceAnswers.lv.services.answer
+    Birojs ved sešas jomas saskaņā ar Taivānas tiesībām: ieguldījumus un sabiedrību dibināšanu, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Katra lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis nosūtīto saturu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.
+
+guidanceAnswers.lv.services.sources[0]
+    /lv/faq
+
+guidanceAnswers.lv.services.sources[1]
+    /lv/contact
+
+guidanceAnswers.lv.about.answer
+    Hovering International Law Firm ir Taivānas advokātu birojs, ko 2016. gadā dibināja National Taiwan University (國立臺灣大學) absolventi, ar birojiem Taipei, Kaohsiung, Taichung un Pingtung. Kopš 2020. gada darbojas arī grāmatvedības daļa; Taichung birojs ved lietas ar saikni ar Koreju un Japānu. Birojs nesola iznākumu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.
+
+guidanceAnswers.lv.about.sources[0]
+    /lv/lawyers
+
+guidanceAnswers.lv.about.sources[1]
+    /lv/services
+
+guidanceAnswers.lv.lawyers.answer
+    Šī lapa rāda Hovering advokāšu un advokātu, darbības vadības un partnera grāmatvedības un revīzijas profilus. Advokāte Wei Tseng (曾雋崴) ir tiesīga praktizēt advokatūru Taivānā un ir biroja vadošā advokāte; viņa palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.
+
+guidanceAnswers.lv.lawyers.sources[0]
+    /lv/about
+
+guidanceAnswers.lv.lawyers.sources[1]
+    /lv/contact
+
+guidanceAnswers.lv.pricing.answer
+    Šī lapa nepublicē cenrādi. Vispirms no Jūsu kopsavilkuma apstiprina darba apjomu, pēc tam ar Jums apstiprina apmēru un aprēķina veidu, pirms darbs sākas. Konsultācija ar advokāti vai advokātu var būt pret samaksu; līdzās honorāram var rasties tiesas vai iestāžu nodevas. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.
+
+guidanceAnswers.lv.pricing.sources[0]
+    /lv/contact
+
+guidanceAnswers.lv.pricing.sources[1]
+    /lv/faq
+
+guidanceAnswers.lv.contact.answer
+    Nosūtiet kopsavilkumu saziņas veidlapā: kas ir noticis, kāda palīdzība Jums vajadzīga, kāda saikne lietai ir ar Taivānu, un termiņu, ja to zināt. Sākumposmā vēl nav jānosūta personas dokumenti vai visa pierādījumu kopa. Birojs nesola atbildes termiņu un neapstiprina tikšanos, izmantojot šo lapu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.
+
+guidanceAnswers.lv.contact.sources[0]
+    /lv/faq
+
+guidanceAnswers.lv.contact.sources[1]
+    /lv/pricing
+
+guidanceAnswers.lv.faq.answer
+    Šī daļa atbild uz biežiem jautājumiem vispārīgas informācijas līmenī: sešas biroja jomas, sagatavošanās pirms saziņas, izmaksu apstiprinājums un nosūtīta ziņojuma nozīme. Nosūtīts ziņojums gaida izvērtējumu, nav juridisks atzinums un nav apstiprināta tikšanās, un pats par sevi nerada attiecības starp advokāti vai advokātu un klientu. Konsultācija notiek tikai četrās valodās: angļu, ķīniešu, japāņu un korejiešu.
+
+guidanceAnswers.lv.faq.sources[0]
+    /lv/services
+
+guidanceAnswers.lv.faq.sources[1]
+    /lv/contact
+
+GUIDANCE_LLMS_NOTICES.lv.consultationNotice
+    Šī informācija ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.
+
+GUIDANCE_LLMS_NOTICES.lv.discoveryNotice
+    Fails llms.txt ir tikai karte publisko lapu atrašanai; tas nesola vietu meklēšanā, atbalstu, mākslīgā intelekta ieteikumu un redzamību.
+
+GUIDANCE_LLMS_NOTICES.lv.confidentialNotice
+    Tā kā sākotnējais teksts tiek saglabāts, sākumposmā nerakstiet to, kas vēl nav vajadzīgs, piemēram, pases numuru, personas dokumenta numuru vai konta datus.

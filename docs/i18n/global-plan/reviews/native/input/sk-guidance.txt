@@ -1,0 +1,1096 @@
+# sk guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.sk.languageName
+    Slovenčina
+
+guidanceContent.sk.nav.home
+    Domov
+
+guidanceContent.sk.nav.services
+    Právne služby
+
+guidanceContent.sk.nav.about
+    Kancelária
+
+guidanceContent.sk.nav.lawyers
+    Náš tím
+
+guidanceContent.sk.nav.pricing
+    Náklady práce
+
+guidanceContent.sk.nav.contact
+    Napíšte nám
+
+guidanceContent.sk.nav.faq
+    Časté otázky
+
+guidanceContent.sk.nav.privacy
+    Súkromie
+
+guidanceContent.sk.nav.disclaimer
+    Upozornenie
+
+guidanceContent.sk.nav.columns
+    Príspevky
+
+guidanceContent.sk.contactCta
+    Odoslať žiadosť o posúdenie
+
+guidanceContent.sk.footerNotice
+    Táto slovenská stránka prináša iba všeobecné informácie o práci kancelárie podľa taiwanského práva. Nie je právnou radou k jednotlivému prípadu a samotné odoslanie správy nezakladá vzťah medzi advokátkou alebo advokátom a klientom.
+
+guidanceContent.sk.skipLink
+    Preskočiť navigáciu a prejsť k obsahu
+
+guidanceContent.sk.menuLabel
+    Prehľad stránok
+
+guidanceContent.sk.languageLabel
+    Jazyk zobrazenia
+
+guidanceContent.sk.mega.services.description
+    Kancelária sa venuje hlavným oblastiam taiwanského práva.
+
+guidanceContent.sk.mega.services.viewAllLabel
+    Zobraziť všetky
+
+guidanceContent.sk.mega.columns.description
+    Príspevky k častým otázkam taiwanského práva.
+
+guidanceContent.sk.mega.columns.viewAllLabel
+    Zobraziť všetky
+
+guidanceContent.sk.mega.lawyers.description
+    Predstavenie advokátok a advokátov a spôsobov, ako nás osloviť.
+
+guidanceContent.sk.mega.lawyers.viewAllLabel
+    Zobraziť všetky
+
+guidanceContent.sk.mega.pricing.description
+    Táto stránka objasňuje rozsah práce a to, ako sa ujasňujú náklady.
+
+guidanceContent.sk.mega.pricing.viewAllLabel
+    Zobraziť všetky
+
+guidanceContent.sk.mega.faq.description
+    Časté otázky o práci kancelárie na Taiwane.
+
+guidanceContent.sk.mega.faq.viewAllLabel
+    Zobraziť všetky
+
+guidanceContent.sk.notFoundTitle
+    Stránka sa nenašla
+
+guidanceContent.sk.notFoundText
+    Hľadaná stránka neexistuje alebo bola presunutá. Môžete sa vrátiť na slovenskú úvodnú stránku a pozrieť si dostupné informácie.
+
+guidanceContent.sk.backHomeLabel
+    Na úvodnú stránku
+
+guidanceContent.sk.readSourceLabel
+    Otvoriť zoznam príspevkov v pôvodnom jazyku
+
+guidanceContent.sk.home.heroScrollLabel
+    Posunúť nadol
+
+guidanceContent.sk.home.heroColumnsCtaLabel
+    Zobraziť príspevky
+
+guidanceContent.sk.home.servicesDetailLabel
+    Zobraziť podrobnosti
+
+guidanceContent.sk.home.servicesAssistanceBefore
+    Ak nie je zrejmé, do ktorej oblasti Vaša vec patrí, stránka 
+
+guidanceContent.sk.home.servicesAssistanceLinkLabel
+    Napíšte nám
+
+guidanceContent.sk.home.servicesAssistanceAfter
+     vysvetľuje, ako zostaviť zhrnutie, ktoré advokátka alebo advokát posúdi.
+
+guidanceContent.sk.home.columnsViewAllLabel
+    Zobraziť všetky príspevky
+
+guidanceContent.sk.home.columnsReadMoreLabel
+    Čítať ďalej
+
+guidanceContent.sk.home.columnsReviewLabel
+    Posúdila advokátka Wei Tseng
+
+guidanceContent.sk.home.columnsOriginalLanguageBadge
+    Pôvodný jazyk
+
+guidanceContent.sk.home.columnsOriginalLanguageNote
+    Nasledujúce príspevky zatiaľ nie sú k dispozícii v slovenčine. Zoznam ostáva v pôvodnom jazyku a otvorí príslušnú jazykovú stránku; obsah sa automaticky neprekladá.
+
+guidanceContent.sk.home.imageBandAlt
+    Tradičný taiwanský dvor sanheyuan (三合院) a moderný pavilón za denného svetla
+
+guidanceContent.sk.home.videoPauseLabel
+    Pozastaviť video
+
+guidanceContent.sk.home.videoPlayLabel
+    Prehrať video
+
+guidanceContent.sk.home.videoReplayLabel
+    Prehrať video znova
+
+guidanceContent.sk.pages.home.eyebrow
+    INFORMÁCIE
+
+guidanceContent.sk.pages.home.title
+    Právne služby na Taiwane — informácie v slovenčine
+
+guidanceContent.sk.pages.home.description
+    Všeobecné vysvetlenie v slovenčine o rozsahu práce Hovering International Law Firm na Taiwane, o jazykoch konzultácie a o prvom kontakte.
+
+guidanceContent.sk.pages.home.intro
+    Hovering International Law Firm zastupuje zahraničných klientov, vrátane osôb s väzbou na Taiwan, vo veciach taiwanského práva: investície a zakladanie spoločností, občianskoprávne spory, manželstvo, rodina a dedenie, pracovné právo, trestné veci a duševné vlastníctvo. Táto slovenská časť Vám pomôže rozpoznať, ktorá práca spadá do nášho rozsahu, čo si pripraviť a ako nás osloviť. Ide o všeobecné informácie, nie o právnu radu k Vašemu prípadu.
+
+guidanceContent.sk.pages.home.sections[0].heading
+    Čím sa zaoberáme
+
+guidanceContent.sk.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm je advokátska kancelária so sídlom na Taiwane. Pracuje podľa taiwanského práva a má sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Radíme podnikom, vedieme súdne konania a zastupujeme zahraničných klientov v krokoch, ktoré je na Taiwane potrebné urobiť.
+
+guidanceContent.sk.pages.home.sections[0].paragraphs[1]
+    Celý tu uvedený obsah je všeobecný. Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu. Tieto informácie nenahrádzajú konzultáciu s advokátkou alebo advokátom nad Vašimi dokumentmi.
+
+guidanceContent.sk.pages.home.sections[1].heading
+    Jazyk stránky a jazyk konzultácie nie sú to isté
+
+guidanceContent.sk.pages.home.sections[1].paragraphs[0]
+    Táto stránka je napísaná po slovensky, ale konzultácia s advokátkou alebo advokátom prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky. Čítanie informácií v slovenčine neznamená, že konzultácia s advokátkou alebo advokátom prebehne po slovensky.
+
+guidanceContent.sk.pages.home.sections[1].paragraphs[1]
+    Nesľubujeme tlmočníka, lehotu na odpoveď ani stretnutie prostredníctvom tejto stránky. Ak neovládate žiadny zo štyroch jazykov konzultácie, stránka „Napíšte nám“ vysvetľuje, ako posudzujeme spôsob komunikácie.
+
+guidanceContent.sk.pages.home.sections[2].heading
+    Oblasti práce kancelárie
+
+guidanceContent.sk.pages.home.sections[2].paragraphs[0]
+    Rozsah práce zahŕňa nasledujúcich šesť oblastí. Stránka „Právne služby“ opisuje každú z nich presnejšie a uvádza, čo sa nesľubuje.
+
+guidanceContent.sk.pages.home.sections[2].items[0]
+    Investície a zakladanie spoločností na Taiwane
+
+guidanceContent.sk.pages.home.sections[2].items[1]
+    Občianskoprávne spory a náhrada škody
+
+guidanceContent.sk.pages.home.sections[2].items[2]
+    Manželstvo, rodina a dedenie
+
+guidanceContent.sk.pages.home.sections[2].items[3]
+    Pracovnoprávne spory
+
+guidanceContent.sk.pages.home.sections[2].items[4]
+    Trestné veci
+
+guidanceContent.sk.pages.home.sections[2].items[5]
+    Duševné vlastníctvo: ochranné známky, patenty a autorské právo
+
+guidanceContent.sk.pages.home.sections[3].heading
+    Kde začať
+
+guidanceContent.sk.pages.home.sections[3].paragraphs[0]
+    Prečítajte si stránku „Právne služby“ a overte, či Vaša vec spadá do nášho rozsahu, potom „Náklady práce“ a „Napíšte nám“, aby ste vedeli, ako sa stanoví rozsah a ako sa náklady potvrdzujú pred začatím práce.
+
+guidanceContent.sk.pages.home.sections[3].paragraphs[1]
+    Pri odoslaní správy môžete zhrnutie napísať vo svojom jazyku. Pôvodný text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Odoslaná správa je žiadosťou čakajúcou na posúdenie: nie je to ešte porada ani potvrdené stretnutie.
+
+guidanceContent.sk.pages.services.eyebrow
+    PRÁVNE SLUŽBY
+
+guidanceContent.sk.pages.services.title
+    V čom klientov zastupujeme
+
+guidanceContent.sk.pages.services.description
+    Šesť oblastí, ktoré kancelária na Taiwane vedie, a hranice, ktoré je užitočné poznať ako prvé.
+
+guidanceContent.sk.pages.services.intro
+    Nižšie sú oblasti, ktoré skutočne vedieme, a otázky, ktoré sa v počiatočnej fáze kladú najčastejšie. Výklad Vám pomôže posúdiť, či Vaša vec spadá do nášho rozsahu; je všeobecný a nie je právnym rozborom jednotlivého spisu.
+
+guidanceContent.sk.pages.services.sections[0].heading
+    Investície a zakladanie spoločností na Taiwane
+
+guidanceContent.sk.pages.services.sections[0].paragraphs[0]
+    Zastupujeme zahraničných investorov a podniky pri založení alebo vedení spoločnosti na Taiwane: voľba právnej formy, príprava a podanie dokumentov, vklad kapitálu, bankové otázky, posúdenie sídla a odvetvové požiadavky. Podporujeme tiež účtovníctvo a dane, ktoré zo založenia a z prevádzky na Taiwane vyplývajú.
+
+guidanceContent.sk.pages.services.sections[0].paragraphs[1]
+    Postup a lehoty sa líšia podľa formy, investora, odvetvia, banky a podľa už dostupných dokumentov. Založenie spoločnosti samo osebe nevedie k pobytovému oprávneniu (居留) ani k pracovnému povoleniu (工作許可): ide o samostatné konania posudzované podľa situácie konkrétnej osoby.
+
+guidanceContent.sk.pages.services.sections[1].heading
+    Občianskoprávne spory a náhrada škody
+
+guidanceContent.sk.pages.services.sections[1].paragraphs[0]
+    Táto oblasť zahŕňa spory zo zmlúv, náhradu škody z protiprávneho konania a spotrebiteľské spory. Práca spravidla začína časovou osou, posúdením dokumentov a existujúcich dôkazov a až potom nasledujú ďalšie kroky.
+
+guidanceContent.sk.pages.services.sections[1].paragraphs[1]
+    Priebeh určujú lehoty, vrátane premlčacích, a úplnosť dôkazov. Uveďte preto známe dátumy čo najskôr. Uschovajte zmluvy, správy, doklady o platbe alebo fotografie stavu na mieste a spomeňte ich v prvej správe.
+
+guidanceContent.sk.pages.services.sections[2].heading
+    Manželstvo, rodina a dedenie
+
+guidanceContent.sk.pages.services.sections[2].paragraphs[0]
+    Vedeme rozvod (離婚), vysporiadanie majetku, výkon a prevzatie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie matričných záznamov (戶籍), formy listín a ich preukaznosti na Taiwane.
+
+guidanceContent.sk.pages.services.sections[2].paragraphs[1]
+    Pretože rodinné veci so sebou často nesú lehoty a súbežné konania, prvé zhrnutie by malo uviesť vzťah medzi stranami, súčasné bydlisko a už prebiehajúce konania.
+
+guidanceContent.sk.pages.services.sections[3].heading
+    Pracovnoprávne spory
+
+guidanceContent.sk.pages.services.sections[3].paragraphs[0]
+    Táto oblasť zahŕňa skončenie pracovného pomeru, odstupné podľa taiwanského práva (資遣費; nemožno ho stotožňovať s obdobnými inštitútmi iných štátov), odmenu a spory z pracovnej zmluvy (勞動契約), a to tak na strane zamestnanca, ako aj na strane zamestnávateľa. Pri posúdení odlišujeme dôvod skončenia od otázok výpovednej doby, výplaty a lehôt.
+
+guidanceContent.sk.pages.services.sections[3].paragraphs[1]
+    Rozhodujúcimi dokumentmi bývajú pracovná zmluva, vnútorný pracovný poriadok (工作規則), výplatné pásky a korešpondencia strán. Ak ich máte stále k dispozícii, spomeňte to v zhrnutí.
+
+guidanceContent.sk.pages.services.sections[4].heading
+    Trestné veci
+
+guidanceContent.sk.pages.services.sections[4].paragraphs[0]
+    Zastupujeme v prípravnom konaní aj pred súdom podozrivých a obvinených i poškodených a posudzujeme trestné riziká podnikateľskej činnosti.
+
+guidanceContent.sk.pages.services.sections[4].paragraphs[1]
+    Trestné veci mávajú krátke lehoty a pevne stanovené fázy. Ak ste už dostali písomnosť orgánu činného v trestnom konaní alebo súdu, uveďte dátum na písomnosti včas, aby sa obsah posúdil v správnom poradí.
+
+guidanceContent.sk.pages.services.sections[5].heading
+    Duševné vlastníctvo
+
+guidanceContent.sk.pages.services.sections[5].paragraphs[0]
+    Podporujeme zápis ochranných známok (商標) a patentov (專利), autorské právo a spory o tieto práva na Taiwane.
+
+guidanceContent.sk.pages.services.sections[5].paragraphs[1]
+    V tejto oblasti rozhoduje poradie krokov: rozsah ochrany, okamih podania prihlášky a skutočné užívanie ovplyvňujú voľbu. Podanie prihlášky samo osebe neznamená, že jej bude vyhovené.
+
+guidanceContent.sk.pages.services.sections[6].heading
+    Rozsah a jeho potvrdenie
+
+guidanceContent.sk.pages.services.sections[6].paragraphs[0]
+    Kancelária pracuje podľa taiwanského práva a vedie veci z vyššie uvedených oblastí. Rozsah každej veci sa potvrdzuje osobitne potom, čo advokátka alebo advokát posúdi Vašu správu.
+
+guidanceContent.sk.pages.services.sections[6].paragraphs[1]
+    Pobytový status, pracovné povolenie a obdobné otázky sa posudzujú podľa dokumentov a podľa situácie konkrétnej osoby, nie podľa štátnej príslušnosti. Ak sa časť Vašej veci týchto bodov dotýka, uveďte to pri kontakte. Táto stránka nesľubuje výsledok ani lehotu na odpoveď.
+
+guidanceContent.sk.pages.about.eyebrow
+    KANCELÁRIA
+
+guidanceContent.sk.pages.about.title
+    O Hovering International Law Firm
+
+guidanceContent.sk.pages.about.description
+    Základné údaje o tejto taiwanskej advokátskej kancelárii, o jej sídlach a o práci so zahraničnými stranami.
+
+guidanceContent.sk.pages.about.intro
+    Hovering International Law Firm je advokátska kancelária na Taiwane. Advokátky a advokáti pracujú od poradenstva podnikom až po súdne konania. Táto časť opisuje vznik kancelárie, sídla a prácu so zahraničnými stranami.
+
+guidanceContent.sk.pages.about.sections[0].heading
+    Založenie a štruktúra
+
+guidanceContent.sk.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) bola založená v roku 2016 advokátkami a advokátmi, ktorí študovali na National Taiwan University (國立臺灣大學). Čínsky názov 昊鼎 spája znak 昊 („širé nebo“) so znakom 鼎 („pevný základ“) a vystihuje zameranie kancelárie od jej založenia.
+
+guidanceContent.sk.pages.about.sections[0].paragraphs[1]
+    Máme sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Sídlo v Kaohsiungu sa sústreďuje na vedenie podnikov a vedie občianskoprávne, trestné a správne spory. Sídlo v Taichungu vedie stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Sídlo v Pingtungu bolo otvorené v roku 2017 pre miestnu potrebu.
+
+guidanceContent.sk.pages.about.sections[0].paragraphs[2]
+    Vedľa advokátskej práce pôsobí od roku 2020 aj Hovering Accounting Office, ktorá ponúka účtovníctvo a daňové plánovanie podnikateľom a súkromným osobám s majetkom.
+
+guidanceContent.sk.pages.about.sections[1].heading
+    Práca so zahraničnými stranami
+
+guidanceContent.sk.pages.about.sections[1].paragraphs[0]
+    Cezhraničná práca zahŕňa zakladanie spoločností, víza, prihlášky ochranných známok a patentov, posúdenie právneho rizika a daňové poradenstvo podnikom. Sídlo v Taichungu vedie najmä stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klientov z Kórey, z Japonska a ďalších medzinárodných klientov v uvedených oblastiach.
+
+guidanceContent.sk.pages.about.sections[1].paragraphs[1]
+    Či môžeme vec prevziať, závisí od obsahu a od jazyka komunikácie. Ak Vaša vec spadá do uvedených oblastí a možno ju prebrať v niektorom zo štyroch jazykov konzultácie, môžete zaslať zhrnutie na posúdenie.
+
+guidanceContent.sk.pages.about.sections[2].heading
+    Keď nás oslovíte
+
+guidanceContent.sk.pages.about.sections[2].paragraphs[0]
+    Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom hovorí o možnom rozsahu práce, o doteraz potrebných dokumentoch a o ďalších krokoch. Pri daňových alebo účtovných otázkach môže kancelária postupovať s účtovným úsekom v jednom nadväzujúcom postupe.
+
+guidanceContent.sk.pages.about.sections[2].paragraphs[1]
+    Výsledok každej veci závisí od skutkového stavu a od dostupných dokumentov; výsledok nesľubujeme. Ak potrebujete záväznú odpoveď pre svoju situáciu, dokumenty treba prebrať s advokátkou alebo advokátom v niektorom zo štyroch jazykov konzultácie.
+
+guidanceContent.sk.pages.lawyers.eyebrow
+    NÁŠ TÍM
+
+guidanceContent.sk.pages.lawyers.title
+    Medzinárodný tím Hovering
+
+guidanceContent.sk.pages.lawyers.description
+    Profily advokátok a advokátov, prevádzkového vedenia a pridruženého účtovníctva a auditu Hovering.
+
+guidanceContent.sk.pages.lawyers.intro
+    
+
+guidanceContent.sk.pages.pricing.eyebrow
+    NÁKLADY PRÁCE
+
+guidanceContent.sk.pages.pricing.title
+    Ako sa stanoví rozsah práce a náklady
+
+guidanceContent.sk.pages.pricing.description
+    Vysvetlenie poradia: najprv rozsah práce, potom potvrdenie nákladov, a prečo táto stránka neobsahuje cenník.
+
+guidanceContent.sk.pages.pricing.intro
+    Táto stránka vysvetľuje, ako sa náklady stanovujú, nie ich výšku. Výška závisí od rozsahu práce v jednotlivej veci a má zmysel až vtedy, keď je tento rozsah zrejmý.
+
+guidanceContent.sk.pages.pricing.sections[0].heading
+    Najprv sa stanoví rozsah práce
+
+guidanceContent.sk.pages.pricing.sections[0].paragraphs[0]
+    Veci toho istého druhu môžu vyžadovať veľmi rozdielne úsilie, podľa počtu strán, dostupných dokumentov, lehôt, ktoré treba dodržať, a podľa toho, či už bolo začaté konanie. Prvým krokom je preto vždy stanoviť, čo do práce patrí a čo nie.
+
+guidanceContent.sk.pages.pricing.sections[0].paragraphs[1]
+    Zhrnutie, ktoré na začiatku zašlete, je základom tohto rozsahu. Čím jasnejšie opisuje priebeh, Vašu požiadavku a lehoty, tým presnejšie možno rozsah určiť.
+
+guidanceContent.sk.pages.pricing.sections[1].heading
+    Náklady sa potvrdzujú pred začatím práce
+
+guidanceContent.sk.pages.pricing.sections[1].paragraphs[0]
+    Ak je rozsah práce zrejmý, výška a spôsob výpočtu nákladov sa s Vami preberú a potvrdia skôr, než práca začne. Ak sa rozsah v priebehu zmení, musí sa potvrdiť znova.
+
+guidanceContent.sk.pages.pricing.sections[1].paragraphs[1]
+    Táto stránka nie je cenovou ponukou a nezakladá povinnosť na platbu.
+
+guidanceContent.sk.pages.pricing.sections[2].heading
+    Porada môže byť odplatná
+
+guidanceContent.sk.pages.pricing.sections[2].paragraphs[0]
+    Porada s advokátkou alebo advokátom môže byť odplatnou službou. Táto stránka nehovorí, že prvá konzultácia je bezplatná, a žiadnu jej časť nemožno v tomto zmysle vykladať.
+
+guidanceContent.sk.pages.pricing.sections[2].paragraphs[1]
+    Ak je porada odplatná, výška a spôsob platby sa oznámia skôr, než sa porada uskutoční.
+
+guidanceContent.sk.pages.pricing.sections[3].heading
+    Prečo táto stránka neuvádza sadzby
+
+guidanceContent.sk.pages.pricing.sections[3].paragraphs[0]
+    Náklady závisia od veci samej: od úsilia, počtu strán, dokumentov, lehôt a od toho, či už konanie prebieha. Číslo stanovené vopred by náklady Vášho spisu neukázalo. Preto najprv stanovíme rozsah práce a náklady Vám oznámime potom, skôr než práca začne.
+
+guidanceContent.sk.pages.pricing.sections[3].paragraphs[1]
+    Okrem odmeny môžu vzniknúť súdne poplatky, náklady orgánov alebo tretích osôb. Tie sú od odmeny oddelené a závisia od príslušného konania.
+
+guidanceContent.sk.pages.contact.eyebrow
+    NAPÍŠTE NÁM
+
+guidanceContent.sk.pages.contact.title
+    Ako kanceláriu osloviť
+
+guidanceContent.sk.pages.contact.description
+    Jazyk stránky, jazyky konzultácie, postup pre prípad, že neovládate žiadny zo štyroch jazykov, a čo táto stránka nesľubuje.
+
+guidanceContent.sk.pages.contact.intro
+    Skôr než nám napíšete, rozlíšte nasledujúce tri body. Bývajú zamenené, ale znamenajú rôzne veci.
+
+guidanceContent.sk.pages.contact.sections[0].heading
+    Tri veci, ktoré treba držať oddelene
+
+guidanceContent.sk.pages.contact.sections[0].paragraphs[0]
+    Jazyk zobrazenia stránky, jazyk konzultácie s advokátkou alebo advokátom a jazyk, v ktorom píšete, sú tri rôzne veci.
+
+guidanceContent.sk.pages.contact.sections[0].items[0]
+    Jazyk stránky: tieto informácie sú napísané po slovensky.
+
+guidanceContent.sk.pages.contact.sections[0].items[1]
+    Jazyk konzultácie: porada prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.
+
+guidanceContent.sk.pages.contact.sections[0].items[2]
+    Váš jazyk písania: zhrnutie môžete napísať vo svojom jazyku; pôvodný text sa uchová bez zmeny.
+
+guidanceContent.sk.pages.contact.sections[1].heading
+    Ak neovládate žiadny zo štyroch jazykov konzultácie
+
+guidanceContent.sk.pages.contact.sections[1].paragraphs[0]
+    V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schodný spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.
+
+guidanceContent.sk.pages.contact.sections[1].paragraphs[1]
+    Ide iba o krok posúdenia, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.
+
+guidanceContent.sk.pages.contact.sections[2].heading
+    Čo by mala obsahovať prvá správa
+
+guidanceContent.sk.pages.contact.sections[2].paragraphs[0]
+    Uveďte, čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. Ak ste už dostali písomnosť súdu alebo úradu, uveďte dátum na písomnosti.
+
+guidanceContent.sk.pages.contact.sections[2].paragraphs[1]
+    V počiatočnej fáze zatiaľ nemusíte zasielať číslo pasu, číslo dokladu, údaje o účte, zdravotnú dokumentáciu ani súbor dôkazov. Vyčkajte pokynov advokátky alebo advokáta a citlivé dokumenty zašlite až potom bezpečnou cestou.
+
+guidanceContent.sk.pages.contact.sections[3].heading
+    Čo táto stránka nesľubuje
+
+guidanceContent.sk.pages.contact.sections[3].paragraphs[0]
+    Nesľubujeme lehotu na odpoveď, nepotvrdzujeme stretnutie prostredníctvom tejto stránky, nesľubujeme konkrétnu advokátku ani konkrétneho advokáta a neposkytujeme tlmočníka. Písomný preklad je niečo iné: Vaša správa sa automaticky neprekladá.
+
+guidanceContent.sk.pages.contact.sections[3].paragraphs[1]
+    Ak odošlete žiadosť, obsah sa uchová a čaká na posúdenie. Ak po určitom čase nedostanete odpoveď, môžete napísať znova na e-mailovú adresu uvedenú na kontaktnej stránke.
+
+guidanceContent.sk.pages.faq.eyebrow
+    ČASTÉ OTÁZKY
+
+guidanceContent.sk.pages.faq.title
+    Časté otázky
+
+guidanceContent.sk.pages.faq.description
+    Vysvetlenie k rozsahu práce, príprave, jazykom, nákladom a k tomu, čo znamená odoslaná žiadosť.
+
+guidanceContent.sk.pages.faq.intro
+    Nasledujúce otázky sú zodpovedané na úrovni všeobecných informácií. Odpoveď pre Váš prípad je možná až potom, čo advokátka alebo advokát posúdi dokumenty.
+
+guidanceContent.sk.pages.faq.sections[0].heading
+    Ako túto časť používať
+
+guidanceContent.sk.pages.faq.sections[0].paragraphs[0]
+    Ak nenájdete odpoveď pre svoju situáciu, odpoveď spravidla závisí od osobitných skutočností. Napíšte ich preto do zhrnutia, namiesto toho, aby ste ich odvodzovali z tejto stránky.
+
+guidanceContent.sk.pages.faq.faqs[0].question
+    Ktoré veci kancelária vedie?
+
+guidanceContent.sk.pages.faq.faqs[0].answer
+    Vedieme šesť oblastí: investície a zakladanie spoločností na Taiwane, občianskoprávne spory a náhradu škody, manželstvo, rodinu a dedenie, pracovnoprávne spory, trestné veci a duševné vlastníctvo. Či bude vec prijatá, sa rozhodne po posúdení obsahu.
+
+guidanceContent.sk.pages.faq.faqs[1].question
+    Čo si pripraviť pred kontaktom?
+
+guidanceContent.sk.pages.faq.faqs[1].answer
+    Pripravte si krátke zhrnutie priebehu, svojej požiadavky, väzby na Taiwan a lehoty, ak nejaká existuje. Ak je už k dispozícii písomnosť súdu alebo úradu, uveďte dátum. V tejto fáze zatiaľ nemusíte zasielať doklady totožnosti ani súbor dôkazov.
+
+guidanceContent.sk.pages.faq.faqs[2].question
+    Je možná porada v slovenčine?
+
+guidanceContent.sk.pages.faq.faqs[2].answer
+    Nie. Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky. Nesľubujeme ani tlmočníka. Písomný preklad je niečo iné: pôvodný text, ktorý napíšete, sa uchová tak, ako je, a automaticky sa neprekladá.
+
+guidanceContent.sk.pages.faq.faqs[3].question
+    Čo robiť, ak nemôžem použiť žiadny zo štyroch jazykov?
+
+guidanceContent.sk.pages.faq.faqs[3].answer
+    Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili spôsob komunikácie, ale služba v inom jazyku zaručená nie je. Ide o krok posúdenia, nie o prísľub, že môžeme pracovať v inom jazyku.
+
+guidanceContent.sk.pages.faq.faqs[4].question
+    Ako sa nakladá s mojím textom v slovenčine?
+
+guidanceContent.sk.pages.faq.faqs[4].answer
+    Pôvodný text, ktorý napíšete, sa uchová tak, ako je, a automaticky sa neprekladá. Ak je to potrebné, jazyk ďalšej komunikácie sa s Vami potvrdí.
+
+guidanceContent.sk.pages.faq.faqs[5].question
+    Prebehla porada už tým, že je žiadosť odoslaná?
+
+guidanceContent.sk.pages.faq.faqs[5].answer
+    Nie. Odoslaná žiadosť čaká na posúdenie advokátkou alebo advokátom. Nie je to právne stanovisko, nie je to potvrdené stretnutie a samotné odoslanie nezakladá vzťah medzi advokátkou alebo advokátom a klientom.
+
+guidanceContent.sk.pages.faq.faqs[6].question
+    Ako sa počítajú náklady?
+
+guidanceContent.sk.pages.faq.faqs[6].answer
+    Najprv sa stanoví rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu nákladov, skôr než práca začne. Táto stránka neuvádza sumy a nehovorí, že prvá konzultácia je bezplatná.
+
+guidanceContent.sk.pages.faq.faqs[7].question
+    Čo robiť, ak je moja vec veľmi naliehavá?
+
+guidanceContent.sk.pages.faq.faqs[7].answer
+    Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nemá núdzový kanál a nezabezpečuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať ďalšie cesty vo svojom mieste.
+
+guidanceContent.sk.pages.privacy.eyebrow
+    SÚKROMIE
+
+guidanceContent.sk.pages.privacy.title
+    Údaje zbierané kontaktným formulárom
+
+guidanceContent.sk.pages.privacy.description
+    Čo zbiera kontaktný formulár v tejto slovenskej časti, ako sa nakladá s pôvodným textom a ako nás osloviť vo veci Vašich údajov.
+
+guidanceContent.sk.pages.privacy.intro
+    Táto časť sa týka iba kontaktného formulára na týchto informačných stránkach. Opisuje nakladanie s údajmi, nie technickú záruku.
+
+guidanceContent.sk.pages.privacy.sections[0].heading
+    Ktoré údaje sa zbierajú
+
+guidanceContent.sk.pages.privacy.sections[0].paragraphs[0]
+    Ak odošlete žiadosť prostredníctvom formulára v tejto časti, zaznamenajú sa tieto údaje:
+
+guidanceContent.sk.pages.privacy.sections[0].items[0]
+    Meno, ktoré uvediete
+
+guidanceContent.sk.pages.privacy.sections[0].items[1]
+    E-mailová adresa na odpoveď
+
+guidanceContent.sk.pages.privacy.sections[0].items[2]
+    Jazyk zobrazenia stránky v okamihu odoslania
+
+guidanceContent.sk.pages.privacy.sections[0].items[3]
+    Jazyk, v ktorom ste písali
+
+guidanceContent.sk.pages.privacy.sections[0].items[4]
+    Jazyk konzultácie, ktorý si želáte
+
+guidanceContent.sk.pages.privacy.sections[0].items[5]
+    Pôvodný text, ktorý ste napísali
+
+guidanceContent.sk.pages.privacy.sections[0].items[6]
+    Váš súhlas s odoslaním žiadosti
+
+guidanceContent.sk.pages.privacy.sections[0].items[7]
+    Číslo podania na dohľadanie žiadosti
+
+guidanceContent.sk.pages.privacy.sections[1].heading
+    Pôvodný text sa uchová bez zmeny
+
+guidanceContent.sk.pages.privacy.sections[1].paragraphs[0]
+    Váš text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Ak je na vybavenie potrebný preklad, preberie sa to s Vami osobitne.
+
+guidanceContent.sk.pages.privacy.sections[1].paragraphs[1]
+    Pretože sa pôvodný text uchováva, nepíšte v počiatočnej fáze to, čo zatiaľ nie je potrebné, napríklad číslo pasu, číslo dokladu alebo údaje o účte.
+
+guidanceContent.sk.pages.privacy.sections[2].heading
+    Miesto uchovania a prístup
+
+guidanceContent.sk.pages.privacy.sections[2].paragraphs[0]
+    Obsah Vášho podania sa uchováva na mieste, ktoré nie je verejne prístupné. Prístup k nemu majú iba oprávnené osoby v kancelárii, a to na účel vybavenia žiadosti.
+
+guidanceContent.sk.pages.privacy.sections[2].paragraphs[1]
+    Táto stránka nedáva absolútnu záruku bezpečnosti. Žiadna cesta prenosu a žiadne miesto uchovania nie je úplne bezpečné; citlivé dokumenty by preto mali byť zasielané až po osobitnom pokyne advokátky alebo advokáta.
+
+guidanceContent.sk.pages.privacy.sections[3].heading
+    Účel použitia
+
+guidanceContent.sk.pages.privacy.sections[3].paragraphs[0]
+    Odoslané údaje slúžia na posúdenie žiadosti, na odpoveď Vám, na ujasnenie spôsobu komunikácie a na vybavenie, ak je práca prevzatá.
+
+guidanceContent.sk.pages.privacy.sections[3].paragraphs[1]
+    Údaje sa bez osobitného súhlasu nepoužívajú na marketing.
+
+guidanceContent.sk.pages.privacy.sections[4].heading
+    Oznámenie a číslo podania
+
+guidanceContent.sk.pages.privacy.sections[4].paragraphs[0]
+    Ak je žiadosť úspešne odoslaná, systém upozorní kanceláriu. Ak doručenie tohto upozornenia ešte nie je overené, Váš text ostáva uložený a nestratí sa.
+
+guidanceContent.sk.pages.privacy.sections[4].paragraphs[1]
+    Číslo podania slúži na dohľadanie Vašej žiadosti v našich záznamoch. Zobrazí sa po uložení; môžete ho uviesť pri novom kontakte.
+
+guidanceContent.sk.pages.privacy.sections[5].heading
+    Vaše práva a cesta na kontakt
+
+guidanceContent.sk.pages.privacy.sections[5].paragraphs[0]
+    Môžete žiadať o prístup k svojim údajom, o ich opravu alebo výmaz, prípadne odvolať súhlas, a to prostredníctvom e-mailovej adresy uvedenej na kontaktnej stránke. Ak existuje zákonná alebo procesná povinnosť uchovania, vysvetlíme obmedzenia.
+
+guidanceContent.sk.pages.privacy.sections[5].paragraphs[1]
+    Táto stránka neuvádza pevnú dobu uchovania, pretože skutočná doba závisí od ďalšieho priebehu veci a od súvisiacich povinností. Ak si želáte skorší výmaz, oznámte to pri kontakte.
+
+guidanceContent.sk.pages.privacy.sections[6].heading
+    Miesto uchovania a poskytovatelia
+
+guidanceContent.sk.pages.privacy.sections[6].paragraphs[0]
+    Tieto stránky sú hostované u spoločnosti Vercel a Vaše podanie sa uchováva v neverejnom objektovom úložisku tejto služby. E-maily sa odosielajú poštovou službou, ktorú kancelária používa.
+
+guidanceContent.sk.pages.privacy.sections[6].paragraphs[1]
+    Servery jednotlivých poskytovateľov sa môžu nachádzať mimo Taiwanu, takže Vaše údaje tam môžu byť uchovávané a spracúvané. Ak je účel uchovania naplnený, údaje sa bez zbytočného odkladu vymažú; údaje, ktoré treba uchovávať podľa použiteľných predpisov, ostávajú po túto dobu. Žiadosti o osobné údaje prijíma wei@hoveringlaw.com.tw.
+
+guidanceContent.sk.pages.disclaimer.eyebrow
+    UPOZORNENIE
+
+guidanceContent.sk.pages.disclaimer.title
+    Rozsah a hranice informácií na tejto stránke
+
+guidanceContent.sk.pages.disclaimer.description
+    Všeobecná povaha informácií, právny rámec a predpoklady vzniku vzťahu medzi advokátkou alebo advokátom a klientom.
+
+guidanceContent.sk.pages.disclaimer.intro
+    Táto časť objasňuje, čo pre Vás tieto slovenské informačné stránky môžu urobiť a čo nie.
+
+guidanceContent.sk.pages.disclaimer.sections[0].heading
+    Iba všeobecné informácie
+
+guidanceContent.sk.pages.disclaimer.sections[0].paragraphs[0]
+    Obsah týchto stránok je napísaný ako všeobecná informácia. Nie je právnou radou k Vášmu prípadu a nenahrádza posúdenie Vašich dokumentov.
+
+guidanceContent.sk.pages.disclaimer.sections[0].paragraphs[1]
+    Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu; dve zdanlivo podobné situácie môžu skončiť rôzne.
+
+guidanceContent.sk.pages.disclaimer.sections[1].heading
+    Právny rámec
+
+guidanceContent.sk.pages.disclaimer.sections[1].paragraphs[0]
+    Kancelária pôsobí podľa taiwanského práva a táto stránka hovorí iba o práci v tomto rámci.
+
+guidanceContent.sk.pages.disclaimer.sections[1].paragraphs[1]
+    Obsah nie je poradenstvom podľa práva iného poriadku než taiwanského, vrátane práva miesta Vášho pobytu. Ak sa časť Vašej veci týka iného právneho poriadku, ujasníme s Vami, aká kvalifikovaná osoba je pre túto časť potrebná.
+
+guidanceContent.sk.pages.disclaimer.sections[2].heading
+    Vzťah medzi advokátkou alebo advokátom a klientom nevzniká sám od seba
+
+guidanceContent.sk.pages.disclaimer.sections[2].paragraphs[0]
+    Prečítanie tejto stránky, odoslanie formulára alebo e-mailu samo osebe nezakladá vzťah medzi advokátkou alebo advokátom a klientom.
+
+guidanceContent.sk.pages.disclaimer.sections[2].paragraphs[1]
+    Tento vzťah vzniká až potom, čo bola vec posúdená a obe strany potvrdili prevzatie práce.
+
+guidanceContent.sk.pages.disclaimer.sections[3].heading
+    Žiadny prísľub výsledku
+
+guidanceContent.sk.pages.disclaimer.sections[3].paragraphs[0]
+    Žiadna časť tejto stránky nie je prísľubom ohľadom výsledku veci, vyhovenia prihláške alebo žiadosti či ohľadom pobytového a pracovného statusu.
+
+guidanceContent.sk.pages.disclaimer.sections[3].paragraphs[1]
+    Vonkajšie odkazy slúžia na orientáciu; nesľubujeme správnosť ani aktuálnosť obsahu tretích osôb.
+
+guidanceContent.sk.pages.columns.eyebrow
+    PRÍSPEVKY
+
+guidanceContent.sk.pages.columns.title
+    Príspevky o taiwanskom práve
+
+guidanceContent.sk.pages.columns.description
+    Príspevky v slovenčine k častým otázkam taiwanského práva. Obsah je všeobecnou informáciou k okamihu zverejnenia, nie právnou radou k Vášmu prípadu.
+
+guidanceContent.sk.pages.columns.intro
+    Kancelária zverejňuje príspevky k častým otázkam taiwanského práva. Príspevky dostupné v slovenčine sú na tejto stránke; vedľa nich sú štyri odkazy, z ktorých každý otvorí zoznam príspevkov v jednom pôvodnom jazyku.
+
+guidanceContent.sk.pages.columns.sections[0].heading
+    Štyri zoznamy podľa jazyka
+
+guidanceContent.sk.pages.columns.sections[0].paragraphs[0]
+    Táto časť obsahuje štyri odkazy: zoznam príspevkov v kórejčine, v čínštine, v angličtine a v japončine. Každý odkaz uvádza jazyk zoznamu, takže vopred viete, v akom jazyku sa obsah otvorí.
+
+guidanceContent.sk.pages.columns.sections[0].paragraphs[1]
+    Tieto štyri zoznamy sú zoznamy podľa pôvodného jazyka príspevkov, nie zoznamy prekladov. Príspevky dostupné v slovenčine sú osobitne na tejto stránke.
+
+guidanceContent.sk.pages.columns.sections[1].heading
+    Kam odkazy vedú
+
+guidanceContent.sk.pages.columns.sections[1].paragraphs[0]
+    Ak zvolíte jeden zo štyroch odkazov, otvorí sa zoznam príspevkov v danom jazyku. Zo zoznamu si text vyberiete sami; celý obsah sa zobrazí v pôvodnom jazyku príspevku.
+
+guidanceContent.sk.pages.columns.sections[1].paragraphs[1]
+    Táto stránka obsah príspevkov nezhrňuje a nezaručuje, že určité téma je k dispozícii vo všetkých štyroch jazykoch. Každý zoznam obsahuje iba texty zverejnené v danom jazyku.
+
+guidanceContent.sk.pages.columns.sections[2].heading
+    Nakoľko môže príspevok slúžiť na orientáciu
+
+guidanceContent.sk.pages.columns.sections[2].paragraphs[0]
+    Príspevky sú všeobecnými informáciami k okamihu zverejnenia. Predpisy a ich používanie sa môžu zmeniť a príspevok neobsahuje všetky okolnosti Vášho prípadu.
+
+guidanceContent.sk.pages.columns.sections[2].paragraphs[1]
+    Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nie je krokom porady.
+
+guidanceTeamCopy.sk.label
+    NÁŠ TÍM
+
+guidanceTeamCopy.sk.title
+    Medzinárodný tím Hovering
+
+guidanceTeamCopy.sk.description
+    Profily advokátok a advokátov, prevádzkového vedenia a pridruženého účtovníctva a auditu Hovering.
+
+guidanceTeamCopy.sk.representativeTitle
+    Riadiaca advokátka
+
+guidanceTeamCopy.sk.teamTitle
+    Právnici a spolupracovníci
+
+guidanceTeamCopy.sk.partnerTitle
+    Pridružené účtovníctvo
+
+guidanceTeamCopy.sk.introLabel
+    Predstavenie
+
+guidanceTeamCopy.sk.educationLabel
+    Vzdelanie
+
+guidanceTeamCopy.sk.experienceLabel
+    Prax
+
+guidanceTeamCopy.sk.photoAltPrefix
+    Portrét
+
+guidanceTeamCopy.sk.workingLanguagesLabel
+    Pracovné jazyky
+
+guidanceTeamCopy.sk.fullProfileLabel
+    Úplný profil (v angličtine)
+
+guidanceTeamCopy.sk.keyFactsHeading
+    Advokátka Wei Tseng — Základné údaje
+
+guidanceTeamCopy.sk.qualificationLabel
+    Oprávnenie a kancelária
+
+guidanceTeamCopy.sk.qualificationSentence
+    {name} je oprávnená vykonávať advokáciu na Taiwane a je riadiacou advokátkou {firm}.
+
+guidanceTeamCopy.sk.practiceLabel
+    Hlavné oblasti
+
+guidanceTeamCopy.sk.consultationLanguagesLabel
+    Jazyky konzultácie
+
+guidanceTeamCopy.sk.roles.tseng-junwei
+    Riadiaca advokátka na Taiwane (Managing Attorney)
+
+guidanceTeamCopy.sk.roles.chang-rongxuan
+    Advokát na Taiwane (Taiwan Attorney)
+
+guidanceTeamCopy.sk.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.sk.roles.son-jungmin
+    Vedenie prevádzky v Kórei (Korea Operations Manager)
+
+guidanceTeamCopy.sk.roles.huang-shengping
+    Partnerský účtovník (Partner CPA)
+
+guidanceTeamBios.sk.tseng-junwei.intro[0]
+    Kancelária vedie veci podnikov a súkromných osôb na Taiwane v angličtine, japončine, kórejčine a čínštine.
+
+guidanceTeamBios.sk.tseng-junwei.intro[1]
+    Zastupovala kórejského študenta v nároku na náhradu škody za úraz v posilňovni a dosiahla rozsudok prvého stupňa vo výške TWD 1.57M.
+
+guidanceTeamBios.sk.tseng-junwei.education[0]
+    Magister (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.sk.tseng-junwei.education[1]
+    Bakalár (B.A.) v dvojodborovom programe práva a financií, National Chengchi University
+
+guidanceTeamBios.sk.tseng-junwei.education[2]
+    Výmenné štúdium na Kobe University a Waseda University
+
+guidanceTeamBios.sk.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.sk.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.sk.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.sk.chang-rongxuan.intro[0]
+    Predtým pôsobil na Ministry of Education, Legal Affairs Division, so zameraním na správne a občianskoprávne veci.
+
+guidanceTeamBios.sk.chang-rongxuan.intro[1]
+    Skúsenosť s vecami univerzít, práv pedagógov a správnych odvolaní.
+
+guidanceTeamBios.sk.chang-rongxuan.education[0]
+    Bakalár práv (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.sk.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.sk.chang-rongxuan.experience[1]
+    Advokát, Hovering International Law Firm
+
+guidanceTeamBios.sk.chang-fangyu.intro[0]
+    Paralegal s dlhoročnou praxou; predtým senior paralegal vo viacerých advokátskych kanceláriách, so zameraním na procesnú podporu, korporátnu agendu a zahraničné investície.
+
+guidanceTeamBios.sk.chang-fangyu.intro[1]
+    Podpora v súdnych konaniach, pri zakladaní spoločností, pri povoleniach zahraničných investícií, pri žiadostiach o licencie a pri komunikácii medzi Kóreou a Taiwanom.
+
+guidanceTeamBios.sk.chang-fangyu.education[0]
+    Bakalár práv (LL.B.), Tunghai University
+
+guidanceTeamBios.sk.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.sk.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.sk.son-jungmin.intro[0]
+    Koordinuje termíny porád a komunikáciu pre klientov z Kórey.
+
+guidanceTeamBios.sk.son-jungmin.intro[1]
+    Podporuje medziregionálnu výmenu prostredníctvom systémov dokumentov a pracovných postupov, na základe informatiky.
+
+guidanceTeamBios.sk.son-jungmin.education[0]
+    Bakalár (B.S.) v informatike, National Cheng Kung University
+
+guidanceTeamBios.sk.son-jungmin.experience[0]
+    Úsek kórejských operácií, Hovering International Law Firm
+
+guidanceTeamBios.sk.huang-shengping.intro[0]
+    Absolvoval bakalársky a magisterský program účtovníctva na National Chengchi University a teraz vedie účtovnú kanceláriu.
+
+guidanceTeamBios.sk.huang-shengping.intro[1]
+    Podporuje integrovanú analýzu právnych, daňových a finančných rizík pre firemných klientov.
+
+guidanceTeamBios.sk.huang-shengping.education[0]
+    Magister (M.A.) v účtovníctve, National Chengchi University
+
+guidanceTeamBios.sk.huang-shengping.education[1]
+    Bakalár (B.A.) v účtovníctve, National Chengchi University
+
+guidanceTeamBios.sk.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.sk.Korean
+    kórejčina
+
+guidanceLanguageNames.sk.Chinese
+    čínština
+
+guidanceLanguageNames.sk.Japanese
+    japončina
+
+guidancePracticeAreaNames.sk.Taiwan company setup
+    Zakladanie spoločností na Taiwane
+
+guidancePracticeAreaNames.sk.Taiwan investment counsel
+    Poradenstvo k investíciám na Taiwane
+
+guidancePracticeAreaNames.sk.Civil litigation and damages
+    Občianskoprávne spory a náhrada škody
+
+guidancePracticeAreaNames.sk.Trademark and patent filings
+    Prihlášky ochranných známok a patentov
+
+guidancePracticeAreaNames.sk.Visa and residency
+    Vízum a pobyt
+
+guidancePracticeAreaNames.sk.Family and labor disputes
+    Rodinné a pracovnoprávne spory
+
+guidanceOfficeCopy.sk.label
+    SÍDLA
+
+guidanceOfficeCopy.sk.title
+    Sídla kancelárie
+
+guidanceOfficeCopy.sk.description
+    Adresy taiwanských sídiel Hovering International Law Firm.
+
+guidanceOfficeCopy.sk.officeLabel
+    Pracovisko
+
+guidanceOfficeCopy.sk.mapPreviewLabel
+    Náhľad mapy
+
+guidanceOfficeCopy.sk.koreaOfficeTitle
+    Kórejské sídlo
+
+guidanceOfficeCopy.sk.koreaAddressCardLabel
+    Adresa kórejského sídla
+
+guidanceOfficeCopy.sk.koreaMapLinkLabel
+    Zobraziť na Naver Map
+
+guidanceOfficeCopy.sk.reviewCountWord
+    hodnotení
+
+guidanceOfficeCopy.sk.phoneLabel
+    Telefón
+
+guidanceOfficeCopy.sk.faxLabel
+    Faxové číslo
+
+guidanceOfficeCopy.sk.mapLinkLabel
+    Zobraziť na mape
+
+guidanceOfficeCopy.sk.photoAlts[0]
+    Recepcia sídla v Taipeji, Hovering International Law Firm
+
+guidanceOfficeCopy.sk.photoAlts[1]
+    Kancelária advokátky v sídle v Taipeji, Hovering International Law Firm
+
+guidanceOfficeCopy.sk.photoAlts[2]
+    Rokovacia miestnosť v sídle v Taipeji, Hovering International Law Firm
+
+guidanceOfficeCopy.sk.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.sk.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.sk.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.sk.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.sk.officeLabel
+    Sídla
+
+guidanceFooterCopy.sk.officeQuickLinksLabel
+    Rýchle odkazy na sídla
+
+guidanceFooterCopy.sk.followLabel
+    Sledujte nás
+
+guidanceFooterCopy.sk.blogLabel
+    Firemný blog
+
+guidanceFooterCopy.sk.websiteLabel
+    Oficiálny web
+
+guidanceFooterCopy.sk.sitemapLabel
+    Mapa stránok
+
+guidanceFooterCopy.sk.copyEmailLabel
+    Skopírovať e-mailovú adresu
+
+guidanceFooterCopy.sk.emailCopiedMessage
+    E-mailová adresa bola skopírovaná.
+
+guidanceFooterCopy.sk.officialConsultationEmailLabel
+    Oficiálny e-mail na dopyty
+
+internationalInquiryCopy.sk.guidanceNotice
+    Táto stránka je napísaná po slovensky ako všeobecná orientácia, nie ako právna rada vo Vašej veci.
+
+internationalInquiryCopy.sk.consultationNotice
+    Porada prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky.
+
+internationalInquiryCopy.sk.methodConfirmationNotice
+    Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schodný spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.
+
+internationalInquiryCopy.sk.preparationNotice
+    Zhrnutie môžete napísať vo svojom jazyku. Pôvodný text sa uchová tak, ako ste ho napísali, a automaticky sa neprekladá.
+
+internationalInquiryCopy.sk.heading
+    Odoslať žiadosť o posúdenie
+
+internationalInquiryCopy.sk.intro
+    Opíšte svoju vec stručne. Advokátka alebo advokát posúdi obsah, kým sa prejde k ďalšiemu kroku.
+
+internationalInquiryCopy.sk.submitLabel
+    Odoslať žiadosť
+
+internationalInquiryCopy.sk.submittingLabel
+    Odosiela sa…
+
+internationalInquiryCopy.sk.successMessage
+    Obdržali sme Vašu žiadosť; čaká na posúdenie. Neznamená to, že porada prebehla alebo že bolo potvrdené stretnutie.
+
+internationalInquiryCopy.sk.savedNotificationPendingMessage
+    Vaša žiadosť bola uložená, ale oznámenie kancelárii zatiaľ nie je overené. Čo ste napísali, sa nestratí. Ak nedostanete odpoveď, môžete napísať aj na e-mailovú adresu z kontaktnej stránky.
+
+internationalInquiryCopy.sk.receiptIdLabel
+    Číslo podania
+
+internationalInquiryCopy.sk.failureMessage
+    Vašu žiadosť sa nepodarilo odoslať. Skúste to znova alebo napíšte na e-mailovú adresu z kontaktnej stránky.
+
+internationalInquiryCopy.sk.originalLanguageLabel
+    Jazyk, v ktorom píšete
+
+internationalInquiryCopy.sk.originalLanguagePlaceholder
+    Napríklad slovenčina, angličtina, čínština alebo iný jazyk
+
+internationalInquiryCopy.sk.preferredConsultationLanguageLabel
+    Jazyk, ktorý si želáte na konzultáciu
+
+internationalInquiryCopy.sk.originalTextLabel
+    Krátky opis veci (vo Vašom jazyku)
+
+internationalInquiryCopy.sk.originalTextPlaceholder
+    Napíšte, čo sa stalo, akú pomoc potrebujete a lehotu, ak existuje. Nepíšte číslo pasu, číslo dokladu ani údaje o účte.
+
+internationalInquiryCopy.sk.nameLabel
+    Meno
+
+internationalInquiryCopy.sk.emailLabel
+    E-mail
+
+internationalInquiryCopy.sk.consentLabel
+    Prečítal(a) som stránku o súkromí a súhlasím s odoslaním tejto žiadosti.
+
+internationalInquiryCopy.sk.privacyLinkLabel
+    Súkromie
+
+internationalInquiryCopy.sk.requiredMessage
+    Toto pole je povinné.
+
+internationalInquiryCopy.sk.invalidEmailMessage
+    Zadajte platnú e-mailovú adresu.
+
+internationalInquiryCopy.sk.tooLongMessage
+    Text je príliš dlhý. Skráťte ho a odošlite znova.
+
+internationalInquiryCopy.sk.sourceLanguageNotice
+    Tento príspevok je zverejnený iba v jazyku {language}; odkaz otvorí pôvodnú stránku.
+
+internationalInquiryCopy.sk.unavailableTranslationNotice
+    Táto časť zatiaľ nie je k dispozícii v jazyku tejto stránky. Odkaz v pôvodnom jazyku otvorí pôvodný text.
+
+internationalInquiryCopy.sk.unavailableLanguageNotice
+    Táto stránka sa v jazyku {language} neponúka.
+
+internationalInquiryCopy.sk.languageOptions.en
+    Angličtina (English)
+
+internationalInquiryCopy.sk.languageOptions.zh-hant
+    Čínština (中文)
+
+internationalInquiryCopy.sk.languageOptions.ja
+    Japončina (日本語)
+
+internationalInquiryCopy.sk.languageOptions.ko
+    Kórejčina (한국어)
+
+internationalInquiryCopy.sk.languageOptions.needs-method-confirmation
+    Žiadny zo štyroch jazykov nie je použiteľný — spôsob komunikácie treba potvrdiť
+
+guidanceAnswers.sk.services.answer
+    Kancelária vedie šesť oblastí podľa taiwanského práva: investície a zakladanie spoločností, občianskoprávne spory a náhradu škody, manželstvo, rodinu a dedenie, pracovnoprávne spory, trestné veci a duševné vlastníctvo. Rozsah každej veci sa potvrdzuje osobitne potom, čo advokátka alebo advokát posúdi zaslaný obsah. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
+
+guidanceAnswers.sk.services.sources[0]
+    /sk/faq
+
+guidanceAnswers.sk.services.sources[1]
+    /sk/contact
+
+guidanceAnswers.sk.about.answer
+    Hovering International Law Firm je taiwanská advokátska kancelária, ktorú v roku 2016 založili absolventi National Taiwan University (國立臺灣大學), so sídlami v Taipeji, Kaohsiungu, Taichungu a Pingtungu. Od roku 2020 pôsobí aj účtovný úsek; sídlo v Taichungu vedie veci s väzbou na Kóreu a Japonsko. Kancelária nesľubuje výsledok. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
+
+guidanceAnswers.sk.about.sources[0]
+    /sk/lawyers
+
+guidanceAnswers.sk.about.sources[1]
+    /sk/services
+
+guidanceAnswers.sk.lawyers.answer
+    Táto stránka ukazuje profily advokátok a advokátov Hovering, prevádzkového vedenia a pridruženého účtovníctva a auditu. Advokátka Wei Tseng (曾雋崴) je oprávnená vykonávať advokáciu na Taiwane a je riadiacou advokátkou kancelárie; pracuje s klientmi z Kórey, z Japonska a s ďalšími medzinárodnými klientmi. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
+
+guidanceAnswers.sk.lawyers.sources[0]
+    /sk/about
+
+guidanceAnswers.sk.lawyers.sources[1]
+    /sk/contact
+
+guidanceAnswers.sk.pricing.answer
+    Táto stránka nezverejňuje cenník. Najprv sa z Vášho zhrnutia potvrdí rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu, skôr než práca začne. Konzultácia s advokátkou alebo advokátom môže byť odplatná; okrem odmeny môžu vzniknúť súdne alebo správne poplatky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
+
+guidanceAnswers.sk.pricing.sources[0]
+    /sk/contact
+
+guidanceAnswers.sk.pricing.sources[1]
+    /sk/faq
+
+guidanceAnswers.sk.contact.answer
+    Zašlite zhrnutie kontaktným formulárom: čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. V počiatočnej fáze zatiaľ nie je treba zasielať doklady totožnosti ani celý dôkazný materiál. Kancelária nesľubuje lehotu na odpoveď a nepotvrdzuje stretnutie prostredníctvom tejto stránky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
+
+guidanceAnswers.sk.contact.sources[0]
+    /sk/faq
+
+guidanceAnswers.sk.contact.sources[1]
+    /sk/pricing
+
+guidanceAnswers.sk.faq.answer
+    Táto časť odpovedá na časté otázky na úrovni všeobecných informácií: šesť oblastí kancelárie, príprava pred kontaktom, potvrdenie nákladov a význam odoslanej správy. Odoslaná správa čaká na posúdenie, nie je právnym stanoviskom ani potvrdeným stretnutím a sama osebe nezakladá vzťah medzi advokátkou alebo advokátom a klientom. Konzultácia prebieha iba v štyroch jazykoch: anglicky, čínsky, japonsky a kórejsky.
+
+guidanceAnswers.sk.faq.sources[0]
+    /sk/services
+
+guidanceAnswers.sk.faq.sources[1]
+    /sk/contact
+
+GUIDANCE_LLMS_NOTICES.sk.consultationNotice
+    Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.
+
+GUIDANCE_LLMS_NOTICES.sk.discoveryNotice
+    Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje poradie vo vyhľadávaní, podporu, odporúčanie umelej inteligencie ani viditeľnosť.
+
+GUIDANCE_LLMS_NOTICES.sk.confidentialNotice
+    Pretože sa pôvodný text uchováva, nepíšte v počiatočnej fáze to, čo zatiaľ nie je potrebné, napríklad číslo pasu, číslo dokladu alebo údaje o účte.

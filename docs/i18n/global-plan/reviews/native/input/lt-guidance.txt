@@ -1,0 +1,1096 @@
+# lt guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.lt.languageName
+    Lietuvių
+
+guidanceContent.lt.nav.home
+    Pradžia
+
+guidanceContent.lt.nav.services
+    Paslaugos
+
+guidanceContent.lt.nav.about
+    Kontora
+
+guidanceContent.lt.nav.lawyers
+    Advokatai
+
+guidanceContent.lt.nav.pricing
+    Išlaidos
+
+guidanceContent.lt.nav.contact
+    Kontaktai
+
+guidanceContent.lt.nav.faq
+    Klausimai
+
+guidanceContent.lt.nav.privacy
+    Privatumas
+
+guidanceContent.lt.nav.disclaimer
+    Įspėjimas
+
+guidanceContent.lt.nav.columns
+    Straipsniai
+
+guidanceContent.lt.contactCta
+    Pateikti prašymą įvertinti
+
+guidanceContent.lt.footerNotice
+    Šiame lietuviškame puslapyje pateikiama tik bendra informacija apie kontoros darbą pagal Taivano teisę. Tai nėra teisinė konsultacija konkrečioje byloje, o vien pats pranešimo išsiuntimas nesukuria advokato ir kliento santykių.
+
+guidanceContent.lt.skipLink
+    Praleisti naršymą ir eiti prie turinio
+
+guidanceContent.lt.menuLabel
+    Puslapių sąrašas
+
+guidanceContent.lt.languageLabel
+    Rodymo kalba
+
+guidanceContent.lt.mega.services.description
+    Kontora tvarko pagrindines Taivano teisės sritis.
+
+guidanceContent.lt.mega.services.viewAllLabel
+    Rodyti visus
+
+guidanceContent.lt.mega.columns.description
+    Straipsniai apie dažnus Taivano teisės klausimus.
+
+guidanceContent.lt.mega.columns.viewAllLabel
+    Rodyti visus
+
+guidanceContent.lt.mega.lawyers.description
+    Advokačių ir advokatų pristatymas ir kreipimosi būdai.
+
+guidanceContent.lt.mega.lawyers.viewAllLabel
+    Rodyti visus
+
+guidanceContent.lt.mega.pricing.description
+    Šis puslapis paaiškina darbo apimtį ir tai, kaip nustatomos išlaidos.
+
+guidanceContent.lt.mega.pricing.viewAllLabel
+    Rodyti visus
+
+guidanceContent.lt.mega.faq.description
+    Dažni klausimai apie kontoros darbą Taivane.
+
+guidanceContent.lt.mega.faq.viewAllLabel
+    Rodyti visus
+
+guidanceContent.lt.notFoundTitle
+    Puslapis nerastas
+
+guidanceContent.lt.notFoundText
+    Ieškomas puslapis neegzistuoja arba buvo perkeltas. Galite grįžti į lietuvišką pradžios puslapį ir peržiūrėti prieinamą informaciją.
+
+guidanceContent.lt.backHomeLabel
+    Į pradžios puslapį
+
+guidanceContent.lt.readSourceLabel
+    Atidaryti straipsnių sąrašą originalo kalba
+
+guidanceContent.lt.home.heroScrollLabel
+    Slinkti žemyn
+
+guidanceContent.lt.home.heroColumnsCtaLabel
+    Žiūrėti straipsnius
+
+guidanceContent.lt.home.servicesDetailLabel
+    Žiūrėti išsamiau
+
+guidanceContent.lt.home.servicesAssistanceBefore
+    Jei neaišku, kuriai sričiai priklauso Jūsų byla, puslapis 
+
+guidanceContent.lt.home.servicesAssistanceLinkLabel
+    Kontaktai
+
+guidanceContent.lt.home.servicesAssistanceAfter
+     paaiškina, kaip parengti santrauką, kurią įvertins advokatė arba advokatas.
+
+guidanceContent.lt.home.columnsViewAllLabel
+    Žiūrėti visus straipsnius
+
+guidanceContent.lt.home.columnsReadMoreLabel
+    Skaityti toliau
+
+guidanceContent.lt.home.columnsReviewLabel
+    Įvertino advokatė Wei Tseng
+
+guidanceContent.lt.home.columnsOriginalLanguageBadge
+    Originalo kalba
+
+guidanceContent.lt.home.columnsOriginalLanguageNote
+    Toliau nurodyti straipsniai lietuvių kalba dar nepateikiami. Sąrašas lieka originalo kalba ir atveria atitinkamą kalbos puslapį; turinys automatiškai neverčiamas.
+
+guidanceContent.lt.home.imageBandAlt
+    Tradicinis Taivano kiemas sanheyuan (三合院) ir šiuolaikinis paviljonas dienos šviesoje
+
+guidanceContent.lt.home.videoPauseLabel
+    Pristabdyti vaizdo įrašą
+
+guidanceContent.lt.home.videoPlayLabel
+    Leisti vaizdo įrašą
+
+guidanceContent.lt.home.videoReplayLabel
+    Leisti vaizdo įrašą iš naujo
+
+guidanceContent.lt.pages.home.eyebrow
+    INFORMACIJA
+
+guidanceContent.lt.pages.home.title
+    Teisinės paslaugos Taivane — informacija lietuvių kalba
+
+guidanceContent.lt.pages.home.description
+    Bendra informacija lietuvių kalba apie Hovering International Law Firm darbo Taivane apimtį, konsultacijos kalbas ir pirmąjį kreipimąsi.
+
+guidanceContent.lt.pages.home.intro
+    Hovering International Law Firm atstovauja užsienio klientams, taip pat asmenims, susijusiems su Taivanu, Taivano teisės bylose: investicijos ir įmonių steigimas, civiliniai ginčai, santuoka, šeima ir paveldėjimas, darbo teisė, baudžiamosios bylos ir intelektinė nuosavybė. Ši lietuviška dalis padeda atpažinti, kuris darbas patenka į mūsų apimtį, ką pasirengti ir kaip į mus kreiptis. Tai bendra informacija, o ne teisinė konsultacija Jūsų byloje.
+
+guidanceContent.lt.pages.home.sections[0].heading
+    Kuo užsiimame
+
+guidanceContent.lt.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus žingsniais, kuriuos Taivane reikia atlikti.
+
+guidanceContent.lt.pages.home.sections[0].paragraphs[1]
+    Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir momento. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.
+
+guidanceContent.lt.pages.home.sections[1].heading
+    Puslapio kalba ir konsultacijos kalba nėra tas pats
+
+guidanceContent.lt.pages.home.sections[1].paragraphs[0]
+    Šis puslapis parašytas lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik keturiomis kalbomis: anglų, kinų (中文), japonų ir korėjiečių. Informacijos skaitymas lietuvių kalba nereiškia, kad pokalbis su advokate arba advokatu vyks lietuviškai.
+
+guidanceContent.lt.pages.home.sections[1].paragraphs[1]
+    Nežadame vertėjo žodžiu, atsakymo termino ir susitikimo per šį puslapį. Jei nemokate nė vienos iš keturių konsultacijos kalbų, puslapis „Kontaktai“ paaiškina, kaip vertiname bendravimo būdą.
+
+guidanceContent.lt.pages.home.sections[2].heading
+    Kontoros sritys
+
+guidanceContent.lt.pages.home.sections[2].paragraphs[0]
+    Darbo apimtis apima šias šešias sritis. Puslapis „Paslaugos“ kiekvieną iš jų aprašo tiksliau ir nurodo, kas nėra žadama.
+
+guidanceContent.lt.pages.home.sections[2].items[0]
+    Investicijos ir įmonių steigimas Taivane
+
+guidanceContent.lt.pages.home.sections[2].items[1]
+    Civiliniai ginčai ir žalos atlyginimas
+
+guidanceContent.lt.pages.home.sections[2].items[2]
+    Santuoka, šeima ir paveldėjimas
+
+guidanceContent.lt.pages.home.sections[2].items[3]
+    Darbo ginčai
+
+guidanceContent.lt.pages.home.sections[2].items[4]
+    Baudžiamosios bylos
+
+guidanceContent.lt.pages.home.sections[2].items[5]
+    Intelektinė nuosavybė: prekių ženklai, patentai ir autorių teisė
+
+guidanceContent.lt.pages.home.sections[3].heading
+    Nuo ko pradėti
+
+guidanceContent.lt.pages.home.sections[3].paragraphs[0]
+    Perskaitykite puslapį „Paslaugos“ ir patikrinkite, ar Jūsų byla patenka į mūsų apimtį, tada „Išlaidos“ ir „Kontaktai“, kad žinotumėte, kaip nustatoma apimtis ir kaip išlaidos patvirtinamos prieš pradedant darbą.
+
+guidanceContent.lt.pages.home.sections[3].paragraphs[1]
+    Siųsdami pranešimą santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas tiksliai toks, kokį parašėte, ir automatiškai neverčiamas. Išsiųstas pranešimas yra užklausa, laukianti įvertinimo: tai dar nėra konsultacija ir nėra patvirtintas susitikimas.
+
+guidanceContent.lt.pages.services.eyebrow
+    PASLAUGOS
+
+guidanceContent.lt.pages.services.title
+    Kokiose bylose atstovaujame klientams
+
+guidanceContent.lt.pages.services.description
+    Šešios sritys, kurias kontora veda Taivane, ir ribos, kurias naudinga žinoti pirmiausia.
+
+guidanceContent.lt.pages.services.intro
+    Toliau nurodytos sritys, kurias iš tikrųjų vedame, ir klausimai, dažniausiai kylantys pradiniame etape. Paaiškinimas padeda įvertinti, ar Jūsų byla patenka į mūsų apimtį; jis yra bendras ir nėra atskiros bylos teisinė analizė.
+
+guidanceContent.lt.pages.services.sections[0].heading
+    Investicijos ir įmonių steigimas Taivane
+
+guidanceContent.lt.pages.services.sections[0].paragraphs[0]
+    Atstovaujame užsienio investuotojams ir įmonėms steigiant arba vedant bendrovę Taivane: teisinės formos pasirinkimas, dokumentų parengimas ir pateikimas, kapitalo įnašas, banko klausimai, buveinės vertinimas ir šakiniai reikalavimai. Taip pat padedame dėl apskaitos ir mokesčių, kylančių iš steigimo ir veiklos Taivane.
+
+guidanceContent.lt.pages.services.sections[0].paragraphs[1]
+    Eiga ir terminai skiriasi pagal formą, investuotoją, šaką, banką ir jau turimus dokumentus. Bendrovės įsteigimas savaime nesuteikia teisės gyventi (居留) ir leidimo dirbti (工作許可): tai atskiros procedūros, vertinamos pagal konkretaus asmens padėtį.
+
+guidanceContent.lt.pages.services.sections[1].heading
+    Civiliniai ginčai ir žalos atlyginimas
+
+guidanceContent.lt.pages.services.sections[1].paragraphs[0]
+    Ši sritis apima ginčus iš sutarčių, žalos atlyginimą dėl neteisėtų veiksmų ir vartotojų ginčus. Darbas paprastai prasideda chronologija, turimų dokumentų ir įrodymų vertinimu, ir tik tada seka tolesni žingsniai.
+
+guidanceContent.lt.pages.services.sections[1].paragraphs[1]
+    Eigą lemia terminai, įskaitant senaties terminus, ir įrodymų visuma. Todėl žinomas datas nurodykite kuo anksčiau. Išsaugokite sutartis, pranešimus, mokėjimo dokumentus arba vietos būklės nuotraukas ir paminėkite juos pirmajame pranešime.
+
+guidanceContent.lt.pages.services.sections[2].heading
+    Santuoka, šeima ir paveldėjimas
+
+guidanceContent.lt.pages.services.sections[2].paragraphs[0]
+    Vedame santuokos nutraukimą (離婚), turto padalijimą, nepilnamečių vaikų teisių ir pareigų įgyvendinimą ir prisiėmimą (未成年子女權利義務之行使或負擔), bendravimą su vaiku (會面交往) ir paveldėjimą (繼承), taip pat kai šalys arba turtas yra skirtingose valstybėse. Tarpvalstybinėms šeimos byloms dažnai reikia papildomai įvertinti namų ūkio registro (戶籍) įrašus, dokumentų formą ir jų įrodomąją galią Taivane.
+
+guidanceContent.lt.pages.services.sections[2].paragraphs[1]
+    Kadangi šeimos bylos dažnai susijusios su terminais ir lygiagrečiomis procedūromis, pirmoji santrauka turėtų nurodyti šalių santykį, dabartinę gyvenamąją vietą ir jau vykstančias procedūras.
+
+guidanceContent.lt.pages.services.sections[3].heading
+    Darbo ginčai
+
+guidanceContent.lt.pages.services.sections[3].paragraphs[0]
+    Ši sritis apima darbo santykių pabaigą, išeitinę išmoką pagal Taivano teisę (資遣費; jos negalima tapatinti su kitų valstybių panašiais institutais), atlyginimą ir ginčus iš darbo sutarties (勞動契約), tiek darbuotojo, tiek darbdavio pusėje. Vertindami atskiriame pabaigos pagrindą nuo įspėjimo termino, išmokėjimo ir terminų klausimų.
+
+guidanceContent.lt.pages.services.sections[3].paragraphs[1]
+    Lemiami dokumentai paprastai būna darbo sutartis, vidaus darbo taisyklės (工作規則), algos lapeliai ir šalių korespondencija. Jei juos vis dar turite, paminėkite tai santraukoje.
+
+guidanceContent.lt.pages.services.sections[4].heading
+    Baudžiamosios bylos
+
+guidanceContent.lt.pages.services.sections[4].paragraphs[0]
+    Atstovaujame ikiteisminiame tyrime ir teisme įtariamuosius ir kaltinamuosius bei nukentėjusiuosius ir vertiname baudžiamąją riziką verslo veikloje.
+
+guidanceContent.lt.pages.services.sections[4].paragraphs[1]
+    Baudžiamosiose bylose terminai dažnai trumpi, o etapai nustatyti. Jei jau gavote ikiteisminio tyrimo institucijos arba teismo raštą, nurodykite datą rašte laiku, kad turinys būtų įvertintas tinkama tvarka.
+
+guidanceContent.lt.pages.services.sections[5].heading
+    Intelektinė nuosavybė
+
+guidanceContent.lt.pages.services.sections[5].paragraphs[0]
+    Padedame registruoti prekių ženklus (商標) ir patentus (專利), autorių teisės ir ginčų dėl šių teisių Taivane klausimais.
+
+guidanceContent.lt.pages.services.sections[5].paragraphs[1]
+    Šioje srityje lemia žingsnių eilė: apsaugos apimtis, paraiškos pateikimo momentas ir faktinis naudojimas daro įtaką pasirinkimui. Paraiškos pateikimas savaime nereiškia, kad jai bus pritarta.
+
+guidanceContent.lt.pages.services.sections[6].heading
+    Apimtis ir jos patvirtinimas
+
+guidanceContent.lt.pages.services.sections[6].paragraphs[0]
+    Kontora dirba pagal Taivano teisę ir veda bylas iš pirmiau nurodytų sričių. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina Jūsų pranešimą.
+
+guidanceContent.lt.pages.services.sections[6].paragraphs[1]
+    Gyvenamosios vietos statusas, leidimas dirbti ir panašūs klausimai vertinami pagal dokumentus ir konkretaus asmens padėtį, o ne pagal pilietybę. Jei dalis Jūsų bylos paliečia šiuos punktus, nurodykite tai kreipdamiesi. Šis puslapis nežada nei rezultato, nei atsakymo termino.
+
+guidanceContent.lt.pages.about.eyebrow
+    KONTORA
+
+guidanceContent.lt.pages.about.title
+    Apie Hovering International Law Firm
+
+guidanceContent.lt.pages.about.description
+    Pagrindiniai duomenys apie šią Taivano advokatų kontorą, jos biurus ir darbą su užsienio šalimis.
+
+guidanceContent.lt.pages.about.intro
+    Hovering International Law Firm yra advokatų kontora Taivane. Advokatės ir advokatai dirba nuo konsultacijų įmonėms iki teismo proceso. Ši dalis aprašo kontoros atsiradimą, buveines ir darbą su užsienio šalimis.
+
+guidanceContent.lt.pages.about.sections[0].heading
+    Įsteigimas ir struktūra
+
+guidanceContent.lt.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) 2016 m. įsteigė advokatės ir advokatai, studijavę National Taiwan University (國立臺灣大學). Kinų pavadinimas 昊鼎 jungia ženklą 昊 („platus dangus“) su ženklu 鼎 („tvirtas pagrindas“) ir nusako kontoros kryptį nuo įsteigimo.
+
+guidanceContent.lt.pages.about.sections[0].paragraphs[1]
+    Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdymą ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui.
+
+guidanceContent.lt.pages.about.sections[0].paragraphs[2]
+    Be advokatų darbo nuo 2020 m. veikia ir Hovering Accounting Office, teikianti apskaitą ir mokesčių planavimą verslininkams ir privatiems asmenims, turintiems turto.
+
+guidanceContent.lt.pages.about.sections[1].heading
+    Darbas su užsienio šalimis
+
+guidanceContent.lt.pages.about.sections[1].paragraphs[0]
+    Tarpvalstybinis darbas apima įmonių steigimą, vizas, prekių ženklų ir patentų paraiškas, teisinės rizikos vertinimą ir mokesčių konsultacijas įmonėms. Taidžongo biuras ypač veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Advokatė Wei Tseng (曾雋崴) atstovauja klientams iš Korėjos, iš Japonijos ir kitiems tarptautiniams klientams nurodytose srityse.
+
+guidanceContent.lt.pages.about.sections[1].paragraphs[1]
+    Ar galime bylą priimti, priklauso nuo turinio ir bendravimo kalbos. Jei Jūsų byla patenka į nurodytas sritis ir ją galima aptarti viena iš keturių konsultacijos kalbų, galite atsiųsti santrauką įvertinti.
+
+guidanceContent.lt.pages.about.sections[2].heading
+    Kai į mus kreipiatės
+
+guidanceContent.lt.pages.about.sections[2].paragraphs[0]
+    Gavus Jūsų santrauką, advokatė arba advokatas įvertina turinį ir tada kalba apie galimą darbo apimtį, dar reikalingus dokumentus ir tolesnius žingsnius. Mokesčių ar apskaitos klausimais kontora gali eiti su apskaitos padaliniu viena nuoseklia eiga.
+
+guidanceContent.lt.pages.about.sections[2].paragraphs[1]
+    Kiekvienos bylos rezultatas priklauso nuo faktinių aplinkybių ir turimų dokumentų; rezultato nežadame. Jei Jums reikia saistančio atsakymo dėl savo padėties, dokumentus reikia aptarti su advokate arba advokatu viena iš keturių konsultacijos kalbų.
+
+guidanceContent.lt.pages.lawyers.eyebrow
+    ADVOKATAI
+
+guidanceContent.lt.pages.lawyers.title
+    Tarptautinė Hovering komanda
+
+guidanceContent.lt.pages.lawyers.description
+    Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profiliai.
+
+guidanceContent.lt.pages.lawyers.intro
+    
+
+guidanceContent.lt.pages.pricing.eyebrow
+    IŠLAIDOS
+
+guidanceContent.lt.pages.pricing.title
+    Kaip nustatoma darbo apimtis ir išlaidos
+
+guidanceContent.lt.pages.pricing.description
+    Eilės paaiškinimas: pirmiausia darbo apimtis, tada išlaidų patvirtinimas, ir kodėl šiame puslapyje nėra kainyno.
+
+guidanceContent.lt.pages.pricing.intro
+    Šis puslapis paaiškina, kaip nustatomos išlaidos, o ne jų dydį. Dydis priklauso nuo darbo apimties konkrečioje byloje ir turi prasmę tik tada, kai ši apimtis aiški.
+
+guidanceContent.lt.pages.pricing.sections[0].heading
+    Pirmiausia nustatoma darbo apimtis
+
+guidanceContent.lt.pages.pricing.sections[0].paragraphs[0]
+    Tos pačios rūšies bylos gali reikalauti labai skirtingų pastangų, pagal šalių skaičių, turimus dokumentus, terminus, kurių reikia laikytis, ir pagal tai, ar procesas jau pradėtas. Todėl pirmasis žingsnis visada yra nustatyti, kas į darbą įeina ir kas ne.
+
+guidanceContent.lt.pages.pricing.sections[0].paragraphs[1]
+    Santrauka, kurią atsiunčiate pradžioje, yra šios apimties pagrindas. Kuo aiškiau ji aprašo eigą, Jūsų prašymą ir terminus, tuo tiksliau galima nustatyti apimtį.
+
+guidanceContent.lt.pages.pricing.sections[1].heading
+    Išlaidos patvirtinamos prieš pradedant darbą
+
+guidanceContent.lt.pages.pricing.sections[1].paragraphs[0]
+    Kai darbo apimtis aiški, išlaidų dydis ir skaičiavimo būdas su Jumis aptariami ir patvirtinami prieš pradedant darbą. Jei apimtis eigoje pasikeičia, ją reikia patvirtinti iš naujo.
+
+guidanceContent.lt.pages.pricing.sections[1].paragraphs[1]
+    Šis puslapis nėra kainos pasiūlymas ir nesukuria pareigos mokėti.
+
+guidanceContent.lt.pages.pricing.sections[2].heading
+    Konsultacija gali būti mokama
+
+guidanceContent.lt.pages.pricing.sections[2].paragraphs[0]
+    Konsultacija su advokate arba advokatu gali būti mokama paslauga. Šis puslapis nesako, kad pirmoji konsultacija nemokama, ir jokios jo dalies negalima taip skaityti.
+
+guidanceContent.lt.pages.pricing.sections[2].paragraphs[1]
+    Jei konsultacija mokama, dydis ir mokėjimo būdas pranešami prieš jai įvykstant.
+
+guidanceContent.lt.pages.pricing.sections[3].heading
+    Kodėl šiame puslapyje nėra tarifų
+
+guidanceContent.lt.pages.pricing.sections[3].paragraphs[0]
+    Išlaidos priklauso nuo pačios bylos: nuo pastangų, šalių skaičiaus, dokumentų, terminų ir nuo to, ar procesas jau vyksta. Iš anksto nustatytas skaičius Jūsų bylos išlaidų neparodytų. Todėl pirmiausia nustatome darbo apimtį ir tada pranešame Jums išlaidas, prieš pradedant darbą.
+
+guidanceContent.lt.pages.pricing.sections[3].paragraphs[1]
+    Be atlygio gali atsirasti teismo rinkliavos, institucijų ar trečiųjų asmenų išlaidos. Jos atskirtos nuo atlygio ir priklauso nuo atitinkamo proceso.
+
+guidanceContent.lt.pages.contact.eyebrow
+    KONTAKTAI
+
+guidanceContent.lt.pages.contact.title
+    Kaip kreiptis į kontorą
+
+guidanceContent.lt.pages.contact.description
+    Puslapio kalba, konsultacijos kalbos, eiga, jei nemokate nė vienos iš keturių kalbų, ir tai, ko šis puslapis nežada.
+
+guidanceContent.lt.pages.contact.intro
+    Prieš rašydami mums, atskirkite šiuos tris punktus. Jie dažnai maišomi, bet reiškia skirtingus dalykus.
+
+guidanceContent.lt.pages.contact.sections[0].heading
+    Trys dalykai, kuriuos reikia laikyti skyrium
+
+guidanceContent.lt.pages.contact.sections[0].paragraphs[0]
+    Puslapio rodymo kalba, konsultacijos su advokate arba advokatu kalba ir kalba, kuria rašote, yra trys skirtingi dalykai.
+
+guidanceContent.lt.pages.contact.sections[0].items[0]
+    Puslapio kalba: ši informacija parašyta lietuviškai.
+
+guidanceContent.lt.pages.contact.sections[0].items[1]
+    Konsultacijos kalba: konsultacija vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.
+
+guidanceContent.lt.pages.contact.sections[0].items[2]
+    Jūsų rašymo kalba: santrauką galite parašyti savo kalba; originalus tekstas išsaugomas be pakeitimų.
+
+guidanceContent.lt.pages.contact.sections[1].heading
+    Jei nemokate nė vienos iš keturių konsultacijos kalbų
+
+guidanceContent.lt.pages.contact.sections[1].paragraphs[0]
+    Kontaktinėje formoje galite pasirinkti „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume, ar yra tinkamas bendravimo būdas; paslauga kita kalba nėra garantuojama ir atsakymo terminas nežadamas.
+
+guidanceContent.lt.pages.contact.sections[1].paragraphs[1]
+    Tai tik vertinimo žingsnis, o ne pažadas. Nežadame vertėjo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.
+
+guidanceContent.lt.pages.contact.sections[2].heading
+    Ką turėtų apimti pirmasis pranešimas
+
+guidanceContent.lt.pages.contact.sections[2].paragraphs[0]
+    Nurodykite, kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Jei jau gavote teismo ar institucijos raštą, nurodykite datą rašte.
+
+guidanceContent.lt.pages.contact.sections[2].paragraphs[1]
+    Pradiniame etape dar nereikia siųsti paso numerio, dokumento numerio, sąskaitos duomenų, sveikatos dokumentacijos ar viso įrodymų rinkinio. Palaukite advokatės arba advokato nurodymų ir jautrius dokumentus tada siųskite saugiu keliu.
+
+guidanceContent.lt.pages.contact.sections[3].heading
+    Ko šis puslapis nežada
+
+guidanceContent.lt.pages.contact.sections[3].paragraphs[0]
+    Nežadame atsakymo termino, nepatvirtiname susitikimo per šį puslapį, nežadame konkrečios advokatės ar konkretaus advokato ir neteikiame vertėjo žodžiu. Rašytinis vertimas yra kas kita: Jūsų pranešimas automatiškai neverčiamas.
+
+guidanceContent.lt.pages.contact.sections[3].paragraphs[1]
+    Jei išsiųsite užklausą, turinys išsaugomas ir laukia įvertinimo. Jei po kurio laiko atsakymo negausite, galite vėl parašyti el. pašto adresu, nurodytu kontaktų puslapyje.
+
+guidanceContent.lt.pages.faq.eyebrow
+    KLAUSIMAI
+
+guidanceContent.lt.pages.faq.title
+    Dažni klausimai
+
+guidanceContent.lt.pages.faq.description
+    Paaiškinimai apie darbo apimtį, pasirengimą, kalbas, išlaidas ir tai, ką reiškia išsiųsta užklausa.
+
+guidanceContent.lt.pages.faq.intro
+    Toliau pateikti klausimai atsakomi bendros informacijos lygiu. Atsakymas Jūsų byloje galimas tik po to, kai advokatė arba advokatas įvertina dokumentus.
+
+guidanceContent.lt.pages.faq.sections[0].heading
+    Kaip naudotis šia dalimi
+
+guidanceContent.lt.pages.faq.sections[0].paragraphs[0]
+    Jei atsakymo savo padėčiai nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne išveskite juos iš šio puslapio.
+
+guidanceContent.lt.pages.faq.faqs[0].question
+    Kokias bylas kontora veda?
+
+guidanceContent.lt.pages.faq.faqs[0].answer
+    Vedame šešias sritis: investicijas ir įmonių steigimą Taivane, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Ar byla bus priimta, sprendžiama įvertinus turinį.
+
+guidanceContent.lt.pages.faq.faqs[1].question
+    Ką pasirengti prieš kreipiantis?
+
+guidanceContent.lt.pages.faq.faqs[1].answer
+    Parenkite trumpą eigos, savo prašymo, ryšio su Taivanu ir termino, jei toks yra, santrauką. Jei jau turite teismo ar institucijos raštą, nurodykite datą. Šiame etape dar nereikia siųsti tapatybės dokumentų ar viso įrodymų rinkinio.
+
+guidanceContent.lt.pages.faq.faqs[2].question
+    Ar galima konsultacija lietuvių kalba?
+
+guidanceContent.lt.pages.faq.faqs[2].answer
+    Ne. Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Nežadame ir vertėjo žodžiu. Rašytinis vertimas yra kas kita: originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas.
+
+guidanceContent.lt.pages.faq.faqs[3].question
+    Ką daryti, jei negaliu naudoti nė vienos iš keturių kalbų?
+
+guidanceContent.lt.pages.faq.faqs[3].answer
+    Siųsdami užklausą pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai vertinimo žingsnis, o ne pažadas, kad galime dirbti kita kalba.
+
+guidanceContent.lt.pages.faq.faqs[4].question
+    Kaip elgiamasi su mano tekstu lietuvių kalba?
+
+guidanceContent.lt.pages.faq.faqs[4].answer
+    Originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas. Jei reikia, tolesnio bendravimo kalba su Jumis patvirtinama.
+
+guidanceContent.lt.pages.faq.faqs[5].question
+    Ar konsultacija jau įvyko vien todėl, kad užklausa išsiųsta?
+
+guidanceContent.lt.pages.faq.faqs[5].answer
+    Ne. Išsiųsta užklausa laukia, kol ją įvertins advokatė arba advokatas. Tai nėra teisinė nuomonė, nėra patvirtintas susitikimas, ir vien pats išsiuntimas nesukuria advokato ir kliento santykių.
+
+guidanceContent.lt.pages.faq.faqs[6].question
+    Kaip skaičiuojamos išlaidos?
+
+guidanceContent.lt.pages.faq.faqs[6].answer
+    Pirmiausia nustatoma darbo apimtis, tada su Jumis patvirtinamas išlaidų dydis ir skaičiavimo būdas, prieš pradedant darbą. Šis puslapis nenumato sumų ir nesako, kad pirmoji konsultacija nemokama.
+
+guidanceContent.lt.pages.faq.faqs[7].question
+    Ką daryti, jei mano byla labai skubi?
+
+guidanceContent.lt.pages.faq.faqs[7].answer
+    Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis neturi skubos kanalo ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, lygiagrečiai turėtumėte ieškoti kitų kelių savo vietoje.
+
+guidanceContent.lt.pages.privacy.eyebrow
+    PRIVATUMAS
+
+guidanceContent.lt.pages.privacy.title
+    Duomenys, renkami kontaktine forma
+
+guidanceContent.lt.pages.privacy.description
+    Ką renka kontaktinė forma šioje lietuviškoje dalyje, kaip elgiamasi su originaliu tekstu ir kaip kreiptis dėl Jūsų duomenų.
+
+guidanceContent.lt.pages.privacy.intro
+    Ši dalis taikoma tik kontaktinei formai šiuose informaciniuose puslapiuose. Ji aprašo elgesį su duomenimis, o ne techninę garantiją.
+
+guidanceContent.lt.pages.privacy.sections[0].heading
+    Kokie duomenys renkami
+
+guidanceContent.lt.pages.privacy.sections[0].paragraphs[0]
+    Jei per šios dalies formą išsiųsite užklausą, fiksuojami šie duomenys:
+
+guidanceContent.lt.pages.privacy.sections[0].items[0]
+    Vardas, kurį nurodote
+
+guidanceContent.lt.pages.privacy.sections[0].items[1]
+    El. pašto adresas atsakymui
+
+guidanceContent.lt.pages.privacy.sections[0].items[2]
+    Puslapio rodymo kalba išsiuntimo metu
+
+guidanceContent.lt.pages.privacy.sections[0].items[3]
+    Kalba, kuria rašėte
+
+guidanceContent.lt.pages.privacy.sections[0].items[4]
+    Konsultacijos kalba, kurios pageidaujate
+
+guidanceContent.lt.pages.privacy.sections[0].items[5]
+    Originalus tekstas, kurį parašėte
+
+guidanceContent.lt.pages.privacy.sections[0].items[6]
+    Jūsų sutikimas išsiųsti užklausą
+
+guidanceContent.lt.pages.privacy.sections[0].items[7]
+    Pateikimo numeris užklausai rasti
+
+guidanceContent.lt.pages.privacy.sections[1].heading
+    Originalus tekstas išsaugomas be pakeitimų
+
+guidanceContent.lt.pages.privacy.sections[1].paragraphs[0]
+    Jūsų tekstas išsaugomas tiksliai toks, kokį parašėte, ir automatiškai neverčiamas. Jei nagrinėjimui reikia vertimo, tai aptariama su Jumis atskirai.
+
+guidanceContent.lt.pages.privacy.sections[1].paragraphs[1]
+    Kadangi originalus tekstas išsaugomas, pradiniame etape nerašykite to, ko dar nereikia, pavyzdžiui, paso numerio, dokumento numerio ar sąskaitos duomenų.
+
+guidanceContent.lt.pages.privacy.sections[2].heading
+    Saugojimo vieta ir prieiga
+
+guidanceContent.lt.pages.privacy.sections[2].paragraphs[0]
+    Jūsų pateikimo turinys saugomas vietoje, kuri nėra viešai prieinama. Prieigą prie jo turi tik įgalioti kontoros asmenys, ir tik užklausai nagrinėti.
+
+guidanceContent.lt.pages.privacy.sections[2].paragraphs[1]
+    Šis puslapis neduoda absoliučios saugumo garantijos. Joks perdavimo kelias ir jokia saugojimo vieta nėra visiškai saugi; jautrius dokumentus todėl reikėtų siųsti tik po atskiro advokatės arba advokato nurodymo.
+
+guidanceContent.lt.pages.privacy.sections[3].heading
+    Naudojimo tikslas
+
+guidanceContent.lt.pages.privacy.sections[3].paragraphs[0]
+    Išsiųsti duomenys skirti užklausai įvertinti, atsakymui Jums, bendravimo būdui išsiaiškinti ir nagrinėjimui, jei darbas priimamas.
+
+guidanceContent.lt.pages.privacy.sections[3].paragraphs[1]
+    Duomenys be atskiro sutikimo nenaudojami rinkodarai.
+
+guidanceContent.lt.pages.privacy.sections[4].heading
+    Pranešimas ir pateikimo numeris
+
+guidanceContent.lt.pages.privacy.sections[4].paragraphs[0]
+    Jei užklausa sėkmingai išsiunčiama, sistema praneša kontorai. Jei šis pranešimas dar nepatvirtintas, Jūsų tekstas lieka išsaugotas ir nedingsta.
+
+guidanceContent.lt.pages.privacy.sections[4].paragraphs[1]
+    Pateikimo numeris skirtas Jūsų užklausai rasti mūsų įrašuose. Jis rodomas po išsaugojimo; galite jį nurodyti kreipdamiesi iš naujo.
+
+guidanceContent.lt.pages.privacy.sections[5].heading
+    Jūsų teisės ir kreipimosi kelias
+
+guidanceContent.lt.pages.privacy.sections[5].paragraphs[0]
+    Galite prašyti prieigos prie savo duomenų, jų taisymo ar ištrynimo, arba atšaukti sutikimą, per el. pašto adresą, nurodytą kontaktų puslapyje. Jei yra įstatyminė ar procesinė saugojimo pareiga, paaiškinsime apribojimą.
+
+guidanceContent.lt.pages.privacy.sections[5].paragraphs[1]
+    Šis puslapis nenumato fiksuoto saugojimo termino, nes faktinė trukmė priklauso nuo tolesnės bylos eigos ir susijusių pareigų. Jei pageidaujate ankstesnio ištrynimo, nurodykite tai kreipdamiesi.
+
+guidanceContent.lt.pages.privacy.sections[6].heading
+    Saugojimo vieta ir paslaugų teikėjai
+
+guidanceContent.lt.pages.privacy.sections[6].paragraphs[0]
+    Ši svetainė talpinama Vercel, o Jūsų pateikimas saugomas neviešoje šios paslaugos objektų saugykloje. El. laiškai siunčiami pašto paslauga, kuria naudojasi kontora.
+
+guidanceContent.lt.pages.privacy.sections[6].paragraphs[1]
+    Atskiri paslaugų teikėjų serveriai gali būti už Taivano ribų, todėl Jūsų duomenys ten gali būti saugomi ir tvarkomi. Kai saugojimo tikslas įvykdytas, duomenys ištrinami nedelsiant; duomenys, kuriuos reikia saugoti pagal taikomus teisės aktus, lieka šiam laikotarpiui. Prašymus dėl asmens duomenų priima wei@hoveringlaw.com.tw.
+
+guidanceContent.lt.pages.disclaimer.eyebrow
+    ĮSPĖJIMAS
+
+guidanceContent.lt.pages.disclaimer.title
+    Šio puslapio informacijos apimtis ir ribos
+
+guidanceContent.lt.pages.disclaimer.description
+    Bendra informacijos prigimtis, teisinė sistema ir prielaidos, kad susidarytų advokato ir kliento santykiai.
+
+guidanceContent.lt.pages.disclaimer.intro
+    Ši dalis paaiškina, ką šie lietuviški informaciniai puslapiai Jums gali padaryti ir ko negali.
+
+guidanceContent.lt.pages.disclaimer.sections[0].heading
+    Tik bendra informacija
+
+guidanceContent.lt.pages.disclaimer.sections[0].paragraphs[0]
+    Šių puslapių turinys parašytas kaip bendra informacija. Tai nėra teisinė konsultacija Jūsų byloje ir nepakeičia Jūsų dokumentų vertinimo.
+
+guidanceContent.lt.pages.disclaimer.sections[0].paragraphs[1]
+    Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir momento; dvi panašiai atrodančios padėtys gali baigtis skirtingai.
+
+guidanceContent.lt.pages.disclaimer.sections[1].heading
+    Teisinė sistema
+
+guidanceContent.lt.pages.disclaimer.sections[1].paragraphs[0]
+    Kontora veikia pagal Taivano teisę ir šis puslapis kalba tik apie darbą šioje sistemoje.
+
+guidanceContent.lt.pages.disclaimer.sections[1].paragraphs[1]
+    Turinys nėra konsultacija pagal kitos nei Taivano teisės sistemos teisę, įskaitant Jūsų gyvenamosios vietos teisę. Jei dalis Jūsų bylos liečia kitą teisės sistemą, su Jumis išsiaiškinsime, koks kvalifikuotas asmuo šiai daliai reikalingas.
+
+guidanceContent.lt.pages.disclaimer.sections[2].heading
+    Advokato ir kliento santykiai patys savaime nesusidaro
+
+guidanceContent.lt.pages.disclaimer.sections[2].paragraphs[0]
+    Šio puslapio perskaitymas, formos ar el. laiško išsiuntimas pats savaime nesukuria advokato ir kliento santykių.
+
+guidanceContent.lt.pages.disclaimer.sections[2].paragraphs[1]
+    Šie santykiai susidaro tik po to, kai byla įvertinta ir abi šalys patvirtino darbo priėmimą.
+
+guidanceContent.lt.pages.disclaimer.sections[3].heading
+    Jokio pažado dėl rezultato
+
+guidanceContent.lt.pages.disclaimer.sections[3].paragraphs[0]
+    Jokia šio puslapio dalis nėra pažadas dėl bylos rezultato, paraiškos ar prašymo patenkinimo ar dėl gyvenamosios vietos ir darbo statuso.
+
+guidanceContent.lt.pages.disclaimer.sections[3].paragraphs[1]
+    Išorinės nuorodos skirtos orientacijai; nežadame trečiųjų asmenų turinio teisingumo ar aktualumo.
+
+guidanceContent.lt.pages.columns.eyebrow
+    STRAIPSNIAI
+
+guidanceContent.lt.pages.columns.title
+    Straipsniai apie Taivano teisę
+
+guidanceContent.lt.pages.columns.description
+    Straipsniai lietuvių kalba apie dažnus Taivano teisės klausimus. Turinys yra bendra informacija paskelbimo metu, o ne teisinė konsultacija Jūsų byloje.
+
+guidanceContent.lt.pages.columns.intro
+    Kontora skelbia straipsnius apie dažnus Taivano teisės klausimus. Straipsniai, prieinami lietuvių kalba, yra šiame puslapyje; šalia jų yra keturios nuorodos, iš kurių kiekviena atveria straipsnių sąrašą viena originalo kalba.
+
+guidanceContent.lt.pages.columns.sections[0].heading
+    Keturi sąrašai pagal kalbą
+
+guidanceContent.lt.pages.columns.sections[0].paragraphs[0]
+    Šioje dalyje yra keturios nuorodos: straipsnių sąrašas korėjiečių, kinų, anglų ir japonų kalbomis. Kiekviena nuoroda nurodo sąrašo kalbą, todėl iš anksto žinote, kokia kalba turinys atsivers.
+
+guidanceContent.lt.pages.columns.sections[0].paragraphs[1]
+    Šie keturi sąrašai yra sąrašai pagal straipsnių originalo kalbą, o ne vertimų sąrašai. Straipsniai, prieinami lietuvių kalba, yra atskirai šiame puslapyje.
+
+guidanceContent.lt.pages.columns.sections[1].heading
+    Kur veda nuorodos
+
+guidanceContent.lt.pages.columns.sections[1].paragraphs[0]
+    Pasirinkus vieną iš keturių nuorodų, atsidaro straipsnių sąrašas ta kalba. Iš sąrašo tekstą pasirenkate patys; visas turinys rodomas straipsnio originalo kalba.
+
+guidanceContent.lt.pages.columns.sections[1].paragraphs[1]
+    Šis puslapis straipsnių turinio nesutraukia ir negarantuoja, kad tam tikra tema prieinama visomis keturiomis kalbomis. Kiekviename sąraše yra tik tekstai, paskelbti ta kalba.
+
+guidanceContent.lt.pages.columns.sections[2].heading
+    Kiek straipsnis gali padėti orientuotis
+
+guidanceContent.lt.pages.columns.sections[2].paragraphs[0]
+    Straipsniai yra bendra informacija paskelbimo metu. Teisės aktai ir jų taikymas gali keistis, ir straipsnis neapima visų Jūsų bylos aplinkybių.
+
+guidanceContent.lt.pages.columns.sections[2].paragraphs[1]
+    Todėl tikros bylos eigos nesiremkite vien straipsniu. Naudokite jį apžvalgai, o savo dokumentus aptarkite atskirai su advokate arba advokatu; šis puslapis nėra konsultacijos žingsnis.
+
+guidanceTeamCopy.lt.label
+    KOMANDA
+
+guidanceTeamCopy.lt.title
+    Tarptautinė Hovering komanda
+
+guidanceTeamCopy.lt.description
+    Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profiliai.
+
+guidanceTeamCopy.lt.representativeTitle
+    Vadovaujančioji advokatė
+
+guidanceTeamCopy.lt.teamTitle
+    Advokatai ir bendradarbiai
+
+guidanceTeamCopy.lt.partnerTitle
+    Susijusi apskaita
+
+guidanceTeamCopy.lt.introLabel
+    Pristatymas
+
+guidanceTeamCopy.lt.educationLabel
+    Išsilavinimas
+
+guidanceTeamCopy.lt.experienceLabel
+    Patirtis
+
+guidanceTeamCopy.lt.photoAltPrefix
+    Nuotrauka
+
+guidanceTeamCopy.lt.workingLanguagesLabel
+    Darbo kalbos
+
+guidanceTeamCopy.lt.fullProfileLabel
+    Visas profilis (anglų kalba)
+
+guidanceTeamCopy.lt.keyFactsHeading
+    Advokatė Wei Tseng — pagrindiniai duomenys
+
+guidanceTeamCopy.lt.qualificationLabel
+    Įgaliojimas ir kontora
+
+guidanceTeamCopy.lt.qualificationSentence
+    {name} turi teisę verstis advokatės praktika Taivane ir yra vadovaujančioji advokatė kontoroje {firm}.
+
+guidanceTeamCopy.lt.practiceLabel
+    Pagrindinės sritys
+
+guidanceTeamCopy.lt.consultationLanguagesLabel
+    Konsultacijos kalbos
+
+guidanceTeamCopy.lt.roles.tseng-junwei
+    Vadovaujančioji advokatė Taivane (Managing Attorney)
+
+guidanceTeamCopy.lt.roles.chang-rongxuan
+    Advokatas Taivane (Taiwan Attorney)
+
+guidanceTeamCopy.lt.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.lt.roles.son-jungmin
+    Korėjos operacijų vadovybė (Korea Operations Manager)
+
+guidanceTeamCopy.lt.roles.huang-shengping
+    Partneris buhalteris (Partner CPA)
+
+guidanceTeamBios.lt.tseng-junwei.intro[0]
+    Kontora veda įmonių ir privačių asmenų bylas Taivane anglų, japonų, korėjiečių ir kinų kalbomis.
+
+guidanceTeamBios.lt.tseng-junwei.intro[1]
+    Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje ir pasiekė pirmosios instancijos sprendimą dėl TWD 1.57M.
+
+guidanceTeamBios.lt.tseng-junwei.education[0]
+    Magistrė (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.lt.tseng-junwei.education[1]
+    Bakalaurė (B.A.) dviguboje teisės ir finansų programoje, National Chengchi University
+
+guidanceTeamBios.lt.tseng-junwei.education[2]
+    Mainų studijos Kobe University ir Waseda University
+
+guidanceTeamBios.lt.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.lt.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.lt.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.lt.chang-rongxuan.intro[0]
+    Anksčiau Ministry of Education, Legal Affairs Division, daugiausia administracinėse ir civilinėse bylose.
+
+guidanceTeamBios.lt.chang-rongxuan.intro[1]
+    Patirtis universitetų bylose, pedagogų teisėse ir administraciniuose skunduose.
+
+guidanceTeamBios.lt.chang-rongxuan.education[0]
+    Teisės bakalauras (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.lt.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.lt.chang-rongxuan.experience[1]
+    Advokatas, Hovering International Law Firm
+
+guidanceTeamBios.lt.chang-fangyu.intro[0]
+    Paralegal su ilgamete patirtimi; anksčiau vyresnysis paralegal keliose advokatų kontorose, daugiausia procesinei pagalbai, bendrovių darbotvarkei ir užsienio investicijoms.
+
+guidanceTeamBios.lt.chang-fangyu.intro[1]
+    Pagalba teismo procesuose, steigiant įmones, užsienio investicijų leidimuose, licencijų prašymuose ir komunikacijoje tarp Korėjos ir Taivano.
+
+guidanceTeamBios.lt.chang-fangyu.education[0]
+    Teisės bakalauras (LL.B.), Tunghai University
+
+guidanceTeamBios.lt.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.lt.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.lt.son-jungmin.intro[0]
+    Koordinuoja konsultacijų terminus ir komunikaciją klientams iš Korėjos.
+
+guidanceTeamBios.lt.son-jungmin.intro[1]
+    Palaiko tarpregioninius mainus dokumentų ir darbo eigos sistemomis, remdamasis informatika.
+
+guidanceTeamBios.lt.son-jungmin.education[0]
+    Bakalauras (B.S.) informatikoje, National Cheng Kung University
+
+guidanceTeamBios.lt.son-jungmin.experience[0]
+    Korėjos operacijų padalinys, Hovering International Law Firm
+
+guidanceTeamBios.lt.huang-shengping.intro[0]
+    Baigė bakalauro ir magistro apskaitos programas National Chengchi University ir dabar vadovauja apskaitos kontorai.
+
+guidanceTeamBios.lt.huang-shengping.intro[1]
+    Palaiko integruotą teisinės, mokestinės ir finansinės rizikos analizę įmonių klientams.
+
+guidanceTeamBios.lt.huang-shengping.education[0]
+    Magistras (M.A.) apskaitoje, National Chengchi University
+
+guidanceTeamBios.lt.huang-shengping.education[1]
+    Bakalauras (B.A.) apskaitoje, National Chengchi University
+
+guidanceTeamBios.lt.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.lt.Korean
+    korėjiečių
+
+guidanceLanguageNames.lt.Chinese
+    kinų
+
+guidanceLanguageNames.lt.Japanese
+    japonų
+
+guidancePracticeAreaNames.lt.Taiwan company setup
+    Įmonių steigimas Taivane
+
+guidancePracticeAreaNames.lt.Taiwan investment counsel
+    Investicijų į Taivaną konsultacijos
+
+guidancePracticeAreaNames.lt.Civil litigation and damages
+    Civiliniai ginčai ir žalos atlyginimas
+
+guidancePracticeAreaNames.lt.Trademark and patent filings
+    Prekių ženklų ir patentų paraiškos
+
+guidancePracticeAreaNames.lt.Visa and residency
+    Vizos ir gyvenamoji vieta
+
+guidancePracticeAreaNames.lt.Family and labor disputes
+    Šeimos ir darbo ginčai
+
+guidanceOfficeCopy.lt.label
+    BIURAI
+
+guidanceOfficeCopy.lt.title
+    Biurai
+
+guidanceOfficeCopy.lt.description
+    Hovering International Law Firm Taivano biurų adresai.
+
+guidanceOfficeCopy.lt.officeLabel
+    Biuras
+
+guidanceOfficeCopy.lt.mapPreviewLabel
+    Žemėlapio peržiūra
+
+guidanceOfficeCopy.lt.koreaOfficeTitle
+    Korėjos biuras
+
+guidanceOfficeCopy.lt.koreaAddressCardLabel
+    Korėjos biuro adresas
+
+guidanceOfficeCopy.lt.koreaMapLinkLabel
+    Žiūrėti Naver Map
+
+guidanceOfficeCopy.lt.reviewCountWord
+    įvertinimų
+
+guidanceOfficeCopy.lt.phoneLabel
+    Telefonas
+
+guidanceOfficeCopy.lt.faxLabel
+    Faksas
+
+guidanceOfficeCopy.lt.mapLinkLabel
+    Žiūrėti žemėlapyje
+
+guidanceOfficeCopy.lt.photoAlts[0]
+    Taipėjaus biuro registratūra, Hovering International Law Firm
+
+guidanceOfficeCopy.lt.photoAlts[1]
+    Advokatės kabinetas Taipėjaus biure, Hovering International Law Firm
+
+guidanceOfficeCopy.lt.photoAlts[2]
+    Posėdžių salė Taipėjaus biure, Hovering International Law Firm
+
+guidanceOfficeCopy.lt.officeTitles.taipei
+    Taipėjus
+
+guidanceOfficeCopy.lt.officeTitles.taichung
+    Taidžongas
+
+guidanceOfficeCopy.lt.officeTitles.kaohsiung
+    Gaosiongas
+
+guidanceOfficeCopy.lt.officeTitles.pingtung
+    Pingdongas
+
+guidanceFooterCopy.lt.officeLabel
+    Biurai
+
+guidanceFooterCopy.lt.officeQuickLinksLabel
+    Sparčiosios biurų nuorodos
+
+guidanceFooterCopy.lt.followLabel
+    Sekite mus
+
+guidanceFooterCopy.lt.blogLabel
+    Tinklaraštis
+
+guidanceFooterCopy.lt.websiteLabel
+    Oficiali svetainė
+
+guidanceFooterCopy.lt.sitemapLabel
+    Svetainės medis
+
+guidanceFooterCopy.lt.copyEmailLabel
+    Kopijuoti el. pašto adresą
+
+guidanceFooterCopy.lt.emailCopiedMessage
+    El. pašto adresas nukopijuotas.
+
+guidanceFooterCopy.lt.officialConsultationEmailLabel
+    Oficialus el. paštas užklausoms
+
+internationalInquiryCopy.lt.guidanceNotice
+    Šis puslapis parašytas lietuviškai kaip bendra orientacija, o ne kaip teisinė konsultacija Jūsų byloje.
+
+internationalInquiryCopy.lt.consultationNotice
+    Konsultacija vyksta tik keturiomis kalbomis: anglų, kinų (中文), japonų ir korėjiečių.
+
+internationalInquiryCopy.lt.methodConfirmationNotice
+    Jei nemokate nė vienos iš keturių konsultacijos kalbų, pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume, ar yra tinkamas bendravimo būdas; paslauga kita kalba nėra garantuojama ir atsakymo terminas nežadamas.
+
+internationalInquiryCopy.lt.preparationNotice
+    Santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas toks, kokį parašėte, ir automatiškai neverčiamas.
+
+internationalInquiryCopy.lt.heading
+    Pateikti prašymą įvertinti
+
+internationalInquiryCopy.lt.intro
+    Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį, prieš pereinant prie kito žingsnio.
+
+internationalInquiryCopy.lt.submitLabel
+    Siųsti užklausą
+
+internationalInquiryCopy.lt.submittingLabel
+    Siunčiama…
+
+internationalInquiryCopy.lt.successMessage
+    Gavome Jūsų užklausą; ji laukia įvertinimo. Tai nereiškia, kad konsultacija įvyko arba kad buvo patvirtintas susitikimas.
+
+internationalInquiryCopy.lt.savedNotificationPendingMessage
+    Jūsų užklausa išsaugota, bet pranešimas kontorai dar nepatvirtintas. Tai, ką parašėte, nedingsta. Jei atsakymo negausite, galite parašyti ir el. pašto adresu iš kontaktų puslapio.
+
+internationalInquiryCopy.lt.receiptIdLabel
+    Pateikimo numeris
+
+internationalInquiryCopy.lt.failureMessage
+    Jūsų užklausos išsiųsti nepavyko. Bandykite dar kartą arba parašykite el. pašto adresu iš kontaktų puslapio.
+
+internationalInquiryCopy.lt.originalLanguageLabel
+    Kalba, kuria rašote
+
+internationalInquiryCopy.lt.originalLanguagePlaceholder
+    Pavyzdžiui, lietuvių, anglų, kinų ar kita kalba
+
+internationalInquiryCopy.lt.preferredConsultationLanguageLabel
+    Kalba, kurios pageidaujate konsultacijai
+
+internationalInquiryCopy.lt.originalTextLabel
+    Trumpas bylos aprašymas (Jūsų kalba)
+
+internationalInquiryCopy.lt.originalTextPlaceholder
+    Parašykite, kas įvyko, kokios pagalbos reikia ir terminą, jei toks yra. Nerašykite paso numerio, dokumento numerio ar sąskaitos duomenų.
+
+internationalInquiryCopy.lt.nameLabel
+    Vardas
+
+internationalInquiryCopy.lt.emailLabel
+    El. paštas
+
+internationalInquiryCopy.lt.consentLabel
+    Perskaičiau privatumo puslapį ir sutinku, kad ši užklausa būtų išsiųsta.
+
+internationalInquiryCopy.lt.privacyLinkLabel
+    Privatumas
+
+internationalInquiryCopy.lt.requiredMessage
+    Šis laukas privalomas.
+
+internationalInquiryCopy.lt.invalidEmailMessage
+    Įveskite galiojantį el. pašto adresą.
+
+internationalInquiryCopy.lt.tooLongMessage
+    Tekstas per ilgas. Sutrumpinkite jį ir siųskite iš naujo.
+
+internationalInquiryCopy.lt.sourceLanguageNotice
+    Šis straipsnis paskelbtas tik kalba {language}; nuoroda atveria originalų puslapį.
+
+internationalInquiryCopy.lt.unavailableTranslationNotice
+    Ši dalis šio puslapio kalba dar nepateikiama. Nuoroda originalo kalba atveria originalų tekstą.
+
+internationalInquiryCopy.lt.unavailableLanguageNotice
+    Šis puslapis kalba {language} nesiūlomas.
+
+internationalInquiryCopy.lt.languageOptions.en
+    Anglų (English)
+
+internationalInquiryCopy.lt.languageOptions.zh-hant
+    Kinų (中文)
+
+internationalInquiryCopy.lt.languageOptions.ja
+    Japonų (日本語)
+
+internationalInquiryCopy.lt.languageOptions.ko
+    Korėjiečių (한국어)
+
+internationalInquiryCopy.lt.languageOptions.needs-method-confirmation
+    Nė viena iš keturių kalbų netinka — bendravimo būdą reikia patvirtinti
+
+guidanceAnswers.lt.services.answer
+    Kontora veda šešias sritis pagal Taivano teisę: investicijas ir įmonių steigimą, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina atsiųstą turinį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+
+guidanceAnswers.lt.services.sources[0]
+    /lt/faq
+
+guidanceAnswers.lt.services.sources[1]
+    /lt/contact
+
+guidanceAnswers.lt.about.answer
+    Hovering International Law Firm yra Taivano advokatų kontora, kurią 2016 m. įsteigė National Taiwan University (國立臺灣大學) absolventai, su biurais miestuose Taipėjus, Gaosiongas, Taidžongas ir Pingdongas. Nuo 2020 m. veikia ir apskaitos padalinys; Taidžongo biuras veda bylas, susijusias su Korėja ir Japonija. Kontora nežada rezultato. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+
+guidanceAnswers.lt.about.sources[0]
+    /lt/lawyers
+
+guidanceAnswers.lt.about.sources[1]
+    /lt/services
+
+guidanceAnswers.lt.lawyers.answer
+    Šis puslapis rodo Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profilius. Advokatė Wei Tseng (曾雋崴) turi teisę verstis advokatės praktika Taivane ir yra vadovaujančioji advokatė kontoroje; dirba su klientais iš Korėjos, iš Japonijos ir su kitais tarptautiniais klientais. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+
+guidanceAnswers.lt.lawyers.sources[0]
+    /lt/about
+
+guidanceAnswers.lt.lawyers.sources[1]
+    /lt/contact
+
+guidanceAnswers.lt.pricing.answer
+    Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; be atlygio gali atsirasti teismo ar administracinės rinkliavos. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+
+guidanceAnswers.lt.pricing.sources[0]
+    /lt/contact
+
+guidanceAnswers.lt.pricing.sources[1]
+    /lt/faq
+
+guidanceAnswers.lt.contact.answer
+    Atsiųskite santrauką kontaktine forma: kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Pradiniame etape dar nereikia siųsti tapatybės dokumentų ar visos įrodymų medžiagos. Kontora nežada atsakymo termino ir nepatvirtina susitikimo per šį puslapį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+
+guidanceAnswers.lt.contact.sources[0]
+    /lt/faq
+
+guidanceAnswers.lt.contact.sources[1]
+    /lt/pricing
+
+guidanceAnswers.lt.faq.answer
+    Ši dalis atsako į dažnus klausimus bendros informacijos lygiu: šešios kontoros sritys, pasirengimas prieš kreipiantis, išlaidų patvirtinimas ir išsiųsto pranešimo reikšmė. Išsiųstas pranešimas laukia įvertinimo, nėra teisinė nuomonė ir nėra patvirtintas susitikimas, ir pats savaime nesukuria advokato ir kliento santykių. Konsultacija vyksta tik keturiomis kalbomis: anglų, kinų, japonų ir korėjiečių.
+
+guidanceAnswers.lt.faq.sources[0]
+    /lt/services
+
+guidanceAnswers.lt.faq.sources[1]
+    /lt/contact
+
+GUIDANCE_LLMS_NOTICES.lt.consultationNotice
+    Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.
+
+GUIDANCE_LLMS_NOTICES.lt.discoveryNotice
+    Failas llms.txt yra tik viešųjų puslapių radimo žemėlapis; jis nežada vietos paieškoje, palaikymo, dirbtinio intelekto rekomendacijos ar matomumo.
+
+GUIDANCE_LLMS_NOTICES.lt.confidentialNotice
+    Kadangi originalus tekstas išsaugomas, pradiniame etape nerašykite to, ko dar nereikia, pavyzdžiui, paso numerio, dokumento numerio ar sąskaitos duomenų.

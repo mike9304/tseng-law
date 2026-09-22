@@ -1,0 +1,1096 @@
+# fa guidance pack strings (path → text). Generated 2026-09-22
+
+guidanceContent.fa.languageName
+    فارسی
+
+guidanceContent.fa.nav.home
+    صفحهٔ اصلی
+
+guidanceContent.fa.nav.services
+    خدمات
+
+guidanceContent.fa.nav.about
+    دربارهٔ ما
+
+guidanceContent.fa.nav.lawyers
+    وکلا
+
+guidanceContent.fa.nav.pricing
+    هزینه
+
+guidanceContent.fa.nav.contact
+    تماس
+
+guidanceContent.fa.nav.faq
+    پرسش‌ها
+
+guidanceContent.fa.nav.privacy
+    حریم خصوصی
+
+guidanceContent.fa.nav.disclaimer
+    سلب مسئولیت
+
+guidanceContent.fa.nav.columns
+    نوشتار
+
+guidanceContent.fa.contactCta
+    ارسال درخواست مشاوره
+
+guidanceContent.fa.footerNotice
+    این صفحهٔ فارسی فقط اطلاعات عمومی دربارهٔ کار دفتر طبق قانون تایوان میدهد. نظر حقوقی دربارهٔ یک پرونده مشخص نیست و فرستادن پیام به تنهایی رابطه میان وکیل و موکل پدید نمی آورد.
+
+guidanceContent.fa.skipLink
+    رد کردن ناوبری و رفتن به محتوای اصلی
+
+guidanceContent.fa.menuLabel
+    فهرست
+
+guidanceContent.fa.languageLabel
+    زبان نمایش
+
+guidanceContent.fa.mega.services.description
+    دفتر زمینه‌های اصلی کار را طبق قانون تایوان می‌پذیرد.
+
+guidanceContent.fa.mega.services.viewAllLabel
+    نمایش همه
+
+guidanceContent.fa.mega.columns.description
+    نوشتارهایی دربارهٔ پرسش‌های رایج در قانون تایوان.
+
+guidanceContent.fa.mega.columns.viewAllLabel
+    نمایش همه
+
+guidanceContent.fa.mega.lawyers.description
+    معرفی وکلا و راه‌های تماس با دفتر.
+
+guidanceContent.fa.mega.lawyers.viewAllLabel
+    نمایش همه
+
+guidanceContent.fa.mega.pricing.description
+    این صفحه محدودهٔ کار و نحوهٔ تعیین هزینه را توضیح می‌دهد.
+
+guidanceContent.fa.mega.pricing.viewAllLabel
+    نمایش همه
+
+guidanceContent.fa.mega.faq.description
+    پرسش‌های رایج دربارهٔ کار دفتر در تایوان.
+
+guidanceContent.fa.mega.faq.viewAllLabel
+    نمایش همه
+
+guidanceContent.fa.notFoundTitle
+    صفحه یافت نشد
+
+guidanceContent.fa.notFoundText
+    صفحه‌ای که می‌جویید وجود ندارد یا به نشانی دیگری منتقل شده است. می‌توانید به صفحهٔ اصلی فارسی بازگردید و بخش‌های راهنما را ببینید.
+
+guidanceContent.fa.backHomeLabel
+    بازگشت به صفحهٔ اصلی
+
+guidanceContent.fa.readSourceLabel
+    گشودن فهرست نوشتارها به زبان اصلی
+
+guidanceContent.fa.home.heroScrollLabel
+    رفتن به پایین
+
+guidanceContent.fa.home.heroColumnsCtaLabel
+    دیدن نوشتارها
+
+guidanceContent.fa.home.servicesDetailLabel
+    دیدن جزئیات
+
+guidanceContent.fa.home.servicesAssistanceBefore
+    اگر روشن نیست پروندهٔ شما در کدام گروه می‌گنجد، صفحهٔ 
+
+guidanceContent.fa.home.servicesAssistanceLinkLabel
+    تماس
+
+guidanceContent.fa.home.servicesAssistanceAfter
+     توضیح می‌دهد خلاصه را چگونه بنویسید تا وکیل آن را بررسی کند.
+
+guidanceContent.fa.home.columnsViewAllLabel
+    دیدن همهٔ نوشتارها
+
+guidanceContent.fa.home.columnsReadMoreLabel
+    ادامهٔ مطلب
+
+guidanceContent.fa.home.columnsReviewLabel
+    بازبینی‌شده توسط وکیل Wei Tseng
+
+guidanceContent.fa.home.columnsOriginalLanguageBadge
+    زبان اصلی
+
+guidanceContent.fa.home.columnsOriginalLanguageNote
+    نوشتارهای زیر هنوز به فارسی موجود نیست. فهرست به زبان اصلی می‌ماند و صفحهٔ همان زبان را می‌گشاید؛ محتوا ترجمهٔ ماشینی نمی‌شود.
+
+guidanceContent.fa.home.imageBandAlt
+    خانهٔ سنتی تایوانی سه‌باله (三合院) در کنار کوشکی امروزی در نور روز
+
+guidanceContent.fa.home.videoPauseLabel
+    توقف ویدئو
+
+guidanceContent.fa.home.videoPlayLabel
+    پخش ویدئو
+
+guidanceContent.fa.home.videoReplayLabel
+    پخش دوبارهٔ ویدئو
+
+guidanceContent.fa.pages.home.eyebrow
+    راهنما
+
+guidanceContent.fa.pages.home.title
+    خدمات حقوقی در تایوان — راهنما به فارسی
+
+guidanceContent.fa.pages.home.description
+    توضیح عمومی به فارسی دربارهٔ محدودهٔ کار Hovering International Law Firm در تایوان، زبانهای مشاوره، و نخستین تماس.
+
+guidanceContent.fa.pages.home.intro
+    Hovering International Law Firm موکلان خارجی، از جمله کسانی که با تایوان ارتباط دارند، را در امور تابع قانون تایوان همراهی می‌کند: سرمایه‌گذاری و تأسیس شرکت، دعاوی مدنی، ازدواج و خانواده و ارث، کار، پرونده‌های کیفری، و مالکیت فکری. این بخش فارسی کمک می‌کند ببینید کدام کار در محدودهٔ دفتر می‌گنجد، چه باید آماده کنید، و چگونه تماس بگیرید. این اطلاعات عمومی است، نه نظر حقوقی دربارهٔ پروندهٔ شما.
+
+guidanceContent.fa.pages.home.sections[0].heading
+    دفتر چه می‌کند
+
+guidanceContent.fa.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm دفتر وکالتی است مستقر در تایوان. طبق قانون تایوان کار می‌کند و دفاتری در تایپه (臺北)، کائوشیونگ (高雄)، تایچونگ (臺中) و پینگتونگ (屏東) دارد. هم مشاورهٔ شرکتی می‌دهد و هم در دادگاه وکالت می‌کند و موکلان خارجی را در مراحل لازم در تایوان همراهی می‌کند.
+
+guidanceContent.fa.pages.home.sections[0].paragraphs[1]
+    همهٔ آنچه اینجا آمده عمومی است. نتیجهٔ هر پرونده به وقایع، مقررات حاکم و زمان بستگی دارد. این راهنما جای گفت‌وگو با وکیل دربارهٔ پروندهٔ شما را نمی‌گیرد.
+
+guidanceContent.fa.pages.home.sections[1].heading
+    زبان صفحه و زبان مشاوره یکی نیست
+
+guidanceContent.fa.pages.home.sections[1].paragraphs[0]
+    این صفحه به فارسی نوشته شده است، اما مشاوره با وکیل فقط به چهار زبان مشاوره انجام می‌شود: انگلیسی، چینی (中文)، ژاپنی و کره‌ای. خواندن راهنمای فارسی به این معنا نیست که گفت‌وگو با وکیل به فارسی خواهد بود.
+
+guidanceContent.fa.pages.home.sections[1].paragraphs[1]
+    مترجم شفاهی، مهلت پاسخ و وقت ملاقات از طریق این صفحه وعده داده نمی‌شود. اگر هیچ‌یک از آن چهار زبان را به‌کار نمی‌برید، صفحهٔ «تماس» توضیح می‌دهد چگونه شیوهٔ ارتباط را بررسی می‌کنیم.
+
+guidanceContent.fa.pages.home.sections[2].heading
+    زمینه‌های کار
+
+guidanceContent.fa.pages.home.sections[2].paragraphs[0]
+    محدودهٔ کار دفتر شش گروه زیر را در بر می‌گیرد. صفحهٔ «خدمات» هر گروه را دقیق‌تر شرح می‌دهد و می‌گوید چه چیزی وعده داده نمی‌شود.
+
+guidanceContent.fa.pages.home.sections[2].items[0]
+    سرمایه‌گذاری و تأسیس شرکت در تایوان
+
+guidanceContent.fa.pages.home.sections[2].items[1]
+    دعاوی مدنی و خسارت
+
+guidanceContent.fa.pages.home.sections[2].items[2]
+    ازدواج، خانواده و ارث
+
+guidanceContent.fa.pages.home.sections[2].items[3]
+    اختلافات کار
+
+guidanceContent.fa.pages.home.sections[2].items[4]
+    پرونده‌های کیفری
+
+guidanceContent.fa.pages.home.sections[2].items[5]
+    مالکیت فکری: علامت تجاری، اختراع و حق مؤلف
+
+guidanceContent.fa.pages.home.sections[3].heading
+    از کجا آغاز کنید
+
+guidanceContent.fa.pages.home.sections[3].paragraphs[0]
+    صفحهٔ «خدمات» را بخوانید تا ببینید موضوع شما در محدودهٔ کار می‌گنجد؛ سپس «هزینه» و «تماس» را ببینید تا بدانید محدوده چگونه تعیین و هزینه پیش از شروع کار تأیید می‌شود.
+
+guidanceContent.fa.pages.home.sections[3].paragraphs[1]
+    هنگام فرستادن پیام می‌توانید خلاصه را به زبان خود بنویسید. متن اصلی همان‌گونه که نوشته‌اید ذخیره می‌شود و ترجمهٔ ماشینی نمی‌شود. پیام فرستاده‌شده درخواست در انتظار بررسی است: هنوز مشاوره نیست و وقت ملاقات تأییدشده نیست.
+
+guidanceContent.fa.pages.services.eyebrow
+    خدمات
+
+guidanceContent.fa.pages.services.title
+    اموری که میپذیریم
+
+guidanceContent.fa.pages.services.description
+    شش زمینهٔ کار دفتر در تایوان و مرزهایی که باید پیش از تماس بدانید.
+
+guidanceContent.fa.pages.services.intro
+    در ادامه گروه‌هایی آمده که واقعاً می‌پذیریم، با پرسش‌هایی که در مرحلهٔ نخست زیاد مطرح می‌شود. این شرح کمک می‌کند ببینید موضوع شما در محدودهٔ کار می‌گنجد؛ عمومی است و تحلیل حقوقی یک پروندهٔ خاص نیست.
+
+guidanceContent.fa.pages.services.sections[0].heading
+    سرمایه‌گذاری و تأسیس شرکت در تایوان
+
+guidanceContent.fa.pages.services.sections[0].paragraphs[0]
+    دفتر سرمایه‌گذاران و شرکت‌های خارجی را در تأسیس یا ادارهٔ شرکت در تایوان همراهی می‌کند: انتخاب شکل حقوقی، تهیه و تسلیم مدارک، آوردهٔ سرمایه، امور بانکی، بررسی محل فعالیت، و الزامات خاص هر رشته. در حسابداری و مالیات ناشی از تأسیس و اداره در تایوان نیز یاری می‌دهد.
+
+guidanceContent.fa.pages.services.sections[0].paragraphs[1]
+    مراحل و مدت آن‌ها به شکل حقوقی، سرمایه‌گذار، رشته، بانک و مدارک موجود بستگی دارد. تأسیس شرکت به‌تنهایی اقامت (居留) یا پروانهٔ کار (工作許可) پدید نمی‌آورد: این‌ها آیین‌های جداگانه‌اند و بر پایهٔ وضع هر شخص بررسی می‌شوند.
+
+guidanceContent.fa.pages.services.sections[1].heading
+    دعاوی مدنی و خسارت
+
+guidanceContent.fa.pages.services.sections[1].paragraphs[0]
+    این گروه اختلافات قراردادی، خسارت ناشی از فعل زیان‌بار (侵權行為) و اختلافات مصرف‌کننده را در بر می‌گیرد. کار معمولاً با ترتیب زمانی وقایع، بررسی مدارک و ادلهٔ موجود، و سپس گام‌های بعد آغاز می‌شود.
+
+guidanceContent.fa.pages.services.sections[1].paragraphs[1]
+    مهلت‌ها، از جمله مرور زمان، و کامل بودن ادله مسیر پرونده را شکل می‌دهد. بنابراین تاریخ‌های معلوم را هرچه زودتر بگویید. قراردادها، پیام‌ها، رسید پرداخت یا عکس محل را نگه دارید و در نخستین پیام ذکر کنید.
+
+guidanceContent.fa.pages.services.sections[2].heading
+    ازدواج، خانواده و ارث
+
+guidanceContent.fa.pages.services.sections[2].paragraphs[0]
+    دفتر طلاق (離婚)، تقسیم اموال، حضانت و مسئولیت والدین نسبت به فرزندان صغیر (未成年子女權利義務之行使或負擔)، حق ملاقات (會面交往) و ارث (繼承) را می‌پذیرد، حتی اگر طرف‌ها یا اموال در چند کشور باشند. پرونده‌های خانوادگی فرامرزی اغلب بررسی افزون‌تری در مدارک ثبت احوال خانوار (戶籍)، شکل اسناد و قابلیت اثبات آن‌ها در تایوان می‌طلبد.
+
+guidanceContent.fa.pages.services.sections[2].paragraphs[1]
+    چون امور خانواده معمولاً مهلت و آیین‌های موازی دارد، خلاصهٔ نخست باید نسبت طرف‌ها، محل اقامت کنونی و آیین‌های جاری را بگوید.
+
+guidanceContent.fa.pages.services.sections[3].heading
+    اختلافات کار
+
+guidanceContent.fa.pages.services.sections[3].paragraphs[0]
+    این گروه پایان رابطهٔ کار، حق سنوات قانونی طبق قانون تایوان (資遣費؛ آن را با مقررات مشابه کشورهای دیگر یکی نگیرید)، مزد و اختلافات ناشی از قرارداد کار (勞動契約) را در بر می‌گیرد، چه از سوی کارگر و چه از سوی کارفرما. هنگام بررسی، سبب پایان رابطه را از ابلاغ، پرداخت و مهلت‌ها جدا می‌کنیم.
+
+guidanceContent.fa.pages.services.sections[3].paragraphs[1]
+    قرارداد کار، آیین‌نامهٔ کار (工作規則)، فیش حقوق و مکاتبات طرف‌ها معمولاً مدارک تعیین‌کننده‌اند. اگر آن‌ها را دارید در خلاصه ذکر کنید.
+
+guidanceContent.fa.pages.services.sections[4].heading
+    پرونده‌های کیفری
+
+guidanceContent.fa.pages.services.sections[4].paragraphs[0]
+    دفتر متهم، مظنون و زیان‌دیده را در مرحلهٔ تحقیق و در دادگاه نمایندگی می‌کند و خطر کیفری فعالیت شرکتی را می‌سنجد.
+
+guidanceContent.fa.pages.services.sections[4].paragraphs[1]
+    پرونده‌های کیفری اغلب مهلت کوتاه و مراحل مقرر دارند. اگر ورقه‌ای از مرجع تعقیب یا دادگاه گرفته‌اید، تاریخ روی ورقه را زود بگویید تا محتوا به ترتیب درست بررسی شود.
+
+guidanceContent.fa.pages.services.sections[5].heading
+    مالکیت فکری
+
+guidanceContent.fa.pages.services.sections[5].paragraphs[0]
+    دفتر در ثبت علامت تجاری (商標) و اختراع (專利)، در حق مؤلف و در اختلافات مربوط به این حقوق در تایوان یاری می‌دهد.
+
+guidanceContent.fa.pages.services.sections[5].paragraphs[1]
+    در این گروه ترتیب گام‌ها مهم است: گسترهٔ حمایت، زمان تقاضا و استفادهٔ واقعی بر انتخاب اثر می‌گذارد. تسلیم تقاضا به‌تنهایی به معنای صدور سند حمایت نیست.
+
+guidanceContent.fa.pages.services.sections[6].heading
+    محدوده و تأیید آن
+
+guidanceContent.fa.pages.services.sections[6].paragraphs[0]
+    دفتر طبق قانون تایوان کار می‌کند و امور گروه‌های بالا را می‌پذیرد. محدودهٔ هر پرونده پس از بررسی وکیل نسبت به پیام شما جداگانه تأیید می‌شود.
+
+guidanceContent.fa.pages.services.sections[6].paragraphs[1]
+    وضع اقامت، پروانهٔ کار و مسائل مشابه بر پایهٔ مدارک و وضع هر شخص بررسی می‌شود، نه بر پایهٔ تابعیت. اگر بخشی از موضوع شما به این مسائل برمی‌خورد، هنگام تماس بگویید. این صفحه هیچ تعهد به نتیجه و هیچ مهلت پاسخ نمی‌دهد.
+
+guidanceContent.fa.pages.about.eyebrow
+    دفتر
+
+guidanceContent.fa.pages.about.title
+    دربارهٔ Hovering International Law Firm
+
+guidanceContent.fa.pages.about.description
+    اطلاعات پایه دربارهٔ این دفتر وکالت تایوان، دفاتر آن، و کار با طرفهای خارجی.
+
+guidanceContent.fa.pages.about.intro
+    Hovering International Law Firm دفتر وکالتی در تایوان است. وکلا از مشاورهٔ شرکتی تا دادرسی کار می‌کنند. این بخش پیدایش دفتر، محل‌ها و کار با طرف‌های خارجی را شرح می‌دهد.
+
+guidanceContent.fa.pages.about.sections[0].heading
+    تأسیس و ساختار
+
+guidanceContent.fa.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) در سال 2016 به دست وکلایی تأسیس شد که در National Taiwan University (國立臺灣大學) درس خوانده‌اند. نام چینی 昊鼎 حرف 昊 («آسمان فراخ») را با 鼎 («بنیاد استوار») جمع می‌کند و جهت دفتر را از آغاز بیان می‌کند.
+
+guidanceContent.fa.pages.about.sections[0].paragraphs[1]
+    دفاتری در تایپه (臺北)، کائوشیونگ (高雄)، تایچونگ (臺中) و پینگتونگ (屏東) داریم. دفتر کائوشیونگ بر ادارهٔ شرکت و دعاوی مدنی، کیفری و اداری متمرکز است. دفتر تایچونگ امور ساختمانی، مالکیت فکری و پرونده‌های مرتبط با کره و ژاپن را می‌پذیرد. دفتر پینگتونگ در سال 2017 گشوده شد تا موکلان منطقه را در محل همراهی کند.
+
+guidanceContent.fa.pages.about.sections[0].paragraphs[2]
+    در کنار کار وکالت، از سال 2020 دفتر حسابداری Hovering Accounting Office نیز هست که حسابداری و برنامه‌ریزی مالیاتی برای کارآفرینان و اشخاص متمول ارائه می‌دهد.
+
+guidanceContent.fa.pages.about.sections[1].heading
+    کار با طرف‌های خارجی
+
+guidanceContent.fa.pages.about.sections[1].paragraphs[0]
+    کار فرامرزی شامل تأسیس شرکت، روادید، ثبت علامت تجاری و اختراع، سنجش خطر حقوقی و مشاورهٔ مالیاتی شرکت‌هاست. دفتر تایچونگ به‌ویژه امور ساختمانی، مالکیت فکری و پرونده‌های مرتبط با کره و ژاپن را می‌پذیرد. وکیل Wei Tseng (曾雋崴) موکلان کره، ژاپن و دیگر موکلان بین‌المللی را در گروه‌های یادشده همراهی می‌کند.
+
+guidanceContent.fa.pages.about.sections[1].paragraphs[1]
+    پذیرش یک پرونده به موضوع و زبان ارتباط بستگی دارد. اگر موضوع شما در گروه‌های یادشده بگنجد و بتوان آن را به یکی از چهار زبان مشاوره گفت، می‌توانید خلاصه‌ای برای بررسی بفرستید.
+
+guidanceContent.fa.pages.about.sections[2].heading
+    هنگام تماس با دفتر
+
+guidanceContent.fa.pages.about.sections[2].paragraphs[0]
+    پس از رسیدن خلاصه، وکیل محتوا را بررسی می‌کند و سپس دربارهٔ محدودهٔ ممکن کار، مدارک لازم و گام‌های بعد سخن می‌گوید. در مسائل مالیاتی یا حسابداری، دفتر می‌تواند با بخش حسابداری در یک مسیر مشترک کار کند.
+
+guidanceContent.fa.pages.about.sections[2].paragraphs[1]
+    نتیجهٔ هر پرونده به وقایع و مدارک موجود بستگی دارد؛ هیچ تعهد به نتیجه نمی‌دهیم. اگر پاسخ الزام‌آور برای وضع خود می‌خواهید، مدارک باید به یکی از چهار زبان مشاوره با وکیل بررسی شود.
+
+guidanceContent.fa.pages.lawyers.eyebrow
+    وکلا
+
+guidanceContent.fa.pages.lawyers.title
+    تیم بین المللی Hovering
+
+guidanceContent.fa.pages.lawyers.description
+    نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering.
+
+guidanceContent.fa.pages.lawyers.intro
+    
+
+guidanceContent.fa.pages.pricing.eyebrow
+    هزینه
+
+guidanceContent.fa.pages.pricing.title
+    محدودهٔ کار و هزینه چگونه تعیین میشود
+
+guidanceContent.fa.pages.pricing.description
+    شرح ترتیب کار: نخست محدوده، سپس تأیید هزینه، و چرا این صفحه فهرست نرخ ندارد.
+
+guidanceContent.fa.pages.pricing.intro
+    این صفحه نحوهٔ تعیین هزینه را می‌گوید، نه مبلغ آن را. مبلغ به محدودهٔ کار هر پرونده بستگی دارد و تنها پس از روشن شدن آن محدوده معنا دارد.
+
+guidanceContent.fa.pages.pricing.sections[0].heading
+    نخست محدودهٔ کار تعیین می‌شود
+
+guidanceContent.fa.pages.pricing.sections[0].paragraphs[0]
+    پرونده‌های هم‌نوع می‌توانند حجم کار بسیار متفاوتی داشته باشند، بسته به شمار طرف‌ها، مدارک موجود، مهلت‌ها و این‌که آیین آغاز شده یا نه. از این رو نخستین گام همیشه این است که روشن شود کار چه چیزی را در بر می‌گیرد و چه چیزی را نه.
+
+guidanceContent.fa.pages.pricing.sections[0].paragraphs[1]
+    خلاصه‌ای که در آغاز می‌فرستید پایهٔ همین محدوده است. هرچه روند، خواسته و مهلت‌ها روشن‌تر باشد، تعیین محدوده دقیق‌تر است.
+
+guidanceContent.fa.pages.pricing.sections[1].heading
+    هزینه پیش از شروع کار تأیید می‌شود
+
+guidanceContent.fa.pages.pricing.sections[1].paragraphs[0]
+    پس از روشن شدن محدوده، مبلغ و نحوهٔ محاسبه با شما گفت‌وگو و پیش از شروع کار تأیید می‌شود. اگر محدوده در مسیر کار تغییر کند، باید دوباره تأیید شود.
+
+guidanceContent.fa.pages.pricing.sections[1].paragraphs[1]
+    این صفحه پیشنهاد قیمت نیست و تعهد پرداخت پدید نمی‌آورد. فرستادن درخواست از این صفحه نیز رایگان است.
+
+guidanceContent.fa.pages.pricing.sections[2].heading
+    مشاوره ممکن است خدمتی با هزینه باشد
+
+guidanceContent.fa.pages.pricing.sections[2].paragraphs[0]
+    مشاوره با وکیل ممکن است خدمتی با هزینه باشد. این صفحه نمی‌گوید نخستین نشست رایگان است و هیچ عبارتی را نباید چنین خواند.
+
+guidanceContent.fa.pages.pricing.sections[2].paragraphs[1]
+    اگر مشاوره با هزینه باشد، مبلغ و نحوهٔ پرداخت پیش از برگزاری آن اعلام می‌شود.
+
+guidanceContent.fa.pages.pricing.sections[3].heading
+    چرا این صفحه نرخ نمی‌گوید
+
+guidanceContent.fa.pages.pricing.sections[3].paragraphs[0]
+    هزینه به خود پرونده بستگی دارد: حجم کار، شمار طرف‌ها، مدارک، مهلت‌ها و این‌که آیین جاری است یا نه. عددی از پیش گذاشته‌شده هزینهٔ پروندهٔ شما را نشان نمی‌دهد. از این رو نخست محدوده را تعیین می‌کنیم و سپس هزینه را پیش از شروع کار می‌گوییم.
+
+guidanceContent.fa.pages.pricing.sections[3].paragraphs[1]
+    در کنار حق‌الوکاله ممکن است هزینهٔ دادگاه، مرجع دولتی یا شخص ثالث پیش آید. این مبالغ از حق‌الوکاله جداست و به هر آیین بستگی دارد.
+
+guidanceContent.fa.pages.contact.eyebrow
+    تماس
+
+guidanceContent.fa.pages.contact.title
+    چگونه با دفتر تماس بگیرید
+
+guidanceContent.fa.pages.contact.description
+    زبان صفحه، زبانهای مشاوره، کار وقتی هیچیک از چهار زبان را بکار نمیبرید، و آنچه این صفحه وعده نمیدهد.
+
+guidanceContent.fa.pages.contact.intro
+    پیش از نوشتن، این سه نکته را از هم جدا کنید. اغلب درهم می‌آمیزند، اما معنای هر یک جداست.
+
+guidanceContent.fa.pages.contact.sections[0].heading
+    سه چیز که باید جدا بماند
+
+guidanceContent.fa.pages.contact.sections[0].paragraphs[0]
+    زبان نمایش صفحه، زبان مشاوره با وکیل، و زبانی که با آن می‌نویسید، سه چیز جداگانه‌اند.
+
+guidanceContent.fa.pages.contact.sections[0].items[0]
+    زبان صفحه: این راهنما به فارسی نوشته شده است.
+
+guidanceContent.fa.pages.contact.sections[0].items[1]
+    زبان مشاوره: مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کره‌ای انجام می‌شود.
+
+guidanceContent.fa.pages.contact.sections[0].items[2]
+    زبان نوشتهٔ شما: می‌توانید خلاصه را به زبان خود بنویسید؛ متن اصلی بدون تغییر ذخیره می‌شود.
+
+guidanceContent.fa.pages.contact.sections[1].heading
+    اگر هیچ‌یک از چهار زبان مشاوره را به‌کار نمی‌برید
+
+guidanceContent.fa.pages.contact.sections[1].paragraphs[0]
+    در فرم تماس می‌توانید «لازم است شیوهٔ ارتباط تأیید شود» را برگزینید. پاسخ می‌دهیم تا ببینیم آیا روش ممکنی برای ارتباط هست؛ خدمت به زبان دیگر تضمین نمی‌شود و مهلت پاسخ وعده داده نمی‌شود.
+
+guidanceContent.fa.pages.contact.sections[1].paragraphs[1]
+    این فقط گام تأیید است، نه وعده. مترجم شفاهی فراهم نمی‌کنیم، خدمت به فارسی یا هر زبان دیگر بیرون از چهار زبان یادشده را تعهد نمی‌کنیم، و پذیرش هر پرونده را تعهد نمی‌کنیم.
+
+guidanceContent.fa.pages.contact.sections[2].heading
+    در نخستین پیام چه بنویسید
+
+guidanceContent.fa.pages.contact.sections[2].paragraphs[0]
+    بگویید چه رخ داده، چه کمکی می‌خواهید، موضوع چه ربطی به تایوان دارد، و مهلت را اگر می‌دانید. اگر ورقه‌ای از دادگاه یا مرجع دولتی گرفته‌اید، تاریخ روی ورقه را بگویید.
+
+guidanceContent.fa.pages.contact.sections[2].paragraphs[1]
+    در این مرحله نیازی نیست شمارهٔ گذرنامه، شمارهٔ شناسنامه، دادهٔ حساب بانکی، پروندهٔ پزشکی یا همهٔ ادله را بفرستید. منتظر راهنمایی وکیل بمانید و مدارک حساس را سپس از راه امن بفرستید.
+
+guidanceContent.fa.pages.contact.sections[3].heading
+    آنچه این صفحه وعده نمی‌دهد
+
+guidanceContent.fa.pages.contact.sections[3].paragraphs[0]
+    مهلت پاسخ وعده نمی‌دهیم، وقت ملاقات را از این صفحه تأیید نمی‌کنیم، وکیل معیّنی را تعهد نمی‌کنیم و مترجم شفاهی فراهم نمی‌کنیم. ترجمهٔ نوشته موضوعی جداست: پیام شما ترجمهٔ ماشینی نمی‌شود.
+
+guidanceContent.fa.pages.contact.sections[3].paragraphs[1]
+    وقتی درخواست می‌فرستید، محتوا ذخیره می‌شود و در انتظار بررسی می‌ماند. اگر پس از مدتی پاسخی نرسید، می‌توانید دوباره به رایانامهٔ درج‌شده در صفحهٔ تماس بنویسید.
+
+guidanceContent.fa.pages.faq.eyebrow
+    پرسش‌ها
+
+guidanceContent.fa.pages.faq.title
+    پرسشهای رایج
+
+guidanceContent.fa.pages.faq.description
+    توضیح دربارهٔ محدودهٔ کار، آمادگی، زبان، هزینه، و معنای درخواست فرستادهشده.
+
+guidanceContent.fa.pages.faq.intro
+    پرسش‌های زیر در سطح اطلاعات عمومی پاسخ داده می‌شود. پاسخ پروندهٔ خودتان تنها پس از بررسی مدارک توسط وکیل ممکن است.
+
+guidanceContent.fa.pages.faq.sections[0].heading
+    چگونه از این بخش استفاده کنید
+
+guidanceContent.fa.pages.faq.sections[0].paragraphs[0]
+    اگر پاسخی متناسب با وضع خود نیافتید، معمولاً پاسخ به وقایع خاص بستگی دارد. آن وقایع را در خلاصه بنویسید، نه آن‌که از این صفحه نتیجه بگیرید.
+
+guidanceContent.fa.pages.faq.faqs[0].question
+    دفتر چه اموری را می‌پذیرد؟
+
+guidanceContent.fa.pages.faq.faqs[0].answer
+    شش گروه را می‌پذیریم: سرمایه‌گذاری و تأسیس شرکت در تایوان، دعاوی مدنی و خسارت، ازدواج و خانواده و ارث، اختلافات کار، پرونده‌های کیفری، و مالکیت فکری. پذیرش هر پرونده پس از بررسی محتوا تصمیم گرفته می‌شود.
+
+guidanceContent.fa.pages.faq.faqs[1].question
+    پیش از تماس چه آماده کنم؟
+
+guidanceContent.fa.pages.faq.faqs[1].answer
+    خلاصهٔ کوتاهی از روند، خواسته، ربط موضوع به تایوان و مهلت، اگر هست، آماده کنید. اگر ورقه‌ای از دادگاه یا مرجع دولتی دارید، تاریخ آن را بگویید. در این مرحله نیازی به فرستادن مدارک هویت یا همهٔ ادله نیست.
+
+guidanceContent.fa.pages.faq.faqs[2].question
+    آیا مشاوره به فارسی انجام می‌شود؟
+
+guidanceContent.fa.pages.faq.faqs[2].answer
+    خیر. این صفحهٔ راهنما به فارسی نوشته شده است. مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کرهای انجام میشود و مترجم شفاهی فراهم نمیکنیم. ترجمهٔ نوشته موضوعی جداست: متن اصلی‌ای که می‌نویسید همان‌گونه ذخیره می‌شود و ترجمهٔ ماشینی نمی‌شود.
+
+guidanceContent.fa.pages.faq.faqs[3].question
+    اگر هیچ‌یک از آن چهار زبان را به‌کار نبرم چه؟
+
+guidanceContent.fa.pages.faq.faqs[3].answer
+    هنگام فرستادن درخواست «لازم است شیوهٔ ارتباط تأیید شود» را برگزینید. پاسخ می‌دهیم تا شیوهٔ ارتباط را اگر روش ممکنی باشد بررسی کنیم. این گام تأیید است، نه تعهد به کار به زبانی دیگر.
+
+guidanceContent.fa.pages.faq.faqs[4].question
+    با متن فارسی من چه می‌شود؟
+
+guidanceContent.fa.pages.faq.faqs[4].answer
+    متن اصلی‌ای که می‌نویسید همان‌گونه ذخیره می‌شود و ترجمهٔ ماشینی نمی‌شود. اگر لازم باشد، زبان ارتباط بعدی با شما تأیید می‌شود.
+
+guidanceContent.fa.pages.faq.faqs[5].question
+    آیا فرستادن درخواست یعنی مشاوره انجام شده است؟
+
+guidanceContent.fa.pages.faq.faqs[5].answer
+    خیر. درخواست فرستاده‌شده در انتظار بررسی وکیل است. نظر حقوقی نیست، وقت ملاقات تأییدشده نیست، و فرستادن آن به‌تنهایی رابطه میان وکیل و موکل پدید نمی‌آورد.
+
+guidanceContent.fa.pages.faq.faqs[6].question
+    هزینه چگونه محاسبه می‌شود؟
+
+guidanceContent.fa.pages.faq.faqs[6].answer
+    نخست محدودهٔ کار تعیین می‌شود، سپس مبلغ و نحوهٔ محاسبه پیش از شروع کار با شما تأیید می‌شود. این صفحه عددی نمی‌گوید و نمی‌گوید نخستین نشست رایگان است.
+
+guidanceContent.fa.pages.faq.faqs[7].question
+    اگر موضوع بسیار فوری باشد چه؟
+
+guidanceContent.fa.pages.faq.faqs[7].answer
+    مهلت یا تاریخ روی ورقهٔ رسمی را در آغاز خلاصه بگویید تا هنگام بررسی دیده شود. این صفحه خط اضطراری ندارد و مهلت پاسخ وعده نمی‌دهد؛ اگر موضوع نمی‌تواند منتظر بماند، همزمان راه‌های دیگری در محل خود بجویید.
+
+guidanceContent.fa.pages.privacy.eyebrow
+    حریم خصوصی
+
+guidanceContent.fa.pages.privacy.title
+    دادههایی که از فرم تماس گردآوری میشود
+
+guidanceContent.fa.pages.privacy.description
+    فرم تماس در این بخش فارسی چه میگرداند، با متن اصلی چه میشود، و چگونه دربارهٔ دادههای خود تماس بگیرید.
+
+guidanceContent.fa.pages.privacy.intro
+    این بخش فقط فرم تماس همین صفحه‌های راهنما را در بر می‌گیرد. نحوهٔ پردازش داده را شرح می‌دهد، نه تضمین فنی.
+
+guidanceContent.fa.pages.privacy.sections[0].heading
+    چه داده‌هایی گردآوری می‌شود
+
+guidanceContent.fa.pages.privacy.sections[0].paragraphs[0]
+    وقتی از فرم این بخش درخواست می‌فرستید، این موارد ثبت می‌شود:
+
+guidanceContent.fa.pages.privacy.sections[0].items[0]
+    نامی که می‌دهید
+
+guidanceContent.fa.pages.privacy.sections[0].items[1]
+    رایانامه برای پاسخ
+
+guidanceContent.fa.pages.privacy.sections[0].items[2]
+    زبان نمایش صفحه هنگام ارسال
+
+guidanceContent.fa.pages.privacy.sections[0].items[3]
+    زبانی که با آن نوشته‌اید
+
+guidanceContent.fa.pages.privacy.sections[0].items[4]
+    زبان مشاوره‌ای که می‌خواهید
+
+guidanceContent.fa.pages.privacy.sections[0].items[5]
+    متن اصلی‌ای که نوشته‌اید
+
+guidanceContent.fa.pages.privacy.sections[0].items[6]
+    رضایت شما به فرستادن درخواست
+
+guidanceContent.fa.pages.privacy.sections[0].items[7]
+    شمارهٔ رسید برای بازیابی درخواست
+
+guidanceContent.fa.pages.privacy.sections[1].heading
+    متن اصلی بدون تغییر ذخیره می‌شود
+
+guidanceContent.fa.pages.privacy.sections[1].paragraphs[0]
+    نوشتهٔ شما دقیقاً همان‌گونه که نوشته‌اید ذخیره می‌شود و ترجمهٔ ماشینی نمی‌شود. اگر برای رسیدگی ترجمه لازم باشد، جداگانه با شما گفت‌وگو می‌شود.
+
+guidanceContent.fa.pages.privacy.sections[1].paragraphs[1]
+    چون متن اصلی ذخیره میشود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه یا شمارهٔ شناسنامه یا دادههای حساب بانکی.
+
+guidanceContent.fa.pages.privacy.sections[2].heading
+    محل ذخیره و دسترسی
+
+guidanceContent.fa.pages.privacy.sections[2].paragraphs[0]
+    محتوای ارسالی شما در جایی غیرعمومی ذخیره می‌شود. فقط اشخاص مجاز در دفتر برای رسیدگی به درخواست به آن دسترسی دارند.
+
+guidanceContent.fa.pages.privacy.sections[2].paragraphs[1]
+    این صفحه تضمین مطلق امنیت نمی‌دهد. هیچ مسیر انتقال و محل ذخیره‌ای به‌طور کامل امن نیست؛ مدارک حساس را فقط پس از دستور جداگانهٔ وکیل بفرستید.
+
+guidanceContent.fa.pages.privacy.sections[3].heading
+    هدف استفاده
+
+guidanceContent.fa.pages.privacy.sections[3].paragraphs[0]
+    داده‌های ارسالی برای بررسی درخواست، پاسخ به شما، روشن کردن شیوهٔ ارتباط و در صورت آغاز کار برای رسیدگی به کار می‌رود.
+
+guidanceContent.fa.pages.privacy.sections[3].paragraphs[1]
+    بدون رضایت جداگانه برای بازاریابی به کار نمی‌رود.
+
+guidanceContent.fa.pages.privacy.sections[4].heading
+    آگاه‌سازی و شمارهٔ رسید
+
+guidanceContent.fa.pages.privacy.sections[4].paragraphs[0]
+    اگر درخواست با موفقیت فرستاده شود، سامانه دفتر را آگاه می‌کند. اگر این آگاه‌سازی هنوز تأیید نشده باشد، نوشتهٔ شما ذخیره می‌ماند و از دست نمی‌رود.
+
+guidanceContent.fa.pages.privacy.sections[4].paragraphs[1]
+    شمارهٔ رسید برای یافتن درخواست در سوابق است. پس از ذخیره نمایش داده می‌شود؛ هنگام تماس دوباره می‌توانید آن را بگویید.
+
+guidanceContent.fa.pages.privacy.sections[5].heading
+    حقوق شما و راه تماس
+
+guidanceContent.fa.pages.privacy.sections[5].paragraphs[0]
+    می‌توانید آگاهی، اصلاح یا حذف داده‌ها را بخواهید یا رضایت را پس بگیرید، از راه رایانامهٔ درج‌شده در صفحهٔ تماس. اگر تکلیف قانونی یا آیین‌مند نگهداری باشد، محدودیت را توضیح می‌دهیم.
+
+guidanceContent.fa.pages.privacy.sections[5].paragraphs[1]
+    این صفحه مدت نگهداری ثابتی نمی‌گوید، چون مدت واقعی به ادامهٔ پرونده و تکالیف وابسته بستگی دارد. اگر حذف زودتر می‌خواهید، هنگام تماس بگویید.
+
+guidanceContent.fa.pages.privacy.sections[6].heading
+    محل ذخیره و ارائه‌دهندگان خدمت
+
+guidanceContent.fa.pages.privacy.sections[6].paragraphs[0]
+    این وب‌سایت روی Vercel میزبانی می‌شود و ارسال شما در انبار شیء غیرعمومی همان خدمت ذخیره می‌شود. رایانامه از راه خدمت نامه‌ای که دفتر به‌کار می‌برد فرستاده می‌شود.
+
+guidanceContent.fa.pages.privacy.sections[6].paragraphs[1]
+    سرور برخی ارائه‌دهندگان ممکن است بیرون تایوان باشد و دادهٔ شما آنجا ذخیره و پردازش شود. پس از تحقق هدف ذخیره، داده بدون تأخیر حذف می‌شود؛ داده‌ای که به حکم مقررات باید نگه داشته شود، برای همان مدت می‌ماند. درخواست‌های مربوط به دادهٔ شخصی را به wei@hoveringlaw.com.tw بفرستید.
+
+guidanceContent.fa.pages.disclaimer.eyebrow
+    سلب مسئولیت
+
+guidanceContent.fa.pages.disclaimer.title
+    گستره و حد اطلاعات این صفحه
+
+guidanceContent.fa.pages.disclaimer.description
+    ماهیت عمومی اطلاعات، قلمرو حقوقی، و شرط پیدایش رابطه میان وکیل و موکل.
+
+guidanceContent.fa.pages.disclaimer.intro
+    این بخش روشن می‌کند این صفحه‌های راهنمای فارسی چه می‌توانند برای شما بکنند و چه نمی‌توانند.
+
+guidanceContent.fa.pages.disclaimer.sections[0].heading
+    فقط اطلاعات عمومی
+
+guidanceContent.fa.pages.disclaimer.sections[0].paragraphs[0]
+    محتوای این صفحه‌ها برای اطلاع عمومی نوشته شده است. نظر حقوقی دربارهٔ پروندهٔ شما نیست و جای بررسی مدارک خودتان را نمی‌گیرد.
+
+guidanceContent.fa.pages.disclaimer.sections[0].paragraphs[1]
+    نتیجهٔ هر پرونده به وقایع، مقررات حاکم و زمان بستگی دارد؛ دو وضع به‌ظاهر مشابه می‌تواند پایان متفاوتی داشته باشد.
+
+guidanceContent.fa.pages.disclaimer.sections[1].heading
+    قلمرو حقوقی
+
+guidanceContent.fa.pages.disclaimer.sections[1].paragraphs[0]
+    دفتر طبق قانون تایوان کار می‌کند و این صفحه فقط کار در همین چارچوب را در بر می‌گیرد.
+
+guidanceContent.fa.pages.disclaimer.sections[1].paragraphs[1]
+    محتوا مشاوره بر پایهٔ قانون هیچ نظام دیگری جز تایوان نیست، از جمله قانون محل اقامت شما. اگر بخشی از موضوع شما تابع نظام دیگری باشد، با شما روشن می‌کنیم کدام متخصص واجد شرایط برای آن بخش لازم است.
+
+guidanceContent.fa.pages.disclaimer.sections[2].heading
+    رابطه میان وکیل و موکل خودبه‌خود پدید نمی‌آید
+
+guidanceContent.fa.pages.disclaimer.sections[2].paragraphs[0]
+    خواندن این صفحه، فرستادن فرم یا رایانامه به‌تنهایی رابطه میان وکیل و موکل پدید نمی‌آورد.
+
+guidanceContent.fa.pages.disclaimer.sections[2].paragraphs[1]
+    این رابطه تنها پس از بررسی پرونده و تأیید هر دو طرف برای پذیرش کار پدید می‌آید.
+
+guidanceContent.fa.pages.disclaimer.sections[3].heading
+    هیچ تعهد به نتیجه نیست
+
+guidanceContent.fa.pages.disclaimer.sections[3].paragraphs[0]
+    هیچ بخش این صفحه وعدهٔ نتیجهٔ پرونده، پذیرش تقاضا، یا وضع اقامت و کار نیست.
+
+guidanceContent.fa.pages.disclaimer.sections[3].paragraphs[1]
+    پیوندهای بیرونی برای جهت‌یابی است؛ درستی یا به‌روز بودن محتوای شخص ثالث را تضمین نمی‌کنیم.
+
+guidanceContent.fa.pages.columns.eyebrow
+    نوشتار
+
+guidanceContent.fa.pages.columns.title
+    نوشتارهایی دربارهٔ قانون تایوان
+
+guidanceContent.fa.pages.columns.description
+    نوشتارهای فارسی دربارهٔ پرسشهای رایج قانون تایوان. محتوا اطلاع عمومی در زمان انتشار است، نه نظر حقوقی دربارهٔ پروندهٔ شما.
+
+guidanceContent.fa.pages.columns.intro
+    دفتر نوشتارهایی دربارهٔ پرسش‌های رایج قانون تایوان منتشر می‌کند. نوشتارهای موجود به فارسی در همین صفحه است؛ در کنار آن چهار پیوند هست که هر یک فهرست نوشتار یک زبان اصلی را می‌گشاید.
+
+guidanceContent.fa.pages.columns.sections[0].heading
+    چهار فهرست بر پایهٔ زبان
+
+guidanceContent.fa.pages.columns.sections[0].paragraphs[0]
+    این بخش چهار پیوند دارد: فهرست نوشتار به کره‌ای، به چینی، به انگلیسی و به ژاپنی. هر پیوند زبان فهرست را می‌گوید تا پیشاپیش بدانید محتوا به کدام زبان گشوده می‌شود.
+
+guidanceContent.fa.pages.columns.sections[0].paragraphs[1]
+    این چهار فهرست، فهرست زبان اصلی‌اند، نه فهرست ترجمه. نوشتارهای موجود به فارسی جداگانه در همین صفحه است.
+
+guidanceContent.fa.pages.columns.sections[1].heading
+    پیوندها به کجا می‌روند
+
+guidanceContent.fa.pages.columns.sections[1].paragraphs[0]
+    با گزینش یکی از چهار پیوند، فهرست نوشتار همان زبان گشوده می‌شود. از فهرست خود متن را برمی‌گزینید؛ همهٔ محتوا به زبان اصلی نوشتار است.
+
+guidanceContent.fa.pages.columns.sections[1].paragraphs[1]
+    این صفحه محتوای نوشتارها را خلاصه نمی‌کند و تضمین نمی‌کند موضوعی در هر چهار زبان موجود باشد. هر فهرست فقط متن‌های منتشرشده به همان زبان را دارد.
+
+guidanceContent.fa.pages.columns.sections[2].heading
+    نوشتار تا کجا می‌تواند راهنما باشد
+
+guidanceContent.fa.pages.columns.sections[2].paragraphs[0]
+    نوشتار اطلاع عمومی در زمان انتشار است. مقررات و اعمال آن‌ها ممکن است تغییر کند و نوشتار همهٔ اوضاع پروندهٔ شما را در بر ندارد.
+
+guidanceContent.fa.pages.columns.sections[2].paragraphs[1]
+    بنابراین در پروندهٔ واقعی فقط به یک نوشتار تکیه نکنید. آن را برای تصویر کلی بخوانید و مدارک را جداگانه با وکیل بررسی کنید؛ این صفحه گام مشاوره نیست.
+
+guidanceTeamCopy.fa.label
+    تیم
+
+guidanceTeamCopy.fa.title
+    تیم بین المللی Hovering
+
+guidanceTeamCopy.fa.description
+    نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering.
+
+guidanceTeamCopy.fa.representativeTitle
+    وکیلِ مدیر
+
+guidanceTeamCopy.fa.teamTitle
+    وکلا و همکاران
+
+guidanceTeamCopy.fa.partnerTitle
+    حسابدار شریک
+
+guidanceTeamCopy.fa.introLabel
+    معرفی
+
+guidanceTeamCopy.fa.educationLabel
+    تحصیلات
+
+guidanceTeamCopy.fa.experienceLabel
+    سابقه
+
+guidanceTeamCopy.fa.photoAltPrefix
+    تصویر
+
+guidanceTeamCopy.fa.workingLanguagesLabel
+    زبان‌های کار
+
+guidanceTeamCopy.fa.fullProfileLabel
+    نمایهٔ کامل (به انگلیسی)
+
+guidanceTeamCopy.fa.keyFactsHeading
+    وکیل Wei Tseng — اطلاعات اصلی
+
+guidanceTeamCopy.fa.qualificationLabel
+    صلاحیت و دفتر
+
+guidanceTeamCopy.fa.qualificationSentence
+    {name} مجاز به وکالت در تایوان است و وکیلِ مدیر {firm} است.
+
+guidanceTeamCopy.fa.practiceLabel
+    زمینه‌های اصلی
+
+guidanceTeamCopy.fa.consultationLanguagesLabel
+    زبان‌های مشاوره
+
+guidanceTeamCopy.fa.roles.tseng-junwei
+    وکیلِ مدیر در تایوان (Managing Attorney)
+
+guidanceTeamCopy.fa.roles.chang-rongxuan
+    وکیل در تایوان (Taiwan Attorney)
+
+guidanceTeamCopy.fa.roles.chang-fangyu
+    دستیار حقوقی (Paralegal)
+
+guidanceTeamCopy.fa.roles.son-jungmin
+    مدیر عملیات کره (Korea Operations Manager)
+
+guidanceTeamCopy.fa.roles.huang-shengping
+    حسابدار رسمی شریک (Partner CPA)
+
+guidanceTeamBios.fa.tseng-junwei.intro[0]
+    دفتر پرونده‌های شرکت‌ها و اشخاص را در تایوان می‌پذیرد و به انگلیسی، ژاپنی، کره‌ای و چینی کار می‌کند.
+
+guidanceTeamBios.fa.tseng-junwei.intro[1]
+    نمایندگی دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت TWD 1.57M صادر شد.
+
+guidanceTeamBios.fa.tseng-junwei.education[0]
+    کارشناسی ارشد (M.S.)، Institute of Finance, National Taiwan University
+
+guidanceTeamBios.fa.tseng-junwei.education[1]
+    کارشناسی (B.A.) با دو رشتهٔ حقوق و مالیه، National Chengchi University
+
+guidanceTeamBios.fa.tseng-junwei.education[2]
+    دانشجوی تبادل در Kobe University و Waseda University
+
+guidanceTeamBios.fa.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.fa.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.fa.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.fa.chang-rongxuan.intro[0]
+    پیش‌تر در Ministry of Education, Legal Affairs Division کار کرده و بر اختلافات اداری و مدنی متمرکز بوده است.
+
+guidanceTeamBios.fa.chang-rongxuan.intro[1]
+    در پرونده‌های مربوط به دانشگاه‌ها، حقوق اعضای هیئت علمی و شکایت اداری سابقه دارد.
+
+guidanceTeamBios.fa.chang-rongxuan.education[0]
+    کارشناسی حقوق (LL.B.)، National Chung Hsing University
+
+guidanceTeamBios.fa.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.fa.chang-rongxuan.experience[1]
+    وکیل، Hovering International Law Firm
+
+guidanceTeamBios.fa.chang-fangyu.intro[0]
+    سال‌ها در چند دفتر وکالت به‌عنوان دستیار حقوقی ارشد کار کرده است، از جمله پشتیبانی دادرسی، امور حقوقی شرکت‌ها و سرمایه‌گذاری خارجی.
+
+guidanceTeamBios.fa.chang-fangyu.intro[1]
+    محدودهٔ کار شامل پشتیبانی دادرسی، تأسیس شرکت، آیین تصویب سرمایه‌گذاری خارجی، درخواست پروانه و ارتباط میان کره و تایوان است.
+
+guidanceTeamBios.fa.chang-fangyu.education[0]
+    کارشناسی حقوق (LL.B.)، Tunghai University
+
+guidanceTeamBios.fa.chang-fangyu.experience[0]
+    دستیار حقوقی ارشد، Boyin Law Firm
+
+guidanceTeamBios.fa.chang-fangyu.experience[1]
+    دستیار حقوقی ارشد، Muyang International Law Firm
+
+guidanceTeamBios.fa.son-jungmin.intro[0]
+    وقت نشست‌ها و ارتباط موکلان کره را هماهنگ می‌کند.
+
+guidanceTeamBios.fa.son-jungmin.intro[1]
+    با پشتوانهٔ علوم رایانه، ارتباط میان گروه‌ها را از راه سامانه‌های مستندسازی و گردش کار پشتیبانی می‌کند.
+
+guidanceTeamBios.fa.son-jungmin.education[0]
+    کارشناسی (B.S.) علوم رایانه، National Cheng Kung University
+
+guidanceTeamBios.fa.son-jungmin.experience[0]
+    بخش امور کره، Hovering International Law Firm
+
+guidanceTeamBios.fa.huang-shengping.intro[0]
+    دوره‌های کارشناسی و کارشناسی ارشد حسابداری را در National Chengchi University به پایان رسانده و اکنون دفتر حسابداری اداره می‌کند.
+
+guidanceTeamBios.fa.huang-shengping.intro[1]
+    تحلیل یکپارچهٔ خطر حقوقی، مالیاتی و مالی را برای موکلان شرکتی پشتیبانی می‌کند.
+
+guidanceTeamBios.fa.huang-shengping.education[0]
+    کارشناسی ارشد (M.A.) حسابداری، National Chengchi University
+
+guidanceTeamBios.fa.huang-shengping.education[1]
+    کارشناسی (B.A.) حسابداری، National Chengchi University
+
+guidanceTeamBios.fa.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.fa.Korean
+    کره‌ای
+
+guidanceLanguageNames.fa.Chinese
+    چینی
+
+guidanceLanguageNames.fa.Japanese
+    ژاپنی
+
+guidancePracticeAreaNames.fa.Taiwan company setup
+    تأسیس شرکت در تایوان
+
+guidancePracticeAreaNames.fa.Taiwan investment counsel
+    مشاورهٔ سرمایه‌گذاری در تایوان
+
+guidancePracticeAreaNames.fa.Civil litigation and damages
+    دعاوی مدنی و خسارت
+
+guidancePracticeAreaNames.fa.Trademark and patent filings
+    ثبت علامت تجاری و اختراع
+
+guidancePracticeAreaNames.fa.Visa and residency
+    روادید و اقامت
+
+guidancePracticeAreaNames.fa.Family and labor disputes
+    اختلافات خانوادگی و کار
+
+guidanceOfficeCopy.fa.label
+    دفاتر
+
+guidanceOfficeCopy.fa.title
+    دفاتر
+
+guidanceOfficeCopy.fa.description
+    نشانی دفاتر Hovering International Law Firm در تایوان.
+
+guidanceOfficeCopy.fa.officeLabel
+    دفتر
+
+guidanceOfficeCopy.fa.mapPreviewLabel
+    پیش‌نمایش نقشه
+
+guidanceOfficeCopy.fa.koreaOfficeTitle
+    دفتر کره
+
+guidanceOfficeCopy.fa.koreaAddressCardLabel
+    نشانی دفتر کره
+
+guidanceOfficeCopy.fa.koreaMapLinkLabel
+    نمایش در Naver Map
+
+guidanceOfficeCopy.fa.reviewCountWord
+    نظر
+
+guidanceOfficeCopy.fa.phoneLabel
+    تلفن
+
+guidanceOfficeCopy.fa.faxLabel
+    نمابر
+
+guidanceOfficeCopy.fa.mapLinkLabel
+    نمایش روی نقشه
+
+guidanceOfficeCopy.fa.photoAlts[0]
+    اتاق پذیرش دفتر تایپه، Hovering International Law Firm
+
+guidanceOfficeCopy.fa.photoAlts[1]
+    اتاق کار وکلا در دفتر تایپه، Hovering International Law Firm
+
+guidanceOfficeCopy.fa.photoAlts[2]
+    سالن نشست دفتر تایپه، Hovering International Law Firm
+
+guidanceOfficeCopy.fa.officeTitles.taipei
+    تایپه
+
+guidanceOfficeCopy.fa.officeTitles.taichung
+    تایچونگ
+
+guidanceOfficeCopy.fa.officeTitles.kaohsiung
+    کائوشیونگ
+
+guidanceOfficeCopy.fa.officeTitles.pingtung
+    پینگتونگ
+
+guidanceFooterCopy.fa.officeLabel
+    دفاتر
+
+guidanceFooterCopy.fa.officeQuickLinksLabel
+    پیوندهای سریع به محل دفاتر
+
+guidanceFooterCopy.fa.followLabel
+    ما را دنبال کنید
+
+guidanceFooterCopy.fa.blogLabel
+    وبلاگ
+
+guidanceFooterCopy.fa.websiteLabel
+    وب‌سایت رسمی
+
+guidanceFooterCopy.fa.sitemapLabel
+    نقشهٔ سایت
+
+guidanceFooterCopy.fa.copyEmailLabel
+    رونوشت نشانی رایانامه
+
+guidanceFooterCopy.fa.emailCopiedMessage
+    نشانی رایانامه رونوشت شد.
+
+guidanceFooterCopy.fa.officialConsultationEmailLabel
+    رایانامهٔ رسمی مشاوره
+
+internationalInquiryCopy.fa.guidanceNotice
+    این صفحه به فارسی به‌عنوان راهنمای عمومی نوشته شده است، نه نظر حقوقی دربارهٔ پروندهٔ شما.
+
+internationalInquiryCopy.fa.consultationNotice
+    مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کره‌ای انجام می‌شود.
+
+internationalInquiryCopy.fa.methodConfirmationNotice
+    اگر هیچ‌یک از این چهار زبان را به‌کار نمی‌برید، «لازم است شیوهٔ ارتباط تأیید شود» را برگزینید. پاسخ می‌دهیم تا ببینیم آیا روش ممکنی برای ارتباط هست؛ خدمت به زبان دیگر تضمین نمی‌شود و مهلت پاسخ وعده داده نمی‌شود.
+
+internationalInquiryCopy.fa.preparationNotice
+    می‌توانید خلاصهٔ موضوع را به زبان خود بنویسید. متن اصلی همان‌گونه که نوشته‌اید ذخیره می‌شود و ترجمهٔ ماشینی نمی‌شود.
+
+internationalInquiryCopy.fa.heading
+    ارسال درخواست مشاوره
+
+internationalInquiryCopy.fa.intro
+    موضوع را کوتاه شرح دهید. وکیل محتوا را بررسی می‌کند و سپس گام بعد را می‌گوید.
+
+internationalInquiryCopy.fa.submitLabel
+    ارسال درخواست
+
+internationalInquiryCopy.fa.submittingLabel
+    در حال ارسال…
+
+internationalInquiryCopy.fa.successMessage
+    درخواست شما رسید و در انتظار بررسی است. این به معنای انجام مشاوره یا تأیید وقت ملاقات نیست.
+
+internationalInquiryCopy.fa.savedNotificationPendingMessage
+    درخواست شما ذخیره شد، اما آگاه‌سازی دفتر هنوز تأیید نشده است. نوشتهٔ شما از دست نرفته است. اگر پاسخی نرسید، می‌توانید به رایانامهٔ درج‌شده در صفحهٔ تماس نیز بنویسید.
+
+internationalInquiryCopy.fa.receiptIdLabel
+    شمارهٔ رسید
+
+internationalInquiryCopy.fa.failureMessage
+    ارسال درخواست ممکن نشد. دوباره بکوشید، یا به رایانامهٔ درج‌شده در صفحهٔ تماس بنویسید.
+
+internationalInquiryCopy.fa.originalLanguageLabel
+    زبانی که با آن می‌نویسید
+
+internationalInquiryCopy.fa.originalLanguagePlaceholder
+    مثلاً فارسی یا فرانسه یا ترکی یا زبانی دیگر
+
+internationalInquiryCopy.fa.preferredConsultationLanguageLabel
+    زبانی که برای مشاوره می‌خواهید
+
+internationalInquiryCopy.fa.originalTextLabel
+    خلاصهٔ موضوع (به زبان شما)
+
+internationalInquiryCopy.fa.originalTextPlaceholder
+    بگویید چه رخ داده، چه کمکی می‌خواهید، و مهلت را اگر هست. لطفاً شمارهٔ گذرنامه یا شناسنامه یا دادهٔ حساب بانکی ننویسید.
+
+internationalInquiryCopy.fa.nameLabel
+    نام
+
+internationalInquiryCopy.fa.emailLabel
+    رایانامه
+
+internationalInquiryCopy.fa.consentLabel
+    حریم خصوصی را خوانده‌ام و با فرستادن این درخواست موافقم.
+
+internationalInquiryCopy.fa.privacyLinkLabel
+    حریم خصوصی
+
+internationalInquiryCopy.fa.requiredMessage
+    این فیلد لازم است.
+
+internationalInquiryCopy.fa.invalidEmailMessage
+    لطفاً نشانی رایانامهٔ معتبر وارد کنید.
+
+internationalInquiryCopy.fa.tooLongMessage
+    متن بسیار بلند است. کوتاه کنید و دوباره بفرستید.
+
+internationalInquiryCopy.fa.sourceLanguageNotice
+    این نوشتار فقط به {language} موجود است و پیوند صفحهٔ اصلی را به همان زبان می‌گشاید.
+
+internationalInquiryCopy.fa.unavailableTranslationNotice
+    این مورد هنوز به زبان این صفحه ترجمه نشده است. پیوندی که زبان اصلی را می‌گوید متن اصلی را می‌گشاید.
+
+internationalInquiryCopy.fa.unavailableLanguageNotice
+    این صفحه به {language} موجود نیست.
+
+internationalInquiryCopy.fa.languageOptions.en
+    انگلیسی (English)
+
+internationalInquiryCopy.fa.languageOptions.zh-hant
+    چینی (中文)
+
+internationalInquiryCopy.fa.languageOptions.ja
+    ژاپنی (日本語)
+
+internationalInquiryCopy.fa.languageOptions.ko
+    کره‌ای (한국어)
+
+internationalInquiryCopy.fa.languageOptions.needs-method-confirmation
+    هیچ‌یک از چهار زبان را به‌کار نمی‌برم — لازم است شیوهٔ ارتباط تأیید شود
+
+guidanceAnswers.fa.services.answer
+    دفتر شش زمینه را طبق قانون تایوان می‌پذیرد: سرمایه‌گذاری و تأسیس شرکت در تایوان، دعاوی مدنی و خسارت، ازدواج و خانواده و ارث، اختلافات کار، پرونده‌های کیفری، و مالکیت فکری. محدودهٔ هر پرونده پس از بررسی وکیل نسبت به آنچه می‌فرستید جداگانه تأیید می‌شود. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.
+
+guidanceAnswers.fa.services.sources[0]
+    /fa/faq
+
+guidanceAnswers.fa.services.sources[1]
+    /fa/contact
+
+guidanceAnswers.fa.about.answer
+    Hovering International Law Firm دفتر وکالتی در تایوان است، در سال 2016 به دست فارغ‌التحصیلان National Taiwan University (國立臺灣大學) تأسیس شد، با دفاتر در تایپه، کائوشیونگ، تایچونگ و پینگتونگ. از سال 2020 بخش حسابداری دارد؛ دفتر تایچونگ امور مرتبط با کره و ژاپن را می‌پذیرد. دفتر هیچ تعهد به نتیجه نمی‌دهد. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.
+
+guidanceAnswers.fa.about.sources[0]
+    /fa/lawyers
+
+guidanceAnswers.fa.about.sources[1]
+    /fa/services
+
+guidanceAnswers.fa.lawyers.answer
+    این صفحه نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering را نشان می‌دهد. وکیل Wei Tseng (曾雋崴) مجاز به وکالت در تایوان و وکیلِ مدیر دفتر است؛ با موکلان کره، ژاپن و دیگر موکلان بین‌المللی کار می‌کند. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.
+
+guidanceAnswers.fa.lawyers.sources[0]
+    /fa/about
+
+guidanceAnswers.fa.lawyers.sources[1]
+    /fa/contact
+
+guidanceAnswers.fa.pricing.answer
+    این صفحه فهرست نرخ ندارد. نخست محدودهٔ کار از خلاصه‌ای که می‌فرستید تعیین می‌شود، سپس مبلغ و نحوهٔ محاسبه پیش از شروع کار با شما تأیید می‌شود. مشاوره با وکیل ممکن است خدمتی با هزینه باشد و در کنار حق‌الوکاله ممکن است مبلغ دادگاه یا مرجع دولتی پیش آید. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.
+
+guidanceAnswers.fa.pricing.sources[0]
+    /fa/contact
+
+guidanceAnswers.fa.pricing.sources[1]
+    /fa/faq
+
+guidanceAnswers.fa.contact.answer
+    خلاصه را از فرم تماس بفرستید: چه رخ داده، چه کمکی می‌خواهید، موضوع چه ربطی به تایوان دارد، و مهلت را اگر می‌دانید. در مرحلهٔ نخست نیازی به فرستادن مدارک هویت یا همهٔ ادله نیست. دفتر مهلت پاسخ وعده نمی‌دهد و وقت ملاقات را از این صفحه تأیید نمی‌کند. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.
+
+guidanceAnswers.fa.contact.sources[0]
+    /fa/faq
+
+guidanceAnswers.fa.contact.sources[1]
+    /fa/pricing
+
+guidanceAnswers.fa.faq.answer
+    بخش پرسش‌ها در سطح اطلاعات عمومی پاسخ می‌دهد: شش زمینهٔ کار، نحوهٔ تهیهٔ خلاصه، تعیین هزینه، و معنای درخواست فرستاده‌شده. درخواست فرستاده‌شده در انتظار بررسی وکیل است؛ نظر حقوقی نیست، وقت ملاقات نیست، و رابطه میان وکیل و موکل پدید نمی‌آورد. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.
+
+guidanceAnswers.fa.faq.sources[0]
+    /fa/contact
+
+guidanceAnswers.fa.faq.sources[1]
+    /fa/services
+
+GUIDANCE_LLMS_NOTICES.fa.consultationNotice
+    این صفحهٔ راهنما به فارسی نوشته شده است. مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کرهای انجام میشود و مترجم شفاهی فراهم نمیکنیم.
+
+GUIDANCE_LLMS_NOTICES.fa.discoveryNotice
+    پروندهٔ llms.txt تنها نقشهای برای یافتن صفحههای عمومی است؛ رتبهای در نتایج جستوجو، توصیهای، پیشنهاد هوش مصنوعی یا نمایانی را وعده نمیدهد.
+
+GUIDANCE_LLMS_NOTICES.fa.confidentialNotice
+    متن اصلی ذخیره میشود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه یا شمارهٔ شناسنامه یا دادههای حساب بانکی.

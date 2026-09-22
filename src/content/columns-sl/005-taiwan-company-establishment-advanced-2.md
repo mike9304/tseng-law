@@ -21,7 +21,7 @@ Osebe, ki so prebrale [Osnove ustanavljanja družbe na Tajvanu](/sl/columns/taiw
 
 ​
 
-Spodnja vprašanja ter odgovori naj pomagajo osebam, ki razmišljajo o ustanovitvi družbe (公司設立) na Tajvanu.
+Spodnja vprašanja ter odgovore je pripravila odvetnica Wei Tseng (曾雋崴); naj pomagajo osebam, ki razmišljajo o ustanovitvi družbe (公司設立) na Tajvanu.
 
 ​
 
@@ -37,9 +37,9 @@ Pred nakazilom kapitala (資本金匯款) se posvetujte pri svoji glavni banki v
 
 **​**
 
-**2. Pri vplačilu kapitala družbe, ali je mogoče tajvanske dolarje (新臺幣, TWD) nakazati z osebnega računa na Tajvanu na pripravljalni račun tajvanske družbe?**
+**2. Pri vplačilu kapitala družbe, ali je mogoče nove tajvanske dolarje (新臺幣, TWD) nakazati z osebnega računa na Tajvanu na pripravljalni račun tajvanske družbe?**
 
-Mogoče je, vendar je treba predložiti listine, ki dokazujejo izvor sredstev v tajvanskih dolarjih, pridobljenih na Tajvanu.
+Mogoče je, vendar je treba predložiti listine, ki dokazujejo izvor sredstev v novih tajvanskih dolarjih, pridobljenih na Tajvanu.
 
 Če gre na primer za dohodek iz plače, pridobljen na Tajvanu, je treba predložiti kopijo potrdila o odtegljaju pri viru od tega dohodka iz plače (薪資所得的扣繳憑單影本).
 

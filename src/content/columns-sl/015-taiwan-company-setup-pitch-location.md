@@ -21,7 +21,7 @@ Ko začenjate gostinsko dejavnost, je prvi problem najti naslov kraja dejavnosti
 
 Poleg tržnih razmer je treba preveriti še, ali je obratovanje na naslovu mogoče.
 
-Nadaljnja pomembna točka je cona, v kateri je dejavnost dovoljena.
+Poleg tržnih razmer je treba preveriti, ali naslov leži v coni, kjer sme obratovati restavracija.
 
 Preveriti je treba, ali ta naslov leži v coni, kjer je obratovanje »restavracije« mogoče.
 
@@ -43,7 +43,7 @@ Vsakdo lahko na zemljiškem uradu (地政事務所) zaprosi za »izpisek iz evid
 
 Če je osebni obisk zemljiškega urada (地政事務所) težaven,
 
-je mogoče za pomoč prositi znanca na Tajvanu, najemodajalca, nepremičninskega posrednika in odvetnika.
+je mogoče za pomoč prositi znanca na Tajvanu, najemodajalca, nepremičninskega posrednika ali odvetnika.
 
 Če rezultat preverjanja pokaže, da restavracija ni mogoča, mestna uprava pozneje pri vpisu družbe (公司登記) vpisa morda ne sprejme.
 

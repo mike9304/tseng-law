@@ -51,9 +51,9 @@ je naložbeni načrt treba sestavljati hkrati z iskanjem naslova za vpis družbe
 
 Po 9. členu zakona o naložbah tujih oseb (外國人投資條例) mora odobreni vložek v celoti prispeti v roku, ki ga določi pristojni organ (核定期限); rok je treba preveriti v aktu odobritve vsake zadeve (v praksi se pogosto določi približno 1 leto).
 
-V tem roku, po najdbi naslova družbe in sklenitvi najemne pogodbe,
+V tem roku je torej dovolj časa, da najdete naslov in sklenete najemno pogodbo,
 
-ostane dovolj časa za odprtje pripravljalnega računa v banki in za nakazilo kapitala.
+odprete pripravljalni račun in nakažete kapital.
 
 ​
 
@@ -77,7 +77,7 @@ Pregledna komisija Ministrstva za gospodarstvo sicer presoja ozadje vlagatelja,
 
 presoja pa ni pretirano stroga.
 
-Navesti je mogoče raznolike delovne izkušnje, vključno s priložnostnimi deli,
+Navesti je mogoče raznolike delovne izkušnje, vključno z delom s krajšim delovnim časom,
 
 in jih razložiti dovolj podrobno, da je mogoče prepričati osebe, ki opravijo presojo.
 
@@ -119,7 +119,7 @@ Poleg tega pri končnem vpisu družbe mestna uprava (市政府) prav tako zahtev
 
 če gre za pisarniški prostor, vpis družbe (公司登記) tedaj ni mogoč.
 
-Nasprotno, če gre za panoge, ki jih je mogoče opravljati v pisarniškem prostoru, kot sta oglaševanje ali trgovina na debelo, je družbo mogoče ustanoviti v pisarniškem prostoru. Pred sklenitvijo najemne pogodbe
+Nasprotno, če gre za panoge, ki jih je mogoče opravljati v pisarniškem prostoru, na primer oglaševanje ali trgovina na debelo, je družbo mogoče ustanoviti v pisarniškem prostoru. Pred sklenitvijo najemne pogodbe
 
 to vnaprej preverite.
 

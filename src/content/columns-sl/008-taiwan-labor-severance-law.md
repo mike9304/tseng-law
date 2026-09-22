@@ -13,7 +13,7 @@ faq:
   - q: "Mora družba izplačati odpravnino tudi pri disciplinski odpovedi?"
     a: "Ne. Če delavec stori protipravno dejanje, krši interni delovni red ali se brez utemeljenega razloga ne zglasi 3 dni zapored (12. člen zakona o temeljnih delovnih standardih, 勞動基準法第12條), sme družba odpustiti brez odpovedi ter odpravnine ni dolžna izplačati. Nasprotno pa gospodarska odpoved (11. člen) zahteva predhodno odpoved ter izplačilo odpravnine."
   - q: "Kako se na Tajvanu odpravnina izračuna?"
-    a: "Za vsako dopolnjeno leto delovne dobe mora delodajalec izplačati 0,5 meseca povprečne plače kot odpravnino, največ 6 mesecev plače. Ta formula zadeva delovno dobo, za katero se uporabi 12. člen zakona o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za 1 leto izplača 1 mesec povprečne plače, brez zgornje meje."
+    a: "Za vsako dopolnjeno leto delovne dobe mora delodajalec izplačati 0,5 meseca povprečne plače kot odpravnino, največ 6 mesecev plače. Ta formula zadeva delovno dobo, za katero se uporabi 12. člen zakona o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za eno leto izplača 1 mesec povprečne plače, brez zgornje meje."
 ---
 
 # Delovno pravo na Tajvanu: je odpravnino na Tajvanu res težko pridobiti?
@@ -62,7 +62,7 @@ Spodnja preglednica to strne.
 
 > Na Tajvanu mora delodajalec za vsako dopolnjeno leto delovne dobe (年資)
 > izplačati 0,5 meseca povprečne plače (平均工資) kot odpravnino.
-> (največ 6 mesecev plače) Ta formula zadeva delovno dobo, za katero se uporabi 12. člen zakona o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za 1 leto izplača 1 mesec povprečne plače, brez zgornje meje.
+> (največ 6 mesecev plače) Ta formula zadeva delovno dobo, za katero se uporabi 12. člen zakona o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za eno leto izplača 1 mesec povprečne plače, brez zgornje meje.
 
 ​
 
@@ -78,7 +78,7 @@ ter vodijo delavce k lastnemu odhodu.
 
 Delavci morajo biti previdni
 
-ter paziti, da ne nasedejo načrtu družbe.
+ter paziti, da ne nasedejo takšni zvijači družbe.
 
 ​
 
@@ -210,13 +210,13 @@ ali premešča delavce na čudna mesta,
 
 Če delate na Tajvanu,
 
-je odpravnino težje pridobiti, kot se misli
+je odpravnino težje pridobiti, kot se misli.
 
 Ne sklenite zlahka poravnave z družbo.
 
-ter pazite, da družba ne odpusti na neustrezen način
+Pazite, da vas družba ne odpusti na neustrezen način
 
-niti ne vodi k lastnemu odhodu
+in da vas ne vodi k lastnemu odhodu.
 
 Odpravnina ni samodejna pravica delavca.
 

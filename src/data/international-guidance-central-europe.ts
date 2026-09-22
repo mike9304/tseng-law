@@ -2028,7 +2028,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'S čim se ukvarjamo',
           paragraphs: [
-            'Hovering International Law Firm je odvetniška pisarna s sedežem na Tajvanu. Deluje po tajvanskem pravu in ima pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Svetujemo podjetjem, vodimo sodne postopke in zastopamo tuje stranke pri korakih, ki jih je treba opraviti na Tajvanu.',
+            'Hovering International Law Firm je odvetniška pisarna s sedežem na Tajvanu. Deluje po tajvanskem pravu in ima pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Svetujemo podjetjem, vodimo sodne postopke in spremljamo tuje stranke pri korakih, ki jih je treba opraviti na Tajvanu.',
             'Vsa vsebina tukaj je splošna. Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo, in od trenutka presoje. Ti napotki ne nadomeščajo pogovora z odvetnico ali odvetnikom o vaših dokumentih.',
           ],
         },
@@ -2396,7 +2396,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Nobene obljube izida',
+          heading: 'Brez obljube o izidu',
           paragraphs: [
             'Noben del te strani ni obljuba glede izida zadeve, ugoditve prijavi ali prošnji oziroma glede statusa prebivanja in dela.',
             'Zunanje povezave služijo orientaciji; ne jamčimo pravilnosti niti ažurnosti vsebine tretjih oseb.',

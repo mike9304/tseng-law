@@ -81,13 +81,13 @@ Spraševalo se je denimo, ali pisana določba, ki je izključno osebam z okvaro 
 
 ter se je dvomilo, ali je ta določba resnično prispevala k varovanju zaposlitve ter obstoja oseb z okvaro vida.
 
-Nazadnje so ustavni sodniki Sodnega sveta (大法官) določbo razglasili za protiustavno (違憲), ki je izključno osebam z okvaro vida dovoljevala opravljanje poklica masažista.
+Nazadnje so ustavni sodniki (大法官) določbo, ki je izključno osebam z okvaro vida dovoljevala opravljanje poklica masažista, razglasili za protiustavno (違憲).
 
 ​
 
-Za primerjavo, po korejskem pravu se številne osebe z okvaro vida preživljajo z masažo,
+Za primerjavo: po korejskem pravu se številne osebe z okvaro vida preživljajo z masažo.
 
-smejo poklic masažista praviloma opravljati le osebe z okvaro vida, ki so pridobile potrdilo o usposobljenosti.
+Poklic masažista smejo praviloma opravljati le osebe z okvaro vida, ki so pridobile potrdilo o usposobljenosti.
 
 Res je, da je vlada Koreje začela izdajati potrdila za masažo tudi osebam brez okvare vida,
 

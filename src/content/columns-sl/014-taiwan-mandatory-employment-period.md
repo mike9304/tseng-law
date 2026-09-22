@@ -13,7 +13,7 @@ faq:
   - q: "Ali se usposabljanje novincev ali zakonsko obvezno usposabljanje šteje za strokovno tehnično usposabljanje?"
     a: "Po napotku tajvanskega Ministrstva za delo (勞動部) z dne 5. junija 2026 stroškov rednega izobraževanja, splošnega usposabljanja na delovnem mestu, prilagoditvenega usposabljanja novincev in usposabljanja, ki ga zakon nalaga izvesti, ni mogoče vzeti za podlago dogovora o najmanjšem obdobju trajanja delovnega razmerja niti zahtevka za pogodbeno kazen (違約金) ali vračilo stroškov. Ni mogoče gledati le na ime usposabljanja, temveč na konkretni program, strokovno in tehnično vsebino, trajanje, stroške, ki jih je delodajalec dejansko nosil, in dokazila."
   - q: "Ali je ob predčasnem odhodu treba vrniti celotno podpisnino (簽約金) ali nagrado za ostanek (留任獎金)?"
-    a: "Celotnega zneska ni treba vedno vrniti. Če sta podpisnina, nagrada za ostanek ali druga dajatev, plačana vnaprej (預付性給付), izplačani kot razumno nadomestilo za dogovor o najmanjšem obdobju trajanja delovnega razmerja, mora biti njen namen delavcu jasno sporočen. Napotek tajvanskega Ministrstva za delo z dne 5. junija 2026 pojasnjuje, da se ob odhodu pred potekom obdobja znesek vračila izračuna v sorazmerju z še neizpolnjenim obdobjem in da ni mogoče zahtevati vračila celotnega zneska. Dejanski sklep je treba sprejeti ob skupni presoji namen izplačila, vsebino dogovora, že odsluženo obdobje in razlog prenehanja."
+    a: "Celotnega zneska ni treba vedno vrniti. Če je podpisnina, nagrada za ostanek ali druga vnaprej plačana dajatev (預付性給付) izplačana kot razumno nadomestilo za dogovor o najmanjšem obdobju trajanja delovnega razmerja, mora biti njen namen delavcu jasno sporočen. Napotek tajvanskega Ministrstva za delo z dne 5. junija 2026 pojasnjuje, da se ob odhodu pred potekom obdobja znesek vračila izračuna v sorazmerju z še neizpolnjenim obdobjem in da ni mogoče zahtevati vračila celotnega zneska. Dejanski sklep je treba sprejeti ob skupni presoji namena izplačila, vsebine dogovora, že odsluženega obdobja in razloga prenehanja."
   - q: "Ali je treba vrniti stroške usposabljanja, če pogodba predčasno preneha iz razloga, ki ga ni mogoče pripisati delavcu?"
     a: "Odstavek 4 člena 15-1 tajvanskega zakona o temeljnih delovnih standardih določa, da delavec, če pogodba o zaposlitvi preneha pred koncem najmanjšega obdobja trajanja delovnega razmerja iz razloga, ki ga ni mogoče pripisati delavcu, ne nosi odgovornosti za kršitev dogovora o najmanjšem obdobju trajanja delovnega razmerja niti za vračilo stroškov usposabljanja. Razlog prenehanja in pripis odgovornosti pa je treba presoditi iz konkretnih dokazov, kot so obvestilo o odpustu, izjava o odhodu in dokumentacija o kršitvi delovnih pogojev."
 ---
@@ -31,7 +31,7 @@ Pri presoji je pomembno, da se naslednjih štirih vprašanj ne zmeša.
 3. Komu se pripiše razlog prenehanja pogodbe o zaposlitvi
 4. Kako se presojata izjava o odhodu in obseg vračila
 
-Tudi če ta štiri vprašanja stojijo skupaj v isti pogodbi, sta uporabljena določba in potrebni dokaz različna. Zato je treba posebej presoditi, ali je dogovor veljaven, kdaj začne učinkovati izjava o odhodu, ali obstaja odgovornost vrniti dajatev, plačano vnaprej (預付性給付), ali stroške usposabljanja, in ali je dejansko nastala posebej uveljavljana škoda.
+Tudi če ta štiri vprašanja stojijo skupaj v isti pogodbi, sta uporabljena določba in potrebni dokaz različna. Zato je treba posebej presoditi, ali je dogovor veljaven, kdaj začne učinkovati izjava o odhodu, ali obstaja odgovornost vrniti dajatev, plačana vnaprej (預付性給付), ali stroške usposabljanja, in ali je dejansko nastala posebej uveljavljana škoda.
 
 ## 1. Ali je dogovor o najmanjšem obdobju trajanja delovnega razmerja samodejno neveljaven?
 
@@ -47,7 +47,7 @@ Okoliščina, da je delavec pogodbo podpisal, je lahko podlaga, ki potrjuje obst
 
 ## 2. Prva zakonska predpostavka: strokovno tehnično usposabljanje in nositev stroškov
 
-Da bi bil dogovor utemeljen z usposabljanjem, mora delodajalec delavcu dejansko zagotoviti strokovno tehnično usposabljanje in nositi njegove stroške. Ni dovolj v načrtu usposabljanja napisati, da gre za strokovni tečaj, ali v pogodbo vpisati ocenjene stroške. Dokazila je treba povezati s temo usposabljanja, s strokovnostjo in tehničnostjo, ki ju mesto zahteva, s konkretnim trajanjem, s tem, ali je bilo končano, in z dejanskim izdatkom.
+Da bi bil dogovor utemeljen z usposabljanjem, mora delodajalec delavcu dejansko zagotoviti strokovno tehnično usposabljanje in nositi njegove stroške. Ni dovolj v načrtu usposabljanja napisati, da gre za strokovni tečaj, ali v pogodbo vpisati ocenjene stroške. Dokazila je treba povezati s temo usposabljanja, s strokovnimi ali tehničnimi veščinami, ki jih delovno mesto zahteva, s konkretnim trajanjem, s tem, ali je bilo končano, in z dejanskim izdatkom.
 
 Predmet presoje niso le neposredno preverljivi stroški, kot so honorarji zunanjih predavateljev, šolnina izobraževalne ustanove in pristojbine za gradivo ali opremo, temveč tudi podlaga izračuna notranjih stroškov, ki jih delodajalec trdi. Če je usposabljal notranji kader, je treba videti, čigav in kakšen čas je bil porabljen, kako se loči od običajnega nadzora ali predaje mesta ter ali obstaja podlaga za pripis tega stroška danemu delavcu. Ocenjeni zneski ali zneski, razporejeni enakomerno, sami po sebi dejanskega bremena ne dokazujejo.
 
@@ -55,7 +55,7 @@ Program, koledar usposabljanja, lista prisotnosti, izid ocene, potrdilo o konča
 
 Meja med splošno prilagoditvijo na delo in strokovnim tehničnim usposabljanjem ni odvisna le od kraja usposabljanja niti od tega, kdo ga prireja. Notranji tečaj lahko izkaže konkretno strokovno in tehnično vsebino in precejšnjo naložbo, dolg tečaj zunanje ustanove pa je lahko v resnici splošno uvodno usposabljanje. Zato ni mogoče enotno izključiti vsega notranjega usposabljanja niti priznati zakonske predpostavke le zato, ker je tečaj drag ali dolg.
 
-Treba je tudi znati pojasniti razmerje med dogovorjenim obdobjem in naložbo v usposabljanje. Kakšna zmožnost se pridobi, kakšno razmerje ima ta zmožnost do ciljnega mesta in zakaj je predlagano obdobje trajanja delovnega razmerja potrebno glede na trajanje in stroške usposabljanja, se presoja posamično. Ali je delavec po usposabljanju to delo dejansko opravljal in kako dolgo je že služil, sta prav tako podlagi za presojo obsega bremena.
+Treba je tudi znati pojasniti razmerje med dogovorjenim obdobjem in naložbo v usposabljanje. Kakšna zmožnost se pridobi, kakšno razmerje ima ta zmožnost do delovnega mesta, na katerem naj bi se uporabljala in zakaj je predlagano obdobje trajanja delovnega razmerja potrebno glede na trajanje in stroške usposabljanja, se presoja posamično. Ali je delavec po usposabljanju to delo dejansko opravljal in kako dolgo je že služil, sta prav tako podlagi za presojo obsega bremena.
 
 ## 3. Druga zakonska predpostavka: razumno nadomestilo
 
@@ -84,9 +84,9 @@ Drugi element, možnost nadomestitve, se ne določi le s trditvijo delodajalca o
 
 Pri tretjem elementu ne gre le za višino nadomestila, temveč tudi za obseg. Pomembno je, kdaj se izplača in pod kakšnimi pogoji delavec dokončno pridobi pravico, kako ustreza dogovorjenemu obdobju kot celoti in ali se ob prenehanju med potekom odrazi že izpolnjeno obdobje. Nagrada za ostanek istega imena se lahko presodi različno glede na zgradbo pogodbe in dejanskost.
 
-Četrti element lahko vključuje različne okoliščine, ki vplivajo na razumnost, kot so potek sklenitve dogovora, narava dela, kar je bilo strankam pojasnjeno, dejansko odsluženo obdobje in razlog prenehanja. Pomen vsakega elementa se lahko razlikuje glede na zadevo, okoliščine za upoštevanje pa se ne omejujejo na prejšnje primere. Zato je treba presoditi brez opustitve ustrezna dejstva, ki se pojavijo v spisu.
+Četrti element lahko vključuje različne okoliščine, ki vplivajo na razumnost, kot so potek sklenitve dogovora, narava dela, kar je bilo strankam pojasnjeno, dejansko odsluženo obdobje in razlog prenehanja. Pomen vsakega elementa se lahko razlikuje glede na zadevo, okoliščine za upoštevanje pa se ne omejujejo na navedene zglede. Zato je treba upoštevati vsa ustrezna dejstva, ki so v spisu.
 
-Nazadnje mora obstajati razumno sorazmerje med dogovorjenim obdobjem, dejansko naložbo delodajalca, težavnostjo nadomestitve delavca (人力替補困難), nadomestilom, ki ga je delavec prejel, in bremenom vračila. Ni mogoče vnaprej določiti veljavnosti le zato, ker gre za določen poklic, niti nespremenjeno uporabiti sklepa iz druge zadeve. Skupaj je treba videti zasnovo ob sklenitvi pogodbe in dejansko stopnjo izpolnitve ob prenehanju.
+Nazadnje mora obstajati razumno sorazmerje med dogovorjenim obdobjem, dejansko naložbo delodajalca, težavnostjo nadomestitve delavca (人力替補困難), nadomestilom, ki ga je delavec prejel, in bremenom vračila. Ni mogoče vnaprej določiti veljavnosti le zato, ker gre za določen poklic, niti sklepa iz druge zadeve kar prenesti sem. Skupaj je treba videti zasnovo ob sklenitvi pogodbe in dejansko stopnjo izpolnitve ob prenehanju.
 
 ## 5. Usposabljanje, ki ne more utemeljiti dogovora
 
@@ -96,13 +96,13 @@ Napotek 勞動關2字第1150141814號 Ministrstva za delo razločuje in ureja us
 
 Tečaje, ki jih novi zaposleni običajno prejme, kot so razlaga delovnega reda (工作規則), predstavitev organizacije in sistemov, običajna predaja mesta in napotek k osnovnim varnostnim postopkom, je treba potrditi v njihovi vsebini. Splošnih stroškov zaposlovanja in vodenja ali stroškov predaje mesta, ki jih je delodajalec prvotno moral nositi, ni mogoče določiti kot predmet vračila zgolj z označbo za posebno naložbo.
 
-Usposabljanje pa se ne izključi vedno le zato, ker je bilo izvedeno znotraj podjetja. V istem programu se lahko mešajo del splošne prilagoditve ter del strokovno tehnični, zato je treba temo, čas, stroške ter to, ali obstaja zakonska dolžnost, preveriti po tečaju. Kdor trdi strokovno tehnični del, potrebuje dokazila pojasniti, katera vsebina se loči od običajnega usposabljanja in kdo je dejansko nosil stroške.
+Usposabljanje pa se ne izključi vedno le zato, ker je bilo izvedeno znotraj podjetja. V istem programu se lahko mešajo del splošne prilagoditve ter del strokovno tehnični, zato je treba temo, čas, stroške ter to, ali obstaja zakonska dolžnost, preveriti po tečaju. Kdor trdi strokovno tehnični del, mora z dokazili pojasniti, katera vsebina se loči od običajnega usposabljanja in kdo je dejansko nosil stroške.
 
 V praksi se ne gleda le na ovitek gradiva usposabljanja, temveč se primerja podrobna vsebina in dejanski zapis izvedbe. Preveriti je treba, ali gre za ponavljajoči se redni tečaj, tečaj za določeno kvalifikacijo ali upravljanje opreme, zakonsko obvezno usposabljanje, ali se je delavec dejansko udeležil in ali se zahtevani znesek ujema z dokazili stroškov usposabljanja.
 
 ## 6. Ali je ob predčasnem odhodu treba vrniti celotno podpisnino ali nagrado za ostanek?
 
-Celotnega zneska ni treba vedno vrniti. Če sta podpisnina, nagrada za ostanek ali druga dajatev, plačana vnaprej, izplačani kot razumno nadomestilo za dogovor o najmanjšem obdobju trajanja delovnega razmerja, mora biti njen namen delavcu jasno sporočen. Napotek tajvanskega Ministrstva za delo z dne 5. junija 2026 pojasnjuje, da se ob odhodu pred potekom obdobja znesek vračila izračuna v sorazmerju z še neizpolnjenim obdobjem in da ni mogoče zahtevati vračila celotnega zneska. Dejanski sklep je treba sprejeti ob skupni presoji namen izplačila, vsebino dogovora, že odsluženo obdobje in razlog prenehanja.
+Celotnega zneska ni treba vedno vrniti. Če je podpisnina, nagrada za ostanek ali druga vnaprej plačana dajatev izplačana kot razumno nadomestilo za dogovor o najmanjšem obdobju trajanja delovnega razmerja, mora biti njen namen delavcu jasno sporočen. Napotek tajvanskega Ministrstva za delo z dne 5. junija 2026 pojasnjuje, da se ob odhodu pred potekom obdobja znesek vračila izračuna v sorazmerju z še neizpolnjenim obdobjem in da ni mogoče zahtevati vračila celotnega zneska. Dejanski sklep je treba sprejeti ob skupni presoji namena izplačila, vsebine dogovora, že odsluženega obdobja in razloga prenehanja.
 
 Sporočila se ne sme prvič predložiti šele tedaj, ko po izplačilu nastane spor. Delavec mora ob sklenitvi pogodbe in prejemu izplačila vedeti, kateri znesek je nadomestilo za obljubo najmanjšega obdobja trajanja delovnega razmerja, kakšno je dogovorjeno obdobje kot celota, kdaj se mu pripiše in po kakšni formuli se poravna, če prenehanje nastopi med potekom.
 
@@ -138,7 +138,7 @@ Odpovedni rok po neprekinjenem obdobju dela je naslednji.
 2. Če je eno leto ali več in manj kot 3 leta: 20 dni
 3. Če je 3 leta ali več: 30 dni
 
-Če obdobje pogodbe o zaposlitvi za določen čas za določeno delo (特定性定期契約) presega 3 leta, se uporabi posebna norma 15. člena. Delavec lahko po 3 letih dela pogodbo konča z odpovednim rokom 30 dni do delodajalca. To normo je treba ločiti od odpovedi po neprekinjenem obdobju dela, ki se uporablja za pogodbo za nedoločen čas.
+Če obdobje pogodbe o zaposlitvi za določen čas za določeno delo (特定性定期契約) presega 3 leta, se uporabi posebna norma 15. člena. Delavec lahko po 3 letih dela pogodbo odpove z 30-dnevnim odpovednim rokom. To normo je treba ločiti od odpovedi po neprekinjenem obdobju dela, ki se uporablja za pogodbo za nedoločen čas.
 
 Če je neprekinjeno obdobje dela krajše od 3 mesecev, gre za drug tip pogodbe za določen čas ali se trdi zakonski razlog takojšnjega prenehanja, je treba uporabljeno določbo in dejstva presoditi posamično. Sama okoliščina, da pogodba zapisuje daljši odpovedni rok ali zahteva takojšnjo predajo mesta, ne omogoča vnaprej določiti pravnega sklepa.
 
@@ -146,7 +146,7 @@ V praksi je treba ohraniti vsebino in dan predaje izjave o odhodu, dan, ko jo je
 
 ## 9. Kontrolni seznam za delodajalca in delavca
 
-Za preprečitev spora ali za presojo že vložene zahteve ni mogoče brati le pogodbe, temveč je treba skupaj urediti podlage usposabljanja, izplačil, dela in prenehanja v časovnem zaporedju. Zlasti urediti v preglednici, koliko dogovorjenega obdobja je bilo izpolnjenega in koliko ostaja in katerim podlagam ustrezajo trjeni stroški ter nadomestilo, pomaga ločiti sporna vprašanja.
+Za preprečitev spora ali za presojo že vložene zahteve ni mogoče brati le pogodbe, temveč je treba skupaj urediti podlage usposabljanja, izplačil, dela in prenehanja v časovnem zaporedju. Zlasti urediti v preglednici, koliko dogovorjenega obdobja je bilo izpolnjenega in koliko ostaja in katerim podlagam ustrezajo zatrjevani stroški ter nadomestilo, pomaga ločiti sporna vprašanja.
 
 ### Točke, ki jih preveri delodajalec
 

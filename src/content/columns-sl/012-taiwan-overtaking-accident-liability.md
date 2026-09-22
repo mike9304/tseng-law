@@ -62,4 +62,4 @@ Kot dopolnilo je mogoče pogledati [ponazoritev pravil in postopka prehitevanja]
 > - [Mednarodna ekipa Hovering](/sl/lawyers)
 > - [Postopek po prometnih nesrečah na Tajvanu](/sl/columns/taiwan-traffic-accident-procedure)
 
-Besedilo je splošna pravna informacija o pravilih prehitevanja in presoji odgovornosti za nesreče na Tajvanu; ni nasvet k konkretni zadevi in ne obljublja določenega izida. Dejanska odgovornost se lahko razlikuje glede na kraj nesreče, gibanje vozil, hitrost, signale, dokaze, izvedensko mnenje (鑑定) in veljavno pravo; konkretne zadeve je treba presoditi ločeno na podlagi ustreznih podlag.
+Besedilo je splošna pravna informacija o pravilih prehitevanja in presoji odgovornosti za nesreče na Tajvanu; ni nasvet k konkretni zadevi in ne obljublja določenega izida. Dejanska odgovornost se lahko razlikuje glede na kraj nesreče, gibanje vozil, hitrost, signale, dokaze, izvedensko mnenje (鑑定) in veljavno pravo; konkretne zadeve je treba presoditi ločeno na podlagi ustreznega gradiva.

@@ -1,0 +1,76 @@
+WO-F-sl r4 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-sl-r4
+Date: 2026-09-23
+
+## Rows applied
+
+sl-a (31 rows): applied 1, 3–23, 25–29.
+sl-b (46 rows): applied 1–17, 19–39, 41–46.
+
+Guidance (`sl` only): columns disclaimer `ta stran ni korak posveta` → `ta stran ni posvet` (disclosure regex in `guidance-disclosure-parity.test.ts` updated to `/ta stran ni posvet/`); both `Odgovorimo, da bi ocenili` sentences → `Odgovorimo zato, da ocenimo` (FAQ in `international-guidance-central-europe.ts` and `methodConfirmationNotice` in `international-inquiry-copy.ts`); office alt `Kabinet odvetnice` → `Soba odvetnice`. `consultationNotice` / `confidentialNotice` / `discoveryNotice` were not rewritten (`llms.txt` token untouched). Bio figure left as `TWD 1.57M`.
+
+016 heir sentence (FAQ and body): glosses (遺囑, 拋棄繼承, 喪失繼承權, 代位繼承) and the digits `3` and `1/3` kept; only the conditional and the participle (`spremenile`) changed.
+010 row 3’s attachment error also fixed on the earlier impairment-rating sentence (`Sam odstotek okvare odškodnine ne določa` → `Sam odstotek okvare sam ne določa zneska odškodnine`).
+
+## Rows skipped
+
+| row | reason |
+|---|---|
+| sl-a 2 | Did not drop `člen 10`. English 004 link text is “Article 10” of the business-tax act; the URL stays `flno=3`. Removing the digit fails `numbers`. 001’s label for the same URL is article 3 of the withholding standards and has no `10`; the two English labels disagree. Both digits kept. |
+| sl-a 24 | Did not turn Q16–Q20 into `##` headings and did not delete U+200B. English 003 keeps those lines as body text with the same zero-width spaces. Headings would change the heading inventory; deleting ZWSP fails `ZWSP n → 0`. |
+| sl-a 30 | `TWD 1.57M` stays byte-identical (pinned bio term, ACCEPTED-ROUND). |
+| sl-a 31 | Space thousands (`500 000`) are not parsed for `sl` (R14, ACCEPTED-ROUND). Dot grouping kept. Part b’s verdict already treats the dot as accepted Slovene orthography. |
+| sl-b 18 | Did not delete U+200B. Same checker constraint as sl-a 24. Characters left in 003, 005, 006, 008, 009, 013, 015. |
+| sl-b 40 | Did not join the second half to the previous paragraph. English 013 and 015 split the same sentence across the same blocks. Joining would change the block count. |
+
+007 `v vsakem primeru v 5 letih` left: English is “in any event”, which is the ordinary Slovene reading, not the “in each case” false friend.
+
+`član uprave (董事)` outside the flagged collision (001, 002, 004) left. Round 3 had moved 董事 to `član uprave`; this round only flags it where it sits beside `upravni odbor` or in the listed director counts.
+
+## Systemic patterns
+
+- “V vsakem primeru” where English is “in each case / each / every situation”, not “in any event”: 5 (001 and 004 treaty 10% caps; 004 limited-liability “v vsaki okoliščini”; 002 “po vsakem pravu”; 002 money-leaving sentence rewritten). The 007 limitation period kept.
+- “Sme” for appearance or bare possibility: 3 (002 account sentence; 016 parental rights `lahko obstaja`; 016 `lahko … podležejo`). Permission and prohibition `sme` / `ne sme` left.
+- Bare letter B in oblique case, plus the reported-speech lines that the same anecdote marks with `naj bi`: 6 lines in 008 (`gospoda B`, `gospodu B`, and the executive’s words as what he said). Nominative `B je bil` left. Male manager and male client stay male.
+- Agent “izvršuje pooblastilo”: 2 in 004, aligned with 001 (`ponavljajoče sklepa pogodbe na podlagi pooblastila`).
+- “Podlaga” where English is a record, file, document, or official source, not a legal basis: about 30 (012 closing; 014 materials/evidence list; 016 tax records, lifetime-transfer records, who keeps which document, official materials, required documents; 017 parking approvals and official materials; 007 household, tax, transfer, medical/police records and evidence; 003 three “Uradni viri” headings for “Official Sources”). `pravna podlaga`, `podlaga izračuna`, and `podlaga poslov` left.
+- “Koledar” as a timetable rather than the ROC calendar or a course calendar: 7 (011 registration timeline ×2; 018 `terminski načrt je običajno krajši`; 004 filing schedule and the two territories’ filing schedules; 016 two procedure schedules). ROC `po koledarju Republike Kitajske`, 003 `procesni koledar`, and 014 training `koledar` left.
+- Dual/plural agreement where the subjects are not a pair: 11 (007 `ne izključi` / `ne zmanjša`; 014 `so v igri` + `se presojata`; 016 `spremenile` ×2 inside the heir sentence, `eno na drugo`, `zahtevata`, `postavita`, `podležejo`; 017 `opravljajo`, `uporabita`, and both `vsako` → `posebno`).
+- 董事 `direktor` beside a board, or in the listed head-count: 4 (018 “1 do 3”, “pri direktorju”, “1 ali 2 direktorja”; 017 `direktorjih`).
+
+R2–R10 / R12–R17: consultation stays negative (angleščina, kitajščina (中文), japonščina, korejščina only); Wei Tseng stays feminine; no sister-language paragraph (`langid PASS`, `neighbour PASS`); `OUR TEAM` / `OFFICES` / Paralegal were already Slovene. No new Hangul. Frontmatter keys, urls, image paths, and block counts unchanged. 005, 006, and 009 had no wording row beyond the zero-width spaces, which stay.
+
+## §Verify
+
+```
+=== CHECKER (tail -8) ===
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      22
+```
+
+Commands were the work-order set (`tail -8` on the checker, marker `wc -l`, `tsc`, `vitest` grep, `git status --short | wc -l`). The 22 status lines include 3 paths that were already dirty before this lane (`WO-F-sl.txt`, `sl-a.md`, `sl-b.md`). This log is not in that count.
+
+Full checker also prints a numbers WARN on 017 only (`수사미해석 (2): 제3자`), with `sourceCount=44 targetCount=44`. It does not fail the file. Summary remains PASS 18/18.
+
+## Reviewer got wrong (not applied)
+
+- Q16–Q20 should become `##` headings, and every U+200B should be deleted (sl-a 24, sl-b 18). The English sources use the same body lines and the same zero-width spaces. The checker fails the heading inventory and `ZWSP n → 0` if they go.
+- Thousands should be `500 000` (sl-a 31 and the part-a verdict). For `sl` the checker accepts dot grouping only. Part b’s own verdict already treats the dot as accepted Slovene orthography. Dots kept.
+- Bio figure should become `1,57 milijona TWD` (sl-a 30). The test pins the bytes `TWD 1.57M`.
+- The withholding-standards link should drop `člen 10` (sl-a 2). The label is awkward, and 001 names the same URL as article 3 without a 10. The English 004 label is still “Article 10”, and deleting the digit fails `numbers`. URL not touched.
+- 013 and 015 sentence halves should be joined (sl-b 40). The English files split them the same way. Joining would change the block count.

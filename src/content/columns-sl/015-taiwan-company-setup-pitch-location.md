@@ -51,7 +51,7 @@ Zato tej zadevi namenite pozornost.
 
 ​
 
-**Q. Ali morajo vse panoge s sistemom »predhodnega preverjanja kraja dejavnosti« preverjati, ali je obratovanje mogoče?**
+**Q. Ali morajo vse panoge uporabiti sistem »predhodnega preverjanja kraja dejavnosti« in preveriti, ali je obratovanje mogoče?**
 
 Vsem panogam se priporoča, da s sistemom »predhodnega preverjanja kraja dejavnosti« (營業場所預先查詢) potrdijo, ali je obratovanje mogoče.
 

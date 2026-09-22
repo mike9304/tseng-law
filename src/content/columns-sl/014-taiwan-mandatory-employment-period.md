@@ -65,7 +65,7 @@ Najprej je treba preveriti namen izplačila. Ali gre za splošni plačni pogoj z
 
 Napotek (函釋) tajvanskega Ministrstva za delo (勞動部) z dne 5. junija 2026 pojasnjuje, da mora biti vloga jasno sporočena, če naj se kot razumno nadomestilo dogovora o najmanjšem obdobju trajanja delovnega razmerja vzame nagrada za ostanek, podpisnina ali druga dajatev, plačana vnaprej. Da delodajalec naknadno znova razloži namen izplačila ali znova uvrsti del plače kot nadomestilo, težko nadomesti sporočilo v trenutku pogodbe.
 
-Razumnost nadomestila se ne presoja le po znesku. Skupaj se presoja, ali delavec dejansko pridobi dodatno korist, ali so pogoji izplačila jasni, kako se prizna del, ki ustreza že odsluženemu obdobju, in ali obseg vračila ni pretiran. Tudi če nadomestilo obstaja, ni brez omejitve dovoljena kakršna koli dolžina ostanka niti kakršna koli višina odgovornosti za vračilo.
+Razumnost nadomestila se ne presoja le po znesku. Skupaj se presoja, ali delavec dejansko pridobi dodatno korist, ali so pogoji izplačila jasni, kako del, ki ustreza že odsluženemu obdobju, pripade delavcu, in ali obseg vračila ni pretiran. Tudi če nadomestilo obstaja, ni brez omejitve dovoljena kakršna koli dolžina ostanka niti kakršna koli višina odgovornosti za vračilo.
 
 Pomembno je tudi, da se besedilo pogodbe in dejansko izplačilo ujemata. Preverjanje, ali je bilo izplačilo zamujeno ali razdeljeno, ali je pogojno, kakšen je dejansko prejeti znesek po davkih in odtegljajih in ali je obstajalo posebno pisno sporočilo, pomaga presoditi obseg nadomestila ter dejansko korist delavca.
 
@@ -80,7 +80,7 @@ Tudi če obstaja ena od zakonskih predpostavk, morata dogovorjeno obdobje in odg
 
 Pri prvem elementu se presoja, kako dolgo je usposabljanje dejansko trajalo in koliko je delodajalec nosil. Ni dovolj predložiti seštevka; smiselno je skupaj preveriti dokazila po postavkah, znesek, pripisan vsakemu delavcu, zmožnost, ki jo je usposabljanje dalo, in že povrnjeni del naložbe.
 
-Drugi element, možnost nadomestitve, se ne določi le s trditvijo delodajalca o težavnosti zaposlovanja. Presoja se, ali je mogoče pridobiti kader istega mesta ali podobnega mesta, kakšna kvalifikacija in raven strokovnosti sta potrebni, kakšno je običajno obdobje zapolnitve in ali se operativna potreba, ki jo delodajalec trdi, ujema z objektivnimi podlagami.
+Drugi element, možnost nadomestitve, se ne določi le s trditvijo delodajalca o težavnosti zaposlovanja. Presoja se, ali je mogoče pridobiti kader istega mesta ali podobnega mesta, kakšna kvalifikacija in raven strokovnosti sta potrebni, kakšno je običajno obdobje zapolnitve in ali se operativna potreba, ki jo delodajalec trdi, ujema z objektivnimi dokazi.
 
 Pri tretjem elementu ne gre le za višino nadomestila, temveč tudi za obseg. Pomembno je, kdaj se izplača in pod kakšnimi pogoji delavec dokončno pridobi pravico, kako ustreza dogovorjenemu obdobju kot celoti in ali se ob prenehanju med potekom odrazi že izpolnjeno obdobje. Nagrada za ostanek istega imena se lahko presodi različno glede na zgradbo pogodbe in dejanskost.
 
@@ -92,7 +92,7 @@ Nazadnje mora obstajati razumno sorazmerje med dogovorjenim obdobjem, dejansko n
 
 Po napotku tajvanskega Ministrstva za delo z dne 5. junija 2026 stroškov rednega izobraževanja, splošnega usposabljanja na delovnem mestu, prilagoditvenega usposabljanja novincev in usposabljanja, ki ga zakon nalaga izvesti, ni mogoče vzeti za podlago dogovora o najmanjšem obdobju trajanja delovnega razmerja niti zahtevka za pogodbeno kazen ali vračilo stroškov. Ni mogoče gledati le na ime usposabljanja, temveč na konkretni program, strokovno in tehnično vsebino, trajanje, stroške, ki jih je delodajalec dejansko nosil, in dokazila.
 
-Napotek 勞動關2字第1150141814號 Ministrstva za delo razločuje in ureja usposabljanje, ki se izvaja redno, običajno usposabljanje za mesto, usposabljanje, da se novinec seznani z okoljem in postopki dela, in usposabljanje, ki ga mora delodajalec izvesti po zakonu. Ker to usposabljanje spremlja opravljanje dejavnosti ali izpolnitev zakonske dolžnosti, njegovih stroškov ni mogoče preoblikovati v podlago dolžnosti ostanka ali sankcije za predčasno prenehanje.
+Napotek 勞動關2字第1150141814號 Ministrstva za delo razločuje in obravnava usposabljanje, ki se izvaja redno, običajno usposabljanje za mesto, usposabljanje, da se novinec seznani z okoljem in postopki dela, in usposabljanje, ki ga mora delodajalec izvesti po zakonu. Ker to usposabljanje spremlja opravljanje dejavnosti ali izpolnitev zakonske dolžnosti, njegovih stroškov ni mogoče preoblikovati v podlago dolžnosti ostanka ali sankcije za predčasno prenehanje.
 
 Tečaje, ki jih novi zaposleni običajno prejme, kot so razlaga delovnega reda (工作規則), predstavitev organizacije in sistemov, običajna predaja mesta in napotek k osnovnim varnostnim postopkom, je treba potrditi v njihovi vsebini. Splošnih stroškov zaposlovanja in vodenja ali stroškov predaje mesta, ki jih je delodajalec prvotno moral nositi, ni mogoče določiti kot predmet vračila zgolj z označbo za posebno naložbo.
 
@@ -120,11 +120,11 @@ Odstavek 4 člena 15-1 tajvanskega zakona o temeljnih delovnih standardih določ
 
 Zato ni mogoče priznati kršitve delavca le zato, ker je delovno razmerje prenehalo pred dogovorjenim obdobjem. Preveriti je treba, kdo je podal kakšno izjavo volje, kakšna je pravna podlaga prenehanja pogodbe in kateri stranki se pripisujejo dejanske okoliščine, ki so ga sprožile.
 
-Dokumentacija presoje lahko vključuje obvestilo o odpustu, pismo o odhodu, listino o prenehanju sporazuma, e-pošto in zapis sporočilnika, podlage o spremembi delovnih pogojev in evidenco prisotnosti ter dela. Tudi če se omenjata zdravje ali okoliščine dela, se izid ne sklene le po tem izrazu, temveč se skupaj presodi dejanski potek, zakonska podlaga prenehanja in povezani dokazi.
+Dokumentacija presoje lahko vključuje obvestilo o odpustu, pismo o odhodu, listino o prenehanju sporazuma, e-pošto in zapis sporočilnika, gradivo o spremembi delovnih pogojev in evidenco prisotnosti ter dela. Tudi če se omenjata zdravje ali okoliščine dela, se izid ne sklene le po tem izrazu, temveč se skupaj presodi dejanski potek, zakonska podlaga prenehanja in povezani dokazi.
 
 Odpust, prenehanje sporazuma in trditev o kršitvi delovnih pogojev so le primeri okoliščin za presojo, ne pa zaprt seznam razlogov, ki jih ni mogoče pripisati delavcu. Prenehanje istega imena se lahko razlikuje v volji strank in v poteku, ime, zapisano v listini, pa se z dejstvi ne ujema nujno.
 
-Presoja razloga prenehanja vpliva neposredno tudi na obseg vračila. Če se uporabi 4. odstavek, od delavca ni mogoče zahtevati odgovornosti za kršitev dogovora o najmanjšem obdobju trajanja delovnega razmerja niti vračila stroškov usposabljanja, zato je treba pripis preveriti pred uporabo formule. Če obstajata tudi dajatev, plačana vnaprej, in drugi posebej uveljavljani zahtevki, se presoja pravna narava in podlaga vsakega zahtevka.
+Presoja razloga prenehanja vpliva neposredno tudi na obseg vračila. Če se uporabi 4. odstavek, od delavca ni mogoče zahtevati odgovornosti za kršitev dogovora o najmanjšem obdobju trajanja delovnega razmerja niti vračila stroškov usposabljanja, zato je treba pripis preveriti pred uporabo formule. Če so v igri tudi dajatev, plačana vnaprej, in drugi posebej uveljavljani zahtevki, se presojata pravna narava in podlaga vsakega zahtevka.
 
 ## 8. Odpovedni rok ob odhodu je ločeno vprašanje
 
@@ -146,20 +146,20 @@ V praksi je treba ohraniti vsebino in dan predaje izjave o odhodu, dan, ko jo je
 
 ## 9. Kontrolni seznam za delodajalca in delavca
 
-Za preprečitev spora ali za presojo že vložene zahteve ni mogoče brati le pogodbe, temveč je treba skupaj urediti podlage usposabljanja, izplačil, dela in prenehanja v časovnem zaporedju. Zlasti urediti v preglednici, koliko dogovorjenega obdobja je bilo izpolnjenega in koliko ostaja in katerim podlagam ustrezajo zatrjevani stroški ter nadomestilo, pomaga ločiti sporna vprašanja.
+Za preprečitev spora ali za presojo že vložene zahteve ni mogoče brati le pogodbe, temveč je treba skupaj urediti gradivo o usposabljanju, izplačilih, delu in prenehanju v časovnem zaporedju. Zlasti preglednica, ki pokaže, koliko dogovorjenega obdobja je bilo izpolnjenega in koliko ostaja in kateremu gradivu ustrezajo zatrjevani stroški ter nadomestilo, pomaga ločiti sporna vprašanja.
 
 ### Točke, ki jih preveri delodajalec
 
 1. Najprej se določi zakonska predpostavka: ali je bilo zagotovljeno strokovno tehnično usposabljanje in so bili noseni stroški, ali je bilo zagotovljeno razumno nadomestilo za obljubo ostanka.
 2. Splošno, redno in zakonsko obvezno usposabljanje se loči od strokovnega tehničnega usposabljanja po dejanski vsebini tečaja, trajanju in namenu.
-3. Ohranjajo se program tečaja, koledar, zapis končanja, računi, potrdila in podlage o tem, kdo je nosil stroške, in posebej se zabeleži podlaga zunanjih ter notranjih stroškov.
+3. Ohranjajo se program tečaja, koledar, zapis končanja, računi, potrdila in gradivo o tem, kdo je nosil stroške, in posebej se zabeleži podlaga zunanjih ter notranjih stroškov.
 4. Pisno se jasno povežejo namen nadomestila, dan izplačila, znesek, pogoji pridobitve pravice, sporočilo, dano delavcu, in formula vračila neizpolnjenega obdobja.
 5. Dokumentira se podlaga izračuna dogovorjenega obdobja, možnost nadomestitve kadra istega mesta ali podobnega mesta in razmerje med operativno potrebo delodajalca in dejansko naložbo.
-6. Presoja se, ali sta dogovorjeno obdobje in znesek vračila sorazmerna obsegu stroškov usposabljanja ali nadomestila, in v poravnavo se odrazi že odsluženo obdobje.
+6. Presoja se, ali sta dogovorjeno obdobje in znesek vračila sorazmerna obsegu stroškov usposabljanja ali nadomestila, pri čemer se upošteva že odsluženo obdobje.
 7. Po posamičnem preverjanju razloga prenehanja in pripisanja odgovornosti se izračunata dejanski dan prenehanja, izpolnjeno obdobje in neizpolnjeno obdobje.
-8. Pred odtegljajem od plače ali zahtevo za vračilo se primerjajo pogodba, podlage izplačil, plačilna lista, komunikacija strank, poziv in zapis odtegljajev za preveritev pravne podlage in postopka.
+8. Pred odtegljajem od plače ali zahtevo za vračilo se primerjajo pogodba, zapisi izplačil, plačilna lista, komunikacija strank, poziv in zapis odtegljajev za preveritev pravne podlage in postopka.
 
-Tudi pri uporabi vzorčne pogodbe ni mogoče mehansko uporabiti istega obdobja in istega zneska za vsako mesto in vsakega delavca. Določbe je treba zasnovati z odrazom dejanske naložbe v usposabljanje, nadomestila in možnosti nadomestitve, namen izplačila in sorazmerno formulo pa je treba razumljivo sporočiti pred sklenitvijo pogodbe.
+Tudi pri uporabi vzorčne pogodbe ni mogoče mehansko uporabiti istega obdobja in istega zneska za vsako mesto in vsakega delavca. Določbe je treba zasnovati tako, da odražajo dejansko naložbo v usposabljanje, nadomestila in možnosti nadomestitve, namen izplačila in sorazmerno formulo pa je treba razumljivo sporočiti pred sklenitvijo pogodbe.
 
 ### Točke, ki jih preveri delavec
 
@@ -172,7 +172,7 @@ Tudi pri uporabi vzorčne pogodbe ni mogoče mehansko uporabiti istega obdobja i
 7. Posebej se presodijo veljavnost dogovora o najmanjšem obdobju trajanja delovnega razmerja, izjava o odhodu in njen trenutek, vračilo stroškov usposabljanja in dajatve, plačane vnaprej, ter posebej uveljavljana škoda.
 8. Odgovornost se ne prizna le zato, ker je bilo podpisano ali ker delodajalec zahteva določen znesek; preverijo se dokazi, ki ustrezajo zakonskim predpostavkam, razumnosti, pripisanju prenehanja in sorazmerni formuli člena 15-1.
 
-Pri urejanju podlag v časovnem zaporedju je smiselno skupaj navesti dan sklenitve pogodbe, dneve začetka in konca usposabljanja, vsak dan izplačila, dneve začetka in konca dela ter dan predaje obvestila. Če del podlag drži le delodajalec, se najprej uredijo lastne podlage in podlaga izračuna zahtevanega zneska, dodatne podlage pa se preverijo po potrebnem postopku.
+Pri urejanju gradiva v časovnem zaporedju je smiselno skupaj navesti dan sklenitve pogodbe, dneve začetka in konca usposabljanja, vsak dan izplačila, dneve začetka in konca dela ter dan predaje obvestila. Če del gradiva drži le delodajalec, se najprej uredijo lastno gradivo in podlaga izračuna zahtevanega zneska, dodatno gradivo pa se preveri po potrebnem postopku.
 
 ## 10. Uradni viri
 

@@ -19,7 +19,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ## Q1. Ali lahko po nesreči zapustiti kraj dogodka?
 
-Pri nesreči s poškodbo ali s smrtjo mora voznik takoj sprejeti reševalne ukrepe (救護措施), obvestiti policijo ter ohraniti vozilo in dokaze kraja (保全現場). Neformalno soglasje nasprotne strani ali zgolj posnetek ne dopušča, da bi kraj zapustili, preden so zahtevani ukrepi končani.
+Pri nesreči s poškodbo ali s smrtjo mora voznik takoj sprejeti reševalne ukrepe (救護措施), obvestiti policijo ter ohraniti vozilo in dokaze kraja (保全現場). Neformalno soglasje nasprotne strani ali zgolj posnetek ne nadomesti zahtevanih ukrepov.
 
 Pri nesreči s poškodbo pa, če se strinjajo vse strani, lahko vozilo premaknete na mesto, ki ne ovira prometa, potem ko označite položaj vozila ter sledi kraja. Takšne oznake ne nadomeščajo zahtevanih ukrepov, kot sta reševanje ter prijava.
 
@@ -61,7 +61,7 @@ Poravnava (和解) iz 736. člena civilnega zakonika je pogodba, v kateri strani
 
 Če gre za kaznivo dejanje, pregonljivo le na predlog, je po 238. členu zakonika o kazenskem postopku predlog mogoče umakniti do zaključka ustne obravnave 1. stopnje; po umiku ga ni mogoče vložiti znova. Pri kaznivem dejanju, ki ni pregonljivo le na predlog, pa se pregon s samo zasebno poravnavo samodejno ne konča, niti poravnava vedno ne zavezuje k umiku predloga.
 
-### Uradne podlage Q1–Q5
+### Uradni viri Q1–Q5
 
 - [zakon o upravljanju in kaznovanju cestnega prometa (道路交通管理處罰條例), 62. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Kazenski zakonik Tajvana, 185-4. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
@@ -117,7 +117,7 @@ Potni stroški se uredijo na podlagi zveze med evidenco zdravljenja ter poškodb
 
 Potrdila, zapisi tarife, zapisi poti ter klinične listine so mogoči dokazi. Potrdilo taksija ni edino dokazno sredstvo, niti sama predložitev ne pomeni, da zadošča.
 
-### Uradne podlage Q6–Q10
+### Uradni viri Q6–Q10
 
 - [Pravilnik o izvedenskem mnenju ter ponovnem pregledu nesreč vozil (車輛行車事故鑑定及覆議作業辦法), 3. člen](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
 - [Pravilnik o izvedenskem mnenju ter ponovnem pregledu nesreč vozil, 11. do 15. člen](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
@@ -179,7 +179,7 @@ Tarifa dajatev (強制汽車責任保險給付標準), spremenjena 29. 5. 2026, 
 
 Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarovanje voznika (駕駛人傷害險) ter zavarovanje škode lastnega vozila (車體損失險) so fakultativni produkti pogodbene narave. Dejansko kritje se razlikuje glede na zavarovanca, zgornjo mejo, odbitno franšizo (自負額), izključitve, krivdo ter druge pogoje police, zato je polico ter pogoje treba preveriti zadevo za zadevo.
 
-### Uradne podlage Q11–Q15
+### Uradni viri Q11–Q15
 
 - [Civilni zakonik, 193. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Civilni zakonik, 216. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)

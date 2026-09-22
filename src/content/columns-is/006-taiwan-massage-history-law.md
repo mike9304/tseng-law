@@ -43,7 +43,7 @@ Nuddstaðir af ýmsu tagi standa þar hlið við hlið.
 
 Að jafnaði getur hver og einn valið það nudd sem hæfir persónulegu smekk, til að létta spennu.
 
-Og ástæðan fyrir því að svo margir nuddstaðir eru til í dag kann að tengjast þessari 1 beiðni um stjórnskipunarskýringu (釋憲).
+Og ástæðan fyrir því að svo margir nuddstaðir eru til í dag kann að tengjast þessari beiðni um stjórnskipunarskýringu (釋憲).
 
 Þegar Taívan árið 1980 setti og lögleiddi lög um velferð fatlaðs fólks (殘障福利法),
 
@@ -89,7 +89,7 @@ Að lokum lýstu stjórnlagadómarar (大法官) ákvæðið, sem aðeins leyfð
 
 að jafnaði aðeins sjónskertir sem hafa öðlast hæfnisvottorð stunda nuddstarf.
 
-Reyndar hefur ríkisstjórn Kóreu á einhverjum tíma einnig gefið út nuddskírteini til þeirra sem ekki eru sjónskertir,
+Reyndar hefur ríkisstjórn Kóreu á einhverjum tíma einnig gefið út nuddleyfi til þeirra sem ekki eru sjónskertir,
 
 og fjölmargir sjónskertir hafa, af ótta við að missa lífsviðurværi, skipulagt harðar mótmæli.
 

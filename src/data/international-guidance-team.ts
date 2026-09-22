@@ -1380,7 +1380,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Yfirlögmaður á Taívan',
       'chang-rongxuan': 'Lögmaður á Taívan',
       'chang-fangyu': 'Lögfræðiaðstoðarmaður',
-      'son-jungmin': 'Rekstrarstjóri Kóreu-starfsemi',
+      'son-jungmin': 'Rekstrarstjóri Kóreureksturs',
       'huang-shengping': 'Meðeigandi löggiltur endurskoðandi',
     },
   },
@@ -4628,7 +4628,7 @@ export const guidanceTeamBios: Record<
     'chang-rongxuan': {
       intro: [
         'Áður í lagadeild menntamálaráðuneytisins, með áherslu á stjórnsýslu- og einkamál.',
-        'Reynsla af málum háskóla, réttinda kennara og stjórnsýslukæra.',
+        'Reynsla af málum háskóla, réttindum kennara og stjórnsýslukærum.',
       ],
       education: [
         'Bakkalárpróf í lögfræði (LL.B.), National Chung Hsing University',
@@ -4660,7 +4660,7 @@ export const guidanceTeamBios: Record<
         'Bakkalárpróf (B.S.) í tölvunarfræði, National Cheng Kung University',
       ],
       experience: [
-        'Kóreu-rekstur, Hovering International Law Firm',
+        'Kóreurekstur, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {

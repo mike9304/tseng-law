@@ -17,9 +17,9 @@ Eins og áður hefur komið fram er á Taívan almennt ekki auðvelt fyrir starf
 
 ​
 
-Einkum þegar starfsmaðurinn segir sjálfur upp (自請離職),
+Einkum þegar starfsmaðurinn segir sjálfur upp (自請離職) er rétturinn takmarkaður.
 
-á hann almennt ekki rétt á starfslokabætur (18. gr. laga um vinnustaðla, 勞動基準法),
+Hann á almennt ekki rétt á starfslokabótum (18. gr. laga um vinnustaðla, 勞動基準法).
 
 og þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi.
 
@@ -33,7 +33,7 @@ og þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — K�
 
 1. Þegar vinnuveitandi, við gerð ráðningarsamnings (勞動契約), gefur ósanna viljayfirlýsingu (虛偽意思表示), svo starfsmaðurinn villist og hætta er á tjóni
 
-(til dæmis þegar vinnuveitandi lofar að senda starfsmanninn, eftir að hann hefur hafið störf, til útibús erlendis sem í raun er ekki til)
+(Til dæmis þegar vinnuveitandi lofar að senda starfsmanninn, eftir að hann hefur hafið störf, til útibús erlendis sem í raun er ekki til.)
 
 2. Þegar vinnuveitandi, fjölskyldumeðlimir vinnuveitanda eða umboðsmaður vinnuveitanda (代理人) beitir starfsmanninn ofbeldi eða móðgar hann alvarlega (重大侮辱)
 
@@ -47,25 +47,25 @@ og þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — K�
 
 ​
 
-Algengustu dæmin eru að vinnuveitandi
+Algengustu dæmin eru þau að vinnuveitandi standi ekki við greiðslur.
 
-greiði ekki laun (工資) á réttum tíma,
+Hann greiðir ekki laun (工資) á réttum tíma.
 
-greiði ekki yfirvinnukaup (加班費)
+Hann greiðir ekki yfirvinnukaup (加班費).
 
-eða skrái starfsmanninn ekki í launþegatryggingu (勞保) eða sjúkratryggingu (健保).
+Hann skráir starfsmanninn ekki í launþegatryggingu (勞保) eða sjúkratryggingu (健保).
 
 Í slíkum tilvikum skal vinnuveitandi einnig greiða starfslokabætur, þótt starfsmaðurinn slíti ráðningarsamningnum sjálfur.
 
 ​
 
-Lög um vinnustaðla (勞動基準法) kveða þó á um
+Lög um vinnustaðla (勞動基準法) kveða þó á um frest.
 
-að starfsmaður sem vill slíta ráðningarsamningnum samkvæmt 1. eða 6. lið hér að ofan (til dæmis vegna þess að tryggingaskráningu vantar),
+Starfsmaður sem vill slíta ráðningarsamningnum samkvæmt 1. eða 6. lið hér að ofan (til dæmis vegna þess að tryggingaskráningu vantar) verður að gæta frests.
 
-skuli slíta ráðningarsamningnum innan **30 daga** frá þeim degi er hann fékk vitneskju um aðstæðurnar,
+Hann skal slíta ráðningarsamningnum innan **30 daga** frá þeim degi er hann fékk vitneskju um aðstæðurnar.
 
-eða (í tilviki 6. liðar) innan **30 daga** frá þeim degi er hann fékk vitneskju um tjónið.
+Í tilviki 6. liðar skal hann slíta ráðningarsamningnum innan **30 daga** frá þeim degi er hann fékk vitneskju um tjónið.
 
 Því þarf starfsmaðurinn að fylgjast nákvæmlega með frestinum.
 
@@ -73,25 +73,25 @@ eða (í tilviki 6. liðar) innan **30 daga** frá þeim degi er hann fékk vitn
 
 Með öðrum orðum:
 
-réttur Taívan, hvort sem sök liggur hjá félaginu
+Eftir rétti Taívan ræðst niðurstaðan af því hvort sök liggur hjá félaginu.
 
-eða hjá starfsmanninum,
+Hún ræðst einnig af því hvort sök liggur hjá starfsmanninum.
 
-viðurkennir hjá báðum hliðum rétt til að greiða ekki starfslokabætur eða krefjast þeirra.
+hvort synja megi starfslokabótum eða krefjast þeirra.
 
-Stundum liggur sök hjá báðum hliðum,
+Stundum liggur sök hjá báðum hliðum.
 
-og þegar báðir deila,
+Þegar báðir deila skiptir röðin máli.
 
-geta, eftir því hvor slítur samningnum fyrst á nægilegum grundvelli,
+Eftir því hvor slítur samningnum fyrst á nægilegum grundvelli getur niðurstaðan verið ólík.
 
 starfslokabætur verið synjaðar eða krafðar.
 
-Því er í vinnudeilum á Taívan (勞資糾紛)
+Þetta skiptir máli í vinnudeilum á Taívan (勞資糾紛).
 
 **„tímasetningin“** afar mikilvæg.
 
-Í flestum tilvikum Sá sem undirbýr sig fyrirfram stendur í flestum tilvikum betur að vígi til að gæta réttinda sinna.
+Sá sem undirbýr sig fyrirfram stendur í flestum tilvikum betur að vígi til að gæta réttinda sinna.
 
 ---
 

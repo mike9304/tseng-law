@@ -2076,14 +2076,14 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Fjárfesting og félagastofnun á Taívan',
           paragraphs: [
-            'Við aðstoðum erlenda fjárfesta og fyrirtæki við stofnun eða rekstur félags á Taívan: val á félagaformi, undirbúning og skil gagna, innlegg hlutafjár, bankamál, mat á starfsstöð og greinarkröfur. Við aðstoðum einnig við bókhald og skatta sem leiða af stofnun og rekstri á Taívan.',
-            'Ferli og tímalengd eru misjöfn eftir félagaformi, fjárfesti, grein, banka og þeim gögnum sem þegar eru til. Félagastofnun leiðir ekki af sjálfu sér til dvalarleyfis (居留) eða atvinnuleyfis (工作許可): það eru sérstök málsmeðferðir sem metin eru út frá stöðu hvers og eins.',
+            'Við aðstoðum erlenda fjárfesta og fyrirtæki við stofnun eða rekstur félags á Taívan: val á félagaformi, undirbúning og skil gagna, hlutafjárframlag, bankamál, mat á starfsstöð og kröfur eftir atvinnugrein. Við aðstoðum einnig við bókhald og skatta sem leiða af stofnun og rekstri á Taívan.',
+            'Ferli og tímalengd eru misjöfn eftir félagaformi, fjárfesti, atvinnugrein, banka og þeim gögnum sem þegar eru til. Félagastofnun leiðir ekki af sjálfu sér til dvalarleyfis (居留) eða atvinnuleyfis (工作許可): það eru sérstök málsmeðferðir sem metin eru út frá stöðu hvers og eins.',
           ],
         },
         {
           heading: 'Einkamál og skaðabætur',
           paragraphs: [
-            'Þessi flokkur nær til samningsdeilna, skaðabóta vegna skaðaverka (侵權行為) og neytendadeilna. Vinna hefst að jafnaði með tímalínu, yfirferð gagna og fyrirliggjandi sönnunargagna og síðan fyrst með næstu skrefum.',
+            'Þessi flokkur nær til samningsdeilna, skaðabóta vegna skaðaverka (侵權行為) og neytendadeilna. Vinna hefst að jafnaði með tímalínu, yfirferð gagna og fyrirliggjandi sönnunargagna og fyrst eftir það með næstu skrefum.',
             'Frestir, þar á meðal lögbundnir málshöfðunarfrestir, og hve fullkomin sönnunargögnin eru, móta framvinduna. Tilgreindu því þekktar dagsetningar sem fyrst. Varðveittu samninga, skilaboð, greiðslukvittanir eða ljósmyndir af staðnum og nefndu þau í fyrstu skilaboðunum.',
           ],
         },
@@ -2169,7 +2169,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       description:
         'Skýring á röðinni: fyrst vinnuumfangið, síðan staðfesting kostnaðar, og hvers vegna þessi síða inniheldur ekki gjaldskrá.',
       intro:
-        'Þessi síða útskýrir hvernig kostnaður er ákveðinn, ekki fjárhæðina. Fjárhæðin ræðst af vinnuumfangi hvers máls og hefur merkingu fyrst þegar það umfang er ljóst.',
+        'Þessi síða útskýrir hvernig kostnaður er ákveðinn, ekki fjárhæðina. Fjárhæðin ræðst af vinnuumfangi hvers máls og skiptir fyrst máli þegar það umfang er ljóst.',
       sections: [
         {
           heading: 'Fyrst er vinnuumfangið ákveðið',
@@ -2188,7 +2188,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ráðgjöfin getur verið greidd',
           paragraphs: [
-            'Ráðgjöf lögmanns getur verið greidd þjónusta. Þessi síða segir ekki að fyrsta samtalið sé án greiðslu og engan hluta hennar má lesa þannig.',
+            'Ráðgjöf lögmanns getur verið greidd þjónusta. Þessi síða segir ekki að fyrsta samtalið sé án greiðslu.',
             'Sé ráðgjöfin greidd eru fjárhæð og greiðsluháttur tilkynnt áður en hún fer fram.',
           ],
         },
@@ -2307,7 +2307,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       description:
         'Hvað tengiliðaeyðublaðið í þessum íslenska hluta safnar, hvernig frumtextinn er meðhöndlaður og hvernig þú nærð til okkar vegna gagna þinna.',
       intro:
-        'Þessi hluti varðar einungis tengiliðaeyðublaðið á þessum leiðbeiningarsíðum. Hann lýsir meðferð gagna, ekki tæknilegri ábyrgð.',
+        'Þessi hluti varðar einungis tengiliðaeyðublaðið á þessum leiðbeiningarsíðum. Hann lýsir meðferð gagna, ekki tæknilegri ábyrgðaryfirlýsingu.',
       sections: [
         {
           heading: 'Hvaða gögnum er safnað',
@@ -2319,7 +2319,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
             'Netfangið fyrir svarið',
             'Birtingartungumál síðunnar við sendingu',
             'Tungumálið sem þú skrifaðir á',
-            'Tungumál ráðgjafarinnar sem þú óskar',
+            'Tungumál ráðgjafar sem þú óskar eftir',
             'Frumtextinn sem þú skrifaðir',
             'Samþykki þitt við sendingu beiðninnar',
             'Móttökunúmer til að finna beiðnina aftur',
@@ -2336,7 +2336,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Geymslustaður og aðgangur',
           paragraphs: [
             'Innihald sendingarinnar er geymt á stað sem er ekki opinn almenningi. Aðeins heimilaðir aðilar á skrifstofunni mega nálgast það til að vinna beiðnina.',
-            'Þessi síða veitir enga algjöra öryggistryggingu. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.',
+            'Þessi síða veitir enga algjöra ábyrgð á öryggi. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.',
           ],
         },
         {
@@ -2349,7 +2349,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tilkynning og móttökunúmer',
           paragraphs: [
-            'Þegar sending beiðni tekst, tilkynnir kerfið skrifstofunni. Hafi þessi tilkynning ekki verið staðfest enn er textinn þinn áfram vistaður og tapast ekki.',
+            'Þegar sending beiðni tekst, tilkynnir kerfið skrifstofunni. Hafi móttaka skrifstofunnar á tilkynningunni ekki verið staðfest enn, er textinn þinn áfram vistaður og tapast ekki.',
             'Móttökunúmerið þjónar því að finna beiðnina þína í gögnum okkar. Það birtist eftir vistun; þú getur tilgreint það við nýtt samband.',
           ],
         },

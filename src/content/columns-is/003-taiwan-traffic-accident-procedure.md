@@ -31,7 +31,7 @@ Samkvæmt 185-4. gr. hegningarlaga (刑法) er fjallað um refsiábyrgð ökuman
 
 Tryggðu fyrst persónulegt öryggi og viðvörunarmerki; við meiðsli eða björgunarþörf hringir þú á Taívan í 119 (sjúkrabíll og slökkvilið), við refsivert athæfi eða bráða öryggishættu í 110 (lögregla) eða 112 úr farsíma (交通事故). Tilkynntu einnig umferðarslysið til lögreglu, að svo miklu leyti sem aðstæður krefjast.
 
-Þegar öryggi er tryggt skaltu taka yfirlits- og nálægtökur til að festa staðsetningu og skemmdir ökutækis, vegmerkingar, merki og veður. Tengiliði vitna, beiðni um varðveislu eftirlitsmyndavélaefnis (監視器影像) og ökurita (行車紀錄器), upplýsingar um aðila, ökutæki og tryggingar og sjúkraskrár (病歷) ættir þú ekki að sleppa. Einkatökur eru gagnlegar, en koma við slys með meiðslum eða dauðsfalli ekki í stað nauðsynlegrar lögreglumeðferðar.
+Þegar öryggi er tryggt skaltu taka yfirlits- og nálægtökur til að festa staðsetningu og skemmdir ökutækis, vegmerkingar, merki og veður. Tengiliði vitna, beiðni um varðveislu eftirlitsmyndavélaefnis (監視器影像) og myndefnis úr mælaborðsmyndavél (行車紀錄器), upplýsingar um aðila, ökutæki og tryggingar og sjúkraskrár (病歷) ættir þú ekki að sleppa. Einkatökur eru gagnlegar, en koma við slys með meiðslum eða dauðsfalli ekki í stað nauðsynlegrar lögreglumeðferðar.
 
 Að því er varðar lögreglugögn getur þú á vettvangi fengið skráningar- og tengiliðaseðil aðila umferðarslyss (道路交通事故當事人登記聯單). Eftir 7 daga frá slysdegi má sækja um stöðumynd og slysmyndir (現場圖 / 現場照片); eftir 30 daga frá slysdegi má sækja um bráðabirgðagreiningarmat umferðarslyss (道路交通事故初步分析研判表). Útgáfutíma og umsóknarskilyrði ættir þú að kanna að nýju hjá lögbærri lögreglustofnun.
 
@@ -55,7 +55,7 @@ Sérfræðiathugun (鑑定) eða bráðabirgðagreiningarmat getur verið mikilv
 
 ## Q5. Hvað á heima í sáttarsamningnum?
 
-Í sáttarsamningi (和解書) skal ákveða slysastund, -stað og aðila, og taka með greiðslufjárhæð og -tíma, meðferð tryggingargreiðslu og innifaldar og fyrirvarðar kröfur. Framtíðarmeðferð, tjón sem síðar kemur í ljós, afhending vottorða (診斷證明書) og samband greiðslu og afturköllunar kæru skal ákveða skýrt.
+Í sáttarsamningi (和解書) skal ákveða slysastund, -stað og aðila, og taka með greiðslufjárhæð og -tíma, meðferð tryggingargreiðslu og kröfur sem eru innifaldar og kröfur sem eru undanskildar með fyrirvara. Framtíðarmeðferð, tjón sem síðar kemur í ljós, afhending vottorða (診斷證明書) og samband greiðslu og afturköllunar kæru skal ákveða skýrt.
 
 Sátt (和解) í 736. gr. almennra borgaralaga (民法) er samningur þar sem aðilar með gagnkvæmri eftirgjöf ljúka deilu eða koma í veg fyrir hana. Samkvæmt 737. gr. almennra borgaralaga er umfang réttindataps aðeins metið eftir því umfangi sem tilgreint er í samningnum. Því má ekki án könnunar orðalagsins slá því föstu að allar framtíðarkröfur séu slokknaðar.
 
@@ -63,7 +63,7 @@ Við brot sem aðeins eru sótt að undangenginni kæru má kæru samkvæmt 238.
 
 ### Opinberar heimildir Q1–Q5
 
-- [Reglur um stjórn og viðurlög í vegumferð (道路交通管理處罰條例) 62. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Lög um stjórn og viðurlög í vegumferð (道路交通管理處罰條例) 62. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Hegningarlög Taívan (lýðveldið Kína) 185-4. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Hegningarlög Taívan (lýðveldið Kína) 284. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Hegningarlög Taívan (lýðveldið Kína) 287. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -287,7 +287,7 @@ Forsenda flótta frá vettvangi slyss (肇事逃逸) er að einhver hafi meiðst
 
 ​
 
-Við eitt ökutækjatjón gildir það ekki sem flótti frá vettvangi slyss.
+Þegar slysið veldur aðeins tjóni á ökutæki gildir það ekki sem flótti frá vettvangi slyss.
 
 ​
 

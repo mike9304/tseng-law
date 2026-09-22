@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Þegar veitingarekstur er hafinn er fyrsta vandamálið að finna rekstrarheimili (營業地址).
 
-Auk markaðsaðstæðna
+Auk markaðsaðstæðna skiptir annað atriði máli.
 
-er annað mikilvægt atriði
+Annað mikilvægt atriði er þetta.
 
-hvort viðkomandi heimilisfang (營業地址) sé á svæði þar sem unnt er að stunda „veitingastarfsemi“.
+Hvort viðkomandi heimilisfang (營業地址) sé á svæði þar sem unnt er að stunda „veitingastarfsemi“.
 
 ​
 
@@ -45,7 +45,7 @@ Hafir þú erfitt með að mæta sjálfur á fasteignaskrifstofuna (地政事務
 
 máttu biðja kunningja á Taívan, leigusala, fasteignasala eða lögmann um aðstoð.
 
-Ef könnunarniðurstaðan tilgreinir að veitingastarfsemi sé ekki möguleg getur borgarstjórnin síðar, við skráningu lögaðilans (公司登記), hafna skráningunni.
+Ef könnunarniðurstaðan tilgreinir að veitingastarfsemi sé ekki möguleg getur borgarstjórnin síðar, við skráningu lögaðilans (公司登記), hafnað skráningunni.
 
 Því skal gæta þessa atriðis.
 
@@ -71,7 +71,7 @@ Ef opnað er á stað þar sem veitingastarfsemi er ekki möguleg getur síðar 
 
 „greinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目)
 
-Þetta eru aðalatriðin. Hafir þú fleiri spurningar máttu senda beiðni með tengiliðaeyðublaðinu. Ráðgjöf er ekki veitt á íslensku, og ekkert svar er heitið þegar í stað.
+Hér lýkur yfirferðinni. Hafir þú fleiri spurningar máttu senda beiðni með tengiliðaeyðublaðinu. Ráðgjöf er ekki veitt á íslensku, og ekkert svar er heitið þegar í stað.
 
 Reglur stjórnvalda geta oft breyst; áður en lögaðilinn er skráður ættir þú að staðfesta nýjustu reglur.
 

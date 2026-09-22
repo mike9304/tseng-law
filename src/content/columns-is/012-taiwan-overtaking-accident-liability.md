@@ -37,11 +37,11 @@ Síðan skal ökutækið sem ekur fram úr kveikja vinstra stefnuljósið, aka f
 
 ![Slysaskissa sem sýnir framúrakstursleið mótorhjólsins og 2 ökutækin á undan á fjallvegi](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A reyndi að aka fram úr 2 ökutækjunum, fór inn á akreinina á móti og jók hraðann. Einnig ökutæki nr. 2 bjó sig undir að aka fram úr ökutæki nr. 1: innan við 1 sekúndu eftir kveikingu stefnuljóssins fór það inn á akreinina á móti. Mótorhjólið hafði of skamman tíma til að hemla og rakst á ökutæki nr. 2.
+A reyndi að aka fram úr 2 ökutækjunum, fór inn á akreinina á móti og jók hraðann. Ökutæki nr. 2 bjó sig einnig undir að aka fram úr ökutæki nr. 1: innan við 1 sekúndu eftir kveikingu stefnuljóssins fór það inn á akreinina á móti. Mótorhjólið hafði of skamman tíma til að hemla og rakst á ökutæki nr. 2.
 
 B hlaut alvarlega höfuðáverka og lést á staðnum; A missti meðvitund og var fluttur á sjúkrahús.
 
-Aðstandendur A og B litu fyrst skyndilega akreinaskiptingu ökutækis nr. 2 sem meginsök árekstursins. Málið leiddi til málshöfðunar, og í framvindu málsins voru gerðar nokkrar sérfræðiathuganir (鑑定) á slysinu.
+Aðstandendur A og B töldu fyrst að skyndileg akreinaskipting ökutækis nr. 2 væri meginsök árekstursins. Málið leiddi til málshöfðunar, og í framvindu málsins voru gerðar nokkrar sérfræðiathuganir (鑑定) á slysinu.
 
 Samkvæmt niðurstöðu sérfræðiathugunarinnar bar A meginsökina á þessum árekstri. Þessi niðurstaða takmarkaðist við atvik þessa máls. Sérfræðiathugunin tók tillit til þess að A ætlaði að aka fram úr 2 ökutækjum á undan sem óku í röð, að hann fór inn á akreinina á móti, að hann ók á hraða sem nánast skildi engan tíma til að hemla eftir, að lögbundin flautu- og ljósamerki vantaði, svo og akreinaskiptingu ökutækis nr. 2, uppbyggingu vegar og akreina og önnur varðveitt sönnunargögn.
 
@@ -49,11 +49,11 @@ Að slíkar sérfræðiniðurstöður komi í einstökum málum þýðir ekki a�
 
 ## Atriði sem kanna skal við mat á slysábyrgð
 
-Áður en framúrakstur hefst skaltu fyrst kanna hvort staðurinn eða umferðarástandið falli undir bann við framúrakstri. Gildi málsmeðferð sömu akreinar, gefðu lögbundið flautu- eða ljósamerki án þess að þvinga ökutækið á undan til að víkja, bíddu eftir skýru vikunarmerki og ljúktu framúrakstrinum með nægilegri fjarlægð og öruggri fjarlægð til að komast aftur inn á akreinina (超車).
+Áður en framúrakstur hefst skaltu fyrst kanna hvort staðurinn eða umferðarástandið falli undir bann við framúrakstri. Gildi aðferðin við framúrakstur á sömu akrein, gefðu lögbundið flautu- eða ljósamerki án þess að þvinga ökutækið á undan til að víkja, bíddu eftir skýru vikunarmerki og ljúktu framúrakstrinum með nægilegri fjarlægð og öruggri fjarlægð til að komast aftur inn á akreinina (超車).
 
 Fylgni við 101. gr. er mikilvæg, en tryggir ekki eitt og sér að slys séu forðast né tiltekna niðurstöðu síðari sérfræðiathugunar eða málshöfðunar. Ökumenn skulu halda aukaöryggismörkum og laga sig að aðstæðum fram undan.
 
-Til viðbótar máttu skoða [skýringarmynd um reglur og málsmeðferð framúraksturs](https://gonews.com.tw/car/daily/21934/). Þar sem þetta er aukaheimild ættir þú, við mat á lagalegum skilyrðum, einnig að lesa gildandi opinberar reglur (道路交通安全規則).
+Til viðbótar máttu skoða [skýringarmynd um reglur og aðferð við framúrakstur](https://gonews.com.tw/car/daily/21934/). Þar sem þetta er aukaheimild ættir þú, við mat á lagalegum skilyrðum, einnig að lesa gildandi opinberar reglur (道路交通安全規則).
 
 ---
 

@@ -53,7 +53,7 @@ Könnunarefnið nær ekki aðeins til beint sannanlegs kostnaðar, svo sem þók
 
 Námskrá, þjálfunaráætlun, mætingarskrá, matarniðurstaða, lokavottorð, reikningar og kvittanir eru grunngögn til að staðfesta raunveruleika þjálfunarinnar og kostnaðinn. Samningur milli vinnuveitanda og þjálfunarstofnunar, greiðslugögn og endurgreiðsluskilmálar, skoðuð saman, gera kleift að átta sig nánar á raunverulegri byrði. Hafi starfsmaðurinn greitt hluta kostnaðarins beint, eða þriðji aðili borið hann, skal einnig greina hver bar lokakostnaðinn.
 
-Mörkin milli almennrar starfsaðlögunar og faglegrar tækniþjálfunar greinast ekki aðeins eftir þjálfunarstað eða eftir því hver stýrir henni. Innra námskeið getur sannað tiltekið faglegt og tæknilegt innihald og umtalsverða fjárfestingu, og langt námskeið hjá utanaðkomandi stofnun getur í raun verið almenn inngangsfræðsla. Því skal ekki í einu lagi útiloka alla innri þjálfun og ekki heldur viðurkenna lögbundna skilyrðið af því einu að námskeiðið sé dýrt eða langt.
+Mörkin milli almennrar starfsaðlögunar og faglegrar tækniþjálfunar greinast ekki aðeins eftir þjálfunarstað eða eftir því hver stýrir henni. Innra námskeið getur haft tiltekið faglegt og tæknilegt innihald og umtalsverða fjárfestingu, og langt námskeið hjá utanaðkomandi stofnun getur í raun verið almenn inngangsfræðsla. Því skal ekki í einu lagi útiloka alla innri þjálfun og ekki heldur viðurkenna lögbundna skilyrðið af því einu að námskeiðið sé dýrt eða langt.
 
 Einnig skal unnt að skýra tengslin milli umsamins tímabils og þjálfunarfjárfestingarinnar. Hvaða færni er öfluð, hvaða tengsl sú færni hefur við viðkomandi starf, og hvers vegna tillagða starfstímabilið er nauðsynlegt miðað við lengd og kostnað þjálfunarinnar, er kannað hvert um sig. Hvort viðkomandi starf var raunverulega unnið að þjálfun lokinni, og það starfstímabil sem þegar er unnið, eru einnig gögn til að meta umfang byrðarinnar.
 
@@ -82,7 +82,7 @@ Við fyrsta þáttinn er skoðað hversu lengi þjálfunin raunverulega stóð, 
 
 Annar þátturinn, möguleikinn á að leysa af (人力替補可能性), ræðst ekki af fullyrðingu vinnuveitanda um ráðningarerfiðleika einni. Kannað er hvort unnt sé að fá starfsfólk í sama starf eða sambærilegt starf, hvaða hæfi og færnistig sé krafist, hvert venjulegt ráðningartímabil sé, og hvort rekstrarþörfin sem vinnuveitandi ber fyrir sig samræmist hlutlægum gögnum (人力替補可能性).
 
-Þriðji þátturinn horfir ekki aðeins á fjárhæð bótanna, heldur einnig sviðið. Það skiptir máli hvenær greitt er, og með hvaða skilyrðum þær eru endanlega eignaðar starfsmanninum, hvernig þær svara til umsamins tímabils í heild, og hvort þegar uppfyllt tímabil endurspeglast við lokun á leiðinni. Bónus með sama heiti getur verið metinn ólíkt eftir samningsskipulagi og raunveruleika.
+Þriðji þátturinn horfir ekki aðeins á fjárhæð bótanna, heldur einnig sviðið. Það skiptir máli hvenær greitt er, og með hvaða skilyrðum þær eru endanlega eignaðar starfsmanninum, hvernig þær svara til umsamins tímabils í heild, og hvort þegar uppfyllt tímabil endurspeglast þegar ráðningu lýkur áður en tímabilinu er lokið. Bónus með sama heiti getur verið metinn ólíkt eftir samningsskipulagi og raunveruleika.
 
 Fjórði þátturinn getur náð til ólíkra atvika sem hafa áhrif á sanngirni, svo sem gerðarferli samkomulagsins, eðli vinnunnar, það sem aðilum var skýrt, raunverulega unnið tímabil og ástæðu lokunar. Mikilvægi hvers þáttar getur verið misjafnt eftir máli, og þau atvik sem taka skal tillit til takmarkast ekki við framangreind dæmi. Því skal án undantekninga kanna viðeigandi atvik sem fram koma í málinu.
 
@@ -92,7 +92,7 @@ Að lokum þarf skiljanlegt hlutfallssamband milli umsamins tímabils, raunverul
 
 Samkvæmt leiðbeiningum vinnumálaráðuneytis Taívan (勞動部) frá 5. júní 2026 má kostnaður við reglulega fræðslu, almenna starfsþjálfun, aðlögun nýráðinna að starfinu og þjálfun sem lög kveða á um að veita, ekki mynda grundvöll samkomulags um lágmarksstarfstímabil, kröfu um samningssekt eða endurgreiðslu kostnaðar. Ekki skal aðeins horfa á heiti þjálfunarinnar, heldur tiltekið námskeið, faglegt og tæknilegt innihald, tímabil, þann kostnað sem vinnuveitandi bar raunverulega, og fylgiskjöl.
 
-Leiðbeiningarnar 勞動關2字第1150141814號 frá vinnumálaráðuneytinu greina og meðhöndla þá fræðslu sem veitt er reglulega, venjulega starfsþjálfun, þjálfun til að nýráðinn verði kunnugur vinnuumhverfinu og verklaginu, og þá þjálfun sem vinnuveitandi skal samkvæmt lögum veita. Vegna þess að þessi þjálfun leiðir af rekstri fyrirtækisins eða uppfyllingu lögbundinnar skyldu er merkingin sú að kostnaði hennar megi ekki breyta í grundvöll starfsskyldu eða viðurlaga við snemmbúinni lokun.
+Leiðbeiningarnar 勞動關2字第1150141814號 frá vinnumálaráðuneytinu greina og meðhöndla þá fræðslu sem veitt er reglulega, venjulega starfsþjálfun, þjálfun til að nýráðinn verði kunnugur vinnuumhverfinu og verklaginu, og þá þjálfun sem vinnuveitandi skal samkvæmt lögum veita. Vegna þess að þessi þjálfun leiðir af rekstri fyrirtækisins eða uppfyllingu lögbundinnar skyldu má kostnaði hennar ekki breyta í grundvöll starfsskyldu eða viðurlaga við snemmbúinni lokun.
 
 Þau námskeið sem nýr starfsmaður fær að jafnaði, svo sem skýringu vinnureglna (工作規則), kynningu á skipulagi og kerfum, venjuleg starfsskil og leiðbeiningu um grunnöryggisreglur, skal staðfesta í kjarna sínum. Almennan ráðningar- og stjórnunarkostnað eða skilakostnað, sem vinnuveitandi bar upprunalega, má ekki ákveða sem endurgreiðsluviðfang með því einu að merkja hann sem sérstaka fjárfestingu.
 
@@ -104,7 +104,7 @@ Leiðbeiningarnar 勞動關2字第1150141814號 frá vinnumálaráðuneytinu gre
 
 Ekki er alltaf endurgreitt að fullu. Hafi undirritunarbónus, starfshaldsbónus eða önnur fyrirframgreidd hlunnindi (預付性給付) verið greidd sem hæfilegar bætur vegna samkomulags um lágmarksstarfstímabil, skal tilgangurinn hafa verið skýrt tilkynntur starfsmanninum. Leiðbeiningar vinnumálaráðuneytis Taívan (勞動部) frá 5. júní 2026 skýra að fjárhæðin sem endurgreiða skal við starfslok fyrir lok tímabilsins skuli reiknuð í hlutfalli við það tímabil sem enn er óuppfyllt, og að ekki megi krefjast fullrar endurgreiðslu. Raunveruleg niðurstaða skal bera saman greiðslutilgang, innihald samkomulagsins, þegar unnið tímabil og ástæðu lokunar.
 
-Tilkynningin má ekki fyrst vera lögð fram þegar deilan rís eftir greiðsluna. Starfsmaðurinn skal á gerðartíma samningsins og við móttöku greiðslunnar geta vitað hvaða fjárhæð er bætur fyrir loforðið um lágmarksstarfstímabil, hvert umsamið tímabil í heild sé, hvenær hún er eignuð honum, og eftir hvaða formúlu gert er upp ef lokun verður á leiðinni (最低服務年限約定).
+Tilkynningin má ekki fyrst vera lögð fram þegar deilan rís eftir greiðsluna. Starfsmaðurinn skal á gerðartíma samningsins og við móttöku greiðslunnar geta vitað hvaða fjárhæð er bætur fyrir loforðið um lágmarksstarfstímabil, hvert umsamið tímabil í heild sé, hvenær hún er eignuð honum, og eftir hvaða formúlu gert er upp ef ráðningu lýkur áður en tímabilinu er lokið (最低服務年限約定).
 
 Hlutfallsreglan um óuppfyllta tímabilið (預付性給付) krefst fyrst ákvörðunar upphafs- og lokadags samkomulagsins, raunverulega unninna daga og grunnfjárhæðar til endurgreiðsluútreiknings. Til dæmis skal föst fjárhæð, sem endurspeglar alls ekki þegar uppfyllt tímabil, könnuð gagnvart hlutfallsviðmiði leiðbeininganna. Sé skipulagið dreifð greiðsla eða eignun í þrepum, skal einnig sérstaklega reikna hvaða tímabili hver greiðsla svarar (預付性給付).
 
@@ -142,7 +142,7 @@ Fari tímabil tímabundins ráðningarsamnings vegna tiltekins verks (特定性�
 
 Sé samfelldur starfsaldur skemur en 3 mánuðir, sé um aðra tegund tímabundins samnings að ræða, eða sé lögbundin ástæða til þegar-í-stað-lokunar borin fyrir, skal gildandi ákvæði og atvikin könnuð hvert um sig. Það eitt að samningurinn nefni lengri fyrirvara eða krefjist þegar-í-stað-starfsskila leyfir ekki að slá lagalegri niðurstöðu föstu fyrir fram.
 
-Í framkvæmd skal varðveita innihald og sendingardag uppsagnarinnar, þann dag sem vinnuveitandi tók hana raunverulega við, og samskipti aðila um síðasta vinnudag. Sé í 4 spurningum greint á milli þess tíma er starfslokin öðlast gilt gildi, gildis samkomulagsins um lágmarksstarfstímabil, endurgreiðslu þjálfunarkostnaðar eða fyrirframgreiddra hlunninda og tjónsins sem borið er sérstaklega fyrir, minnkar villan að draga allar niðurstöður af 1 samningsákvæði.
+Í framkvæmd skal varðveita innihald og sendingardag uppsagnarinnar, þann dag sem vinnuveitandi tók hana raunverulega við, og samskipti aðila um síðasta vinnudag. Sé í 4 spurningum greint á milli þess tíma er starfslokin öðlast gilt gildi, gildis samkomulagsins um lágmarksstarfstímabil, endurgreiðslu þjálfunarkostnaðar eða fyrirframgreiddra hlunninda og tjónsins sem borið er sérstaklega fyrir, minnkar villan að draga allar niðurstöður af einu samningsákvæði.
 
 ## 9. Gátlisti fyrir vinnuveitanda og starfsmann
 

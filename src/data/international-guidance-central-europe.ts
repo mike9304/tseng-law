@@ -138,7 +138,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Manželstvo, rodina a dedenie',
           paragraphs: [
-            'Vedeme rozvod (離婚), vysporiadanie majetku, výkon a nesenie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie záznamov evidencie obyvateľov (戶籍), formy listín a ich preukaznosti na Taiwane.',
+            'Vedeme rozvod (離婚), vysporiadanie majetku, výkon práv a znášanie povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie záznamov evidencie obyvateľov (戶籍), formy listín a ich preukaznosti na Taiwane.',
             'Pretože rodinné veci so sebou často nesú lehoty a súbežné konania, prvé zhrnutie by malo uviesť vzťah medzi stranami, súčasné bydlisko a už prebiehajúce konania.',
           ],
         },

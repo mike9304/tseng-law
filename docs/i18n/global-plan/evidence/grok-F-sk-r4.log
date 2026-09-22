@@ -1,0 +1,84 @@
+WO-F-sk r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-sk-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: sk-a 20, sk-b 47 (67). No P3 rows in either review.
+
+Applied: 61 numbered rows, some with the adaptations below.
+Skipped: 6 numbered rows (sk-a 4, sk-a 8, sk-a 9, sk-a 13, sk-b 10, sk-b 24).
+
+No test file was edited. No pinned Slovak expectation in `src/lib/__tests__/guidance-*sk*.test.ts` matched a string that changed. `GUIDANCE_LLMS_NOTICES.sk` was not edited. "TWD 1.57M" was not touched. Disclosure-parity regexes were not touched.
+
+### Applied
+sk-a 1–3, 5–7, 10–12, 14–20.
+sk-b 1–9, 11–23, 25–47.
+
+Adaptations (still applied):
+- sk-a 5. Mr Lin is fined 40.000 TWD and the two employees 10.000 TWD and 20.000 TWD. The previous sentence now says he hired two employees. Thousands stay dotted; the reviewer's spaces were not used. The (罰鍰) and (新臺幣) glosses stay.
+- sk-a 9 was skipped as a reformat, but sk-a 19 was applied around the pinned figure: "na prvom stupni dosiahla priznanie náhrady vo výške TWD 1.57M."
+- sk-a 16. Article 9 now puts the penalty before the case it covers. Amounts stay `500.000` and `2.500.000`, and the glosses (拘役), (罰金) and (新臺幣) stay.
+- sk-a 20. The three existing lines now say the employer need not pay severance when the employee is at fault, and the employee may claim it when the employer is at fault. The blocks were not merged. The following both-at-fault sentence was left.
+- sk-b 8. The English sentence is "The foregoing is contract-design advice." The paragraphs above compare branch and subsidiary registration, so the Slovak label now says that comparison. The next sentence, that choosing a form does not make a transaction lawful or promise a result, was left.
+- sk-b 25, sk-b 27 and sk-b 37. Each paragraph was made a complete sentence. Blocks were not merged, and no heading was added. The same treatment was used for the other comma-breaks in 013 and 015 (the extra month, the landlord negotiation, Taipei, the land office, and the Taipei notice).
+
+### Skipped
+- sk-a 4. "; zdrojové označenie: článok 10" on the withholding-rate link. The URL is `flno=3` and was not changed. The label already names article 3 of the withholding-rate standards (各類所得扣繳率標準). Korean 영업세법 제10조 still contributes a counted 10; dropping it fails `numbers` (`missing from translation (1): 10`). The parenthetical was restored.
+- sk-a 8 and sk-b 10. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips them, and R14 / `NUMBER_THOUSAND_STYLE` for `sk` is `dot`. Every dotted amount was left.
+- sk-a 9. "TWD 1.57M" → "1,57 mil. TWD". The token is pinned byte-identical. The calque around it is sk-a 19 and was applied.
+- sk-a 13 and sk-b 24. Q16–Q20 stay body lines. U+200B lines in 003, 005, 006, 008, 009, 013 and 015, and the empty bold lines in 005, were left. Deleting a ZWSP fails `blocks`; promoting Q16 fails `headings`. They match the Korean source.
+
+## Systemic patterns
+
+- Dot thousands (sk-a and sk-b verdicts). 0 changed to a space. The checker requires the dot.
+- U+200B blanks, and 005 `**​**` (sk-a verdict; sk-b 013/015). 0 deleted.
+- 營利事業所得稅 "daň z príjmu ziskových podnikov" → "daň z príjmov podnikov zameraných na zisk", and "Ziskové podniky" for that enterprise → "Podniky zamerané na zisk". 14: 001 ×3, 002 ×1, 004 ×10. The Chinese gloss stays on first use. "Podniky zamerané na zisk" that was already in 004, and treaty "zisky podnikov", were left.
+- 有責配偶 read as the husband only. 8: "zbavuje" ×2, "žiadosť" ×2, the heading, "pre manžela bez zavinenia" ×2, and the FAQ question (now "ktorý alebo ktorá nesie vinu").
+- „predmet kotácie“ (上市). 3 in 004: the FAQ, the repeated body, and the securities-market sentence.
+- 行使或負擔 "nesenie" applied to the rights as well as the duties. 6: the guidance family-law line ×1, and in 007 the genitive ×2, the "precise term" sentence, "kto vykonáva a nesie", and "vykonávať a niesť".
+- "kalendár" for a timetable. 10: 011 ×2 (harmonogram registrácie), 014 ×3 (training schedule), 016 ×2 (separate schedule and single schedule), 004 ×2 (application timetable and filing timetables), 018 ×1. ROC "kalendár Čínskej republiky" and the court "procesný kalendár" in 003 were left.
+- Czech "pouhý". 4: 011 "pouhé", 014 "pouhým", 017 "pouhým", 004 "pouhou". "závislosť na" → "závislosť od" ×1 in 017.
+- Undeclined "B" after "pán B". 9 lines in 008, now pán B / pána B / pánovi B. "pána B" that was already declined was left.
+- "zodpovedný" standing in for the attorney or the Taiwan representative. 2 in 018 ("zodpovednej advokátky", "oprávnenie zástupcu"). The bare "zodpovedný" in 002 is sk-a 11 (address and registered particulars), now "zodpovedná osoba". Statutory 負責人 already glossed as "zodpovedná osoba" in 004 and 017 was left.
+- Sentence broken across paragraphs on a comma (sk-b verdict). Completed inside the existing blocks in 013 and 015, as listed under adaptations. 0 blocks merged or split.
+- R2–R10 and R12–R17. Feminine Wei Tseng, vykanie, the four-language consultation lock, day–month–year dates, and the decimal comma already hold. This pass did not find a new Korea-as-default-reader, result-promise, interpreter, or untranslated-chrome instance outside the rows above. No Czech function word (který, smlouva, ř/ě/ů) remained after the pouhý / závislosť na sweep. The Hangul that remains is inside frontmatter `url` values, which are canonical source metadata and were not edited.
+
+## Reviewer points not followed
+
+- sk-a 4. The link parameter `flno=3` is article 3 of the withholding-rate standards, not article 10. The Korean source still says 영업세법 제10조 on that URL, and the checker counts that 10. The parenthetical was kept.
+- sk-a 8 and sk-b 10. A space as the thousands separator is ordinary Slovak. This campaign's checker does not parse it for `sk` (`dot` style). The dotted form was kept.
+- sk-a 9. "1,57 mil. TWD" would drop the pinned token `TWD 1.57M`. The figure stayed byte-identical.
+- sk-a 13 and sk-b 24. Q16–Q20 are body lines in the Korean source as well. The U+200B lines match that source. Promoting Q16 or deleting the blanks fails `headings` or `blocks`.
+- sk-b 8, the English label. The reviewer is right that the sentence does not describe the paragraphs above it. The Slovak sentence now says that those paragraphs compare branch and subsidiary registration. That departs from the English wording "The foregoing is contract-design advice."
+
+Pre-existing number WARNs, unchanged from HEAD and not a FAIL: 006 extra `1`; 015 extra `2×2`. 013 stayed `sourceCount=15 targetCount=15` after "jeden čitateľ".
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=52
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sk src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+The count above is from that run, before this log existed. After the log was written, `git status --short | wc -l` is 23.

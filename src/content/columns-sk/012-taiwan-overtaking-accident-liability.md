@@ -27,7 +27,7 @@ Aby bolo možné v tom istom pruhu predísť vozidlo vpredu, musí vodič zadné
 
 Zadné vozidlo smie predísť až potom, čo vozidlo vpredu spomalilo a uhlo nabok, alebo prejavilo vôľu uvoľniť cestu rukou alebo pravou smerovkou.
 
-Potom musí predchádzajúce vozidlo zapnúť ľavú smerovku, minúť zľava pri zachovaní odstupu najmenej 0,5 metra od vozidla vpredu a po zabezpečení bezpečnej vzdialenosti zapnúť pravú smerovku a bezpečne sa vrátiť na pôvodný pruh.
+Potom musí vozidlo, ktoré predchádza, zapnúť ľavú smerovku, minúť zľava pri zachovaní odstupu najmenej 0,5 metra od vozidla vpredu a po zabezpečení bezpečnej vzdialenosti zapnúť pravú smerovku a bezpečne sa vrátiť na pôvodný pruh.
 
 Toto poradie signálov a uvoľnenia v tom istom pruhu neznamená, že by predchádzanie bolo dovolené i na zakázanom mieste alebo za zakázaných podmienok. Pred začatím predchádzania treba posúdiť spoločne všetky podmienky článku 101.
 
@@ -43,7 +43,7 @@ B utrpel ťažké poranenie hlavy a zomrel na mieste; A stratil vedomie a bol pr
 
 Rodiny A a B najprv považovali náhlu zmenu pruhu vozidla č. 2 za hlavnú príčinu zrážky. Vec prešla do súdneho konania; v jeho priebehu bolo vypracovaných niekoľko znaleckých posudkov (鑑定) k nehode.
 
-Podľa výsledku posudku niesol hlavnú zodpovednosť za túto zrážku A. Tento záver bol obmedzený na skutkové okolnosti tejto veci. Posudok zohľadnil spoločne to, že A chcel predísť 2 vozidlá vpredu idúce za sebou, že vošiel do protismerného pruhu, že išiel rýchlosťou, ktorá takmer nenechávala čas na zabrzdenie, že chýbali predpísané signály klaksónu a svetiel, ako aj pohyb zmeny pruhu vozidla č. 2, usporiadanie cesty a pruhov a ostatné zaistené dôkazy.
+Podľa výsledku posudku niesol hlavnú zodpovednosť za túto zrážku A. Tento záver bol obmedzený na skutkové okolnosti tejto veci. Posudok zohľadnil spoločne to, že A chcel predísť 2 vozidlá vpredu idúce za sebou, že vošiel do protismerného pruhu, že išiel rýchlosťou, ktorá takmer nenechávala čas na zabrzdenie, že chýbali predpísané signály klaksónu a svetiel, ako aj manéver zmeny pruhu vozidla č. 2, usporiadanie cesty a pruhov a ostatné zaistené dôkazy.
 
 Záver obmedzený na túto vec neznamená, že jedno vynechanie predpísaného signálu vždy určí zodpovednosť. Nedbanlivosť (過失) pri nehode pri predchádzaní závisí od miesta nehody, usporiadania pruhov, rýchlosti, pohybov vozidiel, signálov, časových intervalov, výhľadu a ostatných dôkazov.
 

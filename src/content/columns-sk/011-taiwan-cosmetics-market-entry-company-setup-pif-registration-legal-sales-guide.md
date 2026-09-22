@@ -40,11 +40,11 @@ V zmluve je vhodné konkrétne stanoviť rozsah užívania duševného vlastníc
 
 ### Keď činnosť na Taiwane prevádzkujete sami
 
-Taiwanská dcérska spoločnosť a pobočka zahraničnej spoločnosti nie sú tou istou organizáciou. Dcérska spoločnosť je samostatná právnická osoba založená podľa práva Taiwanu, zatiaľ čo pobočka sa zapisuje ako časť ústredia (本公司) zahraničnej spoločnosti. Líši sa právna osobnosť, zodpovednosť ústredia, účtovné a daňové zaobchádzanie, prevod zisku, zastupovacie oprávnenie a spôsob vnútornej kontroly, preto sa forma organizácie nemá voliť len podľa kontroly nad predajom.
+Taiwanská dcérska spoločnosť a pobočka zahraničnej spoločnosti nie sú tou istou organizáciou. Dcérska spoločnosť je samostatná právnická osoba založená podľa práva Taiwanu, zatiaľ čo pobočka sa zapisuje ako časť ústredia (本公司) zahraničnej spoločnosti. Líši sa právna osobnosť, zodpovednosť ústredia, účtovný a daňový režim, prevod zisku, zastupovacie oprávnenie a spôsob vnútornej kontroly, preto sa forma organizácie nemá voliť len podľa kontroly nad predajom.
 
 Ak je potrebný postup zahraničnej investície, treba overiť pokyny **Odboru preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司)** ako aktuálne príslušného orgánu. Lehota potrebná na povolenie investície, prevod peňazí, zápis spoločnosti alebo pobočky, otvorenie bankového účtu, daňovú registráciu (稅籍登記) a získanie kvalifikácie dovozcu sa líši podľa investora, odvetvia, organizačnej formy, predložených podkladov a toho, či dochádza k oprave alebo doplneniu. Preto namiesto stanovenia dátumu uvedenia na trh za predpokladu určitej pevnej lehoty treba najprv overiť, či sa každý úkon uplatní, a najnovšie podmienky prijatia.
 
-Nech je zvolená ktorákoľvek štruktúra, ústredným subjektom zodpovednosti v úprave kozmetiky je **výrobca alebo dovozca kozmetiky**. Usporiadanie podkladov k výrobku alebo hodnotenie bezpečnosti (安全性評估) možno zveriť vonkajšiemu odborníkovi, ale pouhé zverenie práce neprenáša právnu zodpovednosť výrobcu alebo dovozcu. Odlíšiť zmluvné rozdelenie práce od zákonného subjektu zodpovednosti je východiskovým bodom preskúmania štruktúry vstupu.
+Nech je zvolená ktorákoľvek štruktúra, ústredným subjektom zodpovednosti v úprave kozmetiky je **výrobca alebo dovozca kozmetiky**. Usporiadanie podkladov k výrobku alebo hodnotenie bezpečnosti (安全性評估) možno zveriť vonkajšiemu odborníkovi, ale samotné zverenie práce neprenáša právnu zodpovednosť výrobcu alebo dovozcu. Odlíšiť zmluvné rozdelenie práce od zákonného subjektu zodpovednosti je východiskovým bodom preskúmania štruktúry vstupu.
 
 ## 2. Registrácia produktu a PIF sú dva odlišné režimy
 
@@ -52,19 +52,19 @@ Registrácia produktu a PIF nie sú tým istým postupom. Registrácia produktu 
 
 ### Okamih registrácie produktu a doba platnosti
 
-Registrácia kozmetického produktu sa vykonáva na platforme registrácie kozmetických produktov TFDA. Výrobca alebo dovozca kozmetiky musí dokončiť registráciu produktu predtým, než výrobok dodá, predá, daruje, verejne vystaví (公開陳列) alebo poskytne spotrebiteľovi na vyskúšanie. Prípravu nemožno organizovať len podľa odplatného predaja; do kalendára registrácie treba zahrnúť aj propagačné dary a poskytnutie výrobku spotrebiteľovi na vyskúšanie.
+Registrácia kozmetického produktu sa vykonáva na platforme registrácie kozmetických produktov TFDA. Výrobca alebo dovozca kozmetiky musí dokončiť registráciu produktu predtým, než výrobok dodá, predá, daruje, verejne vystaví (公開陳列) alebo poskytne spotrebiteľovi na vyskúšanie. Prípravu nemožno obmedziť len na odplatný predaj; do harmonogramu registrácie treba zahrnúť aj propagačné dary a poskytnutie výrobku spotrebiteľovi na vyskúšanie.
 
 Doba platnosti registrácie produktu je 3 roky. Ak sa má v dodávkach pokračovať, treba požiadať o predĺženie (展延) do 3 mesiacov pred uplynutím platnosti. Ak sa zmenia zapísané údaje, ako je názov výrobku, použitie, forma prípravku (劑型), zložky a miesto výroby, treba tiež overiť, či je nutný postup zodpovedajúci obsahu zmeny.
 
-Registrácia produktu je úkonom ohlásenia stanovených údajov na platforme. Dokončenie registrácie neznamená, že sú kompletné všetky podklady potrebné na PIF, ani nie je posúdením, že označenie alebo reklama výrobku sú v súlade s právom. Kalendár registrácie produktu, správa PIF a preskúmanie označenia a reklamy sa musia viesť ako tri samostatné línie: registrácia, PIF a označenie s reklamou.
+Registrácia produktu je úkonom ohlásenia stanovených údajov na platforme. Dokončenie registrácie neznamená, že sú kompletné všetky podklady potrebné na PIF, ani nie je posúdením, že označenie alebo reklama výrobku sú v súlade s právom. Harmonogram registrácie produktu, správa PIF a preskúmanie označenia a reklamy sa musia viesť ako tri samostatné línie: registrácia, PIF a označenie s reklamou.
 
 ### Podklady PIF a stupňovité uplatnenie
 
-PIF je súbor podkladov usporiadaný tak, aby bolo možné naďalej vysvetľovať akosť a bezpečnosť výrobku. Okrem akosti, bezpečnosti, zloženia, tvrdených funkcií (宣稱功能), spôsobu výroby, výsledkov skúšok a hodnotenia bezpečnosti treba podľa výrobku usporiadať základné informácie o výrobku a výrobcovi a podporné podklady, napríklad etiketu. Pravidlá správy informačného spisu kozmetických produktov (化粧品產品資訊檔案管理辦法) usporadúvajú potrebné podklady do 16 kategórií, preto treba podľa typu výrobku overiť podklady každej kategórie a požiadavky na podpis a kvalifikáciu.
+PIF je súbor podkladov usporiadaný tak, aby bolo možné priebežne doložiť akosť a bezpečnosť výrobku. Okrem akosti, bezpečnosti, zloženia, tvrdených funkcií (宣稱功能), spôsobu výroby, výsledkov skúšok a hodnotenia bezpečnosti treba podľa výrobku usporiadať základné informácie o výrobku a výrobcovi a podporné podklady, napríklad etiketu. Pravidlá správy informačného spisu kozmetických produktov (化粧品產品資訊檔案管理辦法) usporadúvajú potrebné podklady do 16 kategórií, preto treba podľa typu výrobku overiť podklady každej kategórie a požiadavky na podpis a kvalifikáciu.
 
 Režim PIF sa uplatňoval stupňovite podľa skupín výrobkov. Od 1. 7. 2026 sa režim vzťahuje i na zvyšné kozmetické prípravky, takže sa zásadne vzťahuje na všetku kozmetiku. Výnimka sa obmedzuje na tuhé ručne vyrábané mydlo vyrobené v mieste výroby oslobodenom od registrácie závodu. Výrobok nie je vylúčený len preto, že je vyrábaný ručne alebo že nesie názov mydlo; treba overiť oboje, tuhú formu i podmienku oslobodenia miesta výroby od registrácie závodu.
 
-Prácu PIF, vrátane hodnotenia bezpečnosti, môže podporiť tretia osoba, ktorá má potrebnú kvalifikáciu a spôsobilosť. Aj keď sa však využije podpora zostavenia treťou osobou alebo služba uchovania podkladov, právna zodpovednosť výrobcu alebo dovozcu kozmetiky trvá. Treba vybudovať systém, ktorý umožní pôvodnému výrobcovi, skúšobni, hodnotiteľovi bezpečnosti a podniku na strane Taiwanu vzájomne odovzdávať informácie o zmenách a najnovšie podpísané podklady.
+Prípravu PIF, vrátane hodnotenia bezpečnosti, môže podporiť tretia osoba, ktorá má potrebnú kvalifikáciu a spôsobilosť. Aj keď sa však využije podpora zostavenia treťou osobou alebo služba uchovania podkladov, právna zodpovednosť výrobcu alebo dovozcu kozmetiky trvá. Treba vybudovať systém, ktorý umožní pôvodnému výrobcovi, skúšobni, hodnotiteľovi bezpečnosti a taiwanskému podniku vzájomne odovzdávať informácie o zmenách a najnovšie podpísané podklady.
 
 ### Aktualizácia a uchovanie
 
@@ -78,7 +78,7 @@ Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné ele
 
 Keď príslušný orgán kontroluje PIF, oznámi to zásadne výrobcovi alebo dovozcovi kozmetiky najneskôr 7 dní pred dňom kontroly. Ak však prípad spadá pod zákonnú výnimku stanovenú v súvisiacich predpisoch, možno kontrolu vykonať bez predchádzajúceho oznámenia. Bez ohľadu na to, či oznámenie bolo, treba trvale udržiavať stav, ktorý umožňuje vyhľadať a predložiť úplné aktuálne podklady.
 
-Ohlásenie nepravdivých informácií pri registrácii produktu alebo zapísanie nepravdivých informácií do PIF môže byť predmetom správnej pokuty (罰鍰) 10.000 až 1.000.000 nových taiwanských dolárov (新臺幣, TWD). Ak sú naopak podklady PIF neúplné, príslušný orgán zvyčajne nariadi nápravu v stanovenej lehote (限期改正) a správna pokuta sa stáva otázkou až vtedy, keď sa v tejto lehote nenapraví. Nepravdivé informácie a ešte napraviteľnú neúplnosť podkladov nemožno posudzovať ako rovnaký následok.
+Ohlásenie nepravdivých informácií pri registrácii produktu alebo zapísanie nepravdivých informácií do PIF môže byť predmetom správnej pokuty (罰鍰) 10.000 až 1.000.000 nových taiwanských dolárov (新臺幣, TWD). Ak sú naopak podklady PIF neúplné, príslušný orgán zvyčajne nariadi nápravu v stanovenej lehote (限期改正) a správnu pokutu možno uložiť až vtedy, keď sa v tejto lehote nenapraví. Nepravdivé informácie a ešte napraviteľnú neúplnosť podkladov nemožno posudzovať ako rovnaký následok.
 
 Stiahnutie alebo zničenie (銷毀) nie je opatrením, ktoré by automaticky nasledovalo každú neúplnosť podkladov PIF. Bezpečnosť výrobku, obsah porušenia, stav nápravy a zákonné podmienky uplatniteľné na každé opatrenie treba posúdiť oddelene. Opatrenie pri zistenom bezpečnostnom probléme treba odlíšiť od požiadavky na doplnenie dokumentov a postup sa riadi oznámením príslušného orgánu a použitým ustanovením.
 

@@ -56,7 +56,7 @@ Založenie taiwanskej dcérskej spoločnosti začína zásadne predbežným prie
 
 3. Investičná žiadosť na Odbore preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司) (v prípade potreby)
 
-4. Otvorenie účtu prípravnej komisie spoločnosti (公司籌備處帳戶)
+4. Otvorenie prípravného účtu spoločnosti (公司籌備處帳戶)
 
 5. Prevod investičných prostriedkov zo zahraničia
 
@@ -116,9 +116,9 @@ Manžel alebo manželka a maloleté deti zahraničnej osoby, ktorá získala pre
 
 ## 5. Dane a dohoda o dani z príjmu Taiwan–Kórea
 
-Všeobecná sadzba taiwanskej obchodnej dane (營業稅; daň typu DPH) činí 5 %; priznanie sa zvyčajne podáva raz za 2 mesiace. Všeobecná sadzba dane z príjmu ziskových podnikov (營利事業所得稅) činí 20 %, avšak skutočné zdanenie závisí od zdaniteľného príjmu a od uplatniteľných ustanovení. Sadzba zrážky pri zdroji podľa vnútorného taiwanského práva z dividend vyplácaných nerezidentom činí 21 %. Na dividendy, ktoré spĺňajú predpoklady uplatnenia a postup dohody o dani z príjmu Taiwan–Kórea, sa uplatní maximálna sadzba 10 %. Konkrétne priznanie a zrážku pri zdroji treba viesť podľa rezidencie, skutočného vlastníka príjmu (受益所有人), druhu príjmu a listín dohody.
+Všeobecná sadzba taiwanskej obchodnej dane (營業稅; daň typu DPH) činí 5 %; priznanie sa zvyčajne podáva raz za 2 mesiace. Všeobecná sadzba dane z príjmov podnikov zameraných na zisk (營利事業所得稅) činí 20 %, avšak skutočné zdanenie závisí od zdaniteľného príjmu a od uplatniteľných ustanovení. Sadzba zrážky pri zdroji podľa vnútorného taiwanského práva z dividend vyplácaných nerezidentom činí 21 %. Na dividendy, ktoré spĺňajú predpoklady uplatnenia a postup dohody o dani z príjmu Taiwan–Kórea, sa uplatní maximálna sadzba 10 %. Konkrétne priznanie a zrážku pri zdroji treba viesť podľa rezidencie, skutočného vlastníka príjmu (受益所有人), druhu príjmu a listín dohody.
 
-Obchodná daň (營業稅) a daň z príjmu ziskových podnikov sa líšia podľa predmetu dane a spôsobu priznania; daň uplatňovanú na obrat a daň uplatňovanú na zdaniteľný príjem treba rozlišovať. Pri výplate dividend, úrokov, licenčných poplatkov alebo odmien za služby zahraničným spoločníkom alebo spriazneným podnikom treba vopred posúdiť povahu platby a postavenie osoby, ktorá prijíma, vnútorné pravidlá zrážky pri zdroji a možné uplatnenie dohody o dani z príjmu.
+Obchodná daň (營業稅) a daň z príjmov podnikov zameraných na zisk sa líšia podľa predmetu dane a spôsobu priznania; daň uplatňovanú na obrat a daň uplatňovanú na zdaniteľný príjem treba rozlišovať. Pri výplate dividend, úrokov, licenčných poplatkov alebo odmien za služby zahraničným spoločníkom alebo spriazneným podnikom treba vopred posúdiť povahu platby a postavenie osoby, ktorá prijíma, vnútorné pravidlá zrážky pri zdroji a možné uplatnenie dohody o dani z príjmu.
 
 Dohoda o dani z príjmu Taiwan–Kórea nadobudla účinnosť 27. 12. 2023 a uplatňuje sa od 1. 1. 2024; na úroky a licenčné poplatky, ktoré spĺňajú predpoklady, sa takisto uplatní maximálna sadzba v štáte zdroja 10 %. Pri posudzovaní práva zdaniť zisky podnikov treba brať do úvahy všetky 4 typy stálej prevádzkarne uvedené vyššie. Okrem dní služieb treba spoločne posúdiť stále zariadenie, dobu trvania prác, splnomocnenie zástupcu na uzatváranie zmlúv a skutočnú činnosť.
 
@@ -133,7 +133,7 @@ Obmedzená sadzba dohody sa neuplatní automaticky zo samej skutočnosti, že do
 - [Pokyn Ministerstva financií Taiwanu o dohode o dani z príjmu Taiwan–Kórea](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
 - [Ustanovenie o sadzbe zrážky pri zdroji z dividend vyplácaných nerezidentom](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Pokyn k cyklu priznania taiwanskej obchodnej dane (營業稅)](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
-- [Pokyn k sadzbe taiwanskej dane z príjmu ziskových podnikov](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
+- [Pokyn k sadzbe taiwanskej dane z príjmov podnikov zameraných na zisk](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Pokyn k zdaneniu príjmov z dividend zahraničných osôb](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)
 - [Pokyn Imigračnej správy Taiwanu (內政部移民署) o trvalom pobyte](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Pokyn mesta Taipej o predbežnom posúdení miesta činnosti](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)

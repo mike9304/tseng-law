@@ -31,19 +31,19 @@ Ved etterprøvingen er det viktig ikke å blande følgende 4 spørsmål sammen.
 3. Hvem opphørsårsaken til arbeidskontrakten kan tilregnes.
 4. Hvordan fratredelsesvarselet og omfanget av tilbakebetalingen vurderes.
 
-Selv hvis disse 4 spørsmål står sammen i samme kontrakt, er det anvendelige forskriften og det nødvendige beviset forskjellige. Man skal derfor særskilt etterprøve om avtalen er gyldig når arbeidstakerens oppsigelse får virkning, om det består ansvar for å tilbakebetale den forskuddsbetalte ytelsen (預付性給付) eller utdanningskostnadene, og om en særskilt skade faktisk er oppstått.
+Selv hvis disse 4 spørsmål står sammen i samme kontrakt, gjelder ulike lovbestemmelser og ulike bevis. Man skal derfor særskilt etterprøve om avtalen er gyldig når arbeidstakerens oppsigelse får virkning, om det består ansvar for å tilbakebetale den forskuddsbetalte ytelsen (預付性給付) eller utdanningskostnadene, og om en særskilt skade faktisk er oppstått.
 
 ## 1. Når har avtalen om bindingstid virkning?
 
 Avtalen er ikke automatisk ugyldig. Ifølge artikkel 15-1 i Taiwans lov om arbeidsnormer (勞動基準法) kan avtalen oppfylle de lovbestemte kravene hvis arbeidsgiveren gir en spesialisert teknisk utdanning (專業技術培訓) og bærer kostnaden, eller yter en rimelig kompensasjon (合理補償), så arbeidstakeren overholder bindingstiden. Det er ikke nødvendig å oppfylle begge krav samtidig, men selv hvis ett av dem foreligger, må avtalen ikke overskride det rimelige omfanget i lyset av samtlige omstendigheter, slik som utdanningens varighet og kostnad, muligheten for å erstatte personalet (人力替補可能性) samt kompensasjonens beløp og omfang.
 
-Artikkel 15-1, ledd 1, regulerer selektivt 2 lovbestemte krav. Det første er at arbeidsgiveren har gitt arbeidstakeren en spesialisert teknisk utdanning (專業技術培訓) og båret kostnaden; det annet at det er ytt en rimelig kompensasjon (合理補償) som motytelse for overholdelse av bindingstiden. Man skal etterprøve ikke hvilket navn kontrakten har fått, men hvilket grunnlag som faktisk foreligger.
+Artikkel 15-1, ledd 1, angir 2 lovbestemte grunnlag som alternativer til hverandre. Det første er at arbeidsgiveren har gitt arbeidstakeren en spesialisert teknisk utdanning (專業技術培訓) og båret kostnaden; det annet at det er ytt en rimelig kompensasjon (合理補償) som motytelse for overholdelse av bindingstiden. Man skal etterprøve ikke hvilket navn kontrakten har fått, men hvilket grunnlag som faktisk foreligger.
 
 Artikkel 15-1 krever ett av de 2 lovbestemte kravene og i tillegg en særskilt rimelighetsprøving. Det betyr ikke at man alltid samtidig skal yte den spesialiserte tekniske utdanningen og den rimelige kompensasjonen, og heller ikke at hele avtalen automatisk er gyldig, bare fordi man formelt har anført ett av de 2.
 
 Etter bekreftelse av det lovbestemte kravet etterprøver man ifølge ledd 2 særskilt om den avtalte perioden og ansvarets omfang er rimelige. Avtalen som krenker det lovbestemte kravet i ledd 1 eller rimelighetskriteriet i ledd 2, er ugyldig ifølge ledd 3. Denne normen er imidlertid et kriterium til å etterprøve hver avtales innhold og kjensgjerninger, ikke en norm som fra begynnelsen erklærer alle avtaler om bindingstid gyldige eller ugyldige.
 
-Den omstendighet at arbeidstakeren har underskrevet kontrakten, kan være et bilag som bekrefter avtalens eksistens, men erstatter ikke de lovbestemte kravene. Omvendt, i stedet for straks å konkludere alene fordi avtalen er langvarig, skal man etterprøve, hvilken investering eller hvilken kompensasjon som var, og hvorfor denne perioden er fastsatt (最低服務年限約定).
+Den omstendighet at arbeidstakeren har underskrevet kontrakten, kan være et bilag som bekrefter avtalens eksistens, men erstatter ikke de lovbestemte kravene. Omvendt, i stedet for straks å konkludere alene fordi avtalen er langvarig, skal man etterprøve, hvilken investering eller kompensasjon som faktisk er ytt, og hvorfor denne perioden er valgt (最低服務年限約定).
 
 ## 2. Første lovbestemte krav: spesialisert teknisk utdanning og bæring av kostnaden
 
@@ -65,7 +65,7 @@ Først skal betalingsformålet bekreftes. Om det dreier seg om et alminnelig lø
 
 Veiledningen (函釋) fra Taiwans arbeidsdepartement (勞動部) av 5. juni 2026 forklarer at hvis man som rimelig kompensasjon for avtalen om bindingstid tar en bindingsbonus, en signeringsbonus eller en annen forskuddsbetalt ytelse, skal dette formålet være klart opplyst overfor arbeidstakeren. At arbeidsgiveren etterpå fortolker betalingsformålet på nytt eller omkvalifiserer en del av lønnen som kompensasjon, kan neppe erstatte den opplysningen som skulle ha vært gitt da avtalen ble inngått.
 
-Kompensasjonens rimelighet vurderes ikke alene etter beløpet. Man ser sammen om arbeidstakeren faktisk oppnår en ytterligere fordel, om betalingsvilkårene er klare, hvordan den del som svarer til den allerede utførte tjenesteperioden, tildeles, og om tilbakebetalingens omfang ikke er urimelig (合理補償). Selv hvis en kompensasjon foreligger, tillates ikke uten grense enhver bindingsvarighet eller ethvert beløp for tilbakebetalingsansvar.
+Kompensasjonens rimelighet vurderes ikke alene etter beløpet. Man vurderer samlet om arbeidstakeren faktisk oppnår en ytterligere fordel, om betalingsvilkårene er klare, hvordan den del som svarer til den allerede utførte tjenesteperioden, tildeles, og om tilbakebetalingens omfang ikke er urimelig (合理補償). Selv hvis en kompensasjon foreligger, tillates ikke uten grense enhver bindingsvarighet eller ethvert beløp for tilbakebetalingsansvar.
 
 Det er også viktig at kontraktteksten og den faktiske betalingen stemmer overens. Å etterprøve om betalingen er forsinket eller spredt, om den er betinget, hva det faktisk mottatte beløpet etter skatter og fradrag er, og om det var en særskilt skriftlig melding, hjelper til med å vurdere kompensasjonens omfang og arbeidstakerens faktiske fordel (預付性給付).
 
@@ -84,7 +84,7 @@ Den andre faktoren, muligheten for å erstatte arbeidstakeren (人力替補), fa
 
 Den tredje faktoren ser ikke kun kompensasjonens beløp, men også omfanget. Av betydning er når det betales, og under hvilke vilkår den endelig tildeles arbeidstakeren, hvordan den svarer til den avtalte perioden i sin helhet, og om den allerede oppfylte perioden avspeiles ved opphør underveis. En bonus med samme navn kan vurderes forskjellig etter kontraktstrukturen og virkeligheten.
 
-Den fjerde faktoren kan omfatte forskjellige omstendigheter som påvirker rimeligheten, slik som avtalens inngåelsesforløp, arbeidets art, det som er forklart partene, den faktisk utførte tjenesteperiode og opphørsårsaken. Hver faktors betydning kan variere etter saken, og de omstendigheter som skal tas i betraktning, begrenser seg ikke til de foregående eksempler. Man skal derfor uten utelatelse etterprøve de relevante kjensgjerningene som fremgår av saken.
+Den fjerde faktoren kan omfatte forskjellige omstendigheter som påvirker rimeligheten, slik som avtalens inngåelsesforløp, arbeidets art, det som er forklart partene, den faktisk utførte tjenesteperiode og opphørsårsaken. Hver faktors betydning kan variere etter saken, og de omstendigheter som skal tas i betraktning, begrenser seg ikke til de foregående eksempler. Man skal derfor gjennomgå de relevante kjensgjerningene som fremgår av saken, uten å utelate noe.
 
 I siste ende trengs et forståelig proporsjonalitetsforhold mellom den avtalte perioden, arbeidsgiverens faktiske investering, vanskeligheten ved å erstatte arbeidstakeren, den kompensasjon arbeidstakeren har mottatt, og tilbakebetalingsbyrden. Man må ikke fastlegge gyldigheten på forhånd alene fordi det dreier seg om et bestemt erverv, og heller ikke anvende konklusjonen fra en annen sak uendret. Man skal sammen se utformingen på kontraktens inngåelsestidspunkt og den faktiske oppfyllingsgraden på opphørstidspunktet.
 
@@ -104,11 +104,11 @@ I praksis ser man ikke kun omslaget på utdanningsmaterialet, men man etterprøv
 
 Man tilbakebetaler ikke alltid det fulle beløpet. Hvis signeringsbonusen, bindingsbonusen eller en annen forskuddsbetalt ytelse (預付性給付) er betalt som rimelig kompensasjon for avtalen om bindingstid, skal formålet klart være meddelt arbeidstakeren. Veiledningen fra Taiwans arbeidsdepartement (勞動部) av 5. juni 2026 forklarer at beløpet som skal tilbakebetales ved fratreden før periodens utløp, skal beregnes i forhold til den ennå ikke oppfylte perioden, og at full tilbakebetaling ikke må kreves. Den faktiske konklusjonen beror på en sammenholding av betalingsformålet, avtalens innhold, den allerede utførte tjenesteperioden og opphørsårsaken.
 
-Meldingen må ikke først fremlegges når tvisten oppstår etter betalingen. Arbeidstakeren skal på tidspunktet for kontraktens inngåelse og for mottak av betalingen kunne vite, hvilket beløp som er kompensasjon for løftet om bindingstid, hvor lang den avtalte perioden er, når betalingen opptjenes, og etter hvilken formel som avregnes hvis opphøret skjer underveis (最低服務年限約定).
+Meldingen må ikke først fremlegges når tvisten oppstår etter betalingen. Arbeidstakeren skal på tidspunktet for kontraktens inngåelse og for mottak av betalingen kunne vite, hvilket beløp som er kompensasjon for løftet om bindingstid, hvor lang den avtalte perioden er, når betalingen opptjenes, og etter hvilken formel det avregnes hvis arbeidsforholdet opphører underveis (最低服務年限約定).
 
 Proporsjonalitetsprinsippet på den ikke-oppfylte perioden (預付性給付) krever først fastleggelse av avtalens begynnelses- og sluttdato, de faktisk utførte dager og grunnbeløpet til tilbakebetalingsberegningen. For eksempel skal et fast beløp som slett ikke avspeiler den allerede oppfylte periode, etterprøves overfor veiledningens proporsjonalitetskriterium. Hvis strukturen er en spredt betaling eller en tildeling i trinn, skal man også særskilt beregne, hvilken periode hver rate svarer til (預付性給付).
 
-Tilbakebetalingsspørsmålet skal bekreftes i rekkefølge: avtalens gyldighet, det betalte beløps rettslige karakter, den allerede utførte tjenesteperioden, opphørsårsaken og tilbakebetalingsformelen; det krevde beløpet fastlegges ikke alene, fordi kontrakten bruker uttrykket «kontraktsbot» (違約金).
+Tilbakebetalingsspørsmålet skal bekreftes i rekkefølge: avtalens gyldighet, det betalte beløps rettslige karakter, den allerede utførte tjenesteperioden, opphørsårsaken og tilbakebetalingsformelen. At kontrakten bruker uttrykket «kontraktsbot» (違約金), fastlegger ikke i seg selv beløpet som kreves.
 
 Klausulen om full tilbakebetaling, den faste kontraktsbot uten forbindelse til det faktiske tapet og det ensidige fradraget i lønnen vurderes ikke som ett problem. Det rettslige grunnlag, avtalens innhold, grensene i arbeidsretten og fradragets rettmessighet skal bekreftes særskilt. Det beløp som er skrevet på arbeidsgiverens påkrav, eller den kjensgjerning at arbeidstakeren har betalt en del, fastlegger heller ikke de øvrige rettslige spørsmål.
 
@@ -118,9 +118,9 @@ Man skal også skille tilbakebetalingen av utdanningskostnadene og tilbakebetali
 
 Artikkel 15-1, ledd 4, i Taiwans lov om arbeidsnormer (勞動基準法) fastsetter at hvis arbeidskontrakten opphører før utløpet av bindingstiden av en årsak som ikke kan tilregnes arbeidstakeren, bærer arbeidstakeren verken ansvar for brudd på avtalen om bindingstid eller for tilbakebetaling av utdanningskostnadene. Opphørsårsaken og tilregningen av ansvar skal imidlertid vurderes på grunnlag av konkrete beviser, slik som oppsigelsesmeldingen, arbeidstakerens oppsigelse og bilag om brudd på arbeidsvilkårene.
 
-Man kan derfor ikke slå fast at arbeidstakeren har brutt avtalen bare fordi arbeidsforholdet er opphørt før den avtalte perioden. Man skal etterprøve, hvem som har formulert hvilken viljeserklæring, hvilket det rettslige grunnlaget for kontraktens opphør er, og hvilken part de faktiske omstendighetene som har fremkalt det, kan tilregnes.
+Man kan derfor ikke slå fast at arbeidstakeren har brutt avtalen bare fordi arbeidsforholdet er opphørt før den avtalte perioden. Man skal etterprøve, hvem som har formulert hvilken viljeserklæring, hva det rettslige grunnlaget for kontraktens opphør er, og hvilken part de faktiske omstendighetene som har fremkalt det, kan tilregnes.
 
-Etterprøvingsbilagene kan omfatte oppsigelsesmeldingen, fratredelsesbrevet, bilaget om opphør i gjensidig forståelse, den elektroniske posten og meldingsregisteret, bilagene om endring av arbeidsvilkår og tilstedeværelses- og arbeidsregisteret. Selv hvis helsen eller arbeidsforholdene nevnes, konkluderer man ikke resultatet alene etter det uttrykk, men ser sammen det faktiske forløpet, det lovbestemte opphørsgrunnlag og de tilknyttede beviser.
+Etterprøvingsbilagene kan omfatte oppsigelsesmeldingen, fratredelsesbrevet, bilaget om opphør i gjensidig forståelse, den elektroniske posten og meldingsregisteret, bilagene om endring av arbeidsvilkår og tilstedeværelses- og arbeidsregisteret. Selv hvis helsen eller arbeidsforholdene nevnes, skal ikke ordlyden alene avgjøre utfallet, men man vurderer samlet det faktiske forløpet, det lovbestemte opphørsgrunnlag og de tilknyttede beviser.
 
 Oppsigelsen, opphøret i gjensidig forståelse og påstanden om brudd på arbeidsvilkårene er kun eksempler på omstendigheter som skal etterprøves, ikke en lukket oppregning av de årsaker som ikke kan tilregnes arbeidstakeren. Et opphør med samme navn kan skille seg i parternes vilje og i forløpet, og navnet i dokumentet trenger ikke å stemme med de faktiske forholdene (勞動契約).
 
@@ -130,7 +130,7 @@ Vurderingen av opphørsårsaken påvirker også direkte tilbakebetalingens omfan
 
 Avtalen om bindingstid er ikke noe som fysisk eller rettslig hindrer arbeidstakeren i å fratre. Fratredelsesviljeserklæringen og varslingsfristen (預告期間) er spørsmålet om når arbeidsforholdet opphører; gyldigheten av avtalen om bindingstid og ansvaret for tilbakebetaling av kostnader er spørsmålet om opphøret utløser et økonomisk ansvar.
 
-Når arbeidstakeren opphever en tidsubegrenset arbeidskontrakt (不定期契約), gjelder varslingsfristene i artikkel 16, ledd 1, etter artikkel 15 i Taiwans lov om arbeidsnormer. Artikkel 16 er en forskrift om arbeidsgiverens opphevelse av kontrakten, og på arbeidstakerens fratreden anvendes denne varslingsfristen gjennom artikkel 15.
+Når arbeidstakeren opphever en tidsubegrenset arbeidskontrakt (不定期契約), gjelder varslingsfristene i artikkel 16, ledd 1, etter artikkel 15 i Taiwans lov om arbeidsnormer. Artikkel 16 er en bestemmelse om arbeidsgiverens oppsigelse av kontrakten, og på arbeidstakerens fratreden brukes denne varslingsfristen gjennom artikkel 15.
 
 Varslingsfristen etter den uavbrutte ansiennitet er følgende.
 
@@ -140,9 +140,9 @@ Varslingsfristen etter den uavbrutte ansiennitet er følgende.
 
 Hvis perioden for en tidsbegrenset arbeidskontrakt til et særlig arbeid (特定性定期契約) overskrider 3 år, finner den særskilte normen i artikkel 15 anvendelse. Arbeidstakeren kan, etter å ha arbeidet i 3 år, oppheve kontrakten med et varsel på 30 dager til arbeidsgiveren. Denne normen skal skilles fra den om varsel etter den uavbrutte ansiennitet som gjelder for den tidsubegrensede kontrakten.
 
-Hvis den uavbrutte ansienniteten er under 3 måneder, hvis det dreier seg om en annen type tidsbegrenset kontrakt, eller hvis en lovbestemt årsak til øyeblikkelig opphør påberopes, skal den anvendelige forskriften og kjensgjerningene etterprøves individuelt. Bare det at kontrakten nevner et lengre varsel eller krever øyeblikkelig funksjonsoverdragelse, tillater ikke å fastlegge den rettslige konklusjonen på forhånd.
+Hvis den uavbrutte ansienniteten er under 3 måneder, hvis det dreier seg om en annen type tidsbegrenset kontrakt, eller hvis en lovbestemt årsak til øyeblikkelig opphør påberopes, skal den anvendelige bestemmelsen og kjensgjerningene etterprøves individuelt. Bare det at kontrakten nevner et lengre varsel eller krever øyeblikkelig funksjonsoverdragelse, tillater ikke å fastlegge den rettslige konklusjonen på forhånd.
 
-I praksis skal innholdet og avsendelsesdatoen for arbeidstakerens oppsigelse, den dag arbeidsgiveren faktisk har mottatt den, og parternes meldinger om den siste arbeidsdag bevares. Hvis man i 4 spørsmål skiller det tidspunkt, hvor fratredelsen gyldig får virkning, gyldigheten av avtalen om bindingstid, tilbakebetalingen av utdanningskostnadene eller av den forskuddsbetalte ytelsen og den skade som påberopes særskilt, minsker man feilen å trekke alle konklusjoner av én kontraktklausul.
+I praksis skal innholdet og avsendelsesdatoen for arbeidstakerens oppsigelse, den dag arbeidsgiveren faktisk har mottatt den, og parternes meldinger om den siste arbeidsdag bevares. Hvis man i 4 spørsmål skiller det tidspunkt, hvor fratredelsen gyldig får virkning, gyldigheten av avtalen om bindingstid, tilbakebetalingen av utdanningskostnadene eller av den forskuddsbetalte ytelsen og den skade som påberopes særskilt, reduserer man risikoen for å la én kontraktsklausul avgjøre alle spørsmål.
 
 ## 9. Sjekkliste for arbeidsgiveren og arbeidstakeren
 
@@ -189,6 +189,6 @@ Ved ordningen av bilagene i tidsfølge bør man sammen angi datoen for kontrakte
 
 ---
 
-Denne teksten er et dokument med pedagogisk formål til allment å forklare avtalen om bindingstid i Taiwan, tilbakebetalingen av utdanningskostnadene og av den forskuddsbetalte ytelsen samt fratredelsesvarselet; den er ikke juridisk rådgivning for en konkret arbeidssak (最低服務年限約定). Avtalens gyldighet og ansvarets omfang kan variere etter kontraktens type og innhold, den faktiske utdanning og kostnad, kompensasjonens formål og dens melding, tjenesteperioden, opphørsårsaken og bevisene. Før man formulerer fratredelsen, aksepterer et lønnstrekk, avtaler en tilbakebetaling eller besvarer en tvist, bør man bekrefte de nyeste offisielle kildene og de individuelle omstendighetene.
+Denne teksten gir generell veiledning om avtalen om bindingstid i Taiwan, tilbakebetalingen av utdanningskostnadene og av den forskuddsbetalte ytelsen samt fratredelsesvarselet; den er ikke juridisk rådgivning for en konkret arbeidssak (最低服務年限約定). Avtalens gyldighet og ansvarets omfang kan variere etter kontraktens type og innhold, den faktiske utdanning og kostnad, kompensasjonens formål og dens melding, tjenesteperioden, opphørsårsaken og bevisene. Før man formulerer fratredelsen, aksepterer et lønnstrekk, avtaler en tilbakebetaling eller besvarer en tvist, bør man bekrefte de nyeste offisielle kildene og de individuelle omstendighetene.
 
 **Advokat Wei Tseng (曾雋崴)**

@@ -33,7 +33,7 @@ og at utenlandske aktører ikke fører inn midler under et annet påskudd.
 
 Ved utarbeidelsen av investeringsplanen trenger den nøyaktige selskapsadressen ikke å opgis; angivelse av området er tilstrekkelig (eksempel: byen Taipei). ​
 
-Når senere selskapets forberedelseskonto (公司籌備處帳戶) åpnes i banken, prøver tallrike banker imidlertid leieavtalen (租賃契約) og inspiserer selskapsadressen på stedet.
+Når selskapets forberedelseskonto (公司籌備處帳戶) senere åpnes i banken, prøver tallrike banker imidlertid leieavtalen (租賃契約) og inspiserer selskapsadressen på stedet.
 
 En medarbeider ved en taiwansk bank har personlig sagt til meg at
 
@@ -63,7 +63,7 @@ Det er mulig.
 
 Banken krever som regel en dobbelt identitetskontroll.
 
-Uten oppholdskort kan du hos Taiwans immigrasjonsmyndighet søke om ‘**grunndataarket**(統一證號基本資料表)’.
+Uten oppholdskort kan du hos Taiwans immigrasjonsmyndighet søke om «grunndataarket» (統一證號基本資料表).
 
 Utstedelsen er mulig samme dag,
 
@@ -81,7 +81,7 @@ Du kan oppgi ulike yrkeserfaringer, herunder bierverv.
 
 Du kan redegjøre så utførlig at de prøvende personene kan overbevises.
 
-Om dette punktet bør du drøfte dette grundig med en advokat i Taiwan.
+Dette punktet bør du drøfte grundig med en advokat i Taiwan.
 
 ​
 

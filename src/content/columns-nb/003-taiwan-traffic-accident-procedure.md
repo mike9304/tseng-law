@@ -175,7 +175,7 @@ Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring 
 
 Ved eneulykker med 1 kjøretøy er dets fører som regel ikke ytelsesmottaker av den obligatoriske forsikringen for det kjøretøyet. Ved ulykker med flere kjøretøyer kan føreren imidlertid kreve ytelser hos den obligatoriske forsikringsgiveren for et annet involvert kjøretøy.
 
-Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør 200.000 TWD, invaliditetsytelser (失能) etter de lovbestemte 15 trinn 80.000 TWD–3.000.000, dødsfallsytelsen 3.000.000 TWD, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 tilskadekomne person og 1 ulykke utgjør 3.200.000 TWD. For tidligere ulykker kan den tidligere norm gjelde.
+Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør 200.000 TWD, invaliditetsytelser (失能) etter de lovbestemte 15 trinn 80.000 TWD–3.000.000, dødsfallsytelsen 3.000.000 TWD, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 skadelidt og pr. 1 ulykke utgjør 3.200.000 TWD. For tidligere ulykker kan den tidligere norm gjelde.
 
 Ansvarsforsikring overfor tredjemann (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktsmessige valgprodukter. Den faktiske dekning avviker etter forsikret, tak, egenandel (自負額), unntak, uaktsomhet og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøkes et for et.
 
@@ -275,7 +275,7 @@ En betinget dom (緩刑) kan være mulig i enkelte saker; dette er ikke et løft
 
 ​
 
-Q19. Er den straffbare flukt alltid oppfylt når man forlater ulykkesstedet?
+Q19. Er straffbar flukt fra ulykkesstedet alltid oppfylt når man forlater stedet?
 
 ​
 

@@ -1,0 +1,141 @@
+WO-F-nb r4 — Grok 4.7 fix lane
+Date: 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-nb-r4
+Sources: RULEBOOK-FIX.md (R2–R10), ACCEPTED-ROUND.md, reviews/native/rounds/r4/nb-a.md, nb-b.md
+
+## Rows applied
+
+Part A (nb-a), applied:
+1 P1 001 investee is the company receiving the investment, not the contributed asset.
+3 P1 004 Danish Optagelsen / krefter → registrering av dagene personalet oppholder seg i Taiwan.
+4 P1 007 準據法 is the applicable law (hvilken rett som gjelder), including the later gloss and the closing paragraph.
+5 P1 007 戶政機關 is the household-registration authority (4 glosses moved off «register»; 戶籍 glosses left on the register).
+6 P1 007 misplaced 子女最佳利益 removed from the marriage-breakdown phrase (2: FAQ answer and body; the gloss remains on barnets beste).
+7 P1 007 不當得利 removed from «ytterligere risiko»; the term stays glossed as ugrunnet berikelse earlier in the file.
+8 P1 007 «lovlig forbudt opptak» → opptak i strid med loven.
+9 P2 001 the inquiry result does not itself show that other permits are met.
+10 P2 001 separate legal personality, not «because of the legal person».
+11 P2 002 concepts that are often confused, not physical objects.
+12 P2 002 the bookkeeping sentence now has a subject for the negation.
+14 P2 003 only the grammar: «pr. 1 tilskadekomne person og 1 ulykke» → «pr. 1 skadelidt og pr. 1 ulykke». Both digits kept (see skipped).
+16 P2 003 definite/indefinite on straffbar flukt.
+17 P2 004 payment for assets, not asset prices.
+18 P2 004 «til 1» completed as «til 1 rettssubjekt» (digit kept).
+19 P2 004 hvilken + indefinite noun, one hvilken per item.
+20 P2 004 and the tax-filing sweep: Danish angivelse/skatteangivelse for filings → melding / mva-termin / skattemelding (24 instances in 004, including the «30 %» figure, which is tallet, not a return).
+21 P2 004 «fortjener det anbefaling» twice → bør.
+22 P2 006 value for money. Digit in «1 klipp» kept.
+23 P2 007 a divorce already completed abroad.
+24 P2 007 reward-or-punish a parent. Digit in «1 kjensgjerning» kept.
+25 P2 007 doubled stand: sivilstandsstand → sivilstand (3).
+26 P2 008 forutgående underretning of the worker → forutgående varsel (2, same table cell).
+27 P2 008 åpenbarer → røper.
+28 P2 guidance privacy intro. Denial of a technical guarantee kept, without the word garanti (the nb content test bans /garanti/i even in a denial). Final: «og er ikke et løfte om at behandlingen er teknisk trygg.»
+29 P2 guidance «lover ikke at en bestemt advokat tar saken, og stiller ikke med tolk.» The refusal stays negative.
+30 P2 guidance heading «Hvor langt en artikkel kan tjene som orientering».
+31 P2 nb bio only: «Mastergrad (M.S.) ved Institute of Finance, National Taiwan University». The preserved institution string stays byte-identical. The French bio line was touched by a first replace and restored.
+
+Part B (nb-b), applied:
+1 P1 011 retain for the statutory period and at the statutory place.
+2 P1 018 the label above the registration comparison no longer says the section is about drafting a contract. The English source has the same sentence; the Norwegian now describes the comparison the paragraphs actually make.
+3 P2 010 interest stated in the judgment.
+4 P2 010 skadelidte får kjennskap (also the later «offeret» in the same article, 2).
+5 P2 010 the facts may support another cause of action. 民法 gloss kept.
+6 P2 012 compliance does not itself secure a particular later outcome.
+7 P2 012 the anonymized rider stays A; han removed.
+8 P2 014 two alternative statutory grounds. Digit 2 kept.
+9 P2 014 investment or compensation actually provided, and why that period was chosen.
+10 P2 014 the word «kontraktsbot» does not itself fix the amount.
+11 P2 014 Article 16 is a bestemmelse about the employer’s oppsigelse.
+12 P2 015 assisted-inquiry service, not an information desk.
+13 P2 015 an item absent from the list is not exempt from the check.
+14 P2 015 公司登記 is company registration (2: the refusal sentence and the closing).
+15 P2 016 stability of the child’s living arrangements.
+16 P2 016 rights exclusively personal to the decedent.
+17 P2 016 a guardian is not the same person as the parent who exercises parental responsibility.
+18 P2 017 membership certificate, not a membership card.
+19 P2 018 investor classification.
+21 P2 010 limitation: hvis den ikke gjøres gjeldende innen 2 år … Digits 2 and 10 kept.
+22 P2 010 the disability rating is the subject.
+23 P2 011 uansett hvilken struktur.
+24 P2 011 the records are kept in a state that makes them findable.
+26 P2 013 doubled dette.
+27 P2 013 «grunndataarket» (統一證號基本資料表), guillemets, gloss outside the bold.
+28 P2 014 ulike lovbestemmelser og ulike bevis; the later «anvendelige forskriften» in the same article is also bestemmelsen (same misuse of forskrift for a statutory provision).
+29 P2 014 hva det rettslige grunnlaget.
+30 P2 014 the formula used to calculate repayment.
+31 P2 016 for en familie.
+32 P2 016 da vedkommende fikk kjennskap. Digit 3 kept.
+33 P2 016 Taiwans sivilloven (2: FAQ and the body of section 7). Forms that were already definite were left.
+34 P2 017 avhengigheten av.
+35–39 P2 010 the «ikke alene ses / anbefales ikke alene / tap på grunn av tap / skulle følges / bestanddeler av forbrytelsen» calques.
+40–43 P2 011 platform procedure, PIF as a samling, the closing formula, and a presentation that evokes a health professional.
+44–45 P2 012 forbikjøring innebærer risiko; nok plass til å komme trygt tilbake.
+46 P2 013 når kontoen senere åpnes.
+47 P2 014 ser sammen → vurderer samlet (2 in 014). No «ser sammen» remains in 016.
+48 P2 014 and 016 uten utelatelse → uten å utelate noe (2).
+49–50 P2 014 ordlyden does not decide the outcome; the risk of letting one clause decide every question.
+51–52 P2 016 the contract alone is not enough; the share ratio varies by arveklasse. hvormed removed.
+53–54 P2 017 funds transferred as the purchase price; supervision is not avoided by the label alone.
+55 P2 018 filial som er lovlig registrert i Taiwan.
+
+Guidance pack otherwise: VÅRT TEAM, KONTORER, «Fullstendig profil (på engelsk)», consultation lock, and llms.txt notices were already in Bokmål and were not rewritten. consultationNotice remains a substring of the language FAQ answer; confidentialNotice remains a substring of the privacy paragraph. The pinned bio amount «1 570 000 TWD» was not reformatted, and «TWD 1.57M» was not inserted.
+
+## Rows skipped
+
+nb-a 2 P1 — 004 link label «artikkel 10 i næringsavgiftsloven» on pcode=G0340028&flno=3. Not applied. See reviewer-wrong below. URL and the digit 10 unchanged.
+
+nb-a 13 P2 and nb-b 20 P2 — space as thousands separator («500 000», «1 579 589»). Skipped. ACCEPTED-ROUND forbids space thousands; scripts/check-column-translation.mjs sets NUMBER_THOUSAND_STYLE.nb to 'dot'. Column amounts stay 500.000 / 1.579.589 / 3.000.000 and the rest. The guidance bio’s existing «1 570 000» was left as it was.
+
+nb-a 15 P2 and nb-b 25 P2 — delete U+200B, drop 005’s empty bold lines, and turn 003 Q16–Q20 into ## headings. Skipped. The checker requires the same ZWSP count as the Korean source (003: 52, 005: 8 including 4 bold-only lines, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3) and the same heading levels. Removing the characters or adding headings fails blocks/headings. 005 and 009 had no other row.
+
+nb-a 14 P2, the other glued «1»s — «mer enn 1 utenlandsk statsborger» (005), «på 1 navn» (007), «fullførte 1 års» and «per 1 år» (008). Digits not removed. The Korean source counts them (1명 / 1건 / 1년 / 1인), and a missing 1 fails the number check. «en/et» is not in the nb number lexicon unless it is tied to a listed unit, so writing the digit out as a word would not replace it. Those phrases were already grammatical. Only the ungrammatical 003 formula was rephrased, with both 1s kept.
+
+## Systemic patterns
+
+- Danish tax-filing angivelse in 004: 24 instances → melding, mva-termin, or skattemelding. «angivelse av området» in 013 (stating the area) and «registrerte angivelsene» in 011 (registered particulars) were left; they are not tax returns.
+- Closing formula «bestemt til … å / til allment å forklare»: 4 (011, 014, 016, 017) → «gir generell veiledning om». 007’s «til alminnelig belysning» is a noun phrase and was left.
+- ser sammen: 2 in 014. None found in 016.
+- uten utelatelse: 2 (014, 016).
+- 戶政機關 glossed onto the register: 4 in 007.
+- sivilstandsstand: 3 in 007.
+- Misplaced 子女最佳利益: 2 in 007.
+- Taiwans sivillov without the definite article: 2 in 016.
+- forutgående underretning of the worker: 2 in the 008 table. Official underretning in 011 (the authority notifying the company) was left.
+- 公司登記 called juridisk person: 2 in 015.
+- fortjener det anbefaling: 2 in 004.
+- offeret for the injured person: 2 in 010.
+- Thousands with a period, and U+200B layout: swept, then left (see skipped). No further Korea-as-default-reader, result-promise, or English chrome rows remained beyond the Master line.
+
+## Reviewer got wrong (not applied)
+
+nb-a row 2. The shared URL is the Business Tax Act (pcode G0340028, flno=3). Korean 004 and English 004 name that act’s article 10 (영업세법 제10조 / Article 10 of the Value-Added and Non-Value-Added Business Tax Act). The reviewer’s rewrite would relabel it as the nonresident dividend-withholding rule because 001’s Norwegian caption follows a different Korean caption on the same URL. That would contradict the English source and the statute code. The URL and the article number were not changed.
+
+## Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nb --lang nb 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=144
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nb src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+The 21 is the count before this log file was added. Number WARNs (extra digits, unparsed Korean lexical items such as 제3자) remain inside PASS files; none of them are missing-number FAILs. One english FAIL on 004 («for» three times in a Latin-only sentence) was rewritten to skattemeldingsprosedyrer / skattemeldingsplanene i begge områder and rechecked as part of the PASS above.

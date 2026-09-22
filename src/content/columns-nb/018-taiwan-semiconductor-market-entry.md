@@ -23,7 +23,7 @@ Når handelen med taiwanske kunder begynner, kan det utenlandske hovedsetet mott
 
 Det som først skal klarlegges, er hvem i Taiwan som påtar seg hva. Den strukturen som skal vurderes, endrer seg etter om det utenlandske hovedsetet fortsetter med å underskrive salgskontraktene, et taiwansk selskap kjøper varer og selger dem videre, eller det lokale personalet kun yter teknisk støtte.
 
-Denne teksten er en allmenn veiledning for virksomheter innen halvledermaterialer, -komponenter og -utstyr, som utformer inntredelsesstrukturen i Taiwan. De følgende scenariene og kontrollpunktene er hypotetiske eksempler og vurderingsforslag, ikke et faktisk mandat fra en konkret virksomhet og heller ikke et ensartet stiftelseskrav. Skatter, eksportkontroll, tillatelser per produkt og inndelingen av investoren krever ennå en særskilt analyse.
+Denne teksten er en allmenn veiledning for virksomheter innen halvledermaterialer, -komponenter og -utstyr, som utformer inntredelsesstrukturen i Taiwan. De følgende scenariene og kontrollpunktene er hypotetiske eksempler og vurderingsforslag, ikke et faktisk mandat fra en konkret virksomhet og heller ikke et ensartet stiftelseskrav. Skatter, eksportkontroll, tillatelser per produkt og hvordan investoren klassifiseres, krever fortsatt en særskilt vurdering.
 
 ## 1. Fordelingen av handel og drift klarlegges før valget av registreringsform
 
@@ -52,7 +52,7 @@ Hovedforskjellen mellom et taiwansk datterselskap (子公司) og en taiwansk fil
 | Struktur | Grunnskille | Hva man først bør bekrefte |
 |---|---|---|
 | Taiwansk datterselskap (子公司) | Stiftes i samsvar med Taiwans rett, med egen rettssubjektivitet, og er et annet rettssubjekt enn den utenlandske mor. | Fordi datterselskapet er en selvstendig juridisk person, skal det bekreftes hvordan leveringen, tjenestene, den teknologiske lisensen og kostnadsdelingen med moren organiseres. |
-| Taiwansk filial av et utenlandsk selskap (分公司) | Lovlig i Taiwan registrert filial, uten rettssubjektivitet atskilt fra hovedsetet, annerledes enn et særskilt stiftet datterselskap. | Filialen er en del av det utenlandske hovedsetet, ikke en selvstendig juridisk person, så hovedsetet bærer pliktene direkte. Bekreft omfanget av fullmaktene for filialens representant og den interne fordelingen av de ytre kontraktene, leveringen, dekningen av mangler og etterservicen. |
+| Taiwansk filial av et utenlandsk selskap (分公司) | Filial som er lovlig registrert i Taiwan, uten rettssubjektivitet atskilt fra hovedsetet, annerledes enn et særskilt stiftet datterselskap. | Filialen er en del av det utenlandske hovedsetet, ikke en selvstendig juridisk person, så hovedsetet bærer pliktene direkte. Bekreft omfanget av fullmaktene for filialens representant og den interne fordelingen av de ytre kontraktene, leveringen, dekningen av mangler og etterservicen. |
 | Representasjonskontor i Taiwan (代表人辦事處) | Handelsstøttepunkt registrert i samsvar med artikkel 386 i selskapsloven; må i Taiwan ikke utøve handelsvirksomhet. | Fordi det ikke må utøve handelsvirksomhet, bekreftes om den faktiske virksomheten forblir innen det tillatte feltet. |
 
 ## 3. Former for det taiwanske datterselskapet: selskap med begrenset ansvar (有限公司) og aksjeselskap (股份有限公司)
@@ -73,7 +73,7 @@ Når et utenlandsk selskap stifter et taiwansk datterselskap, forhåndskontrolle
 
 Derimot kreves til stiftelsen av en taiwansk filial av et alminnelig utenlandsk selskap i utgangspunktet ikke en investeringstillatelse fra avdelingen for investeringsgjennomgang (經濟部投資審議司); Handelsutviklingskontoret under Taiwans økonomidepartement (經濟部商業發展署) behandler registreringen av filialen og den tilhørende kapitalfastsettelsen. Den forutgående navnekontrollen, overføringen av driftskapitalen, kapitaletterprøvingen og skatteregistreringen er likevel nødvendige; tidsplanen er som regel kortere.
 
-Avsnittet over er veiledning om hvordan kontrakten utformes. At en bestemt selskapsform er valgt, gjør ikke transaksjonen lovlig og utelukker ikke tvister.
+Avsnittet over sammenligner bare registreringsprosessen for filial og datterselskap. At en bestemt selskapsform er valgt, gjør ikke transaksjonen lovlig og utelukker ikke tvister.
 
 ## 5. Selskapsregistreringen og ingeniørens rettmessige arbeid er ikke det samme
 

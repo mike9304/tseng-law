@@ -1271,7 +1271,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hva denne siden ikke lover',
           paragraphs: [
-            'Vi lover ingen svartid, bekrefter ingen time via denne siden, lover ikke en bestemt advokat og stiller ikke med tolk. Skriftlig oversettelse er noe annet: meldingen din oversettes ikke automatisk.',
+            'Vi lover ingen svartid, bekrefter ingen time via denne siden, lover ikke at en bestemt advokat tar saken, og stiller ikke med tolk. Skriftlig oversettelse er noe annet: meldingen din oversettes ikke automatisk.',
             'Når du sender en forespørsel, lagres innholdet og venter på vurdering. Får du ikke svar etter en tid, kan du skrive på nytt til e-postadressen som er oppgitt på kontaktsiden.',
           ],
         },
@@ -1341,7 +1341,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Hva kontaktskjemaet i denne norske delen samler inn, hvordan originalteksten behandles, og hvordan du når oss om opplysningene dine.',
       intro:
-        'Denne delen gjelder bare kontaktskjemaet på disse veiledningssidene. Den beskriver hvordan opplysningene behandles, og gir ingen teknisk sikkerhet.',
+        'Denne delen gjelder bare kontaktskjemaet på disse veiledningssidene. Den beskriver hvordan opplysningene behandles, og er ikke et løfte om at behandlingen er teknisk trygg.',
       sections: [
         {
           heading: 'Hvilke data som samles inn',
@@ -1464,7 +1464,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hva en artikkel kan brukes til som orientering',
+          heading: 'Hvor langt en artikkel kan tjene som orientering',
           paragraphs: [
             'Artiklene er alminnelige opplysninger på publiseringstidspunktet. Regler og praksis kan endre seg, og en artikkel dekker ikke alle omstendighetene i din sak.',
             'Ikke ta en beslutning i en konkret sak bare ut fra en artikkel. Bruk den til å få oversikt, og drøft dine egne dokumenter særskilt med en advokat; denne siden er ikke et rådgivningsmøte.',

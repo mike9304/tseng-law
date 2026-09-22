@@ -23,7 +23,7 @@ I tillegg til klipping fantes det ulike tjenester slik som barbering og ansiktsp
 
 Og det viktigste var at man sittende kunne få hårvask med massasje av hodebunn, skuldre og nakke.
 
-1 klipp var nok til å få denne behandlingen på høyt nivå, så forholdet mellom pris og kvalitet var fremragende.
+1 klipp var nok til å få denne behandlingen på høyt nivå, så man fikk mye for pengene.
 
 Det lignet mye på den vietnamesiske hårvasken i dag.
 

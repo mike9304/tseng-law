@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Bilde som forklarer vurderingen av ansvaret ved forbikjøringsulykker i Taiwan og den sikre forbikjøringsprosedyren](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Når det forankjørende kjøretøyet kjører langsomt, kan forbikjøring (超車) virke som noe helt vanlig, men det er en kjøring med betydelig risiko. Før du begynner på en forbikjøring, skal du vurdere veistrekningen, trafikksituasjonen i begge retninger, de forankjørende kjøretøyenes bevegelse og rommet til trygt å vende tilbake til det opprinnelige kjørefeltet (道路交通安全規則).
+Når det forankjørende kjøretøyet kjører langsomt, kan forbikjøring (超車) virke som noe helt vanlig, men det innebærer betydelig risiko. Før du begynner på en forbikjøring, skal du vurdere veistrekningen, trafikksituasjonen i begge retninger, de forankjørende kjøretøyenes bevegelse og om det er nok plass til å kjøre forbi og komme trygt tilbake til det opprinnelige kjørefeltet (道路交通安全規則).
 
 ## Forbikjøringsvilkår ifølge artikkel 101 i ferdselssikkerhetsforskriftene (道路交通安全規則)
 
@@ -43,7 +43,7 @@ B pådro seg alvorlige hodeskader og omkom på stedet; A mistet bevisstheten og 
 
 As og Bs familier så først det plutselige kjørefeltskiftet til kjøretøy nummer 2 som den vesentligste årsaken til sammenstøtet. Saken førte til en rettssak, og i sakens forløp ble det gjennomført flere sakkyndige undersøkelser (鑑定) av ulykken.
 
-Ifølge resultatet av den sakkyndige undersøkelsen bar A det vesentligste ansvaret for dette sammenstøtet. Denne konklusjonen var begrenset til denne sakens kjensgjerninger. Den sakkyndige undersøkelsen tok samlet i betraktning at A ville forbikjøre 2 forankjørende kjøretøy som kjørte i rekke, at han kjørte inn i det motsatte kjørefeltet, at han kjørte med en hastighet som etterlot for liten tid til å bremse, at de foreskrevne horn- og frontlyktsignalene manglet, samt kjørefeltskiftet til kjøretøy nummer 2, veiens og kjørefeltenes struktur og de øvrige sikrede bevisene (鑑定).
+Ifølge resultatet av den sakkyndige undersøkelsen bar A det vesentligste ansvaret for dette sammenstøtet. Denne konklusjonen var begrenset til denne sakens kjensgjerninger. Den sakkyndige undersøkelsen tok samlet i betraktning at A ville forbikjøre 2 forankjørende kjøretøy som kjørte i rekke, at A kjørte inn i motgående kjørefelt og med en hastighet som ga for liten tid til å bremse, at de foreskrevne horn- og frontlyktsignalene manglet, samt kjørefeltskiftet til kjøretøy nummer 2, veiens og kjørefeltenes struktur og de øvrige sikrede bevisene (鑑定).
 
 At det i enkelte saker kommer slike sakkyndige resultater, betyr ikke at 1 utelatelse av et foreskrevet signal alltid fastlegger ansvaret (鑑定). Uaktsomheten (過失) ved en forbikjøringsulykke avhenger av ulykkesstedet, kjørefeltinndelingen, hastigheten, kjøretøybevegelsene, signalene, tidsintervallene, sikten og de øvrige bevisene.
 
@@ -51,7 +51,7 @@ At det i enkelte saker kommer slike sakkyndige resultater, betyr ikke at 1 utela
 
 Før en forbikjøring skal du først undersøke om stedet eller trafikksituasjonen faller inn under forbikjøringsforbudet. Gjelder prosedyren for samme kjørefelt, så gi det foreskrevne horn- eller frontlyktsignalet uten å tvinge det forankjørende kjøretøyet til å vike, vent på et tydelig viketegn og fullfør forbikjøringen med tilstrekkelig avstand og trygg avstand til å komme tilbake i feltet (超車).
 
-Overholdelsen av artikkel 101 er viktig, men sikrer i seg selv verken unngåelse av en ulykke eller et senere resultat av sakkyndig undersøkelse eller rettssak. Førere skal holde en ekstra sikkerhetsmargin og tilpasse seg situasjonen foran seg.
+Overholdelsen av artikkel 101 er viktig, men sikrer i seg selv verken at en ulykke unngås, eller at en senere sakkyndig undersøkelse eller rettssak får et bestemt utfall. Førere skal holde en ekstra sikkerhetsmargin og tilpasse seg situasjonen foran seg.
 
 Som supplement kan du se [bildet av forbikjøringsreglene og -prosedyren](https://gonews.com.tw/car/daily/21934/). Da det er en sekundær kilde, bør du ved gjennomgangen av de juridiske vilkårene også lese de gjeldende offisielle forskriftene (道路交通安全規則).
 

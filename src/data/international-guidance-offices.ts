@@ -119,7 +119,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     title: 'Mga tanggapan',
     description: 'Mga address ng tanggapan ng Hovering International Law Firm sa Taiwan.',
     officeLabel: 'Tanggapan',
-    mapPreviewLabel: 'Paunang tanaw ng mapa',
+    mapPreviewLabel: 'Preview ng mapa',
     koreaOfficeTitle: 'Tanggapan sa Korea',
     koreaAddressCardLabel: 'Address ng tanggapan sa Korea',
     koreaMapLinkLabel: 'Tingnan sa Naver Map',
@@ -128,7 +128,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     faxLabel: 'Fax',
     mapLinkLabel: 'Tingnan sa mapa',
     photoAlts: [
-      'Opisina ng tanggapan sa Taipei, Hovering International Law Firm',
+      'Silid-tanggap ng tanggapan sa Taipei, Hovering International Law Firm',
       'Silid-trabaho ng abogado sa Taipei, Hovering International Law Firm',
       'Silid-pulungan ng tanggapan sa Taipei, Hovering International Law Firm',
     ],

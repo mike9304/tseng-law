@@ -1755,7 +1755,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         description:
           'Pangkalahatang paliwanag sa Filipino tungkol sa saklaw ng gawain ng Hovering International Law Firm sa Taiwan, ang mga wika ng konsultasyon, at kung paano magsimulang makipag-ugnayan.',
         intro:
-          'Tumutulong ang Hovering International Law Firm sa mga dayuhang kliyente, kabilang ang mga nasa Taiwan, para sa mga usaping nasa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya, sibil na alitan, usaping pag-aasawa at pampamilya, paggawa, kriminal, at intelektuwal na ari-arian. Tutulungan kayo ng gabay na ito sa Filipino na malaman kung anong gawain ang saklaw namin, ano ang dapat ihanda, at paano makipag-ugnayan. Pangkalahatang impormasyon ito, hindi legal na payo para sa sarili ninyong usapin.',
+          'Tumutulong ang Hovering International Law Firm sa mga dayuhang kliyente, kabilang ang mga may kaugnayan sa Taiwan, para sa mga usaping nasa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya, sibil na alitan, usaping pag-aasawa at pampamilya, paggawa, kriminal, at intelektuwal na ari-arian. Tutulungan kayo ng gabay na ito sa Filipino na malaman kung anong gawain ang saklaw namin, ano ang dapat ihanda, at paano makipag-ugnayan. Pangkalahatang impormasyon ito, hindi legal na payo para sa sarili ninyong usapin.',
         sections: [
           {
             heading: 'Ano ang tinutulungan namin',
@@ -1768,7 +1768,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Magkaibang bagay ang wika ng pahina at ang wika ng konsultasyon',
             paragraphs: [
               'Nakasulat sa Filipino ang pahinang ito, ngunit ang aktwal na konsultasyon sa abogado ay isinasagawa lamang sa apat na wika: Ingles, Tsino (中文), Hapon, at Koreano. Ang pagkakabasa ninyo ng gabay sa Filipino ay hindi nangangahulugang sa Filipino gagawin ang pag-uusap sa abogado.',
-              'Hindi kami nangangako ng interpreter (tagapagpaliwanag sa pasalita) para sa pag-uusap, hindi kami nangangako ng sagot sa loob ng takdang panahon, at hindi kinukumpirma ang appointment sa pahinang ito. Kung hindi ninyo magagamit ang apat na wikang nabanggit, ipinapaliwanag ng pahinang “Makipag-ugnayan” kung paano namin kinukumpirma ang paraan ng pakikipag-usap.',
+              'Hindi kami nangangako ng interpreter para sa pasalitang pag-uusap, hindi kami nangangako ng sagot sa loob ng takdang panahon, at hindi kinukumpirma ang appointment sa pahinang ito. Kung hindi ninyo magagamit ang apat na wikang nabanggit, ipinapaliwanag ng pahinang “Makipag-ugnayan” kung paano namin kinukumpirma ang paraan ng pakikipag-usap.',
             ],
           },
           {
@@ -1805,21 +1805,21 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Pamumuhunan at pagtatatag ng kompanya sa Taiwan',
             paragraphs: [
-              'Tumutulong ang tanggapan sa mga dayuhang mamumuhunan at kompanyang nagtatatag o nagpapatakbo ng negosyo sa Taiwan: pagpili ng anyo ng entidad, paghahanda at paghahain ng mga dokumento, pagpapadala ng puhunan, mga hakbang sa bangko, pagsusuri sa lugar ng negosyo, at ang mga kahingiang natatangi sa bawat uri ng industriya. Tumutulong din kami sa mga usaping accounting at pagbubuwis na nagmumula sa pagtatatag at pagpapatakbo ng kompanya sa Taiwan.',
-              'Nagkakaiba-iba ang pagkakasunod-sunod at haba ng proseso ayon sa napiling anyo ng entidad, sa mamumuhunan, sa uri ng negosyo, sa mga bangkong kasangkot, at sa mga dokumentong nasa kamay. Hindi awtomatikong nagbibigay ng karapatang manirahan (居留) o permiso sa trabaho (工作許可) ang pagtatatag ng kompanya: magkahiwalay na proseso ang mga ito at sinusuri nang isa-isa.',
+              'Tumutulong ang tanggapan sa mga dayuhang mamumuhunan at kompanyang nagtatatag o nagpapatakbo ng negosyo sa Taiwan: pagpili ng anyo ng entidad, paghahanda at paghahain ng mga dokumento, paghuhulog ng kapital, mga hakbang sa bangko, pagsusuri sa lugar ng negosyo, at ang mga kahingiang natatangi sa bawat uri ng industriya. Tumutulong din kami sa mga usaping accounting at pagbubuwis na nagmumula sa pagtatatag at pagpapatakbo ng kompanya sa Taiwan.',
+              'Nagkakaiba-iba ang pagkakasunod-sunod at haba ng proseso ayon sa napiling anyo ng entidad, sa mamumuhunan, sa uri ng negosyo, sa mga bangkong kasangkot, at sa mga dokumentong nasa kamay. Hindi awtomatikong nagbibigay ng permiso sa paninirahan (居留) o permiso sa trabaho (工作許可) ang pagtatatag ng kompanya: magkahiwalay na proseso ang mga ito at sinusuri nang isa-isa.',
             ],
           },
           {
             heading: 'Sibil na alitan at paghahabol ng danyos',
             paragraphs: [
-              'Kabilang dito ang mga alitan sa kontrata, paghahabol ng danyos dahil sa tort (quasi-delict) o gawang labag sa batas sa labas ng kontrata, at mga alitan ng mamimili. Karaniwang nagsisimula ang trabaho sa muling pagsasaayos ng pagkakasunod-sunod ng mga pangyayari at sa pagtingin sa mga dokumento at ebidensiyang nasa kamay, saka lamang pag-uusapan ang paraan ng pagharap dito.',
-              'Malaki ang epekto ng mga takdang panahon, kasama ang panahong itinakda ng batas para maghain ng kaso, at ng kabuuan ng ebidensiya sa isang sibil na usapin, kaya banggitin agad ang mga petsang alam ninyo. Kung nasa inyo pa ang kontrata, ang mga palitan ng mensahe, ang patunay ng bayad, o mga larawan ng pangyayari, sabihin ninyo ito mula sa unang mensahe.',
+              'Kabilang dito ang mga alitan sa kontrata, paghahabol ng danyos dahil sa tort (quasi-delict) o gawang labag sa batas sa labas ng kontrata, at mga alitan ng mamimili. Karaniwang nagsisimula ang trabaho sa muling pagsasaayos ng pagkakasunod-sunod ng mga pangyayari at sa pagtingin sa mga dokumento at ebidensyang nasa kamay, saka lamang pag-uusapan ang paraan ng pagharap dito.',
+              'Malaki ang epekto ng mga takdang panahon, kasama ang panahong itinakda ng batas para maghain ng kaso, at ng kabuuan ng ebidensya sa isang sibil na usapin, kaya banggitin agad ang mga petsang alam ninyo. Kung nasa inyo pa ang kontrata, ang mga palitan ng mensahe, ang patunay ng bayad, o mga larawan ng pangyayari, sabihin ninyo ito mula sa unang mensahe.',
             ],
           },
           {
             heading: 'Usaping pag-aasawa, pampamilya, at pagmamana',
             paragraphs: [
-              'Hinahawakan ng tanggapan ang mga usapin ng diborsiyo sa ilalim ng batas ng Taiwan (離婚), paghahati ng ari-arian, paggamit at pagtupad ng karapatan at tungkulin sa menor de edad na anak (未成年子女權利義務之行使或負擔), pagdalaw sa anak (會面交往), at pagmamana (繼承), pati na kapag nasa magkaibang bansa ang mga panig o ang ari-arian. Ang mga usaping pampamilyang may kaugnayan sa ibang bansa ay karaniwang nangangailangan ng dagdag na pagsusuri sa mga dokumento ng katayuang sibil (戶籍), sa anyo ng mga papeles, at sa paraan ng pagpapatunay ng mga ito sa Taiwan.',
+              'Hinahawakan ng tanggapan ang mga usapin ng diborsiyo sa ilalim ng batas ng Taiwan (離婚), paghahati ng ari-arian, paggamit at pagtupad ng karapatan at tungkulin sa menor de edad na anak (未成年子女權利義務之行使或負擔), pagdalaw sa anak (會面交往), at pagmamana (繼承), pati na kapag nasa magkaibang bansa ang mga panig o ang ari-arian. Ang mga usaping pampamilyang may kaugnayan sa ibang bansa ay karaniwang nangangailangan ng dagdag na pagsusuri sa mga dokumento ng rehistro ng sambahayan (戶籍), sa anyo ng mga papeles, at sa paraan ng pagpapatunay ng mga ito sa Taiwan.',
               'Dahil madalas may takdang panahon ang mga usaping pampamilya at sabay-sabay ang ilang hakbang, mabuting banggitin sa unang buod ang ugnayan ng mga panig, ang kasalukuyang tirahan, at ang mga hakbang na natapos o kasalukuyang isinasagawa.',
             ],
           },
@@ -1834,7 +1834,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Usaping kriminal',
             paragraphs: [
               'Tumutulong ang tanggapan sa yugto ng imbestigasyon at sa yugto ng paglilitis, para sa panig ng pinararatangan o nasasakdal at para rin sa panig ng biktima, pati sa pagtaya ng panganib na kriminal na maaaring lumitaw sa pagnenegosyo.',
-              'Karaniwang maikli ang mga takdang panahon sa usaping kriminal at nakatakda ang mga yugto nito, kaya kung may natanggap na kayong papeles mula sa awtoridad, banggitin ninyo agad ang petsang nakasulat doon upang masuri ang usapin ayon sa pagkaapurahan nito.',
+              'Karaniwang maikli ang mga takdang panahon sa usaping kriminal at nakatakda ang mga yugto nito, kaya kung may natanggap na kayong papeles mula sa awtoridad, banggitin ninyo agad ang petsang nakasulat doon upang masuri ang nilalaman ayon sa tamang pagkakasunod-sunod.',
             ],
           },
           {
@@ -1865,7 +1865,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Pagkakatatag at kaayusan',
             paragraphs: [
               'Itinatag ang Hovering International Law Firm (昊鼎國際法律事務所) noong 2016 ng mga abogadong nagmula sa National Taiwan University (國立臺灣大學). Pinagsasama ng pangalang Tsino nito ang dalawang karakter na 昊 (“malawak na kalangitan”) at 鼎 (“matatag na pundasyon”), na sumasalamin sa direksyon ng tanggapan mula sa simula.',
-              'May mga tanggapan ito sa Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Nakatuon ang tanggapan sa Kaohsiung sa corporate governance (pamamahalang pangkorporasyon) at humahawak din ng karaniwang sibil, kriminal, at administratibong alitan; hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksyon, intelektuwal na ari-arian, at gawaing may kaugnayan sa Korea at Hapon; binuksan naman noong 2017 ang tanggapan sa Pingtung para sa pangangailangan ng lugar na iyon.',
+              'May mga tanggapan ito sa Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Nakatuon ang tanggapan sa Kaohsiung sa corporate governance (pamamahalang pangkorporasyon) at humahawak din ng mga alitang sibil, kriminal, at administratibo; hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksyon, intelektuwal na ari-arian, at gawaing may kaugnayan sa Korea at Hapon; binuksan naman noong 2017 ang tanggapan sa Pingtung para sa pangangailangan ng lugar na iyon.',
               'Bukod sa gawaing legal, itinatag noong 2020 ang Hovering Accounting Office, na nagbibigay ng serbisyong accounting at pagpaplano sa buwis para sa mga may-ari ng negosyo at sa mga indibidwal na may malaking ari-arian.',
             ],
           },
@@ -1966,13 +1966,13 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Ano ang dapat isulat sa unang mensahe',
             paragraphs: [
               'Isulat kung ano ang nangyari, anong tulong ang kailangan ninyo, ano ang kaugnayan ng usapin sa Taiwan, at kung may takdang petsa na alam ninyo. Kung may natanggap na kayong papeles mula sa korte o sa ahensiya ng pamahalaan, banggitin ang petsang nakasulat doon.',
-              'Sa unang yugto ay hindi pa ninyo kailangang ipadala ang numero ng pasaporte, numero ng ID, detalye ng bank account, talaang medikal, o buong hanay ng ebidensiya. Hintayin ang tagubilin ng abogado, at saka ipadala ang mga sensitibong dokumento sa ligtas na paraan.',
+              'Sa unang yugto ay hindi pa ninyo kailangang ipadala ang numero ng pasaporte, numero ng ID, detalye ng bank account, talaang medikal, o buong hanay ng ebidensya. Hintayin ang tagubilin ng abogado, at saka ipadala ang mga sensitibong dokumento sa ligtas na paraan.',
             ],
           },
           {
             heading: 'Ang mga hindi ginagarantiya ng pahinang ito',
             paragraphs: [
-              'Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nagbibigay ng interpreter (tagapagpaliwanag sa pasalita) para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.',
+              'Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nangangako ng interpreter para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.',
               'Kapag nagpadala kayo ng mensahe, naitatala ang nilalaman nito at naghihintay ng pagsusuri. Kung lumipas na ang ilang panahon at wala kayong natatanggap na sagot, maaari ninyo itong ipadalang muli sa email address na nasa pahinang Makipag-ugnayan.',
             ],
           },
@@ -2002,7 +2002,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Ano ang dapat kong ihanda bago makipag-ugnayan?',
             answer:
-              'Maghanda ng maikling buod tungkol sa pagkakasunod-sunod ng mga pangyayari, sa hinihiling ninyo, sa kaugnayan ng usapin sa Taiwan, at sa takdang panahon kung mayroon. Kung may papeles na kayo mula sa korte o sa ahensiya ng pamahalaan, banggitin ang petsa nito. Sa yugtong ito ay hindi pa ninyo kailangang ipadala ang mga dokumento ng pagkakakilanlan o ang buong ebidensiya.',
+              'Maghanda ng maikling buod tungkol sa pagkakasunod-sunod ng mga pangyayari, sa hinihiling ninyo, sa kaugnayan ng usapin sa Taiwan, at sa takdang panahon kung mayroon. Kung may papeles na kayo mula sa korte o sa ahensiya ng pamahalaan, banggitin ang petsa nito. Sa yugtong ito ay hindi pa ninyo kailangang ipadala ang mga dokumento ng pagkakakilanlan o ang buong ebidensya.',
           },
           {
             question: 'Maaari ba ang konsultasyon sa Filipino?',
@@ -2096,10 +2096,10 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'Saan nakaimbak ang impormasyon at ang mga tagapaglaan ng serbisyo',
+            heading: 'Saan nakaimbak ang impormasyon at ang mga tagapagbigay ng serbisyo',
             paragraphs: [
               'Naka-host sa Vercel ang website na ito, at iniimbak ang ipinadala ninyo sa pribadong imbakan ng serbisyong iyon — hindi ito bukas sa publiko. Ipinapadala naman ang email sa pamamagitan ng serbisyo ng email na ginagamit ng tanggapan.',
-              'Maaaring nasa labas ng Taiwan ang mga server ng ilang tagapaglaan ng serbisyo, kaya maaaring maimbak at maproseso roon ang impormasyon ninyo. Kapag natupad na ang layunin ng pag-iingat, binubura ang impormasyon nang walang pagkaantala; iniingatan naman sa buong takdang panahon ang impormasyong may tungkuling itago alinsunod sa mga umiiral na tuntunin. Tinatanggap sa wei@hoveringlaw.com.tw ang mga kahilingang may kinalaman sa personal na impormasyon.',
+              'Maaaring nasa labas ng Taiwan ang mga server ng ilang tagapagbigay ng serbisyo, kaya maaaring maimbak at maproseso roon ang impormasyon ninyo. Kapag natupad na ang layunin ng pag-iingat, binubura ang impormasyon nang walang pagkaantala; iniingatan naman sa buong takdang panahon ang impormasyong may tungkuling itago alinsunod sa mga umiiral na tuntunin. Tinatanggap sa wei@hoveringlaw.com.tw ang mga kahilingang may kinalaman sa personal na impormasyon.',
             ],
           },
         ],

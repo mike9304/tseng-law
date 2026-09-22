@@ -111,7 +111,7 @@ describe('international guidance privacy pages', () => {
     },
     {
       locale: 'fil',
-      heading: 'Saan nakaimbak ang impormasyon at ang mga tagapaglaan ng serbisyo',
+      heading: 'Saan nakaimbak ang impormasyon at ang mga tagapagbigay ng serbisyo',
       hosting: /Naka-host sa Vercel ang website na ito/,
       deletion: /binubura ang impormasyon nang walang pagkaantala/,
     },

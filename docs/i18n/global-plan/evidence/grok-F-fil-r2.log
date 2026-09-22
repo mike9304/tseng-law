@@ -1,0 +1,84 @@
+WO-F-fil r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-fil-r2
+date: 2026-09-22
+
+## Rows applied
+
+fil-a (guidance + columns 001–009)
+- P1 #1 戶籍 → mga dokumento ng rehistro ng sambahayan (戶籍). Guidance pack.
+- P1 #2 003 three/four/six-month sentences rewritten as the usual court range, with the non-guarantee kept inside the existing blocks. R3’s “in some judgments / not typical” softening was not kept; the native P1 says that reversal is the error.
+- P1 #3 004 visible statute name corrected to Regulasyon hinggil sa withholding rate sa dibidendo ng hindi residente (各類所得扣繳率標準). URL unchanged (pcode=G0340028&flno=3). Numeral kept as Artikulo 10 — see reviewer disagreement.
+- P1 #4 007 court mediation (調解) restored: “sa mediation sa korte”, including “mabuo ang mediation sa korte”. “Sa pamamagitan ng” meaning “by means of” was left alone.
+- P2 #5–#19, #21–#28, #30–#33 applied (guidance meaning fixes, Abogada Wei Tseng linker, i-offset, TWD double gloss in 003 and 006, doubled 剩餘財產差額分配 gloss, paralegal sentence, map preview, industry licensing / paunang pagsusuri ng pangalan, 004 “isama rito”, 005 doubled “ng kompanya”, 007 shortcut / household office / usaping pampamilya / netong natitirang ari-arian, 002 有期徒刑, 008 karaniwang sahod and the case-result lines).
+
+fil-b (columns 010–018)
+- P1 #1 015 Taipei registration check assigned to Kagawaran ng Komersiyo ng Lungsod ng Taipei. Pangasiwaan sa Pagpapaunlad ng Komersiyo left for 經濟部商業發展署 in 018.
+- P2 #2–#18, #21–#35 applied (010 ruptured disc, consumer-case citation, court name, medical records, limitation sentence; 011 importer status, platform word order, headings, sangay, claims, statute titles; 012 oras / pagsusuri ng eksperto; 013 preparatory-office account, sinisiyasat, review tone, ARC and office terms; 014 headings, makatwirang proporsiyon; 015 colon in the title; 016 contrary judgment, inclusion order, probate nouns, utang, database name; 017–018 operating lists and company-form paragraphs, including 興櫃 without a new Gregorian year).
+- P2 #20 applied only inside the existing blocks: lowercase continuations in 013 and 015 were capitalized. Paragraphs were not joined.
+
+No P3 rows in either review.
+
+Test expected string updated (nothing else in the test): privacy heading “tagapaglaan” → “tagapagbigay” in src/data/__tests__/international-guidance-privacy-disclosure.test.ts.
+
+R12 institution lines stay in Filipino and keep the pinned English name in parentheses, the same pattern as ar/de/fr:
+- Legal Aid Foundation, Taichung Branch (Sangay ng Taichung)
+- Ministri ng Edukasyon, Dibisyon ng Usaping Legal (Ministry of Education, Legal Affairs Division)
+Role title left “Paralegal” / “Senior paralegal” because the native row kept that job title. TWD 1.57M in the fil bio is byte-identical.
+
+llms-txt.ts fil notices and international-inquiry-copy.ts fil were already a negative consultation lock (English, Chinese, Japanese, Korean only; no interpreter, reply-time, free meeting, or result promise). No string change. international-guidance-answers.ts had no flagged fil string.
+
+## Rows skipped
+
+- fil-a #20 and fil-b #19 — delete U+200B, and promote Q16–Q20 to ## headings. The checker compares zero-width counts and heading levels with the Korean source. Counts left as they are: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3. Q16–Q20 stay body paragraphs.
+- fil-a #29 — reformat “TWD 1.57M”. ACCEPTED-ROUND skip; GUIDANCE_BIO_PRESERVED_TERMS pins it.
+- fil-b #20 merge of one-clause paragraphs in 013 and 015. ACCEPTED-ROUND forbids merging blocks. Wording inside the blocks was fixed (see applied).
+- Hangul frontmatter url values. R16 / ACCEPTED-ROUND. Not rendered.
+
+## Systemic patterns (instances changed, counted on removed lines)
+
+- Court mediation collapsed into “pamamagitan sa”: 5 → “mediation sa korte” (007).
+- 居留 rendered as a right (“karapatang manirahan”): 5 → permiso sa paninirahan (guidance + 001).
+- Spelling unified to hurisdiksiyon (2), kwalipikado (3), kwalipikasyon (10), ebidensya (22, columns plus 4 guidance-pack lines).
+- employer/Employer → amo/Amo: 85 word-boundary hits. “employment” unchanged.
+- aytem/Aytem → bagay/Bagay: 5 (014, 018, and the same word in 003).
+- English statute titles swept where the Filipino name was already the house style: Labor Standards Act 18, Company Act 25, Consumer Protection Act 4, Highway Act 7, Family Act 6, Household Registration Act 2, Labor Pension Act 2, Business Tax Act 2 (the third Business Tax Act hit is the 004 link, renamed to the withholding-rate regulation, not to the Business Tax Act).
+- English headwords that already had a Filipino term (branch, appraisal, ARC, commercial office, probate nouns, 017/018 checklists) rewritten in place. “Sa pamamagitan ng” = “by means of” was not swept.
+
+## Reviewer disagreements (not applied as specified)
+
+- fil-a P1 #3 asks for “Artikulo 3” as the only article number. The reviewer is right that the URL is flno=3 of 各類所得扣繳率標準 (the same link 001 already labels as the non-resident dividend withholding-rate regulation), and the visible name is no longer the Business Tax Act. The Korean source link text is 영업세법 제10조, and the checker counts that 10. Changing the label to Artikulo 3 alone failed numbers (missing 10, sourceCount 95 / targetCount 94). The label is therefore “Artikulo 10 ng Regulasyon hinggil sa withholding rate sa dibidendo ng hindi residente (各類所得扣繳率標準)”, URL unchanged.
+- fil-a #20 / fil-b #19: deleting U+200B or turning Q16–Q20 into headings is not a wording error the checker will accept. See skipped rows.
+- fil-a #29: “1.57 milyong TWD” would drop the pinned token “TWD 1.57M”.
+- fil-b #20: joining the chopped sentences would change the block count. Capitalized inside the blocks instead.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-fil --lang fil 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=59
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-fil src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      24
+
+(That count is the verify run, before this log file existed. After the log was written the same command prints 25.)

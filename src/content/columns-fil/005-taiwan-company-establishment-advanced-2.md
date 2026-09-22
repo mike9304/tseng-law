@@ -37,7 +37,7 @@ Halimbawa lamang ng isang rehimen ng palitang dayuhan ang Korea. Bago ipadala an
 
 **​**
 
-**2. Kapag ipinapasok ang kapital ng kompanya, maaari bang ipadala ang TWD (新臺幣) mula sa sarili ninyong account sa Taiwan patungo sa account ng tanggapang naghahanda ng kompanya ng kompanya sa Taiwan?**
+**2. Kapag ipinapasok ang kapital ng kompanya, maaari bang ipadala ang TWD (新臺幣) mula sa sarili ninyong account sa Taiwan patungo sa account ng tanggapang naghahanda ng kompanya sa Taiwan?**
 
 Maaari, ngunit kailangang isumite ang patunay ng pinagmulan ng pondo (資金來源證明) para sa pondong TWD na nakuha sa Taiwan.
 
@@ -49,17 +49,17 @@ Kapag ang pagpapadala ay mula sa isang bank account sa Korea — halimbawa laman
 
 **​**
 
-**3. Matapos maipasok ang kapital sa account ng tanggapang naghahanda ng kompanya ng kompanya, kailan maaaring gawing opisyal na account ang account ng tanggapang naghahanda ng kompanya?**
+**3. Matapos maipasok ang kapital sa account ng tanggapang naghahanda ng kompanya, kailan maaaring gawing opisyal na account ang account ng tanggapang naghahanda ng kompanya?**
 
 Sa pangkalahatan, matapos matanggap ang mga dokumento ng rehistro ng pagtatatag ng kompanya,
 
-maaaring pumunta sa bangko ang responsible person ng kompanya (公司負責人) upang gawing opisyal na account ng kompanya (正式公司帳戶) ang account ng tanggapang naghahanda ng kompanya ng kompanya.
+maaaring pumunta sa bangko ang responsible person ng kompanya (公司負責人) upang gawing opisyal na account ng kompanya (正式公司帳戶) ang account ng tanggapang naghahanda ng kompanya.
 
 Gayunman, dahil magkakaiba ang panloob na regulasyon ng bawat bangko, kung kailangan ninyong gamitin agad ang kapital, mainam na magtanong muna sa bangko.
 
 **​**
 
-**4. Matapos mailipat ang account ng tanggapang naghahanda ng kompanya ng kompanya sa opisyal na account, maaari bang gamitin agad ang online banking?**
+**4. Matapos mailipat ang account ng tanggapang naghahanda ng kompanya sa opisyal na account, maaari bang gamitin agad ang online banking?**
 
 Nagkakaiba ito sa bawat bangko, ngunit sa pangkalahatan ay kailangan man lamang ng numero ng mobile phone.
 
@@ -69,7 +69,7 @@ Maaaring may karagdagang kinakailangan ang ilang bangko, gaya ng anim na buwan p
 
 **5. Maaari bang tanggapin ng kompanya ang mga dayuhan bilang empleyado?**
 
-A. Unang empleyado: pangkalahatang gawaing pamamahala sa negosyong may pamumuhunan ng Overseas Chinese (華僑) o ng dayuhan (一般僑外投資事業主管工作). Hindi nalalapat ang pamantayang "espesyalisado o teknikal na trabaho" sa B sa ibaba, ngunit nananatiling nalalapat ang mga kwalipikasyon sa tao (halimbawa, pagiging manager (經理人) ng kompanyang mahigit isang katlo ang bahagi ng Overseas Chinese o dayuhan) at ang mga kinakailangang kapital at benta ng employer (Artikulo 38 at Artikulo 39 ng Mga Pamantayan sa Pagsusuri (Review Standards)).
+A. Unang empleyado: pangkalahatang gawaing pamamahala sa negosyong may pamumuhunan ng Overseas Chinese (華僑) o ng dayuhan (一般僑外投資事業主管工作). Hindi nalalapat ang pamantayang "espesyalisado o teknikal na trabaho" sa B sa ibaba, ngunit nananatiling nalalapat ang mga kwalipikasyon sa tao (halimbawa, pagiging manager (經理人) ng kompanyang mahigit isang katlo ang bahagi ng Overseas Chinese o dayuhan) at ang mga kinakailangang kapital at benta ng amo (Artikulo 38 at Artikulo 39 ng Mga Pamantayan sa Pagsusuri (Review Standards)).
 
 B. May paghihigpit mula sa ikalawang empleyado: kapag lumampas sa isa ang bilang ng empleyado, ang kaugnay na antas ng pinag-aralan at karanasan ng empleyado, ang regulasyon sa average na sahod sa pag-empleyo, at ang regulasyon sa kapital at sa halaga ng benta ng kompanya ay pinangangasiwaan ayon sa "specialized o technical work" (專門性或技術性工作).
 

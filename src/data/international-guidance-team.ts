@@ -222,7 +222,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'Larawan',
     workingLanguagesLabel: 'Mga wikang ginagamit sa trabaho',
     fullProfileLabel: 'Buong talaan (sa Ingles)',
-    keyFactsHeading: 'Abogadang Wei Tseng — Mahahalagang impormasyon',
+    keyFactsHeading: 'Abogada Wei Tseng — Mahahalagang impormasyon',
     qualificationLabel: 'Kwalipikasyon at tanggapan',
     qualificationSentence:
       'Si {name} ay abogadang kwalipikado sa Taiwan at ang punong abogada ng {firm}.',
@@ -2073,23 +2073,23 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Legal Aid Foundation, Taichung Branch (Sangay ng Taichung)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Dating naglingkod sa Ministry of Education, Legal Affairs Division, nakatuon sa mga alitang administratibo at sibil.',
+        'Dating naglingkod sa Ministri ng Edukasyon, Dibisyon ng Usaping Legal (Ministry of Education, Legal Affairs Division), nakatuon sa mga alitang administratibo at sibil.',
         'May karanasan sa mga usaping may kinalaman sa unibersidad, karapatan ng guro, at reklamong administratibo.',
       ],
       education: ['Batsilyer sa Batas (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministri ng Edukasyon, Dibisyon ng Usaping Legal (Ministry of Education, Legal Affairs Division)',
         'Abogado, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal na may mahabang karanasan bilang senior paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa paglilitis, gawaing legal na pangkorporasyon, at usapin ng dayuhang pamumuhunan.',
+        'Senior paralegal na may mahabang karanasan sa ilang tanggapan ng abogado, sa suporta sa paglilitis, sa gawaing legal na pangkorporasyon, at sa usapin ng dayuhang pamumuhunan.',
         'Sumusuporta sa paglilitis, pagtatatag ng kompanya, pag-apruba ng dayuhang pamumuhunan, aplikasyon ng permiso, at komunikasyong Korea-Taiwan.',
       ],
       education: ['Batsilyer sa Batas (LL.B.), Tunghai University'],

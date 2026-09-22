@@ -13,7 +13,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
     contact: 'Kontaktai',
     faq: 'Klausimai',
     privacy: 'Privatumas',
-    disclaimer: 'Įspėjimas',
+    disclaimer: 'Apribojimas',
     columns: 'Straipsniai',
   },
   contactCta: 'Pateikti prašymą įvertinti',
@@ -272,7 +272,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jei nemokate nė vienos iš keturių konsultacijos kalbų',
           paragraphs: [
             'Kontaktinėje formoje galite pasirinkti „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume, ar yra tinkamas bendravimo būdas; paslauga kita kalba nėra garantuojama ir atsakymo terminas nežadamas.',
-            'Tai tik vertinimo žingsnis, o ne pažadas. Nežadame vertėjo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.',
+            'Tai tik vertinimas, o ne pažadas. Nežadame vertėjo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.',
           ],
         },
         {
@@ -323,9 +323,9 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
             'Ne. Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Nežadame ir vertėjo žodžiu. Rašytinis vertimas yra kas kita: originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas.',
         },
         {
-          question: 'Ką daryti, jei negaliu naudoti nė vienos iš keturių kalbų?',
+          question: 'Ką daryti, jei nemoku nė vienos iš keturių kalbų?',
           answer:
-            'Siųsdami užklausą pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai vertinimo žingsnis, o ne pažadas, kad galime dirbti kita kalba.',
+            'Siųsdami užklausą pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai tik vertinimas, o ne pažadas, kad galime dirbti kita kalba.',
         },
         {
           question: 'Kaip elgiamasi su mano tekstu lietuvių kalba?',
@@ -345,7 +345,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ką daryti, jei mano byla labai skubi?',
           answer:
-            'Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis neturi skubos kanalo ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, lygiagrečiai turėtumėte ieškoti kitų kelių ten, kur esate.',
+            'Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis nėra skubios pagalbos kontaktas ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, lygiagrečiai turėtumėte ieškoti kitų kelių ten, kur esate.',
         },
       ],
     },
@@ -436,7 +436,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Teisinė sistema',
           paragraphs: [
             'Kontora veikia pagal Taivano teisę ir šis puslapis kalba tik apie darbą šioje sistemoje.',
-            'Turinys nėra konsultacija pagal kitos valstybės teisę, ne Taivano, įskaitant Jūsų gyvenamosios vietos teisę. Jei dalis Jūsų bylos liečia kitą teisės sistemą, su Jumis išsiaiškinsime, koks kvalifikuotas asmuo šiai daliai reikalingas.',
+            'Turinys nėra konsultacija pagal kitos nei Taivanas valstybės teisę, įskaitant Jūsų gyvenamosios vietos teisę. Jei dalis Jūsų bylos liečia kitą teisės sistemą, su Jumis išsiaiškinsime, koks kvalifikuotas asmuo šiai daliai reikalingas.',
           ],
         },
         {
@@ -481,7 +481,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kiek straipsnis gali padėti orientuotis',
           paragraphs: [
             'Straipsniai yra bendra informacija paskelbimo metu. Teisės aktai ir jų taikymas gali keistis, ir straipsnis neapima visų Jūsų bylos aplinkybių.',
-            'Todėl tikros bylos eigos nesiremkite vien straipsniu. Naudokite jį apžvalgai, o savo dokumentus aptarkite atskirai su advokate arba advokatu; šis puslapis nėra konsultacijos žingsnis.',
+            'Todėl konkrečioje byloje nesiremkite vien straipsniu. Naudokite jį apžvalgai, o savo dokumentus aptarkite atskirai su advokate arba advokatu; šis puslapis nėra konsultacija.',
           ],
         },
       ],

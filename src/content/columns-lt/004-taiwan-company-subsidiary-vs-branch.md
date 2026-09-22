@@ -157,7 +157,7 @@ Prieš pasirenkant tikslinga raštu sutvarkyti šiuos punktus ir juos palyginti.
 
 Net jei Taivano įėjimo pradžioje numatoma apyvarta maža ir personalo bei sutarčių skaičius nėra didelis, būsimus planus taip pat reikia atspindėti. Trumpalaikio rinkos patikrinimo ir pasitraukimo galimybę, ilgalaikę investiciją ir vietos partnerių priėmimą, plėtrą į reguliuojamą veiklą ir pagrindinės buveinės laidavimo teikimą galima palyginti pagal scenarijus. Sudarius kiekvieno scenarijaus reikalingų lėšų, grynųjų pinigų po mokesčių, atsakomybės ekspozicijos ir dokumentų bei deklaravimo sąnaudų lentelę, galima sumažinti iš formos pavadinimo kylančius išankstinius nusistatymus.
 
-Veiklos metu keisti struktūrą taip pat reikia įvertinti. Filialo veiklos perkėlimas į naują dukterinę bendrovę arba dukterinės bendrovės turto perleidimas kitai grupės bendrovei gali eiti su sutarties šalies sutikimu, darbo santykiais, leidimais, turto perdavimu ir mokestinėmis bei valiutos procedūromis. Negalima tarti, kad pirmiausia pasirinktą formą vėliau galima pakeisti vien pakeitus pavadinimą. Jei atsižvelgiama į konversijos galimybę, tikslinga pradėti nuo pagrindinių sutarčių perleidimo nuostatų ir intelektinės nuosavybės naudojimo teisių.
+Veiklos metu keisti struktūrą taip pat reikia įvertinti. Perkeliant filialo veiklą į naują dukterinę bendrovę arba perleidžiant dukterinės bendrovės turtą kitai grupės bendrovei, gali prireikti sutarties šalies sutikimo, darbo santykių sutvarkymo, leidimų, turto perdavimo ir mokestinių bei valiutos procedūrų. Negalima tarti, kad pirmiausia pasirinktą formą vėliau galima pakeisti vien pakeitus pavadinimą. Jei atsižvelgiama į konversijos galimybę, tikslinga pradėti nuo pagrindinių sutarčių perleidimo nuostatų ir intelektinės nuosavybės naudojimo teisių.
 
 Pasitraukimo eiga taip pat skiriasi. Jei užsienio bendrovės filialas ketina nutraukti veiklą Taivane, filialo registracijos panaikinimą (廢止分公司登記) reikia prašyti pagal Bendrovių įstatymo 378 straipsnį. Tačiau skolos, mokestinės, darbo, sutartinės ir reguliavimo prievolės, atsiradusios prieš prašymą, vien prašymu neišnyksta. Atsiskaitymą su sandorio šalimis, darbo santykių pabaigą, gautinų sumų išieškojimą, turto perleidimą, mokestinę deklaraciją ir banko sąskaitų sutvarkymą reikia atlikti tinkama seka.
 
@@ -172,7 +172,7 @@ Galutinį pasirinkimą saugiausia, kad įvertintų Taivano ir pagrindinės buvei
 ## Oficialūs šaltiniai
 
 - [Taivano Teisingumo ministerijos teisės aktų duomenų bazė — Bendrovių įstatymas](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Taivano Teisingumo ministerijos teisės aktų duomenų bazė — Pridėtinės ir nepridėtinės vertės verslo mokesčio įstatymo 10 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Taivano Teisingumo ministerijos teisės aktų duomenų bazė — Nuostata dėl nerezidentams mokamų dividendų išskaičiuojamojo tarifo (各類所得扣繳率標準, 3 straipsnis), ne verslo mokesčio įstatymo 10 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Taivano Teisingumo ministerijos teisės aktų duomenų bazė — Pajamų mokesčio įstatymas](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Taivano Finansų ministerija — gairės dėl dividendų, mokamų užsienio akcininkams, išskaičiavimo prie šaltinio](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Taivano Finansų ministerija — išaiškinimas dėl užsienio bendrovės filialo pelno](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

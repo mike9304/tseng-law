@@ -1,0 +1,139 @@
+# WO-F-lt round 2 — Lithuanian fix lane (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-lt-r2
+No git add/commit/push.
+Lithuanian strings only. One test expectation updated: src/data/__tests__/guidance-disclosure-parity.test.ts `lt` regex for the “not the consultation step” element, from `/konsultacijos žingsnis/` to `/nėra konsultacija/`, because that sentence was rewritten. Nothing else in the test.
+TWD 1.57M left byte-identical. Frontmatter `url` values left untouched (Hangul slugs in 008 and 009 stay).
+Dot thousands left as 500.000 (R14 / checker style `dot` for lt). U+200B counts left matching the Korean source. Heading levels and block counts were not changed.
+
+R2–R11 and R12–R17 were already in the Lithuanian pack where they show up as product facts: Korea only as a labelled example, feminine Wei Tseng, consultation lock negative (four languages, no interpreter, no reply-time, no free first meeting, no result), KOMANDA / BIURAI / Visas profilis (anglų kalba), paralegal already „Teisininko padėjėjas“, Legal Aid / Ministry lines already in Lithuanian with the pinned English gloss in parentheses, Taiwan 119/110/112 already explicit in 003, no Czech paragraphs, no fullwidth punctuation outside the Hangul `url`. This round applied the r2 review rows and the sweeps those verdicts describe.
+
+## Rows applied
+
+lt-a 21/25, lt-b 46/48. Total applied 67 / 73.
+
+lt-a
+1 APPLIED  004 link label no longer calls the target the Business Tax Act. It now names the non-resident dividend withholding rule (各類所得扣繳率標準, 3 straipsnis). The digit 10 stays in the same label („ne verslo mokesčio įstatymo 10 straipsnis“) because the Korean source link is 제10조 and dropping 10 fails numbers. URL unchanged.
+4 APPLIED  001 the inquiry result does not establish that other permits or professional-statute requirements are met.
+5 APPLIED  003 statutory vehicle-accident appraisal, not a legal opinion.
+6 APPLIED  005 „naujuosius / naujųjų Taivano dolerius/dolerių“ in the question and the next sentence on the source of the funds. Gloss 新臺幣 kept.
+7 APPLIED  004 a later conversion may require the counterparty’s consent and the listed procedures.
+8 APPLIED  005 the Q&A is attributed to advokatė Wei Tseng (曾雋崴).
+9 APPLIED  008 both table cells „Yra“ → „Taip“. „Nėra“ left.
+10 APPLIED  inquiry option: the reader does not speak any of the four languages.
+11 APPLIED  llms discoveryNotice: pritarimo, garantuoto matomumo. Literal token `llms.txt` kept. consultationNotice and confidentialNotice were not rewritten (they must stay verbatim substrings).
+12 APPLIED  nav.disclaimer „Įspėjimas“ → „Apribojimas“ (11 characters; the 14-character nav cap). The suggested „Atsakomybės apribojimas“ is 23 characters. Page title and the eyebrow ĮSPĖJIMAS left.
+13 APPLIED  disclaimer: „pagal kitos nei Taivanas valstybės teisę“.
+14 APPLIED  columns page: „konkrečioje byloje nesiremkite vien straipsniu“.
+15 APPLIED  007 „kiekvienas iš jų yra savarankiška sąlyga“.
+16 APPLIED  008 the unfinished „Jei dirbate Taivane,“ is now a full sentence inside that block. The next paragraph was not merged (block count is pinned).
+18 APPLIED  FAQ: „nėra skubios pagalbos kontaktas“.
+19 APPLIED  FAQ question „jei nemoku“, not „jei negaliu naudoti“.
+20 APPLIED  „konsultacijos žingsnis“ → „nėra konsultacija“; both „vertinimo žingsnis“ sentences → „tik vertinimas“. Other procedural „žingsnis“ (next steps in a matter) left.
+21 APPLIED  005 the reader is already on part 2. Both column links kept. Digit 2 kept („šiame 2 dalies tekste“); dropping it failed numbers.
+22 APPLIED  spare digit 1 dropped where the checker still matched: 001 „paskutinių metų“ ×2 (the „paskutinių 3 metų“ average stays), 008 „ištisus darbo stažo“ ×2 (FAQ and blockquote). „už 1 metus … 1 mėnesio“ stays.
+23 APPLIED  double currency name removed. Dots kept: 003 „200.000 naujųjų Taivano dolerių (TWD)“; 006 „40.000, 10.000 ir 20.000 naujųjų Taivano dolerių (新臺幣, TWD)“.
+25 APPLIED as R13, not as a new Gregorian year. „Kinijos Respublikos kalendoriaus“: 003 ×3 (109, 109, 112) with (民國) where the gloss was not already in the sentence; 007 ×4; 010 ×1 (the existing 民國109 gloss stays). 2020 and 2023 were not added.
+
+lt-b
+1 APPLIED  014 a reasonable proportionate relationship. Gloss 人力替補困難 kept.
+2 APPLIED  016 lifetime gifts may raise restitution, inclusion in the calculation, or forced-share questions.
+3 APPLIED  017 Kinmen or Lienchiang (Matsu): the long sentence in the FAQ and the body, plus the section-2 repeat and the „Kinmeno arba Liančiango kriterijumi“ line. Amounts unchanged.
+4 APPLIED  010 photograph the injured body part, and the site only so far as possible.
+5 APPLIED  010 success is not guaranteed in any of the procedures.
+6 APPLIED  010 travel records, not motion logs.
+7 APPLIED  010 insurance as a possible source of funds. The following insurer-dispute sentence stays.
+8 APPLIED  011 the manufacturer’s or importer’s address named in the labelling rule. Gloss and article digits kept.
+9 APPLIED  011 a small-print disclaimer does not by itself remove the dominant advertising impression.
+10 APPLIED  011 „peržiūros apimtį“, not processing.
+11 APPLIED  012 this case’s result.
+12 APPLIED  012 „turimus įrodymus“. 010 „užtikrinti“ left (there it is evidence secured).
+13 APPLIED  013 „2 mėnesių nuomos mokestis“. Digit 2 kept.
+14 APPLIED  013 one reader.
+15 APPLIED  014 the work actually done and the time already served inform the burden assessment.
+16 APPLIED  014 vesting: the compensation sentence and „kokiomis sąlygomis ji darbuotojui galutinai pereina“. The heading „Kam priskiriama … priežastis“ left (that is attribution of the termination reason).
+17 APPLIED  014 „nurodomų vidaus išlaidų“ and „nurodomos išlaidos ir kompensacija“.
+18 APPLIED  014 professional and technical skills the role requires.
+19 APPLIED  015 the question is whether each business item must be checked through the system.
+20 APPLIED  016 the conclusion on one issue, not an inheritance share.
+21 APPLIED  016 Taiwan trust as trastas, not the Lithuanian patikėjimo sandoris: the trust sentence, trust documents, the planning sentence (trasto valdytojas 受託人), and the checklist „trastą“. 信託 / 信託受益權 kept.
+22 APPLIED  016 transfer of title, not a change of name.
+23 APPLIED  016 whether a Taiwan determination will be recognised at the situs.
+24 APPLIED  016 „gali apimti“ without the closing „be kito turinio“.
+25 APPLIED  016 retaining supporting documents, in the guardian-property sentence only.
+27 APPLIED  014 the pay-statement sentence has „išmoka“ as its subject.
+28 APPLIED  016 „nurodyta tik turto dalis“.
+29 APPLIED  016 „tas iš tėvų, kuris paskutinis“ and „tas iš tėvų, kuris įgyvendina“.
+30 APPLIED  010 the „(1 kartas)“ multiplier dropped. Numbers still match.
+31 APPLIED  010 measures one may choose, not „all the options“.
+32 APPLIED  010 the specific instruction given. 注意義務 kept.
+33 APPLIED  011 registration has to be timed with giveaways and consumer trials, not only paid sale.
+34 APPLIED  011 a fine may be imposed. Dots kept: „nuo 10.000 TWD iki 1.000.000 TWD“.
+35 APPLIED  011 the fine may be imposed only if the defect is not cured in time.
+36 APPLIED  015 the three quoted lines are each a full sentence now („Be rinkos sąlygų…“, „Kitas svarbus dalykas yra šis.“, „Ar šis adresas…“). They were not merged.
+37 APPLIED  014 the clause sets the commitment and the repayment question. Glosses 最低服務年限約定, 簽約金, 留任獎金, 違約金 kept.
+38 APPLIED  014 stating a total is not enough.
+39 APPLIED  014 „pagal išaiškinimo proporcingumo standartą“.
+40 APPLIED  016 „negalima tiesiog perkelti į kitą“. Same as-is calque swept in 007 ×2 (checklist; agreement detrimental to a minor).
+41 APPLIED  017 FAQ and the matching body sentence: 8 and 5 new trucks. Section 2 already said „8 naujos“ / „5 naujos“.
+42 APPLIED  017 listed or over-the-counter securities.
+43 APPLIED  017 who receives the transportation charge and who is liable for cargo damage.
+44 APPLIED  018 emerging-stock registration (興櫃), not an emerging-economy market.
+45 APPLIED  018 the limited-company paragraph uses dalininkai throughout. The following company-limited-by-shares paragraph still says akcininkai. „akcijų prekybai“ and „akcinę bendrovę“ in the closing sentence stay.
+46 APPLIED  018 title, H1, and the contracts row: atstovas. The FAQ and the ### heading stay „platintojas“ because the English FAQ says distributor. The early-export paragraph stays „nepriklausomą platintoją“ / „platinimo“ because that paragraph is the distribution contract, which the body later distinguishes from agency.
+47 APPLIED  018 „kaip už sąnaudas atsiskaitoma“.
+
+## Rows skipped
+
+lt-a 2  SKIP  Bio figure „TWD 1.57M“ is pinned byte-identical. „1,57 mln. TWD“ is not that string.
+lt-a 3  SKIP  Hangul in frontmatter `url` (008 and 009). The row itself says not to edit `url`. R16 / ACCEPTED-ROUND. Not rendered. The fullwidth colon inside that url stays.
+lt-a 17 SKIP  Turn Q16–Q20 into `##` headings and delete the U+200B blanks (also 005, 006, 008, 009). Heading levels, block counts and the ZWSP count are compared to the Korean source. All 18 files already match Korean on those three counts. Deleting a zero-width space or adding a heading fails the checker.
+lt-a 24 SKIP  Space thousands separators („500 000“, and 1.000.000, 2.000.000.000, 2.500.000, 3.200.000, 40.000, and the same pattern in 002, 003, 004, 006, 007). ACCEPTED-ROUND / R14: lt is checker style `dot`. The decimal comma in 0,5 mėnesio was left.
+lt-b 26 SKIP  Delete the U+200B after the Taipėjus sentence in 013, and the ZWSP-only lines in 013 and 015. Same ZWSP pin as lt-a 17. The sentence was left.
+lt-b 48 SKIP  Same as lt-a 24 („1 579 589 TWD“ and the other space-grouped amounts in 010, 011, 017, 018).
+
+## Systemic patterns and how many instances changed
+
+- Dot thousands (both verdicts): 0 changed. Space form not written.
+- U+200B blanks (lt-a: 003, 005, 006, 008, 009; lt-b: 013, 015): 0 deleted.
+- Spare digit glued to a year: 4 changed (001 ×2, 008 ×2). Checker numbers still match.
+- Minguo year without saying it is the ROC calendar: 8 clarified with „kalendoriaus“ (and 民國 where it was missing). 0 Gregorian years added.
+- A process called „žingsnis“ for the consultation/evaluation step: 3 changed. Other „žingsnis“ left.
+- „tokia, kokia yra“ / „toks, koks yra“ as-is calque: 4 changed (016 ×2, 007 ×2). Ordinary „koks yra“ questions left.
+- Taiwan trust named as a Lithuanian fiduciary contract: 7 changed in 016.
+- Kinmen „ir“ / „kitaip Macu“: 4 changed in 017.
+- Limited-company members called akcininkai: 1 paragraph in 018 (the share-company section left).
+- Agent called platintojas: 3 changed (title, H1, contracts row). 2 distributor instances left because the English says distributor there.
+- Vesting called priskyrimas: 2 changed in 014.
+- „8 vienetai“ / „5 vienetai“ without „nauji“: 2 changed (FAQ and the matching body sentence).
+- New Taiwan dollar named twice or as plain „Taivano doleriai“: 4 changed (005 ×2, 003 ×1, 006 ×1).
+- Czech leakage (R17): 0 paragraphs found, 0 rewritten.
+- R12 English role chrome: already in Lithuanian. 0 further changes. „TWD 1.57M“ not reformatted.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=68
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      23
+```
+
+Commands, in order: checker `tail -8`; marker grep `wc -l`; `tsc --noEmit` then `TSC_OK`; vitest grep; `git status --short | wc -l`. The 23 is the count before this log file was written.
+
+## What the reviewer got wrong (not applied as requested)
+
+- Space as the Lithuanian thousands separator is the right typographic habit, and the Minguo-to-Gregorian equivalents (109 = 2020, 112 = 2023) are right. Both were not applied because the checker cannot parse a space group or an added Gregorian digit (R14, R13, ACCEPTED-ROUND).
+- Reformatting „TWD 1.57M“ to „1,57 mln. TWD“ is right as Lithuanian, and wrong for this pack: the test pins those bytes.
+- Deleting U+200B and promoting Q16–Q20 to headings would read better. The Korean source has the same zero-width spaces and the same heading levels, and the checker compares those counts. The lines stay.
+- On 018, „platintojas“ is wrong for the title and the contracts row (English: agent). It is not wrong for the FAQ „start through a distributor“ or for the early-export distribution contract. Those two stay.
+- The 004 link really is the withholding-rate standard, article 3 (`flno=3`), not Business Tax Act article 10. The Korean/English link text still says article 10, and the checker counts that 10. The label now names article 3 and still contains 10 so the number bag matches. A label with only „3 straipsnis“ fails numbers.

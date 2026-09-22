@@ -2352,7 +2352,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japonų (日本語)',
       ko: 'Korėjiečių (한국어)',
       'needs-method-confirmation':
-        'Nė viena iš keturių kalbų netinka — bendravimo būdą reikia patvirtinti',
+        'Nemoku nė vienos iš keturių kalbų — bendravimo būdą reikia patvirtinti',
     },
   },
   lv: {

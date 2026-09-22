@@ -878,7 +878,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.',
     discoveryNotice:
-      'Failas llms.txt yra tik žemėlapis, pagal kurį randami viešieji puslapiai; jis nežada vietos paieškos rezultatuose, palaikymo, dirbtinio intelekto rekomendacijos ar matomumo.',
+      'Failas llms.txt yra tik žemėlapis, pagal kurį randami viešieji puslapiai; jis nežada vietos paieškos rezultatuose, pritarimo, dirbtinio intelekto rekomendacijos ar garantuoto matomumo.',
     confidentialNotice:
       'Kadangi originalus tekstas išsaugomas, pradiniame etape nerašykite to, ko dar nereikia, pavyzdžiui, paso numerio, dokumento numerio ar sąskaitos duomenų.',
   },

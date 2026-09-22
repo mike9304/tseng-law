@@ -52,7 +52,7 @@ Produkto registracija ir PIF nėra ta pati procedūra. Produkto registracija yra
 
 ### Produkto registracijos momentas ir galiojimo trukmė
 
-Kosmetikos produkto registracija atliekama TFDA kosmetikos produktų registracijos platformoje. Kosmetikos gamintojas arba importuotojas privalo baigti produkto registraciją prieš tiekdamas, parduodamas, dovanodamas, viešai eksponuodamas (公開陳列) gaminį arba pateikdamas jį vartotojui išbandyti. Pasirengimo negalima organizuoti tik pagal atlygintinį pardavimą; reklaminių dovanų ar vartotojo bandymo pateikimo kalendorių reikia tvarkyti kartu su registracijos momentu.
+Kosmetikos produkto registracija atliekama TFDA kosmetikos produktų registracijos platformoje. Kosmetikos gamintojas arba importuotojas privalo baigti produkto registraciją prieš tiekdamas, parduodamas, dovanodamas, viešai eksponuodamas (公開陳列) gaminį arba pateikdamas jį vartotojui išbandyti. Rengtis negalima vien mokamam pardavimui; registracijos terminą reikia derinti ir su reklaminių dovanų bei gaminio pateikimo vartotojui išbandyti kalendoriumi.
 
 Produkto registracijos galiojimo trukmė yra 3 metai. Jei tiekimą ketinama tęsti, pratęsimo (展延) prašymą reikia pateikti per 3 mėnesius iki galiojimo pabaigos. Jei keičiasi registruoti duomenys, pavyzdžiui, gaminio pavadinimas, paskirtis, preparato forma (劑型), sudedamosios dalys ir gamybos vieta, taip pat reikia patikrinti, ar reikalinga pakeitimo turinį atitinkanti eiga.
 
@@ -70,7 +70,7 @@ PIF darbą, įskaitant saugos vertinimą, gali padėti atlikti trečioji šalis,
 
 Jei keičiasi žaliava ar receptūra, gamybos būdas ir vieta, ženklinimas, įskaitant etiketę, deklaruojama funkcija arba saugos informacija, reikia peržiūrėti ir atnaujinti paveiktus PIF dokumentus. Taip pat reikia įvertinti, ar vartotojų skundai, nepageidaujami reiškiniai ir nauji tyrimų rezultatai veikia esamą vertinimą, todėl ir po pirmojo parengimo reikalinga pakeitimų valdymo eiga.
 
-Pagal Kosmetikos produktų informacijos bylos tvarkymo taisyklių 7 straipsnį saugojimo laikotarpis yra ne mažiau kaip 5 metai, skaičiuojami nuo kitos dienos po dienos, kai produktas paskutinį kartą buvo pateiktas rinkai. Pagal tų pačių taisyklių 8 straipsnį saugojimo vieta yra kosmetikos gamintojo arba importuotojo ženklinimo adresas, nustatytas Kosmetikos higienos ir saugos įstatymo (化粧品衛生安全管理法) 7 straipsnio 1 dalies 7 punkte. Nuostatą, kuri nustato laikotarpį, ir nuostatą, kuri nustato vietą, reikia taikyti atskirai.
+Pagal Kosmetikos produktų informacijos bylos tvarkymo taisyklių 7 straipsnį saugojimo laikotarpis yra ne mažiau kaip 5 metai, skaičiuojami nuo kitos dienos po dienos, kai produktas paskutinį kartą buvo pateiktas rinkai. Pagal tų pačių taisyklių 8 straipsnį saugojimo vieta yra Kosmetikos higienos ir saugos įstatymo (化粧品衛生安全管理法) 7 straipsnio 1 dalies 7 punkte nurodytas kosmetikos gamintojo arba importuotojo adresas. Nuostatą, kuri nustato laikotarpį, ir nuostatą, kuri nustato vietą, reikia taikyti atskirai.
 
 Net jei pirminis gamintojas saugo originalą arba naudojama saugi elektroninė ar debesijos saugykla, gamintojas arba importuotojas turi turėti prieigą prie visų dokumentų. Reikia nustatyti prieigos teises, atsargines kopijas, versijų valdymą, rinkmenos formatą ir atsakingąjį, kad dokumentus būtų galima greitai surasti ir pateikti, kai kompetentinga institucija jų pareikalauja. Sutartyje taip pat svarbu nustatyti, kurie dokumentai perduodami, kokiu būdu ir ar prieigos teisė išlieka, kad dokumentai būtų išlaikyti įstatyminį saugojimo laikotarpį ir pasibaigus sutarčiai su pardavimo partneriu ar paslaugų teikėju.
 
@@ -78,7 +78,7 @@ Net jei pirminis gamintojas saugo originalą arba naudojama saugi elektroninė a
 
 Kai kompetentinga institucija tikrina PIF, ji iš esmės praneša kosmetikos gamintojui arba importuotojui ne vėliau kaip prieš 7 dienas iki patikros dienos. Tačiau jei atvejis patenka į susijusiuose teisės aktuose nustatytą įstatyminę išimtį, patikrą galima atlikti be išankstinio pranešimo. Nepriklausomai nuo to, ar pranešimas buvo, nuolat reikia palaikyti būklę, leidžiančią surasti ir pateikti visus naujausius dokumentus.
 
-Tikrovės neatitinkančios informacijos pranešimas produkto registracijoje arba tokios informacijos įrašymas į PIF gali būti administracinės baudos (罰鍰) 10.000 TWD–1.000.000 TWD (新臺幣) objektas. Jei PIF dokumentai priešingai yra neišsamūs, kompetentinga institucija paprastai nurodo ištaisyti per nustatytą terminą (限期改正), o administracinė bauda tampa klausimu tik tada, kai per tą terminą neištaisoma. Tikrovės neatitinkančios informacijos ir ištaisomo dokumentų trūkumo negalima laikyti ta pačia pažeidimo pasekme.
+Už tikrovės neatitinkančios informacijos pranešimą produkto registracijoje arba tokios informacijos įrašymą į PIF gali būti skiriama administracinė bauda (罰鍰) nuo 10.000 TWD iki 1.000.000 TWD (新臺幣). Jei PIF dokumentai priešingai yra neišsamūs, kompetentinga institucija paprastai nurodo ištaisyti per nustatytą terminą (限期改正), o administracinė bauda gali būti skiriama tik tada, kai per tą terminą neištaisoma. Tikrovės neatitinkančios informacijos ir ištaisomo dokumentų trūkumo negalima laikyti ta pačia pažeidimo pasekme.
 
 Išėmimas iš rinkos ar sunaikinimas (銷毀) nėra priemonė, kuri automatiškai sektų kiekvieną PIF dokumentų neišsamumą. Gaminio saugą, pažeidimo turinį, ištaisymo būklę ir kiekvienai priemonei taikytinas įstatymines sąlygas reikia vertinti atskirai. Priemones, kai saugos problema patvirtinta, ir dokumentų papildymo reikalavimą reikia nagrinėti skyrium, o reagavimą tvarkyti pagal kompetentingos institucijos pranešimą ir taikytą nuostatą.
 
@@ -88,7 +88,7 @@ Reklama vertinama ne tik pagal sakinį, bet pagal visą raišką, įskaitant gam
 
 ### Vertinama pagal visą raišką, o ne pagal kiekvieną žodį
 
-Ar ženklinimas, populiarinimas (宣傳) ar reklama yra tikrovės neatitinkantys ar perdėti, arba ar teigiamas gydomasis poveikis (醫療效能), nesprendžiama vien pagal vieną tam tikrą žodį. Kartu vertinamas prekės pavadinimas, sakinys, vaizdas, simbolis, garsas, prieš tai ir po to einantis kontekstas ir bendras įspūdis, kurį gauna vartotojas. Centrinės reklamos sukeltą įspūdį automatiškai neišsklaido vien mažu šriftu parašytas apribojimas, todėl reikia peržiūrėti ir atskiras formuluotes, ir galutinę reklamą, kokia ji parengta.
+Ar ženklinimas, populiarinimas (宣傳) ar reklama yra tikrovės neatitinkantys ar perdėti, arba ar teigiamas gydomasis poveikis (醫療效能), nesprendžiama vien pagal vieną tam tikrą žodį. Kartu vertinamas prekės pavadinimas, sakinys, vaizdas, simbolis, garsas, prieš tai ir po to einantis kontekstas ir bendras įspūdis, kurį gauna vartotojas. Vyraujančios reklaminės žinutės įspūdžio vien mažu šriftu įrašyta išlyga savaime nepanaikina, todėl reikia peržiūrėti ir atskiras formuluotes, ir galutinę reklamą, kokia ji parengta.
 
 Pavyzdžiui, teiginys, kad kosmetika gydo spuogus, turi priešuždegiminį poveikį arba baktericidinį veikimą, gali būti gydomojo poveikio teiginys. Kartu reikia patikrinti ir ligos pavadinimo sujungimą su gaminiu, vaizdus prieš naudojimą ir po jo, medicinos darbuotoją primenantį pateikimą ir kontekstą, kuris sudedamosios dalies aiškinimą sieja su gaminio gydomuoju poveikiu.
 
@@ -98,7 +98,7 @@ Administracinė bauda už tikrovės neatitinkančią ar perdėtą reklamą (虛�
 
 Nuomonės formuotojų, apžvalgų autorių ar pardavimo partnerių įrašai pagal turinį ir komercinį kontekstą gali būti vertinami kaip reklama iš esmės. Atlygio mokėjimas, gaminio suteikimas, pardavimo nuoroda, prekių ženklo nurodymas skelbti ir pakartotinis bendradarbiavimas yra veiksniai, į kuriuos šiame vertinime atsižvelgiama. Priešingai, ne kiekvienas asmeninis įrašas automatiškai tampa prekių ženklo reklama, todėl reikia patikrinti skelbiančiojo ir prekių ženklo santykį, konkretų turinį ir prekių ženklo dalyvavimo laipsnį.
 
-Bendradarbiavimo sutartyje ir veiklos gairėse galima nustatyti leistinų posakių apimtį ir pagrindžiamuosius dokumentus, peržiūrą prieš skelbimą ir pažeidžiančių posakių taisymo bei ištrynimo eigą. Į tvarkymo apimtį tikslinga įtraukti ir komentaruose pridedamus posakius, žodinį aiškinimą tiesioginėje transliacijoje ar trumpuose vaizdo įrašuose ir neatitiktį tarp pardavimo puslapio ir etiketės. Peržiūrėtą projektą, patvirtinimo istoriją, taisymo prašymus ir galutinį įrašą reikia saugoti, kad vėliau būtų galima patikrinti faktines aplinkybes.
+Bendradarbiavimo sutartyje ir veiklos gairėse galima nustatyti leistinų posakių apimtį ir pagrindžiamuosius dokumentus, peržiūrą prieš skelbimą ir pažeidžiančių posakių taisymo bei ištrynimo eigą. Į peržiūros apimtį tikslinga įtraukti ir komentaruose pridedamus posakius, žodinį aiškinimą tiesioginėje transliacijoje ar trumpuose vaizdo įrašuose ir neatitiktį tarp pardavimo puslapio ir etiketės. Peržiūrėtą projektą, patvirtinimo istoriją, taisymo prašymus ir galutinį įrašą reikia saugoti, kad vėliau būtų galima patikrinti faktines aplinkybes.
 
 ### Pardavimo pasirengimo patikros tvarka
 

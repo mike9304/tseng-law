@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Pradedant maitinimo veiklą pirmasis klausimas — rasti veiklos adresą (營業地址).
 
-Be rinkos sąlygų
+Be rinkos sąlygų reikia atsižvelgti ir į kitą dalyką.
 
-kitas svarbus dalykas yra
+Kitas svarbus dalykas yra šis.
 
-tai, ar šis adresas yra zonoje, kurioje galima vykdyti „restorano“ veiklą.
+Ar šis adresas yra zonoje, kurioje galima vykdyti „restorano“ veiklą.
 
 ​
 
@@ -51,7 +51,7 @@ Todėl šiam dalykui skirkite dėmesį.
 
 ​
 
-**Ar visos veiklos sritys per sistemą „išankstinė veiklos vietos patikra“ turi tikrinti, ar veikla galima?**
+**Ar kiekvienai veiklos sričiai per sistemą „išankstinė veiklos vietos patikra“ reikia tikrinti, ar veikla galima?**
 
 Visoms veiklos sritims rekomenduojama sistema „išankstinė veiklos vietos patikra“ (營業場所預先查詢) patvirtinti, ar veikla galima.
 

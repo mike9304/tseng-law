@@ -39,7 +39,7 @@ Vienos Taivano banko darbuotojos teigimu,
 
 pastaruoju metu daugelis užsieniečių po sąskaitos atidarymo dingsta, todėl sąskaitų atidarymas vertinamas vis griežčiau.
 
-Jau pagrindų dalyje skaitytojai nurodė, kad sąskaitos atidarymas yra sunkiausias etapas; praktika tai patvirtina.
+Jau pagrindų dalyje vienas skaitytojas nurodė, kad sąskaitos atidarymas yra sunkiausias etapas; praktika tai patvirtina.
 
 Kadangi Taivane yra labai daug pinigų plovimo (洗錢) atvejų, banko sąskaitų atidarymas tampa vis griežtesnis.
 
@@ -95,7 +95,7 @@ Be to, Taivano prekybos patalpų nuomos sutartyse nuomotojas dažnai nuomininkui
 
 Tai laikotarpis, atleistas nuo nuomos mokesčio; dėl jo galima derėtis.
 
-Užsieniečiui prekybos patalpas išsinuomoti nėra lengva, o užstatas (押金) Taivane palyginti mažas (paprastai 2 mėnesiai), todėl nuomotojo apsauga ribota;
+Užsieniečiui prekybos patalpas išsinuomoti nėra lengva, o užstatas (押金) Taivane palyginti mažas (paprastai 2 mėnesių nuomos mokestis), todėl nuomotojo apsauga ribota;
 
 nuomotojai todėl vengia nuomoti užsieniečiams.
 

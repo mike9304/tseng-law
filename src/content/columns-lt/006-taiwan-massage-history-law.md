@@ -55,7 +55,7 @@ iš tikrųjų tik asmenys su regos negalia (視障者) galėjo verstis masažuot
 
 įdarbino darbuotojus be regos negalios plaukų plovimo ir masažo paslaugoms, ir policija tai nustatė.
 
-Pagal tuometinę teisę ponui Lin ir šiems darbuotojams buvo skirta administracinė bauda (罰鍰) — 40.000 TWD, 10.000 TWD ir 20.000 TWD naujojo Taivano dolerio (新臺幣) atitinkamai.
+Pagal tuometinę teisę ponui Lin ir šiems darbuotojams buvo skirta administracinė bauda (罰鍰) — 40.000, 10.000 ir 20.000 naujųjų Taivano dolerių (新臺幣, TWD) atitinkamai.
 
 Ponas Lin šią sankciją laikė labai neteisinga ir paprašė konstitucinio išaiškinimo.
 

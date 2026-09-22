@@ -475,7 +475,7 @@ const ELEMENTS = {
     hr: /nije savjetovanje/,
     sr: /korak konsultacije/,
     sl: /korak posveta/,
-    lt: /konsultacijos žingsnis/,
+    lt: /nėra konsultacija/,
     lv: /konsultācijas solis/,
     et: /nõustamissamm/,
     ca: /no és una consulta/,

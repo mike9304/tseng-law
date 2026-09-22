@@ -1,0 +1,77 @@
+WO-F-bn — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-bn-r1
+date: 2026-09-22
+scope: Bengali guidance pack (bengaliGuidanceContent, team bn bios, inquiry bn, answers bn) + columns-bn 001–018. No commit. llms-txt bn and offices bn were already consultation-locked and in the target register; they were not rewritten. No other locale’s strings were edited.
+Test pin updated only where a Bengali string changed: src/data/__tests__/guidance-disclosure-parity.test.ts (`consultation-may-be-paid` bn regex `/মূল্য পরিশোধসাপেক্ষ/` → `/ফি লাগতে পারে/`).
+
+## Rows applied
+bn-a.md P1: a#1–a#5, a#2 across the form option, the contact heading, the FAQ question, and the sentences that quote that option.
+bn-a.md P2: a#6–a#10, a#12, a#14–a#22, a#24–a#29, a#31–a#36, a#38–a#41. a#12 keeps the byte-identical token TWD 1.57M and only replaces প্রথম ধাপের আদালত with প্রথম আদালত. a#16 translates the degree line and keeps `Institute of Finance, National Taiwan University` contiguous in parentheses. a#37 does not delete the table row; the three cells no longer say সহজ / কঠিন / সহজ.
+bn-b.md P1: b#1–b#5. b#5 is swept wherever আইনি বিষয় / অনুমতির বিষয় stands for the legal person (018, 017 ×3, 004 ×4, 001 ×1).
+bn-b.md P2: b#6–b#31, b#33–b#37. b#15 distinguishes কোম্পানির শাখা (分公司) from শাখা প্রতিষ্ঠান (分支機構). b#28 completes each 013/015 fragment inside its own paragraph. b#36 says the new recording takes the place of the old footage.
+Neither review table has a P3 row.
+
+## Rows skipped or modified
+- a#11 (add 著作權 on কপিরাইট): skipped. guidance-disclosure-parity requires every locale to annotate the same Chinese-character set as the reference. Adding 著作權 only in Bengali fails that test. Trademark and patent on the same sentence already carry 商標 and 專利.
+- a#13 (reformat pinned TWD 1.57M into lakh grouping): skipped. ACCEPTED-ROUND and R12. The figure stays byte-identical.
+- a#16 firm and university names beyond the degree line (Trend Law Office, Boyin Law Firm, Muyang International Law Firm, Chinshin CPA Firm, Hovering International Law Firm): skipped. ACCEPTED keeps those proper names in Latin. Roles were already in Bengali (আইনি সহকারী, অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্ট).
+- a#23 (TWD 5,00,000 and the same request for other amounts): skipped. R14. The bn checker parses a Western comma, not lakh/crore grouping.
+- a#30 (promote Q16–Q20 to ## headings and delete U+200B lines): skipped. checkBlocks requires the same heading levels and the same ZWSP count as the English source. ACCEPTED forbids new headings. The sign-off itself is a#31 and was rephrased.
+- a#37 (delete the কঠিনতা row): skipped as a deletion. A removed table row changes the row count. The three cells now say the difficulty cannot be called easy or hard in advance.
+- b#15 suggested উপশাখা for 分支機構: not used. R8 defines 分支機構 as a branch establishment and 分公司 as a company branch office. The cell now says কোম্পানির শাখা (分公司) and শাখা প্রতিষ্ঠান (分支機構).
+- b#28 suggested one merged paragraph for the 015 opening: not merged. Each existing block is now a full sentence.
+- b#32 (delete U+200B and the lines that contain only that character): skipped. checkBlocks counts those characters. They stay.
+- b#36 suggested ঢাকা পড়তে পারে: not used. That reads as “covered”. R8 says footage may be overwritten. The sentence says a new recording takes the place of the old one, with the gloss (覆蓋) kept.
+
+## Systemic patterns and instance counts
+- “the four languages are not useful” (কাজে লাগে না / কাজে না লাগে): 7 surfaces (inquiry option, inquiry method notice, home language paragraph, contact description, contact heading, FAQ question, FAQ answer). Zero of that wording remain. The option now says the reader cannot speak any of the four. ব্যবহারযোগ্য, অন্য ভাষা, উত্তরের সময়সীমা, প্রতিশ্রুতি নয়, দোভাষী, and প্রতিটি মামলা stay on the contact disclosure.
+- শ্রম used for workload: 2 (pricing body and the fee factors). Labour-law শ্রম was left.
+- নিয়োগকর্তার ফলাফল as business performance: 3 (001 body, 001 checklist, 005). The 001 FAQ already said ব্যবসায়িক ফলাফল. Outcome-sense ফলাফল (no promised result) and আমদানি-রপ্তানি ফলাফল were left.
+- Liquidation পরিশোধন (清算) → অবসায়ন: 22 (002 ×20, 004 ×2). Payment পরিশোধ / পরিশোধিত was left. অবসায়ক was already the liquidator.
+- আইনি বিষয় / অনুমতির বিষয় for the legal person (主體) → আইনি ব্যক্তি / অনুমতিধারী: 9.
+- 辦法 named পদ্ধতি → বিধিমালা: the two cosmetics regulations, “একই বিধিমালার অনুচ্ছেদ 8”, and অনুচ্ছেদ 7-এর অনুচ্ছেদাংশ 1-এর দফা 7 (R8 條/項/款). Production-method উৎপাদন পদ্ধতি was left.
+- উদ্যোগ standing for the business or the operator → ব্যবসা / ব্যবসায়ী: guidance pack (the client-facing uses), 010 ×3, 011 ×1, 018 (title, alt, headings, and the two leftover body uses), 008 ×3, 004 “বিদেশি উদ্যোগ” ×1, 001 “উদ্যোগ যদি” ×2, 005 “তাইওয়ানি উদ্যোগে” ×1. Left on purpose: মুনাফা-অন্বেষী উদ্যোগ (營利事業), treaty উদ্যোগ মুনাফা, and the permit name বিনিয়োগ উদ্যোগ (僑外投資事業 / 投資事業).
+- উত্তরপ্রভাব → স্থায়ী ক্ষতি / দীর্ঘস্থায়ী প্রভাব: 2 (010 items 4 and 6).
+- ROC label প্রজাতন্ত্র চীনের (民國) → চীন প্রজাতন্ত্রের (民國): 8 (003 ×3, 007 ×4, 010 ×1). No Gregorian year added.
+- Hyphenated অ-সম্পত্তি → অর্থনৈতিক নয় এমন ক্ষতি: 003 heading and body, 007 ×2. Link-title অ-বিতর্কিত (非訟) and the privacy অ-সর্বজনীন were left; they are not the non-pecuniary calque.
+- Blog register, rephrased inside the existing blocks: 003 sign-off; 006 age aside; 013 reader-comment sentence and the “told me” line; 013 comma-fragments completed in place (16, 18, 30, 32, 48, 54, 64, 68, 76, 80, 90, 98, 104, 118, 122, 124); 015 hanging phrases (22, 24, 26, 30, 44). U+200B lines were not deleted.
+- Hindi leakage পরিষেবা → সেবা: 1 (015). No other Hindi paragraph was found.
+- R2 Korea-as-default, R3 prison-month / suspended-sentence softening, R9 Taiwan 119/110/112, and R15 [নাম] were already in the files. R10 আপনি was already the register. Wei Tseng’s verbs stay ungendered, which is correct for Bengali; বিনিময় ছাত্রী stays feminine. The 008 manager and the 010 student stay male.
+
+## §Verify
+node scripts/check-column-translation.mjs --dir src/content/columns-bn --lang bn 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=97
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-bn src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      27
+
+(The count 27 is before this log file. It includes the pre-existing WO-F-bn.txt modification, the untracked bn-a.md / bn-b.md, the lane helper .tmp-bn/, and the 23 Bengali source files edited in this lane. Checker WARNs, not in tail -8 and not failures: 017 numbers “수사미해석 (2): 제3자; 제3자” with sourceCount=targetCount=44. That is the R11 Korean lexical numeral and was not given a new digit.)
+
+## Reviewer points not applied
+- a#11 著作權. The gloss is the right Traditional Chinese for copyright. Adding it only in Bengali makes the four-language disclosure test fail, because every locale must annotate the same CJK set. It was not added, and the test was not edited for this.
+- a#13 and a#23 lakh/crore grouping, including TWD 15,70,000 for the pinned bio figure. The checker parses bn amounts only with a Western comma. ACCEPTED-ROUND says the same. TWD 1.57M stays byte-identical.
+- a#12’s suggested “নিম্ন আদালত থেকে প্রথম রায়” drops the pinned figure. The bio now says প্রথম আদালত থেকে TWD 1.57M রায়.
+- a#16’s list of English firm names. ACCEPTED keeps those proper names in Latin. The degree line is translated with the English name left in parentheses.
+- a#30 and b#32: deleting U+200B, or promoting Q16–Q20 to headings, fails the block check. The visible sign-off was rephrased; the invisible characters stayed.
+- a#37: deleting the difficulty row changes the table. The cells were rewritten so they do not say the claim is easy.
+- b#15 উপশাখা. R8’s 分支機構 is a branch establishment, not a sub-branch of a 分公司.
+- b#28: merging the 013/015 fragments changes the block count. Each paragraph was completed in place.
+- b#36 ঢাকা. That is “covered”. The overwrite sentence says the new recording replaces the old footage.
+- মুনাফা-অন্বেষী উদ্যোগ, treaty উদ্যোগ মুনাফা, and বিনিয়োগ উদ্যোগ in the permit title. Those are 營利事業 / enterprise profits / 投資事業, not the “initiative” calque the verdict named.

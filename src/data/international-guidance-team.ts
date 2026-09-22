@@ -3538,11 +3538,11 @@ export const guidanceTeamBios: Record<
   bn: {
     'tseng-junwei': {
       intro: [
-        'কার্যালয় তাইওয়ানে উদ্যোগ ও ব্যক্তিগত বিষয়ে ইংরেজি, জাপানি, কোরীয় ও চীনায় কাজ করে।',
-        'তিনি জিমে আঘাতজনিত ক্ষতিপূরণের দাবিতে একজন কোরীয় শিক্ষার্থীর প্রতিনিধিত্ব করেছেন এবং প্রথম ধাপের আদালত থেকে TWD 1.57M রায় আদায় করেছেন।',
+        'কার্যালয় তাইওয়ানে ব্যবসা ও ব্যক্তিগত বিষয়ে ইংরেজি, জাপানি, কোরীয় ও চীনায় কাজ করে।',
+        'তিনি জিমে আঘাতজনিত ক্ষতিপূরণের দাবিতে একজন কোরীয় শিক্ষার্থীর প্রতিনিধিত্ব করেছেন এবং প্রথম আদালত থেকে TWD 1.57M রায় আদায় করেছেন।',
       ],
       education: [
-        'স্নাতকোত্তর (M.S.), Institute of Finance, National Taiwan University',
+        'স্নাতকোত্তর (M.S.), ফিন্যান্স ইনস্টিটিউট, ন্যাশনাল তাইওয়ান বিশ্ববিদ্যালয় (Institute of Finance, National Taiwan University)',
         'আইন ও অর্থায়নে দ্বৈত স্নাতক (B.A.), National Chengchi University',
         'Kobe University ও Waseda University-এ বিনিময় ছাত্রী',
       ],
@@ -3554,7 +3554,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'আগে শিক্ষা মন্ত্রণালয়ের আইন বিভাগে (Ministry of Education, Legal Affairs Division), প্রশাসনিক ও দেওয়ানি বিষয়ে মন দিয়ে।',
+        'আগে শিক্ষা মন্ত্রণালয়ের আইন বিভাগে (Ministry of Education, Legal Affairs Division) কাজ করেছেন, প্রশাসনিক ও দেওয়ানি বিষয়ে মনোযোগ দিয়ে।',
         'বিশ্ববিদ্যালয়, শিক্ষকদের অধিকার এবং প্রশাসনিক আপিল-সংক্রান্ত বিষয়ের অভিজ্ঞতা।',
       ],
       education: ['আইন স্নাতক (LL.B.), National Chung Hsing University'],

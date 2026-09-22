@@ -3,7 +3,7 @@ title: "स्वैच्छिक त्यागपत्र के बाव
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13 सितंबर 2025"
-read_time: "3 मिनट का पाठ"
+read_time: "3 मिनट में पढ़ें"
 categories:
   - "ताइवान कानूनी जानकारी"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![मुख्य चित्र](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-जैसा पहले बताया गया, ताइवान में कर्मचारी के लिए विच्छेद वेतन (資遣費) प्राप्त करना आसान नहीं है।
+जैसा पहले बताया गया, ताइवान में कर्मचारी को विच्छेद वेतन (資遣費) अपने आप नहीं मिलता।
 
 ​
 
@@ -91,7 +91,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 “**समय**” बहुत महत्वपूर्ण है।
 
-अधिकांश मामलों में जो पक्ष पहले से तैयार रहता है, उसके अधिकार सुरक्षित रहते हैं।
+समय पर अनुबंध समाप्त करना इस बात को प्रभावित कर सकता है कि विच्छेद वेतन कौन माँगता है; यह कोई तय परिणाम नहीं है।
 
 ---
 

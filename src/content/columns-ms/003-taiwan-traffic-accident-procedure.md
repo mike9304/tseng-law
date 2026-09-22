@@ -39,11 +39,11 @@ Mengenai dokumen polis, di tempat kejadian anda boleh menerima talon pendaftaran
 
 Perkara 284 Kanun Jenayah mengatur kecederaan kerana kecuaian (過失傷害) dan kecederaan berat kerana kecuaian (過失致重傷). Kerana, menurut perkara 287 Kanun Jenayah, ia ialah kesalahan yang didakwa atas aduan (告訴乃論之罪), selaras dengan perkara 237 Kanun Tatacara Jenayah Taiwan (刑事訴訟法) aduan pada prinsipnya mesti difailkan dalam 6 bulan selepas hari pelaku diketahui.
 
-Mengenai pampasan sivil kerosakan (損害賠償), menurut perkara 197 Kanun Sivil Taiwan (民法) tuntutan tidak lagi mungkin setelah berlalu 2 tahun dari hari kerosakan dan penghutang pampasan diketahui, atau 10 tahun dari hari perbuatan tort. Fakta apa yang mempengaruhi had masa (消滅時效) mesti diteliti secara berasingan.
+Mengenai pampasan sivil kerosakan (損害賠償), menurut perkara 197 Kanun Sivil Taiwan (民法) tuntutan tidak lagi mungkin setelah berlalu 2 tahun dari hari kerosakan dan pihak yang wajib membayar pampasan diketahui, atau 10 tahun dari hari perbuatan tort. Fakta apa yang mempengaruhi had masa (消滅時效) mesti diteliti secara berasingan.
 
-Sesiapa yang mengalami kerosakan kerana kesalahan boleh, menurut perkara 487 Kanun Tatacara Jenayah, membentuk tindakan sivil sampingan kepada perbicaraan jenayah (刑事附帶民事訴訟). Selagi perbicaraan jenayah sedang berjalan, tindakan ini boleh dibentuk hingga sebelum penutupan hujah lisan (言詞辯論終結) peringkat kedua, menurut perkara 488 Kanun Tatacara Jenayah, tetapi ia tidak boleh dibentuk selepas penutupan hujah lisan peringkat pertama dan sebelum pengajuan rayuan. Pada umumnya, pembayaran yuran mahkamah (裁判費) yang berasingan boleh dielakkan, tetapi tidak semua hasil selesai tanpa kos. Contohnya, jika kes jenayah ditolak dan, atas permintaan plaintif, dihantar ke mahkamah sivil, menurut perkara 503 Kanun Tatacara Jenayah belanja mahkamah boleh dikenakan, dan perlu juga disemak peraturan penghantaran dan tatacara perkara 504.
+Sesiapa yang mengalami kerosakan kerana kesalahan boleh, menurut perkara 487 Kanun Tatacara Jenayah, mengemukakan tuntutan sivil sampingan kepada perbicaraan jenayah (刑事附帶民事訴訟). Selagi perbicaraan jenayah sedang berjalan, tuntutan ini boleh dikemukakan hingga sebelum penutupan hujah lisan (言詞辯論終結) peringkat kedua, menurut perkara 488 Kanun Tatacara Jenayah, tetapi ia tidak boleh dikemukakan selepas penutupan hujah lisan peringkat pertama dan sebelum rayuan dikemukakan. Pada umumnya, pembayaran yuran mahkamah (裁判費) yang berasingan boleh dielakkan, tetapi tidak semua hasil selesai tanpa kos. Contohnya, jika kes jenayah ditolak dan, atas permintaan plaintif, dihantar ke mahkamah sivil, menurut perkara 503 Kanun Tatacara Jenayah kos mahkamah boleh dikenakan, dan perlu juga disemak peraturan penghantaran dan tatacara perkara 504.
 
-Pilihan berbeza menurut pemotongan had masa (時效中斷), kalangan defendan, bukti, insurans dan bidang kuasa. Maka tiada prosedur yang seragam lebih diutamakan untuk semua kes.
+Pilihan berbeza menurut pemotongan had masa (時效中斷), kalangan defendan, bukti, insurans dan bidang kuasa. Maka tiada satu prosedur yang lebih sesuai untuk semua kes.
 
 ## Q4. Jika terdapat kecuaian di kedua pihak, bagaimana dinilai tanggungjawab jenayah dan sivil?
 
@@ -95,15 +95,15 @@ Tuntutan berdasarkan perkara 184 Kanun Sivil mengandaikan pelanggaran haram terh
 
 - **Kecederaan**: Menurut perkara 193 Kanun Sivil boleh diteliti kos perubatan (醫療費用) yang diperlukan, kos tambahan kehidupan harian seperti kos jagaan (看護費用), kos perjalanan untuk rawatan (就醫交通費) dan alat bantu, serta kehilangan pendapatan (收入損失) kerana ketidakupayaan kerja sebenar dan pengurangan keupayaan kerja (勞動能力減損). Menurut perkara 195 Kanun Sivil pampasan penderitaan juga boleh diteliti.
 - **Kematian**: Menurut perkara 192 Kanun Sivil, apabila berkenaan, boleh diteliti kos perubatan sebelum kematian dan kos keperluan hidup yang meningkat, kos pengebumian (殯葬費) dan kehilangan nafkah (扶養利益損失) orang yang mempunyai hak berkanun kepada nafkah. Menurut perkara 194 Kanun Sivil pampasan penderitaan saudara tertentu juga boleh diteliti.
-- **Harta**: Menurut perkara 196 Kanun Sivil boleh dituntut kerosakan harta sebenar yang dijustifikasikan, termasuk kos pembaikan kenderaan atau kehilangan nilai.
+- **Harta**: Menurut perkara 196 Kanun Sivil boleh dituntut kerosakan harta sebenar yang dibuktikan, termasuk kos pembaikan kenderaan atau kehilangan nilai.
 
 ## Q8. Jika rawatan berterusan, bagaimana mengemukakan dokumen kos perubatan?
 
 Simpan resit (收據), perakuan perubatan dan rekod perubatan, dan susun bersama keperluan perubatan setiap rawatan dan kaitan sebabnya dengan kemalangan. Dokumen rawatan yang berterusan boleh melengkapkan bukti menurut kalendar tatacara mahkamah dan isi tuntutan yang sudah dikemukakan, tetapi ini tidak memastikan bahawa semua dokumen yang dikemukakan lewat atau setiap peluasan tuntutan diterima atau dibenarkan.
 
-Perlu dibezakan penambahan dokumen perubatan daripada pengubahsuaian atau peningkatan jumlah yang dituntut. Selepas membentuk tindakan sivil sampingan kepada perbicaraan jenayah, hakikat mengemukakan lebih banyak resit perubatan semata-mata tidak menjana secara automatik yuran mahkamah.
+Perlu dibezakan penambahan dokumen perubatan daripada pengubahsuaian atau peningkatan jumlah yang dituntut. Selepas mengemukakan tuntutan sivil sampingan kepada perbicaraan jenayah, hakikat mengemukakan lebih banyak resit perubatan semata-mata tidak menjana secara automatik yuran mahkamah.
 
-Namun, menurut perkara 504 Kanun Tatacara Jenayah, setelah kes dihantar ke bahagian sivil, mengubah, menambah atau meluaskan tuntutan di luar skop sebelum penghantaran boleh menimbulkan soalan belanja mahkamah ke atas bahagian berlebihan. Fasa penghantaran, saat pengemukaan dan skop tuntutan mesti disemak dalam setiap kes.
+Namun, menurut perkara 504 Kanun Tatacara Jenayah, setelah kes dihantar ke bahagian sivil, mengubah, menambah atau meluaskan tuntutan di luar skop sebelum penghantaran boleh menimbulkan soalan kos mahkamah ke atas bahagian berlebihan. Fasa penghantaran, saat pengemukaan dan skop tuntutan mesti disemak dalam setiap kes.
 
 ## Q9. Dengan apa dibuktikan kos jagaan profesional dan kos jagaan oleh saudara?
 

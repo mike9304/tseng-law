@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Imej yang menjelaskan penilaian tanggungjawab dalam kemalangan memotong di Taiwan dan prosedur memotong yang selamat](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Apabila kenderaan di hadapan bergerak perlahan, memotong (超車) boleh kelihatan pilihan biasa, tetapi ia ialah kelakuan memandu dengan risiko yang ketara. Sebelum memulakan pemotongan, anda mesti meneliti bersama bahagian jalan, keadaan lalu lintas kedua arah, pergerakan kenderaan yang mendahului dan ruang untuk kembali dengan selamat ke lorong asal.
+Apabila kenderaan di hadapan bergerak perlahan, memotong (超車) boleh kelihatan pilihan biasa, tetapi ia ialah kelakuan memandu dengan risiko yang ketara. Sebelum memulakan pemotongan, anda mesti meneliti bersama bahagian jalan, keadaan lalu lintas kedua arah, pergerakan kenderaan yang mendahului dan sama ada ada ruang yang mencukupi untuk memotong dan kembali dengan selamat ke lorong asal.
 
 ## Syarat memotong yang ditetapkan perkara 101 peraturan keselamatan lalu lintas jalan raya (道路交通安全規則)
 
@@ -27,7 +27,7 @@ Untuk memotong kenderaan di hadapan pada lorong yang sama, pemandu kenderaan di 
 
 Kenderaan di belakang hanya boleh memotong selepas kenderaan di hadapan memperlahankan dan menyisih, atau telah menyatakan kehendaknya untuk menyerahkan laluan melalui isyarat tangan atau isyarat belok kanan.
 
-Di Taiwan kenderaan berada di sebelah kanan, jadi pemotongan ialah di kiri. Kemudian, kenderaan yang memotong mesti menyalakan isyarat belok kiri, lalu di kiri sambil mengekalkan jarak sekurang-kurangnya 0.5 meter berbanding kenderaan di hadapan dan, setelah jarak selamat diperoleh, menyalakan isyarat belok kanan dan kembali dengan selamat ke lorong asal.
+Di Taiwan kenderaan berada di sebelah kanan, jadi pemotongan ialah di kiri. Kemudian, kenderaan yang memotong mesti menyalakan isyarat belok kiri, memotong di sebelah kiri sambil mengekalkan jarak sekurang-kurangnya 0.5 meter daripada kenderaan yang dipotong dan, setelah jarak selamat diperoleh, menyalakan isyarat belok kanan dan kembali dengan selamat ke lorong asal.
 
 Urutan isyarat dan penyerahan pada lorong yang sama ini tidak bermakna bahawa pemotongan dibenarkan di tempat atau dalam syarat yang dilarang. Sebelum memulakan pemotongan, semua syarat perkara 101 mesti dinilai bersama.
 
@@ -45,11 +45,11 @@ Keluarga A dan B melihat dahulu pertukaran lorong secara tiba-tiba kenderaan nom
 
 Menurut hasil penilaian pakar, A menanggung tanggungjawab utama perlanggaran ini. Kesimpulan ini terhad kepada fakta kes ini. Penilaian pakar itu mengambil kira bersama hakikat bahawa A ingin memotong 2 kenderaan di hadapan yang bergerak satu di belakang yang lain, bahawa ia masuk ke lorong bertentangan, bahawa ia bergerak pada kelajuan yang hampir tidak meninggalkan masa untuk membrek, bahawa isyarat hon dan lampu yang ditetapkan tidak ada, serta pergerakan pertukaran lorong kenderaan nombor 2, struktur jalan dan lorong dan bukti lain yang dikumpulkan.
 
-Bahawa, dalam sesetengah kes, hasil penilaian pakar sedemikian berlaku tidak bermakna bahawa satu peninggalan isyarat yang ditetapkan sentiasa menetapkan tanggungjawab. Kecuaian (過失) dalam kemalangan memotong bergantung pada tempat kemalangan, konfigurasi lorong, kelajuan, pergerakan kenderaan, isyarat, selang masa, penglihatan dan bukti lain.
+Hasil kes ini tidak bermakna bahawa kegagalan memberikan satu isyarat yang ditetapkan sentiasa menetapkan tanggungjawab. Kecuaian (過失) dalam kemalangan memotong bergantung pada tempat kemalangan, konfigurasi lorong, kelajuan, pergerakan kenderaan, isyarat, selang masa, penglihatan dan bukti lain.
 
 ## Titik yang perlu disahkan untuk menilai tanggungjawab kemalangan
 
-Sebelum memotong, anda mesti dahulu mengesahkan sama ada tempat atau keadaan lalu lintas masuk ke dalam larangan memotong. Jika prosedur lorong yang sama terpakai, berikan isyarat hon atau lampu yang ditetapkan, tanpa memaksa kenderaan di hadapan menyerah, tunggu isyarat penyerahan yang jelas dan selesaikan pemotongan dengan jarak yang mencukupi dan jarak kembali yang selamat.
+Sebelum memotong, anda mesti dahulu mengesahkan sama ada larangan memotong terpakai kepada tempat atau keadaan lalu lintas itu. Jika prosedur lorong yang sama terpakai, berikan isyarat hon atau lampu yang ditetapkan, tanpa memaksa kenderaan di hadapan menyerah, tunggu isyarat penyerahan yang jelas dan selesaikan pemotongan dengan jarak yang mencukupi dan jarak kembali yang selamat.
 
 Pematuhan perkara 101 penting, tetapi ia tidak memastikan dengan sendirinya pengelakan kemalangan mahupun hasil penilaian pakar atau perbicaraan kemudian. Pemandu mesti menyediakan ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
 

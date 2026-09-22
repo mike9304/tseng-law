@@ -56,7 +56,7 @@ Saya merumuskan ini dalam jadual ringkas.
 | Makna | Jika terdapat, pada majikan, keperluan penyesuaian kakitangan kerana keadaan perniagaan, sebab terletak dalam bidang keusahawanan majikan dan bukan dalam tanggungjawab pekerja. Itulah sebabnya majikan mesti mematuhi tempoh notis (預告期間) dan membayar pampasan pemberhentian, agar memampas secara seimbang ketidakselesaan pekerja. | Jika pekerja melakukan perbuatan yang dilarang undang-undang atau tidak sesuai, majikan boleh menamatkan serta-merta kontrak kerja (勞動契約) tanpa notis terdahulu dan tidak perlu membayar pampasan pemberhentian. Ini ialah salah satu prerogatif disiplin majikan. | Orang yang digaji bebas menamatkan kontrak pada bila-bila masa, tetapi mesti, menurut tempoh pekerjaan, mematuhi tempoh notis, agar majikan boleh menjalankan penyerahan dan mencari pengganti. |
 | Syarat | Ada  (perkara 11 undang-undang piawaian buruh Taiwan) | Ada  (perkara 12 undang-undang piawaian buruh Taiwan) | Tiada |
 | Notis terdahulu | Diperlukan | Tidak diperlukan | Diperlukan |
-| Tahap prosedur | Prosedur lebih ringkas bagi majikan | Prosedur lebih ketat bagi majikan | Prosedur lebih ringkas bagi pekerja |
+| Tahap kesukaran | Mudah | Sukar | Mudah |
 | Jika syarikat mesti membayar pampasan pemberhentian (資遣費) | Diperlukan | Tidak diperlukan | Tidak diperlukan |
 |  | Undang-undang piawaian buruh Taiwan, perkara 11 (勞動基準法第11條): Kecuali jika salah satu kes berikut berlaku, majikan tidak boleh menamatkan kontrak kerja, walaupun selepas pemberitahuan terdahulu kepada pekerja.  1. Penghentian aktiviti (歇業) atau pindahan perniagaan (轉讓)  2. Kerugian (虧損) atau pengecutan aktiviti (業務緊縮)  3. Kejadian di luar kawalan (force majeure) menuntut gangguan aktiviti 1 bulan atau lebih  4. Sifat aktiviti menuntut pengurangan kakitangan, dan orang yang diberhentikan tidak boleh dipindahkan ke jawatan sesuai lain  5. Orang yang digaji tertentu tidak boleh melaksanakan dengan memuaskan kerja yang dituntut jawatan | Undang-undang piawaian buruh Taiwan, perkara 12 (勞動基準法第12條): Majikan boleh memberhentikan tanpa pemberitahuan terdahulu jika pekerja jatuh ke dalam salah satu kes berikut.  1. Yang, semasa pemeteraian kontrak kerja, membuat pernyataan tidak tepat, menyesatkan majikan dan menimbulkan risiko kerugian kepada perniagaan  2. Yang menjalankan keganasan atau menghina secara berat majikan, keluarganya, wakilnya (代理人) atau rakan sekerja lain  3. Yang telah dihukum secara muktamad dengan hukuman penjara berjangka (有期徒刑) atau hukuman lebih berat, tanpa penggantungan hukuman (緩刑) dijatuhkan mahupun penukaran kepada denda (易科罰金) dibenarkan  4. Pelanggaran berat kontrak kerja atau peraturan kerja  5. Yang menggunakan secara sengaja mesin, alat, bahan mentah, produk atau harta lain majikan, atau mendedahkan secara sengaja rahsia teknikal dan perniagaan majikan, dan menyebabkan kerugian kepada majikan  6. Ketidakhadiran tanpa sebab (曠工) tanpa sebab yang sah selama 3 hari berturut-turut, atau selama 6 hari atau lebih dalam 1 bulan |  |
 
@@ -96,7 +96,7 @@ memanggil secara berturut-turut pekerja yang bergaji tinggi dan lama ke temu dug
 
 Pada masa itu, klien saya, Encik B, telah bekerja lebih daripada 10 tahun di syarikat A
 
-dan jurujual dengan jualan tertinggi di wilayah tengah Taiwan.
+dan ialah jurujual dengan jualan tertinggi di wilayah tengah Taiwan.
 
 Kerana gaji dan bonus sangat tinggi,
 

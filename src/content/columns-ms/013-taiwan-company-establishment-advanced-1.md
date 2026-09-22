@@ -41,7 +41,7 @@ ramai orang asing hilang baru-baru ini selepas pembukaan akaun, sehingga pembuka
 
 Sudah dalam bahagian asas, seorang pembaca menyatakan bahawa pembukaan akaun ialah langkah yang paling sukar; saya bersetuju.
 
-Kerana kes pengubahan wang haram (洗錢) sangat ramai di Taiwan, pembukaan akaun bank menjadi semakin ketat.
+Kerana kes pengubahan wang haram (洗錢) banyak di Taiwan, pembukaan akaun bank menjadi semakin ketat.
 
 **Nasihat:**
 
@@ -53,7 +53,7 @@ Menurut perkara 9 Statut Pelaburan oleh Warganegara Asing (外國人投資條例
 
 Dalam tempoh ini, setelah alamat syarikat dijumpai dan kontrak sewa ditandatangani,
 
-masih cukup masa untuk membuka di bank akaun persediaan dan memindahkan modal.
+masih cukup masa untuk membuka akaun persediaan di bank dan memindahkan modal.
 
 ​
 
@@ -67,7 +67,7 @@ dan tanpa kad kediaman, anda boleh memohon di pentadbiran imigresen Taiwan “**
 
 Pengeluaran mungkin pada hari yang sama,
 
-tetapi pentadbiran imigresen (移民署) sangat ramai; maka sebaiknya tiba awal dan mengambil nombor.
+tetapi pentadbiran imigresen (移民署) sangat sesak; maka sebaiknya tiba awal dan mengambil nombor.
 
 ​
 
@@ -87,7 +87,7 @@ Mengenai titik ini, bincangkan dengan teliti bersama peguam di Taiwan.
 
 **4. Titik apa yang perlu diperhatikan apabila alamat pendaftaran syarikat (contohnya premis restoran) diambil sewa?**
 
-Penubuhan syarikat berlangsung sekitar **3 bulan**, pemerolehan lesen kerja (工作許可) dan kad kediaman sekitar **1 bulan**,
+Penubuhan syarikat berlangsung sekitar **3 bulan**, pemerolehan permit kerja (工作許可) dan kad kediaman sekitar **1 bulan**,
 
 maka anda mesti menetapkan permulaan kontrak selewat mungkin.
 
@@ -103,7 +103,7 @@ Itulah sebabnya saya mengesyorkan mencari tempat operasi awal.
 
 Jika rundingan dengan tuan rumah tidak berjalan dengan lancar,
 
-anda boleh, jika sesuai, mencadangkan pengesahan kontrak sewa (公證) atau deposit cagaran tambahan.
+anda boleh, jika perlu, mencadangkan supaya kontrak sewa dinotari (公證) atau deposit cagaran tambahan.
 
 ​
 

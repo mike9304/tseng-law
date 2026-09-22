@@ -73,19 +73,19 @@ Pekerja maka mesti menguasai tempoh dengan baik.
 
 Dalam erti lain,
 
-undang-undang Taiwan, sama ada kesalahan di pihak perniagaan
+undang-undang Taiwan memberi hak mengikut pihak yang bersalah:
 
-atau di pihak pekerja,
+majikan boleh tidak membayar pampasan pemberhentian,
 
-mengakui kepada setiap pihak hak untuk tidak membayar pampasan pemberhentian atau menuntutnya.
+manakala pekerja boleh menuntutnya.
 
 Kadang-kadang, apabila terdapat kecuaian di kedua pihak dalam hubungan kerja,
 
 jika pertikaian timbul,
 
-menurut siapa menamatkan dahulu kontrak dengan sebab yang mencukupi
+pihak yang lebih dahulu menamatkan kontrak atas sebab yang mencukupi
 
-pampasan mungkin tidak dibayar atau boleh dituntut.
+boleh sama ada tidak membayar pampasan pemberhentian atau menuntutnya.
 
 Itulah sebabnya, dalam konflik buruh (勞資糾紛) di Taiwan,
 

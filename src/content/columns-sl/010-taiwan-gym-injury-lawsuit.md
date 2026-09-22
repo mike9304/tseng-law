@@ -67,7 +67,7 @@ Spodnje je splošna informacija za pojasnilo sporov o poškodbi v fitnesu na Taj
 
 ## 1. Po poškodbi v fitnesu na Tajvanu, kateri pravni postopki lahko pridejo v poštev?
 
-[7. člen tajvanskega zakona o varstvu potrošnikov (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) določa, da mora podjetje, ko nudi storitev, zagotoviti, da ima ta storitev varnost, ki jo je mogoče razumno pričakovati po strokovnem ali tehničnem merilu v trenutku nudenja.
+[7. člen tajvanskega zakona o varstvu potrošnikov (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) določa, da mora podjetje, ko nudi storitev, zagotoviti, da ta storitev dosega raven varnosti, ki jo je mogoče razumno pričakovati po strokovnem ali tehničnem merilu v trenutku nudenja.
 
 To ne pomeni, da je odgovornost podjetja ali trenerja priznana vsakič, ko se poškodba zgodi v fitnesu. Treba je presojati zadevo za zadevo, katera konkretna dolžnost skrbnosti je obstajala, ali je bila kršena, ali je vzročna zveza med kršitvijo in poškodbo, ali je nastala dejanska škoda, kakšne ugovore ima nasprotna stranka in ali obstaja dokaz, ki podpira vsako trditev ter vsak ugovor.
 
@@ -79,7 +79,7 @@ Po [287. členu tajvanskega kazenskega zakonika (刑法)](https://law.moj.gov.tw
 
 Pravica zahtevati odškodnino iz protipravnega dejanja po [197. členu tajvanskega civilnega zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) praviloma ugasne, če ni uveljavljena v 2 letih od trenutka, ko je oškodovanec izvedel tako za škodo kakor za osebo, ki je dolžna plačati odškodnino, in ugasne tudi, ko od protipravnega dejanja preteče 10 let.
 
-Če pa pride v poštev drug razlog zahtevka, kot pogodbena odgovornost, ali če se uporabijo druga pravila o začetku teka, poteku, pretrganju ipd., se to lahko razlikuje glede na dejanske okoliščine. Roka ni mogoče določati le po datumu nesreče ali diagnoze; varneje je pravočasno in posamično preveriti vsak mogoč temelj zahtevka in dan, od katerega mu začne teči rok.
+Če pa pride v poštev drug razlog zahtevka, kot je pogodbena odgovornost, ali če se uporabijo druga pravila o začetku teka, poteku, pretrganju ipd., se rok lahko razlikuje. Roka ni mogoče določati le po datumu nesreče ali diagnoze; varneje je pravočasno in posamično preveriti vsak mogoč temelj zahtevka in dan, od katerega mu začne teči rok.
 
 ## 3. Takoj po nesreči, katere dokaze je treba ohraniti in kako?
 
@@ -95,17 +95,17 @@ Postavke škode, ki lahko pridejo v poštev, so naslednje. Dejansko priznanje in
 
 1. **Zdravstveni stroški**: Izdatki, dejansko porabljeni za posvet, pregled, zdravljenje, zdravila in rehabilitacijo, se dokazujejo s potrdili in zdravstveno dokumentacijo.
 2. **Stroški nege ali oskrbe**: Ali je bila glede na stopnjo poškodbe in potek zdravljenja nega nujna ter ali sta trajanje ter strošek primerna, se presoja z zdravstveno dokumentacijo in z dokazili o izdatkih.
-3. **Potni stroški**: Izdatki, nujni za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazujejo z evidenco premikov, potrdili in podobnimi dokazili.
-4. **Zmanjšanje delovne zmožnosti (勞動能力減損)**: Če so priznane posledice in trajno znižanje delovne zmožnosti, je mogoče ocenjevati skupaj po medicinski in poklicni dokumentaciji, stopnji okvare, poklicu in dohodku in preostalem času delovne zmožnosti. Sam odstotek okvare odškodnine ne določa, niti se izguba ne izračuna samodejno do trenutka upokojitve.
+3. **Potni stroški**: Izdatki, nujni za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazujejo z evidenco prevozov, potrdili in podobnimi dokazili.
+4. **Zmanjšanje delovne zmožnosti (勞動能力減損)**: Če so priznane posledice in trajno znižanje delovne zmožnosti, je mogoče ocenjevati skupaj po medicinski in poklicni dokumentaciji, stopnji okvare, poklicu in dohodku in preostalem času delovne zmožnosti. Sam odstotek okvare sam ne določa zneska odškodnine, niti se izguba ne izračuna samodejno do trenutka upokojitve.
 5. **Izgubljeni dohodek v času okrevanja (收入損失)**: Čas, v katerem dejansko ni bilo mogoče delati zaradi zdravljenja ali okrevanja, in iz tega izhajajoče znižanje dohodka je treba dokazati s plačilnimi listami, davčnimi evidencami in kadrovskimi evidencami.
 6. **Nepremoženjska škoda (非財產上損害)**: Znesek za duševne bolečine določi sodišče po elementih vsake zadeve, kot so stopnja poškodbe, čas zdravljenja, posledice in konkretne okoliščine stranke.
 7. **Kaznovalna odškodnina (懲罰性賠償金)**: Obstaja pravilo, po katerem je v postopku, za katerega velja zakon o varstvu potrošnikov, mogoče, če je škoda nastala z naklepom podjetja, zahtevati do 5-kratnika dejanske škode; pri hudi malomarnosti do 3-kratnika; in pri malomarnosti pa do višine dejanske škode. Ali se [51. člen tajvanskega zakona o varstvu potrošnikov](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na zadevo nanaša ter ali se kaznovalna odškodnina dejansko prisodi in v kakšni višini, je odvisno od presoje sodišča glede konkretnih predpostavk ter dokazov.
 
 ## 5. Tudi če ima fitnes zavarovanje odgovornosti (責任保險), sta lahko obstoj odškodnine in višina sporna?
 
-Da. Dejstvo, da zavarovanje obstaja, je lahko pomenljivo pri presoji vira odškodnine, vendar samo po sebi ne pomeni pravne odgovornosti fitnesa ali trenerja niti ne določa zneska za izplačilo. Med zavarovalnico (保險人) in strankami lahko nastanejo spori o limitu kritja in izključitvenih klavzulah, vzročni zvezi med nesrečo in poškodbo in nujnosti in višini vsake postavke škode.
+Da. Dejstvo, da zavarovanje obstaja, je lahko pomembno kot možen vir sredstev za odškodnino, vendar samo po sebi ne pomeni pravne odgovornosti fitnesa ali trenerja niti ne določa zneska za izplačilo. Med zavarovalnico (保險人) in strankami lahko nastanejo spori o limitu kritja in izključitvenih klavzulah, vzročni zvezi med nesrečo in poškodbo in nujnosti in višini vsake postavke škode.
 
-Zlasti zmanjšanje delovne zmožnosti, znižanje dohodka v času okrevanja in nepremoženjska škoda lahko zahtevajo zdravstveno dokumentacijo, dokazila o dohodku in poklicno dokumentacijo ali mnenje izvedenca. Znesek, ki ga predlaga zavarovalnica, ali tisti, ki ga zahteva oškodovanec, ne postane takoj znesek, ki ga prizna sodišče, niti izid ocene okvare odškodnine ne določa samodejno. V dejanskem postopku je treba skupaj preveriti polico in pogoje, vsebino obvestila o nesreči, odgovor zavarovalnice, potek zdravljenja in dokumentacijo o škodi.
+Zlasti zmanjšanje delovne zmožnosti, znižanje dohodka v času okrevanja in nepremoženjska škoda lahko zahtevajo zdravstveno dokumentacijo, dokazila o dohodku in poklicno dokumentacijo ali mnenje izvedenca. Znesek, ki ga predlaga zavarovalnica, ali tisti, ki ga zahteva oškodovanec, ne postane takoj znesek, ki ga prizna sodišče, niti izid ocene okvare samodejno ne določa odškodnine. V dejanskem postopku je treba skupaj preveriti polico in pogoje, vsebino obvestila o nesreči, odgovor zavarovalnice, potek zdravljenja in dokumentacijo o škodi.
 
 Če ste utrpeli poškodbo v fitnesu, je pomembno najprej pridobiti potrebno oskrbo, ohraniti listine, ki jih je še mogoče zagotoviti, preden izginejo, in pravočasno pridobiti posamičen pravni nasvet k rokom in postopkom, ki se na zadevo lahko nanašajo. Pogajanja, potrošniška pritožba (消費申訴) ali mediacija (調解), kazenska ovadba in civilni zahtevek za odškodnino so vsa sredstva, ki jih je mogoče glede na zadevo izbrati, in niso postopki, ki bi jih bilo vedno nujno opraviti v celoti.
 

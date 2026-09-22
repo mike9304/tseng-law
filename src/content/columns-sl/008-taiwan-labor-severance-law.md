@@ -104,19 +104,19 @@ je družba vzela gospoda B za cilj.
 
 ​
 
-Nekega dne je vodilni uslužbenec poklical B na razgovor
+Nekega dne je vodilni uslužbenec poklical gospoda B na razgovor
 
 ter mu nenadoma začel očitati, da ne dela vestno.
 
-Družba naj bi imela težave,
+Vodilni uslužbenec je rekel, da ima družba težave,
 
-B naj bi se žrtvoval ter dal zgled
+da naj se gospod B žrtvuje ter da zgled
 
-in znižal plačo ter funkcijo.
+in da naj sprejme znižanje plače ter funkcije.
 
-Sicer naj bi B družbo zapustil;
+Rekel je, da mora sicer gospod B družbo zapustiti;
 
-predložili so B list formata A4
+predložili so gospodu B list formata A4
 
 ter ga pozvali, naj nanj napiše: »Jaz, [ime], prostovoljno znižujem funkcijo in plačo«
 

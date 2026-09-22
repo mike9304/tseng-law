@@ -2220,7 +2220,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Če ne obvladate nobenega od štirih jezikov posveta',
           paragraphs: [
-            'V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
+            'V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo zato, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
             'Gre le za oceno, ne za obljubo. Ne obljubljamo tolmača, storitve v slovenščini niti v drugem jeziku zunaj štirih navedenih jezikov, niti tega, da vsako zadevo sprejmemo.',
           ],
         },
@@ -2274,7 +2274,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kaj storiti, če ne morem uporabiti nobenega od štirih jezikov?',
           answer:
-            'Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za oceno, ne za obljubo, da lahko delamo v drugem jeziku.',
+            'Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo zato, da ocenimo način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za oceno, ne za obljubo, da lahko delamo v drugem jeziku.',
         },
         {
           question: 'Kako se ravna z mojim besedilom v slovenščini?',
@@ -2430,7 +2430,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'V kolikšni meri lahko članek služi za orientacijo',
           paragraphs: [
             'Članki so splošne informacije v trenutku objave. Predpisi in njihova uporaba se lahko spremenijo in članek ne vsebuje vseh okoliščin vašega primera.',
-            'Zato se v resnični zadevi ne opirajte samo na članek. Uporabite ga za pregled in o svojih dokumentih se posebej pogovorite z odvetnico ali odvetnikom; ta stran ni korak posveta.',
+            'Zato se v resnični zadevi ne opirajte samo na članek. Uporabite ga za pregled in o svojih dokumentih se posebej pogovorite z odvetnico ali odvetnikom; ta stran ni posvet.',
           ],
         },
       ],

@@ -67,7 +67,7 @@ Brez dovoljenja za prebivanje pa je pri tajvanski imigracijski upravi mogoče za
 
 Izdaja je mogoča še isti dan,
 
-imigracijska uprava (移民署) pa je zelo obremenjena; zato je treba priti zgodaj in vzeti čakalno številko.
+imigracijska uprava (移民署) pa je zelo polna; zato je treba priti zgodaj in vzeti čakalno številko.
 
 ​
 
@@ -93,7 +93,7 @@ zato je začetek pogodbe treba določiti čim pozneje.
 
 Poleg tega v najemnih pogodbah za poslovne lokale na Tajvanu najemodajalec najemniku pogosto prizna »**obdobje ureditve notranjosti**« (裝潢期間).
 
-Gre za obdobje, oproščeno najemnine; o njem je mogoče pogajati.
+Gre za obdobje, oproščeno najemnine; o njem se je mogoče pogajati.
 
 Tujcu ni lahko najeti poslovnega lokala, varščina (押金) na Tajvanu pa je precej nizka (običajno 2 meseca), zato je zaščita najemodajalca omejena;
 

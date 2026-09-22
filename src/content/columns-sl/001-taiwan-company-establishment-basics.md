@@ -40,7 +40,7 @@ Predstavništvo je izpostava, ki v dovoljenem okviru opravlja opazovanje trga, s
 
 Pri primerjavi organizacijske oblike je zato treba upoštevati ne le obseg odgovornosti, temveč tudi strukturo kapitala, delitev in prenos dobička, davke, panožna dovoljenja, delovnopravna razmerja in pogoje udeležbe pri javnih naročilih. Če določen razpis ali dovoljenje zahteva tajvansko pravno osebo, kapital, reference ali vpis, udeležbe ni mogoče izpeljati samo iz imena organizacijske oblike; presoditi je treba ustrezno določbo in objavo.
 
-Opomba glede posameznih držav — sporazum o davku od dohodka Tajvan–Koreja (所得稅協定): Sporazum med Tajvanom in Korejo je začel veljati 27. 12. 2023 in se uporablja od 1. 1. 2024. Če so izpolnjeni pogoji uporabe sporazuma, znaša najvišja stopnja v državi vira pri dividendah, obrestih in licenčninah v vsakem primeru 10 %. Dobički podjetij se praviloma obdavčijo na strani države sedeža, razen zlasti tedaj, ko na drugem ozemlju obstaja stalna poslovna enota v smislu sporazuma (常設機構, PE); najprej pa je treba presoditi dejanski način opravljanja dejavnosti. Ta razlaga zadeva dejanska stanja, povezana s Korejo, ki izpolnjujejo pogoje sporazuma; ni pravilo, ki bi veljalo za vlagatelje iz vseh držav. Ali med Tajvanom in državo vlagatelja tak sporazum obstaja in kaj vsebuje, je treba preveriti ločeno.
+Opomba glede posameznih držav — sporazum o davku od dohodka Tajvan–Koreja (所得稅協定): Sporazum med Tajvanom in Korejo je začel veljati 27. 12. 2023 in se uporablja od 1. 1. 2024. Če so izpolnjeni pogoji uporabe sporazuma, znaša najvišja stopnja v državi vira za dividende, obresti in licenčnine za vsako od teh vrst 10 %. Dobički podjetij se praviloma obdavčijo na strani države sedeža, razen med drugim takrat, ko ima podjetje na drugem ozemlju stalno poslovno enoto v smislu sporazuma (常設機構, PE); najprej pa je treba presoditi dejanski način opravljanja dejavnosti. Ta razlaga zadeva dejanska stanja, povezana s Korejo, ki izpolnjujejo pogoje sporazuma; ni pravilo, ki bi veljalo za vlagatelje iz vseh držav. Ali med Tajvanom in državo vlagatelja tak sporazum obstaja in kaj vsebuje, je treba preveriti ločeno.
 
 V stalno poslovno enoto v smislu sporazuma lahko spadajo stalni objekti, kot so sedež vodenja, podružnica in pisarna, gradbena dela, ki trajajo dlje kot 6 mesecev, storitve, ki v katerem koli obdobju 12 mesecev v seštevku presegajo 183 dni, in zastopniki, ki ponavljajoče sklepajo pogodbe na podlagi pooblastila. Vsaka od teh 4 vrst ima druge pogoje; če obstaja stalno mesto ali dejavnost zastopnika, je presoja nujna neodvisno od dni storitev. Številke 183 dni zato ni mogoče šteti za odločilno o nastanku stalne poslovne enote niti o obdavčitvi dobičkov podjetij.
 
@@ -52,7 +52,7 @@ Ustanovitev tajvanske hčerinske družbe se praviloma začne s predhodnim pregle
 
 1. Predhodni pregled kitajskega imena družbe in panoge dejavnosti (公司名稱及所營事業預查)
 
-2. Notarski zapis in legalizacija tujih listin, kot je pooblastilo (委任書), in po potrebi overitev tajvanskega predstavništva v tujini (駐外館處驗證)
+2. Notarska overitev ali legalizacija tujih listin, kot je pooblastilo (委任書), in po potrebi overitev tajvanskega predstavništva v tujini (駐外館處驗證)
 
 3. Naložbena vloga pri Oddelku za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司) (po potrebi)
 
@@ -70,9 +70,9 @@ Ustanovitev tajvanske hčerinske družbe se praviloma začne s predhodnim pregle
 
 10. Nadaljnje stopnje, kot so uvoz in izvoz, panožna dovoljenja, delovno dovoljenje in prebivanje (po potrebi)
 
-Predhodni pregled kitajskega imena družbe in panoge dejavnosti pred vpisom potrdi ime, ki naj se uporablja, in predvideno dejavnost. Uspeh tega pregleda ne pomeni, da je samostojno dovoljenje, potrebno za panogo, že izdano, niti da je mogoče takoj delovati na predvidenem kraju. Če je potrebna vloga za tujo naložbo, se morajo vlagatelj, višina naložbe, predmet vložka in poslovni načrt ujemati s podlagami pregleda.
+Predhodni pregled kitajskega imena družbe in panoge dejavnosti pred vpisom potrdi ime, ki naj se uporablja, in predvideno dejavnost. Uspeh tega pregleda ne pomeni, da je samostojno dovoljenje, potrebno za panogo, že izdano, niti da je mogoče takoj delovati na predvidenem kraju. Če je potrebna vloga za tujo naložbo, se morajo vlagatelj, višina naložbe, družba, v katero se vlaga, in poslovni načrt ujemati s podlagami pregleda.
 
-Listine, sestavljene v tujini, kot so pooblastilo, potrdilo o obstoju pravne osebe (法人存續證明) in listine o pooblastilu za zastopanje, lahko glede na kraj sestave in naravo listine zahtevajo notarski zapis, legalizacijo ali overitev tajvanskega predstavništva v tujini. Preveriti je tudi, ali se prevod, oseba, pooblaščena za podpis, in ime pravne osebe ujemajo z vlogo. Glede na državljanstvo vlagatelja ter glede na to, ali gre za fizično ali pravno osebo, se listine lahko razlikujejo; pred izdajo je smiselno urediti rok veljavnosti ter pot legalizacije.
+Listine, sestavljene v tujini, kot so pooblastilo, potrdilo o obstoju pravne osebe (法人存續證明) in listine o pooblastilu za zastopanje, lahko glede na kraj sestave in naravo listine zahtevajo notarsko overitev ali legalizacijo ali overitev tajvanskega predstavništva v tujini. Preveriti je tudi, ali se prevod, oseba, pooblaščena za podpis, in ime pravne osebe ujemajo z vlogo. Glede na državljanstvo vlagatelja ter glede na to, ali gre za fizično ali pravno osebo, se listine lahko razlikujejo; pred izdajo je smiselno urediti rok veljavnosti ter pot legalizacije.
 
 Pri odpiranju pripravljalnega računa in nakazilu naložbenih sredstev lahko banka v okviru identifikacije stranke presodi dejanskega lastnika (實質受益人) in izvor sredstev. Če se nalogodajalec, namen nakazila, vsebina odobritve naložbe in račun prejemnika ne ujemajo, so lahko potrebna dodatna pojasnila ali popravki. Po nakazilu sledi določitev dejansko naloženega zneska, nato vpis družbe in davčna registracija ter po bančnem postopku pretvorba pripravljalnega računa v redni račun.
 

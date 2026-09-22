@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Pagrindinis vaizdas](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Asmenys, kurie skaitė [Įmonės steigimas Taivane — pagrindai](/lt/columns/taiwan-company-establishment-basics) ir [Įmonės steigimas Taivane — išsamesnis išdėstymas, 1 dalis](/lt/columns/taiwan-company-establishment-advanced-1), taip pat gali peržiūrėti Įmonės steigimas Taivane — išsamesnis išdėstymas, 2 dalis (公司設立).
+Asmenys, kurie skaitė [Įmonės steigimas Taivane — pagrindai](/lt/columns/taiwan-company-establishment-basics) ir [Įmonės steigimas Taivane — išsamesnis išdėstymas, 1 dalis](/lt/columns/taiwan-company-establishment-advanced-1), šiame 2 dalies tekste ras tolesnius klausimus apie įmonės steigimą Taivane (公司設立).
 
 ​
 
@@ -21,7 +21,7 @@ Asmenys, kurie skaitė [Įmonės steigimas Taivane — pagrindai](/lt/columns/ta
 
 ​
 
-Toliau pateikti klausimai ir atsakymai skirti padėti asmenims, kurie svarsto įmonės steigimą (公司設立) Taivane.
+Toliau pateikiami advokatės Wei Tseng (曾雋崴) parengti klausimai ir atsakymai asmenims, kurie svarsto įmonės steigimą (公司設立) Taivane.
 
 ​
 
@@ -37,9 +37,9 @@ Prieš pervedant kapitalą (資本金匯款) pasikonsultuokite su savo banku inv
 
 **​**
 
-**2. Įmokant įstatinį kapitalą, ar galima pervesti Taivano dolerius (新臺幣, TWD) iš asmeninės sąskaitos Taivane į Taivano bendrovės parengiamąją sąskaitą?**
+**2. Įmokant įstatinį kapitalą, ar galima pervesti naujuosius Taivano dolerius (新臺幣, TWD) iš asmeninės sąskaitos Taivane į Taivano bendrovės parengiamąją sąskaitą?**
 
-Tai įmanoma, tačiau reikia pateikti dokumentus, patvirtinančius Taivane gautų Taivano dolerių lėšų kilmę.
+Tai įmanoma, tačiau reikia pateikti dokumentus, patvirtinančius Taivane gautų naujųjų Taivano dolerių lėšų kilmę.
 
 Jei, pavyzdžiui, tai darbo užmokesčio pajamos, gautos Taivane, reikia pateikti šių darbo užmokesčio pajamų išskaičiavimo prie šaltinio pažymos kopiją (薪資所得的扣繳憑單影本).
 

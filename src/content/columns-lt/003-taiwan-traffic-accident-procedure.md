@@ -83,7 +83,7 @@ Jei tai nusikaltimas, persekiojamas tik pagal skundą, pagal Baudžiamojo proces
 
 ## Q6. Kaip nustatoma atsakomybė už įvykį?
 
-Policijos sudaryta eismo įvykio preliminaraus analizės vertinimo lentelė yra preliminarinė analizė, paremta vietos dokumentais. Ji nėra nuosprendis, nesaisto teismo ir nenustato kaltės dalies (過失比例). Kadangi reikalingi dokumentai ir ginčo apimtis skiriasi pagal įvykį, ši lentelė, teisinė ekspertizė ir peržiūra (覆議) nėra nei automatinė eiga, nei privalomas etapas.
+Policijos sudaryta eismo įvykio preliminaraus analizės vertinimo lentelė yra preliminarinė analizė, paremta vietos dokumentais. Ji nėra nuosprendis, nesaisto teismo ir nenustato kaltės dalies (過失比例). Kadangi reikalingi dokumentai ir ginčo apimtis skiriasi pagal įvykį, ši lentelė, įstatyme numatyta transporto priemonės eismo įvykio ekspertizė ir peržiūra (覆議) nėra nei automatinė eiga, nei privalomas etapas.
 
 Pagal taikytinas nuostatas teisę turinti šalis gali prašyti transporto priemonės eismo įvykio ekspertizės (車輛行車事故鑑定); bylą vedanti institucija gali ją perduoti, o teismo institucija — pavesti. Šalies prašymas iš esmės teikiamas per 6 mėnesius nuo įvykio datos; bylose, kurios jau tiriamos arba nagrinėjamos teisme, ekspertizė vyksta teismo institucijos pavedimu, o ne nauju tiesioginiu prašymu.
 
@@ -175,7 +175,7 @@ Privalomojo transporto priemonių civilinės atsakomybės draudimo įstatymo (�
 
 Vienos transporto priemonės įvykyje tos priemonės vairuotojas iš esmės nėra tos priemonės privalomojo draudimo išmokos adresatas. Tačiau įvykyje, kuriame dalyvauja kelios transporto priemonės, yra atvejų, kai vairuotojas gali reikalauti išmokos iš kitos dalyvaujančios priemonės privalomojo draudiko.
 
-Išmokų standartas (強制汽車責任保險給付標準), pakeistas 2026 m. gegužės 29 d., taikomas įvykiams, įvykusiems nuo 2026 m. liepos 1 d. Protingų ir būtinų gydymo išlaidų už sužeidimą lubos yra 200.000 TWD naujojo Taivano dolerio; išmoka už negalią (失能) yra nuo 80.000 TWD iki 3.000.000 TWD pagal 15 įstatyminių laipsnių; išmoka už mirtį yra 3.000.000 TWD, o bendras mirties, negalios ir gydymo išlaidų maksimumas 1 nukentėjusiajam ir 1 įvykiui yra 3.200.000 TWD. Ankstesniems įvykiams gali būti taikomas ankstesnis standartas.
+Išmokų standartas (強制汽車責任保險給付標準), pakeistas 2026 m. gegužės 29 d., taikomas įvykiams, įvykusiems nuo 2026 m. liepos 1 d. Protingų ir būtinų gydymo išlaidų už sužeidimą lubos yra 200.000 naujųjų Taivano dolerių (TWD); išmoka už negalią (失能) yra nuo 80.000 TWD iki 3.000.000 TWD pagal 15 įstatyminių laipsnių; išmoka už mirtį yra 3.000.000 TWD, o bendras mirties, negalios ir gydymo išlaidų maksimumas 1 nukentėjusiajam ir 1 įvykiui yra 3.200.000 TWD. Ankstesniems įvykiams gali būti taikomas ankstesnis standartas.
 
 Trečiųjų šalių civilinės atsakomybės draudimas (第三人責任險), vairuotojo nelaimingų atsitikimų draudimas (駕駛人傷害險) ir savo transporto priemonės žalos draudimas (車體損失險) yra fakultatyvūs sutartiniai produktai. Tikroji apsauga skiriasi pagal apdraustąjį, lubas, išskaitą (自負額), išimtis, kaltę ir kitas poliso sąlygas, todėl polisą ir sąlygas reikia tikrinti byloje po bylos.
 
@@ -184,11 +184,11 @@ Trečiųjų šalių civilinės atsakomybės draudimas (第三人責任險), vair
 - [Civilinis kodeksas, 193 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Civilinis kodeksas, 216 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Civilinis kodeksas, 217 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Taivano apeliacinio teismo nuosprendis, Kinijos Respublikos 109 metai, byla 上易字 Nr. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Taivano apeliacinio teismo nuosprendis, Kinijos Respublikos 109 metai, byla 上易字 Nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Taivano apeliacinio teismo nuosprendis, Kinijos Respublikos kalendoriaus (民國) 109 metai, byla 上易字 Nr. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Taivano apeliacinio teismo nuosprendis, Kinijos Respublikos kalendoriaus (民國) 109 metai, byla 上易字 Nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Teismų juano Hofmano dabartinės vertės skaičiuoklė](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civilinis kodeksas, 195 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taojuano apygardos teismo nuosprendis, Kinijos Respublikos 112 metai, byla 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taojuano apygardos teismo nuosprendis, Kinijos Respublikos kalendoriaus (民國) 112 metai, byla 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civilinis kodeksas, 188 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Taivano Baudžiamasis kodeksas, 284 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Privalomojo transporto priemonių civilinės atsakomybės draudimo įstatymas](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)

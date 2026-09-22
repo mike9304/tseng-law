@@ -1,5 +1,5 @@
 ---
-title: "Puslaidininkių dalių įmonei įeinant į Taivano rinką: ką vertinti — dukterinę bendrovę, filialą ar platintoją?"
+title: "Puslaidininkių dalių įmonei įeinant į Taivano rinką: ką vertinti — dukterinę bendrovę, filialą ar atstovą?"
 lastmod: "2026-09-17"
 date_display: "2026 m. rugsėjo 17 d."
 read_time: "8 min. skaitymo"
@@ -15,7 +15,7 @@ faq:
     a: "Etapinį perėjimą galima suplanuoti, tačiau kartu reikia įvertinti esamų sutarčių pabaigą ar pakeitimą, sutartis su klientais, atsargas, garantijos tvarkymą ir personalo klausimus."
 ---
 
-# Puslaidininkių dalių įmonei įeinant į Taivano rinką: ką vertinti — dukterinę bendrovę, filialą ar platintoją?
+# Puslaidininkių dalių įmonei įeinant į Taivano rinką: ką vertinti — dukterinę bendrovę, filialą ar atstovą?
 
 ![Vaizdas, skirtas puslaidininkių įmonės įėjimo į Taivano rinką struktūrai vertinti](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
@@ -33,12 +33,12 @@ Prieš pagrindinei buveinei sprendžiant įėjimo struktūrą, viduje pirmiausia
 
 | Veiklos punktas | Pirmiausia sutvarkytini klausimai |
 |---|---|
-| Klientų sutartys | Kas taps sutarties šalimi: užsienio pagrindinė buveinė, Taivano dukterinė bendrovė ar vietos platintojas? |
+| Klientų sutartys | Kas taps sutarties šalimi: užsienio pagrindinė buveinė, Taivano dukterinė bendrovė ar vietos atstovas? |
 | Pasiūlymai ir užsakymai | Kas galutinai patvirtina kainą ir pristatymo terminus ir kokia yra Taivano atsakingojo asmens įgaliojimų apimtis? |
 | Prekės ir atsargos | Kas importuoja, laiko ir valdo atsargas ir tvarko grąžinimus bei pakeitimus? |
 | Personalas | Ar atvyksta pagrindinės buveinės darbuotojai, ar įdarbinama Taivane, ar darbas pavedamas išorės tiekėjui? |
 | Įrengimas ir techninė pagalba | Kas prisiima pagalbos prievolę klientui ir sprendžia problemas vietoje atliekamo darbo metu? |
-| Mokėjimai ir sąnaudos | Kas teikia sąskaitas ir surenka lėšas ir kaip sąnaudos atsiskaitomos tarp pagrindinės buveinės ir Taivano organizacijos? |
+| Mokėjimai ir sąnaudos | Kas teikia sąskaitas ir surenka lėšas ir kaip už sąnaudas atsiskaitoma tarp pagrindinės buveinės ir Taivano organizacijos? |
 | Kokybė ir ginčai | Kas patvirtina patikros rezultatą ir kas priima defektų teiginius ar žalos atlyginimo reikalavimus? |
 
 Ypač jei pirkimo sutartyje nurodytas pardavėjas nėra ta bendrovė, kuri faktiškai teikia techninę pagalbą, dokumentuose reikia atskirti, iš ko klientas gali reikalauti kurių prievolių įvykdymo.
@@ -61,11 +61,11 @@ Jei nusprendėte Taivane turėti savarankišką juridinį asmenį, reikia pasiri
 
 ### Ribotos atsakomybės bendrovė: valdymas paprastesnis, tačiau dalių perleidimas santykinai uždaresnis
 
-Ribotos atsakomybės bendrovę galima sudaryti su 1 arba daugiau fizinių asmenų arba su Taivano ar užsienio juridiniais asmenimis kaip akcininkais; akcininkai paprastai atsako įnašo sumos ribose. Direktorių yra nuo 1 iki 3 ir jie renkami iš akcininkų. Akcininkai, kurie nevykdo veiklos, gali naudotis priežiūros teise (監察權), todėl atskiro stebėtojo (監察人) skirti nereikia. Jei įstatuose nenumatyta kitaip, 1 akcininkas turi 1 balsą, todėl kontrolė nebūtinai sutampa su įnašo santykiu. Įprasto akcininko įnašo perleidimui paprastai reikia kitų akcininkų balsavimo teisių daugiau kaip pusės sutikimo; direktoriui reikia 2/3 arba daugiau. Todėl forma geriau tinka paprastiems akcininkų santykiams ir stabiliai kontrolei nei dažnam kapitalo pritraukimui ar akcijų prekybai. Vėliau ją galima pertvarkyti į akcinę bendrovę.
+Ribotos atsakomybės bendrovę galima sudaryti su 1 arba daugiau fizinių asmenų arba su Taivano ar užsienio juridiniais asmenimis kaip dalininkais; dalininkai paprastai atsako įnašo sumos ribose. Direktorių yra nuo 1 iki 3 ir jie renkami iš dalininkų. Dalininkai, kurie nevykdo veiklos, gali naudotis priežiūros teise (監察權), todėl atskiro stebėtojo (監察人) skirti nereikia. Jei įstatuose nenumatyta kitaip, 1 dalininkas turi 1 balsą, todėl kontrolė nebūtinai sutampa su įnašo santykiu. Įprasto dalininko įnašo perleidimui paprastai reikia kitų dalininkų balsavimo teisių daugiau kaip pusės sutikimo; direktoriui reikia 2/3 arba daugiau. Todėl forma geriau tinka paprastiems dalininkų santykiams ir stabiliai kontrolei nei dažnam kapitalo pritraukimui ar akcijų prekybai. Vėliau ją galima pertvarkyti į akcinę bendrovę.
 
 ### Akcinė bendrovė: tinka, kai ketinama priimti kitus investuotojus ar svarstomas įtraukimas į biržos sąrašą
 
-Akcinės bendrovės kapitalas dalijamas į akcijas. Paprastai reikia 2 arba daugiau akcininkų, tačiau valstybė ar juridinis asmuo gali steigti ir vienas, ir užsienio juridinis asmuo gali turėti 100 % akcijų. Akcijos paprastai laisvai perleidžiamos, su įstatyminėmis išimtimis; pagal teisės aktus galima numatyti skirtingų klasių akcijas, darbuotojų akcijų opcionus ir pan. Todėl forma tinka įmonėms, kurios tikisi investuotojų, akcijų sandorių, darbuotojų akcijų skatinimo ar būsimo susijungimo, įsigijimo, įtraukimo į biržos sąrašą ar registracijos besiformuojančioje rinkoje; ji neapsiriboja tik didelėmis įmonėmis. Valdymo požiūriu į biržos sąrašą neįtraukta bendrovė įstatuose gali nenumatyti valdybos ir turėti tik 1 arba 2 direktorius. Bendrovė, kurios vienintelis akcininkas yra valstybė ar juridinis asmuo, įstatuose taip pat gali nenumatyti stebėtojo. Be to, ne kiekviena akcinė bendrovė privalo gauti metinį finansinių ataskaitų auditą ir patvirtinimą, kurį atlieka auditorius (會計師查核簽證). Įprastos bendrovės pagrindinės audito ribos yra apmokėtas kapitalas 30.000.000 TWD, arba, jei kapitalas mažesnis, veiklos pajamos 100.000.000 TWD arba 100 darbuotojų, apdraustų darbo draudimu (勞工保險); viešąją emisiją atlikusi bendrovė (公開發行公司) vadovaujasi vertybinių popierių teisės aktais.
+Akcinės bendrovės kapitalas dalijamas į akcijas. Paprastai reikia 2 arba daugiau akcininkų, tačiau valstybė ar juridinis asmuo gali steigti ir vienas, ir užsienio juridinis asmuo gali turėti 100 % akcijų. Akcijos paprastai laisvai perleidžiamos, su įstatyminėmis išimtimis; pagal teisės aktus galima numatyti skirtingų klasių akcijas, darbuotojų akcijų opcionus ir pan. Todėl forma tinka įmonėms, kurios tikisi investuotojų, akcijų sandorių, darbuotojų akcijų skatinimo ar būsimo susijungimo, įsigijimo, įtraukimo į biržos sąrašą ar registracijos prekyboje prieš oficialųjį sąrašą (興櫃); ji neapsiriboja tik didelėmis įmonėmis. Valdymo požiūriu į biržos sąrašą neįtraukta bendrovė įstatuose gali nenumatyti valdybos ir turėti tik 1 arba 2 direktorius. Bendrovė, kurios vienintelis akcininkas yra valstybė ar juridinis asmuo, įstatuose taip pat gali nenumatyti stebėtojo. Be to, ne kiekviena akcinė bendrovė privalo gauti metinį finansinių ataskaitų auditą ir patvirtinimą, kurį atlieka auditorius (會計師查核簽證). Įprastos bendrovės pagrindinės audito ribos yra apmokėtas kapitalas 30.000.000 TWD, arba, jei kapitalas mažesnis, veiklos pajamos 100.000.000 TWD arba 100 darbuotojų, apdraustų darbo draudimu (勞工保險); viešąją emisiją atlikusi bendrovė (公開發行公司) vadovaujasi vertybinių popierių teisės aktais.
 
 ## 4. Filialo ir dukterinės bendrovės steigimo eiga skiriasi; tik dukterinės bendrovės steigimas eina per Ekonomikos ministerijos investicijų peržiūrą
 

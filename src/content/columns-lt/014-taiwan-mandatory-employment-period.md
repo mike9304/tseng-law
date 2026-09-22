@@ -22,7 +22,7 @@ faq:
 
 ![Vaizdas, paaiškinantis darbo sutarties minimalų darbo laikotarpį ir išlaidų grąžinimo klausimą](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Taivano darbo sutarties (勞動契約) minimalaus darbo laikotarpio sąlyga (最低服務年限約定) naudojama kartu su pažadu dirbti tam tikrą laiką tam, kad būtų nustatyta, ar išėjus anksčiau kyla pareiga grąžinti mokymo išlaidas, pasirašymo premiją (簽約金) ar premiją už pasilikimą darbe (留任獎金) ir ar galima atskirai reikalauti sutartinės baudos (違約金). Vien tai, kad yra pasirašytas tekstas, vis dėlto nenustato sąlygos galiojimo ir grąžintinos sumos. Svarbiau už sutarties pavadinimą etapais patikrinti įstatymines prielaidas ir faktinę išmokų, mokymo bei pasibaigimo eigą.
+Taivano darbo sutarties (勞動契約) minimalaus darbo laikotarpio sąlyga (最低服務年限約定) nustato darbuotojo pažadą dirbti tam tikrą laiką, tai, ar išėjus anksčiau kyla pareiga grąžinti mokymo išlaidas, pasirašymo premiją (簽約金) ar premiją už pasilikimą darbe (留任獎金), ir tai, ar galima atskirai reikalauti sutartinės baudos (違約金). Vien tai, kad yra pasirašytas tekstas, vis dėlto nenustato sąlygos galiojimo ir grąžintinos sumos. Svarbiau už sutarties pavadinimą etapais patikrinti įstatymines prielaidas ir faktinę išmokų, mokymo bei pasibaigimo eigą.
 
 Peržiūrint svarbu nemaišyti šių 4 klausimų.
 
@@ -47,25 +47,25 @@ Aplinkybė, kad darbuotojas sutartį pasirašė, gali būti dokumentas, patvirti
 
 ## 2. Pirmoji įstatyminė prielaida: profesinių įgūdžių mokymas ir išlaidų padengimas
 
-Kad sąlyga būtų grindžiama mokymu, darbdavys darbuotojui turi faktiškai teikti profesinių įgūdžių mokymą ir padengti jo išlaidas. Nepakanka mokymo plane parašyti, kad tai profesinis kursas, ar sutartyje įrašyti numatomas išlaidas. Dokumentais reikia susieti mokymo temą, pareigoms reikalingą profesinį ir techninį pobūdį, konkrečią trukmę, ar mokymas baigtas, ir faktines išlaidas.
+Kad sąlyga būtų grindžiama mokymu, darbdavys darbuotojui turi faktiškai teikti profesinių įgūdžių mokymą ir padengti jo išlaidas. Nepakanka mokymo plane parašyti, kad tai profesinis kursas, ar sutartyje įrašyti numatomas išlaidas. Dokumentais reikia susieti mokymo temą, pareigoms reikalingus profesinius ir techninius įgūdžius, konkrečią trukmę, ar mokymas baigtas, ir faktines išlaidas.
 
-Peržiūros objektas yra ne tik tiesiogiai patikrinamos išlaidos, tokios kaip išorės lektorių honorarai, mokymo įstaigos mokestis ir mokesčiai už medžiagas ar įrangą, bet ir darbdavio teigiamų vidaus išlaidų skaičiavimo pagrindas. Jei mokė vidaus personalas, reikia matyti, kieno ir koks laikas buvo skirtas, kuo tai skiriasi nuo įprastos priežiūros ar pareigų perdavimo ir ar yra pagrindas šias išlaidas priskirti tam darbuotojui. Numatyta suma ar vienodai paskirstytos sumos pačios savaime faktinių išlaidų neįrodo.
+Peržiūros objektas yra ne tik tiesiogiai patikrinamos išlaidos, tokios kaip išorės lektorių honorarai, mokymo įstaigos mokestis ir mokesčiai už medžiagas ar įrangą, bet ir darbdavio nurodomų vidaus išlaidų skaičiavimo pagrindas. Jei mokė vidaus personalas, reikia matyti, kieno ir koks laikas buvo skirtas, kuo tai skiriasi nuo įprastos priežiūros ar pareigų perdavimo ir ar yra pagrindas šias išlaidas priskirti tam darbuotojui. Numatyta suma ar vienodai paskirstytos sumos pačios savaime faktinių išlaidų neįrodo.
 
 Programa, mokymo kalendorius, dalyvių sąrašas, vertinimo rezultatas, baigimo pažymėjimas, sąskaitos faktūros ir kvitai yra pagrindiniai dokumentai mokymo faktui ir išlaidoms patvirtinti. Sutartis tarp darbdavio ir mokymo įstaigos, mokėjimo dokumentai ir grąžinimo sąlygos, matomi kartu, leidžia tiksliau nustatyti faktinę naštą. Jei darbuotojas dalį išlaidų sumokėjo tiesiogiai arba jas padengė trečioji šalis, taip pat reikia atskirti, kas padengė galutines išlaidas.
 
 Ribą tarp įprasto prisitaikymo prie darbo ir profesinių įgūdžių mokymo nustato ne vien mokymo vieta ar tai, kas jį rengia. Vidaus kursas gali įrodyti konkretų profesinį ir techninį turinį ir nemažą investiciją, o ilgas išorės įstaigos kursas iš tikrųjų gali būti bendras įvadinis mokymas. Todėl negalima vienodai atmesti viso vidaus mokymo ir negalima pripažinti įstatyminės prielaidos vien todėl, kad kursas brangus ar ilgas.
 
-Taip pat reikia gebėti paaiškinti ryšį tarp sutarto laikotarpio ir investicijos į mokymą. Kokia kompetencija įgyjama, koks šios kompetencijos ryšys su tikslinėmis pareigomis ir kodėl siūlomas darbo laikotarpis reikalingas palyginti su mokymo trukme ir išlaidomis, vertinama atskirai. Ar po mokymo pabaigos šis darbas faktiškai buvo atliekamas ir jau išdirbtas laikotarpis taip pat yra naštos apimties vertinimo dokumentai.
+Taip pat reikia gebėti paaiškinti ryšį tarp sutarto laikotarpio ir investicijos į mokymą. Kokia kompetencija įgyjama, koks šios kompetencijos ryšys su tikslinėmis pareigomis ir kodėl siūlomas darbo laikotarpis reikalingas palyginti su mokymo trukme ir išlaidomis, vertinama atskirai. Ar po mokymo pabaigos šis darbas faktiškai buvo atliekamas ir kiek laiko jau išdirbta, taip pat svarbu vertinant naštos apimtį.
 
 ## 3. Antroji įstatyminė prielaida: protinga kompensacija
 
-Antroji įstatyminė prielaida yra ta, kad darbdavys teikia protingą kompensaciją už darbuotojo pažadą laikytis minimalaus darbo laikotarpio. Čia kompensacija turi turėti tikslą ir struktūrą, skirtingus nuo įprasto darbo užmokesčio ar atlygio už darbą, kuris jau turi būti teikiamas. Teisinis pobūdis nenustatomas vien todėl, kad darbo užmokesčio lapelyje buvo pažymėta kaip pasirašymo premija, premija už pasilikimą darbe ar išmoka, mokama iš anksto.
+Antroji įstatyminė prielaida yra ta, kad darbdavys teikia protingą kompensaciją už darbuotojo pažadą laikytis minimalaus darbo laikotarpio. Čia kompensacija turi turėti tikslą ir struktūrą, skirtingus nuo įprasto darbo užmokesčio ar atlygio už darbą, kuris jau turi būti teikiamas. Teisinis pobūdis nenustatomas vien todėl, kad išmoka darbo užmokesčio lapelyje buvo pažymėta kaip pasirašymo premija, premija už pasilikimą darbe ar išmoka, mokama iš anksto.
 
 Pirmiausia reikia patikrinti išmokos tikslą. Ar tai įprasta įdarbinimo darbo užmokesčio sąlyga, atlygis už pažadą išlikti tam tikrą laiką, ar atlygis už rezultatų pasiekimą, turi būti aišku iš sutarties ir pranešimo dokumentų. Taip pat vertinama, ar išmokos diena, suma, teisių įgijimo diena, ryšys su darbo laikotarpiu, grąžinimo priežastys ir formulė buvo pateikti taip, kad darbuotojas galėtų juos suprasti prieš sutartį.
 
 Taivano Darbo ministerijos (勞動部) 2026 m. birželio 5 d. išaiškinimas (函釋) paaiškina, kad jei kaip protinga kompensacija už minimalaus darbo laikotarpio sąlygą imama premija už pasilikimą darbe, pasirašymo premija ar kita išmoka, mokama iš anksto, šis vaidmuo turi būti aiškiai praneštas. Tai, kad darbdavys vėliau iš naujo aiškina išmokos tikslą arba dalį darbo užmokesčio iš naujo priskiria kompensacijai, sunkiai pakeičia pranešimą sutarties sudarymo metu.
 
-Kompensacijos protingumas vertinamas ne vien pagal sumą. Kartu žiūrima, ar darbuotojas iš tikrųjų gauna papildomą naudą, ar išmokos sąlygos aiškios, kaip priskiriama jau išdirbtam laikotarpiui atitinkanti dalis ir ar grąžinimo apimtis nėra per didelė. Net jei kompensacija yra, be apribojimo neleidžiama bet kokia darbo trukmė ir bet kokia grąžinimo atsakomybės suma.
+Kompensacijos protingumas vertinamas ne vien pagal sumą. Kartu žiūrima, ar darbuotojas iš tikrųjų gauna papildomą naudą, ar išmokos sąlygos aiškios, kaip jau išdirbtam laikotarpiui tenkanti dalis darbuotojui galutinai pereina ir ar grąžinimo apimtis nėra per didelė. Net jei kompensacija yra, be apribojimo neleidžiama bet kokia darbo trukmė ir bet kokia grąžinimo atsakomybės suma.
 
 Taip pat svarbu, kad sutarties tekstas ir faktinė išmoka sutaptų. Patikrinimas, ar išmoka vėlavo ar buvo padalyta, ar ji sąlyginė, kokia faktiškai gauta suma po mokesčių ir išskaitymų ir ar buvo atskiras rašytinis pranešimas, padeda vertinti kompensacijos apimtį ir darbuotojo faktinę naudą.
 
@@ -78,15 +78,15 @@ Net jei yra viena iš įstatyminių prielaidų, sutartas laikotarpis ir atsakomy
 3. Kompensacijos suma ir apimtis
 4. Kitos aplinkybės, kurios veikia protingumą
 
-Pirmuoju elementu žiūrima, kiek mokymas faktiškai truko ir kiek darbdavys padengė. Nepakanka pateikti visumos; tikslinga kartu patikrinti išlaidų dokumentus pagal eilutes, kiekvienam darbuotojui priskirtą sumą, kompetenciją, kurią mokymas suteikė, ir jau atgautą investicijos dalį.
+Pirmuoju elementu žiūrima, kiek mokymas faktiškai truko ir kiek darbdavys padengė. Nepakanka nurodyti bendros sumos; tikslinga kartu patikrinti išlaidų dokumentus pagal eilutes, kiekvienam darbuotojui priskirtą sumą, kompetenciją, kurią mokymas suteikė, ir jau atgautą investicijos dalį.
 
 Antrasis elementas, pakeitimo galimybė, nenustatomas vien darbdavio teiginiu apie įdarbinimo sunkumą. Vertinama, ar galima gauti to paties ar panašaus darbo personalą, kokia kvalifikacija ir įgūdžių lygis reikalingi, koks įprastas užpildymo laikotarpis ir ar darbdavio teikiama veiklos būtinybė sutampa su objektyviais dokumentais.
 
-Trečiasis elementas žiūri ne tik į kompensacijos sumą, bet ir į apimtį. Svarbu, kada išmokama ir kokiomis sąlygomis galutinai priskiriama darbuotojui, kaip ji atitinka visą sutartą laikotarpį ir ar, darbo santykiams pasibaigus anksčiau, atsižvelgiama į jau išdirbtą laikotarpį. To paties pavadinimo premija gali būti vertinama skirtingai pagal sutarties struktūrą ir faktą.
+Trečiasis elementas žiūri ne tik į kompensacijos sumą, bet ir į apimtį. Svarbu, kada išmokama ir kokiomis sąlygomis ji darbuotojui galutinai pereina, kaip ji atitinka visą sutartą laikotarpį ir ar, darbo santykiams pasibaigus anksčiau, atsižvelgiama į jau išdirbtą laikotarpį. To paties pavadinimo premija gali būti vertinama skirtingai pagal sutarties struktūrą ir faktą.
 
 Ketvirtasis elementas gali apimti įvairias aplinkybes, kurios veikia protingumą, tokias kaip sąlygos sudarymo eiga, darbo pobūdis, kas šalims buvo paaiškinta, faktiškai išdirbtas laikotarpis ir pasibaigimo priežastis. Kiekvieno elemento svarba gali skirtis pagal bylą, o įvertintinos aplinkybės neapsiriboja pirmiau nurodytais pavyzdžiais. Todėl reikia vertinti nepraleidžiant susijusių faktų, kurie matyti byloje.
 
-Galiausiai reikalingas suprantamas santykis tarp sutarto laikotarpio, darbdavio faktinės investicijos, pakeičiamumo sunkumo (人力替補困難), kompensacijos, kurią darbuotojas gavo, ir grąžinimo naštos. Negalima iš anksto nustatyti galiojimo vien todėl, kad tai tam tikra profesija, ir negalima be pakeitimų taikyti kitos bylos išvados. Kartu reikia matyti sandorio sandarą sutarties sudarymo metu ir faktinį įvykdymo laipsnį pasibaigimo metu.
+Galiausiai tarp sutarto laikotarpio, darbdavio faktinės investicijos, pakeičiamumo sunkumo (人力替補困難), darbuotojo gautos kompensacijos ir grąžinimo naštos turi būti protingas proporcingas santykis. Negalima iš anksto nustatyti galiojimo vien todėl, kad tai tam tikra profesija, ir negalima be pakeitimų taikyti kitos bylos išvados. Kartu reikia matyti sandorio sandarą sutarties sudarymo metu ir faktinį įvykdymo laipsnį pasibaigimo metu.
 
 ## 5. Mokymas, kuris negali pagrįsti sąlygos
 
@@ -106,7 +106,7 @@ Ne visada reikia grąžinti visą sumą. Jei pasirašymo premija, premija už pa
 
 Pranešimas neturi būti pirmą kartą pateiktas tik tada, kai po išmokos kyla ginčas. Darbuotojas sutarties sudarymo ir išmokos gavimo metu turi žinoti, kuri suma yra kompensacija už minimalaus darbo laikotarpio pažadą, kokia visa sutarto laikotarpio trukmė, kada jis įgyja teises į sumą ir pagal kokią formulę atsiskaitoma, jei pasibaigimas įvyksta nepasibaigus laikotarpiui.
 
-Kad būtų taikomas neįvykdyto laikotarpio proporcijos principas, pirmiausia reikia nustatyti sąlygos pradžios ir pabaigos dieną, faktiškai išdirbtas dienas ir grąžinimo skaičiavimo pagrindą. Pavyzdžiui, fiksuotą sumą, kuri visiškai neatsižvelgia į jau įvykdytą laikotarpį, reikia vertinti išaiškinimo proporcijos standarto šviesoje. Jei struktūra yra padalyta išmoka ar teisių įgijimas etapais, atskirai reikia apskaičiuoti, kuriam laikotarpiui atitinka kiekviena dalis.
+Kad būtų taikomas neįvykdyto laikotarpio proporcijos principas, pirmiausia reikia nustatyti sąlygos pradžios ir pabaigos dieną, faktiškai išdirbtas dienas ir grąžinimo skaičiavimo pagrindą. Pavyzdžiui, fiksuotą sumą, kuri visiškai neatsižvelgia į jau įvykdytą laikotarpį, reikia vertinti pagal išaiškinimo proporcingumo standartą. Jei struktūra yra padalyta išmoka ar teisių įgijimas etapais, atskirai reikia apskaičiuoti, kuriam laikotarpiui atitinka kiekviena dalis.
 
 Grąžinimo klausimą reikia tikrinti šia tvarka: sąlygos galiojimas, išmokėtos sumos teisinis pobūdis, jau išdirbtas laikotarpis, pasibaigimo priežastis ir grąžinimo formulė; reikalaujama suma nenustatoma vien todėl, kad sutartis vartoja posakį „sutartinė bauda“.
 
@@ -146,7 +146,7 @@ Praktikoje reikia išsaugoti pasitraukimo valios išreiškimo turinį ir perdavi
 
 ## 9. Darbdavio ir darbuotojo tikrinimo sąrašas
 
-Siekiant užkirsti kelią ginčui arba vertinti jau pareikštą reikalavimą, negalima skaityti tik sutarties, o kartu laiko tvarka sutvarkyti mokymo, išmokų, darbo ir pasibaigimo dokumentus. Ypač lentelėje sutvarkyti, kiek sutarto laikotarpio įvykdyta ir kiek liko ir kuriems dokumentams atitinka teigiamos išlaidos ir kompensacija, padeda atskirti ginčo punktus.
+Siekiant užkirsti kelią ginčui arba vertinti jau pareikštą reikalavimą, negalima skaityti tik sutarties, o kartu laiko tvarka sutvarkyti mokymo, išmokų, darbo ir pasibaigimo dokumentus. Ypač lentelėje sutvarkyti, kiek sutarto laikotarpio įvykdyta ir kiek liko ir kuriems dokumentams atitinka nurodomos išlaidos ir kompensacija, padeda atskirti ginčo punktus.
 
 ### Darbdavio tikrintini dalykai
 

@@ -43,9 +43,9 @@ B patyrė sunkų galvos sužalojimą ir mirė vietoje; A prarado sąmonę ir buv
 
 A ir B šeimos iš pradžių laikė staigų 2-osios transporto priemonės juostos keitimą pagrindine susidūrimo priežastimi. Byla perėjo į teismo procesą; jo metu buvo parengtos kelios eismo įvykio ekspertizės (鑑定).
 
-Pagal ekspertizės rezultatą pagrindinė atsakomybė už šį susidūrimą teko A. Ši išvada apsiribojo šios bylos faktinėmis aplinkybėmis. Ekspertizė kartu įvertino tai, kad A ketino lenkti dvi priekyje iš eilės važiavusias transporto priemones, kad įvažiavo į priešpriešinio eismo juostą, kad važiavo greičiu, kuris beveik nepaliko laiko stabdyti, kad trūko nustatytų garso ir žibintų signalų, taip pat 2-osios transporto priemonės juostos keitimo judesį, kelio ir juostų sandarą bei kitus užtikrintus įrodymus.
+Pagal ekspertizės rezultatą pagrindinė atsakomybė už šį susidūrimą teko A. Ši išvada apsiribojo šios bylos faktinėmis aplinkybėmis. Ekspertizė kartu įvertino tai, kad A ketino lenkti dvi priekyje iš eilės važiavusias transporto priemones, kad įvažiavo į priešpriešinio eismo juostą, kad važiavo greičiu, kuris beveik nepaliko laiko stabdyti, kad trūko nustatytų garso ir žibintų signalų, taip pat 2-osios transporto priemonės juostos keitimo judesį, kelio ir juostų sandarą bei kitus turimus įrodymus.
 
-Tai, kad atskirose bylose tokie ekspertizės rezultatai pasitaiko, nereiškia, kad vieno nustatyto signalo praleidimas visada nustato atsakomybę. Kaltė (過失) lenkimo eismo įvykyje priklauso nuo įvykio vietos, juostų sandaros, greičio, transporto priemonių judėjimo, signalų, laiko intervalų, matomumo ir kitų įrodymų.
+Šios bylos rezultatas nereiškia, kad vieno nustatyto signalo praleidimas visada nustato atsakomybę. Kaltė (過失) lenkimo eismo įvykyje priklauso nuo įvykio vietos, juostų sandaros, greičio, transporto priemonių judėjimo, signalų, laiko intervalų, matomumo ir kitų įrodymų.
 
 ## Ką patikrinti vertinant atsakomybę už eismo įvykį
 

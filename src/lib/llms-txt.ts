@@ -886,7 +886,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Šī informācija ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.',
     discoveryNotice:
-      'Fails llms.txt ir tikai karte publisko lapu atrašanai; tas nesola vietu meklēšanā, atbalstu, mākslīgā intelekta ieteikumu un redzamību.',
+      'Fails llms.txt ir tikai karte publisko lapu atrašanai; tas nesola vietu meklēšanas rezultātos, ieteikumu, mākslīgā intelekta ieteikumu un garantētu redzamību.',
     confidentialNotice:
       'Tā kā sākotnējais teksts tiek saglabāts, sākumposmā nerakstiet to, kas vēl nav vajadzīgs, piemēram, pases numuru, personas dokumenta numuru vai konta datus.',
   },

@@ -1296,7 +1296,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Vadošā advokāte Taivānā',
       'chang-rongxuan': 'Advokāts Taivānā',
       'chang-fangyu': 'Jurista palīdze',
-      'son-jungmin': 'Korejas operāciju vadītājs',
+      'son-jungmin': 'Korejas darba virziena vadītājs',
       'huang-shengping': 'Partneris, zvērināts revidents',
     },
   },
@@ -4443,7 +4443,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Jurista palīdze ar ilggadēju praksi; iepriekš vecākā jurista palīdze vairākos advokātu birojos, ar uzsvaru uz procesuālo atbalstu, sabiedrību lietām un ārvalstu ieguldījumiem.',
+        'Jurista palīdze ar ilggadēju praksi; iepriekš vecākā jurista palīdze vairākos advokātu birojos, ar uzsvaru uz procesuālo atbalstu, sabiedrību tiesībām un ārvalstu ieguldījumiem.',
         'Atbalsts tiesvedībā, sabiedrību dibināšanā, ārvalstu ieguldījumu atļaujās, licences pieteikumos un saziņā starp Koreju un Taivānu.',
       ],
       education: [
@@ -4457,19 +4457,19 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinē konsultāciju laikus un saziņu klientiem no Korejas.',
-        'Atbalsta dokumentu sistēmu un darba gaitu saskaņošanu starp reģioniem, balstoties uz informātiku.',
+        'Atbalsta dokumentu sistēmu un darba gaitu saskaņošanu starp reģioniem, balstoties uz informātikas izglītību.',
       ],
       education: [
         'Bakalaurs (B.S.) informātikā, National Cheng Kung University',
       ],
       experience: [
-        'Korejas operāciju daļa, Hovering International Law Firm',
+        'Korejas darba virziens, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {
       intro: [
-        'Beidzis bakalaura un maģistra programmu grāmatvedībā National Chengchi University un tagad vada grāmatvedības biroju.',
-        'Atbalsta tiesisko, nodokļu un finanšu risku integrētu analīzi uzņēmumu klientiem.',
+        'Ieguvis bakalaura un maģistra grādu grāmatvedībā National Chengchi University un tagad vada grāmatvedības biroju.',
+        'Palīdz uzņēmumu klientiem kopā izvērtēt tiesiskos, nodokļu un finanšu riskus.',
       ],
       education: [
         'Maģistrs (M.A.) grāmatvedībā, National Chengchi University',

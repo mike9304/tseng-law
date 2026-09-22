@@ -19,17 +19,17 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Sākot ēdināšanas darbību, pirmais jautājums ir atrast darbības adresi (營業地址).
 
-Līdzās tirgus situācijai
+Līdzās tirgus situācijai ir vēl viens svarīgs jautājums.
 
-ir vēl viens svarīgs punkts:
+Šis jautājums ir šāds.
 
-vai šī adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
+Jānoskaidro, vai šī adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
 
 ​
 
-Ja darbību sākat Taipejas pilsētā,
+Ja darbību sākat Taipejas pilsētā, ir pieejama iepriekšējas pārbaudes sistēma.
 
-varat izmantot Taipejas pilsētas Tirdzniecības pārvaldes (臺北市商業處) sistēmu „darbības vietas iepriekšēja pārbaude“ (營業場所預先查詢).
+Varat izmantot Taipejas pilsētas Tirdzniecības pārvaldes (臺北市商業處) sistēmu „darbības vietas iepriekšēja pārbaude“ (營業場所預先查詢).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Tomēr šai pārbaudei jāaugšupielādē darbības adreses „ēkas reģistra 2
 
 Ikviens zemes reģistra birojā (地政事務所) var pieteikties jebkuras adreses „ēkas reģistra 2. veida izrakstam“.
 
-Ja ir grūti personīgi ierasties zemes reģistra birojā (地政事務所),
+Ja ir grūti personīgi ierasties zemes reģistra birojā (地政事務所), izrakstu var lūgt ar citas personas palīdzību.
 
-var lūgt palīdzību paziņai Taivānā, iznomātājam, nekustamā īpašuma starpniekam vai advokātam.
+Palīdzību var lūgt paziņai Taivānā, iznomātājam, nekustamā īpašuma starpniekam vai advokātam.
 
 Ja pārbaudes iznākums rāda, ka restorāns nav iespējams, vēlāk juridiskās personas reģistrācijā (公司登記) pilsētas valdība reģistrāciju var nepieņemt.
 
@@ -57,19 +57,19 @@ Visām nozarēm ieteicams ar sistēmu „darbības vietas iepriekšēja pārbaud
 
 Tomēr, reģistrējot sabiedrību, bieži reģistrē vairākas nozares uzreiz un bieži vēlas vienā iesniegumā reģistrēt aptuveni 10 nozaru.
 
-Tāpēc praksē, reģistrējot sabiedrību, nav jāpārbauda visām nozarēm.
+Tāpēc praksē, reģistrējot sabiedrību, nav jāpārbauda visas nozares.
 
 Saskaņā ar „[Taipejas pilsētas darbības vietu palīdzības pārbaudes pakalpojuma darbības norādījumu](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) un Taipejas pilsētas spēkā esošo norādi,
 
 no 2023. gada 1. janvāra, piesakot sabiedrības vai komercdarbības (ieskaitot filiāli (分公司) un palīgvienību (分支機構)) dibināšanas, atrašanās vietas pārcelšanas vai darbības nozaru papildināšanas reģistrāciju, darbības vietas iepriekšējās pārbaudes iznākums **jāpievieno** reģistrācijas pieteikumam, neatkarīgi no nozares.
 
-Turpmākais saraksts „nozare, kas ir oficiālās pārbaudes priekšmets“ (主動查詢之營業項目) apzīmē nozares, kuras Tirdzniecības pārvalde reģistrācijas izskatīšanas gaitā pārbauda pēc amata papildus (隨案主動查詢), kad nozare figūrē pieteikumā, bet trūkst pievienotajā iznākumā; apstāklis, ka nozares šajā sarakstā nav, nenozīmē atbrīvojumu no pārbaudes.
+Turpmākais saraksts „nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目) apzīmē nozares, kuras Tirdzniecības pārvalde reģistrācijas izskatīšanas gaitā pārbauda pēc amata papildus (隨案主動查詢), kad nozare figūrē pieteikumā, bet pievienotajā iznākumā tās trūkst; apstāklis, ka nozares šajā sarakstā nav, nenozīmē atbrīvojumu no pārbaudes.
 
 Ja atver vietā, kur restorāns nav iespējams, vēlāk var sekot kompetentās iestādes administratīvais naudas sods (罰鍰).
 
-![„nozare, kas ir oficiālās pārbaudes priekšmets“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![„nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-„nozare, kas ir oficiālās pārbaudes priekšmets“ (主動查詢之營業項目)
+„nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目)
 
 Ar to ir apkopota būtiskā gaita; konkrēta lieta jāizvērtē atsevišķi ar advokāti vai advokātu. Birojs konsultē tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.
 

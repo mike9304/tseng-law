@@ -37,13 +37,13 @@ Anonimizētā lietā, ko kārtoja šis birojs, motocikla vadītājs A ar pasaži
 
 ![Negadījuma shēma, kas rāda motocikla un 2 priekšā braucošo transportlīdzekļu apdzīšanas ceļu kalnu ceļā](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A mēģināja apdzīt abus transportlīdzekļus, iegāja pretējā joslā un paātrinājās. Arī 2. transportlīdzeklis gatavojās apdzīt 1. transportlīdzekli: mazāk nekā 1 sekundi pēc virzienrādītāja ieslēgšanas tas iegāja pretējā joslā. Motociklam nepietika rezerves bremzēšanai, un tas sadūrās ar 2. transportlīdzekli.
+A mēģināja apdzīt abus transportlīdzekļus, iegāja pretējā joslā un paātrinājās. Arī 2. transportlīdzeklis gatavojās apdzīt 1. transportlīdzekli: mazāk nekā 1 sekundi pēc virzienrādītāja ieslēgšanas tas iegāja pretējā joslā. Motociklam nepietika laika nobremzēt, un tas sadūrās ar 2. transportlīdzekli.
 
 B guva smagu galvas traumu un mira notikuma vietā; A zaudēja samaņu un tika nogādāts slimnīcā.
 
 A un B ģimenes vispirms uzskatīja, ka 2. transportlīdzekļa pēkšņā joslas maiņa ir sadursmes galvenais cēlonis. Lieta pārgāja tiesvedībā; tās gaitā tika veikti vairāki negadījuma ekspertīzes novērtējumi (鑑定).
 
-Saskaņā ar ekspertīzes iznākumu galveno atbildību par šo sadursmi nesa A. Šis slēdziens bija ierobežots ar šīs lietas apstākļiem. Ekspertīze kopīgi ņēma vērā to, ka A gribēja apdzīt 2 priekšā pēc kārtas braucošus transportlīdzekļus, ka iegāja pretējā joslā, ka brauca ar ātrumu, kas gandrīz neatstāja rezervi bremzēšanai, ka trūka noteikto skaņas signāla un gaismu signālu, kā arī 2. transportlīdzekļa joslas maiņas kustību, ceļa un joslu uzbūvi un pārējos iegūtos pierādījumus.
+Saskaņā ar ekspertīzes iznākumu galveno atbildību par šo sadursmi nesa A. Šis slēdziens bija ierobežots ar šīs lietas apstākļiem. Ekspertīze kopīgi ņēma vērā to, ka A gribēja apdzīt 2 priekšā pēc kārtas braucošus transportlīdzekļus, ka iegāja pretējā joslā, ka brauca ar ātrumu, kas gandrīz neatstāja laiku nobremzēt, ka trūka noteikto skaņas signāla un gaismu signālu, kā arī 2. transportlīdzekļa joslas maiņas kustību, ceļa un joslu uzbūvi un pārējos iegūtos pierādījumus.
 
 Tas, ka dažās lietās šādi ekspertīzes iznākumi iestājas, nenozīmē, ka viena noteiktā signāla izlaišana vienmēr nosaka atbildību. Neuzmanība (過失) apdzīšanas negadījumā ir atkarīga no negadījuma vietas, joslu uzbūves, ātruma, transportlīdzekļu kustības, signāliem, laika intervāliem, redzamības un pārējiem pierādījumiem.
 

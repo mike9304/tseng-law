@@ -1,0 +1,80 @@
+WO-F-fa r4 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-fa-r4
+scope: Persian columns (18) + guidance pack sweep. No git add/commit/push.
+
+## Rows applied
+
+44 finding rows (fa-a 14 + fa-b 30). 36 applied in full, 2 applied in part, 6 skipped.
+
+fa-a applied: 1 (محل حقوقی → شخص حقوقی), 4 (docket 壢簡 / 112年度壢簡字第236號), 5 (constitutional holding, FAQ + body), 7 (در این دام نیفتد), 8 (گزارش سرمایه‌گذاری مستقیم در خارج), 9 (سرمایه‌گذاری عام), 10 (شروط احراز صلاحیت), 13 (منابع رسمی دست‌اول; dropped ردهٔ 1).
+fa-a partial: 12 — link label now names مادهٔ 3 and no longer denies «مادهٔ 10 قانون مالیات کسب‌وکار». Digit 10 stays as «عنوان منبع: مادهٔ 10» because the checker reported `missing from translation (1): 10` against Korean «영업세법 제10조». URL unchanged.
+fa-b applied: 1–13, 15, 16, 18–30.
+fa-b partial: 17 — heading verb بخواند → بخوانند only. Numbering left at 7 then 8.
+
+Guidance pack (international-guidance-*.ts, international-inquiry-copy.ts, llms-txt.ts fa): no string edits. Sweeps below found no instances. «TWD 1.57M» left byte-identical.
+
+No test expected-strings changed. No pinned FAQ question or title was rewritten.
+
+## Rows skipped
+
+| row | reason |
+|---|---|
+| fa-a 2 | R3 + ACCEPTED-ROUND: do not make the sentence-length claim positive. Current hedge («در برخی احکام… کیفر نوعی یا نتیجهٔ تضمین‌شده نیست») is the required form. Digits 3 / 4 / 6 stay. |
+| fa-a 3 | R3: do not restore «بیشترین» / maximum compensation. Current «خسارتی را که وقایع و ادله پشتیبانی می‌کند» stands. |
+| fa-a 6 | R3: the 008 anecdote must stay at establishing the statutory entitlement, not «غرامت اخراج قابل توجهی گرفت». |
+| fa-a 11 | Checker `blocks` pins ZWSP count to the Korean source (003, 005, 006, 008, 009). Promoting Q16–Q20 to headings would change `headings` levels. Korean source has the same ZWSP lines and the same non-heading Q16–Q20. |
+| fa-a 14 | ACCEPTED-ROUND: «TWD 1.57M» is pinned byte-identical. |
+| fa-b 14 | Same ZWSP pin (013, 015). Removing the zero-width spaces fails `ZWSP source → target`. |
+| fa-b 17 (renumber only) | English and Korean also jump from heading 5 to 7, then 8. Renumbering 7→6 and 8→7 would change digits the checker counts and would diverge from the source. |
+
+## Systemic patterns
+
+- «محل حقوقی» for a legal person: 5 instances in 004 (محل حقوق و تکالیف؛ محل حقوقی نهایی؛ دو محل حقوقی؛ که محل حقوقی است؛ یک محل حقوقی‌اند) → شخص حقوقی / حقوق و تکالیف. 0 elsewhere, including the guidance pack.
+- Court-sentence hedge (fa-a verdict): 0 changed. Left in place under R3.
+- U+200B / empty `**​**`: 0 removed. Present in 003, 005, 006, 008, 009, 013, 015, matching the Korean source.
+- «مادهٔ آموزشی» (educational material, not a statutory article): 8 → «مطلب آموزشی» (001, 002, 004, 007, 011, 014, 016, 017). Plus 014 «مادهٔ تأیید» → «به احراز وجود توافق کمک کند» (finding, not the same phrase). Statutory «مادهٔ N» left.
+- «ایمن / ایمنی» where the sense is prudence or “cannot be assumed sound”, not physical safety: 5. 010 «ایمن‌تر آن است» → «احتیاط آن است»؛ 016 «ایمن‌تر است» → «بهتر است»؛ 016 trust/insurance «ایمنی» → «بی‌خطر»؛ 004 planning-stage «ایمن‌تر» → «بهتر است احراز صلاحیت…»؛ 004 «safest approach» → «محتاطانه‌ترین کار». Traffic, gym duty of care, cosmetics product safety, overtaking, child-safety measures, and regulation titles (آیین‌نامهٔ ایمنی) left.
+- Singular verb after a plural or compound subject: 11. بخواند → بخوانند in 001, 002 (2), 004 (2), 017 (2), 018 heading. نخواند → نخوانند in 001 (remitter / purpose / approval / account) and 013 (تحصیلات و سابقه‌ام). 016 «اداره می‌شود» → «اداره می‌شوند». Singular subjects left (شرکت… می‌خواند، مبلغ… می‌خواند، نام سند… نخواند).
+- Past-tense advice with no subject: 1 sentence in 010 (عکس گرفت / مرتب کرد → عکس‌برداری شود / مرتب شود).
+
+## Reviewer disagreements (not applied)
+
+- fa-a 2, 3, and 6 undo RULEBOOK R3. The English source still has “generally impose”, “maximum compensation”, and “a substantial severance”; the standing rule is to keep the softened Persian.
+- fa-a 11 and fa-b 14 treat U+200B and the Q16–Q20 body lines as editor noise. They are structural copies of the Korean source. The checker fails if the counts move.
+- fa-b 17’s renumber treats a gap that is in the English and Korean sources. Only the plural verb was a Persian error.
+- fa-a 12 is right that the label must not argue with the business-tax article. Deleting the digit 10 is not possible: `numbers FAIL missing 10` on that link. Kept «مادهٔ 3؛ عنوان منبع: مادهٔ 10».
+- fa-a 14 is right that «TWD 1.57M» is English notation. The pin overrides the rewrite.
+- fa-b 18 suggested «دو سوم» in words. Kept «2/3» and added «از» («2/3 یا بیشتر از حق رأی») so the fraction stays tied to the voting rights and the digits still parse.
+- fa-b 29 suggested «یک رأی» in words. «1 نفر 1 رأی» is gone; «هر سهامدار 1 رأی دارد» remains. After that change, 018 numbers are `sourceCount=25 targetCount=25`. Replacing the remaining digit with «یک» was not required for the checker and was not done.
+
+Not expanded: 007’s paragraph after the ten grounds still summarizes the constitutional judgment without the “considerable period” test. That sentence was not the quoted row (the quoted wording is in the FAQ and in section 4, both fixed). Adding the test there would be new wording in an unflagged block.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-fa --lang fa 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-fa src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      18
+```
+
+`git status --short | wc -l` was 17 before this log file existed. After `docs/i18n/global-plan/evidence/grok-F-fa-r4.log` was added, the count is 18. No commit.

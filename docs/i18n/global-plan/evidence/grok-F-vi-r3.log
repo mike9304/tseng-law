@@ -1,0 +1,77 @@
+# WO-F-vi — Vietnamese fix lane, campaign round 3 (Grok 4.7), 2026-09-22
+Worktree: /Users/son7/Projects/tseng-law-fix-vi-r3 (no git add/commit/push)
+Files touched: src/content/columns-vi/002, 003, 007, 009, 010, 011, 013, 014, 016, 018;
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.vi.discoveryNotice only); this log.
+No test file was edited. No pinned Vietnamese expectation had to change. "TWD 1.57M" stays byte-identical. consultationNotice and confidentialNotice were not rewritten, so they remain verbatim substrings of the FAQ and privacy copy.
+
+## Rows applied
+vi-a 5/6 and vi-b 17/17. No P3 rows in either review.
+
+vi-a
+2  003 both sentence lines. English is "courts currently generally impose" / "generally results in". Restored "thường tuyên" / "thường bị tuyên" and kept "không phải mức án được bảo đảm cho vụ việc của quý vị" (and "cũng không" on the 4-month / 6-month line). Digits 3, 4, 6 stay. This departs from RULEBOOK R3's earlier "in some judgments … not typical" wording, because that wording is the meaning error this P1 names. A guaranteed outcome is still withheld.
+3  discoveryNotice: "hay việc đăng quảng cáo" → "không bảo đảm mức độ hiển thị". Token `llms.txt` kept.
+4  009 "dù lỗi thuộc về phía công ty / hay lỗi…" → "tùy theo lỗi thuộc về phía công ty / hay lỗi…". The four lines stay four lines (checker block count). Suggested one-sentence merge was not used.
+5  009 虛偽意思表示: "cung cấp thông tin giả khi giao kết hợp đồng" → "có sự thể hiện ý chí giả". The "1." and the following example line are unchanged.
+6  "điểm loại trừ" → "ngoại lệ tại khoản … Điều …". 002 FAQ and body: "ngoại lệ tại khoản 1 Điều 3 Quy chế đăng ký công ty (公司登記辦法)". 007: "ngoại lệ tại khoản 2". Existing "Điều khoản ngoại lệ (但書)" left as already native.
+
+vi-b
+1  011 distributor: four "đại lý bán hàng" → "nhà phân phối" (FAQ, repeated body paragraph, "hoặc nhà phân phối đảm nhận", sentence-initial "Nhà phân phối có thể"). Gloss line "đại lý (代理), tổng đại lý (總代理) hay nhà phân phối (經銷)" unchanged.
+2  010 "Để giải thích được trách nhiệm" → "Để chứng minh được trách nhiệm".
+3  013 "không thể đăng ký công ty" → "có thể không đăng ký được công ty".
+4  010 "không được tính tự động cho đến thời điểm nghỉ hưu" → "không mặc nhiên được tính cho đến tuổi nghỉ hưu".
+5  010 "người đại diện tố tụng" → "tôi là luật sư đại diện cho nguyên đơn, một sinh viên người Hàn Quốc". Luật sư stays epicene; no ông/anh added.
+6  010 the reported settlement is no longer "đó" standing in for the first-instance judgment: "tin thỏa thuận mà báo chí đưa là kết quả xử lý cuối cùng đã được xác nhận".
+7  011 "phải được vận hành một cách phân biệt" → "phải được áp dụng tách biệt"; "Phải đánh giá một cách phân biệt" → "Phải đánh giá riêng". The following "xem xét tách bạch" sentence stays.
+8  011 "trở thành đối tượng của tiền phạt hành chính" → "bị phạt tiền hành chính (罰鍰)". The amount range is unchanged.
+9  011 "dạng sản phẩm (劑型)" → "dạng bào chế (劑型)". One instance.
+10 014 "Điều 16 khoản 1 được áp dụng theo dẫn chiếu của Điều 15" → "khoản 1 Điều 16 được áp dụng theo Điều 15". The next sentence already said "thông qua Điều 15" and stays.
+11 014 "Cách làm sau khi đã chi trả mới diễn giải lại mục đích" → "Việc sau khi đã chi trả mới diễn giải lại mục đích…".
+12 016 claim/waiver: "yêu cầu có thành lập" → "yêu cầu có được xác lập"; "đã thành lập" (waiver) → "theo đúng thủ tục luật định đã hoàn tất".
+13 016 "tiếp nhận một cách bao quát" → "kế thừa toàn bộ".
+14 016 "tài sản riêng của người thành niên" → "tài sản cá nhân của người thành niên". The child's statutory 特有財產 elsewhere stays "tài sản riêng".
+15 018 limited-company paragraph only: cổ đông → người góp vốn (see sweep). The công ty cổ phần section still says cổ đông.
+16 018 "sàn chứng khoán mới (興櫃)" → "sàn cổ phiếu mới nổi (興櫃)". "niêm yết hoặc đăng ký giao dịch" already in the sentence.
+17 018 "Lúc này cần không chỉ một địa chỉ, mà một thực thể…" → "Lúc này không chỉ cần một địa chỉ, mà cần một thực thể…".
+
+## Rows skipped
+vi-a #1 (004 link label). The suggested deletion of "(nhãn nguồn: Điều 10)" was applied, then reverted. Korean source line is still `영업세법 제10조` on `pcode=G0340028&flno=3`. Without that digit the checker reports `numbers FAIL missing from translation (1): 10` (sourceCount=93 targetCount=93, plus the pre-existing extra 0). The link already names the correct instrument and Điều 3; the URL was not changed. Putting "10%" on this link would misstate the statute (the 10% figure in the article is the Korea treaty ceiling, not this standard's rate) and would add a second number.
+
+## Systemic patterns and how many instances changed
+llms notice said "đăng quảng cáo" instead of visibility                         1 (llms-txt.ts vi.discoveryNotice only)
+"không phải mức án điển hình" denying the usual sentence                       2 (003)
+"(nhãn nguồn: Điều 10)"                                                        0 changed, 1 left (skip above)
+"điểm loại trừ" for a proviso                                                  3 (002 FAQ, 002 body, 007)
+"đại lý bán hàng" where English is distributor                                 4 (011). Agent gloss đại lý (代理) left.
+"một cách" + abstract noun where a verb is native                              3 (011 ×2, 016 ×1). Ordinary "một cách cụ thể / khái quát / cân bằng / tách biệt / an toàn / hợp lý / máy móc" left.
+"thành lập" for a claim, waiver, or representation coming into existence       6 (016 ×4: the quoted claim, the quoted waiver, "Nếu yêu cầu đó thành lập", "thành lập thừa kế thế vị" → "phát sinh"; 007 ×2: the substitute property claim, and the housing "có thành lập hay không"). Company-formation "thành lập" left.
+cổ đông for members of a công ty hữu hạn                                       8 wordings in the one 018 paragraph. công ty cổ phần still uses cổ đông.
+"không thể đăng ký" where English is only "may not be possible"                1 (013). No second instance.
+clipped "cần không chỉ A, mà B" with no verb on B                              1 (018). The rest of 018 already uses full sentences.
+
+R2–R10 were already in this corpus (prior rounds; this round's verdicts are 4/5 and confirm gender, the consultation lock, and Korea as a labelled example). This pass did not reopen them. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered). Guidance-pack strings other than the llms discovery notice were not rewritten.
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-vi --lang vi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=31
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-vi src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      13
+```
+`git status --short | wc -l` was 13 before this log file existed. 004 still WARNs `numbers extra in translation (1): 0` (sourceCount=93 targetCount=94). That WARN was already on the file before this round and does not fail the summary.
+
+## Reviewer disagreements (not applied)
+vi-a #1, the deletion itself. The reviewer is right that `pcode=G0340028&flno=3` is Article 3 of 各類所得扣繳率標準 and that "(nhãn nguồn: Điều 10)" still shows the wrong article. The suggested link text drops the only remaining digit 10, and the checker then fails. The previous anchor was kept. Nothing else in the two reviews was rejected as wrong.

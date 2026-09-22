@@ -63,7 +63,7 @@ Căn cứ pháp định thứ hai là trường hợp người sử dụng lao �
 
 Trước hết phải xác minh mục đích chi trả. Hợp đồng và tài liệu thông báo phải thể hiện rõ khoản tiền đó là điều kiện lương thông thường để tuyển dụng, là khoản trả cho cam kết làm việc trong một thời hạn nhất định, hay là khoản thưởng cho việc đạt thành tích. Cũng cần xem ngày chi trả, số tiền, thời điểm khoản tiền thuộc về người lao động, mối liên hệ với thời gian làm việc, lý do và công thức hoàn trả có được trình bày để người lao động hiểu được trước khi giao kết hay không.
 
-Công văn giải thích (函釋) ngày 5 tháng 6 năm 2026 của Bộ Lao động Đài Loan (勞動部) nêu rằng nếu muốn lấy thưởng giữ chân, tiền thưởng khi ký hợp đồng hoặc các khoản chi trả trước khác làm khoản bù đắp hợp lý cho thỏa thuận thời hạn làm việc tối thiểu, người sử dụng lao động phải thông báo rõ vai trò của khoản tiền đó. Cách làm sau khi đã chi trả mới diễn giải lại mục đích, hoặc phân loại lại một phần tiền lương thành khoản bù đắp, khó có thể thay thế cho việc thông báo tại thời điểm giao kết hợp đồng.
+Công văn giải thích (函釋) ngày 5 tháng 6 năm 2026 của Bộ Lao động Đài Loan (勞動部) nêu rằng nếu muốn lấy thưởng giữ chân, tiền thưởng khi ký hợp đồng hoặc các khoản chi trả trước khác làm khoản bù đắp hợp lý cho thỏa thuận thời hạn làm việc tối thiểu, người sử dụng lao động phải thông báo rõ vai trò của khoản tiền đó. Việc sau khi đã chi trả mới diễn giải lại mục đích, hoặc phân loại lại một phần tiền lương thành khoản bù đắp, khó thay thế được cho việc thông báo lúc giao kết hợp đồng.
 
 Tính hợp lý của khoản bù đắp không được đánh giá chỉ bằng số tiền. Cần xem xét đồng thời: người lao động có thực sự nhận được lợi ích tăng thêm hay không, điều kiện chi trả có rõ ràng hay không, phần tương ứng với thời gian đã làm việc thuộc về ai và theo cách nào, phạm vi hoàn trả có quá mức hay không. Ngay cả khi có khoản bù đắp, cũng không có nghĩa là mọi độ dài thời hạn làm việc hay mọi mức trách nhiệm hoàn trả đều được chấp nhận vô giới hạn.
 
@@ -130,7 +130,7 @@ Việc đánh giá nguyên nhân chấm dứt hợp đồng ảnh hưởng trự
 
 Thỏa thuận thời hạn làm việc tối thiểu không phải là công cụ ngăn cản người lao động nghỉ việc, dù trên thực tế hay về mặt pháp lý. Thông báo xin nghỉ việc và thời hạn báo trước (預告期間) là vấn đề về thời điểm quan hệ lao động kết thúc, còn hiệu lực của thỏa thuận thời hạn làm việc tối thiểu và trách nhiệm hoàn trả chi phí là vấn đề về việc có phát sinh trách nhiệm tài sản do việc chấm dứt hợp đồng hay không.
 
-Khi người lao động chấm dứt hợp đồng lao động không xác định thời hạn (不定期契約), thời hạn báo trước tại Điều 16 khoản 1 được áp dụng theo dẫn chiếu của Điều 15 Luật Tiêu chuẩn Lao động Đài Loan. Điều 16 là điều khoản về việc người sử dụng lao động chấm dứt hợp đồng; đối với việc người lao động xin nghỉ việc, thời hạn báo trước đó được áp dụng thông qua Điều 15.
+Khi người lao động chấm dứt hợp đồng lao động không xác định thời hạn (不定期契約), thời hạn báo trước tại khoản 1 Điều 16 được áp dụng theo Điều 15 Luật Tiêu chuẩn Lao động Đài Loan. Điều 16 là điều khoản về việc người sử dụng lao động chấm dứt hợp đồng; đối với việc người lao động xin nghỉ việc, thời hạn báo trước đó được áp dụng thông qua Điều 15.
 
 Thời hạn báo trước theo thời gian làm việc liên tục (繼續工作年資) như sau.
 

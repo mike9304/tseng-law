@@ -167,7 +167,7 @@ Tööandja võib väita, et ta on järginud vajalikku hoolsust töötaja valimis
 
 Kui tööandja tõendab nimetatud vabastamise tingimused nii, et kannatanu ei saa hüvitist lõike 1 järgi, võib kohus tsiviilseadustiku (民法) artikli 188 lõike 2 järgi, arvestades tööandja ja kannatanu majanduslikku seisundit, määrata täieliku või osalise hüvitise.
 
-Tsiviilõiguslike nõudevastaste kinnitamine ja kriminaalvastutus tuleb eristada. Kriminaalvastutus kriminaalkoodeksi (刑法) artikli 284 järgi hinnatakse iga füüsilise isiku hoolsuskohustuse rikkumise ja selle rikkumise põhjusliku seose järgi.
+Tsiviilkostjate valik ja kriminaalvastutus tuleb eristada. Kriminaalvastutus kriminaalkoodeksi (刑法) artikli 284 järgi hinnatakse iga füüsilise isiku hoolsuskohustuse rikkumise ja selle rikkumise põhjusliku seose järgi.
 
 ## Q15. Millised mootorsõiduki kindlustuse hüvitised ja kaitse tuleb selgitada?
 
@@ -359,7 +359,7 @@ Seetõttu ei tohi seda punkti mingil viisil kõrvale jätta; on soovitatav oluko
 
 ​
 
-Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatut vastust ei lubata.
+Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatu vastuse kohta lubadust ei anta.
 
 ​
 

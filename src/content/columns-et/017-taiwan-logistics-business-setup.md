@@ -76,7 +76,7 @@ Asja järgi tuleb menetluse järjekord ja esitamise asutus uuesti kinnitada, kui
 
 Tegevuskoht ja parkimisrajatised peavad vastama kõnealusele tegevusele kohalduvatele kriteeriumidele ning tuleb esitada materjalid, mis tõendavad omandit või kasutusõigust. Ei tohi ühetaoliselt järeldada, et iga ettevõtja peab üürima omaette parkla. Äriühingu põhikiri, osanike nimekiri, parkimisrajatiste heakskiidumaterjalid, tegevuskoha ja parkimisrajatiste omandi või kasutamise tõendid, hooldusleping, sõidukite ostutõendid ja sõidukite loetelu tuleb taotlemise hetkel kõrvutada maanteeameti kehtiva kontrollnimekirjaga.
 
-Pärast asutamise ettevalmistusloa saamist tuleb ettevalmistus põhimõtteliselt lõpule viia 6 kuu jooksul. Eriliste asjaolude korral on pikendamine võimalik lisaks kuni 6 kuud. Pärast tegevusloa väljastamist tuleb tegevus põhimõtteliselt alustada 1 kuu jooksul ning teatada pädevale maanteeasutusele, lisades asjakohase valdkonna ühenduse (同業公會) väljastatud kehtiva liikmetõendi koopia. Täiendamise, maa, rajatiste, sõidukite, kindlustuse ja muu ettevalmistuse jaoks vajalik aeg sõltub asjast, seega ei saa kogu menetluse lõpuleviimise hetke kinnitada. Isegi kui välisinvesteeringu õigusaktides on avaldatud haldusmenetluse sihttähtaeg, ei tähenda see mootorveokite kaubaveo uue asutamise kogu kestust.
+Pärast asutamise ettevalmistusloa saamist tuleb ettevalmistus põhimõtteliselt lõpule viia 6 kuu jooksul. Eriliste asjaolude korral on pikendamine võimalik lisaks kuni 6 kuud. Pärast tegevusloa väljastamist tuleb tegevus põhimõtteliselt alustada 1 kuu jooksul ning teatada pädevale maanteeasutusele, lisades asjakohase valdkonna ühenduse (同業公會) väljastatud kehtiva liikmetõendi koopia. Taotluse puuduste kõrvaldamiseks ning maa, rajatiste, sõidukite, kindlustuse ja muu ettevalmistuse hankimiseks vajalik aeg sõltub asjast, seega ei saa kogu menetluse lõpuleviimise hetke kinnitada. Isegi kui välisinvesteeringu õigusaktides on avaldatud haldusmenetluse sihttähtaeg, ei tähenda see mootorveokite kaubaveo uue asutamise kogu kestust.
 
 ## 3. Kui omandatakse olemasolev ettevõtja
 
@@ -92,7 +92,7 @@ Seevastu, kui teine juriidiline isik võtab vastu tegevuse või varad, ei lähe 
 
 ### Hoolsuskontroll ja tehingu lõpuleviimine
 
-Vähemalt järgmised kohad tuleb kinnitada tõendite ja algmaterjalide kõrvutamisega pädeva asutuse kirjetega.
+Vähemalt järgmised asjaolud tuleb kinnitada tõendite ja algmaterjalide kõrvutamisega pädeva asutuse kirjetega.
 
 - Tegevusloa kehtivus, heakskiidetud tegevusala, piirkond ja tingimused ning töötlemata muudatused.
 - Sõidukite omandi- ja kasutussuhe, tegevuseks mõeldud numbrimärgid, sõiduki vanus, ülevaatus, õnnetused ja rikkumised.

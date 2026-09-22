@@ -1047,14 +1047,14 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'JUHISED',
       title: 'Õigusteenused Taiwanis — juhised eesti keeles',
       description:
-        'Üldine seletus eesti keeles büroo Hovering International Law Firm’i töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese ühenduse kohta.',
+        'Üldine seletus eesti keeles büroo Hovering International Law Firm’i töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese pöördumise kohta.',
       intro:
         'Hovering International Law Firm abistab välismaiseid kliente, sealhulgas Taiwaniga seotud isikuid, Taiwani õiguse asjades: investeeringud ja äriühingu asutamine, tsiviilvaidlused, abielu, perekond ja pärimine, tööõigus, kriminaalasjad ning intellektuaalomand. See eestikeelne osa aitab teil näha, milline töö kuulub meie valdkonda, mida ette valmistada ja kuidas meieni jõuda. Tegemist on üldise teabega, mitte õigusnõuga teie asjas.',
       sections: [
         {
           heading: 'Millega tegeleme',
           paragraphs: [
-            'Hovering International Law Firm on Taiwanis asutatud advokaadibüroo. Ta töötab Taiwani õiguse järgi ning tal on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Nõustame ettevõtteid, viime läbi kohtumenetlusi ja abistame välismaiseid kliente sammudes, mida Taiwanis on vaja teha.',
+            'Hovering International Law Firm on Taiwanis asutatud advokaadibüroo. Ta töötab Taiwani õiguse järgi ning tal on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Nõustame ettevõtteid, viime läbi kohtumenetlusi ja aitame välismaistel klientidel teha samme, mida Taiwanis on vaja.',
             'Kogu siinne sisu on üldine. Asja tulemus sõltub asjaoludest, kohalduvatest sätetest ja ajast. Need juhised ei asenda vestlust advokaadiga teie dokumentide üle.',
           ],
         },
@@ -1113,7 +1113,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Abielu, perekond ja pärimine',
           paragraphs: [
-            'Tegeleme abielulahutusega (離婚), vara jagamisega, alaealiste laste hooldusõiguse ja vanemliku vastutusega (未成年子女權利義務之行使或負擔), suhtlusõigusega (會面交往) ja pärimisega (繼承), ka siis, kui pooled või vara asuvad eri riikides. Piiriülesed perekonnaasjad nõuavad sageli täiendavat kontrolli leibkonnaregistri (戶籍), dokumentide vormi ja nende tõendusväärtuse kohta Taiwanis.',
+            'Tegeleme abielulahutusega (離婚), vara jagamisega, alaealiste laste õiguste teostamise ja kohustuste kandmisega (未成年子女權利義務之行使或負擔), suhtlusõigusega (會面交往) ja pärimisega (繼承), ka siis, kui pooled või vara asuvad eri riikides. Piiriülesed perekonnaasjad nõuavad sageli täiendavat kontrolli leibkonnaregistri (戶籍), dokumentide vormi ja nende tõendusväärtuse kohta Taiwanis.',
             'Kuna perekonnaasjadega kaasnevad sageli tähtajad ja paralleelsed menetlused, peaks esimene kokkuvõte nimetama poolte suhte, praeguse elukoha ja juba käimasolevad menetlused.',
           ],
         },
@@ -1173,7 +1173,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kui võtate meiega ühendust',
           paragraphs: [
-            'Kui teie kokkuvõte on saabunud, vaatab advokaat sisu läbi ja räägib seejärel võimalikust töö ulatusest, veel vajalikest dokumentidest ja järgmistest sammudest. Maksu- või raamatupidamisküsimustes võib büroo töötada raamatupidamisüksusega ühes menetluses.',
+            'Kui teie kokkuvõte on saabunud, vaatab advokaat sisu läbi ja räägib seejärel võimalikust töö ulatusest, veel vajalikest dokumentidest ja järgmistest sammudest. Maksu- või raamatupidamisküsimustes võib büroo teha koostööd raamatupidamisüksusega.',
             'Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemuse kohta me lubadust ei anna. Kui vajate siduvat vastust oma olukorrale, tuleb dokumente advokaadiga arutada ühes neljast nõustamiskeelest.',
           ],
         },
@@ -1216,7 +1216,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Miks sellel lehel ei ole tariife',
+          heading: 'Miks sellel lehel ei ole hinnakirja',
           paragraphs: [
             'Tasud sõltuvad asjast endast: töömahust, poolte arvust, dokumentidest, tähtaegadest ja sellest, kas menetlus juba käib. Ette kindlaks määratud summa ei näitaks, millised oleksid tasud teie asjas. Seepärast kinnitame esmalt töö ulatuse ja teatame teile seejärel tasud, enne kui töö algab.',
             'Lisaks advokaaditasule võivad tekkida kohtu-, asutuse- või kolmanda isiku kulud. Need on tasust eraldi ja sõltuvad vastavast menetlusest.',
@@ -1320,7 +1320,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Mis siis, kui minu asi on väga kiireloomuline?',
           answer:
-            'Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole erakorralist kontakti ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite samal ajal otsima muud abi oma asukohas.',
+            'Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole erakorralist kontakti ega anta vastamise tähtaja kohta lubadust; kui teie asi ei saa oodata, peaksite samal ajal otsima muud abi oma asukohas.',
         },
       ],
     },

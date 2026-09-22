@@ -43,7 +43,7 @@ B sai raske peavigastuse ja suri sündmuskohal; A kaotas teadvuse ja viidi haigl
 
 A lähedased ja B omaksed pidasid algul sõiduki 2 järsku sõiduraja vahetust kokkupõrke peamiseks põhjuseks. Asi viis kohtumenetluseni ja selle käigus tehti õnnetuse kohta mitu ekspertiisi (鑑定).
 
-Ekspertiisi tulemuse järgi kandis A selle kokkupõrke peamist vastutust. See järeldus piirdus selle asja asjaoludega. Ekspertiis võttis koos arvesse, et A kavatses mööduda 2 eesolevast sõidukist, mis sõitsid järjest, et ta sisenes vastassuunarajale, et ta sõitis kiirusega, mis peaaegu ei jätnud aega pidurdada, et määratud heli- ja esitulesignaalid puudusid, ning sõiduki 2 sõiduraja vahetust, tee ja sõiduradade ehitust ja muid säilitatud tõendeid.
+Ekspertiisi tulemuse järgi kandis A selle kokkupõrke peamist vastutust. See järeldus piirdus selle asja asjaoludega. Ekspertiis võttis koos arvesse, et A üritas mööduda 2 eesolevast sõidukist, mis sõitsid järjest, et ta sisenes vastassuunarajale, et ta sõitis kiirusega, mis peaaegu ei jätnud aega pidurdada, et määratud heli- ja esitulesignaalid puudusid, ning sõiduki 2 sõiduraja vahetust, tee ja sõiduradade ehitust ja muid säilitatud tõendeid.
 
 See, et üksikutes asjades tulevad sellised ekspertiisitulemused (鑑定), ei tähenda, et signaalikohustuse üksik rikkumine alati kinnitaks vastutuse. Hooletus (過失) möödasõiduõnnetuses sõltub õnnetuskohast, sõiduradade jaotusest, kiirusest, sõidukite liikumisest, signaalidest, ajavahemikest, nähtavusest ja muudest tõenditest.
 
@@ -51,7 +51,7 @@ See, et üksikutes asjades tulevad sellised ekspertiisitulemused (鑑定), ei t�
 
 Enne möödasõitu tuleb esmalt selgitada, kas koht või liiklusolukord kuulub möödasõidukeelu alla. Kui sama sõiduraja menetlus kohaldub, andke määratud helisignaal või esitulesignaal, sundimata eesolevat sõidukit teed andma, oodake selget teedandmise märki ja viige möödasõit (超車) lõpule piisava vahemaa ja ohutu naasmiskaugusega.
 
-Artikli 101 järgimine on tähtis, kuid see iseenesest ei taga, et õnnetus jääb ära, ega hilisema ekspertiisi või kohtumenetluse tulemust. Juhtidel tuleb hoida lisaturvamarginaal ja kohaneda eesoleva olukorraga.
+Artikli 101 järgimine on tähtis, kuid see iseenesest ei taga, et õnnetus jääb ära, ega kindlat tulemust hilisemas ekspertiisis või kohtumenetluses. Juhtidel tuleb hoida lisaturvamarginaal ja kohaneda eesoleva olukorraga.
 
 Lisateavet saate [pildist möödasõidureeglite ja -menetluse kohta](https://gonews.com.tw/car/daily/21934/). Kuna see on teisene allikas, tuleb õiguslike eelduste selgitamisel lugeda ka kehtivaid ametlikke eeskirju (道路交通安全規則).
 

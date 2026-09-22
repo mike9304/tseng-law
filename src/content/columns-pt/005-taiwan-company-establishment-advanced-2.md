@@ -37,13 +37,13 @@ Antes de transferir o capital (資本金匯款), informe-se junto do banco no pa
 
 **​**
 
-**2. No pagamento do capital social, pode transferir-se dólares de Taiwan (新臺幣, TWD) da conta pessoal em Taiwan para a conta preparatória da sociedade taiwanesa?**
+**2. No pagamento do capital social, podem transferir-se dólares de Taiwan (新臺幣, TWD) da conta pessoal em Taiwan para a conta preparatória da sociedade taiwanesa?**
 
 É possível, mas devem produzir-se peças que justifiquem a origem dos fundos em dólares de Taiwan adquiridos em Taiwan.
 
-Se se tratar por exemplo de rendimentos salariais obtidos em Taiwan, deve apresentar-se uma cópia da atestação de retenção na fonte sobre esses rendimentos salariais (薪資所得的扣繳憑單影本).
+Se se tratar por exemplo de rendimentos salariais obtidos em Taiwan, deve apresentar-se uma cópia da comprovativo de retenção na fonte sobre esses rendimentos salariais (薪資所得的扣繳憑單影本).
 
-Se se tratar de dividendos e de lucros provenientes de um investimento numa empresa em Taiwan, deve apresentar-se uma cópia da atestação de retenção na fonte sobre esses dividendos e lucros (股息和紅利的扣繳憑單影本).
+Se se tratar de dividendos e de lucros provenientes de um investimento numa empresa em Taiwan, deve apresentar-se uma cópia da comprovativo de retenção na fonte sobre esses dividendos e lucros (股息和紅利的扣繳憑單影本).
 
 Se a transferência for efetuada a partir de uma conta bancária na Coreia, não é necessário juntar peças relativas à origem dos fundos.
 
@@ -61,7 +61,7 @@ Contudo, como as regras internas de cada banco (銀行) diferem, se for preciso 
 
 **4. Depois da conversão da conta preparatória em conta ordinária, o banco em linha pode ser utilizado de imediato?**
 
-Isso varia segundo os bancos; em geral, um número de telefone móvel pelo menos é necessário.
+Isso varia segundo os bancos; em geral, é necessário pelo menos um número de telemóvel.
 
 Certos bancos podem impor exigências suplementares, por exemplo uma duração de utilização da conta de pelo menos 6 meses depois da constituição.
 

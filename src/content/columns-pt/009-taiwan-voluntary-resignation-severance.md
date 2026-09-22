@@ -29,7 +29,7 @@ Existem, contudo, **casos excecionais**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Nas situações particulares seguintes, mesmo se o trabalhador se demitir por sua própria iniciativa, o empregador deve pagar-lhe a indemnização por despedimento (artigos 14 da lei sobre as normas do trabalho, que aplica por analogia o artigo 17; 勞動基準法第14條):
+Nas situações particulares seguintes, mesmo se o trabalhador se demitir por sua própria iniciativa, o empregador deve pagar-lhe a indemnização por despedimento (artigos 14 da lei sobre as normas do trabalho, que manda aplicar, por remissão, o artigo 17; 勞動基準法第14條):
 
 1. Quando o empregador, na celebração do contrato de trabalho (勞動契約), faz uma declaração de vontade mentirosa (虛偽意思表示) de modo que o trabalhador se engana e existe um risco de sofrer um prejuízo
 
@@ -37,9 +37,9 @@ Nas situações particulares seguintes, mesmo se o trabalhador se demitir por su
 
 2. Quando o empregador, um membro da família do empregador ou um representante do empregador (代理人) exerce uma violência ou inflige um insulto grave (重大侮辱) ao trabalhador
 
-3. Quando o trabalho convencionado no contrato pode prejudicar a saúde do trabalhador, foi pedido ao empregador que o melhorasse e não há efeito
+3. Quando o trabalho convencionado no contrato pode prejudicar a saúde do trabalhador, foi pedido ao empregador que o corrigisse e este não o fez
 
-4. Quando o empregador, o seu representante ou outro trabalhador está atingido por uma doença contagiosa legal (法定傳染病), existe um risco de contágio para os trabalhadores que trabalham em conjunto e isso constitui um perigo grave para a saúde do trabalhador
+4. Quando o empregador, o seu representante ou outro trabalhador está atingido por uma doença transmissível de declaração obrigatória (法定傳染病), existe um risco de contágio para os trabalhadores que trabalham em conjunto e isso constitui um perigo grave para a saúde do trabalhador
 
 5. Quando o empregador não paga a remuneração (工作報酬) segundo o contrato de trabalho, ou não fornece um trabalho suficiente ao trabalhador cuja retribuição é calculada à peça (按件計酬)
 
@@ -91,7 +91,7 @@ a indemnização pode não ser paga ou pode ser exigida.
 
 o «**tempo**» é muito importante.
 
-Na maior parte dos casos, aquele que se preparou de antemão vê os seus direitos protegidos.
+Na maior parte dos casos, quem se preparou de antemão fica em melhor posição para defender os seus direitos.
 
 ---
 

@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Imagem de destaque](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Recentemente, muitas pessoas constituíram uma sociedade (公司) em Taiwan e obtiveram um visto de trabalho bem como um cartão de residência (外僑居留證),
+Recentemente, muitas pessoas constituíram uma sociedade (公司) em Taiwan e obtiveram um visto de trabalho e um cartão de residência (外僑居留證).
 
-e as perguntas formuladas com frequência no momento da constituição estão reunidas abaixo.
+As perguntas mais frequentes no momento da constituição estão reunidas abaixo.
 
 Quem leu [**os fundamentos da constituição de sociedades**](/pt/columns/taiwan-company-establishment-basics) pode em seguida reportar-se também a esta parte aprofundada mais pormenorizada.
 
@@ -29,17 +29,17 @@ Quando um estrangeiro constitui uma sociedade em Taiwan, deve apresentar um plan
 
 O Departamento de Revisão dos Investimentos deve verificar se o capital (資本額) em causa é realmente utilizado para fins de investimento
 
-e se atores estrangeiros não introduzem fundos sob outro pretexto.
+e que partes estrangeiras não introduzam fundos sob outro pretexto.
 
 Na redação do plano de investimento, não é necessário indicar o endereço exato da sociedade; a indicação da região basta (exemplo: cidade de Taipé). ​
 
 Quando mais tarde a conta preparatória da sociedade (公司籌備處帳戶) é aberta no banco, numerosos bancos examinam contudo o contrato de arrendamento (租賃契約) e inspecionam no local o endereço da sociedade.
 
-Uma empregada ou um empregado de um banco taiwanês disse-me em pessoa que
+Num banco taiwanês indicou-se que
 
 numerosos estrangeiros desaparecem recentemente depois da abertura da conta, de modo que a abertura das contas é tratada de forma cada vez mais estrita.
 
-Já na parte fundamental, uma leitora ou um leitor indicou que a abertura da conta era a etapa mais difícil; concordo.
+Na parte sobre os fundamentos, a abertura da conta foi indicada como a etapa mais difícil, e essa indicação confirma-se na prática.
 
 Porque os casos de branqueamento de capitais (洗錢) são muito numerosos em Taiwan, a abertura das contas bancárias torna-se cada vez mais estrita.
 
@@ -63,7 +63,7 @@ resta tempo suficiente para abrir no banco a conta preparatória e transferir o 
 
 O banco exige em geral uma dupla verificação de identidade,
 
-e sem cartão de residência, pode pedir-se junto da administração da imigração de Taiwan a «**folha de dados de base**» (統一證號基本資料表).
+e sem cartão de residência, pode pedir-se junto da administração da imigração de Taiwan a «**folha de dados básicos do número de identificação unificado**» (統一證號基本資料表).
 
 A emissão é possível no próprio dia,
 
@@ -71,7 +71,7 @@ mas a administração da imigração (移民署) está muito frequentada; convé
 
 ​
 
-**3. Ouvi dizer que, no exame do plano de investimento, deve indicar-se a formação e a experiência profissional, e inquieto-me de que a minha formação e a minha experiência não correspondam ao setor da sociedade que pretendo constituir.**
+**3. Ouvi dizer que, no exame do plano de investimento, deve indicar-se a formação e a experiência profissional, e preocupa-me que a minha formação e a minha experiência não correspondam ao setor da sociedade que pretendo constituir.**
 
 A comissão de exame do Ministério da Economia examina de facto os antecedentes do investidor,
 
@@ -81,7 +81,7 @@ Podem mencionar-se experiências profissionais variadas, incluindo o trabalho a 
 
 e expô-las em pormenor de modo a poder convencer as pessoas encarregadas do exame.
 
-Sobre este ponto, convém trocar de forma aprofundada com uma advogada ou um advogado de Taiwan.
+Sobre este ponto, convém tratar este ponto em pormenor com uma advogada ou um advogado de Taiwan.
 
 ​
 
@@ -99,31 +99,31 @@ Não é fácil para um estrangeiro tomar de arrendamento um local comercial, e o
 
 os senhorios hesitam portanto em arrendar a estrangeiros.
 
-É por isso que recomendo procurar o local de exploração cedo.
+Convém por isso procurar o local de exploração cedo.
 
 Se a negociação com o senhorio não se desenrolar de forma fluida,
 
-pode, se for caso disso, propor-se a autenticação do contrato de arrendamento (公證) ou um depósito de caução suplementar.
+pode, se for caso disso, propor-se a certificação notarial do contrato de arrendamento (公證) ou um depósito de caução suplementar.
 
 ​
 
-**5. Pode, na constituição da sociedade, tomar-se de arrendamento um local comercial de escritórios?**
+**5. Pode, na constituição da sociedade, tomar de arrendamento um escritório comercial ordinário?**
 
 Isso depende dos ramos de atividade (營業項目) da sociedade.
 
-Ex.) Se o ramo de atividade for a restauração e se pretender tomar de arrendamento um local comercial de escritórios, a abertura da conta bancária será muito difícil.
+Por exemplo, se o ramo de atividade for a restauração e se pretender tomar de arrendamento um escritório comercial ordinário, a abertura da conta bancária será muito difícil.
 
 Como já indicado, o banco examina o contrato de arrendamento e inspeciona no local o endereço da sociedade.
 
 Além disso, na inscrição final da sociedade, a municipalidade (市政府) exige também que o endereço inscrito se situe numa zona onde a exploração de um restaurante é autorizada;
 
-se se tratar de um local comercial de escritórios, a inscrição da sociedade (公司登記) não é então possível.
+se se tratar de um escritório comercial ordinário, a inscrição da sociedade (公司登記) não é então possível.
 
-Ex.) Se se tratar de ramos de atividade possíveis num local comercial de escritórios, tais como a publicidade ou o comércio por grosso, a sociedade pode ser constituída num local comercial de escritórios. Antes da conclusão do contrato de arrendamento
+Por exemplo, se se tratar de ramos de atividade possíveis num escritório comercial ordinário, tais como a publicidade ou o comércio por grosso, a sociedade pode ser constituída num escritório comercial ordinário. Antes da conclusão do contrato de arrendamento
 
 convém verificá-lo previamente.
 
-*Se precisar de ajuda ou de uma troca sobre o direito de Taiwan, escreva através da página Contacto; não é prometido um prazo de resposta.*
+*Se for preciso tratar uma questão de direito de Taiwan, escreva através da página Contacto; não é prometido um prazo de resposta.*
 
 ---
 

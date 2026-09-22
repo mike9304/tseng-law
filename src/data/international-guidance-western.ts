@@ -1522,11 +1522,11 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
   },
   notFoundTitle: 'Página não encontrada',
   notFoundText:
-    'A página procurada não existe ou foi deslocada. Pode regressar ao início em português para ver as indicações disponíveis.',
+    'A página procurada não existe ou foi movida. Pode regressar ao início em português para ver as indicações disponíveis.',
   backHomeLabel: 'Voltar ao início',
   readSourceLabel: 'Abrir a lista de artigos na língua original',
   home: {
-    heroScrollLabel: 'Deslocar para baixo',
+    heroScrollLabel: 'Descer',
     heroColumnsCtaLabel: 'Ver artigos',
     servicesDetailLabel: 'Ver pormenores',
     servicesAssistanceBefore: 'Se ainda não for claro a que grupo pertence o seu assunto, a página de ',
@@ -1551,7 +1551,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicação geral em português sobre o âmbito de Hovering International Law Firm em Taiwan, as línguas de consulta e o primeiro contacto.',
       intro:
-        'Hovering International Law Firm acompanha clientes do estrangeiro, incluindo quem tem um vínculo com Taiwan, em assuntos de direito taiwanês: investimento e constituição de sociedades, litígios civis, casamento, família e sucessões, laboral, penal e propriedade intelectual. Esta parte em português ajuda a saber que trabalho entra no nosso âmbito, o que convém preparar e como nos contactar. São indicações gerais, não um parecer jurídico para o seu próprio caso.',
+        'Hovering International Law Firm acompanha clientes do estrangeiro, incluindo quem tem um vínculo com Taiwan, em assuntos de direito taiwanês: investimento e constituição de sociedades, litígios civis, casamento, família e sucessões, conflitos laborais, assuntos penais e propriedade intelectual. Esta parte em português ajuda a saber que trabalho entra no nosso âmbito, o que convém preparar e como nos contactar. São indicações gerais, não um parecer jurídico para o seu próprio caso.',
       sections: [
         {
           heading: 'O que fazemos',
@@ -1601,7 +1601,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investimento e constituição de sociedades em Taiwan',
           paragraphs: [
-            'Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, banca, avaliação do local e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes de constituir e operar em Taiwan.',
+            'Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, banca, verificação do local de atividade e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes de constituir e operar em Taiwan.',
             'A ordem e a duração do processo variam segundo a forma societária, o investidor, o setor, o banco e os documentos disponíveis. Constituir uma sociedade não produz, por si só, um título de residência (居留) nem uma autorização de trabalho (工作許可): são trâmites distintos, apreciados segundo a situação de cada pessoa.',
           ],
         },
@@ -1615,14 +1615,14 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Casamento, família e sucessões',
           paragraphs: [
-            'Tratamos divórcio (離婚), partilha de bens, exercício e assunção de direitos e deveres relativamente a filhos menores (未成年子女權利義務之行使或負擔), regime de visitas (會面交往) e sucessões (繼承), também quando as partes ou os bens estão em países distintos. Os assuntos de família transfronteiriços exigem muitas vezes um exame adicional de documentos do registo de agregados (戶籍), da forma dos documentos e do seu valor probatório em Taiwan.',
+            'Tratamos divórcio (離婚), partilha de bens, o exercício das responsabilidades parentais relativamente aos filhos menores (未成年子女權利義務之行使或負擔), regime de visitas (會面交往) e sucessões (繼承), também quando as partes ou os bens estão em países distintos. Os assuntos de família transfronteiriços exigem muitas vezes um exame adicional de documentos do registo de agregados (戶籍), da forma dos documentos e do seu valor probatório em Taiwan.',
             'Como os assuntos de família costumam ir ligados a prazos e a vários trâmites em paralelo, o resumo inicial deve indicar a relação entre as partes, o local de residência atual e os procedimentos já iniciados.',
           ],
         },
         {
           heading: 'Conflitos laborais',
           paragraphs: [
-            'Este grupo cobre a cessação do contrato de trabalho, a indemnização segundo o direito de Taiwan (資遣費; não se identifica com instituições de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.',
+            'Este grupo cobre a cessação do contrato de trabalho, a indemnização por despedimento segundo o direito de Taiwan (資遣費; não se confunde com as figuras de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.',
             'O contrato de trabalho, o regulamento interno (工作規則), os recibos de vencimento e a troca escrita entre as partes são, em regra, os documentos decisivos. Se ainda os conserva, indique-o no resumo.',
           ],
         },
@@ -1660,7 +1660,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Fundação e estrutura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) foi fundado em 2016 por advogadas e advogados formados na National Taiwan University (國立臺灣大學). O nome chinês 昊鼎 une o carácter 昊 («céu amplo») e o carácter 鼎 («base sólida») e descreve a orientação do escritório desde a fundação.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) foi fundado em 2016 por advogadas e advogados formados na National Taiwan University (國立臺灣大學). O nome chinês 昊鼎 une o caráter 昊 («céu amplo») e o caráter 鼎 («base sólida») e descreve a orientação do escritório desde a fundação.',
             'Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na governação de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para responder às necessidades locais.',
             'Além do trabalho de advocacia, em 2020 criou-se Hovering Accounting Office, que oferece contabilidade e planeamento fiscal a empresários e a particulares com património elevado.',
           ],
@@ -1684,7 +1684,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOGADAS E ADVOGADOS',
       title: 'Equipa internacional de Hovering',
-      description: 'Perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering.',
+      description: 'Perfis das advogadas e dos advogados, da direção de operações e do contabilista sócio de Hovering.',
       intro: '',
       sections: [],
     },
@@ -1700,7 +1700,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'O primeiro passo é fixar o âmbito do trabalho',
           paragraphs: [
             'Assuntos do mesmo tipo podem exigir um trabalho muito distinto, segundo o número de partes, os documentos disponíveis, os prazos a cumprir e se um procedimento já começou. Por isso o primeiro passo é sempre esclarecer o que entra no trabalho e o que não entra.',
-            'O resumo que envia no início é a base desse âmbito. Quanto mais claro descrever os factos, o que espera e os prazos, mais preciso poderá ser o âmbito.',
+            'O resumo que envia no início é a base desse âmbito. Quanto mais claramente descrever os factos, o que espera e os prazos, mais preciso poderá ser o âmbito.',
           ],
         },
         {
@@ -1713,7 +1713,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'A consulta pode ser um serviço pago',
           paragraphs: [
-            'A consulta com uma advogada ou um advogado pode ser um serviço pago. Esta página não afirma que a primeira consulta seja gratuita, e nenhuma parte deve ler-se nesse sentido.',
+            'A consulta com uma advogada ou um advogado pode ser um serviço pago. Esta página não afirma que a primeira consulta seja gratuita, e nada neste texto deve ser lido nesse sentido.',
             'Se a consulta tiver custo, o montante e a forma de pagamento comunicam-se antes de ter lugar.',
           ],
         },
@@ -1898,7 +1898,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'AVISO LEGAL',
       title: 'Âmbito e limites da informação desta página',
       description:
-        'O carácter geral da informação, o âmbito jurídico e as condições para que exista uma relação entre advogada ou advogado e cliente.',
+        'O caráter geral da informação, o âmbito jurídico e as condições para que exista uma relação entre advogada ou advogado e cliente.',
       intro:
         'Esta parte esclarece o que estas páginas de orientação em português podem e não podem fazer por si.',
       sections: [
@@ -1912,7 +1912,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Âmbito jurídico',
           paragraphs: [
-            'O escritório exerce segundo o direito de Taiwan, e esta página só fala do trabalho nesse quadro.',
+            'O escritório exerce a advocacia segundo o direito de Taiwan, e esta página só fala do trabalho nesse quadro.',
             'O conteúdo não é aconselhamento segundo o direito de nenhuma jurisdição distinta de Taiwan, incluindo o direito do lugar onde reside. Se alguma parte do seu assunto se rege por outra jurisdição, confirmaremos consigo que profissional qualificado faz falta para essa parte.',
           ],
         },
@@ -1958,7 +1958,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'Até onde o pode orientar um artigo',
           paragraphs: [
             'Os artigos escreveram-se como informação geral no momento da sua publicação. As normas e a sua aplicação podem mudar, e um artigo não recolhe todas as circunstâncias do seu caso.',
-            'Por isso, não tome um artigo como base para atuar num assunto real. Use-o para entender o panorama geral e fale depois do seu processo com uma advogada ou um advogado; esta página não é o passo de consulta.',
+            'Por isso, não tome um artigo como base para atuar num assunto real. Use-o para entender o panorama geral e fale depois do seu processo com uma advogada ou um advogado; esta página não é uma consulta.',
           ],
         },
       ],

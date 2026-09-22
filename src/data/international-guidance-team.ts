@@ -352,10 +352,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'A NOSSA EQUIPA',
     title: 'Equipa internacional de Hovering',
     description:
-      'Perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering.',
+      'Perfis das advogadas e dos advogados, da direção de operações e do contabilista sócio de Hovering.',
     representativeTitle: 'Advogada diretora',
     teamTitle: 'Advogadas, advogados e pessoal',
-    partnerTitle: 'Contabilista associado',
+    partnerTitle: 'Contabilista sócio',
     introLabel: 'Apresentação',
     educationLabel: 'Formação',
     experienceLabel: 'Experiência',
@@ -373,7 +373,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Advogado em Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Direção de operações da Coreia (Korea Operations Manager)',
-      'huang-shengping': 'Contabilista associado (Partner CPA)',
+      'huang-shengping': 'Contabilista sócio (Partner CPA)',
     },
   },
   'zh-hans': {
@@ -1531,9 +1531,9 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan company setup': 'Constituição de sociedades em Taiwan',
     'Taiwan investment counsel': 'Aconselhamento jurídico para investir em Taiwan',
     'Civil litigation and damages': 'Litígios civis e indemnizações',
-    'Trademark and patent filings': 'Apresentação de marcas e patentes',
+    'Trademark and patent filings': 'Pedidos de registo de marcas e patentes',
     'Visa and residency': 'Visto e residência',
-    'Family and labor disputes': 'Conflitos de família e laborais',
+    'Family and labor disputes': 'Conflitos familiares e laborais',
   },
   'zh-hans': {
     'Taiwan company setup': '在台湾设立公司',
@@ -2361,30 +2361,30 @@ export const guidanceTeamBios: Record<
         'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhões de TWD.',
       ],
       education: [
-        'Mestrado (M.S.), Institute of Finance, National Taiwan University',
-        'Licenciatura (B.A.) com dupla especialização em Direito e Finanças, National Chengchi University',
+        'Mestrado (M.S.), Instituto de Finanças, National Taiwan University (Institute of Finance, National Taiwan University)',
+        'Licenciatura (B.A.) com formação em Direito e em Finanças, National Chengchi University',
         'Aluna de intercâmbio na Kobe University e na Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fundação de Assistência Jurídica, Delegação de Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Trabalhou antes no Ministry of Education, Legal Affairs Division, centrado em conflitos administrativos e civis.',
+        'Trabalhou antes no Ministério da Educação, Divisão de Assuntos Jurídicos (Ministry of Education, Legal Affairs Division), centrado em conflitos administrativos e civis.',
         'Tem experiência em assuntos de universidades, direitos do pessoal docente e reclamações administrativas.',
       ],
       education: ['Licenciatura em Direito (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministério da Educação, Divisão de Assuntos Jurídicos (Ministry of Education, Legal Affairs Division)',
         'Advogado, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal com anos de trabalho como paralegal sénior em vários escritórios, a cargo do apoio processual, do direito de empresa e do investimento estrangeiro.',
+        'Paralegal sénior, com anos de experiência em vários escritórios, a cargo do apoio processual, do direito das sociedades e do investimento estrangeiro.',
         'Apoia litígios, constituição de sociedades, trâmites de aprovação de investimento estrangeiro, pedidos de licença e o intercâmbio entre a Coreia e Taiwan.',
       ],
       education: ['Licenciatura em Direito (LL.B.), Tunghai University'],
@@ -2403,7 +2403,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Concluiu os programas de licenciatura e mestrado em contabilidade na National Chengchi University e dirige atualmente um escritório de contabilidade.',
+        'Licenciou-se e concluiu o mestrado em Contabilidade na National Chengchi University e dirige atualmente um escritório de contabilidade.',
         'Apoia a análise integrada de riscos jurídicos, fiscais e financeiros para clientes empresariais.',
       ],
       education: [

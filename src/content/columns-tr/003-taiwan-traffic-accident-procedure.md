@@ -115,7 +115,7 @@ Bir yakın ücretsiz olarak bakımı gerçekten sunmuş olsa da, uygun dosyada b
 
 Gidiş giderleri, tedavi kaydı ile kazaya bağlı yaralanmaların bağından hareketle düzenlenir. Güzergâh, ziyaret sayısı, tarihler, ulaşım aracı, ücret ile o aracın kullanılmasının gerekliliği ve makullüğü değerlendirmeye ilgili olabilir.
 
-Makbuzlar, ücret kayıtları, güzergâh kayıtları ve klinik belgeler olası kanıtlardır. Taksi makbuzu tek kanıt yolu değildir ve sunulmuş olması tek başına yeterli olduğu anlamına gelmez.
+Makbuzlar, ücret kayıtları, güzergâh kayıtları ve tedavi kayıtları olası kanıtlardır. Taksi makbuzu tek kanıt yolu değildir ve sunulmuş olması tek başına yeterli olduğu anlamına gelmez.
 
 ### Q6–Q10 resmi dayanakları
 
@@ -175,7 +175,7 @@ Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險�
 
 Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu sigortasının ödemelerinin muhatabı değildir. Ancak birden çok aracın karıştığı bir kazada, sürücünün karışan başka bir aracın zorunlu sigortacısından ödeme talep edebildiği haller vardır.
 
-29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve ölüm, sakatlık ve tıbbi giderlerin toplam azamisi, 1 mağdur ve 1 kaza başına TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
+29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve ölüm, sakatlık ve tıbbi giderlerin toplam azamisi, mağdur 1 kişi ve kaza 1 olay başına TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
 
 Üçüncü kişilere karşı mali sorumluluk sigortası (第三人責任險), sürücü kaza sigortası (駕駛人傷害險) ve kendi araç hasarı sigortası (車體損失險) sözleşmeye bağlı isteğe bağlı ürünlerdir. Gerçek teminat, sigortalıya, tavana, muafiyete (自負額), istisnalara, kusura ve poliçenin diğer koşullarına göre değişir, böylece poliçe ve koşullar dosya dosya doğrulanmalıdır.
 

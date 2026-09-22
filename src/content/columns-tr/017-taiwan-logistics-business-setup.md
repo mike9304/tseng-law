@@ -24,7 +24,7 @@ faq:
 
 Tayvan’da sevkiyatla ilgili bir iş planlanırken izin gerekip gerekmediği yalnızca “lojistik şirketi” adına bakılarak saptanamaz. Depolama, paketleme, lojistik sistemi, taşıma komisyonculuğu (運送承攬), kendi malının sevki ile başkasının yükünün karşılık alınarak motorlu araçla taşınması birbirinden ayrı rejimlere girebilir.
 
-Bu yazı üç durumu ayırır: motorlu yük taşımacılığını yeni kurmak, mevcut işletmenin paylarını edinmek veya iş ve varlıklarını devralmak, izni elinde tutan işletmeye taşımayı bırakmak. Somut bir iş planı incelenirken yalnızca sözleşme metni değil; taşıma ücretini kimin aldığı, yük kazasına kimin katlandığı, araç tahsisi, sürücü ve araçları kimin yönettiği gibi fiili işletme biçimi de birlikte doğrulanmalıdır.
+Bu yazı üç durumu ayırır: motorlu yük taşımacılığını yeni kurmak, mevcut işletmenin paylarını edinmek veya iş ve varlıklarını devralmak, izni elinde tutan işletmeye taşımayı bırakmak. Somut bir iş planı incelenirken yalnızca sözleşme metni değil; taşıma ücretini kimin aldığı, yük kazası sorumluluğunu kimin üstlendiği, araç tahsisi, sürücü ve araçları kimin yönettiği gibi fiili işletme biçimi de birlikte doğrulanmalıdır.
 
 ![İzin, araç ve sözleşme ilişkisini ayırmak için görsel](../images/017-taiwan-logistics-business-setup/img-01.jpg)
 

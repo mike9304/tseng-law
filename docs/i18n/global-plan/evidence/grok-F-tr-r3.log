@@ -1,0 +1,79 @@
+WO-F-tr r3 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-tr-r3
+No git add/commit/push.
+
+## Rows applied
+
+tr-a (16 of 19): 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18
+tr-b (27 of 28): 1–17, 19–28
+
+Checker adaptations (wording applied; a source digit was not dropped, because a missing number FAILs):
+- tr-a 10: (公司設立) now glosses şirket kuruluşu. The sentence still says this page is ileri konular 2. Korean body is 심화편-2; dropping that 2 fails numbers. Title and H1 unchanged.
+- tr-a 17: “1 kezlik her durma süresi 1 yılı” → “1 kezlik durma süresi 1 yılı” (FAQ and body). Both 1s stay (Korean 1회 and 1년). “her” was the glue.
+- tr-a 18: “1 mağdur ve 1 kaza başına” → “mağdur 1 kişi ve kaza 1 olay başına”. Both 1s stay (피해자 1명·사고 1건).
+- tr-b 27: “her ortağın 1 kişi 1 oy” → “1 kişi 1 oy”. Both 1s stay (주주 1인 1표). The extra “her ortağın” was the doubling.
+- tr-b 17: the lease sentence is no longer split as “Kira sözleşmesi” / “imzalanmadan”. The two paragraphs stay two paragraphs. Same treatment for the other mid-sentence breaks in 013 and 015 (block count unchanged).
+
+Guidance pack:
+- team bio (tr-a 4): idari uyuşmazlıklar ile hukuk davaları. English parenthesis on the ministry name left.
+- facts prompt (tr-a 5): the reader writes the facts into the summary and does not extract the answer from the page.
+- disclaimer (tr-a 15): “bu sayfa görüşmenin yerini tutmaz.” The denial stays. Test regex in guidance-disclosure-parity.test.ts updated to /görüşmenin yerini tutmaz/ and nothing else in that file.
+- labor scope (tr-a 16): ister işçi ister işveren tarafında olsun.
+
+llms.txt `tr` notices were not rewritten. `llms.txt` stays. consultationNotice and confidentialNotice were already verbatim substrings of the pack, and those sentences were not edited.
+
+## Rows skipped
+
+- tr-a 1 (P1, TWD 1.57M): ACCEPTED-ROUND / R12 pin that figure byte-identical. Not rewritten as “1,57 milyon TWD”.
+- tr-a 13 (P2, Q16–Q20 as ## headings, and the U+200B blank lines in 003, 005, 006, 008, 009): the checker compares heading levels and the ZWSP count with the Korean source. Adding headings or deleting the zero-width lines fails headings / blocks. Empty bold lines in 005 and the lowercase continuation “sorumlu” were left.
+- tr-a 19 (P2, Hangul in `url` of 008 and 009): R16 / ACCEPTED-ROUND. Frontmatter `url` left as-is.
+- tr-b 18 (P2, delete every U+200B in 013 and 015): same ZWSP count rule. Those lines were left in place, including the zero-width space after “Taipei şehri).”
+
+## Systemic patterns
+
+- Glued digit on a count the sentence already names: 4 instances. 002 “1 kezlik her” ×2; 003 “1 mağdur ve 1 kaza” ×1; 018 “her ortağın 1 kişi 1 oy” ×1. Digits kept; see adaptations.
+- U+200B blank lines and empty `**​**` lines (003 Q16+, 005, 006, 008, 009, 013, 015): 0 changed. Checker pins the count.
+- Hangul slug in `url`: 0 changed (008, 009).
+- Wrong person on the divorce ground: 1 (007 item 4, dative “üstsoyuna” / “eşe”).
+- English calques in the guidance pack: 2 (görüşme adımı; iş ister işçinin). The facts-prompt sentence was a meaning fix, not this calque.
+- Mid-sentence paragraph breaks in 013 and 015: 17 sites completed inside the existing blocks (013 ×13, 015 ×4). No block merged or deleted. 015’s three-block “piyasa / husus / adres” sentence is one of the four.
+- Wrong institution or false friend, including the same sentence in the FAQ and the body: mirastan yoksunluk ×1; tedavi kayıtları ×1; 公司登記辦法 on the 002 link label ×1; birlikte uygulama sınırı ×2; tamamlanmalıdır ×1; ancak hükmü (但書) ×1; verilmeyen ×1; sürenin işlemesi and başlangıç tarihi ×1; içeriği tasdikli mektup ×1; dağıtıcı for 銷售代理商 ×4 (FAQ, body, and both labels in the importer paragraph; sözleşmesel “acente” left); iki ayrı kimlik belgesi ×1; oturma belgesi “buna ek olarak” ×1; sermaye katkısı ×1; kararlaştırılan sürenin uzunluğu ×1; yeknesak paylaştırılmış ×1; şirket tescili for 公司登記 ×2; velayeti elinde tutuyorsa ×1 (gloss 親權 kept); hukuki dayanak ×1; mahkemece tetkiki ×1; çifte vergilendirmeyi önleme ×1; yük kazası sorumluluğu ×1; tröst ×2; yabancı uyruklu bir kişi ×1; fon getirip ×1; idari makamlar ×1; ele alınabilir ×1; sorunsuz devri ×1; müşteriye ait gizli evrak and karşı tarafın şirket unvanı ×1 each; 009 fault assignment ×1; 002 genitive series ×1; 014 question marks and “kime aittir” ×4.
+- R2–R10: round-2 wording still holds (Korea only as a labelled example, consultation lock, no result or availability promise, EKİBİMİZ / OFİSLER / Tam profil, feminine unmarked where Turkish does not mark it). No further sentence of that set was rewritten. Fullwidth colon remains only inside the 008 `url`. 005 “tüzel kişi tescil belgelerini (法人登記文件)” was left; that gloss is 法人登記, not 公司登記.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-tr --lang tr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-tr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+The 22 includes this log, the pre-existing WO-F-tr.txt edit, and the two untracked review files. One test expected-string was updated: `src/data/__tests__/guidance-disclosure-parity.test.ts` Turkish regex for the “not the consultation step” disclosure.
+
+Number WARNs that did not fail the summary (pre-existing; not introduced as FAILs): 002 extra 6; 003 extra 2020×2 and 2023; 007 extra 2023×2; 010 extra 2020; 015 extra 2×2; plus unmatched Korean ordinals (제3자, 제2종, 제6호, and article-paragraph ordinals) on 004, 009, 011, 014, 015, 016, 017. 005, 008, 013, and 018 number bags match (013 stayed 15=15 after “iki ayrı”).
+
+## Reviewer points not applied as written
+
+- tr-a 17, tr-a 18, and tr-b 27 ask to drop the digits. Those digits are in the Korean source (1회 / 1년, 피해자 1명·사고 1건, 주주 1인 1표). The awkward Turkish around them was real; the digits are not translator glue. The suggested sentences were not used.
+- tr-a 10’s suggested sentence drops “ileri konular 2”. This file is 심화편-2. Only the gloss was on the wrong noun. The part number stays.
+- tr-a 1 is not a reviewer error about Turkish notation. The bio figure is pinned, so it was not rewritten.
+- tr-a 13, tr-a 19, and tr-b 18 correctly describe the U+200B lines, the spoken line breaks, and the Hangul slugs. Deleting the zero-width spaces, promoting Q16–Q20 to headings, or editing `url` fails the checker or R16. Those rows were not applied.

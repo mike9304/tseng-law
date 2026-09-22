@@ -69,7 +69,7 @@ Medeni Kanun’un (民法) 1052. maddesinin 1. fıkrası, diğer tarafta aşağ�
 1. Çifte evlilik (重婚)
 2. Eş dışındaki bir kişiyle rızaya dayalı cinsel ilişki
 3. Ortak yaşamı katlanılmaz kılacak derecede diğer tarafa eziyet (虐待)
-4. Diğer tarafın kendi üstsoyunu eziyet etmesi veya diğer tarafın üstsoyunun kendisine eziyet etmesi suretiyle ortak yaşamın katlanılmaz hale gelmesi
+4. Bir eşin diğer eşin üstsoyuna eziyet etmesi veya bir eşin üstsoyunun diğer eşe eziyet etmesi suretiyle ortak yaşamın katlanılmaz hale gelmesi
 5. Diğer tarafın kötü niyetli terkinin (惡意遺棄) sürmesi
 6. Diğer tarafı öldürme kastının bulunmuş olması
 7. İyileştirilemeyen ağır bir hastalık
@@ -111,7 +111,7 @@ Bu hak, kalan mal varlığı farkının öğrenildiği günden 2 yıl içinde ve
 
 Aynı haklar değildir. Medeni Kanun’un (民法) 1030-1. maddesindeki kalan mal varlığı farkının paylaşımı hakkı, 1056. maddedeki mahkeme kararıyla boşanma tazminatı, 1057. maddedeki kusursuz eş için ihtiyaç nafakası ve reşit olmayan çocuğun nafakası, doğuş şartları, hesap ve süreler bakımından farklıdır. Paylaşım hakkına, farkın öğrenildiği günden 2 yıl ve yasal mal rejiminin sona ermesinden 5 yıl uygulanır; bu süreler diğer taleplere olduğu gibi aktarılmamalıdır.
 
-Medeni Kanun’un (民法) 1056. maddesindeki tazminat, mahkeme kararıyla boşanmada sorumlu diğer tarafa karşı malvarlığı zararını ve yasal şartları taşıyan (2. fıkranın kaydı: talep edenin kendisinde kusur bulunmamalıdır) malvarlığı dışı zararı ayrı inceleyen bir haktır. Sorumluluk doğuran fiil, zarar, illiyet bağı ve malvarlığı dışı talebin ayrı şartları delille desteklenmelidir. Evliliğin bozulmasına ilişkin olguların varlığı tek başına belirli bir tutarı belirlemez ve başka malvarlığı taleplerinin yerine geçmez.
+Medeni Kanun’un (民法) 1056. maddesindeki tazminat, mahkeme kararıyla boşanmada sorumlu diğer tarafa karşı malvarlığı zararını ve yasal şartları taşıyan (2. fıkranın ancak hükmü (但書): talep edenin kendisinde kusur bulunmamalıdır) malvarlığı dışı zararı ayrı inceleyen bir haktır. Sorumluluk doğuran fiil, zarar, illiyet bağı ve malvarlığı dışı talebin ayrı şartları delille desteklenmelidir. Evliliğin bozulmasına ilişkin olguların varlığı tek başına belirli bir tutarı belirlemez ve başka malvarlığı taleplerinin yerine geçmez.
 
 Medeni Kanun’un (民法) 1057. maddesindeki boşanma sonrası eş nafakası, mahkeme kararıyla boşanma nedeniyle kusursuz eşin geçim sıkıntısına düşmesini öngerektirir. Anlaşmalı boşanma mı mahkeme kararıyla boşanma mı olduğu, talep edenin kusuru bulunup bulunmadığı ve boşanma nedeniyle gerçekten sıkıntıya düşülüp düşülmediği önce doğrulanmalı; kapsam, ihtiyaç ve ödeme gücüne ilişkin somut belgelere göre değerlendirilmelidir. Hükümet istatistiklerindeki ortalama tüketim veya yalnızca diğer tarafın kusuru bağlayıcı bir formül olamaz.
 

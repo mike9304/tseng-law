@@ -25,19 +25,19 @@ Aşağıdaki soru ve yanıtlar, Tayvan’da şirket kurmayı düşünenlere yard
 
 **1. Şirket kurmak istiyorum ama henüz tescil adresini bulamadım. Kuruluş yine de mümkün mü?**
 
-Yabancı, Tayvan’da şirket kurarken Ekonomi Bakanlığı Yatırım İnceleme Dairesine (經濟部投資審議司) yatırım planı (投資計畫書) sunarak incelemeden geçmelidir.
+Yabancı uyruklu bir kişi, Tayvan’da şirket kurarken Ekonomi Bakanlığı Yatırım İnceleme Dairesine (經濟部投資審議司) yatırım planı (投資計畫書) sunarak incelemeden geçmelidir.
 
-Yatırım İnceleme Dairesi, söz konusu sermayenin (資本額) gerçekten yatırım amacıyla kullanılıp kullanılmadığını
+Yatırım İnceleme Dairesi, söz konusu sermayenin (資本額) gerçekten yatırım amacıyla kullanılıp kullanılmadığını doğrular.
 
-ve yabancı kişilerin başka bir gerekçeyle fon sokup sokmadığını doğrulamalıdır.
+Ayrıca yabancı kişilerin başka bir gerekçeyle fon getirip getirmediğini doğrulamalıdır.
 
 Yatırım planı yazılırken şirketin tam adresini yazmak gerekmez; bölgeyi belirtmek yeterlidir (örnek: Taipei şehri). ​
 
 Daha sonra bankada şirket hazırlık hesabı (公司籌備處帳戶) açılırken ise pek çok banka kira sözleşmesini (租賃契約) inceler ve şirket adresini yerinde denetler.
 
-Bir Tayvan bankası çalışanı bana bizzat şunu söyledi:
+Bir Tayvan bankası çalışanı bana bizzat şunu söyledi.
 
-son dönemde pek çok yabancı hesap açtıktan sonra kayboluyor, bu yüzden hesap açılışı giderek daha sıkı ele alınıyor.
+Son dönemde pek çok yabancı hesap açtıktan sonra kayboluyor, bu yüzden hesap açılışı giderek daha sıkı ele alınıyor.
 
 Temel bölümde de bir okur, hesap açılışının en zor adım olduğunu belirtmişti; katılıyorum.
 
@@ -45,15 +45,15 @@ Tayvan’da kara para aklama (洗錢) vakaları çok sayıda olduğu için banka
 
 **Tavsiye:**
 
-Yatırım planı incelemesi de zaman aldığı için,
+Yatırım planı incelemesi de zaman aldığı için adres araması bekletilmemelidir.
 
-yatırım planını yazmak ile şirket tescil adresini aramak aynı anda yürütülmelidir.
+Yatırım planını yazmak ile şirket tescil adresini aramak aynı anda yürütülmelidir.
 
-Yabancı Yatırım Kanunu (外國人投資條例) madde 9 uyarınca onaylanan katkı, yetkili makamın belirlediği süre (核定期限) içinde tam olarak gelmelidir; süre her dosyanın onay belgesinde teyit edilir (uygulamada sıklıkla yaklaşık 1 yıl olarak belirlenir).
+Yabancı Yatırım Kanunu (外國人投資條例) madde 9 uyarınca onaylanan sermaye katkısı, yetkili makamın belirlediği süre (核定期限) içinde tam olarak gelmelidir; süre her dosyanın onay belgesinde teyit edilir (uygulamada sıklıkla yaklaşık 1 yıl olarak belirlenir).
 
-Bu süre içinde şirket adresi bulunup kira sözleşmesi imzalandıktan sonra,
+Bu süre içinde önce şirket adresi bulunup kira sözleşmesi imzalanır.
 
-bankada hazırlık hesabını açmak ve sermayeyi göndermek için yeterli zaman kalır.
+Ardından bankada hazırlık hesabını açmak ve sermayeyi göndermek için yeterli zaman kalır.
 
 ​
 
@@ -61,25 +61,25 @@ bankada hazırlık hesabını açmak ve sermayeyi göndermek için yeterli zaman
 
 Mümkündür.
 
-Banka genel olarak çifte kimlik doğrulaması ister,
+Banka genel olarak iki ayrı kimlik belgesi ister.
 
-ve oturma belgesi yoksa Tayvan göç idaresinden “**birleşik kimlik numarası temel bilgi formu**” (統一證號基本資料表) talep edilebilir.
+Oturma belgesi yoksa Tayvan göç idaresinden “**birleşik kimlik numarası temel bilgi formu**” (統一證號基本資料表) talep edilebilir.
 
-Aynı gün teslim mümkün olmakla birlikte,
+Aynı gün teslim mümkün olmakla birlikte kalabalık hesaba katılmalıdır.
 
-göç idaresi (移民署) çok kalabalıktır; bu nedenle erken gidip numara almak uygun olur.
+Göç idaresi (移民署) çok kalabalıktır; bu nedenle erken gidip numara almak uygun olur.
 
 ​
 
 **3. Yatırım planı incelemesinde öğrenim ve mesleki deneyimin yazılması gerektiğini duydum; öğrenimim ve deneyimim kurmak istediğim şirketin sektörüne uymayacak diye kaygılanıyorum.**
 
-Ekonomi Bakanlığı inceleme komisyonu yatırımcının geçmişini gerçekten inceler,
+Ekonomi Bakanlığı inceleme komisyonu yatırımcının geçmişini gerçekten inceler.
 
-ancak inceleme aşırı sıkı değildir.
+Ancak inceleme aşırı sıkı değildir.
 
-Yarı zamanlı iş dâhil çeşitli iş deneyimleri anılabilir,
+Yarı zamanlı iş dâhil çeşitli iş deneyimleri anılabilir.
 
-ve incelemeden sorumlu kişileri ikna edebilecek biçimde ayrıntılı açıklanmalıdır.
+Bu deneyimler, incelemeden sorumlu kişileri ikna edebilecek biçimde ayrıntılı açıklanmalıdır.
 
 Bu noktada Tayvan avukatı ile yeterince görüşülmesi uygun olur.
 
@@ -87,23 +87,23 @@ Bu noktada Tayvan avukatı ile yeterince görüşülmesi uygun olur.
 
 **4. Şirket tescil adresi (örneğin bir restoran dükkânı) kiralanırken nelere dikkat edilmelidir?**
 
-Şirket kuruluşu yaklaşık **3 ay**, çalışma izni (工作許可) ve oturma belgesi alınması da yaklaşık **1 ay** sürdüğü için,
+Şirket kuruluşu yaklaşık **3 ay** sürer. Çalışma izni (工作許可) ve oturma belgesinin alınması ise buna ek olarak yaklaşık **1 ay** sürer.
 
-sözleşme başlangıç günü mümkün olduğunca geç tutulmalıdır.
+Bu nedenle sözleşme başlangıç günü mümkün olduğunca geç tutulmalıdır.
 
 Ayrıca Tayvan’daki dükkân kira sözleşmelerinde ev sahibi kiracıya sıklıkla “**dekorasyon süresi**” (裝潢期間) verir.
 
 Bu, kiranın muaf tutulduğu bir süredir; müzakere edilebilir.
 
-Yabancının dükkân kiralaması kolay değildir ve Tayvan’da teminat (押金) oldukça düşüktür (genellikle iki aylık kira), bu yüzden ev sahibinin koruması sınırlıdır;
+Yabancının dükkân kiralaması kolay değildir ve Tayvan’da teminat (押金) oldukça düşüktür (genellikle iki aylık kira), bu yüzden ev sahibinin koruması sınırlıdır.
 
-ev sahipleri bu nedenle yabancılara kiralamakta tereddüt eder.
+Ev sahipleri bu nedenle yabancılara kiralamakta tereddüt eder.
 
 Bu yüzden işletme yerini erken aramanızı öneririm.
 
-Ev sahibi ile müzakere akıcı gitmezse,
+Ev sahibi ile müzakere kolay ilerlemezse ek bir yol düşünülür.
 
-gerektiğinde kira sözleşmesinin noter onayı (公證) veya ek teminat önerilebilir.
+Gerektiğinde kira sözleşmesinin noter onayı (公證) veya ek teminat önerilebilir.
 
 ​
 
@@ -115,13 +115,13 @@ Bu, şirketin faaliyet kalemlerine (營業項目) bağlıdır.
 
 Daha önce belirtildiği gibi banka kira sözleşmesini inceler ve şirket adresini yerinde denetler.
 
-Ayrıca nihai şirket tescilinde belediye (市政府) de tescil adresinin restoran işletmesinin serbest olduğu bir bölgede olmasını ister;
+Ayrıca nihai şirket tescilinde belediye (市政府) de tescil adresinin restoran işletmesinin serbest olduğu bir bölgede olmasını ister.
 
-ofis tipi ticari mekân ise şirket tescili (公司登記) mümkün olmayabilir.
+Ofis tipi ticari mekân ise şirket tescili (公司登記) mümkün olmayabilir.
 
-Örnek: Reklamcılık veya toptan ticaret gibi ofis tipi ticari mekânda mümkün faaliyet kalemleri ise, ofis tipi ticari mekânda kuruluş yapılabilir. Kira sözleşmesi
+Örnek: Reklamcılık veya toptan ticaret gibi ofis tipi ticari mekânda mümkün faaliyet kalemleri ise, ofis tipi ticari mekânda kuruluş yapılabilir.
 
-imzalanmadan önce önceden doğrulanmalıdır.
+Kira sözleşmesi imzalanmadan önce önceden doğrulanmalıdır.
 
 *Tayvan hukuku hakkında bir sorunuz varsa İletişim sayfasından İngilizce, Çince (中文), Japonca veya Korece yazabilirsiniz; yanıt süresi vaat edilmez.*
 

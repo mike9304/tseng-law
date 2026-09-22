@@ -1,0 +1,113 @@
+WO-F-ta r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ta-r4
+date: 2026-09-23
+
+## Rows applied
+
+ta-a (7 applied)
+2 P1 004 — visible article is now பிரிவு 3 of the withholding-rate standards (各類所得扣繳率標準). The digit 10 stays in “(வணிக வரிச் சட்டத்தின் பிரிவு 10 அல்ல)” because the Korean label is 영업세법 제10조 and the checker counts it. URL unchanged (1).
+3 P2 team bio — coordination between departments (ஒருங்கிணைப்பு), not an exchange of things (1).
+5 P2 007 — official primary sources, checked on 25 ஜூலை 2026, not “tier 1” and not “according to” the date. Kept a bare “(1)” because Korean “1차” is still a counted digit (1).
+6 P2 007 — “the legislative period specified by that judgment”, not the court’s own assessment period. Did not add a second 112 or 4: the Korean sentence has neither, and the judgment is already named above (1).
+7 P2 008 — he was the highest-selling salesperson, then the top performer in central Taiwan, not merely among high performers (2).
+8 P2 009 — in most cases the party that prepares in advance is better placed. Dropped the extra “this is not a guaranteed outcome”, which the English sentence does not have (1).
+9 P2 about — the 昊 / 鼎 sentence now parses: case on the character, accusative not glued to the parenthesis (1).
+
+ta-b (39 applied)
+1 P1 013 — company registration may not be possible, not that it is impossible (1).
+2 P2 010 — payroll, tax, and employment records, not class-attendance documents (1).
+3 P2 010 — whether punitive damages are actually awarded, and in what amount (1).
+4 P2 010 — insurance does not itself establish the gym’s or trainer’s liability (1).
+5 P2 011 — supplemental documents requested, not a document amendment, in the FAQ, the repeated section sentence, and the timing sentence (3). திருத்தம் (限期改正) and real correction requests were left.
+6 P2 011 — a request for information, not a product request (1).
+7 P2 011 — distributor (விநியோகஸ்தர், gloss 經銷商), including the FAQ “also serves as distributor” (2) and the next sentence “the distributor may also be the importer” (1). The later list “agent, master distributor, or distributor” was already right and was left.
+8 P2 011 — latest filing requirements, not conditions of acceptance (1).
+9 P2 011 — a third party helping prepare or retain the file, not a document-security service (1).
+10 P2 011 — within the scope of the advertising review, not an administrative boundary (1).
+11 P2 012 — the attempt to pass the two vehicles, not merely that A wanted to (1).
+12 P2 013 — the department checks that funds are not brought in under another pretext (1).
+13 P2 013 — enough detail to persuade the reviewers (1).
+14 P2 014 — whether the work was actually done after training, and how long the worker had already served (1).
+15 P2 014 — the arrangement when the contract was made, and what was actually performed when employment ended (1).
+16 P2 014 — does not physically or legally prevent resignation (1).
+17 P2 014 — the portion of the investment already recovered, not an amount collected as a fee (1).
+18 P2 015 — relocation of the company or business, not only a head-office move. The sentence already named branches and sub-branches (1).
+19 P2 — legal “requirements” no longer எதிர்பார்ப்பு. See sweep below.
+20 P2 016 — abstract statutory share (கருத்தளவிலான), not a brief share (1).
+21 P2 016 — personal care of the minor versus property management, not a security role (1).
+22 P2 016 — who may represent the child in a partition agreement or in litigation (1).
+23 P2 016 — treaties and the other country’s law, not the word this article uses for contracts (1).
+24 P2 016 — no disposition without authority, not only a sale (1).
+25 P2 017 — security interests (பிணை உரிமைகள்) in the FAQ and the section 3 repeat (2).
+26 P2 017 — articles of incorporation (உள்விதிகள், 章程), not an attachment report (1).
+27 P2 018 — items not yet decided may be marked “இன்னும் தீர்மானிக்கப்படவில்லை”, not arrears (1).
+28 P2 017 — katakana middle dot inside the gloss → 連江、馬祖 (2: FAQ and body).
+30 P2 013 — “before the lease” and “do a prior check” were one thought split across two lines and both opened with முன். Rephrased inside the two existing lines; the lines were not merged (2).
+31 P2 011 — handmade, or called soap, does not by itself earn the exemption (1).
+32 P2 014 — professional or technical skills, and “whether training was completed”, inside the same noun list (1).
+33 P2 017 — surrendering the commercial plate for deregistration is now a verbal noun the accusative can attach to (1).
+34 P2 010 — “in practice”, not “in the actual response” (1).
+35 P2 010 — “specific” duty of care, and the letter that specifies the camera position (2). See sweep.
+36 P2 011 — accounting and tax treatment (கையாளுகை), not “behavior” (1).
+37 P2 011 — do not concentrate preparation on paid sales alone (1).
+38 P2 014 — “not attributable to the worker” uses சாட்ட, not சுமத்த (5: FAQ question, FAQ answer, section 7 heading, the repeated body, and the list sentence). Also “to which party the circumstances are attributable” (1) and “not an exhaustive list” (1). “சுமத்தப்பட்ட தொகை” (the amount attributable to that worker) was left.
+39 P2 014 — compensation already due for work performed, and consideration for the stay-in-post commitment (2). Other பரிவர்த்தனை in 002/004/011/017/018 means an actual transaction and was left.
+40 P2 016 — parental rights and duties, not “the rights of the parental rights” (1), and several limitation periods may run at the same time (1).
+
+## Rows skipped
+
+ta-a 1 P1 003 — not applied. RULEBOOK R3 already requires “in some judgments about 3 / 4 / 6 months; there is no typical or guaranteed outcome”. The current sentences already say that. The suggested rewrite restores “courts generally impose”, which makes a sentencing range sound like the usual result. ACCEPTED-ROUND: do not make a result sentence positive.
+ta-a 4 P2 003 — not applied. R3 maps “pursue the maximum compensation” to “pursue the compensation the facts and evidence support”. The current sentence already says that. “அதிகபட்ச இழப்பீடு” puts the maximum claim back.
+ta-a 10 P2 — not applied. “TWD 1.57M” is pinned byte-identical (R12). The team-bio sentence was not edited.
+ta-a 11 P2 — not applied. Lakh grouping (30,00,000 and the column amounts) is not parsed (R14 / ACCEPTED-ROUND). Western comma grouping kept.
+ta-b 29 P2 013/015 — zero-width spaces not removed. checkBlocks requires the ZWSP count to match the Korean source. Removing them fails the checker. The same character also sits in other columns (003, 005, 006, 008, 009); those were left for the same reason.
+
+## Systemic patterns
+
+- Legal “requirements” written as எதிர்பார்ப்பு: 10 instances → தேவை / தேவைகள். 011 ×1 (தகுதித் தேவை), 015 ×1 (உள்ளூர் அரசுகளின் தேவைகள்), 017 ×3 (FAQ question, section heading, “தேவைகளில்”), 018 ×4 (வாடிக்கையாளரின் தேவைகள் ×2, அமைத்தல் தேவை, பதிவுத் தேவைகள்). 017 “காலத்தைக் குறைக்கும் சூழல்கள்” ×1 is the same word but English is “circumstances in which the bar may be waived or shortened”, so it became சூழல்கள், not தேவைகள். 018 “பல்வேறு கோரிக்கைகள்” ×1 is the same word but English is “requests”, so it became கோரிக்கைகள். 018 “எதிர்பார்ப்புள்ள நிறுவனங்கள்” (companies that expect a listing) was left, as the review said.
+- “Specific / specify / in concrete terms / examined specifically” written as the adverb உறுதியாக: 6. 010 ×2 (குறிப்பிட்ட கவனக் கடமை; குறிப்பிட்டு எழுதிய), 011 ×1 (தெளிவாகக் குறிப்பிடுவது), 016 ×2 (குறிப்பாகப் பாருங்கள்; the personal-care sentence now தெளிவாகப் பிரியுங்கள்), 018 ×1 (குறிப்பிட்ட விவரங்களுடன் ஒப்பிட்டு). Left where உறுதியாக is “firmly” or “substantively”: 008 “உறுதியாக மறுத்தார்”, 007, 017 “உறுதியாக ஒழுங்குபடுத்துங்கள்” / “உறுதியாக உறுதிப்படுத்துங்கள்”.
+- “Not attributable” as சுமத்த முடியாது: 5 in 014, plus the “which party” clause and the exhaustive-list wording (2 more in the same section).
+- திருத்தம் meaning a request for supplemental documents: 3 in 011. Real correction orders were left.
+- “Among high performers” instead of the top performer: 2 in 008.
+- Amounts at or above one lakh, and “TWD 1.57M”: 0 changed (checker / pin).
+- “இது வழக்கமான அல்லது உத்தரவாதமான முடிவல்ல” / “சில தீர்ப்புகளில்”: 0 changed (R3).
+- U+200B: 0 changed (ZWSP parity).
+- R12–R17 spot check: no Devanagari in columns-ta. No Hangul outside url (checker hangul PASS). Consultation lock not loosened. Register stays நீங்கள். “TWD 1.57M” byte-identical. Feminine reference to Wei Tseng was already அவர் / -ஆர் and was not retouched.
+
+No test file was edited. Nothing in src/lib/__tests__ or src/data/__tests__ pinned the strings that changed (3202 passed).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ta src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      18
+```
+
+The 18 was counted before this log file existed. 004 numbers stayed sourceCount=95 targetCount=95 (the added article 3 did not break the bag; the kept 10 did the work). 015 still WARNs “extra in translation (2): 2×2”; that warning is pre-existing and was not introduced by these edits. Ordinal WARNs (제3자 and similar) are pre-existing R11 word-forms and do not fail the summary.
+
+## Reviewer got wrong (not applied)
+
+- ta-a row 1. The English “generally about 3 / 4 / 6 months” was already softened on purpose by R3. “சில தீர்ப்புகளில் … வழக்கமான அல்லது உத்தரவாதமான முடிவல்ல” is that rule, not a mistranslation of a usual sentence into an uncommon one. Restoring பொதுவாக would read as a typical sentence.
+- ta-a row 4. Same advertising rule. “உண்மைகளும் சான்றுகளும் ஆதரிக்கும் இழப்பீடு” is the required wording. The suggested “அதிகபட்ச இழப்பீடு” is the maximum-compensation claim R3 removed.
+- ta-a rows 10 and 11 are culturally right about “TWD 1.57M” looking like an English abbreviation and about lakh grouping. They are not applicable here: the bio figure is pinned, and the checker does not parse lakh/crore grouping. Part b of the same review already treats Western grouping as acceptable.
+- ta-b row 29 is a real defect (U+200B, including lines whose only character is that space). It is not a wording mistake the fixer can remove: the block checker demands the same ZWSP count as the Korean source.

@@ -334,7 +334,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'Photo',
     workingLanguagesLabel: 'Langues de travail',
     fullProfileLabel: 'Profil complet (en anglais)',
-    keyFactsHeading: 'Avocate Wei Tseng — Indications essentielles',
+    keyFactsHeading: 'Avocate Wei Tseng — L’essentiel',
     qualificationLabel: 'Qualification et cabinet',
     qualificationSentence:
       '{name} est avocate habilitée à exercer à Taïwan et avocate dirigeante de {firm}.',
@@ -2325,7 +2325,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Collaborateur juridique comptant de longues années d’expérience comme collaborateur juridique senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
+        'Collaborateur juridique, fort d’une longue expérience comme collaborateur senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
         'Appui aux procédures, à la constitution de sociétés, aux autorisations d’investissement étranger, aux demandes de licence et aux échanges entre la Corée et Taïwan.',
       ],
       education: ['Licence en droit (LL.B.), Tunghai University'],

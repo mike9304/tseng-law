@@ -55,11 +55,11 @@ Prêtez donc attention à ce point.
 
 Il est recommandé à tous les secteurs de confirmer, par le système de « consultation préalable du local » (營業場所預先查詢), si l’exploitation est possible.
 
-Toutefois, lors de l’immatriculation de la société, plusieurs branches sont souvent inscrites à la fois, et l’on souhaite fréquemment inscrire environ dix branches en une seule fois.
+Toutefois, lors de l’immatriculation de la société, plusieurs branches d’activité sont souvent inscrites à la fois, et l’on souhaite fréquemment inscrire environ dix branches d’activité en une seule fois.
 
-Aussi, en pratique, il n’est pas nécessaire de vérifier toutes les branches lors de l’immatriculation de la société.
+Aussi, en pratique, il n’est pas nécessaire de vérifier toutes les branches d’activité lors de l’immatriculation de la société.
 
-Selon les « [instructions de fonctionnement du service d’aide à la consultation des locaux de la ville de Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) »(臺北市營業場所協助查詢服務作業須知) et le guide en vigueur de la ville de Taipei,
+Selon les « [instructions de fonctionnement du service d’aide à la consultation des locaux de la ville de Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) » (臺北市營業場所協助查詢服務作業須知) et le guide en vigueur de la ville de Taipei,
 
 depuis le 1 janvier 2023, lors de la demande d’immatriculation de constitution, de transfert de siège ou d’ajout de branches d’activité d’une société ou d’un commerce (y compris la succursale (分公司) et l’établissement auxiliaire (分支機構)), le résultat de la consultation préalable du local **doit** être joint à la demande d’immatriculation, indépendamment du secteur.
 

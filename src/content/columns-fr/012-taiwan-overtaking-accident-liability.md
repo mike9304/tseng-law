@@ -27,7 +27,7 @@ Pour dépasser le véhicule de devant sur la même voie, le conducteur du véhic
 
 Le véhicule de derrière ne peut dépasser qu’après que le véhicule de devant a ralenti et s’est écarté, ou a manifesté sa volonté de céder le passage par un signe de la main ou par le clignotant droit.
 
-Ensuite, le véhicule qui dépasse doit allumer le clignotant gauche, passer à gauche en maintenant une distance d’au moins 0,5 mètre par rapport au véhicule de devant et, une distance de sécurité une fois assurée, allumer le clignotant droit et revenir en sécurité sur la voie d’origine.
+Ensuite, le véhicule qui dépasse doit allumer le clignotant gauche, passer à gauche en maintenant une distance d’au moins 0,5 mètre par rapport au véhicule de devant et, une fois la distance de sécurité assurée, allumer le clignotant droit et revenir en sécurité sur la voie d’origine.
 
 Cet ordre de signaux et de cession de passage sur la même voie ne signifie pas que le dépassement serait autorisé en un lieu ou dans une condition interdits. Avant de commencer le dépassement, toutes les conditions de l’article 101 doivent être appréciées ensemble.
 

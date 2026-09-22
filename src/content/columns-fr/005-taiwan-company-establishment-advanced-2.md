@@ -25,7 +25,7 @@ Les questions et réponses suivantes visent à aider les personnes qui envisagen
 
 ​
 
-**1. Lors du virement du capital (資本額) depuis l’étranger vers le compte préparatoire d’une société taïwanaise (公司籌備處帳戶), à quoi faut-il prêter attention ? (les règles bancaires et de change de la Corée exposées ci-dessous ne sont qu’un exemple)**
+**1. Lors du virement du capital (資本額) depuis l’étranger vers le compte de la société taïwanaise en formation (公司籌備處帳戶), à quoi faut-il prêter attention ? (les règles bancaires et de change de la Corée exposées ci-dessous ne sont qu’un exemple)**
 
 En général, les banques de Corée exigent que l’investisseur se rende **en personne** dans une banque en Corée et vire les fonds depuis un compte à son propre nom.
 
@@ -37,7 +37,7 @@ Avant de virer le capital (資本金匯款), renseignez-vous auprès de votre ba
 
 **​**
 
-**2. Lors du versement du capital social, peut-on virer des dollars de Taïwan (新臺幣, TWD) depuis son compte personnel à Taïwan vers le compte préparatoire de la société taïwanaise ?**
+**2. Lors du versement du capital social, peut-on virer des dollars de Taïwan (新臺幣, TWD) depuis son compte personnel à Taïwan vers le compte de la société taïwanaise en formation ?**
 
 C’est possible, mais vous devez produire des pièces justifiant l’origine des fonds en dollars de Taïwan acquis à Taïwan.
 
@@ -49,17 +49,17 @@ Si le virement est effectué depuis un compte bancaire en Corée, il n’est pas
 
 **​**
 
-**3. Après l’arrivée du capital sur le compte préparatoire, quand peut-il être converti en compte social ordinaire (正式公司帳戶) ?**
+**3. Après l’arrivée du capital sur le compte de la société en formation, quand peut-il être converti en compte bancaire ordinaire de la société (正式公司帳戶) ?**
 
 En général, une fois les documents d’immatriculation de la personne morale (法人登記文件) reçus,
 
-le responsable (負責人) peut se rendre à la banque et convertir le compte préparatoire de la société en compte ordinaire.
+le responsable (負責人) peut se rendre à la banque et convertir le compte de la société en formation en compte ordinaire.
 
 Toutefois, comme les règles internes de chaque banque (銀行) diffèrent, s’il faut utiliser le capital d’urgence, il convient de s’adresser d’abord à la banque.
 
 **​**
 
-**4. Après la conversion du compte préparatoire en compte ordinaire, la banque en ligne peut-elle être utilisée immédiatement ?**
+**4. Après la conversion du compte de la société en formation en compte ordinaire, la banque en ligne peut-elle être utilisée immédiatement ?**
 
 Cela varie selon les banques ; en général, un numéro de téléphone mobile au moins est nécessaire.
 

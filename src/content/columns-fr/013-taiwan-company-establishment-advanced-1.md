@@ -27,13 +27,13 @@ Les questions et réponses suivantes visent à aider les personnes qui envisagen
 
 Lorsqu’un étranger constitue une société à Taïwan, il doit présenter un plan d’investissement (投資計畫書) au Département de l’examen des investissements du ministère de l’Économie (經濟部投資審議司) aux fins d’examen.
 
-Le Département de l’examen des investissements doit vérifier si le capital (資本額) concerné est réellement utilisé à des fins d’investissement
+Le Département de l’examen des investissements doit vérifier si le capital (資本額) concerné est réellement utilisé à des fins d’investissement.
 
-et si des parties étrangères n’introduisent pas de fonds sous un autre prétexte.
+Il doit aussi vérifier si des parties étrangères n’introduisent pas de fonds à Taïwan sous un autre prétexte.
 
 Lors de la rédaction du plan d’investissement, il n’est pas nécessaire d’indiquer l’adresse exacte de la société ; l’indication de la région suffit (exemple : ville de Taipei). ​
 
-Lorsque plus tard le compte préparatoire de la société (公司籌備處帳戶) est ouvert à la banque, de nombreuses banques examinent toutefois le contrat de bail (租賃契約) et inspectent sur place l’adresse de la société.
+Lorsque plus tard le compte de la société en formation de la société (公司籌備處帳戶) est ouvert à la banque, de nombreuses banques examinent toutefois le contrat de bail (租賃契約) et inspectent sur place l’adresse de la société.
 
 Une employée ou un employé d’une banque taïwanaise m’a dit en personne que
 
@@ -53,7 +53,7 @@ Selon l’article 9 de la loi sur l’investissement des étrangers (外國人�
 
 Dans ce délai, une fois l’adresse de la société trouvée et le contrat de bail signé,
 
-il reste suffisamment de temps pour ouvrir à la banque le compte préparatoire et virer le capital.
+il reste suffisamment de temps pour ouvrir à la banque le compte de la société en formation et virer le capital.
 
 ​
 

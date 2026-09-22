@@ -1113,8 +1113,8 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investissement et constitution de sociétés à Taïwan',
           paragraphs: [
-            'Nous accompagnons des entreprises et des investisseurs étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous accompagnons aussi la comptabilité et la fiscalité liées à la constitution et à l’exploitation à Taïwan.',
-            'L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société ne produit pas, à elle seule, un titre de séjour (居留) ni un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.',
+            'Nous accompagnons des entreprises et des investisseurs étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous assurons aussi la comptabilité et la fiscalité liées à la constitution et à l’exploitation à Taïwan.',
+            'L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société n’ouvre pas, à elle seule, droit à un titre de séjour (居留) ni à un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.',
           ],
         },
         {
@@ -1134,7 +1134,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Litiges du travail',
           paragraphs: [
-            'Ce domaine couvre la fin du contrat de travail, l’indemnité de licenciement prévue par le droit de Taïwan (資遣費 ; à ne pas confondre avec l’indemnité de licenciement ou de rupture prévue par un autre droit), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous séparons le motif de la fin des questions de préavis, de paiement et de délais.',
+            'Ce domaine couvre la fin du contrat de travail, l’indemnité de licenciement prévue par le droit de Taïwan (資遣費 ; à ne pas confondre avec l’indemnité de licenciement ni avec les règles de protection contre le licenciement d’un autre droit), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous distinguons le motif de la rupture des questions de préavis, de paiement et de délais.',
             'Le contrat de travail, le règlement intérieur (工作規則), les bulletins de paie et les échanges écrits entre les parties sont le plus souvent les pièces décisives. Si vous les avez encore, mentionnez-le dans le résumé.',
           ],
         },
@@ -1173,7 +1173,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Création et organisation',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) a été fondé en 2016 par des avocates et avocats formés à la National Taiwan University (國立臺灣大學). Le nom chinois 昊鼎 unit le caractère 昊 (« ciel vaste ») et le caractère 鼎 (« base solide ») et décrit l’orientation du cabinet depuis sa création.',
-            'Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la gouvernance d’entreprise et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour répondre aux besoins de la région.',
+            'Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la direction et le droit des sociétés, et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour répondre aux besoins de la région.',
             'Outre le travail d’avocat, Hovering Accounting Office existe depuis 2020 et propose comptabilité et planification fiscale aux entrepreneurs et aux particuliers fortunés.',
           ],
         },
@@ -1188,7 +1188,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lorsque vous nous contactez',
           paragraphs: [
             'Après réception de votre résumé, une avocate ou un avocat examine le contenu, puis précise l’étendue possible, les pièces encore nécessaires et les étapes suivantes. Pour des questions fiscales ou comptables, le cabinet peut travailler avec le service de comptabilité de manière intégrée.',
-            'Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse concrète pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.',
+            'Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse sur laquelle vous puissiez vous fonder pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.',
           ],
         },
       ],
@@ -1233,7 +1233,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Pourquoi cette page ne publie pas de tarifs',
           paragraphs: [
             'Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un chiffre fixé à l’avance ne montrerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.',
-            'Outre les honoraires d’avocat, des frais de tribunal, d’autorité ou de tiers peuvent naître. Ils sont distincts des honoraires et dépendent de la procédure suivie.',
+            'Outre les honoraires d’avocat, des frais de tribunal, d’autorités ou de tiers peuvent s’y ajouter. Ils sont distincts des honoraires et dépendent de la procédure suivie.',
           ],
         },
       ],
@@ -1372,7 +1372,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lieu de conservation et accès',
           paragraphs: [
-            'Le contenu de votre envoi est conservé dans un lieu qui n’est pas d’accès public. Seules les personnes autorisées du cabinet peuvent y accéder pour traiter la demande.',
+            'Le contenu de votre envoi est conservé dans un lieu non accessible au public. Seules les personnes autorisées du cabinet peuvent y accéder pour traiter la demande.',
             'Cette page ne promet pas une sécurité absolue. Aucune voie de transmission ni aucun lieu de conservation n’est entièrement sûr ; les pièces sensibles ne devraient donc être envoyées que selon les indications particulières de l’avocate ou de l’avocat.',
           ],
         },
@@ -1425,7 +1425,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Cadre juridique',
           paragraphs: [
             'Le cabinet exerce selon le droit de Taïwan, et cette page ne parle que du travail dans ce cadre.',
-            'Le contenu n’est pas un conseil selon le droit d’un autre ordre juridique que Taïwan, y compris le droit de votre lieu de résidence. Si une partie de votre affaire relève d’un autre ordre juridique, nous clarifions avec vous quelle personne qualifiée est nécessaire pour cette partie.',
+            'Le contenu n’est pas un conseil selon le droit d’un ordre juridique autre que celui de Taïwan, y compris le droit de votre lieu de résidence. Si une partie de votre affaire relève d’un autre ordre juridique, nous clarifions avec vous quelle personne qualifiée est nécessaire pour cette partie.',
           ],
         },
         {
@@ -1438,7 +1438,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Aucune promesse de résultat',
           paragraphs: [
-            'Aucune partie de cette page n’est une promesse sur le résultat d’une affaire, sur l’octroi d’une demande ou sur le statut de séjour et de travail.',
+            'Aucune partie de cette page n’est une promesse sur le résultat d’une affaire, sur l’accueil d’une demande, ou sur le statut de séjour et de travail.',
             'Les liens externes sont fournis pour s’orienter ; nous n’assurons ni l’exactitude ni l’actualité des contenus de tiers.',
           ],
         },
@@ -1470,7 +1470,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jusqu’où un article peut servir d’indication',
           paragraphs: [
             'Les articles sont des indications générales au moment de la publication. Les règles et leur application peuvent changer, et un article ne reprend pas toutes les circonstances de votre affaire.',
-            'Ne fondez donc aucune action dans une affaire réelle sur un article seul. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.',
+            'Ne prenez donc aucune décision dans une affaire réelle sur le seul fondement d’un article. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.',
           ],
         },
       ],

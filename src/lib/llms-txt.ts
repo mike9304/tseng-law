@@ -609,7 +609,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Ces indications sont rédigées en français, mais la consultation avec une avocate ou un avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen.',
     discoveryNotice:
-      'Le fichier llms.txt n’est qu’une carte pour trouver les pages publiques ; il ne promet ni classement dans les moteurs de recherche, ni approbation, ni recommandation par une intelligence artificielle, ni visibilité promise.',
+      'Le fichier llms.txt n’est qu’une carte pour trouver les pages publiques ; il ne promet ni un classement dans les moteurs de recherche, ni une approbation, ni une recommandation par une intelligence artificielle, ni une visibilité particulière.',
     confidentialNotice:
       'Parce que le texte original est conservé, n’écrivez pas, à ce premier stade, ce qui n’est pas encore nécessaire, par exemple un numéro de passeport, un numéro d’identité ou des données de compte.',
   },

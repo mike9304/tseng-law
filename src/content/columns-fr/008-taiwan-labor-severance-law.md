@@ -172,11 +172,11 @@ enregistré tout le déroulement avec le téléphone mobile
 
 et a pu prouver qu’il n’avait pas démissionné lui-même.
 
-C’est pourquoi il a pu, plus tard, avec l’assistance d’une avocate,
+L’enregistrement peut montrer que B n’a pas démissionné de lui-même.
 
-faire reconnaître le droit à l’indemnité de licenciement prévue par la loi,
+Savoir si l’indemnité de licenciement est due dépend encore des faits de l’affaire.
 
-alors que les autres salariés partis n’ont pas pu en faire autant.
+Les autres salariés partis n’avaient pas cet enregistrement.
 
 ​
 
@@ -210,7 +210,7 @@ ou mute les salariés à des postes étranges,
 
 Si vous travaillez à Taïwan,
 
-L’indemnité de licenciement est plus difficile à obtenir qu’on ne le pense.
+l’indemnité de licenciement est plus difficile à obtenir qu’on ne le pense.
 
 Ne transigez pas facilement avec la société.
 

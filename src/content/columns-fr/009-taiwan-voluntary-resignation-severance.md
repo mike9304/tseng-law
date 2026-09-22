@@ -39,7 +39,7 @@ Dans les situations particulières suivantes, même si le salarié démissionne 
 
 3. Lorsque le travail convenu au contrat peut nuire à la santé du salarié, qu’il a été demandé à l’employeur de l’améliorer et qu’il n’y a pas d’effet
 
-4. Lorsque l’employeur, son représentant ou un autre salarié est atteint d’une maladie contagieuse légale (法定傳染病), qu’il existe un risque de contagion pour les salariés qui travaillent ensemble et que cela constitue un danger grave pour la santé du salarié
+4. Lorsque l’employeur, son représentant ou un autre salarié est atteint d’une maladie infectieuse à déclaration obligatoire (法定傳染病), qu’il existe un risque de contagion pour les salariés qui travaillent ensemble et que cela constitue un danger grave pour la santé du salarié
 
 5. Lorsque l’employeur ne verse pas la rémunération (工作報酬) selon le contrat de travail, ou ne fournit pas un travail suffisant au salarié dont la rétribution est calculée à la pièce (按件計酬)
 
@@ -91,7 +91,7 @@ C’est pourquoi, dans les conflits du travail (勞資糾紛) à Taïwan,
 
 le « **temps** » est très important.
 
-Dans la plupart des cas, Celui qui s’est préparé à l’avance est mieux placé pour faire valoir ses droits ; aucun résultat déterminé n’en découle.
+Dans la plupart des cas, celui qui s’est préparé à l’avance est mieux placé pour faire valoir ses droits ; aucun résultat déterminé n’en découle.
 
 ---
 

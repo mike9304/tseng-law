@@ -84,4 +84,4 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 > ထပ်မံ ဖတ်ရန် —
 > - [ကျွန်ုပ်တို့ ဆောင်ရွက်သော ကိစ္စများ](/my/services)
 > - [Hovering ၏ နိုင်ငံတကာအဖွဲ့](/my/lawyers)
-> - [ရုံးသို့ မည်သို့ ရောက်ရှိနိုင်သနည်း](/my/contact)
+> - [ရုံးထံ မည်သို့ စာပေးပို့နိုင်သနည်း](/my/contact)

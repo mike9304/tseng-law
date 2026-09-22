@@ -4281,7 +4281,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Magistrica znanosti (M.S.), Institute of Finance, National Taiwan University',
-        'Univerzitetna diploma (B.A.) v dvojnem programu prava in financ, National Chengchi University',
+        'Univerzitetna diploma (B.A.) dvopredmetnega študija prava in financ, National Chengchi University',
         'Izmenjava na Kobe University in Waseda University',
       ],
       experience: [
@@ -4309,7 +4309,7 @@ export const guidanceTeamBios: Record<
         'Podpora v sodnih postopkih, pri ustanavljanju družb, pri dovoljenjih tujih naložb, pri prošnjah za dovoljenja in pri sporazumevanju med Korejo in Tajvanom.',
       ],
       education: [
-        'Diplomirani pravnik (LL.B.), Tunghai University',
+        'Diplomirana pravnica (LL.B.), Tunghai University',
       ],
       experience: [
         'Višja pravna asistentka, Boyin Law Firm',

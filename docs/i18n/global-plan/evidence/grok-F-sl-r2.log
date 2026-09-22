@@ -1,0 +1,75 @@
+WO-F-sl r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-sl-r2
+date: 2026-09-22
+
+## Rows applied
+96 P1/P2 rows (sl-a 37 + sl-b 59). Applied 91. Skipped 5 (below).
+
+sl-a applied: 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36.
+sl-b applied: 1–30, 32–59 (31 skipped).
+
+Checker-constrained wording (still applied, not the reviewer's digits/merge verbatim):
+- a7 kept "2/3" (a word "dve tretjini" would drop a parsed 3). LLC members are družbeniki; 股份有限公司 stays delničarji.
+- a18 / a31 kept the digit 4 ("vse 4 vrste", "Vsaka od teh 4 vrst"). "štiri/štirih" is not in the checker lexicon.
+- a19 "presegati 1 leta" → "presegati 1 leto" (accusative of 1). "enega" is not parsed. "do 1 leta" left: "do" already takes the genitive, and "enega" is not parsed. "za 1 leto" → "za eno leto" ("eno" parses as 1).
+- a26, a27, b2, b45 rephrased inside the existing blocks. Did not merge stacked lines or the three 015 zoning paragraphs, and did not promote Q16+ to new headings.
+- b15 six-subject "Razlikujeta se" → "Razlikujejo se". The clause "struktura odgovornosti in davkov" is one noun, so "razlikuje se", not a plural verb.
+- b25 "1. odstavka" → "prvega odstavka" ("prvega" parses as 1). Removed the doubled "je" the first splice created.
+- b27 / b49 / 016 list "in" kept as "ter" where a third English stopword "in" would fail the Latin-sentence check. Meaning unchanged.
+- a25 file already had feminine "davčna vez"; the suggested "davčno vez" was not copied.
+
+Guidance pack (not column rows): a4 discoveryNotice "potrditve" → "odobritve" (token llms.txt kept); a17 Chang Fangyu only, "Diplomirana pravnica"; a28 "spremljamo tuje stranke"; a29 "dvopredmetnega študija"; a30 "Brez obljube o izidu". Chang Rongxuan stays "Diplomirani pravnik" (he is male). "TWD 1.57M" untouched. consultationNotice / confidentialNotice unchanged, so they stay substrings of the FAQ and privacy paragraph.
+
+## Rows skipped
+- sl-a 1. Frontmatter Hangul `url` in 008 and 009. ACCEPTED-ROUND / R16. The reviewer also said not to edit `url`.
+- sl-a 9. Trailing ", člen 10" on the withholding-standards link. Removing it dropped a parsed 10 (Korean link title 제10조) and the checker FAILed `missing from translation (1): 10`. The label still opens with "3. člen"; the URL is unchanged. Noted rather than applied.
+- sl-a 21 and sl-b 31. U+200B blanks, and turning Q16+ into `##` headings. Korean source and Slovene have the same ZWSP counts (003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3). Deleting them fails `blocks` ZWSP. New headings would fail `headings`.
+- sl-a 37. "TWD 1.57M" is pinned byte-identical. R14 requires dot thousands for sl ("500.000"). Part b's own verdict treats the dot as accepted Slovene orthography. No currency-order sweep.
+
+## Systemic patterns
+- 有限公司 members: delničar → družbenik in 002 (consent sentences, including the frontmatter copy and člen 113) and 004 (liability paragraph, abuse sentence, guarantee sentence). Joint-stock 股份有限公司 stays delničar.
+- Dual with "ali" / "2 ali več": fixed the flagged sites plus the same pattern in 004 (združitev/delitev, kraj vodenja, pogodbena skupna dejavnost), 007 (ločitev ali preživnina; življenje ali smrt), 011 (označevanje ali oglaševanje), 016 (zavarovanje, prikrivanje, odpoved), 017 (družba ali podružnica), 018 (dva ali več delničarjev). About 16 sites. True dual with "in" (two people who both act) left alone.
+- "se" + accusative: 010 both expense lines (Izdatki … se dokazujejo), 011 organizacijske oblike, 012 hupe in luči.
+- "as is / unchanged" calque: 007 (2, frontmatter and body), 010, 014, 016 (the Taiwan determination, and "nespremenjen prenese"). 5 sites.
+- Trust 信託, not sklad: 6 phrases in 016 (trust, ureditev trusta, pravice upravičenca, listine, upravitelj trusta, načrtovanje). "v skladu z" and skladiščenje untouched.
+- potek = experience: 2 in 001 (applicant experience; attorney's experience and languages). Other potek = course of a procedure, left.
+- Spare digit in a time phrase: 2× "1 leto" (002), 2× "eno leto" (008). "do 1 leta" not changed (see a19).
+- Q&A chrome, OUR TEAM/OFFICES, Paralegal/Ministry English roles, ROC-year glosses, Korea-as-labelled-example (R2), and consultation lock were already in place. No Czech leak. No fullwidth punctuation outside the skipped Hangul url. No new `[변호사 검수 필요]`.
+- Amounts: 0 instances reformatted (R14 + pinned bio figure).
+
+Diff: 21 files, 122 lines changed (18 columns + slovenian guidance content, team bios, llms-txt sl).
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-sl --lang sl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-sl src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      25
+```
+Number WARNs (수사 미해석, extra 1×2 in 006, extra 2×2 in 015) are pre-existing and do not fail the file. No Slovene test string needed an update.
+
+## Reviewer disagreed (not applied)
+- Part a wants currency after the figure, a decimal comma, and "1,57 milijona" for the bio. R14 requires dot thousands; "TWD 1.57M" is pinned; part b says the dot is accepted Slovene orthography.
+- Deleting U+200B and making Q16–Q20 into headings fights the checker, which pins ZWSP counts and heading levels to the Korean source.
+- "enega leta", "štirih", and "dve tretjini" are the natural words, but "enega" and "štiri" are not in the number lexicon, so those forms fail the digit bag. Kept a grammatical form the checker parses.
+- Suggested "davčno vez" disagrees with feminine "vez"; the file's "davčna vez" is the right agreement.
+- Merging 006's two rules, 008's closing lines, 013's approval-period lines, or 015's three zoning paragraphs would change the block count. Each block was rephrased on its own.
+- sl-a 9 is legally right that "člen 10" does not belong on the article-3 withholding-standards label, but the Korean link title still contributes a 10 the checker requires.

@@ -11,7 +11,7 @@ faq:
     a: "Zgolj zato, ker je stranka na Tajvanu, ni mogoče enotno sklepati. Treba je videti zahteve tajvanske stranke in dejansko dejavnost, objekte, osebje in strukturo poslov na Tajvanu, nato pa izbrati najustreznejši subjekt."
   - q: "Ali odgovornost matične družbe popolnoma izgine, ko se ustanovi tajvanska družba?"
     a: "Če se ustanovi hčerinska družba (子公司), ne pa podružnica (分公司), matična družba praviloma ne nosi obveznosti iz pogodb, sklenjenih v imenu hčerinske družbe. Preveriti pa je treba izjeme zlorabe pravne osebnosti in to, ali je matična družba posebej dala poroštvo ali prevzela lastne pogodbene obveznosti."
-  - q: "Ali je mogoče najprej delovati prek zastopnika in pozneje preiti na tajvansko družbo?"
+  - q: "Ali je mogoče najprej delovati prek distributerja in pozneje preiti na tajvansko družbo?"
     a: "Stopnjevit prehod je mogoče načrtovati, vendar je treba skupaj presoditi prenehanje ali spremembo obstoječih pogodb, pogodbe s strankami, zaloge, obravnavo jamstev in osebje."
 ---
 
@@ -65,11 +65,11 @@ Družbo z omejeno odgovornostjo (有限公司) je mogoče ustanoviti z 1 ali ve�
 
 ### Delniška družba: primerna, kadar naj se sprejmejo drugi vlagatelji ali se predvideva kotacija
 
-Delniška družba (股份有限公司) deli kapital na delnice. Praviloma sta potrebna 2 ali več delničarjev, vendar lahko država ali pravna oseba družbo ustanovi sama, tuja pravna oseba pa lahko ima 100 % delnic. Delnice so praviloma prosto prenosljive, z zakonskimi izjemami; po predpisih je mogoče oblikovati vrste delnic, delniške opcije zaposlenih in podobno. Zato oblika ustreza podjetjem, ki pričakujejo vlagatelje, posle z deleži, nagrade v delnicah za zaposlene ali prihodnjo združitev, prevzem ali kotacijo; se ne omejuje le na velika podjetja. Pri upravljanju lahko družba, ki ni javno ponudila delnic, s statutom ne ustanovi upravnega odbora in ima le 1 ali 2 direktorja. Družba z edinim državnim ali pravnoosebnim delničarjem lahko s statutom ne imenuje nadzornika družbe. Prav tako ni treba, da vsaka delniška družba pridobi letno revizijo računovodskih izkazov. Glavni pragovi revizije navadne družbe so vplačani kapital TWD 30.000.000 ali, tudi pod to mejo, poslovni prihodek TWD 100.000.000 ali 100 delavcev, vpisanih v delovno zavarovanje (勞工保險); družbe, ki so javno ponudile delnice (公開發行公司), se ravnajo po predpisih o vrednostnih papirjih.
+Delniška družba (股份有限公司) deli kapital na delnice. Praviloma so potrebni dva ali več delničarjev, vendar lahko država ali pravna oseba družbo ustanovi sama, tuja pravna oseba pa lahko ima 100 % delnic. Delnice so praviloma prosto prenosljive, z zakonskimi izjemami; po predpisih je mogoče oblikovati vrste delnic, delniške opcije zaposlenih in podobno. Zato oblika ustreza podjetjem, ki pričakujejo vlagatelje, posle z deleži, nagrade v delnicah za zaposlene ali prihodnjo združitev, prevzem ali kotacijo; se ne omejuje le na velika podjetja. Pri upravljanju lahko družba, ki ni javno ponudila delnic, s statutom ne ustanovi upravnega odbora in ima le 1 ali 2 direktorja. Družba z edinim državnim ali pravnoosebnim delničarjem lahko s statutom ne imenuje nadzornika družbe. Prav tako ni treba, da vsaka delniška družba pridobi letno revizijo računovodskih izkazov. Glavni pragovi revizije navadne družbe so vplačani kapital TWD 30.000.000 ali, tudi pod to mejo, poslovni prihodek TWD 100.000.000 ali 100 delavcev, vpisanih v delovno zavarovanje (勞工保險); družbe, ki so javno ponudile delnice (公開發行公司), se ravnajo po predpisih o vrednostnih papirjih.
 
 ## 4. Postopka podružnice in hčerinske družbe se razlikujeta; le hčerinska družba gre skozi pregled Oddelka za pregled naložb Ministrstva za gospodarstvo
 
-Kadar tuja družba ustanavlja tajvansko hčerinsko družbo, se ime praviloma predhodno preveri, nato pa se pri Oddelku za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司) zaprosi za naložbeno dovoljenje. Po odobritvi se nakažejo sredstva, določi se višina naložbe in računovodja (會計師) overi kapital, nato se dokončata ustanovitev in davčna registracija.
+Kadar tuja družba ustanavlja tajvansko hčerinsko družbo, se ime praviloma predhodno preveri, nato pa se pri Oddelku za pregled naložb Ministrstva za gospodarstvo (經濟部投資審議司) zaprosi za naložbeno dovoljenje. Po odobritvi se nakažejo sredstva, določi se višina naložbe in pooblaščeni računovodja (會計師) overi kapital, nato se dokončata ustanovitev in davčna registracija.
 
 Nasprotno pri ustanavljanju tajvanske podružnice navadne tuje družbe naložbeno dovoljenje Oddelka za pregled naložb praviloma ni potrebno; Uprava za razvoj trgovine Ministrstva za gospodarstvo (經濟部商業發展署) opravi vpis podružnice in s tem povezano določitev kapitala. Še vedno so potrebni predhodni pregled imena, nakazilo operativnih sredstev, overitev kapitala in davčna registracija; koledar je običajno krajši.
 
@@ -95,7 +95,7 @@ Naslednje situacije so hipotetični zgledi v podporo razmisleku; ne obljubljajo 
 
 Pri prvem posvetu je mogoče urediti osnovne podatke sedeža in vlagateljev, splošen opis izdelka ali storitve, predvideni tok poslov, načrt osebja in objektov na Tajvanu ter pogodbene ter podporne pogoje, ki jih zahtevajo stranke. Kar še ni odločeno, je mogoče označiti kot »še ni določeno«.
 
-Pri prvem stiku ni treba priložiti vse zaupne dokumentacije stranke ali podrobnih podatkov o postopku. Po predložitvi imena nasprotne družbe, potrebnega za preverjanje navzkrižja interesov, se potrebna dokumentacija in način predaje določita po napotku odgovorne osebe.
+Pri prvem stiku ni treba priložiti vse zaupne dokumentacije stranke ali podrobnih podatkov o postopku. Po predložitvi imena nasprotne družbe, potrebnega za preverjanje navzkrižja interesov, se potrebna dokumentacija in način predaje določita po napotku pristojne odvetnice.
 
 ## Pogosto zastavljena vprašanja
 
@@ -107,7 +107,7 @@ Zgolj zato, ker je stranka na Tajvanu, ni mogoče enotno sklepati. Treba je vide
 
 Če se ustanovi hčerinska družba, ne pa podružnica, matična družba praviloma ne nosi obveznosti iz pogodb, sklenjenih v imenu hčerinske družbe. Preveriti pa je treba izjeme zlorabe pravne osebnosti in to, ali je matična družba posebej dala poroštvo ali prevzela lastne pogodbene obveznosti.
 
-### Ali je mogoče najprej delovati prek zastopnika in pozneje preiti na tajvansko družbo?
+### Ali je mogoče najprej delovati prek distributerja in pozneje preiti na tajvansko družbo?
 
 Stopnjevit prehod je mogoče načrtovati, vendar je treba skupaj presoditi prenehanje ali spremembo obstoječih pogodb, pogodbe s strankami, zaloge, obravnavo jamstev in osebje.
 

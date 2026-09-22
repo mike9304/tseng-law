@@ -13,11 +13,11 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 ![Glavna slika](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Na podlagi zadeve, v kateri se je korejski študent poškodoval, ko je v fitnesu (健身房) na Tajvanu sprejemal navodila trenerja (教練), ta članek pojasnjuje pravne postopke, ki jih je mogoče po poškodbi v fitnesu presoditi, roke uveljavljanja, načine ohranitve dokazov (保全證據) in postavke odškodnine (損害賠償).
+Na podlagi zadeve, v kateri se je korejski študent poškodoval, ko je v fitnesu (健身房) na Tajvanu sprejemal navodila trenerja (教練), ta članek pojasnjuje pravne postopke, ki po poškodbi v fitnesu pridejo v poštev, roke uveljavljanja, načine ohranitve dokazov (保全證據) in postavke odškodnine (損害賠償).
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Nesreča se je zgodila v fitnesu v Taichungu (臺中) med vadbo mrtvega dviga (硬舉), ki jo je vodil trener. Po poškodbi ne zadošča ostati le pri dejstvu, da se je nesreča zgodila znotraj fitnesa; treba je skupaj presoditi vadbene izkušnje in zdravstveno stanje uporabnika, vrsto vadbe in obremenitev, pojasnila in navodila trenerja, gibanje in odziv v tistem trenutku, vzročno zvezo (因果關係) med poškodbo in vadbo in listine, ki podpirajo škodo.
+Nesreča se je zgodila v fitnesu v Taichungu (臺中) med vadbo mrtvega dviga (硬舉), ki jo je vodil trener. Po poškodbi ne zadošča ostati le pri dejstvu, da se je nesreča zgodila znotraj fitnesa; treba je skupaj presoditi vadbene izkušnje in zdravstveno stanje uporabnika, vrsto vadbe in obremenitev, pojasnila in navodila trenerja, gibanje in odziv v tistem trenutku, vzročno zvezo (因果關係) med poškodbo in vadbo in listine, ki utemeljujejo zatrjevano škodo.
 
 Odvetnica Wei Tseng je tožnika, korejskega študenta, zastopala kot procesna zastopnica (訴訟代理人). Okrožno sodišče v Taichungu je 24. 1. 2022 v sodbi prve stopnje v potrošniški zadevi št. 7 leta 109 po koledarju Republike Kitajske (民國109年度消字第7號) naložilo toženi stranki plačilo [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) in obresti, navedenih v sodbi.
 
@@ -61,7 +61,7 @@ Naslovi tiskovnih poročil, spletnih objav in pravnih komentarjev k tej zadevi, 
 
 **Ali je pri korejskem študentu prišlo do rupture medvretenčne ploščice, ko je pri osebni vadbi izvajal mrtvi dvig 90 kg?**
 
-Praktični pomen te zadeve je, da pokaže, da se odgovornost ne določi takoj že s samim dejstvom, da se je poškodba zgodila v fitnesu. Vsebina varnostne dolžnosti (安全義務), ki bremeni ponudnika storitve, konkretno dejanje navodila in kršitev dolžnosti skrbnosti (注意義務), vzročna zveza med poškodbo in ravnanjem in obseg škode se presojajo po listinah vsake zadeve. Pogoji in roki kazenskega postopka in civilnega postopka se prav tako razlikujejo, zato je treba zapise takoj po nesreči urediti ločeno.
+Praktični pomen te zadeve je, da pokaže, da se odgovornost ne določi takoj že s samim dejstvom, da se je poškodba zgodila v fitnesu. Vsebina varnostne dolžnosti (安全義務), ki bremeni ponudnika storitve, konkretno dano navodilo in kršitev dolžnosti skrbnosti (注意義務), vzročna zveza med poškodbo in ravnanjem in obseg škode se presojajo po listinah vsake zadeve. Pogoji in roki kazenskega postopka in civilnega postopka se prav tako razlikujejo, zato je treba zapise takoj po nesreči urediti ločeno.
 
 Spodnje je splošna informacija za pojasnilo sporov o poškodbi v fitnesu na Tajvanu; ni pravno mnenje k konkretni zadevi. Dejanske pravice in način postopanja se lahko razlikujejo glede na pogodbeno razmerje, okoliščine nesreče, vzrok in stopnjo poškodbe, ravnanje strank, pogoje police, zagotovljene dokaze ter pravo, ki se uporablja.
 
@@ -79,7 +79,7 @@ Po [287. členu tajvanskega kazenskega zakonika (刑法)](https://law.moj.gov.tw
 
 Pravica zahtevati odškodnino iz protipravnega dejanja po [197. členu tajvanskega civilnega zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) praviloma ugasne, če ni uveljavljena v 2 letih od trenutka, ko je oškodovanec izvedel tako za škodo kakor za osebo, ki je dolžna plačati odškodnino, in ugasne tudi, ko od protipravnega dejanja preteče 10 let.
 
-Če pa pride v poštev drug razlog zahtevka, kot pogodbena odgovornost, ali če se uporabijo druga pravila o začetku teka, poteku, pretrganju ipd., se to lahko razlikuje glede na dejanske okoliščine. Roka ni mogoče določati le po datumu nesreče ali diagnoze; varneje je pravočasno in posamično preveriti mogoče temelje zahtevka in referenčne datume.
+Če pa pride v poštev drug razlog zahtevka, kot pogodbena odgovornost, ali če se uporabijo druga pravila o začetku teka, poteku, pretrganju ipd., se to lahko razlikuje glede na dejanske okoliščine. Roka ni mogoče določati le po datumu nesreče ali diagnoze; varneje je pravočasno in posamično preveriti vsak mogoč temelj zahtevka in dan, od katerega mu začne teči rok.
 
 ## 3. Takoj po nesreči, katere dokaze je treba ohraniti in kako?
 
@@ -87,17 +87,17 @@ Da bi bilo mogoče pojasniti odgovornost, vzročno zvezo in škodo, je smiselno 
 
 Posnetki so lahko po preteku dobe hrambe prepisani (影像可能被覆蓋) ali iz drugih razlogov postanejo neuporabni. Zato lahko pride v poštev prošnja fitnesu za ohranitev prek pisma s potrdilom vsebine (存證信函) ali pisma odvetnice (律師函), ki konkretno zapiše potreben časovni odsek, kraj in položaj kamere. Ta pisna listina je praktični ukrep za zapis, kaj in kdaj je bilo zaprošeno. Sama po sebi pa nasprotni stranki ne nalaga nove pravne dolžnosti ohraniti posnetke niti ne preprečuje njihovega izbrisa, niti sama okoliščina, da posnetki niso ostali, ne pomeni, da sodišče iz tega izpelje samodejno neugoden sklep.
 
-Če okoliščine nesreče lahko izpolnijo znake kaznivega dejanja, je mogoče hitro vložiti ovadbo, da preiskovalni organ (偵查機關) presodi, ali obstaja zakonita podlaga zasega ali ohranitve. Ovadba ne pomeni, da policija ali tožilstvo nujno zavarujeta CCTV, zato je treba zbrati tudi listine, ki jih stranka lahko ohrani sama, kot zdravstveno dokumentacijo in komunikacijske zapise.
+Če okoliščine nesreče lahko izpolnijo znake kaznivega dejanja, je mogoče hitro vložiti ovadbo, da preiskovalni organ (偵查機關) presodi, ali obstaja zakonita podlaga za pridobitev ali ohranitev posnetkov. Ovadba ne pomeni, da policija ali tožilstvo nujno zavarujeta CCTV, zato je treba zbrati tudi listine, ki jih stranka lahko ohrani sama, kot zdravstveno dokumentacijo in komunikacijske zapise.
 
 ## 4. Katere postavke škode je mogoče zahtevati od fitnesa?
 
 Postavke škode, ki lahko pridejo v poštev, so naslednje. Dejansko priznanje in višina sta odvisna od nujnosti vsakega izdatka, vzročne zveze z nesrečo, dokazil, razmerja odgovornosti in presoje sodišča.
 
-1. **Zdravstveni stroški**: Izdatke, dejansko porabljene za posvet, pregled, zdravljenje, zdravila in rehabilitacijo, se dokazuje s potrdili in zdravstveno dokumentacijo.
+1. **Zdravstveni stroški**: Izdatki, dejansko porabljeni za posvet, pregled, zdravljenje, zdravila in rehabilitacijo, se dokazujejo s potrdili in zdravstveno dokumentacijo.
 2. **Stroški nege ali oskrbe**: Ali je bila glede na stopnjo poškodbe in potek zdravljenja nega nujna ter ali sta trajanje ter strošek primerna, se presoja z zdravstveno dokumentacijo in z dokazili o izdatkih.
-3. **Potni stroški**: Izdatke, nujne za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazuje z evidenco premikov, potrdili in podobnimi dokazili.
+3. **Potni stroški**: Izdatki, nujni za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazujejo z evidenco premikov, potrdili in podobnimi dokazili.
 4. **Škoda iz zmanjšanja delovne zmožnosti (勞動能力減損)**: Če so priznane posledice in trajno znižanje delovne zmožnosti, je mogoče ocenjevati skupaj po medicinski in poklicni dokumentaciji, stopnji okvare, poklicu in dohodku in preostalem času delovne zmožnosti. Sam odstotek okvare odškodnine ne določa, niti se izguba ne izračuna samodejno do trenutka upokojitve.
-5. **Izgubljeni dohodek v času okrevanja (收入損失)**: Čas, v katerem dejansko ni bilo mogoče delati zaradi zdravljenja ali okrevanja, in iz tega izhajajoče znižanje dohodka je treba dokazati s plačilnimi, davčnimi in evidenčnimi podlagami.
+5. **Izgubljeni dohodek v času okrevanja (收入損失)**: Čas, v katerem dejansko ni bilo mogoče delati zaradi zdravljenja ali okrevanja, in iz tega izhajajoče znižanje dohodka je treba dokazati s plačilnimi listami, davčnimi evidencami in kadrovskimi evidencami.
 6. **Nepremoženjska škoda (非財產上損害)**: Znesek za duševne bolečine določi sodišče po elementih vsake zadeve, kot so stopnja poškodbe, čas zdravljenja, posledice in konkretne okoliščine stranke.
 7. **Kaznovalna odškodnina (懲罰性賠償金)**: Obstaja pravilo, po katerem je v postopku, za katerega velja zakon o varstvu potrošnikov, mogoče, če je škoda nastala z naklepom podjetja, zahtevati do 5-kratnika dejanske škode; pri hudi malomarnosti do 3-kratnika; in pri malomarnosti pa do višine dejanske škode. Ali se [51. člen tajvanskega zakona o varstvu potrošnikov](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na zadevo nanaša ter ali se kaznovalna odškodnina dejansko prisodi in v kakšni višini, je odvisno od presoje sodišča glede konkretnih predpostavk ter dokazov.
 
@@ -109,7 +109,7 @@ Zlasti zmanjšanje delovne zmožnosti, znižanje dohodka v času okrevanja in ne
 
 Če ste utrpeli poškodbo v fitnesu, je pomembno najprej pridobiti potrebno oskrbo, ohraniti listine, ki jih je še mogoče zagotoviti, preden izginejo, in pravočasno pridobiti posamičen pravni nasvet k rokom in postopkom, ki se na zadevo lahko nanašajo. Pogajanja, potrošniška pritožba (消費申訴) ali mediacija (調解), kazenska ovadba in civilni zahtevek za odškodnino so vsa sredstva, ki jih je mogoče glede na zadevo izbrati, in niso postopki, ki bi jih bilo vedno nujno opraviti v celoti.
 
-Padec v poslovnih prostorih, škoda na zdravju zaradi hrane in poškodba pri strokovni storitvi lahko prav tako odprejo vprašanje varnostne dolžnosti, vzročne zveze, škode in dokaza. Zaključka iz zadeve fitnesa pa ni mogoče brez spremembe uporabiti za drugo nesrečo, zato je treba pogodbo, ravnanje in ustrezne predpise vsakega primera presoditi ločeno.
+Padec v poslovnih prostorih, škoda na zdravju zaradi hrane in poškodba pri strokovni storitvi lahko prav tako odprejo vprašanje varnostne dolžnosti, vzročne zveze, škode in dokaza. Zaključka iz zadeve fitnesa pa ni mogoče kar prenesti na drugo nesrečo, zato je treba pogodbo, ravnanje in ustrezne predpise vsakega primera presoditi ločeno.
 
 ---
 

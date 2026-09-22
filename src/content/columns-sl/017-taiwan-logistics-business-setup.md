@@ -50,7 +50,7 @@ Za običajni avtomobilski tovorni prevoz se načeloma uporabi najmanjši kapital
 
 ### Zahteve glede kapitala in vozil in omejene izjeme
 
-Kadar običajna družba na novo opravlja avtomobilski tovorni prevoz, se načeloma uporabi najmanjši kapital 25.000.000 TWD in najmanj 20 novih vozil. Za tistega, ki se posveča le selitvam, se uporabi lastno merilo najmanjšega kapitala 10.000.000 TWD in najmanj 8 novih vozil, za tistega, ki opravlja na Kinmenu ali v Lienčjangu, to je na Matsu, najmanjši kapital 10.000.000 TWD ter najmanj 5 novih vozil. Podjetnik, ki uporablja merilo Kinmena ali Lienčjanga, podleže omejitvi obsega obratovanja po odobrenem območju.
+Kadar običajna družba na novo opravlja avtomobilski tovorni prevoz, se načeloma uporabi najmanjši kapital 25.000.000 TWD in najmanj 20 novih vozil. Za tistega, ki se posveča le selitvam, se uporabi lastno merilo najmanjšega kapitala 10.000.000 TWD in najmanj 8 novih vozil, za tistega, ki dejavnost opravlja na Kinmenu ali v Lienčjangu, to je na Matsu, najmanjši kapital 10.000.000 TWD ter najmanj 5 novih vozil. Podjetnik, ki uporablja merilo Kinmena ali Lienčjanga, podleže omejitvi obsega obratovanja po odobrenem območju.
 
 Prevoz z malim tovornjakom (小貨車), ki ga opravlja fizična oseba, je ozek režim, različen od običajnega ustanavljanja družb. Med zahtevami je, da ima vlagatelj vpis v register prebivalstva v pristojnem okraju, ima poklicno vozniško dovoljenje za malo vozilo in uporablja 1 mali tovornjak v lasti o starosti, ki ne presega 2 let. To ni običajna pot, po kateri tuja pravna oseba vstopa v avtomobilski tovorni prevoz.
 
@@ -68,7 +68,7 @@ Trenutno pristojni organ za splošno tujo naložbo je Oddelek za pregled naložb
 
 Vrstni red korakov in organ predložitve je treba znova preveriti po vsaki zadevi, vendar se priprava splošno izvede v naslednjem vrstnem redu.
 
-1. Določiti obseg dejavnosti po pogodbi, nasprotni dajatvi, prevozni odgovornosti in obratovanju vozil in izbrati primerno naložbeno pot, kot sta družba ali podružnica.
+1. Določiti obseg dejavnosti po pogodbi, nasprotni dajatvi, prevozni odgovornosti in obratovanju vozil in izbrati primerno naložbeno pot, na primer družba ali podružnica.
 2. Pridobiti odobritev tuje naložbe, ki pride v poštev, in odobritev panoge Ministrstva za promet po 35. členu zakona o cestah.
 3. Zaprositi za dovoljenje za pripravo ustanovitve avtomobilskega tovornega prevoza v skladu z napotki Cestnega urada Ministrstva za promet.
 4. Dokončati vpis družbe in trgovine in pripraviti odobreno poslovno enoto, parkirne objekte (停車設施), sistem vzdrževanja, vozila, zavarovanje in organizacijo.
@@ -76,7 +76,7 @@ Vrstni red korakov in organ predložitve je treba znova preveriti po vsaki zadev
 
 Poslovna enota in parkirni objekti morajo izpolnjevati merilo, ki se uporablja za dano dejavnost, in je treba predložiti dokumentacijo, ki izkazuje lastnino ali pravico uporabe. Ni mogoče enotno trditi, da mora vsak podjetnik nujno najeti lastno rezervirano parkirišče. Statut, seznam delničarjev, podlage odobritve parkirnih objektov, dokaz lastnine ali uporabe poslovne enote in parkirišča, pogodbo o vzdrževanju, dokaz nakupa vozil in seznam vozil je treba primerjati z veljavnim kontrolnim seznamom Cestnega urada v trenutku vloge.
 
-Po pridobitvi dovoljenja za pripravo ustanovitve se priprava načeloma mora dokončati v 6 mesecih. Podaljšanje, če obstajajo posebne okoliščine, je mogoče največ za nadaljnjih 6 mesecev. Po izdaji potrdila o vpisu dejavnosti se obratovanje načeloma mora začeti v 1 mesecu, pristojnemu cestnemu organu pa se prijavi s prilogo kopije veljavne članske izkaznice, ki jo je izdalo ustrezno panožno združenje. Ker se čas, potreben za dopolnitev spisa, pripravo zemljišča in naprav, vozil ter zavarovanja, razlikuje po zadevi, trenutka dokončanja celotnega postopka ni mogoče vnaprej določiti. Tudi če je razglašen ciljni čas upravnega pregleda po pravilih tuje naložbe, to ne pomeni časa celotne nove ustanovitve avtomobilskega tovornega prevoza.
+Po pridobitvi dovoljenja za pripravo ustanovitve priprava se mora načeloma dokončati v 6 mesecih. Podaljšanje, če obstajajo posebne okoliščine, je mogoče največ za nadaljnjih 6 mesecev. Po izdaji potrdila o vpisu dejavnosti obratovanje se mora načeloma začeti v 1 mesecu, pristojnemu cestnemu organu pa se prijavi s prilogo kopije veljavne članske izkaznice, ki jo je izdalo ustrezno panožno združenje. Ker se čas, potreben za dopolnitev spisa, pripravo zemljišča in naprav, vozil ter zavarovanja, razlikuje po zadevi, trenutka dokončanja celotnega postopka ni mogoče vnaprej določiti. Tudi če je razglašen ciljni čas upravnega pregleda po pravilih tuje naložbe, to ne pomeni časa celotne nove ustanovitve avtomobilskega tovornega prevoza.
 
 ## 3. Pridobitev obstoječega podjetnika
 
@@ -118,7 +118,7 @@ Preveriti je treba veljavnost potrdila o vpisu dejavnosti podjetnika, ki mu je d
 
 Tudi če tujec postane delničar ali vlagatelj ciljne družbe, mu ta okoliščina sama po sebi ne podeli pravice do dela niti statusa prebivanja na Tajvanu. Če na Tajvanu izvršuje vsakodnevno delo, kot so vodenje družbe, prodaja, dodeljevanje vozil in skrb za stranko, mora pred začetkom dela preveriti, ali potrebuje delovno dovoljenje, ki ustreza dejanski funkciji, in posebej opraviti poznejši postopek prebivanja.
 
-Za delo brez dovoljenja se lahko uporabijo upravna globa in nalog za zapustitev Tajvana (限令出國). Veljavni delovni napotki k prepovedi vstopa (禁止入國) Imigracijske uprave Ministrstva za notranje zadeve (內政部移民署) določajo splošno pri nedovoljenem delu dobo prepovedi vstopa 3 leta, vendar se lahko uporabijo zahteve za oprostitev ali skrajšanje dobe, ki jih določajo isti napotki. Izid se ne določa mehansko le zato, ker obstaja prijava tretje osebe, pristojni organ pa presoja dejanske okoliščine, pravila, ki se uporabljajo in okoliščine vsake zadeve.
+Za delo brez dovoljenja se lahko uporabijo upravna globa in nalog za zapustitev Tajvana (限令出國). Veljavni upravni napotki o prepovedi vstopa (禁止入國) Imigracijske uprave Ministrstva za notranje zadeve (內政部移民署) določajo splošno pri nedovoljenem delu dobo prepovedi vstopa 3 leta, vendar se lahko uporabijo zahteve za oprostitev ali skrajšanje dobe, ki jih določajo isti napotki. Izid se ne določa mehansko le zato, ker obstaja prijava tretje osebe, pristojni organ pa presoja dejanske okoliščine, pravila, ki se uporabljajo, in okoliščine vsake zadeve.
 
 ## Uradni viri
 

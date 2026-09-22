@@ -85,13 +85,13 @@ Včasih, kadar leži krivda na obeh straneh delovnega razmerja,
 
 odvisno od tega, kdo prvi konča pogodbo z zadostnim razlogom,
 
-odpravnina morda ni izplačana ali pa jo je mogoče zahtevati.
+stranka, ki pogodbo prva konča z zadostnim razlogom, lahko odpravnine ne izplača ali pa jo zahteva.
 
 Zato je v delovnih sporih (勞資糾紛) na Tajvanu odločilen trenutek.
 
 »**čas**« je zelo pomemben.
 
-V sporih o odpravnini odloča, katera stran prva konča pogodbo z zakonskim razlogom in z dokazi.
+V večini primerov je bolje zavarovana stran, ki se pripravi vnaprej.
 
 ---
 

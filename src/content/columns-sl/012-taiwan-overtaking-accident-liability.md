@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Slika, ki pojasnjuje presojo odgovornosti pri nesreči ob prehitevanju na Tajvanu in varen postopek prehitevanja](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Ko vozilo spredaj vozi počasi, se lahko prehitevanje (超車) zdi nekaj običajnega, vendar gre za vozniško ravnanje s precejšnjim tveganjem. Pred začetkom prehitevanja je treba skupaj presoditi odsek ceste, prometne razmere v obeh smereh, gibanje vozil spredaj in to, ali je prostor za varno vrnitev na prvotni vozni pas.
+Ko vozilo spredaj vozi počasi, se lahko prehitevanje (超車) zdi nekaj običajnega, vendar gre za vozniško ravnanje s precejšnjim tveganjem. Pred začetkom prehitevanja je treba skupaj presoditi odsek ceste, prometne razmere v obeh smereh, gibanje vozil spredaj in to, ali je dovolj prostora za varno prehitevanje ter vrnitev na prvotni vozni pas.
 
 ## Pogoji prehitevanja, ki jih določa 101. člen pravilnika o varnosti cestnega prometa (道路交通安全規則)
 
@@ -21,9 +21,9 @@ Ko vozilo spredaj vozi počasi, se lahko prehitevanje (超車) zdi nekaj običaj
 
 Člen 101 prepoveduje prehitevanje na odsekih z znaki, ki označujejo ovinek, strm vzpon ali spust, ozek most, predor ali križišče, in na železniških prehodih in na odsekih gradbenih del.
 
-Poleg tega ni mogoče prehitevati na mestih ali odsekih z znakom šole ali bolnišnice, na mestih z drugimi znaki ali označbo prepovedi prehitevanja, ko se približuje nasprotno vozilo, niti kadar spredaj vozita 2 ali več vozil zapored.
+Poleg tega ni mogoče prehitevati na mestih ali odsekih z znakom šole ali bolnišnice, na mestih z drugimi znaki ali označbo prepovedi prehitevanja, ko se približuje nasprotno vozilo, niti kadar spredaj vozijo dve ali več vozil zapored.
 
-Da bi bilo mogoče na istem pasu prehiteti vozilo spredaj, mora voznik zadnjega vozila najprej na kratko dvakrat zapiskati ali enkrat utripniti z dolgimi lučmi. Hupe in luči se ne sme uporabljati večkrat za vsiljevanje, da bi vozilo spredaj sprostilo pot.
+Da bi bilo mogoče na istem pasu prehiteti vozilo spredaj, mora voznik zadnjega vozila najprej na kratko dvakrat zapiskati ali enkrat utripniti z dolgimi lučmi. Hupe in luči se ne smejo uporabljati večkrat za vsiljevanje, da bi vozilo spredaj sprostilo pot.
 
 Zadnje vozilo lahko prehiti šele potem, ko je vozilo spredaj upočasnilo in umaknilo ob stran, ali izrazilo voljo sprostiti pot z roko ali desnim smernikom.
 
@@ -43,7 +43,7 @@ B je utrpel hudo poškodbo glave in umrl na mestu; A je izgubil zavest in so ga 
 
 Družini A in B sta najprej šteli nenadno spremembo pasu vozila št. 2 za glavni vzrok trčenja. Zadeva je prešla v sodni postopek; v njegovem poteku je bilo izdelanih več izvedenskih mnenj (鑑定) k nesreči.
 
-Po izidu mnenja je glavno odgovornost za to trčenje nosil A. Ta zaključek je bil omejen na dejanske okoliščine te zadeve. Mnenje je skupaj upoštevalo to, da je A hotel prehiteti 2 vozili spredaj, ki sta vozili zapored, da je zapeljal na nasprotni pas, da je vozil s hitrostjo, ki skoraj ni puščala dovolj časa za zaviranje, da so manjkali predpisani signali hupe in luči, kakor tudi gibanje spremembe pasu vozila št. 2, ureditev ceste in pasov in ostale zagotovljene dokaze.
+Po izidu teh mnenj je glavno odgovornost za to trčenje nosil A. Ta zaključek je bil omejen na dejanske okoliščine te zadeve. Mnenje je skupaj upoštevalo to, da je A hotel prehiteti 2 vozili spredaj, ki sta vozili zapored, da je zapeljal na nasprotni pas, da je vozil s hitrostjo, ki skoraj ni puščala dovolj časa za zaviranje, da so manjkali predpisani signali hupe in luči, kakor tudi gibanje spremembe pasu vozila št. 2, ureditev ceste in pasov in ostale zagotovljene dokaze.
 
 Ta zaključek, omejen na to zadevo, ne pomeni, da ena izpustitev predpisanega signala vedno določi odgovornost. Krivda (過失) pri nesreči ob prehitevanju je odvisna od kraja nesreče, ureditve pasov, hitrosti, gibanj vozil, signalov, časovnih razmikov, preglednosti in ostalih dokazov.
 

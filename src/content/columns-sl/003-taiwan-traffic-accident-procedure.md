@@ -151,7 +151,7 @@ Okoliščina, da se tekoča plača ohranja brez spremembe, zahtevka samodejno ne
 
 Če je trajna funkcijska motnja bistveno sporna, je lahko medicinsko izvedensko mnenje koristno, vendar ni obvezno v vseh zadevah. Presoja se tudi lastna krivda oškodovanca iz 217. člena civilnega zakonika ter drugi razlogi prilagoditve.
 
-Ko se izračun opravi v enem kapitalskem znesku, je mogoče pretehtati odbitje vmesnih obresti (中間利息扣除). Hoffmanov kalkulator sedanje vrednosti, ki ga objavlja Judicial Yuan (司法院) je le računski pripomoček, ne pa pravno obvezna metoda, niti ne obljublja izida. Po 193. členu civilnega zakonika sme sodišče na predlog strani naložiti tudi plačilo v redni renti pod pogojem zavarovanja.
+Ko se izračun opravi v enem kapitalskem znesku, je mogoče pretehtati odbitje vmesnih obresti (中間利息扣除). Hoffmanov kalkulator sedanje vrednosti, ki ga objavlja Judicial Yuan (司法院), je le računski pripomoček, ne pa pravno obvezna metoda, niti ne obljublja izida. Po 193. členu civilnega zakonika sme sodišče na predlog strani naložiti tudi plačilo v redni renti pod pogojem zavarovanja.
 
 ## Q13. Kako se presoja denarna odškodnina za nepremoženjsko škodo (慰撫金)?
 

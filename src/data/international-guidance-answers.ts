@@ -612,7 +612,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Den här delen besvarar vanliga frågor på en allmän nivå: de sex verksamhetsområdena, hur du förbereder dig före kontakten, hur kostnaderna fastställs och vad ett skickat meddelande betyder. En skickad begäran väntar på att granskas av en advokat; den är inte ett juridiskt yttrande, inte en tid och skapar inte ett förhållande mellan advokat och klient. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Den här delen besvarar vanliga frågor på en allmän nivå: de sex verksamhetsområdena, hur du förbereder dig före kontakten, hur kostnaderna fastställs och vad ett skickat meddelande betyder. En skickad begäran väntar på att granskas av en advokat; den är inte juridisk rådgivning, inte en bekräftad tid och skapar inte ett förhållande mellan advokat och klient. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/contact', '/sv/services'],
     },
   },

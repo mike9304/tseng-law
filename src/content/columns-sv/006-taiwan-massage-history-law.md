@@ -29,7 +29,7 @@ Det liknade mycket dagens vietnamesiska hårtvätt.
 
 Och dessa salonger i taiwansk stil är ett säreget kulturminne för många människor i Taiwan.
 
-(Det avslöjar kanske min ålder.)
+(Sådana salonger hör till en äldre tid i Taiwan.)
 
 ​
 
@@ -81,7 +81,7 @@ Man frågade sig till exempel om den skrivna regeln som endast tillät personer 
 
 och man tvivlade på att denna regel verkligen hade bidragit till att skydda anställning och existens för personer med synnedsättning.
 
-Slutligen förklarade de stora domarna vid Justitieyuanen (大法官) den bestämmelse som endast tillät personer med synnedsättning att utöva massageyrket som grundlagsstridig (違憲).
+Slutligen förklarade justitieråden vid Justitieyuanen (大法官) den bestämmelse som endast tillät personer med synnedsättning att utöva massageyrket som grundlagsstridig (違憲).
 
 ​
 

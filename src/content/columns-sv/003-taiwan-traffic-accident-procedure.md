@@ -94,7 +94,7 @@ Vid oenighet med sakkunnigutlåtandet kan omprövning begäras, men omprövninge
 Kravet grundat på artikel 184 i civillagen förutsätter en olaglig kränkning av en rättighet, orsakssamband med olyckan och bevis för skadan. Enbart det faktum att en olycka har inträffat innebär inte att alla följande poster erkänns. Artikel 216 i civillagen är måttet för att fastställa omfånget av den faktiska skadan och den uteblivna vinsten (所失利益).
 
 - **Skador**: Enligt artikel 193 i civillagen kan prövas de nödvändiga sjukvårdskostnaderna (醫療費用), de ökade levnadskostnaderna såsom vårdkostnader (看護費用), resekostnader för behandling (就醫交通費) och hjälpmedel, samt inkomstförlust (收入損失) genom faktisk arbetsoförmåga och nedsättning av arbetsförmågan (勞動能力減損). Enligt artikel 195 i civillagen kan även ideell skada prövas.
-- **Dödsfall**: Enligt artikel 192 i civillagen kan, när det är befogat, prövas sjukvårdskostnader före dödsfallet och kostnader för ökade livsbehov, begravningskostnader (殯葬費) och förlust av underhåll (扶養利益損失) för den som hade laglig rätt till underhåll. Enligt artikel 194 i civillagen kan även ideell skada för vissa anhöriga prövas.
+- **Dödsfall**: Enligt artikel 192 i civillagen kan, när det är befogat, prövas sjukvårdskostnader före dödsfallet och ökade levnadskostnader, begravningskostnader (殯葬費) och förlust av underhåll (扶養利益損失) för den som hade laglig rätt till underhåll. Enligt artikel 194 i civillagen kan även ideell skada för vissa anhöriga prövas.
 - **Förmögenhet**: Enligt artikel 196 i civillagen kan den styrkta faktiska förmögenhetsskadan krävas, inbegripet kostnader för reparation av fordonet eller värdeförlust.
 
 ## Q8. Om behandlingen fortsätter, hur ska handlingar om sjukvårdskostnader ges in?
@@ -175,7 +175,7 @@ Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsans
 
 Vid en olycka med ett enda fordon är föraren av det fordonet i allmänhet inte berättigad till ersättning från det fordonets obligatoriska försäkring. Dock, vid en olycka där flera fordon deltar, finns fall där föraren kan kräva ersättning av den obligatoriska försäkringsgivaren för ett annat inblandat fordon.
 
-Ersättningsnivåerna (強制汽車責任保險給付標準) som ändrades den 29 maj 2026 tillämpas på olyckor som inträffat från och med den 1 juli 2026. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; ersättningen vid invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; ersättningen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader för 1 skadad och 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
+Ersättningsnivåerna (強制汽車責任保險給付標準) som ändrades den 29 maj 2026 tillämpas på olyckor som inträffat från och med den 1 juli 2026. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; ersättningen vid invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; ersättningen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader för 1 skadad person och 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
 
 Ansvarsförsäkringen mot tredje man (第三人責任險), förarens olycksfallsförsäkring (駕駛人傷害險) och kaskoförsäkringen för det egna fordonet (車體損失險) är fakultativa produkter av avtalskaraktär. Den faktiska täckningen varierar beroende på försäkrad, tak, självrisk (自負額), undantag, vårdslöshet och de övriga villkoren i försäkringsbrevet, så att försäkringsbrevet och villkoren ska prövas från fall till fall.
 
@@ -193,13 +193,13 @@ Ansvarsförsäkringen mot tredje man (第三人責任險), förarens olycksfalls
 - [Republiken Kinas strafflag, artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Lagen om obligatorisk motorfordonsansvarsförsäkring](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Ersättningsnivåerna för den obligatoriska motorfordonsansvarsförsäkringen](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
-- [Standardavtal för personbilsförsäkring från finansinspektionen (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
+- [Standardavtal för personbilsförsäkring från Taiwans finansövervakningskommission (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Efter olyckan, kan man lämna allt i försäkringsgivarens händer?
+Q16. Kan man efter olyckan lämna allt åt försäkringsgivaren?
 
 ​
 
-Enligt min erfarenhet behandlar försäkringsgivarna ofta inte tillräckligt den känslomässiga sidan hos parterna i olyckan.
+Försäkringsgivarna behandlar ofta inte parternas känslomässiga sida tillräckligt.
 
 ​
 
@@ -219,7 +219,7 @@ En intressekonflikt mellan försäkringsgivaren och parten kan också uppkomma, 
 
 ​
 
-Jag rekommenderar därför inte att anförtro hela tvisten åt försäkringsgivaren.
+Det är därför inte tillrådligt att anförtro hela tvisten åt försäkringsgivaren.
 
 ​
 
@@ -239,7 +239,7 @@ I publicerad praxis förekommer vid vållande till kroppsskada straff om omkring
 
 ​
 
-Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1:a stycket, i strafflagen omvandlingen till TWD 1.000, TWD 2.000 eller TWD 3.000 per en dag; beräknat till TWD 1.000 per en dag motsvarar ett straff om 3 månader 3 × 30 × TWD 1.000 = TWD 90.000.
+Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1:a stycket, i strafflagen omvandlingen till TWD 1.000, TWD 2.000 eller TWD 3.000 per 1 dag; beräknat till TWD 1.000 per 1 dag motsvarar ett straff om 3 månader 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 
@@ -331,7 +331,7 @@ Därmed är frågorna och svaren om trafikolyckor avslutade.
 
 ​
 
-Efter att ha utrett många trafikolyckor vill jag peka på en viktig punkt.
+Erfarenhet av många trafikolyckor pekar på en viktig punkt.
 
 ​
 

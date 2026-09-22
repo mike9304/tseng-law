@@ -37,13 +37,13 @@ I ett anonymiserat ärende som denna byrå har hanterat körde motorcyklisten A 
 
 ![Olycksskiss som visar omkörningsbanan för motorcykeln och de 2 fordonen framför på en bergsväg](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A försökte köra om båda fordonen, gick in i mötande körfält och accelererade. Fordon nr 2 förberedde sig också för att köra om fordon nr 1: mindre än 1 sekund efter att blinkers tänts gick det in i mötande körfält. Motorcykeln hade inte tillräcklig bromsmarginal och kolliderade med fordon nr 2.
+A försökte köra om båda fordonen, gick in i mötande körfält och accelererade. Fordon nr 2 förberedde sig också för att köra om fordon nr 1: mindre än 1 sekund efter att blinkers tänts gick det in i mötande körfält. Motorcykeln hade för lite tid att bromsa och kolliderade med fordon nr 2.
 
 B fick allvarliga huvudskador och avled på plats; A förlorade medvetandet och fördes till sjukhus.
 
 Anhöriga till A och B såg först det plötsliga körfältsbytet hos fordon nr 2 som den huvudsakliga orsaken till kollisionen. Ärendet ledde till rättegång och under förfarandet genomfördes flera sakkunnigbedömningar (鑑定) av olyckan.
 
-Enligt sakkunnigresultatet bar A det huvudsakliga ansvaret för denna kollision. Den slutsatsen var begränsad till faktum i detta ärende. Bedömningen tog samlat hänsyn till att A ville köra om 2 fordon framför som körde i följd, att A gick in i mötande körfält, att A körde i en fart som knappt lämnade bromsmarginal, att de föreskrivna tut- och helljussignalerna uteblev, samt körfältsbytet hos fordon nr 2, vägens och körfältens struktur och övrig insamlad bevisning.
+Enligt sakkunnigresultatet bar A det huvudsakliga ansvaret för denna kollision. Den slutsatsen var begränsad till faktum i detta ärende. Bedömningen tog samlat hänsyn till att A ville köra om 2 fordon framför som körde i följd, att A gick in i mötande körfält, att A körde i en fart som knappt lämnade tid att bromsa, att de föreskrivna tut- och helljussignalerna uteblev, samt körfältsbytet hos fordon nr 2, vägens och körfältens struktur och övrig insamlad bevisning.
 
 Att sådana sakkunnigresultat förekommer i vissa ärenden betyder inte att ett enda uteblivet föreskrivet tecken alltid fastställer ansvaret. Vållandet (過失) vid en omkörningsolycka beror på olycksplatsen, körfältens utformning, farten, fordonens rörelser, signalerna, tidsintervallen, sikten och övrig bevisning.
 
@@ -53,7 +53,7 @@ Innan omkörning måste man först kontrollera om platsen eller trafikläget fal
 
 Att följa artikel 101 är viktigt, men det säkerställer i sig varken att olyckan undviks eller det senare resultatet av sakkunnigbedömning eller rättegång. Förare måste hålla extra säkerhetsmarginal och anpassa sig till läget framför.
 
-Som komplettering kan [illustrationen av omkörningsregler och -förfarande](https://gonews.com.tw/car/daily/21934/) konsulteras. Eftersom det är en sekundär källa bör gällande officiella föreskrifter också läsas när de rättsliga villkoren kontrolleras.
+Som kompletterande läsning kan [illustrationen av omkörningsregler och -förfarande](https://gonews.com.tw/car/daily/21934/) konsulteras. Eftersom det är en sekundär källa bör gällande officiella föreskrifter också läsas när de rättsliga villkoren kontrolleras.
 
 ---
 

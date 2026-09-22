@@ -500,7 +500,7 @@ const ELEMENTS = {
     nl: /juridisch advies/,
     pl: /poradą prawną/,
     hi: /कानूनी राय/,
-    sv: /juridiskt yttrande/,
+    sv: /juridisk rådgivning/,
     da: /juridisk udtalelse/,
     nb: /juridisk uttalelse/,
     fi: /oikeudellinen lausunto/,

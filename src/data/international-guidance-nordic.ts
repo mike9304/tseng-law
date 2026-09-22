@@ -89,7 +89,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Vad vi gör',
           paragraphs: [
-            'Hovering International Law Firm är en advokatbyrå etablerad i Taiwan. Den arbetar enligt Taiwans rätt och har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Vi ger råd till företag, för talan i domstol och följer klienter från utlandet genom de steg som krävs i Taiwan.',
+            'Hovering International Law Firm är en advokatbyrå etablerad i Taiwan. Den arbetar enligt Taiwans rätt och har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Vi ger råd till företag, för talan i domstol och lotsar klienter från utlandet genom de steg som krävs i Taiwan.',
             'Hela innehållet här är allmänt. Utgången av ett ärende beror på fakta, tillämpliga regler och tidpunkten. Den här vägledningen ersätter inte ett samtal med en advokat om dina handlingar.',
           ],
         },
@@ -232,7 +232,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Först fastställs arbetsomfattningen',
           paragraphs: [
-            'Ärenden av samma slag kan kräva mycket olika arbetsinsats, beroende på antalet parter, vilka handlingar som finns, vilka frister som ska hållas och om ett förfarande redan har inletts. Därför är det första steget alltid att bestämma vad som hör till uppdraget och vad som inte gör det.',
+            'Ärenden av samma slag kan kräva en mycket olika stor arbetsinsats, beroende på antalet parter, vilka handlingar som finns, vilka frister som ska hållas och om ett förfarande redan har inletts. Därför är det första steget alltid att bestämma vad som hör till uppdraget och vad som inte gör det.',
             'Sammanfattningen du skickar i början är grunden för omfattningen. Ju tydligare den beskriver förloppet, vad du vill ha hjälp med och fristerna, desto mer exakt kan omfattningen bestämmas.',
           ],
         },
@@ -240,7 +240,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kostnaderna bekräftas innan arbetet börjar',
           paragraphs: [
             'När arbetets omfattning är klar går vi igenom belopp och beräkningssätt med dig och bekräftar dem innan arbetet börjar. Ändras omfattningen under arbetets gång måste det bekräftas på nytt.',
-            'Den här sidan är inte en offert och medför ingen betalningsskyldighet.',
+            'Den här sidan är inte en offert och medför ingen betalningsskyldighet. Att skicka en begäran via den här sidan är också kostnadsfritt.',
           ],
         },
         {
@@ -275,7 +275,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Sidans språk: Den här vägledningen är skriven på svenska.',
             'Rådgivningsspråk: Rådgivningen sker endast på engelska, kinesiska (中文), japanska och koreanska.',
-            'Ditt skriftspråk: Du får skriva sammanfattningen på ditt eget språk; originaltexten sparas oförändrad.',
+            'Språket du skriver på: Du får skriva sammanfattningen på ditt eget språk; originaltexten sparas oförändrad.',
           ],
         },
         {
@@ -365,7 +365,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Vad kontaktformuläret i den här svenska delen samlar in, hur originaltexten behandlas och hur du når oss om dina uppgifter.',
       intro:
-        'Den här delen gäller endast kontaktformuläret på de svenska vägledningssidorna. Den beskriver hur uppgifter behandlas och är inte ett löfte om den tekniska funktionen.',
+        'Den här delen gäller endast kontaktformuläret på de svenska vägledningssidorna. Den beskriver hur uppgifter behandlas och utgör inte ett tekniskt åtagande.',
       sections: [
         {
           heading: 'Vilka uppgifter som samlas in',
@@ -445,7 +445,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Rättsligt tillämpningsområde',
           paragraphs: [
-            'Byrån verkar enligt Taiwans rätt, och den här sidan talar endast om arbete inom den ramen.',
+            'Byrån är verksam enligt Taiwans rätt, och den här sidan handlar endast om arbete inom den ramen.',
             'Innehållet är inte rådgivning enligt rätten i någon annan rättsordning än Taiwans, inbegripet rätten där du är bosatt. Rör en del av ditt ärende en annan rättsordning reder vi tillsammans med dig ut vilken kvalificerad fackperson som behövs för den delen.',
           ],
         },

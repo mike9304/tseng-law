@@ -1136,10 +1136,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ЕКИПЪТ',
     title: 'Международен екип Hovering',
     description:
-      'Профили на адвокатките и адвокатите, на оперативното ръководство и на партньорското счетоводство на Hovering.',
+      'Профили на адвокатките и адвокатите, на оперативното ръководство и на партньора — експерт-счетоводител на Hovering.',
     representativeTitle: 'Ръководна адвокатка',
     teamTitle: 'Адвокатки, адвокати и сътрудници',
-    partnerTitle: 'Партньорско счетоводство (CPA)',
+    partnerTitle: 'Партньор — експерт-счетоводител',
     introLabel: 'Представяне',
     educationLabel: 'Образование',
     experienceLabel: 'Практика',
@@ -4125,7 +4125,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Завършил е бакалавърска и магистърска програма по счетоводство в National Chengchi University и понастоящем ръководи счетоводна кантора.',
+        'Завършил е бакалавърска и магистърска степен по счетоводство в National Chengchi University и понастоящем ръководи счетоводна кантора.',
         'Подпомага комплексен анализ на правни, данъчни и финансови рискове за корпоративни клиенти.',
       ],
       education: [

@@ -49,7 +49,7 @@ La scelta varia secondo l’interruzione della prescrizione (時效中斷), la c
 
 La responsabilità penale può essere ritenuta solo quando sono riconosciuti l’inadempimento del dovere di prudenza di ciascuno e il nesso di causalità tra tale inadempimento e le lesioni dell’altra parte. Il solo fatto che una colpa sia esistita da parte a parte non fa nascere automaticamente la responsabilità per lesioni colpose.
 
-Nel piano civile, secondo l’articolo 217 del Codice civile, se la persona lesa ha una colpa che ha contribuito a causare o aggravare il danno (與有過失), il tribunale può ridurre o esentare il risarcimento. Per esempio, se il danno riconosciuto in nuovo dollaro di Taiwan (新臺幣, TWD) è TWD 1.000.000 e la colpa della persona lesa è valutata al 50%, l’importo può essere ridotto a TWD 500.000 prima di altri adeguamenti.
+Nel piano civile, secondo l’articolo 217 del Codice civile, se la persona lesa ha una colpa che ha contribuito a causare o aggravare il danno (與有過失), il tribunale può ridurre o esentare il risarcimento. Per esempio, se il danno riconosciuto in nuovi dollari taiwanesi (新臺幣, TWD), è di TWD 1.000.000 e la colpa della persona lesa è valutata al 50%, l’importo può essere ridotto a TWD 500.000 prima di altri adeguamenti.
 
 La perizia (鑑定) o il quadro di analisi preliminare possono essere documenti importanti, ma non vincolano il tribunale in modo meccanico. Il tribunale esamina l’insieme delle prove, comprese le dichiarazioni, le immagini e lo stato dei veicoli.
 
@@ -105,11 +105,11 @@ Si deve distinguere l’aggiunta di documenti medici dalla modifica o dall’aum
 
 Tuttavia, secondo l’articolo 504 del Codice di procedura penale, una volta rimesso il procedimento alla sezione civile, modificare, aggiungere o allargare il reclamo oltre l’estensione anteriore al rinvio può porre la questione delle spese sulla parte eccedente. La fase di rinvio, il momento di presentazione e l’estensione del reclamo devono essere verificati in ciascun caso.
 
-## Q9. Perché si provano gli oneri di assistenza professionale e quelli di assistenza da prossimi?
+## Q9. Perché si provano gli oneri di assistenza professionale e quelli di assistenza da familiari?
 
 Il certificato medico o il parere medico sono utili per mostrare la necessità di assistenza, ma non sono da soli un fondamento decisivo. Si deve spiegare con documenti il nesso di causalità con l’incidente, la necessità di assistenza, se è stata effettivamente prestata, la durata e un importo ragionevole.
 
-Anche se un prossimo ha effettivamente prestato l’assistenza senza remunerazione, nel caso appropriato ciò può essere valutato come un danno. Tuttavia, la sola circostanza che l’assistenza sia prestata da un prossimo non implica il suo riconoscimento automatico; il contenuto e la durata dell’assistenza, nonché il livello abituale di costo, sono esaminati anch’essi.
+Anche se un familiare ha effettivamente prestato l’assistenza senza remunerazione, nel caso appropriato ciò può essere valutato come un danno. Tuttavia, la sola circostanza che l’assistenza sia prestata da un familiare non implica il suo riconoscimento automatico; il contenuto e la durata dell’assistenza, nonché il livello abituale di costo, sono esaminati anch’essi.
 
 ## Q10. Perché si provano gli oneri di spostamento per il trattamento?
 
@@ -131,7 +131,7 @@ Le ricevute, i registri di tariffa, i registri di itinerario e i documenti clini
 - [Codice civile, articolo 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Codice di procedura penale, articolo 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
 - [Orientamento dello Yuan giudiziario (司法院) sull’estensione del reclamo dopo il rinvio](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
-- [Sentenza del tribunale distrettuale di Chiayi (嘉義) sugli oneri di assistenza da prossimi](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
+- [Sentenza del tribunale distrettuale di Chiayi (嘉義) sugli oneri di assistenza da familiari](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Sentenza del tribunale distrettuale di Tainan (臺南) sugli oneri di trasporto per cura](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
@@ -175,7 +175,7 @@ L’obbligo di sottoscrivere secondo l’articolo 6 della legge sull’assicuraz
 
 In un incidente di un solo veicolo, il conducente di quel veicolo non è, in generale, destinatario delle prestazioni dell’assicurazione obbligatoria di quel veicolo. Tuttavia, in un incidente in cui intervengono più veicoli, esistono casi nei quali il conducente può reclamare prestazioni all’assicuratore obbligatorio di un altro veicolo implicato.
 
-La tabella di prestazioni (強制汽車責任保險給付標準) modificata il 29 maggio 2026 si applica agli incidenti occorsi a decorrere dal 1 luglio 2026. Il tetto degli oneri medici ragionevoli e necessari per ferite è TWD 200.000 in nuovo dollaro di Taiwan; la prestazione per invalidità (失能) va da TWD 80.000 a TWD 3.000.000 secondo 15 gradi legali; la prestazione per morte è TWD 3.000.000, e il massimo congiunto di morte, di invalidità e di oneri medici per 1 vittima e 1 incidente è TWD 3.200.000. Agli incidenti anteriori può applicarsi la tabella precedente.
+La tabella di prestazioni (強制汽車責任保險給付標準) modificata il 29 maggio 2026 si applica agli incidenti occorsi a decorrere dal 1 luglio 2026. Il tetto degli oneri medici ragionevoli e necessari per ferite è TWD 200.000 in nuovi dollari taiwanesi; la prestazione per invalidità (失能) va da TWD 80.000 a TWD 3.000.000 secondo 15 gradi legali; la prestazione per morte è TWD 3.000.000, e il massimo congiunto di morte, di invalidità e di oneri medici per 1 vittima e 1 incidente è TWD 3.200.000. Agli incidenti anteriori può applicarsi la tabella precedente.
 
 L’assicurazione di responsabilità civile verso terzi (第三人責任險), l’assicurazione di infortuni del conducente (駕駛人傷害險) e l’assicurazione di danni sul proprio veicolo (車體損失險) sono prodotti facoltativi di carattere contrattuale. La copertura reale varia secondo l’assicurato, il tetto, la franchigia (自負額), le esclusioni, la colpa e le altre condizioni della polizza, sicché la polizza e le condizioni devono essere verificate caso per caso.
 
@@ -199,7 +199,7 @@ Q16. Dopo l’incidente, si può lasciare tutto nelle mani dell’assicuratore?
 
 ​
 
-Secondo la mia esperienza, gli assicuratori non trattano frequentemente in modo sufficiente l’aspetto emotivo delle parti nell’incidente.
+Gli assicuratori non trattano frequentemente in modo sufficiente l’aspetto emotivo delle parti nell’incidente.
 
 ​
 
@@ -323,7 +323,7 @@ Si deve diffidare dell’avvocato che gonfia il caso e sostiene che non si deve 
 
 ​
 
-Concludo così le domande e risposte sugli incidenti stradali. Spero che siano utili.
+Qui si chiudono le domande e risposte sugli incidenti stradali.
 
 ​
 
@@ -359,7 +359,7 @@ Questo punto non deve quindi assolutamente essere trascurato, e conviene consult
 
 ​
 
-Per altre domande utilizzi la pagina dei contatti.
+Per altre domande utilizzi la pagina dei contatti e indichi la lingua desiderata tra inglese, cinese (中文), giapponese e coreano; un termine di risposta non è promesso.
 
 ​
 

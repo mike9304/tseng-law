@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Immagine in evidenza](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Di recente, numerose persone hanno costituito con successo una società (公司) a Taiwan e hanno ottenuto un visto di lavoro nonché una carta di soggiorno (外僑居留證),
+Di recente, numerose persone hanno costituito una società (公司) a Taiwan e hanno ottenuto un visto di lavoro nonché una carta di soggiorno (外僑居留證).
 
-e le domande formulate di frequente al momento della costituzione sono riunite di seguito.
+Le domande formulate di frequente al momento della costituzione sono riunite di seguito.
 
 Chi ha letto [**i fondamenti della costituzione di società**](/it/columns/taiwan-company-establishment-basics) può in seguito fare riferimento anche a questa parte approfondita più dettagliata.
 
@@ -37,7 +37,7 @@ Quando più tardi il conto preparatorio della società (公司籌備處帳戶) �
 
 Un’impiegata o un impiegato di una banca taiwanese mi ha detto di persona che
 
-numerosi stranieri scompaiono di recente dopo l’apertura del conto, di modo che l’apertura dei conti è trattata in modo sempre più rigoroso.
+numerosi stranieri scompaiono di recente dopo l’apertura del conto, così che l’apertura dei conti è trattata in modo sempre più rigoroso.
 
 Già nella parte fondamentale, una lettrice o un lettore ha indicato che l’apertura del conto era la tappa più difficile; concordo.
 
@@ -61,9 +61,9 @@ resta tempo sufficiente per aprire in banca il conto preparatorio e trasferire i
 
 È possibile.
 
-La banca esige in generale una doppia verifica di identità,
+La banca esige in generale due documenti di identità.
 
-e senza carta di soggiorno, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan la «**scheda di dati di base del numero unificato di identificazione**» (統一證號基本資料表).
+Senza carta di soggiorno, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan la «**scheda di dati di base del numero unificato di identificazione**» (統一證號基本資料表).
 
 Il rilascio è possibile nello stesso giorno,
 
@@ -73,7 +73,7 @@ ma l’amministrazione dell’immigrazione (移民署) è molto frequentata; con
 
 **3. Ho sentito dire che, nell’esame del piano di investimento, deve indicarsi la formazione e l’esperienza professionale, e mi inquieto che la mia formazione e la mia esperienza non corrispondano al settore della società che intendo costituire.**
 
-La commissione di esame del Ministero dell’Economia esamina di fatto gli antecedenti dell’investitore,
+La commissione di esame del Ministero dell’Economia esamina il percorso formativo e professionale dell’investitore.
 
 ma l’esame non è eccessivamente rigoroso.
 
@@ -95,7 +95,7 @@ Inoltre, nei contratti di locazione di locali commerciali a Taiwan, il locatore 
 
 Si tratta di un periodo esente da canone; si può negoziare.
 
-Non è facile per uno straniero prendere in locazione un locale commerciale, e il deposito cauzionale (押金) a Taiwan è piuttosto basso (di regola 2 mesi), di modo che la protezione del locatore è limitata;
+Non è facile per uno straniero prendere in locazione un locale commerciale, e il deposito cauzionale (押金) a Taiwan è piuttosto basso (di regola 2 mesi), così che la protezione del locatore è limitata;
 
 i locatori esitano quindi a locare a stranieri.
 
@@ -109,21 +109,21 @@ si può, se del caso, proporre l’autenticazione del contratto di locazione (�
 
 **5. Si può, nella costituzione della società, prendere in locazione un locale commerciale di uffici?**
 
-Ciò dipende dai rami di attività (營業項目) della società.
+Ciò dipende dai voci di attività (營業項目) della società.
 
-Es.) Se il ramo di attività è la ristorazione e si intende prendere in locazione un locale commerciale di uffici, l’apertura del conto bancario sarà molto difficile.
+Esempio. Se il voce di attività è la ristorazione e si intende prendere in locazione un locale commerciale di uffici, l’apertura del conto bancario sarà molto difficile.
 
 Come già indicato, la banca esamina il contratto di locazione e ispeziona sul posto l’indirizzo della società.
 
-Inoltre, nell’iscrizione finale della società, il municipio (市政府) esige anche che l’indirizzo iscritto si situi in una zona dove l’esercizio di un ristorante è autorizzato;
+Inoltre, nell’iscrizione finale della società, l’amministrazione comunale (市政府) esige anche che l’indirizzo iscritto si situi in una zona dove l’esercizio di un ristorante è autorizzato;
 
-se si tratta di un locale commerciale di uffici, l’iscrizione della società (公司登記) non è allora possibile.
+se si tratta di un locale commerciale di uffici, l’iscrizione della società (公司登記) può non essere possibile.
 
-Es.) Se si tratta di rami di attività possibili in un locale commerciale di uffici, quali la pubblicità o il commercio all’ingrosso, la società può essere costituita in un locale commerciale di uffici. Prima della conclusione del contratto di locazione
+Esempio. Se si tratta di voci di attività possibili in un locale commerciale di uffici, quali la pubblicità o il commercio all’ingrosso, la società può essere costituita in un locale commerciale di uffici. Prima della conclusione del contratto di locazione
 
 conviene verificarlo in anticipo.
 
-*Se ha bisogno di aiuto sul diritto di Taiwan, utilizzi la pagina dei contatti; un termine di risposta non è promesso.*
+*Se ha bisogno di aiuto sul diritto di Taiwan, utilizzi la pagina dei contatti e indichi la lingua desiderata tra inglese, cinese (中文), giapponese e coreano; un termine di risposta non è promesso.*
 
 ---
 

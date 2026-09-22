@@ -19,17 +19,17 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Ketika memulai usaha makanan dan minuman, persoalan pertama adalah mencari alamat tempat usaha.
 
-Selain mempertimbangkan keadaan pasar,
+Selain keadaan pasar, kawasan tempat usaha juga harus dipertimbangkan.
 
-satu pertimbangan penting lainnya adalah
+Satu pertimbangan penting lainnya adalah izin kawasan untuk usaha rumah makan.
 
-apakah alamat tersebut terletak di kawasan yang memperbolehkan usaha "rumah makan".
+Alamat tersebut harus terletak di kawasan yang memperbolehkan usaha "rumah makan".
 
 ​
 
-Apabila Anda memulai usaha di Kota Taipei,
+Apabila Anda memulai usaha di Kota Taipei, periksalah lokasi itu lebih dahulu.
 
-Anda dapat menggunakan sistem "pemeriksaan awal lokasi usaha" (營業場所預先查詢) milik Kantor Perdagangan Kota Taipei (臺北市商業處).
+Anda dapat menggunakan sistem "pemeriksaan awal lokasi usaha" (營業場所預先查詢) milik Dinas Perdagangan Kota Taipei (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Namun, pada saat pemeriksaan Anda harus mengunggah "salinan pendaftaran bangunan
 
 Siapa pun dapat mengajukan permohonan "salinan pendaftaran bangunan jenis kedua" atas alamat mana pun kepada Kantor Administrasi Pertanahan (地政事務所).
 
-Apabila Anda sulit mendatangi sendiri Kantor Administrasi Pertanahan,
+Apabila Anda sulit mendatangi sendiri Kantor Administrasi Pertanahan, mintalah bantuan.
 
-Anda dapat meminta bantuan kepada kenalan di Taiwan, pemilik atau pihak yang menyewakan, agen properti, atau pengacara.
+Anda dapat meminta bantuan kepada kenalan di Taiwan, pemilik atau pihak yang menyewakan, agen properti, atau advokat.
 
 Apabila hasil pemeriksaan menunjukkan bahwa usaha rumah makan tidak dimungkinkan, pemerintah kota dapat tidak menerima pendaftaran tersebut ketika kemudian Anda mendaftarkan perusahaan (公司登記).
 
@@ -59,9 +59,9 @@ Namun, pada saat pendaftaran perusahaan sering kali beberapa bidang usaha didaft
 
 Karena itu, dalam praktiknya tidak semua bidang usaha perlu diperiksa pada saat pendaftaran perusahaan.
 
-Menurut "[Petunjuk Pelaksanaan Layanan Bantuan Pemeriksaan Lokasi Usaha Kota Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) dan menurut pengumuman terkini Kota Taipei,
+Hal ini mengikuti "[Petunjuk Pelaksanaan Layanan Bantuan Pemeriksaan Lokasi Usaha Kota Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) dan pengumuman terkini Kota Taipei.
 
-sejak 1 Januari 2023, permohonan pendaftaran pendirian, pemindahan lokasi, atau penambahan bidang usaha perusahaan maupun usaha dagang (termasuk kantor cabang (分公司) dan cabang pembantu (分支機構)) **wajib** melampirkan hasil pemeriksaan awal lokasi usaha, tanpa memandang bidang usahanya.
+Sejak 1 Januari 2023, permohonan pendaftaran pendirian, pemindahan lokasi, atau penambahan bidang usaha perusahaan maupun usaha dagang (termasuk kantor cabang (分公司) dan cabang pembantu (分支機構)) **wajib** melampirkan hasil pemeriksaan awal lokasi usaha, tanpa memandang bidang usahanya.
 
 Daftar "bidang usaha yang menjadi objek pemeriksaan atas inisiatif instansi" (主動查詢之營業項目) di bawah ini adalah bidang usaha yang diperiksa sendiri oleh Dinas Perdagangan Kota Taipei (臺北市商業處) dalam proses penelaahan pendaftaran (隨案主動查詢) apabila permohonan mencantumkan bidang usaha tersebut tetapi hasil pemeriksaan yang dilampirkan tidak memuatnya; bidang usaha yang tidak ada dalam daftar ini tidak berarti bebas dari kewajiban pemeriksaan.
 

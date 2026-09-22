@@ -765,7 +765,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         description:
           'Penjelasan umum dalam bahasa Indonesia mengenai lingkup pekerjaan Hovering International Law Firm di Taiwan, bahasa konsultasi, dan cara memulai kontak.',
         intro:
-          'Hovering International Law Firm mendampingi klien dari luar negeri, termasuk mereka yang berada di Taiwan, dalam perkara menurut hukum Taiwan: investasi dan pendirian perusahaan, sengketa perdata, perkara perkawinan dan keluarga, ketenagakerjaan, pidana, dan kekayaan intelektual. Bagian berbahasa Indonesia ini membantu Anda mengetahui pekerjaan apa yang termasuk dalam lingkup kami, apa yang perlu disiapkan, dan bagaimana cara menghubungi kami. Ini keterangan umum, bukan nasihat hukum untuk perkara Anda sendiri.',
+          'Hovering International Law Firm mendampingi klien dari luar negeri, termasuk mereka yang memiliki kaitan dengan Taiwan, dalam perkara menurut hukum Taiwan: investasi dan pendirian perusahaan, sengketa perdata, perkara perkawinan dan keluarga, ketenagakerjaan, pidana, dan kekayaan intelektual. Bagian berbahasa Indonesia ini membantu Anda mengetahui pekerjaan apa yang termasuk dalam lingkup kami, apa yang perlu disiapkan, dan bagaimana cara menghubungi kami. Ini keterangan umum, bukan nasihat hukum untuk perkara Anda sendiri.',
         sections: [
           {
             heading: 'Apa yang kami kerjakan',
@@ -815,7 +815,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Investasi dan pendirian perusahaan di Taiwan',
             paragraphs: [
-              'Kami mendampingi investor dan perusahaan asing yang mendirikan atau menjalankan badan usaha di Taiwan: pemilihan bentuk badan usaha, penyiapan dan pengajuan berkas, pengiriman modal, urusan perbankan, penilaian tempat usaha, serta persyaratan yang khusus berlaku bagi bidang usaha tertentu. Kami juga membantu urusan akuntansi dan perpajakan yang timbul dari pendirian dan pengoperasian perusahaan di Taiwan.',
+              'Kami mendampingi investor dan perusahaan asing yang mendirikan atau menjalankan badan usaha di Taiwan: pemilihan bentuk badan usaha, penyiapan dan pengajuan berkas, penyetoran modal, urusan perbankan, penilaian tempat usaha, serta persyaratan yang khusus berlaku bagi bidang usaha tertentu. Kami juga membantu urusan akuntansi dan perpajakan yang timbul dari pendirian dan pengoperasian perusahaan di Taiwan.',
               'Urutan dan lamanya proses berbeda-beda menurut bentuk badan usaha yang dipilih, investornya, bidang usahanya, bank yang terlibat, dan dokumen yang tersedia. Pendirian perusahaan tidak dengan sendirinya menghasilkan izin tinggal (居留) atau izin kerja (工作許可): keduanya adalah proses tersendiri yang dinilai menurut keadaan masing-masing orang.',
             ],
           },
@@ -844,7 +844,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Perkara pidana',
             paragraphs: [
               'Kami mendampingi pada tahap penyidikan maupun pemeriksaan di pengadilan, baik bagi tersangka atau terdakwa maupun bagi korban, serta menilai risiko pidana yang timbul dalam kegiatan usaha.',
-              'Perkara pidana umumnya memiliki tenggat waktu pendek dan tahapan yang sudah tertentu, jadi apabila Anda sudah menerima surat dari aparat penegak hukum atau pengadilan, sebutkan tanggal pada surat itu sejak awal agar isinya ditinjau menurut urutan kepentingannya.',
+              'Perkara pidana umumnya memiliki tenggat waktu pendek dan tahapan yang sudah tertentu, jadi apabila Anda sudah menerima surat dari aparat penegak hukum atau pengadilan, sebutkan tanggal pada surat itu sejak awal agar isinya ditinjau menurut urutan yang benar.',
             ],
           },
           {
@@ -875,7 +875,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Pendirian dan susunan kantor',
             paragraphs: [
               'Hovering International Law Firm (昊鼎國際法律事務所) didirikan pada 2016 oleh para advokat lulusan Universitas Nasional Taiwan (國立臺灣大學). Nama Tionghoanya, 昊鼎, menggabungkan aksara 昊 yang berarti “langit yang luas” dan aksara 鼎 yang berarti “dasar yang kokoh”, yang mencerminkan arah kantor sejak awal berdiri.',
-              'Kami memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), dan Pingtung (屏東). Kantor Kaohsiung berfokus pada tata kelola perusahaan dan menangani sengketa perdata, pidana, serta administrasi secara umum. Kantor Taichung menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea dan Jepang. Kantor Pingtung dibuka pada 2017 untuk melayani kebutuhan setempat.',
+              'Kami memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), dan Pingtung (屏東). Kantor Kaohsiung berfokus pada tata kelola perusahaan dan menangani sengketa perdata, pidana, dan administrasi. Kantor Taichung menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea dan Jepang. Kantor Pingtung dibuka pada 2017 untuk melayani kebutuhan setempat.',
               'Selain pekerjaan advokat, pada 2020 berdiri pula Hovering Accounting Office, yang menyediakan layanan akuntansi dan perencanaan pajak bagi pemilik usaha dan orang pribadi yang berkekayaan tinggi.',
             ],
           },
@@ -889,7 +889,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Ketika Anda menghubungi kami',
             paragraphs: [
-              'Setelah ringkasan Anda kami terima, advokat meninjau isinya lalu membicarakan lingkup pekerjaan yang dapat dikerjakan, dokumen yang masih diperlukan, dan langkah selanjutnya. Untuk perkara yang menimbulkan persoalan akuntansi atau perpajakan, kantor dapat menangani urusan itu bersama bagian akuntansi secara terpadu.',
+              'Setelah ringkasan Anda kami terima, advokat meninjau isinya lalu membicarakan lingkup pekerjaan yang dapat dikerjakan, dokumen yang masih diperlukan, dan langkah selanjutnya. Bila timbul pertanyaan akuntansi atau perpajakan, kantor dapat menangani urusan itu bersama bagian akuntansi secara terpadu.',
               'Hasil setiap perkara bergantung pada faktanya dan pada berkas yang ada, sehingga kami tidak menjanjikan hasil. Bila Anda memerlukan jawaban yang pasti untuk keadaan Anda, berkas itu perlu dibicarakan langsung dengan advokat dalam salah satu dari empat bahasa konsultasi.',
             ],
           },
@@ -1133,7 +1133,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Lingkup hukum',
             paragraphs: [
               'Kantor kami berpraktik menurut hukum Taiwan, dan halaman ini hanya membicarakan pekerjaan dalam lingkup itu.',
-              'Isi halaman-halaman ini bukan nasihat menurut hukum yurisdiksi mana pun selain Taiwan, termasuk hukum tempat Anda tinggal. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami memastikan bersama Anda tenaga profesional berkualifikasi mana yang diperlukan untuk bagian tersebut.',
+              'Isi halaman-halaman ini bukan nasihat menurut hukum yurisdiksi mana pun selain Taiwan, termasuk hukum tempat Anda tinggal. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, tenaga profesional berkualifikasi mana yang diperlukan untuk bagian itu kami pastikan bersama Anda.',
             ],
           },
           {

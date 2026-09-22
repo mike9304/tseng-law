@@ -42,7 +42,7 @@ Dalam perjanjian, sebaiknya diatur secara konkret ruang lingkup penggunaan kekay
 
 Anak perusahaan di Taiwan dan kantor cabang perusahaan asing bukanlah organisasi yang sama. Anak perusahaan adalah badan hukum tersendiri yang didirikan menurut hukum Taiwan, sedangkan kantor cabang didaftarkan sebagai bagian dari kantor pusat (本公司) perusahaan asing. Kepribadian hukum, tanggung jawab kantor pusat, perlakuan akuntansi dan perpajakan, pemindahan laba, kewenangan mewakili, serta cara pengendalian internalnya berbeda, sehingga bentuk organisasi tidak boleh dipilih hanya berdasarkan kendali atas penjualan.
 
-Apabila prosedur investasi asing diperlukan, panduan **Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司)** sebagai instansi yang kini berwenang harus dipastikan. Jangka waktu yang diperlukan untuk persetujuan investasi, pengiriman dana, pendaftaran perusahaan atau kantor cabang, pembukaan rekening bank, pendaftaran perpajakan (稅籍登記), dan perolehan kualifikasi impor berbeda-beda menurut penanam modal, jenis usaha, bentuk organisasi, dokumen yang diserahkan, dan ada tidaknya perbaikan atau pelengkapan dokumen. Karena itu, daripada menetapkan tanggal peluncuran dengan mengandaikan jangka waktu tertentu yang tetap, penerapan masing-masing prosedur dan syarat penerimaan permohonan yang terbaru harus dipastikan lebih dahulu.
+Apabila prosedur investasi asing diperlukan, panduan **Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司)** sebagai instansi yang kini berwenang harus dipastikan. Jangka waktu yang diperlukan untuk persetujuan investasi, pengiriman dana, pendaftaran perusahaan atau kantor cabang, pembukaan rekening bank, pendaftaran perpajakan (稅籍登記), dan perolehan status sebagai importir berbeda-beda menurut penanam modal, jenis usaha, bentuk organisasi, dokumen yang diserahkan, dan ada tidaknya perbaikan atau pelengkapan dokumen. Karena itu, daripada menetapkan tanggal peluncuran dengan mengandaikan jangka waktu tertentu yang tetap, penerapan masing-masing prosedur dan syarat penerimaan permohonan yang terbaru harus dipastikan lebih dahulu.
 
 Struktur mana pun yang dipilih, pihak yang memikul tanggung jawab utama dalam pengaturan kosmetik adalah **produsen atau importir kosmetik**. Penyusunan data produk atau penilaian keamanan (安全性評估) memang dapat dipercayakan kepada ahli dari luar, tetapi penyerahan pekerjaan itu sendiri tidak memindahkan tanggung jawab hukum produsen atau importir. Membedakan pembagian pekerjaan menurut perjanjian dari pihak yang bertanggung jawab menurut peraturan adalah titik awal peninjauan struktur untuk memasuki pasar.
 
@@ -88,7 +88,7 @@ Iklan dinilai bukan hanya dari kalimatnya, melainkan dari keseluruhan penyajiann
 
 ### Dinilai dari keseluruhan penyajian, bukan dari kata per kata
 
-Apakah penandaan, promosi (宣傳), atau iklan bersifat palsu atau berlebihan, atau mengandung klaim khasiat medis (醫療效能), tidak dinilai hanya dari satu kata tertentu. Nama barang, kalimat, gambar, simbol, suara, konteks sebelum dan sesudahnya, serta kesan menyeluruh yang diterima konsumen ditelaah bersama-sama. Kesan yang terbentuk oleh penyajian iklan yang menjadi intinya tidak dengan sendirinya terhapus hanya oleh keterangan pembatas bertulisan kecil, sehingga masing-masing naskah maupun hasil akhirnya harus ditinjau seluruhnya.
+Apakah penandaan, promosi (宣傳), atau iklan bersifat palsu atau berlebihan, atau mengandung klaim khasiat medis (醫療效能), tidak dinilai hanya dari satu kata tertentu. Nama barang, kalimat, gambar, simbol, suara, konteks sebelum dan sesudahnya, serta kesan menyeluruh yang diterima konsumen ditelaah bersama-sama. Kesan yang terbentuk oleh penyajian iklan yang menjadi intinya tidak dengan sendirinya terhapus hanya karena ada keterangan pengecualian berhuruf kecil, sehingga masing-masing naskah maupun hasil akhirnya harus ditinjau seluruhnya.
 
 Sebagai contoh, menyatakan bahwa suatu kosmetik mengobati jerawat, memiliki efek antiradang, atau berdaya membunuh kuman dapat termasuk klaim khasiat medis. Cara menggabungkan nama penyakit dengan produk, gambar sebelum dan sesudah pemakaian, penyajian yang mengesankan tenaga kesehatan, serta konteks yang menghubungkan penjelasan bahan dengan efek pengobatan produk juga harus dipastikan bersama-sama.
 
@@ -111,7 +111,7 @@ Persiapan penjualan di Taiwan yang diperiksa dengan urutan berikut dapat mengura
 5. Meninjau label, halaman penjualan, iklan, dan unggahan kerja sama dengan standar keseluruhan penyajian.
 6. Menjalankan prosedur untuk menangani pemeriksaan dan permintaan perbaikan, keluhan, informasi keamanan, serta tindak lanjut yang diperlukan.
 
-Struktur dasar perusahaan dan kantor cabang dapat dilihat pada [Dasar pendirian perusahaan di Taiwan](/id/columns/taiwan-company-establishment-basics), ruang lingkup dukungan terkait pada [Bidang perkara yang kami tangani](/id/services), dan keterangan mengenai pengacara yang menangani pada [Tim Internasional Hovering](/id/lawyers).
+Struktur dasar perusahaan dan kantor cabang dapat dilihat pada [Dasar pendirian perusahaan di Taiwan](/id/columns/taiwan-company-establishment-basics), ruang lingkup dukungan terkait pada [Bidang perkara yang kami tangani](/id/services), dan keterangan mengenai advokat yang menangani pada [Tim Internasional Hovering](/id/lawyers).
 
 ### Sumber resmi
 

@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Jika ada pelanggan Taiwan, apakah wajib mendirikan perusahaan di Taiwan?"
-    a: "Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Perlu melihat kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan, lalu memilih badan usaha yang sesuai dengan fakta tersebut."
+    a: "Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan perlu dilihat lebih dahulu, lalu dipilih badan usaha yang sesuai dengan fakta tersebut."
   - q: "Setelah mendirikan perusahaan Taiwan, apakah tanggung jawab kantor pusat hilang sepenuhnya?"
     a: "Jika yang didirikan adalah anak perusahaan, bukan cabang, kantor pusat pada prinsipnya tidak menanggung kewajiban kontrak yang ditandatangani atas nama anak perusahaan. Tetap harus memeriksa pengecualian penyalahgunaan badan hukum dan apakah kantor pusat menanggung jaminan atau kewajiban kontrak terpisah."
   - q: "Dapatkah memulai lewat distributor lalu beralih ke perusahaan di Taiwan?"
@@ -65,7 +65,7 @@ Perseroan terbatas dapat dibentuk oleh 1 orang atau lebih, atau pemegang saham b
 
 ### Perseroan terbatas berbentuk saham: cocok jika ingin menarik investor lain atau berencana mencatatkan saham
 
-Ciri perseroan terbatas berbentuk saham adalah modal dibagi menjadi saham. Pada prinsipnya diperlukan 2 pemegang saham atau lebih, tetapi pemerintah atau badan hukum dapat mendirikan sendiri, dan badan hukum asing dapat memegang 100%. Saham pada prinsipnya dapat dialihkan bebas, dengan pengecualian menurut undang-undang, dan saham khusus serta opsi saham karyawan dapat dirancang menurut hukum. Karena itu cocok bagi perusahaan yang ingin menarik investor, transaksi saham, insentif ekuitas karyawan, atau merger, akuisisi, pencatatan saham di bursa, atau pendaftaran di papan saham emerging Taiwan, pada masa depan; tidak terbatas pada perusahaan besar. Dari sisi tata kelola, perseroan yang tidak melakukan penawaran umum, menurut anggaran dasarnya, dapat tidak membentuk dewan dan hanya menempatkan 1 atau 2 direktur. Perusahaan dengan satu pemegang saham pemerintah atau badan hukum, menurut anggaran dasarnya, dapat tidak menempatkan pengawas. Tidak semua perseroan terbatas berbentuk saham wajib audit laporan keuangan tahunan. Ambang audit utama perusahaan biasa adalah modal disetor TWD 30 juta, atau di bawah itu tetapi pendapatan usaha TWD 100 juta atau 100 pekerja peserta asuransi ketenagakerjaan (勞工保險); perusahaan yang telah melakukan penawaran umum saham (公開發行公司) mengikuti hukum sekuritas.
+Ciri perseroan terbatas berbentuk saham adalah modal dibagi menjadi saham. Pada prinsipnya diperlukan 2 pemegang saham atau lebih, tetapi pemerintah atau badan hukum dapat mendirikan sendiri, dan badan hukum asing dapat memegang 100%. Saham pada prinsipnya dapat dialihkan bebas, dengan pengecualian menurut undang-undang, dan saham khusus serta opsi saham karyawan dapat dirancang menurut hukum. Karena itu cocok bagi perusahaan yang ingin menarik investor, transaksi saham, insentif ekuitas karyawan, atau merger, akuisisi, pencatatan saham di bursa, atau pendaftaran di papan saham emerging Taiwan (興櫃), pada masa depan; tidak terbatas pada perusahaan besar. Dari sisi tata kelola, perseroan yang tidak melakukan penawaran umum, menurut anggaran dasarnya, dapat tidak membentuk dewan dan hanya menempatkan 1 atau 2 direktur. Perusahaan dengan satu pemegang saham pemerintah atau badan hukum, menurut anggaran dasarnya, dapat tidak menempatkan pengawas. Tidak semua perseroan terbatas berbentuk saham wajib audit laporan keuangan tahunan. Ambang audit utama perusahaan biasa adalah modal disetor TWD 30 juta, atau di bawah itu tetapi pendapatan usaha TWD 100 juta atau 100 pekerja peserta asuransi ketenagakerjaan (勞工保險); perusahaan yang telah melakukan penawaran umum saham (公開發行公司) mengikuti hukum sekuritas.
 
 ## 4. Prosedur pendirian cabang dan anak perusahaan berbeda; hanya anak perusahaan yang melalui tinjauan Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi
 
@@ -79,7 +79,7 @@ Uraian di atas merupakan saran perancangan kontrak. Sekadar memakai satu bentuk 
 
 Menyelesaikan pendaftaran perseroan di Taiwan tidak berarti karyawan kantor pusat luar negeri otomatis dapat bekerja di Taiwan. Warga negara asing yang bekerja di Taiwan harus memiliki izin kerja (工作許可) yang sah; untuk tinggal lama juga perlu mengajukan izin tinggal (居留). Pada dasarnya pemberi kerja mengajukan izin kerja dan izin tinggal terkait bagi karyawan asing.
 
-Manajer anak perusahaan dan cabang Taiwan perusahaan asing pada umumnya menempuh jalur permohonan izin kerja yang berbeda; hal itu bukan jaminan persetujuan. Namun untuk mengajukan izin kerja bagi orang asing kedua dan seterusnya, tergantung industri, Kementerian Tenaga Kerja mensyaratkan ambang modal, omzet, dan sejenisnya. Jika Anda berencana menempatkan staf asing untuk bekerja di Taiwan, sebelum mendirikan perseroan Taiwan Anda harus mengonfirmasi apakah penetapan modal mencapai ambang tersebut.
+Manajer anak perusahaan dan cabang Taiwan perusahaan asing pada umumnya menempuh jalur permohonan izin kerja yang berbeda; hal itu bukan jaminan persetujuan. Namun untuk mengajukan izin kerja bagi orang asing kedua dan seterusnya, tergantung industri, Kementerian Ketenagakerjaan (勞動部) mensyaratkan ambang modal, omzet, dan sejenisnya. Jika Anda berencana menempatkan staf asing untuk bekerja di Taiwan, sebelum mendirikan perseroan Taiwan Anda harus mengonfirmasi apakah penetapan modal mencapai ambang tersebut.
 
 ## 7. Struktur yang lebih sesuai menurut tahap perkembangan usaha
 
@@ -101,7 +101,7 @@ Anda tidak perlu melampirkan seluruh data rahasia pelanggan atau data proses rin
 
 ### Jika ada pelanggan Taiwan, apakah wajib mendirikan perusahaan di Taiwan?
 
-Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Perlu melihat kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan, lalu memilih badan usaha yang sesuai dengan fakta tersebut.
+Tidak dapat disimpulkan hanya karena pelanggan berada di Taiwan. Kebutuhan pelanggan serta kegiatan nyata berupa usaha, fasilitas, tenaga kerja, dan struktur transaksi di Taiwan perlu dilihat lebih dahulu, lalu dipilih badan usaha yang sesuai dengan fakta tersebut.
 
 ### Setelah mendirikan perusahaan Taiwan, apakah tanggung jawab kantor pusat hilang sepenuhnya?
 

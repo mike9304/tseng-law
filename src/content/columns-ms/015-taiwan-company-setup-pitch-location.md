@@ -37,9 +37,9 @@ anda boleh menggunakan sistem “semakan awal premis” (營業場所預先查�
 
 Anda boleh mengesahkan tanpa yuran sama ada, di alamat yang diingini, pembukaan “premis restoran” mungkin.
 
-Namun, untuk pengesahan ini, anda mesti memuat naik “petikan pendaftaran bangunan kelas 2” (建物登記第二類謄本, yang mengandungi maklumat terperinci bangunan) alamat premis.
+Namun, untuk pengesahan ini, anda mesti memuat naik “petikan pendaftaran bangunan jenis II” (建物登記第二類謄本, yang mengandungi maklumat terperinci bangunan) alamat premis.
 
-Sesiapa boleh memohon di pejabat pentadbiran tanah (地政事務所) “petikan pendaftaran bangunan kelas 2” mana-mana alamat.
+Sesiapa boleh memohon di pejabat pentadbiran tanah (地政事務所) “petikan pendaftaran bangunan jenis II” mana-mana alamat.
 
 Jika anda sukar hadir secara peribadi di pejabat pentadbiran tanah (地政事務所),
 

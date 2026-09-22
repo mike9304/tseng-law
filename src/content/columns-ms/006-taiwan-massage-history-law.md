@@ -33,9 +33,9 @@ Dan salun gaya Taiwan ini kekal sebagai kenangan budaya yang tersendiri bagi ram
 
 ​
 
-Apa pun, apabila berbicara tentang urutan (按摩),
+Apa pun, apabila berbicara tentang urutan (按摩).
 
-terdapat juga di Taiwan banyak jalan urutan.
+Di Taiwan juga terdapat banyak jalan yang dikenali dengan perniagaan urutan.
 
 Perniagaan urutan pelbagai jenis berbaris di situ.
 

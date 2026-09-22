@@ -82,7 +82,7 @@ Urutan, keperluan dan tempoh langkah berbeza menurut bentuk organisasi, jumlah p
 
 ## 3. Semakan awal sektor dan tempat aktiviti
 
-Pelaburan asing mungkin dalam banyak sektor; sektor yang dilarang atau dihadkan, kelayakan profesional, had tempat dan kebenaran sektor tetap mesti diteliti secara berasingan. Dalam bidang seperti peranti perubatan, alkohol, pelancongan, pembinaan atau perkhidmatan profesional (專門服務), di mana kebenaran, pendaftaran atau kelayakan pihak berkuasa penyelia mungkin timbul, peruntukan yang terpakai mesti diteliti daripada barangan dan perkhidmatan yang benar-benar ditawarkan serta struktur operasi.
+Pelaburan asing mungkin dalam banyak sektor; sektor yang dilarang atau dihadkan, kelayakan profesional, had tempat dan kebenaran sektor tetap mesti diteliti secara berasingan. Dalam bidang seperti peranti perubatan, alkohol, pelancongan, pembinaan atau perkhidmatan profesional (專門服務) yang kebenaran, pendaftaran atau kelayakan pihak berkuasa penyelia mungkin timbul, peruntukan yang terpakai mesti diteliti daripada barangan dan perkhidmatan yang benar-benar ditawarkan serta struktur operasi.
 
 Hakikat bahawa item perniagaan boleh dinyatakan dalam pendaftaran syarikat tidak bermakna aktiviti berkenaan boleh dimulakan serta-merta. Semakan awal nama dan item perniagaan, pendaftaran syarikat, pendaftaran cukai dan kebenaran sektor masing-masing mempunyai objek lain. Jika cara operasi berbeza, seperti jualan dalam talian dan kedai, import dan pengedaran dalam negeri, atau perkhidmatan langsung dan perantaraan, pendaftaran yang diperlukan dan tanggungjawab boleh berbeza.
 
@@ -110,7 +110,7 @@ Angka yang terdahulu bukan modal minimum yang terpakai secara umum kepada penubu
 
 Pasangan dan anak bawah umur orang asing yang memperoleh kad kediaman atas dasar lesen kerja atau kebenaran serupa boleh, jika syarat dipenuhi, memohon secara berasingan kediaman kerana ikatan keluarga (依親居留). Akta yang bertujuan membuktikan perkahwinan atau pertalian, nafkah dan tujuan tinggal mungkin diperlukan; status kediaman keluarga tidak diberikan secara automatik.
 
-Untuk permohonan kediaman tetap (永久居留), orang asing mesti pada prinsipnya, antara lain, telah tinggal secara berterusan dan sah di Taiwan selama 5 tahun dan berada di situ sekurang-kurangnya 183 hari setiap tahun. Bagi profesional asing (外國專業人才) dan orang serupa, kriteria pengiraan lain boleh terpakai; syarat berkanun lain seperti kelakuan, harta dan keupayaan juga diteliti. Tempoh tinggal yang dikecualikan daripada pengiraan kediaman tetap dan syarat pada saat permohonan mesti diteliti satu persatu; pemilikan lesen kerja atau kad kediaman selama 5 tahun semata-mata tidak membawa secara automatik kediaman tetap.
+Untuk permohonan kediaman tetap (永久居留), orang asing mesti pada prinsipnya, antara lain, telah tinggal secara berterusan dan sah di Taiwan selama 5 tahun dan berada di situ sekurang-kurangnya 183 hari setiap tahun. Bagi profesional asing (外國專業人才) dan orang serupa, kriteria pengiraan lain boleh terpakai; syarat berkanun lain seperti kelakuan, harta dan keupayaan juga diteliti. Tempoh tinggal yang dikecualikan daripada pengiraan kediaman tetap dan syarat pada masa permohonan mesti diteliti satu persatu; pemilikan lesen kerja atau kad kediaman selama 5 tahun semata-mata tidak membawa secara automatik kediaman tetap.
 
 ![](../images/001-taiwan-company-establishment-basics/img-04.jpg)
 

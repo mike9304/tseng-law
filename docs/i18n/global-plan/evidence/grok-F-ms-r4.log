@@ -1,0 +1,116 @@
+# WO-F-ms — Malay fix lane, campaign round 4 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-ms-r4 (no git add/commit/push)
+Files touched: src/content/columns-ms/001–018;
+src/data/international-guidance-asia.ts (ms pack: read-more label, stranded "awal", Hubungi spacing);
+src/data/international-guidance-team.ts (ms role and bios only);
+this log.
+No test file was edited. No pinned Malay expectation had to change.
+The ms bio amount stays "TWD 1,570,000" (the pinned token "TWD 1.57M" is not in the ms bio). consultationNotice and confidentialNotice were not rewritten. Page descriptions were not rewritten.
+
+## Rows applied
+ms-a 13/15 and ms-b 36/37. Both P3 rows applied. Three P2 rows were not applied as specified; see skipped.
+
+ms-a
+1  004 link label. The link still points at 各類所得扣繳率標準 Article 3. The label no longer calls that article a 10% ceiling. It now says the domestic rate is 21% and that 10% is the treaty ceiling. URL unchanged. Digit 10 kept. 004 number bag stays 95=95.
+2  007 ground 3: "Layanan buruk (虐待)" → "Penganiayaan (虐待)".
+3  007 ground 4: lineal ascendants are "keluarga menaik dalam garis lurus", not only parents, and "diri sendiri" is now "pihak itu".
+6  006. The blank line stays (block count). Each side is now a full sentence: the first ends after "urutan (按摩).", and the next starts "Di Taiwan juga terdapat banyak jalan yang dikenali dengan perniagaan urutan."
+7  003 lost-income sentence: the subject is no longer "keadaan". "Terus bekerja atau menerima gaji yang tidak berubah adalah relevan…"
+8  003 insurer and feelings: "tidak merawat" → "tidak mengambil berat secukupnya".
+9  003 "membesarkan kes" → "membesar-besarkan kes".
+10 004 "prejudis" → "tanggapan awal".
+11 guidance criminal FAQ: "nyatakan seawal mungkin tarikh pada surat itu".
+12 008 absence ground: one "tanpa sebab". Gloss stays on (曠工).
+13 008 "prerogatif disiplin" → "kuasa disiplin".
+14 P3 "Baca selanjutnya" → "Baca seterusnya" (columnsReadMoreLabel only).
+15 P3 leading space removed from servicesAssistanceAfter. The Before string already ends with a space.
+
+ms-b
+1  010 "peguam (訴訟代理人) bagi plaintif dalam kes ini, iaitu pelajar Korea."
+2  010 the first-instance judgment "tidak mendedahkan hasil rayuan mahupun jumlah perdamaian"; the reported settlement is not the final disposition.
+3  010 "tidak memadai hanya melihat hakikat".
+4  010 tort limitation: "ganti rugi tort (侵權行為)", "sejak perbuatan tort itu". The Article 197 link is unchanged. "dari saat" kept (the suggested sentence keeps it).
+5  016 "Asas undang-undang, pihak yang dituntut, dan harta yang masuk ke dalam pengiraan".
+6  017 Kinmen or Lienchiang (Matsu), including the shorter body sentences and "kriteria Kinmen atau Lienchiang". Middle dot in the gloss → 、. Two full glosses, one short "atau", one criteria name.
+7  018 "Kecuali jika perlembagaan syarikat memperuntukkan sebaliknya".
+8  010 "lelaki" restored on the headline pairs (img-02, img-03, img-04, img-05, img-06, img-07, img-08, img-10, each alt and its matching link text, plus the bold question). The lead sentence stays "pelajar universiti Korea" without "lelaki": the English lead and row 16 do not say male.
+9  010 mindset headline: "Bagaimana pula pola pemikiran orang yang berlatih?" (both copies).
+10 010 "boleh memerlukan dokumen perubatan, bukti pendapatan dan profesion, atau pendapat pakar".
+11 010 "tidak serta-merta menjadi jumlah yang diakui oleh mahkamah".
+12 010 "Ganti rugi bukan berbentuk wang", with and without the gloss. The same calque in 007 (Article 1056) was rewritten and given (非財產上損害).
+13 010 "laporan boleh dibuat dengan pantas".
+14 010 the three steps are parallel: preserve, then seek advice early.
+15 010 "kriteria profesional atau teknikal yang terpakai pada masa perkhidmatan itu disediakan."
+16 010 "kes pelajar universiti Korea yang cedera". 011 "termasuk apabila ia bertindak" (FAQ and body).
+17 011 "jika, pada hakikatnya, siaran itu ialah pengiklanan" (FAQ and body) and "sebagai pengiklanan pada hakikatnya". "pada dasarnya terdapat 3 laluan" in 007 stays: there it means "in principle".
+18 011 "bahawa kelayakan untuk menjual akan diperoleh".
+19 011 body only: "Anak syarikat atau cawangan tidak sentiasa perlu ditubuhkan." The FAQ answer still says "Tidak sentiasa perlu menubuhkannya" because the question names the subsidiary or branch.
+20 011 "siapa yang memikul tanggungjawab undang-undang".
+21 012 "memberi laluan". Earlier "menyerahkan lorong" / "menyerahkan laluan" stay.
+22 012 "tidak dengan sendirinya menjamin bahawa kemalangan akan terelak".
+23 012 "keadaan pemotongan yang dilarang".
+25 013 "dibuat secara notari (公證)". The same non-word "dinotari" on a translation in 007 (two sentences) → "dibuat secara notari".
+26 013 "caruman modal yang diluluskan".
+27 014 items 1 and 2 are now questions ("Adakah …?"). Items 3 and 4 were already questions. List count unchanged.
+28 014 "Kursus dalaman boleh melibatkan kandungan profesional dan teknikal yang terbukti serta pelaburan yang ketara".
+29 014 "balasan" for 合理補償 → "pampasan" through the file (31). Existing (合理補償) glosses stay.
+30 014 "pengaitan tanggungjawab" → "pihak yang harus menanggungnya" (FAQ, repeated body, checklist item 7). "pengaitan mesti disahkan" and "pengaitan terhapus" rewritten the same way.
+31 015 "petikan pendaftaran bangunan jenis II" (both sentences). The closing quotation mark on the first was kept. Number bag stays 9=9.
+32 016 "garis lurus" (3, including the glossed heir class and the later order).
+33 016 "jika pembahagian sama rata itu nyata tidak saksama".
+34 018 "pejabat utama dan pelabur".
+35 018 "mesti menyediakan akaun tahunan yang diaudit".
+36 018 "tidak menjalankan urusan syarikat".
+37 018 "pilih entiti yang sepadan dengan fakta itu" (FAQ and body). "paling sesuai" removed.
+
+Rulebook, not a review row: R12/R5 English "Paralegal" in the ms team block only → "Pembantu undang-undang" (role line, intro, Boyin, Muyang). Firm names stay in Latin. Other locales were not edited.
+
+## Rows skipped
+ms-a #4 (P2). Do not promote Q16–Q20 to `##` headings. checkHeadings requires the same heading levels as the Korean source. Korean and English keep those lines as body paragraphs. Adding headings fails the checker.
+ms-a #5 (P2) and ms-b #24 (P2). Do not delete U+200B lines or the `**​**` lines in 005. checkBlocks requires the same ZWSP count and the same non-empty block count as the Korean source, which contains the same breaks. 003, 005, 006, 008, 009, 013 and 015 were left structurally as they are.
+The other lowercase "dan …" continuations in 006, 008, 009 and 013 were not joined. Joining them would drop blocks. They are the same pinned line-break pattern, not a separate wording error inside the line.
+
+## Systemic patterns and how many instances changed
+`delik` for 侵權行為 → tort                                              4 wordings (010 liability basis; 010 Article 197 sentence, two "delik"; 007 "tuntutan tort (侵權行為)").
+`saat` as a preposition (Indonesian "at the time of") → pada masa / semasa / masa   18. Named rows: 010 "saat penyediaan", 011 "bersama saat pendaftaran", 018 "pada saat hubungan", plus the same pattern in 001, 002, 005, 007, 014, 016, 017 and the CCTV line in 010. Not changed: "1 saat" (one second), "dari saat", "setiap saat", and noun timing ("saat kematian", "saat dividen", "saat bayaran", "saat pengagihan", and the rest of that list).
+出資 `sumbangan` → caruman modal                                        4 (013 approved contribution; 018 amount, ratio, transfer). "sumbangan ekonomi" in 016 stays (economic contribution, not capital).
+`garis langsung` → garis lurus                                          5 (3 in 016; 2 inside the rewritten 007 ground 4, which now says "garis lurus").
+`di mana` as a relative for a non-place                                 23, across 001, 002, 003, 004, 007, 008, 009 (title and H1), 010, 011 (FAQ and body), 016. Left on purpose: "zon di mana" and "tempat di mana" (015, 013) because the antecedent is a place; "di Korea, di mana" (006) because Korea is a place; "disemak dahulu di mana kehidupan" (007) because that "di mana" is the question "where".
+`balasan` for 合理補償 in 014 → pampasan                                 31. Not applied outside 014 (017 "balasan sebagai pengangkut" is the carriage charge).
+`pengaitan` for attribution of responsibility in 014                    4 sites.
+English "Paralegal" in the ms team block                                 4.
+Kinmen "dan … atau Matsu" → "atau … iaitu Matsu"                        4 phrases in 017.
+`lelaki` on the 010 headlines                                            img-02 through img-08 and img-10 pairs, plus the bold question. Lead sentence not included.
+`ganti rugi bukan wang` → bukan berbentuk wang                          2 in 010, 1 in 007.
+
+R2–R10 were already in this corpus (prior rounds; this round's verdicts are 4/5–5/5 and confirm that Malay does not mark Wei Tseng's gender, that the consultation lock stays negative, and that Korea is a labelled example). This pass did not reopen those sentences. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered).
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ms --lang ms 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ms src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      23
+```
+The 23 was taken before this log existed. It is the 20 edited sources above, plus the pre-existing `WO-F-ms.txt` modification and the untracked review files `ms-a.md` and `ms-b.md`. Number warnings that remain (제N항 / 제3자 unparsed, extra 2020 in 010, extra 2023 in 007) were already warnings and are not FAILs. summary is PASS 18/18.
+
+## Reviewer disagreements (not applied)
+- Q16–Q20 are not a Malay heading error. The Korean source, which the checker compares, and the English file use the same body lines. Promoting them to headings changes the outline.
+- The zero-width breaks are not a Malay-only leftover. The Korean columns contain the same U+200B count. Deleting them fails `blocks`. The spoken "dan …" lines were left for the same reason.
+- Article 3's 10% label was wrong as a description of the domestic rate. Dropping the digit 10 was not done. The label now states the domestic 21% and keeps the treaty ceiling of 10%, which the column body already explains. 004's number count stayed equal.
+- "lelaki" was not added to the 010 lead sentence. Row 8 is the headlines. Row 16's suggested lead does not say male, and the English lead does not either.
+- Bare "saat" meaning "the moment of" (saat kematian, saat dividen, 1 saat, dari saat, setiap saat) is ordinary Malay, not the preposition the verdict describes. The suggested Article 197 sentence itself keeps "dari saat".

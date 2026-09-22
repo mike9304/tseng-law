@@ -43,7 +43,7 @@ May massage na isinasagawa ng mga taong may kapansanan sa paningin (視障按摩
 
 Sa madaling salita, makapipili ang bawat isa ng massage na akma sa kanyang panlasa upang mabawasan ang stress.
 
-At ang dahilan kung bakit napakarami ng massage shop sa ngayon ay maaaring dahil sa iisang petisyon para sa constitutional interpretation (釋憲聲請).
+At ang dahilan kung bakit napakaraming massage shop sa ngayon ay maaaring dahil sa iisang petisyon para sa constitutional interpretation (釋憲聲請).
 
 Nang ipinasa at ipinatupad sa Taiwan noong 1980 ang Disability Welfare Act (殘障福利法),
 

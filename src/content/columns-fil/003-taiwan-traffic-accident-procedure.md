@@ -33,7 +33,7 @@ Tiyakin muna ang sariling kaligtasan at ang paglalagay ng babalang panandaan; sa
 
 Kapag natiyak na ang kaligtasan, kumuha ng malawak at malapitang mga larawan upang maitala ang posisyon ng sasakyan, ang pinsala nito, ang mga marka sa kalsada, ang mga senyas, at ang lagay ng panahon. Mabuting huwag ding kaligtaan ang impormasyon sa pakikipag-ugnayan ng mga saksi, ang paghiling na maingatan ang kuha ng CCTV at ng dashcam, ang datos ng mga panig, sasakyan at seguro, gayundin ang mga rekord ng paggamot. Kapaki-pakinabang ang sariling pagkuha ng larawan, ngunit hindi nito napapalitan ang paghawak ng pulisya na hinihingi sa mga aksidenteng may nasugatan o namatay.
 
-Tungkol sa dokumento ng pulisya, maaaring matanggap sa lugar ng aksidente ang traffic accident party registration slip (道路交通事故當事人登記聯單). Kapag lumipas ang 7 araw mula sa petsa ng aksidente ay maaari nang hilingin ang guhit ng pinangyarihan (現場圖) at ang mga larawan nito (現場照片), at kapag lumipas ang 30 araw ay maaari nang hilingin ang preliminary accident analysis report (道路交通事故初步分析研判表). Muling kumpirmahin sa pulisyang may hurisdiksiyon ang panahon ng paglalabas nito at ang mga kailangan sa paghiling.
+Tungkol sa dokumento ng pulisya, maaaring matanggap sa lugar ng aksidente ang pormularyo ng pagpaparehistro ng mga panig sa aksidente sa kalsada (道路交通事故當事人登記聯單). Kapag lumipas ang 7 araw mula sa petsa ng aksidente ay maaari nang hilingin ang guhit ng pinangyarihan (現場圖) at ang mga larawan nito (現場照片), at kapag lumipas ang 30 araw ay maaari nang hilingin ang paunang ulat ng pagsusuri sa aksidente sa kalsada (道路交通事故初步分析研判表). Muling kumpirmahin sa pulisyang may hurisdiksiyon ang panahon ng paglalabas nito at ang mga kailangan sa paghiling.
 
 ## Q3. Kung ako ay nasugatan, anong mga paghahabla at takdang panahon ang dapat kong tingnan?
 
@@ -51,7 +51,7 @@ Ang pananagutang kriminal ay mahuhusgahan lamang kapag kinilala ang paglabag ng 
 
 Sa sibil, ayon sa Artikulo 217 ng Kodigo Sibil, kung may kapabayaan ang biktima na nag-ambag sa pagkakaroon o sa paglaki ng pinsala ay maaaring bawasan o alisin ng hukuman ang halaga ng danyos. Halimbawa, kung ang kinilalang pinsala ay TWD 1,000,000 (isang milyong dolyar ng Taiwan, 新臺幣) at ang kapabayaan ng biktima ay itinaya sa 50%, maaari itong bumaba sa TWD 500,000 bago ang iba pang pagsasaayos.
 
-Maaaring maging mahalagang materyal ang expert appraisal (鑑定) o ang preliminary accident analysis report, ngunit hindi nito mekanikal na iginagapos ang hukuman. Sinusuri ng hukuman ang buong ebidensya kasama ang mga pahayag, ang bidyo, at ang kalagayan ng sasakyan.
+Maaaring maging mahalagang materyal ang expert appraisal (鑑定) o ang paunang ulat ng pagsusuri sa aksidente sa kalsada, ngunit hindi nito mekanikal na iginagapos ang hukuman. Sinusuri ng hukuman ang buong ebidensya kasama ang mga pahayag, ang bidyo, at ang kalagayan ng sasakyan.
 
 ## Q5. Ano ang dapat ilagay sa kasunduang pag-aayos?
 
@@ -83,7 +83,7 @@ Kung ito ay delitong nangangailangan ng reklamo, maaaring urungin ang reklamo ha
 
 ## Q6. Paano kinikilala ang pananagutan sa aksidente?
 
-Ang preliminary accident analysis report ng pulisya ay paunang pagsusuring iginagawa batay sa datos mula sa lugar ng aksidente. Hindi ito hatol ng hukuman, hindi nito iginagapos ang hukuman, at hindi rin nito tinatakda ang proporsyon ng kapabayaan (過失比例). Dahil nag-iiba ang kailangang datos at ang saklaw ng alitan sa bawat aksidente, ang report na ito, ang appraisal na itinatakda ng batas, gayundin ang re-examination ay hindi awtomatikong proseso ni kinakailangang yugto.
+Ang paunang ulat ng pulisya sa pagsusuri ng aksidente sa kalsada ay paunang pagsusuring iginagawa batay sa datos mula sa lugar ng aksidente. Hindi ito hatol ng hukuman, hindi nito iginagapos ang hukuman, at hindi rin nito tinatakda ang proporsyon ng kapabayaan (過失比例). Dahil nag-iiba ang kailangang datos at ang saklaw ng alitan sa bawat aksidente, ang report na ito, ang appraisal na itinatakda ng batas, gayundin ang re-examination ay hindi awtomatikong proseso ni kinakailangang yugto.
 
 Ayon sa kaugnay na mga alituntunin, maaaring humiling ng vehicle-accident appraisal (車輛行車事故鑑定) ang karapat-dapat na panig; maaari ding ipasa ng ahensyang humahawak ang kaso o iatas ito ng awtoridad panghukuman (囑託). Karaniwang inihahain ng panig ang kahilingan sa loob ng 6 na buwan mula sa araw ng aksidente, at sa kasong nasa imbestigasyon o paglilitis na ay isinasagawa ang appraisal sa pamamagitan ng pag-aatas ng awtoridad panghukuman sa halip na bagong direktang kahilingan.
 
@@ -157,7 +157,7 @@ Kapag kinakalkula bilang isahang bayad ay maaaring isaalang-alang ang pagbabawas
 
 Ang moral damages para sa pinsalang hindi pinansiyal ay hinuhusgahan sa paraang pagtatakda ng angkop na halaga, kapag may labag sa batas na paglabag sa katawan o sa kalusugan na itinatakda ng Artikulo 195 ng Kodigo Sibil.
 
-Sinusuri ng hukuman ang kalagayan ng bawat kaso sa pamamagitan ng pagsasama-sama ng nilalaman ng pinsala at ng paggamot, ng nagpapatuloy na epekto, ng hirap gayundin ng epekto sa pamumuhay, ng edad at katayuan, ng lagay panlipunan saka pang-ekonomiya, at ng ebidensyang inihain ng mga panig. Kaya mahirap tiyakin nang maaga ang resulta batay lamang sa mga nakasanayang saklaw ng halaga.
+Sinusuri ng hukuman ang kalagayan ng bawat kaso sa pamamagitan ng pagsasama-sama ng nilalaman ng pinsala at ng paggamot, ng nagpapatuloy na epekto, ng hirap gayundin ng epekto sa pamumuhay, ng edad at katayuan, ng kalagayang panlipunan at pang-ekonomiya, at ng ebidensyang inihain ng mga panig. Kaya mahirap tiyakin nang maaga ang resulta batay lamang sa mga nakasanayang saklaw ng halaga.
 
 ## Q14. Kung naganap ang aksidente habang nasa trabaho, mapananagot din ba sa sibil ang amo?
 
@@ -171,9 +171,9 @@ Kailangang ibukod ang usapin ng pagpili kung sino ang hahablahin sa sibil sa usa
 
 ## Q15. Anong mga benepisyo at saklaw ng seguro sa sasakyan ang dapat tingnan?
 
-Ang obligasyong magseguro ayon sa Artikulo 6 ng Batas sa Compulsory Automobile Liability Insurance (強制汽車責任保險法) ay nasa may-ari ng sasakyan bilang panuntunan, at sa mga tinukoy na kalagayan ay saklaw din nito ang gumagamit o ang tagapamahala ng sasakyang iyon. Ang sistemang ito ay may istrukturang hindi-batay-sa-kapabayaan (no-fault, 無過失給付制度) na pagbabayad para sa taong nasugatan o namatay sa aksidente ng sasakyan, ngunit kailangang tingnan ang saklaw ng mga pasaherong itinatakda ng batas o ng ikatlong panig na nasa labas ng sasakyan.
+Ang obligasyong magseguro ayon sa Artikulo 6 ng Batas sa Sapilitang Seguro sa Pananagutan ng Sasakyan (強制汽車責任保險法) ay nasa may-ari ng sasakyan bilang panuntunan, at sa mga tinukoy na kalagayan ay saklaw din nito ang gumagamit o ang tagapamahala ng sasakyang iyon. Ang sistemang ito ay may istrukturang hindi-batay-sa-kapabayaan (no-fault, 無過失給付制度) na pagbabayad para sa taong nasugatan o namatay sa aksidente ng sasakyan, ngunit kailangang tingnan ang saklaw ng mga pasaherong itinatakda ng batas o ng ikatlong panig na nasa labas ng sasakyan.
 
-Sa aksidenteng iisang sasakyan lamang ang sangkot, karaniwang hindi saklaw ng Compulsory Automobile Liability Insurance ng sasakyang iyon ang nagmamaneho nito. Ngunit sa aksidenteng maraming sasakyan ang sangkot, may pagkakataong makapaghabol ang nagmamaneho ng bayad mula sa kompanya ng Compulsory Automobile Liability Insurance ng ibang sasakyang kaugnay ng aksidente.
+Sa aksidenteng iisang sasakyan lamang ang sangkot, karaniwang hindi saklaw ng Sapilitang Seguro sa Pananagutan ng Sasakyan ng sasakyang iyon ang nagmamaneho nito. Ngunit sa aksidenteng maraming sasakyan ang sangkot, may pagkakataong makapaghabol ang nagmamaneho ng bayad mula sa kompanya ng Sapilitang Seguro sa Pananagutan ng Sasakyan ng ibang sasakyang kaugnay ng aksidente.
 
 Ang pamantayan ng bayad na inamyendahan noong 29 Mayo 2026 ay ipinatutupad sa mga aksidenteng naganap mula 1 Hulyo 2026. Ang hangganan ng makatuwirang gastos sa medikal na kailangan sa pinsala ay TWD 200,000; ang bayad sa kapansanan (失能) ay TWD 80,000–3,000,000 ayon sa 15 antas na itinakda ng batas; ang bayad sa kamatayan ay TWD 3,000,000; at ang pinakamataas na kabuuan ng kamatayan, kapansanan at gastos sa medikal sa bawat biktima kada aksidente ay TWD 3,200,000. Maaaring ipatupad ang naunang pamantayan sa mga aksidenteng naganap bago nito.
 
@@ -191,8 +191,8 @@ Ang seguro sa pananagutan sa ikatlong panig (third-party liability insurance, �
 - [Hatol ng Taoyuan District Court, taong 112 (2023), Li-Chien Blg. 236 (112年度壢簡字第236號)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Artikulo 188 ng Kodigo Sibil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Artikulo 284 ng Kodigo Penal ng Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Batas sa Compulsory Automobile Liability Insurance (強制汽車責任保險法)](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
-- [Pamantayan ng bayad ng Compulsory Automobile Liability Insurance (強制汽車責任保險給付標準)](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
+- [Batas sa Sapilitang Seguro sa Pananagutan ng Sasakyan (強制汽車責任保險法)](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
+- [Pamantayan ng bayad ng Sapilitang Seguro sa Pananagutan ng Sasakyan (強制汽車責任保險給付標準)](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Karaniwang kontrata ng seguro sa personal na sasakyan ng Financial Supervisory Commission (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 Q16. Maaari bang ipaubaya sa kompanya ng seguro ang lahat matapos ang aksidente?

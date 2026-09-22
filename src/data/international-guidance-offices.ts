@@ -130,7 +130,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     photoAlts: [
       'Silid-tanggap ng tanggapan sa Taipei, Hovering International Law Firm',
       'Silid-trabaho ng abogado sa Taipei, Hovering International Law Firm',
-      'Silid-pulungan ng tanggapan sa Taipei, Hovering International Law Firm',
+      'Silid-pagpupulong ng tanggapan sa Taipei, Hovering International Law Firm',
     ],
     officeTitles: {
       taipei: 'Taipei',

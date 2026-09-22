@@ -35,19 +35,19 @@ Sa pagsulat ng plano ng pamumuhunan, hindi kailangang ilagay ang eksaktong adres
 
 Gayunman, kapag magbubukas na kayo ng account ng tanggapang naghahanda ng kompanya (公司籌備處帳戶) sa bangko, marami sa mga bangko ang sumusuri sa kontrata sa upa (租賃契約) at aktuwal na sinisiyasat sa lugar ang adres ng kompanya.
 
-May isang empleyado ng bangko sa Taiwan na mismong nagsabi sa akin nito.
+May isang empleyado ng bangko sa Taiwan na mismong nagsabi sa akin ng sumusunod.
 
 Lalong humihigpit ang pagbubukas ng account dahil kamakailan ay maraming dayuhan ang nagbukas ng account at pagkatapos ay hindi na nagparamdam.
 
 Sa naunang batayang bahagi, may isang mambabasang nagsabi na ang pagbubukas ng bank account ang pinakamahirap na yugto, at sang-ayon din ako roon.
 
-Dahil napakarami ng kaso ng paghuhugas ng pera (洗錢) sa Taiwan, lalo pang humihigpit ang pagbubukas ng bank account.
+Dahil napakaraming kaso ng paghuhugas ng pera (洗錢) sa Taiwan, lalo pang humihigpit ang pagbubukas ng bank account.
 
 **Payo:**
 
-Dahil nangangailangan din ng panahon ang pagsusuri sa plano ng pamumuhunan,
+Nangangailangan din ng panahon ang pagsusuri sa plano ng pamumuhunan.
 
-sabay na isagawa ang paghahanda ng plano ng pamumuhunan at ang paghahanap ng adres para sa rehistro ng kompanya.
+Kaya sabay na isagawa ang paghahanda ng plano ng pamumuhunan at ang paghahanap ng adres para sa rehistro ng kompanya.
 
 Ayon sa Artikulo 9 ng Batas sa Pamumuhunan ng mga Dayuhan (外國人投資條例), ang naaprubahang ambag na kapital ay dapat dumating nang buo sa loob ng panahong itinakda ng awtoridad (核定期限); kumpirmahin ang aktuwal na takdang panahon sa indibidwal na dokumento ng pag-apruba (sa praktika ay madalas itong humigit-kumulang isang taon).
 
@@ -65,7 +65,7 @@ Karaniwang humihingi ang bangko ng dalawang uri ng patunay ng pagkakakilanlan.
 
 Kung wala kayong sertipiko ng paninirahan ng dayuhan (ARC), maaari kayong mag-aplay sa Pambansang Ahensiya sa Imigrasyon (NIA, 內政部移民署) ng Taiwan ng **pangunahing talahanayan ng pinag-isang numero ng ID** (統一證號基本資料表).
 
-Maaari itong maibigay sa mismong araw,
+Maaari itong maibigay sa mismong araw.
 
 ngunit napakasikip sa NIA, kaya maaga po kayong pumunta at kumuha ng numero.
 
@@ -77,9 +77,9 @@ Sinusuri nga ng komite ng pagsusuri sa ilalim ng Ministri ng Ekonomiya (經濟�
 
 Ngunit hindi naman lubhang mahigpit ang pagsusuri; sinusuri ang bawat aplikasyon ayon sa mga isinumiteng dokumento.
 
-Maaari ninyong banggitin ang iba't ibang karanasan sa trabaho, pati na ang part-time na trabaho,
+Maaari ninyong banggitin ang iba't ibang karanasan sa trabaho, pati na ang part-time na trabaho.
 
-at sapat nang ipaliwanag ito nang detalyado upang makumbinsi ang mga tagasuri.
+Sapat nang ipaliwanag ito nang detalyado upang makumbinsi ang mga tagasuri.
 
 Hinggil sa bahaging ito, mainam na kumonsulta kayo nang sapat sa isang abogada o abogado sa Taiwan; maaari rin ninyong gamitin ang pahinang Makipag-ugnayan.
 
@@ -87,23 +87,23 @@ Hinggil sa bahaging ito, mainam na kumonsulta kayo nang sapat sa isang abogada o
 
 **4. May dapat bang pag-ingatan kapag umuupa ng adres para sa rehistro ng kompanya (halimbawa, isang puwesto ng restawran)?**
 
-Umaabot ng humigit-kumulang **tatlong buwan** ang pagtatatag ng kompanya, at humigit-kumulang **isang buwan** pa ang pagkuha ng permiso sa trabaho (工作許可) at ng sertipiko ng paninirahan ng dayuhan (ARC),
+Umaabot ng humigit-kumulang **tatlong buwan** ang pagtatatag ng kompanya, at humigit-kumulang **isang buwan** pa ang pagkuha ng permiso sa trabaho (工作許可) at ng sertipiko ng paninirahan ng dayuhan (ARC).
 
-kaya itakda po ninyo sa pinakahuling posibleng araw ang petsa ng pagsisimula ng kontrata.
+Kaya itakda po ninyo sa pinakahuling posibleng araw ang petsa ng pagsisimula ng kontrata.
 
 At saka, sa mga kontrata sa upa ng puwesto sa Taiwan, madalas na binibigyan ng may-ari ang umuupa ng "**panahon ng pagsasaayos ng loob**" (裝潢期間).
 
 Ito ay panahong hindi sinisingil ang upa, kaya subukan po ninyong makipagkasundo hinggil dito.
 
-Hindi madali para sa dayuhan ang umupa ng puwesto, at maliit lamang ang deposito sa upa (押金) sa Taiwan (karaniwang katumbas ng dalawang buwang upa) kaya kaunti ang proteksiyon ng may-ari,
+Hindi madali para sa dayuhan ang umupa ng puwesto, at maliit lamang ang deposito sa upa (押金) sa Taiwan (karaniwang katumbas ng dalawang buwang upa) kaya kaunti ang proteksiyon ng may-ari.
 
-at dahil dito ay nag-aatubili ang mga may-ari na magpaupa sa dayuhan.
+Dahil dito ay nag-aatubili ang mga may-ari na magpaupa sa dayuhan.
 
 Kaya inirerekomenda kong maaga pa lamang ay maghanap na kayo ng lugar ng operasyon.
 
-Kung hindi maayos ang takbo ng negosasyon sa may-ari,
+Hindi palaging aayos ang negosasyon sa may-ari.
 
-maaari ninyong ialok, kung kinakailangan, ang pagpapanotaryo (公證) ng kontrata sa upa o ang pagbibigay ng karagdagang deposito sa upa.
+Maaari ninyong ialok, kung kinakailangan, ang pagpapanotaryo (公證) ng kontrata sa upa o ang pagbibigay ng karagdagang deposito sa upa.
 
 ​
 
@@ -115,9 +115,9 @@ Halimbawa, kung ang rehistradong gawain (營業項目) ay pagkain at inumin (餐
 
 Gaya ng nabanggit ko na, sinusuri ng bangko ang kontrata sa upa at personal na sinisiyasat sa lugar ang adres ng kompanya.
 
-Bukod pa riyan, sa huling yugto ng rehistro ng kompanya, hinihingi rin ng pamahalaang lungsod (市政府) na nasa sonang maaaring pagpatakbuhan ng restawran ang adres na irerehistro,
+Bukod pa riyan, sa huling yugto ng rehistro ng kompanya, hinihingi rin ng pamahalaang lungsod (市政府) na nasa sonang maaaring pagpatakbuhan ng restawran ang adres na irerehistro.
 
-at kung karaniwang opisina ito, maaaring hindi maging posible ang rehistro ng kompanya.
+Kung karaniwang opisina ito, maaaring hindi maging posible ang rehistro ng kompanya.
 
 Halimbawa, kung ang mga rehistradong gawain ay maaaring isagawa sa karaniwang opisina, gaya ng negosyo sa advertising o ng pakyawang kalakalan, maaaring itatag doon ang kompanya.
 

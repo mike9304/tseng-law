@@ -1519,7 +1519,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
       'Si encara no sap a quina àrea pertany el seu assumpte, la pàgina de ',
     servicesAssistanceLinkLabel: 'Contacte',
     servicesAssistanceAfter:
-      ' explica com redactar un resum que una advocada o un advocat revisarà.',
+      'explica com redactar un resum que una advocada o un advocat revisarà.',
     columnsViewAllLabel: 'Veure tots els articles',
     columnsReadMoreLabel: 'Continuar llegint',
     columnsReviewLabel: 'Revisat per l’advocada Wei Tseng',
@@ -1538,7 +1538,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicació general en català sobre l’abast de Hovering International Law Firm a Taiwan, els idiomes de consulta i el primer contacte.',
       intro:
-        'Hovering International Law Firm acompanya clients de l’estranger, també qui té un vincle amb Taiwan, en assumptes de dret taiwanès: inversió i constitució de societats, litigis civils, matrimoni, família i successions, dret laboral, dret penal i propietat intel·lectual. Aquesta part en català l’ajuda a saber quin treball entra en el nostre abast, què convé preparar i com contactar-nos. Són indicacions generals, no assessorament jurídic per al seu propi cas.',
+        'Hovering International Law Firm acompanya clients de l’estranger, també els qui tenen un vincle amb Taiwan, en assumptes de dret taiwanès: inversió i constitució de societats, litigis civils, matrimoni, família i successions, dret laboral, dret penal i propietat intel·lectual. Aquesta part en català l’ajuda a saber quin treball entra en el nostre abast, què convé preparar i com contactar-nos. Són indicacions generals, no assessorament jurídic per al seu propi cas.',
       sections: [
         {
           heading: 'Què fem',
@@ -1588,7 +1588,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Inversió i constitució de societats a Taiwan',
           paragraphs: [
-            'Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, banca, comprovació del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.',
+            'Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, tràmits bancaris, comprovació del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.',
             'L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sola un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.',
           ],
         },
@@ -1596,7 +1596,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Litigis civils i danys',
           paragraphs: [
             'Aquesta àrea cobreix conflictes contractuals, reclamacions de danys per acte il·lícit i conflictes de consum. El treball sol començar per una cronologia dels fets, la revisió de documents i proves existents i, només després, els passos següents.',
-            'Els terminis, inclosos els terminis legals per demandar, i la integritat de les proves influeixen molt en el curs de l’assumpte civil, així que indiqui des del principi les dates que conegui. Si conserva contractes, missatges, justificants de pagament o fotos del lloc, esmenti-ho en el primer missatge.',
+            'Els terminis, inclosos els terminis legals per demandar, i la completesa de les proves influeixen molt en el curs de l’assumpte civil, així que indiqui des del principi les dates que conegui. Si conserva contractes, missatges, justificants de pagament o fotos del lloc, esmenti’ls en el primer missatge.',
           ],
         },
         {
@@ -1700,7 +1700,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'La consulta pot ser un servei de pagament',
           paragraphs: [
-            'La consulta amb una advocada o un advocat pot ser un servei de pagament. Aquesta pàgina no afirma que la primera consulta sigui gratuïta, i cap part no s’ha de llegir en aquest sentit.',
+            'La consulta amb una advocada o un advocat pot ser un servei de pagament. Aquesta pàgina no afirma que la primera consulta sigui gratuïta, i res d’aquesta pàgina no s’ha d’entendre en aquest sentit.',
             'Si la consulta té cost, la quantia i la forma de pagament es comuniquen abans que tingui lloc.',
           ],
         },
@@ -1875,7 +1875,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lloc d’emmagatzematge i prestadors',
           paragraphs: [
-            'Aquest lloc s’allotja a Vercel, i el seu enviament es guarda en un emmagatzematge d’objectes no públic d’aquest servei. El correu s’envia a través del servei de correu que utilitza el despatx.',
+            'Aquest lloc s’allotja a Vercel, i el seu enviament es guarda en un emmagatzematge no públic d’aquest servei. El correu s’envia a través del servei de correu que utilitza el despatx.',
             'Els servidors d’alguns prestadors poden ser fora de Taiwan, de manera que les seves dades poden emmagatzemar-s’hi i tractar-s’hi. Un cop acomplerta la finalitat de l’emmagatzematge, les dades se suprimeixen sense demora; les dades que s’hagin de conservar segons les normes aplicables es conserven durant aquest termini. Les sol·licituds relatives a dades personals es reben a wei@hoveringlaw.com.tw.',
           ],
         },
@@ -1899,7 +1899,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Àmbit jurídic',
           paragraphs: [
-            'El despatx exerceix segons el dret de Taiwan, i aquesta pàgina només parla del treball en aquest marc.',
+            'El despatx exerceix l’advocacia segons el dret de Taiwan, i aquesta pàgina només parla del treball en aquest marc.',
             'El contingut no és assessorament segons el dret de cap jurisdicció distinta de Taiwan, inclòs el dret del lloc on vostè resideix. Si alguna part del seu assumpte es regeix per una altra jurisdicció, confirmarem amb vostè quin professional qualificat cal per a aquesta part.',
           ],
         },
@@ -1925,7 +1925,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
       description:
         'Articles en català que expliquen qüestions freqüents del dret de Taiwan. El contingut és informació general en el moment de la publicació, no assessorament jurídic per al seu cas.',
       intro:
-        'El despatx publica articles que expliquen qüestions freqüents del dret de Taiwan. Els articles disponibles en català figuren en aquesta pàgina; a més hi ha quatre enllaços, cadascun obre la llista d’articles d’un idioma original.',
+        'El despatx publica articles que expliquen qüestions freqüents del dret de Taiwan. Els articles disponibles en català figuren en aquesta pàgina; a més hi ha quatre enllaços, i cadascun obre la llista d’articles d’un idioma original.',
       sections: [
         {
           heading: 'Quatre llistes segons l’idioma',

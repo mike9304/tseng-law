@@ -91,7 +91,7 @@ La constitució de la societat requereix uns **3 mesos**, i l’obtenció del pe
 
 de manera que fixi la data d’inici del contracte tan tard com sigui possible.
 
-A més, en els contractes d’arrendament de locals a Taiwan el propietari sol concedir a l’arrendatari un «**període d’obres o d’acondicionament**» (裝潢期間).
+A més, en els contractes d’arrendament de locals a Taiwan el propietari sol concedir a l’arrendatari un «**període d’adequació**» (裝潢期間).
 
 Es tracta d’un període exempt de renda, i convé negociar-lo.
 

@@ -141,7 +141,7 @@ const COPY: Record<AiIntakeLocale, LocaleCopy> = {
       '이전 발송 결과가 확인되지 않았습니다. 이 키로는 다시 보내지 않습니다. 수신함을 확인하거나 새 미리보기와 새 키를 사용하세요.',
   },
   'zh-hant': {
-    localeLabel: '繁體中文',
+    localeLabel: '繁體中文（台灣）',
     categoryLabels: {
       company_setup: '公司設立・投資',
       traffic_accident: '車禍・損害賠償',

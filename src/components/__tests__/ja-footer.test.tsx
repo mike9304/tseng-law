@@ -127,7 +127,7 @@ describe('footer social localization', () => {
     expect(html).toContain('<details');
     for (const autonym of [
       '한국어',
-      '繁體中文',
+      '繁體中文（台灣）',
       'English',
       '日本語',
       'Tiếng Việt',

@@ -36,7 +36,7 @@ export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[] = [
   {
     locale: 'zh-hant',
     autonym: PUBLIC_LANGUAGE_AUTONYMS['zh-hant'],
-    englishName: 'Traditional Chinese',
+    englishName: 'Traditional Chinese (Taiwan)',
     region: 'asia-pacific',
   },
   {

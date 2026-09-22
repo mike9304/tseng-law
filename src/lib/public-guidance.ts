@@ -190,7 +190,7 @@ export const PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT = '__public-guidance-u
 
 export const PUBLIC_LANGUAGE_AUTONYMS: Record<PublicLocale8, string> = {
   ko: '한국어',
-  'zh-hant': '繁體中文',
+  'zh-hant': '繁體中文（台灣）',
   en: 'English',
   ja: '日本語',
   vi: 'Tiếng Việt',

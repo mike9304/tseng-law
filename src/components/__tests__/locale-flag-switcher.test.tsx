@@ -60,7 +60,7 @@ describe('LocaleFlagSwitcher', () => {
   it('renders every public autonym without national flags or country labels', () => {
     expect(LOCALE_FLAG_OPTIONS.map((option) => [option.locale, option.label])).toEqual([
       ['ko', '한국어'],
-      ['zh-hant', '繁體中文'],
+      ['zh-hant', '繁體中文（台灣）'],
       ['en', 'English'],
       ['ja', '日本語'],
       ['vi', 'Tiếng Việt'],

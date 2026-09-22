@@ -61,9 +61,11 @@ describe('public eight-locale helper isolation', () => {
   });
 
   it('exposes every registry autonym without flags or nationality labels', () => {
+    // zh-hant carries a Taiwan marker by explicit user instruction (2026-09-22); it is a script/region
+    // qualifier for Traditional Chinese, not a nationality label.
     expect(PUBLIC_LANGUAGE_AUTONYMS).toEqual({
       ko: '한국어',
-      'zh-hant': '繁體中文',
+      'zh-hant': '繁體中文（台灣）',
       en: 'English',
       ja: '日本語',
       vi: 'Tiếng Việt',

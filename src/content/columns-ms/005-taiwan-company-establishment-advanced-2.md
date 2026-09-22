@@ -39,7 +39,7 @@ Sebelum memindahkan modal (資本金匯款), tanyakan kepada bank utama anda di 
 
 **2. Apabila membayar modal syarikat, bolehkah dolar Taiwan (新臺幣, TWD) dipindahkan dari akaun peribadi di Taiwan ke akaun persediaan syarikat Taiwan?**
 
-Ini mungkin, tetapi anda mesti mengemukakan dokumen yang menjustifikasikan punca dana dalam dolar Taiwan yang diperoleh di Taiwan.
+Ini mungkin, tetapi anda mesti mengemukakan dokumen yang membuktikan punca dana dalam dolar Taiwan yang diperoleh di Taiwan.
 
 Jika contohnya pendapatan gaji yang diperoleh di Taiwan, perlu dikemukakan salinan perakuan cukai pegangan ke atas pendapatan gaji itu (薪資所得的扣繳憑單影本).
 
@@ -51,9 +51,9 @@ Jika pindahan dilakukan dari akaun bank di Korea, tidak perlu menyertakan dokume
 
 **3. Selepas modal tiba dalam akaun persediaan, bilakah ia boleh ditukar kepada akaun syarikat biasa (正式公司帳戶)?**
 
-Pada umumnya, setelah dokumen pendaftaran badan undang-undang (法人登記文件) diterima,
+Pada umumnya, dokumen pendaftaran badan undang-undang (法人登記文件) mesti diterima dahulu.
 
-penanggungjawab (負責人) boleh pergi ke bank dan menukar akaun persediaan syarikat kepada akaun biasa.
+Penanggungjawab (負責人) kemudian boleh pergi ke bank dan menukar akaun persediaan syarikat kepada akaun biasa.
 
 Namun, kerana peraturan dalaman setiap bank (銀行) berbeza, jika modal perlu digunakan dengan segera, patut merujuk dahulu kepada bank.
 
@@ -69,7 +69,7 @@ Sesetengah bank boleh mengenakan keperluan tambahan, contohnya tempoh penggunaan
 
 **5. Bolehkah syarikat menggaji pekerja warganegara asing?**
 
-A. Pekerja pertama: permohonan dikemukakan sebagai kerja pengurusan dalam perniagaan pelaburan biasa orang Cina perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria “kerja bersifat khusus atau teknikal” pada titik B di bawah tidak terpakai, tetapi terpakai syarat penerima, khususnya pengurus (經理人) syarikat yang modal orang Cina perantauan atau orang asing melebihi 1/3, serta syarat prestasi majikan mengenai modal dan perolehan (perkara 38 dan 39 standard semakan).
+A. Pekerja pertama: permohonan dikemukakan sebagai kerja pengurusan dalam perniagaan pelaburan biasa orang Cina perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria “kerja khusus atau teknikal” (專門性或技術性工作) pada titik B di bawah tidak terpakai, tetapi terpakai syarat penerima, khususnya pengurus (經理人) syarikat yang modal orang Cina perantauan atau orang asing melebihi 1/3, serta syarat prestasi majikan mengenai modal dan perolehan (perkara 38 dan 39 standard semakan).
 
 B. Mulai pekerja berikutnya, terdapat had: jika bilangan pekerja yang digaji melebihi 1 orang, pendidikan dan pengalaman relevan pekerja, peraturan upah purata penggajian serta peraturan modal dan perolehan syarikat dirawat selaras dengan “kerja khusus atau teknikal” (專門性或技術性工作).
 

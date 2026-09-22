@@ -1,0 +1,136 @@
+WO-F-ms r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ms-r3
+date: 2026-09-23
+scope: Malay columns 001–018 and the `ms` strings in international-guidance-asia.ts. No commit. llms-txt and inquiry-copy had no accepted row. Tests did not pin any rewritten Malay string, so no test file was edited. TWD 1.57M untouched. Frontmatter `url` Hangul left (009 and 008).
+
+## Rows applied
+
+ms-a (20 rows; 16 applied)
+1 P1 009. The three existing lines now assign the rights by fault: the employer may withhold severance, and the worker may claim it. Blocks not merged.
+2 P2 009. “menurut siapa” is now “pihak yang lebih dahulu menamatkan kontrak atas sebab yang mencukupi” / “boleh sama ada tidak membayar … atau menuntutnya.” Blocks not merged.
+3 P2 008 difficulty row. Header “Tahap prosedur” → “Tahap kesukaran”; cells Mudah / Sukar / Mudah.
+4 P2 007 但書. “Rizab (但書)” and the later “rizab perenggan 2” / “teks rizab” that name the proviso → “peruntukan kecualian”. Surplus-reserve “rizab” in 002 and 004 left.
+5 P2 007 residence sentence now says the real residence, or an address that can receive service, differs from the documents.
+6 P2 004. “dan peranti serupa” removed from the investment-credit sentence (FAQ and body).
+7 P2 004. “penerapan serentak” / “had penerapan serentak” → “sekatan terhadap manfaat berganda”; “cara pengiraan” in that list → “cara kredit”.
+8 P2 guidance. “penceraian” → “perceraian”.
+9 P2 005. The split registration sentence was not merged (Korean source is also two blocks). Each block is now a complete sentence: documents must be received first; the responsible person may then convert the account.
+10 P2 005. Point A now uses “kerja khusus atau teknikal (專門性或技術性工作)”, matching point B.
+11 P2 008. “dan ialah jurujual dengan jualan tertinggi…”.
+14 P2 guidance. “soalan sebanding” → “hal yang seumpamanya”; the following “soalan demikian” → “hal demikian” in the same answer.
+15 P2 003. “tiada satu prosedur yang lebih sesuai untuk semua kes.”
+16 P2 003. “membentuk tindakan” → “mengemukakan tuntutan” (2), and “dibentuk” in the same paragraph → “dikemukakan”.
+17 P2 003. “belanja mahkamah” → “kos mahkamah” (2, including “soalan kos mahkamah”).
+18 P2 003. “sebelum pengajuan rayuan” → “sebelum rayuan dikemukakan”.
+
+ms-b (45 rows; 44 applied)
+1 P1 011 handover. The agreement now covers which records are handed over, how, and whether access survives.
+2 P1 016. 認證 stays “pengesahan dokumen”; 檢認 is “probat wasiat”.
+3 P2 010 chronology. “tarikh perjalanan” → “tarikh peristiwa”.
+4 P2 010. Adverse inference, not an automatic adverse assessment.
+5 P2 010. “justifikasi” in the loss list → “dokumen sokongan”.
+6 P2 011. “menawarkan” → “memberi secara percuma” (body and checklist, 2).
+7 P2 011. Manufacturer records are provided, translated and supplemented. FAQ/body “pelengkap dokumen” and the later “pelengkap” → “permintaan dokumen tambahan” (3).
+8 P2 011. “ejen, pengedar utama atau pengedar”.
+9 P2 011. “sebutan yang didaftarkan” / “sebutan yang ditentukan” → “maklumat”.
+10 P2 012. Space to pass and to return.
+11 P2 012. “Hasil kes ini tidak bermakna…”.
+12 P2 013. Lease “dinotari (公證)” and “jika perlu”.
+13 P2 014. The worker’s signature helps show agreement; it is not itself the document.
+14 P2 014. “tempoh biasa untuk mengisi jawatan itu”.
+15 P2 014. The served portion vests in the worker.
+16 P2 015. “premis tambahan (分支機構)” → “cawangan perniagaan (分支機構)”.
+17 P2 015. The 主動查詢 label is “pertanyaan atas inisiatif pihak berkuasa” (body, alt, caption). The following clause no longer calls that step official verification.
+18 P2 017. Broad logistics does not make the company a motor-freight carrier.
+19 P2 017. The individual small-truck route is “laluan tersendiri yang sempit” (FAQ, body, and the heading).
+20 P2 017. The published foreign-investment review target is not the total time to establish the carrier.
+21 P2 018. “perundingan saham” → “urus niaga saham”.
+22 P2 018. Work the head office will perform directly, and work intended for the Taiwan organization.
+23 P2 018. “Contoh tajuk”.
+24 P2 010. “memandang darjah” → “memandangkan darjah”.
+25 P2 010. “pertikaian yang tertakluk kepada undang-undang perlindungan pengguna”.
+26 P2 010. Travel to the hospital or clinic for treatment and back.
+27 P2 011. “dibentuk oleh mesej”.
+28 P2 011. “mereka bentuk”.
+30 P2 016. The heir condition is one “Jika” sentence in the FAQ and the body. Chinese glosses kept.
+31 P2 017. The ancillary-services question puts the services before the verb.
+32 P2 013. “kes … banyak”; immigration office “sangat sesak”.
+33 P2 014. The payment is the thing labelled as a signing or retention bonus.
+34 P2 010 and the same calque in 003. “penghutang pampasan” → “pihak yang wajib membayar pampasan” (2).
+35 P2 011. “boleh dikenakan denda pentadbiran”.
+36 P2 011 and 018 title/H1. “Jenama kosmetik asing”; “Syarikat komponen semikonduktor asing”.
+37 P2 011 and 012. “masuk ke dalam” (falls within) → the exception or the ban applies. The same calque in 004 (“masuk ke dalam skop”) → “termasuk dalam skop”.
+38 P2 012. Pass on the left, at least 0.5 meter from the vehicle being passed.
+39 P2 013. “membuka akaun persediaan di bank”.
+40 P2 016. “Harta khas ialah harta yang dimiliki…”.
+41 P2 017. “usahawan pengangkutan … di Taiwan yang memegang kebenaran”.
+42 P2 018. Representative office is “Kehadiran yang didaftarkan”, not a business point.
+43 P2 014. “kontrak borang standard”.
+44 P2 018, and the work-permit phrase in 013 and 017. “permit kerja” / “permit kediaman”. “lesen operasi”, “lesen memandu” and “pinjaman lesen” left. Column 001’s “lesen kerja” left: part a treated 001 as already native, and the row’s sweep was 013 and 017.
+45 P2 018. “papan saham pra-penyenaraian Taiwan (興櫃)”.
+
+R2–R10 were already in this Malay set (Korea only as a labelled example, consultation languages English, Chinese, Japanese and Korean only, no interpreter / reply-time / free first meeting / result promise, Malaysian dates, comma thousands, Traditional Chinese glosses). Malay does not mark gender; Wei Tseng stays epicene. No further R2–R10 edits beyond the rows and the sweeps below.
+
+## Rows skipped
+
+ms-a 12 — turn Q16–Q20 into `##` headings.
+Reason: Korean keeps Q16–Q20 as plain lines. `checkHeadings` compares heading levels. ACCEPTED-ROUND says not to add headings.
+
+ms-a 13 and ms-b 29 — delete U+200B blank lines (003 Q16–Q20, 005 including `**​**`, 006, 008, 009, 013, 015).
+Reason: `checkBlocks` requires the target ZWSP count to equal the Korean source. A line that contains only U+200B is a non-empty block. Deleting it fails both the ZWSP count and the block count. 009’s five ZWSP lines match the Korean source and were left.
+
+ms-a 19 P3 — drop the leading space on `servicesAssistanceAfter`.
+Reason: not applied. See disagreements. The spaces are on opposite sides of the Hubungi link.
+
+ms-a 20 P3 — “Baca selanjutnya” → “Baca seterusnya”.
+Reason: `ColumnsGrid.tsx` hard-codes the same CTA, and `columns-grid-guidance-labels.test.tsx` requires the rendered card to equal `home.columnsReadMoreLabel`. That component is outside this lane’s write list. Changing only the guidance string fails the test.
+
+## Systemic patterns
+
+- “justifikasi” standing in for supporting documents → “dokumen sokongan”: 20 nouns (001×1, 002×9, 010×1, 014×6, 016×3). Related verbs: 003 “dijustifikasikan” → “dibuktikan” (1); 005 “menjustifikasikan” → “membuktikan” (1).
+- “memandang” meaning “in light of” → “memandangkan”: 4 (010×1, 014×3). Existing “memandangkan” left.
+- “objek” as the thing a rule covers or the subject of a review: 18 (004 penyenaraian ×3, pengisytiharan ×2, peraturan ×1; 011 denda ×1; 014 semakan ×1 and pemulangan ×1; 015 proactive-inquiry label ×3; 016 pewarisan ×1, pengiraan ×3, semakan ×1; 018 “Contoh objek” ×1). “objek bukti”, “objek modal”, “objek pindahan”, “objek sebenar” and “objek pengurangan modal” left; those name a subject matter, and 001–002 were not in this calque’s finding list.
+- 但書 called “rizab”: 5 in 007 (FAQ, body, and the three later proviso mentions). Surplus “rizab” / “rizab berkanun” left.
+- “penghutang pampasan”: 2 (010 and the same sentence in 003). “penghutang nafkah” in 007 left.
+- “masuk ke dalam” for “falls within”: 3 (011, 012, 004).
+- “mereka bentuk” as two words: 2 (011, 018).
+- Work permit “lesen kerja” / “lesen kediaman” → “permit”: 013×1, 017×6, 018 kerja ×3 and kediaman ×2.
+- English modifier stack / place before the object: 011 brand ×1, 013 bank account ×1, 017 carrier ×1, 018 title and H1 ×2, opening sentence ×1, subject-line example ×1.
+- Indonesian “pengajuan”: 1 (003).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ms --lang ms 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ms src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+The 21 was counted before this log file existed. `WO-F-ms.txt` was already modified, and `ms-a.md` / `ms-b.md` were already untracked.
+
+015 numbers is WARN (`extra in translation (2): 2×2`), not FAIL. Those digits were already in the file; this lane did not add them.
+
+## Reviewer disagreements (not applied)
+
+ms-a 19. The Before string ends with a space and the After string starts with a space, but they sit on opposite sides of the link: `…halaman ` + Hubungi + ` menerangkan…`. That is one space before the link and one space after it. Dropping the After space would render “Hubungimenerangkan”.
+
+The ZWSP and Q16-heading rows are not factual errors. They ask for a structure change the checker pins to the Korean source.

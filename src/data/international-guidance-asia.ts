@@ -635,7 +635,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perkahwinan, keluarga dan pusaka',
           paragraphs: [
-            'Kami mengendalikan penceraian (離婚), pembahagian harta, hak jagaan dan kewajipan ibu bapa terhadap anak bawah umur (未成年子女權利義務之行使或負擔), hak lawatan (會面交往) dan pusaka (繼承), termasuk jika pihak atau harta berada di negara berlainan. Hal keluarga merentas sempadan sering memerlukan semakan tambahan dokumen daftar isi rumah (戶籍), bentuk surat cara, dan kebolehbuktiannya di Taiwan.',
+            'Kami mengendalikan perceraian (離婚), pembahagian harta, hak jagaan dan kewajipan ibu bapa terhadap anak bawah umur (未成年子女權利義務之行使或負擔), hak lawatan (會面交往) dan pusaka (繼承), termasuk jika pihak atau harta berada di negara berlainan. Hal keluarga merentas sempadan sering memerlukan semakan tambahan dokumen daftar isi rumah (戶籍), bentuk surat cara, dan kebolehbuktiannya di Taiwan.',
             'Kerana hal keluarga kerap membawa tempoh dan prosedur pada masa yang sama, ringkasan pertama sepatutnya menyatakan hubungan pihak, tempat tinggal semasa, dan prosedur yang sudah berjalan.',
           ],
         },
@@ -664,7 +664,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           heading: 'Skop dan pengesahannya',
           paragraphs: [
             'Firma bekerja menurut undang-undang Taiwan dan mengendalikan hal dalam bidang di atas. Skop setiap hal disahkan secara berasingan selepas peguam menyemak mesej anda.',
-            'Status tinggal, permit kerja dan soalan sebanding dinilai daripada dokumen dan keadaan orang berkenaan, bukan daripada kewarganegaraan. Jika sebahagian hal anda menyentuh soalan demikian, nyatakan semasa menghubungi. Halaman ini tidak menjanjikan hasil mahupun tempoh jawapan.',
+            'Status tinggal, permit kerja dan hal yang seumpamanya dinilai daripada dokumen dan keadaan orang berkenaan, bukan daripada kewarganegaraan. Jika sebahagian hal anda menyentuh hal demikian, nyatakan semasa menghubungi. Halaman ini tidak menjanjikan hasil mahupun tempoh jawapan.',
           ],
         },
       ],

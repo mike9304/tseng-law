@@ -122,7 +122,7 @@ Cukai jualan dan cukai pendapatan perniagaan berbeza menurut objek cukai dan car
 
 Perjanjian cukai pendapatan Taiwan–Korea berkuat kuasa pada 27 Disember 2023 dan terpakai mulai 1 Januari 2024; bagi faedah dan royalti yang memenuhi syarat terpakai juga kadar maksimum di negara sumber 10%. Apabila meneliti hak mengenakan cukai ke atas keuntungan perniagaan, 4 jenis pertubuhan tetap yang dijelaskan di atas mesti semua dipertimbangkan. Selain hari perkhidmatan, kemudahan tetap, tempoh kerja, kuasa memeterai wakil dan aktiviti sebenar mesti diteliti bersama.
 
-Kadar terhad perjanjian tidak terpakai secara automatik semata-mata kerana perjanjian wujud. Perlu diteliti kediaman menurut perjanjian orang yang dikenakan cukai dan sifat benefisiari sebenar, sifat undang-undang pendapatan serta perakuan kediaman (居住者證明) yang dikemukakan dan dokumen permohonan. Struktur operasi, kontrak, invois, kerja sebenar dan aliran bayaran mesti dijaga agar sepadan; tarikh akhir pengisytiharan dan penyimpanan justifikasi mesti diteliti secara berasingan.
+Kadar terhad perjanjian tidak terpakai secara automatik semata-mata kerana perjanjian wujud. Perlu diteliti kediaman menurut perjanjian orang yang dikenakan cukai dan sifat benefisiari sebenar, sifat undang-undang pendapatan serta perakuan kediaman (居住者證明) yang dikemukakan dan dokumen permohonan. Struktur operasi, kontrak, invois, kerja sebenar dan aliran bayaran mesti dijaga agar sepadan; tarikh akhir pengisytiharan dan penyimpanan dokumen sokongan mesti diteliti secara berasingan.
 
 ## Sumber rasmi
 

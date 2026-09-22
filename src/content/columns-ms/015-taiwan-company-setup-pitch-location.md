@@ -61,15 +61,15 @@ Maka, dalam amalan, tidak perlu mengesahkan semua item perniagaan semasa pendaft
 
 Menurut “[arahan operasi perkhidmatan maklumat premis bandar Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) dan panduan yang berkuat kuasa bandar Taipei,
 
-sejak 1 Januari 2023, semasa permohonan pendaftaran penubuhan, pindahan pejabat utama atau penambahan item perniagaan syarikat atau perniagaan (termasuk cawangan (分公司) dan premis tambahan (分支機構)), hasil semakan awal premis **mesti** dilampirkan kepada permohonan pendaftaran, tanpa mengira sektor.
+sejak 1 Januari 2023, semasa permohonan pendaftaran penubuhan, pindahan pejabat utama atau penambahan item perniagaan syarikat atau perniagaan (termasuk cawangan (分公司) dan cawangan perniagaan (分支機構)), hasil semakan awal premis **mesti** dilampirkan kepada permohonan pendaftaran, tanpa mengira sektor.
 
-Senarai di bawah “item perniagaan yang menjadi objek pengesahan rasmi” (主動查詢之營業項目) menamakan item perniagaan yang pejabat perdagangan mengesahkan secara rasmi tambahan semasa semakan pendaftaran (隨案主動查詢) apabila item perniagaan muncul dalam permohonan tetapi tiada dalam hasil yang dilampirkan; hakikat bahawa suatu item perniagaan tidak muncul dalam senarai ini tidak bermakna bahawa pengesahan dikecualikan.
+Senarai di bawah “item perniagaan yang tertakluk kepada pertanyaan atas inisiatif pihak berkuasa” (主動查詢之營業項目) menamakan item perniagaan yang pejabat perdagangan tanya atas inisiatifnya semasa semakan pendaftaran (隨案主動查詢) apabila item perniagaan muncul dalam permohonan tetapi tiada dalam hasil yang dilampirkan; hakikat bahawa suatu item perniagaan tidak muncul dalam senarai ini tidak bermakna bahawa pertanyaan itu dikecualikan.
 
 Jika dibuka di tempat di mana premis restoran tidak mungkin, denda pentadbiran (罰鍰) pihak berkuasa kompeten boleh kemudian dikenakan.
 
-![“item perniagaan yang menjadi objek pengesahan rasmi” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![“item perniagaan yang tertakluk kepada pertanyaan atas inisiatif pihak berkuasa” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-“item perniagaan yang menjadi objek pengesahan rasmi” (主動查詢之營業項目)
+“item perniagaan yang tertakluk kepada pertanyaan atas inisiatif pihak berkuasa” (主動查詢之營業項目)
 
 Inilah intinya; bagi soalan lain, anda boleh menghantar pertanyaan melalui halaman Hubungi — tempoh jawapan tidak dijanjikan.
 

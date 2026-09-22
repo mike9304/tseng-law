@@ -29,7 +29,7 @@ Il existe toutefois des **cas exceptionnels**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Dans les situations particulières suivantes, même si le salarié démissionne de son propre chef, l’employeur doit lui verser l’indemnité de licenciement (articles 14 de la loi sur les normes du travail, qui applique par analogie l’article 17 ; 勞動基準法第14條) :
+Dans les situations particulières suivantes, même si le salarié démissionne de son propre chef, l’employeur doit lui verser l’indemnité de licenciement (l’article 14 de la loi sur les normes du travail, qui applique par analogie l’article 17 ; 勞動基準法第14條) :
 
 1. Lorsque l’employeur, lors de la conclusion du contrat de travail (勞動契約), fait une déclaration de volonté mensongère (虛偽意思表示) de sorte que le salarié se méprend et qu’il existe un risque de subir un préjudice
 
@@ -91,7 +91,7 @@ C’est pourquoi, dans les conflits du travail (勞資糾紛) à Taïwan,
 
 le « **temps** » est très important.
 
-Dans la plupart des cas, celui qui s’est préparé à l’avance voit ses droits protégés.
+Dans la plupart des cas, Celui qui s’est préparé à l’avance est mieux placé pour faire valoir ses droits ; aucun résultat déterminé n’en découle.
 
 ---
 

@@ -586,7 +586,7 @@ const ELEMENTS = {
     ar: /علاقة بين المحامي/,
     de: /Mandatsverhältnis/,
     es: /relación entre abogado/,
-    fr: /relation entre avocate ou avocat/,
+    fr: /relation entre l’avocate ou l’avocat et le client/,
     pt: /relação entre advogada ou advogado/,
     'zh-hans': /律师与委托人关系/,
     ms: /hubungan antara peguam/,

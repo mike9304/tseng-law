@@ -1006,7 +1006,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
   },
   contactCta: 'Envoyer une demande de consultation',
   footerNotice:
-    'Cette page en français ne contient que des indications générales sur le travail du cabinet selon le droit de Taïwan. Elle n’est pas un avis juridique pour une affaire concrète, et l’envoi d’un message ne crée pas, à lui seul, une relation entre avocate ou avocat et client.',
+    'Cette page en français ne contient que des indications générales sur le travail du cabinet selon le droit de Taïwan. Elle n’est pas un avis juridique pour une affaire concrète, et l’envoi d’un message ne crée pas, à lui seul, une relation entre l’avocate ou l’avocat et le client.',
   skipLink: 'Passer la navigation et aller au contenu',
   menuLabel: 'Menu',
   languageLabel: 'Langue d’affichage',
@@ -1054,7 +1054,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
     imageBandAlt: 'Maison traditionnelle taïwanaise (三合院) et un pavillon contemporain en plein jour',
     videoPauseLabel: 'Mettre la vidéo en pause',
     videoPlayLabel: 'Lire la vidéo',
-    videoReplayLabel: 'Relire la vidéo',
+    videoReplayLabel: 'Revoir la vidéo',
   },
   pages: {
     home: {
@@ -1113,7 +1113,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investissement et constitution de sociétés à Taïwan',
           paragraphs: [
-            'Nous accompagnons des entreprises et des investisseurs étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous appuyons aussi la comptabilité et la fiscalité nées de la constitution et de l’exploitation à Taïwan.',
+            'Nous accompagnons des entreprises et des investisseurs étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous accompagnons aussi la comptabilité et la fiscalité liées à la constitution et à l’exploitation à Taïwan.',
             'L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société ne produit pas, à elle seule, un titre de séjour (居留) ni un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.',
           ],
         },
@@ -1127,7 +1127,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mariage, famille et successions',
           paragraphs: [
-            'Nous traitons le divorce (離婚), le partage des biens, l’exercice et la charge des droits et devoirs à l’égard des enfants mineurs (未成年子女權利義務之行使或負擔), le droit de visite (會面交往) et les successions (繼承), y compris lorsque les parties ou les biens se trouvent dans des États différents. Les affaires familiales transfrontalières exigent souvent un examen supplémentaire des pièces du registre des ménages (戶籍), de la forme des actes et de leur force probante à Taïwan.',
+            'Nous traitons le divorce (離婚), le partage des biens, l’exercice de l’autorité parentale sur les enfants mineurs (未成年子女權利義務之行使或負擔), le droit de visite (會面交往) et les successions (繼承), y compris lorsque les parties ou les biens se trouvent dans des États différents. Les affaires familiales transfrontalières exigent souvent un examen supplémentaire des pièces du registre des ménages (戶籍), de la forme des actes et de leur force probante à Taïwan.',
             'Parce que les affaires de famille s’accompagnent souvent de délais et de procédures parallèles, le premier résumé devrait indiquer le lien entre les parties, le lieu de résidence actuel et les procédures déjà en cours.',
           ],
         },
@@ -1196,7 +1196,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'AVOCATES ET AVOCATS',
       title: 'Équipe internationale de Hovering',
-      description: 'Profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering.',
+      description: 'Profils des avocates et avocats, de la direction des opérations et de l’expert-comptable associé de Hovering.',
       intro: '',
       sections: [],
     },
@@ -1225,7 +1225,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'La consultation peut être un service payant',
           paragraphs: [
-            'La consultation avec une avocate ou un avocat peut être une prestation payante. Cette page n’affirme pas que le premier entretien est offert, et aucune partie ne doit se lire en ce sens.',
+            'La consultation avec une avocate ou un avocat peut être une prestation payante. Cette page n’affirme pas que le premier entretien est offert, et rien dans cette page ne doit être compris en ce sens.',
             'Si la consultation est payante, le montant et le mode de paiement sont communiqués avant qu’elle ait lieu.',
           ],
         },
@@ -1244,7 +1244,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       description:
         'Langue de la page, langues de consultation, la démarche si vous ne pouvez utiliser aucune des quatre langues, et ce que cette page ne promet pas.',
       intro:
-        'Avant de nous écrire, distinguez s’il vous plaît les trois points suivants. Ils sont souvent mêlés, mais ils ne signifient pas la même chose.',
+        'Avant de nous écrire, veuillez distinguer les trois points suivants. Ils sont souvent mêlés, mais ils ne signifient pas la même chose.',
       sections: [
         {
           heading: 'Trois choses à tenir séparées',
@@ -1324,7 +1324,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'La consultation a-t-elle déjà eu lieu une fois la demande envoyée ?',
           answer:
-            'Non. Une demande envoyée attend l’examen d’une avocate ou d’un avocat. Ce n’est pas un avis juridique, ce n’est pas un rendez-vous confirmé, et l’envoi ne crée pas, à lui seul, une relation entre avocate ou avocat et client.',
+            'Non. Une demande envoyée attend l’examen d’une avocate ou d’un avocat. Ce n’est pas un avis juridique, ce n’est pas un rendez-vous confirmé, et l’envoi ne crée pas, à lui seul, une relation entre l’avocate ou l’avocat et le client.',
         },
         {
           question: 'Comment les honoraires sont-ils calculés ?',
@@ -1410,7 +1410,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'AVERTISSEMENT',
       title: 'Étendue et limites des indications de cette page',
       description:
-        'Le caractère général des indications, le cadre juridique et les conditions d’une relation entre avocate ou avocat et client.',
+        'Le caractère général des indications, le cadre juridique et les conditions d’une relation entre l’avocate ou l’avocat et le client.',
       intro:
         'Cette partie précise ce que ces pages d’indications en français peuvent et ne peuvent pas faire pour vous.',
       sections: [
@@ -1429,9 +1429,9 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Une relation entre avocate ou avocat et client ne naît pas d’elle-même',
+          heading: 'Une relation entre l’avocate ou l’avocat et le client ne naît pas d’elle-même',
           paragraphs: [
-            'Lire cette page, envoyer un formulaire ou un e-mail ne crée pas, à lui seul, une relation entre avocate ou avocat et client.',
+            'Lire cette page, envoyer un formulaire ou un e-mail ne crée pas, à lui seul, une relation entre l’avocate ou l’avocat et le client.',
             'Cette relation naît seulement après examen de l’affaire et confirmation, par les deux parties, de la prise en charge du travail.',
           ],
         },
@@ -1467,7 +1467,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Jusqu’où un article peut servir d’orientation',
+          heading: 'Jusqu’où un article peut servir d’indication',
           paragraphs: [
             'Les articles sont des indications générales au moment de la publication. Les règles et leur application peuvent changer, et un article ne reprend pas toutes les circonstances de votre affaire.',
             'Ne fondez donc aucune action dans une affaire réelle sur un article seul. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.',

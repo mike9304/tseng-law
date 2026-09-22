@@ -51,7 +51,7 @@ Que, dans certaines affaires, de tels résultats d’expertise interviennent ne 
 
 Avant de dépasser, vous devez d’abord vérifier si le lieu ou la situation du trafic entre dans l’interdiction de dépasser. Si la procédure de la même voie s’applique, donnez le signal de klaxon ou de phares prescrit, sans forcer le véhicule de devant à céder, attendez un signe clair de cession et achevez le dépassement avec un écart suffisant et une distance de retour sûre.
 
-Le respect de l’article 101 est important, mais il n’assure à lui seul ni d’éviter l’accident ni le résultat ultérieur de l’expertise ou du procès. Les conducteurs doivent réserver une marge de sécurité supplémentaire et s’adapter à la situation devant eux.
+Le respect de l’article 101 est important, mais il ne garantit à lui seul ni que l’accident sera évité, ni un résultat déterminé de l’expertise ou du procès. Les conducteurs doivent réserver une marge de sécurité supplémentaire et s’adapter à la situation devant eux.
 
 À titre de complément, vous pouvez consulter [l’illustration des règles et de la procédure de dépassement](https://gonews.com.tw/car/daily/21934/). S’agissant d’une source secondaire, lors de la vérification des conditions juridiques, il convient de lire aussi les règles officielles en vigueur.
 

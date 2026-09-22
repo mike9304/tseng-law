@@ -71,7 +71,7 @@ Certaines banques peuvent imposer des exigences supplémentaires, par exemple un
 
 A. Premier salarié : la demande est présentée comme un travail de direction dans une entreprise d’investissement ordinaire de Chinois d’outre-mer ou d’étrangers (一般僑外投資事業主管工作). Le critère du « travail de nature spécialisée ou technique » du point B ci-dessous ne s’applique pas, mais s’appliquent les conditions de destinataire, notamment celle de dirigeant (經理人) d’une société dont l’apport de Chinois d’outre-mer ou d’étrangers dépasse un tiers, ainsi que les conditions de résultats de l’employeur relatives au capital et au chiffre d’affaires (articles 38 et 39 des normes d’examen).
 
-B. À partir du deuxième salarié, des restrictions existent : si le nombre de salariés embauchés dépasse 1 personne, la formation et l’expérience pertinentes du salarié, les règles de rémunération moyenne d’embauche ainsi que les règles de capital et de chiffre d’affaires de la société sont traitées conformément au « travail spécialisé ou technique » (專門性或技術性工作).
+B. À partir du deuxième salarié, des restrictions existent : si la société emploie plus d’une personne de nationalité étrangère, la formation et l’expérience du salarié, la rémunération moyenne ainsi que le capital et le chiffre d’affaires de la société suivent le régime du « travail spécialisé ou technique » (專門性或技術性工作).
 
 Consultez le site du ministère du Travail de Taïwan (勞動部) : <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

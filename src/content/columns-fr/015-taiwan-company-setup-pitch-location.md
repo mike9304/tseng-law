@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Lorsque vous commencez une activité de restauration, le premier problème est de trouver l’adresse du local (營業地址).
 
-Outre la situation du marché,
+La situation du marché n’est pas le seul critère.
 
-un autre point important est
+Un autre point important est le suivant.
 
-de savoir si cette adresse se situe dans une zone où l’exploitation d’un « établissement de restauration » est possible.
+Il s’agit de savoir si cette adresse se situe dans une zone où l’exploitation d’un « établissement de restauration » est possible.
 
 ​
 
@@ -59,7 +59,7 @@ Toutefois, lors de l’immatriculation de la société, plusieurs branches sont 
 
 Aussi, en pratique, il n’est pas nécessaire de vérifier toutes les branches lors de l’immatriculation de la société.
 
-Selon les « [instructions de fonctionnement du service de renseignement sur les locaux de la ville de Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) »(臺北市營業場所協助查詢服務作業須知) et le guide en vigueur de la ville de Taipei,
+Selon les « [instructions de fonctionnement du service d’aide à la consultation des locaux de la ville de Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) »(臺北市營業場所協助查詢服務作業須知) et le guide en vigueur de la ville de Taipei,
 
 depuis le 1 janvier 2023, lors de la demande d’immatriculation de constitution, de transfert de siège ou d’ajout de branches d’activité d’une société ou d’un commerce (y compris la succursale (分公司) et l’établissement auxiliaire (分支機構)), le résultat de la consultation préalable du local **doit** être joint à la demande d’immatriculation, indépendamment du secteur.
 

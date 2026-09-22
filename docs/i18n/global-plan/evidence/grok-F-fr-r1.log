@@ -1,0 +1,139 @@
+WO-F-fr — French native-review fixes (Grok 4.7, campaign round 1)
+Worktree: /Users/son7/Projects/tseng-law-fix-fr-r1
+Date: 2026-09-22
+Scope: French strings only. No git add/commit/push.
+
+Sources read: RULEBOOK-FIX.md (R2–R10; R12–R17 where they touch this pack), ACCEPTED-ROUND.md, fr-a.md, fr-b.md.
+English meaning checked against src/content/columns-en/ for the rows that change legal sense.
+Guidance edits are in the .ts sources (frenchGuidanceContent, fr team/answers/inquiry, GUIDANCE_LLMS_NOTICES.fr). The dump fr-guidance.txt was not edited.
+One test expectation was updated: src/data/__tests__/guidance-disclosure-parity.test.ts, the French attorney–client regex, so it matches the new wording. Nothing else in that test changed.
+
+TWD 1.57M in the bio is byte-identical. The French gloss sits beside it: "TWD 1.57M (1,57 million de dollars taïwanais)."
+Thousands stay dotted (500.000). The checker’s French style is dot; a space separator is on the skip list.
+
+================================================================================
+ROWS APPLIED
+================================================================================
+
+Part A (fr-a.md) — applied: 1 (wording adjusted), 2 (digit kept in parentheses), 3, 4, 5, 6, 7, 8, 9 (gloss beside the pinned figure), 10, 11, 12, 13, 14, 15, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28 (table cell "TVA", gloss already in the body), 29, 30, 31, 32, 33, 34 (row kept, cells rephrased), 35, 36, 37, 39, 40, 41, 42.
+
+A1 llms notice. "insertion publicitaire" is an ad placement. The English denial is guaranteed visibility. The pack test bans the substring garanti, so the line is "ni visibilité promise."
+
+A2 suspension. "1 fois" was not "only once". The sentence is now "chaque période de suspension ne peut dépasser un an (1 fois)." The parenthetical keeps the Korean 1회, which the checker counts. FAQ and body.
+
+A4 foreign employees. "plus d’une personne de nationalité étrangère" and the specialised-work regime. "une personne" is in the French number lexicon.
+
+A5–A6 team chrome. Ministère de l’Éducation, division des affaires juridiques, and Fondation d’aide juridique, antenne de Taichung, each with the English institution name kept as a substring. Role and both experience lines: Collaborateur juridique / Collaborateur juridique senior. Firm names unchanged.
+
+A7–A8 partner. "expert-comptable associé" in the team description, partner title, lawyers answer. Bio: "Titulaire d’une licence et d’un master…"
+
+A12 attorney–client formula, six strings (disclaimer, FAQ, footer heading and body, answers): "entre l’avocate ou l’avocat et le client."
+
+A18 digit standing for un/une, where the lexicon still emits 1: moins d’un an, depuis un an, un mois, une année, une personne, d’un an. See systemic counts.
+
+A26 ISO dates in 003: "29 mai 2026" and "1 juillet 2026". "1er" was not used (see skipped).
+
+A34 table row in 008. Four cells kept. Label is the employer’s burden of justification: "Charge de justification de l’employeur | Élevée | Très élevée | Sans objet".
+
+A39 monsieur B is masculine: "employé", "M. B", "plus de dix ans" (dix is in the lexicon).
+
+Part B (fr-b.md) — applied: 1–18, 21–51, and 19–20 only as noted under skipped. B23 rephrased inside the two existing blocks (period, then a full sentence) and did not merge them. B42 and the 016 §7 opener are self-standing first sentences; the headings stay.
+
+B8 punitive cap. The English sense is the loss itself. The digit stays: "dans la limite du préjudice réel (1 fois ce montant)." 5 fois and 3 fois unchanged.
+
+Register: vouvoiement kept. Wei Tseng stays feminine. The male manager in 008 and the male client in 010 were not feminised.
+
+================================================================================
+ROWS SKIPPED
+================================================================================
+
+A16 and B20. Space as the thousands separator ("500 000", "1 579 589"). ACCEPTED-ROUND: the checker does not parse spaces. French NUMBER_THOUSAND_STYLE is dot. Amounts were not changed.
+
+A17 and B19. "1 janvier" / "1 juillet" → "1er". The date parser consumes "1 janvier 2024" as day, month and year. "1er janvier" leaves the month number unparsed. Dates stay "1 janvier" / "1 juillet".
+
+A24. Promoting Q16–Q20 to ## headings would add headings and change the block count. They stay body lines. The blog close and "Selon mon expérience" were rewritten inside the existing blocks.
+
+A38. Hangul in the frontmatter url of 008 and 009. R16: do not edit url. The Hangul is only in those url values.
+
+A34 as a row deletion. The "Difficulté" row was rephrased in place. Deleting it would change the table.
+
+B23 as a block merge. Joining the carte-de-séjour line to the next line would change the blank-line block count.
+
+No other P1/P2 row was skipped.
+
+================================================================================
+SYSTEMIC PATTERNS (instances)
+================================================================================
+
+Counts are replacements that landed.
+
+- Digit for un/une, lexicon still emits the number: moins d’un an 5 (001 ×4, 014 ×1); depuis un an 4 (001); un mois 5 (002 pendant ×2, 008 de/un, 013 en, 017); une année 4 (008 pour chaque ×2, par ×2); d’un an 3 (002 peine, 013 autour, 014 notice period); une personne 1 (005).
+- du loi → de la loi: 5 (004, including the source-link label). URL unchanged.
+- précepte → disposition, with feminine agreement: 6 (011 ×3 including "la disposition appliquée", 014 ×2, 016 ×1).
+- orientation as an official note or as advice: 11 in 016/017 (note administrative, note de la Direction, link labels). 010 "orientation individuelle" → "avis au cas par cas" (1). Guidance heading "servir d’orientation" → "servir d’indication" (1). Inquiry "orientation générale" → "information générale" (1). "orientation du cabinet" left: it means the firm’s direction, not a guide.
+- Attorney–client articles: 6.
+- Collaborateur juridique: role + intro + two experience lines (4). Expert-comptable associé: description, partnerTitle, lawyers answer, plus the bio degree line (4 surfaces).
+- Country note label: "Précision selon le pays" in 001 and 004 (2).
+- Blog voice inside existing blocks, not a wholesale rewrite of the one-line layout: 003 close and "Selon mon expérience"; 008 "Je vous résume / Je vous raconte", the missing periods, and "évidemment"; 013 "j’en conviens"; 015 three fragments made into sentences without merging.
+- 014 notification de démission: the awkward "quand produit ses effets" sentence plus 5 remaining "manifestation de démission".
+- nouveaux arrivants / nouvel arrivant → nouvelles recrues / nouvelle recrue: 4 (014).
+- hérédité en commun / de façon globale / propriété réelle / se poser / assurer les pièces: the 016 set in the review, including the FAQ twin of the tribunal sentence (2) and the body-only opener.
+- par automobile → par véhicule routier: 4 (017, including the two statute-link labels; URLs unchanged).
+- matériaux (documents, not process materials): 018 confidential + nécessaires (3) and 017 "documents qui attestent" (1).
+- Gender of Wei Tseng was already feminine. monsieur B corrected (1). No masculine title for her was introduced.
+
+================================================================================
+REVIEWER DISAGREEMENTS (not applied as suggested)
+================================================================================
+
+- A1. "visibilité garantie" matches the English, and it also matches the pack’s forbidden token /garanti/i. The denial is "visibilité promise" so the test still passes.
+- A9. The suggested "1,57 million de dollars taïwanais (TWD)" would drop the pinned "TWD 1.57M". The token stays, with the French gloss in parentheses. "de" before the unit is in the gloss.
+- A16 / B20. Space thousands separators were not applied. The checker’s French grouping is the dot.
+- A17 / B19. "1er" was not applied. It drops the month from the date parse.
+- A24. Q16–Q20 were not turned into headings.
+- A28. The table cell is "TVA", not "TVA (營業稅)". The body already glosses 營業稅 once, which is the source count. A second gloss in the cell would add a hanzi the Korean table does not have.
+- A34. The English row really is Easy | Difficult | Easy. That reading makes an economic dismissal sound like an easy outcome. The row stays, labelled as the employer’s burden of justification.
+- A2. "1 fois" is not deleted. Korean 1회 is a counted 1. It sits in parentheses after the corrected sentence.
+- B8. The punitive "1 fois" is not deleted, for the same reason. It sits in parentheses after the English sense.
+- One-line paragraphs in 005, 006, 008, 009, 013 and 015 were not merged or split. Only the flagged sentences, and the 015 fragments, were rephrased inside their blocks.
+- "taux de" in 001/004/016 is a withholding or exchange rate, not a win rate. "la mère" in 016 is the mother. "interprète à nouveau" in 014 is the verb réinterpréter. "n’assure pas" in 003/004 is the negative "does not ensure", which stays negative. Those were left.
+- "à tout moment" in 002, 008 and 011 is a legal description (shareholders, resignation, record-keeping), not "contact us at any time". Left.
+
+================================================================================
+§Verify
+================================================================================
+
+cd /Users/son7/Projects/tseng-law-fix-fr-r1 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-fr --lang fr 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-fr src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+=== CHECKER ===
+neighbour      PASS   
+hanzi          PASS   han=67
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+=== MARKERS ===
+       0
+
+=== TSC ===
+TSC_OK
+
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+=== GIT STATUS COUNT ===
+      28
+
+Pre-existing number WARNs, files still PASS, not introduced by this pass: 006 extra 1; 007 extra 2023×4; 009 unparsed 제6호; 010 extra 2020. 002 was missing one 1 after the suspension rewrite; "(1 fois)" restored it and that file is numbers PASS.
+
+git status --short includes this log, the pre-existing dirty WO-F-fr.txt, and the untracked fr-a.md / fr-b.md. Those three were not edited in this pass.

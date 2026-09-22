@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Image à la une](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Récemment, de nombreuses personnes ont constitué avec succès une société (公司) à Taïwan et ont obtenu un visa de travail ainsi qu’une carte de séjour (外僑居留證),
+Récemment, de nombreuses personnes ont constitué avec succès une société (公司) à Taïwan et ont obtenu un visa de travail ainsi qu’une carte de séjour (外僑居留證).
 
-et les questions fréquemment posées au moment de la constitution sont rassemblées ci-dessous.
+Les questions fréquemment posées au moment de la constitution sont rassemblées ci-dessous.
 
 Ceux qui ont lu [**les fondamentaux de la création de société**](/fr/columns/taiwan-company-establishment-basics) peuvent ensuite se reporter aussi à cette partie approfondie plus détaillée.
 
@@ -39,7 +39,7 @@ Une employée ou un employé d’une banque taïwanaise m’a dit en personne qu
 
 de nombreux étrangers disparaissent récemment après l’ouverture du compte, de sorte que l’ouverture des comptes est traitée de manière de plus en plus stricte.
 
-Déjà dans la partie fondamentale, une lectrice ou un lecteur a indiqué que l’ouverture du compte était l’étape la plus difficile ; j’en conviens.
+L’ouverture du compte est souvent l’étape la plus difficile.
 
 Parce que les cas de blanchiment d’argent (洗錢) sont très nombreux à Taïwan, l’ouverture des comptes bancaires devient de plus en plus stricte.
 
@@ -49,7 +49,7 @@ Comme l’examen du plan d’investissement prend aussi du temps,
 
 vous devriez rédiger le plan d’investissement et chercher l’adresse d’immatriculation de la société en même temps.
 
-Selon l’article 9 de la loi sur l’investissement des étrangers (外國人投資條例), l’apport approuvé doit parvenir en totalité dans le délai fixé par l’autorité compétente (核定期限) ; le délai est à confirmer dans l’acte d’approbation de chaque affaire (en pratique, il est souvent fixé autour de 1 an).
+Selon l’article 9 de la loi sur l’investissement des étrangers (外國人投資條例), l’apport approuvé doit parvenir en totalité dans le délai fixé par l’autorité compétente (核定期限) ; le délai est à confirmer dans l’acte d’approbation de chaque affaire (en pratique, il est souvent fixé autour d’un an).
 
 Dans ce délai, une fois l’adresse de la société trouvée et le contrat de bail signé,
 
@@ -63,7 +63,7 @@ C’est possible.
 
 La banque exige en général une double vérification d’identité,
 
-et sans carte de séjour, vous pouvez demander auprès de l’administration de l’immigration de Taïwan la « **formulaire de données de base du numéro d’identification unique** » (統一證號基本資料表).
+et sans carte de séjour, vous pouvez demander auprès de l’administration de l’immigration de Taïwan le « formulaire de données de base du numéro d’identification unique » (統一證號基本資料表).
 
 La délivrance est possible le jour même,
 
@@ -87,7 +87,7 @@ Sur ce point, vous devriez échanger de manière approfondie avec une avocate ou
 
 **4. Quels points faut-il observer lorsque l’adresse d’immatriculation de la société (par exemple un local de restauration) est prise à bail ?**
 
-La constitution de la société dure environ **3 mois**, l’obtention du permis de travail (工作許可) et de la carte de séjour environ **1 mois**,
+La constitution de la société dure environ **3 mois**, l’obtention du permis de travail (工作許可) et de la carte de séjour environ **un mois**,
 
 aussi devez-vous fixer le début du contrat le plus tard possible.
 

@@ -43,9 +43,9 @@ Vsakdo lahko na zemljiškem uradu (地政事務所) zaprosi za »izpisek iz evid
 
 Če je osebni obisk zemljiškega urada (地政事務所) težaven,
 
-je mogoče za pomoč prositi znanca na Tajvanu, najemodajalca, nepremičninskega posrednika ter odvetnika.
+je mogoče za pomoč prositi znanca na Tajvanu, najemodajalca, nepremičninskega posrednika in odvetnika.
 
-Če rezultat preverjanja pokaže, da restavracija ni mogoča, mestni urad pozneje pri vpisu pravne osebe (公司登記) vpisa morda ne sprejme.
+Če rezultat preverjanja pokaže, da restavracija ni mogoča, mestna uprava pozneje pri vpisu družbe (公司登記) vpisa morda ne sprejme.
 
 Zato tej zadevi namenite pozornost.
 
@@ -55,13 +55,13 @@ Zato tej zadevi namenite pozornost.
 
 Vsem panogam se priporoča, da s sistemom »predhodnega preverjanja kraja dejavnosti« (營業場所預先查詢) potrdijo, ali je obratovanje mogoče.
 
-Pri vpisu družbe pa se pogosto vpiše več panog hkrati ter se pogosto želi z enim vložkom vpisati približno 10 panog.
+Pri vpisu družbe pa se pogosto vpiše več panog hkrati in se pogosto želi z enim vložkom vpisati približno 10 panog.
 
 Zato v praksi pri vpisu družbe ni nujno preverjati vseh panog.
 
-Po »[operativnih navodilih storitve pomoči pri poizvedbi o kraju dejavnosti mesta Tajpej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) «(臺北市營業場所協助查詢服務作業須知) ter veljavnem napotku mesta Tajpej,
+Po »[operativnih navodilih storitve pomoči pri poizvedbi o kraju dejavnosti mesta Tajpej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)« (臺北市營業場所協助查詢服務作業須知) in veljavnem napotku mesta Tajpej,
 
-od 1. 1. 2023 pri vlogi za vpis ustanovitve, premestitve sedeža ali dopolnitve panog dejavnosti družbe ali podjetja (vključno s podružnico (分公司) ter pomožno enoto (分支機構)) rezultat predhodnega preverjanja kraja dejavnosti **mora** biti priložen vlogi za vpis, ne glede na panogo.
+od 1. 1. 2023 pri vlogi za vpis ustanovitve, premestitve sedeža ali dopolnitve panog dejavnosti družbe ali podjetja (vključno s podružnico (分公司) in pomožno enoto (分支機構)) rezultat predhodnega preverjanja kraja dejavnosti **mora** biti priložen vlogi za vpis, ne glede na panogo.
 
 Spodnji seznam »panog dejavnosti, ki so predmet uradnega preverjanja« (主動查詢之營業項目) označuje panoge, ki jih Trgovinski urad med pregledom vpisa dodatno preveri po uradni dolžnosti (隨案主動查詢), kadar panoga figurira v vlogi, v priloženem rezultatu pa manjka; okoliščina, da panoge na tem seznamu ni, ne pomeni oprostitve preverjanja.
 
@@ -71,7 +71,7 @@ Spodnji seznam »panog dejavnosti, ki so predmet uradnega preverjanja« (主動�
 
 »panoge dejavnosti, ki so predmet uradnega preverjanja« (主動查詢之營業項目)
 
-S tem je povzet bistveni postopek; konkretno zadevo je treba presoditi posebej z odvetnico ali odvetnikom. Posvet v pisarni poteka le v angleščini, kitajščini (中文), japonščini ter korejščini.
+S tem je povzet bistveni postopek; konkretno zadevo je treba presoditi posebej z odvetnico ali odvetnikom. Posvet v pisarni poteka le v angleščini, kitajščini (中文), japonščini in korejščini.
 
 Pravila upravnih organov se lahko pogosto spreminjajo; pred vpisom pravne osebe je smiselno preveriti najnovejše predpise.
 
@@ -80,4 +80,4 @@ Pravila upravnih organov se lahko pogosto spreminjajo; pred vpisom pravne osebe 
 > Glejte tudi:
 > - [Katere zadeve vodimo](/sl/services)
 > - [Mednarodna ekipa Hovering](/sl/lawyers)
-> - [Kako pisarno pokličete](/sl/contact)
+> - [Kako stopiti v stik s pisarno](/sl/contact)

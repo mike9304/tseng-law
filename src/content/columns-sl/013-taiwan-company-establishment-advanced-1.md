@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Glavna slika](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-V zadnjem času so številne osebe uspešno ustanovile družbo (公司) na Tajvanu ter pridobile delovni vizum in dovoljenje za prebivanje tujcev (外僑居留證),
+V zadnjem času so številne osebe uspešno ustanovile družbo (公司) na Tajvanu in pridobile delovni vizum in dovoljenje za prebivanje tujcev (外僑居留證),
 
 vprašanja, ki se pri ustanavljanju pogosto zastavljajo, pa so zbrana spodaj.
 
 Osebe, ki so prebrale [**Osnove ustanavljanja družbe na Tajvanu**](/sl/columns/taiwan-company-establishment-basics), lahko nato pogledajo tudi ta poglobljeni pregled.
 
-Spodnja vprašanja ter odgovori naj pomagajo osebam, ki razmišljajo o ustanovitvi družbe na Tajvanu.
+Spodnja vprašanja in odgovori naj pomagajo osebam, ki razmišljajo o ustanovitvi družbe na Tajvanu.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -29,17 +29,17 @@ Ko tujec ustanavlja družbo na Tajvanu, mora naložbeni načrt (投資計畫書)
 
 Oddelek za pregled naložb mora preveriti, ali se dani kapital (資本額) dejansko uporablja za naložbene namene
 
-ter ali tuji subjekti ne uvajajo sredstev pod drugo pretvezo.
+in ali tuji subjekti ne uvajajo sredstev pod drugo pretvezo.
 
 Pri sestavi naložbenega načrta ni treba navesti točnega naslova družbe; zadostuje navedba območja (primer: mesto Tajpej). ​
 
-Ko se pozneje v banki odpira pripravljalni račun družbe (公司籌備處帳戶), pa številne banke pregledajo najemno pogodbo (租賃契約) ter opravijo ogled naslova družbe na kraju samem.
+Ko se pozneje v banki odpira pripravljalni račun družbe (公司籌備處帳戶), pa številne banke pregledajo najemno pogodbo (租賃契約) in opravijo ogled naslova družbe na kraju samem.
 
 Zaposleni v tajvanski banki so mi neposredno povedali, da
 
 v zadnjem času številni tujci po odprtju računa izginejo, zato se odpiranje računov presoja vse strožje.
 
-Že pri osnovnem pregledu so bralke ter bralci navedli, da je odprtje računa najtežja stopnja; tudi sama se s tem strinjam.
+Že pri osnovnem pregledu so bralke in bralci navedli, da je odprtje računa najtežja stopnja; tudi sama se s tem strinjam.
 
 Ker je na Tajvanu zelo veliko primerov pranja denarja (洗錢), postaja odpiranje bančnih računov vse strožje.
 
@@ -51,9 +51,9 @@ je naložbeni načrt treba sestavljati hkrati z iskanjem naslova za vpis družbe
 
 Po 9. členu zakona o naložbah tujih oseb (外國人投資條例) mora odobreni vložek v celoti prispeti v roku, ki ga določi pristojni organ (核定期限); rok je treba preveriti v aktu odobritve vsake zadeve (v praksi se pogosto določi približno 1 leto).
 
-V tem roku, po najdbi naslova družbe ter sklenitvi najemne pogodbe,
+V tem roku, po najdbi naslova družbe in sklenitvi najemne pogodbe,
 
-ostane dovolj časa za odprtje pripravljalnega računa v banki ter za nakazilo kapitala.
+ostane dovolj časa za odprtje pripravljalnega računa v banki in za nakazilo kapitala.
 
 ​
 
@@ -67,11 +67,11 @@ brez dovoljenja za prebivanje pa je pri tajvanski imigracijski upravi mogoče za
 
 Izdaja je mogoča še isti dan,
 
-imigracijska uprava (移民署) pa je zelo obremenjena; zato je treba priti zgodaj ter vzeti čakalno številko.
+imigracijska uprava (移民署) pa je zelo obremenjena; zato je treba priti zgodaj in vzeti čakalno številko.
 
 ​
 
-**3. Pri presoji naložbenega načrta naj bi se navedla izobrazba ter delovne izkušnje. Kaj, če moja izobrazba ter izkušnje ne ustrezajo panogi družbe, ki jo želim ustanoviti?**
+**3. Pri presoji naložbenega načrta naj bi se navedla izobrazba in delovne izkušnje. Kaj, če moja izobrazba in izkušnje ne ustrezajo panogi družbe, ki jo želim ustanoviti?**
 
 Pregledna komisija Ministrstva za gospodarstvo sicer presoja ozadje vlagatelja,
 
@@ -79,7 +79,7 @@ presoja pa ni pretirano stroga.
 
 Navesti je mogoče raznolike delovne izkušnje, vključno s priložnostnimi deli,
 
-ter jih razložiti dovolj podrobno, da je mogoče prepričati osebe, ki opravijo presojo.
+in jih razložiti dovolj podrobno, da je mogoče prepričati osebe, ki opravijo presojo.
 
 V tej točki je zadevo smiselno temeljito predebatirati z odvetnico ali odvetnikom na Tajvanu.
 
@@ -87,7 +87,7 @@ V tej točki je zadevo smiselno temeljito predebatirati z odvetnico ali odvetnik
 
 **4. Na kaj paziti, ko se najema naslov za vpis družbe (na primer gostinski lokal)?**
 
-Ustanovitev družbe traja približno **3 mesece**, pridobitev delovnega dovoljenja (工作許可) ter dovoljenja za prebivanje približno **1 mesec**,
+Ustanovitev družbe traja približno **3 mesece**, pridobitev delovnega dovoljenja (工作許可) in dovoljenja za prebivanje približno **1 mesec**,
 
 zato je začetek pogodbe treba določiti čim pozneje.
 
@@ -111,11 +111,11 @@ je po potrebi mogoče predlagati notarsko overitev najemne pogodbe (公證) ali 
 
 Odvisno je od vpisanih panog dejavnosti (營業項目) družbe.
 
-Npr. če je panoga gostinstvo ter se namerava najeti pisarniški prostor, bo odprtje bančnega računa zelo težavno.
+Npr. če je panoga gostinstvo in se namerava najeti pisarniški prostor, bo odprtje bančnega računa zelo težavno.
 
-Kot je že navedeno, banka pregleda najemno pogodbo ter opravi ogled naslova družbe na kraju samem.
+Kot je že navedeno, banka pregleda najemno pogodbo in opravi ogled naslova družbe na kraju samem.
 
-Poleg tega pri končnem vpisu družbe mestni urad (市政府) prav tako zahteva, da vpisani naslov leži v coni, kjer je obratovanje restavracije dopustno;
+Poleg tega pri končnem vpisu družbe mestna uprava (市政府) prav tako zahteva, da vpisani naslov leži v coni, kjer je obratovanje restavracije dopustno;
 
 če gre za pisarniški prostor, vpis družbe (公司登記) tedaj ni mogoč.
 
@@ -123,11 +123,11 @@ Npr. če gre za panoge, mogoče v pisarniškem prostoru, kot sta oglaševanje al
 
 to vnaprej preverite.
 
-*Če potrebujete posvet o tajvanskem pravu, posvet poteka le v angleščini, kitajščini (中文), japonščini ter korejščini; komentarjev na spletnem mestu ne vodimo.*
+*Če potrebujete posvet o tajvanskem pravu, posvet poteka le v angleščini, kitajščini (中文), japonščini in korejščini; komentarjev na spletnem mestu ne vodimo.*
 
 ---
 
 > Glejte tudi:
 > - [Katere zadeve vodimo](/sl/services)
 > - [Mednarodna ekipa Hovering](/sl/lawyers)
-> - [Kako pisarno pokličete](/sl/contact)
+> - [Kako stopiti v stik s pisarno](/sl/contact)

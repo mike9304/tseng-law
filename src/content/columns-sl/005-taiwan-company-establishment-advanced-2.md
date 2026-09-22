@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Glavna slika](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Osebe, ki so prebrale [Osnove ustanavljanja družbe na Tajvanu](/sl/columns/taiwan-company-establishment-basics) ter [Ustanavljanje družbe na Tajvanu – poglobljeni pregled, 1. del](/sl/columns/taiwan-company-establishment-advanced-1), lahko prav tako pogledajo Ustanavljanje družbe na Tajvanu – poglobljeni pregled, 2. del (公司設立).
+Osebe, ki so prebrale [Osnove ustanavljanja družbe na Tajvanu](/sl/columns/taiwan-company-establishment-basics) ter [Ustanavljanje družbe na Tajvanu – poglobljeni pregled, 1. del](/sl/columns/taiwan-company-establishment-advanced-1), so s tem člankom že v 2. delu poglobljenega pregleda (公司設立).
 
 ​
 
@@ -69,7 +69,7 @@ Nekatere banke lahko nalagajo dodatne zahteve, na primer dobo uporabe računa na
 
 **5. Ali lahko družba zaposli tuje državljane (vključno z osebami s korejskim državljanstvom)?**
 
-A. Prvi zaposleni: vloga se vloži kot delo poslovodje v podjetju običajne naložbe čezmorskih Kitajcev ali tujcev (一般僑外投資事業主管工作). Merilo »strokovnega ali tehničnega dela« iz točke B spodaj se ne uporabi, vendar se uporabijo pogoji naslovnika, vključno s pogojem poslovodje (經理人) družbe, pri kateri vložek čezmorskih Kitajcev ali tujcev presega 1/3, ter pogoji rezultatov delodajalca glede kapitala ter prometa (člena 38 ter 39 meril pregleda).
+A. Prvi zaposleni: vloga se vloži kot delo poslovodje v podjetju običajne naložbe čezmorskih Kitajcev ali tujcev (一般僑外投資事業主管工作). Merilo »strokovnega ali tehničnega dela« iz točke B spodaj se ne uporabi, vendar se uporabijo pogoji naslovnika, vključno s pogojem poslovodje (經理人) družbe, pri kateri vložek čezmorskih Kitajcev ali tujcev presega 1/3, ter pogoji rezultatov delodajalca glede kapitala ter prometa (po 38. in 39. členu meril pregleda).
 
 B. Od drugega zaposlenega veljajo omejitve: če število zaposlenih oseb presega 1 osebo, se izobrazba ter izkušnje zaposlenega, pravila povprečne plače pri zaposlitvi ter pravila kapitala ter prometa družbe obravnavajo po »strokovnem ali tehničnem delu« (專門性或技術性工作).
 
@@ -84,4 +84,4 @@ Glejte spletno stran tajvanskega Ministrstva za delo (勞動部): <https://ezwor
 > Glejte tudi:
 > - [Katere zadeve vodimo](/sl/services)
 > - [Mednarodna ekipa Hovering](/sl/lawyers)
-> - [Kako pisarno pokličete](/sl/contact)
+> - [Kako stopiti v stik s pisarno](/sl/contact)

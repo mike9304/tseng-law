@@ -17,11 +17,11 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 Če na Tajvanu pride do prometne nesreče (交通事故), je treba najprej zagotoviti varnost, opraviti prijavo ter ohraniti dokaze, nato pa zaporedno presoditi rok zahtevka, krivdo (過失) ter obseg poravnave (和解). Spodaj je splošno zaporedje ukrepov, utemeljeno na tajvanskih predpisih ter napotkih javnih organov; odgovornost ter konkreten postopek se lahko razlikujeta glede na okoliščine vsake nesreče.
 
-## Q1. Ali smete po nesreči zapustiti kraj dogodka?
+## Q1. Ali lahko po nesreči zapustiti kraj dogodka?
 
 Pri nesreči s poškodbo ali s smrtjo mora voznik takoj sprejeti reševalne ukrepe (救護措施), obvestiti policijo ter ohraniti vozilo in dokaze kraja (保全現場). Neformalno soglasje nasprotne strani ali zgolj posnetek ne dopušča, da bi kraj zapustili, preden so zahtevani ukrepi končani.
 
-Pri nesreči s poškodbo pa, če se strinjajo vse strani, smete vozilo premakniti na mesto, ki ne ovira prometa, potem ko označite položaj vozila ter sledi kraja. Takšne oznake ne nadomeščajo zahtevanih ukrepov, kot sta reševanje ter prijava.
+Pri nesreči s poškodbo pa, če se strinjajo vse strani, lahko vozilo premaknete na mesto, ki ne ovira prometa, potem ko označite položaj vozila ter sledi kraja. Takšne oznake ne nadomeščajo zahtevanih ukrepov, kot sta reševanje ter prijava.
 
 Če gre le za premoženjsko škodo ter je vozilo mogoče premakniti, velja načelo: označite položaj vozila ter sledi kraja, jih dokumentirajte s fotografijami ali videom ter vozilo hitro premestite na varno mesto. Zapustitev kraja brez zahtevanih ukrepov lahko prinese upravno sankcijo (行政處罰).
 
@@ -85,7 +85,7 @@ Poravnava (和解) iz 736. člena civilnega zakonika je pogodba, v kateri strani
 
 Preglednica predhodne analize prometne nesreče, ki jo sestavi policija, je predhodna analiza, utemeljena na podlagah kraja. Ni sodba, ne veže sodišča ter ne določi deleža krivde (過失比例). Ker se potrebne podlage ter obseg spora razlikujejo glede na nesrečo, ta preglednica, pravno izvedensko mnenje ter ponovni pregled (覆議) niso niti samodejni postopek niti obvezna stopnja.
 
-Po uporabnih predpisih sme legitimirana stran zaprositi za izvedensko mnenje o nesreči vozil (車輛行車事故鑑定); organ, ki zadevo vodi, jo sme dodeliti, sodni organ pa jo sme naročiti. Vloga strani se vloži načeloma v 6 mesecih od datuma nesreče; v zadevah, ki so že v preiskavi ali sojenju, izvedensko mnenje poteka z naročilom sodnega organa, ne z novo neposredno vlogo.
+Po predpisih, ki se uporabljajo, sme legitimirana stran zaprositi za izvedensko mnenje o nesreči vozil (車輛行車事故鑑定); organ, ki zadevo vodi, jo sme dodeliti, sodni organ pa jo sme naročiti. Vloga strani se vloži načeloma v 6 mesecih od datuma nesreče; v zadevah, ki so že v preiskavi ali sojenju, izvedensko mnenje poteka z naročilom sodnega organa, ne z novo neposredno vlogo.
 
 Ob nestrinjanju z mnenjem izvedenskega mnenja je mogoče zaprositi za ponovni pregled, vendar ga je mogoče vložiti le enkrat. Mnenje izvedenskega mnenja ter ponovnega pregleda je dokaz ali podlaga za sklic, sodišče pa neodvisno oceni celoto spisa, vključno z izjavami, posnetki ter zapisniki kraja.
 
@@ -149,7 +149,7 @@ Okoliščina nadaljnjega dela ali prejemanja plače brez spremembe je bistvena z
 
 Okoliščina, da se tekoča plača ohranja brez spremembe, zahtevka samodejno ne izključi. Nasprotno, višina škode se tudi ne določi mehansko le z odstotkom invalidnosti ali tekočo plačo.
 
-Če je trajna funkcijska motnja bistveno sporna, je lahko medicinsko izvedensko mnenje koristno, vendar ni obvezno v vseh zadevah. Presoja se tudi pobotanje krivde iz 217. člena civilnega zakonika ter drugi razlogi prilagoditve.
+Če je trajna funkcijska motnja bistveno sporna, je lahko medicinsko izvedensko mnenje koristno, vendar ni obvezno v vseh zadevah. Presoja se tudi lastna krivda oškodovanca iz 217. člena civilnega zakonika ter drugi razlogi prilagoditve.
 
 Ko se izračun opravi v enem kapitalskem znesku, je mogoče pretehtati odbitje vmesnih obresti (中間利息扣除). Hoffmanov kalkulator (霍夫曼) Sodnega juana je le računski pripomoček, ne pa pravno obvezna metoda, niti ne obljublja izida. Po 193. členu civilnega zakonika sme sodišče na predlog strani naložiti tudi plačilo v redni renti pod pogojem zavarovanja.
 
@@ -163,7 +163,7 @@ Sodišče presoja okoliščine vsake zadeve ter skupaj oceni vsebino poškodbe t
 
 Člen 188 civilnega zakonika ureja primer, v katerem zaposleni povzroči protipravno škodo drugemu pri opravljanju funkcije. Zveza s funkcijami se ne prizna samodejno iz samega delovnega časa, zato je treba preveriti zvezo med dejanskim delom ter nesrečo.
 
-Delodajalec sme ugovarjati, da je ohranil ustrezno skrbnost pri izbiri ter nadzoru zaposlenega, ali da škodi ne bi bilo mogoče preprečiti niti ob ohranitvi te skrbnosti. Mogče je pretehtati uveljavljanje odškodnine skupaj zoper delodajalca ter zaposlenega. Po odškodnini sme delodajalec uveljavljati regres zoper zaposlenega.
+Delodajalec sme ugovarjati, da je ohranil ustrezno skrbnost pri izbiri ter nadzoru zaposlenega, ali da škodi ne bi bilo mogoče preprečiti niti ob ohranitvi te skrbnosti. Mogoče je pretehtati uveljavljanje odškodnine skupaj zoper delodajalca ter zaposlenega. Po odškodnini sme delodajalec uveljavljati regres zoper zaposlenega.
 
 Če delodajalec dokaže te predpostavke oprostitve ter oškodovanec ne pridobi odškodnine iz 1. odstavka, sme sodišče po 188. členu, 2. odstavku, civilnega zakonika naložiti popolno ali delno odškodnino z upoštevanjem gospodarskega položaja delodajalca ter oškodovanca.
 
@@ -177,25 +177,25 @@ Pri nesreči enega vozila voznik tega vozila načeloma ni naslovnik dajatve obve
 
 Tarifa dajatev (強制汽車責任保險給付標準), spremenjena 29. 5. 2026, se uporabi za nesreče, ki so nastale od 1. 7. 2026. Zgornja meja primernih ter potrebnih zdravstvenih stroškov za poškodbo znaša TWD 200.000 v novem tajvanskem dolarju; dajatev za invalidnost (失能) znaša od TWD 80.000 do TWD 3.000.000 po 15 zakonskih stopnjah; dajatev za smrt znaša TWD 3.000.000, skupni maksimum smrti, invalidnosti ter zdravstvenih stroškov za 1 oškodovanca ter 1 nesrečo pa znaša TWD 3.200.000. Za prejšnje nesreče se sme uporabiti prejšnja tarifa.
 
-Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarovanje voznika (駕駛人傷害險) ter zavarovanje škode lastnega vozila (車體損失險) so fakultativni produkti pogodbene narave. Dejansko kritje se razlikuje glede na zavarovanca, zgornjo mejo, soudeležbo (自負額), izključitve, krivdo ter druge pogoje police, zato je polico ter pogoje treba preveriti zadevo za zadevo.
+Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarovanje voznika (駕駛人傷害險) ter zavarovanje škode lastnega vozila (車體損失險) so fakultativni produkti pogodbene narave. Dejansko kritje se razlikuje glede na zavarovanca, zgornjo mejo, odbitno franšizo (自負額), izključitve, krivdo ter druge pogoje police, zato je polico ter pogoje treba preveriti zadevo za zadevo.
 
 ### Uradne podlage Q11–Q15
 
 - [Civilni zakonik, 193. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Civilni zakonik, 216. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Civilni zakonik, 217. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Sodba pritožbenega sodišča Tajvana, leto 109, zadeva 上易字 številka 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Sodba pritožbenega sodišča Tajvana, leto 109, zadeva 上易字 številka 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Sodba pritožbenega sodišča Tajvana, leto 109 po koledarju Republike Kitajske, zadeva 上易字 številka 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Sodba pritožbenega sodišča Tajvana, leto 109 po koledarju Republike Kitajske, zadeva 上易字 številka 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Kalkulator sedanje vrednosti Hoffmana Sodnega juana](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civilni zakonik, 195. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Sodba okrožnega sodišča Taojuan, leto 112, zadeva 壢簡字 številka 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Sodba okrožnega sodišča Taoyuan, leto 112 po koledarju Republike Kitajske, zadeva 壢簡字 številka 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civilni zakonik, 188. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Kazenski zakonik Tajvana, 284. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zakon o obveznem zavarovanju avtomobilske odgovornosti](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Tarifa dajatev obveznega zavarovanja avtomobilske odgovornosti](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Vzorčna pogodba zavarovanja vozil zasebne rabe Komisije za finančni nadzor (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Ali smete po nesreči vse prepustiti zavarovatelju?
+Q16. Ali lahko po nesreči vse prepustiti zavarovatelju?
 
 ​
 
@@ -235,7 +235,7 @@ Q17. Kakšna je kazenska odgovornost za malomarno telesno poškodbo storilca pro
 
 ​
 
-V nekaterih sodbah je bila za malomarno telesno poškodbo (過失傷害) izrečena kazen približno 3 mesecev; tipičnega ali zajamčenega izida pa ni. Kratka kazen odvzema prostosti (拘役) je ločena kazenska sankcija, ne pa pripor pred sojenjem.
+V nekaterih sodbah je bila za malomarno telesno poškodbo (過失傷害) izrečena kazen približno 3 mesecev; tipičnega ali zajamčenega izida pa ni. Kratkotrajni zapor (拘役) je ločena kazenska sankcija, ne pa pripor pred sojenjem.
 
 ​
 
@@ -255,7 +255,7 @@ V nekaterih sodbah je bila za hudo malomarno telesno poškodbo izrečena kazen 4
 
 ​
 
-Q18. Če sklenete poravnavo z nasprotno stranjo, smete umakniti kazenski predlog?
+Q18. Če sklenete poravnavo z nasprotno stranjo, lahko umaknete kazenski predlog?
 
 ​
 
@@ -279,7 +279,7 @@ Q19. Če se po nesreči zapusti kraj, je kaznivo dejanje pobega vedno izpolnjeno
 
 ​
 
-Ne nujno.
+Pobeg s kraja nesreče ni vedno izpolnjen.
 
 ​
 
@@ -315,7 +315,7 @@ Odvetnica ali odvetnik mora nadalje razumljivo pojasniti položaj stranke ter op
 
 ​
 
-Primerno je izogibati se odvetnici ali odvetniku, ki zadevo napihuje ter zgolj zaradi pridobitve mandata trdi, da poravnave ni mogoče skleniti ter da je treba pravdati se do konca na civilni ter kazenski ravni.
+Primerno je izogibati se odvetnici ali odvetniku, ki zadevo napihuje ter zgolj zaradi pridobitve mandata trdi, da poravnave ni mogoče skleniti ter da se je treba pravdati do konca na civilni ter kazenski ravni.
 
 ​
 
@@ -347,7 +347,7 @@ Storilec pogosto ne skrbi za klic z vprašanjem o stanju žrtve niti za njen obi
 
 ​
 
-Žrtev tako ostane globoko prizadeta ter zapade v jezo, zato pogosto ne popusti pri znesku pogajanja ali predlaga zavarovalno zaplembo (假扣押) ter vodi zaplembo premoženja nasprotne strani do konca.
+Žrtev tako ostane globoko prizadeta ter zapade v jezo, zato pogosto ne popusti pri znesku pogajanja ali predlaga začasni rubež v zavarovanje terjatve (假扣押) ter vodi zaplembo premoženja nasprotne strani do konca.
 
 ​
 

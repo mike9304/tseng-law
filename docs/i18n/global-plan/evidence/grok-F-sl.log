@@ -1,0 +1,140 @@
+WO-F-sl — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-sl-20260922
+date: 2026-09-22
+scope: Slovene columns 001–018, guidance pack `sl` strings, inquiry `sl`. No commit.
+llms notice (`GUIDANCE_LLMS_NOTICES.sl`) was already acceptable and was not edited.
+No other locale was edited. No test expected-string needed a change (`viewAllLabel: 'Pokaži vse'` left in place).
+
+## Rows applied
+
+Part a (sl-a.md), except the skips and modifications below:
+a#1 uporaben = applicable → „ki se uporablja / veljaven“ in the pack and in 001–004, 007 (and, with b#2, 010, 011, 014, 016, 017). Usable/user senses left: „ni uporaben“, „neuporabni“, „uporabniku“.
+a#2 戶籍 → register / evidenca prebivalstva (not Slovenia’s matične evidence), swept in the pack, 007, and with b#10 in 016/017.
+a#3 tuje družbe in samostojni podjetniki. a#4 posebna odobritev. a#5 davek od dohodka (the annual company return, not dohodnina).
+a#6 začasni rubež (假扣押). a#7 nadomestni delavec.
+a#9 OOO → [ime] (R15).
+a#10 kako stopiti v stik (pack, contact title, column CTAs including 001, 002, 004, 005, 007, 013–017).
+a#11 drugega pravnega reda. a#12 e-poštne storitve. a#13 founders are odvetnice in odvetniki.
+a#14 matična družba / sedež, never „glavna poslovna enota“ (001, 004, 011 and the same head-office pattern elsewhere).
+a#15 sklepčna. a#16 kazen zapora / kratkotrajni zapor (002, 003, 006).
+a#17 odbitna franšiza (自負額). a#18 lastna krivda oškodovanca.
+a#19 tehnologija. a#20 opravka s številnimi.
+a#21 ustavni sodniki Sodnega sveta (大法官) — ACCEPTED wording, not the reviewer’s „veliki sodniki Sodnega juana“. 司法院 stays „Sodni juan“ (ü removed, b#36).
+a#22 difficulty row kept and labelled: „Težavnost (z vidika delodajalca) | Lahka | Težka | Lahka“.
+a#23 severance is a statutory right only when the conditions are met.
+a#24 plačilo za delo (工作報酬). a#25 ustanovili (mixed-gender masculine plural).
+a#26 svojo zahtevo, vez, rok. a#27 preden se delo začne. a#28 po nekaj času.
+a#29 odgovor sklepali iz te strani. a#30 se ne opirajte. a#32 njegov obseg. a#33 uporabljalo.
+a#34 posamična prekinitev. a#35 jih je morda treba pripraviti. a#36 Potrebna sklepčnost.
+a#37 še zmogti nadaljevati. a#38 se nadaljuje / se lahko nadaljuje.
+a#39 Mogoče. a#40 da se je treba pravdati. a#41 po 1. odstavku 99. člena / 2. odstavek 99. člena.
+a#42 po 38. in 39. členu. a#43 Osebam brez okvare vida. a#44 Zakoncema. a#45 uporabljenim smiselno.
+a#46 dual vs plural witnesses. a#47 finite verb in second position; the following block still carries »čas« (blocks not merged).
+a#48 Delo obsega. a#49 V kolikšni meri. a#50 da bi ocenili (pack and inquiry).
+a#51 shrambi. a#52 osebja za poslovanje. a#53 lahko napišete / in column 003 „lahko … premaknete / umaknete“.
+a#54 son-jungmin bio: dokumenti in potek dela. a#55 Kabinet odvetnice.
+a#56 ter → in in 002, then the checker constraint below.
+a#58 Pobeg s kraja nesreče ni vedno izpolnjen. a#59 kako preprosta je ustanovitev.
+a#60 Poleg nje je treba upoštevati poroštvo. a#61 self-reference rephrased inside the block (the reader is already in part 2); links kept.
+a#62 slogan and barbershop opening rephrased inside the existing blocks; block count unchanged.
+a#63 kdo je lastnik. a#64 Zaradi krajšega izražanja.
+a#66 ne nasedejo načrtu družbe. a#67 closing of 009 says what decides a severance dispute.
+a#68 Kaohsiung, Taichung, Pingtung (pack, offices, answers, columns). Tajpej left.
+a#71 Taoyuan. a#72 Na strani države sedeža (v zgledu: Koreja).
+a#73 Korea comparison labelled as Korean law, not the reader’s home system.
+a#74 English role brackets dropped on the Slovene team strings (R12). Latin firm names kept (Trend Law Office, Boyin, Muyang, Chinshin CPA Firm, Hovering, National Taiwan University). Ministry / Legal Aid rendered in Slovene. Fang-Yu Chang: pravna asistentka / višja pravna asistentka.
+a#75 Tajvanska borza — merila sprejema. Invest Taiwan kept as the proper name, with a Slovene lead-in „Portal Invest Taiwan — …“.
+
+Part b: every P1/P2 applied under the same skip rules.
+b#1 miselnost vadečega (心態). b#2 the applicable-law sweep above.
+b#3 pričiti → pripisati (014, and the same false friend „pričitan“ in 007).
+b#4 nagrada za ostanek (留任獎金), including bonitete.
+b#5 kako se loči (the demonstrative „to“ was dropped in that sentence so the checker would not treat „to“ as English).
+b#6 mora obstajati razumno sorazmerje. b#7 vstopna pravica / dedovanje po vstopni pravici (代位繼承).
+b#8 izguba pravice dedovati (喪失繼承權). b#9 sklenitev zakonske zveze v tujini.
+b#10 household-register term, as in a#2. Parental-rights „začasno ustavljena“ left — that one is suspension, not a marriage concluded abroad.
+b#11 pristojni organ / postopek (ACCEPTED), not the reviewer’s „pot vložitve“.
+b#12 translator’s aside removed; the block remains: „Skrbništvo nad mladoletnimi (未成年人監護) je ločen institut.“ The 007 „one word does not fully translate“ sentence is in the English and was kept.
+b#13 settlement, not the judgment. b#14 preganja le na predlog (告訴乃論). b#15 Padec v poslovnih prostorih.
+b#16 osebo, ki je dolžna plačati odškodnino. b#17 podlage → dokumentacija / zapisi where they are records; „na podlagi“ and „zakonita podlaga“ left.
+b#18 del matične družbe. b#19 etiketo. b#20 hramba v oblaku. b#21 nepopolnosti, ki jih je še mogoče dopolniti.
+b#22 se ne sme šteti za isti izid. b#23 verb in second position. b#24 citation order (15-1. člen, 7. člen, 1030-1. člen) except the two „Člen 101“ lines noted below.
+b#25 strm vzpon. b#26 Hupe in luči. b#27 mestna uprava (市政府).
+b#29 vse dogovore. b#30 closing guillemet before the Chinese title; the link and the Chinese gloss stay.
+b#31 vpis družbe (公司登記). b#32 sodna potrditev oporoke (檢認).
+b#33 „prizadet“ → „edina dediča“; the digit stays „2 otroka“ (see skipped).
+b#34 dejanski lastniki. b#35 preživeli zakonec / starš / družina.
+b#36 Sodni juan. b#37 ki se mu vloga predlaga. b#38 odprema / špedicija (運送承攬).
+b#39 posojanje dovoljenja oziroma tablic (借牌). b#40 Ni dovolj ostati pri splošni odobritvi.
+b#42 contract-design sentence, one block, no doubled sentence. b#43 družbeniki only in the 有限公司 paragraph; „le do višine vložka“. Delničar stays for 股份有限公司.
+b#44 prisotnost. b#45 Kdo izdaja račune in izterjuje plačila. b#46 Kako stopiti v stik s pisarno.
+b#47 sme/smejo → lahko + a finite verb in 010–018 (not „lahko“ + infinitive). „ne sme“ prohibitions left.
+
+Also from the rulebook: R3 result/timing hedges in 003 and 005 were already in place and were not loosened. R9 emergency numbers were already „Na Tajvanu: 119 … 110 … 112“. R13 ROC years say „po koledarju Republike Kitajske“ and the existing Chinese gloss carries 民國; no Gregorian year was added. R17: no Czech function words. Address stays 2nd-plural vi. „Pokaži vse“ left (test-pinned; the sl review did not flag it).
+
+## Rows skipped
+
+- a#8 Hangul frontmatter `url:` (R16 / ACCEPTED). Not rewritten.
+- a#31 `reviewCountWord: 'ocen'` → „ocene“. The string is interpolated as „17 ocen“. After 5, Slovene wants the genitive plural. The reviewer treated it as a standalone label. Left „ocen“.
+- a#69 „TWD 1.57M“ (test-pinned bio figure). Left byte-identical.
+- a#70 and b#41 space thousands („500 000“) and currency-after-amount. ACCEPTED/R14 keeps dot thousands and the existing „TWD 30.000“ order. A space separator fails the checker.
+- a#57, a#65, b#28 first person → third person. ACCEPTED: the feminine narrator stays. „pridobila“, „Sledi zadeva, ki sem jo vodila.“, „Kot sem že navedla“, „tudi sama se s tem strinjam“ kept. The slogan lines around them were still tightened inside the same blocks.
+- a#22, a#61, a#62, b#12: do not drop a row, a sentence, or a block. Rephrased inside the existing block.
+- b#33 „dva otroka“: the digit „2“ stays, because the checker counts digits.
+- b#24 on the two line-initial „101. člen“ rewrites in 012. The checker treats a line starting with `101.` as a list item (source has 0 list items) and, with Slovene dot-thousands, drops that `101` from the number bag (missing 101×2). Those two citations stay „Člen 101“. Other „N. člen“ citations that already counted were kept.
+- b#11 reviewer’s „pot vložitve“: ACCEPTED says „pristojni organ / postopek“.
+- a#21 reviewer’s „Sodni juan“ for 大法官: ACCEPTED says „ustavni sodniki Sodnega sveta“. 司法院 remains Sodni juan.
+
+## Systemic patterns
+
+- uporaben = applicable: swept in the pack and columns listed under a#1/b#2. Remaining hit of the stem outside „uporabnik“ / „neuporabni“: 0.
+- 戶籍 ≠ matične evidence: pack, 007, 016, 017.
+- 本公司 ≠ glavna poslovna enota: replaced with matična družba / sedež. No „glavna poslovna enota“ left in the Slovene columns.
+- ter → in in 002 and 010–018 (a#56 and the part-b sweep). Then about 56 sentences had a later „in“ put back to „ter“. The checker’s English-stopword test counts the Slovene word „in“, the demonstrative „to“, and „čas“ (č is stripped, leaving „as“). A 12-word Latin sentence with three of those fails. „ter“ that remains in 002 and 010–018 is that constraint. Files 001 and 003–009 were not in the ter sweep; their „ter“ is unchanged except where a quoted row already said „in“.
+- sme/smejo + infinitive → lahko + finite verb in 010–018, plus a#53 „smete“ in 003. „ne sme“ left. Legal „sme“ in 001–009 left except that row.
+- podlage → dokumentacija only where the noun is records, not legal grounds.
+- City names: Gaosjung/Tajdžong/Pingdong/Taojuan → Kaohsiung, Taichung, Pingtung, Taoyuan.
+- Contact CTA „Kako stopiti v stik s pisarno“ on the column footers that used „poklicati“.
+- R12 role chrome on the Slovene team bios only. „TWD 1.57M“ untouched (it also occurs in other locales; those strings were not edited).
+- 有限公司 owners → družbeniki in that paragraph only.
+
+## §Verify
+
+```
+cd /Users/son7/Projects/tseng-law-fix-sl-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-sl --lang sl 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sl src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+```
+
+```
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      24
+```
+
+The `24` is `git status --short` after the scratch directory `.tmp-sl/` was removed and before this log file existed (23 modified files + untracked `docs/i18n/global-plan/WO-F-sl.txt`). After this log was written, the same command prints 25.
+
+## Reviewer got wrong (not applied)
+
+- a#31: „ocene“ would make the UI read „17 ocene“. „17 ocen“ is the genitive plural the number requires.
+- a#21: 大法官 are not „veliki sodniki Sodnega juana“. ACCEPTED’s „ustavni sodniki Sodnega sveta (大法官)“ is what was written. 司法院 is the Judicial Yuan and stays „Sodni juan“.
+- a#70 / b#41: „500 000“ and moving „TWD“ after the amount fight R14 and the checker. Dot thousands and the existing TWD-first order stay.
+- a#57 / a#65 / b#28: dropping the first person would contradict ACCEPTED („feminine narrator stays“) and the product fact that Wei Tseng is a woman. The feminine first person stays.
+- b#11 „pot vložitve“: ACCEPTED overrides it with „pristojni organ / postopek“.
+- b#33 „dva“: the checker counts the digit. „2 otroka“ stays; „edina“ still replaces „prizadeta“.
+- „uporaben“ where it means useful or usable is correct Slovene and was not treated as the applicable-law false friend.
+- „ne sme“ is a real prohibition. It was not rewritten as „ne lahko“.
+- The 007 sentence that one word does not translate the whole of parental rights is in the English source. Only the 016 aside, which the English does not have, was removed.

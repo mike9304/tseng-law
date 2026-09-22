@@ -2023,13 +2023,13 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Splošna pojasnila v slovenščini o obsegu dela Hovering International Law Firm na Tajvanu, o jezikih posveta in o prvem stiku.',
       intro:
-        'Hovering International Law Firm zastopa tuje stranke, tudi osebe z vezjo na Tajvan, v zadevah tajvanskega prava: naložbe in ustanavljanje družb, civilni spori, zakonska zveza, družina in dedovanje, delovno pravo, kazenske zadeve in intelektualna lastnina. Ta slovenski del vam pomaga prepoznati, katero delo spada v naš obseg, kaj pripraviti in kako nas poklicati. Gre za splošne informacije, ne za pravni nasvet za vaš primer.',
+        'Hovering International Law Firm zastopa tuje stranke, tudi osebe z vezjo na Tajvan, v zadevah tajvanskega prava: naložbe in ustanavljanje družb, civilni spori, zakonska zveza, družina in dedovanje, delovno pravo, kazenske zadeve in intelektualna lastnina. Ta slovenski del vam pomaga prepoznati, katero delo spada v naš obseg, kaj pripraviti in kako stopiti v stik z nami. Gre za splošne informacije, ne za pravni nasvet za vaš primer.',
       sections: [
         {
           heading: 'S čim se ukvarjamo',
           paragraphs: [
-            'Hovering International Law Firm je odvetniška pisarna s sedežem na Tajvanu. Deluje po tajvanskem pravu in ima pisarne v Tajpeju (臺北), Gaosjungu (高雄), Tajdžongu (臺中) in Pingdongu (屏東). Svetujemo podjetjem, vodimo sodne postopke in zastopamo tuje stranke pri korakih, ki jih je treba opraviti na Tajvanu.',
-            'Vsa vsebina tukaj je splošna. Izid zadeve je odvisen od dejanskega stanja, od uporabnih predpisov in od trenutka. Ti napotki ne nadomeščajo pogovora z odvetnico ali odvetnikom o vaših dokumentih.',
+            'Hovering International Law Firm je odvetniška pisarna s sedežem na Tajvanu. Deluje po tajvanskem pravu in ima pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Svetujemo podjetjem, vodimo sodne postopke in zastopamo tuje stranke pri korakih, ki jih je treba opraviti na Tajvanu.',
+            'Vsa vsebina tukaj je splošna. Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo in od trenutka. Ti napotki ne nadomeščajo pogovora z odvetnico ali odvetnikom o vaših dokumentih.',
           ],
         },
         {
@@ -2042,7 +2042,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Področja pisarne',
           paragraphs: [
-            'Obseg dela obsega naslednjih šest področij. Stran »Področja« vsako od njih opiše natančneje in navede, česa ne obljubljamo.',
+            'Delo obsega naslednjih šest področij. Stran »Področja« vsako od njih opiše natančneje in navede, česa ne obljubljamo.',
           ],
           items: [
             'Naložbe in ustanavljanje družb na Tajvanu',
@@ -2057,7 +2057,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kje začeti',
           paragraphs: [
             'Preberite stran »Področja« in preverite, ali vaša zadeva spada v naš obseg, nato »Stroški« in »Stik«, da veste, kako se določi obseg in kako se stroški potrdijo pred začetkom dela.',
-            'Pri pošiljanju sporočila smete povzetek napisati v svojem jeziku. Izvirno besedilo se shrani natanko tako, kot ste ga napisali, in se ne prevaja samodejno. Poslano sporočilo je prošnja, ki čaka na oceno: to še ni posvet in še ni potrjen sestanek.',
+            'Povzetek lahko napišete v svojem jeziku. Izvirno besedilo se shrani natanko tako, kot ste ga napisali, in se ne prevaja samodejno. Poslano sporočilo je prošnja, ki čaka na oceno: to še ni posvet in še ni potrjen sestanek.',
           ],
         },
       ],
@@ -2087,7 +2087,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Zakonska zveza, družina in dedovanje',
           paragraphs: [
-            'Vodimo ločitev (離婚), delitev premoženja, izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok (未成年子女權利義務之行使或負擔), stike z otrokom (會面交往) in dedovanje (繼承), tudi kadar so stranke ali premoženje v različnih državah. Čezmejne družinske zadeve pogosto zahtevajo nadaljnjo oceno matičnih evidenc (戶籍), oblike listin in njihove dokazne moči na Tajvanu.',
+            'Vodimo ločitev (離婚), delitev premoženja, izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok (未成年子女權利義務之行使或負擔), stike z otrokom (會面交往) in dedovanje (繼承), tudi kadar so stranke ali premoženje v različnih državah. Čezmejne družinske zadeve pogosto zahtevajo nadaljnjo oceno tajvanskega registra prebivalstva (戶籍), oblike listin in njihove dokazne moči na Tajvanu.',
             'Ker družinske zadeve pogosto prinašajo roke in vzporedne postopke, naj prvi povzetek navede razmerje med strankami, trenutno prebivališče in že potekajoče postopke.',
           ],
         },
@@ -2132,20 +2132,20 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ustanovitev in zgradba',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) so leta 2016 ustanovile odvetnice in odvetniki, ki so študirali na National Taiwan University (國立臺灣大學). Kitajsko ime 昊鼎 povezuje znak 昊 (»široko nebo«) z znakom 鼎 (»trdna podlaga«) in izraža usmeritev pisarne od njene ustanovitve.',
-            'Imamo pisarne v Tajpeju (臺北), Gaosjungu (高雄), Tajdžongu (臺中) in Pingdongu (屏東). Pisarna v Gaosjungu se osredotoča na vodenje podjetij in vodi civilne, kazenske in upravne spore. Pisarna v Tajdžongu vodi gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Pisarna v Pingdongu je bila odprta leta 2017 za lokalne potrebe.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) so leta 2016 ustanovili odvetnice in odvetniki, ki so študirali na National Taiwan University (國立臺灣大學). Kitajsko ime 昊鼎 povezuje znak 昊 (»široko nebo«) z znakom 鼎 (»trdna podlaga«) in izraža usmeritev pisarne od njene ustanovitve.',
+            'Imamo pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Pisarna v Kaohsiungu se osredotoča na vodenje podjetij in vodi civilne, kazenske in upravne spore. Pisarna v Taichungu vodi gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Pisarna v Pingtungu je bila odprta leta 2017 za lokalne potrebe.',
             'Poleg odvetniškega dela od leta 2020 deluje tudi Hovering Accounting Office, ki ponuja računovodstvo in davčno načrtovanje podjetnikom in zasebnim osebam s premoženjem.',
           ],
         },
         {
           heading: 'Delo s tujimi strankami',
           paragraphs: [
-            'Čezmejno delo obsega ustanavljanje družb, vizume, prijave znamk in patentov, oceno pravnega tveganja in davčno svetovanje podjetjem. Pisarna v Tajdžongu vodi zlasti gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Odvetnica Wei Tseng (曾雋崴) zastopa stranke iz Koreje, z Japonske in druge mednarodne stranke na navedenih področjih.',
+            'Čezmejno delo obsega ustanavljanje družb, vizume, prijave znamk in patentov, oceno pravnega tveganja in davčno svetovanje podjetjem. Pisarna v Taichungu vodi zlasti gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Odvetnica Wei Tseng (曾雋崴) zastopa stranke iz Koreje, z Japonske in druge mednarodne stranke na navedenih področjih.',
             'Ali lahko zadevo prevzamemo, je odvisno od vsebine in od jezika sporazumevanja. Če vaša zadeva spada na navedena področja in jo je mogoče obravnavati v enem od štirih jezikov posveta, lahko pošljete povzetek v oceno.',
           ],
         },
         {
-          heading: 'Ko nas pokličete',
+          heading: 'Ko stopite v stik z nami',
           paragraphs: [
             'Po prejemu vašega povzetka odvetnica ali odvetnik oceni vsebino in nato govori o morebitnem obsegu dela, o še potrebnih dokumentih in o nadaljnjih korakih. Pri davčnih ali računovodskih vprašanjih lahko pisarna sodeluje z računovodskim oddelkom v enem povezanem postopku.',
             'Izid vsake zadeve je odvisen od dejanskega stanja in od razpoložljivih dokumentov; izida ne obljubljamo. Če potrebujete zavezujoč odgovor za svoj položaj, morajo biti dokumenti obravnavani z odvetnico ali odvetnikom v enem od štirih jezikov posveta.',
@@ -2156,7 +2156,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ODVETNIKI',
       title: 'Mednarodna ekipa Hovering',
-      description: 'Profili odvetnic in odvetnikov, operativnega vodenja in pridruženega računovodstva Hovering.',
+      description: 'Profili odvetnic in odvetnikov, osebja za poslovanje in pridruženega računovodstva Hovering.',
       intro: '',
       sections: [],
     },
@@ -2178,7 +2178,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Stroški se potrdijo pred začetkom dela',
           paragraphs: [
-            'Ko je obseg dela jasen, se višina in način izračuna stroškov z vami obravnavata in potrdita, preden delo začne. Če se obseg med potekom spremeni, mora biti potrjen znova.',
+            'Ko je obseg dela jasen, se višina in način izračuna stroškov z vami obravnavata in potrdita, preden se delo začne. Če se obseg med potekom spremeni, mora biti potrjen znova.',
             'Ta stran ni cenovna ponudba in ne vzpostavi obveznosti plačila. Tudi pošiljanje prošnje prek te strani je brezplačno.',
           ],
         },
@@ -2192,7 +2192,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Zakaj ta stran ne navaja tarif',
           paragraphs: [
-            'Stroški so odvisni od zadeve same: od prizadevanja, števila strank, dokumentov, rokov in od tega, ali postopek že teče. Številka, določena vnaprej, ne bi pokazala stroškov vašega spisa. Zato najprej določimo obseg dela in vam stroške sporočimo nato, preden delo začne.',
+            'Stroški so odvisni od zadeve same: od prizadevanja, števila strank, dokumentov, rokov in od tega, ali postopek že teče. Številka, določena vnaprej, ne bi pokazala stroškov vašega spisa. Zato najprej določimo obseg dela in vam stroške sporočimo nato, preden se delo začne.',
             'Poleg nagrade lahko nastanejo sodne takse, stroški organov ali tretjih oseb. Ti so od nagrade ločeni in so odvisni od ustreznega postopka.',
           ],
         },
@@ -2200,7 +2200,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
     },
     contact: {
       eyebrow: 'STIK',
-      title: 'Kako pisarno pokličete',
+      title: 'Kako stopiti v stik s pisarno',
       description:
         'Jezik strani, jeziki posveta, postopek, če ne obvladate nobenega od štirih jezikov, in česa ta stran ne obljublja.',
       intro:
@@ -2214,13 +2214,13 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Jezik strani: ti napotki so napisani v slovenščini.',
             'Jezik posveta: posvet poteka samo v angleščini, kitajščini (中文), japonščini in korejščini.',
-            'Vaš jezik pisanja: povzetek smete napisati v svojem jeziku; izvirno besedilo se shrani nespremenjeno.',
+            'Vaš jezik pisanja: povzetek lahko napišete v svojem jeziku; izvirno besedilo se shrani nespremenjeno.',
           ],
         },
         {
           heading: 'Če ne obvladate nobenega od štirih jezikov posveta',
           paragraphs: [
-            'V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
+            'V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
             'Gre le za korak ocene, ne za obljubo. Ne obljubljamo tolmača, storitve v slovenščini niti v drugem jeziku zunaj štirih navedenih jezikov, niti tega, da vsako zadevo sprejmemo.',
           ],
         },
@@ -2235,7 +2235,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Česa ta stran ne obljublja',
           paragraphs: [
             'Ne obljubljamo roka za odgovor, ne potrjujemo sestanka prek te strani, ne obljubljamo določene odvetnice niti določenega odvetnika in ne zagotavljamo tolmača. Pisni prevod je nekaj drugega: vaše sporočilo se ne prevaja samodejno.',
-            'Če pošljete prošnjo, se vsebina shrani in čaka na oceno. Če po nekaj časa ne prejmete odgovora, lahko znova pišete na e-naslov, naveden na strani za stik.',
+            'Če pošljete prošnjo, se vsebina shrani in čaka na oceno. Če po nekaj času ne prejmete odgovora, lahko znova pišete na e-naslov, naveden na strani za stik.',
           ],
         },
       ],
@@ -2251,7 +2251,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kako ta del uporabljati',
           paragraphs: [
-            'Če ne najdete odgovora za svoj položaj, je odgovor praviloma odvisen od posebnih dejstev. Zato jih napišite v povzetek, namesto da bi jih izpeljevali s te strani.',
+            'Če ne najdete odgovora za svoj položaj, je odgovor praviloma odvisen od posebnih dejstev. Zato jih napišite v povzetek, namesto da bi odgovor sklepali iz te strani.',
           ],
         },
       ],
@@ -2264,7 +2264,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kaj pripraviti pred stikom?',
           answer:
-            'Pripravite kratek povzetek poteka, svoje zahteve, vezi s Tajvanom in roka, če obstaja. Če je že na voljo pisanje sodišča ali organa, navedite datum. V tej fazi še ni treba pošiljati osebnih dokumentov niti zbirke dokazov.',
+            'Pripravite kratek povzetek poteka, svojo zahtevo, vez s Tajvanom in rok, če obstaja. Če je že na voljo pisanje sodišča ali organa, navedite datum. V tej fazi še ni treba pošiljati osebnih dokumentov niti zbirke dokazov.',
         },
         {
           question: 'Ali je mogoč posvet v slovenščini?',
@@ -2274,7 +2274,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kaj storiti, če ne morem uporabiti nobenega od štirih jezikov?',
           answer:
-            'Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da ocenimo način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za korak ocene, ne za obljubo, da lahko delamo v drugem jeziku.',
+            'Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za korak ocene, ne za obljubo, da lahko delamo v drugem jeziku.',
         },
         {
           question: 'Kako se ravna z mojim besedilom v slovenščini?',
@@ -2289,7 +2289,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kako se izračunajo stroški?',
           answer:
-            'Najprej se določi obseg dela, nato se z vami potrdita višina in način izračuna stroškov, preden delo začne. Ta stran ne navaja zneskov in ne pravi, da je prvi posvet brezplačen.',
+            'Najprej se določi obseg dela, nato se z vami potrdita višina in način izračuna stroškov, preden se delo začne. Ta stran ne navaja zneskov in ne pravi, da je prvi posvet brezplačen.',
         },
         {
           question: 'Kaj storiti, če je moja zadeva zelo nujna?',
@@ -2302,7 +2302,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ZASEBNOST',
       title: 'Podatki, ki jih zbira obrazec za stik',
       description:
-        'Kaj zbira obrazec za stik v tem slovenskem delu, kako se ravna z izvirnim besedilom in kako nas pokličete glede vaših podatkov.',
+        'Kaj zbira obrazec za stik v tem slovenskem delu, kako se ravna z izvirnim besedilom in kako stopiti v stik z nami glede vaših podatkov.',
       intro:
         'Ta del se nanaša samo na obrazec za stik na teh napotilnih straneh. Opisuje ravnanje s podatki, ne pa tehničnega jamstva.',
       sections: [
@@ -2360,8 +2360,8 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kraj hrambe in ponudniki',
           paragraphs: [
-            'Te strani gosti družba Vercel in vaša pošiljka se hrani v nejavnem objektnem shrambišču te storitve. E-pošta se pošilja poštno storitvijo, ki jo pisarna uporablja.',
-            'Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po uporabnih predpisih, ostanejo za to obdobje. Prošnje za osebne podatke sprejema wei@hoveringlaw.com.tw.',
+            'Te strani gosti družba Vercel in vaša pošiljka se hrani v nejavni objektni shrambi te storitve. E-pošta se pošilja prek e-poštne storitve, ki jo pisarna uporablja.',
+            'Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po predpisih, ki se uporabljajo, ostanejo za to obdobje. Prošnje za osebne podatke sprejema wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -2378,14 +2378,14 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Samo splošne informacije',
           paragraphs: [
             'Vsebina teh strani je napisana kot splošna informacija. Ni pravni nasvet za vaš primer in ne nadomešča ocene vaših dokumentov.',
-            'Izid zadeve je odvisen od dejanskega stanja, od uporabnih predpisov in od trenutka; dve navidezno podobni situaciji se lahko končata različno.',
+            'Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo in od trenutka; dve navidezno podobni situaciji se lahko končata različno.',
           ],
         },
         {
           heading: 'Pravni okvir',
           paragraphs: [
             'Pisarna deluje po tajvanskem pravu in ta stran govori samo o delu v tem okviru.',
-            'Vsebina ni svetovanje po pravu drugega reda kot tajvanskega, vključno s pravom kraja vašega prebivanja. Če se del vaše zadeve nanaša na drug pravni red, z vami pojasnimo, katera usposobljena oseba je za ta del potrebna.',
+            'Vsebina ni svetovanje po pravu drugega pravnega reda, ne po tajvanskem, vključno s pravom kraja vašega prebivanja. Če se del vaše zadeve nanaša na drug pravni red, z vami pojasnimo, katera usposobljena oseba je za ta del potrebna.',
           ],
         },
         {
@@ -2427,10 +2427,10 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Koliko lahko članek služi za orientacijo',
+          heading: 'V kolikšni meri lahko članek služi za orientacijo',
           paragraphs: [
             'Članki so splošne informacije ob trenutku objave. Predpisi in njihova uporaba se lahko spremenijo in članek ne vsebuje vseh okoliščin vašega primera.',
-            'Zato ne opirajte postopka v resnični zadevi samo na članek. Uporabite ga za pregled in svoje dokumente obravnavajte posebej z odvetnico ali odvetnikom; ta stran ni korak posveta.',
+            'Zato se v resnični zadevi ne opirajte samo na članek. Uporabite ga za pregled in svoje dokumente obravnavajte posebej z odvetnico ali odvetnikom; ta stran ni korak posveta.',
           ],
         },
       ],

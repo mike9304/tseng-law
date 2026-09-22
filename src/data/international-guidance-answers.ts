@@ -1296,17 +1296,17 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm je tajvanska odvetniška pisarna, ki so jo leta 2016 ustanovili diplomanti National Taiwan University (國立臺灣大學), s pisarnami v Tajpeju, Gaosjungu, Tajdžongu in Pingdongu. Od leta 2020 deluje tudi računovodski oddelek; pisarna v Tajdžongu vodi zadeve z vezjo na Korejo in Japonsko. Pisarna ne obljublja izida. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
+        'Hovering International Law Firm je tajvanska odvetniška pisarna, ki so jo leta 2016 ustanovili odvetnice in odvetniki, diplomanti National Taiwan University (國立臺灣大學), s pisarnami v Tajpeju, Kaohsiungu, Taichungu in Pingtungu. Od leta 2020 deluje tudi računovodski oddelek; pisarna v Taichungu vodi zadeve z vezjo na Korejo in Japonsko. Pisarna ne obljublja izida. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
       sources: ['/sl/lawyers', '/sl/services'],
     },
     lawyers: {
       answer:
-        'Ta stran prikazuje profile odvetnic in odvetnikov Hovering, operativnega vodenja in pridruženega računovodstva. Odvetnica Wei Tseng (曾雋崴) je pooblaščena za opravljanje odvetništva na Tajvanu in je vodilna odvetnica pisarne; dela s strankami iz Koreje, z Japonske in z drugimi mednarodnimi strankami. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
+        'Ta stran prikazuje profile odvetnic in odvetnikov Hovering, osebja za poslovanje in pridruženega računovodstva. Odvetnica Wei Tseng (曾雋崴) je pooblaščena za opravljanje odvetništva na Tajvanu in je vodilna odvetnica pisarne; dela s strankami iz Koreje, z Japonske in z drugimi mednarodnimi strankami. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
       sources: ['/sl/about', '/sl/contact'],
     },
     pricing: {
       answer:
-        'Ta stran ne objavlja cenika. Najprej se iz vašega povzetka potrdi obseg dela, nato se z vami potrdita višina in način izračuna, preden delo začne. Posvet z odvetnico ali odvetnikom je lahko plačljiv; poleg nagrade lahko nastanejo sodne ali upravne takse. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
+        'Ta stran ne objavlja cenika. Najprej se iz vašega povzetka potrdi obseg dela, nato se z vami potrdita višina in način izračuna, preden se delo začne. Posvet z odvetnico ali odvetnikom je lahko plačljiv; poleg nagrade lahko nastanejo sodne ali upravne takse. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
       sources: ['/sl/contact', '/sl/faq'],
     },
     contact: {

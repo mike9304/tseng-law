@@ -1029,14 +1029,14 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Prikaži na zemljevidu',
     photoAlts: [
       'Recepcija pisarne v Tajpeju, Hovering International Law Firm',
-      'Soba odvetnice v pisarni v Tajpeju, Hovering International Law Firm',
+      'Kabinet odvetnice v pisarni v Tajpeju, Hovering International Law Firm',
       'Sejna soba v pisarni v Tajpeju, Hovering International Law Firm',
     ],
     officeTitles: {
       taipei: 'Tajpej',
-      taichung: 'Tajdžong',
-      kaohsiung: 'Gaosjung',
-      pingtung: 'Pingdong',
+      taichung: 'Taichung',
+      kaohsiung: 'Kaohsiung',
+      pingtung: 'Pingtung',
     },
   },
   lt: {

@@ -23,11 +23,11 @@ Kui müük Taiwani klientidele algab, võib välismaine peakontor saada mitmesug
 
 See, mis tuleb esmalt selgitada, on kes Taiwanis võtab mida. Hinnatav struktuur muutub selle järgi, kas välismaine peakontor jätkab müügilepingute allkirjastamist, kas Taiwani äriühing ostab kaupu ja müüb need edasi või kas kohalik personal annab ainult tehnilist tuge.
 
-See tekst on üldine juhis pooljuhtmaterjalide, -komponentide ja -seadmete ettevõtetele, kes kujundavad turule sisenemise struktuuri Taiwanis. Järgmised stsenaariumid ja kontrollikohad on hüpoteetilised näited ja hindamisettepanekud, mitte kindla ettevõtte tegelik volitus ega ühetaoline asutamise eeldus. Maksud, ekspordikontroll, tootespetsiifilised load ja investori liigitus nõuavad veel eraldi analüüsi.
+See tekst on üldine juhis pooljuhtmaterjalide, -komponentide ja -seadmete ettevõtetele, kes kujundavad turule sisenemise struktuuri Taiwanis. Järgmised stsenaariumid ja kontrollikohad on hüpoteetilised näited ja hindamisettepanekud, mitte kindla ettevõtte tegelik käsund ega ühetaoline asutamise eeldus. Maksud, ekspordikontroll, tootespetsiifilised load ja investori liigitus nõuavad veel eraldi analüüsi.
 
 ## 1. Müügi ja tegevuse jaotus selgitatakse enne registreerimisvormi valikut
 
-Oletame, et välismaine täppiskomponentide tootja müüb Taiwani klientidele. Alguses saadab peakontor otse, kuid klient palub hoida varuosi Taiwanis ja saada inseneride tuge kohapeal. Aadressist ei piisa: vaja on subjekti, kes saab müüa, importida, ladustada, palgata, anda tehnilist tuge ja kanda vastutust.
+Oletame, et välismaine täppiskomponentide tootja müüb Taiwani klientidele. Alguses saadab peakontor otse, kuid klient palub hoida varuosi Taiwanis ja saada inseneride tuge kohapeal. Aadressist ei piisa: vaja on isikut või äriühingut, kes saab müüa, importida, ladustada, palgata, anda tehnilist tuge ja kanda vastutust.
 
 Enne turule sisenemise struktuuri otsustamist saab peakontor sisemiselt selgitada:
 
@@ -61,29 +61,29 @@ Kui otsustatakse asutada iseseisev juriidiline isik Taiwanis, tuleb ka valida se
 
 ### Piiratud vastutusega äriühing (有限公司): kergem juhtimine, kuid rangemalt piiratud osaluste üleandmine
 
-Selle saab moodustada 1 või enama füüsilise isikuga (有限公司) või Taiwani või välismaiste juriidiliste isikutega osanikena; osanikud vastutavad põhimõtteliselt sissemakse summani. Äriühingul on 1–3 juhatuse liiget, valitud osanike hulgast. Osanikud, kes ei täida tegevust, võivad kasutada järelevalveõigust (監察人), seega ei ole vaja eraldi järelevalvajat nimetada. Kui põhikirjas ei ole teisiti määratud, kehtib 1 hääl iga 1 osaniku kohta, seega ei pea valitsev mõju vastama sissemakse suhtele. Tavalise osaniku sissemakse üleandmine eeldab põhimõtteliselt teiste hääleõiguste üle poole nõusolekut; juhatuse liikmele 2/3 või rohkem. See sobib paremini lihtsatele osanikesuhetele ja stabiilsele valitsevale mõjule kui korduvale kapitali kaasamisele või osaluste kauplemisele. Hiljem saab selle muuta aktsiaseltsiks (股份有限公司).
+Selle saab moodustada 1 või enama füüsilise isikuga (有限公司) või Taiwani või välismaiste juriidiliste isikutega osanikena; osanikud vastutavad põhimõtteliselt sissemakse summani. Äriühingul on 1–3 juhatuse liiget, valitud osanike hulgast. Osanikud, kes ei aja äriühingu asju, võivad kasutada kontrolliõigust, seega ei ole vaja eraldi järelevalvajat (監察人) nimetada. Kui põhikirjas ei ole teisiti määratud, kehtib 1 hääl iga 1 osaniku kohta, seega ei pea valitsev mõju vastama sissemakse suhtele. Tavalise osaniku sissemakse üleandmine eeldab põhimõtteliselt teiste hääleõiguste üle poole nõusolekut; juhatuse liikmele 2/3 või rohkem. See sobib paremini lihtsatele osanikesuhetele ja stabiilsele valitsevale mõjule kui korduvale kapitali kaasamisele või osaluste kauplemisele. Hiljem saab selle muuta aktsiaseltsiks (股份有限公司).
 
 ### Aktsiaselts (股份有限公司): sobiv, kui soovitakse võtta teisi investoreid või noteerimine on kavas
 
-Kapital jagatakse aktsiateks. Põhimõtteliselt nõutakse vähemalt kaks aktsionäri (股份有限公司), kuid riik või juriidiline isik võib selle asutada üksi ning välismaine juriidiline isik võib hoida 100 %. Aktsiad on põhimõtteliselt vabalt üleantavad, seadusjärgsete eranditega; eri liiki aktsiaid ja optsioone töötajatele saab kujundada seaduse järgi. See sobib ettevõtetele, kes ootavad investoreid, aktsiakauplemist, kapitalistiimuleid töötajatele või hilisemat ühinemist, omandamist, noteerimist või registreerimist tekkival väärtpaberiturul; see ei piirdu suurte ettevõtetega. Juhtimises võib äriühing, mis ei ole teinud avalikku aktsiapakkumist, põhikirjaga olla ilma juhatuseta ning tal võib olla ainult 1 või kaks juhatajat. Äriühing, mille ainus aktsionär on riik või juriidiline isik, võib põhikirjaga olla ilma järelevalvajata (監察人). Iga aktsiaselts (股份有限公司) ei pea andma majandusaasta aruannet vandeaudiitori kinnitamiseks (會計師查核簽證). Tavalise äriühingu olulisimad audiitorkünnised on sissemakstud kapital TWD 30.000.000 (新臺幣) või, selle all, käive TWD 100.000.000 või 100 töötajat Taiwani töötajate kindlustuses (勞工保險); avaliku aktsiapakkumise teinud äriühingud järgivad väärtpaberireguleerimist.
+Kapital jagatakse aktsiateks. Põhimõtteliselt nõutakse vähemalt kaks aktsionäri (股份有限公司), kuid riik või juriidiline isik võib selle asutada üksi ning välismaine juriidiline isik võib hoida 100 %. Aktsiad on põhimõtteliselt vabalt üleantavad, seadusjärgsete eranditega; eri liiki aktsiaid ja optsioone töötajatele saab kujundada seaduse järgi. See sobib ettevõtetele, kes ootavad investoreid, aktsiakauplemist, kapitalistiimuleid töötajatele või hilisemat ühinemist, omandamist, noteerimist või registreerimist tekkival väärtpaberiturul; see ei piirdu suurte ettevõtetega. Juhtimises võib äriühing, mis ei ole teinud avalikku aktsiapakkumist, põhikirjaga olla ilma juhatuseta ning tal võib olla ainult 1 või kaks juhatajat. Äriühing, mille ainus aktsionär on riik või juriidiline isik, võib põhikirjaga olla ilma järelevalvajata (監察人). Iga aktsiaselts (股份有限公司) ei pea andma majandusaasta aruannet audiitori kinnituseks (會計師查核簽證). Tavalise äriühingu olulisimad audiitorkünnised on sissemakstud kapital TWD 30.000.000 (新臺幣) või, selle all, käive TWD 100.000.000 või 100 töötajat Taiwani töötajate kindlustuses (勞工保險); avaliku aktsiapakkumise teinud äriühingud järgivad väärtpaberireguleerimist.
 
 ## 4. Filiaali ja tütarettevõtte menetlused erinevad; ainult tütarettevõte läbib investeeringute läbivaatamise osakonna kontrolli
 
-Kui välismaine äriühing asutab Taiwani tütarettevõtte, tehakse põhimõtteliselt nime eeluuring ning taotletakse investeerimisluba Majandusministeeriumi investeeringute läbivaatamise osakonnalt (經濟部投資審議司). Heakskiidu järel kantakse vahendid, kinnitatakse investeerimissumma ja vandeaudiitor (會計師) kontrollib kapitali, seejärel viiakse asutamine ja maksuregistreerimine lõpule.
+Kui välismaine äriühing asutab Taiwani tütarettevõtte, tehakse põhimõtteliselt nime eeluuring ning taotletakse investeerimisluba Majandusministeeriumi investeeringute läbivaatamise osakonnalt (經濟部投資審議司). Heakskiidu järel kantakse vahendid, kinnitatakse investeerimissumma ja audiitor (會計師) kontrollib kapitali, seejärel viiakse asutamine ja maksuregistreerimine lõpule.
 
 Seevastu tavalise välismaise äriühingu Taiwani filiaali asutamine ei eelda põhimõtteliselt investeeringute läbivaatamise osakonna investeerimisluba; Majandusministeeriumi kaubandusarengu amet (經濟部商業發展署) käsitleb filiaali registreerimist ja sellega seotud kapitali kinnitamist. Vajalikuks jäävad nime eeluuring, käibekapitali ülekanne, kapitali kontroll ja maksuregistreerimine; kava on tavaliselt lühem.
 
-Eelnev kirjeldab ainult menetlust, mitte seda, kuidas leping tuleks sõnastada. Ühe konkreetse vormi omamine ei tee tehingut seaduslikuks ega enneta vaidlusi.
+Eelnev on juhis lepingu sõnastamise kohta. Ühe konkreetse vormi omamine ei tee tehingut seaduslikuks ega enneta vaidlusi.
 
 ## 5. Äriühingu registreerimine ja inseneri seadusjärgne töö ei ole sama asi
 
 Registreerimise lõpuleviimine Taiwanis ei tähenda, et välismaise peakontori personal võiks automaatselt Taiwanis töötada. Välismaalane, kes töötab Taiwanis, vajab seadusjärgset tööluba (工作許可) ja pikema elamise korral välismaalase elamiskaarti (外僑居留證). Põhimõtteliselt taotleb tööandja tööluba ja vastavat elamiskaarti.
 
-Tööloa saamine on suhteliselt lihtsam Taiwani tütarettevõtte või välismaise äriühingu filiaali juhile. Teisele välismaalasele või järgmistele taotlemiseks nõuab tööministeerium valdkonna järgi künniseid kapitalile, käibele või muule (子公司). Kui on oodata, et välismaist personali töötab Taiwanis, tuleb enne äriühingu asutamist kinnitada, kas kavandatud kapital saavutab kehtiva künnise.
+Tööloa saamine on suhteliselt lihtsam Taiwani tütarettevõtte või välismaise äriühingu filiaali juhile. Teisele välismaalasele või järgmistele taotlemiseks nõuab tööministeerium valdkonna järgi künniseid kapitalile, käibele või muule. Kui on oodata, et välismaist personali töötab Taiwanis, tuleb enne äriühingu asutamist kinnitada, kas kavandatud kapital saavutab kehtiva künnise.
 
 ## 7. Struktuurid, mis võivad tegevuse etapi järgi sobida
 
-Järgmised stsenaariumid on hüpoteetilised kaalumise abiks; need ei kinnita, et kindel viis oleks seaduslik või parem (子公司).
+Järgmised stsenaariumid on hüpoteetilised kaalumise abiks; need ei kinnita, et kindel viis oleks seaduslik või eelistatav.
 
 **Välismaised ettevõtted, kes sihivad varajast eksporti.** Kui Taiwanis ei ole veel töötajaid ega varusid ja soovitakse uurida nõudlust sõltumatu turustaja kaudu, võib esmalt vaadata tarnet, turustamissuhe ja tegevusala Taiwanis. Pelk turustamisleping ei lahenda kõiki reguleerimisküsimusi Taiwanis.
 
@@ -115,4 +115,4 @@ Etappide kaupa üleminekut saab kavandada, kuid tuleb ka uurida olemasolevate le
 
 Kui Taiwanis soovitakse müüa, juhtida varusid, anda paigaldustuge või palgata kohapeal, korrastage esmalt töö, mida peakontor teostab, ja see, mis kuulub Taiwani organisatsioonile. Vestlusteemade ja huvide konfliktide kinnitamise järel selgitab büroo vajalikud materjalid ja nende teenuste ulatuse, mida saab osutada.
 
-Näide teemast: vestlus pooljuhtettevõtte turule sisenemise struktuurist Taiwanis. Esimeses kontaktis teatage äriühingu nimi, peakontori riik, kavandatud toode või teenus, tegevuskava Taiwanis ja soovitud vestluskeel. Konfidentsiaalsed kavandimaterjalid ja täielikud lepingud saadetakse alles pärast täiendavate juhiste saamist. Tegelikult kättesaadavad vestluskeeled ja iga volituse ulatus tuleb kinnitada kontakti ajal; nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles ning viivitamatut vastust ei lubata.
+Näide teemast: vestlus pooljuhtettevõtte turule sisenemise struktuurist Taiwanis. Esimeses kontaktis teatage äriühingu nimi, peakontori riik, kavandatud toode või teenus, tegevuskava Taiwanis ja soovitud vestluskeel. Konfidentsiaalsed kavandimaterjalid ja täielikud lepingud saadetakse alles pärast täiendavate juhiste saamist. Tegelikult kättesaadavad vestluskeeled ja iga volituse ulatus tuleb kinnitada kontakti ajal; nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles ning viivitamatut vastust ei tõotata.

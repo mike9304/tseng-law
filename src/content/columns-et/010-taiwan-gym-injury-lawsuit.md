@@ -17,11 +17,11 @@ Juhtumi põhjal, kus Korea üliõpilane sai Taiwanis jõusaalis (健身房) tree
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Õnnetus juhtus Taichungis (臺中) asuvas jõusaalis treeneri juhendatud jõutõmbe (硬舉) treeningul. Vigastuse järel ei tohi vaadata üksnes asjaolu, et õnnetus toimus jõusaalis; koos tuleb uurida kasutaja treeningukogemust ja terviseseisundit, harjutuse liiki ja raskust, treeneri selgitust ja juhendamist, toonaseid liigutusi ja reageeringut, vigastuse ja harjutuse vahelist põhjuslikku seost (因果關係) ning kahju toetavaid materjale.
+Õnnetus juhtus Taichungis (臺中) asuvas jõusaalis treeneri juhendatud jõutõmbe (硬舉) treeningul. Vigastuse järel ei tohi vaadata üksnes asjaolu, et õnnetus toimus jõusaalis; tuleb arvestada ka kasutaja treeningukogemust ja terviseseisundit, harjutuse liiki ja raskust, treeneri selgitust ja juhendamist, toonaseid liigutusi ja reageeringut, vigastuse ja harjutuse vahelist põhjuslikku seost (因果關係) ning kahju toetavaid materjale.
 
-Esindasin selles asjas hagejat, Korea üliõpilast (訴訟代理人). Taichungi esimese astme kohus (臺灣臺中地方法院) kohustas kuupäeval 24. jaanuar 2022 tarbijavaidluse asjas nr 7 vabariigi aastal 109 (109年度消字第7號) tehtud esimese astme otsuses kostjat maksma [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) koos otsuses märgitud intressiga.
+Esindasin selles asjas hagejat, Korea üliõpilast, kohtuesindajana (訴訟代理人). Taichungi esimese astme kohus (臺灣臺中地方法院) kohustas otsusega, mille kuupäev on 24. jaanuar 2022, tarbijavaidluse asjas nr 7 Hiina Vabariigi kalendriaastal 109 (109年度消字第7號) tehtud esimese astme otsuses kostjat maksma [TWD 1.579.589](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) koos otsuses märgitud intressiga.
 
-Seejärel teatasid meediakanalid, et pooled jõudsid apellatsiooniastmes kokkuleppele (和解). Ainuüksi ametliku esimese astme otsuse põhjal ei saa kinnitada apellatsiooniastme tulemust ega kokkuleppe summat; seda ei tohi lugeda esimese astme otsuse lõplikuks tulemuseks.
+Seejärel teatasid meediakanalid, et pooled jõudsid apellatsiooniastmes kokkuleppele (和解). Ainuüksi ametliku esimese astme otsuse põhjal ei saa kinnitada apellatsiooniastme tulemust ega kokkuleppe summat; meedias teatatud kokkulepet ei tohi lugeda esimese astme otsuse kinnitatud lõpptulemuseks.
 
 Allpool on selle asja meediakajastuste, võrgupostituste ja õiguskommentaaride pealkirjad. Need pealkirjad tutvustavad iga lingi sisu; need ei tähenda, et see artikkel ise asjaolusid kindlaks teeks.
 
@@ -61,9 +61,9 @@ Allpool on selle asja meediakajastuste, võrgupostituste ja õiguskommentaaride 
 
 **Kas Korea meesüliõpilasel tekkis personaalse treeningu käigus 90 kg jõutõmbel lülivaheketta rebend?**
 
-Selle asja praktiline tähendus on selles, et see näitab: ainuüksi asjaolu, et vigastus tekkis jõusaalis (健身房), ei määra vastutust kohe. Teenuseosutaja ohutuskohustuse (安全義務) sisu, konkreetne juhendamistegevus ja hoolsuskohustuse (注意義務) rikkumine, vigastuse ja teo vaheline põhjuslik seos ning kahju ulatus hinnatakse iga asja materjalide põhjal. Kriminaalmenetluse (刑事) ja tsiviilmenetluse (民事) eeldused ning tähtajad erinevad samuti, seega tuleb õnnetuse järel jäljed eraldi korrastada.
+Selle asja praktiline tähendus on selles, et see näitab: ainuüksi asjaolu, et vigastus tekkis jõusaalis (健身房), ei määra vastutust kohe. Teenuseosutaja ohutuskohustuse (安全義務) sisu, konkreetne juhendamistegevus ja hoolsuskohustuse (注意義務) rikkumine, vigastuse ja teo vaheline põhjuslik seos ning kahju ulatus hinnatakse iga asja materjalide põhjal. Kriminaalmenetluse (刑事) ja tsiviilmenetluse (民事) eeldused ning tähtajad erinevad samuti, seega tuleb andmed õnnetuse järel eraldi korrastada.
 
-Järgnev on üldine teave Taiwani jõusaalivigastuste vaidluste selgitamiseks; see ei ole konkreetset asja puudutav õigusnõuanne (損害賠償). Tegelik õigus ja toimimisviis võivad erineda lepingusuhte, õnnetuse kulgemise, vigastuse põhjuse ja astme, poolte teo, kindlustustingimuste, säilitatud tõendite ja kohaldatava õiguse järgi.
+Järgnev on üldine teave Taiwani jõusaalivigastuste vaidluste selgitamiseks; see ei ole konkreetset asja puudutav õigusnõuanne. Tegelik õigus ja toimimisviis võivad erineda lepingusuhte, õnnetuse kulgemise, vigastuse põhjuse ja astme, poolte teo, kindlustustingimuste, säilitatud tõendite ja kohaldatava õiguse järgi.
 
 ## 1. Milliseid õigusmenetlusi võib Taiwani jõusaalivigastuse järel uurida?
 
@@ -71,7 +71,7 @@ Järgnev on üldine teave Taiwani jõusaalivigastuste vaidluste selgitamiseks; s
 
 See ei tähenda, et ettevõtja või treeneri vastutus tunnistataks iga kord, kui vigastus tekib jõusaalis. Asja kaupa tuleb hinnata, milline hoolsuskohustus konkreetselt oli, kas seda rikuti, kas rikkumise ja vigastuse vahel on põhjuslik seos (因果關係), kas tekkis tegelik kahju, milliseid vastuväiteid vastaspoolel on ning kas on tõendeid, mis toetavad iga väidet ja iga vastuväidet.
 
-Kui hooletusest põhjustatud kehavigastuse (過失傷害) süüteo seadusjärgsed tunnused on täidetud, võib uurida kriminaalkaebust (告訴). Uurida võib ka tsiviilõiguslikku kahjuhüvitise nõuet, kuid milline alus lepingulise vastutuse, deliktivastutuse (侵權行為) ja tarbijakaitsevastutuse vahel kohaldub ning milline on vastutuse ulatus, sõltub konkreetsetest asjaoludest. See, et ühest õnnetusest võib uurida mitut menetlust (訴訟), ei tähenda, et need kõik tuleb läbi teha, ega seda, et ühe poole edu oleks kindel.
+Kui hooletusest põhjustatud kehavigastuse (過失傷害) süüteo seadusjärgsed tunnused on täidetud, võib uurida kriminaalkaebust (告訴). Uurida võib ka tsiviilõiguslikku kahjuhüvitise nõuet, kuid milline alus lepingulise vastutuse, deliktivastutuse (侵權行為) ja tarbijakaitsevastutuse vahel kohaldub ning milline on vastutuse ulatus, sõltub konkreetsetest asjaoludest. See, et ühest õnnetusest võib uurida mitut menetlust (訴訟), ei tähenda, et need kõik tuleb läbi teha, ega taga edu üheski neist.
 
 ## 2. Millised tähtajad kehtivad kriminaalkaebusele ja tsiviilõiguslikule hüvitisele?
 
@@ -79,13 +79,13 @@ Kui hooletusest põhjustatud kehavigastuse (過失傷害) süüteo seadusjärgse
 
 Deliktist tulenev kahjuhüvitise nõue (侵權行為) [Taiwani tsiviilseadustiku artikkel 197 (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) järgi lõpeb põhimõtteliselt, kui seda ei kasutata 2 aasta jooksul hetkest, mil kannatanu teab nii kahju kui ka hüvitisekohustuslast, ning lõpeb ka siis, kui kahju põhjustanud teost on möödunud 10 aastat.
 
-Kas mängu tuleb teine nõudealuse, näiteks lepinguline vastutus, või kohalduvad muud reeglid tähtaja alguse, kulgemise, katkemise vms kohta, võib asjaolude (民法) järgi erineda. Tähtaega ei tohi määrata üksnes õnnetusepäeva või diagnoosipäeva järgi; kindlam on varakult ja asja kaupa kontrollida võimalikud nõudealused ja viitepäevad.
+Kas mängu tuleb teine nõudealuse, näiteks lepinguline vastutus, või kohalduvad muud reeglid tähtaja alguse, kulgemise, katkemise vms kohta, võib asjaolude järgi erineda. Tähtaega ei tohi määrata üksnes õnnetusepäeva või diagnoosipäeva järgi; kindlam on varakult ja asja kaupa kontrollida võimalikud nõudealused ja viitepäevad.
 
 ## 3. Milliseid tõendeid tuleb õnnetuse järel säilitada ja kuidas?
 
 Vastutuse, põhjusliku seose ja kahju selgitamiseks on soovitatav koguda mitte ainult õnnetusehetke CCTV-salvestisi (監視器影像), vaid ka haiguslugu (病歷) ja arstitõendit (診斷證明書), kviitungeid ravikulude (醫療費用), ravile sõitmise transpordikulu (就醫交通費) ja hoolduskulu (看護費用) kohta, jõusaali ja treeneriga vahetatud sõnumeid, tunnistajate ütlusi, tunni broneeringut ja kohalolekuandmeid ning treeningukava ja treeninguarvestust. Soovitatav on võimaluse piires pildistada vigastatud piirkonda ja õnnetuskoha olukorda ning järjestada õnnetuse-eelne ja -järgne kulg ning side sisu kuupäeva järgi, et materjale oleks hiljem lihtsam kõrvutada.
 
-Salvestised võivad säilitustähtaja möödumisel üle kirjutuda või muul põhjusel kasutuskõlbmatuks muutuda. Seetõttu võib kaaluda paluda jõusaalil need säilitada sisutõendiga kirja (存證信函) või advokaadi nimel koostatud kirja (律師函) kaudu, milles on konkreetselt märgitud vajalik ajavahemik, koht ja kaamera asukoht. See kiri on praktiline meede jätta jälg sellest, mida ja millal paluti. See iseenesest ei sea vastaspoolele uut seadusjärgset kohustust salvestisi säilitada ega takista kustutamist ning ainuüksi asjaolu, et salvestisi ei ole järele jäänud, ei too kohtule automaatselt kaasa ebasoodsat hinnangut.
+Salvestised võivad säilitustähtaja möödumisel üle kirjutuda või muul põhjusel kasutuskõlbmatuks muutuda. Seetõttu võib kaaluda paluda jõusaalil need säilitada sisutõendiga kirja (存證信函) või advokaadi nimel koostatud kirja (律師函) kaudu, milles on konkreetselt märgitud vajalik ajavahemik, koht ja kaamera asukoht. See kiri on praktiline viis jätta jälje sellest, mida ja millal paluti. See iseenesest ei sea vastaspoolele uut seadusjärgset kohustust salvestisi säilitada ega takista kustutamist ning ainuüksi asjaolu, et salvestisi ei ole järele jäänud, ei too kohtule automaatselt kaasa ebasoodsat hinnangut.
 
 Kui õnnetuse asjaolud võivad täita süüteo tunnused, võib kiiresti teha teate, et uurimisasutus (偵查機關) saaks hinnata, kas on seaduslik alus arestimiseks või säilitamiseks. Teade ei tähenda, et politsei või prokuratuur kindlasti CCTV salvestise säilitaks, seega tuleb koguda ka materjale, mida pool ise saab säilitada, näiteks meditsiinidokumente ja sidekirjeid.
 
@@ -96,10 +96,10 @@ Hüvitise kirjed, mille nõudmist võib uurida, on järgmised. Tegelik tunnustam
 1. **Ravikulud**: Vastuvõtule, uuringutele, ravile, ravimitele ja taastusravile tegelikult kulutatud summad tõendatakse kviitungite ja haiguslooga.
 2. **Hooldus- või hooldamiskulu (看護費用)**: Meditsiini- ja kuludokumentidega uuritakse, kas vigastuse astme ja ravi kulgemise valguses oli hooldust vaja ning kas periood ja kulu olid asjakohased.
 3. **Transpordikulu**: Raviasutusse ja sealt tagasi sõitmiseks vajalik kulu tõendatakse liikumisandmete, kviitungite ja sarnaste dokumentidega.
-4. **Kahju töövõime vähenemisest (勞動能力減損)**: Kui järelkahjustused ja püsiv töövõime langus tunnistatakse, võib hinnata koos meditsiini- ja kutsedokumentide, kahjustuse astme, ameti ja sissetuleku ning järelejäänud töövõimelise perioodiga. Ainuüksi kahjustuse määr ei kinnita hüvitise summat ega arvutata kahju automaatselt pensionieani.
-5. **Saamata jäänud tulu taastumisperioodil (收入損失)**: Periood, mil ravi või taastumise tõttu tegelikult ei saanud töötada, ja sellest tulenenud sissetuleku vähenemine tuleb tõendada palga-, maksu- ja töökirjetega.
+4. **Kahju töövõime vähenemisest (勞動能力減損)**: Kui järelkahjustused ja püsiv töövõime langus tunnistatakse, võib hinnata koos meditsiini- ja kutsedokumentide, kahjustuse astme, ameti ja sissetuleku ning järelejäänud tööeaga. Ainuüksi kahjustuse määr ei määra hüvitise summat ega ole alus kahju automaatseks arvutamiseks pensionieani.
+5. **Saamata jäänud tulu taastumisperioodil (收入損失)**: Periood, mil ravi või taastumise tõttu tegelikult ei saanud töötada, ja sellest tulenenud sissetuleku vähenemine tuleb tõendada palga-, maksu- ja töösuhte dokumentidega.
 6. **Mittevaraline kahju (非財產上損害)**: Vaimse kannatuse summa määrab kohus asja tegurite põhjal, nagu vigastuse aste, raviperiood, järelkahjustused ja poole konkreetsed asjaolud.
-7. **Karistuslik hüvitis (懲罰性賠償金)**: On säte, mille järgi tarbijakaitseseaduse kohaldumisega vaidluses, kui kahju tekkis ettevõtja tahtlusest, võib nõuda kuni 5-kordset tegelikku kahju; raske hooletuse korral kuni 3-kordset; hooletuse korral kuni 1-kordset tegeliku kahju summat. Kas [Taiwani tarbijakaitseseaduse artikkel 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asjale kohaldub ning kas tegelikku hüvitist on ja millises summas, sõltub kohtu hinnangust konkreetsetele eeldustele ja tõenditele (消費者保護法).
+7. **Karistuslik hüvitis (懲罰性賠償金)**: On säte, mille järgi tarbijakaitseseaduse kohaldumisega vaidluses, kui kahju tekkis ettevõtja tahtlusest, võib nõuda kuni 5-kordset tegelikku kahju; raske hooletuse korral kuni 3-kordset; hooletuse korral kuni 1-kordset tegeliku kahju summat. Kas [Taiwani tarbijakaitseseaduse (消費者保護法) artikkel 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asjale kohaldub ning kas tegelikku hüvitist on ja millises summas, sõltub kohtu hinnangust konkreetsetele eeldustele ja tõenditele.
 
 ## 5. Kas ka siis, kui jõusaalil on vastutuskindlustus (責任保險), võib hüvitise olemasolu ja summat vaidlustada?
 

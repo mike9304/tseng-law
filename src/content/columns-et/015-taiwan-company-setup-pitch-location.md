@@ -27,9 +27,9 @@ Kontrollida tuleb, kas kõnealune aadress (營業地址) asub tsoonis, kus „to
 
 ​
 
-Kui tegevus algab Taipei linnas,
+Kui tegevus algab Taipei linnas, on linnal oma eeluuring.
 
-võib kasutada Taipei linna kaubandusameti (臺北市商業處) süsteemi „tegevuskoha eeluuring“ (營業場所預先查詢).
+Kasutada võib Taipei linna kaubandusameti (臺北市商業處) süsteemi „tegevuskoha eeluuring“ (營業場所預先查詢).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,27 +41,27 @@ Selleks kontrolliks tuleb siiski üles laadida tegevuskoha „hooneregistri 2. l
 
 Igaüks võib kinnistusametist (地政事務所) taotleda „hooneregistri 2. liigi väljavõtet“ mis tahes aadressi kohta.
 
-Kui teil on raskusi isiklikult kinnistusametis (地政事務所) asjaajamisega,
+Kui teil on raskusi isiklikult kinnistusametis (地政事務所) asjaajamisega, saab abi küsida.
 
-võite paluda abi tuttavalt Taiwanis, üürileandjalt, kinnisvaramaaklerilt või advokaadilt.
+Võite paluda abi tuttavalt Taiwanis, üürileandjalt, kinnisvaramaaklerilt või advokaadilt.
 
 Kui kontrolli tulemus näitab, et toitlustus ei ole võimalik, võib linnavalitsus hiljem äriühingu registreerimist (公司登記) mitte vastu võtta.
 
-Võtke seetõttu see koht arvesse.
+Olge seetõttu hoolas.
 
 ​
 
 **Küsimus.** Kas kõikide tegevusalade puhul tuleb süsteemi „tegevuskoha eeluuring“ (營業場所預先查詢) kaudu uurida, kas tegevus on võimalik?
 
-Soovitatav on, et kõik tegevusalad kinnitaksid süsteemi „tegevuskoha eeluuring“ (營業場所預先查詢) kaudu, kas tegevus on võimalik.
+Soovitatav on iga tegevusala puhul süsteemi „tegevuskoha eeluuring“ (營業場所預先查詢) kaudu kinnitada, kas tegevus on võimalik.
 
 Äriühingu registreerimisel registreeritakse siiski sageli mitu tegevusala ühel ajal ning sageli soovitakse registreerida umbes 10 tegevusala korraga.
 
 Praktikas ei ole seetõttu vaja kõiki tegevusalasid äriühingu registreerimisel uurida.
 
-„[Taipei linna tegevuskohtade teabeteenuse töökorralduse](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) ja Taipei linna kehtiva juhise järgi
+„[Taipei linna tegevuskohtade teabeteenuse töökorralduse](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) ja Taipei linna kehtiv juhis on alus.
 
-tuleb alates kuupäevast 1. jaanuar 2023 äriühingu või kaubanduse (sealhulgas filiaal (分公司) ja haruettevõte (分支機構)) asutamise, asukoha üleviimise või tegevusalade lisamise registreerimist taotledes tegevuskoha eeluuringu tulemus **kohustuslikult** lisada registreerimistaotlusele, tegevusalast sõltumata.
+Alates kuupäevast, mis on 1. jaanuar 2023, tuleb äriühingu või ettevõtte (sealhulgas filiaal (分公司) ja haruettevõte (分支機構)) asutamise, asukoha üleviimise või tegevusalade lisamise registreerimist taotledes tegevuskoha eeluuringu tulemus **kohustuslikult** lisada registreerimistaotlusele, tegevusalast sõltumata.
 
 Alljärgnev loetelu „omal algatusel kontrollitavatest tegevusaladest“ (主動查詢之營業項目) tähendab tegevusalasid, mida kaubandusamet kontrollib omal algatusel registreerimise käigus (隨案主動查詢), kui tegevusala on taotluses, kuid lisatud tulemus seda ei sisalda; see, et tegevusala ei ole selles loetelus, ei tähenda, et kontroll oleks vabastatud.
 

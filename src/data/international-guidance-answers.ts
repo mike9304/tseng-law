@@ -1392,12 +1392,12 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm on Taiwani advokaadibüroo, mille asutasid 2016. aastal National Taiwan University (國立臺灣大學) vilistlased, büroodega Taipeis, Kaohsiungis, Taichungis ja Pingtungis. Alates 2020. aastast tegutseb ka raamatupidamisüksus; Taichungi büroo tegeleb Koreaga ja Jaapaniga seotud asjadega. Büroo ei luba tulemust. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
+        'Hovering International Law Firm on Taiwani advokaadibüroo, mille asutasid 2016. aastal National Taiwan University (國立臺灣大學) vilistlased, büroodega Taipeis, Kaohsiungis, Taichungis ja Pingtungis. Alates 2020. aastast tegutseb ka raamatupidamisüksus; Taichungi büroo tegeleb Koreaga ja Jaapaniga seotud asjadega. Büroo ei anna lubadust tulemuse kohta. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
       sources: ['/et/lawyers', '/et/services'],
     },
     lawyers: {
       answer:
-        'Sellel lehel on Hoveringi advokaatide, tegevjuhtimise ja seotud audiitorbüroo profiilid. Advokaat Wei Tseng (曾雋崴) on Taiwani advokatuuri liige ja büroo juhtiv advokaat; ta töötab klientidega Koreast, Jaapanist ja teiste riikide klientidega. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
+        'Sellel lehel on Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid. Advokaat Wei Tseng (曾雋崴) on Taiwani advokatuuri liige ja büroo juhtiv advokaat; ta töötab klientidega Koreast, Jaapanist ja teiste riikide klientidega. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
       sources: ['/et/about', '/et/contact'],
     },
     pricing: {
@@ -1407,7 +1407,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Saatke kokkuvõte kontaktvormiga: mis juhtus, millist abi vajate, milline on asja side Taiwaniga, ja tähtaeg, kui see on teada. Algfaasis ei ole vaja saata isikut tõendavaid dokumente ega kogu tõendusmaterjali. Büroo ei luba vastamise tähtaega ega kinnita kohtumist selle lehe kaudu. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
+        'Saatke kokkuvõte kontaktvormiga: mis juhtus, millist abi vajate, milline on asja side Taiwaniga, ja tähtaeg, kui see on teada. Algfaasis ei ole vaja saata isikut tõendavaid dokumente ega kogu tõendusmaterjali. Büroo ei anna lubadust vastamise tähtaja kohta ega kinnita kohtumist selle lehe kaudu. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
       sources: ['/et/faq', '/et/pricing'],
     },
     faq: {

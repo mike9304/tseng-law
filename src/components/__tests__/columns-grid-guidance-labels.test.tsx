@@ -124,7 +124,7 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   sl: "viewAllLabel: 'Pokaži vse'",
   lt: "viewAllLabel: 'Rodyti visus'",
   lv: "viewAllLabel: 'Rādīt visus'",
-  et: "viewAllLabel: 'Kuva kõik'",
+  et: "viewAllLabel: 'Vaadake kõiki'",
   ca: "viewAllLabel: 'Veure-ho tot'",
   is: "viewAllLabel: 'Sýna allt'",
 };

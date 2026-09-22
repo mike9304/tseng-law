@@ -33,7 +33,7 @@ Tagage esmalt isiklik ohutus ja hoiatusmärgid; kehavigastuse või päästevajad
 
 Kui ohutus on tagatud, tehke üld- ja lähivõtteid sõiduki asendi ja kahjustuste, teekattemärgiste, signaalide ja ilma jäädvustamiseks. Tunnistajate kontaktandmeid, taotlust CCTV (監視器影像) ja sõidukikaamera (行車紀錄器) säilitamiseks, andmeid osaliste, sõidukite ja kindlustuse kohta ning haiguslugu (病歷) ei tohi jätta hankimata. Isiklikud salvestised on kasulikud, kuid ei asenda kehavigastuse või surma korral nõutud politseikäsitlemist.
 
-Politseilt võite sündmuskohal saada liiklusõnnetuse osaliste registreerimis- ja kontaktlehe (道路交通事故當事人登記聯單). 7 päeva pärast õnnetusepäevast saab taotleda olukorraplaani ja õnnetusefotosid (現場圖 / 現場照片); 30 päeva pärast õnnetusepäevast saab taotleda maanteeliikluse õnnetuse esialgset analüüsihinnangut (道路交通事故初步分析研判表). Väljastamise hetk ja taotluse eeldused uuritakse uuesti pädevas politseiasutuses.
+Politseilt võite sündmuskohal saada liiklusõnnetuse osaliste registreerimis- ja kontaktlehe (道路交通事故當事人登記聯單). 7 päeva pärast õnnetuspäeva saab taotleda olukorraplaani ja õnnetusefotosid (現場圖 / 現場照片); 30 päeva pärast õnnetuspäeva saab taotleda maanteeliikluse õnnetuse esialgset analüüsihinnangut (道路交通事故初步分析研判表). Väljastamise hetk ja taotluse eeldused uuritakse uuesti pädevas politseiasutuses.
 
 ## Q3. Millised nõuded ja tähtajad tuleb kehavigastuse korral uurida?
 
@@ -55,7 +55,7 @@ Eksperdihinnang (鑑定) või esialgne analüüsihinnang võivad olla olulised d
 
 ## Q5. Mis kuulub kokkuleppesse?
 
-Kokkuleppes (和解書) tuleb kinnitada õnnetuse aeg, koht ja pooled ning võtta kaasa maksesumma ja -hetk, kindlustushüvitise käsitlemine ning kaasatud ja reserveeritud nõuded. Tulevane ravi, hiljem avastatud vigastused, arstitõendite (診斷證明書) üleandmine ja suhe makse ning kaebuse tagasivõtmise vahel tuleb kinnitada selgelt.
+Kokkuleppes (和解書) tuleb kinnitada õnnetuse aeg, koht ja pooled ning märkida maksesumma ja -hetk, kindlustushüvitise käsitlemine ning kaasatud ja reserveeritud nõuded. Tulevane ravi, hiljem avastatud vigastused, arstitõendite (診斷證明書) üleandmine ja suhe makse ning kaebuse tagasivõtmise vahel tuleb kinnitada selgelt.
 
 Kokkulepe (和解) tsiviilseadustiku (民法) artiklis 736 on leping, milles pooled vastastikuse järeleandmisega viivad vaidluse lõpuni või tõkestavad selle. Tsiviilseadustiku artikli 737 järgi hinnatakse õiguse kaotuse ulatust ainult lepingus märgitud ulatuse järgi. Seetõttu ei tohi ilma sõnastust uurimata kinnitada, et kõik tulevased nõuded kustuvad.
 
@@ -93,13 +93,13 @@ Eksperdiarvamuse vastu saab taotleda korduvläbivaatust, siiski ainult üks kord
 
 Nõue tsiviilseadustiku (民法) artikli 184 järgi eeldab õigusvastast õiguse rikkumist, põhjuslikku seost õnnetusega ja kahju tõendamist. Pelk asjaolu, et õnnetus on toimunud, ei tähenda, et kõik järgmised kirjed tunnustatakse. Tsiviilseadustiku artikkel 216 on mõõdupuu tegeliku kahju ja saamata jäänud tulu (所失利益) ulatusele.
 
-- **Kehavigastus**: Tsiviilseadustiku artikli 193 järgi saab uurida vajalikke ravikulusid (醫療費用), elus tõusnud vajaduskulusid nagu hooldus (看護費用), sõit ravile (就醫交通費) ja abivahendid ning palgakaotust (收入損失) tegelikust töövõimetusest ja töövõime alanemisest (勞動能力減損). Tsiviilseadustiku artikli 195 järgi saab uurida ka mittevaralist kahju.
-- **Surm**: Tsiviilseadustiku artikli 192 järgi saab, niivõrd kui see kohaldub, uurida ravikulusid ja tõusnud eluvajaduse kulusid enne surma, matusekulusid (殯葬費) ja ülalpidamise kaotust (扶養利益損失) sellele, kellel oli õiguslik ülalpidamisnõue. Tsiviilseadustiku artikli 194 järgi saab uurida ka teatud sugulaste mittevaralist kahju.
+- **Kehavigastus**: Tsiviilseadustiku artikli 193 järgi saab uurida vajalikke ravikulusid (醫療費用), suurenenud eluvajaduse kulusid, nagu hooldus (看護費用), sõit ravile (就醫交通費) ja abivahendid ning palgakaotust (收入損失) tegelikust töövõimetusest ja töövõime alanemisest (勞動能力減損). Tsiviilseadustiku artikli 195 järgi saab uurida ka mittevaralist kahju.
+- **Surm**: Tsiviilseadustiku artikli 192 järgi saab, niivõrd kui see kohaldub, uurida ravikulusid ja suurenenud eluvajaduse kulusid enne surma, matusekulusid (殯葬費) ja ülalpidamise kaotust (扶養利益損失) sellele, kellel oli õiguslik ülalpidamisnõue. Tsiviilseadustiku artikli 194 järgi saab uurida ka teatud sugulaste mittevaralist kahju.
 - **Vara**: Tsiviilseadustiku artikli 196 järgi saab nõuda tõendatud tegelikke varalisi kahjusid, sealhulgas sõiduki parandust või väärtuse alanemist.
 
 ## Q8. Kuidas tuleb ravikulude dokumendid esitada, kui ravi jätkub?
 
-Säilitage kviitungid (收據), arstitõendid ja haiguslood ning korraldage iga ravi meditsiiniline vajalikkus ja põhjuslik seos õnnetusega koos. Jätkuvad ravidokumendid võivad täiendada tõendeid kohtu menetluskalendri ja juba esitatud nõude järgi; kõiki hilja esitatud dokumente või laiendatud nõudeid ei võeta vastu ega lubata.
+Säilitage kviitungid (收據), arstitõendid ja haiguslood ning korraldage iga ravi meditsiiniline vajalikkus ja põhjuslik seos õnnetusega koos. Jätkuvad ravidokumendid võivad täiendada tõendeid kohtu menetluskalendri ja juba esitatud nõude järgi; ei ole tagatud, et kõik hilja esitatud dokumendid või laiendatud nõuded vastu võetakse.
 
 Meditsiinidokumentide lisamine ja nõudesumma muutmine või suurendamine tuleb eristada. Pärast kriminaalasjaga seotud tsiviilhagi esitamist ei teki kohtukulu automaatselt pelgalt seetõttu, et esitatakse täiendavaid ravikviitungeid.
 
@@ -175,7 +175,7 @@ Kindlustamiskohustus mootorsõidukite kohustusliku vastutuskindlustuse seaduse (
 
 Ühe sõiduki üksikõnnetustes ei ole selle juht tavaliselt kõnealuse sõiduki kohustusliku kindlustuse hüvitise saaja. Õnnetustes, milles on mitu sõidukit, võib juht siiski nõuda hüvitist teise osalise sõiduki kohustuslikult kindlustajalt.
 
-Hüvitisnormi (強制汽車責任保險給付標準) muudeti kuupäeval 29. mai 2026 ja muudatus kehtib õnnetustele alates kuupäevast 1. juuli 2026. Lage vajalikele asjakohastele ravikuludele kehavigastuse korral on TWD 200.000, töövõimetushüvitised (失能) seadusjärgse 15 astme järgi TWD 80.000–3.000.000, surmajuhtumi hüvitis TWD 3.000.000 ning surma, töövõimetuse ja ravikulude ülemmäär ühe kehavigastuse saanud isiku ja ühe õnnetuse kohta on TWD 3.200.000. Varasematele õnnetustele võib kehtida varasem norm.
+Hüvitisnormi (強制汽車責任保險給付標準) muudatuse kuupäev on 29. mai 2026 ja muudatus kehtib õnnetustele, mille kuupäev on 1. juuli 2026 või hilisem. Lage vajalikele asjakohastele ravikuludele kehavigastuse korral on TWD 200.000, töövõimetushüvitised (失能) seadusjärgse 15 astme järgi TWD 80.000–3.000.000, surmajuhtumi hüvitis TWD 3.000.000 ning surma, töövõimetuse ja ravikulude ülemmäär ühe kehavigastuse saanud isiku ja ühe õnnetuse kohta on TWD 3.200.000. Varasematele õnnetustele võib kehtida varasem norm.
 
 Vastutuskindlustus kolmanda isiku suhtes (第三人責任險), juhi õnnetuskindlustus (駕駛人傷害險) ja kaskokindlustus (車體損失險) on lepingulised valiktooted. Tegelik kaitse erineb kindlustatu, lae, omavastutuse (自負額), erandi, hooletuse ja muude kindlustustingimuste järgi; kindlustustunnistus ja tingimused tuleb uurida ükshaaval.
 
@@ -184,11 +184,11 @@ Vastutuskindlustus kolmanda isiku suhtes (第三人責任險), juhi õnnetuskind
 - [Tsiviilseadustik artikkel 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Tsiviilseadustik artikkel 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Tsiviilseadustik artikkel 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Taiwani apellatsioonikohtu otsus vabariigi aastast 109, asi 上易字 nr 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Taiwani apellatsioonikohtu otsus vabariigi aastast 109, asi 上易字 nr 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Taiwani apellatsioonikohtu otsus Hiina Vabariigi kalendriaastast 109, asi 上易字 nr 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Taiwani apellatsioonikohtu otsus Hiina Vabariigi kalendriaastast 109, asi 上易字 nr 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Justiitsyuani Hoffmanni nüüdisväärtuse kalkulaator](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Tsiviilseadustik artikkel 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taoyuani esimese astme kohtu otsus vabariigi aastast 112, asi 壢簡字 nr 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taoyuani esimese astme kohtu otsus Hiina Vabariigi kalendriaastast 112, asi 壢簡字 nr 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Tsiviilseadustik artikkel 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Taiwani kriminaalkoodeks (中華民國刑法) artikkel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Seadus mootorsõidukite kohustusliku vastutuskindlustuse kohta](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -219,7 +219,7 @@ Huvide konfliktid kindlustusandja ja osalise vahel võivad samuti tekkida, ja ku
 
 ​
 
-Kogu asja jätmist kindlustusandja hooleks ei ole seetõttu põhjust pidada iseenesestmõistetavaks.
+Kogu asja jätmist kindlustusandja hooleks ei ole seetõttu põhjust pidada enesestmõistetavaks.
 
 ​
 
@@ -359,7 +359,7 @@ Seetõttu ei tohi seda punkti mingil viisil kõrvale jätta; on soovitatav oluko
 
 ​
 
-Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatut vastust ei lubata.
+Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatut vastust ei tõotata.
 
 ​
 

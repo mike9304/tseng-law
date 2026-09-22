@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Pilt, mis selgitab vastutuse hindamist möödasõiduõnnetustes Taiwanis ja ohutut möödasõidumenetlust](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Kui eesolev sõiduk liigub aeglaselt, võib möödasõit (超車) tunduda tavalise valikuna, kuid see on sõidutoiming, millega kaasneb märkimisväärne oht. Enne möödasõidu alustamist tuleb koos hinnata teelõiku, liiklusolukorda mõlemas suunas, eesolevate sõidukite liikumist ja ruumi, et pärast ohutut möödumist naasta algsele sõidurajale (道路交通安全規則).
+Kui eesolev sõiduk liigub aeglaselt, võib möödasõit (超車) tunduda tavaline, kuid see on sõidutoiming, millega kaasneb märkimisväärne oht. Enne möödasõidu alustamist tuleb koos hinnata teelõiku, liiklusolukorda mõlemas suunas, eesolevate sõidukite liikumist ja ruumi, et pärast ohutut möödumist naasta algsele sõidurajale (道路交通安全規則).
 
 ## Möödasõidu eeldused maanteeliikluse ohutuseeskirja artikli 101 järgi (道路交通安全規則)
 
@@ -51,7 +51,7 @@ See, et üksikutes asjades tulevad sellised ekspertiisitulemused, ei tähenda, e
 
 Enne möödasõitu tuleb esmalt selgitada, kas koht või liiklusolukord kuulub möödasõidukeelu alla. Kui sama sõiduraja menetlus kohaldub, andke määratud helisignaal või esitulesignaal, sundimata eesolevat sõidukit teed andma, oodake selget teedandmise märki ja viige möödasõit lõpule piisava vahemaa ja ohutu naasmiskaugusega (超車).
 
-Artikli 101 järgimine on tähtis, kuid see iseenesest ei kindlusta õnnetuse vältimist ega hilisema ekspertiisi või kohtumenetluse tulemust. Juhtidel tuleb hoida lisaturvamarginaal ja kohaneda eesoleva olukorraga.
+Artikli 101 järgimine on tähtis, kuid see iseenesest ei taga, et õnnetus jääb ära, ega hilisema ekspertiisi või kohtumenetluse tulemust. Juhtidel tuleb hoida lisaturvamarginaal ja kohaneda eesoleva olukorraga.
 
 Lisateavet saate [pildist möödasõidureeglite ja -menetluse kohta](https://gonews.com.tw/car/daily/21934/). Kuna see on teisene allikas, tuleb õiguslike eelduste selgitamisel lugeda ka kehtivaid ametlikke eeskirju (道路交通安全規則).
 

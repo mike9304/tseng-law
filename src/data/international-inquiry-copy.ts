@@ -2411,7 +2411,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Nõustamine toimub ainult neljas keeles: inglise, hiina (中文), jaapani ja korea keeles.',
     methodConfirmationNotice:
-      'Kui te ei saa kasutada ühtegi neljast nõustamiskeelest, valige „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaega ei lubata.',
+      'Kui te ei oska ühtegi neljast nõustamiskeelest, valige „Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaja kohta lubadust ei anta.',
     preparationNotice:
       'Kokkuvõtte võite kirjutada oma keeles. Algtekst säilitatakse nii, nagu te selle kirjutasite, ja seda ei tõlgita automaatselt.',
     heading: 'Saatke läbivaatamistaotlus',

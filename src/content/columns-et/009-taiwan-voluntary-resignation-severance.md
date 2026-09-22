@@ -73,11 +73,11 @@ Seetõttu peavad töötajad tähtaega täpselt silmas pidama.
 
 Teisisõnu:
 
-Taiwani õigus, asugu põhjus äriühingus
+Taiwani õigus vaatab, kus põhjus asub.
 
-või töötajas,
+Põhjus võib olla äriühingus või töötajas.
 
-tunnustab mõlemale poolele õigust lahkumishüvitist mitte maksta või seda nõuda.
+Taiwani õigus annab olenevalt sellest, kas põhjus on tööandjal või töötajal, õiguse lahkumishüvitist mitte maksta või seda nõuda.
 
 Mõnikord asub põhjus mõlemal poolel,
 

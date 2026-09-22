@@ -402,7 +402,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   fr: 'Lire la suite',
   pt: 'Continuar a ler',
   'zh-hans': '继续阅读',
-  ms: 'Baca selanjutnya',
+  ms: 'Baca seterusnya',
   ru: 'Читать далее',
   tr: 'Devamını oku',
   it: 'Continua a leggere',

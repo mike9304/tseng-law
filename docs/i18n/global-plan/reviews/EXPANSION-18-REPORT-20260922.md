@@ -33,7 +33,7 @@
 - 09:38 origin/main 3493af64→e6f829c2 fast-forward 푸시(Vercel 자동 배포) → 09:41 라이브 마커 확인(`/km/faq` 200, sitemap 1,439).
 - 09:47 라이브 스모크: sitemap 1,439 URL 전부 200. 신규 18개 로케일 `/services`·`/faq` 200, `<html lang>` 18개 정확, ur·fa `dir="rtl"`. 루트 llms.txt 200(10.2 KB), `/km/llms.txt` 200(20.0 KB).
 - IndexNow: 신규 로케일 URL 504건 제출 → HTTP 200.
-- `scripts/verify-multilingual-live.mjs --base https://tseng-law.com`: 결과 추기 예정(장시간 실행).
+- `scripts/verify-multilingual-live.mjs --base https://tseng-law.com`: 1차 실행 c/f 항목 FAIL 509 → 원인은 검증기 자체의 hreflang 매핑 누락(zh-hans→zh-Hans, 사이트는 정상 BCP47 출력) → 검증기 수정(2038cd7a) 후 재실행 **overall PASS 3,414 / fail 0** (sitemap 1,440·core 490·hreflang 490·안내문 90·privacy 49·칼럼 855).
 
 ## 5. 후속
 - 신규 18개 언어 원어민 검수(Grok 4.6 a/b) → 총괄 판정 → Opus 5 수정 → 재배포: 기존 27개와 동일 파이프라인으로 2라운드 진행 예정.

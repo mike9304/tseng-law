@@ -42,7 +42,9 @@ describe('public module locale family switching', () => {
       PUBLIC_LOCALES_8.map((locale) => PUBLIC_LANGUAGE_AUTONYMS[locale]),
     );
     for (const option of LOCALE_FLAG_OPTIONS) {
-      // Autonyms only: no country code, no region parenthetical.
+      // Autonyms only: no country code, no region parenthetical — except zh-hant, which
+      // carries "（台灣）" by explicit user instruction (2026-09-22).
+      if (option.locale === 'zh-hant') continue;
       expect(option.label).not.toMatch(/[(（]/);
     }
   });

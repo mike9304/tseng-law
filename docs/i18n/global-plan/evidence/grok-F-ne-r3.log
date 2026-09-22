@@ -1,0 +1,78 @@
+WO-F-ne r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ne-r3
+date: 2026-09-23
+
+Rows: 47 finding rows (ne-a 22 + ne-b 25). Applied 42. Skipped 5.
+
+## Applied
+ne-a: 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+ne-b: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 25
+
+Adaptations inside applied rows (meaning kept; wording not copied verbatim):
+- ne-b 2: suggested "अवश्य मेटिँदैन" reads as "certainly is not erased". Used "सधैं मेटिँदैन" so small print does not always cure the dominant message (English "not necessarily cured").
+- ne-b 18: the extra prior-inquiry sentence is its own block in the Korean source (block 56 of 013). Deleting it would drop the block count. Rephrased that block to "भाडा सम्झौतामा हस्ताक्षर गर्नुअघि यो पुष्टि गर्नुहोस्।" so it no longer names the Taipei prior-inquiry step.
+- ne-b 12: kept the digits 8 and 5; added "नयाँ मालवाहक सवारी" (4 places: FAQ + body, household-moving and Kinmen/Matsu).
+- ne-a 1: restored "सामान्यतः" for the 3-month and 4/6-month sentences and kept "not a certain result of your case". This undoes an earlier softening that denied the result was usual.
+
+## Skipped
+- ne-a 2 (P1, 004 withholding link "धारा 10" → "धारा 3"). The reviewer is right that pcode=G0340028 is 各類所得扣繳率標準 and flno=3 opens article 3. The Korean source link is still "영업세법 제10조" with that same URL, so the checker reported `numbers FAIL missing from translation (1): 10` after the digit change. ACCEPTED-ROUND also forbids changing numbers. URL untouched. Label left as धारा 10. English/Korean misname the same URL as the business-tax act; the Nepali label already names the withholding-rate standards.
+- ne-a 21 (P2, bio "TWD 1.57M" → lakh 15,70,000). Pinned byte-identical by ACCEPTED-ROUND and a test. Not reformatted.
+- ne-a 22 (P2, lakh grouping of TWD/USD amounts in 001–004). R14 and ACCEPTED-ROUND: lakh/crore grouping is not parsed for ne. Western commas kept.
+- ne-b 15 (P2, delete U+200B in 013 and 015). Korean 013 has 5 ZWSP and 015 has 3; Nepali matches. checkBlocks fails if the counts differ. Lines that are only that character are the same blocks as the Korean source. Left in place.
+- ne-b 24 (P3, TWD 1,579,589 and other Western thousands in 010/011/017/018 → lakh grouping). Same R14 / ACCEPTED-ROUND skip.
+
+## Systemic patterns (swept, not only the quoted line)
+- Foreign head office called प्रतिष्ठान → मुख्य कार्यालय: 40
+- Spoken interrogative कोले → कसले: 25 (001, 007, 011, 014, 016, 017, 018)
+- Statutory proviso 但書 called अपवाद → परन्तुक (但書): 2 (002 FAQ and body). Other अपवाद uses are ordinary exceptions and were left.
+- विषय standing in for a listing, a fine, coverage, contract terms, estate inclusion, a calculation base, or a designation: 14
+  (004 listing ×3, 011 fine ×1 and "लागू विषय" ×1, 014 करार विषय ×2, सहमति विषय ×1, जाँच विषय ×1, 016 estate ×1, गणनाको विषय ×1, गणना विषय ×1, सम्झौता विषय ×1, नियुक्ति विषय ×1)
+- डिग्री for severity, impairment, or involvement: 5 (010 ×4, 011 ×1)
+- 商業 as the business-entity category rendered वाणिज्य without the gloss: 6
+  (001 "कम्पनी र वाणिज्य दर्ता" ×2, 015 the registration sentence ×1, 017 "कम्पनी-वाणिज्य दर्ता" ×3)
+  Left: वाणिज्य विकास प्रशासन / वाणिज्य ब्युरो (agency names), वाणिज्यिक (營業用 plates), वाणिज्य सम्झौता, वाणिज्य दूतावास.
+- Issuer "जारी कम्पनी" → "शेयर जारी गर्ने कम्पनी": 4 (004). "जारी शेयर" untouched.
+- Business/import-export "प्रदर्शन" → कार्यसम्पादन: 7 (001; 3 + 4)
+- Court "generally about N months" rewritten as "not a usual result": 2 sentences (003)
+- Korea operations lead dropped or called व्यवस्थापक / विभाग: 5
+  (team description, lawyers page description, lawyers answer, role, experience line)
+- Amounts in Western grouping / "TWD 1.57M": 0 changed (skip rules above)
+- U+200B: 0 removed
+
+Guidance pack (ne strings only): pricing page now says sending an inquiry from that page is free, and the next paragraph still says the page does not say the first conversation is free. About answer: attorneys who studied at NTU, and Hovering Accounting Office (the about page body already said both). Dual bachelor's word order. Disclaimer "सन्दर्भ" and "सट्टा". llms.txt notices were not rewritten; consultationNotice and confidentialNotice are unchanged, so the pinned substrings still match.
+
+No test expected-string needed updating. Disclosure-parity markers for ne were not dropped.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-ne-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-ne --lang ne 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=103
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ne src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+
+(That count is before this log file. It includes the pre-existing WO-F-ne.txt modification and the untracked ne-a.md / ne-b.md.)
+
+## Reviewer got wrong (not applied as suggested)
+- ne-b 2 suggested wording, not the finding. "अवश्य मेटिँदैन" is still an absolute ("certainly does not erase"). The finding itself (small print was made an absolute cure-bar) was applied with "सधैं मेटिँदैन".
+- ne-b 15 treats the zero-width spaces as Nepali debris to delete. They match the Korean source and the checker counts them. Not a Nepali-only defect.
+- ne-a 21, ne-a 22, and ne-b 24 correctly describe Nepal's lakh grouping. They were not applied because R14 and the pinned "TWD 1.57M" test reject that form. Not a misreading of the amounts.
+- ne-a 2 is not a misreading of the URL: G0340028 is the withholding-rate standards and flno=3 is article 3. It was not applied because the Korean source still contributes a 10 ("제10조") and the checker requires that digit. English and Korean call that same URL the business-tax act, which is the mislabel; the Nepali statute name was already the withholding standards.

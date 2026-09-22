@@ -1024,7 +1024,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'टोली',
     title: 'Hovering को अन्तर्राष्ट्रिय टोली',
     description:
-      'Hovering का अधिवक्ता, सञ्चालन नेतृत्व र साझेदार चार्टर्ड एकाउन्टेन्टका प्रोफाइल।',
+      'Hovering का अधिवक्ता, कोरिया सञ्चालनको नेतृत्व र साझेदार चार्टर्ड एकाउन्टेन्टका प्रोफाइल।',
     representativeTitle: 'प्रबन्ध अधिवक्ता',
     teamTitle: 'अधिवक्ता र सहयोगी',
     partnerTitle: 'साझेदार चार्टर्ड एकाउन्टेन्ट',
@@ -1044,7 +1044,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'ताइवानकी प्रबन्ध अधिवक्ता',
       'chang-rongxuan': 'ताइवान अधिवक्ता',
       'chang-fangyu': 'कानुनी सहायक',
-      'son-jungmin': 'कोरिया सञ्चालन व्यवस्थापक',
+      'son-jungmin': 'कोरिया सञ्चालनको नेतृत्व',
       'huang-shengping': 'साझेदार चार्टर्ड एकाउन्टेन्ट',
     },
   },
@@ -3838,7 +3838,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'स्नातकोत्तर (M.S.), Institute of Finance, National Taiwan University',
-        'स्नातक (B.A.) कानुन र वित्तको दोहोरो अध्ययनसहित, National Chengchi University',
+        'कानुन र वित्तमा दोहोरो स्नातक (B.A.), National Chengchi University',
         'Kobe University र Waseda University मा विनिमय छात्रा',
       ],
       experience: [
@@ -3875,7 +3875,7 @@ export const guidanceTeamBios: Record<
         'कम्प्युटर विज्ञान पढेका आधारमा कागजात प्रणाली र कार्यप्रवाहमार्फत विभागहरूबीचको आदानप्रदानमा सहयोग गर्छन्।',
       ],
       education: ['स्नातक (B.S.) कम्प्युटर विज्ञान, National Cheng Kung University'],
-      experience: ['कोरिया सञ्चालन विभाग, Hovering International Law Firm'],
+      experience: ['कोरिया सञ्चालनको नेतृत्व, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Si hi ha clients a Taiwan, cal constituir necessàriament una societat allà?"
-    a: "No es pot concloure només perquè el client estigui a Taiwan. Cal veure les exigències del client i l’activitat real de negoci, instal·lacions, personal i estructura de les operacions a Taiwan, i després triar l’entitat més adequada."
+    a: "No es pot concloure que calgui constituir una societat només perquè el client estigui a Taiwan. Cal veure les exigències del client i l’activitat real de negoci, instal·lacions, personal i estructura de les operacions a Taiwan, i després triar l’entitat més adequada."
   - q: "Desapareix per complet la responsabilitat de la societat matriu en constituir una societat taiwanesa?"
     a: "Si es constitueix una filial i no una sucursal, la societat matriu, en principi, no assumeix les obligacions contractuals signades en nom de la filial. Tanmateix, s’han de comprovar les excepcions per abús de la personalitat jurídica i si la societat matriu ha atorgat garantia o ha assumit obligacions contractuals pròpies."
   - q: "Es pot començar amb un distribuïdor i després passar a una societat a Taiwan?"
@@ -65,7 +65,7 @@ Es pot formar amb 1 o més persones físiques, o amb socis persones jurídiques 
 
 ### La societat anònima (股份有限公司): adequada si es volen incorporar altres inversors o anar cap a una cotització
 
-El capital es divideix en accions. En principi es requereixen 2 accionistes (股東) o més, però l’Estat o una persona jurídica la poden constituir sols, i una persona jurídica estrangera pot posseir el 100 %. Les accions són, en principi, lliurement transmissibles, amb excepcions legals; es poden dissenyar accions especials i opcions d’empleats d’acord amb la llei. Convé a empreses que esperen inversors, negociació d’accions, incentius de capital per a empleats o una fusió, una adquisició, una cotització o la inscripció al mercat emergent (興櫃); no es limita a grans empreses. En governança, una societat no pública pot, per estatuts, no tenir consell i tenir només 1 o 2 administradors. Una societat amb un únic soci estatal o persona jurídica pot, per estatuts, no tenir supervisor (監察人). No tota societat anònima ha d’auditar els comptes anuals. Els llindars principals d’auditoria d’una societat ordinària són capital desemborsat de 30.000.000 TWD, o, per sota, ingressos d’explotació de 100.000.000 TWD o 100 treballadors en l’assegurança laboral (勞工保險); les societats que han fet una oferta pública d’accions (公開發行公司) segueixen la normativa de valors.
+El capital es divideix en accions. En principi es requereixen 2 accionistes (股東) o més, però l’Estat o una persona jurídica la poden constituir sols, i una persona jurídica estrangera pot posseir el 100 %. Les accions són, en principi, lliurement transmissibles, amb excepcions legals; es poden dissenyar accions especials i opcions d’empleats d’acord amb la llei. Convé a empreses que esperen inversors, negociació d’accions, incentius de capital per a empleats o una fusió, una adquisició, una cotització o la inscripció al mercat de valors emergent (興櫃); no es limita a grans empreses. En governança, una societat no pública pot, per estatuts, no tenir consell i tenir només 1 o 2 administradors. Una societat amb un únic soci estatal o persona jurídica pot, per estatuts, no tenir supervisor (監察人). No tota societat anònima ha d’auditar els comptes anuals. Els llindars principals d’auditoria d’una societat ordinària són capital desemborsat de 30.000.000 TWD, o, per sota, ingressos d’explotació de 100.000.000 TWD o 100 treballadors en l’assegurança laboral (勞工保險); les societats que han fet una oferta pública d’accions (公開發行公司) segueixen la normativa de valors.
 
 ## 4. Els procediments de sucursal i de filial difereixen; només la filial passa per la revisió del Departament de Revisió d’Inversions
 
@@ -83,7 +83,7 @@ Per al gerent d’una filial o sucursal taiwanesa d’una societat estrangera, e
 
 ## 7. Estructures que poden encaixar segons l’etapa del negoci
 
-Els escenaris següents són hipotètics per ajudar a pensar; no garanteixen que un mode sigui lícit o preferible.
+Els escenaris següents són hipotètics i només serveixen per orientar l’anàlisi; no garanteixen que un mode sigui lícit o preferible.
 
 **Empreses centrades en l’exportació inicial.** Si encara no hi ha empleats ni inventari a Taiwan i es vol comprovar la demanda mitjançant un distribuïdor independent, es poden examinar primer el subministrament, la relació de distribució i l’àmbit d’activitat a Taiwan. Un contracte de distribució per si sol no elimina totes les qüestions regulatòries a Taiwan.
 
@@ -101,7 +101,7 @@ No cal adjuntar en el primer contacte tots els materials confidencials del clien
 
 ### Si hi ha clients a Taiwan, cal constituir necessàriament una societat allà?
 
-No es pot concloure només perquè el client estigui a Taiwan. Cal veure les exigències del client i l’activitat real de negoci, instal·lacions, personal i estructura de les operacions a Taiwan, i després triar l’entitat més adequada.
+No es pot concloure que calgui constituir una societat només perquè el client estigui a Taiwan. Cal veure les exigències del client i l’activitat real de negoci, instal·lacions, personal i estructura de les operacions a Taiwan, i després triar l’entitat més adequada.
 
 ### Desapareix per complet la responsabilitat de la societat matriu en constituir una societat taiwanesa?
 

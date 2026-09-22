@@ -21,7 +21,7 @@ En iniciar un negoci de restauració, el primer problema és trobar l’adreça 
 
 A més de la situació del mercat, hi ha una altra consideració important.
 
-La consideració addicional és la que segueix.
+Aquesta consideració és la zona on es pot explotar un «establiment de restauració».
 
 Cal comprovar si aquesta adreça se situa en una zona on sigui possible explotar un «establiment de restauració».
 
@@ -43,7 +43,7 @@ Qualsevol pot sol·licitar a l’oficina del registre de la propietat (地政事
 
 Si li resulta difícil acudir en persona a l’oficina del registre de la propietat (地政事務所),
 
-pot demanar ajuda a un conegut a Taiwan, al propietari, a un agent immobiliari o a una advocada o advocat.
+pot demanar ajuda a un conegut a Taiwan, al propietari, a un agent immobiliari o a una advocada o a un advocat.
 
 Si el resultat de la consulta indica que l’establiment de restauració no és possible, més endavant, en registrar la societat (公司登記), el govern municipal podria no acceptar el registre.
 

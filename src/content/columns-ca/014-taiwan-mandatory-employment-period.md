@@ -43,11 +43,11 @@ L’article 15-1 exigeix un dels dos requisits legals i, a més, un examen separ
 
 Després de confirmar el requisit legal, segons l’apartat 2 s’examina per separat si el període pactat i l’abast de la responsabilitat són raonables. El pacte que infringeix el requisit legal de l’apartat 1 o el criteri de raonabilitat de l’apartat 2 és nul segons l’apartat 3. Tanmateix, aquesta norma és un criteri per examinar el contingut i els fets de cada pacte, no una norma que declari d’entrada vàlids o nuls tots els pactes de període mínim de treball.
 
-La circumstància que el treballador hagi signat el contracte pot ser una dada que confirma l’existència de l’acord, però no substitueix els requisits legals. A l’inrevés, més que concloure de seguida només perquè el pacte és de llarga durada, s’ha de comprovar quina inversió o compensació hi va haver i per què es va fixar aquest període.
+La circumstància que el treballador hagi signat el contracte pot ser una dada que confirma l’existència de l’acord, però no substitueix els requisits legals. A l’inrevés, la sola durada del període pactat no ha de determinar el resultat; també s’ha de comprovar quina inversió o compensació hi va haver i per què es va fixar aquest període.
 
 ## 2. Primer requisit legal: formació tècnica especialitzada i assumpció del cost
 
-Per fonamentar el pacte en la formació, l’ocupador ha d’haver proporcionat realment al treballador formació tècnica especialitzada i n’ha d’haver assumit el cost. No n’hi ha prou d’escriure en el pla de formació que es tracta d’un curs professional o de consignar un cost estimat en el contracte. S’han de poder connectar amb dades el tema de la formació, la professionalitat i la tecnicitat necessàries per al lloc, la durada concreta, si es va completar i el desemborsament real.
+Per fonamentar el pacte en la formació, l’ocupador ha d’haver proporcionat realment al treballador formació tècnica especialitzada i n’ha d’haver assumit el cost. No n’hi ha prou d’escriure en el pla de formació que es tracta d’un curs professional o de consignar un cost estimat en el contracte. S’han de poder connectar amb dades el tema de la formació, la competència professional o tècnica que el lloc exigeix, la durada concreta, si es va completar i el desemborsament real.
 
 L’objecte d’examen inclou no només costos directament comprovables, com honoraris de formadors externs, matrícula d’un centre de formació i taxes de materials o equips, sinó també el fonament de càlcul dels costos interns que al·lega l’ocupador. Si va formar personal intern, s’ha de veure de qui i de quin temps es tracta, en què es diferencia de la supervisió habitual o del traspàs del lloc, i si hi ha fonament per imputar aquest cost a aquest treballador. Un import estimat o un prorrateig global no proven per si sols la càrrega real.
 
@@ -86,7 +86,7 @@ El tercer factor no abasta només l’import de la compensació, sinó també l�
 
 El quart factor pot incloure diverses circumstàncies que influeixen en la raonabilitat, com el curs de celebració del pacte, la naturalesa de la feina, el que es va explicar a les parts, el període realment treballat i la causa d’extinció. La importància de cada factor pot variar segons el cas, i les circumstàncies a considerar no es limiten als exemples anteriors. Per això s’han d’examinar sense ometre els fets pertinents que apareixen a l’expedient.
 
-Al final cal una relació de proporcionalitat comprensible entre el període pactat, la inversió real de l’ocupador, la dificultat de substitució, la compensació que va rebre el treballador i la càrrega de devolució. No s’ha de fixar d’antuvi la validesa només perquè es tracti d’un ofici determinat ni aplicar-se tal com és la conclusió d’un altre assumpte. S’han de valorar conjuntament el disseny del moment de celebració del contracte i el grau real de compliment en el moment de l’extinció.
+Al final cal una relació de proporcionalitat comprensible entre el període pactat, la inversió real de l’ocupador, la dificultat de substitució, la compensació que va rebre el treballador i la càrrega de devolució. No s’ha de fixar d’antuvi la validesa només perquè es tracti d’un ofici determinat ni s’ha d’aplicar tal qual la conclusió d’un altre assumpte. S’han de valorar conjuntament el disseny del moment de celebració del contracte i el grau real de compliment en el moment de l’extinció.
 
 ## 5. Formació que no pot fonamentar el pacte
 
@@ -135,7 +135,7 @@ Quan el treballador extingeix un contracte de treball de durada indefinida (不�
 El període de preavís segons l’antiguitat contínua és el següent.
 
 1. Si és de 3 mesos o més i menys d’un any: 10 dies
-2. Si és d’1 any o més i menys de 3 anys: 20 dies
+2. Si és d’un any o més i menys de 3 anys: 20 dies
 3. Si és de 3 anys o més: 30 dies
 
 Si el període d’un contracte de treball de durada determinada per a una feina específica (特定性定期契約) supera 3 anys, s’aplica la norma separada de l’article 15. El treballador, després de treballar 3 anys, pot extingir el contracte amb un preavís de 30 dies a l’ocupador. Aquesta norma s’ha de distingir de la de preavís segons l’antiguitat contínua aplicable al contracte de durada indefinida.

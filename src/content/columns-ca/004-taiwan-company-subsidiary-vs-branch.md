@@ -50,7 +50,7 @@ Si planeja explotar el negoci a Taiwan juntament amb un tercer, no basta amb fix
 
 En el mode sucursal, el subjecte jurídic últim de la gestió de la sucursal és la societat estrangera. La seu necessita fixar de forma concreta l’abast dels contractes que el responsable a Taiwan pot celebrar, les facultats d’operació bancària, les facultats de personal, el sistema d’informes, l’aprovació del pressupost i el control intern. A la inversa, si elegeix la filial, s’han de distingir i documentar els estatuts i la composició d’òrgans, el repartiment de facultats entre accionistes i els contractes de serveis, préstec i llicència entre la filial i la matriu. El que importa no és la denominació, sinó si les facultats reals i el flux de les operacions s’ajusten a l’estructura jurídica.
 
-Les autoritzacions tampoc no es poden concloure només a partir de la personalitat jurídica. Això es deu al fet que les normes sectorials poden fixar per separat el subjecte sol·licitant, el capital mínim, el personal professional, el local, la revisió de la inversió estrangera o la qualificació del responsable. El fet que la filial o la sucursal es puguin registrar no és el mateix que el fet que es pugui explotar un negoci regulat determinat. Les activitats previstes s’han de desglossar i s’ha de confirmar primer la part contractual i el titular de cada autorització.
+Les autoritzacions tampoc no es poden determinar només a partir de la personalitat jurídica. Això es deu al fet que les normes sectorials poden fixar per separat el subjecte sol·licitant, el capital mínim, el personal professional, el local, la revisió de la inversió estrangera o la qualificació del responsable. El fet que la filial o la sucursal es puguin registrar no és el mateix que el fet que es pugui explotar un negoci regulat determinat. Les activitats previstes s’han de desglossar i s’ha de confirmar primer la part contractual i el titular de cada autorització.
 
 ## 2. Fiscalitat i enviament de beneficis
 
@@ -172,7 +172,7 @@ L’elecció final és més segura si l’examinen especialistes de Taiwan i del
 ## Fonts oficials
 
 - [Base de dades normativa del Ministeri de Justícia de Taiwan — Llei de societats](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Base de dades normativa del Ministeri de Justícia de Taiwan — article 10 de la Llei de l’impost sobre les vendes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Base de dades normativa del Ministeri de Justícia de Taiwan — article 3 de les Normes sobre els tipus de retenció de les diverses rendes (各類所得扣繳率標準) — dividends pagats a no residents (no és l’article 10)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Base de dades normativa del Ministeri de Justícia de Taiwan — Llei de l’impost sobre la renda](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministeri de Finances de Taiwan — guia de retenció sobre dividends d’accionistes a l’exterior](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministeri de Finances de Taiwan — interpretació relativa als beneficis de la sucursal d’una societat estrangera](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

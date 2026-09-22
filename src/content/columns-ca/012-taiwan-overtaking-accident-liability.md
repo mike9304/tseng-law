@@ -33,17 +33,17 @@ Aquest ordre de senyals i de cedir el pas en el mateix carril no significa que l
 
 ## Cas anònim d’accident tramitat per aquest despatx
 
-En un assumpte anònim tramitat per aquest despatx, el motorista A circulava per una carretera de muntanya amb el passatger B. Davant hi havia 2 turismes; el vehicle núm. 1, el que anava més al davant, es movia a poc a poc, de manera que el vehicle núm. 2 i la motocicleta també avançaven a baixa velocitat.
+En un assumpte anònim tramitat per aquest despatx, el motorista A circulava per una carretera de muntanya amb el passatger B. Davant hi havia 2 turismes; el vehicle núm. 1, el que anava més al davant, es movia a poc a poc, de manera que el vehicle núm. 2 i la motocicleta també circulaven a baixa velocitat.
 
 ![Esquema de l’accident que mostra la trajectòria d’avançament de la motocicleta i dels 2 vehicles del davant en una carretera de muntanya](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A va intentar ultrapassar tots dos vehicles alhora, de manera que es va internar al carril contrari i va accelerar. El vehicle núm. 2 també es va preparar per avançar el núm. 1: menys d’1 segon després d’encendre l’intermitent, es va internar al carril contrari. La motocicleta no va tenir marge suficient per frenar i va col·lidir amb el vehicle núm. 2.
+A va intentar ultrapassar tots dos vehicles alhora, de manera que es va internar al carril contrari i va accelerar. El vehicle núm. 2 també es va preparar per avançar el núm. 1: menys d’un segon després d’encendre l’intermitent, es va internar al carril contrari. La motocicleta no va tenir marge suficient per frenar i va col·lidir amb el vehicle núm. 2.
 
 B va patir una lesió greu al cap i va morir al lloc; A va perdre el coneixement i va ser traslladat a l’hospital.
 
 Les famílies d’A i B van considerar al principi que el canvi brusc de carril del vehicle núm. 2 era la causa principal de la col·lisió. L’assumpte va passar a litigi i, en el procés, es van practicar diversos peritatges (鑑定) de l’accident.
 
-Segons el resultat del peritatge, es va considerar que la responsabilitat principal d’aquesta col·lisió requeia en A. Aquesta conclusió es limita als fets d’aquest assumpte. El peritatge va valorar conjuntament l’intent d’A d’avançar els 2 vehicles del davant que circulaven en fila, la seva entrada al carril contrari, la velocitat que feia insuficient el marge de frenada, l’omissió dels senyals de clàxon i de fars previstos, el moviment de canvi de carril del vehicle núm. 2, la configuració de la via i dels carrils, i les altres proves disponibles.
+Segons el resultat del peritatge, es va considerar que la responsabilitat principal d’aquesta col·lisió requeia en A. Aquesta conclusió es limita als fets d’aquest assumpte. El peritatge va valorar conjuntament l’intent d’A d’avançar els 2 vehicles del davant que circulaven en fila, la seva entrada al carril contrari, la velocitat que feia insuficient el marge de frenada, l’omissió del senyal de clàxon o de fars previst, el moviment de canvi de carril del vehicle núm. 2, la configuració de la via i dels carrils, i les altres proves disponibles.
 
 Que el peritatge d’aquest assumpte hagi arribat a aquest resultat no significa que ometre un sol dels senyals previstos determini sempre la responsabilitat. La culpa (過失) en un accident per avançament continua depenent del lloc de l’accident, de la configuració dels carrils, de la velocitat, del moviment dels vehicles, dels senyals, de l’interval temporal, de la visibilitat i de les altres proves.
 

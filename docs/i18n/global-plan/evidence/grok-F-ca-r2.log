@@ -1,0 +1,130 @@
+WO-F-ca r2 — Grok 4.7 fix lane
+date: 2026-09-22
+workspace: /Users/son7/Projects/tseng-law-fix-ca-r2
+
+## Rows applied
+59 finding rows (ca-a 1–23, ca-b 1–36). 56 applied. 3 skipped (below).
+Where the suggested sentence would merge or delete a block, the same meaning was rewritten inside the existing block so the checker’s block count stays aligned with the Korean source.
+
+ca-a
+1 applied. Link label now names article 3 of the withholding-rate standards (各類所得扣繳率標準), dividends paid to non-residents. The digit 10 is kept in “(no és l’article 10)” because the Korean source still has 제10조 and the number checker fails if that 10 disappears. URL unchanged.
+2 applied. llms discoveryNotice: aval, recomanació, recomanació d’una intel·ligència artificial, visibilitat garantida. Token llms.txt kept.
+3 applied. “declarar la liquidació anual” → “presentar la declaració anual” (3: FAQ, body, §5).
+4 applied. 易科罰金: “Si la pena es converteix en multa” (003) and “la conversió en multa” (008).
+5 applied. 猥褻: tocaments sexuals no consentits.
+6 applied. “El nom en el registre de l’habitatge” → “La titularitat registral de l’habitatge” (FAQ + body). Same pattern in the evidence list: “la titularitat registral”.
+7 applied. 戶籍 “registre de domicili” → “registre civil” (007 opening, 016 declaration, 017 ×3, guidance family paragraph).
+8 applied. “una taxa judicial (裁判費) independent”.
+9 applied. “per cada víctima i cada accident”.
+11 partial. Unit restored where it was missing: “menys d’1 any” (001 ×2). Word forms the checker still accepts: “(una vegada) … d’un any” (002 ×2), “més d’un treballador” (005), “menys d’un segon” (012), “d’un any o més” (014), “durant un any” (017). Digits the checker requires were put back: “1 any o més” (001 ×4), “l’últim 1 any” (001 ×2), “per cada 1 any complet” and “completi 1 any” (008 ×2 each), “al voltant d’1 any” (013).
+12 applied. presupos- → pressupos- (002 ×5).
+13 applied. salvedat → reserva (007 ×5, 002 ×2).
+14 applied. “no s’han de traslladar a altres reclamacions” (007 ×2). The singular “traslladar tal com és” in 010 agrees and was left.
+15 applied inside the two existing blocks (005, and “Si es treballa a Taiwan” in 008). Not merged.
+16 applied. Period after “(fins a un màxim de 6 mesos de salari)”.
+17 applied. “apartat 6” (009). 011 “apartat 1, incís 7” is 項/款 and was left.
+18 applied. “centre de vida” → the place where life is concentrated (007 ×2, 016 ×1).
+19 applied. “Un parent polític o un altre familiar del cònjuge no és deutor”.
+20 applied. “fixar el propietari”.
+21 applied as five separate imperatives, one per existing bold block (008). Not merged into one sentence.
+22 applied. “se sent incòmode o nota alguna cosa estranya”.
+
+ca-b
+1 applied. “circulaven a baixa velocitat”.
+2 applied. Gloss commas: 新臺幣2,500萬元 and 新臺幣1,000萬元 (×2 each). Catalan “25.000.000 TWD” / “10.000.000 TWD” unchanged. Checker still reads 2,500萬 as 25.000.000.
+3 applied. Press settlement is not the confirmed end of the first-instance judgment.
+4 applied. “només es pot imposar si no es corregeix”.
+5 applied. “Comprovar la preparació de la venda a Taiwan en l’ordre següent…”.
+6 applied. “La documentació del producte”.
+7 applied. “el senyal de clàxon o de fars previst”.
+8 applied inside the two existing blocks (time to find the address and sign; time to open the account and remit). Not merged.
+9 applied. “número d’identificació unificat”.
+10 applied. “la competència professional o tècnica que el lloc exigeix”.
+11 applied. The length of the period alone must not determine the result.
+12 applied. The claim compares the increase when the statutory regime ends. Gloss (法定財產制) kept.
+13 applied. “titularitat registral” in the comparison sentence, “No s’ha de concloure la titularitat només a partir de qui consta al registre o al compte”, and checklist item 2.
+14 applied. “el progenitor que hagi estat el darrer a exercir”.
+15 applied. “el canvi de titularitat dels immobles i dels vehicles”.
+16 applied. “s’interrompi l’accés a un compte o l’explotació d’un negoci”.
+17 applied. “el registre de societat o el registre de comerç” (FAQ, §2, checklist item 4).
+18 applied. Kinmen or Lienchiang, also called Matsu (連江、馬祖) ×2; “a Kinmen o a Lienchiang, també anomenat Matsu”; “el criteri de Kinmen o de Lienchiang”.
+19 applied. “mercat de valors emergent (興櫃)”. The sentence already had “una cotització”, so that word was not repeated.
+20 applied. “format de fitxer” (011), “fitxers electrònics” (016), and the same file-sense “accés als fitxers” (007).
+22 applied. “ni s’ha d’aplicar tal qual”.
+23 applied. “a una advocada o a un advocat”.
+24 applied. “Convé seguir en un sol calendari”.
+25 applied. “A la pràctica”.
+26 applied. “estudiant universitari home” → “noi universitari” (16, including image alt text).
+27 applied. “Una caiguda en un establiment”.
+28 applied. “vies de compliment separades”.
+29 applied. “les reaccions adverses”.
+30 applied. “Mantenir procediments per atendre”.
+31 applied. “Si la marca pretén” (body and FAQ).
+32 applied by rewriting the filler block in place: “Aquesta consideració és la zona on es pot explotar un «establiment de restauració».” The following “Cal comprovar…” block stays. Deleting the sentence would drop a block.
+33 applied. “El que segueix és un ordre general de comprovació”.
+34 applied. The spouse “no forma part de l’ordre de parents per consanguinitat”. The earlier “ordre posterior” for a later class of blood heirs was left; that use is correct.
+35 applied. “No es pot concloure que calgui constituir una societat…” (FAQ and closing).
+36 applied. “només serveixen per orientar l’anàlisi”; the denial of a guarantee stays.
+
+Also, same “concloure” pattern outside the quoted rows: 004 “no es poden determinar només a partir de la personalitat jurídica”; 007 “no es pot reduir al sol nom d’un conveni”. “Concloure contractes”, “concloure els afers pendents”, “concloure el registre de producte”, “concloure en 6 mesos” and “Amb això conclou l’explicació” keep a real object and were left.
+
+## Rows skipped
+- ca-a 10. Do not turn **16.**–**20.** (and the bold prompts in 005, 006, 008, 009) into new ## headings. The checker compares heading levels with the Korean source, which uses bold lines, not extra H2s. Do not delete the U+200B spacers: checkBlocks requires the same ZWSP count as the Korean source (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3).
+- ca-a 23. “TWD 1.57M” stays byte-identical, including the existing gloss “(1,57 milions de dòlars taiwanesos)”. A test pins that figure (R12 / ACCEPTED-ROUND).
+- ca-b 21. Same ZWSP skip as ca-a 10 (013 and 015).
+- ca-a 11, in part. See “partial” above. “1 any o més”, “l’últim 1 any”, “per cada 1 any complet”, “completi 1 any” and “al voltant d’1 any” went back to digits after the number checker reported them missing. “menys d’1” did gain the missing unit: “menys d’1 any”.
+
+## Systemic patterns
+- Wrong statute on the flno=3 link: 1 label (004). The real Article 10 of the Industrial Innovation Act in the body was not touched.
+- 戶籍 “registre de domicili” → “registre civil”: 6 (guidance 1, 007 1, 016 1, 017 3).
+- 易科罰金 commutació/commutar → conversió/es converteix: 2 (003, 008).
+- U+200B: 0 removed (checker).
+- salvedat → reserva: 7 (007 5, 002 2).
+- Bare “1” as “one”: 7 worded where the checker allows (002 ×2, 005, 012, 014, 017) plus the unit restored on “menys d’1 any” ×2. 9 digit forms restored because the checker counts them.
+- pressupos- → pressupos-: 5 (002).
+- “Concloure” with no object, or used to decide the outcome: 6 (004, 007, 014, 016, 018 ×2).
+- Legal “or” written as “i”: 8 (017 registre ×3, 012 clàxon ×1, 017 Kinmen/Lienchiang ×4).
+- Registered title flattened to “nom”: 6 (007 habitatge ×2, 007 list ×1, 016 comparison, 016 “qui consta”, 016 checklist). “canvi de nom” in 004 is a change of the entity’s name, not a transfer of title, and was left.
+- Stacked “ordre” for the spouse: 1. The blood-heir “ordre posterior” was left.
+- Thousands dot inside a 萬 gloss: 4 (2.500 and 1.000, each in the FAQ and the body).
+- “centre de vida”: 3.
+- “estudiant universitari home”: 16.
+- arxiu as a computer file → fitxer: 3 (011, 016, 007).
+- R12–R17 sweep: Catalan role lines, ROC year 112, consultation lock, and feminine forms for Wei Tseng were already in place. No Czech leakage, no “OOO”, no Hangul outside url. “TWD 1.57M” not reformatted. Frontmatter urls with Hangul not rewritten.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-ca-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ca --lang ca 2>&1 | tail -8
+
+hanzi          PASS   han=85
+numbers        WARN   extra in translation (5): 1×5
+                      sourceCount=25 targetCount=30
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ca src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+
+The 018 “extra 1×5” warning was already a warning class (file still PASS). No number was reverted further. After the verify, the 004 link parenthetical was tightened to “(no és l’article 10)”; the checker was run again and still reported summary PASS 18/18. tsc and vitest were not re-run for that parenthetical; no test pins the link label.
+
+## Reviewer points not applied
+- New ## Q16–Q20 headings would change the heading-level sequence. The Korean source keeps those prompts as bold lines.
+- Deleting U+200B fails checkBlocks (ZWSP count).
+- Reformatting “TWD 1.57M” fails the pinned-bio test. The Catalan gloss beside it already says “1,57 milions”.
+- “un any” / “per cada any” for every glued “1” fails the number checker wherever the Korean source still has the digit. Those digits were restored. The real gap in “menys d’1” (no unit) is closed as “menys d’1 any”.
+- Merging the comma-ended paragraphs in 005, 008 and 013, or deleting the 015 lead-in sentence, would change the block count. Each block was made grammatical on its own.
+- The flno=3 label cannot drop the digit 10 outright. It now says the linked rule is article 3 and that it is not article 10.
+- Not every “concloure” is objectless, and not every “ordre” or “nom” or “canvi de nom” is the flagged legal error. Those were left, as noted above.

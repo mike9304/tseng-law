@@ -41,7 +41,7 @@ L’article 284 del Codi penal regula les lesions per imprudència (過失傷害
 
 En matèria d’indemnització civil per danys (損害賠償), segons l’article 197 del Codi civil de Taiwan (民法) no es pot reclamar un cop transcorreguts 2 anys des del dia en què es van conèixer el dany i l’obligat a indemnitzar, o 10 anys des del dia de l’acte il·lícit. Quins fets influeixen en la prescripció (消滅時效) s’ha d’examinar per separat.
 
-Qui sofreix un dany per un delicte pot, segons l’article 487 del Codi de procediment penal, interposar una acció civil acumulada al procés penal (刑事附帶民事訴訟). Mentre el procés penal segueix en tràmit, aquesta acció es pot interposar fins abans de la conclusió dels al·legats orals (言詞辯論終結) de la segona instància, segons l’article 488 del Codi de procediment penal, però no es pot interposar després de la conclusió dels al·legats orals de la primera instància i abans d’interposar el recurs. En general es pot evitar el pagament de taxa judicial (裁判費) independents, però no tots els resultats conclouen sense cost. Per exemple, si l’assumpte penal es desestima i, a petició del demandant, es remet al tribunal civil, segons l’article 503 del Codi de procediment penal es pot imposar la taxa judicial, i també s’han de comprovar les normes de tramesa i procediment de l’article 504.
+Qui sofreix un dany per un delicte pot, segons l’article 487 del Codi de procediment penal, interposar una acció civil acumulada al procés penal (刑事附帶民事訴訟). Mentre el procés penal segueix en tràmit, aquesta acció es pot interposar fins abans de la conclusió dels al·legats orals (言詞辯論終結) de la segona instància, segons l’article 488 del Codi de procediment penal, però no es pot interposar després de la conclusió dels al·legats orals de la primera instància i abans d’interposar el recurs. En general es pot evitar el pagament d’una taxa judicial (裁判費) independent, però no tots els resultats conclouen sense cost. Per exemple, si l’assumpte penal es desestima i, a petició del demandant, es remet al tribunal civil, segons l’article 503 del Codi de procediment penal es pot imposar la taxa judicial, i també s’han de comprovar les normes de tramesa i procediment de l’article 504.
 
 L’elecció varia segons la interrupció de la prescripció (時效中斷), el conjunt de demandats, les proves, l’assegurança i la competència. Per això no hi ha un procediment que sigui preferible en tots els assumptes.
 
@@ -175,7 +175,7 @@ L’obligació de contractar segons l’article 6 de la Llei de l’assegurança
 
 En un accident d’un sol vehicle, el conductor d’aquest vehicle no és, en general, destinatari de les prestacions de l’assegurança obligatòria d’aquest vehicle. Tanmateix, en un accident en què intervenen diversos vehicles, hi ha casos en què el conductor pot reclamar prestacions a l’assegurador obligatori d’un altre vehicle implicat.
 
-El barem de prestacions (強制汽車責任保險給付標準) modificat el 29 de maig de 2026 s’aplica als accidents ocorreguts a partir de l’1 de juliol de 2026. El límit de les despeses mèdiques raonables i necessàries per lesions és 200.000 TWD; la prestació per discapacitat (失能) oscil·la entre 80.000 TWD i 3.000.000 TWD segons 15 graus legals; la prestació per mort és 3.000.000 TWD, i el màxim conjunt de mort, discapacitat i despeses mèdiques per 1 víctima i 1 accident és 3.200.000 TWD. Als accidents anteriors se’ls pot aplicar el barem precedent.
+El barem de prestacions (強制汽車責任保險給付標準) modificat el 29 de maig de 2026 s’aplica als accidents ocorreguts a partir de l’1 de juliol de 2026. El límit de les despeses mèdiques raonables i necessàries per lesions és 200.000 TWD; la prestació per discapacitat (失能) oscil·la entre 80.000 TWD i 3.000.000 TWD segons 15 graus legals; la prestació per mort és 3.000.000 TWD, i el màxim conjunt de mort, discapacitat i despeses mèdiques per cada víctima i cada accident és 3.200.000 TWD. Als accidents anteriors se’ls pot aplicar el barem precedent.
 
 L’assegurança de responsabilitat civil davant tercers (第三人責任險), l’assegurança de lesions del conductor (駕駛人傷害險) i l’assegurança de danys del vehicle propi (車體損失險) són productes voluntaris de caràcter contractual. La cobertura real varia segons l’assegurat, el límit, la franquícia (自負額), les exclusions, la culpa i les altres condicions de la pòlissa, de manera que la pòlissa i les condicions s’han de comprovar cas per cas.
 
@@ -239,7 +239,7 @@ En algunes sentències per lesions per imprudència s’ha imposat una pena d’
 
 ​
 
-Si es commuta per multa (易科罰金), l’article 41, apartat 1, del Codi penal fixa la conversió en 1.000 TWD, 2.000 TWD o 3.000 TWD per 1 dia; calculat a 1.000 TWD per dia, una pena de 3 mesos equival a 3 × 30 × 1.000 TWD = 90.000 TWD.
+Si la pena es converteix en multa (易科罰金), l’article 41, apartat 1, del Codi penal fixa la conversió en 1.000 TWD, 2.000 TWD o 3.000 TWD per 1 dia; calculat a 1.000 TWD per dia, una pena de 3 mesos equival a 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 

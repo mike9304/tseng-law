@@ -51,9 +51,9 @@ redacti el pla d’inversió i cerqui l’adreça de registre de la societat alh
 
 Segons l’article 9 de la Llei d’inversió d’estrangers (外國人投資條例), l’aportació aprovada ha d’arribar per complet dins del termini fixat per l’autoritat competent (核定期限), i aquest termini s’ha de confirmar en el document d’aprovació de cada cas (en la pràctica sol fixar-se al voltant d’1 any).
 
-Dins d’aquest termini, un cop trobada l’adreça de la societat i signat el contracte d’arrendament,
+Dins d’aquest termini hi ha temps suficient per trobar l’adreça de la societat i signar el contracte d’arrendament.
 
-hi ha temps suficient per obrir al banc el compte preparatori de la societat i remetre el capital.
+També hi ha temps suficient per obrir al banc el compte preparatori de la societat i remetre el capital.
 
 ​
 
@@ -63,7 +63,7 @@ hi ha temps suficient per obrir al banc el compte preparatori de la societat i r
 
 En general, el banc exigeix una doble acreditació d’identitat,
 
-i si no té certificat de residència, pot sol·licitar a l’Administració d’Immigració de Taiwan el «formulari de dades bàsiques del número unificat» (統一證號基本資料表).
+i si no té certificat de residència, pot sol·licitar a l’Administració d’Immigració de Taiwan el «formulari de dades bàsiques del número d’identificació unificat» (統一證號基本資料表).
 
 Es pot expedir el mateix dia,
 

@@ -58,11 +58,11 @@ Li ho resumeixo en una taula senzilla.
 | Preavís | Necessari | No necessari | Necessari |
 | Càrrega de justificació de l’empresa | Alta | Molt alta | No escau |
 | Si l’empresa ha de pagar la indemnització per acomiadament (資遣費) | Necessari | No necessari | No necessari |
-|  | Article 11 de la Llei de normes laborals de Taiwan (勞動基準法第11條): Llevat que es produeixi una de les situacions següents, l’ocupador no pot posar fi al contracte de treball encara que notifiqui prèviament el treballador.  1. Cessament d’activitat (歇業) o transmissió de l’empresa (轉讓)  2. Pèrdues (虧損) o contracció de l’activitat (業務緊縮)  3. Força major que exigeix suspendre l’activitat durant 1 mes o més  4. La naturalesa del negoci exigeix reduir personal i el treballador acomiadat no es pot reubicar en un altre lloc adequat  5. Un treballador determinat no pot exercir de forma satisfactòria la feina que exigeix el lloc | Article 12 de la Llei de normes laborals de Taiwan (勞動基準法第12條): L’ocupador pot acomiadar sense preavís si el treballador es troba en un dels casos següents.  1. Qui, en celebrar el contracte de treball, facilita informació falsa i indueix a error l’ocupador, amb risc de danyar el negoci  2. Qui exerceix violència o infligeix un insult greu a l’ocupador, a un familiar de l’ocupador, al representant de l’ocupador o a altres companys  3. Qui té una condemna ferma a pena de presó (有期徒刑) o superior, sense suspensió de la pena (緩刑) i sense que s’hagi autoritzat la commutació per multa (易科罰金)  4. Infracció greu del contracte de treball o del reglament intern  5. Qui, de forma intencionada, consumeix o destrueix màquines, eines, matèries primeres, productes o altres béns de l’ocupador, o revela de forma intencionada secrets tècnics o comercials de l’ocupador, causant dany a l’ocupador  6. Falta injustificada a la feina durant 3 dies consecutius, o 6 dies o més en un mes |  |
+|  | Article 11 de la Llei de normes laborals de Taiwan (勞動基準法第11條): Llevat que es produeixi una de les situacions següents, l’ocupador no pot posar fi al contracte de treball encara que notifiqui prèviament el treballador.  1. Cessament d’activitat (歇業) o transmissió de l’empresa (轉讓)  2. Pèrdues (虧損) o contracció de l’activitat (業務緊縮)  3. Força major que exigeix suspendre l’activitat durant 1 mes o més  4. La naturalesa del negoci exigeix reduir personal i el treballador acomiadat no es pot reubicar en un altre lloc adequat  5. Un treballador determinat no pot exercir de forma satisfactòria la feina que exigeix el lloc | Article 12 de la Llei de normes laborals de Taiwan (勞動基準法第12條): L’ocupador pot acomiadar sense preavís si el treballador es troba en un dels casos següents.  1. Qui, en celebrar el contracte de treball, facilita informació falsa i indueix a error l’ocupador, amb risc de danyar el negoci  2. Qui exerceix violència o infligeix un insult greu a l’ocupador, a un familiar de l’ocupador, al representant de l’ocupador o a altres companys  3. Qui té una condemna ferma a pena de presó (有期徒刑) o superior, sense suspensió de la pena (緩刑) i sense que s’hagi autoritzat la conversió en multa (易科罰金)  4. Infracció greu del contracte de treball o del reglament intern  5. Qui, de forma intencionada, consumeix o destrueix màquines, eines, matèries primeres, productes o altres béns de l’ocupador, o revela de forma intencionada secrets tècnics o comercials de l’ocupador, causant dany a l’ocupador  6. Falta injustificada a la feina durant 3 dies consecutius, o 6 dies o més en un mes |  |
 
 > A Taiwan, cada vegada que el treballador completi 1 any d’antiguitat (年資),
 > l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資).
-> (fins a un màxim de 6 mesos de salari) Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall.
+> (fins a un màxim de 6 mesos de salari). Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall.
 
 ​
 
@@ -196,21 +196,21 @@ o destina el treballador a un lloc estrany,
 
 **s’han de deixar proves.**
 
-**El registre normal d’assistència,**
+**Conservi el registre normal d’assistència.**
 
-**el registre d’hores extraordinàries, el registre de resultats,**
+**Conservi el registre d’hores extraordinàries i el de resultats.**
 
-**el reglament intern de l’empresa, el registre de correus amb companys i superiors,**
+**Conservi el reglament intern de l’empresa i els correus amb companys i superiors.**
 
-**i també gravar les converses amb el superior,**
+**Gravi les converses amb el superior.**
 
-**per deixar proves favorables a un mateix.**
+**Deixi proves favorables a un mateix.**
 
 ​
 
-Si es treballa a Taiwan,
+Si es treballa a Taiwan, el cobrament no és senzill.
 
-la indemnització per acomiadament és més difícil de cobrar del que es pensa.
+La indemnització per acomiadament és més difícil de cobrar del que es pensa.
 
 No transigeixi amb facilitat amb l’empresa,
 

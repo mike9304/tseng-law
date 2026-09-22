@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Per vendre cosmètics a Taiwan cal constituir sempre una filial o una sucursal?"
-    a: "No cal constituir sempre una filial o una sucursal. També és possible encomanar la importació i la venda a un importador taiwanès (inclòs el cas en què actua alhora com a agent de vendes). Si pretén explotar pel seu compte el negoci a Taiwan, la constitució i el registre d’una filial (子公司) taiwanesa difereixen de la constitució i el registre d’una sucursal (分公司) de societat estrangera, i també difereixen l’estructura de responsabilitat i la fiscalitat; el termini necessari per a l’aprovació de la inversió estrangera (僑外投資核准) i per al registre de la societat o de la sucursal varia segons cada assumpte i segons si hi ha correcció o complement de documents. Cal fixar primer el model de negoci i el subjecte que assumirà la responsabilitat com a fabricant o importador de cosmètics (化粧品製造或輸入業者)."
+    a: "No cal constituir sempre una filial o una sucursal. També és possible encomanar la importació i la venda a un importador taiwanès (inclòs el cas en què actua alhora com a agent de vendes). Si la marca pretén explotar pel seu compte el negoci a Taiwan, la constitució i el registre d’una filial (子公司) taiwanesa difereixen de la constitució i el registre d’una sucursal (分公司) de societat estrangera, i també difereixen l’estructura de responsabilitat i la fiscalitat; el termini necessari per a l’aprovació de la inversió estrangera (僑外投資核准) i per al registre de la societat o de la sucursal varia segons cada assumpte i segons si hi ha correcció o complement de documents. Cal fixar primer el model de negoci i el subjecte que assumirà la responsabilitat com a fabricant o importador de cosmètics (化粧品製造或輸入業者)."
   - q: "Què és el PIF i és el mateix procediment que el registre de producte davant la TFDA?"
     a: "No és el mateix procediment. El registre de producte (產品登錄) és un tràmit a part que es fa a la plataforma de registre de productes cosmètics de la TFDA (衛生福利部食品藥物管理署). El PIF és un expedient que reuneix dades sobre qualitat, seguretat, composició, funció reivindicada, mètode de fabricació, resultats d’assaig i avaluació de seguretat, entre d’altres, i que el fabricant o importador de cosmètics elabora, actualitza i custodia; el PIF mateix no és un document que s’hagi de presentar d’antuvi a la TFDA. Des de l’1 de juliol de 2026, en principi tots els cosmètics queden subjectes al règim del PIF, amb l’excepció del sabó sòlid artesanal fabricat en un lloc de producció exempt de registre de fàbrica (工廠登記)."
   - q: "Quines expressions s’han de vigilar en la publicitat de cosmètics a Taiwan?"
@@ -28,7 +28,7 @@ Les obligacions aplicables poden variar segons el tipus de producte i el lloc de
 
 ## 1. Forma d’entrada a Taiwan i elecció del subjecte importador
 
-No cal constituir sempre una filial o una sucursal. També és possible encomanar la importació i la venda a un importador taiwanès (inclòs el cas en què actua alhora com a agent de vendes). Si pretén explotar pel seu compte el negoci a Taiwan, la constitució i el registre d’una filial taiwanesa difereixen de la constitució i el registre d’una sucursal de societat estrangera, i també difereixen l’estructura de responsabilitat i la fiscalitat; el termini necessari per a l’aprovació de la inversió estrangera i per al registre de la societat o de la sucursal varia segons cada assumpte i segons si hi ha correcció o complement de documents. Cal fixar primer el model de negoci i el subjecte que assumirà la responsabilitat com a fabricant o importador de cosmètics.
+No cal constituir sempre una filial o una sucursal. També és possible encomanar la importació i la venda a un importador taiwanès (inclòs el cas en què actua alhora com a agent de vendes). Si la marca pretén explotar pel seu compte el negoci a Taiwan, la constitució i el registre d’una filial taiwanesa difereixen de la constitució i el registre d’una sucursal de societat estrangera, i també difereixen l’estructura de responsabilitat i la fiscalitat; el termini necessari per a l’aprovació de la inversió estrangera i per al registre de la societat o de la sucursal varia segons cada assumpte i segons si hi ha correcció o complement de documents. Cal fixar primer el model de negoci i el subjecte que assumirà la responsabilitat com a fabricant o importador de cosmètics.
 
 ### Quan s’encomana a un importador local
 
@@ -44,7 +44,7 @@ La filial taiwanesa i la sucursal d’una societat estrangera no són la mateixa
 
 Si cal el procediment d’inversió estrangera, s’ha de confirmar la guia del **Departament de Revisió d’Inversions del Ministeri d’Economia (經濟部投資審議司)** com a autoritat actualment competent. El termini necessari per a l’aprovació de la inversió, la transferència de fons, el registre de la societat o de la sucursal, l’obertura de compte bancari, el registre fiscal (稅籍登記) i l’obtenció de la qualificació d’importador varia segons l’inversor, el sector, la forma organitzativa, els documents presentats i si hi ha correcció o complement. Per tant, en lloc de fixar la data de llançament pressuposant un termini fix determinat, s’han de confirmar primer l’aplicació de cada tràmit i els requisits d’admissió més recents.
 
-Sigui quina sigui l’estructura triada, el subjecte de responsabilitat central en la regulació de cosmètics és el **fabricant o importador de cosmètics**. L’ordenació de les dades del producte o l’avaluació de seguretat (安全性評估) es pot encomanar a un expert extern, però el mer fet d’encomanar el treball no transfereix la responsabilitat jurídica del fabricant o importador. Distingir el repartiment de treball segons el contracte del subjecte de responsabilitat segons la normativa és el punt de partida de l’examen de l’estructura d’entrada.
+Sigui quina sigui l’estructura triada, el subjecte de responsabilitat central en la regulació de cosmètics és el **fabricant o importador de cosmètics**. La documentació del producte o l’avaluació de seguretat (安全性評估) es pot encomanar a un expert extern, però el mer fet d’encomanar el treball no transfereix la responsabilitat jurídica del fabricant o importador. Distingir el repartiment de treball segons el contracte del subjecte de responsabilitat segons la normativa és el punt de partida de l’examen de l’estructura d’entrada.
 
 ## 2. El registre de producte i el PIF són dos règims distints
 
@@ -56,7 +56,7 @@ El registre de producte cosmètic es fa a la plataforma de registre de productes
 
 El període de vigència del registre de producte és de 3 anys. Si es pretén continuar el subministrament, la sol·licitud de pròrroga (展延) s’ha de presentar en els 3 mesos anteriors al venciment. Si canvien les mencions registrades, com el nom del producte, l’ús, la forma de presentació (劑型), la composició i el lloc de fabricació, s’ha de confirmar també si cal un tràmit d’acord amb el contingut del canvi.
 
-El registre de producte és el tràmit de declarar a la plataforma les mencions determinades. La conclusió del registre no significa que estiguin completes totes les dades necessàries per al PIF, ni és un judici que l’etiquetatge o la publicitat del producte siguin conformes a dret. El calendari de registre de producte, la gestió del PIF i la revisió de l’etiquetatge i de la publicitat s’han de gestionar com a línies de compliment distintes.
+El registre de producte és el tràmit de declarar a la plataforma les mencions determinades. La conclusió del registre no significa que estiguin completes totes les dades necessàries per al PIF, ni és un judici que l’etiquetatge o la publicitat del producte siguin conformes a dret. El calendari de registre de producte, la gestió del PIF i la revisió de l’etiquetatge i de la publicitat s’han de dur com a vies de compliment separades.
 
 ### Dades del PIF i aplicació per etapes
 
@@ -68,17 +68,17 @@ El treball del PIF, inclosa l’avaluació de seguretat, pot ser recolzat per un
 
 ### Actualització i custòdia
 
-Si canvien la matèria primera o la fórmula, el mètode i el lloc de fabricació, l’etiquetatge inclosa l’etiqueta, la funció reivindicada o la informació de seguretat, s’han de revisar i actualitzar les dades del PIF afectades. També s’ha d’examinar si les reclamacions de consumidors, els successos de reaccions adverses i els nous resultats d’assaig afecten l’avaluació existent, de manera que el procediment de gestió de canvis continua sent necessari després de la primera elaboració.
+Si canvien la matèria primera o la fórmula, el mètode i el lloc de fabricació, l’etiquetatge inclosa l’etiqueta, la funció reivindicada o la informació de seguretat, s’han de revisar i actualitzar les dades del PIF afectades. També s’ha d’examinar si les reclamacions de consumidors, les reaccions adverses i els nous resultats d’assaig afecten l’avaluació existent, de manera que el procediment de gestió de canvis continua sent necessari després de la primera elaboració.
 
 Segons l’article 7 del Reglament de gestió de l’expedient d’informació de productes cosmètics, el període de custòdia és d’almenys 5 anys comptats des del dia següent a l’últim subministrament del producte al mercat. Segons l’article 8 del mateix reglament, el lloc de custòdia és l’adreça d’etiquetatge del fabricant o importador de cosmètics fixada a l’article 7, apartat 1, incís 7, de la Llei de gestió de la higiene i la seguretat dels cosmètics (化粧品衛生安全管理法). El precepte que fixa el període i el que fixa el lloc s’han d’aplicar per separat.
 
-Encara que el fabricant d’origen conservi l’original o s’utilitzi un emmagatzematge electrònic o al núvol segur, el fabricant o importador ha de poder accedir a les dades completes. S’han de fixar els drets d’accés, la còpia de seguretat, la gestió de versions, el format d’arxiu i el responsable, de manera que les dades es puguin localitzar i presentar amb rapidesa quan l’autoritat competent les requereixi. També és important regular en el contracte el destinatari del lliurament, el mode i si subsisteix el dret d’accés, perquè les dades es mantinguin durant el període legal de custòdia fins i tot després d’acabar el contracte amb el soci de vendes o el prestador de serveis.
+Encara que el fabricant d’origen conservi l’original o s’utilitzi un emmagatzematge electrònic o al núvol segur, el fabricant o importador ha de poder accedir a les dades completes. S’han de fixar els drets d’accés, la còpia de seguretat, la gestió de versions, el format de fitxer i el responsable, de manera que les dades es puguin localitzar i presentar amb rapidesa quan l’autoritat competent les requereixi. També és important regular en el contracte el destinatari del lliurament, el mode i si subsisteix el dret d’accés, perquè les dades es mantinguin durant el període legal de custòdia fins i tot després d’acabar el contracte amb el soci de vendes o el prestador de serveis.
 
 ### Inspecció, correcció i mesures administratives
 
 Quan l’autoritat competent inspecciona el PIF, en principi notifica al fabricant o importador de cosmètics com a molt tard 7 dies abans del dia de la inspecció. Tanmateix, si el cas entra en una excepció legal fixada a la normativa connexa, la inspecció es pot fer sense notificació prèvia. Amb independència de si hi ha notificació, s’ha de mantenir en tot moment l’estat que permeti localitzar i presentar les dades actualitzades completes.
 
-Declarar informació falsa en el registre de producte o consignar informació falsa en el PIF pot ser objecte de multa administrativa (罰鍰) de 10.000 a 1.000.000 de dòlars de Taiwan (新臺幣, TWD). En canvi, si les dades del PIF estan incompletes, l’autoritat competent sol ordenar la correcció en un termini determinat (限期改正), i la multa administrativa només es planteja si no es corregeix dins d’aquest termini. La informació falsa i la incompletitud de dades encara subsanable no s’han de tractar com si produïssin la mateixa conseqüència.
+Declarar informació falsa en el registre de producte o consignar informació falsa en el PIF pot ser objecte de multa administrativa (罰鍰) de 10.000 a 1.000.000 de dòlars de Taiwan (新臺幣, TWD). En canvi, si les dades del PIF estan incompletes, l’autoritat competent sol ordenar la correcció en un termini determinat (限期改正), i la multa administrativa només es pot imposar si no es corregeix dins d’aquest termini. La informació falsa i la incompletitud de dades encara subsanable no s’han de tractar com si produïssin la mateixa conseqüència.
 
 La retirada o la destrucció (銷毀) no és una mesura que acompanyi de forma automàtica tota incompletitud de dades del PIF. La seguretat del producte, el contingut de la infracció, l’estat de la correcció i els requisits legals aplicables a cada mesura s’han de valorar per separat. La mesura quan s’ha confirmat un problema de seguretat i el requeriment de completar documents s’han d’examinar per separat, i la resposta segueix la notificació de l’autoritat competent i el precepte aplicat.
 
@@ -102,14 +102,14 @@ En el contracte de col·laboració i en les directrius d’operació es poden fi
 
 ### Ordre de comprovació de la preparació de la venda
 
-La preparació de la venda a Taiwan, si es comprova en l’ordre següent, pot reduir el risc de confondre un règim amb un altre.
+Comprovar la preparació de la venda a Taiwan en l’ordre següent pot reduir el risc de confondre un règim amb un altre.
 
 1. Fixar si la pròpia marca constitueix una filial o una sucursal a Taiwan, o si encomana la importació i la venda a un importador local.
 2. Confirmar el subjecte que assumeix la responsabilitat jurídica com a fabricant o importador de cosmètics i el responsable del treball segons el contracte.
 3. Concloure el registre de producte abans de subministrar, vendre, regalar, exhibir en públic o posar el producte a disposició del consumidor per a prova.
 4. Elaborar el PIF per producte, actualitzar els canvis i custodiar-lo d’acord amb el període i el lloc legals.
 5. Revisar l’etiqueta, la pàgina de venda, la publicitat i les publicacions de col·laboració amb el criteri del conjunt de la presentació.
-6. Aplicar el procediment per atendre inspeccions i requeriments de correcció, reclamacions, informació de seguretat i el seguiment necessari.
+6. Mantenir procediments per atendre inspeccions i requeriments de correcció, reclamacions, informació de seguretat i el seguiment necessari.
 
 L’estructura bàsica de la societat i de la sucursal es pot veure a [Fonaments de la constitució de societats a Taiwan](/ca/columns/taiwan-company-establishment-basics), l’àmbit de suport relacionat a [Assumptes que atenem](/ca/services), i la informació de l’advocada responsable a [Equip internacional de Hovering](/ca/lawyers).
 

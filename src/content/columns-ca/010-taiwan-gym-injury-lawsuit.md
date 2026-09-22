@@ -21,45 +21,45 @@ L’accident va ocórrer en un gimnàs de Taichung (臺中), durant un entrename
 
 En aquest assumpte vaig actuar com a representant processal (訴訟代理人) del demandant, l’estudiant coreà. El Tribunal de Districte de Taichung, el 24 de gener de 2022, en la sentència de primera instància de l’assumpte de consum núm. 7 de l’any 109 de la República de la Xina (2020) (109年度消字第7號), va ordenar al demandat de pagar [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i els interessos que fixa la sentència.
 
-Després, la premsa va informar que les parts van transigir (和解) en la segona instància. Com que amb la sola sentència oficial de primera instància no es pot confirmar el resultat de la segona instància ni l’import de la transacció, això no s’ha de veure com el resultat ferm de la sentència de primera instància.
+Després, la premsa va informar que les parts van transigir (和解) en la segona instància. Com que amb la sola sentència oficial de primera instància no es pot confirmar el resultat de la segona instància ni l’import de la transacció, la transacció de què informa la premsa no s’ha de prendre com el desenllaç confirmat de la sentència de primera instància.
 
 Els títols de les informacions de premsa, de les publicacions en línia i dels comentaris jurídics sobre aquest assumpte, traduïts al català, són els següents. Els títols de sota només pretenen presentar el contingut de cada enllaç; no signifiquen que aquest article fixi per si mateix els fets.
 
-![Un estudiant universitari home pateix una ruptura de disc intervertebral (椎間盤破裂) després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
+![Un noi universitari pateix una ruptura de disc intervertebral (椎間盤破裂) després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
-[Un estudiant universitari home pateix una ruptura de disc intervertebral (椎間盤破裂) després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
+[Un noi universitari pateix una ruptura de disc intervertebral (椎間盤破裂) després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Un estudiant universitari home coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Un noi universitari coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Un estudiant universitari home coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Un noi universitari coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Un estudiant universitari home coreà es lesiona durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Un noi universitari coreà es lesiona durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Un estudiant universitari home coreà es lesiona durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Un noi universitari coreà es lesiona durant un pes mort de 90 kg; en primera instància se li reconeix una indemnització d’1.570.000 TWD i s’informa d’una transacció en segona instància](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
-![Un estudiant universitari home pateix una ruptura de disc intervertebral després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
+![Un noi universitari pateix una ruptura de disc intervertebral després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
-[Un estudiant universitari home pateix una ruptura de disc intervertebral després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](https://news.ebc.net.tw/news/living/362075)
+[Un noi universitari pateix una ruptura de disc intervertebral després d’un pes mort de 90 kg i reclama una indemnització al gimnàs](https://news.ebc.net.tw/news/living/362075)
 
-![Publicació a PTT: un estudiant universitari home coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància s’ordena al gimnàs pagar 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Publicació a PTT: un noi universitari coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància s’ordena al gimnàs pagar 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Publicació a PTT: un estudiant universitari home coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància s’ordena al gimnàs pagar 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Publicació a PTT: un noi universitari coreà pateix una ruptura de disc intervertebral durant un pes mort de 90 kg; en primera instància s’ordena al gimnàs pagar 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blog: lesió per pes mort de 90 kg d’un estudiant universitari home coreà de 70 kg de pes corporal i indemnització de més d’1.000.000 TWD… hi va haver falta del gimnàs? Quina era la mentalitat (心態) de qui feia l’exercici?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blog: lesió per pes mort de 90 kg d’un noi universitari coreà de 70 kg de pes corporal i indemnització de més d’1.000.000 TWD… hi va haver falta del gimnàs? Quina era la mentalitat (心態) de qui feia l’exercici?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blog: lesió per pes mort de 90 kg d’un estudiant universitari home coreà de 70 kg de pes corporal i indemnització de més d’1.000.000 TWD… hi va haver falta del gimnàs? Quina era la mentalitat (心態) de qui feia l’exercici?](https://blog.udn.com/blackjack/179081715)
+[Blog: lesió per pes mort de 90 kg d’un noi universitari coreà de 70 kg de pes corporal i indemnització de més d’1.000.000 TWD… hi va haver falta del gimnàs? Quina era la mentalitat (心態) de qui feia l’exercici?](https://blog.udn.com/blackjack/179081715)
 
-![Comentari jurídic: un estudiant universitari home pateix una ruptura de disc intervertebral durant el pes mort; en primera instància s’ordena a un gimnàs conegut pagar 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Comentari jurídic: un noi universitari pateix una ruptura de disc intervertebral durant el pes mort; en primera instància s’ordena a un gimnàs conegut pagar 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Comentari jurídic: un estudiant universitari home pateix una ruptura de disc intervertebral durant el pes mort; en primera instància s’ordena a un gimnàs conegut pagar 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Comentari jurídic: un noi universitari pateix una ruptura de disc intervertebral durant el pes mort; en primera instància s’ordena a un gimnàs conegut pagar 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Lectura de la sentència: assumpte de ruptura aguda de disc intervertebral després d’indicar a un principiant del gimnàs un pes mort de 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
 [Lectura de la sentència: assumpte de ruptura aguda de disc intervertebral després d’indicar a un principiant del gimnàs un pes mort de 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
 
-![Un estudiant universitari home coreà es va trencar el disc intervertebral en fer un pes mort de 90 kg en entrenament personal?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
+![Un noi universitari coreà es va trencar el disc intervertebral en fer un pes mort de 90 kg en entrenament personal?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Un estudiant universitari home coreà es va trencar el disc intervertebral en fer un pes mort de 90 kg en entrenament personal?**
+**Un noi universitari coreà es va trencar el disc intervertebral en fer un pes mort de 90 kg en entrenament personal?**
 
 L’interès pràctic d’aquest cas és que mostra que la responsabilitat no es determina de seguida pel mer fet que s’hagi produït una lesió en un gimnàs. El contingut de l’obligació de seguretat (安全義務) que recau sobre el prestador del servei, l’acte concret d’instrucció i la infracció del deure de diligència (注意義務), el nexe causal entre la lesió i la conducta, i l’abast del dany es valoren a partir de les dades de cada assumpte. Els requisits i els terminis del procediment penal i del procediment civil també són distints, de manera que des de just després de l’accident convé organitzar els registres per separat.
 
@@ -105,11 +105,11 @@ Els conceptes de dany que es poden examinar per a la reclamació són els següe
 
 Sí. El fet que existeixi una assegurança pot ser rellevant en examinar la font de la indemnització, però per si mateix no reconeix la responsabilitat jurídica del gimnàs o de l’entrenador ni fixa l’import a pagar. Poden sorgir controvèrsies entre l’assegurador (保險人) i les parts sobre el límit de cobertura i les clàusules d’exclusió, el nexe causal entre l’accident i la lesió, i la necessitat i l’import de cada concepte de dany.
 
-En particular, la pèrdua de capacitat laboral, la reducció d’ingressos durant el període de recuperació i el dany no patrimonial poden requerir dades mèdiques, d’ingressos i de professió, o un dictamen pericial. L’import que ofereix l’assegurador o el que demana el perjudicat no es converteix de seguida en l’import reconegut pel tribunal, i el resultat de l’avaluació de la discapacitat tampoc no determina automàticament la indemnització. En l’actuació real s’han de valorar conjuntament la pòlissa i les condicions, el contingut de la notificació de l’accident, la resposta de l’assegurador, l’evolució del tractament i les dades del dany.
+En particular, la pèrdua de capacitat laboral, la reducció d’ingressos durant el període de recuperació i el dany no patrimonial poden requerir dades mèdiques, d’ingressos i de professió, o un dictamen pericial. L’import que ofereix l’assegurador o el que demana el perjudicat no es converteix de seguida en l’import reconegut pel tribunal, i el resultat de l’avaluació de la discapacitat tampoc no determina automàticament la indemnització. A la pràctica s’han de valorar conjuntament la pòlissa i les condicions, el contingut de la notificació de l’accident, la resposta de l’assegurador, l’evolució del tractament i les dades del dany.
 
 Si s’ha sofert una lesió en un gimnàs, el que importa és rebre primer l’atenció mèdica necessària, conservar les dades que encara es poden recollir abans que desapareguin i demanar com més aviat millor orientació individual sobre els terminis i procediments que es puguin aplicar a l’assumpte. La negociació, la reclamació de consum (消費申訴) o la mediació (調解), la querella penal i la reclamació civil d’indemnització són tots mitjans que es poden triar segons l’assumpte, i no són procediments que s’hagin de seguir sempre en la seva totalitat.
 
-Una caiguda al terra d’un establiment, un dany a la salut per aliments i una lesió ocorreguda en utilitzar un servei professional també poden tenir com a controvèrsia l’obligació de seguretat, el nexe causal, el dany i la prova. Tanmateix, la conclusió d’un assumpte de gimnàs no es pot traslladar tal com és a un altre accident, de manera que el contracte, la conducta i les normes aplicables de cada cas s’han d’examinar per separat.
+Una caiguda en un establiment, un dany a la salut per aliments i una lesió ocorreguda en utilitzar un servei professional també poden tenir com a controvèrsia l’obligació de seguretat, el nexe causal, el dany i la prova. Tanmateix, la conclusió d’un assumpte de gimnàs no es pot traslladar tal com és a un altre accident, de manera que el contracte, la conducta i les normes aplicables de cada cas s’han d’examinar per separat.
 
 ---
 

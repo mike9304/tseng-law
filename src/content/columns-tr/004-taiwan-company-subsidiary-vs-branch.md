@@ -13,7 +13,7 @@ faq:
   - q: "Tayvan bağlı şirketi ile Tayvan şubesinin vergi yükü nasıl ayrılır?"
     a: "Bağlı şirket ve şube kural olarak %5 satış vergisine (營業稅) ve %20 kâr amaçlı işletme gelir vergisine (營利事業所得稅) bağlıdır. Tayvan bağlı şirketi yurt dışındaki ana şirkete temettü (股利) dağıttığında Tayvan iç hukukuna göre kaynakta kesinti oranı (扣繳率) %21’dir; Tayvan–Kore gelir vergisi anlaşmasının (所得稅協定) uygulama koşulları sağlanmışsa azami oran %10’dur. Yabancı bir şirketin Tayvan şubesinin vergi sonrası kârı ana kuruluşa aktarması temettü değildir, böylece kural olarak ek kaynakta kesinti yoktur. Merkezi Tayvan dışında olan kâr amaçlı işletmeler, dağıtılmamış kâr üzerindeki %5 ek verginin (未分配盈餘加徵稅額) beyan konusundan dışlanır."
   - q: "Tayvan’da borsaya açılmak veya yatırım vergi kredisi almak için bağlı şirket ile şubeden hangisi seçilmelidir?"
-    a: "Şube bağımsız bir ihraç şirketi (發行公司) değildir ve Tayvan’da kotasyon (上市) konusu olamaz. Bağlı şirket kotasyona girmek isterse Şirket Kanununun (公司法) ve Tayvan Borsasının (臺灣證券交易所) saptadığı koşulları karşılamalıdır. Vergi avantajları yalnızca örgüt biçimine göre tek biçimde saptanmaz. Sanayi Yeniliği Yasasının (產業創新條例) 10-1. maddesindeki yatırım vergi kredisi (投資抵減) ve benzeri düzenler için hedef yatırım, başvuru süresi, mahsup biçimi, birlikte uygulama ve vergi tavanı tek tek doğrulanmalıdır."
+    a: "Şube bağımsız bir ihraç şirketi (發行公司) değildir ve Tayvan’da kotasyon (上市) konusu olamaz. Bağlı şirket kotasyona girmek isterse Şirket Kanununun (公司法) ve Tayvan Borsasının (臺灣證券交易所) saptadığı koşulları karşılamalıdır. Vergi avantajları yalnızca örgüt biçimine göre tek biçimde saptanmaz. Sanayi Yeniliği Yasasının (產業創新條例) 10-1. maddesindeki yatırım vergi kredisi (投資抵減) ve benzeri düzenler için hedef yatırım, başvuru süresi, mahsup biçimi, birlikte uygulama sınırı ve vergi tavanı tek tek doğrulanmalıdır."
 ---
 
 # Tayvan’a giriş: bağlı şirket ile şube arasındaki farklar
@@ -96,7 +96,7 @@ Sorumluluk karşılaştırması sonunda “bağlı şirket güvenli, şube tehli
 
 ## 4. Finansman ve Tayvan’da kotasyon
 
-Şube bağımsız bir ihraç şirketi (發行公司) değildir ve Tayvan’da kotasyon (上市) konusu olamaz. Bağlı şirket kotasyona girmek isterse Şirket Kanunu ve borsanın saptadığı koşulları karşılamalıdır. Vergi avantajları yalnızca örgüt biçimine göre tek biçimde saptanmaz. Sanayi Yeniliği Yasasının 10-1. maddesindeki yatırım vergi kredisi için hedef yatırım, başvuru süresi, mahsup biçimi, birlikte uygulama ve vergi tavanı tek tek doğrulanmalıdır.
+Şube bağımsız bir ihraç şirketi (發行公司) değildir ve Tayvan’da kotasyon (上市) konusu olamaz. Bağlı şirket kotasyona girmek isterse Şirket Kanunu ve borsanın saptadığı koşulları karşılamalıdır. Vergi avantajları yalnızca örgüt biçimine göre tek biçimde saptanmaz. Sanayi Yeniliği Yasasının 10-1. maddesindeki yatırım vergi kredisi için hedef yatırım, başvuru süresi, mahsup biçimi, birlikte uygulama sınırı ve vergi tavanı tek tek doğrulanmalıdır.
 
 Şubenin kendi hissesi veya payı yoktur, böylece bunları bir üçüncü kişiye ihraç ederek şubenin ortağı yapamaz. Tayvan’daki işletme için gereken fonlar, ana kuruluşun ayırdığı fonlardan, ana kuruluşun desteğinden veya hukuka uygun bir borçtan sağlanabilir. Pay ihraç edilememesi, her finansman biçiminin imkânsız olduğu anlamına genişletilmemelidir. Borç imkânı, teminatlar, ana kuruluşun kefaleti, banka incelemesi ve döviz belgeleri her somut işlem için doğrulanmalıdır.
 
@@ -126,7 +126,7 @@ Araştırma ve geliştirme faaliyetlerine ilişkin ayrı bir rejim, Sanayi Yenil
 
 Tayvan–Kore gelir vergisi anlaşması 17 Kasım 2021’de imzalanmış, 27 Aralık 2023’te yürürlüğe girmiş ve 1 Ocak 2024’ten itibaren uygulanır. Anlaşma iki bölge yerleşiklerinin çifte vergilendirmesini düzenler, ancak bütün Tayvan kaynaklı gelirleri kendiliğinden bağışık tutan bir kural değildir. Gelir türü, gerçek lehdar, yerleşik statüsü, işyeri ile gerçek bağ ve iç usuller her biri doğrulanmalıdır.
 
-Anlaşmanın temettü, faiz ve gayri maddi hak bedelleri için azami oranları her birinde %10’dur. Bu oranı uygulamak için alan, anlaşmaya göre diğer bölgenin yerleşiği ve o gelirin gerçek lehdarı olmak gibi sözleşme koşullarını karşılamalıdır. Tayvan’da istenen yerleşik belgesi ile başvuru, beyan veya iade usulü de toplanmalıdır. İşlemler arasında bir aracı şirket (導管公司) varsa, veya gelir Tayvan’daki bir işyeriyle gerçekten bağlıysa, ayrı bir çözümleme gerekebilir.
+Anlaşmanın temettü, faiz ve gayri maddi hak bedelleri için azami oranları her birinde %10’dur. Bu oranı uygulamak için alan, anlaşmaya göre diğer bölgenin yerleşiği ve o gelirin gerçek lehdarı olmak gibi sözleşme koşullarını karşılamalıdır. Tayvan’da istenen yerleşik belgesi ile başvuru, beyan veya iade usulü de tamamlanmalıdır. İşlemler arasında bir aracı şirket (導管公司) varsa, veya gelir Tayvan’daki bir işyeriyle gerçekten bağlıysa, ayrı bir çözümleme gerekebilir.
 
 İşletme kârları, bir bölgenin işletmesi diğer bölgede anlaşma anlamında işyeri (常設機構) bulundurmazsa kural olarak diğer bölgede vergiden bağışıktır. Tersine işyeri varsa, ona tahsis edilebilir kârlar diğer bölgede vergilendirilebilir. Böylece işletme kârları hükmü incelenirken önce Tayvan’da yürütülen faaliyetin işyeri oluşturup oluşturmadığı görülmeli, sonra hangi gelir ve giderlerin ona tahsis edildiği hesaplanmalıdır.
 

@@ -2609,7 +2609,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Daha önce Millî Eğitim Bakanlığının hukuk işleri biriminde (Ministry of Education, Legal Affairs Division), idari ve hukuki uyuşmazlıklara odaklanarak çalıştı.',
+        'Daha önce Millî Eğitim Bakanlığının hukuk işleri biriminde (Ministry of Education, Legal Affairs Division), idari uyuşmazlıklar ile hukuk davalarına odaklanarak çalıştı.',
         'Üniversiteler, öğretim elemanı hakları ve idari başvurular konusunda deneyimi vardır.',
       ],
       education: ['National Chung Hsing University’de hukuk lisansı (LL.B.)'],

@@ -447,7 +447,7 @@ const ELEMENTS = {
     'zh-hans': /不能代替咨询/,
     ms: /langkah perundingan/,
     ru: /шагом консультации/,
-    tr: /görüşme adımı/,
+    tr: /görüşmenin yerini tutmaz/,
     it: /passo di consulenza/,
     nl: /consultatiestap/,
     pl: /nie jest konsultacją/,

@@ -77,7 +77,7 @@ Tayvan hukuku, kusur şirkette olsa da
 
 çalışanda olsa da,
 
-tarafların her birine kıdem tazminatı ödememe veya isteme hakkı tanır.
+kusur şirketteyse çalışan kıdem tazminatını isteyebilir; kusur çalışandaysa şirket ödemeyi reddedebilir.
 
 Bazen iş ilişkisinde karşılıklı kusur varken,
 

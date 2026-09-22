@@ -26,10 +26,10 @@ Tayvan iş sözleşmesinin (勞動契約) asgari hizmet süresi sözleşmesi (�
 
 İncelemede aşağıdaki 4 sorunun birbirine karıştırılmaması önemlidir.
 
-1. Sözleşmenin kendisi madde 15-1’in yasal şartlarını karşılıyor mu
-2. Kararlaştırılan süre ve çalışanın yükü makul kapsamda mı
-3. İş sözleşmesinin sona erme nedeni kime ait
-4. Ayrılış ön bildirimi ve iade kapsamı nasıl değerlendirilir
+1. Sözleşmenin kendisi madde 15-1’in yasal şartlarını karşılıyor mu?
+2. Kararlaştırılan süre ve çalışanın yükü makul kapsamda mı?
+3. İş sözleşmesinin sona erme nedeni kime aittir?
+4. Ayrılış ön bildirimi ve iade kapsamı nasıl değerlendirilir?
 
 Aynı sözleşmede bu 4 mesele birlikte yazılı olsa da uygulanacak hüküm ve gereken delil farklıdır. Bu yüzden sözleşmenin geçerli olup olmadığı, istifa iradesinin ne zaman hüküm doğurduğu, avans niteliğindeki ödemenin (預付性給付) veya eğitim giderinin iade sorumluluğu olup olmadığı ve ayrıca bir zararın gerçekten doğup doğmadığı ayrı ayrı bakılmalıdır.
 
@@ -43,13 +43,13 @@ Madde 15-1, 2 yasal şarttan birini ve ayrıca ayrı bir makullük incelemesini 
 
 Yasal şart doğrulandıktan sonra fıkra 2’ye göre kararlaştırılan süre ve sorumluluk kapsamının makul olup olmadığı ayrıca incelenir. Fıkra 1’in yasal şartını veya fıkra 2’nin makullük ölçütünü ihlal eden sözleşme fıkra 3’e göre geçersizdir. Ancak bu kural her asgari hizmet süresi sözleşmesini baştan geçerli veya geçersiz sayan bir kural değil, her sözleşmenin içeriğini ve olgularını inceleyen bir ölçüttür.
 
-Çalışanın sözleşmeyi imzalamış olması anlaşmanın varlığını doğrulayan bir belge olabilir ama yasal şartların yerine geçmez. Tersine, sözleşmenin uzun süreli olması tek başına hemen sonuç çıkarılmamalı; hangi yatırım veya karşılığın olduğu ve bu sürenin neden belirlendiği doğrulanmalıdır.
+Çalışanın sözleşmeyi imzalamış olması anlaşmanın varlığını doğrulayan bir belge olabilir ama yasal şartların yerine geçmez. Tersine, kararlaştırılan sürenin uzunluğu tek başına sonucu belirlememeli; hangi yatırım veya karşılığın olduğu ve bu sürenin neden belirlendiği doğrulanmalıdır.
 
 ## 2. İlk yasal şart: uzman teknik eğitim ve giderin üstlenilmesi
 
 Sözleşmeyi eğitime dayandırmak için işveren ilgili çalışana uzman teknik eğitimi fiilen vermiş ve giderini üstlenmiş olmalıdır. Eğitim planına mesleki kurs yazmak veya sözleşmeye tahmini gider koymak yetmez. Eğitimin konusu, görev için gereken mesleki ve teknik nitelik, somut süre, tamamlanıp tamamlanmadığı ve fiili gider harcaması belgelerle bağlanabilmelidir.
 
-İnceleme konusu, dış eğitmen ücreti, eğitim kurumu kurs bedeli, materyal ve ekipman kullanım ücreti gibi doğrudan doğrulanabilir giderlerin yanı sıra işverenin ileri sürdüğü iç giderin hesap dayanağını da kapsar. İç personel eğitim verdiyse kimin hangi zamanının eğitime ayrıldığı, olağan gözetim veya görev devrinden nasıl ayrıldığı ve bu giderin o çalışana yüklenmesinin dayanağı bakılmalıdır. Tahmini tutar veya toplu dağıtılmış tutar tek başına fiili yükü kanıtlamaz.
+İnceleme konusu, dış eğitmen ücreti, eğitim kurumu kurs bedeli, materyal ve ekipman kullanım ücreti gibi doğrudan doğrulanabilir giderlerin yanı sıra işverenin ileri sürdüğü iç giderin hesap dayanağını da kapsar. İç personel eğitim verdiyse kimin hangi zamanının eğitime ayrıldığı, olağan gözetim veya görev devrinden nasıl ayrıldığı ve bu giderin o çalışana yüklenmesinin dayanağı bakılmalıdır. Tahmini tutar veya yeknesak paylaştırılmış tutar tek başına işverenin fiili harcamasını kanıtlamaz.
 
 Program, eğitim takvimi, yoklama listesi, değerlendirme sonucu, bitirme belgesi, fatura ve makbuzlar, eğitimin gerçekliği ve gideri doğrulayan temel belgelerdir. İşveren ile eğitim kurumu arasındaki sözleşme, ödeme fişleri ve iade koşulları birlikte görülürse fiili yük daha tam kavranır. Çalışan giderin bir kısmını doğrudan ödemiş veya üçüncü kişi desteklemişse nihai gideri kimin üstlendiği de ayrılmalıdır.
 

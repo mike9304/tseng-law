@@ -14,3 +14,6 @@ Scope for the fixer: RULEBOOK-FIX.md (R2–R10 + round-2 addendum R12–R17) + e
 - 營業稅 → "данък върху добавената стойност (營業稅)" style per reviewer (not the repealed "данък върху оборота"); 戶籍 term per reviewer.
 - Systemic German calques (съпровожда, изходен текст, още нужните документи, особено) → sweep pack + columns. Blog voice R7 (feminine narrator already right).
 - Numbers: keep dot thousands (R14); "1.57M" pinned.
+
+## Part b
+Apply every P1/P2 row of `bg-b.md` under the same skip rules. Additional: b#1 punitive damages → "наказателно обезщетение" is wrong → "обезщетение с наказателен/санкционен характер (懲罰性賠償金)" per reviewer's wording. b#4 самоволно → по собствено желание (part-a rule, sweep 014). b#8 акции vs дялове per company type sweep 018. "Срок на служба" → "минимален срок на работа/оставане (最低服務年限)"; 戶籍 → one term (адресна регистрация по домакинство (戶籍)) sweep 016/017. Calques listed → natural Bulgarian. Numbers keep the dot (R14). Blog voice 013/015 → R7 (feminine narrator).

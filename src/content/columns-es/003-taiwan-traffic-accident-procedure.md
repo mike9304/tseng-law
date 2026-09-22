@@ -43,13 +43,13 @@ En materia de indemnización civil por daños (損害賠償), según el artícul
 
 Quien sufre un daño por un delito puede, según el artículo 487 de la Ley de Enjuiciamiento Criminal, interponer una acción civil acumulada al proceso penal (刑事附帶民事訴訟). Mientras el proceso penal sigue en trámite, esa acción puede interponerse hasta antes de la conclusión de los alegatos orales (言詞辯論終結) de la segunda instancia, según el artículo 488 de la Ley de Enjuiciamiento Criminal, pero no puede interponerse después de la conclusión de los alegatos orales de la primera instancia y antes de interponer el recurso. Por lo general puede evitarse el pago de una tasa judicial (裁判費) independiente, pero no todos los resultados concluyen sin coste. Por ejemplo, si el asunto penal se desestima y, a petición del demandante, se remite al tribunal civil, según el artículo 503 de la Ley de Enjuiciamiento Criminal puede imponerse la tasa judicial, y deben comprobarse también las normas de remisión y procedimiento del artículo 504.
 
-La elección varía según la interrupción de la prescripción (時效中斷), el círculo de demandados, las pruebas, el seguro y la competencia. Por ello no hay un procedimiento que sea el más adecuado para todos los asuntos.
+La elección varía según la interrupción de la prescripción (時效中斷), el círculo de demandados, las pruebas, el seguro y la competencia. Por ello no existe un procedimiento uniformemente mejor para todos los asuntos.
 
 ## Q4. Si hay culpa en ambas partes, ¿cómo se valoran las responsabilidades penal y civil?
 
 La responsabilidad penal solo puede apreciarse cuando se reconoce la infracción del deber de cuidado de cada uno y el nexo causal entre esa infracción y las lesiones de la otra parte. El mero hecho de que ambas partes hayan tenido culpa no hace nacer automáticamente la responsabilidad por lesiones por imprudencia.
 
-En el ámbito civil, según el artículo 217 del Código Civil, si el perjudicado tiene culpa que contribuyó a causar o agravar el daño (與有過失), el tribunal puede reducir o eximir la indemnización. Por ejemplo, si el daño reconocido en dólares de Taiwán (新臺幣, TWD) es TWD 1.000.000 y la culpa del perjudicado se valora en 50 %, el importe puede reducirse a TWD 500.000 antes de otros ajustes.
+En el ámbito civil, según el artículo 217 del Código Civil, si el perjudicado tiene culpa que contribuyó a causar o agravar el daño (與有過失), el tribunal puede reducir o eximir la indemnización. Por ejemplo, si el daño reconocido en nuevo dólar taiwanés (新臺幣, TWD) es TWD 1.000.000 y la culpa del perjudicado se valora en 50 %, el importe puede reducirse a TWD 500.000 antes de otros ajustes.
 
 El peritaje (鑑定) o la tabla de análisis preliminar pueden ser materiales importantes, pero no vinculan al tribunal de forma mecánica. El tribunal examina el conjunto de las pruebas, incluidas declaraciones, imágenes y el estado de los vehículos.
 
@@ -175,7 +175,7 @@ La obligación de contratar según el artículo 6 de la Ley del seguro obligator
 
 En un accidente de un solo vehículo, el conductor de ese vehículo no es, por lo general, destinatario de las prestaciones del seguro obligatorio de ese vehículo. Sin embargo, en un accidente en el que intervienen varios vehículos, hay casos en que el conductor puede reclamar prestaciones al asegurador obligatorio de otro vehículo implicado.
 
-El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026. El límite de los gastos médicos razonables y necesarios por lesiones es de 200.000 dólares de Taiwán (TWD); la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por cada 1 víctima y cada 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
+El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026. El límite de los gastos médicos razonables y necesarios por lesiones es TWD 200.000 en nuevo dólar taiwanés; la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por cada 1 víctima y cada 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
 
 El seguro de responsabilidad civil frente a terceros (第三人責任險), el seguro de lesiones del conductor (駕駛人傷害險) y el seguro de daños del vehículo propio (車體損失險) son productos voluntarios de carácter contractual. La cobertura real varía según el asegurado, el límite, la franquicia (自負額), las exclusiones, la culpa y las demás condiciones de la póliza, de modo que la póliza y las condiciones deben comprobarse caso por caso.
 

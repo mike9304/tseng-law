@@ -53,7 +53,7 @@ Si la remisión se hace desde una cuenta bancaria de Corea, no es necesario adju
 
 En general, primero deben haberse expedido los documentos de registro de la persona jurídica.
 
-El responsable (負責人) puede entonces acudir al banco y convertir la cuenta preparatoria de la sociedad en cuenta ordinaria.
+el responsable (負責人) puede acudir al banco y convertir la cuenta preparatoria de la sociedad en cuenta ordinaria.
 
 Sin embargo, como las normas internas de cada banco difieren, si necesita utilizar el capital con urgencia, conviene preguntar primero al banco.
 

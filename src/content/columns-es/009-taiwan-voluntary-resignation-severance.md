@@ -73,11 +73,11 @@ Por ello el trabajador debe controlar bien el plazo.
 
 Es decir,
 
-el Derecho de Taiwán distingue el efecto según quién tenga la culpa:
+el Derecho de Taiwán, tanto si la falta está en la empresa
 
-si la tiene el empleador, el trabajador puede exigir la indemnización por despido;
+como si está en el trabajador,
 
-si la tiene el trabajador, el empleador puede no pagarla.
+reconoce a ambas partes el derecho a no pagar la indemnización por despido o a exigirla.
 
 A veces, cuando hay falta en ambas partes de la relación laboral,
 

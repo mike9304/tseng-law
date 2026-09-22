@@ -196,15 +196,15 @@ o destina al trabajador a un puesto extraño,
 
 **deben dejarse pruebas.**
 
-**Conserve el registro normal de asistencia.**
+**El registro normal de asistencia,**
 
-**Conserve el registro de horas extraordinarias y el de resultados.**
+**el registro de horas extraordinarias, el registro de resultados,**
 
-**Conserve el reglamento de la empresa y los correos con compañeros y superiores.**
+**el reglamento de la empresa, el registro de correos con compañeros y superiores,**
 
-**Grabe las conversaciones con el superior.**
+**y también grabar las conversaciones con el superior,**
 
-**Conserve cualquier prueba que le favorezca.**
+**para dejar pruebas favorables a uno mismo.**
 
 ​
 

@@ -245,7 +245,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Esta página muestra los perfiles de los abogados, de la dirección de operaciones y del socio auditor (Partner CPA) de Hovering. La abogada Wei Tseng (曾雋崴) está habilitada para ejercer en Taiwán y es la abogada directora del despacho; trabaja con clientes de Corea, de Japón y con otros clientes internacionales. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
+        'Esta página muestra los perfiles de los abogados, de la dirección de operaciones y del auditor asociado de Hovering. La abogada Wei Tseng (曾雋崴) está habilitada para ejercer en Taiwán y es la abogada directora del despacho; trabaja con clientes de Corea, de Japón y con otros clientes internacionales. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
       sources: ['/es/about', '/es/contact'],
     },
     pricing: {

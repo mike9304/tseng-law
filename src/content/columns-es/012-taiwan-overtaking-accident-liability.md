@@ -23,7 +23,7 @@ El artículo 101 prohíbe adelantar en tramos con señales que indican curva, pe
 
 Tampoco puede adelantarse en lugares o tramos con señal de escuela o de hospital, en lugares con otras señales o marcas de prohibición de adelantamiento, cuando se aproxima un vehículo en sentido contrario, ni cuando delante circulan de forma continua dos o más vehículos.
 
-Para rebasar el vehículo de delante en el mismo carril, el conductor del vehículo de detrás debe primero dar dos toques cortos de claxon o una ráfaga con los faros delanteros. No deben utilizarse el claxon ni los faros de forma repetida para forzar a que el vehículo de delante ceda el paso.
+Para rebasar el vehículo de delante en el mismo carril, el conductor del vehículo de detrás debe primero hacer dos toques cortos de claxon o un destello de los faros delanteros. No deben utilizarse el claxon ni los faros de forma repetida para forzar a que el vehículo de delante ceda el paso.
 
 El vehículo de detrás solo puede adelantar después de que el de delante reduzca la velocidad y se aparte, o después de que manifieste su voluntad de ceder el paso con una señal con la mano o con el indicador de dirección derecho.
 

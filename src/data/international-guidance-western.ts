@@ -625,7 +625,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Inversión y constitución de sociedades en Taiwán',
           paragraphs: [
-            'Acompañamos a inversores y empresas extranjeras que constituyen o gestionan una sociedad en Taiwán: elección de la forma societaria, preparación y presentación de documentos, aportación de capital, trámites bancarios, comprobación del local y requisitos propios de determinados sectores. También apoyamos la contabilidad y la fiscalidad derivadas de constituir y operar en Taiwán.',
+            'Acompañamos a inversores y empresas extranjeras que constituyen o gestionan una sociedad en Taiwán: elección de la forma societaria, preparación y presentación de documentos, aportación de capital, banca, comprobación del local y requisitos propios de determinados sectores. También apoyamos la contabilidad y la fiscalidad derivadas de constituir y operar en Taiwán.',
             'El orden y la duración del proceso varían según la forma societaria, el inversor, el sector, el banco y los documentos disponibles. Constituir una sociedad no produce por sí solo un permiso de residencia (居留) ni un permiso de trabajo (工作許可): son trámites distintos que se valoran según la situación de cada persona.',
           ],
         },
@@ -633,7 +633,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Litigios civiles y daños',
           paragraphs: [
             'Esta área cubre conflictos contractuales, reclamaciones de daños por acto ilícito y conflictos de consumo. El trabajo suele empezar por una cronología de los hechos, la revisión de documentos y pruebas existentes y, solo después, los siguientes pasos.',
-            'Los plazos, incluidos los plazos legales para demandar, y la completitud de las pruebas influyen mucho en el curso del asunto civil, así que indique desde el principio las fechas que conozca. Si conserva contratos, mensajes, justificantes de pago o fotos del lugar, menciónelos en el primer mensaje.',
+            'Los plazos, incluidos los plazos legales para demandar, y la integridad de las pruebas influyen mucho en el curso del asunto civil, así que indique desde el principio las fechas que conozca. Si conserva contratos, mensajes, justificantes de pago o fotos del lugar, menciónelo en el primer mensaje.',
           ],
         },
         {
@@ -685,7 +685,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fundación y estructura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) fue fundado en 2016 por abogados titulados por la National Taiwan University (國立臺灣大學). El nombre chino 昊鼎 une el carácter 昊 («cielo amplio») y el carácter 鼎 («base sólida»), y expresa la orientación del despacho desde su origen.',
-            'Tenemos oficinas en Taipéi (臺北), Kaohsiung (高雄), Taichung (臺中) y Pingtung (屏東). La oficina de Kaohsiung se centra en el gobierno corporativo y atiende conflictos civiles, penales y administrativos. La oficina de Taichung atiende construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La oficina de Pingtung se abrió en 2017 para atender a la clientela de la zona.',
+            'Tenemos oficinas en Taipéi (臺北), Kaohsiung (高雄), Taichung (臺中) y Pingtung (屏東). La oficina de Kaohsiung se centra en el gobierno corporativo y atiende conflictos civiles, penales y administrativos. La oficina de Taichung atiende construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La oficina de Pingtung se abrió en 2017 para atender la demanda local.',
             'Además del trabajo de abogacía, en 2020 se creó Hovering Accounting Office, que ofrece contabilidad y planificación fiscal a empresarios y a particulares con patrimonio elevado.',
           ],
         },
@@ -708,7 +708,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ABOGADOS',
       title: 'Equipo internacional de Hovering',
-      description: 'Perfiles de los abogados, de la dirección de operaciones y del socio auditor (Partner CPA) de Hovering.',
+      description: 'Perfiles de los abogados, de la dirección de operaciones y del auditor asociado de Hovering.',
       intro: '',
       sections: [],
     },
@@ -737,7 +737,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'La consulta puede ser un servicio de pago',
           paragraphs: [
-            'La consulta con un abogado puede ser un servicio de pago. Esta página no afirma que la primera consulta sea gratuita, y nada en esta página debe entenderse en ese sentido.',
+            'La consulta con un abogado puede ser un servicio de pago. Esta página no afirma que la primera consulta sea gratuita, y ninguna parte debe leerse en ese sentido.',
             'Si la consulta tiene coste, la cuantía y la forma de pago se comunican antes de que tenga lugar.',
           ],
         },
@@ -912,7 +912,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lugar de almacenamiento y prestadores',
           paragraphs: [
-            'Este sitio se aloja en Vercel, y su envío se guarda en un almacenamiento no público de ese servicio. El correo se envía a través del servicio de correo que utiliza el despacho.',
+            'Este sitio se aloja en Vercel, y su envío se guarda en un almacenamiento de objetos no público de ese servicio. El correo se envía a través del servicio de correo que utiliza el despacho.',
             'Los servidores de algunos prestadores pueden estar fuera de Taiwán, de modo que sus datos pueden almacenarse y tratarse allí. Cumplida la finalidad del almacenamiento, los datos se suprimen sin demora; los datos que deban conservarse según las normas aplicables se conservan durante ese plazo. Las solicitudes relativas a datos personales se reciben en wei@hoveringlaw.com.tw.',
           ],
         },
@@ -950,7 +950,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'No hay garantía de resultado',
           paragraphs: [
-            'Nada en esta página es una promesa sobre el resultado de un asunto, sobre la concesión de una solicitud o sobre el estatus de residencia y de trabajo.',
+            'Ninguna parte de esta página es una promesa sobre el resultado de un asunto, sobre la concesión de una solicitud o sobre el estatus de residencia y de trabajo.',
             'Los enlaces externos se ofrecen para su comodidad; no garantizamos la exactitud ni la actualidad del contenido publicado por terceros.',
           ],
         },
@@ -962,7 +962,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Artículos en español que explican temas frecuentes del derecho de Taiwán. El contenido es información general en el momento de su publicación, no asesoramiento jurídico para su caso.',
       intro:
-        'El despacho publica artículos que explican temas frecuentes del derecho de Taiwán. Los artículos disponibles en español figuran en esta página; además hay cuatro enlaces, y cada uno abre la lista de artículos de un idioma original.',
+        'El despacho publica artículos que explican temas frecuentes del derecho de Taiwán. Los artículos disponibles en español figuran en esta página; además hay cuatro enlaces, cada uno abre la lista de artículos de un idioma original.',
       sections: [
         {
           heading: 'Cuatro listas según el idioma',

@@ -1212,7 +1212,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Rådgivningen foregår kun på fire sprog: engelsk, kinesisk (中文), japansk og koreansk.',
     methodConfirmationNotice:
-      'Hvis du ikke kan bruge noget af de fire sprog, skal du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
+      'Hvis du ikke behersker noget af de fire sprog, skal du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
     preparationNotice:
       'Du må skrive resuméet på dit eget sprog. Originalteksten gemmes, som du har skrevet den, og oversættes ikke automatisk.',
     heading: 'Send en anmodning om rådgivning',

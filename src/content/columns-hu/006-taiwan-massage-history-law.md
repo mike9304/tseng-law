@@ -53,7 +53,7 @@ Látássérültség nélküli személy (非視障者) e foglalkozásának gyakor
 
 Ez a törvény 2003-ig maradt fenn; akkor Lin úr, aki fodrászszalont üzemeltetett,
 
-látássérültség nélküli munkavállalókat foglalkoztatott hajmosási és masszázsszolgáltatásra, és a rendőrség ezt megállapította.
+két látássérültség nélküli munkavállalót foglalkoztatott hajmosási és masszázsszolgáltatásra, és a rendőrség ezt megállapította.
 
 Az akkori jog szerint Lin úrnak és ezeknek a munkavállalóknak közigazgatási bírságot (罰鍰) szabtak ki, rendre TWD 40.000, TWD 10.000 és TWD 20.000 új tajvani dollár (新臺幣) összegben.
 

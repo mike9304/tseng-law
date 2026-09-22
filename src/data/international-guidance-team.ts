@@ -3223,7 +3223,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'Jogi asszisztens; több irodában vezető jogi asszisztensként eljárási, társasági jogi és külföldi befektetési ügyeket támogatott.',
-        'Támogatás eljárásokban, cégalapításban, külföldi befektetési engedélyekben, engedélykérelmekben, valamint a koreai–tajvani kapcsolatokban.',
+        'Támogatás eljárásokban, cégalapításban, külföldi befektetési engedélyekben, engedélykérelmekben, valamint a koreai és tajvani ügyfelek közötti kapcsolattartásban.',
       ],
       education: [
         'Jogi alapfokozat (LL.B.), Tunghai University',
@@ -3247,7 +3247,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'A National Chengchi University számviteli alap- és mesterképzését végezte el, jelenleg könyvelőirodát vezet.',
+        'A National Chengchi University számviteli alap- és mesterképzését végezte el, jelenleg könyvvizsgáló irodát vezet.',
         'Vállalati ügyfeleket a jogi, adózási és pénzügyi kockázatok együttes elemzésében támogatja.',
       ],
       education: [

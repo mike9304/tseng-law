@@ -47,7 +47,7 @@ A választás az elévülés megszakadása (時效中斷), az alperesi kör, a b
 
 ## Q4. Ha mindkét oldalon van gondatlanság, hogyan értékelik a büntetőjogi és a polgári felelősséget?
 
-Büntetőjogi felelősség csak akkor állapítható meg, ha elismerték mindenki gondossági kötelezettségének megsértését, valamint e megsértés és a másik fél sérülései közötti okozati összefüggést. Önmagában az, hogy mindkét oldalon volt gondatlanság, nem kelti automatikusan a gondatlan testi sértés felelősségét.
+Büntetőjogi felelősség csak akkor állapítható meg, ha elismerték mindenki gondossági kötelezettségének megsértését, valamint e megsértés és a másik fél sérülései közötti okozati összefüggést. Önmagában az, hogy mindkét oldalon volt gondatlanság, nem keletkezteti automatikusan a gondatlan testi sértés miatti felelősséget.
 
 Polgári síkon, a polgári törvénykönyv 217. cikke szerint, ha a károsultnak van a kár okozásához vagy súlyosbításához hozzájáruló gondatlansága (與有過失), a bíróság csökkentheti vagy elengedheti a kártérítést. Például, ha az új tajvani dollárban (新臺幣, TWD) elismert kár TWD 1.000.000, és a károsult gondatlanságát 50 %-ra értékelik, az összeg TWD 500.000-ra csökkenthető a többi korrekció előtt.
 
@@ -101,7 +101,7 @@ A polgári törvénykönyv 184. cikkén alapuló igény jogellenes jogsértést,
 
 Meg kell őrizni a nyugtákat (收據), az orvosi igazolásokat és az orvosi dokumentációt, és ezekkel együtt rendezni minden kezelés orvosi szükségességét és a balesettel való okozati összefüggését. A tartó kezelés iratai kiegészíthetik a bizonyítást a bíróság eljárási naptára és a már előterjesztett igény tartalma szerint, de ez nem biztosítja, hogy minden később benyújtott iratot vagy az igény minden kiterjesztését befogadják vagy engedélyezik.
 
-Meg kell különböztetni az orvosi iratok hozzáadását a követelt összeg megváltoztatásától vagy növelésétől. A büntetőeljáráshoz kapcsolódó polgári mellékkereset indítása után önmagában több orvosi nyugta bemutatása nem kelti automatikusan a bírósági költségeket.
+Meg kell különböztetni az orvosi iratok hozzáadását a követelt összeg megváltoztatásától vagy növelésétől. A büntetőeljáráshoz kapcsolódó polgári mellékkereset indítása után önmagában több orvosi nyugta bemutatása nem keletkezteti automatikusan a bírósági költségeket.
 
 A büntetőeljárási törvény 504. cikke szerint azonban, ha az ügyet a polgári osztályra utalták, az áttétel előtti terjedelmen túli igényváltoztatás, hozzáadás vagy kiterjesztés a túllépő rész eljárási költségeinek kérdését vetheti fel. Az áttétel szakaszát, a bemutatás időpontját és az igény terjedelmét minden ügyben ellenőrizni kell.
 
@@ -177,7 +177,7 @@ Egyjárműves balesetben e jármű vezetője elvben nem címzettje e jármű kö
 
 A 2026. május 29-én módosított kifizetési tarifa (強制汽車責任保險給付標準) a 2026. július 1-jétől bekövetkezett balesetekre alkalmazandó. A sérülések ésszerű és szükséges orvosi költségeinek plafonja TWD 200.000 új tajvani dollárban; a rokkantsági szolgáltatás (失能) TWD 80.000-tól TWD 3.000.000-ig terjed a 15 törvényes fokozat szerint; a halálozási szolgáltatás TWD 3.000.000, a halál, a rokkantság és az orvosi költségek együttes maximuma 1 károsultra és 1 balesetre vetítve TWD 3.200.000. A korábbi balesetekre a megelőző tarifa alkalmazható.
 
-A Harmadik személlyel szembeni felelősségbiztosítás (第三人責任險), a járművezetői balesetbiztosítás (駕駛人傷害險) és a saját jármű kárbiztosítása (車體損失險) fakultatív, szerződéses jellegű termékek. A tényleges fedezet a biztosított, a plafon, az önrész (自負額), a kizárások, a gondatlanság és a kötvény egyéb feltételei szerint különbözik, ezért a kötvényt és a feltételeket ügyenként kell ellenőrizni.
+A harmadik személlyel szembeni felelősségbiztosítás (第三人責任險), a járművezetői balesetbiztosítás (駕駛人傷害險) és a saját jármű kárbiztosítása (車體損失險) fakultatív, szerződéses jellegű termékek. A tényleges fedezet a biztosított, a plafon, az önrész (自負額), a kizárások, a gondatlanság és a kötvény egyéb feltételei szerint különbözik, ezért a kötvényt és a feltételeket ügyenként kell ellenőrizni.
 
 ### Q11–Q15 hivatalos alapjai
 
@@ -275,7 +275,7 @@ A bíróság egyes esetekben felfüggesztheti a büntetés végrehajtását (緩
 
 ​
 
-Q19. Ha a baleset után elhagyják a helyszínt, mindig megvalósul-e a büntetőjogi menekülés bűncselekménye?
+Q19. Ha a baleset után elhagyják a helyszínt, mindig megvalósul-e az elmenekülés bűncselekménye (肇事逃逸)?
 
 ​
 

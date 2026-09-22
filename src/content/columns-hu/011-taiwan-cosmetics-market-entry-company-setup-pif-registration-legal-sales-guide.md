@@ -78,7 +78,7 @@ Még ha az eredeti gyártó őrzi is az eredetit, vagy biztonságos elektronikus
 
 Amikor az illetékes szerv a PIF-et vizsgálja, elvben a vizsgálat napja előtt 7 nappal értesíti a kozmetikum gyártóját vagy importőrét. Ha azonban az eset a kapcsolódó szabályokban rögzített törvényes kivétel alá esik, a vizsgálat előzetes értesítés nélkül is elvégezhető. Az értesítés meglététől függetlenül mindig fenn kell tartani azt az állapotot, amelyben a teljes, naprakész adatok megkereshetők és bemutathatók.
 
-Hamis adat bejelentése a terméknyilvántartásban vagy hamis adat rögzítése a PIF-ben 10.000–1.000.000 TWD (新臺幣) közigazgatási bírság (罰鍰) tárgya lehet. Ezzel szemben, ha a PIF adatai hiányosak, az illetékes szerv rendszerint határidős javítást (限期改正) rendel el, és a közigazgatási bírság csak akkor merül fel, ha e határidőn belül nem javítanak. A hamis adatot és a még kiegészíthető adathiányt nem szabad ugyanazon jogsértési eredményként lezárni.
+Hamis adat bejelentése a terméknyilvántartásban vagy hamis adat rögzítése a PIF-ben 10.000–1.000.000 TWD (新臺幣) közigazgatási bírság (罰鍰) tárgya lehet. Ezzel szemben, ha a PIF adatai hiányosak, az illetékes szerv rendszerint határidős javítást (限期改正) rendel el, és a közigazgatási bírság csak akkor merül fel, ha e határidőn belül nem javítanak. A hamis adatot és a még pótolható hiányosságot nem szabad úgy kezelni, mintha ugyanaz lenne a jogkövetkezményük.
 
 A visszahívás vagy a megsemmisítés (銷毀) nem következik automatikusan minden PIF-adathiányból. A termék biztonságát, a jogsértés tartalmát, a javítás állapotát és az egyes intézkedésekre vonatkozó törvényi feltételeket megkülönböztetve kell értékelni. A biztonsági probléma megállapítása utáni intézkedést és az iratkiegészítési felhívást külön kell vizsgálni, és a választ az illetékes szerv értesítése és az alkalmazott rendelkezés szerint kell megtenni.
 
@@ -105,7 +105,7 @@ Az együttműködési szerződésben és a működési irányelvekben rögzíthe
 A tajvani értékesítés előkészítése, ha a következő sorrendben ellenőrzik, csökkentheti annak kockázatát, hogy az egyik rendszert a másikkal keverik.
 
 1. Rögzítik, maguk alapítanak-e tajvani leányvállalatot vagy fióktelepet, vagy az importot és az értékesítést helyi importőrre bízzák.
-2. Megállapítják, ki viseli a jogi felelősséget kozmetikum gyártójaként vagy importőreként, és a szerződés szerinti munka felelősét.
+2. Megállapítják, ki viseli a jogi felelősséget kozmetikum gyártójaként vagy importőreként, és ki felel a szerződésben kiosztott feladatokért.
 3. A terméknyilvántartást befejezik, mielőtt a terméket forgalomba hoznák, értékesítenék, ajándékoznák, nyilvánosan kiállítanák vagy a fogyasztónak próbára bocsátanák.
 4. Termékenként PIF-et készítenek, a változásokat frissítik, és a törvényes időtartamnak és helynek megfelelően őrzik.
 5. A címkét, az értékesítési oldalt, a reklámot és az együttműködési közléseket a teljes megjelenítés mércéje szerint átnézik.

@@ -1,0 +1,94 @@
+# WO-F-ar — Arabic (Modern Standard, Gulf/Levant) fix lane, campaign round 4 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-ar-r4 (no git add/commit/push)
+Files touched: src/content/columns-ar/001, 003, 004, 005, 006, 007, 009, 010, 011, 014, 015, 016, 018;
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.ar.discoveryNotice only); this log.
+No test file was edited. No pinned Arabic expectation had to change.
+"TWD 1.57M" stays byte-identical. consultationNotice and confidentialNotice were not rewritten.
+The discovery notice still contains the literal token `llms.txt`.
+
+## Rows applied
+ar-a 12/17 and ar-b 11/13. No P3 rows in either review.
+
+ar-a
+1  004 link label. The URL stays `pcode=G0340028&flno=3`. The label now names المادة 3 of معايير معدلات الخصم (各類所得扣繳率標準) and says it is not المادة 10 of قانون ضريبة الأعمال. Digit 10 stays inside that gloss (see disagreements). Checker numbers on 004 stay PASS (sourceCount=93 targetCount=93).
+3  003 hit-and-run element: "وشرط الفرار المسبق" → "وشرط قيام جريمة مغادرة موقع الحادث". One instance.
+4  003 docket label now names فرع تشونغلي and الدعوى الميسَّرة, with the existing docket gloss (112年度壢簡字第236號). URL unchanged. No Gregorian year added.
+5  "تقييد التكرار" for stacking incentives → "تقييد الجمع بين الحوافز": the section sentence ("مع حوافز أخرى") and "ومن تقييد التكرار". The FAQ already said الجمع بين الحوافز and stays.
+6  Misplaced gloss (公開發行公司) removed from "وليست له أسهم خاصة به" in the FAQ answer and the repeated body paragraph. The public-offering term stays glossed where it is actually that term (002).
+7  005 permit category: "عملًا إداريًا" → "عمل المسؤول". The gloss (一般僑外投資事業主管工作) stays on the same line.
+8  006 value line: "فكان المقابل المالي ممتازًا" → "فكانت القيمة ممتازة مقابل ما يُدفع", and "هذه الخدمة الممتازة" → "هذه الخدمات".
+10 009 the two إذا lines and the outcome line were rephrased inside the existing three blocks so employer-fault maps to the worker's claim and worker-fault maps to the employer's right to withhold. Blocks were not merged.
+11 ar discoveryNotice: "ولا بإعلان" → "ولا بقدر مضمون من الظهور". Token `llms.txt` stays.
+12 001 categorical negation: "لا شخصٌ اعتباري منفصل" → "وليس شخصًا اعتباريًا منفصلًا".
+15 004 apposition: "شركة تابعة تايوانية أو فرعًا" → "سواء أكانت شركة تابعة تايوانية أم فرعًا".
+16 007 agreement: "وإذا كان نتيجة التوزيع" → "وإذا كانت نتيجة التوزيع". One instance. The earlier "إذا كانت نتيجة" was already feminine.
+
+ar-b
+1  018 "ما تقدم مقترح لتصميم العقود" → "ما تقدم يقارن مسار تسجيل الفرع بمسار تأسيس الشركة التابعة". The no-guarantee sentence stays.
+2  014 bare "انعكست المدة" → "أُخذت المدة التي وُفيت أصلًا في الحسبان إذا انتهى العمل في الأثناء". "تُعكس في التسوية" stays; the reviewer marked that one as already clear.
+5  Unvowelled الملك where the meaning is ownership, not the king. 016: "علاقة الملك الفعلية" → "الملكية الفعلية", and the checklist "ويُعلَّم على حدة الاسم وعلاقة الملك الفعلية" → "ويُميَّز على حدة الاسم المسجَّل والملكية الفعلية". 007, same reading: the FAQ question "الملك" → "الملكية" (verb يتحدد → تتحدد), "مثل الملك والهبة" in the FAQ answer and the body, and "أجلًا للملك".
+6  016 "قضية ميراث أو أسرة مفردة" → "قضية ميراث أو قضية أسرية بعينها".
+7  014 "التكلفة والتعويض المدَّعيين" → "كل تكلفة أو بند تعويض يُطالَب به".
+8  018 two-thirds. "موافقة تبلغ ثلثين فأكثر من" → "موافقة ما لا يقل عن ثلثين من حقوق تصويت المساهمين الآخرين". See disagreements for why the suggested "ثلثي" was not used.
+9  014 "تعبير الاستقالة" → "إخطار الاستقالة" throughout the file, including the FAQ answer and the closing disclaimer. Seven instances. "تعبير «شرط جزائي»" is a different phrase and stays.
+10 010 "بصفتي الوكيلة القضائية للمدعي" → "وقد توليت في هذه القضية الوكالة عن المدعي". The client stays the male Korean student.
+11 011 "ولا تضمن رأيًا قانونيًا" → "وليست رأيًا قانونيًا". The denial of a guaranteed permit, registration, sale, or processing time stays ("ولا تضمن الموافقة أو التسجيل أو إمكانية البيع أو مدة المعالجة").
+12 015 the fragment "وهناك اعتبار مهم آخر" and the two one-line paragraphs around it were each rewritten as a complete sentence. The three blocks were not merged.
+13 016 "وهذا الطلب نظام يقارن، عند انتهاء نظام الأموال القانوني" → "ويقارن هذا الطلب، عند انتهاء نظام الأموال القانوني". The real "نظام الأموال القانوني" stays.
+
+## Rows skipped
+ar-a #2 (003 "في بعض الأحكام" on the 3-month sentence, and the paired 4-month / 6-month sentence). RULEBOOK R3 requires that softening, and ACCEPTED-ROUND forbids making a result sentence positive. Both sentences already say there is no typical or guaranteed outcome. Left as they are.
+ar-a #9 (008 "إثبات استحقاق B لبدل إنهاء الخدمة وفق القانون"). R3 replaced "obtained a high severance" with establishment of the statutory entitlement. The suggested "قبض B بدل إنهاء خدمة كبيرًا" restores that result claim. The existing close "وهذا سرد لواقعة سابقة، لا وعد بنتيجة" stays.
+ar-a #13 and ar-b #3 (U+200B blank lines, and `**​**` in 005). `checkBlocks` requires the target ZWSP count to equal the Korean source. Those lines are in the Korean columns as well. Removing them fails the checker. Left in 003, 005, 006, 008, 009, 013, and 015.
+ar-a #14 (turn Q16–Q20 into `##` headings). Korean and English keep Q16–Q20 as body lines. `checkHeadings` compares heading levels, and ACCEPTED-ROUND forbids adding headings. Left as body lines.
+ar-a #17 (bio "TWD 1.57M"). GUIDANCE_BIO_PRESERVED_TERMS pins that token byte-identical. The suggested sentence deletes it. Left unchanged.
+ar-b #4 (renumber heading 7 to 6 and 8 to 7). Korean and English skip 6 as well. Renumbering changes digits the checker counts, and ACCEPTED-ROUND forbids changing numbers. Left as 7 and 8.
+
+## Systemic patterns and how many instances changed
+Zero-width blank lines / `**​**`                                              0 removed (checker pin; present in 003, 005, 006, 008, 009, 013, 015).
+R3 court-sentence hedge ("في بعض الأحكام" / no typical outcome)             0 changed, 2 sentences left (003).
+"تقييد التكرار" for a ban on stacking incentives                             2 (004). FAQ already used الجمع.
+"TWD 1.57M" English million abbreviation                                     0 changed, 1 left (bio pin).
+"ما تقدم مقترح لتصميم العقود"                                                1 (018). Heading numbers 7 and 8 not renumbered.
+Bare "انعكست" for "is reflected"                                             1 (014). Locative "تُعكس في التسوية" (014) and "تُعكس في الدفاتر" / "تُعكس إمكان" (002) stay; they name where the item is entered.
+Unvowelled "الملك" read as "the king"                                        6 (016 body, 016 checklist, 007 question, 007 FAQ answer, 007 body, 007 "أجلًا للملك").
+"تعبير الاستقالة" calquing 意思表示                                           7 (014 only). No instance outside that file.
+Q16–Q20 outline / ZWSP paragraph splits                                      0 (structure pins above).
+
+R2–R10 were already in this corpus (prior rounds). This round's verdicts are 4/5 and confirm feminine forms for Wei Tseng, the consultation lock (English, Chinese, Japanese, Korean only), and Korea as a labelled example. This pass did not reopen them. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered).
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ar --lang ar 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=6
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ar src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      17
+```
+`git status --short | wc -l` was 17 before this log file existed. Pre-existing number WARNs (003 and 010 extra 2020, 006 extra 1/2, 007 extra 2023, 014 extra 1/2/3/4) do not fail the summary and were not introduced by this round. 004 numbers stay PASS after the article-3 label.
+
+## Reviewer disagreements (not applied, or applied in a checker-safe form)
+ar-a #1, deleting digit 10. The reviewer is right that `flno=3` is article 3 of 各類所得扣繳率標準, not article 10. The suggested label drops the 10 that the Korean source still has on this line (`영업세법 제10조`). Dropping it fails the checker (`missing from translation: 10`). The public label now says المادة 3 and that this is not المادة 10 of the business-tax act, which keeps the digit.
+
+ar-a #2. The reviewer wants "تقضي المحاكم في الوقت الحاضر عامةً … نحو 3 أشهر" (and the same for 4 and 6 months). That undoes R3, which is why the Arabic already says "في بعض الأحكام" and denies a typical or guaranteed outcome. Not a factual mistake about the English source; the campaign rule wins.
+
+ar-a #9. The reviewer wants the anecdote to say B received a large severance. R3 requires the entitlement wording that is already there, plus the no-promise close. Not applied.
+
+ar-a #8's suggested "ثلثي" (ar-b #8). "ثلثين" is what the checker parses as two-thirds (`[2, 3]`). "ثلثي" is not in that list, and the 018 number check then fails `missing from translation (1): 3`. "ما لا يقل عن ثلثين من حقوق تصويت" keeps the parsed fraction, uses the accusative after عن, and stops "فأكثر من" from splitting the fraction off the voting rights.
+
+ar-a #13, ar-a #14, ar-b #3, ar-b #4. The layout and outline complaints match the Korean source (ZWSP lines, Q16–Q20 as body text, headings 7 then 8). Fixing them the way the review asks changes block counts, heading levels, or digits. Not applied.
+
+ar-a #17. The English abbreviation in the bio is real. The test pin forbids removing `TWD 1.57M`. Not applied.

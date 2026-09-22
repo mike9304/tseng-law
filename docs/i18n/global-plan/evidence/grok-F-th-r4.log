@@ -1,0 +1,99 @@
+WO-F-th r4 — Grok 4.7 fix lane — 2026-09-23
+
+## Rows applied
+
+th-a
+1  P1  guidance labour paragraph. 資遣費 is now set against other countries’ severance and dismissal-protection rules together.
+2  P1  001 validity periods and authentication route (จัดลำดับอายุ removed).
+4  P2  beneficial owner. See systemic count.
+6  P2  guidance FAQ intro. “เป็นสัญญาณว่า” removed.
+7  P2  guidance services. “การนำเงินลงทุนเข้าประเทศ” → “การชำระเงินลงทุน (การนำทุนเข้าไต้หวัน)”.
+8  P2  privacy list. “ความยินยอมของท่านในการส่งเรื่อง”.
+9  P2  privacy notice sentence now says the notice may not have reached the firm.
+10 P2  001 investee. “วัตถุแห่งการออกทุน” → “ผู้รับการลงทุน”.
+11 P2  002 “คำแนะนำที่ล้าสมัย”.
+12 P2  002 each amount linked “ทีละรายการ” (suggested “เป็นรายการ” is still not a Thai adverb).
+13 P2  003 “การหักดอกเบี้ยระหว่างกลาง (中間利息扣除)”.
+14 P2  004 “สำนักงานในพื้นที่”, not สาขาย่อย.
+15 P3  003 Hoffmann spelling ฮอฟมันน์, body and link label (2).
+
+th-b
+1  P1  018 technology licensing: จัดส่งสินค้า ให้บริการ อนุญาตให้ใช้เทคโนโลยี และแบ่งค่าใช้จ่าย.
+2  P1  018 “การมีรูปแบบองค์กรแบบใดแบบหนึ่ง”. Suggested “การเลือก” would mean choosing; English is “merely having”.
+3  P1  013 commercial-office registration “อาจทำไม่ได้”.
+4  P1  014 “ผู้ให้การอบรม” (the trainer, not the trainee).
+5  P1  016 economic interest that conflicts with the child’s.
+7  P2  018 “สิทธิออกเสียงของผู้ถือหุ้นอื่น”.
+8  P2  011 claims added in the comment field.
+9  P2  014 “ไม่ว่าระยะเวลาทำงานจะยาวเท่าใด หรือความรับผิดในการคืนเงินจะมีจำนวนเท่าใด”.
+10 P2  014 “เอกสารการจ่ายเงินล่วงหน้า” (doubled จ่าย removed).
+11 P2  018 engagement is a matter the firm was instructed on, not a lawsuit.
+12 P2  018 operating body. Suggested “ที่สามารถ” is parsed by the checker as the numeral สาม and raised numbers WARN extra 3. Wording used: “หน่วยธุรกิจที่ทำหน้าที่ขาย นำเข้า ดูแลสินค้าคงคลัง จ้างงาน ให้การสนับสนุนทางเทคนิค และรับผิดได้”.
+13 P2  018 “ก่อนตัดสินใจเลือกโครงสร้าง”.
+14 P2  018 heading “ขั้นตอนการจัดตั้งสาขากับบริษัทย่อยแตกต่างกัน” (rest of the heading kept).
+15 P2  018 “รายการที่ยังไม่ได้ตัดสินใจ อาจระบุว่า “ยังไม่กำหนด” ได้”.
+16 P2  018 “หากในขั้นก่อนจัดตั้งองค์กรเพื่อการขาย”.
+
+Applied 28 (th-a 13 including the P3, th-b 15). No test expected-string changed. llms.txt th notices were left: the rewritten FAQ intro and privacy sentences are not the pinned consultationNotice or confidentialNotice substrings.
+
+## Rows skipped
+
+th-a #3  004 link label “(เลขมาตราในป้ายต้นฉบับ: 10)”. The suggested rewrite drops the digit. Korean source link is “영업세법 제10조”; checkNumbers FAILs a missing 10. The operative cite is already มาตรา 3 and the URL (`flno=3`) was not touched.
+th-a #5  “TWD 1.57M”. ACCEPTED-ROUND / GUIDANCE_BIO_PRESERVED_TERMS pins that figure byte-identical. Left as published.
+th-b #6  U+200B in 013 and 015 (and the same spacers in 003, 005, 006, 008, 009). 87 characters, 0 removed. checkBlocks requires the same ZWSP count as src/content/columns (Korean). Deleting them FAILs blocks.
+
+## Systemic patterns
+
+- Beneficial owner calque เจ้าของผู้รับผลประโยชน์ → ผู้รับผลประโยชน์ที่แท้จริง: 7. 001: 2 (gloss 受益所有人, and “เป็นผู้รับผลประโยชน์ที่แท้จริงหรือไม่”). 004: 5 (table, dividend sentence, the analysis noun, the checklist noun, the royalty sentence). 001’s bank KYC line already read ผู้รับผลประโยชน์ที่แท้จริง (實質受益人) and was left.
+- Visible source-label note “(เลขมาตราในป้ายต้นฉบับ: 10)”: 1 found, 0 changed (see skipped).
+- Bio “TWD 1.57M”: 0 changed (see skipped).
+- “เป็นสัญญาณว่า”: 1, the guidance FAQ intro. No other hit in the pack or the 18 columns.
+- 資遣費 compared with “ค่าชดเชยเมื่อออกจากงาน”: 1, the guidance labour paragraph.
+- 018 clipped register and bare-verb stacks: 6. Rows 12–16, plus the closing “หากวางแผนจะขาย … ให้การสนับสนุนการติดตั้ง”. Other 018 sentences that already had a finite verb were left.
+- 018 “form” / “licensing” on the wrong noun: 2 (ใบอนุญาตเทคโนโลยี, แบบฟอร์มใดแบบหนึ่ง). Other แบบฟอร์ม are paper forms or the contact form and were left. ใบอนุญาตเฉพาะผลิตภัณฑ์ stays a permit.
+- Noun piles that needed ของ or a verb: the voting-rights ของ (1) and the 014 “however long / however large” sentence (1), already in the row list.
+- Zero-width spacers: 0 changed, 87 left (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-th --lang th 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+```
+
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-th src/data | wc -l
+       0
+```
+
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+```
+
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+git status --short | wc -l
+      14
+```
+
+The 14 lines are the 9 edited columns, the guidance content file, the pre-existing `WO-F-th.txt` modification, the pre-existing untracked `reviews/native/rounds/r4/th-a.md` and `th-b.md`, and this log. No test file is in the diff.
+
+## Reviewer got wrong (not applied)
+
+- Deleting the U+200B lines would fail `checkBlocks`. The Korean source has the same spacers; they are not Thai wording. th-b #6.
+- Removing “(เลขมาตราในป้ายต้นฉบับ: 10)” would fail `checkNumbers`. The digit is the Korean link label 영업세법 제10조, not a free editorial choice. The public label already names มาตรา 3. th-a #3.
+- Rewriting “TWD 1.57M” in the bio would fail the preserved-term test. th-a #5.
+- th-b #3’s problem line says registration may fail “when the registered business is a restaurant”. The English sentence being fixed is “If the premises are ordinary commercial office space, company registration may not be possible.” The restaurant point is the preceding paragraph. The suggested Thai (soften ย่อมไม่อาจ to อาจทำไม่ได้, keep commercial office space) was applied.

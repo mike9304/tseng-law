@@ -440,7 +440,7 @@ const ELEMENTS = {
     th: /ขั้นตอนการให้คำปรึกษา/,
     fil: /hakbang ng konsultasyon/i,
     ar: /خطوة استشارة/,
-    de: /Beratungsschritt/,
+    de: /ersetzt die Beratung nicht/,
     es: /no es una consulta/,
     fr: /étape de consultation/,
     pt: /não é uma consulta/,

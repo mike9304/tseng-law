@@ -43,7 +43,7 @@ Zivilrechtlicher Schadensersatz (損害賠償) kann nach Artikel 197 des Zivilge
 
 Wer durch eine Straftat Schaden erlitten hat, kann nach Artikel 487 der Strafprozessordnung eine dem Strafverfahren beigeordnete Zivilklage (刑事附帶民事訴訟) erheben. Solange das Strafverfahren andauert, kann sie nach Artikel 488 bis zum Schluss der mündlichen Verhandlung (言詞辯論終結) der zweiten Instanz erhoben werden, jedoch nicht nach Schluss der mündlichen Verhandlung der ersten Instanz und vor Einlegung der Berufung. Üblicherweise kann eine gesonderte Zahlung der Gerichtsgebühr (裁判費) vermieden werden; nicht jedes Ergebnis endet ohne Kosten. Wird beispielsweise das Strafverfahren abgewiesen und auf Antrag der klagenden Partei an das Zivilgericht verwiesen, können nach Artikel 503 der Strafprozessordnung Prozesskosten entstehen; auch die Verweisungs- und Verfahrensvorschriften des Artikels 504 sind mitzuprüfen.
 
-Die Wahl weicht nach Unterbrechung der Verjährung (時效中斷), Kreis der Beklagten, Beweisen, Versicherung und Zuständigkeit ab. Deshalb gibt es kein für alle Fälle einheitlich bestes Verfahren.
+Die passende Wahl hängt von der Unterbrechung der Verjährung (時效中斷), dem Kreis der Beklagten, den Beweisen, der Versicherung und der Zuständigkeit ab. Deshalb gibt es kein Verfahren, das für jeden Fall am besten passt.
 
 ## Q4. Wie sind straf- und zivilrechtliche Haftung zu beurteilen, wenn beide Seiten Fahrlässigkeit trifft?
 

@@ -30,7 +30,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
   contactCta: 'Beratungsanfrage senden',
   footerNotice:
     'Diese deutsche Seite enthält nur allgemeine Hinweise zur Arbeit der Kanzlei nach taiwanesischem Recht. Sie ist keine Rechtsberatung für einen konkreten Fall, und das Absenden einer Nachricht begründet für sich kein Mandatsverhältnis.',
-  skipLink: 'Navigation überspringen und zum Inhalt',
+  skipLink: 'Navigation überspringen und zum Inhalt springen',
   menuLabel: 'Menü',
   languageLabel: 'Anzeigesprache',
   mega: {
@@ -195,7 +195,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Gründung und Aufbau',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) wurde 2016 von Anwältinnen und Anwälten gegründet, die an der National Taiwan University (國立臺灣大學) studiert haben. Der chinesische Name 昊鼎 verbindet das Schriftzeichen 昊 („weiter Himmel“) mit 鼎 („fester Grund“) und beschreibt die Ausrichtung der Kanzlei seit der Gründung.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) wurde 2016 von Anwältinnen und Anwälten gegründet, die an der National Taiwan University (國立臺灣大學) studiert haben. Der chinesische Name 昊鼎 verbindet das Schriftzeichen 昊 („der weite Himmel“) mit 鼎 („fester Grund“) und beschreibt die Ausrichtung der Kanzlei seit der Gründung.',
             'Wir haben Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Das Büro Kaohsiung konzentriert sich auf Unternehmensführung und bearbeitet zivil-, straf- und verwaltungsrechtliche Streitigkeiten. Das Büro Taichung bearbeitet Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Das Büro Pingtung wurde 2017 eröffnet, um Mandantinnen und Mandanten in der Region vor Ort zu betreuen.',
             'Neben der anwaltlichen Arbeit besteht seit 2020 auch Hovering Accounting Office, das Buchhaltung und Steuerplanung für Unternehmer und vermögende Privatpersonen anbietet.',
           ],
@@ -210,7 +210,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Wenn Sie uns kontaktieren',
           paragraphs: [
-            'Nach Eingang Ihrer Zusammenfassung prüft eine Anwältin oder ein Anwalt den Inhalt und spricht dann über den möglichen Arbeitsumfang, noch benötigte Unterlagen und die nächsten Schritte. Bei steuerlichen oder buchhalterischen Fragen kann die Kanzlei mit der Buchhaltungsabteilung in einem gemeinsamen Verfahren arbeiten.',
+            'Nach Eingang Ihrer Zusammenfassung prüft eine Anwältin oder ein Anwalt den Inhalt und spricht dann über den möglichen Arbeitsumfang, noch benötigte Unterlagen und die nächsten Schritte. Bei steuerlichen oder buchhalterischen Fragen kann die Kanzlei gemeinsam mit der Buchhaltungsabteilung arbeiten.',
             'Das Ergebnis jeder Sache hängt von den Tatsachen und den vorhandenen Unterlagen ab; wir versprechen kein Ergebnis. Wenn Sie eine verbindliche Antwort für Ihre Lage brauchen, müssen die Unterlagen in einer der vier Beratungssprachen mit einer Anwältin oder einem Anwalt besprochen werden.',
           ],
         },
@@ -234,7 +234,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Zuerst wird der Arbeitsumfang festgelegt',
           paragraphs: [
-            'Sachen derselben Art können sehr unterschiedlichen Aufwand haben, je nach Zahl der Beteiligten, vorhandenen Unterlagen, einzuhaltenden Fristen und danach, ob ein Verfahren bereits begonnen hat. Deshalb ist der erste Schritt stets, festzulegen, was zur Arbeit gehört und was nicht.',
+            'Sachen derselben Art können einen sehr unterschiedlichen Aufwand haben, je nach Zahl der Beteiligten, vorhandenen Unterlagen, einzuhaltenden Fristen und danach, ob ein Verfahren bereits begonnen hat. Deshalb ist der erste Schritt stets, festzulegen, was zur Arbeit gehört und was nicht.',
             'Die Zusammenfassung, die Sie am Anfang senden, ist die Grundlage für diesen Umfang. Je klarer sie den Ablauf, Ihr Anliegen und die Fristen beschreibt, desto genauer kann der Umfang bestimmt werden.',
           ],
         },
@@ -248,15 +248,15 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Die Beratung kann entgeltlich sein',
           paragraphs: [
-            'Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und kein Teil dieser Seite darf so verstanden werden.',
+            'Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und nichts auf dieser Seite ist in diesem Sinn zu verstehen.',
             'Ist die Beratung entgeltlich, werden Höhe und Zahlungsweise mitgeteilt, bevor sie stattfindet.',
           ],
         },
         {
           heading: 'Warum diese Seite keine Tarife nennt',
           paragraphs: [
-            'Die Kosten hängen von der Sache selbst ab: vom Aufwand, der Zahl der Beteiligten, den Unterlagen, den Fristen und davon, ob ein Verfahren bereits läuft. Eine vorab gesetzte Zahl würde die Kosten für Ihren Vorgang nicht zeigen. Deshalb legen wir zuerst den Arbeitsumfang fest und teilen Ihnen dann die Kosten mit, bevor die Arbeit beginnt.',
-            'Neben dem Anwaltshonorar können Gerichts-, Behörden- oder Drittkosten entstehen. Diese sind vom Honorar getrennt und hängen vom jeweiligen Verfahren ab.',
+            'Die Kosten hängen von der Sache selbst ab: vom Aufwand, der Zahl der Beteiligten, den Unterlagen, den Fristen und davon, ob ein Verfahren bereits läuft. Ein im Voraus genannter Betrag gibt die Kosten Ihres Vorgangs nicht wieder. Deshalb legen wir zuerst den Arbeitsumfang fest und teilen Ihnen dann die Kosten mit, bevor die Arbeit beginnt.',
+            'Neben dem Anwaltshonorar können Gerichts- und Behördenkosten oder Kosten Dritter entstehen. Diese sind vom Honorar getrennt und hängen vom jeweiligen Verfahren ab.',
           ],
         },
       ],
@@ -284,7 +284,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Wenn Sie keine der vier Beratungssprachen sprechen können',
           paragraphs: [
             'Im Kontaktformular können Sie „Kommunikationsweise muss bestätigt werden“ wählen. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
-            'Das ist nur ein Prüfungsschritt, kein Versprechen. Wir versprechen keinen Dolmetscher, keine Leistung auf Deutsch oder in einer anderen Sprache außerhalb der vier genannten Sprachen, und nicht, dass wir jede Sache annehmen.',
+            'Das ist nur ein Prüfungsschritt, kein Versprechen. Wir versprechen keinen Dolmetscher und keine Leistung auf Deutsch oder in einer anderen Sprache außerhalb der vier genannten Sprachen, und wir übernehmen nicht jede Sache.',
           ],
         },
         {
@@ -314,7 +314,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Wie Sie diesen Teil nutzen',
           paragraphs: [
-            'Finden Sie keine Antwort auf Ihre Lage, hängt die Antwort meist von besonderen Tatsachen ab. Schreiben Sie diese Tatsachen dann in die Zusammenfassung, statt sie selbst aus dieser Seite abzuleiten.',
+            'Finden Sie hier keine Antwort für Ihre Situation, hängt sie meist von besonderen Tatsachen ab. Schreiben Sie diese Tatsachen dann in die Zusammenfassung, statt die Antwort selbst aus dieser Seite abzuleiten.',
           ],
         },
       ],
@@ -479,7 +479,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Vier Listen nach Sprache',
           paragraphs: [
             'Dieser Teil enthält vier Links: die Beitragsliste auf Koreanisch, auf Chinesisch, auf Englisch und auf Japanisch. Jeder Link nennt die Sprache der Liste, damit Sie vorher wissen, in welcher Sprache der Inhalt öffnet.',
-            'Diese vier Listen sind Listen nach der Originalsprache der Beiträge, keine Übersetzungslisten. Beiträge, die auf Deutsch vorliegen, stehen gesondert auf dieser Seite.',
+            'Diese vier Listen sind Listen nach der Originalsprache der Beiträge, keine Übersetzungen. Beiträge, die auf Deutsch vorliegen, stehen gesondert auf dieser Seite.',
           ],
         },
         {
@@ -493,7 +493,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Wie weit ein Beitrag als Orientierung dienen kann',
           paragraphs: [
             'Beiträge sind allgemeine Angaben zum Zeitpunkt der Veröffentlichung. Vorschriften und ihre Anwendung können sich ändern, und ein Beitrag enthält nicht alle Umstände Ihres Falls.',
-            'Bitte stützen Sie daher keine Handlung in einer echten Sache allein auf einen Beitrag. Nutzen Sie ihn für den Überblick und besprechen Sie Ihre Unterlagen gesondert mit einer Anwältin oder einem Anwalt; diese Seite ist nicht der Beratungsschritt.',
+            'Bitte stützen Sie daher keine Handlung in einer echten Sache allein auf einen Beitrag. Nutzen Sie ihn für den Überblick und besprechen Sie Ihre Unterlagen gesondert mit einer Anwältin oder einem Anwalt; diese Seite ersetzt die Beratung nicht.',
           ],
         },
       ],

@@ -2219,7 +2219,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordiniert Beratungstermine und die Kommunikation für Mandanten aus Korea.',
-        'Unterstützt den Austausch zwischen den Bereichen über Dokumentensysteme und Arbeitsabläufe, auf der Grundlage eines Informatikstudiums.',
+        'Unterstützt die Abstimmung zwischen den Bereichen mithilfe von Dokumenten- und Ablaufsystemen; der Hintergrund ist ein Informatikstudium.',
       ],
       education: ['Bachelorabschluss (B.S.) in Informatik, National Cheng Kung University'],
       experience: ['Leitung Korea, Hovering International Law Firm'],

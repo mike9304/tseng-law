@@ -63,10 +63,10 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ### Q1–Q5 တရားဝင် အရင်းအမြစ်
 
-- [ကုန်းလမ်းယာဉ်အန္တရာယ် စီမံခန့်ခွဲမှုနှင့် ပြစ်ဒဏ်ပေးရေး စည်းမျဉ်း ပုဒ်မ 62 (道路交通管理處罰條例)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [တရုတ်သမ္မတနိုင်ငံ ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 185-4 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [တရုတ်သမ္မတနိုင်ငံ ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 284 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [တရုတ်သမ္မတနိုင်ငံ ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 287 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [ကုန်းလမ်းယာဉ်အန္တရာယ် စီမံခန့်ခွဲမှုနှင့် ပြစ်ဒဏ်ပေးရေးဥပဒေ ပုဒ်မ 62 (道路交通管理處罰條例)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [ထိုင်ဝမ် ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 185-4 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [ထိုင်ဝမ် ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 284 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [ထိုင်ဝမ် ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 287 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [ပြစ်မှုကျင့်ထုံးဥပဒေ ပုဒ်မ 237 (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [ပြစ်မှုကျင့်ထုံးဥပဒေ ပုဒ်မ 238 (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [ပြစ်မှုကျင့်ထုံးဥပဒေ ပုဒ်မ 487 (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -190,7 +190,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 - [တရားမဥပဒေ ပုဒ်မ 195 (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [ထောင်ယွမ် ဒေသတရားရုံး 112 ခုနှစ် 壢簡字 အမှတ် 236 စီရင်ချက် (桃園地方法院)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [တရားမဥပဒေ ပုဒ်မ 188 (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [တရုတ်သမ္မတနိုင်ငံ ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 284 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [ထိုင်ဝမ် ပြစ်မှုဆိုင်ရာဥပဒေ ပုဒ်မ 284 (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [မဖြစ်မနေ မော်တော်ယာဉ် တာဝန်အာမခံဥပဒေ (強制汽車責任保險法)](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [မဖြစ်မနေ မော်တော်ယာဉ် တာဝန်အာမခံ ပေးချေမှုစံ (強制汽車責任保險給付標準)](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [ငွေကြေးကြီးကြပ်ရေးကော်မရှင် ပုဂ္ဂလိက မော်တော်ယာဉ်အာမခံ စံစာချုပ် (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -299,7 +299,7 @@ Q20. ယာဉ်အန္တရာယ် ရှေ့နေကို မည်�
 
 ​
 
-ယာဉ်အန္တရာယ်သည် အလွန် တွေ့ရများသော အမှုဖြစ်သောကြောင့် အထွေထွေ တရားစွဲ ရှေ့နေဆိုပါက နှစ်အနည်းငယ်သာ လက်တွေ့ အတွေ့အကြုံ စုပါက ယာဉ်အန္တရာယ် အမှု ကိုင်တွယ်နိုင်သည်။
+ယာဉ်အန္တရာယ်အမှုသည် အလွန် တွေ့ရများသောကြောင့် အထွေထွေ တရားစွဲရှေ့နေတစ်ဦးသည် လက်တွေ့အတွေ့အကြုံ နှစ်အနည်းငယ်ရှိရုံဖြင့် ဤအမှုများကို ကိုင်တွယ်နိုင်သည်။
 
 ​
 
@@ -363,7 +363,7 @@ Q20. ယာဉ်အန္တရာယ် ရှေ့နေကို မည်�
 
 ​
 
-**ရှေ့နေမ Wei Tseng (曾雋崴)**
+**ရှေ့နေ ဒေါ် Wei Tseng (曾雋崴)**
 
 ---
 

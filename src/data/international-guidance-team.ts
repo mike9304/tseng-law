@@ -511,8 +511,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Avvocata responsabile a Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Avvocato a Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Collaboratore legale (paralegal)',
-      'son-jungmin': 'Responsabile operativo Corea (Korea Operations Manager)',
+      'chang-fangyu': 'Collaboratrice legale (paralegal)',
+      'son-jungmin': 'Responsabile delle operazioni in Corea (Korea Operations Manager)',
       'huang-shengping': 'Commercialista partner a Taiwan (Partner CPA)',
     },
   },
@@ -2657,7 +2657,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Master (M.S.) in finanza, Institute of Finance, National Taiwan University',
-        'Laurea (B.A.) con doppia laurea in diritto e finanza, National Chengchi University',
+        'Laurea (B.A.) a doppio indirizzo in diritto e finanza, National Chengchi University',
         'Studentessa in scambio alla Kobe University e alla Waseda University',
       ],
       experience: [
@@ -2679,13 +2679,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Collaboratore legale (paralegal), con lunga attività come collaboratore legale senior in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.',
+        'Collaboratrice legale (paralegal), con lunga attività come collaboratrice legale senior in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.',
         'Supporto nei procedimenti, nella costituzione di società, nelle autorizzazioni di investimenti esteri, nelle domande di licenza e nello scambio tra Corea e Taiwan.',
       ],
       education: ['Laurea in giurisprudenza (LL.B.), Tunghai University'],
       experience: [
-        'Collaboratore legale senior, Boyin Law Firm',
-        'Collaboratore legale senior, Muyang International Law Firm',
+        'Collaboratrice legale senior, Boyin Law Firm',
+        'Collaboratrice legale senior, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2694,7 +2694,7 @@ export const guidanceTeamBios: Record<
         'Agevola la comunicazione tra i team tramite sistemi documentali e flussi di lavoro, sulla base di una formazione in informatica.',
       ],
       education: ['Laurea (B.S.) in informatica, National Cheng Kung University'],
-      experience: ['Area operazioni Corea, Hovering International Law Firm'],
+      experience: ['Area delle operazioni in Corea, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

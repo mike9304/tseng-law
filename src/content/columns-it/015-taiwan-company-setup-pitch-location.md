@@ -19,7 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Quando si inizia un’attività di ristorazione, il primo problema è trovare l’indirizzo del locale (營業地址).
 
-Oltre alla situazione del mercato, se ne aggiunge un altro.
+Oltre alla situazione del mercato, conta un altro punto: la zona in cui un esercizio di ristorazione è ammesso.
 
 Un altro punto importante è la zona in cui un esercizio di ristorazione è ammesso.
 
@@ -27,9 +27,9 @@ Occorre verificare se quell’indirizzo si trova in una zona in cui un esercizio
 
 ​
 
-Se si inizia l’attività nella città di Taipei,
+Se si inizia l’attività nella città di Taipei, il passo seguente è la verifica del locale.
 
-si può utilizzare il sistema di «consultazione preventiva del locale» (營業場所預先查詢) dell’ufficio del commercio della città di Taipei (臺北市商業處).
+Si può utilizzare il sistema di «consultazione preventiva del locale» (營業場所預先查詢) dell’ufficio del commercio della città di Taipei (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 

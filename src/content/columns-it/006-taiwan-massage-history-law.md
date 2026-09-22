@@ -33,9 +33,9 @@ E quei saloni di stile taiwanese restano una memoria culturale distintiva per nu
 
 ​
 
-Comunque sia, quando si parla di massaggio (按摩),
+Comunque sia, quando si parla di massaggio (按摩) il quadro non è unico.
 
-esistono anche a Taiwan numerose vie di massaggio.
+Esistono anche a Taiwan numerose vie di massaggio.
 
 Stabilimenti di massaggio di tutte le specie vi si allineano.
 
@@ -117,7 +117,7 @@ ma, in questo processo, casi di molestia sessuale (性騷擾) o di contatti sess
 
 Ciò che all’origine non era se non ricevere un massaggio per alleviare la tensione
 
-può divenire un traumatismo per la vita se si subisce una molestia sessuale.
+può lasciare un trauma per tutta la vita se si subisce una molestia sessuale.
 
 Se, durante un massaggio a Taiwan, sente un malessere o qualcosa di strano,
 

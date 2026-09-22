@@ -37,17 +37,17 @@ Prima di decidere la struttura di ingresso, la sede può chiarire internamente:
 | Preventivi e ordini | Chi conferma in via definitiva il prezzo e il termine, e fino a dove arriva l’autorità del responsabile a Taiwan? |
 | Merce e scorte | Chi importa, detiene e gestisce le scorte, e tratta i resi e le sostituzioni? |
 | Personale | I dipendenti della sede si spostano, si assume a Taiwan o si affida il lavoro a un prestatore esterno? |
-| Installazione e sostegno tecnico | Chi deve il sostegno al cliente e tratta i problemi del lavoro sul posto? |
+| Installazione e sostegno tecnico | A chi spettano gli obblighi di sostegno verso il cliente, e chi tratta i problemi del lavoro sul posto? |
 | Incassi e costi | Chi fattura e incassa, e come si liquidano i costi tra la sede e l’organizzazione a Taiwan? |
 | Qualità e controversie | Chi conferma il risultato dell’ispezione e riceve i reclami di difetti o di danni? |
 
-Soprattutto se il venditore del contratto di vendita non è l’impresa che fornisce il sostegno tecnico, i documenti devono distinguere da chi il cliente può esigere quali obbligazioni.
+Soprattutto se il venditore del contratto di vendita non è l’impresa che fornisce il sostegno tecnico, i documenti devono precisare verso chi il cliente può far valere ciascuna obbligazione.
 
 ## 2. Distinzione tra società controllata, succursale e ufficio di rappresentanza di una società straniera a Taiwan
 
 Nel pianificare l’ingresso, l’impresa di semiconduttori deve separare quale presenza si stabilisce a Taiwan e come si organizzano le vendite e il servizio. Il primo punto concerne la personalità giuridica, le esigenze di iscrizione e il campo di attività; il secondo, il modo di operare, le facoltà e la ripartizione di responsabilità.
 
-La differenza principale tra una società controllata taiwanese e una succursale taiwanese di una società straniera è se essa ha una personalità giuridica distinta dalla società madre o dalla sede. La distribuzione e l’agenzia sono schemi contrattuali, e non vanno confuse con la forma societaria.
+La differenza principale tra una società controllata taiwanese e una succursale taiwanese di una società straniera è se la presenza a Taiwan ha una personalità giuridica distinta dalla società madre o dalla sede. La distribuzione e l’agenzia sono schemi contrattuali, e non vanno confuse con la forma societaria.
 
 | Struttura | Distinzione di base | Ciò che conviene confermare prima |
 |---|---|---|
@@ -61,7 +61,7 @@ Se si decide di costituire una persona giuridica indipendente a Taiwan, deve anc
 
 ### Società a responsabilità limitata (有限公司): governance più semplice, ma trasmissione delle quote più chiusa
 
-Può formarsi con 1 o più persone fisiche, o con soci persone giuridiche taiwanesi o straniere; i soci rispondono, in linea di principio, fino all’importo del loro conferimento. La società ha da 1 a 3 amministratori, eletti tra i soci. I soci che non svolgono l’attività sociale possono esercitare diritti di vigilanza, senza necessità di un supervisore distinto. Salvo disposizione statutaria in contrario, ciascun socio ha 1 voto, così che il controllo non deve coincidere con la proporzione dei conferimenti. La trasmissione del conferimento di un socio ordinario esige, in linea di principio, il consenso di più della metà dei diritti di voto degli altri; per un amministratore, il consenso di almeno due terzi dei diritti di voto degli altri soci. Ciò conviene meglio a relazioni di soci semplici e a un controllo stabile che a una frequente raccolta di capitale o alla circolazione delle quote. Più tardi, può convertirsi in società per azioni (股份有限公司).
+Può formarsi con 1 o più persone fisiche, o con soci persone giuridiche taiwanesi o straniere; i soci rispondono, in linea di principio, fino all’importo del loro conferimento. La società ha da 1 a 3 amministratori, eletti tra i soci. I soci che non svolgono l’attività sociale possono esercitare diritti di vigilanza, senza necessità di un supervisore distinto. Salvo disposizione statutaria in contrario, ciascun socio ha 1 voto, così che il controllo può non coincidere con la proporzione dei conferimenti. La trasmissione del conferimento di un socio ordinario esige, in linea di principio, il consenso di più della metà dei diritti di voto degli altri; per un amministratore, il consenso di almeno due terzi dei diritti di voto degli altri soci. Ciò conviene meglio a relazioni di soci semplici e a un controllo stabile che a una frequente raccolta di capitale o alla circolazione delle quote. Più tardi, può convertirsi in società per azioni (股份有限公司).
 
 ### Società per azioni (股份有限公司): adeguata se si vuole incorporare altri investitori o se una quotazione è prevedibile
 
@@ -73,7 +73,7 @@ Quando una società straniera costituisce una società controllata taiwanese, il
 
 Per contro, per costituire una succursale taiwanese di una società straniera ordinaria, un’autorizzazione di investimento del Dipartimento per l’esame degli investimenti non è in linea di principio richiesta; il Dipartimento del commercio del Ministero dell’Economia (經濟部商業發展署) tratta la registrazione di succursale e la determinazione di capitale connessa. Restano necessari la verifica preventiva del nome, il trasferimento del capitale di esercizio, la verifica del capitale e la registrazione fiscale; il calendario è in generale più breve.
 
-Quanto precede è solo un’ipotesi di strutturazione contrattuale. Il solo fatto di aver scelto una forma determinata non rende l’operazione lecita e non evita le controversie.
+Quanto precede è un consiglio sulla struttura del contratto. Il solo fatto di aver scelto una forma determinata non rende l’operazione lecita e non evita le controversie.
 
 ## 5. L’iscrizione societaria e il lavoro lecito di un ingegnere non sono la stessa cosa
 

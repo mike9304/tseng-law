@@ -21,7 +21,7 @@ Chi ha letto [Costituzione di società a Taiwan – fondamenti](/it/columns/taiw
 
 ​
 
-Le domande e risposte seguenti mirano ad aiutare le persone che valutano la costituzione di una società (公司設立) a Taiwan.
+Le domande e risposte seguenti, preparate dall’avvocata Wei Tseng (曾雋崴), mirano ad aiutare le persone che valutano la costituzione di una società (公司設立) a Taiwan.
 
 ​
 
@@ -31,7 +31,7 @@ In generale, le banche della Corea esigono che l’investitore si rechi **di per
 
 Il trasferimento tramite home banking o per tramite di un familiare in Corea non è possibile.
 
-Inoltre, in conformità con la normativa coreana sul controllo dei cambi, la persona di nazionalità coreana che costituisce una persona giuridica estera o acquisisce quote deve depositare una «dichiarazione di investimento diretto all’estero». La dichiarazione deve essere registrata al momento del trasferimento del capitale alla persona giuridica taiwanese (台灣法人); in mancanza, possono applicarsi sanzioni per violazione della normativa sui cambi.
+Inoltre, in conformità con la normativa coreana sul controllo dei cambi, la persona di nazionalità coreana che costituisce una persona giuridica estera o acquisisce quote deve depositare una «dichiarazione di investimento diretto all’estero». La dichiarazione deve essere registrata al momento del trasferimento del capitale alla persona giuridica taiwanese (臺灣法人); in mancanza, possono applicarsi sanzioni per violazione della normativa sui cambi.
 
 Prima di trasferire il capitale (資本金匯款), si informi presso la sua banca principale in Corea.
 
@@ -69,7 +69,7 @@ Certe banche possono imporre esigenze supplementari, per esempio una durata di u
 
 **5. La società può assumere lavoratori stranieri?**
 
-A. Primo lavoratore: la domanda è presentata come un lavoro di direzione in un’impresa di investimento ordinario di cinesi residenti all’estero o di stranieri (一般僑外投資事業主管工作). Il criterio del «lavoro di natura specializzata o tecnica» del punto B sotto non si applica, ma si applicano le condizioni di destinatario, in particolare quella di dirigente (經理人) di una società il cui apporto di cinesi residenti all’estero o di stranieri supera 1/3, nonché le condizioni di risultati del datore di lavoro relative al capitale e al fatturato (articoli 38 e 39 delle norme di esame).
+A. Primo lavoratore: la domanda è presentata come un lavoro di direzione in un’impresa di investimento ordinario di cinesi residenti all’estero o di stranieri (一般僑外投資事業主管工作). Il criterio del «lavoro di natura specializzata o tecnica» del punto B sotto non si applica, ma si applicano i requisiti di ammissibilità, in particolare quello di dirigente (經理人) di una società il cui apporto di cinesi residenti all’estero o di stranieri supera 1/3, nonché le condizioni di risultati del datore di lavoro relative al capitale e al fatturato (articoli 38 e 39 delle norme di esame).
 
 B. A partire dal secondo lavoratore, esistono restrizioni: se i lavoratori stranieri assunti sono più di una persona, la formazione e l’esperienza pertinenti, la retribuzione media e i requisiti di capitale e fatturato della società seguono il «lavoro specializzato o tecnico» (專門性或技術性工作).
 

@@ -39,7 +39,7 @@ Quanto ai documenti di polizia, sul posto dell’incidente si può ricevere il t
 
 L’articolo 284 del Codice penale disciplina le lesioni colpose (過失傷害) e le lesioni colpose gravi (過失致重傷). Poiché, secondo l’articolo 287 del Codice penale, si tratta di un reato perseguibile a querela (告訴乃論之罪), in conformità con l’articolo 237 del Codice di procedura penale di Taiwan (刑事訴訟法) la querela deve di regola essere presentata nei 6 mesi successivi al giorno in cui l’autore è stato conosciuto.
 
-In materia di risarcimento civile dei danni (損害賠償), secondo l’articolo 197 del Codice civile di Taiwan (民法) l’azione di risarcimento si prescrive una volta decorsi 2 anni a decorrere dal giorno in cui il danno e il debitore del risarcimento sono stati conosciuti, o 10 anni a decorrere dal giorno del fatto illecito. Quali fatti influiscono sulla prescrizione (消滅時效) deve esaminarsi separatamente.
+In materia di risarcimento civile dei danni (損害賠償), secondo l’articolo 197 del Codice civile di Taiwan (民法) l’azione di risarcimento si prescrive una volta decorsi 2 anni a decorrere dal giorno in cui il danno e il debitore del risarcimento sono stati conosciuti, o 10 anni a decorrere dal giorno del fatto illecito. Si deve esaminare separatamente se determinati fatti interrompono la prescrizione (消滅時效) o la influenzano in altro modo.
 
 Chi subisce un danno in virtù di un reato può, secondo l’articolo 487 del Codice di procedura penale, formare un’azione civile accessoria al procedimento penale (刑事附帶民事訴訟). Mentre il procedimento penale è in corso, questa azione può essere formata fino a prima della chiusura del dibattimento orale (言詞辯論終結) del grado 2, secondo l’articolo 488 del Codice di procedura penale, ma non può essere formata dopo la chiusura del dibattimento orale del primo grado e prima della proposizione dell’impugnazione. In generale, il pagamento di spese giudiziarie (裁判費) distinte può essere evitato, ma non tutti i risultati si concludono senza costo. Per esempio, se il procedimento penale viene respinto e, a domanda dell’attore, rimesso al tribunale civile, secondo l’articolo 503 del Codice di procedura penale le spese possono essere imposte, e devono anche verificarsi le regole di rinvio e di procedura dell’articolo 504.
 
@@ -49,7 +49,7 @@ La scelta varia secondo l’interruzione della prescrizione (時效中斷), la c
 
 La responsabilità penale può essere ritenuta solo quando sono riconosciuti l’inadempimento del dovere di prudenza di ciascuno e il nesso di causalità tra tale inadempimento e le lesioni dell’altra parte. Il solo fatto che una colpa sia esistita da parte a parte non fa nascere automaticamente la responsabilità per lesioni colpose.
 
-Nel piano civile, secondo l’articolo 217 del Codice civile, se la persona lesa ha una colpa che ha contribuito a causare o aggravare il danno (與有過失), il tribunale può ridurre il risarcimento oppure esonerare da responsabilità la persona tenuta. Per esempio, se il danno riconosciuto in nuovi dollari taiwanesi (新臺幣, TWD), è di 1.000.000 TWD e la colpa della persona lesa è valutata al 50%, l’importo può essere ridotto a 500.000 TWD prima di altri adeguamenti.
+Nel piano civile, secondo l’articolo 217 del Codice civile, se la persona lesa ha una colpa che ha contribuito a causare o aggravare il danno (與有過失), il tribunale può ridurre il risarcimento oppure esonerare da responsabilità la persona tenuta. Per esempio, se il danno riconosciuto è di 1.000.000 nuovi dollari taiwanesi (新臺幣, TWD) e la colpa della persona lesa è valutata al 50%, l’importo può essere ridotto a 500.000 TWD prima di altri adeguamenti.
 
 La perizia (鑑定) o il quadro di analisi preliminare possono essere documenti importanti, ma non vincolano il tribunale in modo meccanico. Il tribunale esamina l’insieme delle prove, comprese le dichiarazioni, le immagini e lo stato dei veicoli.
 
@@ -93,9 +93,9 @@ In caso di disaccordo con il parere di perizia, un riesame può essere chiesto, 
 
 La pretesa fondata sull’articolo 184 del Codice civile presuppone un’offesa illecita a un diritto, il nesso di causalità con l’incidente e la prova del danno. Il solo fatto che un incidente sia occorso non implica che tutte le voci seguenti siano riconosciute. L’articolo 216 del Codice civile è il criterio per determinare l’estensione del danno effettivo e del lucro cessante (所失利益).
 
-- **Ferite**: Secondo l’articolo 193 del Codice civile possono essere esaminati le spese mediche (醫療費用) necessari, le spese supplementari della vita quotidiana quali le spese di assistenza (看護費用), di trasporto per cura (就醫交通費) e di ausili tecnici, nonché la perdita di redditi (收入損失) per incapacità di lavoro reale e la diminuzione della capacità di lavoro (勞動能力減損). Secondo l’articolo 195 del Codice civile il danno morale può anche essere esaminato.
-- **Morte**: Secondo l’articolo 192 del Codice civile, quando vi è luogo, possono essere esaminati le spese mediche anteriori alla morte e le spese di necessità vitali accresciuti, le spese funebri (殯葬費) e la perdita di alimenti (扶養利益損失) della persona che aveva un diritto legale agli alimenti. Secondo l’articolo 194 del Codice civile il danno morale di certi parenti può anche essere esaminato.
-- **Patrimonio**: Secondo l’articolo 196 del Codice civile si può pretendere il danno patrimoniale effettivo giustificato, compresi le spese di riparazione del veicolo o la perdita di valore.
+- **Ferite**: Secondo l’articolo 193 del Codice civile possono essere esaminate le spese mediche (醫療費用) necessarie, le spese supplementari della vita quotidiana quali le spese di assistenza (看護費用), di trasporto per cura (就醫交通費) e di ausili tecnici, nonché la perdita di redditi (收入損失) per incapacità di lavoro reale e la diminuzione della capacità di lavoro (勞動能力減損). Secondo l’articolo 195 del Codice civile il danno morale può anche essere esaminato.
+- **Morte**: Secondo l’articolo 192 del Codice civile, quando vi è luogo, possono essere esaminate le spese mediche anteriori alla morte e le spese di necessità vitali accresciute, le spese funebri (殯葬費) e la perdita di alimenti (扶養利益損失) della persona che aveva un diritto legale agli alimenti. Secondo l’articolo 194 del Codice civile il danno morale di certi parenti può anche essere esaminato.
+- **Patrimonio**: Secondo l’articolo 196 del Codice civile si può pretendere il danno patrimoniale effettivo giustificato, comprese le spese di riparazione del veicolo o la perdita di valore.
 
 ## Q8. Se il trattamento prosegue, come presentare i documenti delle spese mediche?
 
@@ -105,7 +105,7 @@ Si deve distinguere l’aggiunta di documenti medici dalla modifica o dall’aum
 
 Tuttavia, secondo l’articolo 504 del Codice di procedura penale, una volta rimesso il procedimento alla sezione civile, modificare, aggiungere o ampliare la domanda oltre l’estensione anteriore al rinvio può porre la questione delle spese sulla parte eccedente. La fase di rinvio, il momento di presentazione e l’estensione della domanda devono essere verificati in ciascun caso.
 
-## Q9. Perché si provano le spese di assistenza professionale e quelli di assistenza da familiari?
+## Q9. Perché si provano le spese di assistenza professionale e quelle di assistenza da familiari?
 
 Il certificato medico o il parere medico sono utili per mostrare la necessità di assistenza, ma non sono da soli un fondamento decisivo. Si deve spiegare con documenti il nesso di causalità con l’incidente, la necessità di assistenza, se è stata effettivamente prestata, la durata e un importo ragionevole.
 

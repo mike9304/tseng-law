@@ -319,7 +319,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Quali questioni tratta lo studio?',
           answer:
-            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se accettare una questione si decide dopo l’esame del contenuto.',
+            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.',
         },
         {
           question: 'Che cosa dovrei preparare prima del contatto?',

@@ -87,7 +87,7 @@ W tym punkcie należy szczegółowo omówić sprawę z adwokatem na Tajwanie.
 
 **4. Na co zwracać uwagę, gdy adres rejestracji spółki (na przykład lokal gastronomiczny) jest najmowany?**
 
-Założenie spółki trwa około **3 miesięcy**, uzyskanie zezwolenia na pracę (工作許可) i karty pobytu około **1 miesiąca**,
+Założenie spółki trwa około **3 miesięcy**, a uzyskanie zezwolenia na pracę (工作許可) i karty pobytu trwa dodatkowo około **1 miesiąca**,
 
 dlatego początek umowy należy ustalić możliwie najpóźniej.
 

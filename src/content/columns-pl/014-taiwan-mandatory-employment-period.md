@@ -26,10 +26,10 @@ Porozumienia o minimalnym okresie pracy (最低服務年限約定) w umowie o pr
 
 Przy badaniu ważne jest, aby nie mieszać następujących 4 pytań.
 
-1. Czy samo porozumienie spełnia ustawowe przesłanki art. 15-1
-2. Czy uzgodniony okres i obciążenie pracownika mieszczą się w rozsądnym zakresie
-3. Komu przypisuje się przyczynę rozwiązania umowy o pracę
-4. Jak ocenia się wypowiedzenie złożone przez pracownika i zakres zwrotu
+1. Czy samo porozumienie spełnia ustawowe przesłanki art. 15-1?
+2. Czy uzgodniony okres i obciążenie pracownika mieszczą się w rozsądnym zakresie?
+3. Komu przypisuje się przyczynę rozwiązania umowy o pracę?
+4. Jak ocenia się wypowiedzenie złożone przez pracownika i zakres zwrotu?
 
 Nawet jeśli te 4 pytania figurują razem w tej samej umowie, stosowany przepis i potrzebny dowód są odrębne. Trzeba więc osobno zbadać, czy porozumienie jest ważne, kiedy wywołuje skutki oświadczenie o rezygnacji, czy istnieje obowiązek zwrotu świadczenia wypłaconego z góry (預付性給付) lub kosztów szkolenia oraz czy osobna szkoda rzeczywiście powstała.
 
@@ -43,7 +43,7 @@ Art. 15-1 wymaga 1 z 2 ustawowych przesłanek oraz ponadto osobnego badania rozs
 
 Po potwierdzeniu przesłanki ustawowej, według ustępu 2 bada się osobno, czy uzgodniony okres i zakres odpowiedzialności są rozsądne. Porozumienie, które narusza przesłankę ustawową ustępu 1 lub kryterium rozsądności ustępu 2, jest nieważne według ustępu 3. Jednak ta norma jest kryterium badania treści i faktów każdego porozumienia, nie normą, która z góry ogłasza ważne lub nieważne wszystkie porozumienia o minimalnym okresie pracy.
 
-Okoliczność, że pracownik podpisał umowę, może być dokumentem potwierdzającym istnienie zgody, lecz nie zastępuje przesłanek ustawowych. Odwrotnie, zamiast rozstrzygać z góry tylko dlatego, że porozumienie jest długotrwałe, trzeba sprawdzić, jaka inwestycja lub jakie świadczenie było i dlaczego ten okres ustalono.
+Okoliczność, że pracownik podpisał umowę, może być dokumentem potwierdzającym istnienie zgody, lecz nie zastępuje przesłanek ustawowych. Odwrotnie, samej długości uzgodnionego okresu nie należy traktować jako rozstrzygającej; trzeba sprawdzić, jaka inwestycja lub jakie świadczenie było i dlaczego ten okres ustalono.
 
 ## 2. Pierwsza przesłanka ustawowa: specjalistyczne szkolenie techniczne i poniesienie kosztu
 
@@ -55,7 +55,7 @@ Program, kalendarz szkolenia, lista obecności, wynik oceny, zaświadczenie uko�
 
 Granica między ogólną adaptacją do pracy a specjalistycznym szkoleniem technicznym nie zależy wyłącznie od miejsca szkolenia ani od tego, kto je prowadzi. Kurs wewnętrzny może ustalić konkretną treść zawodową i techniczną oraz znaczącą inwestycję, a długi kurs ośrodka zewnętrznego może być w rzeczywistości ogólnym szkoleniem wstępnym. Nie należy więc jednolicie wyłączać każdego szkolenia wewnętrznego ani uznawać przesłanki ustawowej tylko dlatego, że kurs jest kosztowny lub długi.
 
-Trzeba też móc objaśnić związek między uzgodnionym okresem a inwestycją szkolenia. Jaką kompetencję się nabywa, jaki związek ta kompetencja ma ze stanowiskiem, na którym ta kompetencja ma być wykorzystywana i dlaczego proponowany okres pracy jest potrzebny wobec czasu i kosztu szkolenia, bada się indywidualnie. To, czy po zakończeniu szkolenia tę pracę rzeczywiście wykonywano, oraz długość okresu już przepracowanego też mają znaczenie dla oceny zakresu obciążenia.
+Trzeba też móc objaśnić związek między uzgodnionym okresem a inwestycją szkolenia. Jaką kompetencję się nabywa, jaki związek ta kompetencja ma ze stanowiskiem, na którym ta kompetencja ma być wykorzystywana, i dlaczego proponowany okres pracy jest potrzebny wobec czasu i kosztu szkolenia, bada się indywidualnie. To, czy po zakończeniu szkolenia tę pracę rzeczywiście wykonywano, oraz długość okresu już przepracowanego też mają znaczenie dla oceny zakresu obciążenia.
 
 ## 3. Druga przesłanka ustawowa: rozsądne świadczenie
 
@@ -65,7 +65,7 @@ Najpierw trzeba potwierdzić cel wypłaty. Czy jest to ogólny warunek płacowy 
 
 Interpretacja (函釋) Ministerstwa Pracy Tajwanu (勞動部) z 5 czerwca 2026 r. wyjaśnia, że jeśli jako rozsądne świadczenie porozumienia o minimalnym okresie pracy bierze się premię za pozostanie na stanowisku, premię za podpisanie lub inne świadczenie wypłacone z góry, tę rolę trzeba jasno podać. To, że pracodawca po fakcie na nowo interpretuje cel wypłaty lub przeklasyfikowuje część wynagrodzenia jako świadczenie, nie zastępuje w prosty sposób informacji przekazanej przy zawarciu umowy.
 
-Rozsądność świadczenia nie ocenia się tylko według kwoty. Ocenia się łącznie, czy pracownik rzeczywiście uzyskuje dodatkową korzyść, czy warunki wypłaty są jasne, jak przypisuje się część odpowiadającą okresowi już przepracowanemu oraz czy zakres zwrotu nie jest nadmierny. Nawet jeśli świadczenie istnieje, nie zezwala się bez limitu na dowolny czas pozostania ani na dowolną kwotę odpowiedzialności zwrotu.
+Rozsądność świadczenia nie ocenia się tylko według kwoty. Ocenia się łącznie, czy pracownik rzeczywiście uzyskuje dodatkową korzyść, czy warunki wypłaty są jasne, jak przypisuje się część odpowiadającą okresowi już przepracowanemu oraz czy zakres zwrotu nie jest nadmierny. Nawet jeśli świadczenie istnieje, nie zezwala się bez limitu na dowolny czas pozostania ani na obowiązek zwrotu w dowolnej kwocie.
 
 Ważne jest też, aby tekst umowy i rzeczywista wypłata się pokrywały. Sprawdzenie, czy wypłata była opóźniona lub podzielona, czy jest warunkowa, jaka jest kwota rzeczywiście otrzymana po podatkach i potrąceniach oraz czy była osobna pisemna komunikacja, pomaga ocenić zakres świadczenia i rzeczywistą korzyść pracownika.
 
@@ -92,11 +92,11 @@ Ostatecznie potrzebny jest zrozumiały stosunek proporcjonalności między uzgod
 
 Zgodnie ze wskazówką Ministerstwa Pracy Tajwanu z 5 czerwca 2026 r. koszt szkolenia okresowego, ogólnego szkolenia stanowiska, adaptacji do pracy nowo przyjętych i szkolenia, które ustawa nakazuje prowadzić, nie może być podstawą porozumienia o minimalnym okresie pracy ani żądania kary umownej lub zwrotu kosztów. Nie należy patrzeć tylko na nazwę szkolenia, lecz na konkretny program, treść zawodową i techniczną, czas, koszt rzeczywiście poniesiony przez pracodawcę oraz dowody.
 
-Wskazówka 勞動關2字第1150141814號 Ministerstwa Pracy rozróżnia i traktuje szkolenie prowadzone okresowo, zwykłe szkolenie stanowiska, szkolenie, aby nowo przyjęty zapoznał się ze środowiskiem i procedurami pracy, oraz szkolenie, które pracodawca musi prowadzić według ustawy. Ponieważ to szkolenie towarzyszy eksploatacji działalności lub wykonaniu obowiązku ustawowego, sens jest taki, że jego kosztu nie można przekształcić w podstawę obowiązku pozostania lub sankcji za wcześniejsze wygaśnięcie.
+Wskazówka 勞動關2字第1150141814號 Ministerstwa Pracy rozróżnia i traktuje szkolenie prowadzone okresowo, zwykłe szkolenie stanowiska, szkolenie, aby nowo przyjęty zapoznał się ze środowiskiem i procedurami pracy, oraz szkolenie, które pracodawca musi prowadzić według ustawy. Ponieważ takie szkolenie towarzyszy prowadzeniu działalności albo wykonaniu obowiązku ustawowego, jego kosztu nie można przekształcić w podstawę obowiązku pozostania lub sankcji za wcześniejsze wygaśnięcie.
 
-Kursy, które nowy pracownik zwykle otrzymuje, takie jak objaśnienie regulaminu pracy (工作規則), przedstawienie organizacji i systemów, zwykłe przekazanie stanowiska i przewodnik podstawowych procedur bezpieczeństwa, trzeba potwierdzić w ich substancji. Ogólnego kosztu zatrudnienia i zarządzania lub kosztu przekazania stanowiska, który pracodawca miał ponosić od początku, nie można ustalać jako przedmiotu zwrotu, etykietując je tylko jako osobną inwestycję.
+Kursy, które nowy pracownik zwykle otrzymuje, takie jak objaśnienie regulaminu pracy (工作規則), przedstawienie organizacji i systemów, zwykłe przekazanie stanowiska i przewodnik podstawowych procedur bezpieczeństwa, trzeba potwierdzić w ich substancji. Ogólnego kosztu zatrudnienia i zarządzania lub kosztu przekazania stanowiska, który pracodawca miał ponosić od początku, nie można przez samą zmianę nazwy uznać za osobną inwestycję podlegającą zwrotowi.
 
-Jednak nie zawsze wyłącza się szkolenie tylko dlatego, że prowadzono je wewnątrz przedsiębiorstwa. W tym samym programie mogą mieszać się część ogólnej adaptacji i część techniczna specjalistyczna, więc temat, czas, koszt i to, czy jest obowiązek ustawowy, trzeba potwierdzić według kursu. Kto podnosi część techniczną specjalistyczną, potrzebuje objaśnić dokumentami, jaka treść różni się od zwykłego szkolenia i kto rzeczywiście poniósł koszt.
+Jednak nie zawsze wyłącza się szkolenie tylko dlatego, że prowadzono je wewnątrz przedsiębiorstwa. W tym samym programie mogą mieszać się część ogólnej adaptacji i część techniczna specjalistyczna, więc temat, czas, koszt i to, czy jest obowiązek ustawowy, trzeba potwierdzić według kursu. Kto powołuje się na specjalistyczną część techniczną, powinien wykazać dokumentami, jaka treść różni się od zwykłego szkolenia i kto rzeczywiście poniósł koszt.
 
 W praktyce nie patrzy się tylko na okładkę materiału szkolenia, lecz zestawia się szczegółowy indeks i rzeczywisty rejestr prowadzenia. Trzeba sprawdzić, czy jest to kurs okresowy, który się powtarza, kurs dla kwalifikacji lub kompetencji obsługi konkretnych urządzeń, szkolenie ustawowo obowiązkowe, czy pracownik rzeczywiście uczestniczył oraz czy żądana kwota pokrywa się z dowodami kosztów szkolenia.
 
@@ -134,8 +134,8 @@ Gdy pracownik wypowiada umowę o pracę na czas nieokreślony (不定期契約),
 
 Okres wypowiedzenia według stażu ciągłego jest następujący.
 
-1. Jeśli wynosi 3 miesiące lub więcej i mniej niż 1 rok: 10 dni
-2. Jeśli wynosi 1 rok lub więcej i mniej niż 3 lata: 20 dni
+1. Jeśli wynosi 3 miesiące lub więcej i mniej niż jeden rok: 10 dni
+2. Jeśli wynosi jeden rok lub więcej i mniej niż 3 lata: 20 dni
 3. Jeśli wynosi 3 lata lub więcej: 30 dni
 
 Jeśli okres umowy o pracę na czas określony zawartej w celu wykonania określonej pracy (特定性定期契約) przekracza 3 lata, stosuje się osobną normę art. 15. Pracownik, po przepracowaniu 3 lat, może rozwiązać umowę za 30-dniowym wypowiedzeniem wobec pracodawcy. Tę normę trzeba odróżnić od tej o wypowiedzeniu według stażu ciągłego stosowanej do umowy na czas nieokreślony.
@@ -157,7 +157,7 @@ Aby zapobiec sporowi lub zbadać żądanie już postawione, nie należy czytać 
 5. Dokumentuje się podstawę obliczenia uzgodnionego okresu, możliwość zastąpienia personelu tego samego lub podobnego stanowiska oraz związek między potrzebą operacyjną pracodawcy a rzeczywistą inwestycją.
 6. Bada się, czy uzgodniony okres i kwota zwrotu są proporcjonalne do zakresu kosztów szkolenia lub świadczenia, i odzwierciedla się w rozliczeniu okres już przepracowany.
 7. Po indywidualnym potwierdzeniu przyczyny wygaśnięcia i przypisania odpowiedzialności oblicza się rzeczywistą datę wygaśnięcia, okres wykonany i niewykonany.
-8. Przed potrąceniem z wynagrodzenia lub żądaniem zwrotu zestawia się umowę, dokumenty wypłaty, odcinek płacy, komunikacje stron, wezwanie i rejestr potrąceń, aby sprawdzić podstawę prawną i procedurę.
+8. Przed potrąceniem z wynagrodzenia lub żądaniem zwrotu zestawia się umowę, dokumenty wypłaty, pasek płacowy, komunikacje stron, wezwanie i rejestr potrąceń, aby sprawdzić podstawę prawną i procedurę.
 
 Nawet jeśli używa się umowy wzorcowej, nie należy mechanicznie stosować tego samego okresu i tej samej kwoty do każdego stanowiska i każdego pracownika. Klauzule trzeba konstruować, odzwierciedlając rzeczywistą inwestycję szkolenia, świadczenie i możliwość zastąpienia, a cel wypłaty i wzór proporcjonalny trzeba podać w sposób zrozumiały przed zawarciem umowy.
 
@@ -168,7 +168,7 @@ Nawet jeśli używa się umowy wzorcowej, nie należy mechanicznie stosować teg
 3. Zapewnia się dokumenty wypłaty premii za podpisanie, premii za pozostanie na stanowisku i innych świadczeń wypłacanych z góry, komunikację o celu świadczenia, datę wypłaty, warunki nabycia uprawnienia i wzór zwrotu.
 4. Zapisuje się osobno podstawę obliczenia uzgodnionego okresu, okres już przepracowany, okres pozostały i możliwość zastąpienia personelu, którą podnosi pracodawca.
 5. Zachowuje się zawiadomienie o rezygnacji, o zwolnieniu lub dokument wygaśnięcia za wspólnym porozumieniem oraz dowód doręczenia, taki jak poczta elektroniczna i komunikator.
-6. Porządkuje się w porządku czasowym rzeczywistą przyczynę wygaśnięcia i przebieg oraz łącznie potwierdza wezwanie do zwrotu pracodawcy, odcinek płacy, komunikacje stron i rejestr potrąceń.
+6. Porządkuje się w porządku czasowym rzeczywistą przyczynę wygaśnięcia i przebieg oraz łącznie potwierdza wezwanie do zwrotu pracodawcy, pasek płacowy, komunikacje stron i rejestr potrąceń.
 7. Osobno bada się ważność porozumienia o minimalnym okresie pracy, oświadczenie o rezygnacji i wypowiedzenie, zwrot kosztów szkolenia i świadczenia wypłaconego z góry oraz szkodę, którą podnosi się osobno.
 8. Nie uznaje się odpowiedzialności tylko dlatego, że podpisano albo że pracodawca żąda oznaczonej kwoty; potwierdza się dowody, które odpowiadają przesłankom ustawowym, rozsądności, przypisaniu wygaśnięcia i wzorowi proporcjonalnemu art. 15-1.
 

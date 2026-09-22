@@ -77,7 +77,7 @@ prawo Tajwanu, zależnie od tego, czy winę ponosi pracodawca,
 
 czy pracownik,
 
-przyznaje każdej ze stron prawo do odmowy wypłaty odprawy albo do jej żądania.
+przyznaje albo pracodawcy prawo odmowy wypłaty odprawy, albo pracownikowi prawo jej żądania.
 
 Czasem, gdy wina leży po obu stronach stosunku pracy,
 

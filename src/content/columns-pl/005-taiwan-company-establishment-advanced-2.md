@@ -69,7 +69,7 @@ Niektóre banki mogą nakładać dodatkowe wymagania, na przykład okres korzyst
 
 **5. Czy spółka może zatrudniać pracowników o obywatelstwie zagranicznym?**
 
-A. Pierwszy pracownik: wniosek składa się jako pracę kierowniczą w przedsiębiorstwie zwykłej inwestycji Chińczyków zamorskich lub cudzoziemców (一般僑外投資事業主管工作). Kryterium „pracy o charakterze specjalistycznym lub technicznym” z punktu B poniżej nie stosuje się, lecz stosuje się przesłanki adresata, w tym przesłankę kierownika (經理人) spółki, której wkład Chińczyków zamorskich lub cudzoziemców przekracza 1/3, a także przesłanki wyników pracodawcy dotyczące kapitału i obrotu (art. 38 i 39 standardów badania).
+A. Pierwszy pracownik: kierownik przedsiębiorstwa zwykłej inwestycji Chińczyków zamorskich lub cudzoziemców (一般僑外投資事業主管工作). Kryterium „pracy o charakterze specjalistycznym lub technicznym” z punktu B poniżej nie stosuje się, lecz stosuje się przesłanki adresata, w tym przesłankę kierownika (經理人) spółki, której wkład Chińczyków zamorskich lub cudzoziemców przekracza 1/3, a także przesłanki wyników pracodawcy dotyczące kapitału i obrotu (art. 38 i 39 standardów badania).
 
 B. Dla drugiego i każdego kolejnego cudzoziemca istnieją ograniczenia: jeżeli spółka zatrudnia więcej niż 1 cudzoziemca, wykształcenie i doświadczenie, przeciętne wynagrodzenie oraz kapitał i obrót spółki ocenia się według „pracy specjalistycznej lub technicznej” (專門性或技術性工作).
 

@@ -715,7 +715,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   bn: {
-    label: 'অফিস',
+    label: 'কার্যালয়',
     title: 'কার্যালয়',
     description: 'Hovering International Law Firm-এর তাইওয়ানস্থ কার্যালয়গুলোর ঠিকানা।',
     officeLabel: 'কার্যালয়',

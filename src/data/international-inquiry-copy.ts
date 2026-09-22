@@ -1660,7 +1660,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'এই পাতা বাংলায় সাধারণ তথ্য হিসেবে লেখা, আপনার মামলার আইনি মতামত হিসেবে নয়।',
     consultationNotice:
-      'পরামর্শ চার ভাষায় হয়: ইংরেজি, চীনা (中文), জাপানি ও কোরীয়।',
+      'পরামর্শ চার ভাষায় হয়: ইংরেজি, চীনা (中文), জাপানি ও কোরীয় ভাষা।',
     methodConfirmationNotice:
       'চার ভাষার কোনোটি যদি আপনার কাজে না লাগে, “যোগাযোগপথ নিশ্চিত করা প্রয়োজন” বেছে নিন। আমরা ব্যবহারযোগ্য যোগাযোগপথ যাচাই করতে উত্তর দিই, যদি এমন পথ থাকে; অন্য ভাষায় সেবা নিশ্চিত নয় এবং উত্তরের সময়সীমার প্রতিশ্রুতি নেই।',
     preparationNotice:
@@ -1701,7 +1701,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       en: 'ইংরেজি (English)',
       'zh-hant': 'চীনা (中文)',
       ja: 'জাপানি (日本語)',
-      ko: 'কোরীয় (한국어)',
+      ko: 'কোরীয় ভাষা (한국어)',
       'needs-method-confirmation':
         'চার ভাষার কোনোটিই কাজে লাগে না — যোগাযোগপথ নিশ্চিত করা প্রয়োজন',
     },

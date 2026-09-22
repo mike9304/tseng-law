@@ -69,7 +69,7 @@ L’article 1052, alinéa 1, du Code civil (民法) énumère dix motifs permett
 1. Bigamie (重婚)
 2. Relations sexuelles consenties avec une personne autre que le conjoint
 3. Mauvais traitements (虐待) de l’autre partie à un degré qui rend la vie commune intolérable
-4. L’autre partie maltraite des parents en ligne directe, ou des parents en ligne directe de l’autre partie maltraitent soi-même, de sorte que la vie commune devient intolérable
+4. L’autre partie maltraite des parents en ligne directe, ou un parent en ligne directe de l’autre époux maltraite celui-ci, de sorte que la vie commune devient intolérable
 5. L’abandon de mauvaise foi (惡意遺棄) de l’autre partie se poursuit
 6. Il y a eu intention de tuer l’autre partie
 7. Il existe une maladie grave incurable
@@ -93,7 +93,7 @@ L’explication selon laquelle le divorce est efficace à l’étranger selon le
 
 Les documents étrangers peuvent exiger une légalisation des représentations de Taïwan à l’étranger ou d’autres organes compétents ; selon les instructions officielles pour chaque document, une traduction chinoise légalisée ou notariée peut être nécessaire. Les documents rédigés en Chine continentale et ceux rédigés à Hong Kong ou à Macao suivent des règles de vérification distinctes des documents étrangers généraux ; la région de rédaction doit être indiquée avec exactitude. Avant le dépôt, il faut vérifier les indications les plus récentes du Département de l’état civil et de l’organe compétent sur l’original, la légalisation, la traduction et la demande par mandataire.
 
-## 6. Nom du logement, biens antérieurs au mariage et répartition du patrimoine résiduel
+## 6. Titre du logement, biens antérieurs au mariage et répartition du patrimoine résiduel
 
 Non. Le nom inscrit sur le logement et l’origine des fonds d’achat sont des preuves importantes, mais les prétentions individuelles telles que la propriété, la donation, l’enregistrement au nom d’autrui (借名登記), le prêt et l’enrichissement sans cause (不當得利) sont des questions distinctes de la répartition de la différence de patrimoine résiduel (剩餘財產差額分配) de l’article 1030-1 du Code civil (民法). L’accord réel, la cause et la date d’acquisition, les flux de fonds, les dettes, l’acquisition à titre gratuit et les preuves doivent être examinés séparément ; le seul paiement d’une partie avec des fonds antérieurs au mariage ou l’inscription au nom d’une partie ne fixe pas toutes les conclusions.
 

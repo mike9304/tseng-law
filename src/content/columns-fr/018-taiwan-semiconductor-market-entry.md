@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "S’il y a des clients à Taïwan, faut-il nécessairement y constituer une société ?"
-    a: "Il n’est pas possible de conclure seulement parce que le client est à Taïwan. Il faut voir les exigences du client et l’activité réelle de commerce, d’installations, de personnel et de structure des opérations à Taïwan, puis choisir l’entité la plus adéquate."
+    a: "Il n’est pas possible de trancher seulement parce que le client est à Taïwan. Il faut voir les exigences du client et l’activité réelle de commerce, d’installations, de personnel et de structure des opérations à Taïwan, puis choisir l’entité la plus adéquate."
   - q: "La responsabilité du siège disparaît-elle entièrement lorsqu’une société taïwanaise est constituée ?"
     a: "Si vous constituez une filiale et non une succursale, le siège, en principe, n’assume pas les obligations contractuelles signées au nom de la filiale. Il faut toutefois vérifier les exceptions pour abus de la personnalité juridique et si le siège a octroyé une caution ou a assumé des obligations contractuelles propres."
   - q: "Peut-on commencer par un distributeur puis passer à une société à Taïwan ?"
@@ -52,7 +52,7 @@ La différence principale entre une filiale taïwanaise et une succursale taïwa
 | Structure | Distinction de base | Ce qu’il faut confirmer d’abord |
 |---|---|---|
 | Filiale taïwanaise | Elle se constitue conformément au droit de Taïwan, avec une personnalité juridique propre, et est un sujet juridique distinct de la société mère étrangère. | Comme la filiale est une personne morale indépendante, il faut confirmer comment s’organisent la fourniture, les services, la licence technologique et le partage des coûts avec la société mère. |
-| Succursale taïwanaise d’une société étrangère | Succursale inscrite légalement à Taïwan, sans personnalité juridique distincte du siège, différente d’une filiale constituée à part. | La succursale est une partie du siège étranger, non une personne morale indépendante, de sorte que le siège assume les obligations directement. Confirmer l’étendue des facultés du représentant de la succursale et le partage interne des contrats externes, de la livraison, de la couverture des défauts et du service après-vente. |
+| Succursale taïwanaise d’une société étrangère | Succursale inscrite légalement à Taïwan, sans personnalité juridique distincte du siège, différente d’une filiale constituée à part. | La succursale est une partie du siège étranger, non une personne morale indépendante, de sorte que le siège assume les obligations directement. Confirmer l’étendue des facultés du représentant de la succursale et le partage interne des contrats externes, de la livraison, de la garantie des défauts et du service après-vente. |
 | Bureau de représentation à Taïwan | Point d’affaires inscrit conformément à l’article 386 de la loi sur les sociétés ; il ne peut exercer d’activité commerciale à Taïwan. | Comme il ne peut exercer d’activité commerciale, confirmer si l’activité réelle demeure dans le champ permis. |
 
 ## 3. Formes de la filiale taïwanaise : société à responsabilité limitée (有限公司) et société par actions (股份有限公司)
@@ -65,11 +65,11 @@ Elle peut se former avec une ou plusieurs personnes physiques, ou avec des assoc
 
 ### Société par actions (股份有限公司) : adaptée si l’on veut incorporer d’autres investisseurs ou si une cotation est envisageable
 
-Le capital se divise en actions. En principe deux actionnaires ou plus sont requis, mais l’État ou une personne morale peuvent la constituer seuls, et une personne morale étrangère peut détenir 100 %. Les actions sont, en principe, librement transmissibles, avec des exceptions légales ; des actions spéciales et des options de salariés peuvent se concevoir conformément à la loi. Cela convient aux entreprises qui attendent des investisseurs, une négociation d’actions, des incitations en capital pour les salariés ou une fusion, une acquisition ou une cotation future ; cela ne se limite pas aux grandes entreprises. En gouvernance, une société n’ayant pas fait d’offre publique peut, par les statuts, ne pas avoir de conseil et n’avoir qu’un ou deux administrateurs. Une société dont l’unique actionnaire est l’État ou une personne morale peut, par les statuts, ne pas avoir de superviseur (監察人). Toute société par actions (股份有限公司) n’a pas à faire certifier les comptes annuels. Les seuils principaux d’audit d’une société ordinaire sont un capital libéré de TWD 30.000.000, ou, en deçà, des recettes d’exploitation de TWD 100.000.000 ou 100 travailleurs au régime d’assurance du travail ; les sociétés d’offre publique suivent la réglementation des valeurs.
+Le capital se divise en actions. En principe deux actionnaires ou plus sont requis, mais l’État ou une personne morale peut la constituer seul, et une personne morale étrangère peut détenir 100 %. Les actions sont, en principe, librement transmissibles, avec des exceptions légales ; des actions de préférence et des options de souscription au profit des salariés peuvent être prévues conformément à la loi. Cela convient aux entreprises qui attendent des investisseurs, une négociation d’actions, des incitations en capital pour les salariés ou une fusion, une acquisition ou une cotation future ; cela ne se limite pas aux grandes entreprises. En gouvernance, une société n’ayant pas fait d’offre publique peut, par les statuts, ne pas avoir de conseil et n’avoir qu’un ou deux administrateurs. Une société dont l’unique actionnaire est l’État ou une personne morale peut, par les statuts, ne pas avoir de superviseur (監察人). Toute société par actions (股份有限公司) n’a pas à faire certifier les comptes annuels. Les seuils principaux d’audit d’une société ordinaire sont un capital libéré de TWD 30.000.000, ou, en deçà, des recettes d’exploitation de TWD 100.000.000 ou 100 travailleurs au régime d’assurance du travail ; les sociétés d’offre publique suivent la réglementation des valeurs.
 
 ## 4. Les procédures de succursale et de filiale diffèrent ; seule la filiale passe par l’examen du Département de l’examen des investissements
 
-Lorsqu’une société étrangère constitue une filiale taïwanaise, le nom se vérifie en principe à l’avance et une autorisation d’investissement est demandée à la Département de l’examen des investissements du ministère de l’Économie (經濟部投資審議司). Après l’approbation, les fonds sont virés, le montant de l’investissement est déterminé et un expert-comptable (會計師) vérifie le capital, puis la constitution et l’enregistrement fiscal s’achèvent.
+Lorsqu’une société étrangère constitue une filiale taïwanaise, le nom se vérifie en principe à l’avance et une autorisation d’investissement est demandée au Département de l’examen des investissements du ministère de l’Économie (經濟部投資審議司). Après l’approbation, les fonds sont virés, le montant de l’investissement est déterminé et un expert-comptable (會計師) vérifie le capital, puis la constitution et l’enregistrement fiscal s’achèvent.
 
 En revanche, pour constituer une succursale taïwanaise d’une société étrangère ordinaire, une autorisation d’investissement du Département de l’examen des investissements n’est en principe pas exigée ; le Département du commerce du ministère de l’Économie (經濟部商業發展署) traite l’enregistrement de succursale et la détermination de capital connexe. Restent nécessaires la vérification préalable du nom, le virement du capital d’exploitation, la vérification du capital et l’enregistrement fiscal ; le calendrier est en général plus court.
 
@@ -95,13 +95,13 @@ Les scénarios suivants sont hypothétiques pour aider à réfléchir ; ils n�
 
 Lors de la première consultation, vous pouvez réunir les données de base du siège et des apporteurs, une description générale du produit ou du service, le flux d’opérations prévu, les plans de personnel et d’installations à Taïwan, et les conditions de contrat et de soutien que demandent les clients. Ce qui n’est pas encore décidé peut se marquer comme « en attente ».
 
-Il n’est pas nécessaire de joindre au premier contact tous les matériaux confidentiels du client ou des données de procédé détaillées. Après avoir fourni le nom de la contrepartie pour le contrôle des conflits, les matériaux nécessaires et le mode d’envoi se déterminent selon les indications du responsable.
+Il n’est pas nécessaire de joindre au premier contact tous les documents confidentiels du client ou des données de procédé détaillées. Après avoir fourni le nom de la contrepartie pour le contrôle des conflits, les documents nécessaires et le mode d’envoi se déterminent selon les indications du responsable.
 
 ## Questions fréquentes
 
 ### S’il y a des clients à Taïwan, faut-il nécessairement y constituer une société ?
 
-Il n’est pas possible de conclure seulement parce que le client est à Taïwan. Il faut voir les exigences du client et l’activité réelle de commerce, d’installations, de personnel et de structure des opérations à Taïwan, puis choisir l’entité la plus adéquate.
+Il n’est pas possible de trancher seulement parce que le client est à Taïwan. Il faut voir les exigences du client et l’activité réelle de commerce, d’installations, de personnel et de structure des opérations à Taïwan, puis choisir l’entité la plus adéquate.
 
 ### La responsabilité du siège disparaît-elle entièrement lorsqu’une société taïwanaise est constituée ?
 
@@ -113,6 +113,6 @@ Une transition par étapes peut se planifier, mais il faut aussi revoir l’exti
 
 ## Consultation sur la structure d’entrée à Taïwan
 
-Si vous prévoyez de vendre, de gérer des stocks, de fournir un soutien d’installation ou d’embaucher localement à Taïwan, organisez d’abord le travail qu’exécutera le siège et celui qui reviendra à l’organisation à Taïwan. Après confirmation des thèmes de la consultation et des conflits d’intérêts, le cabinet expliquera les matériaux nécessaires et l’étendue des services qui peuvent être fournis.
+Si vous prévoyez de vendre, de gérer des stocks, de fournir un soutien d’installation ou d’embaucher localement à Taïwan, organisez d’abord le travail qu’exécutera le siège et celui qui reviendra à l’organisation à Taïwan. Après confirmation des thèmes de la consultation et des conflits d’intérêts, le cabinet expliquera les documents nécessaires et l’étendue des services qui peuvent être fournis.
 
 Exemple d’objet : consultation sur la structure d’entrée à Taïwan d’une entreprise de semi-conducteurs. Lors du premier contact, indiquez le nom de la société, le pays du siège, le produit ou le service prévu, le plan d’opération à Taïwan et la langue de consultation souhaitée. Envoyez les matériaux de conception confidentiels et les contrats complets seulement après avoir reçu des indications supplémentaires. Les langues de consultation réellement disponibles et l’étendue de tout mandat doivent se confirmer au moment du contact.

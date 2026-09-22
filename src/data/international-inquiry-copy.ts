@@ -658,7 +658,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   fr: {
     guidanceNotice:
-      'Cette page est rédigée en français comme orientation générale, non comme avis juridique pour votre propre affaire.',
+      'Cette page est rédigée en français comme information générale, non comme avis juridique pour votre propre affaire.',
     consultationNotice:
       'La consultation a lieu seulement dans quatre langues : anglais, chinois (中文), japonais et coréen.',
     methodConfirmationNotice:

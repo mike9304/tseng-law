@@ -175,7 +175,7 @@ L’obligation de souscrire selon l’article 6 de la loi sur l’assurance obli
 
 Dans un accident d’un seul véhicule, le conducteur de ce véhicule n’est, en général, pas destinataire des prestations de l’assurance obligatoire de ce véhicule. Toutefois, dans un accident où interviennent plusieurs véhicules, il existe des cas dans lesquels le conducteur peut réclamer des prestations à l’assureur obligatoire d’un autre véhicule impliqué.
 
-Le barème de prestations (強制汽車責任保險給付標準) modifié le 2026-05-29 s’applique aux accidents survenus à compter du 2026-07-01. Le plafond des frais médicaux raisonnables et nécessaires pour blessures est TWD 200.000 en nouveau dollar de Taïwan ; la prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux ; la prestation pour décès est TWD 3.000.000, et le maximum conjoint de décès, d’invalidité et de frais médicaux pour 1 victime et 1 accident est TWD 3.200.000. Aux accidents antérieurs peut s’appliquer le barème précédent.
+Le barème de prestations (強制汽車責任保險給付標準) modifié le 29 mai 2026 s’applique aux accidents survenus à compter du 1 juillet 2026. Le plafond des frais médicaux raisonnables et nécessaires pour blessures est TWD 200.000 en nouveau dollar de Taïwan ; la prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux ; la prestation pour décès est TWD 3.000.000, et le maximum conjoint de décès, d’invalidité et de frais médicaux pour 1 victime et 1 accident est TWD 3.200.000. Aux accidents antérieurs peut s’appliquer le barème précédent.
 
 L’assurance de responsabilité civile envers les tiers (第三人責任險), l’assurance accidents du conducteur (駕駛人傷害險) et l’assurance dommages au véhicule propre (車體損失險) sont des produits facultatifs de caractère contractuel. La couverture réelle varie selon l’assuré, le plafond, la franchise (自負額), les exclusions, la faute et les autres conditions de la police, de sorte que la police et les conditions doivent être vérifiées cas par cas.
 
@@ -199,7 +199,7 @@ Q16. Après l’accident, peut-on tout laisser entre les mains de l’assureur 
 
 ​
 
-Selon mon expérience, les assureurs ne traitent souvent pas de façon suffisante l’aspect émotionnel des parties à l’accident.
+Les assureurs ne traitent souvent pas de façon suffisante l’aspect émotionnel des parties à l’accident.
 
 ​
 
@@ -323,7 +323,7 @@ Il faut se méfier de l’avocat qui gonfle l’affaire et soutient qu’il ne f
 
 ​
 
-J’achève ainsi les questions et réponses sur les accidents de la circulation. J’espère qu’elles vous seront utiles.
+Les questions et réponses sur les accidents de la circulation s’arrêtent ici.
 
 ​
 

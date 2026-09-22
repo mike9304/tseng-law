@@ -277,7 +277,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Cette page présente les profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering. L’avocate Wei Tseng (曾雋崴) est habilitée à exercer à Taïwan et elle est l’avocate dirigeante du cabinet ; elle travaille avec des clients de Corée, du Japon et d’autres clients internationaux. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+        'Cette page présente les profils des avocates et avocats, de la direction des opérations et de l’expert-comptable associé de Hovering. L’avocate Wei Tseng (曾雋崴) est habilitée à exercer à Taïwan et elle est l’avocate dirigeante du cabinet ; elle travaille avec des clients de Corée, du Japon et d’autres clients internationaux. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
       sources: ['/fr/about', '/fr/contact'],
     },
     pricing: {
@@ -292,7 +292,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Cette partie répond à des questions fréquentes : les six domaines de travail, la préparation avant le contact, le mode de fixation des honoraires et le sens d’un message envoyé. Une demande envoyée attend l’examen d’une avocate ou d’un avocat ; ce n’est pas un avis juridique, ce n’est pas un rendez-vous, et cela ne crée pas de relation entre avocate ou avocat et client. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+        'Cette partie répond à des questions fréquentes : les six domaines de travail, la préparation avant le contact, le mode de fixation des honoraires et le sens d’un message envoyé. Une demande envoyée attend l’examen d’une avocate ou d’un avocat ; ce n’est pas un avis juridique, ce n’est pas un rendez-vous, et cela ne crée pas de relation entre l’avocate ou l’avocat et le client. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
       sources: ['/fr/contact', '/fr/services'],
     },
   },

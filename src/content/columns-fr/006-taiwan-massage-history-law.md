@@ -41,7 +41,7 @@ Des établissements de massage de toutes sortes s’y alignent.
 
 Il y a le massage par des personnes en situation de handicap visuel (視障按摩), le massage des pieds, le massage à l’huile, le massage thaïlandais et d’autres formes.
 
-Dans l’essentiel, chacun peut choisir le massage qui convient à son goût pour relâcher la tension.
+Pour l’essentiel, chacun peut choisir le massage qui convient à son goût pour relâcher la tension.
 
 Et la raison pour laquelle il existe aujourd’hui tant d’établissements de massage peut tenir à cette demande d’interprétation constitutionnelle (釋憲).
 

@@ -324,10 +324,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'NOTRE ÉQUIPE',
     title: 'Équipe internationale de Hovering',
     description:
-      'Profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering.',
+      'Profils des avocates et avocats, de la direction des opérations et de l’expert-comptable associé de Hovering.',
     representativeTitle: 'Avocate dirigeante',
     teamTitle: 'Avocates, avocats et collaborateurs',
-    partnerTitle: 'Expertise-comptable associée',
+    partnerTitle: 'Expert-comptable associé',
     introLabel: 'Présentation',
     educationLabel: 'Formation',
     experienceLabel: 'Expérience',
@@ -343,7 +343,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Avocate dirigeante à Taïwan',
       'chang-rongxuan': 'Avocat à Taïwan',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Collaborateur juridique',
       'son-jungmin': 'Direction des opérations Corée',
       'huang-shengping': 'Expert-comptable associé',
     },
@@ -2299,7 +2299,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Le cabinet traite des affaires d’entreprises et de particuliers à Taïwan en anglais, en japonais, en coréen et en chinois.',
-        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport et a obtenu un jugement de première instance de 1,57 million TWD.',
+        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport et a obtenu un jugement de première instance de TWD 1.57M (1,57 million de dollars taïwanais).',
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',
@@ -2309,29 +2309,29 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fondation d’aide juridique, antenne de Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Auparavant au Ministry of Education, Legal Affairs Division, avec un accent sur les affaires administratives et civiles.',
+        'Auparavant au ministère de l’Éducation, division des affaires juridiques (Ministry of Education, Legal Affairs Division), principalement en matière administrative et civile.',
         'Expérience des affaires d’universités, des droits du personnel enseignant et des recours administratifs.',
       ],
       education: ['Licence en droit (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministère de l’Éducation, division des affaires juridiques (Ministry of Education, Legal Affairs Division)',
         'Avocat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal comptant de longues années d’expérience comme paralegal senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
+        'Collaborateur juridique comptant de longues années d’expérience comme collaborateur juridique senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
         'Appui aux procédures, à la constitution de sociétés, aux autorisations d’investissement étranger, aux demandes de licence et aux échanges entre la Corée et Taïwan.',
       ],
       education: ['Licence en droit (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Collaborateur juridique senior, Boyin Law Firm',
+        'Collaborateur juridique senior, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2344,8 +2344,8 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'A achevé les programmes de licence et de master en comptabilité à National Chengchi University et dirige actuellement un cabinet d’expertise comptable.',
-        'Appuie l’analyse intégrée des risques juridiques, fiscaux et financiers pour les clients d’entreprise.',
+        'Titulaire d’une licence et d’un master en comptabilité de la National Chengchi University, il dirige actuellement un cabinet d’expertise comptable.',
+        'Accompagne l’analyse intégrée des risques juridiques, fiscaux et financiers pour les clients d’entreprise.',
       ],
       education: [
         'Master (M.A.) comptabilité, National Chengchi University',

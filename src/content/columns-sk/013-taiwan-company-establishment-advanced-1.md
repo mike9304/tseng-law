@@ -17,7 +17,7 @@ V poslednom čase mnoho osôb úspešne založilo spoločnosť (公司) na Taiwa
 
 Otázky, ktoré sa pri zakladaní často opakujú, sú zhrnuté nižšie.
 
-Osoby, ktoré si prečítali [**základy založenia spoločnosti**](/sk/columns/taiwan-company-establishment-basics), môžu následne nahliadnuť i do tejto podrobnejšej prehĺbenej časti.
+Osoby, ktoré si prečítali [**základy založenia spoločnosti**](/sk/columns/taiwan-company-establishment-basics), môžu následne nahliadnuť i do tejto podrobnejšej časti.
 
 Nasledujúce otázky a odpovede majú pomôcť osobám, ktoré zvažujú založenie spoločnosti na Taiwane.
 
@@ -35,25 +35,25 @@ Pri zostavovaní investičného plánu netreba uvádzať presnú adresu spoločn
 
 Keď sa neskôr v banke otvára prípravný účet spoločnosti (公司籌備處帳戶), mnoho bánk však preskúmava nájomnú zmluvu (租賃契約) a vykonáva miestnu prehliadku adresy spoločnosti.
 
-Podľa oznámenia pracovníčky jednej taiwanskej banky.
+Pracovníčka jednej taiwanskej banky mi to povedala priamo.
 
 V poslednom čase mnoho cudzincov po otvorení účtu zmizne, preto sa otváranie účtov posudzuje stále prísnejšie.
 
-Už v základnej časti čitateľky a čitatelia uvádzali, že otvorenie účtu je najťažšou etapou; prax to potvrdzuje.
+V základnej časti jeden čitateľ uviedol, že otvorenie účtu je najťažšou etapou; s tým súhlasím.
 
 Pretože na Taiwane je veľmi veľa prípadov prania peňazí (洗錢), otváranie bankových účtov sa stáva stále prísnejším.
 
 **Rada:**
 
-Pretože posúdenie investičného plánu tiež zaberie čas.
+Posúdenie investičného plánu tiež zaberie čas.
 
-Mali by ste zostavovať investičný plán a hľadať adresu zápisu spoločnosti súčasne.
+Mali by ste preto zostavovať investičný plán a hľadať adresu zápisu spoločnosti súčasne.
 
 Podľa článku 9 zákona o investíciách cudzincov (外國人投資條例) musí schválený vklad doraziť v plnej výške v lehote stanovenej príslušným orgánom (核定期限); lehotu treba overiť v akte schválenia každej veci (v praxi sa často stanoví približne na jeden rok).
 
-V tejto lehote je dosť času nájsť adresu a uzatvoriť nájomnú zmluvu,
+V tejto lehote je dosť času nájsť adresu a uzatvoriť nájomnú zmluvu.
 
-otvoriť prípravný účet v banke a previesť kapitál.
+V tej istej lehote je dosť času otvoriť prípravný účet v banke a previesť kapitál.
 
 ​
 
@@ -61,7 +61,7 @@ otvoriť prípravný účet v banke a previesť kapitál.
 
 Je to možné.
 
-Banka všeobecne vyžaduje dvojaké overenie totožnosti.
+Banka všeobecne vyžaduje dva doklady totožnosti.
 
 Bez preukazu na pobyt možno na taiwanskej imigračnej správe požiadať o „**formulár základných údajov jednotného identifikačného čísla**“ (統一證號基本資料表).
 
@@ -87,9 +87,9 @@ V tomto bode je vhodné vec dôkladne prebrať s advokátkou alebo advokátom na
 
 **4. Na čo dávať pozor, keď sa prenajíma adresa zápisu spoločnosti (napríklad reštauračná prevádzkareň)?**
 
-Založenie spoločnosti trvá približne **3 mesiace** a získanie pracovného povolenia (工作許可) a preukazu na pobyt trvá navyše približne **jeden mesiac**,
+Založenie spoločnosti trvá približne **3 mesiace** a získanie pracovného povolenia (工作許可) a preukazu na pobyt trvá navyše približne **jeden mesiac**.
 
-preto treba začiatok zmluvy stanoviť čo najneskôr.
+Preto treba začiatok zmluvy stanoviť čo najneskôr.
 
 Okrem toho v nájomných zmluvách na obchodné prevádzkarne na Taiwane prenajímateľ často poskytuje nájomcovi „**obdobie úpravy interiéru**“ (裝潢期間).
 
@@ -101,9 +101,9 @@ Prenajímatelia sa preto zdráhajú prenajímať cudzincom.
 
 Je preto vhodné hľadať prevádzkareň včas.
 
-Ak rokovanie s prenajímateľom neprebieha hladko,
+Ak rokovanie s prenajímateľom neprebieha hladko, existuje ďalší postup.
 
-možno v prípade potreby navrhnúť notárske osvedčenie nájomnej zmluvy (公證) alebo dodatočnú kauciu.
+Možno v prípade potreby navrhnúť notárske osvedčenie nájomnej zmluvy (公證) alebo dodatočnú kauciu.
 
 ​
 

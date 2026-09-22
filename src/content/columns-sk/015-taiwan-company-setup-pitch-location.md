@@ -19,17 +19,17 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Keď začínate gastronomickú činnosť, prvým problémom je nájsť adresu prevádzkarne (營業地址).
 
-Okrem trhovej situácie treba zohľadniť aj to, kde adresa leží.
+Okrem trhovej situácie rozhoduje ešte jedna vec.
 
-Ďalším dôležitým bodom je zóna, v ktorej sa adresa nachádza.
+Tou vecou je zóna, v ktorej sa adresa nachádza.
 
 Rozhoduje, či táto adresa leží v zóne, kde je prevádzka „reštaurácie“ možná.
 
 ​
 
-Ak začínate činnosť v Taipeji,
+Ak začínate činnosť v Taipeji, máte k dispozícii úradný systém.
 
-môžete použiť systém „predbežného overenia prevádzkarne“ (營業場所預先查詢) Obchodného úradu mesta Taipeja (臺北市商業處).
+Môžete použiť systém „predbežného overenia prevádzkarne“ (營業場所預先查詢) Obchodného úradu mesta Taipeja (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Na toto overenie treba však nahrať „výpis z evidencie budovy typu 2“ (建
 
 Každý môže na katastrálnom úrade (地政事務所) požiadať o „výpis z evidencie budovy typu 2“ akejkoľvek adresy.
 
-Ak je ťažké dostaviť sa osobne na katastrálny úrad (地政事務所),
+Ak je ťažké dostaviť sa osobne na katastrálny úrad (地政事務所), výpis možno zaobstarať inak.
 
-možno požiadať o pomoc známeho na Taiwane, prenajímateľa, realitného sprostredkovateľa alebo advokáta.
+Možno požiadať o pomoc známeho na Taiwane, prenajímateľa, realitného sprostredkovateľa alebo advokáta.
 
 Ak výsledok overenia ukáže, že reštaurácia nie je možná, neskôr pri zápise spoločnosti (公司登記) nemusí mestský úrad zápis prijať.
 
@@ -59,13 +59,13 @@ Pri zápise spoločnosti sa však často zapisuje viacero odvetví naraz a čast
 
 Preto v praxi nie je nutné pri zápise spoločnosti overovať všetky odvetvia.
 
-Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipeja](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámenia mesta Taipej,
+Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipeja](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámenia mesta Taipej platí nasledujúce pravidlo.
 
-od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a podriadenej prevádzky (分支機構)) výsledok predbežného overenia prevádzkarne **musí** byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
+Od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a podriadenej prevádzky (分支機構)) výsledok predbežného overenia prevádzkarne **musí** byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
 
 Nižšie uvedený zoznam „odvetví, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目) označuje odvetvia, ktoré Obchodný úrad v priebehu preskúmania zápisu overuje z úradnej moci navyše (隨案主動查詢), keď odvetvie figuruje v žiadosti, ale chýba v pripojenom výsledku; skutočnosť, že odvetvie na tomto zozname nie je, neznamená oslobodenie od overenia.
 
-Ak sa otvorí v mieste, kde reštaurácia nie je možná, môže neskôr nasledovať správna pokuta (罰鍰) príslušného orgánu.
+Ak sa reštaurácia otvorí v mieste, kde to nie je možné, môže neskôr nasledovať správna pokuta (罰鍰) príslušného orgánu.
 
 ![„odvetvia, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 

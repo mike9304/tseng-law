@@ -61,8 +61,8 @@ Nasledujúca tabuľka to zhŕňa.
 |  | Taiwanský zákon o pracovných normách, článok 11 (勞動基準法第11條): Ak nenastane jeden z nasledujúcich prípadov, zamestnávateľ nemôže ukončiť pracovnú zmluvu ani po predchádzajúcom oznámení zamestnancovi.  1. Zastavenie činnosti (歇業) alebo prevod podniku (轉讓)  2. Straty (虧損) alebo obmedzenie činnosti (業務緊縮)  3. Vyššia moc vyžaduje prerušenie činnosti na jeden mesiac alebo dlhšie  4. Povaha činnosti vyžaduje zníženie personálu a prepusteného nemožno preradiť na iné vhodné miesto  5. Určený zamestnanec nemôže uspokojivo vykonávať prácu, ktorú miesto vyžaduje | Taiwanský zákon o pracovných normách, článok 12 (勞動基準法第12條): Zamestnávateľ môže prepustiť bez predchádzajúceho oznámenia, ak zamestnanec spadá do jedného z nasledujúcich prípadov.  1. Kto pri uzatváraní pracovnej zmluvy uvedie nepravdivé údaje, uvedie zamestnávateľa do omylu a vystaví podnik riziku škody  2. Kto použije násilie alebo ťažko urazí zamestnávateľa, jeho rodinu, jeho zástupcu (代理人) alebo iných spolupracovníkov  3. Koho právoplatne odsúdili na trest odňatia slobody na dobu určitú (有期徒刑) alebo na prísnejší trest, bez podmienečného odkladu výkonu trestu (緩刑) a bez povolenia premeny na peňažný trest (易科罰金)  4. Závažné porušenie pracovnej zmluvy alebo pracovného poriadku  5. Kto úmyselne spotrebuje stroje, nástroje, suroviny, výrobky alebo iný majetok zamestnávateľa, alebo úmyselne vyzradí technické a obchodné tajomstvo zamestnávateľa a spôsobí zamestnávateľovi škodu  6. Neospravedlnená absencia (曠工) bez oprávneného dôvodu 3 dni po sebe, alebo 6 dní alebo viac v mesiaci |  |
 
 > Na Taiwane musí zamestnávateľ za každý dokončený jeden rok praxe (年資)
-> vyplatiť 0,5 mesiaca priemernej mzdy (平均工資) ako odstupné.
-> najviac za 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
+> vyplatiť 0,5 mesiaca priemernej mzdy (平均工資) ako odstupné, najviac však za 6 mesiacov mzdy.
+> Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
 
 ​
 
@@ -104,19 +104,19 @@ spoločnosť si pána B vybrala za cieľ.
 
 ​
 
-Jedného dňa vedúci pracovník povolal B na pohovor
+Jedného dňa vedúci pracovník povolal pána B na pohovor
 
 a náhle mu začal vyčítať, že nepracuje svedomito.
 
 Spoločnosť vraj má ťažkosti,
 
-B sa má obetovať a dať príklad
+Pán B sa má obetovať a dať príklad
 
 a prijať nižšiu mzdu aj funkciu.
 
-Inak má B spoločnosť opustiť.
+Inak má pán B spoločnosť opustiť.
 
-Predložili B hárok formátu A4
+Predložili pánovi B hárok formátu A4
 
 a vyzvali ho, aby naň napísal: „Ja, [meno], dobrovoľne súhlasím so znížením funkcie a mzdy“
 
@@ -128,7 +128,7 @@ aby ich nasledovali.
 
 ​
 
-B bol zamestnancom s najlepším výsledkom v strednom regióne Taiwanu,
+Pán B bol zamestnancom s najlepším výsledkom v strednom regióne Taiwanu,
 
 priniesol spoločnosti veľa peňazí
 
@@ -136,11 +136,11 @@ a každý deň pracoval svedomito,
 
 preto tieto nerozumné požiadavky rozhodne odmietol.
 
-B odmietol to napísať
+Pán B odmietol to napísať
 
 a vedúci pracovník spoločnosti mu napokon v hneve povedal, nech odíde.
 
-B opustil, s pocitom krivdy a smútku,
+Pán B opustil, s pocitom krivdy a smútku,
 
 spoločnosť, v ktorej bol 10 rokov,
 
@@ -158,7 +158,7 @@ a sama odišla
 
 ​
 
-B však po zmene vedenia
+Pán B však po zmene vedenia
 
 spoznal, že spoločnosť chce zamestnancov odstraňovať nevhodným spôsobom,
 
@@ -166,7 +166,7 @@ a zistil to zavčasu.
 
 Pretože už pred odchodom zamestnancov našiel ponuky práce,
 
-B v deň, keď šiel na pohovor,
+Pán B v deň, keď šiel na pohovor,
 
 nahral celý priebeh mobilným telefónom
 

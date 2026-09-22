@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Ak sú zákazníci na Taiwane, je nutné tam vždy založiť spoločnosť?"
-    a: "Založenie spoločnosti nie je nutné len preto, že zákazník je na Taiwane. Treba posúdiť požiadavky zákazníka a skutočnú činnosť obchodu, zariadenia, personálu a štruktúru prevádzky na Taiwane a potom zvoliť subjekt, ktorý týmto skutočnostiam zodpovedá."
+    a: "Založenie spoločnosti nie je nutné len preto, že zákazník je na Taiwane. Treba posúdiť požiadavky zákazníka a skutočnú činnosť obchodu, zariadenia, personál a štruktúru transakcie na Taiwane a potom zvoliť subjekt, ktorý týmto skutočnostiam zodpovedá."
   - q: "Zmizne zodpovednosť materskej spoločnosti úplne, keď je založená taiwanská spoločnosť?"
     a: "Ak založíte dcérsku spoločnosť, nie pobočku, materská spoločnosť zásadne nenesie povinnosti zo zmlúv podpísaných menom dcérskej spoločnosti. Treba však overiť výnimky pre zneužitie právnej osobnosti a to, či materská spoločnosť poskytla ručenie alebo prevzala vlastné zmluvné povinnosti."
   - q: "Možno začať s distribútorom a potom prejsť na spoločnosť na Taiwane?"
@@ -34,7 +34,7 @@ Než ústredie rozhodne o štruktúre vstupu, môže interne vyjasniť:
 | Prevádzkový bod | Otázky na vyjasnenie najprv |
 |---|---|
 | Zmluvy so zákazníkmi | Kto bude stranou zmluvy: zahraničné ústredie, taiwanská dcérska spoločnosť, alebo miestny zástupca? |
-| Ponuky a objednávky | Kto s konečnou platnosťou potvrdí cenu a lehotu a kam až siaha oprávnenie zodpovedného na Taiwane? |
+| Ponuky a objednávky | Kto s konečnou platnosťou potvrdí cenu a lehotu a kam až siaha oprávnenie zástupcu na Taiwane? |
 | Tovar a zásoby | Kto dováža, drží a spravuje zásoby a vybavuje vrátenie a výmenu tovaru? |
 | Personál | Prichádzajú zamestnanci ústredia, prijíma sa na Taiwane, alebo sa práca zverí vonkajšiemu dodávateľovi? |
 | Inštalácia a technická podpora | Kto nesie povinnosť podpory voči zákazníkovi a rieši problémy pri práci na mieste? |
@@ -71,9 +71,9 @@ Kapitál sa delí na akcie. Zásadne sú potrební 2 alebo viacerí akcionári (
 
 Keď zahraničná spoločnosť zakladá taiwanskú dcérsku spoločnosť, názov sa zásadne vopred overí a žiada sa o investičné povolenie na Odbore preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司). Po schválení sa prevedú prostriedky, určí sa výška investície a audítor (會計師) overí kapitál, potom sa dokončí založenie a daňový zápis.
 
-Naproti tomu pri zakladaní taiwanskej pobočky bežnej zahraničnej spoločnosti investičné povolenie Odboru preskúmania investícií zásadne netreba; Úrad obchodného rozvoja Ministerstva hospodárstva (經濟部商業發展署) vykonáva zápis pobočky a súvisiace určenie kapitálu. Naďalej sú nutné predbežné overenie názvu, prevod prevádzkového kapitálu, overenie kapitálu a daňový zápis; kalendár je zvyčajne kratší.
+Naproti tomu pri zakladaní taiwanskej pobočky bežnej zahraničnej spoločnosti investičné povolenie Odboru preskúmania investícií zásadne netreba; Úrad obchodného rozvoja Ministerstva hospodárstva (經濟部商業發展署) vykonáva zápis pobočky a súvisiace určenie kapitálu. Naďalej sú nutné predbežné overenie názvu, prevod prevádzkového kapitálu, overenie kapitálu a daňový zápis; harmonogram je zvyčajne kratší.
 
-Vyššie uvedené je odporúčanie k usporiadaniu zmlúv. Samotná voľba právnej formy nerobí transakciu zákonnou, vznik sporu nevylučuje a určitý výsledok nesľubuje.
+Vyššie uvedené porovnáva len postup zápisu pobočky a dcérskej spoločnosti. Samotná voľba právnej formy nerobí transakciu zákonnou, vznik sporu nevylučuje a určitý výsledok nesľubuje.
 
 ## 5. Zápis spoločnosti a zákonná práca inžiniera nie sú totéž
 
@@ -95,13 +95,13 @@ Nasledujúce situácie sú hypotetické na podporu úvahy; nesľubujú určitý 
 
 Pri prvej konzultácii možno usporiadať základné údaje ústredia a vkladateľov, všeobecný opis výrobku alebo služby, predpokladaný tok transakcií, plán personálu a zariadenia na Taiwane a zmluvné a podporné podmienky, ktoré požadujú zákazníci. Čo ešte nie je rozhodnuté, možno označiť ako „nevybavené“.
 
-Pri prvom kontakte nie je nutné pripojiť všetky dôverné podklady zákazníka alebo podrobné údaje o procese. Po poskytnutí názvu protistrany potrebného na overenie stretu záujmov sa potrebné podklady a spôsob odovzdania určia podľa pokynov zodpovednej osoby.
+Pri prvom kontakte nie je nutné pripojiť všetky dôverné podklady zákazníka alebo podrobné údaje o procese. Po poskytnutí názvu protistrany potrebného na overenie stretu záujmov sa potrebné podklady a spôsob odovzdania určia podľa pokynov zodpovednej advokátky.
 
 ## Časté otázky
 
 ### Ak sú zákazníci na Taiwane, je nutné tam vždy založiť spoločnosť?
 
-Založenie spoločnosti nie je nutné len preto, že zákazník je na Taiwane. Treba posúdiť požiadavky zákazníka a skutočnú činnosť obchodu, zariadenia, personálu a štruktúru prevádzky na Taiwane a potom zvoliť subjekt, ktorý týmto skutočnostiam zodpovedá.
+Založenie spoločnosti nie je nutné len preto, že zákazník je na Taiwane. Treba posúdiť požiadavky zákazníka a skutočnú činnosť obchodu, zariadenia, personál a štruktúru transakcie na Taiwane a potom zvoliť subjekt, ktorý týmto skutočnostiam zodpovedá.
 
 ### Zmizne zodpovednosť materskej spoločnosti úplne, keď je založená taiwanská spoločnosť?
 

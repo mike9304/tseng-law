@@ -22,7 +22,7 @@ faq:
 
 ![Snímka vysvetľujúca minimálnu dobu trvania pracovného pomeru v pracovnej zmluve a otázku vrátenia nákladov](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Dohoda o minimálnej dobe trvania pracovného pomeru (最低服務年限約定) pracovnej zmluvy (勞動契約) na Taiwane sa používa spolu so sľubom pracovať po určitú dobu na určenie, či pri predčasnom odchode existuje povinnosť vrátiť náklady na školenie, podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金) a či možno osobitne žiadať zmluvnú pokutu (違約金). Samotná skutočnosť, že existuje podpísaný text, však neurčuje platnosť dohody ani sumu na vrátenie. Viac než názov zmluvy treba po krokoch overiť zákonné predpoklady a skutočný priebeh výplat, školenia a skončenia.
+Dohoda o minimálnej dobe trvania pracovného pomeru (最低服務年限約定) v pracovnej zmluve (勞動契約) na Taiwane vyjadruje záväzok pracovníka zotrvať po určitú dobu, či pri predčasnom odchode vzniká povinnosť vrátiť náklady na školenie, podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金) a či možno osobitne žiadať zmluvnú pokutu (違約金). Samotná skutočnosť, že existuje podpísaný text, však neurčuje platnosť dohody ani sumu na vrátenie. Viac než názov zmluvy treba po krokoch overiť zákonné predpoklady a skutočný priebeh výplat, školenia a skončenia.
 
 Pri preskúmaní je dôležité nezmiešavať nasledujúce štyri otázky.
 
@@ -37,7 +37,7 @@ Aj keď tieto štyri otázky figurujú spoločne v tej istej zmluve, uplatniteľ
 
 Dohoda nie je automaticky neplatná. Podľa článku 15-1 taiwanského zákona o pracovných normách (勞動基準法) môže splniť zákonné predpoklady, ak zamestnávateľ poskytne špecializované technické školenie (專業技術培訓) a nesie jeho náklady, alebo poskytne primeranú náhradu (合理補償), aby pracovník dodržal minimálnu dobu trvania pracovného pomeru. Nie je nutné splniť oba predpoklady zároveň, avšak aj keď existuje jeden, dohoda nesmie prekročiť primeraný rozsah vo svetle všetkých okolností, ako sú doba a náklady školenia, možnosť nahradiť personál (人力替補可能性) a výška a rozsah náhrady.
 
-Článok 15-1 odsek 1 upravuje alternatívne dva zákonné predpoklady. Prvý je, že zamestnávateľ poskytol pracovníkovi špecializované technické školenie a niesol jeho náklady; druhý, že poskytol primeranú náhradu výmenou za dodržanie minimálnej doby trvania pracovného pomeru. Treba overiť nie to, aké meno bolo v zmluve dané, ale aký základ skutočne existuje.
+Článok 15-1 odsek 1 upravuje alternatívne dva zákonné predpoklady. Prvý je, že zamestnávateľ poskytol pracovníkovi špecializované technické školenie a niesol jeho náklady; druhý, že poskytol primeranú náhradu výmenou za dodržanie minimálnej doby trvania pracovného pomeru. Treba overiť nie to, ako sa tento základ v zmluve nazýva, ale aký základ skutočne existuje.
 
 Článok 15-1 vyžaduje jeden z dvoch zákonných predpokladov a navyše osobitné preskúmanie primeranosti. To neznamená, že treba vždy poskytnúť zároveň špecializované technické školenie i primeranú náhradu, ani že celá dohoda je automaticky platná len preto, že sa jeden z nich formálne zapíše.
 
@@ -51,7 +51,7 @@ Aby bola dohoda založená na školení, musí zamestnávateľ pracovníkovi sku
 
 Predmetom preskúmania sú nielen priamo overiteľné náklady, ako honoráre vonkajších lektorov, školné vzdelávacieho zariadenia a poplatky za materiály alebo vybavenie, ale i základ výpočtu vnútorných nákladov, ktoré zamestnávateľ tvrdí. Ak školil vnútorný personál, treba vidieť, čí a aký čas bol vynaložený, čím sa to líši od obvyklého dohľadu alebo odovzdania miesta a či existuje základ na pričítanie tohto nákladu danému pracovníkovi. Ani odhadované sumy, ani sumy rozvrhnuté rovnomerne samy osebe nepreukazujú skutočný výdavok.
 
-Program, kalendár školenia, prezenčná listina, výsledok hodnotenia, osvedčenie o dokončení, faktúry a stvrdenky sú základnými podkladmi na potvrdenie skutočnosti školenia a nákladov. Zmluva medzi zamestnávateľom a vzdelávacím zariadením, doklady o platbe a podmienky vrátenia, videné spoločne, umožňujú presnejšie zachytiť skutočné bremeno. Ak pracovník zaplatil časť nákladov priamo alebo ich niesla tretia osoba, treba tiež rozlíšiť, kto niesol konečné náklady.
+Program, harmonogram školenia, prezenčná listina, výsledok hodnotenia, osvedčenie o dokončení, faktúry a stvrdenky sú základnými podkladmi na potvrdenie skutočnosti školenia a nákladov. Zmluva medzi zamestnávateľom a vzdelávacím zariadením, doklady o platbe a podmienky vrátenia umožňujú presnejšie zachytiť skutočné bremeno. Ak pracovník zaplatil časť nákladov priamo alebo ich niesla tretia osoba, treba tiež rozlíšiť, kto niesol konečné náklady.
 
 Hranica medzi všeobecnou adaptáciou na prácu a špecializovaným technickým školením nezávisí len od miesta školenia ani od toho, kto školenie vedie. Vnútorný kurz môže preukázať konkrétny odborný a technický obsah a značnú investíciu a dlhý kurz vonkajšieho zariadenia môže byť v skutočnosti všeobecným úvodným školením. Preto nemožno jednotne vylúčiť všetko vnútorné školenie ani uznať zákonný predpoklad len preto, že kurz je drahý alebo dlhý.
 
@@ -63,9 +63,9 @@ Druhý zákonný predpoklad je, že zamestnávateľ poskytne primeranú náhradu
 
 Najprv treba overiť účel výplaty. Či ide o všeobecnú mzdovú podmienku náboru, protiplnenie za sľub zotrvať určitú dobu, alebo odmenu za dosiahnutie výsledkov, musí byť zrejmé zo zmluvy a z oznamovacích podkladov. Posudzuje sa tiež, či deň výplaty, suma, okamih nadobudnutia nároku, spojenie s dobou zotrvania, dôvody vrátenia a vzorec boli predložené tak, aby ich pracovník mohol pochopiť pred zmluvou.
 
-Pokyn (函釋) taiwanského Ministerstva práce (勞動部) z 5. 6. 2026 vysvetľuje, že ak sa má ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru vziať prémia za zotrvanie, podpisová prémia alebo iné plnenie poskytnuté vopred, musí byť táto povaha plnenia jasne oznámená. Že zamestnávateľ dodatočne znova vyloží účel výplaty alebo znova zaradí časť mzdy ako náhradu, ťažko nahrádza oznámenie v okamihu zmluvy.
+Pokyn (函釋) taiwanského Ministerstva práce (勞動部) z 5. 6. 2026 vysvetľuje, že ak sa má ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru vziať prémia za zotrvanie, podpisová prémia alebo iné plnenie poskytnuté vopred, musí byť táto povaha plnenia jasne oznámená. Dodatočný výklad účelu výplaty alebo nové zaradenie časti mzdy ako náhrady ťažko nahrádza oznámenie v okamihu zmluvy.
 
-Primeranosť náhrady sa neposudzuje len podľa sumy. Posudzuje sa spoločne, či pracovník skutočne získa dodatočný prospech, či sú podmienky výplaty jasné, ako sa priraďuje časť zodpovedajúca už odpracovanej dobe a či rozsah vrátenia nie je nadmerný. Aj keď náhrada existuje, nie je bez obmedzenia dovolená akákoľvek dĺžka zotrvania ani akákoľvek výška zodpovednosti za vrátenie.
+Primeranosť náhrady sa neposudzuje len podľa sumy. Posudzuje sa spoločne, či pracovník skutočne získa dodatočný prospech, či sú podmienky výplaty jasné, ako pracovník nadobúda časť zodpovedajúcu už odpracovanej dobe a či rozsah vrátenia nie je nadmerný. Aj keď náhrada existuje, nie je bez obmedzenia dovolená akákoľvek dĺžka zotrvania ani akákoľvek výška zodpovednosti za vrátenie.
 
 Je tiež dôležité, aby text zmluvy a skutočná výplata súhlasili. Overenie, či bola výplata oneskorená alebo rozdelená, či je podmienená, aká je skutočne prijatá suma po daniach a zrážkach a či existovalo osobitne písomné oznámenie, pomáha posúdiť rozsah náhrady a skutočný prospech pracovníka.
 
@@ -80,13 +80,13 @@ Aj keď existuje jeden zo zákonných predpokladov, dohodnutá doba a zodpovedno
 
 Pri prvom prvku sa posudzuje, ako dlho školenie skutočne trvalo a koľko zamestnávateľ niesol. Nestačí predložiť úhrn; je vhodné spoločne overiť doklady podľa položiek, sumu pričítanú každému pracovníkovi, spôsobilosť, ktorú školenie poskytlo, a už získanú časť investície.
 
-Druhý prvok, možnosť nahradiť pracovníka, sa neurčuje len tvrdením zamestnávateľa o ťažkosti náboru. Posudzuje sa, či je možné získať personál toho istého miesta alebo podobného miesta, aká kvalifikácia a úroveň odbornosti sú potrebné, aká je obvyklá doba pokrytia a či prevádzková potreba, ktorú zamestnávateľ tvrdí, súhlasí s objektívnymi podkladmi.
+Druhý prvok, možnosť nahradiť pracovníka, sa neurčuje len tvrdením zamestnávateľa o ťažkosti náboru. Posudzuje sa, či je možné získať personál toho istého miesta alebo podobného miesta, aká kvalifikácia a úroveň odbornosti sú potrebné, ako dlho obvykle trvá obsadiť to isté alebo podobné miesto a či prevádzková potreba, ktorú zamestnávateľ tvrdí, súhlasí s objektívnymi podkladmi.
 
 Pri treťom prvku sa posudzuje nielen výška náhrady, ale i rozsah. Dôležité je, kedy sa vypláca a za akých podmienok pracovník s konečnou platnosťou nadobúda nárok, ako zodpovedá dohodnutej dobe ako celku a či sa pri skončení v priebehu odráža už splnená doba. Prémia toho istého mena sa môže posúdiť odlišne podľa štruktúry zmluvy a skutočnosti.
 
 Štvrtý prvok môže zahŕňať rôzne okolnosti, ktoré ovplyvňujú primeranosť, ako priebeh uzatvorenia dohody, povahu práce, čo bolo stranám vysvetlené, skutočne odpracovanú dobu a dôvod skončenia. Význam každého prvku sa môže líšiť podľa veci a okolnosti na zohľadnenie sa neobmedzujú na predchádzajúce príklady. Preto treba posúdiť bez opomenutia relevantné skutočnosti, ktoré sa objavujú v spise.
 
-Nakoniec treba zrozumiteľný pomer medzi dohodnutou dobou, skutočnou investíciou zamestnávateľa, ťažkosťou nahradiť pracovníka, náhradou, ktorú pracovník obdržal, a bremenom vrátenia. Nemožno vopred určiť platnosť len preto, že ide o určité povolanie, ani bez zmeny uplatniť záver z inej veci. Treba posúdiť spolu návrh v okamihu uzatvorenia zmluvy a skutočný stupeň splnenia v okamihu skončenia.
+Nakoniec musí byť medzi dohodnutou dobou, skutočnou investíciou zamestnávateľa, ťažkosťou nahradiť pracovníka, náhradou, ktorú pracovník obdržal, a bremenom vrátenia primeraný pomer. Nemožno vopred určiť platnosť len preto, že ide o určité povolanie, ani bez zmeny uplatniť záver z inej veci. Treba posúdiť spolu návrh v okamihu uzatvorenia zmluvy a skutočný stupeň splnenia v okamihu skončenia.
 
 ## 5. Školenie, ktoré nemôže založiť dohodu
 
@@ -94,7 +94,7 @@ Podľa pokynu taiwanského Ministerstva práce z 5. 6. 2026 nemožno náklady pr
 
 Pokyn 勞動關2字第1150141814號 Ministerstva práce rozlišuje a upravuje školenie, ktoré sa vykonáva pravidelne, obvyklé školenie k miestu, školenie, aby sa nováčik zoznámil s prostredím a postupmi práce, a školenie, ktoré zamestnávateľ musí vykonať podľa zákona. Pretože toto školenie sprevádza prevádzku podniku alebo plnenie zákonnej povinnosti, jeho náklady nemožno urobiť základom povinnosti zotrvať ani sankcie za predčasné skončenie.
 
-Kurzy, ktoré nový zamestnanec zvyčajne obdrží, ako výklad pracovného poriadku (工作規則), predstavenie organizácie a systémov, obvyklé odovzdanie miesta a návod k základným bezpečnostným postupom, treba potvrdiť v ich podstate. Všeobecné náklady náboru a riadenia alebo náklady odovzdania miesta, ktoré mal zamestnávateľ pôvodne niesť, nemožno stanoviť ako predmet vrátenia pouhým označením za osobitnú investíciu.
+Kurzy, ktoré nový zamestnanec zvyčajne obdrží, ako výklad pracovného poriadku (工作規則), predstavenie organizácie a systémov, obvyklé odovzdanie miesta a návod k základným bezpečnostným postupom, treba posúdiť podľa ich podstaty. Všeobecné náklady náboru a riadenia alebo náklady odovzdania miesta, ktoré mal zamestnávateľ pôvodne niesť, nemožno stanoviť ako predmet vrátenia samotným označením za osobitnú investíciu.
 
 Školenie sa však nevylučuje vždy len preto, že bolo vykonané vo vnútri podniku. V tom istom programe sa môžu miešať diel všeobecnej adaptácie a diel špecializovaného technického školenia (專業技術培訓), preto treba tému, trvanie, náklady a otázku, či existuje zákonná povinnosť, overiť podľa kurzu. Kto tvrdí špecializovanú technickú časť, potrebuje dokladmi vysvetliť, aký obsah sa líši od obvyklého školenia a kto skutočne niesol náklady.
 
@@ -120,7 +120,7 @@ Treba tiež rozlíšiť vrátenie nákladov na školenie a vrátenie plnenia pos
 
 Nemožno preto uznať porušenie pracovníka len preto, že pracovný vzťah skončil pred dohodnutou dobou. Treba overiť, kto učinil aký prejav vôle, aký je právny základ skončenia zmluvy a ktorej strane sa pričítajú skutočné okolnosti, ktoré ho vyvolali.
 
-Podklady preskúmania môžu zahŕňať oznámenie o prepustení, list o odchode, dokument o skončení dohodou, e-mail a záznam messengeru, podklady o zmene pracovných podmienok a evidenciu dochádzky a práce. Aj keď sa spomína zdravie alebo okolnosti práce, výsledok sa neuzatvára len podľa tohto výrazu, ale spoločne sa posudzuje skutočný priebeh, zákonný základ skončenia a súvisiace dôkazy.
+Podklady preskúmania môžu zahŕňať oznámenie o prepustení, list o odchode, dokument o skončení dohodou, e-mail a záznam messengeru, podklady o zmene pracovných podmienok a evidenciu dochádzky a práce. Aj keď sa spomína zdravie alebo okolnosti práce, výsledok sa neurčuje len podľa tohto výrazu, ale spoločne sa posudzuje skutočný priebeh, zákonný základ skončenia a súvisiace dôkazy.
 
 Prepustenie, skončenie dohodou a tvrdenie o porušení pracovných podmienok sú len príklady okolností na posúdenie, nie uzavretý výpočet dôvodov, ktoré nemožno pričítať pracovníkovi. Skončenie toho istého názvu sa môže líšiť vo vôli strán a v priebehu a názov zapísaný v dokumente sa nemusí zhodovať so skutočnými faktami.
 
@@ -152,18 +152,18 @@ Na predchádzanie sporu alebo na posúdenie už vzneseného nároku nemožno č�
 
 1. Najprv sa určí zákonný predpoklad: či bolo poskytnuté špecializované technické školenie a nesené náklady, alebo či bola poskytnutá primeraná náhrada za sľub zotrvania.
 2. Všeobecné, pravidelné a zákonne povinné školenie sa oddelí od špecializovaného technického školenia podľa skutočného obsahu kurzu, doby a účelu.
-3. Uchováva sa program kurzu, kalendár, záznam dokončenia, faktúry, stvrdenky a podklady o tom, kto niesol náklady, a osobitne sa zaznamená základ vonkajších a vnútorných nákladov.
+3. Uchováva sa program kurzu, harmonogram, záznam dokončenia, faktúry, stvrdenky a podklady o tom, kto niesol náklady, a osobitne sa zaznamená základ vonkajších a vnútorných nákladov.
 4. Písomne sa jasne prepojí účel náhrady, deň výplaty, suma, podmienky nadobudnutia nároku, oznámenie učinené pracovníkovi a vzorec vrátenia nesplnenej doby.
 5. Dokumentuje sa základ výpočtu dohodnutej doby, možnosť nahradiť personál toho istého miesta alebo podobného miesta a vzťah medzi prevádzkovou potrebou zamestnávateľa a skutočnou investíciou.
 6. Posudzuje sa, či dohodnutá doba a suma vrátenia sú úmerné rozsahu nákladov na školenie alebo náhrady, a do vyrovnania sa odráža už odpracovaná doba.
 7. Po jednotlivom overení dôvodu skončenia a pričítania zodpovednosti sa vypočíta skutočný deň skončenia, splnená doba a nesplnená doba.
 8. Pred zrážkou zo mzdy alebo žiadosťou o vrátenie sa porovná zmluva, podklady výplat, výplatná páska, komunikácia strán, výzva a záznam zrážok na overenie právneho základu a postupu.
 
-Aj pri použití vzorovej zmluvy nemožno mechanicky uplatniť tú istú dobu a tú istú sumu na každé miesto a každého pracovníka. Doložky sa musia navrhnúť s odrazom skutočnej investície do školenia, náhrady a možnosti nahradiť pracovníka a účel výplaty a pomerný vzorec sa musia zrozumiteľne oznámiť pred uzatvorením zmluvy.
+Aj pri použití vzorovej zmluvy nemožno mechanicky uplatniť tú istú dobu a tú istú sumu na každé miesto a každého pracovníka. Doložky sa musia navrhnúť tak, aby odrážali skutočnú investíciu do školenia, náhrady a možnosti nahradiť pracovníka a účel výplaty a pomerný vzorec sa musia zrozumiteľne oznámiť pred uzatvorením zmluvy.
 
 ### Body, ktoré má pracovník overiť
 
-1. Zhromaždí sa originál podpísanej pracovnej zmluvy a dohôd o zmene, vysvetľujúce materiály náboru, školiace materiály, program, kalendár a záznam dokončenia.
+1. Zhromaždí sa originál podpísanej pracovnej zmluvy a dohôd o zmene, vysvetľujúce materiály náboru, školiace materiály, program, harmonogram a záznam dokončenia.
 2. Overí sa odborný a technický obsah školenia, či ide o všeobecné adaptačné školenie alebo zákonne povinné školenie, sumy faktúr a stvrdeniek a kto skutočne niesol náklady.
 3. Zaistia sa podklady výplat podpisovej prémie, prémie za zotrvanie a iných plnení poskytnutých vopred, oznámenie o účele náhrady, deň výplaty, podmienky nadobudnutia nároku a vzorec vrátenia.
 4. Osobitne sa zaznamená základ výpočtu dohodnutej doby, už odpracovaná doba, zostávajúca doba a možnosť nahradiť personál, ktorú zamestnávateľ tvrdí.

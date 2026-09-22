@@ -4011,7 +4011,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelária vedie veci podnikov a súkromných osôb na Taiwane v angličtine, japončine, kórejčine a čínštine.',
-        'Zastupovala kórejského študenta v konaní o náhradu škody za úraz v posilňovni a dosiahla rozsudok prvého stupňa vo výške TWD 1.57M.',
+        'Zastupovala kórejského študenta v konaní o náhradu škody za úraz v posilňovni a na prvom stupni dosiahla priznanie náhrady vo výške TWD 1.57M.',
       ],
       education: [
         'Magisterský titul (M.S.), Institute of Finance, National Taiwan University',

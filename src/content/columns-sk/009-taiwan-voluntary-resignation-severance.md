@@ -73,11 +73,11 @@ Zamestnanec si preto musí túto lehotu ustrážiť.
 
 Inými slovami,
 
-taiwanské právo priznáva každej strane, podľa toho, či vina leží na strane podniku,
+ak je vina na strane zamestnanca, zamestnávateľ odstupné vyplácať nemusí,
 
-alebo na strane zamestnanca,
+a ak je vina na strane zamestnávateľa,
 
-buď právo odstupné nevyplatiť, alebo právo ho žiadať.
+zamestnanec ho môže žiadať.
 
 Niekedy, ak vina leží na oboch stranách pracovného vzťahu,
 

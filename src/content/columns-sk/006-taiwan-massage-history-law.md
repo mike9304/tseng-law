@@ -53,9 +53,9 @@ Výkon tohto povolania osobou bez zrakového postihnutia (非視障者) bol nez�
 
 Tento zákon platil do roku 2003; vtedy pán Lin, ktorý viedol kaderníctvo,
 
-zamestnal pracovníkov bez zrakového postihnutia k službám umývania vlasov a masáže, a polícia to zistila.
+zamestnal dvoch pracovníkov bez zrakového postihnutia na služby umývania vlasov a masáže, a polícia to zistila.
 
-Podľa vtedajšieho práva bola pánovi Linovi a týmto pracovníkom uložená správna pokuta (罰鍰) vo výške 40.000 TWD, 10.000 TWD a 20.000 TWD v novom taiwanskom dolári (新臺幣).
+Podľa vtedajšieho práva bola pánovi Linovi uložená správna pokuta (罰鍰) 40.000 TWD a dvom pracovníkom 10.000 TWD a 20.000 TWD v novom taiwanskom dolári (新臺幣).
 
 Pán Lin považoval túto sankciu za veľmi nespravodlivú a požiadal o ústavný výklad.
 

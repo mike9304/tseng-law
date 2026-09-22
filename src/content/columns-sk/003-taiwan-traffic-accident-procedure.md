@@ -151,7 +151,7 @@ Skutočnosť, že bežná mzda sa udržiava bez zmeny, automaticky nevylučuje n
 
 Ak je trvalá funkčná porucha podstatne sporná, môže byť lekársky znalecký posudok užitočný, avšak nie je povinný vo všetkých veciach. Posudzuje sa tiež započítanie nedbanlivosti podľa článku 217 občianskeho zákonníka a iné dôvody úpravy.
 
-Keď sa výpočet robí v jednej kapitálovej sume, možno zvážiť odpočet medziľahlých úrokov (中間利息扣除). Hoffmannova kalkulačka (霍夫曼) Súdneho jüanu je len výpočtovým nástrojom, nie právne povinnou metódou, a nesľubuje výsledok. Podľa článku 193 občianskeho zákonníka môže súd na návrh strany tiež uložiť platbu v pravidelnej rente pod podmienkou zabezpečenia.
+Keď sa výpočet robí v jednej kapitálovej sume, možno zvážiť odpočet medziúroku (中間利息扣除). Hoffmannova kalkulačka (霍夫曼) Súdneho jüanu je len výpočtovým nástrojom, nie právne povinnou metódou, a nesľubuje výsledok. Podľa článku 193 občianskeho zákonníka môže súd na návrh strany tiež uložiť platbu v pravidelnej rente pod podmienkou zabezpečenia.
 
 ## Q13. Ako sa hodnotí zadostiučinenie za nemajetkovú ujmu (慰撫金)?
 

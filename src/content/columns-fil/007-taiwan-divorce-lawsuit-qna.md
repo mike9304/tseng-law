@@ -38,7 +38,7 @@ Kapag may dayuhang elemento, kailangang pag-ibahin ang sumusunod na limang tanon
 
 Hindi natutukoy ng nasyonalidad ng isang panig, ng pagiging dayuhan nito, o ng lugar ng kasal lamang ang lahat ng limang usaping ito. Halimbawa, magkaibang tanong ang kung maaaring isagawa ang proseso sa Taiwan at ang kung may bisa sa Taiwan ang dayuhang hatol; at hindi rin naman natatapos nang kusa ang rehistro ng katayuang pampamilya sa kabilang bansa dahil lamang naayos na ang rehistro ng sambahayan sa Taiwan. Ito ang dahilan kung bakit dapat munang ayusin nang kongkreto ang kasalukuyang katayuan ng kasal at ng rehistro ng sambahayan, at ang legal na epektong nais makamit, bago piliin ang paraan ng diborsiyo.
 
-## 2. Mga Kailangan sa Diborsiyo sa Magkasundong Pahintulot at ang Rehistro sa Household Registration Authority
+## 2. Mga Kailangan sa Diborsiyo sa Magkasundong Pahintulot at ang Rehistro sa Tanggapan ng Rehistro ng Sambahayan
 
 Ang diborsiyo sa magkasundong pahintulot sa ilalim ng Artikulo 1050 ng Kodigo Sibil (民法) ng Taiwan ay nagkakabisa lamang kapag ang kasunduan ay ginawa nang nakasulat, kapag dalawa o higit pang saksi ang pumirma matapos nilang matiyak na tunay ang intensiyong magdiborsiyo ng magkabilang panig, at kapag naisagawa na ang rehistro ng diborsiyo sa tanggapan ng rehistro ng sambahayan. Hindi nakukumpleto ang diborsiyo sa pamamagitan lamang ng pirmadong kasunduan; at kung may dayuhang elemento ang kaso, hiwalay pang kailangang tiyakin ang batas na ilalapat, ang authentication at pagsasalin ng mga dokumento, at ang paghahain ng ulat sa ibang bansa o rehiyon.
 
@@ -60,7 +60,7 @@ Kapag nabuo ang mediation o settlement, napapawi ang ugnayang mag-asawa sa paraa
 
 Hindi rin maaaring itakda ang landas ng pag-apela batay lamang sa pangalan ng dokumento. Nag-iiba ang landas at ang panahon depende sa kung ito ay apela laban sa hatol, apela laban sa utos ng korte (court ruling, 裁定), o hiwalay na prosesong pinagtatalunan ang pagkakabuo o ang bisa ng mediation o settlement. Kailangan munang tiyakin ang petsa ng paghahatid, kung pinal na ito, at ang katayuan sa proseso, saka kalkulahin ang taning para sa uring iyon; at hindi dapat ilipat sa ibang paglilitis o proseso ng rehistro ang panahong narinig sa isang kaso.
 
-## 4. Batayan ng Judicial Divorce at ang Limitasyon sa Asawang May Pananagutan
+## 4. Batayan ng Diborsiyo sa Hukuman at ang Limitasyon sa Asawang May Pananagutan
 
 Itinatakda ng proviso ng Artikulo 1052, talata 2 ng kasalukuyang Kodigo Sibil na, kapag ang malubhang dahilan ng pagkasira ng pagsasama (marital breakdown, 婚姻破綻) ay pananagutan ng isang panig lamang, ang kabilang panig lamang ang maaaring humiling ng diborsiyo bilang panuntunan. Gayunman, ipinasiya ng Constitutional Court (Hukumang Konstitusyonal, 憲法法庭) ng Taiwan sa Hatol Blg. 4 ng taong 112 (2023; 112年憲判字第4號) na labag sa konstitusyon ang saklaw kung saan lubusang inaalis ang pagkakataong magdiborsiyo ng asawang may pananagutan (有責配偶) nang hindi isinasaalang-alang kung lumipas na ang malaking panahon mula nang mangyari o magpatuloy ang malubhang dahilan, kaya't nagiging maliwanag na napakabigat ang bunga sa isang partikular na kaso. Nananatili pa rin ang teksto ng batas, kaya huwag basta ipasiya na palaging maaari o palaging hindi maaari, at dapat tingnan kung paano inilalapat ng korte ang diwa ng hatol at ang mga tiyak na katotohanan ng kaso.
 
@@ -83,7 +83,7 @@ Kahit hindi makontak ang asawa o umalis siya ng bahay, hindi dapat paghaluin ang
 
 Kung ang pinagkasunduang pakikipagtalik sa taong hindi asawa ay pasok sa batayan ng talata 1 ay kailangang suriin batay sa tumpak na katotohanan, sa mga elementong itinakda ng batas at sa kaugnay na taning na panahon. Ang pagkakaroon ng katotohanang iyon ay hindi nangangahulugang sabay-sabay nang natutukoy ang kalalabasan ng judicial divorce, ng danyos sa ilalim ng Artikulo 1056, ng paghahati sa pagkakaiba ng natitirang ari-arian (剩餘財產差額分配), ng suporta sa asawa sa ilalim ng Artikulo 1057, ng karapatan at tungkulin sa menor de edad na anak, o ng sustento sa anak. Ang bawat isyu ay ipinapasya ayon sa sariling mga elemento nito at sa nauukol na pamantayan gaya ng pinakamabuting interes ng bata.
 
-## 5. Dayuhang Kasal, Dayuhang Diborsiyo at ang Household Registration sa Taiwan
+## 5. Dayuhang Kasal, Dayuhang Diborsiyo at ang Rehistro ng Sambahayan sa Taiwan
 
 Sa kasong ikinasal o nagdiborsiyo sa ibang bansa, hindi maaaring ituring na ang tanging mapagpipilian ay ang irehistro muna ang kasal sa Taiwan o ang maghain ng kasong diborsiyo sa Taiwan. Kung may naganap nang aktong pang-katayuang sibil o hatol sa ibang bansa, kailangan munang tiyakin ang bisa nito at ang posibilidad ng pagkilala rito; at kung hindi pa nagsisimula ang proseso, kailangang ihambing ang hurisdiksiyon, ang batas na ilalapat at ang inaasahang epekto sa rehistro at sa pagpapatupad.
 
@@ -93,7 +93,7 @@ Ang pahayag na nabuo na ang diborsiyo ayon sa lokal na batas ng ibang bansa, o a
 
 Ang mga dayuhang dokumento ay maaaring mangailangan ng authentication ng overseas mission ng Taiwan o ng ibang ahensiyang may kapangyarihan, at ayon sa opisyal na tagubilin sa bawat uri ng dokumento ay maaaring kailanganin ang authenticated o notaryadong salin sa Tsino. Ang mga dokumentong ginawa sa rehiyong kontinental ng Tsina (大陸地區) at ang mga ginawa sa Hong Kong at Macau ay sumusunod sa hiwalay na tuntunin sa beripikasyon na naiiba sa karaniwang dayuhang dokumento, kaya kailangang tukuyin nang tumpak ang lugar ng paggawa. Bago maghain, kailangang tiyakin sa pinakabagong gabay ng Department of Household Registration at sa nasasakupang ahensiya ang mga kailangan hinggil sa orihinal, sa authentication, sa salin at sa aplikasyon sa pamamagitan ng kinatawan.
 
-## 6. Pangalan sa Titulo ng Bahay, Pondong Pre-marital at ang Paghahati ng Residual Property
+## 6. Pangalan sa Titulo ng Bahay, Pondong Bago ang Kasal at ang Paghahati sa Pagkakaiba ng Natitirang Ari-arian
 
 Hindi natutukoy ng titulo ng bahay ang lahat ng usapin. Mahalagang ebidensya ang nakarehistrong pangalan sa bahay at ang pinagmulan ng pondong pambili, ngunit magkaibang usapin ang mga indibidwal na claim gaya ng pagmamay-ari, donasyon, nominee registration, pautang at unjust enrichment, at ang paghahati sa pagkakaiba ng natitirang ari-arian (剩餘財產差額分配) sa ilalim ng Artikulo 1030-1 ng Kodigo Sibil. Kailangang suriing hiwalay ang aktuwal na kasunduan, ang sanhi at panahon ng pagkakamit, ang daloy ng pondo, ang mga utang, kung ang ari-arian ay nakamit nang walang bayad, at ang mga ebidensya; hindi natutukoy ang lahat ng konklusyon dahil lamang sa katotohanang binayaran ang bahagi ng gastos mula sa pondong naipon bago ang kasal o nakarehistro ang bahay sa pangalan ng isang panig.
 
@@ -133,7 +133,7 @@ Sa pagsusuring alinsunod sa Artikulo 1055-1 ng Kodigo Sibil ay pinagsasama-sama 
 
 Kapag natupad ang mga elemento ng pagkakabuo ng napiling landas ng diborsiyo, maaaring mauna nang mapawi ang mismong ugnayang mag-asawa kahit may natitira pang ilang isyu sa ari-arian o sa mga anak. Gayunman, hindi ito dapat ituring na shortcut na maimumungkahi sa lahat ng kaso. Kailangang sabay na tingnan kung anong kasunduan o pasiya ng korte ang kailangan hinggil sa pag-iingat at pag-aayos ng kuwenta ng hindi pa naaayos na ari-arian, sa tirahan, pag-aaruga, pangangalagang medikal at edukasyon ng anak, sa sustento sa anak at sa visitation, at kung kailangan ang provisional disposition (pansamantalang utos, 暫時處分) para sa kaligtasan at pagpapatuloy ng pamumuhay habang nasa gitna ng alitan.
 
-## 9. Sustento sa Anak, Visitation, Pagpapatupad at Provisional Disposition
+## 9. Sustento sa Anak, Pagdalaw, Pagpapatupad at Pansamantalang Utos
 
 Ayon sa Artikulo 1116-2 ng Kodigo Sibil, nagpapatuloy kahit pagkatapos ng diborsiyo ang obligasyon ng mga magulang na sustentuhan ang menor de edad na anak. Ito ay karapatang naiiba sa post-divorce spousal support sa pagitan ng dating mag-asawa sa ilalim ng Artikulo 1057 ng Kodigo Sibil. Kailangang tiyakin sa pamamagitan ng datos ang gastusin sa pamumuhay, sa edukasyon at sa pangangalagang medikal ng anak at ang mga natatanging pangangailangan nito, gayundin ang kita, ari-arian, kakayahang magsustento at aktuwal na hatian sa pag-aaruga ng bawat magulang, saka itakda ang kongkretong pasanin.
 
@@ -155,7 +155,7 @@ Ang pagpapalabas at paggamit ng pasaporte, ang pagpasok at paglabas sa Taiwan at
 
 Hindi dapat ipagpalagay na kusang inilalapat sa Taiwan ang 1980 Hague Convention on the Civil Aspects of International Child Abduction (1980年海牙兒童擄拐公約). Sa paglipat, pagpigil o pagsasauli na tumatawid sa hangganan ay kailangang tiyakin ang legal na payo at ang posibilidad ng pagpapatupad sa bawat hurisdiksiyon, ayon sa dating kinaroroonan ng anak, sa kasalukuyang kinaroroonan nito, at sa katayuan ng mga kaugnay na panig at hatol; at hindi maaaring bumuo ng konklusyon batay lamang sa pangalan ng isang kasunduang internasyonal. Hindi ipinapayo ang pagdadala o ang hindi pagsasauli ng anak nang labag sa umiiral nang kasunduan o utos; at bago ang paglipat ay dapat tiyakin ang naaayong pahintulot o hatol at ang mga paraan ng agarang proteksiyon.
 
-## 11. Ebidensiya at Praktikal na Paghahanda
+## 11. Ebidensya at Praktikal na Paghahanda
 
 Inaayos ang mga datos hindi bilang koleksiyong pampilit sa kabilang panig kundi bilang talaang magpapaliwanag nang tumpak sa hurisdiksiyon, sa proseso, sa mga katotohanan at sa pangangailangan ng anak. Kung ihahanda ang sumusunod na siyam na kategorya sa paraang lumilitaw ang pagkakasunod-sunod ng panahon ng kaso at ang pinagmulan ng orihinal na dokumento, mababawasan ang panganib na mapagkamalang iisa ang magkakaibang claim at taning.
 
@@ -180,9 +180,9 @@ Ang sumusunod na pangunahing sanggunian ay ang panimulang punto sa pagtiyak sa l
 3. [Laws and Regulations Database ng Taiwan: Batas sa mga Usaping Pampamilya](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
 4. [Laws and Regulations Database ng Taiwan: Artikulo 303 ng Kodigo ng Pamamaraang Sibil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
 5. [Laws and Regulations Database ng Taiwan: Mga tuntunin sa provisional disposition sa non-contentious na usaping pampamilya](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
-6. [Laws and Regulations Database ng Taiwan: Household Registration Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
+6. [Laws and Regulations Database ng Taiwan: Batas sa Rehistro ng Sambahayan (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
 7. [Department of Household Registration, Ministry of the Interior ng Taiwan: Gabay sa rehistro ng diborsiyo](https://www.ris.gov.tw/documents/html/2/3/1/384.html)
-8. [Laws and Regulations Database ng Taiwan: Act on Choice of Law in Civil Matters with Foreign Elements](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
+8. [Laws and Regulations Database ng Taiwan: Batas sa Pagpili ng Batas na Ilalapat sa mga Usaping Sibil na may Dayuhang Elemento (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
 9. [Constitutional Court ng Taiwan: Hatol Blg. 4 ng taong 112 (2023; 112年憲判字第4號)](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
 10. [Constitutional Court ng Taiwan: Bersiyong Ingles ng Hatol Blg. 4 ng taong 112 (2023)](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
 

@@ -77,7 +77,7 @@ maging ang kompanya ang may pagkakamali,
 
 o ang empleyado ang may pagkakamali,
 
-binibigyan ng batas ng Taiwan ang magkabilang panig ng karapatang tumangging magbayad o humingi ng separation pay.
+ibinibigay ng batas ng Taiwan, ayon sa kung sino ang may pagkakamali, ang karapatang tumanggi sa pagbabayad ng separation pay o ang karapatang humingi nito.
 
 Kung minsan, kapag kapwa may pagkakamali ang amo at ang manggagawa,
 
@@ -91,7 +91,7 @@ Kaya nga sa mga alitan sa paggawa dito sa Taiwan,
 
 napakahalaga ang **panahon**.
 
-Sa maraming kaso, mas matatag ang panig na maagang nagtipon ng ebidensya at sumunod sa taning; hindi ito katiyakan ng resulta.
+Sa maraming kaso, mas napoprotektahan ang karapatan ng panig na maagang nagtipon ng ebidensya at sumunod sa taning; hindi ito katiyakan ng resulta.
 
 ---
 

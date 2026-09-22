@@ -1767,7 +1767,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Magkaibang bagay ang wika ng pahina at ang wika ng konsultasyon',
             paragraphs: [
-              'Nakasulat sa Filipino ang pahinang ito, ngunit ang aktwal na konsultasyon sa abogado ay isinasagawa lamang sa apat na wika: Ingles, Tsino (中文), Hapon, at Koreano. Ang pagkakabasa ninyo ng gabay sa Filipino ay hindi nangangahulugang sa Filipino gagawin ang pag-uusap sa abogado.',
+              'Nakasulat sa Filipino ang pahinang ito, ngunit ang aktuwal na konsultasyon sa abogado ay isinasagawa lamang sa apat na wika: Ingles, Tsino (中文), Hapon, at Koreano. Ang pagkakabasa ninyo ng gabay sa Filipino ay hindi nangangahulugang sa Filipino gagawin ang pag-uusap sa abogado.',
               'Hindi kami nangangako ng interpreter para sa pasalitang pag-uusap, hindi kami nangangako ng sagot sa loob ng takdang panahon, at hindi kinukumpirma ang appointment sa pahinang ito. Kung hindi ninyo magagamit ang apat na wikang nabanggit, ipinapaliwanag ng pahinang “Makipag-ugnayan” kung paano namin kinukumpirma ang paraan ng pakikipag-usap.',
             ],
           },
@@ -1841,7 +1841,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Intelektuwal na ari-arian',
             paragraphs: [
               'Tumutulong ang tanggapan sa pagpaparehistro ng trademark (marka ng kalakal, 商標) at patent (patente, 專利), sa mga usapin ng copyright (karapatang-sipi), at sa mga alitang may kaugnayan sa mga karapatang ito sa Taiwan.',
-              'Sa larangang ito, mahalaga ang pagkakasunod-sunod ng mga hakbang: ang saklaw ng proteksiyon, ang panahon ng paghahain, at ang aktwal na paggamit ay pawang nakaaapekto sa pipiliing paraan. Ang paghahain ng aplikasyon ay hindi katiyakan na maaaprubahan ito.',
+              'Sa larangang ito, mahalaga ang pagkakasunod-sunod ng mga hakbang: ang saklaw ng proteksiyon, ang panahon ng paghahain, at ang aktuwal na paggamit ay pawang nakaaapekto sa pipiliing paraan. Ang paghahain ng aplikasyon ay hindi katiyakan na maaaprubahan ito.',
             ],
           },
           {
@@ -2092,7 +2092,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Ang mga karapatan ninyo at ang paraan ng pakikipag-ugnayan',
             paragraphs: [
               'Maaari kayong humiling na makita, maitama, o mabura ang impormasyon ninyo, o bawiin ang pagsang-ayon ninyo, sa pamamagitan ng email address na nasa pahinang Makipag-ugnayan. Kung may tungkuling mag-ingat ng talaan alinsunod sa mga umiiral na tuntunin, o dahil sa isang usaping kasalukuyang isinasagawa, ipapaliwanag namin ang dahilan ng limitasyon.',
-              'Hindi nagsasaad ang pahinang ito ng nakatakdang haba ng pag-iingat, dahil nakadepende ang aktwal na haba kung magpapatuloy ba ang usapin at kung anong tungkuling mag-ingat ang kaugnay nito. Kung nais ninyong mabura nang mas maaga ang impormasyon ninyo, banggitin ninyo ang kahilingang iyon kapag nakipag-ugnayan kayo.',
+              'Hindi nagsasaad ang pahinang ito ng nakatakdang haba ng pag-iingat, dahil nakadepende ang aktuwal na haba kung magpapatuloy ba ang usapin at kung anong tungkuling mag-ingat ang kaugnay nito. Kung nais ninyong mabura nang mas maaga ang impormasyon ninyo, banggitin ninyo ang kahilingang iyon kapag nakipag-ugnayan kayo.',
             ],
           },
           {

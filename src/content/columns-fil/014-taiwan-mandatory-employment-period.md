@@ -1,5 +1,5 @@
 ---
-title: "Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Parusang Kontraktuwal sa Paglabag ng Kontrata (違約金)"
+title: "Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Parusang Kontraktuwal sa Paglabag sa Kontrata (違約金)"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "Setyembre 13, 2025"
@@ -18,7 +18,7 @@ faq:
     a: "Itinatakda ng Artikulo 15-1, talata 4 ng Batas sa mga Pamantayan sa Paggawa ng Taiwan na kapag natapos ang kontrata sa paggawa bago matapos ang pinakamababang panahon ng paglilingkod dahil sa dahilang hindi maipapataw sa manggagawa, hindi mananagot ang manggagawa sa paglabag sa kasunduan sa pinakamababang panahon ng paglilingkod ni sa pagsasauli ng gastos sa pagsasanay. Gayunman, ang dahilan ng pagtatapos at ang pagpapataw ng pananagutan ay dapat pasyahan batay sa tiyak na ebidensya gaya ng abiso ng pagtanggal, ng paglalahad ng intensiyong magbitiw, at ng mga dokumento hinggil sa paglabag sa kondisyon sa paggawa."
 ---
 
-# Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Parusang Kontraktuwal sa Paglabag ng Kontrata (違約金)
+# Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Parusang Kontraktuwal sa Paglabag sa Kontrata (違約金)
 
 ![Larawang nagpapaliwanag sa pinakamababang panahon ng paglilingkod sa kontrata sa paggawa at sa pagsasauli ng gastos](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
@@ -63,7 +63,7 @@ Ang pangalawang legal na kinakailangan ay kapag nagbigay ang amo ng makatwirang 
 
 Kailangang tiyakin muna ang layunin ng bayad. Dapat malinaw sa kontrata at sa mga dokumento ng pagpapaalam kung ito ba ay karaniwang kondisyon sa sahod para sa pagkuha ng empleyado, kabayaran sa pangakong maglingkod sa tiyak na panahon, o gantimpala sa natamong resulta. Susuriin din kung naipakita bago pumasok sa kontrata, sa paraang nauunawaan ng manggagawa, ang petsa ng bayad, ang halaga, ang panahon kung kailan ito nagiging kaniya, ang kaugnayan nito sa haba ng paglilingkod, at ang dahilan at pormula ng pagsasauli.
 
-Ipinapaliwanag ng patnubay ng Ministri ng Paggawa (Ministry of Labor, 勞動部) na may petsang Hunyo 5, 2026 na kung nais gawing makatwirang kompensasyon para sa kasunduan sa pinakamababang panahon ng paglilingkod ang pabuya sa pananatili, ang pabuya sa pagpirma o ang iba pang paunang bayad, kailangang malinaw na ipaalam ang papel na ginagampanan ng bayad na iyon. Mahirap palitan ang pagpapaalam na ginawa noong pinasok ang kontrata sa pamamagitan ng paraang muling binibigyan ng bagong interpretasyon ng amo ang layunin ng bayad o muling inuuri bilang kompensasyon ang bahagi ng sahod matapos ang lahat.
+Ipinapaliwanag ng patnubay ng Ministri ng Paggawa (Ministry of Labor, 勞動部) na may petsang Hunyo 5, 2026 na kung nais gawing makatwirang kompensasyon para sa kasunduan sa pinakamababang panahon ng paglilingkod ang pabuya sa pananatili, ang pabuya sa pagpirma o ang iba pang paunang bayad, kailangang malinaw na ipaalam ang papel na ginagampanan ng bayad na iyon. Hindi madaling palitan ang pagpapaalam noong pinasok ang kontrata ng muling pagbibigay-kahulugan ng amo sa layunin ng bayad, o ng muling pag-uuri sa bahagi ng sahod bilang kompensasyon, pagkatapos na ng bayad.
 
 Hindi lamang sa halaga sinusukat ang pagiging makatwiran ng kompensasyon. Sabay ding tinitingnan kung talagang may natatamong karagdagang pakinabang ang manggagawa, kung malinaw ang mga kondisyon ng pagbabayad, kung paano napupunta sa kaniya ang bahaging tumutugma sa panahong naipagtrabaho na, at kung hindi labis ang saklaw ng pagsasauli. Kahit may kompensasyon, hindi nangangahulugang pinapayagan nang walang hangganan ang anumang haba ng panahon ng paglilingkod o anumang laki ng pananagutang isauli.
 

@@ -27,15 +27,15 @@ Ang mga tanong at sagot sa ibaba ay pangkalahatang gabay para sa sinumang nag-ii
 
 Kapag ang isang dayuhan ay nagtatatag ng kompanya sa Taiwan, kailangan niyang magsumite ng plano ng pamumuhunan (投資計畫書) sa Kagawaran ng Pagsusuri ng Pamumuhunan (經濟部投資審議司) ng Taiwan at sumailalim sa pagsusuri.
 
-Kailangan kasing tiyakin ng Kagawaran ng Pagsusuri ng Pamumuhunan kung talagang gagamitin sa layuning pamumuhunan ang kapital na iyon,
+Kailangan kasing tiyakin ng Kagawaran ng Pagsusuri ng Pamumuhunan kung talagang gagamitin sa layuning pamumuhunan ang kapital na iyon.
 
-at kung hindi ipinapasok ng dayuhang mamumuhunan ang pondo sa ilalim ng ibang pangalan o layunin.
+Kailangan din nitong tiyakin kung hindi ipinapasok ng dayuhang mamumuhunan ang pondo sa ilalim ng ibang pangalan o layunin.
 
 Sa pagsulat ng plano ng pamumuhunan, hindi kailangang ilagay ang eksaktong adres ng kompanya; sapat na ang pagtukoy sa lugar (halimbawa, Lungsod ng Taipei). ​
 
 Gayunman, kapag magbubukas na kayo ng account ng tanggapang naghahanda ng kompanya (公司籌備處帳戶) sa bangko, marami sa mga bangko ang sumusuri sa kontrata sa upa (租賃契約) at aktuwal na sinisiyasat sa lugar ang adres ng kompanya.
 
-May isang empleyado ng bangko sa Taiwan na mismong nagsabi sa akin
+May isang empleyado ng bangko sa Taiwan na mismong nagsabi sa akin nito.
 
 Lalong humihigpit ang pagbubukas ng account dahil kamakailan ay maraming dayuhan ang nagbukas ng account at pagkatapos ay hindi na nagparamdam.
 
@@ -49,11 +49,11 @@ Dahil nangangailangan din ng panahon ang pagsusuri sa plano ng pamumuhunan,
 
 sabay na isagawa ang paghahanda ng plano ng pamumuhunan at ang paghahanap ng adres para sa rehistro ng kompanya.
 
-Ayon sa Artikulo 9 ng Statute for Investment by Foreign Nationals (外國人投資條例), ang naaprubahang ambag na kapital ay dapat dumating nang buo sa loob ng panahong itinakda ng awtoridad (核定期限); kumpirmahin ang aktuwal na takdang panahon sa indibidwal na dokumento ng pag-apruba (sa praktika ay madalas itong humigit-kumulang isang taon).
+Ayon sa Artikulo 9 ng Batas sa Pamumuhunan ng mga Dayuhan (外國人投資條例), ang naaprubahang ambag na kapital ay dapat dumating nang buo sa loob ng panahong itinakda ng awtoridad (核定期限); kumpirmahin ang aktuwal na takdang panahon sa indibidwal na dokumento ng pag-apruba (sa praktika ay madalas itong humigit-kumulang isang taon).
 
-Kaya may sapat kayong panahon upang humanap ng adres at pumirma ng upa,
+Kaya may sapat kayong panahon upang humanap ng adres at pumirma ng upa.
 
-magbukas ng account sa bangko, at magpadala ng kapital.
+May panahon din upang magbukas ng account sa bangko at magpadala ng kapital.
 
 ​
 
@@ -61,9 +61,9 @@ magbukas ng account sa bangko, at magpadala ng kapital.
 
 Maaari po.
 
-Karaniwang humihingi ang bangko ng dalawang uri ng patunay ng pagkakakilanlan,
+Karaniwang humihingi ang bangko ng dalawang uri ng patunay ng pagkakakilanlan.
 
-at kung wala kayong sertipiko ng paninirahan ng dayuhan (ARC), maaari kayong mag-aplay sa National Immigration Agency (NIA, 內政部移民署) ng Taiwan ng **pangunahing talahanayan ng pinag-isang numero ng ID** (統一證號基本資料表).
+Kung wala kayong sertipiko ng paninirahan ng dayuhan (ARC), maaari kayong mag-aplay sa Pambansang Ahensiya sa Imigrasyon (NIA, 內政部移民署) ng Taiwan ng **pangunahing talahanayan ng pinag-isang numero ng ID** (統一證號基本資料表).
 
 Maaari itong maibigay sa mismong araw,
 
@@ -73,7 +73,7 @@ ngunit napakasikip sa NIA, kaya maaga po kayong pumunta at kumuha ng numero.
 
 **3. Narinig kong kailangang isulat ang pinag-aralan at ang karanasan sa trabaho sa pagsusuri ng plano ng pamumuhunan, kaya nag-aalala ako na baka hindi tumugma ang aking pinag-aralan at karanasan sa uri ng negosyo ng kompanyang itatatag ko.**
 
-Sinusuri nga ng komite ng pagsusuri sa ilalim ng Ministri ng Ekonomiya (經濟部) ang background ng mamumuhunan gaya ng pinag-aralan at karanasan,
+Sinusuri nga ng komite ng pagsusuri sa ilalim ng Ministri ng Ekonomiya (經濟部) ang background ng mamumuhunan gaya ng pinag-aralan at karanasan.
 
 Ngunit hindi naman lubhang mahigpit ang pagsusuri; sinusuri ang bawat aplikasyon ayon sa mga isinumiteng dokumento.
 
@@ -107,7 +107,7 @@ maaari ninyong ialok, kung kinakailangan, ang pagpapanotaryo (公證) ng kontrat
 
 ​
 
-**5. Maaari bang umupa ng karaniwang karaniwang opisina (一般辦公室) kapag nagtatatag ng kompanya?**
+**5. Maaari bang umupa ng karaniwang opisina (一般辦公室) kapag nagtatatag ng kompanya?**
 
 Depende ito sa mga rehistradong gawain (營業項目) ng kompanya.
 
@@ -117,7 +117,7 @@ Gaya ng nabanggit ko na, sinusuri ng bangko ang kontrata sa upa at personal na s
 
 Bukod pa riyan, sa huling yugto ng rehistro ng kompanya, hinihingi rin ng pamahalaang lungsod (市政府) na nasa sonang maaaring pagpatakbuhan ng restawran ang adres na irerehistro,
 
-at kung karaniwang opisina ito, hindi magiging posible ang rehistro ng kompanya.
+at kung karaniwang opisina ito, maaaring hindi maging posible ang rehistro ng kompanya.
 
 Halimbawa, kung ang mga rehistradong gawain ay maaaring isagawa sa karaniwang opisina, gaya ng negosyo sa advertising o ng pakyawang kalakalan, maaaring itatag doon ang kompanya.
 

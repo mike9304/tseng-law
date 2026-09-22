@@ -30,9 +30,9 @@ Alam na siguro ito ng marami sa inyo.
 
 Sa Korea, kapag umalis sa trabaho ang isang empleyado ay kailangang magbayad ang kompanya ng retirement allowance (退職金); panuntunan iyon ng batas ng Korea, hindi ng Taiwan.
 
-Ngunit hindi tulad ng ilang bansa (halimbawa ang Korea), sa Taiwan
+Ngunit hindi tulad ng ilang bansa (halimbawa ang Korea), iba ang tuntunin sa Taiwan.
 
-ay lumilitaw lamang ang obligasyong magbayad ng separation pay kapag ang kompanya mismo ang nagtanggal sa empleyado.
+Lumilitaw lamang ang obligasyong magbayad ng separation pay kapag ang kompanya mismo ang nagtanggal sa empleyado.
 
 Kapag kusang-loob na nagbitiw ang empleyado, hindi kailangang magbayad ng separation pay ang kompanya.
 
@@ -44,7 +44,7 @@ Gayunman, kung ang empleyado ay gumawa ng gawaing labag sa batas,
 
 **o lumiban sa trabaho nang tatlong sunod na araw nang walang makatwirang dahilan,**
 
-maaaring tanggalin siya ng kompanya kahit hindi binabayaran ng separation pay.
+Maaaring tanggalin siya ng kompanya kahit hindi binabayaran ng separation pay.
 
 ​
 
@@ -58,7 +58,7 @@ Ibubuod ko ito sa inyo sa pamamagitan ng isang simpleng talahanayan.
 | Paunang abiso | Kailangan | Hindi kailangan | Kailangan |
 | Antas ng hirap para sa amo na tanggalin | Madali | Mahirap | Madali (kusang pagbibitiw) |
 | Kailangan bang magbayad ng separation pay (資遣費) ang kompanya | Kailangan | Hindi kailangan | Hindi kailangan |
-|  | Artikulo 11 ng Batas sa mga Pamantayan sa Paggawa ng Taiwan (勞動基準法第11條): Maliban kung mangyari ang isa sa mga sumusunod na kalagayan, hindi maaaring wakasan ng amo ang kontrata sa paggawa kahit nagbigay pa siya ng paunang abiso sa manggagawa.  1. Kapag isinara (歇業) o inilipat ang negosyo ng amo  2. Kapag nalulugi ang negosyo ng amo o nagkakaroon ng pagliit ng operasyon (業務緊縮)  3. Kapag dahil sa pangyayaring hindi kayang pigilan (不可抗力) ay kailangan ang pansamantalang paghinto ng trabaho (暫停工作) nang isang buwan o higit pa  4. Kapag dahil sa katangian ng negosyo ay kailangan ang pagbawas ng tauhan at hindi na mailipat ang tinanggal na empleyado sa ibang angkop na posisyon  5. Kapag ang isang manggagawa ay hindi kayang gampanan nang kasiya-siya ang trabahong kailangan sa kanyang posisyon | Artikulo 12 ng Batas sa mga Pamantayan sa Paggawa ng Taiwan (勞動基準法第12條): Maaaring tanggalin ng amo ang manggagawa nang walang paunang abiso kapag siya ay napapaloob sa alinman sa mga sumusunod.  1. Nagbigay ng maling impormasyon nang pumasok sa kontrata sa paggawa, kaya naligaw ang amo at may panganib na mapinsala ang negosyo  2. Gumamit ng karahasan o malubhang nang-insulto sa amo, sa pamilya ng amo, sa kinatawan ng amo, o sa ibang katrabaho  3. Napatawan ng pinal na hatol na pagkabilanggo na may takdang panahon (有期徒刑) o mas mabigat pa, at hindi pinagkalooban ng suspended sentence ni pinahintulutang palitan ito ng multa  4. Malubhang lumabag sa kontrata sa paggawa (勞動契約) o sa work rules  5. Sinadyang sirain o ubusin ang makinarya, kasangkapan, hilaw na materyales, produkto o iba pang ari-arian ng amo, o sinadyang ibunyag ang teknikal o pangkalakal na lihim ng amo, kaya napinsala ang amo  6. Lumiban nang walang makatwirang dahilan nang tatlong sunod na araw, o nang walang makatwirang dahilan nang anim na araw o higit pa sa loob ng isang buwan |  |
+|  | Artikulo 11 ng Batas sa mga Pamantayan sa Paggawa ng Taiwan (勞動基準法第11條): Maliban kung mangyari ang isa sa mga sumusunod na kalagayan, hindi maaaring wakasan ng amo ang kontrata sa paggawa kahit nagbigay pa siya ng paunang abiso sa manggagawa.  1. Kapag isinara (歇業) o inilipat ang negosyo ng amo  2. Kapag nalulugi ang negosyo ng amo o nagkakaroon ng pagliit ng operasyon (業務緊縮)  3. Kapag dahil sa pangyayaring hindi kayang pigilan (不可抗力) ay kailangan ang pansamantalang paghinto ng trabaho (暫停工作) nang isang buwan o higit pa  4. Kapag dahil sa katangian ng negosyo ay kailangan ang pagbawas ng tauhan at hindi na mailipat ang tinanggal na empleyado sa ibang angkop na posisyon  5. Kapag ang isang manggagawa ay hindi kayang gampanan nang kasiya-siya ang trabahong kailangan sa kanyang posisyon | Artikulo 12 ng Batas sa mga Pamantayan sa Paggawa ng Taiwan (勞動基準法第12條): Maaaring tanggalin ng amo ang manggagawa nang walang paunang abiso kapag siya ay napapaloob sa alinman sa mga sumusunod.  1. Nagbigay ng maling impormasyon nang pumasok sa kontrata sa paggawa, kaya naligaw ang amo at may panganib na mapinsala ang negosyo  2. Gumamit ng karahasan o malubhang nang-insulto sa amo, sa pamilya ng amo, sa kinatawan ng amo, o sa ibang katrabaho  3. Napatawan ng pinal na hatol na pagkabilanggo na may takdang panahon (有期徒刑) o mas mabigat pa, at hindi pinagkalooban ng suspended sentence ni pinahintulutang palitan ito ng multa  4. Malubhang lumabag sa kontrata sa paggawa (勞動契約) o sa mga tuntunin sa trabaho (工作規則)  5. Sinadyang sirain o ubusin ang makinarya, kasangkapan, hilaw na materyales, produkto o iba pang ari-arian ng amo, o sinadyang ibunyag ang teknikal o pangkalakal na lihim ng amo, kaya napinsala ang amo  6. Lumiban nang walang makatwirang dahilan nang tatlong sunod na araw, o nang walang makatwirang dahilan nang anim na araw o higit pa sa loob ng isang buwan |  |
 
 > Sa Taiwan, sa bawat isang taon ng natapos na haba ng serbisyo ng empleyado,
 > kailangang magbayad ang amo ng 資遣費 na katumbas ng 0.5 buwan ng karaniwang sahod (平均工資).

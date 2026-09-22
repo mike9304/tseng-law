@@ -159,7 +159,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Ipadala ang buod sa pamamagitan ng form ng katanungan: kung ano ang nangyari, anong tulong ang kailangan ninyo, ano ang kaugnayan ng usapin sa Taiwan, at kung may takdang petsa na alam ninyo. Sa unang yugto ay hindi pa ninyo kailangang ipadala ang mga dokumento ng pagkakakilanlan o ang buong ebidensiya. Walang ipinapangakong panahon ng pagsagot at walang kinukumpirmang appointment dito. Isinasagawa lamang sa Ingles, Tsino (中文), Hapon, at Koreano ang konsultasyon sa abogado.',
+        'Ipadala ang buod sa pamamagitan ng form ng katanungan: kung ano ang nangyari, anong tulong ang kailangan ninyo, ano ang kaugnayan ng usapin sa Taiwan, at kung may takdang petsa na alam ninyo. Sa unang yugto ay hindi pa ninyo kailangang ipadala ang mga dokumento ng pagkakakilanlan o ang buong ebidensya. Walang ipinapangakong panahon ng pagsagot at walang kinukumpirmang appointment dito. Isinasagawa lamang sa Ingles, Tsino (中文), Hapon, at Koreano ang konsultasyon sa abogado.',
       sources: ['/fil/faq', '/fil/pricing'],
     },
     faq: {

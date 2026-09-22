@@ -23,7 +23,7 @@ Bukod sa pagsasaalang-alang sa kalagayan ng pamilihan,
 
 Isa pang mahalagang pagsasaalang-alang ay ito:
 
-Kung ang adres na iyon ay nasa lugar kung saan pinahihintulutang magpatakbo ng negosyong restawran.
+Ang adres na iyon ay dapat nasa lugar kung saan pinahihintulutang magpatakbo ng negosyong restawran.
 
 ​
 
@@ -63,7 +63,7 @@ Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng L
 
 mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
 
-Ang listahan ng "mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga gawaing kusang sinusuri ng Kagawaran ng Komersiyo ng Lungsod ng Taipei habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang item na wala sa listahang ito.
+Ang listahan ng "mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga gawaing kusang sinusuri ng Kagawaran ng Komersiyo ng Lungsod ng Taipei habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang gawaing iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang gawaing wala sa listahang ito.
 
 Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, maaari kayong patawan sa hinaharap ng multa administratibo (罰鍰) ng ahensiyang may hurisdiksiyon.
 

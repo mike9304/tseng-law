@@ -221,7 +221,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Karanasan',
     photoAltPrefix: 'Larawan',
     workingLanguagesLabel: 'Mga wikang ginagamit sa trabaho',
-    fullProfileLabel: 'Buong talaan (sa Ingles)',
+    fullProfileLabel: 'Buong profile (sa Ingles)',
     keyFactsHeading: 'Abogada Wei Tseng — Mahahalagang impormasyon',
     qualificationLabel: 'Kwalipikasyon at tanggapan',
     qualificationSentence:

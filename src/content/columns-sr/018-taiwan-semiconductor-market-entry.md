@@ -8,10 +8,10 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Ako postoje kupci na Tajvanu, da li tamo uvek treba osnovati društvo?"
-    a: "Ne može se odlučiti jedinstveno samo zato što je kupac na Tajvanu. Treba videti zahteve kupca i stvarnu delatnost prodaje, postrojenja, osoblja i strukturu poslova na Tajvanu, pa zatim izabrati najprimereniji subjekt."
+    a: "Ne može se odlučiti paušalno samo zato što je kupac na Tajvanu. Treba videti zahteve kupca i stvarnu delatnost prodaje, postrojenja, osoblja i strukturu poslova na Tajvanu, pa zatim izabrati najprimereniji subjekt."
   - q: "Da li odgovornost matične kompanije potpuno nestaje kada se osnuje tajvansko društvo?"
     a: "Ako osnovate zavisno društvo, a ne ogranak, matična kompanija načelno ne snosi obaveze iz ugovora zaključenih u ime zavisnog društva. Ipak treba proveriti izuzetke zbog zloupotrebe pravnog subjektiviteta i to da li je matična kompanija posebno dala jemstvo ili preuzela sopstvene ugovorne obaveze."
-  - q: "Može li se najpre raditi preko zastupnika, a zatim preći na društvo na Tajvanu?"
+  - q: "Može li se najpre raditi preko distributera, a zatim preći na društvo na Tajvanu?"
     a: "Postepeni prelaz može da se osmisli. Ipak treba zajedno oceniti prestanak ili izmenu postojećih ugovora, ugovore s kupcima, zalihe, postupanje po jemstvu i pitanja osoblja."
 ---
 
@@ -53,7 +53,7 @@ Glavna razlika između tajvanskog zavisnog društva i tajvanskog ogranka stranog
 |---|---|---|
 | Tajvansko zavisno društvo | Osniva se po tajvanskom pravu, ima sopstveni pravni subjektivitet i pravno je lice različito od stranog matičnog društva. | Pošto je zavisno društvo samostalno pravno lice, treba potvrditi kako će se urediti isporuka proizvoda, usluge, tehnološka licenca i podela troškova s matičnim društvom. |
 | Tajvanski ogranak stranog društva | Ogranak upisan na Tajvanu prema propisima; nema pravni subjektivitet odvojen od matične kompanije i razlikuje se od posebno osnovanog zavisnog društva. | Ogranak je deo strane matične kompanije, a ne samostalno pravno lice, pa matična kompanija neposredno snosi obaveze i odgovornost. Treba potvrditi obim ovlašćenja odgovornog lica ogranka i unutrašnju podelu spoljnih ugovora, isporuke, jemstva i postprodajnog servisa. |
-| Predstavništvo stranog društva na Tajvanu | Upisano uporište prema članu 386 zakona o društvima (公司法); na Tajvanu ne sme da obavlja delatnost usmerenu na dobit. | Pošto ne sme da obavlja delatnost usmerenu na dobit, treba potvrditi da li stvarni rad ostaje u dozvoljenom obimu. |
+| Predstavništvo stranog društva na Tajvanu | Upisano uporište prema članu 386 Zakona o društvima (公司法); na Tajvanu ne sme da obavlja delatnost usmerenu na dobit. | Pošto ne sme da obavlja delatnost usmerenu na dobit, treba potvrditi da li stvarni rad ostaje u dozvoljenom obimu. |
 
 ## 3. Oblici tajvanskog zavisnog društva: društvo sa ograničenom odgovornošću i akcionarsko društvo
 
@@ -65,7 +65,7 @@ Može da se obrazuje s 1 ili više fizičkih lica, ili s tajvanskim ili stranim 
 
 ### Akcionarsko društvo: primereno ako treba primiti druge investitore ili se razmatra uvrštenje
 
-Kapital se deli na akcije. Načelno su potrebna 2 ili više akcionara, ali država ili pravno lice može da ga osnuje i samo, a strano pravno lice može da drži 100 %. Akcije su načelno slobodno prenosive, uz zakonske izuzetke; prema propisima mogu da se osmisle vrste akcija, opcije za zaposlene i slično. Zato odgovara preduzećima koja očekuju investitore, promet akcijama, akcione nagrade zaposlenima ili buduća spajanja, preuzimanja, uvrštenje ili upis u režim akcija u nastajanju (興櫃); ne ograničava se samo na velika preduzeća. U upravljanju društvo koje nije izvršilo javnu emisiju može statutom da ne ustanovi odbor direktora i da ima samo 1 ili 2 člana upravnog odbora. Društvo s jedinim državnim ili pravnim akcionarom može statutom da ne ustanovi nadzornika. Takođe nije svako akcionarsko društvo dužno da godišnje finansijske izveštaje podvrgne reviziji ovlašćenog računovođe (會計師). Glavni pragovi revizije običnog društva jesu uplaćeni kapital 30.000.000 TWD, ili, i ispod te granice, poslovni prihod 100.000.000 TWD ili 100 zaposlenih prijavljenih na radno osiguranje (勞工保險); društva javne emisije (公開發行公司) primenjuju propise o hartijama od vrednosti.
+Kapital se deli na akcije. Načelno su potrebna 2 ili više akcionara, ali država ili pravno lice može da ga osnuje i samo, a strano pravno lice može da drži 100 %. Akcije su načelno slobodno prenosive, uz zakonske izuzetke; prema propisima mogu da se osmisle vrste akcija, opcije za zaposlene i slično. Zato odgovara preduzećima koja očekuju investitore, promet akcijama, akcione nagrade zaposlenima ili buduća spajanja, preuzimanja, uvrštenje ili upis u režim akcija u nastajanju (興櫃); ne ograničava se samo na velika preduzeća. U upravljanju društvo koje nije izvršilo javnu emisiju može statutom da ne ustanovi upravni odbor i da ima samo jedan direktor ili dva direktora. Društvo s jedinim državnim ili pravnim akcionarom može statutom da ne ustanovi nadzornika. Takođe nije svako akcionarsko društvo dužno da godišnje finansijske izveštaje podvrgne reviziji ovlašćenog računovođe (會計師). Glavni pragovi revizije običnog društva jesu uplaćeni kapital 30.000.000 TWD, ili, kada je kapital ispod te granice, poslovni prihod od 100.000.000 TWD ili 100 zaposlenih prijavljenih na radno osiguranje (勞工保險); društva javne emisije (公開發行公司) primenjuju propise o hartijama od vrednosti.
 
 ## 4. Postupci ogranka i zavisnog društva razlikuju se; samo zavisno društvo prolazi ocenu Odeljenja za pregled i odobravanje investicija Ministarstva ekonomije
 
@@ -101,13 +101,13 @@ Pri prvom kontaktu nije potrebno priložiti svu poverljivu dokumentaciju kupca i
 
 ### Ako postoje kupci na Tajvanu, da li tamo uvek treba osnovati društvo?
 
-Ne može se odlučiti jedinstveno samo zato što je kupac na Tajvanu. Treba videti zahteve kupca i stvarnu delatnost prodaje, postrojenja, osoblja i strukturu poslova na Tajvanu, pa zatim izabrati najprimereniji subjekt.
+Ne može se odlučiti paušalno samo zato što je kupac na Tajvanu. Treba videti zahteve kupca i stvarnu delatnost prodaje, postrojenja, osoblja i strukturu poslova na Tajvanu, pa zatim izabrati najprimereniji subjekt.
 
 ### Da li odgovornost matične kompanije potpuno nestaje kada se osnuje tajvansko društvo?
 
 Ako osnovate zavisno društvo, a ne ogranak, matična kompanija načelno ne snosi obaveze iz ugovora zaključenih u ime zavisnog društva. Ipak treba proveriti izuzetke zbog zloupotrebe pravnog subjektiviteta i to da li je matična kompanija posebno dala jemstvo ili preuzela sopstvene ugovorne obaveze.
 
-### Može li se najpre raditi preko zastupnika, a zatim preći na društvo na Tajvanu?
+### Može li se najpre raditi preko distributera, a zatim preći na društvo na Tajvanu?
 
 Postepeni prelaz može da se osmisli. Ipak treba zajedno oceniti prestanak ili izmenu postojećih ugovora, ugovore s kupcima, zalihe, postupanje po jemstvu i pitanja osoblja.
 

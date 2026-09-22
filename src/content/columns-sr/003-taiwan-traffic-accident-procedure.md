@@ -15,11 +15,11 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Primer slike koja beleži položaj vozila i tragove na kolovozu na mestu saobraćajne nezgode](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Ako na Tajvanu dođe do saobraćajne nezgode (交通事故), najpre treba obezbediti bezbednost, izvršiti prijavu i očuvanje dokaza, a zatim redom oceniti rok potraživanja, nehat (過失) i obim poravnanja (和解). U nastavku je opšti redosled postupanja zasnovan na propisima Tajvana i uputstvima javnih organa; odgovornost i konkretan postupak mogu se razlikovati prema okolnostima svake nezgode.
+Ako na Tajvanu dođe do saobraćajne nezgode (交通事故), najpre treba obezbediti bezbednost, podneti prijavu i sačuvati dokaze, a zatim redom oceniti rok potraživanja, nehat (過失) i obim poravnanja (和解). U nastavku je opšti redosled postupanja zasnovan na propisima Tajvana i uputstvima javnih organa; odgovornost i konkretan postupak mogu se razlikovati prema okolnostima svake nezgode.
 
 ## Q1. Može li se nakon nezgode napustiti mesto događaja?
 
-Kod nezgode s povredom ili smrću vozač mora odmah da preduzme mere spasavanja (救護措施), obavesti policiju i sačuva vozilo i dokaze mesta (保全現場). Neformalna saglasnost druge strane ili sam snimak ne dopuštaju da se smatra da se mesto može napustiti a da nisu dovršene zahtevane radnje.
+Kod nezgode s povredom ili smrću vozač mora odmah da preduzme mere spasavanja (救護措施), obavesti policiju i sačuva vozilo i dokaze mesta (保全現場). Neformalna saglasnost druge strane ili sam snimak ne zamenjuju zahtevane radnje.
 
 Međutim, kod nezgode s povredom, ako se sve strane saglase, vozilo se može pomeriti na mesto koje ne ometa saobraćaj, nakon obeležavanja položaja vozila i tragova mesta. To ne znači da ta obeležavanja zamenjuju zahtevane radnje, kao što su spasavanje i prijava.
 
@@ -37,13 +37,13 @@ Kada je bezbednost obezbeđena, napravite ukupne i detaljne snimke da zabeležit
 
 ## Q3. Pri povredi, koja potraživanja i koje rokove treba proveriti?
 
-Član 284 Krivičnog zakonika uređuje telesnu povredu iz nehata (過失傷害) i tešku telesnu povredu iz nehata (過失致重傷). Pošto je prema članu 287 Krivičnog zakonika reč o krivičnom delu koje se goni samo po predlogu oštećenog (告訴乃論之罪), prema članu 237 Zakonika o krivičnom postupku (Tajvan) (刑事訴訟法) predlog treba načelno podneti u roku od 6 meseci od dana kada je učinilac postao poznat.
+Član 284 Krivičnog zakonika uređuje telesnu povredu iz nehata (過失傷害) i tešku telesnu povredu iz nehata (過失致重傷). Pošto je prema članu 287 Krivičnog zakonika reč o krivičnim delima koja se gone samo po predlogu oštećenog (告訴乃論之罪), prema članu 237 Zakonika o krivičnom postupku (Tajvan) (刑事訴訟法) predlog treba načelno podneti u roku od 6 meseci od dana kada je učinilac postao poznat.
 
 Kod građanske naknade štete (損害賠償), prema članu 197 Građanskog zakonika (Tajvan) (民法) potraživanje više nije moguće po isteku 2 godine od dana kada su šteta i dužnik naknade postali poznati, ili 10 godina od dana protivpravne radnje (侵權行為). Koje činjenice utiču na zastarelost (消滅時效), treba oceniti posebno.
 
-Ko pretrpi štetu usled krivičnog dela, može prema članu 487 Zakonika o krivičnom postupku da podnese građansku tužbu pridruženu krivičnom postupku (刑事附帶民事訴訟). Dok krivični postupak traje, tu tužbu moguće je podneti do završetka usmene rasprave (言詞辯論終結) drugog stepena, prema članu 488 Zakonika o krivičnom postupku, ali je nije moguće podneti nakon završetka usmene rasprave prvog stepena i pre podnošenja pravnog leka. Načelno se može izbeći plaćanje posebnih sudskih troškova (裁判費), ali ne svi ishodi završavaju se bez troška. Na primer, ako je krivična stvar odbačena i na predlog tužioca ustupljena građanskom sudu, prema članu 503 Zakonika o krivičnom postupku mogu biti naloženi troškovi postupka, a dalje treba proveriti pravila ustupanja i postupka člana 504.
+Ko pretrpi štetu usled krivičnog dela, može prema članu 487 Zakonika o krivičnom postupku da podnese građansku tužbu pridruženu krivičnom postupku (刑事附帶民事訴訟). Dok krivični postupak traje, tu tužbu moguće je podneti do završetka usmene rasprave (言詞辯論終結) drugog stepena, prema članu 488 Zakonika o krivičnom postupku, ali je nije moguće podneti nakon završetka usmene rasprave prvog stepena i pre podnošenja pravnog leka. Načelno se može izbeći plaćanje posebnih sudskih troškova (裁判費), ali to ne znači da je ishod bez troška. Na primer, ako je krivična stvar odbačena i na predlog tužioca ustupljena građanskom sudu, prema članu 503 Zakonika o krivičnom postupku mogu biti naloženi troškovi postupka, a dalje treba proveriti pravila ustupanja i postupka člana 504.
 
-Izbor se razlikuje prema prekidu zastarelosti (時效中斷), krugu tuženih, dokazima, osiguranju i nadležnosti. Zato ne postoji postupak jedinstveno poželjan za sve stvari.
+Izbor se razlikuje prema prekidu zastarelosti (時效中斷), krugu tuženih, dokazima, osiguranju i nadležnosti. Zato ne postoji postupak paušalno poželjan za sve stvari.
 
 ## Q4. Ako je nehat na obe strane, kako se ocenjuje krivična i građanska odgovornost?
 
@@ -91,7 +91,7 @@ Pri neslaganju s mišljenjem veštačenja može se zahtevati ponovno razmatranje
 
 ## Q7. Koje štete se mogu istaći nakon nezgode?
 
-Potraživanje zasnovano na članu 184 Građanskog zakonika pretpostavlja protivpravnu povredu prava, uzročnu vezu s nezgodom i dokaz štete. Sama činjenica da je do nezgode došlo ne vodi tome da su sve niže navedene stavke priznate. Član 216 Građanskog zakonika merilo je utvrđivanja obima stvarne štete i izgubljene koristi (所失利益).
+Potraživanje zasnovano na članu 184 Građanskog zakonika pretpostavlja protivpravnu povredu prava, uzročnu vezu s nezgodom i dokaz štete. Sama činjenica da je do nezgode došlo ne vodi tome da su sve niže navedene stavke priznate. Član 216 Građanskog zakonika je merilo utvrđivanja obima stvarne štete i izgubljene koristi (所失利益).
 
 - **Povreda**: Prema članu 193 Građanskog zakonika mogu se oceniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života, kao troškovi nege (看護費用), prevoza na lečenje (就醫交通費) i tehničke pomoći, a takođe gubitak prihoda (收入損失) stvarnom nesposobnošću za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članu 195 Građanskog zakonika može se oceniti i nematerijalna šteta.
 - **Smrt**: Prema članu 192 Građanskog zakonika, ako nastupi osnov, mogu se oceniti medicinski troškovi pre smrti i troškovi povećanih životnih potreba, troškovi sahrane (殯葬費) i gubitak izdržavanja (扶養利益損失) lica koje je imalo zakonsko pravo na izdržavanje. Prema članu 194 Građanskog zakonika može se oceniti i nematerijalna šteta izvesnih srodnika.
@@ -131,7 +131,7 @@ Priznanice, zapisi tarife, zapisi trase i kliničke isprave mogući su dokazi. P
 - [Građanski zakonik, član 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Zakonik o krivičnom postupku, član 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
 - [Uputstvo Sudskog juana (司法院) o proširenju potraživanja nakon ustupanja](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
-- [Presuda okružnog suda u Điajiju (嘉義) u stvari troškova nege bliskih lica](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
+- [Presuda okružnog suda Điaji (嘉義) u stvari troškova nege bliskih lica](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Presuda okružnog suda Tajnan (臺南) u stvari troškova prevoza na lečenje](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
@@ -175,7 +175,7 @@ Obaveza zaključenja prema članu 6 Zakona o obaveznom osiguranju od autoodgovor
 
 Kod nezgode jednog vozila vozač tog vozila načelno nije adresat davanja obaveznog osiguranja tog vozila. Međutim, kod nezgode u kojoj učestvuje više vozila postoje slučajevi u kojima vozač može istaći davanje kod osiguravača obaveznog osiguranja drugog učestvujućeg vozila.
 
-Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi 200.000 novih tajvanskih dolara (TWD); davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stepeni; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenog i 1 nezgodu iznosi 3.200.000 TWD. Na ranije nezgode može se primeniti prethodna tarifa.
+Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi 200.000 novih tajvanskih dolara (TWD); davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stepeni; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova kada su u pitanju jedan oštećeni i jedna nezgoda iznosi 3.200.000 TWD. Na ranije nezgode može se primeniti prethodna tarifa.
 
 Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima polise, pa polisu i uslove treba proveriti stvar po stvar.
 
@@ -259,7 +259,7 @@ Q18. Ako zaključite poravnanje s drugom stranom, može li se krivični predlog 
 
 ​
 
-Telesna povreda iz nehata i teška telesna povreda iz nehata krivično su delo koje se goni samo po predlogu oštećenog (告訴乃論之罪), pa se krivični predlog oštećenog može povući.
+Telesna povreda iz nehata i teška telesna povreda iz nehata krivična su dela koja se gone samo po predlogu oštećenog (告訴乃論之罪), pa se krivični predlog oštećenog može povući.
 
 ​
 

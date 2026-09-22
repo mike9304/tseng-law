@@ -1,0 +1,57 @@
+WO-F-sr r4 — Serbian (Latin script) native-review fix
+workspace: /Users/son7/Projects/tseng-law-fix-sr-r4
+date: 2026-09-23
+
+Rows: 57 finding rows (sr-a 32, sr-b 25). Applied 54. Skipped 3.
+No P3 rows in either review.
+
+## Applied
+sr-a 1–16, 18–22, 24, 26–32.
+sr-b 1–25.
+
+Guidance pack (sr strings only): Kaohsiung “korporativno upravljanje”; Hovering Accounting Office dated from 2020; “Na sledeća pitanja odgovoreno je”; “o tome se sa Vama posebno razgovara”; “koje je stručno lice potrebno”; bio “Master (M.S.)”.
+
+## Skipped
+- sr-a 17 (P2, U+200B / Q16–Q20 as headings). Turning those body lines into ## headings would add headings and change block counts. The same U+200B separators and 005 `**​**` lines are in the Korean and English sources. Rephrase-inside-the-block does not apply: the complaint is layout, not wording.
+- sr-a 23 (P2, “TWD 1.57M”). ACCEPTED-ROUND / R12: the bio figure stays byte-identical. Left “u iznosu TWD 1.57M.”
+- sr-a 25 (P2, drop “član 10” from the business-tax link label). The URL stays `flno=3`. The Korean source counts 제10조, so deleting “10” fails the number checker. The rest of the label already matches the suggestion.
+
+## Systemic patterns (instances changed)
+- Glued “1” on a count that already means one: 17 phrases. 001 “manje od 1 godine” ×4, “postoji 1 godinu” ×4, “poslednju 1 godinu” ×2; 002 “duže od 1 godine” ×2; 003 “za 1 oštećenog i 1 nezgodu” ×1; 008 “navršenu 1 godinu” ×2 and “za 1 godinu” ×2. Plus sr-b 11 “1 ili 2” ×1 (jedan / dva). Declined jednog/jednu/jedne are not in the checker lexicon (only nominative jedan/jedna/jedno), so the rewrites use nominative “jedna/jedan” (and “dva”, which is in the lexicon). 001 “poslednju 1 godinu” is now “računato unazad, jedna godina na Tajvanu”.
+- 董事會 “odbor direktora” → “upravni odbor”: 2 (002 decision documents; 018 “ne ustanovi upravni odbor … jedan direktor ili dva direktora”).
+- 營利事業所得稅 “porez na dohodak privrednih društava” → “porez na dobit pravnih lica”: 2 (004 body and table). 所得稅協定 stays “sporazum o porezu na dohodak”.
+- “jedinstveno” = across the board / categorically → “paušalno”: 10. 014 ×1, 017 “oceniti” ×2 and “tvrditi” ×1, 018 “odlučiti” ×2, 004 “ne određuju se” ×3, 003 “postupak paušalno poželjan” ×1. Left “jedinstvenog identifikacionog broja” (統一證號) and “jedinstveni zakonski minimalni kapital” (a single statutory minimum, not the adverb).
+- Wrong contract role where English says distributor: 3. 011 “zastupnik, glavni distributer ili distributer”; 018 FAQ question and heading “preko distributera”. Title and the customer-contract row stay “zastupnik”: English there says agent. 011 “nezavisnog distributera” was already right.
+- Late clitic: 3. 013 “U poslednje vreme su mnoga lica”; 014 “Ova norma je međutim merilo”; same “merilo je” pattern in 003 “Član 216 … je merilo”. A file-wide clitic move was not applied (see below).
+- “ima bezbednost” / “objašnjavati kvalitet”: 2, the only hits (010, 011).
+- Degree flipped by “gotovo nije”: 1 (012), the only hit.
+- Statute title “zakona o društvima” → “Zakona o društvima”: 18 (004 ×10, 002 ×7, 018 ×1).
+- U+200B blank lines: 0 (skipped; see sr-a 17).
+- Bio “TWD 1.57M”: 0 (skipped).
+
+## Reviewer wrong, or not applied as suggested
+- sr-a 10. The file has locative “u Điajiju”, not the quoted “Điajiji”. The suggested rewrite repeats “u Điajiju”, which is the extra syllable. 臺南 in the same list is indeclinable “Tajnan”. Wrote “okružnog suda Điaji (嘉義)” (Jia-yi, two syllables, same pattern as Tajnan).
+- sr-a 22 and sr-b 11 suggest “jednog” / “jednu”. Those forms are not in the sr numeral lexicon, so they would drop a source “1” and fail the checker. Nominative jedan/jedna/dva used instead. “više nego jedan stranac” (005) for the same reason, rather than “više od jednog stranca”.
+- sr-a 23 and sr-a 25 and sr-a 17: skipped, reasons above. The 1.57M suggestion (“1,57 miliona TWD”) also conflicts with the pinned token.
+- sr-a 28 suggestion drops the relative clause (the rule that only people with visual impairment could work as masseurs). Gender fix only: “sudije … proglasili”, clause kept.
+- sr-b clitic pattern. The two cited lines, plus the identical “X merilo je” line in 003, were fixed. Moving every clitic that sits after a long first constituent would rewrite grammatical sentences; that sweep was not done.
+- 018 title “zastupnika” was not changed. English title is “Subsidiary, Branch, or Agent”. Only the distributor question was changed.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      22
+```
+
+Command order was the work-order sequence. `git status --short | wc -l` was 22 before this log file existed (pre-existing `WO-F-sr.txt` modification and untracked `sr-a.md` / `sr-b.md`, plus the sr content edits). No test expected-string updates: vitest 3202 passed. llms.txt `sr` notices and inquiry copy were not rewritten; disclosure regexes still match.

@@ -41,7 +41,7 @@ Klauzula nije automatski ništava. Prema članu 15-1 tajvanskog Zakona o radnim 
 
 Član 15-1 zahteva jednu od dve zakonske pretpostavke i, pored toga, poseban pregled razumnosti. To ne znači da uvek treba istovremeno pružiti i stručnu obuku i razumnu naknadu, niti da cela klauzula automatski važi samo zato što je jedna od njih formalno upisana.
 
-Po potvrdi zakonske pretpostavke prema stavu 2 posebno se ocenjuje da li su ugovoreni rok i opseg odgovornosti razumni. Klauzula koja povredi zakonsku pretpostavku stava 1 ili merilo razumnosti stava 2 ništava je prema stavu 3. Ova norma međutim merilo je za ocenu sadržaja i činjenica svake klauzule, a ne norma koja od početka sve klauzule obaveznog ostanka proglašava važećim ili ništavim.
+Po potvrdi zakonske pretpostavke prema stavu 2 posebno se ocenjuje da li su ugovoreni rok i opseg odgovornosti razumni. Klauzula koja povredi zakonsku pretpostavku stava 1 ili merilo razumnosti stava 2 ništava je prema stavu 3. Ova norma je međutim merilo za ocenu sadržaja i činjenica svake klauzule, a ne norma koja od početka sve klauzule obaveznog ostanka proglašava važećim ili ništavim.
 
 Okolicnost da je zaposleni potpisao ugovor može biti dokaz koji potvrđuje postojanje sporazuma, ali ne zamenjuje zakonske pretpostavke. Nasuprot tome, umesto da se ishod odmah izvede samo iz dužine ugovorenog roka, treba proveriti kakva je investicija ili naknada postojala i zašto je taj rok određen.
 
@@ -53,7 +53,7 @@ Predmet pregleda nisu samo neposredno proverljivi troškovi, kao honorari spoljn
 
 Program, kalendar obuke, spisak prisustva, rezultat ocene, uverenje o završetku, računi i priznanice osnovna su dokumentacija za potvrdu činjenice obuke i troškova. Ugovor između poslodavca i obrazovne ustanove, isprave o plaćanju i uslovi povraćaja, viđeni zajedno, omogućavaju tačnije da se utvrdi stvarni teret. Ako je zaposleni deo troškova platio neposredno ili ih je snosilo treće lice, treba i razlikovati ko je snosio konačne troškove.
 
-Granica između opšteg prilagođavanja poslu i stručne obuke ne deli se samo prema mestu obuke ili prema tome ko je organizuje. Unutrašnji kurs može da dokaže konkretan stručni i tehnički sadržaj i znatnu investiciju, a dugi kurs spoljne ustanove može u stvari biti opšta uvodna obuka. Zato se ne sme jedinstveno isključiti sva unutrašnja obuka niti priznati zakonska pretpostavka samo zato što je kurs skup ili dug.
+Granica između opšteg prilagođavanja poslu i stručne obuke ne deli se samo prema mestu obuke ili prema tome ko je organizuje. Unutrašnji kurs može da dokaže konkretan stručni i tehnički sadržaj i znatnu investiciju, a dugi kurs spoljne ustanove može u stvari biti opšta uvodna obuka. Zato se unutrašnja obuka ne sme paušalno isključiti, niti se zakonska pretpostavka sme priznati samo zato što je kurs skup ili dug.
 
 Treba umeti i da se objasni odnos između ugovorenog roka i investicije u obuku. Kakva se sposobnost stiče, kako se ta sposobnost odnosi na radno mesto i zašto je predloženo trajanje zaposlenja potrebno u odnosu na trajanje i trošak obuke, ocenjuje se pojedinačno. To da li je zaposleni posle obuke taj posao stvarno obavljao, i koliko je već odrađeno, takođe utiče na ocenu opsega tereta.
 
@@ -61,7 +61,7 @@ Treba umeti i da se objasni odnos između ugovorenog roka i investicije u obuku.
 
 Druga zakonska pretpostavka jeste da poslodavac pruži razumnu naknadu za obećanje zaposlenog da će poštovati minimalno trajanje zaposlenja. Ovde naknada mora da ima svrhu i strukturu različite od uobičajene plate ili protivčinidbe za rad koji već treba da bude pružen. Pravna priroda ne određuje se samo zato što je na platnom listiću označena kao nagrada za potpis, nagrada za zadržavanje ili davanje unapred.
 
-Najpre treba proveriti svrhu isplate. Da li je reč o opštem platnom uslovu pri prijemu, protivčinidbi za obećanje da se ostane određeno vreme, ili nagradi za postizanje rezultata, mora biti jasno iz ugovora i iz dokumentacije kojom se svrha saopštava. Ocenjuje se i da li su dan isplate, iznos, trenutak kada pravo na iznos konačno pripadne zaposlenom, veza s rokom ostanka, razlozi vraćanja i formula predati tako da ih zaposleni može razumeti pre ugovora.
+Najpre treba proveriti svrhu isplate. Da li je reč o opštem platnom uslovu pri prijemu, protivčinidbi za obećanje da se ostane određeno vreme, ili nagradi za postizanje rezultata, mora biti jasno iz ugovora i iz dokumentacije kojom se svrha saopštava. Ocenjuje se i da li su dan isplate, iznos, trenutak kada pravo na iznos konačno pripadne zaposlenom, veza s rokom ostanka, razlozi vraćanja i formula saopšteni tako da ih zaposleni može razumeti pre ugovora.
 
 Uputstvo (函釋) tajvanskog Ministarstva rada (勞動部) od 5. 6. 2026. objašnjava da, ako se kao razumna naknada za klauzulu obaveznog ostanka uzme nagrada za zadržavanje, nagrada za potpis ili drugo davanje unapred, ta uloga mora biti jasno saopštena. To što poslodavac naknadno iznova tumači svrhu isplate ili iznova razvrstava deo plate kao naknadu teško zamenjuje saopštenje u trenutku ugovora.
 
@@ -112,7 +112,7 @@ Pitanje vraćanja treba proveriti redom: važenje klauzule, pravna priroda ispla
 
 Klauzula o vraćanju celog iznosa, čvrsta ugovorna kazna koja nije u vezi sa stvarnim gubitkom i jednostrani odbitak od plate ne ocenjuju se kao jedan problem. Pravni osnov, sadržaj sporazuma, ograničenja radnog prava i zakonitost odbitka treba proveriti posebno. Iznos upisan u pozivu poslodavca ili činjenica da je zaposleni platio deo takođe ne određuje preostala pravna pitanja.
 
-Treba i razlikovati vraćanje troškova obuke i vraćanje davanja unapred. Prvo se ocenjuje sa središtem na stvarnoj stručnoj obuci i snošenju troškova; drugo na svrsi isplate, saopštenju, uslovima pripisivanja i srazmeri prema neispunjenom periodu. Ako se obe stavke zahtevaju zajedno, treba posebno porediti da li trošak nije obračunat dvaput, i dokaze svake stavke.
+Treba i razlikovati vraćanje troškova obuke i vraćanje davanja unapred. Prvo se ocenjuje prema stvarnoj stručnoj obuci i snošenju troškova; drugo na svrsi isplate, saopštenju, uslovima pripisivanja i srazmeri prema neispunjenom periodu. Ako se obe stavke zahtevaju zajedno, treba posebno porediti da li trošak nije obračunat dvaput, i dokaze svake stavke.
 
 ## 7. Kada ugovor prestane iz razloga koji se ne može pripisati zaposlenom
 
@@ -146,7 +146,7 @@ U praksi treba sačuvati sadržaj i dan predaje izjave volje o odlasku, dan kada
 
 ## 9. Kontrolna lista za poslodavca i zaposlenog
 
-Da bi se sprečio spor ili ocenio već podneti zahtev, ne sme se čitati samo ugovor, već treba zajedno urediti dokumentaciju obuke, isplata, rada i prestanka u vremenskom redosledu. Naročito urediti u tabeli koliko je ugovorenog roka ispunjeno i koliko preostaje i kojom dokumentacijom odgovaraju tvrđeni troškovi i naknada, pomaže da se odvoje sporna pitanja.
+Da bi se sprečio spor ili ocenio već podneti zahtev, ne sme se čitati samo ugovor, već treba zajedno urediti dokumentaciju obuke, isplata, rada i prestanka u vremenskom redosledu. Naročito pomaže tabela u kojoj piše koliko je ugovorenog roka ispunjeno i koliko preostaje i kojom dokumentacijom odgovaraju tvrđeni troškovi i naknada, da se odvoje sporna pitanja.
 
 ### Šta poslodavac treba da proveri
 

@@ -43,7 +43,7 @@ B je pretrpeo tešku povredu glave i preminuo na mestu; A je izgubio svest i pre
 
 Porodice A i B najpre su smatrale da je iznenadna promena trake vozila broj 2 glavni uzrok sudara. Stvar je prešla u sudski postupak; u njegovom toku izrađeno je više veštačenja (鑑定) o nezgodi.
 
-Prema ishodu veštačenja, glavnu odgovornost za ovaj sudar nosio je A. Taj zaključak bio je ograničen na činjenice ove stvari. Veštačenje je uzelo u obzir pokušaj A da pretekne 2 vozila ispred koja su vozila jedno za drugim, ulazak u traku suprotnog smera, brzinu koja gotovo nije ostavljala dovoljno vremena za kočenje i izostanak propisanog zvučnog signala i svetala, kao i kretanje pri promeni trake vozila broj 2, raspored puta i traka i ostale obezbeđene dokaze.
+Prema ishodu veštačenja, glavnu odgovornost za ovaj sudar nosio je A. Taj zaključak bio je ograničen na činjenice ove stvari. Veštačenje je uzelo u obzir pokušaj A da pretekne 2 vozila ispred koja su vozila jedno za drugim, ulazak u traku suprotnog smera, brzinu koja je ostavljala premalo vremena za kočenje i izostanak propisanog zvučnog signala i svetala, kao i kretanje pri promeni trake vozila broj 2, raspored puta i traka i ostale obezbeđene dokaze.
 
 Zaključak ograničen na ovu stvar ne znači da jedno izostavljanje propisanog signala uvek određuje odgovornost. Nehat (過失) pri nezgodi tokom preticanja zavisi od mesta nezgode, rasporeda traka, brzine, kretanja vozila, signala, vremenskih razmaka, preglednosti i ostalih dokaza.
 

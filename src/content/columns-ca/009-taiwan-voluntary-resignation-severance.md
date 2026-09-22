@@ -29,7 +29,7 @@ Tanmateix, hi ha **casos excepcionals**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-En les situacions especials següents, tot i que el treballador dimiteixi de forma voluntària, l’ocupador li ha de pagar la indemnització per acomiadament (articles 14 de la Llei de normes laborals, que aplica per analogia l’article 17; 勞動基準法第14條):
+En les situacions especials següents, tot i que el treballador dimiteixi de forma voluntària, l’ocupador li ha de pagar la indemnització per acomiadament (l’article 14 de la Llei de normes laborals, que aplica per analogia l’article 17; 勞動基準法第14條):
 
 1. Quan l’ocupador, en celebrar el contracte de treball (勞動契約), fa una declaració de voluntat falsa (虛偽意思表示) de manera que el treballador creu per error i existeix el risc de patir un dany
 
@@ -91,7 +91,7 @@ Per això, en els conflictes laborals (勞資糾紛) de Taiwan,
 
 el **temps** és molt important.
 
-En la majoria dels casos, qui s’ha preparat d’avançada veu protegits els seus drets.
+En la majoria dels casos, qui s’ha preparat per endavant veu protegits els seus drets.
 
 ---
 

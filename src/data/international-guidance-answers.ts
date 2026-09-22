@@ -1429,7 +1429,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Aquesta pàgina mostra els perfils dels advocats de Hovering, de la direcció d’operacions i de l’auditor associat. L’advocada Wei Tseng (曾雋崴) està habilitada per exercir a Taiwan i és l’advocada directora del despatx; treballa amb clients de Corea, del Japó i amb altres clients internacionals. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
+        'Aquesta pàgina mostra els perfils dels advocats de Hovering, de la direcció d’operacions i del soci auditor. L’advocada Wei Tseng (曾雋崴) està habilitada per exercir a Taiwan i és l’advocada directora del despatx; treballa amb clients de Corea, del Japó i amb altres clients internacionals. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
       sources: ['/ca/about', '/ca/contact'],
     },
     pricing: {

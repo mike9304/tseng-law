@@ -17,7 +17,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 Si ocorre un accident de trànsit (交通事故) a Taiwan, primer cal assegurar la seguretat, efectuar la denúncia i conservar les proves, i tot seguit examinar per ordre el termini de reclamació, la culpa (過失) i l’abast de la transacció (和解). El que segueix és un ordre general d’actuació basat en la normativa de Taiwan i en les orientacions d’organismes públics; la responsabilitat i el procediment concrets poden variar segons les circumstàncies de cada accident.
 
-## Q1. Es pot abandonar el lloc després de l’accident?
+## 1. Es pot abandonar el lloc després de l’accident?
 
 En un accident amb lesions o mort, el conductor ha d’adoptar de seguida mesures de socors (救護措施), avisar la policia i conservar el vehicle i les proves del lloc (保全現場). El consentiment informal de l’altra part o una simple gravació no permeten considerar que es pugui abandonar el lloc sense haver completat les mesures exigides.
 
@@ -27,7 +27,7 @@ Si només hi ha danys patrimonials i el vehicle es pot moure, la regla és marca
 
 L’article 185-4 del Codi penal (Taiwan) (刑法) regula la responsabilitat penal del conductor que abandona el lloc després d’un accident de trànsit que causa lesions o mort. La seva aplicació es valora segons les circumstàncies de l’accident i les mesures adoptades.
 
-## Q2. Quines proves s’han de conservar primer?
+## 2. Quines proves s’han de conservar primer?
 
 Asseguri primer la seguretat personal i els senyals d’advertència; si hi ha ferits o cal un rescat, truqui a Taiwan: 119 (ambulància i bombers) i, si hi ha un delicte o una situació de seguretat urgent, al 110 (policia) o al 112 des d’un mòbil. Faci també la denúncia policial segons les circumstàncies de l’accident de trànsit.
 
@@ -35,7 +35,7 @@ Un cop assegurada la seguretat, prengui fotografies de conjunt i de detall per r
 
 Quant als documents policials, al lloc de l’accident es pot rebre la butlleta de registre de les parts de l’accident de trànsit (道路交通事故當事人登記聯單). Transcorreguts 7 dies des de la data de l’accident es poden sol·licitar el plànol i les fotos del lloc (現場圖 / 現場照片); transcorreguts 30 dies des de la data de l’accident es pot sol·licitar la taula d’anàlisi preliminar de l’accident de trànsit (道路交通事故初步分析研判表). El moment d’expedició i els requisits de sol·licitud s’han de confirmar de nou davant l’autoritat policial competent.
 
-## Q3. Si ha sofert lesions, quines reclamacions i quins terminis s’han de comprovar?
+## 3. Si ha sofert lesions, quines reclamacions i quins terminis s’han de comprovar?
 
 L’article 284 del Codi penal regula les lesions per imprudència (過失傷害) i les lesions greus per imprudència (過失致重傷). Com que, segons l’article 287 del Codi penal, es tracta d’un delicte perseguible a instància de part (告訴乃論之罪), de conformitat amb l’article 237 del Codi de procediment penal de Taiwan (刑事訴訟法) la querella s’ha de presentar, en principi, dins dels 6 mesos següents al dia en què es va conèixer l’autor.
 
@@ -43,17 +43,17 @@ En matèria d’indemnització civil per danys (損害賠償), segons l’articl
 
 Qui sofreix un dany per un delicte pot, segons l’article 487 del Codi de procediment penal, interposar una acció civil acumulada al procés penal (刑事附帶民事訴訟). Mentre el procés penal segueix en tràmit, aquesta acció es pot interposar fins abans de la conclusió dels al·legats orals (言詞辯論終結) de la segona instància, segons l’article 488 del Codi de procediment penal, però no es pot interposar després de la conclusió dels al·legats orals de la primera instància i abans d’interposar el recurs. En general es pot evitar el pagament de costes processals (裁判費) independents, però no tots els resultats conclouen sense cost. Per exemple, si l’assumpte penal es desestima i, a petició del demandant, es remet al tribunal civil, segons l’article 503 del Codi de procediment penal es poden imposar les costes, i també s’han de comprovar les normes de tramesa i procediment de l’article 504.
 
-L’elecció varia segons la interrupció de la prescripció (時效中斷), el cercle de demandats, les proves, l’assegurança i la competència. Per això no existeix un procediment uniformement millor per a tots els assumptes.
+L’elecció varia segons la interrupció de la prescripció (時效中斷), el conjunt de demandats, les proves, l’assegurança i la competència. Per això no hi ha un procediment que sigui preferible en tots els assumptes.
 
-## Q4. Si hi ha culpa en ambdues parts, com es valoren les responsabilitats penal i civil?
+## 4. Si hi ha culpa en ambdues parts, com es valoren les responsabilitats penal i civil?
 
 La responsabilitat penal només es pot apreciar quan es reconeix la infracció del deure de cura de cadascú i el nexe causal entre aquesta infracció i les lesions de l’altra part. El mer fet que ambdues parts hagin tingut culpa no fa néixer automàticament la responsabilitat per lesions per imprudència.
 
-En l’àmbit civil, segons l’article 217 del Codi civil, si el perjudicat té culpa que va contribuir a causar o agreujar el dany (與有過失), el tribunal pot reduir o eximir la indemnització. Per exemple, si el dany reconegut en dòlar de Taiwan (新臺幣, TWD) és TWD 1.000.000 i la culpa del perjudicat es valora en 50 %, l’import es pot reduir a TWD 500.000 abans d’altres ajustos.
+En l’àmbit civil, segons l’article 217 del Codi civil, si el perjudicat té culpa que va contribuir a causar o agreujar el dany (與有過失), el tribunal pot reduir o eximir la indemnització. Per exemple, si el dany reconegut en dòlar de Taiwan (新臺幣, TWD) és 1.000.000 TWD i la culpa del perjudicat es valora en 50 %, l’import es pot reduir a 500.000 TWD abans d’altres ajustos.
 
 El peritatge (鑑定) o la taula d’anàlisi preliminar poden ser materials importants, però no vinculen el tribunal de forma mecànica. El tribunal examina el conjunt de les proves, incloses declaracions, imatges i l’estat dels vehicles.
 
-## Q5. Què s’ha d’incloure en el document de transacció?
+## 5. Què s’ha d’incloure en el document de transacció?
 
 En el document de transacció (和解書) convé individualitzar la data, el lloc i les parts de l’accident, i consignar l’import i el moment del pagament, el tractament de les prestacions de l’assegurança, les reclamacions incloses i les que es reserven. També s’han de fixar amb claredat el tractament futur, les lesions descobertes més tard, l’entrega de documents com el certificat mèdic (診斷證明書) i la relació entre el pagament i el desistiment de la querella.
 
@@ -63,7 +63,7 @@ Si es tracta d’un delicte perseguible a instància de part, segons l’article
 
 ### Fonament oficial de Q1–Q5
 
-- [Reglament de gestió i sancions del trànsit per carretera (道路交通管理處罰條例), article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Llei de gestió i sanció del trànsit per carretera (道路交通管理處罰條例), article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Codi penal (Taiwan) (中華民國刑法), article 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Codi penal (Taiwan) (中華民國刑法), article 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Codi penal (Taiwan) (中華民國刑法), article 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -81,7 +81,7 @@ Si es tracta d’un delicte perseguible a instància de part, segons l’article
 - [Orientació de l’Agència Nacional de Policia (內政部警政署) sobre proves i documents d’accidents de trànsit](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
 - [Preguntes freqüents de l’Agència Nacional de Policia sobre accidents de trànsit](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
-## Q6. Com es determina la responsabilitat de l’accident?
+## 6. Com es determina la responsabilitat de l’accident?
 
 La taula d’anàlisi preliminar de l’accident de trànsit que elabora la policia és una anàlisi prèvia basada en els materials del lloc. No és una sentència, no vincula el tribunal i no fixa la proporció de culpa (過失比例). Com que els materials necessaris i l’abast de la controvèrsia varien en cada accident, aquesta taula, el peritatge legal i la revisió (覆議) no són un procediment automàtic ni una etapa obligatòria.
 
@@ -89,7 +89,7 @@ Segons les normes aplicables, la part legitimada pot sol·licitar un peritatge d
 
 Si hi ha discrepància amb el dictamen pericial, es pot demanar una revisió, però la revisió es limita a una vegada. El dictamen pericial i el de revisió són prova o material de referència, i el tribunal valora de forma independent el conjunt de l’expedient, incloses declaracions, imatges i actes del lloc.
 
-## Q7. Quins danys es poden reclamar després de l’accident?
+## 7. Quins danys es poden reclamar després de l’accident?
 
 La reclamació basada en l’article 184 del Codi civil pressuposa una lesió il·lícita d’un dret, el nexe causal amb l’accident i la prova del dany. El mer fet que hagi ocorregut un accident no implica que es reconeguin tots els conceptes següents. L’article 216 del Codi civil és el criteri per determinar l’abast del dany efectiu i del lucre cessant (所失利益).
 
@@ -97,7 +97,7 @@ La reclamació basada en l’article 184 del Codi civil pressuposa una lesió il
 - **Mort**: Segons l’article 192 del Codi civil, quan escaigui, es poden examinar les despeses mèdiques anteriors a la mort i les despeses de necessitats vitals incrementades, les despeses funeràries (殯葬費) i la pèrdua d’aliments (扶養利益損失) de qui tenia dret legal a aliments. Segons l’article 194 del Codi civil també es pot examinar el dany moral de determinats parents.
 - **Patrimoni**: Segons l’article 196 del Codi civil es pot reclamar el dany patrimonial efectiu acreditat, incloses les despeses de reparació del vehicle o la pèrdua de valor.
 
-## Q8. Si el tractament continua, com es presenten les dades de despeses mèdiques?
+## 8. Si el tractament continua, com es presenten les dades de despeses mèdiques?
 
 Conservi rebuts (收據), certificats mèdics i historial clínic, i organitzi juntament amb ells la necessitat mèdica de cada tractament i el seu nexe causal amb l’accident. Les dades d’un tractament que continua poden complementar la prova segons el calendari processal del tribunal i el contingut de la reclamació ja presentada, però no es garanteix que totes les dades presentades tard o tota ampliació de la reclamació siguin admeses o permeses.
 
@@ -105,13 +105,13 @@ S’ha de distingir l’afegir dades mèdiques del modificar o augmentar l’imp
 
 Tanmateix, segons l’article 504 del Codi de procediment penal, un cop tramès l’assumpte a la secció civil, modificar, afegir o ampliar la reclamació més enllà de l’abast anterior a la tramesa pot plantejar la qüestió de les costes sobre la part excedida. La fase de tramesa, el moment de presentació i l’abast de la reclamació s’han de comprovar en cada assumpte.
 
-## Q9. Amb què es proven les despeses de cura professional i les de cura per familiars?
+## 9. Amb què es proven les despeses de cura professional i les de cura per familiars?
 
 El certificat mèdic o el dictamen mèdic són útils per mostrar la necessitat de cura, però no són per si sols un fonament decisiu. S’han d’explicar amb dades el nexe causal amb l’accident, la necessitat de cura, si es van prestar de fet, el període i un import raonable.
 
 Encara que un parent hagi prestat de fet les cures sense retribució, en l’assumpte adequat això es pot valorar com a dany. Tanmateix, la sola circumstància que les cures les presti un parent no implica el seu reconeixement automàtic; s’examinen també el contingut i la durada de les cures i el nivell habitual de cost.
 
-## Q10. Amb què es proven les despeses de desplaçament per al tractament?
+## 10. Amb què es proven les despeses de desplaçament per al tractament?
 
 Les despeses de desplaçament s’organitzen a partir de la connexió entre el registre de tractament i les lesions relacionades amb l’accident. L’itinerari, el nombre de visites, les dates, el mitjà de transport, la tarifa i la necessitat i raonabilitat d’utilitzar aquest mitjà poden ser rellevants per a la valoració.
 
@@ -135,17 +135,17 @@ Els rebuts, els registres de tarifa, els registres d’itinerari i les dades cl�
 - [Sentència del Tribunal de Districte de Tainan (臺南) sobre despeses de transport per a tractament](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
-## Q11. Com es prova la pèrdua d’ingressos durant el període de tractament i recuperació?
+## 11. Com es prova la pèrdua d’ingressos durant el període de tractament i recuperació?
 
 La pèrdua d’ingressos s’ha de provar amb dades que, per lesions relacionades amb l’accident, el treball va ser totalment o parcialment impossible durant el període de recuperació i que, com a resultat, hi va haver una reducció real d’ingressos. El certificat mèdic o la recomanació de repòs són un punt de partida important, però per si sols no basten perquè es reconegui la reclamació.
 
 Convé organitzar junts l’historial clínic, els registres d’assistència o de permís, les dades de salari i impostos i la confirmació de l’ocupador. El treballador autònom pot presentar dades acordes amb la forma de la seva activitat, com dades de vendes, registres d’operacions i declaracions fiscals.
 
-La circumstància d’haver continuat treballant o d’haver percebut el salari sense variació és rellevant per valorar la pèrdua d’ingressos del període de recuperació, però aquest fet per si sol no decideix automàticament la qüestió del dany per disminució de la capacitat laboral. Aquesta circumstància tampoc no és fonament autònom per valorar el dany per disminució de la capacitat laboral. El dany per disminució de la capacitat laboral s’examina per separat a la Q12.
+La circumstància d’haver continuat treballant o d’haver percebut el salari sense variació és rellevant per valorar la pèrdua d’ingressos del període de recuperació, però aquest fet per si sol no decideix automàticament la qüestió del dany per disminució de la capacitat laboral. Aquesta circumstància tampoc no és fonament autònom per valorar el dany per disminució de la capacitat laboral. El dany per disminució de la capacitat laboral s’examina per separat a la pregunta 12.
 
-## Q12. Com es prova el dany per disminució de la capacitat laboral?
+## 12. Com es prova el dany per disminució de la capacitat laboral?
 
-El dany per disminució de la capacitat laboral es distingeix dels ingressos realment reduïts durant el període de recuperació de la Q11. Segons els articles 193 i 216 del Codi civil s’examinen junts el nexe causal amb l’accident, l’alteració funcional persistent (持續功能障礙), la professió i les aptituds del perjudicat, els ingressos que habitualment es poden esperar i el fonament i la prova relatius al període de capacitat laboral.
+El dany per disminució de la capacitat laboral es distingeix dels ingressos realment reduïts durant el període de recuperació de la pregunta 11. Segons els articles 193 i 216 del Codi civil s’examinen junts el nexe causal amb l’accident, l’alteració funcional persistent (持續功能障礙), la professió i les aptituds del perjudicat, els ingressos que habitualment es poden esperar i el fonament i la prova relatius al període de capacitat laboral.
 
 Que el salari actual es mantingui sense variació no exclou automàticament la reclamació. A la inversa, l’import del dany tampoc no es fixa de forma mecànica només amb el percentatge de discapacitat o amb el salari actual.
 
@@ -153,13 +153,13 @@ Si l’alteració funcional persistent es discuteix de forma substancial, un per
 
 Quan el càlcul es fa en un capital únic, es pot considerar la deducció d’interessos intermedis (中間利息扣除). La calculadora Hoffmann (霍夫曼) del Yuan Judicial és només una eina de càlcul, no un mètode legalment obligatori, i no en garanteix el resultat. Segons l’article 193 del Codi civil, a petició de la part el tribunal també pot ordenar el pagament en renda periòdica amb la condició d’una garantia.
 
-## Q13. Com es valora la indemnització per dany moral (慰撫金) per perjudicis no patrimonials?
+## 13. Com es valora la indemnització per dany moral (慰撫金) per perjudicis no patrimonials?
 
 La indemnització per dany moral per perjudicis no patrimonials es valora fixant un import adequat quan existeix una lesió il·lícita del cos o de la salut, segons l’article 195 del Codi civil.
 
 El tribunal examina les circumstàncies de cada assumpte valorant en conjunt el contingut de les lesions i del tractament, els efectes persistents, el sofriment i la repercussió en la vida, l’edat i la condició, les circumstàncies socioeconòmiques i les proves de les parts. Per això és difícil anticipar el resultat només a partir d’un interval tipificat.
 
-## Q14. Si l’accident ocorre durant el treball, es pot exigir també responsabilitat civil a l’ocupador?
+## 14. Si l’accident ocorre durant el treball, es pot exigir també responsabilitat civil a l’ocupador?
 
 L’article 188 del Codi civil regula el cas en què l’empleat causa un dany il·lícit a un altre mentre exerceix les seves funcions. La connexió amb les funcions no es reconeix automàticament només per l’horari de treball, de manera que s’ha de comprovar el vincle entre el treball real i l’accident.
 
@@ -169,13 +169,13 @@ Si l’ocupador prova aquests requisits d’exempció i el perjudicat no obté l
 
 La qüestió de a qui s’adreça la reclamació civil s’ha de distingir de la responsabilitat penal. La responsabilitat penal de l’article 284 del Codi penal es valora segons la infracció del deure de cura de cada persona física i el nexe causal d’aquesta infracció.
 
-## Q15. Quines prestacions i cobertures de l’assegurança d’automòbils s’han de comprovar?
+## 15. Quines prestacions i cobertures de l’assegurança d’automòbils s’han de comprovar?
 
 L’obligació de contractar segons l’article 6 de la Llei de l’assegurança obligatòria de responsabilitat civil d’automòbils (強制汽車責任保險法) recau, en principi, sobre el propietari del vehicle i, en els casos previstos, també sobre l’usuari o l’administrador d’aquest vehicle. Aquest règim estableix una estructura de cobertura sense culpa (無過失給付制度) per a qui resulta lesionat o mor per un accident d’automòbil, però s’ha de comprovar l’abast dels passatgers o d’un tercer (第三人) aliè al vehicle que fixa la llei.
 
 En un accident d’un sol vehicle, el conductor d’aquest vehicle no és, en general, destinatari de les prestacions de l’assegurança obligatòria d’aquest vehicle. Tanmateix, en un accident en què intervenen diversos vehicles, hi ha casos en què el conductor pot reclamar prestacions a l’assegurador obligatori d’un altre vehicle implicat.
 
-El barem de prestacions (強制汽車責任保險給付標準) modificat el 29 de maig de 2026 s’aplica als accidents ocorreguts a partir de l’1 de juliol de 2026. El límit de les despeses mèdiques raonables i necessàries per lesions és TWD 200.000 en dòlar de Taiwan; la prestació per discapacitat (失能) oscil·la entre TWD 80.000 i TWD 3.000.000 segons 15 graus legals; la prestació per mort és TWD 3.000.000, i el màxim conjunt de mort, discapacitat i despeses mèdiques per 1 víctima i 1 accident és TWD 3.200.000. Als accidents anteriors se’ls pot aplicar el barem precedent.
+El barem de prestacions (強制汽車責任保險給付標準) modificat el 29 de maig de 2026 s’aplica als accidents ocorreguts a partir de l’1 de juliol de 2026. El límit de les despeses mèdiques raonables i necessàries per lesions és 200.000 TWD; la prestació per discapacitat (失能) oscil·la entre 80.000 TWD i 3.000.000 TWD segons 15 graus legals; la prestació per mort és 3.000.000 TWD, i el màxim conjunt de mort, discapacitat i despeses mèdiques per 1 víctima i 1 accident és 3.200.000 TWD. Als accidents anteriors se’ls pot aplicar el barem precedent.
 
 L’assegurança de responsabilitat civil davant tercers (第三人責任險), l’assegurança de lesions del conductor (駕駛人傷害險) i l’assegurança de danys del vehicle propi (車體損失險) són productes voluntaris de caràcter contractual. La cobertura real varia segons l’assegurat, el límit, la franquícia (自負額), les exclusions, la culpa i les altres condicions de la pòlissa, de manera que la pòlissa i les condicions s’han de comprovar cas per cas.
 
@@ -195,7 +195,7 @@ L’assegurança de responsabilitat civil davant tercers (第三人責任險), l
 - [Barem de prestacions de l’assegurança obligatòria de responsabilitat civil d’automòbils](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contracte tipus d’assegurança d’automòbil d’ús particular de la Comissió de Supervisió Financera (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Després de l’accident, es pot deixar tot en mans de l’asseguradora?
+**16.** Després de l’accident, es pot deixar tot en mans de l’asseguradora?
 
 ​
 
@@ -207,7 +207,7 @@ Poden descuidar parts importants que concerneixen els sentiments de l’altra pa
 
 ​
 
-Per a l’asseguradora, gastar TWD 500.000 o TWD 1.000.000 addicionals en un assumpte concret no influeix de forma important en el benefici global de l’asseguradora, però per a la part de l’accident aquesta quantitat pot determinar si hi ha o no antecedents penals (前科).
+Per a l’asseguradora, gastar 500.000 TWD o 1.000.000 TWD addicionals en un assumpte concret no influeix de forma important en el benefici global de l’asseguradora, però per a la part de l’accident aquesta quantitat pot determinar si hi ha o no antecedents penals (前科).
 
 ​
 
@@ -231,7 +231,7 @@ Si s’encomana a l’asseguradora, s’ha de seguir de forma contínua el proc�
 
 ​
 
-Q17. Quina és la responsabilitat penal per lesions per imprudència del causant d’un accident de trànsit?
+**17.** Quina és la responsabilitat penal per lesions per imprudència del causant d’un accident de trànsit?
 
 ​
 
@@ -239,7 +239,7 @@ En algunes sentències per lesions per imprudència s’ha imposat una pena d’
 
 ​
 
-Si es commuta per multa (易科罰金), l’article 41, apartat 1, del Codi penal fixa la conversió en TWD 1.000, TWD 2.000 o TWD 3.000 per 1 dia; calculat a TWD 1.000 per dia, una pena de 3 mesos equival a 3 × 30 × TWD 1.000 = TWD 90.000.
+Si es commuta per multa (易科罰金), l’article 41, apartat 1, del Codi penal fixa la conversió en 1.000 TWD, 2.000 TWD o 3.000 TWD per 1 dia; calculat a 1.000 TWD per dia, una pena de 3 mesos equival a 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -255,7 +255,7 @@ En algunes sentències per lesions greus per imprudència s’ha imposat una pen
 
 ​
 
-Q18. Si es transigeix amb l’altra part, es pot desistir de la querella penal?
+**18.** Si es transigeix amb l’altra part, es pot desistir de la querella penal?
 
 ​
 
@@ -275,11 +275,11 @@ En alguns casos el tribunal pot acordar la suspensió de la pena (緩刑); no é
 
 ​
 
-Q19. Si s’abandona el lloc després de l’accident, es configura sempre el delicte penal de fuga?
+**19.** Si s’abandona el lloc després de l’accident, es configura sempre el delicte penal de fuga?
 
 ​
 
-No necessàriament.
+No en tots els casos.
 
 ​
 
@@ -295,7 +295,7 @@ Si només hi ha danys en el vehicle, no es considera fuga.
 
 ​
 
-Q20. Com es busca un advocat per a un accident de trànsit?
+**20.** Com es busca un advocat per a un accident de trànsit?
 
 ​
 
@@ -323,7 +323,7 @@ S’ha de tenir cura amb l’advocat que infla l’assumpte i sosté que no es t
 
 ​
 
-Amb això concloc les preguntes i respostes sobre accidents de trànsit. Espero que li resultin d’utilitat.
+Amb això acaben les preguntes i respostes sobre accidents de trànsit.
 
 ​
 

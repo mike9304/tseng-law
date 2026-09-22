@@ -1332,10 +1332,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'EL NOSTRE EQUIP',
     title: 'Equip internacional de Hovering',
     description:
-      'Perfils dels advocats, de la direcció d’operacions i de l’auditor associat de Hovering.',
+      'Perfils dels advocats, de la direcció d’operacions i del soci auditor de Hovering.',
     representativeTitle: 'Advocada directora',
     teamTitle: 'Advocats i personal',
-    partnerTitle: 'Auditor associat',
+    partnerTitle: 'Soci auditor',
     introLabel: 'Presentació',
     educationLabel: 'Formació',
     experienceLabel: 'Experiència',
@@ -1351,9 +1351,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Advocada directora a Taiwan',
       'chang-rongxuan': 'Advocat a Taiwan',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Direcció d’operacions de Corea',
-      'huang-shengping': 'Auditor associat',
+      'chang-fangyu': 'Ajudant jurídic',
+      'son-jungmin': 'Responsable d’operacions de Corea',
+      'huang-shengping': 'Soci auditor',
     },
   },
   is: {
@@ -1813,7 +1813,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Civil litigation and damages': 'Litigis civils i danys',
     'Trademark and patent filings': 'Presentació de marques i patents',
     'Visa and residency': 'Visat i residència',
-    'Family and labor disputes': 'Conflictes de família i laborals',
+    'Family and labor disputes': 'Conflictes familiars i laborals',
   },
   is: {
     'Taiwan company setup': 'Félagastofnun á Taívan',
@@ -4557,35 +4557,35 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Màster (M.S.), Institute of Finance, National Taiwan University',
-        'Grau (B.A.) amb doble especialitat en Dret i Finances, National Chengchi University',
+        'Grau (B.A.), doble grau en Dret i Finances, National Chengchi University',
         'Estudianta d’intercanvi a Kobe University i Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fundació d’Assistència Jurídica, sucursal de Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Va treballar abans al Ministry of Education, Legal Affairs Division, centrat en conflictes administratius i civils.',
+        'Va treballar abans a la Divisió d’Afers Jurídics del Ministeri d’Educació (Ministry of Education, Legal Affairs Division), centrat en conflictes administratius i civils.',
         'Té experiència en assumptes d’universitats, drets del professorat i reclamacions administratives.',
       ],
       education: ['Grau en Dret (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Divisió d’Afers Jurídics del Ministeri d’Educació (Ministry of Education, Legal Affairs Division)',
         'Advocat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal amb anys de treball com a paralegal sènior en diversos despatxos, a càrrec del suport processal, del dret d’empresa i de la inversió estrangera.',
+        'Ajudant jurídic amb anys de treball com a ajudant jurídic sènior en diversos despatxos, a càrrec del suport processal, del dret d’empresa i de la inversió estrangera.',
         'Dona suport a litigis, constitució de societats, tràmits d’aprovació d’inversió estrangera, sol·licituds de llicència i l’intercanvi entre Corea i Taiwan.',
       ],
       education: ['Grau en Dret (LL.B.), Tunghai University'],
       experience: [
-        'Paralegal sènior, Boyin Law Firm',
-        'Paralegal sènior, Muyang International Law Firm',
+        'Ajudant jurídic sènior, Boyin Law Firm',
+        'Ajudant jurídic sènior, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Imatge principal](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Qui hagi llegit [Constitució de societats a Taiwan — part bàsica](/ca/columns/taiwan-company-establishment-basics) i [Constitució de societats a Taiwan — part avançada 1](/ca/columns/taiwan-company-establishment-advanced-1) també pot consultar Constitució de societats a Taiwan — part avançada 2.
+Aquest text és la part avançada 2, per a qui ja hagi llegit [Constitució de societats a Taiwan — part bàsica](/ca/columns/taiwan-company-establishment-basics) i [Constitució de societats a Taiwan — part avançada 1](/ca/columns/taiwan-company-establishment-advanced-1).
 
 ​
 
@@ -45,7 +45,7 @@ Per exemple, si es tracta de renda salarial obtinguda a Taiwan, ha de presentar 
 
 Si es tracta de dividends i beneficis derivats d’una inversió en un negoci a Taiwan, ha de presentar còpia del justificant de retenció sobre aquests dividends i beneficis (股息和紅利的扣繳憑單影本).
 
-Si la tramesa es fa des d’un compte bancari de Corea, no cal adjuntar documents relatius a l’origen dels fons.
+Si, en l’exemple coreà de la pregunta 1, la tramesa es fa des d’un compte bancari de Corea, no cal adjuntar documents relatius a l’origen dels fons.
 
 **​**
 

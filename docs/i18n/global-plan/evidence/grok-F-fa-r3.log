@@ -1,0 +1,129 @@
+WO-F-fa r3 — Grok 4.7 fix lane — 2026-09-23
+Locale: Persian (Iranian, formal شما; ی/ک, ZWNJ)
+Workspace: /Users/son7/Projects/tseng-law-fix-fa-r3
+No git add/commit/push.
+
+Reviews: docs/i18n/global-plan/reviews/native/rounds/r3/fa-a.md (36 rows), fa-b.md (37 rows).
+Rules applied: RULEBOOK-FIX R2–R17 where an instance remained; ACCEPTED-ROUND skip rules.
+R2–R11 and R12–R16 were already in the machine translation (Korea framed as an example, consultation lock negative, Wei Tseng ungendered where Persian does not mark gender, ROC years glossed with 民國, comma thousands, TWD 1.57M byte-identical, roles already in Persian). Unflagged prose was not reopened. No Arabic ي/ك in the Persian columns or the fa strings. No test file was changed: nothing pinned the rewritten Persian strings. llms.txt fa notices were not rewritten (consultationNotice / confidentialNotice still match the FAQ and privacy sentences).
+
+## Rows applied
+
+Part a
+1 P1 inquiry sourceLanguageNotice: صفحهٔ متن اصلی, and «به زبان {language}».
+2 P1 004 link label for pcode=G0340028&flno=3. The label now names the non-resident dividend withholding rule and مادهٔ 3, same URL. The Korean link text is 영업세법 제10조, so the label also keeps «نه مادهٔ 10 قانون مالیات کسب‌وکار» or the checker reports a missing 10. Column 004 still passes; numbers stay sourceCount=targetCount=95. The numbers WARN on that file is the pre-existing 제3자 ordinal note.
+3 P1 009: either party, depending on who is at fault. Reworded inside the three existing short blocks; blocks were not merged.
+4 P2 pricing answer: هزینهٔ دادگاه.
+5 P2 privacy: دسترسی به داده‌ها، اصلاح یا حذف آن‌ها.
+6 P2 «تا ببینید آیا». Same missing آیا in the services intro (1 extra).
+7 P2 family service: اعمال یا تحمل حقوق و تکالیف نسبت به فرزند صغیر, gloss kept.
+8 P2 team bio: حق مدرسان، not faculty pay.
+9 P2 001 special approval, FAQ and body (2): موافقت استثنایی.
+11 P2 003: suspended sentence may be issued and the prison term not executed; issuance is not guaranteed. R3’s “not a promise” stays.
+12 P2 003: کاهش خسارت به سبب تقصیر زیان‌دیده (Art. 217). منفعت ازدست‌رفته (lost profit) was left.
+13 P2 003: مزایای بیمهٔ اجباری, including the benefit the driver may claim and the link label.
+15 P2 004: ناشر مستقلی نیست (FAQ, section 4, and the listing paragraph: 3). The wrong 公開發行公司 gloss on that sentence was removed; the term remains where it really means a public company.
+16 P2 004: محدودیت جمع مشوق‌ها (FAQ and body: 2).
+17 P2 006: (سنم لو رفت.)
+18 P2 007 ground 4: خویشاوند نسبی در خط مستقیم.
+19 P2 007: ورود غیرمجاز به حساب.
+20 P2 008 difficulty row: آسان / دشوار / آسان. The sentence under the article that payment is not guaranteed stays.
+22 P2 009: better placed to protect its rights; still not a promised outcome.
+23 P2 plural نیستند.
+25 P2 007 sources line: the stray 1 no longer sits between منابع and دست‌اول. It stays as (ردهٔ 1) because Korean 1차 is a counted digit.
+26 P2 no particular lawyer is promised.
+27 P2 به‌کار بردن for speaking a consultation language. See systemic counts.
+28 P2 عددی که از پیش تعیین شده باشد.
+29 P2 بازبینی وکیل Wei Tseng.
+30 P2 the partner CPA انجام می‌دهد the analysis. The Korea-operations «پشتیبانی می‌کند» is coordination via systems and was left.
+31 P2 skip link: پرش از ناوبری.
+32 P2 treaty jurisdiction: حوزهٔ اقامت / قلمرو طرف مقابل in 001, and the 004 treaty paragraphs. Geographic منطقه (a city, a licensed zone) was left.
+33 P2 003: آزرده و خشمگین می‌شود.
+34 P2 004: استثنا می‌گذارد.
+36 P2 003 benefit figures: دلار جدید تایوان, digits unchanged. Same paragraph as row 13.
+
+Part b
+1 P1 011: دست‌کم 7 روز پیش از روز بازرسی.
+2 P2 011 consumer trial use (the registration sentence, the timeline sentence, and the checklist: 3).
+3 P2 011: صرف همین سپردن does not transfer the manufacturer’s or importer’s duty.
+4 P2 010: the reported settlement is not the confirmed end of the first-instance judgment.
+5 P2 010: آموزش داده شد (image alt and the link under it: 2).
+6 P2 010: درجهٔ ازکارافتادگی.
+7 P2 010: میانجیگری مصرف‌کننده, distinct from the appeal settlement.
+8 P2 013: the one-year window covers the address, the lease, the preparatory account, and the remittance. Reworded inside the two existing blocks.
+9 P2 013: تنظیم رسمی قرارداد اجاره نزد سردفتر (公證).
+10 P2 014 FAQ gloss: 人力替補可能性. The body already said امکان جایگزینی نیرو without the wrong gloss.
+11 P2 014: طرح دوره، جدول زمان‌بندی (employer checklist and worker list: 2).
+12 P2 014: تحویل‌های معمول کار، آموزش ایمنی پایه.
+13 P2 016: نام ثبتی مال.
+14 P2 016: the claim’s result is reflected first.
+15 P2 017: رفع نقص درخواست و تأمین زمین…
+16 P2 017: دستور خروج از تایوان.
+17 P2 012: the Article 101 relative clause closes.
+19 P2 010: اگر ممکن است جریان حادثه ارکان جرم را پر کند.
+20 P2 010: the multipliers no longer interrupt the object. Digit kept as «تا حداکثر 1 برابر»; dropping 1 would fail numbers (Korean 1배).
+21 P2 011: the factor list has a verb.
+22 P2 017: پیوست شود inside the باید … شود chain.
+24 P2 رویارویی for “in practice” or “respond”. See systemic counts.
+25 P2 010: بنگاه for the business operator (3, including the punitive-damages sentence).
+26 P2 010: دانشجوی دانشگاهی کره‌ای با وزن 70 کیلوگرم (alt and link: 2).
+27 P2 011: شیوهٔ حسابداری و مالیات … فرق دارند.
+28 P2 011: خاصیت ضدعفونی.
+29 P2 011: ثبت به‌عنوان واردکننده.
+30 P2 014: سازوکاری نیست که استعفای کارگر را عملاً یا از نظر قانونی ناممکن کند.
+31 P2 014: جلد مواد آموزشی.
+32 P2 014: اعلام هدف پرداخت.
+33 P2 016: نمایندگی در دعوا.
+34 P2 016: تدبیر تکمیلی, and سازوکار نظارت in the trust paragraph.
+35 P2 016: نتیجهٔ یک نظام بار دیگر در نظام دیگر به حساب نمی‌آید.
+36 P2 017: تسلیم پلاک برای ابطال ثبت, and the next sentence.
+37 P2 018: حضور وفق مادهٔ 386, not a work point.
+
+## Rows skipped
+
+a10 — Do not restore «courts currently generally impose about 3 / 4 / 6 months». R3 already requires «in some judgments … no typical or guaranteed outcome», and ACCEPTED-ROUND forbids making a result sentence more positive. The 3-month, 4-month, and 6-month figures are already distinguished.
+a14 — «بیشترین خسارت» was not restored. R3 replaces “the maximum / highest possible compensation” with the compensation the facts support. Only the broken را was repaired: «خسارتی را که وقایع و ادله پشتیبانی می‌کند».
+a21 — Do not restore «B غرامت اخراج قابل توجهی گرفت». R3 requires the anecdote to stop at establishing the statutory entitlement. The current sentence already does that.
+a24 — U+200B not deleted, Q16–Q20 not turned into headings, and the empty `**​**` lines in 005 not removed. 003, 005, 006, 008, and 009 match the Korean source, including lines whose only character is U+200B. checkBlocks fails when the ZWSP count or the heading levels diverge.
+a35 — «TWD 1.57M» left byte-identical. ACCEPTED-ROUND: a test pins it.
+b18 — U+200B not deleted in 013 and 015. Same checker reason as a24.
+b23 — Headings were not renumbered from 7 to 6 and 8 to 7. The English source has the same gap, and ACCEPTED-ROUND says not to change numbers. Wording inside those headings was left.
+
+## Systemic patterns and instance counts
+
+- به‌کار بردن for being able to speak a consultation language: 6 (home paragraph, contact description, contact heading, FAQ question, inquiry notice, form option).
+- سمت اقامت / منطقه for the other treaty jurisdiction: 4 sentences (001 tax sentence; 004 «مقیمان دو قلمرو», «قلمرو طرف مقابل», and the business-profits paragraph). Other منطقه (address, licensed zone, another country) left.
+- رویارویی for “in practice” or “respond”: 9 (003 title and H1, 003 «ترتیب عمومی رسیدگی», 012 related-link label, 010 «شیوهٔ پیگیری» and «در عمل», 011 body and checklist, 014 «بروز اختلاف»).
+- دستگاه for a mechanism or safeguard: 3 (014 سازوکار, 016 تدبیر تکمیلی, 016 سازوکار نظارت). «8 دستگاه» and «کار با دستگاه» still mean equipment and were left.
+- صاحب فعالیت for the business operator: 3, all in 010, now بنگاه.
+- U+200B layout: 0 removed (see skipped rows).
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---
+       0
+---
+TSC_OK
+---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---
+      22
+```
+
+The git count 22 is from that run, before this log file existed. It includes the pre-existing WO-F-fa.txt modification and the untracked review files fa-a.md and fa-b.md.
+
+## Reviewer got wrong (not applied)
+
+- a10 and a21, and the «بیشترین» half of a14, treat the R3 advertising hedges as mistranslations and ask to put the concrete sentence or the high result back. Those hedges are the standing rule. The 3/4/6-month distinction and the “not guaranteed” sentence were already present; B’s anecdote already stops at statutory entitlement.
+- a24 and b18 treat the zero-width spacers, the empty bold lines, and Q16–Q20 as body lines as a Persian layout defect. They are copied from the Korean source and the checker counts them. Removing them, or promoting Q16–Q20 to headings, fails checkBlocks / checkHeadings.
+- b23 asks to close a heading-number gap the English source also has. Renumbering would diverge from that source and would change a number.

@@ -3673,7 +3673,7 @@ export const guidanceTeamBios: Record<
     'chang-rongxuan': {
       intro: [
         'پیش‌تر در وزارت آموزش، بخش امور حقوقی (Ministry of Education, Legal Affairs Division) کار کرده و بر اختلافات اداری و مدنی متمرکز بوده است.',
-        'در پرونده‌های مربوط به دانشگاه‌ها، حقوق اعضای هیئت علمی و شکایت اداری سابقه دارد.',
+        'در پرونده‌های مربوط به دانشگاه‌ها، حق مدرسان و شکایت اداری سابقه دارد.',
       ],
       education: ['کارشناسی حقوق (LL.B.)، National Chung Hsing University'],
       experience: [
@@ -3703,7 +3703,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'دوره‌های کارشناسی و کارشناسی ارشد حسابداری را در National Chengchi University به پایان رسانده و اکنون دفتر حسابداری اداره می‌کند.',
-        'تحلیل یکپارچهٔ خطر حقوقی، مالیاتی و مالی را برای موکلان شرکتی پشتیبانی می‌کند.',
+        'تحلیل یکپارچهٔ خطر حقوقی، مالیاتی و مالی را برای موکلان شرکتی انجام می‌دهد.',
       ],
       education: [
         'کارشناسی ارشد (M.A.) حسابداری، National Chengchi University',

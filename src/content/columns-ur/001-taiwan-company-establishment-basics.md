@@ -131,7 +131,7 @@ faq:
 - [تائیوان وزارتِ اقتصادی امور، تجارتی انتظامیہ — کمپنی و کاروباری اندراج کی رہنمائی](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [غیر ملکی سرمایہ کاری والے کاروبار کے انتظامی ذمہ دار کی کام کی اجازت کا دستی](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [تائیوان وزارتِ مالیات — تائیوان–کوریا انکم ٹیکس معاہدے کی رہنمائی](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [تائیوان کے قوانین کا ذخیرہ — کاروباری ٹیکس کی عام شرح](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [تائیوان کے قوانین کا ذخیرہ — غیر رہائشی آمدنی پر ماخذ کٹوتی کی شرحوں کا معیار (各類所得扣繳率標準)، دفعہ 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [تائیوان کاروباری ٹیکس کے گوشوارے کے دور کی رہنمائی](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
 - [تائیوان منافع بخش ادارے کے انکم ٹیکس کی شرح کی رہنمائی](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [غیر ملکی کے ڈیویڈنڈ کی آمدنی پر ٹیکس کی رہنمائی](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)

@@ -744,7 +744,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     title: 'دفاتر',
     description: 'Hovering International Law Firm کے تائیوان میں واقع دفاتر کے پتے۔',
     officeLabel: 'دفتر',
-    mapPreviewLabel: 'نقشے کا پیش منظر',
+    mapPreviewLabel: 'نقشے کا پیش نظارہ',
     koreaOfficeTitle: 'کوریا دفتر',
     koreaAddressCardLabel: 'کوریا دفتر کا پتہ',
     koreaMapLinkLabel: 'Naver Map پر دیکھیں',

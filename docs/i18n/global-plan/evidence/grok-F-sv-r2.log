@@ -1,0 +1,104 @@
+WO-F-sv r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-sv-r2
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: sv-a 33, sv-b 33 (66).
+
+Applied: 62.
+Skipped: 4 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+One test expectation was updated: `src/data/__tests__/guidance-disclosure-parity.test.ts` Swedish `not-legal-advice` was `/juridiskt yttrande/` and now is `/juridisk rådgivning/`, matching the answers FAQ sentence this round rewrote. Nothing else in that test changed. "TWD 1.57M" is not in the Swedish bio (the bio says "1,57 miljoner TWD") and was not touched. `consultationNotice` and `confidentialNotice` were left byte-identical; `discoveryNotice` still contains the literal `llms.txt`.
+
+### Applied
+sv-a 1–10, 12–32.
+sv-b 1–18, 20–31, 33.
+
+Adaptations (still applied):
+- sv-a 2. Link label no longer calls the target lagen om omsättningsskatt. The URL is unchanged (`pcode=G0340028&flno=3`). "(artikel 10)" stays in the label because the Korean source line is 영업세법 제10조; dropping 10 failed `numbers`.
+- sv-a 4. "karta" → "översikt". "garanterad synlighet" was not used: the Swedish pack test bans `/garanti/i`. The notice says "inte säkerställd synlighet". The token `llms.txt` stays.
+- sv-a 9. "teknisk garanti" was not used, same ban. The privacy intro says "utgör inte ett tekniskt åtagande".
+- sv-a 17. Q16 was rephrased inside the existing body line ("Kan man efter olyckan lämna allt åt försäkringsgivaren?"). It was not promoted to a `##` heading.
+- sv-a 19. "per en dag" ×2 → "per 1 dag", not "per dag". Korean is 1일로, and the Swedish lexicon counts "en dag" as 1; "per dag" would drop that 1. "för 1 skadad person och 1 olycka" keeps both source digits (피해자 1명·사고 1건). Space thousands were not introduced.
+- sv-a 23. The self-reference is gone, both hrefs stay, and "fördjupning del 2 (公司設立)" stays so the Korean 2 is still in the block. The sentence now says this part is del 2 and follows the earlier articles.
+- sv-b 13. "har varje delägare 1 röst (1 röst per person)" keeps both source 1s (주주 1인 1표). "varje delägare en röst" would drop them; bare "en" is not in the Swedish number lexicon unless it is followed by a unit.
+- sv-b 20. "(1 gång)" → "1 gånger den faktiska skadan", parallel with "5 gånger" and "3 gånger". Korean 1배 is a counted 1, so the digit stays.
+- sv-b 27 and the 013/015 one-clause pattern. Suggested rewrites merge the next blocks into the first. Block counts are locked. Each fragment was made a sentence inside its own block.
+- sv-b 33. Code-before-amount in 011, 017 and 018 is now amount then TWD, with the dotted thousands the checker accepts (`40.000 till 200.000 TWD`, `25.000.000 TWD`, `30.000.000 TWD`). No spaces.
+
+Guidance pack (Swedish strings only):
+- answers FAQ: "inte juridisk rådgivning, inte en bekräftad tid".
+- pricing: the form-submission sentence "Att skicka en begäran via den här sidan är också kostnadsfritt." This is the German "kostenfrei" about sending the form, not a free consultation. The next section still says the first meeting is not free.
+- home: "lotsar klienter".
+- pricing effort: "en mycket olika stor arbetsinsats".
+- contact item: "Språket du skriver på".
+- disclaimer: "Byrån är verksam" / "handlar endast om".
+- office alt: "Advokatens arbetsrum".
+- llms discoveryNotice, as under sv-a 4.
+
+### Skipped
+- sv-a 11 and sv-b 32, the space-thousands request ("500 000", "1 579 589 TWD"). ACCEPTED-ROUND skips space separators. `NUMBER_THOUSAND_STYLE.sv` is `dot`. Amounts stay `500.000`, `1.570.000`, `3.000.000`.
+- sv-a 17's heading promotion and sv-b 19. U+200B lines were not removed, and Q16–Q20 were not made headings. Heading levels, block counts and ZWSP counts match the Korean source (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). The blog sentences in that stretch were rephrased inside the existing blocks.
+- sv-a 33. 008 and 009 frontmatter `url` Hangul slugs. Canonical source metadata. Not rewritten. The fullwidth colon inside those urls stays.
+
+## Systemic patterns
+
+- Thousands with a period (sv-a and sv-b verdicts). 0 instances changed. The checker requires dots for Swedish.
+- U+200B blanks and personal voice (sv-a verdict: 003 from Q16, 005, 006, 008, 009). ZWSP lines: 0 deleted. First person rewritten inside existing blocks: 003 three lines ("Enligt min erfarenhet", "Jag rekommenderar", "vill jag peka"); 006 the age aside; 008 "Jag är advokaten Wei Tseng", the table lead-in, "Jag berättar om ett ärende", "min part, herr B". 005 and 009 had no first person. The client's "Jag, [namn]" in 008 and the male manager "han gav B" stay. Herr B stays male.
+- "det är inte därför att … som" (sv-a verdict, 004). 4 sentences in §2–§7, including the doubled clause on costs and the doubled clause on the 183-day / 6-month inference.
+- Surplus "en"/"1" in a time phrase. "per en dag" ×2 → "per 1 dag". "per ett år" ×2 in 008 → "per 1 år". The "1 skadad / 1 olycka" digits were kept; only "person" was added.
+- Wrong noun "avslutningsbehörighet" (sv-a 16). 2: the representative list in 001 and "företrädarens avslutningsbehörighet" in §5. Both are now "behörighet att sluta avtal".
+- Kinmen och/eller (sv-b verdict). 4: FAQ and body "i Kinmen (金門) eller i Lienchiang (Matsu, 連江、馬祖)", "för den som driver i Kinmen eller i Lienchiang (Matsu)", and "måttet för Kinmen eller Lienchiang (Matsu)". Amounts unchanged.
+- False friends named in the sv-b verdict. Formulär → bolagsform (1). Post → fråga (1). Bromsmarginal → tid att bromsa (2).
+- 013 and 015 one clause per paragraph. 013: the capital check, the bank employee's report, the earlier-article experience line, the plan-timing pair, the deadline pair, the identity-check pair, the same-day pair, the committee pair, the work-history pair, the 2 månadshyror wording, "bör driftstället sökas", the negotiation pair, the office-lease continuation, and the pre-lease check. 015: the market-location chain (3 blocks), the Taipei query pair, the land-office pair, the guidance-citation pair, and the closing line. Block count unchanged.
+- Calques "1 gång", "anordning", "greppa". 010 multiplier as above. 014 "anordning" → "inte något som … hindrar arbetstagaren från att säga upp sig". 014 "greppa" → "fastställa vilken kostnad som faktiskt har burits".
+- Currency code before the amount (sv-b 33). 011: 2 ranges of 40.000–200.000 and 3 ranges of 600.000–5.000.000. 017: 3 × 25.000.000 and 6 × 10.000.000. 018: 30.000.000 and 100.000.000. Dots kept. 010 was already amount-first and was not reformatted.
+- Voting rule and emerging board. 018 "varje delägare 1 röst" as above, and "registrering i den förbörsliga handeln (興櫃)". The work-permit sentence names arbetsministeriet (勞動部).
+- R2–R10. The country-specific Korea note in 001 and 004, the Taiwan emergency line (119/110/112), the softened 003 custody sentences, the consultation lock, and "Hon företrädde" were already in place. This round's verdict says gender and the consultation lock hold. "VÅRT TEAM", "KONTOR", and "Fullständig profil (på engelska)" were already Swedish. Bare "Paralegal" in the Swedish role line was not a review row and is not an R2–R10 item (R12 is the later-locale chrome rule); left.
+
+## Checker and digits
+
+Natural forms that drop a source digit fail `numbers`. The checker compares to the Korean file. Digit-bearing forms kept, and noted above: 003 "per 1 dag" and "1 skadad person och 1 olycka", 004 "(artikel 10)", 005 "del 2", 008 "per 1 år", 010 "1 gånger", 013 "2 månadshyror", 018 both 1s in the voting rule.
+
+Space thousands were not tried. The style table already says Swedish is dot.
+
+## Reviewer points not followed
+
+- sv-a 11 and sv-b 32. Swedish typography would use a space as the thousands separator. The checker and ACCEPTED-ROUND do not. Dots stay.
+- sv-a 17 and sv-b 19. The U+200B lines are not disposable blanks. The counts match the Korean source. Promoting Q16–Q20 would also change heading levels.
+- sv-a 4 and sv-a 9. "Garanterad" / "teknisk garanti" is the right gloss of garantiert / technische Garantie, and it would fail the Swedish forbidden-token scan (`/garanti/i` on every guidance string, including `GUIDANCE_LLMS_NOTICES.sv`). "Säkerställd synlighet" and "tekniskt åtagande" carry the same limit without that token.
+- sv-a 19's "per dag" / "per år", sv-b 13's "en röst", and sv-b 20's deletion of "(1 gång)". Those 1s are in the Korean source (1일, 1년, 1인 1표, 1배). The suggested Swedish is better, and it fails `numbers`.
+- sv-a 2 without "artikel 10", and sv-a 23 without "del 2". Same number lock. The descriptive fix is in; the digit stays.
+- sv-a 33. The Hangul `url` values are live source metadata. The reviewer already said not to edit them.
+
+Nothing else in the two verdicts looked factually wrong. "Villkorlig dom (緩刑)" was already the suspended sentence, not parole, and was not a finding.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-sv --lang sv 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=82
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sv src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+That 25 is the run before this log existed. Re-running only `git status --short | wc -l` after the file was written prints 26 (this log, untracked).

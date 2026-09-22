@@ -42,7 +42,7 @@ När organisationsformen jämförs ska därför inte bara ansvarsomfånget beakt
 
 Inkomstskatteavtalet (所得稅協定) mellan Taiwan och Korea trädde i kraft den 27 december 2023 och tillämpas från och med den 1 januari 2024. Om avtalets tillämpningsvillkor är uppfyllda är den högsta skattesatsen i källstaten 10 % för vart och ett av inkomstslagen utdelning, ränta och royalty. Landsspecifik anmärkning: avtalet gäller förhållanden med anknytning till Korea. Om det finns ett skatteavtal mellan Taiwan och ditt eget hemland, och vad ett sådant avtal i så fall innehåller, måste prövas särskilt; det är ingen regel som gäller investerare från hela världen. Företagsvinster beskattas i princip på hemviststatens sida, utom bland annat när det i det andra området finns ett avtalsenligt fast driftställe (常設機構, PE); verksamhetens faktiska utförande ska dock prövas först.
 
-I det avtalsenliga fasta driftstället kan ingå fasta anläggningar såsom ledningsställe, filial och kontor, byggnadsarbeten på mer än 6 månader, tjänster som under någon 12-månadersperiod sammanlagt överstiger 183 dagar, samt företrädare som upprepat utövar avslutningsbehörighet. Dessa 4 typer har var och en andra villkor; om det finns en fast plats eller företrädarverksamhet ska prövning ske oberoende av tjänstedagarna. Enbart talet 183 dagar ska därför inte avgöra om ett fast driftställe uppkommer eller om företagsvinster beskattas.
+I det avtalsenliga fasta driftstället kan ingå fasta anläggningar såsom ledningsställe, filial och kontor, byggnadsarbeten på mer än 6 månader, tjänster som under någon 12-månadersperiod sammanlagt överstiger 183 dagar, samt företrädare som upprepat har behörighet att sluta avtal. Dessa 4 typer har var och en andra villkor; om det finns en fast plats eller företrädarverksamhet ska prövning ske oberoende av tjänstedagarna. Enbart talet 183 dagar ska därför inte avgöra om ett fast driftställe uppkommer eller om företagsvinster beskattas.
 
 ![](../images/001-taiwan-company-establishment-basics/img-02.jpg)
 
@@ -100,7 +100,7 @@ Enbart bolagsbildningen ger varken arbetstillstånd eller uppehållstillstånd. 
 
 Studerande kan ansöka om investering och bolagsbildning. Att ha blivit investerare eller delägare betyder dock inte att den nuvarande vistelsestatusen tillåter arbete eller bolagsledning i Taiwan. Den som faktiskt ingår avtal, leder anställda eller utövar den löpande förvaltningen ska före verksamhetens början pröva arbetstillståndets adressat och villkor.
 
-I prövningen av arbetstillståndet kan sökandens funktion och kvalifikation, rollen i bolaget, investeringsförhållandet, arbetsgivarens resultat och de ingivna handlingarna prövas samlat. Även efter att arbetstillståndet meddelats ansöks uppehållskortet särskilt efter vistelsens syfte; varje tillstånds giltighetstid och förnyelsevillkor ska prövas utifrån det berörda beslutet och den då tillämpliga rätten.
+I prövningen av arbetstillståndet kan sökandens funktion och kvalifikation, rollen i bolaget, investeringsförhållandet, arbetsgivarens resultat och de ingivna handlingarna prövas samlat. Även efter att arbetstillståndet meddelats ska uppehållskortet sökas särskilt utifrån vistelsens syfte; varje tillstånds giltighetstid och förnyelsevillkor ska prövas utifrån det berörda beslutet och den då tillämpliga rätten.
 
 ### Bolagskapital och arbetstillstånd för utländska chefer
 
@@ -120,7 +120,7 @@ Den allmänna satsen för den taiwanesiska omsättningsskatten (營業稅) är 5
 
 Omsättningsskatt och inkomstskatt för vinstsyftande företag skiljer sig åt i fråga om skatteföremål och deklarationssätt; skatten på omsättningen och skatten på den skattepliktiga inkomsten ska skiljas åt. Vid utbetalning av utdelning, ränta, royalty eller tjänstersättning till utländska delägare eller närstående företag ska betalningens karaktär och mottagarens ställning, interna källskatteregler och eventuell tillämpning av inkomstskatteavtalet prövas i förväg.
 
-Inkomstskatteavtalet Taiwan–Korea trädde i kraft den 27 december 2023 och tillämpas från och med den 1 januari 2024; på ränta och royalty som uppfyller villkoren gäller också den högsta satsen i källstaten om 10 %. Vid prövningen av beskattningsrätten över företagsvinster ska de 4 typerna av fast driftställe som redogjorts för ovan alla beaktas. Utöver tjänstedagarna ska fast anläggning, byggnadstid, företrädarens avslutningsbehörighet och den faktiska verksamheten prövas tillsammans.
+Inkomstskatteavtalet Taiwan–Korea trädde i kraft den 27 december 2023 och tillämpas från och med den 1 januari 2024; på ränta och royalty som uppfyller villkoren gäller också den högsta satsen i källstaten om 10 %. Vid prövningen av beskattningsrätten över företagsvinster ska de 4 typerna av fast driftställe som redogjorts för ovan alla beaktas. Utöver tjänstedagarna ska fast anläggning, byggnadstid, företrädarens behörighet att sluta avtal och den faktiska verksamheten prövas tillsammans.
 
 Avtalets begränsade sats gäller inte automatiskt enbart därför att ett avtal finns. Det ska prövas den skattskyldiges avtalsenliga hemvist och egenskapen som verklig huvudman, inkomstens rättsliga karaktär samt det hemvistintyg (居住者證明) som ska ges in och ansökningshandlingarna. Transaktionsstruktur, avtal, faktura, faktiskt arbete och betalningsflöde ska hållas i överensstämmelse; deklarationsfrister och bevarande av underlag ska prövas särskilt.
 

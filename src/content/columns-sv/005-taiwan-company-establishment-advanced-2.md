@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Bild till artikeln](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-De som har läst [Bolagsbildning i Taiwan – grunder](/sv/columns/taiwan-company-establishment-basics) och [Bolagsbildning i Taiwan – fördjupning del 1](/sv/columns/taiwan-company-establishment-advanced-1) kan också ta del av Bolagsbildning i Taiwan – fördjupning del 2 (公司設立).
+Den här delen är fördjupning del 2 (公司設立) och följer på [Bolagsbildning i Taiwan – grunder](/sv/columns/taiwan-company-establishment-basics) och på [Bolagsbildning i Taiwan – fördjupning del 1](/sv/columns/taiwan-company-establishment-advanced-1).
 
 ​
 
@@ -37,7 +37,7 @@ Innan du överför kapitalet (資本金匯款) bör du fråga din bank i det lan
 
 **​**
 
-**2. Vid inbetalning av bolagskapitalet, kan man överföra taiwanesiska dollar (新臺幣, TWD) från sitt personliga konto i Taiwan till det taiwanesiska bolagets förberedelsekonto?**
+**2. Vid inbetalning av bolagskapitalet, kan man överföra nya taiwanesiska dollar (新臺幣, TWD) från sitt personliga konto i Taiwan till det taiwanesiska bolagets förberedelsekonto?**
 
 Det är möjligt, men du måste ge in handlingar som styrker ursprunget till de taiwanesiska dollar som förvärvats i Taiwan.
 

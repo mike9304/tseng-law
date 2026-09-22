@@ -27,33 +27,33 @@ Följande frågor och svar är tänkta som hjälp för den som överväger att b
 
 När en utlänning bildar bolag i Taiwan ska en investeringsplan (投資計畫書) ges in till avdelningen för investeringsprövning vid ekonomiministeriet (經濟部投資審議司) för prövning.
 
-Avdelningen ska kontrollera om det aktuella kapitalet (資本額) verkligen används för investeringsändamål
+Avdelningen ska kontrollera att det aktuella kapitalet (資本額) verkligen används för investeringsändamål.
 
-och att utländska aktörer inte för in medel under en annan förevändning.
+Den ska också kontrollera att utländska aktörer inte för in medel under en annan förevändning.
 
 När investeringsplanen upprättas behöver den exakta bolagsadressen inte anges; det räcker med regionen (exempel: staden Taipei). ​
 
 När bolagets förberedelsekonto (公司籌備處帳戶) senare öppnas hos banken granskar dock många banker hyresavtalet (租賃契約) och inspekterar bolagsadressen på plats.
 
-En anställd vid en taiwanesisk bank har själv sagt till mig att
+En anställd vid en taiwanesisk bank har beskrivit läget så här.
 
-många utlänningar på senare tid försvinner efter kontoöppningen, så att kontoöppning hanteras allt striktare.
+Många utlänningar försvinner på senare tid efter kontoöppningen, så att kontoöppning hanteras allt striktare.
 
-I den tidigare texten om grunderna skrev en läsare att kontoöppningen var det svåraste steget, och det stämmer med min erfarenhet.
+I den tidigare texten om grunderna beskrevs kontoöppningen som det svåraste steget, och det stämmer med byråns erfarenhet.
 
 Eftersom fallen av penningtvätt (洗錢) är mycket många i Taiwan blir öppning av bankkonton allt striktare.
 
 **Råd:**
 
-Eftersom prövningen av investeringsplanen också tar tid
+Prövningen av investeringsplanen tar också tid.
 
-bör du upprätta investeringsplanen och söka bolagets registreringsadress samtidigt.
+Du bör därför upprätta investeringsplanen och söka bolagets registreringsadress samtidigt.
 
 Enligt artikel 9 i lagen om utländska medborgares investeringar (外國人投資條例) ska det godkända tillskottet inflyta i sin helhet inom den frist som den behöriga myndigheten har fastställt (核定期限); fristen ska bekräftas i respektive godkännandehandling (i praktiken fastställs den ofta till omkring 1 år).
 
-Inom den fristen, när bolagsadressen har hittats och hyresavtalet har ingåtts,
+Inom den fristen, när bolagsadressen har hittats och hyresavtalet har ingåtts, återstår ännu ett steg.
 
-finns tillräcklig tid att öppna förberedelsekontot hos banken och överföra kapitalet.
+Det finns då tillräcklig tid att öppna förberedelsekontot hos banken och överföra kapitalet.
 
 ​
 
@@ -61,25 +61,25 @@ finns tillräcklig tid att öppna förberedelsekontot hos banken och överföra 
 
 Det är möjligt.
 
-Banken kräver i allmänhet dubbel identitetskontroll,
+Banken kräver i allmänhet dubbel identitetskontroll.
 
-och utan uppehållskort kan du hos Taiwans immigrationsmyndighet begära ”**grunduppgiftsblanketten för det enhetliga id-numret**” (統一證號基本資料表).
+Utan uppehållskort kan du hos Taiwans immigrationsmyndighet begära ”**grunduppgiftsblanketten för det enhetliga id-numret**” (統一證號基本資料表).
 
-Utfärdande är möjligt samma dag,
+Utfärdande är möjligt samma dag.
 
-men immigrationsmyndigheten (移民署) är mycket välbesökt; det är därför lämpligt att komma tidigt och ta en kölapp.
+Immigrationsmyndigheten (移民署) är dock mycket välbesökt; det är därför lämpligt att komma tidigt och ta en kölapp.
 
 ​
 
 **3. Jag har hört att utbildning och yrkeserfarenhet ska anges vid prövningen av investeringsplanen, och oroar mig för att min utbildning och erfarenhet inte stämmer med branschen för det bolag jag vill bilda.**
 
-Ekonomiministeriets prövningskommitté granskar visst investerarens bakgrund,
+Ekonomiministeriets prövningskommitté granskar visst investerarens bakgrund.
 
-men prövningen tar sikte på om investeringsplanen är verklig, inte på att utbildningen ska matcha branschen exakt.
+Prövningen tar dock sikte på om investeringsplanen är verklig, inte på att utbildningen ska matcha branschen exakt.
 
-Du kan nämna all slags yrkeserfarenhet, även extrajobb,
+Du kan nämna all slags yrkeserfarenhet, även extrajobb.
 
-och redogöra i detalj så att de som prövar ärendet kan övertygas.
+Redogör i detalj så att de som prövar ärendet kan övertygas.
 
 På den punkten bör du gå igenom saken grundligt med en advokat i Taiwan.
 
@@ -95,15 +95,15 @@ Dessutom ger hyresvärden i taiwanesiska hyresavtal för butikslokaler ofta hyre
 
 Det är en period utan hyra, och den går att förhandla om.
 
-Det är inte lätt för en utlänning att hyra en butikslokal, och depositionen (押金) i Taiwan är ganska låg (vanligen 2 månader), så hyresvärdens skydd är begränsat;
+Det är inte lätt för en utlänning att hyra en butikslokal, och depositionen (押金) i Taiwan är ganska låg (vanligen 2 månadshyror), så hyresvärdens skydd är begränsat;
 
 hyresvärdar tvekar därför att hyra ut till utlänningar.
 
-Därför rekommenderar jag att söka driftstället tidigt.
+Därför bör driftstället sökas tidigt.
 
-Om förhandlingen med hyresvärden inte går smidigt
+Om förhandlingen med hyresvärden inte går smidigt finns ytterligare alternativ.
 
-kan du, om det behövs, föreslå notarisering av hyresavtalet (公證) eller en extra deposition.
+Du kan, om det behövs, föreslå notarisering av hyresavtalet (公證) eller en extra deposition.
 
 ​
 
@@ -117,11 +117,11 @@ Som redan angetts granskar banken hyresavtalet och inspekterar bolagsadressen p�
 
 Dessutom kräver stadsförvaltningen (市政府) vid den slutliga bolagsregistreringen att den registrerade adressen ligger i ett område där restaurangdrift är tillåten;
 
-om det är en kontorslokal är bolagsregistrering (公司登記) då inte möjlig.
+Om det är en kontorslokal är bolagsregistrering (公司登記) då inte möjlig.
 
-T.ex. om det rör sig om verksamhetsgrenar som är möjliga i kontorslokal, såsom reklam eller partihandel, kan bolaget bildas i en kontorslokal. Innan hyresavtalet ingås
+T.ex. om det rör sig om verksamhetsgrenar som är möjliga i kontorslokal, såsom reklam eller partihandel, kan bolaget bildas i en kontorslokal. Kontrollen bör göras innan hyresavtalet ingås.
 
-bör du kontrollera detta i förväg.
+Gör den kontrollen i förväg.
 
 *Den här texten är endast allmän vägledning. Rådgivning med advokat sker på engelska, kinesiska (中文), japanska eller koreanska; se kontaktsidan.*
 

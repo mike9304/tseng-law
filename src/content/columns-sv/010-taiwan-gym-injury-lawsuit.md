@@ -17,13 +17,13 @@ Utifrån ett ärende där en koreansk universitetsstudent skadades medan denne f
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Olyckan inträffade på ett gym i Taichung (臺中), under ett marklyftpass (硬舉) som leddes av tränaren. Efter skadan räcker det inte att bara utgå från att olyckan skedde inne på gymmet; måste man också granska användarens träningserfarenhet och hälsotillstånd, övningstyp och vikt, tränarens förklaringar och anvisningar, rörelsen och reaktionen just då, orsakssambandet (因果關係) mellan skadan och övningen, och de handlingar som stöder skadan.
+Olyckan inträffade på ett gym i Taichung (臺中), under ett marklyftpass (硬舉) som leddes av tränaren. Efter skadan räcker det inte att bara utgå från att olyckan skedde inne på gymmet. Man måste också granska användarens träningserfarenhet och hälsotillstånd, övningstyp och vikt, tränarens förklaringar och anvisningar, rörelsen och reaktionen just då, orsakssambandet (因果關係) mellan skadan och övningen, och de handlingar som stöder skadan.
 
 Jag var ombud (訴訟代理人) för käranden, den koreanska studenten. Distriktsdomstolen i Taichung förpliktade den 24 januari 2022, i domen i första instans i konsumentmål nr 7 för år 109 (2020) (109年度消字第7號), svaranden att betala [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den ränta som anges i domen.
 
 Därefter har pressen uppgett att parterna förliktes (和解) i andra instans. Enbart den officiella domen i första instans gör det inte möjligt att bekräfta utfallet i andra instans eller förlikningsbeloppet; den förlikning som pressen uppgett får inte läsas som ett bekräftat avslut av målet i första instans.
 
-Rubrikerna på pressuppgifter, nätinlägg och rättskommentarer om detta ärende, översatta till svenska, är följande. Rubrikerna nedan syftar bara till att presentera innehållet i varje länk; de betyder inte att denna text själv fastställer faktum.
+Rubrikerna på nyhetsartiklar, nätinlägg och rättskommentarer om detta ärende, översatta till svenska, är följande. Rubrikerna nedan syftar bara till att presentera innehållet i varje länk; de betyder inte att denna text själv fastställer faktum.
 
 ![En universitetsstudent, diskbråck (椎間盤破裂) efter marklyft på 90 kg… yrkar skadestånd mot gymmet](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
@@ -99,7 +99,7 @@ De skadeposter vars yrkande kan prövas är följande. Det faktiska erkännandet
 4. **Skada för nedsatt arbetsförmåga (勞動能力減損)**: Om följdskador och varaktig nedsättning av arbetsförmågan erkänns kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetsliv. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
 5. **Inkomstbortfall under återhämtningsperioden (收入損失)**: Den period då man faktiskt inte kunde arbeta på grund av behandling eller vila, och den inkomstminskning som följde, måste bevisas med lönehandlingar, skattedokument, närvarouppgifter med mera.
 6. **Icke-ekonomisk skada (非財產上損害)**: Beloppet för det psykiska lidandet fastställs av domstolen utifrån faktorer i varje ärende, som skadans grad, behandlingstid, följdtillstånd och partens konkreta omständigheter.
-7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till det faktiska skadebeloppet (1 gång). Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
+7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till 1 gånger den faktiska skadan. Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
 
 ## 5. Även om gymmet har ansvarsförsäkring (責任保險), kan ersättningens existens och belopp bestridas?
 

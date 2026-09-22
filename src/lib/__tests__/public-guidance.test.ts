@@ -131,6 +131,9 @@ describe('public eight-locale helper isolation', () => {
     ] as const;
     for (const autonym of autonyms) {
       expect(countryQualificationLabels).not.toContain(autonym);
+      // zh-hant is the one deliberate exception: "繁體中文（台灣）" marks the Taiwan variety of
+      // Traditional Chinese by explicit user instruction (2026-09-22).
+      if (autonym === PUBLIC_LANGUAGE_AUTONYMS['zh-hant']) continue;
       for (const country of countryQualificationLabels) {
         expect(autonym).not.toMatch(new RegExp(`[(\\uFF08]\\s*${country}\\s*[)\\uFF09]`, 'i'));
         expect(autonym).not.toMatch(new RegExp(`\\s+[-\\u2013\\u2014]\\s*${country}$`, 'i'));

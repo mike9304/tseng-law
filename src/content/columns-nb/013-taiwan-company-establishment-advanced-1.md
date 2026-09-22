@@ -51,9 +51,9 @@ bør du utarbeide investeringsplanen og samtidig søke selskapets registreringsa
 
 Ifølge artikkel 9 i loven om utenlandske statsborgeres investeringer (外國人投資條例) skal det godkjente innskuddet ankomme fullt ut innen den fristen som den kompetente myndigheten har fastsatt (核定期限); fristen skal bekreftes i godkjenningsakten i hver sak (i praksis fastsettes den ofte omkring 1 år).
 
-Innen denne fristen blir det, etter at selskapsadressen er funnet og leieavtalen er inngått,
+Innen denne fristen er det tid til å finne selskapsadresse og inngå leieavtale,
 
-tilstrekkelig tid til å åpne forberedelseskontoen i banken og overføre kapitalen.
+og til å åpne forberedelseskontoen i banken og overføre kapitalen.
 
 ​
 
@@ -75,7 +75,7 @@ men hos immigrasjonsmyndigheten (移民署) er det svært stor pågang; du bør 
 
 Prøvingskommisjonen under Taiwans økonomidepartement prøver riktignok investorens bakgrunn,
 
-men prøvingen tar sikte på om planen er reell, ikke på at utdanningen skal treffe bransjen nøyaktig.
+men prøvingen er likevel ikke overdrevent streng.
 
 Du kan oppgi ulike yrkeserfaringer, herunder bierverv.
 
@@ -87,7 +87,7 @@ Om dette punktet bør du drøfte dette grundig med en advokat i Taiwan.
 
 **4. Hva skal det tas hensyn til når selskapets registreringsadresse (for eksempel et serveringslokale) leies?**
 
-Selskapsstiftelsen varer omkring **3 måneder**, oppnåelsen av arbeidstillatelsen (工作許可) og av oppholdskortet omkring **1 måned**.
+Selskapsstiftelsen varer omkring **3 måneder**, og det tar ytterligere omkring **1 måned** å få arbeidstillatelse (工作許可) og oppholdskort.
 
 Derfor bør du legge avtalens ikrafttredelsesdato så sent som mulig.
 
@@ -115,9 +115,9 @@ F.eks.: er forretningsgrenen servering, og man vil leie et kommersielt kontorlok
 
 Som allerede anført prøver banken leieavtalen og inspiserer selskapsadressen på stedet.
 
-Dessuten krever byadministrasjonen (市政府) ved den endelige selskapsregistreringen at den registrerte adressen ligger i en sone der restaurantdrift er tillatt;
+Dessuten krever byadministrasjonen (市政府) ved den endelige selskapsregistreringen at den registrerte adressen ligger i en sone der restaurantdrift er tillatt.
 
-ved et kommersielt kontorlokale er selskapsregistreringen (公司登記) da ikke mulig.
+Ved et kommersielt kontorlokale er selskapsregistreringen (公司登記) da ikke mulig.
 
 F.eks.: dreier det seg om forretningsgrener (營業項目) som er mulige i et kommersielt kontorlokale, slik som reklame eller engros, kan selskapet stiftes i et kommersielt kontorlokale. Før inngåelsen av leieavtalen
 

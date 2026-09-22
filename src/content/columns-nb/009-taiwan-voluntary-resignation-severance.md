@@ -35,7 +35,7 @@ I de følgende særlige situasjonene skal arbeidsgiveren utbetale sluttvederlag 
 
 (for eksempel når arbeidsgiveren lover å sende arbeidstakeren etter tiltredelsen til en i virkeligheten ikke-eksisterende utenlandsk filial)
 
-2. Når arbeidsgiveren, familiemedlemmer av arbeidsgiveren eller representanter av arbeidsgiveren (代理人) anvender vold overfor arbeidstakeren eller grovt fornærmer vedkommende (重大侮辱)
+2. Når arbeidsgiveren, arbeidsgiverens familiemedlemmer eller arbeidsgiverens representanter (代理人) anvender vold overfor arbeidstakeren eller grovt fornærmer vedkommende (重大侮辱)
 
 3. Når det kontraktsmessige arbeidet kan skade arbeidstakerens helse, arbeidstakeren har anmodet arbeidsgiveren om forbedring, og dette forblir uten virkning
 
@@ -81,7 +81,7 @@ arbeidsgiveren rett til ikke å betale sluttvederlag og arbeidstakeren rett til 
 
 Noen ganger ligger skylden hos begge sider,
 
-og når begge tvistes,
+og når begge sider er i tvist,
 
 kan etter hvem som først med tilstrekkelig grunn bringer avtalen til opphør,
 

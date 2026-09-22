@@ -671,12 +671,12 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Send sammendraget ditt via kontaktskjemaet: hva som har skjedd, hvilken hjelp du trenger, hvilken tilknytning saken har til Taiwan, og fristen hvis du kjenner den. I første trinn trenger du ennå ikke sende identitetsdokumenter eller hele bevismaterialet. Kontoret lover ingen svartid og bekrefter ingen time via denne siden. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Send sammendraget ditt via kontaktskjemaet: hva som har skjedd, hvilken hjelp du trenger, hvilken tilknytning saken har til Taiwan, og fristen hvis du kjenner den. I første omgang trenger du ennå ikke sende identitetsdokumenter eller hele bevismaterialet. Kontoret lover ingen svartid og bekrefter ingen time via denne siden. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/faq', '/nb/pricing'],
     },
     faq: {
       answer:
-        'Denne delen besvarer vanlige spørsmål på et alminnelig informasjonsnivå: de seks fagområdene, forberedelsen før kontakt, hvordan kostnadene fastsettes, og hva en innsendt melding betyr. En innsendt forespørsel venter på gjennomgang hos en advokat; den er ikke juridisk rådgivning, ikke en bekreftet time, og den skaper ikke et forhold mellom advokat og klient. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Denne delen besvarer vanlige spørsmål på et alminnelig informasjonsnivå: de seks fagområdene, forberedelsen før kontakt, hvordan kostnadene fastsettes, og hva en innsendt melding betyr. En innsendt forespørsel venter på gjennomgang hos en advokat; den er ikke juridisk rådgivning, ikke en bekreftet time, og den skaper ikke et klientforhold. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/contact', '/nb/services'],
     },
   },

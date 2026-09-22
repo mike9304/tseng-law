@@ -1,0 +1,93 @@
+WO-F-nb r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-nb-r3
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: nb-a 62, nb-b 57 (119). No P3-only rows. P1 and P2 applied unless a skip rule below.
+
+Applied in full: 111.
+Partial: nb-a 1, nb-a 58, nb-b 9, nb-b 10.
+Skipped: nb-a 18, nb-a 25, nb-b 29, nb-b 41.
+
+Test pin updated: src/data/__tests__/guidance-disclosure-parity.test.ts, the nb attorney-client marker, `/forhold mellom advokat/` → `/klientforhold/`. Nothing else in that test. No other pinned Norwegian string matched a change. consultationNotice and confidentialNotice in GUIDANCE_LLMS_NOTICES.nb were left; each is still a verbatim substring of the FAQ answer and the privacy paragraph. discoveryNotice still contains the token `llms.txt`. "TWD 1.57M" was not touched.
+
+Inquiry copy was not edited. No finding named it.
+
+### Applied
+nb-a 2–17, 19–24, 26–57, 59–62.
+nb-b 1–8, 11–28, 30–40, 42–57.
+
+### Partial
+- nb-a 1. `driftsmidler` → `driftskapital` for 在臺營運資金 (FAQ and body). The suggested `500 000` was not written; the amount stays `500.000 TWD`.
+- nb-a 58. Grammar fixed: `smelter de to selskapenes rettssubjektivitet ikke straks sammen til 1`. The digit `1` stays. `to` is the word the checker already parses as 2, so the old digit 2 is not dropped.
+- nb-b 9. The deadline sentence is two blocks. They were rephrased in place (`Innen denne fristen er det tid til å finne selskapsadresse og inngå leieavtale,` / `og til å åpne forberedelseskontoen i banken og overføre kapitalen.`). They were not merged.
+- nb-b 10. `analogt` is gone: the periods in artikkel 16, ledd 1, apply through artikkel 15. `første ledd` was not used, because 제1항 is still a parsed 1.
+
+### Skipped
+- nb-a 18. The hedge `i enkelte dommer … omkring 3 måneder` / `4 måneder` / `6 måneder` plus `Det finnes ikke noe typisk eller garantert utfall` is the R3 wording. The suggested `Domstolene idømmer i dag ofte` makes a typical outcome out of that sentence. ACCEPTED-ROUND: a result sentence is not made positive. Digits 3, 4 and 6 stay.
+- nb-a 25 and nb-b 41. Space thousands (`500 000`, `1 579 589`). ACCEPTED-ROUND: the checker cannot parse a space thousands separator. NUMBER_THOUSAND_STYLE.nb is `dot`. Periods stayed. Figures unchanged.
+- nb-b 29. U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. The checker requires the same ZWSP count as the Korean source. Deleting them fails the block check.
+
+## Systemic patterns
+
+Swept across the Norwegian Bokmål columns and the nb guidance strings, not only the quoted line.
+
+- Permission `må` where the source means `may`/`can`. 5: 001 `straks må arbeide` / `straks må opptre` / `straks må påbegynnes`; 016 the surviving-parent question `Må` → `Kan`; 018 `automatisk må arbeide` → `kan arbeide`. Other `må` that means obligation was left.
+- Period as thousand separator. 0 changed. See Skipped.
+- Danish single definiteness (article or demonstrative plus a bare noun). Targeted forms, not every `den`/`det`: `årsakssammenhengen`, `tilsidesettelsen`, `den nåværende lønnen`, `den obligatoriske forsikringen` / `forsikringsgiveren`, `dette punktet`, `det kjøretøyet`, `den ektefellen uten skyld` (007 ×2), `den gjenlevende ektefellen`, `det mindreårige barnet`, `det faktiske forløpet`, `denne regelen`, `denne virksomheten` (017 ×2), `virksomhetsomfanget`, `de finansielle institusjonene` (016 ×2), `Den faktiske konklusjonen` (014 ×2), `denne loven`, `den organisasjonen`, `oppholdsperiodene`, `den skatten` (001 ×2, 004 ×1), `bostedsbeviset`, `kapitalposten`, `prosedyren` (002, 004), `Den adressen`, `begrunnelsen`, `Denne normen` (014 ×2), `den særskilte normen`, `varslingsfristen`, `den tidsubegrensede kontrakten`, `de rettsforholdene`, `ansienniteten`, `Disse spørsmålene`, `det rettslige grunnlaget`, `de berørte arvingene` (016 ×2).
+- Comma before a necessary `om`-clause in 014 and 016. The comma after the verb was removed (014 net 10, 016 net 7, plus `etterprøve hvem` / `skille hvem` / `bekrefte hvem` / `om hvem`). Commas between parallel `om`-items in a list were put back (014 ×6, 016 ×2) after a first pass had glued them.
+- `et forhold mellom advokat og klient` → `et klientforhold`. 6: nordic ×5, answers ×1. Disclosure regex updated to match.
+- `Hovering International Law Firms` genitive. 2: nordic home description, offices description. Danish and Swedish lines in the same files were not edited.
+- `en 3.` / `en 3.s` for 第三人 → `en tredjemann` / `en tredjemanns` (014, 016, 017). `en 3. stat (第三國)` → `et tredjeland (第三國)` (004). 제3자/제3국 are stripped by the checker, so the digit is not required.
+- 營業稅 `omsetningsavgift` → `næringsavgift`, including the act name and the link label. `omsetningsdata` in 003 was left; that is turnover data, not the tax.
+- 營利事業 `profittgivende` / `Profitgivende` → `næringsvirksomhet` (12) and `Næringsdrivende` (3) in 001, 002 and 004.
+- `Nulsats` → `Nullsats` (004).
+- Danish `registret` → `registeret`, including `eiendomsregisteret`, `meldingsregisteret`, `gjennomføringsregisteret`, `forvaltningsregisteret`, and `fra registeret` in 004.
+- 經理人 in 001 → `daglig leder` (glossed term, the same role without the gloss, the heading, and the handbook link label). URL unchanged.
+- 董事 `direktører` → `styremedlemmer` in 001 and in the two 004 sites the review named.
+- `vilkårlig periode` → `en hvilken som helst periode` (001 and 004).
+- `endelig rettighetshaver` → `reell rettighetshaver` wherever 004 used it for 受益所有人 (6).
+- U+200B. 0 deleted. See Skipped.
+- R2–R10. Consultation languages stay English, Chinese (中文), Japanese, Korean. No Norwegian consultation, no interpreter offer, no reply-time, no free first meeting, no result guarantee, no "best/only". Wei Tseng stays feminine where the columns mark her. Traditional Chinese glosses kept, except where a gloss was hanging on the wrong noun and the same gloss already sits on the right term (`營業場所` off `innretninger`, `負責人` off `innretning`). Frontmatter keys, urls, dates, image paths, and block order unchanged.
+
+## Reviewer points not followed
+
+- nb-a 25, nb-b 41, and the `500 000` in the nb-a 1 suggestion. Right for Norwegian typography. Wrong for this checker: a space separator is not parsed. Periods stayed.
+- nb-b 29, delete U+200B. Right for a clean paragraph. Wrong for this checker: the ZWSP count is pinned to the Korean source.
+- nb-a 18. `ofte` / `i dag` undoes the R3 hedge (`in some judgments`, no typical or guaranteed outcome) and reads as a usual sentence length. The existing hedge was left, digits included.
+- nb-b 10, `første ledd`. Right as Bokmål. Wrong for this checker: 제1항 still requires the digit 1. The line says `ledd 1`.
+- nb-b 9, one sentence across the address/lease block and the bank-account block. Block count is pinned. Each block was rewritten on its own.
+- nb-a 37, the English gloss `(Korea Operations Manager)`. R12 asks for the role in Norwegian. The line is `Operativ leder, Korea`.
+- nb-a 58, `én` for the digit 1. The digit stays so the number parse does not drop a 1. The rest of the sentence follows the suggested wording.
+
+Nothing else in the two verdicts looked factually wrong. The male liquidator in 002 is now `likvidatoren`, not a masculine `han`, which does not change anyone's gender. The male manager in 008 and the male client in 010 were not rewritten as women.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nb --lang nb 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=144
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nb src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      26
+```
+
+The 26 is from that run, before this log file existed. `docs/i18n/global-plan/WO-F-nb.txt` was already modified, and `reviews/native/rounds/r3/nb-a.md` and `nb-b.md` were already untracked. This log is the extra untracked file.

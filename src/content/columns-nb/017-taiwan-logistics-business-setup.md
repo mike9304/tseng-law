@@ -1,5 +1,5 @@
 ---
-title: "Logistikk i Taiwan og tillatelsen til godstransport med motorkjøretøy (汽車貨運業): ny stiftelse, overtakelse og overdragelse"
+title: "Logistikk i Taiwan og tillatelsen til godstransport med motorkjøretøy (汽車貨運業): ny stiftelse, oppkjøp og bortsetting av transporten"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
 date_display: "13. september 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Skal enhver virksomhet som henger sammen med logistikk i Taiwan, erverve tillatelsen til godstransport med motorkjøretøy (汽車貨運業)?"
-    a: "Ikke all logistikk krever tillatelse. «Logistikk» er et vidt praksisbegrep; tillatelsesplikten avgjøres ikke alene etter selskapsnavnet eller de i registreringen anførte bransjer (汽車貨運業). Hvis selskapet mottar et vederlag og transporterer andres gods med en lastebil, kan denne virksomhet utgjøre godstransport med motorkjøretøy. Derimot skal lagring, emballering, systemdrift, avsendelse som avsender (貨主), spedisjon (運送承攬) og tilsvarende aktiviteter vurderes én for én etter det kontraktsmessige forhold, transportansvaret, vederlagets innhold og den faktiske kjøretøykjøring."
+    a: "Ikke all logistikk krever tillatelse. «Logistikk» er et vidt praksisbegrep; tillatelsesplikten avgjøres ikke alene etter selskapsnavnet eller de i registreringen anførte bransjer (汽車貨運業). Hvis selskapet mottar et vederlag og transporterer andres gods med en lastebil, kan denne virksomheten utgjøre godstransport med motorkjøretøy. Derimot skal lagring, emballering, systemdrift, avsendelse som avsender (貨主), spedisjon (運送承攬) og tilsvarende aktiviteter vurderes én for én etter det kontraktsmessige forhold, transportansvaret, vederlagets innhold og den faktiske kjøretøykjøring."
   - q: "Hvilke kapital- og kjøretøykrav og hvilken prosedyre gjelder for å stifte en ny alminnelig virksomhet med godstransport med motorkjøretøy?"
     a: "For den alminnelige godstransport med motorkjøretøy gjelder i utgangspunktet en minimumskapital på 25.000.000 TWD (新臺幣) og minst 20 nye lastebiler. For den virksomheten som bare gjelder flytting (搬家), gjelder 10.000.000 TWD og minst 8 enheter, og for den virksomheten som drives i Kinmen (金門) eller i Lienchiang (Matsu, 連江、馬祖), 10.000.000 TWD og minst 5 enheter, med i det siste tilfellet en begrensning av driftssonen. For transport med liten lastebil som en fysisk person driver, finnes egne begrensede unntak, nemlig 1 liten lastebil i eie, en kjøretøyalder som ikke overskrider 2 år, et yrkesførerkort til små kjøretøy (小型車職業駕駛執照) og et husholdningsregister (戶籍) i det kompetente distriktet. Den utenlandske investeringen, godkjenningen fra samferdselsdepartementet (交通部), forberedelsestillatelsen (籌設許可), selskaps- og handelsregistreringen, forberedelsen av kjøretøy og anlegg, næringslisensen (營業執照) og tilslutningen til bransjeforeningen (同業公會) skal hver bekreftes særskilt."
   - q: "Erverver man ved overtakelse av et selskap som allerede har tillatelsen, automatisk næringslisensen til godstransport med motorkjøretøy?"
@@ -18,7 +18,7 @@ faq:
     a: "Det kan ikke vurderes ensartet. Vurderingen skiller seg etter om den som overlater arbeidet, har egenskapen som avsender eller som speditør, eller etter om vedkommende direkte mottar vederlaget som transportør (運送人) i transportkontrakten. Man skal etterprøve motpartens næringslisens og næringskjøretøyene og bringe den kontraktsmessige rolle i samsvar med den faktiske drift, så verken utlån av tillatelsen (借牌) eller transport uten tillatelse oppstår. Dessuten skaper den rene egenskap som aksjonær eller investor ikke retten til å arbeide i Taiwan. Utlendingen som faktisk arbeider eller utøver virksomhetsledelsen, skal før arbeidets begynnelse særskilt bekrefte, om vedkommende har behov for en arbeidstillatelse (工作許可), og hva oppholdsstatus er."
 ---
 
-# Logistikk i Taiwan og tillatelsen til godstransport med motorkjøretøy (汽車貨運業): ny stiftelse, overtakelse og overdragelse
+# Logistikk i Taiwan og tillatelsen til godstransport med motorkjøretøy (汽車貨運業): ny stiftelse, oppkjøp og bortsetting av transporten
 
 ![Bilde som forklarer den rettslige prosedyre for logistikk i Taiwan](../images/017-taiwan-logistics-business-setup/featured-01.jpg)
 
@@ -30,7 +30,7 @@ Denne artikkelen skiller 3 situasjoner (汽車貨運業): å stifte en ny virkso
 
 ## 1. Omfanget av logistikken og av godstransporten med motorkjøretøy (汽車貨運業)
 
-Ikke all logistikk krever tillatelse. «Logistikk» er et vidt praksisbegrep; tillatelsesplikten avgjøres ikke alene etter selskapsnavnet eller de i registreringen anførte bransjer (汽車貨運業). Hvis selskapet mottar et vederlag og transporterer andres gods med en lastebil, kan denne virksomhet utgjøre godstransport med motorkjøretøy. Derimot skal lagring, emballering, systemdrift, avsendelse som avsender (貨主), spedisjon og tilsvarende aktiviteter vurderes én for én etter det kontraktsmessige forhold, transportansvaret, vederlagets innhold og den faktiske kjøretøykjøring.
+Ikke all logistikk krever tillatelse. «Logistikk» er et vidt praksisbegrep; tillatelsesplikten avgjøres ikke alene etter selskapsnavnet eller de i registreringen anførte bransjer (汽車貨運業). Hvis selskapet mottar et vederlag og transporterer andres gods med en lastebil, kan denne virksomheten utgjøre godstransport med motorkjøretøy. Derimot skal lagring, emballering, systemdrift, avsendelse som avsender (貨主), spedisjon og tilsvarende aktiviteter vurderes én for én etter det kontraktsmessige forhold, transportansvaret, vederlagets innhold og den faktiske kjøretøykjøring.
 
 Veiloven (公路法) i Taiwan regulerer virksomheten med transport med motorkjøretøy (汽車運輸業) som den virksomheten som transporterer passasjerer eller gods med motorkjøretøy mot vederlag. Selskapet blir derfor ikke straks en godstransport med motorkjøretøy alene fordi det leverer en logistikktjeneste i vid forstand. Omvendt, selv hvis kontrakten er utformet som spedisjon eller plattformdrift, kan selskapet hvis det faktisk mottar frakten som transportør (運送人) og bærer ansvaret for innsettelse, kjøring og godsskade, ikke undvige tilsynet med den rene betegnelsen.
 
@@ -50,7 +50,7 @@ For den alminnelige godstransport med motorkjøretøy gjelder i utgangspunktet e
 
 ### Kapital- og kjøretøykrav og begrensede unntak
 
-Når et alminnelig selskap starter ny godstransport med motorkjøretøy, gjelder i utgangspunktet en minimumskapital på 25.000.000 TWD og minst 20 nye kjøretøy. For den som bare driver med flytting, gjelder et eget kriterium om minimumskapital 10.000.000 TWD og minst 8 nye kjøretøy, og for den som driver i Kinmen eller i Lienchiang (Matsu), en minimumskapital på 10.000.000 TWD og minst 5 nye kjøretøy. Den næringsdrivende som bruker kriteriet for Kinmen eller Lienchiang, er undergitt en begrensning av driftsomfanget etter den godkjente sone.
+Når et alminnelig selskap starter ny godstransport med motorkjøretøy, gjelder i utgangspunktet en minimumskapital på 25.000.000 TWD og minst 20 nye kjøretøy. For den som bare driver med flytting, gjelder et eget kriterium om minimumskapital 10.000.000 TWD og minst 8 nye kjøretøy, og for den som driver i Kinmen eller i Lienchiang (Matsu), en minimumskapital på 10.000.000 TWD og minst 5 nye kjøretøy. Den næringsdrivende som bruker kriteriet for Kinmen eller Lienchiang, har et driftsområde som er geografisk begrenset til den godkjente sonen.
 
 Transporten med liten lastebil (小貨車) som en fysisk person driver, er en snever ordning, atskilt fra den alminnelige selskapsstiftelsen. Blant kravene inngår at søkeren er registrert i husholdningsregisteret i det kompetente distriktet, har et yrkesførerkort til små kjøretøy og bruker 1 liten lastebil i eie hvis alder ikke overskrider 2 år. Det er ikke den vanlige veien som en utenlandsk juridisk person bruker for å tre inn i godstransporten med motorkjøretøy.
 
@@ -62,7 +62,7 @@ Denne begrensning vedrører slettingen av næringskjennemerket ved innlevering o
 
 Ifølge artikkel 35 i veiloven (公路法) skal utlendingen eller den utenlandske juridiske person som i Taiwan vil investere i og drive godstransporten med motorkjøretøy, først erverve godkjenningen fra samferdselsdepartementet, den sentrale kompetente myndigheten etter samme lov. Man må ikke bli stående ved etterprøvingen av den alminnelige godkjenningen av utenlandsk investering, men skal særskilt i virksomhetsplanen ta inn godkjenningen fra samferdselsdepartementet vedrørende bransjen godstransport med motorkjøretøy.
 
-Den nå kompetente myndigheten for den alminnelige utenlandske investeringen er avdelingen for investeringsgjennomgang i Taiwans økonomidepartement (經濟部投資審議司). Likevel følger ikke all utenlandsk investering samme søknadsvei og samme prosedyre. Investeringen i børsnoterte eller verdipapirer som handles utenfor børs, filialen (分公司) av et utenlandsk selskap, de saker som myndighetene for vitenskapsparker og industriområder behandler, og investeringen fra det kinesiske fastland kan falle inn under andre søknadsveier eller en egen ordning. Ved investering i godstransporten med motorkjøretøy skal, utover bekreftelsen av den gjeldende investeringsveien, bransjegodkjenningen ifølge artikkel 35 i veiloven fullføres.
+Myndigheten som nå er kompetent for den alminnelige utenlandske investeringen, er avdelingen for investeringsgjennomgang i Taiwans økonomidepartement (經濟部投資審議司). Likevel følger ikke all utenlandsk investering samme søknadsvei og samme prosedyre. Investering i børsnoterte verdipapirer eller i verdipapirer som handles utenfor børs, filialen (分公司) av et utenlandsk selskap, de saker som myndighetene for vitenskapsparker og industriområder behandler, og investeringen fra det kinesiske fastland kan falle inn under andre søknadsveier eller en egen ordning. Ved investering i godstransporten med motorkjøretøy skal, utover bekreftelsen av den gjeldende investeringsveien, bransjegodkjenningen ifølge artikkel 35 i veiloven fullføres.
 
 ### Rekkefølgen av prosedyren for ny stiftelse
 
@@ -72,7 +72,7 @@ Rekkefølgen av trinnene og innleveringsorganet skal etter hver sak bekreftes p�
 2. Erverv den gjeldende godkjenningen av utenlandsk investering og bransjegodkjenningen fra samferdselsdepartementet ifølge artikkel 35 i veiloven.
 3. Søk om forberedelsestillatelsen til godstransport med motorkjøretøy i samsvar med veiledningen fra veiadministrasjonen under samferdselsdepartementet.
 4. Fullfør selskaps- og handelsregistreringen, og forbered det godkjente forretningssted, parkeringsanleggene (停車設施), vedlikeholdssystemet, kjøretøyene, forsikringene og organisasjonen.
-5. Søk om næringslisensen, tilslut den tilsvarende bransjeforening og begynn deretter driften etter det godkjente virksomhetsomfang.
+5. Søk om næringslisensen, tilslutt deg den tilsvarende bransjeforeningen og begynn deretter driften etter det godkjente virksomhetsomfanget.
 
 Forretningsstedet og parkeringsanleggene skal oppfylle kriteriet som gjelder for den aktuelle virksomheten, og det skal forelegges materialer som attesterer eiendommen eller bruksretten. Det er ikke mulig ensartet å fastslå at hver næringsdrivende nødvendigvis skal leie en egen eksklusiv parkeringsplass. Vedtektene, aksjonærboken, godkjenningsmaterialene for parkeringsanleggene (停車設施), beviset for eierskap eller bruk av forretningssted og parkering, vedlikeholdskontrakten, kjøpsbeviset for kjøretøyene og kjøretøylisten skal etterprøves overfor veiadministrasjonens gjeldende sjekkliste på søknadstidspunktet.
 
@@ -84,7 +84,7 @@ Et aksjekjøp overfører ikke tillatelsen. Ved aksjekjøpet erverves tillatelsen
 
 ### Forskjellen mellom aksjekjøp og overdragelse av virksomhet eller eiendeler
 
-Ved aksjekjøpet blir kjøperen aksjonær, mens målselskapet, innehaveren av tillatelsen, består som samme juridiske person. Det beløp som er sendt for aksjekjøpet, er overdragelsesprisen for aksjene, ikke kapitalen. Etter sakens omstendigheter behandles den forutgående godkjenningen fra Taiwans økonomidepartement, bransjegodkjenningen ifølge artikkel 35 i veiloven, fastsettelsen av investeringsbeløpet (投資額審定) etter overføringen, selskapsendringen av aksjonærer, ledere og ansvarlig, og endringssøknaden hos den kompetente veimyndigheten hver særskilt.
+Ved aksjekjøpet blir kjøperen aksjonær, mens målselskapet, innehaveren av tillatelsen, består som samme juridiske person. Det beløp som er sendt for aksjekjøpet, er overdragelsesprisen for aksjene, ikke kapitalen. Etter sakens omstendigheter behandles den forutgående godkjenningen fra Taiwans økonomidepartement, bransjegodkjenningen ifølge artikkel 35 i veiloven, verifikasjon av det overførte investeringsbeløpet (投資額審定) etter overføringen, selskapsendringen av aksjonærer, ledere og ansvarlig, og endringssøknaden hos den kompetente veimyndigheten hver særskilt.
 
 Derimot, selv hvis en annen juridisk person mottar overdragelsen av virksomheten eller eiendelene, går overdragerens næringslisens ikke av seg selv over på erververen. Kjøretøy, skilt for næringskjøring (營業用車輛牌照), parkeringsanlegg, kontrakter, arbeidstakere, forsikringer og næringstillatelser skal hver etterprøves. Forberedelsestillatelse, næringslisens og øvrige for erververen nødvendige godkjenninger skal ordnes før transaksjonens gjennomføring.
 
@@ -95,7 +95,7 @@ Overdragelsen av virksomheten og endringen av organisasjon, betegnelse, hjemsted
 Minst følgende punkter skal innholdsmessig bekreftes ved å etterprøve bevisene og originalmaterialene overfor registrene hos den kompetente myndigheten.
 
 - Gyldighet av næringslisensen, godkjente bransjer, sone og vilkår, og ennå ikke behandlede endringer.
-- Forholdet mellom eie og bruk av kjøretøyene, skilt for næringskjøring, alder, periodisk syn, uhell og overtredelser.
+- Forholdet mellom eie og bruk av kjøretøyene, skilt for næringskjøring, alder, periodisk kontroll, uhell og overtredelser.
 - Godkjenning av forretningssted og parkeringsanlegg, eje eller bruksrett, og vedlikeholdssystem.
 - Tilslutning til bransjeforeningen, administrative avgjørelser (行政處分) og om det er restanser av skatter, avgifter og administrative bøter (罰鍰).
 - Arbeidsforholdet for førerne og de øvrige arbeidstakere, arbeidsvilkår, arbeidstillatelse og trygd.
@@ -118,7 +118,7 @@ Man skal bekrefte gyldigheten av næringslisensen hos den næringsdrivende som m
 
 Selv hvis utlendingen blir aksjonær eller investor i målselskapet, gir denne kjensgjerning i seg selv verken retten til å arbeide eller en oppholdsstatus i Taiwan. Hvis vedkommende i Taiwan utøver det daglige arbeid, slik som selskapsledelsen, salget, kjøretøyinnsettelsen og kundebehandlingen, skal vedkommende før arbeidets begynnelse bekrefte om den arbeidstillatelse som passer til den faktiske funksjon, er nødvendig, og behandle den senere oppholdsprosedyre særskilt.
 
-På arbeid uten tillatelse kan en administrativ bot og et påbud om å forlate Taiwan (限令出國) anvendes. Arbeidsveiledningen om innreiseforbud (禁止入國) som gjelder hos immigrasjonsmyndigheten under Taiwans innenriksdepartement (內政部移民署), fastsetter i alminnelighet, for urettmessig arbeid, et innreiseforbud på 3 år, men kravene om fritak eller avkortning av fristen som samme veiledning fastsetter, kan anvendes. Resultatet avgjøres ikke mekanisk alene fordi det finnes en anmeldelse fra en 3., og den kompetente myndigheten etterprøver kjensgjerningene, de gjeldende normer og omstendighetene i hver sak.
+Ved arbeid uten tillatelse kan det ilegges en administrativ bot og et påbud om å forlate Taiwan (限令出國). Arbeidsveiledningen om innreiseforbud (禁止入國) som gjelder hos immigrasjonsmyndigheten under Taiwans innenriksdepartement (內政部移民署), fastsetter i alminnelighet, for urettmessig arbeid, et innreiseforbud på 3 år, men kravene om fritak eller avkortning av fristen som samme veiledning fastsetter, kan anvendes. Resultatet avgjøres ikke mekanisk alene fordi det finnes en anmeldelse fra en tredjemann, og den kompetente myndigheten etterprøver kjensgjerningene, de gjeldende normer og omstendighetene i hver sak.
 
 ## Offisielle kilder
 

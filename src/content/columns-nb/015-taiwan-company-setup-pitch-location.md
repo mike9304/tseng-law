@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Når man begynner en serveringsvirksomhet, er det første problemet å finne driftsadressen (營業地址).
 
-Utover markedssituasjonen kommer også beliggenheten.
+I tillegg til markedssituasjonen må man avklare om adressen kan brukes til restaurant.
 
 Et annet viktig punkt er om adressen kan brukes til virksomheten.
 
-Den gjeldende adressen (營業地址) må ligge i en sone der utøvelse av «restaurantnæring» er mulig.
+Driftsadressen (營業地址) må ligge i en sone der utøvelse av «restaurantnæring» er mulig.
 
 ​
 
@@ -55,7 +55,7 @@ Vær derfor oppmerksom på dette punktet.
 
 Det anbefales at alle bransjer via ordningen for «forutgående forespørsel om forretningsstedet» (營業場所預先查詢) bekrefter om utøvelsen er mulig.
 
-Ved selskapsregistreringen registreres imidlertid ofte flere grener samtidig, og man vil ofte registrere omkring 10 grener på én gang.
+Ved selskapsregistreringen registreres imidlertid ofte flere forretningsgrener samtidig, og man vil ofte registrere omkring 10 forretningsgrener på én gang.
 
 I praksis trenger derfor ikke alle grener å undersøkes ved selskapsregistreringen.
 

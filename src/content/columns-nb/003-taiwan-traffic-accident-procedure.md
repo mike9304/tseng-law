@@ -33,21 +33,21 @@ Sikre først deg selv og sett ut varseltrekanten. Nødnumrene i Taiwan: 119 (amb
 
 Når sikkerheten er sikret, ta da oversikts- og næropptak for å dokumentere kjøretøyets plassering og skader, veimerkingen, signaler og vær. Vitnekontakter, anmodning om sikring av CCTV (監視器影像) og dashcam (行車紀錄器), opplysninger om parter, kjøretøyer og forsikringer samt legejournaler (病歷) bør du ikke utelate. Private opptak er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfall ikke den krevde politibehandling.
 
-Hva politidokumentene angår, kan du på ulykkesstedet få utlevert registrerings- og kontaktskjemaet for partene i trafikkulykken (道路交通事故當事人登記聯單). Etter 7 dager fra ulykkesdagen kan situasjonsskisse og ulykkesfotos (現場圖 / 現場照片) søkes; etter 30 dager fra ulykkesdagen kan den foreløpige analysebedømmelse av veitrafikkulykken (道路交通事故初步分析研判表) søkes. Utstedelsestidspunkt og søknadsvilkår undersøker du på nytt hos den kompetente politimyndighet.
+Hva politidokumentene angår, kan du på ulykkesstedet få utlevert registrerings- og kontaktskjemaet for partene i trafikkulykken (道路交通事故當事人登記聯單). Etter 7 dager fra ulykkesdagen kan situasjonsskisse og bilder fra ulykkesstedet (現場圖 / 現場照片) søkes; etter 30 dager fra ulykkesdagen kan den foreløpige analysebedømmelse av veitrafikkulykken (道路交通事故初步分析研判表) søkes. Utstedelsestidspunkt og søknadsvilkår undersøker du på nytt hos den kompetente politimyndighet.
 
 ## Q3. Hvilke krav og frister skal undersøkes ved tilskadekomst?
 
 Artikkel 284 i straffeloven (刑法) regulerer uaktsom kroppsskade (過失傷害) og uaktsom grov kroppsskade (過失致重傷). Denne bestemmelsen er ifølge artikkel 287 i straffeloven en klageforbrytelse (告訴乃論之罪); ifølge artikkel 237 i straffeprosessloven (刑事訴訟法) skal klagen i prinsippet innleveres innenfor 6 måneder fra kjennskapet til gjerningsmannen.
 
-Sivilrettslig erstatning (損害賠償) kan ifølge artikkel 197 i sivilloven (民法) ikke lenger kreves når 2 år fra kjennskapet til skaden og den erstatningspliktige eller 10 år fra den rettsstridige handling er forløpet. Hvilke kjensgjerninger det påvirker foreldelsen (消滅時效), skal undersøkes særskilt.
+Sivilrettslig erstatning (損害賠償) kan ifølge artikkel 197 i sivilloven (民法) ikke lenger kreves når 2 år fra kjennskapet til skaden og den erstatningspliktige eller 10 år fra den rettsstridige handling er forløpet. Hvilke kjensgjerninger som påvirker foreldelsen (消滅時效), skal undersøkes særskilt.
 
-Den som har lidt skade ved en straffbar handling, kan ifølge artikkel 487 i straffeprosessloven anlegge et sivilt bisøksmål tilknyttet straffesaken (刑事附帶民事訴訟). Så lenge straffesaken verserer, kan det ifølge artikkel 488 anlegges inntil før avslutningen av den muntlige forhandling (言詞辯論終結) i andre instans, men ikke etter avslutningen av den muntlige forhandling i første instans og før iverksettelse av anke. Vanligvis kan en særskilt betaling av rettsgebyr (裁判費) unngås; ikke ethvert resultat ender uten omkostninger. Avvises for eksempel straffesaken og henvises den på saksøkerens begjæring til den sivile rett, kan det ifølge artikkel 503 i straffeprosessloven oppstå saksomkostninger; også henvisnings- og prosedyrebestemmelsene i artikkel 504 skal ettergås.
+Den som har lidt skade ved en straffbar handling, kan ifølge artikkel 487 i straffeprosessloven fremme et sivilt krav i straffesaken (刑事附帶民事訴訟). Så lenge straffesaken verserer, kan det ifølge artikkel 488 anlegges inntil før avslutningen av den muntlige forhandling (言詞辯論終結) i andre instans, men ikke etter avslutningen av den muntlige forhandling i første instans og før iverksettelse av anke. Vanligvis kan en særskilt betaling av rettsgebyr (裁判費) unngås; ikke ethvert resultat ender uten omkostninger. Avvises for eksempel straffesaken og henvises den på saksøkerens begjæring til den sivile rett, kan det ifølge artikkel 503 i straffeprosessloven oppstå saksomkostninger; også henvisnings- og prosedyrebestemmelsene i artikkel 504 skal ettergås.
 
 Valget avviker etter avbrytelse av foreldelsen (時效中斷), kretsen av saksøkte, beviser, forsikring og kompetanse. Derfor finnes det ingen ensartet beste prosedyre for alle saker.
 
 ## Q4. Hvordan bedømmes det strafferettslige og sivilrettslige ansvar når begge sider har uaktsomhet?
 
-Strafferettslig ansvar kan først bedømmes når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenheng som denne tilsidesettelse har med motpartens tilskadekomst, er anerkjent. Alene fordi begge sider har uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom kroppsskade.
+Strafferettslig ansvar kan først bedømmes når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenhengen som denne tilsidesettelsen har med motpartens tilskadekomst, er anerkjent. Alene fordi begge sider har uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom kroppsskade.
 
 Sivilrettslig kan retten ifølge artikkel 217 i sivilloven (民法) nedsette eller ettergi erstatningen hvis den skadelidte har uaktsomhet ved skadens oppståen eller forøkelse (與有過失). Ble for eksempel anerkjente skader på 1.000.000 TWD (新臺幣) og den skadelidtes uaktsomhet vurdert til 50 %, kan beløpet før andre tilpasninger falle til 500.000 TWD.
 
@@ -101,17 +101,17 @@ Krav ifølge artikkel 184 i sivilloven (民法) forutsetter rettsstridig krenkel
 
 Oppbevar kvitteringer (收據), attester og legejournaler, og ordn den medisinske nødvendighet av hver behandling og årsakssammenhengen med ulykken sammen. Fortsatte behandlingsdokumenter kan supplere beviser etter rettens prosedyrekalender og det allerede nedlagte krav; ikke alle sent innleverte dokumenter eller utvidede krav antas eller tillates.
 
-Tilføyelse av medisinske dokumenter og endring eller forhøyelse av kravbeløpet skal skilles. Etter anlegg av et sivilt bisøksmål tilknyttet straffesaken oppstår rettsgebyr ikke automatisk alene fordi ytterligere behandlingskvitteringer innleveres.
+Tilføyelse av medisinske dokumenter og endring eller forhøyelse av kravbeløpet skal skilles. Etter at et sivilt krav er fremmet i straffesaken oppstår rettsgebyr ikke automatisk alene fordi ytterligere behandlingskvitteringer innleveres.
 
 Ifølge artikkel 504 i straffeprosessloven kan det imidlertid, etter at saken er henvist til den sivile avdeling, ved endring, tilføyelse eller utvidelse av kravet utover omfanget før henvisningen oppstå omkostningsspørsmål for den overskytende del. Henvisningsfase, innleveringstidspunkt og kravets omfang skal undersøkes fra sak til sak.
 
-## Q9. Hvormed bevises profesjonell pleie og familiens pleieutgifter?
+## Q9. Hvordan dokumenteres profesjonell pleie og familiens pleieutgifter?
 
 Attest eller legelig uttalelse er nyttige til å vise pleiebehovet, men er alene ikke avgjørende grunnlag. Årsakssammenheng med ulykken, pleiebehov, faktisk ytelse, varighet og passende beløp skal forklares ved dokumenter.
 
 Selv hvis slektninger uten vederlag faktisk har ytt pleie, kan dette i passende saker vurderes som skade. Alene omstendigheten familiemessig pleie fører imidlertid ikke automatisk til anerkjennelse; pleiens innhold og varighet samt det vanlige omkostningsnivå medtas.
 
-## Q10. Hvormed bevises transportutgifter til behandling?
+## Q10. Hvordan dokumenteres transportutgifter til behandling?
 
 Transportutgifter ordnes ut fra forbindelsen mellom behandlingsopptegnelser og ulykkesrelatert tilskadekomst. Rute, besøksantall, besøksdager, transportmiddel, takst samt nødvendighet og rimelighet av bruken kan være viktige for bedømmelsen.
 
@@ -147,13 +147,13 @@ Omstendigheten fortsatt arbeid eller uendret utbetalt lønn vedrører bedømmels
 
 Skaden på grunn av nedsettelse av arbeidsevnen skiller seg fra den i Q11 behandlede, i gjenopprettingsperioden faktisk nedsatte inntekt. Ifølge artikkel 193 og 216 i sivilloven (民法) betraktes årsakssammenheng med ulykken, vedvarende funksjonsforstyrrelse (持續功能障礙), den skadelidtes yrke og evner, vanlig forventelig inntekt samt grunnlag og bevis for den arbeidsdyktige tid under ett.
 
-At den nåværende lønn forblir uendret, utelukker ikke automatisk kravet. Omvendt fastlegges skadesbeløpet heller ikke mekanisk alene etter invaliditetsprosent eller nåværende lønn.
+At den nåværende lønnen forblir uendret, utelukker ikke automatisk kravet. Omvendt fastlegges skadesbeløpet heller ikke mekanisk alene etter invaliditetsprosent eller nåværende lønn.
 
 Bestrides en vedvarende funksjonsforstyrrelse reelt, kan en legelig sakkyndig vurdering være nyttig, men den er ikke påkrevd i enhver sak. Medvirkende uaktsomhet ifølge artikkel 217 i sivilloven (民法) og andre tilpasningsgrunner undersøkes med.
 
 Ved beregning som engangsbeløp kan fradrag av mellomliggende renter (中間利息扣除) komme i betraktning. Hoffmann-beregneren (霍夫曼) fra Justisyuanen er kun beregningshjelp, ikke en rettslig tvingende metode og gir heller ikke resultatet på forhånd. Ifølge artikkel 193 i sivilloven kan retten på partens begjæring også pålegge periodisk betaling under sikkerhetsstillelse.
 
-## Q13. Hvordan bedømmes godtgjørelse (慰撫金) for ikke-økonomisk skade?
+## Q13. Hvordan utmåles erstatning for ikke-økonomisk skade (慰撫金)?
 
 Godtgjørelse for ikke-økonomisk skade bedømmes slik at det ved rettsstridig krenkelse av legeme eller helbred ifølge artikkel 195 i sivilloven (民法) fastsettes et passende beløp.
 
@@ -161,19 +161,19 @@ Retten betrakter tilskadekomst og behandling, vedvarende følge, lidelse og livs
 
 ## Q14. Kan arbeidsgiveren også sivilrettslig gjøres ansvarlig ved en ulykke under arbeidet?
 
-Artikkel 188 i sivilloven (民法) behandler det tilfeller at en ansatt under utførelsen av oppgaven tilføyer en annen rettsstridig skade. Alene arbeidstiden grunnlegger ikke automatisk oppgaveforbindelsen; forbindelsen mellom faktisk arbeid og ulykke skal undersøkes.
+Artikkel 188 i sivilloven (民法) behandler de tilfellene der en ansatt under utførelsen av oppgaven tilføyer en annen rettsstridig skade. Alene arbeidstiden grunnlegger ikke automatisk oppgaveforbindelsen; forbindelsen mellom faktisk arbeid og ulykke skal undersøkes.
 
 Arbeidsgiveren kan innvende at vedkommende har iakttatt den nødvendige aktpågivenhet ved utvelgelse og tilsyn med den ansatte, eller at skaden heller ikke ved slik aktpågivenhet ville kunne unngås. Det kan undersøkes å gjøre arbeidsgiver og ansatt i fellesskap erstatningsansvarlige. Etter erleggelse av erstatningen kan arbeidsgiveren søke regress hos den ansatte.
 
 Beviser arbeidsgiveren de nevnte fritaksvilkår, slik at den skadelidte ikke mottar erstatning ifølge ledd 1, kan retten ifølge artikkel 188 ledd 2 i sivilloven (民法) under hensyn til arbeidsgiverens og den skadelidtes økonomiske stilling pålegge full eller delvis erstatning.
 
-Fastleggelsen av de sivilrettslige kravsmotparter og det strafferettslige ansvar skal skilles. Det strafferettslige ansvar ifølge artikkel 284 i straffeloven (刑法) bedømmes etter tilsidesettelse av hver fysisk persons aktpågivenhetsplikt og årsakssammenhengen av denne tilsidesettelse.
+Fastleggelsen av de sivilrettslige kravsmotparter og det strafferettslige ansvar skal skilles. Det strafferettslige ansvar ifølge artikkel 284 i straffeloven (刑法) bedømmes etter tilsidesettelse av hver fysisk persons aktpågivenhetsplikt og årsakssammenhengen av denne tilsidesettelsen.
 
 ## Q15. Hvilke ytelser og dekninger i motorkjøretøyforsikringen skal undersøkes?
 
 Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring for motorkjøretøyer (強制汽車責任保險法) rammer i prinsippet kjøretøyets eier og i bestemte tilfeller også bruker eller forvalter av kjøretøyet. Dette systemet innretter en uaktsomhetsuavhengig ytelsesstruktur (無過失給付制度) for personer som er kommet til skade eller er avgått ved døden ved motorkjøretøyulykker; den lovbestemte krets av passasjerer eller av tredjemann (第三人) utenfor kjøretøyet skal undersøkes.
 
-Ved eneulykker med 1 kjøretøy er dets fører som regel ikke ytelsesmottaker av den obligatoriske forsikring for det kjøretøy. Ved ulykker med flere kjøretøyer kan føreren imidlertid kreve ytelser hos den obligatoriske forsikringsgiver for et annet involvert kjøretøy.
+Ved eneulykker med 1 kjøretøy er dets fører som regel ikke ytelsesmottaker av den obligatoriske forsikringen for det kjøretøyet. Ved ulykker med flere kjøretøyer kan føreren imidlertid kreve ytelser hos den obligatoriske forsikringsgiveren for et annet involvert kjøretøy.
 
 Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør 200.000 TWD, invaliditetsytelser (失能) etter de lovbestemte 15 trinn 80.000 TWD–3.000.000, dødsfallsytelsen 3.000.000 TWD, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 tilskadekomne person og 1 ulykke utgjør 3.200.000 TWD. For tidligere ulykker kan den tidligere norm gjelde.
 
@@ -339,7 +339,7 @@ Ved den skadelidtes tilskadekomst eller dødsfall lider de selv eller familien l
 
 ​
 
-Mange forårsakere bekymrer seg verken om telefonisk forespørsel om tilstanden eller om sykebesøk og tenker at forsikringsselskapet vil ordne alt, så de selv uteblir. Da føles verken anger eller alvor.
+Mange skadevoldere verken ringer for å høre hvordan det går, eller besøker den skadelidte på sykehuset, og tenker at forsikringsselskapet vil ordne alt, så de selv uteblir. Da føles verken anger eller alvor.
 
 ​
 
@@ -351,7 +351,7 @@ Derved lider den skadelidte stor krenkelse og vrede, gir ikke etter ved forhandl
 
 ​
 
-Derfor må dette punkt på ingen måte overses; det er tilrådelig å drøfte situasjonen med en advokat.
+Derfor må dette punktet på ingen måte overses; det er tilrådelig å drøfte situasjonen med en advokat.
 
 ​
 

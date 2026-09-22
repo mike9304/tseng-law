@@ -517,7 +517,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
   nb: {
     label: 'KONTORER',
     title: 'Kontorer',
-    description: 'Adresser til Hovering International Law Firms kontorer i Taiwan.',
+    description: 'Adresser til kontorene til Hovering International Law Firm i Taiwan.',
     officeLabel: 'Kontor',
     mapPreviewLabel: 'Forhåndsvisning av kartet',
     koreaOfficeTitle: 'Kontoret i Korea',

@@ -1939,7 +1939,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consentLabel:
       'मैले गोपनीयता पृष्ठ पढेको छु र यो अनुरोध पठाउन सहमति दिन्छु।',
     privacyLinkLabel: 'गोपनीयता',
-    requiredMessage: 'यो फिल्ड आवश्यक छ।',
+    requiredMessage: 'यो विवरण आवश्यक छ।',
     invalidEmailMessage: 'कृपया मान्य इमेल ठेगाना दिनुहोस्।',
     tooLongMessage: 'पाठ धेरै लामो छ। छोट्याएर फेरि पठाउनुहोस्।',
     sourceLanguageNotice:

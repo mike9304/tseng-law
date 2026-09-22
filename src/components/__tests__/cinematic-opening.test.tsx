@@ -10,6 +10,12 @@ import {
 import { createRoot, type Root } from 'react-dom/client';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import {
+  GUIDANCE_LOCALES_4,
+  PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT,
+  PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
 
 const navigationState = vi.hoisted(() => ({
   pathname: '/ko' as string | null,
@@ -89,7 +95,7 @@ function htmlEncodedText(value: string): string {
   return value.replace(/&/g, '&amp;');
 }
 
-function renderRouteShell(pathname: string | null, locale: (typeof locales)[number] = 'ko') {
+function renderRouteShell(pathname: string | null, locale: PublicLocale8 = 'ko') {
   navigationState.pathname = pathname;
   return renderToStaticMarkup(
     <CinematicRouteShell
@@ -209,6 +215,71 @@ describe('cinematic opening client-route gate', () => {
     ['/ko/#main', 'ko'],
     [null, 'ko'],
   ] as const)('excludes the non-home pathname %s', (pathname, locale) => {
+    expect(isCinematicHomepagePath(pathname, locale)).toBe(false);
+    const html = renderRouteShell(pathname, locale);
+    expect(html).not.toContain('data-cinematic-home="true"');
+    expect(html).not.toContain('class="cinematic-opening"');
+  });
+
+  it.each<[string, PublicLocale8]>([
+    ['/vi', 'vi'],
+    ['/vi/', 'vi'],
+    [`/vi/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'vi'],
+    [`/vi/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/`, 'vi'],
+    ['/id', 'id'],
+    ['/id/', 'id'],
+    [`/id/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'id'],
+    [`/id/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/`, 'id'],
+    ['/th', 'th'],
+    ['/th/', 'th'],
+    [`/th/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'th'],
+    [`/th/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/`, 'th'],
+    ['/fil', 'fil'],
+    ['/fil/', 'fil'],
+    [`/fil/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'fil'],
+    [`/fil/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/`, 'fil'],
+  ])(
+    'treats guidance public home and exact SSR rewrite alias %s as home',
+    (pathname, locale) => {
+      expect(isCinematicHomepagePath(pathname, locale)).toBe(true);
+      const html = renderRouteShell(pathname, locale);
+      expect(html).toContain('data-cinematic-home="true"');
+      expect(html).toContain('class="cinematic-opening"');
+    },
+  );
+
+  it.each(GUIDANCE_LOCALES_4)(
+    'keeps the %s SSR rewrite alias tree identical to the public home tree',
+    (locale) => {
+      const clientHtml = renderRouteShell(`/${locale}`, locale);
+      const ssrAliasHtml = renderRouteShell(
+        `/${locale}/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`,
+        locale,
+      );
+
+      expect(ssrAliasHtml).toBe(clientHtml);
+      expect(ssrAliasHtml).toContain('data-cinematic-home="true"');
+      expect(ssrAliasHtml).toContain('class="cinematic-opening"');
+      expect(ssrAliasHtml).toContain('<noscript>');
+      expect(ssrAliasHtml).toContain('id="cinematic-home-content"');
+    },
+  );
+
+  it.each<[string, PublicLocale8]>([
+    [`/id/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/contact`, 'id'],
+    [`/fil/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/contact`, 'fil'],
+    [`/vi/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/about`, 'vi'],
+    [`/th/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/faq`, 'th'],
+    [`/id/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/unknown`, 'id'],
+    ['/id/columns', 'id'],
+    ['/fil/columns', 'fil'],
+    ['/id/contact', 'id'],
+    [`/ko/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'ko'],
+    [`/zh-hant/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'zh-hant'],
+    [`/en/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'en'],
+    [`/ja/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`, 'ja'],
+    [`/id/${PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT}`, 'id'],
+  ])('excludes the guidance non-home pathname %s', (pathname, locale) => {
     expect(isCinematicHomepagePath(pathname, locale)).toBe(false);
     const html = renderRouteShell(pathname, locale);
     expect(html).not.toContain('data-cinematic-home="true"');

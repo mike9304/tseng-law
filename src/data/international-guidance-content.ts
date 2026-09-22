@@ -487,7 +487,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Những điều trang này không bảo đảm',
             paragraphs: [
-              'Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: tin nhắn quý vị gửi không được dịch tự động.',
+              'Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: tin nhắn quý vị gửi không được dịch tự động.',
               'Khi quý vị gửi yêu cầu, nội dung được lưu lại và chờ xem xét. Nếu sau một thời gian quý vị chưa nhận được phản hồi, quý vị có thể gửi lại qua địa chỉ thư điện tử được nêu trên trang liên hệ.',
             ],
           },
@@ -527,7 +527,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Nếu tôi không dùng được cả bốn ngôn ngữ đó thì sao?',
             answer:
-              'Quý vị hãy chọn mục “Cần xác nhận cách liên hệ” khi gửi yêu cầu. Văn phòng sẽ dùng thư trả lời để xác nhận phương thức trao đổi, nếu có phương thức khả thi. Đây là bước xác nhận, không phải cam kết rằng chúng tôi có thể hỗ trợ bằng ngôn ngữ khác.',
+              'Quý vị hãy chọn mục “Cần xác nhận cách liên hệ” khi gửi yêu cầu. Cần xác nhận xem có phương thức trao đổi khả thi hay không và việc tư vấn có thể tiến hành hay không. Việc chọn mục này không bảo đảm rằng việc tư vấn có thể được thực hiện.',
           },
           {
             question: 'Nội dung tôi viết bằng tiếng Việt sẽ được xử lý ra sao?',
@@ -982,7 +982,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Hal-hal yang tidak dijamin halaman ini',
             paragraphs: [
-              'Kami tidak menjanjikan waktu balasan, tidak memastikan janji temu melalui halaman ini, tidak menjanjikan advokat tertentu yang akan menangani perkara, dan tidak menyediakan penerjemah. Penerjemahan tulisan adalah hal terpisah: pesan yang Anda kirim tidak diterjemahkan secara otomatis.',
+              'Kami tidak menjanjikan waktu balasan, tidak memastikan janji temu melalui halaman ini, tidak menjanjikan advokat tertentu yang akan menangani perkara, dan tidak menjanjikan pengaturan juru bahasa (penerjemah lisan). Penerjemahan tulisan adalah hal terpisah: pesan yang Anda kirim tidak diterjemahkan secara otomatis.',
               'Ketika Anda mengirim permintaan, isinya tersimpan dan menunggu ditinjau. Jika setelah beberapa waktu Anda belum menerima balasan, Anda dapat mengirim ulang melalui alamat email yang tertera pada halaman kontak.',
             ],
           },
@@ -1017,12 +1017,12 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Bisakah saya berkonsultasi dalam bahasa Indonesia?',
             answer:
-              'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
+              'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan juru bahasa (penerjemah lisan) untuk percakapan. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
           },
           {
             question: 'Bagaimana jika keempat bahasa itu tidak dapat saya gunakan?',
             answer:
-              'Pilihlah “Perlu konfirmasi cara berkomunikasi” ketika mengirim permintaan. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin. Ini langkah pemastian, bukan janji bahwa kami dapat melayani dalam bahasa lain.',
+              'Pilihlah “Perlu konfirmasi cara berkomunikasi” ketika mengirim permintaan. Perlu dipastikan apakah ada cara berkomunikasi yang dapat dipakai dan apakah konsultasi dapat dilanjutkan. Memilih pilihan ini tidak menjamin bahwa konsultasi dapat dilayani.',
           },
           {
             question: 'Bagaimana tulisan saya dalam bahasa Indonesia diperlakukan?',
@@ -1477,7 +1477,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'สิ่งที่หน้านี้ไม่ได้รับประกัน',
             paragraphs: [
-              'เราไม่รับประกันระยะเวลาในการตอบกลับ ไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ ไม่รับประกันว่าทนายความคนใดจะเป็นผู้รับผิดชอบเรื่อง และไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความที่ท่านส่งมาจะไม่ถูกแปลโดยอัตโนมัติ',
+              'เราไม่รับประกันระยะเวลาในการตอบกลับ ไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ ไม่รับประกันว่าทนายความคนใดจะเป็นผู้รับผิดชอบเรื่อง และไม่ได้รับปากว่าจะจัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความที่ท่านส่งมาจะไม่ถูกแปลโดยอัตโนมัติ',
               'เมื่อท่านส่งเรื่องเข้ามา เนื้อหาจะถูกบันทึกไว้และรอการตรวจสอบ หากผ่านไประยะหนึ่งแล้วท่านยังไม่ได้รับการติดต่อกลับ ท่านสามารถส่งเรื่องซ้ำได้ทางอีเมลตามที่อยู่ในหน้าติดต่อ',
             ],
           },
@@ -1512,12 +1512,12 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'ปรึกษาเป็นภาษาไทยได้หรือไม่',
             answer:
-              'ไม่ได้ ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้ สำนักงานไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิมและไม่มีการแปลโดยอัตโนมัติ',
+              'ไม่ได้ ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้ สำนักงานไม่ได้รับปากว่าจะจัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิมและไม่มีการแปลโดยอัตโนมัติ',
           },
           {
             question: 'หากท่านใช้ภาษาใดใน 4 ภาษานั้นไม่ได้จะทำอย่างไร',
             answer:
-              'โปรดเลือก “ต้องยืนยันวิธีติดต่อ” เมื่อส่งเรื่องเข้ามา เราจะตอบกลับเพื่อยืนยันวิธีสื่อสารที่เป็นไปได้ร่วมกับท่าน ขั้นตอนนี้เป็นการยืนยัน ไม่ใช่คำมั่นว่าเราจะให้บริการเป็นภาษาอื่นได้',
+              'โปรดเลือก “ต้องยืนยันวิธีติดต่อ” เมื่อส่งเรื่องเข้ามา ต้องมีการยืนยันว่ามีวิธีสื่อสารที่ใช้ได้จริงหรือไม่ และการให้คำปรึกษาจะดำเนินต่อไปได้หรือไม่ การเลือกหัวข้อนี้ไม่ได้รับประกันว่าจะมีการให้คำปรึกษา',
           },
           {
             question: 'ข้อความที่เขียนเป็นภาษาไทยจะถูกจัดการอย่างไร',
@@ -1972,7 +1972,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Ang mga hindi ginagarantiya ng pahinang ito',
             paragraphs: [
-              'Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nagbibigay ng interpreter (tagapagpaliwanag sa pasalita) para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.',
+              'Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nangangako ng pag-aayos ng interpreter (tagapagpaliwanag sa pasalita) para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.',
               'Kapag nagpadala kayo ng mensahe, naitatala ang nilalaman nito at naghihintay ng pagsusuri. Kung lumipas na ang ilang panahon at wala kayong natatanggap na sagot, maaari ninyo itong ipadalang muli sa email address na nasa pahinang Makipag-ugnayan.',
             ],
           },
@@ -2012,7 +2012,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Paano kung hindi ko magamit ang apat na wikang iyon?',
             answer:
-              'Piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan” kapag nagpadala kayo ng mensahe. Sasagot kami upang magkasamang kumpirmahin kung paano tayo maaaring mag-usap. Hakbang ito ng pagkumpirma, hindi pangako na kaya naming maglingkod sa ibang wika.',
+              'Piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan” kapag nagpadala kayo ng mensahe. Kailangang kumpirmahin kung mayroong paraan ng pakikipag-usap na magagamit at kung maitutuloy ang konsultasyon. Hindi tinitiyak ng pagpiling ito na maibibigay ang konsultasyon.',
           },
           {
             question: 'Paano hahawakan ang tekstong Filipino na isinulat ko?',

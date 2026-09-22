@@ -227,6 +227,13 @@ describe('authored ZH home initial editor read', () => {
     const koSentinel = createHomePageCanvasDocumentDecomposed('ko').nodes.find((node) => node.id === 'home-insights-title')!;
     if (wrongLocaleSentinel.kind !== 'text' || koSentinel.kind !== 'text') throw new Error('text expected');
     wrongLocaleSentinel.content.text = koSentinel.content.text;
+    const attorneyTitle = doc.nodes.find((node) => node.id === 'home-attorney-title')!;
+    const attorneySummary = doc.nodes.find((node) => node.id === 'home-attorney-summary')!;
+    const attorneyIntro2 = doc.nodes.find((node) => node.id === 'home-attorney-intro-2')!;
+    if (attorneyTitle.kind !== 'text' || attorneySummary.kind !== 'text' || attorneyIntro2.kind !== 'text') throw new Error('text expected');
+    attorneyTitle.content.text = '作者自行編輯的律師標題';
+    attorneySummary.content.text = '作者自行編輯的律師摘要';
+    attorneyIntro2.content.text = '作者自行編輯的律師介紹二';
     const original = structuredClone(doc);
     const result = await initialRead(doc);
     expect(result).toEqual(original);

@@ -82,6 +82,29 @@ function nodesOfType(markup: string, type: string): Array<Record<string, unknown
   return parseJsonLdNodes(markup).filter((node) => node['@type'] === type);
 }
 
+/** Undo the entities `renderToStaticMarkup` emits so visible FAQ text can be compared verbatim. */
+function decodeVisibleText(value: string): string {
+  return value
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&');
+}
+
+/** Questions and answers actually rendered by the home `FAQAccordion`. */
+function visibleHomeFaqs(markup: string): Array<{ question: string; answer: string }> {
+  const questions = [
+    ...markup.matchAll(/<h3 class="faq-question">[\s\S]*?<span>([\s\S]*?)<\/span>/g),
+  ].map((match) => decodeVisibleText(match[1]));
+  const answers = [...markup.matchAll(/<p class="faq-answer">([\s\S]*?)<\/p>/g)].map((match) =>
+    decodeVisibleText(match[1]),
+  );
+  return questions.map((question, index) => ({ question, answer: answers[index] }));
+}
+
 describe('guidance FAQPage JSON-LD', () => {
   it.each(GUIDANCE_LOCALES_4)(
     'emits every %s FAQ verbatim on the faq page',
@@ -202,15 +225,53 @@ describe('guidance LegalService JSON-LD', () => {
     expect((legalService!.provider as Record<string, unknown>)['@id']).toBe(ATTORNEY_PERSON_ID);
   });
 
-  it('emits no FAQPage on the guidance home, which carries no FAQs', () => {
+  it('emits one FAQPage on the guidance home from the visible faq items', () => {
     for (const locale of GUIDANCE_LOCALES_4) {
+      const faqs = guidanceContent[locale].pages.faq.faqs ?? [];
+      expect(faqs.length).toBeGreaterThan(0);
+      // The home pack still has no faq field of its own; the visible items are
+      // the translated faq page, headed by this locale's `nav.faq`.
       expect(guidanceContent[locale].pages.home.faqs).toBeUndefined();
+
       const markup = renderGuidanceHome(locale);
-      expect(nodesOfType(markup, 'FAQPage'), `${locale} home FAQPage`).toHaveLength(0);
-      // WO-O28 added the attorney `Person` node the English home already
-      // emits, so the home body now ships exactly LegalService + Person.
-      expect(parseJsonLdNodes(markup), `${locale} home JSON-LD nodes`).toHaveLength(2);
+      expect(markup, `${locale} faq heading`).toContain(guidanceContent[locale].nav.faq);
+      const visible = visibleHomeFaqs(markup);
+      expect(visible, `${locale} visible faqs`).toEqual(
+        faqs.map((faq) => ({ question: faq.question, answer: faq.answer })),
+      );
+
+      const faqPages = nodesOfType(markup, 'FAQPage');
+      expect(faqPages, `${locale} home FAQPage`).toHaveLength(1);
+      expect(faqPages[0].inLanguage).toBe(publicDocumentLanguage(locale));
+      expect(faqPages[0]['@context']).toBe('https://schema.org');
+
+      const mainEntity = faqPages[0].mainEntity as Array<Record<string, unknown>>;
+      expect(mainEntity).toHaveLength(visible.length);
+      mainEntity.forEach((entity, index) => {
+        expect(entity['@type']).toBe('Question');
+        expect(entity.name).toBe(visible[index].question);
+        expect(entity.acceptedAnswer).toEqual({
+          '@type': 'Answer',
+          text: visible[index].answer,
+        });
+      });
+
+      // Person stays, and LegalService consultation languages stay the fixed four.
       expect(nodesOfType(markup, 'Person'), `${locale} home Person`).toHaveLength(1);
+      const legalServices = nodesOfType(markup, 'LegalService');
+      expect(legalServices, `${locale} home LegalService`).toHaveLength(1);
+      const availableLanguage = legalServices[0].availableLanguage as string[];
+      expect(availableLanguage).toEqual(CONSULTATION_LANGUAGES);
+      expect(availableLanguage, `${locale} home consultation languages`).toHaveLength(4);
+      for (const guidanceLocale of GUIDANCE_LOCALES_4) {
+        expect(availableLanguage).not.toContain(guidanceLocale);
+      }
+
+      expect(parseJsonLdNodes(markup), `${locale} home JSON-LD nodes`).toHaveLength(3);
+      expect(
+        parseJsonLdNodes(markup).some((node) => node['@type'] === 'SearchAction'),
+        `${locale} home SearchAction`,
+      ).toBe(false);
     }
   });
 

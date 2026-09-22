@@ -2,7 +2,11 @@
 
 import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
-import { type PublicLocale8 } from '@/lib/public-guidance';
+import {
+  isGuidanceLocale4,
+  PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
 import CinematicOpening from '@/components/CinematicOpening';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
@@ -13,7 +17,15 @@ export function isCinematicHomepagePath(
 ): boolean {
   if (!pathname) return false;
   const localeRoot = `/${locale}`;
-  return pathname === localeRoot || pathname === `${localeRoot}/`;
+  if (pathname === localeRoot || pathname === `${localeRoot}/`) {
+    return true;
+  }
+  // Guidance homes rewrite to /{locale}/__public-guidance. Server usePathname
+  // sees that alias; the client sees /{locale}. Match only the exact home
+  // alias so SSR and hydration render the same opening tree.
+  if (!isGuidanceLocale4(locale)) return false;
+  const guidanceHome = `${localeRoot}/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}`;
+  return pathname === guidanceHome || pathname === `${guidanceHome}/`;
 }
 
 export default function CinematicRouteShell({

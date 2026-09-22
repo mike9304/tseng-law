@@ -313,7 +313,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Việc tư vấn chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
     methodConfirmationNotice:
-      'Nếu quý vị không dùng được ngôn ngữ nào trong bốn ngôn ngữ đó, hãy chọn “Cần xác nhận cách liên hệ”. Văn phòng xác nhận phương thức trao đổi bằng thư trả lời khi có phương thức khả thi; không bảo đảm hỗ trợ bằng ngôn ngữ khác và không cam kết thời gian phản hồi.',
+      'Nếu quý vị không dùng được ngôn ngữ nào trong bốn ngôn ngữ đó, hãy chọn “Cần xác nhận cách liên hệ”. Cần xác nhận xem có phương thức trao đổi khả thi hay không và việc tư vấn có thể tiến hành hay không. Việc chọn mục này không bảo đảm rằng việc tư vấn có thể được thực hiện, không bảo đảm hỗ trợ bằng ngôn ngữ khác và không cam kết thời gian phản hồi.',
     preparationNotice:
       'Quý vị có thể viết tóm tắt vụ việc bằng ngôn ngữ của mình. Phần nội dung gốc quý vị viết được giữ nguyên và không được dịch tự động.',
     heading: 'Gửi yêu cầu tư vấn',
@@ -363,7 +363,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Konsultasi hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
     methodConfirmationNotice:
-      'Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
+      'Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Perlu dipastikan apakah ada cara berkomunikasi yang memungkinkan dan apakah konsultasi dapat dilanjutkan. Memilih pilihan ini tidak menjamin bahwa konsultasi dapat dilayani, tidak menjamin layanan dalam bahasa lain, dan tidak menjanjikan waktu balasan tertentu.',
     preparationNotice:
       'Anda boleh menulis ringkasan perkara dalam bahasa Anda sendiri. Teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
     heading: 'Kirim permintaan konsultasi',
@@ -413,7 +413,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'การให้คำปรึกษาจริงดำเนินการเฉพาะ 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
     methodConfirmationNotice:
-      'หากท่านใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ กรุณาเลือก “ต้องยืนยันวิธีติดต่อ” เราจะตอบกลับเพื่อยืนยันวิธีการสื่อสารที่เป็นไปได้ แต่ไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ',
+      'หากท่านใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ กรุณาเลือก “ต้องยืนยันวิธีติดต่อ” ต้องมีการยืนยันว่ามีวิธีสื่อสารที่เป็นไปได้หรือไม่ และการให้คำปรึกษาจะดำเนินต่อไปได้หรือไม่ การเลือกหัวข้อนี้ไม่ได้รับประกันว่าจะมีการให้คำปรึกษา ไม่รับประกันการให้บริการเป็นภาษาอื่น และไม่รับรองระยะเวลาในการตอบกลับ',
     preparationNotice:
       'ท่านเขียนสรุปเรื่องด้วยภาษาของท่านเองได้ ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิม และไม่มีการแปลโดยอัตโนมัติ',
     heading: 'ส่งเรื่องเพื่อขอคำปรึกษา',
@@ -462,7 +462,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Ang aktwal na konsultasyon ay isinasagawa lamang sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
     methodConfirmationNotice:
-      'Kung wala sa apat na wikang iyon ang kaya ninyong gamitin, piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
+      'Kung wala sa apat na wikang iyon ang kaya ninyong gamitin, piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Kailangang kumpirmahin kung mayroong posibleng paraan ng pakikipag-usap at kung maitutuloy ang konsultasyon. Hindi tinitiyak ng pagpiling ito na maibibigay ang konsultasyon, na magkakaroon ng suporta sa ibang wika, o na may tiyak na panahon ng pagsagot.',
     preparationNotice:
       'Maaari ninyong isulat ang buod ng usapin ninyo sa sarili ninyong wika. Iniingatan ang orihinal ninyong teksto gaya ng pagkakasulat ninyo, at hindi ito awtomatikong isinasalin.',
     heading: 'Ipadala ang inyong katanungan',

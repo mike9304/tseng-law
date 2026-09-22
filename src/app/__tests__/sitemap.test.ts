@@ -1,4 +1,5 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { setImmediate } from 'node:timers/promises';
 import { readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { getAllColumnPosts } from '@/lib/columns';
@@ -56,6 +57,13 @@ describe('sitemap column lastModified', () => {
     sourceMocks.readServiceAreaSourceRecords.mockClear();
     sourceMocks.collectAllBuilderSitemapEntries.mockReset();
     sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
+  });
+
+  // Each case does a few seconds of synchronous file/git work, then the runner
+  // continues on promise microtasks. That never reaches the fork poll phase, so
+  // onTaskUpdate IPC stalls until the whole file ends (~100s) and the RPC times out.
+  afterEach(async () => {
+    await setImmediate();
   });
 
   it('uses each column frontmatter lastmod and preserves distinct dates', async () => {

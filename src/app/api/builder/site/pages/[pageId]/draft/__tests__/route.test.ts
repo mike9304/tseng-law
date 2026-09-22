@@ -433,6 +433,13 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
     if (title.kind !== 'text' || sentinel.kind !== 'text' || ko.kind !== 'text') throw new Error('text expected');
     title.content.text = '作者自訂且必須保留的標題';
     sentinel.content.text = ko.content.text;
+    const attorneyTitle = fixture.nodes.find((node) => node.id === 'home-attorney-title')!;
+    const attorneySummary = fixture.nodes.find((node) => node.id === 'home-attorney-summary')!;
+    const attorneyIntro2 = fixture.nodes.find((node) => node.id === 'home-attorney-intro-2')!;
+    if (attorneyTitle.kind !== 'text' || attorneySummary.kind !== 'text' || attorneyIntro2.kind !== 'text') throw new Error('text expected');
+    attorneyTitle.content.text = '作者自訂且必須保留的律師標題';
+    attorneySummary.content.text = '作者自訂且必須保留的律師摘要';
+    attorneyIntro2.content.text = '作者自訂且必須保留的律師介紹二';
     const stored = recordState(fixture);
     stored.record.updatedBy = 'admin';
     vi.mocked(readPageCanvasRecordState).mockResolvedValue(stored);

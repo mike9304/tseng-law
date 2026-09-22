@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import FAQAccordion from '@/components/FAQAccordion';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
 import LocaleHomePathNav from '@/components/LocaleHomePathNav';
 import JsonLd from '@/components/JsonLd';
@@ -26,7 +27,11 @@ import {
   publicDocumentLanguage,
   type ExistingSiteLocale4,
 } from '@/lib/public-guidance';
-import { buildGuidanceLegalServiceJsonLd, getSiteUrl } from '@/lib/seo';
+import {
+  buildGuidanceFaqJsonLd,
+  buildGuidanceLegalServiceJsonLd,
+  getSiteUrl,
+} from '@/lib/seo';
 import { buildGuidancePersonJsonLd } from '@/lib/guidance-structured-data';
 
 /**
@@ -36,7 +41,9 @@ import { buildGuidancePersonJsonLd } from '@/lib/guidance-structured-data';
  * six service cards, the editorial image band, column archive, then the closing
  * contact band the other guidance pages already use — with the same design
  * system class names, so the four new languages share the site's home design
- * instead of a page-header-plus-cards stack.
+ * instead of a page-header-plus-cards stack. The translated FAQ accordion
+ * (`pages.faq.faqs`, heading `nav.faq`) sits immediately before that contact
+ * band, using the same `FAQAccordion` pattern as the other guidance pages.
  *
  * Copy rules (LOCALIZATION-BRIEF): every sentence comes from
  * `international-guidance-content.ts`. The hero, services and archive headings
@@ -450,14 +457,18 @@ export default function GuidanceHomeBody({
   // consultation languages inside the node stay the fixed four
   // (GUIDANCE_CONSULTATION_LANGUAGES = en/zh-Hant/ja/ko).
   //
-  // No FAQPage here: the home pack carries no `faqs`, and the visible FAQ lives
-  // on `/{locale}/faq`, which already emits that node.
+  // FAQPage is exactly the accordion's `pages.faq.faqs` items. The visible
+  // heading is `nav.faq` and is not a JSON-LD field. Home still has no `faqs`.
+  const homeFaqs = pack.pages.faq.faqs;
   const legalServiceJsonLd = buildGuidanceLegalServiceJsonLd({
     inLanguage: publicDocumentLanguage(locale),
     url: guidanceCanonicalUrl(locale, 'home', getSiteUrl()),
     description: pack.pages.home.description,
     contactUrl: guidanceCanonicalUrl(locale, 'contact', getSiteUrl()),
   });
+  const faqJsonLd = homeFaqs?.length
+    ? buildGuidanceFaqJsonLd(homeFaqs, publicDocumentLanguage(locale))
+    : null;
   // WO-O28. The English home emits the attorney `Person` node (and with it the
   // `Organization` / `CollegeOrUniversity` nodes it nests); the guidance home
   // emitted none. No breadcrumb here — `/en` emits none on its home either.
@@ -468,6 +479,7 @@ export default function GuidanceHomeBody({
       {/* First child so the home design-parity landmark sequence is unchanged. */}
       <JsonLd data={legalServiceJsonLd} />
       {personJsonLd ? <JsonLd data={personJsonLd} /> : null}
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <GuidanceHero locale={locale} />
       <Reveal>
         <GuidanceServices locale={locale} />
@@ -489,6 +501,18 @@ export default function GuidanceHomeBody({
           home now renders that same component, unwrapped exactly as `/en`
           does, so the two home pages agree element for element. */}
       <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" />
+      {homeFaqs && homeFaqs.length > 0 ? (
+        <Reveal>
+          <FAQAccordion
+            locale={locale}
+            items={[...homeFaqs]}
+            id="faq"
+            sectionClassName="section section--gray"
+            headingLabel="FAQ"
+            headingTitle={pack.nav.faq}
+          />
+        </Reveal>
+      ) : null}
       <GuidanceContactBand locale={locale} isContact={false} />
     </div>
   );

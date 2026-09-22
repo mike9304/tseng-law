@@ -98,9 +98,14 @@ describe('guidance home matches the English home composition', () => {
 
   it('renders the same landmark sequence for every guidance locale', () => {
     for (const locale of GUIDANCE_LOCALES_4) {
-      expect(homeLandmarkSequence(renderGuidanceHome(locale)), `${locale} home`).toEqual(
-        EXPECTED_SEQUENCE,
-      );
+      const markup = renderGuidanceHome(locale);
+      expect(homeLandmarkSequence(markup), `${locale} home`).toEqual(EXPECTED_SEQUENCE);
+      // FAQ is not one of the shared English-home landmarks (that fixture passes
+      // an empty faq list). It still has to sit before the closing contact band.
+      const faqAt = markup.indexOf('id="faq"');
+      const contactAt = markup.search(/<section[^>]*class="[^"]*home-contact-cta/);
+      expect(faqAt, `${locale} faq section`).toBeGreaterThan(-1);
+      expect(contactAt, `${locale} faq before contact`).toBeGreaterThan(faqAt);
     }
   });
 
@@ -141,7 +146,9 @@ describe('guidance home matches the English home composition', () => {
         .replace(/>[^<]*</g, '><')
         .replace(/(alt|aria-label|title)="[^"]*"/g, '$1=""')
         .replace(new RegExp(`"/${locale}/`, 'g'), '"/{locale}/')
-        .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"'),
+        .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"')
+        // FAQAccordion ids embed the page locale (`vi-faq-0-button`).
+        .replace(new RegExp(`${locale}-faq-`, 'g'), '{locale}-faq-'),
     );
     shapes.forEach((shape, index) => {
       expect(shape, `guidance home of ${GUIDANCE_LOCALES_4[index]} differs structurally from ${GUIDANCE_LOCALES_4[0]}`).toEqual(shapes[0]);
@@ -193,10 +200,12 @@ describe('guidance home matches the English home composition', () => {
         (match) => JSON.parse(match[1]) as Record<string, unknown>,
       );
       // WO-O28 added the attorney `Person` node the English home already
-      // emits. LegalService stays first, so the landmark sequence is unchanged.
-      expect(nodes, `${locale} json-ld node count`).toHaveLength(2);
+      // emits. LegalService stays first. The home FAQPage is the third node,
+      // built from the same visible `pages.faq.faqs` items.
+      expect(nodes, `${locale} json-ld node count`).toHaveLength(3);
       expect(nodes[0]['@type'], `${locale} json-ld type`).toBe('LegalService');
       expect(nodes[1]['@type'], `${locale} second json-ld type`).toBe('Person');
+      expect(nodes[2]['@type'], `${locale} third json-ld type`).toBe('FAQPage');
 
       const availableLanguage = nodes[0].availableLanguage as string[];
       expect(availableLanguage, `${locale} consultation languages`).toEqual([

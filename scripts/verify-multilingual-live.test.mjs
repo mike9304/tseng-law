@@ -16,6 +16,7 @@ import {
   parseHreflangAlternates,
   parseHtmlLang,
   parseSitemapLocs,
+  publicDocumentLanguage,
   requiredHreflangTags,
   runMultilingualLiveCheck,
   slugFromColumnFilename,
@@ -51,14 +52,14 @@ function hreflangLinks(pageKey) {
       if (tag === 'x-default') {
         return `<link rel="alternate" hreflang="x-default" href="${BASE}/en${pageKey === 'home' ? '' : `/${pageKey}`}">`;
       }
-      const locale = tag === 'zh-Hant' ? 'zh-hant' : tag;
+      const locale = tag === 'zh-Hant' ? 'zh-hant' : tag === 'zh-Hans' ? 'zh-hans' : tag;
       return `<link rel="alternate" hreflang="${tag}" href="${BASE}${guidancePublicPath(locale, pageKey)}">`;
     })
     .join('');
 }
 
 function pageHtml({ locale, pageKey, hreflang = true, memo = false, notice = '', statusLang }) {
-  const lang = statusLang ?? (locale === 'zh-hant' ? 'zh-Hant' : locale);
+  const lang = statusLang ?? (locale === 'zh-hant' ? 'zh-Hant' : locale === 'zh-hans' ? 'zh-Hans' : locale);
   const links = hreflang ? hreflangLinks(pageKey) : '<link rel="alternate" hreflang="en" href="http://live-check.test/en">';
   const memoText = memo ? '이 항목은 운영자 확인이 필요합니다 / operator confirmation' : 'privacy body without operator notes';
   return `<!doctype html><html lang="${lang}"><head>${links}</head><body>${notice}${memoText}</body></html>`;
@@ -140,6 +141,22 @@ test('parse helpers read sitemap locs, html lang, and hreflang tags', () => {
   assert.ok(requiredHreflangTags('about').includes('zh-Hant'));
   assert.ok(!requiredHreflangTags('faq').includes('en'));
   assert.equal(hreflangTagForPublicLocale('zh-hant'), 'zh-Hant');
+  assert.equal(hreflangTagForPublicLocale('zh-hans'), 'zh-Hans');
+  assert.equal(publicDocumentLanguage('zh-hans'), 'zh-Hans');
+});
+
+test('zh-Hans fixture emits canonical tags on the lowercase route', () => {
+  const html = pageHtml({ locale: 'zh-hans', pageKey: 'about' });
+  assert.match(html, /<html lang="zh-Hans">/);
+  assert.match(html, /hreflang="zh-Hans" href="http:\/\/live-check\.test\/zh-hans\/about"/);
+  assert.doesNotMatch(html, /hreflang="zh-hans"/);
+  assert.doesNotMatch(html, /\/zh-Hans\//);
+  const alternates = parseHreflangAlternates(html);
+  assert.equal(alternates.get('zh-Hans'), `${BASE}/zh-hans/about`);
+  assert.equal(alternates.has('zh-hans'), false);
+  for (const tag of requiredHreflangTags('about')) {
+    assert.equal(alternates.has(tag), true, tag);
+  }
 });
 
 test('success: all core checks pass when fetch returns 200 pages', async () => {

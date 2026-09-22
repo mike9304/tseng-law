@@ -43,6 +43,7 @@ const SCHEDULED_SLUG = 'col012-scheduled-future-native-search';
 vi.mock('@/lib/builder/site/persistence', () => ({
   listPages: vi.fn(async () => []),
   readPageCanvas: vi.fn(async () => null),
+  readExistingSiteDocument: vi.fn(async () => null),
 }));
 
 vi.mock('@/lib/builder/faq/faq-engine', () => ({

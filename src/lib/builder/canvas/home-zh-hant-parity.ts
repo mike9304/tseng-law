@@ -1,4 +1,6 @@
 import type { CSSProperties } from 'react';
+import { siteContent } from '@/data/site-content';
+import { teamContent } from '@/data/team-members';
 import type { SiteLocale } from '@/lib/locales';
 import { getAiIntakeDiscovery, type AiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
@@ -229,6 +231,36 @@ function repairOfficeContacts(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
   return replacements.size ? nodes.map((node) => replacements.get(node.id) ?? node) : nodes;
 }
 
+const LEGACY_ATTORNEY_STOCK_TEXT = {
+  'home-attorney-title': '曾雋崴律師，專注服務韓國客戶的台灣法律夥伴',
+  'home-attorney-summary': '擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。',
+  'home-attorney-intro-2': '曾代理韓國留學生健身傷害求償案，獲判新台幣 157 萬元。',
+} as const;
+
+function canonicalAttorneyStockText(id: keyof typeof LEGACY_ATTORNEY_STOCK_TEXT): string | undefined {
+  if (id === 'home-attorney-title') return siteContent['zh-hant'].homeAttorney.title;
+  if (id === 'home-attorney-summary') return siteContent['zh-hant'].homeAttorney.summary;
+  const intro = teamContent['zh-hant'].members.find((member) => member.id === 'tseng-junwei')?.intro?.[1];
+  return typeof intro === 'string' ? intro : undefined;
+}
+
+function repairAttorneyStockText(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
+  const replacements = new Map<string, BuilderCanvasNode>();
+  for (const node of nodes) {
+    if (node.kind !== 'text' || node.dataBinding !== undefined) continue;
+    if (node.content.richText != null) continue;
+    if (node.id !== 'home-attorney-title' && node.id !== 'home-attorney-summary'
+      && node.id !== 'home-attorney-intro-2') continue;
+    if (node.parentId !== 'home-attorney-content'
+      && !(node.id === 'home-attorney-summary' && node.parentId === 'home-attorney-detail-flow')) continue;
+    if (node.content.text !== LEGACY_ATTORNEY_STOCK_TEXT[node.id]) continue;
+    const text = canonicalAttorneyStockText(node.id);
+    if (text === undefined || text === node.content.text) continue;
+    replacements.set(node.id, { ...node, content: { ...node.content, text } });
+  }
+  return replacements.size ? nodes.map((node) => replacements.get(node.id) ?? node) : nodes;
+}
+
 /** A read projection: no persistence, reseed, author metadata change or node removal. */
 export function normalizeLegacyZhHantHome(
   document: BuilderCanvasDocument,
@@ -236,7 +268,7 @@ export function normalizeLegacyZhHantHome(
   isHomePage: boolean,
 ): BuilderCanvasDocument {
   if (!isHome(document, locale, isHomePage)) return document;
-  const nodes = repairOfficeContacts(repairAttorneyDetailFlow(addMissingEmailCta(document.nodes)));
+  const nodes = repairOfficeContacts(repairAttorneyDetailFlow(addMissingEmailCta(repairAttorneyStockText(document.nodes))));
   return nodes === document.nodes ? document : { ...document, nodes };
 }
 
@@ -365,9 +397,30 @@ export async function normalizeLegacyZhHantHomeRead(
 
 const ZINDEX_INSERTION_IDS = ['home-hero-email-consultation-link', 'home-attorney-detail-flow'] as const;
 const KNOWN_INSERTED_GROUP_ID = 'home-attorney-detail-flow';
+const ATTORNEY_FINGERPRINT_IDS = ['home-attorney-title', 'home-attorney-summary', 'home-attorney-intro-2'] as const;
 
-/** Comparison-only: save compaction reindexes zIndex and fills the inserted group defaults. Actual nodes stay unchanged. */
+/** Comparison input only. A mixed or partial trio is an authored edit and stays unchanged. */
+function legacyAttorneyFingerprintText(nodes: BuilderCanvasNode[]): ReadonlyMap<string, string> | null {
+  const group: BuilderCanvasNode[] = [];
+  for (const id of ATTORNEY_FINGERPRINT_IDS) {
+    const node = nodes.find((candidate) => candidate.id === id);
+    const parentOk = id === 'home-attorney-summary'
+      ? node?.parentId === KNOWN_INSERTED_GROUP_ID || node?.parentId === 'home-attorney-content'
+      : node?.parentId === 'home-attorney-content';
+    if (!node || node.kind !== 'text' || !parentOk
+      || node.dataBinding !== undefined || node.content.richText != null) return null;
+    group.push(node);
+  }
+  const legacy = ATTORNEY_FINGERPRINT_IDS.map((id) => LEGACY_ATTORNEY_STOCK_TEXT[id]);
+  if (group.every((node, index) => textOf(node) === legacy[index])) return null;
+  const approved = ATTORNEY_FINGERPRINT_IDS.map((id) => canonicalAttorneyStockText(id));
+  if (approved.some((text, index) => text === undefined || textOf(group[index]) !== text)) return null;
+  return new Map(ATTORNEY_FINGERPRINT_IDS.map((id, index) => [id, legacy[index]]));
+}
+
+/** Comparison-only: undo an exact G43R attorney trio, save-compaction zIndex, and inserted-group defaults. Actual nodes stay unchanged. */
 function nodesForJulyFingerprint(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
+  const legacyText = legacyAttorneyFingerprintText(nodes);
   const insertions = ZINDEX_INSERTION_IDS
     .map((id) => nodes.findIndex((node) => node.id === id))
     .filter((index) => index >= 0)
@@ -375,20 +428,27 @@ function nodesForJulyFingerprint(nodes: BuilderCanvasNode[]): BuilderCanvasNode[
   const sequential = insertions.length === ZINDEX_INSERTION_IDS.length
     && nodes.every((node, index) => node.zIndex === index);
   return nodes.map((node, index) => {
+    let compared = node;
+    if (node.kind === 'text') {
+      const restored = legacyText?.get(node.id);
+      if (restored !== undefined && node.content.text !== restored) {
+        compared = { ...node, content: { ...node.content, text: restored } };
+      }
+    }
     const zIndex = sequential
       ? index - insertions.filter((position) => position < index).length
-      : node.zIndex;
-    if (node.id !== KNOWN_INSERTED_GROUP_ID || node.kind !== 'container') {
-      return zIndex === node.zIndex ? node : { ...node, zIndex };
+      : compared.zIndex;
+    if (compared.id !== KNOWN_INSERTED_GROUP_ID || compared.kind !== 'container') {
+      return zIndex === compared.zIndex ? compared : { ...compared, zIndex };
     }
-    const content = { ...node.content };
+    const content = { ...compared.content };
     if (content.activeIndex === 0) delete content.activeIndex;
     if (content.sticky === false) delete content.sticky;
-    if (zIndex === node.zIndex && content.activeIndex === node.content.activeIndex
-      && content.sticky === node.content.sticky) {
-      return node;
+    if (zIndex === compared.zIndex && content.activeIndex === compared.content.activeIndex
+      && content.sticky === compared.content.sticky) {
+      return compared;
     }
-    return { ...node, zIndex, content };
+    return { ...compared, zIndex, content };
   });
 }
 

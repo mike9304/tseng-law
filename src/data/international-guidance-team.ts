@@ -912,10 +912,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ٹیم',
     title: 'Hovering کی بین الاقوامی ٹیم',
     description:
-      'Hovering کے وکلا، آپریشنز کی قیادت اور شراکت دار محاسب کی پروفائلز۔',
-    representativeTitle: 'منتظم وکیلہ',
+      'Hovering کے وکلا، عملی امور کی قیادت اور شراکت دار سرٹیفائیڈ پبلک اکاؤنٹنٹ کی پروفائلز۔',
+    representativeTitle: 'منتظمہ وکیلہ',
     teamTitle: 'وکلا اور عملہ',
-    partnerTitle: 'شراکت دار محاسب',
+    partnerTitle: 'شراکت دار، سرٹیفائیڈ پبلک اکاؤنٹنٹ',
     introLabel: 'تعارف',
     educationLabel: 'تعلیم',
     experienceLabel: 'تجربہ',
@@ -925,15 +925,15 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'وکیلہ Wei Tseng — بنیادی حقائق',
     qualificationLabel: 'اہلیت اور دفتر',
     qualificationSentence:
-      '{name} تائیوان میں وکالت کی مجاز ہیں اور {firm} کی منتظم وکیلہ ہیں۔',
+      '{name} تائیوان میں وکالت کی مجاز ہیں اور {firm} کی منتظمہ وکیلہ ہیں۔',
     practiceLabel: 'اہم شعبے',
     consultationLanguagesLabel: 'مشورے کی زبانیں',
     roles: {
-      'tseng-junwei': 'تائیوان میں منتظم وکیلہ (Managing Attorney)',
-      'chang-rongxuan': 'تائیوان وکیل (Taiwan Attorney)',
-      'chang-fangyu': 'قانونی معاون (Paralegal)',
-      'son-jungmin': 'کوریا آپریشنز کی قیادت (Korea Operations Manager)',
-      'huang-shengping': 'شراکت دار محاسب (Partner CPA)',
+      'tseng-junwei': 'تائیوان میں منتظمہ وکیلہ',
+      'chang-rongxuan': 'تائیوان کے وکیل',
+      'chang-fangyu': 'قانونی معاون',
+      'son-jungmin': 'کوریا کے امور کے منتظم',
+      'huang-shengping': 'شراکت دار، سرٹیفائیڈ پبلک اکاؤنٹنٹ',
     },
   },
   fa: {
@@ -3598,7 +3598,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'دفتر تائیوان میں کاروباروں اور افراد کے معاملات کا انگریزی، جاپانی، کوریائی اور چینی میں کام کرتا ہے۔',
-        'انہوں نے جم میں لگی چوٹ کے ہرجانے کے ایک دعوے میں کوریائی طالب علم کی نمائندگی کی اور ابتدائی عدالت (پہلی سماعت کی سطح) سے TWD 1.57M کا فیصلہ دلایا۔',
+        'انہوں نے جم میں لگی چوٹ کے ہرجانے کے ایک دعوے میں کوریائی طالب علم کی نمائندگی کی اور ابتدائی عدالت (پہلے درجے کی عدالت) سے TWD 1.57M کا فیصلہ دلایا۔',
       ],
       education: [
         'ماسٹر (M.S.)، Institute of Finance, National Taiwan University',
@@ -3613,7 +3613,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'پہلے وزارتِ تعلیم کے قانونی امور کے شعبے (Ministry of Education, Legal Affairs Division) میں، انتظامی اور دیوانی معاملات پر توجہ کے ساتھ۔',
+        'اس سے پہلے وزارتِ تعلیم کے قانونی امور کے شعبے (Ministry of Education, Legal Affairs Division) میں کام کیا، انتظامی اور دیوانی معاملات پر توجہ کے ساتھ۔',
         'یونیورسٹیوں، تدریسی عملے کے حقوق اور انتظامی اپیلوں سے جڑے معاملات کا تجربہ۔',
       ],
       education: ['قانون میں بیچلر (LL.B.)، National Chung Hsing University'],
@@ -3624,7 +3624,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'قانونی معاون (Paralegal) جنہوں نے کئی دفاتر میں سینئر قانونی معاون کے طور پر طویل عرصہ کام کیا، طریقہ کار کی معاونت، کمپنی قانون اور غیر ملکی سرمایہ کاری کے لیے ذمہ دار۔',
+        'قانونی معاون جنہوں نے کئی دفاتر میں سینئر قانونی معاون کے طور پر طویل عرصہ کام کیا، طریقہ کار کی معاونت، کمپنی قانون اور غیر ملکی سرمایہ کاری کے لیے ذمہ دار۔',
         'کارروائی، کمپنی کا قیام، غیر ملکی سرمایہ کاری کی اجازت، لائسنس کی درخواستیں اور کوریا و تائیوان کے درمیان تبادلے میں مدد۔',
       ],
       education: ['قانون میں بیچلر (LL.B.)، Tunghai University'],
@@ -3636,15 +3636,15 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'کوریا سے آئے موکلوں کے مشورے کے وقت اور رابطے کا ہم آہنگ کرتے ہیں۔',
-        'کمپیوٹر سائنس کی بنیاد پر دستاویزی نظاموں اور کام کے سلسلے سے شعبوں کے درمیان تبادلے کی معاونت کرتے ہیں۔',
+        'کمپیوٹر سائنس کی بنیاد پر دستاویزی نظاموں اور کام کے طریقوں کے ذریعے شعبوں کے درمیان ربط میں مدد کرتے ہیں۔',
       ],
       education: ['بیچلر (B.S.) کمپیوٹر سائنس، National Cheng Kung University'],
-      experience: ['کوریا آپریشنز کا شعبہ، Hovering International Law Firm'],
+      experience: ['کوریا کے امور کا شعبہ، Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
         'National Chengchi University سے اکاؤنٹنگ میں بیچلر اور ماسٹر پروگرام پورے کیے اور اس وقت ایک اکاؤنٹنگ دفتر کی قیادت کرتے ہیں۔',
-        'کاروباری موکلوں کے لیے قانونی، ٹیکس اور مالی خطرات کا متحد تجزیہ سہارا دیتے ہیں۔',
+        'کاروباری موکلوں کے لیے قانونی، ٹیکس اور مالی خطرات کے متحد تجزیے میں مدد کرتے ہیں۔',
       ],
       education: [
         'ماسٹر (M.A.) اکاؤنٹنگ، National Chengchi University',

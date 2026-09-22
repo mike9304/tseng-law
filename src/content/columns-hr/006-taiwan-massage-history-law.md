@@ -103,7 +103,7 @@ Ako netko tko nije oštećen vida vodi masažnu djelatnost, može biti izrečena
 
 ​
 
-To pokazuje da svaka država prima različite pristupe zaštiti prava i interesa različitih skupina.
+To pokazuje da svaka država usvaja različite pristupe zaštiti prava i interesa različitih skupina.
 
 Zaštita prava i interesa svake skupine mijenja se tijekom vremena,
 
@@ -113,7 +113,7 @@ a zakonodavac nastoji naći razmjerno uravnoteženo rješenje sukoba interesa.
 
 Danas mnoge osobe biraju masažu kako bi rasteretile napetost,
 
-no u tom procesu i dalje dolazi do slučajeva seksualnog uznemiravanja (性騷擾) ili nedoličnih čina (猥褻).
+no u tom procesu i dalje dolazi do slučajeva seksualnog uznemiravanja (性騷擾) ili nedoličnih činova (猥褻).
 
 Ono što je izvorno trebalo biti puki primitak masaže radi rasterećenja napetosti
 

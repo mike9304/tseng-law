@@ -55,7 +55,7 @@ Vještačenje (鑑定) ili tablica preliminarnog analitičkog ocjenjivanja mogu 
 
 ## Q5. Što treba unijeti u ispravu o nagodbi?
 
-U ispravi o nagodbi (和解書) treba individualizirati datum, mjesto i stranke nesreće te upisati iznos i trenutak plaćanja, obračun osigurnina, zahtjeve koji su obuhvaćeni i one koji se pridržavaju. Treba jasno odrediti i daljnje liječenje, ozljede otkrivene kasnije, predaju isprava kao što je liječnička potvrda (診斷證明書) te odnos između plaćanja i povlačenja prijave.
+U ispravi o nagodbi (和解書) treba individualizirati datum, mjesto i stranke nesreće te upisati iznos i trenutak plaćanja, pitanje osiguranja, zahtjeve koji su obuhvaćeni i one koji se pridržavaju. Treba jasno odrediti i daljnje liječenje, ozljede otkrivene kasnije, predaju isprava kao što je liječnička potvrda (診斷證明書) te odnos između plaćanja i povlačenja prijave.
 
 Nagodba (和解) iz članka 736. Građanskog zakonika ugovor je u kojem stranke uzajamno ustupaju kako bi okončale spor ili mu spriječile nastanak. Prema članku 737. Građanskog zakonika opseg u kojem prava prestaju ocjenjuje se samo u granicama onoga što je u ispravi o nagodbi napušteno. Stoga se, bez ocjene teksta, ne smije tvrditi da svi budući zahtjevi nestaju.
 
@@ -239,7 +239,7 @@ U nekim je presudama za nehajnu tjelesnu ozljedu izrečena kratkotrajna kazna za
 
 ​
 
-Ako se kazna pretvori u kaznenu novčanu kaznu (易科罰金), članak 41. stavak 1. Kaznenog zakona utvrđuje preračun 1.000 TWD, 2.000 TWD ili 3.000 TWD za 1 dan; pri stopi 1.000 TWD po danu kazni od 3 mjeseca odgovara iznos 3 × 30 × 1.000 TWD = 90.000 TWD.
+Ako se kazna pretvori u kaznenu novčanu kaznu (易科罰金), članak 41. stavak 1. Kaznenog zakona utvrđuje preračun 1.000 TWD, 2.000 TWD ili 3.000 TWD za jedan dan; pri stopi 1.000 TWD po danu kazni od 3 mjeseca odgovara iznos 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -339,7 +339,7 @@ Ozljeda ili smrt oštećenika njemu samome i njegovoj obitelji donosi tjelesnu i
 
 ​
 
-Počinitelj često ne mari za telefoniranje s upitom o stanju žrtve ni za njezin posjet, a mnogi počinitelji pretpostavljaju da će osiguravatelj sve riješiti i sami se ne pojave. U tim se slučajevima ne opaža ni kajanje ni iskrenost.
+Počinitelj često ne nazove da pita za stanje žrtve ni da je posjeti u bolnici, a mnogi počinitelji pretpostavljaju da će osiguravatelj sve riješiti i sami se ne pojave. U tim slučajevima žrtva ne vidi ni kajanje ni iskrenost počinitelja.
 
 ​
 

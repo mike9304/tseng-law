@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Mora li svaka djelatnost povezana s logistikom na Tajvanu ostvariti poslovnu dozvolu za djelatnost cestovnog prijevoza tereta automobilima (汽車貨運業)?"
-    a: "Prijevozna poslovna dozvola (經營許可) nije uvijek potrebna. „Logistika“ (物流) širok je praktični pojam; potreba za dozvolom ne određuje se samo prema nazivu društva ili djelatnostima (營業項目) upisanim u registru. Ako društvo prima naknadu i teretnim automobilom prevozi tuđi teret, ta djelatnost može činiti cestovni prijevoz tereta automobilima. Nasuprot tomu skladištenje, pakiranje, vođenje sustava, otpremu u svojstvu pošiljatelja (貨主), špediciju odnosno otpremu (運送承攬) i slične djelatnosti treba ocjenjivati pojedinačno prema ugovornom odnosu, prijevoznoj odgovornosti, sadržaju naknade i stvarnom stanju vožnje vozila."
+    a: "Prijevozna poslovna dozvola (經營許可) nije uvijek potrebna. „Logistika“ (物流) širok je praktični pojam; potreba za dozvolom ne određuje se samo prema nazivu društva ili djelatnostima (營業項目) upisanim u registru. Ako društvo prima naknadu i teretnim automobilom prevozi tuđi teret, ta djelatnost može činiti cestovni prijevoz tereta automobilima. Nasuprot tomu skladištenje, pakiranje, vođenje sustava, otpremu u svojstvu pošiljatelja (貨主), špediciju ili drugo posredovanje u prijevozu (運送承攬) i slične djelatnosti treba ocjenjivati pojedinačno prema ugovornom odnosu, prijevoznoj odgovornosti, sadržaju naknade i stvarnom stanju vožnje vozila."
   - q: "Koji se zahtjevi kapitala, vozila i postupka primjenjuju na novo osnivanje uobičajene djelatnosti cestovnog prijevoza tereta automobilima?"
     a: "Za uobičajeni cestovni prijevoz tereta automobilima načelno se primjenjuje najmanji kapital 25.000.000 TWD (新臺幣) i najmanje 20 novih teretnih automobila. Za djelatnost posvećenu samo selidbi (搬家) međutim primjenjuje se 10.000.000 TWD i najmanje 8 vozila, a za djelatnost koja se obavlja na Kinmenu (金門) ili u Lienchiangu (Matsu, 連江・馬祖) 10.000.000 TWD i najmanje 5 vozila, u potonjem slučaju s ograničenjem područja poslovanja. Kod prijevoza malim teretnim vozilom koji obavlja fizička osoba postoje vlastite ograničene iznimke, osobito jedno malo teretno vozilo u vlasništvu, starost vozila koja ne premašuje 2 godine, profesionalna vozačka dozvola za mala vozila (小型車職業駕駛執照) i evidencija kućanstava (戶籍) u nadležnom okrugu. Strano ulaganje, odobrenje Ministarstva prometa (交通部), dozvolu za pripremu osnivanja (籌設許可), upis društva i trgovine, pripremu vozila i uređaja, potvrdu o upisu poslovanja (營業執照) i članstvo u strukovnoj udruzi (同業公會) treba provjeriti svako zasebno."
   - q: "Ako se stekne društvo koje već ima dozvolu, stječe li se automatski i potvrda o upisu poslovanja za djelatnost cestovnog prijevoza tereta automobilima?"
@@ -22,7 +22,7 @@ faq:
 
 ![Slika koja objašnjava pravni postupak logističke djelatnosti na Tajvanu](../images/017-taiwan-logistics-business-setup/featured-01.jpg)
 
-Kad na Tajvanu planirate djelatnost povezanu s otpremom, potrebu za dozvolom ne možete odrediti samo prema oznaci „logističko društvo“. Skladištenje, pakiranje, logistički sustav, špedicija odnosno otprema (運送承攬), otprema vlastite robe i prijevoz tuđeg tereta automobilom uz naknadu mogu spadati pod različite pravne režime.
+Kad na Tajvanu planirate djelatnost povezanu s otpremom, potrebu za dozvolom ne možete odrediti samo prema oznaci „logističko društvo“. Skladištenje, pakiranje, logistički sustav, špedicija (運送承攬) ili drugo posredovanje u prijevozu, otprema vlastite robe i prijevoz tuđeg tereta automobilom uz naknadu mogu spadati pod različite pravne režime.
 
 Ovaj članak razlikuje tri situacije: novo osnovati djelatnost cestovnog prijevoza tereta automobilima, steći dionice postojećeg poduzetnika ili primiti prijenos njegova poduzeća i imovine te povjeriti prijevoz poduzetniku koji ima dozvolu. Pri ocjeni konkretnog poslovnog plana treba provjeriti ne samo tekst ugovora, nego i stvarni način vođenja, kao način naplate tarifa, odgovornost za štetu na teretu, raspodjelu vozila i to tko upravlja vozačima i vozilima.
 
@@ -32,7 +32,7 @@ Ovaj članak razlikuje tri situacije: novo osnovati djelatnost cestovnog prijevo
 
 Prijevozna poslovna dozvola (經營許可) nije uvijek potrebna. „Logistika“ (物流) širok je praktični pojam; potreba za dozvolom ne određuje se samo prema nazivu društva ili djelatnostima (營業項目) upisanim u registru. Ako društvo prima naknadu i teretnim automobilom prevozi tuđi teret, ta djelatnost može činiti cestovni prijevoz tereta automobilima. Nasuprot tomu skladištenje, pakiranje, vođenje sustava, otpremu u svojstvu pošiljatelja (貨主), špediciju ili drugo posredovanje u prijevozu (運送承攬) i slične djelatnosti treba ocjenjivati pojedinačno prema ugovornom odnosu, prijevoznoj odgovornosti, sadržaju naknade i stvarnom stanju vožnje vozila.
 
-Tajvanski Zakon o cestama (公路法) uređuje djelatnost automobilskog prijevoza (汽車運輸業) kao djelatnost koja uz naknadu automobilom prevozi putnike ili teret. Društvo stoga ne postaje odmah cestovnim prijevozom tereta automobilima samo zato što pruža logističku uslugu u širem smislu. Naprotiv, čak i kad je ugovor sastavljen kao posredovanje u prijevozu ili vođenje platforme, ako društvo stvarno prima vozarinu kao prijevoznik (運送人) i snosi odgovornost za raspodjelu vozila, vožnju i štetu na teretu, nadzoru ne može izbjeći samim nazivom.
+Tajvanski Zakon o cestama (公路法) uređuje djelatnost automobilskog prijevoza (汽車運輸業) kao djelatnost koja uz naknadu automobilom prevozi putnike ili teret. Društvo stoga ne postaje odmah cestovnim prijevozom tereta automobilima samo zato što pruža logističku uslugu u širem smislu. Naprotiv, čak i kad je ugovor sastavljen kao posredovanje u prijevozu ili vođenje platforme, ako društvo stvarno prima vozarinu kao prijevoznik (運送人) i snosi odgovornost za raspodjelu vozila, vožnju i štetu na teretu, nadzor ne može izbjeći samim nazivom.
 
 Pri utvrđivanju opsega djelatnosti treba konkretno urediti barem sljedeće odnose.
 
@@ -84,7 +84,7 @@ Stjecanjem dionica prijevozna se poslovna dozvola ne prenosi. Pri stjecanju dion
 
 ### Razlika između stjecanja dionica i prijenosa poduzeća ili imovine
 
-Pri stjecanju dionica kupac postaje dioničar, dok ciljno društvo, subjekt nositelja dozvole, i dalje postoji kao ista pravna osoba. Iznos poslan radi stjecanja dionica cijena je prijenosa dionica, a ne kapital. Prema okolnostima predmeta zasebno se obavlja prethodno odobrenje Ministarstva gospodarstva, sektorsko odobrenje prema članku 35. Zakona o cestama, utvrđivanje iznosa ulaganja (投資額審定) nakon prijenosa, izmjena društva kod dioničara, direktora i odgovorne osobe te zahtjev za izmjenu kod nadležnog cestovnog tijela.
+Pri stjecanju dionica kupac postaje dioničar, dok ciljno društvo, subjekt nositelja dozvole, i dalje postoji kao ista pravna osoba. Iznos poslan radi stjecanja dionica cijena je prijenosa dionica, a ne kapital. Prema okolnostima predmeta zasebno se obavlja prethodno odobrenje Ministarstva gospodarstva, sektorsko odobrenje prema članku 35. Zakona o cestama, provjera iznosa ulaganja nakon doznake sredstava (投資額審定), izmjena društva kod dioničara, članova uprave i odgovorne osobe te zahtjev za izmjenu kod nadležnog cestovnog tijela.
 
 Nasuprot tomu, čak i kad druga pravna osoba primi prijenos poduzeća ili imovine, potvrda o upisu poslovanja prenosioca na stjecatelja sama po sebi ne prelazi. Vozila, registarske pločice za poslovnu uporabu, parkirališne uređaje, ugovore, radnike, osiguranje i poslovna dopuštenja treba provjeriti svako, a dozvolu za pripremu osnivanja, potvrdu o upisu poslovanja i ostala odobrenja potrebna stjecatelju treba urediti prije izvršenja posla.
 
@@ -102,7 +102,7 @@ Barem sljedeće točke treba bitno provjeriti usporedbom dokaza i izvornih podlo
 - Osiguranje vozila, tereta i odgovornosti, založna prava, financijski najam i financiranje
 - Važne ugovore i klauzule o promjeni nadzora koje se tiču pošiljatelja, poduzetnika kojima je posao povjeren, sustava i skladišta
 
-U ugovoru se utvrđuju izjave i jamstva, prethodni uvjeti, postupanje ako se dozvola ne ostvari, prilagodba cijene, naknada štete, predaja, obrtna sredstva i način prijenosa vozila i ugovora. Redoslijed potrebnog odobrenja stranog ulaganja, sektorskog odobrenja Ministarstva prometa, odobrenja izmjene nadležnog cestovnog tijela i korporativnih etapa treba uskladiti s uvjetima sklapanja posla.
+U ugovoru se utvrđuju izjave i jamstva, prethodni uvjeti, postupanje ako se dozvola ne ostvari, prilagodba cijene, obeštećenje, predmeti predaje pri sklapanju posla, obrtna sredstva i način prijenosa vozila i ugovora. Redoslijed potrebnog odobrenja stranog ulaganja, sektorskog odobrenja Ministarstva prometa, odobrenja izmjene nadležnog cestovnog tijela i korporativnih etapa treba uskladiti s uvjetima sklapanja posla.
 
 ## 4. Povjeravanje prijevoza i otpreme drugome te rad stranaca
 

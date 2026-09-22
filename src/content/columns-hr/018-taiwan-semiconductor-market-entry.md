@@ -11,7 +11,7 @@ faq:
     a: "Sama činjenica da je kupac na Tajvanu ne određuje sama po sebi rješenje. Treba vidjeti zahtjeve tajvanskog kupca te stvarnu djelatnost prodaje, postrojenja, osoblja i strukturu operacija na Tajvanu, pa zatim odabrati najprikladniji subjekt."
   - q: "Nestaje li odgovornost glavne poslovnice u potpunosti kad se osnuje tajvansko društvo?"
     a: "Ako osnujete kćerinsko društvo (子公司), a ne podružnicu (分公司), glavna poslovnica načelno ne snosi dužnosti iz ugovora sklopljenih u ime kćerinskog društva. Treba međutim provjeriti iznimke zlouporabe pravne osobnosti i to daje li glavna poslovnica zasebno jamstvo ili preuzima vlastite ugovorne dužnosti."
-  - q: "Možete li najprije djelovati preko zastupnika, a zatim prijeći na društvo na Tajvanu?"
+  - q: "Možete li najprije djelovati preko distributera, a zatim prijeći na društvo na Tajvanu?"
     a: "Prijelaz u etapama može se osmisliti. Treba međutim zajedno ocijeniti prestanak ili izmjenu postojećih ugovora, ugovore s kupcima, zalihe, postupanje s jamstvom i pitanja osoblja."
 ---
 
@@ -23,7 +23,7 @@ Kad započnu poslovi s tajvanskim kupcima, strana glavna poslovnica može primit
 
 Najprije treba urediti tko na Tajvanu što preuzima. Struktura koju treba ocijeniti razlikuje se prema tome sklapa li strana glavna poslovnica i dalje ugovore o prodaji, kupuje li i preprodaje li robu tajvansko društvo ili mjesno osoblje pruža samo tehničku potporu.
 
-Ovaj je članak opća obavijest za strana poduzeća materijala, dijelova i opreme poluvodiča koja osmišljavaju strukturu stupanja na Tajvan. Niže navedene operativne situacije i točke provjere hipotetski su primjeri i prijedlozi ocjene; nisu stvarni mandat konkretnog poduzeća ni jedinstveni uvjet osnivanja. Poreze, kontrolu izvoza, dopuštenja prema proizvodu i razvrstavanje ulagača treba ocjenjivati zasebno.
+Ovaj je članak opća obavijest za strana poduzeća iz područja poluvodičkih materijala, dijelova i opreme koja osmišljavaju strukturu stupanja na Tajvan. Niže navedene operativne situacije i točke provjere hipotetski su primjeri i prijedlozi ocjene; nisu stvarni mandat konkretnog poduzeća ni jedinstveni uvjet osnivanja. Poreze, kontrolu izvoza, dopuštenja prema proizvodu i razvrstavanje ulagača treba ocjenjivati zasebno.
 
 ## 1. Prije izbora oblika upisa treba najprije urediti „podjelu prodaje i poslovanja“
 
@@ -61,11 +61,11 @@ Ako ste odlučili na Tajvanu imati samostalnu pravnu osobu, treba odabrati i nje
 
 ### Društvo s ograničenom odgovornošću: upravljanje je jednostavnije, no prijenos udjela relativno je zatvoren
 
-Društvo s ograničenom odgovornošću (有限公司) može se sastaviti od 1 ili više fizičkih osoba ili od tajvanskih ili stranih pravnih osoba kao članova (股東); članovi načelno odgovaraju do visine uloga. Direktora (董事) ima od 1 do 3 i biraju se između članova. Članovi koji ne izvršavaju poslove mogu ostvarivati pravo nadzora, pa zasebnog nadzornika (監察人) nije nužno imenovati. Ako statut ne određuje drukčije, jedan član ima jedan glas, pa nadzor ne mora odgovarati omjeru uloga. Da opći član prenese ulog, načelno je potreban pristanak više od polovine glasova ostalih članova, a za direktora 2/3 ili više. Stoga bolje odgovara jednostavnim odnosima članova i stabilnoj strukturi nadzora nego čestom prikupljanju kapitala ili prometu udjela. Kasnije ga se može pretvoriti u dioničko društvo (股份有限公司).
+Društvo s ograničenom odgovornošću (有限公司) može se sastaviti od 1 ili više fizičkih osoba ili od tajvanskih ili stranih pravnih osoba kao članova (股東); članovi načelno odgovaraju do visine uloga. Članova uprave (董事) ima od 1 do 3 i biraju se između članova. Članovi koji ne izvršavaju poslove mogu ostvarivati pravo nadzora, pa zasebnog nadzornika (監察人) nije nužno imenovati. Ako statut ne određuje drukčije, jedan član ima jedan glas, pa nadzor ne mora odgovarati omjeru uloga. Da opći član prenese ulog, načelno je potreban pristanak više od polovine glasova ostalih članova, a za člana uprave 2/3 ili više. Stoga bolje odgovara jednostavnim odnosima članova i stabilnoj strukturi nadzora nego čestom prikupljanju kapitala ili prometu udjela. Kasnije ga se može pretvoriti u dioničko društvo (股份有限公司).
 
 ### Dioničko društvo: prikladno poduzećima koja namjeravaju primiti druge ulagače ili razmatraju kotaciju
 
-Obilježje je dioničkog društva (股份有限公司) da se kapital dijeli na dionice. Načelno su potrebna 2 ili više dioničara, no država ili pravna osoba može ga osnovati i sama, a strana pravna osoba može držati 100 % dionica. Dionice su načelno slobodno prenosive, uz zakonske iznimke; prema propisima mogu se osmisliti dionice određene vrste, opcije dionica za zaposlenike i slično. Stoga oblik odgovara poduzećima koja očekuju ulagače, promet dionicama, nagradu zaposlenika u dionicama ili kasnije spajanje, preuzimanje, kotaciju ili uvrštenje na tržište u nastajanju; ne odnosi se samo na velika poduzeća. U upravljanju društvo koje nije javni izdavatelj može statutom ne imati odbor direktora, nego samo 1 ili 2 direktora. Društvo s jedinim dioničarom — državom ili pravnom osobom — može statutom i ne imati nadzornika (監察人). Nadalje, nije svako dioničko društvo dužno pribaviti revizijsku ovjeru godišnjih financijskih izvještaja. Glavni pragovi revizije običnog društva jesu uplaćeni kapital 30.000.000 TWD (新臺幣) ili, i ispod toga, poslovni prihod 100.000.000 TWD ili 100 radnika obuhvaćenih radnim osiguranjem (勞工保險); društva javne ponude dionica (公開發行公司) slijede propise o vrijednosnim papirima.
+Obilježje je dioničkog društva (股份有限公司) da se kapital dijeli na dionice. Načelno su potrebna 2 ili više dioničara, no država ili pravna osoba može ga osnovati i sama, a strana pravna osoba može držati 100 % dionica. Dionice su načelno slobodno prenosive, uz zakonske iznimke; prema propisima mogu se osmisliti dionice određene vrste, opcije dionica za zaposlenike i slično. Stoga oblik odgovara poduzećima koja očekuju ulagače, promet dionicama, nagradu zaposlenika u dionicama ili kasnije spajanje, preuzimanje, kotaciju ili uvrštenje na tržište u nastajanju; ne odnosi se samo na velika poduzeća. U upravljanju društvo koje nije javni izdavatelj može statutom ne imati upravni odbor, nego samo 1 ili 2 člana uprave. Društvo s jedinim dioničarom — državom ili pravnom osobom — može statutom i ne imati nadzornika (監察人). Nadalje, nije svako dioničko društvo dužno pribaviti revizijsku ovjeru godišnjih financijskih izvještaja. Glavni pragovi revizije običnog društva jesu uplaćeni kapital 30.000.000 TWD (新臺幣) ili, i ispod toga, poslovni prihod 100.000.000 TWD ili 100 radnika obuhvaćenih radnim osiguranjem (勞工保險); društva javne ponude dionica (公開發行公司) slijede propise o vrijednosnim papirima.
 
 ## 4. Postupci podružnice i kćerinskog društva razlikuju se; samo osnivanje kćerinskog društva prolazi pregled Odjela za pregled ulaganja Ministarstva gospodarstva
 
@@ -107,7 +107,7 @@ Sama činjenica da je kupac na Tajvanu ne određuje sama po sebi rješenje. Treb
 
 Ako osnujete kćerinsko društvo (子公司), a ne podružnicu (分公司), glavna poslovnica načelno ne snosi dužnosti iz ugovora sklopljenih u ime kćerinskog društva. Treba međutim provjeriti iznimke zlouporabe pravne osobnosti i to daje li glavna poslovnica zasebno jamstvo ili preuzima vlastite ugovorne dužnosti.
 
-### Možete li najprije djelovati preko zastupnika, a zatim prijeći na društvo na Tajvanu?
+### Možete li najprije djelovati preko distributera, a zatim prijeći na društvo na Tajvanu?
 
 Prijelaz u etapama može se osmisliti. Treba međutim zajedno ocijeniti prestanak ili izmjenu postojećih ugovora, ugovore s kupcima, zalihe, postupanje s jamstvom i pitanja osoblja.
 

@@ -13,7 +13,7 @@ faq:
   - q: "Smatra li se obuka novih radnika ili zakonom naložena obvezna obuka stručno-tehničkom obukom?"
     a: "Prema uputi tajvanskog Ministarstva rada (勞動部) od 5. 6. 2026. trošak redovite obuke, opće obuke za radno mjesto, obuke za prilagodbu novih radnika i obuke koju zakon nalaže provesti ne može se uzeti za temelj klauzule o najmanjem trajanju radnog odnosa ni zahtjeva za ugovornu kaznu (違約金) ili povrat troškova. Ne treba gledati samo naziv obuke, nego konkretan program, stručni i tehnički sadržaj, trajanje, trošak koji je poslodavac stvarno snosio i dokaze."
   - q: "Pri ranom odlasku, mora li se vratiti cijela nagrada za potpis (簽約金) ili nagrada za ostanak (留任獎金)?"
-    a: "Ne vraća se uvijek cijeli iznos. Ako je nagrada za potpis, nagrada za ostanak ili drugo davanje isplaćeno unaprijed (預付性給付) isplaćeno kao razumna naknada klauzule o najmanjem trajanju radnog odnosa, tu svrhu treba radniku jasno priopćiti. Uputa tajvanskog Ministarstva rada od 5. 6. 2026. objašnjava da se pri odlasku prije isteka razdoblja iznos za povrat mora izračunati razmjerno još neispunjenom razdoblju i da se ne smije zahtijevati povrat cijelog iznosa. Stvarni zaključak mora zajedno ocijeniti svrhu isplate, sadržaj klauzule, već odrađeno razdoblje i razlog prestanka."
+    a: "Ne vraća se uvijek cijeli iznos. Ako je nagrada za potpis, nagrada za ostanak ili drugo davanje isplaćeno unaprijed (預付性給付) isplaćeno kao razumna naknada klauzule o najmanjem trajanju radnog odnosa, tu svrhu treba radniku jasno priopćiti. Uputa tajvanskog Ministarstva rada od 5. 6. 2026. objašnjava da se pri odlasku prije isteka razdoblja iznos za povrat mora izračunati razmjerno još neispunjenom razdoblju i da se ne smije zahtijevati povrat cijelog iznosa. Stvarni zaključak treba izvesti zajedničkom ocjenom svrhe isplate, sadržaja klauzule, već odrađenog razdoblja i razloga prestanka."
   - q: "Ako ugovor prestane rano iz razloga koji se ne može pripisati radniku, treba li vratiti troškove obuke?"
     a: "Članak 15-1. stavak 4. tajvanskog Zakona o standardima rada određuje da, ako ugovor o radu prestane prije kraja najmanjeg trajanja radnog odnosa iz razloga koji se ne može pripisati radniku, radnik ne snosi odgovornost zbog povrede klauzule o najmanjem trajanju radnog odnosa niti zbog povrata troškova obuke. Razlog prestanka i pripisivanje odgovornosti treba međutim ocijeniti na temelju konkretnih dokaza, kao što su obavijest o otkazu, izjava volje o odlasku i podloge o povredi radnih uvjeta."
 ---
@@ -26,10 +26,10 @@ Klauzula o najmanjem trajanju radnog odnosa (最低服務年限約定), odnosno 
 
 Pri ocjeni je važno ne miješati sljedeća četiri pitanja.
 
-1. Ispunjava li sama klauzula zakonske pretpostavke članka 15-1.
-2. Jesu li ugovoreno razdoblje i teret radnika u razumnom opsegu
-3. Kome se pripisuje razlog prestanka ugovora o radu
-4. Kako se ocjenjuju otkazni rok pri odlasku i opseg povrata
+1. Ispunjava li sama klauzula zakonske pretpostavke članka 15-1?
+2. Jesu li ugovoreno razdoblje i teret radnika u razumnom opsegu?
+3. Kome se pripisuje razlog prestanka ugovora o radu?
+4. Kako se ocjenjuju otkazni rok pri odlasku i opseg povrata?
 
 Čak i kad ta četiri pitanja stoje zajedno u istom ugovoru, primjenjiva odredba i potrebni dokaz različiti su. Stoga treba zasebno ocijeniti je li klauzula valjana, kada izjava volje o odlasku stječe učinke, postoji li odgovornost vratiti davanje isplaćeno unaprijed (預付性給付) ili troškove obuke i je li zasebno tvrđena šteta stvarno nastala.
 
@@ -41,9 +41,9 @@ Klauzula nije automatski ništetna. Prema članku 15-1. tajvanskog Zakona o stan
 
 Članak 15-1. zahtijeva jednu od dviju zakonskih pretpostavki i uz to zasebnu ocjenu razumnosti. To ne znači da uvijek treba istodobno pružiti stručno-tehničku obuku i razumnu naknadu, niti da cijela klauzula postaje automatski valjana samo zato što se jedna od njih formalno upiše.
 
-Nakon potvrde zakonske pretpostavke prema stavku 2. zasebno se ocjenjuje jesu li ugovoreno razdoblje i opseg odgovornosti razumni. Klauzula koja povrijedi zakonsku pretpostavku stavka 1. ili mjerilo razumnosti stavka 2. ništetna je prema stavku 3. Ta je odredba međutim mjerilo za ocjenu sadržaja i činjeničnih okolnosti svake klauzule, a ne odredba koja od početka sve klauzule o najmanjem trajanju radnog odnosa proglašava valjanima ili ništetnima.
+Nakon potvrde zakonske pretpostavke prema stavku 2. zasebno se ocjenjuje jesu li ugovoreno razdoblje i opseg odgovornosti razumni. Klauzula koja povrijedi zakonsku pretpostavku iz stavka 1. ili mjerilo razumnosti iz stavka 2. ništetna je prema stavku 3. Ta je odredba međutim mjerilo za ocjenu sadržaja i činjeničnih okolnosti svake klauzule, a ne odredba koja od početka sve klauzule o najmanjem trajanju radnog odnosa proglašava valjanima ili ništetnima.
 
-Okolnost da je radnik ugovor potpisao može biti podloga koja potvrđuje postojanje sporazuma, ali ne zamjenjuje zakonske pretpostavke. Nasuprot tomu, umjesto da se odmah zaključi samo zato što je klauzula dugoročna, treba provjeriti koja je ulaganja ili naknada postojala i zašto je to razdoblje utvrđeno.
+Okolnost da je radnik ugovor potpisao može biti podloga koja potvrđuje postojanje sporazuma, ali ne zamjenjuje zakonske pretpostavke. Nasuprot tomu, umjesto da se odmah zaključi samo zato što je klauzula dugoročna, treba provjeriti koje je ulaganje ili koja je naknada postojala i zašto je to razdoblje utvrđeno.
 
 ## 2. Prva zakonska pretpostavka: stručno-tehnička obuka i snošenje troškova
 
@@ -55,13 +55,13 @@ Program, kalendar obuke, popis nazočnosti, rezultat ocjene, svjedodžba o dovr�
 
 Granica između opće prilagodbe na rad i stručno-tehničke obuke ne ovisi samo o mjestu obuke ni o tome tko je organizira. Unutarnji tečaj može dokazati konkretan stručni i tehnički sadržaj i znatno ulaganje, a dugi tečaj vanjske ustanove može u stvari biti opća uvodna obuka. Stoga se sva unutarnja obuka ne smije paušalno isključiti niti se zakonska pretpostavka smije priznati samo zato što je tečaj skup ili dug.
 
-Treba također moći objasniti odnos između ugovorenog razdoblja i ulaganja u obuku. Koja se sposobnost stječe, kakav odnos ta sposobnost ima prema radnom mjestu na kojem se treba primijeniti i zašto je predloženo trajanje radnog odnosa potrebno prema trajanju i trošku obuke, ocjenjuje se pojedinačno. Obavlja li radnik nakon obuke taj rad i koliko je već odrađeno također utječe na ocjenu opsega tereta.
+Treba također moći objasniti odnos između ugovorenog razdoblja i ulaganja u obuku. Koja se sposobnost stječe, kakav odnos ta sposobnost ima prema radnom mjestu na kojem se treba primijeniti, i zašto je predloženo trajanje radnog odnosa potrebno prema trajanju i trošku obuke, ocjenjuje se pojedinačno. Obavlja li radnik nakon obuke taj rad i koliko je već odrađeno također utječe na ocjenu opsega tereta.
 
 ## 3. Druga zakonska pretpostavka: razumna naknada
 
 Druga zakonska pretpostavka jest da poslodavac pruži razumnu naknadu za obećanje radnika da će poštovati najmanje trajanje radnog odnosa. Ovdje naknada mora imati svrhu i strukturu različite od uobičajene plaće ili protunaknade za rad koju već treba pružiti. Pravna se narav ne određuje samo zato što je na isplatnoj listi označena kao nagrada za potpis, nagrada za ostanak ili davanje isplaćeno unaprijed.
 
-Najprije treba provjeriti svrhu isplate. Je li riječ o općem plaćnom uvjetu zapošljavanja, protunaknadi za obećanje ostanka određeno razdoblje, ili nagradi za postizanje rezultata, mora biti razvidno iz ugovora i iz podloga priopćenja. Ocjenjuje se i jesu li dan isplate, iznos, trenutak pripadanja, veza s razdobljem ostanka, razlozi povrata i formula predani tako da ih je radnik mogao razumjeti prije ugovora.
+Najprije treba provjeriti svrhu isplate. Je li riječ o općem plaćnom uvjetu zapošljavanja, protunaknadi za obećanje ostanka određeno razdoblje, ili nagradi za postizanje rezultata, mora biti razvidno iz ugovora i iz podloga priopćenja. Ocjenjuje se i jesu li dan isplate, iznos, trenutak pripadanja, veza s razdobljem ostanka, razlozi povrata i formula priopćeni tako da ih je radnik mogao razumjeti prije ugovora.
 
 Uputa (函釋) tajvanskog Ministarstva rada (勞動部) od 5. 6. 2026. objašnjava da, ako se kao razumna naknada klauzule o najmanjem trajanju radnog odnosa uzme nagrada za ostanak, nagrada za potpis ili drugo davanje isplaćeno unaprijed, tu ulogu treba jasno priopćiti. To što poslodavac naknadno iznova protumači svrhu isplate ili iznova svrsta dio plaće kao naknadu teško zamjenjuje priopćenje u trenutku ugovora.
 
@@ -86,13 +86,13 @@ Treći čimbenik vidi ne samo iznos naknade, nego i opseg. Važno je kada se isp
 
 Četvrti čimbenik može obuhvatiti različite okolnosti koje utječu na razumnost, kao tijek sklapanja klauzule, narav rada, sadržaj objašnjen strankama, stvarno odrađeno razdoblje i razlog prestanka. Značenje svakog čimbenika može se razlikovati prema stvari, a okolnosti koje valja uzeti u obzir ne ograničavaju se na prethodne primjere. Stoga treba ocijeniti, bez propuštanja, relevantne činjenice koje se pojavljuju u spisu.
 
-Napokon je potreban razumljiv razmjer između ugovorenog razdoblja, stvarnog ulaganja poslodavca, teškoće zamjene, naknade koju je radnik primio i tereta povrata. Valjanost se ne smije unaprijed odrediti samo zato što je riječ o određenom zanimanju, niti se zaključak iz druge stvari smije primijeniti nepromijenjen. Treba zajedno vidjeti zasnovu u trenutku sklapanja ugovora i stvarni stupanj ispunjenja u trenutku prestanka.
+Napokon je potreban razumljiv razmjer između ugovorenog razdoblja, stvarnog ulaganja poslodavca, teškoće zamjene, naknade koju je radnik primio i tereta povrata. Valjanost se ne smije unaprijed odrediti samo zato što je riječ o određenom zanimanju, niti se zaključak iz druge stvari smije primijeniti nepromijenjen. Treba zajedno vidjeti ono što je ugovoreno u trenutku sklapanja ugovora i stvarni stupanj ispunjenja u trenutku prestanka.
 
 ## 5. Obuka koja ne može utemeljiti klauzulu
 
 Prema uputi tajvanskog Ministarstva rada od 5. 6. 2026. trošak redovite obuke, opće obuke za radno mjesto, obuke za prilagodbu novih radnika i obuke koju zakon nalaže provesti ne može se uzeti za temelj klauzule o najmanjem trajanju radnog odnosa ni zahtjeva za ugovornu kaznu ili povrat troškova. Ne treba gledati samo naziv obuke, nego konkretan program, stručni i tehnički sadržaj, trajanje, trošak koji je poslodavac stvarno snosio i dokaze.
 
-Uputa 勞動關2字第1150141814號 Ministarstva rada razlikuje i uređuje obuku koja se provodi redovito, uobičajenu obuku za radno mjesto, obuku da se novi radnik upozna s okružjem i postupcima rada, i obuku koju poslodavac mora provesti prema zakonu. Budući da ta obuka prati vođenje djelatnosti ili ispunjenje zakonske dužnosti, smisao je da se njezin trošak ne može pretvoriti u temelj dužnosti ostanka ili sankcije zbog ranog prestanka.
+Uputa 勞動關2字第1150141814號 Ministarstva rada razlikuje i uređuje obuku koja se provodi redovito, uobičajenu obuku za radno mjesto, obuku da se novi radnik upozna s okružjem i postupcima rada, i obuku koju poslodavac mora provesti prema zakonu. Budući da se takva obuka provodi u sklopu vođenja poslovanja ili radi ispunjenja zakonske dužnosti, njezin se trošak ne može uzeti kao temelj dužnosti ostanka ni kao sankcija zbog ranog prestanka.
 
 Tečajeve koje novi zaposlenik obično primi, kao tumačenje radnih pravila (工作規則), predstavljanje organizacije i sustava, uobičajenu predaju mjesta i uputu o osnovnim postupcima sigurnosti, treba potvrditi u njihovoj biti. Opći troškovi zapošljavanja i upravljanja ili troškovi predaje mjesta, koje je poslodavac izvorno trebao snositi, ne mogu se utvrditi kao predmet povrata pukim označavanjem za zasebno ulaganje.
 
@@ -102,7 +102,7 @@ U praksi se ne gleda samo naslovnica materijala obuke, nego se uspoređuje detal
 
 ## 6. Povrat nagrada i rani odlazak
 
-Ne vraća se uvijek cijeli iznos. Ako je nagrada za potpis, nagrada za ostanak ili drugo davanje isplaćeno unaprijed isplaćeno kao razumna naknada klauzule o najmanjem trajanju radnog odnosa, tu svrhu treba radniku jasno priopćiti. Uputa tajvanskog Ministarstva rada od 5. 6. 2026. objašnjava da se pri odlasku prije isteka razdoblja iznos za povrat mora izračunati razmjerno još neispunjenom razdoblju i da se ne smije zahtijevati povrat cijelog iznosa. Stvarni zaključak mora zajedno ocijeniti svrhu isplate, sadržaj klauzule, već odrađeno razdoblje i razlog prestanka.
+Ne vraća se uvijek cijeli iznos. Ako je nagrada za potpis, nagrada za ostanak ili drugo davanje isplaćeno unaprijed isplaćeno kao razumna naknada klauzule o najmanjem trajanju radnog odnosa, tu svrhu treba radniku jasno priopćiti. Uputa tajvanskog Ministarstva rada od 5. 6. 2026. objašnjava da se pri odlasku prije isteka razdoblja iznos za povrat mora izračunati razmjerno još neispunjenom razdoblju i da se ne smije zahtijevati povrat cijelog iznosa. Stvarni zaključak treba izvesti zajedničkom ocjenom svrhe isplate, sadržaja klauzule, već odrađenog razdoblja i razloga prestanka.
 
 Priopćenje se ne smije prvi put predložiti tek kada nakon isplate nastane spor. Radnik mora u trenutku sklapanja ugovora i primitka isplate znati koji je iznos naknada za obećanje najmanjeg trajanja radnog odnosa, koje je ugovoreno razdoblje kao cjelina, kada mu pripada i prema kojoj se formuli namiruje ako prestanak nastupi u tijeku.
 
@@ -112,7 +112,7 @@ Pitanje povrata treba provjeriti redom: valjanost klauzule, pravna narav isplać
 
 Odredba o povratu cijelog iznosa, čvrsta ugovorna kazna bez veze sa stvarnim gubitkom i jednostrani odbitak od plaće ne ocjenjuju se kao jedan problem. Pravni temelj, sadržaj sporazuma, ograničenja radnog prava i zakonitost odbitka treba provjeriti zasebno. Iznos upisan u pozivu poslodavca ili činjenica da je radnik platio dio također ne utvrđuju preostala pravna pitanja.
 
-Treba također razlikovati povrat troškova obuke i povrat davanja isplaćenog unaprijed. Prvi se ocjenjuje prema stvarno provedenoj stručno-tehničkoj obuci i snošenju troškova; drugi na svrsi isplate, priopćenju, uvjetima pripadanja i razmjeru prema neispunjenom razdoblju. Ako se obje stavke zahtijevaju zajedno, treba zasebno usporediti nije li trošak izračunan dvaput, i dokaze svake stavke.
+Treba također razlikovati povrat troškova obuke i povrat davanja isplaćenog unaprijed. Prvi se ocjenjuje prema stvarno provedenoj stručno-tehničkoj obuci i snošenju troškova; drugi se ocjenjuje prema svrsi isplate, priopćenju, uvjetima pripadanja i razmjeru prema neispunjenom razdoblju. Ako se obje stavke zahtijevaju zajedno, treba zasebno usporediti nije li trošak izračunan dvaput, i dokaze svake stavke.
 
 ## 7. Kad ugovor prestane iz razloga koji se ne može pripisati radniku
 

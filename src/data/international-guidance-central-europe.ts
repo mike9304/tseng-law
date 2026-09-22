@@ -1247,7 +1247,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ako ne govorite nijedan od četiri jezika savjetovanja',
           paragraphs: [
             'U kontaktnom obrascu možete odabrati „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
-            'Riječ je samo o koraku procjene, a ne o obećanju. Ne obećavamo tumača, uslugu na hrvatskom ni na drugom jeziku izvan četiri navedena jezika, niti da ćemo svaki predmet prihvatiti.',
+            'Riječ je samo o procjeni, a ne o obećanju. Ne obećavamo tumača, uslugu na hrvatskom ni na drugom jeziku izvan četiri navedena jezika, niti da ćemo svaki predmet prihvatiti.',
           ],
         },
         {
@@ -1300,7 +1300,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Što učiniti ako se ne mogu služiti nijednim od četiri jezika?',
           answer:
-            'Pri slanju zahtjeva odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili način komunikacije, ali usluga na drugom jeziku nije zajamčena. Riječ je o koraku procjene, a ne o obećanju da možemo raditi na drugom jeziku.',
+            'Pri slanju zahtjeva odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili način komunikacije, ali usluga na drugom jeziku nije zajamčena. Riječ je o procjeni, a ne o obećanju da možemo raditi na drugom jeziku.',
         },
         {
           question: 'Kako se postupa s mojim tekstom na hrvatskom?',
@@ -1345,7 +1345,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
             'Jezik savjetovanja koji želite',
             'Izvorni tekst koji ste napisali',
             'Vaš pristanak na slanje zahtjeva',
-            'Broj podneska za pronalaženje zahtjeva',
+            'Broj primitka za pronalaženje zahtjeva',
           ],
         },
         {
@@ -1358,7 +1358,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mjesto pohrane i pristup',
           paragraphs: [
-            'Sadržaj Vašeg podneska čuva se na mjestu koje nije javno dostupno. Pristup imaju samo ovlaštene osobe u uredu, i to radi obrade zahtjeva.',
+            'Sadržaj Vašeg zahtjeva čuva se na mjestu koje nije javno dostupno. Pristup imaju samo ovlaštene osobe u uredu, i to radi obrade zahtjeva.',
             'Ova stranica ne daje apsolutno jamstvo sigurnosti. Nijedan put prijenosa i nijedno mjesto pohrane nisu potpuno sigurni; osjetljive isprave stoga treba slati tek nakon posebne upute odvjetnice ili odvjetnika.',
           ],
         },
@@ -1370,10 +1370,10 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Obavijest i broj podneska',
+          heading: 'Obavijest i broj primitka',
           paragraphs: [
             'Ako je zahtjev uspješno poslan, sustav obavještava ured. Ako ta obavijest još nije potvrđena, Vaš tekst ostaje spremljen i ne gubi se.',
-            'Broj podneska služi pronalaženju Vašeg zahtjeva u našim evidencijama. Prikazuje se nakon spremanja; možete ga navesti pri novom kontaktu.',
+            'Broj primitka služi pronalaženju Vašeg zahtjeva u našim evidencijama. Prikazuje se nakon spremanja; možete ga navesti pri novom kontaktu.',
           ],
         },
         {

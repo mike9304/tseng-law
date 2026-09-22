@@ -89,9 +89,9 @@ zakonska otpremnina ne mora biti isplaćena, ili može biti zahtijevana.
 
 Stoga u sporovima rada (勞資糾紛) na Tajvanu
 
-„**vrijeme**“ veoma je važno.
+„**vrijeme**“ je veoma važno.
 
-U sporovima o zakonskoj otpremnini odlučuje koja je strana ranije, s valjanim razlogom i dokazima, otkazala ugovor. U većini slučajeva strana koja se unaprijed pripremila u boljem je položaju da zaštiti svoja prava; sama priprema ne određuje ishod.
+U sporovima o zakonskoj otpremnini odlučuje koja je strana ranije, s valjanim razlogom i dokazima, otkazala ugovor. U većini je slučajeva strana koja se unaprijed pripremila u boljem položaju da zaštiti svoja prava; sama priprema ne određuje ishod.
 
 ---
 

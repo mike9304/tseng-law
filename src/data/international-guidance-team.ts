@@ -4139,11 +4139,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Ured vodi predmete poduzeća i privatnih osoba na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
-        'Zastupala je korejskog studenta u zahtjevu za naknadu štete zbog ozljede u teretani i ishodila je presudu prvog stupnja u iznosu TWD 1.57M.',
+        'Zastupala je korejskog studenta u predmetu naknade štete zbog ozljede u teretani i ishodila je presudu prvog stupnja u iznosu TWD 1.57M.',
       ],
       education: [
         'Magistra (M.S.), Institute of Finance, National Taiwan University',
-        'Prvostupnica (B.A.) u dvojnom programu prava i financija, National Chengchi University',
+        'Prvostupnica (B.A.) dvopredmetnog studija prava i financija, National Chengchi University',
         'Razmjenska studentica na Kobe University i Waseda University',
       ],
       experience: [
@@ -4181,7 +4181,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinira termine savjetovanja i komunikaciju za klijente iz Koreje.',
-        'Na temelju obrazovanja iz informatike podržava razmjenu među područjima putem sustava dokumenata i radnih postupaka.',
+        'Na temelju obrazovanja iz informatike podržava komunikaciju među timovima putem sustava dokumenata i radnih postupaka.',
       ],
       education: [
         'Prvostupnik (B.S.) informatike, National Cheng Kung University',

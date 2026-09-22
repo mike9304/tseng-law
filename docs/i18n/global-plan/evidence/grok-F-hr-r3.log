@@ -1,0 +1,149 @@
+# WO-F-hr round 3 — Croatian fix lane (Grok 4.7, 2026-09-23)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-hr-r3
+No git add/commit/push.
+Croatian strings only. No test file needed updating (vitest 3202 passed; no pinned Croatian string was rewritten).
+TWD 1.57M left byte-identical. Frontmatter url values left untouched (Hangul slugs in 008 and 009 stay).
+Dot thousands left as 500.000 (R14). U+200B counts left matching the Korean source.
+
+R2–R11 and R12–R17 were already in the Croatian pack (Korea only as a labelled example, feminine Wei Tseng, consultation lock negative, NAŠ TIM / UREDI / Cjeloviti profil (na engleskom), paralegal already „pravni asistent“, ROC glosses where present, no Czech paragraphs). This round applied the r3 review rows and the sweeps those verdicts describe.
+
+## Rows applied
+
+hr-a 45/49, hr-b 33/34. Total applied 78 / 83. Two of the applied rows kept a digit the small lexicon cannot spell (26, 46).
+
+hr-a
+1 APPLIED  guidance  son-jungmin „razmjenu među područjima“ → „komunikaciju među timovima“.
+2 APPLIED  001 the work permit and the ARC each „ocjenjuje“ again.
+3 APPLIED  003 „obračun osigurnina“ → „pitanje osiguranja“.
+5 APPLIED  bio „u zahtjevu“ → „u predmetu naknade štete“. The figure stays „TWD 1.57M“.
+7 APPLIED  receipt and privacy „podnesak“ → „primitak“ / „zahtjev“ (5 strings: inquiry label, privacy item, storage sentence, heading, explanation).
+8 APPLIED  „u dvojnom programu“ → „dvopredmetnog studija“.
+9 APPLIED  llms discoveryNotice „samo je“ → „je samo“. Literal token `llms.txt` kept. consultationNotice and confidentialNotice were not rewritten.
+10 APPLIED  „korak procjene“ → „procjeni“ in both FAQ answers. Disclosure regex `ne o obećanju` still matches.
+11 APPLIED  001 „posebno priznanje“ → „posebno odobrenje“ (FAQ and body).
+12 APPLIED  001 „kućni red“ → „pravila njezina upravljanja“.
+13 APPLIED  power to conclude contracts is „ovlast“, not „ovlaštenje“: 001 ×2, 004 ×2.
+14 APPLIED  董事 „direktor“ → „član uprave“ and 董事會 „odbor direktora“ → „upravni odbor“. See the systemic count.
+15 APPLIED  general 股東 passages name članovi and, for the stock company, dioničari. See the systemic count.
+16 APPLIED  002 „prijenos gubitaka“ → „akumulirane gubitke“.
+17 APPLIED  002 „odnosa interesa“ → „sukoba interesa“.
+18 APPLIED  002 „odnos interesa s direktorima i dioničarima“ → „interese članova uprave ili dioničara“.
+19 APPLIED  002 the directors’ responsibility for their judgment.
+20 APPLIED  003 the victim sees neither remorse nor sincerity.
+21 APPLIED  003 the at-fault party does not visit the victim.
+22 APPLIED  001 „četiri gore navedena tipa“. The word „četiri“ stayed (it is not in the small lexicon; the digit 4 elsewhere in the file is unchanged).
+23 APPLIED  002 „hoće li nakon plaćanja ostati moguće“.
+24 APPLIED  002 „ne može se objasniti samom riječju kapital“; „stečenu i“.
+26 APPLIED in part  003 „za 1 dan“ → „za jedan dan“ („jedan“ is in the lexicon). „za 1 oštećenika i 1 nesreću“ and 005 „više od 1 stranca“ kept the digit: „jednog“ and „jednu“ are not in the small lexicon, and dropping the digit fails numbers.
+27 APPLIED  bare „Suprotno,“ → „S druge strane,“ (002 ×3, 007 ×2).
+28 APPLIED  002 „iz kojih se sredstava plaća iznos za povrat“.
+29 APPLIED  002 „odgovorna osoba (公司負責人)“.
+30 APPLIED  002 each item has its own basis in the contract, the decision, or the documents.
+31 APPLIED  001 USD follows the figure: „500.000 USD“ ×4 and „200.000 USD“ ×4 (FAQ and body, both thresholds).
+32 APPLIED  001 „Taipej“ / „Taipeja“ → „Taipei“ / „Taipeia“.
+33 APPLIED  004 „djelatnostima s brojnim zaposlenim osobama ili potrošačima“.
+34 APPLIED  004 those factors are taken into account on top of the starting point.
+35 APPLIED  004 „buduće planove treba razmotriti istodobno“.
+36 APPLIED  004 „ne čini ga odmah“ (the subsidiary is masculine).
+37 APPLIED  004 one table of those items for each scenario, commas removed.
+38 APPLIED  005 „Mogu li se novi tajvanski dolari (新臺幣, TWD) prenijeti“.
+39 APPLIED  005 „Načelno je to moguće“.
+40 APPLIED  006 „nedoličnih činova“.
+41 APPLIED  006 „usvaja različite pristupe“.
+42 APPLIED  004 source title „Tajvanska burza — mjerila uvrštenja“. URL unchanged.
+43 APPLIED  007 „dva su različita pitanja“.
+44 APPLIED  007 „svaku dužnost i svaki postupak“.
+45 APPLIED  007 the convention’s name does not let one conclude that it applies in Taiwan.
+46 APPLIED in part  008 „isplaćuje se jedan mjesec“ (FAQ and blockquote; „jedan“ is in the lexicon). „navršenu 1 godinu“ and „za 1 godinu“ kept the digit: „jednu“ is not in the lexicon.
+47 APPLIED  008 „Iz nekog se razloga“.
+48 APPLIED  009 „„vrijeme“ je veoma važno“ and „U većini je slučajeva … u boljem položaju“.
+
+hr-b
+1 APPLIED  011 the contract states which records are handed over, how, and whether access survives.
+2 APPLIED  013 the approval window is long enough to find the address and sign the lease, and long enough to open the preparatory account and remit the capital. The two paragraphs were not merged.
+3 APPLIED  016 „Nijedna se ta ovlast ne izvršava u osobnom interesu roditelja“.
+4 APPLIED  012 room both to pass and to return.
+5 APPLIED  011 „osobe ugovorno odgovorne za dodijeljene poslove“.
+6 APPLIED  014 „ono što je ugovoreno u trenutku sklapanja ugovora“.
+7 APPLIED  016 inside row 3: „osobnih i imovinskih interesa“.
+8 APPLIED  016 „nasljeđivanje po pravu predstavljanja“.
+9 APPLIED  017 „špediciju ili drugo posredovanje u prijevozu“ (FAQ) and „špedicija (運送承攬) ili drugo posredovanje u prijevozu“ (intro). The body repeat already had the fuller wording.
+10 APPLIED  017 verification of the investment amount after the funds are remitted.
+11 APPLIED  017 „obeštećenje, predmeti predaje pri sklapanju posla“.
+12 APPLIED  018 FAQ question and the repeated heading: „distributera“. The title and the 代理商 table cell stay „zastupnik“ (English says agent there).
+13 APPLIED  010 „je li kaznena naknada stvarno dosuđena“.
+14 APPLIED  011 „pronaći i predočiti“ (both sentences).
+16 APPLIED  014 question marks on all four list items. The list stays four items.
+17 APPLIED  014 „koje je ulaganje ili koja je naknada postojala“.
+18 APPLIED  014 comma before „i zašto“.
+19 APPLIED  014 „iz stavka 1.“ and „iz stavka 2.“.
+20 APPLIED  014 „drugi se ocjenjuje prema svrsi isplate“.
+21 APPLIED  016 „To pravo pri prestanku … uspoređuje“.
+22 APPLIED  017 „nadzor ne može izbjeći“.
+23 APPLIED  010 „Stavke štete koje dolaze u obzir“.
+24 APPLIED  012 „Ispred su se kretala 2 osobna vozila“.
+25 APPLIED  012 „jasan znak da vozilo ispred ustupa put“.
+26 APPLIED  013 the opening is two complete sentences in the two existing paragraphs. They were not merged.
+27 APPLIED  013 the if-clause no longer says „osiguranje ugovora“; the next paragraph already states notarization or an extra deposit.
+28 APPLIED  014 „Stvarni zaključak treba izvesti zajedničkom ocjenom“ (FAQ and body).
+29 APPLIED  014 the training cost cannot be the basis of a stay-in-post duty.
+30 APPLIED  014 „formula priopćeni“.
+31 APPLIED  015 each of the three zoning lines is now a full sentence. They were not merged (block count is pinned).
+32 APPLIED  016 „nije srodnik uvršten u red članka 1138.“.
+33 APPLIED  016 „mogu se primijeniti zakonski red“.
+34 APPLIED  018 „strana poduzeća iz područja poluvodičkih materijala, dijelova i opreme“.
+
+## Rows skipped
+
+hr-a 4  SKIP  Dropping „(članak 10.)“ from the G0340028 link. Korean source is 영업세법 제10조 and English 004 is „Article 10 of the Value-Added and Non-Value-Added Business Tax Act“ on the same URL. Removing 10 fails numbers. URL left unchanged. Listed again under reviewer disagreements.
+hr-a 6  SKIP  Bio figure „TWD 1.57M“ is pinned byte-identical. „1,57 mil. TWD“ is not that string. Row 5’s proceeding wording was applied around the pinned figure.
+hr-a 25 SKIP  Turn Q16–Q20 (and the same blanks in 005, 006, 008, 009) into headings and delete U+200B. Heading levels, block counts and the ZWSP count are compared to the Korean source.
+hr-a 49 SKIP  Hangul in frontmatter `url` (008 and 009). The row itself says not to edit `url`. R16 / ACCEPTED-ROUND. Not rendered.
+hr-b 15 SKIP  Delete every U+200B in 013 and 015. Same ZWSP pin as hr-a 25. The sentence on the 013 line was left, including the trailing zero-width space.
+
+## Systemic patterns and how many instances changed
+
+- Inquiry „podnesak“ vs the form’s „zahtjev“ (hr-a verdict): 5 strings (inquiry label + four privacy touches). 0 left in the Croatian pack.
+- 股東 glossed only as „dioničari“ in a general passage (hr-a verdict): 8. 002 remainder FAQ + body twin; 002 account, private property, and the sole owner; 001 „članovi ili dioničari (股東) ili voditelji“; 004 „kruga njegovih članova ili dioničara“ ×2. Stock-company „dioničari“ and the 有限公司 „članovi (股東)“ in 018 were left.
+- 董事 „direktor“ / 董事會 „odbor direktora“, while 經理人 stays „voditelj“ (hr-a verdict): 15. 001 ×1, 002 ×5, 004 ×4, 017 ×1, 018 ×4 (including „upravni odbor“ and „1 ili 2 člana uprave“).
+- U+200B blank lines in 003, 005, 006, 008, 009, 013, 015 (both verdicts): 0 removed.
+- Bare „Suprotno,“ (hr-a verdict): 5 (002 ×3, 007 ×2).
+- Hangul slug in the opening url (hr-a verdict): 0 (url not edited).
+- „Svaka … nije“ read as „not every“ (hr-b verdict): 1 (016). No other hit.
+- A contract names a recipient or a bare handover (hr-b verdict): 2 (011 records handed over; 017 closing deliverables).
+- A conclusion is the grammatical agent (hr-b verdict): 2 (014 FAQ and body). No other „zaključak mora ocijeniti“.
+- „odnosno“ equates two activities (hr-b verdict): 2 (017 FAQ and intro). Other „odnosno“ (penalties, the stay clause, the will’s legacy, „odvjetnice odnosno odvjetnika“) were left; they do not collapse two trades.
+- „nakon“ treats a step as already done inside a window that is only long enough for it (hr-b verdict): 1 (013). 017 „nakon prijenosa“ is the separate remittance row, also applied.
+- USD code before the dollar amount (hr-a verdict): 8 in 001. TWD already followed the figure. „TWD 1.57M“ unchanged.
+
+## Reviewer disagreements (not applied)
+
+- hr-a 4. The parenthetical „članak 10.“ matches the Korean label (영업세법 제10조) and the English 004 label („Article 10 of the Value-Added and Non-Value-Added Business Tax Act“) on this same URL. `flno=3` is also `flno=3` in those sources, which still say article 10. 001’s Croatian label for the same URL („odredbe o stopi obustave…“) is itself a mistranslation of English „General Business Tax Rate“, so it is not the authority for deleting the number. Deleting 10 would also fail the number check. The link text and the URL were left as they were.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-hr --lang hr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=145
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      26
+```

@@ -1,0 +1,74 @@
+WO-F-hr — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-hr-r1
+date: 2026-09-22
+scope: Croatian guidance pack (croatianGuidanceContent, team hr bios, inquiry hr) + columns-hr 001–018. No commit. llms-txt hr, offices hr and answers hr were already consultation-locked and in the formal Vi register; they were not rewritten. No other locale’s strings were edited. No test expected-string was changed: the suite did not pin a Croatian sentence this lane rewrote.
+
+## Rows applied
+hr-a.md P1: a#1–a#7. a#1 drops the spurious „1 put“ (once) and keeps the digit in „1 godine“ (the lexicon has jedan/jedna/jedno, not genitive jedne). a#2 keeps the digit: „više od 1 stranca“. a#3 sweeps both kakvoća-as-status sites (001 beneficial owner, 004 subsidiary). Product-quality kakvoća in 011 was left.
+hr-a.md P2: a#9–a#24, a#27–a#32, a#34–a#49. a#19 keeps dot thousands (40.000 / 10.000 / 20.000) and assigns 40.000 to g. Lin and 10.000 / 20.000 to the two workers. a#22 does not delete the table row; the three cells no longer say Niža / Viša / Ne odnosi se. a#23 does not restore „znatan iznos“; see skipped. a#29 keeps the digit where the inflected form is not in the number lexicon. a#30 is the se-passive nominative in 002 (×3), 003 and 007. a#33 is not a heading promotion; the sign-off is a#45. a#38 adds the missing periods in that close and softens „naravno mora isplatiti“. a#40 is the inquiry option; the FAQ already said „ne mogu rabiti“. a#46 is all four „Ne zato što“ sentences in 004. a#49 stays inside the existing line breaks.
+hr-b.md P1: b#1–b#2. b#1 is 代位繼承 only (po pravu predstavljanja ×4, odnos predstavljanja ×1). Zakonsko zastupanje (法定代理) and posebni zastupnik stay zastupanje. b#2 is the three security-interest sites; insurance proceeds, policies and beneficiaries stay osiguranje.
+hr-b.md P2: b#3–b#36. b#8 keeps the digit („do visine 1 puta stvarne štete“). b#19 keeps „**1 mjesec**“ and adds „još“. b#21 does not merge the 015 paragraphs; each existing block is now a full sentence, and the same treatment was applied to the 013 comma-fragments. b#25–b#26 keep the Taipei URL and put the Chinese gloss outside the Croatian quotation marks. b#33 changes dioničar to član only in the 有限公司 paragraph. The 股份有限公司 paragraph still says dioničar.
+Neither review table has a P3 row.
+
+## Rows skipped or modified
+- a#8 (Hangul url in 008 and 009): skipped. ACCEPTED-ROUND and R16. Frontmatter url is canonical metadata and was not edited.
+- a#23 suggested „kasnije je primio znatan iznos zakonske otpremnine“: not used. R3 and ACCEPTED forbid turning the 008 anecdote back into a received-amount result. The sentence stays an entitlement under legal representation, with the tautology „zakonsko pravo na zakonsku“ removed: „utvrditi postojanje prava na zakonsku otpremninu“.
+- a#25 (reformat pinned TWD 1.57M): skipped. ACCEPTED-ROUND and R12. The figure stays byte-identical.
+- a#26 and b#37 (space thousands, and currency-after bundled with that space form): skipped. R14. The hr checker parses a dot thousands separator. Amounts stay 500.000 / 1.579.589 / TWD 25.000.000 and so on. a#19’s fine amounts use the same dot.
+- a#29 word forms „jedne godine“, „jednog oštećenika“, „jednu godinu“: not used where the inflected word is outside the checker lexicon (jedan, jedna, jedno only). The digit stays in „manje od 1 godine“, „1 oštećenika i 1 nesreću“ and „navršenu 1 godinu“. „jedno malo teretno vozilo“ (×3) and „jedan član ima jedan glas“ use forms the lexicon parses as 1.
+- a#33 (promote Q16–Q20 to ## headings and delete U+200B lines): skipped. checkBlocks requires the same heading levels and the same ZWSP count as the source. ACCEPTED forbids new headings. The sign-off itself is a#45 and was rephrased.
+- b#8 suggested „do visine stvarne štete“: not used as written. That drops the digit 1. The cell says „do visine 1 puta stvarne štete“.
+- b#21 suggested one merged paragraph for the 015 opening: not merged. Each existing block is now a full sentence.
+- a#22 English Easy / Difficult / Easy was not restored. Those cells read as a promised ease. They now say the difficulty cannot be called easy in advance.
+
+## Systemic patterns and instance counts
+- Kakvoća standing for status or for the fact of being something: 2 (001 „je li stvarni vlasnik“, 004 „sama činjenica da je riječ o kćerinskom društvu“). Cosmetic-product kakvoća in 011 was left (it is 品質).
+- „Ne zato što…“ calque of „merely because“: 4 sentences in 004 (§ transfer pricing, qualifying fields, the 183-day / 6-month tests, and deregistration).
+- Spurious „1 put“ (once) on a suspension period: 2 (002 FAQ and §5). Other small counts whose word form the checker would drop were left as digits; see skipped a#29. „jedno malo teretno vozilo“: 3. LLC „jedan član ima jedan glas“: 1.
+- ssnošenje: 2 (011 body, 014 §2 heading).
+- 代位繼承 written as zastupanje: 5. 法定代理 and posebni zastupnik were not touched.
+- osiguranje used for a security interest: 3 (016 §2 inventory, §4 high-value acts, creditor checklist). Real insurance later in the file was left.
+- 行使 / 負擔 as preuzimanje: guidance family line, plus 016 „preuzimati dužnosti“ ×3 and „preuzima te dužnosti“ ×2. Column 007 already said izvršavanje and snošenje.
+- Vision agreement oštećena/oštećeni/oštećene vida → oštećenog vida: 20 in 006.
+- boravišni naslov → status boravka: 6 in 001 (FAQ, two headings, two body sentences, family residence).
+- Matsuu → Matsu, undeclined, with „na“: 3 in 017.
+- šalter for an office or regime: 2 in 017 (the different-regime sentence and „istim šalterom“).
+- dioničar for members of a 有限公司: 7 phrases in that one 018 paragraph. Shareholders of a 股份有限公司 were left.
+- Blog register, rephrased inside the existing blocks: 003 sign-off; 008 close (periods, and „naravno mora isplatiti“); 009 „leži li“ in both fault sentences and the „bolje prolazi“ outcome sentence. 013 comma-fragments completed in place (capital check, bank employee’s remark, parallel plan, lease-then-bank, identity, same-day issue, committee review, experience, landlord caution, negotiation, city-government zone, pre-lease check, and the „još 1 mjesec“ sentence). 015 hanging phrases (market-plus-zone, Taipei service, land-registry extract, the notice sentence). U+200B lines were not deleted.
+- R2 Korea-as-default, R3 prison-month and suspended-sentence softening, R4 feminine Wei Tseng, R5 NAŠ TIM / UREDI / „Cjeloviti profil (na engleskom)“, R9 Taiwan 119/110/112, R12 role and institution lines already in Croatian with the preserved Latin names, R13 „godina Republike Kine“ without a new Gregorian year, R15 „[ime i prezime]“, and R17 (no Czech function-word leak) were already in the files. The hr role line still carries the gloss „(Partner CPA)“ after „Partner, ovlašteni revizor“; the review did not flag it and the Croatian title is the one displayed. Consultation stays negative (English, Chinese (中文), Japanese, Korean only). The 008 manager and 006 g. Lin stay male; 010’s client stays the male student.
+
+## §Verify
+node scripts/check-column-translation.mjs --dir src/content/columns-hr --lang hr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=145
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+
+(The count 24 is before this log file. It includes the pre-existing WO-F-hr.txt modification, the untracked hr-a.md / hr-b.md, and the 21 Croatian source files edited in this lane. Checker WARNs, not in tail -8 and not failures: 017 numbers „수사미해석 (2): 제3자; 제3자“ with sourceCount=targetCount=44. That is the R11 Korean lexical numeral and was not given a new digit.)
+
+## Reviewer points not applied
+- a#8 Hangul urls. ACCEPTED-ROUND says the frontmatter url is not edited.
+- a#23 „znatan iznos“. That puts the received-amount result back into the anecdote R3 tells the fixer to keep as an entitlement. The tautology was removed; the result claim was not restored.
+- a#25 and the space-separator half of a#26 and b#37, including „1,57 milijuna TWD“ and „500 000“. The checker parses hr amounts only with a dot. TWD 1.57M stays byte-identical.
+- a#29 inflected „jedne / jednog / jednu“. Those forms are not in the number lexicon, so replacing the digit would fail the number check. The spurious „once“ was removed; the real counts stay as digits.
+- a#33 and any deletion of U+200B. Promoting Q16–Q20 to headings, or deleting the zero-width spaces, fails the block check. The visible sign-off was rephrased; the invisible characters stayed.
+- b#8 without the digit 1. The negligence multiple stays „1 puta“.
+- b#21 as one merged paragraph. Merging changes the block count. Each 013 and 015 fragment was completed in its own paragraph.
+- a#22’s English „Easy“. Calling economic dismissal easy is the outcome tone R3 softens. The row now says the difficulty cannot be called easy in advance.

@@ -21,7 +21,7 @@ Nesreća se dogodila u teretani u Taichungu (臺中) tijekom vježbe mrtvog diza
 
 U ovom sam predmetu sudjelovala kao parnična zastupnica (訴訟代理人) tužitelja, korejskog studenta. Okružni sud u Taichungu 24. siječnja 2022. u prvostupanjskoj presudi u potrošačkoj stvari br. 7. godine Republike Kine 109. (109年度消字第7號) naredio je tuženiku da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamate navedene u presudi.
 
-Potom je tisak izvijestio da su stranke sklopile nagodbu (和解) u 2. stupnju. Sama službena prvostupanjska presuda ne omogućuje potvrditi ishod 2. stupnja ni iznos nagodbe; to se ne smije čitati kao konačni ishod prvostupanjske presude.
+Potom je tisak izvijestio da su stranke sklopile nagodbu (和解) u 2. stupnju. Sama službena prvostupanjska presuda ne omogućuje potvrditi ishod 2. stupnja ni iznos nagodbe; prijavljenu nagodbu ne treba uzimati kao potvrđen završetak prvostupanjskog predmeta.
 
 Naslovi tiskovnih izvještaja, internetskih objava i pravnih komentara o ovom predmetu, u prijevodu, sljedeći su. Naslovi niže služe samo da predstave sadržaj svake poveznice; ne znače da ovaj tekst sam utvrđuje činjenice.
 
@@ -53,15 +53,15 @@ Naslovi tiskovnih izvještaja, internetskih objava i pravnih komentara o ovom pr
 
 [Pravni komentar: sveučilišni student, puknuće intervertebralnog diska pri mrtvom dizanju… u 1. stupnju nalog poznatoj teretani da plati 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-![Čitanje presude: predmet akutnog puknuća intervertebralnog diska nakon što je početnik u teretani dobio uputu na mrtvo dizanje 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
+![Čitanje presude: predmet akutnog puknuća intervertebralnog diska nakon što je početnik u teretani dobio uputu da izvede mrtvo dizanje od 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-[Čitanje presude: predmet akutnog puknuća intervertebralnog diska nakon što je početnik u teretani dobio uputu na mrtvo dizanje 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
+[Čitanje presude: predmet akutnog puknuća intervertebralnog diska nakon što je početnik u teretani dobio uputu da izvede mrtvo dizanje od 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
 
 ![Je li kod korejskog sveučilišnog studenta došlo do puknuća intervertebralnog diska dok je na osobnom treningu izvodio mrtvo dizanje 90 kg?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
 **Je li kod korejskog sveučilišnog studenta došlo do puknuća intervertebralnog diska dok je na osobnom treningu izvodio mrtvo dizanje 90 kg?**
 
-Praktično značenje ovog predmeta jest u tome što pokazuje da se odgovornost ne utvrđuje odmah samom činjenicom da je do ozljede došlo u teretani. Sadržaj dužnosti osiguranja sigurnosti (安全義務) koja tereti pružatelja usluge, konkretni čin upute i povreda dužnosti pažnje (注意義務), uzročna veza između ozljede i ponašanja te opseg štete ocjenjuju se prema ispravama svakog predmeta. Pretpostavke i rokovi kaznenog postupka i građanskog postupka također se razlikuju, pa tragove odmah nakon nesreće valja urediti odvojeno.
+Praktično značenje ovog predmeta jest u tome što pokazuje da se odgovornost ne utvrđuje odmah samom činjenicom da je do ozljede došlo u teretani. Sadržaj dužnosti osiguranja sigurnosti (安全義務) koja tereti pružatelja usluge, konkretni čin upute i povreda dužnosti pažnje (注意義務), uzročna veza između ozljede i ponašanja te opseg štete ocjenjuju se prema ispravama svakog predmeta. Pretpostavke i rokovi kaznenog postupka i građanskog postupka također se razlikuju, pa zapise odmah nakon nesreće valja urediti odvojeno, prema vrsti postupka.
 
 Niže navedeno opća je informacija za objašnjenje sporova o ozljedi u teretani na Tajvanu; nije pravno mišljenje o konkretnom predmetu. Stvarna prava i način postupanja mogu se razlikovati prema ugovornom odnosu, okolnostima nesreće, uzroku i stupnju ozljede, ponašanju stranaka, uvjetima police, osiguranim dokazima i mjerodavnom pravu.
 
@@ -85,7 +85,7 @@ Ako međutim dolazi u obzir drugi temelj zahtjeva, kao ugovorna odgovornost, ili
 
 Da bi se mogli objasniti odgovornost, uzročna veza i šteta, poželjno je prikupiti zajedno ne samo snimke CCTV-a (監視器影像) iz trenutka nesreće, nego i medicinsku dokumentaciju (病歷) i liječničku potvrdu (診斷證明書), potvrde o plaćanju medicinskih troškova (醫療費用), putnih troškova za liječenje (就醫交通費) i njege (看護費用), poruke razmijenjene s teretanom i trenerom, izjave svjedoka, rezervaciju satova i evidenciju nazočnosti, plan vježbanja i zapis treninga. U mjeri u kojoj je moguće valja fotografirati mjesto ozljede i stanje mjesta nesreće te po datumu urediti tijek prije nesreće i nakon nje te sadržaj komunikacije, kako bi kasnije bilo lakše isprave usporediti.
 
-Snimke se nakon proteka roka čuvanja mogu prebrisati ili iz drugih razloga postati neupotrebljive. Stoga se može razmotriti zahtjev teretani za očuvanje putem pisma s ovjerom sadržaja (存證信函) ili pismom odvjetnice (律師函) koje konkretno zabilježi potrebno vremensko razdoblje, mjesto i položaj kamere. Ta je isprava praktična mjera za zabilježiti što je i kada zatraženo. Sama po sebi međutim protivnoj strani ne nameće novu pravnu dužnost da snimke sačuva niti sprječava njihovo brisanje, a sama okolnost da snimke nisu ostale također ne vodi sud k automatski nepovoljnoj ocjeni.
+Snimke se nakon proteka roka čuvanja mogu prebrisati ili iz drugih razloga postati neupotrebljive. Stoga se može razmotriti zahtjev teretani za očuvanje putem pisma s ovjerom sadržaja (存證信函) ili pismom odvjetnice (律師函) koje konkretno zabilježi potrebno vremensko razdoblje, mjesto i položaj kamere. Ta je isprava praktična mjera za zabilježiti što je i kada zatraženo. Sama po sebi međutim protivnoj strani ne nameće novu pravnu dužnost da snimke sačuva niti sprječava njihovo brisanje, a iz same okolnosti da snimke nisu ostale sud ne izvodi automatski zaključak na štetu stranke.
 
 Ako okolnosti nesreće mogu ispuniti obilježja kaznenog djela, može se brzo podnijeti prijava kako bi istražno tijelo (偵查機關) ocijenilo postoji li zakoniti temelj osiguranja ili očuvanja. Prijava ne znači da će policija ili državno odvjetništvo nužno osigurati CCTV, pa treba prikupiti i isprave koje stranka može sačuvati sama, kao medicinske i komunikacijske podloge.
 
@@ -99,17 +99,17 @@ Stavke štete čije se ostvarenje može ocijeniti sljedeće su. Stvarno priznanj
 4. **Šteta zbog smanjenja radne sposobnosti (勞動能力減損)**: Ako se priznaju posljedice i trajno smanjenje radne sposobnosti, može se ocijeniti zajedno prema medicinskim i profesionalnim podlogama, stupnju oštećenja, zanimanju i prihodu te preostalom razdoblju radne sposobnosti. Sam postotak oštećenja naknadu ne određuje i gubitak se ne računa automatski do trenutka umirovljenja.
 5. **Izgubljeni prihod u razdoblju oporavka (收入損失)**: Razdoblje u kojemu zbog liječenja ili oporavka stvarno nije bilo moguće raditi i iz toga proizašlo smanjenje prihoda treba dokazati platnim listama, poreznim prijavama i evidencijom o radu.
 6. **Nematerijalna šteta (非財產上損害)**: Iznos za duševne boli određuje sud prema čimbenicima svakog predmeta, kao što su stupanj ozljede, trajanje liječenja, posljedice i konkretne okolnosti stranke.
-7. **Kaznena naknada štete (懲罰性賠償金)**: Postoji pravilo prema kojemu se u postupku na koji se primjenjuje Zakon o zaštiti potrošača, ako je šteta nastala namjerom poduzetnika, može zahtijevati do 5 puta stvarne štete; pri grubom nehaju do 3 puta; a pri nehaju do 1-struke visine stvarne štete. Primjenjuje li se [članak 51. tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na predmet te je li i u kojem iznosu stvarna naknada, ovisi o ocjeni suda o konkretnim pretpostavkama i dokazima.
+7. **Kaznena naknada štete (懲罰性賠償金)**: Postoji pravilo prema kojemu se u postupku na koji se primjenjuje Zakon o zaštiti potrošača, ako je šteta nastala namjerom poduzetnika, može zahtijevati do 5 puta stvarne štete; pri grubom nehaju do 3 puta; a pri nehaju do visine 1 puta stvarne štete. Primjenjuje li se [članak 51. tajvanskog Zakona o zaštiti potrošača](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na predmet te je li i u kojem iznosu stvarna naknada, ovisi o ocjeni suda o konkretnim pretpostavkama i dokazima.
 
 ## 5. Čak i kad teretana ima osiguranje odgovornosti (責任保險), mogu li postojanje naknade i visina biti sporni?
 
 Da. Činjenica da osiguranje postoji može biti značajna pri ocjeni izvora naknade, ali sama po sebi ne priznaje pravnu odgovornost teretane ili trenera niti određuje iznos isplate. Između osiguravatelja (保險人) i stranaka mogu nastati sporovi o limitu pokrića i isključnim klauzulama, uzročnoj vezi između nesreće i ozljede te nužnosti i visini svake stavke štete.
 
-Osobito smanjenje radne sposobnosti, smanjenje prihoda u razdoblju oporavka i nematerijalna šteta mogu zahtijevati medicinske, prihodovne i profesionalne podloge ili mišljenje vještaka. Iznos koji predloži osiguravatelj ili onaj koji traži oštećenik ne postaje odmah iznos koji prizna sud, a rezultat ocjene oštećenja također naknadu automatski ne određuje. U stvarnom postupanju treba zajedno provjeriti policu i uvjete, sadržaj obavijesti o nesreći, odgovor osiguravatelja, tijek liječenja i podloge štete.
+Osobito smanjenje radne sposobnosti, smanjenje prihoda u razdoblju oporavka i nematerijalna šteta mogu zahtijevati medicinske dokaze, dokaze o prihodima i dokaze o zanimanju ili mišljenje vještaka. Iznos koji predloži osiguravatelj ili onaj koji traži oštećenik ne postaje odmah iznos koji prizna sud, a rezultat ocjene oštećenja također naknadu automatski ne određuje. U stvarnom postupanju treba zajedno provjeriti policu i uvjete, sadržaj obavijesti o nesreći, odgovor osiguravatelja, tijek liječenja i podloge štete.
 
 Ako ste pretrpjeli ozljedu u teretani, važno je najprije dobiti potrebno liječenje, sačuvati isprave koje se još mogu osigurati prije nego što nestanu te rano dobiti pojedinačni pravni savjet o rokovima i postupcima koji se na predmet mogu primijeniti. Pregovaranje, potrošačka pritužba (消費申訴) ili mirenje (調解), kaznena prijava i građanskopravni zahtjev za naknadu štete sva su sredstva koja se prema predmetu mogu odabrati i nisu postupci koje bi uvijek trebalo poduzeti u cjelini.
 
-Pad u poslovnom prostoru, zdravstvena šteta od hrane i ozljeda pri stručnoj usluzi također mogu imati kao sporne točke dužnost osiguranja sigurnosti, uzročnu vezu, štetu i dokaz. Zaključak iz predmeta teretane međutim se ne može bez izmjene primijeniti na drugu nesreću, pa ugovor, ponašanje i mjerodavne odredbe svakog slučaja treba ocijeniti zasebno.
+Pad u poslovnom prostoru, zdravstvena šteta od hrane i ozljeda pri stručnoj usluzi također mogu otvoriti pitanje dužnosti osiguranja sigurnosti, uzročne veze, štete i dokaza. Zaključak iz predmeta teretane međutim se ne može bez izmjene primijeniti na drugu nesreću, pa ugovor, ponašanje i mjerodavne odredbe svakog slučaja treba ocijeniti zasebno.
 
 ---
 

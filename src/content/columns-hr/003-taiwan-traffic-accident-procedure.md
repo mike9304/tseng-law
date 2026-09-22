@@ -41,7 +41,7 @@ Kad je sigurnost osigurana, snimite ukupne i bliske fotografije kako biste zabil
 
 Kod građanskopravne naknade štete (損害賠償), prema članku 197. Građanskog zakonika Tajvana (民法) zahtjev više nije moguć nakon proteka 2 godine od dana kad su šteta i dužnik naknade postali poznati, ili 10 godina od dana delikta (侵權行為). Koje činjenice utječu na zastaru (消滅時效), treba ocijeniti zasebno.
 
-Tko pretrpi štetu uslijed kaznenog djela, može prema članku 487. Zakona o kaznenom postupku podnijeti građansku tužbu pridruženu kaznenom postupku (刑事附帶民事訴訟). Dok kazneni postupak traje, tužba se može podnijeti do završetka usmene rasprave (言詞辯論終結) 2. stupnja, prema članku 488. Zakona o kaznenom postupku, ali se ne može podnijeti nakon završetka usmene rasprave 1. stupnja i prije podnošenja pravnog lijeka. Načelno se može izbjeći plaćanje zasebnih sudskih pristojbi (裁判費), ali ne svi ishodi završavaju bez troška. Na primjer, ako je kaznena stvar odbačena i na prijedlog tužitelja ustupljena građanskom sudu, prema članku 503. Zakona o kaznenom postupku mogu se naložiti troškovi postupka, a nadalje treba provjeriti pravila ustupanja i postupka članka 504.
+Tko pretrpi štetu uslijed kaznenog djela, može prema članku 487. Zakona o kaznenom postupku podnijeti građansku tužbu pridruženu kaznenom postupku (刑事附帶民事訴訟). Dok kazneni postupak traje, tužba se može podnijeti do završetka usmene rasprave (言詞辯論終結) 2. stupnja, prema članku 488. Zakona o kaznenom postupku, ali se ne može podnijeti nakon završetka usmene rasprave 1. stupnja i prije podnošenja pravnog lijeka. Načelno se može izbjeći plaćanje zasebnih sudskih pristojbi (裁判費), ali ne završavaju svi ishodi bez troška. Na primjer, ako je kaznena stvar odbačena i na prijedlog tužitelja ustupljena građanskom sudu, prema članku 503. Zakona o kaznenom postupku mogu se naložiti troškovi postupka, a nadalje treba provjeriti pravila ustupanja i postupka članka 504.
 
 Izbor se razlikuje prema prekidu zastare (時效中斷), krugu tuženika, dokazima, osiguranju i nadležnosti. Stoga ne postoji postupak koji bi bio jednoliko najbolji za sve predmete.
 
@@ -59,7 +59,7 @@ U ispravi o nagodbi (和解書) treba individualizirati datum, mjesto i stranke 
 
 Nagodba (和解) iz članka 736. Građanskog zakonika ugovor je u kojem stranke uzajamno ustupaju kako bi okončale spor ili mu spriječile nastanak. Prema članku 737. Građanskog zakonika opseg u kojem prava prestaju ocjenjuje se samo u granicama onoga što je u ispravi o nagodbi napušteno. Stoga se, bez ocjene teksta, ne smije tvrditi da svi budući zahtjevi nestaju.
 
-Ako je riječ o kaznenom djelu koje se goni samo na prijavu, prema članku 238. Zakona o kaznenom postupku prijavu se može povući do završetka usmene rasprave 1. stupnja, a nakon povlačenja ne može se ponovno podnijeti. Međutim, kod kaznenog djela koje se ne goni samo na prijavu, optužba se ne okončava automatski privatnom nagodbom i činjenica nagodbe ne obvezuje uvijek na povlačenje prijave.
+Ako je riječ o kaznenom djelu koje se goni samo na prijavu, prema članku 238. Zakona o kaznenom postupku prijava se može povući do završetka usmene rasprave 1. stupnja, a nakon povlačenja ne može se ponovno podnijeti. Međutim, kod kaznenog djela koje se ne goni samo na prijavu, optužba se ne okončava automatski privatnom nagodbom i činjenica nagodbe ne obvezuje uvijek na povlačenje prijave.
 
 ### Službeni izvori Q1–Q5
 
@@ -323,7 +323,7 @@ Valja se kloniti odvjetnika koji stvar napuhuje i samo radi stjecanja mandata tv
 
 ​
 
-Time završavam ovaj pregled pitanja i odgovora o prometnim nesrećama. Nadam se da će Vam biti od koristi.
+Na tome završavaju pitanja i odgovori o prometnim nesrećama.
 
 ​
 

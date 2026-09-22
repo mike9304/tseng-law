@@ -37,25 +37,25 @@ Kada je riječ o masaži (按摩),
 
 na Tajvanu postoji i mnogo ulica masaže.
 
-Tamo se grade masažni pogoni svake vrste.
+Tamo se nižu masažni lokali svake vrste.
 
-Tu je masaža koju obavljaju osobe oštećena vida (視障按摩), masaža stopala, uljna masaža, tajlandska masaža i drugi oblici.
+Tu je masaža koju obavljaju osobe oštećenog vida (視障按摩), masaža stopala, uljna masaža, tajlandska masaža i drugi oblici.
 
 U biti svatko može odabrati masažu koja odgovara vlastitom ukusu, kako bi se rasteretila napetost.
 
-A razlog zbog kojeg danas postoji toliko masažnih pogona može biti upravo onaj zahtjev za ustavnim tumačenjem (釋憲).
+A razlog zbog kojeg danas postoji toliko masažnih lokala može biti upravo onaj zahtjev za ustavnim tumačenjem (釋憲).
 
 Kada je Tajvan 1980. proglasio i stavio na snagu zakon o blagostanju osoba s invaliditetom (殘障福利法),
 
-doista su samo osobe oštećena vida (視障者) mogle obavljati zanimanje masera (按摩業).
+doista su samo osobe oštećenog vida (視障者) mogle obavljati zanimanje masera (按摩業).
 
-Obavljanje tog zanimanja osobom koja nije oštećena vida (非視障者) bilo je nezakonito.
+Obavljanje tog zanimanja osobom koja nije oštećenog vida (非視障者) bilo je nezakonito.
 
 Taj je zakon vrijedio do 2003.; tada je g. Lin, koji je vodio frizerski salon,
 
-zaposlio radnike koji nisu oštećeni vida za usluge pranja kose i masaže, a policija je to utvrdila.
+zaposlio radnike koji nisu oštećenog vida za usluge pranja kose i masaže, a policija je to utvrdila.
 
-Prema tadašnjem pravu g. Linu i tim radnicima izrečena je upravna novčana kazna (罰鍰) u iznosu TWD 40.000, TWD 10.000 i TWD 20.000 u novom tajvanskom dolaru (新臺幣).
+Prema tadašnjem pravu g. Linu izrečena je upravna novčana kazna (罰鍰) od 40.000 TWD, a dvojici radnika od 10.000 odnosno 20.000 TWD (新臺幣).
 
 G. Lin smatrao je tu sankciju veoma nepravednom i zatražio je ustavno tumačenje.
 
@@ -63,37 +63,37 @@ G. Lin smatrao je tu sankciju veoma nepravednom i zatražio je ustavno tumačenj
 
 Na Tajvanu
 
-osobe oštećena vida naiđu na brojne prepreke u rastu, djelovanju, učenju i obrazovanju, među inim,
+osobe oštećenog vida naiđu na brojne prepreke u rastu, djelovanju, učenju i obrazovanju, među inim,
 
 a zanimanja koja mogu obavljati vrlo su ograničena.
 
-Stoga je tadašnji zakonodavac, kako bi štitio osobe oštećena vida koje su se nalazile u slabijem položaju,
+Stoga je tadašnji zakonodavac, kako bi štitio osobe oštećenog vida koje su se nalazile u slabijem položaju,
 
-izradio zakon koji je štitio zaposlenje i pravo na opstanak (生存權) osoba oštećena vida.
+izradio zakon koji je štitio zaposlenje i pravo na opstanak (生存權) osoba oštećenog vida.
 
 Međutim, s tijekom vremena i širenjem potrošačkog tržišta
 
-pojavilo se mišljenje da zaštita isključivo prava osoba oštećena vida pretjerano ograničava pravo na rad osoba koje nisu oštećene vida.
+pojavilo se mišljenje da zaštita isključivo prava osoba oštećenog vida pretjerano ograničava pravo na rad osoba koje nisu oštećenog vida.
 
-U raspravi o profesionalnim pravima osoba oštećena vida i onih koje nisu oštećene vida pojavilo se mnogo proturječnih mišljenja.
+U raspravi o profesionalnim pravima osoba oštećenog vida i onih koje nisu oštećenog vida pojavilo se mnogo proturječnih mišljenja.
 
-Pitalo se, na primjer, ne predstavlja li pisana odredba koja je dopuštala isključivo osobama oštećena vida obavljanje masaže diskriminaciju prema osobama koje nisu oštećene vida,
+Pitalo se, na primjer, ne predstavlja li pisana odredba koja je dopuštala isključivo osobama oštećenog vida obavljanje masaže diskriminaciju prema osobama koje nisu oštećenog vida,
 
-i dovodilo se u pitanje je li ta odredba doista pridonijela zaštiti zaposlenja i opstanka osoba oštećena vida.
+i dovodilo se u pitanje je li ta odredba doista pridonijela zaštiti zaposlenja i opstanka osoba oštećenog vida.
 
-Napokon su suci Sudbenog yuana (大法官) proglasili su protivustavnom (違憲) odredbu koja je dopuštala isključivo osobama oštećena vida obavljanje zanimanja masera.
+Napokon su suci Sudbenog yuana (大法官) proglasili protivustavnom (違憲) odredbu koja je dopuštala isključivo osobama oštećenog vida obavljanje zanimanja masera.
 
 ​
 
-Slično u Koreji, gdje se mnoge osobe oštećena vida izdržavaju masažom,
+Slično u Koreji, gdje se mnoge osobe oštećenog vida izdržavaju masažom,
 
-načelno samo osobe oštećena vida koje su stekle potvrdu o kvalifikaciji mogu obavljati zanimanje masera.
+načelno samo osobe oštećenog vida koje su stekle potvrdu o kvalifikaciji mogu obavljati zanimanje masera.
 
-Istina je da je vlada Koreje počela izdavati potvrde o masaži i osobama koje nisu oštećene vida,
+Istina je da je vlada Koreje počela izdavati potvrde o masaži i osobama koje nisu oštećenog vida,
 
-a mnoge osobe oštećena vida, zabrinute zbog gubitka sredstva izdržavanja, organizirale su intenzivne prosvjede.
+a mnoge osobe oštećenog vida, zabrinute zbog gubitka sredstva izdržavanja, organizirale su intenzivne prosvjede.
 
-Trenutačno Koreja i dalje dopušta isključivo osobama oštećena vida s kvalifikacijom obavljanje zanimanja masera,
+Trenutačno Koreja i dalje dopušta isključivo osobama oštećenog vida s kvalifikacijom obavljanje zanimanja masera,
 
 a ako netko od druge osobe naplaćuje naknadu za masažu bez te kvalifikacije,
 

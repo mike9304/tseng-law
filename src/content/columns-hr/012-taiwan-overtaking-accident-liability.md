@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Slika koja objašnjava ocjenu odgovornosti kod nesreće pri pretjecanju na Tajvanu i siguran postupak pretjecanja](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Kad vozilo ispred vozi sporo, pretjecanje (超車) može izgledati kao uobičajen izbor, no riječ je o vožnji sa znatnim rizikom. Prije početka pretjecanja treba zajedno ocijeniti dionicu ceste, prometnu situaciju u oba smjera, kretanje vozila ispred i postoji li prostor za siguran povratak na izvorni prometni trak.
+Kad vozilo ispred vozi sporo, pretjecanje (超車) može izgledati uobičajeno, no riječ je o vožnji sa znatnim rizikom. Prije početka pretjecanja treba zajedno ocijeniti dionicu ceste, prometnu situaciju u oba smjera, kretanje vozila ispred i postoji li prostor za siguran povratak na izvorni prometni trak.
 
 ## Pretpostavke pretjecanja utvrđene člankom 101. Pravila o sigurnosti cestovnog prometa (道路交通安全規則)
 
@@ -37,15 +37,15 @@ U anonimiziranom predmetu koji je vodio ovaj ured, motociklist A vozio se planin
 
 ![Shema nesreće koja pokazuje putanju pretjecanja motocikla i 2 vozila ispred na planinskoj cesti](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A je pokušao pretjecati oba vozila, ušao u suprotni trak i ubrzao. Vozilo broj 2 također se spremalo pretjecati vozilo broj 1: manje od 1 sekunde nakon uključivanja pokazivača smjera ušlo je u suprotni trak. Motocikl nije imao dovoljnu rezervu za kočenje i sudario se s vozilom broj 2.
+A je pokušao pretjecati oba vozila, ušao u suprotni trak i ubrzao. Vozilo broj 2 također se spremalo pretjecati vozilo broj 1: manje od 1 sekunde nakon uključivanja pokazivača smjera ušlo je u suprotni trak. Motocikl nije imao dovoljno vremena za kočenje i sudario se s vozilom broj 2.
 
 B je pretrpio tešku ozljedu glave i umro na mjestu; A je izgubio svijest i prevezen je u bolnicu.
 
 Obitelji A i B najprije su smatrale da je nagla promjena traka vozila broj 2 glavni uzrok sudara. Predmet je prešao u sudski postupak; tijekom njega izrađeno je više vještačenja (鑑定) nesreće.
 
-Prema rezultatu vještačenja (鑑定) glavnu odgovornost za taj sudar snosio je A. Taj je zaključak bio ograničen na činjenične okolnosti ovog predmeta. Vještačenje je zajedno uzelo u obzir namjeru A da pretjecanjem obuhvati 2 vozila ispred u nizu, ulazak u suprotni trak, brzinu bez dovoljne rezerve za kočenje, izostanak propisanih signala trube i svjetala, kretanje vozila broj 2 pri promjeni traka, raspored ceste i traka te ostale osigurane dokaze.
+Prema rezultatu vještačenja (鑑定) glavnu odgovornost za taj sudar snosio je A. Taj je zaključak bio ograničen na činjenične okolnosti ovog predmeta. Vještačenje je zajedno uzelo u obzir namjeru A da pretjecanjem obuhvati 2 vozila ispred u nizu, ulazak u suprotni trak, brzinu bez dovoljno vremena za kočenje, izostanak propisanih signala trube i svjetala, kretanje vozila broj 2 pri promjeni traka, raspored ceste i traka te ostale osigurane dokaze.
 
-To što se u nekim predmetima takvi rezultati vještačenja pojave ne znači da jedan izostanak propisanog signala uvijek određuje odgovornost. Krivnja (過失) kod nesreće pri pretjecanju ovisi o mjestu nesreće, rasporedu traka, brzini, kretanju vozila, signalima, vremenskim razmacima, preglednosti i ostalim dokazima.
+Taj zaključak, ograničen na ovaj predmet, ne znači da jedan izostanak propisanog signala uvijek određuje odgovornost. Krivnja (過失) kod nesreće pri pretjecanju ovisi o mjestu nesreće, rasporedu traka, brzini, kretanju vozila, signalima, vremenskim razmacima, preglednosti i ostalim dokazima.
 
 ## Točke koje valja provjeriti pri ocjeni odgovornosti za nesreću
 

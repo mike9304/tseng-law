@@ -13,7 +13,7 @@ faq:
   - q: "Musí společnost vyplatit odstupné i při kárném propuštění?"
     a: "Ne. Dopustí-li se zaměstnanec protiprávního činu, poruší vnitřní řád, nebo se bez oprávněného důvodu nedostaví 3 dny po sobě (článek 12 zákona o pracovních normách, 勞動基準法第12條), může společnost propustit bez výpovědi a odstupné vyplácet nemusí. Naproti tomu hospodářské propuštění (článek 11) vyžaduje předchozí výpověď a výplatu odstupného."
   - q: "Jak se na Tchaj-wanu odstupné počítá?"
-    a: "Za každý dokončený 1 rok praxe musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy jako odstupné, nejvýše 6 měsíců mzdy. Tento vzorec se týká praxe, na niž se uplatní článek 12 nařízení o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu."
+    a: "Za každý dokončený 1 rok praxe musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy jako odstupné, nejvýše 6 měsíců mzdy. Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu."
 ---
 
 # Pracovní právo na Tchaj-wanu: je odstupné na Tchaj-wanu opravdu obtížné získat?
@@ -28,7 +28,7 @@ Text vysvětluje, kdy nárok na odstupné vzniká a kdy nikoli.
 
 Úprava se stát od státu liší.
 
-V některých jurisdikcích, například v Koreji, musí společnost vyplatit odstupné i tehdy, když zaměstnanec odejde sám
+V některých jurisdikcích, například v Koreji, musí společnost vyplatit odstupné i tehdy, když zaměstnanec odejde sám.
 
 Na Tchaj-wanu je to jiné:
 
@@ -52,7 +52,7 @@ Následující tabulka to shrnuje.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Druh** | **Hospodářské propuštění**  **資遣** **員工(經濟解僱)** | **Kárné propuštění**  **解僱** **員工(懲戒解僱)** | **Vlastní odchod zaměstnance**  **員工自請離職** |
+| **Druh** | **Hospodářské propuštění (資遣員工, 經濟解僱)** | **Kárné propuštění (解僱員工, 懲戒解僱)** | **Vlastní odchod zaměstnance**  **員工自請離職** |
 | Význam | Existuje-li u zaměstnavatele potřeba úpravy personálu kvůli situaci podniku, leží důvod v hospodářské oblasti zaměstnavatele, nikoli v odpovědnosti zaměstnance. Proto musí zaměstnavatel dodržet výpovědní dobu (預告期間) a vyplatit odstupné, aby vyvážil nevýhody zaměstnance. | Dopustí-li se zaměstnanec protiprávního nebo nevhodného činu, může zaměstnavatel okamžitě ukončit pracovní smlouvu (勞動契約) bez předchozí výpovědi a odstupné vyplácet nemusí. Jde o jednu z kárných pravomocí zaměstnavatele. | Zaměstnanec může kdykoli ukončit smlouvu, avšak musí podle doby zaměstnání dodržet výpovědní dobu, aby zaměstnavatel mohl provést předání a hledání náhrady. |
 | Podmínky | Jsou  (článek 11 tchajwanského zákona o pracovních normách) | Jsou  (článek 12 tchajwanského zákona o pracovních normách) | Nejsou |
 | Předchozí výpověď | Nutná | Není nutná | Nutná |
@@ -62,7 +62,7 @@ Následující tabulka to shrnuje.
 
 > Na Tchaj-wanu, za každý dokončený 1 rok praxe (年資),
 > musí zaměstnavatel vyplatit 0,5 měsíce průměrné mzdy (平均工資) jako odstupné.
-> (nejvýše 6 měsíců mzdy) Tento vzorec se týká praxe, na niž se uplatní článek 12 nařízení o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu.
+> (nejvýše 6 měsíců mzdy) Tento vzorec se týká praxe, na niž se uplatní čl. 12 zákona o důchodu pracovníků (勞工退休金條例); u praxe, na niž se uplatní článek 17 zákona o pracovních normách (勞動基準法), se za 1 rok vyplácí 1 měsíc průměrné mzdy, bez stropu.
 
 ​
 
@@ -118,7 +118,7 @@ Jinak by B měl společnost opustit;
 
 předložili B list formátu A4
 
-a vyzvali ho, aby na něj napsal: „Já, OOO, dobrovolně snižuji funkci a mzdu“
+a vyzvali ho, aby na něj napsal: „Já, [jméno a příjmení], dobrovolně snižuji funkci a mzdu“
 
 jako obsah.
 
@@ -172,11 +172,11 @@ nahrál celý průběh mobilním telefonem
 
 a mohl prokázat, že sám neodešel.
 
-Díky tomu mohl později se zastoupením advokátem
+Díky tomu mohl později díky zastoupení advokátem
 
 prokázat svůj zákonný nárok na odstupné;
 
-ostatní zaměstnanci, kteří odešli bez důkazů, stejný nárok neprosadili.
+ostatní zaměstnanci, kteří odešli bez důkazů, v tomto popisu jedné věci stejný postup nezvolili; nejde o příslib výsledku.
 
 ​
 
@@ -210,17 +210,17 @@ nebo převádí zaměstnance na podivná místa,
 
 Pracujete-li na Tchaj-wanu,
 
-je odstupné obtížnější získat, než se myslí
+Odstupné je obtížnější získat, než se myslí.
 
-Neuzavírejte snadno smír se společností
+Neuzavírejte snadno smír se společností.
 
-a dbejte, aby společnost nepropouštěla nevhodným způsobem
+Dbejte, aby společnost nepropouštěla nevhodným způsobem.
 
-ani nevedla k vlastnímu odchodu
+Ani nevedla k vlastnímu odchodu.
 
-Odstupné je zákonným právem zaměstnance,
+Odstupné je za zákonných předpokladů nárokem zaměstnance.
 
-a společnost je samozřejmě musí vyplatit.
+Společnost je povinna je vyplatit jen tehdy, když tyto předpoklady nastanou.
 
 I vy musíte na Tchaj-wanu chránit svá práva.
 

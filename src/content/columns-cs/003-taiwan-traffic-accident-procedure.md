@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Příkladový obrázek zaznamenávající polohu vozidel a stopy na vozovce na místě dopravní nehody](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Dojde-li na Tchaj-wanu k dopravní nehodě (交通事故), je třeba nejprve zajistit bezpečnost, provést oznámení a zachování důkazů a poté postupně posoudit lhůtu nároku, zavinění (過失) a rozsah smíru (和解). Níže je uvedeno obecné pořadí postupu založený na předpisech Tchaj-wanu a pokynech veřejných orgánů; odpovědnost a konkrétní postup se mohou lišit podle okolností každé nehody.
+Dojde-li na Tchaj-wanu k dopravní nehodě (交通事故), je třeba nejprve zajistit bezpečnost, provést oznámení a zachování důkazů a poté postupně posoudit lhůtu nároku, zavinění (過失) a rozsah smíru (和解). Níže je uvedeno obecné pořadí postupu založené na předpisech Tchaj-wanu a pokynech veřejných orgánů; odpovědnost a konkrétní postup se mohou lišit podle okolností každé nehody.
 
 ## Q1. Lze po nehodě opustit místo události?
 
@@ -39,7 +39,7 @@ Pokud jde o listiny policie, na místě nehody lze obdržet evidenční lístek 
 
 Článek 284 trestního zákona upravuje ublížení na zdraví z nedbalosti (過失傷害) a těžké ublížení na zdraví z nedbalosti (過失致重傷). Protože podle článku 287 trestního zákona jde o trestný čin stíhaný na soukromou žalobu (告訴乃論之罪), podle článku 237 tchajwanského trestního řádu (刑事訴訟法) je třeba žalobu zásadně podat do 6 měsíců ode dne, kdy se pachatel stal známým.
 
-U občanskoprávní náhrady škody (損害賠償), podle článku 197 tchajwanského občanského zákoníku (民法) již nárok není možný po uplynutí 2 let ode dne, kdy se škoda a dlužník náhrady staly známými, nebo 10 let ode dne protiprávního činu. Které skutečnosti ovlivňují promlčení (消滅時效), je třeba posoudit zvlášť.
+U občanskoprávní náhrady škody (損害賠償), podle článku 197 tchajwanského občanského zákoníku (民法) již nárok není možný po uplynutí 2 let ode dne, kdy se škoda a dlužník náhrady stali známými, nebo 10 let ode dne protiprávního činu. Které skutečnosti ovlivňují promlčení (消滅時效), je třeba posoudit zvlášť.
 
 Kdokoli utrpí škodu v důsledku trestného činu, může podle článku 487 trestního řádu podat občanskoprávní žalobu připojenou k trestnímu řízení (刑事附帶民事訴訟). Dokud trestní řízení trvá, lze tuto žalobu podat až do uzavření ústního jednání (言詞辯論終結) 2. instance, podle článku 488 trestního řádu, avšak nelze ji podat po uzavření ústního jednání 1. instance a před podáním opravného prostředku. Zásadně se lze vyhnout zaplacení samostatných soudních poplatků (裁判費), avšak ne všechny výsledky končí bez nákladu. Například, byla-li trestní věc zamítnuta a na návrh žalobce postoupena občanskoprávnímu soudu, podle článku 503 trestního řádu mohou být uloženy náklady řízení a dále je třeba ověřit pravidla postoupení a postupu článku 504.
 
@@ -63,7 +63,7 @@ Jde-li o trestný čin stíhaný na soukromou žalobu, podle článku 238 trestn
 
 ### Oficiální základy Q1–Q5
 
-- [Nařízení o řízení a sankcích silničního provozu (道路交通管理處罰條例), článek 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Zákon o řízení a sankcích silničního provozu (道路交通管理處罰條例), článek 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Trestní zákon Tchaj-wanu, článek 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Trestní zákon Tchaj-wanu, článek 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Trestní zákon Tchaj-wanu, článek 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -184,11 +184,11 @@ Pojištění odpovědnosti vůči třetím osobám (第三人責任險), pojišt
 - [Občanský zákoník, článek 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Občanský zákoník, článek 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Občanský zákoník, článek 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Rozsudek odvolacího soudu Tchaj-wanu, rok 109, věc 上易字 číslo 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Rozsudek odvolacího soudu Tchaj-wanu, rok 109, věc 上易字 číslo 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Rozsudek odvolacího soudu Tchaj-wanu, rok 109 kalendáře Čínské republiky, věc 上易字 číslo 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Rozsudek odvolacího soudu Tchaj-wanu, rok 109 kalendáře Čínské republiky, věc 上易字 číslo 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Kalkulačka současné hodnoty Hoffmanna Soudního jüanu](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Občanský zákoník, článek 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Rozsudek okresního soudu Tchao-jüan, rok 112, věc 壢簡字 číslo 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Rozsudek okresního soudu Tchao-jüan, rok 112 kalendáře Čínské republiky, věc 壢簡字 číslo 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Občanský zákoník, článek 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Trestní zákon Tchaj-wanu, článek 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zákon o povinném pojištění odpovědnosti vozidel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)

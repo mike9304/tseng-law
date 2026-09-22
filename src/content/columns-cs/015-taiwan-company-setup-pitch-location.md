@@ -45,7 +45,7 @@ Pokud je obtížné dostavit se osobně na katastrální úřad (地政事務所
 
 lze požádat o pomoc známého na Tchaj-wanu, pronajímatele, realitního zprostředkovatele nebo advokáta.
 
-Pokud výsledek ověření ukáže, že restaurace není možná, později při zápisu právnické osoby (公司登記) nemusí městský úřad zápis přijmout.
+Pokud výsledek ověření ukáže, že restaurace není možná, později při zápisu společnosti (公司登記) nemusí městský úřad zápis přijmout.
 
 Věnujte proto této věci pozornost.
 
@@ -59,9 +59,9 @@ Při zápisu společnosti se však často zapisuje více odvětví najednou a č
 
 Proto v praxi není nutné při zápisu společnosti ověřovat všechna odvětví.
 
-Podle „[provozních pokynů služby informací o provozovnách města Tchaj-pej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) a platného návodu města Tchaj-pej,
+Podle „[Provozní pokyny služby asistovaného dotazu na provozovny města Tchaj-pej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámení města Tchaj-pej,
 
-od 1. 1. 2023 při žádosti o zápis založení, přemístění sídla nebo doplnění odvětví činnosti společnosti nebo podniku (včetně pobočky (分公司) a pomocného útvaru (分支機構)) výsledek předběžného ověření provozovny **musí** být připojen k žádosti o zápis, bez ohledu na odvětví.
+od 1. 1. 2023 při žádosti o zápis založení, přemístění sídla nebo doplnění odvětví činnosti společnosti nebo podniku (včetně pobočky (分公司) a pobočné provozovny (分支機構)) výsledek předběžného ověření provozovny **musí** být připojen k žádosti o zápis, bez ohledu na odvětví.
 
 Níže uvedený seznam „odvětví, která jsou předmětem úředního ověření“ (主動查詢之營業項目) označuje odvětví, která Obchodní úřad v průběhu přezkumu zápisu ověřuje z úřední moci navíc (隨案主動查詢), když odvětví figuruje v žádosti, ale chybí v připojeném výsledku; skutečnost, že odvětví na tomto seznamu není, neznamená osvobození od ověření.
 
@@ -73,7 +73,7 @@ Pokud se otevře v místě, kde restaurace není možná, může později násle
 
 Tím je shrnut podstatný postup; konkrétní věc je třeba posoudit zvlášť s advokátkou nebo advokátem. Kancelář konzultuje pouze anglicky, čínsky (中文), japonsky a korejsky.
 
-Pravidla správních orgánů se mohou často měnit; před zápisem právnické osoby je vhodné ověřit nejnovější předpisy.
+Pravidla správních orgánů se mohou často měnit; před zápisem společnosti je vhodné ověřit nejnovější předpisy.
 
 ---
 

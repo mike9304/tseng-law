@@ -735,9 +735,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Řídící advokátka na Tchaj-wanu (Managing Attorney)',
       'chang-rongxuan': 'Advokát na Tchaj-wanu (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Právní asistent',
       'son-jungmin': 'Vedení provozu v Koreji (Korea Operations Manager)',
-      'huang-shengping': 'Partnerský účetní (Partner CPA)',
+      'huang-shengping': 'Partner účetní kanceláře (Partner CPA)',
     },
   },
   hu: {
@@ -3135,39 +3135,39 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Nadace právní pomoci, pobočka Tchaj-čung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Dříve na Ministry of Education, Legal Affairs Division, se zaměřením na správní a občanskoprávní věci.',
+        'Dříve v Ministerstvu školství, v odboru právních záležitostí (Ministry of Education, Legal Affairs Division), se zaměřením na správní a občanskoprávní věci.',
         'Zkušenost s věcmi univerzit, práv pedagogů a správních odvolání.',
       ],
       education: [
         'Bakalář práv (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministerstvo školství, odbor právních záležitostí (Ministry of Education, Legal Affairs Division)',
         'Advokát, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal s dlouholetou praxí; dříve senior paralegal ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
+        'Právní asistent s dlouholetou praxí; dříve starší právní asistent ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
         'Podpora v soudních řízeních, při zakládání společností, u povolení zahraničních investic, u žádostí o licence a při komunikaci mezi Koreou a Tchaj-wanem.',
       ],
       education: [
         'Bakalář práv (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Starší právní asistent, Boyin Law Firm',
+        'Starší právní asistent, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Koordinuje termíny porad a komunikaci pro klienty z Koreje.',
-        'Podporuje meziregionální výměnu prostřednictvím systémů dokumentů a pracovních postupů, na základě informatiky.',
+        'Podporuje meziregionální výměnu prostřednictvím systémů dokumentů a pracovních postupů, na základě vzdělání v informatice.',
       ],
       education: [
         'Bakalář (B.S.) v informatice, National Cheng Kung University',
@@ -3178,7 +3178,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Absolvoval bakalářský a magisterský program účetnictví na National Chengchi University a nyní vede účetní kancelář.',
+        'Vystudoval bakalářský a magisterský obor účetnictví na National Chengchi University a nyní vede účetní kancelář.',
         'Podporuje integrovanou analýzu právních, daňových a finančních rizik pro firemní klienty.',
       ],
       education: [

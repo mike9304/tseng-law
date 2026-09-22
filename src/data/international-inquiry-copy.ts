@@ -1396,14 +1396,14 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
     unavailableTranslationNotice:
       'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
-    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    unavailableLanguageNotice: 'Tato stránka v jazyce {language} není k dispozici.',
     languageOptions: {
       en: 'Angličtina (English)',
       'zh-hant': 'Čínština (中文)',
       ja: 'Japonština (日本語)',
       ko: 'Korejština (한국어)',
       'needs-method-confirmation':
-        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+        'Žádný ze čtyř jazyků neovládám — způsob komunikace je třeba potvrdit',
     },
   },
   hu: {

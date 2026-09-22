@@ -1,0 +1,167 @@
+# WO-F-cs — Czech fix lane, campaign round 1 (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-cs-r1
+No git add/commit/push. Czech strings only.
+Files written: 18 × src/content/columns-cs/*.md;
+src/data/international-guidance-eastern.ts (czechGuidanceContent only);
+src/data/international-guidance-team.ts (guidanceTeamCopy.cs roles + guidanceTeamBios.cs only);
+src/data/international-inquiry-copy.ts (cs only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.cs only).
+Offices and answers were already Czech and had no finding row; left unchanged.
+No test file updated: no pinned Czech expectation matched a string that changed.
+Preserved English bio terms stay inside parentheses (Legal Aid Foundation, Taichung Branch;
+Ministry of Education, Legal Affairs Division; Boyin Law Firm; Muyang International Law Firm;
+National Chengchi University). The bio figure stays "1,57 mil. TWD" (not rewritten to TWD 1.57M).
+
+## Rows applied
+
+cs-a.md (52 rows). Applied except the skips below:
+a#1 bios and roles (Ministry, Legal Aid, Paralegal → Právní asistent, Senior Paralegal → Starší právní asistent).
+a#2 meaning applied in 002 FAQ and body; digit form adapted (see checker notes).
+a#3 005: "zaměstnaných cizinců"; digit kept as "1 osobu" so the source 1 survives.
+a#4 001 beneficial owner.
+a#5 004 產業創新條例 → zákon o průmyslových inovacích (FAQ, body, link).
+a#6 008 勞工退休金條例 → zákon; 003 道路交通管理處罰條例 → Zákon o řízení a sankcích.
+a#7 007 stavovský → osobní stav / úkon osobního stavu.
+a#9 llms discoveryNotice: zaštítění + zaručenou viditelnost.
+a#10–12 guidance: sanheyuan, korporátní agendu, movitým soukromým osobám.
+a#13 營業稅 → obchodní daň (daň typu DPH) in 001, 002, 004. Ordinary "prodej" (sale of goods) left.
+a#14 link label now names 各類所得扣繳率標準; URL unchanged; "čl. 10" kept (see reviewer notes).
+a#15 místní kanceláří. a#16 samotná skutečnost. a#17 odpadla-li možnost obnovení činnosti.
+a#18 Lemují je. a#21 založené. a#22 stali známými. a#23 clitic se (FAQ, body, čl. 316).
+a#24 doubled je. a#25 podíly i struktura. a#26 lhůta z jedné věci. a#27 každý ze tří úkonů.
+a#28 bold glosses unsplit. a#30 pracovněprávních sporech. a#31 díky zastoupení advokátem.
+a#32 periods on the close and the Korea sentence.
+a#33–42 guidance/inquiry (informatika, Partner účetní kanceláře, Vystudoval, tam kde se nacházíte,
+okamžiku v němž se věc posuzuje, jiného právního řádu, shromažďované, neovládám, není k dispozici,
+dokumentech které jsou ještě potřeba).
+a#43 může být nutné připravit. a#44 four "Nikoli proto" calques → "To, že … neznamená"
+(the 183-day sentence was rephrased again so the English-sentence detector does not fire; see notes).
+a#45 redundant zbývající. a#46 beze změny / nemají stejně vztahovat. a#47 náprava. a#48 podle počtu kusů.
+a#49 pominout právní osobnost. a#50 stejný postup nezvolili. a#51 odstupné jen za zákonných předpokladů.
+a#52 [jméno a příjmení].
+
+cs-b.md (56 rows). Applied except the skips below:
+b#1 dopisu s ověřeným obsahem. b#2 otevřít spor. b#3 notářský zápis nájemní smlouvy (公證).
+b#4 nemusí nutně dostat polovinu (FAQ + body). b#5 vrácení a výměnu zboží (inventory "náhradních dílů" left).
+b#6 smír. b#7 dopisu advokátky. b#8 zraněnou část těla. b#9 nezakládá právní odpovědnost.
+b#10 až do výše skutečné škody (1násobek dropped; 5násobek/3násobek kept; 010 numbers still PASS).
+b#11 buď dovozce, nebo vlastní provoz. b#12 hlavní distributor nebo distributor.
+b#13 rozlišovat dobu a místo uchování. b#14 malým písmem. b#15 hotovou reklamu.
+b#16 režim se vztahuje i na zbývající. b#17 vyráběn ručně. b#18 sekce (not zóna).
+b#19 působit jako něco běžného. b#20 dost času / čas zabrzdit.
+b#21 013 period on the visa sentence + "Otázky, které se při zakládání často opakují…" in the next block.
+b#23 heading and close: výpověď pracovníka. b#24 projev odchodu → výpověď (genitive "účinků výpovědi").
+b#25 nezávisí jen na místě. b#26 se zaměřením na. b#27 plnění poskytnutých předem.
+b#28 nabytí nároku. b#29 zvláštní investici. b#30 odhadované / rovnoměrně. b#31 four-part syntax.
+b#32 se vidí → posuzuje. b#33 quote closed after the Czech title; gloss outside; URL unchanged.
+b#34 oznámení. b#35 pobočné provozovny. b#36 zápisu společnosti (and před zápisem společnosti).
+b#37 nárok is not itself a regime. b#38 zápisu v evidenci. b#39 obecné pořadí.
+b#40 dative čistému majetku. b#41 dědění ze zastoupení. b#42 parseable claim sentence.
+b#43 právním jednání. b#44 může se uplatnit. b#45 přeruší přístup k účtu.
+b#46 jiné orgány nebo vlastní právní režim. b#47 sešrotování a výměna.
+b#48 "v osobním vlastnictví žadatele"; digit kept as "1 malý nákladní vůz".
+b#49 purpose phrase before choosing registered industries.
+b#50 sídlo-as-parent → mateřská společnost (FAQ); 011 část ústředí (本公司) and odpovědnost ústředí.
+b#51 registraci na vznikajícím trhu. b#52 FAQ → "Lze začít přes distributora" (title left; see below).
+b#53 Zastoupení zapsané podle čl. 386. b#54 doporučení k uspořádání smluv; forma nevylučuje spor.
+b#55 se zákonnými výjimkami.
+
+No P3 rows in either review.
+
+## Rows skipped
+
+a#8  SKIP  Hangul frontmatter `url` in 008 and 009. Reviewer and ACCEPTED-ROUND both say do not edit `url`.
+a#19 SKIP  Space thousands separators and currency-after-amount. ACCEPTED-ROUND skips that separator change.
+a#20 PARTIAL  Glued "1" in "za poslední 1 rok" (001 ×2) and "dokončený 1 rok" (008 FAQ + blockquote)
+            was restored. checkNumbers FAILs when that source digit is missing from the aligned block.
+            "za 1 rok vyplácí 1 měsíc" left: it is the statutory 1-year : 1-month ratio, and the digit must stay.
+a#29 SKIP  Promoting Q16–Q20 to ## headings and removing U+200B blanks. The checker pins heading levels,
+            block counts, and ZWSP to the Korean source.
+a#2  PARTIAL  "1krát" (only once) is gone. Wording is "na 1 přerušení činnosti připadá nejvýše 1 rok"
+            (002 FAQ + body), not "jeden rok". Korean 1회 and 1년 are two digit-1 tokens in the same block;
+            "jeden rok" dropped both and the checker FAILed 1×4.
+b#22 SKIP  Merging the one-clause lines in 013 and 015. That would change the block count. 013's comma
+            and the following summary sentence were fixed inside the existing blocks. 015 fragments left.
+b#56 SKIP  Space thousands separators (010, 011, 017, 018). Same ACCEPTED-ROUND rule as a#19. Figures unchanged.
+
+## Systemic patterns (instances changed)
+
+- 條例 named as a regulation or charter → zákon. 10 sites: 004 ×5 (průmyslové inovace), 008 ×2 (důchod pracovníků),
+  003 ×1 (řízení a sankce), 013 ×1 and 017 ×1 (investice cizinců). 辦法 (公司登記辦法) stays nařízení.
+- Kvalita / stavovský for legal status. 001 beneficial owner; 004 "samotná skutečnost"; 007 osobní stav (FAQ + body).
+  006 "poměr kvality k ceně" left (ordinary quality, not legal status).
+- Glued digit / 1krát. 002 ×2 (see partial a#2). 001 and 008 digit restored for the checker.
+- English chrome in the Czech bios (R12). 8 strings in guidanceTeamBios.cs / roles: ministry intro,
+  ministry experience line, Legal Aid line, Paralegal role, paralegal intro, two Senior Paralegal lines,
+  informatika, CPA degree line. Other locales untouched. Firm names and TWD 1.57M form untouched.
+- Sídlo used for 本公司 / head office / parent → ústředí, or mateřská společnost where English says parent.
+  004: the first sweep plus 21 leftover head-office sites (funds, table, remittance, costs, guarantees, listing,
+  "v místě ústředí", second "sídla" in the closer). 011: část ústředí + odpovědnost ústředí. 018: parent FAQ,
+  head-office phrases, table "mezi ústředím", "zemi ústředí". Left as sídlo where it is the registered office
+  or tax seat: 001 "stát sídla" / "sídlo vedení" / company seat, 002 registry seat, 004 "v zemi jejího sídla"
+  and "sídla investora", 015 "přemístění sídla", 017 change of seat.
+- See / operate / scope calques. 014 "se vidí" ×3 in the first pass, then a further sweep of "je třeba vidět"
+  used as "consider": 004 ×3, 007 ×2, 014 ×2, 016 ×4, 018 ×2. "lze vidět v [odkaz]" left (it means the link).
+  011 "provozovat odděleně" and "předmět uplatnění" rewritten with the row.
+- 014 labour coinages. projev odchodu (all morphological forms) → výpověď / výpovědi / podáním výpovědi;
+  přiřazení-as-vesting → nabytí nároku; předplatných → plnění poskytnutých předem.
+- ROC years (R13) without a new Gregorian digit. 007 "roku 112 kalendáře Čínské republiky" and 民國 in the
+  gloss (body ×2 and link labels). 003 link labels "rok 109" / "rok 112". 010 "roku 109" + 民國109年度.
+  No extra Gregorian year next to an existing one.
+- R2, R3, R9 were already in the Czech columns (country note / Korea example, softened result language,
+  119/110/112). Not rewritten again. Wei Tseng stays feminine. Generic "advokátem" in 008 stays masculine.
+  Consultation languages stay English, Chinese, Japanese, Korean only.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-cs --lang cs 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=30
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-cs src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+That count was taken before this log existed. After the log was written the same command prints 26:
+22 modified Czech sources, this untracked log, the pre-existing modification of
+docs/i18n/global-plan/WO-F-cs.txt, and the untracked review files cs-a.md / cs-b.md.
+This lane did not edit WO-F-cs.txt or the review files.
+
+Checker notes:
+- 001 "za poslední 1 rok" and 008 "dokončený 1 rok" put the digit back after a missing-1 FAIL.
+- 002 keeps two digit-1 tokens ("1 přerušení" and "1 rok") so 1회 and 1년 both survive. Meaning is "per suspension period", not "only once".
+- 004 line that began "To, že dny poskytování služeb činí…" was flagged as English: after diacritics are stripped, "To" is the stopword "to" and "činí" is "in", three times in one sentence. Reworded to "Počet 183 nebo méně dní…" / "ani délka prací 6 měsíců…". Numbers 183 and 6 kept. Re-check PASS 18/18.
+- 015 reports extra digit 2 (WARN only). File still PASS.
+
+## Reviewer got wrong (not applied as suggested)
+
+- b#52 title and H1 "nebo zástupce". English title is "or Agent". "Zástupce" is the agent. Not changed.
+  The same row's FAQ "Lze začít se zástupcem" is English "start through a distributor", not the Article 386
+  representative office. Applied "Lze začít přes distributora" (FAQ and ### heading). The table row for
+  čl. 386 is "Zastoupení", which is the office, not the distributor.
+- a#14. The URL pcode=G0340028&flno=3 opens 各類所得扣繳率標準 article 3, not 營業稅法 article 10.
+  The Korean source label is 영업세법 제10조, and dropping "10" FAILs checkNumbers. Label is now
+  "normy sazeb srážky u zdroje (各類所得扣繳率標準), čl. 10" with the URL unchanged. The "10" is the
+  source-forced digit, not the article the URL opens.
+- a#20 / a#2 / a#3 / b#48 suggested writing the number out ("jeden", "jednu"). The checker counts the
+  digit in the aligned block, so the digit form was kept (see skips).
+- b#24 suggested "kdy nabývá účinků výpověď" (nominative after a genitive noun). Applied "účinků výpovědi".
+- a#8, a#19, a#29, b#22, b#56 are skip rules, not reviewer mistakes; listed above and not applied.

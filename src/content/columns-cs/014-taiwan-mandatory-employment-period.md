@@ -15,7 +15,7 @@ faq:
   - q: "Při předčasném odchodu je třeba vrátit celou podpisovou prémii (簽約金) nebo prémii za setrvání (留任獎金)?"
     a: "Ne vždy se vrací celá částka. Pokud byla podpisová prémie, prémie za setrvání nebo jiné plnění poskytnuté předem (預付性給付) vyplaceno jako přiměřená náhrada ujednání o minimální době trvání pracovního poměru, musí být jeho účel pracovníkovi jasně sdělen. Pokyn tchajwanského Ministerstva práce ze 5. 6. 2026 vysvětluje, že při odchodu před uplynutím doby se částka k vrácení musí vypočíst v poměru k ještě nesplněné době a že nelze žádat vrácení celé částky. Skutečný závěr musí společně posoudit účel výplaty, obsah ujednání, již odpracovanou dobu a důvod skončení."
   - q: "Pokud smlouva skončí předčasně z důvodu nepřičitatelného pracovníkovi, je třeba vrátit náklady na školení?"
-    a: "Čl. 15-1 odst. 4 tchajwanského zákona o pracovních normách stanoví, že pokud pracovní smlouva skončí před koncem minimální doby trvání pracovního poměru z důvodu nepřičitatelného pracovníkovi, pracovník nenese odpovědnost za porušení ujednání o minimální době trvání pracovního poměru ani za vrácení nákladů na školení. Důvod skončení a přičtení odpovědnosti se však musí posoudit z konkrétních důkazů, jako je oznámení o propuštění, projev odchodu a podklady o porušení pracovních podmínek."
+    a: "Čl. 15-1 odst. 4 tchajwanského zákona o pracovních normách stanoví, že pokud pracovní smlouva skončí před koncem minimální doby trvání pracovního poměru z důvodu nepřičitatelného pracovníkovi, pracovník nenese odpovědnost za porušení ujednání o minimální době trvání pracovního poměru ani za vrácení nákladů na školení. Důvod skončení a přičtení odpovědnosti se však musí posoudit z konkrétních důkazů, jako je oznámení o propuštění, výpověď a podklady o porušení pracovních podmínek."
 ---
 
 # Ujednání o minimální době trvání pracovního poměru na Tchaj-wanu: kritéria platnosti, náklady na školení a smluvní pokuta
@@ -29,9 +29,9 @@ Při přezkumu je důležité nesměšovat následující čtyři otázky.
 1. Zda ujednání samo splňuje zákonné předpoklady čl. 15-1
 2. Zda sjednaná doba a břemeno pracovníka jsou v přiměřeném rozsahu
 3. Komu se přičítá důvod skončení pracovní smlouvy
-4. Jak se posuzují výpovědní doba odchodu a rozsah vrácení
+4. Jak se posuzují výpověď pracovníka a rozsah vrácení
 
-I když tyto čtyři otázky figurují společně v téže smlouvě, použitelné ustanovení a potřebný důkaz jsou odlišné. Proto je třeba zvlášť posoudit, zda je ujednání platné, kdy nabývá účinků projev odchodu, zda existuje odpovědnost vrátit plnění poskytnuté předem (預付性給付) nebo náklady na školení a zda skutečně vznikla zvlášť uplatňovaná škoda.
+I když tyto čtyři otázky figurují společně v téže smlouvě, použitelné ustanovení a potřebný důkaz jsou odlišné. Proto je třeba zvlášť posoudit, zda je ujednání platné, kdy nabývá účinků výpovědi, zda existuje odpovědnost vrátit plnění poskytnuté předem (預付性給付) nebo náklady na školení a zda skutečně vznikla zvlášť uplatňovaná škoda.
 
 ## 1. Kdy nabývá ujednání o minimální době trvání pracovního poměru účinků?
 
@@ -49,11 +49,11 @@ Okolnost, že pracovník smlouvu podepsal, může být podkladem, který potvrzu
 
 Aby bylo ujednání založeno na školení, musí zaměstnavatel pracovníkovi skutečně poskytnout specializované technické školení a nést jeho náklady. Nestačí v plánu školení napsat, že jde o odborný kurz, nebo ve smlouvě zapsat odhadované náklady. Je třeba doklady propojit s tématem školení, s odborností a techničností potřebnou k místu, konkrétní dobu, zda bylo dokončeno, a skutečný výdaj.
 
-Předmětem přezkumu jsou nejen přímo ověřitelné náklady, jako honoráře vnějších lektorů, školné vzdělávacího zařízení a poplatky za materiály nebo vybavení, ale i základ výpočtu vnitřních nákladů, které zaměstnavatel tvrdí. Školil-li vnitřní personál, je třeba vidět, čí a jaký čas byl vynaložen, čím se to liší od obvyklého dohledu nebo předání místa a zda existuje základ k přičtení tohoto nákladu danému pracovníkovi. Odhadnutá částka nebo paušální rozvržení samy o sobě skutečné břemeno neprokazují.
+Předmětem přezkumu jsou nejen přímo ověřitelné náklady, jako honoráře vnějších lektorů, školné vzdělávacího zařízení a poplatky za materiály nebo vybavení, ale i základ výpočtu vnitřních nákladů, které zaměstnavatel tvrdí. Školil-li vnitřní personál, je třeba posoudit, čí a jaký čas byl vynaložen, čím se to liší od obvyklého dohledu nebo předání místa a zda existuje základ k přičtení tohoto nákladu danému pracovníkovi. Odhadované částky ani částky rozvržené rovnoměrně samy o sobě neprokazují skutečný výdaj.
 
 Program, kalendář školení, prezenční listina, výsledek hodnocení, osvědčení o dokončení, faktury a stvrzenky jsou základními podklady k potvrzení skutečnosti školení a nákladů. Smlouva mezi zaměstnavatelem a vzdělávacím zařízením, doklady o platbě a podmínky vrácení, viděny společně, umožňují přesněji zachytit skutečné břemeno. Pokud pracovník zaplatil část nákladů přímo nebo je nesla třetí osoba, je třeba také rozlišit, kdo nesl konečné náklady.
 
-Hranice mezi obecnou adaptací na práci a specializovaným technickým školením se nedělí jen podle místa školení nebo podle toho, kdo je pořádá. Vnitřní kurz může prokázat konkrétní odborný a technický obsah a značnou investici a dlouhý kurz vnějšího zařízení může být ve skutečnosti obecným úvodním školením. Proto nelze jednotně vyloučit veškeré vnitřní školení ani uznat zákonný předpoklad jen proto, že kurz je drahý nebo dlouhý.
+Hranice mezi obecnou adaptací na práci a specializovaným technickým školením nezávisí jen na místě školení ani na tom, kdo školení pořádá. Vnitřní kurz může prokázat konkrétní odborný a technický obsah a značnou investici a dlouhý kurz vnějšího zařízení může být ve skutečnosti obecným úvodním školením. Proto nelze jednotně vyloučit veškeré vnitřní školení ani uznat zákonný předpoklad jen proto, že kurz je drahý nebo dlouhý.
 
 Je třeba také umět vysvětlit vztah mezi sjednanou dobou a investicí do školení. Jaká způsobilost se nabývá, jaký vztah má tato způsobilost k cílovému místu a proč je navržená doba trvání pracovního poměru potřebná vůči době a nákladům školení, se posuzuje jednotlivě. Zda po skončení školení byla tato práce skutečně vykonávána a již odpracovaná doba jsou také podklady k posouzení rozsahu břemene.
 
@@ -61,11 +61,11 @@ Je třeba také umět vysvětlit vztah mezi sjednanou dobou a investicí do ško
 
 Druhý zákonný předpoklad je, že zaměstnavatel poskytne přiměřenou náhradu za slib pracovníka dodržet minimální dobu trvání pracovního poměru. Zde musí mít náhrada účel a strukturu odlišné od obvyklé mzdy nebo protiplnění za práci, které již má být poskytnuto. Právní povaha se neurčuje jen proto, že ve výplatním rozpisu bylo označeno jako podpisová prémie, prémie za setrvání nebo plnění poskytnuté předem.
 
-Nejprve je třeba ověřit účel výplaty. Zda jde o obecnou mzdovou podmínku náboru, protiplnění za slib setrvat určitou dobu, nebo odměnu za dosažení výsledků, musí být zřejmé ze smlouvy a z oznamovacích podkladů. Posuzuje se také, zda den výplaty, částka, okamžik přiřazení, spojení s dobou setrvání, důvody vrácení a vzorec byly předloženy tak, aby je pracovník mohl pochopit před smlouvou.
+Nejprve je třeba ověřit účel výplaty. Zda jde o obecnou mzdovou podmínku náboru, protiplnění za slib setrvat určitou dobu, nebo odměnu za dosažení výsledků, musí být zřejmé ze smlouvy a z oznamovacích podkladů. Posuzuje se také, zda den výplaty, částka, okamžik nabytí nároku, spojení s dobou setrvání, důvody vrácení a vzorec byly předloženy tak, aby je pracovník mohl pochopit před smlouvou.
 
 Pokyn (函釋) tchajwanského Ministerstva práce (勞動部) ze 5. 6. 2026 vysvětluje, že má-li se jako přiměřená náhrada ujednání o minimální době trvání pracovního poměru vzít prémie za setrvání, podpisová prémie nebo jiné plnění poskytnuté předem, musí být tato role jasně sdělena. Že zaměstnavatel dodatečně znovu vyloží účel výplaty nebo znovu zařadí část mzdy jako náhradu, obtížně nahrazuje sdělení v okamžiku smlouvy.
 
-Přiměřenost náhrady se neposuzuje jen podle částky. Společně se vidí, zda pracovník skutečně získá dodatečný prospěch, zda jsou podmínky výplaty jasné, jak se přiřazuje část odpovídající již odpracované době a zda rozsah vrácení není nadměrný. I když náhrada existuje, není bez omezení dovolena jakákoli délka setrvání ani jakákoli výše odpovědnosti za vrácení.
+Přiměřenost náhrady se neposuzuje jen podle částky. Posuzuje se společně, zda pracovník skutečně získá dodatečný prospěch, zda jsou podmínky výplaty jasné, jak se započte část odpovídající již odpracované době a zda rozsah vrácení není nadměrný. I když náhrada existuje, není bez omezení dovolena jakákoli délka setrvání ani jakákoli výše odpovědnosti za vrácení.
 
 Je také důležité, aby text smlouvy a skutečná výplata souhlasily. Ověření, zda byla výplata zpožděna nebo rozdělena, zda je podmíněná, jaká je skutečně přijatá částka po daních a srážkách a zda existovalo zvlášť písemné sdělení, pomáhá posoudit rozsah náhrady a skutečný prospěch pracovníka.
 
@@ -78,15 +78,15 @@ I když existuje jeden ze zákonných předpokladů, sjednaná doba a odpovědno
 3. Výše a rozsah náhrady
 4. Ostatní okolnosti, které ovlivňují přiměřenost
 
-U prvního prvku se vidí, jak dlouho školení skutečně trvalo a kolik zaměstnavatel nesl. Nestačí předložit úhrn; je vhodné společně ověřit doklady podle položek, částku přičtenou každému pracovníkovi, způsobilost, kterou školení poskytlo, a již získanou část investice.
+U prvního prvku se posuzuje, jak dlouho školení skutečně trvalo a kolik zaměstnavatel nesl. Nestačí předložit úhrn; je vhodné společně ověřit doklady podle položek, částku přičtenou každému pracovníkovi, způsobilost, kterou školení poskytlo, a již získanou část investice.
 
 Druhý prvek, možnost náhrady, se neurčuje jen tvrzením zaměstnavatele o obtížnosti náboru. Posuzuje se, zda je možné získat personál téhož místa nebo podobného místa, jaká kvalifikace a úroveň odbornosti jsou potřebné, jaká je obvyklá doba pokrytí a zda provozní potřeba, kterou zaměstnavatel tvrdí, souhlasí s objektivními podklady.
 
-Třetí prvek vidí nejen výši náhrady, ale i rozsah. Důležité je, kdy se vyplácí a za jakých podmínek se pracovníkovi s konečnou platností přiřazuje, jak odpovídá sjednané době jako celku a zda se při skončení v průběhu odráží již splněná doba. Prémie téhož jména se může posoudit odlišně podle struktury smlouvy a skutečnosti.
+Třetí prvek vidí nejen výši náhrady, ale i rozsah. Důležité je, kdy se vyplácí a za jakých podmínek se pracovníkovi s konečnou platností nabývá nárok, jak odpovídá sjednané době jako celku a zda se při skončení v průběhu odráží již splněná doba. Prémie téhož jména se může posoudit odlišně podle struktury smlouvy a skutečnosti.
 
 Čtvrtý prvek může zahrnovat různé okolnosti, které ovlivňují přiměřenost, jako průběh uzavření ujednání, povaha práce, co bylo stranám vysvětleno, skutečně odpracovaná doba a důvod skončení. Význam každého prvku se může lišit podle věci a okolnosti k zohlednění se neomezují na předchozí příklady. Proto je třeba posoudit bez opomenutí relevantní skutečnosti, které se objevují ve spisu.
 
-Nakonec je třeba srozumitelný poměr mezi sjednanou dobou, skutečnou investicí zaměstnavatele, obtížností náhrady, náhradou, kterou pracovník obdržel, a břemenem vrácení. Nelze předem určit platnost jen proto, že jde o určité povolání, ani beze změny uplatnit závěr z jiné věci. Je třeba společně vidět návrh v okamžiku uzavření smlouvy a skutečný stupeň splnění v okamžiku skončení.
+Nakonec je třeba srozumitelný poměr mezi sjednanou dobou, skutečnou investicí zaměstnavatele, obtížností náhrady, náhradou, kterou pracovník obdržel, a břemenem vrácení. Nelze předem určit platnost jen proto, že jde o určité povolání, ani beze změny uplatnit závěr z jiné věci. Je třeba společně posoudit návrh v okamžiku uzavření smlouvy a skutečný stupeň splnění v okamžiku skončení.
 
 ## 5. Školení, které nemůže založit ujednání
 
@@ -94,7 +94,7 @@ Podle pokynu tchajwanského Ministerstva práce ze 5. 6. 2026 nelze náklady pra
 
 Pokyn 勞動關2字第1150141814號 Ministerstva práce rozlišuje a upravuje školení, které se provádí pravidelně, obvyklé školení k místu, školení, aby se nováček seznámil s prostředím a postupy práce, a školení, které zaměstnavatel musí provést podle zákona. Protože toto školení doprovází provoz činnosti nebo plnění zákonné povinnosti, smyslem je, že jeho náklady nelze převést na základ povinnosti setrvat nebo sankce za předčasné skončení.
 
-Kurzy, které nový zaměstnanec obvykle obdrží, jako výklad pracovního řádu (工作規則), představení organizace a systémů, obvyklé předání místa a návod k základním bezpečnostním postupům, je třeba potvrdit v jejich podstatě. Obecné náklady náboru a řízení nebo náklady předání místa, které měl zaměstnavatel původně nést, nelze stanovit jako předmět vrácení pouhým označením za zvlášť investici.
+Kurzy, které nový zaměstnanec obvykle obdrží, jako výklad pracovního řádu (工作規則), představení organizace a systémů, obvyklé předání místa a návod k základním bezpečnostním postupům, je třeba potvrdit v jejich podstatě. Obecné náklady náboru a řízení nebo náklady předání místa, které měl zaměstnavatel původně nést, nelze stanovit jako předmět vrácení pouhým označením za zvláštní investici.
 
 Školení se však nevylučuje vždy jen proto, že bylo provedeno uvnitř podniku. V témže programu se mohou mísit část obecné adaptace a část specializovaně technická, proto je třeba téma, čas, náklady a to, zda existuje zákonná povinnost, ověřit podle kurzu. Kdo tvrdí specializovanou technickou část, potřebuje doklady vysvětlit, jaký obsah se liší od obvyklého školení a kdo skutečně nesl náklady.
 
@@ -104,23 +104,23 @@ V praxi se nehledí jen na obálku školicích materiálů, ale porovnává se p
 
 Ne vždy se vrací celá částka. Pokud byla podpisová prémie, prémie za setrvání nebo jiné plnění poskytnuté předem vyplaceno jako přiměřená náhrada ujednání o minimální době trvání pracovního poměru, musí být jeho účel pracovníkovi jasně sdělen. Pokyn tchajwanského Ministerstva práce ze 5. 6. 2026 vysvětluje, že při odchodu před uplynutím doby se částka k vrácení musí vypočíst v poměru k ještě nesplněné době a že nelze žádat vrácení celé částky. Skutečný závěr musí společně posoudit účel výplaty, obsah ujednání, již odpracovanou dobu a důvod skončení.
 
-Sdělení se nemá poprvé předložit, až když po výplatě vznikne spor. Pracovník musí v okamžiku uzavření smlouvy a přijetí výplaty vědět, která částka je náhradou za slib minimální doby trvání pracovního poměru, jaká je sjednaná doba jako celek, kdy se mu přiřazuje a podle jakého vzorce se vyrovnává, pokud skončení nastane v průběhu.
+Sdělení se nemá poprvé předložit, až když po výplatě vznikne spor. Pracovník musí v okamžiku uzavření smlouvy a přijetí výplaty vědět, která částka je náhradou za slib minimální doby trvání pracovního poměru, jaká je sjednaná doba jako celek, kdy na ně nabývá nárok a podle jakého vzorce se vyrovnává, pokud skončení nastane v průběhu.
 
-K uplatnění zásady poměru k nesplněné době je třeba nejprve stanovit den začátku a konce ujednání, skutečně odpracované dny a základ výpočtu vrácení. Například pevná částka, která nijak neodráží již splněnou dobu, se musí posoudit ve světle měřítka poměru pokynu. Je-li struktura rozdělené výplaty nebo přiřazení po etapách, je třeba zvlášť vypočíst, které době odpovídá každá část.
+K uplatnění zásady poměru k nesplněné době je třeba nejprve stanovit den začátku a konce ujednání, skutečně odpracované dny a základ výpočtu vrácení. Například pevná částka, která nijak neodráží již splněnou dobu, se musí posoudit ve světle měřítka poměru pokynu. Je-li struktura rozdělené výplaty nebo nabytí nároku po etapách, je třeba zvlášť vypočíst, které době odpovídá každá část.
 
 Otázku vrácení je třeba ověřit po pořadí: platnost ujednání, právní povaha vyplacené částky, již odpracovaná doba, důvod skončení a vzorec vrácení; požadovaná částka se neurčuje jen proto, že smlouva používá výraz „smluvní pokuta“.
 
 Doložka o vrácení celé částky, pevná smluvní pokuta nesouvisející se skutečnou ztrátou a jednostranná srážka ze mzdy se neposuzují jako jeden problém. Právní základ, obsah dohody, omezení pracovního práva a zákonnost srážky se musí ověřit zvlášť. Částka zapsaná ve výzvě zaměstnavatele nebo skutečnost, že pracovník zaplatil část, rovněž neurčuje zbývající právní otázky.
 
-Je třeba také rozlišit vrácení nákladů na školení a vrácení plnění poskytnutého předem. První se posuzuje se středem na skutečné specializované technické školení a nesení nákladů; druhé na účel výplaty, sdělení, podmínky přiřazení a poměr k nesplněné době. Žádají-li se obě položky společně, je třeba zvlášť porovnat, zda náklad nebyl vypočten dvakrát, a doklady každé položky.
+Je třeba také rozlišit vrácení nákladů na školení a vrácení plnění poskytnutého předem. První se posuzuje se zaměřením na skutečně provedené specializované technické školení a na nesení nákladů; druhé na účel výplaty, sdělení, podmínky nabytí nároku a poměr k nesplněné době. Žádají-li se obě položky společně, je třeba zvlášť porovnat, zda náklad nebyl vypočten dvakrát, a doklady každé položky.
 
 ## 7. Když smlouva skončí z důvodu nepřičitatelného pracovníkovi
 
-Čl. 15-1 odst. 4 tchajwanského zákona o pracovních normách stanoví, že pokud pracovní smlouva skončí před koncem minimální doby trvání pracovního poměru z důvodu nepřičitatelného pracovníkovi, pracovník nenese odpovědnost za porušení ujednání o minimální době trvání pracovního poměru ani za vrácení nákladů na školení. Důvod skončení a přičtení odpovědnosti se však musí posoudit z konkrétních důkazů, jako je oznámení o propuštění, projev odchodu a podklady o porušení pracovních podmínek.
+Čl. 15-1 odst. 4 tchajwanského zákona o pracovních normách stanoví, že pokud pracovní smlouva skončí před koncem minimální doby trvání pracovního poměru z důvodu nepřičitatelného pracovníkovi, pracovník nenese odpovědnost za porušení ujednání o minimální době trvání pracovního poměru ani za vrácení nákladů na školení. Důvod skončení a přičtení odpovědnosti se však musí posoudit z konkrétních důkazů, jako je oznámení o propuštění, výpověď a podklady o porušení pracovních podmínek.
 
 Nelze proto uznat porušení pracovníka jen proto, že pracovní vztah skončil před sjednanou dobou. Je třeba ověřit, kdo učinil jaký projev vůle, jaký je právní základ skončení smlouvy a které straně se přičítají skutečné okolnosti, které je vyvolaly.
 
-Podklady přezkumu mohou zahrnovat oznámení o propuštění, dopis o odchodu, dokument o skončení dohodou, e-mail a záznam messengeru, podklady o změně pracovních podmínek a evidenci docházky a práce. I když se zmiňuje zdraví nebo okolnosti práce, výsledek se neuzavírá jen podle tohoto výrazu, ale společně se vidí skutečný průběh, zákonný základ skončení a související důkazy.
+Podklady přezkumu mohou zahrnovat oznámení o propuštění, dopis o odchodu, dokument o skončení dohodou, e-mail a záznam messengeru, podklady o změně pracovních podmínek a evidenci docházky a práce. I když se zmiňuje zdraví nebo okolnosti práce, výsledek se neuzavírá jen podle tohoto výrazu, ale společně se posuzuje skutečný průběh, zákonný základ skončení a související důkazy.
 
 Propuštění, skončení dohodou a tvrzení o porušení pracovních podmínek jsou jen příklady okolností k posouzení, nikoli uzavřený výčet důvodů nepřičitatelných pracovníkovi. Skončení téhož názvu se může lišit ve vůli stran a v průběhu a název zapsaný v dokumentu se nemusí shodovat se skutečnými fakty.
 
@@ -128,7 +128,7 @@ Posouzení důvodu skončení ovlivňuje přímo i rozsah vrácení. Pokud se up
 
 ## 8. Výpovědní doba odchodu je odlišná otázka
 
-Ujednání o minimální době trvání pracovního poměru není institutem, který by fyzicky nebo právně bránil odchodu pracovníka. Projev odchodu a výpovědní doba (預告期間) jsou otázkou, kdy končí pracovní vztah; platnost ujednání o minimální době trvání pracovního poměru a odpovědnost za vrácení nákladů jsou otázkou, zda existuje majetková odpovědnost odvozená ze skončení.
+Ujednání o minimální době trvání pracovního poměru není institutem, který by fyzicky nebo právně bránil odchodu pracovníka. Výpověď a výpovědní doba (預告期間) jsou otázkou, kdy končí pracovní vztah; platnost ujednání o minimální době trvání pracovního poměru a odpovědnost za vrácení nákladů jsou otázkou, zda existuje majetková odpovědnost odvozená ze skončení.
 
 Když pracovník skončí pracovní smlouvu na dobu neurčitou (不定期契約), podle čl. 15 tchajwanského zákona o pracovních normách se přiměřeně uplatní výpovědní doba čl. 16 odst. 1. Čl. 16 je ustanovení o skončení smlouvy zaměstnavatelem a na odchod pracovníka se tato výpovědní doba uplatní prostřednictvím čl. 15.
 
@@ -142,7 +142,7 @@ Pokud doba pracovní smlouvy na dobu určitou k určité práci (特定性定期
 
 Je-li souvislá doba práce kratší než 3 měsíce, jde-li o jiný typ smlouvy na dobu určitou nebo se tvrdí zákonný důvod okamžitého skončení, použitelné ustanovení a skutečnosti se musí posoudit jednotlivě. Samotná skutečnost, že smlouva zapisuje delší výpovědní dobu nebo požaduje okamžité předání místa, neumožňuje předem určit právní závěr.
 
-V praxi je třeba uchovat obsah a den předání projevu odchodu, den, kdy jej zaměstnavatel skutečně obdržel, a komunikaci stran o posledním pracovním dni. Oddělí-li se do čtyř otázek okamžik, kdy odchod platně nabývá účinků, platnost ujednání o minimální době trvání pracovního poměru, vrácení nákladů na školení nebo plnění poskytnutého předem a zvlášť uplatňovaná škoda, snižuje se chyba vyvodit všechny závěry z jedné doložky smlouvy.
+V praxi je třeba uchovat obsah a den předání výpovědi, den, kdy jej zaměstnavatel skutečně obdržel, a komunikaci stran o posledním pracovním dni. Oddělí-li se okamžik účinků výpovědi, platnost ujednání, vrácení nákladů a zvlášť uplatňovaná škoda, klesá riziko, že se všechny závěry vyvodí z jedné doložky.
 
 ## 9. Kontrolní seznam pro zaměstnavatele a pracovníka
 
@@ -153,7 +153,7 @@ K předcházení sporu nebo k posouzení již vzneseného nároku nelze číst j
 1. Nejprve se určí zákonný předpoklad: zda bylo poskytnuto specializované technické školení a neseny náklady, nebo zda byla poskytnuta přiměřená náhrada za slib setrvání.
 2. Obecné, pravidelné a zákonně povinné školení se oddělí od specializovaného technického školení podle skutečného obsahu kurzu, doby a účelu.
 3. Uchovává se program kurzu, kalendář, záznam dokončení, faktury, stvrzenky a podklady o tom, kdo nesl náklady, a zvlášť se zaznamená základ vnějších a vnitřních nákladů.
-4. Písemně se jasně propojí účel náhrady, den výplaty, částka, podmínky přiřazení, sdělení učiněné pracovníkovi a vzorec vrácení nesplněné doby.
+4. Písemně se jasně propojí účel náhrady, den výplaty, částka, podmínky nabytí nároku, sdělení učiněné pracovníkovi a vzorec vrácení nesplněné doby.
 5. Dokumentuje se základ výpočtu sjednané doby, možnost nahradit personál téhož místa nebo podobného místa a vztah mezi provozní potřebou zaměstnavatele a skutečnou investicí.
 6. Posuzuje se, zda sjednaná doba a částka vrácení jsou úměrné rozsahu nákladů na školení nebo náhrady, a do vyrovnání se odráží již odpracovaná doba.
 7. Po jednotlivém ověření důvodu skončení a přičtení odpovědnosti se vypočte skutečný den skončení, splněná doba a nesplněná doba.
@@ -165,11 +165,11 @@ I při použití vzorové smlouvy nelze mechanicky uplatnit tutéž dobu a tuté
 
 1. Shromáždí se originál podepsané pracovní smlouvy a dohod o změně, vysvětlující materiály náboru, školicí materiály, program, kalendář a záznam dokončení.
 2. Ověří se odborný a technický obsah školení, zda jde o obecné adaptační školení nebo zákonně povinné školení, částky faktur a stvrzenek a kdo skutečně nesl náklady.
-3. Zajistí se podklady výplat podpisové prémie, prémie za setrvání a jiných předplatných plnění, sdělení o účelu náhrady, den výplaty, podmínky přiřazení a vzorec vrácení.
+3. Zajistí se podklady výplat podpisové prémie, prémie za setrvání a jiných plnění poskytnutých předem, sdělení o účelu náhrady, den výplaty, podmínky nabytí nároku a vzorec vrácení.
 4. Zvlášť se zaznamená základ výpočtu sjednané doby, již odpracovaná doba, zbývající doba a možnost nahradit personál, kterou zaměstnavatel tvrdí.
 5. Uchovává se oznámení o odchodu, o propuštění nebo dokument o skončení dohodou a důkaz doručení, jako e-mail a messenger.
 6. V časovém pořadí se uspořádá skutečný důvod skončení a průběh a společně se ověří výzva zaměstnavatele k vrácení, výplatní páska, komunikace stran a záznam srážek.
-7. Zvlášť se posoudí platnost ujednání o minimální době trvání pracovního poměru, projev odchodu a výpovědní doba, vrácení nákladů na školení a plnění poskytnutého předem a zvlášť uplatňovaná škoda.
+7. Zvlášť se posoudí platnost ujednání o minimální době trvání pracovního poměru, výpověď a výpovědní doba, vrácení nákladů na školení a plnění poskytnutého předem a zvlášť uplatňovaná škoda.
 8. Odpovědnost se neuznává jen proto, že bylo podepsáno nebo že zaměstnavatel požaduje určitou částku; ověří se důkazy, které odpovídají zákonným předpokladům, přiměřenosti, přičtení skončení a poměrnému vzorci čl. 15-1.
 
 Při uspořádání podkladů v časovém pořadí je vhodné společně uvést den uzavření smlouvy, dny začátku a konce školení, každý den výplaty, dny začátku a konce práce a den předání oznámení. Pokud část podkladů drží jen zaměstnavatel, uspořádají se nejprve vlastní podklady a základ výpočtu požadované částky a dodatečné podklady se ověří podle potřebného postupu.
@@ -189,6 +189,6 @@ Při uspořádání podkladů v časovém pořadí je vhodné společně uvést 
 
 ---
 
-Tento text je vzdělávacím podkladem k obecnému vysvětlení ujednání o minimální době trvání pracovního poměru na Tchaj-wanu, vrácení nákladů na školení a plnění poskytnutého předem a výpovědní doby odchodu; není právním stanoviskem ke konkrétní pracovní věci. Platnost ujednání a rozsah odpovědnosti se mohou lišit podle typu a znění smlouvy, skutečného školení a nákladů, účelu náhrady a jeho sdělení, doby práce, důvodu skončení a důkazů. Před projevem odchodu, přijetím srážky ze mzdy, dohodou o vrácení nebo reakcí na spor je třeba ověřit nejnovější oficiální podklady a jednotlivé okolnosti.
+Tento text je vzdělávacím podkladem k obecnému vysvětlení ujednání o minimální době trvání pracovního poměru na Tchaj-wanu, vrácení nákladů na školení a plnění poskytnutého předem a výpovědi pracovníka; není právním stanoviskem ke konkrétní pracovní věci. Platnost ujednání a rozsah odpovědnosti se mohou lišit podle typu a znění smlouvy, skutečného školení a nákladů, účelu náhrady a jeho sdělení, doby práce, důvodu skončení a důkazů. Před podáním výpovědi, přijetím srážky ze mzdy, dohodou o vrácení nebo reakcí na spor je třeba ověřit nejnovější oficiální podklady a jednotlivé okolnosti.
 
 **Advokátka Wei Tseng (曾雋崴)**

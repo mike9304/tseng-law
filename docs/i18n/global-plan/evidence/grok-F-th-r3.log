@@ -1,0 +1,159 @@
+# WO-F-th r3 — Thai fix lane (Grok 4.7) — 2026-09-23
+
+Workspace: /Users/son7/Projects/tseng-law-fix-th-r3
+No git add/commit/push. No other locale's strings edited. No test file edited
+(no test pinned a Thai string this round changed). R1/R11 left as already
+applied. R2–R10 were already holding in the round-3 verdicts (gender, the
+four-language consultation lock, Korea-as-example framing, no result/availability
+promise). This pass applied the round-3 rows and the sweeps those verdicts
+named.
+
+## Rows applied
+
+th-a
+1  P1 llms discoveryNotice. Kept the token `llms.txt`. Now disclaims search
+   rank, endorsement (การรับรอง), AI recommendation, and guaranteed visibility
+   (การมองเห็นที่รับประกันไว้). consultationNotice and confidentialNotice unchanged.
+2  P1 004 legal person. ผู้ทรงสิทธิทางกฎหมาย → นิติบุคคล: คนละราย (1),
+   ซึ่งเป็นนิติบุคคล (1), รายเดียวกัน (1). Same calque on the branch paragraph,
+   ผู้ทรงสิทธิและหน้าที่ทางกฎหมายลำดับสุดท้าย → บริษัทต่างชาติเป็นนิติบุคคลซึ่งรับผิดชอบ… (1).
+4  P2 guidance labour group: 資遣費 gloss closed. The warning now sits outside
+   the parentheses and names other countries' severance and dismissal-protection
+   rules.
+6  P2 team bios, Thai strings only. Ministry intro and experience line:
+   กระทรวงศึกษาธิการ ฝ่ายนิติการ (Ministry of Education, Legal Affairs Division).
+   Legal-aid experience line: มูลนิธิช่วยเหลือทางกฎหมาย สาขาไถจง (Legal Aid
+   Foundation, Taichung Branch). English gloss kept so the preserved-term test
+   still sees the canonical substring. Firm and university names unchanged.
+   GUIDANCE_BIO_PRESERVED_TERMS list itself not edited.
+7  P2 ผู้จัดการงาน → ผู้จัดการฝ่ายปฏิบัติการ. 3: guidanceTeamCopy.th.description,
+   guidance content lawyers intro, guidanceAnswers.th.lawyers.answer.
+8  P2 001 โดยตัวเอง dropped from the no-minimum-capital sentence. FAQ answer and
+   the matching body paragraph (2).
+9  P2 007 ถูกกำหนดไป → ชี้ขาด. 4: the premarital-funds sentence in the FAQ and
+   the body (2), the adultery paragraph (ถูกกำหนดไปพร้อมกันทั้งหมด), and the
+   child-support amount sentence (ถูกกำหนดไปทันที).
+10 P2 currency order. See systemic count below. Digits unchanged.
+
+th-b
+1  P1 018 vote proviso moved onto one-share-one-vote. Digits kept as
+   "ผู้ถือหุ้น 1 คนมี 1 เสียง". The supervisor sentence now ends at
+   ไม่ต้องตั้งผู้ตรวจสอบกิจการ (監察人) แยกต่างหาก.
+2  P2 010 adverse inference: วินิจฉัยไปในทางที่เป็นผลร้าย → อนุมานในทางที่เป็นผลร้าย.
+3  P2 013 investment-plan review is only "การพิจารณามิได้เข้มงวดจนเกินไป".
+   The added claims (no single criterion, education alone) are gone. Block kept.
+4  P2 014 early-termination sanction: มูลเหตุแห่งการลงโทษ → ฐานของเบี้ยปรับ.
+5  P2 018 table: ข้อเรียกร้องตำหนิ → ข้อเรียกร้องเรื่องความชำรุดบกพร่อง, with a
+   second ใคร for the damages claim.
+6  P2 010 ทั้งเพียง → และเพียง. Same sentence as row 2.
+8  P2 015 the which-clause is outside (建物登記第二類謄本).
+9  P2 016 representation of a descendant who died earlier, then จะมีขึ้นหรือไม่.
+10 P2 018 director transfer: object restored. "2/3" written สองในสาม; the Thai
+    number lexicon counts that phrase as 2 and 3, and numbers PASS
+    (sourceCount=25 targetCount=25).
+11 P2 018 missing ที่: มิใช่ว่าบริษัทจำกัดโดยหุ้นทุกแห่งต้องตรวจสอบงบการเงินประจำปี.
+12 P2 018 special shares และ employee stock options, not one package with กับ.
+13 P2 014 the length of the period alone does not decide; the investment and
+    the reason for that period stay in the same sentence.
+14 P2 016 a will does not decide who takes each asset.
+15 P2 016 guardian: มิได้อยู่ในฐานะเดียวกันกับบิดาหรือมารดาที่ใช้อำนาจปกครองบุตร
+    (the suggested "มิใช่ฐานะเดียวกัน" is ungrammatical; same meaning).
+16 P2 016 a trust or insurance arrangement cannot be treated as safe from the
+    contract alone.
+17 P2 016 the residual-property claim may have to be counted before the estate
+    is identified.
+18 P2 018 สมมติว่า, ความเที่ยงตรงสูง, ลูกค้าในไต้หวัน.
+19 P2 018 จัดตั้งองค์กรเพื่อการขาย and ประสานงาน.
+20 P2 018 ข้อมูลการออกแบบที่เป็นความลับ; คำชี้แจงเพิ่มเติม restored.
+21 P2 018 ภาษาที่สามารถให้คำปรึกษาได้จริง.
+22 P2 018 both questions gain หาก and ใน. Frontmatter `q` and the matching
+    heading, 2 questions × 2 sites.
+
+Systemic, not a numbered row: 018 "ลักษณะคือทุนแบ่งเป็นหุ้น" →
+"ทุนของบริษัทจำกัดโดยหุ้นแบ่งเป็นหุ้น" (1).
+
+## Rows skipped
+
+th-a #3  004 link label "(เลขมาตราในป้ายต้นฉบับ: 10)". The suggested rewrite
+         drops the digit. Korean source link is "영업세법 제10조"; checkNumbers
+         FAILs a missing 10. The operative cite is already มาตรา 3 and the URL
+         (`flno=3`) was not touched. Same skip as r2.
+th-a #5  "ได้รับค่าเสียหาย TWD 1.57M". ACCEPTED-ROUND / GUIDANCE_BIO_PRESERVED_TERMS
+         pins that figure byte-identical. Left as published.
+th-a #11 and th-b #7  U+200B lines in 003 (52), 005 (8), 006 (4), 008 (10),
+         009 (5), 013 (5), 015 (3) — 87 characters, 0 removed. checkBlocks
+         requires the same ZWSP count as src/content/columns (Korean). Deleting
+         them FAILs blocks. They are not wording.
+
+## Systemic patterns
+
+- Legal-person calque ผู้ทรงสิทธิทางกฎหมาย: 4 wording sites in 004, all changed.
+  Left 004 "เป็นผู้ทรงสิทธิและหน้าที่ซึ่งแยกต่างหากจากบริษัทแม่" (English is
+  distinct rights and obligations, not "legal person") and 016 ผู้ทรงสิทธิ
+  (holder of a right).
+- llms advertising disclaimer: 1 (discoveryNotice only).
+- Currency code before the amount: 49 sites moved to amount-then-name.
+  001: 10 (TWD 3,000,000 ×4, USD 500,000 ×2, USD 200,000 ×4).
+  002: 2. 003: 6. 004: 1. 006: 2 (10,000 and 20,000). 007: 1.
+  010: 10 (1.57 ล้าน ×8, 1 ล้าน ×2). 011: 10 codes inside 5 ranges.
+  017: 7. Digits and thousand commas unchanged. Amounts that already read
+  ดอลลาร์ไต้หวันใหม่ (TWD) were left, including 018. Bio "TWD 1.57M": 0 changed.
+- Zero-width spacers: 0 changed, 87 left (see skipped).
+- Bare English institutions in the Thai bios: 3 strings. Preserved-terms array
+  not edited.
+- ผู้จัดการงาน: 3.
+- โดยตัวเอง on the no-minimum-capital sentence: 2.
+- ถูกกำหนดไป for "does not dictate": 4 in 007. Other กำหนด that are ordinary
+  "provide / set" were left.
+- 018 clipped register and noun stacks: the rows above plus ลักษณะคือ (1) and
+  the กับ between special shares and employee options (1). Other กับ in 018
+  are "with / compared with" and were left.
+- 018 FAQ headings: 4 sites (2 questions in frontmatter and in the body).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-th --lang th 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+```
+
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-th src/data | wc -l
+       0
+```
+
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+```
+
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+git status --short | wc -l
+      21
+```
+
+The 21 lines are the 18 edited sources, the pre-existing `WO-F-th.txt` modification,
+the pre-existing untracked `reviews/native/rounds/r3/` directory, and this log.
+No test file is in the diff.
+
+## Reviewer got wrong (not applied)
+
+- Deleting the U+200B lines would fail `checkBlocks`. The Korean source has the
+  same spacers; they are not Thai wording. th-a #11 and th-b #7.
+- Removing "(เลขมาตราในป้ายต้นฉบับ: 10)" would fail `checkNumbers`. The digit is
+  the Korean link label 영업세법 제10조, not a free editorial choice. The public
+  label already names มาตรา 3. th-a #3.
+- Rewriting "TWD 1.57M" in the bio would fail the preserved-term test. th-a #5.

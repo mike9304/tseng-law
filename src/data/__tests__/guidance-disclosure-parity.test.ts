@@ -189,7 +189,7 @@ const ELEMENTS = {
     sl: /rok za odgovor|roka za odgovor/,
     lt: /atsakymo termino|atsakymo terminas/,
     lv: /atbildes termiņ/,
-    et: /vastamise tähtaeg/,
+    et: /vastamise tähta/,
     ca: /termini de resposta/,
     is: /svarfrest/,
   },

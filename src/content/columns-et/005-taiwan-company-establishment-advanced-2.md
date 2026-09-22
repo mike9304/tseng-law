@@ -77,7 +77,7 @@ Vt Taiwani Tööministeeriumi (勞動部) veebisaiti: <https://ezworktaiwan.wda.
 
 ​
 
-Võite saata küsimuse kontaktvormiga; viivitamatut vastust ei lubata.
+Võite saata küsimuse kontaktvormiga; viivitamatu vastuse kohta lubadust ei anta.
 
 ---
 

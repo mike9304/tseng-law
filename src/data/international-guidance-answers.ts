@@ -1397,7 +1397,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Sellel lehel on Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid. Advokaat Wei Tseng (曾雋崴) on Taiwani advokatuuri liige ja büroo juhtiv advokaat; ta töötab klientidega Koreast, Jaapanist ja teiste riikide klientidega. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
+        'Sellel lehel on Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid. Advokaat Wei Tseng (曾雋崴) on Taiwani advokatuuri liige ja büroo juhtiv advokaat; ta töötab klientidega Koreast, Jaapanist ja teistest riikidest. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.',
       sources: ['/et/about', '/et/contact'],
     },
     pricing: {

@@ -51,7 +51,7 @@ Teil tasub koostada investeerimiskava ja otsida äriühingu registreerimisaadres
 
 Välismaalaste investeerimise seaduse (外國人投資條例) artikli 9 järgi peab heakskiidetud sissemakse saabuma täies ulatuses pädeva asutuse määratud tähtaja (核定期限) jooksul; tähtaeg tuleb kinnitada heakskiidudokumendis igas asjas (praktikas määratakse see sageli umbes 1 aasta pikkuseks).
 
-Selle tähtaja jooksul jääb pärast äriühingu aadressi leidmist ja üürilepingu sõlmimist aega alles.
+Selle tähtaja jooksul jõuab aadressi leida ja üürilepingu sõlmida.
 
 Alles jääb piisavalt aega avada pangas ettevalmistuskonto ja kanda kapital.
 
@@ -61,7 +61,7 @@ Alles jääb piisavalt aega avada pangas ettevalmistuskonto ja kanda kapital.
 
 See on võimalik.
 
-Pank nõuab tavaliselt kahekordset isikutuvastust.
+Pank nõuab tavaliselt kahte isikut tõendavat dokumenti.
 
 Ilma elamiskaardita võite taotleda Taiwani immigratsiooniametilt **ühtse tunnusnumbri põhiandmete vormi** (統一證號基本資料表).
 
@@ -123,7 +123,7 @@ Kui aga tegevusalasid (營業項目) saab pidada tavalisel ärikontoripinnal, na
 
 Tasub see eelnevalt kontrollida.
 
-*See leht on ainult üldine juhis. Nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles; päringu võib saata kontaktvormiga, viivitamatut vastust ei lubata.*
+*See leht on ainult üldine juhis. Nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles; päringu võib saata kontaktvormiga, viivitamatu vastuse kohta lubadust ei anta.*
 
 ---
 

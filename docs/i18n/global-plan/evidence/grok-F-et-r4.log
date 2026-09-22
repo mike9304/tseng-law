@@ -1,0 +1,88 @@
+WO-F-et r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-et-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: et-a 25, et-b 38 (63). No P3 rows in either review.
+
+Applied: 56 numbered rows, some with the adaptations below.
+Skipped: 7 numbered rows (et-a 17, et-a 18, et-a 25, et-b 3, et-b 7, et-b 17, et-b 35).
+
+`guidance-disclosure-parity.test.ts` et reply-time regex widened from `/vastamise tähtaeg/` to `/vastamise tähta/` so it still matches the genitive "vastamise tähtaja". No other test file was edited. `GUIDANCE_LLMS_NOTICES.et.discoveryNotice` still contains the literal token `llms.txt`. "TWD 1.57M" was not touched. `consultationNotice` and `confidentialNotice` were not rewritten.
+
+### Applied
+et-a 1–16, 19–24.
+et-b 1–2, 4–6, 8–16, 18–34, 36–38.
+
+Adaptations (still applied):
+- et-a 1. "sissemakse objekt" → "investeeringu sihtäriühing". The reviewer's "sihtühing" reads as a foundation. 017 already uses sihtäriühing for the company that receives the investment.
+- et-a 9. Both "elukohatõend" sites in 004. The Estonian word is "residenditõend", matching 001, and the missing (居住者證明) gloss was added on the second site. "tuleb samuti luua" → "tuleb samuti läbida".
+- et-a 13. The long gloss in the guidance family-law line and in 007 (FAQ and body). The same split of one institution was swept through the three 016 sentences that paired "hooldusõigus" with "vanemlik vastutus" under (親權).
+- et-a 20. The urgent-matter FAQ now withholds the reply-time promise ("ei anta … lubadust") instead of "ei lubata". The same promise wording was swept through the closings of 003, 005, 013 and 018 ("viivitamatu vastuse kohta lubadust ei anta"). "ei luba järeldada" was left: that verb withholds an inference, not a promise.
+- et-b 6. "kuupäevaga" is gone. The date stays "24. jaanuar 2022. aasta", nominative month. "24. jaanuari" drops January's 1 from the number bag.
+- et-b 8. "Alates kuupäevast" is gone in the FAQ and in both body sentences. The date stays "Alates 1. juuli 2026". "1. juulist" drops month 7.
+- et-b 16. The approval period now leaves time to find the address and sign the lease, inside that existing block. The next block still says there is time to open the preparatory account and remit the capital. The blocks were not merged.
+- et-b 18. "2" → "kaks". The et lexicon counts "kaks" as 2.
+- et-b 32. The guidance is now the object that was updated. The date stays "25. juuni 2026". "25. juunil" drops month 6.
+- et-b 13. Both the heading and the opening sentence. "Taiwani sisenemise vorm" → "Taiwani turule sisenemise struktuur".
+
+### Skipped
+- et-a 17 and et-b 7. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips them, and R14 / `NUMBER_THOUSAND_STYLE` for `et` is `dot`. Every dotted amount was left.
+- et-a 18 and et-b 17. Q16–Q20 stay body lines. U+200B lines in 003 (52), 005 (8), 006 (4), 008 (10), 009 (5), 013 (5) and 015 (3), and the empty bold lines in 005, were left. They match the Korean source. Deleting a ZWSP fails `blocks`; promoting Q16 fails `headings`.
+- et-a 25. "TWD 1.57M" → "1,57 miljonit TWD". The token is pinned byte-identical. The sentence around it was left.
+- et-b 3. "kuni 1-kordset tegeliku kahju summat". Korean 010 says 최대 1배. Dropping the 1 fails `numbers` (010 is sourceCount=54 targetCount=54). English stops at the amount of the actual damages; the counted digit stays.
+- et-b 35. "Eelnev on juhis lepingu sõnastamise kohta." English 018 says "The foregoing is contract-design advice." The Estonian already says that. Replacing it with a sentence about branch-versus-subsidiary registration would change the English meaning.
+
+## Systemic patterns
+
+- Dot thousands (et-a and et-b verdicts). 0 changed to a space. The checker requires the dot.
+- U+200B blanks, and 005 `**​**` (et-a verdict; et-b 013/015). 0 deleted. Counts match the Korean source.
+- "korraldus" for a facility, equipment, a disposition, or the appointment of a responsible person. 8: 001 "püsivad korraldused" and "püsivat korraldust"; 004 "vaid korraldus (負責人)", "püsivate korralduste", "püsiva korralduse", "Püsiva korralduse kõrval", "varud või korraldused"; 007 "võlg ja korraldused". Work rules (töökorralduseeskiri), provisional measures (ajutine korraldus), and the departure order in 017 were left.
+- "juhtiv koht" where 001 already says "juhtimiskoht". 2 in 004 ("juhtiva koha", "juhtiv koht või büroo").
+- One parental-authority institution split into "hooldusõigus" and "vanemlik vastutus". 6: guidance ×1, 007 ×2, 016 ×3. "Vanemlik vastutus" is parents' liability for a child's acts. The glosses stay.
+- "lubama" as a ban where the text only withholds a promise. 6: the urgent-matter FAQ, `discoveryNotice`, and the closings of 003, 005, 013 and 018. "ei luba järeldada" was left.
+- A checklist called "kohad" or "kontrollikoht". 5: 014 employer and worker headings, 017 "järgmised kohad", 018 "kontrollikohad", 007 heading "kontrollikohad" (English "First Cross-Border Checks"). 016 already said "kontrollnimekiri".
+- "saab toime" for a notice taking effect. 2 in 014 ("jõustub", "jõustub").
+- "Alates kuupäevast" with the month in the nominative. 3 in 011, now "Alates 1. juuli 2026". True elative "juulist" is not parsed (month 7 drops). 015 "Alates 1. jaanuarist 2023" was already the elative and was left; that file was not edited.
+- R2–R10 and R12–R17. The pack already uses MEESKOND, BÜROOD, "Täielik profiil (inglise keeles)", and "Jurist-assistent". Consultation stays English, Chinese (中文), Japanese and Korean, with no reply-time promise, no interpreter, and no free first meeting. Estonian does not mark gender on "advokaat" or "ta"; the reviewer found no masculine title for Wei Tseng. No Czech function word turned up in the columns (ž in massaaž, staaž and jääk is Estonian). Hangul remains only inside frontmatter `url` values.
+
+## Reviewer points not followed
+
+- et-a 17 and et-b 7. A space as the thousands separator is ordinary Estonian. This campaign's checker does not parse it for `et` (`dot` style). The dotted form was kept.
+- et-a 18 and et-b 17. Q16–Q20 are body lines in the Korean source as well. The U+200B lines match that source.
+- et-a 25. "1,57 miljonit TWD" would drop the pinned token `TWD 1.57M`. The figure stayed byte-identical.
+- et-b 3. The reviewer is right that English does not say "one times". Korean says 최대 1배, and that 1 is in the matched number bag. The multiplier stayed.
+- et-b 6, et-b 8 and et-b 32, the elative and genitive dates. "1. juulist 2026" parses as [1, 2026] and drops 7. "24. jaanuari 2022" drops January's 1. "25. juunil 2026" drops 6. The checker-accepted nominative month was kept, and the broken "kuupäevaga" / "Alates kuupäevast" / nominative "juhis … kuupäev on" frames were still rewritten.
+- et-b 35. The label does not describe the paragraphs above it, and the English source has the same sentence. The Estonian was left as a translation of that English sentence.
+
+Pre-existing number WARNs, on files this pass did not edit: 006 extra `1`; 009 extra `2`; 015 extra `2×3`. Ordinal `수사미해석` WARNs are the Korean instance markers R11 no longer forces into a digit.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-et --lang et 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=136
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-et src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+The git count is after a temporary helper under `.tmp-et/` was removed and before this log existed. The same command during the test run printed 22 because that helper directory was still untracked. After this log was written, `git status --short | wc -l` is 22.

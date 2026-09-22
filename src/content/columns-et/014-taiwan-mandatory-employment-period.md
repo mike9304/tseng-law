@@ -31,13 +31,13 @@ Uurimisel on tähtis mitte segi ajada järgmisi 4 küsimust.
 3. Kellele saab töölepingu lõppemise põhjuse omistada.
 4. Kuidas hinnatakse lahkumise etteteatamist ja tagastamise ulatust.
 
-Kuigi sama leping käsitleb kõiki 4 küsimust, on kohalduv säte ja vajalik tõend igaühel erinev. Seetõttu tuleb eraldi uurida, kas kokkulepe on kehtiv, millal lahkumise tahteavaldus saab toime, kas on vastutust tagastada ettemakstud hüvitis (預付性給付) või koolituskulud ning kas eraldi kahju on tegelikult tekkinud.
+Kuigi sama leping käsitleb kõiki 4 küsimust, on kohalduv säte ja vajalik tõend igaühel erinev. Seetõttu tuleb eraldi uurida, kas kokkulepe on kehtiv, millal lahkumise tahteavaldus jõustub, kas töötajal on kohustus ettemakstud hüvitis (預付性給付) või koolituskulud tagastada ning kas eraldi kahju on tegelikult tekkinud.
 
 ## 1. Millal on minimaalse töötamise aja kokkuleppel toime?
 
 Kokkulepe ei ole automaatselt tühine. Taiwani tööstandardite seaduse (勞動基準法) artikli 15-1 järgi võib kokkulepe täita seadusjärgsed eeldused, kui tööandja annab kutseoskuste koolituse (專業技術培訓) ja kannab kulu või annab mõistliku hüvitise (合理補償), et töötaja järgiks minimaalset töötamise aega. Mõlemat eeldust ei ole vaja täita ühel ajal, kuid ka siis, kui üks neist on täidetud, ei tohi kokkulepe ületada mõistlikku ulatust kõigi asjaolude valguses, nagu koolituse kestus ja kulu, töötaja asendamise võimalus (人力替補可能性) ning hüvitise summa ja ulatus.
 
-Artikli 15-1 lõige 1 sätestab valikuliselt 2 seadusjärgset eeldust. Esimene on, et tööandja on andnud töötajale kutseoskuste koolituse (專業技術培訓) ja kandnud kulu; teine, et on antud mõistlik hüvitis (合理補償) vastutasuks minimaalse töötamise aja järgimise eest. Uurida tuleb mitte seda, millise nime leping on saanud, vaid milline alus tegelikult on olemas (最低服務年限約定).
+Artikli 15-1 lõige 1 sätestab kaks alternatiivset seadusjärgset eeldust. Esimene on, et tööandja on andnud töötajale kutseoskuste koolituse (專業技術培訓) ja kandnud kulu; teine, et on antud mõistlik hüvitis (合理補償) vastutasuks minimaalse töötamise aja järgimise eest. Uurida tuleb mitte seda, millise nime leping on saanud, vaid milline alus tegelikult on olemas (最低服務年限約定).
 
 Artikkel 15-1 nõuab ühte neist 2 seadusjärgsest eeldusest ja lisaks eraldi mõistlikkuse kontrolli. See ei tähenda, et alati tuleks ühel ajal anda kutseoskuste koolitus ja mõistlik hüvitis, ega ka seda, et kogu kokkulepe oleks automaatselt kehtiv ainult seetõttu, et formaalselt on märgitud üks neist 2-st.
 
@@ -63,7 +63,7 @@ Teine seadusjärgne eeldus on, et tööandja annab mõistliku hüvitise (合理�
 
 Esmalt tuleb kinnitada makse eesmärk. Kas tegemist on tavalise palgatingimusega värbamisel, vastutasuga lubaduse eest jääda kindel periood või tasuga saavutatud tulemuste eest, peab olema selge lepingus ja teatematerjalides (合理補償). Uuritakse ka, kas maksepäev, summa, kuuluvuse hetk, seos töötamise perioodiga, tagastamise põhjused ja valem on esitatud nii, et töötaja sai neid enne lepingut mõista.
 
-Taiwani tööministeeriumi (勞動部) juhis (函釋) 5. juuni 2026. aasta selgitab, et kui mõistliku hüvitisena minimaalse töötamise aja kokkuleppe eest võetakse jäämisboonus, sõlmimisboonus või muu ettemakstud hüvitis, tuleb see roll selgelt teatada. See, et tööandja hiljem tõlgendab makse eesmärki uuesti või liigitab osa palgast hüvitiseks, ei asenda kaugeltki seda teatist, mis oleks tulnud anda lepingu sõlmimisel.
+Taiwani tööministeeriumi (勞動部) 5. juuni 2026. aasta juhis (函釋) selgitab, et kui mõistliku hüvitisena minimaalse töötamise aja kokkuleppe eest võetakse jäämisboonus, sõlmimisboonus või muu ettemakstud hüvitis, tuleb see roll selgelt teatada. See, et tööandja hiljem tõlgendab makse eesmärki uuesti või liigitab osa palgast hüvitiseks, ei asenda kaugeltki seda teatist, mis oleks tulnud anda lepingu sõlmimisel.
 
 Hüvitise mõistlikkust ei hinnata ainuüksi summa järgi. Vaadatakse koos, kas töötaja saab tegelikult lisahüve, kas maksetingimused on selged, kuidas juba täidetud töötamise ajale vastav osa kuulub töötajale ning et tagastamise ulatus ei ole ülemäärane (合理補償). Hüvitise olemasolu ei luba piiramata mis tahes töötamise aja pikkust ega mis tahes tagastamissummat.
 
@@ -82,11 +82,11 @@ Esimeses teguris vaadatakse, kui kaua koolitus tegelikult on kestnud ja kui palj
 
 Teine tegur, asendamise võimalus (人力替補可能性), ei kinnitu ainuüksi tööandja väitega värbamisraskusest. Uuritakse, kas on võimalik hankida personali samal või sarnasel ametikohal, millist kvalifikatsiooni ja oskustaset nõutakse, milline on tavaline täitmisperiood ja kas tööandja väidetav tegevusvajadus on kooskõlas objektiivsete materjalidega (人力替補可能性).
 
-Kolmas tegur ei vaata ainult hüvitise summat, vaid ka ulatust. Tähendus on, millal makstakse ja millistel tingimustel see lõplikult kuulub töötajale, kuidas see vastab kokku lepitud perioodile tervikuna ning kas juba täidetud periood võetakse arvesse, kui töösuhe lõpeb enne perioodi lõppu. Samanimelist boonust võib hinnata erinevalt lepingustruktuuri ja tegelikkuse järgi.
+Kolmas tegur ei vaata ainult hüvitise summat, vaid ka ulatust. Oluline on, millal makstakse ja millistel tingimustel see lõplikult töötajale kuulub, kuidas see vastab kokku lepitud perioodile tervikuna ning kas juba täidetud periood võetakse arvesse, kui töösuhe lõpeb enne perioodi lõppu. Samanimelist boonust võib hinnata erinevalt lepingustruktuuri ja tegelikkuse järgi.
 
-Neljas tegur võib hõlmata mitmesuguseid asjaolusid, mis mõjutavad mõistlikkust, nagu kokkuleppe sõlmimise kulg, töö iseloom, see, mida pooltele on selgitatud, tegelikult täidetud töötamise aeg ja lõppemise põhjus. Iga teguri tähtsus võib asja järgi erineda ning arvesse võetavad asjaolud ei piirdu eelmiste näidetega. Seetõttu tuleb ilma väljajätmiseta uurida asjaga seotud asjaolusid, mis ilmnevad materjalidest.
+Neljas tegur võib hõlmata mitmesuguseid asjaolusid, mis mõjutavad mõistlikkust, nagu kokkuleppe sõlmimise kulg, töö iseloom, see, mida pooltele on selgitatud, tegelikult täidetud töötamise aeg ja lõppemise põhjus. Iga teguri tähtsus võib asja järgi erineda ning arvesse võetavad asjaolud ei piirdu eelmiste näidetega. Seetõttu tuleb uurida kõiki asjaga seotud asjaolusid, mis materjalidest ilmnevad.
 
-Lõpuks on vaja arusaadavat proportsionaalsussuhet kokku lepitud perioodi, tööandja tegeliku investeeringu, asendamise raskuse, töötaja saadud hüvitise ja tagastamise koormuse vahel. Kehtivust ei tohi kinnitada ette ainuüksi seetõttu, et tegemist on kindla ametiga, ega teise asja järeldust kohaldada muutmata kujul. Koos tuleb vaadata kujundust lepingu sõlmimise hetkel ja tegelikku täitmise astet lõppemise hetkel.
+Lõpuks on vaja mõistlikku proportsionaalsussuhet kokku lepitud perioodi, tööandja tegeliku investeeringu, asendamise raskuse, töötaja saadud hüvitise ja tagastamise koormuse vahel. Kehtivust ei tohi kinnitada ette ainuüksi seetõttu, et tegemist on kindla ametiga, ega teise asja järeldust kohaldada muutmata kujul. Koos tuleb vaadata kujundust lepingu sõlmimise hetkel ja tegelikku täitmise astet lõppemise hetkel.
 
 ## 5. Koolitus, mis ei saa kokkulepet rajada
 
@@ -98,7 +98,7 @@ Kursused, mida uus töötaja tavaliselt saab, nagu töökorralduseeskirja (工�
 
 Siiski ei välistata alati koolitust ainuüksi seetõttu, et see on antud ettevõtte sees. Ühes ja samas programmis võivad tavaline kohanemise osa ja kutseoskuste osa olla segatud, seega tuleb teema, aeg, kulu ja see, kas on seadusjärgne kohustus, kinnitada kursuse kaupa (專業技術培訓). See, kes tugineb kutseoskuste osale, peab tõenditega selgitama, milline sisu erineb tavalisest koolitusest ja kes on tegelikult kandnud kulu.
 
-Praktikas ei vaadata ainult koolitusmaterjali kaant, vaid uuritakse üksikasjalikku sisukorda ja tegelikku pidamisarvestust. Tuleb uurida, kas tegemist on korduva korrapärase kursusega, kursusega kindlale kvalifikatsioonile või seadme kasutamise oskusele, seadusjärgse koolitusega, kas töötaja tegelikult osales ja kas nõutud summa on kooskõlas koolituskulude tõenditega (勞動基準法).
+Praktikas ei vaadata ainult koolitusmaterjali kaant, vaid uuritakse üksikasjalikku sisukorda ja koolituse tegeliku läbiviimise andmeid. Tuleb uurida, kas tegemist on korduva korrapärase kursusega, kursusega kindlale kvalifikatsioonile või seadme kasutamise oskusele, seadusjärgse koolitusega, kas töötaja tegelikult osales ja kas nõutud summa on kooskõlas koolituskulude tõenditega (勞動基準法).
 
 ## 6. Boonuste tagastamine ja varajane lahkumine
 
@@ -128,7 +128,7 @@ Lõppemise põhjuse hindamine mõjutab otseselt ka tagastamise ulatust. Kui lõi
 
 ## 8. Lahkumise etteteatamine on eraldi küsimus
 
-Minimaalse töötamise aja kokkulepe ei ole kord, mis füüsiliselt või õiguslikult takistaks töötaja lahkumist. Lahkumise tahteavaldus ja etteteatamistähtaeg (預告期間) on küsimus sellest, millal töösuhe lõpeb; minimaalse töötamise aja kokkuleppe kehtivus ja vastutus kulude tagastamise eest on küsimus sellest, kas lõppemisest tekib varaline vastutus.
+Minimaalse töötamise aja kokkulepe ei takista töötajal tegelikult ega õiguslikult töölt lahkumast. Lahkumise tahteavaldus ja etteteatamistähtaeg (預告期間) on küsimus sellest, millal töösuhe lõpeb; minimaalse töötamise aja kokkuleppe kehtivus ja vastutus kulude tagastamise eest on küsimus sellest, kas lõppemisest tekib varaline vastutus.
 
 Kui töötaja lõpetab tähtajatu töölepingu (不定期契約), kohaldatakse Taiwani tööstandardite seaduse artikli 15 alusel artikli 16 lõike 1 etteteatamistähtaega. Artikkel 16 on säte tööandja lepingu lõpetamise kohta ning töötaja lahkumisele kohaldatakse seda etteteatamistähtaega artikli 15 kaudu.
 
@@ -142,13 +142,13 @@ Kui tähtajalise töölepingu periood kindla töö jaoks (特定性定期契約)
 
 Kui katkematu tööstaaž on alla 3 kuu, kui tegemist on teist tüüpi tähtajalise lepinguga või kui tuginetakse seadusjärgsele alusele viivitamatuks lõpetamiseks, tuleb kohalduv säte ja asjaolud uurida asja kaupa (勞動基準法). Pelk asjaolu, et leping näeb ette pikema etteteatamise või et tööandja nõuab viivitamatut töö üleandmist, ei luba õiguslikku järeldust kinnitada ette.
 
-Praktikas tuleb säilitada lahkumise tahteavalduse sisu ja saatmise päev, päev, mil tööandja selle tegelikult kätte sai, ning poolte teated viimase tööpäeva kohta. Kui 4 küsimuses eristatakse hetke, mil lahkumine kehtivalt saab toime, minimaalse töötamise aja kokkuleppe kehtivust, koolituskulude või ettemakstud hüvitise tagastamist ja kahju, millele tuginetakse eraldi, väheneb oht teha ühest lepinguklauslist kõik järeldused.
+Praktikas tuleb säilitada lahkumise tahteavalduse sisu ja saatmise päev, päev, mil tööandja selle tegelikult kätte sai, ning poolte teated viimase tööpäeva kohta. Kui 4 küsimuses eristatakse hetke, mil lahkumine kehtivalt jõustub, minimaalse töötamise aja kokkuleppe kehtivust, koolituskulude või ettemakstud hüvitise tagastamist ja kahju, millele tuginetakse eraldi, väheneb oht teha ühest lepinguklauslist kõik järeldused.
 
 ## 9. Kontrollnimekiri tööandjale ja töötajale
 
 Vaidluse ennetamiseks või juba esitatud nõude uurimiseks ei tohi lugeda ainult lepingut, vaid tuleb koos korrastada materjalid koolitusest, maksest, tööst ja lõppemisest ajajärjekorras. Eriti aitab vaidluskohade eristamiseks tabel, millest nähtub, kui palju kokku lepitud perioodist on täidetud ja kui palju on täitmata ning millised materjalid vastavad väidetavale kulule ja hüvitisele (勞動契約).
 
-### Kohad, mida tööandja peab uurima
+### Tööandja kontrollnimekiri
 
 1. Täpsustatakse esmalt seadusjärgne eeldus: kas kutseoskuste koolitus on antud ja kulu kantud või on mõistlik hüvitis töötamise lubaduse eest antud (專業技術培訓).
 2. Eristatakse tavaline, korrapärane ja seadusjärgne koolitus kutseoskuste koolitusest kursuse tegeliku sisu, kestuse ja eesmärgi järgi.
@@ -161,7 +161,7 @@ Vaidluse ennetamiseks või juba esitatud nõude uurimiseks ei tohi lugeda ainult
 
 Kuigi kasutatakse näidislepingut, ei tohi mehaaniliselt kohaldada sama perioodi ja sama summat igale ametikohale ja igale töötajale. Klauslid tuleb kujundada, võttes arvesse tegelikku koolitusinvesteeringut, hüvitist ja asendamise võimalust ning makse eesmärk ja proportsionaalsuse valem tuleb teatada arusaadavalt enne lepingu sõlmimist.
 
-### Kohad, mida töötaja peab uurima
+### Töötaja kontrollnimekiri
 
 1. Kogutakse allkirjastatud töölepingu originaal ja muudatuslepingud, selgitusmaterjal värbamisel, koolitusmaterjal, kava, kalender ja läbimise arvestus.
 2. Kinnitatakse koolituse kutse- ja tehniline sisu, kas tegemist on tavalise kohanemiskoolitusega või seadusjärgse koolitusega, summa arvetel ja kviitungitel ning kes on tegelikult kandnud kulu.

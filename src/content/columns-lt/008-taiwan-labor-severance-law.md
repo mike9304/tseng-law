@@ -104,23 +104,23 @@ bendrovė pasirinko poną B taikiniu.
 
 ​
 
-Vieną dieną bendrovės aukšto rango vadovas iškvietė B pokalbiui
+Vieną dieną bendrovės aukšto rango vadovas iškvietė poną B pokalbiui
 
-ir staiga ėmė priekaištauti, kad B nedirba sąžiningai.
+ir staiga ėmė priekaištauti, kad ponas B nedirba sąžiningai.
 
 Bendrovė esanti sunkioje padėtyje,
 
-todėl B turįs aukotis ir parodyti pavyzdį
+todėl ponas B turįs aukotis ir parodyti pavyzdį
 
 bei sumažinti darbo užmokestį ir pareigas.
 
-Kitu atveju B turįs palikti bendrovę;
+Kitu atveju ponas B turįs palikti bendrovę;
 
-vadovas padavė B A4 formato lapą
+vadovas padavė ponui B A4 formato lapą
 
-ir liepė parašyti: „Aš, [vardas, pavardė], savo noru sutinku su žemesnėmis pareigomis ir mažesniu atlyginimu“
+„Aš, [vardas, pavardė], savo noru sutinku su žemesnėmis pareigomis ir mažesniu atlyginimu“
 
-tokį tekstą.
+ir liepė parašyti būtent tokį tekstą.
 
 Šį susitarimą ketino parodyti visiems kitiems darbuotojams,
 

@@ -43,15 +43,15 @@ B patyrė sunkų galvos sužalojimą ir mirė vietoje; A prarado sąmonę ir buv
 
 A ir B šeimos iš pradžių laikė staigų 2-osios transporto priemonės juostos keitimą pagrindine susidūrimo priežastimi. Byla perėjo į teismo procesą; jo metu buvo parengtos kelios eismo įvykio ekspertizės (鑑定).
 
-Pagal ekspertizės rezultatą pagrindinė atsakomybė už šį susidūrimą teko A. Ši išvada apsiribojo šios bylos faktinėmis aplinkybėmis. Ekspertizė kartu įvertino tai, kad A ketino lenkti dvi priekyje iš eilės važiavusias transporto priemones, kad įvažiavo į priešpriešinio eismo juostą, kad važiavo greičiu, kuris beveik nepaliko laiko stabdyti, kad nebuvo duotas nustatytas garso signalas arba žibintų signalas, taip pat 2-osios transporto priemonės juostos keitimo judesį, kelio ir juostų sandarą bei kitus turimus įrodymus.
+Pagal ekspertizės rezultatą pagrindinė atsakomybė už šį susidūrimą teko A. Ši išvada apsiribojo šios bylos faktinėmis aplinkybėmis. Ekspertizė kartu įvertino tai, kad A ketino lenkti dvi priekyje iš eilės važiavusias transporto priemones, kad įvažiavo į priešpriešinio eismo juostą, kad važiavo greičiu, kuris beveik nepaliko laiko stabdyti, kad nebuvo duotas nustatytas garso signalas arba žibintų signalas, taip pat 2-osios transporto priemonės juostos keitimo judesį, kelio ir eismo juostų išdėstymą bei kitus turimus įrodymus.
 
-Šios bylos rezultatas nereiškia, kad vieno nustatyto signalo praleidimas visada nustato atsakomybę. Kaltė (過失) lenkimo eismo įvykyje priklauso nuo įvykio vietos, juostų sandaros, greičio, transporto priemonių judėjimo, signalų, laiko intervalų, matomumo ir kitų įrodymų.
+Šios bylos rezultatas nereiškia, kad vieno nustatyto signalo praleidimas visada nustato atsakomybę. Kaltė (過失) lenkimo eismo įvykyje priklauso nuo įvykio vietos, eismo juostų išdėstymo, greičio, transporto priemonių judėjimo, signalų, laiko intervalų, matomumo ir kitų įrodymų.
 
 ## Ką patikrinti vertinant atsakomybę už eismo įvykį
 
 Prieš lenkiant pirmiausia reikia patikrinti, ar vieta ar eismo padėtis patenka į lenkimo draudimą. Jei taikoma tos pačios juostos eiga, reikia duoti nustatytą garso ar žibintų signalą neverčiant priekyje esančios transporto priemonės užleisti kelio, palaukti aiškaus parodymo, kad kelias užleidžiamas, ir baigti lenkimą paliekant pakankamą tarpą bei saugų grįžimo atstumą.
 
-101 straipsnio laikymasis yra svarbus, tačiau pats savaime neužtikrina nei eismo įvykio išvengimo, nei vėlesnės ekspertizės ar proceso baigties. Vairuotojai turi palikti papildomą saugos atsargą ir prisitaikyti prie padėties priekyje.
+101 straipsnio laikymasis yra svarbus, tačiau pats savaime neužtikrina nei eismo įvykio išvengimo, nei vėlesnės ekspertizės ar proceso baigties. Vairuotojai turi palikti papildomą atsargą ir prisitaikyti prie padėties priekyje.
 
 Papildomai galima žiūrėti [lenkimo taisyklių ir eigos iliustraciją](https://gonews.com.tw/car/daily/21934/). Kadangi tai antrinis šaltinis, tikrinant teisines sąlygas reikia skaityti ir galiojančius oficialius teisės aktus.
 

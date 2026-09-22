@@ -21,9 +21,9 @@ Pradedant maitinimo veiklą pirmasis klausimas — rasti veiklos adresą (營業
 
 Be rinkos sąlygų reikia atsižvelgti ir į kitą dalyką.
 
-Kitas svarbus dalykas yra šis.
+Kitas svarbus klausimas yra šis:
 
-Ar šis adresas yra zonoje, kurioje galima vykdyti „restorano“ veiklą?
+ar šis adresas yra zonoje, kurioje galima vykdyti restorano veiklą.
 
 ​
 

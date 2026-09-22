@@ -460,7 +460,7 @@ const ELEMENTS = {
     hu: /nem helyettesíti a tanácsadást/,
     ro: /pasul consultanței/,
     uk: /не є консультацією/,
-    el: /βήμα της συμβουλευτικής/,
+    el: /δεν αποτελεί συμβουλευτική/,
     he: /שלב הייעוץ/,
     bn: /পরামর্শের ধাপ/,
     ur: /مشورے کا مرحلہ/,

@@ -1,0 +1,123 @@
+WO-F-el — Grok 4.7 fix lane, campaign round 2
+Workspace: /Users/son7/Projects/tseng-law-fix-el-r2
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows
+
+Finding rows: el-a 39 + el-b 40 = 79. No P3 rows in either review.
+Applied: 77.
+Skipped: 2 (plus the Hangul slugs in the 008 and 009 frontmatter `url`, which ACCEPTED-ROUND already forbids).
+
+Applied, every P1 and P2, inside the existing block, except the two skips below.
+Guidance pack (Greek strings only): international-guidance-eastern.ts (greekGuidanceContent), international-guidance-team.ts (el lawyers description and bios), international-guidance-answers.ts (el lawyers answer), international-inquiry-copy.ts (el), llms-txt.ts (GUIDANCE_LLMS_NOTICES.el.discoveryNotice only). consultationNotice and confidentialNotice were left; they are still verbatim substrings of the FAQ answer and the privacy paragraph. international-guidance-offices.ts had no flagged Greek string.
+Columns: all 18 files under src/content/columns-el/.
+Tests, expected string only: src/lib/__tests__/guidance-cs-hu-ro-uk-el-he-content.test.ts (FAQ «Είναι δυνατή η συμβουλευτική στα ελληνικά;») and src/data/__tests__/guidance-disclosure-parity.test.ts (el pin /δεν αποτελεί συμβουλευτική/). No other test assertion was edited.
+
+### Skipped
+
+- el-a #34 (003 Q16 onward → ## headings, and the U+200B-only lines in 003, 005, 006, 008 and 009). The checker compares heading levels and the ZWSP count with the Korean source. Q16–Q20 stay body lines. The same constraint left the zero-width padding. The hanging comma in 008 («Εάν εργάζεστε στην Ταϊβάν,») was closed inside that block: «Εάν εργάζεστε στην Ταϊβάν, έχετε υπόψη τα κατωτέρω.»
+- el-b #29 (delete the U+200B-only lines in 013 and 015). Deleting them fails the ZWSP count. The lines stay.
+
+### Checker override (meaning applied; digit or block count kept)
+
+The checker counts digits in the link label. A word-number that drops a Korean digit fails `numbers`. Merging paragraphs fails the block count.
+
+- el-a #1 (004). The URL is article 3 of 各類所得扣繳率標準 (same link 001 labels as non-resident dividend withholding). The Korean label is still 「영업세법 제10조」, and `numbers` counts that 10. With «άρθρο 3» the file failed: missing 10, sourceCount=95 targetCount=94. The statute name is now the withholding-rate standards, and the visible number stays 10. The URL was not changed.
+- el-a #33. «για 1 θύμα και 1 ατύχημα» → «ανά 1 θύμα και ανά 1 ατύχημα» (both 1s kept). «το 1 έτος», «της 1 περιόδου» (002) and «ανά 1 ημέρα» (003) were left. Suggested «κάθε» / «μία» has no digit.
+- el-b #14. «2 μήνες» → «2 μηνιαία μισθώματα». Suggested «δύο» drops the 2.
+- el-b #25. «1 εταίρος έχει 1 ψήφο» → «1 έκαστος εταίρος έχει 1 ψήφο» (both 1s kept; Korean is 주주 1인 1표). Suggested «κάθε εταίρος έχει μία ψήφο» drops both 1s. 018 numbers PASS, sourceCount=25 targetCount=25.
+- el-b #31. The lowercase fragment in 015 was made a sentence inside its own block («Άλλο σημαντικό σημείο είναι το εξής.»), and the next block was rephrased in place. The blocks were not merged.
+
+## Systemic patterns
+
+Counts are net occurrences in the column diff (inflected forms), unless noted.
+
+- Head office «κύρια εγκατάσταση» → «κύρια έδρα»: 56. Parent-company liability in 018 → «μητρική»: the FAQ heading, the answer, and the guarantee sentence (the English is the parent, and the article already uses μητρική). 本公司 in 011 and the staffing question in 018 → «έδρα» / «μισθωτοί της έδρας». «μόνιμη/σταθερή εγκατάσταση» (permanent establishment) was left.
+- 營業稅 «φόρος επί των πωλήσεων» → «φόρος επιχειρηματικών συναλλαγών»: 11, in 001, 002 and 004 (including the 004 heading and table header). 011 «ελέγχου επί των πωλήσεων» is control of sales and was left. 營利事業所得稅 stayed the income-tax name.
+- Royalties «δικαιώματα χρήσης» → «αμοιβές δικαιωμάτων»: 7, in 001 and 004.
+- Representative office «κερδοσκοπική δραστηριότητα» → «επιχειρηματική δραστηριότητα»: 4 (001 twice, 018 twice, including the second table cell).
+- 告訴 → έγκληση, and 告訴乃論 → «αδίκημα που διώκεται κατ’ έγκληση»: 11, in 003 and 010. 006 «υποβάλετε μήνυση» has no 告訴 gloss and was left.
+- Currency: the unit follows the figure, «N νέα δολάρια Ταϊβάν (TWD)», with repeated codes collapsed in a list or a range, and an existing 新臺幣 gloss joined as «(TWD, 新臺幣)». 51 amount phrases, in 001, 002, 003, 004, 006, 007, 010, 011, 017 and 018. 008 has no «TWD» token and no 500.000. Figures were not changed. The Greek bio «1,57 εκατ. TWD» was not touched.
+- «ομοιομόρφως» → «αδιακρίτως»: 6, in 014, 017 and 018.
+- French «Δεν είναι επειδή … που» → «Το γεγονός ότι … δεν σημαίνει…»: 4 clauses in 004.
+- 商業 as a business registration → «εμπορική επιχείρηση (商業)» / «εμπορικών επιχειρήσεων»: 001, 015 and 017. The office name 臺北市商業處 («γραφείο εμπορίου») in 015 was left.
+- «ούτε» on each negated item: the guidance home sentence, the second promise sentence, and GUIDANCE_LLMS_NOTICES.el.discoveryNotice (the token `llms.txt` stays). The third guidance sentence already repeats «δεν» and was left.
+- Calques of δρόμος / προσεγγίζω for contact or a means: guidance (title, two «προσεγγίσετε», «δρόμους», «δρόμος μετάδοσης», «δρόμος επικοινωνίας») and the contact links in 005, 013 and 015. Literal streets in 006 and «προσεγγίζει» of a vehicle in 012 were left.
+- Influencers → «διαμορφωτές γνώμης» / «διαμορφωτών γνώμης»: heading and body/FAQ in 011.
+- Kinmen «και … ή» → «ή» (017, including the unglossed criterion line). «8 μονάδες» / «5 μονάδες» → «8 νέα φορτηγά» / «5 νέα φορτηγά». 汽車運輸業 «με φορτηγό» → «με μηχανοκίνητο όχημα». 汽車貨運業 stays freight by truck.
+- Center of life: 007 and 016 «κέντρο ζωής» → «ο τόπος όπου συγκεντρώνεται η ζωή».
+- Lawyers description is the same string in eastern.ts and team.ts: «Προφίλ των δικηγόρων, του νομικού συνεργάτη, του υπευθύνου λειτουργιών και του συνεργαζόμενου λογιστή της Hovering.» The answers pack uses the same three roles.
+- Feminine Wei Tseng was already in place. No masculine form was introduced. 008’s male manager and 010’s male client stay male.
+- 015 `numbers` still WARNs extra 2×2. This diff did not add a 2 there. WARN does not fail the file. summary PASS 18/18.
+
+## Reviewer disagreements (not followed)
+
+- el-a #1 is right about the statute: the URL is flno=3 of the withholding-rate standards, not article 10 of the Business Tax Act. The checker counts the Korean label’s 10, so the visible article number stays 10 and only the statute name was corrected. See Checker override.
+- el-a #34 and el-b #29 are right that the Q16 split and the U+200B lines are hard to read. Promoting those lines or deleting the padding fails the heading-level and ZWSP checks. Not applied. See Skipped.
+- el-a #33 and el-b #14 and #25 are right that a bare digit is not «each» and that «2 μήνες» does not say months of rent. The suggested word-numbers drop a counted digit. The digit stays. See Checker override.
+- el-b #31’s merged paragraph was not applied (block count). The two blocks were repaired separately.
+- 006 «υποβάλετε μήνυση» was not swept into έγκληση. There is no 告訴 gloss, and the English is not the complaint-offence of 003 and 010.
+- 018 «Αρμόζει επομένως καλύτερα» was left. The English is «better suited», not a claim that the firm is the best. The vitest ban on καλύτερ applies to the guidance pack, which was not given that word.
+- 011 «ελέγχου επί των πωλήσεων» was left. It is control of sales, not the business-tax name.
+- 018 «ελεγκτής» for 監察人 was not in this round’s rows. Left.
+- 008 was listed with the TWD-before-digit pattern. The Greek file has neither «TWD» nor 500.000, so there was nothing to reorder.
+
+## §Verify
+
+Commands run from /Users/son7/Projects/tseng-law-fix-el-r2 with PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH, after the last content edit and before this log file existed.
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-el --lang el 2>&1 | tail -8
+```
+
+```
+neighbour      PASS   
+hanzi          PASS   han=27
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-el src/data | wc -l
+```
+
+```
+       0
+```
+
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+
+```
+TSC_OK
+```
+
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+git status --short | wc -l
+```
+
+```
+      28
+```
+
+This log is untracked and was not in that count of 28.
+After this file was written, the same command returned:
+
+```
+      29
+```

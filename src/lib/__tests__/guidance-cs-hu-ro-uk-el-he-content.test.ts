@@ -41,7 +41,7 @@ const LANGUAGE_FAQ_QUESTION: Record<EasternLocale, string> = {
   hu: 'Lehetséges magyar nyelvű tanácsadás?',
   ro: 'Este posibilă o consultanță în limba română?',
   uk: 'Чи можлива консультація українською?',
-  el: 'Είναι δυνατή συμβουλευτική στα ελληνικά;',
+  el: 'Είναι δυνατή η συμβουλευτική στα ελληνικά;',
   he: 'האם אפשר לקבל ייעוץ בעברית?',
 };
 

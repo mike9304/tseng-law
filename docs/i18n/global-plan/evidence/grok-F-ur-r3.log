@@ -1,0 +1,106 @@
+WO-F-ur r3 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-ur-r3
+scope: Urdu columns 001–018, Urdu guidance pack (team / south-asia / offices / answers). Inquiry copy and GUIDANCE_LLMS_NOTICES.ur were not rewritten (no row touched those strings; consultation and confidential notices stay verbatim substrings). No test file changed: nothing in src/lib/__tests__ or src/data/__tests__ pinned the strings that moved.
+
+## Rows applied
+
+ur-a (14 of 18):
+1 P1 007 — Art. 1052(1) ground 4: one spouse abuses the other spouse’s lineal relative, or a lineal relative of one spouse abuses the other spouse; actor and victim must be distinguished. Same list item, not a new block.
+3 P1 001 — link label is the nonresident withholding-rate standard (各類所得扣繳率標準), article 3. URL unchanged. 004 was already labelled correctly.
+4 P2 guidance — “دفتر کے انتظام کی قیادت” → “کوریا کے امور کی قیادت” in the team description, the lawyers-page description, and the lawyers answer. Role line “کوریا کے امور کے منتظم” left.
+5 P2 008 — row label دشواری; cells آسان / مشکل / آسان.
+6 P2 008 — بغیر جائز وجہ (the table cell already said this).
+7 P2 008 — کاروباری حال / آجر کے کاروبار (not انتظام).
+8 P2 009 — the party who prepares in advance is better placed to protect its rights; “یہ نتیجے کا وعدہ نہیں” kept.
+9 P2 guidance — “وکیلہ Wei Tseng نے جانچا” (feminine title kept; with نے the verb is masculine default).
+11 P2 team practice name — “تائیوان میں سرمایہ کاری کی قانونی صلاح”.
+12 P2 privacy — “ترسیل کا کوئی راستہ اور ذخیرے کی کوئی جگہ”. Disclosure sentence still denies full security.
+13 P2 pricing — word order “وہ ترتیب، آپ کی مانگ اور مہلتیں جتنا واضح بتائے”.
+14 P2 offices — “نقشے کا پیش نظارہ”.
+15 P2 003 — the attached-civil route does not promise a cost-free result.
+16 P2 006 — Korea-only note is its own sentence; the three-year penalty attaches with “اسے”. Two existing lines kept (not merged).
+
+ur-b (26 of 27):
+1 P1 011 — the agreement states which records are handed over, how, and whether access survives.
+2 P2 010 — the two-year period runs from the injured person’s knowledge of both the damage and the person liable.
+3 P2 011 — a dominant advertising message is not necessarily cured by a small-print disclaimer.
+4 P2 011 — ناپسندیدہ واقعات (adverse events), same sentence as row 23.
+5 P2 013 — “کہا کہ” so the next existing paragraph is what the bank employee said. Paragraphs not merged (English is also two blocks).
+6 P2 013 — company registration may not be possible (رہ سکتا), not “becomes impossible”.
+7 P2 014 — two alternative statutory grounds (متبادل), not optional remarks.
+8 P2 016 — siblings (兄弟姊妹) and paternal and maternal grandparents (دادا دادی و نانا نانی، 祖父母).
+9 P2 016 — third-party rights, and security interests (رہن یا گروی جیسے وثیقے), kept distinct from ضمانتی قرضے.
+10 P2 017 — a truck no more than two years old (جس کی عمر 2 سال سے زیادہ نہ ہو). FAQ, the repeated body paragraph, and section 2.
+11 P2 010 — صارف کا ورزشی تجربہ.
+12 P2 010 — عنوانات plural.
+13 P2 010 — طریقوں کی.
+14 P2 011 — ہر طریقے کا اطلاق.
+15 P2 011 — ضوابط … رکھتے ہیں.
+16 P2 011 — دونوں چیک کرنے چاہییں; جگہ کا (استثنا is masculine).
+17 P2 012 — Vehicle 2’s lane change, the road layout, and the other evidence are finite (“دیکھے گئے”), still one paragraph.
+19 P2 015 — closing quotation mark sits on the link; the Chinese gloss follows. URL unchanged.
+20 P2 016 — فوتگی سے پہلے اور بعد (see sweep).
+21 P2 011 — اردگرد کا سیاق; overall impression on the consumer.
+22 P2 011 — برانڈ کس حد تک شامل ہے.
+23 P2 011 — متاثر کرتے ہیں (see sweep).
+24 P2 013 — the fragment is now a complete sentence inside the same paragraph: the window also covers the preparatory account and the remittance. Not merged with the previous paragraph.
+25 P2 014 — the line between the two kinds of training does not depend only on place or on who delivered it.
+26 P2 014 — the reader checks the repayment factors in order; the question is no longer the subject of چیک کرے۔
+27 P2 016 — conduct that may affect the liability cap (متاثر کر سکتے ہیں), not circumstances that touch it.
+
+## Rows skipped
+
+ur-a 2 P1 — do not restore “courts generally impose about 3 / 4 / 6 months”. RULEBOOK R3 and ACCEPTED-ROUND forbid making that result sentence positive. The two sentences in 003 already say some judgments imposed those terms and that there is no typical or guaranteed outcome (“یہ نہ عام سزا ہے نہ یقینی نتیجہ” / “اس میں بھی نہ عام سزا ہے نہ یقینی نتیجہ”).
+ur-a 10 P2 — not applied. The file already has “بنیاد بنتے۔” and, in 016, “مالک نہیں بنتے۔”. That is the verb بنتے plus the Urdu full stop ۔. The review quote dropped ے, so it read as the noun بنت (“daughter”). The verb is present. See “reviewer got wrong”.
+ur-a 17 P2 — “TWD 1.57M” kept byte-identical (a test pins it). The suggested “TWD 15,70,000” is also lakh grouping.
+ur-a 18 P2 — lakh/crore grouping not applied (R14 and ACCEPTED-ROUND; the checker does not parse 30,00,000). Western commas kept in 001, 002, 003, 004.
+ur-b 18 P2 — U+200B not deleted. The checker requires the target ZWSP count to match the Korean source, and a line whose only character is U+200B is a non-empty block. Deleting them fails blocks. 013 and 015 (and the other columns that inherited the same source spaces) left as they are.
+
+## Systemic patterns
+
+- Korea lead flattened to office management (“دفتر کے انتظام کی قیادت”): 3 changed (team description, lawyers description, lawyers answer).
+- With نے the verb agrees with Wei Tseng: 1 changed (columnsReviewLabel جانچی → جانچا). Sweep: the only other first-person نے in the columns is 008 “میں نے نمٹایا”, which already agrees with the masculine object. Left.
+- Bare بنت where a verb is required: 0 changed. The quoted 002 form and the two 016 “نہیں بنتے۔” forms are already بنتے. See skipped ur-a 10.
+- Usual court result rewritten as a denial: 0 changed. Both 003 sentences left in the R3 form. See skipped ur-a 2.
+- Amounts at or above one lakh, and “TWD 1.57M”: 0 changed. See skipped ur-a 17 and 18.
+- U+200B in 013 and 015: 0 changed. See skipped ur-b 18.
+- Stacked izafat (“X کا Y کا”): 1 changed (010 صارف کا ورزش کا تجربہ). A sweep of that pattern in 010 found no second hit.
+- چھونا standing in for “affect”: 2 changed (011 موجودہ جائزے کو چھوتے ہیں; 016 حد چھونے والے حالات). Left alone: چھوٹنا “miss”, چھوڑنا “omit”, چھوٹی تحریر as a word (the small-print sentence was rewritten under row ur-b 3, not by swapping چھونا).
+- ضمانت covering a security interest as well as a personal guarantee: 6 changed — 016 third-party rights sentence, 016 ضمانت کے حقوق (ضمانتی قرضے kept beside it), 016 “creation of security” (ضمانت دینا → رہن یا گروی قائم کرنا), 017 بیمہ، ضمانت in the FAQ and the repeated body paragraph, 017 due-diligence liens (ضمانت کے حقوق). Left as guarantee or warranty: 016 loan-and-guarantee documents, 017 اقرار و ضمانت (representations and warranties), 018 parent-company guarantee, 002 ضمانتیں / ضمانتی حق.
+- Sentence fragment as its own paragraph (013): 1 rephrased into a full sentence; block not merged.
+- “پہلے بعد” without اور: 3 changed (010 حادثے سے پہلے اور بعد; 011 استعمال سے پہلے اور بعد کی تصویر; 016 فوتگی سے پہلے اور بعد).
+
+R2–R10 were already in the Urdu pack (consultation languages stay English / Chinese / Japanese / Korean, no interpreter, no reply-time, no free first meeting; Wei Tseng stays feminine; Traditional Chinese glosses kept). No further R2–R10 hits turned up beyond the rows above. No test expected-string needed updating.
+
+## §Verify
+
+```
+hanzi          PASS   han=57
+numbers        WARN   extra in translation (14): 1×14
+                      sourceCount=25 targetCount=39
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      21
+```
+
+The numbers WARN in that tail is the checker’s per-file warning on the last file (018, not edited here). Summary is PASS 18/18. No digit was added or removed. `git status --short | wc -l` was 21 before this log file existed (it includes the pre-existing WO-F-ur.txt modification and the untracked r3 review files). This log is an additional untracked path.
+
+## Reviewer got wrong (not applied)
+
+- ur-a 2: the English does say courts generally impose about 3, 4, and 6 months, but R3 already replaced that with “in some judgments … there is no typical or guaranteed outcome”. Restoring “عام طور پر” would put the result sentence back.
+- ur-a 10: “بنیاد بنت۔” is not in the file. The text is “بنیاد بنتے۔” (بنتے + ۔). Same for 016 “حقیقی مالک نہیں بنتے۔”. The verb was not missing.
+- ur-a 17 and 18: a Pakistan reader would use lakh grouping, and 1.57M is an English abbreviation, but the checker does not parse lakh grouping and a test pins the bytes “TWD 1.57M”.
+- ur-b 18: the zero-width spaces are real, and they match the Korean source block-for-block. Removing them fails the checker. The sentence before the space in 013 was left as written.
+- ur-b 5 and 24 asked to fold the following paragraph into the broken sentence. That would merge blocks. The quote and the one-year window were repaired inside the existing paragraphs instead.

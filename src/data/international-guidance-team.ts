@@ -912,7 +912,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ٹیم',
     title: 'Hovering کی بین الاقوامی ٹیم',
     description:
-      'Hovering کے وکلا، دفتر کے انتظام کی قیادت اور شراکت دار سرٹیفائیڈ پبلک اکاؤنٹنٹ کی پروفائلز۔',
+      'Hovering کے وکلا، کوریا کے امور کی قیادت اور شراکت دار سرٹیفائیڈ پبلک اکاؤنٹنٹ کی پروفائلز۔',
     representativeTitle: 'منتظمہ وکیلہ',
     teamTitle: 'وکلا اور عملہ',
     partnerTitle: 'شراکت دار، سرٹیفائیڈ پبلک اکاؤنٹنٹ',
@@ -1689,7 +1689,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
   },
   ur: {
     'Taiwan company setup': 'تائیوان میں کمپنی کا قیام',
-    'Taiwan investment counsel': 'تائیوان سرمایہ کاری کی قانونی صلاح',
+    'Taiwan investment counsel': 'تائیوان میں سرمایہ کاری کی قانونی صلاح',
     'Civil litigation and damages': 'دیوانی مقدمے اور تلافی',
     'Trademark and patent filings': 'تجارتی علامت اور پیٹنٹ کی درخواستیں',
     'Visa and residency': 'ویزا اور رہائش',

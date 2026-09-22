@@ -41,17 +41,17 @@ Názvy tlačových správ, internetových príspevkov a právnych komentárov k 
 
 [Vysokoškolský študent, prasknutie medzistavcovej platničky po mŕtvom ťahu 90 kg… žiada náhradu škody od posilňovne](https://news.ebc.net.tw/news/living/362075)
 
-![Príspevok na PTT: kórejský vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu 90 kg… v 1. inštancii príkaz posilňovni zaplatiť 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Príspevok na PTT: kórejský vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu 90 kg… súd 1. inštancie uložil posilňovni zaplatiť 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Príspevok na PTT: kórejský vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu 90 kg… v 1. inštancii príkaz posilňovni zaplatiť 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Príspevok na PTT: kórejský vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu 90 kg… súd 1. inštancie uložil posilňovni zaplatiť 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
 ![Blog: úraz mŕtvym ťahom 90 kg u kórejského vysokoškolského študenta o hmotnosti 70 kg a náhrada cez 1.000.000 TWD… bola vina posilňovne? Aké je zmýšľanie (心態) osoby, ktorá cvičí?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
 [Blog: úraz mŕtvym ťahom 90 kg u kórejského vysokoškolského študenta o hmotnosti 70 kg a náhrada cez 1.000.000 TWD… bola vina posilňovne? Aké je zmýšľanie (心態) osoby, ktorá cvičí?](https://blog.udn.com/blackjack/179081715)
 
-![Právny komentár: vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu… v 1. inštancii príkaz známej posilňovni zaplatiť 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Právny komentár: vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu… súd 1. inštancie uložil známej posilňovni zaplatiť 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Právny komentár: vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu… v 1. inštancii príkaz známej posilňovni zaplatiť 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Právny komentár: vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu… súd 1. inštancie uložil známej posilňovni zaplatiť 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Čítanie rozsudku: vec akútneho prasknutia medzistavcovej platničky potom, čo začiatočník v posilňovni dostal pokyn na mŕtvy ťah 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
@@ -85,7 +85,7 @@ Ak však prichádza do úvahy ďalší dôvod nároku, ako zmluvná zodpovednos�
 
 Aby bolo možné vysvetliť zodpovednosť, príčinnú súvislosť a škodu, je vhodné zhromaždiť spoločne nielen snímky CCTV (監視器影像) z okamihu nehody, ale aj zdravotnú dokumentáciu (病歷) a lekárske osvedčenie (診斷證明書), stvrdenky za liečebné výdavky (醫療費用), dopravu k lekárovi (就醫交通費) a ošetrovateľskú starostlivosť (看護費用), správy vymenené s posilňovňou a trénerom, vyhlásenia svedkov, rezerváciu lekcií a evidenciu dochádzky, plán cvičenia a záznam tréningu. Je vhodné v možnom rozsahu odfotografovať poranenú časť tela a v možnom rozsahu aj stav miesta nehody a usporiadať podľa dátumu priebeh pred nehodou a po nej i obsah komunikácie, aby neskôr bolo ľahšie dokumenty porovnať.
 
-Zábery môžu byť po uplynutí doby uchovania prepísané novým záznamom (影像可能被覆蓋) alebo sa z iných dôvodov stať nepoužiteľnými. Možno preto zvážiť žiadosť posilňovni o zachovanie prostredníctvom listu s potvrdením obsahu (存證信函) alebo listu advokátky (律師函), ktorá konkrétne zaznamená potrebný časový úsek, miesto a polohu kamery. Táto písomnosť je praktickým opatrením na zaznamenanie toho, čo a kedy bolo žiadané. Sama osebe však protistrane neukladá novú právnu povinnosť snímky zachovať ani nebráni ich vymazaniu a samotná okolnosť, že snímky nezostali, súd z toho automaticky nevyvodzuje nepriaznivý záver.
+Zábery môžu byť po uplynutí doby uchovania prepísané novým záznamom (影像可能被覆蓋) alebo sa z iných dôvodov stať nepoužiteľnými. Možno preto zvážiť žiadosť posilňovni o zachovanie prostredníctvom listu s potvrdením obsahu (存證信函) alebo listu advokátky (律師函), ktorý konkrétne zaznamená potrebný časový úsek, miesto a polohu kamery. Táto písomnosť je praktickým opatrením na zaznamenanie toho, čo a kedy bolo žiadané. Sama osebe však protistrane neukladá novú právnu povinnosť snímky zachovať ani nebráni ich vymazaniu a samotná okolnosť, že snímky nezostali, súd z toho automaticky nevyvodzuje nepriaznivý záver.
 
 Ak okolnosti nehody môžu naplniť znaky trestného činu, možno rýchlo podať oznámenie, aby vyšetrovací orgán (偵查機關) posúdil, či existuje zákonný základ zaistenia alebo zachovania. Oznámenie neznamená, že polícia alebo prokuratúra nutne zaistí CCTV, preto treba tiež zhromaždiť dokumenty, ktoré strana môže zachovať sama, ako zdravotné a komunikačné podklady.
 
@@ -96,7 +96,7 @@ Položky škody, ktorých uplatnenie možno posúdiť, sú nasledujúce. Skutoč
 1. **Liečebné výdavky**: Výdavky skutočne vynaložené na konzultáciu, vyšetrenie, liečbu, liečivá a rehabilitáciu sa preukazujú stvrdenkami a zdravotnou dokumentáciou.
 2. **Náklady na ošetrovanie alebo starostlivosť**: Či bola s ohľadom na stupeň úrazu a priebeh liečby starostlivosť nutná a či sú doba a náklady primerané, sa posudzuje zdravotnými a výdavkovými podkladmi.
 3. **Cestovné**: Výdavky nutné na dochádzanie do zdravotníckeho zariadenia kvôli liečbe sa preukazujú evidenciou presunov, stvrdenkami a podobnými dokladmi.
-4. **Škoda zo straty pracovnej schopnosti (勞動能力減損)**: Ak sú uznané následky a trvalé zníženie pracovnej schopnosti, možno hodnotiť spoločne podľa lekárskych a profesijných podkladov, stupňa postihnutia, povolania a príjmu a zostávajúceho obdobia, počas ktorého by ešte mohol zárobkovo pracovať. Samotné percento postihnutia náhradu neurčuje a strata sa nepočíta automaticky až do okamihu odchodu do dôchodku.
+4. **Strata pracovnej schopnosti (勞動能力減損)**: Ak sú uznané následky a trvalé zníženie pracovnej schopnosti, možno hodnotiť spoločne podľa lekárskych a profesijných podkladov, stupňa postihnutia, povolania a príjmu a zostávajúceho obdobia, počas ktorého by ešte mohol zárobkovo pracovať. Samotné percento postihnutia náhradu neurčuje a strata sa nepočíta automaticky až do okamihu odchodu do dôchodku.
 5. **Ušlý príjem v dobe zotavenia (收入損失)**: Dobu, počas ktorej skutočne nebolo možné pracovať kvôli liečbe alebo rekonvalescencii, a z toho vyplývajúce zníženie príjmu treba preukázať mzdovými, daňovými a dochádzkovými podkladmi.
 6. **Nemajetková ujma (非財產上損害)**: Sumu za duševné útrapy stanoví súd podľa prvkov každej veci, ako je stupeň úrazu, doba liečby, následky a konkrétne okolnosti strany.
 7. **Sankčná náhrada škody (懲罰性賠償金)**: Existuje pravidlo, podľa ktorého v konaní, na ktoré sa vzťahuje zákon o ochrane spotrebiteľa, možno, ak škoda vznikla úmyslom podniku, žiadať až 5-násobok skutočnej škody; pri hrubej nedbanlivosti až 3-násobok; a pri nedbanlivosti najviac do výšky skutočnej škody. Či sa [článok 51 taiwanského zákona o ochrane spotrebiteľa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na vec vzťahuje a či a v akej výške je skutočná náhrada, závisí od posúdenia súdu ohľadom konkrétnych predpokladov a dôkazov.

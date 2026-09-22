@@ -1,5 +1,5 @@
 ---
-title: "Zahraničné podniky súčiastok polovodičov, ktoré vstupujú na Taiwan: ako posúdiť dcérsku spoločnosť, pobočku alebo zástupcu"
+title: "Zahraničné podniky v odbore polovodičových súčiastok, ktoré vstupujú na Taiwan: ako posúdiť dcérsku spoločnosť, pobočku alebo zástupcu"
 lastmod: "2026-09-17"
 date_display: "17. septembra 2026"
 read_time: "8 min čítania"
@@ -15,7 +15,7 @@ faq:
     a: "Postupný prechod možno navrhnúť, avšak treba tiež posúdiť skončenie alebo zmenu existujúcich zmlúv, zmluvy so zákazníkmi, zásoby, vybavovanie reklamácií a personál."
 ---
 
-# Zahraničné podniky súčiastok polovodičov, ktoré vstupujú na Taiwan: ako posúdiť dcérsku spoločnosť, pobočku alebo zástupcu
+# Zahraničné podniky v odbore polovodičových súčiastok, ktoré vstupujú na Taiwan: ako posúdiť dcérsku spoločnosť, pobočku alebo zástupcu
 
 ![Snímka k posúdeniu štruktúry vstupu podniku polovodičov na Taiwan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
@@ -23,7 +23,7 @@ Keď začnú obchody s taiwanskými zákazníkmi, môže zahraničné ústredie 
 
 Najprv treba vyjasniť, kto na Taiwane čo obstaráva. Štruktúra na posúdenie sa mení podľa toho, či zahraničné ústredie naďalej uzatvára kúpne zmluvy, či taiwanská spoločnosť tovar nakupuje a ďalej predáva, alebo či miestny personál poskytuje len technickú podporu.
 
-Tento text je všeobecným výkladom pre zahraničné podniky materiálov, súčiastok a zariadení polovodičov, ktoré navrhujú štruktúru vstupu na Taiwan. Nasledujúce prevádzkové situácie a kontrolné body sú hypotetické príklady a návrhy na posúdenie, nie skutočný mandát konkrétneho podniku ani jednotná požiadavka založenia. Dane, kontrola vývozu, povolenia podľa výrobku a zaradenie investora vyžadujú ešte samostatný rozbor.
+Tento text je všeobecným výkladom pre zahraničné podniky v odbore polovodičových materiálov, súčiastok a zariadení, ktoré navrhujú štruktúru vstupu na Taiwan. Nasledujúce prevádzkové situácie a kontrolné body sú hypotetické príklady a návrhy na posúdenie, nie skutočný mandát konkrétneho podniku ani jednotná požiadavka založenia. Dane, kontrola vývozu, povolenia podľa výrobku a zaradenie investora vyžadujú ešte samostatný rozbor.
 
 ## 1. Pred voľbou formy zápisu treba najprv usporiadať „rozdelenie obchodu a prevádzky“
 
@@ -61,11 +61,11 @@ Ak ste sa rozhodli zriadiť na Taiwane samostatnú právnickú osobu, treba zvol
 
 ### Spoločnosť s ručením obmedzeným: správa je jednoduchšia, prevod podielov je však relatívne uzavretý
 
-Možno ju vytvoriť s 1 alebo viacerými fyzickými osobami, alebo s taiwanskými či zahraničnými právnickými osobami ako spoločníkmi (股東); spoločníci zásadne ručia do výšky vkladu. Konatelia sú 1 až 3 a volia sa zo spoločníkov. Spoločníci, ktorí nevykonávajú činnosť, môžu vykonávať právo nahliadania, bez toho, aby bolo treba osobitný dozorný orgán (監察人). Ak nie je v stanovách inak, má 1 spoločník 1 hlas, takže ovládanie sa nemusí zhodovať s pomerom vkladov. Prevod vkladu bežného spoločníka zásadne vyžaduje súhlas viac než polovice hlasovacích práv ostatných; u konateľa treba 2/3 alebo viac. Preto sa lepšie hodí k jednoduchým vzťahom spoločníkov a stálemu ovládaniu než k častému získavaniu kapitálu alebo obchodovaniu s podielmi. Neskôr ju možno previesť na akciovú spoločnosť.
+Možno ju vytvoriť s 1 alebo viacerými fyzickými osobami, alebo s taiwanskými či zahraničnými právnickými osobami ako spoločníkmi (股東); spoločníci zásadne ručia do výšky vkladu. Konatelia sú 1 až 3 a volia sa zo spoločníkov. Spoločníci, ktorí nevykonávajú činnosť, môžu vykonávať právo nahliadania, bez toho, aby bolo treba osobitný dozorný orgán (監察人). Ak nie je v stanovách inak, má 1 spoločník 1 hlas, takže ovládanie sa nemusí zhodovať s pomerom vkladov. Prevod vkladu bežného spoločníka zásadne vyžaduje súhlas viac než polovice hlasovacích práv ostatných; u konateľa treba súhlas 2/3 alebo viac hlasovacích práv ostatných spoločníkov. Preto sa lepšie hodí k jednoduchým vzťahom spoločníkov a stálemu ovládaniu než k častému získavaniu kapitálu alebo obchodovaniu s podielmi. Neskôr ju možno previesť na akciovú spoločnosť.
 
 ### Akciová spoločnosť: vhodná, ak sa majú pribrať iní investori alebo sa zvažuje kótovanie
 
-Kapitál sa delí na akcie. Zásadne sú potrební 2 alebo viacerí akcionári (股東), avšak štát alebo právnická osoba ju môžu založiť sami a zahraničná právnická osoba môže držať 100 %. Akcie sú zásadne voľne prevoditeľné, so zákonnými výnimkami; podľa predpisov možno navrhnúť druhové akcie, opcie zamestnancov a podobne. Preto sa hodí podnikom, ktoré očakávajú investorov, obchody s podielmi, akciové odmeny zamestnancov alebo budúcu fúziu, akvizíciu, kótovanie alebo zápis do režimu vznikajúcich akcií (興櫃); neobmedzuje sa len na veľké podniky. V správe môže nekótovaná spoločnosť stanovami nezriaďovať predstavenstvo a mať len 1 alebo 2 riaditeľov. Spoločnosť s jediným štátnym alebo právnickým akcionárom môže stanovami nezriaďovať dozorný orgán (監察人). Takisto nemusí každá akciová spoločnosť nechať overiť ročnú účtovnú závierku. Hlavné prahy auditu bežnej spoločnosti sú splatený kapitál 30.000.000 TWD, alebo i pod touto hranicou prevádzkový príjem 100.000.000 TWD alebo 100 zamestnancov prihlásených v poistení pracovníkov (勞工保險); spoločnosti, ktoré uskutočnili verejnú emisiu akcií (公開發行公司), sa riadia predpismi o cenných papieroch.
+Kapitál sa delí na akcie. Zásadne sú potrební 2 alebo viacerí akcionári (股東), avšak štát alebo právnická osoba ju môže založiť aj samostatne a zahraničná právnická osoba môže držať 100 %. Akcie sú zásadne voľne prevoditeľné, so zákonnými výnimkami; podľa predpisov možno navrhnúť druhové akcie, opcie zamestnancov a podobne. Preto sa hodí podnikom, ktoré očakávajú investorov, obchody s podielmi, akciové odmeny zamestnancov alebo budúcu fúziu, akvizíciu, kótovanie alebo zápis do režimu vznikajúcich akcií (興櫃); neobmedzuje sa len na veľké podniky. V správe môže nekótovaná spoločnosť stanovami nezriaďovať predstavenstvo a mať len 1 alebo 2 riaditeľov. Spoločnosť s jediným štátnym alebo právnickým akcionárom môže stanovami nezriaďovať dozorný orgán (監察人). Takisto nemusí každá akciová spoločnosť nechať overiť ročnú účtovnú závierku. Hlavné prahy auditu bežnej spoločnosti sú splatený kapitál 30.000.000 TWD, alebo i pod touto hranicou prevádzkový príjem 100.000.000 TWD alebo 100 zamestnancov prihlásených v poistení pracovníkov (勞工保險); spoločnosti, ktoré uskutočnili verejnú emisiu akcií (公開發行公司), sa riadia predpismi o cenných papieroch.
 
 ## 4. Postupy pobočky a dcérskej spoločnosti sa líšia; iba dcérska spoločnosť prechádza preskúmaním investičného odboru Ministerstva hospodárstva
 

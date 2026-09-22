@@ -13,7 +13,7 @@ faq:
   - q: "Považuje sa školenie nováčikov alebo zákonne povinné školenie za špecializované technické školenie?"
     a: "Podľa pokynu taiwanského Ministerstva práce (勞動部) z 5. 6. 2026 nemožno náklady pravidelného školenia, všeobecného školenia k miestu, adaptačného školenia nováčikov a školenia, ktoré zákon ukladá vykonať, vziať za základ dohody o minimálnej dobe trvania pracovného pomeru ani žiadosti o zmluvnú pokutu (違約金) alebo vrátenie nákladov. Nemožno hľadieť len na názov školenia, ale na konkrétny program, odborný a technický obsah, dobu, náklady skutočne nesené zamestnávateľom a doklady."
   - q: "Pri predčasnom odchode treba vrátiť celú podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金)?"
-    a: "Nie vždy sa vracia celá suma. Ak bola podpisová prémia, prémia za zotrvanie alebo iné plnenie poskytnuté vopred (預付性給付) vyplatené ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru, musí byť jeho účel pracovníkovi jasne oznámený. Pokyn taiwanského Ministerstva práce z 5. 6. 2026 vysvetľuje, že pri odchode pred uplynutím doby sa suma na vrátenie musí vypočítať v pomere k ešte nesplnenej dobe a že nemožno žiadať vrátenie celej sumy. Skutočný záver musí spoločne posúdiť účel výplaty, obsah dohody, už odpracovanú dobu a dôvod skončenia."
+    a: "Nie vždy sa vracia celá suma. Ak bola podpisová prémia, prémia za zotrvanie alebo iné plnenie poskytnuté vopred (預付性給付) vyplatené ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru, musí byť jeho účel pracovníkovi jasne oznámený. Pokyn taiwanského Ministerstva práce z 5. 6. 2026 vysvetľuje, že pri odchode pred uplynutím doby sa suma na vrátenie musí vypočítať v pomere k ešte nesplnenej dobe a že nemožno žiadať vrátenie celej sumy. Skutočný záver treba vyvodiť spoločným posúdením účelu výplaty, obsahu dohody, už odpracovanej doby a dôvodu skončenia."
   - q: "Ak zmluva skončí predčasne z dôvodu, ktorý nemožno pričítať pracovníkovi, treba vrátiť náklady na školenie?"
     a: "Článok 15-1 odsek 4 taiwanského zákona o pracovných normách stanoví, že ak pracovná zmluva skončí pred koncom minimálnej doby trvania pracovného pomeru z dôvodu, ktorý nemožno pričítať pracovníkovi, pracovník nenesie zodpovednosť za porušenie dohody o minimálnej dobe trvania pracovného pomeru ani za vrátenie nákladov na školenie. Dôvod skončenia a pričítanie zodpovednosti sa však musia posúdiť z konkrétnych dôkazov, ako je oznámenie o prepustení, výpoveď a podklady o porušení pracovných podmienok."
 ---
@@ -26,10 +26,10 @@ Dohoda o minimálnej dobe trvania pracovného pomeru (最低服務年限約定) 
 
 Pri preskúmaní je dôležité nezmiešavať nasledujúce štyri otázky.
 
-1. Či dohoda sama spĺňa zákonné predpoklady článku 15-1
-2. Či dohodnutá doba a bremeno pracovníka sú v primeranom rozsahu
-3. Komu sa pričíta dôvod skončenia pracovnej zmluvy
-4. Ako sa posudzujú výpoveď a rozsah vrátenia
+1. Spĺňa dohoda sama zákonné predpoklady článku 15-1?
+2. Sú dohodnutá doba a bremeno pracovníka v primeranom rozsahu?
+3. Komu sa pričíta dôvod skončenia pracovnej zmluvy?
+4. Ako sa posudzujú výpoveď a rozsah vrátenia?
 
 Aj keď tieto štyri otázky figurujú spoločne v tej istej zmluve, uplatniteľné ustanovenie a potrebný dôkaz sú odlišné. Preto treba osobitne posúdiť, či je dohoda platná, kedy nadobúda účinky výpoveď, či existuje zodpovednosť vrátiť plnenie poskytnuté vopred (預付性給付) alebo náklady na školenie a či skutočne vznikla osobitne uplatňovaná škoda.
 
@@ -55,7 +55,7 @@ Program, kalendár školenia, prezenčná listina, výsledok hodnotenia, osvedč
 
 Hranica medzi všeobecnou adaptáciou na prácu a špecializovaným technickým školením nezávisí len od miesta školenia ani od toho, kto školenie vedie. Vnútorný kurz môže preukázať konkrétny odborný a technický obsah a značnú investíciu a dlhý kurz vonkajšieho zariadenia môže byť v skutočnosti všeobecným úvodným školením. Preto nemožno jednotne vylúčiť všetko vnútorné školenie ani uznať zákonný predpoklad len preto, že kurz je drahý alebo dlhý.
 
-Treba tiež vedieť vysvetliť vzťah medzi dohodnutou dobou a investíciou do školenia. Aká spôsobilosť sa nadobúda, ako táto spôsobilosť súvisí s miestom, na ktorom sa má uplatniť a prečo je navrhnutá doba trvania pracovného pomeru potrebná voči dobe a nákladom školenia, sa posudzuje jednotlivo. To, či pracovník po skončení školenia túto prácu skutočne vykonával, a dĺžka už odpracovanej doby tiež ovplyvňujú posúdenie rozsahu bremena.
+Treba tiež vedieť vysvetliť vzťah medzi dohodnutou dobou a investíciou do školenia. Aká spôsobilosť sa nadobúda, ako táto spôsobilosť súvisí s miestom, na ktorom sa má uplatniť, a prečo je navrhnutá doba trvania pracovného pomeru potrebná vzhľadom na dobu a náklady školenia, sa posudzuje jednotlivo. To, či pracovník po skončení školenia túto prácu skutočne vykonával, a dĺžka už odpracovanej doby tiež ovplyvňujú posúdenie rozsahu bremena.
 
 ## 3. Druhý zákonný predpoklad: primeraná náhrada
 
@@ -92,7 +92,7 @@ Nakoniec treba zrozumiteľný pomer medzi dohodnutou dobou, skutočnou investíc
 
 Podľa pokynu taiwanského Ministerstva práce z 5. 6. 2026 nemožno náklady pravidelného školenia, všeobecného školenia k miestu, adaptačného školenia nováčikov a školenia, ktoré zákon ukladá vykonať, vziať za základ dohody o minimálnej dobe trvania pracovného pomeru ani žiadosti o zmluvnú pokutu alebo vrátenie nákladov. Nemožno hľadieť len na názov školenia, ale na konkrétny program, odborný a technický obsah, dobu, náklady skutočne nesené zamestnávateľom a doklady.
 
-Pokyn 勞動關2字第1150141814號 Ministerstva práce rozlišuje a upravuje školenie, ktoré sa vykonáva pravidelne, obvyklé školenie k miestu, školenie, aby sa nováčik zoznámil s prostredím a postupmi práce, a školenie, ktoré zamestnávateľ musí vykonať podľa zákona. Pretože toto školenie sprevádza prevádzku činnosti alebo plnenie zákonnej povinnosti, zmyslom je, že jeho náklady nemožno previesť na základ povinnosti zotrvať alebo sankcie za predčasné skončenie.
+Pokyn 勞動關2字第1150141814號 Ministerstva práce rozlišuje a upravuje školenie, ktoré sa vykonáva pravidelne, obvyklé školenie k miestu, školenie, aby sa nováčik zoznámil s prostredím a postupmi práce, a školenie, ktoré zamestnávateľ musí vykonať podľa zákona. Pretože toto školenie sprevádza prevádzku podniku alebo plnenie zákonnej povinnosti, jeho náklady nemožno urobiť základom povinnosti zotrvať ani sankcie za predčasné skončenie.
 
 Kurzy, ktoré nový zamestnanec zvyčajne obdrží, ako výklad pracovného poriadku (工作規則), predstavenie organizácie a systémov, obvyklé odovzdanie miesta a návod k základným bezpečnostným postupom, treba potvrdiť v ich podstate. Všeobecné náklady náboru a riadenia alebo náklady odovzdania miesta, ktoré mal zamestnávateľ pôvodne niesť, nemožno stanoviť ako predmet vrátenia pouhým označením za osobitnú investíciu.
 
@@ -102,7 +102,7 @@ V praxi sa nehľadí len na obálku školiacich materiálov, ale porovnáva sa p
 
 ## 6. Vrátenie prémií a predčasný odchod
 
-Nie vždy sa vracia celá suma. Ak bola podpisová prémia, prémia za zotrvanie alebo iné plnenie poskytnuté vopred vyplatené ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru, musí byť jeho účel pracovníkovi jasne oznámený. Pokyn taiwanského Ministerstva práce z 5. 6. 2026 vysvetľuje, že pri odchode pred uplynutím doby sa suma na vrátenie musí vypočítať v pomere k ešte nesplnenej dobe a že nemožno žiadať vrátenie celej sumy. Skutočný záver musí spoločne posúdiť účel výplaty, obsah dohody, už odpracovanú dobu a dôvod skončenia.
+Nie vždy sa vracia celá suma. Ak bola podpisová prémia, prémia za zotrvanie alebo iné plnenie poskytnuté vopred vyplatené ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru, musí byť jeho účel pracovníkovi jasne oznámený. Pokyn taiwanského Ministerstva práce z 5. 6. 2026 vysvetľuje, že pri odchode pred uplynutím doby sa suma na vrátenie musí vypočítať v pomere k ešte nesplnenej dobe a že nemožno žiadať vrátenie celej sumy. Skutočný záver treba vyvodiť spoločným posúdením účelu výplaty, obsahu dohody, už odpracovanej doby a dôvodu skončenia.
 
 Oznámenie sa nemá prvýkrát predložiť, až keď po výplate vznikne spor. Pracovník musí v okamihu uzatvorenia zmluvy a prijatia výplaty vedieť, ktorá suma je náhradou za sľub minimálnej doby trvania pracovného pomeru, aká je dohodnutá doba ako celok, kedy nadobúda nárok a podľa akého vzorca sa vyrovnáva, ak skončenie nastane v priebehu.
 

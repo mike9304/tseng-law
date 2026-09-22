@@ -30,9 +30,9 @@ Tento článok rozlišuje tri situácie: novo založiť nákladnú automobilovú
 
 ## 1. Rozsah logistickej činnosti a nákladnej automobilovej dopravy (汽車貨運業)
 
-Povolenie nákladnej automobilovej dopravy nie je potrebné vždy. „Logistika“ je široký praktický pojem; potreba povolenia sa neurčuje len podľa názvu spoločnosti alebo odvetví zapísaných v registri. Ak spoločnosť prijíma odplatu a prepravuje cudzí náklad nákladným automobilom, môže táto činnosť tvoriť nákladnú automobilovú dopravu. Naproti tomu skladovanie, balenie, prevádzka systémov, odoslanie v postavení odosielateľa (貨主), sprostredkovanie prepravy a obdobné činnosti treba posúdiť jednotlivo podľa zmluvného vzťahu, prepravnej zodpovednosti, obsahu odplaty a skutočného stavu prevádzky vozidiel.
+Povolenie nákladnej automobilovej dopravy nie je potrebné vždy. „Logistika“ je široký praktický pojem; potreba povolenia sa neurčuje len podľa názvu spoločnosti alebo odvetví zapísaných v registri. Ak spoločnosť prijíma odplatu a prepravuje cudzí náklad nákladným automobilom, môže táto činnosť tvoriť nákladnú automobilovú dopravu. Naproti tomu skladovanie, balenie, prevádzka systémov, odoslanie v postavení odosielateľa (貨主), zasielateľstvo (運送承攬) alebo iné sprostredkovanie prepravy a obdobné činnosti treba posúdiť jednotlivo podľa zmluvného vzťahu, prepravnej zodpovednosti, obsahu odplaty a skutočného stavu prevádzky vozidiel.
 
-Taiwanský zákon o cestách (公路法) upravuje automobilovú dopravnú činnosť (汽車運輸業) ako činnosť, ktorá za odplatu prepravuje cestujúcich alebo náklad automobilom. Spoločnosť sa preto nestáva ihneď nákladnou automobilovou dopravou len preto, že poskytuje logistickú službu v širšom zmysle. Naopak, aj keď bola zmluva spísaná ako sprostredkovanie prepravy alebo prevádzka platformy, ak spoločnosť skutočne prijíma dopravné ako dopravca (運送人) a nesie zodpovednosť za prideľovanie vozidiel, prevádzku a škody na náklade, nemôže dohľadu uniknúť pouhým označením.
+Taiwanský zákon o cestách (公路法) upravuje automobilovú dopravnú činnosť (汽車運輸業) ako činnosť, ktorá za odplatu prepravuje cestujúcich alebo náklad automobilom. Spoločnosť sa preto nestáva ihneď nákladnou automobilovou dopravou len preto, že poskytuje logistickú službu v širšom zmysle. Naopak, aj keď bola zmluva spísaná ako zasielateľstvo alebo prevádzka platformy, ak spoločnosť skutočne prijíma dopravné ako dopravca (運送人) a nesie zodpovednosť za prideľovanie vozidiel, prevádzku a škody na náklade, nemôže dohľadu uniknúť pouhým označením.
 
 Pri stanovení rozsahu činnosti treba konkrétne usporiadať aspoň nasledujúce vzťahy.
 
@@ -84,7 +84,7 @@ Nadobudnutím akcií sa povolenie neprevádza. Pri nadobudnutí akcií sa povole
 
 ### Rozdiel medzi nadobudnutím akcií a prevodom podniku alebo aktív
 
-Pri nadobudnutí akcií sa kupujúci stáva akcionárom, zatiaľ čo cieľová spoločnosť, subjekt držiteľa povolenia, naďalej existuje ako tá istá právnická osoba. Suma zaslaná na nadobudnutie akcií je cenou prevodu akcií, nie kapitálom. Podľa okolností veci sa zvlášť vykonáva predchádzajúce schválenie Ministerstva hospodárstva, schválenie odvetvia podľa čl. 35 zákona o cestách, určenie výšky investície (投資額審定) po prevode, zmena spoločnosti u akcionárov, riaditeľov a zodpovednej osoby a žiadosť o zmenu u príslušného cestného orgánu.
+Pri nadobudnutí akcií sa kupujúci stáva akcionárom, zatiaľ čo cieľová spoločnosť, subjekt držiteľa povolenia, naďalej existuje ako tá istá právnická osoba. Suma zaslaná na nadobudnutie akcií je cenou prevodu akcií, nie kapitálom. Podľa okolností veci sa zvlášť vykonáva predchádzajúce schválenie Ministerstva hospodárstva, schválenie odvetvia podľa čl. 35 zákona o cestách, overenie výšky investície po prevode peňazí (投資額審定), zmena spoločnosti u akcionárov, riaditeľov a zodpovednej osoby a žiadosť o zmenu u príslušného cestného orgánu.
 
 Naproti tomu, aj keď odlišná právnická osoba prijme prevod podniku alebo aktív, prevádzková licencia prevodcu sa na nadobúdateľa sama osebe neprenáša. Vozidlá, evidenčné značky na obchodné použitie, parkovacie zariadenia, zmluvy, pracovníkov, poistenie a prevádzkové povolenia treba overiť každé a povolenie na prípravu založenia, prevádzkovú licenciu a ostatné schválenia potrebné nadobúdateľovi treba usporiadať pred vykonaním transakcie.
 
@@ -102,7 +102,7 @@ Aspoň nasledujúce body treba podstatne overiť porovnaním dôkazov a pôvodn�
 - Poistenie vozidiel, nákladu a zodpovednosti, práva zabezpečenia, leasing a financovanie
 - Dôležité zmluvy a doložky zmeny ovládania týkajúce sa odosielateľov, podnikateľov, ktorým je práca zverená, systémov a skladov
 
-V zmluve sa stanovia vyhlásenia a záväzky, odkladacie podmienky, zaobchádzanie, ak povolenie nie je získané, úprava ceny, náhrada, odovzdanie, prevádzkový kapitál a spôsob prevodu vozidiel a zmlúv. Poradie potrebného schválenia zahraničnej investície, schválenia odvetvia Ministerstva dopravy, schválenia zmeny príslušného cestného orgánu a firemných krokov treba zosúladiť s podmienkami uzatvorenia transakcie.
+V zmluve sa stanovia vyhlásenia a záväzky, odkladacie podmienky, zaobchádzanie, ak povolenie nie je získané, úprava ceny, odškodnenie, predmety odovzdania pri uzatvorení transakcie, prevádzkový kapitál a spôsob prevodu vozidiel a zmlúv. Poradie potrebného schválenia zahraničnej investície, schválenia odvetvia Ministerstva dopravy, schválenia zmeny príslušného cestného orgánu a firemných krokov treba zosúladiť s podmienkami uzatvorenia transakcie.
 
 ## 4. Zverenie prepravy a odosielania a práca cudzincov
 
@@ -118,7 +118,7 @@ Treba overiť platnosť prevádzkovej licencie podnikateľa, ktorému je práca 
 
 Aj keď sa cudzinec stane akcionárom alebo investorom cieľovej spoločnosti, táto skutočnosť mu sama osebe neudeluje právo pracovať ani pobytový status na Taiwane. Ak na Taiwane vykonáva každodennú prácu, ako riadenie spoločnosti, predaj, prideľovanie vozidiel a starostlivosť o zákazníka, musí pred začatím práce overiť, či potrebuje pracovné povolenie zodpovedajúce skutočnej funkcii, a zvlášť vykonať neskorší pobytový postup.
 
-Na prácu bez povolenia sa môžu uplatniť správna pokuta a príkaz opustiť Taiwan (限令出國). Platné pracovné pokyny k zákazu vstupu (禁止入國) Imigračnej správy Ministerstva vnútra (內政部移民署) stanovujú všeobecne pri nedovolenej práci dobu zákazu vstupu 3 roky, avšak môžu sa uplatniť požiadavky na oslobodenie alebo skrátenie doby, ktoré tie isté pokyny stanovujú. Výsledok sa neurčuje mechanicky len preto, že existuje oznámenie tretej osoby, a príslušný orgán posudzuje skutkové okolnosti, uplatniteľné normy a okolnosti každej veci.
+Na prácu bez povolenia sa môžu uplatniť správna pokuta a príkaz opustiť Taiwan (限令出國). Platné správne pokyny Imigračnej správy Ministerstva vnútra (內政部移民署) k zákazu vstupu (禁止入國) stanovujú všeobecne pri nedovolenej práci dobu zákazu vstupu 3 roky, avšak môžu sa uplatniť požiadavky na oslobodenie alebo skrátenie doby, ktoré tie isté pokyny stanovujú. Výsledok sa neurčuje mechanicky len preto, že existuje oznámenie tretej osoby, a príslušný orgán posudzuje skutkové okolnosti, uplatniteľné normy a okolnosti každej veci.
 
 ## Oficiálne podklady
 

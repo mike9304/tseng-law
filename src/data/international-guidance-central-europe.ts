@@ -79,7 +79,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Čím sa zaoberáme',
           paragraphs: [
-            'Hovering International Law Firm je advokátska kancelária so sídlom na Taiwane. Pracuje podľa taiwanského práva a má sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Radíme podnikom, vedieme súdne konania a zastupujeme zahraničných klientov v krokoch, ktoré je na Taiwane potrebné urobiť.',
+            'Hovering International Law Firm je advokátska kancelária so sídlom na Taiwane. Pracuje podľa taiwanského práva a má sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Radíme podnikom, vedieme súdne konania a sprevádzame zahraničných klientov pri úkonoch, ktoré treba na Taiwane urobiť.',
             'Celý tu uvedený obsah je všeobecný. Výsledok veci závisí od skutkového stavu, od uplatniteľných predpisov a od rozhodného času. Tieto informácie nenahrádzajú konzultáciu s advokátkou alebo advokátom nad Vašimi dokumentmi.',
           ],
         },
@@ -131,7 +131,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Občianskoprávne spory a náhrada škody',
           paragraphs: [
-            'Táto oblasť zahŕňa spory zo zmlúv, náhradu škody z protiprávneho konania a spotrebiteľské spory. Práca spravidla začína časovou osou, posúdením dokumentov a existujúcich dôkazov a až potom nasledujú ďalšie kroky.',
+            'Táto oblasť zahŕňa spory zo zmlúv, náhradu škody z protiprávneho konania a spotrebiteľské spory. Práca spravidla začína chronológiou udalostí, posúdením dokumentov a existujúcich dôkazov a až potom nasledujú ďalšie kroky.',
             'Priebeh určujú lehoty, vrátane premlčacích, a úplnosť dôkazov. Uveďte preto známe dátumy čo najskôr. Uschovajte zmluvy, správy, doklady o platbe alebo fotografie stavu na mieste a spomeňte ich v prvej správe.',
           ],
         },
@@ -271,8 +271,8 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ak neovládate žiadny zo štyroch jazykov konzultácie',
           paragraphs: [
-            'V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schodný spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
-            'Ide iba o krok posúdenia, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.',
+            'V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
+            'Ide iba o posúdenie, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.',
           ],
         },
         {
@@ -315,7 +315,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Čo si pripraviť pred kontaktom?',
           answer:
-            'Pripravte si krátke zhrnutie priebehu, svojej požiadavky, väzby na Taiwan a lehoty, ak nejaká existuje. Ak je už k dispozícii písomnosť súdu alebo úradu, uveďte dátum. V tejto fáze zatiaľ nemusíte zasielať doklady totožnosti ani súbor dôkazov.',
+            'Pripravte si krátke zhrnutie priebehu, svojej požiadavky, väzby na Taiwan a lehotu, ak nejaká existuje. Ak je už k dispozícii písomnosť súdu alebo úradu, uveďte dátum. V tejto fáze zatiaľ nemusíte zasielať doklady totožnosti ani súbor dôkazov.',
         },
         {
           question: 'Je možná porada v slovenčine?',
@@ -325,7 +325,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Čo robiť, ak nemôžem použiť žiadny zo štyroch jazykov?',
           answer:
-            'Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili spôsob komunikácie, ale služba v inom jazyku zaručená nie je. Ide o krok posúdenia, nie o prísľub, že môžeme pracovať v inom jazyku.',
+            'Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili spôsob komunikácie, ale služba v inom jazyku zaručená nie je. Ide o posúdenie, nie o prísľub, že môžeme pracovať v inom jazyku.',
         },
         {
           question: 'Ako sa nakladá s mojím textom v slovenčine?',
@@ -411,7 +411,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Miesto uchovania a poskytovatelia',
           paragraphs: [
-            'Tieto stránky sú hostované u spoločnosti Vercel a Vaše podanie sa uchováva v neverejnom objektovom úložisku tejto služby. E-maily sa odosielajú poštovou službou, ktorú kancelária používa.',
+            'Tieto stránky sú hostované u spoločnosti Vercel a Vaše podanie sa uchováva v neverejnom objektovom úložisku tejto služby. E-maily sa odosielajú e-mailovou službou, ktorú kancelária používa.',
             'Servery jednotlivých poskytovateľov sa môžu nachádzať mimo Taiwanu, takže Vaše údaje tam môžu byť uchovávané a spracúvané. Ak je účel uchovania naplnený, údaje sa bez zbytočného odkladu vymažú; údaje, ktoré treba uchovávať podľa uplatniteľných predpisov, ostávajú po túto dobu. Žiadosti o osobné údaje prijíma wei@hoveringlaw.com.tw.',
           ],
         },

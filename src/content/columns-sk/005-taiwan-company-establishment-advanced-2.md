@@ -69,9 +69,9 @@ Niektoré banky môžu ukladať ďalšie požiadavky, napríklad dobu používan
 
 **5. Môže spoločnosť zamestnávať cudzincov (vrátane osôb s kórejskou štátnou príslušnosťou)?**
 
-Prvý zamestnanec: žiadosť sa podáva ako vedúci práce v podniku bežnej investície zámorských Číňanov alebo cudzincov (一般僑外投資事業主管工作). Kritérium „práce odbornej alebo technickej povahy“ z bodu B nižšie sa neuplatní, avšak uplatnia sa predpoklady adresáta, vrátane predpokladu vedúceho (經理人) spoločnosti, ktorej vklad zámorských Číňanov alebo cudzincov presahuje 1/3, a tiež predpoklady výsledkov zamestnávateľa týkajúce sa kapitálu a obratu (články 38 a 39 preskúmavacích noriem).
+A. Prvý zamestnanec: vedúci podniku bežnej investície zámorských Číňanov alebo cudzincov (一般僑外投資事業主管工作). Kritérium „práce odbornej alebo technickej povahy“ z bodu B nižšie sa neuplatní, avšak uplatnia sa predpoklady adresáta, vrátane predpokladu vedúceho (經理人) spoločnosti, ktorej vklad zámorských Číňanov alebo cudzincov presahuje 1/3, a tiež predpoklady výsledkov zamestnávateľa týkajúce sa kapitálu a obratu (články 38 a 39 preskúmavacích noriem).
 
-B. Od druhého zamestnanca existujú obmedzenia: ak počet zamestnaných cudzincov presiahne 1 osobu, vzdelanie a prax zamestnanca, pravidlá priemernej mzdy a pravidlá kapitálu a obratu spoločnosti sa posudzujú podľa „odbornej alebo technickej práce“ (專門性或技術性工作).
+B. Od druhého zamestnanca existujú obmedzenia: ak je zamestnaných cudzincov viac ako jedna osoba, vzdelanie a prax zamestnanca, pravidlá priemernej mzdy a pravidlá kapitálu a obratu spoločnosti sa posudzujú podľa „odbornej alebo technickej práce“ (專門性或技術性工作).
 
 Pozrite stránku Ministerstva práce Taiwanu (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

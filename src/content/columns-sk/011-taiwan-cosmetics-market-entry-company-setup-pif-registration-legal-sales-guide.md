@@ -22,7 +22,7 @@ faq:
 
 Zahraničná značka kozmetiky, ktorá hodlá na Taiwane uvádzať výrobky do obehu, musí určiť, komu zverí dovoz, kedy dokončí registráciu produktu (產品登錄), kto spravuje informačný spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podľa akého kritéria sa posudzuje označenie (標示) a reklama (廣告). Zahraničná značka môže buď využiť miestneho dovozcu, alebo činnosť na Taiwane prevádzkovať sama, takže príprava predaja nie je dokončená len tým, že bola založená spoločnosť.
 
-Uplatniteľné povinnosti sa môžu líšiť podľa druhu výrobku a miesta výroby (製造場所), skutočnej formy dovozu, spôsobu obehu a obsahu reklamy. Nižšie sa oddelene vysvetľujú forma vstupu a zákonný subjekt zodpovednosti, registrácia produktu u TFDA, zostavenie, aktualizácia a uchovanie PIF, označenie a reklama a kontrola a nápravné opatrenie. Pred stanovením skutočného dodacieho kalendára treba znovu, výrobok po výrobku, overiť najnovšie predpisy a pokyny príslušného orgánu (主管機關).
+Uplatniteľné povinnosti sa môžu líšiť podľa druhu výrobku a miesta výroby (製造場所), skutočnej formy dovozu, spôsobu obehu a obsahu reklamy. Nižšie sa oddelene vysvetľujú forma vstupu a zákonný subjekt zodpovednosti, registrácia produktu u TFDA, zostavenie, aktualizácia a uchovanie PIF, označenie a reklama a kontrola a nápravné opatrenie. Pred stanovením skutočného harmonogramu dodávok treba znovu, výrobok po výrobku, overiť najnovšie predpisy a pokyny príslušného orgánu (主管機關).
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
@@ -72,7 +72,7 @@ Ak sa zmení surovina alebo receptúra, spôsob a miesto výroby, označenie vr�
 
 Podľa článku 7 pravidiel o správe informačného spisu kozmetických produktov je doba uchovania najmenej 5 rokov počítaných odo dňa nasledujúceho po dni posledného dodania výrobku na trh. Podľa článku 8 tých istých pravidiel je miestom uchovania adresa výrobcu alebo dovozcu kozmetiky stanovená v článku 7 odseku 1 bode 7 zákona o správe hygieny a bezpečnosti kozmetiky (化粧品衛生安全管理法). Ustanovenie o dobe uchovania a ustanovenie o mieste uchovania treba v praxi rozlišovať.
 
-Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné elektronické alebo cloudové úložisko, výrobca alebo dovozca musí mať prístup k úplným podkladom. Treba stanoviť prístupové oprávnenie, zálohy, správu verzií, formát súborov a zodpovednú osobu tak, aby bolo možné podklady rýchlo vyhľadať a predložiť, keď ich príslušný orgán požaduje. Je tiež dôležité v zmluve upraviť príjemcu odovzdania, spôsob a to, či prístupové oprávnenie trvá, aby sa podklady udržali po zákonnú dobu uchovania i po skončení zmluvy s predajným partnerom alebo poskytovateľom služieb.
+Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné elektronické alebo cloudové úložisko, výrobca alebo dovozca musí mať prístup k úplným podkladom. Treba stanoviť prístupové oprávnenie, zálohy, správu verzií, formát súborov a zodpovednú osobu tak, aby bolo možné podklady rýchlo vyhľadať a predložiť, keď ich príslušný orgán požaduje. Je tiež dôležité v zmluve upraviť, ktoré podklady sa odovzdajú, ako odovzdanie prebehne a či prístupové oprávnenie trvá, aby sa podklady udržali po zákonnú dobu uchovania i po skončení zmluvy s predajným partnerom alebo poskytovateľom služieb.
 
 ### Kontrola, náprava a správne opatrenie
 
@@ -105,7 +105,7 @@ V zmluve o spolupráci a v prevádzkových pokynoch možno stanoviť rozsah povo
 Ak sa overí príprava predaja na Taiwane v tomto poradí, klesá riziko zámeny jedného režimu s iným.
 
 1. Stanoviť, či sami zriadite dcérsku spoločnosť alebo pobočku na Taiwane, alebo či zveríte dovoz a predaj miestnemu dovozcovi.
-2. Overiť subjekt, ktorý nesie právnu zodpovednosť ako výrobca alebo dovozca kozmetiky, a zmluvného zodpovedného za prácu.
+2. Overiť subjekt, ktorý nesie právnu zodpovednosť ako výrobca alebo dovozca kozmetiky, a osoby zmluvne zodpovedné za zverené úlohy.
 3. Dokončiť registráciu produktu pred dodaním, predajom, darovaním, verejným vystavením alebo poskytnutím výrobku spotrebiteľovi na vyskúšanie.
 4. Zostaviť PIF podľa výrobku, aktualizovať zmeny a uchovávať ho v súlade so zákonnou dobou a miestom.
 5. Preskúmať etiketu, predajnú stránku, reklamu a príspevky zo spolupráce podľa kritéria celého vyjadrenia.

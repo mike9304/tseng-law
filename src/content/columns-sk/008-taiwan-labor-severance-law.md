@@ -62,7 +62,7 @@ Nasledujúca tabuľka to zhŕňa.
 
 > Na Taiwane musí zamestnávateľ za každý dokončený jeden rok praxe (年資)
 > vyplatiť 0,5 mesiaca priemernej mzdy (平均工資) ako odstupné.
-> (najviac 6 mesiacov mzdy) Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
+> najviac za 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
 
 ​
 
@@ -176,7 +176,7 @@ Vďaka zastúpeniu advokátkou sa mu neskôr podarilo
 
 uplatniť nárok na odstupné podľa zákona.
 
-Opis tejto jednej veci nie je prísľubom, že rovnaký výsledok nastane aj u ostatných zamestnancov.
+Tento príklad nie je prísľubom, že rovnaký výsledok nastane aj u ostatných zamestnancov.
 
 ​
 

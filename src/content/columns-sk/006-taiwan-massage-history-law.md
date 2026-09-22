@@ -39,7 +39,7 @@ na Taiwane existuje tiež mnoho ulíc masáže.
 
 Lemujú ich masážne prevádzkarne všetkého druhu.
 
-Je masáž vykonávaná osobami so zrakovým postihnutím (視障按摩), masáž nôh, olejová masáž, thajská masáž a iné formy.
+Sú tu masáže vykonávané osobami so zrakovým postihnutím (視障按摩), masáž nôh, olejová masáž, thajská masáž a iné formy.
 
 V podstate si každý môže zvoliť masáž zodpovedajúcu vlastnému vkusu, aby uvoľnil napätie.
 
@@ -55,7 +55,7 @@ Tento zákon platil do roku 2003; vtedy pán Lin, ktorý viedol kaderníctvo,
 
 zamestnal pracovníkov bez zrakového postihnutia k službám umývania vlasov a masáže, a polícia to zistila.
 
-Podľa vtedajšieho práva bola pánovi Linovi a týmto pracovníkom uložená správna pokuta (罰鍰) vo výške TWD 40.000, TWD 10.000 a TWD 20.000 v novom taiwanskom dolári (新臺幣).
+Podľa vtedajšieho práva bola pánovi Linovi a týmto pracovníkom uložená správna pokuta (罰鍰) vo výške 40.000 TWD, 10.000 TWD a 20.000 TWD v novom taiwanskom dolári (新臺幣).
 
 Pán Lin považoval túto sankciu za veľmi nespravodlivú a požiadal o ústavný výklad.
 
@@ -113,7 +113,7 @@ a zákonodarca sa snaží nájsť relatívne vyvážené riešenie stretu záujm
 
 Dnes mnoho osôb volí masáž, aby uvoľnilo napätie,
 
-avšak v tomto procese stále dochádza k prípadom sexuálneho obťažovania (性騷擾) alebo neslušných činov (猥褻).
+avšak v tomto procese stále dochádza k prípadom sexuálneho obťažovania (性騷擾) alebo obscénneho konania (猥褻).
 
 To, čo pôvodne malo byť len masážou na uvoľnenie napätia,
 
@@ -123,6 +123,6 @@ Ak pociťujete počas masáže na Taiwane nepohodlie alebo niečo osobitné,
 
 oznámte to ihneď alebo požiadajte o prerušenie, aby ste sa chránili.
 
-Ak uznáte, že ste utrpeli sexuálne obťažovanie,
+Ak máte za to, že ste boli sexuálne obťažovaní,
 
-choďte na policajnú stanicu s dôveryhodným priateľom alebo s advokátom na Taiwane (律師), aby ste podali oznámenie.
+choďte na policajnú stanicu s dôveryhodným priateľom alebo s advokátkou či advokátom na Taiwane (律師), aby ste podali oznámenie.

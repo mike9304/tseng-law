@@ -49,7 +49,7 @@ Voľba sa líši podľa prerušenia premlčania (時效中斷), okruhu žalovan�
 
 Trestnú zodpovednosť možno vyvodiť len vtedy, ak sú preukázané porušenie povinnosti opatrnosti každého a príčinná súvislosť medzi týmto porušením a poranením druhej strany. Samotná skutočnosť, že nedbanlivosť bola na oboch stranách, nezakladá automaticky zodpovednosť za ublíženie na zdraví z nedbanlivosti.
 
-Na občianskoprávnej rovine podľa článku 217 občianskeho zákonníka, ak nedbanlivosť poškodeného prispela k vzniku alebo k zväčšeniu škody (與有過失), môže súd náhradu znížiť alebo ju odpustiť. Napríklad ak škoda uznaná v novom taiwanskom dolári (新臺幣, TWD) činí TWD 1.000.000 a nedbanlivosť poškodeného je hodnotená na 50 %, môže byť suma znížená na TWD 500.000 pred inými úpravami.
+Na občianskoprávnej rovine podľa článku 217 občianskeho zákonníka, ak nedbanlivosť poškodeného prispela k vzniku alebo k zväčšeniu škody (與有過失), môže súd náhradu znížiť alebo ju odpustiť. Napríklad ak škoda uznaná v novom taiwanskom dolári (新臺幣, TWD) činí 1.000.000 TWD a nedbanlivosť poškodeného je hodnotená na 50 %, môže byť suma znížená na 500.000 TWD pred inými úpravami.
 
 Znalecký posudok (鑑定) alebo tabuľka predbežnej analýzy môžu byť dôležitými podkladmi, pre súd však nie sú mechanicky záväzné. Súd posudzuje súhrn dôkazov vrátane výpovedí, obrazových záznamov a stavu vozidiel.
 
@@ -175,7 +175,7 @@ Povinnosť uzavrieť poistenie podľa článku 6 zákona o povinnom poistení zo
 
 Pri nehode jedného vozidla nie je vodič tohto vozidla zásadne adresátom plnenia z povinného poistenia tohto vozidla. Pri nehode, ktorej sa zúčastňuje niekoľko vozidiel, však existujú prípady, v ktorých vodič môže uplatniť plnenie u poisťovateľa povinného poistenia iného zúčastneného vozidla.
 
-Sadzobník plnenia (強制汽車責任保險給付標準) zmenený 29. 5. 2026 sa uplatní na nehody, ktoré nastali od 1. 7. 2026. Strop primeraných a potrebných lekárskych nákladov za poranenie činí TWD 200.000 v novom taiwanskom dolári; plnenie za invaliditu (失能) činí od TWD 80.000 do TWD 3.000.000 podľa 15 zákonných stupňov; plnenie za smrť činí TWD 3.000.000 a spoločné maximum smrti, invalidity a lekárskych nákladov pre 1 poškodeného a 1 nehodu činí TWD 3.200.000. Na skoršie nehody sa môže uplatniť predchádzajúci sadzobník.
+Sadzobník plnenia (強制汽車責任保險給付標準) zmenený 29. 5. 2026 sa uplatní na nehody, ktoré nastali od 1. 7. 2026. Strop primeraných a potrebných lekárskych nákladov za poranenie činí 200.000 TWD v novom taiwanskom dolári; plnenie za invaliditu (失能) činí od 80.000 TWD do 3.000.000 TWD podľa 15 zákonných stupňov; plnenie za smrť činí 3.000.000 TWD a spoločné maximum smrti, invalidity a lekárskych nákladov činí 3.200.000 TWD, pričom jeden poškodený a jedna nehoda majú tento spoločný strop. Na skoršie nehody sa môže uplatniť predchádzajúci sadzobník.
 
 Poistenie zodpovednosti voči tretím osobám (第三人責任險), úrazové poistenie vodiča (駕駛人傷害險) a poistenie škôd na vlastnom vozidle (車體損失險) sú fakultatívnymi produktmi zmluvnej povahy. Skutočné krytie sa líši podľa poisteného, stropu, spoluúčasti (自負額), výluk, nedbanlivosti a iných podmienok poistky, takže poistku a podmienky treba overiť vec po veci.
 
@@ -207,7 +207,7 @@ Môžu opomínať aj to, čo je pre druhú stranu podstatné — ospravedlnenie 
 
 ​
 
-Pre poisťovateľa nemá vyplatenie ďalších TWD 500.000 alebo TWD 1.000.000 v jednotlivej veci podstatný vplyv na celkový hospodársky výsledok; pre účastníka nehody však môže taká suma rozhodovať o tom, či bude, alebo nebude mať záznam v registri trestov (前科).
+Pre poisťovateľa nemá vyplatenie ďalších 500.000 TWD alebo 1.000.000 TWD v jednotlivej veci podstatný vplyv na celkový hospodársky výsledok; pre účastníka nehody však môže taká suma rozhodovať o tom, či bude, alebo nebude mať záznam v registri trestov (前科).
 
 ​
 
@@ -239,7 +239,7 @@ V niektorých rozsudkoch bol za ublíženie na zdraví z nedbanlivosti uložený
 
 ​
 
-Ak je trest premenený na peňažný trest (易科罰金), článok 41 odsek 1 trestného zákona stanovuje prepočet TWD 1.000, TWD 2.000 alebo TWD 3.000 za 1 deň; pri sadzbe TWD 1.000 za deň zodpovedá trest 3 mesiacov sume 3 × 30 × TWD 1.000 = TWD 90.000.
+Ak je trest premenený na peňažný trest (易科罰金), článok 41 odsek 1 trestného zákona stanovuje prepočet 1.000 TWD, 2.000 TWD alebo 3.000 TWD za jeden deň; pri sadzbe 1.000 TWD za deň zodpovedá trest 3 mesiacov sume 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -339,7 +339,7 @@ Poranenie alebo smrť poškodeného prináša jemu samému aj jeho rodine fyzick
 
 ​
 
-Páchateľ často nedbá o telefonovanie s otázkou na stav obete ani o jej návštevu a mnohí páchatelia predpokladajú, že poisťovateľ všetko vybaví, a sami sa neobjavia. V týchto prípadoch sa nepostrehne ani ľútosť, ani dobrá viera.
+Páchateľ často nedbá o telefonovanie s otázkou na stav obete ani o jej návštevu a mnohí páchatelia predpokladajú, že poisťovateľ všetko vybaví, a sami sa neobjavia. V týchto prípadoch obeť nevidí ani ľútosť, ani úprimnú snahu.
 
 ​
 
@@ -347,7 +347,7 @@ Páchateľ často nedbá o telefonovanie s otázkou na stav obete ani o jej náv
 
 ​
 
-Obeť tak ostáva veľmi zranená a upadá do hnevu, takže často pri vyjednávaní o sume neustúpi alebo navrhne zabezpečovacie zhabanie (假扣押) a vedie zhabanie majetku druhej strany až do konca.
+Obeť tak ostáva veľmi zranená a upadá do hnevu, takže často pri vyjednávaní o sume neustúpi, navrhne predbežné zabezpečenie (假扣押) a vedie zabezpečenie majetku druhej strany až do konca.
 
 ​
 

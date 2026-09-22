@@ -4011,7 +4011,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelária vedie veci podnikov a súkromných osôb na Taiwane v angličtine, japončine, kórejčine a čínštine.',
-        'Zastupovala kórejského študenta v nároku na náhradu škody za úraz v posilňovni a dosiahla rozsudok prvého stupňa vo výške TWD 1.57M.',
+        'Zastupovala kórejského študenta v konaní o náhradu škody za úraz v posilňovni a dosiahla rozsudok prvého stupňa vo výške TWD 1.57M.',
       ],
       education: [
         'Magisterský titul (M.S.), Institute of Finance, National Taiwan University',
@@ -4053,7 +4053,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinuje termíny porád a komunikáciu pre klientov z Kórey.',
-        'Na základe vzdelania v informatike podporuje výmenu medzi regiónmi pomocou systémov dokumentov a pracovných postupov.',
+        'Na základe vzdelania v informatike podporuje komunikáciu medzi tímami pomocou dokumentových systémov a pracovných postupov.',
       ],
       education: [
         'Bakalársky titul (B.S.) v informatike, National Cheng Kung University',

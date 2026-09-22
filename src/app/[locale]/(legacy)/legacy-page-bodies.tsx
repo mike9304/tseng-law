@@ -321,16 +321,17 @@ export function ColumnsLegacyPageBody({
   searchParams,
   visibleBlockIds,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   posts: ColumnPost[];
   searchParams?: ColumnsSearchParams;
   visibleBlockIds?: string[];
 }) {
   const copy = pageCopy[locale].insights;
-  const headerLabel: Record<Locale, string> = {
+  const headerLabel: Record<SiteLocale, string> = {
     ko: '칼럼',
     'zh-hant': '專欄',
     en: 'COLUMNS',
+    ja: 'コラム',
   };
   const showHero = isTemplateBlockVisible(visibleBlockIds, 'columns.list.hero');
   const showRepeater = isTemplateBlockVisible(visibleBlockIds, 'columns.list.repeater');

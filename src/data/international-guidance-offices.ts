@@ -869,7 +869,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     title: 'ការិយាល័យ',
     description: 'អាសយដ្ឋានការិយាល័យរបស់ Hovering International Law Firm នៅតៃវ៉ាន់',
     officeLabel: 'ការិយាល័យ',
-    mapPreviewLabel: 'មើលផែនទីជាមុន',
+    mapPreviewLabel: 'មើលផែនទីសង្ខេប',
     koreaOfficeTitle: 'ការិយាល័យកូរ៉េ',
     koreaAddressCardLabel: 'អាសយដ្ឋានការិយាល័យកូរ៉េ',
     koreaMapLinkLabel: 'មើលលើ Naver Map',

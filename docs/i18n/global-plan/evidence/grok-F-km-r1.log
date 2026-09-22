@@ -1,0 +1,182 @@
+# WO-F-km — Khmer fix lane (Grok 4.7) — campaign round 1 — 2026-09-22
+
+Scope written: src/content/columns-km/*.md (001, 002, 005 needed no row edits),
+src/data/international-guidance-southeast-central.ts (khmerGuidanceContent strings only),
+src/data/international-guidance-offices.ts (km mapPreviewLabel only),
+src/data/international-guidance-team.ts (km CPA-firm sentence only).
+international-guidance-answers.ts, international-inquiry-copy.ts, and llms-txt.ts km
+blocks were read and left unchanged (no flagged calque, consultation lock already
+the four languages). No test file was modified. No git add/commit/push.
+Subscript-ដ orthography (ស្ដ, អន្ដ, ផ្ដ, ប្ដ, រថយន្ដ) was kept. Reviewer spellings
+that switch to ្ត (បណ្តុះ, រថយន្ត, ផ្តើម, បណ្តឹង) were not copied.
+
+## Rows applied
+
+Part a (km-a.md), 26 of 28:
+a#1  P1 deadlines: អាយុកាលតាមច្បាប់ → កាលកំណត់ រួមទាំងអាយុកាលបណ្ដឹងតាមច្បាប់.
+a#2  P1 keep the documents, do not only describe them.
+a#4  P1 CPA firm: ការិយាល័យគណនេយ្យ → ការិយាល័យគណនេយ្យករសាធារណៈ. "TWD 1.57M" untouched.
+a#5  P1 003 道路交通管理處罰條例: បទប្បញ្ញត្ដិ → ច្បាប់. 辦法 / 道路交通安全規則 left as បទប្បញ្ញត្ដិ.
+a#6  P1 003 司法院: យានតុលាការ → អង្គតុលាការ (body + 2 link labels).
+a#7  P1 004 link label is the dividend withholding-rate rule (001's wording). URL unchanged
+     (pcode=G0340028&flno=3). Digit "10" kept — see Checker constraints.
+a#8  P1 有限合夥: ភាគហ៊ុនមានកំណត់ → សហកម្មសិទ្ធិមានកំណត់. Not the reviewer's សហគ្រាសមានកម្រិត.
+a#9  P1 008 closing no longer states an unconditional duty to pay severance. The two
+     blocks stay two blocks; each is now a full sentence (cannot merge: checker block count).
+a#10 P2 a fee amount is fixed only once the scope is clear (មានន័យ calque).
+a#11 P2 វា → ការិយាល័យ.
+a#12 P2 map preview: មើលផែនទីជាមុន → មើលផែនទីសង្ខេប.
+a#13 P2 chronology: ការរៀបព្រឹត្ដិការណ៍ → ការរៀបលំដាប់ព្រឹត្ដិការណ៍.
+a#14 P2 មាគ៌ា → ផ្លូវ in the privacy sentence and the contact heading.
+a#15 P2 អមដំណើរ → ជួយ (foreign clients, investors, Wei's client line). 3 instances.
+a#16 P2 ព្រះពន្លា → ពន្លា.
+a#17 P2 nav.pricing "វិសាលភាពថ្លៃ" → "វិសាលភាព ថ្លៃ" (13 JS characters). Eyebrow is
+     "វិសាលភាពនិងថ្លៃ". The in-text page cite matches the nav label. See disagreements.
+a#18 P2 003 daily rates: 1,000 ឬ 2,000 ឬ 3,000. Digits unchanged.
+a#20 P2 003 hurt/angry: ឈឺចាប់ក្នុងចិត្ដខ្លាំង និងខឹង (subscript-ដ kept).
+a#21 P2 004 រយៈពី → រយៈពេល. The existing "ដល់ថ្ងៃទី 31 ធ្នូ 2029" was not duplicated.
+a#22 P2 006 remember the old barbershops.
+a#23 P2 006 aside stays នាងខ្ញុំ: (បែបនេះ នាងខ្ញុំលួចប្រាប់អាយុទៅហើយឬ?).
+a#24 P2 006 personal development: ការលូតលាស់ → ការអភិវឌ្ឍខ្លួន. 007's លូតលាស់ for a child left.
+a#25 P2 007 §§3, 6, 7: the question is prefixed inside the existing paragraph. The same
+     opening string also sits in the FAQ answers, so those answers were updated too.
+     Heading count unchanged. FAQ frontmatter questions still supply the yes/no.
+a#26 P2 007 បកប្រែ → គ្របដណ្ដប់ (the sentence already had មិនគួរចាត់ទុក).
+a#27 P2 007 民法 / 民事訴訟法: ច្បាប់ → ក្រម (ក្រមនីតិវិធី 4, ក្រមរដ្ឋប្បវេណី 22).
+     The choice-of-law act title was restored after the sweep caught it — see 016.
+a#28 P2 009 preparation leaves the party better positioned, not assured of protection.
+     Plus the 006 Lin grammar cut named in the a#19 problem line, inside the existing
+     blocks: the clause no longer ends on ដែល, and the next block names លោក Lin.
+
+Part b (km-b.md), 36 of 37:
+b#1  P1 小客車: រថយន្ដដឹកអ្នកដំណើរ → រថយន្ដគ្រួសារ. Subscript-ដ kept.
+b#2  P1 routine training: តាមវេន → ជាប្រចាំ, 5 instances in 014 (fee ×2, arranged, subscription, checklist).
+b#3  P1 015 the attached inquiry result omits that business item; it is not missing.
+b#4  P1 016 慰撫金: សំណងទុក្ខវេទនា ដែលមិនមែនជាសំណងលើទ្រព្យ. Same "not money" gloss swept
+     in 003 (4) and 007 (3) to 010's ការខូចខាតមិនមែនជាទ្រព្យ.
+b#5  P2 civil defendant: ចុងចោទ → ចុងបណ្ដឹង.
+b#6–7 P2 010 extinctive prescription: ផុតអាយុកាល → រលត់តាមអាណត្តិ (principle, 10-year bar,
+     and interruption ផ្ដាច់អាណត្តិ). Same art. 197 sentence in 003 swept (1).
+b#8  P2 011 liable in the role of manufacturer/importer, not "on behalf of" (FAQ, body, checklist).
+b#9  P2 012 ជិះជាន់ → ជែង, 28 instances (title, h1, alts, headings, body, link text). Image paths and the gonews URL unchanged.
+b#10 P2 visibility: ទិសដៅមើល → ភាពមើលឃើញ.
+b#11 P2 統一證號: លេខសម្គាល់ឯកសណ្ឋាន → លេខសម្គាល់បង្រួបបង្រួម. Chinese form title kept.
+b#12 P2 materials or equipment, not only books.
+b#13 P2 主動查詢 label, 3 instances (body, alt, caption). «» and image path kept.
+b#14 P2 信託: ទំនុកបម្រុង → បន្ទុកទុកចិត្ត, 7 instances (property, contract, beneficial interest, documents, plan, checklist).
+b#15 P2 organizational arrangements, not a bare extra entity.
+b#16 P2 FAQ and body §1: ការដំណើរការប្រព័ន្ធ → ប្រតិបត្ដិការប្រព័ន្ធភស្ដុភារ (2). Lead left — see disagreements.
+b#17 P2 a third-party report does not decide the result by itself.
+b#18 P2 semiconductor materials companies, not "companies, parts, and equipment".
+b#19 P2 technical support restored in the entity's functions.
+b#20 P2 emerging-market registration added beside securities-market listing.
+b#21 P2 the subject is a company limited by shares, not "an ordinary company". Wording:
+     មិនមែនគ្រប់ក្រុមហ៊ុនមានទំនួលខុសត្រូវមានកំណត់តាមភាគហ៊ុន. Gloss (會計師查核簽證) and the TWD thresholds kept.
+b#22–23 P2 advertisement judged from the whole expression; heading level kept. Records stay in one party's hands.
+b#25 P2 013 នៅចំណាយ → ក៏ចំណាយ.
+b#26 P2 013 the split line now has its own subject (គួរពិនិត្យ). Blocks not merged.
+b#27 P2 017 body §3 no longer opens on a bare No. The identical FAQ answer string was updated with it.
+b#28 P2 018 two sentences split with ។ (frontmatter FAQ and body FAQ).
+b#29–30 P2 medical travel cost (body + damages heading); insurance may be considered as a source of funds.
+b#31 P2 master distributor: ភ្នាក់ងារលក់ធំ only. Other ភ្នាក់ងារលក់ left.
+b#32 P2 014 "mechanically" is one template, not applied by a machine.
+b#33 P2 行使或負擔: 016 ×16 (including the anaphoric នោះ clauses) and 007 ×5 → អំណាចឪពុកម្ដាយ.
+     016's យន្ដការបំពេញបន្ថែម and យន្ដការត្រួតពិនិត្យ left; those are real mechanisms.
+b#34 P2 ចូលតៃវ៉ាន់ → ចូលទីផ្សារតៃវ៉ាន់ (structure sentence and preparation sentence). The title already said ទីផ្សារ.
+b#35 P2 supply question in Khmer order: យ៉ាងដូចម្ដេច.
+b#36 P2 ក្រសួងការងារ → ក្រសួងពលកម្មតៃវ៉ាន់.
+b#37 P2 លិខិតលេខ before 勞動關2字第1150141814號. The docket string itself unchanged.
+
+Same-class sweep beyond the quoted file:
+- 016 民法 called ច្បាប់: 15 → ក្រមរដ្ឋប្បវេណី. The act 涉外民事法律適用法 stays
+  ច្បាប់ស្ដីពីការអនុវត្ដច្បាប់រដ្ឋប្បវេណីមានធាតុអន្ដរជាតិ (016 ×2, 007 ×1 restored).
+
+R2–R10 and R12–R17 were already in the Khmer pack and columns (four consultation
+languages only, feminine នាងខ្ញុំ / មេធាវីស្ដ្រី / លោកស្រី, Korea passages labelled as
+examples, Taiwan 119/110/112, team roles already Khmer, ROC years already glossed
+with 民國, no Thai bleed, Hangul only inside url values). No further rewrite.
+
+P3 rows: none in km-a.md or km-b.md.
+
+## Rows skipped
+
+a#3  P1 expand "TWD 1.57M". Skipped. R12 and the campaign pin require that figure
+     byte-identical. It is still "សំណង TWD 1.57M" in international-guidance-team.ts.
+a#19 P2 add "## Q16." and rebuild the one-sentence / zero-width layout in 003, 006, 008, 009.
+     Skipped. The checker compares heading levels and non-empty block counts with
+     src/content/columns (Korean), which uses the same layout. Adding a heading or
+     merging lines fails the checker. The 006 grammar cut inside those blocks was applied.
+b#24 P2 delete U+200B in 013 and 015. Skipped. checkBlocks requires the zero-width
+     count to match the Korean source (013: 5, 015: 3). Deleting them fails the checker.
+
+## Systemic patterns and instances
+
+- អមដំណើរ (escort) → ជួយ: 3
+- មាគ៌ា → ផ្លូវ: 2
+- យានតុលាការ → អង្គតុលាការ: 3 (003 only)
+- 條例 misread as បទប្បញ្ញត្ដិ: 1 (道路交通管理處罰條例 only)
+- code ច្បាប់ → ក្រម: 007 procedure 4, 007 civil 22, 016 civil 15. Choice-of-law act kept as ច្បាប់ (3 titles).
+- 行使或負擔 calque → អំណាចឪពុកម្ដាយ: 016 ×16, 007 ×5
+- ជិះជាន់ → ជែង: 28
+- តាមវេន → ជាប្រចាំ: 5
+- ទំនុកបម្រុង (trust) → បន្ទុកទុកចិត្ត: 7
+- 慰撫金 "not money": 016 ×1, 003 ×4, 007 ×3
+- ផុតអាយុកាល → អាណត្តិ: 010 ×3 spots, 003 ×1 sentence
+- nav/eyebrow/cite for the jammed pricing label: 3 strings
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-km --lang km 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=176
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-km src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      21
+
+The count above is before this log file. No Khmer test pinned a string that changed, so no test expectation was edited.
+
+## Checker constraints
+
+004 numbers. Removing "មាត្រា 10" from the mislabeled link dropped one "10"
+(Korean source link is 영업세법 제10조) and the checker reported
+"missing from translation (1): 10". The visible name is the withholding-rate rule;
+"មាត្រា 10" stays after that name so the digit count matches. The URL is still
+flno=3. This is not a claim that the instrument is the Business Tax Act.
+
+## Reviewer disagreements (not applied, or applied in a different wording)
+
+- a#3: expanding TWD 1.57M would break the pinned bio figure. Not applied.
+- a#8: សហគ្រាសមានកម្រិត is "limited enterprise", which is not a limited partnership.
+  Used សហកម្មសិទ្ធិមានកំណត់ (有限合夥).
+- a#17: "វិសាលភាពនិងថ្លៃ" is 15 JS characters. Nav labels are capped at 14.
+  nav.pricing is "វិសាលភាព ថ្លៃ" (13). The eyebrow, which is not a nav label, uses
+  the reviewer's phrase.
+- a#19 and b#24: the layout and the zero-width spacers match the Korean source the
+  checker measures. The suggested heading and the deletion were not applied.
+- b#16 lead: English is "logistics systems", and the Khmer lead already says
+  ប្រព័ន្ធភស្ដុភារ. The FAQ's "systems operations" (ការដំណើរការប្រព័ន្ធ) was the
+  collapsed phrase and was rewritten. The lead was not changed to that FAQ wording.
+- 007/016 民法 inside 涉外民事法律適用法 is the act's name, not the Civil Code.
+  That title stays ច្បាប់, consistent with 016, and was put back in 007 after the
+  code sweep.

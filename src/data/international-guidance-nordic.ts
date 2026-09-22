@@ -636,7 +636,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ægteskab, familie og arv',
           paragraphs: [
-            'Vi behandler skilsmisse (離婚), formuedeling, forældremyndighed og forældreansvar for mindreårige børn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue findes i forskellige stater. Grænseoverskridende familiesager kræver ofte yderligere kontrol af husstandsregistreringen (戶籍), dokumenternes form og deres bevisværdi i Taiwan.',
+            'Vi behandler skilsmisse (離婚), formuedeling, forældremyndighed over mindreårige børn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue findes i forskellige stater. Grænseoverskridende familiesager kræver ofte yderligere kontrol af husstandsregistreringen (戶籍), dokumenternes form og deres bevisværdi i Taiwan.',
             'Fordi familiesager ofte medfører frister og parallelle forløb, bør det første resumé nævne parternes forhold, den aktuelle bopæl og allerede igangværende forløb.',
           ],
         },
@@ -741,7 +741,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hvorfor denne side ikke angiver takster',
           paragraphs: [
-            'Omkostningerne afhænger af sagen selv: af indsatsen, antallet af parter, dokumenterne, fristerne og om et forløb allerede er i gang. Et beløb fastsat på forhånd siger ikke, hvad din sag koster. Derfor fastlægger vi først arbejdsomfanget og meddeler dig derefter omkostningerne, før arbejdet begynder.',
+            'Omkostningerne afhænger af sagen selv: af indsatsen, antallet af parter, dokumenterne, fristerne og af, om et forløb allerede er i gang. Et beløb fastsat på forhånd siger ikke, hvad din sag koster. Derfor fastlægger vi først arbejdsomfanget og meddeler dig derefter omkostningerne, før arbejdet begynder.',
             'Ud over advokathonoraret kan der komme omkostninger til retten, til en myndighed eller til tredjemand. De er adskilt fra honoraret og afhænger af det pågældende forløb.',
           ],
         },
@@ -763,7 +763,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Sidens sprog: Disse vejledninger er skrevet på dansk.',
             'Rådgivningssprog: Rådgivningen foregår kun på engelsk, kinesisk (中文), japansk og koreansk.',
-            'Dit skriftsprog: Du må skrive resuméet på dit eget sprog; originalteksten gemmes uændret.',
+            'Det sprog, du skriver på: Du må skrive resuméet på dit eget sprog; originalteksten gemmes uændret.',
           ],
         },
         {
@@ -800,7 +800,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hvordan du bruger denne del',
           paragraphs: [
-            'Finder du intet svar på din situation, afhænger svaret oftest af særlige fakta. Skriv da disse fakta i resuméet i stedet for selv at udlede dem fra denne side.',
+            'Finder du intet svar på din situation, afhænger svaret oftest af særlige fakta. Skriv da disse fakta i resuméet i stedet for selv at udlede svaret fra denne side.',
           ],
         },
       ],
@@ -934,7 +934,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Retligt anvendelsesområde',
           paragraphs: [
             'Kontoret arbejder efter taiwansk ret, og denne side handler kun om arbejde inden for den ramme.',
-            'Indholdet er ikke rådgivning efter retten i en anden retsorden end Taiwan, herunder retten på din bopæl. Vedrører en del af din sag en anden retsorden, afklarer vi med dig, hvilken kvalificeret fagperson der behøves til den del.',
+            'Indholdet er ikke rådgivning efter en anden retsorden end den taiwanske, herunder retten på din bopæl. Vedrører en del af din sag en anden retsorden, afklarer vi med dig, hvilken kvalificeret fagperson der behøves til den del.',
           ],
         },
         {

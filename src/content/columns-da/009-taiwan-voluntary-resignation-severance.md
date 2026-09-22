@@ -81,11 +81,11 @@ Alt efter om skylden ligger hos selskabet eller hos arbejdstageren, kan selskabe
 
 Sommetider ligger skylden hos begge sider.
 
-Når begge tvistes, får rækkefølgen betydning.
+Når begge sider er i tvist, får rækkefølgen betydning.
 
 Det afgørende er, hvem der først og med tilstrækkelig grund bringer aftalen til ophør.
 
-Den part kan da enten undgå at betale godtgørelsen ved afskedigelse eller kræve den.
+Den part, der først og med tilstrækkelig grund bringer aftalen til ophør, kan da, hvis det er selskabet, undgå at betale godtgørelsen ved afskedigelse, og hvis det er arbejdstageren, kræve den.
 
 I taiwanske arbejdskonflikter (勞資糾紛) er tidspunktet derfor afgørende.
 

@@ -49,7 +49,7 @@ At der i enkelte sager kommer sådanne sagkyndige resultater, betyder ikke, at �
 
 ## Punkter, der skal undersøges ved vurderingen af ulykkesansvaret
 
-Før overhaling bør du først undersøge, om stedet eller trafiksituationen falder ind under overhalingsforbuddet. Gælder proceduren for samme vognbane, så giv det foreskrevne horn- eller forlygtesignal uden at tvinge det forankørende køretøj til at vige, vent på et tydeligt tegn på, at det forankørende køretøj viger og fuldfør overhalingen med tilstrækkelig afstand og sikker afstand til at komme tilbage (超車).
+Før overhaling bør du først undersøge, om stedet eller trafiksituationen falder ind under overhalingsforbuddet. Gælder proceduren for samme vognbane, så giv det foreskrevne horn- eller forlygtesignal uden at tvinge det forankørende køretøj til at vige, vent på et tydeligt tegn på, at det forankørende køretøj viger, og fuldfør overhalingen med tilstrækkelig sideafstand og sikker afstand til at komme tilbage (超車).
 
 Overholdelsen af artikel 101 er vigtig, men sikrer i sig selv hverken undgåelse af en ulykke eller et senere resultat af sagkyndig undersøgelse eller retssag. Førere skal holde en ekstra sikkerhedsmargin og tilpasse sig situationen foran sig.
 
@@ -62,4 +62,4 @@ Som supplement kan du se [illustrationen af overhalingsreglerne og -proceduren](
 > - [Hoverings internationale team](/da/lawyers)
 > - [Procedure ved færdselsuheld i Taiwan](/da/columns/taiwan-traffic-accident-procedure)
 
-Denne artikel er almindelig juridisk information om overhalingsreglerne og vurderingen af ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sag og heller ikke et løfte om et bestemt resultat. Det faktiske ansvar kan afvige efter ulykkessted, køretøjsbevægelse, hastighed, signaler, beviser, sagkyndig undersøgelse (鑑定) og den nyeste ret; konkrete sager skal undersøges særskilt på grundlag af de pågældende dokumenter.
+Denne artikel er almindelig juridisk information om overhalingsreglerne og vurderingen af ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sag og heller ikke et løfte om et bestemt resultat. Det faktiske ansvar kan variere efter ulykkessted, køretøjsbevægelse, hastighed, signaler, beviser, sagkyndig undersøgelse (鑑定) og den nyeste ret; konkrete sager skal undersøges særskilt på grundlag af de pågældende dokumenter.

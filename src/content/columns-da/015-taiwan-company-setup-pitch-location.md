@@ -1,5 +1,5 @@
 ---
-title: "Selskabsstiftelse i Taiwan – fordybelse del 3: søgning af driftsadressen"
+title: "Selskabsstiftelse i Taiwan – fordybelse del 3: søgning efter driftsadressen"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
 date_display: "13. september 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 
-# Selskabsstiftelse i Taiwan – fordybelse del 3: søgning af driftsadressen
+# Selskabsstiftelse i Taiwan – fordybelse del 3: søgning efter driftsadressen
 
 ![Forsidebillede](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
@@ -37,9 +37,9 @@ Ordningen for »forudgående forespørgsel om forretningsstedet« (營業場所�
 
 Du kan uden gebyr undersøge, om der på den ønskede adresse kan drives restaurant.
 
-Til denne kontrol skal dog »udskriften af bygningsregistreringen af type 2« (建物登記第二類謄本, der indeholder bygningens detaljerede oplysninger) for driftsadressen uploades.
+Til denne kontrol skal dog »type 2-udskriften af bygningsregistreringen« (建物登記第二類謄本, der indeholder bygningens detaljerede oplysninger) for driftsadressen uploades.
 
-Enhver kan hos matrikelkontoret (地政事務所) ansøge om »udskriften af bygningsregistreringen af type 2« for en vilkårlig adresse.
+Enhver kan hos matrikelkontoret (地政事務所) ansøge om »type 2-udskriften af bygningsregistreringen« for en vilkårlig adresse.
 
 Har du svært ved selv at møde op på matrikelkontoret (地政事務所), kan en anden hjælpe.
 
@@ -63,7 +63,7 @@ Reglen følger af »[arbejdsretningslinjerne for oplysningstjenesten om forretni
 
 Siden 1. januar 2023 skal resultatet af den forudgående forespørgsel om forretningsstedet **obligatorisk** vedlægges registreringsansøgningen ved ansøgning om registrering af stiftelse, af flytning af hjemsted eller af tilføjelse af forretningsområder for et selskab eller en erhvervsvirksomhed (商業) (herunder filialen (分公司) og andre forretningsenheder (分支機構)), uanset branchen.
 
-Listen nedenfor over de »forretningsområder, der undersøges af embedet« (主動查詢之營業項目) betegner de forretningsområder, som handelskontoret af embedet yderligere undersøger under registreringsprøvelsen (隨案主動查詢), når forretningsområdet står i ansøgningen, men mangler i det vedlagte resultat; det forhold, at et forretningsområde ikke står på denne liste, betyder ikke, at kontrollen er fritaget.
+Listen nedenfor over de »forretningsområder, der undersøges af embedet« (主動查詢之營業項目) betegner de forretningsområder, som handelskontoret af embedet yderligere undersøger under registreringsprøvelsen (隨案主動查詢), når forretningsområdet står i ansøgningen, men mangler i det vedlagte resultat; det forhold, at et forretningsområde ikke står på denne liste, betyder ikke, at forretningsområdet er fritaget for kontrollen.
 
 Hvis man åbner på et sted, hvor restauranterhvervet ikke er muligt, kan senere en administrativ bøde (罰鍰) fra den kompetente myndighed følge.
 

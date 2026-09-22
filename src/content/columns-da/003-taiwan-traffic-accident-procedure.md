@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Eksempelbillede, der registrerer køretøjets position og sporene på kørebanen på stedet for en trafikulykke](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Efter en trafikulykke (交通事故) i Taiwan skal du først sikre sikkerheden, foretage anmeldelse og bevisikring og derefter i rækkefølge undersøge kravfristerne, uagtsomheden (過失) og omfanget af et forlig. Det følgende er en almindelig handlingsrækkefølge på grundlag af taiwanske forskrifter og vejledninger fra offentlige myndigheder; konkret ansvar og procedure kan afvige efter omstændighederne i hver ulykke.
+Efter en trafikulykke (交通事故) i Taiwan skal du først sikre sikkerheden, foretage anmeldelse og bevisikring og derefter i rækkefølge undersøge kravfristerne, uagtsomheden (過失) og omfanget af et forlig. Det følgende er en almindelig handlingsrækkefølge på grundlag af taiwanske forskrifter og vejledninger fra offentlige myndigheder; konkret ansvar og procedure kan variere efter omstændighederne i hver ulykke.
 
 ## Q1. Må man forlade stedet efter ulykken?
 
@@ -109,7 +109,7 @@ Ifølge artikel 504 i strafferetsplejeloven kan der dog, efter at sagen er henvi
 
 Attest eller lægelig udtalelse er nyttige til at vise plejebehovet, men er alene ikke afgørende grundlag. Årsagssammenhæng med ulykken, plejebehov, faktisk ydelse, varighed og passende beløb skal forklares ved dokumenter.
 
-Selv hvis slægtninge uden vederlag faktisk har ydet pleje, kan dette i passende sager vurderes som skade. Alene omstændigheden familiemæssig pleje fører dog ikke automatisk til anerkendelse; plejens indhold og varighed samt det sædvanlige omkostningsniveau medtages.
+Selv hvis slægtninge uden vederlag faktisk har ydet pleje, kan dette i passende sager vurderes som skade. Alene den omstændighed, at plejen ydes af familien, fører dog ikke automatisk til anerkendelse; plejens indhold og varighed samt det sædvanlige omkostningsniveau medtages.
 
 ## Q10. Hvormed bevises transportudgifter til behandling?
 
@@ -141,7 +141,7 @@ Indtægtstab skal bevises ved dokumenter for, at der på grund af ulykkesrelater
 
 Lægejournaler, fremmøde- eller fraværsoptegnelser, løn- og skattedokumenter samt arbejdsgiverens bekræftelse bør ordnes sammen. Selvstændige kan indgive dokumenter, der passer til deres virksomhedsform, såsom omsætningsdata, forretningsoptegnelser og selvangivelser.
 
-Omstændigheden fortsat arbejde eller uændret udbetalt løn vedrører bedømmelsen af indtægtstabet i rekonvalescensperioden, afgør dog ikke automatisk spørgsmålet om skade på grund af nedsættelse af arbejdsevnen. Denne omstændighed er heller ikke et selvstændigt grundlag til bedømmelse af den skade. Skaden på grund af nedsættelse af arbejdsevnen undersøges særskilt i Q12.
+Den omstændighed, at arbejdet fortsætter, eller at lønnen udbetales uændret, vedrører bedømmelsen af indtægtstabet i rekonvalescensperioden, afgør dog ikke automatisk spørgsmålet om skade på grund af nedsættelse af arbejdsevnen. Denne omstændighed er heller ikke et selvstændigt grundlag til bedømmelse af den skade. Skaden på grund af nedsættelse af arbejdsevnen undersøges særskilt i Q12.
 
 ## Q12. Hvordan bevises skaden på grund af nedsættelse af arbejdsevnen?
 
@@ -339,7 +339,7 @@ Ved den skadelidtes tilskadekomst eller dødsfald lider den skadelidte selv elle
 
 ​
 
-Mange skadevoldere ringer ikke og hører til tilstanden, besøger ikke den tilskadekomne og regner med, at forsikringsselskabet ordner alt, mens de selv holder sig væk. Da føles hverken anger eller alvor.
+Mange skadevoldere ringer ikke og spørger ikke til tilstanden, besøger ikke den tilskadekomne og regner med, at forsikringsselskabet ordner alt, mens de selv holder sig væk. Da føles hverken anger eller alvor.
 
 ​
 

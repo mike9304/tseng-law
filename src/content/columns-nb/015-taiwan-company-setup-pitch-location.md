@@ -39,7 +39,7 @@ Du kan uten gebyr undersøke om det på den ønskede adressen kan åpnes en «re
 
 Til denne kontrollen skal imidlertid «utskriften av bygningsregistreringen av type 2» (建物登記第二類謄本, som inneholder bygningens detaljerte opplysninger) for driftsadressen lastes opp.
 
-Enhver kan hos matrikkelkontoret (地政事務所) søke om «utskriften av bygningsregistreringen av type 2» for en vilkårlig adresse.
+Enhver kan hos matrikkelkontoret (地政事務所) søke om «utskriften av bygningsregistreringen av type 2» for en hvilken som helst adresse.
 
 Hvis du har vanskelig for personlig å gå til matrikkelkontoret (地政事務所),
 
@@ -61,15 +61,15 @@ I praksis trenger derfor ikke alle grener å undersøkes ved selskapsregistrerin
 
 Ifølge «[arbeidsretningslinjene for opplysningstjenesten om forretningssteder i byen Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)»(臺北市營業場所協助查詢服務作業須知) og den gjeldende veiledningen fra byen Taipei
 
-skal siden 1. januar 2023 ved søknad om registrering av stiftelse, av flytting av hjemsted eller av tilføyelse av forretningsgrener for et selskap eller en handel (herunder filialen (分公司) og hjelpeinnretningen (分支機構)) resultatet av den forutgående forespørselen om forretningsstedet **obligatorisk** vedlegges registreringssøknaden, uavhengig av bransjen.
+skal siden 1. januar 2023 ved søknad om registrering av stiftelse, av flytting av hjemsted eller av tilføyelse av forretningsgrener for et selskap eller en virksomhet (herunder filialen (分公司) og underavdelingen (分支機構)) resultatet av den forutgående forespørselen om forretningsstedet **obligatorisk** vedlegges registreringssøknaden, uavhengig av bransjen.
 
-Listen nedenfor over de «grener som undersøkes av embetet» (主動查詢之營業項目) betegner de grener som handelskontoret av embetet ytterligere undersøker under registreringsprøvingen (隨案主動查詢), når grenen står i søknaden, men mangler i det vedlagte resultatet; det forhold at en gren ikke står på denne listen, betyr ikke at kontrollen er fritatt.
+Listen nedenfor over de «forretningsgrener som handelskontoret undersøker på eget initiativ» (主動查詢之營業項目) betegner de forretningsgrenene som handelskontoret undersøker på eget initiativ under registreringsprøvingen (隨案主動查詢), når grenen står i søknaden, men mangler i det vedlagte resultatet; det forhold at en gren ikke står på denne listen, betyr ikke at kontrollen er fritatt.
 
-Hvis man åpner på et sted der restaurantnæringen ikke er mulig, kan senere en administrativ bot (罰鍰) fra den kompetente myndighet følge.
+Hvis man åpner på et sted der restaurantnæringen ikke er mulig, kan senere en administrativ bot (罰鍰) fra den kompetente myndigheten følge.
 
-![«grener som undersøkes av embetet» (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![«forretningsgrener som handelskontoret undersøker på eget initiativ» (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-«grener som undersøkes av embetet» (主動查詢之營業項目)
+«forretningsgrener som handelskontoret undersøker på eget initiativ» (主動查詢之營業項目)
 
 Dette er hovedpunktene; har du flere spørsmål, kan du rådføre deg med en advokat i Taiwan (rådgivning foregår bare på engelsk, kinesisk, japansk eller koreansk).
 

@@ -31,7 +31,7 @@ Eksempel Korea: koreanske banker (銀行) krever som regel at investoren **perso
 
 Overføring via nettbank eller via en nærstående (匯款) er da ikke mulig.
 
-Dessuten må en koreansk statsborger som stifter en utenlandsk juridisk person eller erverver andeler, etter de koreanske valutareglene sende inn en «melding om direkte investering i utlandet». Anmeldelsen skal registreres på tidspunktet for kapitaloverføringen til den taiwanske juridiske person (台灣法人); hvis den uteblir, kan det følge sanksjoner for overtredelse av valutareglene.
+Dessuten må en koreansk statsborger som stifter en utenlandsk juridisk person eller erverver andeler, etter de koreanske valutareglene sende inn en «melding om direkte investering i utlandet». Anmeldelsen skal registreres på tidspunktet for kapitaloverføringen til den taiwanske juridiske personen (台灣法人); hvis den uteblir, kan det følge sanksjoner for overtredelse av valutareglene.
 
 Undersøk reglene hos banken din i hjemlandet før kapitaloverføringen (資本金匯款).
 
@@ -55,7 +55,7 @@ Som regel kan den ansvarlige (負責人), når registreringsdokumentene for den 
 
 gå i banken og gjøre selskapets forberedelseskonto om til en vanlig konto.
 
-Da de interne regler i hver bank (銀行) imidlertid skiller seg, anbefales det å forespørre banken først, hvis kapitalen skal brukes raskt.
+Da de interne reglene i hver bank (銀行) imidlertid skiller seg, anbefales det å forespørre banken først, hvis kapitalen skal brukes raskt.
 
 **​**
 
@@ -71,7 +71,7 @@ Visse banker kan stille ytterligere krav, for eksempel en brukstid for kontoen p
 
 A. Første medarbeider: anmodningen innleveres som ledende arbeid i en alminnelig virksomhet med investering fra oversjøiske kinesere eller utlendinger (一般僑外投資事業主管工作). Målestokken for «spesialisert eller teknisk arbeid» under punkt B nedenfor finner ikke anvendelse, men adressatvilkårene gjør, herunder vilkåret som leder (經理人) av et selskap, hvis innskudd fra oversjøiske kinesere eller utlendinger overstiger 1/3, samt arbeidsgiverens resultatvilkår vedrørende kapital og omsetning (bedømmelsesstandarder art. 38 og art. 39).
 
-B. Fra den neste medarbeider gjelder det begrensninger: overstiger antallet av ansatte medarbeidere 1 person, behandles medarbeiderens relevante utdanning og erfaring, reglene om den gjennomsnittlige ansettelseslønn samt reglene om selskapets kapital og omsetning i overensstemmelse med «spesialisert eller teknisk arbeid» (專門性或技術性工作).
+B. Når selskapet ansetter mer enn 1 utenlandsk statsborger, vurderes medarbeiderens relevante utdanning og erfaring, kravet til gjennomsnittslønn og kravene til selskapets kapital og omsetning etter reglene for «spesialisert eller teknisk arbeid» (專門性或技術性工作).
 
 Se nettstedet for Taiwans arbeidsdepartement (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

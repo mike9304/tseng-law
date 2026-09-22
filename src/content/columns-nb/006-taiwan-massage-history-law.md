@@ -39,7 +39,7 @@ finnes det også i Taiwan mange massasjegater.
 
 Massasjesteder av alle slag ligger side om side.
 
-Der finnes massasje utført av personer med synshemming (視障按摩), fotmassasje, oljemassasje, thaimassasje og andre former.
+Det finnes massasje utført av personer med synshemming (視障按摩), fotmassasje, oljemassasje, thaimassasje og andre former.
 
 I prinsippet kan hver enkelt velge den massasjen som passer egen smak, for å løse opp spenninger.
 
@@ -89,7 +89,7 @@ Til sammenligning: i Korea, der mange personer med synshemming lever av massasje
 
 kan som regel bare personer med synshemming som har oppnådd et kompetansebevis, utøve massasjeyrket.
 
-Riktignok har Koreas regering på et tidspunkt også utstedt massasjediplomer til personer uten synshemming,
+Riktignok har Koreas regjering på et tidspunkt også utstedt massasjediplomer til personer uten synshemming,
 
 og mange personer med synshemming har, i frykt for å miste livsgrunnlaget sitt, gjennomført kraftige protester.
 

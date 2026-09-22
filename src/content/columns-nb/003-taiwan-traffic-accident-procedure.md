@@ -29,7 +29,7 @@ Artikkel 185-4 i straffeloven (刑法) behandler det strafferettslige ansvar for
 
 ## Q2. Hvilke beviser skal først sikres?
 
-Sikre først deg selv og sett ut varseltrekanten. Nødnumrene i Taiwan er 119 (ambulanse og brannvesen), 110 (politi) og 112 fra mobiltelefon (交通事故). Anmeld også trafikkulykken til politiet, for så vidt situasjonen krever det.
+Sikre først deg selv og sett ut varseltrekanten. Nødnumrene i Taiwan: 119 (ambulanse/brann), 110 (politi), 112 fra mobil (交通事故). Anmeld også trafikkulykken til politiet, for så vidt situasjonen krever det.
 
 Når sikkerheten er sikret, ta da oversikts- og næropptak for å fastholde kjøretøyets plassering og skader, veimerkingen, signaler og vær. Vitnekontakter, anmodning om sikring av CCTV (監視器影像) og dashcam (行車紀錄器), opplysninger om parter, kjøretøyer og forsikringer samt legejournaler (病歷) bør du ikke utelate. Private opptak er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfall ikke den krevde politibehandling.
 
@@ -37,7 +37,7 @@ Hva politidokumentene angår, kan du på ulykkesstedet få utlevert registrering
 
 ## Q3. Hvilke krav og frister skal undersøkes ved tilskadekomst?
 
-Artikkel 284 i straffeloven (刑法) regulerer uaktsom legemsbeskadigelse (過失傷害) og uaktsom grov legemsbeskadigelse (過失致重傷). Denne bestemmelsen er ifølge artikkel 287 i straffeloven en klageforbrytelse (告訴乃論之罪); ifølge artikkel 237 i straffeprosessloven (刑事訴訟法) skal klagen i prinsippet innleveres innenfor 6 måneder fra kjennskapet til gjerningsmannen.
+Artikkel 284 i straffeloven (刑法) regulerer uaktsom kroppsskade (過失傷害) og uaktsom grov kroppsskade (過失致重傷). Denne bestemmelsen er ifølge artikkel 287 i straffeloven en klageforbrytelse (告訴乃論之罪); ifølge artikkel 237 i straffeprosessloven (刑事訴訟法) skal klagen i prinsippet innleveres innenfor 6 måneder fra kjennskapet til gjerningsmannen.
 
 Sivilrettslig erstatning (損害賠償) kan ifølge artikkel 197 i sivilloven (民法) ikke lenger kreves, når 2 år fra kjennskapet til skaden og den erstatningspliktige eller 10 år fra den rettsstridige handling er forløpet. Hvilke kjensgjerninger det påvirker foreldelsen (消滅時效), skal undersøkes særskilt.
 
@@ -47,7 +47,7 @@ Valget avviker etter avbrytelse av foreldelsen (時效中斷), kretsen av saksø
 
 ## Q4. Hvordan bedømmes det strafferettslige og sivilrettslige ansvar, når begge sider har uaktsomhet?
 
-Strafferettslig ansvar kan først bedømmes, når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenheng, som denne tilsidesettelse har med motpartens tilskadekomst, er anerkjent. Alene fordi begge sider har uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom legemsbeskadigelse.
+Strafferettslig ansvar kan først bedømmes, når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenheng, som denne tilsidesettelse har med motpartens tilskadekomst, er anerkjent. Alene fordi begge sider har uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom kroppsskade.
 
 Sivilrettslig kan retten ifølge artikkel 217 i sivilloven (民法) nedsette eller ettergi erstatningen, hvis den skadelidte har uaktsomhet ved skadens oppståen eller forøkelse (與有過失). Ble for eksempel anerkjente skader på TWD 1.000.000 (新臺幣) og den skadelidtes uaktsomhet vurdert til 50 %, kan beløpet før andre tilpasninger falle til TWD 500.000.
 
@@ -77,7 +77,7 @@ Ved klageforbrytelser kan klagen ifølge artikkel 238 i straffeprosessloven trek
 - [Sivilloven artikkel 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
 - [Sivilloven artikkel 736](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=736&pcode=B0000001)
 - [Sivilloven artikkel 737](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001)
-- [Trafiksikkerhedsvejledning fra Departementet for transport (交通部)](https://168.motc.gov.tw/theme/car/post/2002211806152)
+- [Trafikksikkerhetsveiledning fra Taiwans samferdselsdepartement (交通部)](https://168.motc.gov.tw/theme/car/post/2002211806152)
 - [Politimyndighetens veiledning om beviser og dokumenter ved trafikkulykker](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
 - [Politimyndighetens ofte stilte spørsmål om trafikkulykker](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
@@ -175,9 +175,9 @@ Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring 
 
 Ved eneulykker med 1 kjøretøy er dets fører som regel ikke ytelsesmottaker av den obligatoriske forsikring for det kjøretøy. Ved ulykker med flere kjøretøyer kan føreren imidlertid kreve ytelser hos den obligatoriske forsikringsgiver for et annet involvert kjøretøy.
 
-Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Loftet for nødvendige passende behandlingsutgifter ved tilskadekomst utgjør TWD 200.000, invaliditetsytelser (失能) etter de lovbestemte 15 trinn TWD 80.000–3.000.000, dødsfallsytelsen TWD 3.000.000, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 tilskadekomne person og 1 ulykke utgjør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gjelde.
+Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør TWD 200.000, invaliditetsytelser (失能) etter de lovbestemte 15 trinn TWD 80.000–3.000.000, dødsfallsytelsen TWD 3.000.000, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 tilskadekomne person og 1 ulykke utgjør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gjelde.
 
-Ansvarsforsikring overfor tredjemann (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktsmessige valgprodukter. Den faktiske dekning avviker etter forsikret, loft, egenandel (自負額), unntak, uaktsomhet og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøkes et for et.
+Ansvarsforsikring overfor tredjemann (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktsmessige valgprodukter. Den faktiske dekning avviker etter forsikret, tak, egenandel (自負額), unntak, uaktsomhet og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøkes et for et.
 
 ### Offisielle grunnlag Q11–Q15
 
@@ -193,13 +193,13 @@ Ansvarsforsikring overfor tredjemann (第三人責任險), førerens ulykkesfors
 - [Straffeloven for Republikken Kina artikkel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Lov om obligatorisk ansvarsforsikring for motorkjøretøyer](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Ytelsesnorm for den obligatoriske ansvarsforsikring for motorkjøretøyer](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
-- [Standardkontrakt fra Kommissionen for finansielt tilsyn (金融監督管理委員會) for privat motorkjøretøyforsikring](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
+- [Standardkontrakt fra Kommisjonen for finansielt tilsyn (金融監督管理委員會) for privat motorkjøretøyforsikring](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 Q16. Kan alt etter ulykken overlates til forsikringsselskapet?
 
 ​
 
-Ifølge min erfaring behandler forsikringsselskapet ofte ikke ulykkesparternes følelsesmessige side tilstrekkelig.
+Forsikringsselskapet behandler ofte ikke ulykkespartenes følelsesmessige side tilstrekkelig.
 
 ​
 
@@ -219,7 +219,7 @@ Det kan også oppstå interessekonflikter mellom forsikringsselskap og part, og 
 
 ​
 
-Derfor tilrår jeg ikke å overlate hele prosessen til forsikringsselskapet.
+Det er derfor ikke tilrådelig å overlate hele prosessen til forsikringsselskapet.
 
 ​
 
@@ -231,11 +231,11 @@ Overlater du det til forsikringsselskapet, skal du løpende følge behandlingsfo
 
 ​
 
-Q17. Hva er den forårsakendes strafferettslige ansvar for uaktsom legemsbeskadigelse?
+Q17. Hva er den forårsakendes strafferettslige ansvar for uaktsom kroppsskade?
 
 ​
 
-Straffen for uaktsom legemsbeskadigelse (過失傷害) varierer med omstendighetene; i publisert praksis forekommer blant annet fengsel i omkring 3 måneder. Det finnes ingen typisk utgang, og utfallet i en konkret sak kan ikke forutsies.
+Straffen for uaktsom kroppsskade (過失傷害) varierer med omstendighetene; i enkelte dommer er fengsel på omkring 3 måneder idømt. Det finnes ikke noe typisk eller garantert utfall.
 
 ​
 
@@ -247,7 +247,7 @@ Ved omregning til bot fastsetter artikkel 41, 1. ledd, i straffeloven (刑法) o
 
 ​
 
-Ved uaktsom grov legemsbeskadigelse forekommer det i praksis straffer omkring 4 måneder, og ved uaktsomt forvoldt død (過失致死) omkring 6 måneder. Dette er ingen norm og kan ikke legges til grunn på forhånd.
+Ved uaktsom grov kroppsskade er det i enkelte dommer idømt omkring 4 måneder, og ved uaktsomt forvoldt død (過失致死) omkring 6 måneder. Det finnes ikke noe typisk eller garantert utfall.
 
 ​
 
@@ -259,7 +259,7 @@ Q18. Kan den strafferettslige klage trekkes tilbake, hvis man inngår forlik med
 
 ​
 
-Uaktsom legemsbeskadigelse og uaktsom grov legemsbeskadigelse er klageforbrytelser (告訴乃論之罪), hvor den strafferettslige klage kan trekkes tilbake.
+Uaktsom kroppsskade og uaktsom grov kroppsskade er klageforbrytelser (告訴乃論之罪), hvor den strafferettslige klage kan trekkes tilbake.
 
 ​
 
@@ -267,7 +267,7 @@ Uaktsomt forvoldt død tillater ikke frafall av klagen; inngår man imidlertid f
 
 ​
 
-I enkelte saker kan straffen gjøres betinget (緩刑), slik at frihetsstraffen ikke må sones. Dette skjer ikke automatisk og kan ikke loves på forhånd.
+En betinget dom (緩刑) kan være mulig i enkelte saker; dette er ikke et løfte.
 
 ​
 

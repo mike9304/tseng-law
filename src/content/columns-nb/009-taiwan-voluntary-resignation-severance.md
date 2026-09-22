@@ -73,11 +73,11 @@ Derfor skal arbeidstakere holde fristen nøyaktig for øye.
 
 Med andre ord:
 
-Taiwans rett, hva enten skylden ligger hos selskapet
+Taiwans rett gir, avhengig av om skylden ligger hos selskapet
 
 eller hos arbeidstakeren,
 
-anerkjenner hos begge sider retten til ikke å utbetale sluttvederlag eller å kreve sluttvederlag.
+arbeidsgiveren rett til ikke å betale sluttvederlag og arbeidstakeren rett til å kreve det.
 
 Sommetider ligger skyld hos begge sider,
 
@@ -91,7 +91,7 @@ Derfor er i taiwanske arbeidskonflikter (勞資糾紛)
 
 **tidspunktet** svært viktig.
 
-I de fleste tilfeller beskyttes den siden som har forberedt seg på forhånd.
+Den som forbereder seg på forhånd, står i de fleste tilfeller sterkere til å ivareta rettighetene sine; noe bestemt utfall følger ikke av det.
 
 ---
 

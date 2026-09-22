@@ -380,7 +380,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Permintaan Anda tidak terkirim. Silakan coba lagi, atau kirim ke alamat email pada halaman kontak.',
     originalLanguageLabel: 'Bahasa yang Anda pakai untuk menulis',
     originalLanguagePlaceholder:
-      'Misalnya: bahasa Indonesia, bahasa Vietnam, bahasa Thai, bahasa Filipino, atau bahasa lain',
+      'Misalnya: bahasa Indonesia, bahasa Vietnam, bahasa Thailand, bahasa Filipino, atau bahasa lain',
     preferredConsultationLanguageLabel: 'Bahasa konsultasi yang Anda inginkan',
     originalTextLabel: 'Ringkasan perkara (dalam bahasa Anda sendiri)',
     originalTextPlaceholder:

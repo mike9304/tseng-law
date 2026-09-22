@@ -3,7 +3,7 @@ title: "Ganti Rugi Cedera di Pusat Kebugaran Taiwan: Kasus Tingkat Pertama, Bata
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "13 September 2025"
-read_time: "10 menit membaca"
+read_time: "10 menit baca"
 categories:
   - "Analisis Kasus Litigasi"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
@@ -96,7 +96,7 @@ Pos kerugian yang dapat dipertimbangkan untuk dituntut adalah sebagai berikut. D
 1. **Biaya pengobatan**: Biaya yang benar-benar dikeluarkan untuk pemeriksaan, penunjang diagnosis, terapi, obat-obatan, dan rehabilitasi dibuktikan dengan kuitansi dan rekam medis.
 2. **Biaya perawatan atau pendampingan**: Apakah perawatan memang dibutuhkan jika dilihat dari derajat cedera dan perjalanan pengobatan, serta apakah jangka waktu dan biayanya wajar, ditelaah melalui data medis dan data pengeluaran.
 3. **Biaya transportasi**: Biaya yang diperlukan untuk pergi dan pulang dari fasilitas kesehatan guna menjalani pengobatan dibuktikan dengan catatan perjalanan, kuitansi, dan sejenisnya.
-4. **Kerugian akibat penurunan kemampuan bekerja (勞動能力減損)**: Apabila cacat sisa dan penurunan kemampuan bekerja yang berkelanjutan diakui, penilaian dapat dilakukan dengan mempertimbangkan secara menyeluruh data medis dan data pekerjaan, derajat kecacatan, jenis pekerjaan dan penghasilan, serta sisa masa kerja yang masih mungkin dijalani. Angka persentase kecacatan saja tidak menetapkan besarnya ganti rugi, dan kerugian juga tidak otomatis dihitung sampai saat pensiun.
+4. **Kerugian akibat penurunan kemampuan bekerja (勞動能力減損)**: Apabila kecacatan yang menetap dan penurunan kemampuan bekerja yang berkelanjutan diakui, penilaian dapat dilakukan dengan mempertimbangkan secara menyeluruh data medis dan data pekerjaan, derajat kecacatan, jenis pekerjaan dan penghasilan, serta sisa masa kerja yang masih mungkin dijalani. Angka persentase kecacatan saja tidak menetapkan besarnya ganti rugi, dan kerugian juga tidak otomatis dihitung sampai saat pensiun.
 5. **Kehilangan penghasilan selama masa pemulihan (收入損失)**: Jangka waktu ketika seseorang benar-benar tidak dapat bekerja karena pengobatan atau pemulihan, serta penghasilan yang berkurang karenanya, harus dibuktikan dengan data gaji, data perpajakan, catatan kehadiran kerja, dan sejenisnya.
 6. **Ganti rugi immateriil (非財產上損害)**: Besarnya uang atas penderitaan batin ditetapkan pengadilan berdasarkan faktor pada tiap perkara, seperti derajat cedera, lamanya pengobatan, gejala sisa, dan keadaan konkret pihak yang bersangkutan.
 7. **Ganti rugi punitif (懲罰性賠償金)**: Terdapat ketentuan bahwa dalam gugatan yang tunduk pada Undang-Undang Perlindungan Konsumen, apabila kerugian ditimbulkan karena kesengajaan pelaku usaha dapat dituntut paling banyak 5 kali lipat kerugian yang sebenarnya, apabila karena kelalaian berat paling banyak 3 kali lipat, dan apabila karena kelalaian paling banyak 1 kali lipat dari jumlah kerugian yang sebenarnya. Apakah [Pasal 51 Undang-Undang Perlindungan Konsumen Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) berlaku pada perkara yang bersangkutan, serta ada tidaknya dan besarnya ganti rugi yang benar-benar diberikan, bergantung pada penilaian pengadilan atas syarat dan bukti yang konkret.

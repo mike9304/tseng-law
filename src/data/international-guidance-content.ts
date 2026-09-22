@@ -770,7 +770,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Apa yang kami kerjakan',
             paragraphs: [
-              'Hovering International Law Firm adalah kantor advokat yang berkedudukan di Taiwan, bekerja berdasarkan hukum Taiwan, dan memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), serta Pingtung (屏東). Kami menangani konsultasi hukum bagi perusahaan sekaligus perkara yang beracara di pengadilan, dan mendampingi klien dari luar negeri dalam proses yang harus ditempuh di Taiwan.',
+              'Hovering International Law Firm adalah kantor advokat yang berkedudukan di Taiwan, bekerja berdasarkan hukum Taiwan, dan memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), serta Pingtung (屏東). Kami menangani konsultasi hukum bagi perusahaan sekaligus beracara di pengadilan, dan mendampingi klien dari luar negeri dalam proses yang harus ditempuh di Taiwan.',
               'Seluruh isi di sini bersifat umum. Kesimpulan sebuah perkara bergantung pada fakta, ketentuan yang berlaku, dan waktunya, sehingga panduan ini tidak menggantikan pembicaraan langsung dengan advokat mengenai berkas Anda.',
             ],
           },
@@ -829,7 +829,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Perkawinan, keluarga, dan waris',
             paragraphs: [
-              'Kami menangani perkara perceraian (離婚), pembagian harta, pelaksanaan dan pemikulan hak serta kewajiban terhadap anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak kunjungan dan bertemu anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.',
+              'Kami menangani perkara perceraian (離婚), pembagian harta, hak asuh anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak kunjungan dan hak bertemu anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.',
               'Karena perkara keluarga sering disertai tenggat waktu dan beberapa prosedur yang berjalan bersamaan, ringkasan awal sebaiknya menyebutkan hubungan antarpihak, tempat tinggal saat ini, dan prosedur yang sudah atau sedang berjalan.',
             ],
           },
@@ -876,7 +876,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             paragraphs: [
               'Hovering International Law Firm (昊鼎國際法律事務所) didirikan pada 2016 oleh para advokat lulusan Universitas Nasional Taiwan (國立臺灣大學). Nama Tionghoanya, 昊鼎, menggabungkan aksara 昊 yang berarti “langit yang luas” dan aksara 鼎 yang berarti “dasar yang kokoh”, yang mencerminkan arah kantor sejak awal berdiri.',
               'Kami memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), dan Pingtung (屏東). Kantor Kaohsiung berfokus pada tata kelola perusahaan dan menangani sengketa perdata, pidana, serta administrasi secara umum. Kantor Taichung menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea dan Jepang. Kantor Pingtung dibuka pada 2017 untuk melayani kebutuhan setempat.',
-              'Selain pekerjaan advokat, pada 2020 berdiri pula Hovering Accounting Office, yang menyediakan layanan akuntansi dan perencanaan pajak bagi pemilik usaha dan perorangan berkekayaan besar.',
+              'Selain pekerjaan advokat, pada 2020 berdiri pula Hovering Accounting Office, yang menyediakan layanan akuntansi dan perencanaan pajak bagi pemilik usaha dan orang pribadi yang berkekayaan tinggi.',
             ],
           },
           {
@@ -941,7 +941,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Mengapa halaman ini tidak memuat tarif',
             paragraphs: [
               'Besarnya biaya bergantung pada perkaranya sendiri: banyaknya pekerjaan yang harus dilakukan, jumlah pihak, dokumen yang tersedia, tenggat waktu yang berlaku, dan apakah suatu prosedur sudah dimulai. Angka yang dipasang di muka tidak akan menunjukkan biaya untuk berkas Anda; karena itu, alih-alih memuat daftar tarif, kami menetapkan lebih dulu lingkup pekerjaan bagi perkara Anda lalu menyampaikan biayanya untuk Anda pertimbangkan sebelum pekerjaan dimulai.',
-              'Selain honorarium advokat, sebuah perkara dapat menimbulkan pungutan yang harus dibayarkan kepada pengadilan, instansi pemerintah, atau pihak ketiga. Pungutan itu terpisah dari honorarium advokat dan bergantung pada prosedur yang ditempuh.',
+              'Selain honorarium advokat, sebuah perkara dapat menimbulkan biaya yang harus dibayarkan kepada pengadilan, instansi pemerintah, atau pihak ketiga. Biaya itu terpisah dari honorarium advokat dan bergantung pada prosedur yang ditempuh.',
             ],
           },
         ],

@@ -1,9 +1,9 @@
 ---
-title: "Memasuki Pasar Kosmetik Taiwan: Pemilihan Importir, Pendaftaran Produk, Penyusunan dan Penyimpanan PIF, serta Aturan Iklan"
+title: "Memasuki pasar kosmetik Taiwan: pemilihan importir, pendaftaran produk, penyusunan dan penyimpanan PIF, serta aturan iklan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
 date_display: "4 Februari 2026"
-read_time: "12 menit membaca"
+read_time: "12 menit baca"
 categories:
   - "Pendirian Perusahaan di Taiwan"
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
@@ -11,12 +11,12 @@ faq:
   - q: "Apakah untuk menjual kosmetik di Taiwan harus selalu didirikan anak perusahaan atau kantor cabang?"
     a: "Tidak selalu harus didirikan. Importir Taiwan (termasuk importir yang sekaligus bertindak sebagai agen penjualan) dapat dipercayakan untuk melakukan impor dan penjualan. Apabila Anda hendak menjalankan sendiri usaha di Taiwan, pendirian dan pendaftaran anak perusahaan (子公司) di Taiwan berbeda dari pendirian dan pendaftaran kantor cabang (分公司) perusahaan asing, demikian pula struktur tanggung jawab dan perpajakannya; jangka waktu yang diperlukan untuk persetujuan investasi asing (僑外投資核准) serta pendaftaran perusahaan atau kantor cabang juga berbeda-beda menurut masing-masing perkara dan menurut ada tidaknya perbaikan atau pelengkapan dokumen. Model usaha serta pihak yang akan memikul tanggung jawab sebagai produsen atau importir kosmetik (化粧品製造或輸入業者) harus ditetapkan lebih dahulu."
   - q: "Apa itu PIF, dan apakah ia merupakan prosedur yang sama dengan pendaftaran produk pada TFDA?"
-    a: "Bukan prosedur yang sama. Pendaftaran produk (產品登錄) adalah prosedur tersendiri yang dijalankan melalui platform pendaftaran produk kosmetik TFDA (衛生福利部食品藥物管理署). PIF adalah berkas yang menghimpun data mengenai mutu, keamanan, komposisi, fungsi yang diklaim, cara produksi, hasil pengujian, penilaian keamanan, dan sejenisnya, yang disusun, dimutakhirkan, dan disimpan oleh produsen atau importir kosmetik; PIF itu sendiri bukanlah dokumen yang harus diserahkan terlebih dahulu kepada TFDA. Sejak 1 Juli 2026, pada prinsipnya seluruh kosmetik menjadi objek ketentuan PIF, dengan pengecualian sabun batangan buatan tangan yang diproduksi di tempat produksi yang dibebaskan dari pendaftaran pabrik (工廠登記)."
+    a: "Pendaftaran produk dan PIF bukan prosedur yang sama. Pendaftaran produk (產品登錄) adalah prosedur tersendiri yang dijalankan melalui platform pendaftaran produk kosmetik TFDA (衛生福利部食品藥物管理署). PIF adalah berkas yang menghimpun data mengenai mutu, keamanan, komposisi, fungsi yang diklaim, cara produksi, hasil pengujian, penilaian keamanan, dan sejenisnya, yang disusun, dimutakhirkan, dan disimpan oleh produsen atau importir kosmetik; PIF itu sendiri bukanlah dokumen yang harus diserahkan terlebih dahulu kepada TFDA. Sejak 1 Juli 2026, pada prinsipnya seluruh kosmetik menjadi objek ketentuan PIF, dengan pengecualian sabun batangan buatan tangan yang diproduksi di tempat produksi yang dibebaskan dari pendaftaran pabrik (工廠登記)."
   - q: "Ungkapan apa saja yang harus diperhatikan dalam iklan kosmetik di Taiwan?"
     a: "Iklan dinilai bukan hanya dari kalimatnya, melainkan dari keseluruhan penyajiannya, termasuk nama produk, tulisan, gambar, simbol, dan suara. Ungkapan yang palsu atau berlebihan serta klaim khasiat medis dilarang, dan ungkapan medis seperti mengobati jerawat, antiradang, atau membunuh kuman harus diperhatikan secara khusus. Denda administratifnya adalah 40.000 hingga 200.000 dolar Taiwan baru (新臺幣, TWD) untuk iklan palsu atau berlebihan, dan TWD 600.000 hingga TWD 5.000.000 untuk klaim khasiat medis. Unggahan pemengaruh dan pihak lain pun harus ditinjau dengan standar yang sama apabila pada hakikatnya merupakan iklan."
 ---
 
-# Memasuki Pasar Kosmetik Taiwan: Pemilihan Importir, Pendaftaran Produk, Penyusunan dan Penyimpanan PIF, serta Aturan Iklan
+# Memasuki pasar kosmetik Taiwan: pemilihan importir, pendaftaran produk, penyusunan dan penyimpanan PIF, serta aturan iklan
 
 ![Data produk dan peninjauan peraturan yang diperlukan untuk memasuki pasar kosmetik Taiwan](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
@@ -26,11 +26,11 @@ Kewajiban yang berlaku dapat berbeda menurut jenis produk dan tempat produksinya
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
-## 1. Bentuk Masuk ke Pasar Taiwan dan Pemilihan Importir
+## 1. Bentuk masuk ke pasar Taiwan dan pemilihan importir
 
 Tidak selalu harus didirikan anak perusahaan atau kantor cabang. Importir Taiwan (termasuk importir yang sekaligus bertindak sebagai agen penjualan) dapat dipercayakan untuk melakukan impor dan penjualan. Apabila Anda hendak menjalankan sendiri usaha di Taiwan, pendirian dan pendaftaran anak perusahaan (子公司) di Taiwan berbeda dari pendirian dan pendaftaran kantor cabang (分公司) perusahaan asing, demikian pula struktur tanggung jawab dan perpajakannya; jangka waktu yang diperlukan untuk persetujuan investasi asing (僑外投資核准) serta pendaftaran perusahaan atau kantor cabang juga berbeda-beda menurut masing-masing perkara dan menurut ada tidaknya perbaikan atau pelengkapan dokumen. Model usaha serta pihak yang akan memikul tanggung jawab sebagai produsen atau importir kosmetik (化粧品製造或輸入業者) harus ditetapkan lebih dahulu.
 
-### Apabila Impor Dipercayakan kepada Importir Setempat
+### Apabila impor dipercayakan kepada importir setempat
 
 Apabila importir Taiwan atau agen penjualan (銷售代理商) menangani impor dan penjualan, merek asing dapat pula memilih struktur tanpa anak perusahaan atau kantor cabangnya sendiri di Taiwan. Agen penjualan dapat sekaligus bertindak sebagai importir, dapat pula importir lain yang ikut serta secara terpisah. Namun, penetapan siapa yang memikul tanggung jawab hukum tidak ditentukan semata-mata oleh nama dalam perjanjian seperti agen, distributor tunggal, atau distributor.
 
@@ -38,7 +38,7 @@ Ketika pembagian pekerjaan yang sebenarnya dirancang, hal pertama yang harus dip
 
 Dalam perjanjian, sebaiknya diatur secara konkret ruang lingkup penggunaan kekayaan intelektual seperti merek dagang (商標) dan gambar, cara penyediaan, penerjemahan, dan pelengkapan data produsen asal (原製造者) yang diperlukan untuk pendaftaran produk serta PIF, pengelolaan data terbaru, dan serah terima pada saat perjanjian berakhir. Dapat pula dicakup kewenangan meninjau dan mengubah iklan sebelum dipublikasikan, penerusan informasi keamanan seperti keluhan dan reaksi merugikan, kerja sama dalam penarikan produk (回收) apabila diperlukan, serta penanggungan biaya pengujian, penerjemahan, dan penyimpanan. Agar data tidak tertinggal hanya pada salah satu pihak, ruang lingkup dan tenggat pengembalian data atau penyerahan salinannya juga perlu ditetapkan lebih dahulu.
 
-### Apabila Usaha di Taiwan Dijalankan Sendiri
+### Apabila usaha di Taiwan dijalankan sendiri
 
 Anak perusahaan di Taiwan dan kantor cabang perusahaan asing bukanlah organisasi yang sama. Anak perusahaan adalah badan hukum tersendiri yang didirikan menurut hukum Taiwan, sedangkan kantor cabang didaftarkan sebagai bagian dari kantor pusat (本公司) perusahaan asing. Kepribadian hukum, tanggung jawab kantor pusat, perlakuan akuntansi dan perpajakan, pemindahan laba, kewenangan mewakili, serta cara pengendalian internalnya berbeda, sehingga bentuk organisasi tidak boleh dipilih hanya berdasarkan kendali atas penjualan.
 
@@ -46,11 +46,11 @@ Apabila prosedur investasi asing diperlukan, panduan **Departemen Peninjauan Inv
 
 Struktur mana pun yang dipilih, pihak yang memikul tanggung jawab utama dalam pengaturan kosmetik adalah **produsen atau importir kosmetik**. Penyusunan data produk atau penilaian keamanan (安全性評估) memang dapat dipercayakan kepada ahli dari luar, tetapi penyerahan pekerjaan itu sendiri tidak memindahkan tanggung jawab hukum produsen atau importir. Membedakan pembagian pekerjaan menurut perjanjian dari pihak yang bertanggung jawab menurut peraturan adalah titik awal peninjauan struktur untuk memasuki pasar.
 
-## 2. Pendaftaran Produk dan PIF Adalah Dua Ketentuan yang Berbeda
+## 2. Pendaftaran produk dan PIF adalah dua ketentuan yang berbeda
 
-Bukan prosedur yang sama. Pendaftaran produk adalah prosedur tersendiri yang dijalankan melalui platform pendaftaran produk kosmetik TFDA (衛生福利部食品藥物管理署). PIF adalah berkas yang menghimpun data mengenai mutu, keamanan, komposisi, fungsi yang diklaim, cara produksi, hasil pengujian, penilaian keamanan, dan sejenisnya, yang disusun, dimutakhirkan, dan disimpan oleh produsen atau importir kosmetik; PIF itu sendiri bukanlah dokumen yang harus diserahkan terlebih dahulu kepada TFDA. Sejak 1 Juli 2026, pada prinsipnya seluruh kosmetik menjadi objek ketentuan PIF, dengan pengecualian sabun batangan buatan tangan (固態手工香皂) yang diproduksi di tempat produksi yang dibebaskan dari pendaftaran pabrik (工廠登記).
+Pendaftaran produk dan PIF bukan prosedur yang sama. Pendaftaran produk adalah prosedur tersendiri yang dijalankan melalui platform pendaftaran produk kosmetik TFDA (衛生福利部食品藥物管理署). PIF adalah berkas yang menghimpun data mengenai mutu, keamanan, komposisi, fungsi yang diklaim, cara produksi, hasil pengujian, penilaian keamanan, dan sejenisnya, yang disusun, dimutakhirkan, dan disimpan oleh produsen atau importir kosmetik; PIF itu sendiri bukanlah dokumen yang harus diserahkan terlebih dahulu kepada TFDA. Sejak 1 Juli 2026, pada prinsipnya seluruh kosmetik menjadi objek ketentuan PIF, dengan pengecualian sabun batangan buatan tangan (固態手工香皂) yang diproduksi di tempat produksi yang dibebaskan dari pendaftaran pabrik (工廠登記).
 
-### Saat Pendaftaran Produk dan Masa Berlakunya
+### Saat pendaftaran produk dan masa berlakunya
 
 Pendaftaran produk kosmetik dijalankan melalui platform pendaftaran produk kosmetik TFDA. Produsen atau importir kosmetik harus menyelesaikan pendaftaran produk sebelum produk yang bersangkutan dipasok, dijual, diberikan cuma-cuma, dipajang untuk umum (公開陳列), atau disediakan kepada konsumen untuk dicoba. Persiapan tidak boleh disusun hanya dengan berpatokan pada penjualan berbayar; jadwal pemberian cuma-cuma untuk promosi maupun penyediaan untuk dicoba konsumen pun harus dikelola bersama-sama dengan saat pendaftarannya.
 
@@ -58,7 +58,7 @@ Masa berlaku pendaftaran produk adalah 3 tahun. Apabila pasokan hendak dilanjutk
 
 Pendaftaran produk adalah prosedur pelaporan hal-hal yang telah ditentukan pada platform. Selesainya pendaftaran tidak berarti bahwa seluruh data yang diperlukan bagi PIF telah lengkap, dan bukan pula penilaian bahwa penandaan atau iklan produk telah sesuai dengan hukum. Jadwal pendaftaran produk, pengelolaan PIF, serta peninjauan penandaan dan iklan harus dijalankan sebagai butir kepatuhan hukum yang terpisah satu sama lain.
 
-### Data PIF dan Penerapannya secara Bertahap
+### Data PIF dan penerapannya secara bertahap
 
 PIF adalah himpunan data yang disusun agar mutu dan keamanan produk dapat terus dijelaskan. Selain mutu, keamanan, komposisi, fungsi yang diklaim (宣稱功能), cara produksi, hasil pengujian, dan penilaian keamanan, data dasar mengenai produk dan produsennya serta data pendukung seperti label harus ditata untuk setiap produk. Peraturan Pengelolaan Berkas Informasi Produk Kosmetik (化粧品產品資訊檔案管理辦法) menyusun data yang diperlukan ke dalam 16 kategori, sehingga data pada masing-masing kategori beserta syarat penandatanganan dan kualifikasinya harus dipastikan menurut jenis produknya.
 
@@ -66,7 +66,7 @@ Ketentuan PIF selama ini diterapkan secara bertahap menurut kelompok produk. Sej
 
 Pekerjaan PIF, termasuk penilaian keamanan, dapat dibantu oleh pihak ketiga yang memiliki kualifikasi dan kemampuan yang diperlukan. Namun, sekalipun bantuan penyusunan atau layanan penyimpanan data dari pihak ketiga digunakan, tanggung jawab hukum produsen atau importir kosmetik tetap melekat. Harus dibangun suatu sistem yang memungkinkan produsen asal, lembaga pengujian, penilai keamanan, dan pelaku usaha di pihak Taiwan saling meneruskan informasi perubahan dan data bertanda tangan yang terbaru.
 
-### Pemutakhiran dan Penyimpanan
+### Pemutakhiran dan penyimpanan
 
 Apabila bahan baku atau formula, cara produksi dan tempat produksi, penandaan termasuk label, fungsi yang diklaim, atau informasi keamanan berubah, data PIF yang terpengaruh harus ditinjau dan dimutakhirkan. Perlu ditelaah pula apakah keluhan konsumen, kejadian reaksi merugikan, dan hasil pengujian yang baru memengaruhi penilaian yang telah ada, sehingga prosedur pengelolaan perubahan tetap diperlukan setelah penyusunan yang pertama.
 
@@ -74,7 +74,7 @@ Menurut Pasal 7 Peraturan Pengelolaan Berkas Informasi Produk Kosmetik, jangka w
 
 Sekalipun produsen asal yang memegang dokumen aslinya atau penyimpanan elektronik maupun awan yang aman digunakan, produsen atau importir harus tetap dapat mengakses data yang lengkap. Hak akses, pencadangan, pengelolaan versi, format berkas, dan penanggung jawabnya harus ditetapkan agar data dapat ditelusuri dan disampaikan dengan cepat ketika instansi yang berwenang memintanya. Penting pula mengatur dalam perjanjian pihak yang menerima serah terima, caranya, dan ada tidaknya kelangsungan hak akses, agar data tetap terpelihara selama jangka waktu penyimpanan menurut undang-undang bahkan setelah perjanjian dengan mitra penjualan atau penyedia jasa berakhir.
 
-### Pemeriksaan, Perbaikan, dan Tindakan Administratif
+### Pemeriksaan, perbaikan, dan tindakan administratif
 
 Ketika instansi yang berwenang memeriksa PIF, pada prinsipnya produsen atau importir kosmetik diberi tahu selambat-lambatnya 7 hari sebelum hari pemeriksaan. Namun, apabila keadaannya termasuk pengecualian menurut undang-undang yang ditentukan dalam peraturan terkait, pemeriksaan dapat dilakukan tanpa pemberitahuan lebih dahulu. Terlepas dari ada tidaknya pemberitahuan, keadaan yang memungkinkan penelusuran dan penyampaian data terbaru yang lengkap harus dipelihara setiap saat.
 
@@ -82,11 +82,11 @@ Pelaporan informasi palsu dalam pendaftaran produk atau pencantuman informasi pa
 
 Penarikan produk atau pemusnahan (銷毀) bukanlah tindakan yang secara otomatis menyertai setiap ketidaklengkapan data PIF. Keamanan produk, isi pelanggarannya, keadaan perbaikannya, dan syarat menurut undang-undang yang berlaku bagi masing-masing tindakan harus dibedakan dalam penilaiannya. Tindakan ketika masalah keamanan telah dipastikan dan permintaan pelengkapan dokumen harus ditinjau secara terpisah, dan penanganannya mengikuti pemberitahuan instansi yang berwenang serta pasal yang diterapkan.
 
-## 3. Aturan Penandaan, Promosi, dan Iklan
+## 3. Aturan penandaan, promosi, dan iklan
 
 Iklan dinilai bukan hanya dari kalimatnya, melainkan dari keseluruhan penyajiannya, termasuk nama produk, tulisan, gambar, simbol, dan suara. Ungkapan yang palsu atau berlebihan serta klaim khasiat medis dilarang, dan ungkapan medis seperti mengobati jerawat, antiradang, atau membunuh kuman harus diperhatikan secara khusus. Denda administratifnya adalah TWD 40.000 hingga TWD 200.000 untuk iklan palsu atau berlebihan, dan TWD 600.000 hingga TWD 5.000.000 untuk klaim khasiat medis. Unggahan pemengaruh (influencer) dan pihak lain pun harus ditinjau dengan standar yang sama apabila pada hakikatnya merupakan iklan.
 
-### Dinilai dari Keseluruhan Penyajian, Bukan dari Kata per Kata
+### Dinilai dari keseluruhan penyajian, bukan dari kata per kata
 
 Apakah penandaan, promosi (宣傳), atau iklan bersifat palsu atau berlebihan, atau mengandung klaim khasiat medis (醫療效能), tidak dinilai hanya dari satu kata tertentu. Nama barang, kalimat, gambar, simbol, suara, konteks sebelum dan sesudahnya, serta kesan menyeluruh yang diterima konsumen ditelaah bersama-sama. Kesan yang terbentuk oleh penyajian iklan yang menjadi intinya tidak dengan sendirinya terhapus hanya oleh keterangan pembatas bertulisan kecil, sehingga masing-masing naskah maupun hasil akhirnya harus ditinjau seluruhnya.
 
@@ -94,13 +94,13 @@ Sebagai contoh, menyatakan bahwa suatu kosmetik mengobati jerawat, memiliki efek
 
 Denda administratif bagi iklan palsu atau berlebihan (虛偽誇大廣告) adalah TWD 40.000 hingga TWD 200.000, sedangkan denda administratif bagi klaim khasiat medis adalah TWD 600.000 hingga TWD 5.000.000. Karena rentangnya berbeda menurut jenis pelanggarannya, keseluruhan penyajian iklan dan data pendukungnya harus dibandingkan sebelum iklan itu dipublikasikan.
 
-### Pemengaruh, Penulis Ulasan, dan Mitra Penjualan
+### Pemengaruh, penulis ulasan, dan mitra penjualan
 
 Unggahan pemengaruh, penulis ulasan, atau mitra penjualan pun dapat dinilai pada hakikatnya sebagai iklan menurut isi dan konteks komersialnya. Pemberian imbalan, penyediaan produk, tautan penjualan, arahan merek untuk mengunggah, dan kerja sama yang berulang merupakan faktor yang dipertimbangkan dalam penilaian itu. Sebaliknya, tidak setiap unggahan pribadi otomatis menjadi iklan merek, sehingga hubungan antara pengunggah dan merek, isinya yang konkret, serta derajat keterlibatan merek harus dipastikan.
 
 Dalam perjanjian kerja sama dan pedoman operasional dapat ditetapkan ruang lingkup ungkapan yang boleh digunakan beserta data pendukungnya, peninjauan sebelum pengunggahan, serta prosedur perbaikan dan penghapusan ungkapan yang melanggar. Sebaiknya dimasukkan pula ke dalam lingkup pengelolaan ungkapan yang ditambahkan di kolom komentar, penjelasan lisan dalam siaran langsung atau video pendek, dan ketidaksesuaian antara halaman penjualan dan label. Naskah yang ditinjau, riwayat persetujuan, permintaan perbaikan, dan unggahan akhirnya harus disimpan agar keadaan yang sebenarnya dapat dipastikan di kemudian hari.
 
-### Urutan Pemeriksaan Persiapan Penjualan
+### Urutan pemeriksaan persiapan penjualan
 
 Persiapan penjualan di Taiwan yang diperiksa dengan urutan berikut dapat mengurangi risiko tertukarnya ketentuan yang satu dengan yang lain.
 
@@ -113,7 +113,7 @@ Persiapan penjualan di Taiwan yang diperiksa dengan urutan berikut dapat mengura
 
 Struktur dasar perusahaan dan kantor cabang dapat dilihat pada [Dasar pendirian perusahaan di Taiwan](/id/columns/taiwan-company-establishment-basics), ruang lingkup dukungan terkait pada [Bidang perkara yang kami tangani](/id/services), dan keterangan mengenai pengacara yang menangani pada [Tim Internasional Hovering](/id/lawyers).
 
-### Sumber Resmi
+### Sumber resmi
 
 - [Undang-Undang Pengelolaan Higiene dan Keamanan Kosmetik](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030013)
 - [Peraturan Pendaftaran Produk Kosmetik (化粧品產品登錄辦法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030097)
@@ -121,8 +121,8 @@ Struktur dasar perusahaan dan kantor cabang dapat dilihat pada [Dasar pendirian 
 - [TFDA — pengumuman mengenai lingkup objek pendaftaran produk kosmetik](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30612)
 - [TFDA — pengumuman mengenai penerapan bertahap PIF](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614)
 - [TFDA — pedoman penyusunan PIF](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384)
-- [TFDA — kawasan khusus pendaftaran produk kosmetik](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
-- [TFDA — kawasan khusus Berkas Informasi Produk Kosmetik](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
+- [TFDA — laman informasi pendaftaran produk kosmetik](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
+- [TFDA — laman informasi Berkas Informasi Produk Kosmetik](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
 - [Kriteria Penetapan Penandaan, Promosi, dan Iklan Kosmetik (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Lampiran resmi Kriteria Penetapan Iklan Kosmetik](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Kementerian Kesehatan dan Kesejahteraan (衛生福利部) — pengumuman mengenai pengaturan iklan kosmetik](https://www.mohw.gov.tw/cp-4256-48110-1.html)

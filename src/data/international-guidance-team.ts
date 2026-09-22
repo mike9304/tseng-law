@@ -1945,7 +1945,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kantor menangani perkara korporasi dan perorangan di Taiwan dalam bahasa Inggris, bahasa Jepang, bahasa Korea, dan bahasa Mandarin.',
-        'Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M.',
+        'Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M (1,57 juta dolar Taiwan baru).',
       ],
       education: [
         'Magister (M.S.), Institute of Finance, National Taiwan University',
@@ -1955,17 +1955,17 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Yayasan Bantuan Hukum, Cabang Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Sebelumnya bertugas di Ministry of Education, Legal Affairs Division, dengan fokus pada sengketa administrasi dan perdata.',
+        'Sebelumnya bertugas di Kementerian Pendidikan, Bagian Urusan Hukum (Ministry of Education, Legal Affairs Division), dengan fokus pada sengketa administrasi dan perdata.',
         'Berpengalaman dalam perkara perguruan tinggi, hak dosen, dan keberatan administratif.',
       ],
       education: ['Sarjana Hukum (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Kementerian Pendidikan, Bagian Urusan Hukum (Ministry of Education, Legal Affairs Division)',
         'Advokat, Hovering International Law Firm',
       ],
     },

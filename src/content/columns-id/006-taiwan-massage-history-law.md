@@ -3,7 +3,7 @@ title: "Sejarah dan Informasi Hukum Pijat di Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
 date_display: "13 September 2025"
-read_time: "3 menit membaca"
+read_time: "3 menit baca"
 categories:
   - "Informasi Hukum Taiwan"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
@@ -81,7 +81,7 @@ Sebagai contoh, timbul pemikiran apakah ketentuan tertulis yang hanya memperbole
 
 dan dipertanyakan pula apakah ketentuan tersebut benar-benar berkontribusi pada perlindungan pekerjaan dan penghidupan penyandang disabilitas netra.
 
-Pada akhirnya para Hakim Agung Mahkamah Konstitusi (大法官) menyatakan bahwa pasal undang-undang yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bertentangan dengan konstitusi (違憲).
+Pada akhirnya para hakim konstitusi (大法官) menyatakan bahwa pasal undang-undang yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bertentangan dengan konstitusi (違憲).
 
 ​
 

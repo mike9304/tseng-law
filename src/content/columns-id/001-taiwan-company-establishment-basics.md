@@ -3,7 +3,7 @@ title: "Dasar Pendirian Perusahaan di Taiwan: Anak Perusahaan, Kantor Cabang, Ka
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
 date_display: "13 September 2025"
-read_time: "12 menit membaca"
+read_time: "12 menit baca"
 categories:
   - "Pendirian Perusahaan di Taiwan"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
@@ -36,7 +36,7 @@ Anak perusahaan di Taiwan (perseroan terbatas dan perseroan terbatas berbentuk s
 
 Kantor cabang perusahaan asing di Taiwan adalah organisasi yang dibentuk agar kantor pusat asing dapat menjalankan usaha di Taiwan. Kantor cabang itu sendiri bukan organisasi yang memiliki pemegang saham (股東), dan karena ia bukan badan hukum tersendiri melainkan bagian dari kantor pusat, kantor pusatlah yang memikul utang dan tanggung jawab kantor cabang. Perpindahan dana atau pengiriman keuntungan antara kantor pusat dan kantor cabang di Taiwan, pembukuannya, dan perlakuan perpajakannya tidak boleh dianggap sama dengan struktur pembagian dividen (股利) pada anak perusahaan.
 
-Kantor perwakilan adalah basis kegiatan yang bekerja dalam batas yang diperbolehkan, seperti riset pasar, penghubungan, dukungan negosiasi, atau perbuatan hukum untuk kepentingan perusahaan asing. Kantor perwakilan tidak dapat melakukan kegiatan usaha seperti penjualan atau penyediaan jasa di Taiwan. Apabila pekerjaan yang sesungguhnya meluas menjadi penerimaan pesanan, penerimaan pembayaran, atau penyediaan jasa secara berulang, Anda tidak boleh berhenti pada sebutan kantor perwakilan saja, melainkan harus meninjau kembali apakah diperlukan anak perusahaan atau kantor cabang.
+Kantor perwakilan adalah basis kegiatan yang bekerja dalam batas yang diperbolehkan, seperti riset pasar, pekerjaan penghubung, dukungan negosiasi, atau perbuatan hukum untuk kepentingan perusahaan asing. Kantor perwakilan tidak dapat melakukan kegiatan usaha seperti penjualan atau penyediaan jasa di Taiwan. Apabila pekerjaan yang sesungguhnya meluas menjadi penerimaan pesanan, penerimaan pembayaran, atau penyediaan jasa secara berulang, Anda tidak boleh berhenti pada sebutan kantor perwakilan saja, melainkan harus meninjau kembali apakah diperlukan anak perusahaan atau kantor cabang.
 
 Pada akhirnya, ketika membandingkan bentuk organisasi, yang harus dilihat bukan hanya cakupan tanggung jawabnya, melainkan juga struktur permodalan, pembagian keuntungan dan pengirimannya, perpajakan, izin khusus per bidang usaha, hubungan ketenagakerjaan, serta syarat keikutsertaan dalam pengadaan pemerintah. Apabila suatu tender atau perizinan tertentu mensyaratkan badan hukum Taiwan, jumlah modal, rekam jejak, atau pendaftaran tertentu, jangan menyimpulkan begitu saja kelayakan untuk ikut serta hanya dari sebutan bentuk organisasinya, dan pastikan peraturan serta pengumuman yang bersangkutan.
 
@@ -54,7 +54,7 @@ Pendirian anak perusahaan di Taiwan umumnya dimulai dari pemeriksaan awal nama d
 
 2. Akta notaris atau legalisasi dokumen asing seperti surat kuasa (委任書), dan bila diperlukan verifikasi oleh perwakilan Taiwan di luar negeri (駐外館處驗證)
 
-3. Permohonan investasi kepada Departemen Peninjauan Investasi, Kementerian Ekonomi (經濟部投資審議司) (apabila berlaku)
+3. Permohonan investasi kepada Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司) (apabila berlaku)
 
 4. Pembukaan rekening kantor persiapan perusahaan (公司籌備處帳戶)
 
@@ -126,9 +126,9 @@ Tarif terbatas menurut perjanjian tidak diterapkan secara otomatis hanya karena 
 
 ## Sumber Resmi
 
-- [Teks bahasa Inggris peraturan Kementerian Ekonomi Taiwan mengenai investasi asing](https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E)
-- [Panduan urusan investasi Kementerian Ekonomi Taiwan](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
-- [Panduan pendaftaran perusahaan dan pendaftaran usaha, Badan Pengembangan Perdagangan Kementerian Ekonomi Taiwan (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
+- [Teks bahasa Inggris peraturan Kementerian Urusan Ekonomi Taiwan mengenai investasi asing](https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E)
+- [Panduan urusan investasi Kementerian Urusan Ekonomi Taiwan](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
+- [Panduan pendaftaran perusahaan dan pendaftaran usaha, Badan Pengembangan Perdagangan Kementerian Urusan Ekonomi Taiwan (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Buku panduan kerja untuk izin kerja bagi manajer perusahaan penanaman modal asing](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Panduan Kementerian Keuangan Taiwan mengenai perjanjian pajak penghasilan Taiwan–Korea](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
 - [Ketentuan mengenai tarif pemotongan pajak atas dividen bagi bukan penduduk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)

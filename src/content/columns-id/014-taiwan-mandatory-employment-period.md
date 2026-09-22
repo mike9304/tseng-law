@@ -3,7 +3,7 @@ title: "Perjanjian Masa Kerja Minimum di Taiwan: Keabsahan, Biaya Pelatihan, dan
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "13 September 2025"
-read_time: "18 menit membaca"
+read_time: "18 menit baca"
 categories:
   - "Informasi Hukum Taiwan"
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"

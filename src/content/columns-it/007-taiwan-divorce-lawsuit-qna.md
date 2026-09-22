@@ -32,7 +32,7 @@ In particolare, per una famiglia legata a 2 o più Stati o territori (per esempi
 
 ## 1. 3 vie di divorzio a Taiwan e primi punti da verificare in un caso internazionale
 
-Secondo il diritto di Taiwan, esistono in essenza 3 vie di divorzio. Primo, il divorzio per consenso mutuo (兩願離婚), nel quale le parti soddisfano le condizioni di forma scritta, di testimoni e di iscrizione presso l'ufficio dell’anagrafe (戶政機關). Secondo, il divorzio per mediazione o transazione giudiziale (調解或和解離婚), nel quale l'accordo delle parti si forma dinanzi al tribunale e il matrimonio si estingue secondo il verbale di mediazione (調解筆錄) o il verbale di transazione (和解筆錄). Terzo, il divorzio per sentenza (裁判離婚), nel quale motivi legali di divorzio sono allegati e provati e il tribunale delibera. Il solo fatto di un accordo non scambia le condizioni e gli effetti delle 3 vie.
+Secondo il diritto di Taiwan, esistono in essenza 3 vie di divorzio. Primo, il divorzio per consenso mutuo (兩願離婚), nel quale le parti soddisfano le condizioni di forma scritta, di testimoni e di iscrizione presso l'ufficio dell’anagrafe (戶政機關). Secondo, il divorzio per mediazione o transazione giudiziale (調解或和解離婚), nel quale l'accordo delle parti si forma dinanzi al tribunale e il matrimonio si estingue secondo il verbale di mediazione (調解筆錄) o il verbale di transazione (和解筆錄). Terzo, il divorzio per sentenza (裁判離婚), nel quale motivi legali di divorzio sono allegati e provati e il tribunale delibera. Il solo fatto di un accordo non rende intercambiabili le condizioni e gli effetti delle tre vie.
 
 Se esiste un elemento di estraneità, le 5 questioni seguenti devono essere separate. Se i tribunali o le autorità amministrative di Taiwan hanno competenza o potere di trattamento; quale legge si applica, come diritto internazionale privato, al divorzio, al patrimonio coniugale e alle questioni relative ai figli; se un divorzio o una decisione stranieri sono riconosciuti a Taiwan o quale effetto hanno; quali procedure e quali documenti legalizzati l'ufficio dell’anagrafe di Taiwan esige; e se, in altri Stati o territori rispettivi, una dichiarazione, un riconoscimento o un'esecuzione separate sono necessari.
 
@@ -40,7 +40,7 @@ La nazionalità delle parti, la qualità di straniero o il luogo di matrimonio n
 
 ## 2. Condizioni del divorzio per consenso mutuo e iscrizione presso l'ufficio dell’anagrafe
 
-Il divorzio per consenso mutuo dell'articolo 1050 del Codice civile di Taiwan (民法) produce i suoi effetti solo quando l'accordo è redatto per iscritto, 2 testimoni o più firmano dopo aver constatato la volontà autentica di divorziare delle 2 parti, e il divorzio è iscritto presso l'ufficio dell’anagrafe (離婚登記). L'accordo firmato da solo non perfeziona il divorzio; se esiste un elemento di estraneità, si devono verificare separatamente la legge applicabile, la legalizzazione e la traduzione dei documenti, nonché le dichiarazioni in un altro Stato o territorio.
+Il divorzio per consenso mutuo dell'articolo 1050 del Codice civile di Taiwan (民法) produce i suoi effetti solo quando l'accordo è redatto per iscritto, 2 testimoni o più firmano dopo aver constatato la volontà autentica di divorziare delle 2 parti, e il divorzio è iscritto (離婚登記) presso l'ufficio dell’anagrafe (戶政機關). L'accordo firmato da solo non perfeziona il divorzio; se esiste un elemento di estraneità, si devono verificare separatamente la legge applicabile, la legalizzazione e la traduzione dei documenti, nonché le dichiarazioni in un altro Stato o territorio.
 
 La redazione scritta, la firma di 2 testimoni o più e l'iscrizione del divorzio presso l'ufficio dell’anagrafe sono ciascuna condizioni autonome. Il testimone non è solo qualcuno che appone il proprio nome su un documento già redatto: deve firmare dopo aver riconosciuto e constatato che le 2 parti hanno una volontà autentica di divorziare. È per questo che un accordo privato firmato solo dalle parti può essere la prova di un accordo sui beni o sui figli, ma non fa nascere da solo l'effetto di stato civile del divorzio per consenso mutuo di Taiwan.
 
@@ -67,7 +67,7 @@ La riserva (但書) dell'articolo 1052, comma 2, del Codice civile (民法) in v
 L'articolo 1052, comma 1, del Codice civile (民法) enumera 10 motivi che permettono di chiedere il divorzio per sentenza quando, dal lato dell'altra parte, esistono le circostanze seguenti.
 
 1. Bigamia (重婚)
-2. Relazioni sessuali consentite con una persona altra dal coniuge
+2. Rapporti sessuali consensuali con una persona diversa dal coniuge
 3. Maltrattamenti (虐待) dell'altra parte a un grado che rende la vita comune intollerabile
 4. L'altra parte maltratta parenti in linea diretta, o un parente in linea diretta dell'altra parte maltratta il coniuge, tanto che la vita comune diventa intollerabile
 5. L'abbandono in mala fede (惡意遺棄) dell'altra parte prosegue
@@ -81,7 +81,7 @@ Il comma 2 colloca il caso in cui il matrimonio è, per altro motivo grave rispe
 
 Anche se il coniuge non è contattabile o ha lasciato il domicilio, i motivi non devono essere mescolati. Il motivo del comma 1 secondo il quale la vita o la morte è sconosciuta da più di 3 anni, il motivo del comma 1 secondo il quale l'abbandono in mala fede prosegue, e il motivo del comma 2 secondo il quale il matrimonio è, per altro motivo grave, difficile da mantenere, si distinguono. La dichiarazione di scomparsa presso la polizia può essere una prova sul luogo e sul corso dei fatti, ma non è una condizione previa generale di tutte le domande di divorzio. Non esiste neppure una condizione generale secondo la quale sarebbe necessario prima intentare un'azione di esecuzione dell'obbligo di vita comune per allegare l'abbandono in mala fede o altro motivo grave. Il solo fatto di avere lasciato il domicilio durante alcuni mesi non riempie nessun motivo; la causa della partenza, un motivo legittimo di separazione, il contatto e gli alimenti, nonché il carattere duraturo, devono essere esaminati come fatti concreti.
 
-Sapere se relazioni sessuali consentite con una persona altra dal coniuge cadono sotto il motivo del comma 1 deve esaminarsi secondo i fatti esatti, le condizioni legali e i termini pertinenti. Che questo fatto esista non fissa al tempo stesso le conclusioni sul divorzio per sentenza, l'indennizzo dell'articolo 1056, la ripartizione della differenza di patrimonio residuo, gli alimenti del coniuge dell'articolo 1057, né i diritti e gli obblighi relativamente al figlio minore o l'assegno alimentare. Ciascun punto di lite si valuta secondo le proprie condizioni e criteri, quali l'interesse superiore del figlio.
+Sapere se rapporti sessuali consensuali con una persona diversa dal coniuge cadono sotto il motivo del comma 1 deve esaminarsi secondo i fatti esatti, le condizioni legali e i termini pertinenti. Che questo fatto esista non fissa al tempo stesso le conclusioni sul divorzio per sentenza, l'indennizzo dell'articolo 1056, la ripartizione della differenza di patrimonio residuo, gli alimenti del coniuge dell'articolo 1057, né i diritti e gli obblighi relativamente al figlio minore o l'assegno alimentare. Ciascun punto di lite si valuta secondo le proprie condizioni e criteri, quali l'interesse superiore del figlio.
 
 ## 5. Matrimonio all'estero, divorzio all'estero e stato civile di Taiwan
 
@@ -175,14 +175,14 @@ La vigilanza illecita, l'accesso ai conti, l'intromissione in un telefono mobile
 
 Le fonti primarie (di primo livello) seguenti sono il punto di partenza per verificare la struttura giuridica e le procedure di questo articolo, ferme al 25 luglio 2026. Prima di agire realmente, si devono verificare di nuovo le modificazioni, le indicazioni più recenti dell'organo competente e il testo applicabile al caso.
 
-1. [Banca dati nazionale della regolamentazione di Taiwan: Codice civile (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
+1. [Banca dati nazionale della normativa di Taiwan: Codice civile (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
 2. [Ministero della giustizia di Taiwan: versione inglese del Codice civile](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351)
-3. [Banca dati nazionale della regolamentazione di Taiwan: legge sugli affari familiari (家事事件法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
-4. [Banca dati nazionale della regolamentazione di Taiwan: articolo 303 del Codice di procedura civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
-5. [Banca dati nazionale della regolamentazione di Taiwan: regole sulle misure provvisorie negli affari familiari non contenziosi](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
-6. [Banca dati nazionale della regolamentazione di Taiwan: legge sull’anagrafe e sul registro di famiglia (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
+3. [Banca dati nazionale della normativa di Taiwan: legge sugli affari familiari (家事事件法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
+4. [Banca dati nazionale della normativa di Taiwan: articolo 303 del Codice di procedura civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
+5. [Banca dati nazionale della normativa di Taiwan: regole sulle misure provvisorie negli affari familiari non contenziosi](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
+6. [Banca dati nazionale della normativa di Taiwan: legge sull’anagrafe e sul registro di famiglia (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
 7. [Dipartimento dell’anagrafe del Ministero dell'interno di Taiwan: indicazioni sull'iscrizione del divorzio](https://www.ris.gov.tw/documents/html/2/3/1/384.html)
-8. [Banca dati nazionale della regolamentazione di Taiwan: legge sul diritto applicabile alle relazioni civili con elemento di estraneità (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
+8. [Banca dati nazionale della normativa di Taiwan: legge sul diritto applicabile alle relazioni civili con elemento di estraneità (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
 9. [Tribunale costituzionale di Taiwan: decisione numero 4 dell'anno 112 (112年憲判字第4號)](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
 10. [Tribunale costituzionale di Taiwan: versione inglese della decisione numero 4 dell'anno 112](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
 

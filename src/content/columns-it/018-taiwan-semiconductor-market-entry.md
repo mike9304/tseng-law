@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Se vi sono clienti a Taiwan, è necessario costituire ivi una società?"
-    a: "Non se ne deduce automaticamente la necessità di costituire una società solo perché il cliente è a Taiwan. Devono esaminarsi le esigenze del cliente e l’attività reale di commercio, di impianti, di personale e di struttura delle operazioni a Taiwan, e poi scegliere l’entità più adeguata."
+    a: "Non se ne deduce automaticamente la necessità di costituire una società solo perché il cliente è a Taiwan. Devono esaminarsi le esigenze del cliente e l’attività d’impresa reale, gli impianti, il personale e la struttura delle operazioni a Taiwan, e poi scegliere l’entità più adeguata."
   - q: "La responsabilità della sede sparisce per intero quando una società taiwanese è costituita?"
     a: "Se si costituisce una società controllata e non una succursale, la sede, in linea di principio, non assume le obbligazioni contrattuali firmate in nome della società controllata. Devono però verificarsi le eccezioni per abuso della personalità giuridica e se la sede ha concesso una cauzione o ha assunto obbligazioni contrattuali proprie."
   - q: "Si può cominciare con un distributore e poi passare a una società a Taiwan?"
@@ -25,7 +25,7 @@ Ciò che conviene chiarire prima è chi si occupa di che cosa a Taiwan. La strut
 
 Questo testo è una spiegazione generale per le imprese straniere di materiali, di componenti e di attrezzature di semiconduttori che concepiscono la struttura di ingresso a Taiwan. Gli scenari e i punti di controllo seguenti sono esempi ipotetici e proposte di valutazione, non un mandato reale di un’impresa concreta né un’esigenza di costituzione uniforme. Imposte, controllo delle esportazioni, autorizzazioni per prodotto e classificazione dell’investitore esigono ancora un’analisi a parte.
 
-## 1. Chiarire la divisione delle operazioni e del commercio prima di scegliere la forma di iscrizione
+## 1. Chiarire la divisione delle vendite e delle operazioni prima di scegliere la forma di iscrizione
 
 Si supponga che un fabbricante straniero di componenti di precisione venda a clienti taiwanesi. All’inizio la sede spedisce direttamente, ma il cliente chiede di stoccare pezzi di ricambio a Taiwan e un sostegno di ingegneri sul posto. Un indirizzo non basta: serve un soggetto che possa vendere, importare, stoccare, assumere, fornire un sostegno tecnico e assumere la responsabilità.
 
@@ -61,11 +61,11 @@ Se si decide di costituire una persona giuridica indipendente a Taiwan, deve anc
 
 ### Società a responsabilità limitata (有限公司): governance più semplice, ma trasmissione delle quote più chiusa
 
-Può formarsi con 1 o più persone fisiche, o con soci persone giuridiche taiwanesi o straniere; i soci rispondono, in linea di principio, fino all’importo del loro conferimento. La società ha da 1 a 3 amministratori, eletti tra i soci. I soci che non svolgono l’attività sociale possono esercitare diritti di vigilanza, senza necessità di un supervisore distinto. Salvo disposizione statutaria in contrario, ciascun socio ha 1 voto, così che il controllo non deve coincidere con la proporzione dei conferimenti. La trasmissione del conferimento di un socio ordinario esige, in linea di principio, il consenso di più della metà dei diritti di voto degli altri; per un amministratore, 2/3 o più. Ciò conviene meglio a relazioni di soci semplici e a un controllo stabile che a una frequente raccolta di capitale o alla circolazione delle quote. Più tardi, può convertirsi in società per azioni (股份有限公司).
+Può formarsi con 1 o più persone fisiche, o con soci persone giuridiche taiwanesi o straniere; i soci rispondono, in linea di principio, fino all’importo del loro conferimento. La società ha da 1 a 3 amministratori, eletti tra i soci. I soci che non svolgono l’attività sociale possono esercitare diritti di vigilanza, senza necessità di un supervisore distinto. Salvo disposizione statutaria in contrario, ciascun socio ha 1 voto, così che il controllo non deve coincidere con la proporzione dei conferimenti. La trasmissione del conferimento di un socio ordinario esige, in linea di principio, il consenso di più della metà dei diritti di voto degli altri; per un amministratore, il consenso di almeno due terzi dei diritti di voto degli altri soci. Ciò conviene meglio a relazioni di soci semplici e a un controllo stabile che a una frequente raccolta di capitale o alla circolazione delle quote. Più tardi, può convertirsi in società per azioni (股份有限公司).
 
 ### Società per azioni (股份有限公司): adeguata se si vuole incorporare altri investitori o se una quotazione è prevedibile
 
-Il capitale si divide in azioni. In linea di principio sono richiesti 2 azionisti o più, ma lo Stato o una persona giuridica possono costituirla da soli, e una persona giuridica straniera può detenere 100%. Le azioni sono, in linea di principio, liberamente trasmissibili, con eccezioni legali; azioni speciali e opzioni assegnate ai dipendenti possono concepirsi in conformità con la legge. Ciò conviene alle imprese che attendono investitori, una negoziazione di azioni, incentivi in capitale per i dipendenti o una fusione, un’acquisizione, una quotazione o l’iscrizione al mercato emergente dei titoli (興櫃); non si limita alle grandi imprese. In governance, una società che non ha effettuato un’offerta pubblica di azioni può, con lo statuto, non avere consiglio e avere solo 1 o 2 amministratori. Una società con un solo azionista, lo Stato o una persona giuridica, può, con lo statuto, non avere un supervisore. Non ogni società per azioni (股份有限公司) deve far certificare i conti annuali. Le soglie principali di revisione di una società ordinaria sono un capitale versato di 30.000.000 TWD, o, al di sotto, ricavi di esercizio di 100.000.000 TWD o 100 lavoratori nel regime di assicurazione del lavoro; le società di offerta pubblica seguono la regolamentazione dei valori.
+Il capitale si divide in azioni. In linea di principio sono richiesti 2 azionisti o più, ma lo Stato o una persona giuridica possono costituirla da soli, e una persona giuridica straniera può detenere 100%. Le azioni sono, in linea di principio, liberamente trasmissibili, con eccezioni legali; azioni speciali e opzioni assegnate ai dipendenti possono concepirsi in conformità con la legge. Ciò conviene alle imprese che attendono investitori, una negoziazione di azioni, incentivi in capitale per i dipendenti o una fusione, un’acquisizione, una quotazione o l’iscrizione al mercato emergente dei titoli (興櫃); non si limita alle grandi imprese. In governance, una società che non ha effettuato un’offerta pubblica di azioni può, con lo statuto, non avere un consiglio di amministrazione e avere solo 1 o 2 amministratori. Una società con un solo azionista, lo Stato o una persona giuridica, può, con lo statuto, non avere un supervisore. Non ogni società per azioni (股份有限公司) deve far certificare i conti annuali. Le soglie principali di revisione di una società ordinaria sono un capitale versato di 30.000.000 TWD, o, al di sotto, ricavi di esercizio di 100.000.000 TWD o 100 lavoratori nel regime di assicurazione del lavoro; le società di offerta pubblica seguono la normativa sui valori mobiliari.
 
 ## 4. Le procedure di succursale e di società controllata differiscono; solo la società controllata passa per l’esame del Dipartimento per l’esame degli investimenti
 
@@ -81,7 +81,7 @@ Concludere l’iscrizione a Taiwan non implica che il personale della sede stran
 
 È relativamente più facile ottenere l’autorizzazione di lavoro per un dirigente della società controllata o della succursale taiwanese di una società straniera. Per chiederla per un 2° straniero o i successivi, il Ministero del Lavoro esige, secondo il settore, soglie di capitale, di volume d’affari o altre. Se si prevede che personale straniero lavori a Taiwan, deve confermarsi prima di costituire la società se il capitale previsto raggiunge la soglia applicabile.
 
-## 7. Strutture che possono convenire secondo la tappa del commercio
+## 7. Strutture che possono convenire secondo la fase di sviluppo dell’attività
 
 Gli scenari seguenti sono ipotetici per aiutare a riflettere; non stabiliscono che un modo sia lecito o preferibile.
 
@@ -101,7 +101,7 @@ Non è necessario allegare al primo contatto tutti i materiali riservati del cli
 
 ### Se vi sono clienti a Taiwan, è necessario costituire ivi una società?
 
-Non se ne deduce automaticamente la necessità di costituire una società solo perché il cliente è a Taiwan. Devono esaminarsi le esigenze del cliente e l’attività reale di commercio, di impianti, di personale e di struttura delle operazioni a Taiwan, e poi scegliere l’entità più adeguata.
+Non se ne deduce automaticamente la necessità di costituire una società solo perché il cliente è a Taiwan. Devono esaminarsi le esigenze del cliente e l’attività d’impresa reale, gli impianti, il personale e la struttura delle operazioni a Taiwan, e poi scegliere l’entità più adeguata.
 
 ### La responsabilità della sede sparisce per intero quando una società taiwanese è costituita?
 

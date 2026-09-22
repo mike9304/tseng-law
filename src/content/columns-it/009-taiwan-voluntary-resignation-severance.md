@@ -37,7 +37,7 @@ Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di prop
 
 2. Quando il datore di lavoro, un membro della famiglia del datore di lavoro o un rappresentante del datore di lavoro (代理人) esercita una violenza o infligge un insulto grave (重大侮辱) al lavoratore
 
-3. Quando il lavoro convenuto nel contratto può pregiudicare la salute del lavoratore, è stato chiesto al datore di lavoro di migliorarlo e non vi è effetto
+3. Quando il lavoro convenuto nel contratto può pregiudicare la salute del lavoratore, il lavoratore ha chiesto al datore di lavoro di porvi rimedio e il datore di lavoro non l'ha fatto
 
 4. Quando il datore di lavoro, il suo rappresentante o altro lavoratore è colpito da una malattia contagiosa legale (法定傳染病), esiste un rischio di contagio per i lavoratori che lavorano insieme e ciò costituisce un pericolo grave per la salute del lavoratore
 
@@ -65,19 +65,19 @@ se il lavoratore desidera porre termine al contratto di lavoro a titolo dei punt
 
 deve porre termine al contratto di lavoro in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto questa situazione,
 
-o, per il punto 6, in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto il risultato del pregiudizio.
+o, per il punto 6, in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto il pregiudizio che ne è derivato.
 
 Il lavoratore deve quindi padroneggiare bene il termine.
 
 ​
 
-In altre parole,
+In altre parole, l'effetto si distingue secondo chi ha la colpa.
 
-il diritto di Taiwan, sia che la colpa stia dal lato dell'impresa
+Se la colpa è del datore di lavoro, il lavoratore può esigere l'indennità di licenziamento
 
-sia dal lato del lavoratore,
+e, se la colpa è del lavoratore,
 
-riconosce a ciascuna delle parti il diritto di non pagare l'indennità di licenziamento o di esigerla.
+il datore di lavoro può non pagarla.
 
 A volte, quando vi è colpa di parte a parte nel rapporto di lavoro,
 

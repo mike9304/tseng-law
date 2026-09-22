@@ -2598,7 +2598,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'İş uyuşmazlıkları',
           paragraphs: [
-            'Bu alan iş ilişkisinin sona ermesini, Tayvan hukukuna göre kıdem tazminatını (資遣費; başka ülkelerin benzer düzenlemeleriyle aynı tutulmamalıdır), ücreti ve iş sözleşmesinden (勞動契約) doğan uyuşmazlıkları kapsar; iş ister işçinin ister işverenin olsun. İncelemede sona erme sebebini bildirim, ödeme ve süre sorularından ayırırız.',
+            'Bu alan iş ilişkisinin sona ermesini, Tayvan hukukuna göre kıdem tazminatını (資遣費; başka ülkelerin benzer düzenlemeleriyle aynı tutulmamalıdır), ücreti ve iş sözleşmesinden (勞動契約) doğan uyuşmazlıkları kapsar; ister işçi ister işveren tarafında olsun. İncelemede sona erme sebebini bildirim, ödeme ve süre sorularından ayırırız.',
             'İş sözleşmesi, iş kuralları (工作規則), ücret bordroları ve tarafların yazışması çoğu zaman belirleyici belgelerdir. Hâlâ elinizdeyse özetinizde belirtin.',
           ],
         },
@@ -2755,7 +2755,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Bu bölümü nasıl kullanırsınız',
           paragraphs: [
-            'Durumunuza yanıt bulamazsanız, yanıt çoğu zaman özel olgulara bağlıdır. O olguları bu sayfadan kendiniz çıkarmak yerine özetinize yazın.',
+            'Durumunuza yanıt bulamazsanız, yanıt çoğu zaman özel olgulara bağlıdır. O olguları özetinize yazın; yanıtı bu sayfadan kendiniz çıkarmayın.',
           ],
         },
       ],
@@ -2934,7 +2934,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Bir yazı ne ölçüde yol gösterir',
           paragraphs: [
             'Yazılar, yayımlanma anındaki genel bilgilerdir. Kurallar ve uygulanışları değişebilir ve bir yazı dosyanızın tüm koşullarını içermez.',
-            'Bu yüzden gerçek bir işte eyleminizi yalnızca bir yazıya dayandırmayın. Genel bakış için kullanın ve belgelerinizi ayrı olarak bir avukatla konuşun; bu sayfa görüşme adımı değildir.',
+            'Bu yüzden gerçek bir işte eyleminizi yalnızca bir yazıya dayandırmayın. Genel bakış için kullanın ve belgelerinizi ayrı olarak bir avukatla konuşun; bu sayfa görüşmenin yerini tutmaz.',
           ],
         },
       ],

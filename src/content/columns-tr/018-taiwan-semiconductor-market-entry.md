@@ -61,7 +61,7 @@ Tayvan’da bağımsız tüzel kişi kurulacaksa, tüzel kişi biçimi de seçil
 
 ### Limited şirket (有限公司): yönetişim yalındır ama pay devri görece kapalıdır
 
-Limited şirket 1 veya daha fazla gerçek kişi, ya da Tayvan veya yabancı tüzel kişi ortaklarla kurulabilir; ortaklar ilke olarak koydukları sermaye tutarıyla sorumludur. Yönetici 1 ile 3 kişi arasında olur ve ortaklar arasından seçilir. İşi yürütmeyen ortaklar denetim hakkını kullanabilir, ayrı denetçi konulmasa da olur. Esas sözleşmede aksi yoksa her ortağın 1 kişi 1 oy hakkı vardır; bu yüzden hâkimiyet sermaye oranıyla mutlaka örtüşmez. Sıradan ortağın katkısını devretmesi ilke olarak diğer ortakların oy hakkının yarıdan fazlasının rızasını, yöneticide ise 3’te 2 veya daha fazlasını gerektirir. Bu nedenle ortaklık ilişkisi yalın ve hâkimiyet yapısı istikrarlı şirketlere daha uygundur; sık sermaye çekme veya pay işlemine daha az elverişlidir. Daha sonra anonim şirkete (股份有限公司) dönüştürülebilir.
+Limited şirket 1 veya daha fazla gerçek kişi, ya da Tayvan veya yabancı tüzel kişi ortaklarla kurulabilir; ortaklar ilke olarak koydukları sermaye tutarıyla sorumludur. Yönetici 1 ile 3 kişi arasında olur ve ortaklar arasından seçilir. İşi yürütmeyen ortaklar denetim hakkını kullanabilir, ayrı denetçi konulmasa da olur. Esas sözleşmede aksi yoksa 1 kişi 1 oy hakkı vardır; bu yüzden hâkimiyet sermaye oranıyla mutlaka örtüşmez. Sıradan ortağın katkısını devretmesi ilke olarak diğer ortakların oy hakkının yarıdan fazlasının rızasını, yöneticide ise 3’te 2 veya daha fazlasını gerektirir. Bu nedenle ortaklık ilişkisi yalın ve hâkimiyet yapısı istikrarlı şirketlere daha uygundur; sık sermaye çekme veya pay işlemine daha az elverişlidir. Daha sonra anonim şirkete (股份有限公司) dönüştürülebilir.
 
 ### Anonim şirket (股份有限公司): başka yatırımcı alınması veya borsaya kote olma düşünülen işletmelere uygundur
 
@@ -95,7 +95,7 @@ Aşağıdakiler düşünmeye yardımcı varsayımsal inceleme durumlarıdır; be
 
 İlk görüşmede merkezin ve yatırımcıların temel bilgisi, ürün veya hizmetin genel açıklaması, öngörülen işlem akışı, Tayvan personel ve tesis planı, müşterinin istediği sözleşme ve destek koşulları derlenebilir. Henüz kararlaşmamış hususlar “belirsiz” diye işaretlenebilir.
 
-İlk iletişimde müşteri gizli evrakı veya ayrıntılı süreç verilerinin tümünü eklemek gerekmez. Karşı taraf şirket unvanı gibi çıkar çatışması kontrolü için gereken bilgi verildikten sonra, sorumlunun rehberliğine göre gereken evrak ve iletim yöntemi belirlenir.
+İlk iletişimde müşteriye ait gizli evrakın veya ayrıntılı süreç verilerinin tümünü eklemek gerekmez. Karşı tarafın şirket unvanı gibi çıkar çatışması kontrolü için gereken bilgi verildikten sonra, sorumlunun rehberliğine göre gereken evrak ve iletim yöntemi belirlenir.
 
 ## Sık sorulan sorular
 

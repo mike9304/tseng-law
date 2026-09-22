@@ -155,7 +155,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Controversie di lavoro',
           paragraphs: [
             'Quest’area comprende la cessazione del rapporto di lavoro, l’indennità secondo il diritto di Taiwan (資遣費; da non equiparare a istituti di altri Stati), la retribuzione e le controversie dal contratto di lavoro (勞動契約), sia dal lato del lavoratore sia da quello del datore di lavoro. Nell’esame distinguiamo il motivo della cessazione dalle questioni di preavviso, di pagamento e di termini.',
-            'Il contratto di lavoro, il regolamento interno (工作規則), le buste paga e la corrispondenza delle parti sono di solito i documenti decisivi. Se li ha ancora, lo menzioni nel riassunto.',
+            'Il contratto di lavoro, il regolamento interno (工作規則), le buste paga e la corrispondenza delle parti sono di solito i documenti decisivi. Se li ha ancora, li menzioni nel riassunto.',
           ],
         },
         {
@@ -231,8 +231,8 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Prima si fissa l’ambito di lavoro',
           paragraphs: [
-            'Questioni dello stesso tipo possono avere un impegno molto diverso, secondo il numero delle parti, i documenti disponibili, i termini da rispettare e se un procedimento è già iniziato. Perciò il primo passo è sempre fissare che cosa appartiene al lavoro e che cosa no.',
-            'Il riassunto che invia all’inizio è la base di questo ambito. Quanto più chiaramente descrive il corso, la Sua richiesta e i termini, tanto più precisamente si può determinare l’ambito.',
+            'Questioni dello stesso tipo possono richiedere un impegno molto diverso, secondo il numero delle parti, i documenti disponibili, i termini da rispettare e se un procedimento è già iniziato. Perciò il primo passo è sempre fissare che cosa appartiene al lavoro e che cosa no.',
+            'Il riassunto che invia all’inizio è la base di questo ambito. Quanto più chiaramente descrive il corso dei fatti, la Sua richiesta e i termini, tanto più precisamente si può determinare l’ambito.',
           ],
         },
         {
@@ -252,7 +252,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perché questa pagina non indica tariffe',
           paragraphs: [
-            'I costi dipendono dalla questione stessa: dall’impegno, dal numero delle parti, dai documenti, dai termini e dal fatto che un procedimento sia già in corso. Un numero fissato in anticipo non mostrerebbe i costi del Suo fascicolo. Perciò fissiamo prima l’ambito di lavoro e Le comunichiamo poi i costi, prima che il lavoro inizi.',
+            'I costi dipendono dalla questione stessa: dall’impegno, dal numero delle parti, dai documenti, dai termini e dal fatto che un procedimento sia già in corso. Un importo indicato in anticipo non corrisponde al costo del Suo fascicolo. Perciò fissiamo prima l’ambito di lavoro e Le comunichiamo poi i costi, prima che il lavoro inizi.',
             'Oltre all’onorario possono sorgere costi di tribunale, di autorità o di terzi. Questi sono distinti dall’onorario e dipendono dal rispettivo procedimento.',
           ],
         },
@@ -311,7 +311,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Come usare questa parte',
           paragraphs: [
-            'Se non trova una risposta per la Sua situazione, la risposta dipende di solito da fatti particolari. Scriva allora quei fatti nel riassunto, invece di dedurli da questa pagina.',
+            'Se non trova una risposta per la Sua situazione, la risposta dipende di solito da fatti particolari. Scriva allora quei fatti nel riassunto, invece di dedurre da questa pagina la risposta.',
           ],
         },
       ],
@@ -414,7 +414,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'I Suoi diritti e il canale di contatto',
           paragraphs: [
             'Può chiedere accesso, rettifica o cancellazione dei Suoi dati o revocare il consenso, tramite l’indirizzo di posta elettronica indicato nella pagina di contatto. Se esiste un obbligo legale o processuale di conservazione, spieghiamo la limitazione.',
-            'Questa pagina non indica un termine fisso di conservazione, perché la durata effettiva dipende dal seguito della questione e dagli obblighi connessi. Se desidera una cancellazione anteriore, lo comunichi nel contatto.',
+            'Questa pagina non indica un termine fisso di conservazione, perché la durata effettiva dipende dal seguito della questione e dagli obblighi connessi. Se desidera una cancellazione anticipata, lo comunichi nel contatto.',
           ],
         },
         {
@@ -476,7 +476,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Quattro elenchi per lingua',
           paragraphs: [
             'Questa parte contiene quattro collegamenti: l’elenco degli articoli in coreano, in cinese, in inglese e in giapponese. Ogni collegamento indica la lingua dell’elenco, così sa in anticipo in quale lingua si apre il contenuto.',
-            'Questi quattro elenchi sono elenchi secondo la lingua originale degli articoli, non elenchi di traduzione. Gli articoli disponibili in italiano si trovano a parte su questa pagina.',
+            'Questi quattro elenchi seguono la lingua originale degli articoli; non sono traduzioni. Gli articoli disponibili in italiano si trovano a parte su questa pagina.',
           ],
         },
         {
@@ -490,7 +490,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fino a che punto un articolo può servire da orientamento',
           paragraphs: [
             'Gli articoli sono indicazioni generali al momento della pubblicazione. Le norme e la loro applicazione possono cambiare, e un articolo non contiene tutte le circostanze del Suo caso.',
-            'Non fondi quindi una decisione su un caso reale soltanto su un articolo. Lo usi per la visione d’insieme e discuta i Suoi documenti a parte con un’avvocata o un avvocato; questa pagina non è il passo di consulenza.',
+            'Non fondi quindi una decisione su un caso reale soltanto su un articolo. Lo usi per la visione d’insieme e discuta i Suoi documenti a parte con un’avvocata o un avvocato; questa pagina non sostituisce la consulenza.',
           ],
         },
       ],

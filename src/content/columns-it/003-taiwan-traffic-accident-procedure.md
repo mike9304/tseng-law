@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Immagine di esempio che registra la posizione dei veicoli e le tracce sulla carreggiata sul posto di un incidente stradale](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Se si verifica un incidente stradale (交通事故) a Taiwan, si deve prima assicurare la sicurezza, procedere alla comunicazione e alla conservazione delle prove e, in seguito, esaminare per ordine il termine della pretesa risarcitoria, la colpa (過失) e l’estensione della transazione (和解). Quanto segue è un ordine generale di condotta fondato sulla regolamentazione di Taiwan e sulle indicazioni degli organismi pubblici; la responsabilità e la procedura concrete possono variare secondo le circostanze di ciascun incidente.
+Se si verifica un incidente stradale (交通事故) a Taiwan, si deve prima assicurare la sicurezza, procedere alla comunicazione e alla conservazione delle prove e, in seguito, esaminare per ordine il termine della pretesa risarcitoria, la colpa (過失) e l’estensione della transazione (和解). Quanto segue è un ordine generale di condotta fondato sulla normativa di Taiwan e sulle indicazioni degli organismi pubblici; la responsabilità e la procedura concrete possono variare secondo le circostanze di ciascun incidente.
 
 ## Q1. Si può abbandonare il posto dopo l’incidente?
 
@@ -43,13 +43,13 @@ In materia di risarcimento civile dei danni (損害賠償), secondo l’articolo
 
 Chi subisce un danno in virtù di un reato può, secondo l’articolo 487 del Codice di procedura penale, formare un’azione civile accessoria al procedimento penale (刑事附帶民事訴訟). Mentre il procedimento penale è in corso, questa azione può essere formata fino a prima della chiusura del dibattimento orale (言詞辯論終結) del grado 2, secondo l’articolo 488 del Codice di procedura penale, ma non può essere formata dopo la chiusura del dibattimento orale del primo grado e prima della proposizione dell’impugnazione. In generale, il pagamento di spese giudiziarie (裁判費) distinte può essere evitato, ma non tutti i risultati si concludono senza costo. Per esempio, se il procedimento penale viene respinto e, a domanda dell’attore, rimesso al tribunale civile, secondo l’articolo 503 del Codice di procedura penale le spese possono essere imposte, e devono anche verificarsi le regole di rinvio e di procedura dell’articolo 504.
 
-La scelta varia secondo l’interruzione della prescrizione (時效中斷), la cerchia dei convenuti, le prove, l’assicurazione e la competenza. Non esiste quindi una procedura uniformemente preferibile per tutti i casi.
+La scelta varia secondo l’interruzione della prescrizione (時效中斷), la cerchia dei convenuti, le prove, l’assicurazione e la competenza. Non esiste quindi una procedura che convenga a tutti i casi.
 
 ## Q4. Se vi è colpa da parte a parte, come si valutano le responsabilità penale e civile?
 
 La responsabilità penale può essere ritenuta solo quando sono riconosciuti l’inadempimento del dovere di prudenza di ciascuno e il nesso di causalità tra tale inadempimento e le lesioni dell’altra parte. Il solo fatto che una colpa sia esistita da parte a parte non fa nascere automaticamente la responsabilità per lesioni colpose.
 
-Nel piano civile, secondo l’articolo 217 del Codice civile, se la persona lesa ha una colpa che ha contribuito a causare o aggravare il danno (與有過失), il tribunale può ridurre o esentare il risarcimento. Per esempio, se il danno riconosciuto in nuovi dollari taiwanesi (新臺幣, TWD), è di 1.000.000 TWD e la colpa della persona lesa è valutata al 50%, l’importo può essere ridotto a 500.000 TWD prima di altri adeguamenti.
+Nel piano civile, secondo l’articolo 217 del Codice civile, se la persona lesa ha una colpa che ha contribuito a causare o aggravare il danno (與有過失), il tribunale può ridurre il risarcimento oppure esonerare da responsabilità la persona tenuta. Per esempio, se il danno riconosciuto in nuovi dollari taiwanesi (新臺幣, TWD), è di 1.000.000 TWD e la colpa della persona lesa è valutata al 50%, l’importo può essere ridotto a 500.000 TWD prima di altri adeguamenti.
 
 La perizia (鑑定) o il quadro di analisi preliminare possono essere documenti importanti, ma non vincolano il tribunale in modo meccanico. Il tribunale esamina l’insieme delle prove, comprese le dichiarazioni, le immagini e lo stato dei veicoli.
 
@@ -175,7 +175,7 @@ L’obbligo di sottoscrivere secondo l’articolo 6 della legge sull’assicuraz
 
 In un incidente di un solo veicolo, il conducente di quel veicolo non è, in generale, destinatario delle prestazioni dell’assicurazione obbligatoria di quel veicolo. Tuttavia, in un incidente in cui intervengono più veicoli, esistono casi nei quali il conducente può chiedere le prestazioni all’assicuratore obbligatorio di un altro veicolo implicato.
 
-La tabella di prestazioni (強制汽車責任保險給付標準) modificata il 29 maggio 2026 si applica agli incidenti occorsi a decorrere dal 1 luglio 2026. Il tetto dele spese mediche ragionevoli e necessari per ferite è 200.000 nuovi dollari taiwanesi (TWD); la prestazione per invalidità (失能) va da 80.000 a 3.000.000 TWD secondo 15 gradi legali; la prestazione per morte è 3.000.000 TWD, e il massimo congiunto di morte, di invalidità e delle spese mediche per ogni vittima e ogni incidente è 3.200.000 TWD. Agli incidenti anteriori può applicarsi la tabella precedente.
+La tabella di prestazioni (強制汽車責任保險給付標準) modificata il 29 maggio 2026 si applica agli incidenti occorsi a decorrere dal 1 luglio 2026. Il tetto delle spese mediche ragionevoli e necessarie per le ferite è di 200.000 nuovi dollari taiwanesi (TWD); la prestazione per invalidità (失能) va da 80.000 a 3.000.000 TWD secondo 15 gradi legali; la prestazione per morte è 3.000.000 TWD, e il massimo congiunto di morte, di invalidità e delle spese mediche per ogni vittima e ogni incidente è 3.200.000 TWD. Agli incidenti anteriori può applicarsi la tabella precedente.
 
 L’assicurazione di responsabilità civile verso terzi (第三人責任險), l’assicurazione di infortuni del conducente (駕駛人傷害險) e l’assicurazione di danni sul proprio veicolo (車體損失險) sono prodotti facoltativi di carattere contrattuale. La copertura reale varia secondo l’assicurato, il tetto, la franchigia (自負額), le esclusioni, la colpa e le altre condizioni della polizza, sicché la polizza e le condizioni devono essere verificate caso per caso.
 
@@ -339,7 +339,7 @@ In virtù delle ferite o della morte della vittima, questa o la sua famiglia sub
 
 ​
 
-L’autore non si preoccupa frequentemente di telefonare per prendere notizie della vittima né di visitarla, e numerosi autori pensano che l’assicuratore regolerà tutto e non appaiono. In questi casi, né il pentimento né la buona fede si percepiscono.
+L’autore non si preoccupa frequentemente di telefonare per prendere notizie della vittima né di visitarla, e numerosi autori pensano che l’assicuratore regolerà tutto e non appaiono. In questi casi la vittima non vi percepisce né pentimento né sincerità.
 
 ​
 

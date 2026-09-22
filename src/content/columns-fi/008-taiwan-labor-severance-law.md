@@ -13,16 +13,16 @@ faq:
   - q: "Tuleeko yhtiön maksaa erorahaa myös kurinpidollisessa irtisanomisessa?"
     a: "Ei. Jos työntekijä tekee lainvastaisen teon, rikkoo työsääntöjä tai on ilman pätevää syytä poissa 3 peräkkäisenä päivänä (työstandardilain 12 artikla, 勞動基準法第12條), yhtiö voi irtisanoa ilman ennakkoilmoitusta eikä sen tarvitse maksaa erorahaa. Taloudellinen irtisanominen (11 artikla) sen sijaan edellyttää ennakkoilmoitusta ja erorahan maksamista."
   - q: "Miten eroraha lasketaan Taiwanissa?"
-    a: "Jokaista 1 täyttä palvelusvuotta kohden työnantajan on maksettava 0,5 kuukauden keskipalkka erorahana, enintään 6 kuukausipalkkaa. Tämä kaava koskee palvelusaikaa, johon sovelletaan työntekijöiden eläkelain (勞工退休金條例) 12 artiklaa; palvelusaikaan, johon sovelletaan työstandardilain 17 artiklaa (勞動基準法), maksetaan kutakin 1 vuotta kohden 1 kuukauden keskipalkka ilman ylärajaa."
+    a: "Jokaista täyttä 1 palvelusvuotta kohden työnantajan on maksettava 0,5 kuukauden keskipalkka erorahana, enintään 6 kuukausipalkkaa. Tämä kaava koskee palvelusaikaa, johon sovelletaan työntekijöiden eläkelain (勞工退休金條例) 12 artiklaa; palvelusaikaan, johon sovelletaan työstandardilain 17 artiklaa (勞動基準法), maksetaan kutakin 1 vuotta kohden 1 kuukauden keskipalkka ilman ylärajaa."
 ---
 
 # Eroraha (資遣費) Taiwanissa: milloin se maksetaan ja milloin ei
 
 ![Pääkuva](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Olen Wei Tseng (曾雋崴), asianajaja Taiwanissa.
+Erorahaa (資遣費) Taiwanissa maksetaan vain, kun laissa säädetyt edellytykset täyttyvät.
 
-Tänään haluan puhua teille irtisanomiskorvauksesta (資遣費) Taiwanissa.
+Alla selvitetään, milloin eroraha (資遣費) Taiwanissa maksetaan ja milloin ei.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
@@ -54,13 +54,13 @@ Olen koonnut tämän yksinkertaiseen taulukkoon.
 | --- | --- | --- | --- |
 | **Laji** | **Taloudellinen irtisanominen (資遣員工, 經濟解僱)** | **Kurinpidollinen irtisanominen (解僱員工, 懲戒解僱)** | **Työntekijän oma irtisanoutuminen (員工自請離職)** |
 | Merkitys | Jos työnantajalla on liiketoimintatilanteen vuoksi tarve henkilöstön sopeuttamiseen, syy sijaitsee työnantajan yritystoiminnan alueella eikä työntekijän vastuussa. Siksi työnantajan on noudatettava ilmoitusaikaa (預告期間) ja maksettava eroraha, jotta työntekijän haitat tasataan tasapainoisesti. | Jos työntekijä tekee lainvastaisen tai sopimattoman teon, työnantaja voi heti päättää työsopimuksen (勞動契約) ilman ennakkoilmoitusta eikä sen tarvitse maksaa erorahaa. Tämä on osa työnantajan kurinpitovaltuuksia. | Työntekijä saa milloin tahansa päättää sopimuksen, mutta hänen on palvelussuhteen keston mukaan noudatettava ilmoitusaikaa, jotta työnantaja voi hakea luovutusta ja sijaista. |
-| Edellytykset | Olemassa  (Taiwanin työstandardilain 11 artikla) | Olemassa  (Taiwanin työstandardilain 12 artikla) | Ei |
+| Edellytykset | Kyllä (Taiwanin työstandardilain 11 artikla) | Kyllä (Taiwanin työstandardilain 12 artikla) | Ei |
 | Ennakkoilmoitus | Vaaditaan | Ei vaadita | Vaaditaan |
 | Menettelyn vaativuus | Vähemmän vaiheita | Enemmän vaiheita | Vähemmän vaiheita |
 | Onko yhtiön maksettava erorahaa (資遣費) | Vaaditaan | Ei vaadita | Ei vaadita |
-|  | Taiwanin työstandardilaki 11 artikla (勞動基準法第11條): Jollei jokin seuraavista tapauksista toteudu, työnantaja ei saa päättää työsopimusta, ei myöskään työntekijälle annetun ennakkoilmoituksen jälkeen.  1. Toiminnan keskeytys (歇業) tai yrityksen luovutus (轉讓)  2. Tappio (虧損) tai toiminnan supistaminen (業務緊縮)  3. Ylivoimainen este edellyttää toiminnan keskeyttämistä 1 kuukaudeksi tai pidemmäksi ajaksi  4. Toiminnan luonne edellyttää henkilöstön vähentämistä, eikä irtisanottua voida sijoittaa toiseen sopivaan tehtävään  5. Tietty työntekijä ei kykene tyydyttävästi suorittamaan tehtävän vaatimaa työtä | Taiwanin työstandardilaki 12 artikla (勞動基準法第12條): Työnantaja voi irtisanoa ilman ennakkoilmoitusta, kun työntekijä kuuluu johonkin seuraavista tapauksista.  1. Se, joka työsopimusta solmittaessa antaa virheellisiä tietoja, johtaa työnantajaa harhaan, ja yritykselle on vahingon vaara  2. Se, joka käyttää väkivaltaa työnantajaa, tämän perhettä, tämän edustajaa (代理人) tai muita työtovereita kohtaan tai loukkaa heitä törkeästi  3. Se, joka on lainvoimaisesti tuomittu määräaikaiseen vankeuteen (有期徒刑) tai ankarampaan rangaistukseen ilman, että ehdollista lykkäystä (緩刑) olisi määrätty ja ilman, että muuntaminen sakoksi (易科罰金) olisi sallittu  4. Vakava työsopimuksen tai työsääntöjen rikkominen  5. Se, joka tahallaan kuluttaa työnantajan koneita, välineitä, raaka-aineita, tuotteita tai muita tavaroita taikka tahallaan paljastaa työnantajan teknisiä ja liikesalaisuuksia ja aiheuttaa työnantajalle vahinkoa  6. Luvaton poissaolo (曠工) ilman pätevää syytä 3 peräkkäisenä päivänä tai 6 päivää tai enemmän 1 kuukaudessa |  |
+|  | Taiwanin työstandardilaki 11 artikla (勞動基準法第11條): Jollei jokin seuraavista tapauksista toteudu, työnantaja ei saa päättää työsopimusta, ei myöskään työntekijälle annetun ennakkoilmoituksen jälkeen.  1. Toiminnan keskeytys (歇業) tai yrityksen luovutus (轉讓)  2. Tappio (虧損) tai toiminnan supistaminen (業務緊縮)  3. Ylivoimainen este edellyttää toiminnan keskeyttämistä 1 kuukaudeksi tai pidemmäksi ajaksi  4. Toiminnan luonne edellyttää henkilöstön vähentämistä, eikä irtisanottua voida sijoittaa toiseen sopivaan tehtävään  5. Tietty työntekijä ei kykene tyydyttävästi suorittamaan tehtävän vaatimaa työtä | Taiwanin työstandardilaki 12 artikla (勞動基準法第12條): Työnantaja voi irtisanoa ilman ennakkoilmoitusta, kun työntekijä kuuluu johonkin seuraavista tapauksista.  1. Se, joka työsopimusta solmittaessa antaa virheellisiä tietoja, johtaa työnantajaa harhaan, ja yritykselle on vahingon vaara  2. Se, joka käyttää väkivaltaa työnantajaa, tämän perhettä, tämän edustajaa (代理人) tai muita työtovereita kohtaan tai loukkaa heitä törkeästi  3. Se, joka on lainvoimaisesti tuomittu määräaikaiseen vankeuteen (有期徒刑) tai ankarampaan rangaistukseen ilman, että ehdollista vankeusrangaistusta (緩刑) olisi määrätty ja ilman, että muuntaminen sakoksi (易科罰金) olisi sallittu  4. Vakava työsopimuksen tai työsääntöjen rikkominen  5. Se, joka tahallaan kuluttaa työnantajan koneita, välineitä, raaka-aineita, tuotteita tai muita tavaroita taikka tahallaan paljastaa työnantajan teknisiä ja liikesalaisuuksia ja aiheuttaa työnantajalle vahinkoa  6. Luvaton poissaolo (曠工) ilman pätevää syytä 3 peräkkäisenä päivänä tai 6 päivää tai enemmän 1 kuukaudessa |  |
 
-> Taiwanissa työnantajan on jokaista 1 täyttä palvelusvuotta (年資) kohden
+> Taiwanissa työnantajan on jokaista täyttä 1 palvelusvuotta (年資) kohden
 > maksettava 0,5 kuukauden keskipalkka (平均工資) erorahana.
 > (enintään 6 kuukausipalkkaa) Tämä kaava koskee palvelusaikaa, johon sovelletaan työntekijöiden eläkelain (勞工退休金條例) 12 artiklaa; palvelusaikaan, johon sovelletaan työstandardilain 17 artiklaa (勞動基準法), maksetaan kutakin 1 vuotta kohden 1 kuukauden keskipalkka ilman ylärajaa.
 
@@ -72,7 +72,7 @@ myös eroraha muodostuu suhteellisesti korkeammaksi.
 
 Jotkin taiwanilaiset yhtiöt käyttävät tällöin erilaisia keinoja,
 
-jotta niiden ei tarvitsisi maksaa korkeita irtisanomiskorvauksia,
+jotta niiden ei tarvitsisi maksaa suurta erorahaa,
 
 ja saavat työntekijät irtisanoutumaan itse.
 
@@ -82,7 +82,7 @@ eivätkä he saa langeta yhtiön aikeeseen.
 
 ​
 
-Kerron yhden asian, jota olen hoitanut.
+Seuraava esimerkki on toimiston hoitamasta asiasta.
 
 On tunnettu yhtiö A, jolla on sivuliikkeitä koko Taiwanissa.
 

@@ -10,7 +10,7 @@ faq:
   - q: "Jos Taiwanissa on asiakkaita, onko sinne pakollisesti perustettava yhtiö?"
     a: "Sitä ei voida ratkaista pelkästään siksi, että asiakas on Taiwanissa. On katsottava asiakkaan vaatimuksia ja tosiasiallista toimintaa kaupan, laitosten, henkilöstön ja transaktiorakenteen osalta Taiwanissa ja sen jälkeen valittava se yksikkö, joka vastaa tosiseikkoja."
   - q: "Katoaako päätoimipaikan vastuu kokonaan, kun taiwanilainen yhtiö perustetaan?"
-    a: "Jos perustetaan tytäryhtiö eikä sivuliike (分公司), päätoimipaikka ei lähtökohtaisesti kanna sopimusvelvoitteita, jotka allekirjoitetaan tytäryhtiön nimissä. On kuitenkin tutkittava poikkeukset oikeussubjektiuden väärinkäytön vuoksi sekä se, onko päätoimipaikka itse ottanut takauksen tai omia sopimusvelvoitteita."
+    a: "Jos perustetaan tytäryhtiö eikä sivuliike (分公司), päätoimipaikka ei lähtökohtaisesti kanna sopimusvelvoitteita, jotka allekirjoitetaan tytäryhtiön nimissä. On kuitenkin tutkittava poikkeukset oikeushenkilöllisyyden väärinkäytön vuoksi sekä se, onko päätoimipaikka itse ottanut takauksen tai omia sopimusvelvoitteita."
   - q: "Voiko ensin toimia jälleenmyyjän kautta ja siirtyä myöhemmin yhtiöön Taiwanissa?"
     a: "Vaiheittainen siirtymä voidaan suunnitella, mutta on myös tutkittava olemassa olevien sopimusten päättyminen tai muuttaminen, asiakassopimukset, varastot, vikojen käsittely ja henkilöstö."
 ---
@@ -19,7 +19,7 @@ faq:
 
 ![Toimituksellinen kuva Taiwanin markkinoille tulon rakenteen arvioimiseksi puolijohdeyritykselle](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Kun kauppa taiwanilaisten asiakkaiden kanssa alkaa, ulkomainen päätoimipaikka voi saada erilaisia vaatimuksia: käsitellä tarjouksia ja sopimuksia Taiwanissa, pitää varastoa kiireellistä vaihtoa varten tai sijoittaa henkilöstöä asennukseen ja huoltoon (子公司). Silloin kysytään mielellään ensin: ”Riittääkö yhtiön perustaminen Taiwanissa (子公司) tämän ratkaisemiseksi?”
+Kun kauppa taiwanilaisten asiakkaiden kanssa alkaa, ulkomainen päätoimipaikka voi saada erilaisia vaatimuksia: käsitellä tarjouksia ja sopimuksia Taiwanissa, pitää varastoa kiireellistä vaihtoa varten tai sijoittaa henkilöstöä asennukseen ja huoltoon. Silloin kysytään mielellään ensin: ”Riittääkö yhtiön perustaminen Taiwanissa (子公司) tämän ratkaisemiseksi?”
 
 Se, mikä on ensin selvitettävä, on kuka Taiwanissa ottaa mitä. Arvioitava rakenne muuttuu sen mukaan, jatkaako ulkomainen päätoimipaikka myyntisopimusten allekirjoittamista, ostaako taiwanilainen yhtiö tavaroita ja myy ne edelleen vai antaako paikallinen henkilöstö vain teknistä tukea.
 
@@ -45,14 +45,14 @@ Erityisesti jos ostosopimuksen myyjä ei ole se yritys, joka antaa teknisen tuen
 
 ## 2. Erottelu tytäryhtiön, sivuliikkeen ja ulkomaisen yhtiön edustuston välillä Taiwanissa
 
-Tulon suunnittelussa puolijohdeyrityksen on erotettava, mikä läsnäolo Taiwanissa perustetaan ja miten myynti ja asiakaspalvelu järjestetään. Ensimmäinen kohta koskee oikeussubjektiutta, rekisteröintivaatimuksia ja toimialaa; toinen kauppatapaa, toimivaltuuksia ja vastuun jakoa.
+Tulon suunnittelussa puolijohdeyrityksen on erotettava, mikä läsnäolo Taiwanissa perustetaan ja miten myynti ja asiakaspalvelu järjestetään. Ensimmäinen kohta koskee oikeushenkilöllisyyttä, rekisteröintivaatimuksia ja toimialaa; toinen kauppatapaa, toimivaltuuksia ja vastuun jakoa.
 
-Keskeinen ero taiwanilaisen tytäryhtiön (子公司) ja ulkomaisen yhtiön taiwanilaisen sivuliikkeen (分公司) välillä on, onko sillä emoyhtiöstä tai päätoimipaikasta erillinen oikeussubjektius. Jakelu ja edustussuhde ovat transaktio- ja sopimusrakenteita, eikä niitä saa sekoittaa yhtiömuotoon.
+Keskeinen ero taiwanilaisen tytäryhtiön (子公司) ja ulkomaisen yhtiön taiwanilaisen sivuliikkeen (分公司) välillä on, onko sillä emoyhtiöstä tai päätoimipaikasta erillinen oikeushenkilöllisyys. Jakelu ja edustussuhde ovat transaktio- ja sopimusrakenteita, eikä niitä saa sekoittaa yhtiömuotoon.
 
 | Rakenne | Perusero | Mitä on ensin syytä vahvistaa |
 |---|---|---|
-| Taiwanilainen tytäryhtiö (子公司) | Perustetaan Taiwanin oikeuden mukaisesti, omalla oikeussubjektiudella, ja on eri oikeussubjekti kuin ulkomainen emoyhtiö. | Koska tytäryhtiö on itsenäinen oikeushenkilö, on vahvistettava, miten toimitus, palvelut, teknologialisenssi ja kustannusten jako emoyhtiön kanssa järjestetään. |
-| Ulkomaisen yhtiön taiwanilainen sivuliike (分公司) | Lainmukaisesti Taiwanissa rekisteröity sivuliike, ilman päätoimipaikasta erillistä oikeussubjektiutta, toisin kuin erikseen perustettu tytäryhtiö. | Sivuliike on osa ulkomaista päätoimipaikkaa, ei itsenäinen oikeushenkilö, joten päätoimipaikka kantaa velvoitteet suoraan. Vahvistakaa sivuliikkeen edustajan toimivaltuuksien laajuus ja ulkoisten sopimusten, toimituksen, vikojen kattamisen ja jälkipalvelun sisäinen jako. |
+| Taiwanilainen tytäryhtiö (子公司) | Perustetaan Taiwanin oikeuden mukaisesti, omalla oikeushenkilöllisyydellä, ja on eri oikeushenkilö kuin ulkomainen emoyhtiö. | Koska tytäryhtiö on itsenäinen oikeushenkilö, on vahvistettava, miten toimitus, palvelut, teknologialisenssi ja kustannusten jako emoyhtiön kanssa järjestetään. |
+| Ulkomaisen yhtiön taiwanilainen sivuliike (分公司) | Lainmukaisesti Taiwanissa rekisteröity sivuliike, ilman päätoimipaikasta erillistä oikeushenkilöllisyyttä, toisin kuin erikseen perustettu tytäryhtiö. | Sivuliike on osa ulkomaista päätoimipaikkaa, ei itsenäinen oikeushenkilö, joten päätoimipaikka kantaa velvoitteet suoraan. Vahvistakaa sivuliikkeen edustajan toimivaltuuksien laajuus ja ulkoisten sopimusten, toimituksen, vikojen kattamisen ja jälkipalvelun sisäinen jako. |
 | Edustusto Taiwanissa (代表人辦事處) | Kaupallinen tukipiste, joka on rekisteröity yhtiölain 386 artiklan mukaisesti; ei saa Taiwanissa harjoittaa kaupallista toimintaa. | Koska kaupallista toimintaa ei saa harjoittaa, vahvistetaan, pysyykö tosiasiallinen toiminta sallitulla alalla. |
 
 ## 3. Taiwanilaisen tytäryhtiön muodot: yhtiö, jolla on rajoitettu vastuu (有限公司), ja osakeyhtiö (股份有限公司)
@@ -61,11 +61,11 @@ Jos päätetään perustaa itsenäinen oikeushenkilö Taiwanissa, on myös valit
 
 ### Yhtiö, jolla on rajoitettu vastuu (有限公司): kevyempi hallinto, mutta tiukemmin rajoitettu osuuksien luovutus
 
-Se voidaan muodostaa 1 tai useammalla luonnollisella henkilöllä (有限公司) tai taiwanilaisilla tai ulkomaisilla oikeushenkilöillä osakkeenomistajina; osakkeenomistajat ovat lähtökohtaisesti vastuussa sijoituksensa määrään asti. Yhtiöllä on 1–3 johtajaa, valittuina osakkeenomistajista. Osakkaat, jotka eivät hoida yhtiön asioita, voivat käyttää tarkastusoikeutta, joten erillistä yhtiön valvojaa (監察人) ei tarvitse nimetä. Ellei yhtiöjärjestyksessä toisin määrätä, pätee 1 ääni kutakin 1 osakkeenomistajaa kohden, joten määräysvallan ei tarvitse vastata sijoitussuhdetta. Tavallisen osakkeenomistajan sijoituksen luovutus edellyttää lähtökohtaisesti suostumusta yli puolelta muiden äänioikeuksista; johtajalle 2/3 tai enemmän. Se sopii paremmin yksinkertaisiin osakkeenomistajasuhteisiin ja vakaaseen määräysvaltaan kuin toistuvaan pääomanhankintaan tai osuuksien kauppaan. Myöhemmin se voidaan muuttaa osakeyhtiöksi (股份有限公司).
+Se voidaan perustaa 1 luonnollisella henkilöllä tai useammalla (有限公司) tai taiwanilaisilla tai ulkomaisilla oikeushenkilöillä osakkeenomistajina; osakkeenomistajat ovat lähtökohtaisesti vastuussa sijoituksensa määrään asti. Yhtiöllä on 1–3 johtajaa, valittuina osakkeenomistajista. Osakkaat, jotka eivät hoida yhtiön asioita, voivat käyttää tarkastusoikeutta, joten erillistä yhtiön valvojaa (監察人) ei tarvitse nimetä. Ellei yhtiöjärjestyksessä toisin määrätä, kullakin 1 osakkeenomistajalla on 1 ääni, joten määräysvallan ei tarvitse vastata sijoitussuhdetta. Tavallisen osakkeenomistajan sijoituksen luovutus edellyttää lähtökohtaisesti suostumusta yli puolelta muiden äänioikeuksista; johtajalle 2/3 tai enemmän. Se sopii paremmin yksinkertaisiin osakkeenomistajasuhteisiin ja vakaaseen määräysvaltaan kuin toistuvaan pääomanhankintaan tai osuuksien kauppaan. Myöhemmin se voidaan muuttaa osakeyhtiöksi (股份有限公司).
 
 ### Osakeyhtiö (股份有限公司): sopiva, jos halutaan ottaa muita sijoittajia tai listautuminen on ennakoitavissa
 
-Pääoma jaetaan osakkeisiin. Lähtökohtaisesti vaaditaan 2 osakkeenomistajaa tai enemmän (股份有限公司), mutta valtio tai oikeushenkilö voi perustaa sen yksin, ja ulkomainen oikeushenkilö voi pitää 100 %. Osakkeet ovat lähtökohtaisesti vapaasti luovutettavissa, lakisääteisin poikkeuksin; erityisiä osakkeita ja optioita työntekijöille voidaan muotoilla lain mukaisesti. Se sopii yrityksille, jotka odottavat sijoittajia, osakekauppaa, pääomakannustimia työntekijöille tai myöhempää sulautumista, yritysostoa, pörssilistautumista tai rekisteröitymistä kasvuyritysmarkkinalle; se ei rajoitu suuriin yrityksiin. Hallinnossa yhtiö, joka ei ole tehnyt julkista osakeantia, voi yhtiöjärjestyksellä olla ilman hallitusta, ja sillä voi olla vain 1 tai 2 johtajaa. Yhtiö, jonka ainoa osakkeenomistaja on valtio tai oikeushenkilö, voi yhtiöjärjestyksellä olla ilman yhtiön valvojaa (監察人). Jokaisen osakeyhtiön (股份有限公司) ei tarvitse antaa tilinpäätöstä varmennettavaksi. Tavanomaisen yhtiön olennaisimmat tilintarkastusrajat ovat maksettu pääoma TWD 30.000.000 (新臺幣) tai, sen alle, liikevaihto TWD 100.000.000 tai 100 työntekijää Taiwanin työntekijävakuutuksessa (勞工保險); julkisen osakeannin tehneet yhtiöt noudattavat arvopaperisääntelyä.
+Pääoma jaetaan osakkeisiin. Lähtökohtaisesti vaaditaan 2 osakkeenomistajaa tai enemmän (股份有限公司), mutta valtio tai oikeushenkilö voi perustaa sen yksin, ja ulkomainen oikeushenkilö voi pitää 100 %. Osakkeet ovat lähtökohtaisesti vapaasti luovutettavissa, lakisääteisin poikkeuksin; erityisiä osakkeita ja optioita työntekijöille voidaan muotoilla lain mukaisesti. Se sopii yrityksille, jotka odottavat sijoittajia, osakekauppaa, pääomakannustimia työntekijöille tai myöhempää sulautumista, yritysostoa, pörssilistautumista tai rekisteröitymistä esipörssiin (興櫃); se ei rajoitu suuriin yrityksiin. Hallinnossa yhtiö, joka ei ole tehnyt julkista osakeantia, voi yhtiöjärjestyksellä olla ilman hallitusta, ja sillä voi olla vain 1 tai 2 johtajaa. Yhtiö, jonka ainoa osakkeenomistaja on valtio tai oikeushenkilö, voi yhtiöjärjestyksellä olla ilman yhtiön valvojaa (監察人). Jokaisen osakeyhtiön (股份有限公司) ei tarvitse antaa tilinpäätöstä varmennettavaksi. Tavanomaisen yhtiön olennaisimmat tilintarkastusrajat ovat maksettu pääoma 30.000.000 TWD (新臺幣) tai, sen alle, liikevaihto 100.000.000 TWD tai 100 työntekijää Taiwanin työntekijävakuutuksessa (勞工保險); julkisen osakeannin tehneet yhtiöt noudattavat arvopaperisääntelyä.
 
 ## 4. Sivuliikkeen ja tytäryhtiön menettelyt eroavat; vain tytäryhtiö käy sijoitustarkastusosaston tarkastuksen
 
@@ -73,17 +73,17 @@ Kun ulkomainen yhtiö perustaa taiwanilaisen tytäryhtiön, nimi ennakkotarkaste
 
 Sitä vastoin tavanomaisen ulkomaisen yhtiön taiwanilaisen sivuliikkeen perustamiseen ei lähtökohtaisesti vaadita sijoitustarkastusosaston sijoituslupaa; talousministeriön kaupallisen kehityksen virasto (經濟部商業發展署) käsittelee sivuliikkeen rekisteröinnin ja siihen liittyvän pääoman vahvistamisen. Tarvittaviksi jäävät ennakollinen nimitarkastus, käyttöpääoman siirto, pääomatarkastus ja verorekisteröinti; kalenteri on yleensä lyhyempi.
 
-Edellä oleva on ohjetta sopimuksen muotoilusta. Yhden konkreettisen lomakkeen hallussapito ei tee transaktiota lainmukaiseksi eikä ehkäise riitoja.
+Edellä oleva on ohjetta sopimuksen muotoilusta. Se, että tietty yhtiö- tai sopimusmuoto on valittu, ei tee transaktiota lainmukaiseksi eikä estä riitoja.
 
 ## 5. Yhtiörekisteröinti ja insinöörin lainmukainen työ eivät ole sama asia
 
 Rekisteröinnin saattaminen päätökseen Taiwanissa ei merkitse, että ulkomaisen päätoimipaikan henkilöstö saisi automaattisesti työskennellä Taiwanissa. Ulkomaalainen, joka työskentelee Taiwanissa, tarvitsee lainmukaisen työluvan ja, pidemmässä oleskelussa, oleskeluluvan. Lähtökohtaisesti työnantaja hakee työlupaa ja vastaavaa oleskelulupaa.
 
-Työluvan saaminen on suhteellisen yksinkertaisempaa taiwanilaisen tytäryhtiön tai ulkomaisen yhtiön sivuliikkeen johtajalle. Kun työlupaa haetaan toiselle tai sitä seuraavalle ulkomaalaiselle, työministeriö edellyttää alasta riippuen pääomaa, liikevaihtoa tai muuta vastaavaa rajaa (子公司). Jos ennakoidaan, että ulkomaista henkilöstöä työskentelee Taiwanissa, on ennen yhtiön perustamista vahvistettava, saavuttaako suunniteltu pääoma voimassa olevan rajan.
+Työluvan saaminen on suhteellisen yksinkertaisempaa taiwanilaisen tytäryhtiön tai ulkomaisen yhtiön sivuliikkeen johtajalle. Kun työlupaa haetaan toiselle tai sitä seuraavalle ulkomaalaiselle, työministeriö (勞動部) edellyttää alasta riippuen pääomaa, liikevaihtoa tai muuta vastaavaa rajaa. Jos ennakoidaan, että ulkomaista henkilöstöä työskentelee Taiwanissa, on ennen yhtiön perustamista vahvistettava, saavuttaako suunniteltu pääoma voimassa olevan rajan.
 
 ## 7. Rakenteet, jotka kaupan vaiheen mukaan voivat sopia
 
-Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät vahvista, että tietty tapa olisi lainmukainen tai parempi (子公司).
+Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät vahvista, että tietty tapa olisi lainmukainen tai parempi.
 
 **Ulkomaiset yritykset, jotka tähtäävät alkuvaiheen vientiin.** Jos Taiwanissa ei vielä ole työntekijöitä eikä varastoja ja halutaan tutkia kysyntää riippumattoman jakelijan kautta, voidaan ensin katsoa toimitusta, jakelusuhdetta ja toimialaa Taiwanissa. Pelkkä jakelusopimus ei ratkaise kaikkia sääntelykysymyksiä Taiwanissa.
 
@@ -105,7 +105,7 @@ Sitä ei voida ratkaista pelkästään siksi, että asiakas on Taiwanissa. On ka
 
 ### Katoaako päätoimipaikan vastuu kokonaan, kun taiwanilainen yhtiö perustetaan?
 
-Jos perustetaan tytäryhtiö eikä sivuliike (分公司), päätoimipaikka ei lähtökohtaisesti kanna sopimusvelvoitteita, jotka allekirjoitetaan tytäryhtiön nimissä. On kuitenkin tutkittava poikkeukset oikeussubjektiuden väärinkäytön vuoksi sekä se, onko päätoimipaikka itse ottanut takauksen tai omia sopimusvelvoitteita.
+Jos perustetaan tytäryhtiö eikä sivuliike (分公司), päätoimipaikka ei lähtökohtaisesti kanna sopimusvelvoitteita, jotka allekirjoitetaan tytäryhtiön nimissä. On kuitenkin tutkittava poikkeukset oikeushenkilöllisyyden väärinkäytön vuoksi sekä se, onko päätoimipaikka itse ottanut takauksen tai omia sopimusvelvoitteita.
 
 ### Voiko ensin toimia jälleenmyyjän kautta ja siirtyä myöhemmin yhtiöön Taiwanissa?
 

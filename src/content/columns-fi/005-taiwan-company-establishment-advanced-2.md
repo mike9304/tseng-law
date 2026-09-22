@@ -11,9 +11,9 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 # Yhtiön perustaminen Taiwanissa – syventävä osa 2
 
-![Valittu kuva](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
+![Kansikuva](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Ne, jotka ovat lukeneet [Yhtiön perustaminen Taiwanissa – perusteet](/fi/columns/taiwan-company-establishment-basics) ja [Yhtiön perustaminen Taiwanissa – syventävä osa 1](/fi/columns/taiwan-company-establishment-advanced-1), voivat samoin tutustua tekstiin Yhtiön perustaminen Taiwanissa – syventävä osa 2 (公司設立).
+Tämä osa 2 jatkaa artikkeleita [Yhtiön perustaminen Taiwanissa – perusteet](/fi/columns/taiwan-company-establishment-basics) ja [Yhtiön perustaminen Taiwanissa – syventävä osa 1](/fi/columns/taiwan-company-establishment-advanced-1) (公司設立).
 
 ​
 
@@ -37,7 +37,7 @@ Kysykää ennen pääomansiirtoa (資本金匯款) neuvoa siitä pankista, josta
 
 **​**
 
-**2. Saatteko yhtiöpääomaa tallettaessanne siirtää taiwanilaisia dollareita (新臺幣, TWD) henkilökohtaiselta Taiwanin-tililtänne taiwanilaisen yhtiön valmistelutilille?**
+**2. Saatteko yhtiöpääomaa tallettaessanne siirtää uusia taiwanilaisia dollareita (新臺幣, TWD) henkilökohtaiselta Taiwanin-tililtänne taiwanilaisen yhtiön valmistelutilille?**
 
 Se on mahdollista, mutta teidän on esitettävä asiakirjat, jotka osoittavat Taiwanissa hankittujen TWD-varojen alkuperän.
 

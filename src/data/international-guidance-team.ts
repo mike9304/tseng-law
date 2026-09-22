@@ -701,7 +701,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'Asianajaja Wei Tseng — Keskeiset tiedot',
     qualificationLabel: 'Kelpoisuus ja toimisto',
     qualificationSentence:
-      '{name} on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on {firm}in johtava asianajaja.',
+      '{name} on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on toimiston {firm} johtava asianajaja.',
     practiceLabel: 'Pääalueet',
     consultationLanguagesLabel: 'Neuvontakielet',
     roles: {
@@ -3104,7 +3104,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinoi neuvonta-aikoja ja viestintää Koreasta tuleville päämiehille.',
-        'Tukee alueiden välistä vaihtoa asiakirjajärjestelmien ja työnkulkujen kautta, tietojenkäsittelytieteen pohjalta.',
+        'Tukee toimintojen välistä tiedonvaihtoa asiakirjajärjestelmien ja työnkulkujen avulla, tietojenkäsittelytieteen pohjalta.',
       ],
       education: ['Kandidaatti (B.S.) tietojenkäsittelytieteessä, National Cheng Kung University'],
       experience: ['Korean toiminnot, Hovering International Law Firm'],

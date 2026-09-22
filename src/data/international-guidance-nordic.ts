@@ -1648,11 +1648,11 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
     },
     about: {
       eyebrow: 'TOIMISTO',
-      title: 'Hovering International Law Firmistä',
+      title: 'Tietoa toimistosta Hovering International Law Firm',
       description:
         'Perustiedot tästä taiwanilaisesta asianajotoimistosta, sen toimistoista ja työstä ulkomaisten osapuolten kanssa.',
       intro:
-        'Hovering International Law Firm on asianajotoimisto Taiwanissa. Asianajajat toimivat yrityksen neuvonnasta oikeudenkäyntiin. Tämä osa kuvaa toimiston syntyä, paikkoja ja työtä ulkomaisten osapuolten kanssa.',
+        'Hovering International Law Firm on asianajotoimisto Taiwanissa. Asianajajat hoitavat sekä yritysten neuvontaa että oikeudenkäyntejä. Tämä osa kuvaa toimiston syntyä, paikkoja ja työtä ulkomaisten osapuolten kanssa.',
       sections: [
         {
           heading: 'Perustaminen ja rakentuminen',
@@ -1704,7 +1704,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kulut vahvistetaan ennen työn alkamista',
           paragraphs: [
             'Kun työn laajuus on selvä, määrästä ja laskentatavasta keskustellaan teidän kanssanne ja ne vahvistetaan ennen työn alkamista. Jos laajuus muuttuu matkan varrella, se on vahvistettava uudelleen.',
-            'Tämä sivu ei ole tarjous hinnasta eikä synnytä maksuvelvollisuutta.',
+            'Tämä sivu ei ole tarjous hinnasta eikä synnytä maksuvelvollisuutta. Pyynnön lähettäminen tältä sivulta on myös maksutonta.',
           ],
         },
         {
@@ -1739,7 +1739,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Sivun kieli: Nämä ohjeet on kirjoitettu suomeksi.',
             'Neuvontakieli: Neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
-            'Kirjoituskielenne: Voitte kirjoittaa yhteenvedon omalla kielellänne; alkuperäinen teksti säilytetään muuttamattomana.',
+            'Kieli, jolla kirjoitatte: Voitte kirjoittaa yhteenvedon omalla kielellänne; alkuperäinen teksti säilytetään muuttamattomana.',
           ],
         },
         {
@@ -1850,7 +1850,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Alkuperäinen teksti säilytetään muuttamattomana',
           paragraphs: [
-            'Tekstinne säilytetään juuri sellaisena kuin kirjoititte sen, eikä sitä käännetä automaattisesti. Jos käännös on tarpeen käsittelyä varten, se otetaan esiin erikseen teidän kanssanne.',
+            'Tekstinne säilytetään juuri sellaisena kuin kirjoititte sen, eikä sitä käännetä automaattisesti. Jos käännös on tarpeen käsittelyä varten, siitä sovitaan erikseen teidän kanssanne.',
             'Koska alkuperäinen teksti säilytetään, älkää alkuvaiheessa kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.',
           ],
         },
@@ -1864,7 +1864,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Käytön tarkoitus',
           paragraphs: [
-            'Lähetetyt tiedot palvelevat pyynnön tarkistusta, palautetta teille, viestintätavan selvittämistä ja käsittelyä, jos työ otetaan vastaan.',
+            'Lähetettyjä tietoja käytetään pyynnön tarkistamiseen, vastaukseen teille, viestintätavan selvittämiseen ja käsittelyyn, jos työ otetaan vastaan.',
             'Tietoja ei käytetä markkinointiin ilman erillistä suostumusta.',
           ],
         },

@@ -61,7 +61,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 可以。
 
-银行通常要求双重身份核验。
+银行通常要求提供两种身份证明。
 
 没有居留证时，可向台湾移民署申请“统一证号基本资料表”（統一證號基本資料表）。
 
@@ -81,7 +81,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 说明宜写详细，以便说服承办审查的人。
 
-投资人背景与行业是否匹配，宜结合具体计划再作核对。
+这一点宜与台湾律师充分讨论。
 
 ​
 

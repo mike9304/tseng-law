@@ -795,8 +795,8 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       '此文章仅以{language}发布，链接会打开该原文页面。',
     unavailableTranslationNotice:
-      '这篇内容尚无本页语言的版本。标明原文语言的链接会打开原文。',
-    unavailableLanguageNotice: '本页不以{language}提供。',
+      '此内容尚无当前页面所用语言的版本。标明原文语言的链接会打开原文。',
+    unavailableLanguageNotice: '本页不提供{language}版本。',
     languageOptions: {
       en: '英语（English）',
       'zh-hant': '中文',

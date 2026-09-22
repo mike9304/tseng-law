@@ -59,7 +59,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 故实务上，公司登记时不必查询全部业种。
 
-所依据的是“[台北市营业场所协助查询服务作业须知](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”（臺北市營業場所協助查詢服務作業須知）及台北市现行指南。
+下列须附查询结果的要求，依据的是“[台北市营业场所协助查询服务作业须知](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”（臺北市營業場所協助查詢服務作業須知）及台北市现行指南。
 
 自2023年1月1日起，申请公司或商业（含分公司及分支机构）的设立登记、迁址或追加营业项目时，不论行业，营业场所预先查询结果**必须**附于登记申请。
 

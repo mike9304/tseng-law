@@ -1,0 +1,111 @@
+# WO-F-zh-hans — Simplified Chinese fix lane, campaign round 4 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-zh-hans-r4 (no git add/commit/push)
+Files touched: src/content/columns-zh-hans/003, 005–018 (001, 002, 004 had no r4 row);
+src/data/international-guidance-asia.ts (simplifiedChineseGuidanceContent strings only);
+src/data/international-guidance-team.ts (zh-hans bio only);
+src/data/international-inquiry-copy.ts (zh-hans notices only);
+this log.
+llms-txt was not edited: consultationNotice and confidentialNotice were not the sentences rewritten, and both stay verbatim substrings. "TWD 1.57M" was not in these strings and stays byte-identical. No test expectation pinned a string that changed (vitest 3202 passed without a test edit).
+
+## Rows applied
+zh-hans-a 17/18 and zh-hans-b 29/31. No P1 or P3 rows in either review.
+
+zh-hans-a
+1  003: "对方的非正式同意，或仅作成记录，并不足以取代尚未完成的法定措施。"
+2  007: the predicate is now "仍可能需要法院审查。" The lead-in "即使已有既存决定……" stays.
+3  008 difficulty row, three comparable levels, no result promise: "较低（须符合法定列举事由，不表示一定成立） | 困难 | 较低（仍须遵守预告期间）". Middle cell "困难" already named the English "Difficult", so it was not changed to "高". "第11条" was not added here: the conditions row already counts that 11, and the English difficulty cells have no article number.
+4  005: the permit category is the category applied for, with the official traditional name, and 须符合 on the eligibility requirements. "A." and "专业性或技术性工作" stay. "经理人（經理人）" gloss added.
+5  006: "这次释宪" → "一次释宪".
+6  guidance: "企业治理" → "公司治理".
+8  008 quote: the six-month cap is now on the same sentence as the 0.5-month formula ("雇主须给付平均工资0.5个月作为资遣费，至多6个月工资。"). The following line keeps "此公式适用于……". No second 0.5 was added (the previous quote line already had it).
+9  guidance: "期限（包括诉讼时效，台湾法称消灭时效／消滅時效）".
+10 007: "变更子女抚养费，并不以双方当初绝对无法预见的事件为限。"
+11 007: "动用物理强制" → "采取强制手段". 交付子女 stays; English lists handover separately from use of force.
+12 009: "因此，由雇主依法终止的，可以不给付；由受雇人依法终止的，可以请求。"
+13 guidance: "屏东办公室于2017年开设，以应对当地需求。" Digit 2017 unchanged.
+14 guidance: "本页不提供{language}版本。"
+15 guidance: "此内容尚无当前页面所用语言的版本。标明原文语言的链接会打开原文。"
+16 guidance bio: "她曾代理一名韩国学生，就健身房受伤请求损害赔偿，并取得新台币157万元的一审判决。" Amount unchanged. 她 marks the attorney.
+17 guidance: "劳资双方都可能成为当事人。"
+18 guidance: "以及开始工作后的案件处理。"
+
+zh-hans-b
+1  010: "不利评价" → "不利推定".
+2  011: "资料的沟通" → "资料的提供".
+3  011: "不得仅按希望对销售控制到何种程度来选择。"
+4  011: the disclaimer stays negative. "也不保证任何许可或登录会获准、产品具备销售资格，或办理会在某一期限内完成。"
+5  012: "以及是否有足够空间完成超车并安全返回原车道。"
+6  012: "未按规定发出喇叭或车灯信号". The same English "or" in the preceding rule sentence, "反复使用喇叭与车灯", is now "喇叭或车灯".
+7  013: "银行通常要求提供两种身份证明。"
+8  013: "这一点宜与台湾律师充分讨论。"
+9  014: "提出辞职、从工资中扣款、约定返还或应对争执前". Other 扣留 in the checklist still name withholding records and were not this "接受" error.
+10 014: "再按必要程序调取其余材料。"
+11 017: 新车 → 新货车 on the 20 / 8 / 5 body sentence. The FAQ and the repeated opening already said 新货车 for the 20-count; "至少8辆" and "至少5辆" there now say 新货车. Amounts 25,000,000 and 10,000,000 and the counts 20, 8, 5 unchanged.
+12 017: "不是实缴出资。"
+13 018 table: "故总公司直接承担义务与责任。"
+14 018: "依负责律师的指示确定。" The table's "台湾负责人" is the company's statutory responsible person and was left.
+16 016: "文件从一开始就须有系统地整理。"
+17 010: "不得把报道中的和解视为一审判决已经确定的结果。"
+18 010: "也可能就安全义务、因果关系、损害与证据发生争执。"
+19 011: "但即使由第三人协助建立或保存资料，化妆品制造或进口业者的法律责任仍然存在。"
+20 011: "回收或销毁，并不会仅因PIF资料有任何欠缺就自动采取。"
+21 012: "若适用同一车道的程序，应发出规定的喇叭或车灯信号，不得迫使前方车辆让路，应等待明确的让行表示，并以足够间距和能够安全返回的距离完成超车。"
+22 014: "其费用不能转化为留任义务或提前离职制裁的依据。" 判决意旨 in 007 left (that is the holding of a judgment).
+23 015: rephrased inside the block, link and traditional gloss unchanged. "下列须附查询结果的要求，依据的是“[台北市营业场所协助查询服务作业须知](…)”（臺北市營業場所協助查詢服務作業須知）及台北市现行指南。" The next block still begins "自2023年1月1日起……必须附于登记申请" and was not copied (that date is already counted once).
+24 016: "须兼顾子女当前的需要与日后的生活".
+25 017: "内政部移民署现行关于禁止入境期间的指引". "3年" unchanged. The link label "禁止入境期间行政指引" was already the period, not a work ban, and was left.
+26 017: "是与一般公司设立不同、范围很窄的制度。"
+28 010: "药品与康复费用".
+29 012: "后方车辆的驾驶人"; "摩托车驾驶人A". "驾驶行为" left (it is the act).
+30 018: "会计师查核签证（會計師查核簽證，即会计师审计）".
+31 018: "保固（即质保）" on the FAQ, the branch-table cell, and the repeated closing sentence.
+
+## Rows skipped
+zh-hans-a #7 (003 Q16–Q20 and the close, and the same blanks in 005, 006, 008, 009) and zh-hans-b #15 (013 lines that are only U+200B, and 015). Promoting those lines to `##` changes heading levels. Deleting U+200B changes the ZWSP count. checkHeadings and checkBlocks require both to match the Korean source, which has the same blanks. 0 ZWSP removed. 005's empty `**​**` lines left for the same reason.
+
+zh-hans-b #27 (万/亿 grouping of exact amounts in 010, 011, 017, 018). Not applied. See disagreements. Comma form kept: 1,579,589; 1,570,000; 1,000,000; the 011 fine ranges; 25,000,000; 10,000,000; 30,000,000; 100,000,000. 0 instances changed.
+
+## Systemic patterns and how many instances changed
+U+200B one-line fragments (003 from Q16, 005, 006, 008, 009, 013, 015)     0 removed (skip above)
+Guidance calques of "not offered in" / "the language of this page"       2 (unavailableLanguageNotice, unavailableTranslationNotice). "此文章仅以{language}发布" was already a natural sentence and was left.
+Sentence-initial 曾 in her own bio                                       1 (team intro). No other sentence-initial 曾 in the zh-hans pack.
+007 predicates copied from English structure                              3 (法院审查, 并不以……为限, 强制手段)
+008 difficulty row not three levels                                       1 row (first and third cells)
+Same limitation listed three times                                        1 gloss
+Exact amounts in Western comma grouping (010, 011, 017, 018)              0 (skip above)
+Statutory vehicle named 新车, or the noun dropped on 8 and 5               7 (body 20/8/5; FAQ and opening each gained 新货车 on 8 and on 5)
+Connector 意旨 inventing a purpose                                        1 (014). 007 判决意旨 / 违宪判断意旨 left.
+Taiwan everyday words without a mainland equivalent                       复健→康复 1; 保固（即质保） 3; 查核签证 gloss 即会计师审计 1
+Disclaimer that sales "will be feasible"                                  1 (011), kept as a denial
+驾驶 used for the person                                                  7 (012 ×2, 017 ×5). 职业驾驶执照 and 驾驶行为 left. 003 was already 驾驶人.
+Horn-and-lights where English is horn or lights                           2 (012)
+
+R2–R10 were already in this corpus (prior rounds). This pass did not reopen them except where an r4 row was the same rule (R3: the 011 disclaimer and the 008 "不表示一定成立" stay negative; R8: 新货车, 实缴出资, 审计, 质保, 驾驶人, 公司治理). R9 emergency numbers in 003 already say 119, 110, and 112. Hangul remains only inside frontmatter `url` of 008 and 009. Attorney Wei Tseng is not marked masculine. Consultation languages stay English, Chinese (中文), Japanese, and Korean. No interpreter, reply-time, free first meeting, or result promise was turned positive.
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-zh-hans --lang zh-hans 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=2812
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-zh-hans src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      21
+```
+`git status --short | wc -l` was 21 before this log file existed. Summary is PASS 18/18. 017 still WARNs `수사 미해석 (2): 제3자; 제3자` with sourceCount=targetCount=44; that WARN does not fail the summary, and this pass did not add a digit in 017.
+
+## Reviewer disagreements (not applied)
+zh-hans-b #27, the form "157万9589元" for 新台币1,579,589元. That is not one amount. 157万 is 1,570,000, and 9589 is a second number. The comma form is the judgment figure. Round amounts in 万/亿 would be natural mainland grouping, but this checker's magnitude step only multiplies 萬/億 (not 万/亿), so "2500万元" is read as 2500 and "1亿元" drops 100,000,000. Those strings were not introduced.
+
+Nothing else in the two reviews was rejected as wrong. The U+200B rows were skipped because the checker pins the count. The 015 suggestion that pastes the next paragraph (including 2023年1月1日) into this one was rephrased inside the existing block instead, so the date is not counted twice.

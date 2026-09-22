@@ -61,7 +61,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-នៅតៃវ៉ាន់។
+នៅតៃវ៉ាន់
 
 ជនពិការភ្នែកជួបឧបសគ្គច្រើនក្នុងច្រើនផ្នែក ទាំងការអភិវឌ្ឍខ្លួន សកម្មភាពប្រចាំថ្ងៃ ការរៀន និងការអប់រំ។
 

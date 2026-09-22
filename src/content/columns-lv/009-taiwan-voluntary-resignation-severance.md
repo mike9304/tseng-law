@@ -79,7 +79,7 @@ Vaina var būt darba devēja pusē vai darbinieka pusē.
 
 No tā ir atkarīgs, kura puse atlaišanas pabalstu var neizmaksāt un kura to var prasīt.
 
-Dažkārt, ja vaina ir abu darba attiecību pušu pusē,
+Dažkārt, ja vaina ir abām darba attiecību pusēm,
 
 ja izceļas strīds,
 

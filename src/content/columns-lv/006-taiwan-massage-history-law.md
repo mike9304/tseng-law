@@ -53,9 +53,9 @@ patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masi
 
 Šis likums bija spēkā līdz 2003. gadam; toreiz Lin kungs, kurš vadīja frizētavu,
 
-nodarbināja darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas pakalpojumiem, un policija to konstatēja.
+nodarbināja divus darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas pakalpojumiem, un policija to konstatēja.
 
-Saskaņā ar tolaik spēkā esošajām tiesībām Lin kungam un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 jaunajā Taivānas dolārā (新臺幣).
+Saskaņā ar tolaik spēkā esošajām tiesībām Lin kungam un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 jauno Taivānas dolāru (新臺幣).
 
 Lin kungs uzskatīja šo sankciju par ļoti netaisnīgu un pieprasīja konstitucionālo iztulkošanu.
 

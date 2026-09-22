@@ -67,7 +67,7 @@ Turpmākais ir vispārīga informācija, lai skaidrotu strīdus par traumām spo
 
 ## 1. Kādu tiesisko kārtību pēc traumas sporta zālē Taivānā var izvērtēt?
 
-[Taivānas Patērētāju aizsardzības likuma (消費者保護法) 7. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nosaka, ka tad, kad uzņēmums sniedz pakalpojumu, tam jānodrošina, ka šim pakalpojumam ir drošība, ko saprātīgi var sagaidīt atbilstoši profesionālajiem vai tehniskajiem standartiem, kuri ir spēkā pakalpojuma sniegšanas brīdī.
+[Taivānas Patērētāju aizsardzības likuma (消費者保護法) 7. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nosaka, ka tad, kad uzņēmums sniedz pakalpojumu, tam jānodrošina tāds drošības līmenis, kādu saprātīgi var sagaidīt atbilstoši profesionālajiem vai tehniskajiem standartiem, kuri ir spēkā pakalpojuma sniegšanas brīdī.
 
 Tas nenozīmē, ka uzņēmuma vai trenera atbildība tiek atzīta ikreiz, kad trauma notiek sporta zālē. Katrā lietā atsevišķi jāvērtē, kāds konkrēts rūpības pienākums pastāvēja, vai tas tika pārkāpts, vai ir cēloņsakarība starp pārkāpumu un traumu, vai radušies faktiski zaudējumi, kādi iebildumi ir pretējai pusei un vai pastāv pierādījums, kas pamato katru apgalvojumu un katru iebildumu.
 
@@ -83,7 +83,7 @@ Ja tomēr iespējams cits prasījuma pamats, piemēram, līgumiskā atbildība, 
 
 ## 3. Tūlīt pēc negadījuma — kādus pierādījumus un kā jāsaglabā?
 
-Lai varētu izskaidrot atbildību, cēloņsakarību un zaudējumus, ieteicams kopā savākt ne tikai novērošanas kameru ierakstus (監視器影像) no negadījuma brīža, bet arī medicīnisko dokumentāciju (病歷) un medicīnisko izziņu (診斷證明書), kvītis par medicīniskos izdevumus (醫療費用), transportu uz ārstniecības iestādi (就醫交通費) un aprūpes izmaksas (看護費用), ziņas, kas apmainītas ar sporta zāli un treneri, liecinieku paziņojumus, nodarbību rezervāciju un apmeklējuma uzskaiti, treniņa plānu un treniņa ierakstu. Ieteicams iespējamā apjomā nofotografēt traumas vietu un negadījuma vietas stāvokli un pēc datuma sakārtot gaitu pirms negadījuma un pēc tā, kā arī saziņas saturu, lai vēlāk būtu vieglāk dokumentus salīdzināt.
+Lai varētu izskaidrot atbildību, cēloņsakarību un zaudējumus, ieteicams kopā savākt ne tikai novērošanas kameru ierakstus (監視器影像) no negadījuma brīža, bet arī medicīnisko dokumentāciju (病歷) un medicīnisko izziņu (診斷證明書), kvītis par medicīniskos izdevumus (醫療費用), transportu uz ārstniecības iestādi (就醫交通費) un aprūpes izmaksas (看護費用), ziņas, kas apmainītas ar sporta zāli un treneri, liecinieku paziņojumus, nodarbību rezervāciju un apmeklējuma uzskaiti, treniņa plānu un treniņa ierakstu. Ieteicams iespējamā apjomā nofotografēt ievainoto ķermeņa daļu un negadījuma vietas stāvokli un pēc datuma sakārtot gaitu pirms negadījuma un pēc tā, kā arī saziņas saturu, lai vēlāk būtu vieglāk dokumentus salīdzināt.
 
 Ieraksti pēc glabāšanas termiņa var tikt pārrakstīti vai citu iemeslu dēļ kļūt neizmantojami. Tāpēc var izvērtēt lūgumu sporta zālei saglabāt tos ar satura apliecinājuma vēstuli (存證信函) vai ar advokātes rakstveida pieprasījumu (律師函), kurā konkrēti norādīts vajadzīgais laika posms, vieta un kameras novietojums. Šāds rakstisks lūgums ir praktisks pasākums, lai fiksētu, kas un kad tika lūgts. Pats par sevi tas pretējai pusei neuzliek jaunu tiesisku pienākumu ierakstus saglabāt un neliedz to dzēšanu, un arī apstāklis, ka ieraksti nav palikuši, pats par sevi nenoved pie tā, ka tiesa automātiski izdara nelabvēlīgu slēdzienu.
 
@@ -101,7 +101,7 @@ Zaudējumu posteņi, kuru izvirzīšanu var izvērtēt, ir šādi. Faktiskā atz
 6. **Nemantiskie zaudējumi (非財產上損害)**: Summu par garīgām ciešanām nosaka tiesa pēc katras lietas elementiem, piemēram, traumas pakāpes, ārstēšanās laika, seku un puses konkrētajiem apstākļiem.
 7. **Soda rakstura zaudējumu atlīdzība (懲罰性賠償金)**: Pastāv noteikums, ka procesā, uz kuru attiecas Patērētāju aizsardzības likums, ja zaudējumi radušies uzņēmuma tīša nodoma dēļ, var prasīt līdz 5-kārtīgai faktisko zaudējumu summai; rupjas neuzmanības gadījumā — līdz 3 reizēm; un neuzmanības gadījumā — ne vairāk kā 1-kārtīgā faktisko zaudējumu apmērā. Vai [Taivānas Patērētāju aizsardzības likuma 51. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) uz lietu attiecas un vai soda rakstura atlīdzība faktiski tiek piespriesta un kādā apmērā, ir atkarīgs no tiesas vērtējuma par konkrētajiem priekšnoteikumiem un pierādījumiem.
 
-## 5. Vai arī tad, ja sporta zālei ir civiltiesiskās atbildības apdrošināšana (責任保險), vai atlīdzība vispār pienākas un kādā apmērā, var būt strīdīgi?
+## 5. Vai atlīdzība joprojām var būt strīdus priekšmets arī tad, ja sporta zālei ir civiltiesiskās atbildības apdrošināšana (責任保險)?
 
 Jā. Apstāklis, ka apdrošināšana pastāv, var būt nozīmīgs, vērtējot atlīdzības avotu, bet pats par sevi nepamato sporta zāles vai trenera tiesisko atbildību un nenosaka izmaksājamo summu. Starp apdrošinātāju (保險人) un pusēm var rasties strīdi par seguma limitu un izņēmuma klauzulām, cēloņsakarību starp negadījumu un traumu un katra zaudējumu posteņa nepieciešamību un apmēru.
 

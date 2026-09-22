@@ -39,7 +39,7 @@ Kādas Taivānas bankas darbinieks man kā advokātei teica šādi.
 
 Pēdējā laikā daudzi ārzemnieki pēc konta atvēršanas pazūdot, tāpēc kontu atvēršana tiekot vērtēta arvien stingrāk.
 
-Jau pamata izklāstā ir teikts, ka konta atvēršana ir visgrūtākais posms; tam piekrītu.
+Iepriekšējā pamata izklāstā kāds lasītājs teica, ka konta atvēršana ir visgrūtākais posms; tam piekrītu.
 
 Tā kā Taivānā ir ļoti daudz naudas atmazgāšanas (洗錢) gadījumu, bankas kontu atvēršana kļūst arvien stingrāka.
 
@@ -61,7 +61,7 @@ Pietiek laika, lai bankā atvērtu sagatavošanas kontu un pārskaitītu kapitā
 
 Tas ir iespējams.
 
-Banka vispārēji prasa dubultu identitātes pārbaudi.
+Banka vispārēji prasa divus identitātes dokumentus.
 
 Bez uzturēšanās apliecības Taivānas imigrācijas pārvaldē var pieteikties „**vienotā identifikācijas numura pamatdatu izrakstam**“ (統一證號基本資料表).
 
@@ -87,7 +87,7 @@ To var izklāstīt detalizēti tā, lai varētu pārliecināt personas, kas veic
 
 **4. Kam pievērst uzmanību, nomājot sabiedrības reģistrācijas adresi (piemēram, restorāna telpu)?**
 
-Sabiedrības dibināšana ilgst aptuveni **3 mēnešus**, darba atļaujas (工作許可) un uzturēšanās apliecības iegūšana aptuveni **1 mēnesi**.
+Sabiedrības dibināšana ilgst aptuveni **3 mēnešus**, un darba atļaujas (工作許可) un uzturēšanās apliecības iegūšana ilgst aptuveni vēl **1 mēnesi**.
 
 Tāpēc līguma sākums jānosaka iespējami vēlu.
 

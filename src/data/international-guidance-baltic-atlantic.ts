@@ -519,7 +519,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
       viewAllLabel: 'Rādīt visus',
     },
     lawyers: {
-      description: 'Advokāšu un advokātu, kā arī saziņas veidu iepazīstināšana.',
+      description: 'Īss ieskats advokātēs, advokātos un saziņas veidos.',
       viewAllLabel: 'Rādīt visus',
     },
     pricing: {
@@ -899,7 +899,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Glabāšanas vieta un pakalpojumu sniedzēji',
           paragraphs: [
             'Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskajā datu krātuvē. E-pastus sūta e-pasta pakalpojums, ko birojs lieto.',
-            'Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, tiek glabāti šajā laikposmā. Personu datu pieprasījumus pieņem wei@hoveringlaw.com.tw.',
+            'Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, tiek glabāti šajā laikposmā. Personas datu pieprasījumus pieņem wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -923,7 +923,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Tiesiskais ietvars',
           paragraphs: [
             'Birojs darbojas saskaņā ar Taivānas tiesībām, un šī lapa runā tikai par darbu šajā ietvarā.',
-            'Saturs nav konsultācija pēc tiesībām, kas nav Taivānas tiesības, tostarp pēc Jūsu uzturēšanās vietas tiesībām. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.',
+            'Saturs nav konsultācija saskaņā ar citas valsts tiesībām, tostarp Jūsu uzturēšanās vietas tiesībām. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.',
           ],
         },
         {

@@ -49,7 +49,7 @@ Tas, ka dažās lietās šādi ekspertīzes iznākumi iestājas, nenozīmē, ka 
 
 ## Punkti, kas jāpārbauda, vērtējot atbildību par negadījumu
 
-Pirms apdzīšanas vispirms jāpārbauda, vai vieta vai satiksmes situācija ietilpst apdzīšanas aizliegumā. Ja piemērojama tās pašas joslas kārtība, jāsniedz noteiktais skaņas signāla vai tālās gaismas signāls, nepiespiežot priekšējo transportlīdzekli atbrīvot ceļu, jāgaida skaidra atbrīvošanas izpausme un apdzīšana jāpabeidz ar pietiekamu atstatumu un drošu atgriešanās attālumu.
+Pirms apdzīšanas vispirms jāpārbauda, vai vieta vai satiksmes situācija ietilpst apdzīšanas aizliegumā. Ja piemērojama tās pašas joslas kārtība, jāsniedz noteiktais skaņas signāls vai tālās gaismas signāls, nepiespiežot priekšējo transportlīdzekli atbrīvot ceļu, jāgaida skaidra atbrīvošanas izpausme un apdzīšana jāpabeidz ar pietiekamu atstatumu un drošu atgriešanās attālumu.
 
 Ceļu satiksmes drošības noteikumu 101. panta ievērošana ir svarīga, taču pati par sevi negarantē ne izvairīšanos no negadījuma, ne vēlāko ekspertīzes vai tiesvedības iznākumu. Vadītājiem jāatstāj papildu drošības rezerve un jāpielāgojas situācijai priekšā.
 

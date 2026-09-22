@@ -1,0 +1,91 @@
+WO-F-lv r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-lv-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: lv-a 35, lv-b 31 (66). No P3 rows in either review.
+
+Applied: 58 numbered rows, some with the adaptations below.
+Skipped: 8 numbered rows (lv-a 15, lv-a 16, lv-a 20, lv-a 22, lv-a 34, lv-a 35, lv-b 5, lv-b 16).
+
+No test file was edited. No pinned Latvian expectation in `src/lib/__tests__/guidance-*lv*.test.ts` matched a string that changed. `GUIDANCE_LLMS_NOTICES.lv` was not edited: the privacy and disclaimer sentences that changed are not substrings of `consultationNotice`, `discoveryNotice`, or `confidentialNotice`. "TWD 1.57M" was not touched. Disclosure-parity regexes were not touched; the rewritten disclaimer still satisfies the existing `lv` patterns.
+
+005 had no net edit. Its only cited pattern was the counted "1" in "vairāk nekā 1 ārzemnieku" (lv-a 22), which was left.
+
+### Applied
+lv-a 1–14, 17–19, 21, 23–33.
+lv-b 1–4, 6–15, 17–31.
+
+Adaptations (still applied):
+- lv-a 1. The link label no longer names the Business Tax Act (營業稅法). It now names the withholding-rate standard for nonresident dividends, matching 001's label for the same URL. The parenthetical "(10. pants)" stays, because Korean 영업세법 제10조 still contributes a counted 10. The URL `flno=3` was not changed.
+- lv-a 9. "citi" → "savi". The digit stays "4", not "četriem".
+- lv-a 27 and the same locative in 003 (the TWD 200.000 benefit ceiling) and 006. Genitive "jauno Taivānas dolāru". Thousands stay dotted (`1.000.000`, `200.000`, `40.000`). The (新臺幣) gloss stays.
+- lv-b 4. The sentence above the close of section 4 compares branch and subsidiary registration. Latvian now says that. This departs from the English wording "The foregoing is contract-design advice." The next sentence, that choosing a form does not make a transaction lawful or promise a result, was left.
+- lv-b 25. The three zoning lines stay three blocks. Each is now a full sentence. They were not merged, and no heading was added.
+- lv-a 8. The list item and the later body sentence that repeated "notariālais akts" for authentication of foreign documents.
+- lv-a 12. The same doubled "katrs no šiem punktiem" after a list of subjects also in 017 (FAQ, repeated body, and the asset-transfer sentence): 3.
+
+### Skipped
+- lv-a 15 and lv-b 5. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips them, and R14 / `NUMBER_THOUSAND_STYLE` for `lv` is `dot`. Every dotted amount was left.
+- lv-a 16. Publication stamps stay "13. septembrī 2025. gadā", "4. februārī 2026. gadā", and "17. septembrī 2026. gadā". Year-first "2025. gada 13. septembrī" fails `numbers` (`missing from translation: 9, 2025`): the checker treats a leading "2025." as a list marker, and the month map only lists the locative (`septembrī`), not nominative "septembris". In-sentence year-first locatives were already the form the checker parses and were left.
+- lv-a 20 and lv-b 16. Q16–Q20 stay body lines. U+200B lines in 003, 005, 006, 008, 009, 013, and 015, and the empty bold lines in 005, were left. Deleting a ZWSP fails `blocks` (the count matches the Korean source). Promoting Q16 fails `headings`.
+- lv-a 22. "1" stays in "par katru noslēgtu 1 darba stāža gadu", "mazāk nekā 1 gadu", and "vairāk nekā 1 ārzemnieku". Those digits match counted source quantities. The `0,5` decimal comma was already right.
+- lv-a 34. "(2023)" was not added next to ROC year 112. The passages already say "Ķīnas Republikas 112. gada" and already carry (民國112年憲判字第4號) in the FAQ, the body, and the source list.
+- lv-a 35. "TWD 1.57M" stays byte-identical in the team bio. The sentence around it was already ordinary Latvian and was left.
+
+## Systemic patterns
+
+- Dot thousands (lv-a and lv-b verdicts). 0 changed to a space. The checker requires the dot.
+- Publication stamp day-before-year (lv-a). 0 changed, after the year-first form failed `numbers`. See lv-a 16.
+- U+200B blanks, and 005 `**​**` (lv-a; lv-b 013/015). 0 deleted.
+- "Operācija" for a transaction or a record. 27 word-forms: 001 ×3 (darījumu struktūra, darījumu risks, darījuma struktūra), 002 ×14 across 12 sentences, 004 ×7, 007 ×3 ("pārskaitījumu ieraksti", "atmaksas ieraksti", "maksājumu vēsture" — English is records and payment history, not darījums). "Faktiskais īpašnieks" for the treaty beneficial owner (受益所有人) was left; only the bank's 實質受益人 became "patiesais labuma guvējs".
+- "Pušu pusē". 2: the 003 heading, and 009 "abām darba attiecību pusēm". "Darba devēja pusē" / "darbinieka pusē" and "Korejas pusē" (a labelled example) were left.
+- A digit glued onto a period the sentence already counts (lv-a). 0 removed. See lv-a 22.
+- "Kalendārs" for a schedule, timetable, or workstream. 12: 003 ×1 (tiesas procesuālais grafiks), 004 ×2 (pieteikuma grafiks, deklarāciju grafiki), 011 ×3 (piegādes grafiks, reģistrācijas grafiks, and the registration workstream rewritten as atsevišķi atbilstības darbi), 014 ×3 (apmācības grafiks and the two checklist lines), 016 ×2 (atsevišķā grafikā, vienā grafikā), 018 ×1 (reģistrācijas grafiks). No Republic-of-China calendar wording was in these files.
+- Undeclined "B" after "B kungs". 9 lines in 008: B kungu, B kungam ×3, B kungs ×5. "B kungu" that was already declined was left. The male manager and the reported-speech "esot" / "vajagot" were left.
+- "Jaunajā Taivānas dolārā" as a locative container. 3: 003 damages example, 003 benefit ceiling, 006 fines.
+- Folded genitive "faktiskā tirdzniecības, iekārtu, personāla darbība". 2 in 018 (FAQ and repeated body).
+- "Iestāde" for the testing laboratory. 1 in 011 ("testēšanas laboratorijai"). Statutory iestāde for a public authority was left.
+- 014's three shifted legal tests (lv-b 1–3) and the refund / early-ending / "redz" sentences (lv-b 20–23). One each, in that file.
+- R2–R10 and R12–R17. Feminine Wei Tseng (*advokāte*, *tiesīga*, *Pārbaudījusi*, and 018 *atbildīgās advokātes*), formal Jūs, the four-language consultation lock, Latvian quotes, and the decimal comma already hold. This pass did not find a new Korea-as-default-reader, result-promise, interpreter, free-meeting, or untranslated-chrome instance outside the rows above. Chang Rongxuan's bio verb is masculine *strādājis*; Son Jungmin's line now has *viņš*. The Hangul that remains is inside frontmatter `url` values, which are canonical source metadata and were not edited. The only fullwidth colon outside a Chinese gloss is inside that 008 `url`.
+
+## Reviewer points not followed
+
+- lv-a 1, the article number. The link parameter `flno=3` is article 3 of the withholding-rate standards. The Korean source still says 영업세법 제10조 on that URL, and the checker counts that 10. The statute name was corrected; "(10. pants)" was kept.
+- lv-a 15 and lv-b 5. A space as the thousands separator is ordinary Latvian. This campaign's checker does not parse it for `lv` (`dot` style). The dotted form was kept.
+- lv-a 16. "2025. gada 13. septembris" is the natural bare stamp. The checker does not parse that nominative month, and the year-first locative loses the year to the ordered-list stripper. The previous locative stamp was restored.
+- lv-a 20 and lv-b 16. Q16–Q20 are body lines in the Korean source as well. The U+200B lines match that source.
+- lv-a 22. Dropping those "1"s removes a counted quantity (per full year, less than one year, more than one foreign national).
+- lv-a 34. A Latvian reader still cannot convert ROC year 112 without a Gregorian year. Adding 2023 is forbidden, and the Chinese citation gloss is already there.
+- lv-a 35. "1,57 miljonu TWD" would drop the pinned token `TWD 1.57M`.
+- lv-b 4, the English label. The reviewer is right that the sentence does not describe the paragraphs above it. The Latvian sentence now says that those paragraphs compare branch and subsidiary registration.
+
+Pre-existing number WARNs, unchanged in kind from the pass that already reported `summary PASS 18/18` before this edit: 006 extra `1`; 015 extra `2×2`; lexical Korean ordinal WARNs (`제3자`, `1심`, and similar). They are WARN, not FAIL.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-lv --lang lv 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lv src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```

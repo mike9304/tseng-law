@@ -13,7 +13,7 @@ faq:
   - q: "Mora li društvo da isplati otpremninu i pri disciplinskom otkazu?"
     a: "Ne. Ako zaposleni učini protivpravni akt, prekrši pravilnik o radu, ili se bez opravdanog razloga ne pojavi 3 dana uzastopno (član 12 Zakona o radnim standardima, 勞動基準法第12條), društvo može da otpusti bez prethodnog obaveštenja i otpremninu ne mora da isplati. Nasuprot tome, privredni otkaz (član 11) zahteva prethodni otkaz i isplatu otpremnine."
   - q: "Kako se na Tajvanu otpremnina obračunava?"
-    a: "Za svaku navršenu 1 godinu staža poslodavac mora da isplati 0,5 meseca prosečne plate kao otpremninu, najviše 6 meseci plate. Ova formula odnosi se na staž na koji se primenjuje član 12 Zakona o penzijama radnika (勞工退休金條例); kod staža na koji se primenjuje član 17 Zakona o radnim standardima (勞動基準法) za 1 godinu isplaćuje se jedan mesec prosečne plate, bez gornje granice."
+    a: "Kada se navrši jedna godina staža, poslodavac mora da isplati 0,5 meseca prosečne plate kao otpremninu, najviše 6 meseci plate. Ova formula odnosi se na staž na koji se primenjuje član 12 Zakona o penzijama radnika (勞工退休金條例); kod staža na koji se primenjuje član 17 Zakona o radnim standardima (勞動基準法) kada je navršena jedna godina, isplaćuje se jedan mesec prosečne plate, bez gornje granice."
 ---
 
 # Radno pravo na Tajvanu: kada pripada otpremnina (資遣費)
@@ -28,7 +28,7 @@ Tekst objašnjava kada pravo na otpremninu nastaje i kada ne.
 
 Uređenje se od države do države razlikuje.
 
-U nekim pravnim poredcima, na primer u Koreji, društvo mora da isplati otpremninu i tada kada zaposleni sam da otkaz
+U nekim pravnim poredcima, na primer u Koreji, društvo načelno mora da isplati otpremninu kada zaposleni ode.
 
 Na Tajvanu je drugačije:
 
@@ -60,9 +60,9 @@ Sledeća tabela to sažima.
 | Da li društvo mora da isplati otpremninu (資遣費) | Nužno | Nije nužno | Nije nužno |
 |  | Tajvanski Zakon o radnim standardima, član 11 (勞動基準法第11條): Ako ne nastupi jedan od sledećih slučajeva, poslodavac ne može da raskine ugovor o radu, ni posle prethodnog obaveštenja zaposlenom.  1. Obustava delatnosti (歇業) ili prenos preduzeća (轉讓)  2. Gubici (虧損) ili stezanje delatnosti (業務緊縮)  3. Viša sila zahteva prekid delatnosti na jedan mesec ili duže  4. Priroda delatnosti zahteva smanjenje osoblja i otpušteni se ne može premestiti na drugo pogodno mesto  5. Određeni zaposleni ne može zadovoljavajuće da obavi posao koji mesto zahteva | Tajvanski Zakon o radnim standardima, član 12 (勞動基準法第12條): Poslodavac može da otpusti bez prethodnog obaveštenja, ako za zaposlenog postoji jedan od sledećih slučajeva.  1. Ko pri zaključenju ugovora o radu podnese netačne podatke, navede poslodavca u zabludu i izloži preduzeće riziku štete  2. Ko upotrebi nasilje ili teško uvredi poslodavca, njegovu porodicu, njegovog zastupnika (代理人) ili druge saradnike  3. Koga su pravnosnažno osudili na kaznu zatvora na određeno vreme (有期徒刑) ili na strožu kaznu, bez uslovnog odlaganja izvršenja kazne (緩刑) i bez dozvole pretvaranja u novčanu kaznu (易科罰金)  4. Teško kršenje ugovora o radu ili pravilnika o radu  5. Ko namerno potroši mašine, alate, sirovine, proizvode ili drugu imovinu poslodavca, ili namerno odaje tehničke i poslovne tajne poslodavca i nanese poslodavcu štetu  6. Neopravdani izostanak (曠工) bez opravdanog razloga 3 dana uzastopno, ili 6 dana ili više u mesecu |  |
 
-> Na Tajvanu, za svaku navršenu 1 godinu staža (年資),
+> Na Tajvanu, kada se navrši jedna godina staža (年資),
 > poslodavac mora da isplati 0,5 meseca prosečne plate (平均工資) kao otpremninu, najviše za 6 meseci plate.
-> Ova formula odnosi se na staž na koji se primenjuje član 12 Zakona o penzijama radnika (勞工退休金條例); kod staža na koji se primenjuje član 17 Zakona o radnim standardima (勞動基準法) za 1 godinu isplaćuje se jedan mesec prosečne plate, bez gornje granice.
+> Ova formula odnosi se na staž na koji se primenjuje član 12 Zakona o penzijama radnika (勞工退休金條例); kod staža na koji se primenjuje član 17 Zakona o radnim standardima (勞動基準法) kada je navršena jedna godina, isplaćuje se jedan mesec prosečne plate, bez gornje granice.
 
 ​
 

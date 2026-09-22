@@ -1646,8 +1646,8 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Osnivanje i struktura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) osnovali su 2016. godine advokatkinje i advokati koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmerenje kancelarije od osnivanja.',
-            'Imamo kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Kancelarija u Kaohsiungu usredsređena je na upravljanje preduzećima i vodi građanske, krivične i upravne sporove. Kancelarija u Taichungu vodi građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Kancelarija u Pingtungu otvorena je 2017. godine zbog lokalne potrebe.',
-            'Pored advokatskog rada od 2020. godine deluje i Hovering Accounting Office, koje nudi računovodstvo i poresko planiranje preduzetnicima i imućnim privatnim licima.',
+            'Imamo kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Kancelarija u Kaohsiungu usredsređena je na korporativno upravljanje i vodi građanske, krivične i upravne sporove. Kancelarija u Taichungu vodi građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Kancelarija u Pingtungu otvorena je 2017. godine zbog lokalne potrebe.',
+            'Pored advokatskog rada, od 2020. godine deluje i Hovering Accounting Office, koje nudi računovodstvo i poresko planiranje preduzetnicima i imućnim privatnim licima.',
           ],
         },
         {
@@ -1759,7 +1759,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Objašnjenja o obimu rada, pripremi, jezicima, troškovima i o tome šta znači poslat zahtev.',
       intro:
-        'Sledeća pitanja odgovorena su na nivou opštih informacija. Odgovor za Vaš slučaj moguć je tek nakon što advokatkinja ili advokat pregleda dokumente.',
+        'Na sledeća pitanja odgovoreno je na nivou opštih informacija. Odgovor za Vaš slučaj moguć je tek nakon što advokatkinja ili advokat pregleda dokumente.',
       sections: [
         {
           heading: 'Kako koristiti ovaj deo',
@@ -1838,7 +1838,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Izvorni tekst čuva se bez izmene',
           paragraphs: [
-            'Vaš tekst čuva se tačno onako kako ste ga napisali i automatski se ne prevodi. Ako je za obradu potreban prevod, to se sa Vama posebno razgovara.',
+            'Vaš tekst čuva se tačno onako kako ste ga napisali i automatski se ne prevodi. Ako je za obradu potreban prevod, o tome se sa Vama posebno razgovara.',
             'Budući da se izvorni tekst čuva, u početnoj fazi ne pišite ono što još nije potrebno, na primer broj pasoša, broj isprave ili podatke o računu.',
           ],
         },
@@ -1898,7 +1898,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Pravni okvir',
           paragraphs: [
             'Kancelarija deluje po tajvanskom pravu i ova stranica govori samo o radu u tom okviru.',
-            'Sadržaj nije savetovanje po pravu koje nije tajvansko, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koja kvalifikovana osoba je za taj deo potrebna.',
+            'Sadržaj nije savetovanje po pravu koje nije tajvansko, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koje je stručno lice potrebno za taj deo.',
           ],
         },
         {

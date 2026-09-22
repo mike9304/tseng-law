@@ -19,9 +19,9 @@ Na osnovu predmeta u kojem se korejski student povredio dok je u teretani (健�
 
 Nezgoda se dogodila u teretani u Tajčungu (臺中) tokom vežbe mrtvog dizanja (硬舉) koju je vodio trener. Posle povrede nije dovoljno ostati samo na činjenici da se nezgoda dogodila unutar teretane; treba zajedno oceniti iskustvo vežbanja i zdravstveno stanje korisnika, vrstu vežbe i opterećenje, objašnjenja i uputstva trenera, pokret i reakciju u tom trenutku, uzročnu vezu (因果關係) između povrede i vežbe i isprave kojima se potkrepljuje nastala šteta.
 
-Advokatkinja Wei Tseng zastupala je tužioca, korejskog studenta, kao punomoćnica u parnici (訴訟代理人). Okružni sud u Tajčungu 24. 1. 2022. u presudi prvog stepena u potrošačkoj stvari br. 7, godine 109. po kalendaru Republike Kine (民國109年度消字第7號) naložio je tuženom da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamatu navedenu u presudi.
+Advokatkinja Wei Tseng zastupala je tužioca, korejskog studenta, kao punomoćnica u parnici (訴訟代理人). Okružni sud u Tajčungu 24. 1. 2022. u presudi prvog stepena u potrošačkoj stvari broj 7 iz 109. godine po kalendaru Republike Kine (民國109年度消字第7號) naložio je tuženom da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamatu navedenu u presudi.
 
-Potom je štampa navela da su strane zaključile poravnanje (和解) u drugom stepenu. Sama zvanična presuda prvog stepena ne omogućava da se potvrdi ishod drugog stepena ni visina poravnanja; preneto poravnanje ne sme se čitati kao utvrđen završetak presude prvog stepena.
+Potom je štampa navela da su strane zaključile poravnanje (和解) u drugom stepenu. Sama zvanična presuda prvog stepena ne omogućava da se potvrdi ishod drugog stepena ni visina poravnanja; preneto poravnanje ne sme se čitati kao potvrđen konačan ishod postupka po presudi prvog stepena.
 
 Naslovi novinskih izveštaja, internetskih objava i pravnih komentara o ovoj stvari, u prevodu, jesu sledeći. Naslovi niže služe samo da predstave sadržaj svakog linka; ne znače da ovaj tekst sam utvrđuje činjenice.
 
@@ -67,11 +67,11 @@ U nastavku je opšta informacija radi objašnjenja sporova o povredi u teretani 
 
 ## 1. Posle povrede u teretani na Tajvanu, koje pravne postupke je moguće razmotriti?
 
-[Član 7 tajvanskog Zakona o zaštiti potrošača (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) predviđa da, kada preduzeće pruža uslugu, mora da obezbedi da ta usluga ima bezbednost koju je razumno očekivati prema stručnom ili tehničkom merilu u trenutku pružanja.
+[Član 7 tajvanskog Zakona o zaštiti potrošača (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) predviđa da, kada preduzeće pruža uslugu, mora da obezbedi da ta usluga ima nivo bezbednosti koji je razumno očekivati prema stručnom ili tehničkom merilu u trenutku pružanja.
 
 To ne znači da se odgovornost preduzeća ili trenera priznaje svaki put kada do povrede dođe u teretani. Treba ocenjivati stvar po stvar, kakva konkretna dužnost pažnje je postojala, da li je povređena, da li postoji uzročna veza između povrede dužnosti i povrede tela, da li je nastala stvarna šteta, koje prigovore ima protivna strana i da li postoji dokaz koji podupire svaku tvrdnju i svaki prigovor.
 
-Ako su ispunjeni zakonska obeležja krivičnog dela telesne povrede iz nehata (過失傷害), može se razmotriti krivični predlog oštećenog (告訴). Može se razmotriti i građanski zahtev za naknadu štete, ali koji pravni osnov se primenjuje — ugovorna odgovornost, protivpravna radnja (侵權行為) ili zaštita potrošača — i obim odgovornosti razlikuju se prema konkretnim činjenicama. To što se kod jedne nezgode mogu razmotriti više postupaka ne znači da ih sve treba sprovesti, niti da je uspeh jedne od strana unapred dat.
+Ako su ispunjeni zakonska obeležja krivičnog dela telesne povrede iz nehata (過失傷害), može se razmotriti krivični predlog oštećenog (告訴). Može se razmotriti i građanski zahtev za naknadu štete, ali koji pravni osnov se primenjuje — ugovorna odgovornost, protivpravna radnja (侵權行為) ili zaštita potrošača — i obim odgovornosti razlikuju se prema konkretnim činjenicama. To što se kod jedne nezgode mogu razmotriti više postupaka ne znači da ih sve treba sprovesti, niti da je uspeh u bilo kom od tih postupaka zagarantovan.
 
 ## 2. Koji se rokovi primenjuju na krivični predlog oštećenog i građansku naknadu štete?
 
@@ -79,11 +79,11 @@ Prema [članu 287 tajvanskog Krivičnog zakonika (刑法)](https://law.moj.gov.t
 
 Pravo na naknadu štete iz protivpravne radnje prema [članu 197 tajvanskog Građanskog zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) prestaje načelno ako se ne ostvari u roku od 2 godine od trenutka kada je oštećeni saznao i za štetu i za lice obavezno na naknadu, i prestaje i kada od protivpravne radnje protekne 10 godina.
 
-Ako međutim dolazi u obzir drugi osnov zahteva, kao ugovorna odgovornost, ili ako se primenjuju druga pravila o početku, toku i prekidu roka, to se može razlikovati prema činjenicama. Rok se ne sme određivati samo prema datumu nezgode ili dijagnoze; bezbednije je rano i pojedinačno proveriti moguće osnove zahteva i datume od kojih svakom počinje da teče rok.
+Ako međutim činjenice upućuju na drugi osnov zahteva, kao što je ugovorna odgovornost, ili na druga pravila o početku, toku i prekidu roka, rok se može razlikovati. Rok se ne sme određivati samo prema datumu nezgode ili dijagnoze; bezbednije je rano i pojedinačno proveriti moguće osnove zahteva i datume od kojih svakom počinje da teče rok.
 
 ## 3. Odmah posle nezgode, koje dokaze treba sačuvati i kako?
 
-Da bi se mogli objasniti odgovornost, uzročna veza i šteta, valja zajedno prikupiti ne samo snimke nadzora (監視器影像) iz trenutka nezgode, već i medicinsku dokumentaciju (病歷) i lekarsko uverenje (診斷證明書), račune za troškove lečenja (醫療費用), prevoz radi lečenja (就醫交通費) i negu (看護費用), poruke razmenjene s teretanom i trenerom, iskaze svedoka, rezervaciju časova i evidenciju prisustva, plan vežbanja i zapis treninga. Valja u mogućem obimu fotografisati mesto povrede i stanje mesta nezgode i urediti prema datumu tok pre nezgode i posle nje, kao i sadržaj komunikacije, da bi kasnije bilo lakše isprave uporediti.
+Da bi se mogli objasniti odgovornost, uzročna veza i šteta, valja zajedno prikupiti ne samo snimke nadzora (監視器影像) iz trenutka nezgode, već i medicinsku dokumentaciju (病歷) i lekarsko uverenje (診斷證明書), račune za troškove lečenja (醫療費用), prevoz radi lečenja (就醫交通費) i negu (看護費用), poruke razmenjene s teretanom i trenerom, iskaze svedoka, rezervaciju časova i evidenciju prisustva, plan vežbanja i zapis treninga. Valja u mogućem obimu fotografisati povređeni deo tela i, u meri u kojoj je to moguće, stanje mesta nezgode i urediti prema datumu tok pre nezgode i posle nje, kao i sadržaj komunikacije, da bi kasnije bilo lakše isprave uporediti.
 
 Snimci mogu posle isteka roka čuvanja biti presnimljeni ili iz drugih razloga postati neupotrebljivi. Zato se može razmotriti zahtev teretani za očuvanje putem pisma s overom sadržaja (存證信函) ili pismenog zahteva advokatkinje (律師函), u kome se konkretno navede potreban vremenski odsek, mesto i položaj kamere. Taj zahtev je praktična mera da se zabeleži šta je i kada zahtevano. Sam po sebi, međutim, protivnoj strani ne nameće novu pravnu obavezu da snimke sačuva niti sprečava njihovo brisanje, a sama okolnost da snimci nisu ostali takođe ne vodi sud ka automatski nepovoljnoj oceni.
 

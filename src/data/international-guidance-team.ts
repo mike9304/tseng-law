@@ -4211,7 +4211,7 @@ export const guidanceTeamBios: Record<
         'Zastupala je korejskog studenta u sporu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.',
       ],
       education: [
-        'Master nauka (M.S.), Institut za finansije, National Taiwan University',
+        'Master (M.S.), Institut za finansije, National Taiwan University',
         'Diplomirala (B.A.) na dvostrukom programu prava i finansija, National Chengchi University',
         'Studentkinja na razmeni na Kobe University i Waseda University',
       ],

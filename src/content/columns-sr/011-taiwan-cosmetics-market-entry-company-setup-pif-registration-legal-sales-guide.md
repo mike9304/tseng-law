@@ -32,7 +32,7 @@ Nije uvek nužno osnovati ni zavisno društvo ni ogranak. Uvoz i prodaju moguće
 
 ### Kada se poveri lokalnom uvozniku
 
-Ako tajvanski uvoznik ili prodajni zastupnik (銷售代理商) obavlja uvoz i prodaju, strani brend može izabrati i strukturu bez sopstvenog zavisnog društva ili ogranka na Tajvanu. Prodajni zastupnik može istovremeno da deluje kao uvoznik, ili se može uključiti poseban uvoznik. Pravno pripisivanje odgovornosti međutim ne određuje se samo ugovornim nazivom, kao što su zastupnik, isključivi distributer ili trgovac.
+Ako tajvanski uvoznik ili prodajni zastupnik (銷售代理商) obavlja uvoz i prodaju, strani brend može izabrati i strukturu bez sopstvenog zavisnog društva ili ogranka na Tajvanu. Prodajni zastupnik može istovremeno da deluje kao uvoznik, ili se može uključiti poseban uvoznik. Pravno pripisivanje odgovornosti međutim ne određuje se samo ugovornim nazivom, kao što su zastupnik, glavni distributer ili distributer.
 
 Pri osmišljavanju stvarne podele rada treba najpre proveriti ko uvozi proizvod i sprovodi registraciju proizvoda i ko sastavlja, ažurira i čuva PIF. Treba i odrediti odgovorno lice za ocenu označavanja, vođenje evidencije o prometu, prijem pritužbi potrošača i bezbednosnih informacija i reagovanje na kontrole i zahteve za dokumente od strane nadležnog organa. Treba istovremeno oceniti da li se slažu zakonske obaveze koje terete proizvođača ili uvoznika kozmetike i ugovorni poslovi između brenda i prodajnog partnera.
 
@@ -52,19 +52,19 @@ Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda poseban 
 
 ### Trenutak registracije proizvoda i rok važenja
 
-Registracija kozmetičkog proizvoda sprovodi se na platformi za registraciju kozmetičkih proizvoda TFDA. Proizvođač ili uvoznik kozmetike mora da završi registraciju proizvoda pre nego što proizvod isporuči, proda, pokloni, javno izloži (公開陳列) ili da potrošaču na probu. Pripremu nije moguće organizovati samo prema naplativoj prodaji; u kalendar registracije treba uračunati i promotivne poklone i davanje proizvoda potrošaču na probu.
+Registracija kozmetičkog proizvoda sprovodi se na platformi za registraciju kozmetičkih proizvoda TFDA. Proizvođač ili uvoznik kozmetike mora da završi registraciju proizvoda pre nego što proizvod isporuči, proda, pokloni, javno izloži (公開陳列) ili da potrošaču na probu. Pripremu ne treba usmeriti samo na prodaju uz naplatu; u kalendar registracije treba uračunati i promotivne poklone i davanje proizvoda potrošaču na probu.
 
 Rok važenja registracije proizvoda jeste 3 godine. Ako se isporuke nastavljaju, treba podneti zahtev za produženje (展延) u roku od 3 meseca pre isteka važenja. Ako se izmene upisani podaci, kao što su naziv proizvoda, namena, oblik preparata (劑型), sastojci i mesto proizvodnje, treba i proveriti da li je potreban postupak koji odgovara sadržaju izmene.
 
-Registracija proizvoda akt je prijave utvrđenih podataka na platformi. Završetak registracije ne znači da su kompletni svi dokumenti potrebni za PIF, niti je ocena da su označavanje ili reklama proizvoda u skladu s pravom. Kalendar registracije proizvoda, vođenje PIF i ocenu označavanja i reklame treba voditi kao zasebne tačke usklađenosti.
+Registracija proizvoda akt je prijave utvrđenih podataka na platformi. Završetak registracije ne znači da su kompletni svi dokumenti potrebni za PIF, niti utvrđuje da su označavanje ili reklama proizvoda u skladu s pravom. Kalendar registracije proizvoda, vođenje PIF i ocenu označavanja i reklame treba voditi kao zasebne tačke usklađenosti.
 
 ### Podnesci PIF i postupna primena
 
-PIF je skup dokumenata uređen tako da se i dalje mogu objašnjavati kvalitet i bezbednost proizvoda. Osim kvaliteta, bezbednosti, sastava, tvrđene funkcije (宣稱功能), načina proizvodnje, rezultata ispitivanja i ocene bezbednosti, treba prema proizvodu urediti osnovne podatke o proizvodu i proizvođaču i dokazne dokumente, na primer etiketu. Pravilnik o vođenju informacionog spisa kozmetičkih proizvoda (化粧品產品資訊檔案管理辦法) potrebne dokumente uređuje u 16 kategorija, zato treba prema vrsti proizvoda proveriti dokumente svake kategorije i zahteve za potpis i kvalifikaciju.
+PIF je skup dokumenata uređen tako da se kvalitet i bezbednost proizvoda mogu trajno dokumentovati. Osim kvaliteta, bezbednosti, sastava, tvrđene funkcije (宣稱功能), načina proizvodnje, rezultata ispitivanja i ocene bezbednosti, treba prema proizvodu urediti osnovne podatke o proizvodu i proizvođaču i dokazne dokumente, na primer etiketu. Pravilnik o vođenju informacionog spisa kozmetičkih proizvoda (化粧品產品資訊檔案管理辦法) potrebne dokumente uređuje u 16 kategorija, zato treba prema vrsti proizvoda proveriti dokumente svake kategorije i zahteve za potpis i kvalifikaciju.
 
 Režim PIF primenjivao se postupno prema grupama proizvoda. Od 1. 7. 2026. u predmet primene uključeni su i preostali kozmetički proizvodi, tako da se načelno odnosi na svu kozmetiku. Izuzetak se ograničava na čvrsti ručno izrađeni sapun proizveden na mestu proizvodnje oslobođenom upisa pogona. Proizvod nije izuzet samo zato što je ručni ili što koristi naziv sapuna; treba proveriti oboje, čvrsti oblik i uslov oslobođenja mesta proizvodnje od upisa pogona.
 
-Posao PIF, uključujući ocenu bezbednosti, može da podrži treće lice koje ima potrebnu kvalifikaciju i sposobnost. Čak i kada treće lice pomaže pri sastavljanju ili kada se koristi usluga čuvanja dokumenata, pravna odgovornost proizvođača ili uvoznika kozmetike ipak ostaje. Treba izgraditi sistem koji omogućava da prvobitni proizvođač, ispitna ustanova, ocenjivač bezbednosti i tajvansko preduzeće međusobno prenose informacije o izmenama i najnovije potpisane dokumente.
+Posao na PIF-u, uključujući ocenu bezbednosti, može da podrži treće lice koje ima potrebnu kvalifikaciju i sposobnost. Čak i kada treće lice pomaže pri sastavljanju ili kada se koristi usluga čuvanja dokumenata, pravna odgovornost proizvođača ili uvoznika kozmetike ipak ostaje. Treba izgraditi sistem koji omogućava da prvobitni proizvođač, ispitna ustanova, ocenjivač bezbednosti i tajvansko preduzeće međusobno prenose informacije o izmenama i najnovije potpisane dokumente.
 
 ### Ažuriranje i čuvanje
 

@@ -45,7 +45,7 @@ Ako je teško lično doći u zemljišni ured (地政事務所),
 
 može se zatražiti pomoć poznanika na Tajvanu, zakupodavca, posrednika u prometu nepokretnosti ili advokata.
 
-Ako ishod provere pokaže da restoran nije moguć, kasnije pri upisu društva (公司登記) gradska uprava upis možda neće primiti.
+Ako ishod provere pokaže da restoran nije moguć, kasnije pri upisu društva (公司登記) gradska uprava možda neće primiti upis.
 
 Zato ovoj stvari posvetite pažnju.
 

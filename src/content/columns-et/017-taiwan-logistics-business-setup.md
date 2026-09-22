@@ -54,9 +54,9 @@ Kui tavaline äriühing asutab mootorveokite kaubaveo uueks, kehtib põhimõttel
 
 Füüsilise isiku väikese veoauto vedu on kitsas kord, mis erineb tavalisest äriühingu asutamisest. Eelduseks on muu hulgas, et taotlejal on leibkonna registreerimine pädevas piirkonnas, väikeste sõidukite kutselise juhiloa ning et ta kasutab 1 isiklikus omandis olevat väikest veoautot, mille vanus ei ületa 2 aastat. See ei ole tavaline tee, millel välismaine juriidiline isik siseneb mootorveokite kaubaveole.
 
-Uuele mootorsõidukiveo ettevõtjale väljastatud tegevussõiduki numbrimärki (車輛牌照) ei tohi väljastamise päevast 1 aasta jooksul tagastada kustutamiseks (繳銷) ega sõidukiregistris nime üle kanda ega loovutada (過戶轉讓).
+Uuele mootorsõidukiveo ettevõtjale väljastatud tegevussõiduki numbrimärki (車輛牌照) ei tohi väljastamise päevast 1 aasta jooksul tagastada kustutamiseks (繳銷) ega sõidukiregistris omandit üle kanda ega loovutada (過戶轉讓).
 
-See piirang puudutab tegevussõiduki numbrimärgi tagastamist kustutamiseks ning nime ülekandmist ja loovutamist sõidukiregistris. Lammutamine, asendamine ja muu käitlemine tuleb kinnitada eraldi maanteeasutuse kehtivate sätete järgi.
+See piirang puudutab tegevussõiduki numbrimärgi tagastamist kustutamiseks ning omandi ülekandmist ja loovutamist sõidukiregistris. Lammutamine, asendamine ja muu käitlemine tuleb kinnitada eraldi maanteeasutuse kehtivate sätete järgi.
 
 ### Välisinvesteering ja valdkonna heakskiit
 
@@ -84,11 +84,11 @@ Luba ei lähe ostjale automaatselt üle. Aktsiate omandamisel luba ei omandata e
 
 ### Aktsiate omandamise ja tegevuse või varade üleandmise erinevus
 
-Aktsiate omandamisel saab ostjast osanik ning loa subjektiks olev sihtäriühing jääb samaks juriidiliseks isikuks. Aktsiate omandamise ülekandesumma on aktsiate üleandmise tasu, mitte kapital. Asja järgi eristatakse majandusministeeriumi eelheakskiitu, maanteeseaduse artikli 35 valdkonna heakskiitu, ülekande järgset investeerimissumma kinnitamist (投資額審定), osanike, juhatuse liikmete ja vastutava isiku muudatusi ning muutmistaotlust maanteeasutusele.
+Aktsiate omandamisel saab ostjast aktsionär ning loa subjektiks olev sihtäriühing jääb samaks juriidiliseks isikuks. Aktsiate omandamise ülekandesumma on ostuhind, mitte sissemakstud kapital. Asja järgi eristatakse majandusministeeriumi eelheakskiitu, maanteeseaduse artikli 35 valdkonna heakskiitu, ülekande järgset investeerimissumma kinnitamist (投資額審定), osanike, juhatuse liikmete ja vastutava isiku muudatusi ning muutmistaotlust maanteeasutusele.
 
 Seevastu, kui teine juriidiline isik võtab vastu tegevuse või varad, ei lähe loovutaja tegevusluba omandajale iseenesest üle. Sõidukid, tegevuseks mõeldud numbrimärgid, parkimisrajatised, lepingud, töötajad, kindlustus ja tegevusload tuleb igaüks kinnitada ning enne tehingut korrastada omandajale vajalik asutamise ettevalmistus, tegevusluba ja muud heakskiidud.
 
-„Mootorsõidukiveo tegevuse haldamise eeskirja“ (汽車運輸業管理規則) artikkel 23 sätestab, et tegevuse üleandmine ning organisatsiooni, nime, aadressi, vastutava isiku, kapitali-vara ja parkimisrajatiste muudatused eeldavad asjakohaste dokumentidega pädeva maanteeasutuse heakskiitu. Pelk asjaolu, et tehinguleping on sõlmitud või äriühingu registreerimine muudetud, ei vii veotegevuse muutmise heakskiitu lõpule.
+„Mootorsõidukiveo tegevuse haldamise eeskirja“ (汽車運輸業管理規則) artikkel 23 sätestab, et tegevuse üleandmine ning organisatsiooni, nime, aadressi, vastutava isiku, kapitali või vara ja parkimisrajatiste muudatused eeldavad asjakohaste dokumentidega pädeva maanteeasutuse heakskiitu. Pelk asjaolu, et tehinguleping on sõlmitud või äriühingu registreerimine muudetud, ei vii veotegevuse muutmise heakskiitu lõpule.
 
 ### Hoolsus ja tehingu täitmine
 
@@ -146,6 +146,6 @@ Loata töötamisele võivad kohalduda haldusrahve (罰鍰) ja riigist lahkumise 
 
 ---
 
-See artikkel on õppeaine, mis on mõeldud õiguskorra üldiseks selgitamiseks, mitte nõuanne konkreetses asjas. Kuna loakriteeriumid, taotlusvormid ja pädeva asutuse praktika võivad muutuda, kinnitatakse ajakohased ametlikud allikad ja asja olud enne investeeringu või lepingu täitmist.
+See artikkel on üldine selgitus õiguskorra kohta, mitte nõuanne konkreetses asjas. Kuna loakriteeriumid, taotlusvormid ja pädeva asutuse praktika võivad muutuda, kinnitatakse ajakohased ametlikud allikad ja asja olud enne investeeringu või lepingu täitmist.
 
 **Advokaat Wei Tseng (曾雋崴)**

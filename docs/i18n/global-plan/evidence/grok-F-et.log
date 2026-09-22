@@ -1,0 +1,81 @@
+WO-F-et — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-et-20260922
+date: 2026-09-22
+scope: Estonian guidance pack (estonianGuidanceContent, team et roles/bios, inquiry et) + columns-et 001–018. No commit.
+
+llms-txt.ts GUIDANCE_LLMS_NOTICES.et was already inside the product locks (consultation languages named, no reply-time promise). Not edited.
+Offices et label was already BÜROOD / Bürood. Not edited.
+No P3 rows in et-a.md or et-b.md.
+
+## Rows applied
+Part a P1: a#1 (R12: Jurist-assistent, Vanemjurist-assistent; Latin firm names kept), a#2 (清算 → likvideerimine in 004), a#3, a#4, a#5 (“number” → “nr” in the three 003 citations), a#7 (OOO → [nimi], R15), a#8 (008 closing, R3), a#9 (abielu jätkamine, not ülalpidamine), a#10 (ehitus: lubatud kasutus või halduseeskirjad).
+Part a P2: a#12 (dates, modified — see below), a#13 (award wording only; figure pinned), a#14–a#28, a#30, a#31, a#32 (byline, 006 opener and age aside, 013 reader aside; paragraphs not merged), a#33–a#40.
+a#6 and a#35 applied under R13: ROC year framed as “vabariigi aasta/aastast”, no Gregorian digit added, case citation not duplicated.
+Part b P1: b#1–b#13. b#3 under R13 (vabariigi aastal 109, no 2020). b#4 “põhiturustaja” (ACCEPTED). b#11 preserve ≠ insure sweep. b#12 aktsionär on the 股份有限公司 paragraph and 017 “saab ostjast aktsionär”; osanik kept for 有限公司.
+Part b P2: b#14 (dates, modified), b#16–b#34, b#36–b#39. b#35 digit-memo applied only where the replacement word is in the checker lexicon.
+R2: 004/005 Korea bank and tax-treaty passages stay labelled as a Korea example. No law of the reader’s country added.
+R4: no masculine agreement on Wei Tseng. Other people’s gender left (male manager in 008, male client in 010, Härra B, härra Lin, meesüliõpilane).
+R8 sweeps that match a flagged row: 清算, 華僑, 建築管理, 假扣押, 大法官, 有限合夥, 緩刑, 最低服務年限, 簽約金, 留任獎金, 主動查詢, 被繼承人, 剩餘財產差額分配 in the marital sense, 股份有限公司 shareholders, misplaced 子公司, 劑型, evidence 保全.
+R17: no Czech diacritics in columns-et. No rewrite.
+
+## Rows skipped or modified
+- a#11 and b#15 (space thousands, unit after the amount): skipped. ACCEPTED and R14 require the dot (“500.000”). A space (“500 000”) fails the checker. Existing TWD amounts left as-is, including “TWD 1.57M”.
+- a#13 figure: “1,57 miljonit TWD” skipped (test-pinned, byte-identical “TWD 1.57M”). Surrounding sentence now says the first-instance court awarded it (“esimese astme kohus mõistis välja TWD 1.57M”).
+- a#6, b#3, a#35 Gregorian years 2023/2020: not added (R13). ROC framing used. a#35 does not repeat 112年憲判字第4號 (would double-count 112 and 4); the sentence points back to that decision and keeps “seisuga 25. juuli 2026”.
+- a#12 and b#14 date case: not the reviewer’s “27. detsembril 2023” / “1. jaanuarist 2024”. The checker’s Estonian month list is nominative only, and the date regex is `(day). (month) (year)`. An adessive or elative month (“detsembril”, “jaanuarist”) drops the month token and the file fails. Case is on the surrounding word, and the nominative date token stays: “jõustus kuupäeval 27. detsember 2023”, “alates kuupäevast 1. jaanuar 2024”, “seisuga 25. juuli 2026”, “5. juuni 2026. aasta”, “ajavahemikus 1. jaanuar 2025 – 31. detsember 2029”. Same digits.
+- a#29 “üks järgmistest” and 007 “registreerimine 1 nimele”: digits kept. “üks” / “ühe” are not counted (ü is not a JS word character, so \b does not match). Replacing the digit would drop a 1. “2. astme” → “teise astme” (teise is counted as 2).
+- b#12 “kahte aktsionäri”: wrote “vähemalt kaks aktsionäri”. “kahte” is not in the lexicon; “kaks” is counted as 2.
+- b#35 “üks hääl” / “üks või kaks”: “1 hääl iga 1 osaniku” and “1 või enama” stay as digits. The no-board sentence is “ainult 1 või kaks juhatajat” (the 2 is the counted word; the 1 stays a digit).
+- b#32 and a#32 block merges: not done. Merging one-sentence paragraphs would change the block count. 013’s comma-ended paragraph was closed with a period; the next paragraph starts “Asutamise käigus…”. 015 fragments were made self-standing inside their own blocks.
+- Frontmatter url with Hangul (009): skipped (R16). /ko/ link labels only, where a label was already in scope.
+- “Kuva kõik”: not changed. The reviewer flagged “Kuva keel” (now “Lehe keel”). “Kuva kõik” is pinned by columns-grid-guidance-labels.test.tsx, which is outside the required vitest paths.
+- 015 “Võite tasuta uurida”: left. It is a free lookup of a public register, not a free consultation.
+- 002 “jääkvara (剩餘財產)” after liquidation: left. That is residual estate, not the marital claim.
+- “lapse parimad huvid” and the employee’s sales record in 008: left. They are a legal standard and a fact, not an advertising superlative.
+
+## Systemic patterns and instance counts
+- 華僑 “ülemererahvusest/ülemererahnusest hiinlaste” → “väljaspool Taiwani elavate hiinlaste”: 001 ×5, 005 ×2.
+- Dates rewritten onto “kuupäeval / kuupäevast / seisuga / . aasta / ajavahemikus” with the nominative month token kept: 001 ×2, 003 ×2, 004 ×4 (including the 2025–2029 range), 011 ×3, 014 ×6, 015 ×1, 016 ×1.
+- Evidence 保全 “kindlustama/kindlustada” (insure) → “säilitama/säilitada/koguma”, including headings in 003 and the 014 payment-proof step. Actual insurance words (kindlustus, kindlustusandja, vastutuskindlustus, kindlustusleping) left. 012 “ei kindlusta õnnetuse vältimist” left (it means “does not ensure”).
+- 014 最低服務年限: “teenistus” cleared from that file (miinimumteenistus, teenistusaeg, teenistusluba, teenistuskohustus → töötamise aeg / töötamise kohustus). Continuous seniority (年資) was first moved to “katkematu tööstaaž” so it would not be folded into the lock-in clause. 簽約金 → sõlmimisboonus; 留任獎金 → jäämisboonus.
+- 剩餘財產差額分配 in the marital sense (007 and 016, including the 016 FAQ question and the H2): “abieluvara jäägi vahe” / “abieluvara jäägi jaotamine”. 002 liquidation “jääkvara” untouched.
+- 股份有限公司: “2 osanikku või rohkem” → “vähemalt kaks aktsionäri”; “ainus osanik” in that paragraph → “ainus aktsionär”; 017 share purchase “saab ostjast aktsionär”. The 有限公司 paragraph still says osanik.
+- ROC years: 007 “112. aasta otsus” family → “vabariigi aasta 112 põhiseaduslik otsus” (and case forms); 003 “aastast 109/112” → “vabariigi aastast”; 010 “aastal 109” plus “tarbijakohtu” → “tarbijavaidluse asjas nr 7 vabariigi aastal 109”.
+- Team et only (lines of the et role map and the et bio span): Paralegal → Jurist-assistent; Senior Paralegal → Vanemjurist-assistent; Partneraudiitor → Partner ja vandeaudiitor; Institute of Finance glossed with National Taiwan University kept; double major, Legal Aid Taichung branch, Ministry of Education legal-affairs division translated inside the et bio. Other locales were not edited (a first global replace was reverted with git checkout, then the et span was patched alone).
+- Guidance et: nav “Vastutus” → “Lahtiütlus” (10 characters; cap is 14), eyebrow “LAHTIÜTLUS”, “Kuva keel” → “Lehe keel”, Objektspeicher calque → andmesalvestus, Schreibsprache → “Keel, milles kirjutate”, plus the qualification, fee, and 資遣費 caveat sentences.
+- Inquiry et: “Ükski neljast keelest ei ole kasutatav” → “Ma ei oska ühtegi neljast keelest”. The disclosure notice still contains “kasutatav suhtlusviis”, so the parity test still matches.
+
+## §Verify
+Commands run with PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin. This worktree had no node_modules. The main checkout’s node_modules lacks @modelcontextprotocol/server, so tsc failed there on files this lane did not touch. The checker, tsc, and vitest were run through a temporary symlink to /Users/son7/Projects/tseng-law-fix-lv-20260922/node_modules. The symlink was removed before git status.
+
+node scripts/check-column-translation.mjs --dir src/content/columns-et --lang et 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=137
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-et src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+
+(The count 22 is before this log file. It is 18 columns, baltic-atlantic guidance, team, inquiry copy, and the pre-existing untracked docs/i18n/global-plan/WO-F-et.txt. No other locale’s strings were edited. Number WARNs that the checker still prints on some files match the pre-change token multiset; file status is PASS.)
+
+## Reviewer disagreements (not applied)
+- “Estonian month names are registered” is true only for the nominative stem. “detsembril” and “jaanuarist” are not matched, so the reviewer’s date case cannot be written on the month itself without failing the number check. Case sits on kuupäeval / kuupäevast / seisuga / aasta instead.
+- “üks järgmistest” and “ühe nimele” are not counted by the checker. Those digits stay.
+- Space thousands and “1,57 miljonit TWD” would fail R14 and the pinned bio token.
+- Adding 2023 or 2020 next to a ROC year adds a digit the English source does not have (R13).
+- Merging the one-line blog paragraphs in 003, 006, 008, 009, 013 and 015 would change the block count.

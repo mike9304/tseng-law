@@ -987,7 +987,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
     contact: 'Kontakt',
     faq: 'Küsimused',
     privacy: 'Privaatsus',
-    disclaimer: 'Vastutus',
+    disclaimer: 'Lahtiütlus',
     columns: 'Artiklid',
   },
   contactCta: 'Saatke läbivaatamistaotlus',
@@ -995,7 +995,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
     'See eestikeelne leht sisaldab ainult üldist teavet büroo töö kohta Taiwani õiguse järgi. See ei ole õigusnõu üksiku asja kohta ja teate saatmine iseenesest ei tekita suhet advokaadi ja kliendi vahel.',
   skipLink: 'Jätke navigeerimine vahele ja minge sisu juurde',
   menuLabel: 'Menüü',
-  languageLabel: 'Kuva keel',
+  languageLabel: 'Lehe keel',
   mega: {
     services: {
       description: 'Büroo tegeleb Taiwani õiguse põhiliste valdkondadega.',
@@ -1120,7 +1120,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tööõiguslikud vaidlused',
           paragraphs: [
-            'Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne seadusjärgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide sarnaste korraldustega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.',
+            'Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne seadusjärgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide lahkumishüvitise ega töötushüvitisega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.',
             'Tööleping, töökorralduseeskiri (工作規則), palgalehed ja poolte kirjavahetus on tavaliselt määravad dokumendid. Kui need on teil veel olemas, mainige seda kokkuvõttes.',
           ],
         },
@@ -1218,7 +1218,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Miks sellel lehel ei ole tariife',
           paragraphs: [
-            'Tasud sõltuvad asjast endast: töömahust, poolte arvust, dokumentidest, tähtaegadest ja sellest, kas menetlus juba käib. Eelnevalt öeldud number ei näitaks, millised oleksid tasud teie asjas. Seepärast kinnitame esmalt töö ulatuse ja teatame teile seejärel tasud, enne kui töö algab.',
+            'Tasud sõltuvad asjast endast: töömahust, poolte arvust, dokumentidest, tähtaegadest ja sellest, kas menetlus juba käib. Ette kindlaks määratud summa ei näitaks, millised oleksid tasud teie asjas. Seepärast kinnitame esmalt töö ulatuse ja teatame teile seejärel tasud, enne kui töö algab.',
             'Lisaks advokaaditasule võivad tekkida kohtu-, asutuse- või kolmanda isiku kulud. Need on tasust eraldi ja sõltuvad vastavast menetlusest.',
           ],
         },
@@ -1240,7 +1240,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Lehe keel: need juhised on kirjutatud eesti keeles.',
             'Nõustamiskeel: nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles.',
-            'Teie kirjutamiskeel: kokkuvõtte võite kirjutada oma keeles; algtekst säilitatakse muutmata kujul.',
+            'Keel, milles kirjutate: kokkuvõtte võite kirjutada oma keeles; algtekst säilitatakse muutmata kujul.',
           ],
         },
         {
@@ -1320,7 +1320,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Mis siis, kui minu asi on väga kiireloomuline?',
           answer:
-            'Nimetage tähtaeg või ametikiri kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole valvesidet ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite paralleelselt otsima muid teid oma asukohas.',
+            'Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole valvesidet ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite paralleelselt otsima muid teid oma asukohas.',
         },
       ],
     },
@@ -1386,14 +1386,14 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Säilitamiskoht ja teenuseosutajad',
           paragraphs: [
-            'Neid veebilehti majutab Vercel ja teie saadetis säilitatakse selle teenuse mitteavalikus objektisalves. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.',
+            'Neid veebilehti majutab Vercel ja teie saadetis säilitatakse selle teenuse mitteavalikus andmesalvestuses. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.',
             'Üksikute teenuseosutajate serverid võivad asuda väljaspool Taiwani, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused võtab vastu wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'VASTUTUS',
+      eyebrow: 'LAHTIÜTLUS',
       title: 'Selle lehe teabe ulatus ja piirid',
       description:
         'Teabe üldine iseloom, õiguslik kohaldamisala ja eeldused suhtele advokaadi ja kliendi vahel.',
@@ -1411,7 +1411,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Õiguslik kohaldamisala',
           paragraphs: [
             'Büroo tegutseb Taiwani õiguse järgi ja see leht räägib ainult tööst selles raamistikus.',
-            'Sisu ei ole nõustamine muu õiguskorra kui Taiwani õiguse järgi, sealhulgas teie elukoha õiguse järgi. Kui osa teie asjast puudutab teist õiguskorda, selgitame teiega, millist pädevat asjatundjat selle osa jaoks vaja on.',
+            'Sisu ei ole nõustamine muu õiguskorra kui Taiwani õiguse järgi, sealhulgas teie elukoha õiguse järgi. Kui osa teie asjast puudutab teist õiguskorda, arutame teiega, millist pädevat asjatundjat selle osa jaoks vaja on.',
           ],
         },
         {

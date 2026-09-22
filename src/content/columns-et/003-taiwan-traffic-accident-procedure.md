@@ -11,15 +11,15 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 # Küsimused ja vastused liiklusõnnetuste käsitlemise kohta Taiwanis: toimingud sündmuskohal, hooletus, kokkulepe ja kahjuhüvitis
 
-![Pilt, mis selgitab turvatoiminguid sündmuskohal ja tõendite kindlustamist kohe pärast liiklusõnnetust Taiwanis](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
+![Pilt, mis selgitab turvatoiminguid sündmuskohal ja tõendite säilitamist kohe pärast liiklusõnnetust Taiwanis](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
 ![Näidispilt, mis jäädvustab sõiduki asendi ja jäljed sõiduteel liiklusõnnetuse sündmuskohal](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Liiklusõnnetuse (交通事故) järel Taiwanis peate esmalt hoolitsema ohutuse eest, tegema teate ja kindlustama tõendid ning seejärel käima järjekorras läbi nõuete tähtajad, hooletuse (過失) ja kokkuleppe ulatuse. Järgnev on üldine toimimisjärjekord Taiwani sätete ja avalike asutuste juhendite alusel; konkreetne vastutus ja menetlus võivad erineda iga õnnetuse asjaolude järgi.
+Liiklusõnnetuse (交通事故) järel Taiwanis peate esmalt hoolitsema ohutuse eest, tegema teate ja säilitama tõendid ning seejärel käima järjekorras läbi nõuete tähtajad, hooletuse (過失) ja kokkuleppe ulatuse. Järgnev on üldine toimimisjärjekord Taiwani sätete ja avalike asutuste juhendite alusel; konkreetne vastutus ja menetlus võivad erineda iga õnnetuse asjaolude järgi.
 
 ## Q1. Kas sündmuskoha võib pärast õnnetust jätta?
 
-Õnnetustes, milles on kehavigastus või surm, peab juht kohe teostama päästetoimingud (救護措施), teatama politseile ja kindlustama sõiduki ning tõendid sündmuskohal (保全現場). Vastaspoole mitteametlik nõusolek või pelgad fotod ei anna õigust lahkuda sündmuskohalt enne, kui nõutud toimingud on tehtud.
+Õnnetustes, milles on kehavigastus või surm, peab juht kohe teostama päästetoimingud (救護措施), teatama politseile ja säilitama sõiduki asendit ning tõendeid sündmuskohal (保全現場). Vastaspoole mitteametlik nõusolek või pelgad fotod ei anna õigust lahkuda sündmuskohalt enne, kui nõutud toimingud on tehtud.
 
 Kehavigastusega õnnetustes võib sõidukid siiski, kui kõik pooled nõustuvad, asendi ja jälgede märkimise järel viia kohta, mis ei takista liiklust. See ei asenda nõutud toiminguid, nagu abi ja teade.
 
@@ -27,11 +27,11 @@ Kui on ainult varaline kahju ja sõidukeid saab liigutada, on põhimõte märkid
 
 Kriminaalkoodeksi (刑法) artikkel 185-4 käsitleb kriminaalvastutust juhist, kes kehavigastuse või surmaga lõppenud liiklusõnnetuse järel jätab sündmuskoha. Tegelik kohaldamine hinnatakse õnnetuse olukorra ja teostatud toimingute järgi.
 
-## Q2. Millised tõendid tuleb esmalt kindlustada?
+## Q2. Millised tõendid tuleb esmalt säilitada?
 
-Kindlustage esmalt isiklik ohutus ja hoiatusmärgid; kehavigastuse või päästevajaduse korral helistage Taiwanis numbrile 119 (kiirabi ja päästeamet), kuriteo või kiireloomulise turvaolukorra korral numbrile 110 (politsei) või mobiiltelefonist numbrile 112 (交通事故). Teatage liiklusõnnetus ka politseile, niivõrd kui olukord seda nõuab.
+Tagage esmalt isiklik ohutus ja hoiatusmärgid; kehavigastuse või päästevajaduse korral helistage Taiwanis numbrile 119 (kiirabi ja päästeamet), kuriteo või kiireloomulise turvaolukorra korral numbrile 110 (politsei) või mobiiltelefonist numbrile 112 (交通事故). Teatage liiklusõnnetus ka politseile, niivõrd kui olukord seda nõuab.
 
-Kui ohutus on kindlustatud, tehke üld- ja lähivõtteid sõiduki asendi ja kahjustuste, teekattemärgiste, signaalide ja ilma jäädvustamiseks. Tunnistajate kontaktandmeid, taotlust CCTV (監視器影像) ja sõidukikaamera (行車紀錄器) kindlustamiseks, andmeid osaliste, sõidukite ja kindlustuse kohta ning haiguslugu (病歷) ei tohi jätta hankimata. Isiklikud salvestised on kasulikud, kuid ei asenda kehavigastuse või surma korral nõutud politseikäsitlemist.
+Kui ohutus on tagatud, tehke üld- ja lähivõtteid sõiduki asendi ja kahjustuste, teekattemärgiste, signaalide ja ilma jäädvustamiseks. Tunnistajate kontaktandmeid, taotlust CCTV (監視器影像) ja sõidukikaamera (行車紀錄器) säilitamiseks, andmeid osaliste, sõidukite ja kindlustuse kohta ning haiguslugu (病歷) ei tohi jätta hankimata. Isiklikud salvestised on kasulikud, kuid ei asenda kehavigastuse või surma korral nõutud politseikäsitlemist.
 
 Politseilt võite sündmuskohal saada liiklusõnnetuse osaliste registreerimis- ja kontaktlehe (道路交通事故當事人登記聯單). 7 päeva pärast õnnetusepäevast saab taotleda olukorraplaani ja õnnetusefotosid (現場圖 / 現場照片); 30 päeva pärast õnnetusepäevast saab taotleda maanteeliikluse õnnetuse esialgset analüüsihinnangut (道路交通事故初步分析研判表). Väljastamise hetk ja taotluse eeldused uuritakse uuesti pädevas politseiasutuses.
 
@@ -41,7 +41,7 @@ Kriminaalkoodeksi (刑法) artikkel 284 reguleerib hooletusest põhjustatud keha
 
 Tsiviilõiguslikku kahjuhüvitist (損害賠償) ei saa tsiviilseadustiku (民法) artikli 197 järgi enam nõuda, kui 2 aastat kahju ja hüvitamiskohustuslase teadasaamisest või 10 aastat kahju põhjustanud teost (侵權行為) on möödunud. Millised asjaolud mõjutavad aegumist (消滅時效), tuleb uurida eraldi.
 
-See, kes on kannatanud kahju karistatavast teost, võib kriminaalmenetluse seadustiku artikli 487 järgi esitada kriminaalasjaga seotud tsiviilhagi (刑事附帶民事訴訟). Niikaua kui kriminaalasi on pooleli, saab selle artikli 488 järgi esitada enne 2. astme suulise arutelu lõppu (言詞辯論終結), kuid mitte 1. astme suulise arutelu lõpu järel ja enne muutmisnõude esitamist. Tavaliselt eraldi kohtukulu (裁判費) siis ei nõuta, kuid iga asi ei lõpe ilma kuludeta. Kui näiteks kriminaalasi jäetakse rahuldamata ja kantakse hageja taotlusel tsiviilkohtusse, võivad kriminaalmenetluse seadustiku artikli 503 järgi tekkida menetluskulud; ka artikli 504 ülekande- ja menetlussätted tuleb läbi käia.
+See, kes on kannatanud kahju karistatavast teost, võib kriminaalmenetluse seadustiku artikli 487 järgi esitada kriminaalasjaga seotud tsiviilhagi (刑事附帶民事訴訟). Niikaua kui kriminaalasi on pooleli, saab selle artikli 488 järgi esitada enne teise astme suulise arutelu lõppu (言詞辯論終結), kuid mitte esimese astme suulise arutelu lõpu järel ja enne muutmisnõude esitamist. Tavaliselt eraldi kohtukulu (裁判費) siis ei nõuta, kuid iga asi ei lõpe ilma kuludeta. Kui näiteks kriminaalasi jäetakse rahuldamata ja kantakse hageja taotlusel tsiviilkohtusse, võivad kriminaalmenetluse seadustiku artikli 503 järgi tekkida menetluskulud; ka artikli 504 ülekande- ja menetlussätted tuleb läbi käia.
 
 Valik erineb aegumise katkemise (時效中斷), kostjate ringi, tõendite, kindlustuse ja pädevuse järgi. Seetõttu ei ole kõigile asjadele üht ja sama õiget menetlusviisi.
 
@@ -49,7 +49,7 @@ Valik erineb aegumise katkemise (時效中斷), kostjate ringi, tõendite, kindl
 
 Kriminaalvastutust saab hinnata alles siis, kui mõlema poole hoolsuskohustuse rikkumine ja selle põhjuslik seos, mis sellel rikkumisel on vastaspoole kehavigastusega, on tunnustatud. Pelgalt seetõttu, et mõlemal poolel on hooletust (過失), ei teki automaatselt vastutust hooletusest põhjustatud kehavigastuse eest.
 
-Tsiviilõiguslikult võib kohus tsiviilseadustiku (民法) artikli 217 järgi hüvitist alandada või selle ära jätta, kui kannatanul on hooletust kahju tekkimises või suurenemises (與有過失). Kui näiteks tunnustatud kahjud olid TWD 1.000.000 (新臺幣) ja kannatanu hooletus hinnati 50 %ks, võib summa enne muid kohandusi langeda TWD 500.000-ni.
+Tsiviilõiguslikult võib kohus tsiviilseadustiku (民法) artikli 217 järgi hüvitist alandada või selle ära jätta, kui kannatanul on hooletust kahju tekkimises või suurenemises (與有過失). Kui näiteks tunnustatud kahjud olid TWD 1.000.000 (新臺幣) ja kannatanu hooletus hinnati 50 protsendiks, võib summa enne muid kohandusi langeda TWD 500.000-ni.
 
 Eksperdihinnang (鑑定) või esialgne analüüsihinnang võivad olla olulised dokumendid, kuid ei seo kohut mehaaniliselt. Kohus vaatab seletusi, salvestisi, sõiduki seisundit ja kõiki tõendeid koos.
 
@@ -59,7 +59,7 @@ Kokkuleppes (和解書) tuleb kinnitada õnnetuse aeg, koht ja pooled ning võtt
 
 Kokkulepe (和解) tsiviilseadustiku (民法) artiklis 736 on leping, milles pooled vastastikuse järeleandmisega viivad vaidluse lõpuni või tõkestavad selle. Tsiviilseadustiku artikli 737 järgi hinnatakse õiguse kaotuse ulatust ainult lepingus märgitud ulatuse järgi. Seetõttu ei tohi ilma sõnastust uurimata kinnitada, et kõik tulevased nõuded kustuvad.
 
-Kaebuse alusel menetletavates süütegudes saab kaebuse kriminaalmenetluse seadustiku artikli 238 järgi tagasi võtta enne 1. astme suulise arutelu lõppu; tagasivõtmise järel ei saa uuesti kaevata. Mittekaebuse alusel menetletavates süütegudes ei lõpe avalik süüdistus automaatselt pelgalt eraõigusliku kokkuleppega ega kohusta kokkulepe alati kaebust tagasi võtma.
+Kaebuse alusel menetletavates süütegudes saab kaebuse kriminaalmenetluse seadustiku artikli 238 järgi tagasi võtta enne esimese astme suulise arutelu lõppu; tagasivõtmise järel ei saa uuesti kaevata. Mittekaebuse alusel menetletavates süütegudes ei lõpe avalik süüdistus automaatselt pelgalt eraõigusliku kokkuleppega ega kohusta kokkulepe alati kaebust tagasi võtma.
 
 ### Ametlikud alused Q1–Q5
 
@@ -175,7 +175,7 @@ Kindlustamiskohustus mootorsõidukite kohustusliku vastutuskindlustuse seaduse (
 
 Ühe sõiduki üksikõnnetustes ei ole selle juht tavaliselt kõnealuse sõiduki kohustusliku kindlustuse hüvitise saaja. Õnnetustes, milles on mitu sõidukit, võib juht siiski nõuda hüvitist teise osalise sõiduki kohustuslikult kindlustajalt.
 
-Hüvitisnormi (強制汽車責任保險給付標準) muudeti 29. mai 2026 ja muudatus kehtib õnnetustele alates 1. juuli 2026. Lage vajalikele asjakohastele ravikuludele kehavigastuse korral on TWD 200.000, töövõimetushüvitised (失能) seadusjärgse 15 astme järgi TWD 80.000–3.000.000, surmajuhtumi hüvitis TWD 3.000.000 ning surma, töövõimetuse ja ravikulude ülemmäär ühe kehavigastuse saanud isiku ja ühe õnnetuse kohta on TWD 3.200.000. Varasematele õnnetustele võib kehtida varasem norm.
+Hüvitisnormi (強制汽車責任保險給付標準) muudeti kuupäeval 29. mai 2026 ja muudatus kehtib õnnetustele alates kuupäevast 1. juuli 2026. Lage vajalikele asjakohastele ravikuludele kehavigastuse korral on TWD 200.000, töövõimetushüvitised (失能) seadusjärgse 15 astme järgi TWD 80.000–3.000.000, surmajuhtumi hüvitis TWD 3.000.000 ning surma, töövõimetuse ja ravikulude ülemmäär ühe kehavigastuse saanud isiku ja ühe õnnetuse kohta on TWD 3.200.000. Varasematele õnnetustele võib kehtida varasem norm.
 
 Vastutuskindlustus kolmanda isiku suhtes (第三人責任險), juhi õnnetuskindlustus (駕駛人傷害險) ja kaskokindlustus (車體損失險) on lepingulised valiktooted. Tegelik kaitse erineb kindlustatu, lae, omavastutuse (自負額), erandi, hooletuse ja muude kindlustustingimuste järgi; kindlustustunnistus ja tingimused tuleb uurida ükshaaval.
 
@@ -184,11 +184,11 @@ Vastutuskindlustus kolmanda isiku suhtes (第三人責任險), juhi õnnetuskind
 - [Tsiviilseadustik artikkel 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Tsiviilseadustik artikkel 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Tsiviilseadustik artikkel 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Taiwani apellatsioonikohtu otsus aastast 109, asi 上易字 number 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Taiwani apellatsioonikohtu otsus aastast 109, asi 上易字 number 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Taiwani apellatsioonikohtu otsus vabariigi aastast 109, asi 上易字 nr 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Taiwani apellatsioonikohtu otsus vabariigi aastast 109, asi 上易字 nr 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Justiitsyuani Hoffmanni nüüdisväärtuse kalkulaator](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Tsiviilseadustik artikkel 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taoyuani esimese astme kohtu otsus aastast 112, asi 壢簡字 number 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taoyuani esimese astme kohtu otsus vabariigi aastast 112, asi 壢簡字 nr 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Tsiviilseadustik artikkel 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Taiwani kriminaalkoodeks (中華民國刑法) artikkel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Seadus mootorsõidukite kohustusliku vastutuskindlustuse kohta](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -287,7 +287,7 @@ Sündmuskohalt põgenemine (肇事逃逸) eeldab, et keegi on saanud kehavigastu
 
 ​
 
-Pelgas sõidukikahjus ei peeta seda sündmuskohalt põgenemiseks.
+Kui kahju on ainult sõidukil, ei ole tegemist sündmuskohalt põgenemisega.
 
 ​
 
@@ -347,7 +347,7 @@ Paljud põhjustajad ei hoolitse telefonitsi tehtavast seisundi järelepärimises
 
 ​
 
-Kannatanu kogeb seda solvavana, ei järele anna läbirääkimistel summa osas või taotleb aresti (假扣押) ja sissenõudmist vastaspoole varalt lõpuni.
+Kannatanu kogeb seda solvavana, ei järele anna läbirääkimistel summa osas või taotleb vara arestimist hagi tagamiseks (假扣押) ja sissenõudmist vastaspoole varalt lõpuni.
 
 ​
 

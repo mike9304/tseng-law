@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Kas teie olete kogenud Taiwani varaste aastate traditsiooniliste juuksurite (理髮廳) aega?
+Taiwani varasemate aastate traditsioonilistes juuksurisalongides (理髮廳) oli oma töökord.
 
 Viis, kuidas nendes juuksurisalongides juukseid pesti, oli väga omapärane.
 
@@ -29,7 +29,7 @@ See meenutas tugevalt tänast vietnami stiilis juuksepesu.
 
 Ja sellised taiwanipärased juuksurisalongid jäävad paljudele Taiwanis elavatele inimestele omapäraseks kultuurimälestuseks.
 
-(Kas paljastan sellega tahtmatult oma vanuse?)
+(See kirjeldus käib varasema aja kohta.)
 
 ​
 
@@ -81,7 +81,7 @@ Küsiti näiteks, kas kirjalik reegel, mis lubas massaaži ainult nägemispuudeg
 
 ja kaheldi, kas see reegel oli tegelikult edendanud nägemispuudega isikute töö ja toimetuleku kaitset.
 
-Lõpuks kuulutasid põhiseaduskohtu suurkohtunikud (大法官) sätte, mis lubas ainult nägemispuudega isikutel massaažialal tegutseda, põhiseadusvastaseks (違憲).
+Lõpuks kuulutasid põhiseaduskohtu kohtunikud (大法官) sätte, mis lubas ainult nägemispuudega isikutel massaažialal tegutseda, põhiseadusvastaseks (違憲).
 
 ​
 

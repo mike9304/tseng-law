@@ -20,7 +20,7 @@ faq:
 
 ![Kaanepilt](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Olen Wei Tseng (曾雋崴), Taiwani advokaat.
+Olen Wei Tseng (曾雋崴), advokaat Taiwanis.
 
 Täna soovin teile rääkida seadusjärgsest lahkumishüvitisest (資遣費) Taiwanis.
 
@@ -58,7 +58,7 @@ Koostasin selle teile lihtsasse tabelisse.
 | Etteteatamine | Nõutav | Ei ole nõutav | Nõutav |
 | Raskus | Lihtne | Raske | Lihtne |
 | Kas äriühing peab maksma lahkumishüvitist (資遣費) | Nõutav | Ei ole nõutav | Ei ole nõutav |
-|  | Taiwani tööstandardite seadus artikkel 11 (勞動基準法第11條): Kui ei esine üht järgmistest asjaoludest, ei tohi tööandja töölepingut üles öelda isegi pärast töötajale etteteatamist.  1. Tegevuse peatamine (歇業) või ettevõtte võõrandamine (轉讓)  2. Kahjum (虧損) või tegevuse kokkutõmbamine (業務緊縮)  3. Vääramatu jõud eeldab tegevuse peatamist 1 kuuks või kauemaks  4. Tegevuse laad eeldab personali vähendamist ja ülesöeldud töötajat ei saa määrata teisele sobivale ametikohale  5. Konkreetne töötaja ei suuda ametikoha nõutavat tööd rahuldavalt täita | Taiwani tööstandardite seadus artikkel 12 (勞動基準法第12條): Tööandja võib üles öelda etteteatamiseta, kui töötaja kuulub ühe järgmise asjaolu alla.  1. Isik, kes töölepingu sõlmimisel esitab valeandmeid, eksitab tööandjat ja tekitab ettevõttele kahju ohu  2. Isik, kes tarvitab vägivalda tööandja, tema perekonna, tema esindaja (代理人) või teiste töökaaslaste suhtes või solvab neid raskelt  3. Isik, kelle suhtes on jõustunud tähtajaline vangistus (有期徒刑) või rangem karistus, ilma et oleks mõistetud tingimisi karistus (緩刑) ja ilma et oleks lubatud asendamine rahatrahviga (易科罰金)  4. Töölepingu või töökorralduseeskirja raske rikkumine  5. Isik, kes tahtlikult kulutab tööandja masinaid, tööriistu, toorainet, tooteid või muud vara või tahtlikult paljastab tööandja tehnilisi ja ärisaladusi ning tekitab tööandjale kahju  6. Omavoliline töölt puudumine (曠工) mõjuva põhjuseta 3 järjestikusel päeval või 6 päeva või rohkem 1 kuu jooksul |  |
+|  | Taiwani tööstandardite seadus artikkel 11 (勞動基準法第11條): Kui ei esine üht järgmistest asjaoludest, ei tohi tööandja töölepingut üles öelda isegi pärast töötajale etteteatamist.  1. Tegevuse peatamine (歇業) või ettevõtte võõrandamine (轉讓)  2. Kahjum (虧損) või tegevuse kokkutõmbamine (業務緊縮)  3. Vääramatu jõud eeldab tegevuse peatamist 1 kuuks või kauemaks  4. Tegevuse laad eeldab personali vähendamist ja ülesöeldud töötajat ei saa määrata teisele sobivale ametikohale  5. Konkreetne töötaja ei suuda ametikoha nõutavat tööd rahuldavalt täita | Taiwani tööstandardite seadus artikkel 12 (勞動基準法第12條): Tööandja võib üles öelda etteteatamiseta, kui töötaja kuulub ühe järgmise asjaolu alla.  1. Isik, kes töölepingu sõlmimisel esitab valeandmeid, eksitab tööandjat ja tekitab ettevõttele kahju ohu  2. Isik, kes tarvitab vägivalda tööandja, tema perekonna, tema esindaja (代理人) või teiste töökaaslaste suhtes või solvab neid raskelt  3. Isik, kelle suhtes on jõustunud tähtajaline vangistus (有期徒刑) või rangem karistus, ilma et oleks mõistetud tingimisi karistust (緩刑) ja ilma et oleks lubatud asendamine rahatrahviga (易科罰金)  4. Töölepingu või töökorralduseeskirja raske rikkumine  5. Isik, kes tahtlikult kulutab tööandja masinaid, tööriistu, toorainet, tooteid või muud vara või tahtlikult paljastab tööandja tehnilisi ja ärisaladusi ning tekitab tööandjale kahju  6. Omavoliline töölt puudumine (曠工) mõjuva põhjuseta 3 järjestikusel päeval või 6 päeva või rohkem 1 kuu jooksul |  |
 
 > Taiwanis peab tööandja iga täidetud 1 staažiaasta (年資) kohta
 > maksma lahkumishüvitisena 0,5 kuu keskmist palka (平均工資).
@@ -118,7 +118,7 @@ Muidu pidavat B äriühingust lahkuma;
 
 ta andis B-le A4-lehe
 
-ja käskis kirjutada: „Mina, OOO, alandan vabatahtlikult ametikohta ja palka“
+ja käskis kirjutada: „Mina, [nimi], alandan vabatahtlikult ametikohta ja palka“
 
 sisuks.
 
@@ -182,7 +182,7 @@ kui teistel lahkunud töötajatel vastavat tõendit ei olnud.
 
 Kuna selliseid asju on palju,
 
-peate teie kindlustama tõendid,
+tuleb tõendid säilitada,
 
 kui äriühing kasutab ebasobivaid võtteid.
 
@@ -194,7 +194,7 @@ esitab ülemääraseid nõudmisi
 
 või paigutab töötajaid ootamatutele ametikohtadele,
 
-**peate teie kindlustama tõendid.**
+**tuleb tõendid säilitada.**
 
 **Oma tavalised kohalolekuandmed,**
 
@@ -204,7 +204,7 @@ või paigutab töötajaid ootamatutele ametikohtadele,
 
 **ning vestluste salvestised ülemustega —**
 
-**kindlustage teile soodsad tõendid.**
+**säilitage teile olulised tõendid.**
 
 ​
 
@@ -220,9 +220,9 @@ ega ajaks teid omal soovil lahkuma
 
 Lahkumishüvitis on töötaja seadusjärgne õigus,
 
-ja äriühing peab selle muidugi maksma.
+Lahkumishüvitis tuleb maksta ainult siis, kui seaduse eeldused on täidetud; iga töösuhte lõpp seda ei too.
 
-Ka teie peate Taiwanis oma õigusi kaitsma.
+Töötaja võib Taiwanis oma õigusi kaitsta; tulemust see artikkel ei luba.
 
 ---
 

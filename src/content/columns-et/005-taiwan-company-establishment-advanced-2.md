@@ -69,7 +69,7 @@ Mõnel pangal võivad olla lisatingimused, näiteks konto kasutusaeg vähemalt 6
 
 **5. Kas äriühing võib palgata töötajateks välismaalasi?**
 
-A. Esimene töötaja: taotlus esitatakse tavalise ülemererahvusest hiinlaste või välismaalaste investeeringuga ettevõtte juhtiva tööna (一般僑外投資事業主管工作). Allpool punktis B nimetatud „erialase või tehnilise töö“ mõõdupuu ei kohaldu, kuid kohalduvad sihtrühma eeldused, sealhulgas tegevjuht (經理人) äriühingus, milles ülemererahvusest hiinlaste või välismaalaste sissemakse ületab 1/3, ning tööandja tulemusnõuded kapitali ja käibe kohta (hindamisstandardid artikkel 38 ja artikkel 39).
+A. Esimene töötaja: taotlus esitatakse tavalise väljaspool Taiwani elavate hiinlaste või välismaalaste investeeringuga ettevõtte juhtiva tööna (一般僑外投資事業主管工作). Allpool punktis B nimetatud „erialase või tehnilise töö“ mõõdupuu ei kohaldu, kuid kohalduvad sihtrühma eeldused, sealhulgas tegevjuht (經理人) äriühingus, milles väljaspool Taiwani elavate hiinlaste või välismaalaste sissemakse ületab 1/3, ning tööandja tulemusnõuded kapitali ja käibe kohta (hindamisstandardid artikkel 38 ja artikkel 39).
 
 B. Alates teisest töötajast kehtivad piirangud: kui palgatavate töötajate arv ületab 1 isiku, käsitletakse töötaja asjakohast haridust ja kogemust, keskmist palka puudutavaid reegleid ning äriühingu kapitali ja käivet puudutavaid reegleid „erialase või tehnilise töö“ (專門性或技術性工作) järgi.
 

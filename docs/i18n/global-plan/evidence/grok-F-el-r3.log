@@ -1,0 +1,75 @@
+WO-F-el r3 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-el-r3
+No git add/commit/push.
+
+## Rows applied
+
+el-a (19 of 22, plus 2 partial): 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22
+el-a partial: 11, 12
+el-b (19 of 22, plus 1 partial): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 18, 19, 20, 21
+el-b partial: 22
+
+Guidance pack (el-a 8, 9, 16, 21): the facts prompt now says to write the facts and not derive the answer from the page; the accounting sentence is «από κοινού με το λογιστικό τμήμα» without «ενιαίας διαδικασίας»; «Η γλώσσα της συμβουλευτικής»; the bio says «με υπόβαθρο σπουδών πληροφορικής». llms.txt `el` notices were not rewritten. `llms.txt` stays. consultationNotice and confidentialNotice were already verbatim substrings, and those sentences were not edited. No disclosure-parity regex changed.
+
+Checker adaptations (wording applied; a source digit was not dropped, because a missing number FAILs):
+- el-a 11: «του τελευταίου έτους (1 έτος)» → «του τελευταίου 1 έτους» (FAQ and body). The redundant parenthesis is gone; the 1 stays (Korean 최근 1년). 002 «της 1 περιόδου … το 1 έτος» → «μίας (1) περιόδου … το ένα (1) έτος» (FAQ and body). Both 1s stay (1회 and 1년). 003 «ανά 1 ημέρα» → «ανά ημέρα» (2); those 1s were extra against 1일로. «ανά 1 θύμα και ανά 1 ατύχημα» stays (피해자 1명·사고 1건). 008 «κάθε 1 συμπληρωθέν έτος» and «ανά 1 έτος» stay (1년); writing them as words failed numbers 1×4.
+- el-b 11: «έως 1 φορά το ποσό» kept. Korean is 최대 1배. Dropping the 1 failed numbers. The punitive-damages clause in the same sentence (el-b 1) was still rewritten.
+- el-b 22: «1 έκαστος εταίρος έχει 1 ψήφο» → «ισχύει 1 ψήφος ανά 1 εταίρο». Both 1s stay (주주 1인 1표). έκαστος is gone.
+- el-a 1: not applied. See skipped.
+- el-a 12 / el-b 15–16: no heading added and no U+200B deleted. Inside the existing blocks, 005’s comma-cut before «ο υπεύθυνος» is now two complete sentences, 008 has the period after «επιχείρηση», and the lowercase continuations in 013 («Μπορείτε, εφόσον συντρέχει…») and 015 («Από την 1/1/2023…») are complete sentences. 015’s three lead-in blocks each state the restaurant-zone point. Block count unchanged.
+
+## Rows skipped
+
+- el-a 1 (P1, άρθρο 10 → άρθρο 3 on the withholding-rate link): the Korean source label is 영업세법 제10조. Changing 10 to 3 failed numbers (missing 10). The URL flno=3 was not edited. The statute name in Greek was already the withholding-rate standards.
+- el-a 12 structure (P2, turn Q16+ into ## headings; delete U+200B blank lines and `**​**` in 003, 005, 006, 008, 009): the checker compares heading levels, block count, and ZWSP count with the Korean source. 009’s five ZWSP match the source and were left. In-block wording from this row is under partial, above.
+- el-b 11 (P2, drop «1 φορά»): see adaptations. The suggested sentence without the digit fails numbers.
+- el-b 15 (P2, delete every U+200B in 013 and 015): same ZWSP rule. The lines stay. The sentence after the zero-width space was left, except the lowercase continuations named in el-b 16, which were completed inside their own blocks.
+
+## Systemic patterns
+
+- αμέσως where English is «directly» (or «standing alone», not «immediately»): 12. 018 ships απευθείας and the head office φέρει ευθέως; 014 άμεσα επαληθεύσιμα, κατέβαλε ο ίδιος, επηρεάζει ευθέως; 017 εισπράττει το ίδιο το αντάλλαγμα ×2 and δεν καθίσταται, από μόνη της, μεταφορέας; 004 συμμετάσχει ευθέως, αναλαμβάνει ευθέως, ευθύνεται ευθέως, ασκεί απευθείας. Other αμέσως that mean immediately (accident aid, online banking, dismissal without notice, succession, guardianship) were left.
+- Estate inventory απόγραφο/απογράφου → απογραφή/απογραφής: 8 (nominative, five genitives from «του απογράφου», «από την απογραφή», and the list «απογραφής»). The glossed filing is «απογραφή της κληρονομίας (遺產清冊)».
+- Feminine αμοιβές with a neuter article: 2 (001 «στις αμοιβές δικαιωμάτων», 004 «από τις αμοιβές»).
+- English institution or portal labels: Δικαστικό Γιουάν ×5 (016 link and body; 003 body, calculator link, and the guidance link); Χρηματιστήριο της Ταϊβάν ×1; Επενδύσεις στην Ταϊβάν (Invest Taiwan) ×2 (004 and 011). TFDA acronyms left.
+- δηλοί → δηλώνει: 2 (015 business items, 016 separate property).
+- σύλληψη for identify/clarify: 2 (016 εντοπισμός των χρεών; 014 ακριβέστερη αποτύπωση).
+- Bare 1 standing for ένα/κάθε: see adaptations. Net wording changes that survived the checker: 001 parenthesis folded ×2; 002 word beside the digit ×2 sentences; 003 «ανά ημέρα» ×2. 008 digits unchanged.
+- U+200B blank lines: 0 deleted.
+- Table «Yes»: both economic and disciplinary cells «Υπάρχουν» → «Ναι» (the third cell stays «Δεν υπάρχουν»).
+- R2–R10: already in the Greek from earlier rounds (Korea only as a labelled example, consultation lock, no result or availability promise, feminine Wei Tseng, « »). No further sentence of that set was rewritten. Hangul remains only inside `url`.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-el --lang el 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=27
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-el src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The 23 is after this log was written. It includes the log, the pre-existing WO-F-el.txt edit, and the two untracked review files. No test expected-string was changed.
+
+## Reviewer points not applied as written
+
+- el-a 1: the URL really opens flno=3, and the Greek statute name is already the withholding-rate standards, so «άρθρο 10» does not match that page. The Korean source, which the checker counts, still says 제10조. The digit was not changed.
+- el-b 11: «1 φορά» is not an extra multiplier invented in Greek. Korean 소비자보호법 제51조 says 과실이면 실제 손해액의 최대 1배. English drops the fold because one times the amount is the amount. The digit stays.
+- el-a 11 and el-b 22: the awkward bare 1 and έκαστος are real. The digits themselves are in the Korean source (최근 1년, 1회, 1년, 1인 1표). Suggested sentences that delete those digits were not used.
+- el-a 12 and el-b 15 correctly describe the zero-width lines and the one-line fragments. Those lines are in the Korean source the checker compares. Deleting them, or making Q16 a heading, fails blocks, ZWSP, or headings. They were not deleted.

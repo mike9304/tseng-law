@@ -1,0 +1,73 @@
+WO-F-mn r4 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-mn-r4
+
+## Rows
+
+Review rows: 24 (mn-a 15 + mn-b 9). Applied 18. Skipped 6.
+
+Applied
+- mn-a 2 P2 001 work-permit category: хаяг → ангилал. Kept шалгана, because English is “check,” not “determine.” 1 instance.
+- mn-a 3 P2 004 liquidator: тооцоо хийгч → тооцоо хийгчийг томилох, and авлага өрийг → авлага ба өрийг. 1 instance. The rest of the sentence (tax return, remaining property, procedures) stayed.
+- mn-a 4 P2 005 bank sentence: the fragment that stopped on “after” is now a complete sentence: the legal-entity registration documents must first have been issued. Next sentence unchanged. 1 instance.
+- mn-a 5 P2 guidance about: компанийн зөвлөгөөнөөс → компанийн зөвлөх үйлчилгээнээс. 1 instance.
+- mn-a 6 P2 llms discoveryNotice: зэрэглэл → хайлтын байр, and сурталчилгаа → баталгаатай харагдах байдал. The token llms.txt is still in the sentence. consultationNotice and confidentialNotice were not rewritten.
+- mn-a 7 P2 inquiry saved-pending: фирмд очсон → фирмд очих. The opening “Таны хүсэлтийг хадгалсан боловч” was already there. 1 instance.
+- mn-a 8 P2 contact urgency: оршин буй / зэрэгцүүлэн хайна → оршин суугаа / зэрэгцээ эрж хайна. 1 instance. Still tells the reader to seek other help where they live; no reply-time promise was added.
+- mn-a 9 P2 disclaimer description: хуудас → хуудсууд, so the plural эдгээр agrees. 1 instance. No parentheses added.
+- mn-a 10 P2 home assistance sentence: the link label is now «Холбоо», and the following text is “хуудас … хянуулахаар …”. Rendered once, it reads «Холбоо» хуудас өмгөөлөгчид хянуулахаар товч тоймыг хэрхэн бичихийг тайлбарлана. Putting «Холбоо» in the after-string as well would have duplicated the link.
+- mn-a 12 P2 polite pronoun, mid-sentence only: 3 instances. 003 “Хэрэв та”, 006 “үеийг та”, 008 “компани таныг”.
+- mn-a 13 P2 004 listing subject: субъект болохгүй → бүртгүүлж чадахгүй. 3 instances (FAQ with the 上市 gloss, the repeated body sentence, and the securities-market sentence). Chinese glosses kept.
+- mn-b 1 P2 014 question: ажилтны ачаалал → ажилтанд ногдох үүрэг. 1 instance (the numbered question). Other uses of ачаалал are workload or tax burden and were left.
+- mn-b 2 P2 017 license lending: өөр нэрээр ашиглуулах → бусдад ашиглуулах. 3 instances (FAQ, the repeated body paragraph, and the subcontract paragraph). 借牌 kept.
+- mn-b 3 P2 010 receipts: the genitive now follows the last gloss, so баримт covers medical expenses, travel for treatment, and nursing costs. 醫療費用, 就醫交通費, and 看護費用 kept. 1 instance.
+- mn-b 5 P2 015 quoted title: зүйлийн moved out of the quotes. The title inside «» is зүйл; the genitive is (主動查詢之營業項目)-ын жагсаалт. 1 instance. The image caption that already said зүйл was left.
+- mn-b 6 P2 018 on-site engineering: инженер дэмжлэгийг → инженерийн дэмжлэгийг. 1 instance.
+- mn-b 7 P2 011 Taiwan enterprise: Тайвань талын аж ахуйн нэгж → Тайванийн аж ахуйн нэгж. 1 instance. “нөгөө талын” (the other party) was not this calque and was left.
+- mn-b 9 P2 014 citation: 勞動關2字第1150141814號 заавар → … дугаартай бичиг. 1 instance. The link URL and the other “2026.06.05-ны заавар” sentences were left.
+
+Skipped
+- mn-a 1 P1 004 link label, 10 дугаар зүйл → 3 дугаар зүйл. Not changed. The Korean source label is 영업세법 제10조 and English 004 says “Article 10 of the Value-Added and Non-Value-Added Business Tax Act.” Replacing 10 with 3 would drop one counted 10 and add a 3, so the number checker would fail. ACCEPTED-ROUND forbids changing numbers. The URL (flno=3) was not touched.
+- mn-a 11 P2 and mn-b 4 P2 U+200B blank lines in 003, 005, 006, 008, 009, 013, and 015, including 005’s **​** lines. Not deleted, and Q16–Q20 were not turned into headings. checkBlocks requires the same U+200B count as the Korean source, and a line that is only U+200B is still a block. New ## headings would also change heading levels. ACCEPTED-ROUND forbids adding headings and changing block counts.
+- mn-a 14 P2 bio “TWD 1.57M”. ACCEPTED-ROUND and R12: the token stays byte-identical. The suggested “1,57 сая” is also a comma decimal, which R14 does not parse for mn.
+- mn-a 15 P2 and mn-b 8 P2 money format (space thousands, comma decimal, currency code after the amount), including “0.5 сарын” and “0.5 метр”. Not changed. R14 sets mn to comma thousands and a decimal point (“500,000”, “0.5”). ACCEPTED-ROUND skips space separators (“500 000”) because the checker cannot parse them.
+
+## Systemic patterns
+
+- Listing word субъект: 3 changed, all in 004. No other hit in columns-mn or the mn guidance strings.
+- Capital polite pronoun mid-sentence: 3 changed (003, 006, 008). Sentence-initial and heading-initial Та / Таны in the columns and the pack were left; see disagreements.
+- Money written with a comma, a leading TWD, a point decimal, or “TWD 1.57M”: 0 changed (skip above).
+- U+200B after a sentence or as a blank line: 0 changed (skip above). Counts still match the Korean source (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3).
+- License lending as “under another name”: 3 changed, all in 017.
+- “Taiwan side” calque Тайвань талын: 1 changed (011).
+
+R2–R17 were already in this locale from earlier rounds. This round’s verdicts say the consultation lock stays negative (English, Chinese (中文), Japanese, Korean only; no interpreter; no reply-time; no free first meeting; no result promise), Wei Tseng is not marked masculine, and Mongolian does not mark gender on өмгөөлөгч or the verb. ноён Линь, ноён B, and the male student stay male. Bios already use Mongolian role names (хуулийн туслах, Хууль зүйн туслалцааны сангийн Тайжун салбар, түнш нягтлан бодогч) with Latin firm names. No Russian leakage, no OOO, no Q&A / OUR TEAM / OFFICES chrome, no fullwidth punctuation outside the Hangul url fields. Those url fields were not rewritten. No disclosure-parity regex needed a change. No test expected-string needed a change.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=98
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      18
+```
+
+Commands were the work-order set (checker tail -8, marker grep wc -l, tsc, vitest grep, git status --short wc -l). The git count 18 was taken before this log file existed. WO-F-mn.txt was already modified, and mn-a.md / mn-b.md were already untracked, at the start of the session.
+
+## Reviewer disagreements (not applied)
+
+- mn-a 1: the visible article 10 matches the English and Korean link labels. flno=3 is a mismatch already in the source URL, which must stay. The suggested “3 дугаар зүйл” would fail the number checker. The reviewer’s claim that «Төрөл бүрийн орлогын эх үүсвэрийн суутгалын хувийн хэм хэмжээ» is the right statute name also does not match English 004, which names the Value-Added and Non-Value-Added Business Tax Act. The label was left as it was, because the only edit the row asked for is a digit the checker counts.
+- mn-a 11 and mn-b 4: the zero-width lines are real. They cannot be removed, and Q16–Q20 cannot become headings, without failing ZWSP parity, block count, or heading levels against the Korean source.
+- mn-a 14, mn-a 15, and mn-b 8: the amount and the grouping are real style preferences for Mongolia. The campaign rules require comma thousands, a decimal point, and the bytes TWD 1.57M. Space grouping and “1,57 сая” were not applied.
+- mn-a 12, the example «Та ч Тайваньд»: that Та is the first word of its own sentence, so it stays capitalized. Mongolian capitalizes the first word of a sentence. It does not capitalize the polite pronoun in the middle of a sentence the way Russian capitalizes Вы. The three mid-sentence pronouns were lowercased.
+- mn-a 2 suggested тогтооно. English 001 says to check the work-permit category and its requirements, so the verb stayed шалгана. Only хаяг → ангилал was the error.
+- mn-a 10’s suggested after-string begins with «Холбоо». That word is already the link label rendered immediately before the after-string. The quotes were put on the link label instead, so the page name appears once.

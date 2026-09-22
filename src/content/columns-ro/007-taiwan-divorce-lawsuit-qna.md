@@ -40,7 +40,7 @@ Cetățenia părților, calitatea de străin sau locul căsătoriei nu tranșeaz
 
 ## 2. Condițiile divorțului prin consimțământ mutual și înscrierea la biroul evidenței gospodăriilor
 
-Divorțul prin consimțământ mutual al art. 1050 din Codul civil al Taiwanului (民法) nu produce efectele decât atunci când acordul este trecut în scris, când doi martori sau mai mulți semnează după ce au constatat voința autentică de a divorța a ambelor părți, și când divorțul este înscris la biroul evidenței gospodăriilor (離婚登記). Acordul semnat prin el însuși nu desăvârșește divorțul; dacă există un element de extraneitate, trebuie verificate separat legea aplicabilă, legalizarea și traducerea documentelor, precum și declarațiile într-un alt stat sau teritoriu.
+Divorțul prin consimțământ mutual al art. 1050 din Codul civil al Taiwanului (民法) nu produce efectele decât atunci când acordul este trecut în scris, când doi martori sau mai mulți semnează după ce au constatat voința autentică de a divorța a ambelor părți, și când divorțul este înscris la biroul evidenței gospodăriilor (戶政機關). Acordul semnat prin el însuși nu desăvârșește divorțul; dacă există un element de extraneitate, trebuie verificate separat legea aplicabilă, legalizarea și traducerea documentelor, precum și declarațiile într-un alt stat sau teritoriu.
 
 Redactarea scrisă, semnătura a doi martori sau mai mulți și înscrierea divorțului la biroul de evidență a gospodăriilor sunt fiecare condiții autonome. Martorul nu este numai cineva care își pune numele pe un document deja redactat: trebuie să semneze după ce a recunoscut și constatat că ambele părți au o voință autentică de a divorța. De aceea un acord privat semnat numai de părți poate fi proba unui acord asupra bunurilor sau copiilor, dar nu face să se nască prin el însuși efectul de stare civilă al divorțului prin consimțământ mutual din Taiwan.
 
@@ -115,7 +115,7 @@ Despăgubirile art. 1056 din Codul civil (民法) sunt un drept care, față de 
 
 Întreținerea soțului după divorț, prevăzută de art. 1057 din Codul civil (民法), presupune că soțul fără vină cade, printr-un divorț prin judecată, în nevoia de a trăi. Trebuie mai întâi verificat dacă este vorba de un divorț prin consimțământ mutual sau de un divorț prin judecată, dacă persoana care cere nu are vină și dacă a căzut realmente în nevoie din cauza divorțului; întinderea se apreciază după documente concrete asupra nevoii și a capacității de a plăti. Consumul mediu statistic al guvernului sau numai vina celeilalte părți nu pot servi drept formulă constrângătoare.
 
-Întreținerea copilului minor sunt un drept și o obligație între părinți și copil și se disting de întreținerea dintre foștii soți ale art. 1057. Împărțirea art. 1030-1 este reglementarea regimului matrimonial și nu înlocuiește despăgubirile nici întreținerea. Dacă există pretenții delictuale împotriva unei persoane alta decât soțul, restituirea unui bun determinat, un împrumut sau pretenții contractuale, temeiul juridic, părțile, prejudiciul și termenul trebuie determinate separat. Nu se poate atașa tuturor drepturilor un singur termen de 5 ani de la ziua divorțului; nașterea, cunoașterea, faptul, starea procedurii și regulile de prescripție (消滅時效) ale fiecărei pretenții trebuie examinate separat.
+Întreținerea copilului minor este un drept și o obligație între părinți și copil și se disting de întreținerea dintre foștii soți ale art. 1057. Împărțirea art. 1030-1 este reglementarea regimului matrimonial și nu înlocuiește despăgubirile nici întreținerea. Dacă există pretenții delictuale împotriva unei persoane alta decât soțul, restituirea unui bun determinat, un împrumut sau pretenții contractuale, temeiul juridic, părțile, prejudiciul și termenul trebuie determinate separat. Nu se poate atașa tuturor drepturilor un singur termen de 5 ani de la ziua divorțului; nașterea, cunoașterea, faptul, starea procedurii și regulile de prescripție (消滅時效) ale fiecărei pretenții trebuie examinate separat.
 
 Părțile care trăiesc împreună fără căsătorie nu dobândesc, prin numai faptul vieții comune, drepturi matrimoniale precum divorțul sau întreținerea soțului (贍養費). Dacă totuși există realmente un patrimoniu comun, un împrumut, un contract, o înregistrare pe numele altuia, o fiducie, o îmbogățire fără justă cauză sau o faptă ilicită, aceasta se poate analiza ca un raport patrimonial sau de creanță independent de căsătorie. După numai durata vieții comune nu se poate spune nici că există o împărțire care presupune căsătoria, nici să se constate dinainte restabilirea concretă a dreptului.
 
@@ -175,14 +175,14 @@ Supravegherea ilicită, accesul la conturi, pătrunderea într-un telefon mobil 
 
 Sursele primare (nivelul 1) următoare sunt punctul de plecare pentru a verifica structura juridică și procedurile acestui articol, oprite la 25 iulie 2026. Înainte de a acționa realmente, trebuie verificate din nou modificările, indicațiile cele mai recente ale organului competent și textul aplicabil cauzei.
 
-1. [Baza de date națională a reglementării din Taiwan: Codul civil (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
+1. [Baza de date națională a legislației din Taiwan: Codul civil (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
 2. [Ministerul Justiției din Taiwan: versiunea engleză a Codului civil](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351)
-3. [Baza de date națională a reglementării din Taiwan: legea asupra cauzelor de familie (家事事件法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
-4. [Baza de date națională a reglementării din Taiwan: art. 303 din Codul de procedură civilă](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
-5. [Baza de date națională a reglementării din Taiwan: regulile asupra măsurilor provizorii în cauzele de familie necontencioase](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
-6. [Baza de date națională a reglementării din Taiwan: legea evidenței gospodăriilor (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
+3. [Baza de date națională a legislației din Taiwan: legea asupra cauzelor de familie (家事事件法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
+4. [Baza de date națională a legislației din Taiwan: art. 303 din Codul de procedură civilă](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
+5. [Baza de date națională a legislației din Taiwan: regulile asupra măsurilor provizorii în cauzele de familie necontencioase](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
+6. [Baza de date națională a legislației din Taiwan: legea evidenței gospodăriilor (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
 7. [Departamentul stării civile al Ministerului de Interne din Taiwan: indicații asupra înscrierii divorțului](https://www.ris.gov.tw/documents/html/2/3/1/384.html)
-8. [Baza de date națională a reglementării din Taiwan: legea asupra dreptului aplicabil raporturilor civile cu element de extraneitate (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
+8. [Baza de date națională a legislației din Taiwan: legea asupra dreptului aplicabil raporturilor civile cu element de extraneitate (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
 9. [Curtea constituțională din Taiwan: decizia numărul 4 din anul 112 (112年憲判字第4號)](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
 10. [Curtea constituțională din Taiwan: versiunea engleză a deciziei numărul 4 din anul 112](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
 

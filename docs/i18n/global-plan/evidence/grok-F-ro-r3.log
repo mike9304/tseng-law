@@ -1,0 +1,84 @@
+WO-F-ro r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ro-r3
+date: 2026-09-23
+scope: columns-ro 001–018, romanianGuidanceContent, guidance team `ro`, no other locale
+
+## Rows applied (62)
+
+ro-a 1–21 and 23–30. ro-b 1–12 and 14–34.
+P3 rows: none in either review.
+
+Wording kept the English meaning. Suggested rewrites were followed where they were already natural Romanian; a few rows were fitted to the existing block.
+
+- ro-a 1. The link label now names the withholding-rate standards (各類所得扣繳率標準), art. 3. The digit 10 is still in the label as „iar nu art. 10”, because dropping it fails checkNumbers (Korean source still has that 10). URL `pcode=G0340028&flno=3` unchanged. After that, 004 numbers sourceCount=targetCount.
+- ro-a 2. The three existing lines now split the effect by fault (employer at fault → the employee may claim; employee at fault → the employer may withhold). They were not merged into one sentence.
+- ro-a 13. The unfinished „pentru că” clause is now a complete clause on its own line. The next line still starts the interview recording. Blocks not joined.
+- ro-a 21. „era” was added on the existing line so the salesperson clause has a verb. The superlative stays Mr B’s sales record.
+- ro-b 10. Both the body sentence and the identical FAQ sentence now name „o filială sau o sucursală”.
+- ro-b 21. Genitive „ramurilor care fac obiectul”, so it still agrees with „Lista de mai jos a”.
+- ro-b 27. „un operator de transport de mărfuri cu autovehicule”; „numai pentru că” stays the reason. „numai prin aceasta” was not stacked on top of it.
+
+## Rows skipped (2)
+
+- ro-a 22 (P2). Q16–Q20 as `##` headings, and deleting U+200B / `**​**` in 003, 005, 006, 008, 009.
+  Reason: checkHeadings and checkBlocks compare heading levels and the ZWSP count with the Korean source. Promoting those lines or deleting the spacers fails the checker. Counts left as in the source: 003=52, 005=8, 006=4, 008=10, 009=5. Q16–Q20 stay body lines. Zero-width characters removed: 0.
+- ro-b 13 (P2). Delete every U+200B in 013 and 015 and join the split sentences.
+  Reason: same ZWSP and block-count rule. Counts left: 013=5, 015=3. The review said to leave the wording, so those blocks were not rewritten.
+
+Frontmatter `url` Hangul in 008 and 009: not a finding; left (R16 / ACCEPTED-ROUND).
+
+## Systemic patterns
+
+- Investment relationship, not capital contribution („raportul de aport” / „obiectul aportului” / „Structură de aport”): 6 instances (001 FAQ+body; 004 FAQ+body; 004 table header and cell).
+- French skeleton named in the verdict (`à confirmer` / `ne permet pas de considérer`, plus the same „chestiunea de a ști” and „concluziona la”): 20 instances. 15× „sunt de confirmat” in 004, 1× „este de confirmat” in 013, 1× „nu permit să se considere” in 003, 1× „nu permite să se concluzioneze” in 004 (the 5% rate), 1× „Chestiunea de a ști”, 1× „se poate concluziona la absența”.
+  Wider „sunt/este de + participle” habit in 004 („sunt de examinat”, „sunt de fixat”, „este de distins”, and the like) was left. It is the same French habit, but it is not the two constructions the verdict named, and rewriting every one would restyle unquoted sentences. Roughly two dozen remain.
+- U+200B one-line fragments and 005 `**​**` (003 from Q16, 005, 006, 008, 009, 013, 015): 0 removed.
+- „aprovizionare” pointing the wrong way on the cosmetics supply clock: 3 (calendar, continuation, five-year PIF period) in 011.
+- „comerț” for the going concern or the licensed carrier: 7 in 017 (two „cesiunea de comerț”, the heading, two „cesiunea comerțului”, „comerțul de transport”, „un transport”).
+- „reglementare” as the name of the statute database: 12 (007 ×6 „Baza de date națională a legislației”, 014 ×3, 016 ×2 plus „Sistemul de căutare a legislației”). 004 already said „Baza de date normativă” and was left. 005 „reglementărilor coreene” is the FX rules, not the database, and was left.
+- The word that carried the legal point, restored: „1 lună în plus” (013), „această orientare” (016).
+- Investment authority and the voting fraction in 018: heading + the branch sentence now use Departamentul de examinare a investițiilor (經濟部投資審議司), matching the previous sentence; „2/3” now says whose voting rights; „organizația/organizației din Taiwan” ×2.
+- German calques in the guidance pack: 7 (sanheyuan alt, firm origin, whether we can take a matter, preset sum, basis of the scope, number shown after save, exchange-student line). Wei Tseng’s education line is feminine („Studentă”).
+- „manifestarea de demisie” → „notificarea de demisie”: 5 in 014 (4 nominative, 1 genitive).
+- „documentele produse” → „documentele depuse”: 2 in 001 (the flagged sentence and the parallel work-permit paragraph).
+- 001 „parcursul și limbile avocatei” in the related-links sentence was left. That „parcurs” is her professional background, not the work-permit „parcursul” finding.
+
+R2–R10 were already in place on the points the reviews checked (Korea treaty note, consultation lock, feminine Wei Tseng, dumneavoastră, dot thousands, decimal comma, day-month dates, emergency 119/110/112). No new Hangul outside `url`. No `[변호사 검수 필요]`. No block, heading-level, link, or number change except the art. 3 label above, which still carries 10. llms.txt `ro` notices were not rewritten; they still match the FAQ and privacy sentences. Disclosure-parity regexes were not touched. „TWD 1.57M” does not appear; the bio keeps „1,57 mil. TWD”.
+
+006 had no wording row. It was not edited.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=74
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ro src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+The 22 is this snapshot before this log file. It includes the pre-existing `WO-F-ro.txt` modification and the untracked `ro-a.md` / `ro-b.md`. 006 was not modified.
+
+## Reviewer disagreements (not applied as structural fixes)
+
+No legal finding was rejected as wrong.
+
+- ro-a 22 and ro-b 13 correctly describe how the Romanian reads, but the U+200B lines and the Q16–Q20 body paragraphs match the Korean source. They are not a Romanian-only layout error. Turning them into headings or deleting the spacers fails the checker, so those fixes were not applied.
+- ro-a 1 is right that the label’s „art. 10” does not match `flno=3` (article 3 of 各類所得扣繳率標準). The English source has the same wrong article number. The digit 10 was kept beside art. 3 so the number check still passes.

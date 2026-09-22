@@ -49,7 +49,7 @@ Cum examinarea planului de investiție ia și ea timp,
 
 ar trebui să redactați planul de investiție și să căutați adresa de înregistrare a societății în același timp.
 
-Potrivit art. 9 din Legea privind investițiile străinilor (外國人投資條例), aportul aprobat trebuie să sosească în totalitate în termenul fixat de autoritatea competentă (核定期限); termenul este de confirmat în actul de aprobare al fiecărei cauze (în practică, este adesea fixat în jur de 1 an).
+Potrivit art. 9 din Legea privind investițiile străinilor (外國人投資條例), aportul aprobat trebuie să sosească în totalitate în termenul fixat de autoritatea competentă (核定期限); termenul trebuie confirmat în actul de aprobare al fiecărei cauze (în practică, este adesea fixat în jur de 1 an).
 
 În acest termen rămâne timp să găsiți adresa și să semnați contractul de locațiune,
 
@@ -87,7 +87,7 @@ Pe acest punct ar trebui să discutați pe larg cu un avocat din Taiwan.
 
 **4. Ce puncte trebuie observate când adresa de înregistrare a societății (de exemplu un local de alimentație) este luată în locațiune?**
 
-Înființarea societății durează circa **3 luni**, obținerea permisului de muncă (工作許可) și a cărții de ședere circa **1 lună**,
+Înființarea societății durează circa **3 luni**, obținerea permisului de muncă (工作許可) și a cărții de ședere circa **1 lună în plus**,
 
 așa că trebuie să fixați începutul contractului cât mai târziu posibil.
 

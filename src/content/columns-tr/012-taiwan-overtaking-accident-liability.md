@@ -37,13 +37,13 @@ Bu büronun ele aldığı anonimleştirilmiş bir işte motosiklet sürücüsü 
 
 ![Dağ yolunda motosikletin ve öndeki 2 aracın sollama yörüngesini gösteren kaza şeması](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A, 2 aracı da geçmek istedi, karşı şeride girdi ve hızlandı. 2 numaralı araç da 1 numaralı aracı sollamaya hazırlanıyordu: sinyali yaktıktan sonra 1 saniyeden kısa sürede karşı şeride girdi. Motosikletin yeterli fren payı yoktu ve 2 numaralı araçla çarpıştı.
+A, 2 aracı da geçmek istedi, karşı şeride girdi ve hızlandı. 2 numaralı araç da 1 numaralı aracı sollamaya hazırlanıyordu: sinyali yaktıktan sonra 1 saniyeden kısa sürede karşı şeride girdi. Motosikletin frenlemek için yeterli zamanı yoktu ve 2 numaralı araçla çarpıştı.
 
 B ağır kafa yaralanması geçirdi ve yerinde öldü; A bilincini kaybetti ve hastaneye götürüldü.
 
 A ve B’nin yakınları önce 2 numaralı aracın ani şerit değiştirmesini çarpışmanın başlıca nedeni saydı. İş davaya dönüştü ve usul sırasında kazaya ilişkin birkaç bilirkişilik (鑑定) yapıldı.
 
-Bilirkişilik sonucuna göre bu çarpışmanın başlıca sorumluluğu A’daydı. Bu sonuç, bu işin olgularıyla sınırlıydı. Bilirkişilik, A’nın art arda giden öndeki 2 aracı sollamak istemesini, karşı şeride girmesini, fren payı bırakmayan bir hızla gitmesini, öngörülen korna ve far işaretlerinin eksik kalmasını, 2 numaralı aracın şerit değiştirme hareketini, yol ve şerit yapısını ve toplanan diğer delilleri birlikte dikkate aldı.
+Bilirkişilik sonucuna göre bu çarpışmanın başlıca sorumluluğu A’daydı. Bu sonuç, bu işin olgularıyla sınırlıydı. Bilirkişilik, A’nın art arda giden öndeki 2 aracı sollamak istemesini, karşı şeride girmesini, frenlemek için yeterli zaman bırakmayan bir hızla gitmesini, öngörülen korna ve far işaretlerinin eksik kalmasını, 2 numaralı aracın şerit değiştirme hareketini, yol ve şerit yapısını ve toplanan diğer delilleri birlikte dikkate aldı.
 
 Bazı işlerde böyle bilirkişilik sonuçlarının çıkması, öngörülen bir işaretin bir kez atlanmasının her zaman sorumluluğu belirlediği anlamına gelmez. Sollama kazasında kusur (過失), kaza yeri, şerit düzeni, hız, araç hareketleri, işaretler, zaman aralıkları, görüş ve diğer delillere bağlıdır.
 

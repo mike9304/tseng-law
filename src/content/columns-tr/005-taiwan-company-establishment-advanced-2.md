@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Öne çıkan görsel](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-[Tayvan’da şirket kuruluşu – temeller](/tr/columns/taiwan-company-establishment-basics) ile [Tayvan’da şirket kuruluşu – derinlemesine bölüm 1](/tr/columns/taiwan-company-establishment-advanced-1) yazılarını okuyanlar, Tayvan’da şirket kuruluşu — ileri konular 2 (公司設立) yazısına da bakabilir.
+[Tayvan’da şirket kuruluşu – temeller](/tr/columns/taiwan-company-establishment-basics) ile [Tayvan’da şirket kuruluşu – derinlemesine bölüm 1](/tr/columns/taiwan-company-establishment-advanced-1) metinlerinin devamı olan ileri konular 2’dir (公司設立).
 
 ​
 

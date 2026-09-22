@@ -13,7 +13,7 @@ faq:
   - q: "Disiplin nedeniyle işten çıkarmada da şirket kıdem tazminatı ödemeli midir?"
     a: "Hayır. Çalışan hukuka aykırı bir fiil işlerse, şirket kurallarını ihlal ederse veya meşru neden olmadan 3 gün üst üste izinsiz devamsızlık yaparsa (İş Standartları Kanunu 12. madde, 勞動基準法第12條) şirket önceden bildirim olmadan işten çıkarabilir ve kıdem tazminatı ödemek zorunda değildir. Buna karşılık ekonomik işten çıkarma (11. madde) önceden bildirimi ve kıdem tazminatı ödemesini gerektirir."
   - q: "Tayvan’da kıdem tazminatı nasıl hesaplanır?"
-    a: "Tamamlanan her tam yıl (1 yıl) kıdem için işveren, ortalama ücretin 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir; en çok 6 aylık ücret. Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir."
+    a: "Tamamlanan her bir yıl kıdem için işveren, ortalama ücretin 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir; en çok 6 aylık ücret. Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir."
 ---
 
 # Tayvan iş hukuku: Tayvan’da kıdem tazminatı (資遣費) almak gerçekten zor mu?
@@ -60,7 +60,7 @@ Aşağıdaki tablo üç sona erme türünü karşılaştırır.
 | Şirketin kıdem tazminatı (資遣費) ödeyip ödemeyeceği | Gerekli | Gerekli değil | Gerekli değil |
 |  | Tayvan İş Standartları Kanunu 11. madde (勞動基準法第11條): Aşağıdaki durumlardan biri gerçekleşmedikçe işveren, çalışana önceden bildirimde bulunsa bile iş sözleşmesini sona erdiremez.  1. Faaliyetin durdurulması (歇業) veya işletmenin devri (轉讓)  2. Zarar (虧損) veya işin daraltılması (業務緊縮)  3. Mücbir sebep 1 ay veya daha uzun bir faaliyet kesintisini gerektirir  4. İşin niteliği personel azaltmayı gerektirir ve işten çıkarılan kişi başka uygun bir göreve nakledilemez  5. Belirli bir çalışan, görevin gerektirdiği işi tatmin edici biçimde yerine getiremez | Tayvan İş Standartları Kanunu 12. madde (勞動基準法第12條): İşveren, çalışan aşağıdaki hallerden birine girerse önceden bildirim olmadan işten çıkarabilir.  1. İş sözleşmesinin kurulmasında gerçeğe aykırı beyanda bulunup işvereni yanılgıya düşüren ve işletmeye zarar riski yaratan kişi  2. İşverene, ailesine, temsilcisine (代理人) veya diğer meslektaşlara şiddet uygulayan veya ağır hakaret eden kişi  3. Süreli hapis (有期徒刑) veya daha ağır bir cezaya kesin olarak mahkûm edilen, erteleme (緩刑) verilmeyen ve para cezasına çevirmeye (易科罰金) de izin verilmediği kişi  4. İş sözleşmesinin veya iş kurallarının ağır ihlali  5. İşverenin makinelerini, aletlerini, hammaddelerini, ürünlerini veya diğer mallarını kasten tüketen veya işverenin teknik ve ticari sırlarını kasten açıklayıp işverene zarar veren kişi  6. Meşru neden olmadan 3 gün üst üste veya 1 ayda 6 gün veya daha fazla izinsiz devamsızlık (曠工) |  |
 
-> Tayvan’da tamamlanan her tam yıl (1 yıl) kıdem (年資) için
+> Tayvan’da tamamlanan her bir yıl kıdem (年資) için
 > işveren, ortalama ücretin (平均工資) 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir.
 > (en çok 6 aylık ücret) Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir.
 
@@ -94,7 +94,7 @@ personel maliyetlerini azaltmak için,
 
 yüksek ücretli ve uzun kıdemli çalışanları sırayla görüşmeye çağırmaya başladı
 
-O dönemde müvekkilim B bey, A şirketinde 10 yıldan uzun süredir çalışıyordu
+O dönemde müvekkil B bey, A şirketinde 10 yıldan uzun süredir çalışıyordu
 
 ve Tayvan’ın orta bölgesinin en yüksek sonucunu elde etmiş satış elemanıydı.
 
@@ -210,9 +210,9 @@ veya çalışanları tuhaf görevlere naklederse,
 
 Tayvan’da çalışıyorsanız,
 
-Kıdem tazminatı almak sanıldığından daha zordur.
+kıdem tazminatı almak sanıldığından daha zordur.
 
-Şirketle kolayca uzlaşmayın.
+Şirketle kolayca uzlaşmayın,
 
 ve şirketin sizi uygunsuz biçimde işten çıkarmamasına
 

@@ -19,13 +19,13 @@ faq:
 
 ![Tayvan yarı iletken şirket giriş yapısını inceleyen görsel](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Tayvan müşterileriyle işlem başlayınca yurt dışı merkez çeşitli talepler alabilir. Tayvan’da teklif ve sözleşmenin işlenmesi, acil yedek stok tutulması, kurulum ve bakım personelinin yerleştirilmesi talepleridir. Bu noktada önce “Tayvan’da şirket kurulursa çözülür mü?” sorusu kolayca sorulur.
+Tayvan müşterileriyle işlem başlayınca yurt dışı merkez çeşitli talepler alabilir. Bu talepler; Tayvan’da teklif ve sözleşmenin işlenmesi, acil yedek stok tutulması ya da kurulum ve bakım personelinin yerleştirilmesi olabilir. Bu noktada önce “Tayvan’da şirket kurulursa çözülür mü?” sorusu kolayca sorulur.
 
 Ancak önce netleştirilmesi gereken, Tayvan’da kimin neyi üstlendiğidir. Yurt dışı merkezin satış sözleşmelerini imzalamaya devam edip etmeyeceğine, Tayvan şirketinin malı alıp yeniden satıp satmayacağına, yerel personelin yalnızca teknik destek verip vermeyeceğine göre incelenecek yapı değişir.
 
 Bu yazı, yarı iletken malzeme, parça ve ekipman şirketlerinin Tayvan giriş yapısını tasarlarken genel bir rehberdir. Aşağıdaki işletme durumları ve kontrol kalemleri açıklama için varsayımsal örnek ve inceleme önerisidir; belirli bir şirketin gerçek vekâlet dosyası veya tek tip kuruluş şartı değildir. Vergi, ihracat kontrolü, ürün bazlı izinler ve yatırımcı sınıflandırması ayrıca incelenmelidir.
 
-## 1. Tescil biçimini seçmeden önce ‘işlem ve işletme paylaşımı’ önce netleştirilmelidir
+## 1. Tescil biçimi seçilmeden önce işlem ve işletme paylaşımı netleştirilmelidir
 
 Örneğin yurt dışındaki bir hassas parça üreticisinin Tayvan müşterilerine ürün sattığını varsayalım. Başlangıçta merkez doğrudan sevk ederken, müşteri Tayvan içinde yedek parça depolama ve sahada mühendis desteği de talep eder. Gerekli olan yalnızca adres değil; satış, ithalat, stok, istihdam, teknik destek ve sorumluluğu üstlenebilecek bir işletmedir.
 
@@ -61,11 +61,11 @@ Tayvan’da bağımsız tüzel kişi kurulacaksa, tüzel kişi biçimi de seçil
 
 ### Limited şirket (有限公司): yönetişim yalındır ama pay devri görece kapalıdır
 
-Limited şirket 1 veya daha fazla gerçek kişi, ya da Tayvan veya yabancı tüzel kişi ortaklarla kurulabilir; ortaklar ilke olarak koydukları sermaye tutarıyla sorumludur. Yönetici 1 ile 3 kişi arasında olur ve ortaklar arasından seçilir. İşi yürütmeyen ortaklar denetim hakkını kullanabilir, ayrı denetçi konulmasa da olur. Esas sözleşmede aksi yoksa ortak 1 kişi 1 oy hakkına sahiptir; bu yüzden hâkimiyet sermaye oranıyla mutlaka örtüşmez. Sıradan ortağın katkısını devretmesi ilke olarak diğer ortakların oy hakkının yarıdan fazlasının rızasını, yöneticide ise 3’te 2 veya daha fazlasını gerektirir. Bu nedenle ortaklık ilişkisi yalın ve hâkimiyet yapısı istikrarlı şirketlere daha uygundur; sık sermaye çekme veya pay işlemine daha az elverişlidir. Daha sonra anonim şirkete (股份有限公司) dönüştürülebilir.
+Limited şirket 1 veya daha fazla gerçek kişi, ya da Tayvan veya yabancı tüzel kişi ortaklarla kurulabilir; ortaklar ilke olarak koydukları sermaye tutarıyla sorumludur. Yönetici 1 ile 3 kişi arasında olur ve ortaklar arasından seçilir. İşi yürütmeyen ortaklar denetim hakkını kullanabilir, ayrı denetçi konulmasa da olur. Esas sözleşmede aksi yoksa her ortağın 1 kişi 1 oy hakkı vardır; bu yüzden hâkimiyet sermaye oranıyla mutlaka örtüşmez. Sıradan ortağın katkısını devretmesi ilke olarak diğer ortakların oy hakkının yarıdan fazlasının rızasını, yöneticide ise 3’te 2 veya daha fazlasını gerektirir. Bu nedenle ortaklık ilişkisi yalın ve hâkimiyet yapısı istikrarlı şirketlere daha uygundur; sık sermaye çekme veya pay işlemine daha az elverişlidir. Daha sonra anonim şirkete (股份有限公司) dönüştürülebilir.
 
 ### Anonim şirket (股份有限公司): başka yatırımcı alınması veya borsaya kote olma düşünülen işletmelere uygundur
 
-Anonim şirketin özelliği sermayenin paylara bölünmesidir. İlke olarak 2 veya daha fazla ortak gerekir; ancak devlet veya tüzel kişi tek başına kurabilir ve yabancı tüzel kişinin %100 pay tutması da mümkündür. Paylar ilke olarak serbestçe devredilebilir ancak yasal istisnalar vardır; mevzuata göre özel paylar, çalışanlara pay opsiyonu tasarlanabilir. Bu nedenle yatırımcı çekme, pay işlemi, çalışan pay ödülü, ileride birleşme ve devralma veya kote olma veya gelişen şirketler piyasasına kayıt düşünülen işletmelere uygundur; yalnızca büyük şirketlere özgü değildir. Yönetişim açısından halka arz etmeyen şirket esas sözleşme ile yönetim kurulu koymayıp yalnızca 1 veya 2 yönetici bulundurabilir. Devlet veya tüzel kişi tek ortaklı şirket esas sözleşme ile denetçi koymayabilir. Ayrıca bütün anonim şirketlerin yıllık mali tabloları denetim onayı alması gerekmez. Olağan şirketin başlıca denetim eşiği ödenmiş sermaye TWD 30.000.000 (新臺幣), veya bu tutara ulaşmasa bile faaliyet geliri TWD 100.000.000 ya da işçi sigortasına kayıtlı 100 çalışandır; halka arz şirketleri menkul kıymet mevzuatını izler.
+Anonim şirketin özelliği sermayenin paylara bölünmesidir. İlke olarak 2 veya daha fazla ortak gerekir; ancak devlet veya tüzel kişi tek başına kurabilir ve yabancı tüzel kişinin %100 pay tutması da mümkündür. Paylar ilke olarak serbestçe devredilebilir ancak yasal istisnalar vardır; mevzuata göre özel paylar, çalışanlara pay opsiyonu tasarlanabilir. Bu nedenle yatırımcı çekme, pay işlemi, çalışan pay ödülü, ileride birleşme ve devralma veya kote olma veya gelişen şirketler piyasasına kayıt düşünülen işletmelere uygundur; yalnızca büyük şirketlere özgü değildir. Yönetişim açısından halka arz etmeyen şirket esas sözleşme ile yönetim kurulu koymayıp yalnızca 1 veya 2 yönetici bulundurabilir. Devlet veya tüzel kişi tek ortaklı şirket esas sözleşme ile denetçi koymayabilir. Ayrıca bütün anonim şirketlerin yıllık mali tabloları için denetim ve tasdik gerekmez. Olağan şirketin başlıca denetim eşiği ödenmiş sermaye 30.000.000 TWD (新臺幣), veya bu tutara ulaşmasa bile faaliyet geliri 100.000.000 TWD ya da işçi sigortasına kayıtlı 100 çalışandır; halka arz şirketleri menkul kıymet mevzuatını izler.
 
 ## 4. Şube ve bağlı şirket kuruluş usulü farklıdır; yalnızca bağlı şirket kuruluşu Ekonomi Bakanlığı yatırım incelemesinden geçer
 
@@ -73,7 +73,7 @@ Yabancı şirket Tayvan’da bağlı şirket kurarken ilke olarak unvan ön sorg
 
 Buna karşılık olağan yabancı şirket Tayvan şubesi kurarken ilke olarak Ekonomi Bakanlığı Yatırım İnceleme Dairesi yatırım izni gerekmez; Ekonomi Bakanlığı Ticaret Geliştirme Dairesi (經濟部商業發展署) şube tescili ve ilgili fon tespitini yapar. Ancak unvan ön sorgusu, işletme sermayesi gönderimi, inceleme ve vergi tescili yine gerekir; kuruluş takvimi daha kısa olma eğilimindedir.
 
-Yukarıdakiler sözleşme tasarımı önerisidir. Belirli bir formun doldurulmuş olması işlemi hukuka uygun kılmaz ve uyuşmazlığı önlemez.
+Yukarıdakiler sözleşme tasarımı önerisidir. Belirli bir şirket biçiminin seçilmiş olması işlemi hukuka uygun kılmaz ve uyuşmazlığı önlemez.
 
 ## 5. Şirket tescili ile mühendisin yasal çalışması ayrıdır
 

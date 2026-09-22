@@ -13,7 +13,7 @@ faq:
   - q: "PIF nedir ve TFDA ürün tescili ile aynı usul müdür?"
     a: "Aynı usul değildir. Ürün tescili (產品登錄), TFDA’nın (衛生福利部食品藥物管理署) kozmetik ürün tescil platformunda yürütülen ayrı bir işlemdir. PIF, kalite, güvenlik, bileşim, ileri sürülen işlev, üretim yöntemi, deneme sonuçları ve güvenlik değerlendirmesi vb. verileri toplayan ve kozmetik üreticisi veya ithalatçısının hazırladığı, güncellediği ve sakladığı bir dosyadır; PIF’in kendisi TFDA’ya önceden sunulması gereken bir belge değildir. 1 Temmuz 2026’dan itibaren kural olarak bütün kozmetikler PIF rejimine girer; fabrika tescilinden (工廠登記) muaf bir üretim yerinde üretilen katı el yapımı sabun istisnadır."
   - q: "Tayvan kozmetik reklamında hangi ifadelere dikkat edilmelidir?"
-    a: "Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, iltihap giderici veya bakteri öldürücü gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası (罰鍰) yanlış veya abartılı reklamda TWD 40.000 ile TWD 200.000 (新臺幣), tıbbi etkinlik iddiasında TWD 600.000 ile TWD 5.000.000 arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir."
+    a: "Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, iltihap giderici veya bakteri öldürücü gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası (罰鍰) yanlış veya abartılı reklamda 40.000 ile 200.000 TWD (新臺幣), tıbbi etkinlik iddiasında 600.000 ile 5.000.000 TWD arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir."
 ---
 
 # Tayvan kozmetik pazarına giriş: ithalatçının seçimi, ürün tescili, PIF’in hazırlanması ve saklanması ile reklam düzenlemesi
@@ -32,7 +32,7 @@ Tayvan’da bağlı şirket veya şube kurulması zorunlu değildir. İthalat ve
 
 ### Yerel ithalatçıya bırakıldığında
 
-Bir Tayvan ithalatçısı veya satış acentesi (銷售代理商) ithalat ve satışı üstlenirse, yabancı marka Tayvan’da kendi bağlı şirketi veya şubesi olmadan da bir yapı seçebilir. Satış acentesi aynı zamanda ithalatçı olabilir veya ayrı bir ithalatçı katılabilir. Ancak hukuki sorumluluğun yüklenmesi, acente, münhasır dağıtıcı veya ticari dağıtıcı gibi yalnızca sözleşmesel ada göre belirlenmez.
+Bir Tayvan ithalatçısı veya satış acentesi (銷售代理商) ithalat ve satışı üstlenirse, yabancı marka Tayvan’da kendi bağlı şirketi veya şubesi olmadan da bir yapı seçebilir. Satış acentesi aynı zamanda ithalatçı olabilir veya ayrı bir ithalatçı katılabilir. Ancak hukuki sorumluluğun yüklenmesi, acente, ana dağıtıcı veya dağıtıcı gibi yalnızca sözleşmesel ada göre belirlenmez.
 
 Gerçek iş bölümü tasarlanırken önce kim ürünü ithal eder ve ürün tescilini yapar, kim PIF’i hazırlar, günceller ve saklar doğrulanmalıdır. Etiketleme incelemesi, dağıtım kayıtlarının tutulması, tüketici şikâyetleri ve güvenlik bilgilerinin alınması ile yetkili makamın denetim ve veri taleplerine yanıt için de sorumlu belirlenmelidir. Kozmetik üreticisi veya ithalatçısına yüklenen yasal yükümlülükler ile marka ve satış ortağı arasındaki sözleşmesel işin örtüşüp örtüşmediği birlikte incelenmelidir.
 
@@ -54,7 +54,7 @@ Aynı usul değildir. Ürün tescili, TFDA’nın (衛生福利部食品藥物�
 
 Kozmetik ürün tescili, TFDA kozmetik ürün tescil platformunda yürütülür. Kozmetik üreticisi veya ithalatçısı, ürünü tedarik, satış, hediye, kamuya sergileme (公開陳列) veya tüketiciye deneme için sunmadan önce ürün tescilini tamamlamalıdır. Hazırlık yalnızca bedelli satışa göre kurulmamalıdır; tanıtım hediyelerinin veya tüketici denemesinin takvimi de tescil anıyla birlikte yönetilmelidir.
 
-Ürün tescilinin geçerlilik süresi 3 yıldır. Tedarike devam edilecekse uzatma (展延) başvurusu sürenin bitiminden önceki 3 ay içinde sunulmalıdır. Ürün adı, kullanım, form (劑型), bileşim ve üretim yeri gibi tescilli kayıtlar değişirse, değişikliğin içeriğine uygun bir işlemin gerekip gerekmediği de doğrulanmalıdır.
+Ürün tescilinin geçerlilik süresi 3 yıldır. Tedarike devam edilecekse uzatma (展延) başvurusu sürenin bitiminden önceki 3 ay içinde sunulmalıdır. Ürün adı, kullanım, dozaj şekli (劑型), bileşim ve üretim yeri gibi tescilli kayıtlar değişirse, değişikliğin içeriğine uygun bir işlemin gerekip gerekmediği de doğrulanmalıdır.
 
 Ürün tescili, belirlenen kayıtların platformda beyanı işlemidir. Tescilin tamamlanması, PIF için gereken bütün belgelerinin tam olduğu anlamına gelmez; ürün etiketlemesinin veya reklamının hukuka uygun olduğu yargısı da değildir. Ürün tescil takvimi, PIF yönetimi ve etiketleme ile reklam incelemesi ayrı uyum kalemleri olarak işletilmelidir.
 
@@ -70,7 +70,7 @@ Güvenlik değerlendirmesi dâhil PIF işi, gereken yeterlilik ve kapasiteye sah
 
 Hammadde veya formül, üretim yöntemi ve yeri, etiket dâhil etiketleme, ileri sürülen işlev veya güvenlik bilgisi değişirse etkilenen PIF verileri incelenmeli ve güncellenmelidir. Tüketici şikâyetlerinin, istenmeyen tepki olaylarının ve yeni deneme sonuçlarının mevcut değerlendirmeyi etkileyip etkilemediği de bakılmalıdır; bu yüzden ilk hazırlıktan sonra da değişiklik yönetimi usulü gerekir.
 
-Kozmetik ürün bilgi dosyası yönetim yönetmeliğinin 7. maddesine göre saklama süresi, ürünün piyasaya son tedarik edildiği günün ertesi gününden itibaren en az 5 yıldır. Aynı yönetmeliğin 8. maddesine göre saklama yeri, Kozmetik Hijyen ve Güvenlik Yönetimi Kanunu’nun (化粧品衛生安全管理法) 7. maddesinin 1. fıkrasının 7. bendinde belirlenen kozmetik üreticisi veya ithalatçısının etiketleme adresidir. Süreyi belirleyen hüküm ile yeri belirleyen hüküm ayrı işletilmelidir.
+Kozmetik ürün bilgi dosyası yönetim yönetmeliğinin 7. maddesine göre saklama süresi, ürünün piyasaya son tedarik edildiği günün ertesi gününden itibaren en az 5 yıldır. Aynı yönetmeliğin 8. maddesine göre saklama yeri, Kozmetik Hijyen ve Güvenlik Yönetimi Kanunu’nun (化粧品衛生安全管理法) 7. maddesinin 1. fıkrasının 7. bendinde belirlenen kozmetik üreticisi veya ithalatçısının etiketleme adresidir. Süreyi belirleyen hüküm ile yeri belirleyen hüküm uygulamada birbirinden ayrılmalıdır.
 
 Asıl üretici aslı saklasa veya güvenli elektronik ya da bulut depolama kullanılsa bile üretici veya ithalatçı tam verilere erişebilmelidir. Yetkili makam istediğinde verilerin hızla bulunup sunulabilmesi için erişim hakları, yedekleme, sürüm yönetimi, dosya biçimi ve sorumlu belirlenmelidir. Satış ortağı veya hizmet sağlayıcıyla sözleşme bittikten sonra da yasal saklama süresi boyunca verilere erişilebilmesi için teslim muhatabı, yöntem ve erişim hakkının sürüp sürmediği sözleşmede düzenlenmelidir.
 
@@ -78,21 +78,21 @@ Asıl üretici aslı saklasa veya güvenli elektronik ya da bulut depolama kulla
 
 Yetkili makam PIF’i denetlediğinde kural olarak denetim gününden en geç 7 gün önce kozmetik üreticisi veya ithalatçısını bildirir. Ancak ilgili düzenlemede belirlenen yasal bir istisna varsa denetim önceden bildirim olmadan yapılabilir. Bildirim olsun olmasın, tam güncel verileri bulup sunabilecek durum her zaman korunmalıdır.
 
-Ürün tescilinde yanlış bilgi beyan etmek veya PIF’e yanlış bilgi yazmak, TWD 10.000 ile TWD 1.000.000 (新臺幣) idari para cezasına (罰鍰) konu olabilir. Buna karşılık PIF verileri eksikse yetkili makam olağan olarak belirli bir sürede düzeltme (限期改正) emreder; idari para cezası ancak o sürede düzeltilmezse gündeme gelir. Yanlış bilgi ile henüz tamamlanabilecek veri eksikliği aynı ihlal sonucu sayılmamalıdır.
+Ürün tescilinde yanlış bilgi beyan etmek veya PIF’e yanlış bilgi yazmak, 10.000 ile 1.000.000 TWD (新臺幣) idari para cezasına (罰鍰) konu olabilir. Buna karşılık PIF verileri eksikse yetkili makam olağan olarak belirli bir sürede düzeltme (限期改正) emreder; idari para cezası ancak o sürede düzeltilmezse gündeme gelir. Yanlış bilgi ile henüz tamamlanabilecek veri eksikliği aynı ihlal sonucu sayılmamalıdır.
 
 Geri çağırma veya imha (銷毀), her PIF veri eksikliğine kendiliğinden eşlik eden bir tedbir değildir. Ürün güvenliği, ihlalin içeriği, düzeltme durumu ve her tedbire uygulanan yasal şartlar ayrı değerlendirilmelidir. Güvenlik sorunu doğrulandığında alınan tedbir ile belge tamamlama talebi ayrı incelenmeli; yanıt, yetkili makamın bildirimine ve uygulanan hükme göre verilmelidir.
 
 ## 3. Etiketleme, tanıtım ve reklam düzenlemesi
 
-Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, iltihap giderici veya bakteri öldürücü gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası yanlış veya abartılı reklamda TWD 40.000 ile TWD 200.000, tıbbi etkinlik iddiasında TWD 600.000 ile TWD 5.000.000 arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir.
+Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, iltihap giderici veya bakteri öldürücü gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası yanlış veya abartılı reklamda 40.000 ile 200.000 TWD, tıbbi etkinlik iddiasında 600.000 ile 5.000.000 TWD arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir.
 
 ### Her kelimeye göre değil, bütün sunuma göre değerlendirilir
 
-Etiketleme, tanıtım (宣傳) veya reklamın yanlış veya abartılı olup olmadığı, ya da tıbbi etkinlik (醫療效能) iddia edip etmediği, belirli bir kelimeye göre tek başına yargılanmaz. Ürün adı, cümle, görüntü, işaret, ses, öncesi ve sonrası bağlam ile tüketicinin aldığı bütün izlenim birlikte incelenir. Merkezi reklam sunumunun oluşturduğu izlenim, küçük punto kısıtlayıcı ibareyle kendiliğinden dağılmaz; bu yüzden her iddia ve yayına hazır nihai reklam incelenmelidir.
+Etiketleme, tanıtım (宣傳) veya reklamın yanlış veya abartılı olup olmadığı, ya da tıbbi etkinlik (醫療效能) iddia edip etmediği, belirli bir kelimeye göre tek başına yargılanmaz. Ürün adı, cümle, görüntü, işaret, ses, öncesi ve sonrası bağlam ile tüketicinin aldığı bütün izlenim birlikte incelenir. Baskın reklam mesajının oluşturduğu izlenim, küçük puntolu bir çekinceyle kendiliğinden ortadan kalkmaz; bu yüzden her iddia ve yayına hazır nihai reklam incelenmelidir.
 
 Örneğin bir kozmetiğin sivilceyi tedavi ettiği, iltihap giderici veya bakteri öldürücü etkisi olduğu ileri sürülürse bu tıbbi etkinlik iddiası olabilir. Bir hastalık adının ürünle birleştirilmesi, kullanım öncesi ve sonrası görüntüler, sağlık çalışanını çağrıştıran sahneleme ve bileşen açıklamasını ürünün tedavi etkisine bağlayan bağlam da birlikte doğrulanmalıdır.
 
-Yanlış veya abartılı reklam (虛偽誇大廣告) için idari para cezası TWD 40.000 ile TWD 200.000, tıbbi etkinlik iddiası için TWD 600.000 ile TWD 5.000.000 arasındadır. Aralık ihlal türüne göre farklı olduğundan, yayından önce reklamın bütün sunumu dayanak verilerle karşılaştırılmalıdır.
+Yanlış veya abartılı reklam (虛偽誇大廣告) için idari para cezası 40.000 ile 200.000 TWD, tıbbi etkinlik iddiası için 600.000 ile 5.000.000 TWD arasındadır. Aralık ihlal türüne göre farklı olduğundan, yayından önce reklamın bütün sunumu dayanak verilerle karşılaştırılmalıdır.
 
 ### Influencer’lar, değerlendirme yazarları ve satış ortakları
 

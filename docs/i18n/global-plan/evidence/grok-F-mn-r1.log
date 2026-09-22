@@ -1,0 +1,213 @@
+WO-F-mn — Mongolian (Cyrillic) native-review fix lane (Grok 4.7), campaign round 1
+Worktree: /Users/son7/Projects/tseng-law-fix-mn-r1 (no git add/commit/push)
+Scope written: src/content/columns-mn/*.md (18), src/data/international-guidance-southeast-central.ts
+  (mongolianGuidanceContent), src/data/international-guidance-team.ts (mn bios),
+  src/data/international-guidance-answers.ts (mn gloss-case only).
+Reviewed, no string change: src/data/international-guidance-offices.ts (mn),
+  src/data/international-inquiry-copy.ts (mn), src/lib/llms-txt.ts GUIDANCE_LLMS_NOTICES.mn.
+  Those blocks were already natural Khalkha, formal Та, consultation languages locked,
+  and contained no flagged calque.
+Tests: no guidance-*mn* fixture pinned a rewritten sentence. TWD 1.57M stays a substring
+  of the team bio (GUIDANCE_BIO_PRESERVED_TERMS). No test file edited.
+
+================================================================
+1. ROWS APPLIED
+================================================================
+mn-a.md
+  a#1  privacy retention reason (хугацаа restored)
+  a#2  PARTIAL — link title statute corrected to «Төрөл бүрийн орлогын эх үүсвэрийн
+       суутгалын хувийн хэм хэмжээ»; URL unchanged (pcode=G0340028&flno=3).
+       Visible article numeral kept as «10 дугаар зүйл». See §3.
+  a#3  Korean-bank transfer limit, including acquaintance; other countries checked separately
+  a#4  source-of-funds waiver limited to a Korean bank account
+  a#5  foreign-national hire count restored. Digit kept: «авсан гадаадын иргэний тоо 1-ээс илүү»
+       (reviewer wrote «нэгээс»; a dropped «1» fails the number checker)
+  a#6  fault allocates the right to withhold vs the right to claim, inside the existing paragraph
+  a#7  Кантор → Фирм (swept; see §2)
+  a#8  三合院 described as a three-wing courtyard house. Wording used:
+       «уламжлалт тайванийн гурван далавчтай хашаа байшин (三合院)». «санхэюань» not used.
+  a#9  tort damages: «хууль бус үйлдлээс үүдэлтэй хохирол нөхөн төлүүлэх»
+  a#10 fee amount vs scope of work disambiguated (хөлсний дүн / ажлын хэмжээ)
+  a#11 gloss-case endings moved onto the Mongolian (or Latin/number) head. Swept; see §2.
+  a#12 «нүүлгэсэн» → «өөр хаяг руу шилжүүлсэн»
+  a#13 «хүчин төгөлдөр хариу» → «үүрэг үүсгэх хариу»
+  a#14 «өмгөөлөгчид хянуулах товч тойм»
+  a#15 bio grammar: the student is the object of төлөөлж. TWD 1.57M kept (a#16 not applied)
+  a#17 son-jungmin bio: IT knowledge as the basis, not stacked instrumentals
+  a#18 營利事業 → «ашгийн төлөөх аж ахуй». Swept; see §2. 營業稅 stays «аж ахуйн албан татвар»
+       where that is business tax, and «нэмэгдсэн өртгийн албан татвар» where the English is VAT.
+  a#20 «тэрээр» (person) → «тэр нь» for the medical certificate
+  a#22 Taiwan Stock Exchange and Invest Taiwan titles given a Mongolian lead; proper names kept.
+       «Тайванийн хөрөнгийн бирж (Taiwan Stock Exchange) — …»
+       «Хөрөнгө оруулалтын албан сайт (Invest Taiwan) — …»
+  a#23 filing report «гаргасан байх ёстой», not already accepted
+  a#24 question mark on the foreign-hire question
+  a#25 台→臺 in (臺灣法人)
+  a#26 both adultery lines: «харилцан зөвшөөрөлтэйгээр бэлгийн харьцаанд орсон»
+  a#27 «хүндэтгэн үзэх шалтгаангүйгээр»
+  a#28 economic and disciplinary dismissal headers unsplit:
+       «Эдийн засгийн чөлөөлөлт (資遣員工, 經濟解僱)», «Сахилгын чөлөөлөлт (解僱員工, 懲戒解僱)»
+  a#29 closing two blocks rephrased in place: severance is due only when the statute imposes it
+  a#31 «и-мэйл» → «цахим шуудан»
+
+mn-b.md
+  b#1  final advertisement, not the product
+  b#2  011 FAQ, §1, and the industry paragraph: «нэмэлт материал шаардсан» (3).
+       001 was not this pattern; see §4.
+  b#3  «ижил эрх зүйн үр дагавар»
+  b#4  registration «боломжгүй байж болно»
+  b#5  «үйл ажиллагааны зүйлээс үл хамааран»; question and answer «Бүх төрлийн аж ахуй»
+       (English “every type of business”). 分公司 / 分支機構 stay «салбар» / «салбар байгууллага».
+  b#6  conflicting economic interest
+  b#7  negation restored: «хууль ёсны болохгүй, маргаанаас ч зайлсхийхгүй»
+  b#8  settlement is not the confirmed final result of the first-instance judgment
+  b#9  «өгсөн тодорхой заавар, анхаарах үүргээ (注意義務) зөрчсөн»
+  b#10 insurance does not establish liability or the amount
+  b#11 «Практикт»
+  b#12 «эвлэрлийн тохиролцоо (和解) байгуулсан»
+  b#13 «төлөхийг үүрэг болгосон» (body and the two image alts; paths unchanged) — 5
+  b#14 «Нөхөн сэргэх хугацаанд алдсан орлого» and the related earnings-loss phrase
+  b#15 «ганцаар» (not already «ганцаараа») → «дангаараа». Swept; see §2.
+  b#17 updated-records management
+  b#18 «үйл ажиллагааны чиглэл» where салбар meant industry
+  b#19 «шалгалтын хүрээ»
+  b#20 «сөрөг үзэгдэл»
+  b#21 «эмчилгээний үр нөлөө мэдэгдсэн сурталчилгааны захиргааны торгууль»
+  b#22 «ердийн хэрэг мэт»
+  b#23 «тул» joins the insufficient braking time to the collision
+  b#24 «нэгдсэн дугаарын үндсэн мэдээллийн хүснэгт»
+  b#25 PARTIAL — 013 «Түрээсийн» / «гэрээ» rejoined inside the two existing blocks.
+       The three short lines in 015 were not merged. See §3.
+  b#26 Taipei lookup-guide quote repaired; the laws.taipei.gov.tw link stays inside the label
+  b#27 training boundary does not depend only on place or provider
+  b#28 «хэний цаг, хэр хэмжээгээр»
+  b#29 vesting «эрх баталгаажих өдөр» / «хэзээ ажилтанд эрх баталгаажих» (2 phrases; «хамаарах» elsewhere left)
+  b#30 «аль хэсэг нь биелсэн, аль хэсэг нь үлдсэн»
+  b#31 the claim compares («харьцуулдаг»), it is not a comparing system
+  b#32 registered title; one finite sentence «тогтоож болохгүй»
+  b#33 «тогтоож болно»
+  b#34 «олон улсын гэрээ»
+  b#35 «Эцэг эхийн эрх, үүрэгт»
+  b#36 «Актлах, солих зэрэг бусад захиран зарцуулалтыг»
+  b#37 «өөр байгууллага, тусдаа горим» and «ижил байгууллага, журмаар»
+  b#38 finite verb «аж ахуйн нэгж юм»
+  b#39 «компанийн дүрэмдээ … тусгаж» (board and supervisor)
+  b#40 emerging-market registration restored
+  b#41 «үйл ажиллагааны чиглэлээс хамаарч Хөдөлмөрийн яам»
+
+RULEBOOK R2–R10, R12–R17 (verified; edited only where a gap remained)
+  R2 / R2b  country-specific tax framing already present in 001 and 004. a#3 and a#4
+            remove the two places that had over-generalised a Korean-bank rule.
+            No sentence was added about the reader’s own country’s law.
+  R3 / R7   no leftover chatty chrome, double question marks, 24/7, free first meeting,
+            or result / win-rate promises. «хүссэн үедээ» in 002 is the legal “whenever
+            they want” about capital reduction. «хамгийн ихдээ» is a statutory ceiling.
+            «сэтгэгдэл» in 011 is “impression”. Reply-time lines stay negative
+            («хариу өгөх хугацаа амлагдахгүй» / «амлахгүй»).
+  R4        Mongolian does not mark gender on өмгөөлөгч or verbs. Bio stays «Тэрбээр».
+            Male manager (008) and male client (010) stay male.
+  R5 / R12  English role chrome was already Mongolian. Latin proper names kept
+            (Hovering International Law Firm, National Taiwan University, and the
+            preserved-term substrings). Nav «БАГ» / «ОФФИСУУД» already localised.
+            a#22 translates the two English-led source titles.
+  R6        no new fullwidth punctuation introduced in running text. url values untouched.
+  R8        gloss-case sweep (§2). Traditional Chinese glosses kept. 台→臺 only in a#25.
+  R9        003 already has 119 / 110 / 112. After the suffix move: «112-д (гар утаснаас яаралтай дуудлага)».
+  R10       formal Та kept. Nav labels already within 14 characters.
+  R13       ROC years not given an extra Gregorian digit.
+  R14       comma thousands and decimal point left as the checker requires.
+  R15       008 already uses «[нэр]».
+  R16       image paths unchanged; 010 alt text updated with b#13 only.
+  R17       block count and order unchanged.
+
+================================================================
+2. SYSTEMIC PATTERNS
+================================================================
+  Gloss-case endings moved off the Chinese parenthesis onto the Mongolian, Latin,
+    or numeric head: 288 suffix tokens removed from changed lines; 0 leftover
+    `)-` + Cyrillic in columns-mn. Markdown-link suffixes moved onto the label: 6.
+    Examples: «өв залгамжлалыг (繼承)», «National Taiwan University-д (國立臺灣大學)»,
+    «500,000-аас», «Firm-ийг».
+  «Кантортой» 7 → «Фирмтэй»; «Канторын» 4 → «Фирмийн». «Кантор» remaining in mn: 0.
+  «арилжааны аж ахуйн орлогын албан татвар» 7 → «ашгийн төлөөх …».
+  Other «арилжааны аж ахуй» (營利事業, not 營業稅, not vehicle plates, not trade secrets) 5.
+  «ганцаар» used for “solely” → «дангаараа»: 13 added on changed lines.
+    Existing «ганцаараа» (“alone”) left in 003, 007, 018.
+  Vesting «хамаарах цаг» / «хэзээ ажилтанд хамаарах»: 2. Other «хамаарах» left.
+  «салбар» replaced only where it collided with industry / business item
+    (011 list, 013 question, 015, 018 Ministry of Labor, 001 duration list).
+    分公司 and «салбарын зөвшөөрөл» / «салбарын холбоо» stay «салбар».
+
+================================================================
+3. ROWS SKIPPED
+================================================================
+  a#16  Do not rewrite «TWD 1.57M». It is a pinned preserved term
+        (international-guidance-team.ts GUIDANCE_BIO_PRESERVED_TERMS). a#15’s grammar
+        fix was applied around that token.
+  a#19  Do not switch to a space thousands separator or a decimal comma.
+        Checker NUMBER_THOUSAND_STYLE.mn is comma; decimals stay «0.5».
+        Same decision for b#16 (TWD 1,579,589 and the other comma amounts, «0.5 метр»).
+  a#21  Do not turn Q16–Q20 body lines into new ## headings. The checker compares
+        heading and block counts with the English source.
+  a#30  Do not edit url values. 008 `post/대만-노동법` and 009 `post/직원이-자발적으로-퇴사해도`
+        stay, including the Hangul and the fullwidth colon inside the url.
+  a#2 numeral  Suggested «3 дугаар зүйл» removes the English source’s “Article 10”.
+        The number checker then FAILs 004 (`missing from translation: 10`).
+        Statute name was corrected; the visible numeral stays «10 дугаар зүйл»;
+        the URL still points at flno=3. Noted here rather than treated as a reviewer error:
+        the URL reading is right, and the digit is constrained by the checker.
+  b#25 merge  Do not merge 015’s three short paragraphs (they mirror the English line
+        breaks) or join 008/009 closing sentences into one block. 013’s split
+        «Түрээсийн … гэрээ» was repaired inside the existing two blocks.
+
+================================================================
+4. REVIEWER POINTS NOT APPLIED (disagreement or product constraint)
+================================================================
+  a#8 suggested «санхэюань» as the Mongolian name of 三合院. A native legal editor
+      would describe the building and keep the Chinese gloss. Used
+      «гурван далавчтай хашаа байшин (三合院)».
+  a#16 / a#19 / b#16  space as the thousands separator, decimal comma, and
+      «1,57 сая TWD» for the pinned «TWD 1.57M». The checker and the preserved-term
+      list require the existing forms. Dates stay YYYY.MM.DD.
+  a#21 and b#25  new headings and merged paragraphs would change the block structure
+      the checker locks to the English source.
+  The global «засалт хийгдсэн» → «нэмэлт материал» sweep first also hit 001, whose
+      English is “requested corrections”, not supplemental documents. 001 was put
+      back to «засалт шаардсан эсэхээс». 011’s three hits stay «нэмэлт материал шаардсан».
+  a#5 «нэгээс» would drop the digit 1. Wording is «1-ээс илүү» with «гадаадын иргэн» restored.
+
+================================================================
+5. VERIFY
+================================================================
+cd /Users/son7/Projects/tseng-law-fix-mn-r1 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-mn --lang mn 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-mn src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+----- checker (tail -8) -----
+neighbour      PASS   
+hanzi          PASS   han=98
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+----- markers -----
+       0
+----- tsc -----
+TSC_OK
+----- vitest -----
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+----- git status --short | wc -l -----
+      24
+
+Pass criteria met: summary PASS 18/18, markers 0, TSC_OK, tests passed.
+That count is the command as run, before this log file existed. A later
+`git status --short | wc -l` is 25: the same tree plus this untracked log.
+The other lines are the pre-existing WO-F-mn.txt edit, untracked mn-a.md and
+mn-b.md, and the 18 columns plus the three guidance sources above.
+No commit.

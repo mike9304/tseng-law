@@ -1,0 +1,106 @@
+WO-F-lt r4 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-lt-r4
+No git add/commit/push.
+
+## Rows applied
+
+lt-a (17 of 21):
+1 P1 007 constitutional holding — both the FAQ answer and the repeated body. The proviso now turns on whether a considerable time has passed since the cause arose, or whether the cause continued for a considerable time.
+2 P2 guidance Kaohsiung office: įmonių valdymą → įmonių valdyseną (corporate governance).
+3 P2 role line: Partneris, atestuotas buhalteris → Partneris auditorius. No parentheses (the string can surface beside page descriptions).
+4 P2 001 country-note heading: Pastaba dėl atskiros valstybės → Pastaba dėl konkrečios valstybės. The Korea-treaty facts and the existing “not a worldwide investor rule” sentence stay.
+6 P2 004 exit path: likvidatoriaus paskyrimo restored inside the same paragraph, with the dissolution step named veiklos nutraukimas (解散).
+7 P2 006: įdarbino du darbuotojus (the digit stays elsewhere; “du” is the missing headcount).
+8 P2 007 petition: the subject is the at-fault spouse, in the FAQ and the body.
+9 P2 009: the party who terminates first on sufficient grounds is named inside that block.
+12 P2 008: object-position B declined (poną B, ponui B); reported-speech B turįs → ponas B turįs. Nominative sentence-initial B left as in the English blocks.
+13 P2 guidance interpreter promise: vertėjo žodžiu → vertimo žodžiu in all three pack sentences (home/contact, pricing, FAQ). Disclosure regex in guidance-disclosure-parity.test.ts updated to /vertimo žodžiu/ so the element still matches. llms consultationNotice does not contain this phrase and was left unchanged.
+14 P2 001: pažyma apie juridinio asmens egzistavimą (法人存續證明).
+15 P2 002/004 dissolution term, swept (see systemic).
+16 P2 002: apskaitos atvaizdavimas/atvaizdavimą → apskaitos įrašai/įrašus (4).
+17 P2 003: pranešti apie įvykį ir išsaugoti įrodymus.
+18 P2 007: padarinys yra akivaizdžiai per griežtas (FAQ and body).
+19 P2 007 child support: the change is not confined to unforeseeable events.
+20 P2 008: the quote stays in its own block; the next block is now “ir liepė parašyti būtent tokį tekstą.” (Korean source is three blocks: handed the sheet / the quoted sentence / ordered to write that content). Blocks were not merged.
+
+lt-b (23 of 26):
+1 P1 018: the paragraph compares branch and subsidiary registration, so the label is now “Pirmiau palyginta tik filialo ir dukterinės bendrovės registracijos eiga.”
+2 P2 010: atsakomybė pagal vartotojų apsaugą. The 004 list of legal fields (“vartotojų apsauga”) was left; that occurrence is the field, not a liability basis.
+3 P2 014: kas galiausiai padengė kiekvieną išlaidą.
+4 P2 014: the ordinary-course courses “reikia išnagrinėti pagal jų esmę” (the examples in the same sentence stay).
+5 P2 016: Globėjas nėra tas pats asmuo…
+6 P2 016: kas yra tikrasis savininkas.
+7 P2 016: atspindėti before the estate is identified.
+8 P2 017: pirkimo kaina, o ne apmokėtas kapitalas.
+9 P2 017: before closing, the buyer must identify which preparatory permit, registration certificate and other approvals it will need in its own name. The preceding “check each asset” clause stays in the same paragraph; the comma between them was turned into a full stop so the new sentence stands.
+10 P2 018 and the same 投資額審定 step in 001 and 017: leidimas / nustatoma investuota suma / investuotos sumos nustatymas, kept distinct from auditoriaus kapitalo patikrinimas. See systemic.
+13 P2 010 safety level, one time reference.
+14 P2 010: kelionės gydytis išlaidų (就醫交通費).
+15 P2 010: žala sveikatai dėl maisto.
+16–19 P2 011: sutartinės užduotys; pagrįsti kokybę ir saugą; teiginius, siejančius gaminį su liga; viešinimas (宣傳) in the heading and the body.
+20–21 P2 012: eismo juostų išdėstymas (2); papildomą atsargą.
+22–23 P2 014: išlaidos negali būti … pagrindas; kaip šalys susitarė sudarydamos sutartį.
+24 P2 015: “Kitas svarbus dalykas yra šis.” → “Kitas svarbus klausimas yra šis:” and the next block continues “ar šis adresas…”. The two “Jei …” openers stay their own blocks (same split as the English source; merging would change the block count).
+25 P2 018 only: jomis negarantuojama, kad kuris nors būdas yra teisėtas ar geresnis. The other four “nežada nustatyto rezultato” closes do not use the “rezultato, kad” clause and were left.
+
+## Rows skipped
+
+lt-a 5 (003 “Kai kuriuose nuosprendžiuose … tipiškos ar garantuotos baigties nėra”). RULEBOOK R3 requires that softening, and ACCEPTED-ROUND forbids making a result sentence positive. The reviewer’s “teismai šiuo metu paprastai skiria” restores a usual outcome. Wording left as it was, including the serious-injury and death lines.
+lt-a 10 and lt-b 26 (dot thousands → space). R14 and ACCEPTED-ROUND: the checker does not parse “500 000” for lt. Dot grouping kept (500.000, 1.579.589, and the rest).
+lt-a 11 (promote Q16–Q20 to ## and delete U+200B in 003, 005, 006, 008, 009). Heading levels, non-empty block counts and ZWSP counts are pinned to the Korean source. Korean Q16–Q20 are body lines, and the extra ZWSP blocks are in that source. Deleting them or adding headings fails the checker.
+lt-b 11 (delete every U+200B in 013 and 015). Same checker pin. Left in place.
+lt-b 12 (renumber heading 7→6 and 8→7). The English source has the same skip, and the work order forbids changing numbers. Left “## 7.” and “## 8.”.
+lt-a 21 (TWD 1.57M → “1,57 mln. TWD”). The bio figure is pinned byte-identical. Left “priteisti TWD 1.57M”.
+
+No P3 rows in either review.
+
+## Systemic patterns
+
+- Company “gyvuoja / gyvavimas” where the source means operates or exists: 18 instances. 001 employer-age test → veikia / veikianti (8, plus the existence certificate as its own row). 002 “continue operating” → veikti / veikiant / veikia, and “terminates the company’s existence” → egzistavimą (6). 017 “continues to exist as the same legal person” → egzistuoja (3, FAQ and body).
+- Išformavimas for 解散: 32 word-forms → veiklos nutraukimas / nutraukimo / nutraukimą, kept distinct from likvidavimas (清算). 31 in 002, 1 in 004.
+- “Pelno siekiančių įmonių pajamų mokestis” as the name of 營利事業所得稅: 9 → pelno mokestis, with the Chinese gloss kept where it already stood (001: 3, 002: 1, 004: 5). The taxpayer phrase “pelno siekiančios įmonės” was not this calque and was left.
+- Apskaitos atvaizdavimas: 4 → apskaitos įrašai / įrašus (002).
+- Vertėjo žodžiu: 3 → vertimo žodžiu (guidance pack only; columns had none).
+- Sandara where the source means a layout or an arrangement: 3 (012 road/lane configuration ×2, 014 contract arrangement). 007 “teisinę sandarą” / “teisinei sandarai” left: those name the legal makeup of the petition, not a layout.
+- Patvirtinimas used for the later official determination of the remitted amount (投資額審定), as opposed to an approval: 5 (001 list item and the post-remittance sentence, 017, 018 process sentence and “susijusį lėšų patvirtinimą”).
+- Thousands dots: 0 changed (skipped; see above).
+- U+200B blank lines and empty bold lines: 0 changed (skipped; see above).
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-lt --lang lt 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=68
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-lt src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      22
+
+## Reviewer got wrong (not applied)
+
+- lt-a row 5. “Kai kuriuose nuosprendžiuose” and “tipiškos ar garantuotos baigties nėra” are the R3 advertising softening, not a mistranslation. Restoring “teismai šiuo metu paprastai skiria … laisvės atėmimą” would put a usual criminal result back into the column.
+- lt-a row 10 and lt-b row 26. Lithuanian normally groups thousands with a space, but this checker only accepts dot grouping for lt. Space separators were not introduced.
+- lt-a row 11 and lt-b row 11. The one-line fragments and U+200B lines match the Korean source’s block and ZWSP counts. They are layout inherited from the source, not Lithuanian-only corruption. Making Q16 a heading, or deleting the zero-width spaces, fails check-column-translation.
+- lt-b row 12. The jump from heading 5 to 7 is in the English source as well. Renumbering would change digits.
+- lt-a row 21. “TWD 1.57M” is a pinned bio token. “1,57 mln. TWD” would break that test.
+- lt-b row 24’s suggested sentence merges three source blocks into one. The calque was rewritten so the next block continues the sentence; the “Jei pradedate…” and “Jei sunku…” lines were left because they are the same English line breaks and are already grammatical Lithuanian.

@@ -53,7 +53,7 @@ iš tikrųjų tik asmenys su regos negalia (視障者) galėjo verstis masažuot
 
 Šis įstatymas galiojo iki 2003 m.; tuomet ponas Lin, kuris vedė kirpyklą,
 
-įdarbino darbuotojus be regos negalios plaukų plovimo ir masažo paslaugoms, ir policija tai nustatė.
+įdarbino du darbuotojus be regos negalios plaukų plovimo ir masažo paslaugoms, ir policija tai nustatė.
 
 Pagal tuometinę teisę ponui Lin ir šiems darbuotojams buvo skirta administracinė bauda (罰鍰) — 40.000, 10.000 ir 20.000 naujųjų Taivano dolerių (新臺幣, TWD) atitinkamai.
 

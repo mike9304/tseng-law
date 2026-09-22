@@ -87,7 +87,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Puslapio kalba ir konsultacijos kalba nėra tas pats',
           paragraphs: [
             'Šis puslapis parašytas lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik keturiomis kalbomis: anglų, kinų (中文), japonų ir korėjiečių. Informacijos skaitymas lietuvių kalba nereiškia, kad pokalbis su advokate arba advokatu vyks lietuviškai.',
-            'Nežadame vertėjo žodžiu, atsakymo termino ir susitikimo per šį puslapį. Jei nemokate nė vienos iš keturių konsultacijos kalbų, puslapis „Kontaktai“ paaiškina, kaip vertiname bendravimo būdą.',
+            'Nežadame vertimo žodžiu, atsakymo termino ir susitikimo per šį puslapį. Jei nemokate nė vienos iš keturių konsultacijos kalbų, puslapis „Kontaktai“ paaiškina, kaip vertiname bendravimo būdą.',
           ],
         },
         {
@@ -184,7 +184,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Įsteigimas ir struktūra',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) 2016 m. įsteigė advokatės ir advokatai, studijavę National Taiwan University (國立臺灣大學). Kinų pavadinimas 昊鼎 jungia ženklą 昊 („platus dangus“) su ženklu 鼎 („tvirtas pagrindas“) ir nusako kontoros kryptį nuo įsteigimo.',
-            'Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdymą ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui tenkinti.',
+            'Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdyseną ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui tenkinti.',
             'Nuo 2020 m. šalia advokatų darbo veikia ir „Hovering Accounting Office“, teikiantis apskaitą ir mokesčių planavimą verslininkams ir pasiturintiems privatiems asmenims.',
           ],
         },
@@ -272,7 +272,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jei nemokate nė vienos iš keturių konsultacijos kalbų',
           paragraphs: [
             'Kontaktinėje formoje galite pasirinkti „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume, ar yra tinkamas bendravimo būdas; paslauga kita kalba nėra garantuojama ir atsakymo terminas nežadamas.',
-            'Tai tik vertinimas, o ne pažadas. Nežadame vertėjo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.',
+            'Tai tik vertinimas, o ne pažadas. Nežadame vertimo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.',
           ],
         },
         {
@@ -320,7 +320,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ar galima konsultacija lietuvių kalba?',
           answer:
-            'Ne. Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Nežadame ir vertėjo žodžiu. Rašytinis vertimas yra kas kita: originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas.',
+            'Ne. Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Nežadame ir vertimo žodžiu. Rašytinis vertimas yra kas kita: originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas.',
         },
         {
           question: 'Ką daryti, jei nemoku nė vienos iš keturių kalbų?',

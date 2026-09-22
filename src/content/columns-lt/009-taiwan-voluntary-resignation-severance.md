@@ -85,7 +85,7 @@ jei kyla ginčas,
 
 pagal tai, kas pirmas nutraukia sutartį su pakankamu pagrindu,
 
-išeitinė išmoka gali būti neišmokėta arba jos galima reikalauti.
+šalis, kuri pirma nutraukia sutartį pakankamu pagrindu, gali išeitinės išmokos nemokėti arba jos reikalauti.
 
 Todėl Taivano darbo ginčuose (勞資糾紛)
 

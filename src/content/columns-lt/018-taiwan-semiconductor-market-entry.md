@@ -69,11 +69,11 @@ Akcinės bendrovės kapitalas dalijamas į akcijas. Paprastai reikia 2 arba daug
 
 ## 4. Filialo ir dukterinės bendrovės steigimo eiga skiriasi; tik dukterinės bendrovės steigimas eina per Ekonomikos ministerijos investicijų peržiūrą
 
-Kai užsienio bendrovė steigia Taivano dukterinę bendrovę, paprastai pirmiausia atliekama pavadinimo išankstinė peržiūra, tada Ekonomikos ministerijos Investicijų peržiūros departamentui (經濟部投資審議司) teikiamas investicijos leidimo prašymas. Po patvirtinimo pervedamos lėšos, užbaigiamas investicijos sumos patvirtinimas ir auditoriaus kapitalo patikrinimas, tada užbaigiamas bendrovės steigimas ir mokestinė registracija.
+Kai užsienio bendrovė steigia Taivano dukterinę bendrovę, paprastai pirmiausia atliekama pavadinimo išankstinė peržiūra, tada Ekonomikos ministerijos Investicijų peržiūros departamentui (經濟部投資審議司) teikiamas investicijos leidimo prašymas. Po leidimo pervedamos lėšos, nustatoma investuota suma ir auditorius patikrina kapitalą, tada užbaigiamas bendrovės steigimas ir mokestinė registracija.
 
-Priešingai, kai įprasta užsienio bendrovė steigia Taivano filialą, Ekonomikos ministerijos Investicijų peržiūros departamento investicijos leidimo paprastai nereikia; Ekonomikos ministerijos Prekybos plėtros administracija (經濟部商業發展署) tvarko filialo registraciją ir susijusį lėšų patvirtinimą. Pavadinimo išankstinė peržiūra, veiklos lėšų pervedimas, kapitalo patikrinimas ir mokestinė registracija vis tiek reikalingi, o steigimo grafikas paprastai trumpesnis.
+Priešingai, kai įprasta užsienio bendrovė steigia Taivano filialą, Ekonomikos ministerijos Investicijų peržiūros departamento investicijos leidimo paprastai nereikia; Ekonomikos ministerijos Prekybos plėtros administracija (經濟部商業發展署) tvarko filialo registraciją ir susijusį lėšų sumos nustatymą. Pavadinimo išankstinė peržiūra, veiklos lėšų pervedimas, kapitalo patikrinimas ir mokestinė registracija vis tiek reikalingi, o steigimo grafikas paprastai trumpesnis.
 
-Pirmiau nurodyta yra sutarčių struktūros pasiūlymas. Vien tam tikros teisinės formos pasirinkimas sandorio nepadaro teisėto ir neužkerta kelio ginčams.
+Pirmiau palyginta tik filialo ir dukterinės bendrovės registracijos eiga. Vien tam tikros teisinės formos pasirinkimas sandorio nepadaro teisėto ir neužkerta kelio ginčams.
 
 ## 5. Bendrovės registracija ir inžinieriaus teisėtas darbas nėra tas pats
 
@@ -83,7 +83,7 @@ Užsienio bendrovės Taivano dukterinės bendrovės ir filialo vadovo leidimo di
 
 ## 7. Struktūros, kurias galima palyginti pagal verslo plėtros etapą
 
-Toliau pateiktos situacijos yra hipotetinės, skirtos mąstymui paremti; jos nežada nustatyto rezultato, kad tam tikras būdas yra teisėtas ar geresnis.
+Toliau pateiktos situacijos yra hipotetinės, skirtos mąstymui paremti; jomis negarantuojama, kad kuris nors būdas yra teisėtas ar geresnis.
 
 **Įmonės, kurių dėmesys ankstyvajam eksportui.** Jei Taivane dar nėra darbuotojų ar atsargų ir norite paklausą tikrinti per nepriklausomą platintoją, pirmiausia galima vertinti tiekimą, platinimo santykį ir veiklos Taivane apimtį. Vien platinimo sutartis visų Taivano reguliavimo klausimų neišsprendžia.
 

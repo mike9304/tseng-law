@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Pavyzdinis vaizdas, kuriame fiksuojama transporto priemonių padėtis ir pėdsakai važiuojamojoje dalyje eismo įvykio vietoje](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Jei Taivane įvyksta eismo įvykis (交通事故), pirmiausia reikia užtikrinti saugumą, atlikti pranešimą ir įrodymų išsaugojimą, o tada eilės tvarka įvertinti reikalavimo terminą, kaltę (過失) ir taikos susitarimo (和解) apimtį. Toliau pateikta bendra eigos tvarka, paremta Taivano teisės aktais ir viešųjų institucijų gairėmis; atsakomybė ir konkreti procedūra gali skirtis pagal kiekvieno įvykio aplinkybes.
+Jei Taivane įvyksta eismo įvykis (交通事故), pirmiausia reikia užtikrinti saugumą, pranešti apie įvykį ir išsaugoti įrodymus, o tada eilės tvarka įvertinti reikalavimo terminą, kaltę (過失) ir taikos susitarimo (和解) apimtį. Toliau pateikta bendra eigos tvarka, paremta Taivano teisės aktais ir viešųjų institucijų gairėmis; atsakomybė ir konkreti procedūra gali skirtis pagal kiekvieno įvykio aplinkybes.
 
 ## Q1. Ar po įvykio galima palikti įvykio vietą?
 

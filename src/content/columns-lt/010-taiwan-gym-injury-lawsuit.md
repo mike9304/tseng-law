@@ -67,11 +67,11 @@ Toliau pateikta bendra informacija, skirta sužalojimų sporto salėje ginčams 
 
 ## 1. Po sužalojimo sporto salėje Taivane kokias teisines procedūras galima įvertinti?
 
-[Taivano Vartotojų apsaugos įstatymo (消費者保護法) 7 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nustato, kad verslininkas, teikdamas paslaugą, privalo užtikrinti, jog ta paslauga turėtų saugumą, kurio pagrįstai galima tikėtis pagal tuo metu galiojantį profesinį ar techninį standartą paslaugos teikimo metu.
+[Taivano Vartotojų apsaugos įstatymo (消費者保護法) 7 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) nustato, kad verslininkas, teikdamas paslaugą, privalo užtikrinti tokį paslaugos saugumo lygį, kokio pagrįstai galima tikėtis pagal paslaugos teikimo metu galiojantį profesinį ar techninį standartą.
 
 Tai nereiškia, kad verslininko ar trenerio atsakomybė pripažįstama kaskart, kai sužalojimas įvyksta sporto salėje. Kiekvienoje byloje reikia vertinti, kokia konkreti rūpestingumo pareiga egzistavo, ar ji buvo pažeista, ar yra priežastinis ryšys tarp pažeidimo ir sužalojimo, ar atsirado faktinė žala, kokias prieštaras turi kita šalis ir ar yra įrodymų, pagrindžiančių kiekvieną teiginį ir kiekvieną prieštarą.
 
-Jei tenkinami įstatyminiai kūno sužalojimo dėl neatsargumo (過失傷害) požymiai, galima įvertinti baudžiamąjį skundą (告訴). Taip pat galima įvertinti civilinį reikalavimą atlyginti žalą, tačiau kuris pagrindas taikomas — sutartinė atsakomybė, deliktas (侵權行為) ar vartotojų apsauga — ir atsakomybės apimtis skiriasi pagal konkrečias faktines aplinkybes. Tai, kad dėl vieno įvykio galima įvertinti kelias procedūras, nereiškia, kad visos jos privalomos, ir nereiškia, kad kurios nors iš jų sėkmė iš anksto užtikrinta.
+Jei tenkinami įstatyminiai kūno sužalojimo dėl neatsargumo (過失傷害) požymiai, galima įvertinti baudžiamąjį skundą (告訴). Taip pat galima įvertinti civilinį reikalavimą atlyginti žalą, tačiau kuris pagrindas taikomas — sutartinė atsakomybė, deliktas (侵權行為) ar atsakomybė pagal vartotojų apsaugą — ir atsakomybės apimtis skiriasi pagal konkrečias faktines aplinkybes. Tai, kad dėl vieno įvykio galima įvertinti kelias procedūras, nereiškia, kad visos jos privalomos, ir nereiškia, kad kurios nors iš jų sėkmė iš anksto užtikrinta.
 
 ## 2. Kokie terminai taikomi baudžiamajam skundui ir civiliniam žalos atlyginimui?
 
@@ -83,7 +83,7 @@ Tačiau jei kyla kitas reikalavimo pagrindas, pavyzdžiui, sutartinė atsakomyb�
 
 ## 3. Iš karto po įvykio kokius įrodymus ir kaip reikia išsaugoti?
 
-Kad būtų galima paaiškinti atsakomybę, priežastinį ryšį ir žalą, tikslinga kartu surinkti ne tik įvykio metu darytus vaizdo įrašus (監視器影像), bet ir medicinos dokumentaciją (病歷) bei gydytojo pažymą (診斷證明書), gydymo išlaidų (醫療費用), vykimo gydytis (就醫交通費) ir slaugos (看護費用) kvitus, su sporto sale ir treneriu susirašinėjimą, liudytojų parodymus, užsiėmimų rezervaciją ir lankomumo įrašus, pratimų planą ir treniruočių žurnalą. Tikslinga nufotografuoti sužeistą kūno vietą ir, kiek įmanoma, įvykio vietos būklę ir chronologiškai sutvarkyti eigą prieš įvykį ir po jo bei susirašinėjimo turinį, kad vėliau dokumentus būtų lengviau palyginti.
+Kad būtų galima paaiškinti atsakomybę, priežastinį ryšį ir žalą, tikslinga kartu surinkti ne tik įvykio metu darytus vaizdo įrašus (監視器影像), bet ir medicinos dokumentaciją (病歷) bei gydytojo pažymą (診斷證明書), gydymo išlaidų (醫療費用), kelionės gydytis išlaidų (就醫交通費) ir slaugos (看護費用) kvitus, su sporto sale ir treneriu susirašinėjimą, liudytojų parodymus, užsiėmimų rezervaciją ir lankomumo įrašus, pratimų planą ir treniruočių žurnalą. Tikslinga nufotografuoti sužeistą kūno vietą ir, kiek įmanoma, įvykio vietos būklę ir chronologiškai sutvarkyti eigą prieš įvykį ir po jo bei susirašinėjimo turinį, kad vėliau dokumentus būtų lengviau palyginti.
 
 Vaizdo įrašai, pasibaigus saugojimo laikotarpiui, gali būti perrašyti (影像可能被覆蓋) arba dėl kitų priežasčių tapti neprieinami. Todėl galima svarstyti prašymą sporto salei išsaugoti įrašus laišku su turinio patvirtinimu (存證信函) arba advokatės raštu (律師函), kuriame konkrečiai nurodytas reikalingas laiko tarpas, vieta ir kameros padėtis. Toks raštas yra praktinė priemonė užfiksuoti, ko ir kada buvo prašyta. Pats savaime jis kitai šaliai neuždeda naujos teisinės pareigos išsaugoti įrašus ir neužkerta kelio jų ištrynimui, o vien aplinkybė, kad įrašų neliko, taip pat nereiškia, kad teismas automatiškai padarys nepalankią išvadą.
 
@@ -109,7 +109,7 @@ Ypač darbingumo sumažėjimas, pajamų sumažėjimas atsigavimo laikotarpiu ir 
 
 Jei patyrėte sužalojimą sporto salėje, svarbu pirmiausia gauti reikalingą gydymą, išsaugoti dokumentus, kuriuos dar galima užtikrinti, kol jie neišnyko, ir anksti gauti individualią teisinę konsultaciją dėl terminų ir procedūrų, kurios gali būti taikomos bylai. Derybos, vartotojo skundas (消費申訴) ar taikinimo procedūra (調解), baudžiamasis skundas ir civilinis reikalavimas atlyginti žalą yra priemonės, iš kurių galima rinktis pagal bylą, ir tai nėra procedūros, kurias kiekvienoje byloje reikėtų atlikti visas.
 
-Kritimas komercinėse patalpose, sveikatos žala dėl maisto ir sužalojimas naudojantis profesine paslauga taip pat gali kelti saugumo pareigos, priežastinio ryšio, žalos ir įrodymų klausimus. Tačiau sporto salės bylos išvados negalima be pakeitimų taikyti kitam įvykiui, todėl kiekvieno atvejo sutartį, elgesį ir atitinkamas normas reikia vertinti atskirai.
+Kritimas komercinėse patalpose, žala sveikatai dėl maisto ir sužalojimas naudojantis profesine paslauga taip pat gali kelti saugumo pareigos, priežastinio ryšio, žalos ir įrodymų klausimus. Tačiau sporto salės bylos išvados negalima be pakeitimų taikyti kitam įvykiui, todėl kiekvieno atvejo sutartį, elgesį ir atitinkamas normas reikia vertinti atskirai.
 
 ---
 

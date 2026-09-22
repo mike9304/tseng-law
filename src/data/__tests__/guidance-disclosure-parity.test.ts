@@ -283,7 +283,7 @@ const ELEMENTS = {
     hr: /tumač/,
     sr: /tumača/,
     sl: /tolmač/,
-    lt: /vertėjo žodžiu|vertėjas žodžiu/,
+    lt: /vertimo žodžiu/,
     lv: /tulku/,
     et: /tõlki/,
     ca: /intèrpret/,

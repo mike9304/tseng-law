@@ -1269,7 +1269,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Advokatas Taivane',
       'chang-fangyu': 'Teisininko padėjėjas',
       'son-jungmin': 'Korėjos operacijų vadovas',
-      'huang-shengping': 'Partneris, atestuotas buhalteris',
+      'huang-shengping': 'Partneris auditorius',
     },
   },
   lv: {

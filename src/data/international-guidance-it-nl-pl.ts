@@ -688,14 +688,14 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Werk met buitenlandse betrokkenen',
           paragraphs: [
-            'Het grensoverschrijdende werk omvat oprichting van vennootschappen, visa, merken- en octrooiaanvragen, juridische risicotoetsing en fiscale advisering van ondernemingen. Het kantoor Taichung behandelt in het bijzonder bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Advocaat Wei Tseng (曾雋崴) begeleidt cliënten uit Korea, Japan en andere internationale cliënten in de genoemde groepen.',
+            'Het grensoverschrijdende werk omvat oprichting van vennootschappen, visa, merken- en octrooiaanvragen, juridische risicotoetsing en fiscale advisering van ondernemingen. Het kantoor Taichung behandelt in het bijzonder bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Advocaat Wei Tseng (曾雋崴) begeleidt cliënten uit Korea en Japan en werkt met andere internationale cliënten in de genoemde groepen.',
             'Of wij een zaak kunnen aannemen, hangt af van de inhoud en van de taal van de communicatie. Valt uw zaak in de genoemde groepen en kan zij in een van de vier consultatietalen worden besproken, dan kunt u een samenvatting ter beoordeling sturen.',
           ],
         },
         {
           heading: 'Als u contact opneemt',
           paragraphs: [
-            'Na ontvangst van uw samenvatting beoordeelt een advocaat de inhoud en spreekt daarna over de mogelijke omvang van het werk, nog benodigde stukken en de volgende stappen. Bij fiscale of boekhoudkundige vragen kan het kantoor met de boekhouding in één verloop werken.',
+            'Na ontvangst van uw samenvatting beoordeelt een advocaat de inhoud en spreekt daarna over de mogelijke omvang van het werk, nog benodigde stukken en de volgende stappen. Bij fiscale of boekhoudkundige vragen kan het kantoor met de boekhouding in één traject werken.',
             'Het resultaat van elke zaak hangt af van de feiten en de aanwezige stukken; wij beloven geen resultaat. Als u een bindend antwoord voor uw situatie nodig hebt, moeten de stukken in een van de vier consultatietalen met een advocaat worden besproken.',
           ],
         },
@@ -752,7 +752,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       description:
         'De taal van de pagina, de consultatietalen, de werkwijze als u geen van de vier talen kunt gebruiken, en wat deze pagina niet toezegt.',
       intro:
-        'Voordat u ons schrijft, onderscheidt u de volgende drie punten. Zij worden vaak vermengd, maar betekenen iets anders.',
+        'Houd, voordat u ons schrijft, de volgende drie punten uit elkaar. Zij worden vaak vermengd, maar betekenen iets anders.',
       sections: [
         {
           heading: 'Drie dingen die gescheiden moeten blijven',
@@ -902,7 +902,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Uw rechten en de contactweg',
           paragraphs: [
             'U kunt inzage, rectificatie of verwijdering van uw gegevens vragen of de toestemming intrekken, via het e-mailadres op de contactpagina. Bestaat een wettelijke of procedurele bewaarplicht, dan lichten wij de beperking toe.',
-            'Deze pagina noemt geen vaste bewaartermijn, omdat de werkelijke duur afhangt van of de zaak wordt voortgezet, en van de daarmee verbonden plichten. Wenst u een eerdere verwijdering, deel dat mee bij het contact.',
+            'Deze pagina noemt geen vaste bewaartermijn, omdat de werkelijke duur afhangt van of de zaak wordt voortgezet, en van de daarmee verbonden plichten. Wenst u een eerdere verwijdering, deelt u dat dan mee bij het contact.',
           ],
         },
         {

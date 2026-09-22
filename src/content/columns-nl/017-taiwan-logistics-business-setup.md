@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Moet elke met logistiek samenhangende handel in Taiwan de vergunning voor goederenvervoer per motorvoertuig (汽車貨運業) verkrijgen?"
-    a: "Dat is niet steeds het geval. “Logistiek” is een ruime praktijkterm; de vergunningsplicht wordt niet alleen bepaald volgens de vennootschapsnaam of de in de inschrijving vermelde bedrijfsactiviteiten (汽車貨運業). Indien de vennootschap een tegenprestatie ontvangt en andermans goederen met een vrachtwagen vervoert, kan deze activiteit het goederenvervoer per motorvoertuig vormen. Daarentegen moeten opslag, verpakking, systeemexploitatie, verzending als afzender (貨主), expeditie (運送承攬) en analoge activiteiten één voor één worden beoordeeld volgens de contractuele verhouding, de vervoersverantwoordelijkheid, de inhoud van de tegenprestatie en de werkelijke voertuigcirculatie."
+    a: "Dat is niet steeds het geval. “Logistiek” is een ruime praktijkterm; de vergunningsplicht wordt niet alleen bepaald volgens de vennootschapsnaam of de in de inschrijving vermelde bedrijfsactiviteiten (汽車貨運業). Indien de vennootschap een tegenprestatie ontvangt en andermans goederen met een vrachtwagen vervoert, kan deze activiteit het goederenvervoer per motorvoertuig vormen. Daarentegen moeten opslag, verpakking, systeemexploitatie, verzending als afzender (貨主), expeditie (運送承攬) en soortgelijke activiteiten één voor één worden beoordeeld volgens de contractuele verhouding, de vervoersverantwoordelijkheid, de inhoud van de tegenprestatie en de werkelijke inzet van de voertuigen."
   - q: "Welke kapitaal- en voertuigeisen en welke procedure gelden om een gewone handel van goederenvervoer per motorvoertuig nieuw op te richten?"
     a: "Voor het gewone goederenvervoer per motorvoertuig gelden in beginsel een minimumkapitaal van TWD 25.000.000 (新臺幣) en minstens 20 nieuwe vrachtwagens. Voor de handel die alleen verhuizingen (搬家) betreft, gelden TWD 10.000.000 en minstens 8 eenheden, en voor de handel die in Kinmen (金門) en Lienchiang of Matsu (連江・馬祖) wordt geëxploiteerd, TWD 10.000.000 en minstens 5 eenheden, met in het laatste geval een beperking van de exploitatiezone. Voor het vervoer per kleine vrachtwagen dat een natuurlijke persoon exploiteert, bestaan eigen beperkte uitzonderingen, namelijk 1 kleine vrachtwagen in eigendom, een voertuigleeftijd die 2 jaar niet overschrijdt, een beroepsrijbewijs voor kleine voertuigen (小型車職業駕駛執照) en een inschrijving in het bevolkingsregister (戶籍) van het bevoegde district. De buitenlandse investering, de goedkeuring van het ministerie van Verkeer (交通部), de voorbereidingsvergunning (籌設許可), de vennootschaps- en handelsinschrijving, de voorbereiding van voertuigen en inrichtingen, de exploitatievergunning (營業執照) en de toetreding tot de branchevereniging (同業公會) moeten elk afzonderlijk worden bevestigd."
   - q: "Verkrijgt men bij overname van een vennootschap die de vergunning al heeft, automatisch de exploitatievergunning voor goederenvervoer per motorvoertuig?"
@@ -30,14 +30,14 @@ Dit artikel onderscheidt drie situaties: een handel van goederenvervoer per moto
 
 ## 1. Omvang van de logistiek en van het goederenvervoer per motorvoertuig (汽車貨運業)
 
-Niet elke logistieke activiteit is vergunningsplichtig. “Logistiek” is een ruime praktijkterm; de vergunningsplicht wordt niet alleen bepaald volgens de vennootschapsnaam of de in de inschrijving vermelde bedrijfsactiviteiten (汽車貨運業). Indien de vennootschap een tegenprestatie ontvangt en andermans goederen met een vrachtwagen vervoert, kan deze activiteit het goederenvervoer per motorvoertuig vormen. Daarentegen moeten opslag, verpakking, systeemexploitatie, verzending als afzender (貨主), expeditie en analoge activiteiten één voor één worden beoordeeld volgens de contractuele verhouding, de vervoersverantwoordelijkheid, de inhoud van de tegenprestatie en de werkelijke voertuigcirculatie.
+Niet elke logistieke activiteit is vergunningsplichtig. “Logistiek” is een ruime praktijkterm; de vergunningsplicht wordt niet alleen bepaald volgens de vennootschapsnaam of de in de inschrijving vermelde bedrijfsactiviteiten (汽車貨運業). Indien de vennootschap een tegenprestatie ontvangt en andermans goederen met een vrachtwagen vervoert, kan deze activiteit het goederenvervoer per motorvoertuig vormen. Daarentegen moeten opslag, verpakking, systeemexploitatie, verzending als afzender (貨主), expeditie en soortgelijke activiteiten één voor één worden beoordeeld volgens de contractuele verhouding, de vervoersverantwoordelijkheid, de inhoud van de tegenprestatie en de werkelijke inzet van de voertuigen.
 
-De wegenwet (公路法) van Taiwan regelt de handel van vervoer per motorvoertuig (汽車運輸業) als de handel die passagiers of goederen per motorvoertuig tegen een tegenprestatie vervoert. De vennootschap wordt daarom niet onmiddellijk een goederenvervoer per motorvoertuig alleen omdat zij een logistieke dienst in ruime zin levert. Omgekeerd, zelfs indien het contract als expeditie of platformexploitatie is geredigeerd, kan de vennootschap, indien zij werkelijk de vracht als vervoerder (運送人) ontvangt en de verantwoordelijkheid voor inzet, circulatie en goederenschade draagt, het toezicht niet met de enkele benaming ontwijken.
+De wegenwet (公路法) van Taiwan regelt de handel van vervoer per motorvoertuig (汽車運輸業) als de handel die passagiers of goederen per motorvoertuig tegen een tegenprestatie vervoert. De vennootschap wordt daarom niet onmiddellijk een ondernemer van goederenvervoer per motorvoertuig alleen omdat zij een logistieke dienst in ruime zin levert. Omgekeerd, zelfs indien het contract als expeditie of platformexploitatie is geredigeerd, kan de vennootschap, indien zij werkelijk de vracht als vervoerder (運送人) ontvangt en de verantwoordelijkheid voor inzet, circulatie en goederenschade draagt, het toezicht niet met de enkele benaming ontwijken.
 
 Bij het vaststellen van de handelsomvang moeten ten minste de volgende verhoudingen concreet worden geordend.
 
 - Wie het vervoerscontract met de afzender sluit en wie de vracht of de tegenprestatie van de logistieke dienst ontvangt.
-- Wie de verantwoordelijkheid voor verlies, beschadiging en vertraging van de goederen en voor schade aan een 3e draagt.
+- Wie de verantwoordelijkheid voor verlies, beschadiging en vertraging van de goederen en voor schade aan een derde draagt.
 - Wie de voertuigen, de kentekenplaten voor handelsgebruik (營業用車輛牌照), de bestuurders, de inzet en de circulatie beheert.
 - Hoe de hulptaken zoals magazijn, verpakking, informatiesysteem en expeditie van het werkelijke vervoer worden gescheiden.
 - Bij onderopdracht, welke omvang van werk de ondernemer met vergunning werkelijk uitvoert.
@@ -56,7 +56,7 @@ Het vervoer per kleine vrachtwagen (小貨車) dat een natuurlijke persoon explo
 
 De voertuigkentekenplaten (車輛牌照) voor handelsgebruik, afgegeven aan een ondernemer van vervoer per motorvoertuig van nieuwe oprichting, mogen gedurende 1 jaar vanaf de afgiftedatum niet door teruggave worden geschrapt (繳銷) noch door wijziging van titularis in het voertuigregister worden overgedragen (過戶轉讓).
 
-Deze beperking betreft de schrapping van de handelskentekenplaat door teruggave en de overdracht door wijziging van titularis in het voertuigregister. De andere behandelingen, inclusief de buitengebruikstelling van het voertuig en de vervanging, moeten afzonderlijk worden bevestigd volgens de geldende normen van de bevoegde wegenautoriteit.
+Deze beperking betreft de schrapping van de handelskentekenplaat door teruggave en de overdracht door wijziging van titularis in het voertuigregister. Sloop, vervanging en andere vormen van beschikking over het voertuig moeten afzonderlijk worden bevestigd volgens de geldende normen van de bevoegde wegenautoriteit.
 
 ### Buitenlandse investering en goedkeuring van de sector
 
@@ -68,13 +68,13 @@ De thans bevoegde autoriteit voor de algemene buitenlandse investering is het Di
 
 De volgorde van de stappen en het indieningsorgaan moeten volgens elk dossier opnieuw worden bevestigd, maar in het algemeen gebeurt de voorbereiding in de volgende volgorde.
 
-1. De handelsomvang vaststellen volgens het contract, de tegenprestatie, de vervoersverantwoordelijkheid en de voertuigcirculatie, en de passende investeringsweg kiezen, zoals vennootschap of bijkantoor.
+1. De handelsomvang vaststellen volgens het contract, de tegenprestatie, de vervoersverantwoordelijkheid en de inzet van de voertuigen, en de passende investeringsweg kiezen, zoals vennootschap of bijkantoor.
 2. De toepasselijke goedkeuring van buitenlandse investering en de sectorgoedkeuring van het ministerie van Verkeer volgens artikel 35 van de wegenwet verkrijgen.
 3. De voorbereidingsvergunning van het goederenvervoer per motorvoertuig vragen overeenkomstig de toelichting van de Wegenadministratie van het ministerie van Verkeer.
 4. De vennootschaps- en handelsinschrijving voltooien, en de goedgekeurde vestiging, de parkeerinrichtingen (停車設施), het onderhoudsstelsel, de voertuigen, de verzekeringen en de organisatie voorbereiden.
 5. De exploitatievergunning vragen, tot de overeenkomstige branchevereniging toetreden en vervolgens de exploitatie beginnen volgens de goedgekeurde handelsomvang.
 
-De vestiging en de parkeerinrichtingen moeten het op de betrokken handel toepasselijke criterium vervullen, en er moeten materialen worden voorgelegd die de eigendom of het gebruiksrecht attesteren. Het valt niet in het algemeen te stellen dat elke ondernemer noodzakelijk een eigen exclusieve parking moet huren. De statuten, het aandeelhoudersboek, de goedkeuringsmaterialen van de parkeerinrichtingen, het bewijs van eigendom of gebruik van vestiging en parking, het onderhoudscontract, het aankoopbewijs van de voertuigen en de voertuigenlijst moeten worden getoetst aan de geldende controlelijst van de Wegenadministratie op het ogenblik van de aanvraag.
+De vestiging en de parkeerinrichtingen moeten het op de betrokken handel toepasselijke criterium vervullen, en er moeten materialen worden voorgelegd die de eigendom of het gebruiksrecht attesteren. Het valt niet in het algemeen te stellen dat elke ondernemer een eigen exclusieve parking moet huren. De statuten, het aandeelhoudersboek, de goedkeuringsmaterialen van de parkeerinrichtingen, het bewijs van eigendom of gebruik van vestiging en parking, het onderhoudscontract, het aankoopbewijs van de voertuigen en de voertuigenlijst moeten worden getoetst aan de geldende controlelijst van de Wegenadministratie op het ogenblik van de aanvraag.
 
 Na verkrijging van de voorbereidingsvergunning moet de voorbereiding in beginsel in 6 maanden worden voltooid. De verlenging wanneer bijzondere omstandigheden bestaan, is mogelijk voor een maximum van 6 bijkomende maanden. Na afgifte van de exploitatievergunning moet de exploitatie in beginsel in 1 maand beginnen, en men deelt dit mee aan de bevoegde wegenautoriteit met bijvoeging van een kopie van de geldige lidkaart afgegeven door de overeenkomstige branchevereniging. Omdat de tijd nodig om het dossier te vervolledigen, de grond en de inrichtingen, de voertuigen en de verzekeringen voor te bereiden volgens het dossier varieert, kan het voltooiingsogenblik van de gehele procedure niet vooraf worden vastgelegd. Zelfs indien een objectieve termijn van bestuurlijke toetsing volgens de normen van buitenlandse investering wordt aangekondigd, betekent dit niet de duur van de gehele nieuwe oprichting van het goederenvervoer per motorvoertuig.
 
@@ -118,7 +118,7 @@ Men moet de geldigheid van de exploitatievergunning van de ondernemer die de opd
 
 Zelfs indien de buitenlander aandeelhouder of investeerder van de doelvennootschap wordt, verleent dit feit op zich hem noch het recht om te werken noch een verblijfsstatuut in Taiwan. Indien hij in Taiwan het dagelijkse werk uitoefent, zoals het vennootschapsbeheer, de verkoop, de inzet van voertuigen en de klantenservice, moet hij vóór het begin van het werk bevestigen of hij de werkvergunning passend bij de werkelijke functie nodig heeft, en de latere verblijfsprocedure afzonderlijk behandelen.
 
-Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan te verlaten (限令出國) worden toegepast. De werktoelichting over het inreisverbod (禁止入國) die bij de Immigratieadministratie van het ministerie van Binnenlandse Zaken (內政部移民署) geldt, stelt in het algemeen, voor onrechtmatig werk, een inreisverbod van 3 jaar vast, maar de eisen van vrijstelling of inkorting van de termijn die dezezelfde toelichting vaststelt, kunnen worden toegepast. Het resultaat wordt niet mechanisch bepaald alleen omdat er een aangifte van een 3e bestaat, en de bevoegde autoriteit toetst de feiten, de toepasselijke normen en de omstandigheden van elk dossier.
+Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan te verlaten (限令出國) worden toegepast. De werktoelichting over het inreisverbod (禁止入國) die bij de Immigratieadministratie van het ministerie van Binnenlandse Zaken (內政部移民署) geldt, stelt in het algemeen, voor onrechtmatig werk, een inreisverbod van 3 jaar vast, maar de eisen van vrijstelling of inkorting van de termijn die dezezelfde toelichting vaststelt, kunnen worden toegepast. Het resultaat wordt niet mechanisch bepaald alleen omdat er een aangifte van een derde bestaat, en de bevoegde autoriteit toetst de feiten, de toepasselijke normen en de omstandigheden van elk dossier.
 
 ## Officiële bronnen
 
@@ -129,13 +129,13 @@ Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan t
 - [Wegenadministratie van het ministerie van Verkeer: aanvraag van de exploitatievergunning en in te dienen documenten](https://www.thb.gov.tw/cp.aspx?n=507)
 - [Wegenadministratie van het ministerie van Verkeer: kapitaal- en voertuigcriteria van het goederenvervoer per motorvoertuig](https://cyi2.thb.gov.tw/cp.aspx?n=1962)
 - [Wegenadministratie van het ministerie van Verkeer: wijzigingsprocedure van het vervoer per motorvoertuig](https://www.thb.gov.tw/cl.aspx?n=259)
-- [Wegenadministratie van het ministerie van Verkeer: overdracht van handelsvoertuigen en analoge](https://www.thb.gov.tw/cp.aspx?n=356)
+- [Wegenadministratie van het ministerie van Verkeer: overdracht en andere behandeling van handelsvoertuigen](https://www.thb.gov.tw/cp.aspx?n=356)
 - [Materialen over de criteria van vestiging en parkeerinrichtingen](https://www.mvdis.gov.tw/webMvdisLaw/Download.aspx?ID=22746&type=Law)
-- [Verordening inzake buitenlandse investeringen (外國人投資條例)](https://law.moea.gov.tw/LawContent.aspx?id=FL011158&media=print)
+- [Wet inzake investeringen door buitenlanders (外國人投資條例)](https://law.moea.gov.tw/LawContent.aspx?id=FL011158&media=print)
 - [Dienst Investeringstoetsing van het ministerie van Economische Zaken](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
 - [Ministerie van Economische Zaken: toelichting van de aanvraag van buitenlandse investering](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
-- [Artikel 43 van de wet op de arbeidsbemiddeling (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
-- [Artikel 68 van de wet op de arbeidsbemiddeling](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [Artikel 43 van de Wet op de werkgelegenheidsdiensten (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
+- [Artikel 68 van de Wet op de werkgelegenheidsdiensten](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
 - [Immigratieadministratie van het ministerie van Binnenlandse Zaken: bestuurlijke toelichting over de duur van het inreisverbod](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## Verbonden toelichtingen
@@ -146,6 +146,6 @@ Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan t
 
 ---
 
-Dit artikel is een educatief materiaal bestemd om de juridische regeling algemeen toe te lichten, en is geen raad voor een concreet dossier. Omdat de vergunningscriteria, de aanvraagformulieren en de praktijk van de bevoegde autoriteit kunnen wijzigen, bevestig men de bijgewerkte officiële bronnen en de omstandigheden van het dossier vóór het uitvoeren van een investering of een contract.
+Dit artikel is een educatief materiaal bestemd om de juridische regeling algemeen toe te lichten, en is geen raad voor een concreet dossier. Omdat de vergunningscriteria, de aanvraagformulieren en de praktijk van de bevoegde autoriteit kunnen wijzigen, bevestigt men de bijgewerkte officiële bronnen en de omstandigheden van het dossier vóór het uitvoeren van een investering of een contract.
 
 **Advocaat Wei Tseng (曾雋崴)**

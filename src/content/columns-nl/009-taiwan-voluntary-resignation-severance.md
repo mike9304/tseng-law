@@ -73,11 +73,11 @@ Daarom moeten werknemers de termijn nauwkeurig in het oog houden.
 
 Met andere woorden:
 
-het recht van Taiwan, of de schuld bij de vennootschap ligt
+het recht van Taiwan geeft, naargelang de schuld bij de werkgever ligt
 
 of bij de werknemer,
 
-erkent aan beide partijen het recht geen ontslagvergoeding te betalen of ontslagvergoeding te vorderen.
+de werkgever het recht de ontslagvergoeding niet te betalen en de werknemer het recht die te vorderen.
 
 Soms ligt de schuld bij beide partijen,
 
@@ -91,7 +91,7 @@ Daarom is bij Taiwanese arbeidsgeschillen (勞資糾紛)
 
 het **tijdstip** zeer belangrijk.
 
-In de meeste gevallen wordt de partij beschermd die zich vooraf heeft voorbereid.
+Wie zich vooraf voorbereidt, staat sterker om de eigen rechten te bewaren; een bepaalde uitkomst volgt daaruit niet.
 
 ---
 

@@ -1,0 +1,102 @@
+WO-F-nl r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-nl-r1
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: nl-a 40, nl-b 58 (98). No P3 rows.
+
+Applied: 97.
+Skipped: 1 numbered row, plus the structural half of two rows, plus Hangul `url` fields (not a numbered row).
+
+### Applied
+nl-a 1–23, 25–40 and nl-b 1–58.
+nl-a 36: the table row was not deleted (that would change the row count). The cells were rephrased so they no longer read as Eenvoudig/Moeilijk outcomes; they point to the next row.
+nl-b 31: paragraphs were not merged (block count is locked to the Korean source). The pointed fragments were completed inside the existing blocks (013 next sentence; 015 “Naast de marktsituatie”, “Een ander belangrijk punt”, address sentence). The rest of the one-line blocks in 013/015/008/009 were left.
+
+Guidance pack (Dutch strings only):
+- llms discovery notice (nl-a 1): geen plaats in zoekresultaten, geen aanprijzing, geen aanbeveling, geen gegarandeerde zichtbaarheid.
+- Ministry of Education and Legal Aid Foundation (nl-a 2): Dutch office name, English name kept in parentheses, on the intro and the experience lines.
+- Senior Paralegal (same English-chrome pattern as nl-a 2 / R12): “Senior juridisch medewerker”, Boyin and Muyang experience lines.
+- cliënten uit Korea en Japan en andere internationale cliënten (nl-a 8): about page and lawyers answer.
+- son-jungmin “op grond van een opleiding informatica” (nl-a 9).
+- Huang Chengchi degrees (nl-a 10). Accountant-partner (CPA) (nl-a 11).
+- u-vorm “deelt u dat dan mee” (nl-a 12). “Houd … uit elkaar” (nl-a 13). “één traject” (nl-a 14).
+- Bio figure left as “1,57 miljoen TWD”. The pinned English token “TWD 1.57M” is not the Dutch wording and was not introduced.
+- ONS TEAM, KANTOREN, “Volledig profiel (in het Engels)” and the four consultation languages were already Dutch. Inquiry copy was not edited.
+
+### Skipped
+- nl-a 24. Q16–Q20 were not promoted to `##` headings, and the U+200B blank lines were not removed. Heading levels, block counts and ZWSP counts are locked to the Korean source. ACCEPTED-ROUND: do not add headings or merge blocks. Same blank-line pattern in 005, 006, 008 and 009 left in place.
+- Hangul in the frontmatter `url` of 008 and 009. Canonical source metadata. Not rewritten.
+
+## Systemic patterns
+
+- Het-word gender (nl-a 15). “haar werkkring” / “is haar niet toegestaan” → zijn/het (001, 2). “noemt men haar soms vestiging” and “zodat zij deze niet aan een derde kan uitgeven” → het (004, 2).
+- Glued “1” in a year phrase (nl-a 16). “het laatste 1 jaar” → “het laatste jaar” (001, 2). Numbers still PASS (source 64 = target 64). “elk volbracht 1 jaar” → “elke anciënniteit van een jaar”; “per 1 jaar 1 maand” → “voor een jaar 1 maand” (008). “een jaar” is in the Dutch lexicon, so the year digit survives. “1 periode van bedrijfsstilstand … een jaar” (002, body and the matching sentence) keeps Korean 1회 as the digit 1 and 1년 as “een jaar”, without restoring “only once”.
+- 條例 called “verordening” (nl-a 26, nl-b 30). “wet inzake industriële innovatie” (004, the article cites and the source-link label). “wet over het pensioen van werknemers” (008). “Wet inzake investeringen door buitenlanders” (013 and the 017 source list). No “verordening” remains next to 條例. 辦法 stays “regeling”.
+- 主體 calqued as “subject” (nl-b 21, and the same coined leftovers in 004). Checklist and body in 011 (“de onderneming”), 018 (“een onderneming nodig”). In 004: table header “Aansprakelijke partij”, “hoedanigheid van de aanvrager”, “bepaalde aanvrager”, “bepaalde aansprakelijke”, “Aan welke onderneming” (5). “rechtssubject” / “onderscheiden rechtssubject” left: that is the Dutch legal term, not the calque.
+- “3e” for a third party (nl-b 36). 003 “een derde (第三人)”, 004 “een derde staat (第三國)” and “een derde (第三人)”, 014 “een derde die kost heeft gedragen”, 016 and 017 “een derde”. “1 keer” for the horn/headlight count in 012 was left; that digit is a real count.
+- “bevestig men” → “bevestigt men” (nl-b 43): 016 and 017.
+- “nieuwkomers” → “nieuwe werknemers” (nl-b 33): the flagged sites including §5 (3).
+- “krachten” as personnel (nl-a 27): the flagged phrases in 004 (personeel/medewerkers).
+- Misplaced Chinese glosses (nl-b 1–3, 7, and 016 “familie (民法)”): removed from the wrong Dutch word. Where the bare sentence then failed the English-stopword check, the gloss was put back on the right noun or the sentence was rephrased. See checker note.
+- English office chrome in a Dutch sentence (nl-a 2): three bio lines (Education, Legal Aid, Senior Paralegal), English proper name kept in parentheses.
+- Blog open and chopped close (nl-a 35, 39; nl-b 31 where a block could be finished without a merge). 008 no longer opens “Ik ben Wei Tseng” / “Vandaag wil ik”. Closing lines in 008 given articles and periods. 009 close no longer says the prepared party is protected. First-person case narration and “de heer B” kept. Wei Tseng stays feminine (“zij”); the male manager and the male client stay male.
+- Pair-split of one role (nl-b 32): “Een medewerker van een Taiwanese bank”.
+
+R2 (Korea as the reader’s law), R3 (court/result softening already in 003), R4 (feminine Wei Tseng already in the pack), R5 chrome, and R9 emergency numbers were already in place. No further instance needed a rewrite. Consultation languages stay Engels, Chinees (中文), Japans, Koreaans. 013’s contact line names those four and still refuses a reply deadline.
+
+## Checker and digits
+
+- 005. The reviewer’s “één persoon” is not counted. The lexicon regex uses ASCII `\b`, and `é` is not a word character, so “één persoon” does not match “een persoon”. Korean 1명 was missing (source 18, target 17). Now “meer dan 1 persoon met een buitenlandse nationaliteit”. Numbers PASS.
+- 011. “het ene stelsel” would drop the digit. Kept “dat men 1 stelsel met een ander verwart”.
+- Removing a gloss can make a long Latin sentence look like English: the checker flags 12+ Latin words with 3 or more of `of` / `in` / `is`. After the gloss fixes, these sentences were adjusted so the file still PASSes:
+  - 001 building rules: two extra “of” conjunctions dropped (“en”, “met”), meaning kept as one combined condition.
+  - 010 settlement sentence: “in eerste aanleg” / “in de pers” → “van de eerste aanleg” / “de persmelding”.
+  - 010 disclaimer: (損害賠償) removed from “rechtsadvies”; “in een fitnesscentrum in Taiwan; het is” → “bij een fitnesscentrum op Taiwan; het vormt”.
+  - 010 limitation sentence: (民法) moved from “feiten” onto “het toepasselijke burgerlijk recht (民法)”.
+  - 010 article 51: (消費者保護法) moved from “bewijzen” into the statute link label. URL unchanged.
+  - 011 data-handover sentence: (化粧品) removed from “dienstverlener”; “is … in … of … of” reduced to one “in” and one “of”.
+  - 014 internal-training sentence: “of … of” reduced, and “Indien intern personeel heeft opgeleid” completed to “Heeft intern personeel de opleiding verzorgd”.
+  - 016 debt sentence: second “is” dropped (“het omvat ook het in kaart brengen”).
+  - 016 disclaimer: (民法) moved from “familie” onto “het burgerlijk recht van Taiwan (民法)”.
+
+## Reviewer points not followed
+
+- nl-b 27. “alsook de rijstrookwissel” would attach the lane change to “ontbraken” (the signals were missing). The English says the expert report considered the lane change, the road and the other evidence. Applied a verb instead: “en nam ook de rijstrookwissel van voertuig nr. 2, de structuur van de weg en de rijstroken en de overige veiliggestelde bewijzen in aanmerking.”
+- nl-b 28. “laat dan een reactie achter” invites a comment. R7 forbids that. The line names the contact page and the four consultation languages and says “Een antwoordtermijn wordt niet toegezegd.”
+- nl-b 20 and nl-a 6, the accented “één” / “het ene” forms. See the checker note. The meaning (more than one foreign national; do not confuse one system with another) is kept.
+- nl-a 24 and the U+200B blanks are not a Dutch-only defect. Promoting Q16–Q20 would change heading levels against the Korean source.
+- nl-a 36’s request to delete the Moeilijkheid row, and nl-b 31’s request to merge the clause paragraphs. Both would change the block structure the checker pins. Wording was repaired inside the existing blocks.
+- “rechtssubject” is not the 主體 calque. It was not rewritten.
+- 008 “beste/hoogste resultaat” is a fact about employee B, not a firm superlative. Left.
+- 015 “zonder kosten” is the Taipei government inquiry, not a free consultation. Left.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nl --lang nl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=110
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+That 25 is the run before this log existed. It counts the 22 edited source files plus the pre-existing `WO-F-nl.txt`, `nl-a.md` and `nl-b.md`. A scratch helper `.tmp-nl/apply_nl_r1.py` was removed before this count. Re-running only `git status --short | wc -l` after the file was written prints `26` (this log, untracked). No test pinned a Dutch string that changed, so no test file was edited.

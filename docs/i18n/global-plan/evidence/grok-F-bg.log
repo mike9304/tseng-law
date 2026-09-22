@@ -1,0 +1,92 @@
+WO-F-bg — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-bg-20260922
+date: 2026-09-22
+scope: Bulgarian guidance pack + columns-bg 001–018. No commit.
+
+Button labels left for the supervisor's ColumnsGrid sync
+- mega.*.viewAllLabel: Покажете всички
+- home.columnsReadMoreLabel: Прочетете още
+- nav.disclaimer (14-character cap): Правна бележка
+- disclaimer page eyebrow: ПРАВНА БЕЛЕЖКА
+ColumnsGrid.tsx still has bg: 'Прочети още'. Not edited (outside this lane). The component test that renders the grid CTA against columnsReadMoreLabel therefore fails until that copy is synced. The required vitest paths below do not include it.
+
+## Rows applied
+Part a P1: a#1–a#6 as written (llms four denials; data-processing sentence; "темата е налична"; 009 самоволно → по собствено желание including the title and the 014 link; 008 phone recording; 007 filing sentence).
+Part a P2: a#7, a#8, a#10–a#22, a#24–a#28, a#30–a#35, a#37, a#39, a#41–a#45.
+Part b P1: b#1–b#8.
+Part b P2: b#10–b#39.
+R12 role/institution lines in the bg team bios (paralegal, ministry legal-affairs division, legal-aid Taichung branch, Korea operations manager, partner CPA). Latin firm names kept. "TWD 1.57M" byte-identical.
+R13: 007 already names ROC year 112 with the Chinese gloss; no Gregorian digit added.
+R15: 008 "OOO" → "[име]".
+R17: no leftover Russian paragraphs (checker langid PASS).
+R2: 005 Korea bank answer framed as an example; investor from another country checks the bank at home. 006 Korean massage prison terms kept as a labelled Korea example.
+R8 sweeps that were the same pattern as a flagged row: 營業稅, 戶籍, 最低服務年限, 工作規則, 失能, 勞工退休金條例, investment relationship vs capital ratio, 在臺營運資金.
+
+## Rows skipped or modified
+- a#23 and any reformat of "TWD 1.57M": skipped. Test-pinned; R12/ACCEPTED.
+- a#29 and b#9 (space thousands, amount before the code): skipped. ACCEPTED and R14 require the dot ("500.000"). A space ("500 000") fails the checker. Existing "TWD 500.000" / "TWD 1.579.589" left as-is. Decimal comma already used ("0,5 месеца").
+- a#9 nav wording: "Отказ от отговорност" is 20 characters. nav.* is capped at 14. Used "Правна бележка" (14) and the eyebrow "ПРАВНА БЕЛЕЖКА".
+- a#22: Latin "National Taiwan University" kept (R12). Bulgarian gloss added beside it on the about page, the about FAQ, and the degree line.
+- a#36: not converted to "От практиката на кантората". ACCEPTED says the feminine narrator is already right (R4). The sentence stays "От практиката си съм забелязала". Q16–Q20 became "Въпрос 16." … "Въпрос 20." A bare "16. " at line start is an ordered-list marker and would change the block count.
+- a#38: did not write "инвеститор от България" (R2: no law of the reader's country). Wrote "инвеститор от друга държава проверява банката в своята държава".
+- a#40: did not replace the Korea prison sentences with a sentence that drops 3 and 5. Checker counts those digits. Both sentences stay, marked as a Korea example, not a rule for other countries.
+- b#1 wording: "Обезщетение с наказателен характер (懲罰性賠償金)" (reviewer's sentence). Did not use the criminal adjective "наказателно".
+- b#18: the comma-ended paragraph in 013 was closed with a period and the next paragraph starts "По-долу…". Blocks were not merged.
+- Frontmatter url: with Hangul (008, 009): skipped (R16).
+- Column 012: no finding row; not edited.
+
+## Systemic patterns and instance counts
+- съпровожда / съпровождаме (lawyer "escorts" the client): 4 (home, services investors, about Wei Tseng, plus the home "съпровождаме").
+- изходен/изходният текст and изходна страница (original text, not case outcome): 8 in the guidance pack, 3 in the inquiry copy, 1 in llms.txt. "Изходът на делото" and "изходна точка" left (those are outcome / starting point).
+- още нужните документи: 1. особено указание → изрично указание: 1.
+- ти-form buttons: 5× "Покажи всички" → "Покажете всички"; 1× "Прочети още" → "Прочетете още".
+- 營業稅 "данък върху оборота" → "данък върху добавената стойност" (supervisor term, not the reviewer's "данък върху стопанската дейност" and not the repealed turnover tax): 001 ×3, 002 ×4, 004 ×5, including the link label. URLs unchanged.
+- самоволно напускане → напускане по собствено желание: 009 title, h1, and two body sentences; 014 link label.
+- минимален срок на служба → минимален срок на работа: 29, plus 8 "отслужен" → "изработен" in 014. Gloss 最低服務年限 kept where it already stood.
+- 戶籍 → адресна регистрация по домакинство (戶籍): guidance pack 1, 007 1, 016 the slash forms and the checklist line, 017 ×3. Ordinary "местоживеене" (residence) was not renamed.
+- носене на правата → упражняване на правата и понасяне на задълженията: guidance 1, 007 ×4, 016 ×2.
+- еднообразно / единообразно calques: 002 ×2, 014 ×1, 018 ×1.
+- 014 vesting "отнася" (кога тя му се отнася, моментът/условията/поетапно отнасяне, окончателно се отнася): 7. "сумата, отнасяна към всеки работник" left (that one means allocated).
+- 017 營業執照 → лиценз за извършване на дейността, with the article fixed after "на" (лиценза). 借牌 → заемане на чужд лиценз или чужда табела. 8/5 единици → товарни автомобила. спедиция gloss → превозно посредничество.
+- 018 share-company "100 % от дяловете" and "оборот на дялове" in that paragraph only → акции. The LLC paragraph still says дялове.
+
+## §Verify
+Commands run with PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin. This worktree had no node_modules and the disk was full (npm ci hit ENOSPC; the partial install was deleted). The checker, tsc, and vitest were run through a temporary symlink to /Users/son7/Projects/tseng-law-fix-fa-20260922/node_modules. The symlink was removed after the run.
+
+node scripts/check-column-translation.mjs --dir src/content/columns-bg --lang bg 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=95
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-bg src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+
+(The count 24 is before this log file. Column 012 is unchanged. No other locale's strings were edited.)
+
+## Reviewer points not applied, because they look wrong or conflict with a higher rule
+- Thousands separator and "500 000 TWD": Bulgarian print style often uses a space, but R14 and the checker accept only the dot for bg. Applying the suggested spaces would fail numbers.
+- "TWD 1.57M" → "1,57 млн. TWD": pinned. Skipped.
+- "данък върху стопанската дейност" for 營業稅: the supervisor's term is "данък върху добавената стойност (營業稅)".
+- "органа по домакинска регистрация" for 戶籍: the supervisor's one term is "адресна регистрация по домакинство (戶籍)".
+- "майчино дружество": this is the ordinary Bulgarian company-law term for a parent company, not a literal "the mother". Left it.
+- "изходна точка" and "Изходът на делото": ordinary Bulgarian. Only "изходен текст" (Originaltext) was the calque.
+- "уговорка" inside 004 and 007 where it glosses a contractual proviso or 但書: that meaning is correct. Only the disclaimer nav label was the wrong word.
+- a#36 impersonal "От практиката на кантората": would drop the feminine first person the supervisor said is already right.
+- a#40's replacement sentence would delete the digits 3 and 5.
+- a#38's "инвеститор от България" would state the reader's country. Neutral wording used instead.
+- Leading "16." for the Q headings would be parsed as a markdown list.

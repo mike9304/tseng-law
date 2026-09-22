@@ -931,7 +931,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'تائیوان میں منتظم وکیلہ (Managing Attorney)',
       'chang-rongxuan': 'تائیوان وکیل (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'قانونی معاون (Paralegal)',
       'son-jungmin': 'کوریا آپریشنز کی قیادت (Korea Operations Manager)',
       'huang-shengping': 'شراکت دار محاسب (Partner CPA)',
     },
@@ -3598,47 +3598,47 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'دفتر تائیوان میں کاروباروں اور افراد کے معاملات کا انگریزی، جاپانی، کوریائی اور چینی میں کام کرتا ہے۔',
-        'انہوں نے جم میں لگی چوٹ کے ہرجانے کے ایک دعوے میں کوریائی طالب علم کی نمائندگی کی اور پہلی سماعت کی عدالت سے TWD 1.57M کا فیصلہ دلایا۔',
+        'انہوں نے جم میں لگی چوٹ کے ہرجانے کے ایک دعوے میں کوریائی طالب علم کی نمائندگی کی اور ابتدائی عدالت (پہلی سماعت کی سطح) سے TWD 1.57M کا فیصلہ دلایا۔',
       ],
       education: [
         'ماسٹر (M.S.)، Institute of Finance, National Taiwan University',
-        'بیچلر (B.A.) قانون اور مالیات کے دوہرے راستے کے ساتھ، National Chengchi University',
+        'بیچلر (B.A.) قانون اور مالیات کی دوہری تعلیم کے ساتھ، National Chengchi University',
         'Kobe University اور Waseda University میں تبادلے کی طالبہ',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'قانونی امداد فاؤنڈیشن، تائچونگ شاخ (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'پہلے Ministry of Education, Legal Affairs Division میں، انتظامی اور دیوانی معاملات پر توجہ کے ساتھ۔',
+        'پہلے وزارتِ تعلیم کے قانونی امور کے شعبے (Ministry of Education, Legal Affairs Division) میں، انتظامی اور دیوانی معاملات پر توجہ کے ساتھ۔',
         'یونیورسٹیوں، تدریسی عملے کے حقوق اور انتظامی اپیلوں سے جڑے معاملات کا تجربہ۔',
       ],
       education: ['قانون میں بیچلر (LL.B.)، National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'وزارتِ تعلیم، قانونی امور کا شعبہ (Ministry of Education, Legal Affairs Division)',
         'وکیل، Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal جنہوں نے کئی دفاتر میں سینئر paralegal کے طور پر طویل عرصہ کام کیا، طریقہ کار کی مدد، کمپنی قانون اور غیر ملکی سرمایہ کاری کے لیے ذمہ دار۔',
+        'قانونی معاون (Paralegal) جنہوں نے کئی دفاتر میں سینئر قانونی معاون کے طور پر طویل عرصہ کام کیا، طریقہ کار کی معاونت، کمپنی قانون اور غیر ملکی سرمایہ کاری کے لیے ذمہ دار۔',
         'کارروائی، کمپنی کا قیام، غیر ملکی سرمایہ کاری کی اجازت، لائسنس کی درخواستیں اور کوریا و تائیوان کے درمیان تبادلے میں مدد۔',
       ],
       education: ['قانون میں بیچلر (LL.B.)، Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'سینئر قانونی معاون، Boyin Law Firm',
+        'سینئر قانونی معاون، Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'کوریا سے آئے موکلوں کے مشورے کے وقت اور رابطے کا ہم آہنگ کرتے ہیں۔',
-        'معلوماتی سائنس کی بنیاد پر دستاویزی نظاموں اور کام کے بہاؤ سے شعبوں کے درمیان تبادلے کی حمایت کرتے ہیں۔',
+        'کمپیوٹر سائنس کی بنیاد پر دستاویزی نظاموں اور کام کے سلسلے سے شعبوں کے درمیان تبادلے کی معاونت کرتے ہیں۔',
       ],
-      education: ['بیچلر (B.S.) معلوماتی سائنس، National Cheng Kung University'],
+      education: ['بیچلر (B.S.) کمپیوٹر سائنس، National Cheng Kung University'],
       experience: ['کوریا آپریشنز کا شعبہ، Hovering International Law Firm'],
     },
     'huang-shengping': {

@@ -1500,7 +1500,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
   ur: {
     officeLabel: 'دفاتر',
     officeQuickLinksLabel: 'دفاتر کے فوری روابط',
-    followLabel: 'پیروی کریں',
+    followLabel: 'فالو کریں',
     blogLabel: 'بلاگ',
     websiteLabel: 'سرکاری ویب سائٹ',
     sitemapLabel: 'سائٹ کا نقشہ',

@@ -138,7 +138,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Manželstvo, rodina a dedenie',
           paragraphs: [
-            'Vedeme rozvod (離婚), vysporiadanie majetku, výkon a prevzatie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie záznamov evidencie obyvateľov (戶籍), formy listín a ich preukaznosti na Taiwane.',
+            'Vedeme rozvod (離婚), vysporiadanie majetku, výkon a nesenie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie záznamov evidencie obyvateľov (戶籍), formy listín a ich preukaznosti na Taiwane.',
             'Pretože rodinné veci so sebou často nesú lehoty a súbežné konania, prvé zhrnutie by malo uviesť vzťah medzi stranami, súčasné bydlisko a už prebiehajúce konania.',
           ],
         },
@@ -198,7 +198,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Keď nás oslovíte',
           paragraphs: [
-            'Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom s Vami preberie možný rozsah práce, dokumenty, ktoré sú ešte potrebné, a ďalšie kroky. Pri daňových alebo účtovných otázkach môže kancelária postupovať v jednom spoločnom postupe s účtovným úsekom.',
+            'Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom s Vami preberie možný rozsah práce, dokumenty, ktoré sú ešte potrebné, a ďalšie kroky. Pri daňových alebo účtovných otázkach môže kancelária postupovať spoločne s účtovným úsekom.',
             'Výsledok každej veci závisí od skutkového stavu a od dostupných dokumentov; výsledok nesľubujeme. Ak potrebujete záväznú odpoveď pre svoju situáciu, dokumenty treba prebrať s advokátkou alebo advokátom v niektorom zo štyroch jazykov konzultácie.',
           ],
         },

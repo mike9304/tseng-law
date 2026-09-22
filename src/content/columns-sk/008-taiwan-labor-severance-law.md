@@ -13,7 +13,7 @@ faq:
   - q: "Musí spoločnosť vyplatiť odstupné aj pri kárnom prepustení?"
     a: "Nie. Ak sa zamestnanec dopustí protiprávneho činu, poruší pracovný poriadok (工作規則), alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (článok 12 zákona o pracovných normách, 勞動基準法第12條), môže ho spoločnosť prepustiť bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Naproti tomu hospodárske prepustenie (článok 11) vyžaduje predchádzajúcu výpoveď a výplatu odstupného."
   - q: "Ako sa na Taiwane odstupné počíta?"
-    a: "Za každý dokončený 1 rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemernej mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za 1 rok vypláca 1 mesiac priemernej mzdy, bez stropu."
+    a: "Za každý dokončený jeden rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemernej mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu."
 ---
 
 # Pracovné právo na Taiwane: je odstupné na Taiwane naozaj ťažké získať?
@@ -58,11 +58,11 @@ Nasledujúca tabuľka to zhŕňa.
 | Predchádzajúca výpoveď | Vyžaduje sa | Nevyžaduje sa | Vyžaduje sa |
 | Náročnosť | Ľahká | Ťažká | Ľahká |
 | Či spoločnosť musí vyplatiť odstupné (資遣費) | Vyžaduje sa | Nevyžaduje sa | Nevyžaduje sa |
-|  | Taiwanský zákon o pracovných normách, článok 11 (勞動基準法第11條): Ak nenastane jeden z nasledujúcich prípadov, zamestnávateľ nemôže ukončiť pracovnú zmluvu ani po predchádzajúcom oznámení zamestnancovi.  1. Zastavenie činnosti (歇業) alebo prevod podniku (轉讓)  2. Straty (虧損) alebo obmedzenie činnosti (業務緊縮)  3. Vyššia moc vyžaduje prerušenie činnosti na 1 mesiac alebo dlhšie  4. Povaha činnosti vyžaduje zníženie personálu a prepusteného nemožno preradiť na iné vhodné miesto  5. Určený zamestnanec nemôže uspokojivo vykonávať prácu, ktorú miesto vyžaduje | Taiwanský zákon o pracovných normách, článok 12 (勞動基準法第12條): Zamestnávateľ môže prepustiť bez predchádzajúceho oznámenia, ak zamestnanec spadá do jedného z nasledujúcich prípadov.  1. Kto pri uzatváraní pracovnej zmluvy uvedie nepravdivé údaje, uvedie zamestnávateľa do omylu a vystaví podnik riziku škody  2. Kto použije násilie alebo ťažko urazí zamestnávateľa, jeho rodinu, jeho zástupcu (代理人) alebo iných spolupracovníkov  3. Koho právoplatne odsúdili na trest odňatia slobody na dobu určitú (有期徒刑) alebo na prísnejší trest, bez podmienečného odkladu výkonu trestu (緩刑) a bez povolenia premeny na peňažný trest (易科罰金)  4. Závažné porušenie pracovnej zmluvy alebo pracovného poriadku  5. Kto úmyselne spotrebuje stroje, nástroje, suroviny, výrobky alebo iný majetok zamestnávateľa, alebo úmyselne vyzradí technické a obchodné tajomstvo zamestnávateľa a spôsobí zamestnávateľovi škodu  6. Neospravedlnená absencia (曠工) bez oprávneného dôvodu 3 dni po sebe, alebo 6 dní alebo viac v mesiaci |  |
+|  | Taiwanský zákon o pracovných normách, článok 11 (勞動基準法第11條): Ak nenastane jeden z nasledujúcich prípadov, zamestnávateľ nemôže ukončiť pracovnú zmluvu ani po predchádzajúcom oznámení zamestnancovi.  1. Zastavenie činnosti (歇業) alebo prevod podniku (轉讓)  2. Straty (虧損) alebo obmedzenie činnosti (業務緊縮)  3. Vyššia moc vyžaduje prerušenie činnosti na jeden mesiac alebo dlhšie  4. Povaha činnosti vyžaduje zníženie personálu a prepusteného nemožno preradiť na iné vhodné miesto  5. Určený zamestnanec nemôže uspokojivo vykonávať prácu, ktorú miesto vyžaduje | Taiwanský zákon o pracovných normách, článok 12 (勞動基準法第12條): Zamestnávateľ môže prepustiť bez predchádzajúceho oznámenia, ak zamestnanec spadá do jedného z nasledujúcich prípadov.  1. Kto pri uzatváraní pracovnej zmluvy uvedie nepravdivé údaje, uvedie zamestnávateľa do omylu a vystaví podnik riziku škody  2. Kto použije násilie alebo ťažko urazí zamestnávateľa, jeho rodinu, jeho zástupcu (代理人) alebo iných spolupracovníkov  3. Koho právoplatne odsúdili na trest odňatia slobody na dobu určitú (有期徒刑) alebo na prísnejší trest, bez podmienečného odkladu výkonu trestu (緩刑) a bez povolenia premeny na peňažný trest (易科罰金)  4. Závažné porušenie pracovnej zmluvy alebo pracovného poriadku  5. Kto úmyselne spotrebuje stroje, nástroje, suroviny, výrobky alebo iný majetok zamestnávateľa, alebo úmyselne vyzradí technické a obchodné tajomstvo zamestnávateľa a spôsobí zamestnávateľovi škodu  6. Neospravedlnená absencia (曠工) bez oprávneného dôvodu 3 dni po sebe, alebo 6 dní alebo viac v mesiaci |  |
 
-> Na Taiwane musí zamestnávateľ za každý dokončený 1 rok praxe (年資)
+> Na Taiwane musí zamestnávateľ za každý dokončený jeden rok praxe (年資)
 > vyplatiť 0,5 mesiaca priemernej mzdy (平均工資) ako odstupné.
-> (najviac 6 mesiacov mzdy) Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za 1 rok vypláca 1 mesiac priemernej mzdy, bez stropu.
+> (najviac 6 mesiacov mzdy) Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
 
 ​
 
@@ -78,7 +78,7 @@ a vedú zamestnanca k vlastnému odchodu.
 
 Zamestnanci musia byť opatrní
 
-a dávať pozor, aby do takého zámeru spoločnosti nepadli.
+a dávať pozor, aby do takého postupu nepadli.
 
 ​
 

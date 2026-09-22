@@ -45,9 +45,9 @@ Názvy tlačových správ, internetových príspevkov a právnych komentárov k 
 
 [Príspevok na PTT: kórejský vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu 90 kg… v 1. inštancii príkaz posilňovni zaplatiť 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blog: úraz mŕtvym ťahom 90 kg u kórejského vysokoškolského študenta o hmotnosti 70 kg a náhrada cez 1.000.000 TWD… bola vina posilňovne? Aký je postoj (心態) cvičiacej osoby?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blog: úraz mŕtvym ťahom 90 kg u kórejského vysokoškolského študenta o hmotnosti 70 kg a náhrada cez 1.000.000 TWD… bola vina posilňovne? Aké je zmýšľanie (心態) osoby, ktorá cvičí?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blog: úraz mŕtvym ťahom 90 kg u kórejského vysokoškolského študenta o hmotnosti 70 kg a náhrada cez 1.000.000 TWD… bola vina posilňovne? Aký je postoj (心態) cvičiacej osoby?](https://blog.udn.com/blackjack/179081715)
+[Blog: úraz mŕtvym ťahom 90 kg u kórejského vysokoškolského študenta o hmotnosti 70 kg a náhrada cez 1.000.000 TWD… bola vina posilňovne? Aké je zmýšľanie (心態) osoby, ktorá cvičí?](https://blog.udn.com/blackjack/179081715)
 
 ![Právny komentár: vysokoškolský študent, prasknutie medzistavcovej platničky pri mŕtvom ťahu… v 1. inštancii príkaz známej posilňovni zaplatiť 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
@@ -61,15 +61,15 @@ Názvy tlačových správ, internetových príspevkov a právnych komentárov k 
 
 **Došlo u kórejského vysokoškolského študenta k prasknutiu medzistavcovej platničky, keď pri osobnom tréningu vykonával mŕtvy ťah 90 kg?**
 
-Praktický význam tejto veci spočíva v tom, že ukazuje, že zodpovednosť sa neurčuje hneď samotnou skutočnosťou, že k úrazu došlo v posilňovni. Obsah povinnosti bezpečnosti (安全義務), ktorá zaťažuje poskytovateľa služby, konkrétny akt pokynu a porušenie povinnosti starostlivosti (注意義務), príčinná súvislosť medzi úrazom a konaním a rozsah škody sa posudzujú podľa dokumentov každej veci. Predpoklady a lehoty trestného konania a občianskeho konania sú takisto odlišné, preto treba hneď od začiatku viesť podklady trestného a občianskeho postupu oddelene.
+Praktický význam tejto veci spočíva v tom, že ukazuje, že zodpovednosť sa neurčuje hneď samotnou skutočnosťou, že k úrazu došlo v posilňovni. Obsah povinnosti bezpečnosti (安全義務), ktorá zaťažuje poskytovateľa služby, konkrétny pokyn a porušenie povinnosti starostlivosti (注意義務), príčinná súvislosť medzi úrazom a konaním a rozsah škody sa posudzujú podľa dokumentov každej veci. Predpoklady a lehoty trestného konania a občianskeho konania sú takisto odlišné, preto treba hneď od začiatku viesť podklady trestného a občianskeho postupu oddelene.
 
 Nižšie uvedené je všeobecná informácia na vysvetlenie sporov o úraz v posilňovni na Taiwane; nie je právnym stanoviskom ku konkrétnej veci. Skutočné práva a spôsob postupu sa môžu líšiť podľa zmluvného vzťahu, okolností nehody, príčiny a stupňa úrazu, konania strán, podmienok poistky, zabezpečených dôkazov a rozhodného práva.
 
 ## 1. Po úraze v posilňovni na Taiwane, aké právne postupy možno posúdiť?
 
-[Článok 7 taiwanského zákona o ochrane spotrebiteľa (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že keď podnik poskytuje službu, musí zabezpečiť, aby táto služba mala bezpečnosť, ktorú možno rozumne očakávať podľa odborného alebo technického meradla v okamihu poskytnutia.
+[Článok 7 taiwanského zákona o ochrane spotrebiteľa (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že keď podnik poskytuje službu, musí zabezpečiť, aby táto služba mala bezpečnosť, ktorú možno rozumne očakávať podľa odborných alebo technických noriem platných v čase poskytnutia.
 
-To neznamená, že zodpovednosť podniku alebo trénera je uznaná zakaždým, keď k úrazu dôjde v posilňovni. Treba posudzovať vec po veci, aká konkrétna povinnosť starostlivosti existovala, či bola porušená, či je príčinná súvislosť medzi porušením a úrazom, či vznikla skutočná škoda, aké námietky má protistrana a či existuje dôkaz podopierajúci každé tvrdenie a každú námietku.
+To neznamená, že zodpovednosť podniku alebo trénera je uznaná zakaždým, keď k úrazu dôjde v posilňovni. Treba posudzovať vec po veci, aká konkrétna povinnosť starostlivosti existovala, či bola porušená, či je príčinná súvislosť medzi porušením a úrazom, či vznikla skutočná škoda, aké námietky má protistrana a či existuje dôkaz, ktorý dokladá každé tvrdenie a každú námietku.
 
 Ak sú splnené zákonné znaky trestného činu ublíženia na zdraví z nedbanlivosti (過失傷害), možno posúdiť trestné oznámenie (告訴). Možno tiež posúdiť občiansky nárok na náhradu škody, avšak ktorý právny základ sa uplatní — zmluvná zodpovednosť, delikt (侵權行為) alebo ochrana spotrebiteľa — i rozsah zodpovednosti sa líši podľa konkrétnych skutkových okolností. To, že pri jednej nehode možno posúdiť viacero postupov, neznamená, že ich treba všetky podstúpiť, ani že úspech jednej zo strán je vopred daný.
 
@@ -79,7 +79,7 @@ Podľa [článku 287 taiwanského trestného zákona (刑法)](https://law.moj.g
 
 Právo žiadať náhradu škody z deliktu podľa [článku 197 taiwanského občianskeho zákonníka (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) zaniká zásadne, ak nie je uplatnené do 2 rokov od okamihu, keď sa poškodený dozvedel o škode i o osobe povinnej na náhradu, a zaniká tiež, keď od deliktu uplynulo 10 rokov.
 
-Ak však prichádza do úvahy ďalší dôvod nároku, ako zmluvná zodpovednosť, alebo ak sa uplatnia odlišné pravidlá o začiatku behu, priebehu, prerušení a podobne, môže sa líšiť podľa skutkových okolností. Lehotu nemožno určovať len podľa dátumu nehody alebo diagnózy; spoľahlivejšie je včas a jednotlivo overiť možné základy nároku a referenčné dátumy.
+Ak však prichádza do úvahy ďalší dôvod nároku, ako zmluvná zodpovednosť, alebo ak sa uplatnia odlišné pravidlá o začiatku behu, priebehu, prerušení a podobne, môže sa líšiť podľa skutkových okolností. Lehotu nemožno určovať len podľa dátumu nehody alebo diagnózy; spoľahlivejšie je včas a jednotlivo overiť každý možný základ nároku a deň, od ktorého mu začína plynúť lehota.
 
 ## 3. Hneď po nehode, aké dôkazy treba zachovať a ako?
 

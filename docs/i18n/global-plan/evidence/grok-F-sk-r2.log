@@ -1,0 +1,130 @@
+# WO-F-sk round 2 — Slovak fix lane (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-sk-r2
+No git add/commit/push.
+Slovak strings only. No test file needed updating (vitest 3202 passed; no pinned Slovak string was rewritten).
+TWD 1.57M left byte-identical. Frontmatter url values left untouched (Hangul slugs in 008 and 009 stay).
+Dot thousands left as 500.000 (R14). U+200B counts left matching the Korean source.
+
+R2–R11 and R12–R17 were already in the round-1 Slovak pack (Korea only as a labelled example, feminine Wei Tseng, consultation lock negative, NÁŠ TÍM / SÍDLA / Úplný profil (v angličtine), paralegal already „právna asistentka“, ROC glosses, Taiwan 119/110/112, no Czech paragraphs). This round applied the r2 review rows and the sweeps those verdicts describe.
+
+## Rows applied
+
+sk-a 22/27, sk-b 27/29. Total applied 49 / 56.
+
+sk-a
+2 APPLIED  guidance 負擔 „prevzatie“ → „nesenie“ (007 already had nesenie). „prevzatie práce“ left (that is taking the work on).
+3 APPLIED  llms discoveryNotice „zaštítanie“ → „záštitu“. Literal token `llms.txt` kept. consultationNotice and confidentialNotice were not rewritten.
+4 APPLIED  001 „priebeh a jazyky“ → „prax a jazyky“; „skutočná funkcia, priebeh a predložené listiny“ → „prax“.
+5 APPLIED  002 股份有限公司 quorum: „prítomní spoločníci“ → „prítomní akcionári“ (6). Digit form „2/3“ kept („dve tretiny“ would drop 3; „tretiny“ is not in the small lexicon).
+6 APPLIED  004 有限公司 „Akcionári/akcionári zneužívajú/akcionár … poskytli“ → spoločníci, with singular agreement on the guarantee sentence (row 18). Later „Spoločníci spoločnosti s ručením obmedzeným“. 股份有限公司 akcionári left.
+7 APPLIED  004 „môže ísť so súhlasom“ → „môže vyžadovať súhlas…“.
+9 APPLIED  005 Q&A now says advokátka Wei Tseng (曾雋崴) prepared it.
+10 APPLIED  005 „taiwanské doláre“ / „v taiwanských dolároch“ → „nové/nových taiwanské/taiwanských doláre/dolároch“. Same gloss sweep in 011 ×2 („nových taiwanských dolárov“).
+11 APPLIED  008 „zámeru spoločnosti“ → „postupu“.
+12 APPLIED  009 close is now the English „prepares in advance“ sentence.
+13 APPLIED  009 the party who terminates first is the subject of the severance sentence. Preceding lines kept.
+14 APPLIED  001 „všetkých 4 typov … uvedených“ → „všetky 4 typy … uvedené“. Digit 4 kept („štyri“ is not in the lexicon).
+15 APPLIED  002 the hanging „a každé z nich vyžaduje“ (FAQ with the 股利 gloss, and the body).
+16 APPLIED  004 withholding list: „treba potvrdiť osobitne“. „skutočnú súvislosť“ kept.
+17 APPLIED  004 the „že“ clause now closes; „z materskej spoločnosti“ has an antecedent.
+18 APPLIED  inside row 6: „poskytol“ / „zúčastnil“.
+19 APPLIED  004 the scenario-table genitive chain, commas removed.
+20 APPLIED  006 clitic „sa“ in second position.
+21 APPLIED  glued „1 rok“ / „1 mesiac“ → „jeden rok“ / „jeden mesiac“ where the lexicon has that form. 14 year phrases (001 ×4, 002 ×2, 008 ×4 including „za jeden rok“ and „dokončený jeden rok“, 013 ×1, 014 ×2, 017 ×1) and 6 month phrases (002 ×2, 008 ×3, 013 ×1). „presiahne 1 osobu“, „do 1 roku“ and „do 1 mesiaca“ kept: „jednu“ / „jedného“ are not in the lexicon, so dropping the digit fails numbers.
+23 APPLIED  guidance „postupovať v jednom spoločnom postupe“ → „postupovať spoločne“.
+24 APPLIED  004 „nie je uistením“ → „nie je zárukou“. The sentence stays negative.
+25 APPLIED  004 the appointment enables the foreign company to act; „zariadenie“ removed.
+
+sk-b
+1 APPLIED  017 Kinmen or Lienchiang (FAQ + body, and the shorter section-2 repeat). Amounts unchanged. The „meradlo Ťin-menu a …“ line became „prah pre Ťin-men alebo Lien-ťiang“.
+2 APPLIED  010 „postoj (心態)“ → „zmýšľanie (心態)“ (image alt and the link). Gloss kept.
+3 APPLIED  010 the day the limitation period starts.
+4 APPLIED  011 manufacturer’s/importer’s address in článku 7 odseku 1 bode 7 (digits kept).
+5 APPLIED  012 this case’s result, not „v niektorých veciach“.
+6 APPLIED  012 compliance does not guarantee a particular later outcome. The negation stays.
+7 APPLIED  014 training-and-time facts „ovplyvňujú posúdenie“; they are not called documents.
+8 APPLIED  014 the length of the period does not by itself decide the outcome. The following „treba overiť…“ clause stays in the same block.
+9 APPLIED  016 „položky“ → „otázke“.
+10 APPLIED  016 a Taiwan determination „uznané“ at the situs.
+11 APPLIED  018 „vznikajúcom trhu“ → „zápis do režimu vznikajúcich akcií (興櫃)“.
+13 APPLIED  016 record the purpose and basis of each expenditure.
+14 APPLIED  010 „akt pokynu“ → „pokyn“.
+15 APPLIED  „podopierať“ → „dokladať“: 010 ×1 and 004 transfer-pricing „Listiny, ktoré dokladajú“.
+16 APPLIED  010 technical standard → „odborných alebo technických noriem“. Same calque swept (see systemic).
+17 APPLIED  011 giveaways and trials go into the registration calendar.
+18 APPLIED  011 a measure when a safety issue is found is distinguished from a request to supplement documents.
+19 APPLIED  012 „ľavý/pravý blinker“ → „ľavú/pravú smerovku“.
+20 APPLIED  015 the three quoted lines are each a full sentence now. They were not merged (block count is pinned). Other one-clause lines in 013 were left, apart from the glued-digit sweep.
+21 APPLIED  014 „výplatnom rozpise“ → „výplatnej páske“.
+22 APPLIED  014 „cieľovému miestu“ → „miestom, na ktorom sa má uplatniť“.
+23 APPLIED  014 „technickosťou“ → „odbornými alebo technickými zručnosťami“.
+24 APPLIED  016 „poradím 1“ → „v 1. poradí zákonného dedenia“ (FAQ + body). „prvom“ is not in the lexicon, so the digit stays.
+25 APPLIED  016 „na ochranu osobnosti a majetkových záujmov dieťaťa“.
+26 APPLIED  016 the dangling „medzi iným obsahom“ dropped. „môžu zahŕňať“ still marks an open list.
+27 APPLIED  016 „ustaví“ → „splní“, and the object is the inheritance.
+28 APPLIED  018 „100 zamestnancov prihlásených v poistení pracovníkov (勞工保險)“. The number is unchanged.
+
+## Rows skipped
+
+sk-a 1  SKIP  Hangul in frontmatter `url` (008 and 009). The row itself says not to edit `url`. R16 / ACCEPTED-ROUND. Not rendered.
+sk-a 8  SKIP  Parenthetical „článok 10“ → „článok 3“. English and Korean both say article 10 on this link; the URL `flno=3` is the same in the source. The visible label already names article 3 of 各類所得扣繳率標準. Changing 10 to 3 makes numbers FAIL (missing 10, extra 3).
+sk-a 22 SKIP  Delete U+200B and join Q16–Q20 (and 005, 006, 008, 009) into ordinary paragraphs. Heading levels, block counts and the ZWSP count are compared to the Korean source.
+sk-a 26 SKIP  Bio figure „TWD 1.57M“ is pinned byte-identical. „1,57 mil. TWD“ is not that string.
+sk-a 27 SKIP  Space thousands separators and the paired „500 000 TWD“ form. ACCEPTED-ROUND: the checker cannot parse spaces. Slovak style in the checker is `dot` (`500.000`). Dot grouping and „TWD“ before the figure were left.
+sk-b 12 SKIP  Delete U+200B in 013/015. Same ZWSP pin as sk-a 22. The sentence on that line was left; the trailing zero-width space stays.
+sk-b 29 SKIP  Same as sk-a 27 („1 579 589 TWD“ and the other space-grouped amounts, including 010, 011, 017, 018).
+
+## Systemic patterns and how many instances changed
+
+- Dot thousands / „TWD“ before the amount / pinned „TWD 1.57M“ (sk-a and sk-b verdicts): 0 changed.
+- U+200B blank lines and Hangul `url`: 0 changed.
+- 有限公司 given akcionári / 股份有限公司 given spoločníci: 002 quorum 6 sites; 004 limited-company paragraph rewritten (opening, abuse, guarantee) plus the later „Spoločníci spoločnosti s ručením obmedzeným“ sentence.
+- Glued numeral in a time phrase: 20 replaced with „jeden“ (14 × rok, 6 × mesiac). 3 kept as digits („1 osobu“, „do 1 roku“, „do 1 mesiaca“) because the inflected form is not in the lexicon.
+- „meradlo“ for a standard or threshold: 19 (010 ×1, 011 ×4, 014 ×3, 017 ×6, 007 ×5 including the FAQ question).
+- „podopierať“ for supporting evidence: 2.
+- Kinmen joined with „a“ instead of „alebo“: 4 (two copies of the long threshold sentence, one shorter repeat, and the Kinmen/Lienchiang threshold label).
+- 新臺幣 without „nový“: 4 (005 ×2, 011 ×2).
+- 負擔 as „prevzatie“: 1 (guidance). Column 007 was already „nesenie“.
+- „poradím 1“: 2, now „v 1. poradí“.
+- 015 one-clause layout: 3 blocks rewritten as full sentences, not merged. 013’s one-clause layout left (block count).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=52
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sk src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+That 22 was captured before this log file existed. After the log was written the same command prints 23 (this file is the extra untracked path). The 22 also includes three paths that were already dirty before the edit (WO-F-sk.txt, untracked sk-a.md, untracked sk-b.md).
+
+Pre-existing WARNs, summary still PASS: 006 numbers `extra in translation (1): 1` (this pass did not add a digit there); 015 numbers `extra in translation (2): 2×2`; neighbour `zda` on 001/004 is the checker’s ASCII word-boundary hitting Slovak „zdaňujú“, not the Czech conjunction. Not rewritten.
+
+## Reviewer got wrong (not applied)
+
+- sk-a 8: article 10 on the withholding-rate link is what the English and Korean sources say. `flno=3` is a source-URL mismatch, not a Slovak-only error. The Slovak label already names 各類所得扣繳率標準 article 3. The digit 10 stays so the checker still sees the source’s 제10조.
+- sk-a 26, sk-a 27 and sk-b 29 are right about Slovak orthography (space as the thousands separator, currency after the amount, „mil.“ rather than „M“). Not applied: R14 and the pinned „TWD 1.57M“ forbid that form. Dot grouping and „TWD 1.57M“ stay.
+- sk-a 22 and sk-b 12: Q-lines and the short lines in 005/006/008/009/013/015 are body blocks split by U+200B because the Korean source is. Deleting the zero-width spaces or joining the lines fails blocks.
+- sk-a 5’s „dve tretiny“, sk-a 14’s „štyri“ and sk-b 24’s „v prvom poradí“ are more natural and were not used as worded. „tretiny“, „štyri“ and „prvom“ are not in the Slovak small lexicon, so those forms drop 3, 4 or 1. „2/3“, „4 typy“ and „1. poradie“ stay.
+- sk-a 21’s „jednu osobu“ and a blanket „jeden“ for „do 1 roku“ / „do 1 mesiaca“ drop the digit for the same reason. Nominative/accusative „jeden rok“ and „jeden mesiac“ were used where the lexicon matches.
+- sk-b 20’s single merged sentence would change the block count. The three lines are each a sentence now.

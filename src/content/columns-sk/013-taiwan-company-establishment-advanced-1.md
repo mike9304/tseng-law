@@ -49,7 +49,7 @@ Pretože posúdenie investičného plánu tiež zaberie čas,
 
 mali by ste zostavovať investičný plán a hľadať adresu zápisu spoločnosti súčasne.
 
-Podľa článku 9 zákona o investíciách cudzincov (外國人投資條例) musí schválený vklad doraziť v plnej výške v lehote stanovenej príslušným orgánom (核定期限); lehotu treba overiť v akte schválenia každej veci (v praxi sa často stanoví približne na 1 rok).
+Podľa článku 9 zákona o investíciách cudzincov (外國人投資條例) musí schválený vklad doraziť v plnej výške v lehote stanovenej príslušným orgánom (核定期限); lehotu treba overiť v akte schválenia každej veci (v praxi sa často stanoví približne na jeden rok).
 
 V tejto lehote, po nájdení adresy spoločnosti a uzatvorení nájomnej zmluvy,
 
@@ -87,7 +87,7 @@ V tomto bode je vhodné vec dôkladne prebrať s advokátkou alebo advokátom na
 
 **4. Na čo dávať pozor, keď sa prenajíma adresa zápisu spoločnosti (napríklad reštauračná prevádzkareň)?**
 
-Založenie spoločnosti trvá približne **3 mesiace**, získanie pracovného povolenia (工作許可) a preukazu na pobyt približne **1 mesiac**,
+Založenie spoločnosti trvá približne **3 mesiace**, získanie pracovného povolenia (工作許可) a preukazu na pobyt približne **jeden mesiac**,
 
 preto treba začiatok zmluvy stanoviť čo najneskôr.
 

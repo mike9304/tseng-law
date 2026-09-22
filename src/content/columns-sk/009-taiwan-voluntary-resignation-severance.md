@@ -85,13 +85,13 @@ ak vypukne spor,
 
 podľa toho, kto prvý ukončí zmluvu s dostatočným dôvodom,
 
-odstupné nemusí byť vyplatené, alebo môže byť žiadané.
+strana, ktorá zmluvu ukončí ako prvá a s dostatočným dôvodom, môže buď odstupné nevyplatiť, alebo ho žiadať.
 
 Preto v pracovnoprávnych sporoch (勞資糾紛) na Taiwane
 
 je „**čas**“ veľmi dôležitý.
 
-V sporoch o odstupné preto rozhoduje, ktorá strana skôr ukončí zmluvu s riadnym dôvodom a s dôkazmi.
+Vo väčšine prípadov je lepšie chránená strana, ktorá sa pripraví vopred.
 
 ---
 

@@ -27,7 +27,7 @@ El pacto de período mínimo de trabajo (最低服務年限約定) del contrato 
 Al examinarlo, es importante no mezclar las cuatro preguntas siguientes.
 
 1. Si el pacto mismo reúne los requisitos legales del artículo 15-1
-2. Si el período pactado y la carga del trabajador están en un alcance razonable
+2. Si el período pactado y la carga del trabajador se mantienen dentro de un alcance razonable
 3. A quién se imputa la causa de extinción del contrato de trabajo
 4. Cómo se valoran el preaviso de dimisión y el alcance de la devolución
 
@@ -49,13 +49,13 @@ La circunstancia de que el trabajador haya firmado el contrato puede ser un dato
 
 Para fundar el pacto en la formación, el empleador debe haber proporcionado realmente al trabajador formación técnica especializada y haber asumido su coste. No basta con escribir en el plan de formación que se trata de un curso profesional o con consignar un coste estimado en el contrato. Deben poder conectarse con datos el tema de la formación, la competencia profesional o técnica que el puesto exige, la duración concreta, si se completó y el desembolso real.
 
-El objeto de examen incluye no solo costes directamente comprobables, como honorarios de formadores externos, matrícula de un centro de formación y tasas de materiales o equipos, sino también el fundamento de cálculo de los costes internos que alega el empleador. Si formó personal interno, debe verse de quién y de qué tiempo se trata, en qué se diferencia de la supervisión habitual o de la entrega del puesto, y si hay fundamento para imputar ese coste a ese trabajador. Un importe estimado o un prorrateo global no prueban por sí la carga real.
+El objeto de examen incluye no solo costes directamente comprobables, como honorarios de formadores externos, matrícula de un centro de formación y tasas de materiales o equipos, sino también el fundamento de cálculo de los costes internos que alega el empleador. Si formó personal interno, debe verse de quién y de qué tiempo se trata, en qué se diferencia de la supervisión habitual o de la entrega del puesto, y si hay fundamento para imputar ese coste a ese trabajador. Un importe estimado o un prorrateo global no prueban por sí solos la carga real.
 
 El programa, el calendario de formación, la lista de asistencia, el resultado de la evaluación, el certificado de aprovechamiento, las facturas y los recibos son datos básicos para confirmar la realidad de la formación y el coste. El contrato entre el empleador y el centro de formación, los justificantes de pago y las condiciones de reembolso, considerados en conjunto, permiten captar con más exactitud la carga real. Si el trabajador pagó parte del coste de forma directa o un tercero lo sufragó, también debe distinguirse quién asumió el coste final.
 
 El límite entre la adaptación general al trabajo y la formación técnica especializada no se divide solo por el lugar de la formación o por quién la organiza. Un curso interno puede acreditar contenido profesional y técnico concreto y una inversión considerable, y un curso largo de un centro externo puede ser, en realidad, una formación introductoria general. Por ello no debe excluirse de forma uniforme toda formación interna ni reconocerse el requisito legal solo porque el curso sea costoso o largo.
 
-También debe poder explicarse la relación entre el período pactado y la inversión formativa. Qué competencia se adquiere, qué relación tiene esa competencia con el puesto de destino y por qué es necesario el período de trabajo propuesto frente a la duración y el coste de la formación se examinan de forma individual. Si después de terminar la formación se desempeñó realmente ese trabajo y el período ya trabajado también son datos para valorar el alcance de la carga.
+También debe poder explicarse la relación entre el período pactado y la inversión formativa. Qué competencia se adquiere, qué relación tiene esa competencia con el puesto de destino y por qué es necesario el período de trabajo propuesto frente a la duración y el coste de la formación se examinan de forma individual. Que, terminada la formación, se haya desempeñado realmente ese trabajo, y el tiempo ya trabajado, son también datos para valorar el alcance de la carga.
 
 ## 3. Segundo requisito legal: compensación razonable
 
@@ -92,7 +92,7 @@ Al final se necesita una relación de proporcionalidad comprensible entre el per
 
 Según la orientación del Ministerio de Trabajo de Taiwán de 5 de junio de 2026, el coste de la formación periódica, de la formación general del puesto, de la adaptación al trabajo de los recién incorporados y de la formación que la ley obliga a impartir no puede tomarse como fundamento del pacto de período mínimo de trabajo ni de una reclamación de cláusula penal o de devolución de gastos. No debe verse solo el nombre de la formación, sino el programa concreto, el contenido profesional y técnico, la duración, el coste realmente asumido por el empleador y los justificantes.
 
-La orientación 勞動關2字第1150141814號 del Ministerio de Trabajo distingue y trata la formación que se imparte de forma periódica, la formación habitual del puesto, la formación para que el recién incorporado se familiarice con el entorno y los procedimientos de trabajo, y la formación que el empleador debe impartir según la ley. Como esa formación acompaña a la explotación del negocio o al cumplimiento de una obligación legal, el sentido es que su coste no puede convertirse en fundamento de una obligación de permanencia o de una sanción por extinción anticipada.
+La orientación del Ministerio de Trabajo n.º 1150141814 (勞動關2字第1150141814號) distingue y trata la formación que se imparte de forma periódica, la formación habitual del puesto, la formación para que el recién incorporado se familiarice con el entorno y los procedimientos de trabajo, y la formación que el empleador debe impartir según la ley. Como esa formación acompaña a la explotación del negocio o al cumplimiento de una obligación legal, el sentido es que su coste no puede convertirse en fundamento de una obligación de permanencia o de una sanción por extinción anticipada.
 
 Los cursos que un empleado nuevo suele recibir, como la explicación del reglamento de trabajo (工作規則), la presentación de la organización y de los sistemas, la entrega habitual del puesto y la guía de procedimientos básicos de seguridad, deben confirmarse en su sustancia. El coste general de contratación y gestión o el coste de entrega del puesto que el empleador ya debía asumir en el giro ordinario no pueden fijarse como objeto de devolución con solo etiquetarlos como inversión separada.
 

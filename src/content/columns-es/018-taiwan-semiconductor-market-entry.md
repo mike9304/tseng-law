@@ -37,7 +37,7 @@ Antes de decidir la estructura de entrada, la sede puede aclarar internamente:
 | Ofertas y pedidos | ¿Quién confirma de forma definitiva el precio y el plazo, y hasta dónde llega la autoridad del responsable en Taiwán? |
 | Mercancía e inventario | ¿Quién importa, posee y gestiona el inventario, y tramita devoluciones y sustituciones? |
 | Personal | ¿Viajan empleados de la sede, se contrata en Taiwán o se encarga a un proveedor externo? |
-| Instalación y apoyo técnico | ¿Quién debe el apoyo al cliente y atiende los problemas del trabajo in situ? |
+| Instalación y apoyo técnico | ¿A quién corresponden las obligaciones de apoyo frente al cliente, y quién atiende los problemas del trabajo in situ? |
 | Cobros y costes | ¿Quién factura y cobra, y cómo se liquidan los costes entre la sede y la organización en Taiwán? |
 | Calidad y controversias | ¿Quién confirma el resultado de la inspección y recibe reclamaciones de defectos o daños? |
 
@@ -65,7 +65,7 @@ Puede formarse con una o más personas físicas, o con socios personas jurídica
 
 ### La sociedad anónima (股份有限公司): adecuada si se quieren incorporar otros inversores o cabe una cotización
 
-El capital se divide en acciones. En principio se requieren dos o más accionistas, pero el Estado o una persona jurídica pueden constituirla solos, y una persona jurídica extranjera puede poseer el 100 %. Las acciones son, en principio, libremente transmisibles, con excepciones legales; pueden diseñarse acciones especiales y opciones de empleados conforme a la ley. Conviene a empresas que esperan inversores, negociación de acciones, incentivos de capital para empleados o una fusión, una adquisición, una cotización o la inscripción en el mercado de valores emergente (興櫃); no se limita a grandes empresas. En gobernanza, una sociedad no pública puede, por estatutos, no tener consejo y tener solo uno o dos directores. Una sociedad con un único socio estatal o persona jurídica puede, por estatutos, no tener supervisor (監察人). No toda sociedad anónima debe auditar las cuentas anuales. Los umbrales principales de auditoría de una sociedad ordinaria son capital desembolsado de 30 millones de dólares taiwaneses, o, por debajo, ingresos de explotación de 100 millones o 100 trabajadores en el seguro laboral; las sociedades de oferta pública siguen la normativa de valores.
+El capital se divide en acciones. En principio se requieren dos o más accionistas, pero el Estado o una persona jurídica pueden constituirla solos, y una persona jurídica extranjera puede poseer el 100 %. Las acciones son, en principio, libremente transmisibles, con excepciones legales; pueden diseñarse acciones especiales y opciones sobre acciones para empleados conforme a la ley. Conviene a empresas que esperan inversores, negociación de acciones, incentivos de capital para empleados o una fusión, una adquisición, una cotización o la inscripción en el mercado de valores emergente (興櫃); no se limita a grandes empresas. En gobernanza, una sociedad no pública puede, por estatutos, no tener consejo y tener solo uno o dos directores. Una sociedad con un único socio estatal o persona jurídica puede, por estatutos, no tener supervisor (監察人). No toda sociedad anónima debe auditar las cuentas anuales. Los umbrales principales de auditoría de una sociedad ordinaria son capital desembolsado de 30 millones de dólares taiwaneses, o, por debajo, ingresos de explotación de 100 millones de dólares taiwaneses o 100 trabajadores en el seguro laboral; las sociedades de oferta pública siguen la normativa de valores.
 
 ## 4. Los procedimientos de sucursal y de filial difieren; solo la filial pasa por la revisión del Departamento de Revisión de Inversiones
 
@@ -95,7 +95,7 @@ Los siguientes escenarios son hipotéticos y solo sirven para orientar el análi
 
 En la primera consulta pueden reunirse datos básicos de la sede y los aportantes, una descripción general del producto o servicio, el flujo de operaciones previsto, planes de personal e instalaciones en Taiwán, y las condiciones de contrato y apoyo que piden los clientes. Lo no decidido puede marcarse como «pendiente».
 
-No es necesario adjuntar en el primer contacto todos los materiales confidenciales del cliente o datos de proceso detallados. Tras facilitar el nombre de la contraparte para el control de conflictos, se determinan los materiales necesarios y el modo de envío según las indicaciones de la abogada responsable.
+No es necesario adjuntar en el primer contacto todos los materiales confidenciales del cliente o datos de proceso detallados. Tras facilitar el nombre de la contraparte para la comprobación de conflictos de interés, se determinan los materiales necesarios y el modo de envío según las indicaciones de la abogada responsable.
 
 ## Preguntas frecuentes
 

@@ -1,0 +1,99 @@
+WO-F-es r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-es-r4
+date: 2026-09-23
+no git add/commit/push
+
+## Rows applied (31)
+
+es-a
+3 P2 — mid-sentence blank lines in 006, 008, and 009 (and the same pattern in 013 and 015) rewritten so each existing block is a sentence. Blocks were not merged. See systemic count.
+5 P2 009 — "se ha pedido al empleador que lo mejore y no hay efecto" → "se ha pedido al empleador que lo mejore y este no lo ha hecho".
+6 P2 006 — "los grandes jueces (大法官)" → "los Grandes Jueces (大法官)".
+7 P2 — "inflige un insulto grave" dropped. 009: violence against the worker, or a serious insult directed at the worker. 008 article 12 item 2: violence against the employer, a family member, the agent, or co-workers, or a serious insult directed at them.
+10 P3 — "(TWD, 新臺幣)" → "(新臺幣, TWD)" in 006 (1) and 007 (2, FAQ + body).
+11 P3 008 — table header "**Dimisión voluntaria del trabajador**  **員工自請離職**" → "**Dimisión voluntaria del trabajador (員工自請離職)**".
+
+es-b
+1 P2 011 — "la obtención de la cualificación de importador" → "la obtención de la condición de importador".
+2 P2 016 — "la relación de la titularidad efectiva" → "la titularidad real". Checklist "el nombre y la relación de la titularidad efectiva" → "la titularidad registral y la titularidad real".
+3 P2 017 — plate surrender is no longer "devolución". "no pueden anularse por entrega de la placa para su baja (繳銷)"; the next sentence uses "anulación … por entrega para su baja".
+4 P2 018 — "opciones de empleados" → "opciones sobre acciones para empleados".
+6 P2 014 — "están en un alcance razonable" → "se mantienen dentro de un alcance razonable".
+7 P2 014 — "no prueban por sí la carga real" → "no prueban por sí solos la carga real". Same gap in 010: "por sí solo" / "por sí misma".
+8 P2 014 — the "Si … también son datos" conditional is now "Que, terminada la formación, se haya desempeñado realmente ese trabajo, y el tiempo ya trabajado, son también datos…".
+9 P2 016 — "Prestaciones con beneficiario…" → "Las prestaciones con beneficiario…". The rest of the sentence, including "según el contrato y la ley aplicable", stays.
+10 P2 010 — the court no longer "extrae una inferencia". "no lleva al tribunal a presumir automáticamente en contra de esa parte".
+11 P2 011 — "influenciadores y de otros" → "influenciadores y de otras personas" (FAQ + body).
+12 P2 011 — "corrección o complemento de documentos" → "se piden documentos complementarios" (FAQ + body). The shortened "si hay corrección o complemento" in the same file is now "si se piden documentos complementarios".
+13 P2 011 — link label "ámbito objeto del registro" → "ámbito del registro". URL unchanged.
+14 P2 011 — "el ámbito de apoyo relacionado" → "el alcance de la asistencia relacionada". Link target unchanged.
+15 P2 016 — "El fundamento de nacimiento, la contraparte y el objeto de cálculo" → "Su fundamento jurídico, la persona frente a la que se reclama y los bienes incluidos en el cálculo". Kept "que nace porque el cónyuge sobreviviente es heredero".
+16 P2 016 — "Aunque haya un contenido de designación" → "Aunque exista esa designación".
+17 P2 — "de modo natural" removed or replaced. Calculation sentence: "entran en el cálculo" (FAQ + body). Guardian: "se convierta sin más en tutor". 007 "automatically": "por sí sola" / "automáticamente" (3).
+18 P2 016 — "el papel de protección y el de administración patrimonial" → "la función de cuidado personal y la de administración del patrimonio".
+19 P2 016 — waiver "se constituye" → "queda formalizada". Claim "se constituye" → "llega a reconocerse". Representation "se constituye" → "hay sucesión por representación". "Constituir una filial/sociedad" and "garantías constituidas" left (those are incorporation and created security interests).
+20 P2 017 — "la subencomienda" → "la subcontratación".
+21 P2 018 — table cell "¿Quién debe el apoyo al cliente…" → "¿A quién corresponden las obligaciones de apoyo frente al cliente, y quién atiende los problemas del trabajo in situ?".
+22 P2 018 — "para el control de conflictos" → "para la comprobación de conflictos de interés".
+23 P2 013 — "número unificado" → "número de identificación unificado". Gloss 統一證號基本資料表 kept.
+24 P2 017 — gloss commas that read as decimals: "新臺幣2,500萬元" → "新臺幣二千五百萬元" and "新臺幣1,000萬元" → "新臺幣一千萬元" (each in FAQ + body). Spanish "25 millones" and "TWD 10.000.000" unchanged.
+25 P2 018 — "ingresos de explotación de 100 millones o 100 trabajadores" → "…100 millones de dólares taiwaneses o 100 trabajadores en el seguro laboral".
+26 P2 014 — "La orientación 勞動關2字第1150141814號 del Ministerio de Trabajo" → "La orientación del Ministerio de Trabajo n.º 1150141814 (勞動關2字第1150141814號)". Checker still passes (hanzi duplicate collapses).
+
+No Spanish test expectation needed updating. Guidance pack and llms.txt `es` strings were not rewritten.
+
+## Rows skipped (6)
+
+es-a 1 P2 — do not promote Q16–Q20 to ## headings. See reviewer-wrong.
+es-a 2 P2 and es-b 5 P2 — do not delete U+200B lines or 005 `**​**`. checkBlocks requires the Spanish ZWSP count to equal the English source. 0 removed.
+es-a 4 P2 — the aside "(la fuente lo cita como artículo 10)" stays. Removing it failed the checker: `numbers missing from translation (1): 10`. The English link label is still "Article 10". Visible statute name stays the withholding-rate standard, article 3. URL not touched. Restored after the failed check.
+es-a 8 P3 — description stays "del socio auditor, Partner CPA, de Hovering". ACCEPTED-ROUND forbids parentheses in page descriptions and prescribes that comma form. Same sentence in the lawyers answer left so the two stay aligned.
+es-a 9 P3 — "TWD 1.57M" left byte-identical (ACCEPTED-ROUND pin). Suggested "1,57 millones de dólares de Taiwán (TWD 1,57 millones)" would replace the pinned token.
+
+## Systemic patterns
+
+- Mid-sentence breaks whose next block started in lowercase, completed inside the existing blocks (not merged): 48 chains.
+  006 ×15, 008 ×11, 009 ×6, 013 ×12, 015 ×4.
+  Includes the quoted "si se habla de masaje," / "en Taiwán", the 009 voluntary-resignation opening, and the 008 "si el trabajador comete un acto ilícito" list.
+  008 line "**deben dejarse pruebas.**" left: it is already a full impersonal sentence; the lowercase is the bold marker.
+  003 and 005 still carry the source's ZWSP lineation. Those lines were not deleted.
+- "de modo natural" as "as a matter of course" / "automatically": 6.
+  016 calculation ×2 ("entran en el cálculo", not "sin más" — English has no "as a matter of course" there), 016 guardian ×1 ("sin más"), 007 ×3 ("automáticamente" / "por sí sola").
+- Completed right or status as "se constituye": 3 (016 waiver, claim, representation succession). Company-formation "constituir/se constituye una filial" left.
+- "por sí" without solo/sola/mismo on a verb that needed it: 3 (014 plural "solos"; 010 "por sí solo" and "por sí misma"). Existing "por sí solo/misma/solos" left.
+- "inflige un insulto grave": 2 (008, 009).
+- Currency gloss order "(TWD, 新臺幣)" → "(新臺幣, TWD)": 3.
+- Plate "devolución" for 繳銷: 2. Chinese gloss thousands commas in 017: 4 strings.
+- "influenciadores y de otros": 2. "corrección o complemento": 3. "titularidad efectiva" phrases: 2.
+- U+200B and 005 empty bold lines: 0 removed (checker).
+- R2–R10 otherwise already held from prior rounds. Rechecked the 18 columns and the Spanish guidance pack: Korea stays a labelled example; consultation stays English, Chinese (中文), Japanese, and Korean; no interpreter, reply-time, free-meeting, or result promise was turned positive; Wei Tseng stays feminine ("abogada", "una abogada"); the male manager and señor B stay male; no OUR TEAM / OFFICES / "Full profile (English)" / bare "Q&A" chrome left; no fullwidth punctuation outside the canonical Hangul `url` in 008. No `[변호사 검수 필요]`. No Hangul in column bodies.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      15
+```
+
+Commands were the work-order set, in order. Checker tail above is the last 8 lines (018 PASS details + summary PASS 18/18). Markers `wc -l` = 0. TSC_OK. Tests 160 files / 3202 passed, no × lines. `git status --short | wc -l` = 15 at verify time, before this log file existed. The 15 includes the three paths that were already dirty at the start of the lane (`WO-F-es.txt`, `r4/es-a.md`, `r4/es-b.md`) plus the 12 Spanish columns edited here. 001, 002, 003, 004, 005, and 012 had no string change (004 was edited and restored).
+
+## Reviewer got wrong (not applied)
+
+- es-a 1. Q16–Q20 are body lines in the English file ("Q16. After an accident…"), not markdown headings. Q1–Q15 are `##` in both languages. Promoting Q16–Q20 would fail checkHeadings. ACCEPTED-ROUND also forbids adding headings.
+- es-a 2 and es-b 5. The zero-width lines, including 005 `**​**`, match the English source. checkBlocks fails if the ZWSP count changes. They are not removable in this lane.
+- es-a 4. The parenthetical is an editor's aside, and the statute on the label is already article 3 of the withholding-rate standards. The English link text is still "Article 10", and the checker counts that 10. Dropping the aside failed `numbers missing 10`. The URL was not changed.
+- es-a 8. Parentheses around "Partner CPA" in the team description and the lawyers answer would break the llms.txt description rule. The standing form is already "socio auditor, Partner CPA,".
+- es-a 9. Reformatting "TWD 1.57M" is pinned. Not applied.
+- es-b 17, calculation sentence only. English is "Not every asset acquired during marriage enters the calculation", with no "as a matter of course". "Sin más" would add that nuance. The calque was deleted ("entran en el cálculo"). "Sin más" was used only for the guardian sentence, where English does say "as a matter of course".
+- es-b 19, the family speech. English is "the heir will take nothing", not "will not accept the inheritance". Wording used: "que el heredero no recibirá nada", with the waiver "queda formalizada".

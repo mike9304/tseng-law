@@ -19,17 +19,17 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Al iniciar un negocio de restauración, el primer problema es encontrar la dirección del local de negocio.
 
-Además de considerar la situación del mercado,
+Además de considerar la situación del mercado, hay otro filtro.
 
-otra consideración importante es
+Otra consideración importante es la zona.
 
-si esa dirección se sitúa en una zona donde sea posible explotar un «establecimiento de restauración».
+Hay que ver si esa dirección se sitúa en una zona donde sea posible explotar un «establecimiento de restauración».
 
 ​
 
-Si inicia el negocio en la ciudad de Taipéi,
+Si inicia el negocio en la ciudad de Taipéi, existe una herramienta oficial.
 
-puede utilizar el sistema de «consulta previa del local de negocio» (營業場所預先查詢) de la Oficina de Comercio de la ciudad de Taipéi (臺北市商業處).
+Puede utilizar el sistema de «consulta previa del local de negocio» (營業場所預先查詢) de la Oficina de Comercio de la ciudad de Taipéi (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Sin embargo, al consultar debe cargar la «certificación registral del inmueble
 
 Cualquiera puede solicitar en la oficina del registro de la propiedad (地政事務所) la «certificación registral del inmueble de tipo II» de cualquier dirección.
 
-Si le resulta difícil acudir en persona a la oficina del registro de la propiedad (地政事務所),
+Si le resulta difícil acudir en persona a la oficina del registro de la propiedad (地政事務所), puede delegar el trámite.
 
-puede pedir ayuda a un conocido en Taiwán, al propietario, a un agente inmobiliario o a una abogada o abogado.
+Puede pedir ayuda a un conocido en Taiwán, al propietario, a un agente inmobiliario o a una abogada o abogado.
 
 Si el resultado de la consulta indica que el establecimiento de restauración no es posible, más adelante, al registrar la sociedad (公司登記), el gobierno municipal podría no aceptar el registro.
 
@@ -59,9 +59,9 @@ Sin embargo, al registrar la sociedad suelen inscribirse varios ramos a la vez, 
 
 Por ello, en la práctica no es necesario consultar todos los ramos al registrar la sociedad.
 
-Según las «[Instrucciones de funcionamiento del servicio de consulta de locales de negocio de la ciudad de Taipéi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) y la guía vigente de la ciudad de Taipéi,
+Según las «[Instrucciones de funcionamiento del servicio de consulta de locales de negocio de la ciudad de Taipéi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) y la guía vigente de la ciudad de Taipéi, el anexo es obligatorio.
 
-desde el 1 de enero de 2023, al solicitar el registro de constitución, de traslado de domicilio o de adición de ramos de actividad de una sociedad o de un comercio (incluidas la sucursal (分公司) y el establecimiento auxiliar (分支機構)), el resultado de la consulta previa del local de negocio **debe** anexarse a la solicitud de registro, con independencia del sector.
+Desde el 1 de enero de 2023, al solicitar el registro de constitución, de traslado de domicilio o de adición de ramos de actividad de una sociedad o de un comercio (incluidas la sucursal (分公司) y el establecimiento auxiliar (分支機構)), el resultado de la consulta previa del local de negocio **debe** anexarse a la solicitud de registro, con independencia del sector.
 
 La lista siguiente de «ramos objeto de consulta de oficio» (主動查詢之營業項目) es el objeto de la consulta adicional que la Oficina de Comercio realiza de oficio durante la revisión del registro (隨案主動查詢) cuando el ramo figura en la solicitud pero falta en el resultado anexado; el hecho de que un ramo no esté en esta lista no significa que la consulta quede exenta.
 

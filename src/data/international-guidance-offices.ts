@@ -948,7 +948,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     koreaOfficeTitle: 'Офис в Корея',
     koreaAddressCardLabel: 'Адрес на офиса в Корея',
     koreaMapLinkLabel: 'Вижте в Naver Map',
-    reviewCountWord: 'отзива',
+    reviewCountWord: 'отзиви',
     phoneLabel: 'Телефон',
     faxLabel: 'Факс',
     mapLinkLabel: 'Вижте на картата',

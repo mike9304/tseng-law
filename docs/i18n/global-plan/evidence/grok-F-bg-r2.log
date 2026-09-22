@@ -1,0 +1,114 @@
+WO-F-bg r2 — Grok 4.7 fix lane
+date: 2026-09-22
+workspace: /Users/son7/Projects/tseng-law-fix-bg-r2
+scope: Bulgarian columns (18) + Bulgarian guidance strings only
+
+## Rows applied (37)
+
+bg-a
+1 P1 004 link label: wrong VAT-act name removed; label now matches 001 (withholding on non-resident dividends). Digit 10 kept — see skipped/checker note.
+2 P2 005 point A now says „специализирана или техническа работа“ (專門性或技術性工作), same term as point B.
+3 P2 008 difficulty row restored to relative difficulty (по-малка / по-голяма / по-малка) with „резултат по дело не се обещава“ in each cell. The resignation cell no longer states the severance conclusion (that stays on the next row).
+4 P2 007 extramarital sexual relations; „съпруга“ no longer does double duty as „wife“.
+5 P2 parental duties: понасяне → поемане (see systemic).
+6 P2 戶籍 → регистър на домакинствата (see systemic).
+7 P2 條例 named Закон, not Наредба (see systemic).
+8 P2 004 specialists review one shared set of facts.
+9 P2 „във верния ред“.
+10 P2 review count 17: отзива → отзиви.
+11 P2 paralegal bio: relative clause „който отговаря“, so the verb has a subject.
+12 P2 008 sentence boundaries: period after the Korea example, period after the long-serving workers sentence, and a complete sentence where „Ако Вие работите в Тайван,“ dangled.
+13 P2 pricing page: the free-first-meeting denial now says in what sense the page must not be read. Still a denial.
+14 P2 „разговор … по Вашите документи“.
+15 P2 disclaimer: law other than Taiwan’s, including the law of the place where the reader is.
+16 P2 005 opening no longer tells the reader of part 2 to go read part 2. Links to basics and part 1 kept.
+18 P2 Russian „даденото“ demonstrative → същото / това / съответното (see systemic).
+19 P2 „за един пострадал и едно произшествие“ and „за един ден“ (lexicon still counts them as 1).
+22 P2 005 „нови тайвански долари“ (2 sentences).
+
+bg-b
+1 P1 017 company registration or business registration (или), FAQ + body + step 4. Procedure names unchanged.
+2 P2 010 criminal and civil records kept separate from the outset.
+3 P2 010 adverse inference, not an unfavorable ruling.
+4 P2 012 not enough time to brake.
+5 P2 013 „Обратно“ for the office-premises contrast; the following lease sentence stays in the same block.
+6 P2 014 the clause sets out the stay-in-post commitment.
+7 P2 014 uniformly allocated amount (равномерно). „Понасяне на разходи“ left: that is bearing costs, not parental duties.
+8 P2 016 beneficial interest under a trust. Tax „правото на облагане“ in 001 was not this term and was left.
+9 P2 017 the 20 / 8 / 5 thresholds are нови товарни автомобила. Other „превозни средства“ (fleet, insurance, headings) left.
+10 P2 018 FAQ question and the repeated answer: майчиното дружество. Other „главно седалище“ sentences that mean the head office were left.
+11 P2 018 each shareholder has one vote. Digits kept: „всеки съдружник има по 1 глас, а не общо 1 глас за всички“ (Korean source is 1인 1표).
+12 P2 010 singular verb with нито … нито.
+14 P2 018 staffing row names who is hired.
+15 P2 010 two дали-questions, plural agreement.
+16 P2 011 giveaway and sample schedule aligned with the moment of registration.
+17 P2 016 a marriage is concluded and a divorce is granted.
+19 P2 018 emerging board gloss (興櫃).
+20 P2 018 Ministry of Labor gloss (勞動部), same as 014.
+
+## Rows skipped (6)
+
+a17 P2 and b13 P2 — do not delete U+200B and do not promote Q16–Q20 to new headings.
+  Reason: checkBlocks requires the target ZWSP count to equal the Korean source. Counts already match (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). A new ## heading would also change heading levels. ACCEPTED-ROUND: do not add headings; rephrase inside the block. The question lines are already questions, so there was nothing further to rephrase.
+
+a20 P2 and b18 P2 — do not switch thousands to a space („500 000“) and do not reorder every „TWD 500.000“.
+  Reason: ACCEPTED-ROUND and R14. Bulgarian is a dot-thousands locale; a space fails the checker. R14 accepts both „500.000 TWD“ and „TWD 500.000“. The current TWD-before + dot form already passes, including 0,5. Decimal comma left as is.
+
+a21 P2 — do not rewrite „TWD 1.57M“.
+  Reason: pinned byte-identical (ACCEPTED-ROUND / R12).
+
+a23 P2 — do not edit url in 008 or 009.
+  Reason: frontmatter url with Hangul is canonical metadata (R16 / ACCEPTED-ROUND). The reviewer also said not to edit it.
+
+No P3 rows in either review.
+
+## Systemic patterns
+
+- Parental duties (понасяне → поемане на/поемането на задълженията): 6. Guidance pack 1, 007 ×4, 016 ×1. Cost-bearing „понасяне на разходи“ in 014 was not this pattern.
+- 戶籍 / 戶籍法 / 戶政 named as the household register, not Bulgarian address registration: 26. 007 ×19 „регистъра на домакинствата“, 016 ×3 (including „регистър“), 017 ×3, guidance pack ×1. Habitual residence (經常居所) and the child’s place of residence were left.
+- 條例 as Закон rather than Наредба: 6. 003 road-traffic act ×1, 004 Statute for Industrial Innovation ×5. Chinese glosses kept.
+- Russian demonstrative „даденото“: 5. 003 the same vehicle ×2, 010 this case ×1, 012 this case and the place in question ×2. Ordinary „дадена информация / даден предмет / даде му“ left.
+- 017 „вписване на дружество или търговска регистрация“: 3 (FAQ, body, step 4).
+- 017 freight-truck thresholds „товарни автомобила“: 3 (20, 8, 5 in the restatement; the FAQ already said товарни автомобила).
+- 018 parent-company FAQ (question + answer, frontmatter and body): 6 phrase hits. Head-office sentences elsewhere in 018 left.
+- R2–R13, R15, R17 sweep: Korea examples already framed as examples; consultation lock already negative and limited to EN/中文/JA/KO; Wei Tseng already feminine; team roles already in Bulgarian (no leftover Paralegal / OUR TEAM / OFFICES); no OOO placeholder; no Russian paragraph leakage; no fullwidth punctuation outside the Hangul url (skipped). No extra block merges or splits.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-bg --lang bg 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-bg src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      20
+
+First checker run on 004 failed numbers (missing 10) because the new link label dropped 제10조. „член 10“ was put back on the corrected withholding label; the URL was not changed. The tail above is the rerun after that. No Bulgarian test expectation had to change.
+
+## Reviewer points not applied (checker or standing rules, not a wording dispute)
+
+- Space as the Bulgarian thousands separator, and a file-wide move of TWD to after the amount. Dot grouping is what this checker parses for bg (R14). „TWD 1.57M“ is pinned.
+- Deleting the U+200B lines in 003, 005, 006, 008, 009, 013 and 015, and turning 003 Q16–Q20 into new headings. Those characters are in the Korean source at the same counts; new headings would change the heading-level list.
+- Rewriting the Hangul url fields. The review itself says they are live paths and must not be edited.
+- The suggested 004 label with no article number. The Korean link text is „영업세법 제10조“; dropping 10 fails numbers. The visible label no longer calls that URL the Business Tax Act. It still says „член 10“ because that is the digit the source link contributes. The href stays flno=3.
+- „всеки съдружник има един глас“ as a pure word would drop one of the two 1s in „1인 1표“. Both digits stay, and „всеки“ is what stops the one-partner reading.

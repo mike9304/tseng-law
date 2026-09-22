@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Näidispilt, mis jäädvustab sõiduki asendi ja jäljed sõiduteel liiklusõnnetuse sündmuskohal](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Liiklusõnnetuse (交通事故) järel Taiwanis peate esmalt hoolitsema ohutuse eest, tegema teate ja säilitama tõendid ning seejärel käima järjekorras läbi nõuete tähtajad, hooletuse (過失) ja kokkuleppe ulatuse. Järgnev on üldine toimimisjärjekord Taiwani sätete ja avalike asutuste juhendite alusel; konkreetne vastutus ja menetlus võivad erineda iga õnnetuse asjaolude järgi.
+Liiklusõnnetuse (交通事故) järel Taiwanis peate esmalt hoolitsema ohutuse eest, tegema teate ja säilitama tõendid ning seejärel käima järjekorras läbi nõuete tähtajad, hooletuse (過失) ja kokkuleppe ulatuse. Järgnev on üldine toimimisjärjekord Taiwani sätete ja avalike asutuste juhendite alusel; konkreetne vastutus ja menetlus võivad sõltuda iga õnnetuse asjaoludest.
 
 ## Q1. Kas sündmuskoha võib pärast õnnetust jätta?
 
@@ -29,7 +29,7 @@ Kriminaalkoodeksi (刑法) artikkel 185-4 käsitleb kriminaalvastutust juhist, k
 
 ## Q2. Millised tõendid tuleb esmalt säilitada?
 
-Tagage esmalt isiklik ohutus ja hoiatusmärgid; kehavigastuse või päästevajaduse korral helistage Taiwanis numbrile 119 (kiirabi ja päästeamet), kuriteo või kiireloomulise turvaolukorra korral numbrile 110 (politsei) või mobiiltelefonist numbrile 112 (交通事故). Teatage liiklusõnnetus ka politseile, niivõrd kui olukord seda nõuab.
+Tagage esmalt isiklik ohutus ja hoiatusmärgid; kehavigastuse või päästevajaduse korral helistage Taiwanis numbrile 119 (kiirabi ja päästeamet), kuriteo või kiireloomulise turvaolukorra korral numbrile 110 (politsei) või mobiiltelefonist numbrile 112. Teatage liiklusõnnetusest (交通事故) ka politseile, niivõrd kui olukord seda nõuab.
 
 Kui ohutus on tagatud, tehke üld- ja lähivõtteid sõiduki asendi ja kahjustuste, teekattemärgiste, signaalide ja ilma jäädvustamiseks. Tunnistajate kontaktandmeid, taotlust CCTV (監視器影像) ja sõidukikaamera (行車紀錄器) säilitamiseks, andmeid osaliste, sõidukite ja kindlustuse kohta ning haiguslugu (病歷) ei tohi jätta hankimata. Isiklikud salvestised on kasulikud, kuid ei asenda kehavigastuse või surma korral nõutud politseikäsitlemist.
 
@@ -41,13 +41,13 @@ Kriminaalkoodeksi (刑法) artikkel 284 reguleerib hooletusest põhjustatud keha
 
 Tsiviilõiguslikku kahjuhüvitist (損害賠償) ei saa tsiviilseadustiku (民法) artikli 197 järgi enam nõuda, kui 2 aastat kahju ja hüvitamiskohustuslase teadasaamisest või 10 aastat kahju põhjustanud teost (侵權行為) on möödunud. Millised asjaolud mõjutavad aegumist (消滅時效), tuleb uurida eraldi.
 
-See, kes on kannatanud kahju karistatavast teost, võib kriminaalmenetluse seadustiku artikli 487 järgi esitada kriminaalasjaga seotud tsiviilhagi (刑事附帶民事訴訟). Niikaua kui kriminaalasi on pooleli, saab selle artikli 488 järgi esitada enne teise astme suulise arutelu lõppu (言詞辯論終結), kuid mitte esimese astme suulise arutelu lõpu järel ja enne muutmisnõude esitamist. Tavaliselt eraldi kohtukulu (裁判費) siis ei nõuta, kuid iga asi ei lõpe ilma kuludeta. Kui näiteks kriminaalasi jäetakse rahuldamata ja kantakse hageja taotlusel tsiviilkohtusse, võivad kriminaalmenetluse seadustiku artikli 503 järgi tekkida menetluskulud; ka artikli 504 ülekande- ja menetlussätted tuleb läbi käia.
+See, kes on kannatanud kahju karistatavast teost, võib kriminaalmenetluse seadustiku artikli 487 järgi esitada kriminaalasjaga seotud tsiviilhagi (刑事附帶民事訴訟). Niikaua kui kriminaalasi on pooleli, saab selle artikli 488 järgi esitada enne teise astme suulise arutelu lõppu (言詞辯論終結), kuid mitte esimese astme suulise arutelu lõpu järel ja enne apellatsiooni esitamist. Tavaliselt eraldi kohtukulu (裁判費) siis ei nõuta, kuid iga asi ei lõpe ilma kuludeta. Kui näiteks kriminaalasi jäetakse rahuldamata ja kantakse hageja taotlusel tsiviilkohtusse, võivad kriminaalmenetluse seadustiku artikli 503 järgi tekkida menetluskulud; ka artikli 504 ülekande- ja menetlussätted tuleb läbi käia.
 
 Valik erineb aegumise katkemise (時效中斷), kostjate ringi, tõendite, kindlustuse ja pädevuse järgi. Seetõttu ei ole kõigile asjadele üht ja sama õiget menetlusviisi.
 
 ## Q4. Kuidas hinnatakse kriminaal- ja tsiviilvastutust, kui mõlemal poolel on hooletust?
 
-Kriminaalvastutust saab hinnata alles siis, kui mõlema poole hoolsuskohustuse rikkumine ja selle põhjuslik seos, mis sellel rikkumisel on vastaspoole kehavigastusega, on tunnustatud. Pelgalt seetõttu, et mõlemal poolel on hooletust (過失), ei teki automaatselt vastutust hooletusest põhjustatud kehavigastuse eest.
+Kriminaalvastutust saab hinnata alles siis, kui mõlema poole hoolsuskohustuse rikkumine ja selle põhjuslik seos vastaspoole kehavigastusega on tõendatud. Pelgalt seetõttu, et mõlemal poolel on hooletust (過失), ei teki automaatselt vastutust hooletusest põhjustatud kehavigastuse eest.
 
 Tsiviilõiguslikult võib kohus tsiviilseadustiku (民法) artikli 217 järgi hüvitist alandada või selle ära jätta, kui kannatanul on hooletust kahju tekkimises või suurenemises (與有過失). Kui näiteks tunnustatud kahjud olid TWD 1.000.000 (新臺幣) ja kannatanu hooletus hinnati 50 protsendiks, võib summa enne muid kohandusi langeda TWD 500.000-ni.
 
@@ -239,7 +239,7 @@ Hooletusest põhjustatud kehavigastuse (過失傷害) eest on mõnes otsuses mä
 
 ​
 
-Rahaks ümberarvestamisel kinnitab kriminaalkoodeksi (刑法) artikli 41 lõige 1 ümberarvestuse TWD 1.000, TWD 2.000 või TWD 3.000 (新臺幣) 1 päeva kohta; arvutades TWD 1.000 alusel päevas annab 3 kuu karistus 3 × 30 × 1.000 = TWD 90.000.
+Rahaks ümberarvestamisel kinnitab kriminaalkoodeksi (刑法) artikli 41 lõige 1 ümberarvestuse TWD 1.000, TWD 2.000 või TWD 3.000 (新臺幣) päeva kohta; arvutades TWD 1.000 alusel päevas annab 3 kuu karistus 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 
@@ -335,7 +335,7 @@ Liiklusõnnetuste asjades kerkib korduvalt esile üks eriti oluline asjaolu.
 
 ​
 
-Kui kannatanu saab kehavigastuse või sureb, kannatavad tema ise või pere kehalist ja vaimset valu.
+Kui kannatanu saab kehavigastuse või sureb, kannatab kannatanu ise või tema pere kehalist ja vaimset valu.
 
 ​
 
@@ -359,7 +359,7 @@ Seetõttu ei tohi seda punkti mingil viisil kõrvale jätta; on soovitatav oluko
 
 ​
 
-Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatut vastust ei tõotata.
+Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatut vastust ei lubata.
 
 ​
 

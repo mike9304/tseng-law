@@ -64,7 +64,7 @@ Pärija, kes soovib pärandist loobuda, peab tsiviilseadustiku (民法) artikli 
 
 Enne pärandvara käsutamist või võla tasumist tuleb koos uurida aktiivvara ja passiivvara. Tuleb kinnitada võlausaldajate olemasolu, tagatisõigused, käendusvõlg, kestvad lepingud ja maksudeklaratsiooni kohustus ning vajaduse korral uurida vara loetelu esitamist ja võlausaldajate menetlust. Tuleb vältida ka asjaolusid, mis võivad mõjutada seaduses määratud vastutuse piiramist, nagu vara varjamine või loetelust väljajätmine.
 
-Taiwani rahandusministeeriumi maksportaali juhis pärandiasjade taotlusmenetluse kohta uuendamise kuupäev on 25. juuni 2026; see selgitab vara loetelu esitamise ja pärandist loobumise kohtumenetluse tavalist 3-kuulist tähtaega ning pärandimaksu deklaratsiooni tavalist 6-kuulist tähtaega. Algushetk, pikendamine, erandid ja pädevus tuleb siiski kinnitada asja kaupa ning seda ei tohi kasutada isikliku tähtaja arvutusena.
+Taiwani rahandusministeeriumi maksportaali juhis pärandiasjade taotlusmenetluse kohta uuendamise kuupäev on 25. juuni 2026; see selgitab vara loetelu esitamise ja pärandist loobumise kohtumenetluse tavalist 3-kuulist tähtaega ning pärandimaksu deklaratsiooni tavalist 6-kuulist tähtaega. Algushetk, pikendamine, erandid ja pädevus tuleb siiski kinnitada asja kaupa ning seda juhist ei tohi kasutada konkreetse tähtaja arvutamiseks.
 
 Pärandimaksu deklaratsioon, leibkonna registreerimise teade (戶籍), kinnisasja ja sõiduki omandi üleminek ning finantsasutuste makse menetlus võivad erineda pädeva asutuse ja esitatavate dokumentide poolest. Kohtule esitatavaid pärandist loobumise dokumente ja maksuasutuse pärandimaksu deklaratsiooni ei tohi pidada samaks menetluseks. Kuna mitu tähtaega võib kulgeda ühel ajal, on kindlam hallata iga menetluse algushetke ja tõendeid eraldi ajakavana.
 
@@ -108,7 +108,7 @@ Usaldusvara või kindlustusega kava ei tohi pidada turvaliseks ainuüksi lepingu
 
 Rahvusvahelise elemendiga perele ei tohi Taiwani tsiviilseadustiku siseriiklikke reegleid kohe muutmata kohaldada. Poolte kodakondsus, elukoht ja harilik viibimiskoht, elu keskpunkt surmahetkel, vara asukoht, välismaal sõlmitud abielu või lahutus ning olemasolevad hooldusõiguse otsused võivad mõjutada kohaldatavat õigust ja pädevust. Samas peres võivad pärimisele, abieluvararežiimile, hooldusõigusele, eestkoste ja vara registreerimisele kohalduda erinevad seose kriteeriumid.
 
-Taiwani „välismaiste elementidega tsiviilasjade õiguse kohaldamise seadus“ (涉外民事法律適用法) on lähtepunkt välismaise elemendiga tsiviilsuhte kohaldatava õiguse määramiseks. Ainuüksi selle seaduse kinnitamine ei pruugi siiski piisata; koos tuleb uurida kohtu rahvusvahelist pädevust, välismaiste otsuste tunnustamist ja täitmist, lepinguid või teise riigi õigust. Kas Taiwanis kehtivat otsust aktsepteeritakse muutmata kujul välismaal asuva vara üleminekul, tuleb kinnitada eraldi vara asukohas.
+Taiwani „välismaiste elementidega tsiviilasjade õiguse kohaldamise seadus“ (涉外民事法律適用法) on lähtepunkt välismaise elemendiga tsiviilsuhte kohaldatava õiguse määramiseks. Ainuüksi selle seaduse läbivaatamisest ei pruugi siiski piisata; koos tuleb uurida kohtu rahvusvahelist pädevust, välismaiste otsuste tunnustamist ja täitmist, lepinguid või teise riigi õigust. Kas Taiwanis kehtivat otsust aktsepteeritakse muutmata kujul välismaal asuva vara üleminekul, tuleb kinnitada eraldi vara asukohas.
 
 Välismaal koostatud testamendi puhul tuleb uurida koostamise vormi ja sisulist toimet, tõlget ja notariaalset kinnitamist (認證), testamendi kinnitamist (檢認) või täitmise menetlust. Välismaistele abielu- ja lahutustõenditele ning sünnisideme dokumentidele võivad olla vajalikud apostill või konsulaarkinnitus ja tõlge. Kui nime kirjapilt, passiandmed ja leibkonna registreerimise kirje (戶籍) erinevad, võidakse sama isiku kinnitamisel nõuda täiendavaid dokumente.
 
@@ -118,7 +118,7 @@ Maksudeklaratsioon võib riigiti tekitada eraldi kohustusi. Tuleb kinnitada, kas
 
 ## 9. Praktiline ettevalmistuse kontrollnimekiri
 
-Järgnev järjekord on põhiline raamistik asjaolude täielikuks kogumiseks ja erinevate õiguste ning menetluste mitte segi ajamiseks. Tegelik esitamise järjekord võib erineda pädeva asutuse ja asja kiireloomulisuse järgi, seega tuleb iga etapi tähtaeg kinnitada eraldi.
+Järgnev järjekord on põhiline raamistik asjaolude täielikuks kogumiseks ja erinevate õiguste ning menetluste mitte segi ajamiseks. Tegelik esitamise järjekord võib sõltuda pädevast asutusest ja asja kiireloomulisusest, seega tuleb iga etapi tähtaeg kinnitada eraldi.
 
 1. Kinnitatakse surmatõend ja surmateate materjalid, peresuhted ja Taiwani leibkonna registreerimise materjalid (戶籍), abielu-, lahutus- ja lapsendamiskirjed ning olemasolevad kohtuotsused. Välismaiste dokumentide puhul kontrollitakse ka kinnitamist, tõlget ja nime kirjapildi vastavust.
 2. Uuritakse kinnisasju, hoiuseid, investeerimisvarasid, äriühingu osalusi ja vallasasju ning nõudeid ning korrastatakse koos laenud, käendused, maksud ja lepingulised võlad. Nimi ja tegelik omandisuhe, kindlustuse kasusaaja, usaldusvara, ühisvara ning eluaegse üleandmise materjalid märgitakse eraldi.
@@ -149,6 +149,6 @@ Ametlikel õiguslehtedel kinnitatakse sätte muutmise päev ja jõustumise päev
 
 ---
 
-See artikkel on üldine selgitus, et kirjeldada pärimise, abieluvararežiimi, hooldusõiguse ja alaealise eestkoste korda Taiwanis; see ei ole õigusnõuanne konkreetses pärandi- või pereasjas. Kohalduv õigus, menetlus ja tulemus võivad erineda pärijate ringi, testamendi, vara ja võla, abielurežiimi, olemasolevate kohtuotsuste ja rahvusvaheliste elementide järgi. Enne tähtaegade arvutamist, nagu loobumine või maksudeklaratsioon, või vara käsutamist kinnitatakse uusimad ametlikud allikad ja individuaalsed asjaolud.
+See artikkel on üldine selgitus, et kirjeldada pärimise, abieluvararežiimi, hooldusõiguse ja alaealise eestkoste korda Taiwanis; see ei ole õigusnõuanne konkreetses pärandi- või pereasjas. Kohalduv õigus, menetlus ja tulemus võivad sõltuda pärijate ringist, testamendist, varast ja võlast, abielurežiimist, olemasolevatest kohtuotsustest ja rahvusvahelistest elementidest. Enne tähtaegade arvutamist, nagu loobumine või maksudeklaratsioon, või vara käsutamist kinnitatakse uusimad ametlikud allikad ja individuaalsed asjaolud.
 
 **Advokaat Wei Tseng (曾雋崴)**

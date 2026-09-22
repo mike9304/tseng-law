@@ -1068,7 +1068,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Töövaldkonnad',
           paragraphs: [
-            'Töövaldkond hõlmab järgmisi kuut rühma. Leht „Teenused“ kirjeldab iga rühma täpsemalt ja ütleb, mida ei tõotata.',
+            'Töövaldkond hõlmab järgmisi kuut rühma. Leht „Teenused“ kirjeldab iga rühma täpsemalt ja ütleb, mille kohta lubadust ei anta.',
           ],
           items: [
             'Investeeringud ja äriühingu asutamine Taiwanis',
@@ -1159,7 +1159,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Asutamine ja ülesehitus',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) asutasid 2016. aastal advokaadid, kes on õppinud National Taiwan University’s (國立臺灣大學). Hiinakeelne nimi 昊鼎 ühendab märgi 昊 („lai taevas“) märgiga 鼎 („kindel alus“) ja kirjeldab büroo suunda asutamisest saadik.',
-            'Meil on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Kaohsiungi büroo keskendub ettevõtte juhtimisele ning tegeleb tsiviil-, kriminaal- ja haldusvaidlustega. Taichungi büroo tegeleb ehitusasjade, intellektuaalomandi ning Korea ja Jaapaniga seotud asjadega. Pingtungi büroo avati 2017. aastal kohaliku vajaduse jaoks.',
+            'Meil on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Kaohsiungi büroo keskendub ettevõtte juhtimisele ning tegeleb tsiviil-, kriminaal- ja haldusvaidlustega. Taichungi büroo tegeleb ehitusasjade, intellektuaalomandi ning Korea ja Jaapaniga seotud asjadega. Pingtungi büroo avati 2017. aastal kohalike klientide teenindamiseks.',
             'Advokaaditöö kõrval tegutseb alates 2020. aastast ka Hovering Accounting Office, mis pakub raamatupidamist ja maksude planeerimist ettevõtjatele ja varakatele eraisikutele.',
           ],
         },
@@ -1174,7 +1174,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kui võtate meiega ühendust',
           paragraphs: [
             'Kui teie kokkuvõte on saabunud, vaatab advokaat sisu läbi ja räägib seejärel võimalikust töö ulatusest, veel vajalikest dokumentidest ja järgmistest sammudest. Maksu- või raamatupidamisküsimustes võib büroo töötada raamatupidamisüksusega ühes menetluses.',
-            'Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemuse kohta me lubadust ei anna. Kui vajate siduvat vastust oma olukorrale, tuleb dokumendid arutada advokaadiga ühes neljast nõustamiskeelest.',
+            'Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemuse kohta me lubadust ei anna. Kui vajate siduvat vastust oma olukorrale, tuleb dokumente advokaadiga arutada ühes neljast nõustamiskeelest.',
           ],
         },
       ],
@@ -1228,7 +1228,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Kuidas bürooni jõuda',
       description:
-        'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei oska ühtegi neljast keelest, ja mida see leht ei tõota.',
+        'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei oska ühtegi neljast keelest, ja mida see leht ei luba.',
       intro:
         'Enne kui meile kirjutate, eristage järgmised kolm asja. Neid aetakse sageli segi, kuid need tähendavad erinevaid asju.',
       sections: [
@@ -1258,7 +1258,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Mida see leht ei tõota',
+          heading: 'Mida see leht ei luba',
           paragraphs: [
             'Me ei anna lubadust vastamise tähtaja kohta, ei kinnita kohtumist selle lehe kaudu, ei anna lubadust konkreetse advokaadi kohta ega korralda tõlki. Kirjalik tõlge on midagi muud: teie teadet ei tõlgita automaatselt.',
             'Kui saadate taotluse, säilitatakse sisu ja see ootab läbivaatamist. Kui te mõne aja pärast vastust ei saa, võite kirjutada uuesti kontaktlehel nimetatud e-posti aadressile.',
@@ -1315,7 +1315,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kuidas tasud arvutatakse?',
           answer:
-            'Esmalt kinnitatakse töö ulatus, seejärel kinnitatakse teiega summa ja arvutusviis enne töö algust. See leht ei nimeta arve ega ütle, et esimene vestlus on tasuta.',
+            'Esmalt kinnitatakse töö ulatus, seejärel kinnitatakse teiega summa ja arvutusviis enne töö algust. See leht ei nimeta summasid ega ütle, et esimene vestlus on tasuta.',
         },
         {
           question: 'Mis siis, kui minu asi on väga kiireloomuline?',
@@ -1398,7 +1398,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Teabe üldine iseloom, õiguslik kohaldamisala ja eeldused advokaadi ja kliendi suhte tekkimiseks.',
       intro:
-        'See osa teeb selgeks, mida need eestikeelsed juhislehed saavad teie heaks teha ja mida mitte.',
+        'See osa teeb selgeks, milleks need eestikeelsed juhislehed sobivad ja milleks mitte.',
       sections: [
         {
           heading: 'Ainult üldine teave',
@@ -1422,7 +1422,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Tulemust ei tõotata',
+          heading: 'Tulemuse kohta lubadust ei anta',
           paragraphs: [
             'Ükski osa sellest lehest ei ole lubadus asja tulemuse, taotluse rahuldamise ega elamis- ja tööstaatuse kohta.',
             'Välislingid on mõeldud orienteerumiseks; me ei taga kolmandate isikute sisu õigsust ega ajakohasust.',
@@ -1442,7 +1442,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Neli loendit keele järgi',
           paragraphs: [
             'Selles osas on neli linki: artiklite loend korea, hiina, inglise ja jaapani keeles. Iga link nimetab loendi keele, et te teaksite ette, millises keeles sisu avaneb.',
-            'Need neli loendit on loendid artiklite algkeele järgi, mitte tõlkeloendid. Eestikeelsed artiklid on eraldi sellel lehel.',
+            'Need neli loendit järgivad artiklite algkeelt; need ei ole tõlked. Eestikeelsed artiklid on eraldi sellel lehel.',
           ],
         },
         {

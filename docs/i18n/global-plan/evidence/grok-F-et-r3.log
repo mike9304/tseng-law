@@ -1,0 +1,145 @@
+WO-F-et r3 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-et-r3
+Inputs: RULEBOOK-FIX.md R2–R17, ACCEPTED-ROUND.md, rounds/r3/et-a.md (30 rows), et-b.md (36 rows).
+English meaning: src/content/columns-en/<same file>. Checker compares to Korean src/content/columns.
+No git add / commit / push. Estonian strings only.
+Files written: 16 × src/content/columns-et/*.md (006 and 015 unchanged);
+src/data/international-guidance-baltic-atlantic.ts (estonianGuidanceContent only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.et discoveryNotice only).
+Not edited: international-inquiry-copy.ts, international-guidance-team.ts, -offices.ts, -answers.ts.
+No test expected-string needed updating (vitest 3202 passed without a disclosure-regex edit).
+Bio figure left byte-identical: "TWD 1.57M".
+Dot-thousands kept (NUMBER_THOUSAND_STYLE.et = dot). U+200B counts left matching the Korean source.
+Consultation languages stay English, Chinese (中文), Japanese, Korean.
+
+Rows applied: 61 of 66 (3 of those are partial; see below)
+Rows skipped: 5
+
+## Applied
+
+et-a
+1 001 link label only (URL unchanged): Säte Taiwani käibemaksu üldise määra kohta.
+2 003: gloss (交通事故) moved off 112 onto liiklusõnnetusest. 119 / 110 / 112 and "Taiwanis" kept.
+3 003: enne apellatsiooni esitamist.
+4 005: Kui vahendid kantakse üle Korea pangakontolt. This is the source-of-funds exception for a Korean bank account, not the default reader, so R2 does not widen it.
+5 003 criminal-liability sentence: on tõendatud. "tunnustatud kahjud" left.
+6 002: tarnijatele võlgnetavate summade; §4 tarnijate arvete.
+7 002: kas äriühingu varast piisab võla tagasimaksmiseks (資不抵債). 無力清償 stays on maksevõimetus two paragraphs earlier.
+8 004: tasu vara eest või makse kolmandale isikule (第三人).
+9 004: ehitus-, montaaži- või paigaldusprojekt … kestab üle 6 kuu. Digit 6 kept.
+10 005: (匯款) ei ole lubatud.
+11 005: gloss (公司設立) moved onto äriühingu asutamine. Both column links and "osa 2" kept.
+12 007: võib arvesse võtta pädevate asutuste või lastekaitse kutsetöötajate uurimisi ja arvamusi.
+13 002 elative: varast ei piisa / varast piisab — 3 (art 89, liquidator finding, bankruptcy test).
+14 007: omistatav ainult ühele abikaasale — FAQ and body (2).
+16 bare "1" for üks: "1 päeva kohta" → "päeva kohta" (Korean 1일로 is stripped by the checker, so the digit was extra). "registreerimine 1 nimele" → "registreerimine ühe nimele" — 4 (FAQ question, FAQ answer, two body sentences). Space thousands not used.
+18 guidance: tuleb dokumente advokaadiga arutada. "neljast nõustamiskeelest" kept.
+19 guidance fees: See leht ei nimeta summasid.
+20 003: kannatab kannatanu ise või tema pere.
+21 營利事業所得稅 = tulundusettevõtte tulumaks / tulundusettevõtjad / tulunduslikku juriidilist isikut. 16 phrase instances: 001 (3), 002 (1), 004 (12, including the Company Act definition and the table).
+22 tõotama → ordinary lubadus/lubama. 12: guidance 4 (services line, contact description, contact heading, disclaimer heading), llms discoveryNotice 1 (token llms.txt kept), column closings or reply lines 7 (001, 002, 003, 004, 005, 013, 018). 009 has no tõotama.
+23 guidance columns intro: Need neli loendit järgivad artiklite algkeelt; need ei ole tõlked.
+24 guidance disclaimer intro: milleks need eestikeelsed juhislehed sobivad ja milleks mitte.
+25 guidance offices: Pingtungi büroo avati 2017. aastal kohalike klientide teenindamiseks.
+26–27 007 support: Riiklik keskmise tarbimise statistika ei ole siduv valem; ulatus … lähtudes vajadusest ja vahenditest (贍養費).
+28 008: Äriühing A on tuntud ja tal on filiaalid kogu Taiwanis.
+30 009: Taiwani tööliskindlustusse (勞工保險) ega Taiwani riiklikku ravikindlustusse (健保).
+
+et-b
+1 010: 6 kuu jooksul päevast, mil kaebuseõiguslik isik saab teada teo toimepanija isiku. Digit 6 kept.
+2 014: artikli 15 alusel artikli 16 lõike 1 etteteatamistähtaega.
+3 013: saamine võtab sellele lisaks umbes **1 kuu**. Digits 3 and 1 and the bold kept.
+4 013: Kui aga tegevusalasid (營業項目) saab pidada tavalisel ärikontoripinnal, nagu reklaami või hulgimüüki.
+5 014: ainuüksi kokkulepitud aja pikkusest.
+6 014: muust vastutasust juba tehtud töö eest.
+7 014: leping näeb ette pikema etteteatamise või et tööandja nõuab viivitamatut töö üleandmist.
+8 016: Ainuüksi selle seaduse läbivaatamisest ei pruugi siiski piisata. Elative, because piisata takes it; the suggested nominative subject does not.
+9 016: seda juhist ei tohi kasutada konkreetse tähtaja arvutamiseks.
+10 017: on avaldatud haldusmenetluse sihttähtaeg.
+11 017 heading: Hoolsuskontroll ja tehingu lõpuleviimine. Level unchanged.
+12 012 closing: kehtivatest eeskirjadest (with row 27).
+13 012 glosses moved off the wrong noun (8 attachments). 道路交通安全規則 stays on the regulation heading, the article link, and kehtivaid ametlikke eeskirju. 超車 stays on the title, möödasõit, and the closing. 鑑定 stays on ekspertiisi, ekspertiisitulemused, and ekspertiisist. Removed from sõidurajale, sõidukit, teed andma, tahet, tõendeid, and naasmiskaugusega.
+14 012 heading: Asjaolud, mida tuleb uurida õnnetuse vastutuse hindamisel. Level unchanged.
+15 partial. The inessive "tehtud … otsuses" is gone: kohustas 24. jaanuar 2022 kuupäevaga esimese astme otsusega … kostjat maksma. The link and TWD 1.579.589 stay. Genitive "jaanuari" was not used (see reviewer-wrong).
+16 010: võib kaaluda palvet sisutõendiga kirja … kaudu, … et jõusaal need salvestised säilitaks.
+17 010: suhtluse sisu kuupäevade kaupa.
+18 partial. Three dates: Alates kuupäevast 1. juuli 2026 (FAQ, section 2, and the later PIF sentence). "Alates" now takes the elative of kuupäev. The date itself stays nominative so the checker still parses month 7.
+19 011: täielikele andmetele ligi. Gloss (產品資訊檔案) kept.
+20 011: Meedet, mida rakendatakse siis, kui ohutusprobleem on kinnitatud, ja palvet dokumente täiendada.
+22 014: Lepingule antud nimetusest hoolimata tuleb … etappide kaupa läbi vaadata.
+23 014: ei sõltu ainult koolituskohast ega sellest, kes koolituse korraldab.
+24 014: partitive objects of ei tohi hinnata (täieliku tagastamise klauslit, kindlat leppetrahvi, ühepoolset palgast kinnipidamist).
+25 017: juhiluba (nominative) in the FAQ list (2, including the repeated body list) and in the natural-person sentence (ja väikeste sõidukite kutselise juhiluba ning et ta kasutab).
+26 017: Taotlusi võtavad vastu ja haldusjuhiseid annavad transpordiministeeriumi maanteeamet.
+27 "erineda … järgi" as "may vary with" → sõltuda + elative. 15 passages: closings of 001, 002, 004, 007, 010, 012, 014, 016; the same calque in 003 opening, 011 obligations sentence, 011 fine range, 016 filing order, 017 "sõltub asjast". "erineda … poolest" and "selle järgi, kas" left.
+28 011: Ettevalmistus ei tohi piirduda üksnes tasulise müügiga.
+29 010 image alt and the matching link label (2): äge lülivaheketta rebend pärast seda, kui jõusaali algajale anti juhis teha 90 kg jõutõmme. Image paths unchanged.
+30 010: kui nõuet ei esitata 2 aasta jooksul. Digit 2 kept.
+31 010: või tuua kaasa muud reeglid tähtaja alguse.
+32 013: Teil tasub koostada investeerimiskava.
+33 017: töö usaldaja tegutseb kaubaomanikuna või veo vahendajana (FAQ + body, 2); pelk osanikuks või investoriks olemine (2). "on pelgalt kaubaomanik" in section 4 already names the role and was left. Ownership "omab" (a vehicle, the company, property) left.
+34 017: saada maanteeseaduse artikli 35 valdkonna heakskiit.
+35 018: Siis on kerge esmalt küsida.
+
+Same-pattern extras not in a single row:
+- 001: residendi staatust, seda, kas ta on tegelik kasusaaja (omadus for the beneficial-owner role).
+- 004: pelk asjaolu, et äriühing on … tütarettevõte (omadus for a legal status).
+
+llms.txt discoveryNotice rephrased around the literal token llms.txt. consultationNotice and confidentialNotice were not rewritten; they stay verbatim substrings of the FAQ answer and the privacy paragraph.
+Page descriptions were not given parentheses, brackets, #, |, backticks, or angle brackets.
+
+## Skipped (with reason)
+
+et-a 15 and et-b 36 — space thousands ("500 000", "1 579 589", and the same figures in 001–003, 006, 010, 011, 017, 018). ACCEPTED-ROUND and R14: et parses only dot grouping. Dots kept. Decimal comma 0,5 left as it was.
+et-a 17 and et-b 21 — do not turn Q16–Q20 into ## headings and do not delete U+200B or the empty **​** lines. The checker pins heading levels, block count, and ZWSP count to the Korean source, which already has the same blanks. Counts left: 003, 005, 006, 008, 009, 013, 015.
+et-a 29 — "1,57 miljonit TWD" not applied. The bio figure stays the pinned token TWD 1.57M in international-guidance-team.ts.
+
+et-a 16 thousands half — the suggested "TWD 1 000 …" spaces were not applied. Only the bare "1" before päeva kohta was removed.
+
+## Systemic patterns (instances changed)
+
+- tõotama → lubadus/lubama: 12 (guidance 4, llms 1, columns 7). 009 had none.
+- 營利事業所得稅 kasumit taotlev → tulundusettevõte / tulundusettevõtja / tulunduslik juriidiline isik: 16 (001: 3, 002: 1, 004: 12).
+- erineda … järgi ("may vary with") → sõltuda + elative: 15. Space thousands: 0. ZWSP deleted: 0.
+- bare 1 for üks: 5 (003 "1 päeva kohta" 1; 007 "1 nimele" 4).
+- 012 gloss on the wrong noun: 8 attachments moved or removed; the terms stay glossed on the right noun.
+- omadus/omama for a role or a permit, not ownership: 7 (001 beneficial owner, 004 subsidiary status, 017 role 4, 017 saada 1).
+- Alates kuupäevast 1. juuli 2026: 3. Nominative month kept.
+
+R2–R10 / R12–R17: the reviews already scored consultation languages, feminine address of Wei Tseng (unmarked; no masculine title left), teie-vorm, prose dates, decimal comma, and no Czech leakage as holding. No further Korea-default, advertising, English-chrome, or emergency-number sweep beyond row a2 (119/110/112 already named Taiwan). 005 Korea pangakontolt is a stated bank exception in the English source.
+
+## Reviewer got this wrong (not applied)
+
+- Space as the Estonian thousands separator, and "1,57 miljonit TWD" for the pinned bio figure. The checker accepts only dot grouping for et, and a test pins TWD 1.57M byte-identical.
+- Q16–Q20 should become headings, and U+200B lines are an Estonian-only defect. The Korean source has the same heading levels and the same ZWSP counts. Deleting them fails the structural check.
+- "Alates 1. juulist 2026" and "24. jaanuari 2022. aasta". DATE_MONTH_NAMES lists only nominative jaanuar and juuli. The elative/genitive does not match the date regex, so month 7 or month 1 drops out of the number bag and the file fails. The grammatical fix that still parses is "Alates kuupäevast 1. juuli 2026" and "24. jaanuar 2022 kuupäevaga … otsusega".
+- Closings of 009 use tõotama. 009 has no form of tõotama. The insurance sentence in row 30 was still fixed.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-et-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-et --lang et 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=136
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-et src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+
+Note: 017 numbers is WARN (수사미해석 제3자 ×2) with sourceCount=targetCount=44. That warning is not in tail -8. Summary is still PASS 18/18. The 21 status lines are the pre-existing WO-F-et.txt and untracked et-a.md/et-b.md plus the 18 edited sources. This log is written after that count.

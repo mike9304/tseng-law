@@ -47,7 +47,7 @@ Kuna rahapesujuhtumeid (洗錢) on Taiwanis väga palju, muutub pangakonto avami
 
 Investeerimiskava kontroll võtab samuti aega.
 
-Tasub teil koostada investeerimiskava ja otsida äriühingu registreerimisaadressi samal ajal.
+Teil tasub koostada investeerimiskava ja otsida äriühingu registreerimisaadressi samal ajal.
 
 Välismaalaste investeerimise seaduse (外國人投資條例) artikli 9 järgi peab heakskiidetud sissemakse saabuma täies ulatuses pädeva asutuse määratud tähtaja (核定期限) jooksul; tähtaeg tuleb kinnitada heakskiidudokumendis igas asjas (praktikas määratakse see sageli umbes 1 aasta pikkuseks).
 
@@ -87,7 +87,7 @@ Seda punkti tasub põhjalikult arutada Taiwani advokaadiga.
 
 **4. Millele tuleb tähelepanu pöörata, kui üüritakse äriühingu registreerimisaadress (näiteks restoranipind)?**
 
-Äriühingu asutamine kestab umbes **3 kuud**, tööloa (工作許可) ja elamiskaardi saamine umbes **1 kuu**.
+Äriühingu asutamine kestab umbes **3 kuud**, ning tööloa (工作許可) ja elamiskaardi saamine võtab sellele lisaks umbes **1 kuu**.
 
 Lepingu jõustumise päev tasub paigutada võimalikult hiljaks.
 
@@ -119,11 +119,11 @@ Lisaks nõuab linnavalitsus (市政府) lõplikul äriühingu registreerimisel, 
 
 Tavalisel ärikontoripinnal ei ole äriühingu registreerimine (公司登記) sel juhul võimalik.
 
-Näide: kui tegemist on tegevusaladega (營業項目), mis on võimalikud tavalisel ärikontoripinnal, nagu reklaam või hulgimüük, võib äriühingu asutada tavalisel ärikontoripinnal. Enne üürilepingu sõlmimist tasub sobivus läbi mõelda.
+Kui aga tegevusalasid (營業項目) saab pidada tavalisel ärikontoripinnal, nagu reklaami või hulgimüüki, võib äriühingu asutada tavalisel ärikontoripinnal. Enne üürilepingu sõlmimist tasub sobivus läbi mõelda.
 
 Tasub see eelnevalt kontrollida.
 
-*See leht on ainult üldine juhis. Nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles; päringu võib saata kontaktvormiga, viivitamatut vastust ei tõotata.*
+*See leht on ainult üldine juhis. Nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles; päringu võib saata kontaktvormiga, viivitamatut vastust ei lubata.*
 
 ---
 

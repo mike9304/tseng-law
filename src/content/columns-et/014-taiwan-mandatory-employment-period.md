@@ -22,7 +22,7 @@ faq:
 
 ![Pilt, mis selgitab töölepingu minimaalset töötamise aega ja kulude tagastamist](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Taiwani töölepingu (勞動契約) minimaalse töötamise aja kokkuleppega (最低服務年限約定) pannakse kirja töötaja lubadus jääda kokku lepitud ajaks, kas varajasel lahkumisel tuleb tagastada koolituskulud, sõlmimisboonus (簽約金) või jäämisboonus (留任獎金), ja kas leppetrahvi (違約金) võib nõuda eraldi. Pelk asjaolu, et allkirjastatud tekst on olemas, ei kinnita siiski kokkuleppe kehtivust ega tagastatavat summat. Rohkem kui lepingu nimetust tuleb seadusjärgsed eeldused ning maksete, koolituse ja lõppemise tegelik kulg uurida etappide kaupa.
+Taiwani töölepingu (勞動契約) minimaalse töötamise aja kokkuleppega (最低服務年限約定) pannakse kirja töötaja lubadus jääda kokku lepitud ajaks, kas varajasel lahkumisel tuleb tagastada koolituskulud, sõlmimisboonus (簽約金) või jäämisboonus (留任獎金), ja kas leppetrahvi (違約金) võib nõuda eraldi. Pelk asjaolu, et allkirjastatud tekst on olemas, ei kinnita siiski kokkuleppe kehtivust ega tagastatavat summat. Lepingule antud nimetusest hoolimata tuleb seadusjärgsed eeldused ning maksete, koolituse ja lõppemise tegelik kulg etappide kaupa läbi vaadata.
 
 Uurimisel on tähtis mitte segi ajada järgmisi 4 küsimust.
 
@@ -43,7 +43,7 @@ Artikkel 15-1 nõuab ühte neist 2 seadusjärgsest eeldusest ja lisaks eraldi m�
 
 Seadusjärgse eelduse kinnitamise järel uuritakse lõike 2 järgi eraldi, kas kokku lepitud periood ja vastutuse ulatus on mõistlikud. Kokkulepe, mis rikub lõike 1 seadusjärgset eeldust või lõike 2 mõistlikkuse kriteeriumi, on tühine lõike 3 järgi. See norm on siiski kriteerium iga kokkuleppe sisu ja asjaolude uurimiseks, mitte norm, mis algusest peale kuulutaks kõik minimaalse töötamise aja kokkulepped kehtivaks või tühiseks.
 
-Asjaolu, et töötaja on lepingu allkirjastanud, võib olla materjal, mis kinnitab kokkuleppe olemasolu, kuid see ei asenda seadusjärgseid eeldusi. Seevastu ainuüksi sellest, et kokkulepe on pikaajaline, ei tohi kohe järeldust teha; uurida tuleb, milline investeering või milline hüvitis oli ja miks see periood on määratud (最低服務年限約定).
+Asjaolu, et töötaja on lepingu allkirjastanud, võib olla materjal, mis kinnitab kokkuleppe olemasolu, kuid see ei asenda seadusjärgseid eeldusi. Seevastu ainuüksi kokkulepitud aja pikkusest ei tohi kohe järeldust teha; uurida tuleb, milline investeering või milline hüvitis oli ja miks see periood on määratud (最低服務年限約定).
 
 ## 2. Esimene seadusjärgne eeldus: kutseoskuste koolitus ja kulu kandmine
 
@@ -53,13 +53,13 @@ Uurimisobjekt ei hõlma ainult otseselt kontrollitavaid kulusid, nagu tasud väl
 
 Kava, koolituskalender, kohalolekuleht, hindamistulemus, läbimistõend, arved ja kviitungid on põhimaterjalid koolituse tegelikkuse ja kulu kinnitamiseks. Leping tööandja ja koolitusasutuse vahel, maksetõendid ja tagastamistingimused koos vaadatuna võimaldavad tegelikku koormust täpsemalt mõista. Kui osa kulust on maksnud töötaja ise või kolmas isik, tuleb ka eristada, kes kandis lõppkulu.
 
-Piir tavalise tööga kohanemise ja kutseoskuste koolituse vahel ei jagune ainult koolituskoha ega selle järgi, kes selle korraldab. Sisemine kursus võib sisaldada tõendatud kutse- ja tehnilist sisu ning märkimisväärset investeeringut ning pikk kursus välises asutuses võib tegelikult olla tavaline sissejuhatav koolitus. Seetõttu ei tohi ühetaoliselt välistada iga sisemist koolitust ega tunnistada seadusjärgset eeldust ainuüksi seetõttu, et kursus on kallis või pikk.
+Piir tavalise tööga kohanemise ja kutseoskuste koolituse vahel ei sõltu ainult koolituskohast ega sellest, kes koolituse korraldab. Sisemine kursus võib sisaldada tõendatud kutse- ja tehnilist sisu ning märkimisväärset investeeringut ning pikk kursus välises asutuses võib tegelikult olla tavaline sissejuhatav koolitus. Seetõttu ei tohi ühetaoliselt välistada iga sisemist koolitust ega tunnistada seadusjärgset eeldust ainuüksi seetõttu, et kursus on kallis või pikk.
 
 Tuleb ka osata selgitada seost kokku lepitud perioodi ja koolitusinvesteeringu vahel. Millise oskuse saab, milline seos oskusel on sihtametikohaga ja miks pakutud töötamise aeg on vajalik koolituse kestuse ja kulu kõrval, uuritakse asja kaupa. See, kas kõnealust tööd pärast koolitust tegelikult tehti, ja juba täidetud töötamise aeg on samuti alus koormuse ulatuse hindamiseks.
 
 ## 3. Teine seadusjärgne eeldus: mõistlik hüvitis
 
-Teine seadusjärgne eeldus on, et tööandja annab mõistliku hüvitise (合理補償) töötaja lubaduse eest järgida minimaalset töötamise aega. Siin peab hüvitisel olema eesmärk ja struktuur, mis on eristatud tavalisest palgast või vastutasust töö eest, mis juba tuleb anda (合理補償). Õiguslikku iseloomu ei määra ainuüksi see, et palgalehel on summa märgitud sõlmimisboonuseks, jäämisboonuseks või ettemakstud hüvitiseks.
+Teine seadusjärgne eeldus on, et tööandja annab mõistliku hüvitise (合理補償) töötaja lubaduse eest järgida minimaalset töötamise aega. Siin peab hüvitisel olema eesmärk ja struktuur, mis on eristatud tavalisest palgast või muust vastutasust juba tehtud töö eest (合理補償). Õiguslikku iseloomu ei määra ainuüksi see, et palgalehel on summa märgitud sõlmimisboonuseks, jäämisboonuseks või ettemakstud hüvitiseks.
 
 Esmalt tuleb kinnitada makse eesmärk. Kas tegemist on tavalise palgatingimusega värbamisel, vastutasuga lubaduse eest jääda kindel periood või tasuga saavutatud tulemuste eest, peab olema selge lepingus ja teatematerjalides (合理補償). Uuritakse ka, kas maksepäev, summa, kuuluvuse hetk, seos töötamise perioodiga, tagastamise põhjused ja valem on esitatud nii, et töötaja sai neid enne lepingut mõista.
 
@@ -110,7 +110,7 @@ Proportsionaalsuse põhimõte täitmata perioodile (預付性給付) eeldab esma
 
 Tagastamise küsimus tuleb kinnitada järjekorras: kokkuleppe kehtivus, makstud summa õiguslik iseloom, juba täidetud töötamise aeg, lõppemise põhjus ja tagastamise valem; nõutud summat ei kinnitata ainuüksi seetõttu, et leping kasutab väljendit „leppetrahv“ (違約金).
 
-Klausel täielikust tagastamisest, kindel leppetrahv ilma seoseta tegeliku kahjuga ja ühepoolne kinnipidamine palgast ei hinnata ühe probleemina. Õiguslik alus, lepingu sisu, tööõiguse piirid ja kinnipidamise seaduslikkus tuleb kinnitada eraldi. Summa, mis on kirjutatud tööandja nõudesse, või asjaolu, et töötaja on maksnud osa, ei kinnita samuti muid õigusküsimusi.
+Täieliku tagastamise klauslit, kindlat leppetrahvi, millel puudub seos tegeliku kahjuga, ja ühepoolset palgast kinnipidamist ei tohi hinnata ühe probleemina. Õiguslik alus, lepingu sisu, tööõiguse piirid ja kinnipidamise seaduslikkus tuleb kinnitada eraldi. Summa, mis on kirjutatud tööandja nõudesse, või asjaolu, et töötaja on maksnud osa, ei kinnita samuti muid õigusküsimusi.
 
 Tuleb ka eristada koolituskulude tagastamine ja ettemakstud hüvitise tagastamine. Esimest vaadatakse keskendudes tegelikule kutseoskuste koolitusele ja kulu kandmisele; teist makse eesmärgile, teatisele, kuuluvuse tingimustele ja proportsionaalsusele täitmata perioodiga. Kui mõlemat kirjet nõutakse koos, tuleb eraldi uurida, kas kulu on arvutatud kahekordselt, ja iga kirje tõendeid.
 
@@ -130,7 +130,7 @@ Lõppemise põhjuse hindamine mõjutab otseselt ka tagastamise ulatust. Kui lõi
 
 Minimaalse töötamise aja kokkulepe ei ole kord, mis füüsiliselt või õiguslikult takistaks töötaja lahkumist. Lahkumise tahteavaldus ja etteteatamistähtaeg (預告期間) on küsimus sellest, millal töösuhe lõpeb; minimaalse töötamise aja kokkuleppe kehtivus ja vastutus kulude tagastamise eest on küsimus sellest, kas lõppemisest tekib varaline vastutus.
 
-Kui töötaja lõpetab tähtajatu töölepingu (不定期契約), kohaldatakse Taiwani tööstandardite seaduse artikli 15 järgi analoogselt artikli 16 lõike 1 etteteatamistähtaega. Artikkel 16 on säte tööandja lepingu lõpetamise kohta ning töötaja lahkumisele kohaldatakse seda etteteatamistähtaega artikli 15 kaudu.
+Kui töötaja lõpetab tähtajatu töölepingu (不定期契約), kohaldatakse Taiwani tööstandardite seaduse artikli 15 alusel artikli 16 lõike 1 etteteatamistähtaega. Artikkel 16 on säte tööandja lepingu lõpetamise kohta ning töötaja lahkumisele kohaldatakse seda etteteatamistähtaega artikli 15 kaudu.
 
 Etteteatamistähtaeg katkematu tööstaaži järgi on järgmine.
 
@@ -140,7 +140,7 @@ Etteteatamistähtaeg katkematu tööstaaži järgi on järgmine.
 
 Kui tähtajalise töölepingu periood kindla töö jaoks (特定性定期契約) ületab 3 aastat, kohaldub artikli 15 eraldi norm. Töötaja võib, olles töötanud 3 aastat, lõpetada lepingu 30-päevase etteteatamisega tööandjale. See norm tuleb eristada sellest, mis puudutab etteteatamist katkematu tööstaaži järgi tähtajatule lepingule.
 
-Kui katkematu tööstaaž on alla 3 kuu, kui tegemist on teist tüüpi tähtajalise lepinguga või kui tuginetakse seadusjärgsele alusele viivitamatuks lõpetamiseks, tuleb kohalduv säte ja asjaolud uurida asja kaupa (勞動基準法). Pelk asjaolu, et leping mainib pikemat etteteatamist või nõuab viivitamatut töö üleandmist, ei luba õiguslikku järeldust kinnitada ette.
+Kui katkematu tööstaaž on alla 3 kuu, kui tegemist on teist tüüpi tähtajalise lepinguga või kui tuginetakse seadusjärgsele alusele viivitamatuks lõpetamiseks, tuleb kohalduv säte ja asjaolud uurida asja kaupa (勞動基準法). Pelk asjaolu, et leping näeb ette pikema etteteatamise või et tööandja nõuab viivitamatut töö üleandmist, ei luba õiguslikku järeldust kinnitada ette.
 
 Praktikas tuleb säilitada lahkumise tahteavalduse sisu ja saatmise päev, päev, mil tööandja selle tegelikult kätte sai, ning poolte teated viimase tööpäeva kohta. Kui 4 küsimuses eristatakse hetke, mil lahkumine kehtivalt saab toime, minimaalse töötamise aja kokkuleppe kehtivust, koolituskulude või ettemakstud hüvitise tagastamist ja kahju, millele tuginetakse eraldi, väheneb oht teha ühest lepinguklauslist kõik järeldused.
 
@@ -189,6 +189,6 @@ Materjale ajajärjekorda korrastades tuleks koos märkida lepingu sõlmimise pä
 
 ---
 
-See tekst on üldine selgitus, et kirjeldada minimaalse töötamise aja kokkulepet Taiwanis, koolituskulude ja ettemakstud hüvitise tagastamist ning lahkumise etteteatamist; see ei ole õigusnõuanne konkreetses tööasjas (最低服務年限約定). Kokkuleppe kehtivus ja vastutuse ulatus võivad erineda lepingu liigi ja sisu, tegeliku koolituse ja kulu, hüvitise eesmärgi ja selle teatise, töötamise aja, lõppemise põhjuse ja tõendite järgi. Enne lahkumise vormistamist, palgakinnipidamise aktsepteerimist, tagastamise kokkuleppimist või vaidlusele vastamist tuleks kinnitada uusimad ametlikud allikad ja individuaalsed asjaolud.
+See tekst on üldine selgitus, et kirjeldada minimaalse töötamise aja kokkulepet Taiwanis, koolituskulude ja ettemakstud hüvitise tagastamist ning lahkumise etteteatamist; see ei ole õigusnõuanne konkreetses tööasjas (最低服務年限約定). Kokkuleppe kehtivus ja vastutuse ulatus võivad sõltuda lepingu liigist ja sisust, tegelikust koolitusest ja kulust, hüvitise eesmärgist ja selle teatisest, töötamise ajast, lõppemise põhjusest ja tõenditest. Enne lahkumise vormistamist, palgakinnipidamise aktsepteerimist, tagastamise kokkuleppimist või vaidlusele vastamist tuleks kinnitada uusimad ametlikud allikad ja individuaalsed asjaolud.
 
 **Advokaat Wei Tseng (曾雋崴)**

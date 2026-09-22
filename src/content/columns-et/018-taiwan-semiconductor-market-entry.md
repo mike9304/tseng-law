@@ -19,7 +19,7 @@ faq:
 
 ![Toimetuslik pilt Taiwani turule sisenemise struktuuri hindamiseks pooljuhtettevõttele](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Kui müük Taiwani klientidele algab, võib välismaine peakontor saada mitmesuguseid palveid: käsitleda pakkumisi ja lepinguid Taiwanis, hoida varu kiireks asendamiseks või paigutada personali paigaldusele ja hooldusele. Siis küsitakse meelsasti esmalt: „Kas äriühingu asutamisest Taiwanis piisab selle lahendamiseks?“
+Kui müük Taiwani klientidele algab, võib välismaine peakontor saada mitmesuguseid palveid: käsitleda pakkumisi ja lepinguid Taiwanis, hoida varu kiireks asendamiseks või paigutada personali paigaldusele ja hooldusele. Siis on kerge esmalt küsida: „Kas äriühingu asutamisest Taiwanis piisab selle lahendamiseks?“
 
 See, mis tuleb esmalt selgitada, on kes Taiwanis võtab mida. Hinnatav struktuur muutub selle järgi, kas välismaine peakontor jätkab müügilepingute allkirjastamist, kas Taiwani äriühing ostab kaupu ja müüb need edasi või kas kohalik personal annab ainult tehnilist tuge.
 
@@ -115,4 +115,4 @@ Etappide kaupa üleminekut saab kavandada, kuid tuleb ka uurida olemasolevate le
 
 Kui Taiwanis soovitakse müüa, juhtida varusid, anda paigaldustuge või palgata kohapeal, korrastage esmalt töö, mida peakontor teostab, ja see, mis kuulub Taiwani organisatsioonile. Vestlusteemade ja huvide konfliktide kinnitamise järel selgitab büroo vajalikud materjalid ja nende teenuste ulatuse, mida saab osutada.
 
-Näide teemast: vestlus pooljuhtettevõtte turule sisenemise struktuurist Taiwanis. Esimeses kontaktis teatage äriühingu nimi, peakontori riik, kavandatud toode või teenus, tegevuskava Taiwanis ja soovitud vestluskeel. Konfidentsiaalsed kavandimaterjalid ja täielikud lepingud saadetakse alles pärast täiendavate juhiste saamist. Tegelikult kättesaadavad vestluskeeled ja iga volituse ulatus tuleb kinnitada kontakti ajal; nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles ning viivitamatut vastust ei tõotata.
+Näide teemast: vestlus pooljuhtettevõtte turule sisenemise struktuurist Taiwanis. Esimeses kontaktis teatage äriühingu nimi, peakontori riik, kavandatud toode või teenus, tegevuskava Taiwanis ja soovitud vestluskeel. Konfidentsiaalsed kavandimaterjalid ja täielikud lepingud saadetakse alles pärast täiendavate juhiste saamist. Tegelikult kättesaadavad vestluskeeled ja iga volituse ulatus tuleb kinnitada kontakti ajal; nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles ning viivitamatut vastust ei lubata.

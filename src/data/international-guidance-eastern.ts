@@ -1084,7 +1084,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Limba paginii și limba consultanței nu sunt același lucru',
           paragraphs: [
             'Această pagină este scrisă în limba română, dar consultanța cu un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocatul va avea loc în limba română.',
-            'Nu promitem un interpret, un termen de răspuns și nicio programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
+            'Nu promitem nici un interpret, nici un termen de răspuns și nicio programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
           ],
         },
         {
@@ -1105,7 +1105,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'De unde să începeți',
           paragraphs: [
             'Citiți pagina „Servicii” pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi „Costuri” și „Contact”, pentru a afla cum se stabilește obiectul mandatului și cum se confirmă onorariile înainte de începerea lucrării.',
-            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă o consultanță și nicio programare confirmată.',
+            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă nici o consultanță și nicio programare confirmată.',
           ],
         },
       ],
@@ -1269,7 +1269,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță',
           paragraphs: [
             'În formularul de contact puteți alege „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
-            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem un interpret, o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
+            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem nici un interpret, nici o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
           ],
         },
         {
@@ -1401,7 +1401,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Drepturile dumneavoastră și calea de contact',
           paragraphs: [
-            'Puteți cere accesul la datele dumneavoastră, îndreptarea sau ștergerea lor ori vă puteți retrage consimțământul, prin adresa de e-mail arătată pe pagina de contact. Dacă există o obligație legală sau procesuală de păstrare, explicăm limitarea.',
+            'Puteți cere accesul la datele dumneavoastră, rectificarea sau ștergerea lor ori vă puteți retrage consimțământul, prin adresa de e-mail arătată pe pagina de contact. Dacă există o obligație legală sau procesuală de păstrare, explicăm limitarea.',
             'Această pagină nu arată un termen fix de păstrare, fiindcă durata efectivă depinde de desfășurarea ulterioară a cauzei și de obligațiile legate de aceasta. Dacă doriți o ștergere mai devreme, arătați acest lucru la contactare.',
           ],
         },

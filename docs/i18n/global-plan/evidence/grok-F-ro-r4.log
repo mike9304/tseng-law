@@ -1,0 +1,102 @@
+WO-F-ro r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ro-r4
+date: 2026-09-23
+scope: columns-ro 001–018, romanianGuidanceContent, guidance team/answers `ro`, GUIDANCE_LLMS_NOTICES.ro. No other locale.
+
+## Rows applied (65)
+
+ro-a 1–14 and 16–21. ro-b 1–22 and 24–46.
+P3 rows: none in either review.
+
+Wording keeps the English meaning. Suggested rewrites were followed where they were already natural Romanian. A few were fitted so the sentence still governs its verb and still carries the facts the suggestion dropped.
+
+- ro-a 1. Fang-Yu Chang: role, bio intro, and both experience lines are feminine (asistentă juridică). Wei Tseng’s lines were already feminine and were left.
+- ro-a 5. 005 now credits avocata Wei Tseng (曾雋崴) in the existing introduction. Block count unchanged.
+- ro-a 7. Ground 4 names whose lineal relative is abused. Personal accusative: „îl maltratează pe celălalt soț”.
+- ro-a 8. „gardă” → „custodie”. The Chinese gloss (親權) stays.
+- ro-a 13. The dacă-clause is no longer the subject. „condițiile legale și termenele pertinente” stay; the English still has the statutory requirements and the time limits.
+- ro-a 16. „nici” now marks each item in the contact sentence, and in the two sentences the row named („nu este încă nici o consultanță”, „nu este nici o opinie juridică”).
+- ro-a 17. „Notă specifică de țară” → „Precizare” in 001 and 004. The Korea treaty facts, dates, and the 10% rate stay.
+- ro-a 19. The llms discovery sentence keeps the token `llms.txt`. Endorsement and recommendation are no longer the same noun twice. See disagreements.
+- ro-a 20. Privacy right is „rectificarea”. confidentialNotice does not contain that sentence and was left, so it remains a verbatim substring of the privacy page.
+- ro-a 21. The one gloss (台灣法人) → (臺灣法人). One character, same hanzi count.
+- ro-b 8. Care and the period/cost are the subject of „se apreciază”. They are not conditions.
+- ro-b 13. FAQ, the repeated body sentence, and the investment-timing sentence („unui complet”) now say the authority may or may not ask for supplemental documents.
+- ro-b 14. „oferi” → „ceda cu titlu gratuit” in the registration sentence and in checklist item 3.
+- ro-b 24. „local comercial de birouri” → „spațiu de birouri” in the heading and the four later uses in that answer (5). The previous answer’s „local comercial” is the storefront lease and was left.
+- ro-b 25. Statute phrase is „a întruni condițiile” in 014 (poate întruni ×2, întrunește ×1, „ambele condiții să fie întrunite” ×2) and 016 („sunt întrunite” ×2).
+- ro-b 28. „Concluzia reală trebuie să examineze” → „Rezultatul concret presupune examinarea” in the FAQ and the same body sentence.
+- ro-b 30. „verificat” now has its own „trebuie”.
+- ro-b 32. „raportul de proprietate reală” → „calitatea de beneficiar real” in the body and in checklist item 2. „beneficiarii reali” later in the file was already the right term and was left.
+- ro-b 37–38. Truck age is tied to the truck, and the individual pathway is „un regim propriu și restrâns”, in the FAQ and in section 2. The later paragraph that already said „cu o vârstă” was left.
+- ro-b 40–41. Registration is „Înregistrarea la registrul…”. The Article 35 approval is „obținută”, not concluded. The same paragraph’s „aprobarea … este și ea obținută” follows that pattern.
+
+002, 006, and 009 had no wording row. They were not edited.
+
+## Rows skipped (2)
+
+- ro-a 15 (P2). Q16–Q20 as `##` headings, and deleting U+200B / `**​**` in 003, 005, 006, 008, and 009.
+  Reason: checkHeadings and checkBlocks compare heading levels and the ZWSP count with the Korean source. Promoting those lines or deleting the spacers fails the checker. ACCEPTED-ROUND also forbids adding headings and merging blocks. Q16–Q20 stay body lines. Zero-width characters removed: 0.
+- ro-b 23 (P2). Delete every U+200B in 013 and 015 and join the split sentences.
+  Reason: same ZWSP and block-count rule. The review said to leave the wording, so those blocks were not rewritten. „spațiu de birouri” in 013 is a separate row and was applied inside the existing lines.
+
+Frontmatter `url` Hangul in 008 and 009: not a finding; left (R16 / ACCEPTED-ROUND).
+
+## Systemic patterns
+
+- Work-permit „destinatar” (the addressee of a letter, where the source is the eligible category): 2 (001 the person who will actually manage; 005 point A „condițiile de îndeplinit”). Bank „cont destinatar”, insurance „destinatar al prestațiilor”, and „organ destinatar” are real recipients and were left.
+- Fang-Yu Chang masculine card: 4 strings (role label, bio intro, Boyin line, Muyang line).
+- „nici” only on the last item of a negative list: 5 sentences. The three the row named (contact promise, „nu este încă o consultanță”, FAQ „opinie juridică”), plus the same break in „Nu promitem un interpret, o prestație în limba română … și nici că preluăm orice cauză”, plus the llms discovery sentence. „nu înseamnă nicio ordine și nicio durată” in 001 already marks both items and was left.
+- Indirect question used as a subject, participle not agreeing: 2 (003 prescription; 007 consensual relations). Other „trebuie examinat” clauses already have a real subject and were left.
+- „Notă specifică de țară” → „Precizare”: 2 (001, 004).
+- English „need not” / „does not need to” written as the ban „nu trebuie să”: 5. The quoted 018 control sentence („poate să nu coincidă”), plus 008 severance ×4 (both FAQ answers, the resignation sentence, and the disciplinary cell of the table). 018 section 8 already said „nu este necesar” for the confidential-materials „need not” and was left. Real bans („nu trebuie să depășească”, „nu trebuie să-l folosească”) were left.
+- „Whether” written as a condition, so the question does not govern the verb: 4 (016 marital regime; 007 article 1052; 010 caregiving costs; 010 limitation „Faptele pot totuși deschide”). Other „Dacă” clauses that are real conditions were left.
+- „reuni” where the set phrase is „a întruni condițiile”: 9. 014 ×5 and 016 ×2 are the row; 007 ×2 („soț care întrunește condițiile”, „prejudiciul extra-patrimonial care întrunește condițiile legale”) are the same pattern. „reuni datele / faptele / documentele” means gather and was left (018, 016, 017, 010, 004).
+- „real” as the legal false friend (in rem / real property / an acknowledgment): 7. 010 ×3 (drepturi efective, despăgubiri punitive efectiv acordate, fiecare capăt efectiv admis), 014 ×2 (rezultatul concret), 016 ×2 (beneficiar real). Left: „beneficiar real” as UBO, „prejudiciul real” as compensatory damages, „investiția reală”, „decontul real”, „legătura reală”.
+- An approval or a register „încheiat(ă)” as if it were a contract: 3 in 017 (the checklist registration, the Article 35 approval, and „aprobarea de schimbare … este și ea obținută”). 011 „încheie înregistrarea de produs” is completing the filing, which is the English „complete product registration”, and was left. Contracts that are actually concluded were left.
+- „local comercial de birouri” → „spațiu de birouri”: 5 in 013. The storefront sentence was left.
+- U+200B one-line fragments (003 from Q16, 005, 006, 008, 009, 013, 015): 0 removed.
+- Traditional gloss 臺灣法人: 1 in 005. No other 台 in columns-ro.
+
+R2–R10 were already in place on the points the reviews checked (Korea only as a labelled example, consultation lock, feminine Wei Tseng, dumneavoastră, dot thousands, decimal comma, day-month dates, emergency numbers). No new Hangul outside `url`. No `[변호사 검수 필요]`. No block, heading-level, link, or number change. Disclosure-parity regexes were not touched: the pinned tokens (interpret, termen de răspuns, opinie juridică, programare, orice cauză) are still in the rewritten sentences. consultationNotice and confidentialNotice were not rewritten. „TWD 1.57M” does not appear; the bio keeps „1,57 mil. TWD”.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=74
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ro src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+The 22 is this snapshot before this log file. It includes the pre-existing `WO-F-ro.txt` modification and the untracked `ro-a.md` / `ro-b.md`. 002, 006, and 009 were not modified.
+
+## Reviewer disagreements (not applied as written)
+
+No legal finding was rejected as wrong.
+
+- ro-a 15 and ro-b 23 correctly describe the chopped lines, but those U+200B spacers and the Q16–Q20 body paragraphs match the Korean source. They are not a Romanian-only layout error. Turning them into headings or joining the lines fails the checker, so those fixes were not applied.
+- ro-a 19. The suggested line still says „nicio recomandare, nicio recomandare din partea inteligenței artificiale”. That is the stutter the row itself names. The English notice is search ranking, endorsement, recommendation, and guaranteed visibility. The applied sentence uses „susținere” for endorsement and keeps the AI recommendation as a qualifier, with „nici” on each item.
+- ro-b 8. The suggested sentence still opens with „Dacă îngrijirea era necesară … se apreciază”, which is the false condition the problem line describes. Applied as two noun phrases that „se apreciază”.
+- ro-a 13. The suggested sentence drops „condițiile legale” and „termenele”. The English keeps the statutory requirements and the time limits, so they stay in the Romanian sentence.
+- ro-a 7. „maltratează soțul” has no personal „pe”. Applied „îl maltratează pe celălalt soț”.
+- ro-b 30. „și verificat” has no finite verb of its own. Applied „și trebuie verificat”.
+- ro-b 4. „să permită și să se stabilească” does not coordinate. Applied „Actele trebuie folosite și pentru a stabili”, which is the English „the evidence must also be used to determine”.

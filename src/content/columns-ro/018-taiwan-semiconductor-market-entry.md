@@ -37,17 +37,17 @@ Să presupunem că un fabricant străin de componente de precizie vinde clienți
 | Oferte și comenzi | Cine confirmă definitiv prețul și termenul, și până unde merge autoritatea responsabilului în Taiwan? |
 | Marfă și stocuri | Cine importă, deține și gestionează stocurile, și tratează retururile și înlocuirile? |
 | Personal | Salariații sediului se deplasează, se angajează în Taiwan sau se încredințează munca unui prestator exterior? |
-| Instalare și sprijin tehnic | Cine datorează sprijinul față de client și tratează problemele muncii pe loc? |
+| Instalare și sprijin tehnic | Cine datorează clientului obligațiile de sprijin și cine tratează problemele apărute în lucrarea de la fața locului? |
 | Încasări și costuri | Cine facturează și încasează, și cum se lichidează costurile între sediu și organizația din Taiwan? |
 | Calitate și litigii | Cine confirmă rezultatul inspecției și primește reclamațiile de defecte sau de daune? |
 
-Mai ales dacă vânzătorul contractului de vânzare nu este întreprinderea care furnizează sprijinul tehnic, documentele trebuie să distingă de la cine clientul poate cere ce obligații.
+Mai ales dacă vânzătorul contractului de vânzare nu este întreprinderea care furnizează sprijinul tehnic, documentele trebuie să precizeze față de cine poate clientul să valorifice fiecare obligație.
 
 ## 2. Distincție între filială, sucursală și birou de reprezentare al unei societăți străine în Taiwan
 
 La planificarea intrării, întreprinderea de semiconductori trebuie să separe ce prezență se stabilește în Taiwan și cum se organizează vânzările și serviciul. Primul punct privește personalitatea juridică, cerințele de înregistrare și obiectul de activitate; al doilea, modul de a opera, facultățile și împărțirea răspunderii.
 
-Diferența principală între o filială taiwaneză și o sucursală taiwaneză a unei societăți străine este dacă are o personalitate juridică distinctă de societatea-mamă sau de sediu. Distribuția și agenția sunt aranjamente tranzacționale și contractuale, și nu trebuie confundate cu forma societară.
+Diferența principală între o filială taiwaneză și o sucursală taiwaneză a unei societăți străine este dacă prezența din Taiwan are o personalitate juridică distinctă de societatea-mamă sau de sediu. Distribuția și agenția sunt aranjamente tranzacționale și contractuale, și nu trebuie confundate cu forma societară.
 
 | Structură | Distincție de bază | Ce trebuie confirmat mai întâi |
 |---|---|---|
@@ -61,7 +61,7 @@ Dacă decideți să constituiți o persoană juridică independentă în Taiwan,
 
 ### Societate cu răspundere limitată (有限公司): guvernanță mai simplă, dar transmiterea părților mai închisă
 
-Se poate forma cu 1 persoană fizică sau mai multe, sau cu asociați persoane juridice taiwaneze sau străine; asociații răspund, în principiu, până la concurența sumei aportului lor. Societatea are de la 1 la 3 administratori, aleși dintre asociați. Asociații care nu execută comerțul pot exercita drepturi de supraveghere, fără să fie nevoie de un cenzor (監察人) distinct. În afară de dispoziție statutară contrară, fiecare asociat are un vot (1 asociat, 1 vot), astfel că controlul nu trebuie să coincidă cu proporția aporturilor. Transmiterea aportului unui asociat obișnuit cere, în principiu, consimțământul a mai mult de jumătate din drepturile de vot ale celorlalți; pentru un administrator, consimțământul a cel puțin 2/3 din drepturile de vot ale celorlalți. Aceasta convine mai bine unor relații de asociați simple și unui control stabil decât unor atrageri frecvente de capital sau cesiunilor de părți sociale. Mai târziu, se poate converti în societate pe acțiuni (股份有限公司).
+Se poate forma cu 1 persoană fizică sau mai multe, sau cu asociați persoane juridice taiwaneze sau străine; asociații răspund, în principiu, până la concurența sumei aportului lor. Societatea are de la 1 la 3 administratori, aleși dintre asociați. Asociații care nu execută comerțul pot exercita drepturi de supraveghere, fără să fie nevoie de un cenzor (監察人) distinct. În afară de dispoziție statutară contrară, fiecare asociat are un vot (1 asociat, 1 vot), astfel că controlul poate să nu coincidă cu proporția aporturilor. Transmiterea aportului unui asociat obișnuit cere, în principiu, consimțământul a mai mult de jumătate din drepturile de vot ale celorlalți; pentru un administrator, consimțământul a cel puțin 2/3 din drepturile de vot ale celorlalți. Aceasta convine mai bine unor relații de asociați simple și unui control stabil decât unor atrageri frecvente de capital sau cesiunilor de părți sociale. Mai târziu, se poate converti în societate pe acțiuni (股份有限公司).
 
 ### Societate pe acțiuni (股份有限公司): potrivită dacă se dorește atragerea altor investitori sau dacă se are în vedere o cotare
 
@@ -73,7 +73,7 @@ Când o societate străină constituie o filială taiwaneză, numele se verific�
 
 În schimb, pentru a constitui o sucursală taiwaneză a unei societăți străine obișnuite, o autorizare de investiție a Departamentului de examinare a investițiilor al Ministerului Economiei (經濟部投資審議司) nu este în principiu cerută; Departamentul comerțului al Ministerului Economiei (經濟部商業發展署) tratează înregistrarea de sucursală și determinarea de capital conexă. Rămân necesare verificarea prealabilă a numelui, viramentul capitalului de exploatare, verificarea capitalului și înregistrarea fiscală; calendarul este în general mai scurt.
 
-Cele de mai sus sunt o propunere de concepție contractuală. Simpla alegere a unei anume forme juridice nu face tranzacția licită și nu previne litigiile.
+Cele de mai sus sunt un sfat privind concepția contractului. Simpla alegere a unei anume forme juridice nu face tranzacția licită și nu previne litigiile.
 
 ## 5. Înregistrarea societară și munca licită a unui inginer nu sunt același lucru
 

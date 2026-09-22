@@ -1,0 +1,89 @@
+WO-F-da r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-da-r3
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: da-a 49, da-b 35 (84). No separate P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 80.
+Skipped: 4 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No Danish FAQ question or title pin in src/lib/__tests__/ or src/data/__tests__/ matched a string that changed. consultationNotice in llms-txt.ts was left; it is still a verbatim substring of the Danish FAQ answer ("Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk."). confidentialNotice was left (the privacy sentence it copies was not rewritten). discoveryNotice still contains the token llms.txt; only the doubled "anbefaling" became "omtale". "TWD 1.57M" in the Danish bio was left byte-identical.
+
+### Applied
+da-a 1–3, 5–27, 29–48.
+da-b 1–15, 17–35.
+
+Adaptations (still applied):
+- da-a 18. The gloss (公司設立) now sits on selskabsstiftelse. "del 2" stays in the same paragraph so the source 2 is still counted. The suggested extra "del 1" was not added; the link in that paragraph already says "uddybning del 1".
+- da-a 25. "det seneste et år" → "det seneste 1 år" (FAQ and body). Bare "det seneste år" drops the lexicon phrase "et år", which counts as 1. Two instances.
+- da-a 32. "pr. et år 1 måneds" → "for hvert fuldført 1 år 1 måneds" (FAQ and blockquote). "én" is not in the Danish number lexicon. "et år" is, so the year stays a digit 1 next to the month's 1.
+- da-b 15 and da-a 26 are the same period-before-TWD pattern. Six amounts: 002 "2.500.000 TWD." and "60.000 TWD."; 003 "500.000 TWD.", "3.200.000 TWD." and "90.000 TWD."; 011 "5.000.000 TWD." Amounts that already read "500.000 TWD" without that period were left.
+- da-b 17 and the split sentences named in da-a 28 (005 "gå", 008 the new management and the other employees, 013 the bank clerk, the landlords, and "bør du kontrollere"). Each block is now a full sentence. Paragraphs were not merged, and no heading was added.
+- da-b 31. The three blocks in 015 stay three blocks. "Zonens tilladelse" is no longer the name of the point; the point is whether the address is in a restaurant zone. The (營業地址) gloss stays on the third block.
+
+### Skipped
+- da-a 4. "(artikel 10)" stays on the withholding-rule link. The Korean link is 영업세법 제10조, and dropping 10 fails the number check (sourceCount 95 → 94). The URL (`pcode=G0340028&flno=3`) is unchanged. The label's subject was already the nonresident dividend withholding rule.
+- da-a 28. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003 (from Q16), 005 (including `**​**`), 006, 008 and 009 were not removed. Heading levels and ZWSP counts must match the Korean source. The broken sentence openings inside those files were repaired without deleting the zero-width spaces; see da-b 17.
+- da-a 49. The bio figure "TWD 1.57M" stays byte-identical. ACCEPTED-ROUND pins it. The Danish gloss in parentheses, "(1,57 mio. TWD)", was already there and was left.
+- da-b 16. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 (lines 58, 72, 86, 108) and 015 (lines 28, 36, 52), were left. Deleting them changes the ZWSP count and the block count. 0 instances removed.
+
+## Systemic patterns
+
+- Swedish *røre* used as Danish *røre* ("concern"). 3: guidance "Hvis en del af din sag rører", "Rører en del af din sag", and 004 "rører sletningen". All three are now *vedrører*.
+- Period before the currency code, so TWD sat outside the sentence. 6 amounts, listed under da-a 26 / da-b 15.
+- English genitive *Firms* read as a plural. 2: the Danish home description and the Danish offices description. Swedish and Norwegian strings with the same shape were not touched.
+- U+200B blanks (003 from Q16, 005 including `**​**`, 006, 008, 009, 013, 015). 0 deleted. See Skipped.
+- 資遣費 named with *fratrædelsesgodtgørelse*, which the guidance pack reserves for the other-country payment. 2: frontmatter title and H1 of 008, now "godtgørelse ved afskedigelse". The Korea example in 008 ("udbetale fratrædelsesgodtgørelse, når arbejdstagere fratræder") stays. The body already used "godtgørelse ved afskedigelse".
+- *Driftsstilstand* for 停業 (temporary suspension). 22 tokens in 002, all now "midlertidig indstilling af driften" (definite or indefinite as the sentence needs). Link labels included; URLs unchanged.
+- *Klage* for 告訴 (request for prosecution) in 003. 6 occurrences of *påtalebegæring*, covering klageforbrydelse, indgivelse, tilbagetrækning, Q18 and frafald. Administrative *klage* outside this offence was not in 003 and was left.
+- *Forsikringsgiver* (Norwegian). 4: 010 "forsikringsselskabet (保險人)", "forsikringsselskabet foreslår", "forsikringsselskabets svar"; 003 "det obligatoriske forsikringsselskab".
+- *Civilstandsstand*. 3 in 007: the opening compound, "parternes civilstandsstand", and the closing list. 007 already had *livscentrum*; 016 "livscentret" → "livscentrum" (1).
+- Lexicon phrase "et år" counted as 1. 4 surfaces kept a digit 1 instead of dropping the word: 001 "det seneste 1 år" ×2, 008 "fuldført 1 år" ×2.
+- Doubled determiner. 2 in 014: "hvilken den aftalte periode" and "hvilket det retlige grundlag".
+- *Den omkostning* without the suffixed article. 2 ("omkostningen, som arbejdsgiveren") plus "tilregne omkostningen" ×1, all in 014.
+- *Skranke* for the filing route. 2 in the same 017 paragraph ("samme indgivelsesvej", "forskellige indgivelsesveje").
+- *Flerfoldig* where the restriction on using several deductions at once was missing or coined. 3: FAQ, the section-4 repeat, and "begrænsningen af flerfoldig brug".
+- Guidance calques in the Danish pack only. røre ×2, Bevilling, bodeling, Law Firms ×2, niveauet ×2 (FAQ intro and answers), bevaringsfrist / tidligere sletning, oversættelseslister, Byg derfor, Hvor langt, går igennem, bliver i den tid, indrettet på, i ét forløb, tredjepartsomkostninger and tredjepartsindhold, ville ikke vise, Kontor Korea, Korea-drift ×2 (role and experience line), ikke at vi tager imod enhver sag, akut linje, datalogi bio, sagsakter. llms discoveryNotice: the second "anbefaling" → "omtale". Norwegian and Swedish neighbours in the same files were not edited.
+- Lowercase or mid-sentence paragraph openings. 6 blocks repaired without a merge: 005 "gå i banken"; 013 the bank sentence, the landlords, and the lease check; 008 "Så snart den nye ledelse var tiltrådt" and "De andre medarbejdere, der var fratrådt".
+- R2–R10. Prior rounds already hold: du-address, Wei Tseng in the common-gender title *advokat* with *hun* where a pronoun is used, consultation languages engelsk / kinesisk (中文) / japansk / koreansk, no interpreter, no reply-time promise, no free first meeting, no result promise. Korea stays a labelled example (the 005 bank steps, the treaty note). This round did not turn any of those sentences positive. The Korea severance comparison in 008 still uses *fratrædelsesgodtgørelse* for the other-country payment. 006 had no wording finding beyond the zero-width spaces, which were left.
+
+## Reviewer points not followed
+
+- da-a 28 and da-b 16. The U+200B lines are the same count as the Korean source. Promoting Q16–Q20 to headings would also change heading levels. The Korean source does not use those headings either.
+- da-a 4, the request to drop "(artikel 10)". The opened URL is flno=3 and was not changed. The Korean link text still contains 제10조, and the checker counts that 10.
+- da-a 25, da-a 32 and da-a 18, where the suggested wording drops a number the checker still requires. "et år" counts as 1. "én" does not. "del 2" is the source 2 in that 005 paragraph. The meaning is the reviewer's; the digit shape is the one that still passes.
+- da-a 49. "TWD 1.57M" is pinned. The standing decision skips reformatting it. The reviewer is right that a Danish reader meets the English suffix first; the pin wins.
+- da-b 17 and da-b 31, where the suggested rewrite would join the next block. Block counts are locked. Each block was made a full sentence.
+- Nothing in the reviews was left undone because the legal reading looked wrong. The four skips are checker pins or the pinned bio figure.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-da --lang da 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=116
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-da src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+The count 25 is from that run, before this log file existed. This log is the additional untracked file.

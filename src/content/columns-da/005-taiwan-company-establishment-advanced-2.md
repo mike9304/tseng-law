@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Udvalgt billede](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Den, der har læst [Selskabsstiftelse i Taiwan – grundlag](/da/columns/taiwan-company-establishment-basics) og [Selskabsstiftelse i Taiwan – uddybning del 1](/da/columns/taiwan-company-establishment-advanced-1), kan læse videre i denne uddybning del 2 (公司設立).
+Den, der har læst [Selskabsstiftelse i Taiwan – grundlag](/da/columns/taiwan-company-establishment-basics) og [Selskabsstiftelse i Taiwan – uddybning del 1](/da/columns/taiwan-company-establishment-advanced-1), kan læse videre i del 2. Emnet er fortsat selskabsstiftelse (公司設立).
 
 ​
 
@@ -51,9 +51,9 @@ Udføres overførslen fra en bankkonto i udlandet, behøver dokumenter om midler
 
 **3. Hvornår kan forberedelseskontoen, efter at kapitalen er indgået, omdannes til en almindelig selskabskonto (正式公司帳戶)?**
 
-Som regel kan den ansvarlige (負責人), når registreringsdokumenterne for den juridiske person (法人登記文件) er modtaget,
+Som regel kan den ansvarlige (負責人), når registreringsdokumenterne for den juridiske person (法人登記文件) er modtaget, gå i banken.
 
-gå i banken og omdanne selskabets forberedelseskonto til en almindelig konto.
+Der omdannes selskabets forberedelseskonto til en almindelig konto.
 
 Da de interne regler i hver bank (銀行) imidlertid adskiller sig, anbefales det at forespørge banken først, hvis der er brug for kapitalen med det samme.
 

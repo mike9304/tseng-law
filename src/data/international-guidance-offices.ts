@@ -492,10 +492,10 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
   da: {
     label: 'KONTORER',
     title: 'Kontorer',
-    description: 'Adresser på Hovering International Law Firms kontorer i Taiwan.',
+    description: 'Adresser på kontorerne hos Hovering International Law Firm i Taiwan.',
     officeLabel: 'Kontor',
     mapPreviewLabel: 'Kortforhåndsvisning',
-    koreaOfficeTitle: 'Kontor Korea',
+    koreaOfficeTitle: 'Koreakontoret',
     koreaAddressCardLabel: 'Adresse på kontoret i Korea',
     koreaMapLinkLabel: 'Se i Naver Map',
     reviewCountWord: 'anmeldelser',

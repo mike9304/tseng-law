@@ -37,29 +37,29 @@ Hvad politidokumenterne angår, kan du på ulykkesstedet modtage registrerings- 
 
 ## Q3. Hvilke krav og frister skal undersøges ved tilskadekomst?
 
-Artikel 284 i straffeloven (刑法) regulerer uagtsom legemsbeskadigelse (過失傷害) og uagtsom grov legemsbeskadigelse (過失致重傷). Denne bestemmelse er ifølge artikel 287 i straffeloven en klageforbrydelse (告訴乃論之罪); ifølge artikel 237 i strafferetsplejeloven (刑事訴訟法) skal klagen i princippet indgives inden for 6 måneder fra kendskabet til gerningsmanden.
+Artikel 284 i straffeloven (刑法) regulerer uagtsom legemsbeskadigelse (過失傷害) og uagtsom grov legemsbeskadigelse (過失致重傷). Denne bestemmelse er ifølge artikel 287 i straffeloven en forbrydelse, der kun forfølges efter påtalebegæring (告訴乃論之罪); ifølge artikel 237 i strafferetsplejeloven (刑事訴訟法) skal påtalebegæringen i princippet indgives inden for 6 måneder fra kendskabet til gerningsmanden.
 
 Civilretlig erstatning (損害賠償) kan ifølge artikel 197 i civilloven (民法) ikke længere kræves, når 2 år fra kendskabet til skaden og den erstatningspligtige eller 10 år fra den retsstridige handling er forløbet. Hvilke kendsgerninger der påvirker forældelsen (消滅時效), skal undersøges særskilt.
 
 Den, der har lidt skade ved en strafbar handling, kan ifølge artikel 487 i strafferetsplejeloven anlægge et civilt krav i tilknytning til straffesagen (刑事附帶民事訴訟). Så længe straffesagen verserer, kan det ifølge artikel 488 anlægges indtil før afslutningen af den mundtlige forhandling (言詞辯論終結) i 2. instans, men ikke efter afslutningen af den mundtlige forhandling i 1. instans og før iværksættelse af anke. Sædvanligvis kan en særskilt betaling af retsafgift (裁判費) undgås; ikke ethvert resultat ender uden omkostninger. Afvises for eksempel straffesagen og henvises den på sagsøgerens begæring til den civile ret, kan der ifølge artikel 503 i strafferetsplejeloven opstå sagsomkostninger; også henvisnings- og procedurebestemmelserne i artikel 504 skal eftergås.
 
-Valget afviger efter afbrydelse af forældelsen (時效中斷), kredsen af sagsøgte, beviser, forsikring og kompetence. Derfor findes der ingen ensartet bedste procedure for alle sager.
+Det rette valg afhænger af, om forældelsen er afbrudt (時效中斷), af kredsen af sagsøgte, af beviserne, af forsikringen og af kompetencen. Derfor findes der ingen procedure, der passer bedst i alle sager.
 
-## Q4. Hvordan bedømmes det strafferetlige og civilretlige ansvar, når begge sider har uagtsomhed?
+## Q4. Hvordan bedømmes det strafferetlige og civilretlige ansvar, når begge sider har udvist uagtsomhed?
 
-Strafferetligt ansvar kan først bedømmes, når tilsidesættelse af hver sides agtpågivenhedspligt og den årsagssammenhæng, som denne tilsidesættelse har med modpartens tilskadekomst, er anerkendt. Alene fordi begge sider har uagtsomhed (過失), opstår der ikke automatisk ansvar for uagtsom legemsbeskadigelse.
+Strafferetligt ansvar kan først bedømmes, når tilsidesættelse af hver sides agtpågivenhedspligt og den årsagssammenhæng, som denne tilsidesættelse har med modpartens tilskadekomst, er anerkendt. Alene fordi begge sider har udvist uagtsomhed (過失), opstår der ikke automatisk ansvar for uagtsom legemsbeskadigelse.
 
-Civilretligt kan retten ifølge artikel 217 i civilloven (民法) nedsætte eller eftergive erstatningen, hvis den skadelidte har uagtsomhed ved skadens opståen eller forøgelse (與有過失). Blev for eksempel anerkendte skader på 1.000.000 TWD (新臺幣) og den skadelidtes uagtsomhed vurderet til 50 %, kan beløbet før andre tilpasninger falde til 500.000. TWD
+Civilretligt kan retten ifølge artikel 217 i civilloven (民法) nedsætte eller eftergive erstatningen, hvis den skadelidte selv har udvist uagtsomhed ved skadens opståen eller forøgelse (與有過失). Blev for eksempel anerkendte skader på 1.000.000 TWD (新臺幣) og den skadelidtes uagtsomhed vurderet til 50 %, kan beløbet før andre tilpasninger falde til 500.000 TWD.
 
 Sagkyndig vurdering (鑑定) eller den foreløbige analysebedømmelse kan være vigtige dokumenter, men binder ikke retten mekanisk. Retten betragter forklaringer, optagelser, køretøjets tilstand og samtlige beviser under ét.
 
 ## Q5. Hvad hører hjemme i forligsaftalen?
 
-I forligsaftalen (和解書) skal ulykkestidspunkt, -sted og parter fastlægges, og betalingsbeløb og -tidspunkt, behandlingen af forsikringsydelsen samt indbefattede og forbeholdte krav medtages. Fremtidig behandling, senere opdagede skader, overgivelse af attester (診斷證明書) og forholdet mellem betaling og frafald af klage skal fastlægges klart.
+I forligsaftalen (和解書) skal ulykkestidspunkt, -sted og parter fastlægges, og betalingsbeløb og -tidspunkt, behandlingen af forsikringsydelsen samt indbefattede og forbeholdte krav medtages. Fremtidig behandling, senere opdagede skader, overgivelse af attester (診斷證明書) og forholdet mellem betaling og frafald af påtalebegæringen skal fastlægges klart.
 
 Forliget (和解) i artikel 736 i civilloven (民法) er en kontrakt, hvori parterne ved gensidig indrømmelse bringer tvisten til ophør eller forebygger den. Ifølge artikel 737 i civilloven bedømmes omfanget af retstab kun efter det omfang, der er angivet i aftalen. Derfor må det ikke uden undersøgelse af ordlyden fastslås, at alle fremtidige krav udslukkes.
 
-Ved klageforbrydelser kan klagen ifølge artikel 238 i strafferetsplejeloven trækkes tilbage indtil før afslutningen af den mundtlige forhandling i 1. instans; efter tilbagetrækning kan der ikke klages på ny. Ved ikke-klageforbrydelser ophører den offentlige forfølgning ikke automatisk alene ved privat forlig, og et forlig forpligter ikke altid til tilbagetrækning af klagen.
+Ved forbrydelser, der kun forfølges efter påtalebegæring, kan påtalebegæringen ifølge artikel 238 i strafferetsplejeloven trækkes tilbage indtil før afslutningen af den mundtlige forhandling i 1. instans; efter tilbagetrækning kan påtalebegæringen ikke indgives på ny. Ved forbrydelser, der ikke kræver påtalebegæring, ophører den offentlige forfølgning ikke automatisk alene ved privat forlig, og et forlig forpligter ikke altid til tilbagetrækning af påtalebegæringen.
 
 ### Officielle grundlag Q1–Q5
 
@@ -173,9 +173,9 @@ Fastlæggelsen af de civilretlige kravsmodparter og det strafferetlige ansvar sk
 
 Forsikringspligten ifølge artikel 6 i loven om obligatorisk ansvarsforsikring for motorkøretøjer (強制汽車責任保險法) rammer i princippet køretøjets ejer og i bestemte tilfælde også bruger eller forvalter af køretøjet. Dette system indretter en uagtsomhedsuafhængig ydelsesstruktur (無過失給付制度) for personer, der er kommet til skade eller er afgået ved døden ved motorkøretøjsulykker; den lovbestemte kreds af passagerer eller af en tredjemand (第三人) uden for køretøjet skal undersøges.
 
-Ved eneulykker med 1 køretøj er dets fører som regel ikke ydelsesmodtager af den obligatoriske forsikring for det køretøj. Ved ulykker med flere køretøjer kan føreren dog kræve ydelser hos den obligatoriske forsikringsgiver for et andet involveret køretøj.
+Ved eneulykker med 1 køretøj er dets fører som regel ikke ydelsesmodtager af den obligatoriske forsikring for det køretøj. Ved ulykker med flere køretøjer kan føreren dog kræve ydelser hos det obligatoriske forsikringsselskab for et andet involveret køretøj.
 
-Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret den 29. maj 2026, gælder for ulykker fra den 1. juli 2026. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør 200.000 TWD, invaliditetsydelser (失能) efter de lovbestemte 15 trin 80.000–3.000.000 TWD, dødsfaldsydelsen 3.000.000 TWD, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. tilskadekommen person og pr. ulykke udgør 3.200.000. TWD For tidligere ulykker kan den tidligere norm gælde.
+Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret den 29. maj 2026, gælder for ulykker fra den 1. juli 2026. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør 200.000 TWD, invaliditetsydelser (失能) efter de lovbestemte 15 trin 80.000–3.000.000 TWD, dødsfaldsydelsen 3.000.000 TWD, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. tilskadekommen person og pr. ulykke udgør 3.200.000 TWD. For tidligere ulykker kan den tidligere norm gælde.
 
 Ansvarsforsikring over for tredjemand (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktlige valgprodukter. Den faktiske dækning afviger efter forsikret, loft, selvrisiko (自負額), undtagelse, uagtsomhed og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøges et for et.
 
@@ -199,7 +199,7 @@ Q16. Kan alt efter ulykken overlades til forsikringsselskabet?
 
 ​
 
-Forsikringsselskaber går ofte ikke tilstrækkeligt ind i ulykkesparternes følelsesmæssige side.
+Forsikringsselskaber går ofte ikke tilstrækkeligt ind i ulykkesparternes følelsesmæssige sider.
 
 ​
 
@@ -239,7 +239,7 @@ Ved uagtsom legemsbeskadigelse (過失傷害) er der i nogle afgørelser idømt 
 
 ​
 
-Ved omregning til bøde fastsætter artikel 41 stk. 1 i straffeloven (刑法) omregningen af 1.000 TWD, 2.000 TWD eller 3.000 TWD (新臺幣) pr. dag; beregner man på grundlag af 1.000 TWD pr. dag, giver en straf på 3 måneder 3 × 30 × 1.000 = 90.000. TWD
+Ved omregning til bøde fastsætter artikel 41 stk. 1 i straffeloven (刑法) omregningen af 1.000 TWD, 2.000 TWD eller 3.000 TWD (新臺幣) pr. dag; beregner man på grundlag af 1.000 TWD pr. dag, giver en straf på 3 måneder 3 × 30 × 1.000 = 90.000 TWD.
 
 ​
 
@@ -255,15 +255,15 @@ I nogle afgørelser er uagtsom grov legemsbeskadigelse straffet med omkring 4 m�
 
 ​
 
-Q18. Kan den strafferetlige klage trækkes tilbage, hvis man indgår forlig med modparten?
+Q18. Kan påtalebegæringen trækkes tilbage, hvis man indgår forlig med modparten?
 
 ​
 
-Uagtsom legemsbeskadigelse og uagtsom grov legemsbeskadigelse er klageforbrydelser (告訴乃論之罪), hvor den strafferetlige klage kan trækkes tilbage.
+Uagtsom legemsbeskadigelse og uagtsom grov legemsbeskadigelse er forbrydelser, der kun forfølges efter påtalebegæring (告訴乃論之罪), og påtalebegæringen kan trækkes tilbage.
 
 ​
 
-Uagtsomt forvoldt død tillader ikke frafald af klagen; indgår man dog forlig med modpartens familie, kan retten mildne straffen.
+Uagtsomt forvoldt død tillader ikke frafald af påtalebegæringen; indgår man dog forlig med modpartens familie, kan retten mildne straffen.
 
 ​
 

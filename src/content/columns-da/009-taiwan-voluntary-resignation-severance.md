@@ -77,7 +77,7 @@ Efter taiwansk ret afhænger det af, om skylden ligger hos selskabet.
 
 Det afhænger også af, om skylden ligger hos arbejdstageren.
 
-Godtgørelse ved afskedigelse kan nægtes eller kræves, alt efter hvilken side der har skylden.
+Alt efter om skylden ligger hos selskabet eller hos arbejdstageren, kan selskabet nægte godtgørelsen ved afskedigelse, eller arbejdstageren kan kræve den.
 
 Sommetider ligger skylden hos begge sider.
 
@@ -85,7 +85,7 @@ Når begge tvistes, får rækkefølgen betydning.
 
 Det afgørende er, hvem der først og med tilstrækkelig grund bringer aftalen til ophør.
 
-Godtgørelsen ved afskedigelse kan da nægtes eller kræves.
+Den part kan da enten undgå at betale godtgørelsen ved afskedigelse eller kræve den.
 
 I taiwanske arbejdskonflikter (勞資糾紛) er tidspunktet derfor afgørende.
 

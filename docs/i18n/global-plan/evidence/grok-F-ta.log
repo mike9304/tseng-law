@@ -1,0 +1,220 @@
+WO-F-ta — Tamil native-review fix lane (Grok 4.7), 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-ta-20260922
+No git add / commit / push. Other locales were not edited (diff hunks in shared .ts files sit inside the `ta` / `tamilGuidanceContent` blocks only).
+Test pins updated only where a Tamil string changed: src/lib/__tests__/international-guidance-answers.test.ts (consultation-language term `கொரிய மொழி`; waiting phrase `பரிசீலனைக்காகக் காத்திருக்`).
+
+================================================================
+§1. ROWS APPLIED
+================================================================
+
+ta-a.md (guidance pack + columns 001–009)
+  a#1  P1  கட்சிக்காரர் → வாடிக்கையாளர்; mandate sentences use வழக்கு ஏற்பு உறவு     APPLIED (sweep)
+  a#2  P1  custody 行使或負擔 → செயல்படுத்துதல் அல்லது ஏற்றுக்கொள்ளுதல்              APPLIED
+  a#3  P1  “since the founding” → நிறுவிய நாளிலிருந்து … நோக்கை                     APPLIED
+  a#4  P1  வழக்குரை → வழக்குரைஞர் அலுவலகத்தின் கடிதம்                               APPLIED
+  a#5  P1  உள்ளார்ந்த உரிமையாளர் → பயனாளி உரிமையாளர் (001, 004)                     APPLIED
+  a#6  P1  work-permit experience பாதை → அனுபவம்                                   APPLIED
+  a#7  P1  ஊட்டம் → துணைவர் பராமரிப்பு / பிள்ளை பராமரிப்பு / ஜீவனாம்சம் (001, 003, 007) APPLIED
+  a#8  P1  தாய் மசாஜ் → தாய்லாந்து மசாஜ்                                            APPLIED
+  a#9  P2  பணித்துறை → பணிப் பிரிவு (pack, FAQ, answers)                           APPLIED
+  a#10 P2  begleiten உடன் செல்கிறோம்/ஆர் → உதவுகிறோம்/உதவுகிறார்                    APPLIED
+  a#11 P2  கொரியன் → கொரிய மொழி (four-language sentence, inquiry languageOptions keeps “(한국어)”) APPLIED
+  a#13 P2  資遣費 பிரிவினை ஊதியம் → சட்டப்பூர்வ பணிநீக்க நஷ்டஈடு (pack + 002/008/009/014) APPLIED
+  a#14 P2  Ablauf வரிசை → நடந்த வரலாறு                                              APPLIED
+  a#15 P2  வேறு முடியலாம் → வேறு முடிவுக்கு வரலாம்                                  APPLIED
+  a#16 P2  பொதுவல்லாத சேமிப்பு → பொது அணுகலில்லாத சேமிப்பு                          APPLIED
+  a#17 P2  சட்டப் பொருந்தும் எல்லை → பொருந்தும் சட்டத்தின் வரம்பு                   APPLIED
+  a#18 P2  Paralegal → சட்ட உதவியாளர் (R12); Latin firm names kept; “(paralegal)” gloss kept once in the bio APPLIED
+  a#19 P2  கூட்டாளர் கணக்காளர் → கூட்டாளர் பட்டயக் கணக்காளர்                         APPLIED
+  a#20 P2  திசைக்காக → வழிகாட்டுதலுக்காக                                            APPLIED
+  a#21 P2  ஆலோசனைப் படி → ஆலோசனை அல்ல                                              APPLIED
+  a#22 P2  நான்கு கூறிய மொழிகள் → மேலே கூறிய நான்கு மொழிகள்                          APPLIED
+  a#23 P2  பணி முடிவு → பணி உறவு முடிவு                                             APPLIED
+  a#24 P2  வழக்குக் காலாவதி → வழக்குக் காலவரம்பு                                    APPLIED
+  a#25 P2  இரட்டைப் பாதை → இரட்டை முதன்மைப் பாடம்                                   APPLIED
+  a#26 P2  broken adjective நிலையா → உறுதியான (நிலையான PE / standard-contract left) APPLIED
+  a#27 P2  ஏற்புடைய spelling → ஏற்புடைமை                                            APPLIED
+  a#28 P2  investee → முதலீடு பெறும் நிறுவனம்                                       APPLIED
+  a#30 P2  ROC year 112/109 labelled குடியரசு ஆண்டு (民國)                          APPLIED MODIFIED (no new Gregorian digit; see §3)
+  a#31 P2  007 custody செலுத்துதல்/ஏற்றல் → செயல்படுத்துதல் அல்லது ஏற்றுக்கொள்ளுதல் APPLIED
+  a#32 P2  hit-and-run ஓட்டம் → விபத்து இடத்தை விட்டு ஓடுதல்                        APPLIED
+  a#33 P2  Korea remitter in third person                                           APPLIED MODIFIED (India/Sri Lanka bank sentence not added; see §3)
+  a#35 P2  008 table jam 員工(經濟解僱) → பொருளாதார நீக்கம் (資遣，經濟解僱); sibling 懲戒解僱 cell and 員工自請離職 header given the same parenthesis shape APPLIED
+  a#36 P3  பெறுகை எண் → ஒப்புகை எண்                                                 APPLIED
+  a#38 P3  தொலைவதில்லை → தொலைந்துவிடவில்லை                                         APPLIED
+
+ta-b.md (columns 010–018)
+  b#1  P1  復健 மீட்புப் பயிற்சி → மறுவாழ்வுப் பயிற்சி                               APPLIED
+  b#2  P1  ஓய்வு நாள் → ஓய்வுபெறும் வயது                                            APPLIED
+  b#3  P1  調解 இணக்க நடவடிக்கை → மத்தியஸ்தம் (சமரசம் left for 和解; 011 இணக்கப் புள்ளிகள் left) APPLIED
+  b#4  P1  personal training → தனிப் பயிற்சியாளருடன் செய்யும் அமர்வு (heading too) APPLIED
+  b#5  P1  disc rupture → முதுகெலும்பு இடைத்தட்டு வெடிப்பு (alts and link text)    APPLIED
+  b#6  P1  composition/ingredients → கூட்டமைப்பு / மூலப்பொருட்கள் (supervisor terms, not reviewer சேர்க்கை) APPLIED
+  b#7  P1  வெற்றிடம் → செல்லாதது / செல்லாது (014 sweep, including the heading so the “இல்லை” answer fits) APPLIED
+  b#8  P1  பணி இசைவு → புதிய பணியாளர் பயிற்சி (supervisor term)                    APPLIED
+  b#9  P1  vesting prize calque → செயல்திறன் இலக்கை அடைந்ததற்கான ஊதியம்             APPLIED
+  b#10 P1  vesting சுமத்த → பணியாளருக்கு உரிமையாகுதல் (clawback “சுமத்த” = impose a duty left) APPLIED
+  b#11 P1  016 parental rights செலுத்து → செயல்படுத்துதல்/ஏற்றல்                   APPLIED
+  b#12 P1  தங்கல் பதிவு → குடும்பப் பதிவு (戶籍)                                     APPLIED
+  b#13 P1  stock options → பணியாளர் பங்கு விருப்ப உரிமைகள் (股票選擇權)             APPLIED
+  b#14 P2  ஏற்புடைய spelling in 010                                                 APPLIED
+  b#15 P2  என்று வைக்கிறது → என்று கூறுகிறது (010, 014, 016)                        APPLIED
+  b#16 P2  footage பறிமுதல் → பெறுதல்                                               APPLIED
+  b#17 P2  adverse inference பாதகமான முடிவு → பாதகமான அனுமானம்                      APPLIED
+  b#18 P2  வணிக இயக்குநர் → வணிகத்தை நடத்துபவர்                                     APPLIED
+  b#19 P2  ROC year 109 labelled குடியரசு ஆண்டு (民國)                              APPLIED MODIFIED (no கி.பி. 2020; see §3)
+  b#20 P2  limitation “if unused” → 2 ஆண்டுக்குள் வழக்குத் தொடராவிட்டால்            APPLIED
+  b#22 P2  product-doc வரிசை dropped                                                APPLIED
+  b#23 P2  “join the applicable party” → விதிகளின் வரம்பிற்குள் வரும்               APPLIED
+  b#24 P2  இலாப மாற்றம் → இலாபத்தை வெளியே அனுப்புதல் (011 and the same phrase in 001) APPLIED
+  b#25 P2  PIF retention பாதுகாப்பு → ஆவணம் வைத்திருத்தல் / வைத்திருக்கும் காலம்/இடம் (safety duty and safety assessment left) APPLIED
+  b#26 P2  brake margin → பிரேக் போடப் போதிய நேரம் / போதிய நேரமே இல்லாத வேகம்       APPLIED
+  b#27 P2  fit-out அமைப்பு (அலங்கார) காலம் → உள் அலங்காரக் காலம்                    APPLIED
+  b#28 P2  rental 押金 பிணைத் தொகை → காப்புத் தொகை (018 parent-company பிணை left) APPLIED
+  b#29 P2  hanging comma after பெற்றுள்ளனர் → period (same block)                   APPLIED
+  b#30 P2  தர ஒப்பந்தம் → வகைமாதிரி ஒப்பந்தம்                                       APPLIED
+  b#31 P2  014 severance headword (same as a#13)                                    APPLIED
+  b#32 P2  தொழிலாளர் தரச் சட்டம் → தொழிலாளர் தரநிலைச் சட்டம் (008/009/014)          APPLIED
+  b#33 P2  notice-after-payment word order                                          APPLIED
+  b#34 P2  clause-design sentence made readable                                     APPLIED
+  b#35 P2  stacked பொருள் → புறவயமான அடிப்படை                                       APPLIED
+  b#36 P2  சான்றாவணம் → நகல் (both building-transcript sentences; second is நகலையும்) APPLIED
+  b#37 P2  அறிமுகம் → தெரிந்தவர்                                                    APPLIED
+  b#38 P2  016 சிவில் சட்டம் → உரிமையியல் சட்டம்                                    APPLIED (007 left; see §3)
+  b#39 P2  நேர் வழிப் பரம்பரை → நேர்வழிக் கீழ் இரத்த உறவினர் (016 and the same collision in 007) APPLIED
+  b#40 P2  பாட்டன்–பாட்டி → இரு தரப்பு தாத்தா–பாட்டி                                APPLIED
+  b#41 P2  பொருளாதார உரிமையாளர் → பயனாளி உரிமையாளர்                                 APPLIED
+  b#42 P2  பிணைப்பு → பிணைய உரிமை                                                   APPLIED
+  b#43 P2  active/negative property → சொத்துகளும் கடன்களும்                         APPLIED
+  b#44 P2  பூர்த்தி அமைப்பு → கூடுதல் பாதுகாப்பு ஏற்பாடு                             APPLIED
+  b#45 P2  搬家 → வீட்டுப் பொருள் இடமாற்ற வணிகம் (015 office relocation left)       APPLIED
+  b#46 P2  அமைப்பு இயக்கம் → தகவல் அமைப்பு இயக்கம்                                  APPLIED
+  b#47 P2  தள இயக்கம் → தளச் சேவை                                                   APPLIED
+  b#48 P2  மேசைக்கு மேல் பத்திரங்கள் → பட்டியலில் இல்லாத கவுன்டர்-வழிப் பத்திரங்கள் APPLIED
+  b#49 P2  பெயர் மாற்றம்-மாற்றம் → உரிமை மாற்றம் அல்லது மாற்றித் தருதல்             APPLIED
+  b#50 P2  உரிமம் கடன் → உரிமத்தை இரவல் விடுதல்                                     APPLIED
+  b#51 P2  நுண்பகுதிக் கூறு → துல்லியக் கூறு                                        APPLIED
+  b#52 P2  ஆண்டுக் கணக்குகளின் சான்றாதாரம் → ஆண்டு நிதி அறிக்கைத் தணிக்கை (001/007 notarial 認證 left) APPLIED
+  b#53 P2  கணக்காளர் → பட்டயக் கணக்காளர்                                             APPLIED
+  b#54 P2  emerging market 興櫃 restored as வளர்ந்துவரும் சந்தைப் பதிவு             APPLIED
+
+Also applied (rulebook, not a numbered row):
+  R12 English role chrome in the Tamil bio/role block only (Legal Aid Foundation, Ministry of Education, Managing Attorney, Taiwan Attorney, Korea Operations Manager, Partner CPA). TWD 1.57M left byte-identical. Feminine bio forms (அவர் … பெற்றார், பரிமாற்ற மாணவி) kept.
+  R15 008 OOO → [பெயர்].
+  R7  013 “என்னிடம் நேரில் சொன்னார்” → “நேரடியாகக் கூறினார்” inside the same paragraph. No “??” and no comment-prompt leftovers in columns-ta.
+  R8  glossary items that the reviews named (severance, household registration, mediation, custody, CPA, labor standards) swept with the rows above.
+  Guidance ஆய்வு-as-file-review → பரிசீலனை / பார்க்க / சரிபார்க்க. Name-precheck முன் ஆய்வு and முதலீட்டு மறுஆய்வுத் துறை left.
+
+================================================================
+§2. ROWS SKIPPED
+================================================================
+
+  a#12 P2  reformat pinned “TWD 1.57M” to lakh grouping
+           Reason: ACCEPTED + R12. The figure is test-pinned and was left byte-identical.
+  a#29 P2  TWD 3,000,000 → 30,00,000 (and the same request for other amounts)
+           Reason: R14. The column checker does not parse lakh/crore grouping. Western comma grouping kept.
+  a#34 P2  Hangul + fullwidth colon in frontmatter url (008, and 009’s Hangul slug)
+           Reason: R16 / ACCEPTED. url keys were not rewritten. Hangul in columns-ta remains only on those two url lines.
+  a#37 P3  “3 பாதைகள்” → மூன்று பாதைகள்
+           Reason: the checker counts digits. Replacing 3 with a word would drop a source digit. Left as “3”.
+  b#21 P2  TWD 1,579,589 and the other Western groups (5,000,000 / 25,000,000 / 30,000,000 / 100,000,000) → lakh grouping
+           Reason: same as a#29 (R14).
+
+  a#33 second sentence (“this step is not the Indian or Sri Lankan bank route”)
+           Reason: R2. Do not add a statement about the reader’s country law. Only the third-person Korea-remitter sentence was applied.
+  a#30 / b#19 Gregorian years (கி.பி. 2023 / கி.பி. 2020)
+           Reason: R13. A new Gregorian digit would fail the number check. ROC calendar was labelled with the digits already present, and the Chinese gloss may carry 民國. Not a second copy of a digit that was already in the prose.
+
+================================================================
+§3. SYSTEMIC PATTERNS (removed-occurrence counts from the diff)
+================================================================
+
+  கட்சிக்காரர் → வாடிக்கையாளர்                                              7
+  பிரிவினை ஊதிய (資遣費) → பணிநீக்க நஷ்டஈடு                                 33
+  ஊட்டம் (support, not nutrition) → பராமரிப்பு / ஜீவனாம்சம்                 19
+  கொரியன் → கொரிய மொழி                                                      16
+  broken adjective நிலையா (not நிலையான)                                     7
+  begleiten உடன் செல்கிற                                                     4
+  பணித்துறை → பணிப் பிரிவு                                                  6
+  இணக்க நடவடிக்கை (調解) → மத்தியஸ்தம்                                      21
+  என்று வைக்கிறது → என்று கூறுகிறது                                          6
+  உள்ளார்ந்த உரிமையாளர் → பயனாளி உரிமையாளர்                                  8
+  வட்டு முறி → இடைத்தட்டு வெடிப்பு                                          14
+  ROC label குடியரசு ஆண்டு (民國) added                                      8
+  சிவில் சட்டம் → உரிமையியல் சட்டம் in 016                                  swept there
+  010–018 dump words (செலுத்து / அமைப்பு / ஆய்வு / பாதுகாப்பு)               quoted wrong senses only
+
+Dump-word sweep was context-specific, not a token replace. Left on purpose:
+  முதலீட்டு மறுஆய்வுத் துறை and பெயரின் முன் ஆய்வு (named procedures);
+  பாதுகாப்பு when it is safety (rules, duty, assessment, cosmetic safety);
+  செலுத்து when it is payment of money, tax, or severance;
+  அமைப்பு when it is organization, road layout, or an information system;
+  நிலையான for permanent establishment and for a standard contract;
+  corporate பிரிவினை (公司分割) where it is not 資遣費;
+  015 office relocation; 018 parent-company guarantee பிணை;
+  001/007 notarial 認證 சான்றாதாரம்;
+  014 “பணியாளர் மீது சுமத்த முடியாத காரணம்” (不可歸責) and clawback சுமத்த.
+
+Gender: Wei Tseng stays on the respectful அவர் / -ஆர் forms already in the text. Tamil first person in 006/008/009/010/013 does not mark gender; it was left. கையாண்டவள் was kept. The male manager in 008 and the male client in 010 were not regendered.
+
+================================================================
+§4. REVIEWER ITEMS NOT APPLIED (disagreements)
+================================================================
+
+  Lakh/crore grouping (a#12 amounts other than the pinned figure, a#29, b#21).
+  The checker’s number parser accepts comma grouping for Tamil and does not parse 30,00,000. R14 says to keep Western grouping. The pinned bio figure stays “TWD 1.57M”.
+
+  Gregorian equivalents inside a#30 and b#19.
+  Adding 2023 or 2020 would insert a digit the checker counts. ROC years are labelled குடியரசு ஆண்டு (民國) without a second copy of the year numeral.
+
+  a#33’s extra sentence that this step is not the Indian or Sri Lankan bank route.
+  That states the reader’s country law. R2 says not to. The Korea remitter is now a third person.
+
+  a#34’s request to change the public Hangul slug.
+  The same row says not to rewrite the url key, and R16 skips frontmatter url. The Hangul stays in url only.
+
+  a#37 writing “3” as மூன்று.
+  Cheap, but it deletes a counted digit.
+
+  b#6 suggested சேர்க்கை; ACCEPTED specifies கூட்டமைப்பு / மூலப்பொருட்கள். Supervisor wording used.
+  b#8 suggested a longer “accustom the new hire” phrase; ACCEPTED specifies புதிய பணியாளர் பயிற்சி. Supervisor wording used.
+  b#13 suggested பங்கு வாங்கும் உரிமை; ACCEPTED specifies பங்கு விருப்ப உரிமை (股票選擇權). Supervisor wording used.
+
+  b#38 “throughout 016” was not extended to 007.
+  007 still says சிவில் சட்டம் / சிவில் நடைமுறைச் சட்டம். The finding limits the sweep to 016, and 007’s civil-procedure name was not in the quoted row. 010 already used உரிமையியல் சட்டம் and was left.
+
+  008’s disciplinary-dismissal header and the voluntary-resignation header were not the quoted cell.
+  They had the same jammed-gloss shape as 員工(經濟解僱), so they were given the same parenthesis shape. Noted as an extra instance of that pattern, not a new claim.
+
+================================================================
+§Verify
+================================================================
+
+cd /Users/son7/Projects/tseng-law-fix-ta-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=97
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ta src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+
+The 25 is the count before this log file existed (24 content/test files plus the pre-existing untracked docs/i18n/global-plan/WO-F-ta.txt). This log is an additional untracked path. node_modules from the local npm ci used to run tsc/vitest is gitignored and is not in that count.
+Pass criteria met: checker summary PASS 18/18, markers 0, TSC_OK, tests passed.
+No commit. This lane does not self-certify a product final.

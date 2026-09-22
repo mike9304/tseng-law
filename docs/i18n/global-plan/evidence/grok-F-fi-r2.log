@@ -1,0 +1,71 @@
+WO-F-fi r2 — Grok 4.7 fix lane
+date: 2026-09-22
+workspace: /Users/son7/Projects/tseng-law-fix-fi-r2
+reviews: fi-a.md (39 rows) + fi-b.md (47 rows) = 86 rows
+
+## Rows applied
+82 of 86 P1/P2 rows applied (no P3 rows in either review).
+
+Part a applied: 1–29, 31, 33–39.
+Part b applied: 1–26, 28–45, 47.
+
+Adaptations (meaning applied; suggested wording changed so the checker still parses):
+- a2: link label no longer calls the target the Business Tax Act art. 10. The Korean anchor is still 「영업세법 제10조」, so the digit stays as “(10 artikla)”. URL unchanged.
+- a19: case agreement fixed (lyhyttä …rangaistusta / sakkoa). Digit kept as “5 vuotta”; “viideksi” is not in the Finnish numeral lexicon.
+- a27: “olemassaololla” rewritten, digit kept (“alle 1 vuoden”). The reviewer’s “jos … on” added a third English stopword “on” and failed the english check.
+- a31 and the other bare-digit spots (a “1 jaksolla”, “1 päivältä”, “1 nimeen”, “Jokaista 1 täyttä”; b24, b43, b44): grammar fixed around the digits. Inflected words the lexicon does not count (kahden, yhdeksi, yhdellä, viideksi) were not substituted for a source digit.
+- a37: the page no longer tells the reader to go and read part 2. “osa 2” stays, because the Korean title is 심화편-2. Both column links stay.
+- b8: “1-kertaisena … määrästä” → “1 kertaa … määrä”. The “1” stays.
+- b26: the two 013 paragraphs are each grammatical on their own. They were not merged.
+- b44: “kullakin 1 osakkeenomistajalla on 1 ääni” keeps both source 1s.
+- b47: currency code moved after the amount in 011, 017 and 018. Thousands stay dotted (“40.000–200.000 TWD”), not spaced.
+
+Guidance pack (fi strings only): answers FAQ disclaimer, pricing “maksutonta” (form submission, not a free consultation), privacy translation and purpose sentences, about title and intro, contact “Kirjoituskielenne”, team bio and {firm} sentence, offices description, inquiry “Toivomanne neuvontakieli”, llms discoveryNotice (“yleiskatsaus”; token llms.txt kept). consultationNotice and confidentialNotice were not rewritten, so they remain verbatim substrings of the FAQ and privacy text. The disclosure-parity pin `fi: /oikeudellinen lausunto/` was updated to `/oikeudellista neuvontaa/`.
+
+## Rows skipped
+- a30 and b46 (and the space-separator half of b47). Reason: ACCEPTED-ROUND forbids space thousands separators; NUMBER_THOUSAND_STYLE.fi is `dot`. “500.000” / “1.579.589 TWD” left as they were. “TWD 1.57M” was not in these strings.
+- a32. Reason: turning Q16–Q20 into `##` headings would change heading levels against the Korean source. The lines stay body text.
+- b27, and the U+200B half of a32. Reason: Finnish ZWSP counts already match the Korean source (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). Deleting them fails the block check. Frontmatter `url` Hangul (008, 009) left untouched.
+
+## Systemic patterns
+- Thousands with a period, not a space: 0 changed (skipped; see above).
+- Bare digit standing in for a word: 8 spots rephrased with the digit kept (001 ×2, 003 ×1, 004 ×1, 008 ×2, 012 ×1, 018 ×2). Other digits in the 18 files were left alone.
+- U+200B blank lines: 0 deleted (counts already match the source).
+- 資遣費 as irtisanomiskorvaus: 2 in 008 → eroraha. Title and FAQ already said eroraha.
+- English name with a Finnish ending: 7 (about title Firmistä, offices Firmin, {firm}in, related links in 003 and 010, Taiwan Stock Exchange ×2 in 004).
+- 條例 called asetus: 1 in 003 → laki. 004 and 008 already said laki. 辦法 called asetus: 4 in 002 and 6 in 011 → määräykset. 003’s 辦法 link was already “Säännöt”.
+- Currency code before the amount: 25 “TWD &lt;digits&gt;” tokens in 011, 017 and 018 moved after the amount. Dots kept. 010 already had the amount first and was not restyled.
+- Kinmen and Lienchiang joined with ja/tai: 4 in 017 → “tai”, Matsu gloss kept with Lienchiang. Amounts unchanged.
+- Wrong object (Lääkekulut, lomake, jarrutusvara): 1 heading + 1 receipt line in 010, 1 sentence in 018, 2 in 012.
+- Chopped clause across a paragraph break: 013 (2 blocks made self-standing) and 015 (2 blocks). Not merged; ZWSP lines left.
+- A rule hedged as a purpose, and the unparsable calculation: 1 in 014 (“tarkoitus on”) and 1 in 016 (“heijastaa sen tulos”).
+- Coined legal nouns: oikeussubjekti(us/ivisuus) → oikeushenkilö(llisyys) in 001 (3), 004 (14, including the heading), 011 (1) and 018 (7). ei-varallisuusoikeudellinen / ei-taloudellinen vahinko → aineeton vahinko in 003 (2), 007 (2) and 010 (2). opetusaineisto → yleisesitys in 8 files (001, 002, 004, 007, 011, 014, 016, 017). lakikanta → säädöstietokanta in 004 (4) and 007 (6).
+- Blog register: 008 opening, the “Kerron yhden asian” line, 003’s “katumusta eikä vakavuutta”, and 009’s “Kuten aiemmin on selostettu” opening. Block counts unchanged. herra B stays male.
+
+R2–R10 checked against the pack and all 18 columns. Korea is already a labelled example; the four consultation languages stay negative; 003 already names 119 / 110 / 112 in Taiwan; dates are already day–month–year; Finnish does not mark gender on asianajaja/hän. No further R2–R10 rewrites beyond the sweeps above. R1/R11 not redone. R12–R17 are for the 2026-09-22 sister locales, not fi; the Finnish role lines were already in Finnish.
+
+## §Verify
+```
+===== checker =====
+neighbour      PASS   
+hanzi          PASS   han=119
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== markers =====
+       0
+===== tsc =====
+TSC_OK
+===== vitest =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== git =====
+      28
+```
+Checker tail is the last file (018) plus `summary PASS 18/18`. Markers 0. TSC_OK. Tests passed. `git status --short | wc -l` was 28 before this log file existed (3 paths were already dirty: WO-F-fi.txt, fi-a.md, fi-b.md; the rest are this lane). This log is an additional path written after that snapshot.
+
+## Reviewer disagreements (not applied)
+None of the wording findings were rejected as factually wrong. The four skipped rows and the digit/ZWSP adaptations above are checker and block-count constraints, not disagreements with the Finnish.

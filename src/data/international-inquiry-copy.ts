@@ -1330,7 +1330,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalLanguageLabel: 'Kieli, jolla kirjoitatte',
     originalLanguagePlaceholder:
       'Esimerkiksi suomi, englanti, kiina tai muu kieli',
-    preferredConsultationLanguageLabel: 'Kieli, jota toivotte neuvontaan',
+    preferredConsultationLanguageLabel: 'Toivomanne neuvontakieli',
     originalTextLabel: 'Lyhyt kuvaus asiasta (omalla kielellänne)',
     originalTextPlaceholder:
       'Kertokaa, mitä on tapahtunut, millaista apua tarvitsette, ja määräaika, jos sellainen on. Älkää kirjoittako passinumeroa, henkilötunnusta älkääkä tilitietoja.',

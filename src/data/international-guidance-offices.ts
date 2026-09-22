@@ -542,7 +542,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
   fi: {
     label: 'TOIMISTOT',
     title: 'Toimistot',
-    description: 'Hovering International Law Firmin Taiwanin toimistojen osoitteet.',
+    description: 'Taiwanin toimistojen osoitteet, Hovering International Law Firm.',
     officeLabel: 'Toimisto',
     mapPreviewLabel: 'Kartan esikatselu',
     koreaOfficeTitle: 'Korean toimisto',

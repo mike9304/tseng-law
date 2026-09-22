@@ -19,9 +19,9 @@ Kun edellä ajava ajoneuvo kulkee hitaasti, ohittaminen (超車) voi vaikuttaa a
 
 [Taiwanin tieliikenneturvallisuussääntöjen 101 artikla (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) säätelee samanaikaisesti ehtoja, joilla ohittaminen on kielletty, ja järjestystä, jota on noudatettava, kun ohittaminen samalla kaistalla on sallittu.
 
-101 artikla kieltää ohittamisen osuuksilla, joilla on merkkejä kaarteista, jyrkistä nousuista tai laskuista, kapeista silloista, tunneleista tai risteyksistä, sekä rautatien tasoristeyksissä ja työmaa-alueilla.
+101 artikla kieltää ohittamisen osuuksilla, joilla on kaarteen, jyrkän nousun tai laskun, kapean sillan, tunnelin tai risteyksen merkki, sekä rautatien tasoristeyksissä ja työmaa-alueilla.
 
-Lisäksi ette saa ohittaa paikoissa tai osuuksilla, joilla on koulu- tai sairaalamerkkejä, paikoissa, joissa on muita ohituskieltomerkkejä tai -merkintöjä, kun vastaantuleva ajoneuvo lähestyy, ettekä myöskään kun 2 tai useampaa ajoneuvoa ajaa jonossa edessä (超車).
+Lisäksi ette saa ohittaa paikoissa tai osuuksilla, joilla on koulu- tai sairaalamerkkejä, paikoissa, joissa on muita ohituskieltomerkkejä tai -merkintöjä, kun vastaantuleva ajoneuvo lähestyy, ettekä myöskään kun edessä ajaa jonossa 2 tai useampi ajoneuvo (超車).
 
 Jotta samalla kaistalla voisi ohittaa edellä ajavan ajoneuvon, takana ajavan on ensin annettava 2 lyhyttä äänimerkkiä tai vilkutettava ajovaloilla 1 kerran. Äänimerkkiä ja ajovaloja ei saa käyttää toistuvasti pakottaakseen edellä ajavan ajoneuvon väistämään (超車).
 
@@ -37,13 +37,13 @@ Tämän toimiston anonymisoidussa asiassa moottoripyöräilijä A ajoi matkustaj
 
 ![Onnettomuuspiirros, joka näyttää moottoripyörän ohitusreitin ja 2 edellä ajavaa ajoneuvoa vuoristotiellä](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A yritti ohittaa 2 ajoneuvoa, ajoi vastakkaiselle kaistalle ja kiihdytti. Myös ajoneuvo 2 valmistautui ohittamaan ajoneuvon 1: alle 1 sekunti vilkun sytyttämisen jälkeen se ajoi vastakkaiselle kaistalle. Moottoripyörällä ei ollut riittävää jarrutusvaraa, ja se törmäsi ajoneuvoon 2.
+A yritti ohittaa 2 ajoneuvoa, ajoi vastakkaiselle kaistalle ja kiihdytti. Myös ajoneuvo 2 valmistautui ohittamaan ajoneuvon 1: alle 1 sekunti vilkun sytyttämisen jälkeen se ajoi vastakkaiselle kaistalle. Moottoripyörällä ei ollut riittävästi aikaa jarruttaa, ja se törmäsi ajoneuvoon 2.
 
 B sai vakavia pään vammoja ja kuoli paikalla; A menetti tajuntansa ja vietiin sairaalaan.
 
 A:n läheiset ja B:n omaiset pitivät aluksi ajoneuvon 2 äkillistä kaistanvaihtoa törmäyksen olennaisimpana syynä. Asia johti oikeudenkäyntiin, ja asian kuluessa onnettomuudesta tehtiin useita asiantuntijatutkimuksia (鑑定).
 
-Asiantuntijatutkimuksen tuloksen mukaan A kantoi olennaisimman vastuun tästä törmäyksestä. Tämä johtopäätös rajoittui tämän asian tosiseikkoihin. Asiantuntijatutkimus otti yhdessä huomioon, että A aikoi ohittaa 2 edellä ajavaa ajoneuvoa, jotka ajoivat jonossa, että hän ajoi vastakkaiselle kaistalle, että hän ajoi nopeudella, joka ei juuri jättänyt jarrutusvaraa, että määrätyt äänimerkki- ja ajovalomerkit puuttuivat, sekä ajoneuvon 2 kaistanvaihdon, tien ja kaistojen rakenteen ja muut varmistetut todisteet (鑑定).
+Asiantuntijatutkimuksen tuloksen mukaan A kantoi olennaisimman vastuun tästä törmäyksestä. Tämä johtopäätös rajoittui tämän asian tosiseikkoihin. Asiantuntijatutkimus otti yhdessä huomioon, että A aikoi ohittaa 2 edellä ajavaa ajoneuvoa, jotka ajoivat jonossa, että hän ajoi vastakkaiselle kaistalle, että hän ajoi nopeudella, joka ei juuri jättänyt aikaa jarruttaa, että määrätyt äänimerkki- ja ajovalomerkit puuttuivat, sekä ajoneuvon 2 kaistanvaihdon, tien ja kaistojen rakenteen ja muut varmistetut todisteet (鑑定).
 
 Se, että yksittäisissä asioissa tulee tällaisia asiantuntijatuloksia, ei merkitse, että merkinantovelvollisuuden yksittäinen laiminlyönti aina vahvistaisi vastuun (鑑定). Tuottamus (過失) ohitusonnettomuudessa riippuu onnettomuuspaikasta, kaistajaosta, nopeudesta, ajoneuvojen liikkeistä, merkeistä, aikaväleistä, näkyvyydestä ja muista todisteista.
 

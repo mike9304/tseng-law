@@ -11,7 +11,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 # Hieronnan historia ja oikeudellinen asema Taiwanissa
 
-![Valittu kuva](../images/006-taiwan-massage-history-law/featured-01.jpg)
+![Kansikuva](../images/006-taiwan-massage-history-law/featured-01.jpg)
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
@@ -63,7 +63,7 @@ Herra Lin piti tätä seuraamusta hyvin epäoikeudenmukaisena ja pyysi perustusl
 
 Taiwanissa
 
-näkövammaiset kohtaavat lukuisia esteitä kasvussa, toiminnassa, oppimisessa ja koulutuksessa, muun muassa,
+näkövammaiset kohtaavat monia esteitä kasvussa, toimintakyvyssä, opiskelussa ja koulutuksessa,
 
 ja alat, joita he voivat harjoittaa, ovat hyvin rajoitetut.
 

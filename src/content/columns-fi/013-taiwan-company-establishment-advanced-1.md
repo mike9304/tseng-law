@@ -27,9 +27,9 @@ Seuraavat kysymykset ja vastaukset on tarkoitettu niille, jotka harkitsevat yhti
 
 Kun ulkomaalainen perustaa yhtiön Taiwanissa, hänen on jätettävä sijoitussuunnitelma (投資計畫書) talousministeriön sijoitustarkastusosastolle (經濟部投資審議司) tarkastettavaksi.
 
-Sijoitustarkastusosaston on tutkittava, käytetäänkö kyseistä pääomaa (資本額) tosiasiallisesti sijoitustarkoituksiin
+Sijoitustarkastusosaston on tutkittava, käytetäänkö kyseistä pääomaa (資本額) tosiasiallisesti sijoitustarkoituksiin.
 
-ja että ulkomaiset toimijat eivät tuo varoja Taiwaniin muun verukkeen nojalla.
+Sen on myös varmistettava, etteivät ulkomaiset toimijat tuo varoja Taiwaniin muun verukkeen nojalla.
 
 Sijoitussuunnitelmaa laadittaessa tarkkaa yhtiön osoitetta ei tarvitse ilmoittaa; seudun ilmoittaminen riittää (esimerkki: Taipein kaupunki). ​
 
@@ -95,7 +95,7 @@ Lisäksi vuokranantaja antaa Taiwanissa liikehuoneistojen vuokrasopimuksissa use
 
 Tämä on vuokrasta vapaa jakso, josta voitte neuvotella.
 
-Ulkomaalaiselle liikehuoneiston vuokraaminen ei ole yksinkertaista, ja vakuus (押金) on Taiwanissa melko matala (tavallisesti 2 kuukautta), joten vuokranantajan suoja on rajallinen;
+Ulkomaalaiselle liikehuoneiston vuokraaminen ei ole yksinkertaista, ja vakuus (押金) on Taiwanissa melko matala (tavallisesti 2 kuukauden vuokra), joten vuokranantajan suoja on rajallinen;
 
 vuokranantajat epäröivät siksi vuokrata ulkomaalaisille.
 

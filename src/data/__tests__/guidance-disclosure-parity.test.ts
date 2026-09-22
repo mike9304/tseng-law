@@ -503,7 +503,7 @@ const ELEMENTS = {
     sv: /juridisk rådgivning/,
     da: /juridisk udtalelse/,
     nb: /juridisk uttalelse/,
-    fi: /oikeudellinen lausunto/,
+    fi: /oikeudellista neuvontaa/,
     cs: /právní\w* stanovisk/,
     hu: /jogi állásfoglalás/,
     ro: /opinie juridică/,

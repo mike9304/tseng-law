@@ -21,9 +21,9 @@ Kun ravintolaliiketoiminta aloitetaan, ensimmäinen ongelma on löytää toimipa
 
 Markkinatilanteen lisäksi
 
-toinen tärkeä kohta on
+toinen tärkeä kohta on seuraava.
 
-sijaitseeko kyseinen osoite (營業地址) vyöhykkeellä, jossa ”ravintola-alan” harjoittaminen on mahdollista.
+On selvitettävä, sijaitseeko kyseinen osoite (營業地址) vyöhykkeellä, jossa ”ravintola-alan” harjoittaminen on mahdollista.
 
 ​
 
@@ -63,7 +63,7 @@ Käytännössä kaikkia aloja ei siksi tarvitse tutkia yhtiörekisteröinnissä.
 
 on 1. tammikuuta 2023 alkaen yhtiön tai kaupan (mukaan lukien sivuliike (分公司) ja sivutoimipaikka (分支機構)) perustamisen, kotipaikan siirron tai toimialojen lisäämisen rekisteröintiä haettaessa toimipaikan ennakkokyselyn tulos **pakollisesti** liitettävä rekisteröintihakemukseen, alasta riippumatta.
 
-Jäljempänä oleva luettelo ”viran puolesta tutkittavista aloista” (主動查詢之營業項目) merkitsee aloja, joita kaupallinen toimisto viran puolesta tutkii lisää rekisteröintitarkastuksen aikana (隨案主動查詢), kun ala on hakemuksessa mutta puuttuu liitetystä tuloksesta; se, ettei ala ole tässä luettelossa, ei merkitse, että tarkastus olisi vapautettu.
+Jäljempänä oleva luettelo ”viran puolesta tutkittavista aloista” (主動查詢之營業項目) merkitsee aloja, joita Taipein kaupungin kauppaosasto viran puolesta tutkii lisää rekisteröintitarkastuksen aikana (隨案主動查詢), kun ala on hakemuksessa mutta puuttuu liitetystä tuloksesta; se, ettei ala ole tässä luettelossa, ei merkitse, että tarkastus olisi vapautettu.
 
 Jos avataan paikassa, jossa ravintola-ala ei ole mahdollista, voi myöhemmin seurata toimivaltaisen viranomaisen hallinnollinen sakko (罰鍰).
 

@@ -1,0 +1,137 @@
+WO-F-it r4 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-it-r4
+No git add / commit / push. Italian strings only.
+
+GUIDANCE_LLMS_NOTICES.it was not rewritten. discoveryNotice still contains the literal token llms.txt. consultationNotice and confidentialNotice were left byte-identical; none of the edited guidance sentences is that substring. src/data/international-inquiry-copy.ts was not edited. No test expectation was rewritten. "TWD 1.57M" was not in any edited sentence.
+
+## Rows applied
+
+Part a (it-a.md): 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33.
+Part b (it-b.md): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40.
+
+A24 and B22 were only partly wording. See skipped.
+
+## Rows skipped
+
+- it-a #2. The withholding-rate link stays "articolo 10". The URL flno=3 was not changed, and the label already names 各類所得扣繳率標準. The Korean source label is still 영업세법 제10조, which the number checker counts. Writing "articolo 3" drops that 10 and fails numbers.
+- it-a #20 and it-b #14, and the verdict lines on the first of the month. "1° gennaio / 1° luglio" was not written. The checker’s date pattern is day + whitespace + month + year; the degree sign blocks the match (same result as r3). Nine sites stay with a bare 1: 001 ×2 ("dal 1 gennaio 2024"), 003 ×1 ("dal 1 luglio 2026"), 004 ×2 ("dal 1 gennaio 2025", "dal 1 gennaio 2024"), 011 ×3 ("dal 1 luglio 2026"), 015 ×1 ("Dal 1 gennaio 2023").
+- it-a #24, and the verdict lines on U+200B in 003, 005, 006, 008 and 009, including 005 `**​**`. Q16–Q20 stay body lines. Promoting them to ## headings changes heading levels against the Korean source. Deleting U+200B changes the ZWSP count and the block count. Counts left in place: 003=52, 005=8, 006=4, 008=10, 009=5. Two unfinished lines were completed inside the block they already occupied: 006 "quando si parla di massaggio (按摩)," and 008 "Se lavora a Taiwan,". Paragraphs were not merged.
+- it-b #22, and the verdict lines on U+200B in 013 and 015. Same checker constraint. Counts left in place: 013=5, 015=3. The Taipei-region sentence still ends with its zero-width space. The dangling "Prima della conclusione del contratto di locazione" (013) and "Se si inizia l’attività nella città di Taipei," (015) were finished inside the existing blocks.
+
+No P3 rows in either review.
+
+## Systemic patterns and how many instances changed
+
+Permits and approvals worded as if a contract were being signed ("concludersi")
+  004 authorizations "non possono neppure concludersi" → "non si determinano"     1
+  017 sector approval "deve concludersi" → "deve ottenersi"                        1
+  Left: 017 "la preparazione deve concludersi in 6 mesi" (a deadline is completed);
+  016 "non deve concludersi solo in base all’intestazione" (do not conclude the inquiry);
+  018 registration "si concludono"; 011 "non si conclude"; 002 and 003 ordinary "concludere".
+
+Fang-Yu Chang, feminine (role, intro, two experience lines)                     4
+  Wei Tseng was already feminine. The male manager in 008 and the male client in 010 were left male.
+
+"Destinatario" where the source is a category or an eligibility condition
+  001 work-permit category                                                       1
+  005 eligibility, including the manager condition                               1
+  Left: conto destinatario (001), destinatario delle prestazioni (003),
+  imprenditore destinatario del mandato (017), organo destinatario (016).
+
+English "need not" written as the ban "non deve"
+  018 "il controllo non deve coincidere" → "può non coincidere"                  1
+  008 "does not need to / need not pay severance" → "non è tenuta / tenuto a pagare"
+     FAQ resignation, FAQ disciplinary, body resignation, table (masculine tenuto)  4
+  Left: "non è necessario" where 014 and 018 already said need-not correctly;
+  real prohibitions ("non deve superare", "non deve esigersi la restituzione integrale").
+
+"Whether" written as a condition, so the questions did not govern the verb
+  016 marital-property regime                                                    1
+  Other "Se …, come" lines are real conditions or real question headings and were left.
+
+First of the month without the ordinal                                          0
+  Nine sites left. See skipped.
+
+U+200B blank lines and Q16–Q20 as body lines                                     0 deleted or promoted
+  Named fragments finished in place: 006 ×1, 008 ×1, 013 ×1, 015 ×1.
+
+Typographic apostrophe (U+2019) where the file still used ASCII '
+  004 ×1, 007 ×264, 008 ×37, 009 ×18, 010 ×70, 011 ×125, 012 ×22, 014 ×1
+  Total 538. 001–003, 005 and 013–018 already used U+2019, except the one
+  straight apostrophe this edit had put into 014 ("l’inadempimento"), then converted.
+  URLs were not rewritten.
+
+Also in the same rows, not a separate pattern:
+  002 public offering "appello al pubblico risparmio" ×3; "data" not "data di nascita";
+  "indicazioni non più aggiornate"; "quando si decide"; "può essere inflitta".
+  004 "paese terzo"; settlement with counterparties; "personale" ×2.
+  001 USD after the amount: "500.000 USD" ×4 and "200.000 USD" ×4
+  (FAQ and body, each with the under-one-year list and the one-year-or-more list).
+  003 prescription, expense agreement (esaminate / necessarie, accresciute, comprese),
+  "quelle", comma removed before "è".
+  005 names Wei Tseng; 臺灣法人.
+  007 trust (信託) ×2; ground 4; "le questioni"; reward clause.
+  009 "lo insulta gravemente".
+  010 caregiving, round trip, recognition, remaining working life, punitive damages,
+  documents collected, impersonal injury, chronology, issues raised, not every procedure.
+  011 review order, labeling address, remaining cosmetics, scope of review, surrounding context.
+  012 "divieto di sorpasso" and "si attenda / si concluda".
+  013 "locale a uso ufficio" ×5.
+  014 records sought, consideration, relabeling, training, label, "esigere dal".
+  015 the other point named.
+  016 no parental power for the parents’ own interest; "in modo diverso"; "esige che".
+  017 commencement reported; truck age inside the same item ×2; narrow individual regime ×2.
+  018 contract-structure advice; "la presenza a Taiwan"; support duties; each obligation.
+  Guidance: double major; "Responsabile delle operazioni in Corea";
+  "Area delle operazioni in Corea"; "Ufficio in Corea";
+  "Se una questione viene accettata si decide".
+
+R2–R10 were already in the Italian pack (Korea only as a labelled example, feminine Wei Tseng, Lei, consultation languages locked to English / Chinese / Japanese / Korean, no interpreter, no reply-time, no free first meeting, no result promise). This pass did not find a further Korea-as-default-reader sentence or a masculine form for Wei Tseng.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-it-r4 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-it --lang it 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=77
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-it src/data | wc -l
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+```
+      24
+```
+That count is from the run above, before this log file existed. A later status includes this untracked log.
+
+Number WARNs remain on several files (lexical 제3자 / 제n항 left unmatched, and a few extra digits). They are WARN, not FAIL. summary is PASS 18/18. The "paese 3" → "paese terzo" change did not drop a required digit.
+
+## Reviewer disagreements (not applied)
+
+None of the legal rewrites were rejected as a mistake of law.
+
+The request to call the withholding-rate link "articolo 3" is right about the URL (flno=3, and the statute name is already the withholding-rate standards). It was not applied because the Korean label is 제10조 and the checker counts that 10. See skipped, it-a #2.
+
+The request to turn Q16–Q20 into ## headings treats those lines as missing headings. In the Korean source, and in the English file, they are body lines. Adding headings fails checkHeadings. See skipped, it-a #24.

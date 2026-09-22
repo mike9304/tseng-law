@@ -1,5 +1,5 @@
 ---
-title: "Eccezioni nelle quali il lavoratore può percepire l'indennità di licenziamento (資遣費) nonostante dimissioni volontarie"
+title: "Eccezioni nelle quali il lavoratore può percepire l’indennità di licenziamento (資遣費) nonostante dimissioni volontarie"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13 settembre 2025"
@@ -9,17 +9,17 @@ categories:
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 
-# Eccezioni nelle quali il lavoratore può percepire l'indennità di licenziamento (資遣費) nonostante dimissioni volontarie
+# Eccezioni nelle quali il lavoratore può percepire l’indennità di licenziamento (資遣費) nonostante dimissioni volontarie
 
 ![Immagine in evidenza](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-A Taiwan, in via generale, non è facile per il lavoratore ottenere l'indennità di licenziamento (資遣費).
+A Taiwan, in via generale, non è facile per il lavoratore ottenere l’indennità di licenziamento (資遣費).
 
 ​
 
 In particolare, se il lavoratore si dimette di propria iniziativa (自請離職),
 
-non può percepire l'indennità di licenziamento (資遣費) (articolo 18 della legge sugli standard del lavoro),
+non può percepire l’indennità di licenziamento (資遣費) (articolo 18 della legge sugli standard del lavoro),
 
 e ciò differisce da altri ordinamenti, per esempio dalla Corea.
 
@@ -29,15 +29,15 @@ Esistono, tuttavia, **casi eccezionali**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di propria iniziativa, il datore di lavoro deve pagargli l'indennità di licenziamento (l'articolo 14 della legge sugli standard del lavoro, che applica per analogia l'articolo 17; 勞動基準法第14條):
+Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di propria iniziativa, il datore di lavoro deve pagargli l’indennità di licenziamento (l’articolo 14 della legge sugli standard del lavoro, che applica per analogia l’articolo 17; 勞動基準法第14條):
 
 1. Quando il datore di lavoro, nella celebrazione del contratto di lavoro (勞動契約), fa una dichiarazione di volontà mendace (虛偽意思表示) così che il lavoratore si inganna e esiste un rischio di subire un pregiudizio
 
-(per esempio quando il datore di lavoro dice al lavoratore che, dall'ingresso, lo invierà a una succursale all'estero che non esiste nella realtà)
+(per esempio quando il datore di lavoro dice al lavoratore che, dall’ingresso, lo invierà a una succursale all’estero che non esiste nella realtà)
 
-2. Quando il datore di lavoro, un membro della famiglia del datore di lavoro o un rappresentante del datore di lavoro (代理人) esercita una violenza o infligge un insulto grave (重大侮辱) al lavoratore
+2. Quando il datore di lavoro, un membro della famiglia del datore di lavoro o un rappresentante del datore di lavoro (代理人) esercita violenza contro il lavoratore o lo insulta gravemente (重大侮辱)
 
-3. Quando il lavoro convenuto nel contratto può pregiudicare la salute del lavoratore, il lavoratore ha chiesto al datore di lavoro di porvi rimedio e il datore di lavoro non l'ha fatto
+3. Quando il lavoro convenuto nel contratto può pregiudicare la salute del lavoratore, il lavoratore ha chiesto al datore di lavoro di porvi rimedio e il datore di lavoro non l’ha fatto
 
 4. Quando il datore di lavoro, il suo rappresentante o altro lavoratore è colpito da una malattia contagiosa legale (法定傳染病), esiste un rischio di contagio per i lavoratori che lavorano insieme e ciò costituisce un pericolo grave per la salute del lavoratore
 
@@ -47,21 +47,21 @@ Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di prop
 
 ​
 
-L'esempio più frequente è che il datore di lavoro
+L’esempio più frequente è che il datore di lavoro
 
 non paga il salario (工資) a tempo,
 
 non paga le ore straordinarie (加班費),
 
-o non affilia il lavoratore all'assicurazione del lavoro (勞保) o all'assicurazione di malattia (健保).
+o non affilia il lavoratore all’assicurazione del lavoro (勞保) o all’assicurazione di malattia (健保).
 
-In questi casi, anche se il lavoratore pone termine al contratto di lavoro in via ordinaria, il datore di lavoro deve pagargli l'indennità di licenziamento.
+In questi casi, anche se il lavoratore pone termine al contratto di lavoro in via ordinaria, il datore di lavoro deve pagargli l’indennità di licenziamento.
 
 ​
 
 Tuttavia, la legge sugli standard del lavoro (勞動基準法) dispone che,
 
-se il lavoratore desidera porre termine al contratto di lavoro a titolo dei punti 1 o 6 sopra (per esempio per terminare il contratto per mancanza di affiliazione all'assicurazione),
+se il lavoratore desidera porre termine al contratto di lavoro a titolo dei punti 1 o 6 sopra (per esempio per terminare il contratto per mancanza di affiliazione all’assicurazione),
 
 deve porre termine al contratto di lavoro in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto questa situazione,
 
@@ -71,9 +71,9 @@ Il lavoratore deve quindi padroneggiare bene il termine.
 
 ​
 
-In altre parole, l'effetto si distingue secondo chi ha la colpa.
+In altre parole, l’effetto si distingue secondo chi ha la colpa.
 
-Se la colpa è del datore di lavoro, il lavoratore può esigere l'indennità di licenziamento
+Se la colpa è del datore di lavoro, il lavoratore può esigere l’indennità di licenziamento
 
 e, se la colpa è del lavoratore,
 
@@ -85,7 +85,7 @@ se la lite sorge,
 
 secondo chi pone termine per primo al contratto con un motivo sufficiente
 
-l'indennità può non essere pagata o può essere richiesta.
+l’indennità può non essere pagata o può essere richiesta.
 
 È per questo che, nei conflitti del lavoro (勞資糾紛) a Taiwan,
 

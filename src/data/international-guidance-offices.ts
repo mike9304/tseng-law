@@ -370,7 +370,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     description: 'Indirizzi degli uffici di Hovering International Law Firm a Taiwan.',
     officeLabel: 'Ufficio',
     mapPreviewLabel: 'Anteprima della mappa',
-    koreaOfficeTitle: 'Ufficio Corea',
+    koreaOfficeTitle: 'Ufficio in Corea',
     koreaAddressCardLabel: 'Indirizzo dell’ufficio in Corea',
     koreaMapLinkLabel: 'Vedere su Naver Map',
     reviewCountWord: 'recensioni',

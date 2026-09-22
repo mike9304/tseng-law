@@ -107,21 +107,21 @@ si può, se del caso, proporre l’autenticazione del contratto di locazione (�
 
 ​
 
-**5. Si può, nella costituzione della società, prendere in locazione un locale commerciale di uffici?**
+**5. Si può, nella costituzione della società, prendere in locazione un locale a uso ufficio?**
 
 Ciò dipende dalle voci di attività (營業項目) della società.
 
-Esempio. Se la voce di attività è la ristorazione e si intende prendere in locazione un locale commerciale di uffici, l’apertura del conto bancario sarà molto difficile.
+Esempio. Se la voce di attività è la ristorazione e si intende prendere in locazione un locale a uso ufficio, l’apertura del conto bancario sarà molto difficile.
 
 Come già indicato, la banca esamina il contratto di locazione e ispeziona sul posto l’indirizzo della società.
 
 Inoltre, nell’iscrizione finale della società, l’amministrazione comunale (市政府) esige anche che l’indirizzo iscritto si situi in una zona dove l’esercizio di un ristorante è autorizzato;
 
-se si tratta di un locale commerciale di uffici, l’iscrizione della società (公司登記) può non essere possibile.
+se si tratta di un locale a uso ufficio, l’iscrizione della società (公司登記) può non essere possibile.
 
-Esempio. Se si tratta di voci di attività possibili in un locale commerciale di uffici, quali la pubblicità o il commercio all’ingrosso, la società può essere costituita in un locale commerciale di uffici. Prima della conclusione del contratto di locazione
+Esempio. Se si tratta di voci di attività possibili in un locale a uso ufficio, quali la pubblicità o il commercio all’ingrosso, la società può essere costituita in un locale a uso ufficio.
 
-conviene verificarlo in anticipo.
+Prima della conclusione del contratto di locazione, conviene verificarlo.
 
 *Se ha bisogno di aiuto sul diritto di Taiwan, utilizzi la pagina dei contatti e indichi la lingua desiderata tra inglese, cinese (中文), giapponese e coreano; un termine di risposta non è promesso.*
 

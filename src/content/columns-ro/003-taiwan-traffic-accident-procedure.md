@@ -33,7 +33,7 @@ Asigurați mai întâi siguranța personală și semnalele de avertizare; dacă 
 
 Odată siguranța asigurată, faceți fotografii de ansamblu și de detaliu pentru a înregistra poziția și daunele vehiculelor, marcajele rutiere, semafoarele și condițiile meteorologice. Nu omiteți datele de contact ale martorilor, cererea de conservare a imaginilor CCTV (監視器影像) și a camerei de bord (行車紀錄器), datele părților, ale vehiculului și ale asigurării, și dosarul medical (病歷). Fotografiile personale sunt utile, dar nu se substituie intervenției poliției cerute în caz de accident cu răniți sau deces.
 
-Cât la documentele de poliție, la locul accidentului puteți primi talonul de înregistrare a părților la accidentul de circulație (道路交通事故當事人登記聯單). După 7 zile de la data accidentului, schița și fotografiile locului (現場圖 / 現場照片) pot fi cerute; după 30 de zile de la data accidentului, tabloul de analiză preliminară a accidentului de circulație (道路交通事故初步分析研判表) poate fi cerut. Momentul de eliberare și condițiile de cerere trebuie confirmate din nou la autoritatea de poliție competentă.
+Cât privește documentele de poliție, la locul accidentului puteți primi talonul de înregistrare a părților la accidentul de circulație (道路交通事故當事人登記聯單). După 7 zile de la data accidentului, schița și fotografiile locului (現場圖 / 現場照片) pot fi cerute; după 30 de zile de la data accidentului, tabloul de analiză preliminară a accidentului de circulație (道路交通事故初步分析研判表) poate fi cerut. Momentul de eliberare și condițiile de cerere trebuie confirmate din nou la autoritatea de poliție competentă.
 
 ## Q3. În caz de răni, ce revendicări și ce termene trebuie verificate?
 
@@ -49,7 +49,7 @@ Alegerea variază după întreruperea prescripției (時效中斷), cercul pâr�
 
 Răspunderea penală nu poate fi reținută decât când sunt recunoscute încălcarea datoriei de prudență a fiecăruia și legătura de cauzalitate între această încălcare și leziunile celeilalte părți. Singurul fapt că a existat o vină de ambele părți nu face să se nască automat răspunderea pentru leziuni din imprudență.
 
-Pe plan civil, potrivit art. 217 din Codul civil, dacă persoana vătămată are o vină care a contribuit la cauzarea sau agravarea daunei (與有過失), tribunalul poate reduce sau scuti despăgubirea. De exemplu, dacă dauna recunoscută în noul dolar taiwanez (新臺幣, TWD) este TWD 1.000.000 și vina persoanei vătămate este evaluată la 50 %, suma poate fi redusă la TWD 500.000 înainte de alte ajustări.
+Pe plan civil, potrivit art. 217 din Codul civil, dacă persoana vătămată are o vină care a contribuit la cauzarea sau agravarea daunei (與有過失), tribunalul poate reduce sau scuti despăgubirea. De exemplu, dacă dauna recunoscută în noul dolar taiwanez (新臺幣, TWD) este 1.000.000 TWD și vina persoanei vătămate este evaluată la 50%, suma poate fi redusă la 500.000 TWD înainte de alte ajustări.
 
 Expertiza (鑑定) sau tabloul de analiză preliminară pot fi documente importante, dar ele nu leagă tribunalul în mod mecanic. Tribunalul examinează ansamblul probelor, inclusiv declarațiile, imaginile și starea vehiculelor.
 
@@ -94,7 +94,7 @@ Potrivit regulilor aplicabile, partea legitimată poate cere o expertiză de acc
 Revendicarea întemeiată pe art. 184 din Codul civil presupune o atingere ilicită a unui drept, legătura de cauzalitate cu accidentul și proba daunei. Singurul fapt că un accident a survenit nu implică faptul că toate capetele de cerere următoare sunt recunoscute. Art. 216 din Codul civil este criteriul pentru a determina întinderea daunei efective și a câștigului nerealizat (所失利益).
 
 - **Răni**: Potrivit art. 193 din Codul civil pot fi examinate cheltuielile medicale (醫療費用) necesare, cheltuielile suplimentare ale vieții zilnice precum cheltuielile de îngrijire (看護費用), de transport pentru tratament (就醫交通費) și de ajutoare tehnice, precum și pierderea de venituri (收入損失) prin incapacitatea de muncă reală și diminuarea capacității de muncă (勞動能力減損). Potrivit art. 195 din Codul civil prejudiciul moral poate de asemenea fi examinat.
-- **Deces**: Potrivit art. 192 din Codul civil, când este cazul, pot fi examinate cheltuielile medicale anterioare decesului și cheltuielile de nevoi vitale sporite, cheltuielile funerare (殯葬費) și pierderea de alimente (扶養利益損失) a persoanei care avea un drept legal la alimente. Potrivit art. 194 din Codul civil prejudiciul moral al anumitor părinți poate de asemenea fi examinat.
+- **Deces**: Potrivit art. 192 din Codul civil, când este cazul, pot fi examinate cheltuielile medicale anterioare decesului și cheltuielile de nevoi vitale sporite, cheltuielile funerare (殯葬費) și pierderea întreținerii (扶養利益損失) a persoanei care avea un drept legal la întreținere. Potrivit art. 194 din Codul civil poate fi examinat și prejudiciul moral al rudelor îndreptățite (soțul, părinții, copiii).
 - **Patrimoniu**: Potrivit art. 196 din Codul civil poate fi cerută dauna patrimonială efectivă, dacă este dovedită, inclusiv cheltuielile de reparare a vehiculului sau pierderea de valoare.
 
 ## Q8. Dacă tratamentul continuă, cum se prezintă documentele de cheltuieli medicale?
@@ -151,7 +151,7 @@ Faptul că salariul actual se menține fără variație nu exclude automat reven
 
 Dacă tulburarea funcțională persistentă este contestată în mod substanțial, o expertiză medicală poate fi utilă, dar nu este obligatorie în toate cauzele. Se examinează și compensarea vinelor din art. 217 al Codului civil și alte motive de ajustare.
 
-Când calculul se face într-un capital unic, deducerea dobânzilor intercalare (中間利息扣除) poate fi avută în vedere. Calculatorul Hoffmann (霍夫曼) al Yuanului judiciar nu este decât un instrument de calcul, nu o metodă legal obligatorie, și nu promite rezultatul. Potrivit art. 193 din Codul civil, la cererea părții tribunalul poate de asemenea ordona plata în rentă periodică sub condiția unei cațiuni.
+Când calculul se face într-un capital unic, deducerea dobânzii intermediare (中間利息扣除) poate fi avută în vedere. Calculatorul Hoffmann (霍夫曼) al Yuanului judiciar nu este decât un instrument de calcul, nu o metodă legal obligatorie, și nu promite rezultatul. Potrivit art. 193 din Codul civil, la cererea părții tribunalul poate de asemenea ordona plata în rentă periodică sub condiția unei cauțiuni.
 
 ## Q13. Cum se apreciază indemnizația pentru prejudiciu moral (慰撫金) cu titlu de daune nepatrimoniale?
 
@@ -163,7 +163,7 @@ Tribunalul examinează împrejurările fiecărei cauze apreciind în ansamblu co
 
 Art. 188 din Codul civil reglementează cazul în care angajatul cauzează o daună ilicită altuia în timpul exercitării funcțiilor. Legătura cu funcțiile nu este recunoscută automat numai din cauza orarului de muncă, astfel că trebuie verificată legătura dintre munca reală și accident.
 
-Angajatorul poate alega că a observat diligența cuvenită în selecția și supravegherea angajatului, sau că dauna n-ar fi putut fi evitată chiar observând această diligență. Se poate avea în vedere să se revendice despăgubirea în mod solidar împotriva angajatorului și a angajatului. După ce a despăgubit, angajatorul poate exercita o recurgere împotriva angajatului.
+Angajatorul poate alega că a observat diligența cuvenită în selecția și supravegherea angajatului, sau că dauna n-ar fi putut fi evitată chiar observând această diligență. Se poate avea în vedere să se revendice despăgubirea în mod solidar împotriva angajatorului și a angajatului. După ce a despăgubit, angajatorul poate exercita o acțiune în regres împotriva angajatului.
 
 Dacă angajatorul dovedește aceste condiții de exonerare și persoana vătămată nu obține despăgubirea alineatului 1, tribunalul, potrivit art. 188 alineatul 2 din Codul civil, poate ordona o despăgubire totală sau parțială ținând seama de situația economică a angajatorului și a persoanei vătămate.
 
@@ -175,7 +175,7 @@ Obligația de a subscrie potrivit art. 6 din legea asigurării obligatorii de r�
 
 Într-un accident al unui singur vehicul, conducătorul acestui vehicul nu este, în general, destinatar al prestațiilor asigurării obligatorii a acestui vehicul. Totuși, într-un accident în care intervin mai multe vehicule, există cazuri în care conducătorul poate revendica prestații de la asigurătorul obligatoriu al unui alt vehicul implicat.
 
-Baremul de prestații (強制汽車責任保險給付標準) modificat la 2026-05-29 se aplică accidentelor survenite de la 2026-07-01. Plafonul cheltuielilor medicale rezonabile și necesare pentru răni este TWD 200.000 în noul dolar taiwanez; prestația pentru invaliditate (失能) merge de la TWD 80.000 la TWD 3.000.000 după 15 grade legale; prestația pentru deces este TWD 3.000.000, iar maximumul comun de deces, de invaliditate și de cheltuieli medicale pentru 1 victimă și 1 accident este TWD 3.200.000. Accidentelor anterioare li se poate aplica baremul precedent.
+Baremul de prestații (強制汽車責任保險給付標準), modificat la 29 mai 2026, se aplică accidentelor survenite de la 1 iulie 2026. Plafonul cheltuielilor medicale rezonabile și necesare pentru răni este 200.000 TWD în noul dolar taiwanez; prestația pentru invaliditate (失能) merge de la 80.000 TWD la 3.000.000 TWD după 15 grade legale; prestația pentru deces este 3.000.000 TWD, iar maximumul comun de deces, de invaliditate și de cheltuieli medicale pentru 1 victimă și 1 accident este 3.200.000 TWD. Accidentelor anterioare li se poate aplica baremul precedent.
 
 Asigurarea de răspundere civilă față de terți (第三人責任險), asigurarea de accidente a conducătorului (駕駛人傷害險) și asigurarea de daune la vehiculul propriu (車體損失險) sunt produse facultative de caracter contractual. Acoperirea reală variază după asigurat, plafon, franșiză (自負額), excluderi, vină și celelalte condiții ale poliței, astfel că polița și condițiile trebuie verificate caz cu caz.
 
@@ -207,7 +207,7 @@ Ei pot neglija părți importante care privesc sentimentele celeilalte părți, 
 
 ​
 
-Pentru asigurător, a cheltui TWD 500.000 sau TWD 1.000.000 suplimentare într-o cauză concretă nu influențează în mod important beneficiul global al asigurătorului, dar pentru partea la accident această sumă poate determina dacă există sau nu antecedente penale (前科).
+Pentru asigurător, a cheltui 500.000 TWD sau 1.000.000 TWD suplimentare într-o cauză concretă nu influențează în mod important beneficiul global al asigurătorului, dar pentru partea la accident această sumă poate determina dacă există sau nu antecedente penale (前科).
 
 ​
 
@@ -239,7 +239,7 @@ Q17. Care este răspunderea penală pentru leziuni din imprudență a autorului 
 
 ​
 
-Dacă este convertită în amendă (易科罰金), art. 41 alineatul 1 din Codul penal fixează convertirea la TWD 1.000, TWD 2.000 sau TWD 3.000 pentru 1 zi; calculat la TWD 1.000 pe zi, o pedeapsă de 3 luni echivalează cu 3 × 30 × TWD 1.000 = TWD 90.000.
+Dacă este convertită în amendă (易科罰金), art. 41 alineatul 1 din Codul penal fixează convertirea la 1.000 TWD, 2.000 TWD sau 3.000 TWD pentru 1 zi; calculat la 1.000 TWD pe zi, o pedeapsă de 3 luni echivalează cu 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -323,7 +323,7 @@ Trebuie să vă feriți de avocatul care umflă cauza și susține că nu trebui
 
 ​
 
-Închei astfel întrebările și răspunsurile asupra accidentelor de circulație. Sper că vă vor fi utile.
+Aici se încheie întrebările și răspunsurile despre accidentele de circulație.
 
 ​
 

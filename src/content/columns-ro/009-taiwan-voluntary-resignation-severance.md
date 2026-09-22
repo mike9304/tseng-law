@@ -19,7 +19,7 @@ După cum am arătat într-un articol anterior, în Taiwan nu este ușor pentru 
 
 În special, dacă salariatul demisionează din proprie inițiativă (自請離職),
 
-nu poate primi indemnizația de concediere (資遣費) (art. 18 din legea privind normele muncii),
+nu poate primi indemnizația de concediere (資遣費) (art. 18 din legea standardelor muncii),
 
 spre deosebire de unele state, de exemplu Coreea.
 
@@ -29,7 +29,7 @@ Există totuși **cazuri excepționale**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-În situațiile speciale următoare, chiar dacă salariatul demisionează din proprie inițiativă, angajatorul trebuie să-i plătească indemnizația de concediere (art. 14 din legea privind normele muncii, care aplică prin analogie art. 17; 勞動基準法第14條):
+În situațiile speciale următoare, chiar dacă salariatul demisionează din proprie inițiativă, angajatorul trebuie să-i plătească indemnizația de concediere (art. 14 din legea standardelor muncii, care aplică prin analogie art. 17; 勞動基準法第14條):
 
 1. Când angajatorul, la încheierea contractului de muncă (勞動契約), face o declarație de voință mincinoasă (虛偽意思表示), astfel încât salariatul se înșală și există riscul de a suferi un prejudiciu
 
@@ -59,7 +59,7 @@ sau nu afiliază salariatul la asigurarea muncii (勞保) ori la asigurarea de s
 
 ​
 
-Totuși, legea privind normele muncii (勞動基準法) dispune că,
+Totuși, legea standardelor muncii (勞動基準法) dispune că,
 
 dacă salariatul dorește să pună capăt contractului de muncă în temeiul punctelor 1 sau 6 de mai sus (de exemplu pentru a încheia contractul din cauza neafilierii la asigurare),
 

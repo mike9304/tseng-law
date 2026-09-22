@@ -10,7 +10,7 @@ faq:
   - q: "Dacă există clienți în Taiwan, trebuie neapărat înființată acolo o societate?"
     a: "Nu se poate concluziona numai pentru că clientul este în Taiwan. Trebuie văzute cerințele clientului și activitatea reală de comerț, instalații, personal și structura operațiilor în Taiwan, apoi aleasă entitatea cea mai adecvată."
   - q: "Răspunderea sediului dispare în întregime când se înființează o societate taiwaneză?"
-    a: "Dacă înființați o filială și nu o sucursală, sediul, în principiu, nu asumă obligațiile contractuale semnate în numele filialei. Trebuie totuși verificate excepțiile pentru abuz de personalitate juridică și dacă sediul a acordat o cauțiune sau a asumat obligații contractuale proprii."
+    a: "Dacă înființați o filială și nu o sucursală, sediul, în principiu, nu asumă obligațiile contractuale semnate în numele filialei. Trebuie totuși verificate excepțiile pentru abuz de personalitate juridică și dacă sediul a acordat o garanție sau a asumat obligații contractuale proprii."
   - q: "Puteți începe cu un distribuitor și apoi trece la o societate în Taiwan?"
     a: "O tranziție pe etape se poate planifica, dar trebuie revăzute și stingerea sau modificarea contractelor existente, contractele cu clienții, stocurile, tratarea defectelor și personalul."
 ---
@@ -23,7 +23,7 @@ Când operațiile cu clienți taiwanezi încep, sediul din străinătate poate p
 
 Ceea ce trebuie clarificat mai întâi este cine se ocupă de ce în Taiwan. Structura de evaluat se schimbă după cum sediul străin continuă să semneze contractele de vânzare, o societate taiwaneză cumpără și revinde marfa, sau personalul local furnizează numai sprijinul tehnic.
 
-Acest text este o explicație generală pentru întreprinderile străine de materiale, componente și echipamente de semiconductori care concepe structura de intrare în Taiwan. Scenariile și punctele de control următoare sunt exemple ipotetice și propuneri de evaluare, nu un mandat real al unei întreprinderi concrete nici o cerință de înființare uniformă. Impozitele, controlul exporturilor, autorizările pe produs și clasificarea investitorului cer încă o analiză aparte.
+Acest text este o explicație generală pentru întreprinderile străine de materiale, componente și echipamente de semiconductori care își planifică structura de intrare în Taiwan. Scenariile și punctele de control următoare sunt exemple ipotetice și propuneri de evaluare, nu un mandat real al unei întreprinderi concrete nici o cerință de înființare uniformă. Impozitele, controlul exporturilor, autorizările pe produs și clasificarea investitorului cer încă o analiză aparte.
 
 ## 1. A clarifica împărțirea operațiilor și a comerțului înainte de a alege forma de înregistrare
 
@@ -35,7 +35,7 @@ Să presupunem că un fabricant străin de componente de precizie vinde clienți
 |---|---|
 | Contracte cu clienții | Cine va fi parte la contract: sediul străin, filiala taiwaneză sau un agent local? |
 | Oferte și comenzi | Cine confirmă definitiv prețul și termenul, și până unde merge autoritatea responsabilului în Taiwan? |
-| Marfă și stocuri | Cine importă, deține și gestionează stocurile, și tratează retururile și substituțiile? |
+| Marfă și stocuri | Cine importă, deține și gestionează stocurile, și tratează retururile și înlocuirile? |
 | Personal | Salariații sediului se deplasează, se angajează în Taiwan sau se încredințează munca unui prestator exterior? |
 | Instalare și sprijin tehnic | Cine datorează sprijinul față de client și tratează problemele muncii pe loc? |
 | Încasări și costuri | Cine facturează și încasează, și cum se lichidează costurile între sediu și organizația în Taiwan? |
@@ -53,7 +53,7 @@ Diferența principală între o filială taiwaneză și o sucursală taiwaneză 
 |---|---|---|
 | Filială taiwaneză | Se constituie conform dreptului din Taiwan, cu o personalitate juridică proprie, și este un subiect juridic distinct de societatea-mamă străină. | Cum filiala este o persoană juridică independentă, trebuie confirmat cum se organizează furnizarea, serviciile, licența tehnologică și împărțirea costurilor cu societatea-mamă. |
 | Sucursală taiwaneză a unei societăți străine | Sucursală înscrisă legal în Taiwan, fără personalitate juridică distinctă de sediu, diferită de o filială constituită aparte. | Sucursala este o parte a sediului străin, nu o persoană juridică independentă, astfel că sediul asumă obligațiile în mod direct. Confirmați întinderea facultăților reprezentantului sucursalei și împărțirea internă a contractelor externe, a livrării, a acoperirii defectelor și a serviciului după vânzare. |
-| Birou de reprezentare în Taiwan | Punct de afaceri înscris conform art. 386 din legea asupra societăților; nu poate exercita activitate mercantilă în Taiwan. | Cum nu poate exercita activitate mercantilă, confirmați dacă activitatea reală rămâne în câmpul permis. |
+| Birou de reprezentare în Taiwan | Prezență înscrisă conform art. 386 din legea asupra societăților; nu poate exercita activitate mercantilă în Taiwan. | Cum nu poate exercita activitate mercantilă, confirmați dacă activitatea reală rămâne în câmpul permis. |
 
 ## 3. Forme ale filialei taiwaneze: societate cu răspundere limitată (有限公司) și societate pe acțiuni (股份有限公司)
 
@@ -63,9 +63,9 @@ Dacă decideți să constituiți o persoană juridică independentă în Taiwan,
 
 Se poate forma cu 1 persoană fizică sau mai multe, sau cu asociați persoane juridice taiwaneze sau străine; asociații răspund, în principiu, până la concurența sumei aportului lor. Societatea are de la 1 la 3 administratori, aleși dintre asociați. Asociații care nu execută comerțul pot exercita drepturi de supraveghere, fără să fie nevoie de un cenzor (監察人) distinct. În afară de dispoziție statutară contrară, fiecare asociat are un vot (1 asociat, 1 vot), astfel că controlul nu trebuie să coincidă cu proporția aporturilor. Transmiterea aportului unui asociat obișnuit cere, în principiu, consimțământul a mai mult de jumătate din drepturile de vot ale celorlalți; pentru un administrator, 2/3 sau mai mult. Aceasta convine mai bine unor relații de asociați simple și unui control stabil decât unor atrageri frecvente de capital sau cesiunilor de părți sociale. Mai târziu, se poate converti în societate pe acțiuni (股份有限公司).
 
-### Societate pe acțiuni (股份有限公司): adaptată dacă se vor să se încorporeze alți investitori sau dacă o cotare este de avut în vedere
+### Societate pe acțiuni (股份有限公司): potrivită dacă se dorește atragerea altor investitori sau dacă se are în vedere o cotare
 
-Capitalul se împarte în acțiuni. În principiu sunt ceruți 2 asociați sau mai mulți, dar Statul sau o persoană juridică o pot constitui singure, și o persoană juridică străină poate deține 100 %. Acțiunile sunt, în principiu, liber transmisibile, cu excepții legale; acțiuni speciale și opțiuni de salariați se pot concepe conform legii. Aceasta convine întreprinderilor care așteaptă investitori, o negociere de acțiuni, stimulente în capital pentru salariați sau o fuziune, o achiziție sau o cotare viitoare; nu se limitează la marile întreprinderi. În guvernanță, o societate neemitentă publică poate, prin statute, să nu aibă consiliu și să aibă numai 1 sau 2 administratori. O societate cu un singur asociat de Stat sau persoană juridică poate, prin statut, să nu aibă cenzor. Nu orice societate pe acțiuni (股份有限公司) trebuie să își auditeze situațiile financiare anuale. Pragurile principale de audit ale unei societăți obișnuite sunt un capital vărsat de TWD 30.000.000, sau, sub acesta, încasări de exploatare de TWD 100.000.000 sau 100 lucrători la regimul de asigurare a muncii; societățile de ofertă publică urmează reglementarea valorilor.
+Capitalul se împarte în acțiuni. În principiu sunt necesari cel puțin 2 acționari, dar Statul sau o persoană juridică o pot constitui singure, și o persoană juridică străină poate deține 100%. Acțiunile sunt, în principiu, liber transmisibile, cu excepții legale; acțiuni speciale și opțiuni de salariați se pot concepe conform legii. Aceasta convine întreprinderilor care așteaptă investitori, o negociere de acțiuni, stimulente în capital pentru salariați sau o fuziune, o achiziție, o cotare sau o înregistrare pe piața emergentă; nu se limitează la marile întreprinderi. În guvernanță, o societate neemitentă publică poate, prin statute, să nu aibă consiliu de administrație și să aibă numai 1 sau 2 administratori. O societate al cărei unic acționar este Statul sau o persoană juridică poate, prin statut, să nu aibă cenzor. Nu orice societate pe acțiuni (股份有限公司) trebuie să își auditeze situațiile financiare anuale. Pragurile principale de audit ale unei societăți obișnuite sunt un capital vărsat de 30.000.000 TWD, sau, sub acesta, încasări de exploatare de 100.000.000 TWD sau 100 lucrători la regimul de asigurare a muncii; societățile de ofertă publică urmează reglementarea valorilor.
 
 ## 4. Procedurile de sucursală și de filială diferă; numai filiala trece prin examinarea Comisiei investițiilor
 
@@ -105,7 +105,7 @@ Nu se poate concluziona numai pentru că clientul este în Taiwan. Trebuie văzu
 
 ### Răspunderea sediului dispare în întregime când se înființează o societate taiwaneză?
 
-Dacă înființați o filială și nu o sucursală, sediul, în principiu, nu asumă obligațiile contractuale semnate în numele filialei. Trebuie totuși verificate excepțiile pentru abuz de personalitate juridică și dacă sediul a acordat o cauțiune sau a asumat obligații contractuale proprii.
+Dacă înființați o filială și nu o sucursală, sediul, în principiu, nu asumă obligațiile contractuale semnate în numele filialei. Trebuie totuși verificate excepțiile pentru abuz de personalitate juridică și dacă sediul a acordat o garanție sau a asumat obligații contractuale proprii.
 
 ### Puteți începe cu un distribuitor și apoi trece la o societate în Taiwan?
 

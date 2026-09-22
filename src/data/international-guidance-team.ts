@@ -791,7 +791,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Avocată coordonatoare în Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Avocat în Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Asistent juridic',
       'son-jungmin': 'Conducerea operațiunilor din Coreea (Korea Operations Manager)',
       'huang-shengping': 'Contabil asociat (Partner CPA)',
     },
@@ -3267,45 +3267,45 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Master (M.S.) în finanțe, Institute of Finance, National Taiwan University',
-        'Licență (B.A.) în dublu program de drept și finanțe, National Chengchi University',
+        'Licență (B.A.), dublă specializare drept și finanțe, National Chengchi University',
         'Studii de schimb la Kobe University și Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fundația de asistență juridică, filiala Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Anterior, în cadrul Ministry of Education, Legal Affairs Division, cu accent pe cauze administrative și civile.',
+        'A lucrat anterior la Ministerul Educației, Direcția juridică (Ministry of Education, Legal Affairs Division), cu accent pe cauze administrative și civile.',
         'Experiență în cauze privind universități, drepturile cadrelor didactice și contestații administrative.',
       ],
       education: [
         'Licență în drept (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministerul Educației, Direcția juridică (Ministry of Education, Legal Affairs Division)',
         'Avocat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal cu activitate îndelungată ca paralegal senior în mai multe cabinete, responsabil de sprijin procedural, drept societar și investiții străine.',
+        'Asistent juridic (paralegal), cu o activitate îndelungată ca paralegal senior în mai multe cabinete, cu atribuții de sprijin procedural, drept societar și investiții străine.',
         'Sprijin în proceduri, la înființarea de societăți, la aprobările pentru investiții străine, la cererile de licență și în schimburile dintre Coreea și Taiwan.',
       ],
       education: [
         'Licență în drept (LL.B.), Tunghai University',
       ],
       experience: [
-        'Paralegal senior, Boyin Law Firm',
-        'Paralegal senior, Muyang International Law Firm',
+        'Asistent juridic senior (paralegal), Boyin Law Firm',
+        'Asistent juridic senior (paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Coordonează programările pentru consultanță și comunicarea pentru clienții din Coreea.',
-        'Sprijină schimbul interregional prin sisteme de documente și fluxuri de lucru, având formare în informatică.',
+        'Sprijină schimbul dintre echipe prin sisteme de documente și fluxuri de lucru, având formare în informatică.',
       ],
       education: [
         'Licență (B.S.) în informatică, National Cheng Kung University',
@@ -3316,7 +3316,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'A absolvit programele de licență și de master în contabilitate la National Chengchi University și conduce acum un cabinet de contabilitate.',
+        'A absolvit licența și masteratul în contabilitate la National Chengchi University și conduce acum un cabinet de contabilitate.',
         'Sprijină analiza integrată a riscurilor juridice, fiscale și financiare pentru clienții persoane juridice.',
       ],
       education: [

@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Ați cunoscut epoca salonelor de coafură tradiționale (理髮廳) de la începuturile Taiwanului?
+Vă amintiți epoca salonelor de coafură tradiționale (理髮廳) de la începuturile Taiwanului?
 
 Felul de a spăla părul în acele saloane era foarte particular.
 
@@ -55,7 +55,7 @@ Această lege s-a menținut până în 2003; atunci, dl Lin, care conducea un sa
 
 a angajat salariați fără dizabilitate vizuală pentru servicii de spălare a părului și de masaj, iar poliția a constatat acest lucru.
 
-Potrivit dreptului de atunci, dl Lin și acești salariați au primit, respectiv, o amendă administrativă (罰鍰) de TWD 40.000, TWD 10.000 și TWD 20.000 în noul dolar taiwanez (新臺幣).
+Potrivit dreptului de atunci, dl Lin și acești salariați au primit, respectiv, o amendă administrativă (罰鍰) de 40.000 TWD, 10.000 TWD și 20.000 TWD în noul dolar taiwanez (新臺幣).
 
 Dl Lin a considerat această sancțiune foarte nedreaptă și a cerut o interpretare constituțională.
 

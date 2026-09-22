@@ -1503,7 +1503,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japoneză (日本語)',
       ko: 'Coreeană (한국어)',
       'needs-method-confirmation':
-        'Niciuna dintre cele patru limbi nu este utilizabilă — calea de comunicare trebuie confirmată',
+        'Nu pot folosi niciuna dintre cele patru limbi — calea de comunicare trebuie confirmată',
     },
   },
   uk: {

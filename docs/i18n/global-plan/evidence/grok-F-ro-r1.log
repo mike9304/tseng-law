@@ -1,0 +1,87 @@
+WO-F-ro r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ro-r1
+date: 2026-09-22
+scope: Romanian columns (18) + Romanian guidance pack strings. No commit.
+
+## Rows applied / skipped
+
+Reviews: ro-a.md 50 rows, ro-b.md 63 rows.
+
+Applied: ro-a #1–#29, #31–#49 and ro-b #1–#40, #42–#63.
+ro-a #44 was applied as a rephrase of the cells, not as a deletion of the row (see disagreements).
+P3 rows that were cheap (attached `%`, amount-then-currency, quote marks, a spelling) were done inside the same sweep.
+
+Skipped (3 rows, plus the deletion half of ro-a #44):
+
+- ro-a #30 (P2, 003 Q16–Q20). Those blocks were not promoted to `##` headings, and the U+200B spacer lines were not removed. Heading levels, block count, and ZWSP count are checked against the Korean source (003 has 52 ZWSP, matching the source). Chatty sentences inside the existing blocks were rewritten.
+- ro-a #50 (P2, Hangul `url` in 008 and 009). ACCEPTED-ROUND: frontmatter `url` stays byte-identical. Hangul remains only inside those two `url` values.
+- ro-b #41 (P2). The one-clause-per-line layout in 013 and 015 was not merged. Block count is checked. ro-b #35 was applied without a merge: the comma after `(外僑居留證)` became a period, and the next block now opens `Întrebările puse frecvent…`.
+
+No test pinned a Romanian string that changed. `guidance-cs-hu-ro-uk-el-he-content.test.ts` still expects the unchanged FAQ question `Este posibilă o consultanță în limba română?`, an answer starting `Nu.`, and feminine `avocata Wei Tseng`. The bio figure stays `1,57 mil. TWD` (the `TWD 1.57M` pin covers vi/id/th/fil only). No test file was edited.
+
+## Systemic patterns and how many instances changed
+
+ro-a verdict:
+
+- French and false-friend calques, swept in every column that had them. `servi de` → `servi drept` (3); `servească de` → `servească drept` (5); `titlu de ședere` → `drept de ședere` (4); `sfat juridic` → `consultanță juridică` (4); `insolvabilitate` → `insolvență` and its inflected forms (4); `personaluri` → `persoane` (2); doubled `nu nici` (2); `în afară îndeosebi când` (1). `a dispensa` meaning “to waive” (002 liquidation, 007 the court may waive the split, 015 verification waived) was left; the 014 “to provide training” sense became `a asigura`.
+- Labour-statute names. `normele muncii` → `legea standardelor muncii (勞動基準法)` (10 source hits; the new name is `legea standardelor muncii`, including inflected `legii`). `Legea privind pensia lucrătorilor (勞工退休金條例)` in 008 (2: FAQ and blockquote). Real executive regulations stayed `regulament`.
+- A digit glued into a time phrase. 002 FAQ and body: the Korean `1회` plus `1 an` both have to survive the checker, which has no Romanian word-numeral lexicon. The wording is now `fiecare perioadă de suspendare a activității nu poate depăși 1 an (durata maximă: 1 an)` (2). It no longer reads as “only once”. 008: `Pentru fiecare 1 an de vechime` (FAQ and blockquote). `un an` is not parsed. 005: “more than 1 foreign national”, not “more than 1 employee”. 010 keeps the statutory 1× multiplier as `până la 1 ori cuantumul prejudiciului real`.
+- English office and job lines in the Romanian bios only (`international-guidance-team.ts` `ro` block, 9 strings, plus the role). Legal Aid Foundation and both Ministry of Education lines now have a Romanian name with the English gloss in parentheses. Paralegal intro and both senior-paralegal lines → `Asistent juridic (paralegal)` / `Asistent juridic senior (paralegal)`. Role: `Paralegal` → `Asistent juridic`. `schimbul interregional` → `schimbul dintre echipe`. CPA degree sentence → `licența și masteratul`. Firm names (Trend, Hovering, Boyin, Muyang, Chinshin, National Chengchi University) and `1,57 mil. TWD` were not changed. Other locales in that file were not touched. `Partner CPA` was not a Romanian finding and R12 does not apply here, so the role line stayed `Contabil asociat (Partner CPA)`.
+- Blog padding. U+200B lines were not removed. Inside existing blocks, 003 and 008 open/close asides were rewritten (`noroc` in 008 is now “nu au putut stabili același drept”; the close no longer hopes the reader enjoyed the post). 006 “Astăzi, multe persoane aleg masajul” is the history column’s voice, not a blog sign-off, and was left.
+- Currency and percent. 53 `TWD n` (dot-grouped) → `n TWD`. 38 `n %` → `n%`. Dates already in `29 mai 2026` / `1 iulie 2026` form were kept where the reviewer asked; `mai` is month 5 in the checker. `TWD 1.57M` does not occur in the Romanian bio.
+
+ro-b verdict:
+
+- `cauțiune` used for a lease deposit, a surety, or a parent-company guarantee. Quoted hits in 013 (`depozit de garanție (押金)`), 016 and 018 were changed, then the same pattern in 001 (1), 002 (3: security deposits and two guarantee lists) and 004 (5 sentences: parent guarantee, guarantee contract, personal vs real security, overlay, head-office guarantee) and the remaining 016 debt-list `cauțiuni`. The art. 193 procedural bond in 003 stays `cauțiune` (ro-a #29 was only the missing `u` in `cațiuni`). `locație` / `locațiune` was not touched.
+- `pot naște` / `poate naște` (“give birth”) → `pot apărea` / `poate apărea` where a right, a PE, or a problem arises. Reflexive `se poate naște` was kept (004 PE of services). One bad substring hit that produced `se poate apărea` was restored to `se poate naște`.
+- 戶籍 → `registrul gospodăriei` / `evidența gospodăriilor` (007 household-registration office and form; 016 register and the tax/register/inscription sentence). True civil-status effects of divorce and foreign civil-status acts stayed `stare civilă`.
+- 營業項目 in the two 013 “De exemplu” sentences → `obiectul de activitate` / `obiecte de activitate`. Other `ramură` uses (a company branch, an industry branch) were left.
+- Bare `alimente` for spousal support and loss of support → `întreținere` (007, including agreement after the plural→singular change). `pensie alimentară` for child support (扶養費) was kept. `prin alimente` in 010 is a food injury and was left.
+- `OOO` → `[Nume]` (1). `țară 3` → `țară terță` (1). `terți 3` → `terți` (1). `chinezi stabiliți în străinătate` (2).
+- 014 labour wording from the finding rows: training is `asigurată`, the index is confronted with the real training register, vesting is `consolidarea dreptului`, the pay slip is `fluturașul de salariu`, and the four-question sentence no longer says the clause “separates into 4 questions” (the digit `4` was not a Korean source number the checker required; the file’s number check is PASS).
+
+Rulebook R2–R10, already in the Romanian pack and not re-opened: 001 and 004 already carry the country-specific tax framing sentence; 003 already says “în Taiwan 119 … 110 … 112”; the Department of Investment Review name is already `Departamentul de examinare a investițiilor al Ministerului Economiei (經濟部投資審議司)` in 001/011/013/017/018; Wei Tseng is already feminine in the pack (`avocata`, `avocată coordonatoare`, `autorizată`); `ECHIPA NOASTRĂ`, `BIROURI`, `Profil complet (în engleză)`, and the Q&A chrome are already Romanian; address is `dumneavoastră`. 008 “domnul B” is masculine (`era angajat`). 006 “dl Lin” and the male client in 010 stay male. The 005 Korea-bank section is already labelled as the Korean regime. “Puteți verifica gratuit” in 015 is a city lookup tool, not a free consultation.
+
+Guidance pack (ro-a #6–#15 and the llms/inquiry rows): 4 strings in `international-guidance-eastern.ts` (`romanianGuidanceContent` only: “Cabinetul consiliază…”, `persoanelor fizice înstărite`, `în același demers`, “răspuns pe care să vă puteți întemeia”); 1 in `international-guidance-answers.ts` (`Din 2020 există și Hovering Accounting Office`); 1 in `international-inquiry-copy.ts` (the four-language fallback); 1 in `llms-txt.ts` `GUIDANCE_LLMS_NOTICES.ro` (no search-ranking, endorsement, or guaranteed visibility). Offices had no flagged string. The team strings are the `ro` block only, as counted above.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=64
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-ro src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      26
+```
+
+Checker note: the first full run was `summary FAIL 16/18`. 002 and 008 were each `numbers FAIL missing from translation (2): 1×2` after “1 dată” and “Pentru fiecare an” dropped a digit the checker counts (`un` is not in a Romanian numeral lexicon). Both were put back in a form the checker accepts: 002 `1 an (durata maximă: 1 an)` twice; 008 `Pentru fiecare 1 an de vechime` twice. WARN rows (`제3자`, `제1심`, and the like) do not fail the summary.
+
+## Where the reviewer was not followed as written
+
+- ro-a #30. Q16–Q20 cannot become new headings, and the U+200B lines cannot be deleted, without failing heading levels, block count, or the ZWSP check against the Korean source. The sentences inside those blocks were rewritten.
+- ro-a #44. The Difficulty row was not deleted. The English table is `Difficulty | Easy | Difficult | Easy`, the next row is a different question (whether severance is payable), and deleting a row fails the checker. The cells are now `Dificultate pentru angajator | Redusă | Ridicată | Redusă`. Preaviz `Necerut` → `Nu este cerut`. Severance `Cerut` / `Necerut` → `Se datorează` / `Nu se datorează`.
+- ro-a #50. The Hangul slugs in the 008 and 009 `url` values are canonical metadata.
+- ro-b #41. Merging the one-line clauses in 013 and 015 would change the block count. Wording that could be fixed inside a block was fixed; the line breaks were not.
+- `pensie alimentară` was kept for child support (扶養費). The review bundled every `alimente` with food. Bare `alimente` for spousal support and for loss of support was changed to `întreținere`. The 010 food-injury phrase was left.
+- 010 `1 ori`. That digit is the statutory 1× multiplier, not the glued “one time” in 002. Dropping it fails the number check.
+- 005 “din Coreea” in the banking section. The heading already labels it as Korean practice. It was not rewritten as a worldwide rule.
+- 008 “cel mai bun rezultat”. That is a fact about the salesperson in the anecdote. The reviewer’s own rewrite keeps the phrase and only fixes “regiunea centrului” → “centrul Taiwanului”, which was applied.
+- R13 (ROC year “anul 112”). Not in R2–R10 for this locale, and the Romanian review did not flag it. The Chinese gloss already carries 年.
+- 003 `cauțiune` under art. 193. That is a procedural bond. ro-a #29 only asked for the missing `u`. The systemic note is about a lease deposit, a surety, and a parent-company guarantee; those were changed to `garanție` / `depozit de garanție`.

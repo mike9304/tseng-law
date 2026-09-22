@@ -903,7 +903,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Японский (日本語)',
       ko: 'Корейский (한국어)',
       'needs-method-confirmation':
-        'Ни один из четырёх языков недоступен — способ связи должен быть подтверждён',
+        'Я не могу пользоваться ни одним из четырёх языков — способ связи должен быть подтверждён',
     },
   },
   tr: {

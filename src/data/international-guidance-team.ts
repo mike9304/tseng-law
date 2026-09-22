@@ -2550,12 +2550,12 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Ранее в Ministry of Education, Legal Affairs Division, с упором на административные и гражданские дела.',
+        'Ранее — Министерство образования, отдел правовых вопросов (Ministry of Education, Legal Affairs Division), с упором на административные и гражданские дела.',
         'Опыт в делах вузов, правах преподавателей и административных жалобах.',
       ],
       education: ['Бакалавр права (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Министерство образования, отдел правовых вопросов (Ministry of Education, Legal Affairs Division)',
         'Адвокат, Hovering International Law Firm',
       ],
     },
@@ -2573,14 +2573,14 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Координирует записи на консультацию и общение для доверителей из Кореи.',
-        'Поддерживает обмен между подразделениями через системы документов и рабочие процессы, на основе информатики.',
+        'Поддерживает обмен между подразделениями через системы документов и рабочие процессы, опираясь на образование в области информатики.',
       ],
       education: ['Бакалавр (B.S.) информатики, National Cheng Kung University'],
       experience: ['Операционное направление по Корее, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Завершил программы бакалавриата и магистратуры по бухгалтерскому учёту в National Chengchi University и в настоящее время руководит бухгалтерской фирмой.',
+        'Окончил бакалавриат и магистратуру по бухгалтерскому учёту в National Chengchi University и в настоящее время руководит бухгалтерской фирмой.',
         'Поддерживает комплексный анализ правовых, налоговых и финансовых рисков для корпоративных клиентов.',
       ],
       education: [

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Үндсэн зураг](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-[Тайваньд компани байгуулах үндэс](/mn/columns/taiwan-company-establishment-basics) болон [Тайваньд компани байгуулах — гүнзгийрүүлэлт 1](/mn/columns/taiwan-company-establishment-advanced-1)-ийг үзсэн хүмүүс Тайваньд компани байгуулах — гүнзгийрүүлэлт 2 (公司設立)-ийг ч үзэж болно.
+[Тайваньд компани байгуулах үндэс](/mn/columns/taiwan-company-establishment-basics) болон [Тайваньд компани байгуулах — гүнзгийрүүлэлт 1](/mn/columns/taiwan-company-establishment-advanced-1)-ийг үзсэн бол энэ хэсэг (гүнзгийрүүлэлт 2) компани байгуулах (公司設立)-ын капитал шилжүүлэх, банк, гадаадын ажилтан авах асуултад орно.
 
 ​
 
@@ -84,4 +84,4 @@ B. Хоёр дахь ажилтанаас хязгаар бий: авсан хү
 > Цааш үзэх:
 > - [Бид ямар хэргийг хөтөлнө](/mn/services)
 > - [Hovering-ийн олон улсын баг](/mn/lawyers)
-> - [Фирмтэй хэрхэн холбогдох вэ](/mn/contact)
+> - [Кантортой хэрхэн холбогдох вэ](/mn/contact)

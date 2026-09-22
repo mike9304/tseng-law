@@ -51,7 +51,7 @@ export const GUIDANCE_PAGE_KEYS = Object.freeze([
 const ENGLISH_NOINDEX_PAGE_KEYS = new Set(['faq']);
 
 /** Warning-only hint. Do not fail on count mismatch. */
-const SITEMAP_COUNT_HINT = 207;
+const SITEMAP_COUNT_HINT = 1439;
 const SITEMAP_COUNT_WARN_DELTA = 30;
 
 const DEFAULT_CONCURRENCY = 6;

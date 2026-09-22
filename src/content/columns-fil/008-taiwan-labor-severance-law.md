@@ -216,7 +216,7 @@ Huwag basta makipagkompromiso sa kompanya,
 
 at mag-ingat na huwag kayong tanggalin ng kompanya nang hindi makatwiran
 
-o piliting kusang magbitiw
+o mapilitang kusang magbitiw
 
 Ang 資遣費 ay karapatan lamang kapag natutugunan ang kondisyon sa batas,
 

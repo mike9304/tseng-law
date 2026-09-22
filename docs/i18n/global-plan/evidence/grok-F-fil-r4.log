@@ -1,0 +1,145 @@
+# WO-F-fil — Filipino fix lane, campaign round 4 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-fil-r4 (no git add/commit/push)
+Files touched: src/content/columns-fil/001–008 and 010–018 (009 unchanged);
+src/data/international-guidance-content.ts, international-guidance-team.ts, international-guidance-offices.ts (fil strings only); this log.
+No test file was edited. No pinned Filipino expectation had to change.
+"TWD 1.57M" stays byte-identical. consultationNotice and confidentialNotice were not rewritten, so they remain verbatim substrings of the FAQ and privacy copy. llms.txt fil notices were not rewritten; discoveryNotice still contains the token llms.txt.
+
+## Rows applied
+fil-a 15/18 and fil-b 29/30. P3 fil-a #16 and #17 applied. P3 fil-a #18 skipped (see disagreements).
+
+fil-a
+1  004 link label. The visible citation is now Artikulo 3 of Regulasyon hinggil sa withholding rate sa dibidendo ng hindi residente (各類所得扣繳率標準), and the same label says it is not Artikulo 10 ng Batas sa Buwis sa Negosyo. URL flno=3 unchanged. Digit 10 kept (see disagreements). 004 numbers stay sourceCount=95 targetCount=95.
+2  008 "o piliting kusang magbitiw" → "o mapilitang kusang magbitiw". The previous line already says not to be dismissed without cause; that line was not repeated.
+4  columns page: "upang alam ninyo na kaagad" → "upang agad ninyong malaman". One purpose clause. Other "alam ninyo" sentences are statements of fact, not purpose clauses, and stay.
+5  bio: "Palitang mag-aaral" → "Mag-aaral sa palitan".
+6  "minimum capital" → "pinakamababang kapital": 5 in 001 (FAQ, the repeated §4 paragraph, and the sentence that says the figures are employer-qualification thresholds) and 1 in 004 ("ng pinakamababang kapital").
+7  001 list item and the following paragraph: kapangyarihan ng abogado (power of attorney), pagpapanotaryo, beripikasyon ng tanggapang kinatawan ng Taiwan sa ibang bansa (駐外館處驗證). "authentication" stays, as in the suggested list item.
+8  002: "legal reserve" → "reserbang itinakda ng batas"; "undistributed earnings" → "tubong hindi naipamahagi". Chinese glosses kept. 004 already used the earnings term.
+9  003 police forms: pormularyo ng pagpaparehistro ng mga panig sa aksidente sa kalsada (1, with gloss); paunang ulat ng pagsusuri sa aksidente sa kalsada (3). The "ng pulisya" that followed the English name was moved so it modifies the report, not the road.
+10 003 "Compulsory Automobile Liability Insurance" → "Sapilitang Seguro sa Pananagutan ng Sasakyan" (5: statute sentence, two insurer sentences, two link titles). Gloss (強制汽車責任保險法) and the payment-standard gloss stay. URLs unchanged.
+11 003 "ng lagay panlipunan saka pang-ekonomiya" → "ng kalagayang panlipunan at pang-ekonomiya".
+12 005 "ulat sa overseas direct investment" → "ulat sa tuwirang pamumuhunan sa ibang bansa", and the two "foreign exchange" in that sentence → "palitang dayuhan" (the next paragraph already said "rehimen ng palitang dayuhan"). 002 and 004 still say "foreign exchange" and do not already use "palitang dayuhan"; those were not swept.
+13 007 "Artikulo 48-2 ng Household Registration Act" → "Artikulo 48-2 ng Batas sa Rehistro ng Sambahayan (戶籍法)". The same paragraph already used that statute name for Artikulo 48.
+14 007 "proviso" → "probiso" (4). The two "Itinatakda ng probiso ng Artikulo 1052" were aligned to "probiso sa Artikulo 1052", matching "probiso sa talata 2" already in the file. "teksto ng probiso" stays "ng".
+16  bio P3: "dobleng major" → "doble ang kurso".
+17  office photo alt P3: "Silid-pulungan" → "Silid-pagpupulong".
+
+fil-b
+1  011 "solidong sabong gawang-kamay" → "solidong sabon na gawang-kamay" (FAQ, the repeated body, and the 1 Hulyo 2026 paragraph). 3.
+2  016 the residual-property claim is no longer called a system: "Ikinukumpara ng karapatang ito…". The real "rehimeng ari-arian ng mag-asawa ayon sa batas (法定財產制)" stays.
+3  010 "masusugatan" → "nasusugatan".
+4  010 "nagpapahintulot humabol" → "nagpapahintulot na humabol".
+5  010 "porsyento ng pagkabawas" → "antas ng kapansanan" in the damages sentence. The earlier "antas ng kapansanan" in the same item stays.
+6  010 heading "Danyos na hindi pinansyal (moral damages, 慰撫金)" → "Danyos na moral (慰撫金)", and the later "danyos na hindi pinansyal" in the same file → "danyos na moral".
+7  010 "Danyos na may layuning parusa (懲罰性賠償金)" → "Danyos na pamparusa (punitive damages, 懲罰性賠償金)".
+8  011 the workshop is what is exempt: "na hindi sakop ng rehistro bilang pabrika ang pagawaan".
+9  011 "sa platform" → "sa plataporma" in the reporting sentence. 017 "pagpapatakbo ng platform" is the contract label for a platform business, not the TFDA platform, and stays.
+10 011 "Mahalagang harapin sa kontrata" → "Mahalagang itakda rin sa kasunduan" (the previous sentence already says "Kailangang itakda"). 017 "kailangang harapin sa kontrata ang mga panganib" → "kailangang itakda sa kontrata ang mga panganib".
+11 011 "gawaing pumapatay ng mikrobyo" → "pagpatay ng mikrobyo".
+12 011 "saka nagiging suliranin ang multa administratibo" → "maaaring magpataw ng multa administratibo". The "kapag hindi naitama" clause was already in the sentence and was not repeated.
+13 011 a small-print disclaimer does not necessarily remove the dominant advertising impression. The "kaya kailangang suriin…" tail stays in the same block.
+14 012 "sa sarili nitong maiiwasan" → "sa sarili nito, na maiiwasan".
+15 013 "napakarami ng kaso" → "napakaraming kaso". The same linker error in 006 ("napakarami ng massage shop") → "napakaraming massage shop".
+16 013 and 015 dependent clauses that were their own paragraphs were made into complete sentences inside the existing blocks. Paragraphs were not joined and no heading was added. 013: bank employee "ng sumusunod"; investment-plan timing ("Kaya sabay na isagawa…"); same-day issuance; part-time experience ("Sapat nang ipaliwanag…"); three-month timing; landlord protection; negotiation; restaurant-zone address. 015: market conditions; Taipei start; land-office visit; the guidelines citation ("Mula Enero 1, 2023" capitalized as its own sentence). Dates, the Taipei guidelines URL, and block counts unchanged.
+18 014 "sa panig ng mga panig" → "ang intensiyon ng bawat panig at ang mga pangyayari". The sentence already began "maaaring magkaiba", so that verb was not repeated.
+19 014 "messenger" → "mensahe" in the evidence sentence and the worker checklist.
+20 016 "iisa at ang bahagi" → "iisa sa legal na bahagi sa mana" in the body and in the FAQ question.
+21 016 "verification ng konsulado" → "legalisasyon ng konsulado". The 001 overseas-mission "verification" is a different act (駐外館處驗證) and was handled in fil-a #7 as beripikasyon.
+22 017 "uri ng negosyong negosyo" → "uri ng negosyo na paghahatid ng kargamento sa sasakyan".
+23 017 the bureau is "Pangasiwaan ng mga Lansangan (交通部公路局)". MOTC removed from that parenthesis and from the five link titles. "Ministri ng Transportasyon (MOTC, 交通部)" stays, because MOTC is the ministry.
+24 017 "Ang scrapping (pagwawasak, 報廢) ng sasakyan" → "Ang pag-scrap ng sasakyan (報廢)".
+25 018 "sipi ng presyo" → "kwotasyon" in the opening paragraph, and the table header "Sipi ng presyo at orden" → "Kwotasyon at orden" (English "Quotations and orders"). Table row count unchanged.
+26 018 "isang form" → "isang partikular na anyo".
+27 018 "koleksyon" → "pagkolekta ng bayad" in the sales-and-support sentence. "suporta sa customer" in that sentence is covered by row 30.
+28 018 the comma after (經濟部商業發展署) removed so the bureau is the subject of "ang humahawak"; "ng pagtukoy" added.
+29 018 bare 興櫃 → "pamilihang umuusbong (興櫃)". The "o" already in the sentence was not doubled.
+30 018 "customer" → "kliyente", 17 (FAQ question and answer, the repeated heading and body, the table, and the close). "serbisyo sa mamimili" was already Filipino and stays.
+
+## Rows skipped
+fil-a #3 (bio "danyos na TWD 1.57M" → "1.57 milyong TWD"). ACCEPTED-ROUND / GUIDANCE_BIO_PRESERVED_TERMS pins "TWD 1.57M" byte-identical. The suggested sentence deletes that token. The sentence was left unchanged.
+fil-a #15 — delete U+200B, drop empty `**​**` lines, and promote Q16–Q20 to `##` headings. The checker compares zero-width counts and heading levels with the Korean source. Counts left: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3. Heading levels unchanged. 009 was not edited.
+fil-a #18 — leading space on servicesAssistanceAfter. Not applied; see disagreements.
+fil-b #17 — delete U+200B in 013 and 015. Same checker pin as fil-a #15. The wording fixes in fil-b #16 stay inside the existing blocks.
+
+## Systemic patterns and how many instances changed
+Article 10 on the withholding-rate link (URL is flno=3)                         1 (004). Rewritten as Artikulo 3 plus a negation that still contains digit 10.
+"piliting kusang magbitiw" as an instruction to force a resignation            1 (008). "piliting magbigay-daan" in 012 is the driver forcing the car ahead to yield and stays.
+"alam" heading a purpose clause                                                1 (guidance columns page).
+"Palitang mag-aaral"                                                           1 (bio).
+"minimum capital" beside "pinakamababang kapital"                              6 (001 ×5, 004 ×1).
+power of attorney / overseas-mission verification left in English              2 (001 list item and the next paragraph).
+legal reserve / undistributed earnings left in English                         1 sentence (002).
+English police-form names                                                      4 (1 registration slip, 3 preliminary-report mentions).
+"Compulsory Automobile Liability Insurance"                                    5 (003).
+"lagay panlipunan"                                                             1 (003).
+"overseas direct investment" and "foreign exchange" in the Korea filing sentence  1 title + 2 "foreign exchange" (005 only).
+"Household Registration Act" beside the Filipino statute name                  1 (007).
+"proviso" beside "probiso"                                                     4 (007).
+"dobleng major"                                                                1 (bio).
+"Silid-pulungan"                                                               1 (office alt).
+"sabong" for soap                                                              3 (011).
+residual-property claim called a system                                        1 (016).
+"masusugatan" for an injury that has occurred                                  1 (010).
+missing linker "na" before "humabol"                                           1 (010).
+"porsyento ng pagkabawas" for an impairment rating                             1 (010).
+"danyos na hindi pinansyal"                                                    2 (010 heading and the later sentence).
+"danyos na may layuning parusa"                                                1 (010).
+workshop as the thing that fails to cover factory registration                 1 (011).
+English "platform" beside "plataporma"                                         1 (011).
+"harapin sa kontrata" for "address in the contract"                           2 (011, 017).
+"gawaing pumapatay ng mikrobyo"                                                1 (011).
+"nagiging suliranin ang multa"                                                 1 (011).
+disclaimer calqued as "kusang nawawala"                                        1 (011).
+"sa sarili nitong" linker                                                      1 (012).
+"napakarami ng" (linker -ng)                                                   2 (013 quoted; 006 the same error).
+sentence split across a blank line, rephrased inside the block                8 pairs in 013, 4 pairs in 015. Paragraphs not merged.
+"sa panig ng mga panig"                                                        1 (014).
+"messenger" for messaging records                                              2 (014).
+"iisa at" for "not the same as"                                                2 (016 body and FAQ).
+"verification ng konsulado" for consular legalization                          1 (016).
+"negosyong negosyo"                                                            1 (017).
+MOTC on the highway bureau (the ministry line stays)                           1 parenthesis + 5 link titles (017).
+"scrapping" leading the vehicle-disposal sentence                              1 (017).
+"sipi" for a price quotation                                                   2 (018 opening sentence and the table header).
+"isang form" for the legal form of the entity                                  1 (018).
+"koleksyon" for collecting payment                                             1 (018).
+comma cutting the bureau equational sentence                                   1 (018).
+bare 興櫃                                                                      1 (018).
+English "customer"                                                             17 (018). "serbisyo sa mamimili" unchanged.
+U+200B characters removed                                                      0. Heading levels added: 0.
+"TWD 1.57M" rewritten                                                          0 (pin).
+
+R2–R10 were already in this corpus (prior rounds; this round's verdicts are 4/5 and confirm feminine forms for attorney Wei Tseng, the consultation lock, and Korea as a labelled example). This pass did not reopen them. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered).
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fil --lang fil 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=67
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-fil src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      23
+```
+`git status --short | wc -l` was 23 before this log file existed. After the log is written the same command prints 24. 004 numbers are WARN `수사미해석 (2): 제1항; 제2항` with sourceCount=95 targetCount=95. That WARN does not fail the summary. Keeping digit 10 and adding the visible Artikulo 3 did not add a missing-number or extra-number failure.
+
+## Reviewer disagreements (not applied)
+fil-a #1, deleting digit 10. The reviewer is right that `pcode=G0340028&flno=3` is Article 3 of 各類所得扣繳率標準 and that the reader must not be told the link is Article 10 of that regulation. The suggested label drops the digit 10 that the Korean source still has on this line (`영업세법 제10조`). Round 3 showed that deletion fails the checker (`numbers FAIL missing from translation (1): 10`). The public label now says the link is Artikulo 3 and is not Artikulo 10 ng Batas sa Buwis sa Negosyo, which keeps the digit. The URL was not changed.
+
+fil-a #3 is a skip under the bio pin, not a claim that "M" reads well.
+
+fil-a #15 / fil-b #17. The zero-width lines do split the spoken columns. Deleting them, or turning Q16–Q20 into headings, fails the blocks/headings checks against the Korean source. Not a wording fix the checker will accept. fil-b #16 was applied by completing each existing block instead of merging the paragraphs.
+
+fil-a #18. servicesAssistanceBefore already ends with a space and servicesAssistanceAfter starts with a space, but the link sits between them (`before` + link + `after`). The rendered line is "pahinang Makipag-ugnayan kung paano…", one space on each side of the link. Removing the After space would glue "Makipag-ugnayan" to "kung".

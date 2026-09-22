@@ -51,7 +51,7 @@ Ang ganitong resultang nakabatay sa isang tiyak na kaso ay hindi nangangahulugan
 
 Bago lumampas ay kailangan munang tiyakin kung ang lugar o ang kalagayan ng trapiko ay saklaw ng pagbabawal sa paglampas. Kapag naaangkop ang pamamaraan para sa iisang lane, gawin ang itinakdang senyas ng busina o ng ilaw sa unahan nang hindi pinipilit na magbigay-daan ang sasakyan sa unahan, hintayin ang malinaw na pahiwatig ng pagbibigay-daan, saka tapusin ang paglampas nang may sapat na agwat at may ligtas na distansya ng pagbalik sa orihinal na lane.
 
-Mahalaga ang pagsunod sa Artikulo 101, ngunit hindi nito tinitiyak sa sarili nitong maiiwasan ang aksidente, ni naitatakda nito nang maaga ang magiging resulta ng pagsusuri ng eksperto o ng paglilitis. Kailangan pa ring mag-iwan ang mga nagmamaneho ng dagdag na puwang para sa kaligtasan saka tumugon ayon sa kalagayan ng kalsada sa unahan nila.
+Mahalaga ang pagsunod sa Artikulo 101, ngunit hindi nito tinitiyak, sa sarili nito, na maiiwasan ang aksidente, ni naitatakda nito nang maaga ang magiging resulta ng pagsusuri ng eksperto o ng paglilitis. Kailangan pa ring mag-iwan ang mga nagmamaneho ng dagdag na puwang para sa kaligtasan saka tumugon ayon sa kalagayan ng kalsada sa unahan nila.
 
 Bilang karagdagang babasahin ay maaaring sumangguni sa [ilustradong gabay sa mga alituntunin at hakbang ng paglampas](https://gonews.com.tw/car/daily/21934/). Dahil pangalawang sanggunian lamang ito, mangyaring tingnan din ang kasalukuyang opisyal na regulasyon kapag tinitiyak ang mga kinakailangan ng batas.
 

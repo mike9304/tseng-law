@@ -31,7 +31,7 @@ Sa pangkalahatan, hinihingi ng mga bangko sa Korea na ang mamumuhunan **mismo** 
 
 Hindi maaari ang pagpapadala sa pamamagitan ng online banking o ang pagpapadalang isinasagawa ng kamag-anak o kakilala sa Korea bilang kinatawan ng mamumuhunan.
 
-Bukod dito, ayon sa batas sa pangangasiwa ng foreign exchange ng Korea, ang taong may pagkamamamayang Koreano na nagtatag ng dayuhang juridical person (法人) o kumuha ng bahagi sa equity nito ay kailangang maghain ng "ulat sa overseas direct investment". Kailangang matanggap ang paghahain sa panahon ng pagpapadala ng kapital sa juridical person sa Taiwan, at kung hindi maghahain, maaaring magkaroon ng parusa dahil sa paglabag sa batas sa pangangasiwa ng foreign exchange.
+Bukod dito, ayon sa batas sa pangangasiwa ng palitang dayuhan ng Korea, ang taong may pagkamamamayang Koreano na nagtatag ng dayuhang juridical person (法人) o kumuha ng bahagi sa equity nito ay kailangang maghain ng "ulat sa tuwirang pamumuhunan sa ibang bansa". Kailangang matanggap ang paghahain sa panahon ng pagpapadala ng kapital sa juridical person sa Taiwan, at kung hindi maghahain, maaaring magkaroon ng parusa dahil sa paglabag sa batas sa pangangasiwa ng palitang dayuhan.
 
 Halimbawa lamang ng isang rehimen ng palitang dayuhan ang Korea. Bago ipadala ang kapital, mangyaring kumonsulta muna sa pangunahing bangko ninyo sa bansang pinagmumulan ng pondo at tiyakin ang tuntunin sa pamumuhunan palabas ng bansang iyon.
 

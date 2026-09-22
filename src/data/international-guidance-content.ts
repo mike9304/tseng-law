@@ -2153,7 +2153,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Apat na talaan ayon sa wika',
             paragraphs: [
-              'Apat na link ang nasa bahaging ito: ang talaan ng mga artikulong Koreano, ang talaang Tsino, ang talaang Ingles, at ang talaang Hapon. Nakasaad sa bawat link ang wika ng talaang iyon, upang alam ninyo na kaagad kung anong wika ang bubuksan ninyo.',
+              'Apat na link ang nasa bahaging ito: ang talaan ng mga artikulong Koreano, ang talaang Tsino, ang talaang Ingles, at ang talaang Hapon. Nakasaad sa bawat link ang wika ng talaang iyon, upang agad ninyong malaman kung anong wika ang bubuksan ninyo.',
               'Talaan ayon sa orihinal na wika ang apat na ito, hindi listahan ng mga salin. Hiwalay na nakalista sa pahinang ito ang mga artikulong mayroon nang bersyon sa Filipino.',
             ],
           },

@@ -19,7 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Kapag sisimulan ang negosyo sa pagkain, ang unang suliranin ay ang paghahanap ng adres ng lugar ng negosyo.
 
-Bukod sa pagsasaalang-alang sa kalagayan ng pamilihan,
+Hindi lamang ang kalagayan ng pamilihan ang dapat isaalang-alang.
 
 Isa pang mahalagang pagsasaalang-alang ay ito:
 
@@ -27,9 +27,9 @@ Ang adres na iyon ay dapat nasa lugar kung saan pinahihintulutang magpatakbo ng 
 
 ​
 
-Kung sisimulan ninyo ang negosyo sa Lungsod ng Taipei,
+Nalalapat ito kapag sisimulan ninyo ang negosyo sa Lungsod ng Taipei.
 
-magagamit ninyo ang sistemang paunang pagsusuri sa lugar ng negosyo (營業場所預先查詢) ng Kagawaran ng Komersiyo ng Lungsod ng Taipei (臺北市商業處).
+Magagamit ninyo ang sistemang paunang pagsusuri sa lugar ng negosyo (營業場所預先查詢) ng Kagawaran ng Komersiyo ng Lungsod ng Taipei (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Gayunman, sa paggawa ng paunang pagsusuri, kailangan ninyong i-upload ang "kopya
 
 Sinuman ay maaaring mag-aplay ng "kopya ng rehistro ng gusali, ikalawang uri" sa tanggapan ng lupa (地政事務所) para sa anumang adres.
 
-Kung mahirap para sa inyo na personal na pumunta sa tanggapan ng lupa,
+Hindi laging kailangang personal na pumunta sa tanggapan ng lupa.
 
-maaari kayong humingi ng tulong sa kakilala ninyo sa Taiwan, sa kasero, sa ahente ng real estate, o sa isang abogada o abogado.
+Maaari kayong humingi ng tulong sa kakilala ninyo sa Taiwan, sa kasero, sa ahente ng real estate, o sa isang abogada o abogado.
 
 Kung ipakita ng resulta ng paunang pagsusuri na hindi pinahihintulutan ang negosyong restawran, maaaring hindi tanggapin ng pamahalaan ng lungsod ang rehistro kapag nag-aplay kayo ng rehistro ng kompanya sa hinaharap.
 
@@ -59,9 +59,9 @@ Gayunman, madalas na maraming rehistradong gawain ang inirerehistro kapag nagrer
 
 Kaya nga, sa katunayan ay hindi kailangang gawan ng paunang pagsusuri ang lahat ng rehistradong gawain kapag nagrerehistro ng kompanya.
 
-Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) at ayon sa kasalukuyang paunawa ng Lungsod ng Taipei,
+Nakasaad ang tuntunin sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) at sa kasalukuyang paunawa ng Lungsod ng Taipei.
 
-mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
+Mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
 
 Ang listahan ng "mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga gawaing kusang sinusuri ng Kagawaran ng Komersiyo ng Lungsod ng Taipei habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang gawaing iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang gawaing wala sa listahang ito.
 

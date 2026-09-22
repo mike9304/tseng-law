@@ -2067,8 +2067,8 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Masterado (M.S.), Institute of Finance, National Taiwan University',
-        'Batsilyer (B.A.) na may dobleng major sa Batas at Pananalapi, National Chengchi University',
-        'Palitang mag-aaral, Kobe University at Waseda University',
+        'Batsilyer (B.A.), doble ang kurso sa Batas at Pananalapi, National Chengchi University',
+        'Mag-aaral sa palitan, Kobe University at Waseda University',
       ],
       experience: [
         'Trend Law Office',

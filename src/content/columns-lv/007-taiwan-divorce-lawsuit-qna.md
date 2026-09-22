@@ -26,7 +26,7 @@ faq:
 
 ![Attēls, kas izskaidro laulības šķiršanas gaitu Taivānā un starptautiskas ģimenes lietas](../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg)
 
-Laulības šķiršanas lietā Taivānā jānošķir ne tikai veids, kā izbeigt laulību, bet arī mājsaimniecības reģistra (戶籍) kārtojums, spēks ārvalstīs, laulāto manta, zaudējumu atlīdzība, uzturlīdzekļi laulātajam pēc laulības šķiršanas (贍養費), kā arī lēmumi par nepilngadīgu bērnu (未成年子女) un uzturlīdzekļi (扶養費). Tie paši fakti var kalpot par pamatu vairākiem prasījumiem, taču katru tiesību priekšnoteikumi, sekas, pierādīšanas priekšmets un termiņi nav tie paši.
+Laulības šķiršanas lietā Taivānā jānošķir ne tikai veids, kā izbeigt laulību, bet arī mājsaimniecības reģistra (戶籍) kārtojums, spēks ārvalstīs, laulāto manta, zaudējumu atlīdzība, uzturlīdzekļi laulātajam pēc laulības šķiršanas (贍養費), kā arī lēmumi par nepilngadīgu bērnu (未成年子女) un uzturlīdzekļi (扶養費). Tie paši fakti var kalpot par pamatu vairākiem prasījumiem, taču katras tiesības priekšnoteikumi, sekas, pierādīšanas priekšmets un termiņi nav tie paši.
 
 Īpaši ģimenei, kas saistīta ar 2 vai vairāk valstīm vai teritorijām (Taivāna un cita valsts), gaitu nevar noteikt tikai pēc vienas puses valstspiederības vai laulības noslēgšanas vietas. Vispirms jāpārbauda pašreizējais dzīves centrs, esošo procesu un reģistrāciju stāvoklis, dokumentu sastādīšanas vieta, bērna dzīvesvieta un mantas atrašanās vieta, lai samazinātu liekas dubultas gaitas un izpildes robus.
 
@@ -52,7 +52,7 @@ Ja Taivānas spriedums par laulības šķiršanu ir stājies spēkā vai ja ir n
 
 Laulātajiem mediācijā nav vienmēr jāierodas kopā. Taivānas tiesa pēc ģimenes lietas rakstura var uzdot pusei vai likumiskajam pārstāvim ierasties personīgi; ja rīkojums bez attaisnojoša iemesla netiek izpildīts, pirmo reizi var piemērot administratīvo naudas sodu (罰鍰) līdz TWD 30.000 (新臺幣) saskaņā ar Ģimenes lietu likuma (家事事件法) 13. pantu un Civilprocesa likuma (民事訴訟法) 303. pantu, kas piemērojams atbilstoši. Vai mediācija obligāti jāveic kopā vienā telpā un vai iespējama nošķiršana, aizsardzības pasākumi, pārstāvība vai citi procesuāli soļi, jāpārbauda pēc tiesas un lietas apstākļiem.
 
-Ģimenes lietas, ko nosaka Ģimenes lietu likums, principā iet caur tiesas mediāciju pirms izspriešanas. Arī lietas, kas uzreiz iesniegtas kā prasība, tiesībās dažkārt uzskata par pieteikumu mediācijai; ņemot vērā izņēmumus par izsniegšanas veidu vai lietas raksturu un gaitas pārejas noteikumus, nevar apgalvot, ka visas lietas iet nemainīgā kārtībā. Mediācijā līdzās gribai šķirt laulību var kopīgi sakārtot saistītos strīdus punktus, piemēram, mantu, bērnus un izpildes veidu; vienošanos, kas ir nelabvēlīga nepilngadīgam bērnam, tomēr nedrīkst apstiprināt tādu, kāda tā ir.
+Ģimenes lietas, ko nosaka Ģimenes lietu likums, principā pirms izspriešanas nonāk tiesas mediācijā. Arī lietas, kas uzreiz iesniegtas kā prasība, tiesībās dažkārt uzskata par pieteikumu mediācijai; ņemot vērā izņēmumus par izsniegšanas veidu vai lietas raksturu un gaitas pārejas noteikumus, nevar apgalvot, ka visas lietas iet nemainīgā kārtībā. Mediācijā līdzās gribai šķirt laulību var kopīgi sakārtot saistītos strīdus punktus, piemēram, mantu, bērnus un izpildes veidu; vienošanos, kas ir nelabvēlīga nepilngadīgam bērnam, tomēr nedrīkst apstiprināt tādu, kāda tā ir.
 
 Sankcija saskaņā ar Ģimenes lietu likuma 13. pantu piemērojama tikai tad, ja tiesa pusei vai likumiskajam pārstāvim uzdevusi ierasties personīgi. Ja rīkojums bez attaisnojoša iemesla netiek izpildīts, atbilstoši piemēro Civilprocesa likuma 303. pantu, tā ka administratīvo naudas sodu līdz TWD 30.000 var uzlikt pirmo reizi; uz šīs analogijas pamata nevienu nedrīkst piespiedu kārtā nogādāt. Ja tiesa pēc tam atkal paziņo likumiskā veidā un persona bez attaisnojoša iemesla neierodas, sankcijas var turpināties. Turpretī nedrīkst iepriekš solīt, ka nošķirtas telpas, attēla pārraide, tikai pilnvaroto ierašanās vai aizsardzības pasākumi konkrētā lietā tiks pieļauti; apstākļi jāpaziņo tiesai un jāpārbauda procesuālais norādījums.
 
@@ -93,7 +93,7 @@ Ne skaidrojums, ka laulības šķiršana ir notikusi saskaņā ar ārvalstu ties
 
 Ārvalstu dokumentiem var būt vajadzīga Taivānas diplomātisko pārstāvniecību ārvalstīs vai citu kompetento iestāžu legalizācija; saskaņā ar oficiālajiem norādījumiem katram dokumentam var būt vajadzīgs legalizēts vai notariāli apliecināts ķīniešu tulkojums. Dokumenti, kas sastādīti kontinentālajā Ķīnā, un dokumenti, kas sastādīti Honkongā vai Makao, iet pēc pārbaudes noteikumiem, kuri atšķiras no vispārīgiem ārvalstu dokumentiem; sastādīšanas apgabals jānorāda precīzi. Pirms iesniegšanas jāpārbauda mājsaimniecības reģistra departamenta un kompetentās iestādes jaunākie norādījumi par oriģinālu, legalizāciju, tulkojumu un pieteikumu ar pilnvaroto.
 
-## 6. Mājokļa vārds, manta pirms laulības un atlikušās mantas sadale
+## 6. Mājokļa īpašuma ieraksts, manta pirms laulības un atlikušās mantas sadale
 
 Mājokļa reģistrētais vārds pats par sevi par mantas sadali nenolemj. Vārds, kas ierakstīts pie mājokļa, un pirkuma līdzekļu izcelsme ir svarīgi pierādījumi, taču atsevišķi prasījumi, piemēram, īpašumtiesības, dāvinājums, reģistrācija uz citas personas vārda (借名登記), aizdevums un netaisnīga iedzīvošanās (不當得利), ir jautājumi, kas atšķiras no atlikušās mantas starpības sadales (剩餘財產差額分配) saskaņā ar Civillikuma (民法) 1030-1. pantu. Faktiskā vienošanās, iegūšanas iemesls un laiks, līdzekļu plūsmas, parādi, bezatlīdzības iegūšana un pierādījumi jāpārbauda atsevišķi; tikai daļas samaksa no līdzekļiem pirms laulības vai reģistrācija uz vienas puses vārda nenosaka visus secinājumus.
 
@@ -153,7 +153,7 @@ Starptautiskā pārcelšanās vispirms jāpārbauda, kam ir kompetence noteikt b
 
 Pasu izsniegšana un lietošana, ieceļošana un izceļošana no Taivānas un galamērķa, kā arī uzturēšanās, imigrācijas un ģimenes stāvokļa reģistrācijas nosacījumi atšķiras no civiltiesiskiem lēmumiem par vecāku varu (親權). Jāpārbauda arī, vai esošos lēmumus vai vienošanās par bērnu var atzīt un izpildīt Taivānā un galamērķī. Ja konkrēti baidās no vienpusējas aiziešanas, atdošanas atteikuma vai drošības riska, pēc attiecīgajām jurisdikcijām jāpārbauda, kādus nodrošinājuma vai pagaidu noregulējumus var prasīt pirms izceļošanas vai steidzamā gadījumā.
 
-Nedrīkst pieņemt, ka 1980. gada Hāgas konvencija par starptautiskās bērnu nolaupīšanas civiltiesiskajiem aspektiem uz Taivānu pati par sevi attiecas. Pārrobežu pārvietošana, aizturēšana vai atdošana jāpārbauda pēc bērna iepriekšējās dzīvesvietas, pašreizējās vietas, kā arī pušu un procesu stāvokļa, ar katras jurisdikcijas norādījumiem un izpildes iespēju; pats konvencijas nosaukums neļauj slēgt. Rīcība, kas sastāv no bērna aizvešanas vai neatdošanas pretēji esošai vienošanās vai rīkojumam, nav ieteicama; pirms pārvietošanas jāpārbauda likumiska piekrišana vai nolēmums un steidzamie aizsardzības līdzekļi.
+Nedrīkst pieņemt, ka 1980. gada Hāgas konvencija par starptautiskās bērnu nolaupīšanas civiltiesiskajiem aspektiem uz Taivānu pati par sevi attiecas. Pārrobežu pārvietošana, aizturēšana vai atdošana jāpārbauda pēc bērna iepriekšējās dzīvesvietas, pašreizējās vietas, kā arī pušu un procesu stāvokļa, ar katras jurisdikcijas norādījumiem un izpildes iespēju; pats konvencijas nosaukums neļauj slēgt. Rīcība, kas sastāv no bērna aizvešanas vai neatdošanas pretēji esošai vienošanai vai rīkojumam, nav ieteicama; pirms pārvietošanas jāpārbauda likumiska piekrišana vai nolēmums un steidzamie aizsardzības līdzekļi.
 
 ## 11. Pierādījumi un praktiskā sagatavošana
 
@@ -175,14 +175,14 @@ Prettiesiska novērošana, piekļuve kontiem, iekļūšana mobilajā tālrunī v
 
 Turpmākie primārie avoti (1. līmenis) ir izejas punkts šā raksta tiesiskās struktūras un gaitu pārbaudei, noteikts 2026. gada 25. jūlijā. Pirms faktiskas rīcības no jauna jāpārbauda grozījumi, kompetentās iestādes jaunākie norādījumi un lietai piemērojamais teksts.
 
-1. [Taivānas valsts tiesību aktu datubāze: civillikums (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
+1. [Taivānas valsts tiesību aktu datubāze: Civillikums (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
 2. [Taivānas Tieslietu ministrija: Civillikuma angļu teksts](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351)
 3. [Taivānas valsts tiesību aktu datubāze: Ģimenes lietu likums (家事事件法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
 4. [Taivānas valsts tiesību aktu datubāze: Civilprocesa likuma 303. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
 5. [Taivānas valsts tiesību aktu datubāze: noteikumi par pagaidu noregulējumu neprocesuālās ģimenes lietās](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
-6. [Taivānas valsts tiesību aktu datubāze: mājsaimniecības reģistra likums (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
+6. [Taivānas valsts tiesību aktu datubāze: Mājsaimniecības reģistra likums (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
 7. [Taivānas Iekšlietu ministrijas mājsaimniecības reģistra departaments: norādījumi par laulības šķiršanas reģistrāciju](https://www.ris.gov.tw/documents/html/2/3/1/384.html)
-8. [Taivānas valsts tiesību aktu datubāze: likums par piemērojamām tiesībām civillietās ar ārvalstu elementu (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
+8. [Taivānas valsts tiesību aktu datubāze: Likums par piemērojamām tiesībām civillietās ar ārvalstu elementu (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
 9. [Taivānas Konstitucionālā tiesa: Ķīnas Republikas 112. gada konstitucionālais spriedums Nr. 4 (民國112年憲判字第4號)](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
 10. [Taivānas Konstitucionālā tiesa: Ķīnas Republikas 112. gada konstitucionālā sprieduma Nr. 4 angļu teksts](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
 
@@ -194,6 +194,6 @@ Turpmākie primārie avoti (1. līmenis) ir izejas punkts šā raksta tiesiskās
 
 ---
 
-Šis raksts ir izglītojošs materiāls, kas paredzēts vispārīgam Taivānas laulības šķiršanas, starptautisku ģimenes lietu, laulāto mantas un nepilngadīgu bērnu institūtu skaidrojumam, nevis juridisks padoms konkrētā lietā. Gaita un iznākums var atšķirties pēc jurisdikcijas, piemērojamām tiesībām, ārvalstu nolēmumu atzīšanas, laulības un mājsaimniecības reģistra stāvokļa, mantisko attiecību režīma, esošās vienošanās vai lēmuma par bērnu, faktiem un pierādījumiem, kā arī jaunākajiem oficiālajiem noteikumiem. Reģistrācijas, pārsūdzības, prasījuma un izpildes termiņus pirms rīcības Jums jāpārbauda pa vienam pēc katru tiesību un katras gaitas precīzā tecējuma sākuma.
+Šis raksts ir izglītojošs materiāls, kas paredzēts vispārīgam Taivānas laulības šķiršanas, starptautisku ģimenes lietu, laulāto mantas un nepilngadīgu bērnu institūtu skaidrojumam, nevis juridisks padoms konkrētā lietā. Kārtība un iznākums var atšķirties pēc jurisdikcijas, piemērojamām tiesībām, ārvalstu nolēmumu atzīšanas, laulības un mājsaimniecības reģistra stāvokļa, mantisko attiecību režīma, esošās vienošanās vai lēmuma par bērnu, faktiem un pierādījumiem, kā arī jaunākajiem oficiālajiem noteikumiem. Reģistrācijas, pārsūdzības, prasījuma un izpildes termiņus pirms rīcības Jums jāpārbauda pa vienam pēc katras tiesības un katras kārtības precīzā tecējuma sākuma.
 
 **Advokāte Wei Tseng (曾雋崴)**

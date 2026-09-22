@@ -4443,7 +4443,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Jurista palīdze ar ilggadēju praksi; iepriekš vecākā jurista palīdze vairākos advokātu birojos, ar uzsvaru uz procesuālo atbalstu, sabiedrību tiesībām un ārvalstu ieguldījumiem.',
+        'Jurista palīdze ar ilggadēju praksi; iepriekš vecākā jurista palīdze vairākos advokātu birojos, ar uzsvaru uz procesuālo atbalstu, sabiedrību tiesības un ārvalstu ieguldījumus.',
         'Atbalsts tiesvedībā, sabiedrību dibināšanā, ārvalstu ieguldījumu atļaujās, licences pieteikumos un saziņā starp Koreju un Taivānu.',
       ],
       education: [

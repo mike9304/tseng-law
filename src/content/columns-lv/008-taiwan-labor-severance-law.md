@@ -28,7 +28,7 @@ faq:
 
 Regulējums no valsts uz valsti atšķiras.
 
-Dažās valstīs, piemēram, Korejā, sabiedrībai atlaišanas pabalsts jāizmaksā arī tad, kad darbinieks aiziet pats
+Dažās valstīs, piemēram, Korejā, sabiedrībai atlaišanas pabalsts jāizmaksā arī tad, kad darbinieks aiziet pats.
 
 Taivānā tas ir citādi:
 
@@ -61,8 +61,8 @@ Turpmākā tabula to apkopo.
 |  | Taivānas Darba standartu likums, 11. pants (勞動基準法第11條): Ja neiestājas kāds no šādiem gadījumiem, darba devējs nevar izbeigt darba līgumu, pat pēc iepriekšēja paziņojuma darbiniekam.  1. Darbības apturēšana (歇業) vai uzņēmuma nodošana (轉讓)  2. Zaudējumi (虧損) vai darbības sašaurināšana (業務緊縮)  3. Nepārvarama vara prasa darbības pārtraukumu uz 1 mēnesi vai ilgāk  4. Darbības raksturs prasa personāla samazināšanu, un atlaisto nevar pārcelt citā piemērotā amatā  5. Noteikts darbinieks nevar apmierinoši veikt amatā prasīto darbu | Taivānas Darba standartu likums, 12. pants (勞動基準法第12條): Darba devējs var atlaist bez iepriekšēja paziņojuma, ja darbinieks ietilpst kādā no šādiem gadījumiem.  1. Kurš, slēdzot darba līgumu, sniedz nepatiesas ziņas, maldina darba devēju un pakļauj uzņēmumu zaudējumu riskam  2. Kurš lieto vardarbību vai smagi apvaino darba devēju, viņa ģimeni, viņa pārstāvi (代理人) vai citus līdzstrādniekus  3. Kuram ar spēkā stājušos spriedumu piespriesta brīvības atņemšana uz noteiktu laiku (有期徒刑) vai smagāks sods, bez nosacītas soda izpildes atlikšanas (緩刑) un bez atļaujas aizstāt sodu ar naudas sodu (易科罰金)  4. Smags darba līguma vai iekšējo darba noteikumu pārkāpums  5. Kurš tīši izlieto darba devēja mašīnas, rīkus, izejvielas, izstrādājumus vai citu mantu vai tīši izpauž darba devēja tehniskos un komerciālos noslēpumus un nodara darba devējam zaudējumus  6. Nepamatota neierašanās (曠工) bez attaisnojoša iemesla 3 dienas pēc kārtas vai 6 dienas vai vairāk mēnesī |  |
 
 > Taivānā par katru noslēgtu 1 darba stāža gadu (年資)
-> darba devējam jāizmaksā 0,5 mēneša vidējā alga (平均工資) kā atlaišanas pabalsts.
-> (ne vairāk kā 6 mēnešu alga) Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem.
+> darba devējam jāizmaksā 0,5 mēneša vidējā alga (平均工資) kā atlaišanas pabalsts, ne vairāk kā 6 mēnešu alga.
+> Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem.
 
 ​
 
@@ -92,7 +92,7 @@ un jaunais vadītājs tūlīt pēc stāšanās amatā,
 
 lai samazinātu personāla izmaksas,
 
-sāka pēc kārtas saukt labi apmaksātus un ilggadīgus darbiniekus uz pārrunām
+sāka pēc kārtas saukt labi apmaksātus un ilggadīgus darbiniekus uz pārrunām.
 
 Mans klients, B kungs, sabiedrībā A bija nodarbināts vairāk nekā 10 gadus
 
@@ -208,7 +208,7 @@ vai pārcel darbiniekus dīvainos amatos,
 
 ​
 
-Ja Jūs strādājat Taivānā.
+Ja Jūs strādājat Taivānā,
 
 Atlaišanas pabalstu ir grūtāk saņemt, nekā šķiet.
 

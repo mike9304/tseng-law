@@ -57,7 +57,7 @@ nodarbināja darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas
 
 Saskaņā ar tolaik spēkā esošajām tiesībām Lin kungam un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 jaunajā Taivānas dolārā (新臺幣).
 
-Kungs Lin uzskatīja šo sankciju par ļoti netaisnīgu un pieprasīja konstitucionālo iztulkošanu.
+Lin kungs uzskatīja šo sankciju par ļoti netaisnīgu un pieprasīja konstitucionālo iztulkošanu.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
@@ -123,6 +123,6 @@ Ja masāžas laikā Taivānā jūtat diskomfortu vai kaut ko īpatnēju,
 
 nekavējoties to paziņojiet vai lūdziet pārtraukt, lai sevi aizsargātu.
 
-Ja atzīstat, ka esat cietuši seksuālu uzmākšanos,
+Ja uzskatāt, ka esat cietis(-usi) seksuālu uzmākšanos,
 
 dodieties uz policijas iecirkni kopā ar uzticamu draugu vai ar advokātu Taivānā (律師), lai iesniegtu ziņojumu.

@@ -43,13 +43,13 @@ B guva smagu galvas traumu un mira notikuma vietā; A zaudēja samaņu un tika n
 
 A un B ģimenes vispirms uzskatīja, ka 2. transportlīdzekļa pēkšņā joslas maiņa ir sadursmes galvenais cēlonis. Lieta pārgāja tiesvedībā; tās gaitā tika veikti vairāki negadījuma ekspertīzes novērtējumi (鑑定).
 
-Saskaņā ar ekspertīzes iznākumu galveno atbildību par šo sadursmi nesa A. Šis slēdziens bija ierobežots ar šīs lietas apstākļiem. Ekspertīze kopīgi ņēma vērā to, ka A gribēja apdzīt 2 priekšā pēc kārtas braucošus transportlīdzekļus, ka iegāja pretējā joslā, ka brauca ar ātrumu, kas gandrīz neatstāja laiku nobremzēt, ka trūka noteikto skaņas signāla un gaismu signālu, kā arī 2. transportlīdzekļa joslas maiņas kustību, ceļa un joslu uzbūvi un pārējos iegūtos pierādījumus.
+Saskaņā ar ekspertīzes iznākumu galveno atbildību par šo sadursmi nesa A. Šis slēdziens bija ierobežots ar šīs lietas apstākļiem. Ekspertīze kopīgi ņēma vērā to, ka A gribēja apdzīt 2 priekšā pēc kārtas braucošus transportlīdzekļus, ka iegāja pretējā joslā, ka brauca ar ātrumu, kas gandrīz neatstāja laiku nobremzēt, ka trūka noteiktā skaņas vai gaismas signāla, kā arī 2. transportlīdzekļa joslas maiņas kustību, ceļa un joslu uzbūvi un pārējos iegūtos pierādījumus.
 
 Tas, ka dažās lietās šādi ekspertīzes iznākumi iestājas, nenozīmē, ka viena noteiktā signāla izlaišana vienmēr nosaka atbildību. Neuzmanība (過失) apdzīšanas negadījumā ir atkarīga no negadījuma vietas, joslu uzbūves, ātruma, transportlīdzekļu kustības, signāliem, laika intervāliem, redzamības un pārējiem pierādījumiem.
 
 ## Punkti, kas jāpārbauda, vērtējot atbildību par negadījumu
 
-Pirms apdzīšanas vispirms jāpārbauda, vai vieta vai satiksmes situācija ietilpst apdzīšanas aizliegumā. Ja piemērojama tās pašas joslas gaita, jāsniedz noteiktais skaņas signāla vai tālās gaismas signāls, nepiespiežot priekšējo transportlīdzekli atbrīvot ceļu, jāgaida skaidra atbrīvošanas izpausme un apdzīšana jāpabeidz ar pietiekamu atstatumu un drošu atgriešanās attālumu.
+Pirms apdzīšanas vispirms jāpārbauda, vai vieta vai satiksmes situācija ietilpst apdzīšanas aizliegumā. Ja piemērojama tās pašas joslas kārtība, jāsniedz noteiktais skaņas signāla vai tālās gaismas signāls, nepiespiežot priekšējo transportlīdzekli atbrīvot ceļu, jāgaida skaidra atbrīvošanas izpausme un apdzīšana jāpabeidz ar pietiekamu atstatumu un drošu atgriešanās attālumu.
 
 Ceļu satiksmes drošības noteikumu 101. panta ievērošana ir svarīga, taču pati par sevi negarantē ne izvairīšanos no negadījuma, ne vēlāko ekspertīzes vai tiesvedības iznākumu. Vadītājiem jāatstāj papildu drošības rezerve un jāpielāgojas situācijai priekšā.
 

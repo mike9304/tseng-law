@@ -85,7 +85,7 @@ ja izceļas strīds,
 
 Izšķiroši ir, kura puse līgumu izbeidz pirmā ar pietiekamu pamatu.
 
-puse, kas līgumu izbeidz pirmā ar pietiekamu pamatu, var atlaišanas pabalstu neizmaksāt vai to prasīt.
+Puse, kas līgumu izbeidz pirmā ar pietiekamu pamatu, var atlaišanas pabalstu neizmaksāt vai to prasīt.
 
 Tāpēc darba strīdos (勞資糾紛) Taivānā
 

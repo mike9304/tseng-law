@@ -1153,11 +1153,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Основни направления',
     consultationLanguagesLabel: 'Езици за консултация',
     roles: {
-      'tseng-junwei': 'Ръководна адвокатка в Тайван (Managing Attorney)',
-      'chang-rongxuan': 'Адвокат в Тайван (Taiwan Attorney)',
-      'chang-fangyu': 'Паралегал',
-      'son-jungmin': 'Оперативно ръководство за Корея (Korea Operations Manager)',
-      'huang-shengping': 'Партньор-счетоводител (Partner CPA)',
+      'tseng-junwei': 'Ръководна адвокатка в Тайван',
+      'chang-rongxuan': 'Адвокат в Тайван',
+      'chang-fangyu': 'Правен сътрудник',
+      'son-jungmin': 'Ръководител на дейността за Корея',
+      'huang-shengping': 'Партньор, дипломиран експерт-счетоводител',
     },
   },
   hr: {
@@ -4083,45 +4083,45 @@ export const guidanceTeamBios: Record<
         'Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала първоинстанционно решение за TWD 1.57M.',
       ],
       education: [
-        'Магистър (M.S.), Institute of Finance, National Taiwan University',
+        'Магистър (M.S.), Институт по финанси, Национален тайвански университет (National Taiwan University)',
         'Бакалавър (B.A.) с две специалности — право и финанси, National Chengchi University',
         'Студентка по обмен в Kobe University и Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Фондация за правна помощ, клон Тайджун',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Преди това в Ministry of Education, Legal Affairs Division, с акцент върху административни и граждански дела.',
+        'Преди това в Министерството на образованието, отдел „Правни въпроси“, с акцент върху административни и граждански дела.',
         'Опит в дела на висши училища, права на преподаватели и административни жалби.',
       ],
       education: ['Бакалавър по право (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Министерство на образованието, отдел „Правни въпроси“',
         'Адвокат, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Паралегал с дългогодишна работа като старши паралегал в няколко кантори, отговаря за процесуална подкрепа, дружествено право и чуждестранни инвестиции.',
+        'Правен сътрудник с дългогодишна работа като старши правен сътрудник в няколко кантори, отговаря за процесуална подкрепа, дружествено право и чуждестранни инвестиции.',
         'Подкрепа при процедури, учредяване на дружества, разрешения за чуждестранни инвестиции, заявки за лицензи и обмена между Корея и Тайван.',
       ],
       education: ['Бакалавър по право (LL.B.), Tunghai University'],
       experience: [
-        'Старши паралегал, Boyin Law Firm',
-        'Старши паралегал, Muyang International Law Firm',
+        'Старши правен сътрудник, Boyin Law Firm',
+        'Старши правен сътрудник, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Координира часовете за консултация и общуването за клиенти от Корея.',
-        'Подпомага обмена между звената чрез системи за документи и работни процеси, въз основа на информатика.',
+        'Подпомага обмена между звената чрез системи за документи и работни процеси, въз основа на образованието си по информатика.',
       ],
       education: ['Бакалавър (B.S.) по информатика, National Cheng Kung University'],
-      experience: ['Оперативно направление за Корея, Hovering International Law Firm'],
+      experience: ['Ръководство на дейността за Корея, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

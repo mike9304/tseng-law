@@ -118,7 +118,7 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   km: "viewAllLabel: 'មើលទាំងអស់'",
   mn: "viewAllLabel: 'Бүгдийг харах'",
   sk: "viewAllLabel: 'Zobraziť všetky'",
-  bg: "viewAllLabel: 'Покажи всички'",
+  bg: "viewAllLabel: 'Покажете всички'",
   hr: "viewAllLabel: 'Prikaži sve'",
   sr: "viewAllLabel: 'Prikaži sve'",
   sl: "viewAllLabel: 'Pokaži vse'",

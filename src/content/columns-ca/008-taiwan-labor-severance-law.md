@@ -13,7 +13,7 @@ faq:
   - q: "En cas d’acomiadament disciplinari, l’empresa ha de pagar igualment la indemnització per acomiadament?"
     a: "No. Si el treballador comet un acte il·lícit, infringeix les normes de l’empresa o falta a la feina sense causa justificada durant 3 dies consecutius (article 12 de la Llei de normes laborals, 勞動基準法第12條), l’empresa pot acomiadar sense preavís i no està obligada a pagar la indemnització per acomiadament. En canvi, l’acomiadament econòmic (article 11) exigeix preavís i el pagament de la indemnització per acomiadament."
   - q: "Com es calcula la indemnització per acomiadament a Taiwan?"
-    a: "Cada vegada que el treballador completi 1 any d’antiguitat (年資), l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資), amb un màxim de 6 mesos de salari. Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any, sense topall."
+    a: "Cada vegada que el treballador completi 1 any d’antiguitat (年資), l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資), amb un màxim de 6 mesos de salari. Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall."
 ---
 
 # Dret laboral de Taiwan: és difícil cobrar la indemnització per acomiadament a Taiwan?
@@ -52,7 +52,7 @@ Li ho resumeixo en una taula senzilla.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Tipus** | **Acomiadament econòmic**  **資遣** **員工(經濟解僱)** | **Acomiadament disciplinari**  **解僱** **員工(懲戒解僱)** | **Dimissió voluntària del treballador**  **員工自請離職** |
+| **Tipus** | **Acomiadament econòmic (資遣員工, 經濟解僱)** | **Acomiadament disciplinari (解僱員工, 懲戒解僱)** | **Dimissió voluntària del treballador**  **員工自請離職** |
 | Significat | Quan l’ocupador, segons la situació de gestió, necessita un ajust de personal, la causa sorgeix en l’àmbit de gestió de l’ocupador i no és responsabilitat del treballador. Per això l’ocupador ha de respectar el període de preavís (預告期間) i assumir obligacions com el pagament de la indemnització per acomiadament, a fi d’equilibrar el perjudici del treballador. | Si el treballador comet un acte il·lícit o impropi, l’ocupador pot posar fi de seguida al contracte de treball (勞動契約) sense preavís i no ha de pagar la indemnització per acomiadament. Això és una de les facultats disciplinàries de l’ocupador. | El treballador té llibertat per posar fi al contracte en qualsevol moment, però ha de respectar el període de preavís segons la seva antiguitat, a fi que l’ocupador pugui organitzar el traspàs del lloc i buscar una altra persona. |
 | Requisits | Sí  (article 11 de la Llei de normes laborals de Taiwan) | Sí  (article 12 de la Llei de normes laborals de Taiwan) | No |
 | Preavís | Necessari | No necessari | Necessari |
@@ -62,7 +62,7 @@ Li ho resumeixo en una taula senzilla.
 
 > A Taiwan, cada vegada que el treballador completi 1 any d’antiguitat (年資),
 > l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資).
-> (fins a un màxim de 6 mesos de salari) Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any, sense topall.
+> (fins a un màxim de 6 mesos de salari) Aquesta fórmula correspon al període d’antiguitat al qual s’aplica l’article 12 de la Llei de la pensió laboral (勞工退休金條例); en el període d’antiguitat al qual s’aplica l’article 17 de la Llei de normes laborals (勞動基準法) es paga 1 mes de salari mitjà per cada 1 any complet, sense topall.
 
 ​
 

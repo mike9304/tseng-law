@@ -63,7 +63,7 @@ El senyor Lin va considerar aquesta sanció molt injusta i va sol·licitar una i
 
 A Taiwan,
 
-les persones amb discapacitat visual enfronten molts obstacles en el creixement, l’activitat, l’aprenentatge i l’educació, entre d’altres àmbits,
+les persones amb discapacitat visual troben molts obstacles en el creixement, l’activitat, l’aprenentatge i l’educació, entre d’altres àmbits,
 
 i els oficis als quals es poden dedicar són molt limitats.
 

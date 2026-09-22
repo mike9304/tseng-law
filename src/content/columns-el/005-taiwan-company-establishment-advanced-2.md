@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Κεντρική εικόνα](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Όσοι έχουν αναγνώσει τη [«Σύσταση εταιρείας στην Ταϊβάν – βασικά»](/el/columns/taiwan-company-establishment-basics) και [Σύσταση εταιρείας στην Ταϊβάν — αναλυτικός οδηγός 1](/el/columns/taiwan-company-establishment-advanced-1) μπορούν επίσης να εξετάσουν και τη «Σύσταση εταιρείας στην Ταϊβάν — αναλυτικός οδηγός 2» (公司設立).
+Όσοι έχουν αναγνώσει τη [«Σύσταση εταιρείας στην Ταϊβάν – βασικά»](/el/columns/taiwan-company-establishment-basics) και [Σύσταση εταιρείας στην Ταϊβάν — αναλυτικός οδηγός 1](/el/columns/taiwan-company-establishment-advanced-1) μπορούν επίσης να εξετάσουν και τη «Σύσταση εταιρείας στην Ταϊβάν — αναλυτικός οδηγός 2».
 
 ​
 

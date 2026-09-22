@@ -1,0 +1,82 @@
+WO-F-el r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-el-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: el-a 23, el-b 23 (46). No P3 rows.
+
+Applied: 43.
+Skipped: 3 numbered rows. Checker adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned Greek expectation in `src/lib/__tests__/` or `src/data/__tests__/` matched a string this round changed. `GUIDANCE_LLMS_NOTICES.el` still contains the literal `llms.txt`. `consultationNotice` and `confidentialNotice` were not rewritten, and they remain substrings of the FAQ answer and the privacy paragraph. The bio figure stays `1,57 εκατ. TWD` (not the pinned byte string `TWD 1.57M`, which this locale does not use).
+
+### Applied
+el-a 1–11, 13, 15–23.
+el-b 1–13, 15–23.
+
+Adaptations (still applied):
+- el-a 3. The 004 link no longer says that άρθρο 10 is the article of the withholding-rate standards. The label is now the standards themselves, with the gloss `(各類所得扣繳率標準)` kept, and `(άρθρο 10)` parked at the end. Korean `영업세법 제10조` is a counted 10. Dropping 10 fails `numbers` (`missing 10`). The URL `flno=3` was not changed. 001's label for the same URL still has no article number.
+- el-a 10. The subject stays in its own block and the verb in the next, matching the English line break: «το μέρος που λύει πρώτο τη σύμβαση με επαρκή λόγο» / «μπορεί είτε να μην καταβάλει την αποζημίωση απόλυσης είτε να την απαιτήσει.»
+- el-a 21. Three instances: the FAQ, the body paragraph, and «το ίδιο το υποκατάστημα δεν μπορεί να εισαχθεί στην αγορά αξιών». The third already had «το ίδιο το υποκατάστημα», so a second «το ίδιο» was not added.
+- el-b 11. «πρόταση σχεδιασμού σύμβασης» → «συμβουλή για τον σχεδιασμό της σύμβασης», which is the English sentence «The foregoing is contract-design advice.» The suggested replacement («Τα ανωτέρω συγκρίνουν μόνον τις διαδικασίες καταχώρισης…») was not used. See Reviewer points.
+- el-b 21. «έως 1 φορά το ποσό της πραγματικής ζημίας» stays, and «δηλαδή έως το ίδιο το ποσό» was added. Korean is `최대 1배`. Dropping the 1 fails `numbers`. Greek has no word-numeral lexicon, so «μία» would not count.
+- el-b 23. «ισχύει 1 ψήφος ανά 1 εταίρο» → «κάθε 1 εταίρος έχει 1 ψήφο». Both 1s stay (Korean `1인 1표`). «2/3» stays. «δύο τρίτων» is not in the Greek lexicon, so it would drop 2 and 3.
+
+Guidance pack (Greek strings only):
+- `international-guidance-team.ts` `el`: Fang-Yu Chang is feminine in the role (`Νομική συνεργάτιδα (Paralegal)`), the bio intro, and both experience lines. The lawyers/team description uses «της νομικής συνεργάτιδας». Wei Tseng's B.A. line is «Πτυχίο (B.A.) νομικής και χρηματοοικονομικών, με δύο γνωστικά αντικείμενα». The gym matter is «αγωγή», not «αξίωση».
+- `international-guidance-eastern.ts`: the same lawyers description; criminal representation is «κατά την ποινική προανάκριση»; «χρησιμοποιήσετε» → «μιλάτε» / «μιλάω» in the home paragraph, the contact description, the contact heading, and the FAQ question; privacy requests «υποβάλλονται στη διεύθυνση»; a column «δεν καλύπτει» the reader's circumstances. «Πώς να χρησιμοποιήσετε αυτές τις σελίδες» was left: that is using the pages, not speaking a language.
+- `international-guidance-answers.ts` `el`: «της νομικής συνεργάτιδας».
+- `international-inquiry-copy.ts` `el.methodConfirmationNotice`: «Αν δεν μιλάτε». The form option already said «Δεν μιλάω».
+
+### Skipped
+- el-a 12. The bare 1s stay. Greek has no word-numeral lexicon, and the Korean source counts them: `피해자 1명·사고 1건당`, `1명을 넘는`, `1년` / `1년당`. Left as written: «ανά 1 θύμα και ανά 1 ατύχημα» (003); «περισσότεροι από 1 αλλοδαποί» (005); «για κάθε 1 συμπληρωθέν έτος» and «ανά 1 έτος» in the 008 FAQ and the blockquote.
+- el-a 14. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003, 005, 006, 008 and 009 were not removed. Heading levels and the ZWSP count match the Korean source. 005 `**​**` stays for the same reason.
+- el-b 14. The U+200B lines in 013 and 015 were left. Deleting them changes the ZWSP count and the block count.
+
+## Systemic patterns
+
+- Fang-Yu Chang masculine card and attorney-word role (el-a). 6 strings: role, bio intro (two feminine forms in that one line), two experience lines, and «της νομικής συνεργάτιδας» in the team description, the lawyers page description, and the lawyers answer. Wei Tseng's lines were already feminine and were not edited.
+- «Χρησιμοποιώ» for speaking a language, where the form already says «Δεν μιλάω» (el-a). 5 changed: home paragraph, contact description, contact heading, FAQ question, inquiry notice.
+- A bare digit 1 glued onto a unit the sentence already names (el-a; el-b «1 ψήφος ανά 1 εταίρο»). 1 restructured, digits kept (018). 5 left as digits (003 once; 005 once; 008 FAQ plus the two blockquote lines). See el-a 12 and el-b 23.
+- U+200B blanks, and 005 `**​**` (el-a; el-b 013/015). 0 deleted. Counts unchanged and equal to Korean: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3.
+- English «whether» opened as a condition, so the question no longer governs the verb (el-b). 1 changed: the 016 marital-property sentence. Other «Εάν» clauses are real conditions and were left. The 018 «είναι εάν έχει» sentence is the numbered row (missing subject), not a second condition.
+- A noun names the neighbouring thing (el-b). 2: «διεύθυνση επισήμανσης» → the address named in the statute; «προηγούμενο και επόμενο πλαίσιο» → «τα συμφραζόμενα».
+- R8 `監察人`. 2: «ελεγκτής» / «ελεγκτή» → «επόπτης (監察人)» / «επόπτη (監察人)» in 018. The sentence already said «δικαίωμα εποπτείας».
+- R2–R10 otherwise. The round-4 verdicts say formal εσείς, feminine Wei Tseng, Greece orthography, dot thousands, decimal comma, day-before-month dates, and the four-language consultation lock already hold. This pass did not find a new Korea-as-default-reader, result promise, untranslated `OUR TEAM` / `OFFICES`, or fullwidth punctuation outside a frontmatter `url`. The 008 and 009 `url` values still contain Hangul and a fullwidth colon; those were not edited. 001 already has the country-specific Taiwan–Korea tax note. «Πώς να χρησιμοποιήσετε αυτές τις σελίδες» was left.
+
+## Reviewer points not followed
+
+- el-a 12, el-b 21, and el-b 23 in part. The suggested wording is the better Greek. It deletes digits the checker counts against the Korean source (`1명·1건`, `1명을 넘는`, `1년`/`1년당`, `최대 1배`, `1인 1표`, `3분의 2`). «1 φορά» is that negligence cap, not a surplus next to the 3- and 5-fold caps. «2/3» stays because «δύο τρίτων» is not parsed.
+- el-a 14 and el-b 14. The U+200B lines match the Korean source one for one. Promoting Q16–Q20 would also change heading levels. They are not disposable blank lines, and the one-line layout is the source's.
+- el-a 3, in part. The URL really is `flno=3`, so «άρθρο 10 των προτύπων» was the wrong article of that instrument. The digit cannot leave the file. `(άρθρο 10)` stays on the corrected standards label.
+- el-b 11. The paragraphs above that sentence do compare branch and subsidiary registration, and the English source has the same sentence: «The foregoing is contract-design advice.» Replacing it with «Τα ανωτέρω συγκρίνουν μόνον τις διαδικασίες καταχώρισης υποκαταστήματος και θυγατρικής» would drop that English sentence. Only «πρόταση» → «συμβουλή» was changed, so the Greek matches «advice».
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-el --lang el 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-el src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+Recount after this log was written: `git status --short | wc -l` → 23 (the extra line is this file).

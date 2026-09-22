@@ -31,7 +31,7 @@ Tayvan Ceza Kanununun (刑法) 185-4. maddesi, yaralanma veya ölüm doğuran bi
 
 Önce kişisel güvenliği ve uyarı işaretlerini sağlayınız. Tayvan’da yaralı veya kurtarma gerekiyorsa 119’u (ambulans ve itfaiye), suç veya acil güvenlik durumu varsa 110’u (polis) arayınız; cep telefonundan 112 numarası kullanılabilir. Trafik kazasının olgularına göre polise bildirimi de yapınız.
 
-Güvenlik sağlandıktan sonra genel ve yakın çekimler alarak araçların konumunu ve hasarını, yol işaretlerini, sinyalleri ve hava durumunu kaydediniz. Tanıkların iletişim bilgileri, CCTV (監視器影像) ve araç kamerası (行車紀錄器) görüntülerinin korunması talebi, tarafların, aracın ve sigortanın verileri ile klinik dosya (病歷) atlanmamalıdır. Kişisel fotoğraflar yararlıdır, ancak yaralanma veya ölüm kazasında gereken polis işlemlerinin yerine geçmez.
+Güvenlik sağlandıktan sonra genel ve yakın çekimler alarak araçların konumunu ve hasarını, yol işaretlerini, sinyalleri ve hava durumunu kaydediniz. Tanıkların iletişim bilgileri, CCTV (監視器影像) ve araç kamerası (行車紀錄器) görüntülerinin korunması talebi, tarafların, aracın ve sigortanın verileri ile hasta dosyası (病歷) atlanmamalıdır. Kişisel fotoğraflar yararlıdır, ancak yaralanma veya ölüm kazasında gereken polis işlemlerinin yerine geçmez.
 
 Polis belgelerine gelince, kaza yerinde trafik kazası tarafları kayıt fişi (道路交通事故當事人登記聯單) alınabilir. Kaza tarihinden 7 gün geçince yer krokisi ve yer fotoğrafları (現場圖 / 現場照片) istenebilir; kaza tarihinden 30 gün geçince karayolu trafik kazası ön analiz değerlendirme tablosu (道路交通事故初步分析研判表) istenebilir. Düzenleme anı ve başvuru koşulları, yetkili polis merciinde yeniden doğrulanmalıdır.
 
@@ -99,7 +99,7 @@ Medeni Kanunun 184. maddesine dayanan talep, bir hakka hukuka aykırı saldırı
 
 ## Q8. Tedavi sürerse tıbbi gider belgelerini nasıl sunmalı?
 
-Makbuzları (收據), hekim raporlarını ve klinik dosyayı saklayınız ve her tedavinin tıbbi gerekliliği ile kaza ile nedensellik bağını bunlarla düzenleyiniz. Süren bir tedavinin belgeleri, mahkemenin usul takvimine ve zaten sunulmuş talebin içeriğine göre kanıtı tamamlayabilir, ancak geç sunulan bütün belgelerin veya talebin bütün genişlemesinin kabul edileceği veya izin verileceği güvence altına alınmaz.
+Makbuzları (收據), hekim raporlarını ve hasta dosyasıyı saklayınız ve her tedavinin tıbbi gerekliliği ile kaza ile nedensellik bağını bunlarla düzenleyiniz. Süren bir tedavinin belgeleri, mahkemenin usul takvimine ve zaten sunulmuş talebin içeriğine göre kanıtı tamamlayabilir, ancak geç sunulan bütün belgelerin veya talebin bütün genişlemesinin kabul edileceği veya izin verileceği güvence altına alınmaz.
 
 Tıbbi belge eklemek, talep tutarını değiştirmek veya artırmaktan ayırt edilmelidir. Ceza yargılamasına bağlı medeni dava açıldıktan sonra yalnızca daha fazla tıbbi makbuz sunulması kendiliğinden yargılama gideri doğurmaz.
 
@@ -171,7 +171,7 @@ Medeni talebin kime yöneltileceği sorusu, ceza sorumluluğundan ayırt edilmel
 
 ## Q15. Hangi zorunlu otomobil sigortası ödemeleri ve teminatları doğrulanmalıdır?
 
-Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險法) 6. maddesine göre abone olma yükümlülüğü kural olarak araç sahibine ve öngörülen hallerde o aracın kullanıcısına veya yöneticisine düşer. Bu rejim, otomobil kazası nedeniyle yaralanan veya ölen kişi için kusursuz teminat yapısı (無過失給付制度) kurar, ancak kanunun saptadığı yolcuların veya araç dışındaki üçüncü kişinin (第三人) kapsamı doğrulanmalıdır.
+Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險法) 6. maddesine göre sigorta ettirme yükümlülüğü kural olarak araç sahibine ve öngörülen hallerde o aracın kullanıcısına veya yöneticisine düşer. Bu rejim, otomobil kazası nedeniyle yaralanan veya ölen kişi için kusursuz teminat yapısı (無過失給付制度) kurar, ancak kanunun saptadığı yolcuların veya araç dışındaki üçüncü kişinin (第三人) kapsamı doğrulanmalıdır.
 
 Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu sigortasının ödemelerinin muhatabı değildir. Ancak birden çok aracın karıştığı bir kazada, sürücünün karışan başka bir aracın zorunlu sigortacısından ödeme talep edebildiği haller vardır.
 
@@ -199,7 +199,7 @@ Q16. Kazadan sonra her şey sigortacıya bırakılabilir mi?
 
 ​
 
-Deneyimime göre sigortacılar, kaza taraflarının duygusal yönünü sık sık yeterince işlemez.
+Sigortacılar, deneyime göre, kaza taraflarının duygusal yönünü sık sık yeterince işlemez.
 
 ​
 
@@ -219,7 +219,7 @@ Sigortacı ile taraf arasında çıkar çatışması da doğabilir ve sigortacı
 
 ​
 
-Bu yüzden uyuşmazlığın bütününü sigortacıya emanet etmeyi önermem.
+Bu yüzden uyuşmazlığın bütününün sigortacıya bırakılması önerilmez.
 
 ​
 
@@ -323,7 +323,7 @@ Dosyayı şişirip uzlaşılmamasını, medeni ve ceza planında sonuna kadar ya
 
 ​
 
-Trafik kazalarına ilişkin soru ve yanıtları böyle bitiriyorum. Yararlı olmasını dilerim.
+Trafik kazalarına ilişkin sorular ve yanıtlar burada sona erer.
 
 ​
 
@@ -331,7 +331,7 @@ Trafik kazalarına ilişkin soru ve yanıtları böyle bitiriyorum. Yararlı olm
 
 ​
 
-Çok sayıda trafik kazası yürüttükten sonra önemli bir noktayı belirtmek isterim.
+Çok sayıda trafik kazasından sonra öne çıkan bir nokta vardır.
 
 ​
 
@@ -359,7 +359,7 @@ Bu nokta bu yüzden kesinlikle savsaklanmamalı ve olgulara göre bir avukatla k
 
 ​
 
-Başka sorularınız varsa İletişim sayfasından yazabilirsiniz; yanıt süresi vaat edilmez.
+Başka sorularınız varsa İletişim sayfasından İngilizce, Çince (中文), Japonca veya Korece yazabilirsiniz; yanıt süresi vaat edilmez.
 
 ​
 
@@ -369,5 +369,5 @@ Wei Tseng (曾雋崴), Tayvan avukatı.
 
 > Ayrıca bakınız:
 > - [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
-> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Hovering’in uluslararası ekibi](/tr/lawyers)
 > - [Hovering International Law Firm hakkında](/tr/about)

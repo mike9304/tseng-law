@@ -2585,7 +2585,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hukuk davaları ve tazminat',
           paragraphs: [
             'Bu alan sözleşme uyuşmazlıklarını, haksız fiilden doğan tazminatı ve tüketici uyuşmazlıklarını kapsar. Çalışma genellikle olayların kronolojisinin, eldeki belge ve delillerin incelenmesiyle başlar; sonraki adımlar ancak ondan sonra gelir.',
-            'Süreler, yasal dava süreleri dâhil, ve kanıtların tamlığı seyri biçimlendirir. Bu yüzden bilinen tarihleri mümkün olduğunca erken belirtin. Sözleşmeleri, iletileri, ödeme belgelerini veya yerindeki durumun fotoğraflarını saklayın ve ilk iletide anın.',
+            'Süreler (yasal dava süreleri dâhil) ve kanıtların tamlığı, sürecin nasıl ilerleyeceğini belirler. Bu yüzden bilinen tarihleri mümkün olduğunca erken belirtin. Sözleşmeleri, iletileri, ödeme belgelerini veya yerindeki durumun fotoğraflarını saklayın ve ilk iletide belirtin.',
           ],
         },
         {
@@ -2598,7 +2598,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'İş uyuşmazlıkları',
           paragraphs: [
-            'Bu alan iş ilişkisinin sona ermesini, Tayvan hukukuna göre kıdem tazminatını (資遣費; başka ülkelerin benzer düzenlemeleriyle aynı tutulmamalıdır), ücreti ve iş sözleşmesinden (勞動契約) doğan uyuşmazlıkları kapsar; işçi veya işveren tarafında. İncelemede sona erme sebebini bildirim, ödeme ve süre sorularından ayırırız.',
+            'Bu alan iş ilişkisinin sona ermesini, Tayvan hukukuna göre kıdem tazminatını (資遣費; başka ülkelerin benzer düzenlemeleriyle aynı tutulmamalıdır), ücreti ve iş sözleşmesinden (勞動契約) doğan uyuşmazlıkları kapsar; iş ister işçinin ister işverenin olsun. İncelemede sona erme sebebini bildirim, ödeme ve süre sorularından ayırırız.',
             'İş sözleşmesi, iş kuralları (工作規則), ücret bordroları ve tarafların yazışması çoğu zaman belirleyici belgelerdir. Hâlâ elinizdeyse özetinizde belirtin.',
           ],
         },
@@ -2636,7 +2636,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kuruluş ve yapı',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所), 2016 yılında National Taiwan University’de (國立臺灣大學) öğrenim görmüş avukatlar tarafından kuruldu. Çin adı 昊鼎, 昊 (“geniş gök”) işaretini 鼎 (“sağlam temel”) ile birleştirir ve firmanın kuruluşundan beri yönünü anlatır.',
+            'Hovering International Law Firm (昊鼎國際法律事務所), 2016 yılında National Taiwan University’de (國立臺灣大學) öğrenim görmüş avukatlar tarafından kuruldu. Çince adı 昊鼎, 昊 (“geniş gök”) karakterini 鼎 (“sağlam temel”) ile birleştirir ve firmanın kuruluşundan beri yönünü anlatır.',
             'Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) ve Pingtung (屏東) ofislerimiz vardır. Kaohsiung ofisi şirket yönetimine odaklanır ve hukuk, ceza ve idare uyuşmazlıklarını yürütür. Taichung ofisi inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Pingtung ofisi 2017’de bölgedeki ihtiyaç üzerine açıldı.',
             'Avukatlık çalışmasının yanında 2020’den beri Hovering Accounting Office da vardır; girişimcilere ve varlıklı kişilere muhasebe ve vergi planlaması sunar.',
           ],
@@ -2644,7 +2644,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Yabancı taraflarla çalışma',
           paragraphs: [
-            'Sınır aşan çalışma şirket kuruluşunu, vizeleri, marka ve patent başvurularını, hukuki risk incelemesini ve şirketlere vergi danışmanlığını kapsar. Taichung ofisi özellikle inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Avukat Wei Tseng (曾雋崴), anılan alanlarda Kore, Japonya ve diğer uluslararası müvekkilleri destekler.',
+            'Sınır aşan çalışma şirket kuruluşunu, vizeleri, marka ve patent başvurularını, hukuki risk incelemesini ve şirketlere vergi danışmanlığını kapsar. Taichung ofisi özellikle inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Avukat Wei Tseng (曾雋崴), anılan alanlarda Kore, Japonya ve diğer ülkelerden gelen müvekkilleri destekler.',
             'Bir işi alıp alamayacağımız içeriğe ve iletişim diline bağlıdır. Konunuz anılan alanlara giriyorsa ve dört görüşme dilinden birinde konuşulabiliyorsa, inceleme için bir özet gönderebilirsiniz.',
           ],
         },
@@ -2659,7 +2659,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'AVUKATLAR',
-      title: 'Hovering uluslararası ekibi',
+      title: 'Hovering’in uluslararası ekibi',
       description: 'Hovering avukatlarının, operasyon yönetiminin ve bağlı muhasebe bürosunun profilleri.',
       intro: '',
       sections: [],
@@ -2696,7 +2696,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Bu sayfa neden tarife belirtmez',
           paragraphs: [
-            'Ücret işin kendisine bağlıdır: emeğe, taraf sayısına, belgelere, sürelere ve bir usulün yürüyüp yürümediğine. Önceden konmuş bir sayı, sizin işinizin ücretini göstermez. Bu yüzden önce çalışma kapsamını belirler, sonra işe başlamadan önce ücreti size bildiririz.',
+            'Ücret işin kendisine bağlıdır: emeğe, taraf sayısına, belgelere, sürelere ve bir usulün yürüyüp yürümediğine. Önceden belirlenmiş bir tutar, sizin işinizin ücretini göstermez. Bu yüzden önce çalışma kapsamını belirler, sonra işe başlamadan önce ücreti size bildiririz.',
             'Avukatlık ücretinin yanında mahkeme, idare veya üçüncü kişi giderleri doğabilir. Bunlar ücretten ayrıdır ve ilgili usule bağlıdır.',
           ],
         },
@@ -2808,7 +2808,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Bu Türkçe bölümdeki iletişim formunun neleri topladığı, özgün metnin nasıl ele alındığı ve verileriniz için bize nasıl ulaşacağınız.',
       intro:
-        'Bu bölüm yalnızca bu bilgi sayfalarındaki iletişim formunu kapsar. Veri işlemeyi anlatır, teknik bir mutlak koruma vaadi değildir.',
+        'Bu bölüm yalnızca bu bilgi sayfalarındaki iletişim formunu kapsar. Veri işlemeyi anlatır, mutlak bir teknik koruma vaadi değildir.',
       sections: [
         {
           heading: 'Hangi veriler toplanır',
@@ -2818,11 +2818,11 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Belirttiğiniz ad',
             'Yanıt için e-posta adresi',
-            'Gönderim anındaki sayfa görüntüleme dili',
+            'Formu gönderdiğiniz andaki sayfa dili',
             'Yazdığınız dil',
             'İstediğiniz görüşme dili',
             'Yazdığınız özgün metin',
-            'Talebi göndermeye verdiğiniz onay',
+            'Talebi göndermek için verdiğiniz onay',
             'Talebi yeniden bulmak için bir alındı numarası',
           ],
         },
@@ -2931,7 +2931,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Bir yazının yol göstericiliği ne kadardır',
+          heading: 'Bir yazı ne ölçüde yol gösterir',
           paragraphs: [
             'Yazılar, yayımlanma anındaki genel bilgilerdir. Kurallar ve uygulanışları değişebilir ve bir yazı dosyanızın tüm koşullarını içermez.',
             'Bu yüzden gerçek bir işte eyleminizi yalnızca bir yazıya dayandırmayın. Genel bakış için kullanın ve belgelerinizi ayrı olarak bir avukatla konuşun; bu sayfa görüşme adımı değildir.',

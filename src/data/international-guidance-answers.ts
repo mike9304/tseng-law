@@ -437,7 +437,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Bu sayfa Hovering avukatlarının, operasyon yönetiminin ve bağlı muhasebe bürosunun profillerini gösterir. Avukat Wei Tseng (曾雋崴) Tayvan’da meslek yürütmeye yetkilidir ve büronun yönetici avukatıdır; Kore, Japonya ve diğer uluslararası müvekkillerle çalışır. Büro bir sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Bu sayfa Hovering avukatlarının, operasyon yönetiminin ve bağlı muhasebe bürosunun profillerini gösterir. Avukat Wei Tseng (曾雋崴) Tayvan’da meslek yürütmeye yetkilidir ve büronun yönetici avukatıdır; Kore, Japonya ve diğer ülkelerden gelen müvekkillerle çalışır. Büro bir sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/about', '/tr/contact'],
     },
     pricing: {

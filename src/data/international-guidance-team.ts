@@ -462,7 +462,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
   },
   tr: {
     label: 'EKİBİMİZ',
-    title: 'Hovering uluslararası ekibi',
+    title: 'Hovering’in uluslararası ekibi',
     description:
       'Hovering avukatlarının, operasyon yönetiminin ve bağlı muhasebe bürosunun profilleri.',
     representativeTitle: 'Yönetici avukat',
@@ -483,9 +483,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Tayvan’da yönetici avukat',
       'chang-rongxuan': 'Tayvan avukatı',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Hukuk asistanı (Paralegal)',
       'son-jungmin': 'Kore operasyonları yöneticisi',
-      'huang-shengping': 'Ortak yeminli mali müşavir',
+      'huang-shengping': 'Ortak mali müşavir (Partner CPA)',
     },
   },
   it: {
@@ -2594,7 +2594,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Büro, Tayvan’da şirket ve kişi işlerini İngilizce, Japonca, Korece ve Çince yürütür.',
-        'Spor salonunda yaralanma nedeniyle bir Koreli öğrenciyi tazminat isteminde temsil etti ve TWD 1.57M tutarında ilk derece kararı aldı.',
+        'Spor salonunda yaralanma nedeniyle bir Koreli öğrenciyi tazminat isteminde temsil etti ve TWD 1.57M tutarında ilk derece tazminat kararı elde etti.',
       ],
       education: [
         'Yüksek lisans (M.S.), Institute of Finance, National Taiwan University',
@@ -2604,42 +2604,42 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Hukuki Yardım Vakfı, Taichung şubesi (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Daha önce Ministry of Education, Legal Affairs Division’da, idare ve hukuk işlerine odaklanarak çalıştı.',
+        'Daha önce Millî Eğitim Bakanlığının hukuk işleri biriminde (Ministry of Education, Legal Affairs Division), idari ve hukuki uyuşmazlıklara odaklanarak çalıştı.',
         'Üniversiteler, öğretim elemanı hakları ve idari başvurular konusunda deneyimi vardır.',
       ],
       education: ['Hukuk lisansı (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Millî Eğitim Bakanlığı, hukuk işleri birimi (Ministry of Education, Legal Affairs Division)',
         'Avukat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Birden fazla büroda kıdemli paralegal olarak uzun yıllar çalışmış, usul desteği, şirket hukuku ve yabancı yatırımından sorumlu paralegal.',
-        'Usullere, şirket kuruluşuna, yabancı yatırım onaylarına, ruhsat başvurularına ve Kore ile Tayvan arasındaki alışverişe destek verir.',
+        'Birden fazla büroda uzun yıllar kıdemli hukuk asistanı olarak çalıştı; usul desteği, şirket hukuku ve yabancı yatırımdan sorumluydu.',
+        'Usullere, şirket kuruluşuna, yabancı yatırım onaylarına, ruhsat başvurularına ve Kore ile Tayvan arasındaki iletişime destek verir.',
       ],
       education: ['Hukuk lisansı (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Kıdemli hukuk asistanı, Boyin Law Firm',
+        'Kıdemli hukuk asistanı, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Kore’den gelen müvekkiller için görüşme randevularını ve iletişimi koordine eder.',
-        'Bilgisayar bilimine dayalı olarak, belge sistemleri ve iş akışları üzerinden ekipler arası alışverişi destekler.',
+        'Bilgisayar bilimi eğitimiyle belge sistemleri ve iş akışları üzerinden ekipler arası iletişimi destekler.',
       ],
       education: ['Lisans (B.S.) bilgisayar bilimi, National Cheng Kung University'],
       experience: ['Kore operasyonları alanı, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'National Chengchi University’de muhasebe lisans ve yüksek lisans programlarını tamamladı ve şu anda bir muhasebe bürosu yönetmektedir.',
+        'National Chengchi University’de muhasebe lisansını ve yüksek lisansını tamamladı ve şu anda bir muhasebe bürosu yönetmektedir.',
         'Kurumsal müvekkiller için hukuki, vergi ve mali risklerin bütünleşik analizini destekler.',
       ],
       education: [

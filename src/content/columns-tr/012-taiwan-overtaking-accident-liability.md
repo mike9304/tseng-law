@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Tayvan’da sollama kazasında sorumluluk değerlendirmesini ve güvenli sollama usulünü açıklayan görsel](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Öndeki araç yavaş gidiyorsa sollamak (超車) sıradan bir seçim gibi görünebilir; ancak bu, hatırı sayılır risk taşıyan bir sürüş davranışıdır. Sollamaya başlamadan önce yol kesiti, her yöndeki trafik durumu, öndeki araçların hareketi ve asıl şeride güvenle dönmek için yer olup olmadığı birlikte incelenmelidir.
+Öndeki araç yavaş gidiyorsa sollamak (超車) sıradan bir manevra gibi görünebilir; ancak bu, hatırı sayılır risk taşıyan bir sürüş davranışıdır. Sollamaya başlamadan önce yol kesiti, her yöndeki trafik durumu, öndeki araçların hareketi ve asıl şeride güvenle dönmek için yer olup olmadığı birlikte incelenmelidir.
 
 ## Karayolu Trafik Güvenliği Kuralları’nın (道路交通安全規則) 101. maddesinin koyduğu sollama şartları
 
@@ -45,13 +45,13 @@ A ve B’nin yakınları önce 2 numaralı aracın ani şerit değiştirmesini �
 
 Bilirkişilik sonucuna göre bu çarpışmanın başlıca sorumluluğu A’daydı. Bu sonuç, bu işin olgularıyla sınırlıydı. Bilirkişilik, A’nın art arda giden öndeki 2 aracı sollamak istemesini, karşı şeride girmesini, fren payı bırakmayan bir hızla gitmesini, öngörülen korna ve far işaretlerinin eksik kalmasını, 2 numaralı aracın şerit değiştirme hareketini, yol ve şerit yapısını ve toplanan diğer delilleri birlikte dikkate aldı.
 
-Bazı işlerde böyle bilirkişilik sonuçlarının çıkması, öngörülen bir işaretin bir kez atlanmasının her zaman sorumluluğu sabitlediği anlamına gelmez. Sollama kazasında kusur (過失), kaza yeri, şerit düzeni, hız, araç hareketleri, işaretler, zaman aralıkları, görüş ve diğer delillere bağlıdır.
+Bazı işlerde böyle bilirkişilik sonuçlarının çıkması, öngörülen bir işaretin bir kez atlanmasının her zaman sorumluluğu belirlediği anlamına gelmez. Sollama kazasında kusur (過失), kaza yeri, şerit düzeni, hız, araç hareketleri, işaretler, zaman aralıkları, görüş ve diğer delillere bağlıdır.
 
 ## Kaza sorumluluğunu değerlendirirken doğrulanacak noktalar
 
 Sollamadan önce o yerin veya trafik durumunun sollama yasağına girip girmediği doğrulanmalıdır. Aynı şerit usulü uygulanıyorsa, öndeki aracı yol vermeye zorlamadan öngörülen korna veya far işaretini verin, açık bir yol verme işaretini bekleyin ve yeterli aralık ile güvenli dönüş mesafesiyle sollamayı tamamlayın.
 
-Madde 101’e uymak önemlidir; ancak tek başına kazayı önlemeyi veya sonraki bilirkişilik ya da yargılama sonucunu sağlamaz. Sürücüler ek bir güvenlik payı bırakmalı ve önlerindeki duruma göre hareket etmelidir.
+Madde 101’e uymak önemlidir; ancak tek başına kazanın önleneceğini veya sonraki bilirkişilik ya da yargılamanın belirli bir sonuç vereceğini garanti etmez. Sürücüler ek bir güvenlik payı bırakmalı ve önlerindeki duruma göre hareket etmelidir.
 
 Ek olarak [sollama kuralları ve usulünün şemasına](https://gonews.com.tw/car/daily/21934/) bakılabilir. İkincil kaynak olduğundan, hukuki şartlar doğrulanırken yürürlükteki resmi kurallar da okunmalıdır.
 
@@ -59,7 +59,7 @@ Ek olarak [sollama kuralları ve usulünün şemasına](https://gonews.com.tw/ca
 
 > Ayrıca bakınız:
 > - [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
-> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Hovering’in uluslararası ekibi](/tr/lawyers)
 > - [Tayvan’da trafik kazası işlem usulü](/tr/columns/taiwan-traffic-accident-procedure)
 
 Bu yazı, Tayvan’daki sollama kuralları ve kaza sorumluluğunun değerlendirilmesine ilişkin genel hukuki bilgidir; somut bir işe ilişkin görüş veya belirli bir sonuca dair vaat değildir. Gerçek sorumluluk kaza yerine, araç hareketine, hıza, işaretlere, delillere, bilirkişiliğe (鑑定) ve yürürlükteki hukuka göre değişebilir; somut işler ilgili belgelere göre ayrı incelenmelidir.

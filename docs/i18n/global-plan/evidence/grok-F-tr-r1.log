@@ -1,0 +1,91 @@
+WO-F-tr r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-tr-r1
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: tr-a 54, tr-b 52 (106).
+
+Applied: 103.
+Skipped: 3 numbered rows, plus the verdict’s Hangul `url` fields (not a numbered row).
+
+### Applied
+tr-a 1–3, 5–35, 37–54 and tr-b 1–24, 26–52.
+
+tr-a 4 was not applied. tr-a 7 is the same sentence and was applied as the verb only: “TWD 1.57M tutarında ilk derece tazminat kararı elde etti.” The byte string `TWD 1.57M` stays.
+
+tr-a 47: the table row was not deleted (that would change the row count). The cells were rephrased so “Zorluk | Basit | Zor | Basit” is no longer an outcome: “Usulün ağırlığı | Görece düşük | Görece yüksek | Görece düşük”.
+
+tr-a 1: the notice now says “görünürlük güvencesi vaat etmez”, not the suggested “garantili görünürlük”. The guidance pack’s forbidden-token test matches `/garanti/i` even when the verb is negated.
+
+Guidance pack (Turkish strings only): llms discovery notice; Partner CPA role; Ministry of Education intro and experience line, English name kept in parentheses; Legal Aid Foundation experience line, English name in parentheses; paralegal intro and the two Senior Paralegal lines; son-jungmin and huang bios; damages, labour, firm-name, client-origin, lawyers title, fee, technical-protection, page-language, consent, column-heading, and the lawyers answer. Inquiry copy and office copy were not flagged and were not edited. No test expectation pinned a string that changed.
+
+Digits the checker counts against the Korean source were kept inside the rewrite:
+- tr-a 6: “yabancı uyruklu kişi sayısı 1 kişiyi aşarsa” (the “foreign” reading is restored; “birden fazla” would drop the 1).
+- tr-a 31: “her 1 kezlik durma süresi 1 yılı aşamaz” ×2 (each suspension; both source digits stay).
+- tr-a 53: “her tam yıl (1 yıl) kıdem” ×2 (FAQ and blockquote). “1 yıl başına” was left.
+- tr-b 10: “kusurda en çok gerçek zarar tutarı kadar (1 kat)”. The 5 and the 3 were not touched.
+
+### Skipped
+- tr-a 4. “1,57 milyon TWD” would replace the pinned byte string `TWD 1.57M` (`GUIDANCE_BIO_PRESERVED_TERMS`, `guidance-team-bios.test.ts`). The verb error in that sentence is tr-a 7 and was fixed.
+- tr-a 36. Q16–Q20 were not promoted to headings, and the U+200B blank lines were not removed. Heading levels, block counts and ZWSP counts are locked to the Korean source. Measured ZWSP lines already match (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). ACCEPTED-ROUND: do not add headings or merge blocks. The blog close in that stretch is tr-a 37 and was rephrased inside the existing paragraph.
+- tr-b 25. “Piyasa durumunun yanı sıra” was not merged with the following blocks in 013 or 015. The Korean source and the English file split those clauses the same way, and the checker compares block counts. 013/015 wording rows were applied inside the existing blocks.
+- Verdict, 008 and 009 `url` Hangul slugs. Canonical source metadata. Not rewritten.
+
+## Systemic patterns
+
+- `sabitlemek` for determine/establish (tr-b verdict). 28 replacements in 007, 010, 011 and 012 (`belirlemek` / `saptamak`). Physical `hareket` in 010/012 (vehicle movement, the trip record, “harekete geçmek”) was left. The two response/practice uses were tr-b 2 and 3 only.
+- `özne` for 主體 (tr-b verdict). 12: 004 “Sorumluluk öznesi”, “hukuki özne”, “ayrı hukuki özne”, “tüzel kişi özne”, “aynı hukuki özne”, “başvuru öznesi” ×2, “hangi özneye”; 011 “üstlenecek özne” ×2 and “üstlenen özne”; 014 “düzenleyen özneyle”. 004 was not a quoted row; the verdict describes the calque, so the same words there were swept.
+- Statutory requirements “dolmak / toplanmak” (tr-b verdict, and tr-a 28 / 46). 12: 001 “koşullar toplanmışsa”, “başka koşulların dolması”, “uygulama koşulları dolmuşsa”; 004 “koşulları dolmuşsa” ×3; 007 “şartlarını topladığı”, “doğuş şartları toplanmışsa”; 010 “şartları toplanmışsa”, “unsurlarını doldurabilecekse”; 014 “şartın dolduğu”; 016 “şartlar dolduğunda” ×2. “Kıdem dolmuş” and “yasama süresi dolmuş” were left. 013 “sorular aşağıda toplanmıştır” is “compiled” and was left.
+- `başvurmak` with a registration as subject, or a bare object (tr-a 26/28/32, tr-b 51). Fesih tescili ×2, şube tescilinin silinmesi, öğrenciler, aile oturması, iflasın açılması istemi (including the leftover “İflas ilanı başvurulup”), yatırım iznine, çalışma iznine, oturma belgesine. “Çalışma izni başvurusu” as a noun was left.
+- English office name inside a Turkish sentence (tr-a 3, 22, 41). Ministry intro and experience line, Legal Aid experience line, Paralegal role, Senior Paralegal ×2, Taiwan Stock Exchange, Invest Taiwan. The English name stays in parentheses where the bio test requires the byte string. OUR TEAM / OFFICES / full profile were already EKİBİMİZ / OFİSLER / Tam profil (İngilizce).
+- `Hovering uluslararası ekibi` → `Hovering’in uluslararası ekibi`: 13 (team title, lawyers title, and 11 column link labels).
+- `Çin adı` → `Çince adı`: 4 (guidance firm paragraph and 001). “Çin kıtasından” in 017 was left; that is mainland China.
+- `Sanayi yeniliği tüzüğü` → `Sanayi Yeniliği Yasası`: 5 in 004, including the source-link label. The URL was not changed.
+- Contact line without the four languages (tr-b 26, and the same sentence in 003, 005 and 018). 5. Each still says a reply time is not promised. Consultation languages stay İngilizce, Çince (中文), Japonca, Korece.
+- Blog register (tr-a 37, 52, and the 008 close). 003: four sentences inside the existing Q16–Q20 blocks. 008: opening, the “biliyor” line, the table lead-in, the case lead-in, the anecdote (representation, not luck), the two split glosses joined back into one term, and the closing periods. First-person case narration where it states a fact was kept. 006’s colloquial voice was left; the reviewer called it native, and only the “diğerleri yanında” and “en çok … kadar” rows were in scope.
+- `dâhil` circumflex (tr-b verdict, cheap P3). 4 bare “dahil” in 013, 015 and 016. Existing circumflex forms were not touched.
+- Gender. Turkish does not mark Wei Tseng on the verb. No feminine form was invented. The male manager in 008 and the male client in 010 stay male.
+
+## Checker and digits
+
+`numbers` compares a multiset to the Korean file. Forms that drop a counted 1 fail. The rewrites above keep that digit. The run is `summary PASS 18/18`. WARNs above the tail (extra years, 수사미해석) were already in the pack; this pass did not add a FAIL.
+
+## Reviewer points not followed
+
+- tr-a 4. `TWD 1.57M` is a pinned product string. A Türkiye gloss in parentheses would still have to keep that byte sequence; the suggested replacement deletes it. The verb was fixed instead.
+- tr-a 6, 31, 53 and tr-b 10. The awkward glued “1” is real. Deleting it fails the number checker, because the Korean source contains those digits. The rewrite keeps the digit and fixes the reading around it.
+- tr-a 36 and the U+200B “pad” are not a Turkish-only defect. The counts match the Korean source. Treating them as disposable blank lines, or promoting Q16–Q20 to headings, would fail the checker.
+- tr-a 47’s request to delete the difficulty row. The English source has the same row. Deleting it changes the table. The cells were softened instead.
+- tr-b 25. The short blocks are the English and Korean structure. Merging them would drop `nonEmptyBlocks`.
+- tr-a 1’s “garantili görünürlük”. The sentence is negated, but `/garanti/i` fails the Turkish guidance test. “Görünürlük güvencesi vaat etmez” keeps the meaning.
+- tr-b 8 quotes “mahkemede sabitlenir”. The file has “mahkemece sabitlenir” (by the court). It was changed to “mahkemece belirlenir”.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-tr --lang tr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-tr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+That 25 is the run before this log existed. Re-running only `git status --short | wc -l` after the file was written prints `26` (this log, untracked). No test expectation needed a wording update.

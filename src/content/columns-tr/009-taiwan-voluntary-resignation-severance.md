@@ -91,11 +91,11 @@ Bu yüzden Tayvan’daki iş uyuşmazlıklarında (勞資糾紛)
 
 **zamanlama** çok önemlidir.
 
-Çoğu halde önceden hazırlanan taraf haklarını korumuş olur.
+Önceden hazırlanan taraf, haklarını korumak bakımından daha elverişli durumdadır; bundan belirli bir sonuç çıkmaz.
 
 ---
 
 > Ayrıca bakınız:
 > - [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
-> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Hovering’in uluslararası ekibi](/tr/lawyers)
 > - [Hangi işleri yürütürüz](/tr/services)

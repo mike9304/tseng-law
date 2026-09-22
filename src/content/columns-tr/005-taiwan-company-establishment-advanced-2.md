@@ -1,5 +1,5 @@
 ---
-title: "Tayvan’da şirket kuruluşu – derinleştirme 2"
+title: "Tayvan’da şirket kuruluşu — ileri konular 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
 date_display: "13 Eylül 2025"
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
 ---
 
-# Tayvan’da şirket kuruluşu – derinleştirme 2
+# Tayvan’da şirket kuruluşu — ileri konular 2
 
 ![Öne çıkan görsel](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-[Tayvan’da şirket kuruluşu – temeller](/tr/columns/taiwan-company-establishment-basics) ile [Tayvan’da şirket kuruluşu – derinleştirme 1](/tr/columns/taiwan-company-establishment-advanced-1) yazılarını okuyanlar, Tayvan’da şirket kuruluşu – derinleştirme 2 (公司設立) yazısına da bakabilir.
+[Tayvan’da şirket kuruluşu – temeller](/tr/columns/taiwan-company-establishment-basics) ile [Tayvan’da şirket kuruluşu – derinlemesine bölüm 1](/tr/columns/taiwan-company-establishment-advanced-1) yazılarını okuyanlar, Tayvan’da şirket kuruluşu — ileri konular 2 (公司設立) yazısına da bakabilir.
 
 ​
 
@@ -71,17 +71,17 @@ Bazı bankalar ek gerekler koyabilir, örneğin kuruluştan sonra hesabın en az
 
 A. İlk çalışan: başvuru, olağan yurt dışı Çinli veya yabancı yatırım işletmesinde yönetim işi (一般僑外投資事業主管工作) olarak sunulur. Aşağıdaki B noktasındaki “uzmanlık veya teknik nitelikte iş” ölçütü uygulanmaz, ancak yurt dışı Çinli veya yabancı koyulan sermayesi 1/3’ü aşan bir şirketin işletme sorumlusu (經理人) olmak gibi muhatap koşulları ile işverenin sermaye ve ciroya ilişkin sonuç koşulları uygulanır (inceleme ölçütleri madde 38 ve 39).
 
-B. İkinci çalışandan itibaren kısıtlar vardır: istihdam edilen kişi sayısı 1 kişiyi aşarsa, çalışanın ilgili eğitimi ve deneyimi, istihdam ortalama ücret kuralları ile şirketin sermaye ve ciro kuralları “uzmanlık veya teknik iş”e (專門性或技術性工作) göre işlenir.
+B. İkinci çalışandan itibaren kısıtlar vardır: istihdam edilen yabancı uyruklu kişi sayısı 1 kişiyi aşarsa, çalışanın ilgili eğitimi ve deneyimi, ortalama ücret ile şirketin sermaye ve ciro kuralları “uzmanlık veya teknik iş”e (專門性或技術性工作) göre işlenir.
 
 Tayvan Çalışma Bakanlığı (勞動部) sitesine bakınız: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 
 ​
 
-Başka sorularınız varsa İletişim formundan yazabilirsiniz; yanıt süresi vaat edilmez.
+Başka sorularınız varsa İletişim formundan İngilizce, Çince (中文), Japonca veya Korece yazabilirsiniz; yanıt süresi vaat edilmez.
 
 ---
 
 > Ayrıca bakınız:
 > - [Hangi işleri yürütürüz](/tr/services)
-> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Hovering’in uluslararası ekibi](/tr/lawyers)
 > - [Büroya nasıl ulaşırsınız](/tr/contact)

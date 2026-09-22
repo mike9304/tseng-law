@@ -25,7 +25,7 @@ De volgende vragen en antwoorden beogen personen te helpen die een vennootschaps
 
 **1. Ik wil een vennootschap oprichten, maar heb nog geen inschrijvingsadres gevonden. Is de oprichting toch mogelijk?**
 
-Wanneer een buitenlander in Taiwan een vennootschap opricht, moet hij of zij een investeringsplan (投資計畫書) indienen bij het Dienst Investeringstoetsing van het ministerie van Economische Zaken (經濟部投資審議司) ter toetsing.
+Wanneer een buitenlander in Taiwan een vennootschap opricht, moet hij of zij een investeringsplan (投資計畫書) indienen bij de Dienst Investeringstoetsing van het ministerie van Economische Zaken (經濟部投資審議司) ter toetsing.
 
 De Dienst Investeringstoetsing moet nagaan of het betreffende kapitaal (資本額) werkelijk voor investeringsdoeleinden wordt gebruikt.
 
@@ -35,25 +35,25 @@ Bij het opstellen van het investeringsplan hoeft het exacte vennootschapsadres n
 
 Wanneer later bij de bank de voorbereidingsrekening van de vennootschap (公司籌備處帳戶) wordt geopend, toetsen talrijke banken echter de huurovereenkomst (租賃契約) en inspecteren zij ter plaatse het vennootschapsadres.
 
-Een medewerker van een Taiwanese bank heeft mij persoonlijk gezegd dat
+Een medewerker van een Taiwanese bank heeft mij persoonlijk het volgende gezegd.
 
-talrijke buitenlanders recent na de rekeningopening verdwijnen, zodat de rekeningopening steeds strenger wordt behandeld.
+Talrijke buitenlanders verdwijnen recent na de rekeningopening, zodat de rekeningopening steeds strenger wordt behandeld.
 
-Reeds in de grondslagtekst heeft een lezeres aangegeven dat de rekeningopening de moeilijkste stap bleek; ik ben het daarmee eens.
+In de grondslagtekst is al aangegeven dat de rekeningopening de moeilijkste stap bleek; dat klopt met de praktijk.
 
 Omdat de gevallen van witwassen (洗錢) in Taiwan zeer talrijk zijn, wordt de opening van bankrekeningen steeds strenger.
 
 **Toelichting**:
 
-Omdat de toetsing van het investeringsplan ook tijd vergt,
+De toetsing van het investeringsplan vergt ook tijd.
 
-dient u het investeringsplan op te stellen en tegelijk het inschrijvingsadres van de vennootschap te zoeken.
+Stel daarom het investeringsplan op en zoek tegelijk het inschrijvingsadres van de vennootschap.
 
 Volgens artikel 9 van de Wet inzake investeringen door buitenlanders (外國人投資條例) moet de goedgekeurde inbreng volledig binnen de door de bevoegde autoriteit vastgestelde termijn (核定期限) aankomen; de termijn moet in de goedkeuringsakte van elk dossier worden bevestigd (in de praktijk wordt zij vaak rond 1 jaar vastgesteld).
 
-Binnen deze termijn blijft, nadat het vennootschapsadres is gevonden en de huurovereenkomst is gesloten,
+Binnen deze termijn, nadat het vennootschapsadres is gevonden en de huurovereenkomst is gesloten, blijft voldoende tijd over.
 
-voldoende tijd om bij de bank de voorbereidingsrekening te openen en het kapitaal over te maken.
+Die tijd gebruikt u om bij de bank de voorbereidingsrekening te openen en het kapitaal over te maken.
 
 ​
 
@@ -87,23 +87,23 @@ Over dit punt dient u grondig te overleggen met een advocaat in Taiwan.
 
 **4. Waarop moet worden gelet wanneer het inschrijvingsadres van de vennootschap (bijvoorbeeld een horecalokaal) wordt gehuurd?**
 
-De vennootschapsoprichting duurt ongeveer **3 maanden**, de verkrijging van de werkvergunning (工作許可) en van de verblijfskaart ongeveer **1 maand**,
+De vennootschapsoprichting duurt ongeveer **3 maanden**, de verkrijging van de werkvergunning (工作許可) en van de verblijfskaart ongeveer **1 maand**.
 
-daarom dient u de ingangsdatum van de overeenkomst zo laat mogelijk te plaatsen.
+Plaats de ingangsdatum van de overeenkomst daarom zo laat mogelijk.
 
 Bovendien verleent de verhuurder in huurovereenkomsten voor winkelpanden in Taiwan de huurder vaak een **inrichtingsperiode** (裝潢期間).
 
 Dit is een van huur vrijgestelde periode; u kunt daarover onderhandelen.
 
-Voor een buitenlander is het huren van een winkelpand niet eenvoudig, en de waarborgsom (押金) in Taiwan is eerder laag (gewoonlijk 2 maanden), zodat de bescherming van de verhuurder beperkt is;
+Voor een buitenlander is het huren van een winkelpand niet eenvoudig, en de waarborgsom (押金) in Taiwan is eerder laag (gewoonlijk 2 maanden huur), zodat de bescherming van de verhuurder beperkt is;
 
 verhuurders aarzelen daarom om aan buitenlanders te verhuren.
 
 Daarom raad ik aan het exploitatieadres vroeg te zoeken.
 
-Verloopt de onderhandeling met de verhuurder niet soepel,
+Verloopt de onderhandeling met de verhuurder niet soepel, dan is een extra zekerheid bespreekbaar.
 
-dan kunt u zo nodig een notariële bekrachtiging van de huurovereenkomst (公證) of een aanvullende waarborgsom voorstellen.
+U kunt dan het notarieel laten vastleggen van de huurovereenkomst (公證) of een aanvullende waarborgsom voorstellen.
 
 ​
 

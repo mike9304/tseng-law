@@ -26,9 +26,9 @@ Hieronder staat wanneer die vergoeding verschuldigd is en wanneer niet.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Dat weten velen van u al.
+Dat beginsel is algemeen bekend.
 
-In sommige andere landen — Korea bijvoorbeeld — moet de vennootschap een ontslagvergoeding betalen wanneer werknemers vertrekken
+In sommige andere landen — Korea bijvoorbeeld — moet de vennootschap een ontslagvergoeding betalen wanneer werknemers vertrekken.
 
 In Taiwan ligt dat anders:
 
@@ -48,15 +48,15 @@ dan kan de vennootschap ontslaan zonder ontslagvergoeding te betalen.
 
 ​
 
-Ik vat dit voor u in een eenvoudige tabel samen.
+De onderstaande tabel vat dit samen.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 | **Soort** | **Economisch ontslag (資遣員工, 經濟解僱)** | **Tuchtontslag (解僱員工, 懲戒解僱)** | **Eigen ontslag van de werknemer**  **員工自請離職** |
 | Betekenis | Bestaat bij de werkgever wegens de bedrijfssituatie behoefte aan personeelsaanpassing, dan ligt de grond in het ondernemingsdomein van de werkgever en niet in de verantwoordelijkheid van de werknemer. Daarom moet de werkgever de aankondigingstermijn (預告期間) naleven en ontslagvergoeding betalen, om nadelen van de werknemer evenwichtig te vereffenen. | Pleegt de werknemer een onrechtmatige of ongepaste handeling, dan kan de werkgever de arbeidsovereenkomst (勞動契約) zonder voorafgaande aankondiging dadelijk beëindigen en hoeft hij geen ontslagvergoeding te betalen. Dit is 1 van de tuchtbevoegdheden van de werkgever. | De werknemer is vrij de overeenkomst te allen tijde te beëindigen, maar moet naar de duur van de tewerkstelling de aankondigingstermijn naleven, zodat de werkgever overdracht en vervanging kan zoeken. |
-| Voorwaarden | Aanwezig  (artikel 11 van de Taiwanese wet op de arbeidsnormen) | Aanwezig  (artikel 12 van de Taiwanese wet op de arbeidsnormen) | Geen |
+| Voorwaarden | Ja (artikel 11 van de Taiwanese wet op de arbeidsnormen) | Ja (artikel 12 van de Taiwanese wet op de arbeidsnormen) | Geen |
 | Voorafgaande aankondiging | Vereist | Niet vereist | Vereist |
-| Moeilijkheid | Of ontslagvergoeding verschuldigd is, staat in de volgende rij | Of ontslagvergoeding verschuldigd is, staat in de volgende rij | Of ontslagvergoeding verschuldigd is, staat in de volgende rij |
+| Moeilijkheid | Eenvoudig | Moeilijk | Eenvoudig |
 | Of de vennootschap ontslagvergoeding (資遣費) moet betalen | Vereist | Niet vereist | Niet vereist |
 |  | Taiwanese wet op de arbeidsnormen artikel 11 (勞動基準法第11條): Tenzij 1 van de volgende gevallen zich voordoet, mag de werkgever de arbeidsovereenkomst ook na voorafgaande kennisgeving aan de werknemer niet beëindigen.  1. Stillegging van de activiteit (歇業) of overdracht van de onderneming (轉讓)  2. Verliezen (虧損) of inkrimping van de activiteit (業務緊縮)  3. Overmacht vereist een onderbreking van de activiteit van 1 maand of langer  4. De aard van de activiteit vereist personeelsvermindering, en de ontslagen persoon kan niet naar een andere passende functie worden overgeplaatst  5. Een bepaalde werknemer kan het voor de functie vereiste werk niet bevredigend vervullen | Taiwanese wet op de arbeidsnormen artikel 12 (勞動基準法第12條): De werkgever kan zonder voorafgaande kennisgeving ontslaan wanneer de werknemer onder 1 van de volgende gevallen valt.  1. Wie bij het sluiten van de arbeidsovereenkomst onjuiste opgaven doet, de werkgever misleidt en het gevaar van schade voor de onderneming bestaat  2. Wie tegenover de werkgever, diens familie, diens vertegenwoordiger (代理人) of andere collega's geweld gebruikt of hen zwaar beledigt  3. Wie onherroepelijk tot een gevangenisstraf van bepaalde duur (有期徒刑) of een zwaardere straf is veroordeeld, zonder dat een voorwaardelijke straf (緩刑) is uitgesproken of omzetting in geldboete (易科罰金) is toegestaan  4. Ernstige schending van de arbeidsovereenkomst of van de arbeidsregels  5. Wie machines, gereedschap, grondstoffen, producten of andere goederen van de werkgever opzettelijk verbruikt of technische en handelsgeheimen van de werkgever opzettelijk openbaart en de werkgever schade berokkent  6. Ongewettigde afwezigheid (曠工) zonder geldige reden gedurende 3 opeenvolgende dagen, of gedurende 6 dagen of meer in 1 maand |  |
 
@@ -82,7 +82,7 @@ en erop letten niet in de bedoeling van de vennootschap te trappen.
 
 ​
 
-Ik schets een zaak die ik heb behandeld.
+Een voorbeeld uit de praktijk laat zien hoe dat kan lopen.
 
 Er is de bekende vennootschap A met bijkantoren in heel Taiwan.
 
@@ -134,7 +134,7 @@ had de vennootschap veel geld gebracht
 
 en werkte elke dag gewetensvol,
 
-waarom hij deze onredelijke eis sterk afwees.
+Daarom wees hij deze onredelijke eis krachtig af.
 
 B weigerde dit te schrijven,
 
@@ -208,9 +208,9 @@ of werknemers naar merkwaardige functies overplaatst,
 
 ​
 
-Wanneer u in Taiwan werkt,
+Wanneer u in Taiwan werkt, is de ontslagvergoeding moeilijker te verkrijgen dan men denkt.
 
-De ontslagvergoeding is moeilijker te verkrijgen dan men denkt.
+Die vergoeding volgt niet vanzelf.
 
 Sluit niet licht een compromis met de vennootschap.
 

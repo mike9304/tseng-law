@@ -1053,7 +1053,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japans (日本語)',
       ko: 'Koreaans (한국어)',
       'needs-method-confirmation':
-        'Geen van de vier talen is bruikbaar — communicatiekanaal moet worden bevestigd',
+        'Ik spreek geen van de vier talen — het communicatiekanaal moet worden bevestigd',
     },
   },
   pl: {

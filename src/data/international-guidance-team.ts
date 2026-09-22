@@ -2753,7 +2753,7 @@ export const guidanceTeamBios: Record<
         'Ondersteunt de uitwisseling tussen afdelingen via documentsystemen en werkstromen, op grond van een opleiding informatica.',
       ],
       education: ['Bachelordiploma (B.S.) informatica, National Cheng Kung University'],
-      experience: ['Korea-operaties, Hovering International Law Firm'],
+      experience: ['Werkzaamheden Korea, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Uitgelichte afbeelding](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Wie [Vennootschapsoprichting in Taiwan – grondslagen](/nl/columns/taiwan-company-establishment-basics) en [Vennootschapsoprichting in Taiwan – verdieping deel 1](/nl/columns/taiwan-company-establishment-advanced-1) heeft gelezen, kan eveneens Vennootschapsoprichting in Taiwan – verdieping deel 2 (公司設立) ter kennis nemen.
+Dit deel sluit aan op [Vennootschapsoprichting in Taiwan – grondslagen](/nl/columns/taiwan-company-establishment-basics) en op [Vennootschapsoprichting in Taiwan – verdieping deel 1](/nl/columns/taiwan-company-establishment-advanced-1). Het is verdieping deel 2 (公司設立).
 
 ​
 
@@ -37,7 +37,7 @@ Vraag vóór de kapitaalovermaking (資本金匯款) inlichtingen bij uw eigen b
 
 **​**
 
-**2. Mag u bij de storting van het maatschappelijk kapitaal Taiwanese dollars (新臺幣, TWD) van uw persoonlijke rekening in Taiwan overmaken naar de voorbereidingsrekening van de Taiwanese vennootschap?**
+**2. Mag u bij de storting van het maatschappelijk kapitaal nieuwe Taiwanese dollars (新臺幣, TWD) van uw persoonlijke rekening in Taiwan overmaken naar de voorbereidingsrekening van de Taiwanese vennootschap?**
 
 Dat is mogelijk, maar u moet stukken overleggen die de herkomst van de in Taiwan verworven TWD-middelen staven.
 
@@ -69,7 +69,7 @@ Bepaalde banken kunnen aanvullende eisen stellen, bijvoorbeeld een gebruiksduur 
 
 **5. Kan de vennootschap buitenlandse werknemers in dienst nemen?**
 
-A. Eerste werknemer: het verzoek wordt ingediend als leidinggevende arbeid in een gewone onderneming met investering van overzeese Chinezen of buitenlanders (一般僑外投資事業主管工作). De maatstaf van de “gespecialiseerde of technische arbeid” van punt B hieronder is niet van toepassing, maar wel de adressaatvoorwaarden, waaronder die van bestuurder (經理人) van een vennootschap waarvan de inbreng van overzeese Chinezen of buitenlanders 1/3 overschrijdt en de resultaatsvoorwaarden van de werkgever inzake kapitaal en omzet (toetsingsnormen art. 38 en art. 39).
+A. Eerste werknemer: het verzoek wordt ingediend als leidinggevende arbeid in een gewone onderneming met investering van overzeese Chinezen of buitenlanders (一般僑外投資事業主管工作). De maatstaf van de “gespecialiseerde of technische arbeid” van punt B hieronder is niet van toepassing, maar wel de adressaatvoorwaarden, waaronder die van bestuurder (經理人) van een vennootschap waarvan de inbreng van overzeese Chinezen of buitenlanders 1/3 overschrijdt en de resultaatvoorwaarden van de werkgever inzake kapitaal en omzet (toetsingsnormen art. 38 en art. 39).
 
 B. Vanaf de volgende werknemer gelden beperkingen: neemt de vennootschap meer dan 1 persoon met een buitenlandse nationaliteit in dienst, dan gelden de opleiding en de ervaring van de werknemer, het gemiddelde aanwervingsloon en de regels over kapitaal en omzet van de vennootschap voor de “gespecialiseerde of technische arbeid” (專門性或技術性工作).
 

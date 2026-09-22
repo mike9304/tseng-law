@@ -1169,8 +1169,8 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Założenie i struktura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) została założona w 2016 r. przez adwokatów, którzy studiowali na National Taiwan University (國立臺灣大學). Chińska nazwa 昊鼎 łączy znak 昊 („szerokie niebo”) ze znakiem 鼎 („trwała podstawa”) i opisuje kierunek kancelarii od założenia.',
-            'Mamy biura w Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Biuro w Kaohsiung koncentruje się na zarządzaniu przedsiębiorstwem i prowadzi spory cywilne, karne i administracyjne. Biuro w Taichung prowadzi sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Biuro w Pingtung otwarto w 2017 r. na potrzeby lokalne.',
-            'Oprócz pracy adwokackiej od 2020 r. istnieje także Hovering Accounting Office, które oferuje księgowość i planowanie podatkowe przedsiębiorcom i osobom z majątkiem.',
+            'Mamy biura w Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Biuro w Kaohsiung koncentruje się na ładzie korporacyjnym i prowadzi spory cywilne, karne i administracyjne. Biuro w Taichung prowadzi sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Biuro w Pingtung otwarto w 2017 r. na potrzeby lokalne.',
+            'Oprócz pracy adwokackiej od 2020 r. istnieje także Hovering Accounting Office, które oferuje księgowość i planowanie podatkowe przedsiębiorcom i zamożnym osobom prywatnym.',
           ],
         },
         {
@@ -1368,7 +1368,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Miejsce przechowywania i dostęp',
           paragraphs: [
-            'Treść wysyłki jest przechowywana w miejscu niedostępnym publicznie. Tylko uprawnione osoby w kancelarii mogą z niej korzystać, aby opracować wniosek.',
+            'Treść wniosku jest przechowywana w miejscu niedostępnym publicznie. Tylko uprawnione osoby w kancelarii mogą z niej korzystać, aby opracować wniosek.',
             'Ta strona nie daje bezwzględnej gwarancji bezpieczeństwa. Żadna droga przesyłu i żadne miejsce przechowywania nie jest całkowicie bezpieczne; wrażliwe dokumenty należy więc wysyłać dopiero po szczególnym wskazaniu adwokata.',
           ],
         },

@@ -32,7 +32,7 @@ Ten artykuł rozróżnia następujące sytuacje: założenie od nowa działalno�
 
 To, czy zezwolenie jest potrzebne, nie wynika z samej nazwy. „Logistyka” to praktyczne określenie o szerokim zasięgu; potrzeba zezwolenia nie wynika wyłącznie z nazwy spółki lub branż wpisanych w rejestrze. Jeśli spółka pobiera wynagrodzenie i przewozi cudzy towar ciężarówką, ta działalność może stanowić samochodowy przewóz towarów. Natomiast składowanie, pakowanie, eksploatację systemów, wysyłkę w charakterze nadawcy (貨主), spedycję i analogiczne działalności trzeba oceniać każdą z osobna według stosunku umownego, odpowiedzialności przewozowej, treści wynagrodzenia i rzeczywistego stanu ruchu pojazdów.
 
-Ustawa o drogach (公路法) Tajwanu reguluje działalność samochodowego transportu (汽車運輸業) jako działalność, która za wynagrodzeniem przewozi pasażerów lub towary samochodem. Spółka nie staje się więc od razu samochodowym przewozem towarów tylko dlatego, że świadczy usługę logistyczną w szerokim sensie. Odwrotnie, nawet jeśli umowę zredagowano jako spedycję lub eksploatację platformy, jeżeli spółka rzeczywiście pobiera fracht jako przewoźnik (運送人) i ponosi odpowiedzialność za przydział pojazdów, ruch i szkody w towarze, nie może uchylić się od nadzoru samą nazwą.
+Ustawa o drogach (公路法) Tajwanu reguluje działalność samochodowego transportu (汽車運輸業) jako działalność, która za wynagrodzeniem przewozi pasażerów lub towary samochodem. Spółka nie staje się więc od razu samochodowym przewozem towarów tylko dlatego, że świadczy usługę logistyczną w szerokim sensie. Natomiast nawet jeśli umowę zredagowano jako spedycję lub eksploatację platformy, jeżeli spółka rzeczywiście pobiera fracht jako przewoźnik (運送人) i ponosi odpowiedzialność za przydział pojazdów, ruch i szkody w towarze, nie może uchylić się od nadzoru samą nazwą.
 
 Przy ustalaniu zakresu działalności co najmniej następujące stosunki trzeba uporządkować konkretnie.
 
@@ -52,9 +52,9 @@ Dla zwykłego samochodowego przewozu towarów stosuje się co do zasady kapitał
 
 Gdy zwykła spółka na nowo rozpoczyna samochodowy przewóz towarów, stosuje się co do zasady kapitał minimalny 25.000.000 TWD i co najmniej 20 nowych pojazdów. Dla tego, kto poświęca się wyłącznie przeprowadzkom, stosuje się własne kryterium kapitału minimalnego 10.000.000 TWD i co najmniej 8 nowych pojazdów, a dla tego, kto działa na Kinmen albo na Lienchiang (Matsu), kapitał minimalny 10.000.000 TWD i co najmniej 5 nowych pojazdów. Przedsiębiorca, który korzysta z kryterium Kinmen albo Lienchiang, podlega ograniczeniu zasięgu działalności według zatwierdzonej strefy.
 
-Przewóz małą ciężarówką (小貨車) prowadzony przez osobę fizyczną to wąski reżim, odrębny od zwykłego zakładania spółek. Wśród wymogów jest to, że wnioskodawca ma rejestrację zameldowania we właściwym okręgu, posiada zawodowe prawo jazdy małego pojazdu i używa 1 małej ciężarówki stanowiącej własność wnioskodawcy o wieku nieprzekraczającym 2 lat. To nie jest zwykła droga, którą zagraniczna osoba prawna wchodzi w samochodowy przewóz towarów.
+Przewóz małą ciężarówką (小貨車) prowadzony przez osobę fizyczną to wąski reżim, odrębny od zwykłego zakładania spółek. Wśród wymogów jest to, że wnioskodawca ma rejestrację zameldowania we właściwym okręgu, posiada zawodowe prawo jazdy małego pojazdu i używa 1 małej ciężarówki stanowiącej własność wnioskodawcy o wieku nieprzekraczającym 2 lat. To nie jest zwykła droga, którą zagraniczna osoba prawna podejmuje samochodowy przewóz towarów.
 
-Tablice pojazdu (車輛牌照) użytku handlowego wydane przedsiębiorcy samochodowego transportu nowego założenia nie mogą być wykreślone przez zwrot (繳銷) ani przeniesione przez zmianę posiadacza w rejestrze pojazdu (過戶轉讓) przez 1 rok od daty wydania.
+Tablice pojazdu (車輛牌照) użytku handlowego wydane przedsiębiorcy samochodowego transportu nowego założenia nie mogą być wykreślone przez zwrot (繳銷) ani przeniesione przez zmianę posiadacza w rejestrze pojazdu (過戶轉讓) przez jeden rok od daty wydania.
 
 To ograniczenie dotyczy wykreślenia tablicy użytku handlowego przez zwrot oraz przeniesienia przez zmianę posiadacza w rejestrze pojazdu. Inne czynności, w tym złomowanie i wymiana pojazdu, trzeba potwierdzić osobno według obowiązujących norm właściwego organu dróg.
 
@@ -84,15 +84,15 @@ Nie. Przy nabyciu akcji zezwolenia się nie uzyskuje ani nie przenosi; spółka 
 
 ### Różnica między nabyciem akcji a cesją przedsiębiorstwa lub aktywów
 
-Przy nabyciu akcji nabywca staje się akcjonariuszem, podczas gdy spółka docelowa, podmiot uprawniony z zezwolenia, nadal istnieje jako ta sama osoba prawna. Kwota wysłana za nabycie akcji jest ceną przeniesienia akcji, nie kapitałem. Według okoliczności sprawy wcześniejsze zatwierdzenie Ministerstwa Gospodarki, zatwierdzenie sektora według art. 35 ustawy o drogach, weryfikacja przekazanej kwoty inwestycji (投資額審定) po przelewie, zmiana spółkowa akcjonariuszy, dyrektorów i odpowiedzialnego oraz wniosek o zmianę do właściwego organu dróg obsługuje się każde z osobna.
+Przy nabyciu akcji nabywca staje się akcjonariuszem, podczas gdy spółka docelowa, podmiot uprawniony z zezwolenia, nadal istnieje jako ta sama osoba prawna. Środki przelane za akcje są ceną nabycia, a nie kapitałem wpłaconym. Według okoliczności sprawy wcześniejsze zatwierdzenie Ministerstwa Gospodarki, zatwierdzenie sektora według art. 35 ustawy o drogach, weryfikacja przekazanej kwoty inwestycji (投資額審定) po przelewie, zmiana spółkowa akcjonariuszy, dyrektorów i odpowiedzialnego oraz wniosek o zmianę do właściwego organu dróg obsługuje się każde z osobna.
 
-Natomiast nawet jeśli inna osoba prawna przyjmuje cesję przedsiębiorstwa lub aktywów, licencja działalności cedenta nie przechodzi sama z siebie na cesjonariusza. Pojazdy, tablice użytku handlowego, instalacje parkingowe, umowy, pracowników, ubezpieczenia i zezwolenia eksploatacji trzeba sprawdzić każde, a zezwolenie na przygotowanie założenia, licencję działalności i inne zatwierdzenia potrzebne cesjonariuszowi trzeba uporządkować przed wykonaniem operacji.
+Natomiast nawet jeśli inna osoba prawna przyjmuje cesję przedsiębiorstwa lub aktywów, licencja działalności cedenta nie przechodzi sama z siebie na cesjonariusza. Pojazdy, tablice użytku handlowego, instalacje parkingowe, umowy, pracowników, ubezpieczenia i zezwolenia eksploatacji trzeba sprawdzić każde, a zezwolenie na przygotowanie założenia, licencję działalności i inne zatwierdzenia potrzebne cesjonariuszowi trzeba uporządkować przed zamknięciem transakcji.
 
-Cesja przedsiębiorstwa oraz zmiana organizacji, nazwy, siedziby, odpowiedzialnego, kapitału lub aktywów i instalacji parkingowych, według art. 23 rozporządzenia o zarządzaniu transportem samochodowym (汽車運輸業管理規則), muszą uzyskać zatwierdzenie właściwego organu dróg po zebraniu związanych dokumentów. Sam fakt podpisania umowy operacji lub zakończenia zmiany rejestru nie oznacza, że zatwierdzenie zmiany według norm transportu również zostało zakończone.
+Cesja przedsiębiorstwa oraz zmiana organizacji, nazwy, siedziby, odpowiedzialnego, kapitału lub aktywów i instalacji parkingowych, według art. 23 rozporządzenia o zarządzaniu transportem samochodowym (汽車運輸業管理規則), muszą uzyskać zatwierdzenie właściwego organu dróg po zebraniu związanych dokumentów. Sam fakt podpisania umowy nabycia lub zakończenia zmiany rejestru nie oznacza, że zatwierdzenie zmiany według norm transportu również zostało zakończone.
 
-### Staranność i wykonanie operacji
+### Staranność i zamknięcie transakcji
 
-Co najmniej następujące punkty trzeba potwierdzić w sposób istotny, zestawiając dowody i materiały oryginalne z rejestrami właściwego organu.
+Co najmniej następujące punkty trzeba merytorycznie potwierdzić, zestawiając dowody i materiały oryginalne z rejestrami właściwego organu.
 
 - Ważność licencji działalności, branże, strefa i warunki zatwierdzone oraz zmiany jeszcze niezałatwione
 - Stosunek własności i użytkowania pojazdów, tablice użytku handlowego, wiek, okresowy przegląd, wypadki i naruszenia
@@ -100,7 +100,7 @@ Co najmniej następujące punkty trzeba potwierdzić w sposób istotny, zestawia
 - Członkostwo w stowarzyszeniu branżowym, decyzje administracyjne (行政處分) oraz czy są zaległości podatków, opłat i kar administracyjnych (罰鍰)
 - Stosunek pracy kierowców i innych pracowników, warunki pracy, zezwolenie na pracę i ubezpieczenie społeczne
 - Ubezpieczenia pojazdu, towaru i odpowiedzialności, prawa zabezpieczenia, leasing i finansowanie
-- Ważne umowy i klauzule zmiany kontroli dotyczące nadawców, przedsiębiorców będących adresatami zlecenia, systemów i magazynów
+- Ważne umowy i klauzule zmiany kontroli dotyczące nadawców, usługodawców, dostawców systemów i magazynów
 
 W umowie ustala się oświadczenia i zobowiązania, warunki zawieszające, postępowanie, jeśli zezwolenia nie uzyskano, korektę ceny, odszkodowanie, przedmioty wydania przy zamknięciu transakcji, kapitał obrotowy i sposób przeniesienia pojazdów i umów. Kolejność potrzebnego zatwierdzenia inwestycji zagranicznej, zatwierdzenia sektora Ministerstwa Transportu, zatwierdzenia zmiany właściwego organu dróg i czynności spółkowych trzeba zgrać z warunkami zamknięcia transakcji.
 
@@ -112,13 +112,13 @@ Nie można tego ocenić jednolicie. Ocena różni się zależnie od tego, czy zl
 
 Nadawca lub spółka usług logistycznych może też powierzyć rzeczywisty przewóz tajwańskiemu przedsiębiorcy samochodowego przewozu towarów posiadającemu zezwolenie. Jednak potrzeba zezwolenia i podział odpowiedzialności różnią się zależnie od tego, czy zlecający jest tylko nadawcą lub spedytorem, czy sam staje się przewoźnikiem umowy przewozu i pobiera fracht. Rola według umowy, fakturowanie klienta, polecenie przydziału, zarządzanie kierowcami i pojazdami oraz reakcja na szkody w towarze muszą pokrywać się z rzeczywistą eksploatacją.
 
-Trzeba potwierdzić ważność licencji działalności przedsiębiorcy będącego adresatem zlecenia i zakres zezwolenia, pojazdy handlowe rzeczywiście używane, kierowców, ubezpieczenia i przedsiębiorców podzlecenia. Nie należy dopuszczać użyczenia licencji działalności ani rzeczywistego przewozu przez przedsiębiorcę bez zezwolenia. Sposób zlecenia może wymagać mniejszej początkowej inwestycji stałej niż samodzielne przygotowanie pojazdów i parkingu, lecz zależność od przedsiębiorcy posiadającego zezwolenie, poziom usługi, utratę, uszkodzenie i opóźnienie towaru, ubezpieczenie, dane osobowe i logistyczne, podzlecenie, odszkodowanie oraz procedurę przekazania danych, towaru i obsługi klienta na końcu umowy, a także związane ryzyka, trzeba ująć w umowie.
+Trzeba potwierdzić ważność licencji działalności przedsiębiorcy będącego adresatem zlecenia i zakres zezwolenia, pojazdy handlowe rzeczywiście używane, kierowców, ubezpieczenia i przedsiębiorców podzlecenia. Nie należy dopuszczać użyczenia licencji działalności ani rzeczywistego przewozu przez przedsiębiorcę bez zezwolenia. Sposób zlecenia może wymagać mniejszej początkowej inwestycji stałej niż samodzielne przygotowanie pojazdów i parkingu, lecz zależność od przedsiębiorcy posiadającego zezwolenie, poziom usługi, utratę, uszkodzenie i opóźnienie towaru, ubezpieczenie, dane osobowe i logistyczne, podzlecenie, odszkodowanie oraz procedurę przekazania danych, towaru i obsługi klienta po zakończeniu umowy, a także związane ryzyka, trzeba ująć w umowie.
 
 ### Inwestycja, zezwolenie na pracę i pobyt to odrębne czynności
 
 Nawet jeśli cudzoziemiec staje się akcjonariuszem lub inwestorem spółki docelowej, sam ten fakt nie przyznaje mu prawa do pracy ani statusu pobytu na Tajwanie. Jeśli na Tajwanie wykonuje codzienną pracę, taką jak zarządzanie spółką, sprzedaż, przydział pojazdów i obsługa klienta, musi przed rozpoczęciem pracy potwierdzić, czy potrzebuje zezwolenia na pracę zgodnego z rzeczywistą funkcją, i osobno przeprowadzić późniejszą procedurę pobytu.
 
-Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz opuszczenia Tajwanu (限令出國). Obowiązujące wytyczne Administracji Imigracyjnej Ministerstwa Spraw Wewnętrznych (內政部移民署) w sprawie zakazu wjazdu (禁止入國) ustalają na ogół, dla pracy bezprawnej, okres zakazu wjazdu 3 lat, lecz mogą mieć zastosowanie wymogi zwolnienia lub skrócenia okresu, które te same wytyczne ustalają. Wyniku nie ustala się mechanicznie tylko dlatego, że istnieje doniesienie osoby trzeciej, a właściwy organ bada fakty, normy stosowane i okoliczności każdej sprawy.
+Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz opuszczenia Tajwanu (限令出國). Obowiązujące wytyczne Administracji Imigracyjnej Ministerstwa Spraw Wewnętrznych (內政部移民署) w sprawie zakazu wjazdu (禁止入國) ustalają na ogół, dla pracy bezprawnej, 3-letni okres zakazu wjazdu, lecz mogą mieć zastosowanie wymogi zwolnienia lub skrócenia okresu, które te same wytyczne ustalają. Wyniku nie ustala się mechanicznie tylko dlatego, że istnieje doniesienie osoby trzeciej, a właściwy organ bada fakty, normy stosowane i okoliczności każdej sprawy.
 
 ## Źródła oficjalne
 

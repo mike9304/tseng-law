@@ -104,19 +104,19 @@ spółka wzięła pana B za cel.
 
 ​
 
-Pewnego dnia kadra kierownicza wezwała B na rozmowę
+Pewnego dnia kadra kierownicza wezwała pana B na rozmowę
 
-i nagle zaczęła go ganić, mówiąc, że B nie pracuje sumiennie.
+i nagle zaczęła go ganić, mówiąc, że pan B nie pracuje sumiennie.
 
-Spółka miałaby trudności,
+że spółka ma kłopoty,
 
-B powinien poświęcić się i dać przykład
+że pan B powinien się poświęcić i dać przykład
 
 oraz obniżyć wynagrodzenie i stanowisko.
 
-W przeciwnym razie B miał opuścić spółkę.
+W przeciwnym razie pan B miał opuścić spółkę.
 
-Kadra dała B kartkę A4
+Kadra dała panu B kartkę A4
 
 i poleciła, by napisał: „Ja, [imię i nazwisko], dobrowolnie obniżam stanowisko i wynagrodzenie”
 
@@ -128,7 +128,7 @@ aby poszli za nim.
 
 ​
 
-B był pracownikiem o najlepszym wyniku w regionie środkowego Tajwanu,
+Pan B był pracownikiem o najlepszym wyniku w regionie środkowego Tajwanu,
 
 przyniósł spółce dużo pieniędzy
 
@@ -136,11 +136,11 @@ i pracował każdego dnia sumiennie,
 
 dlatego mocno odrzucił to nierozsądne żądanie.
 
-B odmówił napisania tego,
+Pan B odmówił napisania tego,
 
 a na końcu kadra spółki w gniewie kazała mu odejść.
 
-B opuścił, z poczuciem krzywdy i smutku,
+Pan B opuścił, z poczuciem krzywdy i smutku,
 
 spółkę, w której był od 10 lat,
 
@@ -158,7 +158,7 @@ i sama zrezygnowała
 
 ​
 
-B jednak, po zmianie kierownictwa,
+Pan B jednak, po zmianie kierownictwa,
 
 rozpoznał, że spółka chce usuwać pracowników w niewłaściwy sposób,
 
@@ -166,7 +166,7 @@ i zauważył to wcześnie
 
 i, ponieważ już odkrył ogłoszenia o pracę przed odejściem pracowników,
 
-B w dniu, w którym udał się na rozmowę,
+Pan B w dniu, w którym udał się na rozmowę,
 
 nagrał cały przebieg telefonem komórkowym
 

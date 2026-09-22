@@ -61,17 +61,17 @@ Tytuły doniesień prasowych, publikacji internetowych i komentarzy prawnych dot
 
 **Czy koreański student doznał pęknięcia krążka międzykręgowego, wykonując martwy ciąg 90 kg podczas treningu personalnego?**
 
-Praktyczne znaczenie tej sprawy polega na tym, że pokazuje, iż odpowiedzialność nie jest ustalana od razu samym faktem, że uraz nastąpił na siłowni. Treść obowiązku bezpieczeństwa (安全義務), który ciąży na usługodawcy, konkretny akt wskazówki i naruszenie obowiązku staranności (注意義務), związek przyczynowy między urazem a zachowaniem oraz zakres szkody ocenia się na podstawie dokumentów każdej sprawy. Warunki i terminy postępowania karnego i postępowania cywilnego są też odrębne, więc zaraz po wypadku należy porządkować ślady osobno.
+Praktyczne znaczenie tej sprawy polega na tym, że pokazuje, iż odpowiedzialność nie jest ustalana od razu samym faktem, że uraz nastąpił na siłowni. Treść obowiązku bezpieczeństwa (安全義務), który ciąży na usługodawcy, konkretna wskazówka oraz naruszenie obowiązku staranności (注意義務), związek przyczynowy między urazem a zachowaniem oraz zakres szkody ocenia się na podstawie dokumentów każdej sprawy. Warunki i terminy postępowania karnego i postępowania cywilnego są też odrębne, więc zaraz po wypadku należy porządkować ślady osobno.
 
 Poniższe jest ogólną informacją do wyjaśnienia sporów o uraz na siłowni na Tajwanie; nie jest opinią prawną w konkretnej sprawie. Rzeczywiste prawa i sposób działania mogą się różnić według stosunku umownego, okoliczności wypadku, przyczyny i stopnia urazu, zachowania stron, warunków polisy, zachowanych dowodów i prawa właściwego.
 
 ## 1. Po urazie na siłowni na Tajwanie, jakie procedury prawne można rozważyć?
 
-[Art. 7 tajwańskiej ustawy o ochronie konsumentów (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanowi, że gdy przedsiębiorstwo świadczy usługę, musi sprawić, by ta usługa miała bezpieczeństwo, którego można rozsądnie oczekiwać według kryterium zawodowego lub technicznego z chwili świadczenia.
+[Art. 7 tajwańskiej ustawy o ochronie konsumentów (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanowi, że gdy przedsiębiorstwo świadczy usługę, musi zapewnić poziom bezpieczeństwa, jakiego można rozsądnie oczekiwać według kryterium zawodowego lub technicznego z chwili świadczenia.
 
 Nie oznacza to, że odpowiedzialność przedsiębiorstwa lub trenera jest uznawana za każdym razem, gdy uraz nastąpi na siłowni. Należy oceniać w każdej sprawie osobno, jaki obowiązek staranności konkretnie istniał, czy został naruszony, czy jest związek przyczynowy między naruszeniem a urazem, czy powstała rzeczywista szkoda, jakie zarzuty ma strona przeciwna i czy istnieje dowód na poparcie każdego twierdzenia i każdy zarzut.
 
-Jeśli spełnione są ustawowe przesłanki przestępstwa uszkodzenia ciała z nieostrożności (過失傷害), można rozważyć wniosek o ściganie (告訴). Można też rozważyć cywilne roszczenie o odszkodowanie, lecz która podstawa stosuje się spośród odpowiedzialności umownej, odpowiedzialności deliktowej (侵權行為) i odpowiedzialności ochrony konsumenta, oraz zakres odpowiedzialności, różnią się według konkretnych faktów. To, że w jednym wypadku można rozważyć kilka procedur, nie oznacza, że trzeba je wszystkie przejść, ani że sukces jednej ze stron jest z góry przesądzony.
+Jeśli spełnione są ustawowe przesłanki przestępstwa uszkodzenia ciała z nieostrożności (過失傷害), można rozważyć wniosek o ściganie (告訴). Można też rozważyć cywilne roszczenie o odszkodowanie, lecz która podstawa ma zastosowanie — odpowiedzialność umowna, deliktowa (侵權行為) czy z ustawy o ochronie konsumentów — oraz jaki jest zakres odpowiedzialności, zależy od konkretnych faktów. To, że w jednym wypadku można rozważyć kilka procedur, nie oznacza, że trzeba je wszystkie przejść, ani że sukces jednej ze stron jest z góry przesądzony.
 
 ## 2. Jakie terminy obowiązują przy wniosku o ściganie i cywilnym roszczeniu o odszkodowanie?
 
@@ -97,9 +97,9 @@ Składniki szkody, których można dochodzić, są następujące. Rzeczywiste uz
 2. **Koszty opieki lub asysty**: To, czy opieka była konieczna w świetle stopnia urazu i przebiegu leczenia oraz czy okres i koszt były odpowiednie, ustala się na podstawie dokumentacji medycznej i dowodów wydatków.
 3. **Koszty transportu**: Kosztów koniecznych, by dojeżdżać do placówki medycznej na leczenie, dowodzi się rejestrem przejazdów, pokwitowaniami i podobnymi dokumentami.
 4. **Szkoda z utraty zdolności do pracy (勞動能力減損)**: Jeśli uznane są następstwa i trwałe obniżenie zdolności do pracy, można oceniać łącznie dokumentami medycznymi i zawodowymi, stopniem niepełnosprawności, zawodem i dochodami oraz pozostałym okresem pracy. Sam procent niepełnosprawności nie ustala odszkodowania, a strata nie jest liczona automatycznie do chwili emerytury.
-5. **Utrata dochodu w okresie powrotu do zdrowia (收入損失)**: Okres, w którym rzeczywiście nie można było pracować z powodu leczenia lub odpoczynku, oraz wynikające z tego obniżenie dochodu, należy dowieść dokumentami wynagrodzenia, podatkowymi, obecności w pracy itd.
+5. **Utrata dochodu w okresie powrotu do zdrowia (收入損失)**: Okresu, w którym rzeczywiście nie można było pracować z powodu leczenia lub odpoczynku, oraz wynikającego z tego obniżenia dochodu należy dowieść dokumentami wynagrodzenia, podatkowymi, obecności w pracy itd.
 6. **Szkoda niemajątkowa (非財產上損害)**: Kwotę za cierpienie moralne ustala sąd na podstawie czynników każdej sprawy, jak stopień urazu, okres leczenia, następstwa i konkretne okoliczności strony.
-7. **Odszkodowanie karne (懲罰性賠償金)**: Istnieje przepis, według którego w sporze, do którego stosuje się ustawę o ochronie konsumentów, jeśli szkodę wywołał zamiar przedsiębiorstwa, można żądać do 5-krotności rzeczywistej szkody; jeśli rażące niedbalstwo, do 3-krotności; a przy zwykłym niedbalstwie — do wysokości rzeczywistej szkody (1-krotność). Czy [art. 51 tajwańskiej ustawy o ochronie konsumentów](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) stosuje się do sprawy oraz czy jest rzeczywiste odszkodowanie i w jakiej kwocie, zależy od oceny sądu dotyczącej konkretnych przesłanek i dowodów.
+7. **Odszkodowanie karne (懲罰性賠償金)**: Istnieje przepis, według którego w sporze, do którego stosuje się ustawę o ochronie konsumentów, jeśli przedsiębiorstwo wyrządziło szkodę umyślnie, można żądać do 5-krotności rzeczywistej szkody; przy rażącym niedbalstwie — do 3-krotności; a przy zwykłym niedbalstwie — do wysokości rzeczywistej szkody (1-krotność). Czy [art. 51 tajwańskiej ustawy o ochronie konsumentów](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) stosuje się do sprawy oraz czy odszkodowanie karne zostanie rzeczywiście zasądzone i w jakiej kwocie, zależy od oceny sądu dotyczącej konkretnych przesłanek i dowodów.
 
 ## 5. Nawet jeśli siłownia ma ubezpieczenie odpowiedzialności (責任保險), czy istnienie odszkodowania i kwota mogą być sporne?
 
@@ -109,7 +109,7 @@ W szczególności utrata zdolności do pracy, obniżenie dochodu w okresie powro
 
 Jeśli doznali Państwo urazu na siłowni, ważne jest, by najpierw otrzymać potrzebne leczenie, zachować dokumenty, które jeszcze można zabezpieczyć, zanim znikną, oraz wcześnie zebrać indywidualne wskazówki o terminach i procedurach, które mogą stosować się do sprawy. Negocjacja, skarga konsumencka (消費申訴) lub mediacja (調解), wniosek o ściganie i cywilne żądanie odszkodowania są środkami, z których można skorzystać zależnie od sprawy, i nie są procedurami, które zawsze trzeba przejść w całości.
 
-Upadek na terenie lokalu, szkoda zdrowotna przez żywność i uraz przy korzystaniu z usługi zawodowej mogą również rodzić spór o obowiązek bezpieczeństwa, związek przyczynowy, szkodę i dowody. Wyniku sprawy siłowni nie można jednak przenosić wprost na inny wypadek, więc umowę, zachowanie i normy właściwe dla każdego przypadku należy zbadać osobno.
+Upadek na terenie lokalu, uszczerbek na zdrowiu spowodowany żywnością i uraz przy korzystaniu z usługi zawodowej mogą również rodzić spór o obowiązek bezpieczeństwa, związek przyczynowy, szkodę i dowody. Wyniku sprawy siłowni nie można jednak przenosić wprost na inny wypadek, więc umowę, zachowanie i normy właściwe dla każdego przypadku należy zbadać osobno.
 
 ---
 

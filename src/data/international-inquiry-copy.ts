@@ -1095,7 +1095,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Ten artykuł jest opublikowany tylko w języku {language}; łącze otwiera stronę oryginalną.',
     unavailableTranslationNotice:
-      'Ten punkt nie jest jeszcze dostępny w języku tej strony. Łącze z językiem oryginału otwiera tekst oryginalny.',
+      'Ta treść nie jest jeszcze dostępna w języku tej strony. Łącze z językiem oryginału otwiera tekst oryginalny.',
     unavailableLanguageNotice: 'Ta strona nie jest oferowana w języku {language}.',
     languageOptions: {
       en: 'Angielski (English)',

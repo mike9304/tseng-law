@@ -43,13 +43,13 @@ B doznał ciężkich obrażeń głowy i zmarł na miejscu; A stracił przytomno�
 
 Rodziny A i B uznały najpierw nagłą zmianę pasa pojazdu nr 2 za główną przyczynę zderzenia. Sprawa przeszła do procesu, a w jego toku przeprowadzono kilka ekspertyz (鑑定) wypadku.
 
-Według wyniku ekspertyzy główną odpowiedzialność za to zderzenie ponosił A. Ten wniosek był ograniczony do faktów tej sprawy. Ekspertyza uwzględniła razem to, że A chciał wyprzedzić dwa pojazdy z przodu jadące jeden za drugim, że wjechał na przeciwny pas, że jechał z prędkością, przy której prawie nie było czasu na hamowanie, że brakowało przepisanych sygnałów klaksonu i świateł, a także ruch zmiany pasa pojazdu nr 2, strukturę drogi i pasów oraz inne zebrane dowody.
+Według wyniku ekspertyzy główną odpowiedzialność za to zderzenie ponosił A. Ten wniosek był ograniczony do faktów tej sprawy. Ekspertyza uwzględniła razem to, że A chciał wyprzedzić dwa pojazdy z przodu jadące jeden za drugim, że wjechał na przeciwny pas, że jechał z prędkością, przy której prawie nie było czasu na hamowanie, że brakowało przepisanych sygnałów klaksonu i świateł, a także manewr zmiany pasa pojazdu nr 2, układ drogi i pasów oraz inne zebrane dowody.
 
 Sam ten wynik nie oznacza, że jedno pominięcie przepisanego sygnału zawsze ustala odpowiedzialność. Wina (過失) w wypadku przy wyprzedzaniu zależy od miejsca wypadku, układu pasów, prędkości, ruchów pojazdów, sygnałów, odstępów czasu, widoczności i innych dowodów.
 
 ## Punkty do sprawdzenia przy ocenie odpowiedzialności za wypadek
 
-Przed wyprzedzaniem należy najpierw sprawdzić, czy miejsce lub sytuacja ruchu wchodzą w zakaz wyprzedzania. Jeśli stosuje się procedurę tego samego pasa, należy dać przepisany sygnał klaksonu lub świateł, nie zmuszając pojazdu z przodu do ustąpienia, poczekać na wyraźny znak ustąpienia i dokończyć wyprzedzanie z wystarczającym odstępem i bezpieczną odległością powrotu.
+Przed wyprzedzaniem należy najpierw sprawdzić, czy miejsce lub sytuacja ruchu są objęte zakazem wyprzedzania. Jeśli stosuje się procedurę tego samego pasa, należy dać przepisany sygnał klaksonu lub świateł, nie zmuszając pojazdu z przodu do ustąpienia, poczekać na wyraźny znak ustąpienia i dokończyć wyprzedzanie z wystarczającym odstępem i bezpieczną odległością powrotu.
 
 Przestrzeganie art. 101 jest ważne, lecz samo w sobie nie gwarantuje ani uniknięcia wypadku, ani określonego wyniku późniejszej ekspertyzy lub procesu. Kierowcy muszą zostawiać dodatkowy zapas bezpieczeństwa i dostosowywać się do sytuacji z przodu.
 

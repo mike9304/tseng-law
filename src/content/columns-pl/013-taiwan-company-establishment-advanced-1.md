@@ -91,7 +91,7 @@ Założenie spółki trwa około **3 miesięcy**, a uzyskanie zezwolenia na prac
 
 dlatego początek umowy należy ustalić możliwie najpóźniej.
 
-Ponadto w umowach najmu lokali handlowych na Tajwanie wynajmujący często przyznaje najemcy „**okres aranżacji**” (裝潢期間).
+Ponadto w umowach najmu lokali handlowych na Tajwanie wynajmujący często przyznaje najemcy „**okres wykończenia**” (裝潢期間).
 
 Jest to okres zwolniony z czynszu; można o niego negocjować.
 

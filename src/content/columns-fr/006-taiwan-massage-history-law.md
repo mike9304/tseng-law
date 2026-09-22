@@ -55,7 +55,7 @@ Cette loi s’est maintenue jusqu’en 2003 ; à l’époque, M. Lin, qui géra
 
 employa des salariés sans handicap visuel pour des services de lavage de cheveux et de massage, et la police le constata.
 
-Selon le droit d’alors, M. Lin et ces salariés se virent infliger respectivement une amende administrative (罰鍰) de TWD 40.000, TWD 10.000 et TWD 20.000 en nouveau dollar de Taïwan (新臺幣).
+Selon le droit d’alors, M. Lin et ces salariés se virent infliger respectivement une amende administrative (罰鍰) de TWD 40.000, TWD 10.000 et TWD 20.000 en nouveaux dollars de Taïwan (新臺幣).
 
 M. Lin estima cette sanction très injuste et demanda une interprétation constitutionnelle.
 

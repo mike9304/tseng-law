@@ -2299,7 +2299,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Le cabinet traite des affaires d’entreprises et de particuliers à Taïwan en anglais, en japonais, en coréen et en chinois.',
-        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport et a obtenu un jugement de première instance de TWD 1.57M (1,57 million de dollars taïwanais).',
+        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport. Un jugement de première instance a fixé le montant à 1,57 million de dollars taïwanais (TWD 1.57M). Ce n’est pas un résultat promis.',
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',

@@ -29,7 +29,7 @@ Le véhicule de derrière ne peut dépasser qu’après que le véhicule de deva
 
 Ensuite, le véhicule qui dépasse doit allumer le clignotant gauche, passer à gauche en maintenant une distance d’au moins 0,5 mètre par rapport au véhicule de devant et, une fois la distance de sécurité assurée, allumer le clignotant droit et revenir en sécurité sur la voie d’origine.
 
-Cet ordre de signaux et de cession de passage sur la même voie ne signifie pas que le dépassement serait autorisé en un lieu ou dans une condition interdits. Avant de commencer le dépassement, toutes les conditions de l’article 101 doivent être appréciées ensemble.
+Cet ordre de signaux et l’obligation de céder le passage sur la même voie ne signifie pas que le dépassement serait autorisé en un lieu ou dans une condition interdits. Avant de commencer le dépassement, toutes les conditions de l’article 101 doivent être appréciées ensemble.
 
 ## Cas d’accident anonymisé traité par ce cabinet
 
@@ -37,13 +37,13 @@ Dans une affaire anonymisée traitée par ce cabinet, le motocycliste A circulai
 
 ![Schéma d’accident montrant la trajectoire de dépassement de la motocyclette et des deux véhicules de devant sur une route de montagne](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A tenta de dépasser les deux véhicules, s’engagea sur la voie opposée et accéléra. Le véhicule n° 2 se préparait aussi à dépasser le véhicule n° 1 : moins d’une seconde après avoir allumé le clignotant, il s’engagea sur la voie opposée. La motocyclette n’avait pas de marge de freinage suffisante et entra en collision avec le véhicule n° 2.
+A tenta de dépasser les deux véhicules, s’engagea sur la voie opposée et accéléra. Le véhicule n° 2 se préparait aussi à dépasser le véhicule n° 1 : moins d’une seconde après avoir allumé le clignotant, il s’engagea sur la voie opposée. La motocyclette n’avait pas le temps de freiner et entra en collision avec le véhicule n° 2.
 
 B subit de graves lésions à la tête et décéda sur place ; A perdit conscience et fut transporté à l’hôpital.
 
 Les proches de A et de B virent d’abord le changement brusque de voie du véhicule n° 2 comme la cause principale de la collision. L’affaire donna lieu à un procès et, au cours de la procédure, plusieurs expertises (鑑定) de l’accident furent pratiquées.
 
-Selon le résultat de l’expertise, A supportait la responsabilité principale de cette collision. Cette conclusion était limitée aux faits de cette affaire. L’expertise prit en compte ensemble le fait que A voulait dépasser deux véhicules de devant qui circulaient l’un derrière l’autre, qu’il s’était engagé sur la voie opposée, qu’il circulait à une vitesse laissant à peine une marge de freinage, que les signaux de klaxon et de phares prescrits avaient manqué, ainsi que le mouvement de changement de voie du véhicule n° 2, la structure de la route et des voies et les autres preuves recueillies.
+Selon le résultat de l’expertise, A supportait la responsabilité principale de cette collision. Cette conclusion était limitée aux faits de cette affaire. L’expertise prit en compte ensemble le fait que A voulait dépasser deux véhicules de devant qui circulaient l’un derrière l’autre, qu’il s’était engagé sur la voie opposée, qu’il circulait à une vitesse laissant à peine le temps de freiner, que les signaux de klaxon et de phares prescrits avaient manqué, ainsi que le mouvement de changement de voie du véhicule n° 2, la structure de la route et des voies et les autres preuves recueillies.
 
 Que, dans certaines affaires, de tels résultats d’expertise interviennent ne signifie pas qu’une seule omission d’un signal prescrit fixe toujours la responsabilité. La faute (過失) dans un accident de dépassement dépend du lieu de l’accident, de la configuration des voies, de la vitesse, des mouvements des véhicules, des signaux, des intervalles de temps, de la visibilité et des autres preuves.
 

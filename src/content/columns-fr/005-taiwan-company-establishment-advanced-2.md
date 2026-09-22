@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Image à la une](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Ceux qui ont lu [Création de société à Taïwan – fondamentaux](/fr/columns/taiwan-company-establishment-basics) et [Création de société à Taïwan – partie approfondie 1](/fr/columns/taiwan-company-establishment-advanced-1) peuvent également consulter Création de société à Taïwan – partie approfondie 2 (公司設立).
+Ceux qui ont lu [Création de société à Taïwan – fondamentaux](/fr/columns/taiwan-company-establishment-basics) et [Création de société à Taïwan – partie approfondie 1](/fr/columns/taiwan-company-establishment-advanced-1) peuvent également consulter Création de société à Taïwan (公司設立) – partie approfondie 2.
 
 ​
 
@@ -51,9 +51,9 @@ Si le virement est effectué depuis un compte bancaire en Corée, il n’est pas
 
 **3. Après l’arrivée du capital sur le compte de la société en formation, quand peut-il être converti en compte bancaire ordinaire de la société (正式公司帳戶) ?**
 
-En général, une fois les documents d’immatriculation de la personne morale (法人登記文件) reçus,
+En général, les documents d’immatriculation de la personne morale (法人登記文件) doivent d’abord être délivrés.
 
-le responsable (負責人) peut se rendre à la banque et convertir le compte de la société en formation en compte ordinaire.
+Le responsable (負責人) peut alors se rendre à la banque et convertir le compte de la société en formation en compte ordinaire.
 
 Toutefois, comme les règles internes de chaque banque (銀行) diffèrent, s’il faut utiliser le capital d’urgence, il convient de s’adresser d’abord à la banque.
 

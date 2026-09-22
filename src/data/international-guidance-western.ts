@@ -1134,7 +1134,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Litiges du travail',
           paragraphs: [
-            'Ce domaine couvre la fin du contrat de travail, l’indemnité de licenciement prévue par le droit de Taïwan (資遣費 ; à ne pas confondre avec l’indemnité de licenciement ni avec les règles de protection contre le licenciement d’un autre droit), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous distinguons le motif de la rupture des questions de préavis, de paiement et de délais.',
+            'Ce domaine couvre la fin du contrat de travail, l’indemnité de licenciement prévue par le droit de Taïwan (資遣費 ; à ne pas la confondre avec l’indemnité de licenciement d’un autre droit, ni avec les règles de protection contre le licenciement d’un autre droit), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous distinguons le motif de la rupture des questions de préavis, de paiement et de délais.',
             'Le contrat de travail, le règlement intérieur (工作規則), les bulletins de paie et les échanges écrits entre les parties sont le plus souvent les pièces décisives. Si vous les avez encore, mentionnez-le dans le résumé.',
           ],
         },
@@ -1232,7 +1232,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Pourquoi cette page ne publie pas de tarifs',
           paragraphs: [
-            'Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un chiffre fixé à l’avance ne montrerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.',
+            'Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un montant annoncé d’avance ne donnerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.',
             'Outre les honoraires d’avocat, des frais de tribunal, d’autorités ou de tiers peuvent s’y ajouter. Ils sont distincts des honoraires et dépendent de la procédure suivie.',
           ],
         },
@@ -1291,7 +1291,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Comment utiliser cette partie',
           paragraphs: [
-            'Si vous ne trouvez pas de réponse pour votre situation, c’est souvent que la réponse dépend de faits particuliers. Écrivez alors ces faits dans le résumé, au lieu de les déduire vous-même de cette page.',
+            'Si vous ne trouvez pas de réponse pour votre situation, c’est souvent que la réponse dépend de faits particuliers. Écrivez alors ces faits dans le résumé, au lieu d’en déduire vous-même la réponse à partir de cette page.',
           ],
         },
       ],
@@ -1470,7 +1470,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jusqu’où un article peut servir d’indication',
           paragraphs: [
             'Les articles sont des indications générales au moment de la publication. Les règles et leur application peuvent changer, et un article ne reprend pas toutes les circonstances de votre affaire.',
-            'Ne prenez donc aucune décision dans une affaire réelle sur le seul fondement d’un article. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.',
+            'Ne prenez donc aucune décision dans une affaire réelle sur le seul fondement d’un article. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page ne tient pas lieu de consultation.',
           ],
         },
       ],

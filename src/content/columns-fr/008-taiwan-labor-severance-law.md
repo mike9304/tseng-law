@@ -28,7 +28,7 @@ Aujourd’hui, je voudrais parler avec vous de l’indemnité de licenciement (�
 
 Beaucoup d’entre vous le savent déjà.
 
-Dans certains autres droits — la Corée en est un exemple —, la société doit verser une indemnité de départ lorsque les salariés quittent l’entreprise
+Dans certains autres droits — la Corée en est un exemple —, la société doit verser une indemnité de départ lorsque les salariés quittent l’entreprise.
 
 À Taïwan, la règle est toutefois différente :
 
@@ -96,7 +96,7 @@ afin de réduire les coûts de personnel,
 
 À l’époque, mon client, M. B, était employé depuis plus de dix ans auprès de la société A
 
-et le commercial au meilleur résultat de la région du centre de Taïwan.
+et il était le commercial le plus performant de la région du centre de Taïwan.
 
 Parce que le salaire et les primes étaient très élevés,
 

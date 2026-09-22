@@ -1,0 +1,86 @@
+WO-F-fr r3 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-fr-r3
+No git add / commit / push.
+
+## Rows applied
+Part a (fr-a.md) applied: 1, 2, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 18, 20, 21, 22, 23.
+Part a partial: 17 (the lowercase « le responsable » break in 005 is now two complete sentences inside the existing blocks; Q16–Q20 were not turned into headings, and U+200B was not deleted).
+Part b (fr-b.md) applied: 1, 2, 3, 5, 6, 7, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40.
+Part b partial: 4 (the parenthetical stays, as « une fois ce montant », so Korean 1배 is still counted; it was not deleted).
+
+Test expected-string update: src/data/__tests__/guidance-disclosure-parity.test.ts, key not-the-consultation-step, fr regex now /ne tient pas lieu de consultation/. No other test assertion was changed.
+
+## Rows skipped
+- fr-a #3 (P1). The link label stays « article 10 ». The Korean source label is 영업세법 제10조, and dropping 10 fails the numbers check. The URL flno=3 was not changed. The statute name (各類所得扣繳率標準) was already corrected in r2.
+- fr-a #11 (P2) and fr-b #11 (P2). « 1er janvier / 1er juillet » is not written. The checker’s date pattern is day + month + year; « 1er janvier 2024 » is parsed as 1, 20, 1, 24, so the year 2024 disappears (confirmed on this locale in r2 and left unchanged here). Nine sites stay « 1 janvier / 1 juillet »: 001 ×2, 003 ×1, 004 ×2 (including « 1 janvier 2025 »), 011 ×3, 015 ×1.
+- fr-a #12 (P2). « pour 1 victime et 1 accident » stays. Korean is 피해자 1명·사고 1건. « chaque » is not in the French numeral lexicon, so replacing both digits fails the numbers check.
+- fr-a #16 (P2). « (1 période) » stays in the FAQ and in section 5 of 002. Korean 1회 is a counted 1; « un an » already covers 1년. Removing the parenthetical drops one 1 in each block.
+- fr-a #17 structure, and fr-b #14 (P2). U+200B lines stay. The checker requires the same ZWSP count as the Korean source, and a line that contains only U+200B is its own block. Turning Q16–Q20 into ## headings would add headings. Counts left in place: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3.
+- fr-a #19 (P2) and fr-b #8 (P2). Thousands stay with a dot (TWD 500.000, 1.579.589 TWD, and the rest). ACCEPTED-ROUND skips space separators. scripts/check-column-translation.mjs sets NUMBER_THOUSAND_STYLE.fr to "dot".
+- fr-b #15 merge. The bank-employee sentence in 013 and the « depuis le 1 janvier 2023 » sentence in 015 were completed inside the existing blocks. The paragraph break was not removed.
+
+## Checker accommodations (meaning kept, digit kept)
+- fr-a #18. Plural currency name only: « nouveau dollar » → « nouveaux dollars » in 003 ×2 and 006 ×1. The dot grouping stays (not « 200 000 »).
+- fr-b #4. « (1 fois ce montant) » → « (une fois ce montant) ». The lexicon counts « une fois » as 1, matching Korean 최대 1배. The parenthetical was not removed.
+- fr-a #1. The bio still contains the byte string TWD 1.57M. The sentence no longer says she « a obtenu » the judgment; a first-instance court fixed the amount, and the sentence says that is not a promised result.
+
+## Systemic patterns and instances
+- A plural sum followed by singular « nouveau dollar de Taïwan ». 3 instances → « nouveaux dollars de Taïwan » (003 ×2, 006 ×1). Dot thousands not touched.
+- 資遣費 warning that used the same French term on both sides of « ne pas confondre ». 1 instance, in the guidance labour paragraph: the second limb is now « l’indemnité de licenciement d’un autre droit ».
+- First of the month without « er ». 0 changed (9 sites left; see skipped).
+- Space or narrow-space thousands. 0 changed.
+- U+200B blank lines and Q16–Q20 as body lines. 0 deleted or promoted. Spoken one-clause paragraphs in 006, 008 and 009 stay, because they match the source block count.
+- Lowercase continuation that was one sentence split across two blocks. Fixed in place, not merged: 005 (documents délivrés / Le responsable), 013 (ce qui suit / De nombreux étrangers ont ouvert un compte puis ont disparu), 015 (lead-in closed; « Depuis le 1 janvier 2023 »). 6 lines.
+- Legal name one step off the instrument. 存證信函 → lettre à contenu certifié (010 ×1); 公證 → faire notarier (013 ×1); 公司設立 gloss moved onto création de société (005 body ×1; frontmatter title unchanged); 離婚登記 → 戶政機關 (007 body ×1; the FAQ already had 戶政機關); 檢認 → procédure judiciaire de validation (016 ×1); 投資額審定 → constatation du montant viré (017 ×1); 戶籍 → inscription au registre des ménages (017 ×3); « formulaire concret » → forme arrêtée (018 ×1); « arrangements transactionnels » → montages commerciaux (018 ×1); « livraison » / « mode de transmettre » → éléments à remettre à la clôture / transmission des véhicules et des contrats (017 ×1 sentence); 公司登記 « personne morale » → société (015 ×2).
+- Agreement on a verb or an adjective. « ne substitue pas » → « ne se substitue pas aux » (014 ×1); « constituer seul » → « sans autre actionnaire » (018 ×1); « établis » restructured so the participle is gone (007 ×1); the « consigner » list drops the extra « de » (016 ×1); the custody list restores the articles (016 ×1); « les deux tiers ou plus » names the consent and the voting rights (018 ×1); « le résoudre » → « y répondre » (018 ×1).
+- 009 either-party remedies. The three existing blocks now split the effect by who is at fault. They were not merged.
+- Calques in the guidance pack. « étape de consultation », « montrerait », « déduire les faits » : 1 each. The llms.txt notices were not rewritten; none of those sentences is the pinned consultationNotice or confidentialNotice substring.
+- R2–R10 were already in the French pack (Korea labelled as an example, feminine Wei Tseng, consultation languages locked, no reply-time / free meeting / result promise, no new Hangul). This pass did not find a further Korea-as-default-reader sentence or a masculine form for Wei Tseng.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-fr-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-fr --lang fr 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=78
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-fr src/data | wc -l
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+```
+      22
+```
+That count is from before this log file existed. After writing the log, the same command returns 23.
+The 22 already included three paths that were dirty before this lane: modified docs/i18n/global-plan/WO-F-fr.txt, and untracked reviews/native/rounds/r3/fr-a.md and fr-b.md. This lane did not edit those.
+
+Pre-existing WARN on files that still PASS: extra 1; extra 2023×4; ordinal 제6호; extra 2020. Same set as r2 (006, 007, 009, 010). Not introduced by this pass. « deux pièces d’identité » did not add an unmatched 2.
+
+## Reviewer points not applied
+- Calling the withholding-rate link « article 3 » matches flno=3 and mismatches the Korean label 제10조, which the checker counts. The statute name is already the withholding-rate standards; the visible number stays 10.
+- « 1er » is right for the first of the month. The checker cannot parse it next to a month name, so the bare « 1 » stays.
+- France’s narrow no-break space for thousands is right for print French. This locale’s checker only accepts dot grouping, and ACCEPTED-ROUND skips a space separator, so the dot stays.
+- « chaque victime / chaque accident » and deleting « (1 période) » are what a native would write. « chaque » is not parsed as 1, and 1회 / 1명 / 1건 are real source digits, so the digits stay.
+- Deleting « (1 fois ce montant) » matches the English sentence, which stops at actual damages. The Korean source says 최대 1배. The parenthetical stays, in the form « une fois ».
+- Q16–Q20 as new headings, and deleting U+200B, would change the heading count, the block count, or the ZWSP count. Those stay aligned with the source. The 005, 013 and 015 lowercase breaks were repaired inside the blocks that already existed.

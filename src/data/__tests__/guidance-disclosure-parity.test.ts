@@ -448,7 +448,7 @@ const ELEMENTS = {
     ms: /langkah perundingan/,
     ru: /не заменяет консультацию/,
     tr: /görüşmenin yerini tutmaz/,
-    it: /passo di consulenza/,
+    it: /non sostituisce la consulenza/,
     nl: /consultatiestap/,
     pl: /nie jest konsultacją/,
     hi: /परामर्श चरण/,

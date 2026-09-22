@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Immagine in evidenza](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Chi ha letto [Costituzione di società a Taiwan – fondamenti](/it/columns/taiwan-company-establishment-basics) e [Costituzione di società a Taiwan – parte approfondita 1](/it/columns/taiwan-company-establishment-advanced-1) può ugualmente consultare Costituzione di società a Taiwan – parte approfondita 2 (公司設立).
+Chi ha letto [Costituzione di società a Taiwan – fondamenti](/it/columns/taiwan-company-establishment-basics) e [Costituzione di società a Taiwan – parte approfondita 1](/it/columns/taiwan-company-establishment-advanced-1) può ugualmente consultare Costituzione di società a Taiwan (公司設立) – parte approfondita 2.
 
 ​
 
@@ -31,7 +31,7 @@ In generale, le banche della Corea esigono che l’investitore si rechi **di per
 
 Il trasferimento tramite home banking o per tramite di un familiare in Corea non è possibile.
 
-Inoltre, in conformità con la regolamentazione coreana sul controllo dei cambi, la persona di nazionalità coreana che costituisce una persona giuridica estera o acquisisce quote deve depositare una «dichiarazione di investimento diretto all’estero». La dichiarazione deve essere registrata al momento del trasferimento del capitale alla persona giuridica taiwanese (台灣法人); in mancanza, possono applicarsi sanzioni per violazione della regolamentazione sui cambi.
+Inoltre, in conformità con la normativa coreana sul controllo dei cambi, la persona di nazionalità coreana che costituisce una persona giuridica estera o acquisisce quote deve depositare una «dichiarazione di investimento diretto all’estero». La dichiarazione deve essere registrata al momento del trasferimento del capitale alla persona giuridica taiwanese (台灣法人); in mancanza, possono applicarsi sanzioni per violazione della normativa sui cambi.
 
 Prima di trasferire il capitale (資本金匯款), si informi presso la sua banca principale in Corea.
 

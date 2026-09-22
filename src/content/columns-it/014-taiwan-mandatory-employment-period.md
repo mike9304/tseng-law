@@ -43,7 +43,7 @@ L’articolo 15-1 esige uno dei 2 requisiti legali e, inoltre, un esame separato
 
 Dopo la conferma del requisito legale, secondo il comma 2 si esamina separatamente se il periodo convenuto e l’estensione della responsabilità sono ragionevoli. Il patto che infrange il requisito legale del comma 1 o il criterio di ragionevolezza del comma 2 è nullo secondo il comma 3. Tuttavia, questa norma è un criterio per esaminare il contenuto e i fatti di ciascun patto, non una norma che dichiara validi o nulli in partenza tutti i patti di periodo minimo di lavoro.
 
-La circostanza che il lavoratore abbia firmato il contratto può essere un documento che conferma l’esistenza dell’accordo, ma non sostituisce i requisiti legali. Non conviene, invece, trarre in partenza la conclusione solo perché il patto è di lunga durata, deve verificarsi quale investimento o quale contropartita vi è stato e perché questo periodo è stato fissato.
+La circostanza che il lavoratore abbia firmato il contratto può essere un documento che conferma l’esistenza dell’accordo, ma non sostituisce i requisiti legali. Non conviene, invece, trarre la conclusione dalla sola durata del periodo convenuto; occorre verificare quale investimento o quale contropartita vi sia stato e perché quel periodo è stato fissato.
 
 ## 2. Primo requisito legale: formazione tecnica specializzata e assunzione del costo
 
@@ -98,7 +98,7 @@ I corsi che un impiegato nuovo riceve di regola, come la spiegazione del regolam
 
 Tuttavia, non si esclude sempre una formazione solo perché è stata erogata all’interno dell’impresa. In uno stesso programma possono mescolarsi una parte di adattamento generale e una parte tecnica specializzata, così che il tema, il tempo, il costo e se vi è obbligo legale devono confermarsi in concreto. Chi deduce la parte tecnica specializzata ha bisogno di spiegare con documenti quale contenuto si distingue dalla formazione abituale e chi ha assunto realmente il costo.
 
-Nella pratica, non si guarda solo alla copertina del materiale di formazione, ma si confrontano l’indice dettagliato e il registro effettivo di erogazione. Deve verificarsi se si tratta di un corso periodico che si ripete, di un corso per una qualificazione o una competenza di maneggio di attrezzature concrete, di una formazione legalmente obbligatoria, se il lavoratore ha partecipato realmente e se l’importo chiesto coincide con i documenti giustificativi degli oneri di formazione.
+Nella pratica, non si guarda solo alla copertina del materiale di formazione, ma si confrontano l’indice dettagliato e il registro effettivo di erogazione. Deve verificarsi se si tratta di un corso periodico che si ripete, di un corso per una qualificazione o una competenza nell’uso di attrezzature concrete, di una formazione legalmente obbligatoria, se il lavoratore ha partecipato realmente e se l’importo chiesto coincide con i documenti giustificativi degli oneri di formazione.
 
 ## 6. Restituzione di premi e dimissione anticipata
 
@@ -112,7 +112,7 @@ La questione della restituzione deve confermarsi per ordine: validità del patto
 
 La clausola di restituzione integrale, la clausola penale fissa estranea alla perdita reale e la ritenuta unilaterale del salario non si valutano come un solo problema. Il fondamento giuridico, il contenuto dell’accordo, i limiti del diritto del lavoro e la liceità della ritenuta devono confermarsi separatamente. L’importo scritto nella lettera raccomandata del datore di lavoro o il fatto che il lavoratore abbia pagato una parte non fissano neppure il resto delle questioni giuridiche.
 
-Deve anche distinguersi la restituzione degli oneri di formazione e la restituzione dell’erogazione anticipata. La prima riguarda la formazione tecnica specializzata effettivamente svolta e l’assunzione del costo; la seconda, sulla finalità del pagamento, sulla comunicazione, sulle condizioni di attribuzione e sulla proporzione al periodo non adempiuto. Se si chiedono le 2 voci insieme, deve verificarsi separatamente se il costo è stato calcolato 2 volte e i documenti giustificativi di ciascuna voce.
+Deve anche distinguersi la restituzione degli oneri di formazione e la restituzione dell’erogazione anticipata. La prima riguarda la formazione tecnica specializzata effettivamente svolta e l’assunzione del costo; la seconda riguarda la finalità del pagamento, la comunicazione, le condizioni di attribuzione e la proporzione al periodo non adempiuto. Se si chiedono le 2 voci insieme, deve verificarsi separatamente se il costo è stato calcolato 2 volte e i documenti giustificativi di ciascuna voce.
 
 ## 7. Quando il contratto si estingue per una causa non imputabile al lavoratore
 
@@ -120,7 +120,7 @@ L’articolo 15-1, comma 4, della legge taiwanese sugli standard del lavoro disp
 
 Non può quindi riconoscersi l’inadempimento del lavoratore per il solo fatto che la relazione di lavoro è terminata prima del periodo convenuto. Deve verificarsi chi ha formulato quale manifestazione di volontà, qual è il fondamento giuridico dell’estinzione del contratto e a quale parte si imputano le circostanze reali che l’hanno prodotta.
 
-I documenti di esame possono includere la notificazione di licenziamento, la lettera di dimissione, il documento di estinzione di comune accordo, la posta elettronica e il registro di messaggi, i documenti di modifica di condizioni di lavoro e il registro di presenza e di lavoro. Anche se si menzionano la salute o le circostanze del lavoro, l’esito non si decide solo in base a quell’espressione, ma si guarda insieme al corso reale, il fondamento legale dell’estinzione e le prove legate.
+I documenti di esame possono includere la notificazione di licenziamento, la lettera di dimissione, il documento di estinzione di comune accordo, la posta elettronica e il registro di messaggi, i documenti di modifica di condizioni di lavoro e il registro di presenza e di lavoro. Anche se si menzionano la salute o le circostanze del lavoro, l’esito non si decide solo in base a quell’espressione, ma si guarda insieme al corso reale, al fondamento legale dell’estinzione e alle prove collegate.
 
 Il licenziamento, l’estinzione di comune accordo e l’allegazione di violazione delle condizioni di lavoro sono solo esempi di circostanze da esaminare, non un’enumerazione chiusa delle cause non imputabili al lavoratore. Un’estinzione dello stesso nome può differire nella volontà delle parti e nel corso, e il nome scritto nel documento può non coincidere con i fatti reali.
 
@@ -176,9 +176,9 @@ Nell’ordinare i documenti in ordine temporale, conviene indicare insieme la da
 
 ## 10. Fonti ufficiali
 
-- [Banca dati della regolamentazione nazionale di Taiwan: articolo 15-1 della legge sugli standard del lavoro](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001).
-- [Banca dati della regolamentazione nazionale di Taiwan: articolo 15 della legge sugli standard del lavoro](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001).
-- [Banca dati della regolamentazione nazionale di Taiwan: articolo 16 della legge sugli standard del lavoro](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001).
+- [Banca dati della normativa nazionale di Taiwan: articolo 15-1 della legge sugli standard del lavoro](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001).
+- [Banca dati della normativa nazionale di Taiwan: articolo 15 della legge sugli standard del lavoro](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001).
+- [Banca dati della normativa nazionale di Taiwan: articolo 16 della legge sugli standard del lavoro](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001).
 - [Ministero del Lavoro di Taiwan: orientamento del 5 giugno 2026 sul periodo minimo di lavoro e la restituzione di clausola penale](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000).
 
 ## 11. Orientamento legato
@@ -189,6 +189,6 @@ Nell’ordinare i documenti in ordine temporale, conviene indicare insieme la da
 
 ---
 
-Questo testo è un documento con fine educativo per spiegare in termini generali il patto di periodo minimo di lavoro a Taiwan, la restituzione degli oneri di formazione e dell’erogazione anticipata e il preavviso di dimissione; non è un parere giuridico per un caso di lavoro concreto. La validità del patto e l’estensione della responsabilità possono variare secondo il tipo e il tenore del contratto, la formazione e il costo reali, la finalità della contropartita e la sua comunicazione, il periodo di lavoro, la causa di estinzione e le prove. Prima di formulare la dimissione, di accettare una ritenuta salariale, di convenire una restituzione o di rispondere a una controversia, conviene confermare le fonti ufficiali più recenti e le circostanze individuali.
+Questo testo è un documento a fini informativi per spiegare in termini generali il patto di periodo minimo di lavoro a Taiwan, la restituzione degli oneri di formazione e dell’erogazione anticipata e il preavviso di dimissione; non è un parere giuridico per un caso di lavoro concreto. La validità del patto e l’estensione della responsabilità possono variare secondo il tipo e il tenore del contratto, la formazione e il costo reali, la finalità della contropartita e la sua comunicazione, il periodo di lavoro, la causa di estinzione e le prove. Prima di formulare la dimissione, di accettare una ritenuta salariale, di convenire una restituzione o di rispondere a una controversia, conviene confermare le fonti ufficiali più recenti e le circostanze individuali.
 
 **Wei Tseng (曾雋崴), avvocata a Taiwan**

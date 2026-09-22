@@ -55,7 +55,7 @@ Questa legge si è mantenuta fino al 2003; all’epoca, il Sig. Lin, che gestiva
 
 ha impiegato lavoratori senza disabilità visiva per servizi di lavaggio dei capelli e di massaggio, e la polizia lo ha constatato.
 
-Secondo il diritto di allora, il Sig. Lin e quei lavoratori hanno visto infliggersi rispettivamente una sanzione amministrativa pecuniaria (罰鍰) di 40.000, 10.000 TWD e 20.000 nuovi dollari taiwanesi (TWD) (新臺幣).
+Secondo il diritto di allora, il Sig. Lin ha ricevuto una sanzione amministrativa pecuniaria (罰鍰) di 40.000 nuovi dollari taiwanesi (TWD) e i lavoratori, rispettivamente, di 10.000 e di 20.000 TWD (新臺幣).
 
 Il Sig. Lin ha stimato questa sanzione molto ingiusta e ha chiesto un’interpretazione costituzionale.
 
@@ -99,7 +99,7 @@ e se qualcuno percepisce una remunerazione di massaggio da altri senza quella qu
 
 secondo la legge coreana sui servizi medici (醫療法) una pena detentiva che può arrivare fino a 3 anni può essere pronunciata.
 
-Se qualcuno senza disabilità visiva gestisce un commercio di massaggio, una pena detentiva che può arrivare fino a 5 anni può essere pronunciata.
+Se qualcuno senza disabilità visiva gestisce un’attività di massaggio, una pena detentiva che può arrivare fino a 5 anni può essere pronunciata.
 
 ​
 

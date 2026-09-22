@@ -1,0 +1,83 @@
+WO-F-it r3 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-it-r3
+No git add / commit / push.
+
+## Rows applied
+Part a (it-a.md) applied: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32.
+Part a partial: 1. The link label now names the withholding-rate standards (各類所得扣繳率標準) and non-resident dividends. The visible number stays "articolo 10". The URL flno=3 was not changed.
+Part b (it-b.md) applied: 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40.
+Part b partial: 5. The ordinary-negligence cap stays a counted 1, written "fino a una volta l'importo" ("una volta" is in the Italian numeral lexicon). The multiplier was not deleted.
+Part b partial: 18 and 26, and the 013 bank sentence. Each fragment was finished inside the block it already occupied. Paragraphs were not merged.
+Part b partial: 41. "2/3 o più" now names the consent and the voting rights ("almeno due terzi", which the lexicon counts as 2 and 3). "ciascun socio ha 1 voto" and "solo 1 o 2 amministratori" keep the digits. "non avere consiglio" is now "non avere un consiglio di amministrazione".
+
+Test expected-string update: src/data/__tests__/guidance-disclosure-parity.test.ts, key not-the-consultation-step, it regex now /non sostituisce la consulenza/. No other test assertion was changed.
+
+GUIDANCE_LLMS_NOTICES.it was not rewritten. None of the changed guidance sentences is the pinned consultationNotice or confidentialNotice substring, and discoveryNotice still contains the literal token llms.txt.
+
+## Rows skipped
+- it-a #17 and it-b #10. "1° gennaio / 1° luglio" was not written. The checker’s date pattern is day + whitespace + month + year. The degree sign blocks the match, so the month number is lost (same result as r2). Nine sites stay with a bare 1: 001 ×2 ("dal 1 gennaio 2024"), 003 ×1 ("dal 1 luglio 2026"), 004 ×2 ("dal 1 gennaio 2024", "dal 1 gennaio 2025"), 011 ×3 ("dal 1 luglio 2026"), 015 ×1 ("Dal 1 gennaio 2023"; only the capital letter changed, because the previous block is now its own sentence).
+- it-a #19, and the verdict lines on U+200B in 003, 005, 006, 008 and 009, including 005 `**​**`. Q16–Q20 stay body lines. Promoting them to ## headings changes heading levels. Deleting U+200B changes the ZWSP count and the block count. checkHeadings and checkBlocks require both to match the Korean source. Counts left in place: 003=52, 005=8, 006=4, 008=10, 009=5.
+- it-b #17, and the verdict lines on U+200B in 013 and 015. Same checker constraint. Counts left in place: 013=5, 015=3. The Taipei-region sentence was left, including the zero-width space at its end.
+- it-a #1 number only. Calling the withholding-rate link "articolo 3" matches flno=3 and mismatches the Korean label 제10조, which the checker counts. The statute name and the gloss are corrected; the visible number stays 10.
+- it-b #5 full drop, and it-b #41 "un voto". "fino all'importo" and "un voto" drop a counted 1. "un" / "uno" alone are not in the Italian numeral lexicon ("una volta" is). The 1× cap uses "una volta". The vote stays "1 voto".
+
+## Systemic patterns and instances
+- Wrong statute on the 004 withholding link (營業稅法 art. 10). 1 label rewritten to 各類所得扣繳率標準, non-resident dividends, articolo 10 kept.
+- 009 either-party remedies. The four existing blocks now split the effect by who is at fault. They were not merged.
+- Agreement. "questo sopporta" → "questa" (001 ×1); "adatta" → "adatto" (001 FAQ ×1); "dele / necessari" → "delle / necessarie" (003 ×1); "è libera" → "è libero" and "inappropriato" → "inappropriata" (008 table ×1 each); "dello Legge" → "della Legge" (004 ×5, 013 ×1); "Deve verificarsi" + compound subject → "Devono verificarsi" (017 ×4: licence and vehicles, and validity and scope, FAQ and body); "Deve anche evitarsi le circostanze" → "Vanno anche evitate le condotte" (016 ×1); "procedure fiscale, anagrafica" → "fiscali, anagrafiche" (016 ×1); "una apostille" → "un'apostille" (016 ×1); "di notarile" → "al notaio" (016 ×1).
+- Investment relationship written as "apporto". 001 FAQ and body ×2, and the same English "investment relationship" in 004 FAQ, body, and table ×4. Shareholder contribution amounts elsewhere were left.
+- "registro di prodotto" (產品登錄) → "registrazione del prodotto", including the FAQ, the section headings, the body, and the three TFDA/MOJ link labels in 011. "registro di fabbrica" (工廠登記), distribution records, and company-registration "registro" were left.
+- "regolamentazione" where it names the statute collection or the national-law database → "normativa": 011 ×3, 014 ×3 links, 015 ×1, 016 ×3 (two links and the closing sentence), 018 ×1 ("normativa sui valori mobiliari"), 007 ×6 database links, 003 ×1, 005 ×2, 001 ×1 ("normativa edilizia", gloss 建築管理 kept).
+- "commercio" naming the undertaking or the deal. 017 title, H1, alt, headings, FAQ, and body (cessione di azienda, attività / impresa di trasporto). 015 "società o di un'impresa" ×1. 006 "attività di massaggio" ×1. 018 "vendite e operazioni", "fase di sviluppo dell'attività", and "attività d'impresa" ×2. Left: "ufficio del commercio" / "Dipartimento del commercio" (商業處 / 商業發展署), "commercio all'ingrosso", and "mestiere di massaggio" (the licensed trade, 按摩業).
+- First of the month without the ordinal. 0 changed (9 sites left; see skipped). 015 "Dal" was capitalised only.
+- U+200B blank lines and Q16–Q20 as body lines. 0 deleted or promoted.
+- Paragraphs that opened on a conjunction or a verb with no complement. Finished in place, not merged: 013 funds sentence, 013 "L'esame non è eccessivamente rigoroso", 013 bank-employee quote, 015 market-zone lead-in, 015 Taipei instructions ("Si applicano le …"). 5 blocks.
+- Guidance calques. 8 strings in italianGuidanceContent: dedurre la risposta, li menzioni, non sostituisce la consulenza, importo indicato in anticipo, non sono traduzioni, cancellazione anticipata, richiedere un impegno, corso dei fatti.
+- R2–R10 were already in the Italian pack (Korea labelled as an example, feminine Wei Tseng, consultation languages locked to English / Chinese / Japanese / Korean, no interpreter, no reply-time, no free first meeting, no result promise, Lei). This pass did not find a further Korea-as-default-reader sentence or a masculine form for Wei Tseng. 002 was left unchanged.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-it-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-it --lang it 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=77
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-it src/data | wc -l
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+```
+      22
+```
+That count is from before this log file existed. After writing the log, the same command returns 23.
+The 22 already included three paths that were dirty before this lane: modified docs/i18n/global-plan/WO-F-it.txt, and untracked reviews/native/rounds/r3/it-a.md and it-b.md. This lane did not edit those.
+
+Pre-existing WARN on files that still PASS: 003 extra 2020×2; 015 extra 2×2 (제2종); 006 extra 1 (confirmed on HEAD before this lane, not introduced here); 002/004/007/009/010/011/014/016/017 수사미해석 on 제N항/호/자 and 1심. Not introduced as FAILs by this pass. "due lavoratori" was tried in 006 and reverted because "due" added a counted 2 the Korean source does not have.
+
+## Reviewer points not applied
+- "1°" is right for the first of the month. The checker cannot parse it next to a month name, so the bare "1" stays.
+- Q16–Q20 as new headings, and deleting U+200B, would change the heading count, the block count, or the ZWSP count. Those stay aligned with the Korean source. The 013 and 015 breaks were repaired inside the blocks that already existed.
+- Calling the withholding-rate link "articolo 3" matches flno=3 and mismatches the Korean label 제10조, which the checker counts. The statute name and the gloss are corrected; the visible number stays 10. The URL was not changed.
+- "fino all'importo" is smoother Italian and drops the counted 1 that matches the ordinary-negligence cap of one time the actual loss. "una volta" keeps that 1.
+- "ciascun socio ha un voto" drops the counted 1. "un" is not in the numeral lexicon. The digit stays.

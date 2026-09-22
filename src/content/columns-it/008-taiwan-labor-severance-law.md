@@ -53,7 +53,7 @@ Le riassumo ciò in un quadro semplice.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | **Tipo** | **Licenziamento economico (資遣員工, 經濟解僱)** | **Licenziamento disciplinare (解僱員工, 懲戒解僱)** | **Dimissioni proprie del lavoratore**  **員工自請離職** |
-| Significato | Se esiste, nel datore di lavoro, una necessità di adeguamento del personale in ragione della situazione dell'impresa, il motivo si situa nel dominio imprenditoriale del datore di lavoro e non nella responsabilità del lavoratore. È per questo che il datore di lavoro deve rispettare il termine di preavviso (預告期間) e pagare un'indennità di licenziamento, al fine di compensare in modo equilibrato gli inconvenienti del lavoratore. | Se il lavoratore commette una condotta illecita o inappropriato, il datore di lavoro può porre termine subito al contratto di lavoro (勞動契約) senza preavviso e non deve pagare indennità di licenziamento. È una delle prerogative disciplinari del datore di lavoro. | Il lavoratore è libera di porre termine al contratto in qualsiasi momento, ma deve, secondo la durata di impiego, rispettare il termine di preavviso, affinché il datore di lavoro possa procedere al passaggio e alla ricerca di un sostituto. |
+| Significato | Se esiste, nel datore di lavoro, una necessità di adeguamento del personale in ragione della situazione dell'impresa, il motivo si situa nel dominio imprenditoriale del datore di lavoro e non nella responsabilità del lavoratore. È per questo che il datore di lavoro deve rispettare il termine di preavviso (預告期間) e pagare un'indennità di licenziamento, al fine di compensare in modo equilibrato gli inconvenienti del lavoratore. | Se il lavoratore commette una condotta illecita o inappropriata, il datore di lavoro può porre termine subito al contratto di lavoro (勞動契約) senza preavviso e non deve pagare indennità di licenziamento. È una delle prerogative disciplinari del datore di lavoro. | Il lavoratore è libero di porre termine al contratto in qualsiasi momento, ma deve, secondo la durata di impiego, rispettare il termine di preavviso, affinché il datore di lavoro possa procedere al passaggio e alla ricerca di un sostituto. |
 | Condizioni | Presenti  (articolo 11 della legge taiwanese sugli standard del lavoro) | Presenti  (articolo 12 della legge taiwanese sugli standard del lavoro) | Nessuna |
 | Preavviso previo | Richiesto | Non richiesto | Richiesto |
 | Complessità della procedura (nessun esito è assicurato) | Minore | Maggiore | Minore |
@@ -96,7 +96,7 @@ a convocare successivamente i lavoratori ben pagati e di lunga anzianità per co
 
 All'epoca, la mia parte, il signor B, era impiegato da più di 10 anni presso la società A
 
-e il commerciale di maggior risultato della regione del centro di Taiwan.
+Ed era il commerciale con i risultati migliori della regione del centro di Taiwan.
 
 Poiché il salario e i premi erano molto elevati,
 

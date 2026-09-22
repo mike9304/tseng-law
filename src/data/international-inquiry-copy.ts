@@ -762,7 +762,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       '咨询以四种语言进行：英语、中文、日语和韩语。',
     methodConfirmationNotice:
-      '若您无法使用这四种语言中的任何一种，请选择“沟通方式须待确认”。我们会回复，评估是否有可行的沟通安排；不以其他语言提供服务，也不承诺回复时限。',
+      '若您无法使用这四种语言中的任何一种，请选择“我这四种语言都不会——沟通方式待确认”。我们会回复，评估是否有可行的沟通安排；不以其他语言提供服务，也不承诺回复时限。',
     preparationNotice:
       '您可以用自己的语言撰写案情摘要。原文会按您写下的内容保存，不会被自动翻译。',
     heading: '提交咨询请求',
@@ -773,7 +773,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     successMessage:
       '我们已收到您的请求，正在等待审阅。这并不表示咨询已经进行，也不表示预约已经确认。',
     savedNotificationPendingMessage:
-      '您的请求已保存，但事务所尚未确认通知。您写下的内容没有丢失。若未收到回复，也可以写信至联系页的电子邮件地址。',
+      '您的请求已保存，但事务所尚未确认已收到该通知。您写下的内容没有丢失。若未收到回复，也可以写信至联系页的电子邮件地址。',
     receiptIdLabel: '收件编号',
     failureMessage:
       '您的请求未能发送。请再试一次，或写信至联系页的电子邮件地址。',
@@ -795,7 +795,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       '此文章仅以{language}发布，链接会打开该原文页面。',
     unavailableTranslationNotice:
-      '此项目尚无本页语言的版本。标明原文语言的链接会打开原文。',
+      '这篇内容尚无本页语言的版本。标明原文语言的链接会打开原文。',
     unavailableLanguageNotice: '本页不以{language}提供。',
     languageOptions: {
       en: '英语（English）',
@@ -803,7 +803,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: '日语（日本語）',
       ko: '韩语（한국어）',
       'needs-method-confirmation':
-        '四种语言都无法使用 — 沟通方式须待确认',
+        '我这四种语言都不会——沟通方式待确认',
     },
   },
   ms: {

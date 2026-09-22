@@ -1,0 +1,71 @@
+# WO-F-zh-hans — Grok 4.7 fix lane, campaign round 2 (2026-09-22)
+Workspace: /Users/son7/Projects/tseng-law-fix-zh-hans-r2
+No git add/commit/push. Tests did not need an expected-string edit (3202 passed as-is).
+
+## Rows applied
+Part a (zh-hans-a.md), 36 of 38:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37.
+
+Part b (zh-hans-b.md), 33 of 36:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35.
+
+In-block only, where the suggested rewrite would have merged the next paragraph (block count is checked against the Korean source):
+- a#8 “公司会有困难” — speaker added in that line (“主管说公司经营有困难”); the demand stays in the following lines.
+- a#10 “依谁先以充分事由” — actor and consequence written in that line; the next line restates the same point so the block is not deleted.
+- a#30 “新经营层上任后即开始” — verb completed in that line; the purpose and the interviews stay in the next two lines.
+- b#26 “可考虑加强保障” — that line now says notarize the lease or add a deposit; the following line says how much depends on the landlord, so the two blocks are not copies.
+
+Checker deviations inside applied rows (meaning kept, digit kept):
+- a#2 link label names 各类所得扣缴率标准第3条 and still says “而非营业税法第10条”, because dropping 10 failed `numbers` (missing 10). URL unchanged (flno=3).
+- a#22 “必然展示” became “也不承诺一定会被展示”. The suggested “不保证” contains 保证, which the zh-hans pack test forbids.
+- a#27 the self-pointer is now “本文即《在台湾设立公司 — 深化篇2》，承接基础篇与深化篇1”. Dropping “深化篇2” entirely failed `numbers` (missing 2). Both hrefs kept.
+
+## Rows skipped
+- a#11 (Q16–Q20 and the same U+200B breaks in 005, 006, 008, 009): do not turn body lines into `##` headings and do not delete U+200B. `checkHeadings` compares heading levels with the Korean source; `checkBlocks` requires the same ZWSP count. The Korean files have the same breaks.
+- a#38 and the part-a verdict on 008/009 `url:` Hangul slugs: skipped. Frontmatter `url` is canonical and is not rendered. 008 url still starts `https://www.wei-wei-lawyer.com/post/대만-노동법…`.
+- b#13 (delete U+200B in 013 and 015, including ZWSP-only lines): skipped. Same ZWSP gate. Trailing U+200B on “记载地区即可（例：台北市）。” left in place.
+- b#25 (merge “投资审议司须核对…” with the next sentence, and the same one-clause paragraphs in 013 and 015): skipped as a merge. Each of those lines is already a grammatical sentence. Merging would change the block count.
+- b#36 (1,579,589 → 157万9589, and the same comma amounts in 010, 011, 017, 018): skipped. `NUMBER_THOUSAND_STYLE['zh-hans']` is `comma`. `SINO_UNIT_MULTIPLIERS` matches 萬/만 only, not simplified 万, so 157万9589 is read as 157 and 9589 and the source amount 1579589 goes missing. Comma form kept. The pinned bio figure is already “新台币157万元”, not the Latin “TWD 1.57M”; that string was not touched.
+
+## Systemic patterns and how many instances changed
+From the two verdicts, swept beyond the single quoted line:
+- 硬举 → 硬拉 in 010 (headings, body, image alt, link text). 19. hrefs unchanged. 90公斤 unchanged.
+- Family-law headwords in 007: 赡养费 for the spouse → 离婚后扶养费（贍養費）; 子女扶养费 / the child-support 扶养费 → 抚养费; line 118 子女的扶养 / 前配偶间的赡养 swapped to 抚养 / 扶养（贍養費）. 16 spots. 配偶扶养 (already the spouse term) left as 扶养.
+- 会面交往（會面交往） → 会面交往（會面交往，即探望）: guidance 1, 007 body 2, plus the §9 heading. Later bare 会面交往 in the same article not re-glossed on every repeat.
+- “场所预先查询” missing 营业 in 015: 4 (system name, question, answer, “结果必须附于”). 001’s “运营……系统” sentence rewritten separately (a#26).
+- “餐饮场所” used for the restaurant business rather than the premises, 015: 4.
+- “办公商业空间” in 013: 4 lines, including the false blanket ban on company registration (b#6).
+- “沟通方式须待确认” → “沟通方式待确认”, and the form option is now “我这四种语言都不会——沟通方式待确认”: inquiry option + inquiry notice + 2 guidance sentences.
+- “简体中文这一书面形式” → “简体中文书面”: guidance 2 (page + FAQ) and llms.txt 1.
+- 检察机关 → 检察署（檢察署）: guidance criminal sentence 1, 010 monitoring sentence 1.
+- ROC docket years that were still a bare 年度 (R13, no Gregorian digit added): 010 “民国109年度消字第7号”; 003 link labels 民国109年度上易字第644号, 民国109年度上易字第477号, 民国112年度坜简字第236号. 4. 007’s 民国112年宪判字第4号 was already marked and was left as is. 014’s letter number is now 勞動關2字第1150141814號 (traditional citation characters only; the digits unchanged).
+- 库存、瑕疵处理及人员 → 库存、保固及人员安排: 018 FAQ and body, 2.
+- 缴销注销 unstacked: 017 the prohibition and the next paragraph, 2.
+- 借牌 / 无许可运送 split into two prohibitions: the dedicated sentence plus the FAQ and the matching body sentence (“以免发生借牌或无许可运送”), 3.
+- 马祖 → 馬祖 in the one simplified parenthetical in 017. The FAQ and the section lead were already 馬祖.
+
+RULEBOOK R2–R10 were already in this pack from the previous fix lane (Korea labelled as an example, tax-agreement framing in 001 and 004, 119/110/112, no result or reply-time promise, 我们的团队 / 办公室 / 完整简介（英文）, Traditional glosses). Re-sweep did not find a new Korea-as-default-reader sentence, a new “best/only” claim for the firm, or English chrome in the zh-hans labels. 002 and 012 had no row in this round and were not edited. Company-law 机关 (股东会、董事会) and 主管机关 were not rewritten; only “对机关与人员的股份报酬” (2, both in 004).
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=2779
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      23
+```
+Commands were the work-order set. `tail -8` of the checker is the 018 block plus `summary  PASS  18/18 files`. Marker count is 0. `git status --short | wc -l` was 23 before this log file existed; that count includes the pre-existing dirty `WO-F-zh-hans.txt` and the two untracked round-2 review files, which this lane did not write. 015 still has a numbers WARN (`extra in translation (2): 2×2`); it does not fail the file. No digit 2 was added to 015 in this lane.
+
+## Reviewer got wrong — not applied
+- Deleting the U+200B breaks, or promoting Q16–Q20 to headings (a#11, b#13, and the “one clause per paragraph” merge in b#25). Those breaks match the Korean source. Removing them fails `blocks` / `headings`. The lines are choppy because the source is choppy.
+- Rewriting comma amounts as 万 (b#36), including 157万9589. Mainland grouping is right for a reader; this checker does not parse simplified 万, and a remainder after 万 (9589) is a second number. Commas kept.
+- The llms.txt suggestion “也不保证一定会被展示”. The refusal is right; the word 保证 is forbidden by the zh-hans pack test. Wording used is 不承诺.
+- Nothing else in the P1/P2 rows looked legally wrong. The 004 link really is the withholding-rate standard article 3, not 营业税法第10条; 第10条 stays in the label only so the digit 10 still parses.

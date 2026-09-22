@@ -1297,7 +1297,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     sitemapLabel: '网站地图',
     copyEmailLabel: '复制电子邮件地址',
     emailCopiedMessage: '已复制电子邮件地址。',
-    officialConsultationEmailLabel: '正式咨询电子邮件',
+    officialConsultationEmailLabel: '咨询专用电子邮箱',
   },
   ms: {
     officeLabel: 'Pejabat',

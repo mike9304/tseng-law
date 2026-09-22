@@ -31,7 +31,7 @@ Vannak azonban **kivételes esetek**.
 
 A következő különös helyzetekben, még ha a munkavállaló saját elhatározásából távozik is, a munkáltató köteles végkielégítést fizetni (a munkaügyi törvény 14. cikke, amely megfelelően alkalmazza a 17. cikket; 勞動基準法第14條):
 
-1. Ha a munkáltató a munkaszerződés (勞動契約) megkötésekor hamis akaratnyilatkozatot (虛偽意思表示) tesz, úgy hogy a munkavállaló tévedésbe esik, és kár bekövetkezésének kockázata áll fenn
+1. Ha a munkáltató a munkaszerződés (勞動契約) megkötésekor valótlan nyilatkozatot (虛偽意思表示) tesz, úgy hogy a munkavállaló tévedésbe esik, és kár bekövetkezésének kockázata áll fenn
 
 (például ha a munkáltató azt mondja a munkavállalónak, hogy belépéskor olyan külföldi fióktelepre küldi, amely valójában nem létezik)
 
@@ -65,19 +65,19 @@ ha a munkavállaló a fenti 1. vagy 6. pont alapján kívánja befejezni a munka
 
 a munkaszerződést **30 napon** belül kell befejeznie attól a naptól, amikor e helyzetet megismerte,
 
-vagy, a 6. pont esetén, **30 napon** belül attól a naptól, amikor a kár eredményét megismerte.
+vagy, a 6. pont esetén, **30 napon** belül attól a naptól, amikor a bekövetkezett kárról tudomást szerzett.
 
 A munkavállalónak tehát jól kell kezelnie a határidőt.
 
 ​
 
-Más szóval,
+A szabály a hiba oldalától függ.
 
-Tajvan joga, függetlenül attól, hogy a hiba a vállalkozás oldalán van-e,
+Tajvan joga aszerint ad jogot, hogy a hiba a munkáltató oldalán van-e,
 
-vagy a munkavállaló oldalán,
+vagy a munkavállaló oldalán:
 
-mindkét félnek megadja a jogot arra, hogy a végkielégítést ne fizesse, vagy azt követelje.
+az egyik fél a végkielégítést nem fizeti, a másik követelheti.
 
 Néha, ha a munkaviszony mindkét oldalán van hiba,
 

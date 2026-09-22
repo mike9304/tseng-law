@@ -27,7 +27,7 @@ Az alábbi kérdések és válaszok azoknak kívánnak segíteni, akik tajvani t
 
 Amikor külföldi személy Tajvanon társaságot alapít, beruházási tervet (投資計畫書) kell benyújtania a Gazdasági Minisztérium Beruházásvizsgáló Főosztályához (經濟部投資審議司) vizsgálat céljából.
 
-A Beruházásvizsgáló Főosztálynak ellenőriznie kell, hogy az érintett tőke (資本額) ténylegesen beruházási célra használják-e fel,
+A Beruházásvizsgáló Főosztálynak ellenőriznie kell, hogy az érintett tőkét (資本額) ténylegesen beruházási célra használják-e fel,
 
 és hogy külföldi szereplők nem más ürüggyel visznek-e be forrásokat.
 
@@ -35,13 +35,13 @@ A beruházási terv írásakor nem szükséges a társaság pontos címét felt�
 
 Amikor később a banknál megnyitják a társaság előkészítő számláját (公司籌備處帳戶), számos bank azonban megvizsgálja a bérleti szerződést (租賃契約), és a helyszínen ellenőrzi a társaság címét.
 
-Egy tajvani banki alkalmazott személyesen azt mondta nekem, hogy
+Egy tajvani banki alkalmazott személyesen a számlanyitás szigorodásáról beszélt.
 
-az utóbbi időben sok külföldi a számla megnyitása után eltűnik, ezért a számlanyitás egyre szigorúbban folyik.
+Az utóbbi időben sok külföldi a számla megnyitása után eltűnik, ezért a számlanyitás egyre szigorúbban folyik.
 
-Már az alapozó részben egy olvasó azt jelezte, hogy a számlanyitás a legnehezebb lépés; ezzel egyetértek.
+Már az alapozó részben egy olvasó azt jelezte, hogy a számlanyitás a legnehezebb lépés; a gyakorlat ezt megerősíti.
 
-Mivel a pénzmosási (洗錢) esetek Tajvanon nagyon számosak, a bankszámlanyitás egyre szigorúbbá válik.
+Mivel Tajvanon sok a pénzmosási (洗錢) eset, a bankszámlanyitás egyre szigorúbbá válik.
 
 **Tanács:**
 
@@ -95,11 +95,11 @@ Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakra
 
 Ez bérmentes időszak; erről lehet tárgyalni.
 
-Külföldi személynek nem könnyű üzlethelyiséget bérelni, és a tajvani kaució (押金) meglehetősen alacsony (rendszerint 2 hónap), ezért a bérbeadó védelme korlátozott;
+Külföldi személynek nem könnyű üzlethelyiséget bérelni, és a tajvani kaució (押金) meglehetősen alacsony (rendszerint 2 havi bér), ezért a bérbeadó védelme korlátozott;
 
 a bérbeadók ezért idegenkednek attól, hogy külföldinek adjanak bérbe.
 
-Ezért ajánlom, hogy az üzlethelyiséget korán keresse meg.
+Ezért érdemes az üzlethelyiséget korán megkeresni.
 
 Ha a bérbeadóval a tárgyalás nem folyik gördülékenyen,
 
@@ -113,7 +113,7 @@ Ez a társaság tevékenységi ágaitól (營業項目) függ.
 
 Például ha a tevékenységi ág a vendéglátás, és irodaházban kíván irodahelyiséget bérelni, a bankszámla megnyitása nagyon nehéz lesz.
 
-Amint már említettem, a bank megvizsgálja a bérleti szerződést, és a helyszínen ellenőrzi a társaság címét.
+Mint fentebb szerepel, a bank megvizsgálja a bérleti szerződést, és a helyszínen ellenőrzi a társaság címét.
 
 Emellett a végső társasági bejegyzéskor a városi önkormányzat (市政府) azt is megköveteli, hogy a bejegyzett cím olyan övezetben legyen, ahol étterem üzemeltetése engedélyezett;
 

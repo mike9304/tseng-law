@@ -172,7 +172,7 @@ A végső választás biztonságosabb, ha Tajvanon és a székhely helyén, ugya
 ## Hivatalos források
 
 - [A tajvani Igazságügyi Minisztérium normatív adatbázisa — társasági törvény](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [A tajvani Igazságügyi Minisztérium normatív adatbázisa — a forgalmi adóról szóló törvény (營業稅法) 10. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [A nem belföldi illetőségűeknek fizetett osztalék forrásadó-kulcsára vonatkozó rendelkezés (10. cikk)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [A tajvani Igazságügyi Minisztérium normatív adatbázisa — jövedelemadótörvény](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Tajvani Pénzügyminisztérium — útmutató a külföldi részvényeseknek fizetett osztalék forrásadójáról](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Tajvani Pénzügyminisztérium — értelmezés a külföldi társaság fióktelepének nyereségéről](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)
@@ -190,6 +190,6 @@ A végső választás biztonságosabb, ha Tajvanon és a székhely helyén, ugya
 
 ---
 
-Ez a cikk a tajvani leányvállalat és a külföldi társaság fióktelepe közötti különbségekről szóló általános, oktatási célú tájékoztató; nem minősül konkrét esetben adott jogi vagy adóügyi tanácsnak, és nem ígér meghatározott eredményt. Az alkalmazandó rendelkezések és az adókezelés a befektető és a székhely telephelye, a tevékenység tartalma, az ügyletek és a tőkeáramlás, az egyezmény feltételei, valamint az illetékes szerv legújabb gyakorlata szerint különbözhetnek; alapítás, beruházás, szerződés, osztalék vagy átutalás végrehajtása előtt a legújabb hivatalos forrásokat és a saját körülményeket meg kell erősíteni.
+Ez a cikk a tajvani leányvállalat és a külföldi társaság fióktelepe közötti különbségekről szóló általános, oktatási célú tájékoztató; nem minősül konkrét esetben adott jogi vagy adóügyi tanácsnak, és nem ígér meghatározott eredményt. Az alkalmazandó rendelkezések és az adókezelés a befektető és a székhely helye, a tevékenység tartalma, az ügyletek és a tőkeáramlás, az egyezmény feltételei, valamint az illetékes szerv legújabb gyakorlata szerint különbözhetnek; alapítás, beruházás, szerződés, osztalék vagy átutalás végrehajtása előtt a legújabb hivatalos forrásokat és a saját körülményeket meg kell erősíteni.
 
-**Ügyvédnő Wei Tseng (曾雋崴)**
+**Wei Tseng ügyvédnő (曾雋崴)**

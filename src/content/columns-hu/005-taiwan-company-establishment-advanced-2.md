@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Kiemelt kép](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Ha elolvasta a [Társaságalapítás Tajvanon – alapok](/hu/columns/taiwan-company-establishment-basics) és a [Társaságalapítás Tajvanon – elmélyítő rész 1](/hu/columns/taiwan-company-establishment-advanced-1) írásokat, a Társaságalapítás Tajvanon – elmélyítő rész 2 (公司設立) anyagát is érdemes áttekintenie.
+Ha elolvasta a [Társaságalapítás Tajvanon – alapok](/hu/columns/taiwan-company-establishment-basics) és a [Társaságalapítás Tajvanon – elmélyítő rész 1](/hu/columns/taiwan-company-establishment-advanced-1) írásokat, ez a 2. rész a társaságalapítás (公司設立) alapjait és az elmélyítő 1. részt folytatja.
 
 ​
 
@@ -25,7 +25,7 @@ Az alábbi kérdések és válaszok azoknak kívánnak segíteni, akik tajvani t
 
 ​
 
-**1. Mire kell figyelni a tőke (資本額) Koreából a tajvani társaság előkészítő számlájára (公司籌備處帳戶) történő átutalásakor? (ez a pont a koreai rezsimre és a koreai banki gyakorlatra vonatkozik)**
+**1. Mire kell figyelni a tőke (資本額) Koreából a tajvani társaság előkészítő számlájára (公司籌備處帳戶) történő átutalásakor? (ez a pont a koreai devizaszabályozásra és a koreai banki gyakorlatra vonatkozik)**
 
 A koreai bankok általában megkövetelik, hogy a befektető **személyesen** jelenjen meg egy koreai bankban, és a saját nevére szóló számláról utalja a tőkét.
 
@@ -37,9 +37,9 @@ A tőke átutalása (資本金匯款) előtt tájékozódjon a koreai főbankjá
 
 **​**
 
-**2. A társasági tőke befizetésekor átutalhatók-e tajvani dollárok (新臺幣, TWD) a tajvani személyes számláról a tajvani társaság előkészítő számlájára?**
+**2. A társasági tőke befizetésekor átutalhatók-e új tajvani dollárok (新臺幣, TWD) a tajvani személyes számláról a tajvani társaság előkészítő számlájára?**
 
-Lehetséges, de be kell nyújtani a Tajvanon szerzett tajvani dollár tőke eredetét igazoló iratokat.
+Lehetséges, de be kell nyújtani a Tajvanon szerzett új tajvani dollár tőke eredetét igazoló iratokat.
 
 Ha például tajvani bérjövedelemről van szó, a bérjövedelem forrásadó-igazolásának másolatát (薪資所得的扣繳憑單影本) kell bemutatni.
 

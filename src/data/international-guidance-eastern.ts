@@ -643,7 +643,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Házasság, család és öröklés',
           paragraphs: [
-            'Válást (離婚), vagyonmegosztást, a szülői felügyeletet (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) érintő ügyekben járunk el, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik a háztartási nyilvántartás (戶籍), az okiratok alakjának és tajvani bizonyító erejének további vizsgálatát.',
+            'Válást (離婚), vagyonmegosztást, a szülői felügyeletet (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) érintő ügyekben járunk el, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik a háztartás-nyilvántartás (戶籍), az okiratok alakjának és tajvani bizonyító erejének további vizsgálatát.',
             'Mivel a családi ügyekhez gyakran határidők és párhuzamos eljárások társulnak, az első összefoglalónak meg kell jelölnie a felek viszonyát, a jelenlegi lakóhelyet és a már folyamatban lévő eljárásokat.',
           ],
         },
@@ -651,7 +651,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Munkaügyi jogviták',
           paragraphs: [
             'Ez a csoport a munkaviszony megszűnését, a tajvani jog szerinti végkielégítést (資遣費; nem azonosítható más államok hasonló jogintézményeivel), a díjazást és a munkaszerződésből (勞動契約) eredő jogvitákat foglalja magában, munkavállalói és munkáltatói oldalon egyaránt. A vizsgálat során elkülönítjük a megszűnés okát a felmondási idő, a kifizetés és a határidők kérdéseitől.',
-            'A döntő iratok rendszerint a munkaszerződés, a belső munkarend (工作規則), a bérjegyzékek és a felek levelezése. Ha ezek még megvannak, említse meg az összefoglalóban.',
+            'A döntő iratok rendszerint a munkaszerződés, a belső munkaügyi szabályzat (工作規則), a bérjegyzékek és a felek levelezése. Ha ezek még megvannak, említse meg az összefoglalóban.',
           ],
         },
         {
@@ -689,7 +689,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Alapítás és felépítés',
           paragraphs: [
             'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University-n (國立臺灣大學) végzett ügyvédek. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítása óta követett irányát fejezi ki.',
-            'Irodáink Tajpejben (臺北), Kaohsziungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. A kaohsziungi iroda a vállalatvezetésre összpontosít, és polgári, büntető- és közigazgatási jogvitákban jár el. A tajcsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
+            'Irodáink Tajpejben (臺北), Kaohsziungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. A kaohsziungi iroda a vállalatirányításra összpontosít, és polgári, büntető- és közigazgatási jogvitákban jár el. A tajcsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
             'Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonnal rendelkező magánszemélyeknek.',
           ],
         },
@@ -703,7 +703,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Amikor megkeres minket',
           paragraphs: [
-            'Az összefoglaló beérkezése után egy ügyvéd megvizsgálja a tartalmat, majd beszél a munka lehetséges terjedelméről, a még szükséges iratokról és a következő lépésekről. Adó- vagy könyvviteli kérdésekben az iroda egyetlen folyamatban dolgozhat együtt a könyvviteli résszel.',
+            'Az összefoglaló beérkezése után egy ügyvéd megvizsgálja a tartalmat, majd beszél a munka lehetséges terjedelméről, a még szükséges iratokról és a következő lépésekről. Adó- vagy könyvviteli kérdésekben az iroda a könyvviteli részleggel egy közös eljárásban dolgozhat.',
             'Minden ügy kimenetele a tényektől és a rendelkezésre álló iratoktól függ; eredményt nem ígérünk. Ha helyzetére kötelező erejű választ kíván, az iratokat a négy tanácsadási nyelv valamelyikén kell megtárgyalni egy ügyvéddel.',
           ],
         },

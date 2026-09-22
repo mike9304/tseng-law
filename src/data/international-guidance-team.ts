@@ -3242,7 +3242,7 @@ export const guidanceTeamBios: Record<
         'Alapfokozat (B.S.) informatikából, National Cheng Kung University',
       ],
       experience: [
-        'Koreai működési terület, Hovering International Law Firm',
+        'Koreai üzleti csapat, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {

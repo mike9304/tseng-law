@@ -26,7 +26,7 @@ A külföldi vállalkozások és az egyéni vállalkozók tajvani piacra lépés
 
 A társaságalapítás (公司設立), a külföldi beruházás, a bankszámla, az adózás, a telephely, a munkavállalási engedély (工作許可) és a tartózkodási eljárás összefügg, de nem ugyanaz az eljárás. A társasági bejegyzés befejezése nem jelenti, hogy a beruházási tőke vizsgálata vagy az ágazati engedélyek teljesen lezárultak, sem azt, hogy a tagok vagy a vezető azonnal dolgozhatnak Tajvanon.
 
-Ezért biztonságosabb már kezdettől együtt vizsgálni az üzleti modellt, a befektetők és a székhely telephelyét, a várható ügyleteket, a tőkeáramlást, a személyzet elhelyezését és a telephelyet. Ez a cikk először megkülönbözteti a tajvani belépési formákat, majd sorban bemutatja a leányvállalat alapításának általános menetét, az ágazatra és a helyre vonatkozó előzetes vizsgálatokat, a külföldiek munkavállalási engedélyét, tartózkodását és tőkéjét, valamint a lényeges adókat.
+Ezért biztonságosabb már kezdettől együtt vizsgálni az üzleti modellt, a befektetők és a székhely helyét, a várható ügyleteket, a tőkeáramlást, a személyzet elhelyezését és a telephelyet. Ez a cikk először megkülönbözteti a tajvani belépési formákat, majd sorban bemutatja a leányvállalat alapításának általános menetét, az ágazatra és a helyre vonatkozó előzetes vizsgálatokat, a külföldiek munkavállalási engedélyét, tartózkodását és tőkéjét, valamint a lényeges adókat.
 
 ## 1. Tajvani belépési formák: leányvállalat, fióktelep, képviseleti iroda
 
@@ -142,4 +142,4 @@ A vonatkozó tevékenységi kört a [Milyen ügyekben járunk el](/hu/services) 
 
 Ez a cikk a tajvani társaságalapításról és a kapcsolódó szabályokról szóló általános, oktatási célú tájékoztató; nem minősül konkrét ügyben adott jogi vagy adóügyi tanácsnak, és nem ígér meghatározott eredményt. A szükséges eljárások és eredmények a beruházási szerkezet, az ágazat, a kérelmező állampolgársága és tartózkodási státusza, valamint az illetékes szerv legújabb gyakorlata szerint különbözhetnek; beruházás, szerződés vagy foglalkoztatás végrehajtása előtt a legújabb hivatalos forrásokat és az ügy saját körülményeit kell vizsgálni.
 
-**Ügyvédnő Wei Tseng (曾雋崴)**
+**Wei Tseng ügyvédnő (曾雋崴)**

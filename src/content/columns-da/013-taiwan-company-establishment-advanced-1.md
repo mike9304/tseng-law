@@ -33,13 +33,13 @@ Den skal også undersøge, om udenlandske aktører indfører midler under et and
 
 Ved udarbejdelsen af investeringsplanen behøver den nøjagtige selskabsadresse ikke at anføres; angivelse af egnen er tilstrækkelig (eksempel: byen Taipei). ​
 
-Når senere selskabets forberedelseskonto (公司籌備處帳戶) åbnes i banken, prøver talrige banker dog lejeaftalen (租賃契約) og inspicerer selskabsadressen på stedet.
+Når selskabets forberedelseskonto (公司籌備處帳戶) senere åbnes i banken, prøver talrige banker dog lejeaftalen (租賃契約) og inspicerer selskabsadressen på stedet.
 
 En medarbejder ved en taiwansk bank har oplyst, at talrige udlændinge for nylig forsvinder efter kontoåbningen.
 
 Kontoåbningen behandles derfor stadig strengere.
 
-Allerede i grundlagsteksten har en læser anført, at kontoåbningen viste sig at være det vanskeligste trin; den iagttagelse holder.
+Allerede i den tidligere artikel om grundlaget har en læser anført, at kontoåbningen viste sig at være det vanskeligste trin; den iagttagelse holder.
 
 Fordi tilfældene af hvidvask (洗錢) i Taiwan er meget talrige, bliver åbningen af bankkonti stadig strengere.
 
@@ -117,7 +117,7 @@ Som allerede anført prøver banken lejeaftalen og inspicerer selskabsadressen p
 
 Desuden kræver stadsforvaltningen (市政府) ved den endelige selskabsregistrering, at den registrerede adresse ligger i en zone, hvor restaurantdrift er tilladt;
 
-ved et kommercielt kontorlokale er selskabsregistreringen (公司登記) da ikke mulig.
+ved et almindeligt kommercielt kontorlokale er selskabsregistreringen (公司登記) ikke nødvendigvis mulig.
 
 F.eks.: Drejer det sig om forretningsgrene (營業項目), der er mulige i et kommercielt kontorlokale, såsom reklame eller engros, kan selskabet stiftes i et kommercielt kontorlokale.
 

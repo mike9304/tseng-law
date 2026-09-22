@@ -13,7 +13,7 @@ faq:
   - q: "Skal selskabet også ved en disciplinær afskedigelse udbetale godtgørelse ved afskedigelse?"
     a: "Nej. Begår arbejdstageren et retsbrud, krænker interne regler eller udebliver uden gyldig grund 3 dage i træk (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af godtgørelse ved afskedigelse."
   - q: "Hvordan beregnes godtgørelsen ved afskedigelse i Taiwan?"
-    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales for hvert fuldført 1 år 1 måneds gennemsnitsløn uden maksimum."
+    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hvert fuldførte et år, uden loft."
 ---
 
 # Godtgørelse ved afskedigelse (資遣費) i Taiwan: hvornår den udbetales, og hvornår den ikke gør
@@ -62,7 +62,7 @@ Det sammenfattes i tabellen nedenfor.
 
 > I Taiwan skal arbejdsgiveren for hvert fuldført års anciennitet (年資)
 > udbetale 0,5 måneds gennemsnitsløn (平均工資) som godtgørelse ved afskedigelse.
-> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales for hvert fuldført 1 år 1 måneds gennemsnitsløn uden maksimum.
+> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hvert fuldførte et år, uden loft.
 
 ​
 
@@ -86,7 +86,7 @@ Nedenfor skitseres en sag, som advokaten har behandlet.
 
 Der findes det kendte selskab A med filialer i hele Taiwan.
 
-Af en eller anden grund skiftede ledelsen,
+Af en eller anden grund skiftede ledelsen.
 
 Så snart den nye ledelse var tiltrådt, gik den i gang.
 
@@ -194,7 +194,7 @@ Det kan stille overdrevne krav.
 
 Det kan omplacere medarbejdere til mærkelige stillinger.
 
-**skal du sikre beviser.**
+**Du skal sikre beviser.**
 
 **Gem dine normale fremmøderegistre.**
 
@@ -204,7 +204,7 @@ Det kan omplacere medarbejdere til mærkelige stillinger.
 
 **Gem samtaleoptagelser med overordnede.**
 
-**sikr de beviser, der taler til din fordel.**
+**Sikr de beviser, der taler til din fordel.**
 
 ​
 

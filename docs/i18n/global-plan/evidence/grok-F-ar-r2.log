@@ -1,0 +1,127 @@
+WO-F-ar r2 — Grok 4.7 fix lane — 2026-09-22
+Locale: Arabic (Modern Standard, Gulf/Levant readers)
+Workspace: /Users/son7/Projects/tseng-law-fix-ar-r2
+No git add/commit/push.
+
+Reviews: docs/i18n/global-plan/reviews/native/rounds/r2/ar-a.md (20 rows), ar-b.md (29 rows).
+Rules applied: RULEBOOK-FIX R2–R10 where an instance remained; ACCEPTED-ROUND skip rules.
+
+## Rows applied
+
+Part a
+1 P1 dashcam: الصندوق الأسود → تسجيل كاميرا السيارة (003, 1).
+2 P1 spouse: غير الزوج → شخص غير الزوج أو الزوجة in the heading and the body of §4 and §6, plus ضد غير الزوج (007, 4 sites).
+3 P1 parent: الأب الآخر / موافقة الأب الآخر → الوالد الآخر (007, 4).
+4 P2 Kaohsiung docket: dropped المعتادة (guidance content, 1).
+5 P2 company name: بالحروف → المكتوب بـ (漢字) in the three name-review sentences (001). Did not use الصيني; see reviewer-wrong.
+6 P2 إجازة = leave: موافقة الجهة الرقابية (001). Same calque also in 011 (4) and 016 (1). Left 003 سجلات الحضور أو الإجازة (that is leave).
+7 P2 009: dropped على النحو العام; the severance duty stays in the same sentence.
+8 P2 001: لا شخصًا اعتباريًا → لا شخصٌ اعتباري.
+9 P2 002: فيجب التحقق من ذلك كله: … (list after the colon kept).
+10 P2 002: تختلف النصاب → يختلف النصاب.
+11 P2 002: وإذا أُنهي الأمر، تُعَدُّ إجراءات الحل والتصفية … (indicative, and إجراءات so the verb agrees).
+12 P2 004: ستتحمله المقر → سيتحمله المقر.
+13 P2 004: يُراجَع دوريًا ما إذا كان التشغيل الفعلي قد فارق الهيكل المختار.
+14 P2 llms discoveryNotice.ar: خريطة للوصول؛ توصية من أنظمة الذكاء الاصطناعي (not ترشيح / للاستدلال).
+15 P2 أداء = performance/實績: قيمة تصدير واستيراد (001, 4); نتائج أعمال صاحب العمل (001, 3); سجل أعمال (001, 1); 005 متطلبات الأداء على صاحب العمل → متطلبات صاحب العمل من رأس المال وإيرادات المبيعات (English is capital and turnover). Left أداء where it means carrying out work.
+17 P2 007 §6 body: dropped the bare لا. The FAQ answer to the yes/no question «هل يتحدد بذلك الملك» keeps لا.
+18 P2 008 conditions cells: يُشترط تحقق أحد أوضاع المادة 11 / 12. «لا يوجد» kept for None.
+19 P2 008 difficulty row: header درجة الصعوبة → مقارنة الشروط. Row not deleted (see skipped).
+20 P2 column amounts in 003 only: TWD no longer leads (1,000,000; 500,000; 200,000; 80,000–3,000,000; 3,000,000; 3,200,000), each still followed by دولار تايواني جديد. Parenthetical (TWD) glosses left.
+
+Part b
+1 P1 016: الوصي والمستفيد in the trust sentence → أمين الترست (受託人) والمستفيد. Guardian الوصي elsewhere left.
+2 P2 deadlift agreement: رفعة ميت 90 → رفعة ميتة وزنها 90 (14); رفعة الميت → رفعة الميتة (3). The headline that already said رفعة ميتة was left.
+3 P2 mindset: وضع من يمارس → ذهنية من يمارس (010 alt + link, 2).
+4 P2 010: المبلغ الذي تعترف به المحكمة (not مبلغ المحكمة المعترف به).
+5 P2 011 distributor: من يتولى التوزيع أيضًا (FAQ + body, 2).
+6 P2 011 checklist: ما إذا كانت ستُقام شركة تابعة.
+7 P2 011: يُميَّز في التطبيق بين المادتين؛ ويُعامَل تسجيل المنتج وإدارة PIF … مسار امتثال مستقل (تشغيل dropped, 2).
+8 P2 011: اكتساب صفة المستورد.
+9 P2 011: عوضًا عن تثبيت تاريخ الإطلاق بافتراض مدة ثابتة … متطلبات التقديم.
+10 P2 011: طبيب أو بممارس طبي.
+11 P2 012: لم يتسع الوقت للفرملة (narrative + assessment, 2).
+13 P2 split sentences in 013 and 015: each existing block closed or opened so it stands alone. Blocks were not merged. 013: 12 pairs. 015: the market / Taipei / land-office splits (3).
+14 P2 bare لا: 014 «لا ينفذ الاتفاق تلقائيًا»؛ 016 §3 «هذا الحق لا يندرج في الحصة الإرثية». FAQ answers that reply to a yes/no question keep لا.
+15 P2 014: علاقة تناسب معقولة.
+16 P2 014: ولا يجوز لصاحب العمل أن يعيد تسمية تكلفة التوظيف …
+17 P2 015: closing » moved to the end of the markdown link; Chinese gloss (臺北市營業場所協助查詢服務作業須知) follows. URL unchanged.
+18 P2 016 trust headword: الترست (信託) for the planning sentence, مال الترست / عقد الترست, محرر الترست, مستفيد التأمين والترست. Bank-credit sense removed where the gloss is 信託.
+19 P2 016: مستندات إثبات النسب.
+20 P2 016: ويُوازن بين حاجة الطفل الحالية ومعيشته المقبلة.
+21 P2 017: ثمن شراء الأسهم؛ اشترى شخص اعتباري؛ إلى المشتري / للمشتري.
+22 P2 017: وإذا زُوول النشاط في منطقتي كينمن وليانجيانغ.
+24 P2 018: مجرد اختيار شكل معيّن (the no-guarantee clause stays).
+25 P2 018: إيراد تشغيلي قدره 100 مليون دولار تايواني جديد، أو 100 عامل مشترك في التأمين العمالي.
+26 P2 018: وللمدير موافقة ثلثين من حقوق تصويت المساهمين الآخرين فأكثر. Spelled ثلثين (not ثلثي) so the checker still sees 2 and 3.
+28 P2 018: تُرسَل مواد التصميم السرية …
+29 P2 018: وتُراجَع أيضًا المسؤولية التعاقدية.
+
+Also, same spouse pattern as row a2: نفقة الزوج → نفقة أحد الزوجين (007, 8); للزوج غير المخطئ → لمن لم يخطئ من الزوجين (2); زوجًا غير مخطئ → من لم يخطئ من الزوجين (1). Statutory heir «الزوج» in 016 was not rewritten.
+
+## Rows skipped
+
+a16 (structure) — Do not delete U+200B and do not turn Q16–Q20 into new headings. Korean source ZWSP count matches Arabic (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). Deleting them fails checkBlocks. Adding headings fails checkHeadings. The 006 shampoo opening is the English source’s opening; it was not rewritten into a different article.
+a19 (deletion) — The difficulty row is still a row in the Korean and English tables. Deleting it changes the table-row count. Header relabeled; cells stay the softened wording (not Easy/Difficult).
+a20 (bio only) — «TWD 1.57M» in guidanceTeamBios.ar stays byte-identical (pinned). Column amounts were rewritten.
+b12 — Same ZWSP constraint as a16. The sentences around the spacers were kept; 013/015 fragments were repaired inside the blocks (row b13).
+b23 — Not applied. English and Korean both say the foregoing is contract-design advice («이상은 계약 설계 제안입니다» / «The foregoing is contract-design advice»). Replacing that sentence with a branch-vs-subsidiary comparison would change the source proposition. The next sentence’s نموذج → شكل is row b24 and was applied.
+b27 — Not applied. English and Korean headings also jump from 5 to 7, then 8. Renumbering changes a digit the checker counts.
+
+## Systemic patterns and instance counts
+
+- الزوج for “spouse” (adultery, spousal support, non-fault spouse), not الزوجان/الزوجين and not the 016 statutory heir: 15.
+- الأب for “the other parent”: 4.
+- Amounts that led with the code TWD (003 only): 6 figures. Pinned TWD 1.57M: 0. Gloss «(新臺幣, TWD)» / «(TWD)»: 0.
+- Jussive vocalization on an indicative (تُعدَّ / يُعدَّ): 4 (002, 004, 011, 016).
+- أداء calquing performance / 實績: 9. أداء = carrying out work left.
+- إجازة read as vacation when the English is approval: 6. Sick-leave records in 003 left.
+- One sentence split across blocks, repaired without merging blocks: 15 (013: 12, 015: 3). U+200B deleted: 0.
+- Bare لا opening a non-yes/no section: 3. FAQ yes/no answers left.
+- Trust vs guardian / bank credit (016): 5 headword sites, plus the trustee sentence.
+- تشغيل calquing “operate” a provision or a workstream (011): 2.
+- رفعة ميت agreement (010): 17.
+- قبول = purchase (017): the price sentence and the purchaser sentence (قابل → المشتري, 2).
+- Gender of Wei Tseng was already feminine in the named sites; no masculine title was introduced. السيد لين and السيد B stay male. «قال» in 013 agrees with the male bank employee.
+
+R2–R10 leftovers checked and not reopened: 001/004 Korea tax note already framed as country-specific; 005 remittance is labelled as Korea banking practice, not a rule for every investor; 005 hiring question is already «توظيف أجانب»; consultation lock unchanged; fullwidth colon remains only inside the 008 frontmatter url.
+
+## Reviewer got wrong (not applied)
+
+- b23: the contract-design sentence is in the English and the Korean. The paragraphs above it are about registration, and the sentence is still what the source says.
+- b27: the missing section 6 is in the English and the Korean outlines.
+- a16 / b12: zero-width spaces are in the Korean source at the same counts. They are not an Arabic-only defect the checker will allow to be deleted.
+- a5 suggested wording «الاسم الصيني»: الصيني contains الصين, and the nationality check fails on block[16] because that Korean block does not name China. Wording used instead: اسم الشركة المكتوب بـ (漢字), with the gloss carrying the script.
+- a20 suggested dropping «TWD 1.57M» from the bio. The test pins that byte string.
+- a19 suggested deleting the difficulty row. The source table still has the row.
+- a26-style ثلثي (construct) drops the number token. ثلثين is what the checker parses as 2 and 3, so the director clause uses موافقة ثلثين من حقوق تصويت ….
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-ar-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ar --lang ar 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=6
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ar src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+
+Pass: checker 18/18, markers 0, TSC_OK, tests passed. No Arabic test expectation needed a wording update. 006 was not edited.
+After this log was written, git status --short | wc -l is 23 (this file is the extra line).

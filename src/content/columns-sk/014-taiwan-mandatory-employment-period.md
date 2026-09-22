@@ -14,8 +14,8 @@ faq:
     a: "Podľa pokynu taiwanského Ministerstva práce (勞動部) z 5. 6. 2026 nemožno náklady pravidelného školenia, všeobecného školenia k miestu, adaptačného školenia nováčikov a školenia, ktoré zákon ukladá vykonať, vziať za základ dohody o minimálnej dobe trvania pracovného pomeru ani žiadosti o zmluvnú pokutu (違約金) alebo vrátenie nákladov. Nemožno hľadieť len na názov školenia, ale na konkrétny program, odborný a technický obsah, dobu, náklady skutočne nesené zamestnávateľom a doklady."
   - q: "Pri predčasnom odchode treba vrátiť celú podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金)?"
     a: "Nie vždy sa vracia celá suma. Ak bola podpisová prémia, prémia za zotrvanie alebo iné plnenie poskytnuté vopred (預付性給付) vyplatené ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru, musí byť jeho účel pracovníkovi jasne oznámený. Pokyn taiwanského Ministerstva práce z 5. 6. 2026 vysvetľuje, že pri odchode pred uplynutím doby sa suma na vrátenie musí vypočítať v pomere k ešte nesplnenej dobe a že nemožno žiadať vrátenie celej sumy. Skutočný záver musí spoločne posúdiť účel výplaty, obsah dohody, už odpracovanú dobu a dôvod skončenia."
-  - q: "Ak zmluva skončí predčasne z dôvodu nepričitateľného pracovníkovi, treba vrátiť náklady na školenie?"
-    a: "Článok 15-1 odsek 4 taiwanského zákona o pracovných normách stanoví, že ak pracovná zmluva skončí pred koncom minimálnej doby trvania pracovného pomeru z dôvodu nepričitateľného pracovníkovi, pracovník nenesie zodpovednosť za porušenie dohody o minimálnej dobe trvania pracovného pomeru ani za vrátenie nákladov na školenie. Dôvod skončenia a pričítanie zodpovednosti sa však musia posúdiť z konkrétnych dôkazov, ako je oznámenie o prepustení, prejav odchodu a podklady o porušení pracovných podmienok."
+  - q: "Ak zmluva skončí predčasne z dôvodu, ktorý nemožno pričítať pracovníkovi, treba vrátiť náklady na školenie?"
+    a: "Článok 15-1 odsek 4 taiwanského zákona o pracovných normách stanoví, že ak pracovná zmluva skončí pred koncom minimálnej doby trvania pracovného pomeru z dôvodu, ktorý nemožno pričítať pracovníkovi, pracovník nenesie zodpovednosť za porušenie dohody o minimálnej dobe trvania pracovného pomeru ani za vrátenie nákladov na školenie. Dôvod skončenia a pričítanie zodpovednosti sa však musia posúdiť z konkrétnych dôkazov, ako je oznámenie o prepustení, prejav odchodu a podklady o porušení pracovných podmienok."
 ---
 
 # Dohoda o minimálnej dobe trvania pracovného pomeru na Taiwane: kritériá platnosti, náklady na školenie a zmluvná pokuta
@@ -31,7 +31,7 @@ Pri preskúmaní je dôležité nezmiešavať nasledujúce štyri otázky.
 3. Komu sa pričíta dôvod skončenia pracovnej zmluvy
 4. Ako sa posudzujú výpovedná lehota odchodu a rozsah vrátenia
 
-Aj keď tieto štyri otázky figurujú spoločne v tej istej zmluve, použiteľné ustanovenie a potrebný dôkaz sú odlišné. Preto treba osobitne posúdiť, či je dohoda platná, kedy nadobúda účinky prejav odchodu, či existuje zodpovednosť vrátiť plnenie poskytnuté vopred (預付性給付) alebo náklady na školenie a či skutočne vznikla osobitne uplatňovaná škoda.
+Aj keď tieto štyri otázky figurujú spoločne v tej istej zmluve, uplatniteľné ustanovenie a potrebný dôkaz sú odlišné. Preto treba osobitne posúdiť, či je dohoda platná, kedy nadobúda účinky prejav odchodu, či existuje zodpovednosť vrátiť plnenie poskytnuté vopred (預付性給付) alebo náklady na školenie a či skutočne vznikla osobitne uplatňovaná škoda.
 
 ## 1. Kedy nadobúda dohoda o minimálnej dobe trvania pracovného pomeru účinky?
 
@@ -63,7 +63,7 @@ Druhý zákonný predpoklad je, že zamestnávateľ poskytne primeranú náhradu
 
 Najprv treba overiť účel výplaty. Či ide o všeobecnú mzdovú podmienku náboru, protiplnenie za sľub zotrvať určitú dobu, alebo odmenu za dosiahnutie výsledkov, musí byť zrejmé zo zmluvy a z oznamovacích podkladov. Posudzuje sa tiež, či deň výplaty, suma, okamih priradenia, spojenie s dobou zotrvania, dôvody vrátenia a vzorec boli predložené tak, aby ich pracovník mohol pochopiť pred zmluvou.
 
-Pokyn (函釋) taiwanského Ministerstva práce (勞動部) z 5. 6. 2026 vysvetľuje, že ak sa má ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru vziať prémia za zotrvanie, podpisová prémia alebo iné plnenie poskytnuté vopred, musí byť táto úloha jasne oznámená. Že zamestnávateľ dodatočne znova vyloží účel výplaty alebo znova zaradí časť mzdy ako náhradu, ťažko nahrádza oznámenie v okamihu zmluvy.
+Pokyn (函釋) taiwanského Ministerstva práce (勞動部) z 5. 6. 2026 vysvetľuje, že ak sa má ako primeraná náhrada dohody o minimálnej dobe trvania pracovného pomeru vziať prémia za zotrvanie, podpisová prémia alebo iné plnenie poskytnuté vopred, musí byť táto povaha plnenia jasne oznámená. Že zamestnávateľ dodatočne znova vyloží účel výplaty alebo znova zaradí časť mzdy ako náhradu, ťažko nahrádza oznámenie v okamihu zmluvy.
 
 Primeranosť náhrady sa neposudzuje len podľa sumy. Spoločne sa vidí, či pracovník skutočne získa dodatočný prospech, či sú podmienky výplaty jasné, ako sa priraďuje časť zodpovedajúca už odpracovanej dobe a či rozsah vrátenia nie je nadmerný. Aj keď náhrada existuje, nie je bez obmedzenia dovolená akákoľvek dĺžka zotrvania ani akákoľvek výška zodpovednosti za vrátenie.
 
@@ -86,7 +86,7 @@ Tretí prvok vidí nielen výšku náhrady, ale i rozsah. Dôležité je, kedy s
 
 Štvrtý prvok môže zahŕňať rôzne okolnosti, ktoré ovplyvňujú primeranosť, ako priebeh uzatvorenia dohody, povahu práce, čo bolo stranám vysvetlené, skutočne odpracovanú dobu a dôvod skončenia. Význam každého prvku sa môže líšiť podľa veci a okolnosti na zohľadnenie sa neobmedzujú na predchádzajúce príklady. Preto treba posúdiť bez opomenutia relevantné skutočnosti, ktoré sa objavujú v spise.
 
-Nakoniec treba zrozumiteľný pomer medzi dohodnutou dobou, skutočnou investíciou zamestnávateľa, ťažkosťou náhrady, náhradou, ktorú pracovník obdržal, a bremenom vrátenia. Nemožno vopred určiť platnosť len preto, že ide o určité povolanie, ani bez zmeny uplatniť záver z inej veci. Treba spoločne vidieť návrh v okamihu uzatvorenia zmluvy a skutočný stupeň splnenia v okamihu skončenia.
+Nakoniec treba zrozumiteľný pomer medzi dohodnutou dobou, skutočnou investíciou zamestnávateľa, ťažkosťou náhrady, náhradou, ktorú pracovník obdržal, a bremenom vrátenia. Nemožno vopred určiť platnosť len preto, že ide o určité povolanie, ani bez zmeny uplatniť záver z inej veci. Treba posúdiť spolu návrh v okamihu uzatvorenia zmluvy a skutočný stupeň splnenia v okamihu skončenia.
 
 ## 5. Školenie, ktoré nemôže založiť dohodu
 
@@ -112,17 +112,17 @@ Otázku vrátenia treba overiť po poradí: platnosť dohody, právna povaha vyp
 
 Doložka o vrátení celej sumy, pevná zmluvná pokuta nesúvisiaca so skutočnou stratou a jednostranná zrážka zo mzdy sa neposudzujú ako jeden problém. Právny základ, obsah dohody, obmedzenia pracovného práva a zákonnosť zrážky sa musia overiť osobitne. Suma zapísaná vo výzve zamestnávateľa alebo skutočnosť, že pracovník zaplatil časť, takisto neurčuje zvyšné právne otázky.
 
-Treba tiež rozlíšiť vrátenie nákladov na školenie a vrátenie plnenia poskytnutého vopred. Prvé sa posudzuje so stredom na skutočné špecializované technické školenie a nesenie nákladov; druhé na účel výplaty, oznámenie, podmienky priradenia a pomer k nesplnenej dobe. Ak sa žiadajú obe položky spoločne, treba osobitne porovnať, či náklad nebol vypočítaný dvakrát, a doklady každej položky.
+Treba tiež rozlíšiť vrátenie nákladov na školenie a vrátenie plnenia poskytnutého vopred. Prvé sa posudzuje so zameraním na skutočné špecializované technické školenie a nesenie nákladov; druhé na účel výplaty, oznámenie, podmienky priradenia a pomer k nesplnenej dobe. Ak sa žiadajú obe položky spoločne, treba osobitne porovnať, či náklad nebol vypočítaný dvakrát, a doklady každej položky.
 
-## 7. Keď zmluva skončí z dôvodu nepričitateľného pracovníkovi
+## 7. Keď zmluva skončí z dôvodu, ktorý nemožno pričítať pracovníkovi
 
-Článok 15-1 odsek 4 taiwanského zákona o pracovných normách stanoví, že ak pracovná zmluva skončí pred koncom minimálnej doby trvania pracovného pomeru z dôvodu nepričitateľného pracovníkovi, pracovník nenesie zodpovednosť za porušenie dohody o minimálnej dobe trvania pracovného pomeru ani za vrátenie nákladov na školenie. Dôvod skončenia a pričítanie zodpovednosti sa však musia posúdiť z konkrétnych dôkazov, ako je oznámenie o prepustení, prejav odchodu a podklady o porušení pracovných podmienok.
+Článok 15-1 odsek 4 taiwanského zákona o pracovných normách stanoví, že ak pracovná zmluva skončí pred koncom minimálnej doby trvania pracovného pomeru z dôvodu, ktorý nemožno pričítať pracovníkovi, pracovník nenesie zodpovednosť za porušenie dohody o minimálnej dobe trvania pracovného pomeru ani za vrátenie nákladov na školenie. Dôvod skončenia a pričítanie zodpovednosti sa však musia posúdiť z konkrétnych dôkazov, ako je oznámenie o prepustení, prejav odchodu a podklady o porušení pracovných podmienok.
 
 Nemožno preto uznať porušenie pracovníka len preto, že pracovný vzťah skončil pred dohodnutou dobou. Treba overiť, kto učinil aký prejav vôle, aký je právny základ skončenia zmluvy a ktorej strane sa pričítajú skutočné okolnosti, ktoré ho vyvolali.
 
 Podklady preskúmania môžu zahŕňať oznámenie o prepustení, list o odchode, dokument o skončení dohodou, e-mail a záznam messengeru, podklady o zmene pracovných podmienok a evidenciu dochádzky a práce. Aj keď sa spomína zdravie alebo okolnosti práce, výsledok sa neuzatvára len podľa tohto výrazu, ale spoločne sa vidí skutočný priebeh, zákonný základ skončenia a súvisiace dôkazy.
 
-Prepustenie, skončenie dohodou a tvrdenie o porušení pracovných podmienok sú len príklady okolností na posúdenie, nie uzavretý výpočet dôvodov nepričitateľných pracovníkovi. Skončenie toho istého názvu sa môže líšiť vo vôli strán a v priebehu a názov zapísaný v dokumente sa nemusí zhodovať so skutočnými faktami.
+Prepustenie, skončenie dohodou a tvrdenie o porušení pracovných podmienok sú len príklady okolností na posúdenie, nie uzavretý výpočet dôvodov, ktoré nemožno pričítať pracovníkovi. Skončenie toho istého názvu sa môže líšiť vo vôli strán a v priebehu a názov zapísaný v dokumente sa nemusí zhodovať so skutočnými faktami.
 
 Posúdenie dôvodu skončenia ovplyvňuje priamo i rozsah vrátenia. Ak sa uplatní odsek 4, nemožno po pracovníkovi žiadať zodpovednosť za porušenie dohody o minimálnej dobe trvania pracovného pomeru ani vrátenie nákladov na školenie, preto treba pričítanie overiť pred použitím vzorca. Ak existuje tiež plnenie poskytnuté vopred a iné osobitne uplatňované nároky, posudzuje sa právna povaha a základ každého nároku.
 
@@ -138,9 +138,9 @@ Výpovedná lehota podľa súvislej doby práce je nasledujúca.
 2. Ak je 1 rok alebo viac a menej než 3 roky: 20 dní
 3. Ak je 3 roky alebo viac: 30 dní
 
-Ak doba pracovnej zmluvy na určitý čas k určitej práci (特定性定期契約) presahuje 3 roky, uplatní sa osobitne norma článku 15. Pracovník po 3 rokoch práce môže zmluvu skončiť s výpovednou lehotou 30 dní voči zamestnávateľovi. Túto normu treba odlíšiť od výpovede podľa súvislej doby práce použiteľnej na zmluvu na neurčitý čas.
+Ak doba pracovnej zmluvy na určitý čas k určitej práci (特定性定期契約) presahuje 3 roky, uplatní sa osobitne norma článku 15. Pracovník po 3 rokoch práce môže zmluvu skončiť s výpovednou lehotou 30 dní voči zamestnávateľovi. Túto normu treba odlíšiť od výpovede podľa súvislej doby práce uplatniteľnej na zmluvu na neurčitý čas.
 
-Ak je súvislá doba práce kratšia než 3 mesiace, ak ide o iný typ zmluvy na určitý čas alebo sa tvrdí zákonný dôvod okamžitého skončenia, použiteľné ustanovenie a skutočnosti sa musia posúdiť jednotlivo. Samotná skutočnosť, že zmluva zapisuje dlhšiu výpovednú lehotu alebo požaduje okamžité odovzdanie miesta, neumožňuje vopred určiť právny záver.
+Ak je súvislá doba práce kratšia než 3 mesiace, ak ide o iný typ zmluvy na určitý čas alebo sa tvrdí zákonný dôvod okamžitého skončenia, uplatniteľné ustanovenie a skutočnosti sa musia posúdiť jednotlivo. Samotná skutočnosť, že zmluva zapisuje dlhšiu výpovednú lehotu alebo požaduje okamžité odovzdanie miesta, neumožňuje vopred určiť právny záver.
 
 V praxi treba uchovať obsah a deň odovzdania prejavu odchodu, deň, keď ho zamestnávateľ skutočne obdržal, a komunikáciu strán o poslednom pracovnom dni. Ak sa oddelí do štyroch otázok okamih, kedy odchod platne nadobúda účinky, platnosť dohody o minimálnej dobe trvania pracovného pomeru, vrátenie nákladov na školenie alebo plnenia poskytnutého vopred a osobitne uplatňovaná škoda, znižuje sa chyba vyvodiť všetky závery z jednej doložky zmluvy.
 

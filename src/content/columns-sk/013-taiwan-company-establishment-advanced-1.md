@@ -31,7 +31,7 @@ Odbor preskúmania investícií musí overiť, či sa daný kapitál (資本額)
 
 a či zahraničné subjekty nezavádzajú prostriedky pod inou zámienkou.
 
-Pri zostavovaní investičného plánu nie je treba uvádzať presnú adresu spoločnosti; stačí uviesť oblasť (príklad: mesto Taipei). ​
+Pri zostavovaní investičného plánu netreba uvádzať presnú adresu spoločnosti; stačí uviesť oblasť (príklad: mesto Taipei). ​
 
 Keď sa neskôr v banke otvára prípravný účet spoločnosti (公司籌備處帳戶), mnoho bánk však preskúmava nájomnú zmluvu (租賃契約) a vykonáva miestnu prehliadku adresy spoločnosti.
 
@@ -103,7 +103,7 @@ Je preto vhodné hľadať prevádzkareň včas.
 
 Ak rokovanie s prenajímateľom neprebieha hladko,
 
-možno v prípade potreby navrhnúť overenie nájomnej zmluvy (公證) alebo dodatočnú kauciu.
+možno v prípade potreby navrhnúť notárske osvedčenie nájomnej zmluvy (公證) alebo dodatočnú kauciu.
 
 ​
 

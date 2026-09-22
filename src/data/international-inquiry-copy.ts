@@ -2086,8 +2086,8 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Meno',
     emailLabel: 'E-mail',
     consentLabel:
-      'Prečítal(a) som stránku o súkromí a súhlasím s odoslaním tejto žiadosti.',
-    privacyLinkLabel: 'Súkromie',
+      'Prečítal(a) som stránku o ochrane osobných údajov a súhlasím s odoslaním tejto žiadosti.',
+    privacyLinkLabel: 'Ochrana osobných údajov',
     requiredMessage: 'Toto pole je povinné.',
     invalidEmailMessage: 'Zadajte platnú e-mailovú adresu.',
     tooLongMessage: 'Text je príliš dlhý. Skráťte ho a odošlite znova.',

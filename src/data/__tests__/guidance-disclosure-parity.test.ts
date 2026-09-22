@@ -470,7 +470,7 @@ const ELEMENTS = {
     ne: /परामर्शको चरण/,
     km: /នីតិវិធីពិគ្រោះយោបល់/,
     mn: /зөвлөгөөний алхам биш/,
-    sk: /krokom porady|krok porady/,
+    sk: /nenahrádza poradu/,
     bg: /стъпка от консултацията/,
     hr: /nije savjetovanje/,
     sr: /korak konsultacije/,

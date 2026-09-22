@@ -1183,7 +1183,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Zašlite zhrnutie kontaktným formulárom: čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. V počiatočnej fáze zatiaľ nie je treba zasielať doklady totožnosti ani celý dôkazný materiál. Kancelária nesľubuje lehotu na odpoveď a nepotvrdzuje stretnutie prostredníctvom tejto stránky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+        'Zašlite zhrnutie kontaktným formulárom: čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. V počiatočnej fáze zatiaľ netreba zasielať doklady totožnosti ani celý dôkazný materiál. Kancelária nesľubuje lehotu na odpoveď a nepotvrdzuje stretnutie prostredníctvom tejto stránky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
       sources: ['/sk/faq', '/sk/pricing'],
     },
     faq: {

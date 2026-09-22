@@ -828,7 +828,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'Η ΟΜΑΔΑ ΜΑΣ',
     title: 'Η διεθνής ομάδα της Hovering',
     description:
-      'Προφίλ των δικηγόρων, του νομικού συνεργάτη, του υπευθύνου λειτουργιών και του συνεργαζόμενου λογιστή της Hovering.',
+      'Προφίλ των δικηγόρων, της νομικής συνεργάτιδας, του υπευθύνου λειτουργιών και του συνεργαζόμενου λογιστή της Hovering.',
     representativeTitle: 'Διευθύνουσα δικηγόρος',
     teamTitle: 'Δικηγόροι και συνεργάτες',
     partnerTitle: 'Συνεργαζόμενο λογιστικό γραφείο',
@@ -847,7 +847,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Διευθύνουσα δικηγόρος στην Ταϊβάν (Managing Attorney)',
       'chang-rongxuan': 'Δικηγόρος στην Ταϊβάν (Taiwan Attorney)',
-      'chang-fangyu': 'Δικηγορικός συνεργάτης (Paralegal)',
+      'chang-fangyu': 'Νομική συνεργάτιδα (Paralegal)',
       'son-jungmin': 'Επικεφαλής λειτουργιών για την Κορέα (Korea Operations Manager)',
       'huang-shengping': 'Συνεργαζόμενος λογιστής (Partner CPA)',
     },
@@ -3401,11 +3401,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Το γραφείο χειρίζεται υποθέσεις επιχειρήσεων και ιδιωτών στην Ταϊβάν στα αγγλικά, ιαπωνικά, κορεατικά και κινεζικά.',
-        'Εκπροσώπησε Κορεάτη φοιτητή σε αξίωση αποζημίωσης για τραυματισμό σε γυμναστήριο και πέτυχε πρωτόδικη απόφαση ύψους 1,57 εκατ. TWD.',
+        'Εκπροσώπησε Κορεάτη φοιτητή σε αγωγή αποζημίωσης για τραυματισμό σε γυμναστήριο και πέτυχε πρωτόδικη απόφαση ύψους 1,57 εκατ. TWD.',
       ],
       education: [
         'Μεταπτυχιακό (M.S.), Institute of Finance, National Taiwan University',
-        'Πτυχίο (B.A.) με δύο κύριες κατευθύνσεις, νομική και χρηματοοικονομικά, National Chengchi University',
+        'Πτυχίο (B.A.) νομικής και χρηματοοικονομικών, με δύο γνωστικά αντικείμενα, National Chengchi University',
         'Φοιτήτρια ανταλλαγής στο Kobe University και στο Waseda University',
       ],
       experience: [
@@ -3429,15 +3429,15 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Νομικός συνεργάτης (paralegal) με μακρά θητεία ως ανώτερος νομικός συνεργάτης (senior paralegal) σε διάφορα γραφεία, με ευθύνη για δικονομική υποστήριξη, εταιρικό δίκαιο και ξένες επενδύσεις.',
+        'Νομική συνεργάτιδα (paralegal) με μακρά θητεία ως ανώτερη νομική συνεργάτιδα (senior paralegal) σε διάφορα γραφεία, με ευθύνη για δικονομική υποστήριξη, εταιρικό δίκαιο και ξένες επενδύσεις.',
         'Υποστήριξη σε διαδικασίες, στη σύσταση εταιρειών, σε εγκρίσεις ξένων επενδύσεων, σε αιτήσεις αδειών και στην επικοινωνία Κορέας–Ταϊβάν.',
       ],
       education: [
         'Πτυχίο νομικής (LL.B.), Tunghai University',
       ],
       experience: [
-        'Ανώτερος νομικός συνεργάτης, Boyin Law Firm',
-        'Ανώτερος νομικός συνεργάτης, Muyang International Law Firm',
+        'Ανώτερη νομική συνεργάτιδα, Boyin Law Firm',
+        'Ανώτερη νομική συνεργάτιδα, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

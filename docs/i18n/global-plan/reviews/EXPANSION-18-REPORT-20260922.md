@@ -54,7 +54,11 @@
 운영 사고 2건(복구 완료): ① 큐 러너를 Monitor 태스크로 돌리다 정지 시 자식 워커 8개가 함께 종료 → 데몬(nohup) + 이벤트 파일 tail 구조로 교체, 재발주. ② 디스크 3.2 GiB까지 소진(레인 워크트리마다 node_modules 1.3 GB) → 통합 완료 레인 워크트리 즉시 삭제로 11 GiB 확보. lv 레인은 재발주 경쟁으로 커밋이 고아가 됐다가 `git branch -f`로 복구·통합.
 
 ## 6. 배포 2차 (2라운드 반영)
-(아래 추기)
+- 최종 게이트(통합 트리 7d29f1ff): vitest 1,322파일 12,681 통과 · lint 0 · tsc 0 · `next build` 성공(fa llms.txt 빌드 실패 1회 → ZWNJ 허용 수정 후 성공; next/font 일시 오류 1회 재시도) · 로컬 `next start` 1,439 URL 전부 200.
+- 12:53 origin/main aeffd10a→7d29f1ff fast-forward 푸시 → 12:55 라이브 마커 확인(`/en`에 `繁體中文（台灣）`).
+- 13:02 라이브 스모크: sitemap 1,439 URL 전부 200 · `/fa/llms.txt` 200(ZWNJ 유지) · sk 007 체코어 잔존 0 · km 018 §3–5 복원 확인.
+- IndexNow: 갱신된 18개 로케일 URL 504건 재제출 → HTTP 200.
+- `verify-multilingual-live.mjs --base https://tseng-law.com`: **overall PASS 3,414 / fail 0** (sitemap 1,440 · core 490 · hreflang 490 · 안내문 90 · privacy 49 · 칼럼 855).
 
 ## 7. 후속
 - 원어민 서명 검수는 여전히 미실시(사용자 전제 유지). 27개 기존 로케일의 팀 소개 영문 기관명(R12)은 이번 18개에만 적용 — 필요 시 27개에도 확장.

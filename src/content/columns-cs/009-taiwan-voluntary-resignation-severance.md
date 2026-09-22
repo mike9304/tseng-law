@@ -55,7 +55,7 @@ nevyplácí příplatek za přesčas (加班費)
 
 nebo nezapíše zaměstnance do pracovního pojištění (勞保) nebo zdravotního pojištění (健保).
 
-V takových případech, i když zaměstnanec obyčejně ukončí pracovní smlouvu, musí mu zaměstnavatel vyplatit odstupné.
+V takových případech, i když pracovní smlouvu ukončí zaměstnanec, musí mu zaměstnavatel vyplatit odstupné.
 
 ​
 
@@ -67,7 +67,7 @@ musí ukončit pracovní smlouvu ve lhůtě **30 dní** ode dne, kdy poznal tuto
 
 nebo, u bodu 6, ve lhůtě **30 dní** ode dne, kdy poznal následek škody.
 
-Zaměstnanec proto musí dobře ovládat lhůtu.
+Zaměstnanec proto musí lhůtu hlídat.
 
 ​
 

@@ -49,7 +49,7 @@ Volba se liší podle přerušení promlčení (時效中斷), okruhu žalovaný
 
 Trestní odpovědnost může být přijata jen tehdy, jsou-li uznány porušení povinnosti opatrnosti každého a příčinná souvislost mezi tímto porušením a poraněním druhé strany. Samotná skutečnost, že zavinění existovalo na obou stranách, nezakládá automaticky odpovědnost za ublížení na zdraví z nedbalosti.
 
-Na občanskoprávní rovině, podle článku 217 občanského zákoníku, má-li poškozený zavinění, které přispělo ke vzniku nebo prohloubení škody (與有過失), může soud snížit nebo prominout náhradu. Například, činí-li škoda uznaná v novém tchajwanském dolaru (新臺幣, TWD) TWD 1.000.000 a zavinění poškozeného je hodnoceno na 50 %, může být částka snížena na TWD 500.000 před jinými úpravami.
+Na občanskoprávní rovině, podle článku 217 občanského zákoníku, má-li poškozený zavinění, které přispělo ke vzniku nebo prohloubení škody (與有過失), může soud snížit nebo prominout náhradu. Například, činí-li škoda uznaná v novém tchajwanském dolaru (新臺幣, TWD) 1.000.000 TWD a zavinění poškozeného je hodnoceno na 50 %, může být částka snížena na 500.000 TWD před jinými úpravami.
 
 Znalecký posudek (鑑定) nebo tabulka předběžné analýzy mohou být důležitými podklady, avšak nesvazují soud mechanicky. Soud posuzuje celek důkazů, včetně výpovědí, obrazů a stavu vozidel.
 
@@ -85,9 +85,9 @@ Jde-li o trestný čin stíhaný na soukromou žalobu, podle článku 238 trestn
 
 Tabulka předběžné analýzy dopravní nehody sestavená policií je předběžnou analýzou založenou na podkladech místa. Není rozsudkem, nesvazuje soud a nestanoví poměr zavinění (過失比例). Protože potřebné podklady a rozsah sporu se liší podle nehody, tato tabulka, právní znalecký posudek a přezkum (覆議) nejsou ani automatickým postupem, ani povinnou etapou.
 
-Podle použitelných předpisů může legitimovaná strana požádat o znalecký posudek nehody vozidel (車輛行車事故鑑定); orgán, který věc vede, ji může postoupit a soudní orgán ji může zadat. Žádost strany se podává zásadně do 6 měsíců od data nehody; ve věcech již ve vyšetřování nebo v souzení probíhá znalecký posudek zadáním soudního orgánu, nikoli novou přímou žádostí.
+Podle použitelných předpisů může legitimovaná strana požádat o znalecký posudek nehody vozidel (車輛行車事故鑑定); orgán, který věc vede, ji může postoupit a soudní orgán ji může zadat. Žádost strany se podává zásadně do 6 měsíců od data nehody; ve věcech, v nichž již probíhá vyšetřování nebo soudní řízení, znalecký posudek zadává soudní orgán, nikoli nová přímá žádost.
 
-Při nesouhlasu s názorem znaleckého posudku lze požádat o přezkum, ten však lze podat jen jednou. Názor znaleckého posudku a přezkumu je důkazem nebo podkladem odkazu a soud nezávisle hodnotí celek spisu, včetně výpovědí, obrazů a protokolů místa.
+Při nesouhlasu s názorem znaleckého posudku lze požádat o přezkum, ten však lze podat jen jednou. Názor znaleckého posudku a přezkumu je důkazem nebo orientačním podkladem a soud nezávisle hodnotí celek spisu, včetně výpovědí, obrazů a protokolů místa.
 
 ## Q7. Jaké škody lze uplatnit po nehodě?
 
@@ -175,7 +175,7 @@ Povinnost uzavření podle článku 6 zákona o povinném pojištění odpovědn
 
 U nehody jednoho vozidla není řidič tohoto vozidla zásadně adresátem plnění povinného pojištění tohoto vozidla. Avšak u nehody, v níž se účastní několik vozidel, existují případy, v nichž řidič může uplatnit plnění u pojistitele povinného pojištění jiného zúčastněného vozidla.
 
-Sazebník plnění (強制汽車責任保險給付標準) změněný 29. 5. 2026 se uplatní na nehody, které nastaly od 1. 7. 2026. Strop přiměřených a potřebných lékařských nákladů za poranění činí TWD 200.000 v novém tchajwanském dolaru; plnění za invaliditu (失能) činí od TWD 80.000 do TWD 3.000.000 podle 15 zákonných stupňů; plnění za smrt činí TWD 3.000.000 a společné maximum smrti, invalidity a lékařských nákladů pro 1 poškozeného a 1 nehodu činí TWD 3.200.000. Na dřívější nehody se může uplatnit předchozí sazebník.
+Sazebník plnění (強制汽車責任保險給付標準) změněný 29. 5. 2026 se uplatní na nehody, které nastaly od 1. 7. 2026. Strop přiměřených a potřebných lékařských nákladů za poranění činí 200.000 TWD v novém tchajwanském dolaru; plnění za invaliditu (失能) činí od 80.000 TWD do 3.000.000 TWD podle 15 zákonných stupňů; plnění za smrt činí 3.000.000 TWD a společné maximum smrti, invalidity a lékařských nákladů pro 1 poškozeného a 1 nehodu činí 3.200.000 TWD. Na dřívější nehody se může uplatnit předchozí sazebník.
 
 Pojištění odpovědnosti vůči třetím osobám (第三人責任險), pojištění úrazů řidiče (駕駛人傷害險) a pojištění škod vlastního vozidla (車體損失險) jsou fakultativními produkty smluvní povahy. Skutečné krytí se liší podle pojištěného, stropu, spoluúčasti (自負額), výluk, zavinění a jiných podmínek pojistky, takže pojistku a podmínky je třeba ověřit věc po věci.
 
@@ -207,7 +207,7 @@ Mohou opomíjet i to, co je pro druhou stranu podstatné — omluvu a projev ú�
 
 ​
 
-Pro pojistitele nemá vyplacení dalších TWD 500.000 nebo TWD 1.000.000 v jednotlivé věci podstatný vliv na celkový hospodářský výsledek; pro účastníka nehody však může taková částka rozhodovat o tom, zda bude, či nebude mít záznam v rejstříku trestů (前科).
+Pro pojistitele nemá vyplacení dalších 500.000 TWD nebo 1.000.000 TWD v jednotlivé věci podstatný vliv na celkový hospodářský výsledek; pro účastníka nehody však může taková částka rozhodovat o tom, zda bude, či nebude mít záznam v rejstříku trestů (前科).
 
 ​
 
@@ -239,7 +239,7 @@ V některých rozsudcích byl za ublížení na zdraví z nedbalosti uložen tre
 
 ​
 
-Je-li trest přeměněn na peněžitý trest (易科罰金), článek 41 odstavec 1 trestního zákona stanoví přepočet TWD 1.000, TWD 2.000 nebo TWD 3.000 za 1 den; při sazbě TWD 1.000 za den odpovídá trest 3 měsíců částce 3 × 30 × TWD 1.000 = TWD 90.000.
+Je-li trest přeměněn na peněžitý trest (易科罰金), článek 41 odstavec 1 trestního zákona stanoví přepočet 1.000 TWD, 2.000 TWD nebo 3.000 TWD za 1 den; při sazbě 1.000 TWD za den odpovídá trest 3 měsíců částce 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -339,7 +339,7 @@ Poranění nebo smrt poškozeného přináší jemu samému i jeho rodině fyzic
 
 ​
 
-Pachatel často nedbá o telefonování s dotazem na stav oběti ani o její návštěvu a mnozí pachatelé předpokládají, že pojistitel vše vyřídí, a sami se neobjeví. V těchto případech se nepostřehne ani lítost, ani dobrá víra.
+Pachatel často nedbá o telefonování s dotazem na stav oběti ani o její návštěvu a mnozí pachatelé předpokládají, že pojistitel vše vyřídí, a sami se neobjeví. V těchto případech oběť nevidí ani lítost, ani upřímnou snahu.
 
 ​
 
@@ -347,7 +347,7 @@ Pachatel často nedbá o telefonování s dotazem na stav oběti ani o její ná
 
 ​
 
-Oběť tak zůstává velmi zraněná a upadá do hněvu, takže často neustoupí v částce vyjednávání nebo navrhne zajišťovací zabavení (假扣押) a vede zabavení majetku druhé strany až do konce.
+Oběť tak zůstává velmi zraněná a upadá do hněvu, takže často neustoupí ve vyjednávané částce, navrhne předběžné zajištění (假扣押) a vede zajištění majetku druhé strany až do konce.
 
 ​
 

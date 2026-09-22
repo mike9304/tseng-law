@@ -1,5 +1,5 @@
 ---
-title: "Zahraniční podniky součástek polovodičů, které vstupují na Tchaj-wan: jak posoudit dceřinou společnost, pobočku nebo zástupce"
+title: "Zahraniční podniky v oboru polovodičových součástek, které vstupují na Tchaj-wan: jak posoudit dceřinou společnost, pobočku nebo zástupce"
 lastmod: "2026-09-17"
 date_display: "17. září 2026"
 read_time: "8 min čtení"
@@ -15,7 +15,7 @@ faq:
     a: "Postupný přechod lze navrhnout, avšak je třeba také posoudit skončení nebo změnu stávajících smluv, smlouvy se zákazníky, zásoby, vyřízení vad a personál."
 ---
 
-# Zahraniční podniky součástek polovodičů, které vstupují na Tchaj-wan: jak posoudit dceřinou společnost, pobočku nebo zástupce
+# Zahraniční podniky v oboru polovodičových součástek, které vstupují na Tchaj-wan: jak posoudit dceřinou společnost, pobočku nebo zástupce
 
 ![Snímek k posouzení struktury vstupu podniku polovodičů na Tchaj-wan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
@@ -23,7 +23,7 @@ Když začnou obchody s tchajwanskými zákazníky, může zahraniční ústřed
 
 Nejprve je třeba vyjasnit, kdo na Tchaj-wanu co obstarává. Struktura k posouzení se mění podle toho, zda zahraniční ústředí nadále uzavírá kupní smlouvy, zda tchajwanská společnost zboží nakupuje a dále prodává, nebo zda místní personál poskytuje jen technickou podporu.
 
-Tento text je obecným výkladem pro zahraniční podniky materiálů, součástek a zařízení polovodičů, které navrhují strukturu vstupu na Tchaj-wan. Následující provozní situace a kontrolní body jsou hypotetické příklady a návrhy k posouzení, nikoli skutečný mandát konkrétního podniku ani jednotný požadavek založení. Daně, kontrola vývozu, povolení podle výrobku a zařazení investora vyžadují ještě samostatný rozbor.
+Tento text je obecným výkladem pro zahraniční podniky v oboru polovodičových materiálů, součástek a zařízení, které navrhují strukturu vstupu na Tchaj-wan. Následující provozní situace a kontrolní body jsou hypotetické příklady a návrhy k posouzení, nikoli skutečný mandát konkrétního podniku ani jednotný požadavek založení. Daně, kontrola vývozu, povolení podle výrobku a zařazení investora vyžadují ještě samostatný rozbor.
 
 ## 1. Před volbou formy zápisu je třeba nejprve uspořádat „rozdělení obchodu a provozu“
 
@@ -61,11 +61,11 @@ Pokud jste se rozhodli zřídit na Tchaj-wanu samostatnou právnickou osobu, je 
 
 ### Společnost s ručením omezeným: správa je jednodušší, převod podílů je však relativně uzavřený
 
-Lze ji vytvořit s 1 nebo více fyzickými osobami, nebo s tchajwanskými či zahraničními právnickými osobami jako společníky; společníci zásadně ručí do výše vkladu. Jednatelé jsou 1 až 3 a volí se ze společníků. Společníci, kteří nevykonávají činnost, mohou vykonávat kontrolní oprávnění, aniž by bylo třeba zvláštního dozorčího (監察人). Není-li ve stanovách jinak, má 1 společník 1 hlas, takže ovládání se nemusí shodovat s poměrem vkladů. Převod vkladu běžného společníka zásadně vyžaduje souhlas více než poloviny hlasovacích práv ostatních; u jednatele je třeba 2/3 nebo více. Proto se lépe hodí ke jednoduchým vztahům společníků a stálému ovládání než k častému získávání kapitálu nebo obchodování s podíly. Později ji lze převést na akciovou společnost.
+Lze ji vytvořit s 1 nebo více fyzickými osobami, nebo s tchajwanskými či zahraničními právnickými osobami jako společníky; společníci zásadně ručí do výše vkladu. Jednatelé jsou 1 až 3 a volí se ze společníků. Společníci, kteří nevykonávají činnost, mohou vykonávat kontrolní oprávnění, aniž by bylo třeba zvláštního dozorčího (監察人). Není-li ve stanovách jinak, má 1 společník 1 hlas, takže ovládání se nemusí shodovat s poměrem vkladů. Převod vkladu běžného společníka zásadně vyžaduje souhlas více než poloviny hlasovacích práv ostatních; u jednatele je třeba souhlasu 2/3 nebo více hlasovacích práv ostatních společníků. Proto se lépe hodí ke jednoduchým vztahům společníků a stálému ovládání než k častému získávání kapitálu nebo obchodování s podíly. Později ji lze převést na akciovou společnost.
 
 ### Akciová společnost: vhodná, mají-li se přibrat jiní investoři nebo se zvažuje kótování
 
-Kapitál se dělí na akcie. Zásadně jsou potřeba 2 nebo více akcionářů, avšak stát nebo právnická osoba ji mohou založit samy a zahraniční právnická osoba může držet 100 %. Akcie jsou zásadně volně převoditelné, se zákonnými výjimkami; podle předpisů lze navrhnout druhové akcie, opce zaměstnanců a podobně. Proto se hodí podnikům, které očekávají investory, obchody s podíly, akciové odměny zaměstnanců nebo budoucí fúzi, akvizici, kótování nebo zápis do režimu vznikajících akcií (興櫃); neomezuje se jen na velké podniky. Ve správě může nekotovaná společnost stanovami nezřizovat představenstvo a mít jen 1 nebo 2 jednatele. Společnost s jediným státním nebo právnickým akcionářem může stanovami nezřizovat dozorčího (監察人). Rovněž nemusí každá akciová společnost nechat ověřit roční účetní závěrku. Hlavní prahy auditu běžné společnosti jsou splacený kapitál 30.000.000 TWD, nebo i pod touto hranicí provozní příjem 100.000.000 TWD nebo 100 pracovníků v pracovním pojištění; veřejně emitované společnosti se řídí předpisy o cenných papírech.
+Kapitál se dělí na akcie. Zásadně jsou potřeba 2 nebo více akcionářů, avšak stát nebo právnická osoba ji může založit i samostatně a zahraniční právnická osoba může držet 100 %. Akcie jsou zásadně volně převoditelné, se zákonnými výjimkami; podle předpisů lze navrhnout druhové akcie, opce zaměstnanců a podobně. Proto se hodí podnikům, které očekávají investory, obchody s podíly, akciové odměny zaměstnanců nebo budoucí fúzi, akvizici, kótování nebo zápis do režimu vznikajících akcií (興櫃); neomezuje se jen na velké podniky. Ve správě může nekotovaná společnost stanovami nezřizovat představenstvo a mít jen 1 nebo 2 jednatele. Společnost s jediným státním nebo právnickým akcionářem může stanovami nezřizovat dozorčího (監察人). Rovněž nemusí každá akciová společnost nechat ověřit roční účetní závěrku. Hlavní prahy auditu běžné společnosti jsou splacený kapitál 30.000.000 TWD, nebo i pod touto hranicí provozní příjem 100.000.000 TWD nebo 100 pracovníků v pracovním pojištění; veřejně emitované společnosti se řídí předpisy o cenných papírech.
 
 ## 4. Postupy pobočky a dceřiné společnosti se liší; pouze dceřiná společnost prochází přezkumem investičního odboru Ministerstva hospodářství
 

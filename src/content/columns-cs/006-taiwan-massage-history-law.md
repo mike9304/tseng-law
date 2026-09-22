@@ -39,7 +39,7 @@ na Tchaj-wanu existuje také mnoho ulic masáže.
 
 Lemují je masážní provozovny všeho druhu.
 
-Je masáž prováděná osobami se zrakovým postižením (視障按摩), masáž nohou, olejová masáž, thajská masáž a jiné formy.
+Jsou tu masáže prováděné osobami se zrakovým postižením (視障按摩), masáž nohou, olejová masáž, thajská masáž a jiné formy.
 
 V podstatě si každý může zvolit masáž odpovídající vlastnímu vkusu, aby uvolnil napětí.
 
@@ -55,7 +55,7 @@ Tento zákon platil do roku 2003; tehdy pan Lin, který vedl kadeřnictví,
 
 zaměstnal pracovníky bez zrakového postižení k službám mytí vlasů a masáže, a policie to zjistila.
 
-Podle tehdejšího práva byla panu Linovi a těmto pracovníkům uložena správní pokuta (罰鍰) ve výši TWD 40.000, TWD 10.000 a TWD 20.000 v novém tchajwanském dolaru (新臺幣).
+Podle tehdejšího práva byla panu Linovi a těmto pracovníkům uložena správní pokuta (罰鍰) ve výši 40.000 TWD, 10.000 TWD a 20.000 TWD v novém tchajwanském dolaru (新臺幣).
 
 Pan Lin považoval tuto sankci za velmi nespravedlivou a požádal o ústavní výklad.
 
@@ -113,7 +113,7 @@ a zákonodárce se snaží najít relativně vyvážené řešení střetu zájm
 
 Dnes mnoho osob volí masáž, aby uvolnilo napětí,
 
-avšak v tomto procesu stále dochází k případům sexuálního obtěžování (性騷擾) nebo neslušných činů (猥褻).
+avšak v tomto procesu stále dochází k případům sexuálního obtěžování (性騷擾) nebo obscénního jednání (猥褻).
 
 To, co původně mělo být pouhým přijetím masáže za účelem uvolnění napětí,
 
@@ -123,6 +123,6 @@ Pociťujete-li během masáže na Tchaj-wanu nepohodlí nebo něco zvláštního
 
 oznamte to ihned nebo požádejte o přerušení, abyste se chránili.
 
-Uznáte-li, že jste utrpěli sexuální obtěžování,
+Máte-li za to, že jste byl(a) sexuálně obtěžován(a),
 
-jděte na policejní stanici s důvěryhodným přítelem nebo s advokátem na Tchaj-wanu (律師), abyste podali oznámení.
+jděte na policejní stanici s důvěryhodným přítelem nebo s advokátkou či advokátem na Tchaj-wanu (律師), abyste podal(a) oznámení.

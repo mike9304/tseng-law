@@ -13,7 +13,7 @@ faq:
   - q: "Co je PIF a jde o stejný postup jako registrace produktu u TFDA?"
     a: "Registrace produktu a PIF nejsou týmž postupem. Registrace produktu (產品登錄) je samostatný úkon, který se provádí na platformě registrace kosmetických produktů TFDA (衛生福利部食品藥物管理署). PIF je spis, který sdružuje údaje o jakosti, bezpečnosti, složení, tvrzené funkci, způsobu výroby, výsledcích zkoušek a hodnocení bezpečnosti a který výrobce nebo dovozce kosmetiky sestavuje, aktualizuje a uchovává; samotný PIF není dokumentem, který by se musel předem předkládat TFDA. Od 1. 7. 2026 zásadně všechny kosmetické přípravky spadají pod režim PIF, s výjimkou tuhého ručně vyráběného mýdla vyrobeného v místě výroby osvobozeném od registrace závodu (工廠登記)."
   - q: "Na jaké výrazy je třeba dávat pozor v reklamě na kosmetiku na Tchaj-wanu?"
-    a: "Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivost nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 tchajwanských dolarů (新臺幣, TWD) za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle týchž kritérií, pokud jsou v podstatě reklamou."
+    a: "Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivý účinek nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 tchajwanských dolarů (新臺幣, TWD) za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle týchž kritérií, pokud jsou v podstatě reklamou."
 ---
 
 # Vstup na trh kosmetiky na Tchaj-wanu: volba dovozce, registrace produktu, sestavení a uchování PIF a regulace reklamy
@@ -22,7 +22,7 @@ faq:
 
 Zahraniční značka kosmetiky, která hodlá na Tchaj-wanu uvádět výrobky do oběhu, musí určit, komu svěří dovoz, kdy dokončí registraci produktu (產品登錄), kdo spravuje informační spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podle jakých kritérií se posuzuje označení (標示) a reklama (廣告). Zahraniční značka může buď využít místního dovozce, nebo činnost na Tchaj-wanu provozovat sama, takže příprava prodeje není dokončena jen tím, že byla založena společnost.
 
-Použitelné povinnosti se mohou lišit podle druhu výrobku a místa výroby (製造場所), skutečné formy dovozu, způsobu oběhu a obsahu reklamy. Níže se odděleně vysvětlují forma vstupu a zákonný subjekt odpovědnosti, registrace produktu u TFDA, sestavení, aktualizace a uchování PIF, označení a reklama a kontrola a nápravná opatření. Před stanovením skutečného dodacího kalendáře je třeba znovu, výrobek po výrobku, ověřit nejnovější předpisy a pokyny příslušného orgánu (主管機關).
+Použitelné povinnosti se mohou lišit podle druhu výrobku a místa výroby (製造場所), skutečné formy dovozu, způsobu oběhu a obsahu reklamy. Níže se odděleně vysvětlují forma vstupu a zákonný subjekt odpovědnosti, registrace produktu u TFDA, sestavení, aktualizace a uchování PIF, označení a reklama a kontrola a nápravná opatření. Před stanovením skutečného harmonogramu dodávek je třeba znovu, výrobek po výrobku, ověřit nejnovější předpisy a pokyny příslušného orgánu (主管機關).
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
@@ -72,19 +72,19 @@ Změní-li se surovina nebo receptura, způsob a místo výroby, označení vče
 
 Podle čl. 7 nařízení o správě informačního spisu kosmetických produktů je doba uchování nejméně 5 let počítaných ode dne následujícího po dni posledního dodání výrobku na trh. Podle čl. 8 téhož nařízení je místem uchování adresa výrobce nebo dovozce kosmetiky stanovená v čl. 7 odst. 1 bodě 7 zákona o správě hygieny a bezpečnosti kosmetiky (化粧品衛生安全管理法). Ustanovení o době uchování a ustanovení o místě uchování je třeba v praxi rozlišovat.
 
-I když původní výrobce uchovává originál nebo se používá bezpečné elektronické či cloudové úložiště, výrobce nebo dovozce musí mít přístup k úplným podkladům. Je třeba stanovit přístupová oprávnění, zálohy, správu verzí, formát souborů a odpovědnou osobu tak, aby bylo možné podklady rychle vyhledat a předložit, když je příslušný orgán požaduje. Je také důležité ve smlouvě upravit příjemce předání, způsob a to, zda přístupové oprávnění trvá, aby se podklady udržely po zákonnou dobu uchování i po skončení smlouvy s prodejním partnerem nebo poskytovatelem služeb.
+I když původní výrobce uchovává originál nebo se používá bezpečné elektronické či cloudové úložiště, výrobce nebo dovozce musí mít přístup k úplným podkladům. Je třeba stanovit přístupová oprávnění, zálohy, správu verzí, formát souborů a odpovědnou osobu tak, aby bylo možné podklady rychle vyhledat a předložit, když je příslušný orgán požaduje. Je také důležité ve smlouvě upravit, které podklady se předají, jak předání proběhne a zda přístupové oprávnění přetrvá, aby se podklady udržely po zákonnou dobu uchování i po skončení smlouvy s prodejním partnerem nebo poskytovatelem služeb.
 
 ### Kontrola, náprava a správní opatření
 
 Když příslušný orgán kontroluje PIF, oznámí to zásadně výrobci nebo dovozci kosmetiky nejpozději 7 dní před dnem kontroly. Pokud však případ spadá pod zákonnou výjimku stanovenou v souvisejících předpisech, lze kontrolu provést bez předchozího oznámení. Bez ohledu na to, zda oznámení bylo, je třeba trvale udržovat stav, který umožňuje vyhledat a předložit úplné aktuální podklady.
 
-Ohlášení nepravdivých informací při registraci produktu nebo zapsání nepravdivých informací do PIF může být předmětem správní pokuty (罰鍰) 10.000 až 1.000.000 tchajwanských dolarů (新臺幣, TWD). Jsou-li naopak podklady PIF neúplné, příslušný orgán obvykle nařídí nápravu ve stanovené lhůtě (限期改正) a správní pokuta se stává otázkou teprve tehdy, když se v této lhůtě nenapraví. Nepravdivé informace a ještě doplnitelná neúplnost podkladů se nemají uzavírat jako stejný výsledek porušení.
+Ohlášení nepravdivých informací při registraci produktu nebo zapsání nepravdivých informací do PIF může být předmětem správní pokuty (罰鍰) 10.000 až 1.000.000 tchajwanských dolarů (新臺幣, TWD). Jsou-li naopak podklady PIF neúplné, příslušný orgán obvykle nařídí nápravu ve stanovené lhůtě (限期改正) a správní pokuta se stává otázkou teprve tehdy, když se v této lhůtě nenapraví. Nepravdivé informace a neúplnost podkladů, kterou lze ještě doplnit, nelze považovat za týž následek.
 
 Stažení nebo zničení (銷毀) není opatřením, které by automaticky následovalo každou neúplnost podkladů PIF. Bezpečnost výrobku, obsah porušení, stav nápravy a zákonné podmínky použitelné na každé opatření je třeba posoudit odděleně. Opatření, když byl potvrzen bezpečnostní problém, a požadavek na doplnění dokumentů je třeba posoudit zvlášť a postup se řídí oznámením příslušného orgánu a použitým ustanovením.
 
 ## 3. Regulace označení, propagace a reklamy
 
-Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivost nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 TWD za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle týchž kritérií, pokud jsou v podstatě reklamou.
+Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivý účinek nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 TWD za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle týchž kritérií, pokud jsou v podstatě reklamou.
 
 ### Posuzuje se podle celého vyjádření, nikoli podle každého slova
 
@@ -105,7 +105,7 @@ Ve smlouvě o spolupráci a v provozních pokynech lze stanovit rozsah povolený
 Ověří-li se příprava prodeje na Tchaj-wanu v tomto pořadí, klesá riziko záměny jednoho režimu s jiným.
 
 1. Stanovit, zda sami zřídíte dceřinou společnost nebo pobočku na Tchaj-wanu, nebo zda svěříte dovoz a prodej místnímu dovozci.
-2. Ověřit subjekt, který nese právní odpovědnost jako výrobce nebo dovozce kosmetiky, a smluvního odpovědného za práci.
+2. Ověřit subjekt, který nese právní odpovědnost jako výrobce nebo dovozce kosmetiky, a osoby smluvně odpovědné za svěřené úkoly.
 3. Dokončit registraci produktu před dodáním, prodejem, darováním, veřejným vystavením nebo poskytnutím výrobku spotřebiteli k vyzkoušení.
 4. Sestavit PIF podle výrobku, aktualizovat změny a uchovávat jej v souladu se zákonnou dobou a místem.
 5. Přezkoumat etiketu, prodejní stránku, reklamu a příspěvky ze spolupráce podle kritéria celého vyjádření.

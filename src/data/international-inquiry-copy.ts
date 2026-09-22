@@ -1619,7 +1619,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     intro:
       'תארו את עניינכם בקצרה. עורכת דין או עורך דין בודקים את התוכן לפני המעבר לשלב הבא.',
     submitLabel: 'שליחת פנייה',
-    submittingLabel: 'שולח…',
+    submittingLabel: 'שולחים…',
     successMessage:
       'קיבלנו את פנייתכם; היא ממתינה לבדיקה. אין פירוש הדבר שהייעוץ התקיים או שאושרה פגישה.',
     savedNotificationPendingMessage:
@@ -1653,7 +1653,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'יפנית (日本語)',
       ko: 'קוריאנית (한국어)',
       'needs-method-confirmation':
-        'אף אחת מארבע השפות אינה שמישה — יש לאשר את דרך התקשורת',
+        'איני יכול/ה להשתמש באף אחת מארבע שפות הייעוץ — יש לאשר את דרך התקשורת',
     },
   },
   bn: {

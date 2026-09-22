@@ -1,0 +1,92 @@
+WO-F-nl r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-nl-r2
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: nl-a 43, nl-b 41 (84). No separate P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 81.
+Skipped: 3 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned Dutch expectation matched a string that changed. "TWD 1.57M" is not the Dutch bio figure ("1,57 miljoen TWD") and was not touched. consultationNotice in llms-txt.ts was left; it is still a verbatim substring of the Dutch FAQ answer. confidentialNotice was left; it is still a verbatim substring of the privacy paragraph. discoveryNotice keeps the token llms.txt.
+
+### Applied
+nl-a 1–20, 22–33, 35–43.
+nl-b 1–17, 19–41.
+
+Adaptations (still applied):
+- nl-a 5. The clause no longer calls 負責人 an inrichting. (負責人) stays on "verantwoordelijke" in that sentence, because a long Latin sentence with three of/in/is stopwords fails the checker.
+- nl-a 6. The link label no longer names the Business Tax Act. The URL is unchanged (`pcode=G0340028&flno=3`). "(artikel 10)" stays in the label so the Korean 10 remains in the block.
+- nl-a 19. "per 1 dag" → "per dag" (checker still PASS). "gekwetste" → "gewonde". The phrase is "per een gewonde persoon en 1 ongeval": "een persoon" is in the Dutch number lexicon, and the second 1 stays as a digit. "slechts 1 keer" → "een keer" (not "eenmaal"), so the lexicon still counts 1. "deze 1 aanvraag" → "deze aanvraag"; 006 numbers stayed PASS (WARN only, pre-existing extras).
+- nl-a 30 and nl-b 25. Suggested rewrites merge the next block into the first. Block counts are locked. Each fragment was made a sentence inside its own block. 008: the unfinished "Wanneer u in Taiwan werkt," is now a full sentence; the following line no longer repeats it. 013: the bank "dat"-clause, the investment-plan pair, the bank-account pair, the three-month pair, and the lease-negotiation pair. 015: the marktsituatie lead-in, the Taipei query, and the land-registry help line.
+- nl-a 33. "Dat weten velen van u al.", the table lead-in, and "Ik schets een zaak die ik heb behandeld." are no longer chatty first person. The case of de heer B stays in the existing blocks and stays male. 013 "ik ben het daarmee eens" is now impersonal.
+- nl-a 42. User voice, product fact kept: "Ik spreek geen van de vier talen — het communicatiekanaal moet worden bevestigd". Not "afgesproken". The method notice still quotes “Communicatiekanaal moet worden bevestigd”.
+- nl-b 1. FAQ and the long body sentence: "in Kinmen (金門) of in Lienchiang (Matsu, 連江・馬祖)". The unglossed sentence (line 53) is "in Kinmen of Lienchiang (Matsu)": a second "in" plus "of" made that Latin sentence look like English to the checker. Amounts unchanged. "het criterium van Kinmen of Lienchiang".
+- nl-b 9. "hoe lang al werd gewerkt" rather than a second "is", for the same stopword check. Meaning unchanged.
+- nl-a 43. "Is de ontvangst van deze kennisgeving door het kantoor nog niet bevestigd" does not match the privacy test's banned "nog niet bevestigd door het kantoor".
+
+Guidance pack (Dutch strings only):
+- international-guidance-it-nl-pl.ts: verloop/duur, vervaltermijn, inzet "naar het aantal", "geen deel van deze pagina", overdrachtweg, kennisgeving.
+- international-inquiry-copy.ts: the four-language option, user voice, still negative.
+- llms-txt.ts discoveryNotice: "kaart" → "overzicht"; token llms.txt kept.
+- international-guidance-team.ts: "Korea-operaties" → "Werkzaamheden Korea". Firm name stays in Latin. ONS TEAM, KANTOREN, and "Volledig profiel (in het Engels)" were already Dutch.
+
+### Skipped
+- nl-a 21. Q16–Q20 were not promoted to `##` headings, and the U+200B lines were not removed. Heading levels, block counts and ZWSP counts match the Korean source (003, 005, 006, 008, 009). Same decision as round 1.
+- nl-a 34. 008 and 009 frontmatter `url` Hangul slugs. Canonical source metadata. The reviewer already said not to edit them.
+- nl-b 18. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. Deleting them changes the ZWSP count.
+
+## Systemic patterns
+
+- 營利事業 as already profitable ("winstgevend"). 15 sites → "winstbeogend(e)": 001 ×3, 002 ×1, 004 ×11 (including "Winstbeogende"). "met winstoogmerk" that was already correct was left.
+- Foreign exchange called `wissel` (a bill of exchange). 8: 002 deviezenstukken, deviezenprocedure, deviezen- en bankovermakingsstukken; 004 deviezenstukken, deviezen- en overmakingsstukken, deviezenprocedures, deviezenrechtelijke, deviezenaangiften. Left: wisselkoers, rijstrookwissel, wisseling/wisselde van de leiding, "te gelde kunnen worden gemaakt" (the verb, not the noun tegeldemaking), "berichten gewisseld".
+- U+200B blanks (003 from Q16, 005, 006, 008, 009, 013, 015). 0 deleted. See Skipped.
+- Glued digit where Dutch wants a word. 3 changed: "per dag", "een gewonde persoon", "deze aanvraag". "1 stem per 1 aandeelhouder" in 018 was not this pattern; both 1s are real counts and the file's numbers PASS at 25=25.
+- 008/009 personal case story, and the one-clause stacks in 013 and 015. Openers and unfinished clauses listed under adaptations. Complete sentences about de heer B were left.
+- Guidance calques nach / Übertragungsweg / map. 8 Dutch strings, listed above.
+- Kinmen en/of. 4 sites, listed under nl-b 1.
+- Coined voorwerp. toepassingsvoorwerp → toepassingsgebied (011 ×1); berekeningsvoorwerp → berekeningsgrondslag (016 ×3); toetsingsvoorwerp (014 ×1, 016 ×1); teruggavevoorwerp (014 ×1); etiketadres (011 ×1).
+- "het Dienst" (de-word). 013 "bij de Dienst", 017 "is de Dienst". The 017 source-list label was already "Dienst" without the article.
+- Bare kost (Netherlands Dutch wants kosten). Every bare "kost" in 014, plus 010 "periode en kosten". One over-replacement "kostenen" was corrected to "kosten". "kosten" that was already plural was left.
+- 戶政機關 called the register. 007: huishoudregistratiebureau where the gloss is 戶政機關, huishoudregister where the gloss is 戶籍 (11 sites). "wet op de burgerlijke stand (戶籍法)" left: that is the act, not the office.
+- R2–R10. Round-1 framing, feminine Wei Tseng, u-address, emergency numbers, and the softened result lines were already in place. This round's verdict says they hold. No new Korean-reader default, no Dutch consultation, no interpreter, no reply-time, no free first meeting. Consultation languages stay Engels, Chinees (中文), Japans, Koreaans.
+
+## Reviewer points not followed
+
+- nl-a 21 and nl-b 18. The U+200B lines are not disposable Dutch blank lines. The counts match the Korean source. Promoting Q16–Q20 would also change heading levels.
+- nl-a 34. The Hangul `url` values are live source metadata.
+- nl-a 42, the word "afgesproken". That reads as a promise that a channel will be arranged. The form only records that none of the four languages works and that the channel still has to be confirmed. No other language, no interpreter, and no reply deadline.
+- nl-a 30 / nl-b 25, the request to pull the next paragraph into the first. That would change the block count. The wording inside each block was repaired instead.
+- nl-b 1 on the unglossed Kinmen sentence, and nl-b 9's second "is". The reviewer's Dutch is right. Those two wordings tripped the Latin-stopword check (three of `of` / `in` / `is` in a sentence with no Chinese gloss). The geography and the meaning are the same in the forms that pass.
+
+Nothing else in the two verdicts looked factually wrong. `wisselkoers` is the exchange rate, not a bill of exchange, and was left.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nl --lang nl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=113
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+Recount after this log file was written: `git status --short | wc -l` → 26. The extra line is this log.

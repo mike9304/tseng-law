@@ -31,7 +31,7 @@ Er bestaan echter **uitzonderingsgevallen**.
 
 In de volgende bijzondere situaties moet de werkgever de werknemer ook dan ontslagvergoeding betalen wanneer deze zelf ontslag neemt (artikel 14 van de wet op de arbeidsnormen, dat artikel 17 overeenkomstig toepast, 勞動基準法第14條):
 
-1. Wanneer de werkgever bij het sluiten van de arbeidsovereenkomst (勞動契約) een onjuiste wilsverklaring (虛偽意思表示) aflegt, zodat de werknemer daarin dwaalt en het gevaar van schade bestaat
+1. Wanneer de werkgever bij het sluiten van de arbeidsovereenkomst (勞動契約) een geveinsde wilsverklaring (虛偽意思表示) aflegt, zodat de werknemer daarin dwaalt en het gevaar van schade bestaat
 
 (bijvoorbeeld wanneer de werkgever belooft de werknemer na indiensttreding naar een in werkelijkheid niet bestaande buitenlandse vestiging te zenden)
 

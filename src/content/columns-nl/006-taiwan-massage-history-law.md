@@ -43,7 +43,7 @@ Er is de massage door personen met een visuele beperking (視障按摩), de voet
 
 In beginsel kan ieder de massage kiezen die bij de eigen smaak past om spanning te verlichten.
 
-En de reden waarom er vandaag zoveel massage-inrichtingen bestaan, kan samenhangen met deze 1 aanvraag tot grondwetsuitlegging (釋憲).
+En de reden waarom er vandaag zoveel massage-inrichtingen bestaan, kan samenhangen met deze aanvraag tot grondwetsuitlegging (釋憲).
 
 Toen Taiwan in 1980 de wet op het welzijn van personen met een handicap (殘障福利法) afkondigde en in werking stelde,
 
@@ -73,7 +73,7 @@ een wet op die de arbeid en het bestaansrecht (生存權) van personen met een v
 
 Met het verstrijken van de tijd en de verruiming van de consumptiemarkt
 
-klonk echter de opvatting dat het alleen beschermen van de rechten van personen met een visuele beperking het arbeidsrecht van personen zonder visuele beperking te zeer inperkte.
+klonk echter de opvatting dat het alleen beschermen van de rechten van personen met een visuele beperking het recht op arbeid van personen zonder visuele beperking te zeer inperkte.
 
 In het debat over de beroepsrechten van personen met en zonder visuele beperking verschenen talrijke tegengestelde meningen.
 
@@ -81,7 +81,7 @@ Zo werd bijvoorbeeld gevraagd of de geschreven regel die alleen personen met een
 
 en werd betwijfeld of deze regel werkelijk had bijgedragen tot de bescherming van de arbeid en het bestaan van personen met een visuele beperking.
 
-Ten slotte verklaarden de grote rechters (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
+Ten slotte verklaarden de rechters van het Grondwettelijk Hof (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
 
 ​
 

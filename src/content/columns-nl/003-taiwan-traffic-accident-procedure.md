@@ -49,7 +49,7 @@ De keuze wijkt af volgens stuiting van de verjaring (時效中斷), kring van ge
 
 Strafrechtelijke aansprakelijkheid kan pas worden beoordeeld wanneer schending van de zorgplicht van elke partij en het causaal verband van die schending met het letsel van de wederpartij zijn erkend. Alleen omdat beide partijen schuld (過失) treft, ontstaat niet automatisch aansprakelijkheid wegens letsel door nalatigheid.
 
-Civielrechtelijk kan de rechter volgens artikel 217 van het Burgerlijk Wetboek (民法) de schadevergoeding verminderen of kwijtschelden, indien de benadeelde persoon schuld toekomt bij het ontstaan of de vergroting van de schade (與有過失). Werden bijvoorbeeld erkende schaden van TWD 1.000.000 (新臺幣) en de schuld van de benadeelde persoon op 50 % gewaardeerd, dan kan het bedrag vóór andere aanpassingen tot TWD 500.000 dalen.
+Civielrechtelijk kan de rechter volgens artikel 217 van het Burgerlijk Wetboek (民法) de schadevergoeding verminderen of kwijtschelden, indien de benadeelde persoon schuld toekomt bij het ontstaan of de vergroting van de schade (與有過失). Werden bijvoorbeeld erkende schade van TWD 1.000.000 (新臺幣) en de schuld van de benadeelde persoon op 50 % gewaardeerd, dan kan het bedrag vóór andere aanpassingen tot TWD 500.000 dalen.
 
 Deskundigenonderzoek (鑑定) of de voorlopige analysebeoordeling kunnen belangrijke stukken zijn, maar binden de rechter niet mechanisch. De rechter beschouwt verklaringen, opnamen, voertuigtoestand en het geheel van de bewijzen samen.
 
@@ -87,15 +87,15 @@ De voorlopige analysebeoordeling van het wegverkeersongeval door de politie is e
 
 Volgens de betreffende voorschriften kunnen gerechtigde partijen een voertuigdeskundigenonderzoek (車輛行車事故鑑定) aanvragen, de behandelende instantie de zaak doorzenden of gerechtelijke organen het opdragen. Het verzoek van de partij geschiedt gewoonlijk binnen 6 maanden vanaf de ongevallendag; bij reeds in onderzoek of gerechtelijke procedure bevindende zaken loopt het deskundigenonderzoek via de opdracht van de gerechtelijke organen, niet via een nieuw rechtstreeks verzoek.
 
-Tegen het deskundigenoordeel kan nader onderzoek worden aangevraagd, echter slechts 1 keer. Deskundigen- en nader-onderzoeksoordelen zijn bewijs- of referentiestukken; de rechter waardeert het gehele verloop, met inbegrip van verklaringen, opnamen en plaatsopnamen, zelfstandig.
+Tegen het deskundigenoordeel kan een keer herziening worden aangevraagd. Deskundigen- en nader-onderzoeksoordelen zijn bewijs- of referentiestukken; de rechter waardeert het gehele verloop, met inbegrip van verklaringen, opnamen en plaatsopnamen, zelfstandig.
 
-## Q7. Welke schaden kunnen na het ongeval worden gevorderd?
+## Q7. Welke schade kan na het ongeval worden gevorderd?
 
 Vorderingen volgens artikel 184 van het Burgerlijk Wetboek (民法) veronderstellen onrechtmatige rechtsaantasting, causaal verband met het ongeval en bewijs van de schade. Het enkele feit van een ongeval betekent niet dat alle volgende posten worden erkend. Artikel 216 van het Burgerlijk Wetboek is maatstaf voor de omvang van de werkelijke schade en van de gederfde winst (所失利益).
 
-- **Letsel**: Volgens artikel 193 van het Burgerlijk Wetboek kunnen nodige behandelingskosten (醫療費用), in het leven verhoogde behoeftekosten zoals verzorging (看護費用), vervoerskosten naar behandeling (就醫交通費) en hulpmiddelen en inkomstenderving (收入損失) door werkelijke arbeidsongeschiktheid en vermindering van de arbeidsgeschiktheid (勞動能力減損) worden onderzocht. Volgens artikel 195 van het Burgerlijk Wetboek kan ook immateriële schade worden onderzocht.
-- **Overlijden**: Volgens artikel 192 van het Burgerlijk Wetboek kunnen, voor zover van toepassing, behandelingskosten en verhoogde levensbehoeftekosten vóór het overlijden, begrafeniskosten (殯葬費) en onderhoudsverlies (扶養利益損失) van de wettelijk tot onderhoud gerechtigden worden onderzocht. Volgens artikel 194 van het Burgerlijk Wetboek kan ook immateriële schade van bepaalde verwanten worden onderzocht.
-- **Vermogen**: Volgens artikel 196 van het Burgerlijk Wetboek kunnen bewezen werkelijke vermogensschaden met inbegrip van voertuigreparatie of waardevermindering worden gevorderd.
+- **Letsel**: Volgens artikel 193 van het Burgerlijk Wetboek kunnen nodige behandelingskosten (醫療費用), extra kosten van levensonderhoud, zoals verzorgingskosten (看護費用), vervoerskosten naar behandeling (就醫交通費) en hulpmiddelen en inkomstenderving (收入損失) door werkelijke arbeidsongeschiktheid en vermindering van de arbeidsgeschiktheid (勞動能力減損) worden onderzocht. Volgens artikel 195 van het Burgerlijk Wetboek kan ook immateriële schade worden onderzocht.
+- **Overlijden**: Volgens artikel 192 van het Burgerlijk Wetboek kunnen, voor zover van toepassing, behandelingskosten en extra kosten van levensonderhoud vóór het overlijden, begrafeniskosten (殯葬費) en onderhoudsverlies (扶養利益損失) van de wettelijk tot onderhoud gerechtigden worden onderzocht. Volgens artikel 194 van het Burgerlijk Wetboek kan ook immateriële schade van bepaalde verwanten worden onderzocht.
+- **Vermogen**: Volgens artikel 196 van het Burgerlijk Wetboek kunnen bewezen werkelijke vermogensschade met inbegrip van voertuigreparatie of waardevermindering worden gevorderd.
 
 ## Q8. Hoe moeten stukken van behandelingskosten worden ingediend wanneer de behandeling voortduurt?
 
@@ -163,7 +163,7 @@ De rechter beschouwt letsel en behandeling, aanhoudend gevolg, leed en levensuit
 
 Artikel 188 van het Burgerlijk Wetboek (民法) behandelt het geval dat een tewerkgestelde persoon in uitoefening van de taak een ander onrechtmatig schade toebrengt. Alleen de arbeidstijd grondt niet automatisch het taakverband; de verbinding van werkelijke arbeid en ongeval moet worden onderzocht.
 
-De werkgever kan inbrengen bij selectie en toezicht van de tewerkgestelde persoon de geboden zorg te hebben betracht, of dat de schade ook bij zulke zorg niet vermijdbaar zou zijn geweest. Het kan worden onderzocht werkgever en tewerkgestelde persoon gezamenlijk tot schadevergoeding in aanspraak te nemen. Na prestatie van de vergoeding kan de werkgever bij de tewerkgestelde persoon verhaal nemen.
+De werkgever kan inbrengen bij selectie en toezicht van de tewerkgestelde persoon de geboden zorg te hebben betracht, of dat de schade ook bij zulke zorg niet vermijdbaar zou zijn geweest. Onderzocht kan worden of werkgever en werknemer gezamenlijk tot schadevergoeding kunnen worden aangesproken. Na prestatie van de vergoeding kan de werkgever bij de tewerkgestelde persoon verhaal nemen.
 
 Bewijst de werkgever de voornoemde vrijstellingsvoorwaarden, zodat de benadeelde persoon geen schadevergoeding volgens lid 1 ontvangt, dan kan de rechter volgens artikel 188 lid 2 van het Burgerlijk Wetboek (民法) met inachtneming van de economische toestand van werkgever en benadeelde persoon volle of gedeeltelijke vergoeding bevelen.
 
@@ -171,11 +171,11 @@ De bepaling van de civielrechtelijke vorderingstegenpartijen en de strafrechteli
 
 ## Q15. Welke prestaties en dekkingen van de autoverzekering moeten worden onderzocht?
 
-De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzekering van civiele aansprakelijkheid (強制汽車責任保險法) treft in beginsel de voertuigeigenaar en in bepaalde gevallen ook gebruiker of beheerder van het voertuig. Dit stelsel voorziet een schuldonafhankelijke prestatiestructuur (無過失給付制度) voor bij motorvoertuigongevallen gekwetsten of overledenen; de wettelijk bepaalde kring van passagiers of van een derde (第三人) buiten het voertuig moet worden onderzocht.
+De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzekering van civiele aansprakelijkheid (強制汽車責任保險法) treft in beginsel de voertuigeigenaar en in bepaalde gevallen ook gebruiker of beheerder van het voertuig. Dit stelsel voorziet een schuldonafhankelijke prestatiestructuur (無過失給付制度) voor bij motorvoertuigongevallen gewonden of overledenen; de wettelijk bepaalde kring van passagiers of van een derde (第三人) buiten het voertuig moet worden onderzocht.
 
 Bij alleenongevallen van 1 voertuig is diens bestuurder in de regel geen prestatieontvanger van de verplichte verzekering van dat voertuig. Bij ongevallen met verscheidene voertuigen kan de bestuurder echter prestaties bij de verplichte verzekeraar van een ander betrokken voertuig vorderen.
 
-De op 29 mei 2026 gewijzigde prestatiemaatstaf (強制汽車責任保險給付標準) geldt voor ongevallen vanaf 1 juli 2026. Het plafond van nodige passende behandelingskosten bij letsel bedraagt TWD 200.000, invaliditeitsprestaties (失能) volgens de wettelijke 15 treden TWD 80.000–3.000.000, de overlijdensprestatie TWD 3.000.000, en het maximum uit overlijden, invaliditeit en behandelingskosten per 1 gekwetste persoon en 1 ongeval bedraagt TWD 3.200.000. Voor vroegere ongevallen kan de vroegere maatstaf gelden.
+De op 29 mei 2026 gewijzigde prestatiemaatstaf (強制汽車責任保險給付標準) geldt voor ongevallen vanaf 1 juli 2026. Het plafond van nodige passende behandelingskosten bij letsel bedraagt TWD 200.000, invaliditeitsprestaties (失能) volgens de wettelijke 15 treden TWD 80.000–3.000.000, de overlijdensprestatie TWD 3.000.000, en het maximum uit overlijden, invaliditeit en behandelingskosten per een gewonde persoon en 1 ongeval bedraagt TWD 3.200.000. Voor vroegere ongevallen kan de vroegere maatstaf gelden.
 
 Aansprakelijkheidsverzekering jegens derden (第三人責任險), bestuurdersongevallenverzekering (駕駛人傷害險) en cascoverzekering (車體損失險) zijn contractuele keuzeproducten. De werkelijke dekking wijkt af volgens verzekerde, limiet, eigen risico (自負額), uitsluiting, schuld en overige voorwaarden van de polis; verzekeringsbewijs en voorwaarden moeten een voor een worden onderzocht.
 
@@ -239,7 +239,7 @@ Bij letsel door nalatigheid (過失傷害) is in een deel van de uitspraken onge
 
 ​
 
-Bij omzetting in geldboete bepaalt artikel 41 lid 1 van het Wetboek van Strafrecht (刑法) de omrekening van TWD 1.000, TWD 2.000 of TWD 3.000 (新臺幣) per 1 dag; berekent men op grondslag van TWD 1.000 per dag, dan levert een straf van 3 maanden 3 × 30 × 1.000 = TWD 90.000 op.
+Bij omzetting in geldboete bepaalt artikel 41 lid 1 van het Wetboek van Strafrecht (刑法) de omrekening van TWD 1.000, TWD 2.000 of TWD 3.000 (新臺幣) per dag; berekent men op grondslag van TWD 1.000 per dag, dan levert een straf van 3 maanden 3 × 30 × 1.000 = TWD 90.000 op.
 
 ​
 

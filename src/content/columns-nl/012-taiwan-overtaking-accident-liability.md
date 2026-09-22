@@ -37,13 +37,13 @@ In een geanonimiseerde zaak van dit kantoor reed motorrijder A met passagier B o
 
 ![Ongevalschets die het inhaalpad van de motorfiets en de 2 voorliggende voertuigen op een bergweg toont](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A probeerde de 2 voertuigen in te halen, reed de tegengestelde rijstrook op en versnelde. Ook voertuig nr. 2 bereidde zich erop voor voertuig nr. 1 in te halen: minder dan 1 seconde na het aanzetten van de richtingaanwijzer reed het de tegengestelde rijstrook op. De motorrijder had te weinig ruimte om te remmen en botste tegen voertuig nr. 2.
+A probeerde de 2 voertuigen in te halen, reed de tegengestelde rijstrook op en versnelde. Ook voertuig nr. 2 bereidde zich erop voor voertuig nr. 1 in te halen: minder dan 1 seconde na het aanzetten van de richtingaanwijzer reed het de tegengestelde rijstrook op. De motorrijder had te weinig tijd om te remmen en botste tegen voertuig nr. 2.
 
 B liep ernstige hoofdletsels op en overleed ter plaatse; A verloor het bewustzijn en werd naar het ziekenhuis gebracht.
 
 De familie van A en de nabestaanden van B zagen eerst de plotselinge rijstrookwissel van voertuig nr. 2 als de voornaamste oorzaak van de botsing. De zaak leidde tot een proces, en in de loop van de procedure werden verschillende deskundigenonderzoeken (鑑定) van het ongeval uitgevoerd.
 
-Volgens het resultaat van het deskundigenonderzoek droeg A de voornaamste verantwoordelijkheid voor deze botsing. Deze conclusie was beperkt tot de feiten van deze zaak. Het deskundigenonderzoek nam gezamenlijk in aanmerking dat A 2 achtereenvolgens rijdende voorliggende voertuigen wilde inhalen, dat hij de tegengestelde rijstrook opreed, dat hij met een snelheid reed die nauwelijks ruimte liet om te remmen, dat de voorgeschreven toeter- en koplampsignalen ontbraken, en nam ook de rijstrookwissel van voertuig nr. 2, de structuur van de weg en de rijstroken en de overige veiliggestelde bewijzen in aanmerking.
+Volgens het resultaat van het deskundigenonderzoek droeg A de voornaamste verantwoordelijkheid voor deze botsing. Deze conclusie was beperkt tot de feiten van deze zaak. Het deskundigenonderzoek nam gezamenlijk in aanmerking dat A 2 achtereenvolgens rijdende voorliggende voertuigen wilde inhalen, dat hij de tegengestelde rijstrook opreed, dat hij met een snelheid reed die nauwelijks tijd liet om te remmen, dat de voorgeschreven toeter- en koplampsignalen ontbraken, en nam ook de rijstrookwissel van voertuig nr. 2, de structuur van de weg en de rijstroken en de overige veiliggestelde bewijzen in aanmerking.
 
 Dat in afzonderlijke zaken zulke deskundigenresultaten er komen, betekent niet dat het 1 keer achterwege laten van een voorgeschreven sein steeds de aansprakelijkheid vastlegt. De nalatigheid (過失) bij een inhaalongeval hangt af van de plaats van het ongeval, de rijstrookindeling, de snelheid, de voertuigbewegingen, de seinen, de tijdintervallen, het zicht en de overige bewijzen.
 

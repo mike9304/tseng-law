@@ -622,14 +622,14 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Investering en oprichting van een vennootschap in Taiwan',
           paragraphs: [
             'Wij begeleiden buitenlandse investeerders en ondernemingen bij de oprichting of de exploitatie van een vennootschap in Taiwan: keuze van de rechtsvorm, voorbereiding en indiening van stukken, kapitaalinbreng, bankzaken, toetsing van de vestigingsplaats en branchespecifieke eisen. Wij ondersteunen ook boekhouding en belastingen die uit oprichting en exploitatie in Taiwan voortvloeien.',
-            'Verloop en duur verschillen naar rechtsvorm, investeerder, branche, bank en aanwezige stukken. Oprichting van een vennootschap leidt niet vanzelf tot een verblijfstitel (居留) of een werkvergunning (工作許可): dat zijn afzonderlijke procedures, beoordeeld naar de situatie van de persoon.',
+            'Verloop en duur hangen af van de rechtsvorm, de investeerder, de branche, de bank en de beschikbare stukken. Oprichting van een vennootschap leidt niet vanzelf tot een verblijfstitel (居留) of een werkvergunning (工作許可): dat zijn afzonderlijke procedures, beoordeeld naar de situatie van de persoon.',
           ],
         },
         {
           heading: 'Civiele zaken en schadevergoeding',
           paragraphs: [
             'Deze groep omvat contractgeschillen, schadevergoeding uit onrechtmatige daad en consumentengeschillen. Het werk begint meestal met een chronologie, de toetsing van aanwezige stukken en bewijzen en pas daarna met de volgende stappen.',
-            'Termijnen, waaronder wettelijke vervaltermijnen, en de volledigheid van het bewijs bepalen het verloop. Noem daarom bekende data zo vroeg mogelijk. Bewaar contracten, berichten, betalingsbewijzen of foto’s van de situatie ter plaatse en vermeld ze in het eerste bericht.',
+            'Termijnen, waaronder wettelijke termijnen om een vordering in te stellen, en de volledigheid van het bewijs bepalen het verloop. Noem daarom bekende data zo vroeg mogelijk. Bewaar contracten, berichten, betalingsbewijzen of foto’s van de situatie ter plaatse en vermeld ze in het eerste bericht.',
           ],
         },
         {
@@ -719,7 +719,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Eerst wordt de omvang van het werk vastgesteld',
           paragraphs: [
-            'Zaken van hetzelfde type kunnen zeer verschillende inzet hebben, naar het aantal betrokkenen, aanwezige stukken, na te leven termijnen en of een procedure al is begonnen. Daarom is de eerste stap steeds vast te stellen wat tot het werk behoort en wat niet.',
+            'Zaken van hetzelfde type kunnen een zeer verschillende inzet vergen. Die inzet hangt af van het aantal betrokkenen, de aanwezige stukken, de na te leven termijnen en of een procedure al is begonnen. Daarom is de eerste stap steeds vast te stellen wat tot het werk behoort en wat niet.',
             'De samenvatting die u aan het begin stuurt, is de grondslag voor die omvang. Hoe duidelijker zij het verloop, uw verzoek en de termijnen beschrijft, hoe nauwkeuriger de omvang kan worden bepaald.',
           ],
         },
@@ -733,7 +733,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'De consultatie kan tegen betaling zijn',
           paragraphs: [
-            'Het gesprek met een advocaat kan een dienst tegen betaling zijn. Deze pagina zegt niet dat het eerste gesprek kosteloos is, en geen deel mag zo worden gelezen.',
+            'Het gesprek met een advocaat kan een dienst tegen betaling zijn. Deze pagina zegt niet dat het eerste gesprek kosteloos is, en geen deel van deze pagina mag zo worden gelezen.',
             'Is de consultatie tegen betaling, dan worden hoogte en betalingswijze meegedeeld voordat zij plaatsvindt.',
           ],
         },
@@ -881,7 +881,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Bewaarplaats en toegang',
           paragraphs: [
             'De inhoud van uw bericht wordt bewaard op een niet openbaar toegankelijke plaats. Alleen bevoegde personen in het kantoor mogen erbij om het verzoek te behandelen.',
-            'Deze pagina geeft geen absolute veiligheidsgarantie. Geen overdrachtweg en geen bewaarplaats is volledig veilig; gevoelige stukken moeten daarom alleen na bijzondere aanwijzing van de advocaat worden verzonden.',
+            'Deze pagina geeft geen absolute veiligheidsgarantie. Noch de wijze van verzending, noch de bewaarplaats is volledig veilig; gevoelige stukken moeten daarom alleen na bijzondere aanwijzing van de advocaat worden verzonden.',
           ],
         },
         {
@@ -894,7 +894,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kennisgeving en ontvangstnummer',
           paragraphs: [
-            'Wordt een verzoek succesvol verzonden, dan stelt het systeem het kantoor in kennis. Is deze kennisgeving nog niet bevestigd, dan blijft uw tekst bewaard en gaat niet verloren.',
+            'Wordt een verzoek succesvol verzonden, dan stelt het systeem het kantoor in kennis. Is de ontvangst van deze kennisgeving door het kantoor nog niet bevestigd, dan blijft uw tekst bewaard en gaat zij niet verloren.',
             'Het ontvangstnummer dient om uw verzoek in onze stukken terug te vinden. Het wordt na het bewaren getoond; u kunt het bij een nieuw contact noemen.',
           ],
         },

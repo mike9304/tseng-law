@@ -184,7 +184,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ทีมงานของเรา',
     title: 'ทีมงานระหว่างประเทศ Hovering',
     description:
-      'ประวัติของทนายความ ผู้จัดการงาน และหุ้นส่วนผู้สอบบัญชีของ Hovering',
+      'ประวัติของทนายความ ผู้จัดการฝ่ายปฏิบัติการ และหุ้นส่วนผู้สอบบัญชีของ Hovering',
     representativeTitle: 'ทนายความผู้จัดการสำนักงาน',
     teamTitle: 'ทนายความและเจ้าหน้าที่',
     partnerTitle: 'หุ้นส่วนผู้สอบบัญชี',
@@ -2014,17 +2014,17 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'มูลนิธิช่วยเหลือทางกฎหมาย สาขาไถจง (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'เคยปฏิบัติงานที่ Ministry of Education, Legal Affairs Division โดยเน้นข้อพิพาททางปกครองและทางแพ่ง',
+        'เคยปฏิบัติงานที่กระทรวงศึกษาธิการ ฝ่ายนิติการ (Ministry of Education, Legal Affairs Division) โดยเน้นข้อพิพาททางปกครองและทางแพ่ง',
         'มีประสบการณ์ในเรื่องที่เกี่ยวกับมหาวิทยาลัย สิทธิของอาจารย์ และการร้องทุกข์ทางปกครอง',
       ],
       education: ['นิติศาสตรบัณฑิต (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'กระทรวงศึกษาธิการ ฝ่ายนิติการ (Ministry of Education, Legal Affairs Division)',
         'ทนายความ, Hovering International Law Firm',
       ],
     },

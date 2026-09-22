@@ -39,7 +39,7 @@ Zaposleni v tajvanski banki so mi neposredno povedali, da
 
 v zadnjem času številni tujci po odprtju računa izginejo, zato se odpiranje računov presoja vse strožje.
 
-Že pri osnovnem pregledu so bralke in bralci navedli, da je odprtje računa najtežja stopnja; tudi sama se s tem strinjam.
+V osnovnem pregledu je bralec navedel, da je odprtje računa najtežja stopnja; tudi sama se s tem strinjam.
 
 Ker je na Tajvanu zelo veliko primerov pranja denarja (洗錢), postaja odpiranje bančnih računov vse strožje.
 
@@ -87,7 +87,7 @@ V tej točki je zadevo smiselno temeljito predebatirati z odvetnico ali odvetnik
 
 **4. Na kaj paziti, ko se najema naslov za vpis družbe (na primer gostinski lokal)?**
 
-Ustanovitev družbe traja približno **3 mesece**, pridobitev delovnega dovoljenja (工作許可) in dovoljenja za prebivanje približno **1 mesec**,
+Ustanovitev družbe traja približno **3 mesece**, pridobitev delovnega dovoljenja (工作許可) in dovoljenja za prebivanje traja približno še **1 mesec**,
 
 zato je začetek pogodbe treba določiti čim pozneje.
 
@@ -119,7 +119,7 @@ Poleg tega pri končnem vpisu družbe mestna uprava (市政府) prav tako zahtev
 
 če gre za pisarniški prostor, vpis družbe (公司登記) tedaj ni mogoč.
 
-Npr. če gre za panoge, mogoče v pisarniškem prostoru, kot sta oglaševanje ali trgovina na debelo, je družbo mogoče ustanoviti v pisarniškem prostoru. Pred sklenitvijo najemne pogodbe
+Nasprotno, če gre za panoge, ki jih je mogoče opravljati v pisarniškem prostoru, kot sta oglaševanje ali trgovina na debelo, je družbo mogoče ustanoviti v pisarniškem prostoru. Pred sklenitvijo najemne pogodbe
 
 to vnaprej preverite.
 

@@ -69,9 +69,9 @@ Nekatere banke lahko nalagajo dodatne zahteve, na primer dobo uporabe računa na
 
 **5. Ali lahko družba zaposli tuje državljane (vključno z osebami s korejskim državljanstvom)?**
 
-A. Prvi zaposleni: vloga se vloži kot delo poslovodje v podjetju običajne naložbe čezmorskih Kitajcev ali tujcev (一般僑外投資事業主管工作). Merilo »strokovnega ali tehničnega dela« iz točke B spodaj se ne uporabi, vendar se uporabijo pogoji naslovnika, vključno s pogojem poslovodje (經理人) družbe, pri kateri vložek čezmorskih Kitajcev ali tujcev presega 1/3, ter pogoji rezultatov delodajalca glede kapitala ter prometa (po 38. in 39. členu meril pregleda).
+A. Prvi zaposleni: vloga se vloži kot delo poslovodje v podjetju običajne naložbe čezmorskih Kitajcev ali tujcev (一般僑外投資事業主管工作). Merilo »strokovnega ali tehničnega dela« iz točke B spodaj se ne uporabi, vendar se uporabijo pogoji upravičenosti, vključno s pogojem, da gre za poslovodjo (經理人) družbe, pri kateri vložek čezmorskih Kitajcev ali tujcev presega 1/3, ter pogoji rezultatov delodajalca glede kapitala ter prometa (po 38. in 39. členu meril pregleda).
 
-B. Od drugega zaposlenega veljajo omejitve: če število zaposlenih oseb presega 1 osebo, se izobrazba ter izkušnje zaposlenega, pravila povprečne plače pri zaposlitvi ter pravila kapitala ter prometa družbe obravnavajo po »strokovnem ali tehničnem delu« (專門性或技術性工作).
+B. Od drugega zaposlenega veljajo omejitve: če število zaposlenih tujcev presega eno osebo, se izobrazba ter izkušnje zaposlenega, pravila povprečne plače pri zaposlitvi ter pravila kapitala ter prometa družbe obravnavajo po »strokovnem ali tehničnem delu« (專門性或技術性工作).
 
 Glejte spletno stran tajvanskega Ministrstva za delo (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

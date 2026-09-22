@@ -1296,7 +1296,7 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm je tajvanska odvetniška pisarna, ki so jo leta 2016 ustanovili odvetnice in odvetniki, diplomanti National Taiwan University (國立臺灣大學), s pisarnami v Tajpeju, Kaohsiungu, Taichungu in Pingtungu. Od leta 2020 deluje tudi računovodski oddelek; pisarna v Taichungu vodi zadeve z vezjo na Korejo in Japonsko. Pisarna ne obljublja izida. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
+        'Hovering International Law Firm je tajvanska odvetniška pisarna, ki so jo leta 2016 ustanovili odvetnice in odvetniki, diplomanti National Taiwan University (國立臺灣大學), s pisarnami v Tajpeju, Kaohsiungu, Taichungu in Pingtungu. Od leta 2020 deluje tudi računovodski oddelek; pisarna v Taichungu vodi zadeve, povezane s Korejo in Japonsko. Pisarna ne obljublja izida. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.',
       sources: ['/sl/lawyers', '/sl/services'],
     },
     lawyers: {

@@ -63,7 +63,7 @@ Poravnava (和解) iz 736. člena civilnega zakonika je pogodba, v kateri strani
 
 ### Uradne podlage Q1–Q5
 
-- [Odlok o upravljanju ter sankcijah cestnega prometa (道路交通管理處罰條例), 62. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [zakon o upravljanju in kaznovanju cestnega prometa (道路交通管理處罰條例), 62. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Kazenski zakonik Tajvana, 185-4. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Kazenski zakonik Tajvana, 284. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Kazenski zakonik Tajvana, 287. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -151,7 +151,7 @@ Okoliščina, da se tekoča plača ohranja brez spremembe, zahtevka samodejno ne
 
 Če je trajna funkcijska motnja bistveno sporna, je lahko medicinsko izvedensko mnenje koristno, vendar ni obvezno v vseh zadevah. Presoja se tudi lastna krivda oškodovanca iz 217. člena civilnega zakonika ter drugi razlogi prilagoditve.
 
-Ko se izračun opravi v enem kapitalskem znesku, je mogoče pretehtati odbitje vmesnih obresti (中間利息扣除). Hoffmanov kalkulator (霍夫曼) Sodnega juana je le računski pripomoček, ne pa pravno obvezna metoda, niti ne obljublja izida. Po 193. členu civilnega zakonika sme sodišče na predlog strani naložiti tudi plačilo v redni renti pod pogojem zavarovanja.
+Ko se izračun opravi v enem kapitalskem znesku, je mogoče pretehtati odbitje vmesnih obresti (中間利息扣除). Hoffmanov kalkulator sedanje vrednosti, ki ga objavlja Judicial Yuan (司法院) je le računski pripomoček, ne pa pravno obvezna metoda, niti ne obljublja izida. Po 193. členu civilnega zakonika sme sodišče na predlog strani naložiti tudi plačilo v redni renti pod pogojem zavarovanja.
 
 ## Q13. Kako se presoja denarna odškodnina za nepremoženjsko škodo (慰撫金)?
 
@@ -186,7 +186,7 @@ Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarova
 - [Civilni zakonik, 217. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
 - [Sodba pritožbenega sodišča Tajvana, leto 109 po koledarju Republike Kitajske, zadeva 上易字 številka 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
 - [Sodba pritožbenega sodišča Tajvana, leto 109 po koledarju Republike Kitajske, zadeva 上易字 številka 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
-- [Kalkulator sedanje vrednosti Hoffmana Sodnega juana](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
+- [Kalkulator sedanje vrednosti Hoffmana, ki ga objavlja Judicial Yuan (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civilni zakonik, 195. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Sodba okrožnega sodišča Taoyuan, leto 112 po koledarju Republike Kitajske, zadeva 壢簡字 številka 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civilni zakonik, 188. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
@@ -195,7 +195,7 @@ Zavarovanje odgovornosti do tretjih oseb (第三人責任險), nezgodno zavarova
 - [Tarifa dajatev obveznega zavarovanja avtomobilske odgovornosti](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Vzorčna pogodba zavarovanja vozil zasebne rabe Komisije za finančni nadzor (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Ali lahko po nesreči vse prepustiti zavarovatelju?
+Q16. Ali je po nesreči mogoče vse prepustiti zavarovatelju?
 
 ​
 

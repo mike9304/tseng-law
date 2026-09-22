@@ -1,0 +1,93 @@
+# WO-F-sl — Slovene fix lane report (Grok 4.7, campaign round 1, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-sl-r1
+No git add/commit/push.
+Slovene strings only. No other locale's copy was edited.
+No test expected-string needed updating. There is no guidance-*sl*.test.ts. The answers test still matches angleščini / kitajščini / japonščini / korejščini, obseg, čaka na oceno, and ni pravno mnenje. Those phrases were not removed. Bio preserved-term parentheticals were added on the Slovene lines; the pinning test locales are vi/id/th/fil only.
+
+Files: src/content/columns-sl/001–018 (006 wording unchanged; blank lines left), src/data/international-guidance-central-europe.ts (slovenianGuidanceContent), international-guidance-team.ts (sl), international-guidance-answers.ts (sl), international-inquiry-copy.ts (sl), src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.sl.discoveryNotice only). Offices sl copy was not flagged beyond already-Slovene chrome.
+
+## Rows applied
+
+sl-a (47 rows). Applied: 1–6, 8–19, 21–30, 32–47.
+sl-a partial: 31 — Q16 grammar fixed inside the existing body line ("Ali je po nesreči mogoče vse prepustiti zavarovatelju?"). Heading promotion and U+200B removal not done (see skipped).
+sl-b (70 rows). Applied: 1–65, 67–69.
+sl-b partial: 66 — 015's three quoted fragments rewritten as self-standing sentences inside the existing paragraphs. Paragraphs not merged.
+
+## Rows skipped
+
+sl-a #7  SKIP  Hangul frontmatter urls in 008 and 009. R16 / standing rule: do not edit url. Not rendered as body copy.
+sl-a #20 SKIP  Do not reformat "TWD 1.57M" (pinned, byte-identical in the Wei Tseng bio). Do not switch dot thousands to spaces. Checker NUMBER_THOUSAND_STYLE.sl is 'dot'. Same figures in 001, 002, 003, 004, 006, 007, 008 left.
+sl-b #70 SKIP  Same number rule. "1.579.589 TWD", "40.000", "5.000.000", "25.000.000", "10.000.000", "TWD 30.000.000", "TWD 100.000.000" unchanged. Decimal comma already in use (0,5).
+sl-a #31 SKIP (structure)  Q16–Q20 stay body lines. U+200B blank lines in 003, 005, 006, 008, 009 left. Promoting them to ## headings or deleting the blanks changes the block count. The reviewer's suggested heading "Ali lahko … vse prepustiti" is still ungrammatical; the body line was fixed instead.
+sl-b #66 SKIP (structure)  013 and 015 one-clause paragraphs were not merged. R7: do not merge blog one-liners.
+
+006 had no P1/P2 sentence of its own. Gospod Lin stays masculine. Wei Tseng stays feminine. Huang Shengping and Rongxuan Chang stay masculine. The male manager in 008 and the male client in 010 stay masculine.
+
+## Wording that is not the reviewer's sentence
+
+sl-a #9  Kaohsiung practice: "korporativno pravo", not "korporativno upravljanje". Governance is a narrower field than the office's corporate practice. "Vodenje podjetij" (running companies) was the defect.
+sl-a #11  "v enem skupnem postopku". The sentence already names the accounting department, so "z računovodstvom" was not repeated.
+sl-a #15  Link url unchanged (flno=3). Label is the instrument the page opens: "3. člen standardov stopenj odtegljaja pri viru za posamezne vrste dohodka (各類所得扣繳率標準)". In 004 the label also ends ", člen 10" because the English link text says Article 10 and the checker reported that digit missing. See reviewer-wrong.
+sl-b #35  "vračila ter zamenjave", not "vračila in zamenjave". Three Slovene "in" on that table row trip the English-stopword check (in = English "in").
+sl-b #39  In the care-cost sentence, "čas" → "trajanje". The checker strips č and reads "čas" as the English stopword "as", which with two "in" failed the English check. Meaning is still duration of care.
+sl-b #46  "Odstavek 4 člena 15-1" and "Odstavek 1 člena 15-1", not a line-initial "4. odstavek" / "1. odstavek". A leading "N. " is parsed as a new ordered-list item (014 went 34 → 36) and the digit is then stripped from the number multiset (missing 4×2). Digits 4 and 1 remain.
+sl-b #52  Nominative list kept; only "špedicijo" → "špedicija" so it agrees with "odprema, skladiščenje, pakiranje". The suggested rewrite put accusative "odpremo / špedicijo" into a nominative list.
+
+## Systemic patterns and instances
+
+1. 條例 = zakon. Company 章程 stays "statut". 004 "Statuta o industrijskih inovacijah" → zakon (5). 008 "uredbe o pokojnini delavcev" → zakon (2). 003 "Odlok o upravljanju ter sankcijah cestnega prometa" → zakon (1). 011 辦法 stays "uredba".
+2. 營業稅 = poslovni davek (davek tipa DDV), not davek na promet. 001 (name, sentence, and the tax-base clause "za dobave"), 002 (statute name and procedures), 004 (body, table header, 5 % sentence). "dobičkonosnost" in the 004 listing sentence left (English profitability).
+3. 營利事業 = pridobitno podjetje, including loss-making. 001 and 004, including "sedež je zunaj Tajvana" for the 5 % undistributed-earnings exemption (not "matična družba"). "izvzeta iz napovedi" in the FAQ, body, and table (004).
+4. "z vezjo na" → "povezane/povezani s/z". Guidance: persons connected with Taiwan; Taichung matters connected with Korea and Japan (about copy and the answers blurb). Columns: 001 and 004 Korea facts stay labelled examples ("dejanska stanja, povezana s Korejo"). 007 family line: "družini, povezani z 2 ali več državami ali ozemlji". Korea/Japan facts about Wei Tseng's clients and the Taichung office were not deleted.
+5. "kakovost" as legal status. 001 beneficial owner; 004 "zgolj položaj hčerinske družbe". Product "kakovost in varnost izdelka" in 011 left. 001 work-permit "naslovnika" → "kategorijo" (same addressee calque as 005).
+6. Glued digit where English uses a word. 001 "zadnje leto" (2), "manj kot eno leto" (4), "obstaja eno leto" (4). 002 "en mesec" (2). 005 "eno osebo". 008 "dopolnjeno leto" (2) and the force-majeure cell "en mesec". 014 notice table "eno leto" (2). Kept the 008 ratio "za 1 leto se izplača 1 mesec" and 013 "**1 mesec**". 010 negligence "1-kratnika" → "višine dejanske škode"; 3-kratnik and 5-kratnik kept. 007 "tri samostojne predpostavke" is a word, not a digit.
+7. Security interests = zastavne pravice. 002 (one list), 016 (third-party rights, creditors, creating a security), 017 (after the insurance list). Insurance, "zavarovanje ali pokojnina", and varščina left.
+8. Clitics. "lahko je" → "je lahko" and "ne omejuje se" → "se ne omejuje" in 014, 016, 018 as flagged. Two further "lahko so" in 016 → "so lahko".
+9. Judicial Yuan (司法院), not "Sodni juan". 003 body and link label.
+10. "PRESOVANO" → "preostalega premoženja". 016 FAQ, intro, body, checklist (4). "vstopna pravica" for 代位繼承 left, as the sl-b verdict said.
+11. "spoznal" (met) → "izvedel" for learning a fact. 010 offender; 016 inheritance right.
+12. R12 bios. experienceLabel "Delovne izkušnje". Parentheticals added: "(Legal Aid Foundation, Taichung Branch)" and "(Ministry of Education, Legal Affairs Division)". "TWD 1.57M" untouched. Huang: "Diplomiral je …".
+13. Guidance chrome. skip link navigacijo; menu Meni; disclaimer nav Omejitev / eyebrow OMEJITEV; comma before "in od trenutka presoje" (home and disclaimer); "v trenutku objave"; cloud storage; inquiry option "Nobenega od štirih jezikov ne govorim"; llms discoveryNotice "uvrstitve … potrditve … ali zagotovljene vidnosti". Consultation languages remain angleščina, kitajščina (中文), japonščina, korejščina.
+
+## Reviewer got wrong (not applied as stated)
+
+The page at https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3 is 各類所得扣繳率標準 §3 (withholding-rate standards), including 21 % on dividends to non-residents. It is not the business-tax act and not Article 10. English 001 calls that URL the general business-tax rate; English 004 calls it Article 10 of the business-tax act. The reviewer asked to name the instrument the link opens and to leave the url. That official name is what was written. The ", člen 10" tail on the 004 label only puts the English source digit back so the number check passes. A reader can see two article numbers; the page that opens is Article 3 of the withholding-rate standards.
+
+The suggested Q16 heading still says "Ali lahko … vse prepustiti", which does not parse. The body line was corrected; it was not promoted to a heading.
+
+"Korporativno upravljanje" for the Kaohsiung office would mean corporate governance. The practice line is corporate law.
+
+Space thousands and "1,57 milijona TWD" were not treated as a factual error. They conflict with the checker (dot thousands) and with the pinned "TWD 1.57M", so they were skipped under the standing number rules.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+       0
+```
+
+```
+TSC_OK
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+      25
+```
+
+The git count is from the verify run before this log file existed. This log is an additional untracked file.

@@ -13,7 +13,7 @@ faq:
   - q: "Mora družba izplačati odpravnino tudi pri disciplinski odpovedi?"
     a: "Ne. Če delavec stori protipravno dejanje, krši interni delovni red ali se brez utemeljenega razloga ne zglasi 3 dni zapored (12. člen zakona o temeljnih delovnih standardih, 勞動基準法第12條), sme družba odpustiti brez odpovedi ter odpravnine ni dolžna izplačati. Nasprotno pa gospodarska odpoved (11. člen) zahteva predhodno odpoved ter izplačilo odpravnine."
   - q: "Kako se na Tajvanu odpravnina izračuna?"
-    a: "Za vsako dopolnjeno 1 leto delovne dobe mora delodajalec izplačati 0,5 meseca povprečne plače kot odpravnino, največ 6 mesecev plače. Ta formula zadeva delovno dobo, za katero se uporabi 12. člen uredbe o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za 1 leto izplača 1 mesec povprečne plače, brez zgornje meje."
+    a: "Za vsako dopolnjeno leto delovne dobe mora delodajalec izplačati 0,5 meseca povprečne plače kot odpravnino, največ 6 mesecev plače. Ta formula zadeva delovno dobo, za katero se uporabi 12. člen zakona o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za 1 leto izplača 1 mesec povprečne plače, brez zgornje meje."
 ---
 
 # Delovno pravo na Tajvanu: je odpravnino na Tajvanu res težko pridobiti?
@@ -52,17 +52,17 @@ Spodnja preglednica to strne.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Vrsta** | **Gospodarska odpoved**  **資遣** **員工(經濟解僱)** | **Disciplinska odpoved**  **解僱** **員工(懲戒解僱)** | **Prostovoljni odhod delavca**  **員工自請離職** |
+| **Vrsta** | **Gospodarska odpoved (資遣員工, 經濟解僱)** | **Disciplinska odpoved (解僱員工, 懲戒解僱)** | **Prostovoljni odhod delavca**  **員工自請離職** |
 | Pomen | Če ima delodajalec zaradi poslovnih razmer potrebo po prilagoditvi osebja, je razlog v gospodarskem področju delodajalca, ne pa v odgovornosti delavca. Zato mora delodajalec spoštovati odpovedni rok (預告期間) ter izplačati odpravnino, da uravnoteži neugodnosti delavca. | Če delavec stori protipravno ali neprimerno dejanje, sme delodajalec takoj končati pogodbo o zaposlitvi (勞動契約) brez predhodne odpovedi ter odpravnine ni dolžan izplačati. Gre za eno od disciplinskih pooblastil delodajalca. | Delavec sme kadar koli končati pogodbo, vendar mora glede na dobo zaposlitve spoštovati odpovedni rok, da lahko delodajalec opravi predajo ter iskanje nadomestnega delavca. |
 | Pogoji | So  (11. člen tajvanskega zakona o temeljnih delovnih standardih) | So  (12. člen tajvanskega zakona o temeljnih delovnih standardih) | Jih ni |
 | Predhodna odpoved | Potrebna | Ni potrebna | Potrebna |
 | Težavnost (z vidika delodajalca) | Lahka | Težka | Lahka |
 | Ali mora družba izplačati odpravnino (資遣費) | Potrebno | Ni potrebno | Ni potrebno |
-|  | Tajvanski zakon o temeljnih delovnih standardih, 11. člen (勞動基準法第11條): Če ne nastopi eden od naslednjih primerov, delodajalec ne sme končati pogodbe o zaposlitvi, niti po predhodnem obvestilu delavcu.  1. Prenehanje dejavnosti (歇業) ali prenos podjetja (轉讓)  2. Izgube (虧損) ali zožitev dejavnosti (業務緊縮)  3. Višja sila zahteva prekinitev dejavnosti za 1 mesec ali dlje  4. Narava dejavnosti zahteva zmanjšanje osebja ter odpuščenega ni mogoče premestiti na drugo primerno mesto  5. Določeni delavec ne more zadovoljivo opravljati dela, ki ga mesto zahteva | Tajvanski zakon o temeljnih delovnih standardih, 12. člen (勞動基準法第12條): Delodajalec sme odpustiti brez predhodnega obvestila, če delavec sodi v enega od naslednjih primerov.  1. Kdor ob sklenitvi pogodbe o zaposlitvi navede neresnične podatke, zavede delodajalca ter izpostavi podjetje tveganju škode  2. Kdor uporabi nasilje ali hudo užali delodajalca, njegovo družino, njegovega zastopnika (代理人) ali druge sodelavce  3. Kogar so pravnomočno obsodili na kazen zapora za določen čas (有期徒刑) ali na strožjo kazen, brez pogojnega odloga izvršitve (緩刑) ter brez dovoljenja pretvorbe v denarno kazen (易科罰金)  4. Huda kršitev pogodbe o zaposlitvi ali delovnega reda  5. Kdor namenoma porabi stroje, orodja, surovine, izdelke ali drugo premoženje delodajalca, ali namenoma izda tehnične ter poslovne skrivnosti delodajalca ter mu povzroči škodo  6. Neopravičena odsotnost (曠工) brez utemeljenega razloga 3 dni zapored ali 6 dni ali več v mesecu |  |
+|  | Tajvanski zakon o temeljnih delovnih standardih, 11. člen (勞動基準法第11條): Če ne nastopi eden od naslednjih primerov, delodajalec ne sme končati pogodbe o zaposlitvi, niti po predhodnem obvestilu delavcu.  1. Prenehanje dejavnosti (歇業) ali prenos podjetja (轉讓)  2. Izgube (虧損) ali zožitev dejavnosti (業務緊縮)  3. Višja sila zahteva prekinitev dejavnosti za en mesec ali dlje  4. Narava dejavnosti zahteva zmanjšanje osebja ter odpuščenega ni mogoče premestiti na drugo primerno mesto  5. Določeni delavec ne more zadovoljivo opravljati dela, ki ga mesto zahteva | Tajvanski zakon o temeljnih delovnih standardih, 12. člen (勞動基準法第12條): Delodajalec sme odpustiti brez predhodnega obvestila, če delavec sodi v enega od naslednjih primerov.  1. Kdor ob sklenitvi pogodbe o zaposlitvi navede neresnične podatke, zavede delodajalca ter izpostavi podjetje tveganju škode  2. Kdor uporabi nasilje ali hudo užali delodajalca, njegovo družino, njegovega zastopnika (代理人) ali druge sodelavce  3. Kogar so pravnomočno obsodili na kazen zapora za določen čas (有期徒刑) ali na strožjo kazen, brez pogojnega odloga izvršitve (緩刑) ter brez dovoljenja pretvorbe v denarno kazen (易科罰金)  4. Huda kršitev pogodbe o zaposlitvi ali delovnega reda  5. Kdor namenoma porabi stroje, orodja, surovine, izdelke ali drugo premoženje delodajalca, ali namenoma izda tehnične ter poslovne skrivnosti delodajalca ter mu povzroči škodo  6. Neopravičena odsotnost (曠工) brez utemeljenega razloga 3 dni zapored ali 6 dni ali več v mesecu |  |
 
-> Na Tajvanu mora delodajalec za vsako dopolnjeno 1 leto delovne dobe (年資)
+> Na Tajvanu mora delodajalec za vsako dopolnjeno leto delovne dobe (年資)
 > izplačati 0,5 meseca povprečne plače (平均工資) kot odpravnino.
-> (največ 6 mesecev plače) Ta formula zadeva delovno dobo, za katero se uporabi 12. člen uredbe o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za 1 leto izplača 1 mesec povprečne plače, brez zgornje meje.
+> (največ 6 mesecev plače) Ta formula zadeva delovno dobo, za katero se uporabi 12. člen zakona o pokojnini delavcev (勞工退休金條例); pri delovni dobi, za katero se uporabi 17. člen zakona o temeljnih delovnih standardih (勞動基準法), se za 1 leto izplača 1 mesec povprečne plače, brez zgornje meje.
 
 ​
 
@@ -172,11 +172,11 @@ posnel celoten potek z mobilnim telefonom
 
 ter lahko dokazal, da sam ni odšel.
 
-Zato je pozneje z pravnim zastopanjem
+Z zastopanjem je v tej opisani zadevi
 
-lahko izkazal zakonsko pravico do odpravnine;
+uveljavljal pravico do odpravnine po zakonu.
 
-drugi delavci, ki so odšli, iste pravice niso uveljavili.
+Opis ene zadeve ni obljuba enakega izida.
 
 ​
 
@@ -212,7 +212,7 @@ ali premešča delavce na čudna mesta,
 
 je odpravnino težje pridobiti, kot se misli
 
-Ne sklepajte zlahka poravnave z družbo
+Ne sklenite zlahka poravnave z družbo.
 
 ter pazite, da družba ne odpusti na neustrezen način
 

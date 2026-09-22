@@ -20,9 +20,9 @@ faq:
 
 ![Dokumentacija izdelka in pregled predpisov, potrebni za vstop na trg kozmetike na Tajvanu](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Tuja znamka kozmetike, ki namerava na Tajvanu dajati izdelke v obtok, mora določiti, komu zaupa uvoz, kdaj dokonča registracijo izdelka (產品登錄), kdo upravlja informacijsko mapo izdelka (產品資訊檔案, Product Information File, PIF) in kje, in po kakšnem merilu se presoja označevanje (標示) in oglaševanje (廣告). Tuje znamke lahko uporabijo krajevnega uvoznika in lahko dejavnost na Tajvanu opravljajo same, zato priprava prodaje ni končana že s tem, da je bila ustanovljena družba.
+Tuja znamka kozmetike, ki namerava na Tajvanu dajati izdelke v obtok, mora določiti, komu zaupa uvoz, kdaj dokonča registracijo izdelka (產品登錄), kdo upravlja informacijsko mapo izdelka (產品資訊檔案, Product Information File, PIF) in kje, in po kakšnem merilu se presoja označevanje (標示) in oglaševanje (廣告). Tuja znamka lahko bodisi uporabi krajevnega uvoznika bodisi dejavnost na Tajvanu opravlja sama, zato priprava prodaje ni končana že s tem, da je bila ustanovljena družba.
 
-Obveznosti, ki se uporabljajo se lahko razlikujejo glede na vrsto izdelka in kraj proizvodnje (製造場所), dejansko obliko uvoza, način obtoka in vsebino oglaševanja. Spodaj se ločeno pojasnjujejo oblika vstopa ter zakoniti subjekt odgovornosti, registracija izdelka pri TFDA, sestava, posodobitev ter hramba PIF, označevanje in oglaševanje ter pregled in popravni ukrepi. Pred določitvijo dejanskega koledarja dobave je treba znova, izdelek za izdelkom, preveriti najnovejše predpise in napotke pristojnega organa (主管機關).
+Obveznosti, ki se uporabljajo, se lahko razlikujejo glede na vrsto izdelka in kraj proizvodnje (製造場所), dejansko obliko uvoza, način obtoka in vsebino oglaševanja. Spodaj se ločeno pojasnjujejo oblika vstopa ter zakoniti subjekt odgovornosti, registracija izdelka pri TFDA, sestava, posodobitev ter hramba PIF, označevanje in oglaševanje ter pregled in popravni ukrepi. Pred določitvijo dejanskega koledarja dobave je treba znova, izdelek za izdelkom, preveriti najnovejše predpise in napotke pristojnega organa (主管機關).
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
@@ -32,7 +32,7 @@ Hčerinske družbe niti podružnice ni treba vedno ustanoviti. Uvoz in prodajo j
 
 ### Kadar se zaupa krajevnemu uvozniku
 
-Če tajvanski uvoznik ali prodajni zastopnik (銷售代理商) zagotavlja uvoz in prodajo, lahko tuja znamka izbere tudi strukturo brez lastne hčerinske družbe ali podružnice na Tajvanu. Prodajni zastopnik lahko hkrati deluje kot uvoznik, ali pa se vključi samostojni uvoznik. Pravno prištetje odgovornosti pa se ne določi le s pogodbenim poimenovanjem, kot so zastopnik, izključni distributer ali trgovec.
+Če tajvanski uvoznik ali prodajni zastopnik (銷售代理商) zagotavlja uvoz in prodajo, lahko tuja znamka izbere tudi strukturo brez lastne hčerinske družbe ali podružnice na Tajvanu. Prodajni zastopnik lahko hkrati deluje kot uvoznik, ali pa se vključi samostojni uvoznik. Pravno prištetje odgovornosti pa se ne določi le s pogodbenim poimenovanjem, kot so zastopnik, glavni distributer ali distributer.
 
 Pri zasnovi dejanske delitve dela je treba najprej preveriti, kdo uvaža izdelek in opravlja registracijo izdelka in kdo sestavlja, posodablja ter hrani PIF. Določiti je treba tudi odgovorno osebo za pregled označevanja, vodenje evidenc o obtoku, sprejem pritožb potrošnikov in varnostnih informacij in odziv na preglede ter zahteve po podlagah s strani pristojnega organa. Hkrati je treba presoditi, ali se ujemajo zakonske obveznosti, naložene proizvajalcu ali uvozniku kozmetike, in pogodbeno delo med znamko in prodajnim partnerjem.
 
@@ -52,17 +52,17 @@ Registracija izdelka in PIF nista isti postopek. Registracija izdelka je samosto
 
 ### Trenutek registracije izdelka in doba veljavnosti
 
-Registracija kozmetičnega izdelka se opravi na platformi za registracijo kozmetičnih izdelkov TFDA. Proizvajalec ali uvoznik kozmetike mora dokončati registracijo izdelka, preden izdelek dobavi, proda, podari, javno razstavi (公開陳列) ali da potrošniku v preizkus. Priprave ni mogoče organizirati le po plačljivi prodaji; koledar promocijskih daril ali dajanja v preizkus potrošniku je treba upravljati skupaj s trenutkom registracije.
+Registracija kozmetičnega izdelka se opravi na platformi za registracijo kozmetičnih izdelkov TFDA. Proizvajalec ali uvoznik kozmetike mora dokončati registracijo izdelka, preden izdelek dobavi, proda, podari, javno razstavi (公開陳列) ali da potrošniku v preizkus. Priprav ni smiselno vezati le na plačljivo prodajo; koledar promocijskih daril ali dajanja v preizkus potrošniku je treba upravljati skupaj s trenutkom registracije.
 
 Doba veljavnosti registracije izdelka je 3 leta. Če naj se dobave nadaljujejo, je treba zaprositi za podaljšanje (展延) v 3 mesecih pred potekom veljavnosti. Če se spremenijo vpisani podatki, kot so ime izdelka, namen, oblika pripravka (劑型), sestavine in kraj proizvodnje, je treba tudi preveriti, ali je potreben postopek, ki ustreza vsebini spremembe.
 
-Registracija izdelka je dejanje prijave predpisanih podatkov na platformi. Dokončanje registracije ne pomeni, da so popolne vso dokumentacijo, potrebno za PIF, niti ni presoja, da sta označevanje ali oglaševanje izdelka v skladu s pravom. Koledar registracije izdelka, upravljanje PIF in pregled označevanja in oglaševanja je treba voditi kot samostojne točke skladnosti.
+Registracija izdelka je dejanje prijave predpisanih podatkov na platformi. Dokončanje registracije ne pomeni, da je na voljo vsa dokumentacija, potrebna za PIF, niti ni presoja, da sta označevanje ali oglaševanje izdelka v skladu s pravom. Koledar registracije izdelka, upravljanje PIF in pregled označevanja in oglaševanja je treba voditi kot samostojne točke skladnosti.
 
 ### Dokumentacija PIF in stopenjska uporaba
 
 PIF je zbirka dokumentov, urejena tako, da je mogoče še naprej pojasnjevati kakovost in varnost izdelka. Poleg kakovosti, varnosti, sestave, zatrjevane funkcije (宣稱功能), načina proizvodnje, izidov preizkusov in ocene varnosti je treba po izdelku urediti osnovne podatke o izdelku in proizvajalcu in podporno dokumentacijo, na primer etiketo. Uredba o upravljanju informacijske mape kozmetičnih izdelkov (化粧品產品資訊檔案管理辦法) ureja potrebno dokumentacijo v 16 kategorij, zato je treba po vrsti izdelka preveriti podlage vsake kategorije in zahteve glede podpisa in usposobljenosti.
 
-Ureditev PIF se je uporabljala stopenjsko po skupinah izdelkov. Od 1. 7. 2026 so v predmet uporabe vključeni tudi preostali kozmetični pripravki, zato se načeloma nanaša na vso kozmetiko. Izjema se omejuje na trdno ročno izdelano milo, izdelano na kraju proizvodnje, ki je oproščen vpisa obrata. Izdelek ni izvzet le zato, ker je ročen ali ker uporablja ime mila; preveriti je treba oboje, trdno obliko in pogoj oprostitve kraja proizvodnje od vpisa obrata.
+Ureditev PIF se je uporabljala stopenjsko po skupinah izdelkov. Od 1. 7. 2026 spadajo pod ureditev tudi preostali kozmetični pripravki, zato se načeloma nanaša na vso kozmetiko. Izjema se omejuje na trdno ročno izdelano milo, izdelano na kraju proizvodnje, ki je oproščen vpisa obrata. Izdelek ni izvzet le zato, ker je izdelan ročno ali ker nosi ime milo; preveriti je treba oboje, trdno obliko in pogoj oprostitve kraja proizvodnje od vpisa obrata.
 
 Delo PIF, vključno z oceno varnosti, lahko podpre tretja oseba, ki ima potrebno usposobljenost in zmožnost. Tudi če se uporabi podpora sestave s strani tretje osebe ali storitev hrambe podlag, pa pravna odgovornost proizvajalca ali uvoznika kozmetike ostane. Treba je vzpostaviti sistem, ki omogoča izvornemu proizvajalcu, preizkusnemu laboratoriju, ocenjevalcu varnosti in podjetju na strani Tajvana, da si medsebojno predajajo informacije o spremembah in najnovejše podpisane podlage.
 
@@ -72,15 +72,15 @@ Delo PIF, vključno z oceno varnosti, lahko podpre tretja oseba, ki ima potrebno
 
 Po 7. členu uredbe o upravljanju informacijske mape kozmetičnih izdelkov znaša doba hrambe najmanj 5 let, šteto od dneva, ki sledi dnevu zadnje dobave izdelka na trg. Po členu 8 iste uredbe je kraj hrambe naslov označevanja proizvajalca ali uvoznika kozmetike, določen v 7. točki 1. odstavka 7. člena zakona o upravljanju higiene in varnosti kozmetike (化粧品衛生安全管理法). Določbo, ki določa dobo, in določbo, ki določa kraj, je treba voditi ločeno.
 
-Tudi če izvorni proizvajalec hrani izvirnik ali se uporablja varna elektronska hramba ali hramba v oblaku, mora imeti proizvajalec ali uvoznik dostop do popolne dokumentacije. Določiti je treba pravice dostopa, varnostne kopije, upravljanje različic, obliko datotek in odgovorno osebo, da je mogoče podlage hitro poiskati in predložiti, ko jih pristojni organ zahteva. V pogodbi je tudi pomembno urediti prejemnika predaje, način in to, ali pravica dostopa traja, da se podlage ohranijo po zakonsko dobo hrambe tudi po koncu pogodbe s prodajnim partnerjem ali ponudnikom storitev.
+Tudi če izvorni proizvajalec hrani izvirnik ali se uporablja varna elektronska hramba ali hramba v oblaku, mora imeti proizvajalec ali uvoznik dostop do popolne dokumentacije. Določiti je treba pravice dostopa, varnostne kopije, upravljanje različic, obliko datotek in odgovorno osebo, da je mogoče podlage hitro poiskati in predložiti, ko jih pristojni organ zahteva. V pogodbi je tudi pomembno urediti, katere podlage se predajo, kako poteka predaja in ali pravica dostopa ostane, da se podlage ohranijo po zakonsko dobo hrambe tudi po koncu pogodbe s prodajnim partnerjem ali ponudnikom storitev.
 
 ### Pregled, poprava in upravni ukrepi
 
 Kadar pristojni organ pregleduje PIF, to načeloma sporoči proizvajalcu ali uvozniku kozmetike najpozneje 7 dni pred dnem pregleda. Če pa primer spada pod zakonsko izjemo, določeno v povezanih predpisih, je pregled mogoče opraviti brez predhodnega obvestila. Ne glede na to, ali je obvestilo bilo, je treba trajno ohranjati stanje, ki omogoča poiskati in predložiti popolne aktualne podlage.
 
-Prijava neresničnih podatkov pri registraciji izdelka ali vpis neresničnih podatkov v PIF lahko pomeni predmet upravne globe (罰鍰) TWD 10.000 do TWD 1.000.000 tajvanskih dolarjev (新臺幣). Če so nasprotno podlage PIF nepopolne, pristojni organ običajno naloži popravo v določenem roku (限期改正) in upravna globa postane vprašanje šele tedaj, ko se v tem roku ne popravi. Neresničnih podatkov in nepopolnosti dokumentacije, ki jih je še mogoče dopolniti se ne sme šteti za isti izid kršitve.
+Prijava neresničnih podatkov pri registraciji izdelka ali vpis neresničnih podatkov v PIF lahko pomeni predmet upravne globe (罰鍰) TWD 10.000 do TWD 1.000.000 tajvanskih dolarjev (新臺幣). Če so nasprotno podlage PIF nepopolne, pristojni organ običajno naloži popravo v določenem roku (限期改正) in upravna globa postane vprašanje šele tedaj, ko se v tem roku ne popravi. Neresničnih podatkov in nepopolnosti dokumentacije, ki jo je še mogoče dopolniti, se ne sme šteti za isto posledico.
 
-Umik s trga ali uničenje (銷毀) ni ukrep, ki bi samodejno sledil vsaki nepopolnosti dokumentacije PIF. Varnost izdelka, vsebino kršitve, stanje poprave in zakonske pogoje, ki se nanašajo na vsak ukrep, je treba presoditi ločeno. Ukrepe, ko je potrjena varnostna težava, in zahtevo po dopolnitvi listin je treba presoditi posebej, postopek pa se ravna po obvestilu pristojnega organa in uporabljeni določbi.
+Umik s trga ali uničenje (銷毀) ni ukrep, ki bi samodejno sledil vsaki nepopolnosti dokumentacije PIF. Varnost izdelka, vsebino kršitve, stanje poprave in zakonske pogoje, ki se nanašajo na vsak ukrep, je treba presoditi ločeno. Ukrepe ob potrjeni varnostni težavi in zahtevo po dopolnitvi listin je treba presoditi posebej, postopek pa se ravna po obvestilu pristojnega organa in uporabljeni določbi.
 
 ## 3. Regulacija označevanja, promocije in oglaševanja
 
@@ -88,7 +88,7 @@ Oglaševanje se presoja ne le po stavku, temveč po celotnem izrazu, vključno z
 
 ### Presoja poteka po celotnem izrazu, ne po vsaki besedi
 
-Ali sta označevanje, promocija (宣傳) ali oglaševanje neresnična ali pretirana, ali ali zatrjujeta zdravstveni učinek (醫療效能), se ne presoja le po eni določeni besedi. Skupaj se presojajo ime blaga, stavek, podoba, simbol, zvok, predhodni in naslednji kontekst in celoten vtis, ki ga potrošnik prejme. Vtis, ki ga ustvari osrednji oglaševalski izraz, se samodejno ne razblini le z omejitvijo v drobnem tisku, zato je treba pregledati tako posamezne formulacije kakor končni izdelek.
+Ali sta označevanje, promocija (宣傳) ali oglaševanje neresnična ali pretirana, ali ali zatrjujeta zdravstveni učinek (醫療效能), se ne presoja le po eni določeni besedi. Skupaj se presojajo ime blaga, stavek, podoba, simbol, zvok, predhodni in naslednji kontekst in celoten vtis, ki ga potrošnik prejme. Vtis, ki ga ustvari osrednji oglaševalski izraz, se samodejno ne razblini le z omejitvijo v drobnem tisku, zato je treba pregledati tako posamezne formulacije kakor končni oglas.
 
 Na primer zatrjevanje, da kozmetika zdravi akne, ima protivnetni učinek ali baktericidno delovanje, lahko pomeni zatrjevanje zdravstvenega učinka. Skupaj je treba preveriti tudi način povezave imena bolezni z izdelkom, posnetke pred uporabo in po njej, upodobitev, ki evokira zdravstvenega delavca, in kontekst, ki razlago sestavine povezuje z zdravstvenim učinkom izdelka.
 
@@ -98,7 +98,7 @@ Upravna globa za neresnično ali pretirano oglaševanje (虛偽誇大廣告) zna
 
 Objave vplivnežev, avtorjev ocen ali prodajnih partnerjev so lahko po vsebini in poslovnem kontekstu presojene kot oglaševanje po vsebini. Izplačilo nasprotne dajatve, dajanje izdelka, prodajna povezava, napotek znamke k objavi in ponavljajoče sodelovanje so dejavniki, ki se pri tej presoji upoštevajo. Nasprotno pa vsaka osebna objava samodejno ne postane oglaševanje znamke, zato je treba preveriti razmerje med tistim, ki objavlja, in znamko, konkretno vsebino in stopnjo udeležbe znamke.
 
-V pogodbi o sodelovanju in v operativnih napotkih je mogoče določiti obseg dovoljenih izrazov in podporno dokumentacijo, pregled pred objavo ter postopek spremembe ter izbrisa kršilnih izrazov. V obseg upravljanja je smiselno vključiti tudi izraze, dodane v komentarjih, ustno razlago pri neposrednem prenosu ali kratkih videih in neskladje med prodajno stranjo in etiket. Pregledani osnutek, zgodovino odobritve, prošnje za spremembo in končno objavo je treba hraniti, da bo pozneje mogoče preveriti dejanske okoliščine.
+V pogodbi o sodelovanju in v operativnih napotkih je mogoče določiti obseg dovoljenih izrazov in podporno dokumentacijo, pregled pred objavo ter postopek spremembe ter izbrisa kršilnih izrazov. V obseg upravljanja je smiselno vključiti tudi izraze, dodane v komentarjih, ustno razlago pri neposrednem prenosu ali kratkih videih in neskladje med prodajno stranjo in etiketami. Pregledani osnutek, zgodovino odobritve, prošnje za spremembo in končno objavo je treba hraniti, da bo pozneje mogoče preveriti dejanske okoliščine.
 
 ### Zaporedje preverjanja priprave prodaje
 
@@ -121,8 +121,8 @@ Osnovno strukturo družbe in podružnice si lahko ogledate v [Osnove ustanavljan
 - [TFDA — obvestilo o obsegu predmeta registracije kozmetičnih izdelkov](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30612)
 - [TFDA — obvestilo o stopenjski uporabi PIF](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614)
 - [TFDA — napotki za sestavo PIF](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384)
-- [TFDA — posebno območje registracije kozmetičnih izdelkov](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
-- [TFDA — posebno območje informacijske mape kozmetičnih izdelkov](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
+- [TFDA — razdelek za registracijo kozmetičnih izdelkov](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
+- [TFDA — razdelek informacijske mape kozmetičnih izdelkov](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
 - [Merila za presojo označevanja, promocije in oglaševanja kozmetike (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Uradna priloga meril za presojo oglaševanja kozmetike](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministrstvo za zdravje in socialno varstvo (衛生福利部) — obvestilo o regulaciji oglaševanja kozmetike](https://www.mohw.gov.tw/cp-4256-48110-1.html)

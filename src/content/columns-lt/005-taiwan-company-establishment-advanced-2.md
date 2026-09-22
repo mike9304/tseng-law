@@ -25,15 +25,15 @@ Toliau pateikti klausimai ir atsakymai skirti padėti asmenims, kurie svarsto į
 
 ​
 
-**1. Į ką atkreipti dėmesį pervedant kapitalą (資本額) iš Korėjos į Taivano bendrovės parengiamąją sąskaitą (公司籌備處帳戶)? (šis punktas susijęs su Korėjos režimu ir Korėjos bankų praktika; kitose valstybėse kapitalo išvežimo ir užsienio valiutos kontrolės taisykles reikia tikrinti atskirai)**
+**1. Į ką atkreipti dėmesį pervedant kapitalą (資本額) iš užsienio į Taivano bendrovės parengiamąją sąskaitą (公司籌備處帳戶)? (Korėjos bankų pavyzdys; kitose valstybėse kapitalo išvežimo ir užsienio valiutos kontrolės taisykles reikia tikrinti atskirai)**
 
-Paprastai Korėjos bankai reikalauja, kad investuotojas **pats** atvyktų į banką Korėjoje ir pervestų lėšas iš savo vardu vedamos sąskaitos.
+Korėjos bankų pavyzdyje bankai paprastai reikalauja, kad investuotojas **pats** atvyktų į banką savo valstybėje ir pervestų lėšas iš savo vardu vedamos sąskaitos.
 
-Pervedimas internetine bankininkyste arba per giminaitį Korėjoje negalimas.
+Tame Korėjos pavyzdyje pervedimas internetine bankininkyste arba per giminaitį negalimas.
 
 Be to, pagal Korėjos užsienio valiutos kontrolės teisės aktus asmuo, turintis Korėjos pilietybę, kuris steigia užsienio juridinį asmenį arba įgyja dalių, privalo pateikti „pranešimą apie tiesioginę užsienio investiciją“. Pranešimas turi būti įregistruotas kapitalo pervedimo į Taivano juridinį asmenį (台灣法人) metu; nepranešus gali kilti sankcijos už užsienio valiutos kontrolės taisyklių pažeidimą.
 
-Prieš pervedant kapitalą (資本金匯款) pasikonsultuokite su savo pagrindiniu banku Korėjoje.
+Prieš pervedant kapitalą (資本金匯款) pasikonsultuokite su savo banku investuotojo valstybėje; toliau pateiktas Korėjos bankų pavyzdys.
 
 **​**
 

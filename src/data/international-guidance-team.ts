@@ -1248,7 +1248,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'KOMANDA',
     title: 'Tarptautinė Hovering komanda',
     description:
-      'Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profiliai.',
+      'Hovering advokačių ir advokatų, Korėjos operacijų vadovo ir susijusios apskaitos bei audito profiliai.',
     representativeTitle: 'Vadovaujančioji advokatė',
     teamTitle: 'Advokatai ir bendradarbiai',
     partnerTitle: 'Susijusi apskaita',
@@ -1267,9 +1267,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Vadovaujančioji advokatė Taivane (Managing Attorney)',
       'chang-rongxuan': 'Advokatas Taivane (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Korėjos operacijų vadovybė (Korea Operations Manager)',
-      'huang-shengping': 'Partneris buhalteris (Partner CPA)',
+      'chang-fangyu': 'Teisininko padėjėjas',
+      'son-jungmin': 'Korėjos operacijų vadovas (Korea Operations Manager)',
+      'huang-shengping': 'Partneris, atestuotas buhalteris (Partner CPA)',
     },
   },
   lv: {
@@ -4346,49 +4346,49 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kontora veda įmonių ir privačių asmenų bylas Taivane anglų, japonų, korėjiečių ir kinų kalbomis.',
-        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje ir pasiekė pirmosios instancijos sprendimą dėl TWD 1.57M.',
+        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje ir pasiekė pirmosios instancijos sprendimą priteisti TWD 1.57M.',
       ],
       education: [
         'Magistrė (M.S.), Institute of Finance, National Taiwan University',
-        'Bakalaurė (B.A.) dviguboje teisės ir finansų programoje, National Chengchi University',
+        'Teisės ir finansų dvigubos specialybės bakalaurė (B.A.), National Chengchi University',
         'Mainų studijos Kobe University ir Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Teisinės pagalbos fondas, Taidžongo skyrius (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Anksčiau Ministry of Education, Legal Affairs Division, daugiausia administracinėse ir civilinėse bylose.',
+        'Anksčiau dirbo Švietimo ministerijos Teisės skyriuje (Ministry of Education, Legal Affairs Division), daugiausia administracinėse ir civilinėse bylose.',
         'Patirtis universitetų bylose, pedagogų teisėse ir administraciniuose skunduose.',
       ],
       education: [
         'Teisės bakalauras (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Švietimo ministerijos Teisės skyrius (Ministry of Education, Legal Affairs Division)',
         'Advokatas, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal su ilgamete patirtimi; anksčiau vyresnysis paralegal keliose advokatų kontorose, daugiausia procesinei pagalbai, bendrovių darbotvarkei ir užsienio investicijoms.',
+        'Teisininko padėjėjas su ilgamete patirtimi; anksčiau vyresnysis teisininko padėjėjas keliose advokatų kontorose, daugiausia procesinei pagalbai, bendrovių teisės klausimams ir užsienio investicijoms.',
         'Pagalba teismo procesuose, steigiant įmones, užsienio investicijų leidimuose, licencijų prašymuose ir komunikacijoje tarp Korėjos ir Taivano.',
       ],
       education: [
         'Teisės bakalauras (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Vyresnysis teisininko padėjėjas, Boyin Law Firm',
+        'Vyresnysis teisininko padėjėjas, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Koordinuoja konsultacijų terminus ir komunikaciją klientams iš Korėjos.',
-        'Palaiko tarpregioninius mainus dokumentų ir darbo eigos sistemomis, remdamasis informatika.',
+        'Palaiko dokumentų ir darbo eigų mainus tarp padalinių, remdamasis informatika.',
       ],
       education: [
         'Bakalauras (B.S.) informatikoje, National Cheng Kung University',

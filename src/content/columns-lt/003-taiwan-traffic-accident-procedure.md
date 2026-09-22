@@ -21,7 +21,7 @@ Jei Taivane įvyksta eismo įvykis (交通事故), pirmiausia reikia užtikrinti
 
 Sužeidimų ar mirties įvykyje vairuotojas privalo nedelsdamas imtis gelbėjimo priemonių (救護措施), pranešti policijai ir išsaugoti transporto priemonę bei vietos įrodymus (保全現場). Neoficialus kitos šalies sutikimas ar vien įrašas neleidžia laikyti, kad vietą galima palikti nebaigus reikalaujamų veiksmų.
 
-Tačiau sužeidimų įvykyje, jei visos šalys sutinka, transporto priemonę galima perkelti į vietą, kuri netrukdo eismui, pažymėjus priemonės padėtį ir vietos pėdsakus. Tai nereiškia, kad šie žymėjimai pakeičia reikalaujamus veiksmus, tokius kaip gelbėjimas ir pranešimas.
+Tačiau sužeidimų įvykyje, jei visos šalys sutinka, transporto priemonę galima perkelti į vietą, kuri netrukdo eismui, pažymėjus transporto priemonės padėtį ir pėdsakus vietoje. Tai nereiškia, kad šie žymėjimai pakeičia reikalaujamus veiksmus, tokius kaip gelbėjimas ir pranešimas.
 
 Jei yra tik turtinė žala ir priemonę galima perkelti, taisyklė tokia: pažymėti priemonės padėtį ir vietos pėdsakus, užfiksuoti juos nuotraukomis arba vaizdo įrašu ir greitai perkelti priemonę į saugią vietą. Vietos palikimas be reikalaujamų veiksmų gali sukelti administracinę sankciją (行政處罰).
 
@@ -49,7 +49,7 @@ Pasirinkimas skiriasi pagal senaties nutraukimą (時效中斷), atsakovų ratą
 
 Baudžiamoji atsakomybė gali būti pripažinta tik tada, kai pripažįstamas kiekvieno atsargumo pareigos pažeidimas ir priežastinis ryšys tarp to pažeidimo ir kitos šalies sužeidimo. Vien tai, kad kaltė buvo abiejose pusėse, automatiškai nesukuria atsakomybės už neatsargų sužalojimą.
 
-Civilinėje plotmėje pagal Civilinio kodekso 217 straipsnį, jei nukentėjusysis turi kaltę, prisidėjusią prie žalos atsiradimo ar padidėjimo (與有過失), teismas gali sumažinti arba atleisti nuo žalos atlyginimo. Pavyzdžiui, jei naujuoju Taivano doleriu (新臺幣, TWD) pripažinta žala yra TWD 1.000.000, o nukentėjusiojo kaltė įvertinta 50 %, suma prieš kitas korekcijas gali sumažėti iki TWD 500.000.
+Civilinėje plotmėje pagal Civilinio kodekso 217 straipsnį, jei nukentėjusysis turi kaltę, prisidėjusią prie žalos atsiradimo ar padidėjimo (與有過失), teismas gali sumažinti arba atleisti nuo žalos atlyginimo. Pavyzdžiui, jei naujuoju Taivano doleriu (新臺幣, TWD) pripažinta žala yra 1.000.000 TWD, o nukentėjusiojo kaltė įvertinta 50 %, suma prieš kitas korekcijas gali sumažėti iki 500.000 TWD.
 
 Ekspertizė (鑑定) arba preliminaraus analizės lentelė gali būti svarbūs dokumentai, tačiau teismo mechaniškai nesaisto. Teismas vertina visumą įrodymų, įskaitant parodymus, vaizdus ir transporto priemonių būklę.
 
@@ -89,7 +89,7 @@ Pagal taikytinas nuostatas teisę turinti šalis gali prašyti transporto priemo
 
 Nesutinkant su ekspertizės nuomone galima prašyti peržiūros, tačiau ją galima teikti tik vieną kartą. Ekspertizės ir peržiūros nuomonė yra įrodymas arba nuorodos dokumentas, o teismas savarankiškai vertina visą bylą, įskaitant parodymus, vaizdus ir vietos protokolus.
 
-## Q7. Kokią žalą galima reikalauti po įvykio?
+## Q7. Kokios žalos galima reikalauti po įvykio?
 
 Reikalavimas pagal Civilinio kodekso 184 straipsnį numato neteisėtą teisės pažeidimą, priežastinį ryšį su įvykiu ir žalos įrodymą. Vien tai, kad įvykis įvyko, nereiškia, kad visos toliau nurodytos eilutės pripažįstamos. Civilinio kodekso 216 straipsnis yra tikrosios žalos ir prarastos naudos (所失利益) apimties nustatymo kriterijus.
 
@@ -131,7 +131,7 @@ Kvitai, tarifų įrašai, maršrutų įrašai ir klinikiniai dokumentai yra gali
 - [Civilinis kodeksas, 216 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Baudžiamojo proceso kodeksas, 504 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
 - [Teismų juano (司法院) gairės dėl reikalavimo išplėtimo po perdavimo](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
-- [Dzjajaus apygardos teismo (嘉義) nuosprendis dėl šeimos slaugos išlaidų](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
+- [Dziayi apygardos teismo (嘉義) nuosprendis dėl šeimos slaugos išlaidų](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Tainano apygardos teismo (臺南) nuosprendis dėl kelionės išlaidų gydymui](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
@@ -175,7 +175,7 @@ Privalomojo transporto priemonių civilinės atsakomybės draudimo įstatymo (�
 
 Vienos transporto priemonės įvykyje tos priemonės vairuotojas iš esmės nėra tos priemonės privalomojo draudimo išmokos adresatas. Tačiau įvykyje, kuriame dalyvauja kelios transporto priemonės, yra atvejų, kai vairuotojas gali reikalauti išmokos iš kitos dalyvaujančios priemonės privalomojo draudiko.
 
-Išmokų standartas (強制汽車責任保險給付標準), pakeistas 2026 m. gegužės 29 d., taikomas įvykiams, įvykusiems nuo 2026 m. liepos 1 d. Protingų ir būtinų gydymo išlaidų už sužeidimą lubos yra TWD 200.000 naujojo Taivano dolerio; išmoka už negalią (失能) yra nuo TWD 80.000 iki TWD 3.000.000 pagal 15 įstatyminių laipsnių; išmoka už mirtį yra TWD 3.000.000, o bendras mirties, negalios ir gydymo išlaidų maksimumas 1 nukentėjusiajam ir 1 įvykiui yra TWD 3.200.000. Ankstesniems įvykiams gali būti taikomas ankstesnis standartas.
+Išmokų standartas (強制汽車責任保險給付標準), pakeistas 2026 m. gegužės 29 d., taikomas įvykiams, įvykusiems nuo 2026 m. liepos 1 d. Protingų ir būtinų gydymo išlaidų už sužeidimą lubos yra 200.000 TWD naujojo Taivano dolerio; išmoka už negalią (失能) yra nuo 80.000 TWD iki 3.000.000 TWD pagal 15 įstatyminių laipsnių; išmoka už mirtį yra 3.000.000 TWD, o bendras mirties, negalios ir gydymo išlaidų maksimumas 1 nukentėjusiajam ir 1 įvykiui yra 3.200.000 TWD. Ankstesniems įvykiams gali būti taikomas ankstesnis standartas.
 
 Trečiųjų šalių civilinės atsakomybės draudimas (第三人責任險), vairuotojo nelaimingų atsitikimų draudimas (駕駛人傷害險) ir savo transporto priemonės žalos draudimas (車體損失險) yra fakultatyvūs sutartiniai produktai. Tikroji apsauga skiriasi pagal apdraustąjį, lubas, išskaitą (自負額), išimtis, kaltę ir kitas poliso sąlygas, todėl polisą ir sąlygas reikia tikrinti byloje po bylos.
 
@@ -184,11 +184,11 @@ Trečiųjų šalių civilinės atsakomybės draudimas (第三人責任險), vair
 - [Civilinis kodeksas, 193 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Civilinis kodeksas, 216 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Civilinis kodeksas, 217 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Taivano apeliacinio teismo nuosprendis, 109 metai, byla 上易字 Nr. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Taivano apeliacinio teismo nuosprendis, 109 metai, byla 上易字 Nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Taivano apeliacinio teismo nuosprendis, Kinijos Respublikos 109 metai, byla 上易字 Nr. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Taivano apeliacinio teismo nuosprendis, Kinijos Respublikos 109 metai, byla 上易字 Nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Teismų juano Hofmano dabartinės vertės skaičiuoklė](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civilinis kodeksas, 195 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taoyuano apygardos teismo nuosprendis, 112 metai, byla 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taojuano apygardos teismo nuosprendis, Kinijos Respublikos 112 metai, byla 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civilinis kodeksas, 188 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Taivano Baudžiamasis kodeksas, 284 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Privalomojo transporto priemonių civilinės atsakomybės draudimo įstatymas](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -199,7 +199,7 @@ Q16. Ar po įvykio galima viską palikti draudikui?
 
 ​
 
-Iš savo patirties žinau, kad draudikai dažnai nepakankamai rūpinasi eismo įvykio šalių jausmais.
+Iš kontoros praktikos matyti, kad draudikai dažnai nepakankamai atsižvelgia į eismo įvykio šalių padėtį.
 
 ​
 
@@ -207,7 +207,7 @@ Jie gali palikti nuošalyje ir tai, kas kitai šaliai esminga, — atsiprašymą
 
 ​
 
-Draudikui papildomų TWD 500.000 arba TWD 1.000.000 išmokėjimas atskiroje byloje iš esmės neveikia viso draudiko pelno; eismo įvykio šaliai tokia suma vis dėlto gali lemti, ar bus, ar nebus teistumo (前科) įrašas.
+Draudikui papildomų 500.000 TWD arba 1.000.000 TWD išmokėjimas atskiroje byloje iš esmės neveikia viso draudiko pelno; eismo įvykio šaliai tokia suma vis dėlto gali lemti, ar bus, ar nebus teistumo (前科) įrašas.
 
 ​
 
@@ -219,7 +219,7 @@ Be to, tarp draudiko ir įvykio šalies gali kilti interesų konfliktas; draudik
 
 ​
 
-Todėl nerekomenduoju viso ginčo palikti draudikui.
+Todėl viso ginčo palikti vien draudikui nerekomenduojama.
 
 ​
 
@@ -239,7 +239,7 @@ Kai kuriuose nuosprendžiuose už neatsargų sužalojimą skirta apie 3 mėnesi�
 
 ​
 
-Jei bausmė pakeičiama baudžiamąja bauda (易科罰金), Baudžiamojo kodekso 41 straipsnio 1 dalis nustato perskaičiavimą TWD 1.000, TWD 2.000 arba TWD 3.000 už 1 dieną; pagal tarifą TWD 1.000 už dieną 3 mėnesių bausmė atitinka 3 × 30 × TWD 1.000 = TWD 90.000.
+Jei bausmė pakeičiama baudžiamąja bauda (易科罰金), Baudžiamojo kodekso 41 straipsnio 1 dalis nustato perskaičiavimą 1.000 TWD, 2.000 TWD arba 3.000 TWD už 1 dieną; pagal tarifą 1.000 TWD už dieną 3 mėnesių bausmė atitinka 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 

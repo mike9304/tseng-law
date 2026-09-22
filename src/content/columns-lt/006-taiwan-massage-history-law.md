@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Ar prisimenate ankstyvojo Taivano tradicinių kirpyklų (理髮廳) laikus?
+Ar žinomos ankstyvojo Taivano tradicinės kirpyklos (理髮廳)?
 
 Tose kirpyklose plaukų plovimo būdas buvo labai savitas.
 
@@ -33,7 +33,7 @@ O tokios taivanietiško stiliaus kirpyklos daugeliui Taivano žmonių išliko sa
 
 ​
 
-Šiaip ar taip, kalbant apie masažą (按摩),
+Kalbant apie masažą (按摩),
 
 Taivane yra ir daug masažo gatvių.
 
@@ -49,13 +49,13 @@ Kai Taivanas 1980 m. paskelbė ir įgyvendino neįgaliųjų gerovės įstatymą 
 
 iš tikrųjų tik asmenys su regos negalia (視障者) galėjo verstis masažuotojo veikla (按摩業).
 
-Šios veiklos vykdymas asmens be regos negalia (非視障者) buvo neteisėtas.
+Šios veiklos vykdymas asmens be regos negalios (非視障者) buvo neteisėtas.
 
 Šis įstatymas galiojo iki 2003 m.; tuomet ponas Lin, kuris vedė kirpyklą,
 
-įdarbino darbuotojus be regos negalia plaukų plovimo ir masažo paslaugoms, ir policija tai nustatė.
+įdarbino darbuotojus be regos negalios plaukų plovimo ir masažo paslaugoms, ir policija tai nustatė.
 
-Pagal tuometinę teisę ponui Lin ir šiems darbuotojams buvo skirta administracinė bauda (罰鍰), atitinkamai TWD 40.000, TWD 10.000 ir TWD 20.000 naujojo Taivano dolerio (新臺幣).
+Pagal tuometinę teisę ponui Lin ir šiems darbuotojams buvo skirta administracinė bauda (罰鍰) — 40.000 TWD, 10.000 TWD ir 20.000 TWD naujojo Taivano dolerio (新臺幣) atitinkamai.
 
 Ponas Lin šią sankciją laikė labai neteisinga ir paprašė konstitucinio išaiškinimo.
 
@@ -73,11 +73,11 @@ priėmė įstatymą, kuris saugojo asmenų su regos negalia darbą ir teisę į 
 
 Tačiau laikui bėgant ir plečiantis vartojimo rinkai
 
-atsirado nuomonė, kad vien asmenų su regos negalia teisių apsauga pernelyg riboja asmenų be regos negalia teisę į darbą.
+atsirado nuomonė, kad vien asmenų su regos negalia teisių apsauga pernelyg riboja asmenų be regos negalios teisę į darbą.
 
 Diskusijoje apie asmenų su regos negalia ir be jos profesines teises atsirado daug priešingų nuomonių.
 
-Pavyzdžiui, klausta, ar rašytinė nuostata, kuri leido verstis masažu tik asmenims su regos negalia, nėra diskriminacija asmenų be regos negalia atžvilgiu,
+Pavyzdžiui, klausta, ar rašytinė nuostata, kuri leido verstis masažu tik asmenims su regos negalia, nėra diskriminacija asmenų be regos negalios atžvilgiu,
 
 ir kvestionuota, ar ši nuostata iš tikrųjų padėjo apsaugoti asmenų su regos negalia darbą ir pragyvenimą.
 
@@ -85,11 +85,11 @@ Galiausiai Konstitucinio Teismo teisėjai (大法官) pripažino prieštaraujan�
 
 ​
 
-Panašiai ir Korėjoje, kur daugelis asmenų su regos negalia pragyvena iš masažo,
+Panašiai kai kuriose valstybėse, tarp jų Korėjoje, kur daugelis asmenų su regos negalia pragyvena iš masažo,
 
 paprastai tik asmenys su regos negalia, įgiję kvalifikacijos pažymėjimą, gali verstis masažuotojo veikla.
 
-Tiesa, kad Korėjos vyriausybė ėmė išduoti masažo pažymėjimus ir asmenims be regos negalia,
+Tiesa, kad Korėjos vyriausybė ėmė išduoti masažo pažymėjimus ir asmenims be regos negalios,
 
 o daugelis asmenų su regos negalia, bijodami prarasti pragyvenimo šaltinį, surengė intensyvius protestus.
 
@@ -99,7 +99,7 @@ o jei kas nors be šios kvalifikacijos ima iš kito asmens atlygį už masažą,
 
 pagal Korėjos sveikatos paslaugų įstatymą (醫療法) gali būti skiriama laisvės atėmimo bausmė iki 3 metų.
 
-Jei masažo veiklą vykdo asmuo be regos negalia, gali būti skiriama laisvės atėmimo bausmė iki 5 metų.
+Jei masažo veiklą vykdo asmuo be regos negalios, gali būti skiriama laisvės atėmimo bausmė iki 5 metų.
 
 ​
 

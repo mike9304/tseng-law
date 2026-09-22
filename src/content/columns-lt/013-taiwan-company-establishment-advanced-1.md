@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Pagrindinis vaizdas](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Pastaruoju metu daugelis asmenų sėkmingai įsteigė įmonę (公司) Taivane ir gavo darbo vizą bei užsieniečio leidimo gyventi pažymėjimą (外僑居留證),
+Pastaruoju metu daugelis asmenų įsteigė įmonę (公司) Taivane ir gavo darbo vizą bei užsieniečio leidimo gyventi pažymėjimą (外僑居留證),
 
-o steigimo metu dažnai kylančius klausimus pateikiame toliau.
+Toliau pateikiame klausimus, kurie dažnai kyla steigiant įmonę.
 
 Asmenys, kurie skaitė [**Įmonės steigimas Taivane — pagrindai**](/lt/columns/taiwan-company-establishment-basics), gali toliau peržiūrėti ir šią išsamesnę dalį.
 
@@ -31,7 +31,7 @@ Investicijų peržiūros departamentas turi patikrinti, ar tas kapitalas (資本
 
 ir ar užsienio subjektai neįveda lėšų kitu pretekstu.
 
-Rengiant investicijų planą tikslaus įmonės adreso nurodyti nereikia; pakanka nurodyti sritį (pavyzdys: Taijaus miestas). ​
+Rengiant investicijų planą tikslaus įmonės adreso nurodyti nereikia; pakanka nurodyti vietovę (pavyzdys: Taipėjaus miestas). ​
 
 Tačiau vėliau, banke atidarant bendrovės parengiamąją sąskaitą (公司籌備處帳戶), daugelis bankų peržiūri nuomos sutartį (租賃契約) ir vietoje tikrina įmonės adresą.
 
@@ -49,7 +49,7 @@ Kadangi investicijų plano peržiūra taip pat užtrunka,
 
 investicijų planą ir įmonės registracijos adreso paiešką reikia vykdyti kartu.
 
-Pagal Užsieniečių investicijų statuto (外國人投資條例) 9 straipsnį patvirtintas įnašas turi atvykti visa suma kompetentingos institucijos nustatytu terminu (核定期限); terminą reikia patvirtinti kiekvieno reikalo patvirtinimo akte (praktikoje dažnai nustatomas apie 1 metus).
+Pagal Užsieniečių investicijų įstatymo (外國人投資條例) 9 straipsnį patvirtintas įnašas turi būti įmokėtas visa suma kompetentingos institucijos nustatytu terminu (核定期限); terminą reikia patvirtinti kiekvieno reikalo patvirtinimo akte (praktikoje dažnai nustatomas apie 1 metus).
 
 Šiuo terminu, radus įmonės adresą ir sudarius nuomos sutartį,
 
@@ -99,7 +99,7 @@ Užsieniečiui prekybos patalpas išsinuomoti nėra lengva, o užstatas (押金)
 
 nuomotojai todėl vengia nuomoti užsieniečiams.
 
-Todėl veiklos vietą tikslinga ieškoti anksti.
+Todėl veiklos vietos tikslinga ieškoti anksti.
 
 Jei derybos su nuomotoju vyksta nesėkmingai,
 
@@ -117,7 +117,7 @@ Kaip jau nurodyta, bankas peržiūri nuomos sutartį ir vietoje tikrina įmonės
 
 Be to, galutinės įmonės registracijos metu miesto savivaldybė (市政府) taip pat reikalauja, kad registruotas adresas būtų zonoje, kurioje restoranų veikla leidžiama;
 
-jei tai komercinės biuro patalpos, įmonės registracija (公司登記) tuomet negalima.
+jei tai komercinės biuro patalpos, įmonės registracija (公司登記) tuomet gali būti negalima.
 
 Pvz., jei veiklos sritys galimos komercinėse biuro patalpose, pavyzdžiui, reklama ar didmeninė prekyba, įmonę galima steigti komercinėse biuro patalpose. Prieš sudarant nuomos sutartį
 

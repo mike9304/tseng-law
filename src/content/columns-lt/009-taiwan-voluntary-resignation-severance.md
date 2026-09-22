@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Pagrindinis vaizdas](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Kaip jau anksčiau rašiau, aš, **Advokatė Wei Tseng (曾雋崴)**, Taivane darbuotojui išeitinę išmoką (資遣費) gauti nėra lengva.
+Kaip jau rašyta, Taivane darbuotojui išeitinę išmoką (資遣費) gauti paprastai nėra lengva.
 
 ​
 
@@ -73,11 +73,11 @@ Darbuotojas todėl turi gerai sekti terminą.
 
 Kitaip tariant,
 
-Taivano teisė, nesvarbu, ar kaltė tenka bendrovei,
+Taivano teisė, pagal tai, ar kaltė tenka darbdaviui,
 
 ar darbuotojui,
 
-kiekvienai šaliai suteikia teisę neišmokėti išeitinės išmokos arba jos reikalauti.
+atitinkamai šaliai suteikia teisę išeitinės išmokos nemokėti arba jos reikalauti.
 
 Kartais, kai kaltė tenka abiem darbo santykio šalims,
 

@@ -37,13 +37,13 @@ A következő különös helyzetekben, még ha a munkavállaló saját elhatáro
 
 2. Ha a munkáltató, a munkáltató családtagja vagy a munkáltató képviselője (代理人) erőszakot alkalmaz, vagy súlyos sértést (重大侮辱) követ el a munkavállalóval szemben
 
-3. Ha a szerződésben megállapított munka árthat a munkavállaló egészségének, a munkáltatótól javítást kértek, és nincs hatás
+3. Ha a szerződésben megállapított munka árthat a munkavállaló egészségének, és a munkáltató a kérés után sem orvosolja a helyzetet
 
 4. Ha a munkáltató, képviselője vagy más munkavállaló törvényes fertőző betegségben (法定傳染病) szenved, az együtt dolgozó munkavállalók fertőződésének kockázata áll fenn, és ez súlyos veszélyt jelent a munkavállaló egészségére
 
 5. Ha a munkáltató nem fizeti a munkaszerződés szerinti díjazást (工作報酬), vagy nem biztosít elegendő munkát annak a munkavállalónak, akinek a díjazása darabbérben számolódik (按件計酬)
 
-6. Ha a munkáltató megsérti a munkaszerződést vagy a munkaügyi jogot, úgy hogy a munkavállaló jogainak és érdekeinek sérelme kockázata áll fenn
+6. Ha a munkáltató megsérti a munkaszerződést vagy a munkaügyi jogot, úgy hogy a munkavállaló jogai és érdekei sérelmének kockázata áll fenn
 
 ​
 
@@ -77,7 +77,7 @@ Tajvan joga aszerint ad jogot, hogy a hiba a munkáltató oldalán van-e,
 
 vagy a munkavállaló oldalán:
 
-az egyik fél a végkielégítést nem fizeti, a másik követelheti.
+ha a munkavállaló a hibás, a munkáltató megtagadhatja a végkielégítést; ha a munkáltató a hibás, a munkavállaló követelheti.
 
 Néha, ha a munkaviszony mindkét oldalán van hiba,
 

@@ -757,7 +757,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Ez az oldal a Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgáló profilját mutatja. Wei Tseng ügyvédnő (曾雋崴) Tajvanon ügyvédi tevékenységre jogosult, és az iroda vezető ügyvédnője; koreai, japán és további nemzetközi ügyfelekkel dolgozik. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+        'Ez az oldal a Hovering ügyvédeinek, a működési vezetőnek és a társult könyvvizsgálónak a profilját mutatja. Wei Tseng ügyvédnő (曾雋崴) Tajvanon ügyvédi tevékenységre jogosult, és az iroda vezető ügyvédnője; koreai, japán és további nemzetközi ügyfelekkel dolgozik. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
       sources: ['/hu/about', '/hu/contact'],
     },
     pricing: {

@@ -69,7 +69,7 @@ Egyes bankok további követelményeket támaszthatnak, például a számla hasz
 
 **5. Foglalkoztathat-e a társaság külföldi állampolgárságú munkavállalókat?**
 
-A. Első munkavállaló: a kérelmet a tengerentúli kínaiak vagy külföldiek szokásos beruházási vállalkozásában végzett vezetői munkaként (一般僑外投資事業主管工作) nyújtják be. Az alábbi B pont „szakmai vagy műszaki jellegű munkájának” kritériuma nem alkalmazandó, de alkalmazandók a címzett feltételei, ideértve annak a vezetőnek (經理人) a feltételét, akinek társaságában a tengerentúli kínaiak vagy külföldiek hozzájárulása meghaladja az 1/3-ot, valamint a munkáltató tőkére és árbevételre vonatkozó eredményfeltételeit (a vizsgálati szabványok 38. és 39. cikke).
+A. Az első munkavállaló: a kérelem a tengerentúli kínaiak vagy külföldiek szokásos beruházási vállalkozásának vezetői munkakörére (一般僑外投資事業主管工作) vonatkozik. Az alábbi B pont „szakmai vagy műszaki jellegű munkájának” kritériuma nem alkalmazandó, de alkalmazandók a címzett feltételei, ideértve annak a vezetőnek (經理人) a feltételét, akinek társaságában a tengerentúli kínaiak vagy külföldiek hozzájárulása meghaladja az 1/3-ot, valamint a munkáltató tőkére és árbevételre vonatkozó eredményfeltételeit (a vizsgálati szabványok 38. és 39. cikke).
 
 B. A második munkavállalótól korlátozások vannak: ha 1-nél több külföldi állampolgárt foglalkoztatnak, a munkavállaló képzettségét és gyakorlatát, a foglalkoztatáskori átlagbér szabályait, valamint a társaság tőkéjére és árbevételére vonatkozó szabályokat a „szakmai vagy műszaki munka” (專門性或技術性工作) szerint kezelik.
 

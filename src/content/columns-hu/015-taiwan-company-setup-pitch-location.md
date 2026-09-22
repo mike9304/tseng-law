@@ -53,15 +53,15 @@ Ezért erre figyelni kell.
 
 **Q. Minden ágazatnak a „telephely előzetes lekérdezése” rendszerén keresztül kell ellenőriznie, hogy a tevékenység lehetséges-e?**
 
-Minden ágazatnak ajánlott a „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerén keresztül megerősíteni, hogy a tevékenység lehetséges-e.
+Minden ágazatnak ajánlott a „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerén keresztül ellenőrizni, hogy a tevékenység lehetséges-e.
 
 A társaság bejegyzésekor azonban gyakran több ágazatot jegyeznek be egyszerre, és gyakran körülbelül 10 ágazatot kívánnak egyszerre bejegyezni.
 
 Ezért a gyakorlatban nem szükséges a társaság bejegyzésekor minden ágazatot lekérdezni.
 
-A „[Tajpej város telephely-tájékoztatási szolgálatának működési utasítása](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) és Tajpej város hatályos útmutatója a bejegyzési kérelemre vonatkozik.
+A „[Tajpej város telephely-tájékoztatási szolgálatának működési utasítása](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) és Tajpej város hatályos útmutatója szerint
 
-Társaság vagy kereskedelmi vállalkozás (ideértve a fióktelepet (分公司) és az alárendelt telephelyet (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől — ágazattól függetlenül — **csatolni kell** a telephely előzetes lekérdezésének eredményét.
+társaság vagy kereskedelmi vállalkozás (ideértve a fióktelepet (分公司) és az alárendelt telephelyet (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől — ágazattól függetlenül — **csatolni kell** a telephely előzetes lekérdezésének eredményét.
 
 Az alábbi „hivatalból vizsgált ágazatok” (主動查詢之營業項目) jegyzéke azokat az ágazatokat jelöli, amelyeket a Kereskedelmi Hivatal a bejegyzés vizsgálata során hivatalból további lekérdezéssel (隨案主動查詢) ellenőriz, ha az ágazat szerepel a kérelemben, de hiányzik a csatolt eredményből; az, hogy egy ágazat nincs ezen a jegyzéken, nem jelenti a lekérdezés alóli mentességet.
 
@@ -73,7 +73,7 @@ Ha olyan helyen nyit, ahol az éttermi tevékenység nem lehetséges, később a
 
 Más kérdésben a Kapcsolat oldalon küldhet megkeresést. A tanácsadás nem magyarul, hanem angolul, kínaiul (中文), japánul és koreaiul zajlik.
 
-A közigazgatási szervek szabályai gyakran változhatnak; a jogi személy bejegyzése előtt a legújabb rendelkezéseket kell megerősíteni.
+A közigazgatási szervek szabályai gyakran változhatnak; a jogi személy bejegyzése előtt a legújabb rendelkezéseket kell ellenőrizni.
 
 ---
 

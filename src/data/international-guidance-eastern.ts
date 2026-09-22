@@ -703,7 +703,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Amikor megkeres minket',
           paragraphs: [
-            'Az összefoglaló beérkezése után egy ügyvéd megvizsgálja a tartalmat, majd beszél a munka lehetséges terjedelméről, a még szükséges iratokról és a következő lépésekről. Adó- vagy könyvviteli kérdésekben az iroda a könyvviteli részleggel egy közös eljárásban dolgozhat.',
+            'Az összefoglaló beérkezése után egy ügyvéd megvizsgálja a tartalmat, majd beszél a munka lehetséges terjedelméről, a még szükséges iratokról és a következő lépésekről. Adó- vagy könyvviteli kérdésekben az iroda a könyvviteli részleggel együtt dolgozhat.',
             'Minden ügy kimenetele a tényektől és a rendelkezésre álló iratoktól függ; eredményt nem ígérünk. Ha helyzetére kötelező erejű választ kíván, az iratokat a négy tanácsadási nyelv valamelyikén kell megtárgyalni egy ügyvéddel.',
           ],
         },
@@ -712,7 +712,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ÜGYVÉDEK',
       title: 'A Hovering nemzetközi csapata',
-      description: 'A Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgáló bemutatása.',
+      description: 'A Hovering ügyvédeinek, a működési vezetőnek és a társult könyvvizsgálónak a bemutatása.',
       intro: '',
       sections: [],
     },
@@ -902,7 +902,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Értesítés és iktatószám',
           paragraphs: [
-            'Ha a megkeresés sikeresen elment, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.',
+            'Ha a megkeresés sikeresen elküldésre kerül, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.',
             'Az iktatószám a megkeresés visszakeresésére szolgál a nyilvántartásunkban. A mentés után jelenik meg; új kapcsolatfelvételkor megadhatja.',
           ],
         },
@@ -916,7 +916,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tárolási hely és szolgáltatók',
           paragraphs: [
-            'Ezt a webhelyet a Vercel szolgáltatja, és a küldeménye e szolgáltatás nem nyilvános objektumtárolójában marad. Az e-maileket az iroda által használt levelezőszolgáltatáson keresztül küldjük.',
+            'Ezt a webhelyet a Vercel üzemelteti, és a küldeménye e szolgáltatás nem nyilvános tárhelyén marad. Az e-maileket az iroda által használt levelezőszolgáltatáson keresztül küldjük.',
             'Egyes szolgáltatók kiszolgálói Tajvanon kívül is lehetnek, így adatai ott is tárolhatók és kezelhetők. Ha a tárolás célja teljesült, az adatokat késedelem nélkül töröljük; azok az adatok, amelyeket az alkalmazandó szabályok szerint meg kell őrizni, erre az időre megmaradnak. A személyes adatokkal kapcsolatos kéréseket a wei@hoveringlaw.com.tw címen fogadjuk.',
           ],
         },
@@ -972,7 +972,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Négy lista nyelvenként',
           paragraphs: [
             'Ez a rész négy hivatkozást tartalmaz: a koreai, a kínai, az angol és a japán nyelvű cikkek listáját. Mindegyik hivatkozás megjelöli a lista nyelvét, így előre tudja, milyen nyelven nyílik meg a tartalom.',
-            'Ez a négy lista a cikkek eredeti nyelve szerinti lista, nem fordítási lista. A magyarul elérhető cikkek külön, ezen az oldalon találhatók.',
+            'Ez a négy lista a cikkek eredeti nyelve szerinti lista, nem a fordításoké. A magyarul elérhető cikkek külön, ezen az oldalon találhatók.',
           ],
         },
         {

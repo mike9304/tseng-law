@@ -1,0 +1,98 @@
+WO-F-fil r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-fil-r3
+date: 2026-09-23
+
+## Rows applied
+
+fil-a (guidance + columns 001–009): 13 of 17
+- #2 001 section heading and the two subsections under it: Work Permit / Karapatang Manirahan → Permiso sa Trabaho, Paninirahan. Title and H1 “Work Permit” aligned to Permiso sa Trabaho.
+- #3 009 “magkabilang panig” (both parties, each holding both rights) → either party, according to who is at fault.
+- #4 guidance fullProfileLabel: Buong talaan → Buong profile (sa Ingles).
+- #5 009 “mas matatag” → mas napoprotektahan ang karapatan; the non-guarantee clause stays.
+- #6 001 pre-check → paunang pagsusuri, rest of the sentence kept.
+- #7 001 FAQ question residence certificate → sertipiko ng paninirahan. Same English headword in the section body (4 “residence certificate (ARC)”) → sertipiko ng paninirahan ng dayuhan (ARC).
+- #8 005 “specialized o technical work” → espesyalisado o teknikal na trabaho, gloss kept. The category-A mention of the same term now carries (專門性或技術性工作).
+- #9 007 headings 2, 4, 5, 6, 9 brought onto the body’s Filipino (tanggapan ng rehistro ng sambahayan, diborsiyo sa hukuman, rehistro ng sambahayan, pondong bago ang kasal, paghahati sa pagkakaiba ng natitirang ari-arian, pagdalaw, pansamantalang utos). Heading 11 Ebidensiya → Ebidensya.
+- #10 008 “work rules” → mga tuntunin sa trabaho (工作規則).
+- #11 002 FAQ and the matching body sentence: Regulations Governing Company Registration → Panuntunan sa Rehistro ng Kompanya (公司登記辦法). 2 instances.
+- #12 004 Income Tax Act → Batas sa Buwis sa Kita (所得稅法) in the source list, the table, and the running paragraph. Statute for Industrial Innovation → Batas sa Inobasyon sa Industriya (產業創新條例), gloss added on the link. undistributed earnings → tubong hindi naipamahagi (5). URL paths unchanged. Taiwan–Korea Income Tax Agreement left as the treaty’s name.
+- #13 inquiry placeholder Indones → Indonesyo.
+- #16 006 (新臺幣) moved onto the three TWD amounts, not onto “ayon sa pagkakasunod”.
+
+fil-b (columns 010–018): 17 of 18
+- #1 010 maipaliwanag → mapatunayan (establish liability, causation, and loss).
+- #2 013 “hindi magiging posible” → “maaaring hindi maging posible”.
+- #3 017 FAQ and the repeated §1 paragraph: pagpapadala bilang tagapagpadala → pagpapadala ng sariling kalakal, at ang pagpapasa ng kargamento o iba pang serbisyo ng tagapamagitan sa paghahatid. 2 instances. Blocks not merged.
+- #4 018 bare saligang batas → saligang batas ng korporasyon (章程): the limited-company sentence, and both governance sentences in the share-company paragraph.
+- #5 011 anyo ng produkto (劑型) → uri ng paghahanda (劑型).
+- #6 018 limited-company paragraph: members are may-ambag (股東), not may-hawak ng shares. The following share-company section still says may-hawak ng shares.
+- #7 014 the reinterpretation sentence rewritten so “pagkatapos na ng bayad” is the later reinterpretation, not “matapos ang lahat”.
+- #8 010 ipinaliliwanag → ipinapaliwanag.
+- #9 013 doubled “karaniwang karaniwang” → one “karaniwang”.
+- #10 013 and 015 one-clause breaks rephrased into complete sentences inside the existing blocks (investment-purpose “at kung…”, bank-employee fragment, lease/remittance pair, identification “at kung…”, review “Ngunit…” after a comma, 015 “Kung ang adres…”). Paragraphs not joined.
+- #12 014 title and H1: Paglabag ng Kontrata → Paglabag sa Kontrata.
+- #13 011 branch / importer / distributor / procedure swept where sangay and taga-angkat were already the headwords (FAQ, headings, the importer paragraph, the branch paragraph, the checklist).
+- #14 statute and agency names: 011 cosmetic-file regulation; 013 Batas sa Pamumuhunan ng mga Dayuhan and Pambansang Ahensiya sa Imigrasyon (NIA); 016 choice-of-law act in the sentence and the link; 017 Employment Service Act links, the investment statute link, and both NIA mentions. Same names on the 007 choice-of-law link, the 007 household-registration link, and the 001 NIA link.
+- #15 015 item → gawain, both times in that sentence.
+- #16 016 Guardian → Tagapag-alaga.
+- #17 017 carrier business, Share Acquisition, Due Diligence, and mga kondisyon ng exemption.
+- #18 018 parent, distribution/agency, representative office, engineer, branch, demand, timetable, equity incentive, investor, and the distributor FAQ/heading. “parent or head office” kept as punong kompanya o punong tanggapan.
+
+No test expected-string needed updating. llms.txt fil notices were left: discoveryNotice still contains the token llms.txt, and consultationNotice / confidentialNotice remain verbatim substrings of the published FAQ and privacy paragraphs.
+
+## Rows skipped
+
+- fil-a #1 — visible “Artikulo 10” → “Artikulo 3”. The URL is already flno=3 and was not touched. The Korean source link text is 영업세법 제10조; changing the label to Artikulo 3 alone fails numbers (`missing from translation (1): 10`). Label left as the r2 form: “Artikulo 10 ng Regulasyon hinggil sa withholding rate sa dibidendo ng hindi residente (各類所得扣繳率標準)”.
+- fil-a #14 — “TWD 1.57M” → “1.57 milyong TWD”. ACCEPTED-ROUND: the bio figure stays byte-identical.
+- fil-a #15 — delete U+200B, drop empty `**​**` lines, and promote Q16–Q20 to `##` headings. The checker compares zero-width counts and heading levels with the Korean source. Counts left: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3. The named lowercase split in 005 (“maaaring pumunta”) was rephrased inside the two existing blocks.
+- fil-a #17 — leading space on servicesAssistanceAfter. Not applied; see disagreements.
+- fil-b #11 — delete U+200B in 013 and 015. Same checker pin as fil-a #15.
+
+## Systemic patterns and instances changed
+
+- Spelling split aktwal / aktuwal and Ebidensiya / ebidensya. Columns were already aktuwal and ebidensya. Guidance pack aligned: aktwal → aktuwal in 4 strings (3 in international-guidance-content.ts fil, 1 inquiry consultationNotice). ebidensiya → ebidensya in 2 places (guidance answers contact line, 007 heading 11).
+- English headword after a Filipino term already in the file. Beyond the quoted rows: 001 residence-certificate body (4) and permanent residence (3) plus the NIA link; 004 undistributed earnings (5) and the two statute names in running text as well as the source list; 011 branch/importer/distributor/procedure (the FAQ, both importer headings, the cooperation paragraph, the branch paragraph, the checklist); 017–018 the “also” list in each row; 007 the two English statute links that match the 016 name.
+- Bare saligang batas meaning 章程: 3 in 018 (017 was already “saligang batas ng korporasyon (章程)”).
+- Limited-company members called share-holders: 1 paragraph in 018 (every may-hawak ng shares in that paragraph → may-ambag). Share-company paragraph not retitled.
+- Sentence split across a blank line, rephrased inside the block rather than merged: 005 one pair, 008 two pairs (the Korea/Taiwan severance split and the dismissal continuation), 013 five pairs, 015 one pair.
+- Gloss parked on the wrong words: 1 (006, 新臺幣).
+- U+200B characters removed: 0. Heading levels added: 0.
+
+## Reviewer disagreements (not applied)
+
+- fil-a #17. servicesAssistanceBefore already ends with a space and servicesAssistanceAfter starts with a space, but the link sits between them (`before` + link + `after`). The rendered line is “pahinang Makipag-ugnayan kung paano…”, one space on each side of the link. Removing the After space would glue “Makipag-ugnayan” to “kung”.
+- fil-a #1 is not a disagreement about the URL. flno=3 is Article 3 of 各類所得扣繳率標準. The digit stays 10 only because the checker counts the Korean source’s 제10조. Noted under skipped, not “corrected” to 3.
+- fil-a #15 / fil-b #11. The zero-width lines do split the spoken columns. Deleting them, or turning Q16–Q20 into headings, fails the blocks/headings checks against the Korean source. Not a wording fix the checker will accept.
+- fil-a #14. “milyon” is what a Philippine reader expects, and the decimal point is already right. The standing rule pins the token TWD 1.57M, so the bio sentence was not rewritten.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-fil --lang fil 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=67
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-fil src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      22
+
+(That count is the verify run, before this log file existed. After the log was written the same command prints 23.)

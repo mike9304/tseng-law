@@ -78,7 +78,7 @@ Hindi sapat na tingnan lamang ang ugnayang pampamilya bago at pagkatapos ng pagk
 
 Magkahiwalay na usapin sa batas ang karapatan sa anak at ang pagmamana. Kahit gamitin at tuparin ng nabubuhay na magulang ang karapatan at tungkulin sa anak, ang may-ari ng ari-ariang minana ng anak ay ang anak, at hindi ito maaaring ituring ng magulang na parang sarili niyang bahagi sa mana. Bukod dito, maaaring umiral ang katayuan sa karapatan sa anak kahit hindi tagapagmana ang nabubuhay na magulang; at kapag siya ay naging tagapagmana, kailangan niyang tiyakin nang mas maingat ang posibilidad ng salungatan ng interes (利益衝突) sa pagitan niya at ng anak.
 
-## 6. Pagtatalaga ng Guardian at ang Pakikialam ng Korte
+## 6. Pagtatalaga ng Tagapag-alaga at ang Pakikialam ng Korte
 
 Ang pangangalaga sa menor de edad sa ilalim ng Artikulo 1091 ng Kodigo Sibil ng Taiwan ay nagiging usapin kapag walang magulang ang menor de edad, o kapag pareho ang mga magulang na hindi magagamit at matutupad ang karapatan at tungkulin sa kaniya. Hindi maaaring ipasiya agad na nagsisimula ang pangangalaga sa menor de edad dahil lamang sa katotohanang namatay ang isang magulang. Kailangan munang tiyakin ang katayuan ng karapatan sa anak ng nabubuhay na magulang, ang umiiral nang hatol, at kung aktuwal na magagamit niya ang karapatan.
 
@@ -108,7 +108,7 @@ Ang pagpaplanong gumagamit ng trust o ng seguro ay hindi rin maituturing na ligt
 
 Hindi dapat basta ilapat sa pamilyang may dayuhang elemento ang mga panloob na tuntunin lamang ng Kodigo Sibil ng Taiwan. Maaaring makaapekto sa pagpapasiya sa batas na ilalapat (準據法) at sa hurisdiksiyon ang nasyonalidad ng mga panig, ang tirahan at ang karaniwang tirahan, ang sentro ng pamumuhay noong panahon ng kamatayan, ang lugar kung saan naroon ang ari-arian, ang kasal o diborsiyong naganap sa ibang bansa, at ang umiiral nang hatol hinggil sa karapatan sa anak. Kahit sa loob ng iisang pamilya, maaaring magkaiba ang batayan ng pag-uugnay na inilalapat sa pagmamana, sa rehimeng ari-arian ng mag-asawa, sa karapatan sa anak, sa pangangalaga at sa pagpaparehistro ng ari-arian.
 
-Ang Act on Choice of Law in Civil Matters with Foreign Elements (涉外民事法律適用法) ng Taiwan ang panimulang punto sa pagtatakda ng batas na ilalapat para sa mga ugnayang sibil na may dayuhang elemento. Gayunman, maaaring hindi sapat ang pagtiyak lamang sa batas na iyon; kailangan ding suriin ang internasyonal na hurisdiksiyon ng korte, ang pagkilala at pagpapatupad sa dayuhang hatol, at ang mga kasunduang pandaigdig o ang batas ng kabilang bansa. Kailangan ding hiwalay na tiyakin sa lugar kung saan naroon ang ari-arian kung ang pasiyang may bisa sa Taiwan ay tuwirang naaangkop doon sa paglilipat ng ari-ariang nasa ibang bansa.
+Ang Batas sa Pagpili ng Batas na Ilalapat sa mga Usaping Sibil na may Dayuhang Elemento (涉外民事法律適用法) ng Taiwan ang panimulang punto sa pagtatakda ng batas na ilalapat para sa mga ugnayang sibil na may dayuhang elemento. Gayunman, maaaring hindi sapat ang pagtiyak lamang sa batas na iyon; kailangan ding suriin ang internasyonal na hurisdiksiyon ng korte, ang pagkilala at pagpapatupad sa dayuhang hatol, at ang mga kasunduang pandaigdig o ang batas ng kabilang bansa. Kailangan ding hiwalay na tiyakin sa lugar kung saan naroon ang ari-arian kung ang pasiyang may bisa sa Taiwan ay tuwirang naaangkop doon sa paglilipat ng ari-ariang nasa ibang bansa.
 
 Sa testamentong ginawa sa ibang bansa ay kailangang suriin ang paraan ng pagkakagawa at ang aktuwal na bisa nito, ang pagsasalin at pagpapatunay, at ang proseso ng pagpapatunay ng testamento (檢認) o ng pagpapatupad. Maaaring kailanganin ang apostille o ang verification ng konsulado at ang salin, para sa mga dayuhang sertipiko ng kasal at diborsiyo at para sa mga dokumento ng ugnayan sa kapanganakan. Kapag magkaiba ang pagbaybay ng pangalan, ang datos sa pasaporte at ang talaan ng rehistro ng sambahayan, maaaring hingan kayo ng karagdagang dokumento sa proseso ng pagpapatunay na iisang tao ang tinutukoy.
 
@@ -135,7 +135,7 @@ Kailangan ding pag-ibahin ang ari-ariang nangangailangan ng agarang pag-iingat a
 
 - [Pambansang Database ng mga Batas at Regulasyon ng Taiwan (全國法規資料庫): Kodigo Sibil (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
 - [Sistema ng Paghahanap ng mga Batas ng Ministri ng Katarungan (法務部) ng Taiwan: Ingles na bersiyon ng Kodigo Sibil](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351)
-- [Pambansang Database ng mga Batas at Regulasyon ng Taiwan: Act on Choice of Law in Civil Matters with Foreign Elements (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
+- [Pambansang Database ng mga Batas at Regulasyon ng Taiwan: Batas sa Pagpili ng Batas na Ilalapat sa mga Usaping Sibil na may Dayuhang Elemento (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
 - [Judicial Yuan ng Taiwan: Pormularyo ng paghiling para sa pagpili ng tagapag-alaga ng menor de edad](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html)
 - [eTax Portal ng Ministri ng Pananalapi ng Taiwan: Proseso ng paghahain sa kaso ng pagmamana at mga kailangang dokumento](https://www.etax.nat.gov.tw/etwmain/tax-info/house-land-transfer-taxtation-calculation-area/inheritance/file-process)
 

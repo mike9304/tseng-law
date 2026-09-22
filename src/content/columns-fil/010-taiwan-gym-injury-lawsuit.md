@@ -13,7 +13,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 ![Larawang panimula tungkol sa paghahabol ng danyos matapos masugatan sa gym sa Taiwan](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Batay sa isang kaso kung saan nasugatan ang isang Koreanong estudyante sa unibersidad habang tinuturuan ng trainer (教練) sa isang gym (健身房) sa Taiwan, ipinaliliwanag ng artikulong ito ang mga pamamaraang legal na maaaring suriin matapos ang pinsala sa gym, ang takdang panahon ng paghahabla, ang paraan ng pag-iingat ng ebidensya, gayundin ang mga uri ng danyos (damages, 損害賠償).
+Batay sa isang kaso kung saan nasugatan ang isang Koreanong estudyante sa unibersidad habang tinuturuan ng trainer (教練) sa isang gym (健身房) sa Taiwan, ipinapaliwanag ng artikulong ito ang mga pamamaraang legal na maaaring suriin matapos ang pinsala sa gym, ang takdang panahon ng paghahabla, ang paraan ng pag-iingat ng ebidensya, gayundin ang mga uri ng danyos (damages, 損害賠償).
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
@@ -83,7 +83,7 @@ Gayunman, maaaring maiba ang konklusyon kung may ibang batayan ng paghahabol gay
 
 ## 3. Anong ebidensya ang dapat ingatan, saka paano, kaagad matapos ang aksidente?
 
-Upang maipaliwanag ang pananagutan, ang ugnayang sanhi at ang pinsala, mabuting sabay-sabay na tipunin hindi lamang ang CCTV footage (監視器影像) noong panahon ng aksidente kundi pati ang rekord medikal (病歷) at ang sertipikong medikal (診斷證明書), ang mga resibo ng gastos sa medikal, ng pagbiyahe at ng pag-aalaga, ang mga mensaheng pinagpalitan ng gym at ng trainer, ang salaysay ng mga saksi, ang tala ng pagpapareserba at ng pagdalo sa klase, gayundin ang plano ng ehersisyo at ang tala ng pagsasanay. Mabuti ring kunan ng larawan ang nasugatang bahagi ng katawan at, hangga't maaari, ang kalagayan ng lugar ng aksidente, saka ayusin ayon sa petsa ang mga pangyayari bago at pagkatapos ng aksidente at ang nilalaman ng mga komunikasyon, upang madaling maihambing ang mga materyal sa bandang huli.
+Upang mapatunayan ang pananagutan, ang ugnayang sanhi at ang pinsala, mabuting sabay-sabay na tipunin hindi lamang ang CCTV footage (監視器影像) noong panahon ng aksidente kundi pati ang rekord medikal (病歷) at ang sertipikong medikal (診斷證明書), ang mga resibo ng gastos sa medikal, ng pagbiyahe at ng pag-aalaga, ang mga mensaheng pinagpalitan ng gym at ng trainer, ang salaysay ng mga saksi, ang tala ng pagpapareserba at ng pagdalo sa klase, gayundin ang plano ng ehersisyo at ang tala ng pagsasanay. Mabuti ring kunan ng larawan ang nasugatang bahagi ng katawan at, hangga't maaari, ang kalagayan ng lugar ng aksidente, saka ayusin ayon sa petsa ang mga pangyayari bago at pagkatapos ng aksidente at ang nilalaman ng mga komunikasyon, upang madaling maihambing ang mga materyal sa bandang huli.
 
 Maaaring masapawan ang bidyo kapag lumipas ang panahon ng pag-iingat nito, o maaaring hindi na ito magamit dahil sa ibang kadahilanan. Kaya maaaring suriin ang paghiling sa gym na ingatan ito sa pamamagitan ng sulat na may patunay ng nilalaman (存證信函) o ng sulat ng abogado (律師函) na tiyak na nakasaad ang kinakailangang panahon, lugar at posisyon ng kamera. Ang ganitong sulat ay praktikal na hakbang na nagtatala kung ano ang hiniling saka kailan ito hiniling. Gayunman, hindi nito basta naipapataw sa kabilang panig ang bagong legal na obligasyong ingatan ang bidyo, ni napipigilan nito ang pagbura; hindi rin awtomatikong humuhusga nang laban sa isang panig ang hukuman dahil lamang sa wala nang natirang bidyo.
 

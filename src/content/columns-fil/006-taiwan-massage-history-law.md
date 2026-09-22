@@ -55,7 +55,7 @@ Nanatiling may bisa ang batas na ito hanggang 2003, nang si Ginoong Lin (林先�
 
 ay natuklasan ng pulisya dahil kumuha siya ng dalawang empleyadong walang kapansanan sa paningin upang maghugas ng buhok, magbigay rin ng serbisyong massage.
 
-Sa ilalim ng batas noong panahong iyon, pinatawan sina Ginoong Lin at ang dalawang empleyado ng multa administratibo (罰鍰) na TWD 40,000, TWD 10,000, at TWD 20,000 ayon sa pagkakasunod (新臺幣).
+Sa ilalim ng batas noong panahong iyon, pinatawan sina Ginoong Lin at ang dalawang empleyado ng multa administratibo (罰鍰) na TWD 40,000, TWD 10,000, at TWD 20,000 (新臺幣), ayon sa pagkakasunod.
 
 Naisip ni Ginoong Lin na labis na hindi makatarungan ang parusang ito, kaya naghain siya ng petisyon para sa constitutional interpretation.
 

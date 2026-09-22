@@ -31,13 +31,13 @@ Stel dat een buitenlandse fabrikant van precisieonderdelen aan Taiwanese klanten
 
 Alvorens de toetredingsstructuur te beslissen, kan het hoofdkantoor intern verduidelijken:
 
-| Exploitatiestuk | Vragen die eerst moeten worden verduidelijkt |
+| Exploitatieonderdeel | Vragen die eerst moeten worden verduidelijkt |
 |---|---|
 | Contracten met de klanten | Wie wordt partij bij het contract: het buitenlandse hoofdkantoor, de Taiwanese dochtervennootschap of een lokale agent? |
 | Offertes en bestellingen | Wie bevestigt definitief de prijs en de levertijd, en hoever reikt de bevoegdheid van de verantwoordelijke in Taiwan? |
 | Goederen en voorraden | Wie voert in, houdt en beheert de voorraden, en behandelt de retouren en de vervangingen? |
 | Personeel | Reizen de werknemers van het hoofdkantoor, werft men in Taiwan aan, of vertrouwt men het werk toe aan een externe dienstverlener? |
-| Installatie en technische ondersteuning | Wie is de ondersteuning aan de klant verschuldigd en behandelt de problemen van het werk ter plaatse? |
+| Installatie en technische ondersteuning | Wie is de klant de ondersteuning verschuldigd, en wie behandelt de problemen van het werk ter plaatse? |
 | Facturatie en kosten | Wie factureert en int, en hoe worden de kosten tussen het hoofdkantoor en de organisatie in Taiwan vereffend? |
 | Kwaliteit en geschillen | Wie bevestigt het resultaat van de keuring en ontvangt de klachten over gebreken of schade? |
 
@@ -59,7 +59,7 @@ Het hoofdverschil tussen een Taiwanese dochtervennootschap (子公司) en een Ta
 
 Indien men besluit een zelfstandige rechtspersoon in Taiwan op te richten, moet men ook de vorm ervan kiezen. In Taiwan bestaan de vennootschap met beperkte aansprakelijkheid (有限公司) en de naamloze vennootschap (股份有限公司).
 
-### Vennootschap met beperkte aansprakelijkheid (有限公司): eenvoudiger bestuursstructuur, maar een meer gesloten overdracht van de deelnemingen
+### Vennootschap met beperkte aansprakelijkheid (有限公司): eenvoudiger bestuursstructuur, maar een geslotener regime voor overdracht van de inbreng
 
 Zij kan worden gevormd met 1 of meer natuurlijke personen (有限公司), of met Taiwanese of buitenlandse rechtspersonen als aandeelhouders; de aandeelhouders zijn in beginsel aansprakelijk tot het bedrag van hun inbreng. De vennootschap heeft van 1 tot 3 bestuurders, gekozen onder de aandeelhouders. Aandeelhouders die de bedrijfsvoering niet uitvoeren, kunnen toezichtsrechten uitoefenen, zonder dat een afzonderlijke commissaris nodig is. Tenzij de statuten anders bepalen, heeft 1 aandeelhouder 1 stem, zodat de zeggenschap niet met de inbrengverhouding hoeft samen te vallen. De overdracht van de inbreng van een gewone aandeelhouder vereist in beginsel de instemming van meer dan de helft van de stemrechten van de overigen; voor een bestuurder de instemming van twee derde of meer van de stemrechten van de overige aandeelhouders. Dat past beter bij eenvoudige aandeelhoudersverhoudingen en een stabiele zeggenschap dan bij een frequente kapitaalwerving of de handel in aandelen. Later kan zij worden omgezet in een naamloze vennootschap (股份有限公司).
 

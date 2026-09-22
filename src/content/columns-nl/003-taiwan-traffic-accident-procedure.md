@@ -87,7 +87,7 @@ De voorlopige analysebeoordeling van het wegverkeersongeval door de politie is e
 
 Volgens de betreffende voorschriften kunnen gerechtigde partijen een voertuigdeskundigenonderzoek (車輛行車事故鑑定) aanvragen, de behandelende instantie de zaak doorzenden of gerechtelijke organen het opdragen. Het verzoek van de partij geschiedt gewoonlijk binnen 6 maanden vanaf de ongevallendag; bij reeds in onderzoek of gerechtelijke procedure bevindende zaken loopt het deskundigenonderzoek via de opdracht van de gerechtelijke organen, niet via een nieuw rechtstreeks verzoek.
 
-Tegen het deskundigenoordeel kan een keer herziening worden aangevraagd. Deskundigen- en nader-onderzoeksoordelen zijn bewijs- of referentiestukken; de rechter waardeert het gehele verloop, met inbegrip van verklaringen, opnamen en plaatsopnamen, zelfstandig.
+Tegen het deskundigenoordeel kan een keer herziening worden aangevraagd. Oordelen van het deskundigenonderzoek en van de herziening zijn bewijs- of referentiestukken; de rechter waardeert het gehele verloop, met inbegrip van verklaringen, opnamen en plaatsopnamen, zelfstandig.
 
 ## Q7. Welke schade kan na het ongeval worden gevorderd?
 
@@ -103,7 +103,7 @@ Bewaar bewijzen (收據), attesten en medische dossiers en orden de medische noo
 
 Het toevoegen van medische stukken en de wijziging of verhoging van het vorderingsbedrag moeten worden onderscheiden. Na instelling van een bij de strafzaak gevoegde civiele vordering ontstaan gerechtskosten niet automatisch alleen omdat verdere behandelingsbewijzen worden ingediend.
 
-Volgens artikel 504 van het Wetboek van Strafvordering kunnen echter, nadat de zaak naar de burgerlijke afdeling is verwezen, wijziging, toevoeging of uitbreiding van de vordering boven de omvang vóór de verwijzing kostenkwesties voor het overschrijdende deel doen ontstaan. Verwijzingsfase, indieningstijdstip en vorderingomvang moeten van geval tot geval worden onderzocht.
+Volgens artikel 504 van het Wetboek van Strafvordering kunnen echter, nadat de zaak naar de burgerlijke afdeling is verwezen, wijziging, toevoeging of uitbreiding van de vordering boven de omvang vóór de verwijzing kostenkwesties voor het overschrijdende deel doen ontstaan. Verwijzingsfase, indieningstijdstip en vorderingsomvang moeten van geval tot geval worden onderzocht.
 
 ## Q9. Waarmee worden professionele verzorging en familiële verzorgingskosten bewezen?
 
@@ -130,7 +130,7 @@ Bewijzen, tariefopnamen, routeopnamen en behandelingsstukken zijn mogelijke bewi
 - [Burgerlijk Wetboek artikel 196](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
 - [Burgerlijk Wetboek artikel 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Wetboek van Strafvordering artikel 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
-- [Aanwijzingen van de Justitiële Yuan (司法院) over vorderinguitbreiding na verwijzing](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
+- [Aanwijzingen van de Justitiële Yuan (司法院) over vorderingsuitbreiding na verwijzing](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
 - [Vonnis van de rechtbank Chiayi (嘉義) over familiële verzorgingskosten](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Vonnis van de rechtbank Tainan (臺南) over vervoerskosten naar behandeling](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
@@ -207,7 +207,7 @@ Belangrijke delen die de gevoelens van de wederpartij betreffen, zoals verontsch
 
 ​
 
-Voor de verzekeringsmaatschappij beïnvloedt een bijkomende uitgave van TWD 500.000 (新臺幣) of TWD 1.000.000 in een enkel geval de totale winst nauwelijks, voor de ongevallenpartij kan zij echter over het bestaan van een strafblad (前科) beslissen.
+Voor de verzekeringsmaatschappij beïnvloedt een bijkomende uitgave van TWD 500.000 (新臺幣) of TWD 1.000.000 in een enkel geval de totale winst nauwelijks, voor de betrokkene kan dat bedrag echter bepalen of de zaak een strafblad (前科) oplevert.
 
 ​
 
@@ -299,7 +299,7 @@ Q20. Hoe vindt men een advocaat voor verkeersongevallen?
 
 ​
 
-Verkeersongevallen zijn zeer frequente zaken; een algemene procesadvocaat kan na enkele jaren praktijkervaring verkeersongevalzaken behandelen.
+Verkeersongevallen zijn zeer frequente zaken; een algemene procesadvocaat kan na enkele jaren praktijkervaring verkeersongevalszaken behandelen.
 
 ​
 

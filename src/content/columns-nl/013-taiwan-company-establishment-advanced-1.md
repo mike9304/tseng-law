@@ -17,7 +17,7 @@ Onlangs hebben talrijke personen met succes een vennootschap (公司) in Taiwan 
 
 De vragen die bij de oprichting vaak worden gesteld, zijn hieronder verzameld.
 
-Wie [**de grondslagen van de vennootschapsoprichting**](/nl/columns/taiwan-company-establishment-basics) heeft gelezen, kan vervolgens ook deze uitvoeriger verdieping raadplegen.
+Wie [**de grondslagen van de vennootschapsoprichting**](/nl/columns/taiwan-company-establishment-basics) heeft gelezen, kan vervolgens ook deze uitvoerigere verdieping raadplegen.
 
 De volgende vragen en antwoorden beogen personen te helpen die een vennootschapsoprichting in Taiwan overwegen.
 
@@ -39,7 +39,7 @@ Een medewerker van een Taiwanese bank heeft dit persoonlijk toegelicht.
 
 Talrijke buitenlanders zijn recent na de opening van de rekening verdwenen, zodat de rekeningopening steeds strenger wordt behandeld.
 
-In de grondslagtekst is al aangegeven dat de rekeningopening de moeilijkste stap bleek; dat klopt met de praktijk.
+In het eerdere artikel over de grondslagen is al aangegeven dat de rekeningopening de moeilijkste stap bleek; dat klopt met de praktijk.
 
 Omdat de gevallen van witwassen (洗錢) in Taiwan zeer talrijk zijn, wordt de opening van bankrekeningen steeds strenger.
 

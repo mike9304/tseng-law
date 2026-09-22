@@ -1,0 +1,85 @@
+WO-F-nl r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-nl-r4
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: nl-a 47, nl-b 27 (74). No separate P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 70.
+Skipped: 4 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+Test edits: none. No pinned Dutch FAQ question or title in src/lib/__tests__/guidance-*nl*.test.ts changed. disclosure-parity `nl` regexes still match (werkbare, geen belofte, vier consultatietalen, and the rest). consultationNotice and confidentialNotice were left; discoveryNotice still contains the token llms.txt. "TWD 1.57M" was not touched.
+
+### Applied
+nl-a 1–3, 5–33, 36–47.
+nl-b 1–11, 13–27.
+
+Adaptations (still applied):
+- nl-a 6. The misplaced gloss (子女最佳利益) came off the marriage-breakdown phrase. The same phrase now carries (婚姻破綻), the term already used for that breakdown earlier in 007. Without a gloss the long Latin sentence is flagged as English.
+- nl-a 7. (不當得利) came off “risico’s”. One “of” in the list was replaced by a comma so the sentence stays under the English-stopword threshold. The reviewer’s “voor de zaak en het kind” is the wording used.
+- nl-a 18. “beslist” → “is bepalend”. “In deze groep” stays, because the services section calls each block a groep.
+- nl-a 27. (營業場所) moved from “inrichtingen” onto “de plaats”. English here is investment in facilities; the gloss stays in the sentence so the checker does not read it as English.
+- nl-a 37. “niet meteen tot 1 rechtspersoon.” The digit 1 stays. Bare “één” is not counted unless it precedes a unit (jaar, maand, dag, keer, persoon) or a scale.
+- nl-b 14. “Wie is de klant de ondersteuning verschuldigd, en wie behandelt …” The second clause keeps a subject.
+
+### Skipped
+- nl-a 4. “(artikel 10)” stays on the nonresident-dividend withholding label. The label already names that rule, as in 001. The URL (`pcode=G0340028&flno=3`) is unchanged. Dropping 10 fails the number check: the Korean link text still contains 제10조.
+- nl-a 34. “per gewonde persoon en per 1 ongeval” stays. “per ongeval” drops a counted 1. “één ongeval” is not counted.
+- nl-a 35. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003 (from Q16), 005 (including `**​**`), 006, 008 and 009 were not removed. Heading levels and ZWSP counts must match the Korean source. ACCEPTED-ROUND forbids new headings. English keeps Q16–Q20 as body paragraphs. The strafblad sentence inside that block was still rewritten (nl-a 3).
+- nl-b 12. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. Deleting them changes the ZWSP count.
+
+## Systemic patterns
+
+- 經理人 was “bestuurder”, the same word as 董事. 7: 001 “manager (經理人)” ×2, “manager van het Taiwanese bijkantoor” ×2, “de manager meteen” ×1, heading “buitenlandse managers” ×1, 005 “manager (經理人)” ×1. “bestuurder (董事)” and “enige bestuurder (董事)” were left.
+- Chinese gloss on the wrong Dutch words in 007. 5 removals or moves: (子女最佳利益) off the marriage-breakdown phrase ×2, (不當得利) off “risico’s” ×1, “conflictenrecht (準據法)” → “van toepassing is / het toepasselijke recht (準據法)” ×2. Closing “conflictenrecht” without a gloss → “het toepasselijke recht”. (婚姻破綻) was added on the breakdown phrase ×2 so the sentence is not read as English. 004 “(artikel 10)” was not dropped; see Skipped.
+- U+200B blanks (003 from Q16, 005, 006, 008, 009, 013, 015). 0 deleted. See Skipped.
+- Guidance calques “een taal gebruiken”. 5: “spreekt” / “spreek” in international-guidance-it-nl-pl.ts ×4 (contact sentence, contact heading, FAQ description, FAQ question) and international-inquiry-copy.ts ×1. The refusal of a Dutch consultation, an interpreter and a reply time stays.
+- Notice of termination was “aankondiging”. 7 in the labour sense: 008 “opzeggingstermijn” ×2, “opzegging” ×4, guidance labour group ×1. 016 “aankondiging … aan de schuldeisers” is the creditor notice and was left. 008 “naar de duur van de tewerkstelling” → “overeenkomstig de duur” ×1.
+- Linking -s and the “achteraf” adjective. 6: verkeersongevalszaken, vorderingsomvang, vorderingsuitbreiding, betekeningsverslagen, overdrachtsplaats, “het achteraf omboeken”.
+- “Naar” / “variëren naar” / “afwijken naar” for “depending on”. 17: 010 ×5 (two “verschillen naargelang”, one “kan naargelang … verschillen”, “aan de hand van de datum”, “middelen die naargelang de zaak”), 011 ×4 (“verschillen naargelang het producttype”, “naargelang de inhoud”, “aan de hand van de bewoording” ×2), 012 ×1, 007 ×6 (closing “verschillen naargelang”, “naargelang de zaak”, state of issuance, “aan de hand van het inkomen” ×2, “aan de hand van de documentnaam”), 008 ×1. “Naar de maatstaf”, “kijkt men niet alleen naar de kaft” and “naargelang” that already mapped a condition were left.
+- “Handel” as a business or an operation. 14: 015 “een andere onderneming” ×1; 017 logistics business ×1, delivery business ×1, “overdracht van de onderneming of van de activa” ×3 (two body/FAQ, one heading), “de overdracht van de onderneming of van de activa” ×1, “De overdracht van de onderneming en de wijziging” ×1, “de betrokken onderneming” ×1, “omvang van de onderneming” ×3, “bedrijfsbeheer” ×2. Left: handelsinschrijving, handelsvoertuigen, handelsgebruik, handelskentekenplaat, and 018 “handel” where it is sales (“de handel met Taiwanese klanten”, “verdeling van handel en exploitatie”). The verdict treats 018 as professional apart from deelnemingen, Exploitatiestuk and the inverted clause.
+- “Bevestigen” as the stock verb for review. 22: 011 ×10 (nagaan / vaststellen / vastleggen, including “is vastgesteld” for the safety measure), 014 ×6, 017 ×5 (toetsen ×2, nagaan of ×3), 016 “doornemen” ×1. Left where it means confirm: the highway authority’s current instructions, conflict and fact confirmation in 016, and “nog niet bevestigd” for office receipt.
+- Coined compounds named in the verdict. aanvraagontvangst → “de aanvragen … in de praktijk”; grondslagtekst → “het eerdere artikel over de grondslagen”; aanwijzingsinhoud → “een aanwijzing”; Exploitatiestuk → Exploitatieonderdeel; “insluiting en uitsluiting” → which assets are counted. “uitvoeriger” → “uitvoerigere” is the adjective ending, not a new noun.
+- R2–R10. Prior rounds already hold: u-address, feminine Wei Tseng where Dutch marks it (the title Advocaat is common gender), consultation languages Engels / Chinees (中文) / Japans / Koreaans, no interpreter, no reply-time, no free first meeting, no result promise. Korea stays a labelled example. This round did not turn any of those sentences positive. Freight-truck thresholds of 20, 8 and 5 in the 017 body now say vrachtwagens, matching the FAQ; the numbers are unchanged. “taksen” → “heffingen” so fees are not a second word for taxes.
+
+## Reviewer points not followed
+
+- nl-a 35 and nl-b 12. The U+200B lines are the same count as the Korean source. Promoting Q16–Q20 to headings would also change heading levels. English does not use those headings either.
+- nl-a 4, the request to drop “(artikel 10)”. The opened URL is flno=3 and was not changed. The Korean link text still contains 제10조, and the checker counts that 10.
+- nl-a 34. The suggested “per ongeval” drops a digit the checker still requires.
+- nl-a 6, 7 and 27, where a gloss was moved or a list comma was changed so the English-stopword check still passes. The wrong gloss is gone; a correct gloss or a shorter stopword run remains.
+- nl-a 37. “één rechtspersoon” would not count as 1.
+- 016 creditor “aankondiging”. That is the public notice to creditors, not notice of termination.
+- “Bevestigen” where the English is confirm a fact or confirm receipt. It was changed where it stood in for review or examination.
+- 018 sales uses of “handel”, and the commercial-registration compounds handelsinschrijving / handelsvoertuigen / handelsgebruik.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nl --lang nl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=113
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The count 23 is from that command, before this log file existed. 009 was not edited: its only round-4 issue was the U+200B layout, which stays.

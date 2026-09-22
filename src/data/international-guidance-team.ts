@@ -540,7 +540,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Leidinggevend advocaat in Taiwan',
       'chang-rongxuan': 'Advocaat in Taiwan',
       'chang-fangyu': 'Juridisch medewerker (paralegal)',
-      'son-jungmin': 'Operationeel manager Korea',
+      'son-jungmin': 'Operationeel manager voor Korea',
       'huang-shengping': 'Accountant-partner (CPA)',
     },
   },
@@ -2753,7 +2753,7 @@ export const guidanceTeamBios: Record<
         'Ondersteunt de afstemming tussen afdelingen met document- en werkprocessen, op grond van een opleiding informatica.',
       ],
       education: ['Bachelordiploma (B.S.) informatica, National Cheng Kung University'],
-      experience: ['Werkzaamheden Korea, Hovering International Law Firm'],
+      experience: ['Werkzaamheden voor Korea, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

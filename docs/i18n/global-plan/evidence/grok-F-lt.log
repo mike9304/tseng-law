@@ -1,0 +1,93 @@
+WO-F-lt — Lithuanian native-review fixes
+Workspace: /Users/son7/Projects/tseng-law-fix-lt-20260922
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows applied
+
+Part a (lt-a.md), every P1/P2 except the skips below:
+- a#1 Šalia atlygio (guidance fees + guidanceAnswers.lt.pricing)
+- a#2, a#3 roles and institutions in Lithuanian, English kept in parentheses (R12), lt bios only
+- a#4 paleidimas → išformavimas for 解散 in 002 and 004; 清算 stays likvidavimas
+- a#5 city exonyms swept (Taipėjaus, Dziayi); guidance cities were already Taipėjus / Gaosiongas / Taidžongas / Pingdongas
+- a#6 ROC year clarified as Kinijos Respublikos years; Chinese gloss prefixed 民國; no new Gregorian digits
+- a#7–a#9 as suggested (009 fault split kept as separate lines)
+- a#10–a#12, a#14–a#24, a#26–a#44
+- a#13 wording only: “sprendimą priteisti TWD 1.57M” (figure byte-identical)
+
+Part b (lt-b.md), every P1/P2 except the skips below:
+- b#1 ROC year via R13, no added Gregorian
+- b#2–b#11, b#13–b#14, b#16–b#70
+- b#15 meaning and currency order kept as dotted thousands (see skips)
+- b#11 “namų ruoša” (ACCEPTED), not the reviewer’s “namų ūkio darbus”
+
+Guidance pack (lt strings only): baltic-atlantic lithuanianGuidanceContent, guidance team lt copy + lt bios, guidance answers lt. Offices, inquiry copy, and llms-txt lt strings had no flagged defect and were not edited. No other locale was edited. No test expectation had to change (vitest 3202 passed).
+
+## Rows skipped
+
+- a#13 reformat to “1,57 mln.” — pinned figure stays `TWD 1.57M`. Wording “priteisti” was applied.
+- a#25 and b#15 space thousands (“500 000”, “1 570 000”) — R14 and the column checker require dot thousands. Amounts stay `500.000`. Currency was moved after the number (`500.000 TWD`) where that still parses.
+- a#6 and b#1 parenthetical Gregorian years — R13 forbids a new year digit. ROC wording was clarified without adding 2023 / 2020.
+- b#12 “legado” — the file already has the genitive “legato (遺贈)”. Left as is.
+- Frontmatter `url:` Hangul in 008 and 009 — R16.
+- `/ko/` link rows — already remapped (R1). No link, image path, date, or block-count edits.
+- U+200B blank lines in the blog columns — removing them would change the block count.
+- “Geriausių vaiko interesų” and the client’s “geriausią rezultatą” — statutory or client facts, not a firm “best” claim.
+- 015 “tarnybinė patikra” and 017 “tarnyba” (immigration / trade office) — the tarnyba sweep is 014 最低服務年限 only.
+- 017 administrative “gairės” — the 函釋 → išaiškinimas sweep is 014 only.
+- Inquiry copy and GUIDANCE_LLMS_NOTICES.lt — consultation languages already English, Chinese, Japanese, Korean; no reply-time promise.
+
+006 checker note: “atitinkamai 40.000 TWD” was parsed as the month name “mai” plus day 4, so 40000 went missing. The fine line now reads “bauda (罰鍰) — 40.000 TWD, 10.000 TWD ir 20.000 TWD … atitinkamai”. Digits unchanged.
+
+## Systemic patterns (replacement counts)
+
+- 解散 paleidimas → išformavimas: 33 (002 and 004 only). likvidavimas for 清算 untouched.
+- “be” neben / wrong case: “Be atlygio” → “Šalia atlygio” (guidance fees + answers pricing), “Be advokatų darbo” → “šalia advokatų darbo”, “be regos negalia” → “be regos negalios” (6), 015 “Be rinkos padėties” → “Šalia rinkos padėties”. “Be mokesčio” and “Be to” left.
+- susiklosto / nesusiklosto → atsiranda / neatsiranda: 4 + 4. Liability “atsakomybė nesusiklosto” → “atsakomybė nekyla”: 1.
+- ROC year phrases clarified without new digits: the 109/112 judgment citations that were bare “metai / metų”.
+- City spellings: Taipjaus 1, Taijaus 2, Dzjajaus 1 → Taipėjaus / Dziayi.
+- yuanas → juanas (1), yuano → juano (2). “Teismų juano” that was already genitive was left.
+- 營業稅 “apyvartos mokestis” → verslo mokestis / PVM-tipo wording, and the act title → Pridėtinės ir nepridėtinės vertės verslo mokesčio įstatymas (about 11 hits across 001/003/004).
+- 條例 “statutas” → “įstatymas”: Pramonės inovacijų 5, Užsieniečių investicijų 2.
+- 014 最低服務年限 “tarnyba/tarnybos” → “darbo laikotarpis”: 30 lowercase hits plus 3 title-case (title, H1, one body sentence).
+- 014 留任獎金 “išlaikymo premija” → “premija už pasilikimą darbe”: 7.
+- 014 函釋 “gairės” → “išaiškinimas”: 8.
+- “matas” as a legal standard → “standartas”: 010, 011, 014 (verb forms matoma/mato untouched).
+- “namų darbai” → “namų ruoša”: 007 and 016.
+- Blog voice (R7), rephrased inside existing lines: 003 Q16–Q20, 006, 008 (Sveiki / OOO → “[vardas, pavardė]”), 009, 013, 015 (Q. dropped). Feminine narrator kept where Wei is the speaker (“pati nagrinėjau”).
+- Currency order `TWD 500.000` → `500.000 TWD` (and USD the same). `TWD 1.57M` not moved.
+
+## Reviewer points not applied
+
+- Space as the thousands separator, and “1,57 mln.” for the pinned bio figure. Both fight R14 / the preserved term. Dotted thousands and `TWD 1.57M` stay.
+- Adding a Gregorian year in parentheses to an ROC citation. That inserts a digit the checker counts. The ROC phrase was clarified instead.
+- b#12 “legado”. The Lithuanian text is already “legato”, the genitive of “legatas”.
+- “likvidavimas” as the name for 解散. That word is already 清算. 解散 is išformavimas.
+- “namų ūkio darbus”. ACCEPTED-lt specifies “namų ruoša”.
+- Merging the one-line blog paragraphs. That would change the block count, so each line was rephrased in place.
+- b#1’s suggested “(2020 m.)” next to ROC 109. Not added (R13).
+
+## §Verify
+
+```
+=== CHECKER ===
+neighbour      PASS   
+hanzi          PASS   han=66
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      23
+```
+
+Commands were the work-order block (node v24.14.1). `node_modules` was missing in this worktree, so `npm ci` was run first; it is gitignored and is not in the count of 23. That count is 21 modified content/data files plus untracked `.tmp-lt/` and `docs/i18n/global-plan/WO-F-lt.txt`, taken before this log file existed. Markers `[변호사 검수 필요]`: 0. Hangul remains only inside the 008 and 009 frontmatter `url` values.

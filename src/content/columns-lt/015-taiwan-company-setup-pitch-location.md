@@ -19,7 +19,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Pradedant maitinimo veiklą pirmasis klausimas — rasti veiklos adresą (營業地址).
 
-Be rinkos padėties
+Šalia rinkos padėties
 
 kitas svarbus dalykas yra
 
@@ -39,7 +39,7 @@ Be mokesčio galima patikrinti, ar norimu adresu galima atidaryti „restoraną�
 
 Tačiau šiai patikrai reikia įkelti veiklos adreso „2 tipo pastato registro nuorašą“ (建物登記第二類謄本, kuriame nurodyta išsami pastato informacija).
 
-Kiekvienas asmuo žemės registro įstaigoje (地政事務所) gali prašyti bet kurio adreso „2 tipo pastato registro nuorašo“.
+Kiekvienas asmuo gali kreiptis į žemės registro įstaigą (地政事務所) ir prašyti bet kurio adreso „2 tipo pastato registro nuorašo“.
 
 Jei sunku asmeniškai nuvykti į žemės registro įstaigą (地政事務所),
 
@@ -51,7 +51,7 @@ Todėl šiam dalykui skirkite dėmesį.
 
 ​
 
-**Q. Ar visos veiklos sritys per sistemą „išankstinė veiklos vietos patikra“ turi tikrinti, ar veikla galima?**
+**Ar visos veiklos sritys per sistemą „išankstinė veiklos vietos patikra“ turi tikrinti, ar veikla galima?**
 
 Visoms veiklos sritims rekomenduojama sistema „išankstinė veiklos vietos patikra“ (營業場所預先查詢) patvirtinti, ar veikla galima.
 
@@ -63,7 +63,7 @@ Pagal „[Taipėjaus miesto veiklos vietų užklausos paslaugos veiklos nurodymu
 
 nuo 2023 m. sausio 1 d. teikiant prašymą įregistruoti bendrovės ar komercinės veiklos steigimą, buveinės perkėlimą ar registruotų veiklos sričių papildymą (įskaitant bendrovės filialą (分公司) ir padalinį (分支機構)) išankstinės veiklos vietos patikros rezultatą **būtina** pridėti prie registracijos prašymo, nepriklausomai nuo veiklos srities.
 
-Toliau pateiktas sąrašas „veiklos sritys, kurioms taikoma tarnybinė patikra“ (主動查詢之營業項目) nurodo sritis, kurias Prekybos tarnyba registracijos peržiūros metu papildomai tikrina tarnybine tvarka (隨案主動查詢), kai sritis yra prašyme, bet trūksta pridėtame rezultate; tai, kad srities šiame sąraše nėra, nereiškia atleidimo nuo patikros.
+Toliau pateiktas sąrašas „veiklos sritys, kurioms taikoma tarnybinė patikra“ (主動查詢之營業項目) nurodo sritis, kurias Prekybos tarnyba registracijos peržiūros metu papildomai tikrina tarnybine tvarka (隨案主動查詢), kai sritis yra prašyme, bet pridėtame rezultate tos srities nėra; tai, kad srities šiame sąraše nėra, nereiškia atleidimo nuo patikros.
 
 Jei atidaroma vietoje, kur restorano veikla negalima, vėliau kompetentinga institucija gali skirti administracinę baudą (罰鍰).
 
@@ -71,7 +71,7 @@ Jei atidaroma vietoje, kur restorano veikla negalima, vėliau kompetentinga inst
 
 „veiklos sritys, kurioms taikoma tarnybinė patikra“ (主動查詢之營業項目)
 
-Tuo apibendrinama esminė eiga. Jei turite daugiau klausimų, galite pateikti užklausą per kontaktinę formą; atsakymo terminas nėra žadamas. Kontora konsultuoja tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.
+Tuo šis paaiškinimas ir baigiamas. Jei turite daugiau klausimų, galite pateikti užklausą per kontaktinę formą; atsakymo terminas nėra žadamas. Kontora konsultuoja tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.
 
 Administracinių institucijų taisyklės gali dažnai keistis; prieš juridinio asmens registraciją tikslinga patikrinti naujausius teisės aktus.
 

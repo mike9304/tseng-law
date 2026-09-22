@@ -153,7 +153,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Baudžiamosios bylos',
           paragraphs: [
             'Atstovaujame ikiteisminiame tyrime ir teisme įtariamuosius ir kaltinamuosius bei nukentėjusiuosius ir vertiname baudžiamąją riziką verslo veikloje.',
-            'Baudžiamosiose bylose terminai dažnai trumpi, o etapai nustatyti. Jei jau gavote ikiteisminio tyrimo institucijos arba teismo raštą, nurodykite datą rašte laiku, kad turinys būtų įvertintas tinkama tvarka.',
+            'Baudžiamosiose bylose terminai dažnai trumpi, o etapai nustatyti. Jei jau gavote ikiteisminio tyrimo institucijos arba teismo raštą, kuo anksčiau nurodykite datą, įrašytą rašte, kad turinys būtų įvertintas tinkama tvarka.',
           ],
         },
         {
@@ -184,8 +184,8 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Įsteigimas ir struktūra',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) 2016 m. įsteigė advokatės ir advokatai, studijavę National Taiwan University (國立臺灣大學). Kinų pavadinimas 昊鼎 jungia ženklą 昊 („platus dangus“) su ženklu 鼎 („tvirtas pagrindas“) ir nusako kontoros kryptį nuo įsteigimo.',
-            'Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdymą ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui.',
-            'Be advokatų darbo nuo 2020 m. veikia ir Hovering Accounting Office, teikianti apskaitą ir mokesčių planavimą verslininkams ir privatiems asmenims, turintiems turto.',
+            'Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdymą ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui tenkinti.',
+            'Nuo 2020 m. šalia advokatų darbo veikia ir „Hovering Accounting Office“, teikiantis apskaitą ir mokesčių planavimą verslininkams ir privatiems asmenims, turintiems turto.',
           ],
         },
         {
@@ -198,7 +198,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kai į mus kreipiatės',
           paragraphs: [
-            'Gavus Jūsų santrauką, advokatė arba advokatas įvertina turinį ir tada kalba apie galimą darbo apimtį, dar reikalingus dokumentus ir tolesnius žingsnius. Mokesčių ar apskaitos klausimais kontora gali eiti su apskaitos padaliniu viena nuoseklia eiga.',
+            'Gavus Jūsų santrauką, advokatė arba advokatas įvertina turinį ir tada kalba apie galimą darbo apimtį, dar reikalingus dokumentus ir tolesnius žingsnius. Mokesčių ar apskaitos klausimais kontora gali tą pačią bylą tvarkyti kartu su apskaitos padaliniu.',
             'Kiekvienos bylos rezultatas priklauso nuo faktinių aplinkybių ir turimų dokumentų; rezultato nežadame. Jei Jums reikia saistančio atsakymo dėl savo padėties, dokumentus reikia aptarti su advokate arba advokatu viena iš keturių konsultacijos kalbų.',
           ],
         },
@@ -207,7 +207,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOKATAI',
       title: 'Tarptautinė Hovering komanda',
-      description: 'Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profiliai.',
+      description: 'Hovering advokačių ir advokatų, Korėjos operacijų vadovo ir susijusios apskaitos bei audito profiliai.',
       intro: '',
       sections: [],
     },
@@ -215,14 +215,14 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'IŠLAIDOS',
       title: 'Kaip nustatoma darbo apimtis ir išlaidos',
       description:
-        'Eilės paaiškinimas: pirmiausia darbo apimtis, tada išlaidų patvirtinimas, ir kodėl šiame puslapyje nėra kainyno.',
+        'Eigos paaiškinimas: pirmiausia darbo apimtis, tada išlaidų patvirtinimas, ir kodėl šiame puslapyje nėra kainyno.',
       intro:
         'Šis puslapis paaiškina, kaip nustatomos išlaidos, o ne jų dydį. Dydis priklauso nuo darbo apimties konkrečioje byloje ir turi prasmę tik tada, kai ši apimtis aiški.',
       sections: [
         {
           heading: 'Pirmiausia nustatoma darbo apimtis',
           paragraphs: [
-            'Tos pačios rūšies bylos gali reikalauti labai skirtingų pastangų, pagal šalių skaičių, turimus dokumentus, terminus, kurių reikia laikytis, ir pagal tai, ar procesas jau pradėtas. Todėl pirmasis žingsnis visada yra nustatyti, kas į darbą įeina ir kas ne.',
+            'Tos pačios rūšies bylos gali reikalauti labai skirtingų pastangų, priklausomai nuo šalių skaičiaus, turimų dokumentų ir terminų, kurių reikia laikytis, ir nuo to, ar procesas jau pradėtas. Todėl pirmasis žingsnis visada yra nustatyti, kas į darbą įeina ir kas ne.',
             'Santrauka, kurią atsiunčiate pradžioje, yra šios apimties pagrindas. Kuo aiškiau ji aprašo eigą, Jūsų prašymą ir terminus, tuo tiksliau galima nustatyti apimtį.',
           ],
         },
@@ -244,7 +244,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kodėl šiame puslapyje nėra tarifų',
           paragraphs: [
             'Išlaidos priklauso nuo pačios bylos: nuo pastangų, šalių skaičiaus, dokumentų, terminų ir nuo to, ar procesas jau vyksta. Iš anksto nustatytas skaičius Jūsų bylos išlaidų neparodytų. Todėl pirmiausia nustatome darbo apimtį ir tada pranešame Jums išlaidas, prieš pradedant darbą.',
-            'Be atlygio gali atsirasti teismo rinkliavos, institucijų ar trečiųjų asmenų išlaidos. Jos atskirtos nuo atlygio ir priklauso nuo atitinkamo proceso.',
+            'Šalia atlygio gali atsirasti teismo rinkliavos, institucijų ar trečiųjų asmenų išlaidos. Jos atskirtos nuo atlygio ir priklauso nuo atitinkamo proceso.',
           ],
         },
       ],
@@ -411,7 +411,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Saugojimo vieta ir paslaugų teikėjai',
           paragraphs: [
-            'Ši svetainė talpinama Vercel, o Jūsų pateikimas saugomas neviešoje šios paslaugos objektų saugykloje. El. laiškai siunčiami pašto paslauga, kuria naudojasi kontora.',
+            'Ši svetainė talpinama Vercel, o Jūsų pateikimas saugomas neviešoje šios paslaugos duomenų saugykloje. El. laiškai siunčiami pašto paslauga, kuria naudojasi kontora.',
             'Atskiri paslaugų teikėjų serveriai gali būti už Taivano ribų, todėl Jūsų duomenys ten gali būti saugomi ir tvarkomi. Kai saugojimo tikslas įvykdytas, duomenys ištrinami nedelsiant; duomenys, kuriuos reikia saugoti pagal taikomus teisės aktus, lieka šiam laikotarpiui. Prašymus dėl asmens duomenų priima wei@hoveringlaw.com.tw.',
           ],
         },
@@ -421,9 +421,9 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ĮSPĖJIMAS',
       title: 'Šio puslapio informacijos apimtis ir ribos',
       description:
-        'Bendra informacijos prigimtis, teisinė sistema ir prielaidos, kad susidarytų advokato ir kliento santykiai.',
+        'Bendra informacijos prigimtis, teisinė sistema ir sąlygos, kurioms esant atsiranda advokato ir kliento santykiai.',
       intro:
-        'Ši dalis paaiškina, ką šie lietuviški informaciniai puslapiai Jums gali padaryti ir ko negali.',
+        'Ši dalis paaiškina, kuo šie lietuviški informaciniai puslapiai gali padėti ir kuo negali.',
       sections: [
         {
           heading: 'Tik bendra informacija',

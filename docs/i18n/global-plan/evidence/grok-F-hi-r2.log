@@ -1,0 +1,116 @@
+WO-F-hi r2 — Grok 4.7 fix lane — 2026-09-22
+Locale: Hindi (Modern standard, India; Devanagari; formal आप)
+Workspace: /Users/son7/Projects/tseng-law-fix-hi-r2
+No git add/commit/push.
+
+Reviews: docs/i18n/global-plan/reviews/native/rounds/r2/hi-a.md (27 rows), hi-b.md (21 rows).
+Rules applied: RULEBOOK-FIX R2–R10 where an instance remained; ACCEPTED-ROUND skip rules.
+R2–R10 leftovers from round 1 were already in place (Korea tax note framed as country-specific, hiring/consultation lock, feminine forms for Wei Tseng). Unflagged prose was not reopened. Columns 005 and 006 had no instance of the swept patterns.
+
+## Rows applied
+
+Part a
+1 P1 guidance: missing comma restored, and क्षेत्र → उद्योग. «प्रक्रिया और समय, कानूनी रूप, निवेशक, उद्योग, बैंक और उपलब्ध कागजात के अनुसार भिन्न होते हैं।»
+2 P1 क्षेत्रीय = industry licence, not a region. Swept; see systemic counts. Geographic uses left (भूमि उपयोग क्षेत्र, अन्य क्षेत्र, treaty दूसरे क्षेत्र, 013 «क्षेत्र लिखना» = Taipei City).
+3 P1 001: संदर्भ → पूर्व कार्य का अभिलेख; पूँजी → निर्धारित पूँजी in that tender sentence.
+5 P1 009: चाहे → «इस पर निर्भर करते हुए कि गलती नियोक्ता की हो»; the right belongs to संबंधित पक्ष (रोकने या माँगने). The four source lines were not merged.
+6 P2 परिणाम = business performance, not a case outcome: आयात-निर्यात का प्रदर्शन (4), ताइवान में गतिविधि का रिकॉर्ड (2), नियोक्ता का कारोबारी प्रदर्शन (1). Outcome-परिणाम left.
+8 P2 002: नवीनतम खातों की तिथि के बाद उत्पन्न ऋण. Same «जन्मे ऋण» before cancellation in 004 → उत्पन्न ऋण (1). Other «से जन्मे अधिकार/दायित्व» left.
+9 P2 001 building: अनुमत उपयोग या उसके प्रबंधन नियम. Real co-ownership (007, 016) left.
+10 P2 नियोजन = employment: रोजगार संबंध (001), कर्मचारी नियुक्त करना (001 disclaimer), रोजगार (004 checklist).
+11 P2 007: अन्यायपूर्ण संवर्धन (不當得利), 4.
+12 P2 003: गैर-आर्थिक क्षति, heading and body (2).
+13 P2 003: बीमाकर्ता दुर्घटना में शामिल लोगों की भावनात्मक ज़रूरतों पर अक्सर पर्याप्त ध्यान नहीं देते।
+14 P2 llms discoveryNotice.hi: guaranteed visibility restored as सुनिश्चित दृश्यता. Not गारंटीकृत — the Hindi forbidden-token test matches /गारंटी/. The token llms.txt stays. consultationNotice and confidentialNotice were not rewritten.
+15 P2 team bio: उपर्युक्त समूहों में कोरिया, जापान और अन्य देशों के मुवक्किलों का साथ देती हैं।
+16 P2 inquiry option: मैं चारों में से किसी भी भाषा का उपयोग नहीं कर सकता/सकती — …
+17 P2 pricing FAQ: आपके भेजे हुए सार से.
+18 P2 002: तो उन अंतर्नियमों का भी पालन करना चाहिए। The later «प्रक्रिया माननी चाहिए» stays; प्रक्रिया is feminine.
+19 P2 008: विच्छेद वेतन पाना आपके सोचे से अधिक कठिन हो सकता है।
+20 P2 services: जिन पर हम वास्तव में काम करते हैं.
+21 P2 paralegal bio: सूचना विज्ञान की पढ़ाई … कार्यप्रवाह के जरिए विभागों के बीच आदान-प्रदान में सहायता करते हैं।
+22 P2 FAQ: दो एक जैसी दिखने वाली स्थितियों का अंत अलग-अलग हो सकता है।
+23 P2 001: निम्नलिखित सूची क्रम समझने का सार है.
+24 P2 center of life: 007 «जीवन इस समय कहाँ केंद्रित है»; evidence line «प्रत्येक पक्ष वास्तव में अभी कहाँ रहता है» (English is where they live now, not a second “center”); 016 «मृत्यु के समय उनका जीवन कहाँ केंद्रित था». «पर केंद्रित है» = “centers on” in 014 left.
+25 P2 007: निर्णय द्वारा तलाक का प्रभाव निर्णय के अंतिम होने पर निर्भर करता है।
+27 P2 dockets: Shang-Yi-Zi (上易字) for 644 and the same-series 477; Li-Jian-Zi (壢簡字) 236. URLs unchanged.
+
+Part b
+1 P1 015: हर प्रकार के व्यवसाय (question and answer). Same error «क्षेत्र की परवाह किए बिना» → व्यवसाय मद चाहे जो भी हो (English: whatever the business item).
+2 P2 010: साधारण लापरवाही … वास्तविक क्षति की राशि के बराबर तक (अधिकतम 1 गुना). The digit 1 stays; dropping it failed numbers («missing from translation: 1»).
+3 P2 011: एजेंट, मास्टर वितरक या वितरक।
+4 P2 011: केंद्रीय विज्ञापन संदेश छोटे अक्षरों वाले अस्वीकरण मात्र से अपने आप नहीं मिटता.
+5 P2 012: ब्रेक लगाने का समय (narrative and the expert sentence, 2). Visibility-दृश्यता in the next paragraph left; that is sight distance.
+6 P2 014: युक्तिसंगत आनुपातिक संबंध होना चाहिए।
+7 P2 vesting आरोपण in 014, and estate allocation in 016. दायित्व आरोपण and समाप्ति आरोपण left. Tax and cost आरोपण in 004 and 014 left.
+8 P2 014: आसानी से स्थान नहीं ले सकती।
+9 P2 016: विदेशी विवाह और तलाक के प्रमाण-पत्र तथा वंश-संबंध के दस्तावेज़ों.
+10 P2 016: कौन-सी संपत्ति किसे मिलेगी, including the will sentence.
+11 P2 017 link label: मोटर परिवहन व्यवसाय की संवीक्षा के विस्तृत नियम (汽車運輸業審核細則). URL unchanged.
+13 P2 015: the markdown link is closed; the Chinese gloss sits after the URL.
+14 P2 016: संरक्षकता … शुरू होती है / शुरू हो जाती है. The statutory condition (no parents, or both unable to exercise rights) stays. The suggested rewrite had dropped it.
+15 P2 018: समय-सारणी.
+17 P2 010: सावधानी के कर्तव्य / सावधानी का कौन-सा कर्तव्य (2).
+18 P2 011 responsible entity: जिम्मेदार इकाई (heading, statutory, central, and the distinguish-clause). Same sentence: विज्ञापन की विषय-वस्तु (English is the content of the advertising). 004 sweep: विधिक व्यक्ति (4), आवेदक (not आवेदक विषय), उत्तरदायी पक्ष.
+19 P2 011: वितरण के अभिलेख रखना.
+20 P2 013: the bank employee’s remark is two self-standing blocks («सीधे कहा:» / the review sentence). Blocks were not merged. The one-clause layout of 013 and 015 otherwise matches the source and was left.
+21 P2 018: प्रबंधक के बाद दूसरे या उससे आगे के विदेशी कर्मचारी … श्रम मंत्रालय (勞動部), उद्योग के अनुसार, … ऐसी ही सीमाएँ.
+
+## Rows skipped
+
+a4 — Not applied. pcode=G0340028 is the Business Tax Act (營業稅法). English 004 labels that URL “Article 10 of the Value-Added and Non-Value-Added Business Tax Act”. The suggested title 各類所得扣繳率標準 is a different instrument. See reviewer-wrong.
+a7 — Not applied. Adding (著作權) makes the Hindi services page annotate a Chinese term Vietnamese does not. guidance-disclosure-parity requires the same gloss set. Other locales are outside this lane.
+a26 — Lakh/crore grouping. ACCEPTED-ROUND skip. Western commas kept (TWD 1,570,000 and the column figures). Pinned “TWD 1.57M” was not touched.
+b12 — U+200B not deleted. Hindi 013 had 5 and 015 had 3, matching the Korean source. Removing them failed checkBlocks (013: 60 → 56, 015: 35 → 32) and the ZWSP count. Characters restored. The wording fixes in those files remain.
+b16 — Heading ## 7 / ## 8 not renumbered. English and Korean have the same gap. Renumbering changes digits the checker counts.
+
+## Systemic patterns and instance counts
+
+- क्षेत्रीय / क्षेत्र read as a region when the English is an industry, a licence, or a type of business: 25. Left on purpose: भूमि उपयोग क्षेत्र (土地使用分區), अन्य क्षेत्र (another locality), treaty दूसरे क्षेत्र, 013 naming the area (Taipei City), 017 अनुमत क्षेत्र (Kinmen/Lienchiang operating area).
+- परिणाम = 實績 / business performance, not a case outcome: 7. Outcome-परिणाम left.
+- नियोजन read as planning when the English is employment: 3.
+- “Center of life” calque: 3 (007 narrative, 007 checklist, 016 at death).
+- Docket codes with a readable name plus the Chinese gloss: 3.
+- विषय calquing 主體 / the responsible or legal person: 10, plus विज्ञापन की विषय-वस्तु (1). Topic-विषय (training subject, agenda, जाँच विषय) left. सूचीबद्धता का विषय left; that is “subject of a listing”, and the English is that a branch cannot be listed.
+- आरोपण = vesting or who receives an estate asset: 11. दायित्व आरोपण, समाप्ति आरोपण, and tax/cost attribution left.
+- U+200B deleted: 0 (8 restored).
+- One-clause bank quotation repaired without merging blocks: 2 lines in 013.
+- Gender: Wei Tseng stays feminine where Hindi marks it. 016 संरक्षकता now agrees (feminine). The male bank employee’s कहा stays masculine. अंतर्नियम agreement is grammatical gender of the noun, not her gender.
+
+## Reviewer got wrong (not applied)
+
+- a4: the shared URL is the Business Tax Act, not the non-resident dividend withholding schedule. The Hindi 001 label for that same URL already says “अनिवासियों को दिए गए लाभांश पर स्रोत कटौती दर”, which is what the review treated as the correct identification. English 001 calls it “General Business Tax Rate”. I did not copy the dividend label onto 004, and I did not rewrite the unflagged 001 label (that would be a new legal-title change, not this row).
+- b16: the outline gap is in the English and the Korean. It is not a Hindi-only missing section.
+- b12: the zero-width spaces are in the Korean source at the same counts. The checker will not allow them to be deleted.
+- a26: Indian lakh grouping is what a native editor would write, and the review is right about that. ACCEPTED-ROUND forbids it because the checker does not parse it. Not applied.
+- a14 suggested गारंटीकृत. That token is banned by the Hindi advertising scan even inside a disclaimer. The sentence now disclaims सुनिश्चित दृश्यता, which is the same proposition.
+- a7 is a real missing gloss. It cannot be added in Hindi alone without failing gloss-set parity.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-hi-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-hi --lang hi 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=74
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hi src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+
+The count includes this log, plus pre-existing docs/i18n/global-plan/WO-F-hi.txt (modified) and untracked hi-a.md / hi-b.md. This lane did not edit those three. No test file was changed: the two failures (गारंटी token, extra 著作權 gloss) were avoided in the Hindi strings instead of loosening the tests.

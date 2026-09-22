@@ -681,7 +681,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'ये पृष्ठ हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
     discoveryNotice:
-      'llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या दृश्यता का वादा नहीं करती।',
+      'llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या सुनिश्चित दृश्यता का वादा नहीं करती।',
     confidentialNotice:
       'क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
   },
@@ -689,7 +689,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Den här vägledningen är skriven på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska.',
     discoveryNotice:
-      'Filen llms.txt är bara en karta för att hitta offentliga sidor; den lovar inte sökplacering, rekommendation, rekommendation från artificiell intelligens eller utlovad synlighet.',
+      'Filen llms.txt är bara en översikt för att hitta offentliga sidor; den lovar inte sökplacering, inte en rekommendation, inte en rekommendation från artificiell intelligens och inte säkerställd synlighet.',
     confidentialNotice:
       'Eftersom originaltexten sparas, skriv i inledningen inget som ännu inte behövs, till exempel passnummer, identitetsnummer eller kontouppgifter.',
   },
@@ -697,7 +697,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk.',
     discoveryNotice:
-      'Filen llms.txt er kun et kort til at finde offentlige sider; den lover ikke søgeplacering, anprisning, anbefaling fra kunstig intelligens eller garanteret synlighed.',
+      'Filen llms.txt er kun et kort til at finde offentlige sider; den lover ikke søgeplacering, anbefaling, anbefaling fra kunstig intelligens eller garanteret synlighed.',
     confidentialNotice:
       'Fordi originalteksten gemmes, skriv i begyndelsen ikke noget, der endnu ikke er nødvendigt, for eksempel pasnummer, identitetsnummer eller kontooplysninger.',
   },
@@ -713,7 +713,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
     discoveryNotice:
-      'Tiedosto llms.txt on vain kartta julkisten sivujen löytämiseen; se ei lupaa hakusijaa, suositusta, tekoälyn suositusta eikä taattua näkyvyyttä.',
+      'Tiedosto llms.txt on vain yleiskatsaus julkisten sivujen löytämiseen; se ei lupaa hakusijaa, suositusta, tekoälyn suositusta eikä taattua näkyvyyttä.',
     confidentialNotice:
       'Koska alkuperäinen teksti säilytetään, älkää alkuvaiheessa kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.',
   },
@@ -721,7 +721,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, zaštítění, doporučení umělé inteligence ani zaručenou viditelnost.',
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, schválení, doporučení umělé inteligence ani zaručenou viditelnost.',
     confidentialNotice:
       'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
   },

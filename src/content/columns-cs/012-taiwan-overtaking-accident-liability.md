@@ -45,13 +45,13 @@ Rodiny A a B nejprve považovaly náhlou změnu pruhu vozidla č. 2 za hlavní p
 
 Podle výsledku posudku nesl hlavní odpovědnost za tuto srážku A. Tento závěr byl omezen na skutkové okolnosti této věci. Posudek zohlednil společně to, že A chtěl předjet 2 vozidla vpředu jedoucí za sebou, že vjel do protisměrného pruhu, že jel rychlostí, která téměř nenechávala čas zabrzdit, že chyběly předepsané signály klaksonu a světel, jakož i pohyb změny pruhu vozidla č. 2, uspořádání silnice a pruhů a ostatní zajištěné důkazy.
 
-To, že v některých věcech takové výsledky posudku nastanou, neznamená, že jedno vynechání předepsaného signálu vždy určí odpovědnost. Zavinění (過失) při nehodě při předjíždění závisí na místě nehody, uspořádání pruhů, rychlosti, pohybech vozidel, signálech, časových intervalech, výhledu a ostatních důkazech.
+Tento závěr, omezený na skutkové okolnosti této věci, neznamená, že jedno vynechání předepsaného signálu vždy určí odpovědnost. Zavinění (過失) při nehodě při předjíždění závisí na místě nehody, uspořádání pruhů, rychlosti, pohybech vozidel, signálech, časových intervalech, výhledu a ostatních důkazech.
 
 ## Body k ověření při posuzování odpovědnosti za nehodu
 
 Před předjížděním je třeba nejprve ověřit, zda místo nebo dopravní situace spadají pod zákaz předjíždění. Pokud se uplatní postup stejného pruhu, je třeba dát předepsaný signál klaksonu nebo světel, aniž by se vozidlo vpředu nutilo k uvolnění, vyčkat jasného projevu uvolnění a dokončit předjíždění s dostatečným odstupem a bezpečnou vzdáleností návratu.
 
-Dodržování čl. 101 je důležité, ale samo o sobě nezajišťuje ani vyhnutí se nehodě, ani pozdější výsledek posudku nebo řízení. Řidiči musí ponechat dodatečnou bezpečnostní rezervu a přizpůsobit se situaci vpředu.
+Dodržování čl. 101 je důležité, ale samo o sobě nezaručuje ani odvrácení nehody, ani určitý výsledek pozdějšího posudku nebo řízení. Řidiči musí ponechat dodatečnou bezpečnostní rezervu a přizpůsobit se situaci vpředu.
 
 Jako doplněk lze nahlédnout [ilustraci pravidel a postupu předjíždění](https://gonews.com.tw/car/daily/21934/). Protože jde o sekundární zdroj, při ověřování právních podmínek je třeba číst také aktuální oficiální předpisy.
 

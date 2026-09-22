@@ -1153,7 +1153,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'जापानी (日本語)',
       ko: 'कोरियाई (한국어)',
       'needs-method-confirmation':
-        'चारों में से कोई भाषा मैं उपयोग नहीं कर सकता/सकती — संचार मार्ग की पुष्टि आवश्यक है',
+        'मैं चारों में से किसी भी भाषा का उपयोग नहीं कर सकता/सकती — संचार मार्ग की पुष्टि आवश्यक है',
     },
   },
   sv: {
@@ -1212,7 +1212,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Rådgivningen foregår kun på fire sprog: engelsk, kinesisk (中文), japansk og koreansk.',
     methodConfirmationNotice:
-      'Hvis du ikke kan bruge noget af de fire sprog, skal du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
+      'Hvis du ikke behersker noget af de fire sprog, skal du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
     preparationNotice:
       'Du må skrive resuméet på dit eget sprog. Originalteksten gemmes, som du har skrevet den, og oversættes ikke automatisk.',
     heading: 'Send en anmodning om rådgivning',
@@ -1330,7 +1330,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalLanguageLabel: 'Kieli, jolla kirjoitatte',
     originalLanguagePlaceholder:
       'Esimerkiksi suomi, englanti, kiina tai muu kieli',
-    preferredConsultationLanguageLabel: 'Kieli, jota toivotte neuvontaan',
+    preferredConsultationLanguageLabel: 'Toivomanne neuvontakieli',
     originalTextLabel: 'Lyhyt kuvaus asiasta (omalla kielellänne)',
     originalTextPlaceholder:
       'Kertokaa, mitä on tapahtunut, millaista apua tarvitsette, ja määräaika, jos sellainen on. Älkää kirjoittako passinumeroa, henkilötunnusta älkääkä tilitietoja.',

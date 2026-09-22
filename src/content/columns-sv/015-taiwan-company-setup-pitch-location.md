@@ -19,17 +19,17 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 När du startar restaurangverksamhet är det första problemet att hitta driftställets adress (營業地址).
 
-Utöver marknadsläget
+Marknadsläget är inte den enda frågan.
 
-är en annan viktig punkt
+En annan viktig punkt är platsens tillåtna användning.
 
-om adressen ligger i ett område där ”restaurangverksamhet” får bedrivas.
+Adressen måste ligga i ett område där ”restaurangverksamhet” får bedrivas.
 
 ​
 
-Om du startar verksamheten i staden Taipei
+Om du startar verksamheten i staden Taipei finns ett särskilt system.
 
-kan du använda systemet för ”förhandsfråga om driftställe” (營業場所預先查詢) vid handelskontoret i staden Taipei (臺北市商業處).
+Du kan använda systemet för ”förhandsfråga om driftställe” (營業場所預先查詢) vid handelskontoret i staden Taipei (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ För kontrollen måste du dock ladda upp ”utdrag ur byggnadsregistrering av ty
 
 Vem som helst kan hos lantmäterikontoret (地政事務所) begära ”utdrag ur byggnadsregistrering av typ 2” för en valfri adress.
 
-Om du har svårt att själv besöka lantmäterikontoret (地政事務所)
+Om du har svårt att själv besöka lantmäterikontoret (地政事務所) finns andra vägar.
 
-kan du be en bekant i Taiwan, hyresvärden, en fastighetsmäklare eller en advokat om hjälp.
+Du kan be en bekant i Taiwan, hyresvärden, en fastighetsmäklare eller en advokat om hjälp.
 
 Om kontrollresultatet visar att restaurangverksamhet inte är möjlig kan stadsförvaltningen senare, vid registrering av den juridiska personen (公司登記), vägra registreringen.
 
@@ -59,9 +59,9 @@ Vid bolagsregistrering skrivs dock ofta flera grenar in samtidigt, och man vill 
 
 I praktiken behöver därför inte alla grenar kontrolleras vid bolagsregistreringen.
 
-Enligt [driftsanvisningen för upplysningstjänsten om driftställen i staden Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) och staden Taipeis gällande vägledning
+Följande följer [driftsanvisningen för upplysningstjänsten om driftställen i staden Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) och staden Taipeis gällande vägledning.
 
-ska från och med den 1 januari 2023, vid ansökan om registrering av bildande, flytt av säte eller tillägg av verksamhetsgrenar för bolag eller handel (inklusive filial (分公司) och underenhet (分支機構)), resultatet av förhandsfrågan om driftställe **obligatoriskt** fogas till registreringsansökan, oberoende av bransch.
+Från och med den 1 januari 2023 ska, vid ansökan om registrering av bildande, flytt av säte eller tillägg av verksamhetsgrenar för bolag eller handel (inklusive filial (分公司) och underenhet (分支機構)), resultatet av förhandsfrågan om driftställe **obligatoriskt** fogas till registreringsansökan, oberoende av bransch.
 
 Listan nedan över ”verksamhetsgrenar som handelskontoret kontrollerar på eget initiativ” (主動查詢之營業項目) avser de grenar som handelskontoret under registreringsprövningen på eget initiativ frågar extra (隨案主動查詢) när grenen står i ansökan men saknas i det bifogade resultatet; att en gren inte står på listan innebär inte att frågan är undantagen.
 
@@ -71,7 +71,7 @@ Om man öppnar på en plats där restaurangverksamhet inte är möjlig kan den b
 
 ”verksamhetsgrenar som handelskontoret kontrollerar på eget initiativ” (主動查詢之營業項目)
 
-Det är huvudpunkterna; vid ytterligare frågor kan du vända dig till en advokat i Taiwan.
+Därmed är genomgången avslutad. Vid ytterligare frågor kan du vända dig till en advokat i Taiwan.
 
 Förvaltningsmyndigheternas regler kan ändras ofta; före registrering av den juridiska personen bör du kontrollera den senaste regleringen.
 

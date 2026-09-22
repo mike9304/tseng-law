@@ -17,7 +17,7 @@ Na základě věci, v níž se korejský vysokoškolský student zranil, když v
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Nehoda nastala v posilovně v Tchaj-čungu (臺中) při tréninku mrtvého tahu (硬舉) vedeném trenérem. Po úrazu nestačí setrvat jen u faktu, že k nehodě došlo uvnitř posilovny; je třeba společně posoudit sportovní zkušenost a zdravotní stav uživatele, druh cvičení a zátěž, vysvětlení a pokyny trenéra, pohyb a reakci v onom okamžiku, příčinnou souvislost (因果關係) mezi úrazem a cvičením a dokumenty, které podpírají škodu.
+Nehoda nastala v posilovně v Tchaj-čungu (臺中) při tréninku mrtvého tahu (硬舉) vedeném trenérem. Po úrazu nestačí setrvat jen u faktu, že k nehodě došlo uvnitř posilovny; je třeba společně posoudit sportovní zkušenost a zdravotní stav uživatele, druh cvičení a zátěž, vysvětlení a pokyny trenéra, pohyb a reakci v onom okamžiku, příčinnou souvislost (因果關係) mezi úrazem a cvičením a podklady, které uplatněnou škodu dokládají.
 
 Advokátka Wei Tseng zastupovala žalobce, korejského studenta, jako procesní zástupkyně (訴訟代理人). Okresní soud v Tchaj-čungu 24. 1. 2022 v rozsudku 1. instance ve spotřebitelské věci č. 7 roku 109 kalendáře Čínské republiky (民國109年度消字第7號) nařídil žalovanému zaplatit [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
 
@@ -45,9 +45,9 @@ Názvy tiskových zpráv, internetových příspěvků a právních komentářů
 
 [Příspěvek na PTT: korejský vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu 90 kg… v 1. instanci příkaz posilovně zaplatit 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blog: úraz mrtvým tahem 90 kg u korejského vysokoškolského studenta o hmotnosti 70 kg a náhrada přes 1.000.000 TWD… byla vina posilovny? Jaký je postoj cvičící osoby?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blog: úraz mrtvým tahem 90 kg u korejského vysokoškolského studenta o hmotnosti 70 kg a náhrada přes 1.000.000 TWD… byla vina posilovny? Jaký je přístup osoby, která cvičí?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blog: úraz mrtvým tahem 90 kg u korejského vysokoškolského studenta o hmotnosti 70 kg a náhrada přes 1.000.000 TWD… byla vina posilovny? Jaký je postoj cvičící osoby?](https://blog.udn.com/blackjack/179081715)
+[Blog: úraz mrtvým tahem 90 kg u korejského vysokoškolského studenta o hmotnosti 70 kg a náhrada přes 1.000.000 TWD… byla vina posilovny? Jaký je přístup osoby, která cvičí?](https://blog.udn.com/blackjack/179081715)
 
 ![Právní komentář: vysokoškolský student, prasknutí meziobratlové ploténky při mrtvém tahu… v 1. instanci příkaz známé posilovně zaplatit 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
@@ -61,15 +61,15 @@ Názvy tiskových zpráv, internetových příspěvků a právních komentářů
 
 **Došlo u korejského vysokoškolského studenta k prasknutí meziobratlové ploténky, když při osobním tréninku prováděl mrtvý tah 90 kg?**
 
-Praktický význam této věci spočívá v tom, že ukazuje, že odpovědnost se neurčuje hned samotným faktem, že k úrazu došlo v posilovně. Obsah povinnosti bezpečnosti (安全義務), která tíží poskytovatele služby, konkrétní akt pokynu a porušení povinnosti péče (注意義務), příčinná souvislost mezi úrazem a jednáním a rozsah škody se posuzují podle dokumentů každé věci. Podmínky a lhůty trestního řízení a občanského řízení jsou rovněž odlišné, proto je třeba hned po nehodě stopy uspořádat zvlášť.
+Praktický význam této věci spočívá v tom, že ukazuje, že odpovědnost se neurčuje hned samotným faktem, že k úrazu došlo v posilovně. Obsah povinnosti bezpečnosti (安全義務), která tíží poskytovatele služby, konkrétní pokyn a porušení povinnosti péče (注意義務), příčinná souvislost mezi úrazem a jednáním a rozsah škody se posuzují podle dokumentů každé věci. Podmínky a lhůty trestního řízení a občanského řízení jsou rovněž odlišné, proto je třeba podklady hned od počátku uspořádat odděleně pro trestní a pro občanské řízení.
 
 Níže uvedené je obecná informace k vysvětlení sporů o úraz v posilovně na Tchaj-wanu; není právním stanoviskem ke konkrétní věci. Skutečná práva a způsob postupu se mohou lišit podle smluvního vztahu, okolností nehody, příčiny a stupně úrazu, jednání stran, podmínek pojistky, zajištěných důkazů a rozhodného práva.
 
 ## 1. Po úrazu v posilovně na Tchaj-wanu, jaké právní postupy lze posoudit?
 
-[Čl. 7 tchajwanského zákona o ochraně spotřebitele (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že když podnik poskytuje službu, musí zajistit, aby tato služba měla bezpečnost, kterou lze rozumně očekávat podle odborného nebo technického měřítka v okamžiku poskytnutí.
+[Čl. 7 tchajwanského zákona o ochraně spotřebitele (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že když podnik poskytuje službu, musí zajistit, aby tato služba měla bezpečnost, kterou lze rozumně očekávat podle odborné nebo technické úrovně v okamžiku poskytnutí.
 
-To neznamená, že odpovědnost podniku nebo trenéra je uznána pokaždé, když k úrazu dojde v posilovně. Je třeba posuzovat věc po věci, jaká konkrétní povinnost péče existovala, zda byla porušena, zda je příčinná souvislost mezi porušením a úrazem, zda vznikla skutečná škoda, jaké námitky má protistrana a zda existuje důkaz podpírající každé tvrzení a každou námitku.
+To neznamená, že odpovědnost podniku nebo trenéra je uznána pokaždé, když k úrazu dojde v posilovně. Je třeba posuzovat věc po věci, jaká konkrétní povinnost péče existovala, zda byla porušena, zda je příčinná souvislost mezi porušením a úrazem, zda vznikla skutečná škoda, jaké námitky má protistrana a zda existuje důkaz dokládající každé tvrzení a každou námitku.
 
 Jsou-li splněny zákonné znaky trestného činu ublížení na zdraví z nedbalosti (過失傷害), lze posoudit trestní oznámení (告訴). Lze také posoudit občanský nárok na náhradu škody, avšak který právní základ se uplatní — smluvní odpovědnost, delikt (侵權行為) nebo ochrana spotřebitele — i rozsah odpovědnosti se liší podle konkrétních skutkových okolností. To, že u jedné nehody lze posoudit více postupů, neznamená, že je třeba je všechny podstoupit, ani že úspěch jedné ze stran je předem dán.
 
@@ -79,7 +79,7 @@ Podle [čl. 287 tchajwanského trestního zákoníku (刑法)](https://law.moj.g
 
 Právo žádat náhradu škody z deliktu podle [čl. 197 tchajwanského občanského zákoníku (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) zaniká zásadně, není-li uplatněno do 2 let od okamžiku, kdy se poškozený dozvěděl o škodě i o osobě povinné k náhradě, a zaniká také, když od deliktu uplynulo 10 let.
 
-Pokud však přichází v úvahu jiný důvod nároku, jako smluvní odpovědnost, nebo pokud se uplatní jiná pravidla o počátku běhu, průběhu, přerušení atd., může se to lišit podle skutkových okolností. Lhůtu nelze určovat jen podle data nehody nebo diagnózy; bezpečnější je včas a jednotlivě ověřit možné základy nároku a referenční data.
+Pokud však přichází v úvahu jiný důvod nároku, jako smluvní odpovědnost, nebo pokud se uplatní jiná pravidla o počátku běhu, průběhu, přerušení atd., může se to lišit podle skutkových okolností. Lhůtu nelze určovat jen podle data nehody nebo diagnózy; bezpečnější je včas a jednotlivě ověřit každý možný základ nároku a den, od kterého mu začíná běžet lhůta.
 
 ## 3. Hned po nehodě, jaké důkazy je třeba zachovat a jak?
 

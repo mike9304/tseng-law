@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Pääkuva](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Kuten aiemmin on selostettu, Taiwanissa työntekijöiden ei ole helppoa saada erorahaa (資遣費).
+Taiwanissa erorahan (資遣費) saaminen ei ole itsestään selvää.
 
 ​
 

@@ -13,14 +13,14 @@ faq:
   - q: "Måste företaget betala avgångsvederlag även vid disciplinär uppsägning?"
     a: "Nej. Om den anställda handlar olagligt, allvarligt bryter mot arbetsreglerna eller är frånvarande utan giltigt skäl 3 dagar i följd (artikel 12 i lagen om arbetsnormer, 勞動基準法第12條), kan företaget säga upp utan varsel och behöver inte betala avgångsvederlag. Däremot kräver ekonomisk uppsägning (artikel 11) förhandsvarsel och utbetalning av avgångsvederlag."
   - q: "Hur beräknas avgångsvederlaget i Taiwan?"
-    a: "För varje fullgjort tjänsteår (1 år) som fyllts måste arbetsgivaren betala 0,5 månaders genomsnittslön som avgångsvederlag, högst 6 månaders lön. Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per ett år, utan tak."
+    a: "För varje fullgjort tjänsteår (1 år) som fyllts måste arbetsgivaren betala 0,5 månaders genomsnittslön som avgångsvederlag, högst 6 månaders lön. Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per 1 år, utan tak."
 ---
 
 # Avgångsvederlag i Taiwan: när det utgår och när det inte gör det
 
 ![Huvudbild](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Jag är advokaten Wei Tseng (曾雋崴), verksam i Taiwan.
+Advokat Wei Tseng (曾雋崴) är verksam i Taiwan.
 
 Texten går igenom avgångsvederlag (資遣費) i Taiwan.
 
@@ -48,13 +48,13 @@ kan företaget säga upp utan att betala avgångsvederlag.
 
 ​
 
-Jag sammanfattar detta i en enkel tabell.
+Detta sammanfattas i en enkel tabell.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 | **Typ** | **Ekonomisk uppsägning (資遣員工, 經濟解僱)** | **Disciplinär uppsägning (解僱員工, 懲戒解僱)** | **Den anställdas egen uppsägning**  **員工自請離職** |
 | Betydelse | Om det hos arbetsgivaren finns behov av personaljustering på grund av företagets situation, ligger skälet på arbetsgivarens sida och inte i den anställdas ansvar. Därför måste arbetsgivaren iaktta varseltiden (預告期間) och betala avgångsvederlag, för att på ett balanserat sätt kompensera den anställdas nackdel. | Om den anställda begår en olaglig eller olämplig handling kan arbetsgivaren omedelbart avsluta arbetsavtalet (勞動契約) utan förhandsvarsel och behöver inte betala avgångsvederlag. Detta är en av arbetsgivarens disciplinära befogenheter. | Den anställda är fri att avsluta avtalet när som helst, men måste, beroende på anställningstid, iaktta varseltiden, så att arbetsgivaren kan genomföra överlämning och söka ersättare. |
-| Villkor | Finns  (artikel 11 i Taiwans lag om arbetsnormer) | Finns  (artikel 12 i Taiwans lag om arbetsnormer) | Inga |
+| Villkor | Ja (artikel 11 i Taiwans lag om arbetsnormer) | Ja (artikel 12 i Taiwans lag om arbetsnormer) | Inga |
 | Förhandsvarsel | Krävs | Krävs inte | Krävs |
 | Formell tröskel (inget utlovat utfall) | lägre | högre | lägre |
 | Om företaget måste betala avgångsvederlag (資遣費) | Krävs | Krävs inte | Krävs inte |
@@ -62,7 +62,7 @@ Jag sammanfattar detta i en enkel tabell.
 
 > I Taiwan, för varje fullgjort år av tjänstgöringstid (年資, 1 år) som fyllts,
 > måste arbetsgivaren betala 0,5 månaders genomsnittslön (平均工資) som avgångsvederlag.
-> (högst 6 månaders lön) Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per ett år, utan tak.
+> (högst 6 månaders lön) Denna formel gäller den tjänstgöringstid som artikel 12 i lagen om arbetstagares pension (勞工退休金條例) tillämpas på; för den tjänstgöringstid som artikel 17 i lagen om arbetsnormer (勞動基準法) tillämpas på betalas 1 månads genomsnittslön per 1 år, utan tak.
 
 ​
 
@@ -82,7 +82,7 @@ och inte gå med på det företaget vill.
 
 ​
 
-Jag berättar om ett ärende som jag har hanterat.
+Ett ärende som byrån har hanterat illustrerar frågan.
 
 Det finns det kända företaget A, med etableringar i hela Taiwan.
 
@@ -94,7 +94,7 @@ för att sänka personalkostnaderna,
 
 att kalla in högt avlönade och länge anställda till samtal i tur och ordning
 
-Då var min part, herr B, anställd sedan mer än 10 år hos företaget A
+Den berörda parten, herr B, var då anställd sedan mer än 10 år hos företaget A
 
 och säljaren med bäst resultat i den mellersta regionen i Taiwan.
 

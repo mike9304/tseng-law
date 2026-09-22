@@ -1,5 +1,5 @@
 ---
-title: "Undtagelser, hvor arbejdstagere trods egen opsigelse kan modtage fratrædelsesgodtgørelse (資遣費)"
+title: "Undtagelser, hvor arbejdstagere trods egen opsigelse kan modtage godtgørelse ved afskedigelse (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13. september 2025"
@@ -9,17 +9,17 @@ categories:
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 
-# Undtagelser, hvor arbejdstagere trods egen opsigelse kan modtage fratrædelsesgodtgørelse (資遣費)
+# Undtagelser, hvor arbejdstagere trods egen opsigelse kan modtage godtgørelse ved afskedigelse (資遣費)
 
 ![Hovedbillede](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Som tidligere belyst er det i Taiwan ikke let for arbejdstagere at modtage fratrædelsesgodtgørelse (資遣費).
+I Taiwan er det ikke let for arbejdstagere at modtage godtgørelse ved afskedigelse (資遣費).
 
 ​
 
-Navnlig når arbejdstagere selv siger op (自請離職),
+Navnlig når arbejdstagere selv siger op (自請離職), er udgangspunktet et andet.
 
-kan de ikke modtage fratrædelsesgodtgørelse (artikel 18 i loven om arbejdsnormer, 勞動基準法),
+De kan da ikke modtage godtgørelse ved afskedigelse (artikel 18 i loven om arbejdsnormer, 勞動基準法),
 
 og dette adskiller sig fra reglerne i visse andre lande — Korea er ét eksempel.
 
@@ -29,9 +29,9 @@ Der findes imidlertid **undtagelsestilfælde**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-I de følgende særlige situationer skal arbejdsgiveren udbetale fratrædelsesgodtgørelse til arbejdstageren, også når denne selv siger op (artikel 14 i loven om arbejdsnormer, der anvender artikel 17 tilsvarende, 勞動基準法第14條):
+I de følgende særlige situationer skal arbejdsgiveren udbetale godtgørelse ved afskedigelse til arbejdstageren, også når denne selv siger op (artikel 14 i loven om arbejdsnormer, der anvender artikel 17 tilsvarende, 勞動基準法第14條):
 
-1. Når arbejdsgiveren ved indgåelsen af arbejdsaftalen (勞動契約) afgiver en urigtig viljeserklæring (虛偽意思表示), så arbejdstageren tager fejl deraf, og der består fare for skade
+1. Når arbejdsgiveren ved indgåelsen af arbejdsaftalen (勞動契約) bevidst afgiver urigtige oplysninger (虛偽意思表示), så arbejdstageren tager fejl deraf, og der består fare for skade
 
 (for eksempel når arbejdsgiveren lover at sende arbejdstageren efter tiltrædelsen til en i virkeligheden ikke-eksisterende udenlandsk filial)
 
@@ -47,49 +47,49 @@ I de følgende særlige situationer skal arbejdsgiveren udbetale fratrædelsesgo
 
 ​
 
-De hyppigste eksempler er, at arbejdsgiveren
+De hyppigste eksempler vedrører arbejdsgiverens forsømmelser.
 
-ikke udbetaler lønnen (工資) rettidigt,
+Arbejdsgiveren udbetaler ikke lønnen (工資) rettidigt.
 
-ikke udbetaler overarbejdsvederlag (加班費)
+Arbejdsgiveren udbetaler ikke overarbejdsvederlag (加班費).
 
-eller ikke tilslutter arbejdstageren til arbejdsforsikringen (勞保) eller sygeforsikringen (健保).
+Arbejdsgiveren tilslutter ikke arbejdstageren til arbejdsforsikringen (勞保) eller sygeforsikringen (健保).
 
-I sådanne tilfælde skal arbejdsgiveren også da udbetale fratrædelsesgodtgørelse, når arbejdstageren selv bringer arbejdsaftalen til ophør.
+I sådanne tilfælde skal arbejdsgiveren også da udbetale godtgørelse ved afskedigelse, når arbejdstageren selv bringer arbejdsaftalen til ophør.
 
 ​
 
-Loven om arbejdsnormer (勞動基準法) bestemmer imidlertid,
+Loven om arbejdsnormer (勞動基準法) bestemmer imidlertid en frist.
 
-at arbejdstagere, der vil bringe arbejdsaftalen til ophør efter punkt 1 eller punkt 6 ovenfor (for eksempel på grund af manglende forsikringstilknytning),
+Arbejdstagere, der vil bringe arbejdsaftalen til ophør efter punkt 1 eller punkt 6 ovenfor (for eksempel på grund af manglende forsikringstilknytning), skal iagttage fristen.
 
-skal bringe arbejdsaftalen til ophør inden **30 dage** fra den dag, hvor de kender situationen,
+De skal bringe arbejdsaftalen til ophør inden **30 dage** fra den dag, hvor de kender situationen.
 
-eller (ved punkt 6) inden **30 dage** fra den dag, hvor de kender skadefølgen.
+Ved punkt 6 skal ophøret ske inden **30 dage** fra den dag, hvor de kender skadefølgen.
 
 Derfor skal arbejdstagere holde fristen nøjagtigt for øje.
 
 ​
 
-Med andre ord:
+Reglen kan sammenfattes således.
 
-Taiwans ret, hvad enten skylden ligger hos selskabet
+Efter taiwansk ret afhænger det af, om skylden ligger hos selskabet.
 
-eller hos arbejdstageren,
+Det afhænger også af, om skylden ligger hos arbejdstageren.
 
-anerkender hos begge sider retten til ikke at udbetale fratrædelsesgodtgørelse eller at kræve fratrædelsesgodtgørelse.
+Godtgørelse ved afskedigelse kan nægtes eller kræves, alt efter hvilken side der har skylden.
 
-Sommetider ligger skyld hos begge sider,
+Sommetider ligger skylden hos begge sider.
 
-og når begge tvistes,
+Når begge tvistes, får rækkefølgen betydning.
 
-kan efter, hvem der først med tilstrækkelig grund bringer aftalen til ophør,
+Det afgørende er, hvem der først og med tilstrækkelig grund bringer aftalen til ophør.
 
-fratrædelsesgodtgørelsen nægtes eller kræves.
+Godtgørelsen ved afskedigelse kan da nægtes eller kræves.
 
-Derfor er i taiwanske arbejdskonflikter (勞資糾紛)
+I taiwanske arbejdskonflikter (勞資糾紛) er tidspunktet derfor afgørende.
 
-**tidspunktet** meget vigtigt.
+Netop **tidspunktet** er meget vigtigt.
 
 Den, der forbereder sig i forvejen, står i de fleste tilfælde stærkere til at varetage sine rettigheder.
 

@@ -11,9 +11,9 @@ faq:
   - q: "Musí každá činnost související s logistikou na Tchaj-wanu získat povolení automobilové nákladní dopravy (汽車貨運業)?"
     a: "Povolení automobilové nákladní dopravy není potřeba vždy. „Logistika“ je široký praktický pojem; potřeba povolení se neurčuje jen podle názvu společnosti nebo odvětví zapsaných v rejstříku. Pokud společnost přijímá protiplnění a dopravuje cizí náklad nákladním automobilem, může tato činnost tvořit automobilovou nákladní dopravu. Naproti tomu skladování, balení, provoz systémů, odeslání v postavení odesílatele (貨主), zasílatelství (運送承攬) a obdobné činnosti je třeba posoudit jednotlivě podle smluvního vztahu, dopravní odpovědnosti, obsahu protiplnění a skutečného stavu provozu vozidel."
   - q: "Jaké jsou požadavky na kapitál, vozidla a postup k novému založení běžné automobilové nákladní dopravy?"
-    a: "Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 jednotek a pro činnost provozovanou na Ťin-menu (金門) a v Lien-ťiangu neboli Ma-cu (連江・馬祖) 10.000.000 TWD a nejméně 5 jednotek, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz v osobním vlastnictví žadatele, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis bydliště (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy (交通部), povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť."
+    a: "Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 nových nákladních automobilů a pro činnost provozovanou na Ťin-menu (金門) nebo v Lien-ťiangu (Ma-cu, 連江・馬祖) 10.000.000 TWD a nejméně 5 nových nákladních automobilů, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz v osobním vlastnictví žadatele, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis v evidenci domácností (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy (交通部), povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť."
   - q: "Pokud se nabude společnost, která již má povolení, získá se automaticky i provozní licence automobilové nákladní dopravy?"
-    a: "Ne. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a tabulky k obchodnímu použití (營業用車輛牌照), parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu."
+    a: "Ne. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a registrační značky k obchodnímu použití (營業用車輛牌照), parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu."
   - q: "Pokud se skutečná doprava svěří tchajwanskému podnikateli s povolením, nepotřebuje vaše společnost ani povolení automobilové nákladní dopravy, ani pracovní povolení?"
     a: "Nelze to posoudit jednotně. Posouzení se liší podle toho, zda ten, kdo práci svěřuje, má postavení odesílatele nebo zprostředkovatele dopravy, nebo zda přijímá protiplnění přímo jako dopravce (運送人) v přepravní smlouvě. Je třeba ověřit provozní licenci a obchodní vozidla protistrany a sladit smluvní roli se skutečným provozem, aby nedošlo k půjčení licence (借牌) ani k dopravě bez povolení. Kromě toho samotné postavení akcionáře nebo investora nezakládá právo pracovat na Tchaj-wanu. Cizinec, který skutečně pracuje nebo vykonává řízení podniku, musí zvlášť před zahájením práce ověřit, zda potřebuje pracovní povolení (工作許可) a jaký je jeho pobytový status."
 ---
@@ -38,7 +38,7 @@ Při stanovení rozsahu činnosti je třeba konkrétně uspořádat alespoň ná
 
 - Kdo uzavírá přepravní smlouvu s odesílatelem a kdo přijímá dopravné nebo protiplnění za logistickou službu
 - Kdo nese odpovědnost za ztrátu, poškození a zpoždění nákladu a za škodu třetí osobě
-- Kdo spravuje vozidla, tabulky k obchodnímu použití (營業用車輛牌照), řidiče, přidělování a provoz
+- Kdo spravuje vozidla, registrační značky k obchodnímu použití (營業用車輛牌照), řidiče, přidělování a provoz
 - Jak se od skutečné dopravy oddělují pomocné práce, jako sklad, balení, informační systém a zasílatelství
 - V případě dalšího pověření, jaký rozsah práce podnikatel s povolením skutečně vykonává
 
@@ -46,17 +46,17 @@ Při stanovení rozsahu činnosti je třeba konkrétně uspořádat alespoň ná
 
 ## 2. Nové založení automobilové nákladní dopravy
 
-Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 jednotek a pro činnost provozovanou na Ťin-menu (金門) a v Lien-ťiangu neboli Ma-cu (連江・馬祖) 10.000.000 TWD a nejméně 5 jednotek, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz v osobním vlastnictví žadatele, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis bydliště (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy, povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť.
+Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 nových nákladních automobilů a pro činnost provozovanou na Ťin-menu (金門) nebo v Lien-ťiangu (Ma-cu, 連江・馬祖) 10.000.000 TWD a nejméně 5 nových nákladních automobilů, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz v osobním vlastnictví žadatele, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis v evidenci domácností (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy, povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť.
 
 ### Požadavky na kapitál a vozidla a omezené výjimky
 
-Když běžná společnost nově provozuje automobilovou nákladní dopravu, uplatní se zásadně minimální kapitál 25.000.000 TWD a nejméně 20 nových vozidel. Pro toho, kdo se věnuje pouze stěhování, se uplatní vlastní měřítko minimálního kapitálu 10.000.000 TWD a nejméně 8 nových vozidel a pro toho, kdo provozuje na Ťin-menu a v Lien-ťiangu neboli Ma-cu, minimální kapitál 10.000.000 TWD a nejméně 5 nových vozidel. Podnikatel, který využívá měřítko Ťin-menu a Lien-ťiangu, podléhá omezení rozsahu provozu podle schválené oblasti.
+Když běžná společnost nově provozuje automobilovou nákladní dopravu, uplatní se zásadně minimální kapitál 25.000.000 TWD a nejméně 20 nových vozidel. Pro toho, kdo se věnuje pouze stěhování, se uplatní vlastní práh minimálního kapitálu 10.000.000 TWD a nejméně 8 nových vozidel a pro toho, kdo provozuje na Ťin-menu nebo v Lien-ťiangu (Ma-cu), minimální kapitál 10.000.000 TWD a nejméně 5 nových vozidel. Podnikatel, který využívá práh pro Ťin-men nebo Lien-ťiang, podléhá omezení rozsahu provozu podle schválené oblasti.
 
 Doprava malým nákladním vozem (小貨車) provozovaná fyzickou osobou je úzký režim, odlišný od běžného zakládání společností. Mezi požadavky patří, že žadatel má zápis bydliště v příslušném obvodu, má profesní řidičské oprávnění malého vozidla a používá 1 malý nákladní vůz v osobním vlastnictví žadatele o stáří nepřesahujícím 2 roky. Není to obvyklá cesta, kterou zahraniční právnická osoba vstupuje do automobilové nákladní dopravy.
 
-Tabulky vozidel (車輛牌照) k obchodnímu použití vydané podnikateli automobilové dopravy nového založení nelze po 1 rok ode dne vydání vyřadit vrácením (繳銷) ani převést změnou držitele v evidenci vozidla (過戶轉讓).
+Registrační značky vozidel (車輛牌照) k obchodnímu použití vydané podnikateli automobilové dopravy nového založení nelze po 1 rok ode dne vydání vyřadit vrácením (繳銷) ani převést změnou držitele v evidenci vozidla (過戶轉讓).
 
-Toto omezení se týká vyřazení tabulky k obchodnímu použití vrácením a převodu změnou držitele v evidenci vozidla. Ostatní zacházení, včetně sešrotování a výměny vozidla, je třeba zvlášť ověřit podle platných norem příslušného silničního orgánu.
+Toto omezení se týká vyřazení registrační značky k obchodnímu použití vrácením a převodu změnou držitele v evidenci vozidla. Ostatní zacházení, včetně sešrotování a výměny vozidla, je třeba zvlášť ověřit podle platných norem příslušného silničního orgánu.
 
 ### Zahraniční investice a schválení odvětví
 
@@ -74,19 +74,19 @@ Pořadí kroků a orgán podání je třeba znovu ověřit podle každé věci, 
 4. Dokončit zápis společnosti a obchodu a připravit schválenou provozovnu, parkovací zařízení (停車設施), systém údržby, vozidla, pojištění a organizaci.
 5. Požádat o provozní licenci, přistoupit k příslušnému oborovému sdružení a poté zahájit provoz podle schváleného rozsahu činnosti.
 
-Provozovna a parkovací zařízení musí splňovat měřítko použitelné na danou činnost a je třeba předložit podklady, které osvědčují vlastnictví nebo právo užívání. Nelze jednotně tvrdit, že každý podnikatel musí nutně pronajmout vlastní vyhrazené parkoviště. Stanovy, seznam akcionářů, podklady schválení parkovacích zařízení, důkaz vlastnictví nebo užívání provozovny a parkoviště, smlouva o údržbě, důkaz nákupu vozidel a seznam vozidel je třeba porovnat s platným kontrolním seznamem Silničního úřadu v okamžiku žádosti.
+Provozovna a parkovací zařízení musí splňovat požadavky použitelné na danou činnost a je třeba předložit podklady, které osvědčují vlastnictví nebo právo užívání. Nelze jednotně tvrdit, že každý podnikatel musí nutně pronajmout vlastní vyhrazené parkoviště. Stanovy, seznam akcionářů, podklady schválení parkovacích zařízení, důkaz vlastnictví nebo užívání provozovny a parkoviště, smlouva o údržbě, důkaz nákupu vozidel a seznam vozidel je třeba porovnat s platným kontrolním seznamem Silničního úřadu v okamžiku žádosti.
 
 Po získání povolení přípravy založení se příprava zásadně musí dokončit do 6 měsíců. Prodloužení, jsou-li zvláštní okolnosti, je možné nejvýše o dalších 6 měsíců. Po vydání provozní licence se provoz zásadně musí zahájit do 1 měsíce a příslušnému silničnímu orgánu se oznámí s připojením kopie platného členského průkazu vydaného příslušným oborovým sdružením. Protože doba potřebná k doplnění spisu, přípravě pozemku a zařízení, vozidel a pojištění se liší podle věci, nelze okamžik dokončení celého postupu předem určit. I když je ohlášena cílová doba správního přezkumu podle norem zahraniční investice, neznamená to dobu celého nového založení automobilové nákladní dopravy.
 
 ## 3. Nabytí stávajícího podnikatele
 
-Nabytím akcií se povolení nepřevádí. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a tabulky k obchodnímu použití, parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu.
+Nabytím akcií se povolení nepřevádí. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a registrační značky k obchodnímu použití, parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu.
 
 ### Rozdíl mezi nabytím akcií a převodem podniku nebo aktiv
 
 Při nabytí akcií se kupující stává akcionářem, zatímco cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba. Částka zaslaná k nabytí akcií je cenou převodu akcií, nikoli kapitálem. Podle okolností věci se zvlášť provádí předchozí schválení Ministerstva hospodářství, schválení odvětví podle čl. 35 zákona o silnicích, určení výše investice (投資額審定) po převodu, změna společnosti u akcionářů, jednatelů a odpovědné osoby a žádost o změnu u příslušného silničního orgánu.
 
-Naproti tomu, i když jiná právnická osoba přijme převod podniku nebo aktiv, provozní licence převodce se na nabyvatele sama o sobě nepřenáší. Vozidla, tabulky k obchodnímu použití, parkovací zařízení, smlouvy, pracovníky, pojištění a provozní povolení je třeba ověřit každé a povolení přípravy založení, provozní licenci a ostatní schválení potřebná nabyvateli je třeba uspořádat před provedením transakce.
+Naproti tomu, i když jiná právnická osoba přijme převod podniku nebo aktiv, provozní licence převodce se na nabyvatele sama o sobě nepřenáší. Vozidla, registrační značky k obchodnímu použití, parkovací zařízení, smlouvy, pracovníky, pojištění a provozní povolení je třeba ověřit každé a povolení přípravy založení, provozní licenci a ostatní schválení potřebná nabyvateli je třeba uspořádat před provedením transakce.
 
 Převod podniku a změna organizace, označení, sídla, odpovědné osoby, kapitálu nebo aktiv a parkovacích zařízení podle čl. 23 nařízení o správě automobilové dopravy (汽車運輸業管理規則) musí získat schválení příslušného silničního orgánu po shromáždění souvisejících dokladů. Samotná skutečnost, že byla podepsána smlouva o transakci nebo dokončena změna zápisu, neznamená, že je dokončeno i schválení změny podle norem dopravy.
 
@@ -95,7 +95,7 @@ Převod podniku a změna organizace, označení, sídla, odpovědné osoby, kapi
 Alespoň následující body je třeba podstatně ověřit porovnáním důkazů a původních podkladů se záznamy příslušného orgánu.
 
 - Platnost provozní licence, odvětví, oblast a schválené podmínky a dosud nevyřízené změny
-- Vztah vlastnictví a užívání vozidel, tabulky k obchodnímu použití, stáří, pravidelná prohlídka, nehody a porušení
+- Vztah vlastnictví a užívání vozidel, registračních značek k obchodnímu použití, stáří, pravidelná prohlídka, nehody a porušení
 - Schválení provozovny a parkovacích zařízení, vlastnictví nebo právo užívání a systém údržby
 - Členství v oborovém sdružení, správní rozhodnutí (行政處分) a to, zda existují nedoplatky daní, poplatků a správních pokut (罰鍰)
 - Pracovní vztah řidičů a ostatních pracovníků, pracovní podmínky, pracovní povolení a sociální pojištění
@@ -127,10 +127,10 @@ Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tc
 - [Nařízení o správě automobilové dopravy](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040003)
 - [Silniční úřad Ministerstva dopravy: žádost o povolení přípravy založení automobilové dopravy](https://www.thb.gov.tw/cp.aspx?n=392)
 - [Silniční úřad Ministerstva dopravy: žádost o provozní licenci a doklady k předložení](https://www.thb.gov.tw/cp.aspx?n=507)
-- [Silniční úřad Ministerstva dopravy: měřítka kapitálu a vozidel automobilové nákladní dopravy](https://cyi2.thb.gov.tw/cp.aspx?n=1962)
+- [Silniční úřad Ministerstva dopravy: prahy kapitálu a vozidel automobilové nákladní dopravy](https://cyi2.thb.gov.tw/cp.aspx?n=1962)
 - [Silniční úřad Ministerstva dopravy: postup změny automobilové dopravy](https://www.thb.gov.tw/cl.aspx?n=259)
 - [Silniční úřad Ministerstva dopravy: převod obchodních vozidel a podobně](https://www.thb.gov.tw/cp.aspx?n=356)
-- [Podklady k měřítkům provozovny a parkovacích zařízení](https://www.mvdis.gov.tw/webMvdisLaw/Download.aspx?ID=22746&type=Law)
+- [Podklady k požadavkům na provozovnu a parkovací zařízení](https://www.mvdis.gov.tw/webMvdisLaw/Download.aspx?ID=22746&type=Law)
 - [Zákon o investicích cizinců (外國人投資條例)](https://law.moea.gov.tw/LawContent.aspx?id=FL011158&media=print)
 - [Odbor přezkumu investic Ministerstva hospodářství](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
 - [Ministerstvo hospodářství: pokyny k žádosti o zahraniční investici](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
@@ -146,6 +146,6 @@ Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tc
 
 ---
 
-Tento článek je vzdělávacím podkladem k obecnému vysvětlení právního režimu a není radou ke konkrétní věci. Protože měřítka povolení, formuláře žádostí a praxe příslušného orgánu se mohou měnit, ověřte aktualizované oficiální podklady a okolnosti věci před provedením investice nebo smlouvy.
+Tento článek je vzdělávacím podkladem k obecnému vysvětlení právního režimu a není radou ke konkrétní věci. Protože prahy povolení, formuláře žádostí a praxe příslušného orgánu se mohou měnit, ověřte aktualizované oficiální podklady a okolnosti věci před provedením investice nebo smlouvy.
 
 **Advokátka Wei Tseng (曾雋崴)**

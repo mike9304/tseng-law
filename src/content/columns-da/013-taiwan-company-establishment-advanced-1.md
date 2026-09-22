@@ -15,7 +15,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 For nylig har mange fået stiftet et selskab (公司) i Taiwan og opnået et arbejdsvisum samt et opholdskort for udlændinge (外僑居留證).
 
-og de spørgsmål, der ofte stilles ved stiftelsen, er samlet nedenfor.
+Nedenfor er samlet svar på de spørgsmål, der ofte stilles ved stiftelsen.
 
 Den, der har læst [**grundlaget for selskabsstiftelsen**](/da/columns/taiwan-company-establishment-basics), kan derefter også konsultere denne udførligere fordybelse.
 
@@ -25,35 +25,35 @@ Spørgsmålene og svarene nedenfor skal hjælpe personer, der overvejer at stift
 
 **1. Jeg vil stifte et selskab, men har endnu ikke fundet en registreringsadresse. Er stiftelsen alligevel mulig?**
 
-Når en udlænding stifter et selskab i Taiwan, skal vedkommende indgive en investeringsplan (投資計畫書) til Investeringsafdelingen under Ministeriet for økonomiske anliggender (經濟部投資審議司) til prøvelse.
+Når en udlænding stifter et selskab i Taiwan, skal vedkommende indgive en investeringsplan (投資計畫書) til Investeringsafdelingen under Ministeriet for Økonomiske Anliggender (經濟部投資審議司) til prøvelse.
 
-Investeringsafdelingen skal undersøge, om den pågældende kapital (資本額) faktisk bruges til investeringsformål
+Investeringsafdelingen skal undersøge, om den pågældende kapital (資本額) faktisk bruges til investeringsformål.
 
-og om udenlandske aktører ikke indfører midler under et andet påskud.
+Den skal også undersøge, om udenlandske aktører indfører midler under et andet påskud.
 
 Ved udarbejdelsen af investeringsplanen behøver den nøjagtige selskabsadresse ikke at anføres; angivelse af egnen er tilstrækkelig (eksempel: byen Taipei). ​
 
 Når senere selskabets forberedelseskonto (公司籌備處帳戶) åbnes i banken, prøver talrige banker dog lejeaftalen (租賃契約) og inspicerer selskabsadressen på stedet.
 
-En medarbejder ved en taiwansk bank har personligt sagt til mig, at
+En medarbejder ved en taiwansk bank har oplyst, at
 
 talrige udlændinge for nylig forsvinder efter kontoåbningen, så kontoåbningen behandles stadig strengere.
 
-Allerede i grundlagsteksten har en læser anført, at kontoåbningen viste sig at være det vanskeligste trin; jeg er enig heri.
+Allerede i grundlagsteksten har en læser anført, at kontoåbningen viste sig at være det vanskeligste trin; den iagttagelse holder.
 
 Fordi tilfældene af hvidvask (洗錢) i Taiwan er meget talrige, bliver åbningen af bankkonti stadig strengere.
 
 **Bemærkning:**
 
-Fordi prøvelsen af investeringsplanen også tager tid,
+Prøvelsen af investeringsplanen tager også tid.
 
-bør du udarbejde investeringsplanen og samtidig søge efter selskabets registreringsadresse.
+Du bør udarbejde investeringsplanen og samtidig søge efter selskabets registreringsadresse.
 
 Ifølge artikel 9 i loven om investering fra udlændinge (外國人投資條例) skal det godkendte indskud ankomme fuldt ud inden for den frist, som den kompetente myndighed har fastsat (核定期限); fristen skal bekræftes i godkendelsesakten i hver sag (i praksis fastsættes den ofte omkring 1 år).
 
-Inden for denne frist bliver der, efter at selskabsadressen er fundet og lejeaftalen er indgået,
+Inden for denne frist er der tid nok til at finde selskabsadressen og indgå lejeaftalen.
 
-tilstrækkelig tid til at åbne forberedelseskontoen i banken og overføre kapitalen.
+Der er også tid nok til at åbne forberedelseskontoen i banken og overføre kapitalen.
 
 ​
 
@@ -61,25 +61,25 @@ tilstrækkelig tid til at åbne forberedelseskontoen i banken og overføre kapit
 
 Det er muligt.
 
-Banken kræver som regel en dobbelt identitetskontrol,
+Banken kræver som regel to legitimationer.
 
-og uden opholdskort kan du hos Taiwans immigrationsmyndighed ansøge om ‘**grunddatabladet for det ensartede identitetsnummer**(統一證號基本資料表)’.
+Uden opholdskort kan du hos Taiwans immigrationsmyndighed ansøge om »**grunddatabladet for det ensartede identitetsnummer**(統一證號基本資料表)«.
 
-Udstedelsen er mulig samme dag,
+Udstedelsen er mulig samme dag.
 
-men immigrationsmyndigheden (移民署) har mange besøgende; du bør derfor komme tidligt og trække et nummer.
+Immigrationsmyndigheden (移民署) har mange besøgende; du bør derfor komme tidligt og trække et nummer.
 
 ​
 
 **3. Jeg har hørt, at der ved prøvelsen af investeringsplanen (投資計畫書) skal anføres uddannelse og erhvervserfaring, og jeg frygter, at min uddannelse og erfaring ikke passer til branchen for det selskab, der skal stiftes.**
 
-Prøvelseskommissionen under Ministeriet for økonomiske anliggender prøver ganske vist investorens baggrund,
+Prøvelseskommissionen under Ministeriet for Økonomiske Anliggender prøver ganske vist investorens baggrund.
 
-men prøvelsen er ikke overdrevent streng.
+Prøvelsen er ikke overdrevent streng.
 
-Du kan anføre forskellige former for erhvervserfaring, herunder bijob,
+Du kan anføre forskellige former for erhvervserfaring, herunder bijob.
 
-og redegøre så udførligt, at de prøvende personer kan overbevises.
+Redegør så udførligt, at de prøvende personer kan overbevises.
 
 Dette punkt bør du drøfte grundigt med en advokat i Taiwan.
 
@@ -89,9 +89,9 @@ Dette punkt bør du drøfte grundigt med en advokat i Taiwan.
 
 Selskabsstiftelsen varer omkring **3 måneder**, opnåelsen af arbejdstilladelsen (工作許可) og af opholdskortet omkring **1 måned**,
 
-derfor bør du lægge aftalens ikrafttrædelsesdato så sent som muligt.
+Du bør derfor lægge aftalens ikrafttrædelsesdato så sent som muligt.
 
-Desuden giver udlejeren i lejeaftaler for butikslokaler i Taiwan ofte lejeren en „**indretningsperiode**“ (裝潢期間).
+Desuden giver udlejeren i lejeaftaler for butikslokaler i Taiwan ofte lejeren en »**indretningsperiode**« (裝潢期間).
 
 Dette er en lejefri periode, som du kan forhandle om.
 
@@ -99,11 +99,11 @@ For en udlænding er det ikke enkelt at leje et butikslokale, og depositummet (�
 
 udlejere tøver derfor med at udleje til udlændinge.
 
-Derfor anbefaler jeg at søge driftsadressen tidligt.
+Driftsadressen bør derfor søges tidligt.
 
-Forløber forhandlingen med udlejeren ikke gnidningsløst,
+Forløber forhandlingen med udlejeren ikke gnidningsløst, findes der andre muligheder.
 
-kan du om nødvendigt foreslå en notariel bekræftelse af lejeaftalen (公證) eller et supplerende depositum.
+Du kan om nødvendigt foreslå en notariel bekræftelse af lejeaftalen (公證) eller et supplerende depositum.
 
 ​
 

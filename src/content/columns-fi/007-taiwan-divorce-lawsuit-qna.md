@@ -71,7 +71,7 @@ Siviililain (民法) 1052 artiklan 1 momentti luettelee 10 perustetta, joista av
 3. Vastapuolen pahoinpitely (虐待) laajuudessa, joka tekee yhteiselämän sietämättömäksi
 4. Vastapuoli pahoinpitelee teidän suoraan ylenevässä tai alenevassa polvessa olevia sukulaisianne (直系親屬), tai vastapuolen suoraan ylenevässä tai alenevassa polvessa olevat sukulaiset pahoinpitelevät teitä, niin että yhteiselämä tulee sietämättömäksi
 5. Vastapuolen pahantahtoinen hylkääminen (惡意遺棄) jatkuu
-6. Oli tahallisuus surmata vastapuoli
+6. Vastapuolella oli aikomus surmata teidät
 7. On parantumaton törkeä sairaus
 8. On törkeä parantumaton psyykkinen häiriö
 9. Elämä tai kuolema on tuntematon yli 3 vuotta
@@ -99,7 +99,7 @@ Ei. Asunnon rekisteröity nimi ja ostovarojen alkuperä ovat tärkeitä todistei
 
 Asuntokysymykset on jaettava 3 kerrokseen. Ensin katsotaan rekisteröinnin ja saannon perusteen mukaan, kuka omistaa tietyn omaisuuden. Sitten katsotaan tosiasiallisen sopimuksen ja varojen antamisen luonteen mukaan, syntyykö lahja, rekisteröinti toisen nimiin, laina, trusti (信託), perusteeton etu, kulujen korvaus tai muita sopimusperusteisia vaatimuksia. Lopuksi katsotaan erikseen, kuuluuko tämä omaisuus tai sen arvo ja liittyvä velka lakisääteisen omaisuusjärjestelmän (法定財產制) päättyessä jäännösomaisuuden erotuksen jaon laskentaan. Pelkkä käsirahan tai luottoerien maksaminen avioliittoa edeltäneellä säästöllä ei siirrä rekisteröityä nimeä, eikä rekisteröinti 1 nimeen myöskään päätä kaikkia sopimus-, käyttö-, takaisinmaksu- ja puolisoiden omaisuuskysymyksiä.
 
-Siviililain (民法) 1017 artikla erottaa avioliittoa edeltäneen omaisuuden (婚前財產) ja avioliiton solmimisen jälkeisen omaisuuden (婚後財產) ja asettaa olettaman, että omaisuus, jonka saannon ajankohtaa on vaikea todistaa, on avioliiton jälkeistä omaisuutta. Tämä on lähtökohta jaottelussa ja todistelussa järjestelmän laskentaan, ei oikotie omistusoikeuden määräämiseen rekisteröinnistä riippumatta tai vastapuolen erillisten vaatimusten poistamiseen. Siirrot, kauppasopimus, luottosopimus ja lyhennykset, kuitit (收據), osapuolten väliset ilmoitukset, vero- ja rekisteriasiakirjat sekä saannon peruste ja ajankohta on kytkettävä yhteen, jotta tosiasiallinen oikeussuhde tulee näkyväksi.
+Siviililain (民法) 1017 artikla erottaa avioliittoa edeltäneen omaisuuden (婚前財產) ja avioliiton solmimisen jälkeisen omaisuuden (婚後財產) ja asettaa olettaman, että omaisuus, jonka saannon ajankohtaa on vaikea todistaa, on avioliiton jälkeistä omaisuutta. Tämä on lähtökohta jaottelulle ja todistelulle, kun lakisääteistä omaisuusjärjestelmää lasketaan, ei oikotie omistusoikeuden määräämiseen rekisteröinnistä riippumatta tai vastapuolen erillisten vaatimusten poistamiseen. Siirrot, kauppasopimus, luottosopimus ja lyhennykset, kuitit (收據), osapuolten väliset ilmoitukset, vero- ja rekisteriasiakirjat sekä saannon peruste ja ajankohta on kytkettävä yhteen, jotta tosiasiallinen oikeussuhde tulee näkyväksi.
 
 Siviililain (民法) 1030-1 artikla on järjestely, jossa lakisääteisen omaisuusjärjestelmän päättyessä lasketaan kunkin puolison avioliiton jälkeen syntyneen nettovarallisuuden, joka täyttää edellytykset, ja periaatteessa jakaa erotuksen tasan. Se ei ole järjestely, joka muuttaisi kaiken avioliiton aikana hankitun omaisuuden yhteisomistukseksi (共有) tai jakaa kunkin esineen kahtia. Perinnöllä tai muulla vastikkeettomalla saannolla hankittu omaisuus ja korvaus aineettomasta vahingosta (慰撫金) on suljettu pois lakisääteisestä laskennasta; velka ja järjestelyt ennen järjestelmän päättymistä on tutkittava mukaan. Jos tasaisen erotusjaon tulos lakisääteisten olosuhteiden mukaan on huomattavan kohtuuton, tuomioistuin voi sovitella jaettavaa määrää tai evätä jaon.
 
@@ -111,7 +111,7 @@ Tämä oikeus päättyy, kun sitä ei käytetä 2 vuoden kuluessa tiedosta jää
 
 Ne eivät ole samoja oikeuksia. Oikeus jäännösomaisuuden erotuksen jakoon siviililain (民法) 1030-1 artiklassa, vahingonkorvaus tuomioavioerossa 1056 artiklassa, syyttömän puolison elatus avioeron jälkeen (贍養費) 1057 artiklassa ja alaikäisten lasten elatusapu ovat syntyedellytyksiltään, laskennaltaan ja määräajoiltaan erilaisia. Jakooikeuteen sovelletaan 2 vuotta erotuksen tiedosta ja 5 vuotta lakisääteisen omaisuusjärjestelmän päättymisestä; näitä määräaikoja ei saa muuttamattomina siirtää muihin vaatimuksiin.
 
-Siviililain (民法) 1056 artiklan vahingonkorvaus on oikeus, joka tuomioavioerossa vastuussa olevaa vastapuolta kohtaan erikseen tutkii omaisuusvahingon ja ei-varallisuusoikeudellisen vahingon, joka täyttää lakisääteiset edellytykset (varauma 2 momentissa: vaatimuksen esittävällä henkilöllä itsellään ei saa olla syytä). Vastuullinen teko, vahinko, syy-yhteys ja ei-varallisuusoikeudellisen vaatimuksen erilliset edellytykset on tuettava todisteilla. Pelkästään siksi, että avioliiton hajoamista koskevia seikkoja on olemassa, ei tiettyä määrää ole vahvistettu, eikä muita omaisuusvaatimuksia synny sijaan.
+Siviililain (民法) 1056 artiklan vahingonkorvaus on oikeus, joka tuomioavioerossa vastuussa olevaa vastapuolta kohtaan erikseen tutkii omaisuusvahingon ja sen aineettoman vahingon, joka täyttää lakisääteiset edellytykset (varauma 2 momentissa: vaatimuksen esittävällä henkilöllä itsellään ei saa olla syytä). Vastuullinen teko, vahinko, syy-yhteys ja aineettoman vahingon vaatimuksen erilliset edellytykset on tuettava todisteilla. Pelkästään siksi, että avioliiton hajoamista koskevia seikkoja on olemassa, ei tiettyä määrää ole vahvistettu, eikä muita omaisuusvaatimuksia synny sijaan.
 
 Puolison elatus avioeron jälkeen siviililain (民法) 1057 artiklan mukaan edellyttää, että syytön puoliso tuomioavioerossa joutuu elämän hätään. Ensin on käytävä läpi, onko kyse yhteisymmärryksessä tehdystä avioerosta vai tuomioavioerosta, onko vaatimuksen esittävällä henkilöllä ei syytä ja onko hän avioeron vuoksi todella joutunut hätään; laajuus arvioidaan konkreettisista asiakirjoista tarpeesta ja kantokyvystä (贍養費). Julkisen tilastollinen keskikulutus tai pelkkä vastapuolen syy ei voi palvella sitovana kaavana.
 
@@ -175,14 +175,14 @@ Oikeudenvastainen valvonta, pääsy tileihin, tunkeutuminen matkapuhelimeen tai 
 
 Seuraavat ensisijaiset lähteet (taso 1) ovat lähtökohta tämän artikkelin oikeusrakenteen ja menettelyjen läpikäyntiin, tilanne 25. heinäkuuta 2026. Ennen tosiasiallista toimintaa on muutokset, toimivaltaisen elimen uusimmat ohjeet ja asiaan sovellettava teksti käytävä läpi uudelleen.
 
-1. [Taiwanin kansallinen lakikanta: siviililaki (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
+1. [Taiwanin säädöstietokanta: siviililaki (民法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
 2. [Taiwanin oikeusministeriö: siviililain englanninkielinen laitos](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351)
-3. [Taiwanin kansallinen lakikanta: perheasioiden laki (家事事件法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
-4. [Taiwanin kansallinen lakikanta: oikeudenkäyntilain 303 artikla](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
-5. [Taiwanin kansallinen lakikanta: säännökset väliaikaistoimista ei-prosessuaalisissa perheasioissa](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
-6. [Taiwanin kansallinen lakikanta: kotitalousrekisterilaki (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
+3. [Taiwanin säädöstietokanta: perheasioiden laki (家事事件法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010048)
+4. [Taiwanin säädöstietokanta: oikeudenkäyntilain 303 artikla](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=303&pcode=B0010001)
+5. [Taiwanin säädöstietokanta: säännökset väliaikaistoimista ei-prosessuaalisissa perheasioissa](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010056)
+6. [Taiwanin säädöstietokanta: kotitalousrekisterilaki (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
 7. [Taiwanin sisäministeriön kotitalousrekisteriosasto: ohjeet avioeron rekisteröinnistä](https://www.ris.gov.tw/documents/html/2/3/1/384.html)
-8. [Taiwanin kansallinen lakikanta: laki ulkomaiseen elementtiin liittyviin siviilioikeudellisiin suhteisiin sovellettavasta oikeudesta (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
+8. [Taiwanin säädöstietokanta: laki ulkomaiseen elementtiin liittyviin siviilioikeudellisiin suhteisiin sovellettavasta oikeudesta (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
 9. [Taiwanin perustuslakituomioistuin: tuomio numero 4 vuonna 112 (112年憲判字第4號)](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
 10. [Taiwanin perustuslakituomioistuin: tuomion numero 4 vuonna 112 englanninkielinen laitos](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
 
@@ -194,6 +194,6 @@ Seuraavat ensisijaiset lähteet (taso 1) ovat lähtökohta tämän artikkelin oi
 
 ---
 
-Tämä artikkeli on opetusaineistoa avioeroa, kansainvälisiä perheasioita, puolisoiden omaisuutta ja alaikäisiä lapsia koskevien järjestelyjen yleiseen esittelyyn Taiwanissa, eikä oikeudellista neuvontaa yksittäiseen asiaan. Menettely ja lopputulos voivat poiketa toimivallan, lainvalintasääntöjen, ulkomaisten päätösten tunnustamisen, avioliitto- ja siviilisäätytilan, omaisuusjärjestelmän, olemassa olevan sopimuksen tai päätöksen lapsesta, seikkojen ja todisteiden sekä uusimpien virallisten säännösten mukaan. Rekisteröinti-, muutoksenhaku-, vaatimus- ja täytäntöönpanomääräajat on ennen toimintaa käytävä läpi kohta kohdalta kunkin oikeuden ja kunkin menettelyn tarkan alkupisteen mukaan.
+Tämä artikkeli on yleisesitys avioeroa, kansainvälisiä perheasioita, puolisoiden omaisuutta ja alaikäisiä lapsia koskevista järjestelyistä Taiwanissa, eikä oikeudellista neuvontaa yksittäiseen asiaan. Menettely ja lopputulos voivat poiketa toimivallan, lainvalintasääntöjen, ulkomaisten päätösten tunnustamisen, avioliitto- ja siviilisäätytilan, omaisuusjärjestelmän, olemassa olevan sopimuksen tai päätöksen lapsesta, seikkojen ja todisteiden sekä uusimpien virallisten säännösten mukaan. Rekisteröinti-, muutoksenhaku-, vaatimus- ja täytäntöönpanomääräajat on ennen toimintaa käytävä läpi kohta kohdalta kunkin oikeuden ja kunkin menettelyn tarkan alkupisteen mukaan.
 
 **Asianajaja Wei Tseng (曾雋崴)**

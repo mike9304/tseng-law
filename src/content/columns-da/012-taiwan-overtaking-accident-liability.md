@@ -29,7 +29,7 @@ Det bagvedkørende køretøj må først overhale, efter at det forankørende kø
 
 Derefter skal det overhalende køretøj tænde det venstre blinklys, køre forbi til venstre med en afstand på mindst 0,5 meter til det forankørende køretøj og, når en sikker afstand er sikret, tænde det højre blinklys og sikkert vende tilbage til den oprindelige vognbane.
 
-Denne rækkefølge af signal og vigen i samme vognbane betyder ikke, at overhaling på forbudte steder eller under forbudte betingelser ville være tilladt. Før man begynder at overhale, skal alle betingelser i artikel 101 vurderes under ét.
+Denne rækkefølge af signal og vigemanøvre ved overhaling i samme vognbane betyder ikke, at overhaling på forbudte steder eller under forbudte betingelser ville være tilladt. Før man begynder at overhale, skal alle betingelser i artikel 101 vurderes under ét.
 
 ## Anonymiseret ulykkessag, som kontoret har behandlet
 

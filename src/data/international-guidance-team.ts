@@ -652,7 +652,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Ledende advokat i Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Operativ ledelse Korea (Korea Operations Manager)',
+      'son-jungmin': 'Leder af Korea-drift (Korea Operations Manager)',
       'huang-shengping': 'Tilknyttet revisor (Partner CPA)',
     },
   },
@@ -701,7 +701,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'Asianajaja Wei Tseng — Keskeiset tiedot',
     qualificationLabel: 'Kelpoisuus ja toimisto',
     qualificationSentence:
-      '{name} on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on {firm}in johtava asianajaja.',
+      '{name} on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on toimiston {firm} johtava asianajaja.',
     practiceLabel: 'Pääalueet',
     consultationLanguagesLabel: 'Neuvontakielet',
     roles: {
@@ -2868,7 +2868,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'कोरिया से आए मुवक्किलों के परामर्श समय और संचार का समन्वय करते हैं।',
-        'सूचना विज्ञान के आधार पर दस्तावेज़ प्रणालियों और कार्य प्रवाह से क्षेत्रों के बीच आदान-प्रदान का समर्थन करते हैं।',
+        'सूचना विज्ञान की पढ़ाई के आधार पर दस्तावेज़ प्रणालियों और कार्यप्रवाह के जरिए विभागों के बीच आदान-प्रदान में सहायता करते हैं।',
       ],
       education: ['स्नातक (B.S.) सूचना विज्ञान, National Cheng Kung University'],
       experience: ['कोरिया संचालन क्षेत्र, Hovering International Law Firm'],
@@ -2979,8 +2979,8 @@ export const guidanceTeamBios: Record<
       ],
       education: ['Juridisk bachelor (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Senior paralegal, Boyin Law Firm',
+        'Senior paralegal, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2989,7 +2989,7 @@ export const guidanceTeamBios: Record<
         'Støtter udvekslingen mellem områder via dokumentsystemer og arbejdsgange, på grundlag af datalogi.',
       ],
       education: ['Bachelor (B.S.) i datalogi, National Cheng Kung University'],
-      experience: ['Område Korea-drift, Hovering International Law Firm'],
+      experience: ['Korea-drift, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
@@ -3104,7 +3104,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinoi neuvonta-aikoja ja viestintää Koreasta tuleville päämiehille.',
-        'Tukee alueiden välistä vaihtoa asiakirjajärjestelmien ja työnkulkujen kautta, tietojenkäsittelytieteen pohjalta.',
+        'Tukee toimintojen välistä tiedonvaihtoa asiakirjajärjestelmien ja työnkulkujen avulla, tietojenkäsittelytieteen pohjalta.',
       ],
       education: ['Kandidaatti (B.S.) tietojenkäsittelytieteessä, National Cheng Kung University'],
       experience: ['Korean toiminnot, Hovering International Law Firm'],
@@ -3129,7 +3129,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Magistr (M.S.), Institute of Finance, National Taiwan University',
-        'Bakalář (B.A.) v dvojím programu práva a financí, National Chengchi University',
+        'Bakalář (B.A.) dvouoborového studia práva a financí, National Chengchi University',
         'Výměnné studium na Kobe University a Waseda University',
       ],
       experience: [

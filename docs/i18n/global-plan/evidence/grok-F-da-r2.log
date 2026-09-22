@@ -1,0 +1,100 @@
+WO-F-da r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-da-r2
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: da-a 44, da-b 36 (80). No P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 78.
+Skipped: 2 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned Danish expectation matched a string that changed. "TWD 1.57M" in the bio was not touched. consultationNotice in llms-txt.ts was left; it is still a verbatim substring of the Danish FAQ answer. confidentialNotice was left; it is still a verbatim substring of the privacy paragraph. discoveryNotice keeps the token llms.txt.
+
+### Applied
+da-a 1–23, 25–44.
+da-b 1–18, 20–36.
+
+Adaptations (still applied):
+- da-a 1. The link label no longer names omsætningsafgiftsloven (營業稅法). The URL is unchanged (`pcode=G0340028&amp;flno=3`). "(artikel 10)" stays in the label so the digit 10 remains in the block.
+- da-a 11. The suggested sentence would merge three blocks. Each block is now its own sentence: skylden hos selskabet, skylden hos arbejdstageren, and that godtgørelse ved afskedigelse can be refused or claimed according to which side is at fault. The later pair (begge sider / rækkefølgen / tidspunktet) was completed the same way, one sentence per existing line.
+- da-a 27. The shared predicate is "behersker noget af de fire sprog" (services sentence, contact-section intro, FAQ question, inquiry methodConfirmationNotice). The heading stays "Hvis du ikke behersker noget af de fire rådgivningssprog" because it is a heading, and the FAQ stays a question. The sentences stay negative: no interpreter, no reply-time, no other language.
+- da-a 29. "Er kontorets modtagelse af underretningen endnu ikke bekræftet" does not match the privacy test's banned "venter på kontorets bekræftelse|endnu ikke bekræftet af kontoret".
+- da-a 32. "straks til én" (004), "denne anmodning" (006, the spare 1 dropped), and "hvert fuldført års" (008, the genitive "et års" was not a counted token) were applied. "det seneste et år" (001 ×2), "pr. et år 1 måneds" (008 ×2) and "mere end 1" (005) were restored: "én"/"ét" and a bare "år" are not in the Danish number lexicon, and dropping them failed the checker on a source digit 1.
+- da-a 38. "del 2" stays inside "kan læse videre i denne uddybning del 2 (公司設立)". Dropping the 2 failed numbers. The sentence no longer tells the reader to go and read a different page.
+- da-a 39. Fragments in 008 and 009 were made into sentences inside the existing lines. "Det ved mange allerede." and "Som tidligere belyst" are gone. The Korea example keeps fratrædelsesgodtgørelse (see finding 9) and adds "som udgangspunkt". The case of hr. B stays male. Blocks were not merged.
+- da-a 44. Experience lines are "Senior paralegal, Boyin Law Firm" and "Senior paralegal, Muyang International Law Firm". The role string stays 'Paralegal'. Firm names stay. Swedish experience lines were not lowercased.
+- da-b 8. The one-year period is no longer a precondition of the bank steps. The steps stay in the existing blocks as two sentences ("Inden for denne frist er der tid nok…").
+- da-b 19 was skipped (see below). The Taipei sentence itself was left, as the row asked.
+- da-b 22. "for én ulykke" (010), "hos én part" and "efter ét bestemt ord" (011) were applied. Those 1s were extras (WARN), not source-required. "1 stemme pr. 1 deltager" (018) was restored: both 1s are real counts, and "én" is not in the lexicon.
+- da-b 31 and the 015 one-clause stack. Lowercase fragments were made into sentences inside their own blocks ("Nedenfor er samlet…", zone permission, Taipei query, land-registry help). Blocks were not merged. U+200B lines were not deleted.
+- da-b 35. 014 uses "Derfor skal samtlige relevante kendsgerninger i sagen efterprøves." 016 uses "fuldt ud". "uden at springe noget over" added a third "at" in a Latin-only sentence of 12 or more words and failed the English detector.
+
+Guidance pack (Danish strings only):
+- international-guidance-nordic.ts: navigationen, behersker, "giver først mening", the free-meeting sentence without the calque clause, "Et beløb fastsat på forhånd", privacy confirmation, lovbestemt opbevaring, "sendes til wei@hoveringlaw.com.tw", "arbejder efter taiwansk ret". Swedish, Norwegian and Finnish untouched.
+- international-guidance-answers.ts: "advokat med ret til at praktisere i Taiwan". Feminine "hun arbejder" kept.
+- international-guidance-team.ts: "Leder af Korea-drift (Korea Operations Manager)"; experience "Senior paralegal" and "Korea-drift, Hovering International Law Firm".
+- international-inquiry-copy.ts: methodConfirmationNotice uses "behersker" and stays negative.
+- llms-txt.ts discoveryNotice: "anprisning" → "anbefaling". Token llms.txt kept.
+
+### Skipped
+- da-a 24. Q16–Q20 were not merged with the following sentence, and the U+200B lines were not removed. Heading levels, block counts and ZWSP counts match the Korean source (003, 005, 006, 008, 009). The first-person rewrite is da-a 35, which was applied inside the existing lines.
+- da-b 19. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. Deleting them changes the ZWSP count. The sentence was left as asked.
+
+Hangul `url` slugs in 008 and 009 were already marked "not findings" by the reviewer. Left (R16).
+
+## Systemic patterns
+
+- Spare "et" or a bare digit. Changed where the checker allows it: 004 "straks til én", 006 "denne anmodning", 008 "hvert fuldført års", 010 "én ulykke", 011 "én part" and "ét bestemt ord". Restored where a source 1 disappeared: 001 "det seneste et år" ×2, 005 "mere end 1", 008 "pr. et år 1 måneds" ×2, 018 "1 stemme pr. 1 deltager".
+- U+200B blanks (003 from Q16, 005, 006, 008, 009, 013, 015). 0 deleted. See Skipped.
+- "bruger" a language vs the form's "behersker". 5 Danish strings, listed under da-a 27. "Hvordan du bruger denne del" and "Dataene bruges" were left (a different sense).
+- Blog fragments in 003 (close), 008, 009, 013 and 015. Openers and unfinished clauses completed inside the existing lines. Complete sentences about hr. B were left. 0 blocks merged or split.
+- 資遣費 called fratrædelsesgodtgørelse. Every column instance is now godtgørelse(n/r) ved afskedigelse (002, 008, 009 title and body, 014 including the link label to 009) except one sentence in 008, the Korea comparison, which keeps fratrædelsesgodtgørelse. That is the contrast the guidance pack already uses.
+- Quotation marks. French «…» and German „…“ flipped to Danish »…« in 9 files: 004, 005, 008, 013, 014, 015, 016, 017, 018. The 015 markdown link stays »[arbejdsretningslinjerne…](url)«.
+- Kinmen og/eller. 4 sites in 017: two glossed "i Kinmen (金門) eller i Lienchiang (Matsu, 連江、馬祖)" (Japanese middle dot → Chinese enumeration comma), one unglossed "i Kinmen eller i Lienchiang (Matsu)", and "kriteriet for Kinmen eller Lienchiang". Amounts unchanged.
+- Wrong legal objects named in the rows (produktnavn, ét spørgsmål, registreret adkomst, arv ved stedfortræden, "kan rumme et dokumenteret…"). Applied at the quoted sites. Not a second sweep beyond those phrases.
+- German quotes and guillemet direction. Covered by the 9-file quote sweep.
+- Currency code before the amount. 55 flips to amount-first across the columns (001–007, 011, 017, 018 and the same pattern wherever "TWD" stood before a digit). No column still has "TWD" before a digit. Figures unchanged. "TWD 1.57M" is not in the columns.
+- Ministry names as common nouns. Capitalized as proper names: Taiwans Ministerium for Arbejde, Ministeriet for Arbejde, Ministeriet for Indenrigsanliggender, Ministeriet for Økonomiske Anliggender (013, 014, 017, 018).
+- R2–R10. Round-1 framing, feminine Wei Tseng, du-address, emergency numbers, and the softened result lines were already in place. This round's verdicts say they hold. The remaining Korea-as-default sentence (da-a 41) is now "Er moderselskabet koreansk…". No Danish consultation, no interpreter, no reply-time, no free first meeting, no result promise. Consultation languages stay engelsk, kinesisk (中文), japansk, koreansk. R12–R17 are for the 18 locales added 2026-09-22. The Danish review's own experience-line capitalization (da-a 44) was applied. English role glosses in brackets, Legal Aid Foundation and Ministry of Education were not flagged for Danish and were left.
+
+## Reviewer points not followed
+
+- da-a 24 and da-b 19. The U+200B lines are not disposable Danish blank lines. The counts match the Korean source. Merging Q16 into the next sentence, or promoting Q16–Q20 to headings, would change the block or heading count.
+- da-a 32 and da-b 22, where a source digit 1 is real. "én" and "ét" are not in the checker's Danish numeral lexicon, and "et års" (genitive) is not the token "et år". The reviewer's Danish is right. The forms that pass keep the digit or the lexical "et år".
+- da-a 38, dropping "del 2". The 2 is a source number. It stays inside the sentence that says the reader is already in this part.
+- da-a 1, dropping "(artikel 10)". The digit stays so the block still contains 10. The wrong statute title is gone, and the URL is unchanged.
+- da-a 11, da-b 8 and da-b 31, the request to pull the next paragraph into the first. That would change the block count. The wording inside each block was repaired instead.
+- da-a 39's suggested "godtgørelse" for the Korea example. Finding 9 says the pack reserves fratrædelsesgodtgørelse for other countries. The Korea sentence keeps that word.
+- da-a 44, translating the role 'Paralegal'. The finding rewrites the experience lines to "Senior paralegal" and says firm names stay. The bracketed English titles are the pack's existing design. R12 does not apply to Danish.
+
+Nothing else in the two verdicts looked factually wrong. The doubled "anbefaling, anbefaling fra kunstig intelligens" is the reviewer's own list (endorsement and AI recommendation as two items) and was applied.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-da --lang da 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=116
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-da src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      26
+```
+
+Recount after this log file was written: `git status --short | wc -l` includes this log as one more untracked line. The 26 above is the count before the log. Pre-existing and not part of this lane's edits: `docs/i18n/global-plan/WO-F-da.txt` (already modified) and the untracked review files `da-a.md` and `da-b.md`.

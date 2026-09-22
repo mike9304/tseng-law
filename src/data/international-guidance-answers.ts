@@ -570,7 +570,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'यह पृष्ठ मूल्य सूची प्रकाशित नहीं करता। पहले आपके भेजे सार से कार्य का दायरा तय होता है, फिर लागत की राशि और गणना का तरीका कार्य शुरू होने से पहले आपके साथ पुष्ट होता है। अधिवक्ता से बात सशुल्क हो सकती है; अधिवक्ता शुल्क के अतिरिक्त न्यायालय या प्राधिकरण की लागतें भी लग सकती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+        'यह पृष्ठ मूल्य सूची प्रकाशित नहीं करता। पहले आपके भेजे हुए सार से कार्य का दायरा तय होता है, फिर लागत की राशि और गणना का तरीका कार्य शुरू होने से पहले आपके साथ पुष्ट होता है। अधिवक्ता से बात सशुल्क हो सकती है; अधिवक्ता शुल्क के अतिरिक्त न्यायालय या प्राधिकरण की लागतें भी लग सकती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
       sources: ['/hi/contact', '/hi/faq'],
     },
     contact: {
@@ -612,7 +612,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Den här delen besvarar vanliga frågor på en allmän nivå: de sex verksamhetsområdena, hur du förbereder dig före kontakten, hur kostnaderna fastställs och vad ett skickat meddelande betyder. En skickad begäran väntar på att granskas av en advokat; den är inte ett juridiskt yttrande, inte en tid och skapar inte ett förhållande mellan advokat och klient. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Den här delen besvarar vanliga frågor på en allmän nivå: de sex verksamhetsområdena, hur du förbereder dig före kontakten, hur kostnaderna fastställs och vad ett skickat meddelande betyder. En skickad begäran väntar på att granskas av en advokat; den är inte juridisk rådgivning, inte en bekräftad tid och skapar inte ett förhållande mellan advokat och klient. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/contact', '/sv/services'],
     },
   },
@@ -629,7 +629,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Denne side viser profiler for Hoverings advokater, den operative ledelse og det tilknyttede revisionskontor. Advokat Wei Tseng (曾雋崴) er beskikket som advokat i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Denne side viser profiler for Hoverings advokater, den operative ledelse og det tilknyttede revisionskontor. Advokat Wei Tseng (曾雋崴) er advokat med ret til at praktisere i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/about', '/da/contact'],
     },
     pricing: {
@@ -708,7 +708,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi oikeudenalaa, valmistautuminen ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkastusta; se ei ole oikeudellinen lausunto eikä tapaaminen, eikä se synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi oikeudenalaa, valmistautuminen ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkastusta; se ei ole oikeudellista neuvontaa eikä vahvistettu tapaaminen, eikä se synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/contact', '/fi/services'],
     },
   },

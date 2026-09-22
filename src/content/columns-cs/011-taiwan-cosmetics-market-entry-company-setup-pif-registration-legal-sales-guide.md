@@ -13,14 +13,14 @@ faq:
   - q: "Co je PIF a jde o stejný postup jako registrace produktu u TFDA?"
     a: "Registrace produktu a PIF nejsou týmž postupem. Registrace produktu (產品登錄) je samostatný úkon, který se provádí na platformě registrace kosmetických produktů TFDA (衛生福利部食品藥物管理署). PIF je spis, který sdružuje údaje o jakosti, bezpečnosti, složení, tvrzené funkci, způsobu výroby, výsledcích zkoušek a hodnocení bezpečnosti a který výrobce nebo dovozce kosmetiky sestavuje, aktualizuje a uchovává; samotný PIF není dokumentem, který by se musel předem předkládat TFDA. Od 1. 7. 2026 zásadně všechny kosmetické přípravky spadají pod režim PIF, s výjimkou tuhého ručně vyráběného mýdla vyrobeného v místě výroby osvobozeném od registrace závodu (工廠登記)."
   - q: "Na jaké výrazy je třeba dávat pozor v reklamě na kosmetiku na Tchaj-wanu?"
-    a: "Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivost nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 tchajwanských dolarů (新臺幣, TWD) za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle téhož měřítka, pokud jsou v podstatě reklamou."
+    a: "Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivost nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 tchajwanských dolarů (新臺幣, TWD) za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle týchž kritérií, pokud jsou v podstatě reklamou."
 ---
 
 # Vstup na trh kosmetiky na Tchaj-wanu: volba dovozce, registrace produktu, sestavení a uchování PIF a regulace reklamy
 
 ![Podklady produktu a přezkum předpisů potřebné pro vstup na trh kosmetiky na Tchaj-wanu](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Zahraniční značka kosmetiky, která hodlá na Tchaj-wanu uvádět výrobky do oběhu, musí určit, komu svěří dovoz, kdy dokončí registraci produktu (產品登錄), kdo spravuje informační spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podle jakého měřítka se posuzuje označení (標示) a reklama (廣告). Zahraniční značka může buď využít místního dovozce, nebo činnost na Tchaj-wanu provozovat sama, takže příprava prodeje není dokončena jen tím, že byla založena společnost.
+Zahraniční značka kosmetiky, která hodlá na Tchaj-wanu uvádět výrobky do oběhu, musí určit, komu svěří dovoz, kdy dokončí registraci produktu (產品登錄), kdo spravuje informační spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podle jakých kritérií se posuzuje označení (標示) a reklama (廣告). Zahraniční značka může buď využít místního dovozce, nebo činnost na Tchaj-wanu provozovat sama, takže příprava prodeje není dokončena jen tím, že byla založena společnost.
 
 Použitelné povinnosti se mohou lišit podle druhu výrobku a místa výroby (製造場所), skutečné formy dovozu, způsobu oběhu a obsahu reklamy. Níže se odděleně vysvětlují forma vstupu a zákonný subjekt odpovědnosti, registrace produktu u TFDA, sestavení, aktualizace a uchování PIF, označení a reklama a kontrola a nápravná opatření. Před stanovením skutečného dodacího kalendáře je třeba znovu, výrobek po výrobku, ověřit nejnovější předpisy a pokyny příslušného orgánu (主管機關).
 
@@ -52,7 +52,7 @@ Registrace produktu a PIF nejsou týmž postupem. Registrace produktu je samosta
 
 ### Okamžik registrace produktu a doba platnosti
 
-Registrace kosmetického produktu se provádí na platformě registrace kosmetických produktů TFDA. Výrobce nebo dovozce kosmetiky musí dokončit registraci produktu předtím, než výrobek dodá, prodá, daruje, veřejně vystaví (公開陳列) nebo poskytne spotřebiteli k vyzkoušení. Přípravu nelze organizovat jen podle úplatného prodeje; kalendář propagačních darů nebo poskytnutí k vyzkoušení spotřebitelem je třeba spravovat společně s okamžikem registrace.
+Registrace kosmetického produktu se provádí na platformě registrace kosmetických produktů TFDA. Výrobce nebo dovozce kosmetiky musí dokončit registraci produktu předtím, než výrobek dodá, prodá, daruje, veřejně vystaví (公開陳列) nebo poskytne spotřebiteli k vyzkoušení. Přípravu nelze organizovat jen podle úplatného prodeje; do kalendáře registrace je třeba zahrnout i propagační dary a poskytnutí výrobku spotřebiteli k vyzkoušení.
 
 Doba platnosti registrace produktu je 3 roky. Má-li se v dodávkách pokračovat, je třeba požádat o prodloužení (展延) do 3 měsíců před uplynutím platnosti. Změní-li se zapsané údaje, jako je název výrobku, použití, forma přípravku (劑型), složky a místo výroby, je třeba také ověřit, zda je nutný postup odpovídající obsahu změny.
 
@@ -70,7 +70,7 @@ Práci PIF, včetně hodnocení bezpečnosti, může podpořit třetí osoba, kt
 
 Změní-li se surovina nebo receptura, způsob a místo výroby, označení včetně etikety, tvrzená funkce nebo bezpečnostní informace, je třeba přezkoumat a aktualizovat dotčené podklady PIF. Je třeba také posoudit, zda stížnosti spotřebitelů, nežádoucí příhody a nové výsledky zkoušek ovlivňují stávající hodnocení, proto je i po prvním sestavení nutný postup řízení změn.
 
-Podle čl. 7 nařízení o správě informačního spisu kosmetických produktů je doba uchování nejméně 5 let počítaných ode dne následujícího po dni posledního dodání výrobku na trh. Podle čl. 8 téhož nařízení je místem uchování adresa označení výrobce nebo dovozce kosmetiky stanovená v čl. 7 odst. 1 č. 7 zákona o správě hygieny a bezpečnosti kosmetiky (化粧品衛生安全管理法). Ustanovení o době uchování a ustanovení o místě uchování je třeba v praxi rozlišovat.
+Podle čl. 7 nařízení o správě informačního spisu kosmetických produktů je doba uchování nejméně 5 let počítaných ode dne následujícího po dni posledního dodání výrobku na trh. Podle čl. 8 téhož nařízení je místem uchování adresa výrobce nebo dovozce kosmetiky stanovená v čl. 7 odst. 1 bodě 7 zákona o správě hygieny a bezpečnosti kosmetiky (化粧品衛生安全管理法). Ustanovení o době uchování a ustanovení o místě uchování je třeba v praxi rozlišovat.
 
 I když původní výrobce uchovává originál nebo se používá bezpečné elektronické či cloudové úložiště, výrobce nebo dovozce musí mít přístup k úplným podkladům. Je třeba stanovit přístupová oprávnění, zálohy, správu verzí, formát souborů a odpovědnou osobu tak, aby bylo možné podklady rychle vyhledat a předložit, když je příslušný orgán požaduje. Je také důležité ve smlouvě upravit příjemce předání, způsob a to, zda přístupové oprávnění trvá, aby se podklady udržely po zákonnou dobu uchování i po skončení smlouvy s prodejním partnerem nebo poskytovatelem služeb.
 
@@ -84,7 +84,7 @@ Stažení nebo zničení (銷毀) není opatřením, které by automaticky násl
 
 ## 3. Regulace označení, propagace a reklamy
 
-Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivost nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 TWD za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle téhož měřítka, pokud jsou v podstatě reklamou.
+Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivost nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 TWD za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle týchž kritérií, pokud jsou v podstatě reklamou.
 
 ### Posuzuje se podle celého vyjádření, nikoli podle každého slova
 
@@ -108,7 +108,7 @@ Ověří-li se příprava prodeje na Tchaj-wanu v tomto pořadí, klesá riziko 
 2. Ověřit subjekt, který nese právní odpovědnost jako výrobce nebo dovozce kosmetiky, a smluvního odpovědného za práci.
 3. Dokončit registraci produktu před dodáním, prodejem, darováním, veřejným vystavením nebo poskytnutím výrobku spotřebiteli k vyzkoušení.
 4. Sestavit PIF podle výrobku, aktualizovat změny a uchovávat jej v souladu se zákonnou dobou a místem.
-5. Přezkoumat etiketu, prodejní stránku, reklamu a příspěvky ze spolupráce podle měřítka celého vyjádření.
+5. Přezkoumat etiketu, prodejní stránku, reklamu a příspěvky ze spolupráce podle kritéria celého vyjádření.
 6. Provozovat postup k reakci na kontroly a požadavky na nápravu, stížnosti, bezpečnostní informace a potřebné následné kroky.
 
 Základní strukturu společnosti a pobočky lze vidět v [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics), rozsah související podpory v [V čem klienty zastupujeme](/cs/services) a údaje o odpovědné advokátce v [Mezinárodní tým Hovering](/cs/lawyers).

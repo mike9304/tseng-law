@@ -1,0 +1,181 @@
+# WO-F-cs round 2 — Czech fix lane (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-cs-r2
+No git add/commit/push.
+Czech strings only. Test pin updated: src/data/__tests__/guidance-disclosure-parity.test.ts
+`not-the-consultation-step` cs regex `/krokem porady|krok porady/` → `/není poradou/`
+(the disclaimer sentence was rewritten; nothing else in that test).
+
+R2–R10 were already in the round-1 Czech pack (Korea as a labelled example, feminine Wei Tseng,
+consultation lock, Czech dates, NÁŠ TÝM / POBOČKY / Úplný profil (v angličtině), ROC year glosses,
+Taiwan 119/110/112). This round applied the r2 review rows plus the leftover glossary/register
+instances those rows describe.
+
+## Rows applied
+
+cs-a
+1 APPLIED  007: support-modification sentence no longer puts the change before the event.
+2 APPLIED  009: "ať vina…" rewritten across the three existing lines as "podle toho, zda je vina…".
+5 APPLIED  guidance 戶籍 "matričních záznamů" → "záznamů evidence domácností"; sweep of 007
+           matrika/matriční úřad/zákon o matrice (about 20 phrase sites, FAQ+body) and 017
+           "zápis bydliště (戶籍)" ×2 → "zápis v evidenci domácností".
+6 APPLIED  guidance "převzetí" → "nesení" (007 already had nesení).
+7 APPLIED  001 head office "hlavní provozovna" → "ústředí" (3 sites in that paragraph).
+8 APPLIED  001 "průběh a jazyky" → "praxi a jazyky"; same průběh=background miss on the
+           work-permit applicant ("průběh a předložené listiny" → "praxe").
+9 APPLIED  001 AML "skutečného vlastníka (實質受益人)" → "skutečného majitele". Tax-treaty
+           受益所有人 left as "skutečný vlastník" (the 004 rewrite keeps that term).
+10 APPLIED  002 股份有限公司 quorum: "společníci" → "akcionáři" (2/3-of-shares ×3, majority-of-shares ×3).
+            Digit form "2/3" kept (suggested "dvě třetiny" would drop 2 and 3).
+11 APPLIED  004 有限公司 "Akcionáři/akcionář" → "Společníci/společník" (opening paragraph + the later
+            article-99 paragraph). 股份有限公司 akcionáři left as they were.
+12 APPLIED  004 "může jít se souhlasem" → "může vyžadovat souhlas…".
+13 APPLIED  005 "tchajwanské dolary" → "nové tchajwanské dolary".
+14 APPLIED  005 Q&A now says advokátka Wei Tseng prepared it.
+15 APPLIED  008 table "Jsou" → "Ano" (article 11 and article 12 cells).
+16 APPLIED  008 "nepadli do záměru" → "do takového postupu nespadli".
+17 APPLIED  009 close is now the English "prepares in advance" sentence. The "who terminates first"
+            point stays in the preceding lines.
+19 APPLIED  004 withholding list: accusative agreement, "Je třeba zvlášť potvrdit…".
+20 APPLIED  004 the "že" clause now closes; "z mateřské společnosti" has an antecedent.
+21 APPLIED  004 "účastnili" → "účastnil" (with row 11).
+22 APPLIED  006 "Ptalo se" → "Padla například otázka".
+23 APPLIED  006 "Velmi to připomínalo".
+25 APPLIED  008 "Pracujete-li na Tchaj-wanu," completed inside that block ("…platí následující.").
+            The next block stays its own sentence. Blocks were not merged.
+26 APPLIED  003 "bez nákladu" → "bez nákladů řízení".
+27 APPLIED  guidance "movitým" → "zámožným".
+28 APPLIED  guidance FAQ "užít" → "neovládám-li".
+29 APPLIED  guidance "není krokem porady" → "není poradou" (test regex updated).
+30 APPLIED  guidance "časovou osou" → "časovým přehledem událostí".
+31 APPLIED  team bio "dvojím programu" → "dvouoborového studia".
+32 APPLIED  llms discoveryNotice "zaštítění" → "schválení". Literal token `llms.txt` kept.
+            consultationNotice and confidentialNotice were not rewritten.
+33 APPLIED  001 "Těchto 4 typů má každý" → "Každý z těchto 4 typů" (digit 4 kept).
+34 APPLIED  002 "vyžadují každý" ×2 → "vyžaduje každá položka"; "posoudit každou" → "každou z nich zvlášť".
+35 APPLIED  005 no longer tells the reader to go read part 2. Wording is "najdou v této 2. části"
+            so the source numeral 2 stays (the suggested sentence dropped it and the checker failed).
+36 APPLIED  006 "s během času" → "s postupem času".
+37 APPLIED  008 double "Díky" removed inside that line; the next line still carries "prokázat…".
+38 APPLIED  008 "Úprava se liší stát od státu."
+
+cs-b
+1 APPLIED  017 Kinmen or Lienchiang (FAQ+body opening, and the section-2 repeat). Amounts unchanged.
+2 APPLIED  010 "postoj" → "přístup" (image alt and the link text).
+3 APPLIED  010 records organised separately for criminal and civil procedure.
+4 APPLIED  010 "referenční data" → the day the limitation period starts.
+5 APPLIED  011 manufacturer's/importer's address in čl. 7 odst. 1 bodě 7 (digit 7 kept).
+6 APPLIED  012 this case's result, not "v některých věcech".
+7 APPLIED  012 compliance does not guarantee a particular later outcome.
+8 APPLIED  014 training-and-time facts "ovlivňují posouzení", they are not called documents.
+9 APPLIED  014 replaceability vs compensation: "zajištění náhrady za pracovníka" ×3
+           (obtížností / možnost / možnosti). "možnost nahradit personál (人力替補可能性)" already correct.
+10 APPLIED  016 "položky" → "otázce".
+11 APPLIED  016 a Taiwan determination "uznáno" at the situs, not applied unchanged.
+12 APPLIED  017 "8/5 jednotek" → "nových nákladních automobilů" (FAQ+body). Amounts unchanged.
+13 APPLIED  017 牌照 "tabulky" → "registrační značky" (glossed and later bare sites, plus
+            "Tabulky vozidel" and "vyřazení tabulky").
+14 APPLIED  018 "vznikajícím trhu" → "zápis do režimu vznikajících akcií (興櫃)".
+15 APPLIED  018 "účetní (會計師)" → "auditor (會計師)".
+16 APPLIED  018 "Nelze uzavřít" → "Společnost není nutné zakládat" (FAQ+body).
+18 APPLIED  018 "převzalo" → "převzala" (FAQ+body).
+19 APPLIED  016 "uchováte" → "uchovat".
+20 APPLIED  "podpírat" → "dokládat": 010 ×2 and 004 transfer-pricing "Listiny, které dokládají".
+21 APPLIED  010 "akt pokynu" → "pokyn".
+22 APPLIED  011 giveaways and trials go into the registration calendar.
+23 APPLIED  014 "výplatním rozpisu" → "výplatní pásce".
+24 APPLIED  014 "cílovému místu" → "místem, na kterém se má uplatnit".
+25 APPLIED  015 the quoted three blocks are each a full sentence now. They were not merged
+            (block count is pinned). Other one-clause lines in 013/015 were left: they match
+            the Korean block breaks, and joining them would change the block count.
+26 APPLIED  016 "pořadím 1" → "dědici 1. pořadí zákonné dědické posloupnosti" (FAQ+body).
+            "prvního" was not used: Czech has no word-numeral lexicon, so dropping 1 fails numbers.
+
+R8 leftover (not a numbered row): 018 監察人 "revizora" → "dozorčího (監察人)" ×2.
+The neighbouring "dozorčí oprávnění" (inspection rights) was renamed "kontrolní oprávnění"
+so it is not the same word as the supervisor.
+
+## Rows skipped
+
+cs-a 3  SKIP  "čl. 10" → "čl. 3". English and Korean both say article 10 on this link; the URL
+            `flno=3` is the same in the source. Czech already names 各類所得扣繳率標準, which matches
+            pcode G0340028. Changing 10 to 3 makes numbers FAIL (missing 10, extra 3).
+cs-a 4  SKIP  Hangul in frontmatter `url` (008 and 009). ACCEPTED-ROUND and the reviewer both
+            say not to edit `url`.
+cs-a 18 SKIP  Glued "1" in "za poslední 1 rok", "na 1 přerušení", "dokončený 1 rok" (and the
+            FAQ/body repeats). Those are real Korean numerals (1년 / 1회), not R11 lexical
+            digit-words. Removing them FAILs numbers. Wording left as-is.
+cs-a 24 SKIP  Promoting Q16–Q20 (and the 005/006/008/009 line breaks) to `##` headings, or
+            deleting U+200B. Heading levels and the ZWSP count are compared to the Korean source.
+cs-a 39 SKIP  Space thousands separators and the paired "500 000 TWD" form. ACCEPTED-ROUND:
+            the checker cannot parse spaces. Czech style in the checker is `dot` (`500.000`).
+            Dot grouping and "TWD" before the figure were left.
+cs-b 17 SKIP  Delete U+200B in 013/015. Same ZWSP pin as cs-a 24. The sentence on that line
+            was left; the trailing zero-width space stays.
+cs-b 27 SKIP  Same as cs-a 39 ("1 579 589 TWD" and the other space-grouped amounts).
+
+## Systemic patterns and how many instances changed
+
+- Dot thousands / "TWD" before the amount (cs-a and cs-b verdicts): 0 changed (space form skipped).
+- Glued numeral in a time phrase ("1 rok", "1 přerušení"): 0 removed.
+- Bare "každý" after a plural list: 6 (001 ×1, 002 ×3, 004 ×2).
+- 有限公司 given akcionáři / 股份有限公司 given společníci: 002 quorum 6 sites; 004 limited-company
+  paragraph rewritten (akcionáři, zneužívají-li akcionáři, akcionář/účastnili) plus the later
+  "Akcionáři společnosti s ručením omezeným" sentence.
+- U+200B blank lines and Hangul `url`: 0 changed.
+- "podpírat" for supporting evidence: 3.
+- Kinmen joined with "a" instead of "nebo": 3 (two copies of the threshold sentence, one
+  shorter repeat). "měřítko" for a threshold/standard: 16 (017 ×6 including link labels,
+  014 ×3, 011 ×3, 007 best-interests ×3, 010 technical standard ×1).
+- "náhrada" for replacing a worker: 3 in 014.
+- 戶籍 as matrika / bydliště: guidance ×1, 007 sweep (~20), 017 ×2.
+- 牌照 as "tabulky": 7 sites in 017.
+- 監察人 as "revizor": 2 in 018.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-cs --lang cs 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=38
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-cs src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+```
+
+That 24 was captured before this log file existed. After the log was written the same command prints 25 (this file is the extra untracked path).
+
+015 numbers is WARN `extra in translation (2): 2×2` (pre-existing; not introduced by this pass).
+WARN does not fail the summary. 005 briefly FAILed `missing 2` when the part-2 self-reference
+dropped the digit; restored as "v této 2. části", then summary PASS 18/18.
+
+## Reviewer got wrong (not applied)
+
+- cs-a 3: article 10 on the withholding-rate link is what the English and Korean sources say.
+  `flno=3` is a source-URL mismatch, not a Czech-only error. The statute name in Czech already
+  follows the pcode. The digit was not changed.
+- cs-a 18 and the "za poslední rok" / "dokončený rok" / "na přerušení" suggestions drop a
+  source numeral. The checker has no Czech word for "one".
+- cs-a 24 and cs-b 17: Q-lines are body blocks split by U+200B because the Korean source is.
+  Making them headings or deleting the zero-width spaces fails blocks/headings.
+- cs-a 39 and cs-b 27: a space as the thousands separator is the right Czech typography and
+  the wrong checker convention. Dot grouping stays.
+- cs-a 10's "dvě třetiny" and cs-b 26's "prvního pořadí" are more natural and were not used,
+  for the same numeral reason. "2/3" and "1. pořadí" stay.
+- cs-a 35's suggested sentence omitted "2". The self-reference is fixed without dropping it.

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Hlavní obrázek](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Osoby, které četly [Založení společnosti na Tchaj-wanu – základy](/cs/columns/taiwan-company-establishment-basics) a [Založení společnosti na Tchaj-wanu – podrobnější výklad, 1. část](/cs/columns/taiwan-company-establishment-advanced-1), mohou rovněž nahlédnout do Založení společnosti na Tchaj-wanu – podrobnější výklad, 2. část (公司設立).
+Osoby, které četly [Založení společnosti na Tchaj-wanu – základy](/cs/columns/taiwan-company-establishment-basics) a [Založení společnosti na Tchaj-wanu – podrobnější výklad, 1. část](/cs/columns/taiwan-company-establishment-advanced-1), najdou v této 2. části další otázky k založení společnosti na Tchaj-wanu (公司設立).
 
 ​
 
@@ -21,7 +21,7 @@ Osoby, které četly [Založení společnosti na Tchaj-wanu – základy](/cs/co
 
 ​
 
-Níže uvedené otázky a odpovědi mají pomoci osobám, které zvažují založení společnosti (公司設立) na Tchaj-wanu.
+Níže uvedené otázky a odpovědi připravila advokátka Wei Tseng (曾雋崴); mají pomoci osobám, které zvažují založení společnosti (公司設立) na Tchaj-wanu.
 
 ​
 
@@ -37,7 +37,7 @@ Před převodem kapitálu (資本金匯款) se informujte u své hlavní banky v
 
 **​**
 
-**2. Při vkladu základního kapitálu, lze převést tchajwanské dolary (新臺幣, TWD) z osobního účtu na Tchaj-wanu na přípravný účet tchajwanské společnosti?**
+**2. Při vkladu základního kapitálu, lze převést nové tchajwanské dolary (新臺幣, TWD) z osobního účtu na Tchaj-wanu na přípravný účet tchajwanské společnosti?**
 
 Je to možné, avšak je třeba předložit listiny potvrzující původ prostředků v tchajwanských dolarech získaných na Tchaj-wanu.
 

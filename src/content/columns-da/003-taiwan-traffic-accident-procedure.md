@@ -31,7 +31,7 @@ Artikel 185-4 i straffeloven (刑法) behandler det strafferetlige ansvar for de
 
 Sikr først den personlige sikkerhed og advarselstegnene; ved tilskadekomst eller redningsbehov ringer du i Taiwan 119 (ambulance og brandvæsen), ved en strafbar handling eller en akut sikkerhedssituation 110 (politi) eller 112 fra en mobiltelefon (交通事故). Anmeld også trafikulykken til politiet, for så vidt situationen kræver det.
 
-Når sikkerheden er sikret, tag da oversigts- og næroptagelser for at fastholde køretøjets position og beskadigelse, vejmarkering, signaler og vejr. Vidnekontakter, anmodning om sikring af CCTV (監視器影像) og dashcam (行車紀錄器), oplysninger om parter, køretøjer og forsikringer samt lægejournaler (病歷) bør du ikke udelade. Private optagelser er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfald ikke den krævede politibehandling.
+Når sikkerheden er sikret, tag da oversigts- og næroptagelser for at fastholde køretøjets position og beskadigelse, vejmarkering, signaler og vejr. Vidnekontakter, anmodning om sikring af overvågningsoptagelser (CCTV, 監視器影像) og dashcam (行車紀錄器), oplysninger om parter, køretøjer og forsikringer samt lægejournaler (病歷) bør du ikke udelade. Private optagelser er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfald ikke den krævede politibehandling.
 
 Hvad politidokumenterne angår, kan du på ulykkesstedet modtage registrerings- og kontaktblanketten for parterne i trafikulykken (道路交通事故當事人登記聯單). Efter 7 dage fra ulykkesdagen kan situationsskitse og ulykkesfotos (現場圖 / 現場照片) ansøges; efter 30 dage fra ulykkesdagen kan den foreløbige analysebedømmelse af vejtrafikulykken (道路交通事故初步分析研判表) ansøges. Udstedelsestidspunkt og ansøgningsbetingelser bør du undersøge på ny hos den kompetente politimyndighed.
 
@@ -49,7 +49,7 @@ Valget afviger efter afbrydelse af forældelsen (時效中斷), kredsen af sags�
 
 Strafferetligt ansvar kan først bedømmes, når tilsidesættelse af hver sides agtpågivenhedspligt og den årsagssammenhæng, som denne tilsidesættelse har med modpartens tilskadekomst, er anerkendt. Alene fordi begge sider har uagtsomhed (過失), opstår der ikke automatisk ansvar for uagtsom legemsbeskadigelse.
 
-Civilretligt kan retten ifølge artikel 217 i civilloven (民法) nedsætte eller eftergive erstatningen, hvis den skadelidte har uagtsomhed ved skadens opståen eller forøgelse (與有過失). Blev for eksempel anerkendte skader på TWD 1.000.000 (新臺幣) og den skadelidtes uagtsomhed vurderet til 50 %, kan beløbet før andre tilpasninger falde til TWD 500.000.
+Civilretligt kan retten ifølge artikel 217 i civilloven (民法) nedsætte eller eftergive erstatningen, hvis den skadelidte har uagtsomhed ved skadens opståen eller forøgelse (與有過失). Blev for eksempel anerkendte skader på 1.000.000 TWD (新臺幣) og den skadelidtes uagtsomhed vurderet til 50 %, kan beløbet før andre tilpasninger falde til 500.000. TWD
 
 Sagkyndig vurdering (鑑定) eller den foreløbige analysebedømmelse kan være vigtige dokumenter, men binder ikke retten mekanisk. Retten betragter forklaringer, optagelser, køretøjets tilstand og samtlige beviser under ét.
 
@@ -63,7 +63,7 @@ Ved klageforbrydelser kan klagen ifølge artikel 238 i strafferetsplejeloven tr�
 
 ### Officielle grundlag Q1–Q5
 
-- [Bekendtgørelse om administration og sanktioner i vejtrafikken (道路交通管理處罰條例) artikel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Lov om administration og sanktioner i vejtrafikken (道路交通管理處罰條例) artikel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Straffeloven for Republikken Kina artikel 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Straffeloven for Republikken Kina artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Straffeloven for Republikken Kina artikel 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -93,7 +93,7 @@ Mod den sagkyndige udtalelse kan fornyet prøvelse ansøges, dog kun 1 gang. Sag
 
 Krav ifølge artikel 184 i civilloven (民法) forudsætter retsstridig krænkelse af en ret, årsagssammenhæng med ulykken og bevis for skaden. Den blotte kendsgerning, at en ulykke er sket, betyder ikke, at alle følgende poster anerkendes. Artikel 216 i civilloven er målestok for omfanget af den faktiske skade og den tabte fortjeneste (所失利益).
 
-- **Tilskadekomst**: Ifølge artikel 193 i civilloven kan nødvendige behandlingsudgifter (醫療費用), i livet forhøjede behovsudgifter som pleje (看護費用), transport til behandling (就醫交通費) og hjælpemidler samt indtægtstab (收入損失) ved faktisk arbejdsudygtighed og nedsættelse af arbejdsevnen (勞動能力減損) undersøges. Ifølge artikel 195 i civilloven kan også ikke-økonomisk skade undersøges.
+- **Tilskadekomst**: Ifølge artikel 193 i civilloven kan nødvendige behandlingsudgifter (醫療費用), forøgede udgifter til livsophold såsom pleje (看護費用), transport til behandling (就醫交通費) og hjælpemidler samt indtægtstab (收入損失) ved faktisk arbejdsudygtighed og nedsættelse af arbejdsevnen (勞動能力減損) undersøges. Ifølge artikel 195 i civilloven kan også ikke-økonomisk skade undersøges.
 - **Dødsfald**: Ifølge artikel 192 i civilloven kan, for så vidt det finder anvendelse, behandlingsudgifter og forhøjede livsbehovsudgifter før dødsfaldet, begravelsesudgifter (殯葬費) og tab af forsørgelse (扶養利益損失) for den, der retligt havde krav på forsørgelse, undersøges. Ifølge artikel 194 i civilloven kan også ikke-økonomisk skade for visse slægtninge undersøges.
 - **Formue**: Ifølge artikel 196 i civilloven kan beviste faktiske formueskader, herunder køretøjsreparation eller værdiforringelse, kræves.
 
@@ -175,7 +175,7 @@ Forsikringspligten ifølge artikel 6 i loven om obligatorisk ansvarsforsikring f
 
 Ved eneulykker med 1 køretøj er dets fører som regel ikke ydelsesmodtager af den obligatoriske forsikring for det køretøj. Ved ulykker med flere køretøjer kan føreren dog kræve ydelser hos den obligatoriske forsikringsgiver for et andet involveret køretøj.
 
-Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret den 29. maj 2026, gælder for ulykker fra den 1. juli 2026. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør TWD 200.000, invaliditetsydelser (失能) efter de lovbestemte 15 trin TWD 80.000–3.000.000, dødsfaldsydelsen TWD 3.000.000, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. tilskadekommen person og pr. ulykke udgør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gælde.
+Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret den 29. maj 2026, gælder for ulykker fra den 1. juli 2026. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør 200.000 TWD, invaliditetsydelser (失能) efter de lovbestemte 15 trin 80.000–3.000.000 TWD, dødsfaldsydelsen 3.000.000 TWD, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. tilskadekommen person og pr. ulykke udgør 3.200.000. TWD For tidligere ulykker kan den tidligere norm gælde.
 
 Ansvarsforsikring over for tredjemand (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktlige valgprodukter. Den faktiske dækning afviger efter forsikret, loft, selvrisiko (自負額), undtagelse, uagtsomhed og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøges et for et.
 
@@ -199,7 +199,7 @@ Q16. Kan alt efter ulykken overlades til forsikringsselskabet?
 
 ​
 
-Ifølge min erfaring behandler forsikringsselskabet ofte ikke ulykkesparternes følelsesmæssige side tilstrækkeligt.
+Forsikringsselskaber går ofte ikke tilstrækkeligt ind i ulykkesparternes følelsesmæssige side.
 
 ​
 
@@ -207,7 +207,7 @@ Vigtige dele, der vedrører modpartens følelser, såsom undskyldning og trøst,
 
 ​
 
-For forsikringsselskabet påvirker en yderligere udgift på TWD 500.000 (新臺幣) eller TWD 1.000.000 i en enkelt sag næppe den samlede fortjeneste, for ulykkesparten kan den dog afgøre, om der opstår en strafferegistrering (前科).
+For forsikringsselskabet påvirker en yderligere udgift på 500.000 TWD (新臺幣) eller 1.000.000 TWD i en enkelt sag næppe den samlede fortjeneste, for ulykkesparten kan den dog afgøre, om der opstår en strafferegistrering (前科).
 
 ​
 
@@ -219,7 +219,7 @@ Der kan også opstå interessekonflikter mellem forsikringsselskab og part, og f
 
 ​
 
-Derfor tilråder jeg ikke at overlade hele processen til forsikringsselskabet.
+Hele processen bør derfor ikke overlades til forsikringsselskabet.
 
 ​
 
@@ -239,7 +239,7 @@ Ved uagtsom legemsbeskadigelse (過失傷害) er der i nogle afgørelser idømt 
 
 ​
 
-Ved omregning til bøde fastsætter artikel 41 stk. 1 i straffeloven (刑法) omregningen af TWD 1.000, TWD 2.000 eller TWD 3.000 (新臺幣) pr. dag; beregner man på grundlag af TWD 1.000 pr. dag, giver en straf på 3 måneder 3 × 30 × 1.000 = TWD 90.000.
+Ved omregning til bøde fastsætter artikel 41 stk. 1 i straffeloven (刑法) omregningen af 1.000 TWD, 2.000 TWD eller 3.000 TWD (新臺幣) pr. dag; beregner man på grundlag af 1.000 TWD pr. dag, giver en straf på 3 måneder 3 × 30 × 1.000 = 90.000. TWD
 
 ​
 
@@ -331,7 +331,7 @@ Hermed er spørgsmålene og svarene om trafikulykker afsluttet.
 
 ​
 
-Efter behandling af mange trafikulykker ønsker jeg at nævne 1 vigtigt punkt.
+Efter mange trafikulykker bør 1 punkt nævnes særskilt.
 
 ​
 

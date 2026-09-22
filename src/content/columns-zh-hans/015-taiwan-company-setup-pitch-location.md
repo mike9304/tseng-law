@@ -59,13 +59,13 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 故实务上，公司登记时不必查询全部业种。
 
-依“[台北市营业场所协助查询服务作业须知](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”（臺北市營業場所協助查詢服務作業須知）及台北市现行指南，
+所依据的是“[台北市营业场所协助查询服务作业须知](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”（臺北市營業場所協助查詢服務作業須知）及台北市现行指南。
 
 自2023年1月1日起，申请公司或商业（含分公司及分支机构）的设立登记、迁址或追加营业项目时，不论行业，营业场所预先查询结果**必须**附于登记申请。
 
 下列“主动查询之营业项目”（主動查詢之營業項目）清单，指申请书中有该业种但所附查询结果缺漏时，商业处在登记审查中依职权追加查询（随案主动查询）的对象；某业种不在此清单，并不表示查询获免除。
 
-若在无法经营餐饮之处开业，其后主管机关可能课以行政罚锾（罰鍰）。
+若在无法经营餐饮之处开业，其后主管机关可能课以行政罚锾（罰鍰，即罚款）。
 
 ![“主动查询之营业项目”](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 

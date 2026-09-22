@@ -1,0 +1,81 @@
+WO-F-ta r3 — Grok 4.7 fix lane — 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-ta-r3
+Scope: Tamil columns 001–018, tamil guidance pack (`international-guidance-south-asia.ts` `ta`), guidance team/answers `ta`, `GUIDANCE_LLMS_NOTICES.ta`. No other locale.
+
+## Rows applied
+ta-a: 14 of 19 (P1 #3; P2 #4–#6, #8–#16, #19).
+ta-b: 22 of 25 (P1 #1–#2; P2 #3–#12, #15–#23; P3 #25).
+Total applied: 36.
+
+Notable wording choices (reviewer text used as a hint):
+- 007 Art. 1052(1) ground 4 now names the other spouse’s lineal relative (直系親屬), both directions, and tells the reader to separate actor and victim. The old line had the spouse abusing their own descendants, or those descendants abusing themselves.
+- 002 proviso is விதிவிலக்குக் கூறு (但書) on the FAQ and the body, the gloss 007 already uses. The suggested “ஆனால் கூறு” was not used.
+- 008 “அவர்கள் பின்பற்ற.” is now a finite clause inside that same one-line block (“அவர்களும் பின்பற்றச் சொன்னார்.”). The previous line was not merged into it.
+- 012 keeps the digit in “1 முறை” so the checker still sees it. Only “சில வழக்குகளில் … வருவதால்” was replaced with this case’s expert result.
+- 014 employer is the one who pays, in the FAQ, the section-1 body, and the second statutory ground in the same section. The heading is now the English question (when the clause can be valid), and நிபந்தை is நிபந்தனை.
+- Lawyers blurb (page description, team description, lawyers answer) restores Korea operations: “கொரியா செயல்பாட்டு நிர்வாகம்”. The role line “கொரியா செயல்பாட்டு நிர்வாகி” was already correct and was not edited. No parentheses added to descriptions.
+- llms discoveryNotice keeps the token `llms.txt`. Only “தேடல் வரிசை” became “தேடல் தரவரிசை”.
+- Contact-page link now reads “தொடர்பு பக்கம்” (label, then பக்கம்). “சேவைகள்” பக்கம் uses the same order.
+- 017 “8 அலகுகள் / 5 அலகுகள்” are new freight trucks; “இடமாற்றம்” for 搬家 is கொண்டுசெல்லும் / கொண்டுசெல்லுதல் (FAQ, body, section 2). “கவுண்டர்” is மேசை வழிப் பத்திரங்கள் (櫃檯買賣). “பில்லிங்” is விலைப்பட்டியல்.
+- 016 security interests are அடமானம் அல்லது அடகு போன்ற பிணை உரிமை, and grandparents carry (祖父母).
+
+## Rows skipped
+- ta-a #1 (P1, 003 sentencing). R3 requires “in some judgments about 3 / 4 / 6 months; not a typical or guaranteed outcome.” The current Tamil already says that. The suggested “பொதுவாகச் சுமார் 3 மாதச் சிறை விதிக்கின்றன” puts the usual term back. Not applied.
+- ta-a #2 (P1, 004 link text article 10 → article 3). The URL `pcode=G0340028&flno=3` was left. Changing the visible “10” to “3” made the checker report `numbers FAIL missing from translation (1): 10` (the Korean link label still contains 10). Reverted to “பிரிவு 10”. The reviewer’s article number is the one the URL points at; the checker will not accept dropping that 10.
+- ta-a #7 (P2, restore அதிகபட்ச / maximum compensation). R3 replaces “pursue the maximum” with “pursue the compensation the facts and evidence support.” The current sentence already does that. Not applied.
+- ta-a #17 (P2, bio “TWD 1.57M” → 15,70,000). Pinned byte-identical by the test and by ACCEPTED-ROUND / R12. Not applied.
+- ta-a #18 (P2, lakh grouping 30,00,000 and the other regroupings). R14 and ACCEPTED-ROUND: lakh/crore grouping is not parsed. Western commas kept.
+- ta-b #13 (P2, delete U+200B in 013 and 015). The checker requires the target ZWSP count to equal the Korean source, which has the same characters, including lines whose only character is U+200B. Removing them fails `ZWSP`. Not applied.
+- ta-b #14 (P2, 018 headings 7 and 8). The English source has the same 5-then-7 gap. Renumbering would change heading numbers and diverge from that outline. Not applied.
+- ta-b #24 (P3, TWD 15,79,589 and the other lakh regroupings). Same checker limit as ta-a #18. Not applied.
+
+## Systemic patterns
+- Korea dropped from the lawyers blurb: 3 strings (lawyers description, team description, lawyers answer).
+- Page name after பக்கம்: 2 (home services-assistance link, home “பணிக் குழுக்கள்” paragraph). No further “பக்கம் “…”” in the Tamil columns.
+- தேடல் வரிசை as the order of a search: 1 (`GUIDANCE_LLMS_NOTICES.ta.discoveryNotice`).
+- பாதையில் for “during the work”: 1 (pricing paragraph).
+- Employer as the payer of reasonable compensation: 3 (014 FAQ, section-1 opening, section-1 second ground).
+- 搬家 as a job transfer, and “units” for trucks: 3 passages in 017 (FAQ, repeated body, section 2).
+- Beginner “தொடக்கர்”: 2 (010 image alt and the link under it).
+- 但書 gloss on the Article 3 proviso: 2 (002 FAQ and body).
+- Stock closer “பொருளுக்குப் பொருள் மீண்டும் உறுதிப்படுத்த” (011, “rechecked for each product”): 1, now “ஒவ்வொரு பொருளுக்கும் மீண்டும் பார்க்க”. Other “உறுதிப்படுத்துங்கள்” lines were left; they match English “confirm”.
+- கொள்கையளவில்: 0 changed. See reviewer note below.
+- Western grouping and `TWD 1.57M`: 0 changed (checker / pin).
+- U+200B and one-sentence paragraph layout in 013/015: 0 changed (checker block/ZWSP parity). Merging those lines would change the block count.
+
+R2–R12 residue checked, not re-opened: no Devanagari/Thai/Cyrillic leakage in columns-ta; consultation languages stay English, Chinese (中文), Japanese, and Korean; Wei Tseng stays அவர் / -ஆர் and பரிமாற்ற மாணவி; `[변호사 검수 필요]` is 0. No test pinned a Tamil string this lane changed, so no test file was edited.
+
+## §Verify
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-ta src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+The `21` is the worktree count before this log file was added. An earlier checker run on 004, after the article label was changed from 10 to 3, failed with `numbers FAIL missing from translation (1): 10`. The label was put back; the summary above is the re-run.
+
+## Reviewer got wrong (not applied)
+- ta-a #1. “Courts currently generally impose about 3 months / 4 months / 6 months” is the advertising-rule sentence R3 tells this lane to soften. The published Tamil already says some judgments imposed about those terms and that the term is not a usual or guaranteed result. Restoring பொதுவாக would put a typical sentence length back in front of the reader.
+- ta-a #7. Restoring அதிகபட்ச puts “maximum compensation” back. R3 already replaced that with the compensation the facts and evidence support, and the Tamil sentence is that form.
+- ta-a verdict, “கொள்கையளவில்” as a stock opener. In these columns it is the legal “in principle / as a general rule, subject to the exception that follows” (English “in principle”, “as a general rule”). About 48 instances. Replacing them with a bare “generally” would drop that qualifier. Not swept.
+- ta-b verdict, every instruction ending on உறுதிப்படுத்துங்கள். That verb is the ordinary Tamil for the English “confirm”, which the source repeats. Only the one stiff closer quoted in the verdict (“பொருளுக்குப் பொருள் மீண்டும் உறுதிப்படுத்த”) was rewritten.
+- ta-b #14. The heading gap is in the English source. It is not a Tamil numbering error to close on this lane.
+- ta-a #17–#18 and ta-b #24. Lakh grouping and spelling out TWD 1.57M are standing skips. The bio figure is pinned. The checker does not parse 30,00,000 or 15,79,589.

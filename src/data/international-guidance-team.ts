@@ -996,7 +996,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'குழு',
     title: 'Hovering-இன் பன்னாட்டுக் குழு',
     description:
-      'Hovering வழக்கறிஞர்கள், செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் பட்டயக் கணக்காளரின் சுயவிவரங்கள்.',
+      'Hovering வழக்கறிஞர்கள், கொரியா செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் பட்டயக் கணக்காளரின் சுயவிவரங்கள்.',
     representativeTitle: 'நிர்வாக வழக்கறிஞர்',
     teamTitle: 'வழக்கறிஞர்கள் மற்றும் உதவியாளர்கள்',
     partnerTitle: 'கூட்டாளர் பட்டயக் கணக்காளர்',

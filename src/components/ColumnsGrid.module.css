@@ -429,6 +429,13 @@
   word-break: normal;
 }
 
+/* WO-DS2: Korean keeps 어절 wrapping (globals.css WI-1); ja/zh stay normal. */
+.root:lang(ko) :global(.columns-card-title),
+.root:lang(ko) :global(.columns-card-summary),
+.root:lang(ko) :global(.columns-grid) :global(.columns-card-summary) {
+  word-break: keep-all;
+}
+
 .root :global(.columns-card-linkhint),
 .root :global(.columns-grid) :global(.columns-card-linkhint) {
   display: inline-flex;

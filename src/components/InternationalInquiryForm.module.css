@@ -321,6 +321,28 @@
   -webkit-user-select: all;
 }
 
+/* WO-DS2: Korean keeps 어절 wrapping (globals.css WI-1); ja/zh stay normal.
+   Only prose/heading/label text. Excluded on purpose: .input/.select/
+   .emailInput (single-line controls, email) and .receiptId (monospace ID that
+   must break anywhere). overflow-wrap: anywhere on each rule is kept. */
+.form:lang(ko),
+.notice:lang(ko),
+.heading:lang(ko),
+.intro:lang(ko),
+.label:lang(ko),
+.textarea:lang(ko),
+.hint:lang(ko),
+.error:lang(ko),
+.consentLabel:lang(ko),
+.privacyLink:lang(ko),
+.contactLink:lang(ko),
+.noticeText:lang(ko),
+.submit:lang(ko),
+.status:lang(ko),
+.receiptLabel:lang(ko) {
+  word-break: keep-all;
+}
+
 .form :focus {
   outline: 3px solid var(--text-link, #234d3c);
   outline-offset: 2px;

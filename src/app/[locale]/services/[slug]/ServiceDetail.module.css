@@ -339,6 +339,15 @@
   font-weight: 700;
 }
 
+/* WO-DS2: globals.css sets `word-break: normal` on .authority-card-name/-role/
+   -summary for every locale; Korean keeps 어절 wrapping (WI-1), ja/zh stay
+   normal. overflow-wrap: anywhere from globals.css is untouched. */
+.sidebar:lang(ko) :global(.authority-card-name),
+.sidebar:lang(ko) :global(.authority-card-role),
+.sidebar:lang(ko) :global(.authority-card-summary) {
+  word-break: keep-all;
+}
+
 .sidebar :global(.authority-card-actions),
 .sidebar :global(.authority-chip-list) {
   min-width: 0;

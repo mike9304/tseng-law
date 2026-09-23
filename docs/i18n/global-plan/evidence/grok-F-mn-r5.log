@@ -1,0 +1,181 @@
+# WO-F-mn — Mongolian (Cyrillic) fix lane, campaign round 5, 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-mn-r5 (no git add/commit/push)
+Files touched: src/content/columns-mn/001–018 (all 18);
+src/data/international-guidance-southeast-central.ts (mongolianGuidanceContent, lines 1475–EOF only);
+src/data/international-guidance-team.ts (guidanceTeamBios.mn only);
+src/data/international-inquiry-copy.ts (internationalInquiryCopy.mn only); this log.
+src/lib/llms-txt.ts was NOT changed (no row required it; the three mn notices keep the literal
+`llms.txt` token, the consultationNotice and the confidentialNotice stay verbatim substrings of
+the FAQ answer / privacy paragraph they mirror).
+No test file was edited — no pinned Mongolian expectation had to change (160 test files, 3202 tests, all pass).
+"TWD 1.57M" stays byte-identical in guidanceTeamBios.mn['tseng-junwei'].
+Helper scripts live in the worktree only: .tmp-mn/fix1.py, fix2.py, fix3.py (untracked).
+
+## Rows applied
+mn-a: 41 of 45 rows (40 applied, 1 attempted-and-reverted, 3 skipped by rule).
+mn-b: 31 of 32 rows (1 skipped by rule).
+
+### mn-a
+2   002 «зээл болгон бичихийг зайлна» → «…бичихээс зайлсхийнэ». «оргон зайлах» (肇事逃逸, to flee) in 003 is the correct use of зайлах and was left alone.
+3   006 «нэг удаагийн Үндсэн хуулийн тайлбар хүсэлттэй (釋憲)» → «нэгэн цагт гаргасан Үндсэн хуулийн тайлбарын хүсэлттэй (釋憲)».
+4   006 «Солонгосын засаг харааны…» → «Солонгосын засгийн газар харааны…».
+5   004 the two-nominative sentence. Causal «тул» inserted in all four places the reviewer named: FAQ answer (L14), body (L57), table row (L68) and body (L75). Block/table-row counts unchanged.
+6   004 systemic «аж ахуй» (entity sense) → «аж ахуйн нэгж» — 36 instances across 001 (4), 004 (6 + the 4 of row 5), 005 (1), 010 (3), 015 (3), 017 (11), 018 (11), with the case ending moved onto «нэгж» (нэгжийн / нэгжийг / нэгжид / нэгжээс). Scope decision below.
+7   guidance pages.pricing.description + pages.pricing.sections[0].paragraphs[0]: «тогтоодогыг» → «тогтоодгийг» (2).
+8   guidance pages.home.sections[3].paragraphs[0]: «баталгаажуулдыг» → «баталгаажуулдгийг».
+9   guidance pages.contact.intro: «Тэднийг ихэвчлэн хольдог ч өөр өөр утгатай.» → «Тэдгээрийг ихэвчлэн хольдог ч утга нь өөр өөр.».
+10  guidance pages.faq.sections[0].paragraphs[0]: «энэ хуудаснаас» → «энэ хуудсаас».
+11  internationalInquiryCopy.mn placeholder: «…дансны мэдээлэл бичихгүй.» → «…дансны мэдээллийг бичихгүй байгаарай.» (now an instruction, matching the privacy paragraph and the llms confidentialNotice, which were already correct and were not touched).
+12  001 «практикээс» → «практикаас».
+13  «ашигийн» → «ашгийн» (001 ногдол ашгийн 股利, 003 алдсан ашгийн 所失利益).
+14  001 «үнэмлэхэнд» → «үнэмлэхэд».
+15  «журамын» → «журмын» (7: 002, 008, 012, 014, 017 …), 008 «журамыг» → «журмыг», plus 003 «журамийн» → «журмын» found by the corpus sweep (not quoted by either reviewer, same pattern).
+16  002 «үндэсээс» → «үндсээс»; 007 «үндэсийн» → «үндсийн» (2: 執行名義 and the divorce-ground phrase).
+17  004 «»-ын» → «»-ийн» after the -ь stem «хууль» (3: L99, L121, L181). The other «»-ын» in 005/011/015 sit on «ажил»/«журам» quotations, which take -ын correctly, and were left.
+18  «Тайваняас» → «Тайванаас» (6 in 004) and guidance privacy «Тайваниас» → «Тайванаас» (1). One ablative for the whole pack now.
+19  Country-name adjectives capitalised: «шинэ Тайвань доллараар/доллар» (003, 2), «Тайвань хүн» (004 FAQ), «шинэ Тайвань долларыг/долларын» (005, 2), «Вьетнам маягийн» + «Ийм Тайвань маягийн үсчин олон Тайвань хүнд» (006). Language adjectives (хятад орчуулга, англи/хятад/япон/солонгос) are lower-case by Mongolian convention and were left.
+20  006 «тосны массаж, тайланд массаж» → «тосны массаж, Тайландын массаж».
+22  005 «Хоёр дахь ажилтанаас» → «…ажилтнаас».
+23  006 «уламжлалт үсчинийн (理髮廳)» → «уламжлалт үсчний газрын (理髮廳)».
+24  «үйлдэлийн» → «үйлдлийн» (2: 006 猥褻, 010 侵權行為 — the second is mn-b row 8).
+25  007 «нөхөрийн» → «нөхрийн» (2: FAQ + body).
+26  007 «сонирхолоор» → «сонирхлоор» (2: FAQ + body).
+27  007 «тэтгэлэгийг» → «тэтгэлгийг» (2), «тэтгэлэгийн» → «тэтгэлгийн» (4).
+28  007 «сэргээхыг» → «сэргээхийг».
+29  009 «халдварт өвчинөөр (法定傳染病)» → «халдварт өвчнөөр (法定傳染病)».
+30  003 «гэр бүл нь бие махбодь, сэтгэл санааны зовлон» → «…бие махбодийн болон сэтгэл санааны зовлон».
+31  008 sentence-final full stops added on the five blog-register lines (L31, L95, L157, L213, L219). The Korean source also drops them; adding them changes no block, list or table count.
+32  guidance pages.columns.sections[2].paragraphs[1]: «бүү тулгуурла» → «бүү тулгуурлаарай». The reviewer's suggested word order («нийтлэлийг … тулгуурлаарай») was not used because тулгуурлах governs the dative; only the imperative was fixed, so «нийтлэлд» stays. The pinned disclosure marker «энэ хуудас зөвлөгөө биш» is untouched.
+33  guidance pages.columns.sections[0].heading: «Хэлээр нь дөрвөн жагсаалт» → «Хэл тус бүрийн дөрвөн жагсаалт».
+34  guidance pages.pricing.sections[2].paragraphs[0]: «…хэлэхгүй, аль ч хэсгийг тийн уншиж болохгүй.» → «…хэлэхгүй бөгөөд аль ч хэсгийг нь тэгж ойлгож болохгүй.» The pinned marker «төлбөртэй» stays.
+35  guidance pages.pricing.sections[0].paragraphs[1]: «хэдий чинээ тодорхой бичив, төдий чинээ хэмжээг нарийн тогтоож болно.» → «хэдий чинээ тодорхой бичнэ, төдий чинээ хэмжээг нарийвчлан тогтоох боломжтой.»
+36  guidance pages.home.sections[2].paragraphs[0]: «юу амлагдахгүйг» → «юуг амлахгүйг».
+37  003 «утсаар өвчнийг асуух, эмнэлэгт очиж үзэхэд анхаарал хандуулдаггүй» → «утсаар биеийн байдлыг нь асуух, эмнэлэгт очиж эргэх зэрэгт огт анхаардаггүй».
+38  008 «B-г гар гэж хэлсэн.» → «B-д гарч яв гэж хэлсэн.»
+41  004 table row label capitalised: «| ашгийн төлөөх аж ахуйн орлогын албан татвар |» → «| Ашгийн төлөөх…|».
+42  006 fine sentence: the currency is now named once — «ноён Линь болон хоёр ажилтанд тус тус 40,000, 10,000, 20,000 шинэ Тайвань долларын (新臺幣, TWD) захиргааны торгууль (罰鍰) ногдуулсан.» The comma thousands were KEPT (see skipped row 40).
+43  005 «ерөнхийдөө ядаж гар утасны дугаар» → «ерөнхийдөө дор хаяж гар утасны дугаар».
+44  002 «Гүйлгээний үнийг хүлээн авснаас бүртгэлд тусгах, татварын тайлан хүртэл…» → «Гүйлгээний төлбөрийг хүлээн авснаас эхлээд бүртгэлд тусгах, татварын тайлан гаргах хүртэл…».
+45  guidanceTeamBios.mn['chang-fangyu']: «Олон жил хэд хэдэн фирмд ахлах хуулийн туслахаар ажилласан хуулийн туслах;» → «Хэд хэдэн фирмд олон жил ахлах хуулийн туслахаар ажилласан туршлагатай;». The role term «ахлах хуулийн туслах» (R12) stays.
+
+### mn-b
+1  (P1) 015 «Хэн ч … ямар ч … хүсэж болно.» → «Хүн бүр газрын бүртгэлийн газраас (地政事務所) дурын хаягийн «барилгын бүртгэлийн 2 дугаар төрлийн хуулбар»-ыг хүсэж болно.» Swept the rest of the corpus for «хэн ч / ямар ч / юу ч» + affirmative verb: the five remaining instances (004, 007 ×2, 014 ×2) all stand with a negative verb and are correct; none changed.
+2  011 «үе шаттай хэрэглэлт» → «үе шаттай хэрэгжилт».
+3  016 «салалт» → the statutory term, in all four places: «аль хэдийн гарсан гэрлэлт цуцалсан шийдвэр» (L77), «гэрлэлт, гэрлэлт цуцлалт,» (L109), «Гадаадын гэрлэлт, гэрлэлт цуцалсны гэрчилгээ» (L113), «гэрлэлт, гэрлэлт цуцлалт, үрчлэлтийн бүртгэл» (L123).
+4  012 heading and first body sentence → «Манай фирмийн хөтөлсөн, талуудын нэрийг нууцалсан…» (2).
+5  011 «сөрөг үзэгдэл» → «гаж нөлөө» (the form used earlier in the same file). No other instance in the corpus.
+6  «журамын» → «журмын» — merged with mn-a row 15 (012 L?, 017 L91, 014 L97 included).
+7  010 «аюулгүй байдлын үүрэгийн (安全義務)» → «үүргийн (安全義務)».
+8  010 «эрүүгийн гомдолыг (告訴)» → «гомдлыг (告訴)»; «үйлдэлийн (侵權行為)» → «үйлдлийн» (counted in mn-a row 24).
+9  016 «зөрчилийн (利益衝突)» → «зөрчлийн (利益衝突)».
+10 016 «гэрээслийн» → «гэрээслэлийн» (2), «гэрээслийг» → «гэрээслэлийг» (2), covering the checklist line too.
+11 014 «үлдэх урамшуулалыг (留任獎金)» → «үлдэх урамшууллыг (留任獎金)».
+12 014 «нөхөн олговорыг» → «нөхөн олговрыг».
+13 017 «тээврийн ажилыг (汽車運輸業)» → «ажлыг (汽車運輸業)».
+14 017 «зөвшөөрөлийг (籌設許可)» → «зөвшөөрлийг (籌設許可)».
+15 018 «гарчигийн» → «гарчгийн».
+16 018 «бэлтгэсэнээр» → «бэлтгэснээр»; «эмхэлсэнээр» → «эмхэлснээр».
+17 014 «Мэдэгдэл төлбөрийн дараа маргаан гарахад анх удаа гаргаж болохгүй.» → «Төлбөр хийгдсэний дараа маргаан гарсан үед мэдэгдлийг анх удаа хийж болохгүй.»
+18 014 «ердийн нөхөх хугацаа хэдэн вэ» → «…хэр урт вэ»; «нийт тохиролцооны хугацаа хэдэн,» → «…хэр урт,».
+19 014 «хоёр дахьыг» → «хоёр дахийг».
+20 014 «мессежний бүртгэл» → «мессежийн бүртгэл».
+21 016 «цэвэр эд хөрөнгөнөөс» → «цэвэр эд хөрөнгөөс».
+23 013 «Банкинд»/«банкинд» → «Банканд»/«банканд» (013 ×2), and the same form in 005 L56 found by the sweep (3 total).
+24 015 the case ending moved out of the quoted document name: «…«барилгын бүртгэлийн 2 дугаар төрлийн хуулбар» (建物登記第二類謄本, …)-ыг байршуулах ёстой.»
+25 018 «Үүний эсрэг ердийн гадаадын компани» → «Харин ердийн гадаадын компани». No other «Үүний эсрэг» in the corpus.
+26 018 «хяналтын баталгаа авах ёстой биш.» → «…авах албагүй.» No other «ёстой биш» in the corpus or the pack.
+27 011 «тус тусын дагаж мөрдөх ажил болгон» → «тус тусад нь бие даасан дагаж мөрдөх ажил болгон».
+28 013 «(жишээ нь хоолны газрын дэлгүүр)» → «(жишээ нь хоолны газар нээх гудамжны байр)».
+29 013 «…тустай байх болтугай.» → «…тус болно гэж найдаж байна.»
+30 018 «хоёрдахь нь» → «хоёр дахь нь».
+31 018 «компани компанийн дүрэмдээ» → «компани дүрэмдээ».
+32 017 «(連江・馬祖)» → «(連江、馬祖)» (2: FAQ answer + body). No other Japanese middle dot in columns-mn.
+
+### Systemic sweeps beyond the quoted instances
+- Unstable-vowel / mis-stemmed declension: 26 distinct tokens, 52 instances in total, replaced across
+  columns-mn and the mn guidance region. On top of the reviewers' rows, a mechanical corpus scan
+  (every word whose stem keeps a vowel that the same corpus drops elsewhere) surfaced four more of
+  the same pattern, all fixed: 003 «тэтгэлгийн алдагдалыг» → «алдагдлыг», 003 «журамийн» → «журмын»,
+  007 «эвлэрийн бүрдэлт/тэмдэглэл» → «эвлэрлийн …» (2 instances, stem is эвлэрэл).
+  After the sweep the scan reports zero remaining same-word-two-spellings pairs.
+- «аж ахуй» → «аж ахуйн нэгж»: 36 instances, entity sense only. NOT changed where «аж ахуй» is part
+  of a Taiwanese tax name («аж ахуйн албан татвар» 營業稅, «ашгийн төлөөх аж ахуйн орлогын албан татвар»
+  營利事業所得稅 — R8 wants one name per locale) or where it is the abstract undertaking rather than a legal
+  person («аж ахуйн ашиг» business profits, «аж ахуйн зардал» business expense in 002, «аж ахуй, хөрөнгө
+  шилжүүлэн авах» 營業讓與 in 017, «аж ахуйд хөрөнгө оруулах» in 016, «аж ахуйн байдлаас хамаарч» in 008).
+- Country-name capitalisation: 8 instances (003 ×2, 004 ×1, 005 ×2, 006 ×3).
+- Full stops on blog-register lines: 5 instances in 008.
+
+## Rows skipped (with reason)
+mn-a 21 and mn-b 22 — U+200B blank lines and the "make Q16–Q20 headings" half of mn-a 21.
+  BLOCKED BY THE CHECKER, not by preference. scripts/check-column-translation.mjs compares the target's
+  ZWSP count and its full heading-level array against the KOREAN SOURCE:
+  checkBlocks → `if (sourceZwsp !== targetZwsp) details.push(...)`, checkHeadings → `JSON.stringify(sourceLevels) !== JSON.stringify(targetLevels)`.
+  Measured source/target ZWSP counts are identical today (003 52/52, 005 8/8, 006 4/4, 008 10/10,
+  009 5/5, 013 5/5, 015 3/3), and the Korean 003 keeps Q16–Q20 as body lines too. Removing a single
+  ZWSP or promoting one line to `##` turns `blocks`/`headings` FAIL. This is a source-level defect and
+  belongs in "Decisions for the user", not in a locale fix lane.
+mn-a 39 — «TWD 1.57M» → «1,57 сая TWD». Skipped per ACCEPTED-ROUND: the string is in
+  GUIDANCE_BIO_PRESERVED_TERMS (src/data/international-guidance-team.ts) and a test pins it byte-identical.
+mn-a 40 — space thousands separators («1 000», «90 000») and code-after-amount. Skipped per
+  ACCEPTED-ROUND / RULEBOOK R14: mn is in the comma-thousands group, the checker cannot parse space
+  groups. mn-b's reviewer independently agreed and did not re-raise it. Row 42 was still applied, minus
+  its number reformatting.
+mn-a 1 (P1) — «10 дугаар зүйл» → «3 дугаар зүйл» in the 004 source list.
+  APPLIED, THEN REVERTED because it breaks the numbers gate. Evidence (004 alone, after the change):
+      numbers FAIL  missing from translation (1): 10
+                    sourceCount=95 targetCount=94
+                    [10] src="- [대만 법무부 법령정보 — 영업세법 제10조](…pcode=G0340028&flno=3)"
+      summary FAIL 0/1 files
+  The Korean source itself writes «영업세법 제10조» while linking flno=3, so the checker requires the digit
+  10 in the translated label. Per the WO ("If the checker fails on a number/date, prefer the form the
+  checker accepts and note it in the log") the label keeps «10 дугаар зүйл». The URL was never touched.
+  The underlying mismatch is in the Korean original and needs a supervisor/attorney decision.
+
+## Things I believe the reviewer got wrong (not applied)
+1. mn-a 21 / mn-b 22 (U+200B and the Q16–Q20 heading promotion). Both reviewers read these as a
+   Mongolian-side layout defect. They are inherited structure that the checker pins to the Korean
+   source; fixing them in mn alone makes the file structurally non-isomorphic. See above for the exact
+   failure mechanism. A fix has to start in src/content/columns/003 (and 005, 006, 008, 009, 013, 015).
+2. mn-a 40 vs mn-b's verdict: the two reviewers disagree about the number format. mn-b explicitly
+   accepts the code-first comma form ("that is the internationally used form and a Mongolia reader
+   reads it without trouble, so I am not re-raising the earlier space-separator note"). The checker
+   agrees with mn-b, so the corpus keeps the comma form.
+3. mn-a 32's suggested wording, «нийтлэлийг … бүү тулгуурлаарай», is ungrammatical — тулгуурлах takes
+   the dative, not the accusative. Only the imperative ending was changed; «нийтлэлд» stays.
+4. mn-a 42's suggested wording moves the amounts to space groups; only the currency de-duplication was
+   taken (see row 42 above).
+5. mn-a 6's scope line ("runs through 001, 002, 004") undercounts on one side and overcounts on the
+   other: 002's «аж ахуй» instances are all «аж ахуйн зардал»/«аж ахуйн албан татвар» (abstract/tax
+   terms, correct as they stand and left alone), while 010, 015, 017 and 018 — which mn-b reviewed and
+   did not flag — carry 28 genuine entity-sense instances. The sweep followed the pattern, not the
+   file list.
+6. mn-a 1 is right about the contradiction but the defect is in the Korean source (see skipped rows).
+
+## §Verify output verbatim
+$ cd /Users/son7/Projects/tseng-law-fix-mn-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-mn --lang mn 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=98
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-mn src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      26
+
+(the 26 entries are: the 22 files listed at the top of this log, plus the two untracked r5 review files, the untracked .tmp-mn/ helper dir, and the pre-existing modification to docs/i18n/global-plan/WO-F-mn.txt that was already in the tree when this lane started)

@@ -1,0 +1,142 @@
+# WO-F-km r5 — Khmer (km) fix lane, round 5
+
+worktree: /Users/son7/Projects/tseng-law-fix-km-r5 (branch fix/native-km-r5-20260922)
+input: RULEBOOK-FIX.md (R2–R17) · ACCEPTED-ROUND.md · reviews/native/rounds/r5/km-a.md (32 rows) + km-b.md (28 rows)
+edited: 18 columns-km/*.md + international-guidance-{answers,southeast-central,team}.ts + lib/llms-txt.ts
+no git add/commit/push; no test file changed (none pinned a string that moved).
+
+## Rows applied
+
+### km-a
+| # | sev | done |
+|---|-----|------|
+| 1 | P1 | អាណត្តិ (mandate) → អាជ្ញាយុកាល for 時效/prescription — 003 ×2, 007 ×1, 010 ×3, plus the ត្ដ-spelled អាណត្ដិរលត់ in 016. Also reworded to the reviewer's "រលត់តាមអាជ្ញាយុកាល នៅពេលផុត N ឆ្នាំ" in 003 and 010. 7 instances. |
+| 2 | P1 | ទុក្ខិត → ទ្រាស់ for 信託 in 007 (2). Swept: 016 also carried a second coinage for the same term (បន្ទុកទុកចិត្ត, 6 incl. 信託受益權) → ទ្រាស់, so the pack now has one word for trust. |
+| 3 | P1 | ការពន្យារទោស → ការព្យួរទោស for 緩刑 — 003, 008 (2). |
+| 4 | P1 | 006 licence: លិខិតបញ្ជាក់សមត្ថភាព / បានសមត្ថភាព / គ្មានសមត្ថភាព → អាជ្ញាបណ្ណ (4 sentences, lines 90/92/96/98). |
+| 5 | P1 | 009 "សិទ្ធិទាមទារ និងសិទ្ធិមិនបង់ មិនកើតដល់ភាគីទាំងពីរក្នុងពេលតែមួយឡើយ។" — not in the source and contradicts the next block. Rewritten to the Korean sense: "ក៏ផ្ដល់សិទ្ធិដល់ភាគីទាំងពីរ ក្នុងការមិនបង់ ឬទាមទារប្រាក់ឈប់ការងារតាមច្បាប់ដែរ។" The three blocks before it were re-cut as one continuing sentence (និយាយម្យ៉ាងទៀត / ច្បាប់តៃវ៉ាន់ ទោះកំហុសនៅខាងនិយោជក / ឬកំហុសនៅខាងនិយោជិត). Block count unchanged. |
+| 6 | P1 | 008 conditional closed too early → "បើក្រុមហ៊ុនចាប់កំហុសតូចរបស់លោកអ្នក / កំណត់គោលដៅដែលពិបាកសម្រេច / ដាក់ការទាមទារហួសហេតុ / ឬដាក់លោកអ្នកទៅតួនាទីខុសប្រក្រតី" feeding the bold "**លោកអ្នកត្រូវរក្សាភស្ដុតាង។**". 4 blocks kept (Korean source splits the same sentence across the same 4 lines). |
+| 7 | P1 | SKIPPED — see "Reviewer got wrong / not applicable" below (checkNumbers FAIL, reproduced). |
+| 8 | P2 | ចូលរួមការទិញរបស់រដ្ឋ → ចូលរួមលទ្ធកម្មសាធារណៈ, 001 (3: body ×2 + frontmatter FAQ). |
+| 9 | P2 | 002 បំណុលអតិថិជន → គណនីត្រូវទទួលពីអតិថិជន (accounts receivable). |
+| 10 | P2 | 006 joke → "(និយាយបែបនេះ គឺនាងខ្ញុំបានលាតត្រដាងអាយុខ្លួនឯងហើយមើលទៅ?)". |
+| 11 | P2 | 009 connector tics. All four removed: ឧទាហរណ៍…គឺករណីនិយោជក។ → …គឺនិយោជកដែល (+ the three list lines de-terminated); ចែងដូចតទៅ។ → ចែងថា; មានន័យដូចតទៅ។ → និយាយម្យ៉ាងទៀត; លទ្ធផលអាស្រ័យដូចខាងក្រោម។ and មានចំណុចដូចខាងក្រោម។ folded into their own sentences. |
+| 12 | P2 | 006 "សូមធ្វើដូចខាងក្រោម។" ×2 and "មានទោសដូចខាងក្រោម។" ×1 removed; each pair re-cut into two self-standing sentences (ក្នុងករណីនោះ… / ក្នុងករណីបែបនេះ…) with the block count unchanged. |
+| 13 | P2 | 008 "ដូច្នេះនៅថ្ងៃដែលលោក B ចូលជួប។" → the ។ dropped so the clause runs into the next block's predicate. |
+| 14 | P2 | 008 duplicate "បានដឹងតាំងពីដើម". Fixed by rewriting the first block ("ប៉ុន្ដែបន្ទាប់ពីក្រុមហ៊ុនប្ដូរអ្នកគ្រប់គ្រង") instead of deleting the later line — deleting would have broken the block count. |
+| 15 | P2 | 006 stranded "នៅតៃវ៉ាន់". Merging would break blocks (ACCEPTED-ROUND), so rephrased inside the two existing blocks: "នៅតៃវ៉ាន់ ជនពិការភ្នែកជួបឧបសគ្គក្នុងជីវិតជាច្រើនផ្នែក។" / "ឧបសគ្គទាំងនោះមានទាំង…". |
+| 16 | P2 | 006 Latin comma as list separator removed after "(新臺幣, TWD)"; the gloss's own comma kept. |
+| 17 | P2 | SKIPPED — "TWD 1.57M" is pinned byte-identical by ACCEPTED-ROUND / GUIDANCE_BIO_PRESERVED_TERMS. |
+| 18 | P2 | Currency order normalised to the Khmer name-first order in the part-a files: 001 (TWD 3,000,000 ×4, USD 500,000 ×2, USD 200,000 ×4), 002 (TWD 2,500,000, TWD 60,000), 004 (TWD 2,000,000,000), 007 (TWD 30,000). 010–018 left alone — the part-b review records their "name on first mention, then TWD" convention as consistent. |
+| 19 | P2 | pages.pricing.eyebrow "វិសាលភាពនិងថ្លៃ" → "វិសាលភាព និងថ្លៃ" (now identical to nav.pricing). |
+| 20 | P2 | guidanceAnswers.km.services.answer — space restored before និង in the six-item list (2 places). |
+| 21 | P2 | 007 three FAQ answers that re-printed their own question removed the echo (frontmatter + repeated body paragraph = 6 edits). |
+| 22 | P2 | 005 five numbered headings: "?" inside the bold on all five; the stray "។" after the bold dropped on 1–3; on heading 1 the "?" sits after the question, before the Korea-example parenthetical. |
+| 23 | P2 | 005 Q2 → "ក្នុងករណីផ្ទេរពីគណនីធនាគារនៅបរទេស (កូរ៉េជាឧទាហរណ៍) តាមធម្មតា… ប៉ុន្ដែត្រូវពិនិត្យលក្ខខណ្ឌរបស់ធនាគារនៅប្រទេសរបស់លោកអ្នកដោយឡែក។" (R2 generalisation, no claim about the reader's own law). |
+| 24 | P2 | GUIDANCE_LLMS_NOTICES.km.discoveryNotice — first ការណែនាំ (endorsement) → ការគាំទ្រ. Literal token `llms.txt` kept. |
+| 25 | P2 | SKIPPED — see below (heading levels / blocks / ZWSP are pinned to the Korean source, which has the same shape). |
+| 26 | P3 | 007 ទូរសព្ទ → ទូរស័ព្ទ. |
+| 27 | P3 | 003 "> មើលបន្ថែម:" → "> មើលបន្ថែម៖"; 005 "អានបន្ថែម៖" → "មើលបន្ថែម៖". One read-more label across all 18 files now. |
+| 28 | P3 | 009 "(勞動基準法)):" → "(勞動基準法))៖". |
+| 29 | P3 | privacy "ប្រព័ន្ធរក្សាទុកព័ត៌មានខាងក្រោម" → "…ខាងក្រោម៖". |
+| 30 | P3 | SKIPPED — see below (would put a single Khmer digit into files that are otherwise all-Arabic; R14 requires consistency within a file). |
+| 31 | P3 | 003 假扣押 រឹបអូស → ឃាត់ទុកជាបណ្ដោះអាសន្ន (and the following "តាមរឹបអូសទ្រព្យ" → "តាមឃាត់ទុកទ្រព្យ"). |
+| 32 | P3 | pages.lawyers.description and guidanceTeamCopy.km.description now end with ។ (both edited identically, so the llms.txt catalog bullet still matches verbatim). |
+
+### km-b
+| # | sev | done |
+|---|-----|------|
+| 1 | P1 | 018 four missing sentence breaks restored: §intro (…គ្រប់ករណីឡើយ។ ពន្ធ…), §2 opening (…សេវាអតិថិជនយ៉ាងណា»។ ផ្នែកទីមួយ… ។ ផ្នែកទីពីរ…), the subsidiary/branch line (…ឬការិយាល័យកណ្ដាលឬទេ។ ចំណែកការចែកចាយ… ដូច្នេះមិនគួរលាយ…), §7 (…អាចពិនិត្យការិយាល័យតំណាង។ បើផែនការពិត…). |
+| 2 | P1 | 016 ប្ដីប្រពន្ធដែលនៅរស់ → ប្ដី ឬប្រពន្ធដែលនៅរស់ (5). The collective ប្ដីប្រពន្ធ kept where it really is the couple (夫妻財產制, 夫妻剩餘財產差額分配請求權 …). |
+| 3 | P2 | តែឯង → តែមួយមុខ, swept everywhere: 45 instances — 001 ×3, 002 ×3, 003 ×3, 004 ×6, 007 ×7, 010 ×3, 011 ×3, 014 ×3, 016 ×3, 017 ×3, 018 ×1 and 4 in the guidance pack (southeast-central.ts). In 003 the two bare "ប៉ុន្ដែតែឯង…" got a subject (ប៉ុន្ដែវាតែមួយមុខ…). |
+| 4 | P2 | នឹង written for និង: 017 §heading and 016 "នីតិវិធីតុលាការ និងនីតិវិធីពន្ធ". |
+| 5 | P2 | SKIPPED — see below (U+200B count is pinned to the Korean source by checkBlocks). |
+| 6 | P2 | 013 ដំបូន្មន់ → ដំបូន្មាន (and its colon → ៖). |
+| 7 | P2 | និតិកម្ម → នីតិកម្ម, 7 instances (001 ×3 incl. frontmatter, 007, 016, 018). |
+| 8 | P2 | ASCII ":" → ៖ in Khmer running text, 15 instances: 010 ×7 damage headings, 003 ×3 damage bullets + read-more, 018 ×2 ### headings, 013, 009. No YAML key or URL touched. |
+| 9 | P2 | One orthography: វត្តមាន → វត្ដមាន (018); the អាណត្តិ/អាណត្ដិ split disappeared with row km-a #1; ទុកចិត្ត → (ទ្រាស់) with km-a #2. `grep -o 'ត្ត'` over columns-km is now 0 against 743 ត្ដ. |
+| 10 | P2 | 010 "ការដួលលើឥដ្ឋក្នុងកន្លែងអាជីវកម្ម" → "ការរអិលដួលនៅក្នុងទីតាំងអាជីវកម្ម". |
+| 11 | P2 | ដែនកំពូល → ដែនកំណត់ (5): 010 "ដែនកំណត់នៃការធានារ៉ាប់រង" + 008 severance cap ×4 (body + frontmatter + blockquote). |
+| 12 | P2 | 010 "បាទ/ចាស។" → "មែនហើយ។". |
+| 13 | P2 | 012 ភ្លឹបភ្លែតពន្លឺមុខ → បើកភ្លើងមុខបញ្ចាំង / សញ្ញាភ្លើងមុខ, and "ប្រើស្នែង ឬពន្លឺមុខម្ដងហើយម្ដងទៀត" → "បន្លឺស្នែង ឬបញ្ចាំងភ្លើងមុខ…". ពន្លឺមុខ and ភ្លឹបភ្លែត are now 0 in the file. |
+| 14 | P2 | 011 subsidiary/branch paragraph given the ដោយសារ…ដូច្នេះ frame. |
+| 15 | P2 | 011 ចូលដល់ → ចូលប្រើ (3 in the PIF access paragraph). The 012 "រឿងនេះបានចូលដល់នីតិវិធីតុលាការ" left — there ចូលដល់ really is "reached". |
+| 16 | P2 | 011 "ច្បាប់ដែលបានពិនិត្យ" → "សេចក្ដីព្រាងដែលបានពិនិត្យ". |
+| 17 | P2 | 011 "TFDA តំបន់ជាក់លាក់អំពី…" → "ធនធាន TFDA ស្ដីពី…" (both link labels; URLs untouched). |
+| 18 | P2 | 013 ឧទាហរណ៍ → ផ្ទុយទៅវិញ ("By contrast"). |
+| 19 | P2 | 013 duplicate "សូមធ្វើការពិនិត្យនោះមុនចុះហត្ថលេខា។" — the duplication removed by dropping the repeat from the first block and keeping one instruction in the second block, so both blocks survive. |
+| 20 | P2 | 013 → "ដូច្នេះអ្នកឱ្យជួលជាច្រើនស្ទាក់ស្ទើរ មិនចង់ជួលឱ្យជនបរទេសឡើយ។". |
+| 21 | P2 | 013 → "ហើយគួរពន្យល់ឱ្យបានលម្អិតគ្រប់គ្រាន់ ដើម្បីបញ្ចុះបញ្ចូលអ្នកពិនិត្យ។". |
+| 22 | P2 | "ការនឹង + verb" → ដើម្បី: 004 (ការនឹងប្រើអត្រានេះ), 014 ×2, plus 016 "ការដែលបទប្បញ្ញត្ដិនេះនឹងអនុវត្ដបាន" → "ដើម្បីឱ្យបទប្បញ្ញត្ដិនេះអនុវត្ដបាន". The 002 hit was a false positive (…ប្រតិបត្ដិការ + នឹង…) and was left. |
+| 23 | P2 | ឬអត់ → ឬទេ, swept: 138 instances across 001, 002, 003, 004, 007, 008, 013, 014, 016, 017, 018 (0 in the guidance pack). |
+| 24 | P2 | 016 "ក្លាយជាចំណុចពេល…" → "កើតឡើងនៅពេល…"; the later "អាចក្លាយជាចំណុច។" → "អាចក្លាយជាចំណុចដែលត្រូវពិនិត្យ។". |
+| 25 | P2 | 015 "ម្ចាស់ផ្ទះអ្នកឱ្យជួល" → "អ្នកឱ្យជួល" (the list is four items again). |
+| 26 | P2 | 013 three stray mid-phrase spaces closed. |
+| 27 | P3 | 011 "មិនត្រឹមត្រូវឡើយ" → "មិនគ្រប់គ្រាន់ឡើយ". |
+| 28 | P3 | 018 three ### question headings end with "?", matching 010/011 and the FAQ frontmatter of 011/014/016/017. |
+
+## Systemic sweeps (instances changed)
+
+- តែឯង → តែមួយមុខ: **45** (all 45 occurrences in the corpus; every one meant "alone/by itself" of a thing, none of a person).
+- ឬអត់ → ឬទេ: **138** (all; the corpus now has 210 ឬទេ and 0 ឬអត់).
+- អាណត្តិ/អាណត្ដិ → អាជ្ញាយុកាល: **7**.
+- 信託: ទុក្ខិត (2) and បន្ទុកទុកចិត្ត (6) → ទ្រាស់: **8**, one term across 007 and 016.
+- និតិកម្ម → នីតិកម្ម: **7**.
+- ASCII ":" → ៖ in Khmer text: **15**; read-more label unified to "មើលបន្ថែម៖" across all 18 files (**2** changed).
+- ដែនកំពូល → ដែនកំណត់: **5**.
+- ការពន្យារទោស → ការព្យួរទោស: **2**; គ្មានសមត្ថភាព → គ្មានអាជ្ញាបណ្ណ family: **4**; ចូលរួមការទិញរបស់រដ្ឋ → លទ្ធកម្មសាធារណៈ: **3**.
+- "ការនឹង/ការដែល…នឹង" purpose calque → ដើម្បី: **4**.
+- ពន្លឺមុខ / ភ្លឹបភ្លែត: **4** → 0.
+- Code-first currency in the part-a files → name-first: **14**.
+- Orthography: ត្ត → 0 in columns-km (743 ត្ដ); ឱ្យ 451, អោយ 0.
+- Stock connector "…ដូចខាងក្រោម។ / …ដូចតទៅ។" where the source is one continuing sentence: **9** removed (006 ×3, 008 ×3, 009 ×3+2, 015 ×2). The remaining 12 occurrences genuinely introduce a real list, table or numbered enumeration (007 ten grounds, 008 table, 010 damages list, 013 quoted speech, 014 notice-period list, 018 table) and were left.
+
+## §Verify
+
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-km --lang km 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=178
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+```
+
+```
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-km src/data | wc -l
+       0
+```
+
+```
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+```
+
+```
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+$ git status --short | wc -l
+      26
+```
+
+The 26 lines are the 18 columns, the 4 pack/lib files, this log, the pre-existing modification of `docs/i18n/global-plan/WO-F-km.txt`, and the two untracked review files `rounds/r5/km-a.md` + `km-b.md`. No test file is in the diff.
+
+Regression control: the checker's WARN set (the Korean lexical `제3자 / 제N항 / 1심 …` unmatched-ordinal warnings, R11) was captured from `git show HEAD:` copies of all 18 files before editing and diffed against the post-edit run — **identical**, so no number/date format was disturbed.
+
+## Reviewer got wrong / not applicable (not applied)
+
+- **km-a #7 — drop the trailing "(10)" from the 004 link label.** Reproduced in an isolated copy: removing it makes `checkNumbers` FAIL —
+  `numbers FAIL missing from translation (1): 10 … sourceCount=95 targetCount=94`, citing `src="- [대만 법무부 법령정보 — 영업세법 제10조](…)"`. The digit is the Korean source label 영업세법 제10조, not an editorial choice, and the URL (`flno=3`) must not change. The visible label already names មាត្រា 3 and carries the 各類所得扣繳率標準 gloss. Same finding and same outcome as round 4 (#4). Re-writing it as a rate ("អត្រា 10%") was rejected as factually wrong — Taiwan's withholding rate on dividends to non-residents is not 10%.
+- **km-a #17 — spell out "TWD 1.57M".** ACCEPTED-ROUND pins that figure byte-identical (a test asserts it). Unchanged.
+- **km-a #25 — restore `## Q16.`–`## Q20.` headings in 003 and drop the zero-width-space paragraphs.** The Korean source `src/content/columns/003-…md` has exactly the same shape: Q16–Q20 are plain paragraphs (lines 198/234/258/278/298, not `##`), and it contains the same 52 U+200B. `checkHeadings` pins the heading-level array and `checkBlocks` pins block count + ZWSP count against that source, so either change FAILs. This is an upstream (Korean/English pipeline) defect shared with de/th/vi, not a Khmer one — worth a supervisor decision at the source file, not in the locale lane.
+- **km-b #5 — delete the U+200B in 013 (5) and 015 (3).** Same reason: `checkBlocks` compares `ZWSP n → n` with the Korean source; the counts already match (003 52, 005 8, 006 4, 008 10, 009 5, 013 5, 015 3). They are source markup, not Khmer wording.
+- **km-a #30 (P3) — write `read_time` in Khmer digits ("អាន ៩ នាទី").** Not applied. The reviewer's own verdict records that the columns contain zero Khmer digits; changing only the reading-time badge would put exactly one Khmer digit into each otherwise all-Arabic file, which R14 explicitly forbids ("be consistent within a file"). The mismatch the row describes is between the guidance shell and the columns; resolving it by moving the pack's `៤ ភាសា / ៦ ក្រុម` to Arabic digits, or by converting every number in all 18 columns, is a campaign-wide call, not a one-line fix.
+- **km-a #15 / #12 / #11 / km-b #19 — "join it to the next paragraph" / "delete the sentence".** The wording was applied, the block surgery was not: ACCEPTED-ROUND forbids merging or splitting blocks, and `checkBlocks` compares block counts with the Korean source. In each case the fix was made *inside* the existing blocks (self-standing sentences, or the duplicate removed from the other block), which delivers the reviewer's intent without changing structure.
+- **Note, not a Khmer defect (raised by km-b's verdict):** 018 jumps `## 5.` → `## 7.`; the same gap is in `columns-en/018`, so it is inherited from the source and left alone.

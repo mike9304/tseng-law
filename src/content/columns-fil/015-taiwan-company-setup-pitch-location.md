@@ -59,7 +59,7 @@ Gayunman, madalas na maraming rehistradong gawain ang inirerehistro kapag nagrer
 
 Kaya nga, sa katunayan ay hindi kailangang gawan ng paunang pagsusuri ang lahat ng rehistradong gawain kapag nagrerehistro ng kompanya.
 
-Nakasaad ang tuntunin sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) at sa kasalukuyang paunawa ng Lungsod ng Taipei.
+Nakasaad ang tuntunin sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) at sa kasalukuyang paunawa ng Lungsod ng Taipei.
 
 Mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
 

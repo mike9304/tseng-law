@@ -77,8 +77,8 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 - [सिविल संहिता, अनुच्छेद 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
 - [सिविल संहिता, अनुच्छेद 736](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=736&pcode=B0000001)
 - [सिविल संहिता, अनुच्छेद 737](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001)
-- [परिवहन मंत्रालय (交通部) का सड़क सुरक्षा अभिविन्यास](https://168.motc.gov.tw/theme/car/post/2002211806152)
-- [राष्ट्रीय पुलिस एजेंसी (內政部警政署) का यातायात दुर्घटना साक्ष्य और दस्तावेजों पर अभिविन्यास](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
+- [परिवहन मंत्रालय (交通部) का सड़क सुरक्षा मार्गदर्शन](https://168.motc.gov.tw/theme/car/post/2002211806152)
+- [राष्ट्रीय पुलिस एजेंसी (內政部警政署) का यातायात दुर्घटना साक्ष्य और दस्तावेजों पर मार्गदर्शन](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
 - [राष्ट्रीय पुलिस एजेंसी के यातायात दुर्घटना संबंधी बार-बार प्रश्न](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
 ## Q6. दुर्घटना दायित्व कैसे निर्धारित होता है?
@@ -130,7 +130,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 - [सिविल संहिता, अनुच्छेद 196](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
 - [सिविल संहिता, अनुच्छेद 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [आपराधिक प्रक्रिया संहिता, अनुच्छेद 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
-- [न्यायिक युआन (司法院) का स्थानांतरण के बाद दावा विस्तार पर अभिविन्यास](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
+- [न्यायिक युआन (司法院) का स्थानांतरण के बाद दावा विस्तार पर मार्गदर्शन](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
 - [चियाई (嘉義) जिला न्यायालय का संबंधियों द्वारा देखभाल व्यय पर निर्णय](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [ताइनान (臺南) जिला न्यायालय का उपचार यात्रा व्यय पर निर्णय](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
@@ -157,7 +157,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 गैर-आर्थिक क्षति के लिए सांत्वना राशि तब उपयुक्त मात्रा तय कर आँकी जाती है जब शरीर या स्वास्थ्य पर अधिकार का अवैध अतिक्रमण हो, सिविल संहिता के अनुच्छेद 195 के अनुसार।
 
-न्यायालय प्रत्येक मामले की परिस्थितियाँ समग्र आँकलित करता है: चोट और उपचार की विषयवस्तु, सतत प्रभाव, पीड़ा और जीवन पर असर, आयु और स्थिति, सामाजिक-आर्थिक परिस्थितियाँ तथा पक्षों के साक्ष्य। इसलिए केवल प्ररूपी सीमा से परिणाम पहले से बताना कठिन है।
+न्यायालय प्रत्येक मामले की परिस्थितियाँ समग्र रूप से आँकता है: चोट और उपचार की विषयवस्तु, सतत प्रभाव, पीड़ा और जीवन पर असर, आयु और स्थिति, सामाजिक-आर्थिक परिस्थितियाँ तथा पक्षों के साक्ष्य। इसलिए कोई तय सीमा परिणाम निर्धारित नहीं करती।
 
 ## Q14. यदि दुर्घटना कार्य के दौरान हो, तो नियोक्ता का सिविल दायित्व भी माँगा जा सकता है?
 

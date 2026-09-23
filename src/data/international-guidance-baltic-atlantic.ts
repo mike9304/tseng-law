@@ -1589,7 +1589,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Inversió i constitució de societats a Taiwan',
           paragraphs: [
             'Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, tràmits bancaris, comprovació del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.',
-            'L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sola un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.',
+            'L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sol un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.',
           ],
         },
         {
@@ -1602,14 +1602,14 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Matrimoni, família i successions',
           paragraphs: [
-            'Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte dels fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països distints. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre civil (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.',
+            'Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte dels fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països diferents. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre civil (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.',
             'Com que els assumptes de família solen anar units a terminis i a diversos tràmits en paral·lel, el resum inicial hauria d’indicar la relació entre les parts, el lloc de residència actual i els procediments ja iniciats.',
           ],
         },
         {
           heading: 'Conflictes laborals',
           paragraphs: [
-            'Aquesta àrea cobreix l’extinció del contracte de treball, la indemnització segons el dret de Taiwan (資遣費; no s’identifica amb institucions d’altres països), salaris i conflictes derivats del contracte de treball (勞動契約), tant del costat de la persona treballadora com de l’ocupador. En revisar l’assumpte separem el fonament de l’extinció de les qüestions de preavís, pagament i terminis.',
+            'Aquesta àrea cobreix l’extinció del contracte de treball, la indemnització segons el dret de Taiwan (資遣費; no s’equipara als règims d’indemnització o de protecció contra l’acomiadament d’altres països), salaris i conflictes derivats del contracte de treball (勞動契約), tant del costat de la persona treballadora com de l’ocupador. En revisar l’assumpte separem el fonament de l’extinció de les qüestions de preavís, pagament i terminis.',
             'El contracte de treball, el reglament intern (工作規則), les nòmines i l’intercanvi escrit entre les parts solen ser els documents decisius. Si encara els conserva, indiqui-ho en el resum.',
           ],
         },
@@ -1624,7 +1624,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Propietat intel·lectual',
           paragraphs: [
             'Ajudem en el registre de marques (商標) i patents (專利), en drets d’autor i en conflictes sobre aquests drets a Taiwan.',
-            'En aquesta àrea l’ordre dels passos és decisiu: l’abast de la protecció, el moment de la presentació i l’ús efectiu influeixen en l’estratègia. Presentar una sol·licitud no garanteix per si sola que es concedeixi.',
+            'En aquesta àrea l’ordre dels passos és decisiu: l’abast de la protecció, el moment de la presentació i l’ús efectiu influeixen en l’estratègia. Presentar una sol·licitud no garanteix per si sol que s’acabi concedint.',
           ],
         },
         {
@@ -1686,7 +1686,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'El primer pas és fixar l’abast del treball',
           paragraphs: [
-            'Assumptes del mateix tipus poden exigir un treball molt distint, segons el nombre de parts, els documents disponibles, els terminis que calgui complir i si un procediment ja ha començat. Per això el primer pas és sempre aclarir què entra en el treball i què no.',
+            'Assumptes del mateix tipus poden exigir un treball molt diferent, segons el nombre de parts, els documents disponibles, els terminis que calgui complir i si un procediment ja ha començat. Per això el primer pas és sempre aclarir què entra en el treball i què no.',
             'El resum que envia a l’inici és la base d’aquest abast. Com més clar descrigui els fets, el que espera i els terminis, més precís podrà ser l’abast.',
           ],
         },
@@ -1708,7 +1708,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Per què aquesta pàgina no publica tarifes',
           paragraphs: [
             'La quantia depèn de l’assumpte mateix: del treball que calgui fer, del nombre de parts, dels documents, dels terminis i de si un procediment ja ha començat. Un import indicat d’entrada no reflectiria el cost del seu expedient; per això, en lloc d’una llista de tarifes, fixem primer l’abast del seu assumpte i li comuniquem després els honoraris perquè els valori abans de començar.',
-            'A més dels honoraris de l’advocada o l’advocat, un assumpte pot generar taxes que s’hagin de pagar al tribunal, a una autoritat o a un tercer. Aquestes taxes són distintes dels honoraris i depenen del procediment que se segueixi.',
+            'A més dels honoraris de l’advocada o l’advocat, un assumpte pot generar taxes que s’hagin de pagar al tribunal, a una autoritat o a un tercer. Aquestes taxes són diferents dels honoraris i depenen del procediment que se segueixi.',
           ],
         },
       ],
@@ -1724,7 +1724,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tres coses que convé distingir',
           paragraphs: [
-            'L’idioma de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses distintes.',
+            'L’idioma de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses diferents.',
           ],
           items: [
             'Idioma de la pàgina: aquesta orientació està escrita en català.',
@@ -1868,7 +1868,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Els seus drets i com contactar-nos',
           paragraphs: [
-            'Pot demanar accés, rectificació o supressió de les seves dades, o retirar el consentiment, a través de l’adreça de correu que figura a la pàgina de contacte. Si existeix una obligació de conservació segons les normes aplicables o per un assumpte en curs, n’explicarem el motiu de la limitació.',
+            'Pot demanar accés, rectificació o supressió de les seves dades, o retirar el consentiment, a través de l’adreça de correu que figura a la pàgina de contacte. Si existeix una obligació de conservació segons les normes aplicables o per un assumpte en curs, n’explicarem el motiu.',
             'Aquesta pàgina no indica un termini fix de conservació, perquè la durada real depèn de si l’assumpte continua i de les obligacions de conservació associades. Si desitja que se suprimeixin abans, indiqui-ho en contactar-nos.',
           ],
         },
@@ -1893,7 +1893,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Només informació general',
           paragraphs: [
             'El contingut d’aquestes pàgines està escrit com a informació general. No és assessorament jurídic per al seu cas i no substitueix la revisió del seu propi expedient.',
-            'El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que dues situacions que semblen similars poden acabar de forma distinta.',
+            'El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que dues situacions que semblen similars poden acabar de manera diferent.',
           ],
         },
         {

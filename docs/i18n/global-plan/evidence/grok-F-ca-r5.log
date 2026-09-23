@@ -1,0 +1,166 @@
+WO-F-ca r5 — Catalan fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ca-r5
+branch: fix/native-ca-r5-20260922
+date: 2026-09-23
+no git add/commit/push
+
+Inputs read: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/ca-a.md (46 rows, guidance pack + columns 001–009), rounds/r5/ca-b.md (32 rows, columns 010–018).
+
+## Rows applied (73 of 78)
+
+### ca-a — guidance pack (src/data/international-guidance-baltic-atlantic.ts, catalanGuidanceContent)
+7 P2 — subject is the infinitive clause, so the pronoun is masculine singular. services «Constituir una societat no produeix per si sol un permís de residència (居留)»; ip «Presentar una sol·licitud no garanteix per si sol que s’acabi concedint». The heading «La relació entre advocada o advocat i client no neix per si sola» was left: there the subject really is «la relació» (feminine), so the reviewer’s rule does not apply to it.
+8 P2 — privacy «n’explicarem el motiu de la limitació» → «n’explicarem el motiu» (the duplicated «en» pronoun removed).
+37 P2 — labour area «(資遣費; no s’identifica amb institucions d’altres països)» → «(資遣費; no s’equipara als règims d’indemnització o de protecció contra l’acomiadament d’altres països)».
+
+### ca-a — columns
+1 P1 002 — «es pot tornar opaco» → «opac». Only Spanish leftover in the set.
+2 P1 006 — criminal liability re-attached to the provider: «Si una persona sense aquesta qualificació cobra a altri per fer massatges, la llei preveu una pena.»
+3 P2 004 — «S’han d’fixar» → «S’han de fixar».
+4 P2 004 — «mentre s’allega la reducció» → «s’al·lega» (ela geminada, as in 002/003/007).
+5 P2 004 — «Ni la filial ni la sucursal no és superior…» → «…no són superiors…».
+6 P2 003 — «és de» before a quantity: «és de 200.000 TWD», «és de 3.000.000 TWD», «és de 3.200.000 TWD», and in Q4 «és d’1.000.000 TWD» (elided «de» before «un milió», matching the file’s «d’1.570.000 TWD»).
+9 P2 006 — «Recordi l’època…?» → «Recorda l’època…?» (indicative in a yes-no question to vostè).
+10 P2 — «En l’essencial» removed: 006 → «Bàsicament, qualsevol pot triar…»; 007 → «les vies de divorci són, bàsicament, tres»; 004 «En allò bàsic, l’accionista…» → «En essència, l’accionista…».
+11 P2 008 — meeting, not job interview: «va convocar B a una reunió», «convocar un per un els treballadors … per parlar-hi», «El dia en què B va entrar a la reunió».
+12 P2 008 — «De cop li va començar a retreure que no treballava amb prou diligència.»
+13 P2 008 — «El nou director, tot just incorporar-se, va canviar el rumb.» Also «es va canviar el director» and «després del canvi de director» in the same story.
+14 P2 008 — «En aquell moment,» → «En aquests casos,» (the English carries no time marker).
+15 P2 008 — client kept as subject: «Per això, més tard, amb l’ajuda d’una advocada, B va poder fer valer els seus drets.» The following sentence already states the entitlement was recognised from the evidence, so no result claim is added (R3).
+18 P2 004 — the editor’s note was rewritten into a real bibliographic clarification: «… article 3 de les Normes sobre els tipus de retenció de les diverses rendes (各類所得扣繳率標準) — dividends pagats a no residents, no l’article 10 de la Llei de l’impost sobre les vendes». Dropping the digit entirely (the reviewer’s literal suggestion) makes the checker FAIL — see “checker-forced deviations”. URL untouched.
+19 P2 009 — «de manera que indueix el treballador a error i el posa en risc de patir un dany».
+20 P2 009 — «existeix risc de contagi per als companys de feina d’aquesta persona».
+21 P2 009 — «És a dir, el que decideix és a qui és imputable la falta.» («imputació» in the criminal-charge sense removed.)
+22 P2 009 — «…el moment en què s’actua és decisiu» (calque «el calendari compta» removed).
+23 P2 007 — «si s’admet la representació».
+24 P2 007 — «ni anticipar la restitució concreta d’un dret».
+25 P2 007 — «No es pot aplicar a tots els drets un únic termini de cinc anys…» (verb fixed and the cardinal written out; checker still PASS for 007).
+26 P2 007 — «amb el fet exacte que en determina el còmput».
+27 P2 007 — «El tribunal escolta l’opinió del fill de la manera que fixa la llei».
+28 P2 003 — «S’ha de distingir entre afegir dades mèdiques i modificar o augmentar l’import reclamat.»
+29 P2 003 — «si hi ha ferits o cal un rescat, a Taiwan truqui al 119 (ambulància i bombers)…». 110/112 unchanged (R9 satisfied).
+30 P2 003 — «es valora en un 50 %».
+31 P2 003 — «La qüestió de contra qui s’adreça la reclamació civil…».
+32 P2 003 — «…i advertir-la dels riscos previsibles si no es transigeix.»
+33 P2 005 — «a qui es planteja constituir una societat a Taiwan».
+34 P2 005 — relative clause un-fronted: «…d’una societat en què l’aportació de xinesos d’ultramar o estrangers excedeixi d’1/3…».
+35 P2 002 — «el procediment i la responsabilitat de l’administrador per la seva decisió…».
+36 P2 — «tal com és» removed everywhere (6 instances): 002 «es retornarà íntegrament»; 007 «Una llista fixa no s’aplica igual…», «no es pot homologar sense més»; 010 «no es pot traslladar sense més a un altre accident»; 016 «es trasllada directament a un altre», «s’aplica sense adaptacions a la transmissió d’un bé».
+39 P2 — small cardinals written out where the checker allows it (9 instances): 007 heading «## 1. Tres vies de divorci…», «són, bàsicament, tres», «els efectes de les tres vies», «dividir en tres capes», «les nou categories següents», «distinta d’aquestes deu», «un únic termini de cinc anys»; 002 «suspèn l’activitat durant un mes o més» (×2). 001 and 008 could not follow — see “checker-forced deviations”.
+40 P2 004 — «els beneficis que li són imputables…» and «…i, a continuació, calcular quins ingressos i despeses se li imputen» (tonic «a ell» for an inanimate removed, wrong reflexive on «calcular» removed).
+41 P2 004 — bare postposed «objecte» fixed: «l’actiu objecte de la inversió», «la inversió a què s’aplica» (FAQ + body), «Els àmbits objecte de l’incentiu».
+42 P2 004 — «no n’hi ha prou amb fixar només la proporció d’aportació». Same castellanism also cleared in 016 («si n’hi ha prou amb la representació legal general») and 018 («No n’hi ha prou amb una adreça»).
+43 P2 008 — «L’empresa A és molt coneguda i té sucursals arreu de Taiwan.»
+44 P2 008 — the filler sentence could not be deleted (the Korean source has two separate blocks there and the checker pins block counts), so both blocks were rewritten instead: «Si vostè treballa a Taiwan, tingui present una cosa.» / «Cobrar la indemnització per acomiadament és més difícil del que es pensa.» The duplication the reviewer objected to is gone.
+45 P2 — systemic, see below.
+46 P2 — systemic, see below.
+
+### ca-b — columns 010–018
+1 P1 + 2 P2 013 — «No és fàcil que un estranger arrendi un local. Com que el dipòsit de garantia a Taiwan és relativament baix (per regla general, 2 mesos), la protecció del propietari és escassa.» (causal chain restored, diaeresis removed).
+3 P2 — «consigne» → central «consigni»: 010 «que hi consigni de manera concreta la franja horària…», 014 «El mer fet que el contracte consigni un preavís més llarg».
+4 P2 011 — «La informació falsa i unes dades incompletes que encara es poden esmenar no s’han de tractar com si produïssin la mateixa conseqüència.»
+5 P2 016 — «la possibilitat d’esmenar la sol·licitud».
+6 P2 011 — active and Castilianism-free: «Un tercer que reuneixi la qualificació i la capacitat necessàries pot donar suport al treball del PIF, inclosa l’avaluació de seguretat.»
+7 P2 011 — regulatory vocabulary (11 instances): «al·legació d’eficàcia terapèutica» ×6, «funció declarada» ×4, «si al·leguen eficàcia terapèutica (醫療效能)» ×1. Chinese glosses kept.
+8 P2 016 — «No s’ha d’atendre només a la relació familiar abans i després de la mort: també s’han de confirmar les resolucions de divorci existents…».
+9 P2 016 — «…i s’ha de confirmar qui pot representar el fill…»; «…i s’han d’examinar les normes d’ajust de la doble imposició».
+10 P2 017 — «No n’hi ha prou amb l’aprovació general d’inversió estrangera: el pla de negoci ha d’incorporar per separat l’aprovació del Ministeri de Transports…».
+11 P2 015 — the block now ends with a comma («… i la guia vigent de la ciutat de Taipei,») so the rule in the next block keeps its legal basis. This mirrors the Korean source, whose block also ends in «…에 따르면,». Blocks were not merged.
+13 P2 016 — «Els criteris sobre la cura quotidiana i sobre la representació legal en una disposició patrimonial important poden exigir un examen diferent.»
+14 P2 016 — «s’han d’identificar amb claredat com a patrimoni del fill».
+15 P2 014 — «1. Es determina primer quin és el requisit legal: …».
+16 P2 010 — «va condemnar el demandat a pagar»; both captions (image alt + link text) «en primera instància es condemna el gimnàs a pagar».
+17 P2 012 — «va morir a l’acte».
+18 P2 012 — «va envair el carril contrari» (both occurrences).
+19 P2 013 — «convé comentar aquest punt a fons amb una advocada o un advocat de Taiwan».
+20 P2 017 — «és una via d’abast molt limitat, diferent de la constitució ordinària de societats».
+21 P2 017 — «El treball sense permís pot comportar una multa administrativa i l’ordre de sortida de Taiwan (限令出國).»
+22 P2 017 — «Les directrius vigents de l’Administració d’Immigració del Ministeri de l’Interior (內政部移民署) sobre la prohibició d’entrada (禁止入國) solen fixar…», and later «…que fixen aquestes mateixes directrius».
+23 P2 018 — «dades bàsiques de la seu i dels inversors».
+24 P2 018 — «els documents han de deixar clar quines obligacions pot exigir el client a cadascú».
+25 P2 — «veure» for examine/take into account removed everywhere (17 instances): 014 ×3 (incl. «No s’ha d’atendre només al nom de la formació, sinó al programa concret, al contingut…, a la durada, al cost… i als justificants», FAQ + body), 016 ×5, 004 ×4, 007 ×4, 010 ×1. Verbs used: atendre a, examinar, valorar, considerar, determinar, constatar. The correct «es veu afectat» in 004 was left.
+26 P3 017 — «també anomenat Matsu (連江、馬祖), regeixen 10.000.000 TWD» (FAQ + body).
+27 P3 017 — Chinese thousands comma dropped inside the glosses: «(新臺幣2500萬元)», «(新臺幣1000萬元)» (FAQ + body). Checker re-run: still PASS (the gloss is not in the Korean source).
+28 P3 016 — «es poden tractar de manera diferent del cabal hereditari».
+29 P3 018 — «l’Estat o una persona jurídica la poden constituir en solitari».
+30 P3 017 — «Els altres supòsits, inclosos la baixa del vehicle i la substitució».
+31 P3 018 — «per estatuts, no tenir consell d’administració».
+32 P3 — systemic, see below.
+
+## Systemic patterns swept (counts)
+- `distint*` monoculture (ca-a 45, ca-b 28): 31 instances rewritten as `diferent*` — 26 in the columns (001 ×2, 002 ×3, 004 ×2, 006 ×1, 007 ×6, 008 ×1, 010 ×1, 011 ×1, 014 ×2, 016 ×4, 017 ×1, 018 was already fine) and 5 in the guidance pack. ~33 kept, all in the «distint de X» = “separate from / other than” sense, which is normal legal Catalan («no és una persona jurídica distinta de la seu», «persona distinta del cònjuge», «hereus legals distints del cònjuge»). `diferent` went from 1 occurrence to 32.
+- `de forma + adjectiu` (ca-a 46, ca-b 32): all 149 occurrences in the 18 columns rewritten — 82 → the plain -ment adverb (automàticament, voluntàriament, conjuntament, individualment, directament, uniformement, lícitament, permanentment, mecànicament, reiteradament, periòdicament, unilateralment, intencionadament, definitivament, substancialment, arbitràriament, erròniament, recíprocament, indegudament, repetidament, contínuament, anticipadament, successivament, sistemàticament), 60 → `de manera + adjectiu` (kept as a phrase where the adverb shifts meaning: concreta, independent, general, continuada, coherent…), 7 rewritten individually (per escrit, greument, oficialment, a títol personal, vàlidament, dues vegades, satisfactòriament). `de forma` now appears 0 times in the columns. The guidance pack was deliberately left alone — see “rows skipped”.
+- `veure` for examine: 17 instances (detail under ca-b 25).
+- `tal com és`: 6 instances (detail under ca-a 36).
+- Verbless clause after `sinó` / coordinating `i` (ca-b systemic): 6 instances — 016 ×3, 017 ×1, 001 ×1 («…sinó que s’ha de revisar de nou si cal una filial o una sucursal»), 014 ×1 («…sinó que s’han d’ordenar conjuntament les dades…»). The correct elliptical `sinó` (`sinó part de la seu`, `sinó requisits…`, `sinó qui signa…`, `sinó quin fonament…`) was left.
+- Castilianisms subsanar / recolzar / bastar amb: 6 instances (011 ×2, 016 ×2, 018 ×1, 004 ×1). «bastar» used intransitively in 002 («si el patrimoni social no basta per pagar els deutes») is correct Catalan and was left; «pot no bastar» in 016 → «pot no ser suficient».
+- Small cardinals as digits (ca-a 39): 9 instances written out, 4 reverted (below).
+- Checks that needed no change: R4 gender (both reviewers found no masculine form for Wei Tseng; the male manager in 008 and the male client in 010 stay male), R5/R12 English chrome (already «EL NOSTRE EQUIP», «OFICINES»), R6b fullwidth punctuation (the only hits are inside Chinese glosses and inside the 008 frontmatter `url:`, which R16 exempts), consultation-language / advertising locks (both reviewers report them clean).
+
+## Rows skipped (5) — with reason
+- ca-a 16 P2 (003 Q16–Q20 should be `##` headings). SKIP: the `headings` check pins the heading-level array to the Korean source, which has Q16–Q20 as plain body text — source and target are both `levels=[1,2,…]` with 15 `##`. Promoting five lines to headings makes the checker FAIL. Writing them as `16.` instead would turn them into list items and break the `list items` count. Left as `**16.**`. (Structural defect inherited from the source; needs a supervisor decision if the outline is to be fixed.)
+- ca-a 17 P2 / ca-b 12 P2 (delete the U+200B blank lines: 52 in 003, 8 in 005 incl. four `**​**`, 4 in 006, 10 in 008, 5 in 009, 5 in 013, 3 in 015). SKIP: `checkBlocks` compares the ZWSP count with the Korean source and the counts are already identical (003 52→52, 005 8→8, 006 4→4, 008 10→10, 009 5→5, 013 5→5, 015 3→3). Deleting them makes `blocks` FAIL on every one of those files, and the `**​**` lines are separate blocks in the source too, so removing them also changes the block count. This is a source-level defect that has to be fixed in `src/content/columns/` first.
+- ca-a 38 P2 (bio «TWD 1.57M (1,57 milions de dòlars taiwanesos)» should be given once as «1,57 milions de dòlars de Taiwan»). SKIP per ACCEPTED-ROUND and R12: «TWD 1.57M» is pinned byte-identical by a test.
+- ca-b 12 counted with ca-a 17 above.
+- `de forma automàtica` in the guidance pack (7 occurrences, not a numbered row but part of ca-a 46/ca-b 32). NOT swept: `src/data/__tests__/guidance-disclosure-parity.test.ts` pins `ca: /de forma automàtica/` as the Catalan regex for the “text is not machine-translated” disclosure element. Rewriting those to `automàticament` would need the parity regex changed in the same edit; the work order limits test edits to expected strings of Catalan FAQ/title pins, so this was left for the supervisor. The pattern is fully swept in the 18 columns.
+
+## Checker-forced deviations (noted per the work order)
+- 001 «si en porta menys d’1 any» (×2, FAQ + body) — writing «menys d’un any» removes two `1` tokens and the checker reports `numbers FAIL missing from translation (2): 1×2`. Reverted to the digit form. (The adjacent «menys d’un any» the reviewer contrasted it with is unchanged, so the inconsistency the reviewer saw remains, forced by the checker.)
+- 008 «es paga 1 mes de salari mitjà per cada 1 any complet» (×2, FAQ + body) — «un mes … per cada any complet» gives `numbers FAIL missing from translation (4): 1×4`. Reverted to the digit form.
+- 004 link label (ca-a 18) — dropping «l’article 10» entirely gives `numbers FAIL missing from translation (1): 10`, because the Korean source label cites «영업세법 제10조». Kept the digit inside a clarification that now reads as information for the reader rather than an editor’s note to self.
+
+## Where I think the reviewer is wrong (not applied)
+- ca-a 7 also asks for the masculine pronoun in the disclaimer heading «La relació entre advocada o advocat i client no neix per si sola». There the subject is «la relació», a feminine noun, so «per si sola» is the correct agreement. Only the two sentences whose subject is an infinitive clause were changed.
+- ca-b 11 asks to end the 015 sentence with a comma so that it “runs on into the next sentence”. The two sentences are separate Markdown blocks and the checker pins block counts, so they cannot be joined. The comma was applied (it matches the Korean source, which also ends that block with «…에 따르면,»), but the reader still sees two paragraphs; a real fix means merging the blocks in `src/content/columns/015-*.md` first.
+- ca-a 44 asks to delete a sentence. Block counts are pinned, so the sentence was rewritten instead of deleted; the redundancy is gone but the block is still there.
+- Not disagreements, but recorded: ca-a 16, ca-a 17 and ca-b 12 describe real defects that live in the Korean source (`src/content/columns/`), not in the Catalan. They cannot be fixed inside a translation lane.
+
+## §Verify output verbatim
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ca --lang ca 2>&1 | tail -8
+hanzi          PASS   han=85
+numbers        WARN   extra in translation (5): 1×5
+                      sourceCount=25 targetCount=30
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ca src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      22
+
+$ git status --short
+ M docs/i18n/global-plan/WO-F-ca.txt
+ M src/content/columns-ca/001-taiwan-company-establishment-basics.md
+ M src/content/columns-ca/002-withdraw-capital-taiwan-company.md
+ M src/content/columns-ca/003-taiwan-traffic-accident-procedure.md
+ M src/content/columns-ca/004-taiwan-company-subsidiary-vs-branch.md
+ M src/content/columns-ca/005-taiwan-company-establishment-advanced-2.md
+ M src/content/columns-ca/006-taiwan-massage-history-law.md
+ M src/content/columns-ca/007-taiwan-divorce-lawsuit-qna.md
+ M src/content/columns-ca/008-taiwan-labor-severance-law.md
+ M src/content/columns-ca/009-taiwan-voluntary-resignation-severance.md
+ M src/content/columns-ca/010-taiwan-gym-injury-lawsuit.md
+ M src/content/columns-ca/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+ M src/content/columns-ca/012-taiwan-overtaking-accident-liability.md
+ M src/content/columns-ca/013-taiwan-company-establishment-advanced-1.md
+ M src/content/columns-ca/014-taiwan-mandatory-employment-period.md
+ M src/content/columns-ca/015-taiwan-company-setup-pitch-location.md
+ M src/content/columns-ca/016-taiwan-inheritance-custody-analysis.md
+ M src/content/columns-ca/017-taiwan-logistics-business-setup.md
+ M src/content/columns-ca/018-taiwan-semiconductor-market-entry.md
+ M src/data/international-guidance-baltic-atlantic.ts
+?? docs/i18n/global-plan/reviews/native/rounds/r5/ca-a.md
+?? docs/i18n/global-plan/reviews/native/rounds/r5/ca-b.md
+
+(git status above was captured before this log file was written; the log adds one more untracked line.)

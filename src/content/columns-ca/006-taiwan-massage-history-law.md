@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Recordi l’època de les barberies tradicionals (理髮廳) dels primers temps de Taiwan?
+Recorda l’època de les barberies tradicionals (理髮廳) dels primers temps de Taiwan?
 
 La manera de rentar els cabells en aquelles barberies era molt peculiar.
 
@@ -41,7 +41,7 @@ Hi ha fileres d’establiments de massatge de tot tipus.
 
 Hi ha massatge per persones amb discapacitat visual (視障按摩), massatge de peus, massatge amb oli, massatge tailandès i altres tipus.
 
-En l’essencial, qualsevol pot triar el massatge que s’ajusti al seu gust per alleujar l’estrès.
+Bàsicament, qualsevol pot triar el massatge que s’ajusti al seu gust per alleujar l’estrès.
 
 I la raó que avui existeixin tants establiments de massatge pot deure’s a una sola sol·licitud d’interpretació constitucional (釋憲).
 
@@ -95,7 +95,7 @@ Moltes persones amb discapacitat visual, temeroses de perdre el seu mitjà de vi
 
 En l’actualitat, Corea continua permetent que només les persones amb discapacitat visual que han obtingut la qualificació es dediquin a l’ofici de massatge.
 
-Si algú cobra una tarifa de massatge a una altra persona sense aquesta qualificació, la llei preveu una pena.
+Si una persona sense aquesta qualificació cobra a altri per fer massatges, la llei preveu una pena.
 
 Segons la Llei de serveis mèdics de Corea (醫療法), se li pot imposar una pena de presó de fins a 3 anys.
 
@@ -103,9 +103,9 @@ Si una persona sense discapacitat visual explota un negoci de massatge, se li po
 
 ​
 
-D’això es desprèn que cada país adopta enfocaments distints per protegir els drets i interessos de diversos grups.
+D’això es desprèn que cada país adopta enfocaments diferents per protegir els drets i interessos de diversos grups.
 
-La protecció dels drets i interessos de cada grup canvia de forma contínua amb el pas del temps.
+La protecció dels drets i interessos de cada grup canvia contínuament amb el pas del temps.
 
 El legislador procura trobar una solució relativament equilibrada per resoldre el conflicte d’interessos.
 

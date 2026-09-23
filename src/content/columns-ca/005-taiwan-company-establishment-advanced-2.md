@@ -21,7 +21,7 @@ Aquest text és la part avançada 2, per a qui ja hagi llegit [Constitució de s
 
 ​
 
-Les preguntes i respostes següents poden servir d’orientació general a qui considera constituir una societat a Taiwan.
+Les preguntes i respostes següents poden servir d’orientació general a qui es planteja constituir una societat a Taiwan.
 
 ​
 
@@ -69,7 +69,7 @@ Alguns bancs poden imposar requisits addicionals, per exemple un període d’ú
 
 **5. Pot la societat contractar treballadors de nacionalitat estrangera?**
 
-A. Primer empleat: se sol·licita com a treball de direcció en una empresa d’inversió ordinària de xinesos d’ultramar o d’estrangers (一般僑外投資事業主管工作). No s’apliquen els criteris de «treball de caràcter especialitzat o tècnic» de l’apartat B següent, però sí que s’apliquen els requisits de destinatari, com el de responsable de gestió (經理人) d’una societat l’aportació de xinesos d’ultramar o estrangers de la qual excedeixi d’1/3, i els requisits de resultats de l’ocupador en capital i xifra de negocis (articles 38 i 39 de les Normes de revisió).
+A. Primer empleat: se sol·licita com a treball de direcció en una empresa d’inversió ordinària de xinesos d’ultramar o d’estrangers (一般僑外投資事業主管工作). No s’apliquen els criteris de «treball de caràcter especialitzat o tècnic» de l’apartat B següent, però sí que s’apliquen els requisits de destinatari, com el de responsable de gestió (經理人) d’una societat en què l’aportació de xinesos d’ultramar o estrangers excedeixi d’1/3, i els requisits de resultats de l’ocupador en capital i xifra de negocis (articles 38 i 39 de les Normes de revisió).
 
 B. A partir del segon empleat hi ha restriccions: si es contracta més d’un treballador de nacionalitat estrangera, la formació i l’experiència pertinents de l’empleat, les normes de salari mitjà de contractació i les normes de capital i xifra de negocis de la societat es tramiten d’acord amb el «treball especialitzat o tècnic» (專門性或技術性工作).
 

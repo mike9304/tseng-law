@@ -29,7 +29,7 @@ Když cizinec zakládá společnost na Tchaj-wanu, musí předložit investičn�
 
 Odbor přezkumu investic musí ověřit, zda se daný kapitál (資本額) skutečně používá k investičním účelům.
 
-Ověřit je třeba i to, zda zahraniční subjekty nezavádějí prostředky pod jinou záminkou.
+Ověřit je třeba i to, zda zahraniční subjekty nepřivádějí prostředky na Tchaj-wan pod jinou záminkou.
 
 Při sestavování investičního plánu není třeba uvádět přesnou adresu společnosti; stačí uvést oblast (příklad: město Tchaj-pej). ​
 
@@ -39,7 +39,7 @@ Podle sdělení pracovnice jedné tchajwanské banky platí toto.
 
 V poslední době mnoho cizinců po otevření účtu zmizí, proto se otevírání účtů posuzuje stále přísněji.
 
-Již u základní části čtenářky a čtenáři uváděli, že otevření účtu je nejtěžší etapou; praxe to potvrzuje.
+Už v článku o základech jeden čtenář uvedl, že otevření účtu je nejtěžší etapa; s tím souhlasím.
 
 Protože na Tchaj-wanu je velmi mnoho případů praní peněz (洗錢), otevírání bankovních účtů se stává stále přísnějším.
 
@@ -61,7 +61,7 @@ Ve stejné lhůtě je také dost času otevřít přípravný účet v bance a p
 
 Je to možné.
 
-Banka obecně vyžaduje dvojí ověření totožnosti.
+Banka obecně vyžaduje dva doklady totožnosti.
 
 Nemáte-li průkaz k pobytu, lze u tchajwanské imigrační správy požádat o „**výpis základních údajů k jednotnému identifikačnímu číslu**“ (統一證號基本資料表).
 
@@ -117,11 +117,11 @@ Jak již bylo uvedeno, banka přezkoumává nájemní smlouvu a provádí místn
 
 Kromě toho při konečném zápisu společnosti městský úřad (市政府) také vyžaduje, aby zapsaná adresa ležela v zóně, kde je provoz restaurace přípustný;
 
-jde-li o kancelářský prostor, zápis společnosti (公司登記) pak není možný.
+jde-li o kancelářský prostor, zápis společnosti (公司登記) pak nemusí být možný.
 
-Např. jde-li o odvětví možná v kancelářském prostoru, jako je reklama nebo velkoobchod, lze společnost založit v kancelářském prostoru. Před uzavřením nájemní smlouvy
+Např. jde-li o odvětví, která lze provozovat z kancelářského prostoru, jako je reklama nebo velkoobchod,
 
-to předem ověřte.
+lze společnost založit tam. Ověřte si to prosím před uzavřením nájemní smlouvy.
 
 *Potřebujete-li konzultaci k tchajwanskému právu, kancelář jedná pouze anglicky, čínsky (中文), japonsky a korejsky; komentáře se na webu nevedou.*
 

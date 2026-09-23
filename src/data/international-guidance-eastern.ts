@@ -211,7 +211,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Když nás oslovíte',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dokumentech, které jsou ještě potřeba, a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
+            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dokumentech, které jsou ještě potřeba, a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat společně s účetním úsekem.',
             'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
           ],
         },
@@ -243,7 +243,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
           heading: 'Náklady se potvrzují před zahájením práce',
           paragraphs: [
             'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě. Odeslání žádosti prostřednictvím této stránky je rovněž bezplatné.',
           ],
         },
         {
@@ -256,7 +256,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Proč tato stránka neuvádí sazby',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
+            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Částka stanovená předem by náklady Vaší věci neukázala. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
             'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
           ],
         },

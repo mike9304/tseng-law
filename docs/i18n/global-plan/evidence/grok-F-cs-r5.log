@@ -1,0 +1,150 @@
+# WO-F-cs round 5 — Czech native-review fixes
+
+worktree: /Users/son7/Projects/tseng-law-fix-cs-r5 (branch fix/native-cs-r5-20260922)
+inputs: RULEBOOK-FIX.md (R2–R17), ACCEPTED-ROUND.md, rounds/r5/cs-a.md (29 rows), rounds/r5/cs-b.md (58 rows)
+files touched: src/content/columns-cs/002,003,004,007,008,009,010,011,012,013,014,015,016,017,018;
+src/data/international-guidance-team.ts; src/data/international-guidance-eastern.ts. No test file needed updating
+(the full suite passes unchanged). 001, 005 and 006 are unchanged: their only r5 rows are the three skipped ones.
+
+## Rows applied — cs-a (29 rows: 26 applied, 3 skipped)
+
+| # | file | what changed | instances |
+|---|------|--------------|-----------|
+| 1 P1 | 004 | link label reattributed — "normy sazeb srážky u zdroje (各類所得扣繳率標準); popisek zdroje uvádí čl. 10 zákona o obchodní dani". URL untouched. Partial: see "Reviewer points not followed". | 1 |
+| 2 P1 | pack (team.ts) | Chang Fangyu is a woman — role label, bio line and both experience lines now *Právní asistentka* / *Starší právní asistentka*. Verified against public/images/team/chang-fangyu.jpg, not inferred from sister locales. | 4 strings |
+| 3 | 002 | "daňová přiznání nemizí jednotně" → "přerušení činnosti společnost povinnosti podat daňové přiznání bez dalšího nezbavuje" (EN "does not categorically exempt"). FAQ + body. | 2 |
+| 4 | 004 | "se nestanoví jednotně podle samotné formy organizace" → "nevyplývají ze samotné formy organizace" (EN "solely"). FAQ + §. | 2 |
+| 5 | 004 | "vyloučeny z předmětu přiznání" → "zproštěny povinnosti podat přiznání"; "vyloučeny z řečeného přiznání" → "zproštěny povinnosti podat uvedené přiznání". | 3 |
+| 6 | 007 | "Statistický průměr spotřeby vlády" → "Úřední statistiky průměrné spotřeby … nemohou sloužit jako závazný vzorec". | 1 |
+| 7 | 007 | "Existence tohoto skutku neurčuje zároveň" → "Samotná existence tohoto skutku neurčuje" (EN "by itself"). | 1 |
+| 8 | 009 | either party gets the right: "Tchajwanské právo přiznává kterékoli ze stran … právo odstupné nevyplatit, nebo je žádat." Block count kept (3 short blocks). | 1 |
+| 9 | 004 | "Zda ústředí dodává celek" → "Zda veškeré financování dodá ústředí"; "z 3. státu" → "ze třetí země" (R11; checker re-run, still PASS). | 1 |
+| 10 | pack (eastern.ts) | pricing: added the sentence the German carries — "Odeslání žádosti prostřednictvím této stránky je rovněž bezplatné." The next section's refusal of a free first meeting is untouched. | 1 |
+| 14 | 004 | "ztráty … zacházejí vůči ústředí" → "Způsob, jímž se s počátečními ztrátami … zachází vůči ústředí". | 1 |
+| 15 | 004 | "daň, která ihned násobí obrat 20 %" → "daň, která by se počítala prostým vynásobením obratu 20 %". | 1 |
+| 16 | 004 | "nelze jej rozumět jako režim" → "nelze mu rozumět jako režimu, který by umožňoval odečíst celou výši výdajů přímo od daně k zaplacení". | 1 |
+| 17 | 008 | reported speech now holds across the four short blocks ("že by se pan B měl obětovat …", "a požadovali, aby …", "Vedoucí dodali, že jinak …"). Block count unchanged. | 1 (4 blocks) |
+| 18 | 008 | the stranded infinitive: blocks reordered to mirror the English ("a jakmile nové vedení nastoupilo, / aby snížila personální náklady, / začala společnost postupně zvát …"). Block count unchanged. | 1 (3 blocks) |
+| 19 | 004 | 發行公司 = emitent: "samostatným emitentem (發行公司)" ×2, "není samostatným emitentem", "formu emitenta způsobilou ke kotaci". | 4 |
+| 20 | 004 | "skutečná expozice a prostředky ovládání" → "skutečný rozsah odpovědnosti a dostupné nástroje kontroly". | 1 |
+| 21 | 004 | table cell "Uspořádatelná …" → "Lze ji uspořádat …". | 1 |
+| 22 | 003 | 給付標準 = standard plnění, not sazebník: body, "předchozí standard plnění", official-source link label. | 3 |
+| 23 | 003 | "nedbá o telefonování s dotazem" → "nezavolá, aby se zeptal na stav oběti, ani ji nenavštíví". | 1 |
+| 24 | 003 | "neustoupí ve vyjednávané částce" → "neustoupí z částky smíru". | 1 |
+| 25 | 008 | "vzala pana B za cíl" → "se zaměřila na pana B". | 1 |
+| 26 | 007 | 行使或負擔 split: "výkonu práv a nesení povinností vůči nezletilému dítěti". FAQ + §8 opening. (The guidance pack already had the correct split.) | 2 |
+| 27 | 007 | "nikoli jediným kritériem … ani odměnou a trestem" → "; žádný z nich není jediným kritériem rozhodnutí ani základem odměny nebo trestu". | 1 |
+| 28 | pack | "Číslo stanovené předem by náklady Vašeho spisu neukázalo." → "Částka stanovená předem by náklady Vaší věci neukázala." | 1 |
+| 29 | pack | "postupovat s účetním úsekem v jednom navazujícím postupu" → "postupovat společně s účetním úsekem". | 1 |
+
+## Rows applied — cs-b (58 rows: 56 applied, 2 skipped)
+
+| # | file | what changed | instances |
+|---|------|--------------|-----------|
+| 1 P1 | 017 | "nově založení" → "nové založení" — frontmatter title AND H1. No test pins this string. | 2 |
+| 2 P1 | 017 | katakana middle dot inside the gloss: 連江・馬祖 → 連江、馬祖 (FAQ + §2). | 2 |
+| 3 P1 | 010 | "mzdovými, daňovými a docházkovými podklady" → "mzdovými a daňovými doklady a doklady o zaměstnání". | 1 |
+| 4 P1 | 013 | "nezavádějí prostředky" → "nepřivádějí prostředky na Tchaj-wan pod jinou záminkou". | 1 |
+| 5 P1 | 013 | "dvojí ověření totožnosti" → "dva doklady totožnosti". | 1 |
+| 6 P1 | 013 | "čtenářky a čtenáři uváděli … praxe to potvrzuje" → "Už v článku o základech jeden čtenář uvedl … s tím souhlasím." | 1 |
+| 7 P1 | 018 | "údaje ústředí a vkladatelů" → "údaje o ústředí a investorech". | 1 |
+| 8 P1 | 017 | "změna společnosti u akcionářů…" → "změna zápisu akcionářů, jednatelů nebo odpovědné osoby". | 1 |
+| 9 | 016 | 檢認: "prohlášení závěti za pravou" → "soudní ověření závěti (檢認) nebo o jejím výkonu". | 1 |
+| 10 | 013 | "pak není možný" → "pak nemusí být možný" (EN hedges). | 1 |
+| 11 | 017 | "zápis bydliště" → "zápis v evidenci domácností (戶籍)" — same rendering the file uses twice elsewhere. | 1 |
+| 13 | 018 | "ke jednoduchým" → "k jednoduchým". | 1 |
+| 14 | 018 | one spelling of the root: kótování → kotování (heading + body), matching "nekotovaná". | 2 |
+| 15 | 012 | "nahlédnout [ilustraci …]" → "nahlédnout do [ilustrace …]". | 1 |
+| 16 | 012 | "jízdní jednání" → "manévr". | 1 |
+| 17 | 015 | "Pokud se otevře v místě…" → "Otevře-li se restaurace v místě, kde její provoz není povolen". | 1 |
+| 18 | 015 | "často se chce zapsat asi 10 odvětví" → "žadatelé často chtějí zapsat asi 10 odvětví" (digit kept, see skips). | 1 |
+| 20+21 | 013 | the cut sentence and "odvětví možná": the two blocks now split where the English splits — "…, jako je reklama nebo velkoobchod," / "lze společnost založit tam. Ověřte si to prosím před uzavřením nájemní smlouvy." Block count unchanged. | 1 (2 blocks) |
+| 22 | 011 | "určit odpovědnou osobu za přezkum" → "určit osobu odpovědnou za přezkum". | 1 |
+| 23 | 011 | "Samotné upozornění malým písmem neodstraní dojem vyvolaný hlavním reklamním sdělením". | 1 |
+| 24 | 011 | "když se v této lhůtě nenapraví" → "nedojde-li v této lhůtě k nápravě". | 1 |
+| 25 | 011 | "zda oznámení bylo" → "zda k oznámení došlo". | 1 |
+| 26 | 011 | "posouzeny jako reklama v podstatě" → "v podstatě považovány za reklamu". | 1 |
+| 27 | 011 | "lze vidět v [titul]" → "najdete v článku [titul]". | 1 |
+| 28 | 011 | stacked genitives → "Datum uvedení na trh proto nestanovujte na základě domnělé pevné lhůty; nejprve ověřte…". | 1 |
+| 29 | 011/014/018 | vnější → externí: "externímu odborníkovi", "honoráře externích lektorů", "kurz externího zařízení", "základ externích a interních nákladů", "externímu dodavateli", "vnitřní rozdělení externích smluv". | 6 |
+| 30 | 010 | "lze hodnotit společně" → "lze ztrátu posoudit" (object restored, padding removed). | 1 |
+| 31 | 010 | "vznikla-li škoda úmyslem podniku" → "způsobil-li podnik škodu úmyslně". | 1 |
+| 32 | 010 | "k této věci, v překladu, jsou následující" → "Níže uvádíme přeložené názvy …". | 1 |
+| 33 | 014 | "Skutečný závěr musí společně posoudit" → "Ke skutečnému závěru je třeba posoudit" (FAQ + body). | 2 |
+| 34 | 014 | "Třetí prvek vidí nejen výši náhrady" → "Třetí prvek se netýká jen výše náhrady, ale i jejího rozsahu". | 1 |
+| 35 | 014 | subjectless clause → "Právní povahu neurčuje samotné označení výplaty na výplatní pásce jako podpisové prémie…". | 1 |
+| 36 | 014 | "kdy na ně nabývá nárok" → "kdy na ni nárok vzniká". | 1 |
+| 37 | 014 | "kolik zaměstnavatel nesl" → "jakou část nákladů zaměstnavatel nesl". | 1 |
+| 38 | 014 | "nelze číst jen smlouvu, ale společně uspořádat…" → "je třeba číst nejen smlouvu, ale v časovém pořadí uspořádat i podklady …. Pomáhá zejména tabulka, která ukazuje…". | 1 |
+| 39 | 014 | "s odrazem skutečné investice" → "tak, aby odrážely skutečnou investici…". | 1 |
+| 40 | 014 | "potvrdit v jejich podstatě" → "posoudit podle jejich skutečného obsahu". | 1 |
+| 41 | 014 | "Je-li struktura rozdělené výplaty…" → "Byla-li výplata rozdělena na splátky nebo vzniká-li nárok po etapách". | 1 |
+| 42 | 014 | Slovak transitive: "Když pracovník skončí pracovní smlouvu" → "Vypoví-li pracovník pracovní smlouvu". | 1 |
+| 43 | 014 | "může vůči zaměstnavateli ukončit smlouvu s výpovědní dobou 30 dní" (digit kept). | 1 |
+| 44 | 014 | "jen proto, že bylo podepsáno" → "jen proto, že byla smlouva podepsána". | 1 |
+| 45 | 016 | kalendář → harmonogram: "na samostatném harmonogramu"; "vést průběh … na jednom harmonogramu". | 2 |
+| 46 | 016 | "kdy poznal dědické právo" → "kdy se o svém dědickém právu dozvěděl" ("3 měsíců" kept, see skips). | 1 |
+| 47 | 016 | "posoudit ve formě pořízení" → "Závěť pořízenou v zahraničí je třeba posoudit z hlediska formy pořízení…". | 1 |
+| 48 | 016 | "zda je přijímá" → "zda jmenování přijímá". | 1 |
+| 49 | 017 | "Nemáte se zastavit u přezkumu…" → "Obecné schválení zahraniční investice nestačí; do podnikatelského plánu je třeba zvlášť zahrnout…". | 1 |
+| 50 | 017 | "podstatně ověřit" → "věcně ověřit". | 1 |
+| 51 | 017 | "Na práci bez povolení se mohou uplatnit…" → "Za práci bez povolení hrozí správní pokuta a příkaz opustit Tchaj-wan (限令出國)". | 1 |
+| 52 | 017 | "po 1 rok ode dne vydání" → "po dobu 1 roku ode dne vydání" (grammar fixed, digit kept). | 1 |
+| 53 | 017 | "tvořit automobilovou nákladní dopravu" → "naplňovat znaky automobilové nákladní dopravy" (FAQ + §1 body) and "zda plánovaný obchodní model naplňuje znaky…". | 3 |
+| 54 | 018 | "jsou ujednání transakční a smluvní" → "jsou obchodní a smluvní ujednání". | 1 |
+| 55 | 018 | subjectless hiring: table cell "nabírají se zaměstnanci na Tchaj-wanu"; §7 "Pokud plánujete nabírat zaměstnance na Tchaj-wanu". | 2 |
+| 56 | 018 | "Tehdy je snadné se nejprve zeptat" → "V takové chvíli se nabízí otázka". | 1 |
+| 57 | 018 | "stanovami nezřizovat představenstvo" → "ve stanovách určit, že představenstvo nezřizuje …" (both clauses of the sentence). | 1 |
+| 58 | 018 | "100 pracovníků v pracovním pojištění" → "100 zaměstnanců přihlášených k pracovnímu pojištění". | 1 |
+
+## Rows skipped (with reason)
+
+- **cs-a 11 and cs-b 12 — space thousands separators ("500 000", "1 579 589").** ACCEPTED-ROUND skips these, and `NUMBER_THOUSAND_STYLE.cs` in scripts/check-column-translation.mjs line 685 is `'dot'`. Every dotted amount was left byte-identical. Same decision as rounds 1–4.
+- **cs-a 12 — the spare "1" in "za poslední 1 rok", "méně než 1 rok", "na 1 měsíc", "za 1 den", "pro 1 poškozeného a 1 nehodu", "1 osobu", "dokončený 1 rok".** `SMALL_LEXICON_WORDS` (line 1782) has no `cs` entry, so Czech "jeden rok" is not counted; dropping the digit makes the number `missing from translation`, which is a hard FAIL of the `numbers` check. Digits kept. Where the same phrase also had a grammatical defect the grammar was fixed with the digit in place (cs-b 52 "po dobu 1 roku", cs-b 43 "s výpovědní dobou 30 dní", cs-b 18 "asi 10 odvětví", cs-b 46 "do 3 měsíců").
+- **cs-a 13 and cs-b 19 — U+200B blank lines and the 005 `**​**` lines; promoting 003 Q16–Q20 to headings.** Verified byte-for-byte against the Korean source: `src/content/columns/003` has ZWSP-only lines at exactly the same 52 line numbers as `columns-cs/003`, and 005 (8), 013 (4), 015 (3) likewise. `checkBlocks` compares block count AND a separate `ZWSP` count against the source, and `checkHeadings` compares the heading level list; deleting a ZWSP or promoting Q16 fails. The reviewer is right that lines 58/72/86/108 of 013 render as empty paragraphs, but it is a source-pipeline artifact shared by de/fr/pl, not a Czech defect — it belongs to the supervisor, not to this lane. Wherever a row asked for a merge or split, the text was redistributed **inside** the existing blocks instead (cs-a 17, cs-a 18, cs-a 8, cs-b 20+21).
+
+## Systemic patterns swept (not only the quoted instance)
+
+- **jednotně used for "categorically"/"solely" (cs-a verdict): 8 changed.** 002 ×2 (categorically), 004 ×2 (solely, FAQ + §3), 017 ×3 ("Nelze to posoudit jednotně" ×2 → "Paušální odpověď zde neexistuje"; "Nelze jednotně tvrdit" → "Nelze paušálně tvrdit"), 014 ×1 ("nelze jednotně vyloučit" → "nelze plošně vyloučit"). **Left on purpose:** 004 §5 "se nestanoví jednotně podle samotného názvu organizace" (EN "not uniformly determined") and 003 "postup jednotně preferovaný pro všechny věci" (EN "no universally best route") — the reviewer states jednotně is right for "uniformly".
+- **vnější → externí (cs-b 29): 6 changed** — 011 ×1, 014 ×3, 018 ×2 (incl. "vnějších smluv" in the branch table, same lexical pattern).
+- **společně pasted onto verbs the English does not join (cs-b verdict): 016 13 → 5, 014 12 → 5.** Kept where the English says "together"/"both": 016 §trust-and-insurance and the "dědí společně s" inheritance sense ×3; 014 §"Both the arrangement … and the extent … must be considered", "Žádají-li se obě položky společně", "musí se posoudit společně" in the termination-evidence and checklist sentences. Removed everywhere it was padding on a verb that already governs its list.
+- **"je třeba" opening sentence after sentence in 016 (cs-b verdict): 60 → 44 occurrences.** The six consecutive checklist items in §9 are now imperatives, matching the English imperatives ("Ověřte", "Prověřte", "Prozkoumejte", "… vypočítejte odděleně", "Určete", "… oddělte"), plus the two follow-up paragraphs ("zaznamenejte", "spravujte", "Nejprve posuďte"). List-item count, block count and list structure unchanged.
+- **發行公司 = emitent: 4** (all in 004). **給付標準 = standard plnění: 3** (all in 003). **行使或負擔 split: 2** (007; the guidance pack already read "výkon práv a nesení povinností"). **檢認 = soudní ověření závěti: 1** (016; no other instance in columns-cs or the pack). **戶籍 gloss restored: 1** (017). **kalendář → harmonogram: 2** (016; the ROC "kalendář Čínské republiky" in 003/007/010 and the court's "procesní kalendář" in 003 are correct and were left).
+- **Fullwidth/CJK punctuation outside glosses (R6b): swept all 18 files.** The only hits were the two `・` in 017 (fixed to `、`, which is correct inside a Traditional-Chinese gloss) and the `：` inside the 008 frontmatter `url:` value, which ACCEPTED-ROUND and R16 tell this lane to leave.
+- **R2–R10 re-checked, nothing new found.** Feminine Wei Tseng, Vy, the four-language consultation lock, day-month-year dates and the decimal comma already hold. Chang Fangyu is now feminine too (cs-a 2). English chrome is already localized (`NÁŠ TÝM`, `POBOČKY`, "Úplný profil (v angličtině)") — the dump `input/cs-guidance.txt` still shows `OUR TEAM` / `OFFICES`, but that dump is stale; the `.ts` sources are correct. No Hangul outside `url` values: verified by scan.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-cs --lang cs 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=38
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-cs src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      20
+```
+
+The 20 is the count taken before this log file was written. It is the 16 modified `columns-cs` files plus the two modified `src/data` files, the pre-existing modification of `docs/i18n/global-plan/WO-F-cs.txt` (not touched by this pass) and the two untracked round-5 review files. This log is the 21st entry. No test file needed editing: no pinned Czech string was changed, and the full 160-file / 3202-test suite passes as it stands. Per-file `numbers WARN` lines (Korean 제N항 / 제3자 ordinals that carry no digit into Czech) are pre-existing and do not affect the PASS summary.
+
+## Reviewer points not followed
+
+- **cs-a 1 — deleting "čl. 10" from the 004 source link.** The reviewer is right that čl. 10 is not an article of 各類所得扣繳率標準 (the URL is `flno=3`). But the Korean source label is 영업세법 제10조 and the English is "Article 10 of the Value-Added and Non-Value-Added Business Tax Act", so the 10 belongs to the Business Tax Act, and the `numbers` check counts it — deleting it is a hard FAIL. The label now names the linked document correctly and attributes the article number to the right act ("normy sazeb srážky u zdroje (各類所得扣繳率標準); popisek zdroje uvádí čl. 10 zákona o obchodní dani"), which is the same solution fr/it/pt/ca/ro used. The reviewer's suggested wording, which drops the article number entirely, was not used. The reviewer's "3 straipsnis/artículo 3" variant was also avoided because adding a bare 3 would only add an `extra in translation` warning.
+- **cs-a 11 / cs-b 12, cs-a 12, cs-a 13 / cs-b 19** — see "Rows skipped" above. All four are correct observations about ordinary Czech (space thousands, no glued "1", no empty paragraphs, Q16–Q20 as headings) that this campaign's checker or the Korean source structure forbids. They remain open decisions for the supervisor, not defects this lane can fix.
+- **cs-b 46 — "do tří měsíců".** The wrong verb was fixed ("se … dozvěděl"), but the numeral stays "3 měsíců": Czech has no entry in the checker's small-number lexicon, so "tří" would drop the 3 and fail. Same for cs-b 18 ("asi 10 odvětví", not "asi deset") and cs-b 43 ("30 dní", not "třicetidenní").
+- **Nothing else.** Every other P1 and P2 row was applied; no row was judged wrong on the merits.

@@ -176,7 +176,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Umfang und seine Bestätigung',
+          heading: 'Bestätigung des Umfangs',
           paragraphs: [
             'Die Kanzlei arbeitet nach taiwanesischem Recht und bearbeitet Angelegenheiten der oben genannten Gruppen. Der Umfang jeder Sache wird gesondert bestätigt, nachdem eine Anwältin oder ein Anwalt Ihre Nachricht geprüft hat.',
             'Aufenthaltsstatus, Arbeitserlaubnis und vergleichbare Fragen werden aus den Unterlagen und der Lage der jeweiligen Person beurteilt, nicht aus der Staatsangehörigkeit. Wenn ein Teil Ihres Anliegens solche Fragen berührt, nennen Sie das bei der Kontaktaufnahme. Diese Seite verspricht weder ein Ergebnis noch eine Antwortfrist.',
@@ -248,7 +248,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Die Beratung kann entgeltlich sein',
           paragraphs: [
-            'Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und nichts auf dieser Seite ist in diesem Sinn zu verstehen.',
+            'Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und nichts auf dieser Seite ist als Zusage eines kostenfreien ersten Gesprächs zu verstehen.',
             'Ist die Beratung entgeltlich, werden Höhe und Zahlungsweise mitgeteilt, bevor sie stattfindet.',
           ],
         },

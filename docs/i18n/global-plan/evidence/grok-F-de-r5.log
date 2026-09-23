@@ -1,0 +1,92 @@
+WO-F-de r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-de-r5
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: de-a 23, de-b 19 (42). No P3 rows.
+
+Applied: 38.
+Skipped: 4 numbered rows. Checker adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned German expectation in `src/lib/__tests__/` or `src/data/__tests__/` matched a string this round changed. `src/lib/llms-txt.ts` was not edited: `GUIDANCE_LLMS_NOTICES.de` still quotes the unchanged FAQ and privacy sentences, and `llms.txt` stays in `discoveryNotice`. "TWD 1.57M" was not touched. The pricing sentence still contains `entgeltlich`, so the disclosure-parity regex for `de` still matches.
+
+### Applied
+de-a 2–9, 11–23.
+de-b 1–8, 10–15, 17–19.
+
+Adaptations (still applied):
+- de-a 2. "bezogen auf das letzte Jahr in Taiwan oder den Durchschnitt der letzten 3 Jahre" alone drops the Korean 1 (최근 1년). Now "das letzte Jahr in Taiwan (ein Jahr)" ×2 (FAQ and body). "ein Jahr" is in the German number lexicon, so the count stays 1 and the phrase no longer reads as a third measuring period.
+- de-a 8. "je verletzter Person und je Unfall" drops both 1s (피해자 1명·사고 1건). "Unfall" is not a lexicon unit. Now "je verletzter Person und je Unfall (eine Person und 1 Unfall)". "eine Person" carries one 1; the accident stays a digit.
+- de-a 12. The two lines stay separate (a U+200B line sits between them). The second line now has its own verb: "Er war der Vertriebsmitarbeiter …". Herr B stays male.
+- de-a 17. The suggested close still says "erscheinen selbst nicht", which the same row says reads as a failure to appear in court. The paragraph now says "kommen selbst nicht persönlich" and, with de-a 16, "Dann nimmt die geschädigte Person weder Reue noch Ernsthaftigkeit wahr."
+- de-a 21. The ZWSP line between the two sentences stays. Each block is now a complete sentence: Herr Lin ran the salon; the police found that he employed the two workers.
+- de-b 5. "bis zur Höhe des tatsächlichen Schadens" alone drops Korean 1배. Now "bis zur Höhe des tatsächlichen Schadens (1-fach)". The 5-fach and 3-fach parallels stay.
+- de-b 15. "hat jeder Gesellschafter eine Stimme" drops both 1s ("eine Stimme" is not in the lexicon). Now "hat jeder Gesellschafter 1 Stimme (1 je Gesellschafter)".
+- de-b 8, year side of de-a 8's companion in 008. "je 1 vollendetes Jahr" ×2 is now "je ein Jahr vollendeter Betriebszugehörigkeit" (lexicon "ein Jahr"). "je einem Jahr 1 Monat" ×2 is now "je einem Jahr ein Monat" (lexicon "ein Monat" plus the existing "einem Jahr"). The table's separate "Betriebsunterbrechung von 1 Monat" was not this phrase and was left.
+
+Guidance pack (German strings only):
+- `germanGuidanceContent` pricing heading: "Umfang und seine Bestätigung" → "Bestätigung des Umfangs".
+- Same page, paid-advice paragraph: "in diesem Sinn" now says the page must not be read as promising a free first meeting. The denial stays negative.
+- `guidanceOfficeCopy.de` photo alt: "Anwaltszimmer" → "Arbeitszimmer im Büro Taipeh".
+
+### Skipped
+- de-a 1. "(Artikel 10)" on the dividend-withholding link in 004. The URL is `flno=3` and was not changed. Korean 영업세법 제10조 and the English label are Article 10; dropping 10 fails `numbers` (`missing 10`). The label stays. Other "Artikel 10" / "Artikel 10-1" in that file name the industrial-innovation credit and were left.
+- de-a 10. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003, 005, 006, 008 and 009 were not removed. Heading levels and the ZWSP count match the Korean source. 005 `**​**` stays for the same reason.
+- de-b 9. Trailing U+200B and the ZWSP-only lines in 013 and 015 were left. Deleting them changes the ZWSP count and the block count.
+- de-b 16. "## 7." and "## 8." in 018 were not renumbered to 6 and 7. The English source has the same skip. Changing the digits fails `numbers` (missing 8, extra 6). Heading count and levels stay.
+
+## Systemic patterns
+
+- One source label still names Article 10 for the `flno=3` dividend link (de-a verdict). 1 instance. Not changed; see de-a 1.
+- A digit glued onto a unit that "je" already counts (de-a verdict; also de-b "1-Fachen" / "1 Gesellschafter 1 Stimme"). 6 spots adapted, digits kept via a lexicon word or a short parenthetical: 001 the measuring year ×2; 003 per injured person and per accident ×1; 008 completed year ×2 and the Art. 17 month ×2; 010 the negligence cap ×1; 018 one vote ×1. See adaptations.
+- U+200B blanks and 005 `**​**` (de-a verdict; de-b 013/015). 0 deleted. Counts unchanged: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3.
+- "Selbstverständlich" standing in for "automatically" (de-b verdict). 3 instances in 017 (FAQ, body, "übernehmende Seite") → "automatisch". The 016 guardian sentence "selbstverständlich Vormund" means "as a matter of course", not "automatically"; left.
+- 018 heading skip from 5 to 7 (de-b verdict). 0 changed. See de-b 16.
+- Wrong institution word (de-b verdict). "Anerkennungsmaßstäbe" ×2 in 011 (statute link and appendix title). "vorbörslichen Handel" ×1 → "Emerging Stock Board (興櫃)". "Handelsentwicklungsbehörde" ×2 → "Amt für Handel": the 018 branch-register sentence and the same office's link label in 001. "Direktorium (董事會)" ×1 → "Verwaltungsrat".
+- "Ankündigungsfrist" as a calque of the statutory notice period (de-b verdict). 9 instances → "Kündigungsfrist": 014 section 8 and the closing paragraph ×7, and the same 預告期間 wording in the 008 comparison table ×2. Bare "Ankündigung" / "vorherige Mitteilung" were not this noun and were left.
+- Katakana middle dot inside the Matsu gloss (de-b 4). 2 instances in 017 (FAQ and body) → "連江、馬祖".
+- "Beanspruchung medizinischer Wirkung" (de-b 8). 6 instances in 011 → "Behauptung einer medizinischen Wirkung"; the "unter die … fallen" clause is now "als Behauptung einer medizinischen Wirkung gelten". "beanspruchte Funktion" (宣稱功能) was left.
+- "Unterlage" used as "evidence/basis" without an article (de-a 4). The quoted claim sentence, plus one further sentence in the same file ("Kosten des Aufenthaltsstaats können Unterlage … sein") → "als Anhaltspunkt … dienen". Other "Unterlage" uses that mean a document were left.
+- "Umsiedlung" for a parent's move with a child (de-a 22). 4 instances in 007: heading, two body sentences, checklist item 7.
+- R2–R10. Both round-5 verdicts score 4/5 and say feminine Wei Tseng, Sie, ß, dot-thousands, decimal comma, day–month–year dates, the four-language consultation lock, and the earlier glossary repairs already hold. This pass did not open a new rewrite of unflagged sentences. The only Hangul in columns-de remains inside the 008 and 009 frontmatter `url` values, which were not edited.
+
+## Reviewer points not followed
+
+- de-a 1. The link parameter `flno=3` is not Article 10 of the statute the label names. The Korean source and the English file both put Article 10 on that same URL, and the checker counts that 10. The article number in the label was kept.
+- de-a 8, de-a 2, de-b 5, and de-b 15. The suggested wording is the better German. It deletes digits the checker counts against the Korean source. Where a lexicon spelling carries the value ("ein Jahr", "eine Person", "ein Monat"), that spelling was used. Where it does not ("Unfall", "Stimme", the negligence multiple), the digit stays in a short parenthetical after a normal clause.
+- de-a 10 and de-b 9. The U+200B lines match the Korean source. Promoting Q16–Q20 would also change heading levels. They are not disposable blank lines.
+- de-b 16. The outline does skip 6, in German and in English. Renumbering changes counted heading digits.
+- de-a 17. The suggested second sentence still uses "erscheinen", which that row itself says reads as failing to appear in court. English is "do not appear in person." The German now says they do not come in person.
+- de-a 12 and de-a 21. The suggested sentences merge two blocks. Block count is pinned, so each existing block was rewritten on its own.
+
+Nothing else in the two verdicts looked factually wrong. 006's pre-existing extra number 2 (WARN, not a fail) went from two extras to one because "die zwei Beschäftigten" is now "die beiden Beschäftigten". The other number WARNs (003 years, 007 years, 010 year 2020) are unchanged from HEAD.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-de --lang de 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-de src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      17
+```
+
+The count 17 was taken before this log existed. This file is the additional untracked path. Pre-existing in that 17, not written by this lane: `docs/i18n/global-plan/WO-F-de.txt` (already modified) and the two untracked round-5 review files.

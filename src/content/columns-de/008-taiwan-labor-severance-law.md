@@ -13,7 +13,7 @@ faq:
   - q: "Muss die Gesellschaft auch bei einer Disziplinarkündigung Abfindung zahlen?"
     a: "Nein. Begeht die beschäftigte Person eine rechtswidrige Handlung, verletzt sie Betriebsregeln oder bleibt sie ohne berechtigten Grund 3 Tage hintereinander unentschuldigt fern (Artikel 12 des Arbeitsstandardsgesetzes, 勞動基準法第12條), kann die Gesellschaft ohne vorherige Ankündigung kündigen und muss keine Abfindung zahlen. Dagegen erfordert eine wirtschaftliche Kündigung (Artikel 11) vorherige Ankündigung und Abfindungszahlung."
   - q: "Wie wird die Abfindung in Taiwan berechnet?"
-    a: "Für je 1 vollendetes Jahr der Betriebszugehörigkeit muss der Arbeitgeber 0,5 Monatsbeträge des Durchschnittslohns als Abfindung zahlen, höchstens 6 Monatsgehälter. Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 des Gesetzes über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je einem Jahr 1 Monat des Durchschnittslohns ohne Obergrenze gezahlt."
+    a: "Für je ein Jahr vollendeter Betriebszugehörigkeit muss der Arbeitgeber 0,5 Monatsbeträge des Durchschnittslohns als Abfindung zahlen, höchstens 6 Monatsgehälter. Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 des Gesetzes über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je einem Jahr ein Monat des Durchschnittslohns ohne Obergrenze gezahlt."
 ---
 
 # Taiwanesisches Arbeitsrecht: Ist Abfindung in Taiwan schwer zu erhalten?
@@ -52,17 +52,17 @@ Die folgende Tabelle fasst die Unterschiede zusammen.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Art** | **Wirtschaftliche Kündigung (資遣員工, 經濟解僱)** | **Disziplinarkündigung (解僱員工, 懲戒解僱)** | **Eigene Kündigung der beschäftigten Person**  **員工自請離職** |
-| Bedeutung | Besteht beim Arbeitgeber wegen der Geschäftslage Bedarf an Personalanpassung, liegt der Grund im unternehmerischen Bereich des Arbeitgebers und nicht in der Verantwortung der beschäftigten Person. Deshalb hat der Arbeitgeber die Ankündigungsfrist (預告期間) einzuhalten und Abfindung zu zahlen, um Nachteile der beschäftigten Person ausgewogen auszugleichen. | Begeht die beschäftigte Person eine rechtswidrige oder unangemessene Handlung, kann der Arbeitgeber den Arbeitsvertrag (勞動契約) ohne vorherige Ankündigung sofort beenden und muss keine Abfindung zahlen. Dies ist eine der Disziplinarbefugnisse des Arbeitgebers. | Die beschäftigte Person ist frei, den Vertrag jederzeit zu beenden, muss aber je nach Beschäftigungsdauer die Ankündigungsfrist einhalten, damit der Arbeitgeber Übergabe und Ersatzsuche vornehmen kann. |
+| **Art** | **Wirtschaftliche Kündigung (資遣員工, 經濟解僱)** | **Disziplinarkündigung (解僱員工, 懲戒解僱)** | **Eigene Kündigung der beschäftigten Person (員工自請離職)** |
+| Bedeutung | Besteht beim Arbeitgeber wegen der Geschäftslage Bedarf an Personalanpassung, liegt der Grund im unternehmerischen Bereich des Arbeitgebers und nicht in der Verantwortung der beschäftigten Person. Deshalb hat der Arbeitgeber die Kündigungsfrist (預告期間) einzuhalten und Abfindung zu zahlen, um Nachteile der beschäftigten Person ausgewogen auszugleichen. | Begeht die beschäftigte Person eine rechtswidrige oder unangemessene Handlung, kann der Arbeitgeber den Arbeitsvertrag (勞動契約) ohne vorherige Ankündigung sofort beenden und muss keine Abfindung zahlen. Dies ist eine der Disziplinarbefugnisse des Arbeitgebers. | Die beschäftigte Person ist frei, den Vertrag jederzeit zu beenden, muss aber je nach Beschäftigungsdauer die Kündigungsfrist einhalten, damit der Arbeitgeber Übergabe und Ersatzsuche vornehmen kann. |
 | Voraussetzungen | Vorhanden  (Artikel 11 des taiwanesischen Arbeitsstandardsgesetzes) | Vorhanden  (Artikel 12 des taiwanesischen Arbeitsstandardsgesetzes) | Keine |
 | Vorherige Ankündigung | Erforderlich | Nicht erforderlich | Erforderlich |
 | Schwierigkeit (kein zugesagtes Ergebnis) | niedrig | hoch | niedrig |
 | Ob die Gesellschaft Abfindung (資遣費) zahlen muss | Erforderlich | Nicht erforderlich | Nicht erforderlich |
 |  | Taiwanesisches Arbeitsstandardsgesetz Artikel 11 (勞動基準法第11條): Sofern nicht einer der folgenden Fälle eintritt, darf der Arbeitgeber den Arbeitsvertrag auch nach vorheriger Mitteilung an die beschäftigte Person nicht beenden.  1. Betriebseinstellung (歇業) oder Betriebsübertragung (轉讓)  2. Verluste (虧損) oder Geschäftseinschränkung (業務緊縮)  3. Höhere Gewalt erfordert eine Betriebsunterbrechung von 1 Monat oder länger  4. Die Geschäftseigenschaft erfordert Personalabbau, und die entlassene Person kann nicht auf eine andere geeignete Stelle versetzt werden  5. Eine bestimmte beschäftigte Person kann die für die Stelle erforderliche Arbeit nicht zufriedenstellend erfüllen | Taiwanesisches Arbeitsstandardsgesetz Artikel 12 (勞動基準法第12條): Der Arbeitgeber kann ohne vorherige Mitteilung kündigen, wenn die beschäftigte Person einem der folgenden Fälle unterfällt.  1. Wer beim Abschluss des Arbeitsvertrags unrichtige Angaben macht, den Arbeitgeber in die Irre führt und die Gefahr eines Schadens für das Unternehmen besteht  2. Wer gegenüber dem Arbeitgeber, dessen Familie, dessen Vertreter (代理人) oder anderen Kolleginnen und Kollegen Gewalt anwendet oder sie schwer beleidigt  3. Wer rechtskräftig zu zeitiger Freiheitsstrafe (有期徒刑) oder einer schwereren Strafe verurteilt wurde, ohne dass Strafaussetzung zur Bewährung (緩刑) ausgesprochen oder die Ersetzung durch Geldstrafe (易科罰金) gestattet wurde  4. Schwere Verletzung des Arbeitsvertrags oder der Arbeitsregeln  5. Wer Maschinen, Werkzeuge, Rohstoffe, Erzeugnisse oder andere Gegenstände des Arbeitgebers vorsätzlich verbraucht oder technische und Geschäftsgeheimnisse des Arbeitgebers vorsätzlich offenbart und dem Arbeitgeber Schaden zufügt  6. Unentschuldigtes Fernbleiben (曠工) ohne berechtigten Grund an 3 aufeinanderfolgenden Tagen oder an 6 oder mehr Tagen in einem Monat |  |
 
-> In Taiwan muss der Arbeitgeber für je 1 vollendetes Jahr der Betriebszugehörigkeit (年資)
+> In Taiwan muss der Arbeitgeber für je ein Jahr vollendeter Betriebszugehörigkeit (年資)
 > 0,5 Monatsbeträge des Durchschnittslohns (平均工資) als Abfindung zahlen.
-> (höchstens 6 Monatsgehälter) Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 des Gesetzes über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je einem Jahr 1 Monat des Durchschnittslohns ohne Obergrenze gezahlt.
+> (höchstens 6 Monatsgehälter) Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 des Gesetzes über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je einem Jahr ein Monat des Durchschnittslohns ohne Obergrenze gezahlt.
 
 ​
 
@@ -96,7 +96,7 @@ hochbezahlte langjährige Beschäftigte nacheinander zu Gesprächen zu laden
 
 Damals war meine Partei, Herr B, mehr als 10 Jahre bei Gesellschaft A beschäftigt
 
-und der Vertriebsmitarbeiter mit dem höchsten Ergebnis in der Region Zentraltaiwan.
+Er war der Vertriebsmitarbeiter mit dem höchsten Ergebnis in der Region Zentraltaiwan.
 
 Weil Gehalt und Bonus sehr hoch waren,
 

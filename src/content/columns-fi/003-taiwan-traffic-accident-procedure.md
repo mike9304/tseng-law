@@ -219,7 +219,7 @@ Eturistiriitoja vakuutusyhtiön ja osapuolen välillä voi myös syntyä, ja kos
 
 ​
 
-Koko asian jättämistä vakuutusyhtiön hoidettavaksi ei siksi ole syytä pitää itsestään selvänä.
+En siksi suosittele koko oikeudenkäynnin jättämistä vakuutusyhtiön hoidettavaksi.
 
 ​
 
@@ -235,7 +235,7 @@ Q17. Mikä on aiheuttajan rikosoikeudellinen vastuu tuottamuksellisesta ruumiinv
 
 ​
 
-Tuottamuksellisesta ruumiinvammasta (過失傷害) on joissakin tuomioissa määrätty noin 3 kuukauden vapaudenmenetys; tyypillistä tai etukäteen taattua seuraamusta ei ole.
+Tuottamuksellisesta ruumiinvammasta (過失傷害) tuomioistuimet määräävät käytännössä yleensä noin 3 kuukauden vapaudenmenetyksen; kyse ei ole taatusta seuraamuksesta.
 
 ​
 
@@ -247,7 +247,7 @@ Muunnettaessa sakoksi rikoslain (刑法) 41 artiklan 1 momentti vahvistaa muunno
 
 ​
 
-Tuottamuksellisesta törkeästä ruumiinvammasta on joissakin tuomioissa määrätty noin 4 kuukauden ja tuottamuksellisesti aiheutetusta kuolemasta (過失致死) noin 6 kuukauden vapaudenmenetys; tyypillistä tai etukäteen taattua seuraamusta ei ole.
+Tuottamuksellisesta törkeästä ruumiinvammasta tuomioistuimet määräävät yleensä noin 4 kuukauden ja tuottamuksellisesti aiheutetusta kuolemasta (過失致死) noin 6 kuukauden vapaudenmenetyksen; kyse ei ole taatusta seuraamuksesta.
 
 ​
 
@@ -339,7 +339,7 @@ Kun vahingonkärsijä vammautuu tai kuolee, hän itse tai hänen perheensä kär
 
 ​
 
-Monet aiheuttajat eivät huolehdi puhelimitse tehtävästä tilan tiedustelusta eivätkä sairaalakäynnistä ja ajattelevat, että vakuutusyhtiö järjestää kaiken, joten he itse jäävät pois. Silloin osoitus katumuksesta ja asian vakavuuden ymmärtämisestä jää puuttumaan.
+Monet aiheuttajat eivät huolehdi puhelimitse tehtävästä tilan tiedustelusta eivätkä sairaalakäynnistä ja ajattelevat, että vakuutusyhtiö järjestää kaiken, joten he itse jäävät pois. Silloin vahingonkärsijä ei koe aiheuttajassa katumusta eikä vilpittömyyttä.
 
 ​
 

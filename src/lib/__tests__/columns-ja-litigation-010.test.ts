@@ -22,7 +22,7 @@ const featuredImage =
 const imagePrefix = '../images/010-taiwan-gym-injury-lawsuit/';
 const judgmentUrl =
   'https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1';
-const officialAmount = '1,579,589台湾ドル';
+const officialAmount = '1,579,589新台湾ドル（NT$）';
 
 const lawUrls = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001',
@@ -155,7 +155,7 @@ describe('Japanese litigation column 010 — gym injury damages', () => {
       )?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
 
-    expect(visibleJapaneseCount).toBe(4_233);
+    expect(visibleJapaneseCount).toBe(4_234);
     expect(visibleJapaneseCount).toBeGreaterThanOrEqual(3_500);
     expect(visibleKanaCount).toBe(2_075);
     expect(visibleKanaCount).toBeGreaterThanOrEqual(1_500);

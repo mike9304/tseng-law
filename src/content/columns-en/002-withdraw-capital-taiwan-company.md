@@ -1,5 +1,6 @@
 ---
 title: "Closing a Taiwan Company: What Happens to Capital and Company Assets?"
+seoTitle: "Closing a Taiwan Company: Capital and Assets"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"

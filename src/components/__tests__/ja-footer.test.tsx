@@ -107,9 +107,10 @@ describe('footer social localization', () => {
     expect(anchorForHref(html, 'https://www.youtube.com/@weilawyer')).toContain(
       'aria-label="YouTube"',
     );
-    expect(anchorForHref(html, 'https://tseng-law.com/')).toContain(
-      'aria-label="公式サイト"',
-    );
+    // WO-X2 (JA-18): the root domain 308-redirects to /ko, so the JA
+    // "official site" icon points at the JA home instead.
+    expect(anchorForHref(html, '/ja')).toContain('aria-label="公式サイト"');
+    expect(anchorForHref(html, 'https://tseng-law.com/')).toBeUndefined();
 
     expectedTopics.slice(0, 3).forEach(({ href, label }) => {
       expect(html).toContain(`href="${href}">${label}</a>`);

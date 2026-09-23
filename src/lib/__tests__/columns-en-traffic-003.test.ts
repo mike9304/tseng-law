@@ -20,15 +20,17 @@ const featuredImage =
   '../images/003-taiwan-traffic-accident-procedure/featured-01.jpg';
 const incidentImage =
   '../images/003-taiwan-traffic-accident-procedure/img-01.jpg';
-const immutablePrefixBytes = 1_317;
+// WO-X2 (EN-20): re-locked after shortening the frontmatter seoTitle (-20 bytes);
+// the article body after the frontmatter is byte-identical.
+const immutablePrefixBytes = 1_297;
 const immutablePrefixSha256 =
-  '836e362995ca801aaae3d4bd970262c4af76fb216273059c69df98498354265a';
-const immutableQ1ToQ5PrefixBytes = 8_755;
+  '72f8a98ed2561dcfc60a0a9d9d0b9afe770e84f9c28bfaae8caf045f1e53af95';
+const immutableQ1ToQ5PrefixBytes = 8_735;
 const immutableQ1ToQ5PrefixSha256 =
-  '58f9fc3052bcd946ea21bf3af1ad9772739cc1e3844cbe648dae7c63424c1c8f';
-const immutableQ1ToQ10PrefixBytes = 14_906;
+  '213eebe54f419ed7dc7f3d3222d0d8ebbafe1f5340749eb5325e716a72b16f76';
+const immutableQ1ToQ10PrefixBytes = 14_886;
 const immutableQ1ToQ10PrefixSha256 =
-  '4d6c701fce2c54bd35b8f84e3873063249730888afc5e77d7e55481f97172c02';
+  '2785280a56bce0ba746738bb27c13b39ef80f04539c7a71968d5177cc845a098';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
@@ -428,7 +430,7 @@ describe('English traffic column 003 — metadata and introduction localization 
   it('uses the exact contracted frontmatter and sole matching H1', () => {
     expect(parsed.data).toEqual({
       title,
-      seoTitle: 'Taiwan Traffic Accident Q&A: Fault, Settlement, and Compensation',
+      seoTitle: 'Taiwan Traffic Accident Fault & Compensation',
       url: sourceUrl,
       lastmod: '2026-09-10',
       date_display: 'September 13, 2025',

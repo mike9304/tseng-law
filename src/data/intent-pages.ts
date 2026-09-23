@@ -687,6 +687,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-lawyer',
       label: 'SEARCH GUIDE',
       title: 'Taiwan Lawyer for Litigation, Company Setup & Business Advice',
+      seoTitle: 'Taiwan Lawyer for Litigation & Company Setup',
       description:
         'Taiwan legal support for overseas companies and individuals on litigation, company setup, and business advice, with consultations in English.',
       keywords: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'Taiwan litigation lawyer', 'Taiwan company setup lawyer', 'law firm in Taipei for foreigners', 'Taiwan lawyer for foreigners', 'English speaking lawyer in Taipei', 'Taiwan residence permit assistance', 'Taiwan tax accounting assistance'],
@@ -781,6 +782,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-company-setup-lawyer',
       label: 'Company Formation Legal Services',
       title: 'Taiwan Company Setup Lawyer for Overseas Businesses',
+      seoTitle: 'Taiwan Company Setup Lawyer for Foreign Firms',
       description: 'Legal services for overseas businesses covering entity choice, investment approval, registration, and operating contracts.',
       keywords: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Wei Tseng attorney', 'Taiwan subsidiary branch', 'Taiwan branch vs subsidiary', 'Taiwan residence permit assistance', 'Taiwan tax accounting assistance'],
       searchTerms: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Taiwan branch vs subsidiary'],
@@ -873,6 +875,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-litigation-lawyer',
       label: 'Litigation and Dispute Intake',
       title: 'Taiwan Litigation Lawyer for Contract Disputes & Civil Claims',
+      seoTitle: 'Taiwan Contract & Civil Litigation Lawyer',
       description: 'A Taiwan litigation lawyer guide for overseas companies and individuals covering contract disputes, unpaid invoices, civil claims, criminal and family matters.',
       keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney', 'sue a company in Taiwan', 'Taiwan debt recovery lawyer', 'Taiwan commercial dispute lawyer'],
       searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan debt recovery', 'sue a Taiwanese company'],
@@ -966,7 +969,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-semiconductor-supplier-legal',
       label: 'SEARCH GUIDE',
       title: 'Legal guidance for overseas semiconductor materials and equipment suppliers in Taiwan',
-      seoTitle: 'Taiwan Legal Support for Overseas Semiconductor Materials and Equipment Suppliers',
+      seoTitle: 'Taiwan Semiconductor Supplier Legal Support',
       description:
         'A briefing for overseas semiconductor materials and equipment suppliers that sell into Taiwan fabs and packaging houses: local entity choice, supply contracts, technician stays, and collections. Consultations are in English, Chinese, Korean, and Japanese.',
       keywords: [
@@ -1099,7 +1102,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '台湾弁護士・曾雋崴（国立政治大学 法学・金融、国立台湾大学 財務金融修士）が直接対応します。',
       ],
       idealFor: [
-        '台湾に子会社・支店・駐在員事務所を設立したい日本企業',
+        '台湾に子会社・支店・代表者事務所（いわゆる駐在員事務所）を設立したい日本企業',
         '台湾の取引先との契約トラブル・未払い・損害賠償を日本語で相談したい方',
         '台湾在住の日本人の方の労働・家事（離婚・相続）・交通事故などの法律問題',
         '相談前に手続きと必要資料を先に把握しておきたい方',
@@ -1136,7 +1139,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         },
         {
           question: '相談料はいくらですか？',
-          answer: '一般法律相談は1時間NT$3,000（対面またはビデオ）です。案件の費用は資料を確認したうえで別途お見積りします。標準的な台湾会社設立はNT$50,000からです（費用のご案内ページ参照）。',
+          answer: '一般法律相談は対面またはビデオで1時間3,000新台湾ドル（NT$）です。案件の費用は資料を確認したうえで別途お見積りします。標準的な台湾会社設立はNT$50,000からです（費用のご案内ページ参照）。',
         },
         {
           question: '日本語での契約書や証拠でも対応できますか？',
@@ -1148,12 +1151,12 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-company-setup-lawyer',
       label: '相談案内',
       title: '台湾会社設立・法人設立の弁護士｜手続き・費用・期間',
-      description: '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・駐在員事務所の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
+      description: '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・代表者事務所（いわゆる駐在員事務所）の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
       keywords: ['台湾会社設立弁護士', '台湾法人設立弁護士', '台湾投資弁護士', '曾雋崴弁護士', '台湾子会社 支店', '台湾法人設立'],
       searchTerms: ['台湾会社設立弁護士', '台湾法人設立弁護士', '台湾投資弁護士', '台湾法人設立'],
       heroPoints: [
         '法人形態の選択、投資承認、資本金送金、登記、許認可を一つの流れで検討します。',
-        '子会社・支店・連絡事務所の構造の違いと業種別規制を日本のクライアントの視点で整理します。',
+        '子会社・支店・代表者事務所の構造の違いと業種別規制を日本のクライアントの視点で整理します。',
         '法人設立（会社設立）後のビザ、商標、契約、雇用リスクまで引き続きご検討いただけます。',
       ],
       idealFor: [
@@ -1169,7 +1172,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '会社設立後の契約・労務・商標戦略まであわせて設計すると運営リスクが減ります。',
       ],
       processFlow: [
-        '進出目的と売上構造を基準に、子会社・支店・連絡事務所のどの形態が適切か先に比較します。',
+        '進出目的と売上構造を基準に、子会社・支店・代表者事務所のどの形態が適切か先に比較します。',
         '投資承認の要否、資本金規模、株主構成、営業住所を整理して設立の前提条件を確定します。',
         '登記後の銀行、税務、ビザ、商標、雇用契約まで続くスケジュールを一度に設計します。',
       ],
@@ -1334,7 +1337,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       processFlow: [
         // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
         '取引先から届いたベンダー登録の書式と購買条件を先に読み、現地法人なしでも納入を続けられるかを確認します。',
-        '法人が必要であれば、子会社・支店・駐在員事務所を、税務、契約の締結主体、現地採用計画の三つの基準で比較します。',
+        '法人が必要であれば、子会社・支店・代表者事務所（いわゆる駐在員事務所）を、税務、契約の締結主体、現地採用計画の三つの基準で比較します。',
         '登記完了の予定日を起点に、供給契約の署名、技術者の出張、現地社員の採用時期を逆算し、一つの日程表に合わせます。',
       ],
       prepareChecklist: [
@@ -1354,7 +1357,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
       serviceBlurbs: {
         investment:
-          '台湾のファブ・パッケージング先と直接契約するには、子会社・支店・駐在員事務所のどれが合うか、投資承認と登記の日程がどう組まれるかを確認します。',
+          '台湾のファブ・パッケージング先と直接契約するには、子会社・支店・代表者事務所のどれが合うか、投資承認と登記の日程がどう組まれるかを確認します。',
         civil:
           '納入は終わっているのに代金が入らないとき、納期や検収を巡って争いになったときは、交渉から訴訟まで対応します。',
         // REVIEW: 변호사 검수 필요 — 근로계약서와 계약 종료 조건 검토를 언급
@@ -1396,7 +1399,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '設立の期間と費用はどの程度で見ますか？',
           answer:
-            '台湾の会社設立はよく約3か月を目安にしますが、投資承認の対象かどうか、資本金の送金時期、業種の記載によって変わります。通常の台湾会社設立はNT$50,000から、一般法律相談は対面またはビデオで1時間NT$3,000です。事件の委任費用は資料を確認したうえで別途ご案内します。',
+            '台湾の会社設立はよく約3か月を目安にしますが、投資承認の対象かどうか、資本金の送金時期、業種の記載によって変わります。通常の台湾会社設立は50,000新台湾ドル（NT$）から、一般法律相談は対面またはビデオで1時間NT$3,000です。事件の委任費用は資料を確認したうえで別途ご案内します。',
         },
         {
           question: '納入は終わっているのに代金が入りません。どうしますか？',

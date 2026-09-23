@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan?"
+seoTitle: "Is Severance Pay Hard to Get in Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"

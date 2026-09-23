@@ -385,7 +385,7 @@ describe('editorial heading unit grouping', () => {
       createElement(HomeCaseResultsSplit, { locale: 'en', presentation: 'editorial' }),
     );
     // The legacy heading retains a break after each source line, including the final line.
-    const jaTitle = '韓国人留学生のジム負傷事件\n一審157万TWD判決後、控訴審で和解\n';
+    const jaTitle = '韓国人留学生のジム負傷事件\n一審NT$157万判決後、控訴審で和解\n';
     const enTitle = 'Korean Student Gym Injury Case\nTWD 1.57M Ruling, Then Appeal Settlement\n';
     const editorialHeading = headingEntries(editorial, 'h2', 'home-results-title')[0];
     const standardHeading = headingEntries(standard, 'h2', 'home-results-title')[0];

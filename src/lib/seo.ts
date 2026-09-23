@@ -128,7 +128,20 @@ const organizationName: Record<SiteLocale, string> = {
   ja: '昊鼎国際法律事務所',
 };
 
-const pageTitleBrands = Object.values(organizationName).sort((a, b) => b.length - a.length);
+/**
+ * Brand suffix used in `<title>` (`%s | Brand`). WO-X2 (EN-20): the full EN
+ * firm name (33 chars with the separator) pushed most EN titles past 60
+ * characters, so EN titles use the short "Hovering Law" suffix. The full
+ * organization name is unchanged everywhere else (JSON-LD, publisher, etc.).
+ */
+const pageTitleBrand: Record<SiteLocale, string> = {
+  ...organizationName,
+  en: 'Hovering Law',
+};
+
+const pageTitleBrands = Array.from(
+  new Set([...Object.values(organizationName), ...Object.values(pageTitleBrand)]),
+).sort((a, b) => b.length - a.length);
 const pageTitleSeparatorPattern = /(?:\s*(?:\||｜|—|–|-)\s*)$/u;
 
 const organizationAlternateNames = ['법무법인 호정', '昊鼎國際法律事務所', 'Hovering International Law Firm', 'Tseng Law', '昊鼎国際法律事務所'];
@@ -742,6 +755,11 @@ export function getOrganizationName(locale: PublicSeoLocale): string {
   return organizationName[chromeSiteLocale(locale)];
 }
 
+/** Brand used as the `<title>` suffix (short "Hovering Law" for EN). */
+export function getPageTitleBrand(locale: PublicSeoLocale): string {
+  return pageTitleBrand[chromeSiteLocale(locale)];
+}
+
 /**
  * Removes a known localized firm name only when it appears as the terminal
  * title suffix. This accepts both the canonical pipe separator and legacy
@@ -775,7 +793,7 @@ export function buildLocalizedPageTitle(
   title: string,
   locale: PublicSeoLocale,
 ): string {
-  const brand = getOrganizationName(locale);
+  const brand = getPageTitleBrand(locale);
   const pageTitle = stripOrganizationNameSuffix(title);
   return pageTitle ? `${pageTitle} | ${brand}` : brand;
 }

@@ -55,6 +55,11 @@ const expectedTitles = {
   en: 'How Is Liability Assessed After an Overtaking Accident in Taiwan?',
   ja: '台湾の追い越し事故、責任はどう判断されるか',
 } as const;
+// WO-X2 (EN-20): the EN <title> uses the short frontmatter seoTitle; H1 stays.
+const expectedMetaTitles = {
+  ...expectedTitles,
+  en: 'Overtaking Accident Liability in Taiwan',
+} as const;
 
 const expectedArchiveRecords = {
   ko: {
@@ -398,7 +403,7 @@ describe('column 012 public reference synchronization', () => {
         params: Promise.resolve({ locale, slug }),
       });
 
-      expect(metadata.title, locale).toBe(expectedTitles[locale]);
+      expect(metadata.title, locale).toBe(expectedMetaTitles[locale]);
       expect(metadata.alternates?.canonical, locale).toBe(
         `${siteUrl}/${locale}/columns/${slug}`,
       );
@@ -422,7 +427,7 @@ describe('column 012 public reference synchronization', () => {
         params: Promise.resolve({ locale, slug: aliasSlug }),
       });
 
-      expect(aliasMetadata.title, locale).toBe(expectedTitles[locale]);
+      expect(aliasMetadata.title, locale).toBe(expectedMetaTitles[locale]);
       expect(aliasMetadata.alternates?.canonical, locale).toBe(
         `${siteUrl}/${locale}/columns/${slug}`,
       );

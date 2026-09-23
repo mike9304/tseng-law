@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
+seoTitle: "Taiwan Inheritance and Parental Rights Guide"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"

@@ -1,6 +1,6 @@
 ---
 title: "Entering the Taiwan Market: Key Differences Between a Subsidiary and a Branch"
-seoTitle: "Taiwan Subsidiary vs Branch: Key Differences for Market Entry"
+seoTitle: "Taiwan Subsidiary vs Branch: Key Differences"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"

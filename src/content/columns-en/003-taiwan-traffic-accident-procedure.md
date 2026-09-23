@@ -1,6 +1,6 @@
 ---
 title: "Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation"
-seoTitle: "Taiwan Traffic Accident Q&A: Fault, Settlement, and Compensation"
+seoTitle: "Taiwan Traffic Accident Fault & Compensation"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"

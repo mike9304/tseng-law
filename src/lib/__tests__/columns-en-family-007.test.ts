@@ -203,8 +203,9 @@ const frozenSection5OnwardSha256 =
 const frozenSection1OnwardSha256 =
   'b64f3368517a247872fe3f0d3cd7f0a60eeb52843c12bf5ee3b2cf985546d4dd';
 const frozenVisibleWordCount = 5_827;
+// WO-X2 (EN-20): re-frozen after adding the short frontmatter seoTitle.
 const frozenSourceSha256 =
-  '2bcf4d310bf8f14105d353556d80ec30a3d01cf304429352ae71f9b61a671bca';
+  '11a7267d248b6a877e90bbf5aadbf84bbc7f7f4a19867467659172ff0ce960ab';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -249,6 +250,7 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
   it('publishes the exact complete frontmatter and loaded article identity', () => {
     expect(parsed.data).toEqual({
       title,
+      seoTitle: 'Taiwan Divorce Q&A: Property and Children',
       url: sourceUrl,
       lastmod: '2026-09-10',
       date_display: 'September 13, 2025',

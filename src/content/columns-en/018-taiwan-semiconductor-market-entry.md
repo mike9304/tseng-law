@@ -1,6 +1,6 @@
 ---
 title: "Semiconductor Component Companies Entering Taiwan: How to Assess a Subsidiary, Branch, or Agent"
-seoTitle: "Taiwan Semiconductor Components: Subsidiary, Branch, or Agent"
+seoTitle: "Taiwan Semiconductor Entry: Entity Options"
 lastmod: "2026-09-17"
 date_display: "September 17, 2026"
 read_time: "10 min read"

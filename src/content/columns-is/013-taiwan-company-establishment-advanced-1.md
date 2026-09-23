@@ -29,7 +29,7 @@ Spurningarnar og svörin hér á eftir eiga að hjálpa þeim sem íhuga að sto
 
 Fjárfestingarathugunardeildin skal kanna hvort viðkomandi hlutafé (資本額) sé raunverulega notað til fjárfestingar.
 
-Hún skal einnig kanna hvort erlendir aðilar flytji ekki inn fé undir öðru yfirskini.
+Hún skal einnig ganga úr skugga um að erlendir aðilar séu ekki að flytja fé inn undir öðru yfirskini.
 
 Við gerð fjárfestingaráætlunarinnar þarf nákvæmt heimilisfang félagsins ekki að vera tilgreint; tilgreining svæðisins nægir (dæmi: borgin Taipei). ​
 
@@ -49,7 +49,7 @@ Vegna þess að skoðun fjárfestingaráætlunarinnar tekur einnig tíma
 
 ættir þú að semja fjárfestingaráætlunina og leita jafnframt að skráningarheimili félagsins.
 
-Samkvæmt 9. gr. laga um fjárfestingu útlendinga (外國人投資條例) skal hið samþykkta hlutafjárframlag berast að fullu innan þess frests sem lögbær stofnun hefur ákveðið (核定期限); frestinn skal staðfesta í heimildarskjali hvers máls (í framkvæmd er hann oft ákveðinn um 1 ár).
+Samkvæmt 9. gr. laga um fjárfestingu útlendinga (外國人投資條例) skal hið samþykkta hlutafjárframlag berast að fullu innan þess frests sem lögbær stofnun hefur ákveðið (核定期限); frestinn skal staðfesta í heimildarskjali hvers máls (í framkvæmd er hann oft ákveðinn um eitt ár).
 
 Innan þessa frests gefst nægur tími til að finna heimilisfang félagsins og gera leigusamning,
 
@@ -63,11 +63,11 @@ opna undirbúningsreikninginn og millifæra hlutaféð.
 
 Bankinn krefst að jafnaði tvöfaldrar auðkenningar,
 
-og án dvalarleyfisskírteinis geturðu sótt um hjá innflytjendastofnun Taívan ‘**grunnupplýsingaeyðublaðið um samræmt kenninúmer**(統一證號基本資料表)’.
+og án dvalarleyfisskírteinis geturðu sótt um hjá innflytjendastofnun Taívan „**grunnupplýsingaeyðublaðið um samræmt kenninúmer**“ (統一證號基本資料表).
 
 Útgáfa er möguleg sama dag,
 
-en innflytjendastofnunin (移民署) hefur marga gesti; þú ættir því að koma snemma og taka númer.
+en iðulega er margt um manninn hjá innflytjendastofnuninni (移民署); þú ættir því að koma snemma og taka númer.
 
 ​
 
@@ -95,7 +95,7 @@ Enn fremur veitir leigusali í leigusamningum um verslunarhúsnæði á Taívan 
 
 Þetta er tímabil án leigu, sem þú getur samið um.
 
-Útlendingi er ekki auðvelt að leigja verslunarhúsnæði, og tryggingarfé (押金) á Taívan er fremur lágt (að jafnaði leiga 2 mánaða), svo vernd leigusala er takmörkuð;
+Útlendingi er ekki auðvelt að leigja verslunarhúsnæði, og tryggingarfé (押金) á Taívan er fremur lágt (að jafnaði leiga tveggja mánaða), svo vernd leigusala er takmörkuð;
 
 leigusalar hika því við að leigja útlendingum.
 

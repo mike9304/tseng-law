@@ -19,11 +19,11 @@ Hefur þú upplifað tímann með hefðbundnu rakarastofunum (理髮廳) á fyrs
 
 Hátturinn sem hárið var þvegið á í þessum stofum var mjög sérstæður.
 
-Auk klippingar var til ýmiss konar þjónusta, svo sem raka og andlitsmeðferð.
+Auk klippingar var til ýmiss konar þjónusta, svo sem rakstur og andlitsmeðferð.
 
 Og það mikilvæga var að sitjandi mátti fá hárþvott með nuddi á hársvörð, axlir og háls.
 
-Ein klipping nægði þegar til að njóta þessarar þjónustu á háu stigi, svo hlutfall verðs og gæða var ágætt.
+Ein klipping nægði til að njóta allrar þessarar þjónustu á háu stigi, svo þetta var vel þess virði.
 
 Þetta líktist mjög víetnömskum hárþvotti í dag.
 
@@ -35,13 +35,13 @@ Slík minning tilheyrir fyrri tíð.
 
 Hvernig sem því er farið, þegar talað er um nudd (按摩),
 
-eru á Taívan einnig margar nuddstrætur.
+eru á Taívan einnig mörg nuddstræti.
 
 Nuddstaðir af ýmsu tagi standa þar hlið við hlið.
 
 Þar er nudd hjá sjónskertum (視障按摩), fótanudd, olíunudd, taílenskt nudd og önnur form.
 
-Að jafnaði getur hver og einn valið það nudd sem hæfir persónulegu smekk, til að létta spennu.
+Að jafnaði getur hver og einn valið það nudd sem hæfir persónulegum smekk, til að létta spennu.
 
 Og ástæðan fyrir því að svo margir nuddstaðir eru til í dag kann að tengjast þessari beiðni um stjórnskipunarskýringu (釋憲).
 
@@ -107,7 +107,7 @@ Ef einhver án sjónskerðingar rekur nuddstarfsemi má dæma fangelsi allt að 
 
 Vernd réttinda og hagsmuna hvers hóps breytist enn með tímanum,
 
-og löggjafinn leitar tiltölulega jafnvægis lausnar til að skýra hagsmunaárekstur.
+og löggjafinn leitar lausnar sem er í tiltölulegu jafnvægi til að skýra hagsmunaárekstur.
 
 ​
 
@@ -115,7 +115,7 @@ og löggjafinn leitar tiltölulega jafnvægis lausnar til að skýra hagsmunaár
 
 en í því ferli halda tilvik kynferðislegrar áreitni (性騷擾) eða siðlausra athafna (猥褻) áfram að koma fyrir.
 
-Það sem upphaflega var aðeins móttaka nudd í því skyni að létta spennu,
+Það sem upphaflega var aðeins það að þiggja nudd í því skyni að létta spennu,
 
 getur orðið áfall til æviloka, ef maður verður fyrir kynferðislegri áreitni.
 

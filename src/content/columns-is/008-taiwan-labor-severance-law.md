@@ -13,7 +13,7 @@ faq:
   - q: "Á félagið einnig að greiða starfslokabætur við agalega uppsögn?"
     a: "Nei. Fremji starfsmaðurinn ólögmæta háttsemi, brjóti hann vinnureglur eða sé fjarverandi án gildrar ástæðu 3 daga í röð (12. gr. laga um vinnustaðla, 勞動基準法第12條), má félagið segja upp án fyrirvara og þarf ekki að greiða starfslokabætur. Efnahagsleg uppsögn (11. gr.) krefst hins vegar fyrirvara og greiðslu starfslokabóta."
   - q: "Hvernig eru starfslokabætur á Taívan reiknaðar?"
-    a: "Fyrir hvert fullt ár í starfi skal vinnuveitandi greiða 0,5 mánaðar meðallaun sem starfslokabætur, þó að hámarki 6 mánaðarlaun. Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til er greiddur 1 mánaðar meðallaun á hvert ár, án hámarks."
+    a: "Fyrir hvert fullt ár í starfi skal vinnuveitandi greiða 0,5 mánaðar meðallaun sem starfslokabætur, þó að hámarki 6 mánaðarlaun. Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til eru greidd ein mánaðarmeðallaun á hvert ár, án hámarks."
 ---
 
 
@@ -63,7 +63,7 @@ Eftirfarandi tafla dregur þetta saman.
 
 > Á Taívan skal vinnuveitandi fyrir hvert fullt ár í starfi (年資)
 > greiða 0,5 mánaðar meðallaun (平均工資) sem starfslokabætur.
-> (að hámarki 6 mánaðarlaun) Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til er greiddur 1 mánaðar meðallaun á hvert ár, án hámarks.
+> (að hámarki 6 mánaðarlaun) Þessi reikniregla gildir um starfsaldur sem 12. gr. laga um lífeyri launafólks (勞工退休金條例) tekur til; um starfsaldur sem 17. gr. laga um vinnustaðla (勞動基準法) tekur til eru greidd ein mánaðarmeðallaun á hvert ár, án hámarks.
 
 ​
 
@@ -89,11 +89,11 @@ Til er hið þekkta félag A með útibú um allt Taívan.
 
 Af einhverri ástæðu var skipt um stjórnendur.
 
-Nýja stjórnin hóf strax eftir að hún tók við.
+Strax eftir að nýja stjórnin tók við hófst þetta.
 
 Markmiðið var að lækka launakostnað.
 
-Félagið hóf að kalla hálaunaða langtíma starfsmenn til samtals, einn af öðrum.
+Félagið hóf að kalla hálaunaða langtímastarfsmenn til samtals, einn af öðrum.
 
 Hr. B var starfsmaður í yfir 10 ár hjá félagi A.
 
@@ -165,7 +165,7 @@ Hann sá að félagið ætlaði með ótilhlýðilegum hætti að fá starfsmenn
 
 Hann tók eftir þessu snemma.
 
-Hann hafði, áður en starfsmenn létu af störfum, fundið atvinnuauglýsingar.
+Hann hafði komist að því að félagið birti atvinnuauglýsingar áður en starfsmennirnir sögðu upp.
 
 Þann dag sem hann fór í samtalið tók B upp.
 
@@ -187,7 +187,7 @@ Sama gildir þegar félagið grípur til ótilhlýðilegra ráða.
 
 Þá skalt þú varðveita sönnunargögn.
 
-Þegar félagið festir sig á smáum villum starfsmanna skalt þú varðveita sönnunargögn.
+Þegar félagið hengir sig í smávægileg mistök starfsmanna skalt þú varðveita sönnunargögn.
 
 Sama gildir þegar það setur markmið sem erfitt er að ná.
 
@@ -221,7 +221,7 @@ Gættu þess einnig að það þrýsti ekki á þig til að segja upp að eigin 
 
 Starfslokabætur eru lögbundinn réttur starfsmannsins.
 
-og félaginu ber að greiða þær þegar lögbundin skilyrði eru uppfyllt.
+Félaginu ber að greiða þær þegar lögbundin skilyrði eru uppfyllt.
 
 Þú ættir einnig að vernda réttindi þín á Taívan.
 

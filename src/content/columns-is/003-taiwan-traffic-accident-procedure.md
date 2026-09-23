@@ -25,7 +25,7 @@ Við líkamsmeiðslaslys má þó, ef allir aðilar samþykkja, eftir merkingu s
 
 Sé aðeins eignatjón fyrir hendi, og megi færa ökutækin, er meginreglan að merkja staðsetningu og spor, festa þau með ljósmynd eða myndbandi og aka fljótt á öruggan stað. Sé vettvangur yfirgefinn án nauðsynlegra ráðstafana geta stjórnvaldsrefsingar (行政處罰) komið til.
 
-Samkvæmt 185-4. gr. hegningarlaga (刑法) er fjallað um refsiábyrgð ökumanns sem eftir umferðarslys með meiðslum eða dauðsfalli yfirgefur vettvanginn. Raunveruleg beiting er metin eftir slysaaðstæðum og þeim ráðstöfunum sem gripið var til.
+Í 185-4. gr. hegningarlaga (刑法) er fjallað um refsiábyrgð ökumanns sem eftir umferðarslys með meiðslum eða dauðsfalli yfirgefur vettvanginn. Raunveruleg beiting er metin eftir slysaaðstæðum og þeim ráðstöfunum sem gripið var til.
 
 ## Q2. Hvaða sönnunargögn skal fyrst varðveita?
 
@@ -37,17 +37,17 @@ Að því er varðar lögreglugögn getur þú á vettvangi fengið skráningar-
 
 ## Q3. Hvaða kröfur og fresti skal kanna við meiðsli?
 
-Samkvæmt 284. gr. hegningarlaga (刑法) er fjallað um gáleysislega líkamsmeiðingu (過失傷害) og gáleysislega alvarlega líkamsmeiðingu (過失致重傷). Þetta ákvæði er samkvæmt 287. gr. hegningarlaga brot sem aðeins er sótt að undangenginni kæru (告訴乃論之罪); samkvæmt 237. gr. laga um meðferð sakamála (刑事訴訟法) skal kæra að jafnaði borin fram innan 6 mánaða frá þeim degi sem kærandi fær vitneskju um hver gerandinn er.
+Í 284. gr. hegningarlaga (刑法) er fjallað um gáleysislega líkamsmeiðingu (過失傷害) og gáleysislega alvarlega líkamsmeiðingu (過失致重傷). Þetta ákvæði er samkvæmt 287. gr. hegningarlaga brot sem aðeins er sótt að undangenginni kæru (告訴乃論之罪); samkvæmt 237. gr. laga um meðferð sakamála (刑事訴訟法) skal kæra að jafnaði borin fram innan 6 mánaða frá þeim degi sem kærandi fær vitneskju um hver gerandinn er.
 
 Einkaréttarlegar skaðabætur (損害賠償) verða samkvæmt 197. gr. almennra borgaralaga (民法) ekki lengur krafðar, þegar 2 ár frá vitneskju um tjón og skaðabótaskylda aðila eða 10 ár frá skaðaverkinu (侵權行為) eru liðin. Hvaða atvik hafa áhrif á fyrningu (消滅時效) skal kanna sérstaklega.
 
-Sá sem hefur orðið fyrir tjóni vegna refsiverðs athæfis getur samkvæmt 487. gr. laga um meðferð sakamála höfðað einkamál tengt sakamáli (刑事附帶民事訴訟). Meðan sakamálið er rekið má samkvæmt 488. gr. höfða það allt þar til fyrir lok munnlegs málflutnings (言詞辯論終結) á öðru dómsstigi, en ekki eftir lok munnlegs málflutnings á fyrsta dómsstigi og áður en áfrýjun er höfð. Að jafnaði má forðast sérstaka greiðslu dómstólsgjalda (裁判費); ekki lýkur öllum málum án kostnaðar. Sé sakamálinu til dæmis vísað frá og því að beiðni stefnanda vísað til einkamálaréttar getur, samkvæmt 503. gr. laga um meðferð sakamála, málskostnaður komið til; einnig skal ganga frá vísunar- og málsmeðferðarákvæðum 504. gr.
+Sá sem hefur orðið fyrir tjóni vegna refsiverðs athæfis getur samkvæmt 487. gr. laga um meðferð sakamála höfðað einkamál tengt sakamáli (刑事附帶民事訴訟). Meðan sakamálið er rekið má samkvæmt 488. gr. höfða það allt þar til fyrir lok munnlegs málflutnings (言詞辯論終結) á öðru dómsstigi, en ekki eftir lok munnlegs málflutnings á fyrsta dómsstigi og áður en áfrýjun er höfð. Að jafnaði má forðast sérstaka greiðslu dómstólsgjalda (裁判費); ekki lýkur öllum málum án kostnaðar. Sé sakamálinu til dæmis vísað frá og því að beiðni stefnanda vísað til einkamáladeildar dómstólsins getur, samkvæmt 503. gr. laga um meðferð sakamála, málskostnaður komið til; einnig skal ganga frá vísunar- og málsmeðferðarákvæðum 504. gr.
 
 Rétt leið ræðst af því hvort fyrning hefur verið slitin (時效中斷), af því hverjir eru stefndir, af sönnunargögnum, af tryggingu og af varnarþingi. Því er engin ein samræmd leið sem hæfir öllum málum.
 
 ## Q4. Hvernig er refsiábyrgð og einkaréttarleg ábyrgð metin þegar báðar hliðar hafa gáleysi?
 
-Refsiábyrgð verður fyrst metin þegar brot á aðgæsluskyldu hvorar hliðar og orsakasamband þessa brots við meiðsli gagnaðila er viðurkennt. Það eitt að báðar hliðar hafi gáleysi (過失) veldur ekki sjálfkrafa ábyrgð vegna gáleysislegrar líkamsmeiðingar.
+Refsiábyrgð verður fyrst metin þegar brot á aðgæsluskyldu hvorrar hliðar og orsakasamband þessa brots við meiðsli gagnaðila er viðurkennt. Það eitt að báðar hliðar hafi gáleysi (過失) veldur ekki sjálfkrafa ábyrgð vegna gáleysislegrar líkamsmeiðingar.
 
 Einkaréttarlega getur dómstóllinn samkvæmt 217. gr. almennra borgaralaga (民法) lækkað eða fellt niður skaðabætur, ef tjónþoli hefur gáleysi við tilurð eða aukningu tjóns (與有過失). Hafi til dæmis viðurkenndar skaðabætur verið TWD 1.000.000 (新臺幣) og gáleysi tjónþola metið 50 % getur fjárhæðin fyrir aðrar aðlaganir fallið í TWD 500.000.
 
@@ -59,7 +59,7 @@ Sérfræðiathugun (鑑定) eða bráðabirgðagreiningarmat getur verið mikilv
 
 Sátt (和解) í 736. gr. almennra borgaralaga (民法) er samningur þar sem aðilar með gagnkvæmri eftirgjöf ljúka deilu eða koma í veg fyrir hana. Samkvæmt 737. gr. almennra borgaralaga er umfang réttindataps aðeins metið eftir því umfangi sem tilgreint er í samningnum. Því má ekki án könnunar orðalagsins slá því föstu að allar framtíðarkröfur séu slokknaðar.
 
-Við brot sem aðeins eru sótt að undangenginni kæru má kæru samkvæmt 238. gr. laga um meðferð sakamála afturkalla allt þar til fyrir lok munnlegs málflutnings á fyrsta dómsstigi; eftir afturköllun má ekki kæra að nýju. Við brot sem ekki eru háð kæru lýkur opinberri saksókn ekki sjálfkrafa við einkasátt eina, og sátt skylda ekki alltaf til afturköllunar kæru.
+Við brot sem aðeins eru sótt að undangenginni kæru má kæru samkvæmt 238. gr. laga um meðferð sakamála afturkalla allt þar til fyrir lok munnlegs málflutnings á fyrsta dómsstigi; eftir afturköllun má ekki kæra að nýju. Við brot sem ekki eru háð kæru lýkur opinberri saksókn ekki sjálfkrafa við einkasátt eina, og sátt felur ekki alltaf í sér skyldu til að afturkalla kæru.
 
 ### Opinberar heimildir Q1–Q5
 
@@ -103,7 +103,7 @@ Varðveittu kvittanir (收據), vottorð og sjúkraskrár, og raðaðu læknisfr
 
 Viðbót læknisfræðilegra gagna og breyting eða hækkun kröfufjárhæðar skal greina. Eftir höfðun einkamáls tengds sakamáli koma dómstólsgjöld ekki sjálfkrafa til af því einu að viðbótarmeðferðarkvittunum sé skilað.
 
-Samkvæmt 504. gr. laga um meðferð sakamála getur þó, eftir að málinu er vísað til einkamálaeiningar, við breytingu, viðbót eða víkkun kröfu umfram umfangið fyrir vísun, kostnaðarspurning komið til vegna umframpáttarins. Vísunarstig, skilatími og umfang kröfu skal kanna frá máli til máls.
+Samkvæmt 504. gr. laga um meðferð sakamála getur þó, eftir að málinu er vísað til einkamáladeildar dómstólsins, við breytingu, viðbót eða víkkun kröfu umfram umfangið fyrir vísun, kostnaðarspurning komið til vegna umframþáttarins. Vísunarstig, skilatími og umfang kröfu skal kanna frá máli til máls.
 
 ## Q9. Með hverju er fagleg hjúkrun og hjúkrunarkostnaður fjölskyldu sannaður?
 
@@ -135,7 +135,7 @@ Kvittanir, gjaldskrár, leiðarskrár og meðferðargögn eru möguleg sönnunar
 - [Dómur héraðsdóms Tainan (臺南) um ferðakostnað vegna læknismeðferðar](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
-## Q11. Hvernig er tekjutap á meðferðar- og bata tímabili sannað?
+## Q11. Hvernig er tekjutap á meðferðar- og batatímabili sannað?
 
 Tekjutap (收入損失) skal sanna með gögnum um að vegna slysmeiðsla hafi á batatímabili ekki verið unnt að vinna að öllu eða hluta, og að tekjur hafi þar með raunverulega lækkað. Vottorð eða hvíldarráðlegging er mikilvægur upphafspunktur, gerir þó ekki eitt og sér kröfuna viðurkennda.
 
@@ -147,7 +147,7 @@ Sjúkraskrár, mætingar- eða fjarvistarskrár, launa- og skattagögn og staðf
 
 Tjón vegna skerðingar vinnugetu greinist frá því sem í Q11 er fjallað um, raunverulega lækkuðum tekjum á batatímabili. Samkvæmt 193. og 216. gr. almennra borgaralaga (民法) er orsakasamband við slysið, viðvarandi truflun á starfsemi (持續功能障礙), starf og hæfileikar tjónþola, venjulega væntanlegar tekjur ásamt grundvelli og sönnun vinnuhæfs tíma skoðuð saman.
 
-Það að núverandi laun haldist óbreytt útilokar ekki sjálfkrafa kröfuna. Öfugt er tjónsfjárhæðin ekki heldur ákveðin vélrænt einungis eftir örorkuhlutfalli eða núverandi launum.
+Það að núverandi laun haldist óbreytt útilokar ekki sjálfkrafa kröfuna. Á hinn bóginn er tjónsfjárhæðin ekki heldur ákveðin vélrænt einungis eftir örorkuhlutfalli eða núverandi launum.
 
 Sé viðvarandi truflun á starfsemi raunverulega dregin í efa, getur læknisfræðileg sérfræðiathugun verið gagnleg, en hún er ekki krafist í hverju máli. Meðverkandi gáleysi samkvæmt 217. gr. almennra borgaralaga (民法) og aðrar aðlögunarástæður eru könnuð með.
 
@@ -161,11 +161,11 @@ Dómstóllinn skoðar meiðsli og meðferð, viðvarandi afleiðingu, þjáningu
 
 ## Q14. Getur vinnuveitandinn einnig borið einkaréttarlega ábyrgð við slys í vinnu?
 
-Samkvæmt 188. gr. almennra borgaralaga (民法) er fjallað um það tilvik að starfsmaður við framkvæmd verkefnis valdi öðrum ólögmætu tjóni. Vinnutíminn einn stofnar ekki sjálfkrafa verkefnatengsl; tengsl raunverulegrar vinnu og slyss skal kanna.
+Í 188. gr. almennra borgaralaga (民法) er fjallað um það tilvik að starfsmaður við framkvæmd verkefnis valdi öðrum ólögmætu tjóni. Vinnutíminn einn stofnar ekki sjálfkrafa verkefnatengsl; tengsl raunverulegrar vinnu og slyss skal kanna.
 
 Vinnuveitandi getur borið fyrir sig að hann hafi gætt nauðsynlegrar aðgæslu við val og eftirlit með starfsmanni, eða að tjónið hefði ekki heldur við slíka aðgæslu mátt forðast. Kanna má að gera vinnuveitanda og starfsmann sameiginlega skaðabótaskylda. Að skaðabótum inntum getur vinnuveitandi leitað endurkröfu á starfsmanninn.
 
-Sanni vinnuveitandi ofangreind undanþáguskilyrði, þannig að tjónþoli fái ekki skaðabætur samkvæmt 1. mgr., getur dómstóllinn samkvæmt 188. gr. 2. mgr. almennra borgaralaga (民法), með tilliti til efnahagslegrar stöðu vinnuveitanda og tjónþola, lagt á fullar eða hluta skaðabætur.
+Sanni vinnuveitandi ofangreind undanþáguskilyrði, þannig að tjónþoli fái ekki skaðabætur samkvæmt 1. mgr., getur dómstóllinn samkvæmt 188. gr. 2. mgr. almennra borgaralaga (民法), með tilliti til efnahagslegrar stöðu vinnuveitanda og tjónþola, dæmt fullar skaðabætur eða hluta þeirra.
 
 Val stefndu í einkamálinu skal greina frá refsiábyrgð. Refsiábyrgð samkvæmt 284. gr. hegningarlaga (刑法) er metin eftir broti hvers einstaklings á aðgæsluskyldu og orsakasambandi þessa brots.
 
@@ -347,7 +347,7 @@ Margir tjónvaldar hringja ekki og spyrja um ástandið, heimsækja ekki hinn sl
 
 ​
 
-Þar með verður tjónþoli fyrir mikilli skerðingu og reiði, lætur ekki eftir í samningsfjárhæð eða krefst kyrrsetningar (假扣押) og leggur hald á eignir gagnaðila til enda.
+Þess vegna særist tjónþoli djúpt og reiðist, lætur ekki eftir í samningsfjárhæð eða krefst kyrrsetningar (假扣押) og leggur hald á eignir gagnaðila til enda.
 
 ​
 

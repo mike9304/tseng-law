@@ -61,7 +61,7 @@ Fyrirsagnir fjölmiðlaumfjöllunar, netfærslna og lögfræðilegra skýringa u
 
 **Fékk kóreskur karlkyns háskólanemi brjósklos við réttstöðulyftu á 90 kg í einkatíma?**
 
-Það sem skiptir máli í framkvæmd við þetta mál er að það sýnir að ábyrgðin ræðst ekki þegar af því einu að meiðsli hafi orðið á líkamsræktarstöð (健身房). Inntak öryggisskyldu (安全義務) þjónustuveitanda, tiltekin leiðsögn og brot á aðgæsluskyldu (注意義務), orsakasambandið milli meiðslanna og háttseminnar og umfang tjónsins eru metin út frá gögnum hvers máls. Skilyrði og frestir sakamáls (刑事) og einkamáls (民事) eru einnig ólík, svo nauðsynlegt er strax eftir slysið að skipuleggja gögnin hvert í sínu lagi.
+Það sem skiptir máli í framkvæmd við þetta mál er að það sýnir að ábyrgðin ræðst ekki umsvifalaust af því einu að meiðsli hafi orðið á líkamsræktarstöð (健身房). Inntak öryggisskyldu (安全義務) þjónustuveitanda, tiltekin leiðsögn og brot á aðgæsluskyldu (注意義務), orsakasambandið milli meiðslanna og háttseminnar og umfang tjónsins eru metin út frá gögnum hvers máls. Skilyrði og frestir sakamáls (刑事) og einkamáls (民事) eru einnig ólík, svo nauðsynlegt er strax eftir slysið að skipuleggja gögnin hvert í sínu lagi.
 
 Eftirfarandi er almenn fræðsla um deilur vegna meiðsla á líkamsræktarstöð á Taívan; hún er ekki lögfræðileg ráðgjöf um tiltekið mál. Raunveruleg réttindi og viðbrögð geta verið misjöfn eftir samningssambandi, atburðarás slyssins, orsök og alvarleika meiðslanna, háttsemi aðila, tryggingaskilmálum, þeim sönnunargögnum sem varðveitt eru og gildandi rétti.
 
@@ -69,9 +69,9 @@ Eftirfarandi er almenn fræðsla um deilur vegna meiðsla á líkamsræktarstö�
 
 [7. gr. laga um neytendavernd á Taívan (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) kveður á um að atvinnurekandi, þegar hann veitir þjónustu, skuli sjá til þess að þjónustan hafi það öryggi sem, miðað við faglegan eða tæknilegan mælikvarða þegar þjónustan er veitt, má með sanngirni gera ráð fyrir.
 
-Það þýðir ekki að ábyrgð atvinnurekanda eða þjálfara sé viðurkennd í hvert sinn sem meiðsli verða á líkamsræktarstöð. Meta skal í hverju máli hvaða aðgæsluskylda var til staðar, hvort henni var brotið, hvort orsakasamband (因果關係) sé milli brotsins og meiðslanna, hvort raunverulegt tjón hafi orðið, hvaða varnir gagnaðili hafi og hvort sönnunargögn styðji hverja kröfu og hverja vörn.
+Það þýðir ekki að ábyrgð atvinnurekanda eða þjálfara sé viðurkennd í hvert sinn sem meiðsli verða á líkamsræktarstöð. Meta skal í hverju máli hvaða aðgæsluskylda var til staðar, hvort hún var brotin, hvort orsakasamband (因果關係) sé milli brotsins og meiðslanna, hvort raunverulegt tjón hafi orðið, hvaða varnir gagnaðili hafi og hvort sönnunargögn styðji hverja kröfu og hverja vörn.
 
-Séu lögbundin skilyrði brotsins gáleysisleg líkamsmeiðing (過失傷害) uppfyllt má kanna kæru (告訴). Einnig má kanna einkaréttarlega skaðabótakröfu, en hvort samningsábyrgð, ábyrgð vegna skaðaverks (侵權行為) eða neytendaverndarábyrgð gildi, og hvert umfang ábyrgðarinnar sé, ræðst af tilteknum atvikum. Að unnt sé að kanna fleiri en eina málsmeðferð (訴訟) vegna eins slyss þýðir ekki að fara skuli í þær allar, né að tiltekinni niðurstöðu sé heitið í neinni þeirra.
+Séu lögbundin skilyrði brotsins gáleysislegrar líkamsmeiðingar (過失傷害) uppfyllt má kanna kæru (告訴). Einnig má kanna einkaréttarlega skaðabótakröfu, en hvort samningsábyrgð, ábyrgð vegna skaðaverks (侵權行為) eða neytendaverndarábyrgð gildi, og hvert umfang ábyrgðarinnar sé, ræðst af tilteknum atvikum. Að unnt sé að kanna fleiri en eina málsmeðferð (訴訟) vegna eins slyss þýðir ekki að fara skuli í þær allar, né að tiltekinni niðurstöðu sé heitið í neinni þeirra.
 
 ## 2. Hvaða frestir gilda um kæru og einkaréttarlega skaðabótakröfu?
 
@@ -87,7 +87,7 @@ Til að lýsa ábyrgð, orsakasambandi og tjóni er ráðlegt að safna ekki að
 
 Myndefni getur, að varðveislufresti liðnum, verið yfirskrifað eða orðið ónothæft af öðrum ástæðum. Því má kanna að biðja líkamsræktarstöðina að varðveita myndefnið, með bréfi sem sent er með innihaldsvottun (存證信函) eða með lögmannsbréfi (律師函), sem tilgreinir nákvæmlega nauðsynlegt tímabil, stað og staðsetningu myndavélar. Slíkt bréf er hagnýt ráðstöfun til að skrá hvað var óskað og hvenær. Það leggur þó ekki eitt og sér nýja lögbundna skyldu á gagnaðila til að varðveita myndefnið og kemur ekki í veg fyrir eyðingu, og það eitt að myndefnið sé ekki lengur til veldur ekki sjálfkrafa óhagstæðu mati dómstólsins.
 
-Geti atvik slyssins uppfyllt skilyrði refsiverðs brots má tilkynna fljótt, svo rannsóknaryfirvöld (偵查機關) geti metið hvort lögmætur grundvöllur sé til öflunar eða varðveislu. Tilkynning þýðir ekki að lögregla eða ákæruvald tryggi upptökurnar úr eftirlitsmyndavélunum, því skal einnig safna þeim gögnum sem aðilinn getur sjálfur varðveitt, svo sem sjúkragögnum og samskiptaskrám.
+Geti atvik slyssins uppfyllt skilyrði refsiverðs brots má tilkynna málið fljótt til lögreglu, svo rannsóknaryfirvöld (偵查機關) geti metið hvort lögmætur grundvöllur sé til öflunar eða varðveislu. Tilkynning þýðir ekki að lögregla eða ákæruvald tryggi upptökurnar úr eftirlitsmyndavélunum, því skal einnig safna þeim gögnum sem aðilinn getur sjálfur varðveitt, svo sem sjúkragögnum og samskiptaskrám.
 
 ## 4. Hvaða bótaliðum má krefjast af líkamsræktarstöðinni?
 
@@ -99,7 +99,7 @@ Bótaliðir sem koma til greina eru þessir. Raunveruleg viðurkenning og fjárh
 4. **Tjón vegna skerðingar vinnugetu (勞動能力減損)**: Séu varanlegar afleiðingar og viðvarandi skerðing vinnugetu viðurkenndar má meta tjónið saman út frá læknis- og starfsgögnum, stig skerðingarinnar, starfi og tekjum og þeirri starfsævi sem eftir er. Skerðingarhlutfallið eitt ræður ekki skaðabótunum, og tapið er ekki sjálfkrafa reiknað fram að starfslokum.
 5. **Tekjutap á batatímabili (收入損失)**: Tímabilið sem viðkomandi gat raunverulega ekki unnið vegna meðferðar eða hvíldar, og tekjuskerðingin sem af því leiddi, skulu sönnuð með launagögnum, skattagögnum og vinnuskrám.
 6. **Ófjárhagslegt tjón (非財產上損害)**: Fjárhæð miskabóta er ákveðin af dómstólnum út frá þáttum hvers máls, svo sem alvarleika meiðslanna, meðferðartíma, varanlegum afleiðingum og tilteknum aðstæðum aðila.
-7. **Refsikenndar skaðabætur (懲罰性賠償金)**: Til er regla um að í máli þar sem lög um neytendavernd gilda megi, hafi tjónið orðið af ásetningi atvinnurekanda, krefjast bóta sem nema allt að 5-földu raunverulegu tjóni; við stórfellt gáleysi allt að 3-földu; og við gáleysi allt að fjárhæð raunverulegs tjóns. Hvort [51. gr. laga um neytendavernd á Taívan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gildi um málið, og hvort refsikenndar skaðabætur séu í raun dæmdar, og hver fjárhæðin sé, ræðst af mati dómstólsins á tilteknum skilyrðum og sönnunargögnum.
+7. **Refsikenndar skaðabætur (懲罰性賠償金)**: Til er regla um að í máli þar sem lög um neytendavernd gilda megi, hafi tjónið orðið af ásetningi atvinnurekanda, krefjast bóta sem nema allt að 5 sinnum raunverulegu tjóni; við stórfellt gáleysi allt að 3 sinnum tjóninu; og við gáleysi allt að fjárhæð raunverulegs tjóns. Hvort [51. gr. laga um neytendavernd á Taívan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gildi um málið, og hvort refsikenndar skaðabætur séu í raun dæmdar, og hver fjárhæðin sé, ræðst af mati dómstólsins á tilteknum skilyrðum og sönnunargögnum.
 
 ## 5. Má, einnig þegar líkamsræktarstöðin hefur ábyrgðartryggingu (責任保險), deila um hvort bætur komi til og um fjárhæðina?
 

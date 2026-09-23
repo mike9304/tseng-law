@@ -779,7 +779,7 @@ export const guidanceAnswers: Record<
   ro: {
     services: {
       answer:
-        'Cabinetul acoperă șase domenii de practică din dreptul taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, muncă, cauze penale și proprietate intelectuală. Întinderea fiecărui mandat se confirmă separat, după ce un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        'Cabinetul acoperă șase domenii de practică din dreptul taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Întinderea fiecărui mandat se confirmă separat, după ce un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/faq', '/ro/contact'],
     },
     about: {
@@ -804,7 +804,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este nici o opinie juridică și nicio programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
+        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este nici opinie juridică, nici programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/services', '/ro/contact'],
     },
   },

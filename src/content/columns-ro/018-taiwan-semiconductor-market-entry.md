@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Dacă există clienți în Taiwan, trebuie neapărat înființată acolo o societate?"
-    a: "Nu se poate concluziona numai pentru că clientul este în Taiwan. Trebuie văzute cerințele clientului și activitatea reală de comerț, instalații, personal și structura activității în Taiwan, apoi aleasă entitatea cea mai adecvată."
+    a: "Nu se poate concluziona numai pentru că clientul este în Taiwan. Trebuie văzute cerințele clientului și activitatea comercială reală, instalațiile, personalul și structura activității în Taiwan, apoi aleasă entitatea cea mai adecvată."
   - q: "Răspunderea sediului dispare în întregime când se înființează o societate taiwaneză?"
     a: "Dacă înființați o filială și nu o sucursală, sediul, în principiu, nu asumă obligațiile contractuale semnate în numele filialei. Trebuie totuși verificate excepțiile pentru abuz de personalitate juridică și dacă sediul a acordat o garanție sau a asumat obligații contractuale proprii."
   - q: "Puteți începe cu un distribuitor și apoi trece la o societate în Taiwan?"
@@ -27,7 +27,7 @@ Acest text este o explicație generală pentru întreprinderile străine de mate
 
 ## 1. A clarifica împărțirea vânzărilor și a activității înainte de a alege forma de înregistrare
 
-Să presupunem că un fabricant străin de componente de precizie vinde clienților taiwanezi. La început sediul expediază direct, dar clientul cere să se stocheze piese de schimb în Taiwan și un sprijin de ingineri pe loc. O adresă nu este suficientă: trebuie un subiect care să poată vinde, importa, stoca, angaja, furniza sprijin tehnic și asuma răspunderea.
+Să presupunem că un fabricant străin de componente de precizie vinde clienților taiwanezi. La început sediul expediază direct, dar clientul cere să se stocheze piese de schimb în Taiwan și un sprijin de ingineri pe loc. O adresă nu este suficientă: trebuie o entitate care să poată vinde, importa, stoca, angaja, furniza sprijin tehnic și asuma răspunderea.
 
 Înainte de a decide structura de intrare, sediul poate clarifica intern:
 
@@ -61,11 +61,11 @@ Dacă decideți să constituiți o persoană juridică independentă în Taiwan,
 
 ### Societate cu răspundere limitată (有限公司): guvernanță mai simplă, dar transmiterea părților mai închisă
 
-Se poate forma cu 1 persoană fizică sau mai multe, sau cu asociați persoane juridice taiwaneze sau străine; asociații răspund, în principiu, până la concurența sumei aportului lor. Societatea are de la 1 la 3 administratori, aleși dintre asociați. Asociații care nu execută comerțul pot exercita drepturi de supraveghere, fără să fie nevoie de un cenzor (監察人) distinct. În afară de dispoziție statutară contrară, fiecare asociat are un vot (1 asociat, 1 vot), astfel că controlul poate să nu coincidă cu proporția aporturilor. Transmiterea aportului unui asociat obișnuit cere, în principiu, consimțământul a mai mult de jumătate din drepturile de vot ale celorlalți; pentru un administrator, consimțământul a cel puțin 2/3 din drepturile de vot ale celorlalți. Aceasta convine mai bine unor relații de asociați simple și unui control stabil decât unor atrageri frecvente de capital sau cesiunilor de părți sociale. Mai târziu, se poate converti în societate pe acțiuni (股份有限公司).
+Se poate forma cu 1 sau mai multe persoane fizice, sau cu asociați persoane juridice taiwaneze sau străine; asociații răspund, în principiu, până la concurența sumei aportului lor. Societatea are de la 1 la 3 administratori, aleși dintre asociați. Asociații care nu administrează societatea pot exercita drepturi de supraveghere, fără să fie nevoie de un cenzor (監察人) distinct. În afară de dispoziție statutară contrară, fiecare asociat are un vot (1 asociat, 1 vot), astfel că controlul poate să nu coincidă cu proporția aporturilor. Transmiterea aportului unui asociat obișnuit cere, în principiu, consimțământul a mai mult de jumătate din drepturile de vot ale celorlalți; pentru un administrator, consimțământul a cel puțin 2/3 din drepturile de vot ale celorlalți. Aceasta convine mai bine unor relații de asociați simple și unui control stabil decât unor atrageri frecvente de capital sau cesiunilor de părți sociale. Mai târziu, se poate converti în societate pe acțiuni (股份有限公司).
 
 ### Societate pe acțiuni (股份有限公司): potrivită dacă se dorește atragerea altor investitori sau dacă se are în vedere o cotare
 
-Capitalul se împarte în acțiuni. În principiu sunt necesari cel puțin 2 acționari, dar Statul sau o persoană juridică o pot constitui singure, și o persoană juridică străină poate deține 100%. Acțiunile sunt, în principiu, liber transmisibile, cu excepții legale; acțiuni speciale și opțiuni de salariați se pot concepe conform legii. Aceasta convine întreprinderilor care așteaptă investitori, o negociere de acțiuni, stimulente în capital pentru salariați sau o fuziune, o achiziție, o cotare sau o înregistrare în sistemul de tranzacționare înainte de cotare (興櫃); nu se limitează la marile întreprinderi. În guvernanță, o societate care nu face ofertă publică poate, prin statute, să nu aibă consiliu de administrație și să aibă numai 1 sau 2 administratori. O societate al cărei unic acționar este Statul sau o persoană juridică poate, prin statut, să nu aibă cenzor. Nu orice societate pe acțiuni (股份有限公司) trebuie să își auditeze situațiile financiare anuale. Pragurile principale de audit ale unei societăți obișnuite sunt un capital vărsat de 30.000.000 TWD, sau, sub acesta, încasări de exploatare de 100.000.000 TWD sau 100 lucrători la regimul de asigurare a muncii; societățile de ofertă publică urmează reglementarea valorilor.
+Capitalul se împarte în acțiuni. În principiu sunt necesari cel puțin 2 acționari, dar Statul sau o persoană juridică o pot constitui singure, și o persoană juridică străină poate deține 100%. Acțiunile sunt, în principiu, liber transmisibile, cu excepții legale; acțiuni speciale și opțiuni de salariați se pot concepe conform legii. Aceasta convine întreprinderilor care așteaptă investitori, o negociere de acțiuni, stimulente în capital pentru salariați sau o fuziune, o achiziție, o cotare sau o înregistrare în sistemul de tranzacționare înainte de cotare (興櫃); nu se limitează la marile întreprinderi. În guvernanță, o societate care nu face ofertă publică poate, prin statute, să nu aibă consiliu de administrație și să aibă numai 1 sau 2 administratori. O societate al cărei unic acționar este Statul sau o persoană juridică poate, prin statut, să nu aibă cenzor. Nu orice societate pe acțiuni (股份有限公司) trebuie să își auditeze situațiile financiare anuale. Pragurile principale de audit ale unei societăți obișnuite sunt un capital vărsat de 30.000.000 TWD, sau, sub acesta, încasări de exploatare de 100.000.000 TWD sau 100 de lucrători înscriși la asigurarea de muncă; societățile de ofertă publică urmează reglementarea valorilor.
 
 ## 4. Procedurile de sucursală și de filială diferă; numai filiala trece prin examinarea Departamentului de examinare a investițiilor
 
@@ -79,15 +79,15 @@ Cele de mai sus sunt un sfat privind concepția contractului. Simpla alegere a u
 
 A încheia înregistrarea în Taiwan nu implică faptul că personalul sediului străin poate lucra automat în Taiwan. Un străin care lucrează în Taiwan are nevoie de un permis de muncă licit și, pentru o ședere mai lungă, de un permis de rezidență. În principiu angajatorul cere permisul de muncă și permisul de rezidență corespunzător.
 
-Este relativ mai ușor să se obțină permisul de muncă pentru un gestionar al filialei sau al sucursalei taiwaneze a unei societăți străine. Pentru a-l cere pentru al 2-lea străin sau pentru următorii, Ministerul Muncii cere, după sector, praguri de capital, de cifră de afaceri sau altele. Dacă prevedeați ca personal străin să lucreze în Taiwan, trebuie confirmat înainte de a constitui societatea dacă capitalul prevăzut atinge pragul aplicabil.
+Este relativ mai ușor să se obțină permisul de muncă pentru un gestionar al filialei sau al sucursalei taiwaneze a unei societăți străine. Pentru a-l cere pentru al 2-lea străin sau pentru următorii, Ministerul Muncii cere, după sector, praguri de capital, de cifră de afaceri sau altele. Dacă intenționați ca personal străin să lucreze în Taiwan, trebuie confirmat înainte de a constitui societatea dacă capitalul prevăzut atinge pragul aplicabil.
 
-## 7. Structuri care pot conveni după etapa comerțului
+## 7. Structuri care pot conveni după etapa de dezvoltare a activității
 
 Scenariile următoare sunt ipotetice pentru a ajuta la reflecție; nu stabilesc că un mod ar fi licit sau preferabil.
 
-**Întreprinderi străine centrate pe exportul inițial.** Dacă nu există încă nici salariați nici stocuri în Taiwan și vreți să verificați cererea printr-un distribuitor independent, puteți examina mai întâi furnizarea, raportul de distribuție și obiectul de activitate în Taiwan. Un contract de distribuție singur nu elimină toate chestiunile de reglementare în Taiwan.
+**Întreprinderi străine centrate pe exportul inițial.** Dacă nu există încă nici salariați nici stocuri în Taiwan și vreți să verificați cererea printr-un distribuitor independent, puteți examina mai întâi furnizarea, raportul de distribuție și obiectul de activitate în Taiwan. Un contract de distribuție nu elimină, prin el însuși, toate chestiunile de reglementare în Taiwan.
 
-**Întreprinderi străine care lărgesc vânzările și sprijinul tehnic în Taiwan.** Dacă prevedeați să angajați în Taiwan și să continuați să gestionați stocuri, încasări și sprijinul clientului, este potrivit să se compare concret filiala și sucursala, și să se revadă și răspunderea contractuală, modul de a opera al sediului, impozitele și personalul.
+**Întreprinderi străine care lărgesc vânzările și sprijinul tehnic în Taiwan.** Dacă intenționați să angajați în Taiwan și să continuați să gestionați stocuri, încasări și sprijinul clientului, este potrivit să se compare concret filiala și sucursala, și să se revadă și răspunderea contractuală, modul de operare al sediului, impozitele și personalul.
 
 **Întreprinderi străine în fază de studiu de piață.** Dacă, înaintea unei organizații de vânzări, vreți numai funcții de informare și de legătură, un birou de reprezentare se poate evalua. Dacă planul real include vânzarea de stocuri sau munca pe loc, trebuie confirmat aparte dacă aceste activități sunt permise.
 
@@ -101,7 +101,7 @@ Nu este necesar să se anexeze la primul contact toate materialele confidențial
 
 ### Dacă există clienți în Taiwan, trebuie neapărat înființată acolo o societate?
 
-Nu se poate concluziona numai pentru că clientul este în Taiwan. Trebuie văzute cerințele clientului și activitatea reală de comerț, instalații, personal și structura activității în Taiwan, apoi aleasă entitatea cea mai adecvată.
+Nu se poate concluziona numai pentru că clientul este în Taiwan. Trebuie văzute cerințele clientului și activitatea comercială reală, instalațiile, personalul și structura activității în Taiwan, apoi aleasă entitatea cea mai adecvată.
 
 ### Răspunderea sediului dispare în întregime când se înființează o societate taiwaneză?
 
@@ -113,6 +113,6 @@ O tranziție pe etape se poate planifica, dar trebuie revăzute și stingerea sa
 
 ## Convorbire asupra structurii de intrare în Taiwan
 
-Dacă prevedeați să vindeți, să gestionați stocuri, să furnizați un sprijin de instalare sau să angajați local în Taiwan, organizați mai întâi munca pe care o va executa sediul și cea care va reveni organizației din Taiwan. După confirmarea temelor de convorbire și a conflictelor de interese, cabinetul poate indica ce acte sunt utile și ce servicii pot fi furnizate; consultanța nu se face în limba română.
+Dacă intenționați să vindeți, să gestionați stocuri, să furnizați un sprijin de instalare sau să angajați local în Taiwan, organizați mai întâi munca pe care o va executa sediul și cea care va reveni organizației din Taiwan. După confirmarea temelor de convorbire și a conflictelor de interese, cabinetul poate indica ce acte sunt utile și ce servicii pot fi furnizate; consultanța nu se face în limba română.
 
 Exemplu de obiect: Convorbire asupra structurii de intrare în Taiwan a unei întreprinderi de semiconductori. La primul contact, indicați numele societății, țara sediului, produsul sau serviciul prevăzut, planul de activitate în Taiwan și limba de convorbire dorită. Trimiteți materialele de concepție confidențiale și contractele complete numai după ce ați primit indicații suplimentare. Limbile de convorbire realmente disponibile și întinderea oricărui mandat trebuie confirmate la momentul contactului.

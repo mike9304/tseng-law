@@ -17,7 +17,7 @@ Recent, multe persoane au înființat cu succes o societate (公司) în Taiwan 
 
 Întrebările puse frecvent la momentul înființării sunt adunate mai jos.
 
-Cei care au citit [**fundamentele înființării unei societăți**](/ro/columns/taiwan-company-establishment-basics) pot apoi să se refere și la această parte aprofundată mai detaliată.
+Cei care au citit [**fundamentele înființării unei societăți**](/ro/columns/taiwan-company-establishment-basics) pot consulta apoi și această parte aprofundată.
 
 Întrebările și răspunsurile următoare urmăresc să ajute persoanele care au în vedere să înființeze o societate în Taiwan. 😊
 
@@ -35,7 +35,7 @@ La redactarea planului de investiție nu este necesar să se indice adresa exact
 
 Când mai târziu contul pregătitor al societății (公司籌備處帳戶) este deschis la bancă, multe bănci examinează totuși contractul de locațiune (租賃契約) și inspectează pe loc adresa societății.
 
-O angajată sau un angajat al unei bănci taiwaneze mi-a spus personal că
+Un angajat al unei bănci taiwaneze mi-a spus personal că
 
 mulți străini dispar recent după deschiderea contului, astfel că deschiderea conturilor este tratată din ce în ce mai strict.
 
@@ -85,7 +85,7 @@ Pe acest punct ar trebui să discutați pe larg cu un avocat din Taiwan.
 
 ​
 
-**4. Ce puncte trebuie observate când adresa de înregistrare a societății (de exemplu un local de alimentație) este luată în locațiune?**
+**4. La ce trebuie să fiți atent când luați în locațiune adresa de înregistrare a societății (de exemplu un local de alimentație)?**
 
 Înființarea societății durează circa **3 luni**, obținerea permisului de muncă (工作許可) și a cărții de ședere circa **1 lună în plus**,
 
@@ -109,19 +109,19 @@ puteți, dacă este cazul, să propuneți autentificarea contractului de locați
 
 **5. Se poate, la înființarea societății, lua în locațiune un spațiu de birouri?**
 
-Aceasta depinde de ramurile de activitate (營業項目) ale societății.
+Aceasta depinde de obiectul de activitate (營業項目) al societății.
 
 De exemplu, dacă obiectul de activitate este alimentația și se intenționează luarea în locațiune a unui spațiu de birouri, deschiderea contului bancar va fi foarte dificilă.
 
 După cum s-a indicat deja, banca examinează contractul de locațiune și inspectează pe loc adresa societății.
 
-În plus, la înregistrarea finală a societății, municipalitatea (市政府) cere și ea ca adresa înregistrată să se situeze într-o zonă unde exploatarea unui restaurant este autorizată;
+În plus, la înregistrarea finală a societății, municipalitatea (市政府) cere și ea ca adresa înregistrată să se situeze într-o zonă unde exploatarea unui local de alimentație este autorizată;
 
 dacă este vorba de un spațiu de birouri, înregistrarea societății (公司登記) nu este atunci posibilă.
 
-De exemplu, dacă este vorba de obiecte de activitate posibile într-un spațiu de birouri, precum publicitatea sau comerțul en-gros, societatea poate fi înființată într-un spațiu de birouri. Înainte de încheierea contractului de locațiune
+De exemplu, dacă este vorba de obiecte de activitate posibile într-un spațiu de birouri, precum publicitatea sau comerțul en-gros, societatea poate fi înființată într-un spațiu de birouri. Înainte de a semna contractul de locațiune
 
-ar trebui să verificați dinainte.
+ar trebui să verificați acest aspect.
 
 *Pentru o cauză concretă folosiți pagina Contact a cabinetului; consultanța nu se face în limba română.*
 

@@ -39,13 +39,13 @@ Această ordine de semnale și de cedare pe aceeași bandă nu înseamnă că de
 
 A a încercat să depășească ambele vehicule, s-a angajat pe banda opusă și a accelerat. Vehiculul nr. 2 se pregătea și el să depășească vehiculul nr. 1: la mai puțin de 1 secundă după ce a aprins semnalizatorul, s-a angajat pe banda opusă. Motocicleta nu avea timp suficient pentru a frâna și a intrat în coliziune cu vehiculul nr. 2.
 
-B a suferit leziuni grave la cap și a decedat pe loc; A a pierdut cunoștința și a fost transportat la spital.
+B a suferit leziuni grave la cap și a decedat pe loc; A și-a pierdut cunoștința și a fost transportat la spital.
 
-Apropiații lui A și B au văzut mai întâi schimbarea bruscă de bandă a vehiculului nr. 2 ca cauza principală a coliziunii. Cauza a dat loc unui proces și, în cursul procedurii, s-au efectuat mai multe expertize (鑑定) ale accidentului.
+Familiile lui A și B au crezut la început că schimbarea bruscă de bandă a vehiculului nr. 2 a fost cauza principală a coliziunii. Cauza a dat loc unui proces și, în cursul procedurii, s-au efectuat mai multe expertize (鑑定) ale accidentului.
 
 Potrivit rezultatului expertizei, A suporta răspunderea principală a acestei coliziuni. Această concluzie era limitată la faptele acestei cauze. Expertiza a luat în considerare împreună faptul că A voia să depășească 2 vehicule din față care circulau unul după altul, că se angajase pe banda opusă, că circula cu o viteză care lăsa abia timp pentru a frâna, că semnalele de claxon și de faruri prescrise lipsiseră, precum și mișcarea de schimbare de bandă a vehiculului nr. 2, structura drumului și a benzilor și celelalte probe culese.
 
-Acest rezultat, propriu cauzei, nu înseamnă că o singură omisiune a unui semnal prescris fixează întotdeauna răspunderea. Culpa (過失) într-un accident de depășire depinde de locul accidentului, de configurația benzilor, de viteză, de mișcările vehiculelor, de semnale, de intervalele de timp, de vizibilitate și de celelalte probe.
+Acest rezultat, propriu cauzei, nu înseamnă că o singură omisiune a unui semnal prescris stabilește întotdeauna răspunderea. Culpa (過失) într-un accident de depășire depinde de locul accidentului, de configurația benzilor, de viteză, de mișcările vehiculelor, de semnale, de intervalele de timp, de vizibilitate și de celelalte probe.
 
 ## Puncte de verificat pentru a aprecia răspunderea accidentului
 
@@ -62,4 +62,4 @@ Ca material auxiliar, puteți consulta [ilustrarea regulilor și a procedurii de
 > - [Echipa internațională Hovering](/ro/lawyers)
 > - [Procedura de tratare a accidentelor de circulație în Taiwan](/ro/columns/taiwan-traffic-accident-procedure)
 
-Acest text este o informație juridică generală despre regulile de depășire și aprecierea răspunderii accidentelor în Taiwan; nu constituie un sfat pentru o cauză concretă și nu promite un rezultat determinat. Răspunderea reală poate varia după locul accidentului, mișcarea vehiculelor, viteză, semnale, probe, expertiză (鑑定) și dreptul în vigoare; cauzele concrete trebuie examinate separat pe baza actelor pertinente.
+Acest text este o informație juridică generală despre regulile de depășire și aprecierea răspunderii accidentelor în Taiwan; nu constituie un sfat pentru o cauză concretă și nu promite un rezultat determinat. Răspunderea concretă poate varia după locul accidentului, mișcarea vehiculelor, viteză, semnale, probe, expertiză (鑑定) și dreptul în vigoare; cauzele concrete trebuie examinate separat pe baza actelor pertinente.

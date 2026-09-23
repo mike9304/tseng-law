@@ -39,7 +39,7 @@ Există totuși **cazuri excepționale**.
 
 3. Când munca convenită în contract poate dăuna sănătății salariatului, salariatul a cerut angajatorului să înlăture pericolul, iar angajatorul nu a făcut-o
 
-4. Când angajatorul, reprezentantul său sau un alt salariat este atins de o boală contagioasă legală (法定傳染病), există riscul de contagiere pentru salariații care lucrează împreună și aceasta constituie un pericol grav pentru sănătatea salariatului
+4. Când angajatorul, reprezentantul său sau un alt salariat suferă de o boală transmisibilă cu declarare obligatorie (法定傳染病), există riscul de contagiere pentru salariații care lucrează împreună și aceasta constituie un pericol grav pentru sănătatea salariatului
 
 5. Când angajatorul nu plătește remunerația (工作報酬) potrivit contractului de muncă sau nu furnizează o muncă suficientă salariatului a cărui retribuție se calculează pe bucată (按件計酬)
 

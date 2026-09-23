@@ -374,6 +374,65 @@ test('contact-only orphan events stay visible without inventing tracked sessions
   assert.doesNotMatch(report, /관측된 측정 세션 \(pageview contactTracking=1\): 0/);
 });
 
+test('aggregateSummaries sums inquiry_submitted and contact_intent per locale across days', () => {
+  const aggregate = aggregateSummaries([
+    summaryFixture('2026-09-22', {
+      inquiryByLocale: {
+        ko: { inquirySubmitted: 1, contactIntent: 3 },
+        ja: { inquirySubmitted: 2, contactIntent: 0 },
+      },
+    }),
+    summaryFixture('2026-09-23', {
+      inquiryByLocale: {
+        ja: { inquirySubmitted: 1, contactIntent: 1 },
+        en: { inquirySubmitted: 0, contactIntent: 4 },
+      },
+    }),
+  ]);
+
+  assert.deepEqual(aggregate.inquiryByLocale, {
+    en: { inquirySubmitted: 0, contactIntent: 4 },
+    ja: { inquirySubmitted: 3, contactIntent: 1 },
+    ko: { inquirySubmitted: 1, contactIntent: 3 },
+  });
+  assert.equal(aggregate.inquiryCoverage.fieldDays, 2);
+  assert.equal(aggregate.inquiryCoverage.totalDays, 2);
+
+  const report = formatReport(aggregate, null, 7);
+  assert.match(report, /로케일별 문의 제출/);
+  assert.match(report, /- ja: 문의 제출 3 · 이메일 작성 동작 1/);
+  assert.match(report, /- ko: 문의 제출 1 · 이메일 작성 동작 3/);
+  assert.match(report, /- en: 문의 제출 0 · 이메일 작성 동작 4/);
+  assert.doesNotMatch(report, /필드 가용/);
+});
+
+test('inquiry-by-locale section is unmeasured (not zero) for summaries without the field', () => {
+  const aggregate = aggregateSummaries([summaryFixture('2026-09-20')]);
+  assert.deepEqual(aggregate.inquiryByLocale, {});
+  assert.equal(aggregate.inquiryCoverage.fieldDays, 0);
+  const report = formatReport(aggregate, null, 7);
+  assert.match(report, /로케일별 문의 제출/);
+  assert.match(report, /inquiryByLocale 필드 없음/);
+  assert.doesNotMatch(report, /문의 제출 0 ·/);
+});
+
+test('inquiry-by-locale section flags partial field coverage without zero-filling', () => {
+  const aggregate = aggregateSummaries([
+    summaryFixture('2026-09-20'),
+    summaryFixture('2026-09-21', { inquiryByLocale: { ko: { inquirySubmitted: 2, contactIntent: 1 } } }),
+  ]);
+  assert.equal(aggregate.inquiryCoverage.fieldDays, 1);
+  const report = formatReport(aggregate, null, 7);
+  assert.match(report, /필드 가용 1\/2일/);
+  assert.match(report, /- ko: 문의 제출 2 · 이메일 작성 동작 1/);
+});
+
+test('inquiry-by-locale section reports measured zero when the field is present but empty', () => {
+  const aggregate = aggregateSummaries([summaryFixture('2026-09-21', { inquiryByLocale: {} })]);
+  const report = formatReport(aggregate, null, 7);
+  assert.match(report, /측정됨 · 0건/);
+});
+
 test('formatReport notes GSC overlap double-count risk without changing parser behavior', () => {
   const aggregate = aggregateSummaries([summaryFixture('2026-08-30')]);
   const report = formatReport(

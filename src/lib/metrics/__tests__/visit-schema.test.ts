@@ -4,6 +4,7 @@ import {
   collectRequestSchema,
   contactIntentEventSchema,
   engagementEventSchema,
+  inquirySubmittedEventSchema,
   pageviewEventSchema,
 } from '@/lib/metrics/visit-schema';
 
@@ -157,5 +158,61 @@ describe('visit event schemas', () => {
         ],
       }).success,
     ).toBe(true);
+  });
+});
+
+describe('inquiry_submitted server-side event schema', () => {
+  const validInquirySubmitted = {
+    v: 1 as const,
+    sid: 'inq_0123456789abcdef',
+    ts: '2026-09-24T05:00:00.000Z',
+    type: 'inquiry_submitted' as const,
+    locale: 'ja' as const,
+    path: '/ja/contact',
+  };
+
+  it('accepts a minimal locale/path event', () => {
+    expect(inquirySubmittedEventSchema.safeParse(validInquirySubmitted).success).toBe(true);
+  });
+
+  it('accepts an event without a path (no same-origin referer)', () => {
+    const { path: _path, ...withoutPath } = validInquirySubmitted;
+    expect(inquirySubmittedEventSchema.safeParse(withoutPath).success).toBe(true);
+  });
+
+  it.each(['ko', 'en', 'ja', 'zh-hant', 'vi', 'fil'] as const)('accepts inquiry locale %s', (locale) => {
+    expect(inquirySubmittedEventSchema.safeParse({ ...validInquirySubmitted, locale }).success).toBe(true);
+  });
+
+  it('rejects an unknown locale', () => {
+    expect(inquirySubmittedEventSchema.safeParse({ ...validInquirySubmitted, locale: 'xx' }).success).toBe(false);
+  });
+
+  it.each([
+    ['name', { name: 'Ada Lovelace' }],
+    ['email', { email: 'ada@example.test' }],
+    ['originalText', { originalText: 'Need help' }],
+    ['body', { body: 'Need help' }],
+    ['message', { message: 'Need help' }],
+    ['ip', { ip: '203.0.113.1' }],
+    ['requestId', { requestId: '8a6e0804-2bd0-4672-b79d-d53ae2e86c4e' }],
+    ['intakeId', { intakeId: '8a6e0804-2bd0-4672-b79d-d53ae2e86c4e' }],
+    ['originalLanguage', { originalLanguage: 'Cebuano' }],
+    ['matterType free text', { matterType: 'my divorce with John' }],
+  ])('rejects an inquiry_submitted payload that includes %s', (_case, extra) => {
+    expect(inquirySubmittedEventSchema.safeParse({ ...validInquirySubmitted, ...extra }).success).toBe(false);
+  });
+
+  it.each([
+    ['query string', '/ja/contact?email=ada@example.test'],
+    ['fragment', '/ja/contact#form'],
+    ['protocol-relative', '//evil.example/ja'],
+    ['admin segment', '/ko/admin-consultation'],
+  ])('rejects an inquiry_submitted path with %s', (_case, path) => {
+    expect(inquirySubmittedEventSchema.safeParse({ ...validInquirySubmitted, path }).success).toBe(false);
+  });
+
+  it('is server-only: the public collect endpoint schema rejects inquiry_submitted', () => {
+    expect(collectRequestSchema.safeParse({ events: [validInquirySubmitted] }).success).toBe(false);
   });
 });

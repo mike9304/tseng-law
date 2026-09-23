@@ -16,6 +16,11 @@ import { UNROUTABLE_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 const mocks = vi.hoisted(() => ({
   send: vi.fn(async () => undefined),
   checkRateLimit: vi.fn(async () => ({ allowed: true, remaining: 9, retryAfterMs: 0 })),
+  saveVisit: vi.fn(async (_events: unknown[]) => undefined),
+}));
+
+vi.mock('@/lib/metrics/visit-store', () => ({
+  saveVisitEventBatch: mocks.saveVisit,
 }));
 
 vi.mock('@/lib/email/send-consultation-email', () => ({
@@ -88,6 +93,8 @@ function makeRequest(
     raw?: string;
     contentLength?: string;
     forwardedFor?: string;
+    referer?: string;
+    country?: string;
   } = {},
 ): NextRequest {
   const raw = options.raw ?? JSON.stringify(body);
@@ -99,6 +106,8 @@ function makeRequest(
   }
   if (options.origin) headers.set('origin', options.origin);
   if (options.contentLength !== undefined) headers.set('content-length', options.contentLength);
+  if (options.referer !== undefined) headers.set('referer', options.referer);
+  if (options.country !== undefined) headers.set('x-vercel-ip-country', options.country);
   return new NextRequest(options.url ?? 'http://localhost/api/consultation/international', {
     method: 'POST',
     headers,
@@ -117,6 +126,8 @@ describe('/api/consultation/international', () => {
       retryAfterMs: 0,
     });
     vi.mocked(markInternationalInquiryNotified).mockClear();
+    mocks.saveVisit.mockReset();
+    mocks.saveVisit.mockResolvedValue(undefined);
     tempRoot = await mkdtemp(path.join(os.tmpdir(), 'tseng-intl-inquiry-'));
     vi.stubEnv('INTERNATIONAL_INQUIRY_DIR', tempRoot);
     delete process.env.VERCEL;
@@ -434,5 +445,197 @@ describe('/api/consultation/international', () => {
     expect(stored.payload.originalText).toBe(RAW_TEXT);
     expect(sendInternationalInquiryNotification).toHaveBeenCalledTimes(1);
     expect(markInternationalInquiryNotified).toHaveBeenCalledTimes(1);
+  });
+
+  describe('inquiry_submitted metric', () => {
+    function savedEvents(): Array<Record<string, unknown>> {
+      return mocks.saveVisit.mock.calls.flatMap((call) => call[0] as Array<Record<string, unknown>>);
+    }
+
+    function expectNoPii(serialized: string, body: Record<string, unknown>, intakeId?: string) {
+      expect(serialized).not.toContain(String(body.name));
+      expect(serialized).not.toContain(String(body.email));
+      expect(serialized).not.toContain(String(body.originalText).trim());
+      expect(serialized).not.toContain(String(body.originalLanguage));
+      expect(serialized).not.toContain(String(body.requestId));
+      expect(serialized).not.toContain('203.0.113.7');
+      if (intakeId) expect(serialized).not.toContain(intakeId);
+    }
+
+    it('records exactly one PII-free event after a successful 201 save', async () => {
+      const route = await import('../route');
+      const body = validBody({
+        uiLocale: 'ja',
+        originalLanguage: 'Japanese (visitor-declared)',
+        preferredConsultationLanguage: 'ja',
+      });
+      const response = await route.POST(makeRequest(body, {
+        forwardedFor: '203.0.113.7',
+        referer: 'http://localhost/ja/contact?email=leak@example.test#form',
+        country: 'JP',
+      }));
+      const payload = await response.json() as { intakeId: string };
+
+      expect(response.status).toBe(201);
+      expect(mocks.saveVisit).toHaveBeenCalledTimes(1);
+      const events = savedEvents();
+      expect(events).toHaveLength(1);
+      const [event] = events;
+      expect(event).toMatchObject({
+        v: 1,
+        type: 'inquiry_submitted',
+        locale: 'ja',
+        path: '/ja/contact',
+        country: 'JP',
+      });
+      expect(typeof event.sid).toBe('string');
+      expect(typeof event.ts).toBe('string');
+      expect(typeof event.receivedAt).toBe('string');
+      expect(Object.keys(event).sort()).toEqual(
+        ['country', 'locale', 'path', 'receivedAt', 'sid', 'ts', 'type', 'v'],
+      );
+      const serialized = JSON.stringify(events);
+      expectNoPii(serialized, body, payload.intakeId);
+      expect(serialized).not.toContain('leak@example.test');
+    });
+
+    it('records one event when the inquiry is saved but mail fails (202 pending)', async () => {
+      mocks.send.mockRejectedValueOnce(new Error('SMTP not configured'));
+      const route = await import('../route');
+      const body = validBody({ uiLocale: 'ko', preferredConsultationLanguage: 'ko' });
+      const response = await route.POST(makeRequest(body, { referer: 'http://localhost/ko/contact' }));
+
+      expect(response.status).toBe(202);
+      expect(savedEvents()).toHaveLength(1);
+      expect(savedEvents()[0]).toMatchObject({ type: 'inquiry_submitted', locale: 'ko', path: '/ko/contact' });
+    });
+
+    it.each([
+      ['missing referer', undefined],
+      ['admin referer', 'http://localhost/ko/admin-consultation'],
+      ['malformed referer', 'not a url'],
+      ['other allowed-origin host referer', 'https://tseng-law.com/en/contact'],
+    ])('omits path for %s but still records the event', async (_case, referer) => {
+      const route = await import('../route');
+      const response = await route.POST(makeRequest(validBody(), { referer }));
+
+      expect(response.status).toBe(201);
+      const events = savedEvents();
+      expect(events).toHaveLength(1);
+      expect(events[0]).toMatchObject({ type: 'inquiry_submitted', locale: 'en' });
+      expect(events[0]).not.toHaveProperty('path');
+    });
+
+    it('keeps path when the referer host matches the Host header even if nextUrl host differs', async () => {
+      const route = await import('../route');
+      const request = makeRequest(validBody({ uiLocale: 'ko', preferredConsultationLanguage: 'ko' }), {
+        referer: 'http://127.0.0.1:4817/ko/contact?x=1',
+      });
+      request.headers.set('host', '127.0.0.1:4817');
+      const response = await route.POST(request);
+      expect(response.status).toBe(201);
+      expect(savedEvents()[0]).toMatchObject({ type: 'inquiry_submitted', locale: 'ko', path: '/ko/contact' });
+    });
+
+    it('does not record when a cross-origin referer is rejected by CSRF (403)', async () => {
+      const route = await import('../route');
+      const response = await route.POST(makeRequest(validBody(), {
+        referer: 'https://attacker.example/en/contact',
+      }));
+      expect(response.status).toBe(403);
+      expect(mocks.saveVisit).not.toHaveBeenCalled();
+    });
+
+    it('does not record when validation fails (400)', async () => {
+      const route = await import('../route');
+      const response = await route.POST(makeRequest(validBody({ consent: false })));
+      expect(response.status).toBe(400);
+      expect(mocks.saveVisit).not.toHaveBeenCalled();
+    });
+
+    it('does not record when storage is unavailable (503)', async () => {
+      vi.stubEnv('INTERNATIONAL_INQUIRY_DIR', '   ');
+      const route = await import('../route');
+      const response = await route.POST(makeRequest(validBody()));
+      expect(response.status).toBe(503);
+      expect(mocks.saveVisit).not.toHaveBeenCalled();
+    });
+
+    it('does not record when rate limited (429)', async () => {
+      mocks.checkRateLimit.mockResolvedValueOnce({ allowed: false, remaining: 0, retryAfterMs: 1_000 });
+      const route = await import('../route');
+      const response = await route.POST(makeRequest(validBody()));
+      expect(response.status).toBe(429);
+      expect(mocks.saveVisit).not.toHaveBeenCalled();
+    });
+
+    it('does not record a second event for a conflicting payload (409)', async () => {
+      const route = await import('../route');
+      const requestId = randomUUID();
+      expect((await route.POST(makeRequest(validBody({ requestId })))).status).toBe(201);
+      const conflict = await route.POST(makeRequest(validBody({ requestId, originalText: 'changed text' })));
+      expect(conflict.status).toBe(409);
+      expect(savedEvents()).toHaveLength(1);
+    });
+
+    it('records only one event for a duplicate resubmission of the same intake', async () => {
+      const route = await import('../route');
+      const body = validBody({ uiLocale: 'ja', preferredConsultationLanguage: 'ja' });
+      const first = await route.POST(makeRequest(body));
+      const second = await route.POST(makeRequest(body));
+      const firstJson = await first.json() as { intakeId: string };
+      const secondJson = await second.json() as { intakeId: string };
+
+      expect(first.status).toBe(201);
+      expect(second.status).toBe(200);
+      expect(secondJson.intakeId).toBe(firstJson.intakeId);
+      expect(savedEvents()).toHaveLength(1);
+    });
+
+    it('records only one event when a pending (202) intake is retried', async () => {
+      mocks.send.mockRejectedValueOnce(new Error('SMTP not configured'));
+      mocks.send.mockRejectedValueOnce(new Error('SMTP not configured'));
+      const route = await import('../route');
+      const body = validBody();
+      expect((await route.POST(makeRequest(body))).status).toBe(202);
+      expect((await route.POST(makeRequest(body))).status).toBe(202);
+      expect(savedEvents()).toHaveLength(1);
+    });
+
+    it('does not change the response when recording the metric fails', async () => {
+      const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+      try {
+        mocks.saveVisit.mockRejectedValueOnce(new Error('blob down'));
+        const route = await import('../route');
+        const body = validBody();
+        const response = await route.POST(makeRequest(body));
+        const payload = await response.json() as { success: boolean; intakeId: string; notification: string };
+
+        expect(response.status).toBe(201);
+        expect(payload).toEqual({ success: true, intakeId: payload.intakeId, notification: 'sent' });
+        expect(mocks.saveVisit).toHaveBeenCalledTimes(1);
+        expect(errorSpy).toHaveBeenCalled();
+        const logged = JSON.stringify(errorSpy.mock.calls.map((call) => call.map(String)));
+        expectNoPii(logged, body, payload.intakeId);
+      } finally {
+        errorSpy.mockRestore();
+      }
+    });
+
+    it('does not change the response when recording the metric throws synchronously', async () => {
+      const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+      try {
+        mocks.saveVisit.mockImplementationOnce(() => {
+          throw new Error('sync failure');
+        });
+        const route = await import('../route');
+        mocks.send.mockRejectedValueOnce(new Error('SMTP not configured'));
+        const response = await route.POST(makeRequest(validBody()));
+        expect(response.status).toBe(202);
+        expect((await response.json() as { notification: string }).notification).toBe('pending');
+      } finally {
+        errorSpy.mockRestore();
+      }
+    });
   });
 });

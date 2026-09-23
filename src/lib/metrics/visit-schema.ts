@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { PUBLIC_INQUIRY_LOCALES } from '@/lib/consultation/intake-language-contract';
+
 import type { Channel } from './classify-referrer';
 
 export const visitEventBaseSchema = z.strictObject({
@@ -57,10 +59,31 @@ export const contactIntentEventSchema = visitEventBaseSchema.extend({
   locale: z.enum(['ko', 'zh-hant', 'en', 'ja']),
 }).strict();
 
+/**
+ * Server-only: recorded by /api/consultation/international after a durable
+ * save. Never part of the public collect schema. Strict: no name, email,
+ * message text, IP, requestId, or intakeId — only the inquiry UI locale and
+ * the query-free submit page path.
+ */
+export const inquirySubmittedEventSchema = visitEventBaseSchema.extend({
+  type: z.literal('inquiry_submitted'),
+  locale: z.enum(PUBLIC_INQUIRY_LOCALES),
+  path: contactIntentPathSchema.optional(),
+}).strict();
+
+/** Client-submittable events accepted by /api/metrics/collect. */
 export const visitEventSchema = z.discriminatedUnion('type', [
   pageviewEventSchema,
   engagementEventSchema,
   contactIntentEventSchema,
+]);
+
+/** Every event shape that may appear in the visit store (client + server-only). */
+export const storedVisitEventSchema = z.discriminatedUnion('type', [
+  pageviewEventSchema,
+  engagementEventSchema,
+  contactIntentEventSchema,
+  inquirySubmittedEventSchema,
 ]);
 
 export const collectRequestSchema = z.strictObject({
@@ -72,10 +95,12 @@ export type VisitUtm = z.infer<typeof visitUtmSchema>;
 export type PageviewEvent = z.infer<typeof pageviewEventSchema>;
 export type EngagementEvent = z.infer<typeof engagementEventSchema>;
 export type ContactIntentEvent = z.infer<typeof contactIntentEventSchema>;
+export type InquirySubmittedEvent = z.infer<typeof inquirySubmittedEventSchema>;
 export type VisitEvent = z.infer<typeof visitEventSchema>;
+export type StoredVisitEvent = z.infer<typeof storedVisitEventSchema>;
 export type CollectRequest = z.infer<typeof collectRequestSchema>;
 
-export type EnrichedVisitEvent = VisitEvent & {
+export type EnrichedVisitEvent = StoredVisitEvent & {
   receivedAt: string;
   country?: string;
   channel?: Channel;

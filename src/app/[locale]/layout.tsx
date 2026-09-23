@@ -23,6 +23,7 @@ import {
   buildLegalServiceJsonLd,
   buildWebsiteJsonLd,
   getOrganizationName,
+  getPageTitleBrand,
 } from '@/lib/seo';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
@@ -88,7 +89,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
   return {
     title: {
       default: organizationName,
-      template: `%s | ${organizationName}`,
+      template: `%s | ${getPageTitleBrand(locale)}`,
     },
     description: content.meta.description,
     applicationName: organizationName,

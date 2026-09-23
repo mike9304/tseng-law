@@ -83,6 +83,7 @@ This article provides general educational information about Taiwan’s law of su
 **Wei Tseng (曾雋崴), Taiwan Attorney**`;
 const expectedFrontmatter = `---
 title: "Taiwan Inheritance and Parental Rights: A Guide for Surviving Families"
+seoTitle: "Taiwan Inheritance and Parental Rights Guide"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
@@ -132,6 +133,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     expect(raw.slice(0, closingFrontmatter + 5)).toBe(expectedFrontmatter);
     expect(parsed.data).toEqual({
       title,
+      seoTitle: 'Taiwan Inheritance and Parental Rights Guide',
       url: sourceUrl,
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
@@ -413,7 +415,8 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(
-      '9825b684462af5c2c0d3c6263bd07277d6134ddac25be5b65e5f9eb163b55ad6',
+      // WO-X2 (EN-20): re-frozen after adding the short frontmatter seoTitle.
+      '29653775ff136020c3227d0185ba0e8d79e0bb873a4bb8a5559cefd30d446678',
     );
   });
 

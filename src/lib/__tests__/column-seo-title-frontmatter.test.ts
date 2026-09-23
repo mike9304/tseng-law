@@ -107,7 +107,11 @@ describe('English column corpus seoTitle', () => {
   const enDir = path.join(process.cwd(), 'src/content/columns-en');
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
 
-  it('adds a 60–70 character seoTitle only when the display title exceeds 70 characters', () => {
+  // WO-X2 (EN-20): the rendered <title> is `${seoTitle} | Hovering Law` and must
+  // stay within 60 characters; seoTitle exists only when the H1 would overflow.
+  const titleSuffix = ' | Hovering Law';
+
+  it('adds a seoTitle only when the display title would push <title> past 60 characters', () => {
     expect(files).toHaveLength(18);
 
     for (const file of files) {
@@ -119,11 +123,11 @@ describe('English column corpus seoTitle', () => {
 
       expect(post?.title, file).toBe(title);
 
-      if (title.length > 70) {
+      if ((title + titleSuffix).length > 60) {
         expect(typeof parsed.data.seoTitle, file).toBe('string');
         const seoTitle = String(parsed.data.seoTitle).trim();
-        expect(seoTitle.length, file).toBeGreaterThanOrEqual(60);
-        expect(seoTitle.length, file).toBeLessThanOrEqual(70);
+        expect(seoTitle.length, file).toBeGreaterThanOrEqual(30);
+        expect((seoTitle + titleSuffix).length, file).toBeLessThanOrEqual(60);
         expect(seoTitle, file).not.toBe(title);
         expect(post?.seoTitle, file).toBe(seoTitle);
       } else {

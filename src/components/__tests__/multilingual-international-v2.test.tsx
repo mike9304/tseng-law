@@ -202,7 +202,8 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
       const copy = CIVIL_COMMERCIAL_COPY[locale];
       expect(html).toContain(copy.heading);
       expect(html).toContain(copy.body);
-      expect(html).toContain(`href="/${locale}/taiwan-debt-recovery-lawyer"`);
+      // WO-X2 (EN-02): the debt-recovery draft is unreviewed in every locale.
+      expect(html).not.toContain('taiwan-debt-recovery-lawyer');
       expect(html).toContain(copy.injuryHeading);
     }
   });

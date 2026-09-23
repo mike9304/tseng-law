@@ -93,9 +93,8 @@ describe('semiconductor supplier intent page', () => {
     expect(getIntentPage('en', slug)?.title).toBe(
       'Legal guidance for overseas semiconductor materials and equipment suppliers in Taiwan',
     );
-    expect(getIntentPage('en', slug)?.seoTitle).toBe(
-      'Taiwan Legal Support for Overseas Semiconductor Materials and Equipment Suppliers',
-    );
+    // WO-X2 (EN-20): shortened so `<title>` (with " | Hovering Law") stays ≤ 60.
+    expect(getIntentPage('en', slug)?.seoTitle).toBe('Taiwan Semiconductor Supplier Legal Support');
     expect(getIntentPage('ja', slug)?.title).toBe(
       '台湾の半導体材料・装置サプライヤー向け法務案内',
     );
@@ -172,6 +171,8 @@ describe('semiconductor supplier intent page', () => {
   );
 
   it('splits seoTitle from the H1 on every locale and leaves other intent pages untouched', () => {
+    // WO-X2 (EN-20): EN intent pages may carry a short seoTitle so the rendered
+    // <title> stays within 60 characters; other locales stay untouched.
     for (const locale of siteLocales) {
       const page = getIntentPage(locale, slug);
       expect(page?.seoTitle).toBeDefined();
@@ -181,7 +182,12 @@ describe('semiconductor supplier intent page', () => {
     for (const locale of siteLocales) {
       for (const otherSlug of intentPageSlugs.filter((item) => item !== slug)) {
         const page = getIntentPage(locale, otherSlug);
-        expect(page?.seoTitle).toBeUndefined();
+        if (locale === 'en') {
+          expect(page?.seoTitle).toBeDefined();
+          expect(`${page?.seoTitle} | Hovering Law`.length).toBeLessThanOrEqual(60);
+        } else {
+          expect(page?.seoTitle).toBeUndefined();
+        }
         expect(page?.attorneyHeadingOverride).toBeUndefined();
         expect(page?.ctaTextOverride).toBeUndefined();
         expect(page?.serviceBlurbs).toBeUndefined();
@@ -301,7 +307,8 @@ describe('semiconductor supplier intent page', () => {
     expect(occurrences(ja, '英語・中国語・韓国語・日本語')).toBe(1);
     expect(occurrences(ja, '約3か月')).toBe(1);
     expect(occurrences(ja, 'NT$3,000')).toBe(1);
-    expect(occurrences(ja, 'NT$50,000')).toBe(1);
+    // WO-X2 (JA-17): first currency mention on the ja page spells out 新台湾ドル（NT$）.
+    expect(occurrences(ja, '50,000新台湾ドル（NT$）')).toBe(1);
     expect(ja).toContain('対面またはビデオ');
 
     const zh = JSON.stringify(getIntentPage('zh-hant', slug));

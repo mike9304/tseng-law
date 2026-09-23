@@ -14,12 +14,14 @@ const raw = rawBytes.toString('utf8');
 const immutablePrefixBytes = 1_170;
 const immutablePrefixSha256 =
   '610fbbf7637c8769266cea2f2f079da83bb7531ab32f4a955db855c9e4038930';
-const immutableQ1ToQ5PrefixBytes = 9_479;
+// WO-X2 (JA-17): re-locked after the NT$ currency-notation pass (Q4, Q15,
+// Q16-Q20 amounts); the introduction prefix hash is unchanged.
+const immutableQ1ToQ5PrefixBytes = 9_458;
 const immutableQ1ToQ5PrefixSha256 =
-  '3862249125d730ab1529ef1939c4f125d54ed014d69b8f3d08948d535e6831e3';
-const immutableQ1ToQ10PrefixBytes = 15_915;
+  '665045cce178e4d40b5d010c7fdd0719da3a8a49b25b24d2046a2ddc85867518';
+const immutableQ1ToQ10PrefixBytes = 15_894;
 const immutableQ1ToQ10PrefixSha256 =
-  '8b20eb9ceb67b1a6c55dd4ac3ec20b5d51a6b827a39c9e4b36f3953ba378506a';
+  '874eda4edebca3f581780f1ad339ce428a72b017fa737f1649e20d9e75dd8562';
 const q6ByteIndex = immutableQ1ToQ5PrefixBytes;
 const q11ByteIndex = immutableQ1ToQ10PrefixBytes;
 const q16Marker =
@@ -43,9 +45,9 @@ const staleFooterLocaleTargets = [
   '/ko/korean-lawyer-in-taiwan',
   '/ko/taiwan-lawyer',
 ] as const;
-const immutableQ16ToQ20TailBytes = 4_880;
+const immutableQ16ToQ20TailBytes = 4_802;
 const immutableQ16ToQ20TailSha256 =
-  'aec018156e3c2e4aa00b961a0b37596c12bfc8a12e6f44f4419b37ddcc71ac2b';
+  '2c9268d5a34bc51d821b1eb82c82112d0d941f352217c169a0134ce0e02146f2';
 const localizedPrefixBytes = rawBytes.subarray(0, immutablePrefixBytes);
 const localizedPrefix = localizedPrefixBytes.toString('utf8');
 const parsedPrefix = matter(localizedPrefix);
@@ -625,9 +627,9 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
     expect(q4).toMatch(
       /民法.{0,8}217条.{0,40}(?:被害者|損害を受けた者).{0,15}過失.{0,35}(?:発生|拡大).{0,40}(?:減額|減少).{0,15}(?:免除|免責)/su,
     );
-    expect(q4).toContain('新台湾ドル（TWD）1,000,000');
+    expect(q4).toContain('1,000,000新台湾ドル（NT$）');
     expect(q4).toMatch(
-      /新台湾ドル（TWD）1,000,000.{0,45}50[％%].{0,45}新台湾ドル（TWD）500,000.{0,30}(?:調整|控除).{0,15}(?:前|以前)/su,
+      /1,000,000新台湾ドル（NT\$）.{0,45}50[％%].{0,45}NT\$500,000.{0,30}(?:調整|控除).{0,15}(?:前|以前)/su,
     );
     expect(q4).toMatch(
       /(?:(?:鑑定|事故鑑定).{0,25}(?:初期分析|初歩分析|初判表)|(?:初期分析|初歩分析|初判表).{0,25}(?:鑑定|事故鑑定)).{0,35}(?:重要|有力).{0,15}(?:資料|証拠).{0,45}(?:裁判所|裁判官).{0,30}(?:拘束しない|機械的に従わない|独自に判断)/su,
@@ -1014,11 +1016,11 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
     expect(q15).toMatch(
       /(?:それ以前|より前|以前).{0,30}(?:事故|発生).{0,70}(?:旧|従前).{0,15}基準/su,
     );
-    expect(q15).toContain('TWD 200,000');
-    expect(q15).toContain('TWD 80,000–3,000,000');
+    expect(q15).toContain('NT$200,000');
+    expect(q15).toContain('NT$80,000–NT$3,000,000');
     expect(q15).toMatch(/法定.{0,12}15等級/u);
-    expect(q15).toContain('TWD 3,000,000');
-    expect(q15).toContain('TWD 3,200,000');
+    expect(q15).toContain('NT$3,000,000');
+    expect(q15).toContain('NT$3,200,000');
     expect(q15).toMatch(
       /対人賠償責任保険.{0,60}運転者傷害保険.{0,60}車両損害保険.{0,100}(?:任意|契約)/su,
     );

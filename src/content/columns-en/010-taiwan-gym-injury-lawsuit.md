@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages"
+seoTitle: "Taiwan Gym Injury Claims: Case and Damages"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"

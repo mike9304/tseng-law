@@ -1,6 +1,6 @@
 ---
 title: "Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring"
-seoTitle: "Taiwan Company Formation: Capital Remittance, Banking, and Hiring"
+seoTitle: "Taiwan Company Setup: Remittance and Banking"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"

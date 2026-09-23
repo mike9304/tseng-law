@@ -9,16 +9,18 @@ const columnPath = path.join(
 );
 const sourceBytes = fs.readFileSync(columnPath);
 
-const immutablePrefixLength = 11_876;
+// WO-X2 (JA-17): re-locked after the NT$ currency-notation pass (prefix FAQ
+// and tail fine amounts); the synchronized paragraphs are byte-identical.
+const immutablePrefixLength = 11_858;
 const immutablePrefixSha256 =
-  '77255c9f470d6c9e6e6d0183cbd10943afe8208c3cf1676cd3667869232f9465';
+  '3613a186e8f9d829cfb6828218836ade92e0f763a8952f620f650b049f7d401e';
 const immutableTailMarker = Buffer.from(
   '\n\n### 検査、是正、行政上の措置',
   'utf8',
 );
-const immutableTailLength = 7_667;
+const immutableTailLength = 7_640;
 const immutableTailSha256 =
-  'e50d40fa4aa7345d229e737176db818a4752d91e9efa0b958f0648f585ce3e41';
+  'a3140e0c068e8b8e5bde11cee11d74c17be0c3846817dad1b6f6712ebb9cb986';
 
 const tailOffset = sourceBytes.indexOf(immutableTailMarker);
 const synchronizedBytes =

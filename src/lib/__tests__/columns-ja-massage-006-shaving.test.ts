@@ -95,7 +95,7 @@ describe('Japanese massage column 006 — traditional barbershop service', () =>
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      '当時の法律に基づき、林氏には4万新台湾ドル、2名の従業員にはそれぞれ1万新台湾ドルと2万新台湾ドルの罰金が科されました。',
+      '当時の法律に基づき、林氏には4万新台湾ドル（NT$）、2名の従業員にはそれぞれNT$1万とNT$2万の罰金が科されました。',
     );
     expect(raw).not.toContain('万元');
   });

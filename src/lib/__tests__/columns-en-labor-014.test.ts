@@ -121,7 +121,7 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
   it("publishes the exact complete frontmatter and four ordered FAQs", () => {
     expect(parsed.data).toEqual({
       title,
-      seoTitle: "Taiwan Minimum Service Period Clauses: Validity and Penalties",
+      seoTitle: "Taiwan Minimum Service Period Clauses",
       url: sourceUrl,
       lastmod: "2026-07-25",
       date_display: "September 13, 2025",

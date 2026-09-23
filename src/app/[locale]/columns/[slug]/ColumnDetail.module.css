@@ -198,6 +198,20 @@
   word-break: keep-all;
 }
 
+/* WO-X2 (JA-25): the `word-break: normal` above (and globals.css's mobile
+   `:lang(ja) h2/h3 { normal }`) beat the WI-1 ja heading `auto-phrase`, so
+   column H1/H2/H3 split mid-word at 390 (資|本金, 就業許|可). Restore
+   phrase-aware breaking for ja headings only; ja body paragraphs keep
+   normal + line-break: strict from globals.css. */
+@supports (word-break: auto-phrase) {
+  .hero:lang(ja) :global(.blog-hero-title),
+  .article:lang(ja) :global(.column-markdown) :global(h2.blog-heading),
+  .article:lang(ja) :global(.column-faq-heading),
+  .article:lang(ja) :global(.column-markdown) :global(h3.blog-heading) {
+    word-break: auto-phrase;
+  }
+}
+
 .article :global(.column-markdown) :global(a.link-underline) {
   display: inline;
   min-height: 0;

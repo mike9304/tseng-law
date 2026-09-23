@@ -113,7 +113,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
   it('publishes the complete exact frontmatter and canonical post contract', () => {
     expect(parsed.data).toEqual({
       title,
-      seoTitle: 'Taiwan Subsidiary vs Branch: Key Differences for Market Entry',
+      seoTitle: 'Taiwan Subsidiary vs Branch: Key Differences',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch',
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',

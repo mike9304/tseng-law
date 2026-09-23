@@ -11,7 +11,8 @@ import {
 const expectations: Array<[SiteLocale, string]> = [
   ['ko', '법무법인 호정'],
   ['zh-hant', '昊鼎國際法律事務所'],
-  ['en', 'Hovering International Law Firm'],
+  // WO-X2 (EN-20): EN titles use the short suffix to stay within 60 characters.
+  ['en', 'Hovering Law'],
   ['ja', '昊鼎国際法律事務所'],
 ];
 
@@ -20,6 +21,13 @@ describe('localized page titles', () => {
     expect(buildLocalizedPageTitle('Services', locale)).toBe(`Services | ${brand}`);
     expect(buildLocalizedPageTitle(`Services | ${brand}`, locale)).toBe(`Services | ${brand}`);
     expect(buildLocalizedPageTitle(`Services | ${brand} | ${brand}`, locale)).toBe(`Services | ${brand}`);
+  });
+
+  it('replaces the full EN firm-name suffix with the short EN title brand', () => {
+    expect(buildLocalizedPageTitle('Services | Hovering International Law Firm', 'en')).toBe(
+      'Services | Hovering Law',
+    );
+    expect(stripOrganizationNameSuffix('Services | Hovering Law')).toBe('Services');
   });
 
   it('normalizes legacy dash-separated and cross-locale suffixes', () => {
@@ -69,10 +77,11 @@ describe('localized page titles', () => {
 
   it('uses brand-and-scope English homepage title after templating', () => {
     const metadata = getHomeLegacyMetadata('en');
-    expect(metadata.title).toBe('Taiwan Legal Services for International Clients');
+    expect(metadata.title).toBe('Taiwan Legal Services for Overseas Clients');
     expect(buildLocalizedPageTitle(String(metadata.title), 'en')).toBe(
-      'Taiwan Legal Services for International Clients | Hovering International Law Firm',
+      'Taiwan Legal Services for Overseas Clients | Hovering Law',
     );
+    expect(buildLocalizedPageTitle(String(metadata.title), 'en').length).toBeLessThanOrEqual(60);
     expect(String(metadata.title)).not.toMatch(/taiwan lawyer/i);
     expect(String(metadata.title)).not.toMatch(/company setup lawyer/i);
     expect(String(metadata.title)).not.toMatch(/litigation lawyer/i);

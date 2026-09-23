@@ -207,7 +207,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ctaNote: 'Your consultation time is confirmed after arranging it by email.',
   },
   ja: {
-    currency: 'NTD（ニュー台湾ドル）',
+    currency: '新台湾ドル（NT$）',
     items: [
       {
         icon: 'consultation',
@@ -241,14 +241,14 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         price: 'NT$ 50,000',
         unit: '',
         details: [
-          '資本金400万NTD以下の場合',
+          '資本金NT$400万以下の場合',
           '株主1名の場合',
           '投資許可・会社登記・営業登記を含みます',
           '銀行への同行は別途費用',
           '居留証（ARC）の申請代行は別途費用'
         ],
         note:
-          '資本金が400万NTDを超える場合、株主が複数の場合、または支店・合弁など通常と異なる形態の場合は、別途お見積りいたします。'
+          '資本金がNT$400万を超える場合、株主が複数の場合、または支店・合弁など通常と異なる形態の場合は、別途お見積りいたします。'
       },
       {
         icon: 'retainer',

@@ -339,16 +339,6 @@ function relatedResourceByHref(
   return relatedResources[slug].find((item) => item.href === href);
 }
 
-const enDebtRecoveryResource = {
-  href: 'taiwan-debt-recovery-lawyer',
-  label: {
-    ko: 'Unpaid invoices and supplier disputes',
-    'zh-hant': 'Unpaid invoices and supplier disputes',
-    en: 'Unpaid invoices and supplier disputes',
-    ja: 'Unpaid invoices and supplier disputes',
-  },
-} as const;
-
 const enCivilServiceResource = {
   href: 'services/civil',
   label: {
@@ -454,7 +444,6 @@ function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
       ].filter((item): item is NonNullable<typeof item> => item != null);
     }
     return [
-      enDebtRecoveryResource,
       enCivilServiceResource,
       relatedResourceByHref(slug, 'taiwan-lawyer'),
       advisory,
@@ -587,16 +576,9 @@ export default function IntentLandingPage({
           >
             <p className="contact-email-actions__label">{LITIGATION_SITUATION_NAV[locale].lead}</p>
             <ul className="intent-article-list">
-              <li>
-                <Link
-                  href={`/${locale}/taiwan-debt-recovery-lawyer`}
-                  className="link-underline"
-                  data-en-path={locale === 'en' ? 'unpaid-invoices' : undefined}
-                  data-ml-path="unpaid-invoices"
-                >
-                  {LITIGATION_SITUATION_NAV[locale].unpaid}
-                </Link>
-              </li>
+              {/* WO-X2 (EN-02): no visible link to the unreviewed
+                  debt-recovery draft (/taiwan-debt-recovery-lawyer); the civil
+                  item below covers contract disputes. */}
               <li>
                 <Link
                   href={`/${locale}/services/civil`}

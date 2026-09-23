@@ -54,6 +54,11 @@ const expectedTitles = {
   en: 'Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children',
   ja: '台湾の離婚手続Q&A：調停・訴訟・財産分与・子ども',
 } as const;
+// WO-X2 (EN-20): the EN <title> uses the short frontmatter seoTitle; H1 stays.
+const expectedMetaTitles = {
+  ...expectedTitles,
+  en: 'Taiwan Divorce Q&A: Property and Children',
+} as const;
 
 const expectedArchiveRecords = {
   ko: {
@@ -391,7 +396,7 @@ describe('column 007 public reference synchronization', () => {
         params: Promise.resolve({ locale, slug }),
       });
 
-      expect(metadata.title, locale).toBe(expectedTitles[locale]);
+      expect(metadata.title, locale).toBe(expectedMetaTitles[locale]);
       expect(metadata.alternates?.canonical, locale).toBe(
         `${siteUrl}/${locale}/columns/${slug}`,
       );
@@ -415,7 +420,7 @@ describe('column 007 public reference synchronization', () => {
         params: Promise.resolve({ locale, slug: aliasSlug }),
       });
 
-      expect(aliasMetadata.title, locale).toBe(expectedTitles[locale]);
+      expect(aliasMetadata.title, locale).toBe(expectedMetaTitles[locale]);
       expect(aliasMetadata.alternates?.canonical, locale).toBe(
         `${siteUrl}/${locale}/columns/${slug}`,
       );

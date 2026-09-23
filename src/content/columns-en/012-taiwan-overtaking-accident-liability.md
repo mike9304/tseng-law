@@ -1,5 +1,6 @@
 ---
 title: "How Is Liability Assessed After an Overtaking Accident in Taiwan?"
+seoTitle: "Overtaking Accident Liability in Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"

@@ -54,7 +54,7 @@ describe('Japanese attorney profile', () => {
       '趨勢法律事務所',
       '昊鼎国際法律事務所',
       '法律扶助基金会台中分会',
-      '157万TWD',
+      'NT$157万',
       '一審判決',
       '韓国語',
       '中国語',
@@ -77,10 +77,10 @@ describe('Japanese attorney profile', () => {
     expect(japaneseProfile.faq[0].answer).toContain('台湾投資に関する法務顧問');
     expect(japaneseProfile.summary[1]).toContain('各種手続の遂行');
     expect(japaneseProfile.summary[2]).toContain(
-      '157万TWDの損害賠償を認める一審判決を獲得',
+      'NT$157万の損害賠償を認める一審判決を獲得',
     );
     expect(japaneseProfile.proofPoints[2]).toContain(
-      '157万TWDの損害賠償を認める一審判決を獲得',
+      'NT$157万の損害賠償を認める一審判決を獲得',
     );
     expect(japaneseProfile.internalLinks).toContainEqual({
       label: 'お問い合わせ・ご相談',

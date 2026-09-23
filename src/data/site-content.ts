@@ -972,7 +972,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '주요 업무',
           links: [
             { label: '대만 투자·법인 설립', href: '/ko/services#investment' },
-            { label: '부동산·건설 분쟁', href: '/ko/services#real-estate' },
+            { label: '노동법·고용분쟁', href: '/ko/services#labor' },
             { label: '상표·지식재산', href: '/ko/services#ip' }
           ]
         },
@@ -1742,7 +1742,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '主要服務',
           links: [
             { label: '台灣投資與公司設立', href: '/zh-hant/services#investment' },
-            { label: '不動產與工程爭議', href: '/zh-hant/services#real-estate' },
+            { label: '勞動法·僱傭爭議', href: '/zh-hant/services#labor' },
             { label: '商標與智慧財產', href: '/zh-hant/services#ip' }
           ]
         },
@@ -2517,7 +2517,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Services',
           links: [
             { label: 'Investment & Company Setup', href: '/en/services#investment' },
-            { label: 'Real Estate & Construction', href: '/en/services#real-estate' },
+            { label: 'Labor & Employment', href: '/en/services#labor' },
             { label: 'Trademarks & IP', href: '/en/services#ip' }
           ]
         },
@@ -2724,7 +2724,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         {
           title: 'ジム負傷の損害賠償',
           amount: '一審157万TWD',
-          summary: '一審で157万TWDの損害賠償を認める判決後、控訴審で和解により終結した事例。',
+          summary: '一審でNT$157万の損害賠償を認める判決後、控訴審で和解により終結した事例。',
           image: '/images/feature-1.svg',
           tag: '民事',
           href: '/ja/columns'
@@ -2732,7 +2732,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         {
           title: '医療紛争の損害賠償',
           amount: '300万TWD',
-          summary: '医療紛争の被害者家族が大学病院から300万TWDの損害賠償を受けた事例。',
+          summary: '医療紛争の被害者家族が大学病院からNT$300万の損害賠償を受けた事例。',
           image: '/images/feature-2.svg',
           tag: '医療',
           href: '/ja/columns'
@@ -2740,7 +2740,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         {
           title: '原油先物価格マイナス事件',
           amount: '数百万TWD',
-          summary: '2020年の原油先物価格マイナス事件で、複数の投資家が数百万TWDの補償を受けた事例。',
+          summary: '2020年の原油先物価格マイナス事件で、複数の投資家がNT$数百万の補償を受けた事例。',
           image: '/images/feature-3.svg',
           tag: '金融',
           href: '/ja/columns'
@@ -2748,7 +2748,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         {
           title: '交通事故の損害賠償',
           amount: '290万TWD',
-          summary: '交通事故の被害者が290万TWDの損害賠償を受けた事例。',
+          summary: '交通事故の被害者がNT$290万の損害賠償を受けた事例。',
           image: '/images/feature-2.svg',
           tag: '交通事故',
           href: '/ja/columns'
@@ -2756,7 +2756,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         {
           title: '夫婦残余財産の分配',
           amount: '600万TWD',
-          summary: '日本人配偶者が元配偶者から600万TWDの夫婦残余財産分配を受けた事例。',
+          summary: '日本人配偶者が元配偶者からNT$600万の夫婦残余財産分配を受けた事例。',
           image: '/images/feature-1.svg',
           tag: '家事',
           href: '/ja/columns'
@@ -2764,7 +2764,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         {
           title: '第三者への慰謝料請求',
           amount: '30万TWD',
-          summary: '日本人配偶者が第三者から30万TWDの慰謝料を受けた事例。',
+          summary: '日本人配偶者が第三者からNT$30万の慰謝料を受けた事例。',
           image: '/images/feature-3.svg',
           tag: '家事',
           href: '/ja/columns'
@@ -2940,7 +2940,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: '民事訴訟・損害賠償',
-          description: '契約紛争、損害賠償、消費者被害など、民事事件全般に対応します。韓国人留学生のジム負傷事件では、一審で157万新台湾ドルの損害賠償を認める判決を得た実績があり、外国人依頼者による台湾での訴訟手続を日本語で一貫して支援します。',
+          description: '契約紛争、損害賠償、消費者被害など、民事事件全般に対応します。韓国人留学生のジム負傷事件では、一審で157万新台湾ドル（NT$）の損害賠償を認める判決を得た実績があり、外国人依頼者による台湾での訴訟手続を日本語で一貫して支援します。',
           href: '/ja/services#civil',
           details: [
             '人身損害・物的損害の賠償請求',
@@ -3020,9 +3020,9 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     },
     homeResults: {
       label: '事例紹介',
-      title: '韓国人留学生のジム負傷事件\n一審157万TWD判決後、控訴審で和解',
+      title: '韓国人留学生のジム負傷事件\n一審NT$157万判決後、控訴審で和解',
       description:
-        '台湾のジムでトレーナーの指導を受けて運動中に負傷した韓国人大学生が、損害賠償を請求した事例です。一審では157万TWDの損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
+        '台湾のジムでトレーナーの指導を受けて運動中に負傷した韓国人大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
       summary: '結果は具体的な事実関係や証拠により異なります。本事例は、過去の一案件の経過を紹介するものです。',
       ctaLabel: '取扱事例を見る'
     },
@@ -3299,7 +3299,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           title: '取扱業務',
           links: [
             { label: '投資・会社設立', href: '/ja/services#investment' },
-            { label: '不動産・建設', href: '/ja/services#real-estate' },
+            { label: '労働・雇用', href: '/ja/services#labor' },
             { label: '商標・知財', href: '/ja/services#ip' }
           ]
         },

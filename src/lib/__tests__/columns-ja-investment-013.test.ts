@@ -98,7 +98,7 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
 
   it('restores every source condition for lease timing and landlord negotiations', () => {
     const requiredPhrases = [
-      '会社設立には約**3か月**、就労許可証と居留証の取得にも約**1か月**',
+      '会社設立には約**3か月**、就業許可証と居留証の取得にも約**1か月**',
       '契約開始日はできるだけ遅く設定してください。',
       '家主が借主に「**内装期間**」を設けることがよくあります。',
       'これは賃料が免除される期間ですので、交渉してみてください。',

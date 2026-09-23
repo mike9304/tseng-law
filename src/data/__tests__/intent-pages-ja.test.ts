@@ -54,7 +54,7 @@ describe('Japanese intent landing pages', () => {
     const page = getIntentPage('ja', 'taiwan-company-setup-lawyer');
 
     expect(page?.description).toBe(
-      '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・駐在員事務所の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
+      '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・代表者事務所（いわゆる駐在員事務所）の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
     );
     expect(page?.faq[0]).toEqual({
       question: '台湾の会社設立は通常どのくらいかかりますか？',

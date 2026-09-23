@@ -65,6 +65,7 @@ describe('English litigation column 010 — gym injury damages', () => {
   it('publishes the contracted metadata, sole H1, and five ordered H2 sections', () => {
     expect(parsed.data).toEqual({
       title,
+      seoTitle: 'Taiwan Gym Injury Claims: Case and Damages',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit',
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',

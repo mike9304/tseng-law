@@ -84,7 +84,7 @@ export const semiconductorGuideCopy: Record<
       'In the first inquiry, send the company name, head-office country, counterparty name, a non-confidential outline, and the preferred consultation language. Send confidential materials only after a conflict check.',
     contactBtn: 'Contact page',
     emailBtn: 'Email consultation',
-    metaTitle: 'Semiconductor practice guide | Taiwan market-entry structure',
+    metaTitle: 'Taiwan Semiconductor Market-Entry Guide',
   },
   ja: {
     kicker: '半導体企業実務ガイド',
@@ -101,6 +101,6 @@ export const semiconductorGuideCopy: Record<
       '初回のお問い合わせでは、会社名、本社所在国、相手方会社名、非機密の概要、希望する相談言語をお知らせください。機密資料は利益相反確認後に別途ご送付ください。',
     contactBtn: '公式お問い合わせ',
     emailBtn: 'メール相談',
-    metaTitle: '半導体企業実務ガイド | 台湾進出の架構',
+    metaTitle: '半導体企業実務ガイド | 台湾進出スキームの設計',
   },
 };

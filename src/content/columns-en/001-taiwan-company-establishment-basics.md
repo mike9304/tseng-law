@@ -1,6 +1,6 @@
 ---
 title: "Setting Up a Company in Taiwan: Subsidiaries, Branches, Representative Offices, Procedures, and Work Permits"
-seoTitle: "Setting Up a Company in Taiwan: Subsidiaries, Branches, Work Permits"
+seoTitle: "Taiwan Company Setup: Entities & Permits"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"

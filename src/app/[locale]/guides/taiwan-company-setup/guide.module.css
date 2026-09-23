@@ -270,6 +270,14 @@
   text-align: center;
 }
 
+/* WO-X2 (EN-05): .relatedLink is navy, identical to the .cta navy background
+   (measured contrast 1.00). Inside the CTA, links and their wrapper text use
+   the same light color as the CTA body. */
+.cta .relatedLink,
+.cta .intro {
+  color: #fff;
+}
+
 .ctaTitle {
   font-family: var(--font-heading);
   font-size: 1.2rem;

@@ -75,7 +75,8 @@ describe.each(Object.entries(localeExpectations) as Array<
 
     expect(metadata.title).toEqual({
       default: expected.organizationName,
-      template: `%s | ${expected.organizationName}`,
+      // WO-X2 (EN-20): EN <title> uses the short "Hovering Law" suffix.
+      template: `%s | ${locale === 'en' ? 'Hovering Law' : expected.organizationName}`,
     });
     expect(metadata.description).toBe(siteContent[locale].meta.description);
     expect(metadata.applicationName).toBe(expected.organizationName);

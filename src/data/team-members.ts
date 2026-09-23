@@ -301,7 +301,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
           '企業・個人の幅広い案件を担当しています。当事務所では日本語・英語・韓国語・中国語でご相談いただけます。',
-          '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
+          '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審でNT$157万の損害賠償を認める判決を得た実績があります。',
         ],
         education: [
           '国立台湾大学財務金融研究所 修士号取得',

@@ -65,7 +65,7 @@ Alates 1. jaanuarist 2023 tuleb äriühingu või ettevõtte (sealhulgas filiaal 
 
 Alljärgnev loetelu „omal algatusel kontrollitavatest tegevusaladest“ (主動查詢之營業項目) tähendab tegevusalasid, mida kaubandusamet kontrollib omal algatusel registreerimise käigus (隨案主動查詢), kui tegevusala on taotluses, kuid lisatud tulemus seda ei sisalda; see, et tegevusala ei ole selles loetelus, ei tähenda, et kontroll oleks vabastatud.
 
-Kui avatakse kohas, kus toitlustus ei ole võimalik, võib hiljem järgneda pädeva asutuse haldusrahve (罰鍰).
+Kui avatakse kohas, kus toitlustus ei ole võimalik, võib hiljem järgneda pädeva asutuse haldustrahv (罰鍰).
 
 ![„omal algatusel kontrollitavad tegevusalad“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
@@ -80,4 +80,4 @@ Haldusasutuste reeglid võivad sageli muutuda, seega tasub enne äriühingu regi
 > Vaadake ka:
 > - [Milliste asjadega tegeleme](/et/services)
 > - [Hoveringi rahvusvaheline meeskond](/et/lawyers)
-> - [Kuidas bürooni jõuda](/et/contact)
+> - [Kuidas büroo poole pöörduda](/et/contact)

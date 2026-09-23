@@ -1142,7 +1142,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     partnerTitle: 'Партньор — експерт-счетоводител',
     introLabel: 'Представяне',
     educationLabel: 'Образование',
-    experienceLabel: 'Практика',
+    experienceLabel: 'Професионален опит',
     photoAltPrefix: 'Снимка',
     workingLanguagesLabel: 'Работни езици',
     fullProfileLabel: 'Пълен профил (на английски)',
@@ -4080,7 +4080,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Кантората води дела на дружества и частни лица в Тайван на английски, японски, корейски и китайски.',
-        'Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала първоинстанционно решение за TWD 1.57M.',
+        'Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала първоинстанционно решение за 1,57 млн. нови тайвански долара (TWD 1.57M).',
       ],
       education: [
         'Магистър (M.S.), Институт по финанси, Национален тайвански университет (National Taiwan University)',

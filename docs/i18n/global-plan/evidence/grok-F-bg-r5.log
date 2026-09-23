@@ -1,0 +1,218 @@
+WO-F-bg r5 — fix lane (Bulgarian)
+workspace: /Users/son7/Projects/tseng-law-fix-bg-r5
+branch: fix/native-bg-r5-20260922
+date: 2026-09-23
+
+Inputs read: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/bg-a.md (37 rows), rounds/r5/bg-b.md (41 rows).
+Files touched: src/data/international-guidance-central-europe.ts (bulgarianGuidanceContent),
+src/data/international-guidance-team.ts (bg bios + guidanceTeamCopy.bg),
+src/data/international-guidance-offices.ts (bg alt text),
+src/content/columns-bg/{001,002,003,004,006,007,008,010,011,013,014,015,016,017,018}.md.
+Untouched: 005, 009, 012 (005/012 clean per the reviewers; 009's only row is skipped — see below),
+src/data/international-inquiry-copy.ts and src/lib/llms-txt.ts (no flagged row; bg blocks re-read and clean —
+GUIDANCE_LLMS_NOTICES.bg.consultationNotice is still a verbatim substring of the "Възможна ли е консултация на български?"
+FAQ answer and confidentialNotice of the privacy paragraph, so neither was disturbed).
+No test needed updating: no test pins a Bulgarian string that changed (full run below is green).
+
+
+## Rows applied — 74 of 78 (a: 35/37, b: 39/41)
+
+Part a (guidance pack unless noted)
+1  P1 004 source list: the label on law.moj.gov.tw…pcode=G0340028&flno=3 was the dividend-withholding wording
+       (that belongs to 001, which carries the Korean label 비거주자 배당 원천징수율 for the same URL). 004's Korean label
+       is 영업세법 제10조 → "База нормативни актове на Министерството на правосъдието на Тайван — член 10 от Закона
+       за данъка върху добавената стойност (營業稅法)". URL untouched; the digit 10 kept.
+2  P1 contact bullet regains „само“ (consultation-language lock).
+3  P2 closing comma on the обособено определение „предприятия, насочени към печалба“ — 8 instances
+       (001 ×2, 002 ×1, 004 ×5, incl. the two „…за дадената/съответната година“ readings flagged in the row).
+       The bare table cell in 004 has no following predicate and was left.
+4  P2 004 „Търговски предприятия, чието главно седалище е извън Тайван“ → „Предприятия, насочени към печалба, …“ ×3
+       (FAQ, body, comparison table). 015's „търговско предприятие“ (商業, sole trader) left.
+5  P2 004 table „Данък върху оборота“ → „Данък върху добавената стойност“ (one tax, one name).
+6  P2 001 „На проверка подлежат …“.
+7  P2 007 „не прави условията … и последиците на трите пътя взаимозаменяеми“.
+8  P2 007 „Ако има конкретни опасения за извеждане на детето, за отказ то да бъде върнато или за риск за безопасността му“.
+9  P2 007 „Ако страните искат да променят …“.
+10 P2 007 stray „(1)“ dropped. Checker numbers gate re-run: still sourceCount=25 targetCount=25, PASS.
+11 P2 007 會面交往 → the Family Code term „лични отношения“, 9 instances (FAQ, §5, heading of §9, §9 ×3, §11 ×2, checklist),
+       matching the guidance pack's „лични отношения с детето (會面交往)“. „контакт и свиждане“ no longer occurs.
+12 P2 „пункт“ as a point/aspect → 6 instances (pack 1, 003 ×2, 007 ×1) + the two b29 list-item ones (011, 017).
+       The two remaining „пункта“ in 007 §11 are „пункт на назначение“ (a place), which is the legitimate Bulgarian sense.
+13 P2 003 „Въпрос 16.“–„Въпрос 20.“ → „Q16.“–„Q20.“, aligning with Q1–Q15 and the Korean/English.
+14 P2 „по процедурите, които са необходими в Тайван“.
+15 P2 „включително с такива, свързани с Тайван“.
+16 P2 „Адвокатките и адвокатите консултират дружества и ги представляват в съдебни производства.“
+17 P2 „чуждестранни участници“ → „чуждестранни клиенти“ ×3 (about intro, about heading, page description);
+       „местата“ → „офисите ѝ“; „възникването“ → „създаването“.
+18 P2 bio: „…първоинстанционно решение за 1,57 млн. нови тайвански долара (TWD 1.57M).“ — the pinned token
+       TWD 1.57M is byte-identical, the gloss is added beside it the way es/ca/ar/uk already do.
+19 P2 — SKIPPED, see below.
+20 P2 006 „…административни глоби (罰鍰) в размер съответно 40.000, 10.000 и 20.000 нови тайвански долара (新臺幣, TWD)“.
+       Currency stated once; dot grouping kept (see row 22). Checker `currency` gate re-run: PASS.
+21 P2 008: doubled verb, orphan „го“ and the third „и“ removed without merging blocks —
+       „забеляза, че …“ / „и то отрано,“ / „а понеже …“. Block count unchanged (the Korean is one line per block here).
+22 P2 — SKIPPED, see below.
+23 P2 „Правна сфера на действие“ → „Приложно поле“ (heading + page description).
+24 P2 „не отговаряме за верността и за актуалността на съдържанието на трети лица“.
+25 P2 „цифра“ → „сума“ (pricing paragraph) and „не посочва цифри“ → „не посочва суми“ (FAQ).
+26 P2 003 Q19 „винаги ли е налице престъплението бягство от местопроизшествието?“; the two body sentences that
+       named the same offence were aligned to „бягство от местопроизшествието (肇事逃逸)“.
+27 P2 004 both causal inserts set off by commas.
+28 P2 004 „не е тъждествено на възможността“ (as 002 already writes).
+29 P3 „Обхватът и как се потвърждава“.
+30 P3 „Офисът в Пиндун е открит през 2017 г., за да обслужва клиентите в региона на място.“
+31 P3 Aufwand → „обем работа“ ×2 (pricing section + the tariff FAQ paragraph); „от един и същ вид“.
+32 P3 „твърде“ → „много“/„крайно“ ×4: 003 ×1, 006 ×3 (the Korean reads 매우 in all three 006 places, incl. „занятия“).
+33 P3 „списъците със статии“.
+34 P3 „не преразказва съдържанието на статиите“.
+35 P3 comma before a plain „и“ removed: 002 ×1, 004 ×1.
+36 P3 offices alt text „Кабинет на адвокат в офиса в Тайпе“.
+37 P3 guidanceTeamCopy.bg.experienceLabel „Практика“ → „Професионален опит“.
+
+Part b (columns)
+1  P1 018 „следпродажбеното обслужване“.
+2  P1 011 „законните предпоставки, приложими към всяка мярка“.
+3  P1 010 „не установява правната отговорност“.
+4  P1 016 „Самостоятелното имущество означава имущество…“ (the round-4 term now holds in both sentences).
+5  P2 014 „Писмото … разграничава и разглежда обучение“.
+6  P2 „Напротив“ deleted where the English carries no contrast marker — 017 ×2 (FAQ answer + §1 body,
+       "Warehousing, packing, systems operations…") and 011 ×1 ("Not every personal post…").
+7  P2 „Напротив“ → „За разлика от това“ for In contrast / By contrast: 011 §PIF fine, 017 §asset transfer,
+       018 §branch. Swept beyond the quoted files per the systemic rule: 004 ×2 (By contrast / Conversely)
+       and 008 FAQ ×1 (By contrast). 017 §1 → „Обратно,“ (see "reviewer got wrong" #1).
+       „Напротив“ no longer occurs in columns-bg or in the pack.
+8  P2 014 „разчетният лист“ → „фишът за заплата“ ×2 (worker and employer checklists), matching §62's own wording.
+9  P2 看護費用 → „разходи за чужда помощ“ in 010 and in 003 (the row's cross-reference). 003's Q9 prose about the
+       act of nursing („професионално/семейно гледане“) was not flagged and was left.
+10 P2 015 „Освен пазарната обстановка е важен и още един критерий.“
+11 P2 018 „и искате да проверите търсенето на пазара чрез независим дистрибутор“.
+12 P2 — SKIPPED, see below.
+13 P2 — SKIPPED, see below.
+14 P2 „чл.“ → „член“ — 74 instances. Swept across all three files that used it, not only 016
+       (016 24, 007 42, 002 8); see "reviewer got wrong" #2. No „чл.“ remains in columns-bg.
+15 P2 013 „Закона за инвестициите от чуждестранни лица (外國人投資條例)“ (as 011 and 017).
+16 P2 016 „… той не става собственик на това имущество и не трябва да го използва …“.
+17 P2 018 „или 100 работници, осигурени по трудово осигуряване“ (count form dropped). The row's space-grouped
+       „100 000 000“ half was not applied — see row 13 skip.
+18 P2 018 „обръщане“ → „запитване“ ×4.
+19+20 P2 014 „става негово/негова“ → „работникът окончателно придобива правото върху плащането/нея“ ×5
+       (§62 clause list, §107, the two checklists, and §85's feminine copy), with the closing comma of row 19.
+21 P2 014 „по същество“; „според структурата на договора и съществото на плащането“ (the article now has a complement).
+22 P2 010 comma before „преди да изчезнат“.
+23 P2 010 „не е достатъчно да се изхожда само от факта, че произшествието е станало във фитнес залата“.
+24 P2 011 „за всеки продукт“ ×3.
+25 P2 011 „трябва да съвпада с адреса на производителя или вносителя на козметика, посочен в маркировката съгласно
+       член 7, алинея 1, точка 7 …“.
+26 P2 014 „записи за присъствие и за работното време“.
+27 P2 014 „може да се намали рискът всички изводи да се извеждат от една-единствена формулировка в договора“.
+28 P2 014 „информационен материал“ (as the disclaimer sentence in 016/017).
+29 P2 „пункт“ as a list item → „точка“: 017 ×1, 011 ×1.
+30 P2 011 „Затова датата на пускане не бива да се фиксира въз основа на предварително приет твърд срок; първо …“.
+31 P2 018 „Обстоятелството, че клиентът е в Тайван, само по себе си не дава един и същ отговор за всички случаи.“
+32 P2 013 „Поради това наемодателите неохотно отдават помещения на чужденци.“ (breaks the three-„Затова“ run).
+33 P2 015 „Затова на това обстоятелство следва да се обърне внимание.“
+34 P3 017 „(連江、馬祖)“ ×2 (katakana middle dot → Chinese enumeration comma).
+35 P3 016 „след това баба и дядо.“
+36 P3 014 „Национална база нормативни актове на Тайван“ ×3 (as 007 and 016).
+37 P3 015 caption „„Предмети на дейност, подлежащи на служебна справка“ (主動查詢之營業項目)“.
+38 P3 018 „Ако планирате в Тайван продажби…“.
+39 P3 011 „отправната точка на прегледа“.
+40 P3 011 „с нужната квалификация и капацитет“.
+41 P3 014 „Не бива да се посочва само общата сума;“.
+
+
+## Rows skipped (4) — with the evidence
+
+a19 P2 — 009, blank line before „**Адвокатка Wei Tseng (曾雋崴)**“.
+  ACCEPTED-ROUND: "Requests to merge/split paragraphs … → rephrase inside the existing block instead."
+  The Korean source 009 has no signature line at all (no sister locale carries one), so the added byline had to be
+  glued to keep the block count. Tested and reverted:
+
+    $ (blank line inserted before the signature)
+    $ node scripts/check-column-translation.mjs --source src/content/columns/009-…md --target src/content/columns-bg/009-…md --lang bg
+    FAIL  …/src/content/columns-bg/009-taiwan-voluntary-resignation-severance.md  lang=bg
+    blocks         FAIL   blocks 44 → 45
+    REVERTED
+
+a22 P2 / b13 P2 — space thousands separators (500 000 / 1 579 589 …).
+  ACCEPTED-ROUND: "Requests for space thousands separators … → skip (the checker cannot parse them)"; R14 says to keep
+  the accepted style. scripts/check-column-translation.mjs declares NUMBER_THOUSAND_STYLE.bg = 'dot' (line 662 ff.)
+  and scripts/ is outside this work order's write scope, so the dot grouping stands in 001, 002, 003, 004, 006, 007,
+  010, 011, 017 and 018. The non-separator halves of both rows were applied (a20 currency duplication, b17 count form).
+
+b12 P2 — U+200B in 013 and 015.
+  The zero-width spaces reproduce the Korean source byte for byte (013: ko 5 / bg 5; 015: ko 3 / bg 3) and the
+  checker's `blocks` gate compares ZWSP counts. Part a's reviewer re-checked the same point and declared it a
+  non-defect. Tested and reverted:
+
+    $ (all U+200B stripped from 013)
+    $ node scripts/check-column-translation.mjs --source src/content/columns/013-…md --target src/content/columns-bg/013-…md --lang bg
+    FAIL  …/src/content/columns-bg/013-taiwan-company-establishment-advanced-1.md  lang=bg
+    blocks         FAIL   blocks 60 → 56
+                          ZWSP 5 → 0
+    REVERTED
+
+
+## Systemic sweeps — instances changed
+
+„Напротив“ (10)  · „пункт“ as point/list item (8)  · „чл.“ → „член“ (74)  · closing comma on
+„предприятия, насочени към печалба“ (8)  · „Търговски предприятия“ (3)  · 會面交往 (9)  · „става негово/негова“ (5)
+· „обръщане“ → „запитване“ (4)  · „твърде“ (4)  · Q-label in 003 (5)  · „по всеки продукт“ (3)
+· „Национална база правни актове“ (3)  · „чуждестранни участници“ (3)  · „разчетен лист“ (2)  · 看護費用 (2)
+· „(連江・馬祖)“ (2).
+Post-sweep greps: „Напротив“ 0, „чл.“ 0, „контакт и свиждане“ 0, „чуждестранни участници“ 0,
+Hangul outside `url:` 0, `[변호사 검수 필요]` 0.
+
+
+## §Verify output verbatim
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-bg --lang bg 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-bg src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      21
+
+(21 = 18 files I changed + docs/i18n/global-plan/WO-F-bg.txt, which was already modified in this worktree before
+this round started, + the two untracked review files rounds/r5/bg-a.md and bg-b.md. No git add/commit/push was run.)
+
+
+## Where I believe the reviewer is wrong (not applied as written)
+
+1. b6 — the row claims 017 §1 „Напротив, дори в договора да е записана спедиция“ is an inserted contrast marker
+   with no counterpart in English. columns-en/017 line 37 does carry one: "Conversely, calling an arrangement
+   freight forwarding or platform operations will not avoid regulation…". I applied the row's real point (the
+   „Напротив“ = refutation calque) with „Обратно,“ instead of deleting the connector. The other two places the
+   row names (017 FAQ/§1 "Warehousing, packing…" and 011 "Not every personal post…") genuinely have no marker in
+   English and lost theirs.
+
+2. b14 — the row states "016 is the only column that abbreviates the article; the other eight all write член in
+   full (22 occurrences of чл. here against 34 of член elsewhere)". That is true only inside part b's scope
+   (010–018). 002 (8 occurrences) and 007 (42) also wrote „чл.“, and part a did not flag them. I swept all three
+   files so the whole set is consistent.
+
+3. b12 — see the skip section: the U+200B characters are source parity, not a Bulgarian defect, and part a's
+   reviewer had already re-checked and cleared them. Reported in round 4 for the same reason.
+
+4. a19 — the row assumes 009's signature should be its own block "as every other column separates it". 003, 011,
+   016 and 017 can separate it because their Korean sources have a matching block; 009's Korean has no signature
+   line at all, so the separation cannot be made without breaking the block-count gate.
+
+5. a20 / b13 / b17 (partial) — the suggested rewrites re-group thousands with spaces, which the checker's
+   NUMBER_THOUSAND_STYLE.bg = 'dot' cannot parse; ACCEPTED-ROUND already rules those requests out.

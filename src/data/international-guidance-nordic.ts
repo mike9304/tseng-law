@@ -568,7 +568,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
   pages: {
     home: {
       eyebrow: 'VEJLEDNINGER',
-      title: 'Juridiske ydelser i Taiwan — vejledninger på dansk',
+      title: 'Juridiske tjenester i Taiwan — vejledninger på dansk',
       description:
         'Almindelige forklaringer på dansk om arbejdsområdet hos Hovering International Law Firm i Taiwan, rådgivningssprogene og den første kontakt.',
       intro:
@@ -585,7 +585,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sidens sprog og rådgivningssproget er ikke det samme',
           paragraphs: [
             'Denne side er skrevet på dansk, men rådgivningen med en advokat foregår kun på de fire rådgivningssprog engelsk, kinesisk (中文), japansk og koreansk. At læse vejledningerne på dansk betyder ikke, at samtalen med advokaten foregår på dansk.',
-            'Vi lover ikke en tolk, en svartid eller en tid via denne side. Hvis du ikke behersker nogen af de fire sprog, forklarer siden »Kontakt«, hvordan vi prøver en kommunikationsvej.',
+            'Vi lover ikke en tolk, en svartid eller en tid via denne side. Hvis du ikke behersker noget af de fire sprog, forklarer siden »Kontakt«, hvordan vi prøver en kommunikationsvej.',
           ],
         },
         {
@@ -662,7 +662,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Bekræftelse af omfanget',
+          heading: 'Omfang og dets bekræftelse',
           paragraphs: [
             'Kontoret arbejder efter taiwansk ret og behandler sager inden for de nævnte områder. Omfanget af hver sag bekræftes særskilt, efter at en advokat har gennemgået din meddelelse.',
             'Opholdsstatus, arbejdstilladelse og sammenlignelige spørgsmål vurderes ud fra dokumenterne og personens situation, ikke ud fra statsborgerskabet. Hvis en del af din sag vedrører sådanne spørgsmål, så nævn det, når du kontakter os. Denne side lover hverken et resultat eller en svartid.',
@@ -751,7 +751,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Sådan kontakter du kontoret',
       description:
-        'Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis du ikke behersker nogen af de fire sprog, og hvad denne side ikke lover.',
+        'Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis du ikke behersker noget af de fire sprog, og hvad denne side ikke lover.',
       intro:
         'Før du skriver til os, bør du holde følgende tre punkter adskilt. De blandes ofte, men betyder forskellige ting.',
       sections: [
@@ -767,7 +767,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvis du ikke behersker nogen af de fire rådgivningssprog',
+          heading: 'Hvis du ikke behersker noget af de fire rådgivningssprog',
           paragraphs: [
             'I kontaktformularen kan du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
             'Det er kun en afklaring, ikke et løfte. Vi lover ikke en tolk og ikke rådgivning på dansk eller på et andet sprog end de fire nævnte, og vi tager ikke enhver sag.',
@@ -821,7 +821,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
             'Nej. Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversættelse er noget andet: den oprindelige tekst, du skriver, gemmes som den er og oversættes ikke automatisk.',
         },
         {
-          question: 'Hvad hvis jeg ikke behersker nogen af de fire sprog?',
+          question: 'Hvad hvis jeg ikke behersker noget af de fire sprog?',
           answer:
             'Vælg ved afsendelsen »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej, men rådgivning på et andet sprog loves ikke. Det er kun en afklaring, ikke et løfte om, at vi kan arbejde på et andet sprog.',
         },
@@ -895,8 +895,8 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Underretning og modtagelsesnummer',
           paragraphs: [
-            'Når en anmodning er sendt, underretter systemet kontoret. Hvis det endnu ikke er bekræftet, at kontoret har modtaget underretningen, forbliver din tekst gemt og går ikke tabt.',
-            'Modtagelsesnummeret bruges til at finde din anmodning hos os. Det vises, når anmodningen er gemt, og du kan angive det ved en ny kontakt.',
+            'Når en anmodning er sendt, underretter systemet kontoret. Er kontorets modtagelse af underretningen endnu ikke bekræftet, forbliver din tekst gemt og går ikke tabt.',
+            'Modtagelsesnummeret bruges til at finde din anmodning hos os. Det vises efter gemningen; du kan angive det ved en ny kontakt.',
           ],
         },
         {
@@ -909,7 +909,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lagringssted og leverandører',
           paragraphs: [
-            'Denne hjemmeside ligger hos Vercel, og din indsendelse gemmes i et ikke-offentligt lager hos denne tjeneste. E-mails sendes via den e-mailtjeneste, kontoret bruger.',
+            'Denne hjemmeside drives hos Vercel, og din indsendelse gemmes i et ikke-offentligt lager hos denne tjeneste. E-mails sendes via den e-mailtjeneste, kontoret bruger.',
             'Enkelte leverandørers servere kan stå uden for Taiwan, så dine data kan gemmes og behandles dér. Når lagringsformålet er opfyldt, slettes dataene uden forsinkelse; oplysninger, der skal opbevares efter gældende regler, opbevares i den periode. Forespørgsler om persondata sendes til wei@hoveringlaw.com.tw.',
           ],
         },
@@ -976,7 +976,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvad en artikel kan bruges til',
+          heading: 'Hvad en artikel kan bruges til som orientering',
           paragraphs: [
             'Artikler er almindelige oplysninger på tidspunktet for offentliggørelsen. Regler og deres anvendelse kan ændre sig, og en artikel indeholder ikke alle omstændigheder i din sag.',
             'Træf derfor ikke en beslutning i en konkret sag alene ud fra en artikel. Brug den til overblik og drøft dine dokumenter særskilt med en advokat; denne side er ikke selve rådgivningen.',

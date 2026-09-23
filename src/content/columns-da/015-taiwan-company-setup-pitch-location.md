@@ -21,9 +21,9 @@ Når man begynder en restaurationsvirksomhed, er det første problem at finde dr
 
 Ud over markedssituationen er der et selvstændigt punkt.
 
-Punktet er beliggenheden af driftsadressen.
+Punktet er, om den pågældende adresse ligger i en zone, hvor der kan drives restaurant.
 
-Det skal afklares, om adressen (營業地址) ligger i en zone, hvor der kan drives restaurant.
+Det skal afklares, om den pågældende adresse (營業地址) ligger i en zone, hvor der kan drives restaurant.
 
 ​
 
@@ -45,7 +45,7 @@ Har du svært ved selv at møde op på matrikelkontoret (地政事務所), kan e
 
 Du kan bede en bekendt i Taiwan, udlejeren, en mægler eller en advokat om hjælp.
 
-Hvis kontrolresultatet angiver, at restaurationsdrift ikke er tilladt på adressen, kan stadsforvaltningen senere ved selskabsregistreringen (公司登記) nægte registreringen.
+Hvis kontrolresultatet angiver, at restauranterhvervet ikke er muligt, kan stadsforvaltningen senere ved selskabsregistreringen (公司登記) nægte registreringen.
 
 Vær derfor opmærksom på dette punkt.
 
@@ -61,7 +61,7 @@ I praksis behøver derfor ikke alle forretningsområder at undersøges ved selsk
 
 Reglen følger af »[arbejdsretningslinjerne for oplysningstjenesten om forretningssteder i byen Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)« (臺北市營業場所協助查詢服務作業須知) og den gældende vejledning fra byen Taipei.
 
-Siden 1. januar 2023 skal resultatet af den forudgående forespørgsel om forretningsstedet **obligatorisk** vedlægges registreringsansøgningen ved ansøgning om registrering af stiftelse, af flytning af hjemsted eller af tilføjelse af forretningsområder for et selskab eller en erhvervsvirksomhed (商業) (herunder filialen (分公司) og andre forretningsenheder (分支機構)), uanset forretningsområdet.
+Siden 1. januar 2023 skal resultatet af den forudgående forespørgsel om forretningsstedet **obligatorisk** vedlægges registreringsansøgningen ved ansøgning om registrering af stiftelse, af flytning af hjemsted eller af tilføjelse af forretningsområder for et selskab eller en erhvervsvirksomhed (商業) (herunder filialen (分公司) og andre forretningsenheder (分支機構)), uanset branchen.
 
 Listen nedenfor over de »forretningsområder, der undersøges af embedet« (主動查詢之營業項目) betegner de forretningsområder, som handelskontoret af embedet yderligere undersøger under registreringsprøvelsen (隨案主動查詢), når forretningsområdet står i ansøgningen, men mangler i det vedlagte resultat; det forhold, at et forretningsområde ikke står på denne liste, betyder ikke, at forretningsområdet er fritaget for kontrollen.
 
@@ -73,7 +73,7 @@ Hvis man åbner på et sted, hvor restauranterhvervet ikke er muligt, kan senere
 
 Det var de vigtigste punkter; har du flere spørgsmål, kan du sende en anmodning via kontaktformularen, og der loves ikke svar med det samme.
 
-Myndighedernes regler kan ofte ændres; før selskabsregistreringen bør du undersøge de nyeste forskrifter.
+Myndighedernes regler kan ofte ændres; før selskabsregistreringen bør du bekræfte de nyeste forskrifter.
 
 ---
 

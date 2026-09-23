@@ -651,7 +651,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Ledende advokat i Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Juridisk assistent (paralegal)',
+      'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Leder af Korea-forretningen (Korea Operations Manager)',
       'huang-shengping': 'Tilknyttet revisor (Partner CPA)',
     },
@@ -2974,13 +2974,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Juridisk assistent med lang erfaring som ledende juridisk assistent (senior paralegal) ved flere kontorer, ansvarlig for processuel støtte, selskabsret og udenlandske investeringer.',
+        'Paralegal med lang erfaring som senior paralegal ved flere kontorer, ansvarlig for processuel støtte, selskabsret og udenlandske investeringer.',
         'Støtte ved procedurer, selskabsstiftelse, tilladelser til udenlandske investeringer, licensansøgninger og udvekslingen mellem Korea og Taiwan.',
       ],
       education: ['Juridisk bachelor (LL.B.), Tunghai University'],
       experience: [
-        'Ledende juridisk assistent (senior paralegal), Boyin Law Firm',
-        'Ledende juridisk assistent (senior paralegal), Muyang International Law Firm',
+        'Senior paralegal, Boyin Law Firm',
+        'Senior paralegal, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

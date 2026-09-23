@@ -11,7 +11,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 # Historie og retsstilling for massage i Taiwan
 
-![Forsidebillede](../images/006-taiwan-massage-history-law/featured-01.jpg)
+![Udvalgt billede](../images/006-taiwan-massage-history-law/featured-01.jpg)
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
@@ -35,9 +35,9 @@ Og sådanne frisørsaloner i taiwansk stil forbliver for mange mennesker i Taiwa
 
 Hvordan det end forholder sig, når der tales om massage (按摩),
 
-findes der i Taiwan også mange gader med massagesteder.
+findes der i Taiwan også mange massagestrøg.
 
-Massagesteder af enhver art ligger side om side.
+Massageindretninger af enhver art står der side om side.
 
 Der er massage ved personer med synshandicap (視障按摩), fodmassage, oliemassage, thailandsk massage og andre former.
 
@@ -97,9 +97,9 @@ På nuværende tidspunkt tillader Korea stadig kun personer med synshandicap, de
 
 og hvis nogen uden den kvalifikation modtager et massagevederlag fra en anden,
 
-kan der ifølge den koreanske lov om lægelige ydelser (醫療法) idømmes fængsel indtil 3 år.
+kan der ifølge den koreanske lov om lægelige ydelser (醫療法) idømmes fængsel i indtil 3 år.
 
-Hvis nogen uden synshandicap driver en massagevirksomhed, kan der idømmes fængsel indtil 5 år.
+Hvis nogen uden synshandicap driver en massagevirksomhed, kan der idømmes fængsel i indtil 5 år.
 
 ​
 

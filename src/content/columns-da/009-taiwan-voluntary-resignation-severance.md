@@ -11,7 +11,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 # Undtagelser, hvor arbejdstagere trods egen opsigelse kan modtage godtgørelse ved afskedigelse (資遣費)
 
-![Forsidebillede](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
+![Hovedbillede](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
 I Taiwan er det ikke let for arbejdstagere at modtage godtgørelse ved afskedigelse (資遣費).
 

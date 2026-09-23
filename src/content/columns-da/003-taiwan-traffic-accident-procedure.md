@@ -299,7 +299,7 @@ Q20. Hvordan finder man en advokat til trafikulykker?
 
 ​
 
-Fordi trafikulykker er meget almindelige sager, kan en advokat med almindelig erfaring med retssager efter nogle års praksis behandle sager om trafikulykker.
+Trafikulykker er meget almindelige sager; en almindelig procesadvokat kan efter nogle års erfaring behandle sager om trafikulykker.
 
 ​
 
@@ -339,7 +339,7 @@ Ved den skadelidtes tilskadekomst eller dødsfald lider den skadelidte selv elle
 
 ​
 
-Mange skadevoldere ringer ikke og spørger ikke til tilstanden, besøger ikke den tilskadekomne og regner med, at forsikringsselskabet ordner alt, mens de selv holder sig væk. Da mærker den skadelidte hverken anger eller oprigtighed.
+Mange skadevoldere ringer ikke og spørger ikke til tilstanden, besøger ikke den tilskadekomne og regner med, at forsikringsselskabet ordner alt, mens de selv holder sig væk. Da føles hverken anger eller alvor.
 
 ​
 
@@ -347,7 +347,7 @@ Mange skadevoldere ringer ikke og spørger ikke til tilstanden, besøger ikke de
 
 ​
 
-Derved lider den skadelidte stor krænkelse og vrede, giver ikke efter på forligsbeløbet eller begærer arrest (假扣押) og beslaglægger modpartens formue til enden.
+Derved lider den skadelidte stor krænkelse og vrede, giver ikke efter ved forhandlingsbeløbet eller begærer arrest (假扣押) og beslaglægger modpartens formue til enden.
 
 ​
 

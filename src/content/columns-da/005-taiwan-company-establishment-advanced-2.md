@@ -11,7 +11,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 # Selskabsstiftelse i Taiwan – uddybning del 2
 
-![Forsidebillede](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
+![Udvalgt billede](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
 Den, der har læst [Selskabsstiftelse i Taiwan – grundlag](/da/columns/taiwan-company-establishment-basics) og [Selskabsstiftelse i Taiwan – uddybning del 1](/da/columns/taiwan-company-establishment-advanced-1), kan læse videre i del 2. Emnet er fortsat selskabsstiftelse (公司設立).
 

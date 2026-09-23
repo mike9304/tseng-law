@@ -4207,7 +4207,7 @@ export const guidanceTeamBios: Record<
   sr: {
     'tseng-junwei': {
       intro: [
-        'Kancelarija vodi stvari preduzeća i privatnih lica na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
+        'Kancelarija vodi stvari preduzeća i fizičkih lica na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
         'Zastupala je korejskog studenta u sporu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.',
       ],
       education: [

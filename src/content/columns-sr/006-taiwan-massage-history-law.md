@@ -19,7 +19,7 @@ Da li su Vam poznati tradicionalni frizerski saloni (理髮廳) s ranog Tajvana?
 
 Način pranja kose u tim salonima bio je veoma osoben.
 
-Osim šišanja postojale su razne usluge, kao brijanje i nega lica.
+Osim šišanja postojale su razne usluge, kao što su brijanje i nega lica.
 
 A suština je bila u tome što se, sedeći, moglo dobiti pranje kose uz masažu kože glave, ramena i vrata.
 
@@ -27,9 +27,9 @@ Već jedno šišanje omogućavalo je da se uživa u toj usluzi visoke klase, pa 
 
 To je veoma podsećalo na današnje pranje kose u vijetnamskom stilu.
 
-A ti saloni u tajvanskom stilu ostaju osobena kulturna uspomena za mnoga lica na Tajvanu.
+A ti saloni u tajvanskom stilu ostaju osobena kulturna uspomena za mnoge ljude na Tajvanu.
 
-Ti saloni ostaju deo sećanja na jedan raniji period Tajvana.
+(Jesam li time odala koliko imam godina?)
 
 ​
 
@@ -81,7 +81,7 @@ Pitalo se, na primer, da li pisana odredba, koja je dozvoljavala isključivo lic
 
 i osporavalo se da li je ta odredba zaista doprinela zaštiti zaposlenja i opstanka lica s oštećenjem vida.
 
-Na kraju su sudije Sudskog juana (大法官) odredbu koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju zanimanje masera proglasili protivustavnom (違憲).
+Na kraju su sudije Sudskog juana (大法官) tu odredbu, koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju zanimanje masera, proglasile protivustavnom (違憲).
 
 ​
 
@@ -89,7 +89,7 @@ Slično, u nekim državama, uključujući Koreju, gde se mnoga lica s oštećenj
 
 načelno samo lica s oštećenjem vida koja su stekla uverenje o osposobljenosti mogu da obavljaju zanimanje masera.
 
-Istina je da je vlada Koreje počela da izdaje uverenja o masaži i licima bez oštećenja vida,
+Vlada Koreje je u jednom periodu izdavala uverenja o masaži i licima bez oštećenja vida,
 
 a mnoga lica s oštećenjem vida, plašeći se gubitka sredstva za život, organizovala su intenzivne proteste.
 
@@ -111,7 +111,7 @@ a zakonodavac nastoji da nađe relativno uravnoteženo rešenje sukoba interesa.
 
 ​
 
-Danas mnoga lica biraju masažu da rasterete napetost,
+Danas mnogi ljudi biraju masažu da rasterete napetost,
 
 ali u tom procesu i dalje dolazi do slučajeva seksualnog uznemiravanja (性騷擾) ili opscenih radnji (猥褻).
 

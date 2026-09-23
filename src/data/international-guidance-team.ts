@@ -941,7 +941,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'تیم بین‌المللی Hovering',
     description:
       'نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering.',
-    representativeTitle: 'وکیلِ مدیر',
+    representativeTitle: 'مدیر دفتر وکالت',
     teamTitle: 'وکلا و همکاران',
     partnerTitle: 'حسابدار شریک',
     introLabel: 'معرفی',
@@ -953,11 +953,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'وکیل Wei Tseng — اطلاعات اصلی',
     qualificationLabel: 'صلاحیت و دفتر',
     qualificationSentence:
-      '{name} مجاز به وکالت در تایوان است و وکیلِ مدیر {firm} است.',
+      '{name} مجاز به وکالت در تایوان است و مدیر {firm} است.',
     practiceLabel: 'زمینه‌های اصلی',
     consultationLanguagesLabel: 'زبان‌های مشاوره',
     roles: {
-      'tseng-junwei': 'وکیلِ مدیر در تایوان',
+      'tseng-junwei': 'وکیل و مدیر دفتر در تایوان',
       'chang-rongxuan': 'وکیل در تایوان',
       'chang-fangyu': 'دستیار حقوقی',
       'son-jungmin': 'مدیر عملیات کره',
@@ -3657,7 +3657,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'دفتر پرونده‌های شرکت‌ها و اشخاص را در تایوان می‌پذیرد و به انگلیسی، ژاپنی، کره‌ای و چینی کار می‌کند.',
-        'او نمایندگی یک دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت TWD 1.57M صادر شد.',
+        'او نمایندگی یک دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت 1.57 میلیون دلار جدید تایوان (TWD 1.57M) صادر شد.',
       ],
       education: [
         'کارشناسی ارشد (M.S.)، Institute of Finance, National Taiwan University',
@@ -3684,7 +3684,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'سال‌ها در چند دفتر وکالت به‌عنوان دستیار حقوقی ارشد کار کرده است، از جمله پشتیبانی دادرسی، امور حقوقی شرکت‌ها و سرمایه‌گذاری خارجی.',
-        'محدودهٔ کار شامل پشتیبانی دادرسی، تأسیس شرکت، آیین تصویب سرمایه‌گذاری خارجی، درخواست پروانه و ارتباط میان کره و تایوان است.',
+        'محدودهٔ کار شامل پشتیبانی دادرسی، تأسیس شرکت، فرایند تصویب سرمایه‌گذاری خارجی، درخواست پروانه و ارتباط میان کره و تایوان است.',
       ],
       education: ['کارشناسی حقوق (LL.B.)، Tunghai University'],
       experience: [

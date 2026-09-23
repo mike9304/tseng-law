@@ -1779,11 +1779,11 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'ارسال درخواست ممکن نشد. دوباره بکوشید، یا به رایانامهٔ درج‌شده در صفحهٔ تماس بنویسید.',
     originalLanguageLabel: 'زبانی که با آن می‌نویسید',
     originalLanguagePlaceholder:
-      'مثلاً فارسی یا فرانسه یا ترکی یا زبانی دیگر',
+      'مثلاً فارسی، فرانسوی، ترکی یا زبانی دیگر',
     preferredConsultationLanguageLabel: 'زبانی که برای مشاوره می‌خواهید',
     originalTextLabel: 'خلاصهٔ موضوع (به زبان شما)',
     originalTextPlaceholder:
-      'بگویید چه رخ داده، چه کمکی می‌خواهید، و مهلت را اگر هست. لطفاً شمارهٔ گذرنامه یا شناسنامه یا دادهٔ حساب بانکی ننویسید.',
+      'بگویید چه رخ داده، چه کمکی می‌خواهید، و مهلت را اگر هست. لطفاً شمارهٔ گذرنامه، شمارهٔ شناسنامه یا اطلاعات حساب بانکی ننویسید.',
     nameLabel: 'نام',
     emailLabel: 'رایانامه',
     consentLabel:
@@ -1793,9 +1793,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'لطفاً نشانی رایانامهٔ معتبر وارد کنید.',
     tooLongMessage: 'متن بسیار بلند است. کوتاه کنید و دوباره بفرستید.',
     sourceLanguageNotice:
-      'این نوشتار فقط به زبان {language} موجود است و پیوند، صفحهٔ متن اصلی را به همان زبان می‌گشاید.',
+      'این نوشتار فقط به زبان {language} موجود است و پیوند، صفحهٔ متن اصلی را به همان زبان باز می‌کند.',
     unavailableTranslationNotice:
-      'این مورد هنوز به زبان این صفحه ترجمه نشده است. پیوندی که زبان اصلی را می‌گوید متن اصلی را می‌گشاید.',
+      'این مورد هنوز به زبان این صفحه ترجمه نشده است. پیوندی که زبان اصلی را می‌گوید متن اصلی را باز می‌کند.',
     unavailableLanguageNotice: 'این صفحه به {language} موجود نیست.',
     languageOptions: {
       en: 'انگلیسی (English)',

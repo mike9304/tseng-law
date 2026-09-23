@@ -6,6 +6,11 @@ import { buildLegalServiceJsonLd } from '@/lib/seo';
 
 const SITE_URL = 'https://tseng-law.test';
 const FIRM_AVAILABLE_LANGUAGES = ['ko', 'zh-Hant', 'en', 'ja'] as const;
+// WO-X4: the firm's fixed four languages, with the page language first.
+const firmLanguagesFor = (locale: string) => {
+  const tag = locale === 'zh-hant' ? 'zh-Hant' : locale;
+  return [tag, ...FIRM_AVAILABLE_LANGUAGES.filter((language) => language !== tag)];
+};
 const SERVICE_AVAILABLE_LANGUAGES = ['English', 'Chinese', 'Japanese', 'Korean'] as const;
 const INDIVIDUAL_ENGLISH_MARKERS = /English|영어|英文|英語/;
 
@@ -151,8 +156,8 @@ describe('buildBuilderRecordJsonLd', () => {
         siteUrl: SITE_URL,
       });
 
-      expect(firm.knowsLanguage).toEqual([...FIRM_AVAILABLE_LANGUAGES]);
-      expect(firm.contactPoint?.[0]?.availableLanguage).toEqual([...FIRM_AVAILABLE_LANGUAGES]);
+      expect(firm.knowsLanguage).toEqual(firmLanguagesFor(locale));
+      expect(firm.contactPoint?.[0]?.availableLanguage).toEqual(firmLanguagesFor(locale));
       expect((service as { availableLanguage?: string[] }).availableLanguage).toContain('English');
     },
   );

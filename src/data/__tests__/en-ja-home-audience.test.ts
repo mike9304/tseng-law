@@ -220,11 +220,12 @@ describe('English and Japanese general-page copy residue', () => {
 });
 
 describe('LegalService JSON-LD audience coverage', () => {
-  it('keeps language tags stable while adding Japan to the served-area list', () => {
+  it('keeps the four language tags (EN page first) and serves Taiwan, the US, Korea and Japan', () => {
     const payload = buildLegalServiceJsonLd('en');
 
-    expect(payload.areaServed).toEqual(['Taiwan', 'South Korea', 'Japan']);
-    expect(payload.knowsLanguage).toEqual(['ko', 'zh-Hant', 'en', 'ja']);
-    expect(payload.contactPoint[0]?.availableLanguage).toEqual(['ko', 'zh-Hant', 'en', 'ja']);
+    // WO-X4: United States added; the page language leads the fixed set of four.
+    expect(payload.areaServed).toEqual(['Taiwan', 'United States', 'South Korea', 'Japan']);
+    expect(payload.knowsLanguage).toEqual(['en', 'ko', 'zh-Hant', 'ja']);
+    expect(payload.contactPoint[0]?.availableLanguage).toEqual(['en', 'ko', 'zh-Hant', 'ja']);
   });
 });

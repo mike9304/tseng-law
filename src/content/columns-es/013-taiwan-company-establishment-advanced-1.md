@@ -33,7 +33,7 @@ También debe confirmar que no se trata de una entrada de fondos desde el exteri
 
 Al redactar el plan de inversión no es necesario escribir la dirección exacta de la sociedad; basta con indicar la zona (por ejemplo, la ciudad de Taipéi). ​
 
-Sin embargo, cuando más adelante se abre en el banco la cuenta preparatoria de la sociedad (公司籌備處帳戶), muchos bancos revisan el contrato de arrendamiento (租賃契約) e inspeccionan in situ la dirección de la sociedad.
+Sin embargo, cuando más adelante se abre en el banco la cuenta de la sociedad en constitución (公司籌備處帳戶), muchos bancos revisan el contrato de arrendamiento (租賃契約) e inspeccionan in situ la dirección de la sociedad.
 
 Un empleado de un banco taiwanés me dijo en persona lo siguiente.
 
@@ -53,7 +53,7 @@ Según el artículo 9 del Estatuto de Inversión de Extranjeros (外國人投資
 
 Dentro de ese plazo, una vez encontrada la dirección de la sociedad y firmado el contrato de arrendamiento, queda margen.
 
-Hay tiempo suficiente para abrir en el banco la cuenta preparatoria de la sociedad y remitir el capital.
+Hay tiempo suficiente para abrir en el banco la cuenta de la sociedad en constitución y remitir el capital.
 
 ​
 

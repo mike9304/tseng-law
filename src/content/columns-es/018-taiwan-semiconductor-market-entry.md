@@ -73,7 +73,7 @@ Cuando una sociedad extranjera constituye una filial taiwanesa, en principio se 
 
 En cambio, al constituir una sucursal taiwanesa de una sociedad extranjera ordinaria, en principio no se exige autorización de inversión del Departamento de Revisión de Inversiones; el Departamento de Comercio del Ministerio de Economía tramita el registro de sucursal y la determinación de capital conexa. Siguen siendo necesarios la reserva previa del nombre, la remesa de capital de explotación, la verificación de capital y el registro fiscal; el calendario suele ser más corto.
 
-Lo anterior es una propuesta de diseño contractual. Contar con una forma concreta no hace lícita la operación ni evita controversias.
+Lo anterior solo compara el procedimiento de registro de la sucursal y el de la filial. Contar con una forma concreta no hace lícita la operación ni evita controversias.
 
 ## 5. El registro societario y el trabajo lícito de un ingeniero no son lo mismo
 
@@ -85,7 +85,7 @@ Para el gerente de la filial o sucursal taiwanesa de una sociedad extranjera, ob
 
 Los siguientes escenarios son hipotéticos y solo sirven para orientar el análisis; no garantizan que un modo sea lícito o preferible.
 
-**Empresas centradas en la exportación inicial.** Si aún no hay empleados ni inventario en Taiwán y se quiere comprobar la demanda mediante un distribuidor independiente, pueden examinarse primero el suministro, la relación de distribución y el ámbito de actividad en Taiwán. Un contrato de distribución por sí solo no elimina todas las cuestiones regulatorias en Taiwán.
+**Empresas centradas en la exportación inicial.** Si aún no hay empleados ni inventario en Taiwán y se quiere comprobar la demanda mediante un distribuidor independiente, pueden examinarse primero el suministro, la relación de distribución y el ámbito de actividad en Taiwán. Un contrato de distribución, por sí solo, no dispensa del cumplimiento de la normativa taiwanesa.
 
 **Empresas que amplían ventas y apoyo técnico en Taiwán.** Si se planea contratar en Taiwán y seguir gestionando inventario, cobros y apoyo al cliente, conviene comparar de forma concreta filial y sucursal, y revisar también la responsabilidad contractual, el modo de operar de la sede, los impuestos y el personal.
 

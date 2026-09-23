@@ -2045,11 +2045,11 @@ export const guidanceTeamBios: Record<
         'สนับสนุนการสื่อสารระหว่างทีมด้วยระบบเอกสารและระบบงาน โดยอาศัยพื้นฐานด้านวิทยาการคอมพิวเตอร์',
       ],
       education: ['วิทยาศาสตรบัณฑิต (B.S.) สาขาวิทยาการคอมพิวเตอร์, National Cheng Kung University'],
-      experience: ['ทีมงานธุรกิจเกาหลี, Hovering International Law Firm'],
+      experience: ['ทีมธุรกิจเกาหลี, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'สำเร็จการศึกษาระดับปริญญาตรีและปริญญาโทด้านการบัญชีจาก National Chengchi University และปัจจุบันบริหารสำนักงานบัญชีแห่งหนึ่ง',
+        'สำเร็จการศึกษาระดับปริญญาตรีและปริญญาโทด้านการบัญชีจาก National Chengchi University และปัจจุบันบริหารสำนักงานสอบบัญชีแห่งหนึ่ง',
         'สนับสนุนการวิเคราะห์ความเสี่ยงด้านกฎหมาย ภาษี และการเงินอย่างครบวงจรให้แก่ลูกความที่เป็นองค์กรธุรกิจ',
       ],
       education: [

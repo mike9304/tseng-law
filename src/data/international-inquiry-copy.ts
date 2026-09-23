@@ -2032,7 +2032,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     preferredConsultationLanguageLabel: 'Хүссэн зөвлөгөөний хэл',
     originalTextLabel: 'Хэргийн товч тойм (таны хэлээр)',
     originalTextPlaceholder:
-      'Юу болсныг, ямар тусламж хэрэгтэйг, хугацаа байвал түүнийг бичнэ үү. Паспортын дугаар, үнэмлэхийн дугаар, дансны мэдээлэл бичихгүй.',
+      'Юу болсныг, ямар тусламж хэрэгтэйг, хугацаа байвал түүнийг бичнэ үү. Паспортын дугаар, үнэмлэхийн дугаар, дансны мэдээллийг бичихгүй байгаарай.',
     nameLabel: 'Нэр',
     emailLabel: 'Цахим шуудан',
     consentLabel:

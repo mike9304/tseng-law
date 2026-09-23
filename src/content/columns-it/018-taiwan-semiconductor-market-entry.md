@@ -10,7 +10,7 @@ faq:
   - q: "Se vi sono clienti a Taiwan, è necessario costituire ivi una società?"
     a: "Non se ne deduce automaticamente la necessità di costituire una società solo perché il cliente è a Taiwan. Devono esaminarsi le esigenze del cliente e l’attività d’impresa reale, gli impianti, il personale e la struttura delle operazioni a Taiwan, e poi scegliere l’entità più adeguata."
   - q: "La responsabilità della sede sparisce per intero quando una società taiwanese è costituita?"
-    a: "Se si costituisce una società controllata e non una succursale, la sede, in linea di principio, non assume le obbligazioni contrattuali firmate in nome della società controllata. Devono però verificarsi le eccezioni per abuso della personalità giuridica e se la sede ha concesso una cauzione o ha assunto obbligazioni contrattuali proprie."
+    a: "Se si costituisce una società controllata e non una succursale, la sede, in linea di principio, non assume le obbligazioni contrattuali firmate in nome della società controllata. Devono però verificarsi le eccezioni per abuso della personalità giuridica e se la sede ha prestato una garanzia o ha assunto obbligazioni contrattuali proprie."
   - q: "Si può cominciare con un distributore e poi passare a una società a Taiwan?"
     a: "Una transizione per tappe può pianificarsi, ma deve anche rivedersi l’estinzione o la modifica dei contratti esistenti, i contratti con i clienti, le scorte, la gestione della garanzia e il personale."
 ---
@@ -59,7 +59,7 @@ La differenza principale tra una società controllata taiwanese e una succursale
 
 Se si decide di costituire una persona giuridica indipendente a Taiwan, deve anche scegliersi la sua forma. A Taiwan esistono la società a responsabilità limitata (有限公司) e la società per azioni (股份有限公司).
 
-### Società a responsabilità limitata (有限公司): governance più semplice, ma trasmissione delle quote più chiusa
+### Società a responsabilità limitata (有限公司): governance più semplice, ma cessione delle quote più chiusa
 
 Può formarsi con 1 o più persone fisiche, o con soci persone giuridiche taiwanesi o straniere; i soci rispondono, in linea di principio, fino all’importo del loro conferimento. La società ha da 1 a 3 amministratori, eletti tra i soci. I soci che non svolgono l’attività sociale possono esercitare diritti di vigilanza, senza necessità di un supervisore distinto. Salvo disposizione statutaria in contrario, ciascun socio ha 1 voto, così che il controllo può non coincidere con la proporzione dei conferimenti. La trasmissione del conferimento di un socio ordinario esige, in linea di principio, il consenso di più della metà dei diritti di voto degli altri; per un amministratore, il consenso di almeno due terzi dei diritti di voto degli altri soci. Ciò conviene meglio a relazioni di soci semplici e a un controllo stabile che a una frequente raccolta di capitale o alla circolazione delle quote. Più tardi, può convertirsi in società per azioni (股份有限公司).
 
@@ -95,7 +95,7 @@ Gli scenari seguenti sono ipotetici per aiutare a riflettere; non stabiliscono c
 
 Nel primo colloquio, possono riunirsi i dati di base della sede e di chi fa conferimenti, una descrizione generale del prodotto o del servizio, il flusso di operazioni previsto, i piani di personale e di impianti a Taiwan, e le condizioni di contratto e di sostegno che i clienti chiedono. Ciò che non è ancora deciso può marcarsi come «in attesa».
 
-Non è necessario allegare al primo contatto tutti i materiali riservati del cliente o dati di processo dettagliati. Dopo aver fornito il nome della controparte per il controllo dei conflitti, i materiali necessari e il modo di invio si determinano secondo le indicazioni del responsabile.
+Non è necessario allegare al primo contatto tutti i materiali riservati del cliente o dati di processo dettagliati. Dopo aver fornito il nome della controparte per il controllo dei conflitti, i materiali necessari e il modo di invio si determinano secondo le indicazioni dell’avvocata o dell’avvocato incaricato.
 
 ## Domande frequenti
 
@@ -105,7 +105,7 @@ Non se ne deduce automaticamente la necessità di costituire una società solo p
 
 ### La responsabilità della sede sparisce per intero quando una società taiwanese è costituita?
 
-Se si costituisce una società controllata e non una succursale, la sede, in linea di principio, non assume le obbligazioni contrattuali firmate in nome della società controllata. Devono però verificarsi le eccezioni per abuso della personalità giuridica e se la sede ha concesso una cauzione o ha assunto obbligazioni contrattuali proprie.
+Se si costituisce una società controllata e non una succursale, la sede, in linea di principio, non assume le obbligazioni contrattuali firmate in nome della società controllata. Devono però verificarsi le eccezioni per abuso della personalità giuridica e se la sede ha prestato una garanzia o ha assunto obbligazioni contrattuali proprie.
 
 ### Si può cominciare con un distributore e poi passare a una società a Taiwan?
 

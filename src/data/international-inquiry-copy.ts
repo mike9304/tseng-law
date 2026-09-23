@@ -974,7 +974,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Abbiamo ricevuto la Sua richiesta; attende l’esame. Ciò non significa che la consulenza abbia avuto luogo o che un appuntamento sia confermato.',
     savedNotificationPendingMessage:
       'La Sua richiesta è conservata, ma la notifica allo studio non è ancora confermata. Quanto ha scritto non va perduto. Se non riceve risposta, può anche scrivere all’indirizzo di posta elettronica della pagina di contatto.',
-    receiptIdLabel: 'Numero di ricezione',
+    receiptIdLabel: 'Numero di ricevuta',
     failureMessage:
       'Non è stato possibile inviare la Sua richiesta. Riprovi o scriva all’indirizzo di posta elettronica della pagina di contatto.',
     originalLanguageLabel: 'Lingua in cui scrive',

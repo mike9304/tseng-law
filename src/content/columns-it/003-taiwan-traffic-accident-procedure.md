@@ -91,10 +91,10 @@ In caso di disaccordo con il parere di perizia, un riesame può essere chiesto, 
 
 ## Q7. Quali danni si possono pretendere dopo l’incidente?
 
-La pretesa fondata sull’articolo 184 del Codice civile presuppone un’offesa illecita a un diritto, il nesso di causalità con l’incidente e la prova del danno. Il solo fatto che un incidente sia occorso non implica che tutte le voci seguenti siano riconosciute. L’articolo 216 del Codice civile è il criterio per determinare l’estensione del danno effettivo e del lucro cessante (所失利益).
+La pretesa fondata sull’articolo 184 del Codice civile presuppone un’offesa illecita a un diritto, il nesso di causalità con l’incidente e la prova del danno. Il solo fatto che un incidente si sia verificato non implica che tutte le voci seguenti siano riconosciute. L’articolo 216 del Codice civile è il criterio per determinare l’estensione del danno effettivo e del lucro cessante (所失利益).
 
 - **Ferite**: Secondo l’articolo 193 del Codice civile possono essere esaminate le spese mediche (醫療費用) necessarie, le spese supplementari della vita quotidiana quali le spese di assistenza (看護費用), di trasporto per cura (就醫交通費) e di ausili tecnici, nonché la perdita di redditi (收入損失) per incapacità di lavoro reale e la diminuzione della capacità di lavoro (勞動能力減損). Secondo l’articolo 195 del Codice civile il danno morale può anche essere esaminato.
-- **Morte**: Secondo l’articolo 192 del Codice civile, quando vi è luogo, possono essere esaminate le spese mediche anteriori alla morte e le spese di necessità vitali accresciute, le spese funebri (殯葬費) e la perdita di alimenti (扶養利益損失) della persona che aveva un diritto legale agli alimenti. Secondo l’articolo 194 del Codice civile il danno morale di certi parenti può anche essere esaminato.
+- **Morte**: Secondo l’articolo 192 del Codice civile, ove ne ricorrono i presupposti, possono essere esaminate le spese mediche anteriori alla morte e le spese di necessità vitali accresciute, le spese funebri (殯葬費) e la perdita di alimenti (扶養利益損失) della persona che aveva un diritto legale agli alimenti. Secondo l’articolo 194 del Codice civile il danno morale di certi parenti può anche essere esaminato.
 - **Patrimonio**: Secondo l’articolo 196 del Codice civile si può pretendere il danno patrimoniale effettivo giustificato, comprese le spese di riparazione del veicolo o la perdita di valore.
 
 ## Q8. Se il trattamento prosegue, come presentare i documenti delle spese mediche?
@@ -149,7 +149,7 @@ Il danno per diminuzione della capacità di lavoro si distingue dai redditi real
 
 Il fatto che il salario attuale si mantenga senza variazione non esclude automaticamente la pretesa. Al contrario, l’importo del danno non si fissa neppure in modo meccanico solo con la percentuale di invalidità o con il salario attuale.
 
-Se il disturbo funzionale persistente è contestato in modo sostanziale, una perizia medica può essere utile, ma non è obbligatoria in tutti i casi. Si esaminano anche la compensazione delle colpe dell’articolo 217 del Codice civile e altri motivi di adeguamento.
+Se il disturbo funzionale persistente è contestato in modo sostanziale, una perizia medica può essere utile, ma non è obbligatoria in tutti i casi. Si esaminano anche il concorso di colpa di cui all’articolo 217 del Codice civile e altri motivi di adeguamento.
 
 Quando il calcolo si fa in un capitale unico, la detrazione degli interessi intercalari (中間利息扣除) può essere ponderata. Il calcolatore Hoffmann (霍夫曼) dello Yuan giudiziario è soltanto uno strumento di calcolo, non un metodo legalmente obbligatorio, e non promette il risultato. Secondo l’articolo 193 del Codice civile, a domanda della parte il tribunale può anche ordinare il pagamento in rendita periodica sotto condizione di una cauzione.
 
@@ -175,7 +175,7 @@ L’obbligo di sottoscrivere secondo l’articolo 6 della legge sull’assicuraz
 
 In un incidente di un solo veicolo, il conducente di quel veicolo non è, in generale, destinatario delle prestazioni dell’assicurazione obbligatoria di quel veicolo. Tuttavia, in un incidente in cui intervengono più veicoli, esistono casi nei quali il conducente può chiedere le prestazioni all’assicuratore obbligatorio di un altro veicolo implicato.
 
-La tabella di prestazioni (強制汽車責任保險給付標準) modificata il 29 maggio 2026 si applica agli incidenti occorsi a decorrere dal 1 luglio 2026. Il tetto delle spese mediche ragionevoli e necessarie per le ferite è di 200.000 nuovi dollari taiwanesi (TWD); la prestazione per invalidità (失能) va da 80.000 a 3.000.000 TWD secondo 15 gradi legali; la prestazione per morte è 3.000.000 TWD, e il massimo congiunto di morte, di invalidità e delle spese mediche per ogni vittima e ogni incidente è 3.200.000 TWD. Agli incidenti anteriori può applicarsi la tabella precedente.
+La tabella di prestazioni (強制汽車責任保險給付標準) modificata il 29 maggio 2026 si applica agli incidenti verificatisi a decorrere dal 1 luglio 2026. Il tetto delle spese mediche ragionevoli e necessarie per le ferite è di 200.000 nuovi dollari taiwanesi (TWD); la prestazione per invalidità (失能) va da 80.000 a 3.000.000 TWD secondo 15 gradi legali; la prestazione per morte è 3.000.000 TWD, e il massimo congiunto di morte, di invalidità e delle spese mediche per ogni vittima e ogni incidente è 3.200.000 TWD. Agli incidenti anteriori può applicarsi la tabella precedente.
 
 L’assicurazione di responsabilità civile verso terzi (第三人責任險), l’assicurazione di infortuni del conducente (駕駛人傷害險) e l’assicurazione di danni sul proprio veicolo (車體損失險) sono prodotti facoltativi di carattere contrattuale. La copertura reale varia secondo l’assicurato, il tetto, la franchigia (自負額), le esclusioni, la colpa e le altre condizioni della polizza, sicché la polizza e le condizioni devono essere verificate caso per caso.
 
@@ -239,7 +239,7 @@ In caso di lesioni colpose, in alcune sentenze è stata inflitta una pena di cir
 
 ​
 
-Se è convertita in ammenda (易科罰金), l’articolo 41, comma 1, del Codice penale fissa la conversione in 1.000 TWD, 2.000 o 3.000 TWD per giorno; calcolato a 1.000 TWD per giorno, una pena di 3 mesi equivale a 3 × 30 × 1.000 TWD = 90.000 TWD.
+Se la pena detentiva è convertita in multa (易科罰金), l’articolo 41, comma 1, del Codice penale fissa la conversione in 1.000 TWD, 2.000 o 3.000 TWD per giorno; calcolato a 1.000 TWD per giorno, una pena di 3 mesi equivale a 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 

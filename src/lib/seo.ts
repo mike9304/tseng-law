@@ -222,6 +222,24 @@ export function getOpenGraphLocale(locale: PublicSeoLocale): string {
 }
 
 const organizationLanguageTags = ['ko', 'zh-Hant', 'en', 'ja'];
+
+/**
+ * WO-X4 (G7): the firm's four consultation languages with the page's own
+ * language first, so an EN page leads with `en`, a JA page with `ja`, etc.
+ * The set itself is fixed (never add a language here); only the order follows
+ * the page. Remaining languages keep the canonical {@link organizationLanguageTags}
+ * order, so the KO output is unchanged.
+ */
+export function getConsultationLanguageTags(locale: SiteLocale): string[] {
+  const pageLanguage = getLocaleLanguageTag(locale);
+  return [pageLanguage, ...organizationLanguageTags.filter((tag) => tag !== pageLanguage)];
+}
+
+/**
+ * WO-X4 (G7): regions the firm serves from Taiwan. The United States was
+ * missing although it is a core EN market this year.
+ */
+const LEGAL_SERVICE_AREA_SERVED = ['Taiwan', 'United States', 'South Korea', 'Japan'];
 const organizationAddress: Record<SiteLocale, string> = {
   ko: '타이베이시 다퉁구 청더로 1단 35호 7층의2',
   'zh-hant': '台北市大同區承德路一段35號7樓之2',
@@ -544,15 +562,15 @@ export function buildLegalServiceJsonLd(
     url: buildAbsoluteUrl(getLocalizedPath(locale, options?.path)),
     serviceType: options?.serviceType,
     email: CONSULTATION_EMAIL,
-    areaServed: ['Taiwan', 'South Korea', 'Japan'],
-    knowsLanguage: organizationLanguageTags,
+    areaServed: LEGAL_SERVICE_AREA_SERVED,
+    knowsLanguage: getConsultationLanguageTags(locale),
     sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     contactPoint: [
       {
         '@type': 'ContactPoint',
         contactType: 'customer service',
         email: CONSULTATION_EMAIL,
-        availableLanguage: organizationLanguageTags,
+        availableLanguage: getConsultationLanguageTags(locale),
         url: buildAbsoluteUrl(getLocalizedPath(locale, '/contact')),
       },
     ],

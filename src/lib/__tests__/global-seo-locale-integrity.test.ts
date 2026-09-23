@@ -65,6 +65,8 @@ const localeExpectations: Record<
 };
 
 const bcp47Languages = ['ko', 'zh-Hant', 'en', 'ja'];
+// WO-X4: the page language leads; the remaining three keep the canonical order.
+const pageFirstLanguages = (language: string) => [language, ...bcp47Languages.filter((tag) => tag !== language)];
 const organizationId = 'https://tseng-law.com/#organization';
 
 describe.each(Object.entries(localeExpectations) as Array<
@@ -120,10 +122,10 @@ describe.each(Object.entries(localeExpectations) as Array<
       '@id': organizationId,
       name: expected.organizationName,
       url: localeRoot,
-      knowsLanguage: bcp47Languages,
+      knowsLanguage: pageFirstLanguages(expected.language),
       contactPoint: [
         {
-          availableLanguage: bcp47Languages,
+          availableLanguage: pageFirstLanguages(expected.language),
           url: `${localeRoot}/contact`,
         },
       ],

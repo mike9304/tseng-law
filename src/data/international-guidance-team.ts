@@ -296,7 +296,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'NUESTRO EQUIPO',
     title: 'Equipo internacional de Hovering',
     description:
-      'Perfiles de los abogados, de la dirección de operaciones y del socio auditor, Partner CPA, de Hovering.',
+      'Perfiles de los abogados, de la dirección de operaciones y del socio auditor Partner CPA de Hovering.',
     representativeTitle: 'Abogada directora',
     teamTitle: 'Abogados y personal',
     partnerTitle: 'Socio auditor (Partner CPA)',

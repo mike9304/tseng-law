@@ -708,7 +708,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ABOGADOS',
       title: 'Equipo internacional de Hovering',
-      description: 'Perfiles de los abogados, de la dirección de operaciones y del socio auditor, Partner CPA, de Hovering.',
+      description: 'Perfiles de los abogados, de la dirección de operaciones y del socio auditor Partner CPA de Hovering.',
       intro: '',
       sections: [],
     },

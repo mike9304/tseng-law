@@ -66,7 +66,7 @@ La constitución de una filial taiwanesa suele comenzar por el examen previo del
 
 8. Registro fiscal
 
-9. Conversión de la cuenta preparatoria en cuenta ordinaria
+9. Conversión de la cuenta de la sociedad en constitución en cuenta ordinaria
 
 10. Trámites adicionales de exportación e importación, autorizaciones sectoriales, permiso de trabajo y residencia (cuando corresponda)
 
@@ -74,7 +74,7 @@ El examen previo del nombre en chino y de los ramos de actividad es la etapa en 
 
 Los documentos otorgados en el extranjero, como el poder, el certificado de existencia de la persona jurídica (法人存續證明) y los que acreditan la facultad de representación, pueden requerir notarización, legalización o autenticación por una misión de Taiwán en el exterior, según el lugar de expedición y la naturaleza del documento. También debe comprobarse que la traducción y la mención del firmante autorizado y de la denominación social coincidan con la solicitud. Como los documentos a preparar pueden variar según la nacionalidad del inversor y según se trate de una persona física o jurídica, es más eficiente ordenar los plazos de validez y la vía de autenticación antes de obtenerlos.
 
-En la etapa de apertura de la cuenta preparatoria y de transferencia de los fondos de inversión, el banco puede verificar al titular real (實質受益人) y el origen de los fondos como parte de la identificación del cliente. Si el ordenante, el propósito de la transferencia, el contenido de la aprobación de inversión y la cuenta de destino no coinciden, puede ser necesaria una explicación o una corrección adicionales. Tras la transferencia se determina el importe realmente invertido, se continúa con el registro de constitución y el registro fiscal, y se convierte la cuenta preparatoria en cuenta ordinaria conforme al procedimiento bancario.
+En la etapa de apertura de la cuenta de la sociedad en constitución y de transferencia de los fondos de inversión, el banco puede verificar al titular real (實質受益人) y el origen de los fondos como parte de la identificación del cliente. Si el ordenante, el propósito de la transferencia, el contenido de la aprobación de inversión y la cuenta de destino no coinciden, puede ser necesaria una explicación o una corrección adicionales. Tras la transferencia se determina el importe realmente invertido, se continúa con el registro de constitución y el registro fiscal, y se convierte la cuenta de la sociedad en constitución en cuenta ordinaria conforme al procedimiento bancario.
 
 El orden, la necesidad y la duración de los trámites varían según la forma organizativa, el importe invertido, el sector, el contenido de la revisión, el avance del procedimiento bancario y si hay correcciones. También hay trámites que se realizan después de constituir la sociedad, como el registro de exportación e importación, las autorizaciones relativas a fábrica, producto o sector profesional, y las solicitudes de permiso de trabajo y de residencia de extranjeros. Al fijar la fecha de firma de un contrato o la de inicio de actividad, no debe considerarse solo el registro mercantil, sino también el momento en que queden concluidos esos trámites posteriores.
 

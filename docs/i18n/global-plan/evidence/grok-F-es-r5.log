@@ -1,0 +1,136 @@
+# WO-F-es — Spanish fix lane (Grok 4.7), campaign round 5
+Worktree: /Users/son7/Projects/tseng-law-fix-es-r5 (no git add/commit/push)
+Scope written: src/content/columns-es/{001,004,005,006,007,008,010,011,013,017,018}.md,
+src/data/international-guidance-western.ts (es lawyers description),
+src/data/international-guidance-team.ts (es description only),
+src/data/international-guidance-answers.ts (es lawyers answer, same sentence),
+this log. No test file edited (nothing pinned the strings that changed).
+R2–R10 were already in this text: part a scores the pack 5/5 and the columns 4/5;
+part b scores 010–018 at 4/5. Sweep found no further unflagged R2–R10 instance
+(Korea framing and the treaty caveat, advertising hedges, feminine Wei Tseng,
+NUESTRO EQUIPO / Perfil completo (en inglés), « », dates, 119/110/112, usted).
+0 additional rewrites from that sweep.
+
+## Rows applied
+es-a.md
+  a#1  004: "ordena la doble imposición" → "coordina la tributación … para evitar la doble imposición".
+  a#4  006: dangling "si se habla de masaje." → "En cualquier caso, hablando de masaje."
+       Kept the next paragraph ("En Taiwán hay también muchas calles de masaje.")
+       as its own block. English is a topic shift, not a conditional.
+  a#6  008: the evidence conditional no longer closes on "conviene documentarlo".
+       Eight existing paragraphs now read as two continuing sentences; the bold
+       line stays the apodosis ("**deben dejarse pruebas.**"). Blocks not merged.
+  a#8  008: "cuánto dejaba de trabajar con diligencia" → "que no trabajaba con diligencia".
+  a#9  006: "hay consecuencia penal." is now the protasis; the next block carries the
+       Medical Service Act and the 3-year term. Digit 3 stays once.
+  a#10 007: "llevarse al hijo o no devolverlo" → "llevarse al hijo ni negarse a devolverlo".
+  a#11 P3  broken list around Partner CPA. Descriptions cannot take parentheses
+       (llms catalog). Three copies now read "del socio auditor Partner CPA de Hovering"
+       (lawyers page description, team description, lawyers answer). Role label
+       "Socio auditor (Partner CPA)" left as the review already accepted it.
+  a#13 P3  "por cada un año completo" → "por cada año completo" (008 FAQ answer + body). 2.
+
+es-b.md
+  b#1  018: "Lo anterior es una propuesta de diseño contractual." →
+       "Lo anterior solo compara el procedimiento de registro de la sucursal y el de la filial."
+  b#4  010: "¿hubo falta del gimnasio?" → "¿tuvo culpa el gimnasio?" (alt + link). 2.
+  b#5  010: "indicar … un peso muerto" → "indicar … que hiciera un peso muerto de 90 kg" (alt + link). 2.
+  b#6  011: "ni es un juicio de que" → "ni supone que".
+  b#7  011: "deben gestionarse como líneas de cumplimiento distintas" → "deben llevarse por separado".
+  b#8  011: "dirección de etiquetado del fabricante o importador" →
+       "dirección del fabricante o importador de cosméticos que debe figurar en el etiquetado".
+  b#9  013 and sweep: "cuenta preparatoria" → "cuenta de la sociedad en constitución"
+       (gloss 公司籌備處帳戶 kept). 10 instances: 001 ×3, 005 ×5, 013 ×2.
+  b#10 017: logistics does not, standing alone, make the company a motor freight carrier.
+  b#11 018: "no elimina todas las cuestiones regulatorias" →
+       "no dispensa del cumplimiento de la normativa taiwanesa".
+
+Applied 17 (a#1, a#4, a#6, a#8, a#9, a#10, a#11, a#13, b#1, b#4–b#11).
+
+## Rows skipped
+a#2  003 Q16–Q20 as "##" headings.
+     Korean and English keep Q16–Q20 as body paragraphs. checkHeadings compares
+     heading levels with src/content/columns. Adding ## fails that check and
+     changes the block types. Left as paragraphs.
+a#3  U+200B blank lines and 005 `**​**`.
+     checkBlocks requires the same ZWSP count and the same block count as the
+     Korean source. Those characters are in the source. Deleting them fails
+     `blocks` / `ZWSP`. 0 removed.
+a#5  003 "por cada 1 víctima y cada 1 accidente".
+     Korean is "피해자 1명·사고 1건당". Dropping the digits fails `numbers`.
+     "Cada" does not replace the digit for the checker. Left.
+a#7  004 "(la fuente lo cita como artículo 10)".
+     The suggested label drops the digit 10. First edit failed
+     `numbers  missing from translation (1): 10` (Korean source label is article 10;
+     the URL flno=3 was already correct and was not changed). Parenthetical restored
+     so the file passes. The aside is still clumsy; the checker will not allow it to go.
+a#12 P3  "TWD 1.57M (1,57 millones de dólares taiwaneses)".
+     ACCEPTED-ROUND: the token `TWD 1.57M` stays byte-identical. Suggested rewrite
+     replaces that token. Left.
+b#2  013 and 015 U+200B, including lines whose only character is U+200B.
+     Same constraint as a#3. 0 removed.
+b#3  018 renumber "## 7" → "## 6" and "## 8" → "## 7".
+     Korean and English skip 6 as well. Changing the digits fails `numbers`
+     (drops 8, adds 6) and the work order forbids changing numbers.
+     Headings left as 7 and 8.
+
+## Systemic patterns
+- Treaty verb "ordena la doble imposición": swept columns-es and the es pack.
+  1 instance (004) changed. 016 "ajuste de la doble imposición" is the adjustment
+  rules, not this verb. Left.
+- U+200B: 87 characters, all matching the Korean source
+  (003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3). Changed 0. See a#3 and b#2.
+- Q16–Q20 body vs heading: 5 question lines in 003. Changed 0. See a#2.
+- Editor aside "(la fuente lo cita como …)": 1 instance (004). Changed 0. See a#7.
+- 008 conditional closed early / lowercase bold consequence: 8 paragraphs rephrased
+  in place (1 finding). No other early-closed "conviene documentarlo".
+- Dangling "si … ." with no main clause: 1 instance (006) changed.
+- 018 false "propuesta de diseño contractual" on the branch/subsidiary comparison:
+  1 instance changed. Numbering skip 5→7 left (see b#3).
+- English calque "líneas de cumplimiento": 1 instance (011) changed.
+  No other "líneas de cumplimiento" / "workstream".
+- "cuenta preparatoria": 10 instances changed (001, 005, 013). See b#9.
+  "autorización de preparación de constitución" (籌設許可) is a different term. Left.
+- "dirección de etiquetado": 1 instance (011) changed.
+- "por cada un año": 2 instances (008) changed.
+- Partner CPA comma list: 3 strings changed (description ×2, lawyers answer ×1).
+
+## Reviewer got wrong (not applied)
+- a#2 treats the Q16–Q20 paragraph form as a Spanish outline bug. The Korean source
+  and the English file use the same non-heading paragraphs. Spanish matches them.
+- b#3 treats the missing "6" as a Spanish numbering bug. The Korean source and the
+  English file skip from 5 to 7 as well.
+- a#5 treats the extra "1" as redundant Spanish. The Korean source counts those
+  digits ("1명", "1건"). Removing them is a number-parity failure, not a style choice.
+- a#12 asks to replace the visible token `TWD 1.57M`. That token is pinned
+  byte-identical. The Spanish amount is already in the parenthesis.
+- a#11's suggested parentheses around Partner CPA cannot go in the lawyers
+  description or the team description. Those strings are compared verbatim after
+  the llms catalog strips parentheses. The comma fix was applied without them.
+- a#7's diagnosis (the aside should not be a published correction) is right as
+  prose and blocked by the digit 10. Not a misreading. Listed under skipped.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+```
+       0
+```
+```
+TSC_OK
+```
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+```
+      17
+```

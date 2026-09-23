@@ -117,11 +117,11 @@ Nagu juba öeldud, uurib pank üürilepingut ja kontrollib äriühingu aadressi 
 
 Lisaks nõuab linnavalitsus (市政府) lõplikul äriühingu registreerimisel, et registreeritud aadress asuks tsoonis, kus restoranitegevus on lubatud.
 
-Tavalisel ärikontoripinnal ei ole äriühingu registreerimine (公司登記) sel juhul võimalik.
+Tavalisel ärikontoripinnal ei pruugi äriühingu registreerimine (公司登記) sel juhul võimalik olla.
 
-Kui aga tegevusalasid (營業項目) saab pidada tavalisel ärikontoripinnal, nagu reklaami või hulgimüüki, võib äriühingu asutada tavalisel ärikontoripinnal. Enne üürilepingu sõlmimist tasub sobivus läbi mõelda.
+Kui aga tegevusalasid (營業項目) saab pidada tavalisel ärikontoripinnal, nagu reklaami või hulgimüüki, võib äriühingu asutada tavalisel ärikontoripinnal.
 
-Tasub see eelnevalt kontrollida.
+Kontrollige seda palun enne üürilepingu sõlmimist.
 
 *See leht on ainult üldine juhis. Nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles; päringu võib saata kontaktvormiga, viivitamatu vastuse kohta lubadust ei anta.*
 
@@ -130,4 +130,4 @@ Tasub see eelnevalt kontrollida.
 > Vaadake ka:
 > - [Milliste asjadega tegeleme](/et/services)
 > - [Hoveringi rahvusvaheline meeskond](/et/lawyers)
-> - [Kuidas bürooni jõuda](/et/contact)
+> - [Kuidas büroo poole pöörduda](/et/contact)

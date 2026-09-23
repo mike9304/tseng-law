@@ -26,7 +26,7 @@ Järgnev selgitab seadusjärgset lahkumishüvitist (資遣費) Taiwanis.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Võrdlus mõne teise õiguskorra, näiteks Koreaga, on järgmine.
+Võrdlus mõne teise õiguskorraga, näiteks Koreaga, on järgmine.
 
 Mõnes õiguskorras, näiteks Koreas, peab äriühing maksma lahkumishüvitist, kui töötaja lahkub.
 
@@ -74,7 +74,7 @@ Siis kasutavad mõned Taiwani äriühingud erinevaid võtteid,
 
 et neil ei tuleks maksta suuri lahkumishüvitisi,
 
-ja saavad töötajad omal soovil lahkuma.
+ja panevad töötajad omal soovil lahkuma.
 
 Töötajad peavad olema ettevaatlikud
 
@@ -118,9 +118,9 @@ Muidu pidavat B äriühingust lahkuma;
 
 ta andis B-le A4-lehe
 
-ja käskis kirjutada: „Mina, [nimi], alandan vabatahtlikult ametikohta ja palka“
+ja käskis tal kirjutada teksti, mille sisu oli järgmine:
 
-sisuks.
+„Mina, [nimi], alandan vabatahtlikult ametikohta ja palka“.
 
 Seda kokkulepet kavatseti näidata kõigile teistele töötajatele,
 
@@ -154,7 +154,7 @@ paljude juhtivate töötajate palku
 
 ja osa töötajaid ei talunud seda kohtlemist
 
-ning lahkus omal soovil
+ning lahkus omal soovil.
 
 ​
 
@@ -186,7 +186,7 @@ tuleb tõendid säilitada,
 
 kui äriühing kasutab ebasobivaid võtteid.
 
-Kui äriühing hakkab kinni töötajate väikestest vigadest,
+Kui äriühing hakkab norima töötajate väikeste vigade kallal,
 
 seab raskesti saavutatavaid eesmärke,
 
@@ -214,7 +214,7 @@ on lahkumishüvitist raskem saada, kui arvatakse.
 
 Ärge tehke äriühinguga kergekäeliselt kompromissi.
 
-Hoidke, et äriühing ei ütleks teid ebaõiglaselt üles.
+Ärge laske äriühingul end ebaõiglaselt üles öelda.
 
 Ärge laske end omal soovil lahkuma ajada.
 

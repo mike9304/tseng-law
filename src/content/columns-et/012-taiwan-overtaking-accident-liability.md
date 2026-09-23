@@ -31,9 +31,9 @@ Seejärel peab möödasõitev sõiduk lülitama vasaku suunatule, mööduma vasa
 
 See signaali ja teedandmise järjekord samal sõidurajal ei tähenda, et möödasõit oleks lubatud keelatud kohtades või keelatud tingimustel. Enne möödasõidu alustamist tuleb artikli 101 kõik eeldused koos hinnata.
 
-## Anonüümne õnnetusasi, mida see büroo on käsitlenud
+## Anonüümne õnnetusasi, mida meie büroo on käsitlenud
 
-Selle büroo anonüümseks muudetud asjas sõitis mootorrattur A kaasreisija B-ga mägiteel. Nende ees sõitis 2 sõiduautot; eesmine sõiduk 1 liikus aeglaselt, seega liikusid ka sõiduk 2 ja mootorratas madala kiirusega.
+Meie büroo anonüümseks muudetud asjas sõitis mootorrattur A kaasreisija B-ga mägiteel. Nende ees sõitis 2 sõiduautot; eesmine sõiduk 1 liikus aeglaselt, seega liikusid ka sõiduk 2 ja mootorratas madala kiirusega.
 
 ![Õnnetuse skeem, mis näitab mootorratta möödasõiduteed ja 2 eesolevat sõidukit mägiteel](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -53,7 +53,7 @@ Enne möödasõitu tuleb esmalt selgitada, kas koht või liiklusolukord kuulub m
 
 Artikli 101 järgimine on tähtis, kuid see iseenesest ei taga, et õnnetus jääb ära, ega kindlat tulemust hilisemas ekspertiisis või kohtumenetluses. Juhtidel tuleb hoida lisaturvamarginaal ja kohaneda eesoleva olukorraga.
 
-Lisateavet saate [pildist möödasõidureeglite ja -menetluse kohta](https://gonews.com.tw/car/daily/21934/). Kuna see on teisene allikas, tuleb õiguslike eelduste selgitamisel lugeda ka kehtivaid ametlikke eeskirju (道路交通安全規則).
+Lisateavet leiate [pildilt möödasõidureeglite ja -menetluse kohta](https://gonews.com.tw/car/daily/21934/). Kuna see on teisene allikas, tuleb õiguslike eelduste selgitamisel lugeda ka kehtivaid ametlikke eeskirju (道路交通安全規則).
 
 ---
 

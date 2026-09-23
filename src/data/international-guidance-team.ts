@@ -4526,7 +4526,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordineerib nõustamisaegu ja suhtlust Koreast tulevatele klientidele.',
-        'Toetab üksustevahelist koostööd dokumendisüsteemide ja töövoogude kaudu; taust on arvutiteadus.',
+        'Toetab üksustevahelist koostööd dokumendisüsteemide ja töövoogude kaudu; tema taust on arvutiteaduses.',
       ],
       education: [
         'Bakalaureus (B.S.) arvutiteaduses, National Cheng Kung University',

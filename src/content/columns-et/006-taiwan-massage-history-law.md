@@ -35,7 +35,7 @@ Ja sellised taiwanipärased juuksurisalongid jäävad paljudele Taiwanis elavate
 
 Igal juhul, kui rääkida massaažist (按摩),
 
-on Taiwanis samuti arvukalt massaažitänavaid.
+on Taiwanis ka palju massaažitänavaid.
 
 Igasugused massaažikohad seisavad seal kõrvuti.
 
@@ -45,7 +45,7 @@ Põhimõtteliselt võib igaüks valida massaaži, mis sobib isikliku maitsega, p
 
 Ja põhjus, miks tänapäeval on nii palju massaažikohti, võib olla seotud selle ühe põhiseaduse tõlgendamise taotlusega (釋憲).
 
-Kui Taiwan 1980. aastal andis ja jõustas puuetega inimeste heaoluseaduse (殘障福利法),
+Kui Taiwan võttis 1980. aastal vastu puuetega inimeste heaoluseaduse (殘障福利法) ja jõustas selle,
 
 võisid massaažialal (按摩業) tegelikult tegutseda ainult nägemispuudega isikud (視障者).
 
@@ -55,7 +55,7 @@ See seadus kestis 2003. aastani; toona härra Lin, kes pidas juuksurisalongi,
 
 palkas töötajaid ilma nägemispuudeta juuksepesu- ja massaažiteenusteks ning politsei selle tuvastas.
 
-Tollase õiguse järgi said härra Lin ja töötajad haldusrahve (罰鍰) TWD 40.000, TWD 10.000 ja TWD 20.000 (新臺幣).
+Tollase õiguse järgi said härra Lin ja töötajad haldustrahve (罰鍰) TWD 40.000, TWD 10.000 ja TWD 20.000 (新臺幣).
 
 Härra Lin pidas seda karistust väga ebaõiglaseks ja taotles põhiseaduse tõlgendamist.
 
@@ -63,19 +63,19 @@ Härra Lin pidas seda karistust väga ebaõiglaseks ja taotles põhiseaduse tõl
 
 Taiwanis
 
-kohtavad nägemispuudega isikud arvukaid takistusi arengus, igapäevategevuses, õppimises ja hariduses,
+kohtavad nägemispuudega isikud palju takistusi arengus, igapäevategevuses, õppimises ja hariduses,
 
 ning alad, millel nad võivad tegutseda, on väga piiratud.
 
 Seetõttu tolleaegne seadusandja, et kaitsta nägemispuudega isikuid, kes olid nõrgemas seisundis,
 
-andis seaduse, mis kaitses nägemispuudega isikute tööd ja õigust toimetulekule (生存權).
+kehtestas seaduse, mis kaitses nägemispuudega isikute tööd ja õigust toimetulekule (生存權).
 
 Aja kulgemise ja tarbijaturu laienemisega
 
 tõusis siiski seisukoht, et pelgalt nägemispuudega isikute õiguste kaitse piiras liigselt ilma nägemispuudeta isikute õigust tööle.
 
-Vaidluses nägemispuudega isikute ja ilma nägemispuudeta isikute kutseõiguste üle esitati arvukalt vastandlikke arvamusi.
+Vaidluses nägemispuudega isikute ja ilma nägemispuudeta isikute kutseõiguste üle esitati palju vastandlikke arvamusi.
 
 Küsiti näiteks, kas kirjalik reegel, mis lubas massaaži ainult nägemispuudega isikutele, ei olnud diskrimineerimine ilma nägemispuudeta isikute suhtes,
 
@@ -91,7 +91,7 @@ võivad massaažialal tavaliselt tegutseda ainult nägemispuudega isikud, kes on
 
 Tõsi, Korea valitsus on mingil hetkel andnud massaažidiplomeid ka ilma nägemispuudeta isikutele,
 
-ning arvukad nägemispuudega isikud on, kartes elatise kaotamist, korraldanud tugevaid meeleavaldusi.
+ning paljud nägemispuudega isikud on, kartes elatise kaotamist, korraldanud tugevaid meeleavaldusi.
 
 Tänapäeval lubab Korea endiselt ainult kvalifikatsiooniga nägemispuudega isikutel massaažialal tegutseda,
 
@@ -111,7 +111,7 @@ ja seadusandja otsib suhteliselt tasakaalustatud lahendust huvide konflikti selg
 
 ​
 
-Tänapäeval valivad arvukad inimesed massaaži pinge leevendamiseks,
+Tänapäeval valivad paljud inimesed massaaži pinge leevendamiseks,
 
 kuid selles protsessis esineb endiselt seksuaalse ahistamise (性騷擾) või sündsusetute tegude (猥褻) juhtumeid.
 

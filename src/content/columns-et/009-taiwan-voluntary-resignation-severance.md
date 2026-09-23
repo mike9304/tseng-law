@@ -29,7 +29,7 @@ On siiski **erandlikke juhte**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Järgmistes eriolukordades peab tööandja maksma töötajale lahkumishüvitist ka siis, kui see lahkub omal soovil (tööstandardite seaduse artikkel 14, mis kohaldab artiklit 17 vastavalt, 勞動基準法第14條):
+Järgmistes eriolukordades peab tööandja maksma töötajale lahkumishüvitist ka siis, kui ta lahkub omal soovil (tööstandardite seaduse artikkel 14, mis kohaldab artiklit 17 vastavalt, 勞動基準法第14條):
 
 1. Kui tööandja töölepingu (勞動契約) sõlmimisel teeb vale tahteavalduse (虛偽意思表示), nii et töötaja eksib selle suhtes, ja on kahju oht
 
@@ -39,7 +39,7 @@ Järgmistes eriolukordades peab tööandja maksma töötajale lahkumishüvitist 
 
 3. Kui lepingujärgne töö võib kahjustada töötaja tervist, töötaja on palunud tööandjalt parandust ja sellel ei ole mõju
 
-4. Kui tööandja, tema esindaja või teised töötajad põevad seadusjärgset nakkushaigust (法定傳染病), on koostööd tegevatele isikutele nakkusoht ja see ohustab raskelt töötaja tervist
+4. Kui tööandja, tema esindaja või teised töötajad põevad seadusjärgset nakkushaigust (法定傳染病), on nakkusoht temaga koos töötavatele töötajatele ja see ohustab raskelt töötaja tervist
 
 5. Kui tööandja ei maksa lepingujärgset töötasu (工作報酬) või ei anna tükitöölistele (按件計酬) piisavalt tööd
 
@@ -53,7 +53,7 @@ ei maksa palka (工資) õigel ajal,
 
 ei maksa ületunnitasu (加班費)
 
-või ei liida töötajat Taiwani tööliskindlustusse (勞工保險) ega Taiwani riiklikku ravikindlustusse (健保).
+või ei kindlusta töötajat Taiwani tööliskindlustuses (勞工保險) ega Taiwani riiklikus ravikindlustuses (健保).
 
 Sellistel juhtudel peab tööandja maksma lahkumishüvitist ka siis, kui töötaja ise töölepingu lõpetab.
 

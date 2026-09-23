@@ -1062,7 +1062,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lehe keel ja nõustamiskeel ei ole sama asi',
           paragraphs: [
             'See leht on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult neljas nõustamiskeeles: inglise, hiina (中文), jaapani ja korea keeles. Juhiste lugemine eesti keeles ei tähenda, et vestlus advokaadiga toimuks eesti keeles.',
-            'Me ei anna lubadust tõlgi, vastamise tähtaja ega kohtumise kohta selle lehe kaudu. Kui te ei oska ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.',
+            'Me ei anna selle lehe kaudu lubadust tõlgi, vastamise tähtaja ega kohtumise kohta. Kui te ei oska ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.',
           ],
         },
         {
@@ -1099,14 +1099,14 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investeeringud ja äriühingu asutamine Taiwanis',
           paragraphs: [
-            'Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Toetame ka raamatupidamist ja makse, mis tekivad asutamisest ja tegutsemisest Taiwanis.',
+            'Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Abistame ka raamatupidamis- ja maksuküsimustes, mis tekivad asutamisest ja tegutsemisest Taiwanis.',
             'Menetluse käik ja kestus erinevad vormi, investori, tegevusala, panga ja juba olemasolevate dokumentide järgi. Äriühingu asutamine iseenesest ei anna elamisluba (居留) ega tööluba (工作許可): need on eraldi menetlused, mida hinnatakse isiku olukorra järgi.',
           ],
         },
         {
           heading: 'Tsiviilvaidlused ja kahjuhüvitis',
           paragraphs: [
-            'Sellesse valdkonda kuuluvad lepinguvaidlused, lepinguväline kahjuõiguslik vastutus ja tarbijavaidlused. Töö algab tavaliselt sündmuste ajajärjestuse selgitamisest ning olemasolevate dokumentide ja tõendite läbivaatamisest ning alles seejärel lepitakse kokku järgmised sammud.',
+            'Sellesse valdkonda kuuluvad lepinguvaidlused, lepinguväline (deliktiline) vastutus ja tarbijavaidlused. Töö algab tavaliselt sündmuste ajajärjestuse selgitamisest ning olemasolevate dokumentide ja tõendite läbivaatamisest ning alles seejärel lepitakse kokku järgmised sammud.',
             'Tähtajad, sealhulgas aegumine, ja tõendite täielikkus mõjutavad kulgu otsustavalt. Nimetage seetõttu teadaolevad kuupäevad võimalikult varakult. Säilitage lepingud, teated, maksetõendid või fotod olukorrast kohapeal ja mainige neid esimeses teates.',
           ],
         },
@@ -1120,7 +1120,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tööõiguslikud vaidlused',
           paragraphs: [
-            'Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne seadusjärgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide lahkumishüvitise ega töötushüvitisega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.',
+            'Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide lahkumishüvitise ega töötushüvitisega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.',
             'Tööleping, töökorralduseeskiri (工作規則), palgalehed ja poolte kirjavahetus on tavaliselt määravad dokumendid. Kui need on teil veel olemas, mainige seda kokkuvõttes.',
           ],
         },
@@ -1142,7 +1142,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ulatus ja selle kinnitamine',
           paragraphs: [
             'Büroo töötab Taiwani õiguse järgi ja tegeleb eespool nimetatud valdkondade asjadega. Iga asja ulatus kinnitatakse eraldi pärast seda, kui advokaat on teie teate läbi vaadanud.',
-            'Elamisstaatus, tööluba ja sarnased küsimused hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei anna lubadust tulemuse ega vastamise tähtaja kohta.',
+            'Elamisstaatust, tööluba ja sarnaseid küsimusi hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei anna lubadust tulemuse ega vastamise tähtaja kohta.',
           ],
         },
       ],
@@ -1190,7 +1190,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'TASUD',
       title: 'Kuidas kinnitatakse töö ulatus ja tasud',
       description:
-        'Selgitus järjekorrast: esmalt töö ulatus, seejärel tasude kinnitamine, ja miks sellel lehel ei ole hinnakirja.',
+        'Selgitus järjekorrast: esmalt töö ulatus, seejärel tasude kinnitamine ja see, miks sellel lehel ei ole hinnakirja.',
       intro:
         'See leht selgitab, kuidas tasud kinnitatakse, mitte nende suurust. Suurus sõltub üksiku asja töö ulatusest ja on mõttekas alles siis, kui see ulatus on selge.',
       sections: [
@@ -1226,7 +1226,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
     },
     contact: {
       eyebrow: 'KONTAKT',
-      title: 'Kuidas bürooni jõuda',
+      title: 'Kuidas büroo poole pöörduda',
       description:
         'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei oska ühtegi neljast keelest, ja mida see leht ei luba.',
       intro:
@@ -1277,7 +1277,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kuidas seda osa kasutada',
           paragraphs: [
-            'Kui te ei leia vastust oma olukorrale, sõltub vastus tavaliselt erilistest asjaoludest. Kirjutage need asjaolud kokkuvõttesse, selle asemel et neid ise sellelt lehelt tuletada.',
+            'Kui te ei leia vastust oma olukorrale, sõltub vastus tavaliselt asja konkreetsetest asjaoludest. Kirjutage need asjaolud kokkuvõttesse, selle asemel et neid ise sellelt lehelt tuletada.',
           ],
         },
       ],
@@ -1387,7 +1387,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Säilitamiskoht ja teenuseosutajad',
           paragraphs: [
             'Neid veebilehti majutab Vercel ja teie saadetud andmed säilitatakse selle teenuse mitteavalikus andmesalvestuses. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.',
-            'Üksikute teenuseosutajate serverid võivad asuda väljaspool Taiwani, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused saab saata aadressile wei@hoveringlaw.com.tw.',
+            'Mõne teenuseosutaja serverid võivad asuda väljaspool Taiwanit, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused saab saata aadressile wei@hoveringlaw.com.tw.',
           ],
         },
       ],

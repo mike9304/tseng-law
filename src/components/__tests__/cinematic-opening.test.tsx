@@ -43,6 +43,7 @@ import CinematicOpening from '../CinematicOpening';
 import CinematicRouteShell, {
   CINEMATIC_CHROME_ATTRIBUTE,
   isCinematicHomepagePath,
+  visibleCinematicPathname,
 } from '../CinematicRouteShell';
 
 const locales = ['ko', 'zh-hant', 'en', 'ja'] as const;
@@ -213,6 +214,57 @@ describe('cinematic opening client-route gate', () => {
     const html = renderRouteShell(pathname, locale);
     expect(html).not.toContain('data-cinematic-home="true"');
     expect(html).not.toContain('class="cinematic-opening"');
+  });
+
+  it('shows the opening for a guidance rewrite and for the public homepage path', () => {
+    for (const locale of ['vi', 'de', 'ar'] as const) {
+      expect(visibleCinematicPathname(`/${locale}/__public-guidance`)).toBe(`/${locale}`);
+      expect(visibleCinematicPathname(`/${locale}`)).toBe(`/${locale}`);
+      expect(visibleCinematicPathname(`/${locale}/__public-guidance/services`)).toBe(
+        `/${locale}/services`,
+      );
+
+      navigationState.pathname = `/${locale}/__public-guidance`;
+      const rewritten = renderToStaticMarkup(
+        <CinematicRouteShell
+          locale={locale}
+          header={<div>HEADER</div>}
+          footer={<div>FOOTER</div>}
+          scrollTop={<div>SCROLL_TOP</div>}
+        >
+          <div>PAGE_CONTENT</div>
+        </CinematicRouteShell>,
+      );
+      expect(rewritten, `${locale} rewrite`).toContain('data-cinematic-home="true"');
+      expect(rewritten, `${locale} rewrite opening`).toContain('class="cinematic-opening"');
+
+      navigationState.pathname = `/${locale}`;
+      const browser = renderToStaticMarkup(
+        <CinematicRouteShell
+          locale={locale}
+          header={<div>HEADER</div>}
+          footer={<div>FOOTER</div>}
+          scrollTop={<div>SCROLL_TOP</div>}
+        >
+          <div>PAGE_CONTENT</div>
+        </CinematicRouteShell>,
+      );
+      expect(browser, `${locale} browser`).toContain('class="cinematic-opening"');
+      expect(rewritten, `${locale} server rewrite matches the browser homepage`).toBe(browser);
+
+      navigationState.pathname = `/${locale}/__public-guidance/services`;
+      const services = renderToStaticMarkup(
+        <CinematicRouteShell
+          locale={locale}
+          header={<div>HEADER</div>}
+          footer={<div>FOOTER</div>}
+          scrollTop={<div>SCROLL_TOP</div>}
+        >
+          <div>PAGE_CONTENT</div>
+        </CinematicRouteShell>,
+      );
+      expect(services, `${locale} services`).not.toContain('data-cinematic-home="true"');
+    }
   });
 
   it('re-evaluates home → subpage → home instead of caching the first layout path', () => {

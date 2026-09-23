@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { toBuilderLocale } from '@/lib/locales';
-import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import { isGuidanceLocale4, visiblePublicPathname, type PublicLocale8 } from '@/lib/public-guidance';
 import {
   chromeSiteLocale,
   guidanceChromeLabels,
@@ -451,7 +451,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
         : locale === 'ja'
           ? '昊鼎国際法律事務所'
           : 'Hovering International Law Firm';
-  const pathname = usePathname();
+  const pathname = visiblePublicPathname(usePathname() ?? `/${locale}`);
   const [searchOpen, setSearchOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -539,6 +539,10 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
             ];
 
   const mainNavItems = useMemo(() => buildMainNavItems(locale), [locale]);
+  const guidanceSearchDuplicatesPrimary = Boolean(
+    guidanceSearch && mainNavItems.some((item) => item.href === guidanceSearch.href),
+  );
+  const showGuidanceSearchLink = Boolean(guidanceSearch) && !guidanceSearchDuplicatesPrimary;
   const megaPanels = useMemo(() => buildMegaPanels(locale), [locale]);
   const megaPanelKeys = useMemo(() => new Set(megaPanels.map((p) => p.key)), [megaPanels]);
   const hasMegaPanel = useCallback((key: string) => megaPanelKeys.has(key), [megaPanelKeys]);
@@ -907,7 +911,9 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
               ))}
             </span>
             <span className={styles.contentFitProbeActions}>
-              <span className={styles.contentFitProbeSearch} />
+              {locale === 'ja' || showGuidanceSearchLink || !isGuidance ? (
+                <span className={styles.contentFitProbeSearch} />
+              ) : null}
               <span className="button nav-cta">{content.nav.cta.label}</span>
             </span>
           </div>
@@ -994,18 +1000,18 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
           </nav>
 
           <div className={`header-actions ${styles.headerActions}`}>
-            {locale === 'ja' || isGuidance ? (
+            {locale === 'ja' || showGuidanceSearchLink ? (
               <Link
                 className="header-search-btn"
-                href={guidanceSearch ? guidanceSearch.href : `/${locale}/search`}
-                aria-label={guidanceSearch ? guidanceSearch.label : searchLabel}
+                href={showGuidanceSearchLink && guidanceSearch ? guidanceSearch.href : `/${locale}/search`}
+                aria-label={showGuidanceSearchLink && guidanceSearch ? guidanceSearch.label : searchLabel}
               >
                 <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
                   <circle cx="11" cy="11" r="7.2" />
                   <line x1="16.5" y1="16.5" x2="21" y2="21" />
                 </svg>
               </Link>
-            ) : (
+            ) : isGuidance ? null : (
               <button
                 className="header-search-btn"
                 type="button"

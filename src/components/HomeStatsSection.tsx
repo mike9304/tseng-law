@@ -12,8 +12,27 @@ function easeOutCubic(progress: number) {
   return 1 - Math.pow(1 - progress, 3);
 }
 
-export default function HomeStatsSection({ locale }: { locale: SiteLocale }) {
-  const stats = siteContent[locale].stats;
+export type HomeStatsModel = {
+  label: string;
+  title: string;
+  description: string;
+  highlightWords: readonly string[];
+  items: ReadonlyArray<{ target: number; label: string; suffix?: string }>;
+};
+
+export default function HomeStatsSection({
+  locale,
+  stats: statsOverride,
+  omitLandmarkId = false,
+  plainLede = false,
+}: {
+  locale: SiteLocale;
+  stats?: HomeStatsModel;
+  omitLandmarkId?: boolean;
+  /** Skip the per-word highlight spans when the lede length differs by language. */
+  plainLede?: boolean;
+}) {
+  const stats = statsOverride ?? siteContent[locale].stats;
   // SSR + first paint show real targets so bots / no-JS never see 0/0/0/0.
   const [counts, setCounts] = useState(() => stats.items.map((item) => item.target));
   const [done, setDone] = useState(() => stats.items.map(() => true));
@@ -110,7 +129,7 @@ export default function HomeStatsSection({ locale }: { locale: SiteLocale }) {
   }, [reducedMotion, started, hydrated, stats.items]);
 
   return (
-    <section className="section section--light stats-section" id="stats" data-tone="light" ref={rootRef}>
+    <section className="section section--light stats-section" id={omitLandmarkId ? undefined : 'stats'} data-tone="light" ref={rootRef}>
       <div className="container">
         <SectionLabel data-builder-surface-key={homeStatsTextSurfaceIds[0]}>
           <SurfaceText surfaceKey={homeStatsTextSurfaceIds[0]}>{stats.label}</SurfaceText>
@@ -118,12 +137,18 @@ export default function HomeStatsSection({ locale }: { locale: SiteLocale }) {
         <h2 className="section-title" data-builder-surface-key={homeStatsTextSurfaceIds[1]}>
           <SurfaceText surfaceKey={homeStatsTextSurfaceIds[1]}>{stats.title}</SurfaceText>
         </h2>
-        <ScrollHighlightText
-          className="section-lede"
-          text={stats.description}
-          highlightWords={stats.highlightWords}
-          data-builder-surface-key={homeStatsTextSurfaceIds[2]}
-        />
+        {plainLede ? (
+          <p className="section-lede" data-builder-surface-key={homeStatsTextSurfaceIds[2]}>
+            {stats.description}
+          </p>
+        ) : (
+          <ScrollHighlightText
+            className="section-lede"
+            text={stats.description}
+            highlightWords={stats.highlightWords}
+            data-builder-surface-key={homeStatsTextSurfaceIds[2]}
+          />
+        )}
         <div className="stats-grid reveal-stagger">
           {stats.items.map((item, index) => {
             const progress = item.target ? Math.min(counts[index] / item.target, 1) : 0;

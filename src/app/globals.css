@@ -5831,6 +5831,13 @@ section.home-results-panel--editorial {
     margin-right: 0;
   }
 
+  html[dir='rtl'] .header[data-public-site-header] > .header-main .header-actions {
+    margin-left: 0;
+    margin-right: 0;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
+  }
+
   .site[data-public-header-measured] > main {
     padding-top: var(--header-offset-desktop);
   }
@@ -6041,6 +6048,19 @@ section.home-results-panel--editorial {
   html[lang='fil'] .nav-cta.button {
     padding: 0 0.75rem;
     font-size: 0.8rem;
+  }
+
+  /* RTL nav labels are long. Clip the nav track so it cannot paint over the
+     consultation control; the content-fit measurement still swaps in the menu
+     button when the links do not fit. */
+  html[dir='rtl'] .header[data-public-site-header] .main-nav {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  html[dir='rtl'] .header[data-public-site-header] .header-actions {
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -9213,6 +9233,11 @@ html.js .reveal.is-visible .reveal-stagger > * {
     margin-right: calc(-1 * var(--right-rail-offset) + 12px);
     gap: 0.4rem;
     align-items: center;
+  }
+
+  html[dir='rtl'] .header-actions {
+    margin-right: 0;
+    margin-inline-end: calc(-1 * var(--right-rail-offset) + 12px);
   }
 
   .header-search-btn {

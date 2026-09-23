@@ -1,6 +1,9 @@
 import type { SiteLocale } from '@/lib/locales';
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
-import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
+import {
+  DECORATIVE_VIDEO_CONTROL_LABELS,
+  type DecorativeVideoControlLabels,
+} from '@/components/decorative-video-controls';
 import SmartLink from '@/components/SmartLink';
 import {
   homeResultsButtonSurfaceIds,
@@ -24,6 +27,20 @@ export const HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_WEBM_SRC =
   '/videos/taiwan-courtroom-calm-daylight-v2-mobile.webm';
 export const HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC =
   '/videos/taiwan-courtroom-calm-daylight-v2-mobile.mp4';
+
+/** Alt text of the shared courtroom plate. Guidance homes reuse this asset. */
+export const HOME_RESULTS_SHARED_IMAGE_ALT = 'A bright, empty modern Taiwan civil courtroom';
+
+export type HomeCaseResultsOverride = {
+  label: string;
+  title: string;
+  description: string;
+  summary: string;
+  cta: string;
+  href: string;
+  imageAlt: string;
+  controlLabels: DecorativeVideoControlLabels;
+};
 
 const copyByLocale = {
   ko: {
@@ -54,7 +71,7 @@ const copyByLocale = {
     summary:
       'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
     cta: 'View Case Studies',
-    imageAlt: 'A bright, empty modern Taiwan civil courtroom',
+    imageAlt: HOME_RESULTS_SHARED_IMAGE_ALT,
   },
   ja: {
     label: '事例紹介',
@@ -101,16 +118,22 @@ function protectCaseHeadingUnits(line: string) {
 export default function HomeCaseResultsSplit({
   locale,
   presentation,
+  omitLandmarkId = false,
+  override,
 }: {
   locale: SiteLocale;
   presentation?: 'editorial';
+  omitLandmarkId?: boolean;
+  override?: HomeCaseResultsOverride;
 }) {
-  const copy = copyByLocale[locale];
+  const copy = override ?? copyByLocale[locale];
+  const href = override?.href ?? `/${locale}/columns`;
+  const controlLabels = override?.controlLabels ?? DECORATIVE_VIDEO_CONTROL_LABELS[locale];
 
   return (
     <section
       className="section section--dark split-section split--img-left home-results-panel home-results-panel--editorial"
-      id="results"
+      id={omitLandmarkId ? undefined : 'results'}
       data-tone="dark"
     >
       <div
@@ -133,7 +156,7 @@ export default function HomeCaseResultsSplit({
           height={HOME_RESULTS_EDITORIAL_IMAGE_HEIGHT}
           sizes="(max-width: 900px) 100vw, 52vw"
           loop={false}
-          controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
+          controlLabels={controlLabels}
         />
       </div>
       <div className="split-content home-results-content" data-builder-node-key="copy">
@@ -147,7 +170,7 @@ export default function HomeCaseResultsSplit({
           <SurfaceText surfaceKey={homeResultsTextSurfaceIds[1]}>
             {copy.title.split('\n').map((line) => (
               <span key={line}>
-                {presentation === 'editorial' && locale === 'ja'
+                {presentation === 'editorial' && locale === 'ja' && !override
                   ? protectCaseHeadingUnits(line)
                   : line}
                 <br />
@@ -164,7 +187,7 @@ export default function HomeCaseResultsSplit({
         </p>
         <SmartLink
           className="link-underline home-results-link"
-          href={`/${locale}/columns`}
+          href={href}
           data-builder-surface-key={homeResultsButtonSurfaceIds[0]}
         >
           <SurfaceText surfaceKey={homeResultsButtonSurfaceIds[0]}>{copy.cta} →</SurfaceText>

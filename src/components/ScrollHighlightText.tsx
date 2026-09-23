@@ -9,7 +9,7 @@ function tokenize(text: string) {
   return Array.from(text);
 }
 
-function tokenizeHighlights(text: string, highlightWords: string[]) {
+function tokenizeHighlights(text: string, highlightWords: readonly string[]) {
   const keywords = [...new Set(highlightWords.filter((word) => word.length > 0))]
     .sort((a, b) => b.length - a.length);
   if (keywords.length === 0) {
@@ -39,7 +39,7 @@ export default function ScrollHighlightText({
 }: {
   text: string;
   className?: string;
-  highlightWords?: string[];
+  highlightWords?: readonly string[];
 } & Omit<ComponentPropsWithoutRef<'p'>, 'children'>) {
   const rootRef = useRef<HTMLParagraphElement | null>(null);
   const [visible, setVisible] = useState(false);

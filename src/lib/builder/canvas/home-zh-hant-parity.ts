@@ -408,3 +408,33 @@ export async function hasLegacyJulyZhHantHomeDualTree(
   const fingerprint = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
   return fingerprint === '8f75a13335144f4c9a7ac8dc0dbb1e93173eee5bc075318bde75406d86437a3f';
 }
+
+const OVERLAY_OWNED_DESKTOP_LANDMARKS: Record<string, string> = {
+  'mobile-parity-home-services': 'practice',
+  'mobile-parity-home-case-results': 'results',
+};
+
+/**
+ * Render projection only. Services and case-results stay visible through the
+ * mobile-parity overlay, so the hidden desktop root must not repeat `id`.
+ * Other landmarks stay on the desktop root; the overlay omits them at render.
+ */
+export function omitOverlayOwnedDesktopLandmarkIds(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
+  const drop = new Set<string>();
+  for (const node of nodes) {
+    const owned = node.anchorName ? OVERLAY_OWNED_DESKTOP_LANDMARKS[node.anchorName] : undefined;
+    if (owned) drop.add(owned);
+  }
+  if (drop.size === 0) return nodes;
+  let changed = false;
+  const next = nodes.map((node) => {
+    if (node.parentId || node.kind !== 'container') return node;
+    const htmlId = node.content.htmlId;
+    if (!htmlId || !drop.has(htmlId)) return node;
+    changed = true;
+    const content = { ...node.content };
+    delete content.htmlId;
+    return { ...node, content };
+  });
+  return changed ? next : nodes;
+}

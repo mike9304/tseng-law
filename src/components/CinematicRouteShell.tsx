@@ -2,7 +2,11 @@
 
 import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
-import { type PublicLocale8 } from '@/lib/public-guidance';
+import {
+  PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT,
+  PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
 import CinematicOpening from '@/components/CinematicOpening';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
@@ -14,6 +18,21 @@ export function isCinematicHomepagePath(
   if (!pathname) return false;
   const localeRoot = `/${locale}`;
   return pathname === localeRoot || pathname === `${localeRoot}/`;
+}
+
+/** The guidance rewrite is only the render path. Map it back to the public
+ * URL so the server opening matches the browser path. */
+export function visibleCinematicPathname(pathname: string | null): string | null {
+  if (!pathname) return pathname;
+  for (const segment of [PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT, PUBLIC_GUIDANCE_INTERNAL_UNAVAILABLE_SEGMENT]) {
+    const token = `/${segment}`;
+    const index = pathname.indexOf(token);
+    if (index < 0) continue;
+    const locale = pathname.slice(0, index);
+    const rest = pathname.slice(index + token.length);
+    return `${locale}${rest}` || locale;
+  }
+  return pathname;
 }
 
 export default function CinematicRouteShell({
@@ -33,7 +52,7 @@ export default function CinematicRouteShell({
   eventPopup?: ReactNode;
   children: ReactNode;
 }) {
-  const pathname = usePathname();
+  const pathname = visibleCinematicPathname(usePathname());
   // WO-O22 B: CINEMATIC_OPENING_COPY now covers all eight public languages, so
   // vi/id/th/fil play the same opening as ko/zh-hant/en/ja instead of dropping
   // straight onto the hero.

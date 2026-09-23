@@ -115,6 +115,10 @@ describe('published home responsive headings', () => {
     const insightsMinHeight = Number(insightsRoot.match(/min-height:\s*(\d+)px/)?.[1] ?? 0);
 
     expect(html.match(/<h1\b/g)).toHaveLength(2);
+    for (const id of ['hero', 'practice', 'about', 'results', 'stats', 'insights', 'faq', 'offices', 'contact']) {
+      expect(html.match(new RegExp(`\\bid="${id}"`, 'g'))?.length ?? 0, id).toBe(1);
+    }
+    expect(html.match(/data-home-heritage-interlude="true"/g)?.length ?? 0).toBe(1);
     expect(html).toContain('data-node-id="home-hero-title"');
     expect(html).toContain('data-anchor="mobile-parity-home-hero"');
     expect(html).toContain('<h1 class="hero-title" data-builder-surface-key="headline">');

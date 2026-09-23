@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import FAQAccordion from '@/components/FAQAccordion';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
+import HomeAttorneySplit from '@/components/HomeAttorneySplit';
+import HomeCaseResultsSplit from '@/components/HomeCaseResultsSplit';
+import HomeStatsSection from '@/components/HomeStatsSection';
 import LocaleHomePathNav from '@/components/LocaleHomePathNav';
 import JsonLd from '@/components/JsonLd';
 import OrnamentDivider from '@/components/OrnamentDivider';
@@ -28,22 +32,26 @@ import {
 } from '@/lib/public-guidance';
 import { buildGuidanceLegalServiceJsonLd, getSiteUrl } from '@/lib/seo';
 import { buildGuidancePersonJsonLd } from '@/lib/guidance-structured-data';
+import {
+  guidanceHomeAttorney,
+  guidanceHomeResults,
+  guidanceHomeStats,
+} from '@/lib/guidance-home-bands';
 
 /**
  * Home page for the four guidance locales (vi/id/th/fil).
  *
- * It renders the same section sequence as the English home — full-bleed hero,
- * six service cards, the editorial image band, column archive, then the closing
- * contact band the other guidance pages already use — with the same design
- * system class names, so the four new languages share the site's home design
- * instead of a page-header-plus-cards stack.
+ * It renders the same landmark sequence as the English home — hero, practice,
+ * heritage band, attorney, one past matter, public counts, column archive,
+ * FAQ, offices, then the closing contact band — with the same section
+ * components. The page-language explanation of consultation languages stays
+ * in the home detail block between the counts and the archive.
  *
- * Copy rules (LOCALIZATION-BRIEF): every sentence comes from
- * `international-guidance-content.ts`. The hero, services and archive headings
- * reuse the existing guidance page copy; only the labels the shared home layout
- * needs were added, in the page language. Nothing promises interpreting, a
- * reply time, an appointment or a case result, and the four consultation
- * languages notice stays on the closing band.
+ * Copy rules (LOCALIZATION-BRIEF): visible sentences come from the guidance
+ * content, team, and office packs. The results heading is the lead attorney
+ * biography's existing past-matter line, not a new case. Nothing promises
+ * interpreting, a reply time, an appointment, or an extra consultation
+ * language. The four consultation languages stay on the closing band.
  *
  * Deliberate differences from the English home, both visible in the markup:
  *   - No hero search bar. The search index and `/{locale}/search` route exist
@@ -397,10 +405,9 @@ export function GuidanceServices({
 /**
  * The home page's own guidance copy (intro + the four home sections), kept in
  * the same `.grid-bento` card grid the other guidance pages use. The English
- * home fills this slot with the attorney / results / stats blocks, which have
- * no guidance-language data; dropping the guidance copy instead would delete
- * the page-language explanation of what the firm does and of the difference
- * between the page language and the four consultation languages.
+ * The attorney, results and counts bands sit above this block. This block
+ * keeps the page-language explanation of what the firm does and of the
+ * difference between the page language and the four consultation languages.
  */
 function GuidanceHomeDetail({ locale }: { locale: GuidanceLocale }) {
   const page = guidanceContent[locale].pages.home;
@@ -482,12 +489,30 @@ export default function GuidanceHomeBody({
         }}
       />
       <Reveal>
-        <GuidanceColumnArchive locale={locale} source={columns} />
+        <HomeAttorneySplit locale="en" presentation="editorial" override={guidanceHomeAttorney(locale)} />
+      </Reveal>
+      <Reveal>
+        <HomeCaseResultsSplit locale="en" override={guidanceHomeResults(locale)} />
+      </Reveal>
+      <Reveal>
+        <HomeStatsSection locale="en" stats={guidanceHomeStats(locale)} plainLede />
       </Reveal>
       <GuidanceHomeDetail locale={locale} />
-      {/* WO-O29 A: the English home ends with `OfficeMapTabs`; the guidance
-          home now renders that same component, unwrapped exactly as `/en`
-          does, so the two home pages agree element for element. */}
+      <Reveal>
+        <GuidanceColumnArchive locale={locale} source={columns} />
+      </Reveal>
+      {pack.pages.faq.faqs && pack.pages.faq.faqs.length > 0 ? (
+        <Reveal>
+          <FAQAccordion
+            locale={locale}
+            items={[...pack.pages.faq.faqs]}
+            id="faq"
+            sectionClassName="section section--gray"
+            headingLabel="FAQ"
+            headingTitle={pack.nav.faq}
+          />
+        </Reveal>
+      ) : null}
       <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" />
       <GuidanceContactBand locale={locale} isContact={false} />
     </div>

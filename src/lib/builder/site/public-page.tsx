@@ -30,7 +30,7 @@ import {
   matchLegacyEditorialCompositeLayout,
 } from '@/lib/builder/site/legacy-editorial-composite-layout';
 import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-hant-home-offices';
-import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
+import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead, omitOverlayOwnedDesktopLandmarkIds } from '@/lib/builder/canvas/home-zh-hant-parity';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import {
   CURRENT9_PUBLISHED_HOME_EDITORIAL_CSS,
@@ -859,7 +859,9 @@ export async function PublishedSitePageView({
     !current9PublishedHomeEditorial && slugPath === '' && legacyZhTabletParity
       ? deriveJulyHeroEditorialPresentation(normalizedHomeCanvas, locale)
       : null;
-  const publishedNodes = projectLegacyZhHantHomeOffices(normalizedHomeCanvas.nodes, locale, isHomePage);
+  const publishedNodes = omitOverlayOwnedDesktopLandmarkIds(
+    projectLegacyZhHantHomeOffices(normalizedHomeCanvas.nodes, locale, isHomePage),
+  );
   const visibleNodes = publishedNodes.filter((node) => node.visible !== false);
   const responsiveStylesheet = buildPublishedResponsiveStylesheet(publishedNodes);
   const legacyContactScaffold =

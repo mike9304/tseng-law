@@ -61,23 +61,52 @@ function protectAboutHeadingUnit(title: string, unit: string) {
   );
 }
 
+export type HomeAttorneyOverride = {
+  label: string;
+  title: string;
+  intro: readonly [string, string];
+  summary: string;
+  contactLine: string;
+  cta: string;
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+  badgeName: string;
+  badgeRole: string;
+  largePortrait?: boolean;
+};
+
 export default function HomeAttorneySplit({
   locale,
   presentation,
+  omitLandmarkId = false,
+  override,
 }: {
   locale: SiteLocale;
   presentation?: 'editorial';
+  omitLandmarkId?: boolean;
+  override?: HomeAttorneyOverride;
 }) {
   const copy = copyByLocale[locale];
-  const profilePath = getAttorneyProfilePath(locale);
+  const profilePath = override?.href ?? getAttorneyProfilePath(locale);
   const lead = teamContent[locale].members[0];
-  const useLargeOfficialPortrait =
-    lead.id === 'tseng-junwei' && lead.photo === '/images/team/wei-tseng-official.png';
-  // Original image linked by the attorney's official personal profile.
-  const portrait = useLargeOfficialPortrait ? '/images/team/tseng-junwei.png' : lead.photo;
+  const useLargeOfficialPortrait = override
+    ? Boolean(override.largePortrait)
+    : lead.id === 'tseng-junwei' && lead.photo === '/images/team/wei-tseng-official.png';
+  const portrait = override?.imageSrc
+    ?? (useLargeOfficialPortrait ? '/images/team/tseng-junwei.png' : lead.photo);
+  const imageAlt = override?.imageAlt ?? `${lead.name} ${lead.role}`;
+  const badgeName = override?.badgeName ?? lead.name;
+  const badgeRole = override?.badgeRole ?? lead.role;
+  const label = override?.label ?? copy.label;
+  const title = override?.title ?? copy.title;
+  const intro = override?.intro ?? lead.intro;
+  const summary = override?.summary ?? copy.summary;
+  const contactLine = override?.contactLine ?? `${lead.name} · ${lead.role} · ${lead.email}`;
+  const cta = override?.cta ?? copy.cta;
 
   return (
-    <section className="section section--gray split-section split--img-left" id="about" data-tone="light">
+    <section className="section section--gray split-section split--img-left" id={omitLandmarkId ? undefined : 'about'} data-tone="light">
       <div
         className="split-image split-image--portrait"
         data-builder-node-key="media"
@@ -85,7 +114,7 @@ export default function HomeAttorneySplit({
       >
         <Image
           src={portrait}
-          alt={`${lead.name} ${lead.role}`}
+          alt={imageAlt}
           width={useLargeOfficialPortrait ? 773 : 1200}
           height={useLargeOfficialPortrait ? 865 : 900}
           loading="lazy"
@@ -94,36 +123,36 @@ export default function HomeAttorneySplit({
           data-builder-surface-key={homeAttorneyImageSurfaceIds[0]}
         />
         <div className="split-portrait-badge">
-          <strong>{lead.name}</strong>
-          <span>{lead.role}</span>
+          <strong>{badgeName}</strong>
+          <span>{badgeRole}</span>
         </div>
       </div>
       <div className="split-content" data-builder-node-key="copy">
         <div className="section-label" data-builder-surface-key={homeAttorneyTextSurfaceIds[0]}>
-          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[0]}>{copy.label}</SurfaceText>
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[0]}>{label}</SurfaceText>
         </div>
         <h2 className="split-title" data-builder-surface-key={homeAttorneyTextSurfaceIds[1]}>
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[1]}>
-            {presentation === 'editorial' && locale === 'ja'
-              ? protectAboutHeadingUnit(copy.title, '相談')
-              : presentation === 'editorial' && locale === 'zh-hant'
-                ? protectAboutHeadingUnit(copy.title, '韓國')
-                : copy.title}
+            {!override && presentation === 'editorial' && locale === 'ja'
+              ? protectAboutHeadingUnit(title, '相談')
+              : !override && presentation === 'editorial' && locale === 'zh-hant'
+                ? protectAboutHeadingUnit(title, '韓國')
+                : title}
           </SurfaceText>
         </h2>
         <div className="split-divider" />
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[2]}>
-          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[2]}>{lead.intro[0]}</SurfaceText>
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[2]}>{intro[0]}</SurfaceText>
         </p>
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[3]}>
-          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[3]}>{lead.intro[1]}</SurfaceText>
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[3]}>{intro[1]}</SurfaceText>
         </p>
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[4]}>
-          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[4]}>{copy.summary}</SurfaceText>
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[4]}>{summary}</SurfaceText>
         </p>
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[5]}>
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[5]}>
-            {lead.name} · {lead.role} · {lead.email}
+            {contactLine}
           </SurfaceText>
         </p>
         <SmartLink
@@ -131,7 +160,7 @@ export default function HomeAttorneySplit({
           href={profilePath}
           data-builder-surface-key={homeAttorneyButtonSurfaceIds[0]}
         >
-          <SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{copy.cta} →</SurfaceText>
+          <SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{cta} →</SurfaceText>
         </SmartLink>
       </div>
     </section>

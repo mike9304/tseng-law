@@ -149,10 +149,12 @@ export default function InsightsArchiveSection({
   locale,
   posts,
   presentation,
+  omitLandmarkId = false,
 }: {
   locale: SiteLocale;
   posts: ArchivePost[];
   presentation?: 'editorial';
+  omitLandmarkId?: boolean;
 }) {
   const copy = copyByLocale[locale];
   const authorLabel =
@@ -214,7 +216,7 @@ export default function InsightsArchiveSection({
   if (!featured) return null;
 
   return (
-    <section className="section section--gray" id="insights" data-tone="light">
+    <section className="section section--gray" id={omitLandmarkId ? undefined : 'insights'} data-tone="light">
       <div className="container">
         <div data-builder-node-key="header">
           <SectionLabel data-builder-surface-key={homeInsightsTextSurfaceIds[0]}>

@@ -88,7 +88,6 @@ export function handleLegacyZhHeroScroll(event: ReactMouseEvent<HTMLAnchorElemen
     || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
     || event.currentTarget.getAttribute('href') !== '#insights') return;
   const targets = Array.from(document.querySelectorAll<HTMLElement>('[id="insights"]'));
-  if (targets.length < 2) return;
   const visible = (element: HTMLElement) => {
     const rect = element.getBoundingClientRect();
     if (rect.width <= 0 || rect.height <= 0) return false;
@@ -98,7 +97,12 @@ export function handleLegacyZhHeroScroll(event: ReactMouseEvent<HTMLAnchorElemen
     }
     return true;
   };
-  const target = targets.find(visible);
+  if (targets[0] && visible(targets[0])) return;
+  const visibleId = targets.find(visible);
+  const parity = Array.from(document.querySelectorAll<HTMLElement>(
+    '[data-anchor="mobile-parity-home-insights"]',
+  )).find(visible);
+  const target = visibleId ?? parity;
   if (!target || target === targets[0]) return;
   const header = Array.from(document.querySelectorAll<HTMLElement>('header.header')).find(visible);
   const headerHeight = header ? header.getBoundingClientRect().height : 0;
@@ -128,12 +132,14 @@ export default function HeroSearch({
   headingLevel = 1,
   presentation,
   quickMenus,
+  omitLandmarkId = false,
 }: {
   locale: SiteLocale;
   scrollHref?: string;
   headingLevel?: 1 | 2;
   presentation?: 'editorial';
   quickMenus?: ReadonlyArray<{ label: string; href: string }>;
+  omitLandmarkId?: boolean;
 }) {
   const hero = siteContent[locale].hero;
   const HeroHeading = headingLevel === 2 ? 'h2' : 'h1';
@@ -233,7 +239,7 @@ export default function HeroSearch({
 
   if (editorial) {
     return (
-      <section className={`hero ${styles.heroEditorial}`} id="hero" data-tone="light" data-presentation="editorial">
+      <section className={`hero ${styles.heroEditorial}`} id={omitLandmarkId ? undefined : 'hero'} data-tone="light" data-presentation="editorial">
         <div className={`container hero-inner ${styles.heroInner}`}>
           <div className={`hero-copy ${styles.heroCopy}`} data-builder-node-key="copy">
             <SectionLabel data-builder-surface-key={homeHeroTextSurfaceIds[0]}>
@@ -294,7 +300,7 @@ export default function HeroSearch({
   }
 
   return (
-    <section className="hero" id="hero" data-tone="dark">
+    <section className="hero" id={omitLandmarkId ? undefined : 'hero'} data-tone="dark">
       <HeroMediaBackground locale={locale} />
       <div className="container hero-inner">
         <div className="hero-copy" data-builder-node-key="copy">

@@ -27,21 +27,21 @@ Aquest text és una explicació general per a empreses de materials, components 
 
 ## 1. Aclarir la divisió d’operacions i de negoci abans de triar la forma registral
 
-Suposi que un fabricant estranger de components de precisió ven a clients taiwanesos. Al principi la seu envia directament, però el client demana emmagatzemar recanvis a Taiwan i suport d’enginyers in situ. No basta una adreça: cal un subjecte que pugui vendre, importar, emmagatzemar, contractar, prestar suport tècnic i assumir responsabilitat.
+Suposi que un fabricant estranger de components de precisió ven a clients taiwanesos. Al principi la seu envia directament, però el client demana emmagatzemar recanvis a Taiwan i suport d’enginyers in situ. No n’hi ha prou amb una adreça: cal un subjecte que pugui vendre, importar, emmagatzemar, contractar, prestar suport tècnic i assumir responsabilitat.
 
 Abans de decidir l’estructura d’entrada, la seu pot aclarir internament:
 
 | Punt operatiu | Preguntes que aclarir primer |
 |---|---|
 | Contractes amb clients | Qui serà part del contracte: la seu estrangera, la filial taiwanesa o un agent local? |
-| Ofertes i comandes | Qui confirma de forma definitiva el preu i el termini, i fins on arriba l’autoritat del responsable a Taiwan? |
+| Ofertes i comandes | Qui confirma definitivament el preu i el termini, i fins on arriba l’autoritat del responsable a Taiwan? |
 | Mercaderia i inventari | Qui importa, posseeix i gestiona l’inventari, i tramita devolucions i substitucions? |
 | Personal | Viatgen empleats de la seu, es contracta a Taiwan o s’encarrega a un proveïdor extern? |
 | Instal·lació i suport tècnic | Qui està obligat a prestar el suport al client i atén els problemes del treball in situ? |
 | Cobraments i costos | Qui factura i cobra, i com es liquiden els costos entre la seu i l’organització a Taiwan? |
 | Qualitat i controvèrsies | Qui confirma el resultat de la inspecció i rep reclamacions de defectes o danys? |
 
-Sobretot si el venedor del contracte de compravenda no és l’empresa que presta el suport tècnic, els documents han de distingir de qui pot el client exigir quines obligacions.
+Sobretot si el venedor del contracte de compravenda no és l’empresa que presta el suport tècnic, els documents han de deixar clar quines obligacions pot exigir el client a cadascú.
 
 ## 2. Distinció entre filial, sucursal i oficina de representació d’una societat estrangera a Taiwan
 
@@ -52,7 +52,7 @@ La diferència principal entre una filial taiwanesa i una sucursal taiwanesa d�
 | Estructura | Distinció bàsica | Què confirmar primer |
 |---|---|---|
 | Filial taiwanesa | Es constitueix d’acord amb el dret de Taiwan, amb personalitat jurídica pròpia, i és un subjecte jurídic distint de la societat matriu estrangera. | Com que la filial és una persona jurídica independent, cal confirmar com s’organitzen el subministrament, els serveis, la llicència tecnològica i el repartiment de costos amb la societat matriu. |
-| Sucursal taiwanesa d’una societat estrangera | Sucursal inscrita legalment a Taiwan, sense personalitat jurídica distinta de la seu, diferent d’una filial constituïda a part. | La sucursal és part de la seu estrangera, no una persona jurídica independent, de manera que la seu assumeix les obligacions de forma directa. Confirmar l’abast de facultats del representant de la sucursal i el repartiment intern de contractes externs, lliurament, gestió de les garanties i postvenda. |
+| Sucursal taiwanesa d’una societat estrangera | Sucursal inscrita legalment a Taiwan, sense personalitat jurídica distinta de la seu, diferent d’una filial constituïda a part. | La sucursal és part de la seu estrangera, no una persona jurídica independent, de manera que la seu assumeix les obligacions directament. Confirmar l’abast de facultats del representant de la sucursal i el repartiment intern de contractes externs, lliurament, gestió de les garanties i postvenda. |
 | Oficina de representació a Taiwan | Presència inscrita d’acord amb l’article 386 de la Llei de societats; no pot exercir activitat mercantil a Taiwan. | Com que no pot exercir activitat mercantil, confirmar si l’activitat real roman en l’àmbit permès. |
 
 ## 3. Formes de la filial taiwanesa: societat de responsabilitat limitada (有限公司) i societat anònima (股份有限公司)
@@ -65,7 +65,7 @@ Es pot formar amb 1 o més persones físiques, o amb socis persones jurídiques 
 
 ### La societat anònima (股份有限公司): adequada si es volen incorporar altres inversors o anar cap a una cotització
 
-El capital es divideix en accions. En principi es requereixen 2 accionistes (股東) o més, però l’Estat o una persona jurídica la poden constituir sols, i una persona jurídica estrangera pot posseir el 100 %. Les accions són, en principi, lliurement transmissibles, amb excepcions legals; es poden dissenyar accions especials i opcions sobre accions per a empleats d’acord amb la llei. Convé a empreses que esperen inversors, negociació d’accions, incentius de capital per a empleats o una fusió, una adquisició, una cotització o la inscripció al mercat de valors emergent (興櫃); no es limita a grans empreses. En governança, una societat no pública pot, per estatuts, no tenir consell i tenir només 1 o 2 administradors. Una societat amb un únic soci estatal o persona jurídica pot, per estatuts, no tenir supervisor (監察人). No tota societat anònima ha d’auditar els comptes anuals. Els llindars principals d’auditoria d’una societat ordinària són capital desemborsat de 30.000.000 TWD, o, per sota, ingressos d’explotació de 100.000.000 TWD o 100 treballadors en l’assegurança laboral (勞工保險); les societats que han fet una oferta pública d’accions (公開發行公司) segueixen la normativa de valors.
+El capital es divideix en accions. En principi es requereixen 2 accionistes (股東) o més, però l’Estat o una persona jurídica la poden constituir en solitari, i una persona jurídica estrangera pot posseir el 100 %. Les accions són, en principi, lliurement transmissibles, amb excepcions legals; es poden dissenyar accions especials i opcions sobre accions per a empleats d’acord amb la llei. Convé a empreses que esperen inversors, negociació d’accions, incentius de capital per a empleats o una fusió, una adquisició, una cotització o la inscripció al mercat de valors emergent (興櫃); no es limita a grans empreses. En governança, una societat no pública pot, per estatuts, no tenir consell d’administració i tenir només 1 o 2 administradors. Una societat amb un únic soci estatal o persona jurídica pot, per estatuts, no tenir supervisor (監察人). No tota societat anònima ha d’auditar els comptes anuals. Els llindars principals d’auditoria d’una societat ordinària són capital desemborsat de 30.000.000 TWD, o, per sota, ingressos d’explotació de 100.000.000 TWD o 100 treballadors en l’assegurança laboral (勞工保險); les societats que han fet una oferta pública d’accions (公開發行公司) segueixen la normativa de valors.
 
 ## 4. Els procediments de sucursal i de filial difereixen; només la filial passa per la revisió del Departament de Revisió d’Inversions
 
@@ -87,13 +87,13 @@ Els escenaris següents són hipotètics i només serveixen per orientar l’an�
 
 **Empreses centrades en l’exportació inicial.** Si encara no hi ha empleats ni inventari a Taiwan i es vol comprovar la demanda mitjançant un distribuïdor independent, es poden examinar primer el subministrament, la relació de distribució i l’àmbit d’activitat a Taiwan. Un contracte de distribució per si sol no elimina totes les qüestions regulatòries a Taiwan.
 
-**Empreses que amplien vendes i suport tècnic a Taiwan.** Si es planeja contractar a Taiwan i continuar gestionant inventari, cobraments i suport al client, convé comparar de forma concreta filial i sucursal, i revisar també la responsabilitat contractual, el mode d’operar de la seu, els impostos i el personal.
+**Empreses que amplien vendes i suport tècnic a Taiwan.** Si es planeja contractar a Taiwan i continuar gestionant inventari, cobraments i suport al client, convé comparar de manera concreta filial i sucursal, i revisar també la responsabilitat contractual, el mode d’operar de la seu, els impostos i el personal.
 
 **Empreses en fase d’estudi de mercat.** Si, abans d’una organització de vendes, només es volen funcions d’informació i enllaç, es pot avaluar una oficina de representació. Si el pla real inclou venda d’inventari o treball in situ, cal confirmar per separat si aquestes activitats estan permeses.
 
 ## 8. En la primera consulta n’hi ha prou d’un panorama operatiu; no cal lliurar tota la informació confidencial d’entrada
 
-En la primera consulta es poden reunir dades bàsiques de la seu i els aportants, una descripció general del producte o servei, el flux d’operacions previst, plans de personal i instal·lacions a Taiwan, i les condicions de contracte i suport que demanen els clients. El que no estigui decidit es pot marcar com a «pendent».
+En la primera consulta es poden reunir dades bàsiques de la seu i dels inversors, una descripció general del producte o servei, el flux d’operacions previst, plans de personal i instal·lacions a Taiwan, i les condicions de contracte i suport que demanen els clients. El que no estigui decidit es pot marcar com a «pendent».
 
 No cal adjuntar en el primer contacte tots els materials confidencials del client o dades de procés detallades. Després de facilitar el nom de la contrapart per a la comprovació de conflictes d’interès, es determinen els materials necessaris i el mode d’enviament segons les indicacions de l’advocada responsable.
 

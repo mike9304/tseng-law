@@ -1,0 +1,130 @@
+# WO-F-hu — round 5 fix lane (hu), Claude Opus 5 (1M)
+worktree: /Users/son7/Projects/tseng-law-fix-hu-r5
+inputs: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/hu-a.md (65 rows), rounds/r5/hu-b.md (55 rows)
+touched: src/content/columns-hu/001–011, 013–018 (012 needed nothing), src/data/international-guidance-eastern.ts,
+         -team.ts, -offices.ts, src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts
+
+## Rows applied
+hu-a: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14*, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27*, 28, 29,
+      30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48*, 49, 50, 51, 52, 53, 54, 55,
+      56, 57, 58, 59, 60, 61, 62, 63, 65.
+hu-b: 1, 2, 3, 4, 5, 6, 8*, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26*, 27, 28, 29,
+      30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55.
+
+Partial (*):
+- a#14 / b#8: the currency code was moved behind the amount everywhere ("TWD 500.000" → "500.000 TWD", 47 TWD +
+  8 USD occurrences) and the doubled currency naming was removed. The space thousands separator was NOT adopted:
+  ACCEPTED-ROUND skips "500 000" and NUMBER_THOUSAND_STYLE.hu in the checker is `dot`. Dots kept.
+- a#27: the wrong hyphen before the suffix was removed ("National Taiwan University-n" → "National Taiwan
+  Universityn"; same for "Kobe Universityn", "Waseda Universityn", "Naver Mapen") and the sentence was reordered
+  ("2016-ban a National Taiwan Universityn végzett ügyvédek alapították"). The reviewer's translation of the
+  university name into "Tajvani Nemzeti Egyetem" was NOT taken: R5 and ACCEPTED-ROUND keep Latin-script proper
+  names (National Taiwan University) unchanged.
+- a#48: the Traditional-Chinese gloss (醫療法) was removed from the Korean statute, which was the defect. The
+  reviewer's replacement gloss (의료법) cannot be used — no Korean characters outside `url` (hard rule). The
+  statute is now "a koreai orvosi törvény". The digit in "3 évig terjedő" stays (see skipped rows).
+- b#26: the ZWSP-only lines were left in place (see skipped rows); the rest of the row — "(példa: Tajpej városa)"
+  → "(például Tajpej)" — was applied, together with b#27.
+
+## Rows skipped (with reason)
+- a#17 ("1 szüneteltetési időszak … az 1 évet" → "egy … egy"): tested; `numbers FAIL missing from translation
+  (4): 1×4` in 002 (FAQ + body). The Korean source carries those digits, so the words drop counted numbers.
+- a#64 (promote Q16–Q20 to `## ` headings in 003): `headings` compares the level sequence with the Korean source,
+  where they are body lines too. Promoting them FAILs. (The reviewer notes the defect is source-side.)
+- b#7 (space thousands "1 579 589"): ACCEPTED-ROUND skip + checker style `dot`.
+- b#26, ZWSP half (delete U+200B lines in 013 and 015): `blocks` compares the ZWSP count with the Korean source;
+  the counts already match, deleting them FAILs.
+- b#42 ("minden tagnak egy szavazata van"): tested; `numbers FAIL missing from translation (2): 1×2` in 018.
+- b#52 (drop "azaz annak 1-szereséig" in 010): tested; `numbers FAIL missing from translation (1): 1`.
+- a#20's numeral-to-word requests in 007 were NOT skipped — they were applied and the checker still passes there
+  (the Korean source spells those counts out). The same change fails in 002/010/018, hence the split.
+
+## Systemic patterns (pattern → instances changed)
+- Em dash → Hungarian en dash (gondolatjel): 83 in the columns, 6 in the guidance pack (page title, home intro,
+  services paragraph, privacy paragraph, `keyFactsHeading`, inquiry language option). "ügyvéd–ügyfél" already
+  used the en dash and was left.
+- Spaced percent "50 %" → "50%": 38 (001, 003, 004, 018 …); "100% részesedést" → "100%-os részesedést" (b#41).
+- Currency layout: code moved behind the amount, 47 TWD + 8 USD; 6 range/list cleanups ("TWD 40.000–TWD 200.000"
+  → "40.000–200.000 TWD"; "rendre 40.000, 10.000 és 20.000 TWD (新臺幣)"; "plafonja … új tajvani dollárban" →
+  "felső határa 200.000 TWD").
+- "azonnal" where the meaning is logical → "automatikusan / eleve / egyszerűen / minden további nélkül": 12
+  (002 ×1, 004 ×4, 007 ×3, 016 ×3, 017 ×1). Left as "azonnal" in the 6 places where the sense is genuinely
+  temporal (001 ×2, 002 §5 heading, 005 Q4, 014 "azonnali megszűnés", 016 "azonnal tisztázandó").
+- Verb government "azt következtetni" → "arra következtetni" / "nem kell" → "nem lehet": 5 (002 ×2, 004 ×3).
+- "nemvagyoni" → "nem vagyoni": 7 (003, 007); "nemhivatalos" → "nem hivatalos" / rewritten: 2 (002, 003).
+- "úgy hogy" (result) rewritten: 4 (007 ×2, 009 ×2).
+- "foglalkoztatott személy" → "munkavállaló": 16 in 008 (the file already used "munkavállaló" elsewhere).
+- "látássérültség nélküli" → "ép látású": 7 in 006.
+- "közönséges" (= general/ordinary) → "általános": 7 (017 ×5, 018 ×2).
+- Claims/obligations "eltűnik" → "megszűnik": 5 (002, 003, 004 ×3).
+- 據點 "tevékenységi pont" → "telephely" / "működési bázis": 3 in 004.
+- Colloquial "néz" → "vizsgál / mérlegel" in the legal-assessment sense: 14 (014 ×8, 016 ×6).
+- "a 1030-1./1056./1057./1094-1./1138./1144. cikk" → "az …": 11 (007 ×8, 016 ×3).
+- "cél társaság" → "céltársaság": 6 in 017.
+- Checklist mood: all 16 items of 014 §9 and all 6 of 016 §9 rewritten from 3rd-person indicative to the
+  instructing "…kell" form (block and list-item counts unchanged).
+- 拋棄繼承 "öröklésről való lemondás" → "az örökség visszautasítása" (FAQ, §4 heading and body, §9 item 6,
+  closing): 9 in 016.
+- 預告期間 "előzetes bejelentési időszak" → "felmondási idő" (incl. the §8 heading and the closing paragraph):
+  10 in 014.
+- 營業項目 "ágazat" → "tevékenységi ág" (same term as 013): 9 in 015.
+- 全國法規資料庫 one name per locale: "rendelkezési adatbázisa" (007) and "normatív adatbázisa" (004) →
+  "jogszabály-adatbázis"; "Tajvan nemzeti/országos jogszabályi adatbázisa" unified to "Tajvan országos
+  jogszabály-adatbázisa": 14 link labels across 004, 007, 014, 016.
+- R8 term sweep: 懲罰性賠償金 "Szankciós kártérítés" → "Büntető kártérítés" (2 in 010); 拘役/緩刑/背信/一審/
+  第三人/中華民國刑法/資遣費/會面交往/戶籍/監察人/簽約金/留任獎金/存證信函/告訴乃論之罪 etc. were already
+  correct and were not touched. 經濟部投資審議司 is "Gazdasági Minisztérium Beruházásvizsgáló Főosztálya" in
+  011/013/015/017 — one name, left as is.
+- Guidance pack officialese "-ra/-re kerül" → active: 4 ("a tartalmat megőrizzük", "a megkeresés elküldése
+  sikerül", "a tartalmat automatikusan nem fordítjuk le", "a megfelelő sorrendben tudjuk megvizsgálni").
+- Thousands with a space: 0. U+200B deleted: 0. Digits replaced by words: 7 (all in 007), all checker-verified.
+
+No test expected-string needed updating: no pinned Hungarian FAQ question or title matched a string that changed.
+`consultationNotice` and `confidentialNotice` were not rewritten; `discoveryNotice` still contains the literal
+`llms.txt` (only "támogató kiállást … és láthatóságot sem" became "ajánlást, mesterséges intelligencia általi
+említést, sem garantált láthatóságot"). The disclosure-parity regexes (/járható/, /más nyelvű szolgáltatás nem
+garantált/, /válaszadási határidőt/, /nem ígéret/, /tolmács/i, /minden ügyet/, /eredményt/, /négy nyelv|négy
+tanácsadási nyelv/, /nem helyettesíti a tanácsadást/, /jogi állásfoglalás/) all still match; the page
+`description` strings changed only in the disclaimer (Oxford comma removed) and contain no brackets or pipes.
+
+## What the reviewer got wrong, or what the product/checker will not allow (not applied)
+- a#14 / b#7 / b#8, space grouping: Hungarian does group thousands with a space, but the checker parses only
+  dot-grouping for hu, and ACCEPTED-ROUND skips the request. Dots kept; only the code position was fixed.
+- a#17, b#42, b#52: the "spare" digits are not spare against the Korean number bag; Hungarian has no numeral
+  lexicon in the checker, so writing them as words FAILs `numbers` (outputs quoted above). 007's counts are the
+  exception and were converted.
+- a#27: the request to render "National Taiwan University" as "Tajvani Nemzeti Egyetem" contradicts R5 and
+  ACCEPTED-ROUND (Latin-script proper names stay). Only the orthography of the suffix was fixed.
+- a#48: the suggested Korean gloss (의료법) would put Hangul outside `url`, which the hard rules and the
+  `hangul` check forbid. The gloss was dropped instead. "3 évig terjedő" keeps its digit.
+- a#64: Q16–Q20 are body lines in the Korean source as well, so this is a source-side defect; the `headings`
+  check forbids fixing it on the Hungarian side alone.
+- b#26 (ZWSP): the zero-width spaces are not a Hungarian defect — the Korean source has the same count and
+  `blocks` pins it.
+- b#43: written as "A tagok közül 1–3 igazgató választható." rather than "egy–három"; the digits are in the
+  Korean bag and the spelled-out form would fail `numbers`. Word order and phrasing follow the reviewer.
+- b#35: the reviewer's rewrite also re-ordered the clause; only the redundant "ezért" was removed, because the
+  sentence otherwise parses and the block must keep its content.
+
+## §Verify (verbatim)
+$ cd /Users/son7/Projects/tseng-law-fix-hu-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+$ node scripts/check-column-translation.mjs --dir src/content/columns-hu --lang hu 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-hu src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      25
+
+(git status = 25 at verify time: the 18 edited sources + the pre-existing WO-F-hu.txt edit and the two untracked r5 review files. This log is one further untracked path.)

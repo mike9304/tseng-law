@@ -754,7 +754,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'Fénykép',
     workingLanguagesLabel: 'Munkanyelvek',
     fullProfileLabel: 'Teljes profil (angolul)',
-    keyFactsHeading: 'Wei Tseng ügyvédnő — Fő adatok',
+    keyFactsHeading: 'Wei Tseng ügyvédnő – Fő adatok',
     qualificationLabel: 'Képesítés és iroda',
     qualificationSentence:
       '{name} jogosult Tajvanon ügyvédi tevékenységet folytatni, és a {firm} vezető ügyvédnője.',
@@ -3199,7 +3199,7 @@ export const guidanceTeamBios: Record<
       education: [
         'Mesterfokozat (M.S.), Institute of Finance, National Taiwan University',
         'Alapfokozat (B.A.) jogi és pénzügyi kettős képzésben, National Chengchi University',
-        'Cserehallgató a Kobe University-n és a Waseda University-n',
+        'Cserehallgató a Kobe Universityn és a Waseda Universityn',
       ],
       experience: [
         'Trend Law Office',
@@ -3210,7 +3210,7 @@ export const guidanceTeamBios: Record<
     'chang-rongxuan': {
       intro: [
         'Korábban az Oktatási Minisztérium jogi osztályának (Ministry of Education, Legal Affairs Division) munkatársa, közigazgatási és polgári ügyekre összpontosítva.',
-        'Tapasztalat egyetemeket, oktatói jogokat és közigazgatási fellebbezéseket érintő ügyekben.',
+        'Tapasztalatot szerzett egyetemeket, oktatói jogokat és közigazgatási fellebbezéseket érintő ügyekben.',
       ],
       education: [
         'Jogi alapfokozat (LL.B.), National Chung Hsing University',
@@ -3223,7 +3223,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'Jogi asszisztens; több irodában vezető jogi asszisztensként eljárási, társasági jogi és külföldi befektetési ügyeket támogatott.',
-        'Támogatás eljárásokban, cégalapításban, külföldi befektetési engedélyekben, engedélykérelmekben, valamint a koreai és tajvani ügyfelek közötti kapcsolattartásban.',
+        'Támogatást nyújt eljárásokban, cégalapításban, külföldi befektetési engedélyek és egyéb engedélykérelmek ügyében, valamint a koreai és tajvani ügyfelek közötti kapcsolattartásban.',
       ],
       education: [
         'Jogi alapfokozat (LL.B.), Tunghai University',
@@ -3236,7 +3236,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Egyezteti a tanácsadási időpontokat és a kommunikációt a koreai ügyfelek számára.',
-        'Dokumentumrendszerekkel és munkafolyamatokkal támogatja a csapatok közötti egyeztetést; a háttere informatikai végzettség.',
+        'Dokumentumrendszerekkel és munkafolyamatokkal támogatja a csapatok közötti egyeztetést; informatikai végzettséggel rendelkezik.',
       ],
       education: [
         'Alapfokozat (B.S.) informatikából, National Cheng Kung University',

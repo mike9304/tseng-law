@@ -31,7 +31,7 @@ A Beruházásvizsgáló Főosztálynak ellenőriznie kell, hogy az érintett tő
 
 és hogy külföldi szereplők nem más ürüggyel visznek-e be forrásokat.
 
-A beruházási terv írásakor nem szükséges a társaság pontos címét feltüntetni; a régió megjelölése elég (példa: Tajpej városa). ​
+A beruházási terv írásakor nem szükséges a társaság pontos címét feltüntetni; a régió megjelölése elég (például Tajpej). ​
 
 Amikor később a banknál megnyitják a társaság előkészítő számláját (公司籌備處帳戶), számos bank azonban megvizsgálja a bérleti szerződést (租賃契約), és a helyszínen ellenőrzi a társaság címét.
 
@@ -63,7 +63,7 @@ Lehetséges.
 
 A bank általában kettős személyazonosítást kér,
 
-és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól az „**egységes azonosítószám alapadatainak lapját**” (統一證號基本資料表) lehet kérni.
+és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól az „**egységes azonosítószám alapadatlapját**” (統一證號基本資料表) lehet kérni.
 
 A kiadás még aznap lehetséges,
 
@@ -93,9 +93,9 @@ ezért a szerződés kezdőnapját a lehető legkésőbbre kell tenni.
 
 Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakran „**kialakítási időszakot**” (裝潢期間) ad a bérlőnek.
 
-Ez bérmentes időszak; erről lehet tárgyalni.
+Ez bérletidíj-mentes időszak; erről lehet tárgyalni.
 
-Külföldi személynek nem könnyű üzlethelyiséget bérelni, és a tajvani kaució (押金) meglehetősen alacsony (rendszerint 2 havi bér), ezért a bérbeadó védelme korlátozott;
+Külföldi személynek nem könnyű üzlethelyiséget bérelni, és a tajvani kaució (押金) meglehetősen alacsony (rendszerint 2 havi bérleti díj), ezért a bérbeadó védelme korlátozott;
 
 a bérbeadók ezért idegenkednek attól, hogy külföldinek adjanak bérbe.
 
@@ -119,7 +119,7 @@ Emellett a végső társasági bejegyzéskor a városi önkormányzat (市政府
 
 ha irodaházi irodahelyiségről van szó, a társaság bejegyzése (公司登記) akkor nem lehetséges.
 
-Például ha olyan tevékenységi ágakról van szó, amelyek irodaházi irodahelyiségben is folytathatók — például reklám vagy nagykereskedelem —, a társaság irodahelyiségben is megalapítható.
+Ha viszont olyan tevékenységi ágakról van szó, amelyek irodaházi irodahelyiségben is folytathatók – például reklám vagy nagykereskedelem –, a társaság irodahelyiségben is megalapítható.
 
 A bérleti szerződés megkötése előtt ezt előzetesen ellenőrizni kell.
 

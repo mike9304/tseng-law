@@ -13,7 +13,7 @@ faq:
   - q: "Mi a PIF, és ugyanaz az eljárás, mint a TFDA terméknyilvántartása?"
     a: "Nem ugyanaz az eljárás. A terméknyilvántartás (產品登錄) külön forma, amelyet a TFDA (衛生福利部食品藥物管理署) kozmetikai terméknyilvántartási platformján végeznek. A PIF olyan dosszié, amely a minőségre, a biztonságra, az összetételre, az állított funkcióra, a gyártási módra, a vizsgálati eredményekre és a biztonsági értékelésre vonatkozó adatokat gyűjti össze, és amelyet a kozmetikum gyártója vagy importőre készít, frissít és őriz; magát a PIF-et nem kell előzetesen benyújtani a TFDA-nak. 2026. július 1-jétől elvben minden kozmetikum a PIF-rendszer hatálya alá tartozik, kivéve a gyári bejegyzés (工廠登記) alól mentesített gyártóhelyen készült szilárd kézműves szappant."
   - q: "Milyen kifejezésekre kell ügyelni a tajvani kozmetikai reklámban?"
-    a: "A reklámot nemcsak a mondat, hanem a teljes megjelenítés alapján ítélik meg, ideértve a termék nevét, a szöveget, a képet, a jelet és a hangot. Tilos a hamis vagy túlzó kifejezés és a gyógyhatás állítása, és különösen ügyelni kell az orvosi kifejezésekre, például akné kezelése, gyulladáscsökkentő vagy fertőtlenítő. A közigazgatási bírság hamis vagy túlzó reklám esetén 40.000–200.000 TWD (新臺幣), gyógyhatás állítása esetén TWD 600.000–TWD 5.000.000. Az influenszerek és mások közléseit is ugyanezen mérce szerint kell vizsgálni, ha lényegük szerint reklámok."
+    a: "A reklámot nemcsak a mondat, hanem a teljes megjelenítés alapján ítélik meg, ideértve a termék nevét, a szöveget, a képet, a jelet és a hangot. Tilos a hamis vagy túlzó kifejezés és a gyógyhatás állítása, és különösen ügyelni kell az orvosi kifejezésekre, például akné kezelése, gyulladáscsökkentő vagy fertőtlenítő. A közigazgatási bírság hamis vagy túlzó reklám esetén 40.000–200.000 TWD (新臺幣), gyógyhatás állítása esetén 600.000–5.000.000 TWD. Az influenszerek és mások közléseit is ugyanezen mérce szerint kell vizsgálni, ha lényegük szerint reklámok."
 ---
 
 # Belépés a tajvani kozmetikai piacra: az importőr megválasztása, terméknyilvántartás, PIF készítése és megőrzése, valamint a reklámszabályozás
@@ -42,7 +42,7 @@ A szerződésben konkrétan rögzíteni kell a szellemi tulajdon, például a v�
 
 A tajvani leányvállalat és a külföldi társaság fióktelepe nem ugyanaz a szervezet. A leányvállalat a tajvani jog szerint alapított külön jogi személy, míg a fióktelepet a külföldi társaság központjának (本公司) részeként jegyzik be. Különbözik a jogi személyiség, a központ felelőssége, a számviteli és adózási kezelés, a nyereségátvitel, a képviseleti jog és a belső ellenőrzés módja, ezért a szervezeti formát nem szabad pusztán az értékesítés feletti ellenőrzés alapján választani.
 
-Ha külföldi beruházási eljárás szükséges, a jelenleg illetékes szerv, a **Gazdasági Minisztérium Beruházásvizsgáló Főosztálya (經濟部投資審議司)** útmutatóját kell megnézni. A beruházás jóváhagyásához, a tőkeátutaláshoz, a társaság vagy fióktelep bejegyzéséhez, a bankszámla nyitásához, az adóügyi nyilvántartásba vételhez (稅籍登記) és az importőri minőség megszerzéséhez szükséges időtartam a befektető, az ágazat, a szervezeti forma, a benyújtott iratok és a javítás vagy pótlás szerint változik. Ezért a bevezetés dátumát nem meghatározott, rögzített időtartam feltételezésével kell rögzíteni, hanem először minden forma alkalmazását és a legújabb befogadási feltételeket kell ellenőrizni.
+Ha külföldi beruházási eljárás szükséges, a jelenleg illetékes szerv, a **Gazdasági Minisztérium Beruházásvizsgáló Főosztálya (經濟部投資審議司)** útmutatóját kell megnézni. A beruházás jóváhagyásához, a tőkeátutaláshoz, a társaság vagy fióktelep bejegyzéséhez, a bankszámla nyitásához, az adóügyi nyilvántartásba vételhez (稅籍登記) és az importőri minőség megszerzéséhez szükséges időtartam a befektető, az ágazat, a szervezeti forma, a benyújtott iratok és a javítás vagy pótlás szerint változik. Ezért a bevezetés dátumát nem rögzített időtartamot feltételezve kell kitűzni, hanem először azt kell tisztázni, mely eljárások alkalmazandók, és mik a legújabb benyújtási követelmények.
 
 Bármely szerkezetet választják is, a kozmetikai szabályozás központi felelőse a **kozmetikum gyártója vagy importőre**. A termékadatok rendezése vagy a biztonsági értékelés (安全性評估) külső szakértőre bízható, de pusztán a megbízás nem ruházza át a gyártó vagy az importőr jogi felelősségét. A szerződés szerinti munkamegosztás és a jogszabály szerinti felelős megkülönböztetése a belépési szerkezet vizsgálatának kiindulópontja.
 
@@ -54,7 +54,7 @@ Nem ugyanaz az eljárás. A terméknyilvántartás külön forma, amelyet a TFDA
 
 A kozmetikai terméknyilvántartást a TFDA kozmetikai terméknyilvántartási platformján végzik. A kozmetikum gyártójának vagy importőrének a terméknyilvántartást be kell fejeznie, mielőtt a terméket forgalomba hozná, értékesítené, ajándékozná, nyilvánosan kiállítaná (公開陳列) vagy a fogyasztónak próbára bocsátaná. Az előkészítést nem szabad csak az ellenérték fejében történő értékesítéshez igazítani; a promóciós ajándékozás vagy a fogyasztói próba ütemezését is a nyilvántartás időpontjával együtt kell kezelni.
 
-A terméknyilvántartás érvényességi ideje 3 év. Ha a forgalmazást folytatni kívánják, a meghosszabbítást (展延) a lejárat előtti 3 hónapon belül kell kérni. Ha a nyilvántartott adatok, például a terméknév, a rendeltetés, a kiszerelési forma (劑型), az összetevők és a gyártóhely változnak, ellenőrizni kell, szükséges-e a változás tartalmának megfelelő forma.
+A terméknyilvántartás érvényességi ideje 3 év. Ha a forgalmazást folytatni kívánják, a meghosszabbítást (展延) a lejárat előtti 3 hónapon belül kell kérni. Ha a nyilvántartott adatok, például a terméknév, a rendeltetés, a készítmény formája (劑型), az összetevők és a gyártóhely változnak, ellenőrizni kell, szükséges-e a változás tartalmának megfelelő forma.
 
 A terméknyilvántartás a meghatározott adatok platformon történő bejelentésének formája. A nyilvántartás befejezése nem jelenti, hogy a PIF-hez szükséges összes irat megvan, és nem ítélet arról, hogy a termék jelölése vagy reklámja jogszerű. A terméknyilvántartás ütemezését, a PIF kezelését és a jelölés–reklám átnézését külön megfelelőségi feladatként kell kezelni.
 
@@ -62,7 +62,7 @@ A terméknyilvántartás a meghatározott adatok platformon történő bejelent�
 
 A PIF olyan adatgyűjtemény, amelyet úgy állítanak össze, hogy a termék minőségét és biztonságát továbbra is ismertetni lehessen. A minőség, a biztonság, az összetétel, az állított funkció (宣稱功能), a gyártási mód, a vizsgálati eredmények és a biztonsági értékelés mellett termékenként rendezni kell a termékre és a gyártóra vonatkozó alapadatokat és az alátámasztó anyagokat, például a címkét. A kozmetikai termékadat-dosszié kezelési szabályzata (化粧品產品資訊檔案管理辦法) a szükséges adatokat 16 kategóriába rendezi, ezért a termék típusa szerint ellenőrizni kell az egyes kategóriák adatait, valamint az aláírási és képesítési követelményeket.
 
-A PIF-rendszer termékcsoportonként szakaszosan alkalmazódott. 2026. július 1-jétől a fennmaradó kozmetikumok is a hatály alá kerülnek, így elvben minden kozmetikumra vonatkozik. A kivétel a gyári bejegyzés alól mentesített gyártóhelyen készült szilárd kézműves szappanra korlátozódik. A termék nem esik ki pusztán azért, mert kézműves, vagy mert szappan nevet használ; mindkettőt ellenőrizni kell: a szilárd formát és a gyártóhely gyári bejegyzés alóli mentességének feltételét.
+A PIF-rendszert termékcsoportonként, szakaszosan vezették be. 2026. július 1-jétől a fennmaradó kozmetikumok is a hatály alá kerülnek, így elvben minden kozmetikumra vonatkozik. A kivétel a gyári bejegyzés alól mentesített gyártóhelyen készült szilárd kézműves szappanra korlátozódik. A termék nem mentesül pusztán azért, mert kézműves, vagy mert szappannak nevezik; mindkettőt ellenőrizni kell: a szilárd formát és a gyártóhely gyári bejegyzés alóli mentességének feltételét.
 
 A PIF-munkát, ideértve a biztonsági értékelést, szükséges képesítéssel és képességgel rendelkező harmadik fél támogathatja. Harmadik fél készítési támogatása vagy adatmegőrzési szolgáltatása esetén is fennmarad a kozmetikum gyártójának vagy importőrének jogi felelőssége. Olyan rendszert kell kialakítani, amelyben az eredeti gyártó, a vizsgálóintézet, a biztonsági értékelő és a tajvani vállalkozás kölcsönösen továbbíthatják a változási információkat és a legújabb aláírt adatokat.
 
@@ -70,7 +70,7 @@ A PIF-munkát, ideértve a biztonsági értékelést, szükséges képesítésse
 
 Ha változik a nyersanyag vagy a receptúra, a gyártási mód és a gyártóhely, a jelölés, ideértve a címkét, az állított funkció vagy a biztonsági információ, az érintett PIF-adatokat át kell nézni és frissíteni kell. Azt is vizsgálni kell, hogy a fogyasztói panaszok, a nemkívánatos események és az új vizsgálati eredmények befolyásolják-e a meglévő értékelést, ezért az első elkészítés után is szükséges a változáskezelési eljárás.
 
-A kozmetikai termékadat-dosszié kezelési szabályzata 7. cikke szerint a megőrzési idő legalább 5 év, a termék utolsó forgalomba hozatalát követő naptól számítva. Ugyanezen szabályzat 8. cikke szerint a megőrzés helye a kozmetikumok higiéniai és biztonsági kezeléséről szóló törvény (化粧品衛生安全管理法) 7. cikk 1. bekezdés 7. pontjában meghatározott, a kozmetikum gyártójának vagy importőrének jelölési címe. A határidőt rögzítő és a helyet rögzítő rendelkezést külön kell kezelni.
+A kozmetikai termékadat-dosszié kezelési szabályzata 7. cikke szerint a megőrzési idő legalább 5 év, a termék utolsó forgalomba hozatalát követő naptól számítva. Ugyanezen szabályzat 8. cikke szerint a megőrzés helye a kozmetikumok higiéniai és biztonsági kezeléséről szóló törvény (化粧品衛生安全管理法) 7. cikk 1. bekezdés 7. pontjában meghatározott, a kozmetikum gyártójának vagy importőrének címe. A határidőt rögzítő és a helyet rögzítő rendelkezést külön kell kezelni.
 
 Még ha az eredeti gyártó őrzi is az eredetit, vagy biztonságos elektronikus vagy felhőbeli tárolót használnak, a gyártónak vagy importőrnek hozzá kell férnie a teljes adatokhoz. Rögzíteni kell a hozzáférési jogokat, a biztonsági másolatot, a verziókezelést, a fájlformátumot és a felelőst, hogy az illetékes szerv kérésére az adatok gyorsan megkereshetők és bemutathatók legyenek. Fontos a szerződésben rendezni az átadás címzettjét, módját és a hozzáférési jog fennmaradását, hogy az adatok a törvényes megőrzési idő alatt megmaradjanak az értékesítési partnerrel vagy a szolgáltatóval kötött szerződés vége után is.
 
@@ -84,7 +84,7 @@ A visszahívás vagy a megsemmisítés (銷毀) nem következik automatikusan mi
 
 ## 3. A jelölés, a népszerűsítés és a reklám szabályozása
 
-A reklámot nemcsak a mondat, hanem a teljes megjelenítés alapján ítélik meg, ideértve a termék nevét, a szöveget, a képet, a jelet és a hangot. Tilos a hamis vagy túlzó kifejezés és a gyógyhatás állítása, és különösen ügyelni kell az orvosi kifejezésekre, például akné kezelése, gyulladáscsökkentő vagy fertőtlenítő. A közigazgatási bírság hamis vagy túlzó reklám esetén TWD 40.000–TWD 200.000, gyógyhatás állítása esetén TWD 600.000–TWD 5.000.000. Az influenszerek és mások közléseit is ugyanezen mérce szerint kell vizsgálni, ha lényegük szerint reklámok.
+A reklámot nemcsak a mondat, hanem a teljes megjelenítés alapján ítélik meg, ideértve a termék nevét, a szöveget, a képet, a jelet és a hangot. Tilos a hamis vagy túlzó kifejezés és a gyógyhatás állítása, és különösen ügyelni kell az orvosi kifejezésekre, például akné kezelése, gyulladáscsökkentő vagy fertőtlenítő. A közigazgatási bírság hamis vagy túlzó reklám esetén 40.000–200.000 TWD, gyógyhatás állítása esetén 600.000–5.000.000 TWD. Az influenszerek és mások közléseit is ugyanezen mérce szerint kell vizsgálni, ha lényegük szerint reklámok.
 
 ### A teljes megjelenítés alapján ítélnek, nem az egyes szavak alapján
 
@@ -118,15 +118,15 @@ A társaság és a fióktelep alapstruktúrája a [társaságalapítás alapjai 
 - [A kozmetikumok higiéniai és biztonsági kezeléséről szóló törvény](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030013)
 - [A kozmetikai termékek nyilvántartásának szabályzata (化粧品產品登錄辦法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030097)
 - [A kozmetikai termékadat-dosszié kezelési szabályzata](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098)
-- [TFDA — közlemény a kozmetikai terméknyilvántartás tárgyi köréről](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30612)
-- [TFDA — közlemény a PIF szakaszos alkalmazásáról](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614)
-- [TFDA — a PIF készítésének irányelvei](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384)
-- [TFDA — kozmetikai terméknyilvántartás külön területe](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
-- [TFDA — kozmetikai termékadat-dosszié külön területe](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
+- [TFDA – közlemény a kozmetikai terméknyilvántartás tárgyi köréről](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30612)
+- [TFDA – közlemény a PIF szakaszos alkalmazásáról](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614)
+- [TFDA – a PIF készítésének irányelvei](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384)
+- [TFDA – kozmetikai terméknyilvántartás külön területe](https://www.fda.gov.tw/TC/siteContent.aspx?sid=3435)
+- [TFDA – kozmetikai termékadat-dosszié külön területe](https://www.fda.gov.tw/TC/site.aspx?sid=12523)
 - [A kozmetikumok jelölésének, népszerűsítésének és reklámjának megállapítási mércéi (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [A kozmetikai reklám megállapítási mércéinek hivatalos melléklete](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
-- [Egészségügyi és Jóléti Minisztérium (衛生福利部) — közlemény a kozmetikai reklám szabályozásáról](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Befektetés Tajvanon (Invest Taiwan) — a külföldi beruházás ismertetése](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
+- [Egészségügyi és Jóléti Minisztérium (衛生福利部) – közlemény a kozmetikai reklám szabályozásáról](https://www.mohw.gov.tw/cp-4256-48110-1.html)
+- [Befektetés Tajvanon (Invest Taiwan) – a külföldi beruházás ismertetése](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [A Gazdasági Minisztérium Beruházásvizsgáló Főosztályának útmutatója](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Ez a cikk a tajvani kozmetikai piacra lépéshez kapcsolódó rendszert általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi termékre vagy reklámra, és nem ígér meghatározott eredményt az engedélyről, a nyilvántartásról, az értékesítési lehetőségről vagy az ügyintézési időtartamról. A belépési formát, a termékadatokat, a jelölés és a reklám tartalmát, valamint az illetékes szerv legújabb gyakorlatát ügyenként kell ellenőrizni.

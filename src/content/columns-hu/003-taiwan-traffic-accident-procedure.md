@@ -19,7 +19,7 @@ Ha Tajvanon közúti baleset (交通事故) történik, először a biztonságot
 
 ## Q1. A baleset után elhagyható-e a helyszín?
 
-Sérüléssel vagy halállal járó balesetben a járművezetőnek haladéktalanul mentőintézkedéseket (救護措施) kell tennie, értesítenie kell a rendőrséget, valamint meg kell őriznie a járművet és a helyszíni bizonyítékokat (保全現場). A másik fél nemhivatalos egyetértése vagy önmagában a felvétel nem engedi azt a következtetést, hogy a szükséges intézkedések befejezése nélkül elhagyható a helyszín.
+Sérüléssel vagy halállal járó balesetben a járművezetőnek haladéktalanul mentőintézkedéseket (救護措施) kell tennie, értesítenie kell a rendőrséget, valamint meg kell őriznie a járművet és a helyszíni bizonyítékokat (保全現場). A másik fél nem hivatalos egyetértése vagy önmagában a felvétel nem engedi azt a következtetést, hogy a szükséges intézkedések befejezése nélkül elhagyható a helyszín.
 
 Sérüléses balesetben azonban, ha minden fél egyetért, a jármű a helyzet és a helyszíni nyomok megjelölése után áthelyezhető olyan helyre, amely nem akadályozza a forgalmat. Ez nem jelenti, hogy ezek a jelölések a mentést és a bejelentést pótolják.
 
@@ -47,17 +47,17 @@ A választás az elévülés megszakadása (時效中斷), az alperesi kör, a b
 
 ## Q4. Ha mindkét oldalon van gondatlanság, hogyan értékelik a büntetőjogi és a polgári felelősséget?
 
-Büntetőjogi felelősség csak akkor állapítható meg, ha elismerték mindenki gondossági kötelezettségének megsértését, valamint e megsértés és a másik fél sérülései közötti okozati összefüggést. Önmagában az, hogy mindkét oldalon volt gondatlanság, nem keletkezteti automatikusan a gondatlan testi sértés miatti felelősséget.
+Büntetőjogi felelősség csak akkor állapítható meg, ha megállapítható az egyes felek gondossági kötelezettségének megsértése, valamint e megsértés és a másik fél sérülései közötti okozati összefüggés. Önmagában az, hogy mindkét oldalon volt gondatlanság, nem keletkezteti automatikusan a gondatlan testi sértés miatti felelősséget.
 
-Polgári síkon, a polgári törvénykönyv 217. cikke szerint, ha a károsultnak van a kár okozásához vagy súlyosbításához hozzájáruló gondatlansága (與有過失), a bíróság csökkentheti vagy elengedheti a kártérítést. Például, ha az új tajvani dollárban (新臺幣, TWD) elismert kár TWD 1.000.000, és a károsult gondatlanságát 50 %-ra értékelik, az összeg TWD 500.000-ra csökkenthető a többi korrekció előtt.
+Polgári síkon, a polgári törvénykönyv 217. cikke szerint, ha a károsultnak van a kár okozásához vagy súlyosbításához hozzájáruló gondatlansága (與有過失), a bíróság csökkentheti vagy elengedheti a kártérítést. Például, ha az új tajvani dollárban (新臺幣, TWD) elismert kár 1.000.000 TWD, és a károsult gondatlanságát 50%-ra értékelik, az összeg 500.000 TWD-ra csökkenthető a többi korrekció előtt.
 
 A szakvélemény (鑑定) vagy az előzetes elemzési táblázat fontos irat lehet, de nem köti a bíróságot mechanikusan. A bíróság a bizonyítékok összességét vizsgálja, ideértve a vallomásokat, a képeket és a járművek állapotát.
 
-## Q5. Mit kell foglalni az egyezségi okiratba?
+## Q5. Mit kell belefoglalni az egyezségi okiratba?
 
-Az egyezségi okiratban (和解書) pontosan meg kell jelölni a baleset dátumát, helyét és feleit, valamint rögzíteni a fizetés összegét és időpontját, a biztosítási szolgáltatások rendezését, a lefedett és a fenntartott igényeket. Világosan meg kell állapítani a további kezelést, a később felfedezett sérüléseket, az olyan iratok kiadását, mint az orvosi igazolás (診斷證明書), valamint a fizetés és a büntetőjogi panasz visszavonása közötti viszonyt.
+Az egyezségi okiratban (和解書) pontosan meg kell jelölni a baleset dátumát, helyét és feleit, valamint rögzíteni a fizetés összegét és időpontját, a biztosítási szolgáltatások rendezését, az egyezséggel rendezett és a fenntartott igényeket. Világosan meg kell állapítani a további kezelést, a később felfedezett sérüléseket, az olyan iratok kiadását, mint az orvosi igazolás (診斷證明書), valamint a fizetés és a büntetőjogi panasz visszavonása közötti viszonyt.
 
-A polgári törvénykönyv 736. cikke szerinti egyezség (和解) olyan szerződés, amelyben a felek kölcsönösen engednek, hogy a vitát lezárják vagy elkerüljék. A polgári törvénykönyv 737. cikke szerint az, hogy milyen terjedelemben szűnnek meg a jogok, szintén csak az egyezségi okiratban feladottak határain belül értékelhető. Ezért nem szabad a szöveg vizsgálata nélkül azt állítani, hogy minden jövőbeli igény eltűnik.
+A polgári törvénykönyv 736. cikke szerinti egyezség (和解) olyan szerződés, amelyben a felek kölcsönösen engednek, hogy a vitát lezárják vagy elkerüljék. A polgári törvénykönyv 737. cikke szerint az, hogy milyen terjedelemben szűnnek meg a jogok, szintén csak az egyezségi okiratban feladottak határain belül értékelhető. Ezért a szöveg vizsgálata nélkül nem szabad azt állítani, hogy minden jövőbeli igény megszűnik.
 
 Ha magánindítványra üldözendő bűncselekményről van szó, a büntetőeljárási törvény 238. cikke szerint a panasz az elsőfokú szóbeli tárgyalás berekesztéséig vonható vissza, és a visszavonás után nem terjeszthető elő újra. Azonban olyan bűncselekményben, amely nem magánindítványra üldözendő, a magánegyezség nem fejezi be automatikusan a vádat, és az egyezség ténye nem kötelez mindig a panasz visszavonására.
 
@@ -93,8 +93,8 @@ Ha a szakvéleménnyel nincs egyetértés, újratárgyalás kérhető, de az új
 
 A polgári törvénykönyv 184. cikkén alapuló igény jogellenes jogsértést, a balesettel való okozati összefüggést és a kár bizonyítását feltételezi. Önmagában az, hogy baleset történt, nem vonja maga után, hogy az alábbi tételek mind elismertek. A polgári törvénykönyv 216. cikke a tényleges kár és az elmaradt haszon (所失利益) terjedelmének megállapítási kritériuma.
 
-- **Sérülések**: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a gyógyászati segédeszközök, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nemvagyoni kár is vizsgálható.
-- **Halál**: A polgári törvénykönyv 192. cikke szerint, ha van alap, vizsgálhatók a halál előtti orvosi költségek és a megnövekedett életviteli szükségletek költségei, a temetési költségek (殯葬費), valamint annak a személynek a tartási érdekkiesése (扶養利益損失), akinek törvényes tartási joga volt. A polgári törvénykönyv 194. cikke szerint egyes rokonok nemvagyoni kára is vizsgálható.
+- **Sérülések**: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a gyógyászati segédeszközök, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nem vagyoni kár is vizsgálható.
+- **Halál**: A polgári törvénykönyv 192. cikke szerint, ha van alap, vizsgálhatók a halál előtti orvosi költségek és a megnövekedett életviteli szükségletek költségei, a temetési költségek (殯葬費), valamint annak a személynek a tartási érdekkiesése (扶養利益損失), akinek törvényes tartási joga volt. A polgári törvénykönyv 194. cikke szerint egyes rokonok nem vagyoni kára is vizsgálható.
 - **Vagyon**: A polgári törvénykönyv 196. cikke szerint az indokolt tényleges vagyoni kár érvényesíthető, ideértve a jármű javítási költségeit vagy az értékvesztést.
 
 ## Q8. Ha a kezelés tart, hogyan kell bemutatni az orvosi költségiratokat?
@@ -109,7 +109,7 @@ A büntetőeljárási törvény 504. cikke szerint azonban, ha az ügyet a polg�
 
 Az orvosi igazolás vagy az orvosi vélemény hasznos a gondozás szükségességének bemutatásához, de önmagában nem döntő alap. Okiratokkal kell ismertetni a balesettel való okozati összefüggést, a gondozás szükségességét, hogy ténylegesen nyújtották-e, az időtartamot és az ésszerű összeget.
 
-Még ha a hozzátartozó ténylegesen, díjazás nélkül nyújtott gondozást, a megfelelő ügyben ez kárként értékelhető. Önmagában azonban az, hogy a gondozást hozzátartozó nyújtja, nem vonja maga után annak automatikus elismerését; a gondozás tartalmát, időtartamát és a szokásos költségszintet is vizsgálják.
+Még ha a hozzátartozó ténylegesen, díjazás nélkül nyújtott is gondozást, a megfelelő ügyben ez kárként értékelhető. Önmagában azonban az, hogy a gondozást hozzátartozó nyújtja, nem vonja maga után annak automatikus elismerését; a gondozás tartalmát, időtartamát és a szokásos költségszintet is vizsgálják.
 
 ## Q10. Mivel bizonyítják a kezelésre járás költségeit?
 
@@ -153,9 +153,9 @@ Ha a tartós működési zavar lényegesen vitatott, az orvosi szakvélemény ha
 
 Ha a számítás egyetlen tőkeösszegben történik, megfontolható a közbenső kamat levonása (中間利息扣除). A Bírósági Yuan Hoffmann-kalkulátora (霍夫曼) csak számítási eszköz, nem kötelező törvényes módszer, és nem ígér meghatározott eredményt. A polgári törvénykönyv 193. cikke szerint, a fél kérelmére, a bíróság biztosíték mellett rendszeres járadékban is rendelkezhet a fizetésről.
 
-## Q13. Hogyan értékelik a nemvagyoni kárért járó sérelemdíjat (慰撫金)?
+## Q13. Hogyan értékelik a nem vagyoni kárért járó sérelemdíjat (慰撫金)?
 
-A nemvagyoni kárért járó sérelemdíjat akkor értékelik megfelelő összeg megállapításával, ha a test vagy az egészség jogellenes megsértése fennáll, a polgári törvénykönyv 195. cikke szerint.
+A nem vagyoni kárért járó sérelemdíjat akkor értékelik megfelelő összeg megállapításával, ha a test vagy az egészség jogellenes megsértése fennáll, a polgári törvénykönyv 195. cikke szerint.
 
 A bíróság minden ügy körülményeit vizsgálja, együtt értékelve a sérülések és a kezelés tartalmát, a tartós következményeket, a szenvedést és az életre gyakorolt hatást, a kort és az állapotot, a társadalmi-gazdasági körülményeket, valamint a felek bizonyítékait. Ezért nehéz a kimenetelt csupán tipizált terjedelemből előre jelezni.
 
@@ -175,7 +175,7 @@ A kötelező gépjármű-felelősségbiztosításról szóló törvény (強制�
 
 Egyjárműves balesetben e jármű vezetője elvben nem címzettje e jármű kötelező biztosításának. Több jármű részvételével járó balesetben azonban vannak esetek, amikor a vezető a másik érintett jármű kötelező biztosítója felé érvényesíthet szolgáltatásokat.
 
-A 2026. május 29-én módosított kifizetési tarifa (強制汽車責任保險給付標準) a 2026. július 1-jétől bekövetkezett balesetekre alkalmazandó. A sérülések ésszerű és szükséges orvosi költségeinek plafonja TWD 200.000 új tajvani dollárban; a rokkantsági szolgáltatás (失能) TWD 80.000-tól TWD 3.000.000-ig terjed a 15 törvényes fokozat szerint; a halálozási szolgáltatás TWD 3.000.000, a halál, a rokkantság és az orvosi költségek együttes maximuma 1 károsultra és 1 balesetre vetítve TWD 3.200.000. A korábbi balesetekre a megelőző tarifa alkalmazható.
+A 2026. május 29-én módosított kifizetési tarifa (強制汽車責任保險給付標準) a 2026. július 1-jétől bekövetkezett balesetekre alkalmazandó. A sérülések ésszerű és szükséges orvosi költségeinek felső határa 200.000 TWD; a rokkantsági szolgáltatás (失能) 80.000-tól 3.000.000 TWD-ig terjed a 15 törvényes fokozat szerint; a halálozási szolgáltatás 3.000.000 TWD, a halál, a rokkantság és az orvosi költségek együttes maximuma 1 károsultra és 1 balesetre vetítve 3.200.000 TWD. A korábbi balesetekre a megelőző tarifa alkalmazható.
 
 A harmadik személlyel szembeni felelősségbiztosítás (第三人責任險), a járművezetői balesetbiztosítás (駕駛人傷害險) és a saját jármű kárbiztosítása (車體損失險) fakultatív, szerződéses jellegű termékek. A tényleges fedezet a biztosított, a plafon, az önrész (自負額), a kizárások, a gondatlanság és a kötvény egyéb feltételei szerint különbözik, ezért a kötvényt és a feltételeket ügyenként kell ellenőrizni.
 
@@ -207,11 +207,11 @@ Elhanyagolhatják a másik fél érzéseit érintő fontos részeket, például 
 
 ​
 
-A biztosító számára egy konkrét ügyben további TWD 500.000 vagy TWD 1.000.000 kiadása nem befolyásolja lényegesen a biztosító teljes nyereségét, a baleset fele számára azonban ez az összeg eldöntheti, hogy van-e vagy nincs büntetőjogi előélet (前科).
+A biztosító számára egy konkrét ügyben további 500.000 vagy 1.000.000 TWD kiadása nem befolyásolja lényegesen a biztosító teljes nyereségét, a baleset fele számára azonban ez az összeg döntheti el, hogy lesz-e büntetett előélete (前科).
 
 ​
 
-Érdekellentét is keletkezhet a biztosító és a fél között, és mivel a biztosítónak sok ügyet kell vezetnie, nehéz mindennek elégséges időt szentelnie.
+Érdekellentét is keletkezhet a biztosító és a fél között, és mivel a biztosítónak sok ügyet kell intéznie, nehéz mindegyikre elegendő időt szentelnie.
 
 ​
 
@@ -223,7 +223,7 @@ A vita egészét ezért nem érdemes a biztosítóra bízni.
 
 ​
 
-Ha az iratokat a biztosítóra bízzák, folyamatosan követni kell a vezetés folyamatát, és gondosan vizsgálni mindkét fél iratait.
+Ha az iratokat a biztosítóra bízzák, folyamatosan követni kell az ügyintézés menetét, és gondosan meg kell vizsgálni mindkét fél iratait.
 
 ​
 
@@ -239,7 +239,7 @@ Gondatlan testi sértés miatt egyes ítéletekben mintegy 3 hónap szabadságve
 
 ​
 
-Ha pénzbüntetésre váltják (易科罰金), a büntető törvénykönyv 41. cikke 1. bekezdése 1 napra TWD 1.000, TWD 2.000 vagy TWD 3.000 átváltást állapít meg; naponta TWD 1.000 szerint számítva a 3 hónap büntetés 3 × 30 × TWD 1.000 = TWD 90.000.
+Ha pénzbüntetésre váltják (易科罰金), a büntető törvénykönyv 41. cikke 1. bekezdése 1 napra 1.000, 2.000 vagy 3.000 TWD átváltást állapít meg; naponta 1.000 TWD szerint számítva a 3 hónap büntetés 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -299,11 +299,11 @@ Q20. Hogyan keresnek ügyvédet közúti balesethez?
 
 ​
 
-Mivel a közúti balesetek nagyon gyakori ügyek, az általános peres ügyvéd, aki néhány év gyakorlati tapasztalatot gyűjtött, vezethet közúti baleseti ügyet.
+Mivel a közúti balesetek nagyon gyakori ügyek, az általános peres ügyvéd, aki néhány év gyakorlati tapasztalatot szerzett, elláthat közúti baleseti ügyet.
 
 ​
 
-Akkor az ügyvéd gondossága és tisztessége a fontos.
+Ilyenkor az ügyvéd gondossága és tisztessége a döntő.
 
 ​
 
@@ -339,7 +339,7 @@ A sérülések vagy a halál miatt az áldozat maga vagy a családja fizikai és
 
 ​
 
-Az okozó gyakran nem törődik azzal, hogy telefonáljon az áldozat állapotáról vagy meglátogassa, és sok okozó azt feltételezi, hogy a biztosító mindent elintéz, és maga nem jelenik meg. Ezekben az esetekben sem megbánás, sem jóhiszeműség nem látható.
+Az okozó gyakran nem törődik azzal, hogy telefonáljon az áldozat állapotáról vagy meglátogassa, és sok okozó azt feltételezi, hogy a biztosító mindent elintéz, és maga nem jelenik meg. Ezekben az esetekben sem megbánás, sem őszinte jó szándék nem látszik.
 
 ​
 
@@ -347,11 +347,11 @@ Az okozó gyakran nem törődik azzal, hogy telefonáljon az áldozat állapotá
 
 ​
 
-A sértett ezért mélyen megbántódik, és haragra gerjed, ezért gyakran nem enged a tárgyalási összegből, vagy előzetes vagyonzárlatot (假扣押) kér, és a másik fél vagyonának zárolását a végsőkig viszi.
+A sértett ezért mélyen megbántódik és feldühödik, ezért gyakran nem enged a tárgyalási összegből, vagy előzetes vagyonzárlatot (假扣押) kér, és a másik fél vagyonának zárolását a végsőkig viszi.
 
 ​
 
-Ezt a pontot tehát abszolút nem szabad elhanyagolni, és a körülményekhez képest ügyvéddel kell konzultálni.
+Ezt a szempontot tehát semmiképpen nem szabad elhanyagolni, és a körülményekhez igazodva ügyvéddel kell konzultálni.
 
 ​
 

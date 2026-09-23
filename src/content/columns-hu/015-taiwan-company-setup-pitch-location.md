@@ -13,7 +13,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![Kiemelt kép](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
-(A tajvani helyi önkormányzatok követelményei különböznek; a következő szöveg éttermi tevékenység nyitásának példája Tajpej városában.)
+(A tajvani helyi önkormányzatok követelményei különböznek; a következő szöveg tajpeji példán mutatja be az éttermi tevékenység megnyitását.)
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 
@@ -51,25 +51,25 @@ Ezért erre figyelni kell.
 
 ​
 
-**Kérdés. Minden ágazatnak a „telephely előzetes lekérdezése” rendszerén keresztül kell ellenőriznie, hogy a tevékenység lehetséges-e?**
+**Kérdés. Minden tevékenységi ághoz a „telephely előzetes lekérdezése” rendszerén keresztül kell ellenőrizni, hogy a tevékenység lehetséges-e?**
 
-Minden ágazatnak ajánlott a „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerén keresztül ellenőrizni, hogy a tevékenység lehetséges-e.
+Minden tevékenységi ághoz ajánlott a „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerén keresztül ellenőrizni, hogy a tevékenység lehetséges-e.
 
-A társaság bejegyzésekor azonban gyakran több ágazatot jegyeznek be egyszerre, és gyakran körülbelül 10 ágazatot kívánnak egyszerre bejegyezni.
+A társaság bejegyzésekor azonban gyakran több tevékenységi ágat jegyeznek be egyszerre, és gyakran körülbelül 10 tevékenységi ágat kívánnak egyszerre bejegyezni.
 
-Ezért a gyakorlatban nem szükséges a társaság bejegyzésekor minden ágazatot lekérdezni.
+Ezért a gyakorlatban nem szükséges a társaság bejegyzésekor minden tevékenységi ágat lekérdezni.
 
 A „[Tajpej város telephely-tájékoztatási szolgálatának működési utasítása](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) és Tajpej város hatályos útmutatója szerint
 
-társaság vagy kereskedelmi vállalkozás (ideértve a fióktelepet (分公司) és az alárendelt telephelyet (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől — ágazattól függetlenül — **csatolni kell** a telephely előzetes lekérdezésének eredményét.
+társaság vagy kereskedelmi vállalkozás (ideértve a fióktelepet (分公司) és az alárendelt telephelyet (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől – a tevékenységi ágtól függetlenül – **csatolni kell** a telephely előzetes lekérdezésének eredményét.
 
-Az alábbi „hivatalból vizsgált ágazatok” (主動查詢之營業項目) jegyzéke azokat az ágazatokat jelöli, amelyeket a Kereskedelmi Hivatal a bejegyzés vizsgálata során hivatalból további lekérdezéssel (隨案主動查詢) ellenőriz, ha az ágazat szerepel a kérelemben, de hiányzik a csatolt eredményből; az, hogy egy ágazat nincs ezen a jegyzéken, nem jelenti a lekérdezés alóli mentességet.
+Az alábbi „hivatalból vizsgált tevékenységi ágak” (主動查詢之營業項目) jegyzéke azokat a tevékenységi ágakat jelöli, amelyeket a Kereskedelmi Hivatal a bejegyzés vizsgálata során hivatalból további lekérdezéssel (隨案主動查詢) ellenőriz, ha a tevékenységi ág szerepel a kérelemben, de hiányzik a csatolt eredményből; az, hogy egy tevékenységi ág nincs ezen a jegyzéken, nem jelenti a lekérdezés alóli mentességet.
 
 Ha olyan helyen nyit, ahol az éttermi tevékenység nem lehetséges, később az illetékes szerv közigazgatási bírsága (罰鍰) is kiszabható.
 
-![„hivatalból vizsgált ágazatok” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![„hivatalból vizsgált tevékenységi ágak” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-„hivatalból vizsgált ágazatok” (主動查詢之營業項目)
+„hivatalból vizsgált tevékenységi ágak” (主動查詢之營業項目)
 
 Más kérdésben a Kapcsolat oldalon küldhet megkeresést. A tanácsadás nem magyarul, hanem angolul, kínaiul (中文), japánul és koreaiul zajlik.
 

@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Glavni prikaz](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-U poslednje vreme su mnoga lica uspešno osnovala društvo (公司) na Tajvanu i stekla radnu vizu i ispravu o boravku stranca (外僑居留證).
+U poslednje vreme su mnogi ljudi uspešno osnovali društvo (公司) na Tajvanu i stekla radnu vizu i ispravu o boravku stranca (外僑居留證).
 
-Pitanja koja se često postavljaju pri osnivanju sastavila sam niže.
+Pitanja koja se često postavljaju pri osnivanju sastavila sam u nastavku.
 
-Lica koja su čitala [**Osnivanje društva na Tajvanu — osnove**](/sr/columns/taiwan-company-establishment-basics) mogu zatim da pogledaju i ovaj detaljniji produbljeni deo.
+Oni koji su čitali [**Osnivanje društva na Tajvanu — osnove**](/sr/columns/taiwan-company-establishment-basics) mogu zatim da pogledaju i ovaj detaljniji produbljeni deo.
 
-Navedena pitanja i odgovori neka budu od pomoći licima koja razmatraju osnivanje društva na Tajvanu.
+Nadam se da će navedena pitanja i odgovori pomoći onima koji razmatraju osnivanje društva na Tajvanu.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -29,15 +29,15 @@ Kada stranac osniva društvo na Tajvanu, mora da podnese investicioni plan (投�
 
 Odeljenje za pregled i odobravanje investicija mora da proveri da li se dati kapital (資本額) stvarno koristi u investicione svrhe.
 
-Odeljenje takođe proverava da strana lica ne unose sredstva pod drugim izgovorom.
+Odeljenje takođe proverava da li strana lica unose sredstva pod drugim izgovorom.
 
 Pri sastavljanju investicionog plana nije potrebno navesti tačnu adresu društva; dovoljno je navesti područje (primer: grad Tajpej). ​
 
 Kada se kasnije u banci otvara pripremni račun društva (公司籌備處帳戶), mnoge banke međutim pregledaju ugovor o zakupu (租賃契約) i na licu mesta provere adresu društva.
 
-Službenica tajvanske banke neposredno je navela sledeće:
+Službenica tajvanske banke navela je sledeće:
 
-u poslednje vreme mnogi stranci nakon otvaranja računa nestanu, pa se otvaranje računa ocenjuje sve strože.
+„U poslednje vreme mnogi stranci nakon otvaranja računa nestanu, pa se otvaranje računa ocenjuje sve strože.”
 
 Već u delu o osnovama jedan čitalac naveo je da je otvaranje računa najteža etapa; slažem se s tim.
 
@@ -61,9 +61,9 @@ U istom roku ima dovoljno vremena i da se u banci otvori pripremni račun i pren
 
 Moguće je.
 
-Banka načelno zahteva dvostruku identifikaciju,
+Banka po pravilu traži dva identifikaciona dokumenta,
 
-a bez isprave o boravku možete kod Imigracione uprave Tajvana zatražiti „**osnovni obrazac jedinstvenog identifikacionog broja**“ (統一證號基本資料表).
+a bez isprave o boravku možete kod Imigracione uprave Tajvana zatražiti „**osnovni obrazac jedinstvenog identifikacionog broja**” (統一證號基本資料表).
 
 Izdavanje je moguće istog dana,
 
@@ -75,11 +75,11 @@ Imigraciona uprava (移民署) je međutim veoma opterećena; zato treba doći r
 
 Odeljenje za pregled i odobravanje investicija Ministarstva ekonomije ocenjuje pozadinu investitora,
 
-ali ocena nije pretirano stroga.
+ali ocena nije preterano stroga.
 
 Možete navesti raznovrsno radno iskustvo, uključujući poslove sa nepunim radnim vremenom.
 
-Iskustvo izložite detaljno, tako da se lica koja vrše ocenu mogu uveriti.
+Iskustvo izložite detaljno, tako da se oni koji vrše ocenu mogu uveriti.
 
 U ovoj tački stvar treba temeljno razmotriti s advokatkinjom ili advokatom na Tajvanu.
 
@@ -91,11 +91,11 @@ Osnivanje društva traje oko **3 meseca**, a sticanje radne dozvole (工作許�
 
 zato datum početka ugovora treba odrediti što kasnije.
 
-Dalje, u ugovorima o zakupu trgovačkih lokala na Tajvanu zakupodavac često zakupcu daje „**razdoblje uređenja prostora**“ (裝潢期間).
+Osim toga, u ugovorima o zakupu trgovačkih lokala na Tajvanu zakupodavac često zakupcu daje „**period uređenja prostora**” (裝潢期間).
 
-Reč je o razdoblju oslobođenom zakupnine; o njemu se može pregovarati.
+Reč je o periodu oslobođenom zakupnine; o njemu se može pregovarati.
 
-Strancu nije lako da zakupi trgovački lokal, a kaucija (押金) na Tajvanu je prilično niska (obično 2 meseca), pa je zaštita zakupodavca ograničena;
+Strancu nije lako da zakupi trgovački lokal, a kaucija (押金) na Tajvanu je prilično niska (obično u visini dve mesečne zakupnine), pa je zaštita zakupodavca ograničena;
 
 zakupodavci se zato ustručavaju da izdaju strancima.
 
@@ -115,7 +115,7 @@ Npr. ako je upisana delatnost ugostiteljstvo, a namerava se zakup kancelarijskog
 
 Kao što sam već navela, banka pregleda ugovor o zakupu i na licu mesta proverava adresu društva.
 
-Dalje, pri konačnom upisu društva i gradska uprava (市政府) zahteva da adresa upisa bude u zoni u kojoj je rad restorana dopušten;
+Osim toga, pri konačnom upisu društva i gradska uprava (市政府) zahteva da adresa upisa bude u zoni u kojoj je rad restorana dopušten;
 
 ako je reč o kancelarijskom prostoru, upis društva (公司登記) tada nije moguć.
 

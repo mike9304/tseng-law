@@ -20,7 +20,7 @@ faq:
 
 ![Glavni prikaz](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Advokatkinja Wei Tseng (曾雋崴) niže sažima pravila otpremnine (資遣費) po tajvanskom pravu.
+Advokatkinja Wei Tseng (曾雋崴) u nastavku sažima pravila otpremnine (資遣費) po tajvanskom pravu.
 
 Tekst objašnjava kada pravo na otpremninu nastaje i kada ne.
 
@@ -28,7 +28,7 @@ Tekst objašnjava kada pravo na otpremninu nastaje i kada ne.
 
 Uređenje se od države do države razlikuje.
 
-U nekim pravnim poredcima, na primer u Koreji, društvo načelno mora da isplati otpremninu kada zaposleni ode.
+U nekim pravnim porecima, na primer u Koreji, društvo načelno mora da isplati otpremninu kada zaposleni ode.
 
 Na Tajvanu je drugačije:
 
@@ -58,7 +58,7 @@ Sledeća tabela to sažima.
 | Prethodni otkaz | Nužan | Nije nužan | Nužan |
 | Težina | Lako | Teško | Lako |
 | Da li društvo mora da isplati otpremninu (資遣費) | Nužno | Nije nužno | Nije nužno |
-|  | Tajvanski Zakon o radnim standardima, član 11 (勞動基準法第11條): Ako ne nastupi jedan od sledećih slučajeva, poslodavac ne može da raskine ugovor o radu, ni posle prethodnog obaveštenja zaposlenom.  1. Obustava delatnosti (歇業) ili prenos preduzeća (轉讓)  2. Gubici (虧損) ili stezanje delatnosti (業務緊縮)  3. Viša sila zahteva prekid delatnosti na jedan mesec ili duže  4. Priroda delatnosti zahteva smanjenje osoblja i otpušteni se ne može premestiti na drugo pogodno mesto  5. Određeni zaposleni ne može zadovoljavajuće da obavi posao koji mesto zahteva | Tajvanski Zakon o radnim standardima, član 12 (勞動基準法第12條): Poslodavac može da otpusti bez prethodnog obaveštenja, ako za zaposlenog postoji jedan od sledećih slučajeva.  1. Ko pri zaključenju ugovora o radu podnese netačne podatke, navede poslodavca u zabludu i izloži preduzeće riziku štete  2. Ko upotrebi nasilje ili teško uvredi poslodavca, njegovu porodicu, njegovog zastupnika (代理人) ili druge saradnike  3. Koga su pravnosnažno osudili na kaznu zatvora na određeno vreme (有期徒刑) ili na strožu kaznu, bez uslovnog odlaganja izvršenja kazne (緩刑) i bez dozvole pretvaranja u novčanu kaznu (易科罰金)  4. Teško kršenje ugovora o radu ili pravilnika o radu  5. Ko namerno potroši mašine, alate, sirovine, proizvode ili drugu imovinu poslodavca, ili namerno odaje tehničke i poslovne tajne poslodavca i nanese poslodavcu štetu  6. Neopravdani izostanak (曠工) bez opravdanog razloga 3 dana uzastopno, ili 6 dana ili više u mesecu |  |
+|  | Tajvanski Zakon o radnim standardima, član 11 (勞動基準法第11條): Ako ne nastupi jedan od sledećih slučajeva, poslodavac ne može da raskine ugovor o radu, ni posle prethodnog obaveštenja zaposlenom.  1. Obustava delatnosti (歇業) ili prenos preduzeća (轉讓)  2. Gubici (虧損) ili stezanje delatnosti (業務緊縮)  3. Viša sila zahteva prekid delatnosti na jedan mesec ili duže  4. Priroda delatnosti zahteva smanjenje osoblja i otpušteni se ne može premestiti na drugo pogodno mesto  5. Određeni zaposleni ne može zadovoljavajuće da obavi posao koji mesto zahteva | Tajvanski Zakon o radnim standardima, član 12 (勞動基準法第12條): Poslodavac može da otpusti bez prethodnog obaveštenja, ako za zaposlenog postoji jedan od sledećih slučajeva.  1. Ko pri zaključenju ugovora o radu podnese netačne podatke, navede poslodavca u zabludu i izloži preduzeće riziku štete  2. Ko upotrebi nasilje ili teško uvredi poslodavca, njegovu porodicu, njegovog zastupnika (代理人) ili druge saradnike  3. Koga su pravnosnažno osudili na kaznu zatvora na određeno vreme (有期徒刑) ili na strožu kaznu, bez uslovnog odlaganja izvršenja kazne (緩刑) i bez dozvole pretvaranja u novčanu kaznu (易科罰金)  4. Teško kršenje ugovora o radu ili pravilnika o radu  5. Ko namerno ošteti ili potroši mašine, alate, sirovine, proizvode ili drugu imovinu poslodavca, ili namerno odaje tehničke i poslovne tajne poslodavca i nanese poslodavcu štetu  6. Izostanak s posla (曠工) bez opravdanog razloga 3 dana uzastopno, ili 6 dana ili više u mesecu |  |
 
 > Na Tajvanu, kada se navrši jedna godina staža (年資),
 > poslodavac mora da isplati 0,5 meseca prosečne plate (平均工資) kao otpremninu, najviše za 6 meseci plate.
@@ -70,11 +70,11 @@ Ako je plata zaposlenog visoka i postignut je određeni staž,
 
 otpremnina je takođe razmerno viša.
 
-Tada neka malo savesna tajvanska društva koriste razna sredstva,
+Tada se neka nesavesna tajvanska društva služe raznim sredstvima,
 
 da ne bi morala da isplaćuju visoke otpremnine,
 
-i vode zaposlene ka sopstvenom odlasku.
+i navode zaposlene da sami daju otkaz.
 
 Zaposleni moraju biti oprezni
 
@@ -92,11 +92,11 @@ i novo rukovodstvo počelo je odmah po stupanju,
 
 da smanji troškove osoblja,
 
-postupno da poziva dobro plaćene i dugogodišnje zaposlene na razgovore
+i da postupno poziva dobro plaćene i dugogodišnje zaposlene na razgovore.
 
-Stranka, gospodin B, u društvu A bio je zaposlen više od 10 godina
+Naš klijent, gospodin B, bio je zaposlen u društvu A više od 10 godina
 
-i trgovac s najboljim rezultatom u središnjem regionu Tajvana.
+i prodavac s najboljim rezultatima u središnjem delu Tajvana.
 
 Pošto su plata i nagrade bile veoma visoke,
 
@@ -116,9 +116,9 @@ i da smanji platu i funkciju.
 
 Inače bi B trebalo da napusti društvo;
 
-predali su B list formata A4
+predali su gospodinu B list formata A4
 
-i pozvali ga da na njega napiše: „Ja, [ime], dobrovoljno snižavam funkciju i platu“
+i pozvali ga da na njega napiše: „Ja, [ime], dobrovoljno snižavam funkciju i platu”
 
 kao sadržinu.
 
@@ -128,7 +128,7 @@ da ih slede.
 
 ​
 
-B je bio zaposleni s najboljim rezultatom u središnjem regionu Tajvana,
+B je bio zaposleni s najboljim rezultatima u središnjem delu Tajvana,
 
 doneo je društvu mnogo novca
 
@@ -148,13 +148,13 @@ i zatim više nije dolazio na posao.
 
 ​
 
-Istom metodom društvo
+Istom metodom društvo je
 
-smanjilo je plate mnogim rukovodećim zaposlenima
+smanjilo plate mnogim rukovodećim zaposlenima
 
 i deo zaposlenih to postupanje nije podneo
 
-i sami su otišli
+i sami su otišli.
 
 ​
 
@@ -174,7 +174,7 @@ i mogao je da dokaže da sam nije otišao.
 
 Zahvaljujući tome kasnije je uz zastupanje
 
-mogao da utvrdi pravo koje zakon predviđa.
+mogao da ostvari pravo koje zakon predviđa.
 
 Opis jedne stvari nije obećanje da će isti ishod nastupiti i drugde.
 
@@ -190,7 +190,7 @@ Ako društvo beleži sitne greške zaposlenih,
 
 postavlja ciljeve teške za postizanje,
 
-stavlja preterane zahteve
+postavlja preterane zahteve
 
 ili premešta zaposlene na čudna mesta,
 
@@ -216,7 +216,7 @@ Ne zaključujte lako poravnanje s društvom
 
 i pazite da društvo ne otpušta neprikladnim načinom
 
-niti vodi ka sopstvenom odlasku.
+niti da Vas navodi da sami date otkaz.
 
 Otpremnina je zakonsko pravo samo kada su uslovi zakona ispunjeni;
 

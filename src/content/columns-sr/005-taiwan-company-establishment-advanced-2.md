@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Glavni prikaz](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Lica koja su čitala [Osnivanje društva na Tajvanu — osnove](/sr/columns/taiwan-company-establishment-basics) i [Osnivanje društva na Tajvanu — produbljeni pregled, 1. deo](/sr/columns/taiwan-company-establishment-advanced-1) ovde nalaze dalja pitanja o osnivanju društva na Tajvanu (公司設立).
+Oni koji su čitali [Osnivanje društva na Tajvanu — osnove](/sr/columns/taiwan-company-establishment-basics) i [Osnivanje društva na Tajvanu — produbljeni pregled, 1. deo](/sr/columns/taiwan-company-establishment-advanced-1) ovde nalaze dalja pitanja o osnivanju društva na Tajvanu (公司設立).
 
 ​
 
@@ -21,7 +21,7 @@ Lica koja su čitala [Osnivanje društva na Tajvanu — osnove](/sr/columns/taiw
 
 ​
 
-Navedena pitanja i odgovori pripremila je advokatkinja Wei Tseng (曾雋崴); neka budu od pomoći licima koja razmatraju osnivanje društva (公司設立) na Tajvanu.
+Navedena pitanja i odgovore pripremila je advokatkinja Wei Tseng (曾雋崴); nadamo se da će pomoći onima koji razmatraju osnivanje društva (公司設立) na Tajvanu.
 
 ​
 
@@ -31,7 +31,7 @@ Načelno banke u Koreji zahtevaju da se investitor **lično** pojavi u banci u K
 
 Prenos internetskim bankarstvom ili preko srodnika u Koreji nije moguć.
 
-Dalje, prema korejskim propisima o deviznoj kontroli, lice s korejskim državljanstvom koje osniva strano pravno lice ili stiče udele mora da podnese „prijavu neposredne strane investicije“. Prijava mora biti zavedena u trenutku prenosa kapitala na tajvansko pravno lice (台灣法人); ako prijava izostane, mogu nastupiti sankcije zbog povrede deviznih propisa.
+Dalje, prema korejskim propisima o deviznoj kontroli, lice s korejskim državljanstvom koje osniva strano pravno lice ili stiče udele mora da podnese „prijavu neposredne strane investicije”. Prijava mora biti zavedena u trenutku prenosa kapitala na tajvansko pravno lice (台灣法人); ako prijava izostane, mogu nastupiti sankcije zbog povrede deviznih propisa.
 
 Pre prenosa kapitala (資本金匯款) obratite se svojoj glavnoj banci u Koreji.
 
@@ -63,15 +63,15 @@ Pošto se unutrašnja pravila pojedinih banaka (銀行) razlikuju, ako kapital t
 
 Zavisi od banke; načelno je potreban barem broj mobilnog telefona.
 
-Neke banke mogu da postave i dalje zahteve, na primer da se račun koristi najmanje 6 meseci nakon osnivanja.
+Neke banke mogu da postave dodatne zahteve, na primer da se račun koristi najmanje 6 meseci nakon osnivanja.
 
 **​**
 
 **5. Može li društvo da zapošljava strance (uključujući lica s korejskim državljanstvom)?**
 
-Prvi zaposleni: rukovodilac preduzeća redovne investicije prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Merilo „posla stručne ili tehničke prirode“ iz tačke B ispod se ne primenjuje, ali se primenjuju uslovi podobnosti, uključujući uslov rukovodioca (經理人) društva čiji ulog prekomorskih Kineza ili stranaca prelazi 1/3, kao i uslovi rezultata poslodavca koji se tiču kapitala i prometa (članovi 38 i 39 standarda provere).
+Prvi zaposleni: rukovodilac preduzeća redovne investicije prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Merilo „posla stručne ili tehničke prirode” iz sledeće tačke ne primenjuje se, ali se primenjuju uslovi podobnosti, uključujući uslov rukovodioca (經理人) društva čiji ulog prekomorskih Kineza ili stranaca prelazi 1/3, kao i uslovi rezultata poslodavca koji se tiču kapitala i prometa (članovi 38 i 39 standarda provere).
 
-Od drugog zaposlenog postoje ograničenja: ako se zaposli više nego jedan stranac, obrazovanje i iskustvo zaposlenog, pravila prosečne plate pri zapošljavanju i pravila kapitala i prometa društva obrađuju se prema „stručnom ili tehničkom poslu“ (專門性或技術性工作).
+Od drugog zaposlenog postoje ograničenja: ako se zaposli više od jednog stranca, obrazovanje i iskustvo zaposlenog, pravila prosečne plate pri zapošljavanju i pravila kapitala i prometa društva obrađuju se prema „stručnom ili tehničkom poslu” (專門性或技術性工作).
 
 Vidite stranicu Ministarstva rada Tajvana (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

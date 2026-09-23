@@ -1259,17 +1259,17 @@ export const guidanceAnswers: Record<
   sr: {
     services: {
       answer:
-        'Kancelarija vodi šest oblasti po tajvanskom pravu: investicije i osnivanje društava, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda poslati sadržaj. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Kancelarija pokriva šest oblasti po tajvanskom pravu: investicije i osnivanje društava, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda poslati sadržaj. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/faq', '/sr/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm je tajvanska advokatska kancelarija koju su 2016. osnovali diplomci National Taiwan University (國立臺灣大學), sa kancelarijama u Tajpeju, Kaohsiungu, Taichungu i Pingtungu. Od 2020. deluje i računovodstveno odeljenje; kancelarija u Taichungu vodi stvari sa vezom na Koreju i Japan. Kancelarija ne obećava ishod. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Hovering International Law Firm je tajvanska advokatska kancelarija koju su 2016. osnovali diplomci National Taiwan University (國立臺灣大學), sa kancelarijama u Tajpeju, Kaohsiungu, Taichungu i Pingtungu. Od 2020. deluje i računovodstveno odeljenje; kancelarija u Taichungu vodi stvari povezane sa Korejom i Japanom. Kancelarija ne obećava ishod. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/lawyers', '/sr/services'],
     },
     lawyers: {
       answer:
-        'Ova stranica pokazuje profile advokatkinja i advokata Hovering, operativnog rukovodstva i pridruženog računovodstva i revizije. Advokatkinja Wei Tseng (曾雋崴) ovlašćena je da obavlja advokatsku delatnost na Tajvanu i rukovodeća je advokatkinja kancelarije; radi sa klijentima iz Koreje, iz Japana i sa drugim međunarodnim klijentima. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Ova stranica prikazuje profile advokatkinja i advokata kancelarije Hovering, operativnog rukovodstva i pridruženog računovodstva i revizije. Advokatkinja Wei Tseng (曾雋崴) ovlašćena je da obavlja advokatsku delatnost na Tajvanu i rukovodeća je advokatkinja kancelarije; radi sa klijentima iz Koreje, iz Japana i sa drugim međunarodnim klijentima. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/about', '/sr/contact'],
     },
     pricing: {
@@ -1279,7 +1279,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Pošaljite sažetak kontaktnim obrascem: šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati isprave identiteta niti celokupne dokaze. Kancelarija ne obećava rok za odgovor i ne potvrđuje sastanak preko ove stranice. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Pošaljite sažetak kontaktnim obrascem: šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati lične isprave niti celokupne dokaze. Kancelarija ne obećava rok za odgovor i ne potvrđuje sastanak preko ove stranice. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/faq', '/sr/pricing'],
     },
     faq: {

@@ -2211,7 +2211,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Konsultacija se odvija samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom.',
     methodConfirmationNotice:
-      'Ako ne možete da koristite nijedan od četiri jezika konsultacije, izaberite „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
+      'Ako ne možete da koristite nijedan od četiri jezika konsultacije, izaberite „Način komunikacije treba potvrditi”. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
     preparationNotice:
       'Sažetak možete napisati na svom jeziku. Izvorni tekst čuva se onako kako ste ga napisali i automatski se ne prevodi.',
     heading: 'Pošaljite zahtev za ocenu',

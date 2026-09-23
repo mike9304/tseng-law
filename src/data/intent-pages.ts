@@ -971,7 +971,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       title: 'Taiwan Legal Counsel for Semiconductor Suppliers',
       seoTitle: 'Taiwan Semiconductor Supplier Legal Support',
       description:
-        'A briefing for overseas semiconductor materials and equipment suppliers that sell into Taiwan fabs and packaging houses: local entity choice, supply contracts, technician stays, and collections.',
+        'For overseas semiconductor materials and equipment suppliers to Taiwan fabs and OSAT houses: entity choice, supply contracts, technician stays, and collections.',
       keywords: [
         'Taiwan semiconductor supplier legal',
         'semiconductor materials equipment Taiwan',

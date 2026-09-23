@@ -16,14 +16,14 @@ describe('Japanese pricing integration', () => {
 
     expect(metadata.title).toBe('費用のご案内');
     expect(metadata.description).toBe(
-      '昊鼎国際法律事務所の主要サービスについて、費用の目安をご案内します。',
+      '一般法律相談、民事・刑事訴訟、台湾での会社設立、年間法律顧問など、昊鼎国際法律事務所が提供する主要サービスごとの費用の目安をわかりやすくご案内するページです。',
     );
     expect(metadata.alternates?.canonical).toBe(`${SITE_URL}/ja/pricing`);
     expect(metadata.other?.['content-language']).toBe('ja');
     expect(metadata.openGraph).toMatchObject({
       title: '費用のご案内',
       description:
-        '昊鼎国際法律事務所の主要サービスについて、費用の目安をご案内します。',
+        '一般法律相談、民事・刑事訴訟、台湾での会社設立、年間法律顧問など、昊鼎国際法律事務所が提供する主要サービスごとの費用の目安をわかりやすくご案内するページです。',
       url: `${SITE_URL}/ja/pricing`,
       locale: 'ja_JP',
     });
@@ -111,7 +111,7 @@ describe('Japanese pricing integration', () => {
     expect(html).toContain('PRICING');
     expect(html).toContain('費用のご案内');
     expect(html).toContain(
-      '昊鼎国際法律事務所の主要サービスについて、費用の目安をご案内します。',
+      '一般法律相談、民事・刑事訴訟、台湾での会社設立、年間法律顧問など、昊鼎国際法律事務所が提供する主要サービスごとの費用の目安をわかりやすくご案内するページです。',
     );
     expect(html).toContain('一般法律相談');
     expect(html).toContain('民事・刑事訴訟');

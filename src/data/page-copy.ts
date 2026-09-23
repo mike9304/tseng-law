@@ -187,17 +187,17 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     services: {
       label: 'SERVICES',
       title: '取扱業務',
-      description: '台湾投資、紛争対応、顧問業務を体系的に提供します。'
+      description: '日系企業をはじめとする海外企業・在台日本人向けに、台湾投資・会社設立、民事訴訟、家事事件、労働問題、刑事事件、知的財産・金融紛争まで、台湾法務の主要分野を日本語で体系的にご案内します。'
     },
     lawyers: {
       label: 'OUR TEAM',
       title: TEAM_NAME_BY_LOCALE['ja'],
-      description: '弁護士・事務長・会計士の経歴と専門分野をご確認ください。'
+      description: '台湾弁護士、パラリーガル、事務長、提携会計士で構成される昊鼎国際法律事務所のチームについて、各メンバーの経歴・専門分野・連絡先をご確認いただけるページです。'
     },
     insights: {
       label: 'INSIGHTS',
       title: 'コラム',
-      description: '台湾法務の実務コラムをカテゴリ別にご覧いただけます。'
+      description: '台湾進出を検討する日系企業や在台日本人向けに、会社設立、訴訟、労務、家事事件など台湾法務に関する実務コラムをカテゴリ別にまとめてご覧いただけます。'
     },
     videos: {
       label: 'VIDEOS',
@@ -207,12 +207,12 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     faq: {
       label: 'FAQ',
       title: 'よくある質問',
-      description: '相談の流れに関するFAQです。'
+      description: '台湾での会社設立、労働問題、交通事故、離婚・親権、刑事事件、相談の流れや費用など、日本語でよくいただくご質問への回答をまとめてご案内しています。'
     },
     contact: {
       label: 'CONTACT',
       title: 'お問い合わせ',
-      description: 'お問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。'
+      description: 'ビジネス・投資、メディア取材、採用、一般のお問い合わせなど窓口別の連絡先と、台北・台中・高雄・屏東の事務所所在地をメールで一括してご案内するページです。'
     },
     search: {
       label: 'SEARCH',
@@ -222,7 +222,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     pricing: {
       label: 'PRICING',
       title: '費用のご案内',
-      description: '昊鼎国際法律事務所の主要サービスについて、費用の目安をご案内します。'
+      description: '一般法律相談、民事・刑事訴訟、台湾での会社設立、年間法律顧問など、昊鼎国際法律事務所が提供する主要サービスごとの費用の目安をわかりやすくご案内するページです。'
     },
     reviews: {
       label: 'REVIEWS',

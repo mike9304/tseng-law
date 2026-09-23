@@ -17,7 +17,7 @@ describe('Japanese contact page data', () => {
     expect(pageCopy.ja.contact).toEqual({
       label: 'CONTACT',
       title: 'お問い合わせ',
-      description: 'お問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。',
+      description: 'ビジネス・投資、メディア取材、採用、一般のお問い合わせなど窓口別の連絡先と、台北・台中・高雄・屏東の事務所所在地をメールで一括してご案内するページです。',
     });
   });
 

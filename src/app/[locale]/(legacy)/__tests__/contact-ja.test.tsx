@@ -25,13 +25,13 @@ describe('Japanese contact route integration', () => {
 
     expect(metadata.title).toBe('お問い合わせ');
     expect(metadata.description).toBe(
-      'お問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。',
+      'ビジネス・投資、メディア取材、採用、一般のお問い合わせなど窓口別の連絡先と、台北・台中・高雄・屏東の事務所所在地をメールで一括してご案内するページです。',
     );
     expect(metadata.alternates?.canonical).toBe(`${SITE_URL}/ja/contact`);
     expect(metadata.other?.['content-language']).toBe('ja');
     expect(metadata.openGraph).toMatchObject({
       title: 'お問い合わせ',
-      description: 'お問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。',
+      description: 'ビジネス・投資、メディア取材、採用、一般のお問い合わせなど窓口別の連絡先と、台北・台中・高雄・屏東の事務所所在地をメールで一括してご案内するページです。',
       url: `${SITE_URL}/ja/contact`,
       locale: 'ja_JP',
     });
@@ -140,7 +140,7 @@ describe('Japanese contact route integration', () => {
     for (const expected of [
       'CONTACT',
       'お問い合わせ',
-      'お問い合わせ種別、連絡先、事務所所在地をまとめてご案内します。',
+      'ビジネス・投資、メディア取材、採用、一般のお問い合わせなど窓口別の連絡先と、台北・台中・高雄・屏東の事務所所在地をメールで一括してご案内するページです。',
       'ご相談前の確認事項',
       'ご利用いただける連絡手段',
       'メールでお問い合わせいただけます。',

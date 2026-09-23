@@ -616,7 +616,7 @@ describe('editorial insights archive behavior', () => {
 });
 
 describe('editorial office presentation', () => {
-  it('keeps unique Korea label and one address/NAVER action while default keeps the duplicate shell', () => {
+  it('keeps unique Korea label and one address/NAVER action in both presentations (WO-DS1 F: default is a single card too)', () => {
     const editorial = renderToStaticMarkup(
       createElement(OfficeMapTabs, { locale: 'ja', presentation: 'editorial' }),
     );
@@ -646,16 +646,19 @@ describe('editorial office presentation', () => {
     expect(standardKoreaHeadings).toHaveLength(1);
     expect(editorialKoreaHeadings).toHaveLength(1);
     expect(editorialKoreaHeadings[0].text).toBe(koreaTitle);
-    expect(standardStrongTitles.filter((title) => title === koreaTitle)).toHaveLength(1);
+    expect(standardStrongTitles).not.toContain(koreaTitle);
     expect(editorialStrongTitles).not.toContain(koreaTitle);
     expect(koreaAddress).toBeTruthy();
     expect(editorialCardCopy).toEqual(standardCardCopy);
     expect(editorialCardCopy.filter((text) => text === koreaAddress)).toHaveLength(1);
-    expect(standardPlainSpans.filter((text) => text === koreaAddress)).toHaveLength(1);
+    expect(standardCardCopy.filter((text) => text === koreaAddress)).toHaveLength(1);
+    expect(standardPlainSpans).not.toContain(koreaAddress);
     expect(editorialPlainSpans).not.toContain(koreaAddress);
-    expect(standardKorea).toContain('office-map-wrap--naver');
+    expect(standardKorea).not.toContain('office-map-wrap--naver');
     expect(editorialKorea).not.toContain('office-map-wrap--naver');
-    expect((standardKorea.match(/office-map-fallback-link/g) ?? []).length).toBe(1);
+    expect((standardKorea.match(/office-map-fallback-link/g) ?? []).length).toBe(0);
+    expect((standardKorea.match(/office-map-fallback-kicker/g) ?? []).length).toBe(1);
+    expect((standardKorea.match(/class="card office-card/g) ?? []).length).toBe(1);
     expect((editorialKorea.match(/office-map-fallback-link/g) ?? []).length).toBe(0);
     expect((editorialKorea.match(/office-map-link/g) ?? []).length).toBe(1);
     expect((standardKorea.match(/office-map-link/g) ?? []).length).toBe(1);

@@ -1159,6 +1159,21 @@ h1, h2, h3 {
   margin-inline: auto;
 }
 
+/* Desktop: pin the portrait's left edge to the `.container` content line
+   instead of centring it in the 45fr cell. `100%` here is the grid cell
+   (0.45 × section width), so `100% / 0.45` is the section width and the
+   inset mirrors `.container` (min(max-width, width − 2·gutter), centred). */
+@media (min-width: 1025px) {
+  #about.split-section.split--img-left [data-home-stock-portrait='true'] {
+    --about-portrait-inset: max(
+      0px,
+      calc((100% / 0.45 - min(var(--max-width), 100% / 0.45 - var(--page-gutter) * 2)) / 2)
+    );
+    width: min(100% - var(--about-portrait-inset), 34rem);
+    margin-inline: var(--about-portrait-inset) 0;
+  }
+}
+
 #about.split-section [data-home-stock-portrait='true'] img {
   width: 100% !important;
   height: 100% !important;
@@ -5055,8 +5070,7 @@ section.home-results-panel--editorial {
   border-bottom: 1px solid rgba(80, 104, 74, 0.42);
   background:
     radial-gradient(circle at top left, rgba(137, 167, 125, 0.18), transparent 28%),
-    linear-gradient(120deg, rgba(12, 28, 20, 0.95) 0%, rgba(18, 41, 29, 0.9) 55%, rgba(12, 28, 20, 0.94) 100%),
-    url('/images/feature-3.svg') center / contain no-repeat;
+    linear-gradient(120deg, rgba(12, 28, 20, 0.95) 0%, rgba(18, 41, 29, 0.9) 55%, rgba(12, 28, 20, 0.94) 100%);
 }
 
 .home-contact-actions {
@@ -7174,17 +7188,20 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 .office-map-fallback {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  /* Behind the iframe (z-index 1): it only shows through while the map has
+     not painted yet (or never loads) — once Google Maps renders, the facade
+     (fake pin, stripes, preview card) is fully covered. */
+  z-index: 0;
   display: flex;
   align-items: flex-end;
   padding: clamp(1rem, 2vw, 1.4rem);
   color: var(--text-primary);
   pointer-events: none;
   background:
-    linear-gradient(22deg, transparent 0 43%, rgba(91, 58, 140, 0.16) 44% 46%, transparent 47% 100%),
-    linear-gradient(132deg, transparent 0 52%, rgba(196, 162, 101, 0.2) 53% 55%, transparent 56% 100%),
-    repeating-linear-gradient(0deg, rgba(91, 58, 140, 0.08) 0 1px, transparent 1px 44px),
-    repeating-linear-gradient(90deg, rgba(91, 58, 140, 0.06) 0 1px, transparent 1px 52px);
+    linear-gradient(22deg, transparent 0 43%, rgba(22, 56, 45, 0.16) 44% 46%, transparent 47% 100%),
+    linear-gradient(132deg, transparent 0 52%, rgba(137, 167, 125, 0.24) 53% 55%, transparent 56% 100%),
+    repeating-linear-gradient(0deg, rgba(22, 56, 45, 0.08) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(22, 56, 45, 0.06) 0 1px, transparent 1px 52px);
 }
 
 .office-map-fallback::after {
@@ -7198,7 +7215,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   background: var(--purple);
   border: 3px solid var(--bg-white);
   box-shadow:
-    0 0 0 7px rgba(91, 58, 140, 0.14),
+    0 0 0 7px rgba(22, 56, 45, 0.14),
     0 14px 28px rgba(26, 26, 46, 0.18);
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -7209,7 +7226,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   display: grid;
   gap: 0.35rem;
   padding: 1rem;
-  border: 1px solid rgba(91, 58, 140, 0.16);
+  border: 1px solid rgba(22, 56, 45, 0.16);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 16px 34px rgba(26, 26, 46, 0.12);
@@ -7405,6 +7422,43 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .office-korea-title {
   margin-bottom: var(--space-4);
+}
+
+/* Single Korea office card (default presentation): details left, NAVER
+   button right on desktop; stacked on phones. */
+.office-korea-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-6);
+}
+
+.office-korea-card-info {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+  flex: 1 1 22rem;
+}
+
+.office-korea-card .office-korea-title {
+  margin-bottom: 0;
+}
+
+.office-korea-card .office-map-link {
+  margin-top: 0;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .office-korea-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .office-korea-card-info {
+    flex-basis: auto;
+  }
 }
 
 .office-map-wrap.office-map-wrap--naver,
@@ -26013,6 +26067,108 @@ html[lang='zh-hant'],
 
 .en-home-paths--light .en-home-path-guide {
   color: #1d2b2f;
+}
+
+/* WO-DS1 C — inside the left-aligned home hero (HeroSearch dark + editorial)
+   the path row follows the hero copy: left aligned, same metrics as the hero
+   CTAs, and secondary hierarchy so `.hero-cta-primary` stays the only solid
+   button. The centred cinematic opening and GuidanceHomeBody hero (no
+   `data-builder-node-key`) keep the base rules above. */
+.hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-paths,
+.hero[data-presentation='editorial'] .hero-copy .en-home-paths {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin: 1.25rem 0 0;
+}
+
+.hero[data-presentation='editorial'] .hero-copy .en-home-paths {
+  gap: 12px 20px;
+}
+
+.hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-button {
+  min-height: 48px;
+  padding: 0.72rem 1.2rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: inherit;
+  color: #fff;
+  background: rgba(13, 34, 26, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: none;
+}
+
+.hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-button:hover,
+.hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-button:focus-visible {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+
+.hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-button:focus-visible,
+.hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-guide:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.92);
+  outline-offset: 3px;
+}
+
+.hero[data-presentation='editorial'] .hero-copy .en-home-path-button {
+  min-height: 48px;
+  padding: 0.72rem 1.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+  box-shadow: none;
+}
+
+.hero[data-presentation='editorial'] .hero-copy .en-home-path-button:hover,
+.hero[data-presentation='editorial'] .hero-copy .en-home-path-button:focus-visible {
+  color: var(--primary);
+  background: var(--purple-bg);
+  border-color: var(--primary);
+}
+
+.hero[data-presentation='editorial'] .hero-copy .en-home-path-button:focus-visible,
+.hero[data-presentation='editorial'] .hero-copy .en-home-path-guide:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-guide,
+.hero[data-presentation='editorial'] .hero-copy .en-home-path-guide {
+  min-height: 48px;
+}
+
+@media (max-width: 640px) {
+  .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-paths,
+  .hero[data-presentation='editorial'] .hero-copy .en-home-paths {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-paths {
+    width: min(100%, 420px);
+  }
+
+  .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-button,
+  .hero[data-presentation='editorial'] .hero-copy .en-home-path-button {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-guide,
+  .hero[data-presentation='editorial'] .hero-copy .en-home-path-guide {
+    justify-content: flex-start;
+    text-align: start;
+  }
 }
 
 .cinematic-opening__brand {

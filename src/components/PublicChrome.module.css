@@ -1065,6 +1065,9 @@
   min-height: 44px;
   color: #f7faf6;
   border-color: rgba(247, 250, 246, 0.28);
+  /* Dark footer surface: without this the global `.social-icon` white fill
+     showed through and hid the light icon (≈1:1 contrast). */
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .footer :global(.social-icon):hover,

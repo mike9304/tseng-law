@@ -348,49 +348,31 @@ export default function OfficeMapTabs({
               </a>
             </article>
           ) : (
-            <>
-              <h3 className="card-title office-korea-title">{koreaOffice.title}</h3>
-              <div className="office-layout">
-                {/* 네이버 공식 임베드는 플레이스 등록 후 가능(map.naver.com/p/embed/place/{id}) —
-                    등록 전까지는 주소 카드 + 네이버 링크로 대체. NAVER_EMBED_URL은 등록 후 전환용으로 보존. */}
-                <div className="office-map-wrap office-map-wrap--address office-map-wrap--naver">
-                  <div className="office-address-card">
-                    <div className="office-map-fallback-panel">
-                      <span className="office-map-fallback-kicker">{addressCardLabel}</span>
-                      <strong>{koreaOffice.title}</strong>
-                      <span>{koreaOffice.address}</span>
-                      <a
-                        className="office-map-fallback-link"
-                        href={koreaOffice.mapsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {koreaOffice.mapLinkLabel}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <article className="card office-card">
-                  <p className="card-copy">{koreaOffice.address}</p>
-                  {koreaOffice.phone ? (
-                    <p className="card-copy">
-                      {telLabel}:{' '}
-                      <a className="link-underline phone-number" href={`tel:${koreaOffice.phone.replace(/-/g, '')}`}>
-                        {koreaOffice.phone}
-                      </a>
-                    </p>
-                  ) : null}
-                  <a
-                    className="button office-map-link"
-                    href={koreaOffice.mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {koreaOffice.mapLinkLabel}
-                  </a>
-                </article>
+            // 네이버 공식 임베드는 플레이스 등록 후 가능(map.naver.com/p/embed/place/{id}) —
+            // 등록 전까지는 단일 주소 카드 + 네이버 링크로 대체. NAVER_EMBED_URL은 등록 후 전환용으로 보존.
+            <article className="card office-card office-korea-card">
+              <div className="office-korea-card-info">
+                <span className="office-map-fallback-kicker">{addressCardLabel}</span>
+                <h3 className="card-title office-korea-title">{koreaOffice.title}</h3>
+                <p className="card-copy">{koreaOffice.address}</p>
+                {koreaOffice.phone ? (
+                  <p className="card-copy">
+                    {telLabel}:{' '}
+                    <a className="link-underline phone-number" href={`tel:${koreaOffice.phone.replace(/-/g, '')}`}>
+                      {koreaOffice.phone}
+                    </a>
+                  </p>
+                ) : null}
               </div>
-            </>
+              <a
+                className="button office-map-link"
+                href={koreaOffice.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {koreaOffice.mapLinkLabel}
+              </a>
+            </article>
           )}
         </div>
       </div>

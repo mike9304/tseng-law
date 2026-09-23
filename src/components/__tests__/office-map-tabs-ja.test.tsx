@@ -109,7 +109,8 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
     expect(html).not.toContain('韓國京畿道楊州市玉井東路177號 Suhyeon Plaza 4樓');
     expect(html).toContain('>+82-10-2992-9304<');
     expect(html).toContain('>NAVERマップで見る<');
-    expect((html.match(new RegExp(`href="${naverHref}"`, 'g')) ?? [])).toHaveLength(2);
+    // WO-DS1 F: the Korea office is a single card, so the NAVER link renders once.
+    expect((html.match(new RegExp(`href="${naverHref}"`, 'g')) ?? [])).toHaveLength(1);
     expect(html).toMatch(
       new RegExp(
         `href="${naverHref}" target="_blank" rel="noopener noreferrer"`,

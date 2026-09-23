@@ -196,7 +196,8 @@ describe('Japanese contact route integration', () => {
           'g',
         ),
       ) ?? [],
-    ).toHaveLength(2);
+      // WO-DS1 F: the Korea office is a single card, so NAVER renders once.
+    ).toHaveLength(1);
   });
 
   it('renders three office tabs with Taipei selected and exact Japanese media alternatives', () => {

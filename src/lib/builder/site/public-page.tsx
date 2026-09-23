@@ -419,6 +419,24 @@ export function projectPublishedHomeCaseResultsPoster(
   };
 }
 
+/**
+ * Whether a top-level flow section gets the saved `rect.height` as a
+ * min-height floor (inline style + desktop `!important` safety net).
+ *
+ * A `composite` with no visible builder children is a self-sizing code
+ * component (HeroSearch, ServicesBento, …); its `rect.height` is only the
+ * editor-coordinate estimate, so pinning it left empty bands between home
+ * sections. Containers (`as: "section"`) and composites that host builder
+ * children keep the floor.
+ */
+export function flowSectionUsesMinHeightFloor(
+  node: Pick<BuilderCanvasNode, 'id' | 'kind'>,
+  childrenMap: Readonly<Record<string, readonly string[] | undefined>>,
+): boolean {
+  if (node.kind !== 'composite') return true;
+  return (childrenMap[node.id]?.length ?? 0) > 0;
+}
+
 export interface ResolvedPublishedSitePage {
   locale: Locale;
   slugPath: string;
@@ -929,6 +947,13 @@ export async function PublishedSitePageView({
   const topLevelNodes = visibleNodes.filter((node) => !node.parentId);
   const hasTopLevelComposite = topLevelNodes.some(isTopLevelFlowSection);
   const flowSectionMetrics = computeTopLevelFlowSectionMetrics(visibleNodes);
+  // Every top-level node is a self-sizing composite (no floor, see
+  // flowSectionUsesMinHeightFloor): the stacked sections define the page
+  // height, so the saved stage height must not pin `main` either — it would
+  // just move the empty band below the last section.
+  const selfSizingFlowOnlyPage = topLevelNodes.length > 0 && topLevelNodes.every(
+    (node) => isTopLevelFlowSection(node) && !flowSectionUsesMinHeightFloor(node, childrenMap),
+  );
 
   // Desktop safety net: pin each top-level flow section's min-height via
   // CSS !important so the designer-intended height survives even when
@@ -939,7 +964,11 @@ export async function PublishedSitePageView({
   const desktopFlowSectionMinHeightCss = current9PublishedHomeEditorial
     ? ''
     : [...flowSectionMetrics.entries()]
-      .filter(([, metric]) => Boolean(metric) && metric.minHeight > 0)
+      .filter(([id, metric]) => {
+        if (!metric || metric.minHeight <= 0) return false;
+        const sectionNode = nodesById.get(id);
+        return !sectionNode || flowSectionUsesMinHeightFloor(sectionNode, childrenMap);
+      })
       .map(([id, metric]) => `[data-node-id="${id}"]{min-height:${metric.minHeight}px !important}`)
       .join('\n');
 
@@ -1323,7 +1352,9 @@ export async function PublishedSitePageView({
             : useLegacyContactScaffold
               ? renderedNode.rect.height
               : flowAsSection
-                ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
+                ? (flowSectionUsesMinHeightFloor(renderedNode, childrenMap)
+                  ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
+                  : undefined)
                 : isTextShapedKind(renderedNode.kind)
                   ? renderedNode.rect.height
                   : undefined,
@@ -2443,7 +2474,9 @@ export async function PublishedSitePageView({
           maxWidth: hasTopLevelComposite ? undefined : 1280,
           margin: '0 auto',
           position: 'relative',
-          minHeight: current9PublishedHomeEditorial || legacyEditorialCompositeLayout ? undefined : Math.max(publishedContentHeight, 720),
+          minHeight: current9PublishedHomeEditorial || legacyEditorialCompositeLayout || selfSizingFlowOnlyPage
+            ? undefined
+            : Math.max(publishedContentHeight, 720),
           // Light mode: inherit color/background/font from body so the
           // public green theme (globals.css) is used, not the builder's
           // blue/gray fallback vars. Dark mode overrides these via the

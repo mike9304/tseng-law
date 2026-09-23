@@ -40,6 +40,18 @@ export interface DailySummary {
   localeSwitchSessions: number;
   contactIntent?: ContactIntentSummary;
   acquisitionCohorts?: AcquisitionCohort[];
+  /**
+   * Per-locale conversion signals, side by side. Optional because summaries
+   * written before inquiry_submitted existed lack it (unmeasured, not zero).
+   * inquirySubmitted = server-recorded durable inquiry saves (uiLocale);
+   * contactIntent = contact_intent (email compose) events (page locale).
+   */
+  inquiryByLocale?: Record<string, InquiryLocaleCounts>;
+}
+
+export interface InquiryLocaleCounts {
+  inquirySubmitted: number;
+  contactIntent: number;
 }
 
 type Pageview = Extract<EnrichedVisitEvent, { type: 'pageview' }>;
@@ -112,6 +124,14 @@ export function buildDailySummary(day: string, events: EnrichedVisitEvent[]): Da
   const keywordCounts = new Map<string, Map<string, number>>();
   const contactByAction = new Map<string, number>();
   const cohorts = new Map<string, AcquisitionCohort>();
+  const inquiryByLocale = new Map<string, InquiryLocaleCounts>();
+  const localeCounts = (locale: string): InquiryLocaleCounts => {
+    const existing = inquiryByLocale.get(locale);
+    if (existing) return existing;
+    const created = { inquirySubmitted: 0, contactIntent: 0 };
+    inquiryByLocale.set(locale, created);
+    return created;
+  };
 
   let contactEvents = 0;
 
@@ -134,6 +154,9 @@ export function buildDailySummary(day: string, events: EnrichedVisitEvent[]): Da
     } else if (event.type === 'contact_intent') {
       contactEvents += 1;
       increment(contactByAction, event.action);
+      localeCounts(event.locale).contactIntent += 1;
+    } else if (event.type === 'inquiry_submitted') {
+      localeCounts(event.locale).inquirySubmitted += 1;
     }
   }
 
@@ -275,5 +298,8 @@ export function buildDailySummary(day: string, events: EnrichedVisitEvent[]): Da
       byAction: toRecord(contactByAction),
     },
     acquisitionCohorts,
+    inquiryByLocale: Object.fromEntries(
+      [...inquiryByLocale.entries()].sort((left, right) => compareText(left[0], right[0])),
+    ),
   };
 }

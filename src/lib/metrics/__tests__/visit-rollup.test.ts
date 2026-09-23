@@ -189,6 +189,7 @@ describe('buildDailySummary', () => {
         byAction: {},
       },
       acquisitionCohorts: [],
+      inquiryByLocale: {},
     });
   });
 });
@@ -236,6 +237,55 @@ function contactIntent(
     ...overrides,
   };
 }
+
+function inquirySubmitted(
+  overrides: Partial<Extract<EnrichedVisitEvent, { type: 'inquiry_submitted' }>> & { sid: string; ts: string },
+): EnrichedVisitEvent {
+  return {
+    v: 1,
+    type: 'inquiry_submitted',
+    locale: 'en',
+    path: '/en/contact',
+    receivedAt: '2026-09-03T00:00:01.000Z',
+    ...overrides,
+  };
+}
+
+describe('buildDailySummary inquiry_submitted by locale', () => {
+  it('counts inquiry_submitted and contact_intent side by side per locale', () => {
+    const summary = buildDailySummary('2026-09-03', [
+      inquirySubmitted({ sid: 'inq_aaaaaaaaaaaa', ts: '2026-09-03T01:00:00.000Z', locale: 'ko', path: '/ko/contact' }),
+      inquirySubmitted({ sid: 'inq_bbbbbbbbbbbb', ts: '2026-09-03T01:01:00.000Z', locale: 'ja', path: '/ja/contact' }),
+      inquirySubmitted({ sid: 'inq_cccccccccccc', ts: '2026-09-03T01:02:00.000Z', locale: 'ja' }),
+      inquirySubmitted({ sid: 'inq_dddddddddddd', ts: '2026-09-03T01:03:00.000Z', locale: 'vi', path: undefined }),
+      contactIntent({ sid: 'visitor_en', ts: '2026-09-03T02:00:00.000Z', locale: 'en' }),
+      contactIntent({ sid: 'visitor_en', ts: '2026-09-03T02:00:01.000Z', locale: 'en' }),
+      contactIntent({ sid: 'visitor_ko', ts: '2026-09-03T02:01:00.000Z', locale: 'ko', path: '/ko/contact' }),
+    ]);
+
+    expect(summary.inquiryByLocale).toEqual({
+      en: { inquirySubmitted: 0, contactIntent: 2 },
+      ja: { inquirySubmitted: 2, contactIntent: 0 },
+      ko: { inquirySubmitted: 1, contactIntent: 1 },
+      vi: { inquirySubmitted: 1, contactIntent: 0 },
+    });
+    expect(Object.keys(summary.inquiryByLocale ?? {})).toEqual(['en', 'ja', 'ko', 'vi']);
+  });
+
+  it('does not let server-side inquiry events inflate sessions, pageviews, cohorts, or contact attribution', () => {
+    const baseline = buildDailySummary('2026-09-01', events);
+    const summary = buildDailySummary('2026-09-01', [
+      ...events,
+      inquirySubmitted({ sid: 'inq_eeeeeeeeeeee', ts: '2026-09-01T05:00:00.000Z', locale: 'en' }),
+    ]);
+
+    expect(summary.totals).toEqual(baseline.totals);
+    expect(summary.byLocale).toEqual(baseline.byLocale);
+    expect(summary.acquisitionCohorts).toEqual(baseline.acquisitionCohorts);
+    expect(summary.contactIntent).toEqual(baseline.contactIntent);
+    expect(summary.inquiryByLocale).toEqual({ en: { inquirySubmitted: 1, contactIntent: 0 } });
+  });
+});
 
 describe('buildDailySummary contact intent and cohorts', () => {
   it('does not let contact events inflate legacy sessions, pageviews, dwell, or bounce', () => {

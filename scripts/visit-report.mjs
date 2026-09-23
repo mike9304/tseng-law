@@ -114,6 +114,8 @@ export function aggregateSummaries(summaries) {
       byAction: {},
     },
     acquisitionCohorts: [],
+    inquiryByLocale: {},
+    inquiryCoverage: { fieldDays: 0, totalDays: summaries.length },
   };
 
   let dwellWeighted = 0;
@@ -155,6 +157,17 @@ export function aggregateSummaries(summaries) {
     for (const keyword of summary.keywords ?? []) {
       const key = `${keyword.keyword}\u0000${keyword.source}`;
       keywords.set(key, (keywords.get(key) ?? 0) + keyword.count);
+    }
+
+    const inquiry = summary.inquiryByLocale;
+    if (inquiry != null && typeof inquiry === 'object' && !Array.isArray(inquiry)) {
+      aggregate.inquiryCoverage.fieldDays += 1;
+      for (const [locale, counts] of Object.entries(inquiry)) {
+        const target = aggregate.inquiryByLocale[locale] ?? { inquirySubmitted: 0, contactIntent: 0 };
+        target.inquirySubmitted += Number(counts?.inquirySubmitted) || 0;
+        target.contactIntent += Number(counts?.contactIntent) || 0;
+        aggregate.inquiryByLocale[locale] = target;
+      }
     }
 
     const contact = summary.contactIntent;
@@ -275,7 +288,39 @@ export function aggregateSummaries(summaries) {
     || ((left.source ?? '') < (right.source ?? '') ? -1 : (left.source ?? '') > (right.source ?? '') ? 1 : 0)
   ));
 
+  aggregate.inquiryByLocale = Object.fromEntries(
+    Object.entries(aggregate.inquiryByLocale).sort((left, right) => (left[0] < right[0] ? -1 : left[0] > right[0] ? 1 : 0)),
+  );
+
   return aggregate;
+}
+
+function formatInquiryByLocale(aggregate) {
+  const lines = [];
+  lines.push('## ⑪ 로케일별 문의 제출 · 이메일 작성 동작');
+  lines.push('  ※ 문의 제출 = 문의 폼 저장 성공(서버 기록, 같은 요청 재전송은 1건). locale은 폼 안내 언어이며 국적이 아닙니다.');
+  lines.push('  ※ 이메일 작성 동작 = 이메일 작성 링크 선택 이벤트 수(페이지 locale). 발송·수신 확인 값이 아닙니다.');
+  const coverage = aggregate.inquiryCoverage ?? { fieldDays: 0, totalDays: 0 };
+  if (coverage.fieldDays === 0) {
+    lines.push('  - 미측정 (요약에 inquiryByLocale 필드 없음 — 0건이 아닙니다)');
+    return lines;
+  }
+  if (coverage.fieldDays < coverage.totalDays) {
+    lines.push(`  ※ 필드 가용 ${coverage.fieldDays}/${coverage.totalDays}일 — 필드 없는 일자는 0으로 채우지 않음`);
+  }
+  const rows = Object.entries(aggregate.inquiryByLocale ?? {}).sort((left, right) => (
+    right[1].inquirySubmitted - left[1].inquirySubmitted
+    || right[1].contactIntent - left[1].contactIntent
+    || (left[0] < right[0] ? -1 : left[0] > right[0] ? 1 : 0)
+  ));
+  if (rows.length === 0) {
+    lines.push('  - 측정됨 · 0건 (문의 제출·이메일 작성 동작 모두 없음)');
+    return lines;
+  }
+  for (const [locale, counts] of rows) {
+    lines.push(`  - ${locale}: 문의 제출 ${counts.inquirySubmitted} · 이메일 작성 동작 ${counts.contactIntent}`);
+  }
+  return lines;
 }
 
 function splitCsvLine(line) {
@@ -573,6 +618,8 @@ export function formatReport(aggregate, gscRows, days) {
       );
     }
   }
+  lines.push('');
+  lines.push(...formatInquiryByLocale(aggregate));
   return lines.join('\n');
 }
 

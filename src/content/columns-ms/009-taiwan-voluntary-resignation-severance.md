@@ -55,7 +55,7 @@ tidak membayar kerja lebih masa (加班費),
 
 atau tidak menyertakan pekerja ke insurans buruh (勞保) atau insurans kesihatan nasional (健保).
 
-Dalam kes ini, walaupun pekerja menamatkan kontrak kerja secara biasa, majikan mesti membayarnya pampasan pemberhentian.
+Dalam kes ini, walaupun pekerja sendiri yang menamatkan kontrak kerja, majikan tetap mesti membayar pampasan pemberhentian.
 
 ​
 
@@ -73,11 +73,11 @@ Pekerja maka mesti menguasai tempoh dengan baik.
 
 Dalam erti lain,
 
-undang-undang Taiwan memberi hak mengikut pihak yang bersalah:
+undang-undang Taiwan memberi hak kepada mana-mana pihak —
 
-majikan boleh tidak membayar pampasan pemberhentian,
+bergantung pada sama ada majikan atau pekerja yang bersalah —
 
-manakala pekerja boleh menuntutnya.
+untuk tidak membayar pampasan pemberhentian atau untuk menuntutnya.
 
 Kadang-kadang, apabila terdapat kecuaian di kedua pihak dalam hubungan kerja,
 

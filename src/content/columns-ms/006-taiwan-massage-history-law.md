@@ -33,7 +33,7 @@ Dan salun gaya Taiwan ini kekal sebagai kenangan budaya yang tersendiri bagi ram
 
 ​
 
-Apa pun, apabila berbicara tentang urutan (按摩).
+Apa pun, apabila berbicara tentang urutan (按摩) —
 
 Di Taiwan juga terdapat banyak jalan yang dikenali dengan perniagaan urutan.
 
@@ -55,7 +55,7 @@ Undang-undang ini kekal hingga 2003; pada masa itu, Encik Lin, yang mengurus sal
 
 menggaji dua pekerja tanpa kurang upaya penglihatan untuk perkhidmatan cucian rambut dan urutan, dan polis mengetahuinya.
 
-Menurut undang-undang masa itu, Encik Lin dikenakan denda pentadbiran (罰鍰) TWD 40,000, manakala dua pekerja itu masing-masing TWD 10,000 dan TWD 20,000 dalam dolar Taiwan baharu (新臺幣).
+Menurut undang-undang masa itu, Encik Lin dikenakan denda pentadbiran (罰鍰) sebanyak 40,000 dolar baharu Taiwan (新臺幣), manakala dua pekerja itu masing-masing 10,000 dan 20,000 dolar baharu Taiwan.
 
 Encik Lin menganggap sanksi ini sangat tidak adil dan memohon tafsiran perlembagaan.
 

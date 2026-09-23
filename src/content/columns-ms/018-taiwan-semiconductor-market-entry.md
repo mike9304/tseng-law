@@ -73,7 +73,7 @@ Apabila syarikat asing menubuhkan anak syarikat Taiwan, nama pada prinsipnya dis
 
 Sebaliknya, untuk menubuhkan cawangan Taiwan syarikat asing biasa, kebenaran pelaburan Jabatan Semakan Pelaburan pada prinsipnya tidak dituntut; Pentadbiran Pembangunan Perniagaan, Kementerian Hal Ehwal Ekonomi (經濟部商業發展署) merawat pendaftaran cawangan dan penentuan modal berkaitan. Kekal diperlukan semakan terdahulu nama, pindahan modal operasi, pengesahan modal dan pendaftaran cukai; jadual pada umumnya lebih pendek.
 
-Nasihat di atas berkaitan reka bentuk kontrak. Sekadar memakai satu bentuk tertentu tidak menjadikan transaksi itu sah dan tidak mengelakkan pertikaian.
+Uraian di atas hanya membandingkan prosedur pendaftaran cawangan dan anak syarikat. Sekadar memakai satu bentuk tertentu tidak menjadikan transaksi itu sah dan tidak mengelakkan pertikaian.
 
 ## 5. Pendaftaran syarikat dan kerja sah jurutera bukan perkara yang sama
 
@@ -83,9 +83,9 @@ Agak lebih mudah memperoleh permit kerja bagi pengurus anak syarikat atau cawang
 
 ## 7. Struktur yang boleh sesuai menurut peringkat perdagangan
 
-Senario berikut ialah hipotesis untuk membantu berfikir; mereka tidak menetapkan bahawa suatu cara sah atau lebih baik.
+Senario berikut ialah hipotesis sebagai bahan untuk menimbang pilihan. Ia tidak menjamin bahawa suatu cara adalah sah atau lebih baik.
 
-**Syarikat asing yang berpusat pada eksport awal.** Jika belum ada pekerja mahupun stok di Taiwan dan anda ingin mengesahkan permintaan melalui pengedar bebas, anda boleh meneliti dahulu bekalan, hubungan pengedaran dan bidang aktiviti di Taiwan. Kontrak pengedaran semata-mata tidak menghapuskan semua soalan pengawalseliaan di Taiwan.
+**Syarikat asing yang berpusat pada eksport awal.** Jika belum ada pekerja mahupun stok di Taiwan dan anda ingin mengesahkan permintaan melalui pengedar bebas, anda boleh meneliti dahulu bekalan, hubungan pengedaran dan bidang aktiviti di Taiwan. Kontrak pengedaran semata-mata tidak menepikan semua keperluan kawal selia di Taiwan.
 
 **Syarikat asing yang memperluas jualan dan sokongan teknikal di Taiwan.** Jika anda merancang mengambil kerja di Taiwan dan terus mengurus stok, kutipan dan sokongan pelanggan, sebaiknya bandingkan secara konkret anak syarikat dan cawangan, dan menyemak juga tanggungjawab kontrak, cara beroperasi pejabat utama, cukai dan kakitangan.
 

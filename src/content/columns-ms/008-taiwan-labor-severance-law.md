@@ -28,9 +28,9 @@ Hari ini, saya ingin berbicara dengan anda mengenai pampasan pemberhentian (資�
 
 Ramai antara anda sudah mengetahuinya.
 
-Di Korea, syarikat mesti membayar pampasan persaraan apabila pekerja meninggalkan perniagaan
+Sebagai perbandingan dengan sesetengah bidang kuasa lain — Korea, sebagai contoh — syarikat di sana pada umumnya mesti membayar pampasan apabila pekerja meninggalkan pekerjaan.
 
-Di Taiwan, bagaimanapun berbeza daripada Korea:
+Di Taiwan, keadaannya berbeza:
 
 Kewajipan membayar pampasan pemberhentian hanya lahir apabila syarikat memberhentikan pekerja.
 
@@ -61,8 +61,8 @@ Saya merumuskan ini dalam jadual ringkas.
 |  | Undang-undang piawaian buruh Taiwan, perkara 11 (勞動基準法第11條): Kecuali jika salah satu kes berikut berlaku, majikan tidak boleh menamatkan kontrak kerja, walaupun selepas pemberitahuan terdahulu kepada pekerja.  1. Penghentian aktiviti (歇業) atau pindahan perniagaan (轉讓)  2. Kerugian (虧損) atau pengecutan aktiviti (業務緊縮)  3. Kejadian di luar kawalan (force majeure) menuntut gangguan aktiviti 1 bulan atau lebih  4. Sifat aktiviti menuntut pengurangan kakitangan, dan orang yang diberhentikan tidak boleh dipindahkan ke jawatan sesuai lain  5. Orang yang digaji tertentu tidak boleh melaksanakan dengan memuaskan kerja yang dituntut jawatan | Undang-undang piawaian buruh Taiwan, perkara 12 (勞動基準法第12條): Majikan boleh memberhentikan tanpa pemberitahuan terdahulu jika pekerja jatuh ke dalam salah satu kes berikut.  1. Yang, semasa pemeteraian kontrak kerja, membuat pernyataan tidak tepat, menyesatkan majikan dan menimbulkan risiko kerugian kepada perniagaan  2. Yang menjalankan keganasan atau menghina secara berat majikan, keluarganya, wakilnya (代理人) atau rakan sekerja lain  3. Yang telah dihukum secara muktamad dengan hukuman penjara berjangka (有期徒刑) atau hukuman lebih berat, tanpa penggantungan hukuman (緩刑) dijatuhkan mahupun penukaran kepada denda (易科罰金) dibenarkan  4. Pelanggaran berat kontrak kerja atau peraturan kerja  5. Yang menggunakan secara sengaja mesin, alat, bahan mentah, produk atau harta lain majikan, atau mendedahkan secara sengaja rahsia teknikal dan perniagaan majikan, dan menyebabkan kerugian kepada majikan  6. Ketidakhadiran tanpa sebab yang sah (曠工) selama 3 hari berturut-turut, atau selama 6 hari atau lebih dalam 1 bulan |  |
 
 > Di Taiwan, bagi setiap 1 tahun kekananan (年資) yang lengkap,
-> majikan mesti membayar 0.5 bulan gaji purata (平均工資) sebagai pampasan pemberhentian.
-> (paling banyak 6 bulan gaji) Formula ini terpakai kepada kekananan yang perkara 12 peraturan pencen persaraan pekerja (勞工退休金條例) terpakai; bagi kekananan yang perkara 17 undang-undang piawaian buruh (勞動基準法) terpakai, 1 bulan gaji purata dibayar bagi 1 tahun, tanpa siling.
+> majikan mesti membayar 0.5 bulan gaji purata (平均工資) sebagai pampasan pemberhentian, paling banyak 6 bulan gaji.
+> Formula ini terpakai kepada kekananan yang perkara 12 peraturan pencen persaraan pekerja (勞工退休金條例) terpakai; bagi kekananan yang perkara 17 undang-undang piawaian buruh (勞動基準法) terpakai, 1 bulan gaji purata dibayar bagi 1 tahun, tanpa siling.
 
 ​
 
@@ -74,7 +74,7 @@ Maka, sesetengah syarikat Taiwan yang kurang teliti menggunakan pelbagai cara,
 
 agar tidak perlu membayar pampasan pemberhentian yang tinggi,
 
-dan menolak pekerja untuk meletakkan jawatan sendiri.
+dan menekan pekerja supaya meletakkan jawatan sendiri.
 
 Pekerja mesti berhati-hati
 

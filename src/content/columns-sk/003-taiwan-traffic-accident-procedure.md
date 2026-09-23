@@ -33,15 +33,15 @@ Najprv zabezpečte osobnú bezpečnosť a výstražné značky. Na Taiwane je 11
 
 Keď je bezpečnosť zabezpečená, urobte celkové aj detailné snímky, aby ste zaznamenali polohu a poškodenie vozidiel, cestné značenie, svetlá a poveternostné podmienky. Nemožno opomenúť kontaktné údaje svedkov, žiadosť o zachovanie záberov z kamier (監視器影像) a z palubnej kamery (行車紀錄器), údaje strán, vozidla a poistenia a zdravotnú dokumentáciu (病歷). Osobné snímky sú užitočné, avšak nenahrádzajú policajný zásah požadovaný pri nehode s poranením alebo so smrťou.
 
-Ak ide o policajné listiny, na mieste nehody možno prevziať evidenčný lístok účastníkov dopravnej nehody (道路交通事故當事人登記聯單). Po uplynutí 7 dní od dátumu nehody možno požiadať o náčrt a snímky miesta (現場圖 / 現場照片); po uplynutí 30 dní od dátumu nehody možno požiadať o tabuľku predbežnej analýzy dopravnej nehody (道路交通事故初步分析研判表). Okamih vydania a predpoklady žiadosti treba znova potvrdiť u príslušného policajného orgánu.
+Ak ide o policajné listiny, na mieste nehody možno prevziať evidenčný lístok účastníkov dopravnej nehody (道路交通事故當事人登記聯單). Po uplynutí 7 dní od dátumu nehody možno požiadať o náčrt a snímky miesta (現場圖 / 現場照片); po uplynutí 30 dní od dátumu nehody možno požiadať o tabuľku predbežnej analýzy dopravnej nehody (道路交通事故初步分析研判表). Okamih vydania a predpoklady žiadosti treba znova overiť na príslušnom policajnom orgáne.
 
-## Q3. Pri poranení, aké nároky a aké lehoty treba overiť?
+## Q3. Aké nároky a aké lehoty treba pri poranení overiť?
 
-Článok 284 trestného zákona upravuje ublíženie na zdraví z nedbanlivosti (過失傷害) a ťažké ublíženie na zdraví z nedbanlivosti (過失致重傷). Pretože podľa článku 287 trestného zákona ide o trestný čin stíhaný len na základe trestného oznámenia (告訴乃論之罪), podľa článku 237 taiwanského trestného poriadku (刑事訴訟法) treba trestné oznámenie zásadne podať do 6 mesiacov odo dňa, keď sa páchateľ stal známym.
+Článok 284 trestného zákona upravuje ublíženie na zdraví z nedbanlivosti (過失傷害) a ťažké ublíženie na zdraví z nedbanlivosti (過失致重傷). Pretože podľa článku 287 trestného zákona ide o trestný čin stíhaný len na základe trestného oznámenia (告訴乃論之罪), podľa článku 237 taiwanského trestného poriadku (刑事訴訟法) treba trestné oznámenie spravidla podať do 6 mesiacov odo dňa, keď sa páchateľ stal známym.
 
 Pri občianskoprávnej náhrade škody (損害賠償) podľa článku 197 taiwanského občianskeho zákonníka (民法) už nárok nie je možný po uplynutí 2 rokov odo dňa, keď sa škoda a dlžník náhrady stali známymi, alebo 10 rokov odo dňa protiprávneho činu. Ktoré skutočnosti ovplyvňujú premlčanie (消滅時效), treba posúdiť osobitne.
 
-Kto utrpí škodu v dôsledku trestného činu, môže podľa článku 487 trestného poriadku podať občianskoprávnu žalobu pripojenú k trestnému konaniu (刑事附帶民事訴訟). Počas trestného konania možno túto žalobu podať až do skončenia ústneho pojednávania (言詞辯論終結) 2. stupňa, podľa článku 488 trestného poriadku, avšak nemožno ju podať po skončení ústneho pojednávania 1. stupňa a pred podaním opravného prostriedku. Zásadne sa možno vyhnúť zaplateniu samostatných súdnych poplatkov (裁判費), avšak nie každý výsledok je bez nákladov. Napríklad ak bola trestná vec zamietnutá a na návrh žalobcu postúpená občianskoprávnemu súdu, podľa článku 503 trestného poriadku môžu byť uložené náklady konania a ďalej treba overiť pravidlá postúpenia a postupu podľa článku 504.
+Kto utrpí škodu v dôsledku trestného činu, môže podľa článku 487 trestného poriadku podať občianskoprávnu žalobu pripojenú k trestnému konaniu (刑事附帶民事訴訟). Počas trestného konania možno túto žalobu podať až do skončenia ústneho pojednávania (言詞辯論終結) 2. stupňa, podľa článku 488 trestného poriadku, avšak nemožno ju podať po skončení ústneho pojednávania 1. stupňa a pred podaním opravného prostriedku. Spravidla sa možno vyhnúť zaplateniu samostatných súdnych poplatkov (裁判費), avšak nie každý výsledok je bez nákladov. Napríklad ak bola trestná vec zamietnutá a na návrh žalobcu postúpená občianskoprávnemu súdu, podľa článku 503 trestného poriadku môžu byť uložené náklady konania a ďalej treba overiť pravidlá postúpenia a postupu podľa článku 504.
 
 Voľba sa líši podľa prerušenia premlčania (時效中斷), okruhu žalovaných, dôkazov, poistenia a príslušnosti. Neexistuje preto postup jednotne vhodný pre všetky veci.
 
@@ -49,7 +49,7 @@ Voľba sa líši podľa prerušenia premlčania (時效中斷), okruhu žalovan�
 
 Trestnú zodpovednosť možno vyvodiť len vtedy, ak sú preukázané porušenie povinnosti opatrnosti každého a príčinná súvislosť medzi týmto porušením a poranením druhej strany. Samotná skutočnosť, že nedbanlivosť bola na oboch stranách, nezakladá automaticky zodpovednosť za ublíženie na zdraví z nedbanlivosti.
 
-Na občianskoprávnej rovine podľa článku 217 občianskeho zákonníka, ak nedbanlivosť poškodeného prispela k vzniku alebo k zväčšeniu škody (與有過失), môže súd náhradu znížiť alebo ju odpustiť. Napríklad ak škoda uznaná v novom taiwanskom dolári (新臺幣, TWD) činí 1.000.000 TWD a nedbanlivosť poškodeného je hodnotená na 50 %, môže byť suma znížená na 500.000 TWD pred inými úpravami.
+Na občianskoprávnej rovine podľa článku 217 občianskeho zákonníka, ak nedbanlivosť poškodeného prispela k vzniku alebo k zväčšeniu škody (與有過失), môže súd náhradu znížiť alebo ju odpustiť. Napríklad ak škoda uznaná v novom taiwanskom dolári (新臺幣, TWD) je 1.000.000 TWD a nedbanlivosť poškodeného je hodnotená na 50 %, môže byť suma znížená na 500.000 TWD pred inými úpravami.
 
 Znalecký posudok (鑑定) alebo tabuľka predbežnej analýzy môžu byť dôležitými podkladmi, pre súd však nie sú mechanicky záväzné. Súd posudzuje súhrn dôkazov vrátane výpovedí, obrazových záznamov a stavu vozidiel.
 
@@ -85,7 +85,7 @@ Ak ide o trestný čin stíhaný len na základe trestného oznámenia, podľa �
 
 Tabuľka predbežnej analýzy dopravnej nehody zostavená políciou je predbežnou analýzou založenou na podkladoch z miesta. Nie je rozsudkom, nezväzuje súd a nestanovuje pomer nedbanlivosti (過失比例). Pretože potrebné podklady a rozsah sporu sa líšia podľa nehody, táto tabuľka, zákonný znalecký posudok a preskúmanie (覆議) nie sú ani automatickým postupom, ani povinnou etapou.
 
-Podľa uplatniteľných predpisov môže oprávnená strana požiadať o znalecký posudok nehody vozidiel (車輛行車事故鑑定); orgán, ktorý vec vedie, ju môže postúpiť a súdny orgán ju môže zadať. Žiadosť strany sa podáva zásadne do 6 mesiacov od dátumu nehody; vo veciach, v ktorých už prebieha vyšetrovanie alebo súdne konanie, sa znalecký posudok vykonáva zadaním súdneho orgánu, nie novou priamou žiadosťou.
+Podľa uplatniteľných predpisov môže oprávnená strana požiadať o znalecký posudok nehody vozidiel (車輛行車事故鑑定); orgán, ktorý vec vedie, ju môže postúpiť a súdny orgán ju môže zadať. Žiadosť strany sa spravidla podáva do 6 mesiacov od dátumu nehody; vo veciach, v ktorých už prebieha vyšetrovanie alebo súdne konanie, sa znalecký posudok vykonáva zadaním súdneho orgánu, nie novou priamou žiadosťou.
 
 Pri nesúhlase s názorom znaleckého posudku možno požiadať o preskúmanie, to však možno podať len raz. Názor znaleckého posudku a preskúmania je dôkazom alebo referenčným podkladom a súd nezávisle hodnotí celý spis vrátane výpovedí, obrazových záznamov a protokolov z miesta.
 
@@ -171,13 +171,13 @@ Otázku, proti komu sa občianskoprávny nárok smeruje, treba odlíšiť od tre
 
 ## Q15. Aké plnenia a aké krytie povinného poistenia vozidiel treba overiť?
 
-Povinnosť uzavrieť poistenie podľa článku 6 zákona o povinnom poistení zodpovednosti vozidiel (強制汽車責任保險法) spočíva zásadne na vlastníkovi vozidla a v predvídaných prípadoch tiež na užívateľovi alebo správcovi tohto vozidla. Tento režim vytvára štruktúru krytia bez ohľadu na nedbanlivosť (無過失給付制度) pre osobu zranenú alebo usmrtenú v dôsledku nehody motorového vozidla, avšak treba overiť rozsah cestujúcich alebo tretích osôb (第三人) mimo vozidla, ktorý stanovuje zákon.
+Povinnosť uzavrieť poistenie podľa článku 6 zákona o povinnom poistení zodpovednosti vozidiel (強制汽車責任保險法) spočíva v zásade na vlastníkovi vozidla a v predvídaných prípadoch tiež na užívateľovi alebo správcovi tohto vozidla. Tento režim vytvára štruktúru krytia bez ohľadu na nedbanlivosť (無過失給付制度) pre osobu zranenú alebo usmrtenú v dôsledku nehody motorového vozidla, avšak treba overiť rozsah cestujúcich alebo tretích osôb (第三人) mimo vozidla, ktorý stanovuje zákon.
 
-Pri nehode jedného vozidla nie je vodič tohto vozidla zásadne adresátom plnenia z povinného poistenia tohto vozidla. Pri nehode, ktorej sa zúčastňuje niekoľko vozidiel, však existujú prípady, v ktorých vodič môže uplatniť plnenie u poisťovateľa povinného poistenia iného zúčastneného vozidla.
+Pri nehode jedného vozidla nie je vodič tohto vozidla spravidla adresátom plnenia z povinného poistenia tohto vozidla. Pri nehode, ktorej sa zúčastňuje niekoľko vozidiel, však existujú prípady, v ktorých vodič môže uplatniť plnenie voči poisťovateľovi povinného poistenia iného zúčastneného vozidla.
 
-Sadzobník plnenia (強制汽車責任保險給付標準) zmenený 29. 5. 2026 sa uplatní na nehody, ktoré nastali od 1. 7. 2026. Strop primeraných a potrebných lekárskych nákladov za poranenie činí 200.000 TWD v novom taiwanskom dolári; plnenie za invaliditu (失能) činí od 80.000 TWD do 3.000.000 TWD podľa 15 zákonných stupňov; plnenie za smrť činí 3.000.000 TWD a spoločné maximum smrti, invalidity a lekárskych nákladov činí 3.200.000 TWD, pričom jeden poškodený a jedna nehoda majú tento spoločný strop. Na skoršie nehody sa môže uplatniť predchádzajúci sadzobník.
+Sadzobník plnenia (強制汽車責任保險給付標準) zmenený 29. 5. 2026 sa uplatní na nehody, ktoré nastali od 1. 7. 2026. Strop primeraných a potrebných lekárskych nákladov za poranenie je 200.000 TWD v novom taiwanskom dolári; plnenie za invaliditu (失能) je od 80.000 TWD do 3.000.000 TWD podľa 15 zákonných stupňov; plnenie za smrť je 3.000.000 TWD a spoločné maximum smrti, invalidity a lekárskych nákladov je 3.200.000 TWD, pričom jeden poškodený a jedna nehoda majú tento spoločný strop. Na skoršie nehody sa môže uplatniť predchádzajúci sadzobník.
 
-Poistenie zodpovednosti voči tretím osobám (第三人責任險), úrazové poistenie vodiča (駕駛人傷害險) a poistenie škôd na vlastnom vozidle (車體損失險) sú fakultatívnymi produktmi zmluvnej povahy. Skutočné krytie sa líši podľa poisteného, stropu, spoluúčasti (自負額), výluk, nedbanlivosti a iných podmienok poistky, takže poistku a podmienky treba overiť vec po veci.
+Poistenie zodpovednosti voči tretím osobám (第三人責任險), úrazové poistenie vodiča (駕駛人傷害險) a poistenie škôd na vlastnom vozidle (車體損失險) sú fakultatívnymi produktmi zmluvnej povahy. Skutočné krytie sa líši podľa poisteného, stropu, spoluúčasti (自負額), výluk, nedbanlivosti a iných podmienok poistky, takže poistku a podmienky treba overiť v každej veci osobitne.
 
 ### Oficiálne základy Q11–Q15
 
@@ -359,7 +359,7 @@ Tento aspekt preto nemožno podceňovať; podľa okolností je na mieste poradi�
 
 ​
 
-Ak máte ďalšie otázky, opíšte ich v žiadosti o posúdenie na kontaktnej stránke; porada prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.
+Ak máte ďalšie otázky, opíšte ich v žiadosti o posúdenie na kontaktnej stránke; konzultácia prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.
 
 ​
 

@@ -108,7 +108,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kde začať',
           paragraphs: [
             'Prečítajte si stránku „Právne služby“ a overte, či Vaša vec spadá do nášho rozsahu, potom „Odmena“ a „Napíšte nám“, aby ste vedeli, ako sa stanoví rozsah a ako sa náklady potvrdzujú pred začatím práce.',
-            'Pri odoslaní správy môžete zhrnutie napísať vo svojom jazyku. Pôvodný text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Odoslaná správa je žiadosťou čakajúcou na posúdenie: nie je to ešte porada ani potvrdené stretnutie.',
+            'Pri odoslaní správy môžete zhrnutie napísať vo svojom jazyku. Pôvodný text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Odoslaná správa je žiadosťou čakajúcou na posúdenie: nie je to ešte konzultácia ani potvrdené stretnutie.',
           ],
         },
       ],
@@ -230,14 +230,14 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Náklady sa potvrdzujú pred začatím práce',
           paragraphs: [
             'Ak je rozsah práce zrejmý, výška a spôsob výpočtu nákladov sa s Vami preberú a potvrdia skôr, než práca začne. Ak sa rozsah v priebehu zmení, musí sa potvrdiť znova.',
-            'Táto stránka nie je cenovou ponukou a nezakladá povinnosť na platbu.',
+            'Táto stránka nie je cenovou ponukou a nezakladá platobnú povinnosť.',
           ],
         },
         {
-          heading: 'Porada môže byť odplatná',
+          heading: 'Konzultácia môže byť spoplatnená',
           paragraphs: [
-            'Porada s advokátkou alebo advokátom môže byť odplatnou službou. Táto stránka nehovorí, že prvá konzultácia je bezplatná, a žiadnu jej časť nemožno v tomto zmysle vykladať.',
-            'Ak je porada odplatná, výška a spôsob platby sa oznámia skôr, než sa porada uskutoční.',
+            'Konzultácia s advokátkou alebo advokátom môže byť spoplatnenou službou. Táto stránka nehovorí, že prvá konzultácia je bezplatná, a žiadnu jej časť nemožno v tomto zmysle vykladať.',
+            'Ak je konzultácia spoplatnená, výška a spôsob platby sa oznámia skôr, než sa konzultácia uskutoční.',
           ],
         },
         {
@@ -264,14 +264,14 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             'Jazyk stránky: tieto informácie sú napísané po slovensky.',
-            'Jazyk konzultácie: porada prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
+            'Jazyk konzultácie: konzultácia prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
             'Váš jazyk písania: zhrnutie môžete napísať vo svojom jazyku; pôvodný text sa uchová bez zmeny.',
           ],
         },
         {
           heading: 'Ak neovládate žiadny zo štyroch jazykov konzultácie',
           paragraphs: [
-            'V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
+            'V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme a posúdime, či existuje vhodný spôsob komunikácie; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
             'Ide iba o posúdenie, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.',
           ],
         },
@@ -318,14 +318,14 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
             'Pripravte si krátke zhrnutie priebehu, svojej požiadavky, väzby na Taiwan a lehotu, ak nejaká existuje. Ak je už k dispozícii písomnosť súdu alebo úradu, uveďte dátum. V tejto fáze zatiaľ nemusíte zasielať doklady totožnosti ani súbor dôkazov.',
         },
         {
-          question: 'Je možná porada v slovenčine?',
+          question: 'Je možná konzultácia v slovenskom jazyku?',
           answer:
-            'Nie. Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky. Nesľubujeme ani tlmočníka. Písomný preklad je niečo iné: pôvodný text, ktorý napíšete, sa uchová tak, ako je, a automaticky sa neprekladá.',
+            'Nie. Tieto informácie sú napísané po slovensky, ale konzultácia s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky. Nesľubujeme ani tlmočníka. Písomný preklad je niečo iné: pôvodný text, ktorý napíšete, sa uchová tak, ako je, a automaticky sa neprekladá.',
         },
         {
           question: 'Čo robiť, ak nemôžem použiť žiadny zo štyroch jazykov?',
           answer:
-            'Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili spôsob komunikácie, ale služba v inom jazyku zaručená nie je. Ide o posúdenie, nie o prísľub, že môžeme pracovať v inom jazyku.',
+            'Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme a posúdime, aký spôsob komunikácie je možný; služba v inom jazyku však zaručená nie je. Ide o posúdenie, nie o prísľub, že môžeme pracovať v inom jazyku.',
         },
         {
           question: 'Ako sa nakladá s mojím textom v slovenčine?',
@@ -333,7 +333,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
             'Pôvodný text, ktorý napíšete, sa uchová tak, ako je, a automaticky sa neprekladá. Ak je to potrebné, jazyk ďalšej komunikácie sa s Vami potvrdí.',
         },
         {
-          question: 'Prebehla porada už tým, že je žiadosť odoslaná?',
+          question: 'Znamená odoslanie žiadosti, že už prebehla konzultácia?',
           answer:
             'Nie. Odoslaná žiadosť čaká na posúdenie advokátkou alebo advokátom. Nie je to právne stanovisko, nie je to potvrdené stretnutie a samotné odoslanie nezakladá vzťah medzi advokátkou alebo advokátom a klientom.',
         },
@@ -345,7 +345,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Čo robiť, ak je moja vec veľmi naliehavá?',
           answer:
-            'Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nemá núdzový kanál a nezabezpečuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať aj inú pomoc tam, kde sa nachádzate.',
+            'Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nie je linkou pre naliehavé prípady a nesľubuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať aj inú pomoc tam, kde sa nachádzate.',
         },
       ],
     },
@@ -384,13 +384,13 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Miesto uchovania a prístup',
           paragraphs: [
             'Obsah Vášho podania sa uchováva na mieste, ktoré nie je verejne prístupné. Prístup k nemu majú iba oprávnené osoby v kancelárii, a to na účel vybavenia žiadosti.',
-            'Táto stránka nedáva absolútnu záruku bezpečnosti. Žiadna cesta prenosu a žiadne miesto uchovania nie je úplne bezpečné; citlivé dokumenty by preto mali byť zasielané až po osobitnom pokyne advokátky alebo advokáta.',
+            'Táto stránka nedáva absolútnu záruku bezpečnosti. Žiadna cesta prenosu ani žiadne miesto uchovania nie sú úplne bezpečné; citlivé dokumenty preto posielajte až po osobitnom pokyne advokátky alebo advokáta.',
           ],
         },
         {
           heading: 'Účel použitia',
           paragraphs: [
-            'Odoslané údaje slúžia na posúdenie žiadosti, na odpoveď Vám, na ujasnenie spôsobu komunikácie a na vybavenie, ak je práca prevzatá.',
+            'Odoslané údaje slúžia na to, aby sme žiadosť posúdili, odpovedali Vám, ujasnili spôsob komunikácie a vec vybavili, ak prácu prevezmeme.',
             'Údaje sa bez osobitného súhlasu nepoužívajú na marketing.',
           ],
         },
@@ -402,7 +402,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Vaše práva a cesta na kontakt',
+          heading: 'Vaše práva a ako nás kontaktovať',
           paragraphs: [
             'Môžete žiadať o prístup k svojim údajom, o ich opravu alebo výmaz, prípadne odvolať súhlas, a to prostredníctvom e-mailovej adresy uvedenej na kontaktnej stránke. Ak existuje zákonná alebo procesná povinnosť uchovania, vysvetlíme obmedzenia.',
             'Táto stránka neuvádza pevnú dobu uchovania, pretože skutočná doba závisí od ďalšieho priebehu veci a od súvisiacich povinností. Ak si želáte skorší výmaz, oznámte to pri kontakte.',
@@ -449,7 +449,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Žiadny prísľub výsledku',
           paragraphs: [
-            'Žiadna časť tejto stránky nie je prísľubom ohľadom výsledku veci, vyhovenia prihláške alebo žiadosti či ohľadom pobytového a pracovného statusu.',
+            'Žiadna časť tejto stránky nie je prísľubom, pokiaľ ide o výsledok veci, o vyhovenie prihláške alebo žiadosti či o pobytový a pracovný status.',
             'Vonkajšie odkazy slúžia na orientáciu; nesľubujeme správnosť ani aktuálnosť obsahu tretích osôb.',
           ],
         },
@@ -481,7 +481,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Nakoľko môže príspevok slúžiť na orientáciu',
           paragraphs: [
             'Príspevky sú všeobecnými informáciami k okamihu zverejnenia. Predpisy a ich používanie sa môžu zmeniť a príspevok neobsahuje všetky okolnosti Vášho prípadu.',
-            'Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nenahrádza poradu.',
+            'Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nenahrádza konzultáciu.',
           ],
         },
       ],

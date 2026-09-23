@@ -1178,7 +1178,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Táto stránka nezverejňuje cenník. Najprv sa z Vášho zhrnutia potvrdí rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu, skôr než práca začne. Konzultácia s advokátkou alebo advokátom môže byť odplatná; okrem odmeny môžu vzniknúť súdne alebo správne poplatky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+        'Táto stránka nezverejňuje cenník. Najprv sa z Vášho zhrnutia potvrdí rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu, skôr než práca začne. Konzultácia s advokátkou alebo advokátom môže byť spoplatnená; okrem odmeny môžu vzniknúť súdne alebo správne poplatky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
       sources: ['/sk/contact', '/sk/faq'],
     },
     contact: {

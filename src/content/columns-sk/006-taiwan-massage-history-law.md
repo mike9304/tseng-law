@@ -23,7 +23,7 @@ Okrem strihania existovali rôzne služby, ako holenie a starostlivosť o tvár.
 
 A podstatou bolo, že v sede bolo možné prijať umývanie vlasov spolu s masážou pokožky hlavy, ramien a šije.
 
-Už jedno strihanie umožňovalo užívať túto službu vysokej triedy, takže pomer kvality k cene bol výborný.
+Za cenu jedného strihania sa dala dopriať prvotriedna služba, takže pomer ceny a kvality bol výborný.
 
 Pripomínalo to veľmi dnešné umývanie vlasov vo vietnamskom štýle.
 
@@ -35,7 +35,7 @@ Dnes už sa salóny v tejto podobe takmer nevyskytujú.
 
 Tak či onak, keď je reč o masáži (按摩),
 
-na Taiwane existuje tiež mnoho ulíc masáže.
+aj na Taiwane je mnoho masážnych ulíc.
 
 Lemujú ich masážne prevádzkarne všetkého druhu.
 
@@ -87,9 +87,9 @@ Nakoniec sudcovia Súdneho jüanu (大法官) vyhlásili za protiústavné (違�
 
 Podobne v Kórei, kde sa mnoho osôb so zrakovým postihnutím živí masážou,
 
-zásadne len osoby so zrakovým postihnutím, ktoré získali osvedčenie kvalifikácie, môžu vykonávať povolanie maséra.
+povolanie maséra spravidla môžu vykonávať len osoby so zrakovým postihnutím, ktoré získali osvedčenie o odbornej spôsobilosti.
 
-Je pravda, že vláda Kórey začala vydávať osvedčenie masáže tiež osobám bez zrakového postihnutia,
+Kórejská vláda istý čas vydávala osvedčenia o odbornej spôsobilosti maséra aj osobám bez zrakového postihnutia,
 
 a mnoho osôb so zrakovým postihnutím, obávajúcich sa straty prostriedku obživy, usporiadalo intenzívne protesty.
 
@@ -117,7 +117,7 @@ avšak v tomto procese stále dochádza k prípadom sexuálneho obťažovania (�
 
 To, čo pôvodne malo byť len masážou na uvoľnenie napätia,
 
-sa môže stať traumou na celý život, ak sa utrpí sexuálne obťažovanie.
+sa môže stať traumou na celý život, ak človek zažije sexuálne obťažovanie.
 
 Ak pociťujete počas masáže na Taiwane nepohodlie alebo niečo osobitné,
 

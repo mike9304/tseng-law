@@ -836,9 +836,9 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   sk: {
     consultationNotice:
-      'Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
+      'Tieto informácie sú napísané po slovensky, ale konzultácia s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
     discoveryNotice:
-      'Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje poradie vo vyhľadávaní, záštitu, odporúčanie umelej inteligencie ani zaručenú viditeľnosť.',
+      'Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje umiestnenie vo vyhľadávaní, schválenie, odporúčanie umelej inteligencie ani zaručenú viditeľnosť.',
     confidentialNotice:
       'Pretože sa pôvodný text uchováva, nepíšte v počiatočnej fáze to, čo zatiaľ nie je potrebné, napríklad číslo pasu, číslo dokladu alebo údaje o účte.',
   },

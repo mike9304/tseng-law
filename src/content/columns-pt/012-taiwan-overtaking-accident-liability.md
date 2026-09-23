@@ -23,7 +23,7 @@ O artigo 101 interdita a ultrapassagem nos troços providos de sinais que indiqu
 
 Além disso, não se pode ultrapassar nos locais ou troços providos de um sinal de escola ou de hospital, nos sítios providos de outros sinais ou marcas de interdição de ultrapassar, quando um veículo se aproxima em sentido inverso, nem quando dois veículos ou mais circulam um atrás do outro à frente.
 
-Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de trás deve primeiro buzinar duas vezes brevemente ou fazer um sinal de luzes. A buzina e os faróis não devem ser utilizados de forma repetida para forçar o veículo da frente a ceder a via.
+Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de trás deve primeiro buzinar duas vezes brevemente ou fazer um sinal de luzes uma vez. A buzina e os faróis não devem ser utilizados de forma repetida para forçar o veículo da frente a ceder a via.
 
 O veículo de trás só pode ultrapassar depois de o veículo da frente ter abrandado e se ter afastado, ou ter manifestado a sua vontade de ceder a passagem por um sinal da mão ou pelo intermitente direito.
 

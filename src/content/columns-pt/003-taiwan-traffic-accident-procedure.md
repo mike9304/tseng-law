@@ -203,7 +203,7 @@ As seguradoras muitas vezes não tratam o bastante do lado humano das pessoas en
 
 ​
 
-Podem negligenciar partes importantes que concernem os sentimentos da outra parte, tais como um pedido de desculpa e sinais de preocupação.
+Podem negligenciar gestos importantes para os sentimentos da outra parte, como um pedido de desculpa e sinais de preocupação.
 
 ​
 
@@ -315,7 +315,7 @@ Além disso, o advogado deve explicar claramente a situação da parte e adverti
 
 ​
 
-Deve desconfiar-se do advogado que inflaciona o assunto e sustenta que não se deve transigir e que se deve litigar até ao fim no plano civil e penal, só para aceitar o mandato.
+Deve desconfiar-se do advogado que exagera o assunto e sustenta que não se deve transigir e que se deve litigar até ao fim no plano civil e penal, só para aceitar o mandato.
 
 ​
 
@@ -339,7 +339,7 @@ Em virtude dos ferimentos ou da morte da vítima, esta ou a sua família sofre u
 
 ​
 
-O autor não se preocupa frequentemente em ligar para tomar notícias da vítima nem de a visitar, e numerosos autores pensam que a seguradora regulará tudo e não aparecem. Nestes casos, nem o arrependimento nem a boa-fé se percebem.
+O autor não se preocupa frequentemente em ligar para tomar notícias da vítima nem de a visitar, e numerosos autores pensam que a seguradora regulará tudo e não aparecem. Nestes casos, nem o arrependimento nem a sinceridade se percebem.
 
 ​
 
@@ -347,7 +347,7 @@ O autor não se preocupa frequentemente em ligar para tomar notícias da vítima
 
 ​
 
-A vítima permanece assim muito ferida e entra em cólera, de modo que frequentemente não cede sobre o montante da negociação, ou pede uma apreensão conservatória (假扣押) e prossegue a apreensão dos bens da outra parte até ao fim.
+A vítima permanece assim muito ferida e entra em cólera, de modo que frequentemente não cede quanto ao montante da negociação, ou pede uma apreensão conservatória (假扣押) e prossegue a apreensão dos bens da outra parte até ao fim.
 
 ​
 

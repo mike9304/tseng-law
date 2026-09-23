@@ -172,7 +172,7 @@ A escolha final é mais segura se for examinada por especialistas em Taiwan e no
 ## Fontes oficiais
 
 - [Base de dados normativa do Ministério da Justiça de Taiwan — Lei das sociedades](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Base de dados normativa do Ministério da Justiça de Taiwan — artigo 3 das Normas sobre as taxas de retenção na fonte por categoria de rendimentos (各類所得扣繳率標準) — dividendos pagos a não residentes, e não o artigo 10 da lei do imposto sobre as vendas](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Normas sobre as taxas de retenção na fonte por categoria de rendimentos (各類所得扣繳率標準), artigo 3 — dividendos pagos a não residentes; o artigo 10 da lei do imposto sobre as vendas não é esta disposição](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Base de dados normativa do Ministério da Justiça de Taiwan — Lei do imposto sobre o rendimento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministério das Finanças de Taiwan — indicação sobre a retenção na fonte dos dividendos pagos aos acionistas no estrangeiro](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministério das Finanças de Taiwan — interpretação relativa ao lucro da sucursal de uma sociedade estrangeira](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

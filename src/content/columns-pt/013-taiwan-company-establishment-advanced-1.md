@@ -17,7 +17,7 @@ Recentemente, muitas pessoas constituíram uma sociedade (公司) em Taiwan e ob
 
 As perguntas mais frequentes no momento da constituição estão reunidas abaixo.
 
-Quem leu [**os fundamentos da constituição de sociedades**](/pt/columns/taiwan-company-establishment-basics) pode em seguida reportar-se também a esta parte aprofundada mais pormenorizada.
+Quem leu [**os fundamentos da constituição de sociedades**](/pt/columns/taiwan-company-establishment-basics) pode em seguida consultar também esta parte aprofundada mais pormenorizada.
 
 As perguntas e respostas seguintes visam ajudar as pessoas que ponderam constituir uma sociedade em Taiwan.
 
@@ -49,7 +49,7 @@ O exame do plano de investimento também leva tempo.
 
 Convém redigir o plano de investimento e procurar o endereço de inscrição da sociedade ao mesmo tempo.
 
-Segundo o artigo 9 do Estatuto do investimento dos estrangeiros (外國人投資條例), a entrada aprovada deve chegar na totalidade no prazo fixado pela autoridade competente (核定期限); o prazo deve confirmar-se no ato de aprovação de cada assunto (na prática, é frequentemente fixado em torno de 1 ano).
+Segundo o artigo 9 do Estatuto do investimento dos estrangeiros (外國人投資條例), o capital aprovado deve entrar na totalidade no prazo fixado pela autoridade competente (核定期限); o prazo deve confirmar-se no ato de aprovação de cada assunto (na prática, é frequentemente fixado em torno de 1 ano).
 
 Neste prazo, o endereço da sociedade pode já estar encontrado e o contrato de arrendamento assinado.
 
@@ -101,7 +101,7 @@ Os senhorios hesitam portanto em arrendar a estrangeiros.
 
 Convém por isso procurar o local de exploração cedo.
 
-Se a negociação com o senhorio não se desenrolar de forma fluida, há medidas suplementares.
+Se a negociação com o senhorio não correr bem, há medidas suplementares.
 
 Pode, se for o caso, propor-se a certificação notarial do contrato de arrendamento (公證) ou um depósito de caução suplementar.
 
@@ -121,7 +121,7 @@ Se se tratar de um escritório comercial ordinário, a inscrição da sociedade 
 
 Por exemplo, se se tratar de ramos de atividade possíveis num escritório comercial ordinário, tais como a publicidade ou o comércio por grosso, a sociedade pode ser constituída num escritório comercial ordinário. A adequação do local deve confirmar-se antes da conclusão do contrato de arrendamento.
 
-Convém verificá-lo previamente.
+Essa confirmação tem de estar feita antes da celebração do contrato.
 
 *Se for preciso tratar uma questão de direito de Taiwan, escreva através da página Contacto; não é prometido um prazo de resposta.*
 

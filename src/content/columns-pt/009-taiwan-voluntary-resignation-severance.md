@@ -31,7 +31,7 @@ Existem, contudo, **casos excecionais**.
 
 Nas situações particulares seguintes, mesmo se o trabalhador se demitir por sua própria iniciativa, o empregador deve pagar-lhe a indemnização por despedimento (artigo 14 da lei sobre as normas do trabalho, que manda aplicar, por remissão, o artigo 17; 勞動基準法第14條):
 
-1. Quando o empregador, na celebração do contrato de trabalho (勞動契約), faz uma declaração de vontade mentirosa (虛偽意思表示) de modo que o trabalhador se engana e existe um risco de sofrer um prejuízo
+1. Quando o empregador, na celebração do contrato de trabalho (勞動契約), faz uma declaração de vontade falsa (虛偽意思表示) de modo que o trabalhador se engana e existe um risco de sofrer um prejuízo
 
 (por exemplo quando o empregador diz ao trabalhador que, desde a entrada, o enviará a uma sucursal no estrangeiro que não existe na realidade)
 

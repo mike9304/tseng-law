@@ -54,7 +54,7 @@ Resumo-lhe isso num quadro simples.
 | --- | --- | --- | --- |
 | **Tipo** | **Despedimento económico**  **資遣** **員工(經濟解僱)** | **Despedimento disciplinar**  **解僱** **員工(懲戒解僱)** | **Demissão própria da pessoa empregada**  **員工自請離職** |
 | Significado | Se existir, no empregador, uma necessidade de ajustamento do pessoal em razão da situação da empresa, o motivo situa-se no domínio empresarial do empregador e não na responsabilidade da pessoa empregada. É por isso que o empregador deve respeitar o prazo de pré-aviso (預告期間) e pagar uma indemnização por despedimento, a fim de compensar de forma equilibrada os inconvenientes da pessoa empregada. | Se a pessoa empregada cometer um ato ilícito ou inapropriado, o empregador pode pôr termo de imediato ao contrato de trabalho (勞動契約) sem pré-aviso e não tem de pagar indemnização por despedimento. É uma das prerrogativas disciplinares do empregador. | A pessoa empregada é livre de pôr termo ao contrato a qualquer momento, mas deve, segundo a duração de emprego, respeitar o prazo de pré-aviso, a fim de que o empregador possa proceder à passagem e à procura de um substituto. |
-| Condições | Presentes  (artigo 11 da lei taiwanesa sobre as normas do trabalho) | Presentes  (artigo 12 da lei taiwanesa sobre as normas do trabalho) | Nenhuma |
+| Condições | Sim (artigo 11 da lei taiwanesa sobre as normas do trabalho) | Sim (artigo 12 da lei taiwanesa sobre as normas do trabalho) | Nenhuma |
 | Pré-aviso prévio | Exigido | Não exigido | Exigido |
 | Dificuldade | Simples | Difícil | Simples |
 | Se a sociedade deve pagar a indemnização por despedimento (資遣費) | Exigido | Não exigido | Não exigido |

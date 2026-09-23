@@ -567,7 +567,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Adwokatka kierująca kancelarią na Tajwanie (Managing Attorney)',
       'chang-rongxuan': 'Adwokat na Tajwanie (Taiwan Attorney)',
-      'chang-fangyu': 'Asystent prawny (paralegal)',
+      'chang-fangyu': 'Asystentka prawna (paralegal)',
       'son-jungmin': 'Kierownictwo ds. operacji w Korei (Korea Operations Manager)',
       'huang-shengping': 'Wspólnik biura rachunkowego (Partner CPA)',
     },
@@ -2797,13 +2797,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Asystent prawny (paralegal) z wieloletnią pracą na stanowisku starszego asystenta prawnego w kilku kancelariach, odpowiedzialny za wsparcie procesowe, prawo spółek i inwestycje zagraniczne.',
+        'Asystentka prawna (paralegal) z wieloletnią pracą na stanowisku starszej asystentki prawnej w kilku kancelariach, odpowiedzialna za wsparcie procesowe, prawo spółek i inwestycje zagraniczne.',
         'Wsparcie postępowań, zakładania spółek, zezwoleń na inwestycje zagraniczne, wniosków o licencje oraz wymiany między Koreą a Tajwanem.',
       ],
       education: ['Licencjat prawa (LL.B.), Tunghai University'],
       experience: [
-        'Starszy asystent prawny, Boyin Law Firm',
-        'Starszy asystent prawny, Muyang International Law Firm',
+        'Starsza asystentka prawna, Boyin Law Firm',
+        'Starsza asystentka prawna, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

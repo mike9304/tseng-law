@@ -1059,7 +1059,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Ogólne wyjaśnienia po polsku o zakresie pracy Hovering International Law Firm na Tajwanie, o językach konsultacji i o pierwszym kontakcie.',
       intro:
-        'Hovering International Law Firm prowadzi sprawy klientów z zagranicy, także z powiązaniem z Tajwanem, według prawa Tajwanu: inwestycje i zakładanie spółek, spory cywilne, małżeństwo, rodzina i spadki, prawo pracy, sprawy karne oraz własność intelektualna. Ta polska część pomaga rozpoznać, jaka praca wchodzi w nasz zakres, co przygotować i jak się z nami skontaktować. Są to informacje ogólne, a nie porada prawna w Państwa sprawie.',
+        'Hovering International Law Firm prowadzi sprawy klientów z zagranicy, w tym klientów mających powiązanie z Tajwanem, według prawa Tajwanu: inwestycje i zakładanie spółek, spory cywilne, małżeństwo, rodzina i spadki, prawo pracy, sprawy karne oraz własność intelektualna. Ta polska część pomaga rozpoznać, jaka praca wchodzi w nasz zakres, co przygotować i jak się z nami skontaktować. Są to informacje ogólne, a nie porada prawna w Państwa sprawie.',
       sections: [
         {
           heading: 'Czym się zajmujemy',
@@ -1116,7 +1116,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Sprawy cywilne i odszkodowania',
           paragraphs: [
-            'Ta grupa obejmuje spory umowne, odszkodowania z czynu niedozwolonego i spory konsumenckie. Praca zaczyna się zwykle od chronologii, oceny posiadanych dokumentów i dowodów, a dopiero potem od kolejnych kroków.',
+            'Ta grupa obejmuje spory umowne, odszkodowania z czynu niedozwolonego i spory konsumenckie. Praca zaczyna się zwykle od ustalenia chronologii zdarzeń, oceny posiadanych dokumentów i dowodów, a dopiero potem od kolejnych kroków.',
             'Terminy, w tym ustawowe terminy do wytoczenia powództwa, oraz kompletność dowodów kształtują przebieg. Dlatego znane daty należy podać jak najwcześniej. Prosimy zachować umowy, wiadomości, dowody zapłaty lub zdjęcia z miejsca zdarzenia i wymienić je w pierwszej wiadomości.',
           ],
         },
@@ -1228,7 +1228,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Dlaczego ta strona nie podaje stawek',
           paragraphs: [
-            'Koszty zależą od samej sprawy: od nakładu, liczby stron, dokumentów, terminów i od tego, czy postępowanie już trwa. Liczba ustalona z góry nie oddałaby kosztów Państwa sprawy. Dlatego najpierw ustalamy zakres pracy, a następnie podajemy koszty, zanim praca się zacznie.',
+            'Koszty zależą od samej sprawy: od nakładu, liczby stron, dokumentów, terminów i od tego, czy postępowanie już trwa. Kwota podana z góry nie odpowiadałaby kosztom Państwa sprawy. Dlatego najpierw ustalamy zakres pracy, a następnie podajemy koszty, zanim praca się zacznie.',
             'Obok honorarium adwokackiego mogą powstać koszty sądowe, urzędowe lub osób trzecich. Są one oddzielone od honorarium i zależą od danego postępowania.',
           ],
         },

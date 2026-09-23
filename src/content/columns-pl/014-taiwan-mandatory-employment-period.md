@@ -14,8 +14,8 @@ faq:
     a: "Zgodnie ze wskazówką Ministerstwa Pracy Tajwanu (勞動部) z 5 czerwca 2026 r. koszt szkolenia okresowego, ogólnego szkolenia stanowiska, adaptacji do pracy nowo przyjętych i szkolenia, które ustawa nakazuje prowadzić, nie może być podstawą porozumienia o minimalnym okresie pracy ani żądania kary umownej (違約金) lub zwrotu kosztów. Nie należy patrzeć tylko na nazwę szkolenia, lecz na konkretny program, treść zawodową i techniczną, czas, koszt rzeczywiście poniesiony przez pracodawcę oraz dowody."
   - q: "Jeśli odchodzi się przed terminem, czy trzeba zwrócić w całości premię za podpisanie (簽約金) lub premię za pozostanie na stanowisku (留任獎金)?"
     a: "Nie zawsze zwraca się kwotę w całości. Jeśli premia za podpisanie, premia za pozostanie na stanowisku lub inne świadczenie wypłacone z góry (預付性給付) zostało wypłacone jako rozsądne świadczenie porozumienia o minimalnym okresie pracy, jego cel musi być jasno podany pracownikowi. Wskazówka Ministerstwa Pracy Tajwanu z 5 czerwca 2026 r. wyjaśnia, że przy odejściu przed upływem okresu kwotę do zwrotu trzeba obliczyć proporcjonalnie do okresu jeszcze niewykonanego i nie należy żądać zwrotu w całości. Rzeczywisty wniosek musi zbadać łącznie cel wypłaty, treść porozumienia, okres już przepracowany i przyczynę wygaśnięcia."
-  - q: "Jeśli umowa zostaje rozwiązana przed terminem z przyczyny nieprzypisywalnej pracownikowi, czy trzeba zwrócić koszty szkolenia?"
-    a: "Art. 15-1 ustęp 4 tajwańskiej ustawy o standardach pracy stanowi, że jeśli umowa o pracę zostaje rozwiązana przed końcem minimalnego okresu pracy z przyczyny nieprzypisywalnej pracownikowi, pracownik nie ponosi odpowiedzialności za naruszenie porozumienia o minimalnym okresie pracy ani za zwrot kosztów szkolenia. Jednak przyczynę wygaśnięcia i przypisanie odpowiedzialności trzeba oceniać na podstawie konkretnych dowodów, takich jak zawiadomienie o zwolnieniu, oświadczenie o rezygnacji i dokumenty naruszenia warunków pracy."
+  - q: "Jeśli umowa zostaje rozwiązana przed terminem z przyczyny, za którą pracownik nie odpowiada, czy trzeba zwrócić koszty szkolenia?"
+    a: "Art. 15-1 ustęp 4 tajwańskiej ustawy o standardach pracy stanowi, że jeśli umowa o pracę zostaje rozwiązana przed końcem minimalnego okresu pracy z przyczyny, za którą pracownik nie odpowiada, pracownik nie ponosi odpowiedzialności za naruszenie porozumienia o minimalnym okresie pracy ani za zwrot kosztów szkolenia. Jednak przyczynę wygaśnięcia i przypisanie odpowiedzialności trzeba oceniać na podstawie konkretnych dowodów, takich jak zawiadomienie o zwolnieniu, oświadczenie o rezygnacji i dokumenty naruszenia warunków pracy."
 ---
 
 # Porozumienie o minimalnym okresie pracy na Tajwanie: kryteria ważności, koszty szkolenia i kara umowna
@@ -43,7 +43,7 @@ Art. 15-1 wymaga 1 z 2 ustawowych przesłanek oraz ponadto osobnego badania rozs
 
 Po potwierdzeniu przesłanki ustawowej, według ustępu 2 bada się osobno, czy uzgodniony okres i zakres odpowiedzialności są rozsądne. Porozumienie, które narusza przesłankę ustawową ustępu 1 lub kryterium rozsądności ustępu 2, jest nieważne według ustępu 3. Jednak ta norma jest kryterium badania treści i faktów każdego porozumienia, nie normą, która z góry uznaje wszystkie porozumienia o minimalnym okresie pracy za ważne albo za nieważne.
 
-Okoliczność, że pracownik podpisał umowę, może być dokumentem potwierdzającym istnienie zgody, lecz nie zastępuje przesłanek ustawowych. Natomiast samej długości uzgodnionego okresu nie należy traktować jako rozstrzygającej; trzeba sprawdzić, jaka inwestycja lub jakie świadczenie było i dlaczego ten okres ustalono.
+Podpis pracownika może pomóc wykazać, że porozumienie zostało zawarte, lecz nie zastępuje przesłanek ustawowych. Natomiast samej długości uzgodnionego okresu nie należy traktować jako rozstrzygającej; trzeba sprawdzić, jaka inwestycja lub jakie świadczenie było i dlaczego ten okres ustalono.
 
 ## 2. Pierwsza przesłanka ustawowa: specjalistyczne szkolenie techniczne i poniesienie kosztu
 
@@ -51,7 +51,7 @@ Aby oprzeć porozumienie na szkoleniu, pracodawca musi rzeczywiście zapewnić p
 
 Przedmiot badania obejmuje nie tylko koszty bezpośrednio weryfikowalne, takie jak honoraria zewnętrznych szkoleniowców, opłaty wpisowe ośrodka szkolenia i opłaty materiałów lub urządzeń, lecz także podstawę obliczenia kosztów wewnętrznych, które podnosi pracodawca. Jeśli szkolił personel wewnętrzny, trzeba zobaczyć, o kogo i o jaki czas chodzi, czym to się różni od zwykłego nadzoru lub przekazania stanowiska oraz czy jest podstawa, aby przypisać ten koszt temu pracownikowi. Kwoty szacunkowe oraz kwoty rozdzielone jednolicie same z siebie nie dowodzą rzeczywistego obciążenia.
 
-Program, kalendarz szkolenia, lista obecności, wynik oceny, zaświadczenie ukończenia, faktury i pokwitowania są podstawowymi dokumentami do potwierdzenia rzeczywistości szkolenia i kosztu. Umowa między pracodawcą a ośrodkiem szkolenia, dowody płatności i warunki zwrotu, oglądane łącznie, pozwalają dokładniej uchwycić rzeczywiste obciążenie. Jeśli pracownik zapłacił część kosztu bezpośrednio albo osoba trzecia ją pokryła, trzeba też rozróżnić, kto ostatecznie poniósł dany koszt.
+Program, harmonogram szkolenia, lista obecności, wynik oceny, zaświadczenie ukończenia, faktury i pokwitowania są podstawowymi dokumentami do potwierdzenia rzeczywistości szkolenia i kosztu. Umowa między pracodawcą a ośrodkiem szkolenia, dowody płatności i warunki zwrotu, oglądane łącznie, pozwalają dokładniej uchwycić rzeczywiste obciążenie. Jeśli pracownik zapłacił część kosztu bezpośrednio albo osoba trzecia ją pokryła, trzeba też rozróżnić, kto ostatecznie poniósł dany koszt.
 
 Granica między ogólną adaptacją do pracy a specjalistycznym szkoleniem technicznym nie zależy wyłącznie od miejsca szkolenia ani od tego, kto je prowadzi. Kurs wewnętrzny może ustalić konkretną treść zawodową i techniczną oraz znaczącą inwestycję, a długi kurs ośrodka zewnętrznego może być w rzeczywistości ogólnym szkoleniem wstępnym. Nie należy więc jednolicie wyłączać każdego szkolenia wewnętrznego ani uznawać przesłanki ustawowej tylko dlatego, że kurs jest kosztowny lub długi.
 
@@ -59,7 +59,7 @@ Trzeba też móc objaśnić związek między uzgodnionym okresem a inwestycją s
 
 ## 3. Druga przesłanka ustawowa: rozsądne świadczenie
 
-Druga przesłanka ustawowa polega na tym, że pracodawca zapewnia rozsądne świadczenie za obietnicę pracownika przestrzegania minimalnego okresu pracy. Tutaj świadczenie musi mieć cel i strukturę odrębne od zwykłego wynagrodzenia lub od świadczenia wzajemnego pracy, które już ma być dostarczone. Charakter prawny nie rozstrzyga się tylko dlatego, że na pasku płacowym nazwano wypłatę premią za podpisanie, premią za pozostanie na stanowisku albo świadczeniem wypłaconym z góry.
+Druga przesłanka ustawowa polega na tym, że pracodawca zapewnia rozsądne świadczenie za obietnicę pracownika przestrzegania minimalnego okresu pracy. Tutaj świadczenie musi mieć cel i strukturę odrębne od zwykłego wynagrodzenia lub od świadczenia wzajemnego pracy, które już ma być dostarczone. Samego nazwania wypłaty na pasku płacowym premią za podpisanie, premią za pozostanie na stanowisku albo świadczeniem wypłaconym z góry nie wystarczy, aby ustalić jej charakter prawny.
 
 Najpierw trzeba potwierdzić cel wypłaty. Czy jest to ogólny warunek płacowy zatrudnienia, świadczenie wzajemne za obietnicę pozostania przez oznaczony okres, czy nagroda za osiągnięcie wyników, musi być jasne w umowie i w dokumentach komunikacji. Bada się też, czy data wypłaty, kwota, data nabycia uprawnienia, związek z okresem pozostania, przyczyny zwrotu i wzór zostały przedstawione tak, aby pracownik mógł je zrozumieć przed umową.
 
@@ -114,15 +114,15 @@ Klauzuli zwrotu w całości, stałej kary umownej niemającej związku z rzeczyw
 
 Trzeba też rozróżnić zwrot kosztów szkolenia i zwrot świadczenia wypłaconego z góry. Pierwszy dotyczy rzeczywiście przeprowadzonego specjalistycznego szkolenia technicznego i poniesionego kosztu; drugi dotyczy celu wypłaty, komunikacji, warunków nabycia uprawnienia i proporcji do okresu niewykonanego. Jeśli żąda się obu pozycji łącznie, trzeba osobno zestawić, czy koszt policzono 2 razy, oraz dowody każdej pozycji.
 
-## 7. Gdy umowa zostaje rozwiązana z przyczyny nieprzypisywalnej pracownikowi
+## 7. Gdy umowa zostaje rozwiązana z przyczyny, za którą pracownik nie odpowiada
 
-Art. 15-1 ustęp 4 tajwańskiej ustawy o standardach pracy stanowi, że jeśli umowa o pracę zostaje rozwiązana przed końcem minimalnego okresu pracy z przyczyny nieprzypisywalnej pracownikowi, pracownik nie ponosi odpowiedzialności za naruszenie porozumienia o minimalnym okresie pracy ani za zwrot kosztów szkolenia. Jednak przyczynę wygaśnięcia i przypisanie odpowiedzialności trzeba oceniać na podstawie konkretnych dowodów, takich jak zawiadomienie o zwolnieniu, oświadczenie o rezygnacji i dokumenty naruszenia warunków pracy.
+Art. 15-1 ustęp 4 tajwańskiej ustawy o standardach pracy stanowi, że jeśli umowa o pracę zostaje rozwiązana przed końcem minimalnego okresu pracy z przyczyny, za którą pracownik nie odpowiada, pracownik nie ponosi odpowiedzialności za naruszenie porozumienia o minimalnym okresie pracy ani za zwrot kosztów szkolenia. Jednak przyczynę wygaśnięcia i przypisanie odpowiedzialności trzeba oceniać na podstawie konkretnych dowodów, takich jak zawiadomienie o zwolnieniu, oświadczenie o rezygnacji i dokumenty naruszenia warunków pracy.
 
 Nie można więc uznać naruszenia pracownika samym faktem, że stosunek pracy zakończył się przed uzgodnionym okresem. Trzeba sprawdzić, kto złożył jakie oświadczenie woli, jaka jest podstawa prawna wygaśnięcia umowy i której stronie przypisuje się rzeczywiste okoliczności, które je wywołały.
 
 Dokumenty badania mogą obejmować zawiadomienie o zwolnieniu, pismo rezygnacji, dokument wygaśnięcia za wspólnym porozumieniem, pocztę elektroniczną i rejestr komunikatora, dokumenty zmiany warunków pracy oraz rejestr obecności i pracy. Nawet jeśli wspomina się zdrowie lub okoliczności pracy, nie rozstrzyga się wyniku tylko według tego wyrażenia, lecz ocenia się łącznie rzeczywisty przebieg, ustawową podstawę wygaśnięcia i związane dowody.
 
-Zwolnienie, wygaśnięcie za wspólnym porozumieniem i twierdzenie naruszenia warunków pracy są tylko przykładami okoliczności do zbadania, nie zamkniętym wyliczeniem przyczyn nieprzypisywalnych pracownikowi. Wygaśnięcie tej samej nazwy może różnić się w woli stron i w przebiegu, a nazwa wpisana w dokumencie może nie pokrywać się z rzeczywistymi faktami.
+Zwolnienie, wygaśnięcie za wspólnym porozumieniem i twierdzenie naruszenia warunków pracy są tylko przykładami okoliczności do zbadania, nie zamkniętym wyliczeniem przyczyn, za które pracownik nie odpowiada. Wygaśnięcie tej samej nazwy może różnić się w woli stron i w przebiegu, a nazwa wpisana w dokumencie może nie pokrywać się z rzeczywistymi faktami.
 
 Ocena przyczyny wygaśnięcia wpływa bezpośrednio także na zakres zwrotu. Jeśli stosuje się ustęp 4, nie można żądać od pracownika odpowiedzialności za naruszenie porozumienia o minimalnym okresie pracy ani zwrotu kosztów szkolenia, więc przypisanie trzeba potwierdzić przed zastosowaniem wzoru. Jeśli jest też świadczenie wypłacone z góry i inne żądania osobne, bada się charakter prawny i podstawę każdego żądania.
 
@@ -152,7 +152,7 @@ Aby zapobiec sporowi lub zbadać żądanie już postawione, nie należy czytać 
 
 1. Najpierw precyzuje się przesłankę ustawową: czy zapewniono specjalistyczne szkolenie techniczne i poniesiono koszt, albo czy zapewniono rozsądne świadczenie za obietnicę pozostania.
 2. Ogólne, okresowe i ustawowo obowiązkowe szkolenie odróżnia się od specjalistycznego szkolenia technicznego według rzeczywistej treści kursu, czasu i celu.
-3. Zachowuje się program kursu, kalendarz, rejestr ukończenia, faktury, pokwitowania i dokumenty tego, kto poniósł koszt, oraz zapisuje się osobno podstawę kosztów zewnętrznych i wewnętrznych.
+3. Zachowuje się program kursu, harmonogram, rejestr ukończenia, faktury, pokwitowania i dokumenty tego, kto poniósł koszt, oraz zapisuje się osobno podstawę kosztów zewnętrznych i wewnętrznych.
 4. Cel świadczenia, datę wypłaty, kwotę, warunki nabycia uprawnienia, komunikację daną pracownikowi i wzór zwrotu okresu niewykonanego łączy się jasno na piśmie.
 5. Dokumentuje się podstawę obliczenia uzgodnionego okresu, możliwość zastąpienia personelu tego samego lub podobnego stanowiska oraz związek między potrzebą operacyjną pracodawcy a rzeczywistą inwestycją.
 6. Bada się, czy uzgodniony okres i kwota zwrotu są proporcjonalne do zakresu kosztów szkolenia lub świadczenia, i odzwierciedla się w rozliczeniu okres już przepracowany.
@@ -163,7 +163,7 @@ Nawet jeśli używa się umowy wzorcowej, nie należy mechanicznie stosować teg
 
 ### Aspekty, które pracownik musi sprawdzić
 
-1. Zbiera się oryginał podpisanej umowy o pracę i porozumień o zmianie, materiał objaśniający zatrudnienie, materiał szkolenia, program, kalendarz i rejestr ukończenia.
+1. Zbiera się oryginał podpisanej umowy o pracę i porozumień o zmianie, materiał objaśniający zatrudnienie, materiał szkolenia, program, harmonogram i rejestr ukończenia.
 2. Potwierdza się treść zawodową i techniczną szkolenia, czy jest to ogólne szkolenie adaptacyjne, czy szkolenie ustawowo obowiązkowe, kwotę faktur i pokwitowań oraz kto rzeczywiście poniósł koszt.
 3. Zapewnia się dokumenty wypłaty premii za podpisanie, premii za pozostanie na stanowisku i innych świadczeń wypłacanych z góry, komunikację o celu świadczenia, datę wypłaty, warunki nabycia uprawnienia i wzór zwrotu.
 4. Zapisuje się osobno podstawę obliczenia uzgodnionego okresu, okres już przepracowany, okres pozostały i możliwość zastąpienia personelu, którą podnosi pracodawca.
@@ -176,9 +176,9 @@ Porządkując dokumenty w porządku czasowym, należy łącznie wskazać datę z
 
 ## 10. Źródła oficjalne
 
-- [Baza danych regulacji krajowej Tajwanu: art. 15-1 ustawy o standardach pracy](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
-- [Baza danych regulacji krajowej Tajwanu: art. 15 ustawy o standardach pracy](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
-- [Baza danych regulacji krajowej Tajwanu: art. 16 ustawy o standardach pracy](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
+- [Krajowa baza danych przepisów Tajwanu: art. 15-1 ustawy o standardach pracy](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
+- [Krajowa baza danych przepisów Tajwanu: art. 15 ustawy o standardach pracy](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
+- [Krajowa baza danych przepisów Tajwanu: art. 16 ustawy o standardach pracy](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
 - [Ministerstwo Pracy Tajwanu: wskazówka z 5 czerwca 2026 r. o minimalnym okresie pracy i zwrocie kary umownej](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)
 
 ## 11. Wskazówki związane

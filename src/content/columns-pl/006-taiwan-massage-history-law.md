@@ -63,7 +63,7 @@ Pan Lin uznał tę sankcję za bardzo niesprawiedliwą i wystąpił o wykładni�
 
 Na Tajwanie
 
-osoby z niepełnosprawnością wzroku napotykają liczne przeszkody we wzroście, aktywności, nauce i edukacji, między innymi,
+osoby z niepełnosprawnością wzroku napotykają liczne przeszkody, między innymi we wzroście, aktywności, nauce i edukacji,
 
 a zawody, które mogą wykonywać, są bardzo ograniczone.
 

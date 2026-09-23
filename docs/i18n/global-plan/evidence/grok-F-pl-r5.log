@@ -1,0 +1,85 @@
+WO-F-pl r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pl-r5
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: pl-a 33, pl-b 27 (60). No P3 rows in either review.
+
+Applied: 50 numbered rows, some with the adaptations below.
+Skipped: 10 numbered rows (pl-a 1, pl-a 9, pl-a 10, pl-a 11, pl-a 16, pl-b 5, pl-b 9, pl-b 14, pl-b 20, pl-b 26).
+
+No test file was edited. No pinned Polish expectation in `src/lib/__tests__/guidance-*pl*.test.ts` or the other test trees matched a string that changed. `GUIDANCE_LLMS_NOTICES.pl` was not edited: `consultationNotice` and `confidentialNotice` are still substrings of sentences that were not rewritten. "TWD 1.57M" was not touched. The disclosure-parity regex `termin(?:u)? odpowiedzi` still matches "Nie przyrzekamy terminu odpowiedzi."
+
+### Applied
+pl-a 2–8, 12–15, 17–33.
+pl-b 1–4, 6–8, 10–13, 15–19, 21–25, 27.
+
+Adaptations (still applied):
+- pl-a 12. The filing calendars are also the timetable calque, so the instrumental is "harmonogramami deklaracji obu terytoriów należy zarządzać łącznie."
+- pl-a 15. Three source labels now say "roku 109/112 kalendarza Republiki Chińskiej". The Gregorian years 2020 and 2023 were not added (R13; the checker counts digits). URLs and case numbers are unchanged. The same bare "roku 109" in 010, next to the judgment date 24 stycznia 2022 r., is now "roku 109 kalendarza Republiki Chińskiej" (1).
+- pl-a 17. The block stays a one-line fragment. The previous line now ends "sumiennie," so "że spółka ma kłopoty," continues the same reported speech. The blocks were not merged.
+- pl-a 23. Besides "wyznaczyć na Tajwanie osobę odpowiedzialną (負責人)" and "Wyznaczenie osoby odpowiedzialnej", the bare noun "odpowiedzialny/odpowiedzialnego" for 負責人 in 004 is now "osoba odpowiedzialna" (table cell, two body clauses, the qualification clause, and the directors sentence). "zawarł" became "zawarła" with the feminine noun.
+- pl-a 24. "rzeczywistą ekspozycję i środki opanowania" is now "rzeczywisty zakres odpowiedzialności i dostępne środki kontroli." The later "ekspozycji odpowiedzialności" in the scenario table sentence is "zakresu odpowiedzialności" (1).
+- pl-a 29. "wchodzą pod przyczynę ust. 1" is now "stanowią przyczynę z ust. 1". The same collocation "wchodzą pod ustawowe czynniki korekty" is "mieszczą się w ustawowych czynnikach korekty" (1).
+- pl-b 8. "Poniższe jest" is "Poniższy tekst jest"; the rest of the gym-injury sentence stays. "Poniższe porządkuje" in 016 is "Poniższy tekst porządkuje". Other "Poniższe" + noun openings were left.
+- pl-b 11. The hanging "między innymi" in 011 is now before the list (FAQ and body). 016 "wśród innych treści" is now before the list. The same hang in 006 is now before the list (1). "między innymi" that already stood before its list was left.
+- pl-b 15. "Nie przyrzekamy terminu odpowiedzi." in 013, 015 and 018, and the same calque in 003 and 005 (5). The refusal stays negative.
+- pl-b 18. The payroll examples (premia za podpisanie, premia za pozostanie, świadczenie wypłacone z góry) stay inside the block.
+- pl-b 23. "dossier" in 017 is "dokumentacji". The same French word in 004 "dossier wniosku" is "dokumentację wniosku" (1). Dutch "dossier" in the shared guidance file was not touched.
+- pl-b 27. "harmonogram" where "kalendarz" meant a timetable: 018 formation (1), 016 procedure schedules (2), 014 training schedules (3), 011 supply schedule and promotional-gift schedule (2), 004 filing timetable and application timetable (2), 003 court procedural schedule (1). "kalendarza Republiki Chińskiej" stays a calendar.
+
+## Systemic patterns
+
+- Dot thousands (pl-a and pl-b verdicts). 0 changed to a space. `NUMBER_THOUSAND_STYLE.pl` is `dot`, and ACCEPTED-ROUND skips "500 000".
+- Spare digit glued to a unit, and small counts written as words (pl-a; pl-b 20). 0 changed. "jeden rok" is the lexicon phrase; "jednego", "jednej", "dwóch" and "czterech" are not. See the skipped rows.
+- U+200B blanks, Q16–Q20 as body lines, and 005 `**​**` (pl-a; pl-b 013/015). 0 deleted. Promoting Q16 fails `headings`; deleting a zero-width line fails `blocks`.
+- "Odwrotnie" for instead / on the other hand (pl-a). 3: 002 "natomiast jedna wewnętrzna aprobata", 004 "Jeżeli natomiast wybrano", 016 "natomiast jeśli testament".
+- "w sposób jednolity" for solely or categorically (pl-a). 4: 004 "nie wynikają z samej formy organizacji" (×2), 002 "zawieszenie nie zwalnia ze wszystkich obowiązków deklaracyjnych" (×2). The §5 sentence "nie ustalają się w sposób jednolity według samej nazwy organizacji" stays: the English there is "uniformly".
+- "Przedsiębiorstwo nastawione na zysk" (pl-a verdict). 0 replaced. The verdict says the term is glossed on first use and has no separate row. 營利事業 stays with that gloss.
+- Reply-time passive (pl-b). 5, listed under pl-b 15.
+- "Kalendarz" for a timetable (pl-b). 11, listed under pl-b 27.
+- "Między innymi" / "wśród innych treści" after the list (pl-b). 4, listed under pl-b 11.
+- R2–R10. Feminine Wei Tseng, Państwo, the four-language consultation lock, day–month–year dates, and the decimal comma already hold. This pass fixed Chang Fangyu (role label, intro, two experience lines: Asystentka / starszej asystentki / odpowiedzialna / Starsza asystentka prawna). No new Korea-as-default-reader, result-promise, or untranslated-chrome instance outside the rows above. The only fullwidth colon in columns-pl remains inside the 008 frontmatter `url`, which is canonical source metadata and was not edited.
+
+## Reviewer points not followed
+
+- pl-a 1. The link parameter `flno=3` is the withholding-rate standard, and "art. 10" is the wrong article. The Korean source still says 영업세법 제10조 on that URL, and the checker counts that 10. The label stays. The URL was not changed.
+- pl-a 9 and pl-b 9. A space as the thousands separator is ordinary Polish. This campaign's checker does not parse it for `pl` (`dot` style). The dotted form was kept.
+- pl-a 10 and pl-a 16, and pl-b 20. "nie może przekroczyć jednego roku", "za ostatni rok" without "jeden", "ukończony rok", "jednej z dwóch", "czterech pytań", "jednego głosu" and "jednego kraju" drop a digit the lexicon does not recover from the inflected word. "długość 1 okresu nie może przekroczyć jeden rok" (×2), "za ostatni jeden rok" (×2), "ukończony jeden rok" (body and blockquote), "dla 1 poszkodowanego i 1 wypadku", "więcej niż 1 cudzoziemca", "1 z 2", "4 pytań", "1 problemu", "1 głos" and "zgłoszenia 1 kraju" stay.
+- pl-a 11 and pl-b 14. Q16–Q20 are body lines in the Korean source as well. The U+200B lines in 003, 005, 006, 008, 009, 013 and 015, and the empty bold lines in 005, match that source. Promoting Q16 or deleting the blanks fails `headings` or `blocks`.
+- pl-a 15, the years 2020 and 2023. "roku 109" and "roku 112" are the ROC calendar. Adding the Gregorian year inserts a digit the source does not have. The calendar is named in Polish; the citation numbers are unchanged.
+- pl-b 5. The English sentence stops at actual damages. The Korean sentence says 1배, and that 1 is counted. "(1-krotność)" stays.
+- pl-b 26. The outline skip is in the English source and in the Korean headings. The digit 8 is counted. The headings stay "## 7." and "## 8.".
+- The standing calque "przedsiębiorstwo nastawione na zysk" was not swapped for a shorter company-tax name. See Systemic patterns.
+- "zalecenie odpoczynku" in 003 was left. That is a medical recommendation of rest, not the recuperation in pl-b 6.
+- "międzynarodową właściwość sądu" in 016 was left. That is international jurisdiction, not the foreign-element connecting factor fixed under pl-b 22.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-pl --lang pl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-pl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+The 21 is the count before this log file was written. This log is the additional untracked file `docs/i18n/global-plan/evidence/grok-F-pl-r5.log`.

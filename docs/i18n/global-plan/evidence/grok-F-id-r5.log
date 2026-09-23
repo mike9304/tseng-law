@@ -1,0 +1,80 @@
+WO-F-id r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-id-r5
+date: 2026-09-23
+no git add/commit/push
+
+## Rows applied (13)
+
+id-a
+3 P2 006 — the closed lead-in "kalau berbicara tentang pijat." is now an open lead-in with an em dash, matching English "Anyway, speaking of massage—". The next block stays its own sentence ("Di Taiwan terdapat pula…"). The two blocks were not merged.
+5 P2 005 — "Standar Penelaahan" now carries the gloss (審查標準). Articles 38 and 39 unchanged.
+6 P3 008 — inside the existing blockquote, the six-month cap now sits on the 0,5-month formula. The following line starts with "Ini adalah rumus…". Quote-block count unchanged. The FAQ answer in the same file already had the cap on the formula and was left.
+7 P3 003 — "TWD 200.000 dalam dolar baru Taiwan" → "200.000 dolar baru Taiwan". The later TWD ranges in that sentence stay.
+
+id-b
+1 P1 011 — false data and a remediable gap are no longer "the consequence of the same violation". They must not be treated as producing the same consequence. One sentence, same paragraph.
+5 P2 010 — "mengambil penilaian yang merugikan" → "menarik kesimpulan yang merugikan" (adverse inference).
+6 P2 013 — "memperoleh sewa toko" → "menyewa toko" (lease a storefront, not receive rent).
+7 P2 016 — the gloss no longer splits "pengalihan penting". Now "pengalihan harta yang penting (處分)" and "pemeriksaan yang berbeda".
+8 P2 017 — general foreign-investment approval is not sufficient; the MOTC sector approval goes into the business plan on its own. Two sentences inside the same paragraph.
+9 P2 018 — the company is no longer the subject of "mudah bertanya". The question is what easily comes up first.
+10 P2 018 — "produsen komponen presisi luar negeri" → "produsen komponen presisi dari luar negeri".
+11 P2 018 — "untuk membantu berpikir" → "sebagai bahan untuk menimbang pilihan".
+12 P2 018 — "Kontrak distribusi sendiri tidak menyingkirkan semua isu regulasi" → "Kontrak distribusi saja tidak meniadakan ketentuan Taiwan yang tetap harus dipenuhi."
+
+No guidance-pack string, llms.txt notice, or test expectation changed. No pinned FAQ or title string was rewritten.
+
+## Rows skipped (7)
+
+id-a 1 P2 — do not promote Pertanyaan 16–20 to ## headings. See reviewer-wrong.
+id-a 2 P2 and id-b 3 P2 — do not delete U+200B lines or 005 `**​**`. checkBlocks requires the Indonesian ZWSP count to equal the Korean source. A line whose only character is U+200B is a non-empty block, so deleting it also drops the block count. 0 removed.
+id-a 4 P2 — the aside "(bukan Pasal 10 Undang-Undang Pajak Usaha)" stays. The visible statute name is already the withholding-rate standard, Pasal 3, and the URL was not touched. Korean link text is 영업세법 제10조, so dropping "10" fails `numbers missing 10`. The parenthetical is the form the checker accepts.
+id-a 8 P3 — "TWD 1.57M" left byte-identical (ACCEPTED-ROUND pin). The suggested "1,57 juta dolar baru Taiwan (TWD 1,57 juta)" would replace that token.
+id-b 2 P1 — "Uraian di atas merupakan saran perancangan kontrak" left as written. See reviewer-wrong.
+id-b 4 P2 — headings stay numbered 7 then 8. See reviewer-wrong.
+
+## Systemic patterns
+
+- U+200B blanks, and 005 empty `**​**`: 0 removed. Counts left: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3.
+- Lead-in closed by a period so it no longer joins the next sentence: 1 (006, the row above). No other "kalau berbicara … ." lead-in in the 18 columns. Blocks not merged.
+- Correction note inside a published source label: 1 instance (004). Not removed; digit 10 stays. No second "(bukan Pasal …)" label.
+- Pinned "TWD 1.57M": 0 changed (team bio and the token list).
+- Reversed "same consequence" relation: 1 (011). No other "akibat pelanggaran yang sama".
+- "mengambil penilaian": 1 (010). "memperoleh sewa": 1 (013). Left "memperoleh izin kerja" and "memperoleh pesangon", which mean obtain a permit or obtain severance.
+- Gloss splitting "pengalihan (處分) penting": 1 (016).
+- "berhenti pada peninjauan" calque of "do not treat an approval as sufficient": 1 (017).
+- English sentence-shape calques in 018 ("mudah bertanya", postposed "luar negeri", "untuk membantu berpikir", "menyingkirkan semua isu regulasi"): 4, the rows above. "lebih mudah memperoleh izin kerja" left (correct). "kantor pusat di luar negeri" left.
+- Stacked "TWD N dalam dolar baru Taiwan": 1 (003). The gloss pattern "dalam dolar baru Taiwan (新臺幣, TWD)" in the same file was left.
+- Stranded "(dengan batas maksimum 6 bulan upah)" at the start of a blockquote line: 1 (008). The FAQ copy of the same formula already attached the cap.
+- False "contract-design" label and the 5→7 heading skip in 018: 0 changed (skipped).
+- R2–R10 otherwise already held. Consultation stays English, Mandarin (中文), Japanese, and Korean; no interpreter, reply-time, free-meeting, or result promise was turned positive. Wei Tseng stays unmarked (Indonesian does not inflect; no Bapak). No OUR TEAM / OFFICES / Q&A chrome in the Indonesian pack. "penerjemahan" in 011 is document translation in a contract clause, not an interpreter offer.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      12
+```
+
+Commands were the work-order set. Checker tail above is the last 8 lines (018 PASS details + summary PASS 18/18). Markers 0. TSC_OK. Tests 160 files / 3202 passed, no × lines. git status --short | wc -l = 12 at verify time, before this log file existed. The 12 includes the two paths that were already dirty at the start of the lane (WO-F-id.txt and reviews/native/rounds/r5/) plus the 10 column files edited here.
+
+## Reviewer got wrong (not applied)
+
+- id-a 1. Q16–Q20 are body lines in the English file ("Q16. After an accident…") and in the Korean file, not markdown headings. Promoting them would fail checkHeadings. The Indonesian "Pertanyaan 16." lines already match that shape.
+- id-b 2. English: "The foregoing is contract-design advice." Korean: "이상은 계약 설계 제안입니다." The Indonesian sentence matches both. The preceding paragraphs are about branch versus subsidiary registration in the source as well. Replacing the sentence with "hanya membandingkan prosedur pendirian" would drop the source's characterization. The next sentence already says that choosing a form does not make a transaction lawful and does not prevent disputes.
+- id-b 4. English and Korean headings also jump from section 5 to section 7, then 8. Renumbering 7→6 and 8→7 would diverge from the source and change digits the checker counts.

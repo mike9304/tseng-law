@@ -19,7 +19,7 @@ faq:
 
 ![Foto editorial untuk menilai struktur masuk pasar Taiwan perusahaan semikonduktor](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Setelah mulai bertransaksi dengan pelanggan Taiwan, kantor pusat di luar negeri dapat menghadapi berbagai permintaan: menangani penawaran dan kontrak di Taiwan, menyiapkan persediaan pengganti darurat, atau menempatkan petugas pemasangan dan perawatan. Saat itu perusahaan mudah bertanya lebih dulu: “Apakah mendirikan perusahaan di Taiwan akan menyelesaikan masalah ini?”
+Setelah mulai bertransaksi dengan pelanggan Taiwan, kantor pusat di luar negeri dapat menghadapi berbagai permintaan: menangani penawaran dan kontrak di Taiwan, menyiapkan persediaan pengganti darurat, atau menempatkan petugas pemasangan dan perawatan. Pada saat itu, pertanyaan yang mudah muncul lebih dulu ialah: “Apakah mendirikan perusahaan di Taiwan akan menyelesaikan masalah ini?”
 
 Yang perlu diklarifikasi lebih dulu adalah siapa yang bertanggung jawab atas hal apa di Taiwan. Struktur yang perlu dinilai berbeda-beda, bergantung pada apakah kantor pusat di luar negeri terus menandatangani kontrak penjualan, perusahaan Taiwan membeli barang lalu menjual kembali, atau personel di Taiwan hanya memberikan dukungan teknis.
 
@@ -27,7 +27,7 @@ Tulisan ini adalah penjelasan umum bagi perusahaan bahan, komponen, dan peralata
 
 ## 1. Klarifikasi “pembagian transaksi dan operasi” sebelum memilih bentuk pendaftaran
 
-Misalkan produsen komponen presisi luar negeri sedang menjual kepada pelanggan Taiwan. Awalnya kantor pusat mengirim langsung, tetapi pelanggan lalu meminta penyimpanan suku cadang di Taiwan dan dukungan insinyur di lapangan. Yang dibutuhkan bukan sekadar alamat, melainkan badan usaha yang dapat melakukan penjualan, impor, persediaan, perekrutan, dukungan teknis, dan menanggung tanggung jawab.
+Misalkan produsen komponen presisi dari luar negeri sedang menjual kepada pelanggan Taiwan. Awalnya kantor pusat mengirim langsung, tetapi pelanggan lalu meminta penyimpanan suku cadang di Taiwan dan dukungan insinyur di lapangan. Yang dibutuhkan bukan sekadar alamat, melainkan badan usaha yang dapat melakukan penjualan, impor, persediaan, perekrutan, dukungan teknis, dan menanggung tanggung jawab.
 
 Sebelum memutuskan struktur masuk Taiwan, kantor pusat dapat mengklarifikasi secara internal:
 
@@ -83,9 +83,9 @@ Manajer anak perusahaan atau cabang Taiwan dari perusahaan asing pada umumnya le
 
 ## 7. Struktur yang lebih sesuai menurut tahap perkembangan usaha
 
-Berikut skenario penilaian hipotetis untuk membantu berpikir, bukan kesimpulan yang menjamin suatu cara sah atau lebih baik.
+Berikut skenario penilaian hipotetis sebagai bahan untuk menimbang pilihan, bukan kesimpulan yang menjamin suatu cara sah atau lebih baik.
 
-**Perusahaan yang berfokus pada ekspor tahap awal.** Jika belum ada karyawan atau persediaan di Taiwan dan ingin menguji permintaan lewat distributor independen, tinjau dulu pasokan, hubungan distribusi, dan ruang lingkup kegiatan di Taiwan. Kontrak distribusi sendiri tidak menyingkirkan semua isu regulasi di Taiwan.
+**Perusahaan yang berfokus pada ekspor tahap awal.** Jika belum ada karyawan atau persediaan di Taiwan dan ingin menguji permintaan lewat distributor independen, tinjau dulu pasokan, hubungan distribusi, dan ruang lingkup kegiatan di Taiwan. Kontrak distribusi saja tidak meniadakan ketentuan Taiwan yang tetap harus dipenuhi.
 
 **Perusahaan yang memperluas penjualan dan dukungan teknis di Taiwan.** Jika merencanakan rekrutmen di Taiwan serta terus mengelola persediaan, penagihan, dan dukungan pelanggan, bandingkan secara konkret anak perusahaan dan cabang, sekaligus meninjau tanggung jawab kontrak, cara kantor pusat beroperasi, pajak, dan tenaga kerja.
 

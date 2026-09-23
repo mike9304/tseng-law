@@ -71,7 +71,7 @@ Si l’on ouvre dans un lieu où l’établissement de restauration n’est pas 
 
 « branches faisant l’objet d’une vérification d’office » (主動查詢之營業項目)
 
-Tel est l’essentiel ; pour d’autres questions, vous pouvez écrire depuis la page Contact à une avocate ou à un avocat de Taïwan ; aucun délai de réponse n’est promis.
+Tel est l’essentiel ; pour d’autres questions sur le droit de Taïwan, écrivez depuis la page Contact en anglais, en chinois (中文), en japonais ou en coréen ; aucun délai de réponse n’est promis.
 
 Les règles des autorités administratives peuvent changer souvent ; avant l’immatriculation de la société, il convient de confirmer la réglementation la plus récente.
 

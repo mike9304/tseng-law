@@ -73,9 +73,9 @@ Le salarié doit donc bien maîtriser le délai.
 
 Autrement dit,
 
-le droit de Taïwan distingue l’effet selon qui a la faute :
+le droit de Taïwan distingue l’effet selon qui a la faute :
 
-si elle est du côté de l’employeur, le salarié peut exiger l’indemnité de licenciement ;
+si elle est du côté de l’employeur, le salarié peut exiger l’indemnité de licenciement ;
 
 si elle est du côté du salarié, l’employeur peut ne pas la verser.
 
@@ -91,7 +91,7 @@ C’est pourquoi, dans les conflits du travail (勞資糾紛) à Taïwan,
 
 le « **temps** » est très important.
 
-Dans la plupart des cas, celui qui s’est préparé à l’avance est mieux placé pour faire valoir ses droits ; aucun résultat déterminé n’en découle.
+Dans la plupart des cas, celui qui s’est préparé à l’avance est mieux placé pour faire valoir ses droits ; aucun résultat déterminé n’en découle.
 
 ---
 

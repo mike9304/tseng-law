@@ -77,7 +77,7 @@ Consultez le site du ministère du Travail de Taïwan (勞動部) : <https://ez
 
 ​
 
-Si vous avez d’autres questions, vous pouvez écrire depuis la page Contact ; aucun délai de réponse n’est promis.
+Si vous avez d’autres questions, vous pouvez écrire depuis la page Contact ; aucun délai de réponse n’est promis.
 
 ---
 

@@ -385,8 +385,9 @@ describe('editorial heading unit grouping', () => {
       createElement(HomeCaseResultsSplit, { locale: 'en', presentation: 'editorial' }),
     );
     // The legacy heading retains a break after each source line, including the final line.
-    const jaTitle = '韓国人留学生のジム負傷事件\n一審NT$157万判決後、控訴審で和解\n';
-    const enTitle = 'Korean Student Gym Injury Case\nTWD 1.57M Ruling, Then Appeal Settlement\n';
+    // WO-X1 (EN-03/J01): nationality-neutral case headlines.
+    const jaTitle = 'ジムでの負傷事故 —\n一審NT$157万判決、控訴審で和解\n';
+    const enTitle = 'Gym Injury Claim —\nTWD 1.57M First-Instance Ruling, Settled on Appeal\n';
     const editorialHeading = headingEntries(editorial, 'h2', 'home-results-title')[0];
     const standardHeading = headingEntries(standard, 'h2', 'home-results-title')[0];
     const englishHeading = headingEntries(english, 'h2', 'home-results-title')[0];
@@ -616,11 +617,13 @@ describe('editorial insights archive behavior', () => {
 });
 
 describe('editorial office presentation', () => {
+  // WO-X1 (J02/EN-03): EN/JA reduce the Korea office to one text line, so the
+  // card contract below is checked on zh-hant, which keeps the card.
   it('keeps unique Korea label and one address/NAVER action in both presentations (WO-DS1 F: default is a single card too)', () => {
     const editorial = renderToStaticMarkup(
-      createElement(OfficeMapTabs, { locale: 'ja', presentation: 'editorial' }),
+      createElement(OfficeMapTabs, { locale: 'zh-hant', presentation: 'editorial' }),
     );
-    const standard = renderToStaticMarkup(createElement(OfficeMapTabs, { locale: 'ja' }));
+    const standard = renderToStaticMarkup(createElement(OfficeMapTabs, { locale: 'zh-hant' }));
     const editorialKorea = koreaBlock(editorial);
     const standardKorea = koreaBlock(standard);
     const standardKoreaHeadings = headingEntries(standardKorea, 'h3', 'office-korea-title');
@@ -638,10 +641,10 @@ describe('editorial office presentation', () => {
 
     expect(editorial.match(/role="tab"/g)?.length).toBe(standard.match(/role="tab"/g)?.length);
     expect((editorial.match(/role="tab"/g) ?? []).length).toBeGreaterThanOrEqual(4);
-    expect(editorial).toContain('台北事務所');
+    expect(editorial).toContain('台北');
     expect(editorial).toContain('office-gallery');
-    expect(standardKorea).toContain('韓国事務所の所在地');
-    expect(editorialKorea).toContain('韓国事務所の所在地');
+    expect(standardKorea).toContain('韓國辦公室地址');
+    expect(editorialKorea).toContain('韓國辦公室地址');
     expect(koreaTitle).toBeTruthy();
     expect(standardKoreaHeadings).toHaveLength(1);
     expect(editorialKoreaHeadings).toHaveLength(1);
@@ -701,6 +704,10 @@ describe('editorial office presentation', () => {
     expect(headingEntries(empty, 'h2', 'section-title')[0].text).toBe('');
     expect(empty).not.toContain('OFFICES');
     expect(empty).toContain('台北事務所');
-    expect(koreaBlock(empty)).toContain('韓国事務所の所在地');
+    // WO-X1 (J02): JA shows the Korea office as a single address line.
+    expect(koreaBlock(empty)).toBe('');
+    expect(empty).toContain('data-office-korea-compact');
+    expect(empty).toContain('韓国事務所：');
+    expect(empty).not.toContain('tel:+82');
   });
 });

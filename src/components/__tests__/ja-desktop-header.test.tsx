@@ -90,7 +90,7 @@ describe('Japanese desktop header', () => {
     }
   });
 
-  it.each(['ko', 'zh-hant', 'en'] as const)(
+  it.each(['ko', 'zh-hant'] as const)(
     'retains desktop member and search UI for %s',
     (locale) => {
       const html = renderHeader(locale);
@@ -100,4 +100,14 @@ describe('Japanese desktop header', () => {
       expect(html).toContain('class="header-search-btn"');
     },
   );
+
+  // WO-X1 (EN-17): signed-out EN visitors find "Client log in" in the footer;
+  // the header keeps search, and account/logout once a member is signed in.
+  it('keeps search but moves the signed-out login link out of the EN header', () => {
+    const html = renderHeader('en');
+
+    expect(html).not.toContain('data-member-role-link="login"');
+    expect(html).toContain('class="header-search-btn"');
+    expect(headerSource).toContain("(locale !== 'en' || memberNav.status === 'signed-in')");
+  });
 });

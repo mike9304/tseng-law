@@ -8,8 +8,9 @@ import { locales, siteLocales, type Locale, type SiteLocale } from '@/lib/locale
 const reviewedSummaries = {
   ko: '법원 소송 실무와 기업 법률고문 경험을 바탕으로, SBS 뉴스에 법률 의견과 해설을 제공하고 WEI Lawyer를 통해 법률정보를 꾸준히 발행하고 있습니다.',
   'zh-hant': '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。',
-  en: 'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
-  ja: '裁判所での訴訟実務と企業の法律顧問としての経験を有し、SBSニュースに法律上の意見・解説を提供するとともに、WEI Lawyerを通じて法律情報を継続的に発信しています。',
+  // WO-X1 (EN-21/J24): scan-friendly EN summary; JA leads with JLPT N1 and exchange study.
+  en: 'Experienced in court litigation and corporate advisory work; has provided legal commentary to Korea’s SBS News and publishes Taiwan-law explainers on the WEI Lawyer channel.',
+  ja: '日本語能力試験（JLPT）N1を取得し、神戸大学・早稲田大学への交換留学経験があります。訴訟実務と企業の法律顧問としての経験を生かし、WEI Lawyerを通じて台湾法の情報を継続的に発信しています。',
 } as const satisfies Record<SiteLocale, string>;
 
 const canonicalAttorneyNames = {
@@ -97,10 +98,13 @@ describe('homepage attorney factual summary', () => {
       'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
     );
     expect(html).toContain('Attorney Wei Tseng, Taiwan Legal Partner for International Clients');
+    // WO-X1 (EN-01/EN-12): the attorney consults directly in English; the
+    // second line states existing overseas-company advisory facts.
     expect(html).toContain(
-      'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.',
+      'Consults directly in English, Chinese, Korean, and Japanese — in person in Taipei or by video.',
     );
-    expect(html).toContain('Represented a Korean student in a gym injury case');
+    expect(html).toContain('Advises overseas companies on Taiwan company setup, investment, contracts, and employment.');
+    expect(html).not.toContain('Represented a Korean student in a gym injury case');
     expect(html).not.toContain('Taiwan Legal Partner for Korean Clients');
     expect(titleNode).toMatchObject({
       kind: 'text',
@@ -112,7 +116,7 @@ describe('homepage attorney factual summary', () => {
     expect(introNode).toMatchObject({
       kind: 'text',
       content: {
-        text: 'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.',
+        text: 'Consults directly in English, Chinese, Korean, and Japanese — in person in Taipei or by video.',
       },
     });
   });

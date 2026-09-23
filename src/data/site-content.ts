@@ -1798,7 +1798,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         { label: 'Our Team', href: '/en/lawyers' },
         { label: 'Pricing', href: '/en/pricing' },
         { label: 'Insights', href: '/en/columns' },
-        { label: 'Media Center', href: '/en/videos' },
+        { label: 'Videos', href: '/en/videos' },
         { label: 'Locations', href: '/en/contact#offices' }
       ],
       servicesMenu: {
@@ -1822,7 +1822,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           },
           {
             title: 'Multilingual Communication',
-            description: 'We provide clear legal communication in English, Chinese, Korean, and Japanese.',
+            description: 'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese.',
             href: '/en/about'
           }
         ],
@@ -1892,7 +1892,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       quickLinksLabel: 'Quick Links',
       quickLinks: [
         { label: 'Services', href: '/en/services' },
-        { label: 'International Team', href: '/en/lawyers' },
+        { label: 'Our Team', href: '/en/lawyers' },
         { label: 'Insights', href: '/en/columns' },
         { label: 'Videos', href: '/en/videos' },
         { label: 'FAQ', href: '/en/faq' }
@@ -1996,7 +1996,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: 'Cross-Border Practice at a Glance',
       description:
-        'The firm provides Taiwan legal services in four languages: English, Chinese, Korean, and Japanese. Based on the official attorney profile: four Taiwan offices, seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
+        'The firm provides Taiwan legal services in four languages: English, Chinese, Korean, and Japanese. Based on the official attorney profile: four Taiwan offices, seven principal practice areas, and two top-level language qualifications, JLPT N1 and TOPIK Level 6.',
       highlightWords: [
         'four Taiwan offices',
         'four languages',
@@ -2005,14 +2005,14 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         'Korean',
         'Japanese',
         'seven principal practice areas',
-        'TOPIK Level 6',
-        'JLPT N1'
+        'JLPT N1',
+        'TOPIK Level 6'
       ],
       items: [
         { target: 4, label: 'Taiwan Offices' },
-        { target: 4, label: 'Working Languages' },
+        { target: 4, label: 'Consultation Languages' },
         { target: 7, label: 'Principal Practice Areas' },
-        { target: 2, label: 'Top-Level Language Qualifications' }
+        { target: 2, label: 'Top-Level Language Qualifications (JLPT N1, TOPIK 6)' }
       ]
     },
     majorNews: {
@@ -2199,7 +2199,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Severance calculations under Taiwan’s new and old systems',
             'Worker-initiated termination under Article 14: statutory grounds, time limits, and severance',
             'Minimum-service-period clauses: alternative statutory bases, reasonable scope, repayment, and attribution',
-            'Taiwan employment-law advice for international employers, including Korean businesses'
+            'Taiwan employment-law advice for international employers'
           ],
           relatedColumns: [
             { title: 'Taiwan Severance Law', slug: 'taiwan-labor-severance-law' },
@@ -2234,15 +2234,15 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     homeAttorney: {
       label: 'ABOUT',
       title: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
-      summary: 'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
+      summary: 'Experienced in court litigation and corporate advisory work; has provided legal commentary to Korea’s SBS News and publishes Taiwan-law explainers on the WEI Lawyer channel.',
       ctaLabel: 'View Lawyer Profile'
     },
     homeResults: {
       label: 'CASE STUDY',
-      title: 'Korean Student Gym Injury Case\nTWD 1.57M Ruling, Then Appeal Settlement',
-      description: 'A Korean university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
+      title: 'Gym Injury Claim —\nTWD 1.57M First-Instance Ruling, Settled on Appeal',
+      description: 'A university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
       summary: 'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
-      ctaLabel: 'View Case Studies'
+      ctaLabel: 'Read the case write-up'
     },
     updates: {
       ...base.updates,
@@ -2484,22 +2484,22 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: 'Taichung Office',
-          details: ['40453, 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
+          details: ['40453, 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City', 'Tel: +886-4-2326-1862', 'Fax: +886-4-2326-1863']
         },
         {
           title: 'Kaohsiung Office',
-          details: ['81358, No. 233, Anji St., Zuoying Dist., Kaohsiung City', 'Tel: 07-557-9797', 'Fax: 07-557-7171']
+          details: ['81358, No. 233, Anji St., Zuoying Dist., Kaohsiung City', 'Tel: +886-7-557-9797', 'Fax: +886-7-557-7171']
         },
         {
           title: 'Pingtung Office',
-          details: ['No. 46, Sec. 3, Jiuru Rd., Jiuru Township, Pingtung County 90443', 'Tel: 08-739-1689', 'Fax: 08-739-7362']
+          details: ['No. 46, Sec. 3, Jiuru Rd., Jiuru Township, Pingtung County 90443', 'Tel: +886-8-739-1689', 'Fax: +886-8-739-7362']
         }
       ],
       cta: { label: 'Email Consultation', href: consultationMailto.en }
     },
     homeContactCta: {
-      title: 'Talk to us now about your Taiwan legal issue.',
-      description: 'We quickly route business, litigation, and incorporation inquiries by case type.'
+      title: 'Tell us about your Taiwan legal matter.',
+      description: 'Every inquiry is read by the firm before a consultation is scheduled. We reply in the language you write in. Office time zone: Taipei (GMT+8).'
     },
     footer: {
       ...base.footer,
@@ -2509,7 +2509,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Firm',
           links: [
             { label: 'About', href: '/en/about' },
-            { label: 'International Team', href: '/en/lawyers' },
+            { label: 'Our Team', href: '/en/lawyers' },
             { label: 'Email Consultation', href: consultationMailto.en }
           ]
         },
@@ -2574,7 +2574,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       ...base.nav,
       primary: [
         { label: '取扱業務', href: '/ja/services' },
-        { label: '日本チーム', href: '/ja/lawyers' },
+        { label: 'チーム紹介', href: '/ja/lawyers' },
         { label: '費用案内', href: '/ja/pricing' },
         { label: 'コラム', href: '/ja/columns' },
         { label: 'メディアセンター', href: '/ja/videos' },
@@ -2601,7 +2601,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           },
           {
             title: '多言語コミュニケーション',
-            description: '日本語・英語・韓国語・中国語で分かりやすい法律コミュニケーションを行います。',
+            description: '曾雋崴弁護士が日本語・中国語・英語・韓国語で直接ご相談に対応します。',
             href: '/ja/about'
           }
         ],
@@ -2672,7 +2672,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       quickLinksLabel: 'クイックリンク',
       quickLinks: [
         { label: '取扱業務', href: '/ja/services' },
-        { label: '日本チーム', href: '/ja/lawyers' },
+        { label: 'チーム紹介', href: '/ja/lawyers' },
         { label: 'コラム', href: '/ja/columns' },
         { label: '動画', href: '/ja/videos' },
         { label: 'FAQ', href: '/ja/faq' }
@@ -2774,25 +2774,25 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     stats: {
       ...base.stats,
       label: 'ABOUT',
-      title: '公式プロフィールで見る国際業務の基盤',
+      title: '数字で見る昊鼎',
       description:
-        '当事務所では英語・中国語・韓国語・日本語の4言語で台湾の法律相談に対応しています。公式弁護士プロフィールに基づき、台湾4拠点、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
+        '日本語・中国語・英語・韓国語の4言語で台湾法のご相談に対応しています。公式弁護士プロフィールに基づき、台湾4拠点、7つの主要取扱分野、JLPT N1・TOPIK 6級の2つの最上位級資格をまとめています。',
       highlightWords: [
-        '台湾4拠点',
         '4言語',
-        '英語',
-        '中国語',
-        '韓国語',
         '日本語',
+        '中国語',
+        '英語',
+        '韓国語',
+        '台湾4拠点',
         '7つの主要取扱分野',
-        'TOPIK 6級',
-        'JLPT N1'
+        'JLPT N1',
+        'TOPIK 6級'
       ],
       items: [
         { target: 4, label: '台湾の事務所' },
-        { target: 4, label: '業務対応言語' },
+        { target: 4, label: '相談対応言語' },
         { target: 7, label: '主要取扱分野' },
-        { target: 2, label: '最上位級の語学資格' }
+        { target: 2, label: '語学資格（JLPT N1・TOPIK 6級）' }
       ]
     },
     majorNews: {
@@ -2940,7 +2940,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: '民事訴訟・損害賠償',
-          description: '契約紛争、損害賠償、消費者被害など、民事事件全般に対応します。韓国人留学生のジム負傷事件では、一審で157万新台湾ドル（NT$）の損害賠償を認める判決を得た実績があり、外国人依頼者による台湾での訴訟手続を日本語で一貫して支援します。',
+          description: '契約紛争、損害賠償、消費者被害など、民事事件全般に対応します。留学生のジム負傷事故では、一審で157万新台湾ドル（NT$）の損害賠償を認める判決を得た実績があり、外国人依頼者による台湾での訴訟手続を日本語で一貫して支援します。',
           href: '/ja/services#civil',
           details: [
             '人身損害・物的損害の賠償請求',
@@ -3015,16 +3015,16 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: '曾雋崴弁護士——国際クライアントの台湾法パートナー',
       summary:
-        '裁判所での訴訟実務と企業の法律顧問としての経験を有し、SBSニュースに法律上の意見・解説を提供するとともに、WEI Lawyerを通じて法律情報を継続的に発信しています。',
+        '日本語能力試験（JLPT）N1を取得し、神戸大学・早稲田大学への交換留学経験があります。訴訟実務と企業の法律顧問としての経験を生かし、WEI Lawyerを通じて台湾法の情報を継続的に発信しています。',
       ctaLabel: '弁護士プロフィールを見る'
     },
     homeResults: {
       label: '事例紹介',
-      title: '韓国人留学生のジム負傷事件\n一審NT$157万判決後、控訴審で和解',
+      title: 'ジムでの負傷事故 —\n一審NT$157万判決、控訴審で和解',
       description:
-        '台湾のジムでトレーナーの指導を受けて運動中に負傷した韓国人大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
+        '台湾のジムでトレーナーの指導を受けて運動中に負傷した大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
       summary: '結果は具体的な事実関係や証拠により異なります。本事例は、過去の一案件の経過を紹介するものです。',
-      ctaLabel: '取扱事例を見る'
+      ctaLabel: '事例の解説を読む'
     },
     updates: {
       ...base.updates,
@@ -3266,32 +3266,32 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: '台中事務所',
-          details: ['40453 台中市北区館前路19号6F-1', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
+          details: ['40453 台中市北区館前路19号6F-1', 'Tel: +886-4-2326-1862', 'Fax: +886-4-2326-1863']
         },
         {
           title: '高雄事務所',
-          details: ['81358 高雄市左営区安吉街233号', 'Tel: 07-557-9797', 'Fax: 07-557-7171']
+          details: ['81358 高雄市左営区安吉街233号', 'Tel: +886-7-557-9797', 'Fax: +886-7-557-7171']
         },
         {
           title: '屏東事務所',
-          details: ['90443 屏東県九如郷九如路三段46号', 'Tel: 08-739-1689', 'Fax: 08-739-7362']
+          details: ['90443 屏東県九如郷九如路三段46号', 'Tel: +886-8-739-1689', 'Fax: +886-8-739-7362']
         }
       ],
       cta: { label: 'メールで相談', href: consultationMailto.ja }
     },
     homeContactCta: {
-      title: '台湾の法律問題を、今すぐご相談ください。',
-      description: 'ビジネス、訴訟、会社設立のご相談を案件種別に迅速に振り分けます。'
+      title: '台湾の法律問題を、日本語でご相談ください。',
+      description: '企業法務・紛争・会社設立など、ご相談内容を弁護士が確認したうえでご案内します。ご返信は日本語で行います（台湾時間＝日本時間−1時間）。'
     },
     footer: {
       ...base.footer,
-      note: '日本語・英語・韓国語・中国語で、台湾のクロスボーダー顧問と紛争対応を支援します。',
+      note: '日本語・中国語・英語・韓国語で、台湾のクロスボーダー顧問と紛争対応を支援します。',
       columns: [
         {
           title: '事務所',
           links: [
             { label: '事務所紹介', href: '/ja/about' },
-            { label: '日本チーム', href: '/ja/lawyers' },
+            { label: 'チーム紹介', href: '/ja/lawyers' },
             { label: 'メールで相談', href: consultationMailto.ja }
           ]
         },

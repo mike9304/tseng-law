@@ -91,6 +91,45 @@ export function resolveColumnMarkdownLinkHref(
   return getConsultationPublicMailto(locale);
 }
 
+/**
+ * WO-X1 (EN-15 · J21): EN/JA columns end with a fixed "see also" list that
+ * pointed readers at the Korean-speaker landing. On those two locales the item
+ * is swapped for the first English/Japanese entry path the list does not
+ * already carry (or dropped when both are there). The landing page itself and
+ * the ko/zh-hant columns are untouched.
+ */
+const KOREAN_SPEAKER_LANDING_ITEM =
+  /^(>[ \t]*[-*][ \t]+)\[[^\]\n]*\]\(\/(?:ko|zh-hant|en|ja)\/korean-lawyer-in-taiwan\/?\)[ \t]*$/gm;
+
+const KOREAN_SPEAKER_LANDING_REPLACEMENTS: Partial<
+  Record<SiteLocale, ReadonlyArray<{ href: string; label: string }>>
+> = {
+  en: [
+    { href: '/en/taiwan-lawyer', label: 'English-language consultation in Taipei' },
+    { href: '/en/taiwan-company-setup-lawyer', label: 'Company setup for overseas businesses' },
+  ],
+  ja: [
+    { href: '/ja/taiwan-lawyer', label: '日本語で相談できる台湾弁護士' },
+    { href: '/ja/taiwan-company-setup-lawyer', label: '日本企業の台湾会社設立' },
+  ],
+};
+
+export function replaceKoreanSpeakerLandingLinks(content: string, locale?: SiteLocale): string {
+  const replacements = locale ? KOREAN_SPEAKER_LANDING_REPLACEMENTS[locale] : undefined;
+  if (!replacements) return content;
+  const used = new Set(
+    replacements
+      .filter((item) => content.includes(`](${item.href})`))
+      .map((item) => item.href),
+  );
+  return content.replace(KOREAN_SPEAKER_LANDING_ITEM, (_match, prefix: string) => {
+    const next = replacements.find((item) => !used.has(item.href));
+    if (!next) return '\u0000DROP\u0000';
+    used.add(next.href);
+    return `${prefix}[${next.label}](${next.href})`;
+  }).replace(/^\u0000DROP\u0000\n?/gm, '');
+}
+
 const FOOTNOTE_LABELS: Record<SiteLocale, string> = {
   ko: '각주',
   'zh-hant': '註腳',
@@ -169,7 +208,7 @@ export default function ColumnContent({
           },
         }}
       >
-        {content}
+        {replaceKoreanSpeakerLandingLinks(content, locale)}
       </ReactMarkdown>
     </div>
   );

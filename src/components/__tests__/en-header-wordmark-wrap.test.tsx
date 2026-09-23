@@ -43,7 +43,10 @@ describe('English mobile header wordmark wrap', () => {
     expect(ja).toContain('昊鼎国際法律事務所');
     expect(zh).toContain('昊鼎國際法律事務所');
     expect(ko).not.toContain('Hovering International');
-    expect(ja).not.toContain('Hovering International');
+    // WO-X1 (J22): JA adds the English firm name as one small sub-label line,
+    // not the EN two-line brand wordmark.
+    expect(ja).toMatch(/<span lang="en"[^>]*data-ja-brand-sublabel="true"[^>]*>Hovering International Law Firm<\/span>/);
+    expect(ja).not.toMatch(/>Hovering International<\/span>/);
     expect(zh).not.toContain('Hovering International');
   });
 });

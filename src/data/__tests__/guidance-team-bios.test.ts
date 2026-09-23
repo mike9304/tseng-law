@@ -150,9 +150,14 @@ describe('guidance team biographies', () => {
   }
 
   it('every preserved term is a string the canonical record actually publishes', () => {
-    const canonical = JSON.stringify(teamContent.en);
+    // WO-X1 (EN-12): the EN roster card no longer repeats the gym-injury ruling;
+    // the TWD 1.57M figure stays published in the canonical EN attorney profile.
+    const canonical = JSON.stringify([
+      teamContent.en,
+      getAttorneyProfile('en', primaryAttorneySlug)?.notableMatters,
+    ]);
     for (const term of GUIDANCE_BIO_PRESERVED_TERMS) {
-      expect(canonical.includes(term), `"${term}" is not in teamContent.en`).toBe(true);
+      expect(canonical.includes(term), `"${term}" is not in the canonical EN record`).toBe(true);
     }
   });
 

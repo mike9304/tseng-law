@@ -45,12 +45,13 @@ const contactCopy = {
     description: '依案件類型安排投資、訴訟與公司設立諮詢流程。',
   },
   en: {
-    title: 'Talk to us now about your Taiwan legal issue.',
-    description: 'We quickly route business, litigation, and incorporation inquiries by case type.',
+    // WO-X1 (EN-06/J27): no unsupported urgency; reply language and time zone.
+    title: 'Tell us about your Taiwan legal matter.',
+    description: 'Every inquiry is read by the firm before a consultation is scheduled. We reply in the language you write in. Office time zone: Taipei (GMT+8).',
   },
   ja: {
-    title: '台湾の法律問題を、今すぐご相談ください。',
-    description: 'ビジネス、訴訟、会社設立のご相談を案件種別に迅速に振り分けます。',
+    title: '台湾の法律問題を、日本語でご相談ください。',
+    description: '企業法務・紛争・会社設立など、ご相談内容を弁護士が確認したうえでご案内します。ご返信は日本語で行います（台湾時間＝日本時間−1時間）。',
   },
 } as const;
 
@@ -164,14 +165,15 @@ describe('legacy home four-locale localization', () => {
 
     expect(japaneseHtml).toContain('コラムを見る');
     expect(japaneseHtml).toContain('下へスクロール');
-    expect(japaneseHtml).toContain('台湾の法律問題を、今すぐご相談ください。');
+    expect(japaneseHtml).toContain('台湾の法律問題を、日本語でご相談ください。');
+    expect(japaneseHtml).not.toContain('迅速に');
     expect(japaneseHtml).toContain('ページ上部へ戻る');
 
     for (const fallback of [
       'View Columns',
       'View Insights',
       'Scroll down',
-      'Talk to us now about your Taiwan legal issue.',
+      'Tell us about your Taiwan legal matter.',
       'Office Locations',
       'Korea Office',
       'Back to top',

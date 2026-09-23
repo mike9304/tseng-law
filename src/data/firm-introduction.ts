@@ -57,7 +57,7 @@ export const firmIntroductionContent: Record<SiteLocale, FirmIntroductionContent
       'In 2017, we opened the Pingtung office to provide region-specific legal support. Its managing attorney has extensive practical experience in the establishment, operation, and evaluation of farmers’ organizations, allowing broader and more comprehensive legal services.',
       'In 2020, CPA Shao Yun-Ping (邵允平) officially joined the firm and established the Hovering Accounting Office to provide integrated accounting and tax planning services for business owners and high-net-worth individuals.',
       'In 2024, to provide integrated support across legal, accounting, tax, and HR matters for business owners, Attorney Shao Yun-Liang established SHAW & ASSOCIATES, LAW FIRM (昊鼎維仁法律事務所) for one-stop, all-around business support.',
-      'Also in 2024, Attorney Wei Tseng joined Hovering and has been providing comprehensive legal services for Korean and Japanese clients, including company setup, visa applications, trademark/patent filings, legal risk assessments, and corporate tax consultation.',
+      'Also in 2024, Attorney Wei Tseng joined Hovering and has been providing comprehensive legal services for overseas clients, including those from Japan and Korea, covering company setup, visa applications, trademark/patent filings, legal risk assessments, and corporate tax consultation.',
       'Our members also remain committed to social service. In addition to annual public-interest and legal-aid cases, we continue to provide pro bono services and legal consultations to put fairness and justice into practice.'
     ],
     logo: '/images/brand/hovering-logo-ko.png',

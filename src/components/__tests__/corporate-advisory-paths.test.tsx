@@ -142,7 +142,7 @@ describe('corporate advisory discovery paths', () => {
     expect(ja).toContain(htmlHref(getIntentPage('ja', slug)?.title ?? ''));
   });
 
-  it('puts general, setup, litigation, and advisory links before the Korean-specific guide on EN taiwan-lawyer', () => {
+  it('orders general, setup, litigation, and advisory links on EN taiwan-lawyer without the Korean-speaker landing (WO-X1 EN-15)', () => {
     const html = relatedResourcesHtml(
       renderToStaticMarkup(<IntentLandingPage locale="en" slug="taiwan-lawyer" />),
     );
@@ -151,26 +151,23 @@ describe('corporate advisory discovery paths', () => {
       '/en/taiwan-litigation-lawyer',
       '/en/taiwan-lawyer#corporate-advisory',
       '/en/guides/taiwan-company-setup',
-      '/en/korean-lawyer-in-taiwan',
     ]);
 
     expect(positions.every((index) => index !== -1)).toBe(true);
     expect(positions[0]).toBeLessThan(positions[1]);
     expect(positions[1]).toBeLessThan(positions[2]);
     expect(positions[2]).toBeLessThan(positions[3]);
-    expect(positions[3]).toBeLessThan(positions[4]);
+    expect(html).not.toContain('/en/korean-lawyer-in-taiwan');
   });
 
-  it('keeps the Korean-specific related resource on JA taiwan-lawyer and adds the advisory destination', () => {
+  it('drops the Korean-speaker related resource on JA taiwan-lawyer and keeps the advisory destination (WO-X1 J21)', () => {
     const html = relatedResourcesHtml(
       renderToStaticMarkup(<IntentLandingPage locale="ja" slug="taiwan-lawyer" />),
     );
 
-    expect(html).toContain('/ja/korean-lawyer-in-taiwan');
+    expect(html).not.toContain('/ja/korean-lawyer-in-taiwan');
     expect(html).toContain('/ja/taiwan-lawyer#corporate-advisory');
-    expect(html.indexOf('/ja/korean-lawyer-in-taiwan')).toBeLessThan(
-      html.indexOf('/ja/taiwan-lawyer#corporate-advisory'),
-    );
+    expect(html).toContain('/ja/taiwan-company-setup-lawyer');
   });
 
   it('places the advisory link after the six EN/JA service cards without adding a seventh service item', () => {

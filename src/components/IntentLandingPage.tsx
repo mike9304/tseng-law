@@ -137,12 +137,12 @@ const labels = {
 
 const intentDirectContact = {
   en: {
-    support: 'Consultations in English, Chinese, Korean, and Japanese.',
+    support: 'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese.',
     initialNote:
       'First email: a brief overview of the issue or business, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Sensitive materials only after attorney instructions.',
   },
   ja: {
-    support: '英語・日本語・韓国語でご相談いただけます。中国語での相談にも対応しています。',
+    support: '曾雋崴弁護士に日本語で直接ご相談いただけます（中国語・英語・韓国語にも対応）。',
     initialNote:
       '初回メールでは、争点または事業の簡潔な概要、期限、連絡先のみをお送りください。機微情報は弁護士の指示後に提出してください。',
   },
@@ -430,7 +430,6 @@ function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
         relatedResourceByHref(slug, 'guides/taiwan-company-setup'),
         ...assistance,
         ...official,
-        relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
       ].filter((item): item is NonNullable<typeof item> => item != null);
     }
     if (slug === 'taiwan-company-setup-lawyer') {
@@ -440,23 +439,28 @@ function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
         advisory,
         ...assistance,
         ...official,
-        relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
       ].filter((item): item is NonNullable<typeof item> => item != null);
     }
     return [
       enCivilServiceResource,
       relatedResourceByHref(slug, 'taiwan-lawyer'),
+      relatedResourceByHref('taiwan-lawyer', 'taiwan-company-setup-lawyer'),
       advisory,
       ...assistance,
-      relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
     ].filter((item): item is NonNullable<typeof item> => item != null);
   }
 
+  // WO-X1 (J21): the Japanese landings no longer send readers to the
+  // Korean-speaker landing; the page itself stays published.
+  const localized = locale === 'ja'
+    ? base.filter((item) => item.href !== 'korean-lawyer-in-taiwan')
+    : base;
+
   if (advisory) {
-    return [...base, advisory];
+    return [...localized, advisory];
   }
 
-  return base;
+  return localized;
 }
 
 export default function IntentLandingPage({

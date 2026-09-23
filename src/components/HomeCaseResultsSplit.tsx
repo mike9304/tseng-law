@@ -65,22 +65,22 @@ const copyByLocale = {
   },
   en: {
     label: 'CASE STUDY',
-    title: 'Korean Student Gym Injury Case\nTWD 1.57M Ruling, Then Appeal Settlement',
+    title: 'Gym Injury Claim —\nTWD 1.57M First-Instance Ruling, Settled on Appeal',
     description:
-      'A Korean university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
+      'A university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
     summary:
       'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
-    cta: 'View Case Studies',
+    cta: 'Read the case write-up',
     imageAlt: HOME_RESULTS_SHARED_IMAGE_ALT,
   },
   ja: {
     label: '事例紹介',
-    title: '韓国人留学生のジム負傷事件\n一審NT$157万判決後、控訴審で和解',
+    title: 'ジムでの負傷事故 —\n一審NT$157万判決、控訴審で和解',
     description:
-      '台湾のジムでトレーナーの指導を受けて運動中に負傷した韓国人大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
+      '台湾のジムでトレーナーの指導を受けて運動中に負傷した大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
     summary:
       '結果は具体的な事実関係や証拠により異なります。本事例は、過去の一案件の経過を紹介するものです。',
-    cta: '取扱事例を見る',
+    cta: '事例の解説を読む',
     imageAlt: '明るく無人の現代的な台湾民事法廷',
   },
 } as const;
@@ -127,7 +127,12 @@ export default function HomeCaseResultsSplit({
   override?: HomeCaseResultsOverride;
 }) {
   const copy = override ?? copyByLocale[locale];
-  const href = override?.href ?? `/${locale}/columns`;
+  // WO-X1 (EN-16): EN/JA point at the write-up of this very case instead of
+  // the full column archive; ko/zh-hant keep the archive link.
+  const href = override?.href
+    ?? (locale === 'en' || locale === 'ja'
+      ? `/${locale}/columns/taiwan-gym-injury-lawsuit`
+      : `/${locale}/columns`);
   const controlLabels = override?.controlLabels ?? DECORATIVE_VIDEO_CONTROL_LABELS[locale];
 
   return (

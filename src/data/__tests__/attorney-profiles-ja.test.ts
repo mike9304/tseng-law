@@ -33,11 +33,21 @@ const arrayFields = [
 
 describe('Japanese attorney profile', () => {
   it('has the same fields and collection counts as the Korean profile', () => {
-    expect(Object.keys(japaneseProfile).sort()).toEqual(Object.keys(koreanProfile).sort());
+    // WO-X1 (J06/J22): JA adds the optional visible H1/lede fields the EN
+    // profile already uses; every Korean field is still present.
+    expect(Object.keys(japaneseProfile).sort()).toEqual(
+      [...Object.keys(koreanProfile), 'heading', 'lede'].sort(),
+    );
 
     for (const field of arrayFields) {
+      if (field === 'languages') continue;
       expect(japaneseProfile[field], field).toHaveLength(koreanProfile[field].length);
     }
+    // WO-X1 (J04, user decision 2026-09-23): English added, Japanese first.
+    expect(japaneseProfile.languages).toEqual(['日本語', '中国語', '英語', '韓国語']);
+    expect(japaneseProfile.heading).toBe('曾雋崴（Wei Tseng）台湾弁護士');
+    expect(japaneseProfile.lede).toContain('日本語能力試験（JLPT）N1');
+    expect(japaneseProfile.lede).toContain('神戸大学・早稲田大学への交換留学');
   });
 
   it('preserves the required identity, credentials, experience, and representative matter', () => {

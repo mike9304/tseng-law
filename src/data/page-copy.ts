@@ -130,7 +130,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: 'About Hovering',
-      description: `Learn about Hovering's background and meet the ${TEAM_NAME_BY_LOCALE['en']}.`
+      description: "Learn about Hovering's background and meet our team."
     },
     services: {
       label: 'SERVICES',
@@ -182,7 +182,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎について',
-      description: `台湾を拠点とする国際的な法律実務と、${TEAM_NAME_BY_LOCALE['ja']}をご紹介します。`
+      description: '台湾を拠点とする国際的な法律実務と、弁護士・スタッフをご紹介します。'
     },
     services: {
       label: 'SERVICES',

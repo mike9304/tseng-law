@@ -157,7 +157,7 @@ const expectedFamilyIntros = {
   ko: '한국-대만 국제결혼 증가에 따라 이혼·친권·상속 관련 분쟁이 늘고 있습니다. 법무법인 호정은 대만 가사소송법과 국제사법을 함께 검토하여, 한국인 의뢰인에게 최적의 전략을 제공합니다.',
   'zh-hant':
     '因應韓台跨國婚姻增加，協助協議離婚、調解離婚、裁判離婚程序，以及法定繼承順位與剩餘財產分配請求。',
-  en: 'As Korea-Taiwan marriages increase, disputes on divorce, custody, and inheritance are growing. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.',
+  en: 'Cross-border marriages bring divorce, custody, and inheritance questions that involve more than one country\'s law. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.',
 } as const;
 
 const expectedFaqQuestions = {

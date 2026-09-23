@@ -14,7 +14,8 @@ const expectedJapaneseIdentity = {
   'tseng-junwei': ['曾雋崴弁護士', '台湾弁護士・代表弁護士'],
   'chang-rongxuan': ['張容瑄', '台湾弁護士'],
   'chang-fangyu': ['張芳瑀', 'パラリーガル'],
-  'son-jungmin': ['孫貞旻', '韓国事務長'],
+  // WO-X1 (J04): role stays factual, worded as the Korea office post.
+  'son-jungmin': ['孫貞旻', '事務長（韓国事務所）'],
   'huang-shengping': ['黃勝平', '提携会計士'],
 } as const;
 
@@ -99,15 +100,17 @@ describe('Japanese team content', () => {
 
     expect(japanese.description).toContain('パラリーガル');
     expect(japanese.story[0]).toBe(
-      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',
+      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。日本語・中国語・英語・韓国語でご相談いただけます。',
     );
+    // WO-X1 (J04): the lead card states existing overseas-company advisory
+    // facts instead of the gym case (still published on the profile page).
     expect(lead?.intro[1]).toBe(
-      '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審でNT$157万の損害賠償を認める判決を得た実績があります。',
+      '日本企業をはじめとする海外企業に、台湾での会社設立、投資、契約、労務について助言しています。',
     );
     expect(lead?.experience).toContain('法律扶助基金会台中分会の法律扶助担当弁護士');
     expect(paralegal?.experience).toContain('慕陽國際法律事務所 シニアパラリーガル');
     expect(paralegal?.intro[1]).toBe(
-      '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、韓国・台湾間のコミュニケーションを支援します。',
+      '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、海外クライアントとのコミュニケーションを支援します。',
     );
     expect(operations?.education).toEqual(['国立成功大学でコンピュータサイエンスを専攻（学士）']);
     expect(accountant?.intro[1]).toBe(

@@ -19,7 +19,8 @@ const divorceFaqCases = [
   },
   {
     locale: 'en',
-    question: 'What procedures does a Korean national need for divorce in Taiwan?',
+    // WO-X1 (EN-03/J03): nationality-neutral EN/JA subjects, same Article 1050 facts.
+    question: 'What is the process for a foreign national to divorce in Taiwan?',
     prohibitedWording: 'court notarization',
     article1050Elements: [
       'in writing',
@@ -36,7 +37,7 @@ const divorceFaqCases = [
   },
   {
     locale: 'ja',
-    question: '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
+    question: '外国籍の方が台湾で離婚する場合、どのような手続きが必要ですか？',
     prohibitedWording: '裁判所の公証',
     article1050Elements: ['書面で行い', '2名以上の証人が署名', '戸政機関で離婚登記'],
     crossBorderGuidance: ['国際離婚', 'どの法が適用', '台湾で手続できるか', '財産分与', '親権'],

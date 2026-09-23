@@ -231,10 +231,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     failureMessage:
       'Your inquiry could not be sent. Please try again, or send it to the email address on the contact page.',
     originalLanguageLabel: 'Language you are writing in',
-    originalLanguagePlaceholder:
-      'For example: Vietnamese, Indonesian, Thai, Filipino, or another language',
+    originalLanguagePlaceholder: 'For example: English',
     preferredConsultationLanguageLabel: 'Preferred consultation language',
-    originalTextLabel: 'Summary of your matter (in your own language)',
+    originalTextLabel: 'Summary of your matter',
     originalTextPlaceholder:
       'Tell us what happened, what you need help with, and any deadline you know of. Please do not include passport numbers, identification numbers, or bank account details.',
     nameLabel: 'Name',
@@ -262,7 +261,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'このページは日本語による一般的なご案内です。個別の案件に対する法的助言ではありません。',
     consultationNotice:
-      '実際のご相談は、英語・中国語・日本語・韓国語の4言語で承ります。',
+      '実際のご相談は、日本語・中国語・英語・韓国語の4言語で承ります。',
     methodConfirmationNotice:
       '4言語のいずれも難しい場合は、「連絡方法の確認が必要」をお選びください。どのように連絡を取れるかは返信でご確認いたします。他の言語での対応可否は保証できません。',
     preparationNotice:
@@ -280,10 +279,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     failureMessage:
       'お問い合わせを送信できませんでした。時間をおいて再度お試しいただくか、お問い合わせページのメールアドレスへお送りください。',
     originalLanguageLabel: 'ご記入に使う言語',
-    originalLanguagePlaceholder:
-      '例：ベトナム語、インドネシア語、タイ語、フィリピン語など',
+    originalLanguagePlaceholder: '例：日本語',
     preferredConsultationLanguageLabel: 'ご希望の相談言語',
-    originalTextLabel: '案件の概要（お使いの言語でご記入ください）',
+    originalTextLabel: '案件の概要',
     originalTextPlaceholder:
       '何が起きたか、どのような支援が必要か、期限があればその点もご記入ください。旅券番号、身分証番号、銀行口座情報などの機微情報は記載しないでください。',
     nameLabel: 'お名前',

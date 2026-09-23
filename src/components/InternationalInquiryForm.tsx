@@ -75,6 +75,27 @@ const EMPTY_VALUES: FormValues = {
   consent: false,
 };
 
+/**
+ * WO-X1 (EN-10 · J09): on the EN and JA site pages the visitor is writing in
+ * the page language, so "Language you are writing in" is not asked. The field
+ * is still submitted — prefilled with the page language — so the intake
+ * payload and API contract stay unchanged. Guidance locales keep the field.
+ */
+const PAGE_LANGUAGE_BY_LOCALE: Partial<Record<InquiryCopyLocale, string>> = {
+  en: 'English',
+  ja: '日本語',
+};
+
+/**
+ * Consultation-language options in the order each page lists them: the page
+ * language first on JA; EN already starts with English.
+ */
+const CONSULTATION_LANGUAGE_ORDER: Partial<
+  Record<InquiryCopyLocale, ReadonlyArray<(typeof CONSULTATION_LANGUAGES)[number]>>
+> = {
+  ja: ['ja', 'zh-hant', 'en', 'ko'],
+};
+
 const inquiryNameSchema = z.string().trim().min(1).max(120);
 const inquiryEmailSchema = z.string().trim().email().max(254);
 const FETCH_TIMEOUT_MS = 30000;
@@ -204,18 +225,29 @@ function firstInvalidField(errors: FieldErrors): FieldKey | null {
 export function InternationalInquiryNotice({
   locale,
   showContactLink = false,
+  guidanceOnly = false,
 }: {
   locale: InquiryCopyLocale;
   showContactLink?: boolean;
+  /**
+   * Show only the general-guidance line. The EN/JA contact page already shows
+   * the four-language and method notices above the form, so the form does not
+   * repeat them (WO-X1 EN-10).
+   */
+  guidanceOnly?: boolean;
 }) {
   const copy = internationalInquiryCopy[locale];
 
   return (
     <aside className={styles.notice} lang={locale}>
       <p className={styles.noticeText}>{copy.guidanceNotice}</p>
-      <p className={styles.noticeText}>{copy.consultationNotice}</p>
-      <p className={styles.noticeText}>{copy.methodConfirmationNotice}</p>
-      <p className={styles.noticeText}>{copy.preparationNotice}</p>
+      {guidanceOnly ? null : (
+        <>
+          <p className={styles.noticeText}>{copy.consultationNotice}</p>
+          <p className={styles.noticeText}>{copy.methodConfirmationNotice}</p>
+          <p className={styles.noticeText}>{copy.preparationNotice}</p>
+        </>
+      )}
       {showContactLink ? (
         <p className={styles.noticeText}>
           <Link href={`/${locale}/contact`} className={styles.contactLink}>
@@ -240,7 +272,13 @@ export default function InternationalInquiryForm({
   const pendingStatusFocusRef = useRef(false);
   const isSubmittingRef = useRef(false);
 
-  const [values, setValues] = useState<FormValues>(EMPTY_VALUES);
+  const pageLanguage = PAGE_LANGUAGE_BY_LOCALE[locale];
+  const hideOriginalLanguage = pageLanguage !== undefined;
+  const consultationLanguageOptions =
+    CONSULTATION_LANGUAGE_ORDER[locale] ?? CONSULTATION_LANGUAGES;
+  const [values, setValues] = useState<FormValues>(() =>
+    pageLanguage ? { ...EMPTY_VALUES, originalLanguage: pageLanguage } : EMPTY_VALUES,
+  );
   const [errors, setErrors] = useState<FieldErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<FormStatus>({
@@ -468,7 +506,8 @@ export default function InternationalInquiryForm({
     }
   }
 
-  const showPreparationNotice = values.originalLanguage.trim().length > 0;
+  const showPreparationNotice =
+    !hideOriginalLanguage && values.originalLanguage.trim().length > 0;
   const showMethodConfirmationNotice =
     values.preferredConsultationLanguage === 'needs-method-confirmation';
 
@@ -564,6 +603,14 @@ export default function InternationalInquiryForm({
           </div>
         </div>
 
+        {hideOriginalLanguage ? (
+          <input
+            id={ids.originalLanguage}
+            type="hidden"
+            name="originalLanguage"
+            value={values.originalLanguage}
+          />
+        ) : (
         <div className={styles.field}>
           <label className={styles.label} htmlFor={ids.originalLanguage}>
             {copy.originalLanguageLabel}
@@ -607,6 +654,7 @@ export default function InternationalInquiryForm({
             </p>
           ) : null}
         </div>
+        )}
 
         <div className={styles.field}>
           <label
@@ -649,7 +697,7 @@ export default function InternationalInquiryForm({
             <option value="">
               {copy.preferredConsultationLanguageLabel}
             </option>
-            {CONSULTATION_LANGUAGES.map((language) => (
+            {consultationLanguageOptions.map((language) => (
               <option key={language} value={language}>
                 {copy.languageOptions[language]}
               </option>
@@ -748,7 +796,7 @@ export default function InternationalInquiryForm({
       </div>
 
       <div className={styles.ctaBlock}>
-        <InternationalInquiryNotice locale={locale} />
+        <InternationalInquiryNotice locale={locale} guidanceOnly={hideOriginalLanguage} />
         <button
           className={styles.submit}
           type="submit"

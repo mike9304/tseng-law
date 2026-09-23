@@ -118,7 +118,7 @@ describe('buildBuilderRecordJsonLd', () => {
   });
 
   it.each(locales)(
-    'uses the official individual three languages, not English, for Person in %s',
+    'uses the official individual profile languages for Person in %s',
     (locale) => {
       const profile = getAttorneyProfile(locale, primaryAttorneySlug);
       const payload = buildBuilderRecordJsonLd({
@@ -127,16 +127,23 @@ describe('buildBuilderRecordJsonLd', () => {
         recordSlug: primaryAttorneySlug,
         siteUrl: SITE_URL,
       });
+      // WO-X1 (EN-01, user decision 2026-09-23): the attorney consults directly
+      // in English, and the EN profile says so; ko/zh-hant profiles are unchanged.
+      const expectedCount = locale === 'en' ? 4 : 3;
 
-      expect(profile?.languages).toHaveLength(3);
+      expect(profile?.languages).toHaveLength(expectedCount);
       expect(payload).toMatchObject({
         '@type': 'Attorney',
         knowsLanguage: profile?.languages,
       });
-      expect((payload as { knowsLanguage?: unknown[] }).knowsLanguage).toHaveLength(3);
-      expect(JSON.stringify((payload as { knowsLanguage?: unknown }).knowsLanguage)).not.toMatch(
-        INDIVIDUAL_ENGLISH_MARKERS,
-      );
+      expect((payload as { knowsLanguage?: unknown[] }).knowsLanguage).toHaveLength(expectedCount);
+      if (locale === 'en') {
+        expect((payload as { knowsLanguage?: unknown[] }).knowsLanguage?.[0]).toBe('English');
+      } else {
+        expect(JSON.stringify((payload as { knowsLanguage?: unknown }).knowsLanguage)).not.toMatch(
+          INDIVIDUAL_ENGLISH_MARKERS,
+        );
+      }
       expect(payload).not.toHaveProperty('hasCredential');
       expect(payload).not.toHaveProperty('award');
     },

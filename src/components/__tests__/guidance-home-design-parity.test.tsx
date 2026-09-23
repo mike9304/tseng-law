@@ -170,8 +170,11 @@ describe('guidance home matches the English home composition', () => {
   });
 
   it('counts the four consultation languages, not the attorney profile languages', () => {
+    // WO-X1 (EN-01): the EN attorney profile now also lists four languages, so
+    // the count alone no longer tells the two sources apart; the stat must
+    // still equal the consultation-language list published in JSON-LD.
     const profile = getAttorneyProfile('en', primaryAttorneySlug);
-    expect(profile?.languages.length).not.toBe(GUIDANCE_CONSULTATION_LANGUAGES.length);
+    expect(profile?.languages).toEqual(['English', 'Chinese', 'Korean', 'Japanese']);
     const consultationLanguages = [...GUIDANCE_CONSULTATION_LANGUAGES];
     for (const locale of GUIDANCE_LOCALES_4) {
       const label = guidanceTeamCopy[locale].consultationLanguagesLabel;

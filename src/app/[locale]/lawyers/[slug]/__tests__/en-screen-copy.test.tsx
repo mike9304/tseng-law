@@ -6,8 +6,9 @@ import LawyerProfilePage, { generateMetadata } from '../page';
 
 const SITE_URL = 'https://tseng-law.com';
 const EN_SCREEN_HEADING = 'Wei Tseng';
+// WO-X1 (EN-01/EN-08): the lede leads with the direct consultation languages.
 const EN_SCREEN_LEDE =
-  'Taiwan attorney advising overseas companies and individuals on company setup, investment, litigation, residence, and IP matters.';
+  'Taiwan attorney who consults directly in English, Chinese, Korean, and Japanese, advising overseas companies and individuals on company setup, investment, litigation, residence, and IP matters.';
 const EN_JOB_TITLE = 'Taiwan Attorney · Managing Attorney';
 
 const sourceMocks = vi.hoisted(() => ({
@@ -113,7 +114,7 @@ describe('English lawyer profile screen copy', () => {
     );
     expect(header).toContain(EN_SCREEN_LEDE);
     expect(header).not.toContain('Wei Tseng Taiwan Attorney Profile');
-    expect(header).not.toContain('A dedicated profile for Wei Tseng, a Taiwan attorney focusing on');
+    expect(header).not.toContain('Taiwan attorney Wei Tseng advises overseas clients'); // meta description stays out of the visible header
     expect(EN_SCREEN_HEADING).toBe('Wei Tseng');
   });
 });

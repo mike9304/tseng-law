@@ -108,10 +108,11 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
       const kaohsiung = locations.find((location) => /가오슝|高雄|Kaohsiung/.test(location.title));
       const taipei = locations.find((location) => /타이베이|台北|Taipei/.test(location.title));
       const taichung = locations.find((location) => /타이중|台中|Taichung/.test(location.title));
-      expect(kaohsiung?.details.join(' ')).toContain('07-557-9797');
-      expect(taipei?.details.join(' ')).not.toContain('04-2326-1862');
-      expect(taipei?.details.join(' ')).not.toContain('04-2326-1863');
-      expect(taichung?.details.join(' ')).toContain('04-2326-1862');
+      // WO-X1 (EN-06/J07): EN/JA print the same numbers in international form.
+      expect(kaohsiung?.details.join(' ')).toMatch(/(?:\b07|\+886-7)-557-9797/);
+      expect(taipei?.details.join(' ')).not.toContain('2326-1862');
+      expect(taipei?.details.join(' ')).not.toContain('2326-1863');
+      expect(taichung?.details.join(' ')).toMatch(/(?:\b04|\+886-4)-2326-1862/);
     }
   });
 

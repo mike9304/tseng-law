@@ -11,9 +11,9 @@ import { AboutLegacyPageBody, LawyersLegacyPageBody } from '../legacy-page-bodie
 // `TEAM_NAME_BY_LOCALE` cannot make this test agree with itself.
 const names = {
   ko: '호정 대만·한국 팀',
-  en: 'Hovering English Team',
+  en: 'Our Team', // WO-X1 (EN-12): matches the nav label
   'zh-hant': '昊鼎韓國台灣團隊',
-  ja: '昊鼎日本語チーム',
+  ja: 'チーム紹介', // WO-X1 (J04): matches the nav label
 };
 
 describe('International team branding across public routes', () => {

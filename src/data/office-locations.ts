@@ -106,6 +106,20 @@ const japaneseTaiwanOfficeTitles: Record<TaiwanOfficeId, string> = {
   pingtung: '屏東事務所',
 };
 
+/**
+ * WO-X1 (EN-06 · J07): EN/JA readers mostly call from outside Taiwan, so
+ * those two locales display the same published numbers in international form
+ * (`04-2326-1862` -> `+886-4-2326-1862`, the form `taiwanOfficeSeoRecords`
+ * already uses). Display only — the dial href already uses the E.164 values.
+ * ko/zh-hant and the guidance locales keep the local form.
+ */
+export const taiwanOfficeInternationalNumbers: Record<TaiwanOfficeId, Pick<OfficeInfo, 'phone' | 'fax'>> = {
+  taipei: {},
+  taichung: { phone: '+886-4-2326-1862', fax: '+886-4-2326-1863' },
+  kaohsiung: { phone: '+886-7-557-9797', fax: '+886-7-557-7171' },
+  pingtung: { phone: '+886-8-739-1689', fax: '+886-8-739-7362' },
+};
+
 // ja 주소는 site-content.ts 연락처 관례(일본식 한자·층수 표기)를 따른다.
 const japaneseTaiwanOfficeAddresses: Record<TaiwanOfficeId, string> = {
   taipei: '103 台北市大同区承徳路一段35号7F-2',
@@ -248,6 +262,7 @@ export const taiwanOfficeData: Record<SiteLocale, OfficeInfo[]> = {
     ...office,
     title: japaneseTaiwanOfficeTitles[office.id],
     address: japaneseTaiwanOfficeAddresses[office.id],
+    ...taiwanOfficeInternationalNumbers[office.id],
   })),
 };
 

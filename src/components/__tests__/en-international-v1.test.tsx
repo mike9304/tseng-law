@@ -21,7 +21,9 @@ describe('EN-INTERNATIONAL-v1 candidate copy', () => {
 
   it('keeps the English home title international without claiming every attorney speaks English', () => {
     expect(siteContent.en.hero.title).toBe(EN_HOME_HERO_TITLE);
-    expect(siteContent.en.hero.subtitle).toMatch(/Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese/);
+    // WO-X1 (EN-01, user decision 2026-09-23): the attorney consults directly in English.
+    expect(siteContent.en.hero.subtitle).toMatch(/Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese/);
+    expect(siteContent.en.hero.subtitle).not.toMatch(/works with clients directly in Korean, Chinese, and Japanese/);
     expect(siteContent.en.hero.subtitle).not.toMatch(/English-speaking attorneys/i);
   });
 

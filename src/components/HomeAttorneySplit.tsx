@@ -33,18 +33,18 @@ const copyByLocale = {
     label: 'ABOUT',
     title: 'Attorney Wei Tseng, Taiwan Legal Partner for International Clients',
     description:
-      'Attorney Wei Tseng provides integrated investment, incorporation, and litigation strategy. Consultations in English, Japanese, Korean, and Mandarin are available for international clients.',
+      'Attorney Wei Tseng provides integrated investment, incorporation, and litigation strategy, and consults directly in English, Chinese, Korean, and Japanese.',
     summary:
-      'With experience in court litigation and corporate legal advisory work, Attorney Wei Tseng has provided legal commentary and advice to SBS News and continues to publish legal information through WEI Lawyer.',
+      'Experienced in court litigation and corporate advisory work; has provided legal commentary to Korea’s SBS News and publishes Taiwan-law explainers on the WEI Lawyer channel.',
     cta: 'View Lawyer Profile'
   },
   ja: {
     label: 'ABOUT',
     title: '曾雋崴弁護士 — 日本語で相談できる台湾法務パートナー',
     description:
-      '曾雋崴弁護士は日本語・韓国語・中国語でのコミュニケーションを強みに、投資・会社設立・訴訟まで一貫した戦略を提供します。',
+      '曾雋崴弁護士は日本語・中国語・英語・韓国語で直接ご相談に対応し、投資・会社設立・訴訟まで一貫した戦略を提供します。',
     summary:
-      '裁判所での訴訟実務と企業の法律顧問としての経験を有し、SBSニュースに法律上の意見・解説を提供するとともに、WEI Lawyerを通じて法律情報を継続的に発信しています。',
+      '日本語能力試験（JLPT）N1を取得し、神戸大学・早稲田大学への交換留学経験があります。訴訟実務と企業の法律顧問としての経験を生かし、WEI Lawyerを通じて台湾法の情報を継続的に発信しています。',
     cta: '弁護士プロフィールを見る',
   },
 } as const;

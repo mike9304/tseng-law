@@ -175,7 +175,7 @@ Povinnost uzavření podle článku 6 zákona o povinném pojištění odpovědn
 
 U nehody jednoho vozidla není řidič tohoto vozidla zásadně adresátem plnění povinného pojištění tohoto vozidla. Avšak u nehody, v níž se účastní několik vozidel, existují případy, v nichž řidič může uplatnit plnění u pojistitele povinného pojištění jiného zúčastněného vozidla.
 
-Sazebník plnění (強制汽車責任保險給付標準) změněný 29. 5. 2026 se uplatní na nehody, které nastaly od 1. 7. 2026. Strop přiměřených a potřebných lékařských nákladů za poranění činí 200.000 TWD v novém tchajwanském dolaru; plnění za invaliditu (失能) činí od 80.000 TWD do 3.000.000 TWD podle 15 zákonných stupňů; plnění za smrt činí 3.000.000 TWD a společné maximum smrti, invalidity a lékařských nákladů pro 1 poškozeného a 1 nehodu činí 3.200.000 TWD. Na dřívější nehody se může uplatnit předchozí sazebník.
+Standard plnění (強制汽車責任保險給付標準) změněný 29. 5. 2026 se uplatní na nehody, které nastaly od 1. 7. 2026. Strop přiměřených a potřebných lékařských nákladů za poranění činí 200.000 TWD v novém tchajwanském dolaru; plnění za invaliditu (失能) činí od 80.000 TWD do 3.000.000 TWD podle 15 zákonných stupňů; plnění za smrt činí 3.000.000 TWD a společné maximum smrti, invalidity a lékařských nákladů pro 1 poškozeného a 1 nehodu činí 3.200.000 TWD. Na dřívější nehody se může uplatnit předchozí standard plnění.
 
 Pojištění odpovědnosti vůči třetím osobám (第三人責任險), pojištění úrazů řidiče (駕駛人傷害險) a pojištění škod vlastního vozidla (車體損失險) jsou fakultativními produkty smluvní povahy. Skutečné krytí se liší podle pojištěného, stropu, spoluúčasti (自負額), výluk, zavinění a jiných podmínek pojistky, takže pojistku a podmínky je třeba ověřit věc po věci.
 
@@ -192,7 +192,7 @@ Pojištění odpovědnosti vůči třetím osobám (第三人責任險), pojišt
 - [Občanský zákoník, článek 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Trestní zákon Tchaj-wanu, článek 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zákon o povinném pojištění odpovědnosti vozidel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
-- [Sazebník plnění povinného pojištění odpovědnosti vozidel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
+- [Standard plnění povinného pojištění odpovědnosti vozidel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Vzorová smlouva pojištění vozidel soukromého užití Komise finančního dohledu (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 Q16. Lze po nehodě nechat vše na pojistiteli?
@@ -339,7 +339,7 @@ Poranění nebo smrt poškozeného přináší jemu samému i jeho rodině fyzic
 
 ​
 
-Pachatel často nedbá o telefonování s dotazem na stav oběti ani o její návštěvu a mnozí pachatelé předpokládají, že pojistitel vše vyřídí, a sami se neobjeví. V těchto případech oběť nevidí ani lítost, ani upřímnou snahu.
+Pachatel často nezavolá, aby se zeptal na stav oběti, ani ji nenavštíví, a mnozí pachatelé předpokládají, že pojistitel vše vyřídí, a sami se neobjeví. V těchto případech oběť nevidí ani lítost, ani upřímnou snahu.
 
 ​
 
@@ -347,7 +347,7 @@ Pachatel často nedbá o telefonování s dotazem na stav oběti ani o její ná
 
 ​
 
-Oběť tak zůstává velmi zraněná a upadá do hněvu, takže často neustoupí ve vyjednávané částce, navrhne předběžné zajištění (假扣押) a vede zajištění majetku druhé strany až do konce.
+Oběť tak zůstává velmi zraněná a upadá do hněvu, takže často neustoupí z částky smíru, navrhne předběžné zajištění (假扣押) a vede zajištění majetku druhé strany až do konce.
 
 ​
 

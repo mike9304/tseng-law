@@ -73,11 +73,11 @@ Zaměstnanec proto musí lhůtu hlídat.
 
 Jinými slovy,
 
-Tchajwanské právo přiznává — podle toho, zda je vina na straně zaměstnavatele,
+Tchajwanské právo přiznává kterékoli ze stran — podle toho, zda je vina na straně zaměstnavatele,
 
 nebo na straně zaměstnance —
 
-jedné straně právo odstupné nevyplatit a druhé právo je žádat.
+právo odstupné nevyplatit, nebo je žádat.
 
 Někdy, leží-li vina na obou stranách pracovního vztahu,
 

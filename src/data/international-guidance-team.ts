@@ -735,7 +735,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Řídící advokátka na Tchaj-wanu (Managing Attorney)',
       'chang-rongxuan': 'Advokát na Tchaj-wanu (Taiwan Attorney)',
-      'chang-fangyu': 'Právní asistent',
+      'chang-fangyu': 'Právní asistentka',
       'son-jungmin': 'Vedení provozu v Koreji (Korea Operations Manager)',
       'huang-shengping': 'Partner účetní kanceláře (Partner CPA)',
     },
@@ -3153,15 +3153,15 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Právní asistent s dlouholetou praxí; dříve starší právní asistent ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
+        'Právní asistentka s dlouholetou praxí; dříve starší právní asistentka ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
         'Podpora v soudních řízeních, při zakládání společností, u povolení zahraničních investic, u žádostí o licence a při komunikaci mezi Koreou a Tchaj-wanem.',
       ],
       education: [
         'Bakalář práv (LL.B.), Tunghai University',
       ],
       experience: [
-        'Starší právní asistent, Boyin Law Firm',
-        'Starší právní asistent, Muyang International Law Firm',
+        'Starší právní asistentka, Boyin Law Firm',
+        'Starší právní asistentka, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

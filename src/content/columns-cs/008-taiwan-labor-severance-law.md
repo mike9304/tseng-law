@@ -88,11 +88,11 @@ Existuje společnost A, známá, s pobočkami po celém Tchaj-wanu.
 
 Z nějakého důvodu se změnilo vedení,
 
-a nové vedení začalo ihned po nástupu,
+a jakmile nové vedení nastoupilo,
 
-aby snížilo personální náklady,
+aby snížila personální náklady,
 
-postupně volat dobře placené a dlouholeté zaměstnance na pohovory
+začala společnost postupně zvát dobře placené a dlouholeté zaměstnance na individuální pohovory.
 
 Klient, pan B, byl ve společnosti A zaměstnán více než 10 let
 
@@ -100,7 +100,7 @@ a obchodníkem s nejlepším výsledkem ve středním regionu Tchaj-wanu.
 
 Protože mzda a prémie byly velmi vysoké,
 
-společnost vzala pana B za cíl.
+společnost se zaměřila na pana B.
 
 ​
 
@@ -110,11 +110,11 @@ a náhle mu začali vytýkat, že nepracuje svědomitě.
 
 Vedoucí řekli, že společnost má obtíže,
 
-Pan B by se měl obětovat a dát příklad
+že by se pan B měl obětovat a jít příkladem,
 
-a snížit mzdu a funkci.
+a požadovali, aby pan B přijal snížení mzdy a funkce.
 
-Jinak by pan B měl společnost opustit;
+Vedoucí dodali, že jinak bude muset pan B ze společnosti odejít,
 
 předložili panu B list formátu A4
 

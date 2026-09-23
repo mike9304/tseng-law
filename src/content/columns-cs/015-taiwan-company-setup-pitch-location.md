@@ -55,7 +55,7 @@ Věnujte proto této věci pozornost.
 
 Všem odvětvím se doporučuje potvrdit systémem „předběžného ověření provozovny“ (營業場所預先查詢), zda je provoz možný.
 
-Při zápisu společnosti se však často zapisuje více odvětví najednou a často se chce zapsat asi 10 odvětví jedním podáním.
+Při zápisu společnosti se však často zapisuje více odvětví najednou a žadatelé často chtějí zapsat asi 10 odvětví jedním podáním.
 
 Proto v praxi není nutné při zápisu společnosti ověřovat všechna odvětví.
 
@@ -65,7 +65,7 @@ od 1. 1. 2023 při žádosti o zápis založení, přemístění sídla nebo dop
 
 Níže uvedený seznam „odvětví, která jsou předmětem úředního ověření“ (主動查詢之營業項目) označuje odvětví, která Obchodní úřad v průběhu přezkumu zápisu ověřuje z úřední moci navíc (隨案主動查詢), když odvětví figuruje v žádosti, ale chybí v připojeném výsledku; skutečnost, že odvětví na tomto seznamu není, neznamená osvobození od ověření.
 
-Pokud se otevře v místě, kde restaurace není možná, může později následovat správní pokuta (罰鍰) příslušného orgánu.
+Otevře-li se restaurace v místě, kde její provoz není povolen, může později následovat správní pokuta (罰鍰) příslušného orgánu.
 
 ![„odvětví, která jsou předmětem úředního ověření“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 

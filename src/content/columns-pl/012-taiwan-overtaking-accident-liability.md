@@ -19,7 +19,7 @@ Gdy pojazd z przodu jedzie wolno, wyprzedzanie (超車) może wydawać się czym
 
 [Art. 101 rozporządzenia o bezpieczeństwie ruchu drogowego Tajwanu (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) reguluje zarówno warunki, w których wyprzedzanie jest zakazane, jak i kolejność, której należy przestrzegać, gdy wyprzedzanie na tym samym pasie jest dozwolone.
 
-Art. 101 zakazuje wyprzedzania na odcinkach ze znakami wskazującymi zakręt, stromy spadek lub zjazd, wąski most, tunel lub skrzyżowanie, a także na przejazdach kolejowych i na odcinkach robót.
+Art. 101 zakazuje wyprzedzania na odcinkach ze znakami wskazującymi zakręt, stromy spadek, wąski most, tunel lub skrzyżowanie, a także na przejazdach kolejowych i na odcinkach robót.
 
 Ponadto nie można wyprzedzać w miejscach lub na odcinkach ze znakiem szkoły lub szpitala, w miejscach z innymi znakami lub oznaczeniami zakazu wyprzedzania, gdy zbliża się pojazd z przeciwka, ani gdy z przodu jadą kolejno dwa pojazdy lub więcej.
 

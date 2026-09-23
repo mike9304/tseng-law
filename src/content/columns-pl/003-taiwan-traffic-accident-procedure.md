@@ -99,7 +99,7 @@ Roszczenie oparte na art. 184 Kodeksu cywilnego zakłada bezprawne naruszenie pr
 
 ## Q8. Jeżeli leczenie trwa, jak przedstawiać dokumenty kosztów medycznych?
 
-Proszę zachować pokwitowania (收據), zaświadczenia lekarskie i dokumentację medyczną oraz uporządkować wraz z nimi medyczną konieczność każdego leczenia i jego związek przyczynowy z wypadkiem. Dokumenty leczenia, które trwa, mogą uzupełnić dowód według kalendarza proceduralnego sądu i treści już przedstawionego roszczenia, lecz nie zapewnia to, że wszystkie dokumenty złożone później albo każde rozszerzenie roszczenia zostaną dopuszczone lub zezwolone.
+Proszę zachować pokwitowania (收據), zaświadczenia lekarskie i dokumentację medyczną oraz uporządkować wraz z nimi medyczną konieczność każdego leczenia i jego związek przyczynowy z wypadkiem. Dokumenty leczenia, które trwa, mogą uzupełnić dowód według harmonogramu procesowego sądu i treści już przedstawionego roszczenia, lecz nie zapewnia to, że wszystkie dokumenty złożone później albo każde rozszerzenie roszczenia zostaną dopuszczone lub zezwolone.
 
 Należy rozróżnić dodanie dokumentów medycznych od zmiany albo zwiększenia kwoty dochodzonej. Po wytoczeniu powództwa cywilnego akcesoryjnego do postępowania karnego sam fakt przedstawienia większej liczby pokwitowań medycznych nie rodzi automatycznie kosztów sądowych.
 
@@ -175,7 +175,7 @@ Obowiązek zawarcia według art. 6 ustawy o obowiązkowym ubezpieczeniu odpowied
 
 W wypadku jednego pojazdu kierowca tego pojazdu nie jest co do zasady adresatem świadczeń obowiązkowego ubezpieczenia tego pojazdu. Jednak w wypadku, w którym uczestniczy kilka pojazdów, istnieją przypadki, w których kierowca może dochodzić świadczeń od ubezpieczyciela obowiązkowego innego pojazdu zaangażowanego.
 
-Taryfa świadczeń (強制汽車責任保險給付標準) zmieniona 29 maja 2026 r. stosuje się do wypadków, które nastąpiły od 1 lipca 2026 r. Pułap rozsądnych i potrzebnych kosztów medycznych za obrażenia wynosi 200.000 TWD w nowym dolarze tajwańskim; świadczenie za inwalidztwo (失能) wynosi od 80.000 TWD do 3.000.000 TWD według 15 stopni ustawowych; świadczenie za śmierć wynosi 3.000.000 TWD, a łączne maksimum śmierci, inwalidztwa i kosztów medycznych dla 1 poszkodowanego i 1 wypadku wynosi 3.200.000 TWD. Do wypadków wcześniejszych może stosować się taryfa poprzednia.
+Standard świadczeń (強制汽車責任保險給付標準) zmieniona 29 maja 2026 r. stosuje się do wypadków, które nastąpiły od 1 lipca 2026 r. Pułap rozsądnych i potrzebnych kosztów medycznych za obrażenia wynosi 200.000 TWD w nowym dolarze tajwańskim; świadczenie za inwalidztwo (失能) wynosi od 80.000 TWD do 3.000.000 TWD według 15 stopni ustawowych; świadczenie za śmierć wynosi 3.000.000 TWD, a łączne maksimum śmierci, inwalidztwa i kosztów medycznych dla 1 poszkodowanego i 1 wypadku wynosi 3.200.000 TWD. Do wypadków wcześniejszych może stosować się standard poprzedni.
 
 Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任險), ubezpieczenie wypadków kierowcy (駕駛人傷害險) i ubezpieczenie szkód własnego pojazdu (車體損失險) są produktami fakultatywnymi o charakterze umownym. Rzeczywiste pokrycie różni się według ubezpieczonego, pułapu, franczyzy (自負額), wyłączeń, winy i innych warunków polisy, dlatego polisę i warunki należy sprawdzić w każdej sprawie osobno.
 
@@ -184,15 +184,15 @@ Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任�
 - [Kodeks cywilny, art. 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Kodeks cywilny, art. 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Kodeks cywilny, art. 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Wyrok sądu apelacyjnego Tajwanu, rok 109, sprawa 上易字 numer 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Wyrok sądu apelacyjnego Tajwanu, rok 109, sprawa 上易字 numer 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Wyrok sądu apelacyjnego Tajwanu z roku 109 kalendarza Republiki Chińskiej, sprawa 上易字 nr 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Wyrok sądu apelacyjnego Tajwanu z roku 109 kalendarza Republiki Chińskiej, sprawa 上易字 nr 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Kalkulator wartości bieżącej Hoffmanna Yuanu Sądowego](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Kodeks cywilny, art. 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Wyrok sądu rejonowego Taoyuan, rok 112, sprawa 壢簡字 numer 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Wyrok sądu rejonowego Taoyuan z roku 112 kalendarza Republiki Chińskiej, sprawa 壢簡字 nr 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Kodeks cywilny, art. 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Kodeks karny Tajwanu, art. 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Ustawa o obowiązkowym ubezpieczeniu odpowiedzialności cywilnej pojazdów](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
-- [Taryfa świadczeń obowiązkowego ubezpieczenia odpowiedzialności cywilnej pojazdów](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
+- [Standard świadczeń obowiązkowego ubezpieczenia odpowiedzialności cywilnej pojazdów](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Umowa wzorcowa ubezpieczenia komunikacyjnego użytku prywatnego Komisji Nadzoru Finansowego (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 Q16. Czy po wypadku można wszystko zostawić ubezpieczycielowi?
@@ -299,7 +299,7 @@ Q20. Jak szuka się adwokata do wypadku drogowego?
 
 ​
 
-Ponieważ wypadki drogowe są sprawami bardzo częstymi, ogólny adwokat procesowy, który zgromadził kilka lat doświadczenia praktycznego, może prowadzić sprawę wypadku drogowego.
+Ponieważ wypadki drogowe są sprawami bardzo częstymi, adwokat z kilkuletnią praktyką procesową, może prowadzić sprawę wypadku drogowego.
 
 ​
 
@@ -339,7 +339,7 @@ Z powodu obrażeń albo śmierci ofiary ona sama albo jej rodzina doznaje bólu 
 
 ​
 
-Sprawca często nie dba o telefonowanie z pytaniem o stan ofiary ani o jej odwiedzanie, a wielu sprawców zakłada, że ubezpieczyciel wszystko załatwi, i sam się nie pojawia. W tych przypadkach nie dostrzega się ani skruchy, ani dobrej wiary.
+Sprawca często nie dzwoni, by zapytać o stan ofiary, ani jej nie odwiedza, a wielu sprawców zakłada, że ubezpieczyciel wszystko załatwi, i sam się nie pojawia. W tych przypadkach osoba poszkodowana nie dostrzega ani skruchy, ani szczerości sprawcy.
 
 ​
 
@@ -347,7 +347,7 @@ Sprawca często nie dba o telefonowanie z pytaniem o stan ofiary ani o jej odwie
 
 ​
 
-Osoba poszkodowana pozostaje w ten sposób głęboko dotknięta i rozżalona, dlatego często nie ustępuje w kwocie negocjacji albo wnioskuje o zajęcie zabezpieczające (假扣押) i prowadzi zajęcie majątku drugiej strony aż do końca.
+Osoba poszkodowana pozostaje w ten sposób głęboko dotknięta i rozżalona, dlatego często nie ustępuje co do kwoty ugody albo wnioskuje o zajęcie zabezpieczające (假扣押) i prowadzi zajęcie majątku drugiej strony aż do końca.
 
 ​
 
@@ -359,7 +359,7 @@ Tej kwestii nie należy zatem lekceważyć; stosownie do okoliczności warto sko
 
 ​
 
-Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; termin odpowiedzi nie jest przyrzeczony.
+Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; nie przyrzekamy terminu odpowiedzi.
 
 ​
 

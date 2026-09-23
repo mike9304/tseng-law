@@ -77,7 +77,7 @@ Zob. witrynę Ministerstwa Pracy Tajwanu (勞動部): <https://ezworktaiwan.wda.
 
 ​
 
-Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; termin odpowiedzi nie jest przyrzeczony.
+Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; nie przyrzekamy terminu odpowiedzi.
 
 ---
 

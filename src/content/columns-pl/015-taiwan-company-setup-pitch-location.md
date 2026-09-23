@@ -71,7 +71,7 @@ Jeśli otworzy się lokal w miejscu, w którym zakład gastronomiczny nie jest m
 
 „branże objęte sprawdzeniem z urzędu” (主動查詢之營業項目)
 
-Na tym kończy się omówienie. Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; termin odpowiedzi nie jest przyrzeczony.
+Na tym kończy się omówienie. Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; nie przyrzekamy terminu odpowiedzi.
 
 Reguły organów administracyjnych mogą często się zmieniać; przed rejestracją osoby prawnej należy potwierdzić najnowsze przepisy.
 

@@ -656,7 +656,7 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av jurister utdannet ved National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 har kontoret også en regnskapsavdeling; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av jurister utdannet ved National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 finnes også Hovering Accounting Office; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/lawyers', '/nb/services'],
     },
     lawyers: {

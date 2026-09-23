@@ -1295,7 +1295,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Denne artikkelen er publisert bare på {language}; lenken åpner originalsiden.',
     unavailableTranslationNotice:
-      'Dette punktet er ennå ikke tilgjengelig på sidens språk. En lenke med originalspråket åpner originalteksten.',
+      'Denne teksten finnes ennå ikke på sidens språk. En lenke merket med originalspråket åpner originalteksten.',
     unavailableLanguageNotice: 'Denne siden tilbys ikke på {language}.',
     languageOptions: {
       en: 'Engelsk (English)',

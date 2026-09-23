@@ -59,7 +59,7 @@ Ved selskapsregistreringen registreres imidlertid ofte flere forretningsgrener s
 
 I praksis trenger derfor ikke alle grener å undersøkes ved selskapsregistreringen.
 
-Ifølge «[arbeidsretningslinjene for Taipeis tjeneste for assistert forespørsel om forretningssted](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)»(臺北市營業場所協助查詢服務作業須知) og den gjeldende veiledningen fra byen Taipei
+Ifølge «[arbeidsretningslinjene for Taipeis tjeneste for assistert forespørsel om forretningssted](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) og den gjeldende veiledningen fra byen Taipei
 
 skal siden 1. januar 2023 ved søknad om registrering av stiftelse, av flytting av hjemsted eller av tilføyelse av forretningsgrener for et selskap eller en virksomhet (herunder filialen (分公司) og underavdelingen (分支機構)) resultatet av den forutgående forespørselen om forretningsstedet **obligatorisk** vedlegges registreringssøknaden, uavhengig av bransjen.
 

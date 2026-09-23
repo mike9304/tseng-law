@@ -29,7 +29,7 @@ Spørsmålene og svarene nedenfor er ment som hjelp for den, som vurderer en sel
 
 Eksempel Korea: koreanske banker (銀行) krever som regel at investoren **personlig** møter i banken og overfører midlene fra en konto i eget navn.
 
-Overføring via nettbank eller via en nærstående (匯款) er da ikke mulig.
+Overføring via nettbank eller stedfortredende overføring (匯款) via en slektning eller bekjent er da ikke mulig.
 
 Dessuten må en koreansk statsborger som stifter en utenlandsk juridisk person eller erverver andeler, etter de koreanske valutareglene sende inn en «melding om direkte investering i utlandet». Anmeldelsen skal registreres på tidspunktet for kapitaloverføringen til den taiwanske juridiske personen (台灣法人); hvis den uteblir, kan det følge sanksjoner for overtredelse av valutareglene.
 

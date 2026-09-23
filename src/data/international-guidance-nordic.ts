@@ -1170,7 +1170,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Stiftelse og oppbygning',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) ble stiftet i 2016 av advokater som har studert ved National Taiwan University (國立臺灣大學). Det kinesiske navnet 昊鼎 forener tegnet 昊 («den vide himmelen») med 鼎 («det faste grunnlaget») og beskriver kontorets retning helt siden stiftelsen.',
-            'Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung er innrettet på virksomhetsledelse og behandler sivile, strafferettslige og forvaltningsrettslige tvister. Kontoret i Taichung behandler byggesaker, immaterialrett og saker med tilknytning til Korea og Japan. Kontoret i Pingtung ble åpnet i 2017 for det lokale behovet.',
+            'Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung er innrettet på eierstyring og selskapsledelse og behandler sivile, strafferettslige og forvaltningsrettslige tvister. Kontoret i Taichung behandler byggesaker, immaterialrett og saker med tilknytning til Korea og Japan. Kontoret i Pingtung ble åpnet i 2017 for å gi juridisk bistand tilpasset regionen.',
             'Ved siden av advokatvirksomheten har vi siden 2020 også Hovering Accounting Office, som tilbyr bokføring og skatteplanlegging for næringsdrivende og formuende privatpersoner.',
           ],
         },
@@ -1184,7 +1184,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Når du kontakter oss',
           paragraphs: [
-            'Når sammendraget ditt er kommet inn, vurderer en advokat innholdet og tar deretter opp mulig arbeidsomfang, dokumenter som fortsatt trengs, og de neste trinnene. I skatte- og bokføringsspørsmål kan kontoret arbeide sammen med regnskapsavdelingen i én og samme sak.',
+            'Når sammendraget ditt er kommet inn, vurderer en advokat innholdet og tar deretter opp mulig arbeidsomfang, dokumenter som fortsatt trengs, og de neste trinnene. I skatte- og bokføringsspørsmål kan kontoret arbeide sammen med Hovering Accounting Office i én og samme sak.',
             'Utfallet i den enkelte sak avhenger av fakta og av dokumentene som finnes; vi lover ikke noe resultat. Trenger du et bindende svar for din situasjon, må dokumentene drøftes med en advokat på et av de fire rådgivningsspråkene.',
           ],
         },

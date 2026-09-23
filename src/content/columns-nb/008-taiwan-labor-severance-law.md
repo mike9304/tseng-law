@@ -13,7 +13,7 @@ faq:
   - q: "Skal selskapet også ved en disiplinær avskjed utbetale sluttvederlag?"
     a: "Nei. Begår arbeidstakeren et delikt (侵權行為), krenker interne regler eller uteblir uten gyldig grunn 3 dager på rad (artikkel 12 i loven om arbeidsnormer, 勞動基準法第12條), kan selskapet avskjedige uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Derimot krever en økonomisk oppsigelse (artikkel 11) forutgående varsel og utbetaling av sluttvederlag."
   - q: "Hvordan beregnes sluttvederlaget i Taiwan?"
-    a: "For hvert fullførte 1 års ansiennitet skal arbeidsgiveren utbetale 0,5 måneds gjennomsnittslønn som sluttvederlag, høyst 6 månedslønninger. Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales per 1 år 1 måneds gjennomsnittslønn uten maksimum."
+    a: "For hvert fullførte 1 års ansiennitet skal arbeidsgiveren utbetale 0,5 måneds gjennomsnittslønn som sluttvederlag, høyst 6 månedslønninger. Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales det per år 1 måneds gjennomsnittslønn uten maksimum."
 ---
 
 # Sluttvederlag (資遣費) i Taiwan: når det utbetales, og når det ikke gjør det
@@ -52,7 +52,7 @@ Oversikten står i en enkel tabell.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Art** | **Økonomisk oppsigelse (資遣員工, 經濟解僱)** | **Disiplinær avskjed (解僱員工, 懲戒解僱)** | **Arbeidstakerens egen oppsigelse**  **員工自請離職** |
+| **Art** | **Økonomisk oppsigelse (資遣員工, 經濟解僱)** | **Disiplinær avskjed (解僱員工, 懲戒解僱)** | **Arbeidstakerens egen oppsigelse (員工自請離職)** |
 | Betydning | Består det hos arbeidsgiveren på grunn av forretningssituasjonen behov for personaltilpasning, ligger grunnen i arbeidsgiverens virksomhetsområde og ikke i arbeidstakerens ansvar. Derfor skal arbeidsgiveren overholde varselfristen (預告期間) og utbetale sluttvederlag, så arbeidstakerens ulemper utlignes balansert. | Begår arbeidstakeren en rettsstridig eller upassende handling, kan arbeidsgiveren straks bringe arbeidsavtalen (勞動契約) til opphør uten forutgående varsel og trenger ikke å utbetale sluttvederlag. Dette er 1 av arbeidsgiverens disiplinærbeføyelser. | Arbeidstakeren er fri til når som helst å bringe avtalen til opphør, men skal etter ansettelsens varighet overholde varselfristen, slik at arbeidsgiveren får tid til overlevering og til å finne en erstatter. |
 | Vilkår | Ja  (artikkel 11 i den taiwanske loven om arbeidsnormer) | Ja  (artikkel 12 i den taiwanske loven om arbeidsnormer) | Ingen |
 | Forutgående varsel | Påkrevd | Ikke påkrevd | Påkrevd |
@@ -62,7 +62,7 @@ Oversikten står i en enkel tabell.
 
 > I Taiwan skal arbeidsgiveren for hvert fullførte 1 års ansiennitet (年資)
 > utbetale 0,5 måneds gjennomsnittslønn (平均工資) som sluttvederlag.
-> (høyst 6 månedslønninger) Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales per 1 år 1 måneds gjennomsnittslønn uten maksimum.
+> (høyst 6 månedslønninger) Denne formelen gjelder for ansiennitet som artikkel 12 i loven om arbeidstakeres pensjon (勞工退休金條例) finner anvendelse på; for ansiennitet som artikkel 17 i loven om arbeidsnormer (勞動基準法) finner anvendelse på, utbetales det per år 1 måneds gjennomsnittslønn uten maksimum.
 
 ​
 
@@ -218,7 +218,7 @@ Påse at selskapet ikke sier deg opp på en usaklig måte.
 
 Påse at selskapet ikke presser deg til å si opp selv.
 
-Fratredelsesgodtgjørelse er en lovbestemt rett for arbeidstakeren,
+Sluttvederlag er en lovbestemt rett for arbeidstakeren,
 
 og selskapet er forpliktet til å utbetale den.
 

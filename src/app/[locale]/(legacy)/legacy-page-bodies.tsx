@@ -78,10 +78,10 @@ export function ServicesLegacyPageBody({
       {showHero ? (
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
-      <EnAcquisitionGuideLinks locale={locale} />
       {showRepeater ? (
         <ServicesBento locale={locale} showHeader={!showHero} presentation="editorial" />
       ) : null}
+      <EnAcquisitionGuideLinks locale={locale} variant="compact" />
     </>
   );
 }

@@ -6,18 +6,43 @@ import CinematicRouteShell from '@/components/CinematicRouteShell';
 import type { SiteLocale } from '@/lib/locales';
 
 const EN_ACQUISITION_HREFS = [
-  '/en/taiwan-lawyer',
   '/en/taiwan-company-setup-lawyer',
   '/en/taiwan-litigation-lawyer',
+  '/en/services/labor',
+  '/en/taiwan-semiconductor-supplier-legal',
+  '/en/taiwan-lawyer',
 ] as const;
 
 const EN_ACQUISITION_LABELS = [
-  'Taiwan lawyer',
-  'Taiwan company setup lawyer',
-  'Taiwan litigation lawyer',
+  'Set up a Taiwan entity',
+  'Contracts, disputes &amp; litigation',
+  'Employment &amp; labor issues',
+  'Semiconductor &amp; equipment suppliers',
+  'English-speaking Taiwan lawyer in Taipei',
 ] as const;
 
-const OTHER_LOCALES = ['ko', 'zh-hant', 'ja'] as const satisfies readonly SiteLocale[];
+const JA_ENTRY_HREFS = [
+  '/ja/taiwan-company-setup-lawyer',
+  '/ja/taiwan-litigation-lawyer',
+  '/ja/services/labor',
+  '/ja/guides/taiwan-company-setup',
+  '/ja/taiwan-semiconductor-supplier-legal',
+  '/ja/taiwan-lawyer',
+] as const;
+
+const JA_ENTRY_LABELS = [
+  '台湾での会社設立・進出',
+  '契約・紛争・訴訟',
+  '労務・雇用',
+  '台湾会社設立ガイド',
+  '半導体素材・装置サプライヤーの方へ',
+  '日本語で相談できる台湾弁護士',
+] as const;
+
+const EN_HEADING = 'For overseas companies and international clients';
+const JA_HEADING = '日系企業・在台日本人の方へ';
+
+const OTHER_LOCALES = ['ko', 'zh-hant'] as const satisfies readonly SiteLocale[];
 
 const navigation = vi.hoisted(() => ({
   pathname: '/en/columns',
@@ -84,61 +109,107 @@ function mainInner(html: string): string {
   return match![0];
 }
 
-function expectAcquisitionHub(html: string) {
+function entryBlock(html: string, variant: 'full' | 'compact'): string {
   const main = mainInner(html);
-  expect(main).toContain('Guides for overseas clients');
-  for (const href of EN_ACQUISITION_HREFS) {
-    expect(main).toContain(`href="${href}"`);
-  }
-  for (const label of EN_ACQUISITION_LABELS) {
-    expect(main).toContain(label);
-  }
+  const match = main.match(
+    new RegExp(`<section[^>]*data-overseas-entry="${variant}"[^>]*>[\\s\\S]*?</section>`),
+  );
+  expect(match, `expected ${variant} overseas entry block in <main>`).not.toBeNull();
+  return match![0];
 }
 
-function expectNoAcquisitionHub(html: string, locale: SiteLocale) {
+function expectEntryBlock(
+  html: string,
+  variant: 'full' | 'compact',
+  heading: string,
+  hrefs: readonly string[],
+  labels: readonly string[],
+) {
+  const block = entryBlock(html, variant);
+  expect(block).toContain(heading);
+  for (const href of hrefs) {
+    expect(block).toContain(`href="${href}"`);
+  }
+  for (const label of labels) {
+    expect(block).toContain(label);
+  }
+  // One link per item: whole-card / whole-row links, never nested anchors.
+  expect(block.match(/<a\b/g)?.length).toBe(hrefs.length);
+  expect(block).not.toMatch(/<a\b[^>]*>(?:(?!<\/a>)[\s\S])*<a\b/);
+}
+
+function expectNoEntryBlock(html: string) {
   const main = mainInner(html);
-  expect(main).not.toContain('Guides for overseas clients');
+  expect(main).not.toContain('data-overseas-entry');
+  expect(main).not.toContain(EN_HEADING);
+  expect(main).not.toContain(JA_HEADING);
   for (const href of EN_ACQUISITION_HREFS) {
     expect(main).not.toContain(`href="${href}"`);
   }
-  // Locale-native first-screen consult paths (v2) are not the EN acquisition hub.
-  void locale;
 }
 
-describe('EN acquisition guide hub in home / services / columns main (P1-5①②)', () => {
+describe('Overseas / 日系企業 entry block in home / services / columns main (WO-G6)', () => {
   beforeEach(() => {
     navigation.pathname = '/en/columns';
     builderMocks.resolvePublishedSitePage.mockResolvedValue(null);
     builderMocks.getAllColumnPostsIncludingBlob.mockResolvedValue([]);
   });
 
-  it('puts the three query-style landing links inside EN home <main>', () => {
-    const html = renderInMain(
-      <LegacyHomePageBody locale="en" posts={[]} faqItems={[]} />,
-    );
-    expectAcquisitionHub(html);
+  it('renders the full EN entry card grid inside EN home <main>', () => {
+    const html = renderInMain(<LegacyHomePageBody locale="en" posts={[]} faqItems={[]} />);
+    expectEntryBlock(html, 'full', EN_HEADING, EN_ACQUISITION_HREFS, EN_ACQUISITION_LABELS);
   });
 
-  it.each(OTHER_LOCALES)('does not render the EN acquisition hub on %s home', (locale) => {
+  it('renders the full JA entry card grid inside JA home <main>', () => {
+    const html = renderToStaticMarkup(
+      <CinematicRouteShell locale="ja" header={null} footer={null} scrollTop={null}>
+        <LegacyHomePageBody locale="ja" posts={[]} faqItems={[]} />
+      </CinematicRouteShell>,
+    );
+    expectEntryBlock(html, 'full', JA_HEADING, JA_ENTRY_HREFS, JA_ENTRY_LABELS);
+  });
+
+  it('places the home block directly after the hero and before the practice section', () => {
+    const html = mainInner(renderInMain(<LegacyHomePageBody locale="en" posts={[]} faqItems={[]} />));
+    const blockAt = html.indexOf('data-overseas-entry="full"');
+    const practiceAt = html.indexOf('id="practice"');
+    expect(blockAt).toBeGreaterThan(-1);
+    expect(practiceAt).toBeGreaterThan(blockAt);
+  });
+
+  it.each(OTHER_LOCALES)('does not render the entry block on %s home', (locale) => {
     const html = renderToStaticMarkup(
       <CinematicRouteShell locale={locale} header={null} footer={null} scrollTop={null}>
         <LegacyHomePageBody locale={locale} posts={[]} faqItems={[]} />
       </CinematicRouteShell>,
     );
-    expectNoAcquisitionHub(html, locale);
+    expectNoEntryBlock(html);
   });
 
-  it('puts the three query-style landing links inside EN services <main>', () => {
+  it('renders the compact EN block below the service cards on EN services', () => {
     const html = renderInMain(
       <ServicesLegacyPageBody
         locale="en"
         visibleBlockIds={['service-areas.list.hero', 'service-areas.list.repeater']}
       />,
     );
-    expectAcquisitionHub(html);
+    expectEntryBlock(html, 'compact', EN_HEADING, EN_ACQUISITION_HREFS, EN_ACQUISITION_LABELS);
+    const main = mainInner(html);
+    expect(main.indexOf('data-overseas-entry="compact"')).toBeGreaterThan(
+      main.indexOf('services-card-grid'),
+    );
   });
 
-  it.each(OTHER_LOCALES)('does not render the EN acquisition hub on %s services', (locale) => {
+  it('renders the compact JA block on JA services', () => {
+    const html = renderToStaticMarkup(
+      <CinematicRouteShell locale="ja" header={null} footer={null} scrollTop={null}>
+        <ServicesLegacyPageBody locale="ja" />
+      </CinematicRouteShell>,
+    );
+    expectEntryBlock(html, 'compact', JA_HEADING, JA_ENTRY_HREFS, JA_ENTRY_LABELS);
+  });
+
+  it.each(OTHER_LOCALES)('does not render the entry block on %s services', (locale) => {
     const html = renderToStaticMarkup(
       <CinematicRouteShell locale={locale} header={null} footer={null} scrollTop={null}>
         <ServicesLegacyPageBody
@@ -147,30 +218,27 @@ describe('EN acquisition guide hub in home / services / columns main (P1-5①②
         />
       </CinematicRouteShell>,
     );
-    expectNoAcquisitionHub(html, locale);
+    expectNoEntryBlock(html);
   });
 
-  it('puts the three query-style landing links inside EN columns list <main>', async () => {
+  it('keeps the compact EN block inside EN columns list <main>', async () => {
     const page = await ColumnsPage({
       params: Promise.resolve({ locale: 'en' }),
     });
     const html = renderInMain(page);
-    expectAcquisitionHub(html);
+    expectEntryBlock(html, 'compact', EN_HEADING, EN_ACQUISITION_HREFS, EN_ACQUISITION_LABELS);
   });
 
-  it.each(OTHER_LOCALES)(
-    'does not render the EN acquisition hub on %s columns list',
-    async (locale) => {
-      navigation.pathname = `/${locale}/columns`;
-      const page = await ColumnsPage({
-        params: Promise.resolve({ locale }),
-      });
-      const html = renderToStaticMarkup(
-        <CinematicRouteShell locale={locale} header={null} footer={null} scrollTop={null}>
-          {page}
-        </CinematicRouteShell>,
-      );
-      expectNoAcquisitionHub(html, locale);
-    },
-  );
+  it.each(OTHER_LOCALES)('does not render the entry block on %s columns list', async (locale) => {
+    navigation.pathname = `/${locale}/columns`;
+    const page = await ColumnsPage({
+      params: Promise.resolve({ locale }),
+    });
+    const html = renderToStaticMarkup(
+      <CinematicRouteShell locale={locale} header={null} footer={null} scrollTop={null}>
+        {page}
+      </CinematicRouteShell>,
+    );
+    expectNoEntryBlock(html);
+  });
 });

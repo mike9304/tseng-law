@@ -74,9 +74,9 @@ export function LegacyHomePageBody({
   return (
     <div className={homeEditorialStyles.root}>
       <HeroSearch locale={locale} presentation="editorial" />
-      {locale === 'en' ? (
+      {locale === 'en' || locale === 'ja' ? (
         <Reveal>
-          <EnAcquisitionGuideLinks locale={locale} />
+          <EnAcquisitionGuideLinks locale={locale} variant="full" />
         </Reveal>
       ) : null}
       <Reveal>

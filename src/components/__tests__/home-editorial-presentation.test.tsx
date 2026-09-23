@@ -15,6 +15,7 @@ import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import Reveal from '@/components/Reveal';
+import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
 import {
   homeAttorneyTextSurfaceIds,
@@ -307,7 +308,16 @@ describe('legacy home editorial composition', () => {
     ];
     const faqItems = [{ question: 'Q', answer: 'A' } as FAQItem];
     const body = LegacyHomePageBody({ locale: 'ja', posts, faqItems });
-    const children = Children.toArray(body.props.children);
+    const allChildren = Children.toArray(body.props.children);
+
+    // WO-G6: the JA 日系企業 entry block sits directly after the hero.
+    expect(allChildren).toHaveLength(11);
+    expect(elementType(allChildren[1])).toBe(Reveal);
+    expect(elementType(revealChild(allChildren[1]))).toBe(EnAcquisitionGuideLinks);
+    expect(
+      (revealChild(allChildren[1]) as ReactElement<{ locale: SiteLocale; variant?: string }>).props,
+    ).toMatchObject({ locale: 'ja', variant: 'full' });
+    const children = allChildren.filter((_, index) => index !== 1);
 
     expect(children).toHaveLength(10);
     expect(elementType(children[0])).toBe(HeroSearch);

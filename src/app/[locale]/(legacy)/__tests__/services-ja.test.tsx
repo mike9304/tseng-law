@@ -173,7 +173,11 @@ describe('Japanese services-list integration', () => {
     for (const slug of getServiceSlugs()) {
       expect(html).toContain(`href="/ja/services/${slug}"`);
     }
-    expect(html.match(/href="\/ja\/services\/[^"#]+"/g) ?? []).toHaveLength(6);
+    // WO-G6: the compact 日系企業 entry block below the cards adds its own labor link;
+    // the service cards themselves still link to exactly six detail pages.
+    const withoutEntryBlock = html.replace(/<section[^>]*data-overseas-entry="compact"[^>]*>[\s\S]*?<\/section>/, '');
+    expect(withoutEntryBlock).not.toBe(html);
+    expect(withoutEntryBlock.match(/href="\/ja\/services\/[^"#]+"/g) ?? []).toHaveLength(6);
     expect(html).not.toContain('Related Columns');
     expect(html).not.toContain('View details');
     expect(html).toContain('詳しく見る');

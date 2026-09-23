@@ -58,7 +58,7 @@ Medeni Kanun (民法) madde 1030-1, eşit dağıtım sonucu açıkça adaletsizs
 
 ## 4. Miras borçları ve mirastan feragat
 
-Tayvan Medeni Kanunu (民法) madde 1148’e göre mirasçı, mirasın açılmasından itibaren murisin malvarlığı hak ve yükümlülüklerini kapsayıcı biçimde halef olur; sıkı kişisel hak ve yükümlülükler hariçtir. Miras borçlarına (繼承債務) sorumluluk kural olarak mirasla edinilen malvarlığının değeriyle sınırlıdır. Ancak envanter düzenleme, alacaklılara ilan ve ödeme, miras malvarlığının korunması gibi ilgili yasal usuller ve istisnalar birlikte doğrulanmalıdır.
+Tayvan Medeni Kanununun (民法) 1148. maddesine göre mirasçı, mirasın açılmasından itibaren murisin malvarlığı hak ve yükümlülüklerini kapsayıcı biçimde halef olur; sıkı kişisel hak ve yükümlülükler hariçtir. Miras borçlarına (繼承債務) sorumluluk kural olarak mirasla edinilen malvarlığının değeriyle sınırlıdır. Ancak envanter düzenleme, alacaklılara ilan ve ödeme, miras malvarlığının korunması gibi ilgili yasal usuller ve istisnalar birlikte doğrulanmalıdır.
 
 Mirastan feragat etmek isteyen mirasçı, Medeni Kanun (民法) madde 1174’e göre miras hakkını öğrendiği günden itibaren 3 ay içinde yetkili mahkemeye yazılı irade bildirmelidir. Aile içinde alınmayacağı söylenmesi veya malvarlığının kullanılmaması tek başına kanunun aradığı biçimde yapılmış bir feragatin gerçekleştiği anlamına gelmez. Feragat edenin sonraki sıra mirasçısına veya temsil ilişkisine etkisi de aile bağı ve usul seyri esas alınarak doğrulanmalıdır.
 
@@ -66,7 +66,7 @@ Miras malvarlığı tasarruf edilmeden veya borç ödenmeden önce aktif ve pasi
 
 Tayvan Maliye Bakanlığı (財政部) vergi portalının miras dosyası başvuru usulü rehberi 25 Haziran 2026’da güncellenmiş olup envanter sunumu ve feragate ilişkin mahkeme usulünün genel 3 aylık süresi ile miras vergisinin (遺產稅) genel 6 aylık beyan süresini açıklar. Ancak başlangıç noktası, uzatma, istisnalar ve yetki her dosyada doğrulanmalıdır; bu, kişisel son gün hesabı olarak kullanılmamalıdır.
 
-Miras vergisi beyanı, nüfus tescili (戶籍) beyanı, taşınmaz ve araç ad değişikliği ile finans kuruluşlarının ödeme usulü birbirinden ayrı organ ve belgelere sahip olabilir. Mahkemeye sunulan feragat yazısı ile vergi organına miras vergisi beyanı aynı usul sanılmamalıdır. Birden fazla süre aynı anda işleyebileceği için her usulün başlangıç noktası ve belgelerinin ayrı bir takvimle yönetilmesi daha güvenlidir.
+Miras vergisi beyanı, nüfus tescili (戶籍) beyanı, taşınmaz ve araç ad değişikliği ile finans kuruluşlarının ödeme usulü birbirinden ayrı makam ve belgelere sahip olabilir. Mahkemeye sunulan feragat yazısı ile vergi idaresine miras vergisi beyanı aynı usul sanılmamalıdır. Birden fazla süre aynı anda işleyebileceği için her usulün başlangıç noktası ve belgelerinin ayrı bir takvimle yönetilmesi daha güvenlidir.
 
 ## 5. Sağ kalan ebeveynin velayet hak ve yükümlülükleri
 
@@ -118,16 +118,16 @@ Vergide her devlet için ayrı beyan yükümlülüğü de doğabilir. Tayvan mir
 
 ## 9. Uygulama hazırlığı kontrol listesi
 
-Aşağıdaki sıra, olguları eksiksiz toplamak ve birbirinden ayrı hak ile usulleri karıştırmamak için temel bir çerçevedir. Fiili sunum sırası yetkili organa ve dosyanın ivediliğine göre değişebilir; her adımın süresi ayrıca doğrulanmalıdır.
+Aşağıdaki sıra, olguları eksiksiz toplamak ve birbirinden ayrı hak ile usulleri karıştırmamak için temel bir çerçevedir. Fiili sunum sırası yetkili makama ve dosyanın ivediliğine göre değişebilir; her adımın süresi ayrıca doğrulanmalıdır.
 
 1. Ölüm belgesi ve ölüm beyanı evrakı, aile bağı ve Tayvan nüfus tescili verileri, evlilik, boşanma ve evlat edinme kayıtları ile mevcut mahkeme kararları doğrulanır. Belge yabancıysa tasdik, çeviri ve ad yazımının örtüşmesi de denetlenir.
 2. Taşınmaz, mevduat, yatırım varlıkları, işletme payı ve taşınırlar ile alacaklar araştırılır; kredi, kefalet, vergi ve sözleşme borçları birlikte derlenir. Ad ve fiili mülkiyet ilişkisi, sigorta lehtarı, tröst, ortak malvarlığı ve sağken aktarım belgeleri ayrı işaretlenir.
 3. Vasiyet aslı ve düzenleme şekli, vasiyet ehliyeti, tanık veya noter şartları, vasiyetname infazcısı ve vasiyetle bırakılan kazandırma (遺贈) doğrulanır. Geçerli vasiyetin dağıtımı nasıl değiştirdiği ile saklı pay dâhil emredici kural sınırları birlikte incelenir.
 4. Yasal miras payı ile evlilik sonu kalan malvarlığı farkının dağıtımını isteme hakkı ayrı hesaplanır. Her rejimin hesap konusu, borçları, dışlama kalemleri, değerleme referans günü ve belgeler ayrılır; bir hesabın sonucu diğerine çift yansıtılmaz.
 5. Küçüğe bağlanan mallar belirlenir; yasal temsil, baba, anne veya vasinin yönetim kapsamı, çıkar çatışması ve özel temsilci gerekip gerekmediği doğrulanır. Hesaplar, defterler ve tasarruf bedelinin erginin kişisel malvarlığından ayrı saklanma yolu da hazırlanır.
-6. Mahkemenin feragat, envanter, vesayet ve özel temsilci usulü, vergi organının miras vergisi beyanı, nüfus tescili ve mal tescili usulleri organ organ ayrılır. Her usulün yetkisi, başlangıç noktası, sunulacak belgeler, tamamlama imkânı ve uzatma olup olmadığı doğrulanır; alındı belgesi ve suretler saklanır.
+6. Mahkemenin feragat, envanter, vesayet ve özel temsilci usulü, vergi idaresinin miras vergisi beyanı, nüfus tescili ve mal tescili usulleri makamına göre ayrılır. Her usulün yetkisi, başlangıç noktası, sunulacak belgeler, tamamlama imkânı ve uzatma olup olmadığı doğrulanır; alındı belgesi ve suretler saklanır.
 
-Belgeler toplanırken aslın saklandığı yer ile düzenleme ve referans günleri kaydedilmeli; elektronik dosya ve kâğıt belgeler aynı sınıflandırma sistemine göre derlenmelidir. Birden fazla birlikte mirasçı veya malvarlığı yöneticisi varsa kimin hangi belgeyi sakladığı ve hangi fiillerin onaylandığı yazılmalıdır. Küçüğün kişisel ve mali verileri, bunlara ihtiyaç duyan kişi ve organlara verilecek biçimde erişimle yönetilmelidir.
+Belgeler toplanırken aslın saklandığı yer ile düzenleme ve referans günleri kaydedilmeli; elektronik dosya ve kâğıt belgeler aynı sınıflandırma sistemine göre derlenmelidir. Birden fazla birlikte mirasçı veya malvarlığı yöneticisi varsa kimin hangi belgeyi sakladığı ve hangi fiillerin onaylandığı yazılmalıdır. Küçüğün kişisel ve mali verileri, bunlara ihtiyaç duyan kişi ve makamlara verilecek biçimde erişimle yönetilmelidir.
 
 İvedi koruma gereken malvarlığı ile olağan beyan usulü de ayrılmalıdır. Hesap veya işletme faaliyetinin durma riski, taşınmazın bozulması, alacağın zamanaşımı gibi hemen doğrulanacak olgular önce bakılır; ancak ivedilik gerekçesiyle yetkisiz tasarruf yapılmamalıdır. Mahkeme usulü ile vergi, nüfus ve tescil usullerinin seyri tek bir takvimde birlikte yönetmek yararlıdır.
 
@@ -139,7 +139,7 @@ Belgeler toplanırken aslın saklandığı yer ile düzenleme ve referans günle
 - [Tayvan Yargı Yuanı: küçük vasisi atama başvuru formu](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html)
 - [Tayvan Maliye Bakanlığı vergi portalı: miras dosyası başvuru usulü ve hazırlanacak belgeler](https://www.etax.nat.gov.tw/etwmain/tax-info/house-land-transfer-taxtation-calculation-area/inheritance/file-process)
 
-Resmi mevzuat sayfalarında hükmün değişiklik günü ve yürürlük günü doğrulanmalı; İngilizce metin bu yazının açıklaması ile asıl metni karşılaştırmak için yardımcı malzeme olarak kullanılmalıdır. Yargı Yuanı formu ve vergi portalı rehberi genel hazırlık yönünü gösterir ancak her dosyanın yetkisi ve sunum şartları, başvuru organının en güncel rehberine göre ayrıca doğrulanmalıdır.
+Resmi mevzuat sayfalarında hükmün değişiklik günü ve yürürlük günü doğrulanmalı; İngilizce metin bu yazının açıklaması ile asıl metni karşılaştırmak için yardımcı malzeme olarak kullanılmalıdır. Yargı Yuanı formu ve vergi portalı rehberi genel hazırlık yönünü gösterir ancak her dosyanın yetkisi ve sunum şartları, başvuru makamının en güncel rehberine göre ayrıca doğrulanmalıdır.
 
 ## 11. İlgili rehber
 

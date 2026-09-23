@@ -87,7 +87,7 @@ Sorumluluğu, illiyet bağını ve zararı açıklamak için kaza anındaki CCTV
 
 Görüntüler saklama süresi dolunca üzerine yazılabilir veya başka nedenlerle kullanılamaz hale gelebilir. Bu yüzden gereken zaman aralığını, yeri ve kamera konumunu somut yazan bir içeriği tasdikli mektup (存證信函) veya avukat yazısı (律師函) ile spor salonundan saklama istenmesi düşünülebilir. Bu yazı, neyin ne zaman istendiğini kayda geçiren pratik bir tedbirdir. Ancak tek başına karşı tarafa görüntüleri saklama konusunda yeni bir hukuki yükümlülük yüklemez veya silinmeyi engellemez; görüntülerin kalmamış olması da mahkemenin kendiliğinden aleyhe değerlendirme yapmasına yol açmaz.
 
-Kaza şartları bir suçun unsurları oluşabilecekse, soruşturma organının (偵查機關) hukuka uygun elkoyma veya koruma dayanağı olup olmadığını değerlendirmesi için hızla ihbar edilebilir. İhbar, polisin veya savcılığın CCTV’yi mutlaka ele geçireceği anlamına gelmez; bu yüzden tarafın kendi saklayabileceği tıbbi ve iletişim belgelerini de toplamak gerekir.
+Kaza şartları bir suçun unsurları oluşabilecekse, soruşturma makamının (偵查機關) hukuka uygun elkoyma veya koruma dayanağı olup olmadığını değerlendirmesi için hızla ihbar edilebilir. İhbar, polisin veya savcılığın CCTV’yi mutlaka ele geçireceği anlamına gelmez; bu yüzden tarafın kendi saklayabileceği tıbbi ve iletişim belgelerini de toplamak gerekir.
 
 ## 4. Spor salonundan hangi zarar kalemleri istenebilir?
 
@@ -97,9 +97,9 @@ Kaza şartları bir suçun unsurları oluşabilecekse, soruşturma organının (
 2. **Bakım veya yardım giderleri**: Yaralanmanın derecesi ve tedavi seyrine göre bakımın gerekip gerekmediği, süre ve maliyetin uygun olup olmadığı tıbbi ve gider belgeleriyle incelenir.
 3. **Ulaşım giderleri**: Tedavi için sağlık kuruluşuna gidip gelmek için gereken giderler hareket kaydı, makbuz ve benzeri belgelerle ispatlanır.
 4. **Çalışma gücü kaybından zarar (勞動能力減損)**: Sekel ve çalışma gücünde kalıcı azalma tanınırsa tıbbi ve mesleki belgeler, maluliyet derecesi, meslek ve gelir ile kalan çalışma süresi birlikte değerlendirilebilir. Yalnız maluliyet yüzdesi tazminatı belirlemez; zarar emeklilik yaşına kadar kendiliğinden hesaplanmaz.
-5. **İyileşme süresindeki gelir kaybı (收入損失)**: Tedavi veya istirahat nedeniyle gerçekten çalışılamayan süre ve bundan doğan gelir azalması ücret, vergi ve işe devam belgelerleriyle ispatlanmalıdır.
+5. **İyileşme süresindeki gelir kaybı (收入損失)**: Tedavi veya istirahat nedeniyle gerçekten çalışılamayan süre ve bundan doğan gelir azalması bordro, vergi kayıtları ve istihdam belgeleriyle ispatlanmalıdır.
 6. **Malvarlığı dışı zarar (非財產上損害)**: Manevi acı için tutar, yaralanmanın derecesi, tedavi süresi, sekeller ve tarafın somut şartları gibi her işe özgü etkenlerden mahkemece belirlenir.
-7. **Cezalandırıcı tazminat (懲罰性賠償金)**: Tüketiciyi Koruma Kanunu’nun uygulandığı bir uyuşmazlıkta zarar işletmenin kastıyla doğmuşsa gerçek zararın en çok 5 katı, ağır kusurda en çok 3 katı, kusurda en çok gerçek zarar tutarı kadar (1 kat) istenebileceğine dair bir kural vardır. [Tayvan Tüketiciyi Koruma Kanunu’nun 51. maddesinin](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) işe uygulanıp uygulanmayacağı ve gerçek bir tazminat olup olmayacağı, hangi tutarda olacağı, somut şartlar ve deliller hakkındaki mahkeme değerlendirmesine bağlıdır.
+7. **Cezalandırıcı tazminat (懲罰性賠償金)**: Tüketiciyi Koruma Kanunu’nun uygulandığı bir uyuşmazlıkta zarar işletmenin kastıyla doğmuşsa gerçek zararın en çok 5 katı, ağır kusurda en çok 3 katı, kusurda en çok gerçek zarar tutarının 1 katı istenebileceğine dair bir kural vardır. [Tayvan Tüketiciyi Koruma Kanunu’nun 51. maddesinin](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) işe uygulanıp uygulanmayacağı ve gerçek bir tazminat olup olmayacağı, hangi tutarda olacağı, somut şartlar ve deliller hakkındaki mahkeme değerlendirmesine bağlıdır.
 
 ## 5. Spor salonunun sorumluluk sigortası (責任保險) olsa bile tazminatın varlığı ve tutarı tartışılabilir mi?
 
@@ -109,7 +109,7 @@ Evet. Sigortanın varlığı, tazminatın karşılanabileceği olası bir kaynak
 
 Spor salonunda yaralandıysanız önce gereken tıbbi bakımı almak, henüz güvence altına alınabilecek belgeler yok olmadan önce saklamak ve işe uygulanabilecek süreler ile usuller hakkında erken bireysel yönlendirme almak önemlidir. Müzakere, tüketici şikâyeti (消費申訴) veya arabuluculuk (調解), ceza şikâyeti ve hukuk tazminat talebi, işe göre seçilebilecek araçlardır; her zaman hepsinin izlenmesi gereken usuller değildir.
 
-İşletme zemininde düşme, gıdadan sağlık zararı ve mesleki bir hizmet kullanılırken meydana gelen yaralanma da güvenlik yükümlülüğü, illiyet bağı, zarar ve delili uyuşmazlık konusu yapabilir. Ancak bir spor salonu işinin sonucu başka bir kazaya olduğu gibi uygulanamaz; her olayın sözleşmesi, davranışı ve ilgili kuralları ayrı incelenmelidir.
+Ticari işletmede düşme, gıdanın yol açtığı sağlık zararı ve mesleki bir hizmet kullanılırken meydana gelen yaralanma da güvenlik yükümlülüğü, illiyet bağı, zarar ve delili uyuşmazlık konusu yapabilir. Ancak bir spor salonu işinin sonucu başka bir kazaya olduğu gibi uygulanamaz; her olayın sözleşmesi, davranışı ve ilgili kuralları ayrı incelenmelidir.
 
 ---
 

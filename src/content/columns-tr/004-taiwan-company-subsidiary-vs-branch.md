@@ -106,7 +106,7 @@ Tayvan’da kotasyon, şube ile bağlı şirket arasındaki yapı farkının aç
 
 Yalnızca bir Tayvan bağlı şirketinin varlığı da kotasyona elverişliliği kendiliğinden kurmaz. Kotasyon öngörülüyorsa önce kotasyona elverişli bir ihraç şirketi biçimi gerekir ve Tayvan Borsasının ilgili piyasa ölçütü karşılanmalıdır. Kuruluştan beri süre, sermaye, kârlılık, hisselerin dağılması, şirket yönetimi, iç denetim, muhasebe denetimi ve kamuya bilgi ile uygulanacak bütün koşullar hazırlanmalıdır. Sektör veya yabancı yatırım kısıtları, grubun yeniden örgütlenmesi ve ortak çevresi kotasyon planını etkileyebilir.
 
-Bu yüzden yalnızca bugünkü işletme fonu ihtiyacı değil, gelecekteki fon kaynakları ve yurda dönüş yolları da zaman sırasına göre çizilmelidir. Ana kuruluşun bütünü sağlayıp sağlamayacağı, Tayvan’dan veya 3. ülkeden yatırımcı alınıp alınmayacağı, banka borcu ve teminatların gerekip gerekmediği, organlar ve personele pay karşılığı verilip verilmeyeceği ve ileride pay devri veya kotasyonun itilip itilmeyeceği, uygun yapıyı daha net kılar. Kısa vadeli girişe uygun yapı ile uzun vadeli sermaye piyasası planına uygun yapı sapabilir.
+Bu yüzden yalnızca bugünkü işletme fonu ihtiyacı değil, gelecekteki fon kaynakları ve yurda dönüş yolları da zaman sırasına göre çizilmelidir. Ana kuruluşun bütünü sağlayıp sağlamayacağı, Tayvan’dan veya 3. ülkeden yatırımcı alınıp alınmayacağı, banka borcu ve teminatların gerekip gerekmediği, organlar ve personele pay karşılığı verilip verilmeyeceği ve ileride pay devri veya kotasyonun planlanıp planlanmayacağı, uygun yapıyı daha net kılar. Kısa vadeli girişe uygun yapı ile uzun vadeli sermaye piyasası planına uygun yapı sapabilir.
 
 ## 5. Yatırım vergi kredisi
 
@@ -132,7 +132,7 @@ Anlaşmanın temettü, faiz ve gayri maddi hak bedelleri için azami oranları h
 
 İşyeri, faaliyetin yürütüldüğü belirli bir yeri kapsayabilir. Faaliyet yönetim yeri, şube veya büro gibi sabit tesisler üzerinden yürütülürse, yerin kullanım süresi, işletmenin tasarruf yetkisi ve yürütülen iş incelenmelidir. Tayvan’da resmi olarak şube tescil etmiş yabancı bir şirketin faaliyet noktası, kural olarak Tayvan’daki sabit tesis işyerine girer; şubenin Tayvan işletme kârı hemen bağışık sayılmamalıdır.
 
-Sabit tesisin yanında anlaşma çeşitli işyeri türleri öngörür. Şantiye, inşaat, montaj veya kurulum işleri veya bağlı gözetim 6 ayı aşarsa şantiye işyeri devreye girebilir. İşletme çalışanlar veya başka personel üzerinden herhangi 12 aylık dönemde toplamda 183 günden fazla hizmet sunarsa hizmet işyeri doğabilir. İşletme adına sözleşmeleri yinelenerek kurma yetkisini kullanan bir temsilcinin faaliyeti de temsilci işyerine girebilir.
+Sabit tesisin yanında anlaşma çeşitli işyeri türleri öngörür. Şantiye, inşaat, montaj veya kurulum işleri veya bağlı gözetim 6 ayı aşarsa şantiye işyeri devreye girebilir. İşletme çalışanlar veya başka personel üzerinden herhangi bir 12 aylık dönemde toplamda 183 günden fazla hizmet sunarsa hizmet işyeri doğabilir. İşletme adına sözleşmeleri yinelenerek kurma yetkisini kullanan bir temsilcinin faaliyeti de temsilci işyerine girebilir.
 
 Her ölçüt ayrı bir faaliyet türünü işler. Hizmet sunum günlerinin 183 gün veya daha az olması, yönetim yeri veya büro gibi bir sabit tesisin olmadığı sonucunu vermez; işlerin süresinin 6 ay veya daha az olması da temsilci işyeri imkânını ortadan kaldırmaz. Yer, süre, personel, müzakere ve sözleşme kurma yetkisi, stoklar veya ekipmanlar ile müşteri gibi karşı tarafa görünen işletme biçimi, hepsi doğrulanmalıdır.
 

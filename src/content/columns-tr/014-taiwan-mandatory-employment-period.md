@@ -11,11 +11,11 @@ faq:
   - q: "Tayvan iş sözleşmesindeki asgari hizmet süresi sözleşmesi (最低服務年限約定) kendiliğinden geçersiz midir?"
     a: "Hayır. Tayvan İş Standartları Kanunu (勞動基準法) madde 15-1’e göre işveren uzman teknik eğitim (專業技術培訓) verip giderini üstlenmişse veya çalışanın asgari hizmet süresine uyması için makul bir karşılık (合理補償) sağlamışsa, asgari hizmet süresi sözleşmesi yasal şartları karşılayabilir. 2 şartın birlikte bulunması gerekmez; ancak şartlardan biri olsa bile eğitim süresi ve gideri, yerine personel koyma imkânı (人力替補可能性), karşılığın tutarı ve kapsamı gibi bütün olgular ışığında sözleşme makul kapsamı aşmamalıdır."
   - q: "Yeni çalışan eğitimi veya yasal zorunlu eğitim de uzman teknik eğitim sayılır mı?"
-    a: "Tayvan Çalışma Bakanlığı’nın (勞動部) 5 Haziran 2026 tarihli rehberine göre periyodik eğitim, genel görev eğitimi, yeni çalışanın işe uyum eğitimi ve kanunun yaptırdığı zorunlu eğitimin gideri, asgari hizmet süresi sözleşmesinin veya cezai şart (違約金) ile gider iadesi talebinin dayanağı yapılamaz. Yalnızca eğitimin adına bakılmamalı; somut program, mesleki ve teknik içerik, süre, işverenin fiilen üstlendiği gider ve belgeler doğrulanmalıdır."
+    a: "Tayvan Çalışma Bakanlığı’nın (勞動部) 5 Haziran 2026 tarihli rehberine göre periyodik eğitim, genel görev eğitimi, yeni çalışanın işe uyum eğitimi ve işverenin kanunen vermek zorunda olduğu eğitimin gideri, asgari hizmet süresi sözleşmesinin veya cezai şart (違約金) ile gider iadesi talebinin dayanağı yapılamaz. Yalnızca eğitimin adına bakılmamalı; somut program, mesleki ve teknik içerik, süre, işverenin fiilen üstlendiği gider ve belgeler doğrulanmalıdır."
   - q: "Erken ayrılışta imza primi (簽約金) veya görevde kalma primi (留任獎金) tam olarak iade edilmeli midir?"
     a: "Her zaman tam tutar iade edilmez. İmza primi, görevde kalma primi veya başka bir avans niteliğindeki ödeme (預付性給付) asgari hizmet süresi sözleşmesinin makul karşılığı olarak ödendiyse amacı çalışana açık bildirilmelidir. Tayvan Çalışma Bakanlığı’nın 5 Haziran 2026 tarihli rehberi, süre dolmadan ayrılışta iade tutarının henüz ifa edilmemiş süreyle orantılı hesaplanması gerektiğini ve tam iade istenmemesi gerektiğini açıklar. Fiili sonuç, ödeme amacı, sözleşme içeriği, halihazırda çalışılmış süre ve sona erme nedeni birlikte incelenmelidir."
   - q: "Çalışana yüklenemeyen bir nedenle sözleşme erken biterse eğitim gideri iade edilmeli midir?"
-    a: "Tayvan İş Standartları Kanunu madde 15-1’in 4. fıkrası, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir."
+    a: "Tayvan İş Standartları Kanununun 15-1. maddesinin 4. fıkrası, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir."
 ---
 
 # Tayvan asgari hizmet süresi sözleşmesi: geçerlilik, eğitim gideri ve cezai şart ölçütleri
@@ -90,7 +90,7 @@ Sonuçta kararlaştırılan süre, işverenin fiili yatırımı, yerine koyma zo
 
 ## 5. Sözleşmeye dayanak olamayacak eğitim
 
-Tayvan Çalışma Bakanlığı’nın 5 Haziran 2026 tarihli rehberine göre periyodik eğitim, genel görev eğitimi, yeni çalışanın işe uyum eğitimi ve kanunun yaptırdığı zorunlu eğitimin gideri, asgari hizmet süresi sözleşmesinin veya cezai şart ile gider iadesi talebinin dayanağı yapılamaz. Yalnızca eğitimin adına bakılmamalı; somut program, mesleki ve teknik içerik, süre, işverenin fiilen üstlendiği gider ve belgeler doğrulanmalıdır.
+Tayvan Çalışma Bakanlığı’nın 5 Haziran 2026 tarihli rehberine göre periyodik eğitim, genel görev eğitimi, yeni çalışanın işe uyum eğitimi ve işverenin kanunen vermek zorunda olduğu eğitimin gideri, asgari hizmet süresi sözleşmesinin veya cezai şart ile gider iadesi talebinin dayanağı yapılamaz. Yalnızca eğitimin adına bakılmamalı; somut program, mesleki ve teknik içerik, süre, işverenin fiilen üstlendiği gider ve belgeler doğrulanmalıdır.
 
 Çalışma Bakanlığı’nın 勞動關2字第1150141814號 sayılı yazısı, düzenli verilen eğitimi, olağan görev eğitimini, yeni çalışanın iş ortamı ve usullerine alışması eğitimini ve işverenin kanuna göre vermek zorunda olduğu eğitimi ayırarak ele alır. Bu eğitim işletmenin yürütülmesine veya yasal yükümlülüğün ifasına eşlik ettiği için giderinin görevde kalma yükümlülüğüne veya erken sona ermeye yaptırıma dönüştürülemeyeceği anlamındadır.
 
@@ -116,7 +116,7 @@ Eğitim gideri iadesi ile avans niteliğindeki ödeme iadesi de ayrılmalıdır.
 
 ## 7. İş sözleşmesi çalışana yüklenemeyen bir nedenle sona erdiğinde
 
-Tayvan İş Standartları Kanunu madde 15-1’in 4. fıkrası, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir.
+Tayvan İş Standartları Kanununun 15-1. maddesinin 4. fıkrası, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir.
 
 Bu yüzden iş ilişkisinin kararlaştırılan süreden önce bitmiş olması tek başına çalışanın ihlalini kabul ettirmez. Kimin hangi irade beyanını yaptığı, sözleşmenin hangi hukuki dayanakla sona erdiği ve sona ermeyi doğuran fiili olguların hangi tarafa ait olduğu doğrulanmalıdır.
 
@@ -130,7 +130,7 @@ Sona erme nedeninin değerlendirilmesi iade kapsamını da doğrudan etkiler. F�
 
 Asgari hizmet süresi sözleşmesi, çalışanın istifasını fiilen veya hukuken engelleyen bir hüküm değildir. İstifa iradesi ve ön bildirim süresi (預告期間), iş ilişkisinin ne zaman bittiğine dair meseledir; asgari hizmet süresi sözleşmesinin geçerliliği ve gider iadesi sorumluluğu, sona ermeden doğan malvarlığı sorumluluğu olup olmadığına dair meseledir.
 
-Süresi belirsiz iş sözleşmesini (不定期契約) çalışan sona erdirdiğinde Tayvan İş Standartları Kanunu madde 15 uyarınca madde 16’nın 1. fıkrasının ön bildirim süresi kıyasen uygulanır. Madde 16 işverenin sözleşmeyi sona erdirmesine dair hükümdür; çalışanın istifasında bu ön bildirim süresi madde 15 yoluyla uygulanır.
+Süresi belirsiz iş sözleşmesini (不定期契約) çalışan sona erdirdiğinde Tayvan İş Standartları Kanununun 15. maddesi uyarınca 16. maddesinin 1. fıkrasının ön bildirim süresi kıyasen uygulanır. Madde 16 işverenin sözleşmeyi sona erdirmesine dair hükümdür; çalışanın istifasında bu ön bildirim süresi madde 15 yoluyla uygulanır.
 
 Kesintisiz kıdeme göre ön bildirim süresi şöyledir.
 
@@ -159,7 +159,7 @@ Uyuşmazlığı önlemek veya halihazırda ileri sürülen talebi incelerken yal
 7. Sona erme nedeni ve sorumluluk aidiyeti tek tek doğrulandıktan sonra fiili sona erme günü, ifa edilen süre ve edilmeyen süre hesaplanır.
 8. Ücretten kesinti yapmadan veya iade istemeden önce sözleşme, ödeme belgeleri, ücret dökümü, taraf iletişimi, ihtarname ve kesinti kayıtları karşılaştırılarak hukuki dayanak ve usul denetlenir.
 
-Standart sözleşme kullanılsa bile her görev ve her çalışana aynı süre ve tutar mekanik uygulanmamalıdır. Fiili eğitim yatırımı, karşılık ve yerine koyma imkânı yansıtılarak hükümler tasarlanmalı; ödeme amacı ve orantı formülü sözleşme kurulmadan önce anlaşılır bildirilmelidir.
+Standart sözleşme kullanılsa bile her görev ve her çalışana aynı süre ve tutar mekanik olarak uygulanmamalıdır. Fiili eğitim yatırımı, karşılık ve yerine koyma imkânı yansıtılarak hükümler tasarlanmalı; ödeme amacı ve orantı formülü sözleşme kurulmadan önce anlaşılır bildirilmelidir.
 
 ### Çalışanın doğrulayacağı hususlar
 
@@ -170,15 +170,15 @@ Standart sözleşme kullanılsa bile her görev ve her çalışana aynı süre v
 5. İstifa bildirimi, işten çıkarma bildirimi veya anlaşarak sona erme belgesi ile e-posta ve ileti gibi tebliğ delili saklanır.
 6. Fiili sona erme nedeni ve seyri zaman sırasına göre derlenir; işverenin iade ihtarnamesi, ücret dökümü, taraf iletişimi ve kesinti kayıtları birlikte doğrulanır.
 7. Asgari hizmet süresi sözleşmesinin geçerliliği, istifa iradesi ve ön bildirim, eğitim gideri ve avans niteliğindeki ödeme iadesi ile ayrıca ileri sürülen zarar ayrı incelenir.
-8. İmzaladı veya işveren belirli bir tutar istedi diye sorumluluk kabul edilmez; madde 15-1’in yasal şartları, makullük, sona erme aidiyeti ve orantı formülüne karşılık gelen deliller doğrulanır.
+8. Sözleşme imzalandı veya işveren belirli bir tutar istedi diye sorumluluk kabul edilmemelidir; madde 15-1’in yasal şartları, makullük, sona erme aidiyeti ve orantı formülüne karşılık gelen deliller doğrulanır.
 
 Belgeler zaman sırasına göre derlenirken sözleşme kurulma günü, eğitimin başlangıç ve bitiş günü, her ödeme günü, çalışmanın başlangıç ve bitiş günü ile bildirimin iletildiği gün birlikte işaretlenmelidir. Belgelerin bir kısmı yalnızca işverende ise eldeki belgeler ve istenen tutarın hesap dayanağı önce derlenir; ek belgeler gereken usule göre doğrulanmalıdır.
 
 ## 10. Resmi kaynaklar
 
-- [Tayvan ulusal mevzuat veri tabanı: İş Standartları Kanunu madde 15-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
-- [Tayvan ulusal mevzuat veri tabanı: İş Standartları Kanunu madde 15](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
-- [Tayvan ulusal mevzuat veri tabanı: İş Standartları Kanunu madde 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
+- [Tayvan ulusal mevzuat veri tabanı: İş Standartları Kanununun 15-1. maddesi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15-1&pcode=N0030001)
+- [Tayvan ulusal mevzuat veri tabanı: İş Standartları Kanununun 15. maddesi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=N0030001)
+- [Tayvan ulusal mevzuat veri tabanı: İş Standartları Kanununun 16. maddesi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=N0030001)
 - [Tayvan Çalışma Bakanlığı: 5 Haziran 2026 asgari hizmet süresi ve cezai şart iadesi rehberi](https://laws.mol.gov.tw/FLAW/FLAWDOC03.aspx?cnt=926&datatype=etype&edate=99991231&lnabndn=1&now=1&recordno=10&sdate=20180000)
 
 ## 11. İlgili rehber

@@ -1,0 +1,104 @@
+WO-F-tr r5 — Grok 4.7 fix lane
+Date: 2026-09-23
+Workspace: /Users/son7/Projects/tseng-law-fix-tr-r5
+
+## Rows applied (36)
+
+Part a
+2. 001 çalışma izninin muhatabını → uygulanacak çalışma izni türünü.
+3. 002 madde 3’ün 1. fıkrası istisnası → şirket tescil yönetmeliğinin 3. maddesinin 1. fıkrasının ancak hükmü (FAQ + body, 2).
+4. 003 iyi niyet → samimiyet; the victim is the one who sees it.
+5. 003 müzakere tutarı → uzlaşma tutarı.
+6. 004 kotasyonun itilip itilmeyeceği → planlanıp planlanmayacağı (pay devri was already in the sentence).
+7. 006 Bay Lin’e TWD 40.000, iki çalışana TWD 10.000 ve TWD 20.000. Currency gloss (新臺幣) kept.
+8. 007 talebin malzemesi → talebin delili.
+9. 007 restorasyon / saptanamaz → evlilik varmış gibi paylaşım vaat edilmemeli; soyut hak elde edileceği vaat edilmemelidir.
+10. 007 güven (信託) and the unglossed güven in the cohabitation sentence → trust (信託).
+11. 007 child support and contact: alıkonulamaz veya takas edilemez; gündelik yarar.
+12. 009 kusur şirkette olsa da / çalışanda olsa da → olsun / olsun (blocks kept). The following both-at-fault lines were already right and stayed.
+13. herhangi 12 → herhangi bir 12 (001, 004).
+14. 002 nakde bakmayınız.
+15. 002 yargılama ve icra işlerinin ve banka hesaplarının. 003 504. maddesinin gönderme ve usul kuralları.
+16. Glued digits, in a form the number checker still counts. See systemic note.
+18. Statute name in the genitive before the article. See systemic note.
+19. Offices photo alt: Taipei ofisindeki avukat çalışma odası.
+20. Contact FAQ: başka bir yola da başvurmalısınız. Reply-time denial kept (yanıt süresi sağlanmaz). llms consultationNotice was a different sentence and was left.
+21. 003 duygusal ihtiyaçlarına çoğu zaman yeterince eğilmez.
+22. 003 genel dava işi gören bir avukat.
+23. 003 Hukuk davasında.
+24. 007 engellemez (sonradan yapılacak inceleme).
+25. 007 1차 kaynak listesi → Aşağıdaki 1. el resmi kaynaklar. The suggested wording dropped the digit; 1. el keeps it and is the ordinary name for a primary source.
+26. 008 table headers: Chinese terms are parenthetical glosses inside one bold cell (istifa, ekonomik, disiplin).
+
+Part b
+1. 010 bordro, vergi kayıtları ve istihdam belgeleri.
+2. 010 negligence tier: gerçek zarar tutarının 1 katı, in the same ladder as 5 katı and 3 katı. The bare “(1 kat)” gloss is gone; the digit stays because the checker counts Korean 1배. “tutarının 1 katı” is the coefficient, not an amount added on top.
+3. 010 Ticari işletmede düşme, gıdanın yol açtığı sağlık zararı.
+5. 013 reported speech: colon on “şunu söyledi:” and the next block rewritten as the reported sentence (…inceleniyormuş). Blocks were not merged.
+6. mekanik olarak. See systemic note.
+7. 014 Sözleşme imzalandı … kabul edilmemelidir.
+8. 014 işverenin kanunen vermek zorunda olduğu eğitimin gideri (FAQ + section 5, 2). The later letter paragraph already said “kanuna göre vermek zorunda”.
+9. organ for a public authority → makam / idare. Corporate organ (şirket organı, organ üyesi) left. See systemic note.
+10. 018 each shareholder one vote → her 1 ortağın 1 oy hakkı vardır. “her ortağın bir oy” dropped a counted 1 (Korean 1인 1표). “Ortak” is this file’s word for a limited-company member (有限公司), not a partnership partner.
+11. 018 Ekonomi Bakanlığı Ticaret Dairesi (經濟部商業發展署). 015 Taipei şehri Ticaret Dairesi was already that name and was not touched.
+12. 018 Esasen → İlke olarak (the hedge this file already uses).
+13. 018 Yönetici for 董事 → Direktör (董事): the 1–3 count, the transfer consent, and “yalnızca 1 veya 2”. Branch/subsidiary manager (yöneticisi, line on work permits) stayed yönetici.
+
+## Rows skipped (4)
+
+A1. “TWD 1.57M tutarında” in the team bio. ACCEPTED-ROUND: the pinned figure stays byte-identical. Not reformatted to “1,57 milyon”.
+A17. Do not turn Q16–Q20 into ## headings, and do not delete U+200B. The column checker compares heading levels and ZWSP counts with src/content/columns (Korean). Korean Q16–Q20 are body lines, and the ZWSP count matches Turkish today. English also leaves Q16–Q20 as body lines. Removing the spaces or adding ## fails the checker.
+B4. Same ZWSP pin for 013 and 015, including the lines whose only character is U+200B. Not removed.
+B14. Do not renumber 018 “## 7.” to 6 and “## 8.” to 7. Korean and English skip 6 the same way. The heading digits are counted; renumbering fails numbers.
+
+## Systemic patterns
+
+- Statute without the genitive before the article: 24 replacements. 002 proviso ×2; 008 İş Standartları Kanununun 11./12. maddesi (FAQ + table + long cell); 009 18. and 14. madde, with 17. madde kıyasen; 014 15-1, 15, 16 including the three link labels (URLs unchanged); 016 Medeni Kanununun 1148. maddesi; 017 Karayolu Kanununun 3. and 35. maddesi and İstihdam Hizmetleri Kanununun 43. and 68. maddesi; 007 Hukuk Muhakemeleri Usulü Kanununun 303. maddesi.
+- organ as a public authority or institution: 25. 007 yetkili makam ×6 and kişi ve makamlara; 016 makam/vergi idaresi/makamına göre (7); 017 yetkili makam ×6, bağlı idareler, bilim parkı ve sanayi bölgesi idareleri, sunum makamı; 010 soruşturma makamı; 003 dosyayı yürüten makam. Left: 001/004 şirket organları, 002 organ üyesi.
+- mekanik as a bare adverb: 3 → mekanik olarak (014 her görev, 017 sonuç, 003 zarar tutarı). Left “mekanik biçimde” in 003; biçimde already makes the adverb.
+- Glued digits: 002 her 1 durma ×2 → 1 kezlik durma süresi (Korean 1회; “her bir” is not parsed as 1). 003 yeniden inceleme bir kez (lexicon “bir kez” counts). 003 her 1 mağdur ve her 1 kaza → 1 mağdur ve 1 kaza başına (both unit digits kept). 005 bir kişi sınırını aşarsa (“bir kişi” is a whole word, so it counts). 007 her 2 taraf → her iki taraf ×3 (“iki” counts as 2). 018 vote line keeps both 1s, as above.
+- Neighbouring legal word: muhatap only where it meant a permit category (001). Left real addressee uses (003 sigorta ödemesinin muhatabı, 011 teslim muhatabı). malzeme → delil only where it meant evidence (007 talebin delili, değerlendirme delili). Left eğitim malzemesi, bilgi malzemesi, yarı iletken malzeme, yardımcı malzeme. güven → trust only for 信託.
+- Department of Commerce name: 2. 018 Ticaret Dairesi, and the 001 link label Ticaret Geliştirme İdaresi → Ticaret Dairesi (same 商業發展署). URL unchanged.
+- 008 Chinese table headers: 3 cells.
+
+006 “iki çalışana” adds a parsed 2. The file still PASSes; numbers is WARN extra 2×1, not FAIL.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-tr --lang tr 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=77
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-tr src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      20
+
+The count 20 is from before this log file was written. Number WARNs that already existed (extra 6 in 002, ROC-year extras, unparsed 제3자 / 제n항) are still WARN. No numbers check is FAIL.
+
+## Reviewer points not applied
+
+- TWD 1.57M is not English-million leakage to be rewritten. The campaign pins that byte string. The dot-as-thousands reading is real, and the standing rule wins.
+- Q16–Q20 should not become headings. The English column and the Korean source both keep them as body lines. The U+200B lines are in the Korean source; the checker requires the same count. They still chop the Turkish reading. That is a source-structure limit, not a wording fix inside a block.
+- 018’s jump from heading 5 to 7 is the English and Korean outline. Renumbering would invent a “6” the source does not have.
+- “her bir” / “her ortağın bir oy hakkı” / dropping “(1 kat)” without a remaining digit fails the number check (missing 1). The wording above keeps the digit and the meaning.
+- “muhatap”, “malzeme”, and “organ” are not wrong in every sentence. Payment addressee, educational material, semiconductor material, and a company’s own organs were left.

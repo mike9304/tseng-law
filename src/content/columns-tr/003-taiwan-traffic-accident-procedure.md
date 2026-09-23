@@ -41,7 +41,7 @@ Ceza Kanununun 284. maddesi taksirle yaralamayı (過失傷害) ve taksirle ağ�
 
 Medeni tazminatta (損害賠償), Tayvan Medeni Kanununun (民法) 197. maddesine göre zarar ve tazmin yükümlüsünün öğrenildiği günden 2 yıl, veya haksız fiilin olduğu günden 10 yıl geçince talep mümkün olmaz. Hangi olguların zamanaşımını (消滅時效) etkilediği ayrı incelenmelidir.
 
-Bir suç nedeniyle zarar gören kişi, Ceza Muhakemesi Kanununun 487. maddesine göre ceza yargılamasına bağlı medeni dava (刑事附帶民事訴訟) açabilir. Ceza yargılaması sürerken bu dava, Ceza Muhakemesi Kanununun 488. maddesine göre istinaf duruşmasının sona ermesine (言詞辯論終結) kadar açılabilir, ancak ilk derece duruşması sona erdikten sonra ve istinafa başvurulmadan önce açılamaz. Kural olarak ayrı yargılama gideri (裁判費) ödenmesi kaçınılabilir, ancak her sonuç maliyetsiz bitmez. Örneğin ceza dosyası reddedilip davacının talebiyle hukuk mahkemesine gönderilirse, Ceza Muhakemesi Kanununun 503. maddesine göre giderler yüklenebilir ve 504. maddenin gönderme ile usul kuralları da doğrulanmalıdır.
+Bir suç nedeniyle zarar gören kişi, Ceza Muhakemesi Kanununun 487. maddesine göre ceza yargılamasına bağlı medeni dava (刑事附帶民事訴訟) açabilir. Ceza yargılaması sürerken bu dava, Ceza Muhakemesi Kanununun 488. maddesine göre istinaf duruşmasının sona ermesine (言詞辯論終結) kadar açılabilir, ancak ilk derece duruşması sona erdikten sonra ve istinafa başvurulmadan önce açılamaz. Kural olarak ayrı yargılama gideri (裁判費) ödenmesi kaçınılabilir, ancak her sonuç maliyetsiz bitmez. Örneğin ceza dosyası reddedilip davacının talebiyle hukuk mahkemesine gönderilirse, Ceza Muhakemesi Kanununun 503. maddesine göre giderler yüklenebilir ve 504. maddesinin gönderme ve usul kuralları da doğrulanmalıdır.
 
 Seçim, zamanaşımının kesilmesine (時效中斷), davalıların çevresine, kanıtlara, sigortaya ve yetkiye göre değişir. Bu yüzden bütün dosyalar için tek biçimde tercih edilen bir usul yoktur.
 
@@ -49,7 +49,7 @@ Seçim, zamanaşımının kesilmesine (時效中斷), davalıların çevresine, 
 
 Ceza sorumluluğu, her birinin özen yükümlülüğünü ihlali ve bu ihlalin karşı tarafın yaralanmasıyla nedensellik bağı tanındığında tutulabilir. Yalnızca her iki tarafta da kusur olmuş olması, taksirle yaralama sorumluluğunu kendiliğinden doğurmaz.
 
-Medeni planda, Medeni Kanunun 217. maddesine göre zarar görenin zararın doğuşuna veya büyümesine katkıda bulunan bir kusuru (與有過失) varsa mahkeme tazminatı indirebilir veya bağışık tutabilir. Örneğin Tayvan yeni doları (新臺幣, TWD) cinsinden tanınan zarar TWD 1.000.000 ve zarar görenin kusuru %50 olarak değerlendirilirse, başka ayarlardan önce tutar TWD 500.000’e inebilir.
+Hukuk davasında, Medeni Kanunun 217. maddesine göre zarar görenin zararın doğuşuna veya büyümesine katkıda bulunan bir kusuru (與有過失) varsa mahkeme tazminatı indirebilir veya bağışık tutabilir. Örneğin Tayvan yeni doları (新臺幣, TWD) cinsinden tanınan zarar TWD 1.000.000 ve zarar görenin kusuru %50 olarak değerlendirilirse, başka ayarlardan önce tutar TWD 500.000’e inebilir.
 
 Bilirkişi incelemesi (鑑定) veya ön analiz tablosu önemli belgeler olabilir, ancak mahkemeyi mekanik biçimde bağlamaz. Mahkeme beyanlar, görüntüler ve araçların durumu dâhil bütün kanıtları inceler.
 
@@ -85,9 +85,9 @@ Medeni Kanunun 736. maddesindeki uzlaşma (和解), tarafların bir uyuşmazlı�
 
 Polisin kurduğu karayolu trafik kazası ön analiz tablosu, yerindeki belgelere dayanan ön bir çözümdür. Hüküm değildir, mahkemeyi bağlamaz ve kusur oranını (過失比例) saptamaz. Gereken belgeler ve uyuşmazlığın kapsamı kazaya göre değiştiğinden bu tablo, yasal bilirkişi incelemesi ve yeniden inceleme (覆議) kendiliğinden işleyen veya zorunlu bir sıra oluşturmaz.
 
-Uygulanacak kurallara göre yetkili taraf, araç kaza bilirkişi incelemesi (車輛行車事故鑑定) isteyebilir; dosyayı yürüten organ iletebilir ve yargı mercii emredebilir. Tarafın başvurusu kural olarak kaza tarihinden itibaren 6 ay içinde sunulur; zaten soruşturma veya yargılamada olan dosyalarda inceleme, yeni doğrudan başvuruyla değil yargı merciinin emriyle yürür.
+Uygulanacak kurallara göre yetkili taraf, araç kaza bilirkişi incelemesi (車輛行車事故鑑定) isteyebilir; dosyayı yürüten makam iletebilir ve yargı mercii emredebilir. Tarafın başvurusu kural olarak kaza tarihinden itibaren 6 ay içinde sunulur; zaten soruşturma veya yargılamada olan dosyalarda inceleme, yeni doğrudan başvuruyla değil yargı merciinin emriyle yürür.
 
-Bilirkişi görüşüne katılınmazsa yeniden inceleme istenebilir, ancak yeniden inceleme 1 kez ile sınırlıdır. Bilirkişi ve yeniden inceleme görüşü bir kanıt veya başvuru belgesidir ve mahkeme beyanlar, görüntüler ve yer tutanakları dâhil bütün dosyayı bağımsız değerlendirir.
+Bilirkişi görüşüne katılınmazsa yeniden inceleme istenebilir, ancak yeniden inceleme bir kez ile sınırlıdır. Bilirkişi ve yeniden inceleme görüşü bir kanıt veya başvuru belgesidir ve mahkeme beyanlar, görüntüler ve yer tutanakları dâhil bütün dosyayı bağımsız değerlendirir.
 
 ## Q7. Kazadan sonra hangi zararlar talep edilebilir?
 
@@ -147,7 +147,7 @@ Tedavi kayıtları, devam veya izin kayıtları, ücret ve vergi verileri ile i�
 
 Çalışma gücünün azalması zararı, Q11’deki iyileşme döneminde gerçekten azalmış gelirden ayrılır. Medeni Kanunun 193. ve 216. maddelerine göre kaza ile nedensellik bağı, süren işlev bozukluğu (持續功能障礙), zarar görenin mesleği ve yetenekleri, olağan beklenebilecek gelir ile çalışma gücüne ilişkin dönem hakkındaki dayanak ve kanıt birlikte incelenir.
 
-Güncel ücretin değişmeden durması talebi kendiliğinden dışlamaz. Tersine, zarar tutarı da yalnızca sakatlık yüzdesi veya güncel ücretle mekanik saptanmaz.
+Güncel ücretin değişmeden durması talebi kendiliğinden dışlamaz. Tersine, zarar tutarı da yalnızca sakatlık yüzdesi veya güncel ücretle mekanik olarak saptanmaz.
 
 Süren işlev bozukluğu esaslı biçimde tartışılırsa tıbbi bilirkişi incelemesi yararlı olabilir, ancak her dosyada zorunlu değildir. Medeni Kanunun 217. maddesine göre kusur mahsubu ve diğer ayar sebepleri de incelenir.
 
@@ -175,7 +175,7 @@ Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險�
 
 Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu sigortasının ödemelerinin muhatabı değildir. Ancak birden çok aracın karıştığı bir kazada, sürücünün karışan başka bir aracın zorunlu sigortacısından ödeme talep edebildiği haller vardır.
 
-29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve ölüm, sakatlık ve tıbbi giderlerin toplam azamisi, her 1 mağdur ve her 1 kaza başına TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
+29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve ölüm, sakatlık ve tıbbi giderlerin toplam azamisi, 1 mağdur ve 1 kaza başına TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
 
 Üçüncü kişilere karşı mali sorumluluk sigortası (第三人責任險), sürücü kaza sigortası (駕駛人傷害險) ve kendi araç hasarı sigortası (車體損失險) sözleşmeye bağlı isteğe bağlı ürünlerdir. Gerçek teminat, sigortalıya, tavana, muafiyete (自負額), istisnalara, kusura ve poliçenin diğer koşullarına göre değişir, böylece poliçe ve koşullar dosya dosya doğrulanmalıdır.
 
@@ -199,7 +199,7 @@ Q16. Kazadan sonra her şey sigortacıya bırakılabilir mi?
 
 ​
 
-Sigortacılar, deneyime göre, kaza taraflarının duygusal yönünü sık sık yeterince işlemez.
+Sigortacılar, deneyime göre, kaza taraflarının duygusal ihtiyaçlarına çoğu zaman yeterince eğilmez.
 
 ​
 
@@ -299,7 +299,7 @@ Q20. Trafik kazası için avukat nasıl aranır?
 
 ​
 
-Trafik kazaları çok sık görülen dosyalar olduğundan, birkaç yıllık uygulama deneyimi biriktirmiş genel bir yargılama avukatı bir trafik kazası dosyasını yürütebilir.
+Trafik kazaları çok sık görülen dosyalar olduğundan, birkaç yıllık uygulama deneyimi olan, genel dava işi gören bir avukat bir trafik kazası dosyasını yürütebilir.
 
 ​
 
@@ -339,7 +339,7 @@ Mağdurun yaralanması veya ölümü nedeniyle kendisi veya ailesi bedensel ve r
 
 ​
 
-Fail sık sık mağdurun hâlini sormak için aramaz veya ziyaret etmez ve birçok fail her şeyi sigortacının çözeceğini düşünüp görünmez. Bu hallerde ne pişmanlık ne de iyi niyet hissedilir.
+Fail sık sık mağdurun hâlini sormak için aramaz veya ziyaret etmez ve birçok fail her şeyi sigortacının çözeceğini düşünüp görünmez. Bu hallerde mağdur, failde ne pişmanlık ne de samimiyet görür.
 
 ​
 
@@ -347,7 +347,7 @@ Fail sık sık mağdurun hâlini sormak için aramaz veya ziyaret etmez ve birç
 
 ​
 
-Mağdur böylece derin biçimde incinir ve öfkelenir, böylece sık sık müzakere tutarında ödün vermez, veya ihtiyati haciz (假扣押) ister ve karşı tarafın mallarının haczini sonuna kadar sürdürür.
+Mağdur böylece derin biçimde incinir ve öfkelenir, böylece sık sık uzlaşma tutarında ödün vermez, veya ihtiyati haciz (假扣押) ister ve karşı tarafın mallarının haczini sonuna kadar sürdürür.
 
 ​
 

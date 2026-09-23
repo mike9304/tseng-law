@@ -42,7 +42,7 @@ Temsilcilik, izin verilen çerçevede pazar gözlemi, irtibat işleri, müzakere
 
 Tayvan ile Kore arasındaki gelir vergisi anlaşması (所得稅協定) 27 Aralık 2023’te yürürlüğe girmiş ve 1 Ocak 2024’ten itibaren uygulanır. Anlaşmanın uygulama koşulları sağlanmışsa, temettü, faiz ve gayri maddi hak bedelleri için kaynak devletindeki azami oran her birinde %10’dur. İşletme kârları kural olarak yerleşim yeri devletinde vergilendirilir, özellikle karşı bölgede anlaşma anlamında işyeri (常設機構) varsa bunun dışında; faaliyetin gerçek yürütülüş biçimi yine önce incelenmelidir. Ülkeye özgü not: bu anlaşma açıklaması, anlaşmanın koşullarını karşılayan Kore bağlantılı durumlar içindir; her yabancı yatırımcı için geçerli genel bir kural değildir. Tayvan ile kendi ülkeniz arasında bir vergi anlaşması bulunup bulunmadığı ve koşulları ayrıca incelenmelidir.
 
-Anlaşma anlamındaki işyerine yönetim yeri, şube ve büro gibi sabit tesisler, 6 ayı aşan inşaat işleri, herhangi 12 aylık dönemde toplamda 183 günü aşan hizmetler ve sözleşme kurma yetkisini yinelenerek kullanan temsilciler girebilir. Bu 4 türün her birinin başka koşulları vardır; sabit bir yer veya temsilci faaliyeti varsa inceleme, hizmet günlerinden bağımsız olarak gerekir. Bu yüzden yalnızca 183 gün sayısı, işyerinin doğuşuna veya işletme kârlarının vergilendirilmesine karar vermemelidir.
+Anlaşma anlamındaki işyerine yönetim yeri, şube ve büro gibi sabit tesisler, 6 ayı aşan inşaat işleri, herhangi bir 12 aylık dönemde toplamda 183 günü aşan hizmetler ve sözleşme kurma yetkisini yinelenerek kullanan temsilciler girebilir. Bu 4 türün her birinin başka koşulları vardır; sabit bir yer veya temsilci faaliyeti varsa inceleme, hizmet günlerinden bağımsız olarak gerekir. Bu yüzden yalnızca 183 gün sayısı, işyerinin doğuşuna veya işletme kârlarının vergilendirilmesine karar vermemelidir.
 
 ![](../images/001-taiwan-company-establishment-basics/img-02.jpg)
 
@@ -98,7 +98,7 @@ Taipei kenti, ilgili şirket ve ticaret tescilleri için faaliyet yeri ön sorgu
 
 Yalnızca şirket kuruluşu, çalışma iznini veya oturma hakkını vermez. Tayvan’da bir şirketi yöneten veya işleten yabancı, görev, koyulan sermaye ilişkisi ve işverenin iş sonuçlarına dair çalışma izni koşullarını karşılamalı ve izin verildikten sonra kalış sebebine uygun oturma kartı için ayrıca başvurmalıdır.
 
-Öğrenciler de yatırım ve şirket kuruluşuna başvurabilir. Yatırımcı veya ortak olunması, mevcut oturma statüsünün Tayvan’da çalışmaya veya şirket yönetimine izin verdiği anlamına gelmez. Gerçekten sözleşme kuran, çalışanları yönlendiren veya günlük yönetimi üstlenen kişi, faaliyete başlamadan önce çalışma izninin muhatabını ve koşullarını incelemelidir.
+Öğrenciler de yatırım ve şirket kuruluşuna başvurabilir. Yatırımcı veya ortak olunması, mevcut oturma statüsünün Tayvan’da çalışmaya veya şirket yönetimine izin verdiği anlamına gelmez. Gerçekten sözleşme kuran, çalışanları yönlendiren veya günlük yönetimi üstlenen kişi, faaliyete başlamadan önce uygulanacak çalışma izni türünü ve koşullarını incelemelidir.
 
 Çalışma izni incelemesinde başvuranın görevi ve niteliği, şirketteki rolü, yatırım ilişkisi, işverenin iş sonuçları ve sunulan belgeler bir bütün olarak incelenebilir. Çalışma izni verilmiş olsa da oturma kartı kalış sebebine göre ayrıca başvurur; her iznin geçerlilik süresi ve yenileme koşulları, ilgili karara ve o sırada uygulanan hukuka göre incelenmelidir.
 
@@ -128,7 +128,7 @@ Anlaşmanın sınırlı oranı, yalnızca bir anlaşma var diye kendiliğinden u
 
 - [Tayvan Ekonomi Bakanlığının yabancı yatırıma ilişkin kurallarının İngilizce metni](https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E)
 - [Tayvan Ekonomi Bakanlığının yatırım işlerine ilişkin açıklaması](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
-- [Tayvan Ekonomi Bakanlığı Ticaret Geliştirme İdaresinin (商業發展署) şirket ve ticaret tesciline ilişkin açıklaması](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
+- [Tayvan Ekonomi Bakanlığı Ticaret Dairesinin (商業發展署) şirket ve ticaret tesciline ilişkin açıklaması](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Yurt dışı Çinli veya yabancı yatırım işletmelerinin yöneticilerinin çalışma iznine ilişkin iş kılavuzu](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Tayvan Maliye Bakanlığının Tayvan–Kore gelir vergisi anlaşmasına ilişkin açıklaması](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
 - [Yerleşik olmayana ödenen temettüde kaynakta kesinti oranına ilişkin kural](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)

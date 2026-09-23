@@ -33,7 +33,7 @@ Salon pangkas rambut bergaya Taiwan seperti ini pun tetap tersimpan sebagai kena
 
 ​
 
-Bagaimanapun juga, kalau berbicara tentang pijat.
+Bagaimanapun juga, kalau berbicara tentang pijat—
 
 Di Taiwan terdapat pula banyak ruas jalan yang dikenal sebagai kawasan pijat.
 

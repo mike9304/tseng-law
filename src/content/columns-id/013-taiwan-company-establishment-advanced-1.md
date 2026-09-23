@@ -95,7 +95,7 @@ Selain itu, dalam perjanjian sewa toko di Taiwan, pemilik kerap memberikan "**ma
 
 Masa tersebut adalah jangka waktu yang dibebaskan dari sewa, dan sebaiknya Anda merundingkannya.
 
-Orang asing tidak mudah memperoleh sewa toko, dan karena uang jaminan sewa (押金) di Taiwan tergolong kecil (umumnya 2 bulan), perlindungan bagi pemilik pun terbatas.
+Orang asing tidak mudah menyewa toko, dan karena uang jaminan sewa (押金) di Taiwan tergolong kecil (umumnya 2 bulan), perlindungan bagi pemilik pun terbatas.
 
 Para pemilik enggan menyewakan tempatnya kepada orang asing.
 

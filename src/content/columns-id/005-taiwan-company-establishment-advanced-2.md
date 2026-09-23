@@ -69,7 +69,7 @@ Sebagian bank dapat menetapkan persyaratan tambahan, misalnya masa penggunaan re
 
 **5. Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan?**
 
-A. Karyawan pertama: pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria "pekerjaan spesialis atau teknis" (專門性或技術性工作) pada bagian B di bawah tidak berlaku, tetapi persyaratan objek (seperti manajer (經理人) perusahaan yang penyertaan modal Tionghoa perantauan atau asingnya melebihi sepertiga) dan persyaratan kinerja pemberi kerja berupa modal dan omzet (Pasal 38 dan Pasal 39 Standar Penelaahan) tetap berlaku.
+A. Karyawan pertama: pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria "pekerjaan spesialis atau teknis" (專門性或技術性工作) pada bagian B di bawah tidak berlaku, tetapi persyaratan objek (seperti manajer (經理人) perusahaan yang penyertaan modal Tionghoa perantauan atau asingnya melebihi sepertiga) dan persyaratan kinerja pemberi kerja berupa modal dan omzet (Pasal 38 dan Pasal 39 Standar Penelaahan (審查標準)) tetap berlaku.
 
 B. Mulai karyawan asing kedua terdapat pembatasan: apabila jumlah pekerja yang dipekerjakan melebihi 1 orang, latar belakang pendidikan dan pengalaman kerja karyawan yang relevan, ketentuan gaji rata-rata pada saat mempekerjakan, serta ketentuan modal dan omzet perusahaan diproses menurut "pekerjaan spesialis atau teknis" (專門性或技術性工作).
 

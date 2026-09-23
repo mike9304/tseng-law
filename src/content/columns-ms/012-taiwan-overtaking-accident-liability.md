@@ -51,7 +51,7 @@ Hasil kes ini tidak bermakna bahawa kegagalan memberikan satu isyarat yang ditet
 
 Sebelum memotong, anda mesti dahulu mengesahkan sama ada larangan memotong terpakai kepada tempat atau keadaan lalu lintas itu. Jika prosedur lorong yang sama terpakai, berikan isyarat hon atau lampu yang ditetapkan, tanpa memaksa kenderaan di hadapan memberi laluan, tunggu isyarat penyerahan yang jelas dan selesaikan pemotongan dengan jarak yang mencukupi dan jarak kembali yang selamat.
 
-Pematuhan perkara 101 penting, tetapi ia tidak dengan sendirinya menjamin bahawa kemalangan akan terelak mahupun hasil penilaian pakar atau perbicaraan kemudian. Pemandu mesti menyediakan ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
+Pematuhan perkara 101 penting, tetapi ia tidak dengan sendirinya menjamin bahawa kemalangan akan terelak, dan tidak juga menjamin apa-apa hasil tertentu dalam penilaian pakar atau perbicaraan kemudian. Pemandu mesti menyediakan ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
 
 Sebagai pelengkap, anda boleh merujuk [ilustrasi peraturan dan prosedur memotong](https://gonews.com.tw/car/daily/21934/). Kerana ini sumber sekunder, semasa pengesahan syarat undang-undang, sebaiknya baca juga peraturan rasmi yang berkuat kuasa.
 

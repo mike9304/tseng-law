@@ -516,7 +516,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
   footerNotice:
     'Halaman bahasa Melayu ini hanya memberikan maklumat am tentang kerja firma menurut undang-undang Taiwan. Ia bukan nasihat undang-undang bagi suatu kes tertentu, dan penghantaran mesej dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.',
   skipLink: 'Langkau navigasi dan pergi ke kandungan',
-  menuLabel: 'Direktori halaman',
+  menuLabel: 'Menu',
   languageLabel: 'Bahasa paparan',
   mega: {
     services: {
@@ -682,7 +682,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) ditubuhkan pada 2016 oleh peguam yang belajar di National Taiwan University (國立臺灣大學). Nama Cina 昊鼎 menggabungkan aksara 昊 (“langit luas”) dengan 鼎 (“asas kukuh”) dan menggambarkan hala tuju firma sejak penubuhan.',
             'Kami mempunyai pejabat di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) dan Pingtung (屏東). Pejabat Kaohsiung menumpukan tadbir urus syarikat dan mengendalikan pertikaian sivil, jenayah dan pentadbiran. Pejabat Taichung mengendalikan hal pembinaan, harta intelek, dan hal yang berkaitan dengan Korea dan Jepun. Pejabat Pingtung dibuka pada 2017 untuk keperluan setempat.',
-            'Selain kerja peguam, sejak 2020 wujud juga Hovering Accounting Office, yang menawarkan perakaunan dan perancangan cukai untuk usahawan dan individu bernilai bersih tinggi.',
+            'Selain kerja peguam, sejak 2020 wujud juga Hovering Accounting Office, yang menawarkan perakaunan dan perancangan cukai untuk usahawan dan individu berharta.',
           ],
         },
         {

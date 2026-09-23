@@ -17,19 +17,19 @@ faq:
 
 # Doanh nghiệp sản xuất linh kiện bán dẫn gia nhập thị trường Đài Loan: đánh giá công ty con, chi nhánh hay đại lý
 
-![Ảnh minh họa cấu trúc doanh nghiệp bán dẫn vào thị trường Đài Loan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
+![Ảnh minh họa cấu trúc gia nhập thị trường Đài Loan của doanh nghiệp bán dẫn](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
 Khi bắt đầu giao dịch với khách hàng Đài Loan, tổng công ty ở nước ngoài có thể nhận nhiều yêu cầu: xử lý báo giá và hợp đồng tại Đài Loan, chuẩn bị tồn kho thay thế khẩn cấp, hoặc bố trí nhân sự lắp đặt và bảo trì. Lúc đó doanh nghiệp dễ hỏi trước: “Thành lập công ty tại Đài Loan có giải quyết được không?”
 
 Điều cần làm rõ trước là ai chịu trách nhiệm việc gì tại Đài Loan. Cấu trúc cần đánh giá sẽ khác nhau tùy việc tổng công ty nước ngoài tiếp tục ký hợp đồng bán hàng, công ty Đài Loan mua hàng rồi bán lại, hay nhân sự tại chỗ chỉ hỗ trợ kỹ thuật.
 
-Bài viết này là giải thích chung cho doanh nghiệp vật liệu, linh kiện và thiết bị bán dẫn khi thiết kế cấu trúc vào thị trường Đài Loan. Các tình huống vận hành và mục kiểm tra dưới đây là ví dụ giả định và đề xuất đánh giá, không phải vụ việc thực tế của một doanh nghiệp cụ thể, cũng không phải điều kiện thành lập áp dụng cho mọi trường hợp. Thuế, kiểm soát xuất khẩu, giấy phép từng sản phẩm và phân loại nhà đầu tư vẫn cần đánh giá riêng.
+Bài viết này là giải thích chung cho doanh nghiệp vật liệu, linh kiện và thiết bị bán dẫn khi thiết kế cấu trúc gia nhập thị trường Đài Loan. Các tình huống vận hành và mục kiểm tra dưới đây là ví dụ giả định và đề xuất đánh giá, không phải vụ việc thực tế của một doanh nghiệp cụ thể, cũng không phải điều kiện thành lập áp dụng cho mọi trường hợp. Thuế, kiểm soát xuất khẩu, giấy phép từng sản phẩm và phân loại nhà đầu tư vẫn cần đánh giá riêng.
 
 ## 1. Làm rõ “phân công giao dịch và vận hành” trước khi chọn hình thức đăng ký
 
 Giả sử một nhà sản xuất linh kiện chính xác ở nước ngoài đang bán cho khách hàng Đài Loan. Ban đầu tổng công ty xuất hàng trực tiếp, nhưng khách hàng tiếp tục yêu cầu lưu kho phụ tùng tại Đài Loan và hỗ trợ kỹ sư tại hiện trường. Lúc này không chỉ cần một địa chỉ, mà cần một thực thể có thể bán hàng, nhập khẩu, quản lý tồn kho, tuyển dụng, hỗ trợ kỹ thuật và chịu trách nhiệm.
 
-Trước khi quyết định cấu trúc vào Đài Loan, tổng công ty có thể làm rõ nội bộ:
+Trước khi quyết định cấu trúc gia nhập thị trường Đài Loan, tổng công ty có thể làm rõ nội bộ:
 
 | Hạng mục vận hành | Câu hỏi cần làm rõ trước |
 |---|---|
@@ -111,8 +111,8 @@ Nếu thành lập công ty con chứ không phải chi nhánh, công ty mẹ v�
 
 Có thể thiết kế chuyển đổi theo giai đoạn, nhưng cần rà soát chấm dứt hoặc sửa đổi hợp đồng hiện có, hợp đồng khách hàng, tồn kho, bảo hành và nhân sự.
 
-## Tư vấn cấu trúc vào thị trường Đài Loan
+## Tư vấn cấu trúc gia nhập thị trường Đài Loan
 
 Nếu dự kiến bán hàng, quản lý tồn kho, hỗ trợ lắp đặt hoặc tuyển dụng tại Đài Loan, hãy sắp xếp trước công việc tổng công ty tự thực hiện và công việc dành cho tổ chức tại Đài Loan. Văn phòng sẽ xác nhận nội dung tư vấn và xung đột lợi ích, rồi giải thích tài liệu cần thiết và phạm vi dịch vụ có thể cung cấp.
 
-Ví dụ tiêu đề liên hệ: Tư vấn cấu trúc doanh nghiệp bán dẫn vào thị trường Đài Loan. Lần liên hệ đầu hãy cung cấp tên công ty, quốc gia tổng công ty, sản phẩm hoặc dịch vụ dự kiến, kế hoạch vận hành tại Đài Loan và ngôn ngữ tư vấn mong muốn. Tài liệu thiết kế mật và hợp đồng đầy đủ xin gửi sau khi nhận hướng dẫn riêng. Ngôn ngữ tư vấn thực tế và phạm vi nhận việc phải được xác nhận khi liên hệ.
+Ví dụ tiêu đề liên hệ: Tư vấn cấu trúc gia nhập thị trường Đài Loan của doanh nghiệp bán dẫn. Lần liên hệ đầu hãy cung cấp tên công ty, quốc gia tổng công ty, sản phẩm hoặc dịch vụ dự kiến, kế hoạch vận hành tại Đài Loan và ngôn ngữ tư vấn mong muốn. Tài liệu thiết kế mật và hợp đồng đầy đủ xin gửi sau khi nhận hướng dẫn riêng. Ngôn ngữ tư vấn thực tế và phạm vi nhận việc phải được xác nhận khi liên hệ.

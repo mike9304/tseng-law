@@ -19,7 +19,7 @@ Khi xe phía trước chạy chậm, việc vượt xe (超車) có thể trông
 
 [Điều 101 Quy tắc An toàn Giao thông Đường bộ Đài Loan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) quy định đồng thời những điều kiện cấm vượt xe và trình tự phải tuân theo khi được phép vượt trong cùng một làn đường.
 
-Điều 101 cấm vượt xe tại các đoạn đường có biển báo chỉ đường cong, dốc đứng, cầu hẹp, đường hầm hoặc giao lộ, cũng như tại đường ngang giao cắt với đường sắt và đoạn đường đang thi công.
+Điều 101 cấm vượt xe tại các đoạn đường có biển báo đường cong, dốc đứng, cầu hẹp, đường hầm hoặc giao lộ, cũng như tại đường ngang giao cắt với đường sắt và đoạn đường đang thi công.
 
 Ngoài ra, cũng không được vượt tại nơi hoặc đoạn đường có biển báo trường học, bệnh viện, tại nơi có biển báo hoặc vạch kẻ cấm vượt khác, khi có xe đi ngược chiều đang tới gần, và khi phía trước có từ hai xe trở lên đang chạy nối tiếp nhau.
 
@@ -27,7 +27,7 @@ Muốn vượt xe phía trước trong cùng một làn đường, người lái
 
 Xe phía sau chỉ được vượt sau khi xe phía trước đã giảm tốc độ và tránh sang một bên, hoặc đã thể hiện ý định nhường đường bằng tín hiệu tay hoặc bằng đèn báo rẽ (方向燈) bên phải.
 
-Tiếp đó, xe vượt phải bật đèn báo rẽ bên trái, đi qua về phía bên trái trong khi giữ khoảng cách ít nhất 0,5 mét với xe phía trước, rồi sau khi đã có được khoảng cách an toàn thì bật đèn báo rẽ bên phải để quay lại làn đường ban đầu một cách an toàn.
+Tiếp đó, xe vượt phải bật đèn báo rẽ bên trái, vượt bên trái trong khi giữ khoảng cách ít nhất 0,5 mét với xe phía trước, rồi sau khi đã có được khoảng cách an toàn thì bật đèn báo rẽ bên phải để quay lại làn đường ban đầu một cách an toàn.
 
 Trình tự ra tín hiệu và nhường đường trong cùng một làn đường như trên không có nghĩa là cho phép vượt xe tại địa điểm hoặc trong điều kiện bị cấm vượt. Trước khi bắt đầu vượt, vẫn phải xem xét đồng thời toàn bộ các yêu cầu của Điều 101.
 
@@ -43,7 +43,7 @@ B bị chấn thương nặng ở vùng đầu và tử vong ngay tại hiện t
 
 Ban đầu, gia đình của A và B cho rằng việc xe số 2 chuyển làn đột ngột là nguyên nhân chính của vụ va chạm. Vụ việc được đưa ra tố tụng, và trong quá trình đó việc giám định (鑑定) về vụ tai nạn đã được tiến hành nhiều lần.
 
-Theo các kết quả giám định, A bị phán định là người chịu trách nhiệm chính đối với vụ va chạm này. Kết luận đó chỉ giới hạn trong các tình tiết của vụ việc này. Việc giám định đã xem xét đồng thời tình tiết A định vượt hai xe phía trước đang chạy nối tiếp nhau, việc đi vào làn ngược chiều, việc chạy với tốc độ khiến khó bảo đảm khoảng thời gian để phanh, việc không thực hiện tín hiệu còi hoặc đèn theo quy định, động tác chuyển làn của xe số 2, cấu trúc đường và làn đường, cùng những chứng cứ khác đã thu thập được.
+Theo các kết quả giám định, A được xác định là người chịu trách nhiệm chính đối với vụ va chạm này. Kết luận đó chỉ giới hạn trong các tình tiết của vụ việc này. Việc giám định đã xem xét đồng thời tình tiết A định vượt hai xe phía trước đang chạy nối tiếp nhau, việc đi vào làn ngược chiều, việc chạy với tốc độ khiến khó bảo đảm khoảng thời gian để phanh, việc không thực hiện tín hiệu còi hoặc đèn theo quy định, động tác chuyển làn của xe số 2, cấu trúc đường và làn đường, cùng những chứng cứ khác đã thu thập được.
 
 Việc có kết quả giám định theo từng vụ việc như trên không có nghĩa là hễ bỏ sót một lần tín hiệu theo quy định thì trách nhiệm luôn được ấn định. Lỗi vô ý (過失) trong vụ tai nạn khi vượt xe còn thay đổi tùy theo địa điểm xảy ra tai nạn, cách bố trí làn đường, tốc độ, chuyển động của xe, tín hiệu, khoảng cách thời gian, tầm nhìn và những chứng cứ khác.
 

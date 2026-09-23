@@ -23,7 +23,7 @@ Cách gội đầu ở các tiệm cắt tóc thời đó rất đặc biệt.
 
 Hơn nữa, điểm quan trọng là khách có thể vừa ngồi gội đầu vừa được xoa bóp (按摩, massage) da đầu cùng vùng vai và cổ.
 
-Chỉ cần cắt tóc một lần là đã được hưởng những dịch vụ hạng nhất như vậy, nên mức độ đáng đồng tiền quả thực rất cao.
+Chỉ cần cắt tóc một lần là đã được hưởng những dịch vụ hạng nhất như vậy, nên quả thực rất đáng đồng tiền.
 
 Cách làm này rất giống với gội đầu kiểu Việt (越式洗髮).
 

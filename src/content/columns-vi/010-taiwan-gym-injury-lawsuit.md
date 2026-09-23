@@ -21,7 +21,7 @@ Vụ tai nạn xảy ra trong buổi tập động tác nâng tạ deadlift (硬
 
 Trong vụ án này, tôi là luật sư đại diện cho nguyên đơn, một sinh viên người Hàn Quốc. Tại bản án sơ thẩm ngày 24 tháng 1 năm 2022 về vụ án tiêu dùng số 7 năm 109 (2020) (109年度消字第7號), Tòa án Địa phương Đài Trung (臺灣臺中地方法院) đã tuyên buộc bị đơn phải trả [1.579.589 Đài tệ mới (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) cùng khoản tiền lãi được ghi trong bản án.
 
-Sau đó, báo chí đưa tin rằng các bên đã đạt được thỏa thuận (和解) ở giai đoạn phúc thẩm. Chỉ dựa vào bản án sơ thẩm chính thức thì không thể xác nhận kết quả xử lý của cấp phúc thẩm hay số tiền thỏa thuận, nên không được coi tin thỏa thuận mà báo chí đưa là kết quả xử lý cuối cùng đã được xác nhận.
+Sau đó, báo chí đưa tin rằng các bên đã đạt được thỏa thuận (和解) ở giai đoạn phúc thẩm. Chỉ dựa vào bản án sơ thẩm chính thức thì không thể xác nhận kết quả xử lý của cấp phúc thẩm hay số tiền thỏa thuận, nên không được coi thông tin về thỏa thuận mà báo chí đưa tin là kết quả xử lý cuối cùng đã được xác nhận của bản án sơ thẩm.
 
 Dưới đây là bản dịch tiếng Việt các tiêu đề bản tin báo chí, bài đăng trực tuyến và bình luận pháp lý về vụ việc này. Các tiêu đề dưới đây chỉ nhằm giới thiệu nội dung được đưa tin hoặc đăng tải tại từng đường dẫn, không có nghĩa là bài viết này tự xác nhận những nội dung đó là sự thật.
 
@@ -103,7 +103,7 @@ Các khoản thiệt hại có thể xem xét yêu cầu bồi thường gồm n
 
 ## 5. Dù phòng tập thể hình có bảo hiểm trách nhiệm, việc bồi thường hay số tiền bồi thường vẫn có thể bị tranh chấp hay không?
 
-Có thể bị tranh chấp. Việc có bảo hiểm có thể có ý nghĩa khi xem xét nguồn tiền bồi thường, nhưng bản thân điều đó không công nhận trách nhiệm pháp lý của phòng tập hay của huấn luyện viên và cũng không ấn định số tiền phải chi trả. Giữa doanh nghiệp bảo hiểm và các bên có thể phát sinh tranh chấp về hạn mức bồi thường của hợp đồng bảo hiểm, về các điều khoản miễn trách và loại trừ, về quan hệ nhân quả giữa tai nạn và chấn thương, cũng như về tính cần thiết và số tiền của từng khoản thiệt hại.
+Có thể bị tranh chấp. Việc có bảo hiểm có thể có ý nghĩa khi xem xét nguồn tiền bồi thường, nhưng bản thân việc đó không xác lập trách nhiệm pháp lý của phòng tập hay của huấn luyện viên và cũng không ấn định số tiền phải chi trả. Giữa doanh nghiệp bảo hiểm và các bên có thể phát sinh tranh chấp về hạn mức bồi thường của hợp đồng bảo hiểm, về các điều khoản miễn trách và loại trừ, về quan hệ nhân quả giữa tai nạn và chấn thương, cũng như về tính cần thiết và số tiền của từng khoản thiệt hại.
 
 Đặc biệt, đối với suy giảm khả năng lao động, phần thu nhập giảm sút trong thời gian dưỡng bệnh và thiệt hại phi tài sản, có thể cần đến tài liệu về y tế, thu nhập, nghề nghiệp hoặc ý kiến chuyên gia. Số tiền mà doanh nghiệp bảo hiểm đưa ra hay số tiền mà người bị thiệt hại yêu cầu không đương nhiên trở thành số tiền được tòa án công nhận, và kết quả giám định mức độ suy giảm cũng không tự động quyết định số tiền bồi thường. Khi xử lý trên thực tế, quý vị cần kiểm tra đồng thời đơn bảo hiểm và điều khoản hợp đồng bảo hiểm, nội dung thông báo tai nạn, văn bản trả lời của doanh nghiệp bảo hiểm, diễn biến điều trị và tài liệu về thiệt hại.
 

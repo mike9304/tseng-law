@@ -349,7 +349,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Vụ việc hình sự',
             paragraphs: [
               'Văn phòng hỗ trợ ở giai đoạn điều tra và giai đoạn xét xử, cho cả người bị tình nghi hoặc bị cáo và người bị hại, cũng như đánh giá rủi ro hình sự phát sinh trong hoạt động kinh doanh.',
-              'Vụ việc hình sự thường có thời hạn ngắn và các mốc thủ tục cố định, vì vậy nếu quý vị đã nhận được giấy tờ của cơ quan có thẩm quyền, hãy nêu ngày ghi trên giấy tờ đó ngay khi liên hệ để nội dung được xem xét đúng thứ tự ưu tiên.',
+              'Vụ việc hình sự thường có thời hạn ngắn và các mốc thủ tục cố định, vì vậy nếu quý vị đã nhận được giấy tờ của cơ quan có thẩm quyền, hãy nêu ngày ghi trên giấy tờ đó ngay khi liên hệ để nội dung được xem xét theo đúng trình tự.',
             ],
           },
           {

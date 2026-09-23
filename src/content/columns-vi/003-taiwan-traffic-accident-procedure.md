@@ -49,7 +49,7 @@ Lựa chọn sẽ khác nhau tùy việc thời hiệu có bị gián đoạn ha
 
 Trách nhiệm hình sự chỉ có thể được phán định khi xác định được từng bên có vi phạm nghĩa vụ chú ý hay không, và vi phạm đó có quan hệ nhân quả với thương tích của bên kia hay không. Việc cả hai bên đều có lỗi vô ý (過失) không đương nhiên làm phát sinh trách nhiệm về tội gây thương tích do vô ý.
 
-Về dân sự, theo Điều 217 Bộ luật Dân sự, nếu người bị thiệt hại cũng có lỗi góp phần làm phát sinh hoặc mở rộng thiệt hại thì tòa án có thể giảm nhẹ hoặc miễn khoản bồi thường thiệt hại. Ví dụ, nếu thiệt hại được công nhận là 1.000.000 TWD theo Đài tệ mới (新臺幣, TWD) và lỗi của người bị thiệt hại được đánh giá là 50% thì trước các điều chỉnh khác, khoản bồi thường có thể giảm còn 500.000 TWD.
+Về dân sự, theo Điều 217 Bộ luật Dân sự, nếu người bị thiệt hại cũng có lỗi góp phần làm phát sinh hoặc mở rộng thiệt hại thì tòa án có thể giảm nhẹ hoặc miễn khoản bồi thường thiệt hại. Ví dụ, nếu thiệt hại được công nhận là 1.000.000 đài tệ mới (新臺幣, TWD) và lỗi của người bị thiệt hại được đánh giá là 50% thì trước các điều chỉnh khác, khoản bồi thường có thể giảm còn 500.000 TWD.
 
 Kết quả giám định hoặc bảng phân tích sơ bộ có thể là tài liệu quan trọng, nhưng không ràng buộc tòa án một cách máy móc. Tòa án xem xét đồng thời toàn bộ chứng cứ như lời khai, hình ảnh và tình trạng xe.
 
@@ -175,7 +175,7 @@ Nghĩa vụ tham gia bảo hiểm theo Điều 6 Luật Bảo hiểm Trách nhi�
 
 Trong vụ tai nạn chỉ liên quan tới một xe, người lái chiếc xe đó thông thường không thuộc đối tượng được chi trả theo bảo hiểm bắt buộc của chính chiếc xe ấy. Tuy nhiên, trong vụ tai nạn có nhiều xe liên quan, có trường hợp người lái xe có thể yêu cầu doanh nghiệp bảo hiểm bắt buộc của xe liên quan khác chi trả.
 
-Tiêu chuẩn chi trả (強制汽車責任保險給付標準) sửa đổi ngày 29 tháng 5 năm 2026 được áp dụng cho vụ tai nạn xảy ra từ ngày 1 tháng 7 năm 2026. Mức trần chi phí y tế hợp lý và cần thiết cho thương tích là 200.000 TWD theo Đài tệ mới; khoản chi trả cho tình trạng mất khả năng lao động (失能) là 80.000–3.000.000 TWD theo 15 cấp độ luật định; khoản chi trả cho trường hợp tử vong là 3.000.000 TWD; và mức tối đa cộng gộp của khoản tử vong, mất khả năng lao động và chi phí y tế cho mỗi người bị hại trong mỗi vụ tai nạn là 3.200.000 TWD. Với vụ tai nạn xảy ra trước thời điểm đó, tiêu chuẩn trước đây có thể được áp dụng.
+Tiêu chuẩn chi trả (強制汽車責任保險給付標準) sửa đổi ngày 29 tháng 5 năm 2026 được áp dụng cho vụ tai nạn xảy ra từ ngày 1 tháng 7 năm 2026. Mức trần chi phí y tế hợp lý và cần thiết cho thương tích là 200.000 đài tệ mới (新臺幣, TWD); khoản chi trả cho tình trạng mất khả năng lao động (失能) là 80.000–3.000.000 TWD theo 15 cấp độ luật định; khoản chi trả cho trường hợp tử vong là 3.000.000 TWD; và mức tối đa cộng gộp của khoản tử vong, mất khả năng lao động và chi phí y tế cho mỗi người bị hại trong mỗi vụ tai nạn là 3.200.000 TWD. Với vụ tai nạn xảy ra trước thời điểm đó, tiêu chuẩn trước đây có thể được áp dụng.
 
 Bảo hiểm trách nhiệm đối với người thứ ba (第三人責任險), bảo hiểm tai nạn cho người lái xe (駕駛人傷害險) và bảo hiểm thiệt hại thân xe (車體損失險) đều là sản phẩm bảo hiểm tự nguyện theo hợp đồng. Phạm vi bảo đảm trên thực tế thay đổi tùy theo người được bảo hiểm, hạn mức, mức tự chịu (自負額), các trường hợp loại trừ, lỗi cùng những điều kiện khác trong điều khoản hợp đồng, nên quý vị phải kiểm tra riêng từng đơn bảo hiểm và điều khoản.
 

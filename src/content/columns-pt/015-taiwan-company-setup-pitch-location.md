@@ -61,7 +61,7 @@ Na prática, também não é necessário verificar todos os ramos na inscrição
 
 Segundo as «[instruções de funcionamento do serviço de consulta assistida de locais de negócio da cidade de Taipé](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) e o guia em vigor da cidade de Taipé, vigora uma regra de junção.
 
-Desde 1 de janeiro de 2023, no pedido de inscrição de constituição, de transferência de sede ou de adição de ramos de atividade de uma sociedade ou de um comércio (incluindo a sucursal (分公司) e o estabelecimento auxiliar (分支機構)), o resultado da consulta prévia do local **deve** ser junto ao pedido de inscrição, independentemente do setor.
+Desde 1 de janeiro de 2023, no pedido de inscrição de constituição, de transferência de sede ou de adição de ramos de atividade de uma sociedade ou de um comércio (incluindo a sucursal (分公司) e o estabelecimento auxiliar (分支機構)), o resultado da consulta prévia do local **deve** ser juntado ao pedido de inscrição, independentemente do setor.
 
 A lista abaixo dos «ramos sujeitos a consulta por iniciativa do serviço» (主動查詢之營業項目) designa os ramos que o gabinete do comércio consulta por iniciativa própria durante o exame da inscrição (隨案主動查詢) quando o ramo figura no pedido mas falta no resultado junto; o facto de um ramo não figurar nesta lista não significa que a verificação seja dispensada.
 

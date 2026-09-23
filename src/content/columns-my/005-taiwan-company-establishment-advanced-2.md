@@ -2,7 +2,7 @@
 title: "ထိုင်ဝမ်တွင် ကုမ္ပဏီတည်ထောင်ခြင်း — အဆင့်မြင့်အပိုင်း 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
-date_display: "13 စက်တင်ဘာ 2025"
+date_display: "2025 ခုနှစ် စက်တင်ဘာ 13 ရက်"
 read_time: "2 မိနစ်"
 categories:
   - "ထိုင်ဝမ်တွင် ကုမ္ပဏီတည်ထောင်ခြင်း"

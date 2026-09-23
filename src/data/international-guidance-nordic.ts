@@ -1598,7 +1598,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Sijoittaminen ja yhtiön perustaminen Taiwanissa',
           paragraphs: [
-            'Avustamme ulkomaisia sijoittajia ja yrityksiä yhtiön perustamisessa ja toiminnassa Taiwanissa: oikeudellisen muodon valinta, asiakirjojen valmistelu ja jättäminen, pääomansijoitus, pankkiasiat, toimitilan tarkastus sekä toimialavaatimukset. Tuemme myös kirjanpitoa ja veroja, jotka syntyvät perustamisesta ja toiminnasta Taiwanissa.',
+            'Avustamme ulkomaisia sijoittajia ja yrityksiä yhtiön perustamisessa ja toiminnassa Taiwanissa: oikeudellisen muodon valinta, asiakirjojen valmistelu ja jättäminen, pääomansijoitus, pankkiasiat, toimitilan tarkastus sekä toimialavaatimukset. Tuemme teitä myös perustamisesta ja Taiwanissa toimimisesta aiheutuvissa kirjanpito- ja veroasioissa.',
             'Menettelyn vaiheet ja kesto vaihtelevat yhtiömuodon, sijoittajan, toimialan, pankin ja jo olemassa olevien asiakirjojen mukaan. Yhtiön perustaminen ei yksin johda oleskelulupaan (居留) tai työlupaan (工作許可): ne ovat erillisiä menettelyjä, jotka arvioidaan henkilön tilanteen mukaan.',
           ],
         },
@@ -1657,8 +1657,8 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perustaminen ja rakentuminen',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) perustivat vuonna 2016 asianajajat, jotka ovat opiskelleet National Taiwan Universityssa (國立臺灣大學). Kiinankielinen nimi 昊鼎 yhdistää merkin 昊 (”laaja taivas”) merkkiin 鼎 (”luja perusta”) ja kuvaa toimiston suuntaa perustamisesta lähtien.',
-            'Meillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Kaohsiungin toimisto keskittyy yhtiöoikeuteen ja yritysten hallintoon ja käsittelee siviili-, rikos- ja hallinto-oikeudellisia riitoja. Taichungin toimisto käsittelee rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Pingtungin toimisto avattiin vuonna 2017 paikallista tarvetta varten.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) perustivat vuonna 2016 asianajajat, jotka ovat opiskelleet National Taiwan Universityssä (國立臺灣大學). Kiinankielinen nimi 昊鼎 yhdistää merkin 昊 (”laaja taivas”) merkkiin 鼎 (”luja perusta”) ja kuvaa toimiston suuntaa perustamisesta lähtien.',
+            'Meillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Kaohsiungin toimisto keskittyy yhtiöiden hallinnointiin ja käsittelee siviili-, rikos- ja hallinto-oikeudellisia riitoja. Taichungin toimisto käsittelee rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Pingtungin toimisto avattiin vuonna 2017, jotta alueen päämiehiä voidaan palvella paikan päällä.',
             'Asianajotyön rinnalla on vuodesta 2020 myös Hovering Accounting Office, joka tarjoaa kirjanpitoa ja verosuunnittelua yrittäjille ja varakkaille yksityishenkilöille.',
           ],
         },
@@ -1710,7 +1710,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Neuvonta voi olla maksullinen',
           paragraphs: [
-            'Neuvonta asianajajan kanssa voi olla maksullinen palvelu. Tämä sivu ei sano, että ensimmäinen keskustelu olisi maksuton, eikä mitään osaa saa lukea niin.',
+            'Neuvonta asianajajan kanssa voi olla maksullinen palvelu. Tämä sivu ei tarkoita, että ensimmäinen keskustelu olisi maksuton, eikä mitään kohtaa saa lukea niin.',
             'Jos neuvonta on maksullinen, määrä ja maksutapa ilmoitetaan ennen sen tapahtumista.',
           ],
         },
@@ -1814,7 +1814,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Miten kulut lasketaan?',
           answer:
-            'Ensin vahvistetaan työn laajuus, sen jälkeen määrä ja laskentatapa vahvistetaan teidän kanssanne ennen työn alkamista. Tämä sivu ei ilmoita lukuja eikä sano, että ensimmäinen keskustelu olisi maksuton.',
+            'Ensin vahvistetaan työn laajuus, sen jälkeen määrä ja laskentatapa vahvistetaan teidän kanssanne ennen työn alkamista. Tämä sivu ei ilmoita lukuja eikä tarkoita, että ensimmäinen keskustelu olisi maksuton.',
         },
         {
           question: 'Entä jos asianne on hyvin kiireellinen?',

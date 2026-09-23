@@ -41,7 +41,7 @@ Ennen markkinoille tulon rakenteen päättämistä päätoimipaikka voi sisäise
 | Laskutus ja kustannukset | Kuka laskuttaa ja perii, ja miten kustannukset tilitetään päätoimipaikan ja Taiwanin organisaation välillä? |
 | Laatu ja riidat | Kuka vahvistaa tarkastuksen tuloksen ja vastaanottaa valitukset vioista tai vahingosta? |
 
-Erityisesti jos ostosopimuksen myyjä ei ole se yritys, joka antaa teknisen tuen, liitteiden on erotettava, keneltä asiakas voi vaatia mitä velvoitteita.
+Erityisesti jos ostosopimuksen myyjä ei ole se yritys, joka antaa teknisen tuen, asiakirjojen on erotettava, keneltä asiakas voi vaatia mitä velvoitteita.
 
 ## 2. Erottelu tytäryhtiön, sivuliikkeen ja ulkomaisen yhtiön edustuston välillä Taiwanissa
 
@@ -61,7 +61,7 @@ Jos päätetään perustaa itsenäinen oikeushenkilö Taiwanissa, on myös valit
 
 ### Yhtiö, jolla on rajoitettu vastuu (有限公司): kevyempi hallinto, mutta tiukemmin rajoitettu osuuksien luovutus
 
-Se voidaan perustaa 1 luonnollisella henkilöllä tai useammalla (有限公司) tai taiwanilaisilla tai ulkomaisilla oikeushenkilöillä osakkeenomistajina; osakkeenomistajat ovat lähtökohtaisesti vastuussa sijoituksensa määrään asti. Yhtiöllä on 1–3 johtajaa, valittuina osakkeenomistajista. Osakkaat, jotka eivät hoida yhtiön asioita, voivat käyttää tarkastusoikeutta, joten erillistä yhtiön valvojaa (監察人) ei tarvitse nimetä. Ellei yhtiöjärjestyksessä toisin määrätä, 1 osakkeenomistajaa kohden on 1 ääni, joten määräysvallan ei tarvitse vastata sijoitussuhdetta. Tavallisen osakkeenomistajan sijoituksen luovutus edellyttää lähtökohtaisesti muiden osakkaiden äänioikeuksien enemmistön suostumusta; johtajalle 2/3 tai enemmän. Se sopii paremmin yksinkertaisiin osakkeenomistajasuhteisiin ja vakaaseen määräysvaltaan kuin toistuvaan pääomanhankintaan tai osuuksien kauppaan. Myöhemmin se voidaan muuttaa osakeyhtiöksi (股份有限公司).
+Se voidaan perustaa 1 luonnollisella henkilöllä tai useammalla (有限公司) tai taiwanilaisilla tai ulkomaisilla oikeushenkilöillä osakkeenomistajina; osakkeenomistajat ovat lähtökohtaisesti vastuussa sijoituksensa määrään asti. Yhtiöllä on 1–3 johtajaa (董事), jotka valitaan osakkeenomistajista. Osakkaat, jotka eivät hoida yhtiön asioita, voivat käyttää tarkastusoikeutta, joten erillistä yhtiön valvojaa (監察人) ei tarvitse nimetä. Ellei yhtiöjärjestyksessä toisin määrätä, 1 osakkeenomistajaa kohden on 1 ääni, joten määräysvallan ei tarvitse vastata sijoitussuhdetta. Tavallisen osakkeenomistajan sijoituksen luovutus edellyttää lähtökohtaisesti muiden osakkaiden äänioikeuksien enemmistön suostumusta; johtajalle 2/3 tai enemmän. Se sopii paremmin yksinkertaisiin osakkeenomistajasuhteisiin ja vakaaseen määräysvaltaan kuin toistuvaan pääomanhankintaan tai osuuksien kauppaan. Myöhemmin se voidaan muuttaa osakeyhtiöksi (股份有限公司).
 
 ### Osakeyhtiö (股份有限公司): sopiva, jos halutaan ottaa muita sijoittajia tai listautuminen on ennakoitavissa
 
@@ -83,7 +83,7 @@ Työluvan saaminen on suhteellisen helpompaa taiwanilaisen tytäryhtiön tai ulk
 
 ## 7. Rakenteet, jotka kaupan vaiheen mukaan voivat sopia
 
-Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät vahvista, että tietty tapa olisi lainmukainen tai parempi.
+Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät takaa, että tietty tapa olisi lainmukainen tai parempi.
 
 **Ulkomaiset yritykset, jotka tähtäävät alkuvaiheen vientiin.** Jos Taiwanissa ei vielä ole työntekijöitä eikä varastoja ja halutaan tutkia kysyntää riippumattoman jakelijan kautta, voidaan ensin katsoa toimitusta, jakelusuhdetta ja toimialaa Taiwanissa. Pelkkä jakelusopimus ei ratkaise kaikkia sääntelykysymyksiä Taiwanissa.
 
@@ -91,11 +91,11 @@ Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät vahvista, et
 
 **Ulkomaiset yritykset markkinatutkimusvaiheessa.** Jos ennen myyntiorganisaatiota halutaan vain tieto- ja yhteystoimintoja, voidaan arvioida edustustoa (代表人辦事處). Jos tosiasiallinen suunnitelma käsittää varastojen myynnin tai työn paikan päällä, on erikseen vahvistettava, ovatko nämä toimet sallittuja.
 
-## 8. Ensimmäiseen keskusteluun riittää toiminnan yleiskuva; kaikkia luottamuksellisia liitteitä ei tarvitse heti luovuttaa
+## 8. Ensimmäiseen keskusteluun riittää toiminnan yleiskuva; kaikkia luottamuksellisia aineistoja ei tarvitse heti luovuttaa
 
 Ensimmäistä yhteydenottoa varten (neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi) voidaan koota perustiedot päätoimipaikasta ja sijoittajasta, yleinen kuvaus tuotteesta tai palvelusta, suunniteltu transaktiovirta, suunnitelmat henkilöstöstä ja laitoksista Taiwanissa sekä sopimus- ja tukiehdot, joita asiakkaat vaativat. Se, mitä ei ole vielä päätetty, voidaan merkitä ”odottavaksi”.
 
-Ensimmäisessä yhteydessä ei ole tarpeen liittää kaikkia luottamuksellisia asiakasliitteitä tai yksityiskohtaisia prosessitietoja. Sen jälkeen kun vastapuolen nimi eturistiriitatarkastusta varten on ilmoitettu, tarvittavat liitteet ja lähetystapa vahvistetaan vastuuhenkilön ohjeiden mukaan.
+Ensimmäisessä yhteydessä ei ole tarpeen liittää kaikkia luottamuksellisia asiakasaineistoja tai yksityiskohtaisia prosessitietoja. Sen jälkeen kun vastapuolen nimi eturistiriitatarkastusta varten on ilmoitettu, tarvittavat aineistot ja lähetystapa vahvistetaan vastuuhenkilön ohjeiden mukaan.
 
 ## Usein kysyttyjä kysymyksiä
 
@@ -113,6 +113,6 @@ Vaiheittainen siirtymä voidaan suunnitella, mutta on myös tutkittava olemassa 
 
 ## Keskustelu markkinoille tulon rakenteesta Taiwanissa
 
-Jos Taiwanissa halutaan myydä, johtaa varastoja, antaa asennustukea tai palkata paikallisesti, järjestäkää ensin työ, jonka päätoimipaikka suorittaa, ja se, joka kuuluu Taiwanin organisaatiolle. Keskustelunaiheiden ja eturistiriitojen vahvistamisen jälkeen toimisto selvittää, mitä liitteitä tarvitaan, ja sen, mitä palveluja voidaan tarjota.
+Jos Taiwanissa halutaan myydä, johtaa varastoja, antaa asennustukea tai palkata paikallisesti, järjestäkää ensin työ, jonka päätoimipaikka suorittaa, ja se, joka kuuluu Taiwanin organisaatiolle. Keskustelunaiheiden ja eturistiriitojen vahvistamisen jälkeen toimisto selvittää, mitä aineistoja tarvitaan, ja sen, mitä palveluja voidaan tarjota.
 
-Esimerkki aiheesta: keskustelu puolijohdeyrityksen markkinoille tulon rakenteesta Taiwanissa. Ensimmäisessä yhteydessä ilmoitetaan yhtiön nimi, päätoimipaikan maa, suunniteltu tuote tai palvelu, toimintasuunnitelma Taiwanissa ja toivottu keskustelukieli. Luottamukselliset suunnitteluliitteet ja täydelliset sopimukset lähetetään vasta lisäohjeiden vastaanottamisen jälkeen. Tosiasiallisesti käytettävissä olevat keskustelukielet ja kunkin toimeksiannon laajuus on vahvistettava yhteydenoton yhteydessä.
+Esimerkki aiheesta: keskustelu puolijohdeyrityksen markkinoille tulon rakenteesta Taiwanissa. Ensimmäisessä yhteydessä ilmoitetaan yhtiön nimi, päätoimipaikan maa, suunniteltu tuote tai palvelu, toimintasuunnitelma Taiwanissa ja toivottu keskustelukieli. Luottamukselliset suunnitteluaineistot ja täydelliset sopimukset lähetetään vasta lisäohjeiden vastaanottamisen jälkeen. Tosiasiallisesti käytettävissä olevat keskustelukielet ja kunkin toimeksiannon laajuus on vahvistettava yhteydenoton yhteydessä.

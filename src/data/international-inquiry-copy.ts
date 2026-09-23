@@ -1321,7 +1321,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     submitLabel: 'Lähetä pyyntö',
     submittingLabel: 'Lähetetään…',
     successMessage:
-      'Olemme vastaanottaneet pyyntönne; se odottaa tarkastusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.',
+      'Olemme vastaanottaneet pyyntönne; se odottaa tarkistusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.',
     savedNotificationPendingMessage:
       'Pyyntönne on tallennettu, mutta ilmoitus toimistolle ei ole vielä vahvistettu. Kirjoittamanne ei katoa. Jos ette saa vastausta, voitte myös kirjoittaa yhteyssivun sähköpostiosoitteeseen.',
     receiptIdLabel: 'Vastaanottonumero',

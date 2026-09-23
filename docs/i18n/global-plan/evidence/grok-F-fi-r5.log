@@ -1,0 +1,114 @@
+# WO-F-fi — round 5 Finnish fix lane (Claude Opus 5)
+worktree: /Users/son7/Projects/tseng-law-fix-fi-r5 (branch fix/native-fi-r5-20260922)
+inputs: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/fi-a.md, rounds/r5/fi-b.md
+date: 2026-09-23
+
+## Rows applied
+
+### fi-a (guidance pack + columns 001–009)
+- a1 P2 guidance (nordic.ts, about page): "keskittyy yhtiöoikeuteen ja yritysten hallintoon" -> "keskittyy yhtiöiden hallinnointiin". (corporate governance = yhtiöiden hallinnointi)
+- a2 P2 guidance: "avattiin vuonna 2017 paikallista tarvetta varten." -> "avattiin vuonna 2017, jotta alueen päämiehiä voidaan palvella paikan päällä."
+- a3 P2 001: "Yritysvoitto verotetaan periaatteessa asuinvaltion puolella" -> "Yritysvoittoa verotetaan periaatteessa vain asuinvaltiossa" (restores "only")
+- a4 P2 001: "että aiotussa paikassa saisi heti esiintyä" -> "että toimintaa saisi heti aloittaa aiotussa paikassa"
+- a5 P2 001: "oleskelun motiivia ja kestoa" -> "oleskelun tarkoitusta ja kestoa"
+- a6 P2 002: "menettelyllistä yhdenvertaisuutta" -> "menettelyn oikeudenmukaisuutta"
+- a7 P2 003: 3-month sentence rewritten to "tuomioistuimet määräävät käytännössä yleensä noin 3 kuukauden vapaudenmenetyksen; kyse ei ole taatusta seuraamuksesta." Systemic sweep: the parallel 4-month / 6-month sentence rewritten the same way (2 instances). The guarantee denial (R3) is kept in both.
+- a8 P2 003: "ei siksi ole syytä pitää itsestään selvänä." -> "En siksi suosittele koko oikeudenkäynnin jättämistä vakuutusyhtiön hoidettavaksi." (matches EN "Therefore, I do not recommend entrusting all litigation to the insurance company.")
+- a9 P2 003: "osoitus katumuksesta ja asian vakavuuden ymmärtämisestä jää puuttumaan." -> "Silloin vahingonkärsijä ei koe aiheuttajassa katumusta eikä vilpittömyyttä."
+- a10 P2 004: "rakennus-, asennus- tai asennustyöt" -> "rakennus-, kokoonpano- tai asennustyöt"
+- a11 P2 004: "yhtiöjohtaminen" -> "yhtiöiden hallinnointi" (listing standards)
+- a12 P2 004: "osakkeenomistajakokous ja johtajat" -> "osakkeenomistajakokous ja hallituksen jäsenet"
+- a13 P2 004: "tulevat suunnitelmat on kuvattava mukaan." -> "tulevat suunnitelmat on otettava huomioon samalla."
+- a14 P2 004: "turvallisuusjohtamisen loukkaus" -> "turvallisuusmääräysten rikkominen"
+- a15 P2 006: fines re-attributed — "herra Linille määrättiin hallinnollinen sakko (罰鍰) TWD 40.000 (新臺幣) ja kahdelle työntekijälle TWD 10.000 ja TWD 20.000." (EN: Mr Lin 40,000; two employees 10,000 and 20,000). Thousands kept dot-grouped, see SKIP a20.
+- a16 P2 006: "työn ja olemassaolon suojaa" -> "työn ja toimeentulon suojaa"
+- a17 P2 007: "keinoja, joita voisi keskenään kostonhimoisesti vaihtaa" -> "Lapsen elatusavun maksamista ja tapaamisen toteuttamista ei saa jättää tekemättä eikä käyttää keskinäiseen kostoon"
+- a18 P2 007: "jokainen muutos aina edellyttäisi osapuolille täysin ennakoimatonta tapahtumaa" -> "Pyyntö lapsen elatusavun muuttamisesta ei rajoitu tapahtumiin, joita osapuolet eivät voineet ennakoida silloin, kun he ensin sopivat elatuksesta tai kun tuomioistuin ensin määräsi sen."
+- a19 P2 008: "antaa virheellisiä tietoja" -> "antaa totuudenvastaisia tietoja" (aligns with 009)
+- a21 P2 (partial, see PARTIAL below): bare digit "1" replaced by the inflected word where the checker still parses the number — 001 "periaatteessa 1 seuraavista" -> "periaatteessa yksi seuraavista" (x4); 002 "toiminnan 1 kuukaudeksi" -> "yhdeksi kuukaudeksi" (x2), "enintään 1 vuosi" -> "enintään yksi vuosi"; 004 "2 yhtiön … 1 oikeushenkilöksi" -> "kahden yhtiön … yhdeksi oikeushenkilöksi"; 007 "vain 1 puolen syyksi" -> "vain toisen puolison syyksi" (x2), "rekisteröinti 1 nimeen" -> "rekisteröinti yhden henkilön nimiin" (x4), "1 asiassa kuultua" -> "yhdessä asiassa kuultua", "vain 1 seikka monista" -> "vain yksi seikka monista"; 008 "keskeyttämistä 1 kuukaudeksi" -> "yhdeksi kuukaudeksi". Two further clauses reworded so the digit sits in a grammatical slot: 001 "laskettuna Taiwanin viimeiseltä 1 vuodelta" -> "laskettuna Taiwanin viimeisen 1 vuoden luvuista" (x2); 002 "yksittäinen keskeytysjakso ei saa 1 jaksolla ylittää 1 vuotta" -> "keskeytys ei saa 1 kerralla ylittää 1 vuotta" (x2).
+- a23 P2 guidance: "National Taiwan Universityssa" -> "National Taiwan Universityssä" (1 instance; the rest of the pack already used -ssä/-stä)
+- a24 P2 guidance: inquiry status unified on tarkistus — internationalInquiryCopy.fi "se odottaa tarkastusta" -> "se odottaa tarkistusta"; guidanceAnswers.fi.services.answer "on tarkastanut lähettämänne sisällön" -> "on tarkistanut …"; guidanceAnswers.fi.faq.answer "odottaa asianajajan tarkastusta" -> "odottaa asianajajan tarkistusta". "Tietojenne tarkastusta" (privacy, access right) and "toimitilan tarkastus" (premises inspection) left as they are, per the row.
+- a25 P2 guidance: "Tämä sivu ei sano, että ensimmäinen keskustelu olisi maksuton, eikä mitään osaa saa lukea niin." -> "Tämä sivu ei tarkoita, että ensimmäinen keskustelu olisi maksuton, eikä mitään kohtaa saa lukea niin." Systemic sweep: the FAQ fee answer "eikä sano, että ensimmäinen keskustelu olisi maksuton" -> "eikä tarkoita, …". The denial of a free first meeting is unchanged.
+- a26 P2 guidance: "Tuemme myös kirjanpitoa ja veroja, jotka syntyvät …" -> "Tuemme teitä myös perustamisesta ja Taiwanissa toimimisesta aiheutuvissa kirjanpito- ja veroasioissa." (fixes the tukea + partitive-object collocation; "Avustamme" avoided because the previous sentence already opens with it)
+- a27 P2 002: "kirjanpidollinen heijastus" -> "kirjanpitokäsittely"
+- a28 P2 007: "nykyinen elämän keskus" -> "Ensin on selvitettävä, missä osapuolten elämä nykyisin keskittyy"; checklist item 1 "tosiasiallisesta elämän keskuksesta" -> "tosiasiallisesta elämän painopisteestä"
+- a29 P2 004: "Lopullinen valinta on varmempi tutkia, jos … jakavat samat seikat." -> "Lopullinen valinta on turvallisinta tutkia niin, että … käyvät läpi samat seikat."
+
+### fi-b (columns 010–018)
+- b1 P1 014: *purkaa* -> *irtisanoa* for notice-based resignation — "Kun työntekijä irtisanoo toistaiseksi voimassa olevan työsopimuksen (不定期契約)"; "irtisanoa sopimuksen 30 päivän ennakkoilmoituksella"; "16 artikla on säännös työnantajan suorittamasta irtisanomisesta". (The *purkaminen* instances in 002/004 are 解散 = dissolution of a company and were left alone.)
+- b2 P2 011: "eikä totea, että lupa tai rekisteröinti saataisiin" -> "eikä takaa, …"
+- b3 P2 018: "eivät vahvista, että tietty tapa olisi lainmukainen tai parempi" -> "eivät takaa, …"
+- b4 P2 014: "jonka työnantajan alun perin tuli kantaa" -> "jonka työnantaja normaalisti kantaisi"
+- b5 P2 014 (systemic): *liite* -> *näyttö / aineisto / maksutosite / asiakirja* — 19 replacement sites in 014 covering 22 word instances (incl. perusliitteitä, tutkimusliitteet, maksuliitteet, ilmoitusliitteissä, lisäliitteet). Swept beyond the quoted file: 016 "Liitteillä on vahvistettava" -> "Aineistolla on vahvistettava"; 018 six sites ("luottamuksellisia liitteitä"/"asiakasliitteitä"/"suunnitteluliitteet"/"mitä liitteitä tarvitaan"/"tarvittavat liitteet"/"liitteiden on erotettava" -> aineisto/asiakirjat), matching the EN word "materials"/"documents". "Liittyvät oppaat" and other *liittyä* forms untouched.
+- b6 P2 016: "kuluvat sopimukset" -> "voimassa olevat sopimukset"
+- b7 P2 017: "Työohje maahantulokiellosta (禁止入國), joka pätee sisäministeriön maahanmuuttovirastossa (內政部移民署)" -> "Sisäministeriön maahanmuuttoviraston (內政部移民署) voimassa oleva hallinnollinen ohje maahantulokiellosta (禁止入國)"
+- b8 P2 017/015 (systemic): *kauppa* -> *liiketoiminta / yritys / elinkeino* — 20 replacement sites in 017 covering 25 instances (incl. "yhtiö- ja kaupparekisteröinti" x3 -> "yhtiö- ja elinkeinorekisteröinti", FAQ "jokaisen kaupan, joka liittyy logistiikkaan" -> "jokaisen logistiikkaan liittyvän yrityksen"); 015 "yhtiön tai kaupan" -> "yhtiön tai muun yrityksen". Swept further: 001 "yhtiö- ja kaupparekisteröinti" x2 -> "yhtiö- ja elinkeinorekisteröinti". Left in place where *kauppa* is correct: "kaupan toteuttaminen" (closing a transaction), "kauppahinnan tarkistus", "pörssin ulkopuolella kaupattuihin arvopapereihin" (017), "kaupallinen toimistotila" (013), the trade senses in 018.
+- b9 P2 018: "Yhtiöllä on 1–3 johtajaa, valittuina osakkeenomistajista." -> "Yhtiöllä on 1–3 johtajaa (董事), jotka valitaan osakkeenomistajista." (董事 glossed at first mention in the section)
+- b12 P2 011: nominative subject fixed — "Valheellisten tietojen ilmoittamisesta tuoterekisteröinnissä tai valheellisten tietojen kirjaamisesta PIF:ään voidaan määrätä hallinnollinen sakko"
+- b13 P2 014: "Suhteellisuusperiaate täyttämättömään jaksoon (預付性給付) vaatii ensin …" -> "Suhteellinen palautus täyttämättömän jakson mukaan (預付性給付) edellyttää ensin … vahvistamista."
+- b14 P2 014 (systemic): the broken genitive chain fixed in 9 instances — "sopimuksen vähimmäispalvelusajasta rikkomisesta" x3 and "sopimuksen vähimmäispalvelusajasta pätevyys" x3 -> "vähimmäispalvelusaikaa koskevan sopimuksen …"; "korvauksena sopimuksesta vähimmäispalvelusajasta" x3 -> "korvauksena vähimmäispalvelusaikaa koskevasta sopimuksesta". (The well-formed "sopimus / sopimukselle / sopimuksella vähimmäispalvelusajasta" forms were left alone.)
+- b15 P2 016: "jako-sopimuksella" / "jako-sopimuksessa" -> "perinnönjakosopimuksella" / "perinnönjakosopimuksessa"
+- b16 P2 011: "maahantuojakelpoisuuden saamiseen" -> "maahantuojan aseman saamiseen"
+- b17 P2 011: "tulla ytimeltään arvioiduiksi mainonnaksi" -> "voidaan … katsoa asiallisesti mainonnaksi"
+- b18 P2 016: "sen tulos voi olla heijastettava ensin" -> "sen tulos on ehkä otettava huomioon ensin"
+- b19 P2 016: "Oikeus jäämän erotuksen jakamiseen (剩餘財產差額分配)" -> "Oikeus jäännösvarallisuuden erotuksen jakamiseen (剩餘財產差額分配)" (x2; the gloss was already present)
+
+## Rows skipped (with reason)
+
+- a20 P2 / b10 P2 — space thousands separators ("500 000", "1 579 589"). SKIPPED: ACCEPTED-ROUND lists "requests for space thousands separators" as a standing skip, and the checker confirms it: `NUMBER_THOUSAND_STYLE.fi = 'dot'` in scripts/check-column-translation.mjs, so a space-grouped figure is parsed as two numbers and `numbers` FAILs. Dot grouping kept in all 18 files (incl. the reformatted 006 fines in a15).
+- a22 P2 / b11 P2 — remove U+200B, and turn 003 Q16–Q20 into `##` headings. SKIPPED, two independent reasons:
+  1. `checkBlocks` compares `countZwsp(source.body)` with the target and FAILs on any difference. The Korean canonical source carries the identical counts (003: 52 in src/content/columns/ and 52 in columns-fi; 005: 8 and 8; 013: 5 and 5), and the sibling locales sv/da/nb/de carry the same 52 in 003 — the blanks are a source artifact, not a Finnish defect. Same for the `**​**` empty bold lines in 005: 4 in the Korean source, 4 in fi, 4 in sv, 0 only in the EN rewrite.
+  2. Making Q16–Q20 headings would break `checkHeadings`: the English source itself has them as plain body lines (columns-en/003 line 199 "Q16. After an accident, …"), and ACCEPTED-ROUND forbids adding new headings.
+- a21 P2 — PARTIAL, not fully applied. Every remaining bare "1"/"2"/"3" was tested individually against the checker (script kept at .tmp-fi/trydigit.py); each of the following made `numbers` FAIL with "missing from translation", because the Korean source carries the same digit and the checker's Finnish word-numeral lexicon (`buildFiLexicon`) only recognises the nominative phrases "yksi vuosi/vuotta/kuukausi/kuukautta/päivä(ä)/viikko(a)/henkilö(ä)" and bare "kaksi…kymmenen" — every inflected Finnish form ("yhden", "kahden", "kolmena") is invisible to it. Kept in digit form per RULEBOOK R6 / ACCEPTED-ROUND ("keep the previous form for that number and note it"): 001 "alle 1 vuoden" (x4), "olemassa 1 vuoden tai pidempään" (x4); 002 "kuitataan 1 tilillä", "päätettyinä 1 ilmoituksella"; 004 "tavallisesti 2 kuukauden verokaudelta"; 005 "enemmän kuin 1 ulkomaan kansalaisen"; 008 "täyttä 1 palvelusvuotta" (x2), "kutakin 1 vuotta kohden" (x2), "3 peräkkäisenä päivänä" (x3). All of these are grammatically well formed when the digit is read in the required case ("alle yhden vuoden", "kolmena peräkkäisenä päivänä"); what remains is the style preference the reviewer raises.
+
+## Systemic patterns and instance counts
+
+| pattern (verdict) | action | instances changed |
+|---|---|---|
+| a: corporate governance = hallinto/yhtiöoikeus/yhtiöjohtaminen | -> "yhtiöiden hallinnointi" | 2 (guidance about page, 004) |
+| a: inquiry status tarkistus vs tarkastus | unified on tarkistus | 3 (inquiry copy, answers.services, answers.faq); privacy "tietojenne tarkastusta" and "toimitilan tarkastus" kept |
+| a: usual court result denied as having no typical sanction | restored "yleensä", kept the guarantee denial | 2 sentences (003 Q17, 3/4/6 months) |
+| a: bare digit for yksi / agreement | word form where the checker parses it | 18 instances across 001, 002, 004, 007, 008 (+2 clauses reworded to keep the digit grammatical); 19 instances checker-blocked, listed above |
+| a: thousands with a period | skipped (checker) | 0 |
+| a/b: U+200B blanks and `**​**` | skipped (source parity, checker) | 0 |
+| b: *kauppa* for a business / 商業 | -> liiketoiminta / yritys / elinkeino | 28 (017 x25, 015 x1, 001 x2); 6 correct *kauppa* senses left |
+| b: disclaimer uses *toteaa* / *vahvistaa* where EN denies a guarantee | -> *takaa* | 2 (011, 018); 016 "ei vahvista koko pesän kohdentamista" is a will, not a disclaimer, left |
+| b: *liite* for evidence and records | -> näyttö / aineisto / asiakirja / maksutosite | 29 (014 x22, 018 x6, 016 x1) |
+| b: *purkaa* for notice-based resignation | -> *irtisanoa* / irtisanominen | 3 (014); 解散 = purkaminen in 002/004 left |
+| b: broken genitive chain "sopimuksen vähimmäispalvelusajasta X" | -> "vähimmäispalvelusaikaa koskevan sopimuksen X" | 9 (014) |
+
+Hard-rule checks: consultation-language / interpreter / reply-time / free-meeting / result denials all still negative (no edit touched their polarity); attorney Wei Tseng is never given a masculine form (Finnish does not mark gender here; "Asianajaja Wei Tseng", "hän"); Traditional-Chinese glosses kept and one added (董事, 018); no frontmatter key, `url`, `lastmod`, `featured_image`, image path, external link, block count, number or date changed; `[변호사 검수 필요]` = 0; no Hangul outside `url` values (verified by script over all 18 files).
+
+## Where I think the reviewer was wrong (not applied)
+
+1. fi-a row 21, quote "alle 1 vuotta" — that string does not exist in columns-fi/001; the file reads "alle 1 vuoden", which is grammatical (alle + genitive). The row's other listed instances do exist and were handled as described above.
+2. fi-a row 20 / fi-b row 10 — Finnish does group thousands with a space, so the reviewer is right about Finnish usage, but the campaign's checker for fi is pinned to dot grouping and ACCEPTED-ROUND makes this a standing skip. Flagged here as a real residual defect that only a checker change can fix.
+3. fi-a row 22 / fi-b row 11 — removing the U+200B blanks and promoting Q16–Q20 to headings would improve the Finnish reading, but the blanks and the plain-line Q16–Q20 come from the shared canonical source (identical in ko, sv, da, nb, de) and both the ZWSP count and the heading levels are pinned to it by the checker. This is a source-level layout decision, not a Finnish-locale one.
+4. fi-a row 7 — the reviewer asks to restore "courts generally impose", which partly reverses RULEBOOK R3's softening of the same sentence. I applied the reviewer's version but kept an explicit guarantee denial ("kyse ei ole taatusta seuraamuksesta") in both the 3-month and the 4/6-month sentences, so R3's advertising-safety purpose is preserved. Worth a supervisor ruling if R3 is meant to override the round-5 row.
+5. fi-a row 15 — the suggested rewrite also respaced the amounts ("40 000 TWD"); I kept "TWD 40.000 (新臺幣)" (dot grouping, existing currency order) for the checker, and applied only the attribution fix the row is actually about.
+
+## §Verify output verbatim
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fi --lang fi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=123
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-fi src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      20
+
+(note: `git status --short` = 20 lines — 17 tracked files, of which docs/i18n/global-plan/WO-F-fi.txt was already modified in the worktree before this task started and was NOT touched by me; plus 3 untracked entries: the two r5 review files delivered with the WO and my helper dir .tmp-fi/ kept inside the worktree per RULEBOOK-FIX. No git add/commit/push was run.)

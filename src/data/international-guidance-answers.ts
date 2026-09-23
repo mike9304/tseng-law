@@ -1323,7 +1323,7 @@ export const guidanceAnswers: Record<
   lt: {
     services: {
       answer:
-        'Kontora veda šešias sritis pagal Taivano teisę: investicijas ir įmonių steigimą, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina atsiųstą turinį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+        'Kontora pagal Taivano teisę dirba šešiose srityse: investicijų ir įmonių steigimo, civilinių ginčų ir žalos atlyginimo, santuokos, šeimos ir paveldėjimo, darbo ginčų, baudžiamųjų bylų ir intelektinės nuosavybės. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina atsiųstą turinį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
       sources: ['/lt/faq', '/lt/contact'],
     },
     about: {
@@ -1338,7 +1338,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; šalia atlygio gali atsirasti teismo ar administracinės rinkliavos. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+        'Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; be atlyginimo už teisines paslaugas, gali atsirasti teismo ar administracinių rinkliavų. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
       sources: ['/lt/contact', '/lt/faq'],
     },
     contact: {

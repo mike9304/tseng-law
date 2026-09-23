@@ -1,0 +1,201 @@
+# WO-F-lt r5 — Lithuanian fix lane (campaign round 5)
+worktree: /Users/son7/Projects/tseng-law-fix-lt-r5   branch: fix/native-lt-r5-20260922
+input: RULEBOOK-FIX.md (R2–R17) · ACCEPTED-ROUND.md · reviews/native/rounds/r5/lt-a.md (44 rows) + lt-b.md (54 rows)
+no git add/commit/push performed.
+
+## 1. Rows applied
+
+### lt-a (guidance pack + columns 001–009)
+a1  P1 007 — Art. 1057 recast: "…1057 straipsnis dėl sutuoktinio išlaikymo po santuokos nutraukimo taikomas tada, kai dėl santuokos nutraukimo teismo sprendimu kaltės neturintis sutuoktinis patenka į gyvenimo nepriteklių." (*kaltei nesantis* removed)
+a2  P1 居留 — practice-area label `guidanceTeamPracticeAreas.lt['Visa and residency']` → "Vizos ir leidimai gyventi"; pack "Gyvenamosios vietos statusas…" → "Leidimo gyventi statusas…"; "dėl gyvenamosios vietos ir darbo statuso" → "dėl leidimo gyventi ir darbo statuso". Swept through 001 and 017 (see systemic §3.1).
+a4  001 — "kreiptis dėl leidimo gyventi šeimos ryšio pagrindu (依親居留)"; "Prašymas dėl leidimo nuolat gyventi (永久居留)" + the two follow-on sentences + the Immigration-Agency link label.
+a5  004 — "Įmonių pelnas kitoje teritorijoje paprastai neapmokestinamas"; "…negalima laikyti savaime neapmokestinamu".
+a6  004 — "piktnaudžiavimą juridinio asmens statusu".
+a7  002 — FAQ q → "Ar galima sustabdyti veiklą, iš karto nevykdant veiklos nutraukimo (解散)?" (orphan *išformavimas* gone; gloss added, consistent with the body's "veiklos nutraukimas (解散)").
+a11 pack — "…nėra visiškai saugūs" (masc. pl. predicate for the two coordinated subjects).
+a12 pack — pusdalyvis comma: "Siųsdami pranešimą, santrauką…" and "Siųsdami užklausą, pasirinkite…".
+a13 003 — "preliminarios analizės lentelė".
+a14 003 — "yra preliminari analizė".
+a15 008 — sentence-final period added at "…darbuotojus pokalbiui." and "…ir išėjo savo noru."
+a16 pack — *vesti* → work-in-a-field (4 pack strings + the answers.ts services answer); see systemic §3.3.
+a17 pack — "padedame užsienio klientams atlikti Taivane reikalingas procedūras" (+ "vedame teismo bylas").
+a18 pack — mega services description → "Kontora dirba pagrindinėse Taivano teisės srityse."
+a19 pack — "Darbas apima šias šešias sritis." (*apimtis apima* stutter gone)
+a20 pack — "Šiame puslapyje straipsnių turinys nėra apibendrinamas ir negarantuojama, kad…" (see §4 for why not the reviewer's *nesantraukina*)
+a21 pack — "Jei atsakymo dėl savo padėties nerandate…"
+a22 pack + answers.ts pricing — "Be atlyginimo už teisines paslaugas, gali atsirasti teismo rinkliavų…" (both the pricing page paragraph and the pricing answer).
+a23 international-inquiry-copy.ts — "Advokatė arba advokatas įvertins turinį ir tik tada bus pereinama prie tolesnių veiksmų."
+a24 PARTIAL team.ts lt bio — calque *pasiekė sprendimą* removed: "…už traumą sporto salėje; pirmosios instancijos teismas priteisė TWD 1.57M." The figure itself stays byte-identical (ACCEPTED-ROUND pinned term / R12) — the requested "1,57 mln. TWD" reformat was NOT applied.
+a25 002 — "Jei daroma veiklos tęstinumo prielaida"
+a26 002 — "atskirti įmonės vardu registruoto turto sąrašą nuo akcininkų asmeniniu vardu turimo turto"
+a27 002 — *kaštai* → *išlaidos* (both halves of the sentence)
+a28 004 — "Prie to dar reikia pridėti laidavimą, neteisėtus veiksmus, piktnaudžiavimą juridinio asmens statusu…"
+a29 004 — "Negalima manyti, kad iš pradžių pasirinktą formą…"
+a30 004 — "Galutinį pasirinkimą saugiausia patikėti Taivano ir pagrindinės buveinės vietos specialistams, kurie remiasi tomis pačiomis faktinėmis aplinkybėmis."
+a31 004 — "Kiekvienas kriterijus apima kitokią veiklos rūšį."
+a32 004 — 據點: *veiklos taškas* → *veiklos vieta*, all 3 occurrences.
+a33 004 — 營利事業所得稅 unified as "Pelno mokestis (營利事業所得稅)" (body + comparison-table cell), matching 001 and this file's own FAQ.
+a34 001/002/004 — 居住者 / tax residence: "rezidavimo vietos pažyma (居住者證明)", "rezidavimo vieta", "rezidavimo valstybė" (6 spots).
+a35 005 — "…; pirmiau pateiktame pavyzdyje aprašyti Korėjos bankai."
+a36 006 — "Ar prisimenate senąsias Taivano kirpyklas (理髮廳)?"
+a37 006 — "ponas Lin, kuris turėjo kirpyklą"
+a38 007 — "9. Ilgiau nei 3 metus nežinoma, ar sutuoktinis gyvas, ar miręs"
+a39 007 — "nustato prezumpciją…"; "…įtvirtina kaip atskirą bendrą priežastį"
+a40 007 — "Vien tai, kad sutuoktinių pilietybės skiriasi, nereiškia, kad 1030-1 straipsnio skaičiavimo būdas yra kitoks."
+a41 008 — "apginti įstatyme numatytą teisę į išeitinę išmoką"
+a42 009 — duplication removed inside the existing block (see §4: the line could not be deleted)
+a43 009 — "Todėl darbuotojas turi atidžiai stebėti šį terminą."
+a44 pack/001/002/004/018 — bare *šaka* (Branche) → *veiklos sektorius*; see systemic §3.4.
+
+### lt-b (columns 010–018)
+b1  P1 016 — "lyginamas kiekvieno sutuoktinio per santuoką įgyto turto prieaugis"
+b2  017 — "netampa automobilių krovinių vežimo veiklos vykdytoja"
+b3  011/017 — administrative *byla* → *atvejis* (4 spots)
+b4  013 — "terminą reikia pasitikrinti konkrečiu atveju išduotame patvirtinimo rašte"
+b5  016 — "## 11. Susijusios paslaugos"
+b6  015 — 公司登記 unified as "įmonės registracija" (2 spots), matching 013
+b7  011 — "…kiekvienam gaminiui reikia iš naujo patikrinti naujausius teisės aktus"
+b8  011 — "ne vėliau kaip likus 7 dienoms iki patikros"
+b9  014 — *atitikti* + accusative, both spots ("kurį laikotarpį…", "kuriuos dokumentus…")
+b10 014 — "negalima skaityti vien sutarties — kartu reikia laiko tvarka sutvarkyti…"
+b11 016 — "Skaičiuojant reikia žiūrėti ne tik į posakį …, bet ir į įtraukimo bei išskyrimo apimtį…"
+b12 016 — "sužinojo apie paveldėjimo teisę"
+b13 016 — "…paveldėjimui, sutuoktinių turtiniam režimui, tėvų valdžiai, globai ir turto registrui gali būti taikomi skirtingi susiejimo kriterijai."
+b14 015 — "rekomenduojama sistemoje „išankstinė veiklos vietos patikra“ (營業場所預先查詢) patikrinti, ar veikla galima"
+b15 013 — "praktikoje jis dažnai būna apie 1 metus" (subject + predicate fixed; the numeral stays a digit — see §2 b16)
+b17 013 — "bendrojo identifikacinio numerio pagrindinių duomenų formos"
+b19 014 — "išaiškinime nurodyta" (FAQ answer + body)
+b20 014 — "vien todėl, kad sutartyje vartojamas posakis „sutartinė bauda“"
+b21 014 — "Vien tai, kad sutartyje įrašytas ilgesnis įspėjimo terminas"
+b22 014 — "Trečiuoju elementu vertinama ne tik kompensacijos suma, bet ir jos apimtis."
+b23 014 — "galėtų juos suprasti prieš sudarydamas sutartį"
+b24 014 — "nurodomas įstatyminis nedelsiamo pasibaigimo pagrindas"
+b25 004/007/014/016/018 — *reikia matyti* → *reikia įvertinti* / *atsižvelgti*; see systemic §3.5
+b26 016 — "pergyvenęs tėvas ar motina gali turėti tėvų valdžią ir tada, kai nėra įpėdinis"
+b27 016 — "Net jei testamente toks paskyrimas yra…"
+b28 016 — "…gali būti tvarkomi skirtingose institucijose ir reikalauti skirtingų dokumentų."
+b29 016 — "…neturi būti svarbesnis už vaiko interesus."
+b30 016 — "…tuo negalima remtis skaičiuojant savo termino pabaigos dieną."
+b31 016 — "reikia kartu tirti ir turtą, ir įsipareigojimus"
+b32 016 — "Kadangi keli terminai gali būti skaičiuojami vienu metu"
+b33 011 — "…importuotojui nustatytos įstatyminės pareigos"
+b34 011 — "Nustatant faktinį darbų pasidalijimą"
+b35 011 — "Sutartinio darbų pasidalijimo atskyrimas nuo įstatyminio atsakomybės subjekto yra … išeities taškas."
+b36 011 — "iš esmės gali būti vertinami kaip reklama"
+b37 010 — "galima reikalauti iki 5 kartų už faktinę žalą didesnio atlyginimo; … iki 3 kartų didesnio; … ne didesnio už pačią faktinę žalą."
+b38 010 — "Toliau pateikiami išversti … pavadinimai."
+b39 013 — "neperveda lėšų į Taivaną kitu pretekstu"
+b40 013 — "Jei derybos su nuomotoju nesiseka"
+b41 PARTIAL 015 — the redundancy removed inside the 3 existing blocks: "Be rinkos sąlygų reikia atsižvelgti ir į kitą svarbų dalyką:" / "būtina patikrinti," / "ar šis adresas yra zonoje, kurioje galima vykdyti restorano veiklą." The source line breaks stay (block parity).
+b42 015 — "Nemokamai galima patikrinti"
+b43 017 — "ši veikla gali būti laikoma automobilių krovinių vežimo veikla" (FAQ answer + body)
+b44 017 — "ne kiekviena užsienio investicija tvarkoma toje pačioje institucijoje"
+b45 017 — "…turi būti patvirtinti kompetentingos kelių institucijos."
+b46 018 — "turi atskirai vertinti, kokį vienetą Taivane steigs"
+b47 018 — "…filialo vadovui leidimą dirbti gauti yra santykinai lengviau."
+b48 018 — "Tuomet pirmiausia savaime kyla klausimas:"
+b49 018 — "reikia daugiau kaip pusės kitų dalininkų balsavimo teisių sutikimo"
+b51 P3 010/012 — "konsultacija konkrečioje byloje" (2 spots)
+b53 P3 015 — "Todėl į tai atkreipkite dėmesį."
+b54 P3 013 — "kad būtų galima įtikinti vertintojus"
+
+## 2. Rows skipped (with reason and evidence)
+
+a3  003 (P2) — SKIPPED. The current wording ("Kai kuriuose nuosprendžiuose … skirta apie 3 mėnesių bausmė; tipiškos ar garantuotos baigties nėra.") is exactly what RULEBOOK-FIX R3 prescribes for this sentence. The suggested "teismai šiuo metu paprastai skiria" restores the typical-outcome claim, which ACCEPTED-ROUND forbids ("Requests to make a … result sentence positive → never"). Same for the serious-injury / death line.
+a8, b50 — SKIPPED (thousands "500.000" → "500 000"). ACCEPTED-ROUND: "Requests for space thousands separators ('500 000') … → skip (the checker cannot parse them)"; R14 pins dot-thousands for lt. Left unchanged in 001, 002, 003, 004, 006, 007, 010, 011, 017, 018.
+a9, b18 — SKIPPED (remove the U+200B-only paragraphs in 003/005/006/008/013/015). The checker compares ZWSP count and block count against the canonical source `src/content/columns/`, which CONTAINS those characters (003 SRC=52 LT=52, 005 8/8, 006 4/4, 008 10/10, 013 5/5, 015 3/3). Measured:
+      $ node scripts/check-column-translation.mjs --source src/content/columns/013-…md --target <copy with U+200B stripped> --lang lt
+        blocks   FAIL   blocks 60 → 56
+                        ZWSP 5 → 0
+        summary  FAIL  0/1 files
+    Removing them therefore breaks the gate; this is a source-parity matter for the supervisor, not a locale fix.
+a10 006 — SKIPPED (blank line before the trailing byline). The byline is an lt-only addition glued to the last source block; adding the blank line splits a block:
+      $ node scripts/check-column-translation.mjs --source src/content/columns/006-…md --target <copy with blank line inserted> --lang lt
+        blocks   FAIL   blocks 59 → 60
+    ACCEPTED-ROUND: "Requests to merge/split paragraphs … → rephrase inside the existing block instead." (Note for the supervisor: no other locale carries a byline in 006 at all — the clean fix is to drop the stray lt byline or to add the paragraph in the source.)
+a24 — the reformat half ("1,57 mln. TWD") skipped; "TWD 1.57M" is in GUIDANCE_BIO_PRESERVED_TERMS. Only the calque was fixed.
+b16 — SKIPPED (metai as plurale tantum: "1/2/3/5 metai" → "vieneri/dveji/treji/penkeri"). Grammatically right, but the checker's lt number lexicon (`SMALL_LEXICON_WORDS.lt`) only knows vienas/viena/du/dvi/trys + ordinals, so the dauginiai skaitvardžiai are not parsed and the digit disappears from the count. The sweep was applied (45 instances across 12 files) and then reverted after measuring:
+        001 numbers FAIL  missing from translation (10): 1×6, 3×2, 5×2
+        002 numbers FAIL  missing from translation (4): 1×3, 5
+        006 numbers FAIL  missing from translation (2): 3, 5
+        007 numbers FAIL  missing from translation (2): 5×2
+        008 numbers FAIL  missing from translation (2): 1×2
+        010 numbers FAIL  missing from translation (1): 2
+        011 numbers FAIL  missing from translation (1): 5
+        014 numbers FAIL  missing from translation (3): 3×3
+        017 numbers FAIL  missing from translation (4): 1, 2×3
+        summary  FAIL  9/18 files
+    Per the work order ("prefer the form the checker accepts and note it in the log") the digits stay. Fix belongs in the checker lexicon, not in the locale.
+b52 P3 012 — SKIPPED. The reviewer conditions it himself ("The site uses the bare form throughout, so change it only if the whole locale is changed"): bare *kontora* is the established term in all 18 columns AND in the guidance pack (`Kontora dirba pagal Taivano teisę…`). A locale-wide rename is a supervisor decision, not a single-row fix.
+017 *šakos asociacija* / *šakos patvirtinimas* (同業公會, industry approval) — left as is. These are idiomatic Lithuanian collocations; part b reviewed 017 and did not flag them. Only the bare "šaka = Branche" uses were changed.
+
+## 3. Systemic patterns swept (instances changed)
+
+3.1  居留 rendered as *gyvenamoji vieta* (a2 / a4) → *leidimas gyventi* — 16 instances: guidance pack 3 (team practice-area label, services-scope paragraph, disclaimer sentence), 001 ×8, 017 ×5. Family-law *gyvenamoji vieta* (place of residence) in 007 and 016 deliberately kept — different concept.
+3.2  Tax-residence drift 居住者 / 居住者證明 (a34) → *rezidavimo vieta* / *rezidavimo vietos pažyma* / *rezidavimo valstybė* — 6 instances (001 ×3, 002 ×1, 004 ×2).
+3.3  *Vesti* stretched from a case to a practice area (a16/a17/a37) — 9 instances: pack "Vedame šešias sritis…" → "Dirbame šešiose srityse…", "sritys, kurias kontora veda" → "kuriose kontora dirba", "sritys, kurias iš tikrųjų vedame" → "kuriose iš tikrųjų dirbame", "Kontora tvarko … sritis" → "dirba … srityse", "steigiant arba vedant bendrovę" → "valdant", the family list → "Vedame … bylas", answers.ts services answer, "lydime … per procedūras" → "padedame … atlikti", 006 "vedė kirpyklą" → "turėjo kirpyklą". *Vesti bylas / vesti teismo bylas* kept — correct collocation.
+3.4  Bare *šaka* (Germanism for Branche) → *veiklos sektorius* / *sritis* — 15 instances (pack ×2, 001 ×11, 002 ×2, 004 ×1, 018 ×1).
+3.5  *reikia matyti* stock calque → *reikia įvertinti* / *atsižvelgti* — 13 instances (004 ×3, 007 ×2, 014 ×2, 016 ×4, 018 ×2).
+3.6  Administrative matter called *byla* → *atvejis* — 4 instances (011 ×3, 017 ×1).
+3.7  營利事業所得稅 one rendering per file → "Pelno mokestis (營利事業所得稅)" — 2 instances in 004 (body + table cell), aligning 004 with 001.
+3.8  公司登記 one rendering → "įmonės registracija" — 2 instances in 015, aligning it with 013.
+3.9  "konsultacija konkrečiai bylai" (dative) → "konkrečioje byloje" — 2 instances (010, 012).
+
+Rulebook items re-verified as already satisfied (no change needed): R5/R12 English chrome (label 'KOMANDA'; institution names translated with the preserved English in parentheses), R6b fullwidth CJK punctuation outside glosses = 0 hits, R9 Taiwan emergency numbers present in 003 line 32, R13 ROC years written as "Kinijos Respublikos kalendoriaus (民國) … metai", R15 the redacted name is "[vardas, pavardė]" in 008, R16 Hangul only inside `url:`, gender: attorney Wei Tseng feminine everywhere (no masculine form found).
+
+## 4. Where the reviewer's wording was not taken literally
+- a20: the suggested "nesantraukina" is not a Lithuanian verb (*santraukinti* does not exist). Used "Šiame puslapyje straipsnių turinys nėra apibendrinamas…", which carries the same meaning.
+- a24: suggested "1,57 mln. TWD" collides with the pinned bio token "TWD 1.57M"; only the calque was fixed.
+- a42: suggested deleting the duplicated line. A deletion changes the block count (the canonical source has both blocks). Instead the repetition was removed inside block 2: "pagal tai, kas pirmas nutraukia sutartį su pakankamu pagrindu," / "galima išeitinės išmokos nemokėti arba jos reikalauti." — which also matches the source's own split.
+- b41: the suggested single merged sentence would collapse three source blocks into one; the redundancy was removed while keeping all three.
+- a10 / a9 / b18 / b16 / a8 / b50: see §2 — correct as language observations, blocked by the checker or by ACCEPTED-ROUND.
+- a3: see §2 — the reviewer is asking to undo RULEBOOK R3.
+- 011: the "byla" that renders the PIF dossier was NOT renamed where it means the product information file (that is the file/dossier sense and reads correctly); only the "each matter" sense was changed.
+
+## 5. §Verify output (verbatim)
+
+$ cd /Users/son7/Projects/tseng-law-fix-lt-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-lt --lang lt 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=68
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-lt src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      25
+
+(The 25 entries are the 22 files this lane edited, the pre-existing modification of
+docs/i18n/global-plan/WO-F-lt.txt, and the two untracked round-5 review files
+reviews/native/rounds/r5/lt-a.md and lt-b.md. This log file adds a 26th, untracked.)
+
+Note on the first vitest attempt: an earlier run reported 3 failures
+(semiconductor-drafts-public-surface ×2, column-007-public-reference-sync ×1) at
+6395 ms / 5228 ms / 7555 ms. Each passes in isolation
+(semiconductor-drafts-public-surface: 3 passed; column-007-public-reference-sync:
+13 passed) and the repeated full run is green — they are 5 s-timeout flakes under
+maxForks=1, not content failures.
+
+## 6. Files touched
+src/content/columns-lt/001…018 (18 files)
+src/data/international-guidance-baltic-atlantic.ts (lithuanianGuidanceContent)
+src/data/international-guidance-answers.ts (guidanceAnswers.lt)
+src/data/international-guidance-team.ts (guidanceTeamPracticeAreas.lt, teamContent.lt bio)
+src/data/international-inquiry-copy.ts (lt)
+src/lib/llms-txt.ts — NOT touched (no row applied; consultationNotice / confidentialNotice
+substring parity re-verified intact after the pack edits).
+No test file needed an updated expected string.

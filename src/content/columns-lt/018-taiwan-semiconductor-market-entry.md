@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Jei yra Taivano klientų, ar visada būtina Taivane steigti bendrovę?"
-    a: "Vien todėl, kad klientas yra Taivane, vienodai spręsti negalima. Reikia matyti Taivano kliento reikalavimus, faktinę pardavimo, įrenginių ir personalo veiklą Taivane bei sandorių struktūrą, ir tada rinktis tam tinkamiausią subjektą."
+    a: "Vien todėl, kad klientas yra Taivane, vienodai spręsti negalima. Reikia įvertinti Taivano kliento reikalavimus, faktinę pardavimo, įrenginių ir personalo veiklą Taivane bei sandorių struktūrą, ir tada rinktis tam tinkamiausią subjektą."
   - q: "Ar įsteigus Taivano bendrovę pagrindinės buveinės atsakomybė visiškai išnyksta?"
     a: "Jei steigiate dukterinę bendrovę, o ne filialą, pagrindinė buveinė paprastai neprisiima sutarčių, sudarytų dukterinės bendrovės vardu, prievolių. Tačiau tai nėra visos atsakomybės išnykimas: reikia patikrinti juridinio asmens statuso piktnaudžiavimo išimtis ir tai, ar pagrindinė buveinė atskirai suteikė laidavimą ar prisiėmė savas sutartines prievoles."
   - q: "Ar galima pradėti su platintoju, o vėliau pereiti prie Taivano bendrovės?"
@@ -19,7 +19,7 @@ faq:
 
 ![Vaizdas, skirtas puslaidininkių įmonės įėjimo į Taivano rinką struktūrai vertinti](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Prasidėjus sandoriams su Taivano klientais, užsienio pagrindinė buveinė gali gauti įvairių reikalavimų: Taivane tvarkyti pasiūlymus ir sutartis, turėti skubiam pakeitimui skirtų atsargų arba laikyti vietoje įrengimo ir priežiūros personalą. Tuomet lengva pirmiausia klausti: „Ar įmonės įsteigimas Taivane šiuos klausimus išsprendžia?“
+Prasidėjus sandoriams su Taivano klientais, užsienio pagrindinė buveinė gali gauti įvairių reikalavimų: Taivane tvarkyti pasiūlymus ir sutartis, turėti skubiam pakeitimui skirtų atsargų arba laikyti vietoje įrengimo ir priežiūros personalą. Tuomet pirmiausia savaime kyla klausimas: „Ar įmonės įsteigimas Taivane šiuos klausimus išsprendžia?“
 
 Pirmiausia reikia sutvarkyti, kas Taivane ką prisiima. Vertintina struktūra skiriasi pagal tai, ar užsienio pagrindinė buveinė ir toliau sudaro pirkimo–pardavimo sutartis, ar Taivano bendrovė prekes perka ir perparduoda, ar vietos personalas teikia tik techninę pagalbą.
 
@@ -45,7 +45,7 @@ Ypač jei pirkimo sutartyje nurodytas pardavėjas nėra ta bendrovė, kuri fakti
 
 ## 2. Dukterinės bendrovės, filialo ir užsienio bendrovės Taivano atstovybės skirtumas ir vaidmuo
 
-Rengdama įėjimą į Taivaną, puslaidininkių įmonė turi atskirai vertinti, koks buvimas Taivane bus įsteigtas, ir kaip bus išdėstytas pardavimas bei klientų aptarnavimas. Pirmasis punktas telkiasi į juridinio asmens statusą, registracijos reikalavimus ir veiklos apimtį; antrasis — į sandorio būdą, įgaliojimus ir atsakomybės paskirstymą.
+Rengdama įėjimą į Taivaną, puslaidininkių įmonė turi atskirai vertinti, kokį vienetą Taivane steigs ir kaip bus išdėstytas pardavimas bei klientų aptarnavimas. Pirmasis punktas telkiasi į juridinio asmens statusą, registracijos reikalavimus ir veiklos apimtį; antrasis — į sandorio būdą, įgaliojimus ir atsakomybės paskirstymą.
 
 Pagrindinis Taivano dukterinės bendrovės ir užsienio bendrovės Taivano filialo (分公司) skirtumas yra tai, ar ji turi juridinio asmens statusą, atskirtą nuo patronuojančiosios bendrovės (母公司) ar pagrindinės buveinės. Platinimas ir atstovavimas yra sandorio ir sutarties struktūros, todėl jų nereikia maišyti su bendrovės organizacijos forma. Kiekvieną struktūrą galima skirti taip.
 
@@ -61,7 +61,7 @@ Jei nusprendėte Taivane turėti savarankišką juridinį asmenį, reikia pasiri
 
 ### Ribotos atsakomybės bendrovė: valdymas paprastesnis, tačiau dalių perleidimas santykinai uždaresnis
 
-Ribotos atsakomybės bendrovę galima sudaryti su 1 arba daugiau fizinių asmenų arba su Taivano ar užsienio juridiniais asmenimis kaip dalininkais; dalininkai paprastai atsako įnašo sumos ribose. Direktorių yra nuo 1 iki 3 ir jie renkami iš dalininkų. Dalininkai, kurie nevykdo veiklos, gali naudotis priežiūros teise (監察權), todėl atskiro stebėtojo (監察人) skirti nereikia. Jei įstatuose nenumatyta kitaip, 1 dalininkas turi 1 balsą, todėl kontrolė nebūtinai sutampa su įnašo santykiu. Įprasto dalininko įnašo perleidimui paprastai reikia kitų dalininkų balsavimo teisių daugiau kaip pusės sutikimo; direktoriaus įnašui perleisti reikia kitų dalininkų balsavimo teisių 2/3 arba daugiau sutikimo. Todėl forma geriau tinka paprastiems dalininkų santykiams ir stabiliai kontrolei nei dažnam kapitalo pritraukimui ar akcijų prekybai. Vėliau ją galima pertvarkyti į akcinę bendrovę.
+Ribotos atsakomybės bendrovę galima sudaryti su 1 arba daugiau fizinių asmenų arba su Taivano ar užsienio juridiniais asmenimis kaip dalininkais; dalininkai paprastai atsako įnašo sumos ribose. Direktorių yra nuo 1 iki 3 ir jie renkami iš dalininkų. Dalininkai, kurie nevykdo veiklos, gali naudotis priežiūros teise (監察權), todėl atskiro stebėtojo (監察人) skirti nereikia. Jei įstatuose nenumatyta kitaip, 1 dalininkas turi 1 balsą, todėl kontrolė nebūtinai sutampa su įnašo santykiu. Įprasto dalininko įnašo perleidimui paprastai reikia daugiau kaip pusės kitų dalininkų balsavimo teisių sutikimo; direktoriaus įnašui perleisti reikia kitų dalininkų balsavimo teisių 2/3 arba daugiau sutikimo. Todėl forma geriau tinka paprastiems dalininkų santykiams ir stabiliai kontrolei nei dažnam kapitalo pritraukimui ar akcijų prekybai. Vėliau ją galima pertvarkyti į akcinę bendrovę.
 
 ### Akcinė bendrovė: tinka, kai ketinama priimti kitus investuotojus ar svarstomas įtraukimas į biržos sąrašą
 
@@ -79,7 +79,7 @@ Pirmiau palyginta tik filialo ir dukterinės bendrovės registracijos eiga. Vien
 
 Tai, kad Taivane užbaigta bendrovės registracija, nereiškia, kad užsienio pagrindinės buveinės darbuotojai gali automatiškai dirbti Taivane. Užsienietis, kuris dirba Taivane, turi turėti teisėtą leidimą dirbti (工作許可), o ilgesniam gyvenimui — ir užsieniečio leidimo gyventi pažymėjimą (外僑居留證). Paprastai darbdavys užsienio darbuotojui teikia leidimo dirbti ir atitinkamo leidimo gyventi pažymėjimo prašymą.
 
-Užsienio bendrovės Taivano dukterinės bendrovės ir filialo vadovo leidimo dirbti prašymas yra santykinai lengvesnis. Tačiau jei leidimo dirbti prašoma kitam užsieniečiui, Darbo ministerija pagal šaką reikalauja kapitalo, apyvartos ir panašių ribų. Jei planuojate, kad užsienio darbuotojai dirbs Taivane, prieš steigiant Taivano bendrovę iš anksto reikia patikrinti, ar numatytas kapitalas atitinka taikytiną ribą.
+Užsienio bendrovės Taivano dukterinės bendrovės ir filialo vadovui leidimą dirbti gauti yra santykinai lengviau. Tačiau jei leidimo dirbti prašoma kitam užsieniečiui, Darbo ministerija pagal veiklos sektorių reikalauja kapitalo, apyvartos ir panašių ribų. Jei planuojate, kad užsienio darbuotojai dirbs Taivane, prieš steigiant Taivano bendrovę iš anksto reikia patikrinti, ar numatytas kapitalas atitinka taikytiną ribą.
 
 ## 7. Struktūros, kurias galima palyginti pagal verslo plėtros etapą
 
@@ -101,7 +101,7 @@ Pirmame kreipimesi nebūtina pridėti visų kliento konfidencialių dokumentų a
 
 ### Jei yra Taivano klientų, ar visada būtina Taivane steigti bendrovę?
 
-Vien todėl, kad klientas yra Taivane, vienodai spręsti negalima. Reikia matyti Taivano kliento reikalavimus, faktinę pardavimo, įrenginių ir personalo veiklą Taivane bei sandorių struktūrą, ir tada rinktis tam tinkamiausią subjektą.
+Vien todėl, kad klientas yra Taivane, vienodai spręsti negalima. Reikia įvertinti Taivano kliento reikalavimus, faktinę pardavimo, įrenginių ir personalo veiklą Taivane bei sandorių struktūrą, ir tada rinktis tam tinkamiausią subjektą.
 
 ### Ar įsteigus Taivano bendrovę pagrindinės buveinės atsakomybė visiškai išnyksta?
 

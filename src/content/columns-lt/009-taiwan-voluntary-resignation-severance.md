@@ -67,7 +67,7 @@ darbo sutartį privalo nutraukti per **30 dienų** nuo dienos, kai sužinojo api
 
 arba, 6 punkto atveju, per **30 dienų** nuo dienos, kai sužinojo apie žalos pasekmę.
 
-Darbuotojas todėl turi gerai sekti terminą.
+Todėl darbuotojas turi atidžiai stebėti šį terminą.
 
 ​
 
@@ -85,7 +85,7 @@ jei kyla ginčas,
 
 pagal tai, kas pirmas nutraukia sutartį su pakankamu pagrindu,
 
-šalis, kuri pirma nutraukia sutartį pakankamu pagrindu, gali išeitinės išmokos nemokėti arba jos reikalauti.
+galima išeitinės išmokos nemokėti arba jos reikalauti.
 
 Todėl Taivano darbo ginčuose (勞資糾紛)
 

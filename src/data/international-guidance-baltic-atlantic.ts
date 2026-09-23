@@ -24,7 +24,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
   languageLabel: 'Rodymo kalba',
   mega: {
     services: {
-      description: 'Kontora tvarko pagrindines Taivano teisės sritis.',
+      description: 'Kontora dirba pagrindinėse Taivano teisės srityse.',
       viewAllLabel: 'Rodyti visus',
     },
     columns: {
@@ -79,7 +79,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kuo užsiimame',
           paragraphs: [
-            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus per procedūras, kurias Taivane reikia atlikti.',
+            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo bylas ir padedame užsienio klientams atlikti Taivane reikalingas procedūras.',
             'Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir to, kada byla vertinama. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.',
           ],
         },
@@ -93,7 +93,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kontoros sritys',
           paragraphs: [
-            'Darbo apimtis apima šias šešias sritis. Puslapis „Paslaugos“ kiekvieną iš jų aprašo tiksliau ir nurodo, kas nėra žadama.',
+            'Darbas apima šias šešias sritis. Puslapis „Paslaugos“ kiekvieną iš jų aprašo tiksliau ir nurodo, kas nėra žadama.',
           ],
           items: [
             'Investicijos ir įmonių steigimas Taivane',
@@ -108,7 +108,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Nuo ko pradėti',
           paragraphs: [
             'Perskaitykite puslapį „Paslaugos“ ir patikrinkite, ar Jūsų byla patenka į mūsų apimtį, tada „Išlaidos“ ir „Kontaktai“, kad žinotumėte, kaip nustatoma apimtis ir kaip išlaidos patvirtinamos prieš pradedant darbą.',
-            'Siųsdami pranešimą santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas tiksliai toks, kokį parašėte, ir automatiškai neverčiamas. Išsiųstas pranešimas yra užklausa, laukianti įvertinimo: tai dar nėra konsultacija ir nėra patvirtintas susitikimas.',
+            'Siųsdami pranešimą, santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas tiksliai toks, kokį parašėte, ir automatiškai neverčiamas. Išsiųstas pranešimas yra užklausa, laukianti įvertinimo: tai dar nėra konsultacija ir nėra patvirtintas susitikimas.',
           ],
         },
       ],
@@ -117,15 +117,15 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'PASLAUGOS',
       title: 'Kokiose bylose atstovaujame klientams',
       description:
-        'Šešios sritys, kurias kontora veda Taivane, ir ribos, kurias naudinga žinoti pirmiausia.',
+        'Šešios sritys, kuriose kontora dirba Taivane, ir ribos, kurias naudinga žinoti pirmiausia.',
       intro:
-        'Toliau nurodytos sritys, kurias iš tikrųjų vedame, ir klausimai, dažniausiai kylantys pradiniame etape. Paaiškinimas padeda įvertinti, ar Jūsų byla patenka į mūsų apimtį; jis yra bendras ir nėra atskiros bylos teisinė analizė.',
+        'Toliau nurodytos sritys, kuriose iš tikrųjų dirbame, ir klausimai, dažniausiai kylantys pradiniame etape. Paaiškinimas padeda įvertinti, ar Jūsų byla patenka į mūsų apimtį; jis yra bendras ir nėra atskiros bylos teisinė analizė.',
       sections: [
         {
           heading: 'Investicijos ir įmonių steigimas Taivane',
           paragraphs: [
-            'Atstovaujame užsienio investuotojams ir įmonėms steigiant arba vedant bendrovę Taivane: teisinės formos pasirinkimas, dokumentų parengimas ir pateikimas, kapitalo įnašas, banko klausimai, buveinės vertinimas ir šakiniai reikalavimai. Taip pat padedame dėl apskaitos ir mokesčių, kylančių iš steigimo ir veiklos Taivane.',
-            'Eiga ir terminai skiriasi pagal formą, investuotoją, šaką, banką ir jau turimus dokumentus. Bendrovės įsteigimas savaime nesuteikia teisės gyventi (居留) ir leidimo dirbti (工作許可): tai atskiros procedūros, vertinamos pagal konkretaus asmens padėtį.',
+            'Atstovaujame užsienio investuotojams ir įmonėms steigiant arba valdant bendrovę Taivane: teisinės formos pasirinkimas, dokumentų parengimas ir pateikimas, kapitalo įnašas, banko klausimai, buveinės vertinimas ir sektoriaus reikalavimai. Taip pat padedame dėl apskaitos ir mokesčių, kylančių iš steigimo ir veiklos Taivane.',
+            'Eiga ir terminai skiriasi pagal formą, investuotoją, veiklos sektorių, banką ir jau turimus dokumentus. Bendrovės įsteigimas savaime nesuteikia teisės gyventi (居留) ir leidimo dirbti (工作許可): tai atskiros procedūros, vertinamos pagal konkretaus asmens padėtį.',
           ],
         },
         {
@@ -138,7 +138,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Santuoka, šeima ir paveldėjimas',
           paragraphs: [
-            'Vedame santuokos nutraukimą (離婚), turto padalijimą, nepilnamečių vaikų teisių ir pareigų įgyvendinimą ir prisiėmimą (未成年子女權利義務之行使或負擔), bendravimą su vaiku (會面交往) ir paveldėjimą (繼承), taip pat kai šalys arba turtas yra skirtingose valstybėse. Tarpvalstybinėms šeimos byloms dažnai reikia papildomai įvertinti namų ūkio registro (戶籍) įrašus, dokumentų formą ir jų įrodomąją galią Taivane.',
+            'Vedame santuokos nutraukimo (離婚), turto padalijimo, nepilnamečių vaikų teisių ir pareigų įgyvendinimo ir prisiėmimo (未成年子女權利義務之行使或負擔), bendravimo su vaiku (會面交往) ir paveldėjimo (繼承) bylas, taip pat tada, kai šalys arba turtas yra skirtingose valstybėse. Tarpvalstybinėms šeimos byloms dažnai reikia papildomai įvertinti namų ūkio registro (戶籍) įrašus, dokumentų formą ir jų įrodomąją galią Taivane.',
             'Kadangi šeimos bylos dažnai susijusios su terminais ir lygiagrečiomis procedūromis, pirmoji santrauka turėtų nurodyti šalių santykį, dabartinę gyvenamąją vietą ir jau vykstančias procedūras.',
           ],
         },
@@ -167,7 +167,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Apimtis ir jos patvirtinimas',
           paragraphs: [
             'Kontora dirba pagal Taivano teisę ir veda bylas iš pirmiau nurodytų sričių. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina Jūsų pranešimą.',
-            'Gyvenamosios vietos statusas, leidimas dirbti ir panašūs klausimai vertinami pagal dokumentus ir konkretaus asmens padėtį, o ne pagal pilietybę. Jei dalis Jūsų bylos paliečia šiuos punktus, nurodykite tai kreipdamiesi. Šis puslapis nežada nei rezultato, nei atsakymo termino.',
+            'Leidimo gyventi statusas, leidimas dirbti ir panašūs klausimai vertinami pagal dokumentus ir konkretaus asmens padėtį, o ne pagal pilietybę. Jei dalis Jūsų bylos paliečia šiuos punktus, nurodykite tai kreipdamiesi. Šis puslapis nežada nei rezultato, nei atsakymo termino.',
           ],
         },
       ],
@@ -244,7 +244,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kodėl šiame puslapyje nėra tarifų',
           paragraphs: [
             'Išlaidos priklauso nuo pačios bylos: nuo pastangų, šalių skaičiaus, dokumentų, terminų ir nuo to, ar procesas jau vyksta. Iš anksto nustatytas skaičius Jūsų bylos išlaidų neparodytų. Todėl pirmiausia nustatome darbo apimtį ir tada pranešame Jums išlaidas, prieš pradedant darbą.',
-            'Šalia atlygio gali atsirasti teismo rinkliavos, institucijų ar trečiųjų asmenų išlaidos. Jos atskirtos nuo atlygio ir priklauso nuo atitinkamo proceso.',
+            'Be atlyginimo už teisines paslaugas, gali atsirasti teismo rinkliavų, institucijų ar trečiųjų asmenų išlaidų. Jos yra atskirtos nuo atlyginimo ir priklauso nuo atitinkamo proceso.',
           ],
         },
       ],
@@ -302,7 +302,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kaip naudotis šia dalimi',
           paragraphs: [
-            'Jei atsakymo savo padėčiai nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne spręskite apie juos vien iš šio puslapio.',
+            'Jei atsakymo dėl savo padėties nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne spręskite apie juos vien iš šio puslapio.',
           ],
         },
       ],
@@ -310,7 +310,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kokias bylas kontora veda?',
           answer:
-            'Vedame šešias sritis: investicijas ir įmonių steigimą Taivane, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Ar byla bus priimta, sprendžiama įvertinus turinį.',
+            'Dirbame šešiose srityse: investicijų ir įmonių steigimo Taivane, civilinių ginčų ir žalos atlyginimo, santuokos, šeimos ir paveldėjimo, darbo ginčų, baudžiamųjų bylų ir intelektinės nuosavybės. Ar byla bus priimta, sprendžiama įvertinus turinį.',
         },
         {
           question: 'Ką pasirengti prieš kreipiantis?',
@@ -325,7 +325,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ką daryti, jei nemoku nė vienos iš keturių kalbų?',
           answer:
-            'Siųsdami užklausą pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai tik vertinimas, o ne pažadas, kad galime dirbti kita kalba.',
+            'Siųsdami užklausą, pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai tik vertinimas, o ne pažadas, kad galime dirbti kita kalba.',
         },
         {
           question: 'Kaip elgiamasi su mano tekstu lietuvių kalba?',
@@ -384,7 +384,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Saugojimo vieta ir prieiga',
           paragraphs: [
             'Jūsų pateikimo turinys saugomas vietoje, kuri nėra viešai prieinama. Prieigą prie jo turi tik įgalioti kontoros asmenys, ir tik užklausai nagrinėti.',
-            'Šis puslapis neduoda absoliučios saugumo garantijos. Joks perdavimo kelias ir jokia saugojimo vieta nėra visiškai saugi; jautrius dokumentus todėl reikėtų siųsti tik po atskiro advokatės arba advokato nurodymo.',
+            'Šis puslapis neduoda absoliučios saugumo garantijos. Joks perdavimo kelias ir jokia saugojimo vieta nėra visiškai saugūs; jautrius dokumentus todėl reikėtų siųsti tik po atskiro advokatės arba advokato nurodymo.',
           ],
         },
         {
@@ -449,7 +449,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Jokio pažado dėl rezultato',
           paragraphs: [
-            'Jokia šio puslapio dalis nėra pažadas dėl bylos rezultato, paraiškos ar prašymo patenkinimo ar dėl gyvenamosios vietos ir darbo statuso.',
+            'Jokia šio puslapio dalis nėra pažadas dėl bylos rezultato, paraiškos ar prašymo patenkinimo ar dėl leidimo gyventi ir darbo statuso.',
             'Išorinės nuorodos skirtos orientacijai; nežadame trečiųjų asmenų turinio teisingumo ar aktualumo.',
           ],
         },
@@ -474,7 +474,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kur veda nuorodos',
           paragraphs: [
             'Pasirinkus vieną iš keturių nuorodų, atsidaro straipsnių sąrašas ta kalba. Iš sąrašo tekstą pasirenkate patys; visas turinys rodomas straipsnio originalo kalba.',
-            'Šis puslapis straipsnių turinio nesutraukia ir negarantuoja, kad tam tikra tema prieinama visomis keturiomis kalbomis. Kiekviename sąraše yra tik tekstai, paskelbti ta kalba.',
+            'Šiame puslapyje straipsnių turinys nėra apibendrinamas ir negarantuojama, kad tam tikra tema prieinama visomis keturiomis kalbomis. Kiekviename sąraše yra tik tekstai, paskelbti ta kalba.',
           ],
         },
         {

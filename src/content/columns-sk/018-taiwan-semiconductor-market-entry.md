@@ -10,7 +10,7 @@ faq:
   - q: "Ak sú zákazníci na Taiwane, je nutné tam vždy založiť spoločnosť?"
     a: "Založenie spoločnosti nie je nutné len preto, že zákazník je na Taiwane. Treba posúdiť požiadavky zákazníka a skutočnú činnosť obchodu, zariadenia, personál a štruktúru transakcie na Taiwane a potom zvoliť subjekt, ktorý týmto skutočnostiam zodpovedá."
   - q: "Zmizne zodpovednosť materskej spoločnosti úplne, keď je založená taiwanská spoločnosť?"
-    a: "Ak založíte dcérsku spoločnosť, nie pobočku, materská spoločnosť zásadne nenesie povinnosti zo zmlúv podpísaných menom dcérskej spoločnosti. Treba však overiť výnimky pre zneužitie právnej osobnosti a to, či materská spoločnosť poskytla ručenie alebo prevzala vlastné zmluvné povinnosti."
+    a: "Ak založíte dcérsku spoločnosť, nie pobočku, materská spoločnosť spravidla nenesie povinnosti zo zmlúv podpísaných menom dcérskej spoločnosti. Treba však overiť výnimky pre zneužitie právnej osobnosti a to, či materská spoločnosť poskytla ručenie alebo prevzala vlastné zmluvné povinnosti."
   - q: "Možno začať s distribútorom a potom prejsť na spoločnosť na Taiwane?"
     a: "Postupný prechod možno navrhnúť, avšak treba tiež posúdiť skončenie alebo zmenu existujúcich zmlúv, zmluvy so zákazníkmi, zásoby, vybavovanie reklamácií a personál."
 ---
@@ -19,9 +19,9 @@ faq:
 
 ![Snímka k posúdeniu štruktúry vstupu podniku polovodičov na Taiwan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Keď začnú obchody s taiwanskými zákazníkmi, môže zahraničné ústredie obdržať rôzne požiadavky: spracovať ponuky a zmluvy na Taiwane, držať zásobu náhradných dielov na naliehavú výmenu alebo umiestniť personál na inštaláciu a údržbu. Vtedy je ľahké sa najprv spýtať: „Stačí na riešenie založiť spoločnosť na Taiwane?“
+Keď začnú obchody s taiwanskými zákazníkmi, môže zahraničné ústredie dostať rôzne požiadavky: spracovať ponuky a zmluvy na Taiwane, držať zásobu náhradných dielov na naliehavú výmenu alebo umiestniť personál na inštaláciu a údržbu. Vtedy je ľahké sa najprv spýtať: „Stačí na riešenie založiť spoločnosť na Taiwane?“
 
-Najprv treba vyjasniť, kto na Taiwane čo obstaráva. Štruktúra na posúdenie sa mení podľa toho, či zahraničné ústredie naďalej uzatvára kúpne zmluvy, či taiwanská spoločnosť tovar nakupuje a ďalej predáva, alebo či miestny personál poskytuje len technickú podporu.
+Najprv treba vyjasniť, kto bude na Taiwane za ktoré činnosti zodpovedať. Štruktúra na posúdenie sa mení podľa toho, či zahraničné ústredie naďalej uzatvára kúpne zmluvy, či taiwanská spoločnosť tovar nakupuje a ďalej predáva, alebo či miestny personál poskytuje len technickú podporu.
 
 Tento text je všeobecným výkladom pre zahraničné podniky v odbore polovodičových materiálov, súčiastok a zariadení, ktoré navrhujú štruktúru vstupu na Taiwan. Nasledujúce prevádzkové situácie a kontrolné body sú hypotetické príklady a návrhy na posúdenie, nie skutočný mandát konkrétneho podniku ani jednotná požiadavka založenia. Dane, kontrola vývozu, povolenia podľa výrobku a zaradenie investora vyžadujú ešte samostatný rozbor.
 
@@ -36,7 +36,7 @@ Než ústredie rozhodne o štruktúre vstupu, môže interne vyjasniť:
 | Zmluvy so zákazníkmi | Kto bude stranou zmluvy: zahraničné ústredie, taiwanská dcérska spoločnosť, alebo miestny zástupca? |
 | Ponuky a objednávky | Kto s konečnou platnosťou potvrdí cenu a lehotu a kam až siaha oprávnenie zástupcu na Taiwane? |
 | Tovar a zásoby | Kto dováža, drží a spravuje zásoby a vybavuje vrátenie a výmenu tovaru? |
-| Personál | Prichádzajú zamestnanci ústredia, prijíma sa na Taiwane, alebo sa práca zverí vonkajšiemu dodávateľovi? |
+| Personál | Prídu zamestnanci ústredia, bude sa prijímať na Taiwane, alebo sa práca zverí vonkajšiemu dodávateľovi? |
 | Inštalácia a technická podpora | Kto nesie povinnosť podpory voči zákazníkovi a rieši problémy pri práci na mieste? |
 | Platby a náklady | Kto fakturuje a vyberá a ako sa vyrovnávajú náklady medzi ústredím a organizáciou na Taiwane? |
 | Akosť a spory | Kto potvrdí výsledok kontroly a kto prijíma tvrdenia vád alebo nároky na náhradu škody? |
@@ -61,23 +61,23 @@ Ak ste sa rozhodli zriadiť na Taiwane samostatnú právnickú osobu, treba zvol
 
 ### Spoločnosť s ručením obmedzeným: správa je jednoduchšia, prevod podielov je však relatívne uzavretý
 
-Možno ju vytvoriť s 1 alebo viacerými fyzickými osobami, alebo s taiwanskými či zahraničnými právnickými osobami ako spoločníkmi (股東); spoločníci zásadne ručia do výšky vkladu. Konatelia sú 1 až 3 a volia sa zo spoločníkov. Spoločníci, ktorí nevykonávajú činnosť, môžu vykonávať právo nahliadania, bez toho, aby bolo treba osobitný dozorný orgán (監察人). Ak nie je v stanovách inak, má 1 spoločník 1 hlas, takže ovládanie sa nemusí zhodovať s pomerom vkladov. Prevod vkladu bežného spoločníka zásadne vyžaduje súhlas viac než polovice hlasovacích práv ostatných; u konateľa treba súhlas 2/3 alebo viac hlasovacích práv ostatných spoločníkov. Preto sa lepšie hodí k jednoduchým vzťahom spoločníkov a stálemu ovládaniu než k častému získavaniu kapitálu alebo obchodovaniu s podielmi. Neskôr ju možno previesť na akciovú spoločnosť.
+Možno ju vytvoriť s 1 alebo viacerými fyzickými osobami, alebo s taiwanskými či zahraničnými právnickými osobami ako spoločníkmi (股東); spoločníci v zásade ručia do výšky vkladu. Konatelia sú 1 až 3 a volia sa zo spoločníkov. Spoločníci, ktorí nevykonávajú činnosť, môžu vykonávať právo nahliadania, bez toho, aby bolo treba osobitný dozorný orgán (監察人). Ak nie je v stanovách inak, má 1 spoločník 1 hlas, takže ovládanie sa nemusí zhodovať s pomerom vkladov. Prevod vkladu bežného spoločníka spravidla vyžaduje súhlas viac než polovice hlasovacích práv ostatných; u konateľa treba súhlas 2/3 alebo viac hlasovacích práv ostatných spoločníkov. Preto sa lepšie hodí pre jednoduché vzťahy medzi spoločníkmi a pre stále ovládanie než pre časté získavaniu kapitálu alebo obchodovaniu s podielmi. Neskôr ju možno previesť na akciovú spoločnosť.
 
 ### Akciová spoločnosť: vhodná, ak sa majú pribrať iní investori alebo sa zvažuje kótovanie
 
-Kapitál sa delí na akcie. Zásadne sú potrební 2 alebo viacerí akcionári (股東), avšak štát alebo právnická osoba ju môže založiť aj samostatne a zahraničná právnická osoba môže držať 100 %. Akcie sú zásadne voľne prevoditeľné, so zákonnými výnimkami; podľa predpisov možno navrhnúť druhové akcie, opcie zamestnancov a podobne. Preto sa hodí podnikom, ktoré očakávajú investorov, obchody s podielmi, akciové odmeny zamestnancov alebo budúcu fúziu, akvizíciu, kótovanie alebo zápis do režimu vznikajúcich akcií (興櫃); neobmedzuje sa len na veľké podniky. V správe môže nekótovaná spoločnosť stanovami nezriaďovať predstavenstvo a mať len 1 alebo 2 riaditeľov. Spoločnosť s jediným štátnym alebo právnickým akcionárom môže stanovami nezriaďovať dozorný orgán (監察人). Takisto nemusí každá akciová spoločnosť nechať overiť ročnú účtovnú závierku. Hlavné prahy auditu bežnej spoločnosti sú splatený kapitál 30.000.000 TWD, alebo i pod touto hranicou prevádzkový príjem 100.000.000 TWD alebo 100 zamestnancov prihlásených v poistení pracovníkov (勞工保險); spoločnosti, ktoré uskutočnili verejnú emisiu akcií (公開發行公司), sa riadia predpismi o cenných papieroch.
+Kapitál sa delí na akcie. Spravidla sú potrební 2 alebo viacerí akcionári (股東), avšak štát alebo právnická osoba ju môže založiť aj samostatne a zahraničná právnická osoba môže držať 100 %. Akcie sú v zásade voľne prevoditeľné, so zákonnými výnimkami; podľa predpisov možno navrhnúť druhové akcie, opcie zamestnancov a podobne. Preto sa hodí podnikom, ktoré očakávajú investorov, obchody s podielmi, akciové odmeny zamestnancov alebo budúcu fúziu, akvizíciu, kótovanie alebo zápis do režimu vznikajúcich akcií (興櫃); neobmedzuje sa len na veľké podniky. V správe môže nekótovaná spoločnosť stanovami nezriaďovať predstavenstvo a mať len 1 alebo 2 členov predstavenstva (董事). Spoločnosť s jediným štátnym alebo právnickým akcionárom môže stanovami nezriaďovať dozorný orgán (監察人). Takisto nemusí každá akciová spoločnosť nechať overiť ročnú účtovnú závierku. Povinnosť auditu vzniká bežnej spoločnosti pri splatenom kapitáli 30.000.000 TWD a aj pod touto hranicou pri prevádzkovom príjme 100.000.000 TWD alebo pri 100 zamestnancoch prihlásených v poistení pracovníkov (勞工保險); spoločnosti, ktoré uskutočnili verejnú emisiu akcií (公開發行公司), sa riadia predpismi o cenných papieroch.
 
 ## 4. Postupy pobočky a dcérskej spoločnosti sa líšia; iba dcérska spoločnosť prechádza preskúmaním investičného odboru Ministerstva hospodárstva
 
-Keď zahraničná spoločnosť zakladá taiwanskú dcérsku spoločnosť, názov sa zásadne vopred overí a žiada sa o investičné povolenie na Odbore preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司). Po schválení sa prevedú prostriedky, určí sa výška investície a audítor (會計師) overí kapitál, potom sa dokončí založenie a daňový zápis.
+Keď zahraničná spoločnosť zakladá taiwanskú dcérsku spoločnosť, názov sa spravidla vopred overí a žiada sa o investičné povolenie na Odbore preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司). Po schválení sa prevedú prostriedky, určí sa výška investície a audítor (會計師) overí kapitál, potom sa dokončí založenie a daňový zápis.
 
-Naproti tomu pri zakladaní taiwanskej pobočky bežnej zahraničnej spoločnosti investičné povolenie Odboru preskúmania investícií zásadne netreba; Úrad obchodného rozvoja Ministerstva hospodárstva (經濟部商業發展署) vykonáva zápis pobočky a súvisiace určenie kapitálu. Naďalej sú nutné predbežné overenie názvu, prevod prevádzkového kapitálu, overenie kapitálu a daňový zápis; harmonogram je zvyčajne kratší.
+Naproti tomu pri zakladaní taiwanskej pobočky bežnej zahraničnej spoločnosti investičné povolenie Odboru preskúmania investícií spravidla netreba; Úrad obchodného rozvoja Ministerstva hospodárstva (經濟部商業發展署) vykonáva zápis pobočky a súvisiace určenie kapitálu. Naďalej sú nutné predbežné overenie názvu, prevod prevádzkového kapitálu, overenie kapitálu a daňový zápis; harmonogram je zvyčajne kratší.
 
 Vyššie uvedené porovnáva len postup zápisu pobočky a dcérskej spoločnosti. Samotná voľba právnej formy nerobí transakciu zákonnou, vznik sporu nevylučuje a určitý výsledok nesľubuje.
 
 ## 5. Zápis spoločnosti a zákonná práca inžiniera nie sú totéž
 
-Dokončenie zápisu na Taiwane neznamená, že zamestnanci zahraničného ústredia môžu na Taiwane automaticky pracovať. Cudzinec, ktorý na Taiwane pracuje, potrebuje zákonné pracovné povolenie (工作許可) a na dlhší pobyt i preukaz na pobyt cudzinca (外僑居留證). Zásadne zamestnávateľ žiada o pracovné povolenie a zodpovedajúci preukaz na pobyt.
+Dokončenie zápisu na Taiwane neznamená, že zamestnanci zahraničného ústredia môžu na Taiwane automaticky pracovať. Cudzinec, ktorý na Taiwane pracuje, potrebuje zákonné pracovné povolenie (工作許可) a na dlhší pobyt i preukaz na pobyt cudzinca (外僑居留證). Spravidla zamestnávateľ žiada o pracovné povolenie a zodpovedajúci preukaz na pobyt.
 
 Pre vedúceho taiwanskej dcérskej spoločnosti a pobočky zahraničnej spoločnosti je žiadosť o pracovné povolenie relatívne ľahšia. Ak sa má však žiadať o pracovné povolenie pre ďalšieho cudzinca, Ministerstvo práce podľa odvetvia požaduje prahy kapitálu, obratu a podobne. Ak plánujete, že zahraniční zamestnanci budú pracovať na Taiwane, treba pred založením taiwanskej spoločnosti vopred overiť, či nastavenie kapitálu spĺňa príslušný prah.
 
@@ -105,7 +105,7 @@ Založenie spoločnosti nie je nutné len preto, že zákazník je na Taiwane. T
 
 ### Zmizne zodpovednosť materskej spoločnosti úplne, keď je založená taiwanská spoločnosť?
 
-Ak založíte dcérsku spoločnosť, nie pobočku, materská spoločnosť zásadne nenesie povinnosti zo zmlúv podpísaných menom dcérskej spoločnosti. Treba však overiť výnimky pre zneužitie právnej osobnosti a to, či materská spoločnosť poskytla ručenie alebo prevzala vlastné zmluvné povinnosti.
+Ak založíte dcérsku spoločnosť, nie pobočku, materská spoločnosť spravidla nenesie povinnosti zo zmlúv podpísaných menom dcérskej spoločnosti. Treba však overiť výnimky pre zneužitie právnej osobnosti a to, či materská spoločnosť poskytla ručenie alebo prevzala vlastné zmluvné povinnosti.
 
 ### Možno začať s distribútorom a potom prejsť na spoločnosť na Taiwane?
 
@@ -115,4 +115,4 @@ Postupný prechod možno navrhnúť, avšak treba tiež posúdiť skončenie ale
 
 Ak plánujete na Taiwane predaj, správu zásob, podporu inštalácie alebo miestny nábor, usporiadajte najprv prácu, ktorú vykoná ústredie, a prácu, ktorá pripadne taiwanskej organizácii. Po overení tém konzultácie a stretu záujmov kancelária vysvetlí potrebné podklady a rozsah služieb, ktoré možno poskytnúť.
 
-Príklad predmetu: Konzultácia o štruktúre vstupu podniku polovodičov na Taiwan. Pri prvom kontakte uveďte názov spoločnosti, krajinu ústredia, predpokladaný výrobok alebo službu, plán prevádzky na Taiwane a požadovaný jazyk konzultácie (iba angličtina, čínština (中文), japončina alebo kórejčina). Dôverné konštrukčné podklady a úplné zmluvy zašlite až po obdržaní ďalšieho pokynu. Skutočne dostupné jazyky konzultácie a rozsah prípadného mandátu treba overiť pri kontakte.
+Príklad predmetu: Konzultácia o štruktúre vstupu podniku polovodičov na Taiwan. Pri prvom kontakte uveďte názov spoločnosti, krajinu ústredia, predpokladaný výrobok alebo službu, plán prevádzky na Taiwane a požadovaný jazyk konzultácie (iba angličtina, čínština (中文), japončina alebo kórejčina). Dôverné konštrukčné podklady a úplné zmluvy zašlite až po ďalšom pokyne. Skutočne dostupné jazyky konzultácie a rozsah prípadného mandátu treba overiť pri kontakte.

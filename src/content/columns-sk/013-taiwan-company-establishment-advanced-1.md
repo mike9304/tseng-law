@@ -41,7 +41,7 @@ V poslednom čase mnoho cudzincov po otvorení účtu zmizne, preto sa otvárani
 
 V základnej časti jeden čitateľ uviedol, že otvorenie účtu je najťažšou etapou; s tým súhlasím.
 
-Pretože na Taiwane je veľmi veľa prípadov prania peňazí (洗錢), otváranie bankových účtov sa stáva stále prísnejším.
+Pretože na Taiwane je veľmi veľa prípadov prania peňazí (洗錢), posudzovanie žiadostí o otvorenie účtu je stále prísnejšie.
 
 **Rada:**
 
@@ -49,7 +49,7 @@ Posúdenie investičného plánu tiež zaberie čas.
 
 Mali by ste preto zostavovať investičný plán a hľadať adresu zápisu spoločnosti súčasne.
 
-Podľa článku 9 zákona o investíciách cudzincov (外國人投資條例) musí schválený vklad doraziť v plnej výške v lehote stanovenej príslušným orgánom (核定期限); lehotu treba overiť v akte schválenia každej veci (v praxi sa často stanoví približne na jeden rok).
+Podľa článku 9 zákona o investíciách cudzincov (外國人投資條例) musí byť schválený vklad v plnej výške poukázaný v lehote stanovenej príslušným orgánom (核定期限); lehotu treba overiť v akte schválenia každej veci (v praxi sa často stanoví približne na jeden rok).
 
 V tejto lehote je dosť času nájsť adresu a uzatvoriť nájomnú zmluvu.
 
@@ -111,7 +111,7 @@ Možno v prípade potreby navrhnúť notárske osvedčenie nájomnej zmluvy (公
 
 Záleží to na odvetviach činnosti (營業項目) spoločnosti.
 
-Napr. ak je odvetvím gastronómia a zamýšľa sa prenajať kancelársky priestor, otvorenie bankového účtu bude veľmi ťažké.
+Napr. ak je odvetvím gastronómia a chcete si prenajať kancelársky priestor, otvorenie bankového účtu bude veľmi ťažké.
 
 Ako už bolo uvedené, banka preskúmava nájomnú zmluvu a vykonáva miestnu prehliadku adresy spoločnosti.
 

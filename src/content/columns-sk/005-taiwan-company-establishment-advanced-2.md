@@ -27,17 +27,17 @@ Nižšie uvedené otázky a odpovede pripravila advokátka Wei Tseng (曾雋崴)
 
 **1. Na čo dať pozor pri prevode kapitálu (資本額) z Kórey na prípravný účet taiwanskej spoločnosti (公司籌備處帳戶)? (tento bod sa týka kórejského režimu a kórejskej bankovej praxe)**
 
-Zásadne banky v Kórei vyžadujú, aby sa investor **osobne** dostavil do banky v Kórei a previedol prostriedky z účtu vedeného na vlastné meno.
+Banky v Kórei spravidla vyžadujú, aby sa investor **osobne** dostavil do banky v Kórei a previedol prostriedky z účtu vedeného na vlastné meno.
 
 Prevod internetovým bankovníctvom alebo prostredníctvom príbuzného v Kórei nie je možný.
 
 Ďalej, podľa kórejských predpisov o devízovej kontrole, osoba s kórejskou štátnou príslušnosťou, ktorá zakladá zahraničnú právnickú osobu alebo nadobúda podiely, musí podať „oznámenie priamej zahraničnej investície“. Oznámenie musí byť zaregistrované v okamihu prevodu kapitálu na taiwanskú právnickú osobu (台灣法人); pri neoznámení môžu nastať sankcie za porušenie devízových predpisov.
 
-Pred prevodom kapitálu (資本金匯款) sa informujte u svojej hlavnej banky v Kórei.
+Pred prevodom kapitálu (資本金匯款) sa informujte vo svojej hlavnej banke v Kórei.
 
 **​**
 
-**2. Pri vklade základného kapitálu, možno previesť nové taiwanské doláre (新臺幣, TWD) z osobného účtu na Taiwane na prípravný účet taiwanskej spoločnosti?**
+**2. Možno pri vklade základného kapitálu previesť nové taiwanské doláre (新臺幣, TWD) z osobného účtu na Taiwane na prípravný účet taiwanskej spoločnosti?**
 
 Je to možné, avšak treba predložiť listiny potvrdzujúce pôvod prostriedkov v nových taiwanských dolároch získaných na Taiwane.
 
@@ -49,9 +49,9 @@ Ak nastane prevod z bankového účtu v Kórei, netreba pripojiť listiny o pôv
 
 **​**
 
-**3. Po pripísaní kapitálu na prípravný účet, kedy ho možno premeniť na riadny účet spoločnosti (正式公司帳戶)?**
+**3. Kedy možno prípravný účet po pripísaní kapitálu premeniť na riadny účet spoločnosti (正式公司帳戶)?**
 
-Zásadne to možno po prijatí listín o zápise právnickej osoby (法人登記文件).
+Spravidla to možno po prijatí listín o zápise právnickej osoby (法人登記文件).
 
 Zodpovedná osoba (負責人) potom v banke premení prípravný účet spoločnosti na riadny účet.
 
@@ -59,9 +59,9 @@ Pretože sa však vnútorné pravidlá jednotlivých bánk (銀行) líšia, ak 
 
 **​**
 
-**4. Po premene prípravného účtu na riadny účet, možno internetové bankovníctvo používať ihneď?**
+**4. Možno po premene prípravného účtu na riadny účet používať internetové bankovníctvo ihneď?**
 
-Záleží na banke; zásadne je potrebné aspoň číslo mobilného telefónu.
+Záleží na banke; spravidla je potrebné aspoň číslo mobilného telefónu.
 
 Niektoré banky môžu ukladať ďalšie požiadavky, napríklad dobu používania účtu najmenej 6 mesiacov po založení.
 

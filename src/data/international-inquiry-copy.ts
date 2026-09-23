@@ -2059,18 +2059,18 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Táto stránka je napísaná po slovensky ako všeobecná orientácia, nie ako právna rada vo Vašej veci.',
     consultationNotice:
-      'Porada prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky.',
+      'Konzultácia prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky.',
     methodConfirmationNotice:
-      'Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
+      'Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme a posúdime, či existuje vhodný spôsob komunikácie; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
     preparationNotice:
       'Zhrnutie môžete napísať vo svojom jazyku. Pôvodný text sa uchová tak, ako ste ho napísali, a automaticky sa neprekladá.',
     heading: 'Odoslať žiadosť o posúdenie',
     intro:
-      'Opíšte svoju vec stručne. Advokátka alebo advokát posúdi obsah, kým sa prejde k ďalšiemu kroku.',
+      'Opíšte svoju vec stručne. Advokátka alebo advokát posúdi obsah skôr, než sa prejde k ďalšiemu kroku.',
     submitLabel: 'Odoslať žiadosť',
     submittingLabel: 'Odosiela sa…',
     successMessage:
-      'Obdržali sme Vašu žiadosť; čaká na posúdenie. Neznamená to, že porada prebehla alebo že bolo potvrdené stretnutie.',
+      'Vašu žiadosť sme prijali; čaká na posúdenie. Neznamená to, že konzultácia prebehla alebo že bolo potvrdené stretnutie.',
     savedNotificationPendingMessage:
       'Vaša žiadosť bola uložená, ale oznámenie kancelárii zatiaľ nie je overené. Čo ste napísali, sa nestratí. Ak nedostanete odpoveď, môžete napísať aj na e-mailovú adresu z kontaktnej stránky.',
     receiptIdLabel: 'Číslo podania',
@@ -2086,7 +2086,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Meno',
     emailLabel: 'E-mail',
     consentLabel:
-      'Prečítal(a) som stránku o ochrane osobných údajov a súhlasím s odoslaním tejto žiadosti.',
+      'Prečítal(a) som si stránku o ochrane osobných údajov a súhlasím s odoslaním tejto žiadosti.',
     privacyLinkLabel: 'Ochrana osobných údajov',
     requiredMessage: 'Toto pole je povinné.',
     invalidEmailMessage: 'Zadajte platnú e-mailovú adresu.',

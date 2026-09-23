@@ -55,7 +55,7 @@ Venujte preto tejto veci pozornosť.
 
 Všetkým odvetviam sa odporúča potvrdiť systémom „predbežného overenia prevádzkarne“ (營業場所預先查詢), či je prevádzka možná.
 
-Pri zápise spoločnosti sa však často zapisuje viacero odvetví naraz a často sa chce zapísať asi 10 odvetví jedným podaním.
+Pri zápise spoločnosti sa však často zapisuje viacero odvetví naraz a často sa jedným podaním zapisuje asi 10 odvetví.
 
 Preto v praxi nie je nutné pri zápise spoločnosti overovať všetky odvetvia.
 
@@ -69,7 +69,7 @@ Ak sa reštaurácia otvorí v mieste, kde to nie je možné, môže neskôr nasl
 
 ![„odvetvia, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-„odvetvia, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目)
+„Odvetvia, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目)
 
 Tým je zhrnutý podstatný postup; konkrétnu vec treba posúdiť osobitne s advokátkou alebo advokátom. Kancelária konzultuje iba po anglicky, čínsky (中文), japonsky a kórejsky.
 

@@ -52,7 +52,7 @@ De onderstaande tabel vat dit samen.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Soort** | **Economisch ontslag (資遣員工, 經濟解僱)** | **Tuchtontslag (解僱員工, 懲戒解僱)** | **Eigen ontslag van de werknemer**  **員工自請離職** |
+| **Soort** | **Economisch ontslag (資遣員工, 經濟解僱)** | **Tuchtontslag (解僱員工, 懲戒解僱)** | **Eigen ontslag van de werknemer (員工自請離職)** |
 | Betekenis | Bestaat bij de werkgever wegens de bedrijfssituatie behoefte aan personeelsaanpassing, dan ligt de grond in het ondernemingsdomein van de werkgever en niet in de verantwoordelijkheid van de werknemer. Daarom moet de werkgever de opzeggingstermijn (預告期間) naleven en ontslagvergoeding betalen, om nadelen van de werknemer evenwichtig te vereffenen. | Pleegt de werknemer een onrechtmatige of ongepaste handeling, dan kan de werkgever de arbeidsovereenkomst (勞動契約) zonder voorafgaande opzegging dadelijk beëindigen en hoeft hij geen ontslagvergoeding te betalen. Dit is 1 van de tuchtbevoegdheden van de werkgever. | De werknemer is vrij de overeenkomst te allen tijde te beëindigen, maar moet overeenkomstig de duur van de tewerkstelling de opzeggingstermijn naleven, zodat de werkgever overdracht en vervanging kan zoeken. |
 | Voorwaarden | Ja (artikel 11 van de Taiwanese wet op de arbeidsnormen) | Ja (artikel 12 van de Taiwanese wet op de arbeidsnormen) | Geen |
 | Voorafgaande opzegging | Vereist | Niet vereist | Vereist |
@@ -96,7 +96,7 @@ hoogbetaalde langdurige werknemers achtereenvolgens tot gesprekken te ontbieden
 
 De heer B was toen meer dan 10 jaar bij vennootschap A tewerkgesteld
 
-en de verkoper met het hoogste resultaat in de regio Midden-Taiwan.
+Hij was de verkoper met het hoogste resultaat in de regio Midden-Taiwan.
 
 Omdat loon en bonus zeer hoog waren,
 

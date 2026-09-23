@@ -55,7 +55,7 @@ Deze wet hield stand tot 2003; destijds nam de heer Lin, die een kapperszaak dre
 
 werknemers zonder visuele beperking in dienst voor haarwas- en massagediensten, en de politie stelde dat vast.
 
-Volgens het toenmalige recht kregen de heer Lin en die werknemers respectievelijk een bestuurlijke geldboete (罰鍰) van TWD 40.000, TWD 10.000 en TWD 20.000 in nieuwe Taiwanese dollar (新臺幣).
+De heer Lin kreeg een bestuurlijke geldboete (罰鍰) van TWD 40.000, de twee werknemers TWD 10.000 en TWD 20.000 in nieuwe Taiwanese dollar (新臺幣).
 
 De heer Lin achtte deze sanctie zeer onrechtvaardig en vroeg een grondwetsuitlegging.
 
@@ -81,7 +81,7 @@ Zo werd bijvoorbeeld gevraagd of de geschreven regel die alleen personen met een
 
 en werd betwijfeld of deze regel werkelijk had bijgedragen tot de bescherming van de arbeid en het bestaan van personen met een visuele beperking.
 
-Ten slotte verklaarden de grootrechters (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
+Ten slotte verklaarden de rechters van het Grondwettelijk Hof (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
 
 ​
 

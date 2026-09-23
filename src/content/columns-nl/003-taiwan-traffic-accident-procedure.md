@@ -41,7 +41,7 @@ Artikel 284 van het Wetboek van Strafrecht (刑法) regelt letsel door nalatighe
 
 Civielrechtelijke schadevergoeding (損害賠償) kan volgens artikel 197 van het Burgerlijk Wetboek (民法) niet meer worden gevorderd wanneer 2 jaar vanaf de kennis van schade en tot vergoeding verplichte of 10 jaar vanaf de onrechtmatige daad zijn verstreken. Welke feiten de verjaring (消滅時效) beïnvloeden, moet afzonderlijk worden onderzocht.
 
-Wie door een strafbaar feit schade heeft geleden, kan volgens artikel 487 van het Wetboek van Strafvordering een bij de strafzaak gevoegde civiele vordering (刑事附帶民事訴訟) instellen. Zolang de strafzaak loopt, kan zij volgens artikel 488 tot vóór de sluiting van het mondeling debat (言詞辯論終結) van de tweede aanleg worden ingesteld, maar niet na sluiting van het mondeling debat van de eerste aanleg en vóór het instellen van het hoger beroep. Gewoonlijk kan een afzonderlijke betaling van de gerechtskosten (裁判費) worden vermeden; niet elk resultaat eindigt zonder kosten. Wordt bijvoorbeeld de strafzaak afgewezen en op verzoek van de eisende partij naar de burgerlijke rechter verwezen, dan kunnen volgens artikel 503 van het Wetboek van Strafvordering proceskosten ontstaan; ook de verwijzings- en procedurevoorschriften van artikel 504 moeten worden nagegaan.
+Wie door een strafbaar feit schade heeft geleden, kan volgens artikel 487 van het Wetboek van Strafvordering een bij de strafzaak gevoegde civiele vordering (刑事附帶民事訴訟) instellen. Zolang de strafzaak loopt, kan zij volgens artikel 488 tot vóór de sluiting van de mondelinge behandeling (言詞辯論終結) van de tweede aanleg worden ingesteld, maar niet na sluiting van de mondelinge behandeling van de eerste aanleg en vóór het instellen van het hoger beroep. Gewoonlijk kan een afzonderlijke betaling van de gerechtskosten (裁判費) worden vermeden; niet elk resultaat eindigt zonder kosten. Wordt bijvoorbeeld de strafzaak afgewezen en op verzoek van de eisende partij naar de burgerlijke rechter verwezen, dan kunnen volgens artikel 503 van het Wetboek van Strafvordering proceskosten ontstaan; ook de verwijzings- en procedurevoorschriften van artikel 504 moeten worden nagegaan.
 
 De passende keuze hangt af van de stuiting van de verjaring (時效中斷), de kring van gedaagden, de bewijzen, de verzekering en de bevoegdheid. Daarom bestaat er geen procedure die in alle gevallen de beste is.
 
@@ -59,7 +59,7 @@ In de schikkingsovereenkomst (和解書) moeten ongevallentijd, -plaats en parti
 
 De schikking (和解) van artikel 736 van het Burgerlijk Wetboek (民法) is een contract waarin de partijen door wederzijds toegeven het geschil beëindigen of voorkomen. Volgens artikel 737 van het Burgerlijk Wetboek wordt de omvang van het rechtsverlies alleen bepaald door wat in de akte is opgenomen. Daarom mag niet zonder onderzoek van de bewoordingen worden vastgesteld dat alle toekomstige vorderingen uitdoven.
 
-Bij klachtdelicten kan de klacht volgens artikel 238 van het Wetboek van Strafvordering tot vóór de sluiting van het mondeling debat van de eerste aanleg worden ingetrokken; na intrekking kan niet opnieuw klacht worden gedaan. Bij niet-klachtdelicten eindigt de openbare vervolging niet automatisch alleen door een onderlinge schikking, en een schikking verplicht niet steeds tot intrekking van de klacht.
+Bij klachtdelicten kan de klacht volgens artikel 238 van het Wetboek van Strafvordering tot vóór de sluiting van de mondelinge behandeling van de eerste aanleg worden ingetrokken; na intrekking kan niet opnieuw klacht worden gedaan. Bij niet-klachtdelicten eindigt de openbare vervolging niet automatisch alleen door een onderlinge schikking, en een schikking verplicht niet steeds tot intrekking van de klacht.
 
 ### Officiële grondslagen Q1–Q5
 
@@ -175,7 +175,7 @@ De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzeker
 
 Bij een ongeval met 1 voertuig is de bestuurder van dat voertuig in de regel geen prestatieontvanger van de verplichte verzekering van dat voertuig. Bij ongevallen met verscheidene voertuigen kan de bestuurder echter prestaties bij de verplichte verzekeraar van een ander betrokken voertuig vorderen.
 
-De op 29 mei 2026 gewijzigde prestatiemaatstaf (強制汽車責任保險給付標準) geldt voor ongevallen vanaf 1 juli 2026. Het plafond van nodige passende behandelingskosten bij letsel bedraagt TWD 200.000, invaliditeitsprestaties (失能) volgens de wettelijke 15 invaliditeitsgraden TWD 80.000–3.000.000, de overlijdensprestatie TWD 3.000.000, en het maximum uit overlijden, invaliditeit en behandelingskosten per gewonde persoon en per 1 ongeval bedraagt TWD 3.200.000. Voor vroegere ongevallen kan de vroegere maatstaf gelden.
+De op 29 mei 2026 gewijzigde prestatiemaatstaf (強制汽車責任保險給付標準) geldt voor ongevallen vanaf 1 juli 2026. Het plafond van nodige passende behandelingskosten bij letsel bedraagt TWD 200.000, invaliditeitsprestaties (失能) volgens de wettelijke 15 invaliditeitsgraden TWD 80.000–3.000.000, de overlijdensprestatie TWD 3.000.000, en het maximum uit overlijden, invaliditeit en behandelingskosten per gewonde persoon en per ongeval bedraagt TWD 3.200.000. Voor vroegere ongevallen kan de vroegere maatstaf gelden.
 
 Aansprakelijkheidsverzekering jegens derden (第三人責任險), bestuurdersongevallenverzekering (駕駛人傷害險) en cascoverzekering (車體損失險) zijn contractuele keuzeproducten. De werkelijke dekking verschilt naargelang de verzekerde, de limiet, het eigen risico (自負額), de uitsluiting, de schuld en de overige voorwaarden van de polis; verzekeringsbewijs en voorwaarden moeten een voor een worden onderzocht.
 
@@ -235,7 +235,7 @@ Q17. Wat is de strafrechtelijke verantwoordelijkheid van de veroorzaker wegens l
 
 ​
 
-Bij letsel door nalatigheid (過失傷害) is in een deel van de uitspraken ongeveer 3 maanden vrijheidsstraf opgelegd; een gebruikelijke of gegarandeerde uitkomst bestaat niet.
+Bij letsel door nalatigheid (過失傷害) legt de rechtspraak in de regel ongeveer 3 maanden vrijheidsstraf op; dat is geen gegarandeerde uitkomst.
 
 ​
 
@@ -247,7 +247,7 @@ Bij omzetting in geldboete bepaalt artikel 41 lid 1 van het Wetboek van Strafrec
 
 ​
 
-Bij zwaar letsel door nalatigheid is in een deel van de uitspraken ongeveer 4 maanden en bij dood door nalatigheid (過失致死) ongeveer 6 maanden vrijheidsstraf opgelegd; ook hier is geen uitkomst toegezegd.
+Bij zwaar letsel door nalatigheid legt de rechtspraak in de regel ongeveer 4 maanden en bij dood door nalatigheid (過失致死) ongeveer 6 maanden vrijheidsstraf op; dat is geen gegarandeerde uitkomst.
 
 ​
 
@@ -307,7 +307,7 @@ Beslissend zijn daarbij zorgvuldigheid en oprechtheid van de advocaat.
 
 ​
 
-Belangrijk is dat de advocaat alle schadeposten van de zaak zorgvuldig naloopt, zodat geen post over het hoofd wordt gezien.
+Belangrijk is dat de advocaat alle schadeposten zorgvuldig naloopt en helpt de vergoeding te vorderen die de feiten en het bewijs ondersteunen.
 
 ​
 
@@ -315,7 +315,7 @@ Bovendien moet de advocaat de toestand van de partij duidelijk toelichten en de 
 
 ​
 
-Voorzichtigheid is geboden bij advocaten die de zaak opblazen, van de schikking afraden en tot het einde civiel- en strafrechtelijk willen strijden, alleen om het mandaat te verkrijgen.
+Voorzichtigheid is geboden bij advocaten die de zaak opblazen, van de schikking afraden en tot het einde civiel- en strafrechtelijk willen strijden, alleen om de opdracht te krijgen.
 
 ​
 
@@ -339,7 +339,7 @@ Door letsel of overlijden van de benadeelde persoon lijdt de benadeelde persoon 
 
 ​
 
-Veel veroorzakers nemen niet de moeite telefonisch naar de toestand te vragen of langs te gaan, en denken dat de verzekeringsmaatschappij alles zal afhandelen, zodat zij zelf niet verschijnen. Dan worden berouw en ernst niet gevoeld.
+Veel veroorzakers nemen niet de moeite telefonisch naar de toestand te vragen of langs te gaan, en denken dat de verzekeringsmaatschappij alles zal afhandelen, zodat zij zelf niet verschijnen. Dan ervaart de benadeelde bij de veroorzaker noch berouw, noch oprechtheid.
 
 ​
 
@@ -347,7 +347,7 @@ Veel veroorzakers nemen niet de moeite telefonisch naar de toestand te vragen of
 
 ​
 
-Dat kwetst de benadeelde en wekt woede op: hij geeft bij het onderhandelingsbedrag niet toe of vraagt conservatoir beslag (假扣押) en legt tot het einde beslag op het vermogen van de wederpartij.
+Dat kwetst de benadeelde en wekt woede op: hij geeft bij het schikkingsbedrag niet toe of vraagt conservatoir beslag (假扣押) en legt tot het einde beslag op het vermogen van de wederpartij.
 
 ​
 

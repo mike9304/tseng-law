@@ -792,7 +792,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     // The published privacy-page sentence, with its leading connective dropped
     // so the line stands alone; the proposition is unchanged.
     confidentialNotice:
-      'متن اصلی ذخیره می‌شود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه یا شمارهٔ شناسنامه یا داده‌های حساب بانکی.',
+      'چون متن اصلی ذخیره می‌شود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه، شمارهٔ شناسنامه یا اطلاعات حساب بانکی.',
   },
   my: {
     consultationNotice:

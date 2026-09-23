@@ -70,6 +70,11 @@
   word-break: normal;
 }
 
+/* WO-DS2: Korean keeps 어절 wrapping (globals.css WI-1); ja/zh stay normal. */
+.hero:lang(ko) :global(.blog-hero-title) {
+  word-break: keep-all;
+}
+
 .hero:lang(ko) :global(.blog-hero-title),
 .hero:lang(ja) :global(.blog-hero-title),
 .hero:lang(zh) :global(.blog-hero-title),
@@ -177,6 +182,20 @@
   max-height: none;
   overflow-wrap: break-word;
   word-break: normal;
+}
+
+/* WO-DS2: Korean keeps 어절 wrapping (globals.css WI-1); ja/zh stay normal.
+   overflow-wrap above stays as the long-URL safety net. The authority card's
+   `word-break: normal` comes from globals.css (.authority-card-name/-role/
+   -summary), overridden here for ko only. */
+.article:lang(ko) :global(.column-markdown) :global(h2.blog-heading),
+.article:lang(ko) :global(.column-faq-heading),
+.article:lang(ko) :global(.column-markdown) :global(h3.blog-heading),
+.article:lang(ko) :global(.blog-paragraph),
+.article:lang(ko) :global(.authority-card-name),
+.article:lang(ko) :global(.authority-card-role),
+.article:lang(ko) :global(.authority-card-summary) {
+  word-break: keep-all;
 }
 
 .article :global(.column-markdown) :global(a.link-underline) {

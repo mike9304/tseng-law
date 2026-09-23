@@ -15,3 +15,8 @@
   overflow-wrap: anywhere;
   word-break: normal;
 }
+
+/* WO-DS2: Korean keeps 어절 wrapping (globals.css WI-1); ja/zh stay normal. */
+.current:lang(ko) {
+  word-break: keep-all;
+}

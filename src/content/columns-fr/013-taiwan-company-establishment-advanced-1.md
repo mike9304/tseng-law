@@ -43,7 +43,7 @@ L’ouverture du compte est souvent l’étape la plus difficile.
 
 Parce que les cas de blanchiment d’argent (洗錢) sont très nombreux à Taïwan, l’ouverture des comptes bancaires devient de plus en plus stricte.
 
-**Conseil** :
+**Conseil** :
 
 Comme l’examen du plan d’investissement prend aussi du temps,
 
@@ -111,7 +111,7 @@ vous pouvez, s’il y a lieu, proposer de faire notarier le contrat de bail (公
 
 Cela dépend des branches d’activité (營業項目) de la société.
 
-Exemple : si la branche d’activité est la restauration et que l’on entend prendre à bail un local à usage de bureaux, l’ouverture du compte bancaire sera très difficile.
+Exemple : si la branche d’activité est la restauration et que l’on entend prendre à bail un local à usage de bureaux, l’ouverture du compte bancaire sera très difficile.
 
 Comme déjà indiqué, la banque examine le contrat de bail et inspecte sur place l’adresse de la société.
 
@@ -119,11 +119,11 @@ En outre, lors de l’immatriculation finale de la société, la municipalité (
 
 s’il s’agit d’un local à usage de bureaux, l’immatriculation de la société (公司登記) n’est alors pas possible.
 
-Exemple : s’il s’agit de branches d’activité possibles dans un local à usage de bureaux, telles que la publicité ou le commerce de gros, la société peut être constituée dans un local à usage de bureaux.
+Exemple : s’il s’agit de branches d’activité possibles dans un local à usage de bureaux, telles que la publicité ou le commerce de gros, la société peut être constituée dans un local à usage de bureaux.
 
 Avant de conclure le contrat de bail, vous devriez vérifier ce point.
 
-*Si vous avez besoin d’aide ou d’un échange sur le droit de Taïwan, utilisez la page Contact ; aucun délai de réponse n’est promis.*
+*Si vous avez une question sur le droit de Taïwan, écrivez depuis la page Contact en anglais, en chinois (中文), en japonais ou en coréen ; aucun délai de réponse n’est promis.*
 
 ---
 

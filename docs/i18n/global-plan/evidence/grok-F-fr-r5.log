@@ -1,0 +1,73 @@
+WO-F-fr r5 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-fr-r5
+Date: 2026-09-23
+Scope: French guidance pack + columns-fr only. No commit.
+
+Rows: 36 (fr-a 16 + fr-b 20). Applied 25 (1 of them in a checker-safe form). Skipped 11.
+
+## Applied
+fr-a: 1, 2, 3, 4, 11, 12, 13, 15, 16.
+fr-b: 1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20.
+
+Checker-safe variant (still applied):
+- fr-b 15. « 1 petit camion de sa propriété » → « 1 petit camion dont il est propriétaire » (FAQ, body, and the « utilise » sentence). The bare digit stays: Korean 1대 is counted, and bare « un » is not in the French number lexicon.
+
+Wording choices inside applied rows:
+- fr-a 12. « ne parachève pas le divorce » → « ne suffit pas à rendre le divorce effectif » (2). « ne parachève pas toutes les procédures » → « n’accomplit pas toutes les procédures exigées ».
+- fr-b 1. « traces » → « pièces », verb « classer » rather than the suggested « ordonner » (see disagreements).
+- fr-b 18. « responsable » → « l’avocate ou de l’avocat chargé du dossier », the house formula for an unnamed attorney.
+- fr-a 2. Cells are « Faible | Élevée | Faible », with the hedge in the header « Difficulté de la démarche (aucun résultat promis) ».
+
+## Skipped
+- fr-a 5. Q16–Q20 were not promoted to `##` headings. Heading levels are pinned to the Korean source.
+- fr-a 6 and fr-b 7. No paragraphs merged, and no U+200B deleted (ZWSP counts are pinned), including 005’s `**​**` lines. 013 already says « l’indication de la région suffit (exemple : ville de Taipei) »; the suggested parenthetical was already there.
+- fr-a 7. « par 1 victime et par 1 accident » kept. Korean 1명·1건 are counted; dropping the digits fails numbers.
+- fr-a 8 and fr-b 6 (first of the month as « 1er »). 9 left as « 1 janvier / 1 juillet »: 001 ×2, 003 ×1, 004 ×2, 011 ×3, 015 ×1. The checker’s date pattern is `1 janvier 2024`. `1er janvier 2024` does not match, so the month number is lost and numbers FAIL.
+- fr-a 9 and fr-b 5 (space as thousands separator). ACCEPTED-ROUND: the checker does not parse « 500 000 ». French thousands stay dotted (`TWD 500.000`). 0 instances changed.
+- fr-a 10. The link label still says article 3 of the withholding-rate standards and keeps « et non l’article 10 de la loi sur la TVA ». The Korean source link text is 제10조; dropping 10 fails numbers. URL unchanged (flno=3).
+- fr-a 14. Pinned bio figure « TWD 1.57M » left byte-identical. The French sentence already says « 1,57 million de dollars taïwanais ».
+- fr-b 19. Heading numbers stay 7 then 8. The Korean and English sources skip 6 the same way; renumbering would change a counted digit.
+- Frontmatter `url:` Hangul and the fullwidth colon inside the 008 url: not touched (R16).
+
+## Systemic patterns
+- `ordonner` where the English means identify, address, or coordinate: 5 sentences. 004 « coordonne l’imposition … afin d’éviter la double imposition »; 007 « identifier concrètement l’état actuel » and « peuvent être abordés ensemble »; 017 « identifier concrètement les rapports suivants » and « doivent être déterminées ». Court orders (003, 008, 010), liquidation wording, and « ordonner les documents / les pièces » (arrange a file) were left.
+- Worker who ends a contract: 2 (« met fin » / « mettre fin »). « le contrat s’éteint » left.
+- `mode d’opérer` / `facultés` as dealing and authority, 018 only: 3 (the pair in §2, « mode de relation commerciale du siège », « étendue des pouvoirs du représentant »). 016 « facultés » of parental authority left.
+- No-break space before ; : ? : 18 ASCII spaces replaced with U+00A0 (001 ×2, 004 ×3, 005 ×1, 009 ×3, 013 ×4, 014 ×2, 015 ×1, 016 ×1, 018 ×1). That includes the two contact lines rewritten in this pass.
+- Consultation languages named, reply time still denied: 3 closings (013, 015, 018).
+- Fullwidth solidus in the Lienchiang/Matsu gloss: 2 → « 連江、馬祖 ».
+- Photo caption « Bureau de l’avocate au bureau de Taipei »: 1 → « Bureau de l’avocate à Taipei ».
+- Checklist voice in 016 §9: 6 numbered items plus the following paragraph, present « Vous » → infinitive.
+- Thousands separator and « 1er »: 0 changed (see Skipped).
+- Spoken-column ZWSP stacks: 0 deleted.
+- R2–R10 beyond these rows: prior rounds already hold the consultation lock, feminine Wei Tseng, Korea-as-labelled-example framing, Traditional glosses, « NOTRE ÉQUIPE », « Profil complet (en anglais) », and « questions et réponses ». No further instance turned up. The only fullwidth colon outside a gloss is the 008 frontmatter url.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=80
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+`grep -rn "\[변호사 검수 필요\]" src/content/columns-fr src/data | wc -l` →        0
+`npx tsc --noEmit -p tsconfig.json && echo TSC_OK` → TSC_OK
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+`git status --short | wc -l` → 18
+(That count is from before this log file existed. After this file was written the same command prints 19.)
+
+## Reviewer disagreements (not applied)
+- The « 1er » and narrow-space thousands recommendations are right for French typography. They are not applied because the checker and ACCEPTED-ROUND reject them. Noted above, not treated as a mistake about the language.
+- fr-a 7 is not a leftover digit. English says « per victim per accident », but the Korean source counts 1명 and 1건. The digits stay.
+- fr-a 10: the correction note is awkward in a published label. It stays because the Korean link text contributes a counted 10. The statute name and article 3 are already in the same label, and the URL is already flno=3.
+- fr-b 1’s suggested verb « ordonner » fights this round’s own pattern (ordonner read as command). « Classer séparément les pièces » is the wording applied. The diagnosis that « traces » is the wrong noun is right.
+- fr-b 15’s « un » would drop a counted 1. The possessive was fixed; the digit was not.
+- fr-b 18’s masculine « l’avocat » was not used. The sentence does not name Wei Tseng; the firm’s unnamed-counsel formula is « avocate ou avocat ».
+- fr-b 19: the skip from 5 to 7 is in the English and Korean sources. Changing only the French digits would diverge from the source.
+- Promoting Q16–Q20 to headings, and deleting U+200B lines, would move structure the checker pins to the Korean source. The layout complaint is fair; the structure cannot move.

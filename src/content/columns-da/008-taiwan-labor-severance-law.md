@@ -13,12 +13,12 @@ faq:
   - q: "Skal selskabet også ved en disciplinær afskedigelse udbetale godtgørelse ved afskedigelse?"
     a: "Nej. Begår arbejdstageren et retsbrud, krænker interne regler eller udebliver uden gyldig grund 3 dage i træk (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af godtgørelse ved afskedigelse."
   - q: "Hvordan beregnes godtgørelsen ved afskedigelse i Taiwan?"
-    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hvert fuldførte et år, uden loft."
+    a: "For hvert fuldført års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som godtgørelse ved afskedigelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hver fuldført periode på 1 år, uden loft."
 ---
 
 # Godtgørelse ved afskedigelse (資遣費) i Taiwan: hvornår den udbetales, og hvornår den ikke gør
 
-![Hovedbillede](../images/008-taiwan-labor-severance-law/featured-01.jpg)
+![Forsidebillede](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
 Advokat Wei Tseng (曾雋崴) er advokat i Taiwan.
 
@@ -52,7 +52,7 @@ Det sammenfattes i tabellen nedenfor.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Art** | **Økonomisk afskedigelse (資遣員工, 經濟解僱)** | **Disciplinær afskedigelse (解僱員工, 懲戒解僱)** | **Arbejdstagerens egen opsigelse**  **員工自請離職** |
+| **Art** | **Økonomisk afskedigelse (資遣員工, 經濟解僱)** | **Disciplinær afskedigelse (解僱員工, 懲戒解僱)** | **Arbejdstagerens egen opsigelse (員工自請離職)** |
 | Betydning | Består der hos arbejdsgiveren på grund af forretningssituationen behov for personaletilpasning, ligger grunden i arbejdsgiverens virksomhedsområde og ikke i arbejdstagerens ansvar. Derfor skal arbejdsgiveren overholde varselsfristen (預告期間) og udbetale godtgørelse ved afskedigelse, så arbejdstagerens ulemper udlignes afbalanceret. | Begår arbejdstageren en retsstridig eller upassende handling, kan arbejdsgiveren straks bringe arbejdsaftalen (勞動契約) til ophør uden forudgående varsel og behøver ikke at udbetale godtgørelse ved afskedigelse. Dette er 1 af arbejdsgiverens disciplinærbeføjelser. | Arbejdstageren er fri til når som helst at bringe aftalen til ophør, men skal efter ansættelsens varighed overholde varselsfristen, så arbejdsgiveren kan søge overdragelse og erstatning. |
 | Vilkår | Ja  (artikel 11 i den taiwanske lov om arbejdsnormer) | Ja  (artikel 12 i den taiwanske lov om arbejdsnormer) | Ingen |
 | Forudgående varsel | Påkrævet | Ikke påkrævet | Påkrævet |
@@ -62,7 +62,7 @@ Det sammenfattes i tabellen nedenfor.
 
 > I Taiwan skal arbejdsgiveren for hvert fuldført års anciennitet (年資)
 > udbetale 0,5 måneds gennemsnitsløn (平均工資) som godtgørelse ved afskedigelse.
-> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hvert fuldførte et år, uden loft.
+> (højst 6 månedslønninger) Denne formel gælder for anciennitet, som artikel 12 i loven om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales 1 måneds gennemsnitsløn for hver fuldført periode på 1 år, uden loft.
 
 ​
 

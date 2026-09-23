@@ -1551,7 +1551,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'L’idioma de la pàgina i l’idioma de la consulta no són el mateix',
           paragraphs: [
             'Aquesta pàgina està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en els quatre idiomes de consulta: anglès, xinès (中文), japonès i coreà. Llegir l’orientació en català no vol dir que la conversa amb l’advocada o l’advocat es faci en català.',
-            'No prometem intèrpret, no prometem un termini de resposta i no confirmem cites a través d’aquesta pàgina. Si no pot fer servir cap d’aquests quatre idiomes, la pàgina «Contacte» explica com comprovem una forma de comunicar-nos.',
+            'No prometem cap intèrpret, no prometem un termini de resposta i no confirmem cites a través d’aquesta pàgina. Si no pot fer servir cap d’aquests quatre idiomes, la pàgina «Contacte» explica com comprovem una forma de comunicar-nos.',
           ],
         },
         {
@@ -1736,7 +1736,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Si no pot fer servir cap dels quatre idiomes de consulta',
           paragraphs: [
             'Al formulari de contacte pot triar «Cal confirmar la forma de comunicar-se». Respondrem per comprovar si existeix una via possible de comunicació; no es garanteix el servei en un altre idioma i no es promet un termini de resposta.',
-            'Això és només un pas de comprovació, no és una promesa. No prometem intèrpret, no prometem servei en català ni en un altre idioma fora dels quatre indicats, i no prometem que puguem acceptar tots els assumptes.',
+            'Això és només un pas de comprovació, no és una promesa. No prometem cap intèrpret, no prometem cap servei en català ni en un altre idioma fora dels quatre indicats, i no prometem que puguem acceptar tots els assumptes.',
           ],
         },
         {
@@ -1749,7 +1749,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'El que aquesta pàgina no garanteix',
           paragraphs: [
-            'No prometem un termini de resposta, no confirmem una cita a través d’aquesta pàgina, no prometem una advocada o un advocat concret i no oferim intèrpret. La traducció escrita és una altra cosa: el missatge que envia no es tradueix de forma automàtica.',
+            'No prometem un termini de resposta, no confirmem una cita a través d’aquesta pàgina, no prometem una advocada o un advocat concret i no oferim cap intèrpret. La traducció escrita és una altra cosa: el missatge que envia no es tradueix de forma automàtica.',
             'Quan envia una sol·licitud, el contingut es guarda i espera revisió. Si al cap d’un temps no rep resposta, pot tornar a escriure a l’adreça de correu que figura a la pàgina de contacte.',
           ],
         },
@@ -1784,7 +1784,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Puc consultar en català?',
           answer:
-            'No. Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Tampoc no prometem intèrpret. La traducció escrita és una altra cosa: el text original que vostè escriu es conserva tal com està i no es tradueix de forma automàtica.',
+            'No. Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Tampoc no prometem cap intèrpret. La traducció escrita és una altra cosa: el text original que vostè escriu es conserva tal com està i no es tradueix de forma automàtica.',
         },
         {
           question: 'Què passa si no puc fer servir cap d’aquests quatre idiomes?',

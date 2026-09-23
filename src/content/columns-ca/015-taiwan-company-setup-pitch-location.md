@@ -27,9 +27,9 @@ Cal comprovar si aquesta adreça se situa en una zona on sigui possible explotar
 
 ​
 
-Si inicia el negoci a la ciutat de Taipei,
+Si inicia el negoci a la ciutat de Taipei, hi ha una eina pública.
 
-pot utilitzar el sistema de «consulta prèvia del local de negoci» (營業場所預先查詢) de l’Oficina de Comerç de la ciutat de Taipei (臺北市商業處).
+Pot utilitzar el sistema de «consulta prèvia del local de negoci» (營業場所預先查詢) de l’Oficina de Comerç de la ciutat de Taipei (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Tanmateix, en consultar ha de carregar la «certificació registral de l’immob
 
 Qualsevol pot sol·licitar a l’oficina del registre de la propietat (地政事務所) la «certificació registral de l’immoble de tipus 2» de qualsevol adreça.
 
-Si li resulta difícil acudir en persona a l’oficina del registre de la propietat (地政事務所),
+Si li resulta difícil acudir en persona a l’oficina del registre de la propietat (地政事務所), pot delegar la gestió.
 
-pot demanar ajuda a un conegut a Taiwan, al propietari, a un agent immobiliari o a una advocada o a un advocat.
+Pot demanar ajuda a un conegut a Taiwan, al propietari, a un agent immobiliari o a una advocada o a un advocat.
 
 Si el resultat de la consulta indica que l’establiment de restauració no és possible, més endavant, en registrar la societat (公司登記), el govern municipal podria no acceptar el registre.
 
@@ -59,9 +59,9 @@ Tanmateix, en registrar la societat solen inscriure’s diversos rams alhora, i 
 
 Per això, en la pràctica no cal consultar tots els rams en registrar la societat.
 
-Segons les «[Instruccions de funcionament del servei de consulta de locals de negoci de la ciutat de Taipei (臺北市營業場所協助查詢服務作業須知)](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» i la guia vigent de la ciutat de Taipei,
+Segons les «[Instruccions de funcionament del servei de consulta de locals de negoci de la ciutat de Taipei (臺北市營業場所協助查詢服務作業須知)](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» i la guia vigent de la ciutat de Taipei.
 
-des de l’1 de gener de 2023, en sol·licitar el registre de constitució, de trasllat de domicili o d’addició de rams d’activitat d’una societat o d’un comerç (incloent-hi la sucursal (分公司) i l’establiment dependent (分支機構)), el resultat de la consulta prèvia del local de negoci **s’ha** d’adjuntar a la sol·licitud de registre, amb independència del sector.
+Des de l’1 de gener de 2023, en sol·licitar el registre de constitució, de trasllat de domicili o d’addició de rams d’activitat d’una societat o d’un comerç (incloent-hi la sucursal (分公司) i l’establiment dependent (分支機構)), el resultat de la consulta prèvia del local de negoci **s’ha** d’adjuntar a la sol·licitud de registre, amb independència del sector.
 
 La llista següent de «rams objecte de consulta d’ofici» (主動查詢之營業項目) és l’objecte de la consulta addicional que l’Oficina de Comerç realitza d’ofici durant la revisió del registre (隨案主動查詢) quan el ram figura a la sol·licitud però manca en el resultat adjunt; el fet que un ram no estigui en aquesta llista no significa que la consulta quedi exempta.
 

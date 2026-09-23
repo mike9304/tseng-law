@@ -23,7 +23,7 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 Vėliau žiniasklaida pranešė, kad apeliacinėje instancijoje šalys sudarė taikos susitarimą (和解). Vien oficialus 1-osios instancijos sprendimas neleidžia patvirtinti apeliacinės instancijos baigties ar taikos sumos, todėl pranešimo apie taiką negalima laikyti patvirtinta galutine bylos baigtimi.
 
-Toliau pateikiami šią bylą aprašiusių žiniasklaidos pranešimų, interneto įrašų ir teisinių komentarų pavadinimai, išversti. Šie pavadinimai skirti tik kiekvienos nuorodos turiniui pristatyti; jie nereiškia, kad šis tekstas pats nustato faktus.
+Toliau pateikiami išversti šią bylą aprašiusių žiniasklaidos pranešimų, interneto įrašų ir teisinių komentarų pavadinimai. Šie pavadinimai skirti tik kiekvienos nuorodos turiniui pristatyti; jie nereiškia, kad šis tekstas pats nustato faktus.
 
 ![Studentui po 90 kg mirties traukos plyšo tarpslankstelinis diskas (椎間盤破裂)… prašo žalos atlyginimo iš sporto salės](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
@@ -63,7 +63,7 @@ Toliau pateikiami šią bylą aprašiusių žiniasklaidos pranešimų, interneto
 
 Praktinė šios bylos reikšmė ta, kad ji parodo, jog atsakomybė nekyla vien dėl to, kad sužalojimas įvyko sporto salėje. Paslaugos teikėjui tenkančios saugumo pareigos (安全義務) turinys, konkreti duota instrukcija ir rūpestingumo pareigos (注意義務) pažeidimas, priežastinis ryšys tarp sužalojimo ir veiksmo bei žalos apimtis vertinami pagal kiekvienos bylos dokumentus. Baudžiamojo ir civilinio proceso sąlygos ir terminai taip pat skiriasi, todėl iškart po įvykio įrašus ir dokumentus reikia tvarkyti atskirai.
 
-Toliau pateikta bendra informacija, skirta sužalojimų sporto salėje ginčams Taivane paaiškinti; tai nėra teisinė konsultacija konkrečiai bylai. Kokios teisės faktiškai atsiranda ir kaip galima reaguoti, gali skirtis pagal sutartinius santykius, įvykio aplinkybes, sužalojimo priežastį ir laipsnį, šalių elgesį, draudimo poliso sąlygas, užtikrintus įrodymus ir taikytiną teisę.
+Toliau pateikta bendra informacija, skirta sužalojimų sporto salėje ginčams Taivane paaiškinti; tai nėra teisinė konsultacija konkrečioje byloje. Kokios teisės faktiškai atsiranda ir kaip galima reaguoti, gali skirtis pagal sutartinius santykius, įvykio aplinkybes, sužalojimo priežastį ir laipsnį, šalių elgesį, draudimo poliso sąlygas, užtikrintus įrodymus ir taikytiną teisę.
 
 ## 1. Po sužalojimo sporto salėje Taivane kokias teisines procedūras galima įvertinti?
 
@@ -99,7 +99,7 @@ Jei įvykio aplinkybės gali atitikti nusikaltimo sudėtį, galima skubiai prane
 4. **Žala dėl darbingumo sumažėjimo (勞動能力減損)**: Jei pripažįstami padariniai ir nuolatinis darbingumo sumažėjimas, galima vertinti kartu pagal medicinos ir profesinius dokumentus, negalios laipsnį, profesiją ir pajamas bei likusį darbingo amžiaus laikotarpį. Vien negalios procentas atlyginimo dydžio nenustato ir nuostolis automatiškai neskaičiuojamas iki pensijos momento.
 5. **Prarastos pajamos atsigavimo laikotarpiu (收入損失)**: Laikotarpį, per kurį faktiškai nebuvo galima dirbti dėl gydymo ar poilsio, ir dėl to sumažėjusias pajamas reikia įrodyti darbo užmokesčio, mokesčių ir darbo įrašais.
 6. **Neturtinė žala (非財產上損害)**: Sumą už dvasines kančias nustato teismas pagal kiekvienos bylos elementus, tokius kaip sužalojimo laipsnis, gydymo trukmė, padariniai ir konkreti šalies padėtis.
-7. **Baudinis žalos atlyginimas (懲罰性賠償金)**: Yra taisyklė, pagal kurią procese, kuriame taikomas Vartotojų apsaugos įstatymas, jei žala atsirado dėl verslininko tyčios, galima reikalauti iki 5 kartų faktinės žalos; esant dideliam neatsargumui — iki 3 kartų; o esant neatsargumui — ne daugiau kaip faktinės žalos dydis. Ar [Taivano Vartotojų apsaugos įstatymo 51 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) taikomas bylai ir ar baudinis atlyginimas priteisiamas bei kokio dydžio, priklauso nuo teismo vertinimo dėl konkrečių sąlygų ir įrodymų.
+7. **Baudinis žalos atlyginimas (懲罰性賠償金)**: Yra taisyklė, pagal kurią procese, kuriame taikomas Vartotojų apsaugos įstatymas, jei žala atsirado dėl verslininko tyčios, galima reikalauti iki 5 kartų už faktinę žalą didesnio atlyginimo; esant dideliam neatsargumui — iki 3 kartų didesnio; o esant neatsargumui — ne didesnio už pačią faktinę žalą. Ar [Taivano Vartotojų apsaugos įstatymo 51 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) taikomas bylai ir ar baudinis atlyginimas priteisiamas bei kokio dydžio, priklauso nuo teismo vertinimo dėl konkrečių sąlygų ir įrodymų.
 
 ## 5. Net jei sporto salė turi civilinės atsakomybės draudimą (責任保險), ar atlyginimo buvimas ir dydis vis tiek gali būti ginčijami?
 

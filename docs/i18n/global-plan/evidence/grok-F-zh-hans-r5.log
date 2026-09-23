@@ -1,0 +1,96 @@
+# WO-F-zh-hans — Simplified Chinese fix lane, campaign round 5 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-zh-hans-r5 (no git add/commit/push)
+Files touched: src/content/columns-zh-hans/001, 002, 003, 004, 007, 008, 010, 011, 012, 013, 014, 016, 018;
+src/data/international-guidance-asia.ts (simplifiedChineseGuidanceContent strings only);
+this log.
+005, 006, 009, 015, 017 were not edited. inquiry copy, team, offices, answers, and llms-txt were not edited: the three guidance rows live in the about/pricing strings, not in a notice. consultationNotice and confidentialNotice stay verbatim substrings. "TWD 1.57M" was not in these strings and stays byte-identical. No test expectation pinned a string that changed (vitest 3202 passed without a test edit).
+
+R2–R10 were already in the pack from earlier rounds. This round's reviews treat Korea as a labelled example, keep the consultation lock negative, leave Wei Tseng unmarked for gender (Chinese does not mark it on 律师), and keep mainland dates. Unflagged sentences were left. The 007 sentence "才成为问题" (the Article 13 sanction arises only after an order to appear) was left, as the reviewer asked.
+
+## Rows applied
+zh-hans-a 10/11 and zh-hans-b 19/22. No P3 rows. Both P1 rows applied.
+
+zh-hans-a
+1  004: retained earnings may be subject to the 5% surtax. "可能适用所得税法第66条之9的未分配盈余加征5%。"
+2  004: a construction project lasting more than six months may constitute a construction PE. "可能构成工地常设机构。"
+3  004: failure to separate assets, or abuse of legal personality to harm creditors, may give rise to the statutory exception. "可能发生公司法上的例外责任。"
+4  007: enforcement methods may include direct or indirect compulsion. "依法律与个案事实，这些方法可以包括直接强制或间接强制。"
+5  007: support and contact must not be withheld or traded off in retaliation. "不得因报复而拒绝给付或互相交换；为维护子女的日常生活，各项义务与程序应分别处理。"
+6  003: the victim perceives neither remorse nor sincerity. "被害人感受不到肇事一方的悔意或诚意。" 善意 → 诚意.
+7  008 FAQ: Labor Standards Act seniority is one month per full year. "则每满1年给付平均工资1个月". The article citation was already in that sentence, so it was not repeated. The blockquote in the same file already said 每满1年.
+9  guidance: "并且可以用四种咨询语言之一讨论". The negative consultation lock stays.
+10 guidance: "摘要把经过、您的需求和期限写得越清楚".
+11 guidance: "律师为企业提供咨询，并代理诉讼。"
+
+zh-hans-b
+1  010 P1: payroll, tax, and employment records. "须以薪资记录、税务资料和在职证明等文件证明。"
+2  014 P1: review together with the employer's repayment demand. "并连同雇主要求返还的存证信函、薪资单、双方沟通及扣薪记录一并核对。" Other 扣留 in the same file still name wage-withholding records and were left.
+3  010: receipts for medical, transport, and caregiving expenses. Written as three nouns so 收据 attaches to each: "医疗费用收据、就医交通费收据及看护费用收据".
+4  010: "法律规定，在适用消费者保护法的诉讼中".
+5  010: "可能符合犯罪构成要件". Only instance of 该当.
+7  011: recall or destruction is not automatic. Subject supplied: "主管机关并不会仅因PIF资料有任何欠缺，就自动采取回收或销毁。"
+8  011: "因此，组织形态不得仅按希望把销售控制到何种程度来选择。"
+9  011 and 018: 税籍登记（稅籍登記，即税务登记）. Swept; see systemic.
+10 012: "是否属于禁止超车的情形。"
+11 012: "少发一次规定的喇叭或车灯信号".
+13 013: "但移民署办事窗口往往要排很久，宜早到并取号。"
+14 014: "第15-1条第1项规定两项择一的法定要件。" Digit 2 is now 两; the checker still counts it as 2.
+15 014: "外部培训机构的长期课程，实际上也可能只是一般入职培训。"
+16 014: the substance of those ordinary courses must be examined, not only the last item. "如工作规则说明、组织与制度介绍、日常岗位交接及基本安全程序，须就其实际内容加以审查。"
+17 014: "违反劳动条件的资料" in the FAQ and the repeated body sentence, and "主张违反劳动条件" in section 7.
+18 014: a fixed-term contract to complete a specific task. "若为完成特定工作而订立、期间超过3年的定期契约（特定性定期契約）". 3年 and 30日 unchanged.
+19 016: "并可能在权能范围、清册编制、报告及司法监督上另负义务。"
+20 016: "不得把一项制度下的计算结果再计入另一项。"
+21 018: the scenarios stay a denial. "这些假设并不保证某种方式合法，也不保证它更可取。"
+
+## Rows skipped
+zh-hans-a #8 (003 Q16–Q20 and the close are body lines, and the same U+200B blanks run through 005, 006, 008, 009; 005 also has empty `**​**`) and zh-hans-b #12 (013 lines 58, 72, 86, 108 and 015 lines 28, 36, 52 are only U+200B; 013 line 34 ends with U+200B). Promoting Q16 to `##` changes heading levels. Deleting U+200B changes the ZWSP count. checkHeadings and checkBlocks require both to match the Korean source, which has the same blanks. 0 ZWSP removed.
+
+zh-hans-b #6 (万/亿 grouping of exact amounts in 010, 011, 017, 018, including the 1,570,000 and 1,000,000 headlines). Not applied. Comma form kept. See disagreements. 0 instances changed.
+
+zh-hans-b #22 (018 heading "## 7." → "## 6." and "## 8." → "## 7."). Not applied. The English source has the same skip, which the reviewer noted, and the Korean source uses the same heading numbers. Changing 7 to 6 and 8 to 7 changes the digit bag checkNumbers compares. 0 instances changed.
+
+## Systemic patterns and how many instances changed
+“成为问题” calquing “may apply / may arise”                         4 (004 ×3, 007 enforcement ×1). 007 “才成为问题” for the Article 13 sanction left, as instructed.
+U+200B one-line fragments (003 from Q16, 005, 006, 008, 009, 013, 015)   0 removed (skip above)
+Guidance strings missing a verb or copying an English frame         3 (about intro, language condition, summary)
+Exact amounts still in a Western thousands comma (010, 011, 017, 018)   0 (skip above)
+税籍 / 税籍登记 with no mainland equivalent beside it               10: 001 ×5 税籍登记（稅籍登記，即税务登记）; 002 ×2 税籍（稅籍，即税务登记）; 011 ×1; 018 ×2
+导入训练                                                             1 (014 → 入职培训)
+特定性定期契约 unexplained                                           1 (014 gloss 特定性定期契約)
+不断言 where English says the text does not guarantee              1 (018)
+018 outline skips heading 6                                          0 (skip above)
+该当 for “satisfy the elements”                                      1 (010)
+劳动条件违反 in Taiwan/Japanese order                                3 (014 FAQ, repeated body, section 7)
+
+## §Verify
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-zh-hans --lang zh-hans 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=2839
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-zh-hans src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      18
+```
+Pre-existing WARNs on numbers (수사미해석 of Korean 제N항 / 제3자, and 015 extra 2×2) were already there and are not FAILs. 014's 两项 still counts as 2.
+
+## Reviewer disagreements (not applied)
+1. Deleting U+200B, or turning 003 Q16–Q20 into headings (zh-hans-a #8, zh-hans-b #12). The fragments are real, but they are the Korean source's block structure. The checker fails if the ZWSP count or the heading-level list changes. Same skip as round 4.
+2. Rewriting exact amounts as 万/亿 (zh-hans-b #6), for example 1,579,589 → 157万9589. zh-hans NUMBER_THOUSAND_STYLE is comma. SINO_UNIT_MULTIPLIERS matches 萬/만, not simplified 万, so 157万9589 is parsed as 157 and 9589. The source integer 1579589 would then be missing (FAIL). Comma form kept. Round amounts that were already 万 (157万元 in the team bio) were not in this row.
+3. Renumbering 018 "## 7." to "## 6." and "## 8." to "## 7." (zh-hans-b #22). The English file skips from 5 to 7 on purpose or by the same omission; the reviewer says so. The Korean source has the same numbers. Renumbering only the Simplified Chinese headings would diverge from that outline and change the digits the checker counts.

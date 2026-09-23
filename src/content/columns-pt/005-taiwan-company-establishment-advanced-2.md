@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Imagem de destaque](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Quem leu [Constituição de sociedades em Taiwan – fundamentos](/pt/columns/taiwan-company-establishment-basics) e [Constituição de sociedades em Taiwan – parte aprofundada 1](/pt/columns/taiwan-company-establishment-advanced-1) pode igualmente consultar Constituição de sociedades em Taiwan – parte aprofundada 2 (公司設立).
+Quem leu [Constituição de sociedades em Taiwan – fundamentos](/pt/columns/taiwan-company-establishment-basics) e [Constituição de sociedades em Taiwan – parte aprofundada 1](/pt/columns/taiwan-company-establishment-advanced-1) encontra aqui a parte aprofundada 2 (公司設立).
 
 ​
 

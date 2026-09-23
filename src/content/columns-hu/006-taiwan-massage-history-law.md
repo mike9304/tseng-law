@@ -23,7 +23,7 @@ A hajvágáson túl különféle szolgáltatások voltak, például borotválás
 
 A lényeg pedig az volt, hogy ülve kaphatott hajmosást fejbőr-, váll- és nyakmasszázzsal.
 
-Már egy hajvágás lehetővé tette e magas színvonalú szolgáltatás élvezetét, ezért az ár-érték arány kiváló volt.
+Már egyetlen hajvágásért is élvezhette ezt a magas színvonalú szolgáltatást, ezért az ár-érték arány kiváló volt.
 
 Nagyon hasonlított a mai vietnami stílusú hajmosásra.
 
@@ -37,7 +37,7 @@ Akárhogy is, ha masszázsról (按摩) van szó,
 
 Tajvanon sok masszázs utca is van.
 
-Mindenféle masszázsüzletek sorakoznak ott.
+Mindenféle masszázsüzlet sorakozik ott.
 
 Van látássérültek által végzett masszázs (視障按摩), lábmasszázs, olajos masszázs, thai masszázs és más formák.
 
@@ -49,13 +49,13 @@ Amikor Tajvan 1980-ban kihirdette és hatályba léptette a fogyatékosok jólé
 
 ténylegesen csak látássérült személyek (視障者) végezhették a masszőri foglalkozást (按摩業).
 
-Látássérültség nélküli személy (非視障者) e foglalkozásának gyakorlása jogellenes volt.
+Ép látású személy (非視障者) nem gyakorolhatta jogszerűen ezt a foglalkozást.
 
 Ez a törvény 2003-ig maradt fenn; akkor Lin úr, aki fodrászszalont üzemeltetett,
 
-két látássérültség nélküli munkavállalót foglalkoztatott hajmosási és masszázsszolgáltatásra, és a rendőrség ezt megállapította.
+két ép látású munkavállalót foglalkoztatott hajmosási és masszázsszolgáltatásra, és a rendőrség ezt megállapította.
 
-Az akkori jog szerint Lin úrnak és ezeknek a munkavállalóknak közigazgatási bírságot (罰鍰) szabtak ki, rendre TWD 40.000, TWD 10.000 és TWD 20.000 új tajvani dollár (新臺幣) összegben.
+Az akkori jog szerint Lin úrnak és ezeknek a munkavállalóknak közigazgatási bírságot (罰鍰) szabtak ki, rendre 40.000, 10.000 és 20.000 TWD (新臺幣) összegben.
 
 Lin úr e szankciót nagyon igazságtalannak tartotta, és alkotmányértelmezést kért.
 
@@ -73,11 +73,11 @@ olyan törvényt alkotott, amely a látássérült személyek foglalkoztatását
 
 Az idő múlásával és a fogyasztói piac bővülésével azonban
 
-az a vélemény jelent meg, hogy csupán a látássérült személyek jogainak védelme túlságosan korlátozza a látássérültség nélküli személyek munkához való jogát.
+az a vélemény jelent meg, hogy csupán a látássérült személyek jogainak védelme túlságosan korlátozza az ép látású személyek munkához való jogát.
 
-A látássérült és a látássérültség nélküli személyek foglalkozási jogairól szóló vitában sok ellentétes vélemény hangzott el.
+A látássérült és az ép látású személyek foglalkozási jogairól szóló vitában sok ellentétes vélemény hangzott el.
 
-Például azt kérdezték, hogy az írott szabály, amely kizárólag látássérült személyeknek engedte a masszázs gyakorlását, nem diszkrimináció-e a látássérültség nélküli személyekkel szemben,
+Például azt kérdezték, hogy az írott szabály, amely kizárólag látássérült személyeknek engedte a masszázs gyakorlását, nem diszkrimináció-e az ép látású személyekkel szemben,
 
 és kétségbe vonták, hogy e szabály ténylegesen hozzájárult-e a látássérült személyek foglalkoztatásának és létfenntartásának védelméhez.
 
@@ -85,11 +85,11 @@ Végül az alkotmánybírák (大法官) alkotmányellenesnek (違憲) nyilván�
 
 ​
 
-Összehasonlításképpen Koreában — ez csak egy megjelölt külföldi példa —, ahol sok látássérült személy masszázsból tartja fenn magát,
+Összehasonlításképpen Koreában – ez csak egy megjelölt külföldi példa –, ahol sok látássérült személy masszázsból tartja fenn magát,
 
 elvben csak a képesítési igazolást szerzett látássérült személyek végezhetik a masszőri foglalkozást.
 
-Igaz, hogy Korea kormánya masszázs-igazolványokat látássérültség nélküli személyeknek is kiadott,
+Igaz, hogy Korea kormánya masszázs-igazolványokat ép látású személyeknek is kiadott,
 
 és sok látássérült személy, attól tartva, hogy elveszíti a megélhetését, heves tiltakozásokat szervezett.
 
@@ -97,9 +97,9 @@ Jelenleg Korea továbbra is csak a képesítéssel rendelkező látássérült s
 
 és ha valaki e képesítés nélkül más személytől masszázsdíjat szed,
 
-a koreai orvosi szolgáltatásokról szóló törvény (醫療法) szerint 3 évig terjedő szabadságvesztés szabható ki.
+a koreai orvosi törvény szerint 3 évig terjedő szabadságvesztés szabható ki.
 
-Ha látássérültség nélküli személy masszázstevékenységet üzemeltet, 5 évig terjedő szabadságvesztés szabható ki.
+Ha ép látású személy masszázstevékenységet üzemeltet, 5 évig terjedő szabadságvesztés szabható ki.
 
 ​
 

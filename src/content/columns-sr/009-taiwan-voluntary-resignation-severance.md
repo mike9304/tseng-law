@@ -21,7 +21,7 @@ Naročito ako zaposleni ode po sopstvenoj volji (自請離職),
 
 ne može da primi otpremninu (資遣費) (član 18 Zakona o radnim standardima),
 
-što se razlikuje od uređenja u nekim pravnim poredcima, na primer u Koreji.
+što se razlikuje od uređenja u nekim pravnim porecima, na primer u Koreji.
 
 ​
 
@@ -89,7 +89,7 @@ ta strana može ili da ne isplati otpremninu, ili da je zahteva.
 
 U radnim sporovima (勞資糾紛) na Tajvanu vreme je odlučujuće.
 
-„**Vreme**“ je veoma važno.
+„**Vreme**” je veoma važno.
 
 U većini slučajeva bolje je zaštićena strana koja se pripremi unapred.
 

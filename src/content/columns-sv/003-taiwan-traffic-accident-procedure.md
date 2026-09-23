@@ -91,7 +91,7 @@ Vid oenighet med sakkunnigutlåtandet kan omprövning begäras, men omprövninge
 
 ## Q7. Vilka skador kan krävas efter olyckan?
 
-Kravet grundat på artikel 184 i civillagen förutsätter en olaglig kränkning av en rättighet, orsakssamband med olyckan och bevis för skadan. Enbart det faktum att en olycka har inträffat innebär inte att alla följande poster erkänns. Artikel 216 i civillagen är måttet för att fastställa omfånget av den faktiska skadan och den uteblivna vinsten (所失利益).
+Kravet grundat på artikel 184 i civillagen förutsätter en olaglig kränkning av en rättighet, orsakssamband med olyckan och bevis för skadan. Enbart det faktum att en olycka har inträffat innebär inte att alla följande poster godtas. Artikel 216 i civillagen är måttet för att fastställa omfånget av den faktiska skadan och den uteblivna vinsten (所失利益).
 
 - **Skador**: Enligt artikel 193 i civillagen kan prövas de nödvändiga sjukvårdskostnaderna (醫療費用), de ökade levnadskostnaderna såsom vårdkostnader (看護費用), resekostnader för behandling (就醫交通費) och hjälpmedel, samt inkomstförlust (收入損失) genom faktisk arbetsoförmåga och nedsättning av arbetsförmågan (勞動能力減損). Enligt artikel 195 i civillagen kan även ideell skada prövas.
 - **Dödsfall**: Enligt artikel 192 i civillagen kan, när det är befogat, prövas sjukvårdskostnader före dödsfallet och ökade levnadskostnader, begravningskostnader (殯葬費) och förlust av underhåll (扶養利益損失) för den som hade laglig rätt till underhåll. Enligt artikel 194 i civillagen kan även ideell skada för vissa anhöriga prövas.
@@ -109,7 +109,7 @@ Dock kan, enligt artikel 504 i rättegångsbalken i brottmål, när ärendet har
 
 Läkarintyget eller det medicinska utlåtandet är nyttiga för att visa vårdbehovet, men de är inte ensamma en avgörande grund. Orsakssambandet med olyckan, vårdbehovet, om vården faktiskt har tillhandahållits, varaktigheten och ett skäligt belopp ska förklaras med handlingar.
 
-Även om en anhörig faktiskt har tillhandahållit vården utan ersättning, kan detta i det lämpliga ärendet värderas som en skada. Dock innebär enbart den omständigheten att vården tillhandahålls av en anhörig inte automatiskt erkännande; vårdens innehåll och varaktighet samt den vanliga kostnadsnivån prövas också.
+Även om en anhörig faktiskt har tillhandahållit vården utan ersättning, kan detta i det lämpliga ärendet värderas som en skada. Dock innebär enbart den omständigheten att vården tillhandahålls av en anhörig inte att den automatiskt godtas; vårdens innehåll och varaktighet samt den vanliga kostnadsnivån prövas också.
 
 ## Q10. Med vad styrks resekostnader för behandlingen?
 
@@ -137,7 +137,7 @@ Kvitton, taxeregister, sträckregister och kliniska handlingar är möjliga bevi
 
 ## Q11. Hur styrks inkomstförlust under behandlings- och återhämtningstiden?
 
-Inkomstförlust ska styrkas med handlingar som visar att arbetet, på grund av skador kopplade till olyckan, helt eller delvis varit omöjligt under återhämtningstiden och att det därigenom har skett en faktisk inkomstminskning. Läkarintyget eller vilorekommendationen är en viktig utgångspunkt, men de räcker inte ensamma för att kravet ska erkännas.
+Inkomstförlust ska styrkas med handlingar som visar att arbetet, på grund av skador kopplade till olyckan, helt eller delvis varit omöjligt under återhämtningstiden och att det därigenom har skett en faktisk inkomstminskning. Läkarintyget eller vilorekommendationen är en viktig utgångspunkt, men de räcker inte ensamma för att kravet ska godtas.
 
 Journalen, närvaro- eller ledighetsregister, löne- och skatteuppgifter samt arbetsgivarens bekräftelse bör ordnas tillsammans. Den som är egenföretagare kan ge in uppgifter som stämmer med verksamhetens form, såsom försäljningsdata, transaktionsregister och skattedeklarationer.
 
@@ -161,7 +161,7 @@ Domstolen prövar omständigheterna i varje ärende genom att samlat bedöma inn
 
 ## Q14. Om olyckan inträffar under arbetet, kan även arbetsgivarens civilrättsliga ansvar sökas?
 
-Artikel 188 i civillagen reglerar det fall där den anställda olagligen orsakar skada för annan under utövandet av sina uppgifter. Sambandet med uppgifterna erkänns inte automatiskt enbart på grund av arbetstiden, så att sambandet mellan det faktiska arbetet och olyckan ska prövas.
+Artikel 188 i civillagen reglerar det fall där den anställda olagligen orsakar skada för annan under utövandet av sina uppgifter. Sambandet med uppgifterna anses inte föreligga automatiskt enbart på grund av arbetstiden, så att sambandet mellan det faktiska arbetet och olyckan ska prövas.
 
 Arbetsgivaren kan invända att denne har iakttagit tillbörlig aktsamhet vid urval och tillsyn av den anställda, eller att skadan inte hade kunnat undvikas ens vid iakttagande av denna aktsamhet. Det kan komma i fråga att kräva skadestånd gemensamt mot arbetsgivaren och den anställda. Efter att ha ersatt kan arbetsgivaren utöva regress mot den anställda.
 
@@ -171,11 +171,11 @@ Frågan om mot vem det civilrättsliga kravet riktas ska skiljas från det straf
 
 ## Q15. Vilka ersättningar och täckningar i motorfordonsförsäkringen ska prövas?
 
-Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsansvarsförsäkring (強制汽車責任保險法) åvilar i princip fordonets ägare och, i de fall som föreskrivs, också fordonets brukare eller förvaltare. Denna ordning inrättar en struktur för ersättning utan vårdslöshet (無過失給付制度) för den som skadas eller avlider genom en motorfordonsolycka, men det omfång av passagerare eller tredje man (第三人) utanför fordonet som lagen fastställer måste prövas.
+Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsansvarsförsäkring (強制汽車責任保險法) åvilar i princip fordonets ägare och, i de fall som föreskrivs, också fordonets brukare eller förvaltare. Denna ordning inrättar ett system för ersättning oberoende av vållande (無過失給付制度) för den som skadas eller avlider genom en motorfordonsolycka, men det omfång av passagerare eller tredje man (第三人) utanför fordonet som lagen fastställer måste prövas.
 
 Vid en olycka med ett enda fordon är föraren av det fordonet i allmänhet inte berättigad till ersättning från det fordonets obligatoriska försäkring. Dock, vid en olycka där flera fordon deltar, finns fall där föraren kan kräva ersättning av den obligatoriska försäkringsgivaren för ett annat inblandat fordon.
 
-Ersättningsnivåerna (強制汽車責任保險給付標準) som ändrades den 29 maj 2026 tillämpas på olyckor som inträffat från och med den 1 juli 2026. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; ersättningen vid invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; ersättningen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader för 1 skadad person och 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
+Ersättningsnivåerna (強制汽車責任保險給付標準) som ändrades den 29 maj 2026 tillämpas på olyckor som inträffat från och med den 1 juli 2026. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; ersättningen vid invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; ersättningen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader per 1 skadad person och per 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
 
 Ansvarsförsäkringen mot tredje man (第三人責任險), förarens olycksfallsförsäkring (駕駛人傷害險) och kaskoförsäkringen för det egna fordonet (車體損失險) är fakultativa produkter av avtalskaraktär. Den faktiska täckningen varierar beroende på försäkrad, tak, självrisk (自負額), undantag, vårdslöshet och de övriga villkoren i försäkringsbrevet, så att försäkringsbrevet och villkoren ska prövas från fall till fall.
 
@@ -235,7 +235,7 @@ Q17. Vad är det straffrättsliga ansvaret för vållande till kroppsskada för 
 
 ​
 
-I publicerad praxis förekommer vid vållande till kroppsskada straff om omkring 3 månader; något typiskt eller garanterat utfall finns inte.
+I vissa domar har vid vållande till kroppsskada omkring 3 månaders fängelse dömts ut; något typiskt eller garanterat utfall finns inte.
 
 ​
 
@@ -247,7 +247,7 @@ Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1:a stycket
 
 ​
 
-I domar om vållande till grov kroppsskada förekommer straff om omkring 4 månader och vid vållande till annans död (過失致死) omkring 6 månader; utfallet beror på omständigheterna i det enskilda fallet.
+I vissa domar om vållande till grov kroppsskada förekommer omkring 4 månaders fängelse och vid vållande till annans död (過失致死) omkring 6 månaders fängelse; något typiskt eller garanterat utfall finns inte.
 
 ​
 
@@ -307,7 +307,7 @@ Det viktiga då är advokatens omsorg och ärlighet.
 
 ​
 
-Det är viktigt att advokaten noggrant går igenom varje post i kravet och förklarar vad som kan yrkas utifrån den bevisning som finns.
+Advokaten ska noggrant gå igenom varje skadepost och hjälpa till att yrka den ersättning som bevisningen medger.
 
 ​
 
@@ -339,7 +339,7 @@ På grund av skadan eller dödsfallet lider offret själv eller familjen fysisk 
 
 ​
 
-Gärningsmannen bekymrar sig ofta inte om att ringa för att höra hur offret mår eller att besöka, och många gärningsmän tänker att försäkringsgivaren ska ordna allt och de visar sig inte. I dessa fall uppfattas varken ånger eller god tro.
+Gärningsmannen bekymrar sig ofta inte om att ringa för att höra hur offret mår eller att besöka, och många gärningsmän tänker att försäkringsgivaren ska ordna allt och de visar sig inte. I dessa fall uppfattar offret hos gärningsmannen varken ånger eller uppriktighet.
 
 ​
 

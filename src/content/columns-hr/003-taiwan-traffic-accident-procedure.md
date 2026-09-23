@@ -29,9 +29,9 @@ Ako postoji samo imovinska šteta i vozilo se može premjestiti, načelo glasi: 
 
 ## Q2. Koje dokaze treba sačuvati u prvom redu?
 
-Najprije osigurajte osobnu sigurnost i znakove upozorenja. Na Tajvanu: 119 (hitna pomoć/vatrogasci) kod ozljede ili potrebe spašavanja, 110 (policija) kod kaznenog djela ili hitne sigurnosne situacije, 112 s mobilnog. Također izvršite prijavu policiji prema okolnostima prometne nesreće.
+Najprije osigurajte osobnu sigurnost i znakove upozorenja. Na Tajvanu: 119 (hitna pomoć/vatrogasci) kod ozljede ili potrebe spašavanja, 110 (policija) kod kaznenog djela ili hitne sigurnosne situacije, 112 s mobilnog. Nesreću, prema okolnostima, prijavite i policiji.
 
-Kad je sigurnost osigurana, snimite ukupne i bliske fotografije kako biste zabilježili položaj i oštećenje vozila, cestovne oznake, svjetla i vremenske uvjete. Ne smiju se ispustiti kontaktni podaci svjedoka, zahtjev za očuvanje snimaka CCTV-a (監視器影像) i kamere u vozilu (行車紀錄器), podaci stranaka, vozila i osiguranja te medicinska dokumentacija (病歷). Osobne snimke korisne su, ali ne zamjenjuju policijski postupak koji se zahtijeva kod nesreće s ozljedom ili smrću.
+Kad je sigurnost osigurana, snimite ukupne i bliske fotografije kako biste zabilježili položaj i oštećenje vozila, cestovne oznake, svjetla i vremenske uvjete. Nemojte propustiti prikupiti kontaktne podatke svjedoka, zahtjev za očuvanje snimaka CCTV-a (監視器影像) i kamere u vozilu (行車紀錄器), podatke stranaka, vozila i osiguranja te medicinsku dokumentaciju (病歷). Osobne snimke korisne su, ali ne zamjenjuju policijski postupak koji se zahtijeva kod nesreće s ozljedom ili smrću.
 
 Što se tiče policijskih isprava, na mjestu nesreće može se primiti evidencijski listak sudionika prometne nesreće (道路交通事故當事人登記聯單). Nakon proteka 7 dana od datuma nesreće može se zatražiti skica i fotografije mjesta (現場圖 / 現場照片); nakon proteka 30 dana od datuma nesreće može se zatražiti tablica preliminarnog analitičkog ocjenjivanja prometne nesreće (道路交通事故初步分析研判表). Trenutak izdavanja i pretpostavke zahtjeva treba ponovno potvrditi kod nadležnog policijskog tijela.
 
@@ -39,11 +39,11 @@ Kad je sigurnost osigurana, snimite ukupne i bliske fotografije kako biste zabil
 
 Članak 284. Kaznenog zakona uređuje nehajnu tjelesnu ozljedu (過失傷害) i nehajnu tešku tjelesnu ozljedu (過失致重傷). Budući da je prema članku 287. Kaznenog zakona riječ o kaznenom djelu koje se goni samo na prijavu (告訴乃論之罪), prema članku 237. Zakona o kaznenom postupku Tajvana (刑事訴訟法) prijavu treba načelno podnijeti u roku od 6 mjeseci od dana kad je počinitelj postao poznat.
 
-Kod građanskopravne naknade štete (損害賠償), prema članku 197. Građanskog zakonika Tajvana (民法) zahtjev više nije moguć nakon proteka 2 godine od dana kad su šteta i dužnik naknade postali poznati, ili 10 godina od dana delikta (侵權行為). Koje činjenice utječu na zastaru (消滅時效), treba ocijeniti zasebno.
+Kod građanskopravne naknade štete (損害賠償), prema članku 197. Građanskog zakonika Tajvana (民法) zahtjev više nije moguć nakon proteka 2 godine od dana kad su šteta i dužnik naknade postali poznati, ili 10 godina od dana protupravne radnje (侵權行為). Koje činjenice utječu na zastaru (消滅時效), treba ocijeniti zasebno.
 
 Tko pretrpi štetu uslijed kaznenog djela, može prema članku 487. Zakona o kaznenom postupku podnijeti građansku tužbu pridruženu kaznenom postupku (刑事附帶民事訴訟). Dok kazneni postupak traje, tužba se može podnijeti do završetka usmene rasprave (言詞辯論終結) 2. stupnja, prema članku 488. Zakona o kaznenom postupku, ali se ne može podnijeti nakon završetka usmene rasprave 1. stupnja i prije podnošenja pravnog lijeka. Načelno se može izbjeći plaćanje zasebnih sudskih pristojbi (裁判費), ali ne završavaju svi ishodi bez troška. Na primjer, ako je kaznena stvar odbačena i na prijedlog tužitelja ustupljena građanskom sudu, prema članku 503. Zakona o kaznenom postupku mogu se naložiti troškovi postupka, a nadalje treba provjeriti pravila ustupanja i postupka članka 504.
 
-Izbor se razlikuje prema prekidu zastare (時效中斷), krugu tuženika, dokazima, osiguranju i nadležnosti. Stoga ne postoji postupak koji bi bio jednoliko najbolji za sve predmete.
+Izbor se razlikuje prema prekidu zastare (時效中斷), krugu tuženika, dokazima, osiguranju i nadležnosti. Stoga ne postoji postupak koji bi jednako odgovarao svim predmetima.
 
 ## Q4. Ako je krivnja na objema stranama, kako se ocjenjuje kaznena i građanskopravna odgovornost?
 
@@ -89,7 +89,7 @@ Prema primjenjivim propisima legitimirana stranka može zatražiti vještačenje
 
 Pri neslaganju s mišljenjem vještačenja može se zatražiti ponovni pregled, no on se može podnijeti samo jednom. Mišljenje vještačenja i ponovnog pregleda dokaz je ili podloga za uvid, a sud samostalno ocjenjuje cjelinu spisa, uključujući iskaze, snimke i zapisnike s mjesta.
 
-## Q7. Koje štete se mogu zahtijevati nakon nesreće?
+## Q7. Koje se štete mogu zahtijevati nakon nesreće?
 
 Zahtjev utemeljen na članku 184. Građanskog zakonika pretpostavlja protupravnu povredu prava, uzročnu vezu s nesrećom i dokaz štete. Sama činjenica da je do nesreće došlo ne vodi k tomu da su sve niže navedene stavke priznate. Članak 216. Građanskog zakonika mjerilo je utvrđivanja opsega stvarne štete i izgubljene koristi (所失利益).
 
@@ -141,7 +141,7 @@ Gubitak prihoda treba dokazati ispravama koje utvrđuju da je zbog ozljeda povez
 
 Treba zajedno urediti medicinsku dokumentaciju, evidenciju nazočnosti ili dopusta, podatke o plaći i porezima te potvrdu poslodavca. Osoba koja samostalno obavlja djelatnost može predložiti podatke prilagođene obliku svoje djelatnosti, kao što su podaci o prodaji, zapisi poslova i porezne prijave.
 
-Okolicnost daljnjeg rada ili primitka plaće bez izmjene bitna je za ocjenu gubitka prihoda u razdoblju oporavka, ali sama ta činjenica ne odlučuje automatski pitanje štete zbog smanjenja radne sposobnosti. Ta okolnost nije ni samostalna podloga ocjene štete zbog smanjenja radne sposobnosti. Šteta zbog smanjenja radne sposobnosti ocjenjuje se zasebno u Q12.
+Okolnost daljnjeg rada ili primitka plaće bez izmjene bitna je za ocjenu gubitka prihoda u razdoblju oporavka, ali sama ta činjenica ne odlučuje automatski pitanje štete zbog smanjenja radne sposobnosti. Ta okolnost nije ni samostalna podloga ocjene štete zbog smanjenja radne sposobnosti. Šteta zbog smanjenja radne sposobnosti ocjenjuje se zasebno u Q12.
 
 ## Q12. Kako se dokazuje šteta zbog smanjenja radne sposobnosti?
 
@@ -163,7 +163,7 @@ Sud ocjenjuje okolnosti svakog predmeta, zajedno procjenjujući sadržaj ozljede
 
 Članak 188. Građanskog zakonika uređuje slučaj u kojem zaposlenik drugome uzrokuje protupravnu štetu pri obavljanju dužnosti. Povezanost s dužnostima ne priznaje se automatski iz samog radnog vremena, pa treba provjeriti vezu između stvarnog rada i nesreće.
 
-Poslodavac može prigovoriti da je sačuvao dužnu pažnju pri izboru i nadzoru zaposlenika, ili da se šteti ne bi moglo spriječiti ni uz tu pažnju. Može se razmotriti zahtijevanje naknade zajedno protiv poslodavca i zaposlenika. Nakon naknade poslodavac može ostvariti regres prema zaposleniku.
+Poslodavac može prigovoriti da je sačuvao dužnu pažnju pri izboru i nadzoru zaposlenika, ili da se šteta ne bi mogla spriječiti ni uz tu pažnju. Može se razmotriti zahtijevanje naknade zajedno protiv poslodavca i zaposlenika. Nakon naknade poslodavac može ostvariti regres prema zaposleniku.
 
 Ako poslodavac dokaže te pretpostavke oslobođenja i oštećenik ne dobije naknadu iz stavka 1., sud može prema članku 188. stavku 2. Građanskog zakonika naložiti naknadu potpunu ili djelomičnu s obzirom na gospodarsko stanje poslodavca i oštećenika.
 
@@ -175,9 +175,9 @@ Obveza sklapanja prema članku 6. Zakona o obveznom osiguranju odgovornosti za v
 
 Kod nesreće jednog vozila vozač toga vozila načelno nije korisnik davanja obveznog osiguranja toga vozila. Međutim, kod nesreće u kojoj sudjeluje više vozila postoje slučajevi u kojima vozač može zahtijevati davanje kod osiguravatelja obveznog osiguranja drugog sudjelujućeg vozila.
 
-Tarifa davanja (強制汽車責任保險給付標準) izmijenjena 29. 5. 2026. primjenjuje se na nesreće koje su nastale od 1. 7. 2026. Strop razumnih i potrebnih medicinskih troškova za ozljedu iznosi 200.000 TWD u novom tajvanskom dolaru; davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stupnjeva; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenika i 1 nesreću iznosi 3.200.000 TWD. Na ranije nesreće može se primijeniti prethodna tarifa.
+Tarifa davanja (強制汽車責任保險給付標準) izmijenjena 29. 5. 2026. primjenjuje se na nesreće koje su nastale od 1. 7. 2026. Strop razumnih i potrebnih medicinskih troškova za ozljedu iznosi 200.000 TWD u novom tajvanskom dolaru; davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stupnjeva; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova po 1 oštećeniku i po 1 nesreći iznosi 3.200.000 TWD. Na ranije nesreće može se primijeniti prethodna tarifa.
 
-Osiguranje odgovornosti prema trećim osobama (第三人責任險), osiguranje ozljeda vozača (駕駛人傷害險) i osiguranje štete vlastitog vozila (車體損失險) fakultativni su proizvodi ugovorne naravi. Stvarno pokriće razlikuje se prema osiguraniku, stropu, sudjelovanju (自負額), isključenjima, krivnji i drugim uvjetima police, pa policu i uvjete treba provjeriti predmet po predmet.
+Osiguranje odgovornosti prema trećim osobama (第三人責任險), osiguranje ozljeda vozača (駕駛人傷害險) i osiguranje štete vlastitog vozila (車體損失險) fakultativni su proizvodi ugovorne naravi. Stvarno pokriće razlikuje se prema osiguraniku, stropu, sudjelovanju (自負額), isključenjima, krivnji i drugim uvjetima police, pa policu i uvjete treba provjeriti za svaki predmet posebno.
 
 ### Službeni izvori Q11–Q15
 
@@ -203,7 +203,7 @@ Prema mojem iskustvu, osiguravatelji često nedovoljno pažljivo rješavaju emoc
 
 ​
 
-Mogu zanemariti i ono što je za drugu stranu bitno — ispriku i izraz sudjelovanja.
+Mogu zanemariti i ono što je za drugu stranu bitno — ispriku i izraz suosjećanja.
 
 ​
 
@@ -347,7 +347,7 @@ Počinitelj često ne nazove da pita za stanje žrtve ni da je posjeti u bolnici
 
 ​
 
-Žrtva tako ostaje veoma povrijeđena i pada u srdžbu, pa često ne popušta u visini nagodbe ili predloži privremenu mjeru osiguranja (假扣押) i vodi zapljenu imovine druge strane do kraja.
+Žrtva tako ostaje duboko povrijeđena i ogorčena, pa često ne popušta u visini nagodbe ili predloži privremenu mjeru osiguranja (假扣押) i vodi zapljenu imovine druge strane do kraja.
 
 ​
 

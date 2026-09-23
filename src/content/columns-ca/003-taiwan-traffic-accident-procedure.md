@@ -29,7 +29,7 @@ L’article 185-4 del Codi penal (Taiwan) (刑法) regula la responsabilitat pen
 
 ## 2. Quines proves s’han de conservar primer?
 
-Asseguri primer la seguretat personal i els senyals d’advertència; si hi ha ferits o cal un rescat, truqui a Taiwan: 119 (ambulància i bombers) i, si hi ha un delicte o una situació de seguretat urgent, al 110 (policia) o al 112 des d’un mòbil. Faci també la denúncia policial segons les circumstàncies de l’accident de trànsit.
+Asseguri primer la seguretat personal i els senyals d’advertència; si hi ha ferits o cal un rescat, a Taiwan truqui al 119 (ambulància i bombers) i, si hi ha un delicte o una situació de seguretat urgent, al 110 (policia) o al 112 des d’un mòbil. Faci també la denúncia policial segons les circumstàncies de l’accident de trànsit.
 
 Un cop assegurada la seguretat, prengui fotografies de conjunt i de detall per registrar la posició i els danys dels vehicles, les marques viàries, els semàfors i les condicions meteorològiques. Convé no ometre les dades de contacte de testimonis, la sol·licitud de conservació d’imatges de CCTV (監視器影像) i de la càmera de bord (行車紀錄器), les dades de les parts, del vehicle i de l’assegurança, i l’historial clínic (病歷). Les fotos personals són útils, però no substitueixen l’actuació policial exigida en accidents amb lesions o mort.
 
@@ -49,9 +49,9 @@ L’elecció varia segons la interrupció de la prescripció (時效中斷), el 
 
 La responsabilitat penal només es pot apreciar quan es reconeix la infracció del deure de cura de cadascú i el nexe causal entre aquesta infracció i les lesions de l’altra part. El mer fet que ambdues parts hagin tingut culpa no fa néixer automàticament la responsabilitat per lesions per imprudència.
 
-En l’àmbit civil, segons l’article 217 del Codi civil, si el perjudicat té culpa que va contribuir a causar o agreujar el dany (與有過失), el tribunal pot reduir la indemnització o dispensar-ne el pagament. Per exemple, si el dany reconegut en dòlars taiwanesos (新臺幣, TWD) és 1.000.000 TWD i la culpa del perjudicat es valora en 50 %, l’import es pot reduir a 500.000 TWD abans d’altres ajustos.
+En l’àmbit civil, segons l’article 217 del Codi civil, si el perjudicat té culpa que va contribuir a causar o agreujar el dany (與有過失), el tribunal pot reduir la indemnització o dispensar-ne el pagament. Per exemple, si el dany reconegut en dòlars taiwanesos (新臺幣, TWD) és d’1.000.000 TWD i la culpa del perjudicat es valora en un 50 %, l’import es pot reduir a 500.000 TWD abans d’altres ajustos.
 
-El peritatge (鑑定) o la taula d’anàlisi preliminar poden ser materials importants, però no vinculen el tribunal de forma mecànica. El tribunal examina el conjunt de les proves, incloses declaracions, imatges i l’estat dels vehicles.
+El peritatge (鑑定) o la taula d’anàlisi preliminar poden ser materials importants, però no vinculen el tribunal mecànicament. El tribunal examina el conjunt de les proves, incloses declaracions, imatges i l’estat dels vehicles.
 
 ## 5. Què s’ha d’incloure en el document de transacció?
 
@@ -87,7 +87,7 @@ La taula d’anàlisi preliminar de l’accident de trànsit que elabora la poli
 
 Segons les normes aplicables, la part legitimada pot sol·licitar un peritatge d’accident de vehicles (車輛行車事故鑑定); l’òrgan que tramita l’assumpte el pot remetre i l’autoritat judicial el pot encarregar. La sol·licitud de la part es presenta, en general, dins dels 6 mesos següents a la data de l’accident; en assumptes ja en investigació o en judici, el peritatge es tramita mitjançant encàrrec de l’autoritat judicial i no mitjançant una nova sol·licitud directa.
 
-Si hi ha discrepància amb el dictamen pericial, es pot demanar una revisió, però la revisió es limita a una vegada. El dictamen pericial i el de revisió són prova o material de referència, i el tribunal valora de forma independent el conjunt de l’expedient, incloses declaracions, imatges i actes del lloc.
+Si hi ha discrepància amb el dictamen pericial, es pot demanar una revisió, però la revisió es limita a una vegada. El dictamen pericial i el de revisió són prova o material de referència, i el tribunal valora de manera independent el conjunt de l’expedient, incloses declaracions, imatges i actes del lloc.
 
 ## 7. Quins danys es poden reclamar després de l’accident?
 
@@ -101,7 +101,7 @@ La reclamació basada en l’article 184 del Codi civil pressuposa una lesió il
 
 Conservi rebuts (收據), certificats mèdics i historial clínic, i organitzi juntament amb ells la necessitat mèdica de cada tractament i el seu nexe causal amb l’accident. Les dades d’un tractament que continua poden complementar la prova segons el calendari processal del tribunal i el contingut de la reclamació ja presentada, però no es garanteix que totes les dades presentades tard o tota ampliació de la reclamació siguin admeses o permeses.
 
-S’ha de distingir l’afegir dades mèdiques del modificar o augmentar l’import reclamat. Després d’interposar una acció civil acumulada al procés penal, el mer fet de presentar més rebuts mèdics no genera automàticament taxa judicial.
+S’ha de distingir entre afegir dades mèdiques i modificar o augmentar l’import reclamat. Després d’interposar una acció civil acumulada al procés penal, el mer fet de presentar més rebuts mèdics no genera automàticament taxa judicial.
 
 Tanmateix, segons l’article 504 del Codi de procediment penal, un cop tramès l’assumpte a la secció civil, modificar, afegir o ampliar la reclamació més enllà de l’abast anterior a la tramesa pot plantejar la qüestió de la taxa judicial sobre la part excedida. La fase de tramesa, el moment de presentació i l’abast de la reclamació s’han de comprovar en cada assumpte.
 
@@ -147,9 +147,9 @@ La circumstància d’haver continuat treballant o d’haver percebut el salari 
 
 El dany per disminució de la capacitat laboral es distingeix dels ingressos realment reduïts durant el període de recuperació de la pregunta 11. Segons els articles 193 i 216 del Codi civil es valoren conjuntament el nexe causal amb l’accident, l’alteració funcional persistent (持續功能障礙), la professió i les aptituds del perjudicat, els ingressos que habitualment es poden esperar i el fonament i la prova relatius al període de capacitat laboral.
 
-Que el salari actual es mantingui sense variació no exclou automàticament la reclamació. A la inversa, l’import del dany tampoc no es fixa de forma mecànica només amb el percentatge de discapacitat o amb el salari actual.
+Que el salari actual es mantingui sense variació no exclou automàticament la reclamació. A la inversa, l’import del dany tampoc no es fixa mecànicament només amb el percentatge de discapacitat o amb el salari actual.
 
-Si l’alteració funcional persistent es discuteix de forma substancial, un peritatge mèdic pot ser útil, però no és obligatori en tots els assumptes. També s’examinen la compensació de culpes de l’article 217 del Codi civil i altres motius d’ajust.
+Si l’alteració funcional persistent es discuteix substancialment, un peritatge mèdic pot ser útil, però no és obligatori en tots els assumptes. També s’examinen la compensació de culpes de l’article 217 del Codi civil i altres motius d’ajust.
 
 Quan el càlcul es fa en un capital únic, es pot considerar la deducció d’interessos intermedis (中間利息扣除). La calculadora Hoffmann (霍夫曼) del Yuan Judicial és només una eina de càlcul, no un mètode legalment obligatori, i no en garanteix el resultat. Segons l’article 193 del Codi civil, a petició de la part el tribunal també pot ordenar el pagament en renda periòdica amb la condició d’una garantia.
 
@@ -163,11 +163,11 @@ El tribunal examina les circumstàncies de cada assumpte valorant en conjunt el 
 
 L’article 188 del Codi civil regula el cas en què l’empleat causa un dany il·lícit a un altre mentre exerceix les seves funcions. La connexió amb les funcions no es reconeix automàticament només per l’horari de treball, de manera que s’ha de comprovar el vincle entre el treball real i l’accident.
 
-L’ocupador pot al·legar que va observar la diligència deguda en la selecció i supervisió de l’empleat, o que el dany no s’hauria pogut evitar ni observant aquesta diligència. Es pot considerar reclamar la indemnització de forma conjunta contra l’ocupador i l’empleat. Després d’indemnitzar, l’ocupador pot repetir contra l’empleat.
+L’ocupador pot al·legar que va observar la diligència deguda en la selecció i supervisió de l’empleat, o que el dany no s’hauria pogut evitar ni observant aquesta diligència. Es pot considerar reclamar la indemnització conjuntament contra l’ocupador i l’empleat. Després d’indemnitzar, l’ocupador pot repetir contra l’empleat.
 
 Si l’ocupador prova aquests requisits d’exempció i el perjudicat no obté la indemnització de l’apartat 1, el tribunal, segons l’article 188, apartat 2, del Codi civil, pot ordenar una indemnització total o parcial tenint en compte la situació econòmica de l’ocupador i del perjudicat.
 
-La qüestió de a qui s’adreça la reclamació civil s’ha de distingir de la responsabilitat penal. La responsabilitat penal de l’article 284 del Codi penal es valora segons la infracció del deure de cura de cada persona física i el nexe causal d’aquesta infracció.
+La qüestió de contra qui s’adreça la reclamació civil s’ha de distingir de la responsabilitat penal. La responsabilitat penal de l’article 284 del Codi penal es valora segons la infracció del deure de cura de cada persona física i el nexe causal d’aquesta infracció.
 
 ## 15. Quines prestacions i cobertures de l’assegurança d’automòbils s’han de comprovar?
 
@@ -175,7 +175,7 @@ L’obligació de contractar segons l’article 6 de la Llei de l’assegurança
 
 En un accident d’un sol vehicle, el conductor d’aquest vehicle no és, en general, destinatari de les prestacions de l’assegurança obligatòria d’aquest vehicle. Tanmateix, en un accident en què intervenen diversos vehicles, hi ha casos en què el conductor pot reclamar prestacions a l’assegurador obligatori d’un altre vehicle implicat.
 
-El barem de prestacions (強制汽車責任保險給付標準) modificat el 29 de maig de 2026 s’aplica als accidents ocorreguts a partir de l’1 de juliol de 2026. El límit de les despeses mèdiques raonables i necessàries per lesions és 200.000 TWD; la prestació per discapacitat (失能) oscil·la entre 80.000 TWD i 3.000.000 TWD segons 15 graus legals; la prestació per mort és 3.000.000 TWD, i el màxim conjunt de mort, discapacitat i despeses mèdiques per cada víctima i cada accident és 3.200.000 TWD. Als accidents anteriors se’ls pot aplicar el barem precedent.
+El barem de prestacions (強制汽車責任保險給付標準) modificat el 29 de maig de 2026 s’aplica als accidents ocorreguts a partir de l’1 de juliol de 2026. El límit de les despeses mèdiques raonables i necessàries per lesions és de 200.000 TWD; la prestació per discapacitat (失能) oscil·la entre 80.000 TWD i 3.000.000 TWD segons 15 graus legals; la prestació per mort és de 3.000.000 TWD, i el màxim conjunt de mort, discapacitat i despeses mèdiques per cada víctima i cada accident és de 3.200.000 TWD. Als accidents anteriors se’ls pot aplicar el barem precedent.
 
 L’assegurança de responsabilitat civil davant tercers (第三人責任險), l’assegurança de lesions del conductor (駕駛人傷害險) i l’assegurança de danys del vehicle propi (車體損失險) són productes voluntaris de caràcter contractual. La cobertura real varia segons l’assegurat, el límit, la franquícia (自負額), les exclusions, la culpa i les altres condicions de la pòlissa, de manera que la pòlissa i les condicions s’han de comprovar cas per cas.
 
@@ -207,7 +207,7 @@ Poden descuidar parts importants que concerneixen els sentiments de l’altra pa
 
 ​
 
-Per a l’asseguradora, gastar 500.000 TWD o 1.000.000 TWD addicionals en un assumpte concret no influeix de forma important en el benefici global de l’asseguradora, però per a la part de l’accident aquesta quantitat pot determinar si hi ha o no antecedents penals (前科).
+Per a l’asseguradora, gastar 500.000 TWD o 1.000.000 TWD addicionals en un assumpte concret no influeix de manera important en el benefici global de l’asseguradora, però per a la part de l’accident aquesta quantitat pot determinar si hi ha o no antecedents penals (前科).
 
 ​
 
@@ -223,7 +223,7 @@ Per això no recomano encomanar tot el litigi a l’asseguradora.
 
 ​
 
-Si s’encomana a l’asseguradora, s’ha de seguir de forma contínua el procés de tramitació i revisar amb cura els documents d’ambdues parts.
+Si s’encomana a l’asseguradora, s’ha de seguir contínuament el procés de tramitació i revisar amb cura els documents d’ambdues parts.
 
 ​
 
@@ -311,7 +311,7 @@ El que importa aleshores és la minuciositat i l’honestedat de l’advocat.
 
 ​
 
-A més, l’advocat ha d’explicar amb claredat la situació de la part i advertir amb claredat els riscos previsibles si no es transigeix.
+A més, l’advocat ha d’explicar amb claredat la situació de la part i advertir-la dels riscos previsibles si no es transigeix.
 
 ​
 

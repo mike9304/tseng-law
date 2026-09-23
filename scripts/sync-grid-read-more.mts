@@ -3,8 +3,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { guidanceContent } from '../src/data/international-guidance-content';
 const loc = process.argv[2];
-const find = (v: any): string | null => { if (!v || typeof v !== 'object') return null; if (typeof v.columnsReadMoreLabel === 'string') return v.columnsReadMoreLabel; for (const x of Object.values(v)) { const r = find(x); if (r) return r; } return null; };
-const label = find((guidanceContent as any)[loc]);
+const find = (v: unknown): string | null => { if (!v || typeof v !== 'object') return null; const o = v as Record<string, unknown>; if (typeof o.columnsReadMoreLabel === 'string') return o.columnsReadMoreLabel; for (const x of Object.values(o)) { const r = find(x); if (r) return r; } return null; };
+const label = find((guidanceContent as Record<string, unknown>)[loc]);
 if (!label) { console.log('no columnsReadMoreLabel'); process.exit(0); }
 const p = 'src/components/ColumnsGrid.tsx'; const src = readFileSync(p, 'utf8');
 const a = src.indexOf('GUIDANCE_CARD_READ_MORE_LABEL'); if (a < 0) { console.log('table not found'); process.exit(0); }

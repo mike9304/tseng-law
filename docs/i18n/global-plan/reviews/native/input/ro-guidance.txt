@@ -1,4 +1,4 @@
-# ro guidance pack strings (path → text). Generated 2026-09-21
+# ro guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.ro.languageName
     Română
@@ -28,7 +28,7 @@ guidanceContent.ro.nav.privacy
     Date personale
 
 guidanceContent.ro.nav.disclaimer
-    Avertismente
+    Note juridice
 
 guidanceContent.ro.nav.columns
     Articole
@@ -37,10 +37,10 @@ guidanceContent.ro.contactCta
     Trimiteți o solicitare
 
 guidanceContent.ro.footerNotice
-    Această pagină în limba română conține doar informații generale despre activitatea cabinetului potrivit dreptului taiwanez. Nu este consultanță juridică pentru un caz concret, iar trimiterea unui mesaj nu creează prin ea însăși o relație între avocată sau avocat și client.
+    Această pagină în limba română conține doar informații generale despre activitatea cabinetului potrivit dreptului taiwanez. Nu este consultanță juridică pentru un caz concret, iar trimiterea unui mesaj nu creează prin ea însăși o relație între avocat și client.
 
 guidanceContent.ro.skipLink
-    Săriți navigarea și mergeți la conținut
+    Treceți la conținut
 
 guidanceContent.ro.menuLabel
     Lista paginilor
@@ -49,7 +49,7 @@ guidanceContent.ro.languageLabel
     Limba de afișare
 
 guidanceContent.ro.mega.services.description
-    Cabinetul tratează grupele principale de lucrări potrivit dreptului taiwanez.
+    Cabinetul acoperă principalele domenii de practică din dreptul taiwanez.
 
 guidanceContent.ro.mega.services.viewAllLabel
     Vedeți toate
@@ -61,13 +61,13 @@ guidanceContent.ro.mega.columns.viewAllLabel
     Vedeți toate
 
 guidanceContent.ro.mega.lawyers.description
-    Prezentarea avocatelor și avocaților și a modalităților de contact.
+    Prezentarea avocaților și a modalităților de contact.
 
 guidanceContent.ro.mega.lawyers.viewAllLabel
     Vedeți toate
 
 guidanceContent.ro.mega.pricing.description
-    Această pagină explică întinderea lucrării și modul de clarificare a costurilor.
+    Această pagină explică obiectul mandatului și modul de clarificare a onorariilor.
 
 guidanceContent.ro.mega.pricing.viewAllLabel
     Vedeți toate
@@ -100,13 +100,13 @@ guidanceContent.ro.home.servicesDetailLabel
     Vedeți detaliile
 
 guidanceContent.ro.home.servicesAssistanceBefore
-    Dacă nu este clar din ce grupă face parte cazul dumneavoastră, pagina 
+    Dacă nu este clar din ce domeniu face parte cazul dumneavoastră, pagina 
 
 guidanceContent.ro.home.servicesAssistanceLinkLabel
     Contact
 
 guidanceContent.ro.home.servicesAssistanceAfter
-     explică cum să alcătuiți un rezumat pe care o avocată sau un avocat îl va examina.
+     explică cum să alcătuiți un rezumat pe care un avocat îl va examina.
 
 guidanceContent.ro.home.columnsViewAllLabel
     Vedeți toate articolele
@@ -121,10 +121,10 @@ guidanceContent.ro.home.columnsOriginalLanguageBadge
     Limba originală
 
 guidanceContent.ro.home.columnsOriginalLanguageNote
-    Articolele următoare nu sunt încă disponibile în limba română. Lista rămâne în limba originală și deschide pagina lingvistică corespunzătoare; conținutul nu este tradus automat.
+    Articolele următoare nu sunt încă disponibile în limba română. Lista rămâne în limba originală și deschide pagina în limba respectivă; conținutul nu este tradus automat.
 
 guidanceContent.ro.home.imageBandAlt
-    Curte tradițională taiwaneză sanheyuan (三合院) și un pavilion modern în lumina zilei
+    Ansamblu tradițional taiwanez sanheyuan (三合院) și un pavilion modern în lumina zilei
 
 guidanceContent.ro.home.videoPauseLabel
     Opriți videoclipul
@@ -145,31 +145,31 @@ guidanceContent.ro.pages.home.description
     Explicații generale în limba română despre aria de lucru a Hovering International Law Firm în Taiwan, despre limbile de consultanță și despre primul contact.
 
 guidanceContent.ro.pages.home.intro
-    Hovering International Law Firm însoțește clienți din străinătate, inclusiv pe cei cu legătură cu Taiwanul, în chestiuni de drept taiwanez: investiții și înființare de societăți, litigii civile, căsătorie, familie și succesiuni, dreptul muncii, cauze penale și proprietate intelectuală. Această parte în limba română vă ajută să recunoașteți ce lucrări intră în aria noastră, ce să pregătiți și cum ne puteți contacta. Sunt informații generale, nu consultanță juridică pentru cazul dumneavoastră.
+    Hovering International Law Firm asistă clienți din străinătate, inclusiv pe cei cu legătură cu Taiwanul, în chestiuni de drept taiwanez: investiții și înființare de societăți, litigii civile, căsătorie, familie și succesiuni, dreptul muncii, cauze penale și proprietate intelectuală. Această parte în limba română vă ajută să recunoașteți ce cauze intră în aria noastră, ce să pregătiți și cum ne puteți contacta. Sunt informații generale, nu consultanță juridică pentru cazul dumneavoastră.
 
 guidanceContent.ro.pages.home.sections[0].heading
     Cu ce ne ocupăm
 
 guidanceContent.ro.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Consiliem întreprinderi, susținem cauze în fața instanțelor și însoțim clienți din străinătate în pașii necesari în Taiwan.
+    Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Cabinetul consiliază întreprinderi, susține cauze în fața instanțelor și asistă clienți din străinătate în pașii necesari în Taiwan.
 
 guidanceContent.ro.pages.home.sections[0].paragraphs[1]
-    Tot conținutul de aici este general. Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv. Aceste informații nu înlocuiesc discuția cu o avocată sau un avocat asupra documentelor dumneavoastră.
+    Tot conținutul de aici este general. Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv. Aceste informații nu înlocuiesc discuția cu un avocat asupra documentelor dumneavoastră.
 
 guidanceContent.ro.pages.home.sections[1].heading
     Limba paginii și limba consultanței nu sunt același lucru
 
 guidanceContent.ro.pages.home.sections[1].paragraphs[0]
-    Această pagină este scrisă în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocata sau avocatul va avea loc în limba română.
+    Această pagină este scrisă în limba română, dar consultanța cu un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocatul va avea loc în limba română.
 
 guidanceContent.ro.pages.home.sections[1].paragraphs[1]
-    Nu promitem interpret, un termen de răspuns și nici o programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina «Contact» explică modul în care examinăm o cale de comunicare.
+    Nu promitem nici un interpret, nici un termen de răspuns și nicio programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.
 
 guidanceContent.ro.pages.home.sections[2].heading
-    Grupele de lucrări
+    Domeniile de practică
 
 guidanceContent.ro.pages.home.sections[2].paragraphs[0]
-    Aria de lucru cuprinde următoarele șase grupe. Pagina «Servicii» descrie fiecare grupă mai exact și arată ce nu se promite.
+    Aria de lucru cuprinde următoarele șase domenii. Pagina „Servicii” descrie fiecare domeniu mai exact și arată ce nu se promite.
 
 guidanceContent.ro.pages.home.sections[2].items[0]
     Investiții și înființare de societăți în Taiwan
@@ -193,10 +193,10 @@ guidanceContent.ro.pages.home.sections[3].heading
     De unde să începeți
 
 guidanceContent.ro.pages.home.sections[3].paragraphs[0]
-    Citiți pagina «Servicii» pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi «Costuri» și «Contact», pentru a afla cum se stabilește întinderea lucrării și cum se confirmă costurile înainte de începerea acesteia.
+    Citiți pagina „Servicii” pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi „Costuri” și „Contact”, pentru a afla cum se stabilește obiectul mandatului și cum se confirmă onorariile înainte de începerea lucrării.
 
 guidanceContent.ro.pages.home.sections[3].paragraphs[1]
-    La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă o consultanță și nici o programare confirmată.
+    La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă nici o consultanță și nicio programare confirmată.
 
 guidanceContent.ro.pages.services.eyebrow
     SERVICII
@@ -205,16 +205,16 @@ guidanceContent.ro.pages.services.title
     Ce cauze tratăm
 
 guidanceContent.ro.pages.services.description
-    Cele șase grupe de lucrări ale cabinetului în Taiwan și limitele pe care este util să le cunoașteți mai întâi.
+    Cele șase domenii de practică ale cabinetului în Taiwan și limitele pe care este util să le cunoașteți mai întâi.
 
 guidanceContent.ro.pages.services.intro
-    Mai jos sunt grupele pe care le tratăm efectiv și întrebările care apar cel mai des în faza inițială. Expunerea vă ajută să apreciați dacă situația dumneavoastră intră în aria noastră; este generală și nu constituie o analiză juridică a unui dosar anume.
+    Mai jos sunt domeniile pe care le tratăm efectiv și întrebările care apar cel mai des în faza inițială. Expunerea vă ajută să apreciați dacă situația dumneavoastră intră în aria noastră; este generală și nu constituie o analiză juridică a unui dosar anume.
 
 guidanceContent.ro.pages.services.sections[0].heading
     Investiții și înființare de societăți în Taiwan
 
 guidanceContent.ro.pages.services.sections[0].paragraphs[0]
-    Însoțim investitori și întreprinderi străine la înființarea sau conducerea unei societăți în Taiwan: alegerea formei juridice, pregătirea și depunerea documentelor, vărsarea capitalului, chestiuni bancare, examinarea sediului și cerințele specifice domeniului. Sprijinim și contabilitatea și impozitele care decurg din înființarea și funcționarea în Taiwan.
+    Asistăm investitori și întreprinderi străine la înființarea sau conducerea unei societăți în Taiwan: alegerea formei juridice, pregătirea și depunerea documentelor, vărsarea capitalului, chestiuni bancare, examinarea sediului și cerințele specifice domeniului. Sprijinim și contabilitatea și impozitele care decurg din înființarea și funcționarea în Taiwan.
 
 guidanceContent.ro.pages.services.sections[0].paragraphs[1]
     Parcursul și termenele diferă după formă, investitor, domeniu, bancă și după documentele deja disponibile. Înființarea unei societăți nu duce prin ea însăși la un drept de ședere (居留) sau la o autorizație de muncă (工作許可): acestea sunt proceduri distincte, apreciate după situația persoanei.
@@ -223,7 +223,7 @@ guidanceContent.ro.pages.services.sections[1].heading
     Litigii civile și despăgubiri
 
 guidanceContent.ro.pages.services.sections[1].paragraphs[0]
-    Această grupă cuprinde litigii din contracte, despăgubiri din fapte ilicite și litigii cu consumatorii. Lucrarea începe de regulă cu o cronologie, cu examinarea documentelor și a probelor existente, iar abia apoi urmează pașii următori.
+    Acest domeniu cuprinde litigii din contracte, despăgubiri din fapte ilicite și litigii cu consumatorii. Lucrarea începe de regulă cu o cronologie, cu examinarea documentelor și a probelor existente, iar abia apoi urmează pașii următori.
 
 guidanceContent.ro.pages.services.sections[1].paragraphs[1]
     Termenele, inclusiv prescripția, și caracterul complet al probelor determină parcursul. De aceea indicați cât mai devreme datele cunoscute. Păstrați contractele, mesajele, dovezile de plată sau fotografiile situației de la fața locului și menționați-le în primul mesaj.
@@ -232,7 +232,7 @@ guidanceContent.ro.pages.services.sections[2].heading
     Căsătorie, familie și succesiuni
 
 guidanceContent.ro.pages.services.sections[2].paragraphs[0]
-    Tratăm divorțul (離婚), împărțirea bunurilor, exercitarea și asumarea drepturilor și obligațiilor față de copiii minori (未成年子女權利義務之行使或負擔), legăturile personale (會面交往) și succesiunile (繼承), inclusiv atunci când părțile sau bunurile se află în state diferite. Cauzele de familie transfrontaliere cer adesea o examinare suplimentară a evidenței populației (戶籍), a formei înscrisurilor și a puterii lor doveditoare în Taiwan.
+    Tratăm divorțul (離婚), împărțirea bunurilor, autoritatea părintească asupra copiilor minori (未成年子女權利義務之行使或負擔), legăturile personale (會面交往) și succesiunile (繼承), inclusiv atunci când părțile sau bunurile se află în state diferite. Cauzele de familie transfrontaliere cer adesea o examinare suplimentară a evidenței populației (戶籍), a formei înscrisurilor și a puterii lor doveditoare în Taiwan.
 
 guidanceContent.ro.pages.services.sections[2].paragraphs[1]
     Întrucât cauzele de familie aduc adesea termene și proceduri paralele, primul rezumat ar trebui să arate raportul dintre părți, domiciliul actual și procedurile deja în curs.
@@ -241,7 +241,7 @@ guidanceContent.ro.pages.services.sections[3].heading
     Litigii de muncă
 
 guidanceContent.ro.pages.services.sections[3].paragraphs[0]
-    Această grupă cuprinde încetarea raportului de muncă, indemnizația potrivit dreptului taiwanez (資遣費; a nu se confunda cu instituții asemănătoare din alte state), remunerația și litigiile din contractul de muncă (勞動契約), atât din partea salariatului, cât și a angajatorului. La examinare deosebim motivul încetării de chestiunile privind preavizul, plata și termenele.
+    Acest domeniu cuprinde încetarea raportului de muncă, indemnizația potrivit dreptului taiwanez (資遣費; a nu se confunda cu instituții asemănătoare din alte state), remunerația și litigiile din contractul de muncă (勞動契約), atât din partea salariatului, cât și a angajatorului. La examinare deosebim motivul încetării de chestiunile privind preavizul, plata și termenele.
 
 guidanceContent.ro.pages.services.sections[3].paragraphs[1]
     Documentele hotărâtoare sunt de obicei contractul de muncă, regulamentul intern (工作規則), fluturașii de salariu și corespondența părților. Dacă le mai aveți, menționați acest lucru în rezumat.
@@ -250,7 +250,7 @@ guidanceContent.ro.pages.services.sections[4].heading
     Cauze penale
 
 guidanceContent.ro.pages.services.sections[4].paragraphs[0]
-    Însoțim în faza de urmărire penală și în fața instanței, atât persoane suspectate sau inculpate, cât și persoane vătămate, și apreciem riscurile penale ale activității de afaceri.
+    Reprezentăm, în faza de urmărire penală și în fața instanței, atât suspecți sau inculpați, cât și persoane vătămate, și apreciem riscurile penale ale activității de afaceri.
 
 guidanceContent.ro.pages.services.sections[4].paragraphs[1]
     Cauzele penale au adesea termene scurte și etape fixe. Dacă ați primit deja un act de la organul de urmărire penală sau de la instanță, indicați din timp data de pe act, pentru ca conținutul să fie examinat în ordinea potrivită.
@@ -262,16 +262,16 @@ guidanceContent.ro.pages.services.sections[5].paragraphs[0]
     Sprijinim înregistrarea mărcilor (商標) și a brevetelor (專利), dreptul de autor și litigiile privind aceste drepturi în Taiwan.
 
 guidanceContent.ro.pages.services.sections[5].paragraphs[1]
-    În această grupă hotărăște ordinea pașilor: întinderea protecției, momentul depunerii și folosirea efectivă influențează alegerea. Depunerea unei cereri nu înseamnă prin ea însăși că aceasta va fi admisă.
+    În acest domeniu hotărăște ordinea pașilor: întinderea protecției, momentul depunerii și folosirea efectivă influențează alegerea. Depunerea unei cereri nu înseamnă prin ea însăși că aceasta va fi admisă.
 
 guidanceContent.ro.pages.services.sections[6].heading
-    Întinderea lucrării și confirmarea ei
+    Obiectul mandatului și confirmarea lui
 
 guidanceContent.ro.pages.services.sections[6].paragraphs[0]
-    Cabinetul lucrează potrivit dreptului taiwanez și tratează cauze din grupele arătate mai sus. Întinderea fiecărei cauze se confirmă separat, după ce o avocată sau un avocat a examinat mesajul dumneavoastră.
+    Cabinetul lucrează potrivit dreptului taiwanez și tratează cauze din domeniile arătate mai sus. Obiectul fiecărui mandat se confirmă separat, după ce un avocat a examinat mesajul dumneavoastră.
 
 guidanceContent.ro.pages.services.sections[6].paragraphs[1]
-    Statutul de ședere, autorizația de muncă și chestiunile asemănătoare se apreciază după documente și după situația persoanei, nu după cetățenie. Dacă o parte a cauzei dumneavoastră atinge aceste puncte, arătați acest lucru la contactare. Această pagină nu promite un rezultat și nici un termen de răspuns.
+    Statutul de ședere, autorizația de muncă și chestiunile asemănătoare se apreciază după documente și după situația persoanei, nu după cetățenie. Dacă o parte a cauzei dumneavoastră atinge aceste puncte, arătați acest lucru la contactare. Această pagină nu promite un rezultat și niciun termen de răspuns.
 
 guidanceContent.ro.pages.about.eyebrow
     CABINETUL
@@ -283,37 +283,37 @@ guidanceContent.ro.pages.about.description
     Date de bază despre acest cabinet de avocatură taiwanez, despre birourile sale și despre lucrul cu părți străine.
 
 guidanceContent.ro.pages.about.intro
-    Hovering International Law Firm este un cabinet de avocatură din Taiwan. Avocatele și avocații lucrează de la consultanța pentru întreprinderi până la procedura în fața instanței. Această parte descrie apariția cabinetului, sediile și lucrul cu părți străine.
+    Hovering International Law Firm este un cabinet de avocatură din Taiwan. Avocații cabinetului lucrează de la consultanța pentru întreprinderi până la procedura în fața instanței. Această parte descrie înființarea cabinetului, sediile și lucrul cu părți străine.
 
 guidanceContent.ro.pages.about.sections[0].heading
     Înființare și structură
 
 guidanceContent.ro.pages.about.sections[0].paragraphs[0]
-    Hovering International Law Firm (昊鼎國際法律事務所) a fost înființat în 2016 de avocate și avocați care au studiat la National Taiwan University (國立臺灣大學). Denumirea chineză 昊鼎 unește caracterul 昊 («cer larg») cu 鼎 («temelie solidă») și descrie orientarea cabinetului încă de la înființare.
+    Hovering International Law Firm (昊鼎國際法律事務所) a fost înființat în 2016 de avocați care au studiat la National Taiwan University (國立臺灣大學). Denumirea chineză 昊鼎 unește caracterul 昊 („cer larg”) cu 鼎 („temelie solidă”) și descrie orientarea cabinetului încă de la înființare.
 
 guidanceContent.ro.pages.about.sections[0].paragraphs[1]
-    Avem birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Biroul din Kaohsiung se concentrează pe conducerea întreprinderilor și tratează litigii civile, penale și administrative. Biroul din Taichung tratează cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Biroul din Pingtung a fost deschis în 2017 pentru nevoile locale.
+    Avem birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Biroul din Kaohsiung se concentrează pe consultanța pentru conducerea societăților și tratează litigii civile, penale și administrative. Biroul din Taichung tratează cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Biroul din Pingtung a fost deschis în 2017 pentru nevoile locale.
 
 guidanceContent.ro.pages.about.sections[0].paragraphs[2]
-    Pe lângă activitatea de avocatură există din 2020 și Hovering Accounting Office, care oferă contabilitate și planificare fiscală întreprinzătorilor și persoanelor fizice cu patrimoniu.
+    Pe lângă activitatea de avocatură există din 2020 și Hovering Accounting Office, care oferă contabilitate și planificare fiscală întreprinzătorilor și persoanelor fizice înstărite.
 
 guidanceContent.ro.pages.about.sections[1].heading
     Lucrul cu părți străine
 
 guidanceContent.ro.pages.about.sections[1].paragraphs[0]
-    Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) însoțește clienți din Coreea, din Japonia și alți clienți internaționali în grupele arătate.
+    Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) asistă clienți din Coreea, din Japonia și alți clienți internaționali în domeniile arătate.
 
 guidanceContent.ro.pages.about.sections[1].paragraphs[1]
-    Dacă putem prelua o cauză depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în grupele arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.
+    Preluarea unei cauze depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în domeniile arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.
 
 guidanceContent.ro.pages.about.sections[2].heading
     Când ne contactați
 
 guidanceContent.ro.pages.about.sections[2].paragraphs[0]
-    După sosirea rezumatului dumneavoastră, o avocată sau un avocat examinează conținutul și vorbește apoi despre întinderea posibilă a lucrării, despre documentele încă necesare și despre pașii următori. Pentru chestiuni fiscale sau contabile, cabinetul poate lucra împreună cu secțiunea de contabilitate într-un singur flux.
+    După sosirea rezumatului dumneavoastră, un avocat examinează conținutul și vorbește apoi despre obiectul posibil al mandatului, despre documentele încă necesare și despre pașii următori. Pentru chestiuni fiscale sau contabile, cabinetul poate lucra împreună cu Hovering Accounting Office, în același demers.
 
 guidanceContent.ro.pages.about.sections[2].paragraphs[1]
-    Rezultatul fiecărei cauze depinde de fapte și de documentele disponibile; nu promitem un rezultat. Dacă aveți nevoie de un răspuns obligatoriu pentru situația dumneavoastră, documentele trebuie discutate într-una dintre cele patru limbi de consultanță cu o avocată sau un avocat.
+    Rezultatul fiecărei cauze depinde de fapte și de documentele disponibile; nu promitem un rezultat. Dacă aveți nevoie de un răspuns pe care să vă puteți întemeia în situația dumneavoastră, documentele trebuie discutate cu un avocat într-una dintre cele patru limbi de consultanță.
 
 guidanceContent.ro.pages.lawyers.eyebrow
     AVOCAȚI
@@ -322,7 +322,7 @@ guidanceContent.ro.pages.lawyers.title
     Echipa internațională Hovering
 
 guidanceContent.ro.pages.lawyers.description
-    Profilurile avocatelor și avocaților, ale conducerii operative și ale revizuirii contabile asociate Hovering.
+    Profilurile avocaților, ale conducerii operaționale și ale cabinetului de contabilitate asociat Hovering.
 
 guidanceContent.ro.pages.lawyers.intro
     
@@ -331,46 +331,46 @@ guidanceContent.ro.pages.pricing.eyebrow
     COSTURI
 
 guidanceContent.ro.pages.pricing.title
-    Cum se stabilesc întinderea lucrării și costurile
+    Cum se stabilesc obiectul mandatului și onorariile
 
 guidanceContent.ro.pages.pricing.description
-    Explicarea ordinii: mai întâi întinderea lucrării, apoi confirmarea costurilor, și de ce această pagină nu cuprinde o listă de prețuri.
+    Explicarea ordinii: mai întâi obiectul mandatului, apoi confirmarea onorariilor, și de ce această pagină nu cuprinde o listă de prețuri.
 
 guidanceContent.ro.pages.pricing.intro
-    Această pagină explică modul în care se stabilesc costurile, nu cuantumul lor. Cuantumul depinde de întinderea lucrării în cauza concretă și are înțeles abia atunci când această întindere este clară.
+    Această pagină explică modul în care se stabilesc costurile, nu cuantumul lor. Cuantumul depinde de obiectul mandatului în cauza concretă și capătă înțeles abia atunci când acest obiect este clar.
 
 guidanceContent.ro.pages.pricing.sections[0].heading
-    Mai întâi se stabilește întinderea lucrării
+    Mai întâi se stabilește obiectul mandatului
 
 guidanceContent.ro.pages.pricing.sections[0].paragraphs[0]
-    Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după cum a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce ține de lucrare și ce nu.
+    Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după faptul dacă a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce intră în mandat și ce nu.
 
 guidanceContent.ro.pages.pricing.sections[0].paragraphs[1]
-    Rezumatul pe care îl trimiteți la început este temeiul acestei întinderi. Cu cât descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact se poate determina întinderea.
+    Rezumatul pe care îl trimiteți la început este baza de la care se stabilește acest obiect. Cu cât rezumatul descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact poate fi delimitat mandatul.
 
 guidanceContent.ro.pages.pricing.sections[1].heading
-    Costurile se confirmă înainte de începerea lucrării
+    Onorariile se confirmă înainte de începerea lucrării
 
 guidanceContent.ro.pages.pricing.sections[1].paragraphs[0]
-    Când întinderea lucrării este clară, cuantumul și modul de calcul al costurilor se discută și se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Dacă întinderea se schimbă pe parcurs, aceasta trebuie confirmată din nou.
+    Când obiectul mandatului este clar, cuantumul onorariului și modul lui de calcul se discută și se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Dacă obiectul se schimbă pe parcurs, el trebuie confirmat din nou.
 
 guidanceContent.ro.pages.pricing.sections[1].paragraphs[1]
     Această pagină nu este o ofertă de preț și nu creează o obligație de plată.
 
 guidanceContent.ro.pages.pricing.sections[2].heading
-    Consultanța poate fi cu plată
+    Consultanța poate fi contra cost
 
 guidanceContent.ro.pages.pricing.sections[2].paragraphs[0]
-    Consultanța cu o avocată sau un avocat poate fi o prestație cu plată. Această pagină nu spune că prima discuție este gratuită și nicio parte a ei nu poate fi citită în acest sens.
+    Consultanța cu un avocat poate fi o prestație contra cost. Această pagină nu spune că prima discuție este gratuită și nimic din ea nu trebuie înțeles în acest sens.
 
 guidanceContent.ro.pages.pricing.sections[2].paragraphs[1]
-    Dacă consultanța este cu plată, cuantumul și modul de plată se comunică înainte ca aceasta să aibă loc.
+    Dacă consultanța este contra cost, cuantumul și modul de plată se comunică înainte ca aceasta să aibă loc.
 
 guidanceContent.ro.pages.pricing.sections[3].heading
     De ce această pagină nu arată tarife
 
 guidanceContent.ro.pages.pricing.sections[3].paragraphs[0]
-    Costurile depind de cauza însăși: de efort, de numărul părților, de documente, de termene și de faptul dacă o procedură este deja în curs. Un număr stabilit dinainte nu ar arăta costurile dosarului dumneavoastră. De aceea stabilim mai întâi întinderea lucrării și vă comunicăm apoi costurile, înainte ca lucrarea să înceapă.
+    Costurile depind de cauza însăși: de efort, de numărul părților, de documente, de termene și de faptul dacă o procedură este deja în curs. O sumă stabilită dinainte nu ar arăta costurile dosarului dumneavoastră. De aceea stabilim mai întâi obiectul mandatului și vă comunicăm apoi onorariul, înainte ca lucrarea să înceapă.
 
 guidanceContent.ro.pages.pricing.sections[3].paragraphs[1]
     Pe lângă onorariu pot apărea taxe de instanță, cheltuieli ale autorităților sau ale terților. Acestea sunt distincte de onorariu și depind de procedura respectivă.
@@ -391,7 +391,7 @@ guidanceContent.ro.pages.contact.sections[0].heading
     Trei lucruri care trebuie ținute separat
 
 guidanceContent.ro.pages.contact.sections[0].paragraphs[0]
-    Limba de afișare a paginii, limba consultanței cu avocata sau avocatul și limba în care scrieți sunt trei lucruri distincte.
+    Limba de afișare a paginii, limba consultanței cu avocatul și limba în care scrieți sunt trei lucruri distincte.
 
 guidanceContent.ro.pages.contact.sections[0].items[0]
     Limba paginii: aceste informații sunt scrise în limba română.
@@ -400,16 +400,16 @@ guidanceContent.ro.pages.contact.sections[0].items[1]
     Limba consultanței: consultanța se desfășoară în engleză, chineză (中文), japoneză și coreeană.
 
 guidanceContent.ro.pages.contact.sections[0].items[2]
-    Limba dumneavoastră de scriere: puteți scrie rezumatul în limba dumneavoastră; textul original se păstrează nemodificat.
+    Limba în care scrieți: puteți scrie rezumatul în limba dumneavoastră; textul original se păstrează nemodificat.
 
 guidanceContent.ro.pages.contact.sections[1].heading
     Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță
 
 guidanceContent.ro.pages.contact.sections[1].paragraphs[0]
-    În formularul de contact puteți alege «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale practicabilă de comunicare, dacă o asemenea cale există; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.
+    În formularul de contact puteți alege „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.
 
 guidanceContent.ro.pages.contact.sections[1].paragraphs[1]
-    Acesta este doar un pas de examinare, nu o promisiune. Nu promitem interpret, o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.
+    Acesta este doar un pas de examinare, nu o promisiune. Nu promitem nici un interpret, nici o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.
 
 guidanceContent.ro.pages.contact.sections[2].heading
     Ce ar trebui să cuprindă primul mesaj
@@ -418,13 +418,13 @@ guidanceContent.ro.pages.contact.sections[2].paragraphs[0]
     Arătați ce s-a întâmplat, de ce ajutor aveți nevoie, ce legătură are cauza cu Taiwanul și termenul, dacă îl cunoașteți. Dacă ați primit deja un act de la o instanță sau de la o autoritate, indicați data de pe act.
 
 guidanceContent.ro.pages.contact.sections[2].paragraphs[1]
-    În faza inițială nu trebuie să trimiteți încă numărul de pașaport, numărul actului de identitate, datele unui cont, documente medicale sau întregul material probator. Așteptați îndrumarea avocatei sau avocatului și trimiteți abia atunci documentele sensibile pe o cale sigură.
+    În faza inițială nu trebuie să trimiteți încă numărul de pașaport, numărul actului de identitate, datele unui cont, documente medicale sau întregul material probator. Așteptați îndrumarea avocatului și trimiteți abia atunci documentele sensibile pe o cale sigură.
 
 guidanceContent.ro.pages.contact.sections[3].heading
     Ce nu promite această pagină
 
 guidanceContent.ro.pages.contact.sections[3].paragraphs[0]
-    Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem o anumită avocată sau un anumit avocat și nu punem la dispoziție interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.
+    Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem un anumit avocat și nu punem la dispoziție un interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.
 
 guidanceContent.ro.pages.contact.sections[3].paragraphs[1]
     Dacă trimiteți o solicitare, conținutul se păstrează și așteaptă examinarea. Dacă după un timp nu primiți răspuns, puteți scrie din nou la adresa de e-mail arătată pe pagina de contact.
@@ -439,19 +439,19 @@ guidanceContent.ro.pages.faq.description
     Explicații despre aria de lucru, pregătire, limbi, costuri și despre înțelesul unei solicitări trimise.
 
 guidanceContent.ro.pages.faq.intro
-    Întrebările următoare sunt lămurite la nivelul informațiilor generale. Un răspuns pentru cazul dumneavoastră este cu putință abia după ce o avocată sau un avocat a examinat documentele.
+    Întrebările următoare sunt lămurite la nivelul informațiilor generale. Un răspuns pentru cazul dumneavoastră este posibil abia după ce un avocat a examinat documentele.
 
 guidanceContent.ro.pages.faq.sections[0].heading
     Cum să folosiți această parte
 
 guidanceContent.ro.pages.faq.sections[0].paragraphs[0]
-    Dacă nu găsiți un răspuns pentru situația dumneavoastră, răspunsul depinde de regulă de fapte deosebite. Scrieți-le atunci în rezumat, în loc să le deduceți din această pagină.
+    Dacă nu găsiți un răspuns pentru situația dumneavoastră, răspunsul depinde, de regulă, de fapte deosebite. Scrieți-le atunci în rezumat, în loc să le deduceți din această pagină.
 
 guidanceContent.ro.pages.faq.faqs[0].question
     Ce cauze tratează cabinetul?
 
 guidanceContent.ro.pages.faq.faqs[0].answer
-    Tratăm șase grupe: investiții și înființare de societăți în Taiwan, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Dacă o cauză este preluată se hotărăște după examinarea conținutului.
+    Tratăm șase domenii: investiții și înființare de societăți în Taiwan, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Preluarea unei cauze se hotărăște după examinarea conținutului.
 
 guidanceContent.ro.pages.faq.faqs[1].question
     Ce ar trebui să pregătesc înainte de contactare?
@@ -460,16 +460,16 @@ guidanceContent.ro.pages.faq.faqs[1].answer
     Pregătiți un scurt rezumat al desfășurării, al cererii dumneavoastră, al legăturii cu Taiwanul și al termenului, dacă există unul. Dacă există deja un act al unei instanțe sau al unei autorități, indicați data. În această fază nu trebuie să trimiteți încă acte de identitate sau întregul material probator.
 
 guidanceContent.ro.pages.faq.faqs[2].question
-    Este cu putință o consultanță în limba română?
+    Este posibilă o consultanță în limba română?
 
 guidanceContent.ro.pages.faq.faqs[2].answer
-    Nu. Aceste informații sunt scrise în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Nu promitem nici interpret. Traducerea scrisă este altceva: textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat.
+    Nu. Aceste informații sunt scrise în limba română, dar consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Nu promitem niciun interpret. Traducerea scrisă este altceva: textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat.
 
 guidanceContent.ro.pages.faq.faqs[3].question
     Ce fac dacă nu pot folosi niciuna dintre cele patru limbi?
 
 guidanceContent.ro.pages.faq.faqs[3].answer
-    La trimiterea solicitării alegeți «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale de comunicare, dar o prestație în altă limbă nu este garantată. Acesta este un pas de examinare, nu o promisiune că putem lucra în altă limbă.
+    La trimiterea solicitării alegeți „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi, dar o prestație în altă limbă nu este garantată. Acesta este un pas de examinare, nu o promisiune că putem lucra în altă limbă.
 
 guidanceContent.ro.pages.faq.faqs[4].question
     Cum este tratat textul meu în limba română?
@@ -481,13 +481,13 @@ guidanceContent.ro.pages.faq.faqs[5].question
     Consultanța a avut deja loc prin trimiterea solicitării?
 
 guidanceContent.ro.pages.faq.faqs[5].answer
-    Nu. O solicitare trimisă așteaptă examinarea de către o avocată sau un avocat. Nu este o opinie juridică, nu este o programare confirmată, iar trimiterea nu creează prin ea însăși o relație între avocată sau avocat și client.
+    Nu. O solicitare trimisă așteaptă examinarea de către un avocat. Nu este o opinie juridică, nu este o programare confirmată, iar trimiterea nu creează prin ea însăși o relație între avocat și client.
 
 guidanceContent.ro.pages.faq.faqs[6].question
     Cum se calculează costurile?
 
 guidanceContent.ro.pages.faq.faqs[6].answer
-    Mai întâi se stabilește întinderea lucrării, apoi cuantumul și modul de calcul al costurilor se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Această pagină nu arată sume și nu spune că prima discuție este gratuită.
+    Mai întâi se stabilește obiectul mandatului, apoi cuantumul onorariului și modul lui de calcul se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Această pagină nu arată sume și nu spune că prima discuție este gratuită.
 
 guidanceContent.ro.pages.faq.faqs[7].question
     Ce fac dacă situația mea este foarte urgentă?
@@ -553,7 +553,7 @@ guidanceContent.ro.pages.privacy.sections[2].paragraphs[0]
     Conținutul trimiterii dumneavoastră se păstrează într-un loc care nu este accesibil publicului. Numai persoanele autorizate din cabinet au acces la el, pentru soluționarea solicitării.
 
 guidanceContent.ro.pages.privacy.sections[2].paragraphs[1]
-    Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; documentele sensibile ar trebui de aceea trimise abia după o îndrumare anume a avocatei sau avocatului.
+    Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; de aceea, documentele sensibile ar trebui trimise abia după o îndrumare anume din partea avocatului.
 
 guidanceContent.ro.pages.privacy.sections[3].heading
     Scopul folosirii
@@ -571,13 +571,13 @@ guidanceContent.ro.pages.privacy.sections[4].paragraphs[0]
     Dacă o solicitare este trimisă cu succes, sistemul înștiințează cabinetul. Dacă această înștiințare nu ajunge la cabinet, textul dumneavoastră rămâne păstrat și nu se pierde.
 
 guidanceContent.ro.pages.privacy.sections[4].paragraphs[1]
-    Numărul de înregistrare servește la regăsirea solicitării dumneavoastră în evidențele noastre. Se arată după păstrare; îl puteți indica la un nou contact.
+    Numărul de înregistrare servește la regăsirea solicitării dumneavoastră în evidențele noastre. Numărul se afișează după salvarea solicitării; îl puteți indica la o nouă contactare.
 
 guidanceContent.ro.pages.privacy.sections[5].heading
     Drepturile dumneavoastră și calea de contact
 
 guidanceContent.ro.pages.privacy.sections[5].paragraphs[0]
-    Puteți cere accesul la datele dumneavoastră, îndreptarea sau ștergerea lor ori vă puteți retrage consimțământul, prin adresa de e-mail arătată pe pagina de contact. Dacă există o obligație legală sau procesuală de păstrare, explicăm limitarea.
+    Puteți cere accesul la datele dumneavoastră, rectificarea sau ștergerea lor ori vă puteți retrage consimțământul, prin adresa de e-mail arătată pe pagina de contact. Dacă există o obligație legală sau procesuală de păstrare, explicăm limitarea.
 
 guidanceContent.ro.pages.privacy.sections[5].paragraphs[1]
     Această pagină nu arată un termen fix de păstrare, fiindcă durata efectivă depinde de desfășurarea ulterioară a cauzei și de obligațiile legate de aceasta. Dacă doriți o ștergere mai devreme, arătați acest lucru la contactare.
@@ -586,19 +586,19 @@ guidanceContent.ro.pages.privacy.sections[6].heading
     Locul păstrării și furnizorii
 
 guidanceContent.ro.pages.privacy.sections[6].paragraphs[0]
-    Acest site este găzduit la Vercel, iar trimiterea dumneavoastră se păstrează într-un depozit de obiecte nepublic al acestui serviciu. E-mailurile se trimit prin serviciul de poștă electronică folosit de cabinet.
+    Acest site este găzduit la Vercel, iar mesajul dumneavoastră este stocat într-un spațiu de stocare privat al acestui serviciu, neaccesibil publicului. E-mailurile se trimit prin serviciul de poștă electronică folosit de cabinet.
 
 guidanceContent.ro.pages.privacy.sections[6].paragraphs[1]
     Serverele unor furnizori se pot afla în afara Taiwanului, astfel încât datele dumneavoastră pot fi păstrate și prelucrate acolo. Când scopul păstrării este îndeplinit, datele se șterg fără întârziere; datele care trebuie păstrate potrivit normelor aplicabile rămân pe acea durată. Cererile privind datele cu caracter personal se primesc la wei@hoveringlaw.com.tw.
 
 guidanceContent.ro.pages.disclaimer.eyebrow
-    AVERTISMENTE
+    NOTE JURIDICE
 
 guidanceContent.ro.pages.disclaimer.title
     Întinderea și limitele informațiilor de pe această pagină
 
 guidanceContent.ro.pages.disclaimer.description
-    Caracterul general al informațiilor, cadrul juridic și condițiile nașterii unei relații între avocată sau avocat și client.
+    Caracterul general al informațiilor, cadrul juridic și condițiile nașterii unei relații între avocat și client.
 
 guidanceContent.ro.pages.disclaimer.intro
     Această parte lămurește ce pot face pentru dumneavoastră aceste pagini de informare în limba română și ce nu.
@@ -622,10 +622,10 @@ guidanceContent.ro.pages.disclaimer.sections[1].paragraphs[1]
     Conținutul nu este consultanță potrivit dreptului unei alte ordini juridice decât cea taiwaneză, inclusiv dreptul locului dumneavoastră de ședere. Dacă o parte a cauzei dumneavoastră privește o altă ordine juridică, vom lămuri împreună ce persoană calificată este necesară pentru acea parte.
 
 guidanceContent.ro.pages.disclaimer.sections[2].heading
-    Relația dintre avocată sau avocat și client nu se naște de la sine
+    Relația dintre avocat și client nu se naște de la sine
 
 guidanceContent.ro.pages.disclaimer.sections[2].paragraphs[0]
-    Citirea acestei pagini, trimiterea unui formular sau a unui e-mail nu creează prin ea însăși o relație între avocată sau avocat și client.
+    Citirea acestei pagini, trimiterea unui formular sau a unui e-mail nu creează prin ea însăși o relație între avocat și client.
 
 guidanceContent.ro.pages.disclaimer.sections[2].paragraphs[1]
     Această relație ia naștere abia după ce cauza a fost examinată și ambele părți au confirmat preluarea lucrării.
@@ -676,16 +676,16 @@ guidanceContent.ro.pages.columns.sections[2].paragraphs[0]
     Articolele sunt informații generale la momentul publicării. Normele și aplicarea lor se pot schimba, iar un articol nu cuprinde toate împrejurările cazului dumneavoastră.
 
 guidanceContent.ro.pages.columns.sections[2].paragraphs[1]
-    De aceea nu întemeiați un demers într-o cauză reală numai pe un articol. Folosiți-l pentru privirea de ansamblu și discutați documentele dumneavoastră separat cu o avocată sau un avocat; această pagină nu este pasul consultanței.
+    De aceea nu întemeiați un demers într-o cauză reală numai pe un articol. Folosiți-l pentru o privire de ansamblu și discutați documentele dumneavoastră separat cu un avocat; această pagină nu ține loc de consultanță.
 
 guidanceTeamCopy.ro.label
-    OUR TEAM
+    ECHIPA NOASTRĂ
 
 guidanceTeamCopy.ro.title
     Echipa internațională Hovering
 
 guidanceTeamCopy.ro.description
-    Profilurile avocatelor și avocaților, ale conducerii operative și ale revizuirii contabile asociate Hovering.
+    Profilurile avocaților, ale conducerii operaționale și ale cabinetului de contabilitate asociat Hovering.
 
 guidanceTeamCopy.ro.representativeTitle
     Avocată coordonatoare
@@ -712,7 +712,7 @@ guidanceTeamCopy.ro.workingLanguagesLabel
     Limbi de lucru
 
 guidanceTeamCopy.ro.fullProfileLabel
-    Profil complet (English)
+    Profil complet (în engleză)
 
 guidanceTeamCopy.ro.keyFactsHeading
     Avocata Wei Tseng — Date esențiale
@@ -736,7 +736,7 @@ guidanceTeamCopy.ro.roles.chang-rongxuan
     Avocat în Taiwan (Taiwan Attorney)
 
 guidanceTeamCopy.ro.roles.chang-fangyu
-    Paralegal
+    Asistentă juridică
 
 guidanceTeamCopy.ro.roles.son-jungmin
     Conducerea operațiunilor din Coreea (Korea Operations Manager)
@@ -748,16 +748,16 @@ guidanceTeamBios.ro.tseng-junwei.intro[0]
     Cabinetul tratează cauze ale întreprinderilor și ale persoanelor fizice în Taiwan în engleză, japoneză, coreeană și chineză.
 
 guidanceTeamBios.ro.tseng-junwei.intro[1]
-    A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sală și a obținut o hotărâre în primă instanță de TWD 1.57M.
+    A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sala de sport, iar instanța de fond a pronunțat o hotărâre de 1,57 mil. TWD.
 
 guidanceTeamBios.ro.tseng-junwei.education[0]
-    Master (M.S.), Institute of Finance, National Taiwan University
+    Master (M.S.) în finanțe, Institute of Finance, National Taiwan University
 
 guidanceTeamBios.ro.tseng-junwei.education[1]
-    Licență (B.A.) în dublu program de drept și finanțe, National Chengchi University
+    Licență (B.A.), dublă specializare în drept și finanțe, National Chengchi University
 
 guidanceTeamBios.ro.tseng-junwei.education[2]
-    Studii de schimb la Kobe University și Waseda University
+    Studentă în program de schimb la Kobe University și Waseda University
 
 guidanceTeamBios.ro.tseng-junwei.experience[0]
     Trend Law Office
@@ -766,10 +766,10 @@ guidanceTeamBios.ro.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.ro.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Fundația de asistență juridică, filiala Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.ro.chang-rongxuan.intro[0]
-    Anterior la Ministry of Education, Legal Affairs Division, cu accent pe cauze administrative și civile.
+    A lucrat anterior la Ministerul Educației, Direcția juridică (Ministry of Education, Legal Affairs Division), cu accent pe cauze administrative și civile.
 
 guidanceTeamBios.ro.chang-rongxuan.intro[1]
     Experiență în cauze privind universități, drepturile cadrelor didactice și contestații administrative.
@@ -778,13 +778,13 @@ guidanceTeamBios.ro.chang-rongxuan.education[0]
     Licență în drept (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.ro.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Ministerul Educației, Direcția juridică (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.ro.chang-rongxuan.experience[1]
     Avocat, Hovering International Law Firm
 
 guidanceTeamBios.ro.chang-fangyu.intro[0]
-    Paralegal cu activitate îndelungată ca paralegal senior în mai multe cabinete, responsabil de sprijin procedural, drept societar și investiții străine.
+    Asistentă juridică (paralegal), cu o activitate îndelungată ca asistentă juridică senior în mai multe cabinete, cu atribuții de sprijin procedural, drept societar și investiții străine.
 
 guidanceTeamBios.ro.chang-fangyu.intro[1]
     Sprijin în proceduri, la înființarea de societăți, la aprobările pentru investiții străine, la cererile de licență și în schimburile dintre Coreea și Taiwan.
@@ -793,28 +793,28 @@ guidanceTeamBios.ro.chang-fangyu.education[0]
     Licență în drept (LL.B.), Tunghai University
 
 guidanceTeamBios.ro.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Asistentă juridică senior (paralegal), Boyin Law Firm
 
 guidanceTeamBios.ro.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Asistentă juridică senior (paralegal), Muyang International Law Firm
 
 guidanceTeamBios.ro.son-jungmin.intro[0]
     Coordonează programările pentru consultanță și comunicarea pentru clienții din Coreea.
 
 guidanceTeamBios.ro.son-jungmin.intro[1]
-    Sprijină schimbul interregional prin sisteme de documente și fluxuri de lucru, pe fond de informatică.
+    Sprijină schimbul dintre echipe prin sisteme de documente și fluxuri de lucru, având formare în informatică.
 
 guidanceTeamBios.ro.son-jungmin.education[0]
     Licență (B.S.) în informatică, National Cheng Kung University
 
 guidanceTeamBios.ro.son-jungmin.experience[0]
-    Zona de operațiuni din Coreea, Hovering International Law Firm
+    Operațiunile pentru Coreea, Hovering International Law Firm
 
 guidanceTeamBios.ro.huang-shengping.intro[0]
-    A absolvit programele de licență și de master în contabilitate la National Chengchi University și conduce acum un cabinet de contabilitate.
+    A absolvit licența și masteratul în contabilitate la National Chengchi University și conduce acum un cabinet de contabilitate.
 
 guidanceTeamBios.ro.huang-shengping.intro[1]
-    Sprijină analiza integrată a riscurilor juridice, fiscale și financiare pentru clienții companii.
+    Sprijină analiza integrată a riscurilor juridice, fiscale și financiare pentru clienții persoane juridice.
 
 guidanceTeamBios.ro.huang-shengping.education[0]
     Master (M.A.) în contabilitate, National Chengchi University
@@ -853,7 +853,7 @@ guidancePracticeAreaNames.ro.Family and labor disputes
     Litigii de familie și de muncă
 
 guidanceOfficeCopy.ro.label
-    OFFICES
+    BIROURI
 
 guidanceOfficeCopy.ro.title
     Birouri
@@ -943,7 +943,7 @@ internationalInquiryCopy.ro.consultationNotice
     Consultanța se desfășoară în patru limbi: engleză, chineză (中文), japoneză și coreeană.
 
 internationalInquiryCopy.ro.methodConfirmationNotice
-    Dacă nu puteți folosi niciuna dintre cele patru limbi, alegeți «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale practicabilă de comunicare, dacă există; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.
+    Dacă nu puteți folosi niciuna dintre cele patru limbi, alegeți „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.
 
 internationalInquiryCopy.ro.preparationNotice
     Puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează așa cum l-ați scris și nu este tradus automat.
@@ -952,7 +952,7 @@ internationalInquiryCopy.ro.heading
     Trimiteți o solicitare
 
 internationalInquiryCopy.ro.intro
-    Descrieți pe scurt cazul dumneavoastră. O avocată sau un avocat examinează conținutul înainte de a se trece la pasul următor.
+    Descrieți pe scurt cazul dumneavoastră. Un avocat examinează conținutul înainte de a se trece la pasul următor.
 
 internationalInquiryCopy.ro.submitLabel
     Trimiteți solicitarea
@@ -1030,10 +1030,10 @@ internationalInquiryCopy.ro.languageOptions.ko
     Coreeană (한국어)
 
 internationalInquiryCopy.ro.languageOptions.needs-method-confirmation
-    Niciuna dintre cele patru limbi nu este utilizabilă — calea de comunicare trebuie confirmată
+    Nu pot folosi niciuna dintre cele patru limbi — calea de comunicare trebuie confirmată
 
 guidanceAnswers.ro.services.answer
-    Cabinetul vede șase grupe potrivit dreptului taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, muncă, cauze penale și proprietate intelectuală. Întinderea fiecărei cauze se confirmă separat, după ce o avocată sau un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
+    Cabinetul acoperă șase domenii de practică din dreptul taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, muncă, cauze penale și proprietate intelectuală. Întinderea fiecărui mandat se confirmă separat, după ce un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
 
 guidanceAnswers.ro.services.sources[0]
     /ro/faq
@@ -1042,7 +1042,7 @@ guidanceAnswers.ro.services.sources[1]
     /ro/contact
 
 guidanceAnswers.ro.about.answer
-    Hovering International Law Firm este un cabinet de avocatură taiwanez, înființat în 2016 de absolvenți ai National Taiwan University (國立臺灣大學), cu birouri în Taipei, Kaohsiung, Taichung și Pingtung. Din 2020 există și o secțiune de contabilitate; biroul din Taichung tratează cauze cu legătură cu Coreea și Japonia. Cabinetul nu promite un rezultat. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
+    Hovering International Law Firm este un cabinet de avocatură taiwanez, înființat în 2016 de absolvenți ai National Taiwan University (國立臺灣大學), cu birouri în Taipei, Kaohsiung, Taichung și Pingtung. Din 2020 există și Hovering Accounting Office; biroul din Taichung tratează cauze cu legătură cu Coreea și Japonia. Cabinetul nu promite un rezultat. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
 
 guidanceAnswers.ro.about.sources[0]
     /ro/lawyers
@@ -1051,7 +1051,7 @@ guidanceAnswers.ro.about.sources[1]
     /ro/services
 
 guidanceAnswers.ro.lawyers.answer
-    Această pagină arată profilurile avocatelor și avocaților Hovering, ale conducerii operative și ale revizuirii contabile asociate. Avocata Wei Tseng (曾雋崴) este autorizată în Taiwan și este avocata coordonatoare a cabinetului; lucrează cu clienți din Coreea, din Japonia și cu alți clienți internaționali. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
+    Această pagină arată profilurile avocaților Hovering, ale conducerii operaționale și ale cabinetului de contabilitate asociat. Avocata Wei Tseng (曾雋崴) este autorizată în Taiwan și este avocata coordonatoare a cabinetului; lucrează cu clienți din Coreea, din Japonia și cu alți clienți internaționali. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
 
 guidanceAnswers.ro.lawyers.sources[0]
     /ro/about
@@ -1060,7 +1060,7 @@ guidanceAnswers.ro.lawyers.sources[1]
     /ro/contact
 
 guidanceAnswers.ro.pricing.answer
-    Această pagină nu publică o listă de prețuri. Mai întâi se confirmă întinderea lucrării din rezumatul dumneavoastră, apoi cuantumul și modul de calcul se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Discuția cu o avocată sau un avocat poate fi cu plată; pe lângă onorariu pot apărea taxe de instanță sau ale autorităților. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
+    Această pagină nu publică o listă de prețuri. Mai întâi se confirmă obiectul mandatului din rezumatul dumneavoastră, apoi cuantumul onorariului și modul lui de calcul se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Discuția cu un avocat poate fi contra cost; pe lângă onorariu pot apărea taxe de instanță sau ale autorităților. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.
 
 guidanceAnswers.ro.pricing.sources[0]
     /ro/contact
@@ -1078,7 +1078,7 @@ guidanceAnswers.ro.contact.sources[1]
     /ro/pricing
 
 guidanceAnswers.ro.faq.answer
-    Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase grupe de lucrări, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este o opinie juridică și nici o programare confirmată, iar prin el însuși nu creează o relație între avocată sau avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.
+    Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este nici o opinie juridică și nicio programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.
 
 guidanceAnswers.ro.faq.sources[0]
     /ro/services
@@ -1087,10 +1087,10 @@ guidanceAnswers.ro.faq.sources[1]
     /ro/contact
 
 GUIDANCE_LLMS_NOTICES.ro.consultationNotice
-    Aceste informații sunt scrise în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană.
+    Aceste informații sunt scrise în limba română, dar consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană.
 
 GUIDANCE_LLMS_NOTICES.ro.discoveryNotice
-    Fișierul llms.txt este doar o hartă pentru găsirea paginilor publice; nu promite poziție în căutare, susținere, recomandare din partea inteligenței artificiale și nici vizibilitate.
+    Fișierul llms.txt este doar o hartă pentru găsirea paginilor publice; nu promite nici poziționare în căutare, nici o susținere, nici o recomandare, inclusiv din partea inteligenței artificiale, și nicio vizibilitate garantată.
 
 GUIDANCE_LLMS_NOTICES.ro.confidentialNotice
     Întrucât textul original se păstrează, în faza inițială nu scrieți ceea ce nu este încă necesar, de pildă numărul de pașaport, numărul actului de identitate sau datele unui cont.

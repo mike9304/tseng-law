@@ -1,4 +1,4 @@
-# fr guidance pack strings (path → text). Generated 2026-09-21
+# fr guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.fr.languageName
     Français
@@ -37,19 +37,19 @@ guidanceContent.fr.contactCta
     Envoyer une demande de consultation
 
 guidanceContent.fr.footerNotice
-    Cette page en français ne contient que des indications générales sur le travail du cabinet selon le droit de Taïwan. Elle n’est pas un avis juridique pour une affaire concrète, et l’envoi d’un message ne crée pas, à lui seul, une relation entre avocate ou avocat et client.
+    Cette page en français ne contient que des indications générales sur le travail du cabinet selon le droit de Taïwan. Elle n’est pas un avis juridique pour une affaire concrète, et l’envoi d’un message ne crée pas, à lui seul, une relation entre l’avocate ou l’avocat et le client.
 
 guidanceContent.fr.skipLink
     Passer la navigation et aller au contenu
 
 guidanceContent.fr.menuLabel
-    Sommaire des pages
+    Menu
 
 guidanceContent.fr.languageLabel
     Langue d’affichage
 
 guidanceContent.fr.mega.services.description
-    Le cabinet traite les groupes d’activité essentiels selon le droit de Taïwan.
+    Le cabinet traite les principaux domaines d’activité prévus par le droit de Taïwan.
 
 guidanceContent.fr.mega.services.viewAllLabel
     Tout afficher
@@ -61,7 +61,7 @@ guidanceContent.fr.mega.columns.viewAllLabel
     Tout afficher
 
 guidanceContent.fr.mega.lawyers.description
-    Présentation des avocates et avocats en activité et des voies de contact.
+    Présentation des avocates et avocats en exercice et des voies de contact.
 
 guidanceContent.fr.mega.lawyers.viewAllLabel
     Tout afficher
@@ -100,7 +100,7 @@ guidanceContent.fr.home.servicesDetailLabel
     Voir les détails
 
 guidanceContent.fr.home.servicesAssistanceBefore
-    Si le groupe auquel appartient votre affaire n’est pas clair, la page 
+    Si le domaine auquel appartient votre affaire n’est pas clair, la page 
 
 guidanceContent.fr.home.servicesAssistanceLinkLabel
     Contact
@@ -133,7 +133,7 @@ guidanceContent.fr.home.videoPlayLabel
     Lire la vidéo
 
 guidanceContent.fr.home.videoReplayLabel
-    Relire la vidéo
+    Revoir la vidéo
 
 guidanceContent.fr.pages.home.eyebrow
     INDICATIONS
@@ -166,10 +166,10 @@ guidanceContent.fr.pages.home.sections[1].paragraphs[1]
     Nous ne promettons ni service d’interprétation, ni délai de réponse, ni rendez-vous par cette page. Si vous ne pouvez utiliser aucune des quatre langues, la page « Contact » explique comment nous examinons une manière de communiquer.
 
 guidanceContent.fr.pages.home.sections[2].heading
-    Groupes d’activité
+    Domaines d’activité
 
 guidanceContent.fr.pages.home.sections[2].paragraphs[0]
-    Le champ d’activité couvre les six groupes suivants. La page « Domaines d’activité » décrit chaque groupe plus en détail et indique ce qui n’est pas promis.
+    Le champ d’activité couvre les six domaines suivants. La page « Domaines d’activité » décrit chaque domaine plus en détail et indique ce qui n’est pas promis.
 
 guidanceContent.fr.pages.home.sections[2].items[0]
     Investissement et constitution de sociétés à Taïwan
@@ -205,25 +205,25 @@ guidanceContent.fr.pages.services.title
     Affaires que nous traitons
 
 guidanceContent.fr.pages.services.description
-    Six groupes d’activité du cabinet à Taïwan et les limites qu’il convient de connaître d’abord.
+    Six domaines d’activité du cabinet à Taïwan et les limites qu’il convient de connaître d’abord.
 
 guidanceContent.fr.pages.services.intro
-    Voici les groupes que nous traitons réellement et les questions souvent posées au début. Cette présentation vous aide à juger si votre affaire entre dans notre champ ; elle est générale et n’est pas l’analyse juridique d’un dossier particulier.
+    Voici les domaines que nous traitons réellement et les questions souvent posées au début. Cette présentation vous aide à juger si votre affaire entre dans notre champ ; elle est générale et n’est pas l’analyse juridique d’un dossier particulier.
 
 guidanceContent.fr.pages.services.sections[0].heading
     Investissement et constitution de sociétés à Taïwan
 
 guidanceContent.fr.pages.services.sections[0].paragraphs[0]
-    Nous accompagnons des entreprises et des investisseurs étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous appuyons aussi la comptabilité et la fiscalité nées de la constitution et de l’exploitation à Taïwan.
+    Nous accompagnons des entreprises et des investisseurs étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous assurons aussi la comptabilité et la fiscalité liées à la constitution et à l’exploitation à Taïwan.
 
 guidanceContent.fr.pages.services.sections[0].paragraphs[1]
-    L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société ne produit pas, à elle seule, un titre de séjour (居留) ni un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.
+    L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société n’ouvre pas, à elle seule, droit à un titre de séjour (居留) ni à un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.
 
 guidanceContent.fr.pages.services.sections[1].heading
     Affaires civiles et dommages-intérêts
 
 guidanceContent.fr.pages.services.sections[1].paragraphs[0]
-    Ce groupe couvre les litiges contractuels, les dommages-intérêts nés d’un acte illicite et les litiges de consommation. Le travail commence en général par une chronologie, l’examen des pièces et des preuves existantes, puis seulement les étapes suivantes.
+    Ce domaine couvre les litiges contractuels, les dommages-intérêts nés d’un acte illicite et les litiges de consommation. Le travail commence en général par une chronologie, l’examen des pièces et des preuves existantes, puis seulement les étapes suivantes.
 
 guidanceContent.fr.pages.services.sections[1].paragraphs[1]
     Les délais, y compris les délais légaux pour agir, et le caractère complet des preuves marquent le cours de l’affaire. Indiquez donc dès que possible les dates que vous connaissez. Conservez contrats, messages, justificatifs de paiement ou photos des lieux et mentionnez-les dans le premier message.
@@ -232,7 +232,7 @@ guidanceContent.fr.pages.services.sections[2].heading
     Mariage, famille et successions
 
 guidanceContent.fr.pages.services.sections[2].paragraphs[0]
-    Nous traitons le divorce (離婚), le partage des biens, l’exercice et la charge des droits et devoirs à l’égard des enfants mineurs (未成年子女權利義務之行使或負擔), le droit de visite (會面交往) et les successions (繼承), y compris lorsque les parties ou les biens se trouvent dans des États différents. Les affaires familiales transfrontalières exigent souvent un examen supplémentaire des pièces du registre des ménages (戶籍), de la forme des actes et de leur force probante à Taïwan.
+    Nous traitons le divorce (離婚), le partage des biens, l’exercice de l’autorité parentale sur les enfants mineurs (未成年子女權利義務之行使或負擔), le droit de visite (會面交往) et les successions (繼承), y compris lorsque les parties ou les biens se trouvent dans des États différents. Les affaires familiales transfrontalières exigent souvent un examen supplémentaire des pièces du registre des ménages (戶籍), de la forme des actes et de leur force probante à Taïwan.
 
 guidanceContent.fr.pages.services.sections[2].paragraphs[1]
     Parce que les affaires de famille s’accompagnent souvent de délais et de procédures parallèles, le premier résumé devrait indiquer le lien entre les parties, le lieu de résidence actuel et les procédures déjà en cours.
@@ -241,7 +241,7 @@ guidanceContent.fr.pages.services.sections[3].heading
     Litiges du travail
 
 guidanceContent.fr.pages.services.sections[3].paragraphs[0]
-    Ce groupe couvre la fin du contrat de travail, l’indemnité selon le droit de Taïwan (資遣費 ; à ne pas identifier avec des institutions d’autres États), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous séparons le motif de la fin des questions de préavis, de paiement et de délais.
+    Ce domaine couvre la fin du contrat de travail, l’indemnité de licenciement prévue par le droit de Taïwan (資遣費 ; à ne pas la confondre avec l’indemnité de licenciement d’un autre droit, ni avec les règles de protection contre le licenciement d’un autre droit), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous distinguons le motif de la rupture des questions de préavis, de paiement et de délais.
 
 guidanceContent.fr.pages.services.sections[3].paragraphs[1]
     Le contrat de travail, le règlement intérieur (工作規則), les bulletins de paie et les échanges écrits entre les parties sont le plus souvent les pièces décisives. Si vous les avez encore, mentionnez-le dans le résumé.
@@ -253,7 +253,7 @@ guidanceContent.fr.pages.services.sections[4].paragraphs[0]
     Nous intervenons au stade de l’enquête et devant le tribunal, pour la personne mise en cause ou accusée comme pour la victime, et nous évaluons le risque pénal de l’activité d’entreprise.
 
 guidanceContent.fr.pages.services.sections[4].paragraphs[1]
-    Les affaires pénales ont souvent des délais courts et des étapes déjà fixées. Si vous avez déjà reçu un écrit de l’autorité de poursuite ou du tribunal, indiquez tôt la date de cet écrit afin que le contenu soit examiné dans le bon ordre.
+    Les affaires pénales ont souvent des délais courts et des étapes déjà fixées. Si vous avez déjà reçu un écrit de l’autorité de poursuite ou du tribunal, indiquez sans tarder la date de cet écrit afin que le contenu soit examiné dans le bon ordre.
 
 guidanceContent.fr.pages.services.sections[5].heading
     Propriété intellectuelle
@@ -262,13 +262,13 @@ guidanceContent.fr.pages.services.sections[5].paragraphs[0]
     Nous aidons à l’enregistrement des marques (商標) et des brevets (專利), au droit d’auteur et aux litiges sur ces droits à Taïwan.
 
 guidanceContent.fr.pages.services.sections[5].paragraphs[1]
-    Dans ce groupe, l’ordre des étapes est décisif : l’étendue de la protection, le moment du dépôt et l’usage effectif influencent le choix. Déposer une demande ne signifie pas, à lui seul, qu’elle sera accordée.
+    Dans ce domaine, l’ordre des étapes est décisif : l’étendue de la protection, le moment du dépôt et l’usage effectif influencent le choix. Déposer une demande ne signifie pas, à lui seul, qu’elle sera accordée.
 
 guidanceContent.fr.pages.services.sections[6].heading
-    Étendue et sa confirmation
+    L’étendue du travail et sa confirmation
 
 guidanceContent.fr.pages.services.sections[6].paragraphs[0]
-    Le cabinet travaille selon le droit de Taïwan et traite les affaires des groupes ci-dessus. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné votre message.
+    Le cabinet travaille selon le droit de Taïwan et traite les affaires des domaines ci-dessus. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné votre message.
 
 guidanceContent.fr.pages.services.sections[6].paragraphs[1]
     Le statut de séjour, le permis de travail et des questions comparables sont appréciés à partir des pièces et de la situation de chaque personne, non à partir de la nationalité. Si une partie de votre affaire touche ces questions, mentionnez-le lors du contact. Cette page ne promet ni un résultat ni un délai de réponse.
@@ -292,7 +292,7 @@ guidanceContent.fr.pages.about.sections[0].paragraphs[0]
     Hovering International Law Firm (昊鼎國際法律事務所) a été fondé en 2016 par des avocates et avocats formés à la National Taiwan University (國立臺灣大學). Le nom chinois 昊鼎 unit le caractère 昊 (« ciel vaste ») et le caractère 鼎 (« base solide ») et décrit l’orientation du cabinet depuis sa création.
 
 guidanceContent.fr.pages.about.sections[0].paragraphs[1]
-    Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la gouvernance d’entreprise et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour le besoin local.
+    Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la gouvernance d’entreprise et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour répondre aux besoins de la région.
 
 guidanceContent.fr.pages.about.sections[0].paragraphs[2]
     Outre le travail d’avocat, Hovering Accounting Office existe depuis 2020 et propose comptabilité et planification fiscale aux entrepreneurs et aux particuliers fortunés.
@@ -301,19 +301,19 @@ guidanceContent.fr.pages.about.sections[1].heading
     Travail avec des parties étrangères
 
 guidanceContent.fr.pages.about.sections[1].paragraphs[0]
-    Le travail transfrontalier couvre la constitution de sociétés, les visas, les dépôts de marques et de brevets, l’examen des risques juridiques et le conseil fiscal des entreprises. Le bureau de Taichung traite en particulier la construction, la propriété intellectuelle et les affaires liées à la Corée et au Japon. L’avocate Wei Tseng (曾雋崴) accompagne des clients de Corée, du Japon et d’autres clients internationaux dans les groupes indiqués.
+    Le travail transfrontalier couvre la constitution de sociétés, les visas, les dépôts de marques et de brevets, l’examen des risques juridiques et le conseil fiscal des entreprises. Le bureau de Taichung traite en particulier la construction, la propriété intellectuelle et les affaires liées à la Corée et au Japon. L’avocate Wei Tseng (曾雋崴) accompagne des clients de Corée, du Japon et d’autres clients internationaux dans les domaines indiqués.
 
 guidanceContent.fr.pages.about.sections[1].paragraphs[1]
-    La possibilité de prendre une affaire dépend du contenu et de la langue de communication. Si votre affaire entre dans les groupes indiqués et peut être discutée dans l’une des quatre langues de consultation, vous pouvez envoyer un résumé pour examen.
+    La possibilité de prendre une affaire dépend du contenu et de la langue de communication. Si votre affaire entre dans les domaines indiqués et peut être discutée dans l’une des quatre langues de consultation, vous pouvez envoyer un résumé pour examen.
 
 guidanceContent.fr.pages.about.sections[2].heading
     Lorsque vous nous contactez
 
 guidanceContent.fr.pages.about.sections[2].paragraphs[0]
-    Après réception de votre résumé, une avocate ou un avocat examine le contenu, puis parle de l’étendue possible, des pièces encore nécessaires et des étapes suivantes. Pour des questions fiscales ou comptables, le cabinet peut travailler avec le service de comptabilité dans un même flux.
+    Après réception de votre résumé, une avocate ou un avocat examine le contenu, puis précise l’étendue possible, les pièces encore nécessaires et les étapes suivantes. Pour des questions fiscales ou comptables, le cabinet peut travailler en coordination avec le service de comptabilité.
 
 guidanceContent.fr.pages.about.sections[2].paragraphs[1]
-    Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse concrète pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.
+    Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse sur laquelle vous puissiez vous fonder pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.
 
 guidanceContent.fr.pages.lawyers.eyebrow
     AVOCATES ET AVOCATS
@@ -322,7 +322,7 @@ guidanceContent.fr.pages.lawyers.title
     Équipe internationale de Hovering
 
 guidanceContent.fr.pages.lawyers.description
-    Profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering.
+    Profils des avocates et avocats, de la direction des opérations et de l’expert-comptable associé de Hovering.
 
 guidanceContent.fr.pages.lawyers.intro
     
@@ -361,7 +361,7 @@ guidanceContent.fr.pages.pricing.sections[2].heading
     La consultation peut être un service payant
 
 guidanceContent.fr.pages.pricing.sections[2].paragraphs[0]
-    La consultation avec une avocate ou un avocat peut être une prestation payante. Cette page n’affirme pas que le premier entretien est offert, et aucune partie ne doit se lire en ce sens.
+    La consultation avec une avocate ou un avocat peut être une prestation payante. Cette page n’affirme pas que le premier entretien est offert, et rien dans cette page ne doit être compris en ce sens.
 
 guidanceContent.fr.pages.pricing.sections[2].paragraphs[1]
     Si la consultation est payante, le montant et le mode de paiement sont communiqués avant qu’elle ait lieu.
@@ -370,10 +370,10 @@ guidanceContent.fr.pages.pricing.sections[3].heading
     Pourquoi cette page ne publie pas de tarifs
 
 guidanceContent.fr.pages.pricing.sections[3].paragraphs[0]
-    Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un chiffre fixé à l’avance ne montrerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.
+    Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un montant annoncé d’avance ne donnerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.
 
 guidanceContent.fr.pages.pricing.sections[3].paragraphs[1]
-    Outre les honoraires d’avocat, des frais de tribunal, d’autorité ou de tiers peuvent naître. Ils sont distincts des honoraires et dépendent de la procédure suivie.
+    Outre les honoraires d’avocat, des frais de tribunal, d’autorités ou de tiers peuvent s’y ajouter. Ils sont distincts des honoraires et dépendent de la procédure suivie.
 
 guidanceContent.fr.pages.contact.eyebrow
     CONTACT
@@ -385,7 +385,7 @@ guidanceContent.fr.pages.contact.description
     Langue de la page, langues de consultation, la démarche si vous ne pouvez utiliser aucune des quatre langues, et ce que cette page ne promet pas.
 
 guidanceContent.fr.pages.contact.intro
-    Avant de nous écrire, distinguez s’il vous plaît les trois points suivants. Ils sont souvent mêlés, mais ils ne signifient pas la même chose.
+    Avant de nous écrire, veuillez distinguer les trois points suivants. Ils sont souvent mêlés, mais ils ne signifient pas la même chose.
 
 guidanceContent.fr.pages.contact.sections[0].heading
     Trois choses à tenir séparées
@@ -397,7 +397,7 @@ guidanceContent.fr.pages.contact.sections[0].items[0]
     Langue de la page : ces indications sont rédigées en français.
 
 guidanceContent.fr.pages.contact.sections[0].items[1]
-    Langue de consultation : la consultation a lieu en anglais, en chinois (中文), en japonais et en coréen.
+    Langue de consultation : la consultation a lieu seulement en anglais, en chinois (中文), en japonais et en coréen.
 
 guidanceContent.fr.pages.contact.sections[0].items[2]
     Votre langue d’écriture : vous pouvez rédiger le résumé dans votre propre langue ; le texte original est conservé tel quel.
@@ -427,7 +427,7 @@ guidanceContent.fr.pages.contact.sections[3].paragraphs[0]
     Nous ne promettons pas de délai de réponse, nous ne confirmons pas de rendez-vous par cette page, nous ne promettons pas une avocate ou un avocat en particulier et nous ne mettons pas en place un service d’interprétation. La traduction écrite est autre chose : votre message n’est pas traduit automatiquement.
 
 guidanceContent.fr.pages.contact.sections[3].paragraphs[1]
-    Lorsque vous envoyez une demande, le contenu est conservé et attend un examen. Si, après un certain temps, vous ne recevez pas de réponse, vous pouvez écrire à nouveau à l’adresse de courrier indiquée sur la page de contact.
+    Lorsque vous envoyez une demande, le contenu est conservé et attend un examen. Si, après un certain temps, vous ne recevez pas de réponse, vous pouvez écrire à nouveau à l’adresse e-mail indiquée sur la page de contact.
 
 guidanceContent.fr.pages.faq.eyebrow
     QUESTIONS FRÉQUENTES
@@ -445,13 +445,13 @@ guidanceContent.fr.pages.faq.sections[0].heading
     Comment utiliser cette partie
 
 guidanceContent.fr.pages.faq.sections[0].paragraphs[0]
-    Si vous ne trouvez pas de réponse pour votre situation, c’est souvent que la réponse dépend de faits particuliers. Écrivez alors ces faits dans le résumé, au lieu de les déduire vous-même de cette page.
+    Si vous ne trouvez pas de réponse pour votre situation, c’est souvent que la réponse dépend de faits particuliers. Écrivez alors ces faits dans le résumé, au lieu d’en déduire vous-même la réponse à partir de cette page.
 
 guidanceContent.fr.pages.faq.faqs[0].question
     Quelles affaires le cabinet traite-t-il ?
 
 guidanceContent.fr.pages.faq.faqs[0].answer
-    Nous traitons six groupes : investissement et constitution de sociétés à Taïwan, affaires civiles et dommages-intérêts, mariage, famille et successions, litiges du travail, affaires pénales et propriété intellectuelle. L’acceptation d’une affaire se décide après examen du contenu.
+    Nous traitons six domaines : investissement et constitution de sociétés à Taïwan, affaires civiles et dommages-intérêts, mariage, famille et successions, litiges du travail, affaires pénales et propriété intellectuelle. L’acceptation d’une affaire se décide après examen du contenu.
 
 guidanceContent.fr.pages.faq.faqs[1].question
     Que dois-je préparer avant de contacter le cabinet ?
@@ -481,7 +481,7 @@ guidanceContent.fr.pages.faq.faqs[5].question
     La consultation a-t-elle déjà eu lieu une fois la demande envoyée ?
 
 guidanceContent.fr.pages.faq.faqs[5].answer
-    Non. Une demande envoyée attend l’examen d’une avocate ou d’un avocat. Ce n’est pas un avis juridique, ce n’est pas un rendez-vous confirmé, et l’envoi ne crée pas, à lui seul, une relation entre avocate ou avocat et client.
+    Non. Une demande envoyée attend l’examen d’une avocate ou d’un avocat. Ce n’est pas un avis juridique, ce n’est pas un rendez-vous confirmé, et l’envoi ne crée pas, à lui seul, une relation entre l’avocate ou l’avocat et le client.
 
 guidanceContent.fr.pages.faq.faqs[6].question
     Comment les honoraires sont-ils calculés ?
@@ -505,7 +505,7 @@ guidanceContent.fr.pages.privacy.description
     Ce que le formulaire de cette partie en français recueille, comment le texte original est traité et comment nous joindre au sujet de vos données.
 
 guidanceContent.fr.pages.privacy.intro
-    Cette partie concerne seulement le formulaire de contact de ces pages d’indications. Elle décrit le traitement des données, non une assurance technique.
+    Cette partie concerne seulement le formulaire de contact de ces pages d’indications. Elle décrit le traitement des données, et non un engagement sur la sécurité technique.
 
 guidanceContent.fr.pages.privacy.sections[0].heading
     Données recueillies
@@ -517,7 +517,7 @@ guidanceContent.fr.pages.privacy.sections[0].items[0]
     Le nom que vous indiquez
 
 guidanceContent.fr.pages.privacy.sections[0].items[1]
-    L’adresse de courrier pour la réponse
+    L’adresse e-mail pour la réponse
 
 guidanceContent.fr.pages.privacy.sections[0].items[2]
     La langue d’affichage de la page au moment de l’envoi
@@ -550,10 +550,10 @@ guidanceContent.fr.pages.privacy.sections[2].heading
     Lieu de conservation et accès
 
 guidanceContent.fr.pages.privacy.sections[2].paragraphs[0]
-    Le contenu de votre envoi est conservé dans un lieu qui n’est pas d’accès public. Seules les personnes autorisées du cabinet peuvent y accéder pour traiter la demande.
+    Le contenu de votre envoi est conservé dans un lieu non accessible au public. Seules les personnes autorisées du cabinet peuvent y accéder pour traiter la demande.
 
 guidanceContent.fr.pages.privacy.sections[2].paragraphs[1]
-    Cette page n’offre pas une assurance absolue de sécurité. Aucune voie de transmission ni aucun lieu de conservation n’est entièrement sûr ; les pièces sensibles ne devraient donc être envoyées que selon les indications particulières de l’avocate ou de l’avocat.
+    Cette page ne promet pas une sécurité absolue. Aucune voie de transmission ni aucun lieu de conservation n’est entièrement sûr ; les pièces sensibles ne devraient donc être envoyées que selon les indications particulières de l’avocate ou de l’avocat.
 
 guidanceContent.fr.pages.privacy.sections[3].heading
     Finalité de l’usage
@@ -577,7 +577,7 @@ guidanceContent.fr.pages.privacy.sections[5].heading
     Vos droits et la voie de contact
 
 guidanceContent.fr.pages.privacy.sections[5].paragraphs[0]
-    Vous pouvez demander l’accès, la rectification ou l’effacement de vos données, ou retirer le consentement, par l’adresse de courrier indiquée sur la page de contact. S’il existe une obligation de conservation légale ou liée à une procédure, nous expliquons la limite.
+    Vous pouvez demander l’accès, la rectification ou l’effacement de vos données, ou retirer le consentement, en écrivant à l’adresse e-mail indiquée sur la page de contact. S’il existe une obligation de conservation légale ou liée à une procédure, nous expliquons la limite.
 
 guidanceContent.fr.pages.privacy.sections[5].paragraphs[1]
     Cette page n’indique pas de durée fixe de conservation, parce que la durée réelle dépend de la poursuite de l’affaire et des obligations liées. Si vous souhaitez un effacement plus tôt, indiquez-le lors du contact.
@@ -586,10 +586,10 @@ guidanceContent.fr.pages.privacy.sections[6].heading
     Lieu de conservation et prestataires
 
 guidanceContent.fr.pages.privacy.sections[6].paragraphs[0]
-    Ce site est hébergé chez Vercel, et votre envoi est conservé dans un stockage d’objets non public de ce service. Les courriers sont envoyés par le service de courrier utilisé par le cabinet.
+    Ce site est hébergé chez Vercel, et votre envoi est conservé dans un espace de stockage non public de ce service. Les e-mails sont envoyés par le service de messagerie utilisé par le cabinet.
 
 guidanceContent.fr.pages.privacy.sections[6].paragraphs[1]
-    Les serveurs de certains prestataires peuvent se trouver hors de Taïwan, de sorte que vos données peuvent y être conservées et traitées. Une fois la finalité de conservation atteinte, les données sont effacées sans délai ; les données qui doivent être conservées selon les règles applicables le restent pendant cette durée. Les demandes relatives aux données personnelles sont reçues à wei@hoveringlaw.com.tw.
+    Les serveurs de certains prestataires peuvent se trouver hors de Taïwan, de sorte que vos données peuvent y être conservées et traitées. Une fois la finalité de conservation atteinte, les données sont effacées sans délai ; les données qui doivent être conservées selon les règles applicables le restent pendant cette durée. Pour les questions relatives aux données personnelles, écrivez à wei@hoveringlaw.com.tw.
 
 guidanceContent.fr.pages.disclaimer.eyebrow
     AVERTISSEMENT
@@ -598,7 +598,7 @@ guidanceContent.fr.pages.disclaimer.title
     Étendue et limites des indications de cette page
 
 guidanceContent.fr.pages.disclaimer.description
-    Le caractère général des indications, le cadre juridique et les conditions d’une relation entre avocate ou avocat et client.
+    Le caractère général des indications, le cadre juridique et les conditions d’une relation entre l’avocate ou l’avocat et le client.
 
 guidanceContent.fr.pages.disclaimer.intro
     Cette partie précise ce que ces pages d’indications en français peuvent et ne peuvent pas faire pour vous.
@@ -619,13 +619,13 @@ guidanceContent.fr.pages.disclaimer.sections[1].paragraphs[0]
     Le cabinet exerce selon le droit de Taïwan, et cette page ne parle que du travail dans ce cadre.
 
 guidanceContent.fr.pages.disclaimer.sections[1].paragraphs[1]
-    Le contenu n’est pas un conseil selon le droit d’un autre ordre juridique que Taïwan, y compris le droit de votre lieu de résidence. Si une partie de votre affaire relève d’un autre ordre juridique, nous clarifions avec vous quelle personne qualifiée est nécessaire pour cette partie.
+    Le contenu n’est pas un conseil selon le droit d’un ordre juridique autre que celui de Taïwan, y compris le droit de votre lieu de résidence. Si une partie de votre affaire relève d’un autre ordre juridique, nous clarifions avec vous quelle personne qualifiée est nécessaire pour cette partie.
 
 guidanceContent.fr.pages.disclaimer.sections[2].heading
-    Une relation entre avocate ou avocat et client ne naît pas d’elle-même
+    Une relation entre l’avocate ou l’avocat et le client ne naît pas d’elle-même
 
 guidanceContent.fr.pages.disclaimer.sections[2].paragraphs[0]
-    Lire cette page, envoyer un formulaire ou un courrier ne crée pas, à lui seul, une relation entre avocate ou avocat et client.
+    Lire cette page, envoyer un formulaire ou un e-mail ne crée pas, à lui seul, une relation entre l’avocate ou l’avocat et le client.
 
 guidanceContent.fr.pages.disclaimer.sections[2].paragraphs[1]
     Cette relation naît seulement après examen de l’affaire et confirmation, par les deux parties, de la prise en charge du travail.
@@ -634,7 +634,7 @@ guidanceContent.fr.pages.disclaimer.sections[3].heading
     Aucune promesse de résultat
 
 guidanceContent.fr.pages.disclaimer.sections[3].paragraphs[0]
-    Aucune partie de cette page n’est une promesse sur le résultat d’une affaire, sur l’octroi d’une demande ou sur le statut de séjour et de travail.
+    Aucune partie de cette page n’est une promesse sur le résultat d’une affaire, sur l’accueil d’une demande, ou sur le statut de séjour et de travail.
 
 guidanceContent.fr.pages.disclaimer.sections[3].paragraphs[1]
     Les liens externes sont fournis pour s’orienter ; nous n’assurons ni l’exactitude ni l’actualité des contenus de tiers.
@@ -670,22 +670,22 @@ guidanceContent.fr.pages.columns.sections[1].paragraphs[1]
     Cette page ne résume pas le contenu des articles et n’assure pas qu’un thème existe dans les quatre langues. Chaque liste ne contient que les textes publiés dans cette langue.
 
 guidanceContent.fr.pages.columns.sections[2].heading
-    Jusqu’où un article peut servir d’orientation
+    Jusqu’où un article peut servir d’indication
 
 guidanceContent.fr.pages.columns.sections[2].paragraphs[0]
     Les articles sont des indications générales au moment de la publication. Les règles et leur application peuvent changer, et un article ne reprend pas toutes les circonstances de votre affaire.
 
 guidanceContent.fr.pages.columns.sections[2].paragraphs[1]
-    Ne fondez donc aucune action dans une affaire réelle sur un article seul. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.
+    Ne prenez donc aucune décision dans une affaire réelle sur le seul fondement d’un article. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page ne tient pas lieu de consultation.
 
 guidanceTeamCopy.fr.label
-    OUR TEAM
+    NOTRE ÉQUIPE
 
 guidanceTeamCopy.fr.title
     Équipe internationale de Hovering
 
 guidanceTeamCopy.fr.description
-    Profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering.
+    Profils des avocates et avocats, de la direction des opérations et de l’expert-comptable associé de Hovering.
 
 guidanceTeamCopy.fr.representativeTitle
     Avocate dirigeante
@@ -694,7 +694,7 @@ guidanceTeamCopy.fr.teamTitle
     Avocates, avocats et collaborateurs
 
 guidanceTeamCopy.fr.partnerTitle
-    Expertise-comptable associée
+    Expert-comptable associé
 
 guidanceTeamCopy.fr.introLabel
     Présentation
@@ -712,10 +712,10 @@ guidanceTeamCopy.fr.workingLanguagesLabel
     Langues de travail
 
 guidanceTeamCopy.fr.fullProfileLabel
-    Profil complet (English)
+    Profil complet (en anglais)
 
 guidanceTeamCopy.fr.keyFactsHeading
-    Avocate Wei Tseng — Indications essentielles
+    Avocate Wei Tseng — L’essentiel
 
 guidanceTeamCopy.fr.qualificationLabel
     Qualification et cabinet
@@ -730,25 +730,25 @@ guidanceTeamCopy.fr.consultationLanguagesLabel
     Langues de consultation
 
 guidanceTeamCopy.fr.roles.tseng-junwei
-    Avocate dirigeante à Taïwan (Managing Attorney)
+    Avocate dirigeante à Taïwan
 
 guidanceTeamCopy.fr.roles.chang-rongxuan
-    Avocat à Taïwan (Taiwan Attorney)
+    Avocat à Taïwan
 
 guidanceTeamCopy.fr.roles.chang-fangyu
-    Paralegal
+    Collaboratrice juridique
 
 guidanceTeamCopy.fr.roles.son-jungmin
-    Direction des opérations Corée (Korea Operations Manager)
+    Direction des opérations de Corée
 
 guidanceTeamCopy.fr.roles.huang-shengping
-    Expert-comptable associé (Partner CPA)
+    Expert-comptable associé
 
 guidanceTeamBios.fr.tseng-junwei.intro[0]
     Le cabinet traite des affaires d’entreprises et de particuliers à Taïwan en anglais, en japonais, en coréen et en chinois.
 
 guidanceTeamBios.fr.tseng-junwei.intro[1]
-    Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport et a obtenu un jugement de première instance de TWD 1.57M.
+    Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport. Un jugement de première instance a fixé le montant à 1,57 million de dollars taïwanais (TWD 1.57M). Ce n’est pas un résultat promis.
 
 guidanceTeamBios.fr.tseng-junwei.education[0]
     Master (M.S.), Institute of Finance, National Taiwan University
@@ -766,10 +766,10 @@ guidanceTeamBios.fr.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.fr.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Fondation d’aide juridique, antenne de Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.fr.chang-rongxuan.intro[0]
-    Auparavant au Ministry of Education, Legal Affairs Division, avec un accent sur les affaires administratives et civiles.
+    Auparavant au ministère de l’Éducation, division des affaires juridiques (Ministry of Education, Legal Affairs Division), principalement en matière administrative et civile.
 
 guidanceTeamBios.fr.chang-rongxuan.intro[1]
     Expérience des affaires d’universités, des droits du personnel enseignant et des recours administratifs.
@@ -778,13 +778,13 @@ guidanceTeamBios.fr.chang-rongxuan.education[0]
     Licence en droit (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.fr.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Ministère de l’Éducation, division des affaires juridiques (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.fr.chang-rongxuan.experience[1]
     Avocat, Hovering International Law Firm
 
 guidanceTeamBios.fr.chang-fangyu.intro[0]
-    Paralegal comptant de longues années d’expérience comme paralegal senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.
+    Collaboratrice juridique, forte d’une longue expérience comme collaboratrice senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.
 
 guidanceTeamBios.fr.chang-fangyu.intro[1]
     Appui aux procédures, à la constitution de sociétés, aux autorisations d’investissement étranger, aux demandes de licence et aux échanges entre la Corée et Taïwan.
@@ -793,10 +793,10 @@ guidanceTeamBios.fr.chang-fangyu.education[0]
     Licence en droit (LL.B.), Tunghai University
 
 guidanceTeamBios.fr.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Collaboratrice juridique senior, Boyin Law Firm
 
 guidanceTeamBios.fr.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Collaboratrice juridique senior, Muyang International Law Firm
 
 guidanceTeamBios.fr.son-jungmin.intro[0]
     Coordonne les rendez-vous de consultation et la communication pour les clients de Corée.
@@ -808,13 +808,13 @@ guidanceTeamBios.fr.son-jungmin.education[0]
     Licence (B.S.) informatique, National Cheng Kung University
 
 guidanceTeamBios.fr.son-jungmin.experience[0]
-    Pôle opérations Corée, Hovering International Law Firm
+    Pôle opérations de Corée, Hovering International Law Firm
 
 guidanceTeamBios.fr.huang-shengping.intro[0]
-    A achevé les programmes de licence et de master en comptabilité à National Chengchi University et dirige actuellement un cabinet d’expertise comptable.
+    Titulaire d’une licence et d’un master en comptabilité de la National Chengchi University, il dirige actuellement un cabinet d’expertise comptable.
 
 guidanceTeamBios.fr.huang-shengping.intro[1]
-    Appuie l’analyse intégrée des risques juridiques, fiscaux et financiers pour les clients d’entreprise.
+    Accompagne l’analyse intégrée des risques juridiques, fiscaux et financiers pour les clients d’entreprise.
 
 guidanceTeamBios.fr.huang-shengping.education[0]
     Master (M.A.) comptabilité, National Chengchi University
@@ -853,7 +853,7 @@ guidancePracticeAreaNames.fr.Family and labor disputes
     Litiges familiaux et du travail
 
 guidanceOfficeCopy.fr.label
-    OFFICES
+    BUREAUX
 
 guidanceOfficeCopy.fr.title
     Bureaux
@@ -868,7 +868,7 @@ guidanceOfficeCopy.fr.mapPreviewLabel
     Aperçu de la carte
 
 guidanceOfficeCopy.fr.koreaOfficeTitle
-    Bureau Corée
+    Bureau de Corée
 
 guidanceOfficeCopy.fr.koreaAddressCardLabel
     Adresse du bureau en Corée
@@ -892,7 +892,7 @@ guidanceOfficeCopy.fr.photoAlts[0]
     Salle d’accueil du bureau de Taipei, Hovering International Law Firm
 
 guidanceOfficeCopy.fr.photoAlts[1]
-    Cabinet d’avocat au bureau de Taipei, Hovering International Law Firm
+    Bureau de l’avocate au bureau de Taipei, Hovering International Law Firm
 
 guidanceOfficeCopy.fr.photoAlts[2]
     Salle de réunion du bureau de Taipei, Hovering International Law Firm
@@ -928,19 +928,19 @@ guidanceFooterCopy.fr.sitemapLabel
     Plan du site
 
 guidanceFooterCopy.fr.copyEmailLabel
-    Copier l’adresse de courrier
+    Copier l’adresse e-mail
 
 guidanceFooterCopy.fr.emailCopiedMessage
-    L’adresse de courrier a été copiée.
+    L’adresse e-mail a été copiée.
 
 guidanceFooterCopy.fr.officialConsultationEmailLabel
-    Courrier officiel pour la consultation
+    Adresse e-mail officielle pour la consultation
 
 internationalInquiryCopy.fr.guidanceNotice
-    Cette page est rédigée en français comme orientation générale, non comme avis juridique pour votre propre affaire.
+    Cette page est rédigée en français comme information générale, non comme avis juridique pour votre propre affaire.
 
 internationalInquiryCopy.fr.consultationNotice
-    La consultation a lieu en quatre langues : anglais, chinois (中文), japonais et coréen.
+    La consultation a lieu seulement dans quatre langues : anglais, chinois (中文), japonais et coréen.
 
 internationalInquiryCopy.fr.methodConfirmationNotice
     Si vous ne pouvez utiliser aucune des quatre langues, choisissez « La manière de communiquer doit être confirmée ». Nous répondons pour examiner une manière possible de communiquer lorsqu’il en existe une ; une prestation dans une autre langue n’est pas assurée et aucun délai de réponse n’est promis.
@@ -964,13 +964,13 @@ internationalInquiryCopy.fr.successMessage
     Nous avons reçu votre demande ; elle attend un examen. Cela ne signifie pas que la consultation a eu lieu ni qu’un rendez-vous est confirmé.
 
 internationalInquiryCopy.fr.savedNotificationPendingMessage
-    Votre demande est conservée, mais l’avis au cabinet n’est pas encore confirmé. Ce que vous avez écrit n’est pas perdu. Si vous ne recevez pas de réponse, vous pouvez aussi écrire à l’adresse de courrier de la page de contact.
+    Votre demande est conservée, mais l’avis au cabinet n’est pas encore confirmé. Ce que vous avez écrit n’est pas perdu. Si vous ne recevez pas de réponse, vous pouvez aussi écrire à l’adresse e-mail de la page de contact.
 
 internationalInquiryCopy.fr.receiptIdLabel
     Numéro de réception
 
 internationalInquiryCopy.fr.failureMessage
-    Votre demande n’a pas pu être envoyée. Veuillez réessayer ou écrire à l’adresse de courrier de la page de contact.
+    Votre demande n’a pas pu être envoyée. Veuillez réessayer ou écrire à l’adresse e-mail de la page de contact.
 
 internationalInquiryCopy.fr.originalLanguageLabel
     Langue dans laquelle vous écrivez
@@ -991,7 +991,7 @@ internationalInquiryCopy.fr.nameLabel
     Nom
 
 internationalInquiryCopy.fr.emailLabel
-    Courrier
+    E-mail
 
 internationalInquiryCopy.fr.consentLabel
     J’ai lu la page de confidentialité et j’accepte l’envoi de cette demande.
@@ -1003,7 +1003,7 @@ internationalInquiryCopy.fr.requiredMessage
     Ce champ est obligatoire.
 
 internationalInquiryCopy.fr.invalidEmailMessage
-    Veuillez indiquer une adresse de courrier valable.
+    Veuillez indiquer une adresse e-mail valide.
 
 internationalInquiryCopy.fr.tooLongMessage
     Le texte est trop long. Raccourcissez-le et renvoyez-le.
@@ -1033,7 +1033,7 @@ internationalInquiryCopy.fr.languageOptions.needs-method-confirmation
     Aucune des quatre langues n’est utilisable — la manière de communiquer doit être confirmée
 
 guidanceAnswers.fr.services.answer
-    Le cabinet traite six groupes de travail selon le droit de Taïwan : investissement et constitution de sociétés, affaires civiles et dommages-intérêts, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné le contenu que vous envoyez. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
+    Le cabinet traite six domaines de travail selon le droit de Taïwan : investissement et constitution de sociétés, affaires civiles et dommages-intérêts, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné le contenu que vous envoyez. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
 
 guidanceAnswers.fr.services.sources[0]
     /fr/faq
@@ -1051,7 +1051,7 @@ guidanceAnswers.fr.about.sources[1]
     /fr/services
 
 guidanceAnswers.fr.lawyers.answer
-    Cette page présente les profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering. L’avocate Wei Tseng (曾雋崴) est habilitée à exercer à Taïwan et elle est l’avocate dirigeante du cabinet ; elle travaille avec des clients de Corée, du Japon et d’autres clients internationaux. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
+    Cette page présente les profils des avocates et avocats, de la direction des opérations et de l’expert-comptable associé de Hovering. L’avocate Wei Tseng (曾雋崴) est habilitée à exercer à Taïwan et elle est l’avocate dirigeante du cabinet ; elle travaille avec des clients de Corée, du Japon et d’autres clients internationaux. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
 
 guidanceAnswers.fr.lawyers.sources[0]
     /fr/about
@@ -1060,7 +1060,7 @@ guidanceAnswers.fr.lawyers.sources[1]
     /fr/contact
 
 guidanceAnswers.fr.pricing.answer
-    Cette page ne publie pas de liste de prix. L’étendue du travail est d’abord fixée à partir du résumé que vous envoyez, puis le montant et le mode de calcul sont confirmés avec vous avant le début du travail. La consultation avec une avocate ou un avocat peut être une prestation payante ; outre les honoraires, des frais de tribunal ou d’autorité peuvent naître. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
+    Cette page ne publie pas de liste de prix. L’étendue du travail est d’abord fixée à partir du résumé que vous envoyez, puis le montant et le mode de calcul sont confirmés avec vous avant le début du travail. La consultation avec une avocate ou un avocat peut être une prestation payante ; outre les honoraires, des frais de tribunal ou d’autorités peuvent s’y ajouter. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
 
 guidanceAnswers.fr.pricing.sources[0]
     /fr/contact
@@ -1078,7 +1078,7 @@ guidanceAnswers.fr.contact.sources[1]
     /fr/pricing
 
 guidanceAnswers.fr.faq.answer
-    Cette partie répond à des questions fréquentes : les six groupes de travail, la préparation avant le contact, le mode de fixation des honoraires et le sens d’un message envoyé. Une demande envoyée attend l’examen d’une avocate ou d’un avocat ; ce n’est pas un avis juridique, ce n’est pas un rendez-vous, et cela ne crée pas de relation entre avocate ou avocat et client. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
+    Cette partie répond à des questions fréquentes : les six domaines de travail, la préparation avant le contact, le mode de fixation des honoraires et le sens d’un message envoyé. Une demande envoyée attend l’examen d’une avocate ou d’un avocat ; ce n’est pas un avis juridique, ce n’est pas un rendez-vous, et cela ne crée pas de relation entre l’avocate ou l’avocat et le client. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.
 
 guidanceAnswers.fr.faq.sources[0]
     /fr/contact
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.fr.consultationNotice
     Ces indications sont rédigées en français, mais la consultation avec une avocate ou un avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen.
 
 GUIDANCE_LLMS_NOTICES.fr.discoveryNotice
-    Le fichier llms.txt n’est qu’une carte pour trouver les pages publiques ; il ne promet ni rang dans les moteurs de recherche, ni soutien, ni recommandation par une intelligence artificielle, ni visibilité.
+    Le fichier llms.txt n’est qu’une carte pour trouver les pages publiques ; il ne promet ni un classement dans les moteurs de recherche, ni une approbation, ni une recommandation par une intelligence artificielle, ni une visibilité particulière.
 
 GUIDANCE_LLMS_NOTICES.fr.confidentialNotice
     Parce que le texte original est conservé, n’écrivez pas, à ce premier stade, ce qui n’est pas encore nécessaire, par exemple un numéro de passeport, un numéro d’identité ou des données de compte.

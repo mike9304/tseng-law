@@ -71,7 +71,7 @@ Bazı bankalar ek gerekler koyabilir, örneğin kuruluştan sonra hesabın en az
 
 A. İlk çalışan: başvuru, olağan yurt dışı Çinli veya yabancı yatırım işletmesinde yönetim işi (一般僑外投資事業主管工作) olarak sunulur. Aşağıdaki B noktasındaki “uzmanlık veya teknik nitelikte iş” ölçütü uygulanmaz, ancak yurt dışı Çinlilerin veya yabancıların elindeki hisse veya koyulan sermaye toplamının, çıkarılmış hisselerin veya toplam sermayenin 1/3’ünü aştığı bir şirketin işletme sorumlusu (經理人) olmak gibi uygunluk koşulları ile işverenin sermaye ve ciroya ilişkin sonuç koşulları uygulanır (inceleme ölçütleri madde 38 ve 39).
 
-B. İkinci çalışandan itibaren kısıtlar vardır: istihdam edilen yabancı uyruklu kişi sayısı 1 kişiyi aşarsa, çalışanın ilgili eğitimi ve deneyimi, ortalama ücret ile şirketin sermaye ve ciro kuralları “uzmanlık veya teknik iş”e (專門性或技術性工作) göre işlenir.
+B. İkinci çalışandan itibaren kısıtlar vardır: istihdam edilen yabancı uyruklu kişi sayısı bir kişi sınırını aşarsa, çalışanın ilgili eğitimi ve deneyimi, ortalama ücret ile şirketin sermaye ve ciro kuralları “uzmanlık veya teknik iş”e (專門性或技術性工作) göre işlenir.
 
 Tayvan Çalışma Bakanlığı (勞動部) sitesine bakınız: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

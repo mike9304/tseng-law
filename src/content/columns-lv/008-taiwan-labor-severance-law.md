@@ -70,11 +70,11 @@ Ja darbinieka alga ir augsta un ir sasniegts noteikts stāžs,
 
 atlaišanas pabalsts arī ir samērā lielāks.
 
-Tad dažas mazapzinīgas Taivānas sabiedrības lieto dažādus līdzekļus,
+Tad dažas negodprātīgas Taivānas sabiedrības lieto dažādus līdzekļus,
 
 lai tām nebūtu jāizmaksā augsti atlaišanas pabalsti,
 
-un ved darbiniekus uz aiziešanu pēc paša gribas.
+un mudina darbiniekus aiziet pēc paša vēlēšanās.
 
 Darbiniekiem jābūt piesardzīgiem
 
@@ -98,7 +98,7 @@ Mans klients, B kungs, sabiedrībā A bija nodarbināts vairāk nekā 10 gadus
 
 un bija pārdevējs ar vislabāko rezultātu Taivānas vidusreģionā.
 
-Tāpēc ka alga un prēmijas bija ļoti augstas,
+Tā kā alga un prēmijas bija ļoti augstas,
 
 sabiedrība ņēma B kungu par mērķi.
 
@@ -118,9 +118,9 @@ Citādi B kungam vajagot sabiedrību atstāt;
 
 Vadītājs iedeva B kungam A4 formāta lapu
 
-un lika uz tās uzrakstīt: „Es, [vārds], brīvprātīgi pazeminu amatu un algu“
+un lika uz tās uzrakstīt šādu tekstu:
 
-kā saturu.
+„Es, [vārds], brīvprātīgi pazeminu amatu un algu“.
 
 Šo vienošanos gribēja parādīt visiem pārējiem darbiniekiem,
 
@@ -142,7 +142,7 @@ un sabiedrības vadītājs beidzot dusmās lika viņam iet.
 
 B kungs ar pāridarījuma un skumju sajūtu atstāja
 
-sabiedrību, kurā bija 10 gadus,
+sabiedrību, kurā bija nostrādājis 10 gadus,
 
 un pēc tam vairs nenāca uz darbu.
 
@@ -160,11 +160,11 @@ un aizgāja paši
 
 B kungs tomēr pēc vadības maiņas
 
-atpazina, ka sabiedrība grib darbiniekus aizvākt neatbilstošā veidā,
+saprata, ka sabiedrība grib darbiniekus atbrīvot neatbilstošā veidā,
 
 un to pamanīja agri
 
-un tāpēc, ka jau bija atklājis darbā pieņemšanas sludinājumus pirms darbinieku aiziešanas,
+un, tā kā jau bija atklājis darbā pieņemšanas sludinājumus pirms darbinieku aiziešanas,
 
 B kungs dienā, kad gāja uz pārrunām,
 
@@ -180,7 +180,7 @@ varēja konstatēt likumā noteiktās tiesības uz atlaišanas pabalstu;
 
 ​
 
-Tāpēc ka šādu gadījumu ir daudz,
+Tā kā šādu gadījumu ir daudz,
 
 jāsaglabā pierādījumi,
 
@@ -216,7 +216,7 @@ Nevienojieties viegli ar sabiedrību.
 
 Uzmanieties, lai sabiedrība Jūs neatlaistu neatbilstošā veidā.
 
-Uzmanieties, lai sabiedrība Jūs nespiestu uz aiziešanu pēc paša gribas.
+Uzmanieties, lai sabiedrība Jūs nespiestu aiziet pēc paša vēlēšanās.
 
 Atlaišanas pabalsts ir darbinieka likumā noteiktās tiesības.
 

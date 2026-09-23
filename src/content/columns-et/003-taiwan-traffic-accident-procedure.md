@@ -207,7 +207,7 @@ Olulised osad, mis puudutavad vastaspoole tundeid, nagu vabandus ja lohutus, võ
 
 ​
 
-Kindlustusandjale lisakulu TWD 500.000 (新臺幣) või TWD 1.000.000 üksikus asjas vaevalt mõjutab kogukasumit; õnnetuse osalisele võib see siiski otsustada, kas tekib karistusregister (前科).
+Kindlustusandjale lisakulu TWD 500.000 (新臺幣) või TWD 1.000.000 üksikus asjas vaevalt mõjutab kogukasumit; õnnetuse osalise jaoks võib see siiski mõjutada, kas asjast jääb talle karistusregistri kanne (前科).
 
 ​
 
@@ -239,7 +239,7 @@ Hooletusest põhjustatud kehavigastuse (過失傷害) eest on mõnes otsuses mä
 
 ​
 
-Rahaks ümberarvestamisel kinnitab kriminaalkoodeksi (刑法) artikli 41 lõige 1 ümberarvestuse TWD 1.000, TWD 2.000 või TWD 3.000 (新臺幣) päeva kohta; arvutades TWD 1.000 alusel päevas annab 3 kuu karistus 3 × 30 × 1.000 = TWD 90.000.
+Rahaks ümberarvestamisel kinnitab kriminaalkoodeksi (刑法) artikli 41 lõige 1 ümberarvestuse TWD 1.000, TWD 2.000 või TWD 3.000 (新臺幣) päeva kohta; kui arvestada TWD 1.000 päevas, annab 3 kuu karistus 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 
@@ -315,7 +315,7 @@ Lisaks peab advokaat selgelt selgitama osalise olukorra ja selgelt teatama riski
 
 ​
 
-Ettevaatlik tuleb olla advokaatide suhtes, kes paisutavad asja, soovitavad kokkulepet mitte teha ja tahavad võidelda tsiviil- ja kriminaalõiguslikult lõpuni, üksnes mandaadi pärast.
+Ettevaatlik tuleb olla advokaatide suhtes, kes paisutavad asja, soovitavad kokkulepet mitte teha ja tahavad võidelda tsiviil- ja kriminaalõiguslikult lõpuni, üksnes tasu ja kliendisuhte pärast.
 
 ​
 
@@ -339,7 +339,7 @@ Kui kannatanu saab kehavigastuse või sureb, kannatab kannatanu ise või tema pe
 
 ​
 
-Paljud põhjustajad ei hoolitse telefonitsi tehtavast seisundi järelepärimisest ega haiglakülastusest ja arvavad, et kindlustusandja korraldab kõik, seega jäävad nad ise kõrvale. Siis ei taju kannatanu põhjustaja kahetsust ega siirust.
+Paljud põhjustajad ei hooli telefonitsi tehtavast seisundi järelepärimisest ega haiglakülastusest ja arvavad, et kindlustusandja korraldab kõik, seega jäävad nad ise kõrvale. Siis ei taju kannatanu põhjustaja kahetsust ega siirust.
 
 ​
 
@@ -347,7 +347,7 @@ Paljud põhjustajad ei hoolitse telefonitsi tehtavast seisundi järelepärimises
 
 ​
 
-Kannatanu kogeb seda solvavana, ei järele anna läbirääkimistel summa osas või taotleb vara arestimist hagi tagamiseks (假扣押) ja sissenõudmist vastaspoole varalt lõpuni.
+Kannatanu kogeb seda solvavana, ei anna läbirääkimistel summa osas järele või taotleb vara arestimist hagi tagamiseks (假扣押) ja sissenõudmist vastaspoole varalt lõpuni.
 
 ​
 

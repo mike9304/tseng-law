@@ -55,7 +55,7 @@ Bu kanun 2003’e kadar sürdü; o dönemde berber salonu işleten Bay Lin,
 
 görme engelli olmayan çalışanları saç yıkama ve masaj hizmetleri için istihdam etti ve polis bunu saptadı.
 
-O zamanki hukuka göre Bay Lin ve bu çalışanlara sırasıyla Tayvan yeni doları (新臺幣) cinsinden TWD 40.000, TWD 10.000 ve TWD 20.000 idari para cezası (罰鍰) verildi.
+O zamanki hukuka göre Bay Lin’e Tayvan yeni doları (新臺幣) cinsinden TWD 40.000, iki çalışana ise TWD 10.000 ve TWD 20.000 idari para cezası (罰鍰) verildi.
 
 Bay Lin bu yaptırımı çok haksız buldu ve anayasa yorumu istedi.
 

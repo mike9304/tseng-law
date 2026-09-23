@@ -31,7 +31,7 @@ Načelno banke u Koreji zahtijevaju da se ulagač **osobno** pojavi u banci u Ko
 
 Prijenos internetskim bankarstvom ili putem rođaka u Koreji nije moguć.
 
-Nadalje, prema korejskim propisima o deviznoj kontroli, osoba s korejskim državljanstvom koja osniva stranu pravnu osobu ili stječe udjele mora podnijeti „prijavu izravnog stranog ulaganja“. Prijava mora biti zaprimljena u trenutku prijenosa kapitala na tajvansku pravnu osobu (台灣法人); pri neprijavi mogu nastupiti sankcije zbog povrede deviznih propisa.
+Nadalje, prema korejskim propisima o deviznoj kontroli, osoba s korejskim državljanstvom koja osniva stranu pravnu osobu ili stječe udjele mora podnijeti „prijavu izravnog stranog ulaganja”. Prijava mora biti zaprimljena u trenutku prijenosa kapitala na tajvansku pravnu osobu (台灣法人); pri neprijavi mogu nastupiti sankcije zbog povrede deviznih propisa.
 
 Prije prijenosa kapitala (資本金匯款) informirajte se kod svoje glavne banke u Koreji.
 
@@ -69,9 +69,9 @@ Neke banke mogu postavljati dodatne zahtjeve, na primjer vrijeme uporabe računa
 
 **5. Može li društvo zapošljavati strance (uključujući osobe s korejskim državljanstvom)?**
 
-Prvi zaposlenik: zahtjev se podnosi kao voditeljski rad u pothvatu redovitog ulaganja prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Mjerilo „rada stručne ili tehničke naravi“ iz točke B niže ne primjenjuje se, no primjenjuju se pretpostavke podobnosti, uključujući pretpostavku voditelja (經理人) društva čiji ulog prekomorskih Kineza ili stranaca premašuje 1/3, te pretpostavke rezultata poslodavca koje se tiču kapitala i prometa (članci 38. i 39. mjerila za pregled zahtjeva).
+A. Prvi zaposlenik: zahtjev se podnosi kao voditeljski rad u pothvatu redovitog ulaganja prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Mjerilo „rada stručne ili tehničke naravi” iz točke B niže ne primjenjuje se, no primjenjuju se pretpostavke podobnosti, uključujući pretpostavku voditelja (經理人) društva čiji ulog prekomorskih Kineza ili stranaca premašuje 1/3, te pretpostavke rezultata poslodavca koje se tiču kapitala i prometa (članci 38. i 39. mjerila za pregled zahtjeva).
 
-B. Od drugog zaposlenika postoje ograničenja: ako društvo zapošljava više od 1 stranca, obrazovanje i iskustvo, prosječna plaća te kapital i promet društva obrađuju se prema „stručnom ili tehničkom radu“ (專門性或技術性工作).
+B. Od drugog zaposlenika postoje ograničenja: ako društvo zapošljava više od 1 stranca, obrazovanje i iskustvo, prosječna plaća te kapital i promet društva obrađuju se prema „stručnom ili tehničkom radu” (專門性或技術性工作).
 
 Vidi stranicu Ministarstva rada Tajvana (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

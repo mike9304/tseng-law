@@ -27,7 +27,7 @@ Järgmised küsimused ja vastused on mõeldud neile, kes kaaluvad äriühingu as
 
 **1. Millele peate tähelepanu pöörama, kui kannate kapitali (資本額) Koreast Taiwani äriühingu ettevalmistuskontole (公司籌備處帳戶)? (see punkt puudutab Korea süsteeme ja Korea pangapraktikat)**
 
-Korea pangad (銀行) nõuavad tavaliselt, et investor külastaks **isiklikult** panka Koreas ja kannaks vahendid oma nimele olevalt kontolt.
+Korea pangad (銀行) nõuavad tavaliselt, et investor külastaks **isiklikult** panka Koreas ja kannaks vahendid oma nimel olevalt kontolt.
 
 Ülekanne internetipanga kaudu või lähedase kaudu (匯款) ei ole lubatud.
 
@@ -84,4 +84,4 @@ Võite saata küsimuse kontaktvormiga; viivitamatu vastuse kohta lubadust ei ant
 > Lisalugemist:
 > - [Milliste asjadega tegeleme](/et/services)
 > - [Hoveringi rahvusvaheline meeskond](/et/lawyers)
-> - [Kuidas bürooni jõuda](/et/contact)
+> - [Kuidas büroo poole pöörduda](/et/contact)

@@ -1,4 +1,4 @@
-# nl guidance pack strings (path → text). Generated 2026-09-21
+# nl guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.nl.languageName
     Nederlands
@@ -34,13 +34,13 @@ guidanceContent.nl.nav.columns
     Artikelen
 
 guidanceContent.nl.contactCta
-    Een consultatieverzoek sturen
+    Een verzoek om advies sturen
 
 guidanceContent.nl.footerNotice
     Deze Nederlandstalige pagina bevat alleen algemene toelichting over het werk van het kantoor volgens Taiwanees recht. Het is geen juridisch advies voor een concreet dossier, en het versturen van een bericht schept op zich geen relatie tussen advocaat en cliënt.
 
 guidanceContent.nl.skipLink
-    Navigatie overslaan en naar de inhoud
+    Navigatie overslaan en naar de inhoud gaan
 
 guidanceContent.nl.menuLabel
     Pagina-overzicht
@@ -49,19 +49,19 @@ guidanceContent.nl.languageLabel
     Weergavetaal
 
 guidanceContent.nl.mega.services.description
-    Het kantoor behandelt de wezenlijke werkgroepen volgens Taiwanees recht.
+    Het kantoor behandelt de belangrijkste praktijkgebieden van het Taiwanese recht.
 
 guidanceContent.nl.mega.services.viewAllLabel
     Alles tonen
 
 guidanceContent.nl.mega.columns.description
-    Artikelen over veelgestelde vragen van Taiwanees recht.
+    Artikelen over veelgestelde vragen van het Taiwanese recht.
 
 guidanceContent.nl.mega.columns.viewAllLabel
     Alles tonen
 
 guidanceContent.nl.mega.lawyers.description
-    Voorstelling van de advocaten en de contactwegen.
+    Kennismaking met de advocaten en de contactmogelijkheden.
 
 guidanceContent.nl.mega.lawyers.viewAllLabel
     Alles tonen
@@ -106,7 +106,7 @@ guidanceContent.nl.home.servicesAssistanceLinkLabel
     Contact
 
 guidanceContent.nl.home.servicesAssistanceAfter
-     uit hoe u een samenvatting formuleert die een advocaat beoordeelt.
+     uit hoe u een korte samenvatting opstelt die een advocaat kan beoordelen.
 
 guidanceContent.nl.home.columnsViewAllLabel
     Alle artikelen bekijken
@@ -151,25 +151,25 @@ guidanceContent.nl.pages.home.sections[0].heading
     Wat wij doen
 
 guidanceContent.nl.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm is een in Taiwan gevestigd advocatenkantoor. Het werkt volgens Taiwanees recht en heeft kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Wij adviseren ondernemingen en voeren procedures voor de rechter en begeleiden cliënten uit het buitenland door de in Taiwan vereiste stappen.
+    Hovering International Law Firm is een in Taiwan gevestigd advocatenkantoor. Het werkt volgens Taiwanees recht en heeft kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Wij adviseren ondernemingen, voeren procedures voor de rechter en begeleiden buitenlandse cliënten door de stappen die in Taiwan nodig zijn.
 
 guidanceContent.nl.pages.home.sections[0].paragraphs[1]
     De hele inhoud hier is algemeen. De afloop van een zaak hangt af van de feiten, de toepasselijke regels en het tijdstip. Deze toelichting vervangt niet het gesprek met een advocaat over uw stukken.
 
 guidanceContent.nl.pages.home.sections[1].heading
-    Paginataal en consultatietaal zijn niet hetzelfde
+    De taal van de pagina is niet de taal van het gesprek met de advocaat
 
 guidanceContent.nl.pages.home.sections[1].paragraphs[0]
     Deze pagina is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in de vier consultatietalen Engels, Chinees (中文), Japans en Koreaans. Het lezen van de Nederlandse toelichting betekent niet dat het gesprek met de advocaat in het Nederlands plaatsvindt.
 
 guidanceContent.nl.pages.home.sections[1].paragraphs[1]
-    Wij beloven geen tolk, geen antwoordtermijn en geen afspraak via deze pagina. Als u geen van de vier talen kunt gebruiken, legt de pagina «Contact» uit hoe wij een communicatieweg onderzoeken.
+    Wij beloven geen tolk, geen antwoordtermijn en geen afspraak via deze pagina. Als u geen van de vier talen spreekt, legt de pagina “Contact” uit hoe wij naar een werkbare manier van communiceren zoeken.
 
 guidanceContent.nl.pages.home.sections[2].heading
-    Werkgroepen
+    Praktijkgebieden
 
 guidanceContent.nl.pages.home.sections[2].paragraphs[0]
-    Het werkterrein omvat de volgende zes groepen. De pagina «Diensten» beschrijft elke groep nader en noemt wat niet wordt toegezegd.
+    Het werkterrein omvat de volgende zes praktijkgebieden. De pagina “Diensten” beschrijft elk gebied nader en noemt wat niet wordt toegezegd.
 
 guidanceContent.nl.pages.home.sections[2].items[0]
     Investering en oprichting van een vennootschap in Taiwan
@@ -193,7 +193,7 @@ guidanceContent.nl.pages.home.sections[3].heading
     Waar u moet beginnen
 
 guidanceContent.nl.pages.home.sections[3].paragraphs[0]
-    Lees de pagina «Diensten» om te toetsen of uw zaak tot ons terrein behoort, daarna «Kosten» en «Contact» om te weten hoe de omvang wordt vastgesteld en hoe de kosten vóór het begin van het werk worden bevestigd.
+    Lees de pagina “Diensten” om te toetsen of uw zaak tot ons terrein behoort, daarna “Kosten” en “Contact” om te weten hoe de omvang wordt vastgesteld en hoe de kosten vóór het begin van het werk worden bevestigd.
 
 guidanceContent.nl.pages.home.sections[3].paragraphs[1]
     Bij het sturen van een bericht mag u de samenvatting in uw eigen taal schrijven. De oorspronkelijke tekst wordt bewaard zoals u die hebt geschreven en niet automatisch vertaald. Een verzonden bericht is een verzoek dat op beoordeling wacht: dat is nog geen advies en nog geen bevestigde afspraak.
@@ -205,10 +205,10 @@ guidanceContent.nl.pages.services.title
     Welke zaken wij behandelen
 
 guidanceContent.nl.pages.services.description
-    Zes werkgroepen van het kantoor in Taiwan en de grenzen die u eerst moet kennen.
+    De zes praktijkgebieden van het kantoor in Taiwan en de grenzen die u eerst moet kennen.
 
 guidanceContent.nl.pages.services.intro
-    Hieronder de groepen die wij daadwerkelijk behandelen, en vragen die in de beginfase vaak worden gesteld. De weergave helpt u te beoordelen of uw zaak tot ons terrein behoort; zij is algemeen en geen juridische analyse van één dossier.
+    Hieronder staan de praktijkgebieden die wij daadwerkelijk behandelen, met vragen die in de beginfase vaak worden gesteld. Dit overzicht helpt u te beoordelen of uw zaak tot ons terrein behoort; het is algemeen en geen juridische analyse van één dossier.
 
 guidanceContent.nl.pages.services.sections[0].heading
     Investering en oprichting van een vennootschap in Taiwan
@@ -217,7 +217,7 @@ guidanceContent.nl.pages.services.sections[0].paragraphs[0]
     Wij begeleiden buitenlandse investeerders en ondernemingen bij de oprichting of de exploitatie van een vennootschap in Taiwan: keuze van de rechtsvorm, voorbereiding en indiening van stukken, kapitaalinbreng, bankzaken, toetsing van de vestigingsplaats en branchespecifieke eisen. Wij ondersteunen ook boekhouding en belastingen die uit oprichting en exploitatie in Taiwan voortvloeien.
 
 guidanceContent.nl.pages.services.sections[0].paragraphs[1]
-    Verloop en duur verschillen naar rechtsvorm, investeerder, branche, bank en aanwezige stukken. Oprichting van een vennootschap leidt niet vanzelf tot een verblijfstitel (居留) of een werkvergunning (工作許可): dat zijn afzonderlijke procedures, beoordeeld naar de situatie van de persoon.
+    Verloop en duur hangen af van de rechtsvorm, de investeerder, de branche, de bank en de beschikbare stukken. Oprichting van een vennootschap leidt niet vanzelf tot een verblijfstitel (居留) of een werkvergunning (工作許可): dat zijn afzonderlijke procedures, beoordeeld naar de situatie van de persoon.
 
 guidanceContent.nl.pages.services.sections[1].heading
     Civiele zaken en schadevergoeding
@@ -226,13 +226,13 @@ guidanceContent.nl.pages.services.sections[1].paragraphs[0]
     Deze groep omvat contractgeschillen, schadevergoeding uit onrechtmatige daad en consumentengeschillen. Het werk begint meestal met een chronologie, de toetsing van aanwezige stukken en bewijzen en pas daarna met de volgende stappen.
 
 guidanceContent.nl.pages.services.sections[1].paragraphs[1]
-    Termijnen, waaronder wettelijke vervaltermijnen, en de volledigheid van het bewijs bepalen het verloop. Noem daarom bekende data zo vroeg mogelijk. Bewaar contracten, berichten, betalingsbewijzen of foto’s van de situatie ter plaatse en vermeld ze in het eerste bericht.
+    Termijnen, waaronder wettelijke termijnen om een vordering in te stellen, en de volledigheid van het bewijs bepalen het verloop. Noem daarom bekende data zo vroeg mogelijk. Bewaar contracten, berichten, betalingsbewijzen of foto’s van de situatie ter plaatse en vermeld ze in het eerste bericht.
 
 guidanceContent.nl.pages.services.sections[2].heading
     Huwelijk, familie en erfrecht
 
 guidanceContent.nl.pages.services.sections[2].paragraphs[0]
-    Wij behandelen echtscheiding (離婚), vermogensverdeling, uitoefening en dragen van rechten en plichten jegens minderjarige kinderen (未成年子女權利義務之行使或負擔), omgang (會面交往) en erfrecht (繼承), ook als partijen of vermogen in verschillende staten liggen. Grensoverschrijdende familiezaken vragen vaak extra toetsing van huishoudregisters (戶籍), de vorm van akten en hun bewijsbaarheid in Taiwan.
+    Wij behandelen echtscheiding (離婚), vermogensverdeling, de uitoefening en het dragen van rechten en plichten jegens minderjarige kinderen (未成年子女權利義務之行使或負擔), omgang (會面交往) en erfrecht (繼承), ook als partijen of vermogen in verschillende staten liggen. Grensoverschrijdende familiezaken vragen vaak extra toetsing van huishoudregisters (戶籍), de vorm van akten en hun bewijsbaarheid in Taiwan.
 
 guidanceContent.nl.pages.services.sections[2].paragraphs[1]
     Omdat familiezaken vaak termijnen en parallelle procedures meebrengen, moet de eerste samenvatting de verhouding van de partijen, de huidige woonplaats en al lopende procedures noemen.
@@ -241,7 +241,7 @@ guidanceContent.nl.pages.services.sections[3].heading
     Arbeidsrechtelijke geschillen
 
 guidanceContent.nl.pages.services.sections[3].paragraphs[0]
-    Deze groep omvat beëindiging van de arbeidsovereenkomst, ontslagvergoeding volgens Taiwanees recht (資遣費; niet gelijk te stellen met instituten van andere staten), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over aankondiging, betaling en termijnen.
+    Deze groep omvat beëindiging van de arbeidsovereenkomst, ontslagvergoeding volgens Taiwanees recht (資遣費; dit is niet hetzelfde als de ontslagvergoeding of de transitievergoeding in Nederland of België), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over de opzegging, de betaling en de termijnen.
 
 guidanceContent.nl.pages.services.sections[3].paragraphs[1]
     Arbeidsovereenkomst, arbeidsreglement (工作規則), loonstroken en de briefwisseling van de partijen zijn meestal de beslissende stukken. Als u ze nog hebt, vermeld dat in de samenvatting.
@@ -253,7 +253,7 @@ guidanceContent.nl.pages.services.sections[4].paragraphs[0]
     Wij begeleiden in het opsporingsonderzoek en voor de rechter, voor verdachten of beklaagden evenzeer als voor benadeelden, en beoordelen strafrechtelijke risico’s van ondernemingsactiviteit.
 
 guidanceContent.nl.pages.services.sections[4].paragraphs[1]
-    Strafzaken hebben vaak korte termijnen en vastgelegde stappen. Als u al een schrijven van het openbaar ministerie of de rechter hebt ontvangen, noem vroeg de datum op het schrijven, zodat de inhoud in de juiste volgorde wordt beoordeeld.
+    Strafzaken hebben vaak korte termijnen en vastgelegde stappen. Als u al een schrijven van het openbaar ministerie of de rechter hebt ontvangen, noem zo vroeg mogelijk de datum op het schrijven, zodat de inhoud in de juiste volgorde wordt beoordeeld.
 
 guidanceContent.nl.pages.services.sections[5].heading
     Intellectuele eigendom
@@ -262,7 +262,7 @@ guidanceContent.nl.pages.services.sections[5].paragraphs[0]
     Wij ondersteunen bij de inschrijving van merken (商標) en octrooien (專利), bij auteursrecht en bij geschillen over deze rechten in Taiwan.
 
 guidanceContent.nl.pages.services.sections[5].paragraphs[1]
-    In deze groep beslist de volgorde van de stappen: beschermingsomvang, aanmeldtijdstip en feitelijk gebruik beïnvloeden de keuze. Het indienen van een aanvraag betekent niet vanzelf dat zij wordt ingewilligd.
+    In deze groep is de volgorde van de stappen bepalend: beschermingsomvang, tijdstip van de aanvraag en feitelijk gebruik beïnvloeden de keuze. Het indienen van een aanvraag betekent niet vanzelf dat zij wordt ingewilligd.
 
 guidanceContent.nl.pages.services.sections[6].heading
     Omvang en de bevestiging daarvan
@@ -289,7 +289,7 @@ guidanceContent.nl.pages.about.sections[0].heading
     Oprichting en opbouw
 
 guidanceContent.nl.pages.about.sections[0].paragraphs[0]
-    Hovering International Law Firm (昊鼎國際法律事務所) is in 2016 opgericht door advocaten die aan de National Taiwan University (國立臺灣大學) hebben gestudeerd. De Chinese naam 昊鼎 verbindt het teken 昊 («wijde hemel») met 鼎 («vaste grond») en beschrijft de koers van het kantoor sinds de oprichting.
+    Hovering International Law Firm (昊鼎國際法律事務所) is in 2016 opgericht door advocaten die aan de National Taiwan University (國立臺灣大學) hebben gestudeerd. De Chinese naam 昊鼎 verbindt het teken 昊 (“wijde hemel”) met 鼎 (“vaste grond”) en beschrijft de koers van het kantoor sinds de oprichting.
 
 guidanceContent.nl.pages.about.sections[0].paragraphs[1]
     Wij hebben kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Het kantoor Kaohsiung richt zich op ondernemingsbestuur en behandelt civiele, straf- en bestuursrechtelijke geschillen. Het kantoor Taichung behandelt bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Het kantoor Pingtung is in 2017 geopend voor de plaatselijke behoefte.
@@ -301,7 +301,7 @@ guidanceContent.nl.pages.about.sections[1].heading
     Werk met buitenlandse betrokkenen
 
 guidanceContent.nl.pages.about.sections[1].paragraphs[0]
-    Het grensoverschrijdende werk omvat oprichting van vennootschappen, visa, merken- en octrooiaanvragen, juridische risicotoetsing en fiscale advisering van ondernemingen. Het kantoor Taichung behandelt in het bijzonder bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Advocaat Wei Tseng (曾雋崴) begeleidt cliënten uit Korea, Japan en andere internationale cliënten in de genoemde groepen.
+    Het grensoverschrijdende werk omvat oprichting van vennootschappen, visa, merken- en octrooiaanvragen, juridische risicotoetsing en fiscale advisering van ondernemingen. Het kantoor Taichung behandelt in het bijzonder bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Advocaat Wei Tseng (曾雋崴) begeleidt cliënten uit Korea en Japan en werkt met andere internationale cliënten in de genoemde groepen.
 
 guidanceContent.nl.pages.about.sections[1].paragraphs[1]
     Of wij een zaak kunnen aannemen, hangt af van de inhoud en van de taal van de communicatie. Valt uw zaak in de genoemde groepen en kan zij in een van de vier consultatietalen worden besproken, dan kunt u een samenvatting ter beoordeling sturen.
@@ -310,7 +310,7 @@ guidanceContent.nl.pages.about.sections[2].heading
     Als u contact opneemt
 
 guidanceContent.nl.pages.about.sections[2].paragraphs[0]
-    Na ontvangst van uw samenvatting beoordeelt een advocaat de inhoud en spreekt daarna over de mogelijke omvang van het werk, nog benodigde stukken en de volgende stappen. Bij fiscale of boekhoudkundige vragen kan het kantoor met de boekhouding in één verloop werken.
+    Na ontvangst van uw samenvatting beoordeelt een advocaat de inhoud en spreekt daarna over de mogelijke omvang van het werk, nog benodigde stukken en de volgende stappen. Bij fiscale of boekhoudkundige vragen kan het kantoor samenwerken met de boekhoudafdeling.
 
 guidanceContent.nl.pages.about.sections[2].paragraphs[1]
     Het resultaat van elke zaak hangt af van de feiten en de aanwezige stukken; wij beloven geen resultaat. Als u een bindend antwoord voor uw situatie nodig hebt, moeten de stukken in een van de vier consultatietalen met een advocaat worden besproken.
@@ -322,7 +322,7 @@ guidanceContent.nl.pages.lawyers.title
     Internationaal team van Hovering
 
 guidanceContent.nl.pages.lawyers.description
-    Profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering.
+    Profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering.
 
 guidanceContent.nl.pages.lawyers.intro
     
@@ -343,7 +343,7 @@ guidanceContent.nl.pages.pricing.sections[0].heading
     Eerst wordt de omvang van het werk vastgesteld
 
 guidanceContent.nl.pages.pricing.sections[0].paragraphs[0]
-    Zaken van hetzelfde type kunnen zeer verschillende inzet hebben, naar het aantal betrokkenen, aanwezige stukken, na te leven termijnen en of een procedure al is begonnen. Daarom is de eerste stap steeds vast te stellen wat tot het werk behoort en wat niet.
+    Zaken van hetzelfde type kunnen een zeer verschillende inzet vergen. Die inzet hangt af van het aantal betrokkenen, de aanwezige stukken, de na te leven termijnen en of een procedure al is begonnen. Daarom is de eerste stap steeds vast te stellen wat tot het werk behoort en wat niet.
 
 guidanceContent.nl.pages.pricing.sections[0].paragraphs[1]
     De samenvatting die u aan het begin stuurt, is de grondslag voor die omvang. Hoe duidelijker zij het verloop, uw verzoek en de termijnen beschrijft, hoe nauwkeuriger de omvang kan worden bepaald.
@@ -361,7 +361,7 @@ guidanceContent.nl.pages.pricing.sections[2].heading
     De consultatie kan tegen betaling zijn
 
 guidanceContent.nl.pages.pricing.sections[2].paragraphs[0]
-    Het gesprek met een advocaat kan een dienst tegen betaling zijn. Deze pagina zegt niet dat het eerste gesprek kosteloos is, en geen deel mag zo worden gelezen.
+    Het gesprek met een advocaat kan een dienst tegen betaling zijn. Deze pagina zegt niet dat het eerste gesprek kosteloos is, en niets op deze pagina mag in die zin worden gelezen.
 
 guidanceContent.nl.pages.pricing.sections[2].paragraphs[1]
     Is de consultatie tegen betaling, dan worden hoogte en betalingswijze meegedeeld voordat zij plaatsvindt.
@@ -370,7 +370,7 @@ guidanceContent.nl.pages.pricing.sections[3].heading
     Waarom deze pagina geen tarieven noemt
 
 guidanceContent.nl.pages.pricing.sections[3].paragraphs[0]
-    De kosten hangen van de zaak zelf af: van de inzet, het aantal betrokkenen, de stukken, de termijnen en of een procedure al loopt. Een vooraf gezet getal zou de kosten voor uw dossier niet tonen. Daarom stellen wij eerst de omvang van het werk vast en delen u daarna de kosten mee, voordat het werk begint.
+    De kosten hangen van de zaak zelf af: van de inzet, het aantal betrokkenen, de stukken, de termijnen en of een procedure al loopt. Een vooraf genoemd bedrag zou de kosten van uw dossier niet weergeven. Daarom stellen wij eerst de omvang van het werk vast en delen u daarna de kosten mee, voordat het werk begint.
 
 guidanceContent.nl.pages.pricing.sections[3].paragraphs[1]
     Naast het honorarium kunnen gerechtelijke, bestuurlijke of derdenkosten ontstaan. Die zijn van het honorarium gescheiden en hangen van de betreffende procedure af.
@@ -382,10 +382,10 @@ guidanceContent.nl.pages.contact.title
     Hoe u het kantoor bereikt
 
 guidanceContent.nl.pages.contact.description
-    Paginataal, consultatietalen, de werkwijze als u geen van de vier talen kunt gebruiken, en wat deze pagina niet toezegt.
+    De taal van de pagina, de consultatietalen, de werkwijze als u geen van de vier talen spreekt, en wat deze pagina niet toezegt.
 
 guidanceContent.nl.pages.contact.intro
-    Voordat u ons schrijft, onderscheidt u de volgende drie punten. Zij worden vaak vermengd, maar betekenen iets anders.
+    Houd, voordat u ons schrijft, de volgende drie punten uit elkaar. Zij worden vaak door elkaar gehaald, maar betekenen iets anders.
 
 guidanceContent.nl.pages.contact.sections[0].heading
     Drie dingen die gescheiden moeten blijven
@@ -394,7 +394,7 @@ guidanceContent.nl.pages.contact.sections[0].paragraphs[0]
     De weergavetaal van de pagina, de consultatietaal met de advocaat en de taal waarin u schrijft, zijn drie gescheiden dingen.
 
 guidanceContent.nl.pages.contact.sections[0].items[0]
-    Paginataal: deze toelichting is in het Nederlands geschreven.
+    Taal van de pagina: deze toelichting is in het Nederlands geschreven.
 
 guidanceContent.nl.pages.contact.sections[0].items[1]
     Consultatietaal: de consultatie vindt plaats in het Engels, Chinees (中文), Japans en Koreaans.
@@ -403,13 +403,13 @@ guidanceContent.nl.pages.contact.sections[0].items[2]
     Uw schrijftaal: u mag de samenvatting in uw eigen taal schrijven; de oorspronkelijke tekst wordt ongewijzigd bewaard.
 
 guidanceContent.nl.pages.contact.sections[1].heading
-    Als u geen van de vier consultatietalen kunt gebruiken
+    Als u geen van de vier consultatietalen spreekt
 
 guidanceContent.nl.pages.contact.sections[1].paragraphs[0]
-    In het contactformulier kunt u «Communicatieweg moet worden bevestigd» kiezen. Wij antwoorden om een werkbare communicatieweg te onderzoeken, als zo’n weg bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.
+    In het contactformulier kunt u “Communicatiekanaal moet worden bevestigd” kiezen. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.
 
 guidanceContent.nl.pages.contact.sections[1].paragraphs[1]
-    Dit is alleen een toetsingsstap, geen belofte. Wij beloven geen tolk, geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en niet dat wij elke zaak aannemen.
+    Dit is alleen een controle, geen belofte. Wij beloven geen tolk en geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en wij nemen niet elke zaak aan.
 
 guidanceContent.nl.pages.contact.sections[2].heading
     Wat in het eerste bericht moet staan
@@ -424,7 +424,7 @@ guidanceContent.nl.pages.contact.sections[3].heading
     Wat deze pagina niet toezegt
 
 guidanceContent.nl.pages.contact.sections[3].paragraphs[0]
-    Wij beloven geen antwoordtermijn, bevestigen geen afspraak via deze pagina, beloven geen bepaalde advocaat en stellen geen tolk. Schriftelijke vertaling is iets anders: uw bericht wordt niet automatisch vertaald.
+    Wij beloven geen antwoordtermijn, bevestigen geen afspraak via deze pagina, beloven niet dat een bepaalde advocaat de zaak behandelt en stellen geen tolk ter beschikking. Schriftelijke vertaling is iets anders: uw bericht wordt niet automatisch vertaald.
 
 guidanceContent.nl.pages.contact.sections[3].paragraphs[1]
     Als u een verzoek stuurt, wordt de inhoud bewaard en wacht op beoordeling. Ontvangt u na enige tijd geen antwoord, dan kunt u opnieuw schrijven naar het e-mailadres op de contactpagina.
@@ -445,13 +445,13 @@ guidanceContent.nl.pages.faq.sections[0].heading
     Hoe u dit deel gebruikt
 
 guidanceContent.nl.pages.faq.sections[0].paragraphs[0]
-    Vindt u geen antwoord voor uw situatie, dan hangt het antwoord meestal van bijzondere feiten af. Schrijf die feiten dan in de samenvatting, in plaats van ze zelf uit deze pagina af te leiden.
+    Vindt u geen antwoord voor uw situatie, dan hangt het antwoord meestal van bijzondere feiten af. Schrijf die feiten dan in de samenvatting, in plaats van het antwoord zelf uit deze pagina af te leiden.
 
 guidanceContent.nl.pages.faq.faqs[0].question
     Welke zaken behandelt het kantoor?
 
 guidanceContent.nl.pages.faq.faqs[0].answer
-    Wij behandelen zes groepen: investering en oprichting van een vennootschap in Taiwan, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrechtelijke geschillen, strafzaken en intellectuele eigendom. Of een zaak wordt aangenomen, beslist zich na beoordeling van de inhoud.
+    Wij behandelen zes groepen: investering en oprichting van een vennootschap in Taiwan, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrechtelijke geschillen, strafzaken en intellectuele eigendom. Of wij een zaak aannemen, wordt beslist na beoordeling van de inhoud.
 
 guidanceContent.nl.pages.faq.faqs[1].question
     Wat moet ik voorbereiden vóór het contact?
@@ -466,10 +466,10 @@ guidanceContent.nl.pages.faq.faqs[2].answer
     Nee. Deze toelichting is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans. Wij beloven ook geen tolk. Schriftelijke vertaling is iets anders: de oorspronkelijke tekst die u schrijft, wordt zo bewaard en niet automatisch vertaald.
 
 guidanceContent.nl.pages.faq.faqs[3].question
-    Wat als ik geen van de vier talen kan gebruiken?
+    Wat als ik geen van de vier talen spreek?
 
 guidanceContent.nl.pages.faq.faqs[3].answer
-    Kies bij het sturen van het verzoek «Communicatieweg moet worden bevestigd». Wij antwoorden om een communicatieweg te onderzoeken, maar een dienst in een andere taal wordt niet gewaarborgd. Dit is een toetsingsstap, geen belofte dat wij in een andere taal kunnen werken.
+    Kies bij het sturen van het verzoek “Communicatiekanaal moet worden bevestigd”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat, maar een dienst in een andere taal wordt niet gewaarborgd. Dit is een controle, geen belofte dat wij in een andere taal kunnen werken.
 
 guidanceContent.nl.pages.faq.faqs[4].question
     Hoe wordt mijn Nederlandse tekst behandeld?
@@ -493,7 +493,7 @@ guidanceContent.nl.pages.faq.faqs[7].question
     Wat als mijn zaak zeer spoedeisend is?
 
 guidanceContent.nl.pages.faq.faqs[7].answer
-    Noem de termijn of de datum op een ambtelijk schrijven aan het begin van uw samenvatting, zodat die data bij de beoordeling zichtbaar zijn. Deze pagina heeft geen noodkanaal en waarborgt geen antwoordtermijn; als uw zaak niet kan wachten, moet u parallel andere wegen op uw plaats zoeken.
+    Noem de termijn of de datum op een ambtelijk schrijven aan het begin van uw samenvatting, zodat die data bij de beoordeling zichtbaar zijn. Deze pagina heeft geen spoedlijn en belooft geen antwoordtermijn; als uw zaak niet kan wachten, zoek dan tegelijk naar andere mogelijkheden in uw eigen land.
 
 guidanceContent.nl.pages.privacy.eyebrow
     PRIVACY
@@ -550,16 +550,16 @@ guidanceContent.nl.pages.privacy.sections[2].heading
     Bewaarplaats en toegang
 
 guidanceContent.nl.pages.privacy.sections[2].paragraphs[0]
-    De inhoud van uw verzending wordt bewaard op een niet openbaar toegankelijke plaats. Alleen bevoegde personen in het kantoor mogen erbij om het verzoek te behandelen.
+    De inhoud van uw bericht wordt bewaard op een niet openbaar toegankelijke plaats. Alleen bevoegde personen in het kantoor mogen erbij om het verzoek te behandelen.
 
 guidanceContent.nl.pages.privacy.sections[2].paragraphs[1]
-    Deze pagina geeft geen absolute veiligheidsgarantie. Geen overdrachtweg en geen bewaarplaats is volledig veilig; gevoelige stukken moeten daarom alleen na bijzondere aanwijzing van de advocaat worden verzonden.
+    Deze pagina geeft geen absolute veiligheidsgarantie. Noch de wijze van verzending, noch de bewaarplaats is volledig veilig; gevoelige stukken moeten daarom alleen na bijzondere aanwijzing van de advocaat worden verzonden.
 
 guidanceContent.nl.pages.privacy.sections[3].heading
     Doel van het gebruik
 
 guidanceContent.nl.pages.privacy.sections[3].paragraphs[0]
-    De verzonden gegevens dienen tot beoordeling van het verzoek, de terugkoppeling aan u, de verduidelijking van de communicatieweg en de behandeling, als het werk wordt opgenomen.
+    De verzonden gegevens worden gebruikt om het verzoek te beoordelen, u te antwoorden, het communicatiekanaal af te spreken en de zaak te behandelen als het kantoor die aanneemt.
 
 guidanceContent.nl.pages.privacy.sections[3].paragraphs[1]
     De gegevens worden niet zonder een afzonderlijke toestemming voor marketing gebruikt.
@@ -568,7 +568,7 @@ guidanceContent.nl.pages.privacy.sections[4].heading
     Kennisgeving en ontvangstnummer
 
 guidanceContent.nl.pages.privacy.sections[4].paragraphs[0]
-    Wordt een verzoek succesvol verzonden, dan stelt het systeem het kantoor in kennis. Is deze kennisgeving nog niet bevestigd, dan blijft uw tekst bewaard en gaat niet verloren.
+    Als het verzoek is verzonden, stelt het systeem het kantoor daarvan in kennis. Is de ontvangst van deze kennisgeving door het kantoor nog niet bevestigd, dan blijft uw tekst bewaard en gaat zij niet verloren.
 
 guidanceContent.nl.pages.privacy.sections[4].paragraphs[1]
     Het ontvangstnummer dient om uw verzoek in onze stukken terug te vinden. Het wordt na het bewaren getoond; u kunt het bij een nieuw contact noemen.
@@ -580,13 +580,13 @@ guidanceContent.nl.pages.privacy.sections[5].paragraphs[0]
     U kunt inzage, rectificatie of verwijdering van uw gegevens vragen of de toestemming intrekken, via het e-mailadres op de contactpagina. Bestaat een wettelijke of procedurele bewaarplicht, dan lichten wij de beperking toe.
 
 guidanceContent.nl.pages.privacy.sections[5].paragraphs[1]
-    Deze pagina noemt geen vaste bewaartermijn, omdat de werkelijke duur afhangt van of de zaak wordt voortgezet, en van de daarmee verbonden plichten. Wenst u een eerdere verwijdering, deel dat mee bij het contact.
+    Deze pagina noemt geen vaste bewaartermijn, omdat de werkelijke duur afhangt van of de zaak wordt voortgezet, en van de daarmee verbonden plichten. Wenst u een eerdere verwijdering, deelt u dat dan mee bij het contact.
 
 guidanceContent.nl.pages.privacy.sections[6].heading
     Bewaarplaats en dienstverleners
 
 guidanceContent.nl.pages.privacy.sections[6].paragraphs[0]
-    Deze website wordt bij Vercel gehost, en uw verzending wordt in een niet-openbare objectopslag van deze dienst bewaard. E-mails worden verzonden via de e-maildienst die het kantoor gebruikt.
+    Deze website wordt bij Vercel gehost, en uw bericht wordt in een niet-openbare opslag van deze dienst bewaard. E-mails worden verzonden via de e-maildienst die het kantoor gebruikt.
 
 guidanceContent.nl.pages.privacy.sections[6].paragraphs[1]
     Servers van afzonderlijke dienstverleners kunnen buiten Taiwan staan, zodat uw gegevens daar kunnen worden bewaard en verwerkt. Is het bewaardoel vervuld, dan worden de gegevens zonder vertraging gewist; gegevens die volgens toepasselijke voorschriften moeten worden bewaard, blijven voor die duur. Verzoeken over persoonsgegevens neemt wei@hoveringlaw.com.tw in ontvangst.
@@ -598,7 +598,7 @@ guidanceContent.nl.pages.disclaimer.title
     Omvang en grenzen van de informatie op deze pagina
 
 guidanceContent.nl.pages.disclaimer.description
-    Het algemene karakter van de informatie, het juridische geldingsgebied en de voorwaarden van een relatie tussen advocaat en cliënt.
+    Het algemene karakter van de informatie, het toepasselijke recht en de voorwaarden van een relatie tussen advocaat en cliënt.
 
 guidanceContent.nl.pages.disclaimer.intro
     Dit deel maakt duidelijk wat deze Nederlandse toelichtingspagina’s voor u kunnen doen en wat niet.
@@ -613,13 +613,13 @@ guidanceContent.nl.pages.disclaimer.sections[0].paragraphs[1]
     De afloop van een zaak hangt af van de feiten, de toepasselijke regels en het tijdstip; twee ogenschijnlijk gelijke situaties kunnen verschillend eindigen.
 
 guidanceContent.nl.pages.disclaimer.sections[1].heading
-    Juridisch geldingsgebied
+    Welk recht
 
 guidanceContent.nl.pages.disclaimer.sections[1].paragraphs[0]
     Het kantoor werkt volgens Taiwanees recht, en deze pagina spreekt alleen over werk in dat kader.
 
 guidanceContent.nl.pages.disclaimer.sections[1].paragraphs[1]
-    De inhoud is geen advies volgens het recht van een andere rechtsorde dan Taiwan, met inbegrip van het recht van uw woonplaats. Raakt een deel van uw zaak een andere rechtsorde, dan verduidelijken wij met u welke gekwalificeerde vakpersoon voor dat deel nodig is.
+    De inhoud is geen advies volgens een andere rechtsorde dan de Taiwanese, met inbegrip van het recht van uw woonplaats. Raakt een deel van uw zaak een andere rechtsorde, dan overleggen wij met u welke bevoegde deskundige u voor dat deel nodig hebt.
 
 guidanceContent.nl.pages.disclaimer.sections[2].heading
     Een relatie tussen advocaat en cliënt ontstaat niet vanzelf
@@ -628,16 +628,16 @@ guidanceContent.nl.pages.disclaimer.sections[2].paragraphs[0]
     Het lezen van deze pagina, het versturen van een formulier of een e-mail schept op zich geen relatie tussen advocaat en cliënt.
 
 guidanceContent.nl.pages.disclaimer.sections[2].paragraphs[1]
-    Die relatie ontstaat pas nadat de zaak is beoordeeld en beide zijden de overname van het werk hebben bevestigd.
+    Die relatie ontstaat pas nadat de zaak is beoordeeld en beide partijen hebben bevestigd dat het kantoor de zaak aanvaardt.
 
 guidanceContent.nl.pages.disclaimer.sections[3].heading
     Geen resultaatbelofte
 
 guidanceContent.nl.pages.disclaimer.sections[3].paragraphs[0]
-    Geen deel van deze pagina is een belofte over het resultaat van een zaak, over de inwilliging van een aanvraag of over verblijfs- en werkstatus.
+    Niets op deze pagina is een belofte over het resultaat van een zaak, over de inwilliging van een aanvraag of over verblijfs- en werkstatus.
 
 guidanceContent.nl.pages.disclaimer.sections[3].paragraphs[1]
-    Externe koppelingen dienen ter oriëntatie; wij waarborgen noch de juistheid noch de actualiteit van inhoud van derden.
+    Externe koppelingen dienen ter oriëntatie; wij waarborgen noch de juistheid noch de actualiteit van de inhoud van derden.
 
 guidanceContent.nl.pages.columns.eyebrow
     ARTIKELEN
@@ -646,19 +646,19 @@ guidanceContent.nl.pages.columns.title
     Artikelen over Taiwanees recht
 
 guidanceContent.nl.pages.columns.description
-    Nederlandse artikelen over veelgestelde vragen van Taiwanees recht. De inhoud is algemene informatie op het tijdstip van publicatie, geen juridisch advies voor uw zaak.
+    Nederlandse artikelen over veelgestelde vragen van het Taiwanese recht. De inhoud is algemene informatie op het tijdstip van publicatie, geen juridisch advies voor uw zaak.
 
 guidanceContent.nl.pages.columns.intro
-    Het kantoor publiceert artikelen over veelgestelde vragen van Taiwanees recht. Artikelen die in het Nederlands beschikbaar zijn, staan op deze pagina; daarnaast zijn er vier koppelingen die elk de artikelenlijst van een oorspronkelijke taal openen.
+    Het kantoor publiceert artikelen over veelgestelde vragen van het Taiwanese recht. Artikelen die in het Nederlands beschikbaar zijn, staan op deze pagina; daarnaast zijn er vier koppelingen die elk de artikelenlijst van een oorspronkelijke taal openen.
 
 guidanceContent.nl.pages.columns.sections[0].heading
-    Vier lijsten naar taal
+    Vier lijsten in de oorspronkelijke taal
 
 guidanceContent.nl.pages.columns.sections[0].paragraphs[0]
     Dit deel bevat vier koppelingen: de artikelenlijst in het Koreaans, in het Chinees, in het Engels en in het Japans. Elke koppeling noemt de taal van de lijst, zodat u vooraf weet in welke taal de inhoud opent.
 
 guidanceContent.nl.pages.columns.sections[0].paragraphs[1]
-    Deze vier lijsten zijn lijsten naar de oorspronkelijke taal van de artikelen, geen vertaallijsten. Artikelen die in het Nederlands beschikbaar zijn, staan afzonderlijk op deze pagina.
+    Deze vier lijsten volgen de oorspronkelijke taal van de artikelen; het zijn geen vertalingen. Artikelen die in het Nederlands beschikbaar zijn, staan afzonderlijk op deze pagina.
 
 guidanceContent.nl.pages.columns.sections[1].heading
     Waar de koppelingen naartoe leiden
@@ -676,16 +676,16 @@ guidanceContent.nl.pages.columns.sections[2].paragraphs[0]
     Artikelen zijn algemene informatie op het tijdstip van publicatie. Voorschriften en hun toepassing kunnen veranderen, en een artikel bevat niet alle omstandigheden van uw zaak.
 
 guidanceContent.nl.pages.columns.sections[2].paragraphs[1]
-    Steun daarom geen handeling in een echte zaak alleen op een artikel. Gebruik het voor het overzicht en bespreek uw stukken afzonderlijk met een advocaat; deze pagina is niet de consultatiestap.
+    Neem in een echte zaak geen stappen alleen op basis van een artikel. Gebruik het voor het overzicht en bespreek uw stukken afzonderlijk met een advocaat; deze pagina vervangt de consultatie niet.
 
 guidanceTeamCopy.nl.label
-    OUR TEAM
+    ONS TEAM
 
 guidanceTeamCopy.nl.title
     Internationaal team van Hovering
 
 guidanceTeamCopy.nl.description
-    Profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering.
+    Profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering.
 
 guidanceTeamCopy.nl.representativeTitle
     Leidinggevend advocaat
@@ -694,10 +694,10 @@ guidanceTeamCopy.nl.teamTitle
     Advocaten en medewerkers
 
 guidanceTeamCopy.nl.partnerTitle
-    Partneraccountancy
+    Aangesloten accountantskantoor
 
 guidanceTeamCopy.nl.introLabel
-    Voorstelling
+    Kennismaking
 
 guidanceTeamCopy.nl.educationLabel
     Opleiding
@@ -712,7 +712,7 @@ guidanceTeamCopy.nl.workingLanguagesLabel
     Werktalen
 
 guidanceTeamCopy.nl.fullProfileLabel
-    Volledig profiel (English)
+    Volledig profiel (in het Engels)
 
 guidanceTeamCopy.nl.keyFactsHeading
     Advocaat Wei Tseng — Kerngegevens
@@ -730,31 +730,31 @@ guidanceTeamCopy.nl.consultationLanguagesLabel
     Consultatietalen
 
 guidanceTeamCopy.nl.roles.tseng-junwei
-    Leidinggevend advocaat in Taiwan (Managing Attorney)
+    Leidinggevend advocaat in Taiwan
 
 guidanceTeamCopy.nl.roles.chang-rongxuan
-    Advocaat in Taiwan (Taiwan Attorney)
+    Advocaat in Taiwan
 
 guidanceTeamCopy.nl.roles.chang-fangyu
-    Paralegal
+    Juridisch medewerker (paralegal)
 
 guidanceTeamCopy.nl.roles.son-jungmin
-    Operationele leiding Korea (Korea Operations Manager)
+    Operationeel manager voor Korea
 
 guidanceTeamCopy.nl.roles.huang-shengping
-    Partneraccountant (Partner CPA)
+    Accountant-partner (CPA)
 
 guidanceTeamBios.nl.tseng-junwei.intro[0]
     Het kantoor behandelt ondernemings- en individuele zaken in Taiwan in het Engels, Japans, Koreaans en Chinees.
 
 guidanceTeamBios.nl.tseng-junwei.intro[1]
-    Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens een letsel in een fitnesszaal en verkreeg een vonnis in eerste aanleg van TWD 1.57M.
+    Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens een letsel in een fitnesszaal en verkreeg een vonnis in eerste aanleg van 1,57 miljoen TWD.
 
 guidanceTeamBios.nl.tseng-junwei.education[0]
-    Master (M.S.), Institute of Finance, National Taiwan University
+    Masterdiploma (M.S.) financiën, Institute of Finance, National Taiwan University
 
 guidanceTeamBios.nl.tseng-junwei.education[1]
-    Bachelor (B.A.) met dubbel traject recht en financiën, National Chengchi University
+    Bachelordiploma (B.A.) in de dubbele opleiding rechten en financiën, National Chengchi University
 
 guidanceTeamBios.nl.tseng-junwei.education[2]
     Uitwisselingsstudente aan de Kobe University en de Waseda University
@@ -766,61 +766,61 @@ guidanceTeamBios.nl.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.nl.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Stichting voor rechtsbijstand, vestiging Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.nl.chang-rongxuan.intro[0]
-    Eerder werkzaam bij het Ministry of Education, Legal Affairs Division, met nadruk op bestuurs- en civiele zaken.
+    Eerder werkzaam bij het ministerie van Onderwijs, afdeling Juridische Zaken (Ministry of Education, Legal Affairs Division), met nadruk op bestuurs- en civiele zaken.
 
 guidanceTeamBios.nl.chang-rongxuan.intro[1]
     Ervaring met zaken over hogescholen, rechten van onderwijspersoneel en bestuursrechtelijke klachten.
 
 guidanceTeamBios.nl.chang-rongxuan.education[0]
-    Bachelor of Laws (LL.B.), National Chung Hsing University
+    Bachelordiploma rechten (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.nl.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Ministerie van Onderwijs, afdeling Juridische Zaken (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.nl.chang-rongxuan.experience[1]
     Advocaat, Hovering International Law Firm
 
 guidanceTeamBios.nl.chang-fangyu.intro[0]
-    Paralegal met langdurige werkzaamheid als senior paralegal in meerdere kantoren, verantwoordelijk voor procedurele ondersteuning, vennootschapsrecht en buitenlandse investeringen.
+    Senior juridisch medewerker met jarenlange ervaring bij meerdere kantoren, verantwoordelijk voor procesondersteuning, vennootschapsrecht en buitenlandse investeringen.
 
 guidanceTeamBios.nl.chang-fangyu.intro[1]
     Ondersteuning bij procedures, oprichting van vennootschappen, vergunningen voor buitenlandse investeringen, licentieaanvragen en de uitwisseling tussen Korea en Taiwan.
 
 guidanceTeamBios.nl.chang-fangyu.education[0]
-    Bachelor of Laws (LL.B.), Tunghai University
+    Bachelordiploma rechten (LL.B.), Tunghai University
 
 guidanceTeamBios.nl.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Senior juridisch medewerker, Boyin Law Firm
 
 guidanceTeamBios.nl.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Senior juridisch medewerker, Muyang International Law Firm
 
 guidanceTeamBios.nl.son-jungmin.intro[0]
     Coördineert consultatieafspraken en de communicatie voor cliënten uit Korea.
 
 guidanceTeamBios.nl.son-jungmin.intro[1]
-    Ondersteunt de uitwisseling tussen afdelingen via documentsystemen en werkstromen, op basis van informatica.
+    Ondersteunt de afstemming tussen afdelingen met document- en werkprocessen, op grond van een opleiding informatica.
 
 guidanceTeamBios.nl.son-jungmin.education[0]
-    Bachelor (B.S.) informatica, National Cheng Kung University
+    Bachelordiploma (B.S.) informatica, National Cheng Kung University
 
 guidanceTeamBios.nl.son-jungmin.experience[0]
-    Gebied Korea-operaties, Hovering International Law Firm
+    Werkzaamheden voor Korea, Hovering International Law Firm
 
 guidanceTeamBios.nl.huang-shengping.intro[0]
-    Heeft bachelor- en masterprogramma’s in accountancy aan de National Chengchi University afgerond en leidt thans een accountantskantoor.
+    Heeft aan de National Chengchi University een bachelor- en een masteropleiding accountancy afgerond en leidt thans een accountantskantoor.
 
 guidanceTeamBios.nl.huang-shengping.intro[1]
     Ondersteunt de geïntegreerde analyse van juridische, fiscale en financiële risico’s voor ondernemingscliënten.
 
 guidanceTeamBios.nl.huang-shengping.education[0]
-    Master (M.A.) accountancy, National Chengchi University
+    Masterdiploma (M.A.) accountancy, National Chengchi University
 
 guidanceTeamBios.nl.huang-shengping.education[1]
-    Bachelor (B.A.) accountancy, National Chengchi University
+    Bachelordiploma (B.A.) accountancy, National Chengchi University
 
 guidanceTeamBios.nl.huang-shengping.experience[0]
     Chinshin CPA Firm
@@ -853,7 +853,7 @@ guidancePracticeAreaNames.nl.Family and labor disputes
     Familie- en arbeidsgeschillen
 
 guidanceOfficeCopy.nl.label
-    OFFICES
+    KANTOREN
 
 guidanceOfficeCopy.nl.title
     Kantoren
@@ -865,7 +865,7 @@ guidanceOfficeCopy.nl.officeLabel
     Kantoor
 
 guidanceOfficeCopy.nl.mapPreviewLabel
-    Kaartvoorvertoning
+    Voorbeeld van de kaart
 
 guidanceOfficeCopy.nl.koreaOfficeTitle
     Kantoor Korea
@@ -943,13 +943,13 @@ internationalInquiryCopy.nl.consultationNotice
     De consultatie vindt alleen plaats in vier talen: Engels, Chinees (中文), Japans en Koreaans.
 
 internationalInquiryCopy.nl.methodConfirmationNotice
-    Als u geen van de vier talen kunt gebruiken, kies «Communicatieweg moet worden bevestigd». Wij antwoorden om een werkbare communicatieweg te onderzoeken, als zo’n weg bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.
+    Als u geen van de vier talen spreekt, kies dan “Communicatiekanaal moet worden bevestigd”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.
 
 internationalInquiryCopy.nl.preparationNotice
     U mag de samenvatting in uw eigen taal schrijven. De oorspronkelijke tekst wordt bewaard zoals u die hebt geschreven en niet automatisch vertaald.
 
 internationalInquiryCopy.nl.heading
-    Een consultatieverzoek sturen
+    Een verzoek om advies sturen
 
 internationalInquiryCopy.nl.intro
     Beschrijf uw zaak kort. Een advocaat beoordeelt de inhoud voordat de volgende stap wordt besproken.
@@ -982,7 +982,7 @@ internationalInquiryCopy.nl.preferredConsultationLanguageLabel
     Taal die u voor de consultatie wenst
 
 internationalInquiryCopy.nl.originalTextLabel
-    Korte weergave van de zaak (in uw taal)
+    Korte beschrijving van de zaak (in uw taal)
 
 internationalInquiryCopy.nl.originalTextPlaceholder
     Noem wat er is gebeurd, welke hulp u nodig hebt en de termijn, als er een is. Schrijf geen paspoortnummer, identiteitsnummer of rekeninggegevens.
@@ -1012,7 +1012,7 @@ internationalInquiryCopy.nl.sourceLanguageNotice
     Dit artikel is alleen in het {language} gepubliceerd; de koppeling opent de oorspronkelijke pagina.
 
 internationalInquiryCopy.nl.unavailableTranslationNotice
-    Dit punt is in de taal van deze pagina nog niet beschikbaar. Een koppeling met de oorspronkelijke taal opent de oorspronkelijke tekst.
+    Dit punt is in de taal van deze pagina nog niet beschikbaar. Een koppeling naar de oorspronkelijke tekst opent die tekst.
 
 internationalInquiryCopy.nl.unavailableLanguageNotice
     Deze pagina wordt niet in het {language} aangeboden.
@@ -1030,10 +1030,10 @@ internationalInquiryCopy.nl.languageOptions.ko
     Koreaans (한국어)
 
 internationalInquiryCopy.nl.languageOptions.needs-method-confirmation
-    Geen van de vier talen is bruikbaar — communicatieweg moet worden bevestigd
+    Ik spreek geen van de vier talen — het communicatiekanaal moet worden bevestigd
 
 guidanceAnswers.nl.services.answer
-    Het kantoor behandelt zes werkgroepen volgens Taiwanees recht: investering en oprichting van vennootschappen, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrecht, strafzaken en intellectuele eigendom. De omvang van elke zaak wordt afzonderlijk bevestigd nadat een advocaat de inhoud heeft beoordeeld die u stuurt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.
+    Het kantoor behandelt zes praktijkgebieden van het Taiwanese recht: investering en oprichting van vennootschappen, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrecht, strafzaken en intellectuele eigendom. De omvang van elke zaak wordt afzonderlijk bevestigd nadat een advocaat de inhoud heeft beoordeeld die u stuurt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.
 
 guidanceAnswers.nl.services.sources[0]
     /nl/faq
@@ -1051,7 +1051,7 @@ guidanceAnswers.nl.about.sources[1]
     /nl/services
 
 guidanceAnswers.nl.lawyers.answer
-    Deze pagina toont de profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea, Japan en andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.
+    Deze pagina toont de profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea en Japan en met andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.
 
 guidanceAnswers.nl.lawyers.sources[0]
     /nl/about
@@ -1078,7 +1078,7 @@ guidanceAnswers.nl.contact.sources[1]
     /nl/pricing
 
 guidanceAnswers.nl.faq.answer
-    Dit deel beantwoordt veelgestelde vragen op het niveau van algemene informatie: de zes werkgroepen, de voorbereiding vóór het contact, de vaststelling van de kosten en de betekenis van een verzonden bericht. Een verzonden verzoek wacht op beoordeling door een advocaat; het is geen juridisch advies, geen afspraak en schept geen relatie tussen advocaat en cliënt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.
+    Dit deel beantwoordt veelgestelde vragen op het niveau van algemene informatie: de zes praktijkgebieden, de voorbereiding vóór het contact, de vaststelling van de kosten en de betekenis van een verzonden bericht. Een verzonden verzoek wacht op beoordeling door een advocaat; het is geen juridisch advies, geen afspraak en schept geen relatie tussen advocaat en cliënt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.
 
 guidanceAnswers.nl.faq.sources[0]
     /nl/contact
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.nl.consultationNotice
     Deze toelichting is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans.
 
 GUIDANCE_LLMS_NOTICES.nl.discoveryNotice
-    Het bestand llms.txt is slechts een kaart om openbare pagina’s te vinden; het belooft geen zoekplaats, steun, aanbeveling door kunstmatige intelligentie of weergave.
+    Het bestand llms.txt is slechts een overzicht om openbare pagina’s te vinden; het belooft geen plaats in zoekresultaten, geen aanprijzing, geen aanbeveling en geen gegarandeerde zichtbaarheid.
 
 GUIDANCE_LLMS_NOTICES.nl.confidentialNotice
     Omdat de oorspronkelijke tekst wordt bewaard, schrijf in deze eerste fase niets wat nog niet nodig is, zoals een paspoortnummer, een identiteitsnummer of rekeninggegevens.

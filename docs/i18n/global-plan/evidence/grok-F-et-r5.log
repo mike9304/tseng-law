@@ -1,0 +1,179 @@
+# WO-F-et — round 5 fix lane (et), worktree /Users/son7/Projects/tseng-law-fix-et-r5
+date: 2026-09-23 · branch fix/native-et-r5-20260922 · no git add/commit/push performed
+inputs: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/et-a.md (59 rows), rounds/r5/et-b.md (39 rows)
+files touched: src/content/columns-et/001…018 (all 18), src/data/international-guidance-baltic-atlantic.ts
+  (estonianGuidanceContent block only), src/data/international-guidance-team.ts (et bio only).
+  No test file needed changing (no test pins an Estonian string that was reworded).
+
+## Rows applied
+
+### et-a (part a, Grok 4.7) — 55 of 59 applied, 4 skipped
+- a1  004 "Maksusoodustused ei määrdu" → "Maksusoodustusi ei määrata" — 3 instances (front-matter FAQ, §4, §5).
+- a2  007 stray gloss "(不當得利)" deleted from the child-relocation sentence; verb fixed to "kaasa tuua".
+- a3  009 "koostööd tegevatele isikutele nakkusoht" → "nakkusoht temaga koos töötavatele töötajatele".
+- a4  003 "võib see siiski otsustada, kas tekib karistusregister (前科)" → "…võib see siiski mõjutada, kas asjast jääb talle karistusregistri kanne (前科)".
+- a5  004 "suunatakse … tulumaksule" → "arvatakse maha … tulumaksust" — both parallel clauses (5 % and 3 %).
+- a6  001 "sellega seotud korraldustest" → "sellega seotud reeglitest".
+- a7  004 "ei katkesta siiski iga riski" → "ei kõrvalda siiski emaettevõttelt iga riski".
+- a8  003 "üksnes mandaadi pärast" → "üksnes tasu ja kliendisuhte pärast".
+- a9  007 "Elu või surm on tundmatu üle 3 aasta" → "Vastaspool on olnud teadmata kadunud üle 3 aasta" — list item §… and the repeating paragraph (2 instances).
+- a10 007 ground 10 rewritten: "Jõustunud süüdimõistev otsus, millega on tahtliku süüteo eest mõistetud üle 6 kuu pikkune tähtajaline vangistus (有期徒刑)".
+- a11 006 "andis ja jõustas … heaoluseaduse" → "võttis … vastu … ja jõustas selle"; "andis seaduse" → "kehtestas seaduse".
+- a12 guidance services §civil "lepinguväline kahjuõiguslik vastutus" → "lepinguväline (deliktiline) vastutus".
+- a13 guidance services §labour "õiguse järgne seadusjärgne lahkumishüvitis" → "õiguse järgne lahkumishüvitis".
+- a14 004 "mitte ainult määrastikku" → "mitte ainult maksumäärasid".
+- a15 001 "asukohariigi poolel" → "asukohariigis".
+- a16 001 "püsiv koht (常設機構)" → "püsiv tegevuskoht (常設機構)".
+- a18 002 "ülekandetokumentidest" → "ülekandedokumentidest".
+- a19 001 "maksvoog" → "maksevood"; 002 "maksvoo laad" → "maksevoogude laad" (2 instances, both files).
+- a20 002 "nimes olev(ad/atest)" → "nimel olev(ad/atest)" — 3 instances.
+- a21 005 "oma nimele olevalt kontolt" → "oma nimel olevalt kontolt".
+- a22 007 "ehtsa lahutustahtet" → "ehtsat lahutustahet" — 4 instances (front matter, §2 ×2, §11).
+- a23 nominative-object sweep, 4 instances: guidance "Elamisstaatust, tööluba ja sarnaseid küsimusi hinnatakse"; 004 "vastutuse ulatust hinnatakse"; 007 "ulatust hinnatakse"; 010 "kahju ulatust hinnatakse".
+- a24 008 "mõne teise õiguskorra, näiteks Koreaga" → "mõne teise õiguskorraga, näiteks Koreaga".
+- a25 009 "kui see lahkub omal soovil" → "kui ta lahkub omal soovil".
+- a26 003 "ei järele anna … summa osas" → "ei anna … summa osas järele".
+- a27 003 "ei hoolitse … järelepärimisest" → "ei hooli … järelepärimisest".
+- a28 003 dangling -des clause fixed: "kui arvestada TWD 1.000 päevas, annab 3 kuu karistus 3 × 30 × 1.000 = TWD 90.000." (number format left as-is, see skips).
+- a29 004 "Kumbki, tütarettevõte ega filiaal, ei ole ülimuslik…" → "Ei tütarettevõte ega filiaal ei ole igasuguse Taiwani turule sisenemise puhul parem."
+- a30 004 double "seetõttu" + "hinnata" → "…ei tohi järeldada, et varasem vastutus oleks lõppenud".
+- a31 004 "uurida omavahel seotud" → "käsitleda omavahel seotult".
+- a32 004 whole list put in the partitive + "stsenaariumide kaupa" instead of "stsenaariumiti".
+- a33 007 "25. juuli 2026. aasta seisuga" → "25. juuli 2026 seisuga".
+- a34 007 "solvangust kolmandalt" → "kolmanda isiku raskest sekkumisest või solvangust".
+- a35 008 missing full stop added ("ning lahkus omal soovil.").
+- a36 008 stranded "sisuks." fixed *inside the two existing blocks* (block count is pinned): block 1 now "ja käskis tal kirjutada teksti, mille sisu oli järgmine:", block 2 now the quoted sentence "„Mina, [nimi], …“." — mirrors the Korean source, which splits the same sentence across the two blocks.
+- a37 comma-before-"ja" sweep, 2 instances: guidance pricing description "…tasude kinnitamine ja see, miks…"; 007 "ei ole siduv valem ega ole seda ka pelk vastaspoole süü."
+- a38 digit-word sweep — partially applied, see skips: 002 "ühel kontol", "ühe teatega"; 018 "üks või kaks juhatajat".
+- a39 001 "iga 2. kuu" → "iga 2 kuu tagant" (postposition added; digit kept for the checker, see skips).
+- a41 006 "arvukas/arvukalt/arvukaid/arvukad" → "palju/paljud" — all 5 instances.
+- a42 002 "Väliselt võib igal juhul lahkuda raha…" → "Väljastpoolt vaadates väljub raha igal juhul äriühingu kontolt".
+- a43 002 "Tuum on hinnata" → "Oluline on hinnata".
+- a44 002 "ei ole tegevuse peatamine asendaja lõpetamisele…" → "ei asenda tegevuse peatamine lõpetamist ja likvideerimist".
+- a45 004 "Mainimine „30 %“ ei tähenda…" → "See, et mainitakse 30 %, ei tähenda…".
+- a46 004 "kutselised jagavad samu asjaolusid" → "asjatundjatel on samad lähteandmed".
+- a47 004 "kirjeldada kaasa" → "tuleb kirjeldada ka tulevasi plaane".
+- a48 007 "Toiminguid viia laps ära … ei soovitata" → "Ei ole soovitatav viia last ära … ega jätta teda tagastamata".
+- a49 008 "Hoidke, et äriühing ei ütleks teid ebaõiglaselt üles." → "Ärge laske äriühingul end ebaõiglaselt üles öelda."
+- a50 008 "saavad töötajad omal soovil lahkuma" → "panevad töötajad omal soovil lahkuma".
+- a51 008 "hakkab kinni töötajate väikestest vigadest" → "hakkab norima töötajate väikeste vigade kallal".
+- a52 009 "ei liida töötajat … kindlustusse" → "ei kindlusta töötajat … kindlustuses" (both 勞工保險 and 健保).
+- a53 guidance contact page title "Kuidas bürooni jõuda" → "Kuidas büroo poole pöörduda"; the same label swept in the 10 columns that link to /et/contact (001, 002, 004, 005, 007, 013, 014, 015, 016, 017).
+- a54 guidance "Toetame ka raamatupidamist ja makse" → "Abistame ka raamatupidamis- ja maksuküsimustes".
+- a55 guidance FAQ intro "erilistest asjaoludest" → "asja konkreetsetest asjaoludest".
+- a56 guidance privacy "Üksikute teenuseosutajate serverid … väljaspool Taiwani" → "Mõne teenuseosutaja serverid … väljaspool Taiwanit".
+- a57 guidance home "Me ei anna selle lehe kaudu lubadust tõlgi, vastamise tähtaja ega kohtumise kohta." (adverbial moved next to the verb).
+- a58 international-guidance-team.ts et bio "taust on arvutiteadus" → "tema taust on arvutiteaduses".
+
+### et-b (part b, Claude Opus 5) — 36 of 39 applied, 3 skipped
+- b1  "haldusrahv" → "haldustrahv" everywhere (罰鍰 = administrative fine, kept distinct from 罰金 per R8): 006 ×1, 007 ×3, 011 ×6, 015 ×1, 017 ×2 = 13 instances; case fixed per sentence ("Haldustrahv … on", "tulla kõne alla haldustrahv", "haldustrahvide võlgnevus", "Loata töötamisega võivad kaasneda haldustrahv …").
+- b2  018 "Iga aktsiaselts … ei pea" → "Mitte iga aktsiaselts … ei pea".
+- b3  "uurida" (= consider/check) swept: 010 ×7 (kaaluda / läbi vaadata), 011 ×8, 014 ×12, 016 ×16, 017 ×6, 018 ×6 → kaaluda / hinnata / kontrollida / läbi vaadata / arvestada, by context. Genuine "investigate" senses (nime eeluuring, varauurimine) left alone.
+- b4  016 "tuleb esmalt kinnitada loetelu ja pärandvara õiguslik iseloom" → "tuleb esmalt välja selgitada pärandvara koosseis ja õiguslik iseloom"; the same "kinnitada"=establish pattern swept: 011 ×9, 014 ×17, 016 ×27, 017 ×16, 018 ×7 → kindlaks teha / välja selgitada / kindlaks määrata / üle kontrollida / täpsustada. Genuine "confirm/approve/authenticate" senses kept (Kes kinnitab hinna; notariaalne kinnitamine (認證); testamendi kinnitamine (檢認); investeerimissumma kinnitamine (投資額審定); the pricing-page title "Kuidas kinnitatakse töö ulatus ja tasud").
+- b6  011 "Alates 1. juuli 2026" → "Alates kuupäevast 1. juuli 2026" — 3 instances; see skips for why not "1. juulist".
+- b8  011 "ilma eelneva teate." → "ilma eelneva teateta."
+- b9  017 "Loakohustus ei määratu tegevuse nime järgi." → "Loakohustust ei määra tegevuse nimi."
+- b10 017 "Äriühingust ei saa seetõttu kohe mootorveokite kaubavedu…" → "…ei saa seetõttu veel mootorveokite kaubaveo ettevõtjat ainuüksi sellepärast, et…".
+- b11 017 "uueks asutama" family → "asutada uus mootorveokite kaubaveo ettevõte" / "asutab uue … ettevõtte" / heading "## 2. Kui asutatakse uus mootorveokite kaubaveo ettevõte" (3 instances).
+- b12 "Kuigi" = "even if" → "Ka siis, kui": 014 ×2, 017 ×1.
+- b13 "moodustada" = constitute → "olla käsitatav …na": 017 ×2, 011 ×1.
+- b14 014 "Ei piisa esitada kogusummat" → "Kogusumma esitamisest ei piisa"; "Ei piisa koolituskavas kirjutada, et…" → "Ei piisa sellest, kui koolituskavas kirjutatakse, et…".
+- b15 014 "oht teha ühest lepinguklauslist kõik järeldused" → "oht, et kõik järeldused tehakse ühest lepinguklauslist".
+- b16 014 heading "Proportsionaalsuse põhimõte täitmata perioodile" → "Proportsionaalne arvestus täitmata perioodi eest" (heading count unchanged).
+- b17 014 "uurida … kriteeriumi vastu" → "kõrvutada … kriteeriumiga".
+- b18 016 "uuendati 25. juuni 2026" → "uuendati seisuga 25. juuni 2026" — see skips for why not "25. juunil".
+- b19 016 "kas tavaline seaduslik esindamine piisab" → "kas tavalisest seaduslikust esindamisest piisab".
+- b20 016 stranded "nagu" fixed: "Suure väärtuse ja riskiga tehingute, nagu kinnisasja müük, tagatise seadmine või äriinvesteering, puhul…".
+- b21 016 subjectless "aitab hallata" → "Kohtumenetlust ning maksu-, leibkonna registreerimise ja registreerimise menetlusi on kasulik jälgida ühes ajakavas."
+- b22 016 "ingliskeelne tekst peab teenima abimaterjalina" → "ingliskeelset teksti tuleks kasutada üksnes abimaterjalina".
+- b23 018 "tütarettevõtte nimes" → "tütarettevõtte nimel" — 2 instances (FAQ + body).
+- b24 018 "Kui on oodata, et välismaist personali töötab Taiwanis" → "Kui on kavas, et Taiwanis töötab välismaine personal".
+- b25 018 "tarnet, turustamissuhe ja tegevusala" → "tarnet, turustamissuhet ja tegevusala".
+- b26 018 "esipörsile (興櫃)" → "esibörsile (興櫃)".
+- b27 018 "Teisele ja igale järgmisele välismaalasele tööluba taotledes nõuab tööministeerium (勞動部) …, et äriühing vastaks … künnisele."
+- b28 018 English cleft removed: "Kõigepealt tuleb selgitada, kes Taiwanis mida teeb."
+- b29 013 absolute statement hedged: "ei pruugi äriühingu registreerimine (公司登記) sel juhul võimalik olla".
+- b30 013 redundancy removed *without deleting a block* (block count is pinned): the closing sentence was moved out of the preceding block and the stranded block now reads "Kontrollige seda palun enne üürilepingu sõlmimist." — this matches the Korean source, where the same sentence is split across the two blocks.
+- b31 010 "kuni 1-kordset tegeliku kahju summat" → "kuni tegeliku kahju summani" (checker still PASS).
+- b32 (P3) 014 heading "Millal on … kokkuleppel toime?" → "Millal minimaalse töötamise aja kokkulepe kehtib?"
+- b33 (P3) 018 "1 või kaks juhatajat" → "üks või kaks juhatajat" (checker still PASS).
+- b34 (P3) 012 本所 calque: heading + sentence "see büroo / Selle büroo" → "meie büroo / Meie büroo".
+- b35 (P3) 011 "Tervise- ja heaolu ministeerium" → "Tervise- ja heaoluministeerium".
+- b36 (P3) 016 "kellel on vaja" → "kes neid tõesti vajavad".
+- b37 (P3) 017 "tavaline tee, millel … siseneb" → "tavaline viis, kuidas … siseneb".
+- b38 (P3) 012 "Lisateavet saate [pildist …]" → "Lisateavet leiate [pildilt …]".
+- b39 (P3) 018 consultation-lock conjunction unified to "ja" ("inglise, hiina (中文), jaapani ja korea keeles").
+
+## Rows skipped (with reason)
+- a17 + b5 — space thousands separators ("TWD 500 000", "TWD 1 579 589"). SKIPPED by ACCEPTED-ROUND / R14: for et the checker only parses dot-thousands. All figures keep "500.000" / "1.579.589". (The grammar half of a28 was applied; only its number reformatting was dropped.) Also the "TWD 40 000 – TWD 200 000" half of b1 was dropped for the same reason; only the word "haldusrahv" was fixed.
+- a59 — "esimese astme kohus mõistis välja TWD 1.57M" → "1,57 miljonit TWD". SKIPPED by ACCEPTED-ROUND / R12: "TWD 1.57M" is pinned byte-identical by a test (GUIDANCE_BIO_PINNED_TERMS in src/data/international-guidance-team.ts).
+- a40 + b7 — zero-width-space layout damage / restoring "##" headings in 003 and removing U+200B-only lines in 005, 006, 008, 009, 013, 015. SKIPPED as structural: the Korean sources carry exactly the same ZWSP lines and the same missing "##" (003 line 198 is "Q16. …" in ko too), and checkBlocks pins both the block count and the ZWSP count (`ZWSP n → n`). Fixing it means changing the Korean source, which is outside this work order. Counts verified: ko/et ZWSP 52/52 (003), 8/8 (005), 4/4 (006), 10/10 (008), 5/5 (009), 5/5 (013), 3/3 (015).
+- a38 (partial) — "iga täidetud 1 staažiaasta" (008, two places: front-matter FAQ + block quote) and "põhimõtteliselt 1 järgmistest kriteeriumidest" (001, two places). REVERTED after the checker failed: the Korean source writes these as digits (근속 1년, 설립 1년 …) and checkNumbers treats a missing source digit as FAIL ("missing from translation (2): 1×2" for 001, "(1): 1" for 008). The other instances of the same row (002 "ühel kontol", "ühe teatega"; 018 "üks või kaks juhatajat") were applied and pass.
+- a39 (partial) — wrote "iga 2 kuu tagant" rather than the reviewer's "iga kahe kuu tagant": the postposition (the actual defect) is fixed, the digit kept because the ko source has 2개월.
+- b18 (variant) — "25. juunil 2026" fails the checker: DATE_MONTH_NAMES only lists nominative Estonian month names ("juuni"), so the adessive hides the month digit 6 and the number gate reports "missing from translation (1): 6". Used the checker-safe, still-grammatical "seisuga 25. juuni 2026".
+- b6 (variant) — same cause: "Alates 1. juulist 2026" produced "missing from translation (3): 7×3". Used "Alates kuupäevast 1. juuli 2026" (3 instances), which is grammatical Estonian officialese and keeps the month name in the parsed form.
+
+## Systemic patterns and instance counts
+- Korea-centric framing (R2): none left to fix — the only Korea mentions are labelled foreign-country examples (008 "mõne teise õiguskorraga, näiteks Koreaga", 006 Korea comparison, 005 Korean banking section, 001 Taiwan–Korea tax agreement) and the reviewers raised no R2 row.
+- Attorney gender (R4): no finding in either review; Estonian marks no gender on "advokaat"/"ta". Wei Tseng appears as "Advokaat Wei Tseng (曾雋崴)"; the male manager (008 härra B / 006 härra Lin) and the male plaintiff (010) untouched.
+- Consultation lock (R3): unchanged and still negative everywhere; the only edit touching it was b39 (või → ja) and a57 (word order), both meaning-preserving. No interpreter / reply-time / free-meeting / result / win-rate / best-only wording introduced.
+- "haldusrahv" → "haldustrahv": 13 instances across 6 files.
+- "kinnitada" as establish/determine: 76 instances rewritten across 011, 014, 016, 017, 018 (plus 4 in the guidance pack via a12/a13/a23/a37).
+- "uurida" as consider/check: 55 instances rewritten across 010, 011, 014, 016, 017, 018.
+- "arvukas/arvukalt": 5 instances in 006 → palju/paljud.
+- "nimes/nimele olev" → "nimel olev": 4 instances (002 ×3, 005 ×1) plus 018 ×2 (b23) = 6.
+- Contact-page label "Kuidas bürooni jõuda": 11 instances (1 pack title + 10 column links).
+- Nominative object with impersonal "hinnatakse": 4 instances (pack, 004, 007, 010).
+- Comma before coordinating "ja": 2 instances (pack pricing description, 007).
+
+## §Verify output (verbatim)
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-et --lang et 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=136
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-et src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      23
+
+(The "23" was measured before this log file was written; with the log present it is 24 =
+21 modified files + the 2 untracked r5 review files delivered with the work order + this log.
+docs/i18n/global-plan/WO-F-et.txt was already modified before this lane started and was not touched
+here. Nothing was staged, committed or pushed.)
+
+## Where I believe the reviewer is wrong (NOT applied)
+1. et-a #17 / et-b #5 — "Estonian thousands take a space, not a period." Correct as general Estonian
+   orthography, but the campaign rule (R14) and ACCEPTED-ROUND fix the et corpus on dot-thousands
+   because the translation checker's number gate cannot parse "500 000". The reviewer repeated this
+   row from round 4 without registering the standing decision; it should be closed as a known
+   deviation rather than re-filed each round.
+2. et-a #59 — "TWD 1.57M" → "1,57 miljonit TWD". The bio figure is pinned byte-identical by a unit
+   test (GUIDANCE_BIO_PINNED_TERMS) and ACCEPTED-ROUND names it explicitly as a skip. Same comment:
+   this is a standing decision, not a defect.
+3. et-a #40 / et-b #7 — the zero-width-space layout and the missing "##" in 003 from Q16 on are not
+   translation defects: they are faithfully copied from the Korean source, and the checker pins both
+   the block count and the ZWSP count against it. Repairing this needs a source-side decision
+   (003, 005, 006, 008, 009, 013, 015 in src/content/columns), which no locale fixer can take.
+4. et-b #18 and #6 suggested wording ("25. juunil 2026", "Alates 1. juulist 2026") is the right
+   Estonian but breaks the checker, which knows only nominative Estonian month names. The defect is
+   real and was fixed with checker-safe phrasing instead ("seisuga 25. juuni 2026", "Alates
+   kuupäevast 1. juuli 2026"). If the campaign wants the natural inflected forms, the fix belongs in
+   scripts/check-column-translation.mjs (DATE_MONTH_NAMES for et), not in the content.
+5. et-b #30 asked to delete the sentence "Tasub see eelnevalt kontrollida." It is its own body block
+   and block counts are pinned, so deletion is not available; the redundancy was removed by moving
+   the closing sentence into that block instead. Same for et-a #36 ("sisuks.").

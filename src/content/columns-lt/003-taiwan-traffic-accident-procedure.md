@@ -51,7 +51,7 @@ Baudžiamoji atsakomybė gali būti pripažinta tik tada, kai pripažįstamas ki
 
 Civilinėje plotmėje pagal Civilinio kodekso 217 straipsnį, jei nukentėjusysis turi kaltę, prisidėjusią prie žalos atsiradimo ar padidėjimo (與有過失), teismas gali sumažinti arba atleisti nuo žalos atlyginimo. Pavyzdžiui, jei naujuoju Taivano doleriu (新臺幣, TWD) pripažinta žala yra 1.000.000 TWD, o nukentėjusiojo kaltė įvertinta 50 %, suma prieš kitas korekcijas gali sumažėti iki 500.000 TWD.
 
-Ekspertizė (鑑定) arba preliminaraus analizės lentelė gali būti svarbūs dokumentai, tačiau teismo mechaniškai nesaisto. Teismas vertina visumą įrodymų, įskaitant parodymus, vaizdus ir transporto priemonių būklę.
+Ekspertizė (鑑定) arba preliminarios analizės lentelė gali būti svarbūs dokumentai, tačiau teismo mechaniškai nesaisto. Teismas vertina visumą įrodymų, įskaitant parodymus, vaizdus ir transporto priemonių būklę.
 
 ## Q5. Ką reikia įrašyti į taikos susitarimo dokumentą?
 
@@ -83,7 +83,7 @@ Jei tai nusikaltimas, persekiojamas tik pagal skundą, pagal Baudžiamojo proces
 
 ## Q6. Kaip nustatoma atsakomybė už įvykį?
 
-Policijos sudaryta eismo įvykio preliminaraus analizės vertinimo lentelė yra preliminarinė analizė, paremta vietos dokumentais. Ji nėra nuosprendis, nesaisto teismo ir nenustato kaltės dalies (過失比例). Kadangi reikalingi dokumentai ir ginčo apimtis skiriasi pagal įvykį, ši lentelė, įstatyme numatyta transporto priemonės eismo įvykio ekspertizė ir peržiūra (覆議) nėra nei automatinė eiga, nei privalomas etapas.
+Policijos sudaryta eismo įvykio preliminaraus analizės vertinimo lentelė yra preliminari analizė, paremta vietos dokumentais. Ji nėra nuosprendis, nesaisto teismo ir nenustato kaltės dalies (過失比例). Kadangi reikalingi dokumentai ir ginčo apimtis skiriasi pagal įvykį, ši lentelė, įstatyme numatyta transporto priemonės eismo įvykio ekspertizė ir peržiūra (覆議) nėra nei automatinė eiga, nei privalomas etapas.
 
 Pagal taikytinas nuostatas teisę turinti šalis gali prašyti transporto priemonės eismo įvykio ekspertizės (車輛行車事故鑑定); bylą vedanti institucija gali ją perduoti, o teismo institucija — pavesti. Šalies prašymas iš esmės teikiamas per 6 mėnesius nuo įvykio datos; bylose, kurios jau tiriamos arba nagrinėjamos teisme, ekspertizė vyksta teismo institucijos pavedimu, o ne nauju tiesioginiu prašymu.
 

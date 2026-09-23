@@ -17,13 +17,13 @@ Keď vozidlo vpredu ide pomaly, môže predchádzanie (超車) vyzerať ako bež
 
 ## Podmienky predchádzania stanovené článkom 101 pravidiel bezpečnosti cestnej premávky (道路交通安全規則)
 
-[Článok 101 taiwanských pravidiel bezpečnosti cestnej premávky (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) upravuje ako podmienky, za ktorých je predchádzanie zakázané, tak poradie, ktoré treba dodržať, keď je predchádzanie v tom istom pruhu dovolené.
+[Článok 101 taiwanských pravidiel bezpečnosti cestnej premávky (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) upravuje tak podmienky, za ktorých je predchádzanie zakázané, ako aj poradie, ktoré treba dodržať, keď je predchádzanie v tom istom pruhu dovolené.
 
 Článok 101 zakazuje predchádzanie v úsekoch so značkami označujúcimi zákrutu, prudké stúpanie alebo klesanie, úzky most, tunel alebo križovatku, ako aj na železničných priecestiach a v úsekoch stavebných prác.
 
 Okrem toho nemožno predchádzať v miestach alebo úsekoch so značkou školy alebo nemocnice, v miestach s inými značkami alebo vyznačením zákazu predchádzania, keď sa blíži protiidúce vozidlo, ani keď vpredu idú za sebou 2 alebo viac vozidiel.
 
-Aby bolo možné v tom istom pruhu predísť vozidlo vpredu, musí vodič zadného vozidla najprv krátko dvakrát zatroubiť alebo raz blýsknuť diaľkovými svetlami. Klaksón a svetlá sa nesmú používať opakovane na vynútenie, aby vozidlo vpredu uvoľnilo cestu.
+Aby bolo možné v tom istom pruhu predísť vozidlo vpredu, musí vodič zadného vozidla najprv krátko dvakrát zatrúbiť alebo raz bliknúť diaľkovými svetlami. Klaksón a svetlá sa nesmú používať opakovane na vynútenie, aby vozidlo vpredu uvoľnilo cestu.
 
 Zadné vozidlo smie predísť až potom, čo vozidlo vpredu spomalilo a uhlo nabok, alebo prejavilo vôľu uvoľniť cestu rukou alebo pravou smerovkou.
 

@@ -33,7 +33,7 @@ Y esas barberías de estilo taiwanés siguen siendo un recuerdo cultural distint
 
 ​
 
-En cualquier caso, si se habla de masaje.
+En cualquier caso, hablando de masaje.
 
 En Taiwán hay también muchas calles de masaje.
 
@@ -95,9 +95,9 @@ Muchas personas con discapacidad visual, temiendo perder su medio de vida, organ
 
 En la actualidad, Corea sigue permitiendo que solo las personas con discapacidad visual que han obtenido la cualificación se dediquen al oficio de masaje.
 
-Si alguien cobra una tarifa de masaje a otra persona sin esa cualificación, hay consecuencia penal.
+Si alguien cobra una tarifa de masaje a otra persona sin esa cualificación,
 
-Según la Ley de servicios médicos de Corea (醫療法), puede imponérsele una pena de prisión de hasta 3 años.
+puede imponérsele, según la Ley de servicios médicos de Corea (醫療法), una pena de prisión de hasta 3 años.
 
 Si una persona sin discapacidad visual explota un negocio de masaje, puede imponérsele una pena de prisión de hasta 5 años.
 

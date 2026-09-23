@@ -617,7 +617,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Esta orientação está escrita em português, mas a consulta com uma advogada ou um advogado realiza-se apenas em inglês, chinês (中文), japonês e coreano.',
     discoveryNotice:
-      'O ficheiro llms.txt é apenas um mapa para localizar páginas públicas; não promete posicionamento em motores de busca, endosso, recomendação por inteligência artificial nem visibilidade garantida.',
+      'O ficheiro llms.txt é apenas um mapa para localizar páginas públicas; não promete posicionamento em motores de busca, chancela, recomendação por inteligência artificial nem visibilidade garantida.',
     confidentialNotice:
       'Como o texto original se guarda, não escreva nesta primeira fase dados que ainda não fazem falta, como o número de passaporte, o número de identidade ou dados de uma conta bancária.',
   },
@@ -689,7 +689,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Den här vägledningen är skriven på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska.',
     discoveryNotice:
-      'Filen llms.txt är bara en översikt för att hitta offentliga sidor; den lovar inte sökplacering, inte en rekommendation, inte en rekommendation från artificiell intelligens och inte en säkrad synlighet.',
+      'Filen llms.txt är bara en översikt för att hitta offentliga sidor; den lovar inte en plats i sökresultaten, inte en rekommendation från människor eller från artificiell intelligens och inte att synligheten är given.',
     confidentialNotice:
       'Eftersom originaltexten sparas, skriv i inledningen inget som ännu inte behövs, till exempel passnummer, identitetsnummer eller kontouppgifter.',
   },
@@ -705,7 +705,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk.',
     discoveryNotice:
-      'Filen llms.txt er bare en oversikt for å finne offentlige sider; den lover ingen plassering i søkeresultater, ingen anbefaling, ingen anbefaling fra kunstig intelligens og ingen garantert synlighet.',
+      'Filen llms.txt er bare en oversikt for å finne offentlige sider; den lover ingen plassering i søkeresultater, ingen godkjenning, ingen anbefaling og ingen garantert synlighet.',
     confidentialNotice:
       'Fordi originalteksten lagres, bør du i begynnelsen ikke skrive noe som ennå ikke trengs, for eksempel passnummer, identitetsnummer eller kontoopplysninger.',
   },
@@ -729,7 +729,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Ez a tájékoztatás magyarul készült, de az ügyvéddel folytatott tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik.',
     discoveryNotice:
-      'Az llms.txt fájl csak térkép a nyilvános oldalak megtalálásához; nem ígér keresési helyezést, támogató kiállást, mesterséges intelligencia általi ajánlást és láthatóságot sem.',
+      'Az llms.txt fájl csak térkép a nyilvános oldalak megtalálásához; nem ígér keresési helyezést, ajánlást, mesterséges intelligencia általi említést, sem garantált láthatóságot.',
     confidentialNotice:
       'Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a bankszámlaadatokat.',
   },
@@ -737,7 +737,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Aceste informații sunt scrise în limba română, dar consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană.',
     discoveryNotice:
-      'Fișierul llms.txt este doar o hartă pentru găsirea paginilor publice; nu promite nici poziționare în căutare, nici o susținere, nici o recomandare, inclusiv din partea inteligenței artificiale, și nicio vizibilitate garantată.',
+      'Fișierul llms.txt este doar o hartă pentru găsirea paginilor publice; nu promite nici poziționare în căutare, nici susținere, nici recomandare, inclusiv din partea inteligenței artificiale, și nici vizibilitate garantată.',
     confidentialNotice:
       'Întrucât textul original se păstrează, în faza inițială nu scrieți ceea ce nu este încă necesar, de pildă numărul de pașaport, numărul actului de identitate sau datele unui cont.',
   },
@@ -792,7 +792,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     // The published privacy-page sentence, with its leading connective dropped
     // so the line stands alone; the proposition is unchanged.
     confidentialNotice:
-      'متن اصلی ذخیره می‌شود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه یا شمارهٔ شناسنامه یا داده‌های حساب بانکی.',
+      'چون متن اصلی ذخیره می‌شود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه، شمارهٔ شناسنامه یا اطلاعات حساب بانکی.',
   },
   my: {
     consultationNotice:
@@ -806,7 +806,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'இந்தப் பக்கங்கள் தமிழில் எழுதப்பட்டுள்ளன; ஆனால் வழக்கறிஞரின் ஆலோசனை ஆங்கிலம், சீனம் (中文), ஜப்பானியம் மற்றும் கொரிய மொழி ஆகியவற்றிலேயே நடைபெறும்.',
     discoveryNotice:
-      'llms.txt கோப்பு பொதுப் பக்கங்களைக் கண்டறிய உதவும் வரைபடம் மட்டுமே; தேடல் தரவரிசை, பரிந்துரை, செயற்கை நுண்ணறிவுப் பரிந்துரை அல்லது உறுதிசெய்யப்பட்ட தெரிவுநிலையை வாக்குறுதி அளிக்காது.',
+      'llms.txt கோப்பு பொதுப் பக்கங்களைக் கண்டறிய உதவும் வரைபடம் மட்டுமே; தேடல் தரவரிசை, பரிந்துரை, செயற்கை நுண்ணறிவுப் பரிந்துரை அல்லது உறுதிசெய்யப்பட்ட தெரிவுநிலைக்கு உத்தரவாதம் அளிக்காது.',
     confidentialNotice:
       'மூல உரை வைக்கப்படுவதால், தொடக்கக் கட்டத்தில் இப்போது தேவையில்லாதவற்றை எழுதாதீர்கள் — கடவுச்சீட்டு எண், அடையாள எண் அல்லது கணக்கு விவரங்கள் போன்றவை.',
   },
@@ -822,7 +822,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'សេចក្ដីណែនាំនេះសរសេរជាភាសាខ្មែរ ប៉ុន្ដែការពិគ្រោះយោបល់ជាមួយមេធាវីធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ',
     discoveryNotice:
-      'ឯកសារ llms.txt នេះគ្រាន់តែជាផែនទីសម្រាប់រកទំព័រសាធារណៈ។ វាមិនសន្យាលំដាប់ក្នុងលទ្ធផលស្វែងរក ការណែនាំ ការណែនាំដោយ AI ឬភាពមើលឃើញដែលធានាទុកជាមុននៅទំព័រណាមួយឡើយ។',
+      'ឯកសារ llms.txt នេះគ្រាន់តែជាផែនទីសម្រាប់រកទំព័រសាធារណៈ។ វាមិនសន្យាលំដាប់ក្នុងលទ្ធផលស្វែងរក ការគាំទ្រ ការណែនាំដោយ AI ឬភាពមើលឃើញដែលធានាទុកជាមុននៅទំព័រណាមួយឡើយ។',
     confidentialNotice:
       'ដោយអត្ថបទដើមត្រូវបានរក្សាទុក សូមកុំសរសេរព័ត៌មានដែលមិនទាន់ចាំបាច់នៅដំណាក់កាលដំបូង ដូចជាលេខលិខិតឆ្លងដែន លេខអត្ដសញ្ញាណប័ណ្ណ ឬទិន្នន័យគណនីធនាគារ។',
   },
@@ -836,9 +836,9 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   sk: {
     consultationNotice:
-      'Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
+      'Tieto informácie sú napísané po slovensky, ale konzultácia s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
     discoveryNotice:
-      'Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje poradie vo vyhľadávaní, záštitu, odporúčanie umelej inteligencie ani zaručenú viditeľnosť.',
+      'Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje umiestnenie vo vyhľadávaní, schválenie, odporúčanie umelej inteligencie ani zaručenú viditeľnosť.',
     confidentialNotice:
       'Pretože sa pôvodný text uchováva, nepíšte v počiatočnej fáze to, čo zatiaľ nie je potrebné, napríklad číslo pasu, číslo dokladu alebo údaje o účte.',
   },

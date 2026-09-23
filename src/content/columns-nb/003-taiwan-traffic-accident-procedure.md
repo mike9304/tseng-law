@@ -47,7 +47,7 @@ Valget avviker etter avbrytelse av foreldelsen (時效中斷), kretsen av saksø
 
 ## Q4. Hvordan bedømmes det strafferettslige og sivilrettslige ansvar når begge sider har uaktsomhet?
 
-Strafferettslig ansvar kan først bedømmes når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenhengen som denne tilsidesettelsen har med motpartens tilskadekomst, er anerkjent. Alene fordi begge sider har uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom kroppsskade.
+Strafferettslig ansvar kan først bedømmes når tilsidesettelse av hver sides aktpågivenhetsplikt og den årsakssammenhengen som denne tilsidesettelsen har med motpartens tilskadekomst, er anerkjent. Bare fordi begge sider har utvist uaktsomhet (過失), oppstår det ikke automatisk ansvar for uaktsom kroppsskade.
 
 Sivilrettslig kan retten ifølge artikkel 217 i sivilloven (民法) nedsette eller ettergi erstatningen hvis den skadelidte har uaktsomhet ved skadens oppståen eller forøkelse (與有過失). Ble for eksempel anerkjente skader på 1.000.000 TWD (新臺幣) og den skadelidtes uaktsomhet vurdert til 50 %, kan beløpet før andre tilpasninger falle til 500.000 TWD.
 
@@ -109,7 +109,7 @@ Ifølge artikkel 504 i straffeprosessloven kan det imidlertid, etter at saken er
 
 Attest eller legelig uttalelse er nyttige til å vise pleiebehovet, men er alene ikke avgjørende grunnlag. Årsakssammenheng med ulykken, pleiebehov, faktisk ytelse, varighet og passende beløp skal forklares ved dokumenter.
 
-Selv hvis slektninger uten vederlag faktisk har ytt pleie, kan dette i passende saker vurderes som skade. Alene omstendigheten familiemessig pleie fører imidlertid ikke automatisk til anerkjennelse; pleiens innhold og varighet samt det vanlige omkostningsnivå medtas.
+Selv hvis slektninger uten vederlag faktisk har ytt pleie, kan dette i passende saker vurderes som skade. Bare det at pleien er ytt av familien, fører imidlertid ikke automatisk til anerkjennelse; pleiens innhold og varighet samt det vanlige omkostningsnivå medtas.
 
 ## Q10. Hvordan dokumenteres transportutgifter til behandling?
 
@@ -161,11 +161,11 @@ Retten betrakter tilskadekomst og behandling, vedvarende følge, lidelse og livs
 
 ## Q14. Kan arbeidsgiveren også sivilrettslig gjøres ansvarlig ved en ulykke under arbeidet?
 
-Artikkel 188 i sivilloven (民法) behandler de tilfellene der en ansatt under utførelsen av oppgaven tilføyer en annen rettsstridig skade. Alene arbeidstiden grunnlegger ikke automatisk oppgaveforbindelsen; forbindelsen mellom faktisk arbeid og ulykke skal undersøkes.
+Artikkel 188 i sivilloven (民法) behandler de tilfellene der en ansatt under utførelsen av oppgaven tilføyer en annen rettsstridig skade. Arbeidstiden alene knytter ikke automatisk skaden til utførelsen av oppgaven; forbindelsen mellom faktisk arbeid og ulykke skal undersøkes.
 
 Arbeidsgiveren kan innvende at vedkommende har iakttatt den nødvendige aktpågivenhet ved utvelgelse og tilsyn med den ansatte, eller at skaden heller ikke ved slik aktpågivenhet ville kunne unngås. Det kan undersøkes å gjøre arbeidsgiver og ansatt i fellesskap erstatningsansvarlige. Etter erleggelse av erstatningen kan arbeidsgiveren søke regress hos den ansatte.
 
-Beviser arbeidsgiveren de nevnte fritaksvilkår, slik at den skadelidte ikke mottar erstatning ifølge ledd 1, kan retten ifølge artikkel 188 ledd 2 i sivilloven (民法) under hensyn til arbeidsgiverens og den skadelidtes økonomiske stilling pålegge full eller delvis erstatning.
+Beviser arbeidsgiveren de nevnte fritaksvilkår, slik at den skadelidte ikke mottar erstatning ifølge ledd 1, kan retten ifølge artikkel 188 ledd 2 i sivilloven (民法) ut fra arbeidsgiverens og den skadelidtes økonomiske stilling pålegge full eller delvis erstatning.
 
 Fastleggelsen av de sivilrettslige kravsmotparter og det strafferettslige ansvar skal skilles. Det strafferettslige ansvar ifølge artikkel 284 i straffeloven (刑法) bedømmes etter tilsidesettelse av hver fysisk persons aktpågivenhetsplikt og årsakssammenhengen av denne tilsidesettelsen.
 
@@ -175,7 +175,7 @@ Forsikringsplikten ifølge artikkel 6 i loven om obligatorisk ansvarsforsikring 
 
 Ved eneulykker med 1 kjøretøy er dets fører som regel ikke ytelsesmottaker av den obligatoriske forsikringen for det kjøretøyet. Ved ulykker med flere kjøretøyer kan føreren imidlertid kreve ytelser hos den obligatoriske forsikringsgiveren for et annet involvert kjøretøy.
 
-Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør 200.000 TWD, invaliditetsytelser (失能) etter de lovbestemte 15 trinn 80.000 TWD–3.000.000, dødsfallsytelsen 3.000.000 TWD, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. 1 skadelidt og pr. 1 ulykke utgjør 3.200.000 TWD. For tidligere ulykker kan den tidligere norm gjelde.
+Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for ulykker fra og med 1. juli 2026. Taket for nødvendige og rimelige behandlingsutgifter ved tilskadekomst utgjør 200.000 TWD, invaliditetsytelser (失能) etter de lovbestemte 15 trinn 80.000 TWD–3.000.000, dødsfallsytelsen 3.000.000 TWD, og maksimum av dødsfall, invaliditet og behandlingsutgifter pr. skadelidt og pr. ulykke utgjør 3.200.000 TWD. For tidligere ulykker kan den tidligere norm gjelde.
 
 Ansvarsforsikring overfor tredjemann (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktsmessige valgprodukter. Den faktiske dekning avviker etter forsikret, tak, egenandel (自負額), unntak, uaktsomhet og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøkes et for et.
 
@@ -207,7 +207,7 @@ Viktige dele som vedrører motpartens følelser, slik som unnskyldning og trøst
 
 ​
 
-For forsikringsselskapet påvirker en ytterligere utgift på 500.000 TWD (新臺幣) eller 1.000.000 TWD i en enkelt sak neppe den samlede fortjenesten, for ulykkesparten kan den imidlertid avgjøre, om det oppstår en strafferegistrering (前科).
+For forsikringsselskapet påvirker en ytterligere utgift på 500.000 TWD (新臺幣) eller 1.000.000 TWD i en enkelt sak neppe den samlede fortjenesten, for ulykkesparten kan den imidlertid avgjøre om det oppstår en strafferegistrering (前科).
 
 ​
 
@@ -239,7 +239,7 @@ Straffen for uaktsom kroppsskade (過失傷害) varierer med omstendighetene; i 
 
 ​
 
-Ved omregning til bot fastsetter artikkel 41, 1. ledd, i straffeloven (刑法) omregningen av 1.000 TWD, 2.000 TWD eller 3.000 TWD (新臺幣) pr. 1 dag; beregner man på grunnlag av 1.000 TWD pr. dag, gir en straff på 3 måneder 3 × 30 × 1.000 = 90.000 TWD.
+Ved omregning til bot fastsetter artikkel 41, 1. ledd, i straffeloven (刑法) omregningen av 1.000 TWD, 2.000 TWD eller 3.000 TWD (新臺幣) pr. dag; beregner man på grunnlag av 1.000 TWD pr. dag, gir en straff på 3 måneder 3 × 30 × 1.000 = 90.000 TWD.
 
 ​
 
@@ -247,7 +247,7 @@ Ved omregning til bot fastsetter artikkel 41, 1. ledd, i straffeloven (刑法) o
 
 ​
 
-Ved uaktsom grov kroppsskade er det i enkelte dommer idømt omkring 4 måneder, og ved uaktsomt forvoldt død (過失致死) omkring 6 måneder. Det finnes ikke noe typisk eller garantert utfall.
+Ved uaktsom grov kroppsskade er det i enkelte dommer idømt omkring 4 måneders fengsel, og ved uaktsomt forvoldt død (過失致死) omkring 6 måneders fengsel. Det finnes ikke noe typisk eller garantert utfall.
 
 ​
 
@@ -307,7 +307,7 @@ Avgjørende er da advokatens omhu og oppriktighet.
 
 ​
 
-Viktig er at advokaten går nøye gjennom hvert kravpunkt i saken og forklarer hva som kan kreves ut fra de bevisene som finnes.
+Viktig er at advokaten går nøye gjennom hvert kravpunkt i saken og hjelper til med å kreve den erstatningen bevisene gir grunnlag for.
 
 ​
 
@@ -339,7 +339,7 @@ Ved den skadelidtes tilskadekomst eller dødsfall lider de selv eller familien l
 
 ​
 
-Mange skadevoldere verken ringer for å høre hvordan det går, eller besøker den skadelidte på sykehuset, og tenker at forsikringsselskapet vil ordne alt, så de selv uteblir. Da føles verken anger eller alvor.
+Mange skadevoldere verken ringer for å høre hvordan det går, eller besøker den skadelidte på sykehuset, og tenker at forsikringsselskapet vil ordne alt, så de selv uteblir. Da oppfatter den skadelidte verken anger eller oppriktighet hos skadevolderen.
 
 ​
 

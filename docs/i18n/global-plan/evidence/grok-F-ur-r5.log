@@ -1,0 +1,226 @@
+# WO-F-ur — round 5 fix log (Urdu)
+worktree: /Users/son7/Projects/tseng-law-fix-ur-r5   branch: fix/native-ur-r5-20260922
+fixer: Claude Opus 5 (1M)   date: 2026-09-23
+inputs: RULEBOOK-FIX.md (R1–R17) · ACCEPTED-ROUND.md · rounds/r5/ur-a.md (60 rows) · rounds/r5/ur-b.md (37 rows)
+files touched: src/content/columns-ur/001–018 (18) · src/data/international-guidance-south-asia.ts (urduGuidanceContent)
+  · src/data/international-guidance-answers.ts (ur) · src/data/international-guidance-team.ts (ur bios)
+  · src/data/international-inquiry-copy.ts (ur). No test file needed changing (no test pins a Urdu string I touched).
+
+## Summary
+rows applied: 94 of 97 (ur-a 57/60, ur-b 36/37, incl. all P1 except a1)
+rows skipped: 3 (a1, a11, b6) — reasons below
+rows applied in modified form: 2 (a15, a34) — the reviewer's exact wording would break a pinned gate or a standing rule
+
+--------------------------------------------------------------------
+## §1 Rows applied — ur-a (guidance pack, rows 4–13)
+4  about/2/p1  "کاغذات … وکیل سے بات کرنے ہوں گے" → "آپ کو اپنے کاغذات کے ساتھ … وکیل سے بات کرنی ہو گی" (kept the
+   disclosure marker چار مشورے کی زبان).
+5  columns/2/p1  "اپنے کاغذات وکیل سے الگ بات کریں" → "اپنے کاغذات کے بارے میں وکیل سے الگ بات کریں".
+6  disclaimer/3/p1  "درستگی یا تازگی نہیں کہتے" → "… کی ذمہ داری نہیں لیتے" (a warranty disclaimer, not a statement).
+7  missing کی before تصدیق — the reviewer named 6 places; I swept the pack and fixed 9:
+   south-asia: home/3/p0, pricing/1 heading, pricing/1/p0 (+ "اسے پھر تصدیق کرنا ہوتا ہے" → "اس کی دوبارہ تصدیق کرنی ہوتی ہے"),
+   contact/2/p1, faq "لاگت کیسے نکالی جاتی ہے؟", faq "درخواست کامیابی سے بھیجے جانے پر…";
+   answers.ur.pricing, answers.ur.contact; inquiry-copy.ur (dispatch-warning string).
+   Two of these ("ملاقات کا وقت تصدیق نہیں کرتے/کرتا") were fixed as "ملاقات کا وقت طے نہیں کرتے/کرتا" so the
+   not-an-appointment disclosure marker /ملاقات کا وقت/ in guidance-disclosure-parity.test.ts stays intact.
+8  about/0/p0  "جو … میں پڑھے" → "جنہوں نے … سے تعلیم حاصل کی".
+9  inquiry intro  "اپنے معاملے کا مختصر بیان کریں" → "اپنا معاملہ مختصراً بیان کریں".
+10 contact/1/p1  "چار کہی گئی زبانوں کے باہر" → "مذکورہ چار زبانوں کے علاوہ" (markers ترجمان / کسی اور زبان / ہر مقدمہ kept).
+12 home.intro  firm gender unified to masculine ("مدد کرتا ہے"), matching "دفتر … کرتا ہے" everywhere else in the pack.
+13 team bios  chang-fangyu.intro[0] dangling appositive → "… جہاں وہ … کے امور کے ذمہ دار رہے۔";
+   chang-rongxuan.intro[0] → "… جہاں توجہ انتظامی اور دیوانی معاملات پر رہی۔"
+   R12 re-checked: the ur bios already carry Urdu role/institution names (قانونی معاون, وزارتِ تعلیم کے قانونی امور کا شعبہ,
+   قانونی امداد فاؤنڈیشن تائچونگ شاخ, شراکت دار سرٹیفائیڈ پبلک اکاؤنٹنٹ) and R5 chrome is already localised
+   (label ٹیم / دفاتر, fullProfileLabel "مکمل پروفائل (انگریزی میں)") — nothing left to do there.
+
+## §2 Rows applied — ur-a (columns)
+2  (P1) 007 ground 1 of Art. 1052(1): "1. دوسری شادی" → "1. تعددِ ازدواج — پہلی شادی قائم رہتے ہوئے دوسری شادی (重婚)".
+3  ideographic full stop 。 → ۔ : 007 FAQ 2, 008 FAQ 1 (2 instances; swept all 18 files, no others).
+14 مشق (= "drill") → رائج (عملی) طریقہ, 7 instances: 001, 004×2, 005×2, 011, 017.
+16 "ملک کی خاص نوٹ ہے" → "ایک مخصوص ملک سے متعلق ہے", 4 instances: 001×1, 004×3.
+17 001 "رہائش والے جانب پر ٹیکس ہوتا ہے" → "رہائش کے علاقے میں ٹیکس کے تابع ہوتا ہے".
+18 001 ×2 (FAQ + body) "ان میں سے اگر کمپنی یا شاخ کا آجر … 1 سال سے کم ہو … ان میں سے ایک شرط"
+   → "اگر آجر (کمپنی یا شاخ) کے قیام کو 1 سال سے کم ہوا ہو تو اصولاً اسے مندرجہ ذیل میں سے ایک شرط پوری کرنی ہو گی".
+19 001 "محلِ ٹیکس اور گوشوارے کے طریقے میں مختلف ہیں" → "اس بات میں مختلف ہیں کہ ٹیکس کس چیز پر لگتا ہے اور گوشوارہ کیسے جمع ہوتا ہے".
+20 001 link label "کام کی اجازت کا دستی" → "کام کی اجازت کا ہدایت نامہ (SOP Manual)" (checker `english` still PASS).
+21 plural agreement چاہیے→چاہییں, 3 instances in 001 (آجر کی شرائط / مناسبت / اجازت کی مدت و شرائط).
+22 002 ×2 "کمپنی کے ضوابط … رکھ سکتا ہے" → "رکھ سکتے ہیں".
+23 002 چھیجتا → "کو نقصان پہنچاتا ہے" (also de-fronted the clause, row 59).
+24 002 "کمپنی قانونی طریقہ" → "کمپنی قانون کا وہ طریقہ".
+25 002 "قرض لکھ دینا گریز کریں" → "قرض لکھ دینے سے گریز کریں".
+26 002 ×2 債務超過: "ذمہ داریوں کا بڑھنا" → "ذمہ داریوں کا اثاثوں سے بڑھ جانا" (+ circular definition repaired).
+27 002 arm's-length is a requirement: "بیان ہو سکتے ہیں" → "بیان کرنے ہوں گے … جیسے یہ لین دین کسی آزاد تیسرے فریق کے ساتھ ہوا ہو".
+28 002 "ایک ہی لائن" → "ایک ہی تسلسل".
+29 003 "دستبردار ہوا گیا" → "جس حد تک صلح نامے میں دستبرداری اختیار کی گئی".
+30 003 "دفع کر سکتا ہے … معتبر احتیاط کی" → "دفاع کر سکتا ہے … معقول احتیاط برتی".
+31 003 "پیش کرنا خود بخود کافی ہونا نہیں" → "محض اسے پیش کر دینا ہی کافی نہیں ہوتا" (+ "ثبوت کا واحد طریقہ").
+32 003 "3*30*1,000=TWD 90,000" → "3 × 30 × 1,000 = TWD 90,000".
+33 003 "رابطہ کا صفحہ" → "رابطے کا صفحہ".
+35 003 "چاہے … ہو، …" → "اگر … ہو تو بھی …".
+36 003 "ایک رقم میں اندازے" → "یکمشت ادائیگی کے اندازے … کٹوتی کی جا سکتی ہے".
+37 003 "نمٹانے سے" → "نمٹانے کے تجربے کی بنیاد پر".
+38 003 چاہئیں → چاہییں (the file's only old spelling).
+39 oblique before a postposition: تیسرا فریق/ملک → تیسرے فریق/ملک, 12 instances (003×1, 004×8, 007×3);
+   the bare nominative uses (007 heading, 011 subject) correctly left alone.
+40 004 "معاہدہ … لیبل لگی ہوئی مثال ہے … واحد ماخذ ملک نہیں" → "آگے کوریا کو … ایک مثال کے طور پر الگ نشان زد کیا گیا ہے؛
+   وہ ہر غیر ملکی سرمایہ کار کا واحد ماخذ ملک نہیں۔"
+41 004 ×3 ایک → ایک جیسا/جیسی/جیسے.
+42 004 stacked verb-final comment clauses → "تاہم یہ فیصلہ کہ … ، اور یہ فیصلہ کہ … — دونوں الگ رکھنے چاہییں۔"
+43 004 hanging relative clause repaired ("تنظیم کی وہ شکل جو … ، اسے حقیقی عمل میں برقرار رکھنا بھی آسان ہوتا ہے").
+44 004 ×2 قلیل → قلیل مدتی (and طویل → طویل مدتی in the same pairs).
+45 005 ×2 space before colon removed ("پہلا ملازم:", "پابندیاں ہیں:").
+46 005 the country-scope disclaimer, already carried by the bold heading directly above, dropped from the answer's first
+   line; the answer now opens with the substance ("کوریائی بینک عام طور پر یہ مانگتے ہیں…").
+47 006 subject/case-marker split across two rendered paragraphs repaired **inside** the two blocks (block count is pinned
+   by the checker, so no merge): block 1 now closes ("… جناب لن کا واقعہ پیش آیا۔"), block 2 opens ("پولیس نے انہیں …").
+48 008 "کچھ بری تائیوانی کمپنیاں" → "تائیوان کی کچھ بے ضمیر کمپنیاں".
+49 008 "لکھا دیا" → "یہ لکھوایا".
+50 008 the wedged "یہ کہ …" complement re-ordered across the three existing blocks (count unchanged):
+   "مگر B انتظامیہ بدلنے کے بعد ہی بھانپ گیا تھا / کہ کمپنی … نکالنا چاہتی ہے، / یعنی یہ خطرہ اسے پہلے ہی نظر آ گیا تھا".
+51 009 mid-clause subject switch repaired ("… جھوٹی بات کرے، ملازم غلط فہمی میں آئے اور اسے نقصان کا اندیشہ ہو").
+52 انشورنس → بیمہ (003's established term), 4 instances: 009×3 (مزدور بیمہ 勞工保險 / صحت بیمہ / بیمے میں شامل نہ کرنے), 018×1.
+53 currency presentation: 003's doubled unit "TWD 200,000 نئے تائیوانی ڈالر" → "200,000 نئے تائیوانی ڈالر (TWD)";
+   007's outlier "30,000 TWD" ×3 → "30,000 نئے تائیوانی ڈالر (TWD)", matching 001/002/004/006. 003's later short
+   references keep "TWD N" after the spelled-out first mention, which is the normal Urdu convention.
+54 percent style unified to the 001 convention: 32 real percentages (003×1, 004×30, 018×1) "N%" → "N فیصد".
+   Percent-encoded bytes inside URLs were excluded programmatically and are untouched.
+55 慰撫金 one term, one gloss: 007 "ذہنی معاوضہ" and 016 "تسلی کا معاوضہ (慰撫金)" → "غیر مالی معاوضہ (慰撫金)",
+   matching the 3 existing occurrences in 003. (016's r4 fix was the gloss; the gloss is kept, only the head noun changes.)
+56 007 ×2 (FAQ + body) "… نفقہ پیدائش کی شرائط … مختلف ہیں" → "… نفقہ — یہ سب پیدا ہونے کی شرائط … میں مختلف ہیں".
+57 007 "نو زمروں کو … دکھائے تو" → "اگر مندرجہ ذیل نو زمرے … کے ساتھ دکھائے جائیں تو".
+58 stock-verb saturation: 193 چیک-forms across the 18 files reduced to 111 by rotating in جانچنا (+62) and پرکھنا (+30)
+   with matching gender/number endings (جانچ لیں / پرکھ لیں / جانچنا چاہیے / جانچنی چاہییں / جانچ کر …). The rotation is
+   deterministic (cycle of 6, two جانچ and one پرکھ per three kept) so no file becomes monotone; "چیک لسٹ" and the two
+   "…چیک کرے" section headings were excluded. Post-sweep mix: چیک 111 · جانچ 126 · پرکھ 32 · جائزہ 44.
+59 topic-comment resumptive "…، یہ [فعل]": 19 of the ~29 instances restructured to verb + کہ + clause
+   (001×1, 002×2, 003×1, 004×3, 007×2, 011×3, 012×1, 014×5, 018×3 incl. the Hague-Convention sentence the reviewer quoted).
+   The ~10 short ones are left: a briefly fronted embedded question resumed by یہ is idiomatic Urdu in moderation, and
+   converting every one of them would itself read mechanical.
+60 008 "(کوریا مثلاً)" → "(مثلاً کوریا)".
+
+## §3 Rows applied — ur-b
+1  (P1) 016 "دوہری ٹیکس کی ترمیم دیکھیں" → "دوہرے ٹیکس سے بچاؤ کے قواعد دیکھیں".
+2  (P1) 018 → "قانون کے تحت خصوصی شیئرز (特別股) اور ملازمین کے اسٹاک آپشن رکھے جا سکتے ہیں۔"
+3  (P1) 017 principal/contractor confusion → "سپردگی دینے والا، کام لینے والے (اجازت یافتہ کاروباری) کا … جانچ لے۔"
+4  018 currency unit restored: "کاروباری آمدنی 100,000,000 نئے تائیوانی ڈالر، یا مزدور بیمہ (勞工保險) میں شامل 100 ملازم ہیں".
+5  016 habitual residence: the second rendering → "بچے کی عادی رہائش (經常居所)", matching the first.
+7  015 "بلدیہ اندراج قبول نہ کرے" → "تو ممکن ہے کہ … قبول نہ کرے".
+8  013 "ممکن نہیں رہ سکتا" → "ممکن ہے کہ کمپنی کا اندراج نہ ہو سکے".
+9  014 "کاغذات کا نام … نہ ملے" → "ہو سکتا ہے کہ کاغذات پر لکھا نام … میل نہ کھائے".
+10 010 "استعمال نہ رہے" → "ہو سکتا ہے کہ … دستیاب نہ رہے".
+   (I swept all 18 files for further bare subjunctives reading as "may": every remaining one sits after
+   "مطلب یہ نہیں کہ" / "تاکہ" / a conditional, where the subjunctive is correct. b7–b10 were the real instances.)
+11 مقابل کرنا (not a verb) → "ملا کر دیکھیں / آپس میں ملا کر", all 6 instances: 011×1, 014×3, 017×2.
+12 011 ×3 (frontmatter FAQ, section 2, section 3) صابن gender + "ہو ہے" → "استثنا صرف اُس ہاتھ سے بنے ٹھوس صابن کو/تک … جو …".
+13 018 → "دوسرے شیئر ہولڈرز کے نصف سے زیادہ ووٹوں کی رضامندی چاہیے".
+14 018 English gapping → "… کے لیے زیادہ مناسب ہے، جبکہ … کے لیے کم موزوں ہے۔"
+15 017 Art. 23 predicate restored ("… کے مطابق … کی تبدیلی کے لیے مقررہ کاغذات کے ساتھ … منظوری لینی چاہیے۔").
+16 017 "انجمن کا نافذ رکن کارڈ" → "انجمن کے نافذ رکن کارڈ".
+17 017 "وزارتِ داخلہ امیگریشن کے موجودہ … کے انتظامی ہدایت" → "وزارتِ داخلہ کی امیگریشن ایجنسی کی، داخلے کی ممانعت سے متعلق موجودہ انتظامی ہدایت".
+18 014 "ملازم کی متبادل عملے کی دستیابی" → "ملازم کے بدلے عملہ ملنے کا امکان".
+19 014 "ملے ہو سکتے ہیں" → "عام واقفیت والا حصہ اور … حصہ آپس میں ملے ہوئے ہو سکتے ہیں".
+20 014 دعوی → دعویٰ, 4 instances (the rest of the file already spelled it correctly).
+21 011 "… کا جواب بھی ذمہ دار طے کرنا چاہیے" → "… کے جواب کا ذمہ دار بھی طے کرنا چاہیے".
+22 011 "آخری تیار شدہ" → "الگ الگ دعوے اور تیار شدہ آخری اشتہار، دونوں".
+23 011 plural verb → "یہ سب جانچنے چاہئیں".
+24 010 heading → "## 4. جم سے نقصان کی کون سی اقسام مانگی جا سکتی ہیں؟" (heading count unchanged).
+25 016 stray comma before بھی removed.
+26 016 "کون سا ملک کا" → "کس ملک کا".
+27 016 "کاغذی کاغذات" → "الیکٹرانک فائلیں اور کاغذی دستاویزات".
+28 European guillemets « » removed: 18 pairs (017×10, 018×3, 011×2, 016×1) → the set's own straight double quote,
+   escaped as \" inside the one YAML frontmatter answer (017 FAQ 1) exactly as 004's frontmatter already does.
+   This is now the single quote style across all 18 columns and the guidance pack (frontmatter check still PASS).
+29 016 基準日 noun stack → "قدر ناپنے کی تاریخ" / "زرِ مبادلہ کی تاریخ", all 4 remaining instances.
+30 016 "خود کی" → "اپنی".
+31 014 source word order → "یہ اطلاع پہلی بار اُس وقت نہ دی جائے جب ادائیگی کے بعد تنازع کھڑا ہو۔"
+32 012 → "اس مقدمے کے حقائق پر مبنی اس نتیجے کا مطلب یہ نہیں کہ …".
+33 018 stacked genitives → "ذیل میں سوچنے میں مدد دینے والی فرضی صورتیں ہیں؛" plus the "نیچے کے/کی" calque in
+   010, 014, 016 and 018 (5 instances) → ذیل کے / ذیل میں دیے گئے / ذیل کی.
+34 (P3) 010 "قانونی تبصرے کے عنوانات" → "قانونی تبصروں کے عنوانات".
+35 (P3) 016 "فہرست سے گرانا" → "فہرست میں درج نہ کرنا".
+36 (P3) 011 "جو ڈھانچہ چنیں" → "ڈھانچہ جو بھی چنا جائے".
+37 (P3) 015 "دفتر (地政事務所) خود جانا" → "دفتر تک خود جانا" (duplicate gloss in consecutive sentences dropped).
+
+## §4 Extra systemic sweeps (same pattern, instances the reviewer did not quote)
+- Oblique before a postposition (the ur-a verdict's third systemic pattern), beyond تیسرا فریق / رابطہ:
+  سرمایہ→سرمایے (42), بیمہ→بیمے (3), فیصلہ→فیصلے (1) when directly followed by کا/کے/کی/کو/سے/میں/پر/تک.
+  The files already used سرمایے 15× / بیمے 16× / فیصلے 50×, so this removes an internal inconsistency rather than
+  imposing a new choice. "سرمایہ کاری" and every nominative use are untouched.
+- Fullwidth CJK punctuation (R6b): swept all 18 files. The only remaining fullwidth character outside a Chinese gloss is
+  the ： inside 008's frontmatter `url:` value, which R16/ACCEPTED-ROUND keep.
+- Hangul outside `url:` values: 0. `[변호사 검수 필요]`: 0.
+- Gender of Wei Tseng re-checked after every edit: feminine throughout (وکیلہ، منتظمہ وکیلہ، طالبہ، چاہتی ہوں، بتاتی ہوں،
+  سمجھتی ہوں …). جناب لن (006), جناب B (008) and the male client stay male. No row was needed.
+
+--------------------------------------------------------------------
+## §5 Rows NOT applied
+a1  (P1) 003 "کچھ فیصلوں میں غفلت سے چوٹ پر تقریباً 3 ماہ قید ہوئی ہے؛ یہ نہ عام سزا ہے نہ یقینی نتیجہ" (and the 4/6-month line).
+    SKIPPED. The current wording is not a translation error — it is exactly what RULEBOOK-FIX R3 prescribes:
+    «003 "courts currently impose about 3 months" / "4 months" / "6 months" → "in some judgments about 3 months has been
+    imposed; there is no typical or guaranteed outcome" (keep the digits)». ACCEPTED-ROUND additionally forbids making a
+    result sentence positive again ("Requests to make a … result sentence positive → never"). This is why it is still
+    "unfixed since round 4": it is deliberately not to be fixed. See §6.
+a11 (P2) team bio "TWD 1.57M". SKIPPED — ACCEPTED-ROUND: "The pinned bio figure TWD 1.57M → keep byte-identical (a test
+    pins it)"; R12 repeats it. The Urdu bio is otherwise untouched.
+b6  (P2) "Delete every U+200B." SKIPPED, and this one is a genuine trap:
+    - the Korean source columns carry the *identical* ZWSP counts (003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3 = 87),
+    - scripts/check-column-translation.mjs checkBlocks() asserts `sourceZwsp === targetZwsp` and fails otherwise, and
+    - the ZWSP-only lines are paragraph blocks, so deleting them also changes `blocks` — which the work order pins.
+    Verified empirically before deciding (temp copy .tmp-ur/test-ur → FAIL). Left in place; the Urdu text is unchanged.
+    If the supervisor wants them gone, it has to be a source-side (columns/) change swept across all 45 locales.
+
+## §6 Where I think the reviewer is wrong (not applied)
+1. ur-a row 1 (P1). The reviewer reads the Urdu as "reversing the English source". It does diverge from the English —
+   on purpose. RULEBOOK-FIX R3 rewrote exactly these three sentences in every locale because a sentence telling a reader
+   that courts "generally impose about 3 months" reads as a predicted outcome under the Taiwan attorney advertising rules.
+   Restoring the English degree would undo a supervisor rule and an ACCEPTED-ROUND skip rule at once. Decision for the
+   supervisor, not for this lane. (Same reasoning applies to the identical sentences in ko/en/ja/zh-hant, which
+   RULEBOOK-FIX already lists as an open user decision.)
+2. ur-a row 34. The reviewer wants "زیادہ سے زیادہ معاوضہ" ("the maximum compensation available") restored because the
+   English says so. R3 explicitly replaces "pursue the maximum / highest possible compensation" with "pursue the
+   compensation the facts and evidence support". I applied only the grammatical half of the row — "اس کے پیچھے لگے" was
+   indeed not Urdu — and the sentence now reads "… اور حقائق و ثبوت سے جو معاوضہ ثابت ہو، اس کے حصول کے لیے کوشش کرے۔"
+   The superlative is deliberately not restored.
+3. ur-a row 15. The reviewer asks for the redundant gloss "(3 میں سے 1)" / "(3 میں سے 2)" to be deleted outright. Deleting
+   it removes the digits the checker counts against the Korean source: measured on a temp copy, that is
+   `numbers FAIL missing from translation` in 001, 002 (×8), 005, 016 and 018 — summary FAIL 13/18. I applied the row in
+   the form that fixes the machine feel and keeps the digits: "ایک تہائی (1/3)" / "دو تہائی (2/3)", 13 instances
+   (001×2, 002×9, 005×1, 016×2, 018×1). Verified: summary PASS 18/18.
+4. ur-b row 6 — see §5. The characters are in the source, and the gate pins them.
+5. Not an error, but a note for the next round: the ur-b verdict calls the U+200B lines "reported in r4 and still on disk".
+   They will stay on disk for as long as the Korean source has them; re-listing them each round costs the lane a P2 slot.
+
+--------------------------------------------------------------------
+## §7 Verify output (verbatim)
+
+$ cd /Users/son7/Projects/tseng-law-fix-ur-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ur --lang ur 2>&1 | tail -8
+hanzi          PASS   han=60
+numbers        WARN   extra in translation (14): 1×14
+                      sourceCount=25 targetCount=39
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ur src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      26   (25 at the moment the command above was captured; 26 once this log file itself was written)
+
+Pass criteria: checker summary PASS 18/18 ✓ · markers 0 ✓ · TSC_OK ✓ · tests 3202/3202 passed ✓.
+No number or date format change was rejected by the checker, so nothing had to be reverted to a previous form.
+
+Note on `git status`: 26 lines = 19 columns + 4 data files (mine) + this log + the two round-5 review files
+(ur-a.md / ur-b.md, untracked, supplied by the supervisor) + docs/i18n/global-plan/WO-F-ur.txt, which was already
+modified in the worktree before this lane started and which I did not touch. No git add/commit/push was run.

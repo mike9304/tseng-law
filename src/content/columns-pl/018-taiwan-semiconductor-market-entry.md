@@ -37,7 +37,7 @@ Zanim centrala zdecyduje o strukturze wejścia, może wewnętrznie wyjaśnić:
 | Oferty i zamówienia | Kto ostatecznie potwierdza cenę i termin, i dokąd sięga umocowanie odpowiedzialnego na Tajwanie? |
 | Towar i zapasy | Kto importuje, posiada i zarządza zapasami oraz obsługuje zwroty i wymianę towaru? |
 | Personel | Czy pracownicy centrali wyjeżdżają, czy zatrudnia się na Tajwanie, czy powierza się pracę wykonawcy zewnętrznemu? |
-| Instalacja i wsparcie techniczne | Kto jest zobowiązany do świadczenia wsparcia wobec klienta i obsługuje problemy pracy na miejscu? |
+| Instalacja i wsparcie techniczne | Kto jest zobowiązany do świadczenia wsparcia wobec klienta i rozwiązuje problemy powstające przy pracach na miejscu? |
 | Wpływy i koszty | Kto wystawia faktury i inkasuje, i jak rozlicza się koszty między centralą a organizacją na Tajwanie? |
 | Jakość i spory | Kto potwierdza wynik odbioru i przyjmuje reklamacje wad lub szkód? |
 
@@ -47,7 +47,7 @@ Zwłaszcza jeśli sprzedawca umowy sprzedaży nie jest przedsiębiorstwem, któr
 
 Planując wejście, przedsiębiorstwo półprzewodników musi oddzielić, jaka obecność powstaje na Tajwanie i jak organizuje się sprzedaż oraz serwis. Pierwszy punkt dotyczy osobowości prawnej, wymogów rejestracji i zakresu działalności; drugi — sposobu operowania, uprawnień i podziału odpowiedzialności.
 
-Główna różnica między tajwańską spółką zależną a tajwańskim oddziałem spółki zagranicznej polega na tym, czy ma osobowość prawną odrębną od spółki matki lub centrali. Dystrybucja i agencja to ustalenia transakcyjne i umowne i nie należy ich mylić z formą spółkową.
+Główna różnica między tajwańską spółką zależną a tajwańskim oddziałem spółki zagranicznej polega na tym, czy ma osobowość prawną odrębną od spółki matki lub centrali. Dystrybucja i agencja to ustalenia handlowe i umowne i nie należy ich mylić z formą spółkową.
 
 | Struktura | Podstawowe rozróżnienie | Co potwierdzić najpierw |
 |---|---|---|
@@ -71,7 +71,7 @@ Kapitał dzieli się na akcje. Co do zasady wymaganych jest co najmniej 2 akcjon
 
 Gdy spółka zagraniczna zakłada tajwańską spółkę zależną, nazwę co do zasady sprawdza się z góry i występuje o zezwolenie inwestycyjne do Departamentu Przeglądu Inwestycji Ministerstwa Gospodarki (經濟部投資審議司). Po zatwierdzeniu środki przelewa się, weryfikuje się przekazaną kwotę inwestycji, a biegły rewident (會計師) weryfikuje kapitał, następnie kończy się założenie i rejestrację podatkową.
 
-Natomiast aby założyć tajwański oddział zwykłej spółki zagranicznej, zezwolenie inwestycyjne Departamentu Przeglądu Inwestycji co do zasady nie jest wymagane; Departament Handlu Ministerstwa Gospodarki (經濟部商業發展署) obsługuje rejestrację oddziału i związane ustalenie kapitału. Nadal konieczne są wcześniejsze sprawdzenie nazwy, przelew kapitału obrotowego, weryfikacja kapitału i rejestracja podatkowa; kalendarz jest na ogół krótszy.
+Natomiast aby założyć tajwański oddział zwykłej spółki zagranicznej, zezwolenie inwestycyjne Departamentu Przeglądu Inwestycji co do zasady nie jest wymagane; Departament Handlu Ministerstwa Gospodarki (經濟部商業發展署) obsługuje rejestrację oddziału i związane ustalenie kapitału. Nadal konieczne są wcześniejsze sprawdzenie nazwy, przelew kapitału obrotowego, weryfikacja kapitału i rejestracja podatkowa; harmonogram jest na ogół krótszy.
 
 Powyższe porównuje tylko tryb rejestracji oddziału i spółki zależnej. Sam wybór określonej formy prawnej nie czyni transakcji legalną i nie zapobiega sporom.
 
@@ -115,4 +115,4 @@ Przejście etapami można zaplanować, ale trzeba też ponownie przejrzeć wyga�
 
 Jeśli planują Państwo sprzedawać, zarządzać zapasami, zapewniać wsparcie instalacji lub zatrudniać lokalnie na Tajwanie, prosimy najpierw uporządkować pracę, którą wykona centrala, i tę, która przypadnie organizacji na Tajwanie. Po potwierdzeniu tematów rozmowy i konfliktów interesów kancelaria objaśni potrzebne materiały i zakres usług, które mogą być świadczone.
 
-Przykład tematu: Rozmowa o strukturze wejścia na Tajwan przedsiębiorstwa półprzewodników. Przy pierwszym kontakcie prosimy podać nazwę spółki, kraj centrali, planowany produkt lub usługę, plan operacji na Tajwanie oraz język rozmowy spośród angielskiego, chińskiego (中文), japońskiego i koreańskiego. Materiały projektu poufnego i pełne umowy prosimy przesyłać dopiero po otrzymaniu dodatkowych wskazówek. Konsultacja odbywa się wyłącznie w tych czterech językach; termin odpowiedzi nie jest przyrzeczony, a zakres ewentualnego zlecenia trzeba potwierdzić w chwili kontaktu.
+Przykład tematu: Rozmowa o strukturze wejścia na Tajwan przedsiębiorstwa półprzewodników. Przy pierwszym kontakcie prosimy podać nazwę spółki, kraj centrali, planowany produkt lub usługę, plan operacji na Tajwanie oraz język rozmowy spośród angielskiego, chińskiego (中文), japońskiego i koreańskiego. Materiały projektu poufnego i pełne umowy prosimy przesyłać dopiero po otrzymaniu dodatkowych wskazówek. Konsultacja odbywa się wyłącznie w tych czterech językach; nie przyrzekamy terminu odpowiedzi, a zakres ewentualnego zlecenia trzeba potwierdzić w chwili kontaktu.

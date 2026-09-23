@@ -92,7 +92,7 @@ ir naujas vadovas, vos pradėjęs eiti pareigas,
 
 kad sumažintų personalo išlaidas,
 
-ėmė po vieną kviesti didelį atlyginimą gaunančius ir ilgai dirbančius darbuotojus pokalbiui
+ėmė po vieną kviesti didelį atlyginimą gaunančius ir ilgai dirbančius darbuotojus pokalbiui.
 
 Mano klientas, ponas B, bendrovėje A dirbo daugiau nei 10 metų
 
@@ -154,7 +154,7 @@ sumažino daugelio aukšto rango darbuotojų darbo užmokestį,
 
 o dalis darbuotojų šio elgesio neištvėrė
 
-ir išėjo savo noru
+ir išėjo savo noru.
 
 ​
 
@@ -174,7 +174,7 @@ ir galėjo įrodyti, kad pats savo noru neišėjo.
 
 Dėl to vėliau, turėdamas teisinį atstovavimą, B galėjo
 
-nustatyti įstatyme numatytą teisę į išeitinę išmoką;
+apginti įstatyme numatytą teisę į išeitinę išmoką;
 
 kiti išėję darbuotojai tos pačios teisės neįrodė.
 

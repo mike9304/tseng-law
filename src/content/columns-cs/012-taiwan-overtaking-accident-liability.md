@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Snímek vysvětlující posouzení odpovědnosti při nehodě při předjíždění na Tchaj-wanu a bezpečný postup předjíždění](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Když vozidlo vpředu jede pomalu, může předjíždění (超車) působit jako něco běžného, avšak jde o jízdní jednání se značným rizikem. Před zahájením předjíždění je třeba společně posoudit úsek silnice, dopravní situaci v obou směrech, pohyb vozidel vpředu a to, zda je prostor k bezpečnému návratu na původní jízdní pruh.
+Když vozidlo vpředu jede pomalu, může předjíždění (超車) působit jako něco běžného, avšak jde o manévr se značným rizikem. Před zahájením předjíždění je třeba společně posoudit úsek silnice, dopravní situaci v obou směrech, pohyb vozidel vpředu a to, zda je prostor k bezpečnému návratu na původní jízdní pruh.
 
 ## Podmínky předjíždění stanovené čl. 101 pravidel bezpečnosti silničního provozu (道路交通安全規則)
 
@@ -53,7 +53,7 @@ Před předjížděním je třeba nejprve ověřit, zda místo nebo dopravní si
 
 Dodržování čl. 101 je důležité, ale samo o sobě nezaručuje ani odvrácení nehody, ani určitý výsledek pozdějšího posudku nebo řízení. Řidiči musí ponechat dodatečnou bezpečnostní rezervu a přizpůsobit se situaci vpředu.
 
-Jako doplněk lze nahlédnout [ilustraci pravidel a postupu předjíždění](https://gonews.com.tw/car/daily/21934/). Protože jde o sekundární zdroj, při ověřování právních podmínek je třeba číst také aktuální oficiální předpisy.
+Jako doplněk lze nahlédnout do [ilustrace pravidel a postupu předjíždění](https://gonews.com.tw/car/daily/21934/). Protože jde o sekundární zdroj, při ověřování právních podmínek je třeba číst také aktuální oficiální předpisy.
 
 ---
 

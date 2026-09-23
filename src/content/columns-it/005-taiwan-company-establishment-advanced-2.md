@@ -29,7 +29,7 @@ Le domande e risposte seguenti, preparate dall’avvocata Wei Tseng (曾雋崴),
 
 In generale, le banche della Corea esigono che l’investitore si rechi **di persona** a una banca in Corea e trasferisca i fondi da un conto a proprio nome.
 
-Il trasferimento tramite home banking o per tramite di un familiare in Corea non è possibile.
+Il trasferimento tramite home banking o per il tramite di un familiare in Corea non è possibile.
 
 Inoltre, in conformità con la normativa coreana sul controllo dei cambi, la persona di nazionalità coreana che costituisce una persona giuridica estera o acquisisce quote deve depositare una «dichiarazione di investimento diretto all’estero». La dichiarazione deve essere registrata al momento del trasferimento del capitale alla persona giuridica taiwanese (臺灣法人); in mancanza, possono applicarsi sanzioni per violazione della normativa sui cambi.
 
@@ -37,9 +37,9 @@ Prima di trasferire il capitale (資本金匯款), si informi presso la sua banc
 
 **​**
 
-**2. Nel pagamento del capitale sociale, si può trasferire dollari di Taiwan (新臺幣, TWD) dal conto personale a Taiwan al conto preparatorio della società taiwanese?**
+**2. Nel pagamento del capitale sociale, si possono trasferire nuovi dollari taiwanesi (新臺幣, TWD) dal conto personale a Taiwan al conto preparatorio della società taiwanese?**
 
-È possibile, ma devono prodursi documenti che giustifichino l’origine dei fondi in dollari di Taiwan acquisiti a Taiwan.
+È possibile, ma devono prodursi documenti che giustifichino l’origine dei fondi in nuovi dollari taiwanesi acquisiti a Taiwan.
 
 Se si tratta per esempio di redditi salariali ottenuti a Taiwan, deve presentarsi una copia dell’attestazione di ritenuta alla fonte su quei redditi salariali (薪資所得的扣繳憑單影本).
 

@@ -1,5 +1,5 @@
 ---
-title: "Leverandører af halvlederkomponenter der træder ind i Taiwan: hvordan et datterselskab, en filial eller et agentur vurderes"
+title: "Leverandører af halvlederkomponenter på vej ind i Taiwan: hvordan et datterselskab, en filial eller et agentur vurderes"
 lastmod: "2026-09-17"
 date_display: "17. september 2026"
 read_time: "8 minutters læsetid"
@@ -15,11 +15,11 @@ faq:
     a: "En overgang i trin kan planlægges, men man skal også efterprøve ophør eller ændring af eksisterende aftaler, kundekontrakterne, lagrene, behandlingen af mangler og personalet."
 ---
 
-# Leverandører af halvlederkomponenter der træder ind i Taiwan: hvordan et datterselskab, en filial eller et agentur vurderes
+# Leverandører af halvlederkomponenter på vej ind i Taiwan: hvordan et datterselskab, en filial eller et agentur vurderes
 
 ![Redaktionelt foto til at vurdere indtrædelsesstrukturen i Taiwan for en halvledervirksomhed](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Når salget til taiwanske kunder begynder, kan det udenlandske hovedsæde møde forskellige krav om behandling af tilbud og kontrakter i Taiwan, om et lager til hasteudskiftning eller om indsættelse af personale til installation og vedligeholdelse. Da spørger man gerne først: »Rækker det at stifte et selskab i Taiwan (子公司) for at løse dette?«
+Når salget til taiwanske kunder begynder, kan det udenlandske hovedsæde møde forskellige krav om behandling af tilbud og kontrakter i Taiwan, om et lager til hasteudskiftning eller om indsættelse af personale til installation og vedligeholdelse. Da spørger man gerne først: »Rækker det at stifte et selskab i Taiwan (公司) for at løse dette?«
 
 Det, der først skal klarlægges, er, hvem i Taiwan der påtager sig hvad. Den struktur, der skal vurderes, ændrer sig efter, om det udenlandske hovedsæde fortsætter med at underskrive salgskontrakterne, et taiwansk selskab køber varer og sælger dem videre, eller det lokale personale kun yder teknisk støtte.
 
@@ -45,15 +45,15 @@ Navnlig hvis sælgeren i købekontrakten ikke er den virksomhed, der yder den te
 
 ## 2. Skelnen mellem datterselskab, filial og repræsentationskontor for et udenlandsk selskab i Taiwan
 
-Ved planlægningen af indtrædelsen skal halvledervirksomheden skille, hvilken tilstedeværelse i Taiwan der etableres, og hvordan salg og kundeservice organiseres. Det første punkt vedrører retssubjektiviteten, registreringskravene og virksomhedsfeltet; det andet handelsmåden, beføjelserne og fordelingen af ansvar.
+Ved planlægningen af indtrædelsen skal halvledervirksomheden skille, hvilken tilstedeværelse i Taiwan der etableres, og hvordan salg og kundeservice organiseres. Det første punkt vedrører retssubjektiviteten, registreringskravene og virksomhedsfeltet; det andet vedrører handelsmåden, beføjelserne og fordelingen af ansvar.
 
 Hovedforskellen mellem et taiwansk datterselskab (子公司) og en taiwansk filial (分公司) af et udenlandsk selskab er, om den har en retssubjektivitet adskilt fra moderselskabet eller hovedsædet. Distribution og agentur er transaktions- og kontraktstrukturer og må ikke blandes med selskabsformen.
 
-| Struktur | Grundskelnen | Hvad man først bør bekræfte |
+| Struktur | Grundskelnen | Hvad man først bør afklare |
 |---|---|---|
-| Taiwansk datterselskab (子公司) | Stiftes i overensstemmelse med Taiwans ret, med egen retssubjektivitet, og er et andet retssubjekt end det udenlandske moderselskab. | Fordi datterselskabet er en selvstændig juridisk person, skal det bekræftes, hvordan leveringen, tjenesterne, den teknologiske licens og omkostningsdelingen med moderselskabet organiseres. |
+| Taiwansk datterselskab (子公司) | Stiftes i overensstemmelse med Taiwans ret, med egen retssubjektivitet, og er et andet retssubjekt end det udenlandske moderselskab. | Fordi datterselskabet er en selvstændig juridisk person, skal det fastlægges, hvordan leveringen, tjenesterne, licensen til teknologien og omkostningsdelingen med moderselskabet organiseres. |
 | Taiwansk filial af et udenlandsk selskab (分公司) | Lovligt i Taiwan registreret filial, uden retssubjektivitet adskilt fra hovedsædet, anderledes end et særskilt stiftet datterselskab. | Filialen er en del af det udenlandske hovedsæde, ikke en selvstændig juridisk person, så hovedsædet bærer pligterne direkte. Bekræft omfanget af beføjelserne for filialens repræsentant og den interne fordeling af de ydre kontrakter, leveringen, dækningen af mangler og efterservicen. |
-| Repræsentationskontor i Taiwan (代表人辦事處) | Handelsstøttepunkt registreret i overensstemmelse med artikel 386 i selskabsloven; må i Taiwan ikke udøve handelsvirksomhed. | Fordi det ikke må udøve handelsvirksomhed, bekræftes om den faktiske virksomhed forbliver inden for det tilladte felt. |
+| Repræsentationskontor i Taiwan (代表人辦事處) | Handelsstøttepunkt registreret i overensstemmelse med artikel 386 i selskabsloven; må i Taiwan ikke udøve handelsvirksomhed. | Fordi det ikke må udøve handelsvirksomhed, efterprøves, om den faktiske virksomhed forbliver inden for det tilladte felt. |
 
 ## 3. Former for det taiwanske datterselskab: selskab med begrænset ansvar (有限公司) og aktieselskab (股份有限公司)
 
@@ -61,7 +61,7 @@ Hvis man beslutter at stifte en selvstændig juridisk person i Taiwan, skal man 
 
 ### Selskab med begrænset ansvar (有限公司): enklere ledelsesstruktur, men mere lukket overdragelse af andelene
 
-Det kan dannes med 1 eller flere fysiske personer (有限公司), eller med taiwanske eller udenlandske juridiske personer som selskabsdeltagere; deltagerne er i udgangspunktet ansvarlige indtil beløbet af deres indskud. Selskabet har fra 1 til 3 bestyrelsesmedlemmer, valgt blandt deltagerne. Deltagere, der ikke driver virksomheden, kan udøve tilsynsrettigheder, uden at der særskilt skal udpeges en tilsynsførende (監察人). Medmindre vedtægterne bestemmer andet, gælder 1 stemme pr. 1 deltager, så kontrollen ikke behøver at stemme overens med indskudsforholdet. Overdragelsen af indskuddet fra en almindelig deltager kræver i udgangspunktet samtykke fra mere end halvdelen af de øvriges stemmerettigheder; for et bestyrelsesmedlem, 2/3 eller mere. Det passer bedre til enkle deltagerforhold og en stabil kontrol end til en hyppig kapitalrejsning eller handelen med andele. Senere kan det omdannes til et aktieselskab (股份有限公司).
+Det kan dannes med 1 eller flere fysiske personer (有限公司), eller med taiwanske eller udenlandske juridiske personer som selskabsdeltagere; deltagerne er i udgangspunktet ansvarlige indtil beløbet af deres indskud. Selskabet har fra 1 til 3 bestyrelsesmedlemmer, valgt blandt deltagerne. Deltagere, der ikke driver virksomheden, kan udøve tilsynsrettigheder, uden at der særskilt skal udpeges en tilsynsførende (監察人). Medmindre vedtægterne bestemmer andet, gælder princippet 1 deltager, 1 stemme, så kontrollen ikke behøver at stemme overens med indskudsforholdet. Overdragelsen af indskuddet fra en almindelig deltager kræver i udgangspunktet samtykke fra mere end halvdelen af de øvriges stemmerettigheder; for et bestyrelsesmedlem, 2/3 eller mere. Det passer bedre til enkle deltagerforhold og en stabil kontrol end til en hyppig kapitalrejsning eller handelen med andele. Senere kan det omdannes til et aktieselskab (股份有限公司).
 
 ### Aktieselskab (股份有限公司): passende hvis man vil inddrage andre investorer, eller en notering er forudsigelig
 
@@ -79,17 +79,17 @@ Det foregående er en almen sammenligning af selskabsformer, ikke rådgivning om
 
 At fuldføre registreringen i Taiwan indebærer ikke, at personalet fra det udenlandske hovedsæde automatisk må arbejde i Taiwan. En udlænding, der arbejder i Taiwan, har brug for en retmæssig arbejdstilladelse og, ved et længere ophold, en opholdstilladelse. I udgangspunktet ansøger arbejdsgiveren om arbejdstilladelsen og den tilsvarende opholdstilladelse.
 
-Det er relativt enklere at erhverve arbejdstilladelsen for en leder af det taiwanske datterselskab eller af filialen af et udenlandsk selskab. Ansøgning om arbejdstilladelse (工作許可) til endnu en udlænding eller til flere kræver hos Ministeriet for Arbejde, efter branchen, grænser vedrørende kapital, omsætning eller andet. Hvis man forudser, at udenlandsk personale arbejder i Taiwan, skal man før stiftelsen af selskabet bekræfte, om den påtænkte kapital når den gældende grænse.
+Det er relativt enklere at erhverve arbejdstilladelsen for en leder af det taiwanske datterselskab eller af filialen af et udenlandsk selskab. Ansøgning om arbejdstilladelse (工作許可) til endnu en udlænding eller til flere kræver hos Ministeriet for Arbejde, efter branchen, grænser vedrørende kapital, omsætning eller andet. Hvis man forudser, at udenlandsk personale arbejder i Taiwan, skal man før stiftelsen af selskabet afklare, om den påtænkte kapital når den gældende grænse.
 
 ## 7. Strukturer der kan passe til forskellige faser af virksomhedens udvikling
 
-De følgende scenarier er hypotetiske og skal hjælpe overvejelsen; de fastslår ikke, om en given måde er retmæssig eller bedre.
+De følgende scenarier er hypotetiske og skal hjælpe overvejelsen; de garanterer ikke, at en given måde er retmæssig eller bedre.
 
 **Udenlandske virksomheder rettet mod den indledende eksport.** Hvis der i Taiwan endnu hverken er arbejdstagere eller lagre, og man vil efterprøve efterspørgslen via en uafhængig distributør, kan man først se leveringen, distributionsforholdet og virksomhedsfeltet i Taiwan. En distributionskontrakt alene løser ikke alle reguleringsspørgsmål i Taiwan.
 
 **Udenlandske virksomheder der udvider salget og den tekniske støtte i Taiwan.** Hvis man i Taiwan vil ansætte og fortsat lede lagre, opkrævning og kundestøtte, bør man konkret sammenligne datterselskab og filial og også efterprøve det kontraktlige ansvar, hovedsædets driftsmåde, skatterne og personalet.
 
-**Udenlandske virksomheder i markedsundersøgelsesfasen.** Hvis man før en salgsorganisation kun vil have informations- og kontaktfunktioner, kan et repræsentationskontor (代表人辦事處) vurderes. Hvis den faktiske plan omfatter salg af lagre eller arbejde på stedet, skal det særskilt bekræftes, om disse aktiviteter er tilladt.
+**Udenlandske virksomheder i markedsundersøgelsesfasen.** Hvis man før en salgsorganisation kun vil have informations- og kontaktfunktioner, kan et repræsentationskontor (代表人辦事處) vurderes. Hvis den faktiske plan omfatter salg af lagre eller arbejde på stedet, skal det særskilt afklares, om disse aktiviteter er tilladt.
 
 ## 8. Til den første samtale rækker et driftsoverblik; man behøver ikke straks at overdrage alle fortrolige bilag
 

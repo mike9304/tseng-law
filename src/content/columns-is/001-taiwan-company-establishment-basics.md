@@ -42,7 +42,7 @@ Við samanburð félagaforms skal því ekki aðeins horfa á umfang ábyrgðar,
 
 Tvísköttunarsamningurinn um tekjuskatt (所得稅協定) milli Taívan og Kóreu tók gildi 27. desember 2023 og gildir frá 1. janúar 2024. Séu skilyrði samningsins uppfyllt eru hámarkshlutföll upprunaríkisins fyrir arð, vexti og notkunarleyfisgjöld hvert um sig 10 %. Hagnaður af atvinnustarfsemi er að jafnaði skattlagður í því ríki þar sem viðkomandi er heimilisfastur, nema meðal annars þegar föst starfsstöð samkvæmt samningi (常設機構, PE) er til staðar á hinu svæðinu; raunveruleg framkvæmd starfseminnar verður þó fyrst að kanna.
 
-Til fastrar starfsstöðvar samkvæmt samningi geta talist fastar starfsstöðvar eins og stjórnunarstaður, útibú og skrifstofa, byggingarframkvæmdir sem vara lengur en 6 mánuði, þjónusta sem á hvaða 12 mánaða tímabili sem er nemur samanlagt meira en 183 dögum, og umboðsmenn sem ítrekað beita samningsumboði. Þessar 4 gerðir hafa hver um sig önnur skilyrði; sé fastur staður eða umboðsstarfsemi til staðar þarf athugun óháð þjónustudögunum. Talan 183 dagar ein og sér má því ekki ráða því hvort föst starfsstöð myndast eða hvort hagnaður af atvinnustarfsemi er skattlagður.
+Til fastrar starfsstöðvar samkvæmt samningi geta talist fastar starfsstöðvar eins og stjórnunarstaður, útibú og skrifstofa, byggingarframkvæmdir sem vara lengur en 6 mánuði, þjónusta sem á hvaða 12 mánaða tímabili sem er nemur samanlagt meira en 183 dögum, og umboðsmenn sem ítrekað beita samningsumboði. Þessar fjórar gerðir hafa hver um sig önnur skilyrði; sé fastur staður eða umboðsstarfsemi til staðar þarf athugun óháð þjónustudögunum. Talan 183 dagar ein og sér má því ekki ráða því hvort föst starfsstöð myndast eða hvort hagnaður af atvinnustarfsemi er skattlagður.
 
 ![](../images/001-taiwan-company-establishment-basics/img-02.jpg)
 
@@ -54,7 +54,7 @@ Stofnun dótturfélags á Taívan hefst að jafnaði á forathugun kínversks he
 
 2. Vottun og lögformleg staðfesting erlendra skjala, þar á meðal umboðsskjals (委任書), og, eftir atvikum, staðfesting erlendrar sendistöðvar Taívan (駐外館處驗證)
 
-3. Fjárfestingarumssókn til fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司) (ef við á)
+3. Fjárfestingarumsókn til fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司) (ef við á)
 
 4. Opnun undirbúningsreiknings félagsins (公司籌備處帳戶)
 
@@ -120,7 +120,7 @@ Almennt hlutfall söluskatts Taívan (營業稅) er 5 %; skil eru að jafnaði �
 
 Söluskattur og tekjuskattur atvinnufyrirtækja greinast eftir skattstofni og skilamáta; skattinn sem lagður er á veltu og skattinn sem lagður er á skattskyldar tekjur skal greina. Við greiðslu arðs, vaxta, notkunarleyfisgjalda eða þóknunar fyrir þjónustu til erlendra hluthafa eða tengdra félaga skal fyrir fram kanna eðli greiðslunnar og stöðu viðtakanda, innlendar reglur um staðgreiðslu og hugsanlega beitingu tvísköttunarsamningsins.
 
-Tvísköttunarsamningurinn um tekjuskatt Taívan–Kórea (所得稅協定) tók gildi 27. desember 2023 og gildir frá 1. janúar 2024; á vöxtum og notkunarleyfisgjöldum sem uppfylla skilyrðin gildir einnig hámarkshlutfall upprunaríkisins 10 %. Við athugun skattlagningarréttar yfir hagnaði af atvinnustarfsemi skulu allar ofangreindar 4 gerðir fastrar starfsstöðvar teknar til greina. Auk þjónustudaga skal skoða saman fasta starfsstöð, byggingartíma, samningsumboð umboðsmanns og raunverulega starfsemi.
+Tvísköttunarsamningurinn um tekjuskatt Taívan–Kórea (所得稅協定) tók gildi 27. desember 2023 og gildir frá 1. janúar 2024; á vöxtum og notkunarleyfisgjöldum sem uppfylla skilyrðin gildir einnig hámarkshlutfall upprunaríkisins 10 %. Við athugun skattlagningarréttar yfir hagnaði af atvinnustarfsemi skulu allar ofangreindar fjórar gerðir fastrar starfsstöðvar teknar til greina. Auk þjónustudaga skal skoða saman fasta starfsstöð, byggingartíma, samningsumboð umboðsmanns og raunverulega starfsemi.
 
 Takmarkað samningshlutfall gildir ekki sjálfkrafa af því einu að samningur sé til. Kanna skal hvort skattaðili sé heimilisfastur samkvæmt samningi og raunverulegur eigandi, lagalegt eðli tekna og vottorð um heimilisfesti (居住者證明) sem leggja skal fram, ásamt umsóknargögnum. Viðskiptaskipulag, samningur, reikningur, raunveruleg vinna og greiðslustreymi skulu haldast í samræmi; skilafresti og varðveisluskyldu fylgiskjala skal kanna sérstaklega.
 

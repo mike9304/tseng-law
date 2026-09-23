@@ -1,0 +1,147 @@
+# WO-F-sr — Serbian (Latin script) native-quality fix, campaign round 5
+
+worktree: /Users/son7/Projects/tseng-law-fix-sr-r5   branch: fix/native-sr-r5-20260922
+inputs: RULEBOOK-FIX.md (R1–R17) · ACCEPTED-ROUND.md · rounds/r5/sr-a.md (80 rows) · rounds/r5/sr-b.md (80 rows)
+scope touched: src/content/columns-sr/*.md (18 files), src/data/international-guidance-central-europe.ts
+  (serbianGuidanceContent), src/data/international-guidance-answers.ts (sr), src/data/international-guidance-team.ts (sr),
+  src/data/international-inquiry-copy.ts (sr). No test file needed a change (no test pinned a Serbian string I rewrote).
+No git add/commit/push was run.
+
+## 1. Rows applied / skipped
+
+### sr-a (guidance pack + columns 001–009): 79 of 80 rows applied, 1 skipped
+
+Applied in full: 1–22, 24–39, 41–47, 49–55, 57, 58, 60–80.
+
+SKIPPED (1 row):
+- a23 "TWD 1.57M" → "1,57 miliona TWD" — SKIPPED per ACCEPTED-ROUND ("keep byte-identical, a test pins it")
+  and R12. Confirmed pinned by src/data/__tests__/guidance-team-bios.test.ts:63 ("1.57 must not become 1,57").
+
+Applied with a deliberate deviation from the reviewer's suggested wording (checker constraint — the sr word-numeral
+lexicon in scripts/check-column-translation.mjs only parses jedan/jedna/jedno, dva/dve, tri and their ordinals;
+"četiri", "pet", "šest", "osam", "deset", "jedne", "jednog" are NOT parsed, so spelling them out deletes the digit
+from the target and the `numbers` check FAILs):
+- a40 — the missing object was supplied ("izrečena je kazna zatvora od oko 3 meseca / 4 meseca / od oko 6 meseci"),
+  but the digits 3/4/6 were kept as digits, not spelled out. R3 itself says "keep the digits" for exactly these
+  003 sentences.
+- a48 — "sami po sebi ne rešavaju tih 5 pitanja" (reviewer wanted "tih pet pitanja"; "pet" is unparseable).
+- a56 — "bio je zaposlen u društvu A više od 10 godina" (reviewer wanted "deset godina").
+- a59 — pleonasm removed ("Izostanak s posla (曠工) bez opravdanog razloga 3 dana uzastopno"); "3 dana" and
+  "6 dana" left as digits so the statutory enumeration stays internally consistent and parseable.
+- a30 (comparative sweep) — in 002 the fixed form "duže od jedne godine" made the checker FAIL 002
+  (missing "1" ×2, see §3 first run); the accepted form is "ne sme da traje duže od 1 godine". The *nego*+nominative
+  defect the reviewer flagged is fixed; only the numeral stayed a digit.
+
+### sr-b (columns 010–018): all 80 rows applied, 0 skipped
+
+Applied with a deliberate deviation:
+- b3 — "Društvo ima od 1 do 3 direktora, koji se biraju iz reda članova." (the invented "Upravni odbor" is gone,
+  as the reviewer asked; digits kept — "od jednog do tri" loses the 1 for the checker).
+- b10 — "promena upisa akcionara, članova upravnog odbora i odgovornog lica u registru društva". The garbled phrase
+  is fixed, but 董事 stays "član upravnog odbora" rather than the reviewer's "direktor", because 002/004/017 already
+  use "član upravnog odbora" throughout; one term per locale (R8) outweighs the local suggestion. In 018 the
+  reviewer's own rows (b3, b36) use "direktor" for the 有限公司 case, which has no board — that one is kept.
+- b14 — participle fixed ("kada je saznalo ko je učinilac"); "6 meseci" kept as a digit.
+- b15 — "može se zahtevati iznos do 5 puta veći od stvarne štete; pri grubom nehatu do 3 puta veći" (natural Serbian
+  multiple, digits preserved; "petostrukog/trostrukog" would delete 5 and 3).
+- b29 — heading rewritten and the list items given their subject ("Ako staž iznosi 3 meseca ili više, a manje od
+  godinu dana: 10 dana" …); statutory digits kept.
+- b37 — "od" supplied everywhere ("uslov minimalnog kapitala od 25.000.000 TWD", "uplaćeni kapital od 30.000.000 TWD").
+- b38 — applied where the checker allows: 012 "dva putnička vozila", "dva vozila ispred", "dva ili više vozila";
+  017 "jedno malo teretno vozilo", "starosti ne veće od dve godine"; 018 "dva ili više akcionara" and
+  "jedan član ima jedan glas" (the first attempt "svaki član ima po jedan glas" dropped one of the two 1s the
+  Korean source carries and FAILed the checker — see §3). Statutory digits (3 meseca, 3 godine, 6 meseci, 15/30/45 dana)
+  were left as digits.
+- b70 — "jedinica" → "vozila" applied; "8" and "5" kept as digits.
+- b80 — "često se jednim podneskom upisuje oko 10 delatnosti" (term 營業項目 = "delatnost" now, as in 013/017);
+  "desetak" would delete the 10.
+
+## 2. Systemic patterns swept (not only the quoted instance)
+
+| pattern | files | instances changed |
+|---|---|---|
+| a24/R6 German closing quote “ (U+201C) → Serbian ” | 004, 005, 008, 009, 013, 014, 015, 016, 017, 018 + guidance pack + inquiry copy | 38 (28 columns + 9 guidanceContent + 1 inquiryCopy). 0 U+201C left anywhere in sr. |
+| a32/b39 bare `, kao` + list → `kao što su` / `kao što je` | 001×4, 002×5, 003×2, 004×5, 006×1, 007×6, 010×1, 014×4, 016×6, 017×3 | 37 of 39 occurrences. The 2 left are not appositions: "zastupala je tužioca … kao punomoćnica u parnici" (010) and "…teško održati, kao samostalan opšti razlog" (007). |
+| a30 comparative *nego* + nominative → *od* + genitive | 001×4, 002×2, 005×1 | 7 (002's two became "duže od 1 godine", see §1) |
+| b-verdict overuse of *zajedno* for "taken together" | 001, 002, 003, 004, 007, 010, 011, 012, 014, 016, 018 | 47 rewritten (64 → 17). The 17 left are genuine comitative uses ("nasleđuje zajedno s naslednicima", "žive zajedno", "rade zajedno", "pojave se zajedno", "zajedno s trećim licem" …). Replacements vary: "sveobuhvatno", "u celini", "sagledati", "objediniti", "istovremeno", "uporedo", or simply "i …". |
+| b42 *niže* for "below" → *u nastavku* | 008, 010, 011, 013, 015 | 5 |
+| a-verdict bureaucratic *lica* for ordinary people in the story columns | 005×1, 006×2, 013×3 | 6 ("mnogi ljudi", "onima koji", "oni koji") |
+| a76 *s vezom na* (German *mit Bezug auf*) | guidance ×3, 001, 004 | 5 → "povezana sa Korejom / sa Korejom i Japanom" |
+| b47 "dokument opšte informacije obrazovne prirode" (3 stacked nominals) | 001, 004, 011, 017 | 4 → "…je opšteinformativnog i edukativnog karaktera i odnosi se na …" |
+| b46 "obim odgovarajućeg rada" / "odgovarajuća advokatkinja" (Korean 해당 calque) | 001, 011 | 2 closing paragraphs → "obim naših usluga" / "advokatkinja koja vodi predmet" |
+| b75 Croatian-leaning *razdoblje* where flagged | 013×2, 017×3 (incl. one link label) | 5 → *period*. 001/003/004 keep *razdoblje* (not flagged by sr-a, which reviewed those files). |
+| a9 決算申報 = *završni obračun*, not "zatvaranje razdoblja" | 002 (step-4 heading, body, link label) | 3 + "Razdoblje prijave" → "Rok za prijavu" |
+| a54 *poredcima* → *porecima* | 008, 009 | 2 |
+| b4 Croatian *ured* → *katastarska služba* | 015 | 2 |
+| b-verdict residual Croatianisms: *potrebuje* (018), *pretirano* (013), *popis* "list" (014), *trebao* (014) | 013, 014, 018 | 4 |
+| a80 *posao po posao* / *stvar po stvar* calque | 002×2, 003×1, 010×1 | 4 → "za svaki posao posebno" / "za svaku stvar posebno" |
+| a19 term split 會面交往 (services page said *viđanje*, 007 says *lični kontakt*) | guidance services + 007 | services page changed to "lični kontakt (會面交往)"; one name now site-wide |
+| a20 慰撫金 term split | 007 | → "naknada za nematerijalnu štetu (慰撫金)", matching 003 and 016 |
+| b43 "tvrđena funkcija" → "deklarisano dejstvo" (宣稱功能) | 011 | 4 (FAQ + body + PIF list + update paragraph) |
+| a62/a63/a5/a61/a64–a69 German verb calques in the guidance pack (*Pratimo*, *Podržavamo*, *sprovodimo klijente*, *Kod pitanja*, *trud*, *vodi oblasti*, *dira*, *smešten kod*, *služe oceni*) | guidanceContent.sr, guidanceAnswers.sr | 14 strings |
+| b52 hortative *neka budu od pomoći* (Korean closing formula) | 005, 013 | 2 → "nadamo se da će pomoći onima …" / "Nadam se da će …" |
+| b53 discourse *Dalje,* → *Osim toga,* | 013 | 2 |
+| b55 *videti* used for "assess" | 014, 016, 018 | 4 → "gleda se", "sagledati" |
+| b42/b67 "Sledeće uređuje…" / "Niže navedeni spisak" | 015, 016 | 2 → "U nastavku je izložen…", "Spisak … naveden u nastavku" |
+| 015: 營業項目 rendered *grana* instead of *delatnost* (b80 term) | 015 | 7 (kept "grana delatnosti" in the two generic "za svaku granu delatnosti" phrases, where it reads as "line of business") |
+
+Hard-rule checks after the sweep: consultation languages untouched (EN/中文/JA/KO only, all four denials still
+negative); attorney Wei Tseng feminine everywhere (no row required a change — both reviewers reported 0 gender
+findings); Chinese glosses untouched; no frontmatter key, `url`, `lastmod`, `featured_image`, image path, external
+link, block count, heading count, number or date changed; `[변호사 검수 필요]` = 0; no Hangul outside `url:` values;
+the only fullwidth colon left is inside 008's `url:` (R16 says it stays); GUIDANCE_LLMS_NOTICES.sr untouched, and the
+FAQ/privacy sentences its consultationNotice/confidentialNotice quote verbatim were not reworded.
+
+## 3. Verify (verbatim)
+
+```
+$ cd /Users/son7/Projects/tseng-law-fix-sr-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+$ node scripts/check-column-translation.mjs --dir src/content/columns-sr --lang sr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-sr src/data | wc -l
+0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+26
+```
+
+Two intermediate checker failures were hit and fixed during the run (both were the word-numeral lexicon, both are
+recorded in §1):
+- 002 `numbers FAIL missing from translation (2): 1×2` after "duže nego jedna godina" → "duže od jedne godine"
+  (source 1개월/1년 paragraph). Fixed by "duže od 1 godine".
+- 018 `numbers FAIL missing from translation (1): 1  sourceCount=25 targetCount=24` after "1 član ima 1 glas" →
+  "svaki član ima po jedan glas" (source 주주 1인 1표 carries two 1s). Fixed by "jedan član ima jedan glas".
+
+## 4. Things I believe the reviewer got wrong (NOT applied)
+
+1. sr-a row 23 — the reviewer asks for "1,57 miliona TWD". This is a standing campaign exception
+   (ACCEPTED-ROUND + R12) and a test pins the string; the row is not a Serbian defect but a product constraint.
+2. sr-a row 31 / sr-b rows 15, 24, 29, 38, 70, 80 and sr-a rows 40, 48, 56, 59 — the reviewer repeatedly asks for
+   small numerals to be spelled out. The requests are linguistically right, but `check-column-translation.mjs`
+   only parses jedan/jedna/jedno, dva/dve, tri and their ordinals for `sr`. Every other spelled-out numeral deletes
+   the digit from the target and fails the `numbers` check. I applied the spelling-out where the lexicon covers it
+   (1, 2, 3) and kept digits elsewhere, per the work order's "prefer the form the checker accepts".
+3. sr-b row 10 — "direktora" for 董事 in 017. Not applied as worded: 002/004/017 already use "član upravnog odbora"
+   for the same organ, and one term per locale (R8) wins over a local preference. The garbled sentence itself is fixed.
+4. sr-a row 18 — the reviewer supplies the author's aside "(Jesam li time odala koliko imam godina?)" as a full
+   replacement for "Ti saloni ostaju deo sećanja na jedan raniji period Tajvana." I applied it as given (it matches
+   EN/DE and the feminine *odala* is correct), but flag that this restores content that the Serbian file did not have
+   — if the supervisor prefers the Serbian file not to carry the aside, revert that one line.
+5. sr-a row 19 asks the *services page* to be changed to match 007's *lični kontakt*. That is a guidance-pack edit
+   driven by a column row; I made it (guidanceContent.sr.pages.services), so the term is now identical in both
+   surfaces. Noting it because it is the only row where a column review changed the pack.

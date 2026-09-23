@@ -1,5 +1,5 @@
 ---
-title: "Excepcions en què el treballador pot rebre indemnització per acomiadament tot i dimitir de forma voluntària"
+title: "Excepcions en què el treballador pot rebre indemnització per acomiadament tot i dimitir de manera voluntària"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13 de setembre de 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 
-# Excepcions en què el treballador pot rebre indemnització per acomiadament tot i dimitir de forma voluntària
+# Excepcions en què el treballador pot rebre indemnització per acomiadament tot i dimitir voluntàriament
 
 ![Imatge principal](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
@@ -29,9 +29,9 @@ Tanmateix, hi ha **casos excepcionals**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-En les situacions especials següents, tot i que el treballador dimiteixi de forma voluntària, l’ocupador li ha de pagar la indemnització per acomiadament (l’article 14 de la Llei de normes laborals, que aplica, en el que escaigui, l’article 17; 勞動基準法第14條):
+En les situacions especials següents, tot i que el treballador dimiteixi voluntàriament, l’ocupador li ha de pagar la indemnització per acomiadament (l’article 14 de la Llei de normes laborals, que aplica, en el que escaigui, l’article 17; 勞動基準法第14條):
 
-1. Quan l’ocupador, en celebrar el contracte de treball (勞動契約), fa una declaració de voluntat falsa (虛偽意思表示) de manera que el treballador creu per error i existeix el risc de patir un dany
+1. Quan l’ocupador, en celebrar el contracte de treball (勞動契約), fa una declaració de voluntat falsa (虛偽意思表示) de manera que indueix el treballador a error i el posa en risc de patir un dany
 
 (per exemple, quan l’ocupador diu al treballador que, en ingressar, l’enviarà a una sucursal a l’estranger que en realitat no existeix)
 
@@ -39,7 +39,7 @@ En les situacions especials següents, tot i que el treballador dimiteixi de for
 
 3. Quan el treball pactat en el contracte pot ser perjudicial per a la salut del treballador, s’ha demanat a l’ocupador que ho esmeni i no ho ha fet
 
-4. Quan l’ocupador, el seu representant o un altre treballador pateix una malaltia contagiosa de declaració obligatòria (法定傳染病), existeix risc de contagi als treballadors que treballen junts i això suposa un perill greu per a la salut del treballador
+4. Quan l’ocupador, el seu representant o un altre treballador pateix una malaltia contagiosa de declaració obligatòria (法定傳染病), existeix risc de contagi per als companys de feina d’aquesta persona i això suposa un perill greu per a la salut del treballador
 
 5. Quan l’ocupador no paga la remuneració (工作報酬) segons el contracte de treball, o no proporciona treball suficient al treballador la retribució del qual es calcula per peça (按件計酬)
 
@@ -55,7 +55,7 @@ No paga les hores extraordinàries (加班費).
 
 O no afilia el treballador a l’assegurança laboral (勞保) o a l’assegurança de salut (健保).
 
-En aquests casos, tot i que el treballador posi fi al contracte de treball de forma ordinària, l’ocupador li ha de pagar la indemnització per acomiadament.
+En aquests casos, tot i que el treballador posi fi al contracte de treball de manera ordinària, l’ocupador li ha de pagar la indemnització per acomiadament.
 
 ​
 
@@ -71,7 +71,7 @@ Per això el treballador ha de controlar bé el termini.
 
 ​
 
-És a dir, el criteri és la imputació.
+És a dir, el que decideix és a qui és imputable la falta.
 
 El dret de Taiwan distingeix si la falta és de l’ocupador.
 
@@ -87,7 +87,7 @@ Segons qui posi fi primer al contracte amb raó suficient, el resultat canvia.
 
 Es pot no pagar la indemnització o es pot exigir.
 
-Per això, en els conflictes laborals (勞資糾紛) de Taiwan el calendari compta.
+Per això, en els conflictes laborals (勞資糾紛) de Taiwan el moment en què s’actua és decisiu.
 
 El **temps** és molt important.
 

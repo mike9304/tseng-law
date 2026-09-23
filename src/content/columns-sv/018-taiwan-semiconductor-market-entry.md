@@ -65,7 +65,7 @@ Bolag med begränsat ansvar kan bildas av 1 eller flera fysiska personer, eller 
 
 ### Aktiebolag (股份有限公司): lämpligt för företag som vill ta in andra investerare eller har notering i sikte
 
-Kapitalet delas i aktier. I princip krävs minst 2 delägare, men staten eller en juridisk person kan bilda ensamt, och en utländsk juridisk person kan inneha 100 %. Aktier är i princip fritt överlåtbara, med lagstadgade undantag; säraktier och personaloptioner kan utformas enligt lag. Det passar därför företag som avser investeraranskaffning, andelshandel, aktieersättning till anställda eller framtida fusion, förvärv, börsnotering eller registrering i den förbörsliga handeln (興櫃); det gäller inte bara stora företag. I styrningshänseende kan ett onoterat bolag genom bolagsordningen avstå från styrelse och ha endast 1 eller 2 styrelseledamöter. Ett bolag med enbart staten eller en juridisk person som delägare kan genom bolagsordningen avstå från bolagsövervakare (監察人). Vidare behöver inte varje aktiebolag (股份有限公司) få årsredovisningen revisionsintygad. De främsta revisionströsklarna för ett vanligt bolag är inbetalt kapital 30.000.000 TWD, eller, även därunder, rörelseintäkt 100.000.000 TWD eller 100 arbetstagare anslutna till den taiwanesiska arbetstagarförsäkringen (勞工保險); bolag som har gjort en offentlig emission (公開發行公司) följer värdepappersregleringen.
+Kapitalet delas i aktier. I princip krävs minst 2 delägare, men staten eller en juridisk person kan bilda ensamt, och en utländsk juridisk person kan inneha 100 %. Aktier är i princip fritt överlåtbara, med lagstadgade undantag; aktier av särskilt slag och personaloptioner kan utformas enligt lag. Det passar därför företag som avser investeraranskaffning, andelshandel, aktieersättning till anställda eller framtida fusion, förvärv, börsnotering eller registrering i den förbörsliga handeln (興櫃); det gäller inte bara stora företag. I styrningshänseende kan ett bolag som inte har gjort en offentlig emission genom bolagsordningen avstå från styrelse och ha endast 1 eller 2 styrelseledamöter. Ett bolag med enbart staten eller en juridisk person som delägare kan genom bolagsordningen avstå från bolagsövervakare (監察人). Vidare behöver inte varje aktiebolag (股份有限公司) få årsredovisningen revisionsintygad. De främsta revisionströsklarna för ett vanligt bolag är inbetalt kapital 30.000.000 TWD, eller, även därunder, rörelseintäkt 100.000.000 TWD eller 100 arbetstagare anslutna till den taiwanesiska arbetstagarförsäkringen (勞工保險); bolag som har gjort en offentlig emission (公開發行公司) följer värdepappersregleringen.
 
 ## 4. Förfarandena för filial och dotterbolag skiljer sig; endast bildande av dotterbolag går genom ekonomiministeriets investeringsprövning
 
@@ -83,7 +83,7 @@ För en företagsledare i ett utländskt bolags taiwanesiska dotterbolag eller f
 
 ## 7. Strukturer att jämföra efter verksamhetens utvecklingssteg
 
-Följande är hypotetiska exempel för att underlätta tanken; det är inte en slutsats som slår fast att ett visst sätt är lagligt eller bättre.
+Följande är hypotetiska exempel för att underlätta tanken; det garanterar inte att ett visst sätt är lagligt eller att det är att föredra.
 
 **Utländska företag med tidig export i centrum.** Om det ännu inte finns anställda eller lager i Taiwan och du vill pröva efterfrågan via en oberoende distributör kan du börja med att se på leverans, distributionsförhållande och verksamhetsomfång i Taiwan. Ett distributionsavtal undanröjer dock inte alla regleringsfrågor i Taiwan.
 

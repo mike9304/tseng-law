@@ -49,7 +49,7 @@ Att sådana sakkunnigresultat förekommer i vissa ärenden betyder inte att ett 
 
 ## Punkter att kontrollera när olycksansvaret bedöms
 
-Innan omkörning måste man först kontrollera om platsen eller trafikläget faller under omkörningsförbud. Om förfarandet för samma körfält gäller, ge det föreskrivna tut- eller helljustecknet utan att tvinga fordonet framför att vika, vänta på ett tydligt tecken på företräde och slutför omkörningen med tillräckligt mellanrum och ett säkert återgångsavstånd.
+Innan omkörning måste man först kontrollera om platsen eller trafikläget faller under omkörningsförbud. Om förfarandet för samma körfält gäller, ge det föreskrivna tut- eller helljustecknet utan att tvinga fordonet framför att vika, vänta på ett tydligt tecken på att fordonet framför lämnar företräde och slutför omkörningen med tillräckligt mellanrum och ett säkert återgångsavstånd.
 
 Att följa artikel 101 är viktigt, men det innebär i sig varken att olyckan undviks eller att en senare sakkunnigbedömning eller rättegång får ett visst utfall. Förare måste hålla extra säkerhetsmarginal och anpassa sig till läget framför.
 

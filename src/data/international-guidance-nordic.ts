@@ -71,7 +71,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Granskad av advokat Wei Tseng',
     columnsOriginalLanguageBadge: 'Originalspråk',
     columnsOriginalLanguageNote:
-      'Följande artiklar finns ännu inte på svenska. Listan stannar på originalspråket och öppnar den aktuella språksidan; innehållet översätts inte automatiskt.',
+      'Följande artiklar finns ännu inte på svenska. Listan ligger kvar på originalspråket och öppnar den aktuella språksidan; innehållet översätts inte automatiskt.',
     imageBandAlt: 'Traditionell taiwanesisk sanheyuan (三合院) och en modern paviljong i dagsljus',
     videoPauseLabel: 'Pausa videon',
     videoPlayLabel: 'Spela videon',
@@ -194,7 +194,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Grundande och uppbyggnad',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) grundades 2016 av advokater som studerat vid National Taiwan University (國立臺灣大學). Det kinesiska namnet 昊鼎 förenar tecknet 昊 (”den vida himlen”) med 鼎 (”fast grund”) och beskriver byråns inriktning sedan grundandet.',
-            'Vi har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Kontoret i Kaohsiung är inriktat på företagsledning och behandlar civil-, straff- och förvaltningsrättsliga tvister. Kontoret i Taichung behandlar byggärenden, immaterialrätt och ärenden med anknytning till Korea och Japan. Kontoret i Pingtung öppnades 2017 för det lokala behovet.',
+            'Vi har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Kontoret i Kaohsiung är inriktat på bolagsstyrning och behandlar civil-, straff- och förvaltningsrättsliga tvister. Kontoret i Taichung behandlar byggärenden, immaterialrätt och ärenden med anknytning till Korea och Japan. Kontoret i Pingtung öppnades 2017 för att ge juridiskt stöd anpassat till regionen.',
             'Vid sidan av advokatverksamheten finns sedan 2020 också Hovering Accounting Office, som erbjuder bokföring och skatteplanering för företagare och förmögna privatpersoner.',
           ],
         },
@@ -568,7 +568,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
   pages: {
     home: {
       eyebrow: 'VEJLEDNINGER',
-      title: 'Juridiske tjenester i Taiwan — vejledninger på dansk',
+      title: 'Juridiske ydelser i Taiwan — vejledninger på dansk',
       description:
         'Almindelige forklaringer på dansk om arbejdsområdet hos Hovering International Law Firm i Taiwan, rådgivningssprogene og den første kontakt.',
       intro:
@@ -585,7 +585,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sidens sprog og rådgivningssproget er ikke det samme',
           paragraphs: [
             'Denne side er skrevet på dansk, men rådgivningen med en advokat foregår kun på de fire rådgivningssprog engelsk, kinesisk (中文), japansk og koreansk. At læse vejledningerne på dansk betyder ikke, at samtalen med advokaten foregår på dansk.',
-            'Vi lover ikke en tolk, en svartid eller en tid via denne side. Hvis du ikke behersker noget af de fire sprog, forklarer siden »Kontakt«, hvordan vi prøver en kommunikationsvej.',
+            'Vi lover ikke en tolk, en svartid eller en tid via denne side. Hvis du ikke behersker nogen af de fire sprog, forklarer siden »Kontakt«, hvordan vi prøver en kommunikationsvej.',
           ],
         },
         {
@@ -662,7 +662,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Omfang og dets bekræftelse',
+          heading: 'Bekræftelse af omfanget',
           paragraphs: [
             'Kontoret arbejder efter taiwansk ret og behandler sager inden for de nævnte områder. Omfanget af hver sag bekræftes særskilt, efter at en advokat har gennemgået din meddelelse.',
             'Opholdsstatus, arbejdstilladelse og sammenlignelige spørgsmål vurderes ud fra dokumenterne og personens situation, ikke ud fra statsborgerskabet. Hvis en del af din sag vedrører sådanne spørgsmål, så nævn det, når du kontakter os. Denne side lover hverken et resultat eller en svartid.',
@@ -751,7 +751,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Sådan kontakter du kontoret',
       description:
-        'Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis du ikke behersker noget af de fire sprog, og hvad denne side ikke lover.',
+        'Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis du ikke behersker nogen af de fire sprog, og hvad denne side ikke lover.',
       intro:
         'Før du skriver til os, bør du holde følgende tre punkter adskilt. De blandes ofte, men betyder forskellige ting.',
       sections: [
@@ -767,7 +767,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvis du ikke behersker noget af de fire rådgivningssprog',
+          heading: 'Hvis du ikke behersker nogen af de fire rådgivningssprog',
           paragraphs: [
             'I kontaktformularen kan du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
             'Det er kun en afklaring, ikke et løfte. Vi lover ikke en tolk og ikke rådgivning på dansk eller på et andet sprog end de fire nævnte, og vi tager ikke enhver sag.',
@@ -821,7 +821,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
             'Nej. Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversættelse er noget andet: den oprindelige tekst, du skriver, gemmes som den er og oversættes ikke automatisk.',
         },
         {
-          question: 'Hvad hvis jeg ikke behersker noget af de fire sprog?',
+          question: 'Hvad hvis jeg ikke behersker nogen af de fire sprog?',
           answer:
             'Vælg ved afsendelsen »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej, men rådgivning på et andet sprog loves ikke. Det er kun en afklaring, ikke et løfte om, at vi kan arbejde på et andet sprog.',
         },
@@ -895,8 +895,8 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Underretning og modtagelsesnummer',
           paragraphs: [
-            'Når en anmodning er sendt, underretter systemet kontoret. Er kontorets modtagelse af underretningen endnu ikke bekræftet, forbliver din tekst gemt og går ikke tabt.',
-            'Modtagelsesnummeret bruges til at finde din anmodning hos os. Det vises efter gemningen; du kan angive det ved en ny kontakt.',
+            'Når en anmodning er sendt, underretter systemet kontoret. Hvis det endnu ikke er bekræftet, at kontoret har modtaget underretningen, forbliver din tekst gemt og går ikke tabt.',
+            'Modtagelsesnummeret bruges til at finde din anmodning hos os. Det vises, når anmodningen er gemt, og du kan angive det ved en ny kontakt.',
           ],
         },
         {
@@ -909,7 +909,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lagringssted og leverandører',
           paragraphs: [
-            'Denne hjemmeside drives hos Vercel, og din indsendelse gemmes i et ikke-offentligt lager hos denne tjeneste. E-mails sendes via den e-mailtjeneste, kontoret bruger.',
+            'Denne hjemmeside ligger hos Vercel, og din indsendelse gemmes i et ikke-offentligt lager hos denne tjeneste. E-mails sendes via den e-mailtjeneste, kontoret bruger.',
             'Enkelte leverandørers servere kan stå uden for Taiwan, så dine data kan gemmes og behandles dér. Når lagringsformålet er opfyldt, slettes dataene uden forsinkelse; oplysninger, der skal opbevares efter gældende regler, opbevares i den periode. Forespørgsler om persondata sendes til wei@hoveringlaw.com.tw.',
           ],
         },
@@ -976,7 +976,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvad en artikel kan bruges til som orientering',
+          heading: 'Hvad en artikel kan bruges til',
           paragraphs: [
             'Artikler er almindelige oplysninger på tidspunktet for offentliggørelsen. Regler og deres anvendelse kan ændre sig, og en artikel indeholder ikke alle omstændigheder i din sag.',
             'Træf derfor ikke en beslutning i en konkret sag alene ud fra en artikel. Brug den til overblik og drøft dine dokumenter særskilt med en advokat; denne side er ikke selve rådgivningen.',
@@ -1170,7 +1170,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Stiftelse og oppbygning',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) ble stiftet i 2016 av advokater som har studert ved National Taiwan University (國立臺灣大學). Det kinesiske navnet 昊鼎 forener tegnet 昊 («den vide himmelen») med 鼎 («det faste grunnlaget») og beskriver kontorets retning helt siden stiftelsen.',
-            'Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung er innrettet på virksomhetsledelse og behandler sivile, strafferettslige og forvaltningsrettslige tvister. Kontoret i Taichung behandler byggesaker, immaterialrett og saker med tilknytning til Korea og Japan. Kontoret i Pingtung ble åpnet i 2017 for det lokale behovet.',
+            'Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung er innrettet på eierstyring og selskapsledelse og behandler sivile, strafferettslige og forvaltningsrettslige tvister. Kontoret i Taichung behandler byggesaker, immaterialrett og saker med tilknytning til Korea og Japan. Kontoret i Pingtung ble åpnet i 2017 for å gi juridisk bistand tilpasset regionen.',
             'Ved siden av advokatvirksomheten har vi siden 2020 også Hovering Accounting Office, som tilbyr bokføring og skatteplanlegging for næringsdrivende og formuende privatpersoner.',
           ],
         },
@@ -1184,7 +1184,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Når du kontakter oss',
           paragraphs: [
-            'Når sammendraget ditt er kommet inn, vurderer en advokat innholdet og tar deretter opp mulig arbeidsomfang, dokumenter som fortsatt trengs, og de neste trinnene. I skatte- og bokføringsspørsmål kan kontoret arbeide sammen med regnskapsavdelingen i én og samme sak.',
+            'Når sammendraget ditt er kommet inn, vurderer en advokat innholdet og tar deretter opp mulig arbeidsomfang, dokumenter som fortsatt trengs, og de neste trinnene. I skatte- og bokføringsspørsmål kan kontoret arbeide sammen med Hovering Accounting Office i én og samme sak.',
             'Utfallet i den enkelte sak avhenger av fakta og av dokumentene som finnes; vi lover ikke noe resultat. Trenger du et bindende svar for din situasjon, må dokumentene drøftes med en advokat på et av de fire rådgivningsspråkene.',
           ],
         },
@@ -1598,7 +1598,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Sijoittaminen ja yhtiön perustaminen Taiwanissa',
           paragraphs: [
-            'Avustamme ulkomaisia sijoittajia ja yrityksiä yhtiön perustamisessa ja toiminnassa Taiwanissa: oikeudellisen muodon valinta, asiakirjojen valmistelu ja jättäminen, pääomansijoitus, pankkiasiat, toimitilan tarkastus sekä toimialavaatimukset. Tuemme myös kirjanpitoa ja veroja, jotka syntyvät perustamisesta ja toiminnasta Taiwanissa.',
+            'Avustamme ulkomaisia sijoittajia ja yrityksiä yhtiön perustamisessa ja toiminnassa Taiwanissa: oikeudellisen muodon valinta, asiakirjojen valmistelu ja jättäminen, pääomansijoitus, pankkiasiat, toimitilan tarkastus sekä toimialavaatimukset. Tuemme teitä myös perustamisesta ja Taiwanissa toimimisesta aiheutuvissa kirjanpito- ja veroasioissa.',
             'Menettelyn vaiheet ja kesto vaihtelevat yhtiömuodon, sijoittajan, toimialan, pankin ja jo olemassa olevien asiakirjojen mukaan. Yhtiön perustaminen ei yksin johda oleskelulupaan (居留) tai työlupaan (工作許可): ne ovat erillisiä menettelyjä, jotka arvioidaan henkilön tilanteen mukaan.',
           ],
         },
@@ -1657,8 +1657,8 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perustaminen ja rakentuminen',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) perustivat vuonna 2016 asianajajat, jotka ovat opiskelleet National Taiwan Universityssa (國立臺灣大學). Kiinankielinen nimi 昊鼎 yhdistää merkin 昊 (”laaja taivas”) merkkiin 鼎 (”luja perusta”) ja kuvaa toimiston suuntaa perustamisesta lähtien.',
-            'Meillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Kaohsiungin toimisto keskittyy yhtiöoikeuteen ja yritysten hallintoon ja käsittelee siviili-, rikos- ja hallinto-oikeudellisia riitoja. Taichungin toimisto käsittelee rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Pingtungin toimisto avattiin vuonna 2017 paikallista tarvetta varten.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) perustivat vuonna 2016 asianajajat, jotka ovat opiskelleet National Taiwan Universityssä (國立臺灣大學). Kiinankielinen nimi 昊鼎 yhdistää merkin 昊 (”laaja taivas”) merkkiin 鼎 (”luja perusta”) ja kuvaa toimiston suuntaa perustamisesta lähtien.',
+            'Meillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Kaohsiungin toimisto keskittyy yhtiöiden hallinnointiin ja käsittelee siviili-, rikos- ja hallinto-oikeudellisia riitoja. Taichungin toimisto käsittelee rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Pingtungin toimisto avattiin vuonna 2017, jotta alueen päämiehiä voidaan palvella paikan päällä.',
             'Asianajotyön rinnalla on vuodesta 2020 myös Hovering Accounting Office, joka tarjoaa kirjanpitoa ja verosuunnittelua yrittäjille ja varakkaille yksityishenkilöille.',
           ],
         },
@@ -1710,7 +1710,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Neuvonta voi olla maksullinen',
           paragraphs: [
-            'Neuvonta asianajajan kanssa voi olla maksullinen palvelu. Tämä sivu ei sano, että ensimmäinen keskustelu olisi maksuton, eikä mitään osaa saa lukea niin.',
+            'Neuvonta asianajajan kanssa voi olla maksullinen palvelu. Tämä sivu ei tarkoita, että ensimmäinen keskustelu olisi maksuton, eikä mitään kohtaa saa lukea niin.',
             'Jos neuvonta on maksullinen, määrä ja maksutapa ilmoitetaan ennen sen tapahtumista.',
           ],
         },
@@ -1814,7 +1814,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Miten kulut lasketaan?',
           answer:
-            'Ensin vahvistetaan työn laajuus, sen jälkeen määrä ja laskentatapa vahvistetaan teidän kanssanne ennen työn alkamista. Tämä sivu ei ilmoita lukuja eikä sano, että ensimmäinen keskustelu olisi maksuton.',
+            'Ensin vahvistetaan työn laajuus, sen jälkeen määrä ja laskentatapa vahvistetaan teidän kanssanne ennen työn alkamista. Tämä sivu ei ilmoita lukuja eikä tarkoita, että ensimmäinen keskustelu olisi maksuton.',
         },
         {
           question: 'Entä jos asianne on hyvin kiireellinen?',

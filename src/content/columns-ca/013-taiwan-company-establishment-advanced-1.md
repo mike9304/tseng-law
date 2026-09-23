@@ -81,7 +81,7 @@ Pot esmentar experiències laborals diverses, inclòs el treball a temps parcial
 
 Pot explicar-les amb detall de manera que pugui convèncer els revisors.
 
-Sobre aquest punt, convé consultar de forma suficient amb una advocada o un advocat de Taiwan.
+Sobre aquest punt, convé comentar aquest punt a fons amb una advocada o un advocat de Taiwan.
 
 ​
 
@@ -95,7 +95,7 @@ A més, en els contractes d’arrendament de locals a Taiwan el propietari sol c
 
 Es tracta d’un període exempt de renda, i convé negociar-lo.
 
-No és fàcil que un estranger arrendï un local, i com que el dipòsit de garantia a Taiwan és relativament baix (per regla general 2 mesos) i la protecció del propietari és escassa.
+No és fàcil que un estranger arrendi un local. Com que el dipòsit de garantia a Taiwan és relativament baix (per regla general, 2 mesos), la protecció del propietari és escassa.
 
 Els propietaris es resisteixen a arrendar a estrangers.
 

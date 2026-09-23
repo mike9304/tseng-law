@@ -1,0 +1,115 @@
+WO-F-pt r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pt-r5
+date: 2026-09-23
+No git add/commit/push. Portuguese strings only. No test expectation was rewritten (nothing pinned the strings that changed).
+
+## Rows applied
+
+Part A (pt-a.md): 1, 2, 3, 4, 5, 6 (digit 10 kept; see below), 7, 8 (see below), 13, 14, 15, 16, 17 (see below), 18, 19.
+Part B (pt-b.md): 1–11, 13–18, 19 (rephrased inside the block; the paragraph was not deleted), 20–29.
+
+A2: both table cells "Presentes" → "Sim" (article 11 and article 12).
+A3: "ordenação judicial" → "decisão judicial"; "em contrário a um acordo ou a uma ordenação" → "contra um acordo ou uma decisão".
+A4: llms.txt discoveryNotice "endosso" → "chancela". The token `llms.txt` stays. consultationNotice and confidentialNotice were not rewritten.
+A5: "dupla formação" → "Direito e em Finanças (dupla licenciatura)". National Chengchi University and "(B.A.)" stay.
+A6: the link now leads with the withholding standards, article 3, and dividends paid to non-residents. URL unchanged (`flno=3`). The digit 10 stays in the same label: "o artigo 10 da lei do imposto sobre as vendas não é esta disposição". Deleting it fails `numbers` (Korean anchor is 영업세법 제10조).
+A7: the two existing links stay. The self-reference is now "encontra aqui a parte aprofundada 2 (公司設立)".
+A8: the stub is now "Se alguém cobra a outrem uma remuneração de massagem sem essa qualificação, essa conduta é punida." The next block already states the Medical Service Act and the three-year term; that block and the five-year sentence were left. The suggested sentence would have put a second "3" in the previous block.
+A17: gloss added, and the pinned token kept: "1,57 milhão de novos dólares de Taiwan (TWD 1.57M)". The reviewer's "(TWD)" alone would drop `TWD 1.57M`.
+B3: alt text and the bold heading (2).
+B6: body sentence and checklist item 3 (2).
+B19: "Convém verificá-lo previamente." → "Essa confirmação tem de estar feita antes da celebração do contrato." The previous sentence already says to confirm the premises before the lease. Deleting this paragraph would drop a block: the Korean source splits that confirmation across a blank line.
+B23: FAQ answer and the matching body sentence, plus the heading "## 4. Extensão razoável" → "## 4. Âmbito razoável" (same collocation).
+B29: "uma idade … que não exceda 2 anos" → "com não mais de 2 anos" in the FAQ, the repeated body paragraph, and the small-truck paragraph (3). The digit stays "1 camião", not "um camião".
+
+## Rows skipped
+
+- A9, and the verdict line that Q16–Q20 should become `##` headings.
+  Reason: heading levels must match the Korean source. Q16–Q20 are body lines there and in the English file. Adding headings fails `headings`.
+- A10 and B12, and the verdict lines on U+200B in 003, 005, 006, 008, 009, 013 and 015, including the four `**​**` lines in 005.
+  Reason: zero-width counts already match the Korean source (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). Deleting them fails `blocks`. Instances removed: 0.
+- A11 and A12 ("por cada 1 vítima", "por cada 1 acidente", "por cada 1 ano" in the 008 FAQ and in both formula lines).
+  Reason: those digits are in the Korean count (1명·1건, 1년). "por cada vítima" / "por cada ano" drops them and fails `numbers`. The digit 1 stays. "ultrapassar 1 pessoa" in 005 was left; it is the threshold of more than one worker, not this "cada" pattern.
+
+## Systemic patterns and how many instances changed
+
+U+200B blank lines and 005 `**​**`
+  Removed: 0. Counts match Korean. See skipped rows.
+
+Leftover digit after "cada"
+  Changed: 0. See skipped rows. Left in place: 003 (one sentence, two "1"s) and 008 (FAQ plus two blockquote lines).
+
+"ordenação" for a court order, and "em contrário a"
+  "uma ordenação judicial aplicável" → "uma decisão judicial aplicável"                         1 (007)
+  "em contrário a um acordo ou a uma ordenação" → "contra um acordo ou uma decisão"           1 (007)
+  "em contrário a um acordo ou a uma decisão" → "contra um acordo ou uma decisão"             1 (007)
+  Left: "ordenação dos dados" (011) is arranging the product file, not a court order.
+  Left: "disposição estatutária em contrário" (018) is the ordinary "unless the articles provide otherwise".
+
+"Presentes" in the severance table where English is Yes
+  Both condition cells → "Sim"                                                                 2 (008)
+
+"extensão" for a reasonable scope (checklist already said "âmbito")
+  "ultrapassar a extensão razoável" → "sair de um âmbito razoável"                            2 (014 FAQ and body)
+  heading "Extensão razoável" → "Âmbito razoável"                                             1 (014)
+  Left: "extensão da contrapartida", "extensão da restituição", "extensão da responsabilidade". Those are the scope of the payment or of the liability, not the reasonable-scope test.
+
+"colocar" for imposing a fine or for a claim already made
+  "a coima administrativa só se coloca" → "só pode ser aplicada"                              1 (011)
+  "um pedido já colocado" → "um pedido já apresentado"                                        1 (014)
+  Left: "coloca-se" where the question arises (007 ×1, 016 ×4). That is not a fine or a claim.
+
+"fluido / fluidez" calquing "smoothly"
+  "não se desenrolar de forma fluida" → "não correr bem"                                      1 (013)
+  "entregues com fluidez" → "entregues sem dificuldade"                                       1 (016)
+  No other fluido/fluida/fluidez in columns-pt.
+
+"Blog" → "Blogue"                                                                              1 (pt footer blogLabel only)
+  Column 010 already said "Blogue". Other locales' blogLabel were not touched.
+
+"treino pessoal" → "sessão de treino personalizado"                                           2 (010 alt and bold heading)
+
+"oferecer" after "vender", where English is giving the product away
+  → "dar a título gratuito"                                                                    2 (011 body and checklist)
+
+Vehicle-age calque "uma idade que não exceda"                                                 3 (017)
+
+R2–R10 were already in this corpus (prior rounds). This round’s verdicts are 4/5 and confirm feminine Wei Tseng, the consultation lock, European Portuguese, and Korea only as a labelled example. This pass did not reopen them. Hangul remains only inside frontmatter `url` of 008 and 009.
+
+## §Verify
+
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-pt --lang pt 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=75
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-pt src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      21
+```
+
+That count is from the verify run, before this log file existed. This log is one further untracked path.
+
+## Reviewer got wrong (not applied, or not applied as written)
+
+- A9. Q16–Q20 are body paragraphs in the Korean source and in the English file. Promoting them to headings fails the heading-level check.
+- A10 and B12, and the U+200B verdict lines. The zero-width lines match the Korean source, including the four `**​**` lines in 005. Deleting them fails `blocks`. They are source layout.
+- A11 and A12. "por cada 1" keeps a source digit. The checker failed an earlier draft of 004 the moment one counted digit was removed; the same rule holds here.
+- A6, the request to drop article 10 from the public label. The Korean anchor still names article 10 of the business-tax act, and that digit has to remain. The URL stays `flno=3`. The label now names the withholding standards and article 3 first, and still says article 10 of the business-tax act is not this provision.
+- A8, copying the three-year Medical Service Act sentence into the stub. The next block already states that penalty. A second "3" would duplicate the block and add a digit. The five-year sentence was left as asked.
+- A17, replacing the figure with "(TWD)" only. Standing rule: `TWD 1.57M` stays byte-identical. The gloss "novos dólares de Taiwan" was added around that token.
+- B19, deleting "Convém verificá-lo previamente." That line is its own block. It was rewritten so the pronoun is not dangling.
+- B29, "um camião" for "1 camião". The digit 1 stays.
+- "ordenação dos dados" (011) and "disposição estatutária em contrário" (018). Those are not the court-order error.
+- "coloca-se" for an issue that arises (007, 016). The fine and the claim were the "colocar" errors.

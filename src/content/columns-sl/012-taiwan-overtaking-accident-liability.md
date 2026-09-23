@@ -17,17 +17,17 @@ Ko vozilo spredaj vozi počasi, se lahko prehitevanje (超車) zdi nekaj običaj
 
 ## Pogoji prehitevanja, ki jih določa 101. člen pravilnika o varnosti cestnega prometa (道路交通安全規則)
 
-[Člen 101 tajvanskega pravilnika o varnosti cestnega prometa (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) ureja tako pogoje, v katerih je prehitevanje prepovedano, kakor zaporedje, ki ga je treba upoštevati, kadar je prehitevanje na istem pasu dovoljeno.
+[Tajvanski pravilnik o varnosti cestnega prometa (道路交通安全規則), 101. člen](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) ureja tako pogoje, v katerih je prehitevanje prepovedano, kakor zaporedje, ki ga je treba upoštevati, kadar je prehitevanje na istem pasu dovoljeno.
 
-Člen 101 prepoveduje prehitevanje na odsekih z znaki, ki označujejo ovinek, strm vzpon ali spust, ozek most, predor ali križišče, in na železniških prehodih in na odsekih gradbenih del.
+Prepoved po 101. členu velja na odsekih z znaki, ki označujejo ovinek, strm vzpon ali spust, ozek most, predor ali križišče, in na železniških prehodih in na odsekih gradbenih del.
 
-Poleg tega ni mogoče prehitevati na mestih ali odsekih z znakom šole ali bolnišnice, na mestih z drugimi znaki ali označbo prepovedi prehitevanja, ko se približuje nasprotno vozilo, niti kadar spredaj vozijo dve ali več vozil zapored.
+Poleg tega ni mogoče prehitevati na mestih ali odsekih z znakom šole ali bolnišnice, na mestih z drugimi znaki ali označbo prepovedi prehitevanja, ko se približuje nasprotno vozilo, niti kadar spredaj zapored vozita dve vozili ali več.
 
 Da bi bilo mogoče na istem pasu prehiteti vozilo spredaj, mora voznik zadnjega vozila najprej na kratko dvakrat zapiskati ali enkrat utripniti z dolgimi lučmi. Hupe in luči se ne smejo uporabljati večkrat za vsiljevanje, da bi vozilo spredaj sprostilo pot.
 
 Zadnje vozilo lahko prehiti šele potem, ko je vozilo spredaj upočasnilo in umaknilo ob stran, ali izrazilo voljo sprostiti pot z roko ali desnim smernikom.
 
-Nato mora prehitevajoče vozilo vklopiti levi smernik, mimo peljati z leve ob ohranitvi razmika najmanj 0,5 metra od vozila spredaj in po zagotovitvi varne razdalje vklopiti desni smernik in se varno vrniti na prvotni pas.
+Nato mora prehitevajoče vozilo vklopiti levi smernik, peljati mimo po levi strani ter ohraniti razmik najmanj 0,5 metra od vozila spredaj, po zagotovitvi varne razdalje pa vklopiti desni smernik in se varno vrniti na prvotni pas.
 
 To zaporedje signalov in sprostitve na istem pasu ne pomeni, da bi bilo prehitevanje dovoljeno tudi na prepovedanem mestu ali v prepovedanih pogojih. Pred začetkom prehitevanja je treba presoditi skupaj vse pogoje 101. člena.
 
@@ -41,7 +41,7 @@ A je poskusil prehiteti obe vozili, zapeljal na nasprotni pas in pospešil. Tudi
 
 B je utrpel hudo poškodbo glave in umrl na mestu; A je izgubil zavest in so ga prepeljali v bolnišnico.
 
-Družini A in B sta najprej šteli nenadno spremembo pasu vozila št. 2 za glavni vzrok trčenja. Zadeva je prešla v sodni postopek; v njegovem poteku je bilo izdelanih več izvedenskih mnenj (鑑定) k nesreči.
+Družini A in B sta najprej šteli nenadno spremembo pasu vozila št. 2 za glavni vzrok trčenja. Zadeva je prešla v sodni postopek; v njegovem poteku je bilo izdelanih več izvedenskih mnenj (鑑定) o nesreči.
 
 Po izidu teh mnenj je glavno odgovornost za to trčenje nosil A. Ta zaključek je bil omejen na dejanske okoliščine te zadeve. Mnenja so skupaj upoštevala to, da je A hotel prehiteti 2 vozili spredaj, ki sta vozili zapored, da je zapeljal na nasprotni pas, da je vozil s hitrostjo, ki ni puščala dovolj časa za zaviranje, da so manjkali predpisani signali hupe in luči, kakor tudi spremembo pasu vozila št. 2, ureditev ceste in pasov in ostale zagotovljene dokaze.
 
@@ -62,4 +62,4 @@ Kot dopolnilo je mogoče pogledati [ponazoritev pravil in postopka prehitevanja]
 > - [Mednarodna ekipa Hovering](/sl/lawyers)
 > - [Postopek po prometnih nesrečah na Tajvanu](/sl/columns/taiwan-traffic-accident-procedure)
 
-Besedilo je splošna pravna informacija o pravilih prehitevanja in presoji odgovornosti za nesreče na Tajvanu; ni nasvet k konkretni zadevi in ne obljublja določenega izida. Dejanska odgovornost se lahko razlikuje glede na kraj nesreče, gibanje vozil, hitrost, signale, dokaze, izvedensko mnenje (鑑定) in veljavno pravo; konkretne zadeve je treba presoditi ločeno na podlagi ustreznega gradiva.
+Besedilo je splošna pravna informacija o pravilih prehitevanja in presoji odgovornosti za nesreče na Tajvanu; ni nasvet o konkretni zadevi in ne obljublja določenega izida. Dejanska odgovornost se lahko razlikuje glede na kraj nesreče, gibanje vozil, hitrost, signale, dokaze, izvedensko mnenje (鑑定) in veljavno pravo; konkretne zadeve je treba presoditi ločeno na podlagi ustreznega gradiva.

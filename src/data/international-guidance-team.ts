@@ -296,7 +296,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'NUESTRO EQUIPO',
     title: 'Equipo internacional de Hovering',
     description:
-      'Perfiles de los abogados, de la dirección de operaciones y del socio auditor, Partner CPA, de Hovering.',
+      'Perfiles de los abogados, de la dirección de operaciones y del socio auditor Partner CPA de Hovering.',
     representativeTitle: 'Abogada directora',
     teamTitle: 'Abogados y personal',
     partnerTitle: 'Socio auditor (Partner CPA)',
@@ -520,7 +520,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ONS TEAM',
     title: 'Internationaal team van Hovering',
     description:
-      'Profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering.',
+      'Profielen van de advocaten, de juridisch medewerker, de operationeel manager en de accountant-partner van Hovering.',
     representativeTitle: 'Leidinggevend advocaat',
     teamTitle: 'Advocaten en medewerkers',
     partnerTitle: 'Aangesloten accountantskantoor',
@@ -567,7 +567,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Adwokatka kierująca kancelarią na Tajwanie (Managing Attorney)',
       'chang-rongxuan': 'Adwokat na Tajwanie (Taiwan Attorney)',
-      'chang-fangyu': 'Asystent prawny (paralegal)',
+      'chang-fangyu': 'Asystentka prawna (paralegal)',
       'son-jungmin': 'Kierownictwo ds. operacji w Korei (Korea Operations Manager)',
       'huang-shengping': 'Wspólnik biura rachunkowego (Partner CPA)',
     },
@@ -651,7 +651,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Ledende advokat i Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Juridisk assistent (paralegal)',
       'son-jungmin': 'Leder af Korea-forretningen (Korea Operations Manager)',
       'huang-shengping': 'Tilknyttet revisor (Partner CPA)',
     },
@@ -735,7 +735,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Řídící advokátka na Tchaj-wanu (Managing Attorney)',
       'chang-rongxuan': 'Advokát na Tchaj-wanu (Taiwan Attorney)',
-      'chang-fangyu': 'Právní asistent',
+      'chang-fangyu': 'Právní asistentka',
       'son-jungmin': 'Vedení provozu v Koreji (Korea Operations Manager)',
       'huang-shengping': 'Partner účetní kanceláře (Partner CPA)',
     },
@@ -754,7 +754,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'Fénykép',
     workingLanguagesLabel: 'Munkanyelvek',
     fullProfileLabel: 'Teljes profil (angolul)',
-    keyFactsHeading: 'Wei Tseng ügyvédnő — Fő adatok',
+    keyFactsHeading: 'Wei Tseng ügyvédnő – Fő adatok',
     qualificationLabel: 'Képesítés és iroda',
     qualificationSentence:
       '{name} jogosult Tajvanon ügyvédi tevékenységet folytatni, és a {firm} vezető ügyvédnője.',
@@ -819,8 +819,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Керівна адвокатка на Тайвані (Managing Attorney)',
       'chang-rongxuan': 'Адвокат на Тайвані (Taiwan Attorney)',
-      'chang-fangyu': 'Помічник адвоката (paralegal)',
-      'son-jungmin': 'Керівництво операціями в Кореї (Korea Operations Manager)',
+      'chang-fangyu': 'Помічник адвоката (Paralegal)',
+      'son-jungmin': 'Керівник операцій у Кореї (Korea Operations Manager)',
       'huang-shengping': 'Партнер бухгалтерської фірми (Partner CPA)',
     },
   },
@@ -941,7 +941,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'تیم بین‌المللی Hovering',
     description:
       'نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering.',
-    representativeTitle: 'وکیلِ مدیر',
+    representativeTitle: 'مدیر دفتر وکالت',
     teamTitle: 'وکلا و همکاران',
     partnerTitle: 'حسابدار شریک',
     introLabel: 'معرفی',
@@ -953,11 +953,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'وکیل Wei Tseng — اطلاعات اصلی',
     qualificationLabel: 'صلاحیت و دفتر',
     qualificationSentence:
-      '{name} مجاز به وکالت در تایوان است و وکیلِ مدیر {firm} است.',
+      '{name} مجاز به وکالت در تایوان است و مدیر {firm} است.',
     practiceLabel: 'زمینه‌های اصلی',
     consultationLanguagesLabel: 'زبان‌های مشاوره',
     roles: {
-      'tseng-junwei': 'وکیلِ مدیر در تایوان',
+      'tseng-junwei': 'وکیل و مدیر دفتر در تایوان',
       'chang-rongxuan': 'وکیل در تایوان',
       'chang-fangyu': 'دستیار حقوقی',
       'son-jungmin': 'مدیر عملیات کره',
@@ -1052,7 +1052,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ក្រុម',
     title: 'ក្រុមអន្ដរជាតិ Hovering',
     description:
-      'ប្រវត្ដិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្ដិ និងគណនេយ្យករសាធារណៈដៃគូនៃ Hovering',
+      'ប្រវត្ដិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្ដិ និងគណនេយ្យករសាធារណៈដៃគូនៃ Hovering។',
     representativeTitle: 'មេធាវីគ្រប់គ្រង',
     teamTitle: 'មេធាវី និងបុគ្គលិក',
     partnerTitle: 'គណនេយ្យករសាធារណៈដៃគូ',
@@ -1142,7 +1142,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     partnerTitle: 'Партньор — експерт-счетоводител',
     introLabel: 'Представяне',
     educationLabel: 'Образование',
-    experienceLabel: 'Практика',
+    experienceLabel: 'Професионален опит',
     photoAltPrefix: 'Снимка',
     workingLanguagesLabel: 'Работни езици',
     fullProfileLabel: 'Пълен профил (на английски)',
@@ -1788,7 +1788,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan investment counsel': 'Investicijų į Taivaną konsultacijos',
     'Civil litigation and damages': 'Civiliniai ginčai ir žalos atlyginimas',
     'Trademark and patent filings': 'Prekių ženklų ir patentų paraiškos',
-    'Visa and residency': 'Vizos ir gyvenamoji vieta',
+    'Visa and residency': 'Vizos ir leidimai gyventi',
     'Family and labor disputes': 'Šeimos ir darbo ginčai',
   },
   lv: {
@@ -2045,11 +2045,11 @@ export const guidanceTeamBios: Record<
         'สนับสนุนการสื่อสารระหว่างทีมด้วยระบบเอกสารและระบบงาน โดยอาศัยพื้นฐานด้านวิทยาการคอมพิวเตอร์',
       ],
       education: ['วิทยาศาสตรบัณฑิต (B.S.) สาขาวิทยาการคอมพิวเตอร์, National Cheng Kung University'],
-      experience: ['ทีมงานธุรกิจเกาหลี, Hovering International Law Firm'],
+      experience: ['ทีมธุรกิจเกาหลี, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'สำเร็จการศึกษาระดับปริญญาตรีและปริญญาโทด้านการบัญชีจาก National Chengchi University และปัจจุบันบริหารสำนักงานบัญชีแห่งหนึ่ง',
+        'สำเร็จการศึกษาระดับปริญญาตรีและปริญญาโทด้านการบัญชีจาก National Chengchi University และปัจจุบันบริหารสำนักงานสอบบัญชีแห่งหนึ่ง',
         'สนับสนุนการวิเคราะห์ความเสี่ยงด้านกฎหมาย ภาษี และการเงินอย่างครบวงจรให้แก่ลูกความที่เป็นองค์กรธุรกิจ',
       ],
       education: [
@@ -2101,7 +2101,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Inaayos ang iskedyul ng konsultasyon at ang pakikipag-ugnayan para sa mga kliyenteng Koreano.',
-        'Sinusuportahan ang komunikasyon sa pagitan ng mga bahagi sa pamamagitan ng sistema ng dokumento at daloy ng trabaho, batay sa pinag-aralang agham pangkompyuter.',
+        'Sinusuportahan ang komunikasyon sa pagitan ng mga bahagi sa pamamagitan ng sistema ng dokumento at daloy ng trabaho; agham pangkompyuter ang pinag-aralan niya.',
       ],
       education: ['Batsilyer (B.S.) sa Agham Pangkompyuter, National Cheng Kung University'],
       experience: ['Bahaging pangnegosyo para sa Korea, Hovering International Law Firm'],
@@ -2122,7 +2122,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.',
-        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في صالة رياضية، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M (1.57 مليون دولار تايواني جديد).',
+        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في صالة رياضية، وصدر حكم ابتدائي بالتعويض بمبلغ 1.57 مليون دولار تايواني جديد (TWD 1.57M).',
       ],
       education: [
         'ماجستير (M.S.)، Institute of Finance, National Taiwan University',
@@ -2358,11 +2358,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'O escritório trata assuntos de empresas e de particulares em Taiwan em inglês, japonês, coreano e chinês.',
-        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhão de TWD.',
+        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhão de novos dólares de Taiwan (TWD 1.57M).',
       ],
       education: [
         'Mestrado (M.S.), Institute of Finance, National Taiwan University',
-        'Licenciatura (B.A.) em dupla formação de Direito e Finanças, National Chengchi University',
+        'Licenciatura (B.A.) em Direito e em Finanças (dupla licenciatura), National Chengchi University',
         'Aluna de intercâmbio na Kobe University e na Waseda University',
       ],
       experience: [
@@ -2712,7 +2712,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Het kantoor behandelt ondernemings- en individuele zaken in Taiwan in het Engels, Japans, Koreaans en Chinees.',
-        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens een letsel in een fitnesszaal en verkreeg een vonnis in eerste aanleg van 1,57 miljoen TWD.',
+        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens letsel in een sportschool en verkreeg een vonnis in eerste aanleg van 1,57 miljoen TWD.',
       ],
       education: [
         'Masterdiploma (M.S.) financiën, Institute of Finance, National Taiwan University',
@@ -2797,13 +2797,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Asystent prawny (paralegal) z wieloletnią pracą na stanowisku starszego asystenta prawnego w kilku kancelariach, odpowiedzialny za wsparcie procesowe, prawo spółek i inwestycje zagraniczne.',
+        'Asystentka prawna (paralegal) z wieloletnią pracą na stanowisku starszej asystentki prawnej w kilku kancelariach, odpowiedzialna za wsparcie procesowe, prawo spółek i inwestycje zagraniczne.',
         'Wsparcie postępowań, zakładania spółek, zezwoleń na inwestycje zagraniczne, wniosków o licencje oraz wymiany między Koreą a Tajwanem.',
       ],
       education: ['Licencjat prawa (LL.B.), Tunghai University'],
       experience: [
-        'Starszy asystent prawny, Boyin Law Firm',
-        'Starszy asystent prawny, Muyang International Law Firm',
+        'Starsza asystentka prawna, Boyin Law Firm',
+        'Starsza asystentka prawna, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2974,13 +2974,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal med lang erfaring som senior paralegal ved flere kontorer, ansvarlig for processuel støtte, selskabsret og udenlandske investeringer.',
+        'Juridisk assistent med lang erfaring som ledende juridisk assistent (senior paralegal) ved flere kontorer, ansvarlig for processuel støtte, selskabsret og udenlandske investeringer.',
         'Støtte ved procedurer, selskabsstiftelse, tilladelser til udenlandske investeringer, licensansøgninger og udvekslingen mellem Korea og Taiwan.',
       ],
       education: ['Juridisk bachelor (LL.B.), Tunghai University'],
       experience: [
-        'Senior paralegal, Boyin Law Firm',
-        'Senior paralegal, Muyang International Law Firm',
+        'Ledende juridisk assistent (senior paralegal), Boyin Law Firm',
+        'Ledende juridisk assistent (senior paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -3153,15 +3153,15 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Právní asistent s dlouholetou praxí; dříve starší právní asistent ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
+        'Právní asistentka s dlouholetou praxí; dříve starší právní asistentka ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
         'Podpora v soudních řízeních, při zakládání společností, u povolení zahraničních investic, u žádostí o licence a při komunikaci mezi Koreou a Tchaj-wanem.',
       ],
       education: [
         'Bakalář práv (LL.B.), Tunghai University',
       ],
       experience: [
-        'Starší právní asistent, Boyin Law Firm',
-        'Starší právní asistent, Muyang International Law Firm',
+        'Starší právní asistentka, Boyin Law Firm',
+        'Starší právní asistentka, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -3199,7 +3199,7 @@ export const guidanceTeamBios: Record<
       education: [
         'Mesterfokozat (M.S.), Institute of Finance, National Taiwan University',
         'Alapfokozat (B.A.) jogi és pénzügyi kettős képzésben, National Chengchi University',
-        'Cserehallgató a Kobe University-n és a Waseda University-n',
+        'Cserehallgató a Kobe Universityn és a Waseda Universityn',
       ],
       experience: [
         'Trend Law Office',
@@ -3210,7 +3210,7 @@ export const guidanceTeamBios: Record<
     'chang-rongxuan': {
       intro: [
         'Korábban az Oktatási Minisztérium jogi osztályának (Ministry of Education, Legal Affairs Division) munkatársa, közigazgatási és polgári ügyekre összpontosítva.',
-        'Tapasztalat egyetemeket, oktatói jogokat és közigazgatási fellebbezéseket érintő ügyekben.',
+        'Tapasztalatot szerzett egyetemeket, oktatói jogokat és közigazgatási fellebbezéseket érintő ügyekben.',
       ],
       education: [
         'Jogi alapfokozat (LL.B.), National Chung Hsing University',
@@ -3223,7 +3223,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'Jogi asszisztens; több irodában vezető jogi asszisztensként eljárási, társasági jogi és külföldi befektetési ügyeket támogatott.',
-        'Támogatás eljárásokban, cégalapításban, külföldi befektetési engedélyekben, engedélykérelmekben, valamint a koreai és tajvani ügyfelek közötti kapcsolattartásban.',
+        'Támogatást nyújt eljárásokban, cégalapításban, külföldi befektetési engedélyek és egyéb engedélykérelmek ügyében, valamint a koreai és tajvani ügyfelek közötti kapcsolattartásban.',
       ],
       education: [
         'Jogi alapfokozat (LL.B.), Tunghai University',
@@ -3236,7 +3236,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Egyezteti a tanácsadási időpontokat és a kommunikációt a koreai ügyfelek számára.',
-        'Dokumentumrendszerekkel és munkafolyamatokkal támogatja a csapatok közötti egyeztetést; a háttere informatikai végzettség.',
+        'Dokumentumrendszerekkel és munkafolyamatokkal támogatja a csapatok közötti egyeztetést; informatikai végzettséggel rendelkezik.',
       ],
       education: [
         'Alapfokozat (B.S.) informatikából, National Cheng Kung University',
@@ -3332,7 +3332,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Фірма веде справи підприємств і приватних осіб на Тайвані англійською, японською, корейською та китайською.',
-        'Представляла корейського студента у вимозі про відшкодування шкоди через травму в спортзалі та здобула рішення першої інстанції на TWD 1.57M.',
+        'Представляла корейського студента у вимозі про відшкодування шкоди через травму в спортзалі та здобула рішення першої інстанції про відшкодування 1,57 млн нових тайванських доларів (TWD 1.57M).',
       ],
       education: [
         'Магістр (M.S.), Institute of Finance, National Taiwan University',
@@ -3405,7 +3405,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Μεταπτυχιακό (M.S.), Institute of Finance, National Taiwan University',
-        'Πτυχίο (B.A.) νομικής και χρηματοοικονομικών, με δύο γνωστικά αντικείμενα, National Chengchi University',
+        'Πτυχίο (B.A.) διπλής κατεύθυνσης στη νομική και στα χρηματοοικονομικά, National Chengchi University',
         'Φοιτήτρια ανταλλαγής στο Kobe University και στο Waseda University',
       ],
       experience: [
@@ -3470,7 +3470,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'המשרד מטפל בעניינים של עסקים ושל יחידים בטאיוואן באנגלית, ביפנית, בקוריאנית ובסינית.',
-        'ייצגה סטודנט קוריאני בתביעת פיצויים בשל פגיעה במכון כושר והשיגה פסק דין בערכאה ראשונה בסך TWD 1.57M.',
+        'ייצגה סטודנט קוריאני בתביעת פיצויים בשל פגיעה במכון כושר והשיגה פסק דין בערכאה ראשונה בסך TWD 1.57M (1.57 מיליון דולר טאיוואני חדש).',
       ],
       education: [
         'מוסמכת (M.S.), Institute of Finance, National Taiwan University',
@@ -3538,7 +3538,7 @@ export const guidanceTeamBios: Record<
   bn: {
     'tseng-junwei': {
       intro: [
-        'কার্যালয় তাইওয়ানে ব্যবসা ও ব্যক্তিগত বিষয়ে ইংরেজি, জাপানি, কোরীয় ও চীনায় কাজ করে।',
+        'কার্যালয় তাইওয়ানে ব্যবসা ও ব্যক্তিগত বিষয়ে ইংরেজি, জাপানি, কোরীয় ও চীনা ভাষায় কাজ করে।',
         'তিনি জিমে আঘাতজনিত ক্ষতিপূরণের দাবিতে একজন কোরীয় শিক্ষার্থীর প্রতিনিধিত্ব করেছেন এবং প্রথম আদালত থেকে TWD 1.57M রায় আদায় করেছেন।',
       ],
       education: [
@@ -3613,7 +3613,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'اس سے پہلے وزارتِ تعلیم کے قانونی امور کے شعبے (Ministry of Education, Legal Affairs Division) میں کام کیا، انتظامی اور دیوانی معاملات پر توجہ کے ساتھ۔',
+        'اس سے پہلے وزارتِ تعلیم کے قانونی امور کے شعبے (Ministry of Education, Legal Affairs Division) میں کام کیا، جہاں توجہ انتظامی اور دیوانی معاملات پر رہی۔',
         'یونیورسٹیوں، تدریسی عملے کے حقوق اور انتظامی اپیلوں سے جڑے معاملات کا تجربہ۔',
       ],
       education: ['قانون میں بیچلر (LL.B.)، National Chung Hsing University'],
@@ -3624,7 +3624,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'قانونی معاون جنہوں نے کئی دفاتر میں سینئر قانونی معاون کے طور پر طویل عرصہ کام کیا، طریقہ کار کی معاونت، کمپنی قانون اور غیر ملکی سرمایہ کاری کے لیے ذمہ دار۔',
+        'قانونی معاون جنہوں نے کئی دفاتر میں سینئر قانونی معاون کے طور پر طویل عرصہ کام کیا، جہاں وہ طریقہ کار کی معاونت، کمپنی قانون اور غیر ملکی سرمایہ کاری کے امور کے ذمہ دار رہے۔',
         'کارروائی، کمپنی کا قیام، غیر ملکی سرمایہ کاری کی اجازت، لائسنس کی درخواستیں اور کوریا و تائیوان کے درمیان تبادلے میں مدد۔',
       ],
       education: ['قانون میں بیچلر (LL.B.)، Tunghai University'],
@@ -3657,7 +3657,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'دفتر پرونده‌های شرکت‌ها و اشخاص را در تایوان می‌پذیرد و به انگلیسی، ژاپنی، کره‌ای و چینی کار می‌کند.',
-        'او نمایندگی یک دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت TWD 1.57M صادر شد.',
+        'او نمایندگی یک دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت 1.57 میلیون دلار جدید تایوان (TWD 1.57M) صادر شد.',
       ],
       education: [
         'کارشناسی ارشد (M.S.)، Institute of Finance, National Taiwan University',
@@ -3684,7 +3684,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'سال‌ها در چند دفتر وکالت به‌عنوان دستیار حقوقی ارشد کار کرده است، از جمله پشتیبانی دادرسی، امور حقوقی شرکت‌ها و سرمایه‌گذاری خارجی.',
-        'محدودهٔ کار شامل پشتیبانی دادرسی، تأسیس شرکت، آیین تصویب سرمایه‌گذاری خارجی، درخواست پروانه و ارتباط میان کره و تایوان است.',
+        'محدودهٔ کار شامل پشتیبانی دادرسی، تأسیس شرکت، فرایند تصویب سرمایه‌گذاری خارجی، درخواست پروانه و ارتباط میان کره و تایوان است.',
       ],
       education: ['کارشناسی حقوق (LL.B.)، Tunghai University'],
       experience: [
@@ -3716,11 +3716,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'ရုံးသည် ထိုင်ဝမ်တွင် ကုမ္ပဏီနှင့် ပုဂ္ဂိုလ်ရေးကိစ္စများကို အင်္ဂလိပ်၊ ဂျပန်၊ ကိုရီးယားနှင့် တရုတ်ဘာသာဖြင့် ဆောင်ရွက်သည်။',
-        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး၊ ထိုကျောင်းသားအတွက် ပထမအဆင့်တရားရုံးက လျော်ကြေး 1.57 သန်း ထိုင်ဝမ်ဒေါ်လာအသစ် (TWD 1.57M) ပေးရန် စီရင်ချက် ရယူခဲ့သည်။',
+        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး၊ ထိုကျောင်းသားအတွက် ပထမအဆင့်တရားရုံးက လျော်ကြေးအဖြစ် ထိုင်ဝမ်ဒေါ်လာအသစ် 1.57 သန်း (TWD 1.57M) ပေးရန် စီရင်ချက် ရယူခဲ့သည်။',
       ],
       education: [
         'မဟာသိပ္ပံဘွဲ့ (M.S.), Institute of Finance, National Taiwan University',
-        'ဘွဲ့ (B.A.) ဥပဒေနှင့် ဘဏ္ဍာရေး နှစ်ဘာသာတွဲ, National Chengchi University',
+        'ဝိဇ္ဇာဘွဲ့ (B.A.) ဥပဒေနှင့် ဘဏ္ဍာရေး နှစ်ဘာသာတွဲ, National Chengchi University',
         'Kobe University နှင့် Waseda University တွင် ဖလှယ်ကျောင်းသူ',
       ],
       experience: [
@@ -3766,7 +3766,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'မဟာဝိဇ္ဇာဘွဲ့ (M.A.) စာရင်းကိုင်, National Chengchi University',
-        'ဘွဲ့ (B.A.) စာရင်းကိုင်, National Chengchi University',
+        'ဝိဇ္ဇာဘွဲ့ (B.A.) စာရင်းကိုင်, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },
@@ -3790,7 +3790,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'முன்பு கல்வி அமைச்சகத்தின் சட்ட விவகாரப் பிரிவில் பணி செய்தார்; கவனம் நிர்வாக மற்றும் உரிமையியல் வழக்குகளில்.',
+        'முன்பு கல்வி அமைச்சகத்தின் சட்ட விவகாரப் பிரிவில் பணி செய்தார்; நிர்வாக மற்றும் உரிமையியல் வழக்குகளில் கவனம் செலுத்துகிறார்.',
         'பல்கலைக்கழகங்கள், கற்பித்தல் பணியாளர்களின் உரிமைகள் மற்றும் நிர்வாக மேல்முறையீடுகள் தொடர்பான வழக்குகளில் அனுபவம்.',
       ],
       education: ['சட்ட இளங்கலை (LL.B.), National Chung Hsing University'],
@@ -3872,7 +3872,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'कोरियाबाट आएका पक्षकारको परामर्श समय र सञ्चार समन्वय गर्छन्।',
-        'कम्प्युटर विज्ञान पढेका आधारमा कागजात प्रणाली र कार्यप्रवाहमार्फत विभागहरूबीचको समन्वयमा सहयोग गर्छन्।',
+        'कम्प्युटर विज्ञान पढेको पृष्ठभूमिका आधारमा कागजात प्रणाली र कार्यप्रवाहमार्फत विभागहरूबीचको समन्वयमा सहयोग गर्छन्।',
       ],
       education: ['स्नातक (B.S.) कम्प्युटर विज्ञान, National Cheng Kung University'],
       experience: ['कोरिया सञ्चालनको नेतृत्व, Hovering International Law Firm'],
@@ -3978,7 +3978,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Олон жил хэд хэдэн фирмд ахлах хуулийн туслахаар ажилласан хуулийн туслах; шүүхийн дэмжлэг, корпорацийн эрх зүй, гадаадын хөрөнгө оруулалтыг хариуцна.',
+        'Хэд хэдэн фирмд олон жил ахлах хуулийн туслахаар ажилласан туршлагатай; шүүхийн дэмжлэг, корпорацийн эрх зүй, гадаадын хөрөнгө оруулалтыг хариуцна.',
         'Шүүхийн журам, компани байгуулах, гадаадын хөрөнгө оруулалтын зөвшөөрөл, лицензийн өргөдөл, Солонгос–Тайванийн харилцааг дэмжинэ.',
       ],
       education: ['Хуулийн бакалавр (LL.B.), Tunghai University'],
@@ -4080,7 +4080,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Кантората води дела на дружества и частни лица в Тайван на английски, японски, корейски и китайски.',
-        'Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала първоинстанционно решение за TWD 1.57M.',
+        'Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала първоинстанционно решение за 1,57 млн. нови тайвански долара (TWD 1.57M).',
       ],
       education: [
         'Магистър (M.S.), Институт по финанси, Национален тайвански университет (National Taiwan University)',
@@ -4181,7 +4181,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinira termine savjetovanja i komunikaciju za klijente iz Koreje.',
-        'Na temelju obrazovanja iz informatike podržava komunikaciju među timovima putem sustava dokumenata i radnih postupaka.',
+        'Na temelju obrazovanja iz informatike olakšava komunikaciju među timovima putem sustava dokumenata i radnih postupaka.',
       ],
       education: [
         'Prvostupnik (B.S.) informatike, National Cheng Kung University',
@@ -4193,7 +4193,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'Završio je preddiplomski i diplomski program računovodstva na National Chengchi University i sada vodi računovodstveni ured.',
-        'Podržava integriranu analizu pravnih, poreznih i financijskih rizika za korporativne klijente.',
+        'Pomaže u integriranoj analizi pravnih, poreznih i financijskih rizika za korporativne klijente.',
       ],
       education: [
         'Magistar (M.A.) računovodstva, National Chengchi University',
@@ -4207,7 +4207,7 @@ export const guidanceTeamBios: Record<
   sr: {
     'tseng-junwei': {
       intro: [
-        'Kancelarija vodi stvari preduzeća i privatnih lica na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
+        'Kancelarija vodi stvari preduzeća i fizičkih lica na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
         'Zastupala je korejskog studenta u sporu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.',
       ],
       education: [
@@ -4277,12 +4277,12 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Pisarna vodi zadeve podjetij in zasebnih oseb na Tajvanu v angleščini, japonščini, korejščini in kitajščini.',
-        'Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M.',
+        'Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M (1,57 milijona novih tajvanskih dolarjev).',
       ],
       education: [
         'Magistrica (M.S.), Institute of Finance, National Taiwan University',
         'Univerzitetna diploma (B.A.) dvopredmetnega študija prava in financ, National Chengchi University',
-        'Izmenjavna študentka na Kobe University in Waseda University',
+        'Študentka na izmenjavi na Kobe University in Waseda University',
       ],
       experience: [
         'Trend Law Office',
@@ -4346,7 +4346,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kontora veda įmonių ir privačių asmenų bylas Taivane anglų, japonų, korėjiečių ir kinų kalbomis.',
-        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje ir pasiekė pirmosios instancijos sprendimą priteisti TWD 1.57M.',
+        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje; pirmosios instancijos teismas priteisė TWD 1.57M.',
       ],
       education: [
         'Magistrė (M.S.), Institute of Finance, National Taiwan University',
@@ -4526,7 +4526,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordineerib nõustamisaegu ja suhtlust Koreast tulevatele klientidele.',
-        'Toetab üksustevahelist koostööd dokumendisüsteemide ja töövoogude kaudu; taust on arvutiteadus.',
+        'Toetab üksustevahelist koostööd dokumendisüsteemide ja töövoogude kaudu; tema taust on arvutiteaduses.',
       ],
       education: [
         'Bakalaureus (B.S.) arvutiteaduses, National Cheng Kung University',
@@ -4612,7 +4612,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Skrifstofan vinnur mál fyrirtækja og einstaklinga á Taívan á ensku, japönsku, kóresku og kínversku.',
-        'Hún fór með mál kóresks námsmanns um skaðabætur vegna meiðsla í líkamsræktarstöð og fékk dóm í fyrsta dómsstigi um TWD 1.57M.',
+        'Hún fór með mál kóresks námsmanns um skaðabætur vegna meiðsla í líkamsræktarstöð og fékk dóm á fyrsta dómsstigi um TWD 1.57M.',
       ],
       education: [
         'Meistarapróf (M.S.), Institute of Finance, National Taiwan University',

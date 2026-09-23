@@ -1,0 +1,246 @@
+WO-F-ne — Nepali native-quality fix lane, campaign round 5
+worktree: /Users/son7/Projects/tseng-law-fix-ne-r5   branch: fix/native-ne-r5-20260922
+fixer: Claude Opus 5 (1M)   date: 2026-09-23
+inputs: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/ne-a.md (32 rows), rounds/r5/ne-b.md (42 rows)
+files touched: src/content/columns-ne/{001,002,003,004,005,007,008,009,010,011,012,013,014,015,016,017,018}.md,
+               src/data/international-guidance-southeast-central.ts (nepaliGuidanceContent),
+               src/data/international-guidance-team.ts (ne bios), src/data/international-inquiry-copy.ts (ne)
+no test file needed an expected-string update (all 3202 tests pass unchanged).
+006 is the only column left untouched — its single row is skipped (see below).
+
+
+=======================================================================
+1. ROWS APPLIED
+=======================================================================
+
+--- ne-a (part a, columns 001–009 + guidance pack) ---
+ 1  P1 A 004 withholding-rate link label. Adopted the campaign's established cross-locale form
+        (hi/th/ta/bn/fr all carry it): "… (各類所得扣繳率標準), धारा 3 (व्यवसाय कर ऐनको धारा 10 होइन)".
+        This keeps BOTH digits, so the checker's number parity is preserved, and it records the
+        reviewer's point without contradicting the English source label ("Article 10 of the
+        Value-Added and Non-Value-Added Business Tax Act"). URL untouched.
+ 4  P2 A 008 "…त्यति भाग्यमानी भएनन्।" — contrastive तर restored, past tense restored, आफैं dropped.
+ 5  P2 C 002 cataphoric यो … कि → भन्ने + verb-final (see systemic S1).
+ 6  P2 C 004 same, incl. यो आश्वासन होइन कि / फरक यसमा छ कि / फाइदा यो हो कि / यसबाट यो निस्कँदैन कि /
+        यो नमान्नुहोस् कि (see systemic S1).
+ 7  P2 C 007 तब मात्र … जब → condition-first (see systemic S2).
+ 8  P2 C 004 trailing यदि-clause rebuilt as -एमा ("…स्थायी संस्था (常設機構, PE) नराखेमा उद्यम नाफा …");
+        008 "यदि कर्मचारी निम्नमध्ये कुनैमा परे।" → "कर्मचारी निम्नमध्ये कुनै अवस्थामा परेमा रोजगारदाताले …"
+ 9  P2 C 007 "रह गएका माता वा पिता" → "अर्को माता वा पिता" (Hindi रह गए removed).
+10  P2 C 004 "X का अधीन हुन्" ×2 (FAQ answer + body) → "सहायक कम्पनी र शाखालाई … लाग्छ।"
+11  P2 C 004 आवंट्य/आवंटित/आवंटन ×8 → भाग लाग्ने / भाग लाग्छन् / बाँडफाँट. Zero आवंट* left in the corpus.
+12  P2 B guidance संदिग्ध → सन्दिग्ध.
+13  P2 B संख्या → सङ्ख्या, संगठन → सङ्गठन, संचित → सञ्चित (see systemic S3).
+14  P2 B आँकलन → आकलन ×17 (verb आँक्नु/आँकिन्छ left untouched, as the reviewer asked).
+15  P2 B "कोबारे" → "को बारेमा" ×3 (guidance about-title + 003 and 010 related-link labels).
+16  P2 B 004 फछ्र्योट → फर्छ्यौट.
+17  P2 B 007 सन्तान् → सन्तान ×3 (incl. heading "10. सन्तानसँग अन्तर्राष्ट्रिय स्थानान्तरण").
+18  P2 B inquiry-copy successMessage गर्यौं → गर्‍यौं (र-halanta with ZWJ).
+19  P2 B team.ts son-jungmin "कम्प्युटर विज्ञान पढेका आधारमा" → "… पढेको पृष्ठभूमिका आधारमा".
+20  P2 B कम्पनीकी → कम्पनीको ×2 (002 "कम्पनी सम्पत्ति कम्पनीको हो", 004 "विदेशी मूल कम्पनीको सहायक कम्पनी").
+21  P2 B detached मध्ये ×15 attached (9 guidance + inquiry-copy, 6 columns "निम्नमध्ये").
+22  P2 C प्राप्ति सङ्ख्या → प्राप्ति नम्बर ×4 (guidance privacy list item, heading, paragraph; inquiry receiptIdLabel).
+24  P2 D 007 "पहिचान संख्या" → "परिचय नम्बर" (matches the pack's three existing uses).
+25  P2 C inquiry originalLanguageLabel "जुन भाषामा तपाईं लेख्नुहुन्छ" → "तपाईंले लेख्ने भाषा".
+26  P2 C 009 all six statutory conditions re-cast from "जब …" to -दा/-एमा form.
+27  P2 B 003 "कसकोविरुद्ध लक्षित हो" → "कसका विरुद्ध हो".
+28  P2 B 008 कठिनाई → कठिनाइ.
+29  P3 B 008 sentence-final danda added on the two genuinely sentence-final lines (31, 95). The other
+        lines the row hints at (97, 143, 151, 161 …) are mid-sentence continuations — the Korean source
+        itself ends them without a stop and the next Nepali line opens with र/तर, so a danda there
+        would be wrong. Noted, not applied.
+30  P3 B वचन → वाचा ×4 in the "promise" sense (003 ×2, 007 ×2). 014/017 "वचन" = the employee's
+        contractual undertaking (a different sense, not flagged) and is left.
+31  P3 B guidance "चार वटा कडी" → "चारवटा कडी".
+32  P3 D 005 "[कार्यालयसम्म कसरी पुग्ने](/ne/contact)" → "[फर्मसम्म कसरी पुग्ने](/ne/contact)" — the
+        contact page's own title from the pack, matching the other two labels in the same blockquote
+        (services title, lawyers title). Swept: the identical outlier in 013 and 015 too (3 files).
+
+--- ne-b (part b, columns 010–018) ---
+ 1  P1 A "scope" रendered विस्तार → दायरा, 28 instances (014 ×12, 016 ×5, 017 ×9, 018 ×2). विस्तार kept
+        for the genuine "extension/expansion" sense: 003 ×2 (claim expansion), 004 (expansion into
+        regulated business), 011 (展延 renewal), 016:67 and 016:128, 017:79 (6-month extension),
+        013 "पुग्ने विस्तारमा वर्णन" (= in sufficient detail).
+ 2  P1 B 013 "छैनन् कि छैनन् पनि।" → "… छैनन् भन्ने पनि सुनिश्चित गर्न चाहन्छ।"
+ 3  P1 A 014 "नमिले पनि हुन्छ" → "नमिल्न पनि सक्छ" (the sentence no longer tells the reader a mismatch is fine).
+ 4  P1 A "विदेशी राष्ट्रियहरूको लगानी ऐन" → "विदेशी नागरिकको लगानी ऐन" (013, 017). 001's
+        "विदेशी राष्ट्रियता भएका जिम्मेवार व्यक्ति" is NOT the same defect (राष्ट्रियता is the correct
+        Nepali noun and is the corpus's own term in 007 ×4) — left, see §4.
+ 5  P1 A भेटी → निःशुल्क वितरण ×3 (011 lines 55 ×2, 109); "प्रचार भेटी" → "प्रचारका लागि गरिने निःशुल्क वितरण".
+ 6  P1 A 010 CCTV तस्बिर → CCTV फुटेज (all four footage references in the retention section).
+ 7  P2 C कि-complementizer swept across 002–018: ~32 clauses re-cast as content-first + भन्ने (S1).
+ 8  P2 C 016 "यसरी … कि" → "… ती सन्तानकै हुन् भनी पहिचान गर्न सकिने गरी व्यवस्थापन गर्नुहोस्".
+ 9  P2 C 017 "आवश्यकतामा यो पर्छ कि …" → "अन्य आवश्यकतासँगै निवेदकले … हुनुपर्छ" (subject number fixed).
+10  P2 C postposed relative clauses pre-posed: 017:55 (जसबाट), 013:118 (त्यस्तो … जहाँ), 016:53 (जसका विरुद्ध).
+11  P2 B 012 "उनी स्थलमै मृत्यु भए" → "घटनास्थलमै उनको मृत्यु भयो".
+12  P2 C 012 verbless tail given its verb: "… सँगै हेर्‍यो।" — both digits (2 सवारी / सवारी सङ्ख्या 2) kept.
+13  P2 B 016 बचनुहोस् → बच्नुहोस्.
+14  P2 B 018 बोक्योस् → "दिन सकोस् र … बोक्न सकोस्".
+15  P2 B bare जिम्मेवार → जिम्मेवार व्यक्ति (011 ×2, 017:91); 018:98 → "जिम्मेवार अधिवक्ताको निर्देशनअनुसार".
+16  P2 B 011 "सुरक्षा सूचनाको पठाउने काम" → "सुरक्षा सूचना पठाउने काम"; same at line 39.
+17  P2 B 011 "जरिवाना उठ्छ" → "जरिवाना लाग्छ".
+18  P2 C 011 postposed "जस्तै …" pre-posed with जस्ता ×2 (lines 35, 57).
+19  P2 B 011 विचारिने → विचार गरिने.
+20  P2 C 011 "अपूर्णतासँग स्वतः आउने उपाय होइन" → "… अपूर्णतामा स्वतः लागू हुने होइनन्" (plural verb fixed).
+21  P2 A 010 "तर त्यसैले …" → "तर त्यो पत्रले मात्रै …"; 012:54 "तर त्यसैले मात्र" → "तर त्यति गरेकै भरमा".
+22  P2 B 010 "2 वर्षभित्र दाबी नगरेमा सकिन्छ" → "… प्रयोग नगरेमा … दाबी गर्ने हक सिद्धान्ततः समाप्त हुन्छ".
+23  P2 C 010 अधिलेखित → "मेटिएर त्यसमाथि नयाँ रेकर्ड लेखिन सक्छ".
+24  P2 B missing locative मा: 013 "आप्रवासन प्रशासन (移民署) मा", 015 "भूमि प्रशासन कार्यालय (地政事務所) मा".
+26  P2 B 014 bare न → न त ×2 (lines 56, 89).
+27  P2 B 014 "कुन नाम दिइयो होइन" → "कुन नाम दिइएको छ भन्ने होइन, … भन्ने हेर्नुहोस्".
+28  P2 B 014 "बुझाउन सकियोस्।" → "बुझाउन सक्नुपर्छ।"
+29  P2 C 014 "निर्वहनसँग आउँछ" → "निर्वहनबाटै उत्पन्न हुन्छ".
+30  P2 C 014 "सूचना भुक्तानीपछि विवाद उठ्दा पहिलो पटक आउनु हुँदैन।" → "भुक्तानीपछि विवाद उठेपछि मात्र यो
+        कुरा पहिलो पटक बताइनु हुँदैन।" (+ the following कि-clause re-cast).
+31  P2 B 014 "रकम वा कर्मचारीले भाग तिरे, यसैले …" → "… रकम लेखिएकै कारण वा … तिरेकै कारण …".
+32  P2 B 014 "खर्च दुई पटक त गनिएन" → "खर्च दुई पटक गनिएको त छैन, जाँच्नुहोस्".
+33  P2 B 016 "केवल परिवारमा नलिने भन्ने, वा …" → "… भनेकै वा … नगरेकै आधारमा … त्याग भएको मान्नु हुँदैन।"
+34  P2 B 017 "बिना अनुमति" → "अनुमतिबिना(को/का)" ×4 (lines 18, 109, 115, 121).
+35  P2 B निपटार्ने/निपटारिन/ननिपटारिएका → फर्छ्यौट गर्ने / फर्छ्यौट हुन / फर्छ्यौट नभएका (018 ×1, 016 ×1, 017 ×1).
+36  P2 B 018 table row: leading के removed from the three-way choice; "नियुक्ति हुने" → "नियुक्ति गर्ने".
+37  P2 C 015 paragraph opening with कि rebuilt across the two existing blocks (block count unchanged):
+        "महत्त्वपूर्ण कुरा भनेको" / "त्यो ठेगाना “रेस्टुराँ” चलाउन मिल्ने क्षेत्रमा छ कि छैन भन्ने हो।"
+38  P2 C 012 "सुरक्षित फिर्ती दूरीसँग" → "मूल लेनमा सुरक्षित फर्कने दूरी सुनिश्चित गरेर".
+40  P3 B 012 दुई → 2 ×2 (lines 24, 26). This IMPROVED number parity: sourceCount=17 targetCount=17.
+41  P3 B 017 "(營業項目)बाट" → "(營業項目) बाट" ×2 (lines 12, 33). Corpus-wide scan: no other
+        Chinese-gloss-then-Devanagari collision remains except sentence-final "।", which is correct.
+42  P3 C 018 "यो पाठ" → "यो लेख"; 015 "निम्न पाठ" → "तलको भाग".
+
+
+=======================================================================
+2. SYSTEMIC PATTERNS SWEPT (verdict-level, not only the quoted instance)
+=======================================================================
+S1  Cataphoric "यो … कि" / finite-verb + कि complementizer (ne-a #5/#6, ne-b #7/#9).
+    Swept every file. 32 clauses re-cast content-first + भन्ने/भनी + verb-final:
+    002 ×6, 003 ×3, 004 ×10, 007 ×1, 010 ×2, 011 ×4, 012 ×1, 013 ×2, 014 ×6, 015 ×1,
+    016 ×4, 017 ×4, 018 ×6, guidance pack ×2 (pricing, disclaimer intro).
+    Genuine alternative-question कि (छ कि छैन, भयो कि भएन, हो कि होइन, तालिम हो कि वैधानिक तालिम)
+    left untouched — that is correct Nepali.
+S2  "तब मात्र … जब" / "तब … जब" correlative (ne-a #7). 12 instances re-cast condition-first:
+    002 ×3, 003 ×1, 004 ×1, 007 ×3, 008 ×2, 012 ×1, 016 ×1, plus guidance disclaimer ×1.
+    Zero "तब मात्र" left in columns-ne.
+S3  Pañcham-varṇa orthography (ne-a #13). 25 instances: संख्या → सङ्ख्या ×5, संगठन → सङ्गठन ×18,
+    संचित → सञ्चित ×1, संदिग्ध → सन्दिग्ध ×1 (guidance).
+S4  One spelling per word (ne-a #14, #16, #17, #18, #27, #28): आँकलन → आकलन ×17,
+    सन्तान् → सन्तान ×3, कठिनाई → कठिनाइ, फछ्र्योट → फर्छ्यौट, गर्यौं → गर्‍यौं, कसकोविरुद्ध → कसका विरुद्ध.
+S5  Detached मध्ये (ne-a #21): 15 instances attached (guidance 9 + inquiry 2, columns 4).
+S6  "scope" = विस्तार (ne-b #1): 28 instances → दायरा; 8 genuine "extension" uses preserved.
+S7  Hindi-order postposition / Hindi lexis (ne-b #34, ne-a #9/#10/#11): बिना अनुमति ×4,
+    "X का अधीन हुनु" ×2, आवंट* ×8, रह गएका ×1 — all zero remaining.
+S8  Invented verb stems (ne-b #5/#13/#14/#19/#23/#35): भेटी, बचनुहोस्, बोक्योस्, विचारिने, अधिलेखित,
+    निपटार* — all zero remaining.
+
+
+=======================================================================
+3. ROWS SKIPPED (with reason)
+=======================================================================
+ne-a #2  (P2 A, 003 "maximum compensation").  PARTIAL — degree deliberately NOT restored.
+    RULEBOOK-FIX R3 explicitly requires 003's "pursue the maximum / highest possible compensation"
+    to read "pursue the compensation the facts and evidence support", and ACCEPTED-ROUND says a
+    result sentence may never be made positive again, only more natural. The current Nepali IS the
+    R3 form. Applied the allowed half — the wording was made more idiomatic:
+      "…तथ्य तथा प्रमाणले टेवा दिने क्षतिपूर्तिका लागि प्रयास गर्नु हो।"
+      → "…तथ्य र प्रमाणले पुष्टि गर्ने हदसम्मको क्षतिपूर्तिका लागि प्रयास गर्नु हो।"
+    "उपलब्ध अधिकतम क्षतिपूर्ति" was not written back.
+
+ne-a #3  (P2 A, 006 Korean Medical Service Act gloss).  SKIPPED.
+    (a) The reviewer's primary suggestion "(의료법)" is banned by the work order's hard rule —
+        no Korean characters outside `url` values.
+    (b) ACCEPTED-ROUND: "Requests to change … Chinese glosses → skip (proper names); only fix a
+        wrong or missing gloss." 醫療法 is not wrong: it is the hanja of 의료법, and the Chinese
+        source writes exactly 依韓國《醫療法》… (columns-zh/006 line 94).
+    (c) Every one of the sister locales carries the same gloss verbatim (hi, th, ta, bn, cs, de, fr
+        checked). Dropping it in ne alone would desync one locale from 44 others.
+    Empirical note: dropping it does NOT fail the checker, so the block is not what forced the skip —
+    the gloss's correctness and the cross-locale convention did.
+
+ne-a #23 (P2 D, "TWD 1.57M" → "TWD 15,70,000").  SKIPPED — two independent rules:
+    ACCEPTED-ROUND "Requests for … lakh/crore grouping … → skip (the checker cannot parse them)",
+    and RULEBOOK R12 "Keep the pinned bio term 'TWD 1.57M' byte-identical (a test pins it)" —
+    src/data/international-guidance-team.ts:1858 is that pin.
+
+ne-b #39 (P3 D, lakh grouping for every ≥1-lakh amount in 010/011/017/018).  SKIPPED — same
+    ACCEPTED-ROUND rule. Western comma grouping is the parse form R14 mandates for ne.
+
+ne-b #25 (P2 B, U+200B in 013 and 015).  SKIPPED — the checker pins the ZWSP count exactly, and
+    the ZWSPs are inherited byte-for-byte from the Korean source (columns/013 lines 34/58/72/86/108,
+    columns/015 lines 28/36/52) and are present in all 44 sister locales. Measured both ways:
+
+      # removing the three standalone ZWSP lines from 015
+      FAIL  .../src/content/columns-ne/015-taiwan-company-setup-pitch-location.md  lang=ne
+      blocks         FAIL   blocks 35 → 32
+                            ZWSP 3 → 0
+
+      # removing only the trailing ZWSP inside 013 line 34 (no block-count change)
+      FAIL  .../src/content/columns-ne/013-taiwan-company-establishment-advanced-1.md  lang=ne
+      blocks         FAIL   ZWSP 5 → 4
+
+    Both reverted; the row is out of reach until the supervisor changes the checker or the source.
+    (008 carries 10 of the same ZWSPs; not tabled, and left for the same reason.)
+
+
+=======================================================================
+4. WHAT I BELIEVE THE REVIEWER GOT WRONG (not applied)
+=======================================================================
+a) ne-a #1's diagnosis of the 004 link. The reviewer says "the visible article number is still 10"
+   and asks for "धारा 3" alone. But the English source labels the same URL "Article 10 of the
+   Value-Added and Non-Value-Added Business Tax Act", so silently replacing 10 with 3 would both
+   contradict the source and drop a digit the checker counts. Applied the campaign's existing
+   cross-locale compromise instead, which states both numbers.
+
+b) ne-a #2. The reviewer calls the missing degree a defect ("This is advice about the attorney's
+   work, not a firm win-rate claim"). RULEBOOK R3 disagrees: that exact sentence is one of the three
+   named advertising-rule sentences in 003 and its softening is deliberate. Not restored.
+
+c) ne-a #3. The Chinese gloss on Korea's Medical Service Act is not a Taiwanese-term gloss misapplied
+   — 醫療法 is the statute's own hanja and comes straight from the Chinese source. See §3.
+
+d) ne-b #4's extension to columns-ne/001. 001 has no occurrence of the statute name; what it has is
+   "विदेशी राष्ट्रियता भएका जिम्मेवार व्यक्ति (負責人)", where राष्ट्रियता is the ordinary Nepali noun
+   "nationality" and is the corpus's own term (007 uses it four times, unflagged). Left as is.
+
+e) ne-a #29's wider list. "…भेटमा बोलाउन थाले" and "…कोरियामा … भत्ता दिनुपर्छ" did need a danda and
+   got one. "…10 वर्षभन्दा बढीदेखि कार्यरत थिए" is followed by "र … विक्रेता थिए।" — it is the first
+   half of a coordinated pair, and the Korean source line likewise has no stop. A danda there would
+   break the coordination.
+
+f) ne-b #12's suggested rewrite drops one of the two digits ("अगाडिका 2 सवारी"), which would fail the
+   checker's number parity. Kept both digits while making the same grammatical repair.
+
+
+=======================================================================
+5. §Verify — output verbatim
+=======================================================================
+$ cd /Users/son7/Projects/tseng-law-fix-ne-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ne --lang ne 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=103
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ne src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      23
+
+(The 23 lines are: 20 files I edited + 1 pre-existing modification to
+docs/i18n/global-plan/WO-F-ne.txt that was already in the worktree before this lane started and that
+I did not touch, + the two untracked review files rounds/r5/ne-a.md and ne-b.md. This log itself is
+the 24th entry once written. No git add/commit/push was run.)
+
+Pass criteria: checker summary PASS 18/18 ✓ · markers 0 ✓ · TSC_OK ✓ · tests passed ✓
+No checker item had to be reverted for a number/date format: the only digit change made
+(012 दुई → 2 ×2) left numbers at sourceCount=17 targetCount=17 PASS.

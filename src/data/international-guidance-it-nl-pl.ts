@@ -88,8 +88,8 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Che cosa facciamo',
           paragraphs: [
-            'Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Lo studio fornisce consulenza alle imprese, le rappresenta in giudizio e accompagna i clienti dall’estero nei passi necessari a Taiwan.',
-            'Tutto il contenuto qui è generale. L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento. Queste indicazioni non sostituiscono il colloquio con un’avvocata o un avvocato sui Suoi documenti.',
+            'Hovering International Law Firm è uno studio legale con sede a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Lo studio fornisce consulenza alle imprese, le rappresenta in giudizio e accompagna i clienti dall’estero nei passi necessari a Taiwan.',
+            'Tutto il contenuto qui è generale. L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento in cui si agisce. Queste indicazioni non sostituiscono il colloquio con un’avvocata o un avvocato sui Suoi documenti.',
           ],
         },
         {
@@ -169,7 +169,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Proprietà intellettuale',
           paragraphs: [
             'Assistiamo nella registrazione di marchi (商標) e brevetti (專利), nel diritto d’autore e nelle controversie su questi diritti a Taiwan.',
-            'In quest’area decide l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.',
+            'In quest’area è decisivo l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.',
           ],
         },
         {
@@ -319,7 +319,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Quali questioni tratta lo studio?',
           answer:
-            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.',
+            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. L’accettazione di una questione si decide dopo l’esame del contenuto.',
         },
         {
           question: 'Che cosa dovrei preparare prima del contatto?',
@@ -354,7 +354,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Che fare se la mia questione è molto urgente?',
           answer:
-            'Indichi il termine o la data su uno scritto ufficiale all’inizio del riassunto, così quelle date sono visibili nell’esame. Questa pagina non ha un canale di emergenza e non assicura un termine di risposta; se la Sua questione non può attendere, dovrebbe cercare in parallelo altre vie nel Suo luogo.',
+            'Indichi il termine o la data su uno scritto ufficiale all’inizio del riassunto, così quelle date sono visibili nell’esame. Questa pagina non ha un canale di emergenza e non assicura un termine di risposta; se la Sua questione non può attendere, dovrebbe cercare in parallelo altre vie nel luogo in cui si trova.',
         },
       ],
     },
@@ -362,7 +362,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'PRIVACY',
       title: 'Dati raccolti tramite il modulo di contatto',
       description:
-        'Che cosa raccoglie il modulo di contatto in questa parte in italiano, come viene trattato il testo originale e come raggiungerci sui Suoi dati.',
+        'Che cosa raccoglie il modulo di contatto in questa parte in italiano, come viene trattato il testo originale e come raggiungerci per i Suoi dati.',
       intro:
         'Questa parte riguarda soltanto il modulo di contatto su queste pagine di indicazioni. Descrive il trattamento dei dati, non una garanzia tecnica.',
       sections: [
@@ -379,7 +379,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
             'La lingua di consulenza da Lei desiderata',
             'Il testo originale che ha scritto',
             'Il Suo consenso all’invio della richiesta',
-            'Un numero di ricezione per ritrovare la richiesta',
+            'Un numero di ricevuta per ritrovare la richiesta',
           ],
         },
         {
@@ -399,15 +399,15 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Scopo dell’uso',
           paragraphs: [
-            'I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento del canale di comunicazione e al trattamento, se il lavoro viene assunto.',
+            'I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento del canale di comunicazione e al trattamento, se l’incarico viene assunto.',
             'I dati non vengono usati per il marketing senza un consenso distinto.',
           ],
         },
         {
-          heading: 'Notifica e numero di ricezione',
+          heading: 'Notifica e numero di ricevuta',
           paragraphs: [
             'Se una richiesta viene inviata con successo, il sistema notifica lo studio. Se questa notifica non è ancora confermata, il Suo testo resta conservato e non va perduto.',
-            'Il numero di ricezione serve a ritrovare la Sua richiesta nei nostri atti. Viene mostrato dopo la conservazione; può indicarlo in un nuovo contatto.',
+            'Il numero di ricevuta serve a ritrovare la Sua richiesta nei nostri atti. Viene mostrato dopo la conservazione; può indicarlo in un nuovo contatto.',
           ],
         },
         {
@@ -420,7 +420,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Luogo di conservazione e fornitori',
           paragraphs: [
-            'Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio a oggetti non accessibile al pubblico, presso questo fornitore. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.',
+            'Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio non accessibile al pubblico, presso questo fornitore. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.',
             'I server di singoli fornitori possono trovarsi fuori da Taiwan, così i Suoi dati possono essere ivi conservati e trattati. Quando lo scopo di conservazione è soddisfatto, i dati vengono cancellati senza ritardo; i dati che devono essere conservati secondo le norme applicabili restano per quella durata. Per le richieste sui dati personali si scriva a wei@hoveringlaw.com.tw.',
           ],
         },
@@ -438,7 +438,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Soltanto indicazioni generali',
           paragraphs: [
             'Il contenuto di queste pagine è scritto come informazione generale. Non è una consulenza legale per il Suo caso e non sostituisce l’esame dei Suoi documenti.',
-            'L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento; due situazioni apparentemente simili possono finire in modo diverso.',
+            'L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento in cui si agisce; due situazioni apparentemente simili possono finire in modo diverso.',
           ],
         },
         {
@@ -452,7 +452,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Un rapporto tra avvocata o avvocato e cliente non sorge automaticamente',
           paragraphs: [
             'La lettura di questa pagina, l’invio di un modulo o di un’e-mail non costituisce di per sé un rapporto tra avvocata o avvocato e cliente.',
-            'Questo rapporto nasce soltanto dopo che la questione è stata esaminata e entrambe le parti hanno confermato l’assunzione del lavoro.',
+            'Questo rapporto nasce soltanto dopo che la questione è stata esaminata e entrambe le parti hanno confermato l’assunzione dell’incarico.',
           ],
         },
         {
@@ -642,7 +642,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Arbeidsrechtelijke geschillen',
           paragraphs: [
-            'Deze groep omvat beëindiging van de arbeidsovereenkomst, ontslagvergoeding volgens Taiwanees recht (資遣費; dit is niet hetzelfde als de ontslagvergoeding of de transitievergoeding in Nederland of België), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over de opzegging, de betaling en de termijnen.',
+            'Deze groep omvat beëindiging van de arbeidsovereenkomst, een wettelijke vertrekvergoeding naar Taiwanees recht (資遣費; niet dezelfde regeling als de transitievergoeding in Nederland of de ontslagvergoeding in België), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over de opzegging, de betaling en de termijnen.',
             'Arbeidsovereenkomst, arbeidsreglement (工作規則), loonstroken en de briefwisseling van de partijen zijn meestal de beslissende stukken. Als u ze nog hebt, vermeld dat in de samenvatting.',
           ],
         },
@@ -661,7 +661,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Omvang en de bevestiging daarvan',
+          heading: 'Bevestiging van de omvang',
           paragraphs: [
             'Het kantoor werkt volgens Taiwanees recht en behandelt zaken van de bovengenoemde groepen. De omvang van elke zaak wordt afzonderlijk bevestigd nadat een advocaat uw bericht heeft beoordeeld.',
             'Verblijfsstatus, werkvergunning en vergelijkbare vragen worden beoordeeld uit de stukken en de situatie van de persoon, niet uit de nationaliteit. Als een deel van uw zaak zulke vragen raakt, noem dat bij het contact. Deze pagina belooft geen resultaat en geen antwoordtermijn.',
@@ -675,13 +675,13 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       description:
         'Basisgegevens over dit Taiwanese advocatenkantoor, de kantoren en het werk met buitenlandse betrokkenen.',
       intro:
-        'Hovering International Law Firm is een advocatenkantoor in Taiwan. De advocaten werken van ondernemingsadvies tot gerechtelijke procedure. Dit deel beschrijft het ontstaan van het kantoor, de vestigingen en het werk met buitenlandse betrokkenen.',
+        'Hovering International Law Firm is een advocatenkantoor in Taiwan. De advocaten adviseren ondernemingen en staan hen bij in procedures voor de rechter. Dit deel beschrijft het ontstaan van het kantoor, de vestigingen en het werk met buitenlandse betrokkenen.',
       sections: [
         {
           heading: 'Oprichting en opbouw',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) is in 2016 opgericht door advocaten die aan de National Taiwan University (國立臺灣大學) hebben gestudeerd. De Chinese naam 昊鼎 verbindt het teken 昊 (“wijde hemel”) met 鼎 (“vaste grond”) en beschrijft de koers van het kantoor sinds de oprichting.',
-            'Wij hebben kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Het kantoor Kaohsiung richt zich op ondernemingsbestuur en behandelt civiele, straf- en bestuursrechtelijke geschillen. Het kantoor Taichung behandelt bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Het kantoor Pingtung is in 2017 geopend voor de plaatselijke behoefte.',
+            'Wij hebben kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Het kantoor Kaohsiung richt zich op ondernemingsbestuur en behandelt civiele, straf- en bestuursrechtelijke geschillen. Het kantoor Taichung behandelt bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Het kantoor Pingtung is in 2017 geopend om in de plaatselijke behoefte te voorzien.',
             'Naast het advocatenwerk bestaat sinds 2020 ook Hovering Accounting Office, dat boekhouding en fiscale planning biedt voor ondernemers en vermogende particulieren.',
           ],
         },
@@ -704,7 +704,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOCATEN',
       title: 'Internationaal team van Hovering',
-      description: 'Profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering.',
+      description: 'Profielen van de advocaten, de juridisch medewerker, de operationeel manager en de accountant-partner van Hovering.',
       intro: '',
       sections: [],
     },
@@ -768,8 +768,8 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Als u geen van de vier consultatietalen spreekt',
           paragraphs: [
-            'In het contactformulier kunt u “Communicatiekanaal moet worden bevestigd” kiezen. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
-            'Dit is alleen een controle, geen belofte. Wij beloven geen tolk en geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en wij nemen niet elke zaak aan.',
+            'In het contactformulier kunt u “De manier van communiceren moet nog worden afgesproken” kiezen. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
+            'Dit is alleen een afstemming, geen toezegging. Wij beloven geen tolk en geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en wij nemen niet elke zaak aan.',
           ],
         },
         {
@@ -822,7 +822,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Wat als ik geen van de vier talen spreek?',
           answer:
-            'Kies bij het sturen van het verzoek “Communicatiekanaal moet worden bevestigd”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat, maar een dienst in een andere taal wordt niet gewaarborgd. Dit is een controle, geen belofte dat wij in een andere taal kunnen werken.',
+            'Kies bij het sturen van het verzoek “De manier van communiceren moet nog worden afgesproken”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat, maar een dienst in een andere taal wordt niet gewaarborgd. Dit is alleen een afstemming, geen toezegging dat wij in een andere taal kunnen werken.',
         },
         {
           question: 'Hoe wordt mijn Nederlandse tekst behandeld?',
@@ -887,7 +887,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Doel van het gebruik',
           paragraphs: [
-            'De verzonden gegevens worden gebruikt om het verzoek te beoordelen, u te antwoorden, het communicatiekanaal af te spreken en de zaak te behandelen als het kantoor die aanneemt.',
+            'De verzonden gegevens worden gebruikt om het verzoek te beoordelen, u te antwoorden, de manier van communiceren af te spreken en de zaak te behandelen als het kantoor die aanneemt.',
             'De gegevens worden niet zonder een afzonderlijke toestemming voor marketing gebruikt.',
           ],
         },
@@ -930,7 +930,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Welk recht',
+          heading: 'Toepasselijk recht',
           paragraphs: [
             'Het kantoor werkt volgens Taiwanees recht, en deze pagina spreekt alleen over werk in dat kader.',
             'De inhoud is geen advies volgens een andere rechtsorde dan de Taiwanese, met inbegrip van het recht van uw woonplaats. Raakt een deel van uw zaak een andere rechtsorde, dan overleggen wij met u welke bevoegde deskundige u voor dat deel nodig hebt.',
@@ -1059,7 +1059,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Ogólne wyjaśnienia po polsku o zakresie pracy Hovering International Law Firm na Tajwanie, o językach konsultacji i o pierwszym kontakcie.',
       intro:
-        'Hovering International Law Firm prowadzi sprawy klientów z zagranicy, także z powiązaniem z Tajwanem, według prawa Tajwanu: inwestycje i zakładanie spółek, spory cywilne, małżeństwo, rodzina i spadki, prawo pracy, sprawy karne oraz własność intelektualna. Ta polska część pomaga rozpoznać, jaka praca wchodzi w nasz zakres, co przygotować i jak się z nami skontaktować. Są to informacje ogólne, a nie porada prawna w Państwa sprawie.',
+        'Hovering International Law Firm prowadzi sprawy klientów z zagranicy, w tym klientów mających powiązanie z Tajwanem, według prawa Tajwanu: inwestycje i zakładanie spółek, spory cywilne, małżeństwo, rodzina i spadki, prawo pracy, sprawy karne oraz własność intelektualna. Ta polska część pomaga rozpoznać, jaka praca wchodzi w nasz zakres, co przygotować i jak się z nami skontaktować. Są to informacje ogólne, a nie porada prawna w Państwa sprawie.',
       sections: [
         {
           heading: 'Czym się zajmujemy',
@@ -1116,7 +1116,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Sprawy cywilne i odszkodowania',
           paragraphs: [
-            'Ta grupa obejmuje spory umowne, odszkodowania z czynu niedozwolonego i spory konsumenckie. Praca zaczyna się zwykle od chronologii, oceny posiadanych dokumentów i dowodów, a dopiero potem od kolejnych kroków.',
+            'Ta grupa obejmuje spory umowne, odszkodowania z czynu niedozwolonego i spory konsumenckie. Praca zaczyna się zwykle od ustalenia chronologii zdarzeń, oceny posiadanych dokumentów i dowodów, a dopiero potem od kolejnych kroków.',
             'Terminy, w tym ustawowe terminy do wytoczenia powództwa, oraz kompletność dowodów kształtują przebieg. Dlatego znane daty należy podać jak najwcześniej. Prosimy zachować umowy, wiadomości, dowody zapłaty lub zdjęcia z miejsca zdarzenia i wymienić je w pierwszej wiadomości.',
           ],
         },
@@ -1228,7 +1228,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Dlaczego ta strona nie podaje stawek',
           paragraphs: [
-            'Koszty zależą od samej sprawy: od nakładu, liczby stron, dokumentów, terminów i od tego, czy postępowanie już trwa. Liczba ustalona z góry nie oddałaby kosztów Państwa sprawy. Dlatego najpierw ustalamy zakres pracy, a następnie podajemy koszty, zanim praca się zacznie.',
+            'Koszty zależą od samej sprawy: od nakładu, liczby stron, dokumentów, terminów i od tego, czy postępowanie już trwa. Kwota podana z góry nie odpowiadałaby kosztom Państwa sprawy. Dlatego najpierw ustalamy zakres pracy, a następnie podajemy koszty, zanim praca się zacznie.',
             'Obok honorarium adwokackiego mogą powstać koszty sądowe, urzędowe lub osób trzecich. Są one oddzielone od honorarium i zależą od danego postępowania.',
           ],
         },

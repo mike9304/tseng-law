@@ -1,0 +1,125 @@
+# WO-F-uk — round 5 fix log (Ukrainian)
+
+worktree: /Users/son7/Projects/tseng-law-fix-uk-r5 (branch fix/native-uk-r5-20260922)
+inputs: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/uk-a.md (36 rows), rounds/r5/uk-b.md (64 rows)
+files touched: src/content/columns-uk/001–018.md, src/data/international-guidance-eastern.ts,
+               src/data/international-guidance-team.ts. No test file needed a change (all 3202 tests green
+               without touching any expected string). No git add/commit/push.
+
+## §1 Rows applied
+
+### uk-a (36 rows) — applied 33, adapted 2, skipped 3
+| row | sev | result |
+|---|---|---|
+| 1 | P1 | ADAPTED — 004 source list. Dropped the confusing double-article form. New label: "Норми ставок утримання у джерела виплати (各類所得扣繳率標準), стаття 3 (у корейському першоджерелі — стаття 10 Закону про податок на підприємницьку діяльність)". The reviewer's exact wording (delete "стаття 10") makes the checker FAIL — see §3. URL untouched. |
+| 2 | P1 | applied — 002 "перенесення збитків (累積虧損)" → "накопичені збитки (累積虧損)". |
+| 3 | P2 | applied (partly adapted) — digits spelled out where the checker allows: 001 "всі 4 типи"/"цих 4 типів" → "чотири"; 006 "2 працівників" → "двох працівників"; 007 "3 шляхи"(heading+body+"цих 3 шляхів"), "5 питань"×2, "9 категорій", "3 шари"; 016 "2 дітей"×2 → "двоє дітей", "3 особи" → "троє спадкоємців". Kept as digits because removing them fails the number checker: 007 "(1 рівень)" → "1-го рівня"; 008 "(1 рік)" (rewritten, see row 29); 005 "1 особу" → "більше ніж 1 іноземця"; 016 "1 рангом" → "спадкоємцями 1-ї черги"; 017 "1 мала вантажівка"; 018 "від 1 до 3 осіб". |
+| 4 | P2 | applied — 007 "існують по суті три шляхи"; "з двома або більше державами"; "двоє/двох або більше свідків" (FAQ + body ×2). |
+| 5 | P2 | SKIPPED — thousands with a space. NUMBER_THOUSAND_STYLE.uk = 'dot' in scripts/check-column-translation.mjs, and ACCEPTED-ROUND.md lists space separators as a skip rule. Dot grouping kept in all 18 files. |
+| 6 | P2 | SKIPPED — U+200B blank paragraphs and the missing `##` on Q16–Q20 (003, 005, 006, 008, 009). checkBlocks pins the ZWSP count to the Korean source (003 52↔52, 005 8↔8, 006 4↔4, 008 10↔10, 009 5↔5) and checkHeadings pins the heading-level array; the Korean source itself ends its `##` headings at Q15. Removing them or adding headings makes the checker FAIL. Structural defect inherited from the source — supervisor decision needed. |
+| 7 | P2 | applied — 005: two self-standing sentences, block count unchanged ("Як правило, спершу видають документи…" / "Після цього відповідальна особа (負責人) може…"). |
+| 8 | P2 | applied — 009 lowercase "право Тайваню дає кожній зі сторін право" (one sentence, no stray capital; blocks unchanged). |
+| 9 | P2 | applied in the vi/ca form — bio now reads "…здобула рішення першої інстанції про відшкодування 1,57 млн нових тайванських доларів (TWD 1.57M)." The literal token `TWD 1.57M` is kept byte-identical (ACCEPTED-ROUND + guidance-team-bios.test.ts pin). |
+| 10 | P2 | applied — 004 "Те саме стосується випадку, коли материнське товариство…". |
+| 11 | P2 | applied — 007 "Заяви після спливу строку бюро цивільного стану також повинно прийняти;". |
+| 12 | P2 | applied — 003 "Тому цим у жодному разі не можна нехтувати…". |
+| 13 | P2 | applied — 006 "на пана Ліня та цих працівників було накладено адміністративний штраф (罰鍰) у розмірі відповідно…". |
+| 14 | P2 | applied — 008 full stops after "…на співбесіди." and "…і пішла сама.". |
+| 15 | P2 | applied — 008 "варто мати на увазі". |
+| 16 | P2 | applied — 008 table row → "| … | Так | Ні | Ні |" (row/cell counts unchanged). |
+| 17 | P2 | applied — 009 "(стаття 14 Закону про норми праці, яка застосовує за аналогією статтю 17; 勞動基準法第14條)". |
+| 18 | P2 | applied — 007 "## 6. Право власності на житло, майно до шлюбу та розподіл залишкового майна". |
+| 19 | P2 | applied — 006 "може бути пов’язана з однією-єдиною заявою про конституційне тлумачення (釋憲)". |
+| 20 | P2 | applied — 003 "Тому потерпілий почувається глибоко скривдженим і розгніваним…". |
+| 21 | P2 | applied + swept — 003 "наголосити на одній важливій речі"; 004 "| Критерій порівняння |", "впорядкувати та порівняти таке"; 013 "Щодо цього варто докладно порадитися…"; 015 "інше важливе питання —"; 017 "Принаймні таке треба підтвердити по суті". |
+| 22 | P2 | applied ×2 — 002 "Перевищення зобов’язань над активами (資不抵債)" (heading sentence + following paragraph). |
+| 23 | P2 | applied ×2 — 004 "планує вийти на біржу" (FAQ + body). |
+| 24 | P2 | applied — 004 "транзитна компанія (導管公司)". |
+| 25 | P2 | applied — 008 "взяло пана B на приціл". |
+| 26 | P2 | applied — 008, rewritten inside the three existing blocks: "йому дали аркуш A4," / "і звеліли написати на ньому: «Я, [ім’я та прізвище], добровільно знижую свою посаду та заробітну плату»." / "Саме такого змісту від нього вимагали." |
+| 27 | P2 | applied — 001 "не повинна сама визначати, чи виникає постійне представництво і чи оподатковується прибуток підприємств". |
+| 28 | P2 | applied — privacy page: "…та опрацюванню справи, якщо ми візьмемося за неї." |
+| 29 | P2 | applied, digit-preserving — 008 FAQ + blockquote: "Щоразу, коли стаж працівника досягає 1 року, роботодавець повинен виплатити 0,5 місяця…"; "…на кожен 1 рік стажу припадає 1 місяць середньої заробітної плати без верхньої межі." The bare "(1 рік)" is gone; the digit stays because the source's three "1"s are counted (dropping them → numbers FAIL). |
+| 30 | P2 | applied + swept — 001 "скористайтеся сторінкою [«Контакти»](/uk/contact)"; list label "[Контакти](/uk/contact)" in 002, 004, 007, 014, 016, 017 (7 instances total). |
+| 31 | P2 | applied + swept — "Пов’язані гіди"/"Пов’язані орієнтири" → "Пов’язані матеріали" in 004, 014, 016, 017. |
+| 32 | P3 | applied — "бюро" → "офіс" in the PE list (001 ×1, 004 ×2). |
+| 33 | P3 | applied — guidanceTeamCopy.uk.roles.son-jungmin → "Керівник операцій у Кореї (Korea Operations Manager)". |
+| 34 | P3 | applied — "(paralegal)" → "(Paralegal)". |
+| 35 | P3 | applied — about/paragraphs[1]: "Офіс у Тайчжуні…", "Офіс у Піндуні відкрито 2017 року…" (declension made consistent with "Офіс у Гаосюні"). |
+| 36 | P3 | applied — 007 "Питання житла треба розглядати на трьох рівнях." |
+
+### uk-b (64 rows) — applied 63, skipped 1
+All rows applied as written or in an equivalent natural form, except:
+- b-9 (thousands with a non-breaking space) — SKIPPED, same checker/ACCEPTED-ROUND reason as a-5.
+- b-28 — applied, but with "юридичний висновок" instead of the suggested "правовий висновок": the guidance pack's own disclosure sentence already says "не є юридичним висновком" and guidance-disclosure-parity.test.ts pins the uk marker `/юридичн[а-яіїєґ]* висновк/`. One term is now used across the pack and the columns (010, 011, and also 002 "правовою думкою" → "юридичним висновком").
+- b-34 (U+200B in 013/015) — the ZWSP removal part is SKIPPED (checker, same as a-6); the sentence quoted in the row is otherwise fine.
+- b-36 — applied in 013 and also in 015 ("заяву про видачу «витягу з реєстру будівлі типу 2»").
+- b-50/b-55/b-61 — applied, but the ordinal/quantity stays as a digit where the checker counts it (see a-3).
+
+## §2 Systemic sweeps (verdict patterns swept across all 18 files, not only the quoted instance)
+
+| pattern | instances changed |
+|---|---|
+| «разом» used for 綜合 "comprehensively" → «в сукупності / у сукупності / водночас / також» | 42 (001×3, 002×4, 003×2, 004×3, 007×4, 010×4, 011×2, 012×3, 014×10, 016×8, 018×3 — genuine "together" uses left alone: 003 "разом з ними", 004 "разом із дочірнім", 006 "разом із надійним другом", 007 "з’являтися разом / медіювати разом / живуть разом", 009 "працюють разом", 014 "записані разом у тому самому договорі", 016 "разом із найкращими інтересами дитини", 017 "разом із підтвердженням") |
+| «орієнтир» for guidance/instructions/guide → путівник / настанови / вказівки / роз’яснення / матеріали | 13 (014×2, 015×1, 016×5 incl. title + H1, 017×3, 018×3) — 0 left in columns-uk |
+| «звичайно» meaning "usually" → «зазвичай» | 5 (013×1, 014×1, 016×4 counting FAQ + body duplicates) — the remaining «звичайн*» are all "ordinary/regular" (005, 014, 017, 018) |
+| «того з батьків, хто вижив» → «хто пережив померлого» | 9 (016: FAQ ×3, H2 ×1, body ×5) |
+| «ранг» in succession → «черга» | 8 (016, incl. FAQ duplicates) |
+| English-imperative checklists rendered as statements | 016: 6 list items + 2 body sentences → imperative; 014: 8 + 8 list items → imperative |
+| «письмо» for a letter → «лист / письмова угода» | 3 (010 ×2, 007 ×1) |
+| «зустрічне надання» for 対価 → «плата / ціна» | 4 (002, 011, 014 ×2, 016) |
+| «операція» for a legal transaction → «правочин / угода» | 5 (016 ×2, 017 ×3) |
+| «підприємець» for a licensed carrier → «перевізник» | 9 (017, incl. FAQ) |
+| «юридична/правова думка» → «юридичний висновок» | 4 (002, 010, 011 ×2) |
+| «компетентна адвокатка» (reads as a quality claim) → «адвокатка, яка веде такі справи» | 2 (001, 011) |
+| «справа за справою / операція за операцією» → «у кожній справі окремо / щодо кожної операції окремо» | 3 (002 ×2, 010 ×1) |
+| bare «Контакт» link label → «Контакти» (the site's own nav label) | 7 |
+| «товариства чи комерції» → «товариства чи іншого суб’єкта господарювання (商業)» | 3 (015 ×1, 017 ×2) |
+
+Hard rules re-checked after the edits: consultation languages still EN/中文/JA/KO only and still negative (no interpreter, no reply time, no free meeting, no 24/7, no result/win-rate/"best-only"); attorney Wei Tseng feminine everywhere; the male manager (008) and the male client (010) unchanged; all Traditional-Chinese glosses kept (one added: 商業); frontmatter keys, `url`, `lastmod`, `featured_image`, image paths, external links, block/table/list counts unchanged; `[변호사 검수 필요]` = 0; no Hangul outside `url` values.
+
+## §3 Verify output (verbatim)
+
+```
+=== 1) checker ===
+neighbour      PASS   
+hanzi          PASS   han=59
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== 2) markers ===
+       0
+=== 3) tsc ===
+TSC_OK
+=== 4) vitest ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== 5) git status ===
+      24
+```
+
+## §4 Checker conflicts (form the checker accepts, per the work order)
+
+1. **Thousands separators (a-5, b-9).** `NUMBER_THOUSAND_STYLE.uk = 'dot'`. `500 000` is not parsed, so every amount keeps dot grouping (`500.000`, `1.579.589`). The decimal comma (`0,5`) is already correct.
+2. **U+200B / missing `##` headings (a-6, b-34).** `checkBlocks` compares the ZWSP count with the Korean source and `checkHeadings` compares the full heading-level array; the source carries the same blanks and also stops using `##` after Q15. Both fixes are source-level, not translation-level.
+3. **Digits that the source counts.** Converting these to words made `numbers` FAIL (`missing from translation`), so the digit is kept in a form that reads acceptably:
+   - 004 "стаття 10" — removing it → `missing from translation (1): 10`. Kept as an explicit note about the Korean first source (row a-1).
+   - 007 "(1 рівень)" → "1-го рівня" (words → `missing … (1): 1`).
+   - 016 "1 рангом" → "спадкоємцями 1-ї черги" ("першою чергою" → `missing … (2): 1×2`).
+   - 005 "перевищує 1 особу" → "якщо найнято більше ніж 1 іноземця" ("одну особу" → `missing … (1): 1`).
+   - 008 "(1 рік)" — rewritten around the digit ("досягає 1 року", "на кожен 1 рік стажу").
+   - 017 "1 мала вантажівка, що перебуває у власності заявника" (tautology removed, digit kept).
+   - 018 "Директорів призначають у кількості від 1 до 3 осіб, обираючи їх серед учасників" (case pattern fixed, digits kept).
+   After each of these the checker returns `summary PASS 18/18`.
+
+## §5 Where I believe the reviewer was wrong (not applied)
+
+1. **uk-a row 6 / uk-b row 34 — "U+200B blanks chop the article" and "Q16–Q20 lost their `##` headings".** The Ukrainian file is faithful here: the Korean source `src/content/columns/003-…md` has exactly the same 52 U+200B paragraphs and also has no `##` on Q16–Q20 (its last `##` is Q15, line 172). Same for 005/006/008/009/013/015. This is a source-corpus defect, and the checker pins both counts, so it cannot be fixed inside one locale. Flagging it for the supervisor rather than applying it.
+2. **uk-a row 5 / uk-b row 9 — non-breaking-space thousands.** Correct for Ukrainian typography, but structurally impossible under the current checker (uk is registered as a dot-grouping locale) and explicitly listed as a skip rule in ACCEPTED-ROUND.md.
+3. **uk-a row 9 — "TWD 1.57M" should become "1,57 млн TWD".** Half-right: the Ukrainian reading was missing, but the literal `TWD 1.57M` is a pinned term (`GUIDANCE_BIO_PRESERVED_TERMS` + guidance-team-bios.test.ts). Applied the vi/ca/da solution instead — Ukrainian amount first, pinned token in parentheses.
+4. **uk-b row 28 — "правовий висновок".** Both forms fix the calque, but the guidance pack (`guidanceAnswers.uk`) already says "не є юридичним висновком" and the disclosure-parity test pins `/юридичн[а-яіїєґ]* висновк/` for uk. Using "правовий висновок" in the columns would leave two competing terms in one locale, so "юридичний висновок" was used throughout instead.
+5. **uk-a row 3 — "005 (2 працівників, 1 особу)".** File attribution is off: "2 працівників" is in 006, not 005 (fixed there). "1 особу" is in 005 and had to keep its digit (§4).
+6. **uk-a row 33 — "Керівництво операціями в Кореї" names a function, not a person.** Applied ("Керівник операцій у Кореї"), but noting that Ukrainian has no gender-neutral agent noun here; the masculine form is used as the generic, consistently with "Адвокат на Тайвані" and "Помічник адвоката" in the same list. If the team member is a woman the label should become "Керівниця операцій у Кореї" — a fact I cannot verify from the pack.

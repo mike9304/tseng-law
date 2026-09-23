@@ -347,7 +347,7 @@ Maraming may kagagawan ang hindi nag-aabalang tumawag upang makiramay o dumalaw 
 
 ​
 
-Dahil dito ay malaki ang sugat na natatamo ng biktima kaya nagagalit siya, at madalas na hindi na siya nagpapaubaya sa halagang pinag-uusapan, o humihiling pa ng provisional attachment (假扣押) upang habulin hanggang dulo ang ari-arian ng kabilang panig.
+Dahil dito, labis na nasasaktan at nagagalit ang biktima, at madalas ay hindi na siya pumapayag sa halagang pinag-uusapan, o humihiling pa ng provisional attachment (假扣押) upang habulin hanggang dulo ang ari-arian ng kabilang panig.
 
 ​
 

@@ -1,12 +1,12 @@
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { guidanceContent } from '../src/data/international-guidance-content';
 import { guidanceLanguageNames, guidanceTeamBios, guidanceTeamCopy, guidancePracticeAreaNames } from '../src/data/international-guidance-team';
 import { guidanceOfficeCopy, guidanceFooterCopy } from '../src/data/international-guidance-offices';
 import { internationalInquiryCopy } from '../src/data/international-inquiry-copy';
 import { guidanceAnswers } from '../src/data/international-guidance-answers';
 import { GUIDANCE_LLMS_NOTICES } from '../src/lib/llms-txt';
-const srcs: Record<string, any> = { guidanceContent, guidanceTeamCopy, guidanceTeamBios, guidanceLanguageNames, guidancePracticeAreaNames, guidanceOfficeCopy, guidanceFooterCopy, internationalInquiryCopy, guidanceAnswers, GUIDANCE_LLMS_NOTICES };
-const walk = (v: any, out: string[]) => { if (typeof v === 'string') out.push(v); else if (Array.isArray(v)) v.forEach((x) => walk(x, out)); else if (v && typeof v === 'object') Object.values(v).forEach((x) => walk(x, out)); };
+const srcs: Record<string, Record<string, unknown>> = { guidanceContent, guidanceTeamCopy, guidanceTeamBios, guidanceLanguageNames, guidancePracticeAreaNames, guidanceOfficeCopy, guidanceFooterCopy, internationalInquiryCopy, guidanceAnswers, GUIDANCE_LLMS_NOTICES };
+const walk = (v: unknown, out: string[]) => { if (typeof v === 'string') out.push(v); else if (Array.isArray(v)) v.forEach((x) => walk(x, out)); else if (v && typeof v === 'object') Object.values(v).forEach((x) => walk(x, out)); };
 const loc = process.argv[2];
 const round = process.argv[3]; // optional campaign round number → reviews/native/rounds/r<N>/
 const reviewDir = round ? `docs/i18n/global-plan/reviews/native/rounds/r${round}` : 'docs/i18n/global-plan/reviews/native';
@@ -17,7 +17,7 @@ const cols = Object.fromEntries(readdirSync(dir).filter((f) => f.endsWith('.md')
 const allCols = Object.values(cols).join('\n');
 const SKIP = /wei-wei-lawyer\.com\/post|TWD 1\.57M|^https?:/;
 const norm = (s: string) => s.replace(/^["“„«»‚‘'`*]+|["”“„«»‘’'`*]+$/g, '').trim();
-let total = 0, left: string[] = [];
+let total = 0; const left: string[] = [];
 for (const part of ['a', 'b']) {
   const md = readFileSync(`${reviewDir}/${loc}-${part}.md`, 'utf8');
   for (const line of md.split('\n')) {

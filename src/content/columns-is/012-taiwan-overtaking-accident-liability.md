@@ -21,29 +21,29 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 Ákvæði 101. gr. bannar framúrakstur á köflum með merki um beygju, bratta hækkun eða lækkun, þröngar brýr, göng eða gatnamót, svo og við járnbrautarvegamót og á vinnusvæðum.
 
-Enn fremur er óheimilt að aka fram úr á stöðum eða köflum með skóla- eða sjúkrahúsmerki, á stöðum með öðrum bannmerkjum eða merkingum um framúrakstur, þegar ökutæki á móti nálgast, og ekki heldur þegar 2 eða fleiri ökutæki aka í röð á undan (超車).
+Enn fremur er óheimilt að aka fram úr á stöðum eða köflum með skóla- eða sjúkrahúsmerki, á stöðum með öðrum bannmerkjum eða merkingum um framúrakstur, þegar ökutæki á móti nálgast, og ekki heldur þegar tvö eða fleiri ökutæki aka í röð á undan (超車).
 
-Til að aka fram úr ökutæki á undan á sömu akrein skal ökumaðurinn að baki fyrst gefa 2 stutt flautumerki eða blikka ljósum einu sinni. Flautu og ljósum má ekki beita ítrekað til að þvinga ökutækið á undan til að víkja (超車).
+Til að aka fram úr ökutæki á undan á sömu akrein skal ökumaður aftari bifreiðar fyrst gefa tvö stutt flautumerki eða blikka ljósum einu sinni. Flautu og ljósum má ekki beita ítrekað til að þvinga ökutækið á undan til að víkja (超車).
 
-Ökutækið að baki má fyrst aka fram úr eftir að ökutækið á undan hefur dregið úr hraða og vikið til hliðar, eða með handmerki eða hægra stefnuljósi sýnt vilja til að víkja (超車).
+Ökutækið fyrir aftan má fyrst aka fram úr eftir að ökutækið á undan hefur dregið úr hraða og vikið til hliðar, eða með handmerki eða hægra stefnuljósi sýnt vilja til að víkja (超車).
 
 Síðan skal ökutækið sem ekur fram úr kveikja vinstra stefnuljósið, aka fram hjá til vinstri með a.m.k. 0,5 metra fjarlægð frá ökutækinu á undan og, þegar örugg fjarlægð er tryggð, kveikja hægra stefnuljósið og snúa örugglega aftur inn á upprunalegu akreinina.
 
-Þessi röð merkis og vikunar á sömu akrein þýðir ekki að framúrakstur á bönnuðum stöðum eða við bönnuð skilyrði sé leyfður. Áður en framúrakstur hefst skulu öll skilyrði 101. gr. metin saman.
+Þessi röð merkjagjafar og þess að vikið sé úr vegi á sömu akrein þýðir ekki að framúrakstur á bönnuðum stöðum eða við bönnuð skilyrði sé leyfður. Áður en framúrakstur hefst skulu öll skilyrði 101. gr. metin saman.
 
 ## Nafnlaust slysamál sem skrifstofan hefur unnið
 
-Í nafnlausu máli frá skrifstofunni ók mótorhjólamaðurinn A með farþegann B á fjallvegi. Á undan þeim óku 2 fólksbílar; fremsta ökutækið nr. 1 hreyfðist hægt, svo einnig ökutæki nr. 2 og mótorhjólið komust áfram á lágum hraða.
+Í nafnlausu máli frá skrifstofunni ók mótorhjólamaðurinn A með farþegann B á fjallvegi. Á undan þeim óku tveir fólksbílar; fremsta ökutækið nr. 1 hreyfðist hægt, svo einnig ökutæki nr. 2 og mótorhjólið komust áfram á lágum hraða.
 
-![Slysaskissa sem sýnir framúrakstursleið mótorhjólsins og 2 ökutækin á undan á fjallvegi](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
+![Slysaskissa sem sýnir framúrakstursleið mótorhjólsins og ökutækin tvö á undan á fjallvegi](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A reyndi að aka fram úr 2 ökutækjunum, fór inn á akreinina á móti og jók hraðann. Ökutæki nr. 2 bjó sig einnig undir að aka fram úr ökutæki nr. 1: innan við 1 sekúndu eftir kveikingu stefnuljóssins fór það inn á akreinina á móti. Mótorhjólið hafði of skamman tíma til að hemla og rakst á ökutæki nr. 2.
+A reyndi að aka fram úr ökutækjunum tveimur, fór inn á akreinina á móti og jók hraðann. Ökutæki nr. 2 bjó sig einnig undir að aka fram úr ökutæki nr. 1: innan við 1 sekúndu eftir kveikingu stefnuljóssins fór það inn á akreinina á móti. Mótorhjólið hafði of skamman tíma til að hemla og rakst á ökutæki nr. 2.
 
 B hlaut alvarlega höfuðáverka og lést á staðnum; A missti meðvitund og var fluttur á sjúkrahús.
 
 Aðstandendur A og B töldu fyrst að skyndileg akreinaskipting ökutækis nr. 2 væri meginsök árekstursins. Málið leiddi til málshöfðunar, og í framvindu málsins voru gerðar nokkrar sérfræðiathuganir (鑑定) á slysinu.
 
-Samkvæmt niðurstöðu sérfræðiathugunarinnar bar A meginsökina á þessum árekstri. Þessi niðurstaða takmarkaðist við atvik þessa máls. Sérfræðiathugunin tók tillit til þess að A ætlaði að aka fram úr 2 ökutækjum á undan sem óku í röð, að hann fór inn á akreinina á móti, að hann ók á hraða sem nánast skildi engan tíma eftir til að hemla, að lögbundin flautu- og ljósamerki vantaði, svo og akreinaskiptingu ökutækis nr. 2, uppbyggingu vegar og akreina og önnur varðveitt sönnunargögn.
+Samkvæmt niðurstöðu sérfræðiathugunarinnar bar A meginsökina á þessum árekstri. Þessi niðurstaða takmarkaðist við atvik þessa máls. Sérfræðiathugunin tók tillit til þess að A ætlaði að aka fram úr tveimur ökutækjum á undan sem óku í röð, að hann fór inn á akreinina á móti, að hann ók á hraða sem nánast skildi engan tíma eftir til að hemla, að lögbundin flautu- og ljósamerki vantaði, svo og akreinaskiptingu ökutækis nr. 2, uppbyggingu vegar og akreina og önnur varðveitt sönnunargögn.
 
 Að slíkar sérfræðiniðurstöður komi í einstökum málum þýðir ekki að það að sleppa einu sinni lögbundnu merki ráði ávallt ábyrgðinni. Gáleysi (過失) við framúrakstursslys ræðst af slysstað, akreinaskipan, hraða, hreyfingu ökutækja, merkjum, tímabili, skyggni og öðrum sönnunargögnum.
 

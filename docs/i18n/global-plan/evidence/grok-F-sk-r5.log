@@ -1,0 +1,253 @@
+# WO-F-sk r5 — Slovak native-quality fix lane (round 5)
+worktree: /Users/son7/Projects/tseng-law-fix-sk-r5   branch: fix/native-sk-r5-20260922
+inputs: RULEBOOK-FIX.md (R2–R17), ACCEPTED-ROUND.md, rounds/r5/sk-a.md (61 rows), rounds/r5/sk-b.md (43 rows)
+date: 2026-09-23
+
+## Summary
+Rows applied: sk-a 57 of 61 · sk-b 41 of 43 (incl. all P1 and all P3).
+Rows skipped: sk-a #22, #23, #24 · sk-b #4, #15 (+ the number-format half of sk-b #10/#39) — all under ACCEPTED-ROUND skip rules (see §Skipped).
+Files touched: 18 columns-sk/*.md, international-guidance-central-europe.ts (slovakGuidanceContent),
+international-guidance-answers.ts (sk), international-inquiry-copy.ts (sk), llms-txt.ts (GUIDANCE_LLMS_NOTICES.sk),
+guidance-disclosure-parity.test.ts (2 sk marker regexes for strings I reworded — nothing else in tests).
+
+## Rows applied — sk-a (guidance pack + columns 001–009)
+P1
+- #1 A "prieskum" (market survey) → posúdenie / overenie for administrative and bank review: 12 instances in 001
+  ("bankové posúdenie" ×2, "posúdenie investičných prostriedkov", "predbežné overenie čínskeho názvu" ×4,
+  "posúdenie zahraničnej investície", "kladný výsledok tohto overenia", "podklady tohto overenia", "obsahu overenia",
+  "pri posudzovaní pracovného povolenia") + 1 in 002 ("overenie kapitálu"). 018 L92 "vo fáze prieskumu trhu" left:
+  that IS a market survey, the correct Slovak word.
+- #2 A 董事 = člen predstavenstva, not "riaditeľ": 004 ×4 (vymenúva členov predstavenstva (董事) / valné zhromaždenie
+  akcionárov a predstavenstvo (董事會) / vymenovanie členov predstavenstva (董事) / Povinnosti členov predstavenstva (董事)),
+  002 ×1, 018 ×1 ("len 1 alebo 2 členov predstavenstva (董事)"), 017 ×1 (+ "pri akcionároch, členoch predstavenstva (董事)
+  a zodpovednej osobe"). 003's "riaditeľ" hits were false positives ("poriadku").
+- #3 A 006 "Je pravda, že vláda Kórey začala vydávať osvedčenie masáže…" → "Kórejská vláda istý čas vydávala osvedčenia
+  o odbornej spôsobilosti maséra aj osobám bez zrakového postihnutia,". Same term fixed in the paragraph above
+  ("osvedčenie kvalifikácie" → "osvedčenie o odbornej spôsobilosti").
+- #4 G 004 "## Súvisiace sprievodce" → "## Súvisiace pokyny" (matches 002/007; heading level unchanged).
+P2 — guidance pack
+- #5 "Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje" → "Odpovieme a posúdime, či existuje
+  vhodný spôsob komunikácie" (central-europe.ts contact + internationalInquiryCopy.sk.methodConfirmationNotice, 2×).
+  Same frame in the FAQ answer "Čo robiť, ak nemôžem použiť žiadny zo štyroch jazykov?" → "Odpovieme a posúdime, aký
+  spôsob komunikácie je možný; služba v inom jazyku však zaručená nie je." (same systemic pattern).
+  Disclosure-parity marker sk for `feasible-method-only` updated /schôdný/ → /vhodný spôsob komunikácie/.
+- #6 "Obdržali sme Vašu žiadosť" → "Vašu žiadosť sme prijali".
+- #9 "Prečítal(a) som stránku…" → "Prečítal(a) som si stránku…".
+- #10 FAQ "Prebehla porada už tým, že je žiadosť odoslaná?" → "Znamená odoslanie žiadosti, že už prebehla konzultácia?".
+- #11 porada/konzultácia unified on *konzultácia* — 13 instances: pack footer/pricing/faq/columns notice ×8,
+  inquiryCopy consultationNotice + successMessage ×2, llms-txt consultationNotice, team bio "termíny konzultácií",
+  column 003 closing line. "poradenstvo" (advisory work) and "poradie" (order) deliberately untouched.
+  FAQ question is now "Je možná konzultácia v slovenskom jazyku?" — NOT "…v slovenčine", because the checker's
+  sk-consult-lang forbidden regex matches `konzultáci[ae] v slovenčine`; meaning and the negative answer unchanged.
+- #12 "Porada môže byť odplatná" → "Konzultácia môže byť spoplatnená" (+ body sentence and the answers.ts mirror,
+  "odplatná/odplatnou" → "spoplatnená/spoplatnenou" ×3).
+- #13 "posúdi obsah, kým sa prejde k ďalšiemu kroku" → "…skôr, než sa prejde k ďalšiemu kroku".
+- #14 llms discoveryNotice: "nesľubuje poradie vo vyhľadávaní, záštitu, odporúčanie umelej inteligencie…" →
+  "nesľubuje umiestnenie vo vyhľadávaní, schválenie, odporúčanie umelej inteligencie…". I used *schválenie* for
+  "endorsement" (as cs does) instead of the reviewer's second "odporúčanie", which would have repeated the word twice
+  in one list. Literal token `llms.txt` preserved.
+- #15 "Žiadna cesta prenosu a žiadne miesto uchovania nie je úplne bezpečné" → "…ani žiadne miesto uchovania nie sú…".
+- #16 same sentence: agentless passive → imperative "citlivé dokumenty preto posielajte až po osobitnom pokyne…".
+- #17 "slúžia na posúdenie žiadosti, na odpoveď Vám, …" → "slúžia na to, aby sme žiadosť posúdili, odpovedali Vám,
+  ujasnili spôsob komunikácie a vec vybavili, ak prácu prevezmeme."
+- #18 heading "Vaše práva a cesta na kontakt" → "Vaše práva a ako nás kontaktovať".
+- #19 "nemá núdzový kanál a nezabezpečuje lehotu na odpoveď" → "nie je linkou pre naliehavé prípady a nesľubuje lehotu
+  na odpoveď" (parity marker /lehotu na odpoveď/ still matches).
+- #20 "nezakladá povinnosť na platbu" → "nezakladá platobnú povinnosť".
+- #21 *ohľadom* → *pokiaľ ide o*: pack ×1 ("prísľubom, pokiaľ ide o výsledok veci, o vyhovenie prihláške alebo žiadosti
+  či o pobytový a pracovný status"), 002 ×1, 016 ×1, 010 ×1 (rewritten as "závisí od toho, ako súd posúdi…").
+  The remaining hits are "s ohľadom na", which is correct Slovak and was left alone.
+P2 — columns
+- #7 *u* + non-person → *pri* / *na*: 008 "pri praxi, na ktorú sa uplatní článok 17" ×2 (body + FAQ), 002 "na daňovom
+  orgáne" ×2 and "na príslušnom daňovom orgáne", 003 "na príslušnom policajnom orgáne" + "voči poisťovateľovi",
+  005 "vo svojej hlavnej banke", 016 ×4, 017 ×3. *u* with persons (u konateľa, u kórejského študenta, u jednej strany,
+  u ostatných zamestnancov) kept — standard Slovak.
+- #8 002 "z starostlivosti" → "zo starostlivosti".
+- #25 fronted adverbial cut off by a comma before the question word: 005 ×3 ("Možno pri vklade základného kapitálu
+  previesť…", "Kedy možno prípravný účet po pripísaní kapitálu premeniť…", "Možno po premene prípravného účtu na riadny
+  účet používať internetové bankovníctvo ihneď?"), 003 "## Q3. Aké nároky a aké lehoty treba pri poranení overiť?".
+  001's FAQ "Pri zakladaní spoločnosti na Taiwane čím sa líši" no longer exists in the file (fixed in an earlier round).
+- #26 fronted purpose clause: 002 FAQ q → "Musí sa vždy vykonať zrušenie a likvidácia, aby sa prostriedky taiwanskej
+  spoločnosti vrátili spoločníkom?"; 004 FAQ q → "Ktorú formu zvoliť — dcérsku spoločnosť alebo pobočku — ak sa má
+  vstúpiť na burzu na Taiwane alebo získať daňový odpočet z titulu investície?".
+- #27 "Nie preto, že X, Y" frame removed 4× in 004 (all rewritten as "To, že X, ešte neznamená, že Y").
+- #28 *zásadne* → *v zásade* / *spravidla*: 63 instances across 001 (7), 002 (8), 003 (5), 004 (12), 005 (3), 006 (1),
+  008 (1), 010 (2), 011 (4), 016 (6), 017 (5), 018 (9). 0 left in the columns.
+- #29 001 "Samotný výsledok tohto dopytu však samo osebe nepreukazuje" → "…však nepreukazuje".
+- #30 001 → "Zisky podnikov sa v zásade zdaňujú v štáte sídla; výnimkou je najmä prípad, keď…".
+- #31 001 "(有限公司·股份有限公司)" → "(有限公司 alebo 股份有限公司)".
+- #32 001 → "Ak ide o konkrétnu vec, použite stránku [Napíšte nám](/sk/contact)."
+- #33 001 "je dokumentom všeobecnej informácie vzdelávacej povahy" → "má všeobecnú informačnú a vzdelávaciu povahu";
+  same in 004 ("Tento článok má všeobecnú informačnú a vzdelávaciu povahu a týka sa rozdielov…").
+- #34 002 long sentence re-fronted: "Ak sa na jednom účte zmiešajú súkromné výdavky zaplatené firemnou kartou, …".
+- #35 002 "mimo účtovnej výšky kapitálu" → "Pri ukončení treba okrem účtovnej výšky kapitálu zohľadniť aj…".
+- #36 "vec po veci" → "v každej veci" (002, 003 L180, 010 L72 — 3 instances, systemic sweep).
+- #37 002 "treba posúdiť každú" → "treba posúdiť jednotlivo" (+ *u* fix).
+- #38 002 "nakopené straty / zákonnú rezervu" → "kumulované straty (累積虧損), zákonný rezervný fond (法定盈餘公積)".
+- #39 002 "Daňové priznania nemožno považovať za všetky zmiznuté so samým zápisom…" → "Samotný zápis prerušenia činnosti
+  neznamená, že zanikli všetky povinnosti podať daňové priznanie."; the FAQ/body echo "daňové priznania nemiznú jednotne"
+  → "povinnosť podať daňové priznanie nezaniká pre všetky dane naraz" ×2.
+- #40 004 "zhromaždiť formu emisnej spoločnosti" → "spoločnosť musí mať najprv formu emitenta spôsobilého na kotáciu".
+- #41 004 "Každé kritérium pojednáva samostatný druh činnosti." → "Každé kritérium sa týka iného druhu činnosti."
+  (003/007 "ústne pojednávanie" is the correct Slovak term for a hearing and was left.)
+- #42 004 "pat" → "patové situácie" (+ "treba upraviť spoločne").
+- #43 004 "nakresliť v poradí času" → "zostaviť v časovej postupnosti".
+- #44 004 "stojacich voči početným zamestnaným osobám" → "v činnostiach, ktoré sa dotýkajú veľkého počtu zamestnancov
+  alebo spotrebiteľov".
+- #45 004 "zdieľajúci tie isté skutočnosti" → "ktorí vychádzajú z tých istých skutočností".
+- #46 partially: 007 "## 1. Tri cesty rozvodu…", "existujú v zásade tri cesty", "rozdeliť do troch vrstiev",
+  004 "z 3. štátu" → "z tretieho štátu". "5 otázok", "9 kategórií", 001 "4 typov" kept as digits — see §Skipped.
+- #47 贍養費 unified as "výživné pre rozvedeného manžela alebo manželku (贍養費)" (short form "výživné pre rozvedeného
+  manžela") — 10 instances in 007 incl. the section heading and both FAQ rows; 扶養費 stays "výživné (dieťaťa)".
+- #48 007 statutory list harmonised to noun phrases: items 5–9 ("Trvajúce zlovolné opustenie (惡意遺棄)…", "Úmysel zabiť
+  druhú stranu", "Závažná nevyliečiteľná choroba", "Závažná nevyliečiteľná duševná choroba", "Nezvestnosť druhej strany
+  dlhšia než 3 roky"); the body back-reference reworded to match. Item count unchanged (10).
+- #49 007 "Odsek 2 stavia prípad…" → "Odsek 2 upravuje ako samostatný všeobecný dôvod prípad, v ktorom…".
+- #50 *poznanie* → *dozvedieť sa*: 007 ×4 ("odo dňa, keď sa oprávnený o rozdiele zvyškového majetku dozvedel" ×1,
+  "2 roky odo dňa, keď sa oprávnený o rozdiele dozvedel" ×2, "deň, keď sa oprávnený o práve dozvedel", "vedomosť o ňom"),
+  009 ×1 ("odo dňa, keď sa o tejto situácii dozvedel"). Digits kept (see §Skipped note on "dvoch").
+- #51 007 link labels aligned with the pack page titles: "[V čom klientov zastupujeme](/sk/services)",
+  "[Ako sa stanoví rozsah práce a náklady](/sk/pricing)". Swept all 18 files — 007 was the only mismatch.
+- #52 008 "Pán B sa má obetovať a dať príklad" → "pán B sa má obetovať a ísť príkladom"; the second instance
+  "Pán B v deň, keď šiel na pohovor," → lowercase "pán B …".
+- #53 008 "a sama odišla" → "a sama odišla."
+- #54 009 "ochorie zákonnou nákazlivou chorobou" → "ochorie na zákonom určenú prenosnú chorobu (法定傳染病)".
+- #55 009 "riziko utrpenej škody" → "hrozí, že utrpí škodu".
+- #56 009 "spôsobí závažnú urážku (重大侮辱) zamestnancovi" → "zamestnanca závažne urazí (重大侮辱)".
+- #57 009 "ktorý primerane užíva článok 17" → "za primeraného použitia článku 17".
+- #58 009 duplicated condition removed → "sa určí, či odstupné treba vyplatiť, alebo či ho možno žiadať."
+- #59 006 → "Za cenu jedného strihania sa dala dopriať prvotriedna služba, takže pomer ceny a kvality bol výborný."
+- #60 006 "mnoho ulíc masáže" → "aj na Taiwane je mnoho masážnych ulíc."
+- #61 006 "ak sa utrpí sexuálne obťažovanie" → "ak človek zažije sexuálne obťažovanie."
+
+## Rows applied — sk-b (columns 010–018)
+P1
+- #1 012 "zatroubiť / blýsknuť" → "zatrúbiť / bliknúť".
+- #2 016 "Pouhé overenie" → "Samotné overenie".
+- #3 016 "dedičia neskoršieho poradia zásadne nedia pred nimi" → "…spravidla nededia popri nich".
+P2/P3
+- #5 010 "Nižšie uvedené je všeobecná informácia…" → "Nasledujúci text je všeobecnou informáciou, ktorá vysvetľuje spory…".
+- #6 010 stacked "že" clauses reduced.
+- #7 010 "avšak ktorý právny základ sa uplatní" → "avšak to, ktorý právny základ sa uplatní".
+- #8 010 → "a zo samotnej okolnosti, že snímky nezostali, súd automaticky nevyvodzuje nepriaznivý záver."
+- #9 011 "je takisto treba posúdiť" → "treba takisto posúdiť" (body + FAQ, 2×).
+- #10 011 *činiť* → *byť*: "Správna pokuta je od 40.000 do 200.000 TWD" etc. Swept the same Bohemism across all files —
+  24 instances total: 001 ×4, 003 ×5, 004 ×7 (+ "činí vhodnú štruktúru zreteľnejšou" → "robí…"), 011 ×4, plus the
+  004 L137 sentence rewritten under sk-a #27. 0 left. Amounts and separators untouched.
+- #11 "ako …, tak …" → "tak …, ako aj …": 011 ×1, 012 ×1. 0 left.
+- #12 011 "neodstraňuje samo upozornenie" → "neodstráni samotné upozornenie".
+- #13 011 "posúdené ako reklama v podstate" → "posúdené ako reklama, ak ňou v podstate sú".
+- #14 013 "musí schválený vklad doraziť" → "musí byť schválený vklad v plnej výške poukázaný".
+- #16 013 "zamýšľa sa prenajať" → "chcete si prenajať".
+- #17 014 "vyjadruje záväzok … , či …" → "upravuje záväzok …, otázku, či …, a otázku, či …".
+- #18 014 "treba vidieť, čí a aký čas" → "treba zistiť, koho čas a v akom rozsahu bol vynaložený".
+- #19 014 "bolo označené ako podpisová prémia" → "len tým, že plnenie bolo na výplatnej páske označené ako…".
+- #20 *obdržať* → *dostať / prijať / absolvovať*: 014 ×3, 018 ×2 ("dostať rôzne požiadavky", "až po ďalšom pokyne"). 0 left.
+- #21 *učiniť* → *urobiť*: 014 ×2 ("kto urobil aký prejav vôle", "oznámenie urobené voči pracovníkovi"). 0 left
+  (003/007 hits were "zadostiučinenie", a different word).
+- #22 014 "Výpovedná lehota" → "Výpovedná doba" (matches the rest of the file and the statute).
+- #23 014 → "môže dať zamestnávateľovi výpoveď s výpovednou dobou 30 dní".
+- #24 014 "Ak sa oddelí okamih…" → "Ak sa od seba oddelia okamih…".
+- #25 014 "len preto, že bolo podpísané" → "…že zmluva bola podpísaná".
+- #26 014 "do vyrovnania sa odráža" → "pri vyrovnaní sa zohľadní".
+- #27 015 "často sa chce zapísať asi 10 odvetví" → "často sa jedným podaním zapisuje asi 10 odvetví".
+- #28 016 fragment given a predicate → "Plnenia, ktorých príjemca je určený osobitne, ako poistenie alebo dávka pri
+  odchode do dôchodku (退休金), sa môžu podľa zmluvy a rozhodného práva posudzovať inak než dedičský majetok."
+- #29 016 "spôsobilosť poručovať" → "spôsobilosť zriadiť závet" (×2, incl. the checklist item).
+- #30 016 "Nasledujúce usporadúva" → "Nasledujúci text usporadúva" (the other "Nasledujúce + noun" uses are adjectival
+  and correct; left alone).
+- #31 016 "kopírovať tak, ako je" → "nemožno preberať bez úprav".
+- #32 017 "po jeden rok odo dňa vydania" → "počas 1 roka odo dňa vydania" — see §Checker note.
+- #33 017 "zaobchádzanie, ak povolenie nie je získané" → "postup pre prípad, že povolenie nebude získané".
+- #34 017 Japanese interpunct in the gloss → Chinese enumeration comma: "(Matsu, 連江、馬祖)" ×2.
+- #35 017 place names switched to the system the guidance pack already uses (Taipej / Taichung / Kaohsiung / Pingtung):
+  Ťin-men → Kinmen, Lien-ťiang → Lienchiang, Ma-cu → Matsu (5 instances). One system across all 18 files now.
+- #36 018 "kto na Taiwane čo obstaráva" → "kto bude na Taiwane za ktoré činnosti zodpovedať".
+- #37 018 table row → "Prídu zamestnanci ústredia, bude sa prijímať na Taiwane, alebo sa práca zverí vonkajšiemu
+  dodávateľovi?" (table row count unchanged).
+- #38 018 "hodí sa k jednoduchým vzťahom" → "hodí sa pre jednoduché vzťahy medzi spoločníkmi a pre stále ovládanie".
+- #39 018 → "Povinnosť auditu vzniká bežnej spoločnosti pri splatenom kapitáli 30.000.000 TWD a aj pod touto hranicou
+  pri prevádzkovom príjme 100.000.000 TWD alebo pri 100 zamestnancoch…" (amounts and separators unchanged).
+- #40 (P3) 013 "otváranie bankových účtov sa stáva stále prísnejším" → "posudzovanie žiadostí o otvorenie účtu je stále
+  prísnejšie."
+- #41 (P3) 016 "dávka z odchodu do dôchodku" → "dávka pri odchode do dôchodku (退休金)".
+- #42 (P3) 017 "správne pokyny obstaráva Cestný úrad" → "zabezpečuje"; also "záležitosti, ktoré obstarávajú orgány
+  vedeckých parkov" → "ktoré vybavujú".
+- #43 (P3) 015 caption capitalised: "„Odvetvia, ktoré sú predmetom úradného overenia“ (主動查詢之營業項目)" (image alt + caption).
+
+## Rows SKIPPED (with reason)
+- sk-a #22 "TWD 1.57M" → 1,57 mil. TWD. SKIP — ACCEPTED-ROUND/R12 pin this figure byte-identical (a test pins it).
+- sk-a #23 and sk-b #4 — dot thousands separator → space ("500 000", "1 579 589"). SKIP — R14 and ACCEPTED-ROUND:
+  the checker's sk profile is `dot` and space separators fail it. All 41+ amounts left in dot form on purpose.
+  The wording halves of sk-b #10 and #39 (činiť, the three-item predicate) WERE applied; only the reformat was skipped.
+- sk-a #24 and sk-b #15 — restore the `##` on 003 Q16–Q20 and delete the U+200B "blank" lines in 003/005/006/008/009/
+  013/015. SKIP — these are artifacts of the Korean source, not of the Slovak translation: `src/content/columns/003…md`
+  has exactly the same un-marked "Q16." lines and the same 52 ZWSP lines; 005 = 8, 006 = 4, 008 = 10, 009 = 5, 013 = 5,
+  015 = 3, identical on both sides. The checker enforces identical heading levels and an identical ZWSP count
+  (`checkHeadings`, `checkBlocks` → `ZWSP src→target`), so "fixing" them in Slovak alone makes the file FAIL, and the
+  work order forbids changing the count/order of body blocks. Escalation, not a fixer-lane change.
+- sk-a #46, the parts asking for "5 otázok", "9 kategórií" and 001 "4 typov" to be spelled out. SKIP — the checker's
+  Slovak word-numeral lexicon (`SMALL_LEXICON_WORDS.sk`) only knows 1/2/3 (jeden, dva/dve, tri, traja + prvý/druhý/tretí),
+  so "päť", "deväť", "štyri" delete a number the source has and FAIL `numbers`. Applied only where the numeral is 1–3
+  in a listed form: "tri cesty", "do troch vrstiev", "z tretieho štátu".
+- sk-a #50, the "do dvoch rokov" half. SKIP for the same reason ("dvoch" is not in the lexicon); the *poznanie* → *dozvedieť
+  sa* half was applied and the digit kept ("do 2 rokov odo dňa, keď sa oprávnený … dozvedel").
+- sk-b #35's second option (Tchaj-pej / Tchaj-čung transcription). Not skipped but decided the other way: the guidance
+  pack's own office titles are Taipej/Taichung/Kaohsiung/Pingtung, so the English/pinyin system won and 017 was
+  converted to it, not the reverse.
+
+## Checker note (required by the work order)
+sk-b #32's natural form "počas jedného roka" made 017 FAIL `numbers` ("missing from translation (1): 1",
+sourceCount=44 targetCount=43), because "jedného" is not in the checker's sk lexicon. Kept the digit —
+"nemožno počas 1 roka odo dňa vydania vyradiť odovzdaním (繳銷)" — which fixes the Czech duration government the
+reviewer flagged and parses. Everything else passes unchanged.
+
+## Things I believe the reviewer got wrong (NOT applied)
+1. sk-a #24 / sk-b #15 are attributed to "round-4 layout damage" on the Slovak side. They are not: the Korean source
+   carries the same missing `##` and the same U+200B lines (verified byte-for-byte counts, above). They are a
+   source-side issue for every locale, not a Slovak defect.
+2. sk-a #23 / sk-b #4 (space thousands separator) are correct about Slovak orthography but are ruled out by the
+   campaign's own checker profile (R14). Standing supervisor decision, not a reviewer error as such — noted so the
+   next round does not re-file them.
+3. sk-a #14's suggested rewrite uses "odporúčanie" twice in one list ("…, odporúčanie, odporúčanie zo strany umelej
+   inteligencie ani…"). Applied the intent with *schválenie* for "endorsement" instead.
+4. sk-a #11's suggested FAQ title would have read "konzultácia v slovenčine", which trips the checker's own
+   `sk-consult-lang` forbidden-claim regex. Used "Je možná konzultácia v slovenskom jazyku?" instead; the answer is
+   still a flat "Nie."
+5. sk-a #1 counts 13 "prieskum" in 001; the file had 12 (plus 1 in 002). All administrative/bank senses were changed;
+   018 L92 "vo fáze prieskumu trhu" is a genuine market survey and was deliberately left.
+6. sk-a #7's example "u ostatných zamestnancov" (008 L179) is not the flagged pattern — *u* + person is standard
+   Slovak. Only *u* + institution/abstract noun was changed.
+7. sk-b #20 lists "obdržať rôzne požiadavky" and "po obdržaní" in 018 — correct; but sk-b #21's "učinil" in 003/007
+   does not exist: those hits are "zadostiučinenie", a different lexeme.
+8. Not a reviewer error, but recorded: the checker's `neighbour` check reports "L43: zda" in 001 and three lines in 004.
+   It is a false positive — JavaScript's `\b` is ASCII-only, so "zdaňujú" matches /\bzda\b/. Pre-existing (reproduced
+   against `git show HEAD:…`), WARN only, no Czech word is present.
+
+## Verify output (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=54
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-sk src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      26
+
+(git status 26 = 23 files I changed + 1 pre-existing modification of docs/i18n/global-plan/WO-F-sk.txt
+ + the 2 untracked round-5 review files sk-a.md / sk-b.md that were already in the tree when I started.
+ This log file adds a 27th entry once written. Nothing was staged, committed or pushed.)

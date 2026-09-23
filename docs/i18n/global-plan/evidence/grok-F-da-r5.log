@@ -1,0 +1,92 @@
+WO-F-da r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-da-r5
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: da-a 33, da-b 46 (79). No P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 76.
+Skipped: 3 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No Danish FAQ question or title pin in src/lib/__tests__/ or src/data/__tests__/ matched a string that changed; the full suite is green as shipped. consultationNotice and confidentialNotice in llms-txt.ts were left untouched — the FAQ answer and the privacy paragraph they copy verbatim were not rewritten. discoveryNotice still contains the token llms.txt. "TWD 1.57M" in the Danish bio is byte-identical.
+
+### Applied
+da-a 1 (adapted), 2 (adapted), 3-18, 20-25, 27-33.
+da-b 1-19, 21-46.
+
+Adaptations (still applied):
+- da-a 1. The reviewer is right that flno=3 is not article 10, but both sources carry the number: the Korean link text is 영업세법 제10조 and the English is "Article 10 of the Value-Added and Non-Value-Added Business Tax Act". Dropping "(artikel 10)" fails the number check (verified: "missing from translation (1): 10"). Instead the label now matches the source law: "Retsdatabase hos Taiwans justitsministerium — artikel 10 i loven om omsætningsafgift (營業稅法)". The URL is unchanged, and the Danish no longer pairs 001's withholding-rate description with 004's article number.
+- da-a 2. The parties were swapped back, but the list keeps its own frame. The intro says the grounds exist "på modpartens side" and items 3, 5 and 6 address the reader as "dig", so ground 4 now reads "Modparten mishandler dine slægtninge i ret op- eller nedstigende linje (直系親屬), eller modpartens slægtninge i ret op- eller nedstigende linje mishandler dig, så samlivet bliver uudholdeligt". Same actor/victim pairing as the English and 民法 1052-1-4; the gloss stays.
+- da-a 17. "opgjort over det seneste et år i Taiwan" → "opgjort over den seneste periode på 1 år i Taiwan" (FAQ and body, 2). The reviewer's bare "det seneste år" drops a 1 that the Korean 최근 1년 puts in the multiset; verified FAIL ("missing from translation (2): 1×2"). "de foregående 3 år" was already in place from r4.
+- da-a 18. "1 måneds gennemsnitsløn for hvert fuldførte et år" → "1 måneds gennemsnitsløn for hver fuldført periode på 1 år" (FAQ and blockquote, 2). "for hvert fuldført år" drops one of the two 1s the Korean 1년당 … 1개월분 requires; verified FAIL. "uden loft" was already there.
+- da-a 33. The reviewer's "intet enkelt ord" was applied in full ("For letheds skyld kan man sige forældremyndighed (親權) eller omsorg; intet enkelt ord gengiver dog fuldstændigt helheden …"). The digit in "dette 1 ord" disappears, but the checker still passes — the Korean 그 한 단어 is not parsed as a numeral.
+- da-b 8. Only the verb changed: "det, man først skal bekræfte" → "det, man først skal afklare". The missing-"er" half of the row does not hold: the full sentence is "Ved udformningen af den faktiske arbejdsdeling er det, man først skal afklare, hvem der importerer produktet …" — the finite "er" is fronted by V2 inversion and the cleft parses. The reviewer quoted the tail only.
+- da-b 29. The repeated sentence was not deleted (block counts are pinned, and the Korean source splits one sentence across three blocks, lines 22/24/26). The middle block was rewritten instead, so the repetition is gone and the block count holds: "Ud over markedssituationen er der et selvstændigt punkt." / "Punktet er beliggenheden af driftsadressen." / "Det skal afklares, om adressen (營業地址) ligger i en zone, hvor der kan drives restaurant."
+- da-b 42. 子公司 is wrong there (the Korean asks 회사, a company), but deleting the gloss outright leaves the paragraph Latin-only and the checker's English-sentence heuristic then fires on L22 (verified: english FAIL). The gloss was corrected instead: "stifte et selskab i Taiwan (公司) for at løse dette".
+- da-b 45. "har hver deltager én stemme" drops both 1s of the Korean 주주 1인 1표 and fails numbers (verified). Now "gælder princippet 1 deltager, 1 stemme", which keeps both digits and reads as the named principle rather than as "pr. 1 deltager".
+- da-b 27. Applied as an em-dash apposition so no block is split: "Hvis man holder de fire spørgsmål adskilt — det tidspunkt, hvor fratrædelsen gyldigt får virkning, gyldigheden af aftalen om en bindingsperiode, tilbagebetalingen … og den skade, der påberåbes særskilt — mindsker man risikoen …". "fire" is in the Danish numeral lexicon, so the 4 survives.
+- da-b 41. Both the frontmatter title and the H1 were changed (2), as the row asks. url, lastmod and featured_image are untouched.
+
+### Skipped
+- da-a 19. Q16-Q20 were not promoted to `##` headings, and the U+200B lines in 003 (from Q16), 005 (including `**​**`), 006, 008 and 009 were not removed. Heading levels, block counts and ZWSP counts must match the Korean source; the Danish ZWSP totals are exactly the source totals (003 52, 005 8, 006 4, 008 10, 009 5, 013 5, 015 3).
+- da-a 26. The bio figure "TWD 1.57M" stays byte-identical; ACCEPTED-ROUND pins it. The Danish gloss "(1,57 mio. TWD)" that already follows it was left as is.
+- da-b 20. The trailing U+200B after the Taipei sentence and the ZWSP-only lines in 013 (58, 72, 86, 108) and 015 (28, 36, 52) were left. Deleting them changes the ZWSP count and the block count. 0 instances removed.
+
+## Systemic patterns
+
+- 營利事業 rendered with the English "profit" (da-a 22). 15 instances: 001 ×3 (body, FAQ-mirrored paragraph, the etax link label), 002 ×1, 004 ×11 (FAQ, body, table cell, R&D-credit paragraphs, the "Profitgivende virksomheder, hvis hovedsæde …" openings). All now "erhvervsdrivende virksomheder" / "Erhvervsdrivende virksomheder".
+- Neuter pronoun on "de fire sprog" (da-a 23). 6 instances, all in the pack: home section, contact description, contact heading ("… de fire rådgivningssprog"), the FAQ question, the inquiry methodConfirmationNotice and the "needs-method-confirmation" language option. All now "nogen af de fire …". No column used the phrase.
+- U+200B blanks and the `**​**` bold lines (da-a 19, da-b 20). 0 deleted. See Skipped.
+- A spare "et" or "i" glued onto a period (da-a 17, 18, 10). 8 instances: 001 "det seneste et år" ×2, 008 "fuldførte et år" ×2, 002 "fængsel i indtil" ×2, 006 "fængsel i indtil" ×2. The two year phrases keep their digit (see Adaptations); "fængsel indtil" is now the statute style everywhere.
+- 007 using "eftergås" as the stock verb for every check. 16 verb instances + 1 noun ("eftergang"); 15 rewritten, 2 left (the FAQ answer and its body twin, which stay identical). Replacements are distributed over afklares, kontrolleres, gennemgås, efterprøves — "undersøg*" was already used 24 times in that file and was not increased.
+- Image alts still calquing "featured image" (da-a 21). 4 instances: 005 and 006 "Udvalgt billede", 008 and 009 "Hovedbillede", all now "Forsidebillede" as in 001-004, 010, 013, 015.
+- "Bekræfte" where the English means determine, consult or consider (da-b verdict). 61 unflagged instances rewritten on top of the 2 flagged rows (da-b 8, 10): 016 ×26, 014 ×13, 017 ×10, 011 ×6, 018 ×5, 015 ×1 — now afklares, fastlægges, fastslå, klarlægges, efterprøves, kontrolleres, gennemgås, vurderes, opgøre, dokumentere, identificeres, indhentes according to the act meant. Genuine "confirm" uses were kept: the notarial/legalisation senses in 001, 003, 007, 010, 013; "Hvem bekræfter endeligt prisen" and "Hvem bekræfter resultatet af kontrollen" in the 018 table; the closing consultation-language sentence in 018 ("De faktisk tilgængelige samtalesprog … skal bekræftes ved henvendelsen"); 011's "så kendsgerningerne senere kan bekræftes"; 017's "skal hver bekræftes særskilt" pair; and 015's pre-inquiry sentence. 016 also got 檢認 as "rettens prøvelse af testamentet" so it no longer shares a word with 認證 (R8).
+- A noun naming the neighbouring thing (da-b verdict). 3 quoted instances fixed: 011 "eneforhandler eller forhandler" → "hoveddistributør eller distributør", 017 "Arbejdvejledningen" → "Den administrative vejledning", 016 "er i retten særskilte spørgsmål" → "er retligt særskilte spørgsmål". No further instance of the same kind was found.
+- The finite verb split from its subject (da-b verdict). 2 instances, both the 016 "Dog kan, efter konkrete omstændigheder …" sentence (FAQ and body, the body one carrying the 子女最佳利益 gloss); both now "Rettens medvirken kan dog være nødvendig efter de konkrete omstændigheder, herunder …". The two remaining comma-framed "kan, …" clauses (014 L141, 011 L99) keep their subject before the verb and are ordinary Danish; they were left.
+- A timeline or a denial pointing the wrong way (da-b verdict). 011 registration timeline and 018 "de fastslår ikke, om" fixed; 012 "et bestemt udfald af en senere sagkyndig undersøgelse" fixed as da-b 19. No other denial of this shape remains ("fastslår ikke, om" now has 0 hits).
+- "Branche" replacing the registered business item (da-b verdict). 1 instance, 015 "uanset branchen." → "uanset forretningsområdet.". The other 5 uses of "branchen" (002, 011, 013, 017, 018) really mean the industry or sector and were left.
+- 017 "new" dropped from the vehicle thresholds (da-b 1). 4 instances: "mindst 8 lastbiler" and "mindst 5 lastbiler", each in the FAQ answer and in section 2; all now "nye lastbiler", matching the 20-truck threshold in the same sentence. Digits unchanged.
+- 014 da-b 22 and 24 each covered 2 instances (FAQ answer + body section); 016 da-b 34 likewise.
+- R2-R10. Prior rounds still hold and nothing this round reopened them: du/man address per file as the reviewer describes, Wei Tseng as "advokat"/"hun" with no masculine form, the consultation languages engelsk / kinesisk (中文) / japansk / koreansk only, no interpreter, no reply-time, no free first meeting, no result or "best/only" claim. The Korea-specific tax passages in 001 and 004 keep the country-note framing (only the sentence-initial capital after the colon changed, da-a 32). Pack chrome is Danish (VORES TEAM, KONTORER, "Fuld profil (på engelsk)").
+
+## Reviewer points not followed
+
+- da-a 1. "artikel 10" could not be deleted: the Korean and English sources both name article 10 and the checker counts that digit. The label was realigned to the source law instead; the URL was not touched.
+- da-a 19 and da-b 20. The U+200B lines and the un-promoted Q16-Q20 are source layout. Deleting a zero-width space fails blocks; promoting the questions fails headings. Same decision as r1-r4.
+- da-a 26. "TWD 1.57M" is pinned by ACCEPTED-ROUND. The reviewer is right that a Danish reader meets the English suffix first; the pin wins, and the Danish form is already in the parenthesis.
+- da-a 17, da-a 18 and da-b 45, where the suggested wording drops a digit the checker still requires. The meaning is the reviewer's; the digit-bearing shape is the one that passes.
+- da-b 8. The sentence does parse: "er" is fronted by V2 inversion. Only "bekræfte" → "afklare" was needed.
+- da-b 29. The duplicate was removed by rewriting the middle block, not by deleting it — the Korean source has three blocks there and the block count is pinned.
+- da-b 42. The gloss was corrected to 公司 rather than deleted; deleting it makes the paragraph Latin-only and trips the checker's English-sentence heuristic.
+- Nothing else in the two reviews was left undone because the legal reading looked wrong.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-da --lang da 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=115
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-da src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The count 23 is from that run, before this log file existed; this log is the additional untracked file. `docs/i18n/global-plan/WO-F-da.txt` and the two r5 review files were already modified/untracked in the worktree when this lane started and were not authored here. Number multisets match the Korean source in all 18 columns (the tail shows the last file, 018: numbers PASS, sourceCount=targetCount=25). The han count in that tail moved 116 → 115 because 018 swapped 子公司 (3 characters) for 公司 (2); the hanzi check still passes.

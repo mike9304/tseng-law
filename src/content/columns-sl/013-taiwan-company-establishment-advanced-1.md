@@ -123,7 +123,7 @@ Po drugi strani, če gre za panoge, ki jih je mogoče opravljati v pisarniškem 
 
 to vnaprej preverite.
 
-*Če potrebujete posvet o tajvanskem pravu, posvet poteka le v angleščini, kitajščini (中文), japonščini in korejščini; komentarjev na spletnem mestu ne vodimo.*
+*Posvet o tajvanskem pravu poteka le v angleščini, kitajščini (中文), japonščini in korejščini; komentarjev na spletnem mestu ne vodimo.*
 
 ---
 

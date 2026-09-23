@@ -39,7 +39,7 @@ Kada je bezbednost obezbeđena, napravite ukupne i detaljne snimke da zabeležit
 
 Član 284 Krivičnog zakonika uređuje telesnu povredu iz nehata (過失傷害) i tešku telesnu povredu iz nehata (過失致重傷). Pošto je prema članu 287 Krivičnog zakonika reč o krivičnim delima koja se gone samo po predlogu oštećenog (告訴乃論之罪), prema članu 237 Zakonika o krivičnom postupku (Tajvan) (刑事訴訟法) predlog treba načelno podneti u roku od 6 meseci od dana kada je učinilac postao poznat.
 
-Kod građanske naknade štete (損害賠償), prema članu 197 Građanskog zakonika (Tajvan) (民法) potraživanje više nije moguće po isteku 2 godine od dana kada su šteta i dužnik naknade postali poznati, ili 10 godina od dana protivpravne radnje (侵權行為). Koje činjenice utiču na zastarelost (消滅時效), treba oceniti posebno.
+Kod građanske naknade štete (損害賠償), prema članu 197 Građanskog zakonika (Tajvan) (民法) potraživanje više nije moguće po isteku 2 godine od dana saznanja za štetu i za lice odgovorno za naknadu, ili 10 godina od dana protivpravne radnje (侵權行為). Koje činjenice utiču na zastarelost (消滅時效), treba oceniti posebno.
 
 Ko pretrpi štetu usled krivičnog dela, može prema članu 487 Zakonika o krivičnom postupku da podnese građansku tužbu pridruženu krivičnom postupku (刑事附帶民事訴訟). Dok krivični postupak traje, tu tužbu moguće je podneti do završetka usmene rasprave (言詞辯論終結) drugog stepena, prema članu 488 Zakonika o krivičnom postupku, ali je nije moguće podneti nakon završetka usmene rasprave prvog stepena i pre podnošenja pravnog leka. Načelno se može izbeći plaćanje posebnih sudskih troškova (裁判費), ali to ne znači da je ishod bez troška. Na primer, ako je krivična stvar odbačena i na predlog tužioca ustupljena građanskom sudu, prema članu 503 Zakonika o krivičnom postupku mogu biti naloženi troškovi postupka, a dalje treba proveriti pravila ustupanja i postupka člana 504.
 
@@ -57,7 +57,7 @@ Veštačenje (鑑定) ili tabela preliminarne analize mogu biti važni podaci, a
 
 U ispravi o poravnanju (和解書) treba individualizovati datum, mesto i strane nezgode i upisati iznos i trenutak plaćanja, rešavanje osiguranih davanja, potraživanja koja su obuhvaćena i ona koja su zadržana. Treba i jasno utvrditi dalje lečenje, povrede otkrivene kasnije, izdavanje isprava, kao što je lekarsko uverenje (診斷證明書), i odnos između plaćanja i povlačenja predloga oštećenog.
 
-Poravnanje (和解) iz člana 736 Građanskog zakonika ugovor je u kojem strane uzajamno ustupaju da bi okončale spor ili mu preduhitrile. Prema članu 737 Građanskog zakonika obim u kojem prava prestaju ocenjuje se takođe samo u granicama onoga što je u ispravi o poravnanju napušteno. Zato se, bez ocene teksta, ne može tvrditi da sva buduća potraživanja nestaju.
+Poravnanje (和解) iz člana 736 Građanskog zakonika ugovor je u kojem strane uzajamno ustupaju da bi okončale spor ili sprečile njegov nastanak. Prema članu 737 Građanskog zakonika obim u kojem prava prestaju ocenjuje se takođe samo u granicama onoga što je u ispravi o poravnanju napušteno. Zato se, bez ocene teksta, ne može tvrditi da sva buduća potraživanja nestaju.
 
 Ako je reč o krivičnom delu koje se goni samo po predlogu oštećenog, prema članu 238 Zakonika o krivičnom postupku predlog se može povući do završetka usmene rasprave prvog stepena, a nakon povlačenja ne može se podneti ponovo. Kod krivičnog dela koje se ne goni samo po predlogu oštećenog, međutim, optužba se ne okončava automatski privatnim poravnanjem, a činjenica poravnanja ne obavezuje uvek na povlačenje predloga.
 
@@ -85,7 +85,7 @@ Ako je reč o krivičnom delu koje se goni samo po predlogu oštećenog, prema �
 
 Tabela preliminarne analize saobraćajne nezgode koju sastavlja policija preliminarna je analiza zasnovana na podacima mesta. Nije presuda, ne vezuje sud i ne utvrđuje udeo nehata (過失比例). Pošto se potrebni podaci i obim spora razlikuju prema nezgodi, ta tabela, zakonsko veštačenje i ponovno razmatranje (覆議) nisu ni automatski postupak ni obavezna etapa.
 
-Prema merodavnim propisima legitimisana strana može da zahteva veštačenje nezgode vozila (車輛行車事故鑑定); organ koji vodi stvar može je ustupiti, a sudski organ može je naložiti. Zahtev strane podnosi se načelno u roku od 6 meseci od datuma nezgode; u stvarima već u istrazi ili u suđenju veštačenje teče nalogom sudskog organa, a ne novim neposrednim zahtevom.
+Prema merodavnim propisima legitimisana strana može da zahteva veštačenje nezgode vozila (車輛行車事故鑑定); organ koji vodi stvar može ga ustupiti, a sudski organ može ga naložiti. Zahtev strane podnosi se načelno u roku od 6 meseci od datuma nezgode; u stvarima već u istrazi ili u suđenju veštačenje teče nalogom sudskog organa, a ne novim neposrednim zahtevom.
 
 Pri neslaganju s mišljenjem veštačenja može se zahtevati ponovno razmatranje, ali se ono može podneti samo jednom. Mišljenje veštačenja i ponovnog razmatranja dokaz je ili podatak za uvid, a sud samostalno ocenjuje celinu spisa, uključujući iskaze, snimke i zapisnike mesta.
 
@@ -93,7 +93,7 @@ Pri neslaganju s mišljenjem veštačenja može se zahtevati ponovno razmatranje
 
 Potraživanje zasnovano na članu 184 Građanskog zakonika pretpostavlja protivpravnu povredu prava, uzročnu vezu s nezgodom i dokaz štete. Sama činjenica da je do nezgode došlo ne vodi tome da su sve niže navedene stavke priznate. Član 216 Građanskog zakonika je merilo utvrđivanja obima stvarne štete i izgubljene koristi (所失利益).
 
-- **Povreda**: Prema članu 193 Građanskog zakonika mogu se oceniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života, kao troškovi nege (看護費用), prevoza na lečenje (就醫交通費) i tehničke pomoći, a takođe gubitak prihoda (收入損失) stvarnom nesposobnošću za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članu 195 Građanskog zakonika može se oceniti i nematerijalna šteta.
+- **Povreda**: Prema članu 193 Građanskog zakonika mogu se oceniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života, kao što su troškovi nege (看護費用), prevoza na lečenje (就醫交通費) i tehničke pomoći, a takođe gubitak prihoda (收入損失) stvarnom nesposobnošću za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članu 195 Građanskog zakonika može se oceniti i nematerijalna šteta.
 - **Smrt**: Prema članu 192 Građanskog zakonika, ako nastupi osnov, mogu se oceniti medicinski troškovi pre smrti i troškovi povećanih životnih potreba, troškovi sahrane (殯葬費) i gubitak izdržavanja (扶養利益損失) lica koje je imalo zakonsko pravo na izdržavanje. Prema članu 194 Građanskog zakonika može se oceniti i nematerijalna šteta izvesnih srodnika.
 - **Imovina**: Prema članu 196 Građanskog zakonika može se istaći obrazložena stvarna imovinska šteta, uključujući troškove popravke vozila ili gubitak vrednosti.
 
@@ -139,13 +139,13 @@ Priznanice, zapisi tarife, zapisi trase i kliničke isprave mogući su dokazi. P
 
 Gubitak prihoda treba dokazati ispravama koje utvrđuju da je zbog povreda povezanih s nezgodom rad u razdoblju oporavka bio potpuno ili delimično nemoguć i da je usled toga nastalo stvarno smanjenje prihoda. Lekarsko uverenje ili preporuka odmora važna su polazna tačka, ali same nisu dovoljne da bi potraživanje bilo priznato.
 
-Treba zajedno urediti medicinsku dokumentaciju, zapise prisustva ili odsustva, podatke o zaradi i porezima i potvrdu poslodavca. Samostalno lice može podneti podatke prilagođene obliku svoje delatnosti, kao podatke o prometu, zapise poslova i poreske prijave.
+Treba objediniti medicinsku dokumentaciju, zapise prisustva ili odsustva, podatke o zaradi i porezima i potvrdu poslodavca. Samostalno lice može podneti podatke prilagođene obliku svoje delatnosti, kao što su podaci o prometu, zapisi poslova i poreske prijave.
 
 Okolnost daljeg rada ili primanja zarade bez izmene bitna je za ocenu gubitka prihoda razdoblja oporavka, ali sama ta činjenica ne odlučuje automatski pitanje štete iz smanjenja radne sposobnosti. Ta okolnost nije ni samostalni osnov ocene štete iz smanjenja radne sposobnosti. Šteta iz smanjenja radne sposobnosti ocenjuje se posebno u Q12.
 
 ## Q12. Kako se dokazuje šteta iz smanjenja radne sposobnosti?
 
-Šteta iz smanjenja radne sposobnosti razlikuje se od prihoda stvarno smanjenih u razdoblju oporavka iz Q11. Prema članovima 193 i 216 Građanskog zakonika zajedno se ocenjuju uzročna veza s nezgodom, trajni funkcionalni poremećaj (持續功能障礙), zanimanje i sposobnosti oštećenog, prihodi koji se obično mogu očekivati, te osnov i dokaz koji se tiču razdoblja radne sposobnosti.
+Šteta iz smanjenja radne sposobnosti razlikuje se od prihoda stvarno smanjenih u razdoblju oporavka iz Q11. Prema članovima 193 i 216 Građanskog zakonika u celini se ocenjuju uzročna veza s nezgodom, trajni funkcionalni poremećaj (持續功能障礙), zanimanje i sposobnosti oštećenog, prihodi koji se obično mogu očekivati, te osnov i dokaz koji se tiču razdoblja radne sposobnosti.
 
 Činjenica da se redovna zarada održava bez izmene automatski ne isključuje potraživanje. Nasuprot tome, visina štete takođe se ne utvrđuje mehanički samo procentom invalidnosti ili redovnom zaradom.
 
@@ -157,7 +157,7 @@ Kada se obračun vrši u jednom kapitalnom iznosu, može se razmotriti odbitak m
 
 Naknada za nematerijalnu štetu iz naslova nematerijalnih šteta ocenjuje se utvrđivanjem primeranog iznosa, ako postoji protivpravno zadiranje u telo ili zdravlje, prema članu 195 Građanskog zakonika.
 
-Sud ocenjuje okolnosti svake stvari, vrednujući zajedno sadržaj povrede i lečenja, trajne učinke, bol i uticaj na život, uzrast i položaj, društveno-ekonomske okolnosti i dokaze strana. Zato je teško predvideti ishod samo iz tipizovanog obima.
+Sud ocenjuje okolnosti svake stvari, vrednujući u celini sadržaj povrede i lečenja, trajne učinke, bol i uticaj na život, uzrast i položaj, društveno-ekonomske okolnosti i dokaze strana. Zato je teško predvideti ishod samo iz tipizovanog obima.
 
 ## Q14. Ako nezgoda nastupi u vreme rada, može li se istaći i građanska odgovornost poslodavca?
 
@@ -177,7 +177,7 @@ Kod nezgode jednog vozila vozač tog vozila načelno nije adresat davanja obavez
 
 Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi 200.000 novih tajvanskih dolara (TWD); davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stepeni; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova kada su u pitanju jedan oštećeni i jedna nezgoda iznosi 3.200.000 TWD. Na ranije nezgode može se primeniti prethodna tarifa.
 
-Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima polise, pa polisu i uslove treba proveriti stvar po stvar.
+Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima polise, pa polisu i uslove treba proveriti za svaku stvar posebno.
 
 ### Zvanični izvori Q11–Q15
 
@@ -207,7 +207,7 @@ Mogu zanemariti i ono što je za drugu stranu bitno — izvinjenje i izraz sauč
 
 ​
 
-Za osiguravača isplata dodatnih 500.000 TWD ili 1.000.000 TWD u pojedinačnoj stvari nema bitan uticaj na ukupni privredni rezultat; za učesnika nezgode, međutim, takav iznos može odlučivati o tome da li će imati, ili neće imati, zabelešku u evidenciji osuđivanosti (前科).
+Za osiguravača isplata dodatnih 500.000 TWD ili 1.000.000 TWD u pojedinačnoj stvari nema bitan uticaj na ukupni privredni rezultat; za učesnika nezgode, međutim, takav iznos može odlučivati o tome da li će imati, ili neće imati, zabelešku u kaznenoj evidenciji (前科).
 
 ​
 
@@ -235,7 +235,7 @@ Q17. Kakva je krivična odgovornost za telesnu povredu iz nehata učinioca saobr
 
 ​
 
-U nekim presudama za telesnu povredu iz nehata izrečeno je oko 3 meseca; nema tipičnog ni zagarantovanog ishoda.
+U nekim presudama za telesnu povredu iz nehata izrečena je kazna zatvora od oko 3 meseca; nema tipičnog ni zagarantovanog ishoda.
 
 ​
 
@@ -247,7 +247,7 @@ Ako se kazna pretvori u novčanu kaznu (易科罰金; 罰金, a ne upravna kazna
 
 ​
 
-U nekim presudama za tešku telesnu povredu iz nehata izrečeno je oko 4 meseca, a za smrt iz nehata (過失致死) oko 6 meseci; nema tipičnog ni zagarantovanog ishoda.
+U nekim presudama za tešku telesnu povredu iz nehata izrečena je kazna zatvora od oko 4 meseca, a za smrt iz nehata (過失致死) od oko 6 meseci; nema tipičnog ni zagarantovanog ishoda.
 
 ​
 
@@ -303,7 +303,7 @@ Saobraćajne nezgode spadaju među veoma česte stvari, pa ih načelno može vod
 
 ​
 
-Odlučuje pre svega pažljivost i poštenje advokata.
+Odlučuju pre svega pažljivost i poštenje advokata.
 
 ​
 
@@ -339,7 +339,7 @@ Povreda ili smrt oštećenog donosi njemu samom i njegovoj porodici fizičku i d
 
 ​
 
-Učinilac često ne mari za telefoniranje s pitanjem o stanju oštećenog ni za njegovu posetu, a mnogi učinioci pretpostavljaju da će osiguravač sve rešiti, pa se sami ne pojavljuju. U tim slučajevima oštećeni ne vidi ni kajanje ni iskrenu nameru.
+Učinilac se često ne javi da pita kako je oštećeni, niti ga poseti, a mnogi učinioci pretpostavljaju da će osiguravač sve rešiti, pa se sami ne pojavljuju. U tim slučajevima oštećeni ne vidi ni kajanje ni iskrenu nameru.
 
 ​
 
@@ -351,7 +351,7 @@ Oštećeni tako ostaje veoma povređen i pada u gnev, pa često ne ustupa u izno
 
 ​
 
-Taj aspekt zato se ne sme potceniti; prema okolnostima valja se posavetovati s advokatkinjom ili advokatom.
+Taj se aspekt zato ne sme potceniti; prema okolnostima valja se posavetovati s advokatkinjom ili advokatom.
 
 ​
 

@@ -33,7 +33,7 @@ Tame Korėjos pavyzdyje pervedimas internetine bankininkyste arba per giminaitį
 
 Be to, pagal Korėjos užsienio valiutos kontrolės teisės aktus asmuo, turintis Korėjos pilietybę, kuris steigia užsienio juridinį asmenį arba įgyja dalių, privalo pateikti „pranešimą apie tiesioginę užsienio investiciją“. Pranešimas turi būti įregistruotas kapitalo pervedimo į Taivano juridinį asmenį (臺灣法人) metu; nepranešus gali kilti sankcijos už užsienio valiutos kontrolės taisyklių pažeidimą.
 
-Prieš pervedant kapitalą (資本金匯款) pasikonsultuokite su savo banku investuotojo valstybėje; toliau pateiktas Korėjos bankų pavyzdys.
+Prieš pervedant kapitalą (資本金匯款) pasikonsultuokite su savo banku investuotojo valstybėje; pirmiau pateiktame pavyzdyje aprašyti Korėjos bankai.
 
 **​**
 

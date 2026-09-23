@@ -21,7 +21,7 @@ Quando si inizia un’attività di ristorazione, il primo problema è trovare l�
 
 Oltre alla situazione del mercato, conta un altro punto: la zona in cui un esercizio di ristorazione è ammesso.
 
-Un altro punto importante è la zona in cui un esercizio di ristorazione è ammesso.
+Oltre alla situazione del mercato, conta se l’indirizzo è in una zona in cui un esercizio di ristorazione è ammesso.
 
 Occorre verificare se quell’indirizzo si trova in una zona in cui un esercizio di ristorazione è ammesso.
 
@@ -37,9 +37,9 @@ Si può utilizzare il sistema di «consultazione preventiva del locale» (營業
 
 Si può verificare senza oneri se, all’indirizzo che si intende usare, l’apertura di un «esercizio di ristorazione» è possibile.
 
-Tuttavia, per questa verifica, deve caricarsi l’«estratto di iscrizione immobiliare di tipo 2» (建物登記第二類謄本, che contiene le informazioni dettagliate dell’edificio) dell’indirizzo del locale.
+Tuttavia, per questa verifica, deve caricarsi l’«estratto di registrazione dell’edificio di tipo 2» (建物登記第二類謄本, che contiene le informazioni dettagliate dell’edificio) dell’indirizzo del locale.
 
-Qualunque persona può chiedere presso l’ufficio dell’amministrazione fondiaria (地政事務所) l’«estratto di iscrizione immobiliare di tipo 2» di un indirizzo qualunque.
+Qualunque persona può chiedere presso l’ufficio dell’amministrazione fondiaria (地政事務所) l’«estratto di registrazione dell’edificio di tipo 2» di un indirizzo qualunque.
 
 Se ha difficoltà a recarsi di persona all’ufficio dell’amministrazione fondiaria (地政事務所),
 
@@ -55,11 +55,11 @@ Presti quindi attenzione a questo punto.
 
 È raccomandato a tutti i settori confermare, con il sistema di «consultazione preventiva del locale» (營業場所預先查詢), se l’esercizio è possibile.
 
-Tuttavia, nell’iscrizione della società, diverse voci di attività sono di frequente iscritte in una sola volta, e si desidera di frequente iscrivere circa 10 voci di attività in una sola volta.
+Tuttavia, nell’iscrizione della società, diverse voci di attività sono di frequente iscritte in una sola volta, e si desidera di frequente iscrivere circa dieci voci di attività in una sola volta.
 
 Nella pratica, peraltro, non è necessario verificare tutte le voci di attività nell’iscrizione della società.
 
-Si applicano le [«istruzioni di funzionamento del servizio di informazione sui locali della città di Taipei»](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) e la guida in vigore della città di Taipei.
+Si applicano le [«istruzioni operative del servizio di informazione sui locali della città di Taipei»](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) e la guida in vigore della città di Taipei.
 
 Dal 1 gennaio 2023, nella domanda di iscrizione di costituzione, di trasferimento di sede o di aggiunta di voci di attività di una società o di un’impresa (compresa la succursale (分公司) e la sede secondaria (分支機構)), il risultato della consultazione preventiva del locale **deve** essere allegato alla domanda di iscrizione, indipendentemente dal settore.
 

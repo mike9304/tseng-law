@@ -1,4 +1,4 @@
-# hr guidance pack strings (path → text). Generated 2026-09-22
+# hr guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.hr.languageName
     Hrvatski
@@ -25,10 +25,10 @@ guidanceContent.hr.nav.faq
     Pitanja
 
 guidanceContent.hr.nav.privacy
-    Privatnost
+    Osobni podaci
 
 guidanceContent.hr.nav.disclaimer
-    Odricanje
+    Odgovornost
 
 guidanceContent.hr.nav.columns
     Članci
@@ -145,16 +145,16 @@ guidanceContent.hr.pages.home.description
     Opće objašnjenje na hrvatskom o opsegu rada Hovering International Law Firm na Tajvanu, o jezicima savjetovanja i o prvom kontaktu.
 
 guidanceContent.hr.pages.home.intro
-    Hovering International Law Firm zastupa strane klijente, uključujući osobe s vezom s Tajvanom, u predmetima tajvanskog prava: ulaganja i osnivanje društava, građanskopravni sporovi, brak, obitelj i nasljeđivanje, radno pravo, kazneni predmeti i intelektualno vlasništvo. Ovaj hrvatski dio pomaže Vam prepoznati koji posao spada u naš opseg, što pripremiti i kako nas kontaktirati. Riječ je o općim informacijama, a ne o pravnom savjetu za Vaš slučaj.
+    Hovering International Law Firm zastupa strane klijente, uključujući osobe povezane s Tajvanom, u predmetima tajvanskog prava: ulaganja i osnivanje društava, građanskopravni sporovi, brak, obitelj i nasljeđivanje, radno pravo, kazneni predmeti i intelektualno vlasništvo. Ovaj hrvatski dio pomaže Vam prepoznati koji posao spada u naš opseg, što pripremiti i kako nas kontaktirati. Riječ je o općim informacijama, a ne o pravnom savjetu za Vaš slučaj.
 
 guidanceContent.hr.pages.home.sections[0].heading
     Čime se bavimo
 
 guidanceContent.hr.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm odvjetnički je ured sa sjedištem na Tajvanu. Radi prema tajvanskom pravu i ima urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savjetujemo poduzeća, vodimo sudske postupke i zastupamo strane klijente u koracima koje na Tajvanu treba poduzeti.
+    Hovering International Law Firm odvjetnički je ured sa sjedištem na Tajvanu. Radi prema tajvanskom pravu i ima urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savjetujemo poduzeća, vodimo sudske postupke i pratimo strane klijente kroz korake koje na Tajvanu treba poduzeti.
 
 guidanceContent.hr.pages.home.sections[0].paragraphs[1]
-    Cjelokupni sadržaj ovdje opće je naravi. Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku. Ove informacije ne zamjenjuju savjetovanje s odvjetnicom ili odvjetnikom na temelju Vaših isprava.
+    Cjelokupni je sadržaj ovdje opće naravi. Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku u kojem se stvar ocjenjuje. Ove informacije ne zamjenjuju savjetovanje s odvjetnicom ili odvjetnikom na temelju Vaših isprava.
 
 guidanceContent.hr.pages.home.sections[1].heading
     Jezik stranice i jezik savjetovanja nisu isto
@@ -196,19 +196,19 @@ guidanceContent.hr.pages.home.sections[3].paragraphs[0]
     Pročitajte stranicu „Područja rada“ i provjerite spada li Vaš predmet u naš opseg, zatim „Troškovi“ i „Kontakt“, kako biste znali kako se utvrđuje opseg i kako se troškovi potvrđuju prije početka rada.
 
 guidanceContent.hr.pages.home.sections[3].paragraphs[1]
-    Pri slanju poruke sažetak možete napisati na svojem jeziku. Izvorni se tekst čuva točno onako kako ste ga napisali i ne prevodi se automatski. Poslana poruka zahtjev je koji čeka pregled: to još nije savjetovanje ni potvrđeni sastanak.
+    Pri slanju poruke sažetak možete napisati na svojem jeziku. Izvorni se tekst čuva točno onako kako ste ga napisali i ne prevodi se automatski. Poslana poruka je zahtjev koji čeka pregled: to još nije savjetovanje ni potvrđeni sastanak.
 
 guidanceContent.hr.pages.services.eyebrow
     PODRUČJA RADA
 
 guidanceContent.hr.pages.services.title
-    U čemu zastupamo klijente
+    Koje predmete vodimo
 
 guidanceContent.hr.pages.services.description
     Šest područja koja ured na Tajvanu vodi i granice koje je korisno znati unaprijed.
 
 guidanceContent.hr.pages.services.intro
-    U nastavku su područja koja stvarno vodimo i pitanja koja se u početnoj fazi postavljaju najčešće. Objašnjenje Vam pomaže procijeniti spada li Vaš predmet u naš opseg; opće je naravi i nije pravna analiza pojedinog spisa.
+    U nastavku su područja koja stvarno vodimo i pitanja koja se u početnoj fazi postavljaju najčešće. Objašnjenje Vam pomaže procijeniti spada li Vaš predmet u naš opseg; ono je opće naravi i nije pravna analiza pojedinog spisa.
 
 guidanceContent.hr.pages.services.sections[0].heading
     Ulaganja i osnivanje društava na Tajvanu
@@ -226,13 +226,13 @@ guidanceContent.hr.pages.services.sections[1].paragraphs[0]
     Ovo područje obuhvaća sporove iz ugovora, naknadu štete iz protupravnog djelovanja i potrošačke sporove. Rad u pravilu započinje vremenskim slijedom, procjenom isprava i postojećih dokaza, a tek potom slijede sljedeći koraci.
 
 guidanceContent.hr.pages.services.sections[1].paragraphs[1]
-    Tijek određuju rokovi, uključujući zastarne, i potpunost dokaza. Stoga navedite poznate datume što ranije. Sačuvajte ugovore, poruke, dokaze o plaćanju ili fotografije stanja na mjestu i spomenite ih u prvoj poruci.
+    Tijek određuju rokovi, uključujući zastarne, i potpunost dokaza. Stoga navedite poznate datume što ranije. Sačuvajte ugovore, poruke, dokaze o plaćanju ili fotografije s mjesta događaja i spomenite ih u prvoj poruci.
 
 guidanceContent.hr.pages.services.sections[2].heading
     Brak, obitelj i nasljeđivanje
 
 guidanceContent.hr.pages.services.sections[2].paragraphs[0]
-    Vodimo razvod (離婚), diobu imovine, ostvarivanje i preuzimanje prava i dužnosti prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), i tada kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu kućne evidencije (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.
+    Vodimo razvod (離婚), diobu imovine, vršenje prava i obveza prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), pa i kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu evidencije kućanstava (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.
 
 guidanceContent.hr.pages.services.sections[2].paragraphs[1]
     Budući da obiteljski predmeti često nose rokove i paralelne postupke, prvi sažetak treba navesti odnos među strankama, trenutačno prebivalište i već pokrenute postupke.
@@ -241,7 +241,7 @@ guidanceContent.hr.pages.services.sections[3].heading
     Radnopravni sporovi
 
 guidanceContent.hr.pages.services.sections[3].paragraphs[0]
-    Ovo područje obuhvaća prestanak radnog odnosa, zakonsku otpremninu prema tajvanskom pravu (資遣費; ne smije se poistovjećivati sa sličnim institutima drugih država), naknadu i sporove iz ugovora o radu (勞動契約), i na strani radnika i na strani poslodavca. Pri procjeni razlikujemo razlog prestanka od pitanja otkaznog roka, isplate i rokova.
+    Ovo područje obuhvaća prestanak radnog odnosa, zakonsku otpremninu prema tajvanskom pravu (資遣費; ne smije se poistovjećivati sa sličnim institutima drugih država), plaću i sporove iz ugovora o radu (勞動契約), i na strani radnika i na strani poslodavca. Pri procjeni razlikujemo razlog prestanka od pitanja otkaznog roka, isplate i rokova.
 
 guidanceContent.hr.pages.services.sections[3].paragraphs[1]
     Odlučujuće isprave obično su ugovor o radu, pravila rada (工作規則), platne liste i korespondencija stranaka. Ako ih još imate, spomenite to u sažetku.
@@ -250,7 +250,7 @@ guidanceContent.hr.pages.services.sections[4].heading
     Kazneni predmeti
 
 guidanceContent.hr.pages.services.sections[4].paragraphs[0]
-    Zastupamo u predistražnom postupku i pred sudom osumnjičene i okrivljenike te oštećenike i procjenjujemo kaznene rizike poslovne djelatnosti.
+    Zastupamo u istrazi i pred sudom osumnjičenike, okrivljenike i oštećenike te procjenjujemo kaznene rizike poslovne djelatnosti.
 
 guidanceContent.hr.pages.services.sections[4].paragraphs[1]
     Kazneni predmeti često imaju kratke rokove i čvrsto određene faze. Ako ste već primili pismeno tijela kaznenog progona ili suda, navedite datum na pismenu na vrijeme, kako bi se sadržaj pregledao u ispravnom redoslijedu.
@@ -289,13 +289,13 @@ guidanceContent.hr.pages.about.sections[0].heading
     Osnivanje i struktura
 
 guidanceContent.hr.pages.about.sections[0].paragraphs[0]
-    Hovering International Law Firm (昊鼎國際法律事務所) osnovale su 2016. odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.
+    Odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學) osnovali su 2016. Hovering International Law Firm (昊鼎國際法律事務所). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.
 
 guidanceContent.hr.pages.about.sections[0].paragraphs[1]
-    Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na vođenje poduzeća i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. za lokalnu potrebu.
+    Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na korporativno upravljanje i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. kako bi se skrbilo o strankama u toj regiji.
 
 guidanceContent.hr.pages.about.sections[0].paragraphs[2]
-    Uz odvjetnički rad od 2020. djeluje i Hovering Accounting Office, koji nudi računovodstvo i porezno planiranje poduzetnicima i privatnim osobama s imovinom.
+    Uz odvjetnički rad od 2020. djeluje i Hovering Accounting Office, koji nudi računovodstvo i porezno planiranje poduzetnicima i imućnim privatnim osobama.
 
 guidanceContent.hr.pages.about.sections[1].heading
     Rad sa stranim strankama
@@ -310,7 +310,7 @@ guidanceContent.hr.pages.about.sections[2].heading
     Kada nas kontaktirate
 
 guidanceContent.hr.pages.about.sections[2].paragraphs[0]
-    Nakon primitka Vašeg sažetka odvjetnica ili odvjetnik pregledava sadržaj i zatim govori o mogućem opsegu rada, o još potrebnim ispravama i o sljedećim koracima. Kod poreznih ili računovodstvenih pitanja ured može postupati s računovodstvenim odjelom u jednom povezanom postupku.
+    Nakon primitka Vašeg sažetka odvjetnica ili odvjetnik pregledava sadržaj i zatim govori o mogućem opsegu rada, o još potrebnim ispravama i o sljedećim koracima. Kod poreznih ili računovodstvenih pitanja ured može s računovodstvenim odjelom raditi u jednom zajedničkom postupku.
 
 guidanceContent.hr.pages.about.sections[2].paragraphs[1]
     Ishod svakog predmeta ovisi o činjenicama i o dostupnim ispravama; ishod ne obećavamo. Ako trebate obvezujući odgovor za svoju situaciju, isprave se moraju raspraviti s odvjetnicom ili odvjetnikom na jednom od četiri jezika savjetovanja.
@@ -409,7 +409,7 @@ guidanceContent.hr.pages.contact.sections[1].paragraphs[0]
     U kontaktnom obrascu možete odabrati „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.
 
 guidanceContent.hr.pages.contact.sections[1].paragraphs[1]
-    Riječ je samo o koraku procjene, a ne o obećanju. Ne obećavamo tumača, uslugu na hrvatskom ni na drugom jeziku izvan četiri navedena jezika, niti da ćemo svaki predmet prihvatiti.
+    Riječ je samo o procjeni, a ne o obećanju. Ne obećavamo tumača, uslugu na hrvatskom ni na drugom jeziku izvan četiri navedena jezika, niti da ćemo svaki predmet prihvatiti.
 
 guidanceContent.hr.pages.contact.sections[2].heading
     Što bi trebala sadržavati prva poruka
@@ -424,7 +424,7 @@ guidanceContent.hr.pages.contact.sections[3].heading
     Što ova stranica ne obećava
 
 guidanceContent.hr.pages.contact.sections[3].paragraphs[0]
-    Ne obećavamo rok za odgovor, ne potvrđujemo sastanak putem ove stranice, ne obećavamo određenu odvjetnicu ni određenog odvjetnika i ne osiguravamo tumača. Pisani prijevod nešto je drugo: Vaša se poruka ne prevodi automatski.
+    Ne obećavamo rok za odgovor, ne potvrđujemo sastanak putem ove stranice, ne obećavamo određenu odvjetnicu ni određenog odvjetnika i ne osiguravamo tumača. Pisani prijevod je nešto drugo: Vaša se poruka ne prevodi automatski.
 
 guidanceContent.hr.pages.contact.sections[3].paragraphs[1]
     Ako pošaljete zahtjev, sadržaj se čuva i čeka pregled. Ako nakon nekog vremena ne primite odgovor, možete ponovno napisati na adresu e-pošte navedenu na kontaktnoj stranici.
@@ -445,7 +445,7 @@ guidanceContent.hr.pages.faq.sections[0].heading
     Kako rabiti ovaj dio
 
 guidanceContent.hr.pages.faq.sections[0].paragraphs[0]
-    Ako ne nađete odgovor za svoju situaciju, odgovor u pravilu ovisi o posebnim činjenicama. Napišite ih stoga u sažetak, umjesto da ih izvodite s ove stranice.
+    Ako ne nađete odgovor za svoju situaciju, odgovor u pravilu ovisi o posebnim činjenicama. Napišite ih stoga u sažetak, umjesto da ih izvodite iz ove stranice.
 
 guidanceContent.hr.pages.faq.faqs[0].question
     Koje predmete ured vodi?
@@ -463,13 +463,13 @@ guidanceContent.hr.pages.faq.faqs[2].question
     Mogu li dobiti savjet na hrvatskom?
 
 guidanceContent.hr.pages.faq.faqs[2].answer
-    Ne. Ove su informacije napisane na hrvatskom, ali savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Ne obećavamo ni tumača. Pisani prijevod nešto je drugo: izvorni tekst koji napišete čuva se kakav jest i ne prevodi se automatski.
+    Ne. Ove su informacije napisane na hrvatskom, ali savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Ne obećavamo ni tumača. Pisani prijevod je nešto drugo: izvorni tekst koji napišete čuva se kakav jest i ne prevodi se automatski.
 
 guidanceContent.hr.pages.faq.faqs[3].question
-    Što učiniti ako ne mogu rabiti nijedan od četiri jezika?
+    Što učiniti ako se ne mogu služiti nijednim od četiri jezika?
 
 guidanceContent.hr.pages.faq.faqs[3].answer
-    Pri slanju zahtjeva odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili način komunikacije, ali usluga na drugom jeziku nije zajamčena. Riječ je o koraku procjene, a ne o obećanju da možemo raditi na drugom jeziku.
+    Pri slanju zahtjeva odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili način komunikacije, ali usluga na drugom jeziku nije zajamčena. Riječ je o procjeni, a ne o obećanju da možemo raditi na drugom jeziku.
 
 guidanceContent.hr.pages.faq.faqs[4].question
     Kako se postupa s mojim tekstom na hrvatskom?
@@ -493,10 +493,10 @@ guidanceContent.hr.pages.faq.faqs[7].question
     Što učiniti ako je moj predmet vrlo hitan?
 
 guidanceContent.hr.pages.faq.faqs[7].answer
-    Navedite rok ili datum s službenog pismena odmah na početku sažetka, kako bi ti datumi pri pregledu bili vidljivi. Ova stranica nema hitni kanal i ne osigurava rok za odgovor; ako Vaš predmet ne trpi odgodu, trebali biste usporedno tražiti i druge putove na svojem mjestu.
+    Navedite rok ili datum na službenom pismenu odmah na početku sažetka, kako bi ti datumi pri pregledu bili vidljivi. Ova stranica nema hitni kanal i ne osigurava rok za odgovor; ako Vaš predmet ne trpi odgodu, trebali biste usporedno tražiti i druge putove ondje gdje se nalazite.
 
 guidanceContent.hr.pages.privacy.eyebrow
-    PRIVATNOST
+    OSOBNI PODACI
 
 guidanceContent.hr.pages.privacy.title
     Podaci koje prikuplja kontaktni obrazac
@@ -535,7 +535,7 @@ guidanceContent.hr.pages.privacy.sections[0].items[6]
     Vaš pristanak na slanje zahtjeva
 
 guidanceContent.hr.pages.privacy.sections[0].items[7]
-    Broj podneska za pronalaženje zahtjeva
+    Broj primitka za pronalaženje zahtjeva
 
 guidanceContent.hr.pages.privacy.sections[1].heading
     Izvorni se tekst čuva neizmijenjen
@@ -550,7 +550,7 @@ guidanceContent.hr.pages.privacy.sections[2].heading
     Mjesto pohrane i pristup
 
 guidanceContent.hr.pages.privacy.sections[2].paragraphs[0]
-    Sadržaj Vašeg podneska čuva se na mjestu koje nije javno dostupno. Pristup imaju samo ovlaštene osobe u uredu, i to radi obrade zahtjeva.
+    Sadržaj Vašeg zahtjeva čuva se na mjestu koje nije javno dostupno. Pristup imaju samo ovlaštene osobe u uredu, i to radi obrade zahtjeva.
 
 guidanceContent.hr.pages.privacy.sections[2].paragraphs[1]
     Ova stranica ne daje apsolutno jamstvo sigurnosti. Nijedan put prijenosa i nijedno mjesto pohrane nisu potpuno sigurni; osjetljive isprave stoga treba slati tek nakon posebne upute odvjetnice ili odvjetnika.
@@ -565,13 +565,13 @@ guidanceContent.hr.pages.privacy.sections[3].paragraphs[1]
     Podaci se bez posebnog pristanka ne rabe za marketing.
 
 guidanceContent.hr.pages.privacy.sections[4].heading
-    Obavijest i broj podneska
+    Obavijest i broj primitka
 
 guidanceContent.hr.pages.privacy.sections[4].paragraphs[0]
     Ako je zahtjev uspješno poslan, sustav obavještava ured. Ako ta obavijest još nije potvrđena, Vaš tekst ostaje spremljen i ne gubi se.
 
 guidanceContent.hr.pages.privacy.sections[4].paragraphs[1]
-    Broj podneska služi pronalaženju Vašeg zahtjeva u našim evidencijama. Prikazuje se nakon spremanja; možete ga navesti pri novom kontaktu.
+    Broj primitka služi pronalaženju Vašeg zahtjeva u našim evidencijama. Prikazuje se nakon spremanja; možete ga navesti pri novom kontaktu.
 
 guidanceContent.hr.pages.privacy.sections[5].heading
     Vaša prava i put kontakta
@@ -586,13 +586,13 @@ guidanceContent.hr.pages.privacy.sections[6].heading
     Mjesto pohrane i pružatelji usluga
 
 guidanceContent.hr.pages.privacy.sections[6].paragraphs[0]
-    Ove stranice smještene su kod tvrtke Vercel, a Vaš se podnesak čuva u nejavnom objektnom spremištu te usluge. Poruke e-pošte šalju se poštanskom uslugom koju ured rabi.
+    Ove stranice smještene su kod tvrtke Vercel, a Vaš se zahtjev čuva u pohrani te usluge koja nije javno dostupna. Poruke e-pošte šalju se uslugom e-pošte koju ured rabi.
 
 guidanceContent.hr.pages.privacy.sections[6].paragraphs[1]
     Poslužitelji pojedinih pružatelja mogu se nalaziti izvan Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha pohrane ispunjena, podaci se bez nepotrebne odgode brišu; podaci koje treba čuvati prema mjerodavnim propisima ostaju za to razdoblje. Zahtjeve u vezi s osobnim podacima prima wei@hoveringlaw.com.tw.
 
 guidanceContent.hr.pages.disclaimer.eyebrow
-    ODRICANJE
+    ODGOVORNOST
 
 guidanceContent.hr.pages.disclaimer.title
     Opseg i granice informacija na ovoj stranici
@@ -610,7 +610,7 @@ guidanceContent.hr.pages.disclaimer.sections[0].paragraphs[0]
     Sadržaj ovih stranica napisan je kao opća informacija. Nije pravni savjet za Vaš slučaj i ne zamjenjuje pregled Vaših isprava.
 
 guidanceContent.hr.pages.disclaimer.sections[0].paragraphs[1]
-    Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku; dvije naizgled slične situacije mogu završiti različito.
+    Ishod predmeta ovisi o činjenicama, o mjerodavnim propisima i o trenutku u kojem se stvar ocjenjuje; dvije naizgled slične situacije mogu završiti različito.
 
 guidanceContent.hr.pages.disclaimer.sections[1].heading
     Pravni okvir
@@ -619,7 +619,7 @@ guidanceContent.hr.pages.disclaimer.sections[1].paragraphs[0]
     Ured djeluje prema tajvanskom pravu i ova stranica govori samo o radu u tom okviru.
 
 guidanceContent.hr.pages.disclaimer.sections[1].paragraphs[1]
-    Sadržaj nije savjetovanje prema pravu drugog poretka osim tajvanskog, uključujući pravo mjesta Vašeg boravka. Ako se dio Vašeg predmeta tiče drugog pravnog poretka, s Vama ćemo razjasniti koja je kvalificirana osoba za taj dio potrebna.
+    Sadržaj nije savjetovanje prema pravnom poretku koji nije tajvanski, uključujući pravo mjesta Vašeg boravka. Ako se dio Vašeg predmeta tiče drugog pravnog poretka, razjasnit ćemo s Vama koja je stručna osoba za taj dio potrebna.
 
 guidanceContent.hr.pages.disclaimer.sections[2].heading
     Odnos između odvjetnice ili odvjetnika i klijenta ne nastaje sam od sebe
@@ -628,7 +628,7 @@ guidanceContent.hr.pages.disclaimer.sections[2].paragraphs[0]
     Čitanje ove stranice, slanje obrasca ili e-pošte samo po sebi ne uspostavlja odnos između odvjetnice ili odvjetnika i klijenta.
 
 guidanceContent.hr.pages.disclaimer.sections[2].paragraphs[1]
-    Taj odnos nastaje tek nakon što je predmet pregledan i obje strane potvrdile preuzimanje rada.
+    Taj odnos nastaje tek nakon što je predmet pregledan i nakon što su obje strane potvrdile preuzimanje rada.
 
 guidanceContent.hr.pages.disclaimer.sections[3].heading
     Nema obećanja ishoda
@@ -637,7 +637,7 @@ guidanceContent.hr.pages.disclaimer.sections[3].paragraphs[0]
     Nijedan dio ove stranice nije obećanje glede ishoda predmeta, udovoljenja prijavi ili zahtjevu niti glede boravišnog i radnog statusa.
 
 guidanceContent.hr.pages.disclaimer.sections[3].paragraphs[1]
-    Vanjski linkovi služe orijentaciji; ne jamčimo točnost ni aktualnost sadržaja trećih osoba.
+    Vanjske poveznice služe orijentaciji; ne jamčimo točnost ni aktualnost sadržaja trećih osoba.
 
 guidanceContent.hr.pages.columns.eyebrow
     ČLANCI
@@ -658,7 +658,7 @@ guidanceContent.hr.pages.columns.sections[0].paragraphs[0]
     Ovaj dio sadrži četiri poveznice: popis članaka na korejskom, na kineskom, na engleskom i na japanskom. Svaka poveznica navodi jezik popisa, tako da unaprijed znate na kojemu će se jeziku sadržaj otvoriti.
 
 guidanceContent.hr.pages.columns.sections[0].paragraphs[1]
-    Ta četiri popisa popisi su prema izvornom jeziku članaka, a ne popisi prijevoda. Članci dostupni na hrvatskom nalaze se zasebno na ovoj stranici.
+    Ta su četiri popisa sastavljena prema izvornom jeziku članaka, a ne prema jeziku prijevoda. Članci dostupni na hrvatskom nalaze se zasebno na ovoj stranici.
 
 guidanceContent.hr.pages.columns.sections[1].heading
     Kamo vode poveznice
@@ -676,7 +676,7 @@ guidanceContent.hr.pages.columns.sections[2].paragraphs[0]
     Članci su opće informacije u trenutku objave. Propisi i njihova primjena mogu se promijeniti, a članak ne sadrži sve okolnosti Vašeg slučaja.
 
 guidanceContent.hr.pages.columns.sections[2].paragraphs[1]
-    Stoga nemojte u stvarnom predmetu postupati samo na temelju članka. Rabite ga za pregled i svoje isprave raspravite zasebno s odvjetnicom ili odvjetnikom; ova stranica nije korak savjetovanja.
+    Stoga nemojte u stvarnom predmetu postupati samo na temelju članka. Rabite ga za pregled i svoje isprave raspravite zasebno s odvjetnicom ili odvjetnikom; ova stranica nije savjetovanje.
 
 guidanceTeamCopy.hr.label
     NAŠ TIM
@@ -730,31 +730,31 @@ guidanceTeamCopy.hr.consultationLanguagesLabel
     Jezici savjetovanja
 
 guidanceTeamCopy.hr.roles.tseng-junwei
-    Vodeća odvjetnica na Tajvanu (Managing Attorney)
+    Vodeća odvjetnica na Tajvanu
 
 guidanceTeamCopy.hr.roles.chang-rongxuan
-    Odvjetnik na Tajvanu (Taiwan Attorney)
+    Odvjetnik na Tajvanu
 
 guidanceTeamCopy.hr.roles.chang-fangyu
-    Paralegal
+    Pravni asistent
 
 guidanceTeamCopy.hr.roles.son-jungmin
-    Operativno vodstvo za Koreju (Korea Operations Manager)
+    Operativno vodstvo za Koreju
 
 guidanceTeamCopy.hr.roles.huang-shengping
-    Partnerski računovođa (Partner CPA)
+    Partner, ovlašteni revizor
 
 guidanceTeamBios.hr.tseng-junwei.intro[0]
     Ured vodi predmete poduzeća i privatnih osoba na Tajvanu na engleskom, japanskom, korejskom i kineskom.
 
 guidanceTeamBios.hr.tseng-junwei.intro[1]
-    Zastupala je korejskog studenta u zahtjevu za naknadu štete zbog ozljede u teretani i ishodila je presudu prvog stupnja u iznosu TWD 1.57M.
+    Zastupala je korejskog studenta u predmetu naknade štete zbog ozljede u teretani i ishodila je presudu prvog stupnja u iznosu TWD 1.57M.
 
 guidanceTeamBios.hr.tseng-junwei.education[0]
     Magistra (M.S.), Institute of Finance, National Taiwan University
 
 guidanceTeamBios.hr.tseng-junwei.education[1]
-    Prvostupnica (B.A.) u dvojnom programu prava i financija, National Chengchi University
+    Prvostupnica (B.A.) dvopredmetnog studija prava i financija, National Chengchi University
 
 guidanceTeamBios.hr.tseng-junwei.education[2]
     Razmjenska studentica na Kobe University i Waseda University
@@ -766,10 +766,10 @@ guidanceTeamBios.hr.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.hr.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Zaklada za pravnu pomoć, podružnica u Taichungu (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.hr.chang-rongxuan.intro[0]
-    Ranije na Ministry of Education, Legal Affairs Division, s naglaskom na upravne i građanskopravne predmete.
+    Ranije u odjelu za pravne poslove Ministarstva obrazovanja (Ministry of Education, Legal Affairs Division), s naglaskom na upravne i građanskopravne predmete.
 
 guidanceTeamBios.hr.chang-rongxuan.intro[1]
     Iskustvo s predmetima sveučilišta, prava nastavnika i upravnih žalbi.
@@ -778,13 +778,13 @@ guidanceTeamBios.hr.chang-rongxuan.education[0]
     Prvostupnik prava (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.hr.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Odjel za pravne poslove Ministarstva obrazovanja (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.hr.chang-rongxuan.experience[1]
     Odvjetnik, Hovering International Law Firm
 
 guidanceTeamBios.hr.chang-fangyu.intro[0]
-    Paralegal s dugogodišnjim iskustvom; ranije senior paralegal u više odvjetničkih ureda, s naglaskom na postupovnu potporu, korporativne predmete i strana ulaganja.
+    Pravni asistent s dugogodišnjim iskustvom; ranije viši pravni asistent u više odvjetničkih ureda, s naglaskom na postupovnu potporu, korporativne predmete i strana ulaganja.
 
 guidanceTeamBios.hr.chang-fangyu.intro[1]
     Potpora u sudskim postupcima, pri osnivanju društava, kod dozvola za strana ulaganja, kod zahtjeva za licence i u komunikaciji između Koreje i Tajvana.
@@ -793,16 +793,16 @@ guidanceTeamBios.hr.chang-fangyu.education[0]
     Prvostupnik prava (LL.B.), Tunghai University
 
 guidanceTeamBios.hr.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Viši pravni asistent, Boyin Law Firm
 
 guidanceTeamBios.hr.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Viši pravni asistent, Muyang International Law Firm
 
 guidanceTeamBios.hr.son-jungmin.intro[0]
     Koordinira termine savjetovanja i komunikaciju za klijente iz Koreje.
 
 guidanceTeamBios.hr.son-jungmin.intro[1]
-    Podržava međuregionalnu razmjenu putem sustava dokumenata i radnih postupaka, na temelju informatike.
+    Na temelju obrazovanja iz informatike podržava komunikaciju među timovima putem sustava dokumenata i radnih postupaka.
 
 guidanceTeamBios.hr.son-jungmin.education[0]
     Prvostupnik (B.S.) informatike, National Cheng Kung University
@@ -967,7 +967,7 @@ internationalInquiryCopy.hr.savedNotificationPendingMessage
     Vaš je zahtjev spremljen, ali obavijest uredu još nije potvrđena. Ono što ste napisali ne gubi se. Ako ne primite odgovor, možete napisati i na adresu e-pošte s kontaktne stranice.
 
 internationalInquiryCopy.hr.receiptIdLabel
-    Broj podneska
+    Broj primitka
 
 internationalInquiryCopy.hr.failureMessage
     Vaš zahtjev nije bilo moguće poslati. Pokušajte ponovno ili napišite na adresu e-pošte s kontaktne stranice.
@@ -994,10 +994,10 @@ internationalInquiryCopy.hr.emailLabel
     E-pošta
 
 internationalInquiryCopy.hr.consentLabel
-    Pročitao sam ili pročitala sam stranicu o privatnosti i pristajem na slanje ovog zahtjeva.
+    Pročitao sam ili pročitala sam stranicu o osobnim podacima i pristajem na slanje ovog zahtjeva.
 
 internationalInquiryCopy.hr.privacyLinkLabel
-    Privatnost
+    Osobni podaci
 
 internationalInquiryCopy.hr.requiredMessage
     Ovo je polje obvezno.
@@ -1030,7 +1030,7 @@ internationalInquiryCopy.hr.languageOptions.ko
     Korejski (한국어)
 
 internationalInquiryCopy.hr.languageOptions.needs-method-confirmation
-    Nijedan od četiri jezika nije uporabljiv — način komunikacije treba potvrditi
+    Ne mogu se služiti nijednim od četiri jezika — način komunikacije treba potvrditi
 
 guidanceAnswers.hr.services.answer
     Ured vodi šest područja prema tajvanskom pravu: ulaganja i osnivanje društava, građanskopravne sporove i naknadu štete, brak, obitelj i nasljeđivanje, radnopravne sporove, kaznene predmete i intelektualno vlasništvo. Opseg svakog predmeta potvrđuje se zasebno nakon što odvjetnica ili odvjetnik pregleda poslani sadržaj. Savjetovanje se odvija samo na engleskom, kineskom, japanskom i korejskom.
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.hr.consultationNotice
     Ove su informacije napisane na hrvatskom, ali savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom.
 
 GUIDANCE_LLMS_NOTICES.hr.discoveryNotice
-    Datoteka llms.txt samo je karta za pronalaženje javnih stranica; ne obećava poredak u pretraživanju, podršku, preporuku umjetne inteligencije ni vidljivost.
+    Datoteka llms.txt je samo karta za pronalaženje javnih stranica; ne obećava poredak u pretraživanju, službenu preporuku, preporuku umjetne inteligencije ni zajamčenu vidljivost.
 
 GUIDANCE_LLMS_NOTICES.hr.confidentialNotice
     Budući da se izvorni tekst čuva, u početnoj fazi nemojte pisati ono što još nije potrebno, primjerice broj putovnice, broj isprave ili podatke o računu.

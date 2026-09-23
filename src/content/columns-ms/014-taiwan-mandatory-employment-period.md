@@ -78,7 +78,7 @@ Walaupun wujud salah satu syarat berkanun, tempoh yang dipersetujui dan tanggung
 3. Jumlah dan skop pampasan
 4. Keadaan lain yang mempengaruhi kemunasabahan
 
-Dalam faktor pertama, dilihat berapa lama latihan benar-benar berlangsung dan berapa majikan menanggung. Tidak cukup membentangkan jumlah; sebaiknya sahkan bersama dokumen sokongan menurut pos, jumlah yang dikaitkan kepada setiap pekerja, kemahiran yang latihan sediakan dan bahagian pelaburan yang sudah dipulihkan.
+Dalam faktor pertama, dilihat berapa lama latihan benar-benar berlangsung dan berapa majikan menanggung. Tidak cukup membentangkan jumlah; sebaiknya sahkan bersama dokumen sokongan yang diperinci, jumlah yang dikaitkan kepada setiap pekerja, kemahiran yang latihan sediakan dan bahagian pelaburan yang sudah dipulihkan.
 
 Faktor kedua, kemungkinan penggantian, tidak ditetapkan hanya dengan dakwaan majikan mengenai kesukaran pengambilan. Disemak sama ada mungkin memperoleh kakitangan jawatan yang sama atau jawatan serupa, kelayakan dan tahap kepakaran apa yang diperlukan, tempoh biasa untuk mengisi jawatan itu dan sama ada keperluan operasi yang didakwa majikan sepadan dengan dokumen objektif.
 
@@ -92,7 +92,7 @@ Akhirnya, perlu wujud hubungan perkadaran yang munasabah antara tempoh yang dipe
 
 Menurut panduan Kementerian Buruh Taiwan 5 Jun 2026, kos latihan berkala, latihan umum jawatan, penyesuaian kerja pekerja baharu dan latihan yang undang-undang mewajibkan diberikan tidak boleh diambil sebagai asas perjanjian tempoh kerja minimum mahupun tuntutan klausa penalti atau pemulangan kos. Jangan lihat hanya nama latihan, tetapi program konkret, kandungan profesional dan teknikal, tempoh, kos yang benar-benar ditanggung majikan dan dokumen sokongan.
 
-Surat panduan 勞動關2字第1150141814號 Kementerian Buruh membezakan dan merawat latihan yang diberikan secara berkala, latihan biasa jawatan, latihan agar pekerja baharu membiasakan diri dengan persekitaran dan prosedur kerja, dan latihan yang majikan mesti berikan menurut undang-undang. Kerana latihan ini menyertai operasi aktiviti atau penyempurnaan kewajipan berkanun, erti ialah bahawa kosnya tidak boleh ditukar menjadi asas kewajipan pengekalan atau sanksi bagi terhapus awal.
+Surat panduan 勞動關2字第1150141814號 Kementerian Buruh membezakan dan merawat latihan yang diberikan secara berkala, latihan biasa jawatan, latihan agar pekerja baharu membiasakan diri dengan persekitaran dan prosedur kerja, dan latihan yang majikan mesti berikan menurut undang-undang. Oleh kerana latihan ini mengiringi operasi perniagaan atau pematuhan kewajipan berkanun, kosnya tidak boleh dijadikan asas kewajipan berkhidmat atau sanksi bagi penamatan awal.
 
 Kursus yang pekerja baharu terima biasanya, seperti penjelasan peraturan kerja (工作規則), pembentangan organisasi dan sistem, penyerahan biasa jawatan dan panduan prosedur asas keselamatan, mesti disahkan dalam substansinya. Kos umum pengambilan dan pengurusan atau kos penyerahan jawatan yang majikan sudah mesti tanggung asalnya tidak boleh ditetapkan sebagai perkara yang perlu dipulangkan hanya dengan melabelnya sebagai pelaburan berasingan.
 
@@ -112,7 +112,7 @@ Soalan pemulangan mesti disahkan mengikut tertib: kesahan perjanjian, sifat unda
 
 Klausa pemulangan penuh, klausa penalti tetap yang asing kepada kerugian sebenar dan potongan sepihak gaji tidak dinilai sebagai satu masalah sahaja. Asas undang-undang, kandungan persetujuan, had undang-undang buruh dan keabsahan potongan mesti disahkan secara berasingan. Jumlah yang ditulis dalam notis majikan atau hakikat bahawa pekerja telah membayar sebahagian juga tidak menetapkan soalan undang-undang yang tinggal.
 
-Perlu juga dibezakan pemulangan kos latihan dan pemulangan bayaran pendahuluan. Yang pertama dilihat berpusat pada latihan teknikal khusus sebenar dan pada tanggungan kos; yang kedua, pada tujuan bayaran, komunikasi, syarat pemberian dan perkadaran kepada tempoh yang belum disempurnakan. Jika dituntut kedua pos bersama, perlu disepadukan secara berasingan sama ada kos dikira 2 kali dan dokumen sokongan setiap pos.
+Perlu juga dibezakan pemulangan kos latihan dan pemulangan bayaran pendahuluan. Yang pertama dilihat berpusat pada latihan teknikal khusus sebenar dan pada tanggungan kos; yang kedua, pada tujuan bayaran, komunikasi, syarat pemberian dan perkadaran kepada tempoh yang belum disempurnakan. Jika kedua-duanya dituntut bersama, perlu disepadukan secara berasingan sama ada kos dikira 2 kali dan dokumen sokongan setiap tuntutan.
 
 ## 7. Apabila kontrak terhapus kerana sebab yang tidak boleh dikaitkan kepada pekerja
 

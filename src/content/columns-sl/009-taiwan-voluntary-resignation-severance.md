@@ -21,7 +21,7 @@ Zlasti če delavec odide po lastni volji (自請離職),
 
 odpravnine (資遣費) ni mogoče prejeti (18. člen zakona o temeljnih delovnih standardih),
 
-kar se razlikuje od ureditve v nekaterih pravnih redovih, na primer v Koreji.
+kar se razlikuje od ureditve v nekaterih pravnih redih, na primer v Koreji.
 
 ​
 
@@ -31,19 +31,19 @@ Obstajajo pa **izjemni primeri**.
 
 V naslednjih posebnih okoliščinah mora delodajalec delavcu izplačati odpravnino, tudi če delavec odide po lastni volji (14. člen zakona o temeljnih delovnih standardih, ki smiselno uporablja 17. člen; 勞動基準法第14條):
 
-1. Kadar delodajalec ob sklenitvi pogodbe o zaposlitvi (勞動契約) poda lažno izjavo volje (虛偽意思表示), tako da se delavec zmoti ter obstaja tveganje škode
+1. Kadar delodajalec ob sklenitvi pogodbe o zaposlitvi (勞動契約) poda lažno izjavo volje (虛偽意思表示), tako da se delavec zmoti in obstaja tveganje škode
 
 (na primer kadar delodajalec delavcu reče, da ga bo po sprejemu poslal v tujo podružnico, ki v resnici ne obstaja)
 
-2. Kadar delodajalec, družinski član delodajalca ali zastopnik delodajalca (代理人) uporabi nasilje ali povzroči hudo žalitev (重大侮辱) delavcu
+2. Kadar delodajalec, družinski član delodajalca ali zastopnik delodajalca (代理人) uporabi nasilje ali hudo užali delavca (重大侮辱)
 
 3. Kadar delo, določeno v pogodbi, lahko škoduje zdravju delavca, je bila od delodajalca zahtevana izboljšava, do nje pa ni prišlo
 
-4. Kadar delodajalec, njegov zastopnik ali drug delavec zboli za zakonsko nalezljivo boleznijo (法定傳染病), obstaja tveganje okužbe delavcev, ki delajo skupaj, ter gre za hudo nevarnost za zdravje delavca
+4. Kadar delodajalec, njegov zastopnik ali drug delavec zboli za zakonsko nalezljivo boleznijo (法定傳染病), obstaja tveganje okužbe delavcev, ki delajo skupaj, in gre za hudo nevarnost za zdravje delavca
 
 5. Kadar delodajalec ne izplačuje plačila za delo (工作報酬) po pogodbi o zaposlitvi ali ne zagotavlja dovolj dela delavcu, katerega plačilo za delo se računa po kosu (按件計酬)
 
-6. Kadar delodajalec krši pogodbo o zaposlitvi ali delovno pravo, tako da obstaja tveganje posega v pravice ter interese delavca
+6. Kadar delodajalec krši pogodbo o zaposlitvi ali delovno pravo, tako da obstaja tveganje posega v pravice in interese delavca
 
 ​
 
@@ -87,11 +87,11 @@ odvisno od tega, kdo prvi konča pogodbo z zadostnim razlogom,
 
 stranka, ki pogodbo prva konča z zadostnim razlogom, lahko odpravnine ne izplača ali pa jo zahteva.
 
-Zato je v delovnih sporih (勞資糾紛) na Tajvanu odločilen trenutek.
+Zato je v delovnih sporih (勞資糾紛) na Tajvanu
 
-»**čas**« je zelo pomemben.
+»**čas**« zelo pomemben.
 
-V večini primerov je bolje zavarovana stran, ki se pripravi vnaprej.
+V večini primerov je bolje zavarovana stranka, ki se pripravi vnaprej.
 
 ---
 

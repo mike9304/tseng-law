@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Če so stranke na Tajvanu, ali je tam vedno treba ustanoviti družbo?"
-    a: "Zgolj zato, ker je stranka na Tajvanu, ni mogoče enotno sklepati. Treba je videti zahteve tajvanske stranke in dejansko dejavnost, objekte, osebje in strukturo poslov na Tajvanu, nato pa izbrati najustreznejši subjekt."
+    a: "Zgolj zato, ker je stranka na Tajvanu, ni mogoče sklepati na splošno. Treba je preveriti zahteve tajvanske stranke in dejansko dejavnost, objekte, osebje in strukturo poslov na Tajvanu, nato pa izbrati najustreznejši subjekt."
   - q: "Ali odgovornost matične družbe popolnoma izgine, ko se ustanovi tajvanska družba?"
     a: "Če se ustanovi hčerinska družba (子公司), ne pa podružnica (分公司), matična družba praviloma ne nosi obveznosti iz pogodb, sklenjenih v imenu hčerinske družbe. Preveriti pa je treba izjeme zlorabe pravne osebnosti in to, ali je matična družba posebej dala poroštvo ali prevzela lastne pogodbene obveznosti."
   - q: "Ali je mogoče najprej delovati prek distributerja in pozneje preiti na tajvansko družbo?"
@@ -17,11 +17,11 @@ faq:
 
 # Tuja podjetja za sestavne dele polprevodnikov, ki vstopajo na Tajvan: kako presoditi hčerinsko družbo, podružnico ali zastopnika
 
-![Slika k presoji strukture vstopa podjetja polprevodnikov na Tajvan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
+![Slika za presojo strukture vstopa podjetja polprevodnikov na Tajvan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
 Ko se začnejo posli s tajvanskimi strankami, lahko sedež v tujini prejme različne zahteve: obdelati ponudbe in pogodbe na Tajvanu, imeti zalogo rezervnih delov za nujno zamenjavo ali namestiti osebje za vgradnjo in vzdrževanje. Tedaj je lahko prvo vprašanje: »Ali se zadeva reši z ustanovitvijo družbe na Tajvanu?«
 
-Najprej je treba razjasniti, kdo na Tajvanu kaj opravlja. Struktura, ki jo je treba presoditi, se spremeni glede na to, ali sedež v tujini še naprej sklepa kupoprodajne pogodbe, ali tajvanska družba blago kupi in ga naprej proda, ali krajevno osebje nudi le tehnično podporo.
+Najprej je treba razjasniti, kdo na Tajvanu kaj opravlja. Struktura, ki jo je treba presoditi, se spremeni glede na to, ali sedež v tujini še naprej sklepa kupoprodajne pogodbe, ali tajvanska družba blago kupi in ga naprej proda, ali lokalno osebje nudi le tehnično podporo.
 
 Ta članek je splošen napotek za tuja podjetja za materiale, sestavne dele in opremo za polprevodnike, ki načrtujejo strukturo vstopa na Tajvan. Spodnje operativne situacije in točke pregleda so hipotetični zgledi in predlogi za presojo, ne pa dejanski mandat določenega podjetja niti enotna zahteva ustanovitve. Davke, nadzor izvoza, dovoljenja po izdelku in razvrstitev vlagatelja je treba presoditi ločeno.
 
@@ -33,13 +33,13 @@ Preden sedež odloči o strukturi vstopa, lahko znotraj podjetja razjasni:
 
 | Operativna točka | Vprašanja, ki jih je treba razjasniti najprej |
 |---|---|
-| Pogodbe s strankami | Kdo bo pogodbena stranka: sedež v tujini, tajvanska hčerinska družba ali krajevni zastopnik? |
+| Pogodbe s strankami | Kdo bo pogodbena stranka: sedež v tujini, tajvanska hčerinska družba ali lokalni zastopnik? |
 | Ponudbe in naročila | Kdo dokončno potrdi ceno in rok dobave ter kam sega pooblastilo odgovorne osebe na Tajvanu? |
-| Blago in zaloge | Kdo uvaža, drži in upravlja zaloge ter kdo ureja vračila ter zamenjave? |
+| Blago ter zaloge | Kdo uvaža, hrani in upravlja zaloge ter kdo ureja vračila in zamenjave? |
 | Osebje | Ali prihajajo zaposleni sedeža, ali se zaposluje na Tajvanu, ali se delo zaupa zunanjemu izvajalcu? |
 | Vgradnja in tehnična podpora | Kdo nosi dolžnost podpore do stranke in kdo rešuje težave pri delu na kraju? |
 | Plačila in stroški | Kdo izdaja račune in izterjuje plačila ter kako se poravnajo stroški med sedežem ter organizacijo na Tajvanu? |
-| Kakovost in spori | Kdo potrdi izid pregleda in kdo prejema navedbe napak ali zahtevke za odškodnino? |
+| Kakovost in spori | Kdo potrdi izid pregleda in kdo sprejema reklamacije ali odškodninske zahtevke? |
 
 Zlasti če prodajalec iz kupoprodajne pogodbe ni podjetje, ki nudi tehnično podporo, morajo listine razločiti, od koga lahko stranka zahteva izpolnitev katerih obveznosti.
 
@@ -53,7 +53,7 @@ Osrednja razlika med tajvansko hčerinsko družbo (子公司) in tajvansko podru
 |---|---|---|
 | Tajvanska hčerinska družba | Ustanovi se po tajvanskem pravu, ima lastno pravno osebnost in je pravni subjekt, različen od tuje matične družbe. | Ker je hčerinska družba samostojna pravna oseba, je treba potrditi, kako se uredijo dobava izdelkov, storitve, licenca tehnologije in delitev stroškov z matično družbo. |
 | Tajvanska podružnica tuje družbe | Podružnica, vpisana na Tajvanu po predpisih, brez pravne osebnosti, ločene od sedeža, in različna od posebej ustanovljene hčerinske družbe. | Podružnica je del sedeža v tujini, ne samostojna pravna oseba, zato sedež nosi obveznosti neposredno. Potrditi je treba obseg pooblastil vodje podružnice in notranjo delitev zunanjih pogodb, dobav, jamstev in poprodajnih storitev. |
-| Predstavništvo tuje družbe na Tajvanu | Oporišče, vpisano na Tajvanu po 386. členu zakona o družbah (公司法); na Tajvanu ne sme opravljati poslovne dejavnosti. | Ker ne sme opravljati poslovne dejavnosti, je treba potrditi, ali dejansko delo ostaja v dovoljenem obsegu. |
+| Predstavništvo tuje družbe na Tajvanu | Izpostava, vpisana na Tajvanu po 386. členu zakona o družbah (公司法); na Tajvanu ne sme opravljati poslovne dejavnosti. | Ker ne sme opravljati poslovne dejavnosti, je treba potrditi, ali dejansko delo ostaja v dovoljenem obsegu. |
 
 ## 3. Obliki tajvanske hčerinske družbe: družba z omejeno odgovornostjo in delniška družba
 
@@ -65,7 +65,7 @@ Družbo z omejeno odgovornostjo (有限公司) je mogoče ustanoviti z 1 ali ve�
 
 ### Delniška družba: primerna, kadar naj se sprejmejo drugi vlagatelji ali se predvideva kotacija
 
-Delniška družba (股份有限公司) deli kapital na delnice. Praviloma so potrebni dva ali več delničarjev, vendar lahko država ali pravna oseba družbo ustanovi sama, tuja pravna oseba pa lahko ima 100 % delnic. Delnice so praviloma prosto prenosljive, z zakonskimi izjemami; po predpisih je mogoče oblikovati vrste delnic, delniške opcije zaposlenih in podobno. Zato oblika ustreza podjetjem, ki pričakujejo vlagatelje, posle z deleži, nagrade v delnicah za zaposlene ali prihodnjo združitev, prevzem, kotacijo ali vpis na nastajajoči trg; se ne omejuje le na velika podjetja. Pri upravljanju lahko družba, ki ni javno ponudila delnic, s statutom ne ustanovi upravnega odbora in ima le 1 ali 2 direktorja. Družba z edinim državnim ali pravnoosebnim delničarjem lahko s statutom ne imenuje nadzornika družbe. Prav tako ni treba, da vsaka delniška družba pridobi letno revizijo računovodskih izkazov. Glavni pragovi revizije navadne družbe so vplačani kapital TWD 30.000.000 ali, tudi pod to mejo, poslovni prihodek TWD 100.000.000 ali 100 delavcev, vpisanih v delovno zavarovanje (勞工保險); družbe, ki so javno ponudile delnice (公開發行公司), se ravnajo po predpisih o vrednostnih papirjih.
+Delniška družba (股份有限公司) deli kapital na delnice. Praviloma sta potrebna dva delničarja ali več, vendar lahko država ali pravna oseba družbo ustanovi sama, tuja pravna oseba pa lahko ima 100 % delnic. Delnice so praviloma prosto prenosljive, z zakonskimi izjemami; po predpisih je mogoče oblikovati vrste delnic, delniške opcije zaposlenih in podobno. Zato oblika ustreza podjetjem, ki pričakujejo vlagatelje, posle z deleži, nagrade v delnicah za zaposlene ali prihodnjo združitev, prevzem, kotacijo ali vpis na nastajajoči trg, pri čemer ta oblika ni omejena le na velika podjetja. Pri upravljanju lahko družba, ki ni javno ponudila delnic, s statutom ne ustanovi upravnega odbora in ima le 1 ali 2 direktorja. Družba z edinim državnim ali pravnoosebnim delničarjem lahko s statutom ne imenuje nadzornika družbe. Prav tako ni treba, da vsaka delniška družba pridobi letno revizijo računovodskih izkazov. Glavni pragovi revizije navadne družbe so vplačani kapital 30.000.000 TWD ali, tudi pod to mejo, poslovni prihodek 100.000.000 TWD ali 100 delavcev, vpisanih v delovno zavarovanje (勞工保險); družbe, ki so javno ponudile delnice (公開發行公司), se ravnajo po predpisih o vrednostnih papirjih.
 
 ## 4. Postopka podružnice in hčerinske družbe se razlikujeta; le hčerinska družba gre skozi pregled Oddelka za pregled naložb Ministrstva za gospodarstvo
 
@@ -73,13 +73,13 @@ Kadar tuja družba ustanavlja tajvansko hčerinsko družbo, se ime praviloma pre
 
 Po drugi strani pri ustanavljanju tajvanske podružnice navadne tuje družbe naložbeno dovoljenje Oddelka za pregled naložb praviloma ni potrebno; Uprava za razvoj trgovine Ministrstva za gospodarstvo (經濟部商業發展署) opravi vpis podružnice in s tem povezano določitev kapitala. Še vedno so potrebni predhodni pregled imena, nakazilo operativnih sredstev, overitev kapitala in davčna registracija; terminski načrt je običajno krajši.
 
-Zgornje je napotek za zasnovo pogodb. Sama izbira določene pravne oblike posla ga ne naredi zakonitega in ne prepreči sporov.
+Zgoraj navedeno je napotek za zasnovo pogodb. Sama izbira določene pravne oblike posla ga ne naredi zakonitega in ne prepreči sporov.
 
 ## 5. Vpis družbe in zakonito delo inženirja nista isto
 
 Končan vpis družbe na Tajvanu ne pomeni, da lahko zaposleni sedeža v tujini na Tajvanu samodejno delajo. Tujec, ki na Tajvanu dela, potrebuje zakonito delovno dovoljenje (工作許可) in za daljše prebivanje tudi dovoljenje za prebivanje tujcev (外僑居留證). Praviloma delodajalec zaprosi za delovno dovoljenje in ustrezno dovoljenje za prebivanje tujcev.
 
-Za vodjo tajvanske hčerinske družbe in podružnice tuje družbe je vloga za delovno dovoljenje razmeroma lažja. Če pa naj se zaprosi za delovno dovoljenje za nadaljnjega tujca, Ministrstvo za delo (勞動部) glede na panogo zahteva pragove kapitala, prometa in podobno. Če načrtujete, da bodo tuji zaposleni delali na Tajvanu, je treba pred ustanovitvijo tajvanske družbe vnaprej potrditi, ali nastavitev kapitala izpolnjuje ustrezni prag.
+Za vodjo tajvanske hčerinske družbe in podružnice tuje družbe je vloga za delovno dovoljenje razmeroma lažja. Če pa naj se zaprosi za delovno dovoljenje za dodatnega tujega delavca, Ministrstvo za delo (勞動部) glede na panogo zahteva pragove kapitala, prometa in podobno. Če načrtujete, da bodo tuji zaposleni delali na Tajvanu, je treba pred ustanovitvijo tajvanske družbe vnaprej potrditi, ali višina kapitala dosega ustrezni prag.
 
 ## 7. Strukture, ki jih je mogoče primerjati glede na stopnjo razvoja podjetja
 
@@ -101,7 +101,7 @@ Pri prvem stiku ni treba priložiti vse zaupne dokumentacije stranke ali podrobn
 
 ### Če so stranke na Tajvanu, ali je tam vedno treba ustanoviti družbo?
 
-Zgolj zato, ker je stranka na Tajvanu, ni mogoče enotno sklepati. Treba je videti zahteve tajvanske stranke in dejansko dejavnost, objekte, osebje in strukturo poslov na Tajvanu, nato pa izbrati najustreznejši subjekt.
+Zgolj zato, ker je stranka na Tajvanu, ni mogoče sklepati na splošno. Treba je preveriti zahteve tajvanske stranke in dejansko dejavnost, objekte, osebje in strukturo poslov na Tajvanu, nato pa izbrati najustreznejši subjekt.
 
 ### Ali odgovornost matične družbe popolnoma izgine, ko se ustanovi tajvanska družba?
 
@@ -113,6 +113,6 @@ Stopnjevit prehod je mogoče načrtovati, vendar je treba skupaj presoditi prene
 
 ## Posvet o strukturi vstopa na Tajvan
 
-Če načrtujete na Tajvanu prodajo, upravljanje zalog, podporo pri vgradnji ali krajevno zaposlovanje, najprej uredite delo, ki ga bo opravil sedež, in delo, ki naj pripade tajvanski organizaciji. Po potrditvi tem posveta in navzkrižja interesov pisarna pojasni potrebno dokumentacijo in obseg storitev, ki jih je mogoče nuditi.
+Če načrtujete na Tajvanu prodajo, upravljanje zalog, podporo pri vgradnji ali lokalno zaposlovanje, najprej uredite delo, ki ga bo opravil sedež, in delo, ki naj pripade tajvanski organizaciji. Po potrditvi tem posveta in navzkrižja interesov pisarna pojasni potrebno dokumentacijo in obseg storitev, ki jih je mogoče nuditi.
 
 Zgled zadeve: Posvet o strukturi vstopa podjetja polprevodnikov na Tajvan. Pri prvem stiku navedite ime družbe, državo sedeža, predvideni izdelek ali storitev, načrt delovanja na Tajvanu in želeni jezik posveta (le angleščina, kitajščina (中文), japonščina ali korejščina). Zaupno projektno dokumentacijo in popolne pogodbe pošljite šele po prejemu nadaljnjega napotka. Jezike, v katerih je posvet dejansko mogoč, in obseg morebitnega mandata je treba potrditi ob stiku.

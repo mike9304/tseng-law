@@ -28,7 +28,7 @@ Acest text explică indemnizația de concediere (資遣費) din Taiwan.
 
 Mulți dintre dumneavoastră știți deja acest lucru.
 
-Prin comparație cu unele state — Coreea fiind un exemplu —, acolo societatea trebuie de regulă să plătească o indemnizație atunci când salariatul pleacă din întreprindere.
+În unele state, precum Coreea, societatea trebuie de regulă să plătească o indemnizație atunci când salariatul pleacă din întreprindere.
 
 În Taiwan însă lucrurile stau altfel:
 
@@ -48,7 +48,7 @@ societatea poate concedia fără a plăti indemnizație de concediere.
 
 ​
 
-Vă rezum aceasta într-un tablou simplu.
+Vă rezum aceasta într-un tabel simplu.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ Vă rezum aceasta într-un tablou simplu.
 | Preaviz | Cerut | Nu este cerut | Cerut |
 | Dificultate pentru angajator | Redusă | Ridicată | Redusă |
 | Dacă societatea trebuie să plătească indemnizația de concediere (資遣費) | Se datorează | Nu se datorează | Nu se datorează |
-|  | Legea taiwaneză a standardelor muncii, art. 11 (勞動基準法第11條): În afară de cazul în care se produce unul dintre cazurile următoare, angajatorul nu poate pune capăt contractului de muncă, chiar după înștiințarea prealabilă a persoanei angajate.  1. Încetarea activității (歇業) sau cesiunea de întreprindere (轉讓)  2. Pierderi (虧損) sau contracția activității (業務緊縮)  3. Un caz de forță majoră cere o întrerupere a activității de 1 lună sau mai mult  4. Natura activității cere o reducere de personal, iar persoana concediată nu poate fi mutată la un alt post potrivit  5. O persoană angajată determinată nu poate îndeplini în mod satisfăcător munca cerută de post | Legea taiwaneză a standardelor muncii, art. 12 (勞動基準法第12條): Angajatorul poate concedia fără înștiințare prealabilă dacă persoana angajată cade în unul dintre cazurile următoare.  1. Care, la încheierea contractului de muncă, face declarații inexacte, induce în eroare angajatorul și face să existe un risc de prejudiciu pentru întreprindere  2. Care exercită violențe sau insultă grav angajatorul, familia sa, reprezentantul său (代理人) sau alți colegi  3. Care a fost condamnat definitiv la o pedeapsă cu închisoarea pe durată determinată (有期徒刑) sau la o pedeapsă mai grea, fără ca suspendarea executării pedepsei (緩刑) să fi fost dispusă și fără ca convertirea în amendă (易科罰金) să fi fost autorizată  4. Încălcare gravă a contractului de muncă sau a regulilor de muncă  5. Care consumă intenționat mașini, unelte, materii prime, produse sau alte bunuri ale angajatorului, sau dezvăluie intenționat secrete tehnice și comerciale ale angajatorului, și cauzează un prejudiciu angajatorului  6. Absență nejustificată (曠工) fără motiv legitim timp de 3 zile consecutive, sau timp de 6 zile sau mai mult într-o lună |  |
+|  | Legea taiwaneză a standardelor muncii, art. 11 (勞動基準法第11條): În afară de cazul în care se produce unul dintre cazurile următoare, angajatorul nu poate pune capăt contractului de muncă, chiar după înștiințarea prealabilă a persoanei angajate.  1. Încetarea activității (歇業) sau cesiunea de întreprindere (轉讓)  2. Pierderi (虧損) sau contracția activității (業務緊縮)  3. Un caz de forță majoră cere o întrerupere a activității de 1 lună sau mai mult  4. Natura activității cere o reducere de personal, iar persoana concediată nu poate fi mutată la un alt post potrivit  5. O persoană angajată determinată nu poate îndeplini în mod satisfăcător munca cerută de post | Legea taiwaneză a standardelor muncii, art. 12 (勞動基準法第12條): Angajatorul poate concedia fără înștiințare prealabilă dacă persoana angajată cade în unul dintre cazurile următoare.  1. Face declarații inexacte la încheierea contractului de muncă, induce în eroare angajatorul și creează un risc de prejudiciu pentru întreprindere  2. Exercită violențe sau insultă grav angajatorul, familia sa, reprezentantul său (代理人) sau alți colegi  3. A fost condamnat definitiv la o pedeapsă cu închisoarea pe durată determinată (有期徒刑) sau la o pedeapsă mai grea, fără ca suspendarea executării pedepsei (緩刑) să fi fost dispusă și fără ca convertirea în amendă (易科罰金) să fi fost autorizată  4. Încălcare gravă a contractului de muncă sau a regulilor de muncă  5. Deteriorează sau consumă intenționat utilaje, unelte, materii prime, produse sau alte bunuri ale angajatorului, sau dezvăluie intenționat secrete tehnice și comerciale ale angajatorului, și cauzează un prejudiciu angajatorului  6. Absență nejustificată (曠工) fără motiv legitim timp de 3 zile consecutive, sau timp de 6 zile sau mai mult într-o lună |  |
 
 > În Taiwan, pentru fiecare 1 an de vechime (年資) împlinit,
 > angajatorul trebuie să plătească 0,5 luni de salariu mediu (平均工資) ca indemnizație de concediere.
@@ -106,7 +106,7 @@ societatea l-a luat pe domnul B ca țintă.
 
 Într-o zi, un cadru de conducere l-a chemat pe B la un interviu
 
-și a început deodată să-l blameze, spunând că B nu lucra cu conștiință.
+și a început deodată să-i reproșeze că B nu își face treaba conștiincios.
 
 Societatea ar fi în dificultate,
 
@@ -134,7 +134,7 @@ adusese mulți bani societății
 
 și lucra în fiecare zi cu conștiință,
 
-de aceea a respins puternic această cerință nerațională.
+de aceea a respins ferm această cerință nerezonabilă.
 
 B a refuzat să scrie aceasta,
 
@@ -154,21 +154,21 @@ a scăzut salariile multor salariați de conducere
 
 iar o parte a salariaților nu a suportat acest tratament
 
-și a demisionat ea însăși
+și a demisionat din proprie inițiativă.
 
 ​
 
-B recunoscuse totuși, după schimbarea conducerii,
+B își dăduse totuși seama, după schimbarea conducerii,
 
-că societatea voia să facă să plece salariații în mod nepotrivit,
+că societatea voia să îi facă pe salariați să plece în mod nepotrivit,
 
-și observase aceasta de timpuriu
+și observase acest lucru de timpuriu
 
 și descoperise că societatea publica anunțuri de angajare încă înainte ca salariații să plece.
 
 În ziua în care s-a prezentat la interviu, B a înregistrat desfășurarea.
 
-A folosit telefonul mobil pentru toată desfășurarea.
+A folosit telefonul mobil pentru a înregistra toată discuția
 
 și a putut dovedi că nu demisionase el însuși.
 
@@ -212,7 +212,7 @@ Dacă lucrați în Taiwan,
 
 indemnizația de concediere este mai greu de obținut decât se crede.
 
-Nu încheiați ușor o tranzacție cu societatea.
+Nu încheiați ușor o tranzacție cu societatea
 
 și vegheați ca societatea să nu vă concedieze în mod nepotrivit
 

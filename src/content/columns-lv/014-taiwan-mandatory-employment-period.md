@@ -15,14 +15,14 @@ faq:
   - q: "Priekšlaicīgi aizejot, vai jāatdod visa parakstīšanas prēmija (簽約金) vai palikšanas prēmija (留任獎金)?"
     a: "Ne vienmēr atdod visu summu. Ja parakstīšanas prēmija, palikšanas prēmija vai cits avansā izmaksāts labums (預付性給付) tika izmaksāts kā saprātīga kompensācija nolīgumam par minimālo nostrādājamo laiku, tā mērķis darbiniekam skaidri jāpaziņo. Taivānas Darba ministrijas 2026. gada 5. jūnijā dotais norādījums skaidro, ka, aizejot pirms termiņa beigām, atdodamā summa jāaprēķina proporcionāli vēl neizpildītajam laikam un ka nedrīkst prasīt visas summas atdošanu. Faktiskais slēdziens kopīgi jāizvērtē pēc izmaksas mērķa, nolīguma satura, jau nostrādātā laika un izbeigšanas iemesla."
   - q: "Ja līgums beidzas priekšlaicīgi iemesla dēļ, ko nevar pieskaitīt darbiniekam, vai jāatdod apmācības izmaksas?"
-    a: "Taivānas Darba standartu likuma 15-1. panta 4. daļa nosaka, ka tad, ja darba līgums beidzas pirms minimālā nostrādājamā laika beigām iemesla dēļ, ko nevar pieskaitīt darbiniekam, darbinieks nenes atbildību par nolīguma par minimālo nostrādājamo laiku pārkāpumu un arī par apmācības izmaksu atdošanu. Tomēr izbeigšanas iemesls un atbildības pieskaitīšana jāvērtē pēc konkrētiem pierādījumiem, piemēram, atlaišanas paziņojuma, aiziešanas izteikuma un materiāliem par darba apstākļu pārkāpumu."
+    a: "Taivānas Darba standartu likuma 15-1. panta 4. daļa nosaka, ka tad, ja darba līgums beidzas pirms minimālā nostrādājamā laika beigām iemesla dēļ, ko nevar pieskaitīt darbiniekam, darbinieks nenes atbildību ne par nolīguma par minimālo nostrādājamo laiku pārkāpumu, ne par apmācības izmaksu atdošanu. Tomēr izbeigšanas iemesls un atbildības pieskaitīšana jāvērtē pēc konkrētiem pierādījumiem, piemēram, atlaišanas paziņojuma, aiziešanas izteikuma un materiāliem par darba apstākļu pārkāpumu."
 ---
 
 # Nolīgums par minimālo nostrādājamo laiku Taivānā: spēkā esamība, apmācības izmaksas un līgumsods
 
 ![Attēls, kas skaidro minimālo nostrādājamo laiku darba līgumā un izmaksu atdošanas jautājumu](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Nolīgums par minimālo nostrādājamo laiku (最低服務年限約定) darba līgumā (勞動契約) Taivānā izsaka darbinieka solījumu palikt darbā noteiktu laiku, to, vai, aizejot pirms termiņa, jāatdod apmācības izmaksas, parakstīšanas prēmija (簽約金) vai palikšanas prēmija (留任獎金), un to, vai var atsevišķi prasīt līgumsodu (違約金). Tomēr pats apstāklis, ka ir parakstīts teksts, nenosaka nolīguma spēkā esamību un arī atdodamo summu. Likumā noteiktie priekšnoteikumi un faktiskā izmaksu, apmācības un izbeigšanas gaita jāpārbauda soli pa solim neatkarīgi no tā, kā līgums šo kārtību nosauc.
+Nolīgums par minimālo nostrādājamo laiku (最低服務年限約定) darba līgumā (勞動契約) Taivānā izsaka darbinieka solījumu palikt darbā noteiktu laiku, to, vai, aizejot pirms termiņa, jāatdod apmācības izmaksas, parakstīšanas prēmija (簽約金) vai palikšanas prēmija (留任獎金), un to, vai var atsevišķi prasīt līgumsodu (違約金). Tomēr pats apstāklis, ka ir parakstīts teksts, nenosaka ne nolīguma spēkā esamību, ne atdodamo summu. Likumā noteiktie priekšnoteikumi un faktiskā izmaksu, apmācības un izbeigšanas gaita jāpārbauda soli pa solim neatkarīgi no tā, kā līgums šo kārtību nosauc.
 
 Pārskatot ir svarīgi nesajaukt šādus četrus jautājumus.
 
@@ -31,7 +31,7 @@ Pārskatot ir svarīgi nesajaukt šādus četrus jautājumus.
 3. Kam pieskaitāms darba līguma izbeigšanas iemesls
 4. Kā vērtē aiziešanas paziņojumu un atdošanas apjomu
 
-Pat ja šie četri jautājumi kopā figūrē tajā pašā līgumā, piemērojamā norma un vajadzīgais pierādījums atšķiras. Tāpēc atsevišķi jāizvērtē, vai nolīgums ir spēkā, kad stājas spēkā aiziešanas izteikums, vai pastāv atbildība atdot avansā izmaksāto labumu (預付性給付) vai apmācības izmaksas un vai faktiski radušies atsevišķi apgalvotie zaudējumi.
+Pat ja visi četri jautājumi ir ietverti vienā un tajā pašā līgumā, piemērojamā norma un vajadzīgais pierādījums atšķiras. Tāpēc atsevišķi jāizvērtē, vai nolīgums ir spēkā, kad stājas spēkā aiziešanas izteikums, vai pastāv atbildība atdot avansā izmaksāto labumu (預付性給付) vai apmācības izmaksas un vai faktiski radušies atsevišķi apgalvotie zaudējumi.
 
 ## 1. Vai nolīgums par minimālo nostrādājamo laiku var būt spēkā?
 
@@ -39,7 +39,7 @@ Nolīgums nav automātiski spēkā neesošs. Saskaņā ar Taivānas Darba standa
 
 Darba standartu likuma 15-1. panta 1. daļa alternatīvi regulē divus likumā noteiktus priekšnoteikumus. Pirmais ir tas, ka darba devējs darbiniekam sniedza profesionālo prasmju apmācību un sedza tās izmaksas; otrais — ka sniedza saprātīgu kompensāciju pretī minimālā nostrādājamā laika ievērošanai. Jāpārbauda nevis, kāds nosaukums līgumā dots, bet kāds pamats faktiski pastāv.
 
-15-1. pants prasa vienu no diviem likumā noteiktajiem priekšnoteikumiem un turklāt atsevišķu saprātīguma pārskatīšanu. Tas nenozīmē, ka vienmēr jāsniedz vienlaikus profesionālo prasmju apmācība un saprātīga kompensācija, un arī to, ka viss nolīgums automātiski ir spēkā tikai tāpēc, ka viens no tiem formāli ierakstīts.
+15-1. pants prasa vienu no diviem likumā noteiktajiem priekšnoteikumiem un turklāt atsevišķu saprātīguma pārskatīšanu. Tas nenozīmē ne to, ka vienmēr jāsniedz vienlaikus profesionālo prasmju apmācība un saprātīga kompensācija, ne to, ka viss nolīgums automātiski ir spēkā tikai tāpēc, ka viens no tiem formāli ierakstīts.
 
 Pēc likumā noteiktā priekšnoteikuma apstiprināšanas saskaņā ar 2. daļu atsevišķi vērtē, vai nolīgtais laiks un atbildības apjoms ir saprātīgi. Nolīgums, kas pārkāpj 1. daļas likumā noteikto priekšnoteikumu vai 2. daļas saprātīguma kritēriju, saskaņā ar 3. daļu ir spēkā neesošs. Tomēr šī norma ir kritērijs katra nolīguma satura un lietas apstākļu vērtēšanai, nevis norma, kas no paša sākuma visus nolīgumus par minimālo nostrādājamo laiku pasludina par spēkā esošiem vai spēkā neesošiem.
 
@@ -53,7 +53,7 @@ Pārskatīšanas priekšmets ir ne tikai tieši pārbaudāmās izmaksas, piemēr
 
 Programma, apmācības grafiks, apmeklējuma saraksts, vērtējuma iznākums, pabeigšanas apliecība, rēķini un kvītis ir pamata materiāli, ar kuriem apstiprina, ka apmācība notikusi, un apstiprina izmaksas. Līgums starp darba devēju un mācību iestādi, maksājuma dokumenti un mācību maksas atmaksas nosacījumi ļauj precīzāk fiksēt faktisko slogu. Ja darbinieks daļu izmaksu samaksāja pats vai tās sedza trešā persona, jānošķir arī, kurš sedza galīgās izmaksas.
 
-Robeža starp vispārīgu pielāgošanos darbam un profesionālo prasmju apmācību nedalās tikai pēc apmācības vietas vai pēc tā, kurš to rīko. Iekšējs kurss var pierādīt konkrētu profesionālo un tehnisko saturu un ievērojamu ieguldījumu, un ārējas iestādes garš kurss faktiski var būt vispārīga ievada apmācība. Tāpēc nedrīkst vienoti izslēgt visu iekšējo apmācību un arī atzīt likumā noteikto priekšnoteikumu tikai tāpēc, ka kurss ir dārgs vai garš.
+Robeža starp vispārīgu pielāgošanos darbam un profesionālo prasmju apmācību nedalās tikai pēc apmācības vietas vai pēc tā, kurš to rīko. Iekšējs kurss var pierādīt konkrētu profesionālo un tehnisko saturu un ievērojamu ieguldījumu, un ārējas iestādes garš kurss faktiski var būt vispārīga ievada apmācība. Tāpēc nedrīkst ne visos gadījumos izslēgt iekšējo apmācību, ne arī atzīt likumā noteikto priekšnoteikumu tikai tāpēc, ka kurss ir dārgs vai garš.
 
 Jāspēj arī izskaidrot saikni starp nolīgto laiku un ieguldījumu apmācībā. Kāda spēja tiek iegūta, kāda saikne šai spējai ir ar amatu, kurā tā jāizmanto, un kāpēc ierosinātais nostrādājamais laiks ir vajadzīgs, ņemot vērā apmācības laiku un izmaksas, vērtē atsevišķi. Vai pēc apmācības beigām šis darbs faktiski tika veikts un cik ilgi darbinieks jau bija nostrādājis, arī ietekmē sloga apjoma vērtējumu.
 
@@ -61,7 +61,7 @@ Jāspēj arī izskaidrot saikni starp nolīgto laiku un ieguldījumu apmācībā
 
 Otrais likumā noteiktais priekšnoteikums ir tas, ka darba devējs sniedz saprātīgu kompensāciju pretī darbinieka solījumam ievērot minimālo nostrādājamo laiku. Šeit kompensācijai jābūt mērķim un struktūrai, kas atšķiras no parastās algas vai pretizpildījuma par darbu, kas jau jāsniedz. Tiesiskais raksturs netiek noteikts tikai tāpēc, ka algas lapā tas apzīmēts kā parakstīšanas prēmija, palikšanas prēmija vai avansā izmaksāts labums.
 
-Vispirms jāpārbauda izmaksas mērķis. Vai tas ir vispārīgs algas nosacījums pieņemšanai darbā, pretizpildījums par solījumu palikt noteiktu laiku, vai atlīdzība par rezultāta sasniegšanu, jābūt skaidram no līguma un paziņojuma materiāliem. Vērtē arī, vai izmaksas diena, summa, brīdis, kad labums kļūst neatņemams, saikne ar palikšanas laiku, atdošanas iemesli un formula tika iesniegti tā, lai darbinieks tos varētu saprast pirms līguma.
+Vispirms jāpārbauda izmaksas mērķis. No līguma un paziņojuma materiāliem jābūt skaidram, vai tas ir vispārīgs algas nosacījums pieņemšanai darbā, pretizpildījums par solījumu palikt noteiktu laiku vai atlīdzība par rezultāta sasniegšanu. Vērtē arī, vai izmaksas diena, summa, brīdis, kad labums kļūst neatņemams, saikne ar palikšanas laiku, atdošanas iemesli un formula tika iesniegti tā, lai darbinieks tos varētu saprast pirms līguma.
 
 Taivānas Darba ministrijas (勞動部) 2026. gada 5. jūnijā dotā interpretācija (函釋) skaidro, ka tad, ja kā saprātīgu kompensāciju nolīgumam par minimālo nostrādājamo laiku ņem palikšanas prēmiju, parakstīšanas prēmiju vai citu avansā izmaksātu labumu, šī loma skaidri jāpaziņo. Tas, ka darba devējs pēc tam no jauna iztulko izmaksas mērķi vai no jauna daļu algas klasificē kā kompensāciju, nevar viegli aizstāt paziņojumu, kas dots, slēdzot līgumu.
 
@@ -86,7 +86,7 @@ Trešais elements aptver ne tikai kompensācijas summu, bet arī apjomu. Svarīg
 
 Ceturtais elements var ietvert dažādus apstākļus, kas ietekmē saprātīgumu, piemēram, nolīguma noslēgšanas gaitu, darba raksturu, to, kas pusēm tika izskaidrots, faktiski nostrādāto laiku un izbeigšanas iemeslu. Katram elementam nozīme var atšķirties pēc lietas, un ņemamie apstākļi neaprobežojas ar iepriekšējiem piemēriem. Tāpēc jāizvērtē, neizlaižot attiecīgos faktus, kas parādās lietas materiālos.
 
-Galīgi starp nolīgto laiku, darba devēja faktisko ieguldījumu, aizstāšanas grūtību, darbinieka saņemto kompensāciju un atdošanas slogu jābūt saprātīgai samērībai. Nedrīkst iepriekš noteikt spēkā esamību tikai tāpēc, ka tas ir noteikts amats, un arī bez grozījumiem piemērot slēdzienu no citas lietas. Kopīgi jāvērtē struktūra līguma noslēgšanas brīdī un faktiskā izpildes pakāpe izbeigšanas brīdī.
+Galu galā starp nolīgto laiku, darba devēja faktisko ieguldījumu, aizstāšanas grūtību, darbinieka saņemto kompensāciju un atdošanas slogu jābūt saprātīgai samērībai. Nedrīkst ne iepriekš noteikt spēkā esamību tikai tāpēc, ka tas ir noteikts amats, ne arī bez grozījumiem piemērot slēdzienu no citas lietas. Kopīgi jāvērtē struktūra līguma noslēgšanas brīdī un faktiskā izpildes pakāpe izbeigšanas brīdī.
 
 ## 5. Apmācība, kas nevar būt nolīguma pamats
 
@@ -94,9 +94,9 @@ Saskaņā ar Taivānas Darba ministrijas 2026. gada 5. jūnijā doto norādījum
 
 Darba ministrijas norādījums 勞動關2字第1150141814號 nošķir un regulē apmācību, ko veic regulāri, parasto apmācību amatam, apmācību, lai jaunais darbinieks iepazītos ar darba vidi un gaitām, un apmācību, kas darba devējam jāveic saskaņā ar likumu. Tā kā šī apmācība pavada darbības veikšanu vai likumiskā pienākuma izpildi, jēga ir tāda, ka tās izmaksas nedrīkst pārvērst par pamatu palikšanas pienākumam vai sankcijai par priekšlaicīgu izbeigšanu.
 
-Kursi, ko jaunais darbinieks parasti saņem, piemēram, darba noteikumu (工作規則) skaidrojums, organizācijas un sistēmu iepazīstināšana, parastā amata nodošana un pamata drošības gaitas norādījums, jāapstiprina pēc to satura. Vispārīgās pieņemšanas darbā un pārvaldības izmaksas vai amata nodošanas izmaksas, kas darba devējam sākotnēji bija jāsedz, nedrīkst iekļaut atdodamajā summā, tikai nosaucot tās par atsevišķu ieguldījumu.
+Kursi, ko jaunais darbinieks parasti saņem, piemēram, darba noteikumu (工作規則) skaidrojums, organizācijas un sistēmu iepazīstināšana, parastā amata nodošana un pamata darba drošības instruktāža, jāapstiprina pēc to satura. Vispārīgās pieņemšanas darbā un pārvaldības izmaksas vai amata nodošanas izmaksas, kas darba devējam sākotnēji bija jāsedz, nedrīkst iekļaut atdodamajā summā, tikai nosaucot tās par atsevišķu ieguldījumu.
 
-Tomēr apmācība netiek vienmēr izslēgta tikai tāpēc, ka tā notika uzņēmuma iekšienē. Vienā programmā var jaukties vispārīgās pielāgošanās daļa un profesionāli tehniskā daļa, tāpēc tēma, laiks, izmaksas un tas, vai pastāv likumisks pienākums, jāpārbauda pēc kursa. Kas apgalvo profesionāli tehnisko daļu, ar materiāliem jāizskaidro, kāds saturs atšķiras no parastās apmācības un kurš faktiski sedza izmaksas.
+Tomēr apmācība netiek vienmēr izslēgta tikai tāpēc, ka tā notika uzņēmuma iekšienē. Vienā programmā var jaukties vispārīgās pielāgošanās daļa un profesionāli tehniskā daļa, tāpēc tēma, laiks, izmaksas un tas, vai pastāv likumisks pienākums, jāpārbauda pēc kursa. Tam, kurš atsaucas uz profesionāli tehnisko daļu, ar materiāliem jāizskaidro, kāds saturs atšķiras no parastās apmācības un kurš faktiski sedza izmaksas.
 
 Praksē neskata tikai apmācības materiālu vāku, bet salīdzina detalizētu saturu un faktisko veikšanas ierakstu. Jāpārbauda, vai tas ir atkārtots regulārs kurss, kurss noteiktai kvalifikācijai vai iekārtas apkalpošanai, likumā noteikta obligātā apmācība, vai darbinieks faktiski piedalījās un vai prasītā summa saskan ar apmācības izmaksu apliecinājumiem.
 
@@ -116,15 +116,15 @@ Jānošķir arī apmācības izmaksu atdošana un avansā izmaksātā labuma atd
 
 ## 7. Kad līgums beidzas iemesla dēļ, ko nevar pieskaitīt darbiniekam
 
-Taivānas Darba standartu likuma 15-1. panta 4. daļa nosaka, ka tad, ja darba līgums beidzas pirms minimālā nostrādājamā laika beigām iemesla dēļ, ko nevar pieskaitīt darbiniekam, darbinieks nenes atbildību par nolīguma par minimālo nostrādājamo laiku pārkāpumu un arī par apmācības izmaksu atdošanu. Tomēr izbeigšanas iemesls un atbildības pieskaitīšana jāvērtē pēc konkrētiem pierādījumiem, piemēram, atlaišanas paziņojuma, aiziešanas izteikuma un materiāliem par darba apstākļu pārkāpumu.
+Taivānas Darba standartu likuma 15-1. panta 4. daļa nosaka, ka tad, ja darba līgums beidzas pirms minimālā nostrādājamā laika beigām iemesla dēļ, ko nevar pieskaitīt darbiniekam, darbinieks nenes atbildību ne par nolīguma par minimālo nostrādājamo laiku pārkāpumu, ne par apmācības izmaksu atdošanu. Tomēr izbeigšanas iemesls un atbildības pieskaitīšana jāvērtē pēc konkrētiem pierādījumiem, piemēram, atlaišanas paziņojuma, aiziešanas izteikuma un materiāliem par darba apstākļu pārkāpumu.
 
 Tāpēc nedrīkst atzīt darbinieka pārkāpumu tikai tāpēc, ka darba attiecības beidzās pirms nolīgtā laika. Jāpārbauda, kurš izteica kādu gribas izteikumu, kāds ir līguma izbeigšanas tiesiskais pamats un kurai pusei pieskaitāmi faktiskie apstākļi, kas to izraisīja.
 
-Pārskatīšanas materiāli var ietvert atlaišanas paziņojumu, aiziešanas vēstuli, dokumentu par izbeigšanu ar vienošanos, e-pastu un ziņojumapmaiņas ierakstu, materiālus par darba apstākļu maiņu un apmeklējuma un darba uzskaiti. Pat ja min veselību vai darba apstākļus, slēdzienu nenosaka tikai šis izteikums; kopā jāvērtē faktiskā gaita, likumiskais izbeigšanas pamats un saistītie pierādījumi.
+Pārskatīšanas materiāli var ietvert atlaišanas paziņojumu, aiziešanas vēstuli, dokumentu par izbeigšanu ar vienošanos, e-pastu un ziņojumapmaiņas ierakstu, materiālus par darba apstākļu maiņu un apmeklējuma un darba uzskaiti. Pat ja tiek minēta veselība vai darba apstākļi, slēdzienu nenosaka tikai šis izteikums; kopā jāvērtē faktiskā gaita, likumiskais izbeigšanas pamats un saistītie pierādījumi.
 
 Atlaišana, izbeigšana ar vienošanos un apgalvojums par darba apstākļu pārkāpumu ir tikai vērtējamo apstākļu piemēri, nevis slēgts uzskaitījums iemesliem, ko nevar pieskaitīt darbiniekam. Tā paša nosaukuma izbeigšanās var atšķirties pušu gribā un gaitā, un dokumentā ierakstītais nosaukums var nesaskanēt ar faktiskajiem apstākļiem.
 
-Izbeigšanas iemesla vērtējums tieši ietekmē arī atdošanas apjomu. Ja piemēro 4. daļu, no darbinieka nevar prasīt atbildību par nolīguma par minimālo nostrādājamo laiku pārkāpumu un arī apmācības izmaksu atdošanu, tāpēc pieskaitīšana jāpārbauda pirms formulas lietošanas. Ja pastāv arī avansā izmaksāts labums un citi atsevišķi apgalvoti prasījumi, vērtē katra prasījuma tiesisko raksturu un pamatu.
+Izbeigšanas iemesla vērtējums tieši ietekmē arī atdošanas apjomu. Ja piemēro 4. daļu, no darbinieka nevar prasīt atbildību ne par nolīguma par minimālo nostrādājamo laiku pārkāpumu, ne par apmācības izmaksu atdošanu, tāpēc pieskaitīšana jāpārbauda pirms formulas lietošanas. Ja pastāv arī avansā izmaksāts labums un citi atsevišķi apgalvoti prasījumi, vērtē katra prasījuma tiesisko raksturu un pamatu.
 
 ## 8. Aiziešanas paziņojuma termiņš ir atšķirīgs jautājums
 
@@ -132,17 +132,17 @@ Nolīgums par minimālo nostrādājamo laiku nav institūts, kas fiziski vai tie
 
 Kad darbinieks izbeidz darba līgumu uz nenoteiktu laiku (不定期契約), saskaņā ar Taivānas Darba standartu likuma 15. pantu atbilstoši piemēro 16. panta 1. daļas paziņojuma termiņu. 16. pants ir norma par līguma izbeigšanu no darba devēja puses, un uz darbinieka aiziešanu šis paziņojuma termiņš attiecas saskaņā ar 15. pantu.
 
-Brīdinājuma termiņš pēc nepārtrauktā darba laika ir šāds.
+Paziņojuma termiņš atkarībā no nepārtrauktā darba stāža ir šāds.
 
 1. Ja ir 3 mēneši vai vairāk un mazāk nekā 1 gads: 10 dienas
 2. Ja ir 1 gads vai vairāk un mazāk nekā 3 gadi: 20 dienas
 3. Ja ir 3 gadi vai vairāk: 30 dienas
 
-Ja noteikta uzdevuma termiņlīguma (特定性定期契約) termiņš pārsniedz 3 gadus, piemēro atsevišķu 15. panta normu. Darbinieks pēc 3 gadu darba var līgumu izbeigt ar 30 dienu paziņojumu darba devējam. Šī norma jānošķir no paziņojuma pēc nepārtrauktā darba laika, kas piemērojams līgumam uz nenoteiktu laiku.
+Ja noteikta uzdevuma termiņlīguma (特定性定期契約) termiņš pārsniedz 3 gadus, piemēro atsevišķu 15. panta normu. Darbinieks pēc 3 gadu darba var līgumu izbeigt ar 30 dienu paziņojumu darba devējam. Šī norma jānošķir no paziņojuma termiņa, kas atkarībā no nepārtrauktā darba stāža piemērojams līgumam uz nenoteiktu laiku.
 
-Ja nepārtrauktais darba laiks ir īsāks par 3 mēnešiem, ja tas ir cita veida termiņlīgums vai apgalvo likumisku tūlītējas izbeigšanas iemeslu, piemērojamā norma un fakti jāizvērtē atsevišķi. Pats apstāklis, ka līgums ieraksta garāku paziņojuma termiņu vai prasa tūlītēju amata nodošanu, neļauj iepriekš noteikt tiesisko slēdzienu.
+Ja nepārtrauktais darba stāžs ir īsāks par 3 mēnešiem, ja tas ir cita veida termiņlīgums vai apgalvo likumisku tūlītējas izbeigšanas iemeslu, piemērojamā norma un fakti jāizvērtē atsevišķi. Pats apstāklis, ka līgums ieraksta garāku paziņojuma termiņu vai prasa tūlītēju amata nodošanu, neļauj iepriekš noteikt tiesisko slēdzienu.
 
-Praksē jāsaglabā aiziešanas izteikuma saturs un nodošanas diena, diena, kad darba devējs to faktiski saņēma, un pušu saziņa par pēdējo darba dienu. Ja četros jautājumos nošķir brīdi, kad aiziešana spēkā stājas, nolīguma par minimālo nostrādājamo laiku spēkā esamību, apmācības izmaksu vai avansā izmaksātā labuma atdošanu un atsevišķi apgalvotos zaudējumus, samazinās kļūda visus slēdzienus atvasināt no vienas līguma klauzulas.
+Praksē jāsaglabā aiziešanas izteikuma saturs un nodošanas diena, diena, kad darba devējs to faktiski saņēma, un pušu saziņa par pēdējo darba dienu. Ja četros jautājumos nošķir brīdi, kad aiziešana spēkā stājas, nolīguma par minimālo nostrādājamo laiku spēkā esamību, apmācības izmaksu vai avansā izmaksātā labuma atdošanu un atsevišķi apgalvotos zaudējumus, mazinās risks visus slēdzienus atvasināt no vienas līguma klauzulas.
 
 ## 9. Pārbaudes saraksts darba devējam un darbiniekam
 
@@ -150,27 +150,27 @@ Lai novērstu strīdu vai izvērtētu jau izvirzītu prasījumu, nedrīkst lasī
 
 ### Punkti, kas darba devējam jāpārbauda
 
-1. Vispirms nosaka likumā noteikto priekšnoteikumu: vai tika sniegta profesionālo prasmju apmācība un segtas izmaksas, vai tika sniegta saprātīga kompensācija par palikšanas solījumu.
-2. Vispārīgo, regulāro un likumā noteikto obligāto apmācību nošķir no profesionālo prasmju apmācības pēc kursa faktiskā satura, laika un mērķa.
-3. Saglabā kursa programmu, grafiku, pabeigšanas ierakstu, rēķinus, kvītis un materiālus par to, kurš sedza izmaksas, un atsevišķi fiksē ārējo un iekšējo izmaksu pamatu.
-4. Rakstveidā skaidri sasaista kompensācijas mērķi, izmaksas dienu, summu, nosacījumus, ar kādiem labums kļūst neatņemams, darbiniekam doto paziņojumu un neizpildītā laika atdošanas formulu.
-5. Dokumentē nolīgtā laika aprēķina pamatu, iespēju aizstāt tā paša vai līdzīga amata personālu un saikni starp darba devēja darbības vajadzību un faktisko ieguldījumu.
-6. Vērtē, vai nolīgtais laiks un atdošanas summa ir proporcionāli apmācības izmaksu vai kompensācijas apjomam, un norēķinā atspoguļo jau nostrādāto laiku.
-7. Pēc izbeigšanas iemesla un atbildības pieskaitīšanas atsevišķas pārbaudes aprēķina faktisko izbeigšanas dienu, izpildīto laiku un neizpildīto laiku.
-8. Pirms ieturējuma no algas vai atdošanas pieprasījuma salīdzina līgumu, izmaksu materiālus, algas lapu, pušu saziņu, pieprasījumu un ieturējumu ierakstu, lai pārbaudītu tiesisko pamatu un gaitu.
+1. Vispirms noteikt likumā noteikto priekšnoteikumu: vai tika sniegta profesionālo prasmju apmācība un segtas izmaksas, vai tika sniegta saprātīga kompensācija par palikšanas solījumu.
+2. Vispārīgo, regulāro un likumā noteikto obligāto apmācību nošķirt no profesionālo prasmju apmācības pēc kursa faktiskā satura, laika un mērķa.
+3. Saglabāt kursa programmu, grafiku, pabeigšanas ierakstu, rēķinus, kvītis un materiālus par to, kurš sedza izmaksas, un atsevišķi fiksēt ārējo un iekšējo izmaksu pamatu.
+4. Rakstveidā skaidri sasaistīt kompensācijas mērķi, izmaksas dienu, summu, nosacījumus, ar kādiem labums kļūst neatņemams, darbiniekam doto paziņojumu un neizpildītā laika atdošanas formulu.
+5. Dokumentēt nolīgtā laika aprēķina pamatu, iespēju aizstāt tā paša vai līdzīga amata personālu un saikni starp darba devēja darbības vajadzību un faktisko ieguldījumu.
+6. Novērtēt, vai nolīgtais laiks un atdošanas summa ir proporcionāli apmācības izmaksu vai kompensācijas apjomam, un norēķinā atspoguļot jau nostrādāto laiku.
+7. Pēc izbeigšanas iemesla un atbildības pieskaitīšanas atsevišķas pārbaudes aprēķināt faktisko izbeigšanas dienu, izpildīto laiku un neizpildīto laiku.
+8. Pirms ieturējuma no algas vai atdošanas pieprasījuma salīdzināt līgumu, izmaksu materiālus, algas lapu, pušu saziņu, pieprasījumu un ieturējumu ierakstu, lai pārbaudītu tiesisko pamatu un gaitu.
 
 Pat lietojot parauglīgumu, nedrīkst mehāniski piemērot to pašu laiku un to pašu summu katram amatam un katram darbiniekam. Klauzulas jāveido, atspoguļojot faktisko ieguldījumu apmācībā, kompensāciju un aizstāšanas iespēju, un izmaksas mērķis un proporcionālā formula saprotami jāpaziņo pirms līguma noslēgšanas.
 
 ### Punkti, kas darbiniekam jāpārbauda
 
-1. Savāc parakstītā darba līguma un grozījumu vienošanos oriģinālu, pieņemšanas darbā skaidrojošos materiālus, apmācības materiālus, programmu, grafiku un pabeigšanas ierakstu.
-2. Pārbauda apmācības profesionālo un tehnisko saturu, vai tā ir vispārīga pielāgošanās apmācība vai likumā noteikta obligātā apmācība, rēķinu un kvīšu summas un kurš faktiski sedza izmaksas.
-3. Nodrošina parakstīšanas prēmijas, palikšanas prēmijas un citu avansā izmaksāto labumu izmaksu materiālus, paziņojumu par kompensācijas mērķi, izmaksas dienu, nosacījumus, ar kādiem labums kļūst neatņemams, un atdošanas formulu.
-4. Atsevišķi fiksē nolīgtā laika aprēķina pamatu, jau nostrādāto laiku, atlikušo laiku un aizstāšanas iespēju, ko darba devējs apgalvo.
-5. Saglabā aiziešanas paziņojumu, atlaišanas paziņojumu vai dokumentu par izbeigšanu ar vienošanos un piegādes pierādījumu, piemēram, e-pastu un ziņojumapmaiņas ierakstu.
-6. Hronoloģiskā kārtībā sakārto faktisko izbeigšanas iemeslu un gaitu un kopīgi pārbauda darba devēja atdošanas pieprasījumu, algas lapu, pušu saziņu un ieturējumu ierakstu.
-7. Atsevišķi izvērtē nolīguma par minimālo nostrādājamo laiku spēkā esamību, aiziešanas izteikumu un paziņojuma termiņu, apmācības izmaksu un avansā izmaksātā labuma atdošanu un atsevišķi apgalvotos zaudējumus.
-8. Atbildību neatzīst tikai tāpēc, ka tika parakstīts vai ka darba devējs prasa noteiktu summu; pārbauda pierādījumus, kas atbilst 15-1. panta likumā noteiktajiem priekšnoteikumiem, saprātīgumam, izbeigšanas pieskaitīšanai un proporcionālajai formulai.
+1. Savākt parakstītā darba līguma un grozījumu vienošanos oriģinālu, pieņemšanas darbā skaidrojošos materiālus, apmācības materiālus, programmu, grafiku un pabeigšanas ierakstu.
+2. Pārbaudīt apmācības profesionālo un tehnisko saturu, vai tā ir vispārīga pielāgošanās apmācība vai likumā noteikta obligātā apmācība, rēķinu un kvīšu summas un kurš faktiski sedza izmaksas.
+3. Nodrošināt parakstīšanas prēmijas, palikšanas prēmijas un citu avansā izmaksāto labumu izmaksu materiālus, paziņojumu par kompensācijas mērķi, izmaksas dienu, nosacījumus, ar kādiem labums kļūst neatņemams, un atdošanas formulu.
+4. Atsevišķi fiksēt nolīgtā laika aprēķina pamatu, jau nostrādāto laiku, atlikušo laiku un aizstāšanas iespēju, ko darba devējs apgalvo.
+5. Saglabāt aiziešanas paziņojumu, atlaišanas paziņojumu vai dokumentu par izbeigšanu ar vienošanos un piegādes pierādījumu, piemēram, e-pastu un ziņojumapmaiņas ierakstu.
+6. Hronoloģiskā kārtībā sakārtot faktisko izbeigšanas iemeslu un gaitu un kopīgi pārbaudīt darba devēja atdošanas pieprasījumu, algas lapu, pušu saziņu un ieturējumu ierakstu.
+7. Atsevišķi izvērtēt nolīguma par minimālo nostrādājamo laiku spēkā esamību, aiziešanas izteikumu un paziņojuma termiņu, apmācības izmaksu un avansā izmaksātā labuma atdošanu un atsevišķi apgalvotos zaudējumus.
+8. Neatzīt atbildību tikai tāpēc, ka tika parakstīts vai ka darba devējs prasa noteiktu summu; pārbaudīt pierādījumus, kas atbilst 15-1. panta likumā noteiktajiem priekšnoteikumiem, saprātīgumam, izbeigšanas pieskaitīšanai un proporcionālajai formulai.
 
 Sakārtojot materiālus hronoloģiskā kārtībā, ir lietderīgi kopīgi norādīt līguma noslēgšanas dienu, apmācības sākuma un beigu dienas, katru izmaksas dienu, darba sākuma un beigu dienas un paziņojuma nodošanas dienu. Ja daļu materiālu tur tikai darba devējs, vispirms sakārto paša materiālus un prasītās summas aprēķina pamatu un papildu materiālus pārbauda pēc vajadzīgās kārtības.
 

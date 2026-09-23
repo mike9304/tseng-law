@@ -59,7 +59,7 @@ Kailangan ding maipaliwanag ang ugnayan ng panahon ng kasunduan at ng pamumuhuna
 
 ## 3. Pangalawang Legal na Kinakailangan: Makatwirang Kompensasyon
 
-Ang pangalawang legal na kinakailangan ay kapag nagbigay ang amo ng makatwirang kompensasyon kapalit ng pangako ng manggagawang tuparin ang pinakamababang panahon ng paglilingkod. Dito, kailangang may layunin at istrukturang naiiba ang kompensasyon sa karaniwang sahod (工資) o sa kabayaran sa paggawang dapat na ngang ibigay. Hindi natutukoy ang legal na katangian ng bayad dahil lamang nakasulat sa talaan ng bayad na ito ay pabuya sa pagpirma, pabuya sa pananatili o paunang bayad.
+Ang pangalawang legal na kinakailangan ay kapag nagbigay ang amo ng makatwirang kompensasyon kapalit ng pangako ng manggagawang tuparin ang pinakamababang panahon ng paglilingkod. Dito, kailangang may layunin at istrukturang naiiba ang kompensasyon sa karaniwang sahod (工資) o sa iba pang kabayarang dapat na para sa trabahong nagawa na. Hindi natutukoy ang legal na katangian ng bayad dahil lamang nakasulat sa talaan ng bayad na ito ay pabuya sa pagpirma, pabuya sa pananatili o paunang bayad.
 
 Kailangang tiyakin muna ang layunin ng bayad. Dapat malinaw sa kontrata at sa mga dokumento ng pagpapaalam kung ito ba ay karaniwang kondisyon sa sahod para sa pagkuha ng empleyado, kabayaran sa pangakong maglingkod sa tiyak na panahon, o gantimpala sa natamong resulta. Susuriin din kung naipakita bago pumasok sa kontrata, sa paraang nauunawaan ng manggagawa, ang petsa ng bayad, ang halaga, ang panahon kung kailan ito nagiging kaniya, ang kaugnayan nito sa haba ng paglilingkod, at ang dahilan at pormula ng pagsasauli.
 

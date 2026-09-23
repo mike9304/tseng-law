@@ -13,7 +13,7 @@ faq:
   - q: "En caso de despido disciplinario, ¿debe la empresa pagar igualmente la indemnización por despido?"
     a: "No. Si el trabajador comete un acto ilícito, infringe las normas de la empresa o falta al trabajo sin causa justificada durante 3 días consecutivos (artículo 12 de la Ley de Normas Laborales, 勞動基準法第12條), la empresa puede despedir sin preaviso y no está obligada a pagar la indemnización por despido. En cambio, el despido económico (artículo 11) exige preaviso y el pago de la indemnización por despido."
   - q: "¿Cómo se calcula la indemnización por despido en Taiwán?"
-    a: "Cada vez que el trabajador complete un año de antigüedad (年資), el empleador debe pagar como indemnización por despido 0,5 meses del salario medio (平均工資), con un máximo de 6 meses de salario. Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada un año completo, sin tope."
+    a: "Cada vez que el trabajador complete un año de antigüedad (年資), el empleador debe pagar como indemnización por despido 0,5 meses del salario medio (平均工資), con un máximo de 6 meses de salario. Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada año completo, sin tope."
 ---
 
 # Derecho laboral de Taiwán: ¿es difícil cobrar la indemnización por despido en Taiwán?
@@ -62,7 +62,7 @@ La comparación queda en la tabla siguiente.
 
 > En Taiwán, cada vez que el trabajador complete un año de antigüedad (年資),
 > el empleador debe pagar como indemnización por despido 0,5 meses del salario medio (平均工資).
-> (hasta un máximo de 6 meses de salario) Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada un año completo, sin tope.
+> (hasta un máximo de 6 meses de salario) Esta fórmula corresponde al período de antigüedad al que se aplica el artículo 12 de la Ley de la pensión laboral (勞工退休金條例); en el período de antigüedad al que se aplica el artículo 17 de la Ley de Normas Laborales (勞動基準法) se paga 1 mes de salario medio por cada año completo, sin tope.
 
 ​
 
@@ -106,7 +106,7 @@ La empresa lo tomó como objetivo.
 
 Un día, un alto cargo de la empresa llamó a B a una entrevista.
 
-De pronto empezó a reprocharle cuánto dejaba de trabajar con diligencia.
+De pronto empezó a reprocharle que no trabajaba con diligencia.
 
 Como la empresa atravesaba dificultades, pidió un sacrificio.
 
@@ -180,19 +180,19 @@ Los demás trabajadores que se fueron no tuvieron tanta suerte.
 
 ​
 
-Como hay muchos casos de este tipo, la prueba importa.
+Como hay muchos casos de este tipo,
 
-Cuando la empresa utiliza métodos indebidos, no basta con la palabra.
+cuando la empresa utiliza métodos indebidos,
 
-Deben dejarse pruebas.
+deben dejarse pruebas.
 
-En situaciones en que la empresa persigue un error pequeño del trabajador, conviene documentarlo.
+Si la empresa persigue un error pequeño del trabajador,
 
-La empresa fija objetivos difíciles de alcanzar.
+fija objetivos difíciles de alcanzar,
 
-Hace exigencias desmesuradas.
+hace exigencias desmesuradas
 
-También destina al trabajador a un puesto extraño.
+o lo destina a un puesto extraño,
 
 **deben dejarse pruebas.**
 

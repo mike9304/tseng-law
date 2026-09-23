@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Vă amintiți epoca salonelor de coafură tradiționale (理髮廳) de la începuturile Taiwanului?
+Vă amintiți epoca saloanelor de coafură tradiționale (理髮廳) de la începuturile Taiwanului?
 
 Felul de a spăla părul în acele saloane era foarte particular.
 
@@ -39,7 +39,7 @@ există și în Taiwan multe străzi de masaj.
 
 Se aliniază acolo unități de masaj de tot felul.
 
-Există masajul practicat de persoane cu dizabilitate vizuală (視障按摩), masajul picioarelor, masajul cu ulei, masajul thailandez și alte forme.
+Există masajul practicat de persoane cu dizabilități vizuale (視障按摩), masajul picioarelor, masajul cu ulei, masajul thailandez și alte forme.
 
 În esență, fiecare poate alege masajul potrivit gustului său pentru a destinde tensiunea.
 
@@ -47,13 +47,13 @@ Iar motivul pentru care astăzi există atâtea unități de masaj poate ține d
 
 Când Taiwan a promulgat și a pus în vigoare, în 1980, legea privind bunăstarea persoanelor cu dizabilități (殘障福利法),
 
-doar persoanele cu dizabilitate vizuală (視障者) puteau, de fapt, să exercite meseria de masaj (按摩業).
+doar persoanele cu dizabilități vizuale (視障者) puteau, de fapt, să exercite meseria de masaj (按摩業).
 
-Ca o persoană fără dizabilitate vizuală (非視障者) să exercite această meserie era ilegal.
+Ca o persoană fără dizabilități vizuale (非視障者) să exercite această meserie era ilegal.
 
 Această lege s-a menținut până în 2003; atunci, dl Lin, care conducea un salon de coafură,
 
-a angajat salariați fără dizabilitate vizuală pentru servicii de spălare a părului și de masaj, iar poliția a constatat acest lucru.
+a angajat salariați fără dizabilități vizuale pentru servicii de spălare a părului și de masaj, iar poliția a constatat acest lucru.
 
 Potrivit dreptului de atunci, dl Lin și acești salariați au primit, respectiv, o amendă administrativă (罰鍰) de 40.000 TWD, 10.000 TWD și 20.000 TWD în noul dolar taiwanez (新臺幣).
 
@@ -63,43 +63,43 @@ Dl Lin a considerat această sancțiune foarte nedreaptă și a cerut o interpre
 
 În Taiwan,
 
-persoanele cu dizabilitate vizuală întâmpină multe obstacole în creștere, activitate, învățare și educație, între altele,
+persoanele cu dizabilități vizuale întâmpină multe obstacole în creștere, activitate, învățare și educație, între altele,
 
 iar meseriile pe care le pot exercita sunt foarte limitate.
 
-De aceea legiuitorul de atunci, pentru a proteja persoanele cu dizabilitate vizuală, care se aflau într-o poziție mai slabă,
+De aceea legiuitorul de atunci, pentru a proteja persoanele cu dizabilități vizuale, care se aflau într-o poziție mai slabă,
 
-a elaborat o lege care proteja ocuparea și dreptul la subzistență (生存權) ale persoanelor cu dizabilitate vizuală.
+a elaborat o lege care proteja ocuparea și dreptul la subzistență (生存權) ale persoanelor cu dizabilități vizuale.
 
 Totuși, odată cu trecerea timpului și lărgirea pieței de consum,
 
-s-a ivit opinia că protejarea numai a drepturilor persoanelor cu dizabilitate vizuală restrânge prea mult dreptul la muncă al persoanelor fără dizabilitate vizuală.
+s-a ivit opinia că protejarea numai a drepturilor persoanelor cu dizabilități vizuale restrânge prea mult dreptul la muncă al persoanelor fără dizabilități vizuale.
 
-În dezbaterea despre drepturile profesionale ale persoanelor cu și fără dizabilitate vizuală au apărut multe opinii contrare.
+În dezbaterea despre drepturile profesionale ale persoanelor cu și fără dizabilități vizuale au apărut multe opinii contrare.
 
-S-a pus, de exemplu, întrebarea dacă regula scrisă care permitea numai persoanelor cu dizabilitate vizuală să practice masajul nu era o discriminare față de persoanele fără dizabilitate vizuală,
+S-a pus, de exemplu, întrebarea dacă regula scrisă care permitea numai persoanelor cu dizabilități vizuale să practice masajul nu era o discriminare față de persoanele fără dizabilități vizuale,
 
-și s-a pus la îndoială dacă această regulă contribuise cu adevărat la protejarea ocupării și a subzistenței persoanelor cu dizabilitate vizuală.
+și s-a pus la îndoială dacă această regulă contribuise cu adevărat la protejarea ocupării și a subzistenței persoanelor cu dizabilități vizuale.
 
-În cele din urmă, judecătorii constituționali (大法官) au declarat neconstituțională (違憲) dispoziția care permitea numai persoanelor cu dizabilitate vizuală să exercite meseria de masaj.
+În cele din urmă, judecătorii constituționali (大法官) au declarat neconstituțională (違憲) dispoziția care permitea numai persoanelor cu dizabilități vizuale să exercite meseria de masaj.
 
 ​
 
-În mod similar, în Coreea, unde multe persoane cu dizabilitate vizuală își câștigă existența prin masaj,
+În mod similar, în Coreea, unde multe persoane cu dizabilități vizuale își câștigă existența prin masaj,
 
-în general numai persoanele cu dizabilitate vizuală care au obținut un certificat de calificare pot exercita meseria de masaj.
+în general numai persoanele cu dizabilități vizuale care au obținut un certificat de calificare pot exercita meseria de masaj.
 
-Este adevărat că guvernul Coreei a ajuns să elibereze certificate de masaj și persoanelor fără dizabilitate vizuală,
+Este adevărat că guvernul Coreei a ajuns să elibereze certificate de masaj și persoanelor fără dizabilități vizuale,
 
-iar multe persoane cu dizabilitate vizuală, temându-se să-și piardă mijlocul de existență, au organizat proteste intense.
+iar multe persoane cu dizabilități vizuale, temându-se să-și piardă mijlocul de existență, au organizat proteste intense.
 
-În prezent, Coreea continuă să permită numai persoanelor cu dizabilitate vizuală care dețin calificarea să exercite meseria de masaj,
+În prezent, Coreea continuă să permită numai persoanelor cu dizabilități vizuale care dețin calificarea să exercite meseria de masaj,
 
 iar dacă cineva percepe de la altcineva o remunerație de masaj fără această calificare,
 
 potrivit legii coreene a serviciilor medicale (醫療法) poate fi pronunțată o pedeapsă cu închisoarea de până la 3 ani.
 
-Dacă cineva fără dizabilitate vizuală exploatează un comerț de masaj, poate fi pronunțată o pedeapsă cu închisoarea de până la 5 ani.
+Dacă cineva fără dizabilități vizuale exploatează o unitate de masaj, poate fi pronunțată o pedeapsă cu închisoarea de până la 5 ani.
 
 ​
 

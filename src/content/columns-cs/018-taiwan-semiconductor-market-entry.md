@@ -19,7 +19,7 @@ faq:
 
 ![Snímek k posouzení struktury vstupu podniku polovodičů na Tchaj-wan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Když začnou obchody s tchajwanskými zákazníky, může zahraniční ústředí obdržet různé požadavky: zpracovat nabídky a smlouvy na Tchaj-wanu, držet zásobu náhradních dílů pro naléhavou výměnu nebo umístit personál k instalaci a údržbě. Tehdy je snadné se nejprve zeptat: „Stačí k řešení založit společnost na Tchaj-wanu?“
+Když začnou obchody s tchajwanskými zákazníky, může zahraniční ústředí obdržet různé požadavky: zpracovat nabídky a smlouvy na Tchaj-wanu, držet zásobu náhradních dílů pro naléhavou výměnu nebo umístit personál k instalaci a údržbě. V takové chvíli se nabízí otázka: „Stačí k řešení založit společnost na Tchaj-wanu?“
 
 Nejprve je třeba vyjasnit, kdo na Tchaj-wanu co obstarává. Struktura k posouzení se mění podle toho, zda zahraniční ústředí nadále uzavírá kupní smlouvy, zda tchajwanská společnost zboží nakupuje a dále prodává, nebo zda místní personál poskytuje jen technickou podporu.
 
@@ -36,7 +36,7 @@ Než ústředí rozhodne o struktuře vstupu, může interně vyjasnit:
 | Smlouvy se zákazníky | Kdo bude stranou smlouvy: zahraniční ústředí, tchajwanská dceřiná společnost, nebo místní zástupce? |
 | Nabídky a objednávky | Kdo s konečnou platností potvrdí cenu a lhůtu a kam až sahá oprávnění odpovědné osoby na Tchaj-wanu? |
 | Zboží a zásoby | Kdo dováží, drží a spravuje zásoby a vyřizuje vrácení a výměnu zboží? |
-| Personál | Přijíždějí zaměstnanci ústředí, přijímá se na Tchaj-wanu, nebo se práce svěří vnějšímu dodavateli? |
+| Personál | Přijedou zaměstnanci ústředí, nabírají se zaměstnanci na Tchaj-wanu, nebo se práce svěří externímu dodavateli? |
 | Instalace a technická podpora | Kdo nese povinnost podpory vůči zákazníkovi a řeší problémy při práci na místě? |
 | Platby a náklady | Kdo fakturuje a vybírá a jak se vyrovnávají náklady mezi ústředím a organizací na Tchaj-wanu? |
 | Jakost a spory | Kdo potvrdí výsledek kontroly a kdo přijímá tvrzení vad nebo nároky na náhradu škody? |
@@ -47,12 +47,12 @@ Zejména pokud prodávající kupní smlouvy není podnikem, který poskytuje te
 
 Při návrhu vstupu musí podnik polovodičů oddělit, jaká přítomnost se na Tchaj-wanu zřídí, a jak se uspořádají prodej a služby. První bod se zaměřuje na právní osobnost, požadavky zápisu a rozsah činnosti; druhý na způsob obchodování, oprávnění a rozdělení odpovědnosti.
 
-Hlavní rozdíl mezi tchajwanskou dceřinou společností a tchajwanskou pobočkou zahraniční společnosti je, zda má právní osobnost odlišnou od mateřské společnosti nebo ústředí. Distribuce a zastoupení jsou ujednání transakční a smluvní a nemají se směšovat s formou společnosti. Každou strukturu lze rozlišit takto:
+Hlavní rozdíl mezi tchajwanskou dceřinou společností a tchajwanskou pobočkou zahraniční společnosti je, zda má právní osobnost odlišnou od mateřské společnosti nebo ústředí. Distribuce a zastoupení jsou obchodní a smluvní ujednání a nemají se směšovat s formou společnosti. Každou strukturu lze rozlišit takto:
 
 | Struktura | Základní rozlišení | Co je třeba nejprve ověřit |
 |---|---|---|
 | Tchajwanská dceřiná společnost | Zakládá se podle práva Tchaj-wanu, má vlastní právní osobnost a je právním subjektem odlišným od zahraniční mateřské společnosti. | Protože dceřiná společnost je samostatná právnická osoba, je třeba ověřit, jak se uspořádají dodávky, služby, technologická licence a sdílení nákladů s mateřskou společností. |
-| Tchajwanská pobočka zahraniční společnosti | Pobočka zapsaná podle předpisů na Tchaj-wanu, bez právní osobnosti odlišné od ústředí, odlišná od zvlášť založené dceřiné společnosti. | Pobočka je částí zahraničního ústředí, nikoli samostatnou právnickou osobou, proto ústředí nese povinnosti přímo. Ověřit rozsah oprávnění vedoucího pobočky a vnitřní rozdělení vnějších smluv, dodávek, záruk a poprodejního servisu. |
+| Tchajwanská pobočka zahraniční společnosti | Pobočka zapsaná podle předpisů na Tchaj-wanu, bez právní osobnosti odlišné od ústředí, odlišná od zvlášť založené dceřiné společnosti. | Pobočka je částí zahraničního ústředí, nikoli samostatnou právnickou osobou, proto ústředí nese povinnosti přímo. Ověřit rozsah oprávnění vedoucího pobočky a vnitřní rozdělení externích smluv, dodávek, záruk a poprodejního servisu. |
 | Zastoupení zahraniční společnosti na Tchaj-wanu | Zastoupení zapsané podle čl. 386 zákona o společnostech; na Tchaj-wanu nesmí vykonávat obchodní činnost. | Protože nesmí vykonávat obchodní činnost, je třeba ověřit, zda skutečná činnost zůstává v povoleném rozsahu. |
 
 ## 3. Formy tchajwanské dceřiné společnosti: společnost s ručením omezeným a akciová společnost
@@ -61,11 +61,11 @@ Pokud jste se rozhodli zřídit na Tchaj-wanu samostatnou právnickou osobu, je 
 
 ### Společnost s ručením omezeným: správa je jednodušší, převod podílů je však relativně uzavřený
 
-Lze ji vytvořit s 1 nebo více fyzickými osobami, nebo s tchajwanskými či zahraničními právnickými osobami jako společníky; společníci zásadně ručí do výše vkladu. Jednatelé jsou 1 až 3 a volí se ze společníků. Společníci, kteří nevykonávají činnost, mohou vykonávat kontrolní oprávnění, aniž by bylo třeba zvláštního dozorčího (監察人). Není-li ve stanovách jinak, má 1 společník 1 hlas, takže ovládání se nemusí shodovat s poměrem vkladů. Převod vkladu běžného společníka zásadně vyžaduje souhlas více než poloviny hlasovacích práv ostatních; u jednatele je třeba souhlasu 2/3 nebo více hlasovacích práv ostatních společníků. Proto se lépe hodí ke jednoduchým vztahům společníků a stálému ovládání než k častému získávání kapitálu nebo obchodování s podíly. Později ji lze převést na akciovou společnost.
+Lze ji vytvořit s 1 nebo více fyzickými osobami, nebo s tchajwanskými či zahraničními právnickými osobami jako společníky; společníci zásadně ručí do výše vkladu. Jednatelé jsou 1 až 3 a volí se ze společníků. Společníci, kteří nevykonávají činnost, mohou vykonávat kontrolní oprávnění, aniž by bylo třeba zvláštního dozorčího (監察人). Není-li ve stanovách jinak, má 1 společník 1 hlas, takže ovládání se nemusí shodovat s poměrem vkladů. Převod vkladu běžného společníka zásadně vyžaduje souhlas více než poloviny hlasovacích práv ostatních; u jednatele je třeba souhlasu 2/3 nebo více hlasovacích práv ostatních společníků. Proto se lépe hodí k jednoduchým vztahům společníků a stálému ovládání než k častému získávání kapitálu nebo obchodování s podíly. Později ji lze převést na akciovou společnost.
 
-### Akciová společnost: vhodná, mají-li se přibrat jiní investoři nebo se zvažuje kótování
+### Akciová společnost: vhodná, mají-li se přibrat jiní investoři nebo se zvažuje kotování
 
-Kapitál se dělí na akcie. Zásadně jsou potřeba 2 nebo více akcionářů, avšak stát nebo právnická osoba ji může založit i samostatně a zahraniční právnická osoba může držet 100 %. Akcie jsou zásadně volně převoditelné, se zákonnými výjimkami; podle předpisů lze navrhnout druhové akcie, opce zaměstnanců a podobně. Proto se hodí podnikům, které očekávají investory, obchody s podíly, akciové odměny zaměstnanců nebo budoucí fúzi, akvizici, kótování nebo zápis do režimu vznikajících akcií (興櫃); neomezuje se jen na velké podniky. Ve správě může nekotovaná společnost stanovami nezřizovat představenstvo a mít jen 1 nebo 2 jednatele. Společnost s jediným státním nebo právnickým akcionářem může stanovami nezřizovat dozorčího (監察人). Rovněž nemusí každá akciová společnost nechat ověřit roční účetní závěrku. Hlavní prahy auditu běžné společnosti jsou splacený kapitál 30.000.000 TWD, nebo i pod touto hranicí provozní příjem 100.000.000 TWD nebo 100 pracovníků v pracovním pojištění; veřejně emitované společnosti se řídí předpisy o cenných papírech.
+Kapitál se dělí na akcie. Zásadně jsou potřeba 2 nebo více akcionářů, avšak stát nebo právnická osoba ji může založit i samostatně a zahraniční právnická osoba může držet 100 %. Akcie jsou zásadně volně převoditelné, se zákonnými výjimkami; podle předpisů lze navrhnout druhové akcie, opce zaměstnanců a podobně. Proto se hodí podnikům, které očekávají investory, obchody s podíly, akciové odměny zaměstnanců nebo budoucí fúzi, akvizici, kotování nebo zápis do režimu vznikajících akcií (興櫃); neomezuje se jen na velké podniky. Ve správě může nekotovaná společnost ve stanovách určit, že představenstvo nezřizuje a že bude mít jen 1 nebo 2 jednatele. Společnost s jediným státním nebo právnickým akcionářem může ve stanovách určit, že dozorčího (監察人) nezřizuje. Rovněž nemusí každá akciová společnost nechat ověřit roční účetní závěrku. Hlavní prahy auditu běžné společnosti jsou splacený kapitál 30.000.000 TWD, nebo i pod touto hranicí provozní příjem 100.000.000 TWD nebo 100 zaměstnanců přihlášených k pracovnímu pojištění; veřejně emitované společnosti se řídí předpisy o cenných papírech.
 
 ## 4. Postupy pobočky a dceřiné společnosti se liší; pouze dceřiná společnost prochází přezkumem investičního odboru Ministerstva hospodářství
 
@@ -87,13 +87,13 @@ Následující situace jsou hypotetické k podpoře úvahy; neslibují určený 
 
 **Zahraniční podniky zaměřené na počáteční vývoz.** Pokud na Tchaj-wanu ještě nejsou zaměstnanci ani zásoby a chcete ověřit poptávku prostřednictvím nezávislého distributora, lze nejprve posoudit dodávky, distribuční vztah a rozsah činnosti na Tchaj-wanu. Samotná distribuční smlouva však nevyřeší všechny otázky regulace na Tchaj-wanu.
 
-**Zahraniční podniky, které na Tchaj-wanu postupně rozšiřují prodej a technickou podporu.** Pokud plánujete přijímat na Tchaj-wanu a nadále spravovat zásoby, výběr plateb a podporu zákazníků, je vhodné konkrétně porovnat strukturu dceřiné společnosti a pobočky a společně posoudit i smluvní odpovědnost, způsob provozu ústředí, daně a plán personálu.
+**Zahraniční podniky, které na Tchaj-wanu postupně rozšiřují prodej a technickou podporu.** Pokud plánujete nabírat zaměstnance na Tchaj-wanu a nadále spravovat zásoby, výběr plateb a podporu zákazníků, je vhodné konkrétně porovnat strukturu dceřiné společnosti a pobočky a společně posoudit i smluvní odpovědnost, způsob provozu ústředí, daně a plán personálu.
 
 **Zahraniční podniky ve fázi průzkumu trhu.** Pokud před zřízením prodejní organizace chcete jen funkce sběru informací a styku, lze posoudit zastoupení. Pokud však skutečný plán zahrnuje prodej skladovaného zboží nebo práci na místě, je třeba zvlášť ověřit, zda tyto činnosti jsou povoleny.
 
 ## 8. Pro první konzultaci stačí provozní přehled; není nutné hned předávat veškeré důvěrné podklady
 
-Při první konzultaci lze uspořádat základní údaje ústředí a vkladatelů, obecný popis výrobku nebo služby, předpokládaný tok transakcí, plán personálu a zařízení na Tchaj-wanu a smluvní a podpůrné podmínky, které požadují zákazníci. Co ještě není rozhodnuto, lze označit jako „nevyřízeno“.
+Při první konzultaci lze uspořádat základní údaje o ústředí a investorech, obecný popis výrobku nebo služby, předpokládaný tok transakcí, plán personálu a zařízení na Tchaj-wanu a smluvní a podpůrné podmínky, které požadují zákazníci. Co ještě není rozhodnuto, lze označit jako „nevyřízeno“.
 
 Při prvním kontaktu není nutné připojit veškeré důvěrné podklady zákazníka nebo podrobné údaje o procesu. Po poskytnutí názvu protistrany potřebného k ověření střetu zájmů se potřebné podklady a způsob předání určí podle pokynů odpovědné advokátky.
 

@@ -29,7 +29,7 @@ Kai užsienietis steigia įmonę Taivane, jis privalo pateikti investicijų plan
 
 Investicijų peržiūros departamentas turi patikrinti, ar tas kapitalas (資本額) iš tikrųjų naudojamas investiciniams tikslams.
 
-Jis taip pat tikrina, ar užsienio subjektai neįveda lėšų į Taivaną kitu pretekstu.
+Jis taip pat tikrina, ar užsienio subjektai neperveda lėšų į Taivaną kitu pretekstu.
 
 Rengiant investicijų planą tikslaus įmonės adreso nurodyti nereikia; pakanka nurodyti vietovę (pavyzdys: Taipėjaus miestas). ​
 
@@ -49,7 +49,7 @@ Investicijų plano peržiūra taip pat užtrunka.
 
 Todėl investicijų planą ir įmonės registracijos adreso paiešką reikia vykdyti kartu.
 
-Pagal Užsieniečių investicijų įstatymo (外國人投資條例) 9 straipsnį patvirtintas įnašas turi būti įmokėtas visa suma kompetentingos institucijos nustatytu terminu (核定期限); terminą reikia patvirtinti kiekvieno reikalo patvirtinimo akte (praktikoje dažnai nustatomas apie 1 metus).
+Pagal Užsieniečių investicijų įstatymo (外國人投資條例) 9 straipsnį patvirtintas įnašas turi būti įmokėtas visa suma kompetentingos institucijos nustatytu terminu (核定期限); terminą reikia pasitikrinti konkrečiu atveju išduotame patvirtinimo rašte (praktikoje jis dažnai būna apie 1 metus).
 
 Per šį terminą spėsite rasti įmonės adresą ir sudaryti nuomos sutartį.
 
@@ -63,7 +63,7 @@ Tai įmanoma.
 
 Bankas paprastai reikalauja dvigubo tapatybės patvirtinimo.
 
-Be leidimo gyventi pažymėjimo Taivano imigracijos tarnyboje galima kreiptis dėl „**vieningo identifikacinio numerio pagrindinių duomenų formos**“ (統一證號基本資料表).
+Be leidimo gyventi pažymėjimo Taivano imigracijos tarnyboje galima kreiptis dėl „**bendrojo identifikacinio numerio pagrindinių duomenų formos**“ (統一證號基本資料表).
 
 Išdavimas galimas tą pačią dieną.
 
@@ -79,7 +79,7 @@ Tačiau peržiūra nėra pernelyg griežta.
 
 Galima nurodyti įvairią darbo patirtį, įskaitant darbą ne visą darbo dieną.
 
-Ją reikia išdėstyti išsamiai, kad būtų galima įtikinti peržiūrą atliekančius asmenis.
+Ją reikia išdėstyti išsamiai, kad būtų galima įtikinti vertintojus.
 
 Šiuo klausimu tikslinga dalyką nuodugniai aptarti su advokate arba advokatu Taivane.
 
@@ -101,7 +101,7 @@ Nuomotojai todėl vengia nuomoti užsieniečiams.
 
 Todėl veiklos vietos tikslinga ieškoti anksti.
 
-Jei derybos su nuomotoju vyksta nesėkmingai, galima imtis papildomų priemonių.
+Jei derybos su nuomotoju nesiseka, galima imtis papildomų priemonių.
 
 Prireikus galima pasiūlyti nuomos sutarties notarinį tvirtinimą (公證) arba papildomą užstatą.
 

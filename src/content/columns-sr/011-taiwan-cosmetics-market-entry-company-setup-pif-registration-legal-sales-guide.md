@@ -11,7 +11,7 @@ faq:
   - q: "Da bi se kozmetika prodavala na Tajvanu, je li uvek nužno osnovati zavisno društvo ili ogranak?"
     a: "Nije uvek nužno osnovati ni zavisno društvo ni ogranak. Uvoz i prodaju moguće je poveriti i tajvanskom uvozniku (uključujući slučaj kada istovremeno deluje kao prodajni zastupnik). Ako nameravate sami da vodite delatnost na Tajvanu, osnivanje i upis tajvanskog zavisnog društva (子公司) razlikuju se od osnivanja i upisa ogranka (分公司) stranog društva, a razlikuju se i struktura odgovornosti i poreza; rok potreban za odobrenje strane investicije (僑外投資核准) i za upis društva ili ogranka razlikuje se prema svakoj stvari i prema tome da li dolazi do ispravke ili dopune isprava. Najpre treba utvrditi poslovni model i subjekt koji će nositi odgovornost kao proizvođač ili uvoznik kozmetike (化粧品製造或輸入業者)."
   - q: "Šta je PIF i da li je to isti postupak kao registracija proizvoda kod TFDA?"
-    a: "Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda (產品登錄) poseban je akt koji se sprovodi na platformi za registraciju kozmetičkih proizvoda TFDA (衛生福利部食品藥物管理署). PIF je spis koji okuplja podatke o kvalitetu, bezbednosti, sastavu, tvrđenoj funkciji, načinu proizvodnje, rezultatima ispitivanja i oceni bezbednosti i koji proizvođač ili uvoznik kozmetike sastavlja, ažurira i čuva; sam PIF nije dokument koji bi se unapred podnosio TFDA. Od 1. 7. 2026. načelno svi kozmetički proizvodi spadaju pod režim PIF, izuzev čvrstog ručno izrađenog sapuna proizvedenog na mestu proizvodnje oslobođenom upisa pogona (工廠登記)."
+    a: "Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda (產品登錄) poseban je akt koji se sprovodi na platformi za registraciju kozmetičkih proizvoda TFDA (衛生福利部食品藥物管理署). PIF je spis koji okuplja podatke o kvalitetu, bezbednosti, sastavu, deklarisanom dejstvu, načinu proizvodnje, rezultatima ispitivanja i oceni bezbednosti i koji proizvođač ili uvoznik kozmetike sastavlja, ažurira i čuva; sam PIF nije dokument koji bi se unapred podnosio TFDA. Od 1. 7. 2026. načelno svi kozmetički proizvodi spadaju pod režim PIF, izuzev čvrstog ručno izrađenog sapuna proizvedenog na mestu proizvodnje oslobođenom upisa pogona (工廠登記)."
   - q: "Na koje izraze treba paziti u reklami kozmetike na Tajvanu?"
     a: "Reklama se ocenjuje ne samo prema rečenici, već prema celokupnom izrazu, uključujući naziv proizvoda, tekst, sliku, znak i zvuk. Zabranjeni su neistiniti ili preterani izrazi i tvrdnje o lekovitom dejstvu, a posebnu pažnju treba pokloniti medicinskim izrazima, kao što su lečenje akni, protivupalno ili baktericidno delovanje. Upravna novčana kazna iznosi od 40.000 do 200.000 novih tajvanskih dolara (新臺幣, TWD) za neistinitu ili preteranu reklamu i od 600.000 TWD do 5.000.000 TWD za tvrdnju o lekovitom dejstvu. Objave influensera i drugih takođe treba oceniti prema istom merilu, ako su u suštini reklama."
 ---
@@ -22,7 +22,7 @@ faq:
 
 Strani brend kozmetike koji namerava da na Tajvanu stavlja proizvode u promet mora da utvrdi kome poverava uvoz, kada završava registraciju proizvoda (產品登錄), ko vodi informacioni spis proizvoda (產品資訊檔案, Product Information File, PIF) i gde, i prema kom merilu se ocenjuju označavanje (標示) i reklama (廣告). Strani brendovi mogu da koriste lokalnog uvoznika i mogu sami da vode delatnost na Tajvanu, tako da priprema prodaje nije završena samim time što je društvo osnovano.
 
-Primenjive obaveze mogu se razlikovati prema vrsti proizvoda i mestu proizvodnje (製造場所), stvarnom obliku uvoza, načinu prometa i sadržaju reklame. Niže se odvojeno objašnjavaju oblik ulaska i zakonski subjekt odgovornosti, registracija proizvoda kod TFDA, sastavljanje, ažuriranje i čuvanje PIF, označavanje i reklama, te kontrola i mere ispravke. Pre utvrđivanja stvarnog kalendara isporuke treba, proizvod po proizvod, ponovo proveriti najnovije propise i uputstva nadležnog organa (主管機關).
+Primenjive obaveze mogu se razlikovati prema vrsti proizvoda i mestu proizvodnje (製造場所), stvarnom obliku uvoza, načinu prometa i sadržaju reklame. U nastavku se odvojeno objašnjavaju oblik ulaska i zakonski subjekt odgovornosti, registracija proizvoda kod TFDA, sastavljanje, ažuriranje i čuvanje PIF, označavanje i reklama, te kontrola i mere ispravke. Pre utvrđivanja stvarnog kalendara isporuke treba, proizvod po proizvod, ponovo proveriti najnovije propise i uputstva nadležnog organa (主管機關).
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
@@ -34,7 +34,7 @@ Nije uvek nužno osnovati ni zavisno društvo ni ogranak. Uvoz i prodaju moguće
 
 Ako tajvanski uvoznik ili prodajni zastupnik (銷售代理商) obavlja uvoz i prodaju, strani brend može izabrati i strukturu bez sopstvenog zavisnog društva ili ogranka na Tajvanu. Prodajni zastupnik može istovremeno da deluje kao uvoznik, ili se može uključiti poseban uvoznik. Pravno pripisivanje odgovornosti međutim ne određuje se samo ugovornim nazivom, kao što su zastupnik, glavni distributer ili distributer.
 
-Pri osmišljavanju stvarne podele rada treba najpre proveriti ko uvozi proizvod i sprovodi registraciju proizvoda i ko sastavlja, ažurira i čuva PIF. Treba i odrediti odgovorno lice za ocenu označavanja, vođenje evidencije o prometu, prijem pritužbi potrošača i bezbednosnih informacija i reagovanje na kontrole i zahteve za dokumente od strane nadležnog organa. Treba istovremeno oceniti da li se slažu zakonske obaveze koje terete proizvođača ili uvoznika kozmetike i ugovorni poslovi između brenda i prodajnog partnera.
+Pri osmišljavanju stvarne podele rada treba najpre proveriti ko uvozi proizvod i sprovodi registraciju proizvoda i ko sastavlja, ažurira i čuva PIF. Treba i odrediti odgovorno lice za ocenu označavanja, vođenje evidencije o prometu, prijem pritužbi potrošača i bezbednosnih informacija i reagovanje na kontrole i zahteve za dokumente od strane nadležnog organa. Treba istovremeno oceniti da li su usklađene zakonske obaveze koje terete proizvođača ili uvoznika kozmetike i ugovorni poslovi između brenda i prodajnog partnera.
 
 U ugovoru je umesno konkretno utvrditi obim upotrebe intelektualne svojine, kao što su žig (商標) i slike, način dostavljanja, prevoda i dopune dokumenata prvobitnog proizvođača (原製造者) potrebnih za registraciju proizvoda i za PIF, vođenje ažurnih dokumenata i predaju pri prestanku ugovora. Mogu se obuhvatiti i ovlašćenje za prethodnu ocenu i izmenu reklame, prenošenje bezbednosnih informacija, kao što su pritužbe i neželjena dejstva, saradnja pri povlačenju s tržišta (回收), ako je potrebno, i snošenje troškova ispitivanja, prevoda i čuvanja. Da dokumenti ne ostanu samo kod jedne strane, treba unapred utvrditi i obim i rok vraćanja ili davanja primeraka.
 
@@ -48,7 +48,7 @@ Koja god struktura da se izabere, središnji subjekt odgovornosti u regulaciji k
 
 ## 2. Registracija proizvoda i PIF dva su različita režima
 
-Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda poseban je akt koji se sprovodi na platformi za registraciju kozmetičkih proizvoda TFDA (衛生福利部食品藥物管理署). PIF je spis koji okuplja podatke o kvalitetu, bezbednosti, sastavu, tvrđenoj funkciji, načinu proizvodnje, rezultatima ispitivanja i oceni bezbednosti i koji proizvođač ili uvoznik kozmetike sastavlja, ažurira i čuva; sam PIF nije dokument koji bi se unapred podnosio TFDA. Od 1. 7. 2026. načelno svi kozmetički proizvodi spadaju pod režim PIF, izuzev čvrstog ručno izrađenog sapuna (固態手工香皂) proizvedenog na mestu proizvodnje oslobođenom upisa pogona (工廠登記).
+Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda poseban je akt koji se sprovodi na platformi za registraciju kozmetičkih proizvoda TFDA (衛生福利部食品藥物管理署). PIF je spis koji okuplja podatke o kvalitetu, bezbednosti, sastavu, deklarisanom dejstvu, načinu proizvodnje, rezultatima ispitivanja i oceni bezbednosti i koji proizvođač ili uvoznik kozmetike sastavlja, ažurira i čuva; sam PIF nije dokument koji bi se unapred podnosio TFDA. Od 1. 7. 2026. načelno svi kozmetički proizvodi spadaju pod režim PIF, izuzev čvrstog ručno izrađenog sapuna (固態手工香皂) proizvedenog na mestu proizvodnje oslobođenom upisa pogona (工廠登記).
 
 ### Trenutak registracije proizvoda i rok važenja
 
@@ -60,7 +60,7 @@ Registracija proizvoda akt je prijave utvrđenih podataka na platformi. Završet
 
 ### Podnesci PIF i postupna primena
 
-PIF je skup dokumenata uređen tako da se kvalitet i bezbednost proizvoda mogu trajno dokumentovati. Osim kvaliteta, bezbednosti, sastava, tvrđene funkcije (宣稱功能), načina proizvodnje, rezultata ispitivanja i ocene bezbednosti, treba prema proizvodu urediti osnovne podatke o proizvodu i proizvođaču i dokazne dokumente, na primer etiketu. Pravilnik o vođenju informacionog spisa kozmetičkih proizvoda (化粧品產品資訊檔案管理辦法) potrebne dokumente uređuje u 16 kategorija, zato treba prema vrsti proizvoda proveriti dokumente svake kategorije i zahteve za potpis i kvalifikaciju.
+PIF je skup dokumenata uređen tako da se kvalitet i bezbednost proizvoda mogu trajno dokumentovati. Osim kvaliteta, bezbednosti, sastava, deklarisanog dejstva (宣稱功能), načina proizvodnje, rezultata ispitivanja i ocene bezbednosti, treba prema proizvodu urediti osnovne podatke o proizvodu i proizvođaču i dokazne dokumente, na primer etiketu. Pravilnik o vođenju informacionog spisa kozmetičkih proizvoda (化粧品產品資訊檔案管理辦法) potrebne dokumente uređuje u 16 kategorija, zato treba prema vrsti proizvoda proveriti dokumente svake kategorije i zahteve za potpis i kvalifikaciju.
 
 Režim PIF primenjivao se postupno prema grupama proizvoda. Od 1. 7. 2026. u predmet primene uključeni su i preostali kozmetički proizvodi, tako da se načelno odnosi na svu kozmetiku. Izuzetak se ograničava na čvrsti ručno izrađeni sapun proizveden na mestu proizvodnje oslobođenom upisa pogona. Proizvod nije izuzet samo zato što je ručni ili što koristi naziv sapuna; treba proveriti oboje, čvrsti oblik i uslov oslobođenja mesta proizvodnje od upisa pogona.
 
@@ -68,9 +68,9 @@ Posao na PIF-u, uključujući ocenu bezbednosti, može da podrži treće lice ko
 
 ### Ažuriranje i čuvanje
 
-Ako se izmene sirovina ili receptura, način i mesto proizvodnje, označavanje uključujući etiketu, tvrđena funkcija ili bezbednosne informacije, treba oceniti i ažurirati zahvaćene dokumente PIF. Treba i oceniti da li pritužbe potrošača, neželjeni događaji i novi rezultati ispitivanja utiču na postojeću ocenu, zato je i posle prvog sastavljanja potreban postupak upravljanja izmenama.
+Ako se izmene sirovina ili receptura, način i mesto proizvodnje, označavanje uključujući etiketu, deklarisano dejstvo ili bezbednosne informacije, treba oceniti i ažurirati zahvaćene dokumente PIF. Treba i oceniti da li pritužbe potrošača, neželjeni događaji i novi rezultati ispitivanja utiču na postojeću ocenu, zato je i posle prvog sastavljanja potreban postupak upravljanja izmenama.
 
-Prema članu 7 Pravilnika o vođenju informacionog spisa kozmetičkih proizvoda rok čuvanja iznosi najmanje 5 godina, računato od dana koji sledi posle dana poslednje isporuke proizvoda na tržište. Prema članu 8 istog pravilnika mesto čuvanja jeste adresa proizvođača ili uvoznika kozmetike utvrđena u članu 7 stavu 1 tački 7 Zakona o higijeni i bezbednosti kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje rok i odredbu koja utvrđuje mesto treba voditi odvojeno.
+Prema članu 7 Pravilnika o vođenju informacionog spisa kozmetičkih proizvoda rok čuvanja iznosi najmanje 5 godina, računato od prvog dana posle poslednje isporuke proizvoda na tržište. Prema članu 8 istog pravilnika mesto čuvanja jeste adresa proizvođača ili uvoznika kozmetike utvrđena u članu 7 stavu 1 tački 7 Zakona o higijeni i bezbednosti kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje rok i odredbu koja utvrđuje mesto treba voditi odvojeno.
 
 Čak i kada prvobitni proizvođač čuva original ili se koristi bezbedno elektronsko skladište ili skladištenje u oblaku, proizvođač ili uvoznik mora da ima pristup potpunim dokumentima. Treba utvrditi prava pristupa, rezervne kopije, vođenje verzija, format datoteka i odgovorno lice tako da se dokumenti mogu brzo pronaći i predočiti kada ih nadležni organ zahteva. Važno je i u ugovoru urediti koji se dokumenti predaju, kako se predaja obavlja i da li pravo pristupa ostaje, kako bi se dokumenti održali tokom zakonskog roka čuvanja i posle prestanka ugovora s prodajnim partnerom ili pružaocem usluge.
 
@@ -88,9 +88,9 @@ Reklama se ocenjuje ne samo prema rečenici, već prema celokupnom izrazu, uklju
 
 ### Ocenjuje se prema celokupnom izrazu, a ne prema svakoj reči
 
-Da li su označavanje, promocija (宣傳) ili reklama neistiniti ili preterani, ili da li tvrde lekovito dejstvo (醫療效能), ne ocenjuje se samo prema jednoj određenoj reči. Zajedno se ocenjuju naziv robe, rečenica, slika, znak, zvuk, prethodni i naredni kontekst i ukupni utisak koji potrošač dobija. Utisak koji stvara središnji reklamni izraz ne nestaje automatski samo ograničenjem sitnim slovima, zato treba oceniti kako pojedine formulacije, tako i konačni izrađeni materijal.
+Da li su označavanje, promocija (宣傳) ili reklama neistiniti ili preterani, ili da li tvrde lekovito dejstvo (醫療效能), ne ocenjuje se samo prema jednoj određenoj reči. U celini se ocenjuju naziv robe, rečenica, slika, znak, zvuk, prethodni i naredni kontekst i ukupni utisak koji potrošač dobija. Utisak koji stvara središnji reklamni izraz ne nestaje automatski samo ograničenjem sitnim slovima, zato treba oceniti kako pojedine formulacije, tako i konačni izrađeni materijal.
 
-Na primer, tvrdnja da kozmetika leči akne, ima protivupalno dejstvo ili baktericidno delovanje može biti tvrdnja o lekovitom dejstvu. Treba zajedno proveriti i način povezivanja naziva bolesti s proizvodom, snimke pre upotrebe i posle nje, prikaz koji evocira zdravstvenog radnika i kontekst koji tumačenje sastojka povezuje s lekovitim dejstvom proizvoda.
+Na primer, tvrdnja da kozmetika leči akne, ima protivupalno dejstvo ili baktericidno delovanje može biti tvrdnja o lekovitom dejstvu. Treba proveriti i način povezivanja naziva bolesti s proizvodom, snimke pre upotrebe i posle nje, prikaz koji evocira zdravstvenog radnika i kontekst koji tumačenje sastojka povezuje s lekovitim dejstvom proizvoda.
 
 Upravna novčana kazna za neistinitu ili preteranu reklamu (虛偽誇大廣告) iznosi od 40.000 TWD do 200.000 TWD, a upravna novčana kazna za tvrdnju o lekovitom dejstvu iznosi od 600.000 TWD do 5.000.000 TWD. Pošto se raspon razlikuje prema vrsti povrede, treba pre objavljivanja uporediti celokupni reklamni izraz s dokaznim dokumentima.
 
@@ -98,7 +98,7 @@ Upravna novčana kazna za neistinitu ili preteranu reklamu (虛偽誇大廣告) 
 
 Objave influensera, autora recenzija ili prodajnih partnera mogu se prema sadržaju i trgovačkom kontekstu oceniti kao reklama u suštini. Isplata naknade, davanje proizvoda, prodajni link, nalog brenda za objavljivanje i ponovljena saradnja činioci su koji se u toj oceni uzimaju u obzir. Nasuprot tome, svaka lična objava ne postaje automatski reklama brenda, zato treba proveriti odnos između onoga ko objavljuje i brenda, konkretan sadržaj i meru učešća brenda.
 
-U ugovoru o saradnji i u operativnim uputstvima mogu se utvrditi obim dozvoljenih izraza i dokazni dokumenti, ocena pre objavljivanja i postupak izmene i brisanja izraza koji krše pravila. U obim vođenja umesno je uključiti i izraze koji se dodaju u komentarima, usmeno tumačenje pri živom prenosu ili kratkim snimcima i nesklad između prodajne stranice i etikete. Oceneni nacrt, istoriju odobrenja, zahteve za izmenu i konačnu objavu treba sačuvati, kako bi se kasnije mogle proveriti činjenične okolnosti.
+U ugovoru o saradnji i u operativnim uputstvima mogu se utvrditi obim dozvoljenih izraza i dokazni dokumenti, ocena pre objavljivanja i postupak izmene i brisanja izraza koji krše pravila. U obim vođenja umesno je uključiti i izraze koji se dodaju u komentarima, usmeno tumačenje pri živom prenosu ili kratkim snimcima i nesklad između prodajne stranice i etikete. Ocenjeni nacrt, istoriju odobrenja, zahteve za izmenu i konačnu objavu treba sačuvati, kako bi se kasnije mogle proveriti činjenične okolnosti.
 
 ### Redosled provere pripreme prodaje
 
@@ -111,7 +111,7 @@ Ako se priprema prodaje na Tajvanu proveri ovim redosledom, opada rizik da se je
 5. Oceniti etiketu, prodajnu stranicu, reklamu i objave iz saradnje prema merilu celokupnog izraza.
 6. Voditi postupak za reagovanje na kontrole i zahteve za ispravku, pritužbe, bezbednosne informacije i potrebne naredne korake.
 
-Osnovnu strukturu društva i ogranka možete videti u članku [Osnivanje društva na Tajvanu](/sr/columns/taiwan-company-establishment-basics), obim odgovarajućeg rada na stranici [U kojim stvarima zastupamo klijente](/sr/services), a podatke o odgovarajućoj advokatkinji na stranici [Međunarodni tim Hovering](/sr/lawyers).
+Osnovnu strukturu društva i ogranka možete videti u članku [Osnivanje društva na Tajvanu](/sr/columns/taiwan-company-establishment-basics), obim naših usluga na stranici [U kojim stvarima zastupamo klijente](/sr/services), a podatke o advokatkinji koja vodi predmet na stranici [Međunarodni tim Hovering](/sr/lawyers).
 
 ### Zvanični izvori
 
@@ -129,6 +129,6 @@ Osnovnu strukturu društva i ogranka možete videti u članku [Osnivanje društv
 - [Invest Taiwan — pregled strane investicije](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Odeljenje za pregled i odobravanje investicija Ministarstva ekonomije — uputstvo](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
-Ovaj članak je dokument opšte informacije obrazovne prirode o režimu povezanom s ulaskom na tržište kozmetike na Tajvanu; nije pravno mišljenje o pojedinom proizvodu ili reklami i ne obećava određeni ishod, dozvolu, registraciju, mogućnost prodaje niti poštovanje roka rešavanja. Oblik ulaska, dokumente o proizvodu, sadržaj označavanja i reklame i najnoviju praksu nadležnog organa treba proveriti u svakoj stvari posebno.
+Ovaj tekst je opšteinformativnog i edukativnog karaktera i odnosi se na režim povezan s ulaskom na tržište kozmetike na Tajvanu; nije pravno mišljenje o pojedinom proizvodu ili reklami i ne obećava određeni ishod, dozvolu, registraciju, mogućnost prodaje niti poštovanje roka rešavanja. Oblik ulaska, dokumente o proizvodu, sadržaj označavanja i reklame i najnoviju praksu nadležnog organa treba proveriti u svakoj stvari posebno.
 
 **Advokatkinja Wei Tseng (曾雋崴)**

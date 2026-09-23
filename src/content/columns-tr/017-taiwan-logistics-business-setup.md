@@ -42,7 +42,7 @@ Tayvan Karayolu Kanunu (公路法) motorlu taşıma işini (汽車運輸業) kar
 - Depo, paketleme, bilgi sistemi, taşıma komisyonculuğu gibi yardımcı işlerin fiili taşımadan nasıl ayrıldığı
 - Alt yükleniciye devirde izinli işletmenin hangi kapsamda işi fiilen yürüttüğü
 
-Karayolu Kanunu madde 3’ün saptadığı merkezi yetkili organ Ulaştırma Bakanlığı’dır (交通部). Fiili başvuru kabulü ve idari rehber Ulaştırma Bakanlığı Karayolu İdaresi (交通部公路局) ve bağlı organlarınca yürütüldüğü için en güncel rehber doğrulanmalıdır. Planlanan iş modelinin motorlu yük taşımacılığı sayılıp sayılmadığı açık değilse tescildeki faaliyet kalemleri saptanmadan önce öngörülen sözleşme ve işletme biçimi yetkili organa sunularak teyit edilmelidir.
+Karayolu Kanununun 3. maddesinin saptadığı merkezi yetkili makam Ulaştırma Bakanlığı’dır (交通部). Fiili başvuru kabulü ve idari rehber Ulaştırma Bakanlığı Karayolu İdaresi (交通部公路局) ve bağlı idarelerince yürütüldüğü için en güncel rehber doğrulanmalıdır. Planlanan iş modelinin motorlu yük taşımacılığı sayılıp sayılmadığı açık değilse tescildeki faaliyet kalemleri saptanmadan önce öngörülen sözleşme ve işletme biçimi yetkili makama sunularak teyit edilmelidir.
 
 ## 2. Motorlu yük taşımacılığını yeni kurmak
 
@@ -60,16 +60,16 @@ Bu sınırlama, ticari plakanın iade ile iptalini ve araç tescilinde ad deği�
 
 ### Yabancı yatırım ve sektör onayı
 
-Karayolu Kanunu madde 35’e göre yabancı veya yabancı tüzel kişi Tayvan’da motorlu yük taşımacılığına yatırım yapıp işletmek isterse önce aynı kanunun saptadığı merkezi yetkili organ olan Ulaştırma Bakanlığı’nın onayını almalıdır. Genel yabancı yatırım onayı incelemesiyle yetinilmemeli; motorlu yük taşımacılığı sektörüne ilişkin Ulaştırma Bakanlığı onayı iş planına ayrıca yansıtılmalıdır.
+Karayolu Kanununun 35. maddesine göre yabancı veya yabancı tüzel kişi Tayvan’da motorlu yük taşımacılığına yatırım yapıp işletmek isterse önce aynı kanunun saptadığı merkezi yetkili makam olan Ulaştırma Bakanlığı’nın onayını almalıdır. Genel yabancı yatırım onayı incelemesiyle yetinilmemeli; motorlu yük taşımacılığı sektörüne ilişkin Ulaştırma Bakanlığı onayı iş planına ayrıca yansıtılmalıdır.
 
-Genel yabancı yatırımın güncel yetkili birimi Ekonomi Bakanlığı Yatırım İnceleme Dairesidir (經濟部投資審議司). Ancak bütün yabancı yatırım aynı gişe ve usulü izlemez. Borsa veya borsa dışı kıymetlere yatırım, yabancı şirket şubesi (分公司), bilim parkı ve sanayi bölgesi organlarının işlediği dosyalar ile Anakara bölgesinden (大陸地區) yapılan yatırım ayrı gişelere veya ayrı bir rejime girebilir. Motorlu yük taşımacılığına yatırımda uygulanacak yatırım yolu doğrulanmasının yanı sıra Karayolu Kanunu madde 35’teki sektör onayı tamamlanmalıdır.
+Genel yabancı yatırımın güncel yetkili birimi Ekonomi Bakanlığı Yatırım İnceleme Dairesidir (經濟部投資審議司). Ancak bütün yabancı yatırım aynı gişe ve usulü izlemez. Borsa veya borsa dışı kıymetlere yatırım, yabancı şirket şubesi (分公司), bilim parkı ve sanayi bölgesi idarelerinin işlediği dosyalar ile Anakara bölgesinden (大陸地區) yapılan yatırım ayrı gişelere veya ayrı bir rejime girebilir. Motorlu yük taşımacılığına yatırımda uygulanacak yatırım yolu doğrulanmasının yanı sıra Karayolu Kanununun 35. maddesindeki sektör onayı tamamlanmalıdır.
 
 ### Yeni kuruluş usulünün sırası
 
-Adımların sırası ve sunum organı her dosyada yeniden doğrulanmalıdır; ancak genel olarak hazırlık aşağıdaki sırayla yapılır.
+Adımların sırası ve sunum makamı her dosyada yeniden doğrulanmalıdır; ancak genel olarak hazırlık aşağıdaki sırayla yapılır.
 
 1. Sözleşme, karşılık, taşıma sorumluluğu ve araç seyrine göre iş kapsamı saptanır; şirket veya şube gibi uygun yatırım yolu seçilir.
-2. Uygulanan yabancı yatırım onayı ile Karayolu Kanunu madde 35’e göre Ulaştırma Bakanlığı sektör onayı alınır.
+2. Uygulanan yabancı yatırım onayı ile Karayolu Kanununun 35. maddesine göre Ulaştırma Bakanlığı sektör onayı alınır.
 3. Ulaştırma Bakanlığı Karayolu İdaresi rehberine göre motorlu yük taşımacılığı kuruluş hazırlık izni için başvurulur.
 4. Şirket ve ticaret tescili tamamlanır; onaylı işyeri, otopark tesisleri (停車設施), bakım sistemi, araçlar, sigorta ve örgüt hazırlanır.
 5. İşletme ruhsatı için başvurulur, ilgili meslek birliğine katılınır, ardından onaylı iş kapsamına göre faaliyete başlanır.
@@ -84,7 +84,7 @@ Kuruluş hazırlık izni alındıktan sonra hazırlık kural olarak 6 ay içinde
 
 ### Pay edinimi ile iş veya varlık devrinin farkı
 
-Pay ediniminde alıcı ortak olur; izin sahibi olan hedef şirket aynı tüzel kişi olarak varlığını sürdürür. Pay edinimi için gönderilen tutar sermaye değil, pay devir bedelidir. Dosyaya göre Ekonomi Bakanlığı’nın ön onayı, Karayolu Kanunu madde 35’teki sektör onayı, havaleden sonra yatırım tutarı tespiti (投資額審定), ortak, yönetici ve sorumlu gibi şirket değişiklikleri ile yetkili yol idaresine değişiklik başvurusu her biri ayrı yürütülür.
+Pay ediniminde alıcı ortak olur; izin sahibi olan hedef şirket aynı tüzel kişi olarak varlığını sürdürür. Pay edinimi için gönderilen tutar sermaye değil, pay devir bedelidir. Dosyaya göre Ekonomi Bakanlığı’nın ön onayı, Karayolu Kanununun 35. maddesindeki sektör onayı, havaleden sonra yatırım tutarı tespiti (投資額審定), ortak, yönetici ve sorumlu gibi şirket değişiklikleri ile yetkili yol idaresine değişiklik başvurusu her biri ayrı yürütülür.
 
 Buna karşılık başka bir tüzel kişi iş veya varlıkları devralsa bile devredenin işletme ruhsatı devralana kendiliğinden geçmez. Araçlar, ticari plakalar (營業用車輛牌照), otopark tesisleri, sözleşmeler, çalışanlar, sigorta ve işletme izinleri her biri doğrulanmalıdır. Devralanın ihtiyaç duyduğu kuruluş hazırlık izni, işletme ruhsatı ve diğer onaylar işlem yürütülmeden önce derlenmelidir.
 
@@ -92,7 +92,7 @@ Motorlu taşıma işi yönetim kuralları (汽車運輸業管理規則) madde 23
 
 ### İnceleme ve işlemin yürütülmesi
 
-En azından aşağıdaki hususlar, belgeler ve asıl evrak yetkili organın kayıtlarıyla karşılaştırılarak esastan doğrulanmalıdır.
+En azından aşağıdaki hususlar, belgeler ve asıl evrak yetkili makamın kayıtlarıyla karşılaştırılarak esastan doğrulanmalıdır.
 
 - İşletme ruhsatının geçerliliği, izinli faaliyet, bölge ve koşullar ile henüz işlenmemiş değişiklikler
 - Araçların mülkiyet ve kullanım ilişkisi, ticari plakalar, yaş, periyodik muayene, kaza ve ihlaller
@@ -118,7 +118,7 @@ Gönderici veya lojistik hizmet şirketi, fiili taşımayı izni olan Tayvan mot
 
 Yabancı hedef şirketin ortağı veya yatırımcısı olsa bile bu olgu tek başına Tayvan’da çalışma hakkı veya kalış statüsü vermez. Şirket yönetimi, satış, araç tahsisi, müşteri hizmeti gibi günlük işi Tayvan’da yürütüyorsa işe başlamadan önce fiili göreve uygun çalışma izninin gerekip gerekmediği doğrulanmalı; sonraki kalış usulü ayrıca yürütülmelidir.
 
-İzinsiz çalışmaya idari para cezası ve Tayvan’dan ayrılma emri (限令出國) uygulanabilir. İçişleri Bakanlığı Göç İdaresinin (內政部移民署) yürürlükteki giriş yasağı (禁止入國) iş rehberi, hukuka aykırı çalışma için genel olarak 3 yıllık giriş yasağı süresi saptar; ancak aynı rehberin saptadığı muafiyet veya süre kısaltma şartları uygulanabilir. Yalnızca üçüncü kişinin ihbarı var diye sonuç mekanik saptanmaz; yetkili organ olguları, uygulanacak kuralları ve her dosyanın şartlarını inceler.
+İzinsiz çalışmaya idari para cezası ve Tayvan’dan ayrılma emri (限令出國) uygulanabilir. İçişleri Bakanlığı Göç İdaresinin (內政部移民署) yürürlükteki giriş yasağı (禁止入國) iş rehberi, hukuka aykırı çalışma için genel olarak 3 yıllık giriş yasağı süresi saptar; ancak aynı rehberin saptadığı muafiyet veya süre kısaltma şartları uygulanabilir. Yalnızca üçüncü kişinin ihbarı var diye sonuç mekanik olarak saptanmaz; yetkili makam olguları, uygulanacak kuralları ve her dosyanın şartlarını inceler.
 
 ## Resmi kaynaklar
 
@@ -134,8 +134,8 @@ Yabancı hedef şirketin ortağı veya yatırımcısı olsa bile bu olgu tek ba�
 - [Yabancı Yatırım Kanunu (外國人投資條例)](https://law.moea.gov.tw/LawContent.aspx?id=FL011158&media=print)
 - [Ekonomi Bakanlığı Yatırım İnceleme Dairesi](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
 - [Ekonomi Bakanlığı: yabancı yatırım başvuru rehberi](https://www.moea.gov.tw/Mns/dir/investment/wHandDirApply_File.ashx?file_id=49)
-- [İstihdam Hizmetleri Kanunu madde 43 (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
-- [İstihdam Hizmetleri Kanunu madde 68](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
+- [İstihdam Hizmetleri Kanununun 43. maddesi (就業服務法)](https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=43&id=FL015128)
+- [İstihdam Hizmetleri Kanununun 68. maddesi](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
 - [İçişleri Bakanlığı Göç İdaresi: giriş yasağı süresine dair idari rehber](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
 ## İlgili rehber
@@ -146,6 +146,6 @@ Yabancı hedef şirketin ortağı veya yatırımcısı olsa bile bu olgu tek ba�
 
 ---
 
-Bu yazı, genel hukuk rejimini açıklamak için eğitim amaçlı bir belgedir; tek tek dosyaya hukuki görüş değildir. İzin ölçütleri, başvuru formları ve yetkili organın uygulaması değişebileceği için yatırım veya sözleşme yürütülmeden önce en güncel resmi kaynaklar ve dosyanın olguları doğrulanmalıdır.
+Bu yazı, genel hukuk rejimini açıklamak için eğitim amaçlı bir belgedir; tek tek dosyaya hukuki görüş değildir. İzin ölçütleri, başvuru formları ve yetkili makamın uygulaması değişebileceği için yatırım veya sözleşme yürütülmeden önce en güncel resmi kaynaklar ve dosyanın olguları doğrulanmalıdır.
 
 **Avukat Wei Tseng (曾雋崴)**

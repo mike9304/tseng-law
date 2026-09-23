@@ -23,7 +23,7 @@ L’article 101 prohibeix avançar en trams amb senyals que indiquen corba, pend
 
 Tampoc no es pot avançar en llocs o trams amb senyal d’escola o d’hospital, en llocs amb altres senyals o marques de prohibició d’avançament, quan s’acosta un vehicle en sentit contrari, ni quan davant circulen 2 vehicles o més en fila.
 
-Per ultrapassar el vehicle del davant en el mateix carril, el conductor del vehicle de darrere ha de fer primer 2 tocs curts de clàxon o 1 senyal lluminós dels fars davanters. No s’han d’utilitzar el clàxon ni els fars de forma repetida per forçar que el vehicle del davant cedeixi el pas.
+Per ultrapassar el vehicle del davant en el mateix carril, el conductor del vehicle de darrere ha de fer primer 2 tocs curts de clàxon o 1 senyal lluminós dels fars davanters. No s’han d’utilitzar el clàxon ni els fars repetidament per forçar que el vehicle del davant cedeixi el pas.
 
 El vehicle de darrere només pot avançar després que el del davant redueixi la velocitat i s’aparti, o després que manifesti la voluntat de cedir el pas amb un senyal amb la mà o amb l’intermitent dret.
 
@@ -37,9 +37,9 @@ En un assumpte anònim tramitat per aquest despatx, el motorista A circulava per
 
 ![Esquema de l’accident que mostra la trajectòria d’avançament de la motocicleta i dels 2 vehicles del davant en una carretera de muntanya](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A va intentar ultrapassar tots dos vehicles alhora, de manera que es va internar al carril contrari i va accelerar. El vehicle núm. 2 també es va preparar per avançar el núm. 1: menys d’un segon després d’encendre l’intermitent, es va internar al carril contrari. La motocicleta no va tenir marge suficient per frenar i va col·lidir amb el vehicle núm. 2.
+A va intentar ultrapassar tots dos vehicles alhora, de manera que va envair el carril contrari i va accelerar. El vehicle núm. 2 també es va preparar per avançar el núm. 1: menys d’un segon després d’encendre l’intermitent, va envair el carril contrari. La motocicleta no va tenir marge suficient per frenar i va col·lidir amb el vehicle núm. 2.
 
-B va patir una lesió greu al cap i va morir al lloc; A va perdre el coneixement i va ser traslladat a l’hospital.
+B va patir una lesió greu al cap i va morir a l’acte; A va perdre el coneixement i va ser traslladat a l’hospital.
 
 Les famílies d’A i B van considerar al principi que el canvi brusc de carril del vehicle núm. 2 era la causa principal de la col·lisió. L’assumpte va passar a litigi i, en el procés, es van practicar diversos peritatges (鑑定) de l’accident.
 
@@ -62,4 +62,4 @@ Com a material complementari es pot consultar [la il·lustració de les normes i
 > - [Equip internacional de Hovering](/ca/lawyers)
 > - [Preguntes i respostes sobre accidents de trànsit a Taiwan](/ca/columns/taiwan-traffic-accident-procedure)
 
-Aquest article és informació jurídica general sobre les normes d’avançament a Taiwan i la valoració de la responsabilitat en accidents; no constitueix assessorament per a un assumpte concret ni una promesa sobre el desenllaç. La responsabilitat real pot variar segons el lloc de l’accident, el moviment dels vehicles, la velocitat, els senyals, les proves, el peritatge i la normativa més recent, de manera que l’assumpte concret s’ha d’examinar de forma individual a partir dels materials pertinents.
+Aquest article és informació jurídica general sobre les normes d’avançament a Taiwan i la valoració de la responsabilitat en accidents; no constitueix assessorament per a un assumpte concret ni una promesa sobre el desenllaç. La responsabilitat real pot variar segons el lloc de l’accident, el moviment dels vehicles, la velocitat, els senyals, les proves, el peritatge i la normativa més recent, de manera que l’assumpte concret s’ha d’examinar individualment a partir dels materials pertinents.

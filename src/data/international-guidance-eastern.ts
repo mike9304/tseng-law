@@ -211,7 +211,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Když nás oslovíte',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dokumentech, které jsou ještě potřeba, a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
+            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dokumentech, které jsou ještě potřeba, a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat společně s účetním úsekem.',
             'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
           ],
         },
@@ -243,7 +243,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
           heading: 'Náklady se potvrzují před zahájením práce',
           paragraphs: [
             'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě. Odeslání žádosti prostřednictvím této stránky je rovněž bezplatné.',
           ],
         },
         {
@@ -256,7 +256,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Proč tato stránka neuvádí sazby',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
+            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Částka stanovená předem by náklady Vaší věci neukázala. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
             'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
           ],
         },
@@ -566,7 +566,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Ellenőrizte Wei Tseng ügyvédnő',
     columnsOriginalLanguageBadge: 'Eredeti nyelv',
     columnsOriginalLanguageNote:
-      'A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalom automatikusan nem kerül fordításra.',
+      'A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalmat automatikusan nem fordítjuk le.',
     imageBandAlt: 'Hagyományos tajvani háromszárnyú udvarház (三合院) és egy modern pavilon nappali fényben',
     videoPauseLabel: 'Videó szüneteltetése',
     videoPlayLabel: 'Videó lejátszása',
@@ -575,11 +575,11 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
   pages: {
     home: {
       eyebrow: 'TÁJÉKOZTATÁS',
-      title: 'Jogi szolgáltatások Tajvanon — magyar nyelvű tájékoztatás',
+      title: 'Jogi szolgáltatások Tajvanon – magyar nyelvű tájékoztatás',
       description:
         'Általános magyar nyelvű ismertetés a Hovering International Law Firm tajvani munkájának köréről, a tanácsadás nyelveiről és az első kapcsolatfelvételről.',
       intro:
-        'A Hovering International Law Firm külföldi ügyfeleket képvisel és támogat — köztük tajvani kötődésűeket — tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
+        'A Hovering International Law Firm külföldi ügyfeleket képvisel és támogat – köztük tajvani kötődésűeket – tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
       sections: [
         {
           heading: 'Mivel foglalkozunk',
@@ -637,7 +637,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Polgári jogviták és kártérítés',
           paragraphs: [
             'Ez a csoport szerződéses jogvitákat, jogellenes károkozásból eredő kártérítést és fogyasztói jogvitákat foglal magában. A munka rendszerint az események időrendjével, az iratok és a meglévő bizonyítékok áttekintésével kezdődik, és csak ezután következnek a további lépések.',
-            'A menetet a határidők — köztük az elévülés — és a bizonyítékok teljessége szabják meg. Ezért az ismert dátumokat minél előbb adja meg. Őrizze meg a szerződéseket, üzeneteket, fizetési bizonylatokat vagy a helyszínről készült fényképeket, és említse meg őket az első üzenetben.',
+            'A menetet a határidők – köztük az elévülés – és a bizonyítékok teljessége szabják meg. Ezért az ismert dátumokat minél előbb adja meg. Őrizze meg a szerződéseket, üzeneteket, fizetési bizonylatokat vagy a helyszínről készült fényképeket, és említse meg őket az első üzenetben.',
           ],
         },
         {
@@ -658,7 +658,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Büntetőügyek',
           paragraphs: [
             'A nyomozási szakaszban és a bíróság előtt egyaránt képviseljük az ügyfeleket, gyanúsítottakat és vádlottakat éppúgy, mint sértetteket, és vizsgáljuk az üzleti tevékenység büntetőjogi kockázatait.',
-            'A büntetőügyekben gyakran rövidek a határidők, és a szakaszok kötöttek. Ha már kapott iratot a nyomozó hatóságtól vagy a bíróságtól, adja meg időben az iraton szereplő dátumot, hogy a tartalom a megfelelő sorrendben kerüljön vizsgálatra.',
+            'A büntetőügyekben gyakran rövidek a határidők, és a szakaszok kötöttek. Ha már kapott iratot a nyomozó hatóságtól vagy a bíróságtól, adja meg időben az iraton szereplő dátumot, hogy a tartalmat a megfelelő sorrendben tudjuk megvizsgálni.',
           ],
         },
         {
@@ -688,7 +688,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Alapítás és felépítés',
           paragraphs: [
-            'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University-n (國立臺灣大學) végzett ügyvédek. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítása óta követett irányát fejezi ki.',
+            'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban a National Taiwan Universityn (國立臺灣大學) végzett ügyvédek alapították. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítása óta követett irányát fejezi ki.',
             'Irodáink Tajpejben (臺北), Kaohsziungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. A kaohsziungi iroda a vállalatirányításra összpontosít, és polgári, büntető- és közigazgatási jogvitákban jár el. A tajcsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
             'Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonos magánszemélyeknek.',
           ],
@@ -722,7 +722,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
       description:
         'A sorrend ismertetése: előbb a munka terjedelme, majd a költségek megerősítése, és hogy ez az oldal miért nem tartalmaz árlistát.',
       intro:
-        'Ez az oldal azt ismerteti, hogyan alakulnak a költségek, nem pedig azok összegét. Az összeg az adott ügy munkaterjedelmétől függ, és csak akkor mond valamit, ha ez a terjedelem világos.',
+        'Ez az oldal azt ismerteti, hogyan alakulnak a költségek, nem pedig azok összegét. Az összeg az adott ügy munkaterjedelmétől függ, és csak akkor értelmezhető, ha ez a terjedelem világos.',
       sections: [
         {
           heading: 'Először a munka terjedelmét rögzítjük',
@@ -791,7 +791,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Amit ez az oldal nem ígér',
           paragraphs: [
             'Nem ígérünk válaszadási határidőt, ezen az oldalon keresztül nem erősítünk meg időpontot, nem ígérünk meghatározott ügyvédet, és tolmácsot sem biztosítunk. Az írásbeli fordítás más kérdés: az üzenetét automatikusan nem fordítjuk le.',
-            'Ha megkeresést küld, a tartalom megőrzésre kerül, és vizsgálatra vár. Ha egy idő után nem kap választ, újra írhat a kapcsolatfelvételi oldalon megadott e-mail-címre.',
+            'Ha megkeresést küld, a tartalmát megőrizzük, és az vizsgálatra vár. Ha egy idő után nem kap választ, újra írhat a kapcsolatfelvételi oldalon megadott e-mail-címre.',
           ],
         },
       ],
@@ -807,7 +807,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hogyan használja ezt a részt',
           paragraphs: [
-            'Ha nem talál választ a saját helyzetére, a válasz rendszerint az ügy konkrét tényeitől függ. Ezeket írja bele az összefoglalóba ahelyett, hogy ebből az oldalból következtetne rájuk.',
+            'Ha nem talál választ a saját helyzetére, a válasz rendszerint az ügy konkrét tényeitől függ. Ezeket a tényeket írja bele az összefoglalóba, ahelyett hogy a választ vezetné le ebből az oldalból.',
           ],
         },
       ],
@@ -895,14 +895,14 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'A felhasználás célja',
           paragraphs: [
-            'Az elküldött adatok a megkeresés vizsgálatát, az Önnek adott választ, a kommunikáció módjának tisztázását és — ha a munkát elvállaljuk — az ügyintézést szolgálják.',
+            'Az elküldött adatok a megkeresés vizsgálatát, az Önnek adott választ, a kommunikáció módjának tisztázását és – ha a munkát elvállaljuk – az ügyintézést szolgálják.',
             'Az adatokat külön hozzájárulás nélkül nem használjuk marketingre.',
           ],
         },
         {
           heading: 'Értesítés és iktatószám',
           paragraphs: [
-            'Ha a megkeresés sikeresen elküldésre kerül, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.',
+            'Ha a megkeresés elküldése sikerül, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.',
             'Az iktatószám a megkeresés visszakeresésére szolgál a nyilvántartásunkban. A mentés után jelenik meg; új kapcsolatfelvételkor megadhatja.',
           ],
         },
@@ -926,9 +926,9 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'JOGI KÖZLEMÉNY',
       title: 'Az oldalon szereplő tájékoztatás köre és korlátai',
       description:
-        'A tájékoztatás általános jellege, a jogi keret, és az ügyvéd–ügyfél viszony létrejöttének feltételei.',
+        'A tájékoztatás általános jellege, a jogi keret és az ügyvéd–ügyfél viszony létrejöttének feltételei.',
       intro:
-        'Ez a rész tisztázza, mit tudnak ezek a magyar tájékoztató oldalak megtenni Önért, és mit nem.',
+        'Ez a rész tisztázza, mire jók ezek a magyar tájékoztató oldalak, és mire nem.',
       sections: [
         {
           heading: 'Csak általános tájékoztatás',
@@ -969,7 +969,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         'Az iroda cikkeket tesz közzé a tajvani jog gyakori kérdéseiről. A magyarul elérhető cikkek ezen az oldalon vannak; mellettük négy hivatkozás található, amelyek egy-egy eredeti nyelvű cikklistát nyitnak meg.',
       sections: [
         {
-          heading: 'Négy lista nyelvenként',
+          heading: 'Négy lista, nyelvek szerint',
           paragraphs: [
             'Ez a rész négy hivatkozást tartalmaz: a koreai, a kínai, az angol és a japán nyelvű cikkek listáját. Mindegyik hivatkozás megjelöli a lista nyelvét, így előre tudja, milyen nyelven nyílik meg a tartalom.',
             'Ez a négy lista a cikkek eredeti nyelve szerinti lista, nem a fordításoké. A magyarul elérhető cikkek külön, ezen az oldalon találhatók.',
@@ -1084,7 +1084,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Limba paginii și limba consultanței nu sunt același lucru',
           paragraphs: [
             'Această pagină este scrisă în limba română, dar consultanța cu un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocatul va avea loc în limba română.',
-            'Nu promitem nici un interpret, nici un termen de răspuns și nicio programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
+            'Nu promitem interpret, termen de răspuns sau programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
           ],
         },
         {
@@ -1105,7 +1105,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'De unde să începeți',
           paragraphs: [
             'Citiți pagina „Servicii” pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi „Costuri” și „Contact”, pentru a afla cum se stabilește obiectul mandatului și cum se confirmă onorariile înainte de începerea lucrării.',
-            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă nici o consultanță și nicio programare confirmată.',
+            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă nici consultanță, nici programare confirmată.',
           ],
         },
       ],
@@ -1269,7 +1269,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță',
           paragraphs: [
             'În formularul de contact puteți alege „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
-            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem nici un interpret, nici o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
+            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem interpret și nicio prestație în limba română sau în altă limbă în afara celor patru arătate; nu preluăm orice cauză.',
           ],
         },
         {
@@ -1381,7 +1381,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Locul păstrării și accesul',
           paragraphs: [
             'Conținutul trimiterii dumneavoastră se păstrează într-un loc care nu este accesibil publicului. Numai persoanele autorizate din cabinet au acces la el, pentru soluționarea solicitării.',
-            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; de aceea, documentele sensibile ar trebui trimise abia după o îndrumare anume din partea avocatului.',
+            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu sunt pe deplin sigure; de aceea, documentele sensibile ar trebui trimise abia după o îndrumare anume din partea avocatului.',
           ],
         },
         {
@@ -1463,7 +1463,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Patru liste după limbă',
           paragraphs: [
-            'Această parte cuprinde patru legături: lista articolelor în coreeană, în chineză, în engleză și în japoneză. Fiecare legătură arată limba listei, astfel încât știți dinainte în ce limbă se deschide conținutul.',
+            'Această parte cuprinde patru legături: lista articolelor în coreeană, în chineză, în engleză și în japoneză. Fiecare legătură arată limba listei, astfel încât să știți dinainte în ce limbă se deschide conținutul.',
             'Aceste patru liste sunt liste după limba originală a articolelor, nu liste de traduceri. Articolele disponibile în limba română se află separat, pe această pagină.',
           ],
         },
@@ -1674,7 +1674,7 @@ export const ukrainianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Заснування та структура',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) заснували 2016 року адвокати, які навчалися в National Taiwan University (國立臺灣大學). Китайська назва 昊鼎 поєднує знак 昊 («широке небо») зі знаком 鼎 («міцна основа») й описує спрямування фірми від заснування.',
-            'Ми маємо офіси в містах Тайбей (臺北), Гаосюн (高雄), Тайчжун (臺中) і Піндун (屏東). Офіс у Гаосюні зосереджений на корпоративному управлінні й веде цивільні, кримінальні та адміністративні спори. Офіс у місті Тайчжун веде будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Офіс у місті Піндун відкрито 2017 року для місцевих потреб.',
+            'Ми маємо офіси в містах Тайбей (臺北), Гаосюн (高雄), Тайчжун (臺中) і Піндун (屏東). Офіс у Гаосюні зосереджений на корпоративному управлінні й веде цивільні, кримінальні та адміністративні спори. Офіс у Тайчжуні веде будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Офіс у Піндуні відкрито 2017 року для місцевих потреб.',
             'Крім адвокатської роботи, від 2020 року діє також Hovering Accounting Office, що пропонує бухгалтерський облік і податкове планування підприємцям і заможним приватним особам.',
           ],
         },
@@ -1880,7 +1880,7 @@ export const ukrainianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Мета використання',
           paragraphs: [
-            'Надіслані дані слугують розглядові запиту, відповіді Вам, з’ясуванню способу спілкування та опрацюванню, якщо роботу буде взято.',
+            'Надіслані дані слугують розглядові запиту, відповіді Вам, з’ясуванню способу спілкування та опрацюванню справи, якщо ми візьмемося за неї.',
             'Дані не використовують для маркетингу без окремої згоди.',
           ],
         },
@@ -2048,7 +2048,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Ελέγχθηκε από τη δικηγόρο Wei Tseng',
     columnsOriginalLanguageBadge: 'Γλώσσα πρωτοτύπου',
     columnsOriginalLanguageNote:
-      'Τα ακόλουθα άρθρα δεν είναι ακόμη διαθέσιμα στα ελληνικά. Ο κατάλογος παραμένει στη γλώσσα του πρωτοτύπου και ανοίγει την αντίστοιχη γλωσσική σελίδα· το περιεχόμενο δεν μεταφράζεται αυτόματα.',
+      'Τα ακόλουθα άρθρα δεν είναι ακόμη διαθέσιμα στα ελληνικά. Ο κατάλογος παραμένει στη γλώσσα του πρωτοτύπου και ο σύνδεσμος οδηγεί στη σελίδα της αντίστοιχης γλώσσας· το περιεχόμενο δεν μεταφράζεται αυτόματα.',
     imageBandAlt: 'Παραδοσιακή ταϊβανέζικη αυλή σανχεγιουάν (三合院) και ένα σύγχρονο περίπτερο στο φως της ημέρας',
     videoPauseLabel: 'Παύση του βίντεο',
     videoPlayLabel: 'Αναπαραγωγή του βίντεο',
@@ -2073,7 +2073,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Η γλώσσα της σελίδας και η γλώσσα της συμβουλευτικής δεν ταυτίζονται',
           paragraphs: [
-            'Η σελίδα αυτή είναι γραμμένη στα ελληνικά, αλλά η συμβουλευτική με δικηγόρο διεξάγεται μόνο στις τέσσερις γλώσσες συμβουλευτικής: αγγλικά, κινεζικά (中文), ιαπωνικά και κορεατικά. Η ανάγνωση των πληροφοριών στα ελληνικά δεν σημαίνει ότι η συζήτηση με τη δικηγόρο ή το δικηγόρο θα γίνει στα ελληνικά.',
+            'Η σελίδα αυτή είναι γραμμένη στα ελληνικά, αλλά η συμβουλευτική με δικηγόρο διεξάγεται μόνο στις τέσσερις γλώσσες συμβουλευτικής: αγγλικά, κινεζικά (中文), ιαπωνικά και κορεατικά. Η ανάγνωση των πληροφοριών στα ελληνικά δεν σημαίνει ότι η συζήτηση με δικηγόρο θα γίνει στα ελληνικά.',
             'Δεν υποσχόμαστε ούτε διερμηνέα, ούτε προθεσμία απάντησης, ούτε ραντεβού μέσω αυτής της σελίδας. Αν δεν μιλάτε καμία από τις τέσσερις γλώσσες, η σελίδα «Επικοινωνία» εξηγεί πώς εξετάζουμε έναν τρόπο επικοινωνίας.',
           ],
         },
@@ -2132,7 +2132,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Εργατικές διαφορές',
           paragraphs: [
-            'Η κατηγορία αυτή περιλαμβάνει τη λύση της εργασιακής σχέσης, την αποζημίωση απόλυσης κατά το δίκαιο της Ταϊβάν (資遣費· δεν εξομοιώνεται με αντίστοιχους θεσμούς άλλων κρατών), τις αποδοχές και τις διαφορές από τη σύμβαση εργασίας (勞動契約), τόσο από την πλευρά του εργαζομένου όσο και από την πλευρά του εργοδότη. Κατά την εξέταση διακρίνουμε το λόγο της λύσης από τα ζητήματα προειδοποίησης, καταβολής και προθεσμιών.',
+            'Η κατηγορία αυτή περιλαμβάνει τη λύση της εργασιακής σχέσης, την αποζημίωση απόλυσης κατά το δίκαιο της Ταϊβάν (資遣費· δεν εξομοιώνεται με αντίστοιχους θεσμούς άλλων κρατών), τις αποδοχές και τις διαφορές από τη σύμβαση εργασίας (勞動契約), τόσο από την πλευρά του εργαζομένου όσο και από την πλευρά του εργοδότη. Κατά την εξέταση διακρίνουμε τον λόγο της λύσης από τα ζητήματα προειδοποίησης, καταβολής και προθεσμιών.',
             'Καθοριστικά έγγραφα είναι συνήθως η σύμβαση εργασίας, ο εσωτερικός κανονισμός (工作規則), οι μισθοδοτικές καταστάσεις και η αλληλογραφία των μερών. Αν τα διατηρείτε ακόμη, αναφέρετέ το στην περίληψη.',
           ],
         },
@@ -2165,12 +2165,12 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
       description:
         'Βασικά στοιχεία για αυτό το ταϊβανέζικο δικηγορικό γραφείο, για τα γραφεία του και για την εργασία με αλλοδαπά μέρη.',
       intro:
-        'Η Hovering International Law Firm είναι δικηγορικό γραφείο στην Ταϊβάν. Οι δικηγόροι εργάζονται από τη συμβουλευτική επιχειρήσεων έως τη δίκη. Η σελίδα αυτή περιγράφει τη δημιουργία του γραφείου, τις έδρες και την εργασία με αλλοδαπά μέρη.',
+        'Η Hovering International Law Firm είναι δικηγορικό γραφείο στην Ταϊβάν. Οι δικηγόροι μας συμβουλεύουν επιχειρήσεις και τις εκπροσωπούν στο δικαστήριο. Η σελίδα αυτή περιγράφει την ίδρυση του γραφείου, τα γραφεία του και την εργασία με αλλοδαπά μέρη.',
       sections: [
         {
           heading: 'Ίδρυση και δομή',
           paragraphs: [
-            'Η Hovering International Law Firm (昊鼎國際法律事務所) ιδρύθηκε το 2016 από δικηγόρους που σπούδασαν στο National Taiwan University (國立臺灣大學). Η κινεζική ονομασία 昊鼎 συνδέει το χαρακτήρα 昊 («πλατύς ουρανός») με το χαρακτήρα 鼎 («στέρεο θεμέλιο») και περιγράφει τον προσανατολισμό του γραφείου από την ίδρυσή του.',
+            'Η Hovering International Law Firm (昊鼎國際法律事務所) ιδρύθηκε το 2016 από δικηγόρους που σπούδασαν στο National Taiwan University (國立臺灣大學). Η κινεζική ονομασία 昊鼎 συνδέει τον χαρακτήρα 昊 («πλατύς ουρανός») με τον χαρακτήρα 鼎 («στέρεο θεμέλιο») και περιγράφει τον προσανατολισμό του γραφείου από την ίδρυσή του.',
             'Διατηρούμε γραφεία στην Ταϊπέι (臺北), στο Καοσιούνγκ (高雄), στο Ταϊτσούνγκ (臺中) και στο Πινγκτούνγκ (屏東). Το γραφείο στο Καοσιούνγκ εστιάζει σε θέματα εταιρικής διοίκησης και χειρίζεται αστικές, ποινικές και διοικητικές διαφορές. Το γραφείο στο Ταϊτσούνγκ χειρίζεται υποθέσεις κατασκευών, διανοητικής ιδιοκτησίας και υποθέσεις με δεσμό προς την Κορέα και την Ιαπωνία. Το γραφείο στο Πινγκτούνγκ άνοιξε το 2017 για τις τοπικές ανάγκες.',
             'Πέρα από τη δικηγορική εργασία λειτουργεί από το 2020 και το Hovering Accounting Office, που προσφέρει λογιστική και φορολογικό σχεδιασμό σε επιχειρηματίες και σε ιδιώτες με περιουσία.',
           ],
@@ -2247,7 +2247,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Τρία πράγματα που πρέπει να μένουν χωριστά',
           paragraphs: [
-            'Η γλώσσα εμφάνισης της σελίδας, η γλώσσα της συμβουλευτικής με τη δικηγόρο ή το δικηγόρο και η γλώσσα στην οποία γράφετε είναι τρία διαφορετικά πράγματα.',
+            'Η γλώσσα εμφάνισης της σελίδας, η γλώσσα της συμβουλευτικής με δικηγόρο και η γλώσσα στην οποία γράφετε είναι τρία διαφορετικά πράγματα.',
           ],
           items: [
             'Γλώσσα της σελίδας: οι πληροφορίες αυτές είναι γραμμένες στα ελληνικά.',
@@ -2272,7 +2272,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Τι δεν υπόσχεται η σελίδα αυτή',
           paragraphs: [
-            'Δεν υποσχόμαστε προθεσμία απάντησης, δεν επιβεβαιώνουμε ραντεβού μέσω αυτής της σελίδας, δεν υποσχόμαστε συγκεκριμένη δικηγόρο ή συγκεκριμένο δικηγόρο και δεν παρέχουμε διερμηνέα. Η γραπτή μετάφραση είναι άλλο ζήτημα: το μήνυμά σας δεν μεταφράζεται αυτόματα.',
+            'Δεν υποσχόμαστε προθεσμία απάντησης, δεν επιβεβαιώνουμε ραντεβού μέσω αυτής της σελίδας, δεν υποσχόμαστε συγκεκριμένο δικηγόρο και δεν παρέχουμε διερμηνέα. Η γραπτή μετάφραση είναι άλλο ζήτημα: το μήνυμά σας δεν μεταφράζεται αυτόματα.',
             'Αν στείλετε αίτημα, το περιεχόμενο διατηρείται και αναμένει εξέταση. Αν μετά από κάποιο διάστημα δεν λάβετε απάντηση, μπορείτε να γράψετε ξανά στη διεύθυνση ηλεκτρονικού ταχυδρομείου που αναφέρεται στη σελίδα επικοινωνίας.',
           ],
         },
@@ -2363,21 +2363,21 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Το πρωτότυπο κείμενο διατηρείται αμετάβλητο',
           paragraphs: [
-            'Το κείμενό σας διατηρείται ακριβώς όπως το γράψατε και δεν μεταφράζεται αυτόματα. Αν για το χειρισμό χρειάζεται μετάφραση, αυτό συζητείται μαζί σας χωριστά.',
+            'Το κείμενό σας διατηρείται ακριβώς όπως το γράψατε και δεν μεταφράζεται αυτόματα. Αν για τον χειρισμό χρειάζεται μετάφραση, αυτό συζητείται μαζί σας χωριστά.',
             'Επειδή το πρωτότυπο κείμενο διατηρείται, στο αρχικό στάδιο μη γράφετε ό,τι δεν είναι ακόμη απαραίτητο, για παράδειγμα τον αριθμό διαβατηρίου, τον αριθμό ταυτότητας ή στοιχεία λογαριασμού.',
           ],
         },
         {
           heading: 'Χώρος αποθήκευσης και πρόσβαση',
           paragraphs: [
-            'Το περιεχόμενο της αποστολής σας αποθηκεύεται σε χώρο που δεν είναι προσβάσιμος στο κοινό. Πρόσβαση έχουν μόνο εξουσιοδοτημένα πρόσωπα του γραφείου, για το χειρισμό του αιτήματος.',
+            'Το περιεχόμενο της αποστολής σας αποθηκεύεται σε χώρο που δεν είναι προσβάσιμος στο κοινό. Πρόσβαση έχουν μόνο εξουσιοδοτημένα πρόσωπα του γραφείου, για τον χειρισμό του αιτήματος.',
             'Η σελίδα αυτή δεν δίνει απόλυτη εγγύηση ασφάλειας. Κανένα μέσο μετάδοσης και κανένας χώρος αποθήκευσης δεν είναι απολύτως ασφαλής· τα ευαίσθητα έγγραφα θα πρέπει επομένως να αποστέλλονται μόνο μετά από ειδική οδηγία της δικηγόρου ή του δικηγόρου.',
           ],
         },
         {
           heading: 'Σκοπός της χρήσης',
           paragraphs: [
-            'Τα δεδομένα που στέλνονται χρησιμεύουν στην εξέταση του αιτήματος, στην απάντηση προς εσάς, στην αποσαφήνιση του τρόπου επικοινωνίας και στο χειρισμό, αν η εργασία αναληφθεί.',
+            'Τα δεδομένα που στέλνονται χρησιμεύουν στην εξέταση του αιτήματος, στην απάντηση προς εσάς, στην αποσαφήνιση του τρόπου επικοινωνίας και στον χειρισμό, αν η εργασία αναληφθεί.',
             'Τα δεδομένα δεν χρησιμοποιούνται για εμπορική προώθηση χωρίς χωριστή συγκατάθεση.',
           ],
         },
@@ -2446,7 +2446,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ΑΡΘΡΑ',
       title: 'Άρθρα για το δίκαιο της Ταϊβάν',
       description:
-        'Άρθρα στα ελληνικά για συχνά ερωτήματα του δικαίου της Ταϊβάν. Το περιεχόμενο είναι γενική ενημέρωση κατά το χρόνο της δημοσίευσης, όχι νομική συμβουλή για τη δική σας υπόθεση.',
+        'Άρθρα στα ελληνικά για συχνά ερωτήματα του δικαίου της Ταϊβάν. Το περιεχόμενο είναι γενική ενημέρωση κατά τον χρόνο της δημοσίευσης, όχι νομική συμβουλή για τη δική σας υπόθεση.',
       intro:
         'Το γραφείο δημοσιεύει άρθρα για συχνά ερωτήματα του δικαίου της Ταϊβάν. Τα άρθρα που είναι διαθέσιμα στα ελληνικά βρίσκονται σε αυτή τη σελίδα· δίπλα υπάρχουν τέσσερις σύνδεσμοι, καθένας από τους οποίους ανοίγει τον κατάλογο άρθρων μιας γλώσσας πρωτοτύπου.',
       sections: [
@@ -2467,7 +2467,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Σε ποιον βαθμό ένα άρθρο μπορεί να χρησιμεύσει ως προσανατολισμός',
           paragraphs: [
-            'Τα άρθρα είναι γενικές πληροφορίες κατά το χρόνο της δημοσίευσης. Οι κανόνες και η εφαρμογή τους μπορεί να μεταβληθούν, και ένα άρθρο δεν καλύπτει όλες τις περιστάσεις της υπόθεσής σας.',
+            'Τα άρθρα είναι γενικές πληροφορίες κατά τον χρόνο της δημοσίευσης. Οι κανόνες και η εφαρμογή τους μπορεί να μεταβληθούν, και ένα άρθρο δεν καλύπτει όλες τις περιστάσεις της υπόθεσής σας.',
             'Γι’ αυτό μην προβαίνετε σε ενέργειες για πραγματική υπόθεση στηριζόμενοι μόνο σε ένα άρθρο. Χρησιμοποιήστε το για τη γενική εικόνα και συζητήστε τα έγγραφά σας χωριστά με δικηγόρο· η σελίδα αυτή δεν αποτελεί συμβουλευτική.',
           ],
         },
@@ -2811,7 +2811,7 @@ export const hebrewGuidanceContent: GuidanceLocaleContent = {
             'לא. מידע זה כתוב בעברית, אך הייעוץ עם עורכת דין או עורך דין מתקיים רק באנגלית, בסינית (中文), ביפנית ובקוריאנית. גם מתורגמן איננו מבטיחים. תרגום בכתב הוא עניין אחר: הטקסט המקורי שאתם כותבים נשמר כפי שהוא ואינו מתורגם אוטומטית.',
         },
         {
-          question: 'מה לעשות אם אינכם יכולים להשתמש באף אחת מארבע השפות?',
+          question: 'מה לעשות אם איני יכול או יכולה להשתמש באף אחת מארבע השפות?',
           answer:
             'בשליחת הפנייה בחרו "יש לאשר את דרך התקשורת". אנו משיבים כדי לבחון דרך תקשורת, אך שירות בשפה אחרת אינו מובטח. זהו צעד בדיקה, ולא הבטחה שנוכל לעבוד בשפה אחרת.',
         },

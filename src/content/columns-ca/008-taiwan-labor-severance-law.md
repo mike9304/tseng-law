@@ -8,8 +8,8 @@ categories:
   - "Informació jurídica de Taiwan"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
-  - q: "A Taiwan, percep indemnització per acomiadament el treballador que dimiteix de forma voluntària?"
-    a: "No. A diferència d’alguns ordenaments (Corea, per exemple), a Taiwan l’obligació de pagar la indemnització per acomiadament (資遣費) només neix quan l’empresa acomiada el treballador; si el treballador dimiteix de forma voluntària, l’empresa no l’ha de pagar."
+  - q: "A Taiwan, percep indemnització per acomiadament el treballador que dimiteix voluntàriament?"
+    a: "No. A diferència d’alguns ordenaments (Corea, per exemple), a Taiwan l’obligació de pagar la indemnització per acomiadament (資遣費) només neix quan l’empresa acomiada el treballador; si el treballador dimiteix voluntàriament, l’empresa no l’ha de pagar."
   - q: "En cas d’acomiadament disciplinari, l’empresa ha de pagar igualment la indemnització per acomiadament?"
     a: "No. Si el treballador comet un acte il·lícit, infringeix les normes de l’empresa o falta a la feina sense causa justificada durant 3 dies consecutius (article 12 de la Llei de normes laborals, 勞動基準法第12條), l’empresa pot acomiadar sense preavís i no està obligada a pagar la indemnització per acomiadament. En canvi, l’acomiadament econòmic (article 11) exigeix preavís i el pagament de la indemnització per acomiadament."
   - q: "Com es calcula la indemnització per acomiadament a Taiwan?"
@@ -30,11 +30,11 @@ Potser aquest punt ja li resulta conegut.
 
 En alguns ordenaments —Corea n’és un exemple assenyalat— l’empresa ha de pagar, per regla general, una indemnització quan el treballador cessa.
 
-Taiwan, en canvi, és distint.
+Taiwan, en canvi, és diferent.
 
 Només genera l’obligació de pagar la indemnització per acomiadament quan l’empresa acomiada el treballador.
 
-Si el treballador dimiteix de forma voluntària, l’empresa no ha de pagar la indemnització per acomiadament.
+Si el treballador dimiteix de manera voluntària, l’empresa no ha de pagar la indemnització per acomiadament.
 
 ​
 
@@ -58,7 +58,7 @@ Li ho resumeixo en una taula senzilla.
 | Preavís | Necessari | No necessari | Necessari |
 | Càrrega de justificació de l’empresa | Alta | Molt alta | No escau |
 | Si l’empresa ha de pagar la indemnització per acomiadament (資遣費) | Necessari | No necessari | No necessari |
-|  | Article 11 de la Llei de normes laborals de Taiwan (勞動基準法第11條): Llevat que es produeixi una de les situacions següents, l’ocupador no pot posar fi al contracte de treball encara que notifiqui prèviament el treballador.  1. Cessament d’activitat (歇業) o transmissió de l’empresa (轉讓)  2. Pèrdues (虧損) o contracció de l’activitat (業務緊縮)  3. Força major que exigeix suspendre l’activitat durant 1 mes o més  4. La naturalesa del negoci exigeix reduir personal i el treballador acomiadat no es pot reubicar en un altre lloc adequat  5. Un treballador determinat no pot exercir de forma satisfactòria la feina que exigeix el lloc | Article 12 de la Llei de normes laborals de Taiwan (勞動基準法第12條): L’ocupador pot acomiadar sense preavís si el treballador es troba en un dels casos següents.  1. Qui, en celebrar el contracte de treball, facilita informació falsa i indueix a error l’ocupador, amb risc de danyar el negoci  2. Qui exerceix violència o dirigeix un insult greu a l’ocupador, a un familiar de l’ocupador, al representant de l’ocupador o a altres companys  3. Qui té una condemna ferma a pena de presó (有期徒刑) o superior, sense suspensió de la pena (緩刑) i sense que s’hagi autoritzat la conversió en multa (易科罰金)  4. Infracció greu del contracte de treball o del reglament intern  5. Qui, de forma intencionada, consumeix o destrueix màquines, eines, matèries primeres, productes o altres béns de l’ocupador, o revela de forma intencionada secrets tècnics o comercials de l’ocupador, causant dany a l’ocupador  6. Falta injustificada a la feina durant 3 dies consecutius, o 6 dies o més en un mes |  |
+|  | Article 11 de la Llei de normes laborals de Taiwan (勞動基準法第11條): Llevat que es produeixi una de les situacions següents, l’ocupador no pot posar fi al contracte de treball encara que notifiqui prèviament el treballador.  1. Cessament d’activitat (歇業) o transmissió de l’empresa (轉讓)  2. Pèrdues (虧損) o contracció de l’activitat (業務緊縮)  3. Força major que exigeix suspendre l’activitat durant 1 mes o més  4. La naturalesa del negoci exigeix reduir personal i el treballador acomiadat no es pot reubicar en un altre lloc adequat  5. Un treballador determinat no pot exercir satisfactòriament la feina que exigeix el lloc | Article 12 de la Llei de normes laborals de Taiwan (勞動基準法第12條): L’ocupador pot acomiadar sense preavís si el treballador es troba en un dels casos següents.  1. Qui, en celebrar el contracte de treball, facilita informació falsa i indueix a error l’ocupador, amb risc de danyar el negoci  2. Qui exerceix violència o dirigeix un insult greu a l’ocupador, a un familiar de l’ocupador, al representant de l’ocupador o a altres companys  3. Qui té una condemna ferma a pena de presó (有期徒刑) o superior, sense suspensió de la pena (緩刑) i sense que s’hagi autoritzat la conversió en multa (易科罰金)  4. Infracció greu del contracte de treball o del reglament intern  5. Qui, intencionadament, consumeix o destrueix màquines, eines, matèries primeres, productes o altres béns de l’ocupador, o revela intencionadament secrets tècnics o comercials de l’ocupador, causant dany a l’ocupador  6. Falta injustificada a la feina durant 3 dies consecutius, o 6 dies o més en un mes |  |
 
 > A Taiwan, cada vegada que el treballador completi 1 any d’antiguitat (年資),
 > l’ocupador ha de pagar com a indemnització per acomiadament 0,5 mesos del salari mitjà (平均工資).
@@ -70,11 +70,11 @@ Si el salari del treballador és alt i ha completat una certa antiguitat, la xif
 
 La indemnització per acomiadament també és relativament elevada.
 
-En aquell moment, algunes empreses de Taiwan de mala fe volen evitar una indemnització per acomiadament alta.
+En aquests casos, algunes empreses de Taiwan de mala fe volen evitar una indemnització per acomiadament alta.
 
 Utilitzen diversos mitjans.
 
-Ho fan perquè el treballador dimiteixi de forma voluntària.
+Ho fan perquè el treballador dimiteixi voluntàriament.
 
 El treballador ha de tenir cura.
 
@@ -84,15 +84,15 @@ No s’ha de deixar portar per la intenció de l’empresa.
 
 Li explicaré un assumpte que vaig tramitar.
 
-Hi ha una empresa A famosa, amb sucursals a tot Taiwan.
+L’empresa A és molt coneguda i té sucursals arreu de Taiwan.
 
-Per alguna raó es va canviar el gestor.
+Per alguna raó es va canviar el director.
 
-El nou gestor, tan bon punt va prendre possessió, va canviar el rumb.
+El nou director, tot just incorporar-se, va canviar el rumb.
 
 Volia reduir els costos de personal de l’empresa.
 
-Va començar a cridar un per un els treballadors d’alt salari i llarga antiguitat per entrevistar-los.
+Va començar a convocar un per un els treballadors d’alt salari i llarga antiguitat per parlar-hi.
 
 El meu client, el senyor B, era un treballador amb més de 10 anys a l’empresa A.
 
@@ -104,9 +104,9 @@ L’empresa el va prendre com a objectiu.
 
 ​
 
-Un dia, un alt càrrec de l’empresa va cridar B a una entrevista.
+Un dia, un alt càrrec de l’empresa va convocar B a una reunió.
 
-De cop va començar a retreure-li quant deixava de treballar amb diligència.
+De cop li va començar a retreure que no treballava amb prou diligència.
 
 Com que l’empresa travessava dificultats, va demanar un sacrifici.
 
@@ -120,7 +120,7 @@ Li va donar un full A4.
 
 Li va indicar que hi escrivís:
 
-«Jo, [nom], rebaixaré de forma voluntària el càrrec i el salari».
+«Jo, [nom], rebaixaré voluntàriament el càrrec i el salari».
 
 I va dir que mostraria aquest acord a tots els altres treballadors.
 
@@ -154,11 +154,11 @@ Va rebaixar el salari de molts treballadors d’alt rang.
 
 Alguns treballadors no van suportar aquell tracte.
 
-Van dimitir de forma voluntària.
+Van dimitir de manera voluntària.
 
 ​
 
-Però B, després del canvi de gestor, ja desconfiava.
+Però B, després del canvi de director, ja desconfiava.
 
 Es va adonar que l’empresa pretenia fer sortir els treballadors per mitjans indeguts.
 
@@ -166,13 +166,13 @@ Ho pretenia de bon començament.
 
 Va descobrir que es publicaven anuncis de feina fins i tot abans que el treballador se n’anés.
 
-El dia en què B va entrar a l’entrevista, va prendre una precaució.
+El dia en què B va entrar a la reunió, va prendre una precaució.
 
 Va gravar tot el procés amb el telèfon mòbil.
 
-Així va poder provar que B no havia dimitit de forma voluntària.
+Així va poder provar que B no havia dimitit voluntàriament.
 
-Per això, amb l’ajuda posterior d’una advocada, el dret es va poder fer valer.
+Per això, més tard, amb l’ajuda d’una advocada, B va poder fer valer els seus drets.
 
 Va poder veure reconegut el dret a la indemnització per acomiadament prevista en la llei, a partir de les proves reunides.
 
@@ -208,15 +208,15 @@ O destina el treballador a un lloc estrany.
 
 ​
 
-Si es treballa a Taiwan, el cobrament no és senzill.
+Si vostè treballa a Taiwan, tingui present una cosa.
 
-La indemnització per acomiadament és més difícil de cobrar del que es pensa.
+Cobrar la indemnització per acomiadament és més difícil del que es pensa.
 
 No transigeixi amb facilitat amb l’empresa.
 
-Vigili que l’empresa no l’acomiadi de forma indeguda.
+Vigili que l’empresa no l’acomiadi indegudament.
 
-Vigili també que no el faci dimitir de forma voluntària.
+Vigili també que no el faci dimitir voluntàriament.
 
 La indemnització per acomiadament és un dret legal del treballador.
 

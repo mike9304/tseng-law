@@ -28,7 +28,7 @@ Tekst objašnjava kada pravo na zakonsku otpremninu nastaje, a kada ne.
 
 Uređenje se od države do države razlikuje.
 
-U nekim pravnim poredcima, na primjer u Koreji, društvo mora isplatiti zakonsku otpremninu pa i kada radnik sam ode
+U nekim pravnim poredcima, na primjer u Koreji, društvo mora isplatiti zakonsku otpremninu pa i kada radnik sam ode.
 
 Na Tajvanu je drukčije:
 
@@ -78,13 +78,13 @@ i navode radnike na dobrovoljni odlazak.
 
 Radnici moraju biti oprezni
 
-i paziti da ne padnu u namjeru društva.
+i paziti da ne nasjednu na namjeru društva.
 
 ​
 
 Sljedeći je predmet ured doista vodio.
 
-Postoji društvo A, poznato, s poslovnicama diljem Tajvana.
+Riječ je o poznatom društvu A koje ima poslovnice diljem Tajvana.
 
 Iz nekog se razloga promijenilo vodstvo,
 
@@ -92,7 +92,7 @@ a novi je voditelj odmah po stupanju na dužnost,
 
 kako bi smanjio troškove osoblja,
 
-počeo redom pozivati dobro plaćene i dugogodišnje radnike na razgovore
+počeo redom pozivati dobro plaćene i dugogodišnje radnike na razgovore.
 
 Klijent, g. B, bio je u društvu A zaposlen više od 10 godina
 
@@ -100,17 +100,17 @@ i trgovac s najboljim rezultatom u središnjoj regiji Tajvana.
 
 Budući da su plaća i nagrade bile vrlo visoke,
 
-društvo je uzelo g. B za cilj.
+društvo je g. B uzelo na nišan.
 
 ​
 
 Jednoga dana viši je rukovoditelj pozvao g. B na razgovor
 
-i iznenada mu počeo prigovarati da ne radi savjesno.
+i iznenada mu počeo prigovarati da ne radi savjesno,
 
 rekavši da društvo ima teškoće,
 
-g. B bi se trebao žrtvovati i dati primjer
+da bi se g. B trebao žrtvovati i dati primjer
 
 te smanjiti plaću i dužnost.
 
@@ -118,7 +118,7 @@ Inače bi g. B trebao napustiti društvo;
 
 predali su g. B list formata A4
 
-i naložili mu da na nj napiše: „Ja, [ime i prezime], dobrovoljno pristajem na nižu dužnost i plaću“
+i naložili mu da na nj napiše: „Ja, [ime i prezime], dobrovoljno pristajem na nižu dužnost i plaću”
 
 kao sadržaj.
 
@@ -128,7 +128,7 @@ kako bi ih slijedili.
 
 ​
 
-B je bio radnik s najboljim rezultatom u središnjoj regiji Tajvana,
+G. B bio je radnik s najboljim rezultatom u središnjoj regiji Tajvana,
 
 donio je društvu mnogo novca
 
@@ -136,11 +136,11 @@ i radio je svaki dan savjesno,
 
 stoga je te nerazumne zahtjeve odlučno odbio.
 
-B je odbio to napisati,
+G. B odbio je to napisati,
 
-a rukovoditelj društva mu je napokon u gnjevu rekao neka ode.
+a rukovoditelj društva mu je naposljetku u gnjevu rekao neka ode.
 
-B je napustio, s osjećajem nepravde i tuge,
+G. B napustio je, s osjećajem nepravde i tuge,
 
 društvo u kojem je bio 10 godina,
 
@@ -148,25 +148,25 @@ i nakon toga više nije dolazio na rad.
 
 ​
 
-Istim je načinom društvo
+Na isti je način društvo
 
-smanjilo plaće mnogim rukovodećim radnicima
+smanjilo plaće mnogim rukovodećim radnicima,
 
 a dio radnika to postupanje nije podnio
 
-i sam je otišao
+i sam je otišao.
 
 ​
 
-B je međutim nakon promjene vodstva
+G. B je međutim nakon promjene vodstva
 
 prepoznao da društvo želi uklanjati radnike neprikladnim načinom,
 
-i to je spoznao rano
+a to je shvatio rano
 
-i jer je već otkrio oglase za rad prije odlaska radnika,
+jer je već prije odlaska drugih radnika primijetio oglase za posao.
 
-B je na dan kada je otišao na razgovor
+G. B je na dan kada je otišao na razgovor
 
 snimio cijeli tijek mobilnim telefonom
 
@@ -180,7 +180,7 @@ ostali radnici koji su otišli bez dokaza nisu ostvarili isti zahtjev.
 
 ​
 
-Jer takvih je slučajeva mnogo,
+Budući da je takvih slučajeva mnogo,
 
 treba čuvati dokaze,
 
@@ -200,7 +200,7 @@ ili premješta radnike na čudna mjesta,
 
 **evidencije prekovremenog rada, evidencije rezultata,**
 
-**radna pravila, e-poštnu korespondenciju sa suradnicima i nadređenima**
+**radna pravila, korespondenciju e-poštom sa suradnicima i nadređenima**
 
 **i snimke razgovora s nadređenima —**
 

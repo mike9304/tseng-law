@@ -69,7 +69,7 @@ Sesetengah bank boleh mengenakan keperluan tambahan, contohnya tempoh penggunaan
 
 **5. Bolehkah syarikat menggaji pekerja warganegara asing?**
 
-A. Pekerja pertama: permohonan dikemukakan sebagai kerja pengurusan dalam perniagaan pelaburan biasa orang Cina perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria “kerja khusus atau teknikal” (專門性或技術性工作) pada titik B di bawah tidak terpakai, tetapi terpakai syarat penerima, khususnya pengurus (經理人) syarikat yang modal orang Cina perantauan atau orang asing melebihi 1/3, serta syarat prestasi majikan mengenai modal dan perolehan (perkara 38 dan 39 standard semakan).
+A. Pekerja pertama: permohonan dikemukakan sebagai kerja pengurusan dalam perniagaan pelaburan biasa orang Cina perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria “kerja khusus atau teknikal” (專門性或技術性工作) pada titik B di bawah tidak terpakai, tetapi terpakai syarat penerima, khususnya pengurus (經理人) syarikat yang modal orang Cina perantauan atau orang asing melebihi 1/3, serta syarat prestasi majikan mengenai modal dan perolehan (perkara 38 dan 39 Standard Semakan (審查標準)).
 
 B. Mulai pekerja berikutnya, terdapat had: jika bilangan pekerja yang digaji melebihi 1 orang, pendidikan dan pengalaman relevan pekerja, peraturan upah purata penggajian serta peraturan modal dan perolehan syarikat dirawat selaras dengan “kerja khusus atau teknikal” (專門性或技術性工作).
 

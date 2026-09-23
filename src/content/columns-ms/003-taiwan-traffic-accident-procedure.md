@@ -53,11 +53,11 @@ Dari segi sivil, menurut perkara 217 Kanun Sivil, jika orang yang cedera mempuny
 
 Kepakaran (鑑定) atau jadual analisis awal boleh menjadi dokumen penting, tetapi ia tidak mengikat mahkamah secara mekanikal. Mahkamah meneliti keseluruhan bukti, termasuk pernyataan, imej dan keadaan kenderaan.
 
-## Q5. Apa yang perlu dimasukkan dalam akta perdamaian?
+## Q5. Apa yang perlu dimasukkan dalam dokumen perdamaian?
 
-Dalam akta perdamaian (和解書), patut diperincikan tarikh, tempat dan pihak kemalangan, dan direkod jumlah serta saat bayaran, rawatan faedah insurans, tuntutan yang termasuk dan yang dikhaskan. Perlu juga ditetapkan dengan jelas rawatan masa depan, kecederaan yang dikesan kemudian, penyerahan dokumen seperti perakuan perubatan (診斷證明書) dan hubungan antara bayaran dan penarikan aduan.
+Dalam dokumen perdamaian (和解書), patut diperincikan tarikh, tempat dan pihak kemalangan, dan direkod jumlah serta saat bayaran, rawatan faedah insurans, tuntutan yang termasuk dan yang dikhaskan. Perlu juga ditetapkan dengan jelas rawatan masa depan, kecederaan yang dikesan kemudian, penyerahan dokumen seperti perakuan perubatan (診斷證明書) dan hubungan antara bayaran dan penarikan aduan.
 
-Perdamaian (和解) perkara 736 Kanun Sivil ialah kontrak yang pihak gunakan untuk berkompromi secara timbal balik untuk menamatkan pertikaian atau mengelakkannya. Menurut perkara 737 Kanun Sivil, skop yang hak terhapus dinilai juga hanya dalam had apa yang ditinggalkan dalam akta perdamaian. Maka jangan ditegaskan, tanpa meneliti teks, bahawa semua tuntutan masa depan hilang.
+Perdamaian (和解) perkara 736 Kanun Sivil ialah kontrak yang pihak gunakan untuk berkompromi secara timbal balik untuk menamatkan pertikaian atau mengelakkannya. Menurut perkara 737 Kanun Sivil, skop yang hak terhapus dinilai juga hanya dalam had apa yang ditinggalkan dalam dokumen perdamaian. Maka jangan ditegaskan, tanpa meneliti teks, bahawa semua tuntutan masa depan hilang.
 
 Jika ia kesalahan yang didakwa atas aduan, menurut perkara 238 Kanun Tatacara Jenayah aduan boleh ditarik hingga sebelum penutupan hujah lisan peringkat pertama, dan setelah ditarik ia tidak boleh difailkan semula. Namun, dalam kesalahan yang tidak didakwa atas aduan, pendakwaan tidak tamat secara automatik dengan perdamaian peribadi, dan hakikat telah berdamai tidak sentiasa mewajibkan menarik aduan.
 
@@ -91,7 +91,7 @@ Jika tidak bersetuju dengan pendapat pakar itu, semakan semula boleh dipohon, te
 
 ## Q7. Kerosakan apa yang boleh dituntut selepas kemalangan?
 
-Tuntutan berdasarkan perkara 184 Kanun Sivil mengandaikan pelanggaran haram terhadap hak, kaitan sebab dengan kemalangan dan bukti kerosakan. Hakikat kemalangan berlaku semata-mata tidak bermakna semua pos berikut diakui. Perkara 216 Kanun Sivil ialah kriteria untuk menentukan skop kerosakan sebenar dan kehilangan keuntungan (所失利益).
+Tuntutan berdasarkan perkara 184 Kanun Sivil mengandaikan pelanggaran haram terhadap hak, kaitan sebab dengan kemalangan dan bukti kerosakan. Hakikat kemalangan berlaku semata-mata tidak bermakna semua kerugian yang disenaraikan diakui. Perkara 216 Kanun Sivil ialah kriteria untuk menentukan skop kerosakan sebenar dan kehilangan keuntungan (所失利益).
 
 - **Kecederaan**: Menurut perkara 193 Kanun Sivil boleh diteliti kos perubatan (醫療費用) yang diperlukan, kos tambahan kehidupan harian seperti kos jagaan (看護費用), kos perjalanan untuk rawatan (就醫交通費) dan alat bantu, serta kehilangan pendapatan (收入損失) kerana ketidakupayaan kerja sebenar dan pengurangan keupayaan kerja (勞動能力減損). Menurut perkara 195 Kanun Sivil pampasan penderitaan juga boleh diteliti.
 - **Kematian**: Menurut perkara 192 Kanun Sivil, apabila berkenaan, boleh diteliti kos perubatan sebelum kematian dan kos keperluan hidup yang meningkat, kos pengebumian (殯葬費) dan kehilangan nafkah (扶養利益損失) orang yang mempunyai hak berkanun kepada nafkah. Menurut perkara 194 Kanun Sivil pampasan penderitaan saudara tertentu juga boleh diteliti.
@@ -175,7 +175,7 @@ Kewajipan untuk menyertai menurut perkara 6 undang-undang insurans liabiliti siv
 
 Dalam kemalangan satu kenderaan, pemandu kenderaan itu pada umumnya bukan penerima faedah insurans wajib kenderaan itu. Namun, dalam kemalangan yang melibatkan beberapa kenderaan, terdapat kes apabila pemandu boleh menuntut faedah daripada penanggung insurans wajib kenderaan lain yang terlibat.
 
-Skala manfaat (強制汽車責任保險給付標準) yang diubah pada 29 Mei 2026 terpakai kepada kemalangan yang berlaku mulai 1 Julai 2026. Siling kos perubatan yang munasabah dan diperlukan bagi kecederaan ialah TWD 200,000 dalam dolar Taiwan baharu; manfaat bagi ketidakupayaan (失能) merangkumi dari TWD 80,000 hingga TWD 3,000,000 menurut 15 darjah berkanun; manfaat bagi kematian ialah TWD 3,000,000, dan maksimum bersama kematian, ketidakupayaan dan kos perubatan bagi 1 mangsa dan 1 kemalangan ialah TWD 3,200,000. Bagi kemalangan terdahulu skala sebelumnya boleh terpakai.
+Skala manfaat (強制汽車責任保險給付標準) yang diubah pada 29 Mei 2026 terpakai kepada kemalangan yang berlaku mulai 1 Julai 2026. Siling kos perubatan yang munasabah dan diperlukan bagi kecederaan ialah 200,000 dolar baharu Taiwan; manfaat bagi ketidakupayaan (失能) merangkumi dari TWD 80,000 hingga TWD 3,000,000 menurut 15 darjah berkanun; manfaat bagi kematian ialah TWD 3,000,000, dan maksimum bersama kematian, ketidakupayaan dan kos perubatan bagi 1 mangsa dan 1 kemalangan ialah TWD 3,200,000. Bagi kemalangan terdahulu skala sebelumnya boleh terpakai.
 
 Insurans liabiliti sivil terhadap pihak ketiga (第三人責任險), insurans kemalangan pemandu (駕駛人傷害險) dan insurans kerosakan kenderaan sendiri (車體損失險) ialah produk pilihan bersifat kontrak. Perlindungan sebenar berbeza menurut tertanggung, siling, potongan sendiri (自負額), pengecualian, kecuaian dan syarat lain polisi, sehingga polisi dan syarat mesti disemak kes demi kes.
 
@@ -307,7 +307,7 @@ Yang penting kemudian ialah ketelitian dan kejujuran peguam.
 
 ​
 
-Penting bahawa peguam meneliti dengan teliti setiap pos tuntutan supaya tiada pos terlepas pandang; hasilnya bergantung pada fakta dan bukti, dan tiada hasil yang dijanjikan.
+Penting bahawa peguam meneliti dengan teliti setiap jenis tuntutan supaya tiada jenis terlepas pandang; hasilnya bergantung pada fakta dan bukti, dan tiada hasil yang dijanjikan.
 
 ​
 

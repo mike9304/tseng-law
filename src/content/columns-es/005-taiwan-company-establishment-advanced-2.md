@@ -25,7 +25,7 @@ Las preguntas y respuestas siguientes pueden servir de orientación general a qu
 
 ​
 
-**1. Al remitir el capital (資本額) desde el exterior a la cuenta preparatoria de una sociedad taiwanesa (公司籌備處帳戶), ¿a qué debe prestarse atención? (las reglas bancarias y de control de cambios de Corea que se describen a continuación son solo un ejemplo; las del país de origen del inversor deben comprobarse por separado)**
+**1. Al remitir el capital (資本額) desde el exterior a la cuenta de una sociedad taiwanesa en constitución (公司籌備處帳戶), ¿a qué debe prestarse atención? (las reglas bancarias y de control de cambios de Corea que se describen a continuación son solo un ejemplo; las del país de origen del inversor deben comprobarse por separado)**
 
 En general, los bancos de Corea exigen que el inversor **en persona** acuda al banco en Corea y remita los fondos desde una cuenta a su propio nombre.
 
@@ -37,7 +37,7 @@ Antes de remitir el capital, consulte con el banco principal con el que opera en
 
 **​**
 
-**2. Al ingresar el capital social, ¿puede remitir dólares de Taiwán (新臺幣, TWD) desde su cuenta personal en Taiwán a la cuenta preparatoria de la sociedad taiwanesa?**
+**2. Al ingresar el capital social, ¿puede remitir dólares de Taiwán (新臺幣, TWD) desde su cuenta personal en Taiwán a la cuenta de la sociedad taiwanesa en constitución?**
 
 Es posible, pero debe presentar documentos que acrediten el origen de los fondos en dólares de Taiwán obtenidos en Taiwán.
 
@@ -49,17 +49,17 @@ Si la remisión se hace desde una cuenta bancaria de Corea, no es necesario adju
 
 **​**
 
-**3. Tras ingresarse el capital en la cuenta preparatoria de la sociedad, ¿cuándo puede convertirse en cuenta ordinaria (正式公司帳戶)?**
+**3. Tras ingresarse el capital en la cuenta de la sociedad en constitución, ¿cuándo puede convertirse en cuenta ordinaria (正式公司帳戶)?**
 
 En general, primero deben haberse expedido los documentos de registro de la persona jurídica.
 
-El responsable (負責人) puede entonces acudir al banco y convertir la cuenta preparatoria de la sociedad en cuenta ordinaria.
+El responsable (負責人) puede entonces acudir al banco y convertir la cuenta de la sociedad en constitución en cuenta ordinaria.
 
 Sin embargo, como las normas internas de cada banco difieren, si necesita utilizar el capital con urgencia, conviene preguntar primero al banco.
 
 **​**
 
-**4. Tras convertir la cuenta preparatoria de la sociedad en cuenta ordinaria, ¿puede utilizar de inmediato la banca por internet?**
+**4. Tras convertir la cuenta de la sociedad en constitución en cuenta ordinaria, ¿puede utilizar de inmediato la banca por internet?**
 
 Varía según el banco, pero en general se necesita al menos un número de teléfono móvil.
 

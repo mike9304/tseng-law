@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Ar žinomos ankstyvojo Taivano tradicinės kirpyklos (理髮廳)?
+Ar prisimenate senąsias Taivano kirpyklas (理髮廳)?
 
 Tose kirpyklose plaukų plovimo būdas buvo labai savitas.
 
@@ -51,7 +51,7 @@ iš tikrųjų tik asmenys su regos negalia (視障者) galėjo verstis masažuot
 
 Šios veiklos vykdymas asmens be regos negalios (非視障者) buvo neteisėtas.
 
-Šis įstatymas galiojo iki 2003 m.; tuomet ponas Lin, kuris vedė kirpyklą,
+Šis įstatymas galiojo iki 2003 m.; tuomet ponas Lin, kuris turėjo kirpyklą,
 
 įdarbino du darbuotojus be regos negalios plaukų plovimo ir masažo paslaugoms, ir policija tai nustatė.
 

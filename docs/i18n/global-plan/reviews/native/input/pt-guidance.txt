@@ -1,4 +1,4 @@
-# pt guidance pack strings (path → text). Generated 2026-09-21
+# pt guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.pt.languageName
     Português
@@ -43,10 +43,10 @@ guidanceContent.pt.skipLink
     Saltar a navegação e ir para o conteúdo
 
 guidanceContent.pt.menuLabel
-    Índice de páginas
+    Menu
 
 guidanceContent.pt.languageLabel
-    Língua de visualização
+    Língua da página
 
 guidanceContent.pt.mega.services.description
     O escritório trata os grupos principais de atividade segundo o direito de Taiwan.
@@ -82,7 +82,7 @@ guidanceContent.pt.notFoundTitle
     Página não encontrada
 
 guidanceContent.pt.notFoundText
-    A página procurada não existe ou foi deslocada. Pode regressar ao início em português para ver as indicações disponíveis.
+    A página procurada não existe ou foi movida. Pode regressar ao início em português para ver as indicações disponíveis.
 
 guidanceContent.pt.backHomeLabel
     Voltar ao início
@@ -91,7 +91,7 @@ guidanceContent.pt.readSourceLabel
     Abrir a lista de artigos na língua original
 
 guidanceContent.pt.home.heroScrollLabel
-    Deslocar para baixo
+    Descer
 
 guidanceContent.pt.home.heroColumnsCtaLabel
     Ver artigos
@@ -145,13 +145,13 @@ guidanceContent.pt.pages.home.description
     Explicação geral em português sobre o âmbito de Hovering International Law Firm em Taiwan, as línguas de consulta e o primeiro contacto.
 
 guidanceContent.pt.pages.home.intro
-    Hovering International Law Firm acompanha clientes do estrangeiro, incluindo quem tem um vínculo com Taiwan, em assuntos de direito taiwanês: investimento e constituição de sociedades, litígios civis, casamento, família e sucessões, laboral, penal e propriedade intelectual. Esta parte em português ajuda a saber que trabalho entra no nosso âmbito, o que convém preparar e como nos contactar. São indicações gerais, não um parecer jurídico para o seu próprio caso.
+    Hovering International Law Firm acompanha clientes do estrangeiro, incluindo quem tem um vínculo com Taiwan, em assuntos de direito taiwanês: investimento e constituição de sociedades, litígios civis, casamento, família e sucessões, conflitos laborais, assuntos penais e propriedade intelectual. Esta parte em português ajuda a saber que trabalho entra no nosso âmbito, o que convém preparar e como nos contactar. São indicações gerais, não um parecer jurídico para o seu próprio caso.
 
 guidanceContent.pt.pages.home.sections[0].heading
     O que fazemos
 
 guidanceContent.pt.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm é um escritório de advogados estabelecido em Taiwan. Trabalha segundo o direito taiwanês e tem escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Aconselhamos empresas e conduzimos procedimentos perante os tribunais, e acompanhamos clientes do estrangeiro nos trâmites que devem seguir-se em Taiwan.
+    Hovering International Law Firm é um escritório de advogados estabelecido em Taiwan. Trabalha segundo o direito taiwanês e tem escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Aconselhamos empresas e conduzimos procedimentos perante os tribunais, e acompanhamos clientes do estrangeiro nos trâmites exigidos em Taiwan.
 
 guidanceContent.pt.pages.home.sections[0].paragraphs[1]
     Todo o conteúdo destas páginas é geral. O resultado de um assunto depende dos factos, das normas aplicáveis e do momento. Estas indicações não substituem uma conversa com uma advogada ou um advogado sobre o seu processo.
@@ -166,7 +166,7 @@ guidanceContent.pt.pages.home.sections[1].paragraphs[1]
     Não prometemos serviço de interpretação, não prometemos um prazo de resposta e não confirmamos marcações através desta página. Se não puder usar nenhuma dessas quatro línguas, a página «Contacto» explica como examinamos uma forma de comunicar.
 
 guidanceContent.pt.pages.home.sections[2].heading
-    Grupos de atividade
+    Áreas de atividade
 
 guidanceContent.pt.pages.home.sections[2].paragraphs[0]
     O âmbito do escritório cobre os seis grupos seguintes. A página «Áreas de atividade» descreve cada grupo com mais pormenor e indica o que não é prometido.
@@ -208,13 +208,13 @@ guidanceContent.pt.pages.services.description
     Seis grupos de trabalho do escritório em Taiwan e os limites que convém conhecer de antemão.
 
 guidanceContent.pt.pages.services.intro
-    Seguem-se os grupos que realmente tratamos e as questões que costumam surgir no início. Esta descrição ajuda a avaliar se o seu assunto entra no nosso âmbito; é informação geral, não a análise jurídica de um processo concreto.
+    Seguem-se os grupos de que nos ocupamos e as questões que costumam surgir no início. Esta descrição ajuda a avaliar se o seu assunto entra no nosso âmbito; é informação geral, não a análise jurídica de um processo concreto.
 
 guidanceContent.pt.pages.services.sections[0].heading
     Investimento e constituição de sociedades em Taiwan
 
 guidanceContent.pt.pages.services.sections[0].paragraphs[0]
-    Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, banca, avaliação do local e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes de constituir e operar em Taiwan.
+    Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, trâmites bancários, verificação do local de atividade e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes da constituição e do funcionamento em Taiwan.
 
 guidanceContent.pt.pages.services.sections[0].paragraphs[1]
     A ordem e a duração do processo variam segundo a forma societária, o investidor, o setor, o banco e os documentos disponíveis. Constituir uma sociedade não produz, por si só, um título de residência (居留) nem uma autorização de trabalho (工作許可): são trâmites distintos, apreciados segundo a situação de cada pessoa.
@@ -226,13 +226,13 @@ guidanceContent.pt.pages.services.sections[1].paragraphs[0]
     Este grupo cobre conflitos contratuais, pedidos de indemnização por ato ilícito e conflitos de consumo. O trabalho costuma começar por uma cronologia dos factos, a revisão de documentos e provas existentes e, só depois, os passos seguintes.
 
 guidanceContent.pt.pages.services.sections[1].paragraphs[1]
-    Os prazos, incluindo os prazos legais para demandar, e a integridade das provas marcam o curso do assunto civil, pelo que deve indicar desde o início as datas que conheça. Se conservar contratos, mensagens, comprovativos de pagamento ou fotografias do local, mencione-os na primeira mensagem.
+    Os prazos, incluindo os prazos legais para demandar, e o caráter completo das provas marcam o curso do assunto civil, pelo que deve indicar desde o início as datas que conheça. Se conservar contratos, mensagens, comprovativos de pagamento ou fotografias do local, mencione-os na primeira mensagem.
 
 guidanceContent.pt.pages.services.sections[2].heading
     Casamento, família e sucessões
 
 guidanceContent.pt.pages.services.sections[2].paragraphs[0]
-    Tratamos divórcio (離婚), partilha de bens, exercício e assunção de direitos e deveres relativamente a filhos menores (未成年子女權利義務之行使或負擔), regime de visitas (會面交往) e sucessões (繼承), também quando as partes ou os bens estão em países distintos. Os assuntos de família transfronteiriços exigem muitas vezes um exame adicional de documentos do registo de agregados (戶籍), da forma dos documentos e do seu valor probatório em Taiwan.
+    Tratamos divórcio (離婚), partilha de bens, o exercício das responsabilidades parentais relativamente aos filhos menores (未成年子女權利義務之行使或負擔), regime de visitas (會面交往) e sucessões (繼承), também quando as partes ou os bens estão em países distintos. Os assuntos de família transfronteiriços exigem muitas vezes um exame adicional de documentos do registo domiciliário (戶籍), da forma dos documentos e do seu valor probatório em Taiwan.
 
 guidanceContent.pt.pages.services.sections[2].paragraphs[1]
     Como os assuntos de família costumam ir ligados a prazos e a vários trâmites em paralelo, o resumo inicial deve indicar a relação entre as partes, o local de residência atual e os procedimentos já iniciados.
@@ -241,7 +241,7 @@ guidanceContent.pt.pages.services.sections[3].heading
     Conflitos laborais
 
 guidanceContent.pt.pages.services.sections[3].paragraphs[0]
-    Este grupo cobre a cessação do contrato de trabalho, a indemnização segundo o direito de Taiwan (資遣費; não se identifica com instituições de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.
+    Este grupo cobre a cessação do contrato de trabalho, a indemnização por cessação segundo o direito de Taiwan (資遣費; não equivale à indemnização por despedimento nem às regras de proteção no despedimento de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.
 
 guidanceContent.pt.pages.services.sections[3].paragraphs[1]
     O contrato de trabalho, o regulamento interno (工作規則), os recibos de vencimento e a troca escrita entre as partes são, em regra, os documentos decisivos. Se ainda os conserva, indique-o no resumo.
@@ -250,7 +250,7 @@ guidanceContent.pt.pages.services.sections[4].heading
     Assuntos penais
 
 guidanceContent.pt.pages.services.sections[4].paragraphs[0]
-    Acompanhamos na investigação e perante o tribunal, tanto a pessoa investigada ou acusada como a vítima, e avaliamos o risco penal da atividade empresarial.
+    Intervimos na fase de investigação e em tribunal, tanto a favor da pessoa investigada ou acusada como da vítima, e avaliamos o risco penal da atividade empresarial.
 
 guidanceContent.pt.pages.services.sections[4].paragraphs[1]
     Os assuntos penais costumam ter prazos curtos e etapas já definidas, pelo que, se já recebeu um escrito da autoridade ou do tribunal, indique a data desse escrito desde o início para que o conteúdo seja revisto na ordem adequada.
@@ -289,10 +289,10 @@ guidanceContent.pt.pages.about.sections[0].heading
     Fundação e estrutura
 
 guidanceContent.pt.pages.about.sections[0].paragraphs[0]
-    Hovering International Law Firm (昊鼎國際法律事務所) foi fundado em 2016 por advogadas e advogados formados na National Taiwan University (國立臺灣大學). O nome chinês 昊鼎 une o carácter 昊 («céu amplo») e o carácter 鼎 («base sólida») e descreve a orientação do escritório desde a fundação.
+    Hovering International Law Firm (昊鼎國際法律事務所) foi fundado em 2016 por advogadas e advogados formados na National Taiwan University (國立臺灣大學). O nome chinês 昊鼎 une o caráter 昊 («céu amplo») e o caráter 鼎 («base sólida») e descreve a orientação do escritório desde a fundação.
 
 guidanceContent.pt.pages.about.sections[0].paragraphs[1]
-    Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na governação de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para a procura local.
+    Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na gestão de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para responder às necessidades locais.
 
 guidanceContent.pt.pages.about.sections[0].paragraphs[2]
     Além do trabalho de advocacia, em 2020 criou-se Hovering Accounting Office, que oferece contabilidade e planeamento fiscal a empresários e a particulares com património elevado.
@@ -310,10 +310,10 @@ guidanceContent.pt.pages.about.sections[2].heading
     Quando nos contacta
 
 guidanceContent.pt.pages.about.sections[2].paragraphs[0]
-    Após receber o seu resumo, uma advogada ou um advogado examina o conteúdo e fala depois do âmbito possível, dos documentos ainda necessários e dos passos seguintes. Se o assunto colocar questões contabilísticas ou fiscais, o escritório pode trabalhar com a área de contabilidade num mesmo fluxo.
+    Após receber o seu resumo, uma advogada ou um advogado examina o conteúdo e fala depois do âmbito possível, dos documentos ainda necessários e dos passos seguintes. Se o assunto colocar questões contabilísticas ou fiscais, o escritório pode trabalhar com a área de contabilidade de forma integrada.
 
 guidanceContent.pt.pages.about.sections[2].paragraphs[1]
-    O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta concreta para a sua situação, esse processo deve ser discutido diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.
+    O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta em que possa basear-se para a sua situação, os documentos devem ser discutidos diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.
 
 guidanceContent.pt.pages.lawyers.eyebrow
     ADVOGADAS E ADVOGADOS
@@ -322,7 +322,7 @@ guidanceContent.pt.pages.lawyers.title
     Equipa internacional de Hovering
 
 guidanceContent.pt.pages.lawyers.description
-    Perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering.
+    Perfis das advogadas e dos advogados, da direção de operações e do contabilista sócio de Hovering.
 
 guidanceContent.pt.pages.lawyers.intro
     
@@ -346,7 +346,7 @@ guidanceContent.pt.pages.pricing.sections[0].paragraphs[0]
     Assuntos do mesmo tipo podem exigir um trabalho muito distinto, segundo o número de partes, os documentos disponíveis, os prazos a cumprir e se um procedimento já começou. Por isso o primeiro passo é sempre esclarecer o que entra no trabalho e o que não entra.
 
 guidanceContent.pt.pages.pricing.sections[0].paragraphs[1]
-    O resumo que envia no início é a base desse âmbito. Quanto mais claro descrever os factos, o que espera e os prazos, mais preciso poderá ser o âmbito.
+    O resumo que envia no início é a base desse âmbito. Quanto mais claramente descrever os factos, o que espera e os prazos, mais preciso poderá ser o âmbito.
 
 guidanceContent.pt.pages.pricing.sections[1].heading
     Os honorários confirmam-se antes de começar o trabalho
@@ -361,7 +361,7 @@ guidanceContent.pt.pages.pricing.sections[2].heading
     A consulta pode ser um serviço pago
 
 guidanceContent.pt.pages.pricing.sections[2].paragraphs[0]
-    A consulta com uma advogada ou um advogado pode ser um serviço pago. Esta página não afirma que o primeiro encontro seja oferecido, e nenhuma parte deve ler-se nesse sentido.
+    A consulta com uma advogada ou um advogado pode ser um serviço pago. Esta página não afirma que a primeira consulta seja gratuita, e nada neste texto deve ser lido nesse sentido.
 
 guidanceContent.pt.pages.pricing.sections[2].paragraphs[1]
     Se a consulta tiver custo, o montante e a forma de pagamento comunicam-se antes de ter lugar.
@@ -370,7 +370,7 @@ guidanceContent.pt.pages.pricing.sections[3].heading
     Por que esta página não publica tarifas
 
 guidanceContent.pt.pages.pricing.sections[3].paragraphs[0]
-    O montante depende do próprio assunto: do trabalho a fazer, do número de partes, dos documentos, dos prazos e de se um procedimento já começou. Uma cifra colocada de antemão não mostraria o custo do seu processo. Por isso fixamos primeiro o âmbito do seu assunto e comunicamos-lhe depois os honorários para os avaliar antes de começar.
+    O montante depende do próprio assunto: do trabalho a fazer, do número de partes, dos documentos, dos prazos e de se um procedimento já começou. Um valor indicado de antemão não mostraria o custo do seu processo. Por isso fixamos primeiro o âmbito do seu assunto e comunicamos-lhe depois os honorários para os avaliar antes de começar.
 
 guidanceContent.pt.pages.pricing.sections[3].paragraphs[1]
     Além dos honorários da advogada ou do advogado, um assunto pode gerar taxas a pagar ao tribunal, a uma autoridade ou a um terceiro. Essas taxas são distintas dos honorários e dependem do procedimento seguido.
@@ -391,13 +391,13 @@ guidanceContent.pt.pages.contact.sections[0].heading
     Três coisas que convém distinguir
 
 guidanceContent.pt.pages.contact.sections[0].paragraphs[0]
-    A língua de visualização da página, a língua da consulta com a advogada ou o advogado e a língua em que escreve são três coisas distintas.
+    A língua em que a página é apresentada, a língua da consulta com a advogada ou o advogado e a língua em que escreve são três coisas distintas.
 
 guidanceContent.pt.pages.contact.sections[0].items[0]
     Língua da página: esta orientação está escrita em português.
 
 guidanceContent.pt.pages.contact.sections[0].items[1]
-    Língua de consulta: a consulta realiza-se em inglês, chinês (中文), japonês e coreano.
+    Língua de consulta: a consulta realiza-se apenas em inglês, chinês (中文), japonês e coreano.
 
 guidanceContent.pt.pages.contact.sections[0].items[2]
     Língua do seu texto: pode escrever o resumo na sua própria língua, e o texto original guarda-se tal qual.
@@ -406,7 +406,7 @@ guidanceContent.pt.pages.contact.sections[1].heading
     Se não puder usar nenhuma das quatro línguas de consulta
 
 guidanceContent.pt.pages.contact.sections[1].paragraphs[0]
-    No formulário de contacto pode escolher «É preciso confirmar a forma de comunicar». Responderemos para examinar uma via possível de comunicação quando existir uma forma possível; não se assegura o serviço noutra língua e não se promete um prazo de resposta.
+    No formulário de contacto pode escolher «É preciso confirmar a forma de comunicar». Responderemos para verificar se existe uma forma possível de comunicação; não se assegura o serviço noutra língua e não se promete um prazo de resposta.
 
 guidanceContent.pt.pages.contact.sections[1].paragraphs[1]
     Isto é apenas um passo de verificação, não é uma promessa. Não prometemos serviço de interpretação, não prometemos serviço em português nem noutra língua fora das quatro indicadas, e não prometemos que possamos aceitar todos os assuntos.
@@ -427,19 +427,19 @@ guidanceContent.pt.pages.contact.sections[3].paragraphs[0]
     Não prometemos um prazo de resposta, não confirmamos uma marcação através desta página, não prometemos uma advogada ou um advogado concreto e não disponibilizamos serviço de interpretação. A tradução escrita é outra coisa: a mensagem que envia não se traduz de forma automática.
 
 guidanceContent.pt.pages.contact.sections[3].paragraphs[1]
-    Quando envia um pedido, o conteúdo guarda-se e espera revisão. Se passado algum tempo não receber resposta, pode voltar a escrever para o endereço de correio que figura na página de contacto.
+    Quando envia um pedido, o conteúdo guarda-se e espera revisão. Se passado algum tempo não receber resposta, pode voltar a escrever para o endereço de correio indicado na página de contacto.
 
 guidanceContent.pt.pages.faq.eyebrow
     PERGUNTAS FREQUENTES
 
 guidanceContent.pt.pages.faq.title
-    Perguntas que se formulam com frequência
+    Perguntas frequentes
 
 guidanceContent.pt.pages.faq.description
     Explicação do âmbito, da preparação, das línguas, dos honorários e do significado de enviar um pedido.
 
 guidanceContent.pt.pages.faq.intro
-    As perguntas seguintes respondem-se no plano da informação geral. A resposta para o seu próprio caso só pode dar-se depois de uma advogada ou um advogado rever o processo.
+    As respostas seguintes são informação geral. A resposta para o seu próprio caso só pode dar-se depois de uma advogada ou um advogado rever o processo.
 
 guidanceContent.pt.pages.faq.sections[0].heading
     Como usar esta parte
@@ -487,7 +487,7 @@ guidanceContent.pt.pages.faq.faqs[6].question
     Como se calculam os honorários?
 
 guidanceContent.pt.pages.faq.faqs[6].answer
-    Primeiro fixa-se o âmbito do trabalho e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. Esta página não publica cifras e não afirma que o primeiro encontro seja oferecido.
+    Primeiro fixa-se o âmbito do trabalho e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. Esta página não publica valores e não afirma que a primeira consulta seja gratuita.
 
 guidanceContent.pt.pages.faq.faqs[7].question
     O que faço se o meu assunto for urgente?
@@ -520,7 +520,7 @@ guidanceContent.pt.pages.privacy.sections[0].items[1]
     O endereço de correio para responder
 
 guidanceContent.pt.pages.privacy.sections[0].items[2]
-    A língua de visualização da página no momento do envio
+    A língua da página no momento do envio
 
 guidanceContent.pt.pages.privacy.sections[0].items[3]
     A língua em que escreveu
@@ -553,7 +553,7 @@ guidanceContent.pt.pages.privacy.sections[2].paragraphs[0]
     O conteúdo do seu envio guarda-se num lugar que não é de acesso público, e só as pessoas autorizadas do escritório podem aceder a ele para tramitar esse pedido.
 
 guidanceContent.pt.pages.privacy.sections[2].paragraphs[1]
-    Esta página não oferece uma segurança absoluta. Nenhuma via de envio nem de armazenamento é de todo segura, pelo que o material sensível convém enviá-lo apenas segundo as indicações concretas da advogada ou do advogado.
+    Esta página não oferece uma segurança absoluta. Nenhuma via de envio nem de armazenamento é de todo segura, pelo que convém enviar o material sensível apenas segundo as indicações concretas da advogada ou do advogado.
 
 guidanceContent.pt.pages.privacy.sections[3].heading
     Finalidade do uso
@@ -577,7 +577,7 @@ guidanceContent.pt.pages.privacy.sections[5].heading
     Os seus direitos e como nos contactar
 
 guidanceContent.pt.pages.privacy.sections[5].paragraphs[0]
-    Pode pedir acesso, retificação ou supressão dos seus dados, ou retirar o consentimento, através do endereço de correio que figura na página de contacto. Se existir uma obrigação de conservação segundo as normas aplicáveis ou por um assunto em curso, explicaremos o motivo da limitação.
+    Pode pedir acesso, retificação ou supressão dos seus dados, ou retirar o consentimento, através do endereço de correio indicado na página de contacto. Se existir uma obrigação de conservação segundo as normas aplicáveis ou por um assunto em curso, explicaremos o motivo da limitação.
 
 guidanceContent.pt.pages.privacy.sections[5].paragraphs[1]
     Esta página não indica um prazo fixo de conservação, porque a duração real depende de o assunto continuar e das obrigações de conservação associadas. Se desejar que se suprimam antes, indique-o ao contactar-nos.
@@ -586,7 +586,7 @@ guidanceContent.pt.pages.privacy.sections[6].heading
     Lugar de armazenamento e prestadores
 
 guidanceContent.pt.pages.privacy.sections[6].paragraphs[0]
-    Este sítio aloja-se na Vercel, e o seu envio guarda-se num armazenamento de objetos não público desse serviço. O correio envia-se através do serviço de correio que o escritório utiliza.
+    Este sítio aloja-se na Vercel, e o seu envio guarda-se num armazenamento não público desse serviço. O correio envia-se através do serviço de correio que o escritório utiliza.
 
 guidanceContent.pt.pages.privacy.sections[6].paragraphs[1]
     Os servidores de alguns prestadores podem estar fora de Taiwan, de modo que os seus dados podem armazenar-se e tratar-se aí. Cumprida a finalidade do armazenamento, os dados suprimem-se sem demora; os dados que devam conservar-se segundo as normas aplicáveis conservam-se durante esse prazo. Os pedidos relativos a dados pessoais recebem-se em wei@hoveringlaw.com.tw.
@@ -598,7 +598,7 @@ guidanceContent.pt.pages.disclaimer.title
     Âmbito e limites da informação desta página
 
 guidanceContent.pt.pages.disclaimer.description
-    O carácter geral da informação, o âmbito jurídico e as condições para que exista uma relação entre advogada ou advogado e cliente.
+    O caráter geral da informação, o âmbito jurídico e as condições para que exista uma relação entre advogada ou advogado e cliente.
 
 guidanceContent.pt.pages.disclaimer.intro
     Esta parte esclarece o que estas páginas de orientação em português podem e não podem fazer por si.
@@ -616,7 +616,7 @@ guidanceContent.pt.pages.disclaimer.sections[1].heading
     Âmbito jurídico
 
 guidanceContent.pt.pages.disclaimer.sections[1].paragraphs[0]
-    O escritório exerce segundo o direito de Taiwan, e esta página só fala do trabalho nesse quadro.
+    O escritório exerce a advocacia segundo o direito de Taiwan, e esta página só fala do trabalho nesse quadro.
 
 guidanceContent.pt.pages.disclaimer.sections[1].paragraphs[1]
     O conteúdo não é aconselhamento segundo o direito de nenhuma jurisdição distinta de Taiwan, incluindo o direito do lugar onde reside. Se alguma parte do seu assunto se rege por outra jurisdição, confirmaremos consigo que profissional qualificado faz falta para essa parte.
@@ -649,7 +649,7 @@ guidanceContent.pt.pages.columns.description
     Artigos em português que explicam temas frequentes do direito de Taiwan. O conteúdo é informação geral no momento da sua publicação, não um parecer jurídico para o seu caso.
 
 guidanceContent.pt.pages.columns.intro
-    O escritório publica artigos que explicam temas frequentes do direito de Taiwan. Os artigos disponíveis em português figuram nesta página; além disso há quatro ligações, cada uma abre a lista de artigos de uma língua original.
+    O escritório publica artigos que explicam temas frequentes do direito de Taiwan. Os artigos disponíveis em português encontram-se nesta página; além disso há quatro ligações; cada uma abre a lista de artigos de uma língua original.
 
 guidanceContent.pt.pages.columns.sections[0].heading
     Quatro listas segundo a língua
@@ -658,7 +658,7 @@ guidanceContent.pt.pages.columns.sections[0].paragraphs[0]
     Esta parte contém quatro ligações: a lista de artigos em coreano, a lista em chinês, a lista em inglês e a lista em japonês. Cada ligação indica a língua da sua lista, para que saiba de antemão em que língua se abrirá o conteúdo.
 
 guidanceContent.pt.pages.columns.sections[0].paragraphs[1]
-    Essas quatro listas são listas segundo a língua original do artigo, não listas de traduções. Os artigos já disponíveis em português figuram em separado nesta mesma página.
+    Essas quatro listas são listas segundo a língua original do artigo, não listas de traduções. Os artigos já disponíveis em português encontram-se em separado nesta mesma página.
 
 guidanceContent.pt.pages.columns.sections[1].heading
     Para onde levam as ligações
@@ -676,16 +676,16 @@ guidanceContent.pt.pages.columns.sections[2].paragraphs[0]
     Os artigos escreveram-se como informação geral no momento da sua publicação. As normas e a sua aplicação podem mudar, e um artigo não recolhe todas as circunstâncias do seu caso.
 
 guidanceContent.pt.pages.columns.sections[2].paragraphs[1]
-    Por isso, não tome um artigo como base para atuar num assunto real. Use-o para entender o panorama geral e fale depois do seu processo com uma advogada ou um advogado; esta página não é o passo de consulta.
+    Por isso, não tome um artigo como base para atuar num assunto real. Use-o para entender o panorama geral e fale depois do seu processo com uma advogada ou um advogado; esta página não é uma consulta.
 
 guidanceTeamCopy.pt.label
-    OUR TEAM
+    A NOSSA EQUIPA
 
 guidanceTeamCopy.pt.title
     Equipa internacional de Hovering
 
 guidanceTeamCopy.pt.description
-    Perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering.
+    Perfis das advogadas e dos advogados, da direção de operações e do contabilista sócio de Hovering.
 
 guidanceTeamCopy.pt.representativeTitle
     Advogada diretora
@@ -694,7 +694,7 @@ guidanceTeamCopy.pt.teamTitle
     Advogadas, advogados e pessoal
 
 guidanceTeamCopy.pt.partnerTitle
-    Contabilista associado
+    Contabilista sócio
 
 guidanceTeamCopy.pt.introLabel
     Apresentação
@@ -712,7 +712,7 @@ guidanceTeamCopy.pt.workingLanguagesLabel
     Línguas de trabalho
 
 guidanceTeamCopy.pt.fullProfileLabel
-    Perfil completo (English)
+    Perfil completo (em inglês)
 
 guidanceTeamCopy.pt.keyFactsHeading
     Advogada Wei Tseng — Dados essenciais
@@ -736,25 +736,25 @@ guidanceTeamCopy.pt.roles.chang-rongxuan
     Advogado em Taiwan (Taiwan Attorney)
 
 guidanceTeamCopy.pt.roles.chang-fangyu
-    Paralegal
+    Assistente jurídico (Paralegal)
 
 guidanceTeamCopy.pt.roles.son-jungmin
     Direção de operações da Coreia (Korea Operations Manager)
 
 guidanceTeamCopy.pt.roles.huang-shengping
-    Contabilista associado (Partner CPA)
+    Contabilista sócio (Partner CPA)
 
 guidanceTeamBios.pt.tseng-junwei.intro[0]
     O escritório trata assuntos de empresas e de particulares em Taiwan em inglês, japonês, coreano e chinês.
 
 guidanceTeamBios.pt.tseng-junwei.intro[1]
-    Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de TWD 1.57M.
+    Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhão de TWD.
 
 guidanceTeamBios.pt.tseng-junwei.education[0]
     Mestrado (M.S.), Institute of Finance, National Taiwan University
 
 guidanceTeamBios.pt.tseng-junwei.education[1]
-    Licenciatura (B.A.) com dupla especialização em Direito e Finanças, National Chengchi University
+    Licenciatura (B.A.) em dupla formação de Direito e Finanças, National Chengchi University
 
 guidanceTeamBios.pt.tseng-junwei.education[2]
     Aluna de intercâmbio na Kobe University e na Waseda University
@@ -766,10 +766,10 @@ guidanceTeamBios.pt.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.pt.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Fundação de Assistência Jurídica, Delegação de Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.pt.chang-rongxuan.intro[0]
-    Trabalhou antes no Ministry of Education, Legal Affairs Division, centrado em conflitos administrativos e civis.
+    Trabalhou antes no Ministério da Educação, Divisão de Assuntos Jurídicos (Ministry of Education, Legal Affairs Division), centrado em conflitos administrativos e civis.
 
 guidanceTeamBios.pt.chang-rongxuan.intro[1]
     Tem experiência em assuntos de universidades, direitos do pessoal docente e reclamações administrativas.
@@ -778,13 +778,13 @@ guidanceTeamBios.pt.chang-rongxuan.education[0]
     Licenciatura em Direito (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.pt.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Ministério da Educação, Divisão de Assuntos Jurídicos (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.pt.chang-rongxuan.experience[1]
     Advogado, Hovering International Law Firm
 
 guidanceTeamBios.pt.chang-fangyu.intro[0]
-    Paralegal com anos de trabalho como paralegal sénior em vários escritórios, a cargo do apoio processual, do direito de empresa e do investimento estrangeiro.
+    Assistente jurídico sénior (Paralegal), com anos de experiência em vários escritórios, a cargo do apoio processual, do direito das sociedades e do investimento estrangeiro.
 
 guidanceTeamBios.pt.chang-fangyu.intro[1]
     Apoia litígios, constituição de sociedades, trâmites de aprovação de investimento estrangeiro, pedidos de licença e o intercâmbio entre a Coreia e Taiwan.
@@ -793,10 +793,10 @@ guidanceTeamBios.pt.chang-fangyu.education[0]
     Licenciatura em Direito (LL.B.), Tunghai University
 
 guidanceTeamBios.pt.chang-fangyu.experience[0]
-    Paralegal sénior, Boyin Law Firm
+    Assistente jurídico sénior (Paralegal), Boyin Law Firm
 
 guidanceTeamBios.pt.chang-fangyu.experience[1]
-    Paralegal sénior, Muyang International Law Firm
+    Assistente jurídico sénior (Paralegal), Muyang International Law Firm
 
 guidanceTeamBios.pt.son-jungmin.intro[0]
     Coordena as marcações de consulta e a comunicação para clientes da Coreia.
@@ -811,7 +811,7 @@ guidanceTeamBios.pt.son-jungmin.experience[0]
     Área de operações da Coreia, Hovering International Law Firm
 
 guidanceTeamBios.pt.huang-shengping.intro[0]
-    Concluiu os programas de licenciatura e mestrado em contabilidade na National Chengchi University e dirige atualmente um escritório de contabilidade.
+    Licenciou-se e concluiu o mestrado em Contabilidade na National Chengchi University e dirige atualmente um escritório de contabilidade.
 
 guidanceTeamBios.pt.huang-shengping.intro[1]
     Apoia a análise integrada de riscos jurídicos, fiscais e financeiros para clientes empresariais.
@@ -844,16 +844,16 @@ guidancePracticeAreaNames.pt.Civil litigation and damages
     Litígios civis e indemnizações
 
 guidancePracticeAreaNames.pt.Trademark and patent filings
-    Apresentação de marcas e patentes
+    Pedidos de registo de marcas e patentes
 
 guidancePracticeAreaNames.pt.Visa and residency
     Visto e residência
 
 guidancePracticeAreaNames.pt.Family and labor disputes
-    Conflitos de família e laborais
+    Conflitos familiares e laborais
 
 guidanceOfficeCopy.pt.label
-    OFFICES
+    ESCRITÓRIOS
 
 guidanceOfficeCopy.pt.title
     Escritórios
@@ -892,7 +892,7 @@ guidanceOfficeCopy.pt.photoAlts[0]
     Sala de receção do escritório de Taipé, Hovering International Law Firm
 
 guidanceOfficeCopy.pt.photoAlts[1]
-    Gabinete de advocacia no escritório de Taipé, Hovering International Law Firm
+    Gabinete no escritório de Taipé, Hovering International Law Firm
 
 guidanceOfficeCopy.pt.photoAlts[2]
     Sala de reuniões do escritório de Taipé, Hovering International Law Firm
@@ -940,10 +940,10 @@ internationalInquiryCopy.pt.guidanceNotice
     Esta página está escrita em português como orientação geral, não como parecer jurídico para o seu próprio caso.
 
 internationalInquiryCopy.pt.consultationNotice
-    A consulta realiza-se em quatro línguas: inglês, chinês (中文), japonês e coreano.
+    A consulta realiza-se apenas em quatro línguas: inglês, chinês (中文), japonês e coreano.
 
 internationalInquiryCopy.pt.methodConfirmationNotice
-    Se não puder usar nenhuma dessas quatro línguas, escolha «É preciso confirmar a forma de comunicar». Responderemos para examinar uma via possível de comunicação quando existir uma forma possível; não se assegura o serviço noutra língua e não se promete um prazo de resposta.
+    Se não puder usar nenhuma dessas quatro línguas, escolha «É preciso confirmar a forma de comunicar». Responderemos para verificar se existe uma forma possível de comunicação; não se assegura o serviço noutra língua e não se promete um prazo de resposta.
 
 internationalInquiryCopy.pt.preparationNotice
     Pode escrever o resumo do seu assunto na sua própria língua. O texto original é guardado tal como o escreve e não é traduzido de forma automática.
@@ -1012,7 +1012,7 @@ internationalInquiryCopy.pt.sourceLanguageNotice
     Este artigo só está publicado em {language}, e a ligação abre essa página original.
 
 internationalInquiryCopy.pt.unavailableTranslationNotice
-    Este elemento ainda não está traduzido para a língua desta página. Uma ligação que indica a língua original abre o texto original.
+    Este texto ainda não está traduzido para a língua desta página. Uma ligação que indica a língua original abre o texto original.
 
 internationalInquiryCopy.pt.unavailableLanguageNotice
     Esta página não está disponível em {language}.
@@ -1033,7 +1033,7 @@ internationalInquiryCopy.pt.languageOptions.needs-method-confirmation
     Não posso usar nenhuma das quatro línguas — é preciso confirmar a forma de comunicar
 
 guidanceAnswers.pt.services.answer
-    O escritório trata seis grupos de trabalho segundo o direito de Taiwan: investimento e constituição de sociedades, litígios civis e indemnizações, casamento, família e sucessões, laboral, penal e propriedade intelectual. O âmbito de cada assunto confirma-se separadamente depois de uma advogada ou um advogado rever o conteúdo que envia. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.
+    O escritório trata seis grupos de trabalho segundo o direito de Taiwan: investimento e constituição de sociedades, litígios civis e indemnizações, casamento, família e sucessões, conflitos laborais, assuntos penais e propriedade intelectual. O âmbito de cada assunto confirma-se separadamente depois de uma advogada ou um advogado rever o conteúdo que envia. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.
 
 guidanceAnswers.pt.services.sources[0]
     /pt/faq
@@ -1051,7 +1051,7 @@ guidanceAnswers.pt.about.sources[1]
     /pt/services
 
 guidanceAnswers.pt.lawyers.answer
-    Esta página mostra os perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering. A advogada Wei Tseng (曾雋崴) está habilitada a exercer em Taiwan e é a advogada diretora do escritório; trabalha com clientes da Coreia, do Japão e com outros clientes internacionais. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.
+    Esta página mostra os perfis das advogadas e dos advogados, da direção de operações e do contabilista sócio de Hovering. A advogada Wei Tseng (曾雋崴) está habilitada a exercer em Taiwan e é a advogada diretora do escritório; trabalha com clientes da Coreia, do Japão e com outros clientes internacionais. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.
 
 guidanceAnswers.pt.lawyers.sources[0]
     /pt/about
@@ -1060,7 +1060,7 @@ guidanceAnswers.pt.lawyers.sources[1]
     /pt/contact
 
 guidanceAnswers.pt.pricing.answer
-    Esta página não publica uma lista de preços. Primeiro fixa-se o âmbito do trabalho a partir do resumo que envia, e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. A consulta com uma advogada ou um advogado pode ser um serviço pago, e junto aos honorários podem surgir taxas judiciais ou administrativas. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.
+    Esta página não publica uma lista de preços. Primeiro fixa-se o âmbito do trabalho a partir do resumo que envia, e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. A consulta com uma advogada ou um advogado pode ser um serviço pago, e, para além dos honorários, podem surgir taxas judiciais ou administrativas. A consulta realiza-se apenas em inglês, chinês, japonês e coreano.
 
 guidanceAnswers.pt.pricing.sources[0]
     /pt/contact
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.pt.consultationNotice
     Esta orientação está escrita em português, mas a consulta com uma advogada ou um advogado realiza-se apenas em inglês, chinês (中文), japonês e coreano.
 
 GUIDANCE_LLMS_NOTICES.pt.discoveryNotice
-    O ficheiro llms.txt é apenas um mapa para localizar páginas públicas; não promete posição em motores de busca, apoio, recomendação por inteligência artificial nem visibilidade.
+    O ficheiro llms.txt é apenas um mapa para localizar páginas públicas; não promete posicionamento em motores de busca, endosso, recomendação por inteligência artificial nem visibilidade garantida.
 
 GUIDANCE_LLMS_NOTICES.pt.confidentialNotice
     Como o texto original se guarda, não escreva nesta primeira fase dados que ainda não fazem falta, como o número de passaporte, o número de identidade ou dados de uma conta bancária.

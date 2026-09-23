@@ -55,7 +55,7 @@ Tämä laki kesti vuoteen 2003; tuolloin herra Lin, joka piti parturiliikettä,
 
 palkkasi työntekijöitä ilman näkövammaa hiuspesu- ja hierontapalveluihin, ja poliisi totesi sen.
 
-Silloisen oikeuden mukaan herra Lin ja työntekijät saivat hallinnolliset sakot (罰鍰) TWD 40.000, TWD 10.000 ja TWD 20.000 (新臺幣).
+Silloisen oikeuden mukaan herra Linille määrättiin hallinnollinen sakko (罰鍰) TWD 40.000 (新臺幣) ja kahdelle työntekijälle TWD 10.000 ja TWD 20.000.
 
 Herra Lin piti tätä seuraamusta hyvin epäoikeudenmukaisena ja pyysi perustuslain tulkintaa.
 
@@ -79,7 +79,7 @@ Keskustelussa näkövammaisten ja ilman näkövammaa olevien ammatillisista oike
 
 Kysyttiin esimerkiksi, eikö kirjallinen sääntö, joka salli hieronnan vain näkövammaisille, ollut syrjintää ilman näkövammaa olevia kohtaan,
 
-ja epäiltiin, oliko tämä sääntö todella edistänyt näkövammaisten työn ja olemassaolon suojaa.
+ja epäiltiin, oliko tämä sääntö todella edistänyt näkövammaisten työn ja toimeentulon suojaa.
 
 Lopulta perustuslakituomarit (大法官) julistivat säännöksen, joka salli vain näkövammaisten harjoittaa hieronta-alaa, perustuslainvastaiseksi (違憲).
 

@@ -1,0 +1,156 @@
+# WO-F-fa-r5 — Persian (fa) native-quality fixes, campaign round 5
+worktree: /Users/son7/Projects/tseng-law-fix-fa-r5 (branch fix/native-fa-r5-20260922)
+inputs: RULEBOOK-FIX.md (R2–R17) · ACCEPTED-ROUND.md · ACCEPTED-fa.md · rounds/r5/fa-a.md (41 rows) · rounds/r5/fa-b.md (49 rows)
+files touched: src/content/columns-fa/001–008,010–018 (009 needed no change) · src/data/international-guidance-south-asia.ts (persianGuidanceContent) · -team.ts · -answers.ts · src/data/international-inquiry-copy.ts · src/lib/llms-txt.ts · src/data/__tests__/guidance-disclosure-parity.test.ts (fa regex lines only)
+
+## §Rows applied — part a (fa-a.md)
+a#1  P1 006 غیربینا → بینا. 7 instances replaced (lines 52, 56, 76, 78, 80, 92, 102); «حق شغل» → «حق شغلی» in the same sentence. The article no longer states the opposite of its meaning.
+a#2  P1 007 «تعدد زوجات (重婚)» → «ازدواج مجدد در زمان بقای نکاح (重婚)».
+a#3  P1 «ماده» used for evidence/reference material → دلیل / مأخذ مرجع / مبنا / عوامل. 4 instances: 003 ×2, 007 ×2 (plus b#7 in 016, see below).
+a#5  P2 003 «تکلیف عضویت» → «تکلیف انعقاد بیمه» (Art. 6 compulsory motor liability insurance).
+a#8  P2 004 «حتی با اتحاد فروش و اتحاد نرخ» → «حتی اگر فروش و نرخ مالیات یکسان باشد».
+a#9  P2 004 «…را انباشت تا مبلغ مواجههٔ واقعی و ابزار نظارت حکم شود» → «…را بر این نقطهٔ عزیمت افزود تا میزان واقعی ریسک و ابزارهای کنترلی روشن شود»؛ «مسئولیت تنظیمی» → «مسئولیت مقرراتی».
+a#10 P2 002 «آیین ثبت شرکت» (公司登記辦法) → «آیین‌نامهٔ ثبت شرکت». 4 instances (frontmatter FAQ, §2 item 3, §5 body, official-source link label).
+a#11 P2 002 «از شرطی کوتاه ماندن/کوتاه بودن» calque → «آن حد نصاب حضور را برآورده نکند» / «برای ادای دیون کافی نیست» / «…کافی است». 3 instances.
+a#12 P2 002 heading «## 5. تعلیق فعالیت اگر پایان فوری نخواهد شد» → «## 5. تعلیق فعالیت، اگر شرکت بی‌درنگ پایان نیابد».
+a#13 P2 003 broken «را … آن دانست که» → «این واقعیت به‌تنهایی نه خسارت کاهش توانایی کار را به‌طور خودکار تعیین می‌کند و نه مبنای مستقلی برای ارزیابی آن است.»
+a#14 P2 008 «روزی یکی از مسئولان ارشد شرکت B را به گفت‌وگو خواند» → «روزی یکی از مدیران ارشد شرکت، B را به گفت‌وگو فراخواند» (ezafe chain disambiguated with a comma).
+a#15 P2 008 «B را به کم‌کاری نکوهش کرد» → «او را به کم‌کاری متهم کرد».
+a#16 P2 008 verbless bold block → «این مدارک را برای نگه‌داشتن ادله‌ای به نفع خودتان حفظ کنید.»
+a#17 P2 007 «آماده کردن نه دستهٔ زیر» → «آماده‌کردن نُه دستهٔ زیر».
+a#18 P2 007 §11 checklist: all nine items regained the bold category label and the imperative (**هویت، وضعیت و نشانی‌ها.** … را مرتب کنید, etc.), matching the English source; list-item count unchanged.
+a#19 P2 007 «دلار تایوان» → «دلار جدید تایوان» in all three places.
+a#20 P2 001 title + H1 «آیین کار و پروانهٔ کار» → «مراحل اداری و پروانهٔ کار».
+a#21 P2 003 impersonal passive before the byline → «پس از رسیدگی به پرونده‌های بسیارِ تصادف رانندگی، می‌خواهم بر یک نکتهٔ مهم تأکید کنم.» (first person restored, gender-unmarked as Persian requires — R4).
+a#22 P2 systemic «دیدن/نگریستن» for "consider/take into account" → «در نظر گرفتن / بررسی کردن / اکتفا نکردن / دانستن». 24 instances changed (001 ×6, 002 ×5, 003 ×5, 004 ×4, 007 ×3, 010 ×2, 012 ×2, 014 ×5, 016 ×3, 018 ×3 — counted across the whole sweep, incl. the part-b files).
+a#23 P2 systemic «حکم کردن/حکم شدن» for "is determined/assessed" → «تعیین شدن / تصمیم گرفتن / مقرر شدن». 10 instances (003 ×5, 004 ×4, 007 ×2, 002 ×1).
+a#24 P2 systemic «آیین» alone for "procedure" → فرایند / مراحل / رویه / تشریفات / رسیدگی / مسیر, keeping only the fixed compounds «آیین دادرسی» and «آیین‌نامه». 118 instances changed across 001, 002, 003, 004, 007, 010, 011, 012, 014, 016, 017, 018 and the guidance pack. Residual «آیین» in columns-fa is now only «آیین دادرسی …» / «آیین‌نامهٔ …» (verified by grep).
+a#25 P2 systemic «استعمال» for funds/assets/IP/premises/accounts → استفاده / بهره‌برداری. 15 instances (002 ×3, 004 ×10, 005 ×2, plus 016 ×3 and 017 ×4 in part b). «سوءاستعمال شخصیت حقوقی» kept (idiomatic legal term).
+a#26 P2 systemic one-digit quantities in running prose → spelled out where the checker's fa lexicon parses them (یک/دو/سه). ~40 instances across 001, 002, 003, 005, 006, 008, 010, 012, 013, 014, 017, 018. See "checker constraints" below for the 5/6/30 cases.
+a#28 P2 pack «هیچ» without the indefinite ی → «هیچ تعهدی به نتیجه», «هیچ مهلتی برای پاسخ», «هیچ بخشی از این صفحه». 5 strings (services page, about page, disclaimer heading, disclaimer paragraph, answers.about).
+a#29 P2 pack contact meta description «کار وقتی…» → «آنچه باید بکنید وقتی…».
+a#30 P2 llms.txt confidentialNotice regained the causal «چون …»; the privacy-page paragraph it quotes was updated identically, so the two stay verbatim-aligned.
+a#32 P2 pack «وکیلِ مدیر» → «مدیر دفتر وکالت» (representativeTitle), «…و مدیر {firm} است» (qualificationSentence), «وکیل و مدیر دفتر در تایوان» (role), «…و مدیر دفتر است» (answers.lawyers). 4 instances.
+a#33 P2 pack «بازبینی وکیل Wei Tseng» → «بازبینی‌شده به‌دست وکیل Wei Tseng».
+a#34 P2 pack 昊鼎 sentence → «نام چینی 昊鼎 از دو نویسهٔ 昊 («آسمان فراخ») و 鼎 («بنیاد استوار») ساخته شده است و سمت‌وسوی کار دفتر را از آغاز نشان می‌دهد.»
+a#35 P2 pack «به این مسائل برمی‌خورد» → «به این مسائل مربوط می‌شود».
+a#36 P2 pack «گشودن/گشوده شدن» for UI and for opening a branch office → «باز کردن / باز می‌شود / افتتاح شد». 8 strings (readSourceLabel, columnsOriginalLanguageNote, about §1 p2, columns intro + 2 paragraphs, inquiry sourceLanguageNotice, inquiry unavailableTranslationNotice).
+a#37 P2 pack bare «چه؟» → «…، چه باید بکنم؟» and «…، چه می‌شود؟». 2 FAQ questions.
+a#38 P2 pack یا-chains → commas; «فرانسه» (country) → «فرانسوی» (language). 4 strings (inquiry originalLanguagePlaceholder, inquiry originalTextPlaceholder, privacy paragraph, contact §3 p2 — the last also 病歷 → «سوابق پزشکی» per R8).
+a#39 P2 pack «دفتر زمینه‌های اصلی کار را … می‌پذیرد» → «دفتر در زمینه‌های اصلی کار، طبق قانون تایوان، پرونده می‌پذیرد.»
+a#40 P2 008 «خطای کوچکی از کارمند بگیرد» → «به خطاهای کوچک کارمند ایراد بگیرد».
+a#41 P2 002 «راهنمای کهنه» → «راهنماهای قدیمی».
+
+## §Rows applied — part b (fa-b.md)
+b#1  P1 018 «موافقت 2/3 یا بیشتر از حق رأی» → «موافقت دست‌کم دو سوم حق رأی» (slash removed; checker still parses the file — numbers PASS 25/25).
+b#2  P1 016 «یا با فرزند مصلحت اقتصادی دارد» → «منفعت اقتصادی‌اش با منفعت فرزند تعارض دارد» (applied inside the b#36 rewrite).
+b#3  P1 017 §3 «تغییر در واگذاری فعالیت، …» → «واگذاری فعالیت، و نیز تغییر سازمان، نام، نشانی، مسئول، سرمایه یا دارایی و تأسیسات پارکینگ …» (the transfer and the changes are separated again).
+b#4  P2 017 «تأسیسات پارک» → «تأسیسات پارکینگ». 11 instances, now consistent with «پارکینگ اختصاصی شرکت» in the same file.
+b#5  P2 011 «جمع‌آوری» for product recall → «فراخوان (جمع‌آوری محصول از بازار)» and «فراخوان محصول». 2 instances.
+b#6  P2 012 heading + body: «پروندهٔ بی‌نامی که دفتر رسیدگی کرد» → «پرونده‌ای که این دفتر وکالت آن را بر عهده داشت» / «در پرونده‌ای — که نام طرفین در آن ذکر نمی‌شود — و این دفتر وکالت آن را بر عهده داشت».
+b#7  P2 016 «نسخهٔ انگلیسی باید مادهٔ کمکی باشد که…» → «نسخهٔ انگلیسی فقط مرجع کمکی است و باید این شرح را با نص اصلی ماده تطبیق داد.»
+b#8  P2 014 «در سابقه آمده» → «در پرونده آمده».
+b#9  P2 016 «سایر تصرف لازم» → «سایر تدابیر لازم».
+b#10 P2 016 «نگاه‌داشتن بدل تصرف و برنامهٔ استعمال آن» → «برنامهٔ نگاه‌داشتن و استفاده از عواید حاصل از تصرف»; the same term fixed in the §9 checklist item 5.
+b#12 P2 014 «مؤاخذ کرد» → «مؤاخذه کرد».
+b#13 P2 014 «پس از 3 سال کار می‌تواند 30 روز پیش … اخطار دهد» → «پس از سه سال کار می‌تواند با اخطار 30 روزه به کارفرما قرارداد را پایان دهد» (30 kept as a digit — see checker constraints).
+b#14 P2 014 «توانی که آموزش داده» → «توانی که آموزش داده شده».
+b#15 P2 016 «جدا علامت می‌شود» → «جداگانه علامت‌گذاری می‌شود».
+b#16 P2 016 missing آیا restored: «این‌که آیا حکم نافذ … اجرا می‌شود یا نه، باید جدا در محل مال احراز شود.»
+b#17 P2 015 «جریمهٔ اداری … بگذارد» → «جریمهٔ اداری (罰鍰) وضع کند».
+b#18 P2 018 «باید اسناد تفکیک کنند مشتری…» → «باید در اسناد تفکیک شود که مشتری…».
+b#19 P2 012 «مسئولیت … بر «الف» دانسته شد» → «مسئولیت … متوجه «الف» دانسته شد».
+b#20 P2 013 «(معمولاً 2 ماه) پس حمایت موجر اندک است» → «(معمولاً دو ماه)، پس تضمینی که موجر در اختیار دارد اندک است».
+b#21 P2 016 «…راهنمایی می‌کند» → «…را اعلام می‌کند»; «آیین دادگاه» → «رسیدگی دادگاه» (3/6-month figures kept as digits, see constraints).
+b#22 P2 014 «در سنجش … کمک می‌کند» → «به سنجش … کمک می‌کند».
+b#23 P2 011 two subjects on one singular verb → «…و نیز مسئول کار وفق قرارداد، هر دو تأیید می‌شوند.»
+b#24 P2 016 split list rejoined: «…و اظهار یا عدم اظهار مالیات احراز می‌شود، و در صورت لزوم …».
+b#25 P2 010 «اگر … برگردانده شود، چنین است.» → «ترجمهٔ عناوین … در پی می‌آید.»
+b#26 P2 010 «ارکان جرم را پر کند» → «با ارکان جرم منطبق باشد».
+b#27 P2 010 limitation-period conditional reordered: «اصولاً اگر ظرف دو سال از زمانی که زیان‌دیده هم از زیان و هم از شخص مسئول جبران آگاه شده اعمال نشود ساقط می‌شود…».
+b#28 P2 011/018 «شرکت گذاشتن» → «تأسیس کردن / ایجاد شدن / تشکیل ندادن». 011 ×2, 018 ×4 (systemic گذاشتن sweep also covered 008 ×3, 013 ×1, 015 ×3, 001 ×1, 003 ×1, 004 ×1, 007 ×1, 016 ×1).
+b#29 P2 011 «پیام غالب تبلیغ با سلب مسئولیت به خط ریز برطرف شود» → «سلب مسئولیت با حروف ریز لزوماً پیام غالب تبلیغ را خنثی نمی‌کند».
+b#30 P2 011 «طبق اخطار … و مادهٔ منطبق» → «مطابق اخطار … و مواد قانونی حاکم» (systemic منطبق→قابل اعمال/حاکم also in 014 ×2, 016 ×2, 017 ×2, 018 ×1).
+b#31 P2 018 audit-threshold branch restored: «…؛ و اگر سرمایه کمتر از آن باشد، درآمد عملیاتی 100,000,000 دلار جدید تایوان یا 100 کارگر بیمه‌شده…».
+b#32 P2 018 «بهتر می‌خواند تا» → «بیشتر با … سازگار است تا با …»; «با شرکت‌هایی می‌خواند که» → «برای شرکت‌هایی مناسب است که»; §7 heading «بخوانند» → «سازگار باشند»; same sweep in 013 ×2, 014 ×4, 017 ×2, 006 ×1.
+b#33 P2 015 «هر رشته … بسنجد» → «برای هر رشته … سنجیده شود» (question line and answer line both).
+b#34 P2 015 trailing وقتی-clause fronted: «…همان بندهایی است که اگر در درخواست آمده باشند اما نتیجهٔ استعلامشان پیوست نشده باشد، ادارهٔ بازرگانی … خود استعلام می‌کند (隨案主動查詢)».
+b#35 P2 016 «نباید گفت ترک … با صرف گفتن در خانواده که نمی‌گیرد …» → «نباید پنداشت که ترک ارث تنها با اعلام شفاهی در جمع خانواده یا با استفاده‌نکردن از مال به‌طور قانونی محقق می‌شود.»
+b#36 P2 016 condition fronted: «اگر شخص پیشنهادی مدتی دراز در خارج اقامت دارد، منفعت اقتصادی‌اش با منفعت فرزند تعارض دارد، یا تجربهٔ ادارهٔ دارایی‌اش کم است، باید دید تدبیر تکمیلی لازم است یا نه.»
+b#37 P2 014 «هیچ طول مدت ماندگاری و هیچ مبلغ مسئولیت بازگرداندن بی‌قید روا نیست» → «هیچ مدت ماندگاری و هیچ مبلغ بازگرداندنی بی‌حد و مرز مجاز نیست».
+b#38 P2 013 «در این نکته» → «در این باره».
+b#39 P2 013 «آوردهٔ تصویب‌شده … تماماً برسد» → «… تماماً واریز شود».
+b#40 P2 012 «فروگذاشتن علامت مقرر» → «انجام‌ندادن علامت مقرر» (now matches the same file's earlier wording).
+b#41 P2 012 «علامت کنار رفتن روشن را انتظار کرد» → «منتظر علامت صریح کنار رفتن ماند».
+b#42 P2 017 «محدودیت منطقهٔ فعالیت به آن می‌پیوندد» → «و همراه با محدودیت منطقهٔ فعالیت است». 2 instances (FAQ + body).
+b#43 P2 017 «وفق منطقهٔ مجوزگرفته» → «در منطقه‌ای که برای آن مجوز گرفته شده».
+b#44 P2 017 «مدت منع ورود 3 سال می‌گذارد» → «مدت منع ورود را سه سال تعیین می‌کند».
+b#45 P2 017 «راهنمایی شود» → «اعلام شود».
+b#46 P2 018 «…نیمه‌رساناست هنگام طراحی ساختار ورود به تایوان.» → «…نیمه‌رسانا هنگام طراحی ساختار ورود به تایوان است.»
+b#47 P2 018/012 Latin digits for small counts → یک/دو/سه (018 ×5, 012 ×5, plus the a#26 sweep above).
+b#48 P2 018 «آستانهٔ منطبق» → «آستانهٔ قابل اعمال».
+b#49 P2 010 «دانشجوی دانشگاهی کره‌ای» → «دانشجوی کره‌ای». 3 instances (intro, image alt on line 48, matching link label).
+
+## §Rows applied — rulebook/ACCEPTED sweeps not tied to a numbered row
+R2a 004 §2 last paragraph: «قانون مالیات کره» / «شرکت مادر کره‌ای» / «بار نهایی در کره» → «قانون مالیات کشور شرکت مادر» / «شرکت مادر خارجی» / «بار نهایی در کشور شرکت مادر». Korea stays only as the labelled tax-treaty example (R2b framing sentence already present in 001 and 004).
+R8  病歷 → «سوابق پزشکی» in the pack contact page (was «پروندهٔ پزشکی»).
+R12 pack bio «آیین تصویب سرمایه‌گذاری خارجی» → «فرایند تصویب سرمایه‌گذاری خارجی».
+Orthography ZWNJ after non-joining alef (fa-b verdict, 10 occurrences): «ادعا‌شده / اجرا‌شده / ایفا‌شده» → «ادعاشده / اجراشده / ایفاشده». 007 ×1, 011 ×4, 014 ×6.
+Byte scan after the edits: 0 Arabic ي/ك in all 18 columns and in the fa guidance pack; 0 Hangul outside `url:`.
+
+## §Rows skipped, with reason
+a#4  003 sentencing hedge (3/4/6 months). SKIPPED as written. RULEBOOK-FIX R3 explicitly requires the hedge the reviewer wants removed: «003 "courts currently impose about 3 months" → "in some judgments about 3 months has been imposed; there is no typical or guaranteed outcome"», and ACCEPTED-ROUND forbids making a result sentence positive. Only the Persian was made more idiomatic inside the hedge («… حدود 3 ماه حبس تعیین شده است؛ هیچ کیفر نوعی یا نتیجهٔ تضمین‌شده‌ای در کار نیست.»). See "reviewer got it wrong" below.
+a#6  003 re-adding «بیشترین» ("maximum compensation"). SKIPPED. R3 requires exactly the opposite: «"pursue the maximum / highest possible compensation" → "pursue the compensation the facts and evidence support"». Advertising-rule row.
+a#7  008 «B غرامت اخراج قابل‌توجهی دریافت کرد». SKIPPED. R3 requires «with legal representation was able to establish the entitlement under the law», which is what the file already says; ACCEPTED-fa a#6 (round 2) pinned that wording. Only the following clause was polished («چنین ادله‌ای در اختیار نداشتند»).
+a#27 003 Q16–Q20 as «## Q…» headings, removal of U+200B lines and of the empty `**​**` bold lines in 005. SKIPPED — structural, pinned by the checker against the Korean source:
+       · `checkHeadings` compares the full heading-level vector with the source; the source has Q16–Q20 as plain body lines (src/content/columns/003…md lines 198/234/258/278/298), so adding five `##` headings fails the check.
+       · `checkBlocks` compares the ZWSP count with the source. Measured source vs fa: 003 52/52, 005 8/8, 006 4/4, 008 10/10, 009 5/5, 013 5/5, 015 3/3 — the U+200B lines and the `**​**` blocks are in the Korean source, and removing them fails both `blocks` and `ZWSP`.
+       ACCEPTED-ROUND also lists "requests to merge/split paragraphs, headings … or to add new headings" as skip.
+b#11 013/015 U+200B removal. SKIPPED for the same reason (source-pinned ZWSP count).
+a#31 pack «TWD 1.57M». The reformat itself is a documented skip (ACCEPTED-ROUND: "keep byte-identical — a test pins it"). Applied the pattern the `my` locale already uses instead: «حکم بدوی به پرداخت 1.57 میلیون دلار جدید تایوان (TWD 1.57M) صادر شد.» — the pinned token is untouched byte-for-byte and the Persian reading is added beside it. Full suite re-run after the change: 3202/3202 pass.
+Frontmatter `url:` with Hangul in 008/009 — skipped (R16, canonical source metadata).
+
+## §Checker constraints noted (WO: "prefer the form the checker accepts and note it")
+The fa entry of `WORD_NUMERAL_LEXICONS` (scripts/check-column-translation.mjs, `SMALL_LEXICON_WORDS`) parses only یک=1, دو=2, سه=3 (and اول/یکم/دوم/سوم). Spelling out any other digit deletes a number the Korean source carries and makes `numbers` FAIL ("missing from translation"). So:
+ · a#26 «پنج سال پیاپی» — NOT applied; 5 kept as a digit in 001 (اقامت دائم) — پنج is not in the lexicon.
+ · b#13 «اخطار سی‌روزه» — written «اخطار 30 روزه»; سی is not in the lexicon.
+ · b#21 «مدت عمومی شش‌ماهه» — written «مدت عمومی 6 ماهه»; شش is not in the lexicon. «سه ماهه» would parse but the pair was kept in one style for readability.
+ · Sentencing/statutory figures (003 «3 ماه / 4 ماه / 6 ماه», 006 «3 سال / 5 سال», 007 grounds-for-divorce list, 014 notice-period table, 011 «3 سال / 3 ماه», 016 «3 ماه») kept as digits — the reviewer's own rule exempts tables and statutory citations, and it keeps number parity robust.
+ · b#1 «دو سوم» without the «(2/3)» parenthetical was verified against the checker before being kept: 018 numbers PASS sourceCount=25 targetCount=25. 002 keeps its existing «دو سوم (2/3)» form, which part a did not flag.
+Test edit: `src/data/__tests__/guidance-disclosure-parity.test.ts` fa markers widened to match the a#28 rewording — `/تعهد به نتیجه/` → `/تعهدی? به نتیجه/` and `/مهلت پاسخ/` → `/مهلتی? (?:برای )?پاسخ/` (ACCEPTED-ROUND "Disclosure parity" clause). Nothing else in tests was touched.
+009-taiwan-voluntary-resignation-severance.md has no r5 findings and no systemic hits; left unmodified.
+
+## §Things I believe the reviewer got wrong (NOT applied)
+1. fa-a a#4 — "«در برخی احکام» downgrades the usual sentence to an occasional one". That downgrade is deliberate: RULEBOOK-FIX R3 orders it for 003 in every locale (Taiwan attorney advertising rules — no typical-outcome claim). Reverting to «دادگاه‌ها … عموماً … حکم می‌کنند» would re-introduce the claim the campaign is removing.
+2. fa-a a#6 — "«maximum» was lost". It was removed on purpose by R3 ("pursue the compensation the facts and evidence support"). Re-adding «بیشترین» is a result/superlative claim.
+3. fa-a a#7 — "the Persian stops at proving entitlement". That is the R3 replacement for the original "obtained a high severance" anecdote, and ACCEPTED-fa a#6 pinned it in round 2. The reviewer's suggested text restores a result claim ("غرامت اخراج قابل‌توجهی دریافت کرد").
+4. fa-a a#27 / fa-b b#11 — the U+200B lines, the `**​**` blocks and the Q16–Q20 body lines are not translation defects: they are present in the Korean source and are pinned byte-for-byte by the checker's `blocks`/`ZWSP`/`headings` checks. Fixing them belongs to the source file, not to the Persian.
+5. fa-a a#31 — "TWD 1.57M … the currency code precedes the amount". The token is test-pinned; see above for how it was handled without touching the token.
+6. fa-b b#32's wider claim that «خواندن» is always wrong for "match": «با هم می‌خوانند / با مدارک عینی نمی‌خواند» is idiomatic Persian and was kept where it reads naturally (002, 004); only the comparative «بهتر می‌خواند تا …» and «با شرکت‌هایی می‌خواند که …» constructions were rewritten.
+
+## §Verify output (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fa --lang fa 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-fa src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      26
+
+Pass criteria: checker summary PASS 18/18 — met. Markers 0 — met. TSC_OK — met. Tests 3202 passed / 160 files — met.
+No git add/commit/push was run; the worktree is left dirty for the integrator.

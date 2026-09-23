@@ -67,7 +67,7 @@ Kung wala kayong sertipiko ng paninirahan ng dayuhan (ARC), maaari kayong mag-ap
 
 Maaari itong maibigay sa mismong araw.
 
-ngunit napakasikip sa NIA, kaya maaga po kayong pumunta at kumuha ng numero.
+Napakasikip naman sa NIA, kaya maaga po kayong pumunta at kumuha ng numero.
 
 ​
 

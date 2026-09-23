@@ -179,7 +179,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Auf der Karte ansehen',
     photoAlts: [
       'Empfangsraum des Büros Taipeh, Hovering International Law Firm',
-      'Anwaltszimmer im Büro Taipeh, Hovering International Law Firm',
+      'Arbeitszimmer im Büro Taipeh, Hovering International Law Firm',
       'Besprechungsraum im Büro Taipeh, Hovering International Law Firm',
     ],
     officeTitles: {
@@ -229,7 +229,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Voir sur la carte',
     photoAlts: [
       'Salle d’accueil du bureau de Taipei, Hovering International Law Firm',
-      'Bureau de l’avocate au bureau de Taipei, Hovering International Law Firm',
+      'Bureau de l’avocate à Taipei, Hovering International Law Firm',
       'Salle de réunion du bureau de Taipei, Hovering International Law Firm',
     ],
     officeTitles: {
@@ -354,7 +354,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Haritada görün',
     photoAlts: [
       'Taipei ofisinin kabul salonu, Hovering International Law Firm',
-      'Taipei ofisindeki avukat odası, Hovering International Law Firm',
+      'Taipei ofisindeki avukat çalışma odası, Hovering International Law Firm',
       'Taipei ofisinin toplantı salonu, Hovering International Law Firm',
     ],
     officeTitles: {
@@ -404,7 +404,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Op de kaart bekijken',
     photoAlts: [
       'Ontvangstruimte van het kantoor Taipei, Hovering International Law Firm',
-      'Advocatenkamer in het kantoor Taipei, Hovering International Law Firm',
+      'Werkkamer in het kantoor Taipei, Hovering International Law Firm',
       'Vergaderruimte in het kantoor Taipei, Hovering International Law Firm',
     ],
     officeTitles: {
@@ -597,7 +597,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapPreviewLabel: 'Térkép előnézete',
     koreaOfficeTitle: 'Koreai iroda',
     koreaAddressCardLabel: 'A koreai iroda címe',
-    koreaMapLinkLabel: 'Megtekintés a Naver Map-en',
+    koreaMapLinkLabel: 'Megtekintés a Naver Mapen',
     reviewCountWord: 'értékelés',
     phoneLabel: 'Telefon',
     faxLabel: 'Fax',
@@ -676,7 +676,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     reviewCountWord: 'κριτικές',
     phoneLabel: 'Τηλέφωνο',
     faxLabel: 'Φαξ',
-    mapLinkLabel: 'Προβολή στο χάρτη',
+    mapLinkLabel: 'Προβολή στον χάρτη',
     photoAlts: [
       'Χώρος υποδοχής του γραφείου στην Ταϊπέι, Hovering International Law Firm',
       'Γραφείο δικηγόρου στο γραφείο της Ταϊπέι, Hovering International Law Firm',
@@ -954,7 +954,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Вижте на картата',
     photoAlts: [
       'Приемна на офиса в Тайпе, Hovering International Law Firm',
-      'Кабинет на адвокатката в офиса в Тайпе, Hovering International Law Firm',
+      'Кабинет на адвокат в офиса в Тайпе, Hovering International Law Firm',
       'Зала за срещи на офиса в Тайпе, Hovering International Law Firm',
     ],
     officeTitles: {
@@ -1281,7 +1281,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     officeLabel: 'Escritórios',
     officeQuickLinksLabel: 'Ligações rápidas para os escritórios',
     followLabel: 'Seguir',
-    blogLabel: 'Blog',
+    blogLabel: 'Blogue',
     websiteLabel: 'Sítio oficial',
     sitemapLabel: 'Mapa do sítio',
     copyEmailLabel: 'Copiar o endereço de correio',

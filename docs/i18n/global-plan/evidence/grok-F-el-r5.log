@@ -1,0 +1,193 @@
+# WO-F-el — round 5 Greek fix lane
+worktree: /Users/son7/Projects/tseng-law-fix-el-r5 (branch fix/native-el-r5-20260922)
+inputs: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/el-a.md (36 rows), rounds/r5/el-b.md (38 rows)
+scope touched: src/content/columns-el/*.md (18 files), src/data/international-guidance-eastern.ts (greekGuidanceContent),
+               src/data/international-guidance-offices.ts (el block), src/data/international-guidance-team.ts (el block)
+not touched: src/data/international-inquiry-copy.ts (no flagged row landed there), src/lib/llms-txt.ts (el notices already clean),
+             tests (no test pinned a Greek string that changed — full suite green without edits)
+git diff --stat: 21 files, 269 insertions(+), 269 deletions(-)  → block/line counts unchanged everywhere
+
+
+## §1 Rows applied
+
+### el-a (part a)
+APPLIED: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+         30, 31, 32, 33, 34, 35, 36
+APPLIED WITH DEVIATION: 16 (see §3)
+SKIPPED: 17 (see §3)
+
+Row-by-row notes where the wording differs from the reviewer's suggestion or where the sweep went wider than the quote:
+- a1/a2  財產 → περιουσία / περιουσιακά στοιχεία. Swept all 18 files + pack: 56 replacements
+         («αγαθά»→«περιουσιακά στοιχεία» 25, «αγαθών»→«περιουσιακών στοιχείων» 18, «αγαθό»→«περιουσιακό στοιχείο» 6,
+         «αγαθού»→«περιουσιακού στοιχείου» 7). 5 genuine "goods" spots kept as «αγαθά»:
+         001 «προσφερόμενα αγαθά και υπηρεσίες», 002 «υπέρ αγαθών ή υπηρεσιών», 002 «αναγκαία αγαθά ή υπηρεσίες»,
+         004 «παραδόσεων αγαθών ή των παροχών υπηρεσιών» (營業稅 = supply of goods), 008 «άλλα αγαθά του εργοδότη» (物品).
+         007 §6 heading → «προγαμιαία περιουσία»; 007 art. 1017 sentence and 016 «περιουσία που αποκτήθηκε κατά τον γάμο»
+         rewritten as the reviewer suggested. Extra de-duplications in the same family:
+         016 «τη διοίκηση των αγαθών»→«τη διαχείριση της περιουσίας», 016 «ο τύπος του αγαθού»→«το είδος του
+         περιουσιακού στοιχείου», 016 «το μητρώο αγαθών»→«η καταχώριση των περιουσιακών στοιχείων»,
+         007 «των άλυτων αγαθών»→«των εκκρεμών περιουσιακών ζητημάτων».
+- a8   Masculine accusative article: full sweep over the 18 columns AND the el guidance regions → 150 replacements
+       (σ?το + βαθμό, γάμο, γονέα, διαχειριστή, διευθυντή, δικαιούχο, δικηγόρο, διορισμό, διάδικο, διαχωρισμό, δόλο,
+        θάνατο, λογαριασμό, λόγο, μισθό, μισθωτό, μισθωτή, ναύλο, νόμο, σκοπό, συνεπιβάτη, συντελεστή, σχεδιασμό,
+        σύζυγο, φάκελο, φορτωτή, φόρο, χαρακτήρα, χάρτη, χειρισμό, χρήστη, χρόνο, χώρο + 11 adjective+noun phrases
+        «τον νόμιμο εκπρόσωπο / υπολογισμό / τόπο / τύπο», «τον συνήθη τρόπο / μισθό», «τον δεύτερο μισθωτό / αλλοδαπό»,
+        «στον συγκεκριμένο μισθωτό», «στον συνολικό κατάλογο», «τον συναφή καθορισμό»).
+       Neuter heads were checked one by one and left alone (το αλλοδαπό νομικό πρόσωπο, το ανήλικο τέκνο,
+       το αντίδικο/συμβαλλόμενο/νομιμοποιούμενο μέρος, το πληρεξούσιο, το δικό του θεμέλιο, …).
+       Post-sweep re-scan: only «το αλλοδαπό (νομικό πρόσωπο)» remains, correctly neuter.
+- a9 + b31  Percent typography: 38 instances of «N %» → «N%» (001 ×6, 003 ×1, 004 ×30, 018 ×1). Zero left.
+- a16  digit «1» glued to a unit — see §3 (checker constraint).
+- a18  German gender doubling removed in 3 pack strings (the reviewer counted 5; only 3 exist on disk):
+       contact §1 «η συζήτηση με δικηγόρο», about §"Τρία πράγματα" «η γλώσσα της συμβουλευτικής με δικηγόρο»,
+       contact §"Τι δεν υπόσχεται" «δεν υποσχόμαστε συγκεκριμένο δικηγόρο». The consultation lock (no interpreter,
+       no reply-time, four languages only) is untouched; guidance-disclosure-parity tests still green.
+- a25  Katharevousa aorists demoticised, 17 tokens: απεκτήθησαν→αποκτήθηκαν, αναλήφθησαν/ανελήφθησαν→αναλήφθηκαν,
+       εξοφλήθησαν→εξοφλήθηκαν, επεχειρήθησαν→επιχειρήθηκαν, επληρώθησαν→πληρώθηκαν, συνήφθησαν→συνάφθηκαν,
+       απεφάσισε→αποφάσισε, εδάνεισαν→δάνεισαν, ευρισκόταν→βρισκόταν, απασχολείτο→απασχολούνταν
+       (+ b34 αξιούται→αξιώνεται ×2). «απεβίωσε» kept (standard formal Greek).
+- a27  Written as «Ούτε αποτελεί αυτοτελές θεμέλιο …» (sentence-initial, so capitalised).
+- a29  «αποφορτίζω την ένταση» removed in all 3 places (006:44, 006:114 plural, 006:118) → «χαλαρώσει/χαλαρώσουν».
+- a31  The five-block imperative list in 008 rebuilt as five imperatives with the block count unchanged
+       («Κρατήστε … / τα δελτία … / τον εσωτερικό κανονισμό … / και καταγράψτε τις συζητήσεις … / Διαφυλάξτε …»).
+- a36  «Στην πράξη» → «Από την εμπειρία μου» (first-person attribution restored, as in the rest of 003).
+
+### el-b (part b)
+APPLIED: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+         30, 31, 32, 34, 35, 36, 37, 38
+APPLIED WITH DEVIATION: 13 (see §3)
+SKIPPED: 17, 33 (see §3)
+
+- b3   «, ώστε X <indicative>» → «· επομένως X <indicative>»: swept all 18 columns, 22 replacements
+       (not only the 10 quoted lines — the same joint occurs in 001, 002, 003, 004, 011, 013, 018).
+       3 narrative ones rendered with «έτσι» instead (003:350, 006:26, 012:36); 1 genuine consecutive clause kept
+       (007 «ώστε η κοινή ζωή καθίσταται αφόρητη» — a statutory ground, where ώστε is correct).
+- b4   «κάθε χωριστά» ×3 in 017 → «χωριστά η καθεμία» (the subjects are feminine lists, so not «το καθένα»).
+- b10  Rewritten as the reviewer suggested; the trailing «ώστε να παρέχονται μόνον στα πρόσωπα και οργανισμούς που
+       έχουν ανάγκη» folded into «πρέπει να περιορίζεται στα πρόσωπα και στους οργανισμούς …», block count unchanged.
+- b18  015 lines 22/24/26: the invented bridge and the verbatim repetition are gone. The Korean/English source splits
+       ONE sentence over three blocks, so the Greek now mirrors that split («Πέραν της κατάστασης της αγοράς,» /
+       «ένα ακόμη σημαντικό ζήτημα είναι» / «εάν η διεύθυνση βρίσκεται σε ζώνη όπου επιτρέπεται η λειτουργία …»).
+       Deleting the two sentences as the reviewer suggested would have changed the block count (forbidden).
+- b20  All three elliptical spots fixed and the file unified on «επιτρέπεται η λειτουργία / το άνοιγμα καταστήματος
+       εστίασης» (015:38, 015:48, 015:68) so the file does not carry two names for the same test.
+- b22  «στη διοίκηση μετανάστευσης» → «στην Υπηρεσία Μετανάστευσης της Ταϊβάν». The 移民署 gloss was NOT repeated here
+       (it already stands four lines below, and an extra Han token risks the hanzi check).
+- b27  The five bare answers made self-standing in the BODY only; the frontmatter FAQ `a:` strings keep «Όχι,» because
+       there they answer an explicit `q:`. 016 §3, 016 §7, 017 §1, 017 §3, 017 §5.
+- b29  016 switched to true imperatives throughout (items 1–6 + 016:65, 016:132, 016:142): Επιβεβαιώστε, Ερευνήστε,
+       τακτοποιήστε, Υπολογίστε, Αναγνωρίστε, επιβεβαιώστε, Διαχωρίστε, Εξετάστε, ελέγξτε — 11 verbs.
+- b30  Nationality capitalisation in 010: 7 lowercase «κορεάτης/κορεάτη» → «Κορεάτης/Κορεάτη» (body + image alt texts).
+- b32  U+30FB → 、 inside the 連江、馬祖 gloss, both occurrences (017:14 frontmatter + 017:49 body).
+- b36  «η ευχέρεια του διοικητή» → «η ευκολία του διαχειριστή» (kept «ευκολία» rather than the reviewer's colloquial
+       «βολή», which is below the register of the file; the meaning "convenience" is the reviewer's point).
+- b38  Comma added; the digit «1» kept (see §3 — the reviewer's «ένα μικρό φορτηγό» would drop a source digit).
+
+### Extra instances of the reviewers' systemic patterns, swept beyond the quoted rows
+- Deponent verbs pressed into passive service (b10/b11 pattern), 3 more found and fixed:
+  011:55 «το ημερολόγιο … πρέπει να διαχειρίζεται» → «… να τηρείται»;
+  004:141 «τα ημερολόγια δήλωσης … πρέπει να διαχειρίζονται» → «… να τηρούνται»;
+  004:154 «Πώς διαχειρίζονται τα βιβλία …» → «Πώς αντιμετωπίζονται τα βιβλία …».
+  (016:69 and 016:132 «να διαχειρίζεται κανείς …» are correct deponent uses and were left.)
+- «ή πλέον» (以上 calque, b13): all 10 instances removed — 002 ×9 and 018 ×1 «2/3 ή πλέον» → «τουλάχιστον τα 2/3»,
+  plus the 014 notice-period list.
+- 013:106 and 016:65 both had the half-idiom «εφόσον συντρέχει»; both now «εφόσον συντρέχει περίπτωση» (b26).
+- 簽約金 unified as «πριμ υπογραφής» in 014 (b23: 014:25 and 014:168).
+
+### Product-fact checks re-run after editing
+- Consultation languages: only English / 中文 / Japanese / Korean anywhere; no interpreter, reply-time, free-first-meeting,
+  24/7, result or win-rate promise introduced. R3 softeners already on disk were not weakened.
+- Attorney Wei Tseng feminine forms untouched and still present («Η δικηγόρος», «της αρμόδιας δικηγόρου»,
+  «Ήμουν η πληρεξούσια δικηγόρος», «Είμαι η δικηγόρος Wei Tseng», «Φοιτήτρια ανταλλαγής»). The male manager (008 «ο κ. Β»)
+  and the male client (010) stay male.
+- Traditional-Chinese glosses, frontmatter keys, `url`, `lastmod`, `featured_image`, image paths, external links, numbers,
+  dates and block counts unchanged (diff is 269+/269-).
+- `[변호사 검수 필요]` markers: 0. No Hangul outside frontmatter `url:` values.
+- Pinned bio figure «1,57 εκατ. TWD» byte-identical; R9 Taiwan emergency numbers (119 / 110 / 112) already present in 003.
+- Scans for fullwidth CJK punctuation outside glosses (：，（）、｜；！？), «Q&A», «OUR TEAM», «OFFICES», «Full profile (English)»
+  returned nothing to fix.
+
+
+## §2 Rows skipped, with reason
+
+- a17 and b17 — strip the U+200B zero-width spaces (003, 005, 006, 008, 009, 013, 015).
+  SKIPPED, checker-enforced. `checkBlocks` compares the ZWSP count of the translation with the Korean source and FAILS on a
+  mismatch. The counts are already identical (003 52/52, 005 8/8, 006 4/4, 008 10/10, 009 5/5, 013 5/5, 015 3/3), so removing
+  them would turn the file red. Part a's own reviewer reaches the same conclusion ("identical in the German file, so it is a
+  pipeline artefact … strip the zero-width spaces in the pipeline, not in the Greek"). Needs a pipeline/source fix, not a
+  Greek-lane fix.
+- b33 — 018 §4 label «Τα ανωτέρω είναι συμβουλή για τον σχεδιασμό της σύμβασης».
+  SKIPPED on the reviewer's own instruction ("no Greek change until the English is corrected"): the English source carries the
+  same false label, and changing only the Greek would break source parity. Belongs to the English editor.
+
+
+## §3 Rows applied with a deviation forced by the checker (ACCEPTED-ROUND "keep the previous form and note it")
+
+`checkNumbers` FAILS when a digit present in the Korean source is missing from the translation. Four of the "bare digit 1"
+targets are backed by a digit in the source, so the reviewer's digit-free wording was not usable as written. Verified
+empirically: with the reviewer's wording the checker reported
+  003 `numbers FAIL missing from translation (2): 1×2`, 005 `(1): 1`, 008 `(2): 1×2`, 018 `(2): 1×2`  → summary FAIL 14/18.
+
+- a16 / 003:178 «ανά 1 θύμα και ανά 1 ατύχημα» — KEPT AS IS. Korean source: 「피해자 1명·사고 1건당」 (two 1s). No natural Greek
+  phrasing keeps both digits, so the previous form stands.
+- a16 / 005:74 — rewritten keeping the digit: «εάν οι αλλοδαποί που προσλαμβάνονται είναι περισσότεροι από 1»
+  (removes the "digit + plural noun" glue the reviewer objected to; source 「1명을 넘는 경우」).
+- a16 / 008:16 + 008:63 — rewritten keeping the digit: «Κάθε φορά που η προϋπηρεσία (年資) συμπληρώνει 1 έτος, …»
+  (source 「1년 찰 때마다」). The «κάθε 1 X» telegram is gone.
+- b14 / 018:64 — rewritten keeping both digits: «ισχύει ο κανόνας 1 εταίρος – 1 ψήφος» (source 「주주 1인 1표」).
+- b13 / 014:137–139 — the reviewer's spelled-out numerals («τουλάχιστον τριών μηνών … του ενός έτους») would drop the
+  source digits 3/1/3, so the digits stay and only the calque and the missing subject were fixed:
+  «1. Προϋπηρεσία τουλάχιστον 3 μηνών και μικρότερη του 1 έτους: 10 ημέρες» (and the two following items).
+- b38 / 017:55 — «1 μικρό φορτηγό» kept (the reviewer's «ένα μικρό φορτηγό» would drop a source digit); only the
+  missing comma was added.
+
+
+## §4 Where I think the reviewer is wrong (NOT applied)
+
+1. b17 / a17 (U+200B). Part b asks to delete every U+200B and the blank lines they hold. That is not a Greek-quality defect
+   and the checker forbids it (§2). Part a's reviewer is right that it is a pipeline artefact.
+2. b33 (018 §4 "contract-design advice"). The reviewer already says not to change the Greek; recorded here so the English
+   lane picks it up.
+3. a18 says the German double form is in "5 places in the pack (contact §1, §3, §4 and privacy §3)". Only 3 exist on disk
+   (about "Τρία πράγματα", contact "Η γλώσσα της σελίδας …", contact "Τι δεν υπόσχεται η σελίδα αυτή"); the other pack
+   sentences already read «συμβουλευτική με δικηγόρο». All 3 real ones are fixed.
+4. a8 says "≈40 places in part a, ≈19 more in 010–018" (≈59). The real figure over the columns *and* the guidance pack is
+   150. The higher number is the sweep, not a disagreement — recorded so the count is not mistaken for over-editing.
+5. b36 suggests «η βολή του διαχειριστή». «Βολή» is colloquial and clashes with the register of 016; the point (convenience,
+   not discretion) is carried by «η ευκολία», which is what was written.
+6. a1's suggested «διακρίνει την προγαμιαία περιουσία … από την περιουσία που αποκτήθηκε …» was adopted, but the reviewer's
+   §6 heading fix needed «προγαμιαία περιουσία» (not «περιουσιακά στοιχεία») to stay inside one heading line — noted so the
+   next round does not read it as an inconsistency.
+
+
+## §5 Verify output (verbatim)
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-el --lang el 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-el src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      25
+
+git status breakdown (25): 21 edited source files (18 columns + eastern.ts + offices.ts + team.ts)
+  + this log (untracked) + rounds/r5/el-a.md and el-b.md (untracked, supplied by the supervisor)
+  + docs/i18n/global-plan/WO-F-el.txt (already modified in the worktree before this lane started — not touched here).
+No git add/commit/push was run. The helper scripts used for the sweeps lived in <worktree>/.tmp-el/ and were deleted.
+
+Pass criteria: checker summary PASS 18/18 ✔ · markers 0 ✔ · TSC_OK ✔ · tests 3202 passed / 160 files ✔

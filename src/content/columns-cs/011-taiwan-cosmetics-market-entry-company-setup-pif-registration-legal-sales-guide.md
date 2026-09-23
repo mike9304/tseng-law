@@ -34,7 +34,7 @@ Dceřinou společnost ani pobočku není nutné vždy zakládat. Je také možn�
 
 Pokud tchajwanský dovozce nebo prodejní zástupce (銷售代理商) zajišťuje dovoz a prodej, může zahraniční značka zvolit i strukturu bez vlastní dceřiné společnosti nebo pobočky na Tchaj-wanu. Prodejní zástupce může zároveň působit jako dovozce, nebo se může zapojit samostatný dovozce. Právní přičtení odpovědnosti se však neurčuje jen smluvním označením, jako je zástupce, hlavní distributor nebo distributor.
 
-Při návrhu skutečného rozdělení práce je třeba nejprve ověřit, kdo dováží výrobek a provádí registraci produktu a kdo sestavuje, aktualizuje a uchovává PIF. Je třeba také určit odpovědnou osobu za přezkum označení, vedení záznamů o oběhu, příjem stížností spotřebitelů a bezpečnostních informací a reakci na kontroly a požadavky na podklady ze strany příslušného orgánu. Je třeba zároveň posoudit, zda se shodují zákonné povinnosti uložené výrobci nebo dovozci kosmetiky a smluvní práce mezi značkou a prodejním partnerem.
+Při návrhu skutečného rozdělení práce je třeba nejprve ověřit, kdo dováží výrobek a provádí registraci produktu a kdo sestavuje, aktualizuje a uchovává PIF. Je třeba také určit osobu odpovědnou za přezkum označení, vedení záznamů o oběhu, příjem stížností spotřebitelů a bezpečnostních informací a reakci na kontroly a požadavky na podklady ze strany příslušného orgánu. Je třeba zároveň posoudit, zda se shodují zákonné povinnosti uložené výrobci nebo dovozci kosmetiky a smluvní práce mezi značkou a prodejním partnerem.
 
 Ve smlouvě je vhodné konkrétně stanovit rozsah užívání duševního vlastnictví, jako je ochranná známka (商標) a snímky, způsob poskytnutí, překladu a doplnění podkladů původního výrobce (原製造者) potřebných k registraci produktu a k PIF, správu aktuálních podkladů a předání při skončení smlouvy. Lze také zahrnout oprávnění k předběžnému přezkumu a úpravě reklamy, předávání bezpečnostních informací, jako jsou stížnosti a nežádoucí účinky, spolupráci při stažení (回收), je-li nutné, a nesení nákladů na zkoušky, překlad a uchování. Aby podklady nezůstaly jen u jedné strany, je třeba předem stanovit i rozsah a lhůtu vrácení nebo poskytnutí kopií.
 
@@ -42,9 +42,9 @@ Ve smlouvě je vhodné konkrétně stanovit rozsah užívání duševního vlast
 
 Tchajwanská dceřiná společnost a pobočka zahraniční společnosti nejsou stejnou organizací. Dceřiná společnost je samostatná právnická osoba založená podle práva Tchaj-wanu, zatímco pobočka se zapisuje jako část ústředí (本公司) zahraniční společnosti. Liší se právní osobností, odpovědností ústředí, účetním a daňovým zacházením, převodem zisku, zastupovacím oprávněním a způsobem vnitřní kontroly, proto se forma organizace nemá volit jen podle kontroly nad prodejem.
 
-Je-li potřebný postup zahraniční investice, je třeba ověřit pokyny **Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司)** jako aktuálně příslušného orgánu. Lhůta potřebná k povolení investice, převodu peněz, zápisu společnosti nebo pobočky, otevření bankovního účtu, daňové registraci (稅籍登記) a získání kvalifikace dovozce se liší podle investora, odvětví, organizační formy, předložených podkladů a toho, zda dochází k opravě nebo doplnění. Proto místo stanovení data uvedení na trh za předpokladu určité pevné lhůty je třeba nejprve ověřit, zda se každý úkon uplatní, a nejnovější podmínky přijetí.
+Je-li potřebný postup zahraniční investice, je třeba ověřit pokyny **Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司)** jako aktuálně příslušného orgánu. Lhůta potřebná k povolení investice, převodu peněz, zápisu společnosti nebo pobočky, otevření bankovního účtu, daňové registraci (稅籍登記) a získání kvalifikace dovozce se liší podle investora, odvětví, organizační formy, předložených podkladů a toho, zda dochází k opravě nebo doplnění. Datum uvedení na trh proto nestanovujte na základě domnělé pevné lhůty; nejprve ověřte, zda se každý úkon uplatní, a jaké jsou nejnovější podmínky přijetí.
 
-Ať je zvolena kterákoli struktura, ústředním subjektem odpovědnosti v regulaci kosmetiky je **výrobce nebo dovozce kosmetiky**. Uspořádání podkladů k výrobku nebo hodnocení bezpečnosti (安全性評估) lze svěřit vnějšímu odborníkovi, ale pouhé svěření práce nepřenáší právní odpovědnost výrobce nebo dovozce. Odlišit smluvní rozdělení práce od zákonného subjektu odpovědnosti je výchozím bodem přezkumu struktury vstupu.
+Ať je zvolena kterákoli struktura, ústředním subjektem odpovědnosti v regulaci kosmetiky je **výrobce nebo dovozce kosmetiky**. Uspořádání podkladů k výrobku nebo hodnocení bezpečnosti (安全性評估) lze svěřit externímu odborníkovi, ale pouhé svěření práce nepřenáší právní odpovědnost výrobce nebo dovozce. Odlišit smluvní rozdělení práce od zákonného subjektu odpovědnosti je výchozím bodem přezkumu struktury vstupu.
 
 ## 2. Registrace produktu a PIF jsou dva odlišné režimy
 
@@ -76,9 +76,9 @@ I když původní výrobce uchovává originál nebo se používá bezpečné el
 
 ### Kontrola, náprava a správní opatření
 
-Když příslušný orgán kontroluje PIF, oznámí to zásadně výrobci nebo dovozci kosmetiky nejpozději 7 dní před dnem kontroly. Pokud však případ spadá pod zákonnou výjimku stanovenou v souvisejících předpisech, lze kontrolu provést bez předchozího oznámení. Bez ohledu na to, zda oznámení bylo, je třeba trvale udržovat stav, který umožňuje vyhledat a předložit úplné aktuální podklady.
+Když příslušný orgán kontroluje PIF, oznámí to zásadně výrobci nebo dovozci kosmetiky nejpozději 7 dní před dnem kontroly. Pokud však případ spadá pod zákonnou výjimku stanovenou v souvisejících předpisech, lze kontrolu provést bez předchozího oznámení. Bez ohledu na to, zda k oznámení došlo, je třeba trvale udržovat stav, který umožňuje vyhledat a předložit úplné aktuální podklady.
 
-Ohlášení nepravdivých informací při registraci produktu nebo zapsání nepravdivých informací do PIF může být předmětem správní pokuty (罰鍰) 10.000 až 1.000.000 tchajwanských dolarů (新臺幣, TWD). Jsou-li naopak podklady PIF neúplné, příslušný orgán obvykle nařídí nápravu ve stanovené lhůtě (限期改正) a správní pokuta se stává otázkou teprve tehdy, když se v této lhůtě nenapraví. Nepravdivé informace a neúplnost podkladů, kterou lze ještě doplnit, nelze považovat za týž následek.
+Ohlášení nepravdivých informací při registraci produktu nebo zapsání nepravdivých informací do PIF může být předmětem správní pokuty (罰鍰) 10.000 až 1.000.000 tchajwanských dolarů (新臺幣, TWD). Jsou-li naopak podklady PIF neúplné, příslušný orgán obvykle nařídí nápravu ve stanovené lhůtě (限期改正) a správní pokuta se stává otázkou teprve tehdy, nedojde-li v této lhůtě k nápravě. Nepravdivé informace a neúplnost podkladů, kterou lze ještě doplnit, nelze považovat za týž následek.
 
 Stažení nebo zničení (銷毀) není opatřením, které by automaticky následovalo každou neúplnost podkladů PIF. Bezpečnost výrobku, obsah porušení, stav nápravy a zákonné podmínky použitelné na každé opatření je třeba posoudit odděleně. Opatření přijatá poté, co byl potvrzen bezpečnostní problém, a požadavek na doplnění dokumentů je třeba posoudit zvlášť a postup se řídí oznámením příslušného orgánu a použitým ustanovením.
 
@@ -88,7 +88,7 @@ Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně 
 
 ### Posuzuje se podle celého vyjádření, nikoli podle každého slova
 
-Zda je označení, propagace (宣傳) nebo reklama nepravdivá či nadsazená, nebo zda tvrdí léčebný účinek (醫療效能), se neposuzuje jen podle jednoho určitého slova. Společně se posuzuje název zboží, věta, obraz, symbol, zvuk, předchozí a následující kontext a celkový dojem, který spotřebitel získá. Dojem vyvolaný hlavním reklamním sdělením neodstraňuje samo upozornění malým písmem, proto je třeba přezkoumat jak jednotlivé formulace, tak hotovou reklamu.
+Zda je označení, propagace (宣傳) nebo reklama nepravdivá či nadsazená, nebo zda tvrdí léčebný účinek (醫療效能), se neposuzuje jen podle jednoho určitého slova. Společně se posuzuje název zboží, věta, obraz, symbol, zvuk, předchozí a následující kontext a celkový dojem, který spotřebitel získá. Samotné upozornění malým písmem neodstraní dojem vyvolaný hlavním reklamním sdělením, proto je třeba přezkoumat jak jednotlivé formulace, tak hotovou reklamu.
 
 Například tvrzení, že kosmetika léčí akné, má protizánětlivý účinek nebo baktericidní působení, může být tvrzením léčebného účinku. Je třeba společně ověřit i způsob spojení názvu nemoci s výrobkem, snímky před použitím a po něm, ztvárnění evokující zdravotníka a kontext, který spojuje výklad složky s léčebným účinkem výrobku.
 
@@ -96,7 +96,7 @@ Správní pokuta za nepravdivou nebo nadsazenou reklamu (虛偽誇大廣告) či
 
 ### Influenceři, autoři recenzí a prodejní partneři
 
-Příspěvky influencerů, autorů recenzí nebo prodejních partnerů mohou být podle obsahu a obchodního kontextu posouzeny jako reklama v podstatě. Vyplacení protiplnění, poskytnutí výrobku, prodejní odkaz, pokyn značky ke zveřejnění a opakovaná spolupráce jsou faktory, které se v tomto posouzení zohledňují. Naopak každý osobní příspěvek se automaticky nestává reklamou značky, proto je třeba ověřit vztah mezi tím, kdo zveřejňuje, a značkou, konkrétní obsah a míru zapojení značky.
+Příspěvky influencerů, autorů recenzí nebo prodejních partnerů mohou být podle obsahu a obchodního kontextu v podstatě považovány za reklamu. Vyplacení protiplnění, poskytnutí výrobku, prodejní odkaz, pokyn značky ke zveřejnění a opakovaná spolupráce jsou faktory, které se v tomto posouzení zohledňují. Naopak každý osobní příspěvek se automaticky nestává reklamou značky, proto je třeba ověřit vztah mezi tím, kdo zveřejňuje, a značkou, konkrétní obsah a míru zapojení značky.
 
 Ve smlouvě o spolupráci a v provozních pokynech lze stanovit rozsah povolených výrazů a podpůrné podklady, přezkum před zveřejněním a postup úpravy a smazání porušujících výrazů. Do rozsahu přezkumu je vhodné zahrnout i výrazy přidávané v komentářích, ústní výklad při živém vysílání nebo krátkých videích a nesoulad mezi prodejní stránkou a etiketou. Přezkoumaný návrh, historii schválení, žádosti o úpravu a konečný příspěvek je třeba uchovat, aby bylo možné později ověřit skutkové okolnosti.
 
@@ -111,7 +111,7 @@ Ověří-li se příprava prodeje na Tchaj-wanu v tomto pořadí, klesá riziko 
 5. Přezkoumat etiketu, prodejní stránku, reklamu a příspěvky ze spolupráce podle kritéria celého vyjádření.
 6. Provozovat postup k reakci na kontroly a požadavky na nápravu, stížnosti, bezpečnostní informace a potřebné následné kroky.
 
-Základní strukturu společnosti a pobočky lze vidět v [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics), rozsah související podpory v [V čem klienty zastupujeme](/cs/services) a údaje o odpovědné advokátce v [Mezinárodní tým Hovering](/cs/lawyers).
+Základní strukturu společnosti a pobočky najdete v článku [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics), rozsah související podpory v [V čem klienty zastupujeme](/cs/services) a údaje o odpovědné advokátce v [Mezinárodní tým Hovering](/cs/lawyers).
 
 ### Oficiální podklady
 

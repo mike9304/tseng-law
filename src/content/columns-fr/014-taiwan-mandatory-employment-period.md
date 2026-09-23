@@ -11,7 +11,7 @@ faq:
   - q: "La clause de durée minimale de service (最低服務年限約定) du contrat de travail à Taïwan est-elle automatiquement nulle ?"
     a: "Non. Selon l’article 15-1 de la loi taïwanaise sur les normes du travail (勞動基準法), si l’employeur dispense une formation technique spécialisée (專業技術培訓) et en assume le coût, ou fournit une contrepartie raisonnable (合理補償) pour que le travailleur observe la durée minimale de service, la clause peut réunir les conditions légales. Il n’est pas nécessaire de réunir les deux conditions à la fois, mais, même s’il en existe une, la clause ne doit pas dépasser la portée raisonnable à la lumière de l’ensemble des circonstances, comme la durée et le coût de la formation, la possibilité de remplacer le personnel (人力替補可能性) et le montant et l’étendue de la contrepartie."
   - q: "La formation des nouvelles recrues ou la formation légalement obligatoire sont-elles considérées comme formation technique spécialisée ?"
-    a: "Selon l’interprétation administrative du ministère du Travail de Taïwan (勞動部) du 5 juin 2026, le coût de la formation périodique, de la formation générale du poste, de l’adaptation au travail des nouvelles recrues et de la formation que la loi oblige à dispenser ne peut pas être pris comme fondement de la clause de durée minimale de service ni d’une demande de clause pénale (違約金) ou de restitution de frais. Il ne faut pas voir seulement le nom de la formation, mais le programme concret, le contenu professionnel et technique, la durée, le coût réellement assumé par l’employeur et les justificatifs."
+    a: "Selon l’interprétation administrative du ministère du Travail de Taïwan (勞動部) du 5 juin 2026, le coût de la formation périodique, de la formation générale du poste, de l’adaptation au travail des nouvelles recrues et de la formation que la loi oblige à dispenser ne peut pas être pris comme fondement de la clause de durée minimale de service ni d’une demande de paiement de la clause pénale (違約金) ou de restitution de frais. Il ne faut pas voir seulement le nom de la formation, mais le programme concret, le contenu professionnel et technique, la durée, le coût réellement assumé par l’employeur et les justificatifs."
   - q: "Si l’on démissionne par anticipation, faut-il restituer en entier la prime de signature (簽約金) ou la prime de maintien en poste (留任獎金) ?"
     a: "On ne restitue pas toujours le montant intégral. Si la prime de signature, la prime de maintien en poste ou une autre prestation anticipée (預付性給付) a été versée comme contrepartie raisonnable de la clause de durée minimale de service, sa finalité doit être communiquée clairement au travailleur. L’interprétation administrative du ministère du Travail de Taïwan du 5 juin 2026 explique que, lors d’une démission avant l’échéance de la période, le montant à restituer doit se calculer en proportion de la période encore non accomplie et qu’il ne faut pas exiger la restitution intégrale. La conclusion réelle doit examiner ensemble la finalité du versement, le contenu de la clause, la période déjà travaillée et la cause de l’extinction."
   - q: "Si le contrat s’éteint par anticipation pour une cause non imputable au travailleur, faut-il restituer les frais de formation ?"
@@ -28,8 +28,8 @@ Lors de l’examen, il est important de ne pas mêler les quatre questions suiva
 
 1. Si la clause elle-même réunit les conditions légales de l’article 15-1
 2. Si la période convenue et la charge du travailleur sont dans une portée raisonnable
-3. À qui s’impute la cause d’extinction du contrat de travail ?
-4. Comment s’apprécient le préavis de démission et l’étendue de la restitution ?
+3. À qui s’impute la cause d’extinction du contrat de travail ?
+4. Comment s’apprécient le préavis de démission et l’étendue de la restitution ?
 
 Même si ces quatre questions figurent ensemble dans le même contrat, la disposition applicable et la preuve nécessaire sont distinctes. Il faut donc examiner séparément si la clause est valable, quand la démission produit ses effets, s’il y a responsabilité de restituer la prestation anticipée (預付性給付) ou les frais de formation, et si un préjudice séparé s’est réellement produit.
 
@@ -90,7 +90,7 @@ Au final, il faut une relation de proportionnalité compréhensible entre la pé
 
 ## 5. Formation qui ne peut pas fonder la clause
 
-Selon l’interprétation administrative du ministère du Travail de Taïwan du 5 juin 2026, le coût de la formation périodique, de la formation générale du poste, de l’adaptation au travail des nouvelles recrues et de la formation que la loi oblige à dispenser ne peut pas être pris comme fondement de la clause de durée minimale de service ni d’une demande de clause pénale ou de restitution de frais. Il ne faut pas voir seulement le nom de la formation, mais le programme concret, le contenu professionnel et technique, la durée, le coût réellement assumé par l’employeur et les justificatifs.
+Selon l’interprétation administrative du ministère du Travail de Taïwan du 5 juin 2026, le coût de la formation périodique, de la formation générale du poste, de l’adaptation au travail des nouvelles recrues et de la formation que la loi oblige à dispenser ne peut pas être pris comme fondement de la clause de durée minimale de service ni d’une demande de paiement de la clause pénale ou de restitution de frais. Il ne faut pas voir seulement le nom de la formation, mais le programme concret, le contenu professionnel et technique, la durée, le coût réellement assumé par l’employeur et les justificatifs.
 
 L’interprétation administrative 勞動關2字第1150141814號 du ministère du Travail distingue et traite la formation qui se dispense de façon périodique, la formation habituelle du poste, la formation pour que la nouvelle recrue se familiarise avec l’environnement et les procédures de travail, et la formation que l’employeur doit dispenser selon la loi. Comme cette formation accompagne l’exploitation de l’activité ou l’accomplissement d’une obligation légale, son coût ne peut pas être converti en fondement d’une obligation de maintien ou d’une sanction pour extinction anticipée.
 
@@ -98,7 +98,7 @@ Les cours qu’un employé nouveau reçoit d’ordinaire, comme l’explication 
 
 Toutefois, on n’exclut pas toujours une formation seulement parce qu’elle a été dispensée à l’intérieur de l’entreprise. Dans un même programme peuvent se mêler une part d’adaptation générale et une part technique spécialisée, de sorte que le thème, le temps, le coût et s’il y a obligation légale doivent être vérifiés cours par cours. Qui allègue la part technique spécialisée a besoin d’expliquer par des documents quel contenu se distingue de la formation habituelle et qui a réellement assumé le coût.
 
-Dans la pratique, on ne regarde pas seulement la couverture du matériel de formation, mais on rapproche l’index détaillé et le registre réel de dispense. Il faut vérifier s’il s’agit d’un cours périodique qui se répète, d’un cours pour une qualification ou une compétence de maniement d’équipements concrets, d’une formation légalement obligatoire, si le travailleur a réellement participé et si le montant demandé coïncide avec les justificatifs des frais de formation.
+Dans la pratique, on ne regarde pas seulement la couverture du matériel de formation, mais on rapproche la table des matières détaillée et le relevé réel du déroulement. Il faut vérifier s’il s’agit d’un cours périodique qui se répète, d’un cours pour une qualification ou une compétence de maniement d’équipements concrets, d’une formation légalement obligatoire, si le travailleur a réellement participé et si le montant demandé coïncide avec les justificatifs des frais de formation.
 
 ## 6. Restitution de primes et démission anticipée
 
@@ -130,7 +130,7 @@ L’appréciation de la cause d’extinction influe directement aussi sur l’é
 
 La clause de durée minimale de service n’est pas un dispositif qui empêche de façon physique ou juridique la démission du travailleur. La notification de démission et la période de préavis (預告期間) sont la question de quand prend fin la relation de travail ; la validité de la clause de durée minimale de service et la responsabilité de restitution de frais sont la question de s’il y a responsabilité patrimoniale dérivée de l’extinction.
 
-Lorsque le travailleur éteint un contrat de travail à durée indéterminée (不定期契約), selon l’article 15 de la loi taïwanaise sur les normes du travail, la période de préavis de l’article 16, alinéa 1, s’applique. L’article 16 est une disposition sur l’extinction du contrat par l’employeur, et à la démission du travailleur cette période de préavis s’applique par l’article 15.
+Lorsque le travailleur met fin à un contrat de travail à durée indéterminée (不定期契約), selon l’article 15 de la loi taïwanaise sur les normes du travail, la période de préavis de l’article 16, alinéa 1, s’applique. L’article 16 est une disposition sur l’extinction du contrat par l’employeur, et à la démission du travailleur cette période de préavis s’applique par l’article 15.
 
 La période de préavis selon l’ancienneté continue est la suivante.
 
@@ -138,7 +138,7 @@ La période de préavis selon l’ancienneté continue est la suivante.
 2. Si elle est d’un an ou plus et de moins de 3 ans : 20 jours
 3. Si elle est de 3 ans ou plus : 30 jours
 
-Si la période d’un contrat de travail à durée déterminée pour un travail spécifique (特定性定期契約) dépasse 3 ans, s’applique la norme séparée de l’article 15. Le travailleur, après avoir travaillé 3 ans, peut éteindre le contrat avec un préavis de 30 jours à l’employeur. Cette norme doit se distinguer de celle des délais de préavis fondés sur l’ancienneté continue applicable au contrat à durée indéterminée.
+Si la période d’un contrat de travail à durée déterminée pour un travail spécifique (特定性定期契約) dépasse 3 ans, s’applique la norme séparée de l’article 15. Le travailleur, après avoir travaillé 3 ans, peut mettre fin au contrat avec un préavis de 30 jours à l’employeur. Cette norme doit se distinguer de celle des délais de préavis fondés sur l’ancienneté continue applicable au contrat à durée indéterminée.
 
 Si l’ancienneté continue est inférieure à 3 mois, s’il s’agit d’un autre type de contrat à durée déterminée ou si l’on allègue une cause légale d’extinction immédiate, la disposition applicable et les faits doivent s’examiner au cas par cas. Le seul fait que le contrat consigne un préavis plus long ou exige une transmission immédiate du poste ne permet pas de fixer d’avance la conclusion juridique.
 

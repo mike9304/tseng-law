@@ -1,0 +1,353 @@
+WO-F-lv — round 5 fix lane, Latvian (lv)
+worktree: /Users/son7/Projects/tseng-law-fix-lv-r5   branch: fix/native-lv-r5-20260922
+inputs: RULEBOOK-FIX.md (R2–R17), ACCEPTED-ROUND.md, rounds/r5/lv-a.md (63 rows), rounds/r5/lv-b.md (42 rows)
+files touched: src/content/columns-lv/001–018.md, src/data/international-guidance-baltic-atlantic.ts,
+src/data/international-guidance-answers.ts, src/data/international-inquiry-copy.ts
+(src/lib/llms-txt.ts not touched — no lv notice was affected; no test file needed changing)
+
+====================================================================
+§1 ROWS APPLIED
+====================================================================
+
+--- lv-a (guidance pack + columns 001–009) ---
+
+P1
+ 1  004  "Tam jāuzliek galvojums…" → "Uz šo izejas punktu pēc tam jāuzslāņo galvojumi, prettiesiska
+        rīcība, … lai novērtētu faktisko riska apmēru un pieejamos kontroles līdzekļus." (also clears row 40
+        for that sentence)
+ 2  007  1056. pants: "ir tiesības, kas … atsevišķi pārbauda" → "ir prasījums pret otru pusi, kura ir
+        atbildīga par laulības šķiršanu ar spriedumu; mantiskos zaudējumus un nemantisko kaitējumu … vērtē
+        atsevišķi"
+ 3  007  "tiesa var sadales summu koriģēt vai atbrīvot" → "tiesa var sadalāmo summu koriģēt vai sadali atteikt"
+ 4  009  "no darba devēja ir pieprasīta labošana, bet labojums nav noticis" → "darbinieks ir pieprasījis
+        darba devējam novērst šos apstākļus, bet darba devējs to nav izdarījis"
+ 5  002  "Sabiedrībām ar ārvalstu akcionāriem jāsaskan …" → subject restored; see note in §3 (applied as the
+        reviewer's own wording, locative "Sabiedrībās … savstarpēji jāsaskan")
+
+P2 / P3 (applied)
+ 7  006  "Tā ir taisnība, ka Korejas valdība sāka…" → "Savulaik Korejas valdība sāka…"
+ 8  004  "Paredzētās darbības jāizklāj; katras atļaujas līguma puse…" → "Paredzētās darbības jāsadala pa
+        daļām, un vispirms jānoskaidro, kurš par katru no tām slēdz līgumus un kurš ir attiecīgās atļaujas
+        turētājs."
+ 9  001  "būvniecības pārvalde (建築管理)" → "būvniecības noteikumi (建築管理)"
+10  009  "izsaka nepatiesu gribas izpausmi (虛偽意思表示)" → "sniedz nepatiesu gribas izteikumu (虛偽意思表示)"
+11  003  "cietušais nejūt ne nožēlu, ne sirsnību" → "cietušais nesaskata ne nožēlu, ne sirsnīgu attieksmi"
+12  003  "paliek dziļi ievainots un nonāk dusmās" → "jūtas dziļi aizvainots un sadusmojas"
+13  007  "gandarījuma nauda (慰撫金)" → "morālā kaitējuma atlīdzība (慰撫金)"  [+ swept 016: "atlīdzība par
+        garīgo kaitējumu (慰撫金)" → the same canonical term; 003 already had it — now 1 term in all 3 files]
+14  009  "pat ja darbinieks parasti izbeidz darba līgumu" → "pat ja darba līgumu izbeidz pats darbinieks"
+15  004  "ieteicams sākt no galveno līgumu atsavināšanas klauzulām…" → "jau no paša sākuma ieteicams sakārtot
+        galveno līgumu cesijas klauzulas un intelektuālā īpašuma licenču nosacījumus"
+16  007  debitive object → nominative: "Pieteicējs, pārstāvības iespēja, … faktiski sagatavojamie materiāli
+        jāsagatavo"; "Pieteikumi pēc termiņa … arī jāpieņem"; 001 "aizliegtas vai ierobežotas nozares,
+        profesionālā kvalifikācija, vietas ierobežojumi un nozares atļaujas … jāizvērtē"; 001 "nodoklis …
+        un nodoklis … jānošķir"
+17  002  "…tiesības visiem jāizkārto" → "…tiesības visi jāizkārto"
+18  001  "paredzētajai adresei un darbības nozarei jāizvērtē" → "attiecībā uz paredzēto adresi un darbības
+        nozari jāizvērtē"
+19  004  "tie, kuriem jānovērš ar iekšējo kontroli" → "tie, kas jānovērš ar iekšējo kontroli"
+20  004  "izbeigšana (解散) un likvidācijas" → "izbeigšana (解散) un likvidācija"
+21  004  "vai filiāle var pieteikties vai vai meitas sabiedrība" → "…var pieteikties un vai meitas sabiedrība"
+22  002  "Pienākumi pēc nodokļa veida, turētās mantas, darbinieku un citu apstākļu jāvērtē" → "Pienākumi
+        atkarībā no nodokļa veida, turētās mantas, darbiniekiem un citiem apstākļiem jāvērtē" (FAQ + body);
+        "pēc darījumu pirms pārtraukšanas" → "atkarībā no darījumiem pirms pārtraukšanas"
+23  004  "bet arī izstāšanās." → "iedarbojas ne tikai ienākot Taivānā, bet arī no tās izejot."
+24  007  "Fiksēts saraksts visām starptautiskajām lietām tādā pašā veidā neattiecas." → "Viens un tas pats
+        fiksētais saraksts neattiecas uz visām starptautiskajām lietām."
+25  006  "Tomēr ar laika gaitu" → "Tomēr laika gaitā un līdz ar patēriņa tirgus paplašināšanos"
+26  008  "Tāpēc ka alga un prēmijas" → "Tā kā alga un prēmijas"; "Tāpēc ka šādu gadījumu ir daudz" → "Tā kā
+        šādu gadījumu ir daudz"; "un tāpēc, ka jau bija atklājis" → "un, tā kā jau bija atklājis"
+27  006  "esat cietis(-usi) seksuālu uzmākšanos" → "…no seksuālas uzmākšanās"; "ja tiek ciesta seksuāla
+        uzmākšanās" → "ja nākas ciest no seksuālas uzmākšanās"
+28  003/006 duplicated currency naming removed: "TWD 200.000 jauno Taivānas dolāru" → "TWD 200.000";
+        "TWD 40.000, TWD 10.000 un TWD 20.000 jauno Taivānas dolāru (新臺幣)" → "… TWD 20.000 (新臺幣)".
+        (The dot thousands separator itself is kept — see §2.)
+31 (part) 009 mid-sentence capital "Izšķiroši ir," → "izšķiroši ir,". ZWSP part skipped — see §2.
+32 (part) 005 "vairāk nekā 1 ārzemnieku" → "vairāk nekā vienu ārzemnieku". 001/008 instances reverted — §2.
+33  008  "sabiedrību, kurā bija 10 gadus" → "sabiedrību, kurā bija nostrādājis 10 gadus"
+34  008  stranded "kā saturu." removed without changing the block count: block A now reads "un lika uz tās
+        uzrakstīt šādu tekstu:" and block B '„Es, [vārds], brīvprātīgi pazeminu amatu un algu“.'
+35  002/004 "visaugstāk" → "ne vairāk kā" (5 instances: 002 ×2, 004 ×3). Digits/format untouched.
+36  002  "Jāizvērtē, darījums pēc darījuma, …" → "Jāizvērtē katrs darījums atsevišķi — …"; "lai lietu pēc
+        lietas novērtētu" → "lai katrā lietā atsevišķi novērtētu"
+37  002  "sapīta ārvalstu ieguldījuma struktūra" → "sarežģīta ārvalstu ieguldījuma struktūra"
+38  002  "paliek zem šī klātbūtnes priekšnoteikuma" → "šo klātbūtnes priekšnoteikumu neizpilda"
+39  002  "Nodokļu deklarācijas nedrīkst uzskatīt par visām izzudušām…" → "Nedrīkst uzskatīt, ka līdz ar
+        darbības pārtraukšanas reģistrāciju izzūd visi nodokļu deklarēšanas pienākumi."
+40  004  "faktisko ekspozīciju" → "faktisko riska apmēru"; "atbildības ekspozīcija" → "pakļautība atbildības
+        riskam" (0 occurrences of "ekspozīcij" remain)
+41  004  "ar pašu sabiedrības formu nerisinās" → "…netiek atrisināti"
+42  005  "informējieties savā galvenajā bankā savā mītnes valstī" → "sazinieties ar savu banku mītnes valstī"
+43  005  "neiesniedzot, var iestāties sankcijas" → "ja to neiesniedz, var iestāties sankcijas"
+44  006  "var tikt uzlikta brīvības atņemšana līdz 3/5 gadiem" → "var piespriest brīvības atņemšanu uz laiku
+        līdz 3/5 gadiem" (both sentences)
+45  007  "kā atsevišķu vispārīgu iemeslu liek gadījumu" → "…paredz gadījumu"; "liek pieņēmumu, ka manta…" →
+        "nosaka pieņēmumu, ka manta…"
+46  007  "Nedrīkst apgalvot tikai tāpēc, ka valstspiederības atšķiras, ka … atšķiras." → "Nedrīkst pieņemt,
+        ka 1030-1. panta aprēķins mainās tikai tāpēc, ka laulātajiem ir atšķirīga valstspiederība."
+47  007/002 "nenoteicas"/"nenosakās" → active/nominative: 007 "Turpretī grozījuma summu arī nenosaka uzreiz
+        pašas cenu izmaiņas vai vienpusējs apgalvojums"; 002 "Akcionāru saņemtās summas aplikšanu … nenosaka
+        tikai ieguldītā kapitāla atdošanas apzīmējums."
+48  008  "ved darbiniekus uz aiziešanu pēc paša gribas" → "mudina darbiniekus aiziet pēc paša vēlēšanās";
+        "nespiestu uz aiziešanu pēc paša gribas" → "nespiestu aiziet pēc paša vēlēšanās"
+49  008  "mazapzinīgas" → "negodprātīgas"
+50  008  "atpazina, ka sabiedrība grib darbiniekus aizvākt" → "saprata, ka sabiedrība grib darbiniekus
+        atbrīvot neatbilstošā veidā"
+51  009  "termiņš labi jāpārvalda" → "rūpīgi jāseko šim termiņam"
+52  009  "Tāpēc darba strīdos (勞資糾紛) Taivānā / laiks šeit ir izšķirošs." → "Tāpēc Taivānas darba strīdos
+        (勞資糾紛) / izšķirošs ir laiks." (two blocks, block count unchanged)
+53  003  "piesakās uz pagaidu mantas nodrošinājumu (假扣押)" → "iesniedz pieteikumu par pagaidu mantas
+        nodrošinājumu (假扣押)"
+54  003  "nerūpējas par zvanīšanu ar jautājumu par cietušā stāvokli un par apmeklējumu" → "ne piezvana, lai
+        painteresētos par cietušā veselību, ne arī viņu apmeklē"
+55  pack international-inquiry-copy.ts: "tikai valodā {language}" → "tikai {language} valodā";
+        "Šī lapa valodā {language} netiek piedāvāta." → "Šī lapa {language} valodā netiek piedāvāta."
+58  006  the Traditional-Chinese gloss wrongly pinned to a Korean statute removed; the act is now named:
+        "saskaņā ar Korejas Medicīnisko pakalpojumu likumu". (Reviewer's suggested Hangul gloss 의료법 NOT
+        used — Hangul outside `url` is forbidden and the checker's hangul lane would fail. The English
+        source leaves the act unglossed, so the gloss was simply dropped.)
+59  pack "Mēs nesolām tulku, atbildes termiņu un tikšanos, izmantojot šo lapu." → "Ar šīs lapas starpniecību
+        mēs nesolām ne tulku, ne atbildes termiņu, ne tikšanos."; contact page "Mēs nesolām atbildes termiņu,
+        neapstiprinām tikšanos, izmantojot šo lapu, …" → "Ar šīs lapas starpniecību mēs nesolām ne atbildes
+        termiņu, ne apstiprinātu tikšanos, ne konkrētu advokāti vai konkrētu advokātu, un mēs nenodrošinām
+        tulku." (all disclosure-parity markers — atbildes termiņ / tikšan / tulku — preserved verbatim, so
+        guidance-disclosure-parity.test.ts needed no edit; it passes.)
+60  pack "Mēs vedam sešas jomas: …" → "Mēs strādājam sešās jomās: …" and guidanceAnswers.lv.services
+        "Birojs ved sešas jomas saskaņā ar Taivānas tiesībām: …" → "Birojs strādā sešās jomās …"
+        (the list that follows switched from accusative to nominative accordingly)
+61  pack services description "robežas, kas vispirms ir noderīgi zināt" → "robežas, ko vispirms ir noderīgi
+        zināt" (no brackets/parentheses introduced — llms.txt catalog rule respected)
+62  pack "Izmaksas ir atkarīgas no lietas pašas" → "Izmaksas ir atkarīgas no pašas lietas"
+63  pack "nevis izseciniet tos no šīs lapas" → "un nemēģiniet tos izsecināt no šīs lapas"
+
+--- lv-b (columns 010–018) ---
+
+ 1  016  "Kandidātam, kurš ilgstoši dzīvo ārvalstīs, … jāvērtē" → "Ja kandidāts ilgstoši dzīvo ārvalstīs, ja
+        viņam ir saimnieciska interese pret bērnu vai maza aktīvu pārvaldības pieredze, atsevišķi jāvērtē…"
+ 2  014  "Brīdinājuma termiņš pēc nepārtrauktā darba laika ir šāds." → "Paziņojuma termiņš atkarībā no
+        nepārtrauktā darba stāža ir šāds."; the same term fixed at "Šī norma jānošķir no paziņojuma termiņa,
+        kas atkarībā no nepārtrauktā darba stāža…" and "Ja nepārtrauktais darba stāžs ir īsāks par 3 mēnešiem"
+ 3  011  "2026. gada 1. jūlijā principā visi kosmētikas izstrādājumi ietilpst PIF režīmā" (FAQ + body) and
+        "2026. gada 1. jūlijā piemērošanas priekšmetā ietilpst" → the rule now clearly runs from that date
+        onwards: "2026. gada 1. jūlijā un turpmāk PIF režīms principā attiecas uz visiem kosmētikas
+        izstrādājumiem…" / "2026. gada 1. jūlijā un turpmāk režīms attiecas arī uz pārējiem kosmētikas
+        izstrādājumiem…". The reviewer's "No 2026. gada 1. jūlija" was tried first and REVERTED: the
+        checker's month table only knows the locative "jūlijā", so the genitive dropped month 7 three times
+        and the file failed `numbers`. Evidence is in §3.
+ 5  010  "kvītis par medicīniskos izdevumus … un aprūpes izmaksas" → "kvītis par medicīniskajiem izdevumiem
+        (醫療費用), transportu uz ārstniecības iestādi (就醫交通費) un aprūpes izmaksām (看護費用)"
+ 8/9 015 the zoning point is no longer stated three times. The English is one sentence split over three
+        lines, and the Korean source has exactly three blocks there, so the blocks were KEPT and the three
+        lines now carry one sentence: "Līdzās tirgus situācijai" / "vēl viens būtisks apsvērums ir tas," /
+        "vai adrese atrodas zonā, kur „restorāna“ darbība ir iespējama." (deleting the two paragraphs, as
+        the reviewer proposed, would have broken block parity — ACCEPTED-ROUND says rephrase instead.)
+10  013  "Piemēram, ja nozare ir iespējama biroja telpā, piemēram, …" → "Turpretī, ja nozare ir veicama
+        biroja telpā (piemēram, reklāma vai vairumtirdzniecība), sabiedrību var dibināt biroja telpā."
+11  013  the duplicated closing sentence removed inside the existing blocks: the trailing "Pirms nomas
+        līguma noslēgšanas to pārbaudiet." was dropped from the previous block and the next block now reads
+        "Pirms nomas līguma noslēgšanas to pārbaudiet kompetentajā iestādē."
+12  012  "1 reizi jāmirkšķina tālās gaismas" → "1 reizi jāpamirgo ar tālajām gaismām" (the digit is kept:
+        it is a source number the checker counts, and the finding was about the verb)
+13  012  "jāgaida skaidra atbrīvošanas izpausme" → "jāsagaida skaidra norāde, ka priekšā braucošais dod ceļu"
+14  012  "Tas, ka dažās lietās šādi ekspertīzes iznākumi iestājas, nenozīmē…" → "Šis konkrētās lietas
+        iznākums nenozīmē…" (English: "This case-specific result does not mean…"; wording chosen so it does
+        not repeat the preceding "Šis slēdziens bija ierobežots ar šīs lietas apstākļiem.")
+15  012  "jāpielāgojas situācijai priekšā" → "jāpielāgo braukšana ceļa apstākļiem priekšā"
+16  011  "Tiesiskā atbildības pieskaitīšana tomēr netiek noteikta tikai ar līgumisku apzīmējumu…" → "Tomēr
+        tikai līgumisks apzīmējums — pārstāvis, galvenais izplatītājs vai izplatītājs — nenosaka, kurš nes
+        tiesisko atbildību."
+17  011  "nedrīkst kārtot tikai pēc atlīdzinātas pārdošanas" → "nedrīkst plānot tikai ap pārdošanu par samaksu"
+18  011  "piemērošanas priekšmetā ietilpst" → "režīms attiecas arī uz pārējiem kosmētikas izstrādājumiem"
+19  011  "un līgumisko darba atbildīgo" → "un personas, kas atbild par līgumā sadalītajiem darbiem"
+20  017  negated coordination → "ne … ne" / "nedz … nedz": 017 lines for the plate ban, the two
+        licence-lending sentences, the acquisition sentence (×2) and the residence sentence
+21  014/017 "vienoti" → "visos gadījumos" (014 "nedrīkst ne visos gadījumos izslēgt iekšējo apmācību…",
+        017 "Nedrīkst visos gadījumos apgalvot…"); 0 occurrences of adverbial "vienoti" remain
+22  014  "Galīgi starp nolīgto laiku" → "Galu galā starp nolīgto laiku"
+23  014  subjectless debitive fixed: "No līguma un paziņojuma materiāliem jābūt skaidram, vai tas ir …"
+24  014  "Kas apgalvo profesionāli tehnisko daļu, ar materiāliem jāizskaidro" → "Tam, kurš atsaucas uz
+        profesionāli tehnisko daļu, ar materiāliem jāizskaidro"
+25  014  "pamata drošības gaitas norādījums" → "pamata darba drošības instruktāža"
+26  014  "samazinās kļūda visus slēdzienus atvasināt" → "mazinās risks visus slēdzienus atvasināt"
+27  014  "Pat ja min veselību vai darba apstākļus" → "Pat ja tiek minēta veselība vai darba apstākļi"
+28  014/015 "figūrē" removed: 014 "Pat ja visi četri jautājumi ir ietverti vienā un tajā pašā līgumā";
+        015 "kad nozare ir norādīta pieteikumā" (0 occurrences of "figūrē" remain)
+29  014  both checklists (16 items) converted from 3rd-person indicative to the infinitive instruction form
+        (noteikt / nošķirt / saglabāt / sasaistīt / dokumentēt / novērtēt / aprēķināt / salīdzināt; savākt /
+        pārbaudīt / nodrošināt / fiksēt / saglabāt / sakārtot + pārbaudīt / izvērtēt / neatzīt + pārbaudīt)
+30  015  "aptuveni 10 nozaru" → "aptuveni 10 nozares"
+31  015  "pārbauda pēc amata papildus (隨案主動查詢)" → "papildus pārbauda pēc savas iniciatīvas (隨案主動查詢)"
+32  015  "Ar to ir apkopota būtiskā gaita" → "Ar to izklāsts ir noslēgts"
+33  016  "trusts" → "trasts"
+34  016  "Katra no šīm tiesībām nav vecāku pašu interesēs" → "Neviena no šīm tiesībām nepastāv vecāku pašu
+        interesēs"
+35  016  "jāizvērtē sastādīšanas formā, materiālajā spēkā, tulkojumā…" → "jāizvērtē pēc sastādīšanas formas,
+        materiālā spēka, tulkojuma un notariālā apliecinājuma (認證), kā arī pēc testamenta apstiprināšanas
+        (檢認) vai izpildes gaitas"
+36  016  "nedrīkst svērt vairāk par bērna interesēm" → "nedrīkst būt svarīgāka par bērna interesēm"
+37  016  "Ja pie nepilnīgiem materiāliem" → "Ja ar nepilnīgiem materiāliem"
+38  016  "neizlaižot" → "neko neizlaižot"
+39  017  "piemēro pašu slieksni" → "piemēro atsevišķu slieksni" (figures untouched)
+40  017  frontmatter FAQ resynchronised with the body: "kravu ekspedīcija (運送承攬) vai cita pārvadājuma
+        starpniecība un līdzīgas darbības jāizvērtē atsevišķi"
+41  018  "pieteicas ieguldījuma atļaujai" → "piesakās ieguldījuma atļaujai"
+42  018  "Jāvērtē klienta prasības un faktisko uzņēmējdarbību, iekārtas, personālu un darījumu struktūru" →
+        "…un faktiskā uzņēmējdarbība, iekārtas, personāls un darījumu struktūra" (FAQ + body)
+
+--- SYSTEMIC SWEEPS (beyond the quoted instance) ---
+S1  Negated verb coordinated with "un arī" → "ne … ne" / "nedz … nedz" / rephrased.
+    21 instances changed: 001 ×2, 011 ×1, 014 ×7, 016 ×2, 017 ×7, 018 ×2.
+    (012 "un arī tad, kad …" in the prohibition list left as is — that is an ordinary additive clause under
+    one negation, not the flagged coordination.)
+S2  Debitive with an accusative object / with the dative on the wrong noun → nominative subject or an
+    explicit agent. 13 instances: 001 ×2, 002 ×1, 004 ×1, 007 ×3, 010 ×1 ("Laiks … un … samazinājums
+    jāpierāda", found by sweep, not quoted by either reviewer), 014 ×2, 016 ×1, 018 ×2.
+S3  "pēc" carrying "depending on" with the wrong (genitive) plural → "atkarībā no" + dative. 3 instances,
+    all in 002 (FAQ, body §5, and the deregistration paragraph). A file-wide "pēc" sweep was NOT done:
+    the remaining ~240 occurrences are grammatical ("pēc parādu … nokārtošanas", "pēc darījumu struktūras"
+    — genitive modifiers of a singular head), and replacing them wholesale is not a defect fix.
+S4  "visaugstāk" (superlative adverb) as a statutory ceiling → "ne vairāk kā": 5 instances (002 ×2, 004 ×3).
+S5  Term unification (R8): one Latvian rendering of 慰撫金 across 003/007/016 ("morālā kaitējuma atlīdzība");
+    "trasts" spelling unified in 016; 經濟部投資審議司 already one name (001/011/013/017/018 — verified).
+S6  Stock assessment verbs (lv-a systemic 6): varied only inside the sentences that were already being
+    rewritten (jāizvērtē → jānoskaidro / jānovērtē / jāsadala / jāsaprot …). A file-wide thinning of the
+    138 occurrences was not attempted — it would rewrite unflagged sentences wholesale and each such
+    sentence still says something the source says. Flagged as remaining work for a later round.
+
+====================================================================
+§2 ROWS SKIPPED (with reason)
+====================================================================
+lv-a 29, 35(separator part), 56; lv-b 4, 39(separator part)
+    Space thousands separators ("500 000", "1 579 589", "2 500 000", "1,57 miljoni TWD").
+    SKIP per RULEBOOK R14 + ACCEPTED-ROUND: the checker only parses dot thousands for lv; a space
+    separator is not parsed and the pinned bio figure "TWD 1.57M" is asserted byte-identical by a test.
+    The wording halves of rows 35 and 39 WERE applied ("visaugstāk" → "ne vairāk kā", "pašu" →
+    "atsevišķu"); only the digit grouping stayed.
+
+lv-a 30, lv-b 6  — publication stamp "13. septembrī 2025. gadā" → year-first.
+    TRIED AND REVERTED. `stripStructuralNoise()` in scripts/check-column-translation.mjs removes a
+    line-initial "<digits>. " unless the next token is a month name, so a year-first stamp at the start of
+    `date_display` loses both the year and the month. Measured:
+        analyzeNumbers("2025. gada 13. septembrī","lv") -> [13]          (year + month lost)
+        analyzeNumbers("13. septembrī 2025. gadā","lv") -> [13,9,2025]   (current form, correct)
+        analyzeNumbers("Publicēts 2025. gada 13. septembrī","lv") -> [2025,13,9]  (parses only mid-line)
+    All 18 files failed `numbers` with "missing from translation (2): 9, 2025" until the day-first form was
+    restored. The in-body dates (which are mid-line) already use the correct year-first Latvian form.
+    This is a checker limitation, not a Latvian decision — it needs a checker patch, not a content patch.
+
+lv-a 31 (ZWSP part), lv-b 7  — delete the U+200B lines in 003/005/006/008/009/013/015.
+    SKIP. `checkBlocks` asserts ZWSP parity with the Korean source, and the counts already match exactly:
+        003 lv=52 src=52 · 005 8/8 · 006 4/4 · 008 10/10 · 009 5/5 · 013 5/5 · 015 3/3
+    Deleting them would fail every one of those files ("ZWSP 52 → 0"). Turning the "Jautājums 16." body
+    lines into "## 16." headings (lv-a's suggestion) would also break `checkHeadings` level parity.
+    The parts of row 31 that do NOT touch ZWSP were applied (009 mid-sentence capital). The empty bold
+    lines in 005 (`**​**`) are byte-identical to the Korean source at lines 38/50/60/68 — a source
+    artifact, left alone for the same parity reason.
+
+lv-a 32 (partly)  — remove the redundant digit "1".
+    005 applied ("vairāk nekā vienu ārzemnieku"). 001 ("mazāk nekā 1 gadu", 4×) and 008 ("par katru
+    noslēgtu 1 darba stāža gadu", 2×) TRIED AND REVERTED: the numbers bag then went short against the
+    Korean source — 001 "missing from translation (4): 1×4", 008 "missing from translation (1): 1".
+    In 008 exactly one of the two could be dropped without failing, but that would leave the frontmatter
+    FAQ and the body blockquote saying the same thing in two different ways — the very defect lv-b 40
+    reports for 017 — so both were left as they are.
+
+lv-a 6  — drop "(10. pants)" from the 004 source-list label.
+    TRIED AND REVERTED. The Korean source line 175 is "대만 법무부 법령정보 — 영업세법 제10조" and the
+    numbers check counts that 10; removing it failed 004 with "missing from translation (3): 9, 10, 2025".
+    The reviewer is right that the article number contradicts `flno=3` — but the contradiction is in the
+    Korean source, so it is a source fix, not a Latvian one. Flagged for the supervisor.
+
+lv-a 57  — add the Gregorian year beside the Republic-of-China year in 007.
+    SKIP per ACCEPTED-ROUND (adding a Gregorian year adds a digit the checker counts). R13 is already
+    satisfied: the text reads "Ķīnas Republikas 112. gada konstitucionālajā spriedumā Nr. 4
+    (民國112年憲判字第4號)" — the ROC calendar is named and the gloss carries 民國.
+
+lv-a 58 (partly) — the reviewer's replacement gloss "의료법" is Hangul; Hangul outside `url` is forbidden
+    by the work order and by the checker's `hangul` lane. The row's substance was applied by dropping the
+    wrong gloss instead (the English source leaves the act unglossed).
+
+lv-b 8/9 (deletion part) — deleting two paragraphs would change the block count; rephrased inside the
+    existing three blocks instead, per ACCEPTED-ROUND.
+
+lv-b 3 (wording part) — "No 2026. gada 1. jūlija" is the natural Latvian, but the genitive month form is
+    not in the checker's month table. Applied as "2026. gada 1. jūlijā un turpmāk", which carries the same
+    "from that date onwards" meaning and keeps the parsable locative.
+
+Frontmatter `url:` with Hangul in 008/009 — SKIP (ACCEPTED-ROUND; canonical source metadata).
+
+====================================================================
+§3 VERIFY OUTPUT (verbatim)
+====================================================================
+$ cd /Users/son7/Projects/tseng-law-fix-lv-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-lv --lang lv 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-lv src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      25
+
+(25 = the 18 columns + 3 data files I changed + this log, + `docs/i18n/global-plan/WO-F-lv.txt` which was
+already modified in the worktree before this run, + the two untracked review files rounds/r5/lv-a.md and
+lv-b.md. No git add/commit/push was run.)
+
+Supplementary evidence for the two reverted format changes:
+$ node -e 'import("./scripts/check-column-translation.mjs").then(m=>{for(const t of ["2025. gada 13. septembrī","13. septembrī 2025. gadā","No 2026. gada 1. jūlija","2026. gada 1. jūlijā"])console.log(JSON.stringify(t),"=>",JSON.stringify(m.analyzeNumbers(t,"lv").tokens.map(x=>x.value)))})'
+"2025. gada 13. septembrī" => [13]
+"13. septembrī 2025. gadā" => [13,9,2025]
+"No 2026. gada 1. jūlija" => [2026,1]
+"2026. gada 1. jūlijā" => [1]        (mid-line it yields [2026,1,7]; the bare string is stripped as a list marker)
+
+====================================================================
+§4 THINGS I BELIEVE THE REVIEWER GOT WRONG (not applied)
+====================================================================
+1. lv-a 58 — the suggested gloss "(의료법)" is Hangul. The product rule and the checker both forbid Hangul
+   outside `url`. The finding itself is correct (a Traditional-Chinese gloss must not be pinned to a Korean
+   statute); the fix had to be "drop the gloss", not "swap it for Hangul".
+2. lv-a 6 — "(10. pants)" is not a Latvian defect: the Korean source label says "영업세법 제10조" and the
+   checker counts that 10. The article-number/link mismatch (and the fact that the label names a different
+   act than the Latvian text does) exists in the source; only the supervisor can fix it upstream.
+3. lv-a 29/30 and lv-b 4/6 — both are correct Latvian typography, but the checker cannot parse a space
+   thousands separator or a year-first standalone date stamp. They are checker defects, not content
+   defects; nothing in the Latvian files can satisfy both at once.
+4. lv-b 7 / lv-a 31 — the U+200B lines and the empty bold lines in 005 are byte-for-byte the same as the
+   Korean source and are asserted by `checkBlocks`. They cannot be removed per-locale; they have to be
+   removed from the source for all 45 locales at once.
+5. lv-a 32 — in 001 and 008 the digit "1" is not a Latvian addition: it is in the Korean source
+   ("근속 1년", "1년 미만") and the numbers bag requires it. The stylistic point is fair, but applying it
+   breaks structural parity.
+6. lv-b 14 — the reviewer's replacement ("Šis slēdziens attiecas tikai uz konkrēto lietu") would have made
+   the paragraph repeat the sentence two paragraphs earlier almost word for word. The English is "This
+   case-specific result does not mean…", so the rewrite reads "Šis konkrētās lietas iznākums nenozīmē…".
+7. lv-b 8/9 — the three 015 paragraphs are not three Latvian sentences that can be deleted: the Korean
+   source has exactly those three blocks and the English is one sentence split across them. They were
+   rejoined into one sentence instead of deleted.
+
+====================================================================
+§5 REMAINING / FOR THE SUPERVISOR
+====================================================================
+- Checker patch needed before the lv typography rows can ever pass: (a) `stripStructuralNoise` should not
+  eat a line-initial "<year>. gada" stamp; (b) the lv month table should accept the genitive/accusative
+  forms (jūlija/jūliju …); (c) NUMBER_THOUSAND_STYLE has no space-separator style for the Baltic locales.
+- Source-level fixes (all 45 locales at once): the U+200B blocks in 003/005/006/008/009/013/015, the empty
+  bold lines in 005, and the "영업세법 제10조" label in 004 whose link is `flno=3`.
+- Not attempted this round: a full thinning of the 138 "jāizvērtē/jāpārbauda/jāvērtē/jāapstiprina" clause
+  endings (lv-a systemic 6). It needs a sentence-by-sentence rewrite of unflagged text and should be its
+  own work order.

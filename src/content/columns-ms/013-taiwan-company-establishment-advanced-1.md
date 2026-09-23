@@ -91,11 +91,11 @@ Penubuhan syarikat berlangsung sekitar **3 bulan**, pemerolehan permit kerja (�
 
 maka anda mesti menetapkan permulaan kontrak selewat mungkin.
 
-Selain itu, dalam kontrak sewa premis komersial di Taiwan, tuan rumah kerap memberikan kepada penyewa “**tempoh pengubahsuaian**” (裝潢期間).
+Selain itu, dalam kontrak sewa premis kedai di Taiwan, tuan rumah kerap memberi penyewa “**tempoh pengubahsuaian**” (裝潢期間).
 
 Ini ialah tempoh yang dikecualikan sewa; anda boleh merundingkannya.
 
-Tidak mudah bagi orang asing untuk menyewa premis komersial, dan deposit cagaran (押金) di Taiwan agak rendah (biasanya 2 bulan), sehingga perlindungan tuan rumah terhad;
+Tidak mudah bagi orang asing untuk menyewa premis kedai, dan deposit cagaran (押金) di Taiwan agak rendah (biasanya 2 bulan), sehingga perlindungan tuan rumah terhad;
 
 tuan rumah maka teragak-agak untuk menyewa kepada orang asing.
 

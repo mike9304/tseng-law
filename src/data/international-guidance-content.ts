@@ -1735,7 +1735,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         'Kung hindi pa tiyak kung saang larangan nabibilang ang inyong usapin, ipinapaliwanag ng pahinang ',
       servicesAssistanceLinkLabel: 'Makipag-ugnayan',
       servicesAssistanceAfter:
-        ' kung paano isulat ang buod na susuriin ng abogado.',
+        'kung paano isulat ang buod na susuriin ng abogado.',
       columnsViewAllLabel: 'Tingnan ang lahat ng artikulo',
       columnsReadMoreLabel: 'Basahin pa',
       columnsReviewLabel: 'Sinuri ni Abogada Wei Tseng',
@@ -2329,7 +2329,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'القضايا الجزائية',
             paragraphs: [
               'يساعد المكتب في مرحلة التحقيق وفي مرحلة المحاكمة، للمشتبه به أو المتهم وللمجني عليه على السواء، كما يساعد في تقدير المخاطر الجزائية الناشئة عن النشاط التجاري.',
-              'وللقضايا الجزائية عادةً مواعيد قصيرة ومحطات إجرائية ثابتة، فإذا كنت قد تسلّمت ورقة من جهة مختصة فاذكر التاريخ المدوّن عليها فور التواصل ليُنظَر في الأمر بترتيب أولويته الصحيح.',
+              'وللقضايا الجزائية عادةً مواعيد قصيرة ومحطات إجرائية ثابتة، فإذا كنت قد تسلّمت ورقة من جهة مختصة فاذكر التاريخ المدوّن عليها في أول التواصل ليُراجَع المحتوى بترتيبه الصحيح.',
             ],
           },
           {

@@ -118,7 +118,7 @@ Bekräfta giltigheten av uppdragstagarens driftlicens och tillståndsomfång, de
 
 Även om utlänningen blir delägare eller investerare i målbolaget ger det faktumet ensamt varken rätt att arbeta eller vistelsestatus i Taiwan. Om den dagliga driften, såsom företagsledning, försäljning, fordonsdisposition och kundhantering, utförs i Taiwan ska det, innan arbetet inleds, bekräftas om arbetstillstånd som stämmer med den faktiska funktionen behövs, och det efterföljande vistelseförfarandet ska drivas separat.
 
-Vid arbete utan tillstånd kan sanktionsavgift och utreseorder (限令出國) tillämpas. Den gällande arbetsvägledningen om inreseförbud (禁止入國) vid inrikesministeriets immigrationsmyndighet (內政部移民署) anger i allmänhet, för olagligt arbete, en inreseförbudsperiod om 3 år, men de krav på befrielse eller förkortning av perioden som samma vägledning anger kan tillämpas. Resultatet avgörs inte mekaniskt bara för att en anmälan från tredje man finns, och den behöriga myndigheten prövar fakta, tillämpliga regler och omständigheterna i varje ärende.
+Vid arbete utan tillstånd kan sanktionsavgift och utreseorder (限令出國) tillämpas. Den gällande administrativa vägledningen om inreseförbud (禁止入國) vid inrikesministeriets immigrationsmyndighet (內政部移民署) anger i allmänhet, för olagligt arbete, en inreseförbudsperiod om 3 år, men de krav på befrielse eller förkortning av perioden som samma vägledning anger kan tillämpas. Resultatet avgörs inte mekaniskt bara för att en anmälan från tredje man finns, och den behöriga myndigheten prövar fakta, tillämpliga regler och omständigheterna i varje ärende.
 
 ## Officiella källor
 

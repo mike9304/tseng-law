@@ -33,7 +33,7 @@ Internetes bankon vagy koreai hozzátartozón keresztül történő megbízott �
 
 Továbbá a koreai devizaszabályozás szerint a koreai állampolgárságú személy, aki külföldi jogi személyt hoz létre vagy részesedést szerez, „külföldi közvetlen beruházási bejelentést” köteles tenni. A bejelentést a tajvani jogi személy (台灣法人) tőkeátutalásának időpontjában kell nyilvántartásba venni; bejelentés hiányában a devizaszabályok megsértése miatti szankciók következhetnek.
 
-A tőke átutalása (資本金匯款) előtt tájékozódjon a koreai főbankjánál.
+A tőke átutalása (資本金匯款) előtt tájékozódjon a számlavezető bankjánál.
 
 **​**
 
@@ -45,7 +45,7 @@ Ha például tajvani bérjövedelemről van szó, a bérjövedelem forrásadó-i
 
 Ha tajvani vállalkozásba történt beruházásból származó osztalékról és nyereségről van szó, az osztalék és a nyereség forrásadó-igazolásának másolatát (股息和紅利的扣繳憑單影本) kell bemutatni.
 
-Ha az átutalás koreai bankszámláról történik, a tőke eredetére vonatkozó iratokat nem kell csatolni.
+Ha az átutalás külföldi (például koreai) bankszámláról történik, a tőke eredetére vonatkozó iratokat nem kell csatolni.
 
 **​**
 
@@ -71,7 +71,7 @@ Egyes bankok további követelményeket támaszthatnak, például a számla hasz
 
 A. Az első munkavállaló: a kérelem a tengerentúli kínaiak vagy külföldiek szokásos beruházási vállalkozásának vezetői munkakörére (一般僑外投資事業主管工作) vonatkozik. Az alábbi B pont „szakmai vagy műszaki jellegű munkájának” kritériuma nem alkalmazandó, de alkalmazandók a címzett feltételei, ideértve annak a vezetőnek (經理人) a feltételét, akinek társaságában a tengerentúli kínaiak vagy külföldiek hozzájárulása meghaladja az 1/3-ot, valamint a munkáltató tőkére és árbevételre vonatkozó eredményfeltételeit (a vizsgálati szabványok 38. és 39. cikke).
 
-B. A második munkavállalótól korlátozások vannak: ha 1-nél több külföldi állampolgárt foglalkoztatnak, a munkavállaló képzettségét és gyakorlatát, a foglalkoztatáskori átlagbér szabályait, valamint a társaság tőkéjére és árbevételére vonatkozó szabályokat a „szakmai vagy műszaki munka” (專門性或技術性工作) szerint kezelik.
+B. A második munkavállalótól korlátozások vannak: ha egynél több külföldi állampolgárt foglalkoztatnak, a munkavállaló képzettségét és gyakorlatát, a foglalkoztatáskori átlagbér szabályait, valamint a társaság tőkéjére és árbevételére vonatkozó szabályokat a „szakmai vagy műszaki munka” (專門性或技術性工作) szerint kezelik.
 
 Lásd a tajvani Munkaügyi Minisztérium (勞動部) honlapját: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

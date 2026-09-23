@@ -95,7 +95,7 @@ Numerosas pessoas em situação de deficiência visual, receando perder o seu me
 
 Atualmente, a Coreia continua a autorizar só as pessoas em situação de deficiência visual titulares da qualificação a exercer o ofício de massagem.
 
-Se alguém percebe uma remuneração de massagem de outrem sem essa qualificação, a lei prevê uma sanção.
+Se alguém cobra a outrem uma remuneração de massagem sem essa qualificação, essa conduta é punida.
 
 Segundo a lei coreana sobre os serviços médicos (醫療法), uma pena de prisão que pode ir até 3 anos pode ser pronunciada.
 

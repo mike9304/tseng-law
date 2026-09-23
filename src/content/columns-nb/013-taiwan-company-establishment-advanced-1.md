@@ -37,7 +37,7 @@ Når selskapets forberedelseskonto (公司籌備處帳戶) senere åpnes i banke
 
 En medarbeider ved en taiwansk bank har personlig sagt til meg at
 
-tallrike utlendinger nylig forsvinner etter kontoåpningen, så kontoåpningen behandles stadig strengere.
+tallrike utlendinger i det siste har forsvunnet etter kontoåpningen, så kontoåpningen behandles stadig strengere.
 
 Allerede i grunnlagsteksten har en leser anført at kontoåpningen viste seg å være det vanskeligste trinnet; jeg er enig i dette.
 

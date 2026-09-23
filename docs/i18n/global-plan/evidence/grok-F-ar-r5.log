@@ -1,0 +1,87 @@
+# WO-F-ar — Arabic (Modern Standard, Gulf/Levant readers) fix lane (Grok 4.7), campaign round 5
+Worktree: /Users/son7/Projects/tseng-law-fix-ar-r5 (no git add/commit/push)
+Scope written: src/content/columns-ar/{001,003,008,009,010,011,013,014,015,016,018}.md,
+src/data/international-guidance-content.ts (ar criminal paragraph only),
+src/data/international-guidance-team.ts (ar bio only; token `TWD 1.57M` kept byte-identical),
+this log. No test file edited (nothing pinned the strings that changed).
+R2–R10 were already in this text: both round-5 verdicts score 4/5 and say the earlier defects are closed. No further unflagged rewrite, except the identical «الظروف المفردة» collocation in 001 (see sweep).
+
+## Rows applied
+ar-a.md
+  a#1  003: courts currently, in general, impose about 3 months for negligent injury, and about 4 / 6 months for negligent serious injury / negligent death. The no-guarantee close stays («ليست تلك المدة/المدد مضمونة في كل قضية»). Digits 3, 4, 6 kept. Two sentences, still two blocks.
+  a#2  008: B received a large severance with a lawyer’s help; the others who left did not fare the same. The past-fact disclaimer stays («وهذا سرد لواقعة سابقة، لا وعد بنتيجة»). Three existing lines, not merged.
+  a#3  guidance criminal paragraph: «بترتيب أولويته» → «ليُراجَع المحتوى بترتيبه الصحيح», and «فور التواصل» → «في أول التواصل».
+  a#4  003 heading: «كيف تُعترف مسؤولية الحادث؟» → «كيف تُحدَّد المسؤولية عن الحادث؟». Heading level unchanged.
+  a#6  009: the standalone «أي أن» → «بعبارة أخرى:». The following «فإذا…» / «وإذا…» lines stay their own blocks (a merge would change the block count).
+  a#7  team bio: the Arabic amount leads, and `TWD 1.57M` stays byte-identical at the end: «1.57 مليون دولار تايواني جديد (TWD 1.57M)».
+ar-b.md
+  b#1+b#4  011 recall: «التعاون في الاسترداد» → «التعاون في سحب المنتج من السوق»; «والاسترداد أو الإتلاف ليسا تدبيرًا» → «وليس سحب المنتج من السوق أو إتلافه تدبيرًا» (singular predicate).
+  b#2  014: «ثم تُتحقق مواد إضافية» → «ثم يُطلب ما يلزم من مواد إضافية وفق الإجراء المناسب».
+  b#3  016 disclaimer: «الظروف المفردة» → «وقائع المسألة».
+  b#6  014: «من من أبدى أي تعبير» → «ممّن صدر عنه أي قول». The third clause («وإلى أي طرف تُنسب…») stays.
+  b#7  015: «يُنظر اعتبار» → «يُراعى اعتبارٌ». The next sentence already states the restaurant-zone test, so it was not copied into this block.
+  b#8  018 fraction, partial: «ثلثين من» → «الثلثين من» (see reviewer note). The checker lexicon counts «ثلثين» / «الثلثين» as 2 and 3; «ثلثي» emits nothing and `numbers` FAILs on a missing 3.
+  b#9  011: a small-print disclaimer does not necessarily remove the impression of the prominent advertising claim («تُزيل عبارة تحفظ… الادعاء الإعلاني البارز»).
+  b#10 011: «الحكم بتمييز» → «النظر على حدة في» (same sentence as the recall rewrite).
+  b#11 010, partial: the parenthetical calque «(1 مثل)» is gone. The digit stays, parallel with «5 أمثال» / «3 أمثال»: «فبما لا يجاوز 1 مثل مبلغ الضرر الفعلي». Korean is «1배»; dropping the 1 fails `numbers`.
+  b#12 013: «وليس في ذلك نتيجة مضمونة» → «ولا يُضمن بذلك تحقق النتيجة نفسها في قضية أخرى».
+  b#13 016: the guardian is not the parent who exercises the minor child’s rights and duties. The separate-duties clause stays.
+  b#14 016: «على مناصفة تركة الميراث» → «على نصف التركة» (FAQ answer and body).
+  b#15 018: «أنسب لعلاقات المساهمين البسيطة ولهيكل سيطرة مستقرٍ منه لجمع رأس المال أو لتداول الحصص على نحو متكرر».
+
+Applied in full: a#1, a#2, a#3, a#4, a#6, a#7, b#1, b#2, b#3, b#4, b#6, b#7, b#9, b#10, b#12, b#13, b#14, b#15 (18).
+Applied in part, checker form kept: b#8, b#11 (2).
+
+## Rows skipped
+a#5  004 link label «وليست المادة 10 من قانون ضريبة الأعمال».
+     The suggested label drops the digit 10. The column checker compares against the Korean
+     source label «영업세법 제10조»; without that 10, `numbers` FAILs
+     `missing from translation (1): 10`. URL left unchanged. Parenthetical kept so the
+     file still passes. The note is still a translator aside; the checker will not allow it to go.
+a#8  003 Q16–Q20 turned into `##` headings.
+     Korean and English keep Q16–Q20 as body lines. Adding headings changes `headingLevels`.
+     Rephrasing inside the lines would not fix the outline. Left as body paragraphs.
+a#9 and b#5  U+200B blank lines (003, 005, 006, 008, 009, 013, 015), including 005 `**​**` and the trailing U+200B on the 013 address sentence.
+     `checkBlocks` requires the same ZWSP count and the same block count as
+     src/content/columns (Korean). Those characters are in the Korean source.
+     Deleting them fails `blocks` / `ZWSP`. Left in place. 0 instances removed.
+
+## Systemic patterns
+- Court practice told as an occasional result and then denied as typical («في بعض الأحكام… ليست تلك عقوبة نمطية»): 2 sentences in 003 changed (3 months; 4 and 6 months). No other instance.
+- Labor story stopped at proof of entitlement: 1 passage in 008 (3 lines) changed. The no-promise close stays.
+- Product recall written «استرداد»: 2 instances in 011 changed to «سحب المنتج من السوق». Other «استرداد» are capital recovery, tax refund, or a training-cost refund (002, 004, 007, 014). Left.
+- «الظروف المفردة» for the facts / circumstances of the matter: 2 changed. 016 → «وقائع المسألة» (English “facts of the matter”). 001 → «الظروف الفردية» (English “circumstances of the individual matter”; same wording as 014 and 017). No other «الظروف المفردة». «العبارات المفردة» / «الكلمة المفردة» in 011 mean the single expression and were left.
+- Bio leading with `TWD 1.57M`: 1 instance (ar team bio) changed; the token stays byte-identical.
+- Heading «تُعترف» for how fault is determined: 1 instance (003 Q6) changed. «لا تُعترف بها» in 003 for recognition of a damages claim was left.
+- «ثلثين من» as a broken idafa: the flagged 018 instance changed to «الثلثين من» (checker-parsed). Other «ثلثين من أصوات» / «ثلثين أو أكثر» in 002 were not this row and were left.
+- U+200B: 87 characters, all matching the Korean source (003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3). Changed 0. See a#9 / b#5.
+- «(1 مثل)» as a statutory 1× gloss: 1 instance in 010 rewritten with the digit kept. See b#11.
+
+## Reviewer got wrong (not applied)
+a#5, a#8, a#9, and b#5 are right as prose and blocked by the checker, not by a bad reading.
+b#8’s «ثلثي» is the sound idafa; the checker’s Arabic lexicon does not count it, so «الثلثين من» is what the file keeps.
+b#11’s deletion of the 1 would drop Korean «1배». The parenthetical is gone; the digit remains.
+Suggested merges in a#6 (009) and b#7 (015) would join blocks. Each line was rephrased in place.
+Other «استرداد» are not a product recall.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=6
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      16
+```
+Commands were the work-order set (`check-column-translation.mjs --dir src/content/columns-ar --lang ar | tail -8`, marker grep, `tsc --noEmit`, vitest on src/lib/__tests__ and src/data/__tests__, `git status --short | wc -l`). The `16` was counted before this log file existed. After this file was written, `git status --short | wc -l` is 17.

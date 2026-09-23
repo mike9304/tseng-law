@@ -29,17 +29,17 @@ Existujú však **výnimočné prípady**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-V nasledujúcich osobitných situáciách, aj keď zamestnanec odíde z vlastnej vôle, musí mu zamestnávateľ vyplatiť odstupné (článok 14 zákona o pracovných normách, ktorý primerane užíva článok 17; 勞動基準法第14條):
+V nasledujúcich osobitných situáciách, aj keď zamestnanec odíde z vlastnej vôle, musí mu zamestnávateľ vyplatiť odstupné (článok 14 zákona o pracovných normách za primeraného použitia článku 17; 勞動基準法第14條):
 
-1. Keď zamestnávateľ pri uzatvorení pracovnej zmluvy (勞動契約) urobí nepravdivý prejav vôle (虛偽意思表示), takže sa zamestnanec zmýli a existuje riziko utrpenej škody
+1. Keď zamestnávateľ pri uzatvorení pracovnej zmluvy (勞動契約) urobí nepravdivý prejav vôle (虛偽意思表示), takže sa zamestnanec zmýli a hrozí, že utrpí škodu
 
 (napríklad keď zamestnávateľ povie zamestnancovi, že po prijatí ho pošle do zahraničnej pobočky, ktorá v skutočnosti neexistuje)
 
-2. Keď zamestnávateľ, člen rodiny zamestnávateľa alebo zástupca zamestnávateľa (代理人) použije násilie alebo spôsobí závažnú urážku (重大侮辱) zamestnancovi
+2. Keď zamestnávateľ, člen rodiny zamestnávateľa alebo zástupca zamestnávateľa (代理人) použije násilie alebo zamestnanca závažne urazí (重大侮辱)
 
 3. Keď práca stanovená v zmluve môže škodiť zdraviu zamestnanca, zamestnanec požiadal o nápravu a zamestnávateľ ju nevykonal
 
-4. Keď zamestnávateľ, jeho zástupca alebo iný zamestnanec ochorie zákonnou nákazlivou chorobou (法定傳染病), existuje riziko nákazy zamestnancov pracujúcich spolu a ide o závažné nebezpečenstvo pre zdravie zamestnanca
+4. Keď zamestnávateľ, jeho zástupca alebo iný zamestnanec ochorie na zákonom určenú prenosnú chorobu (法定傳染病), existuje riziko nákazy zamestnancov pracujúcich spolu a ide o závažné nebezpečenstvo pre zdravie zamestnanca
 
 5. Keď zamestnávateľ nevypláca odmenu (工作報酬) podľa pracovnej zmluvy, alebo nezabezpečuje dostatočné množstvo práce zamestnancovi, ktorého odmena sa počíta podľa počtu kusov (按件計酬)
 
@@ -63,7 +63,7 @@ Zákon o pracovných normách (勞動基準法) však stanoví, že
 
 ak chce zamestnanec ukončiť pracovnú zmluvu na základe bodu 1 alebo 6 vyššie (napríklad aby ukončil zmluvu kvôli nezápisu do poistenia),
 
-musí ukončiť pracovnú zmluvu v lehote **30 dní** odo dňa, keď poznal túto situáciu,
+musí ukončiť pracovnú zmluvu v lehote **30 dní** odo dňa, keď sa o tejto situácii dozvedel,
 
 alebo, pri bode 6, v lehote **30 dní** odo dňa, keď poznal následok škody.
 
@@ -85,7 +85,7 @@ ak vypukne spor,
 
 podľa toho, kto prvý ukončí zmluvu s dostatočným dôvodom,
 
-strana, ktorá zmluvu ukončí ako prvá a s dostatočným dôvodom, môže buď odstupné nevyplatiť, alebo ho žiadať.
+sa určí, či odstupné treba vyplatiť, alebo či ho možno žiadať.
 
 Preto v pracovnoprávnych sporoch (勞資糾紛) na Taiwane
 

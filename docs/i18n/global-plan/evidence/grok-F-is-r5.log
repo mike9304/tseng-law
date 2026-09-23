@@ -1,0 +1,204 @@
+# WO-F-is (round 5) — Icelandic fix lane
+worktree: /Users/son7/Projects/tseng-law-fix-is-r5  (branch fix/native-is-r5-20260922)
+inputs: RULEBOOK-FIX.md (R2–R17), ACCEPTED-ROUND.md, rounds/r5/is-a.md (57 rows), rounds/r5/is-b.md (49 rows)
+date: 2026-09-23
+
+## Summary
+- is-a: 57 rows → 56 applied, 1 skipped (row 7, pinned bio figure).
+- is-b: 49 rows → 48 applied, 1 skipped (row 18, U+200B deletion — checker-enforced, evidence below).
+- Files touched: columns-is/001,002,003,004,005,006,007,008,010,011,012,013,014,015,016,017,018
+  (009 untouched — is-a reports no rows for it), src/data/international-guidance-baltic-atlantic.ts,
+  src/data/international-guidance-team.ts.
+- No test file needed an expected-string update (all 3202 tests pass unchanged).
+
+## Rows applied — guidance pack (is-a rows 8–14)
+All in src/data/international-guidance-baltic-atlantic.ts (icelandicGuidanceContent) except row 8.
+-  8  team.ts bio: "fékk dóm í fyrsta dómsstigi" → "fékk dóm á fyrsta dómsstigi".
+       (Kept the spelling "dómsstigi" — all 17 occurrences in the pack + columns use it; the
+        reviewer's own note says the columns write "á fyrsta dómsstigi".)
+-  9  privacy: "eru gögnin eydd án tafar" → "er gögnunum eytt án tafar" (dative with eyða).
+- 10  disclaimer: "Ekki byggðu ákvörðun …" → "Byggðu ekki ákvörðun …" (negated imperative order).
+- 11  pricing: "Breyti umfangið …verður það að vera staðfest" → "Breytist umfangið … verður að staðfesta það".
+- 12  consultation FAQ: "Við heitum ekki túlki, svarfresti né tíma" → "Við heitum hvorki túlki, svarfresti né tíma".
+       (The second instance, "Við heitum ekki túlki, ekki þjónustu á íslensku …, og ekki að við tökum hvert mál",
+        is the three-negated-noun form the reviewer explicitly allows — left as is.)
+- 13  about intro: "Lögmennirnir vinna allt frá ráðgjöf til fyrirtækja og til málflutnings" →
+       "Lögmennirnir sinna öllu frá ráðgjöf til fyrirtækja til málflutnings".
+- 14  privacy/security: "Þessi síða veitir enga algjöra ábyrgð á öryggi." → "Þessi síða ábyrgist ekki fullkomið öryggi."
+Disclosure-parity regexes for `is` (/svarfrest/, /túlk/, /tíma í gegnum|staðfestur tími/, /sjálf ráðgjöfin/ …)
+still match after these rewrites; GUIDANCE_LLMS_NOTICES.is (consultation/discovery/confidential) was not
+touched and its verbatim-substring anchors are unchanged. guidance-disclosure-parity.test.ts passes.
+
+## Rows applied — columns (is-a rows 1–6, 15–57)
+P1: 1 (004 reversed meaning: "getur umsóknarfrestur … fallið niður" → "getur fyrirtækið misst af umsóknarfresti
+    eða ekki uppfyllt sönnunarkröfur"), 2 (008 B discovered the company's ads, not his own job hunt),
+    3 (003 "verður fyrir mikilli skerðingu og reiði" → "særist djúpt og reiðist"),
+    4 (002 "einkum" → "í eigin þágu", condition restored), 5 (002 "Að utan …" → "Út á við líta þessir flokkar
+    allir eins út — fé fer af reikningi félagsins — en …"; the now-redundant "þó" in the tail removed),
+    6 (007 Hague 1980 name → "Haagsamningurinn frá 1980 um einkaréttarleg áhrif af brottnámi barna í
+    alþjóðlegu samhengi"; the year 1980 kept).
+P2 typos/agreement/case applied verbatim as flagged: 15,16,17,18,19,20,21,22,24,25,26,27,28,31,32,33,34,36,37,
+    38,39,40,41,42,46,47,48,49,50,53,55.
+P2 idiom/register: 43,44,45 (006), 51 (007 "skipta í 3 lög" → "Húsnæðisatriðum skal skipta í 3 þrep" — dative +
+    "þrep" instead of "lög"; digit kept, see Numbers), 54 (008 self-standing sentence), 56 (008 "festir sig á
+    smáum villum" → "hengir sig í smávægileg mistök").
+Systemic sweeps from is-a:
+- 29 "Samkvæmt <art.>. gr. … er fjallað um" → "Í <art.>. gr. … er fjallað um" — 3 instances in 003 (l.28, 40, 164).
+- 30 court civil division unified: "einkamálaréttar" (l.44) and "einkamálaeiningar" (l.106) → "einkamáladeildar
+     dómstólsins" (2 instances).
+- 35 "heimtsending" is not a word → "heimflutningur": "heimtsendingu hagnaðar" → "heimflutning hagnaðar",
+     "tímasetningu heimtsendingar fjár" → "tímasetningu heimflutnings fjár", "heimtsendingarleiðir" →
+     "heimflutningsleiðir" (3 instances, 004).
+- 57 (008) the lower-case continuation line was made self-standing ("Félaginu ber að greiða þær …") rather than
+     merged with the preceding block — merging would drop a block and fail the `blocks` check.
+
+## Rows applied — columns (is-b rows 1–17, 19–49)
+P1: 1 (011 Norwegian *inntrykk* → "heildaráhrifin sem neytandinn verður fyrir" / "Þau áhrif sem miðlæg
+    auglýsingaframsetning myndar hverfa ekki"), 2 (014 "matarniðurstaða" → "matsniðurstöður"),
+    3 (017 "háð við leyfishafann" → "skal taka á því hversu háður reksturinn er leyfishafanum, þjónustustigi,
+    tapi, … undirverktöku, skaðabótum …" — the whole list put in the dative that *taka á* governs; this also
+    absorbs row 41's "undirverkakaup" → "undirverktöku").
+P2 agreement/case/word-form: 5,6,22,23,32,33,38,41,42,45,46,47,48.
+P2 idiom/register: 8,9,11,12,13,14,15,16,17,19,20,21,24,25,26,27,28,29,30,31,34,35,36,37,39,40,43,44,49.
+Systemic sweeps from is-b:
+- row 9 *greinast*: only the "greinast í <list>" construction (= divided into) was wrong — 011 l.43 →
+     "Þau eru ólík hvað varðar …" (1 instance). The other 13 hits are "greinast frá e-u" / "greinast eftir e-u"
+     ("be distinguished from" / "differ according to"), which are correct Icelandic; left unchanged.
+- row 10 "Einnig þegar" for *even where* → "Jafnvel þótt" + subjunctive: 011 l.67, 011 l.75, 007 l.82 (3 instances).
+- row 14 *ranghæfur/ofdrifinn* → *rangur/ýktur*: 011 l.16, 87, 91, 95 (11 word forms in 4 lines).
+- row 24 connector "Öfugt" → "Á hinn bóginn": 002 l.77, 002 l.87, 003 l.150, 007 l.57, 007 l.92, 007 l.140,
+     014 l.46, 017 l.35 (8 instances; the two comma-form ones, 014 and 017, also restructured so the main
+     clause keeps verb-second).
+- rows 35/49 adverbial "þegar" = *immediately*: → "umsvifalaust" / "strax" in 002 l.115 (heading), 007 l.122,
+     007 l.140, 007 l.144, 010 l.64, 016 l.109, 018 l.94 (7 instances).
+     NOT changed: 014 l.68 "þegar unnins tímabils" and 014 l.109 "þegar uppfyllt tímabil" — there "þegar"
+     correctly means *already*.
+- row 37 *dagskrá* → *dagatal* / *tímaáætlun*: 016 l.69, 016 l.132, 018 l.74 (3 instances).
+- row 4 cardinals — see Numbers below.
+
+## Rows skipped
+- is-a row 7 — "um TWD 1.57M." → "um 1,57 milljónir TWD.". SKIPPED. ACCEPTED-ROUND ("The pinned bio figure
+  'TWD 1.57M' → keep byte-identical (a test pins it)") and RULEBOOK R12 ("skip any row asking to reformat that
+  one figure"). The token is listed in the preserved-Latin-terms array in international-guidance-team.ts.
+  Row 8, which touches the same sentence, was applied.
+- is-b row 18 — "Delete every U+200B" in 013 (l.58,72,86,108) and 015 (l.28,36,52). SKIPPED.
+  Evidence (removing them from 013 only, before reverting):
+      blocks         FAIL   blocks 60 → 56
+                            ZWSP 5 → 0
+  The checker counts ZWSP and requires source parity, and the WO forbids changing the count of body blocks.
+  is-a's reviewer independently routes these to the pipeline ("byte-identical in every locale I checked …
+  export artifacts of the shared build, not Icelandic defects"). The inline trailing ZWSP on 013 l.34 is part
+  of the same set of 5 and was left with them.
+
+## Numbers — checker constraint (recorded per the WO's "prefer the form the checker accepts")
+scripts/check-column-translation.mjs counts a numeral word only if it is in WORD_NUMERAL_LEXICONS.is, and its
+`\b…\b` word boundary is ASCII-only, so an Icelandic numeral that starts or ends with þ/ð/æ/ö never matches.
+Verified empirically:
+    einn MATCH · eitt MATCH · tveir MATCH · tvær MATCH · fyrsta MATCH · fyrsti MATCH · annar MATCH · annarri MATCH
+    tvö no-match · þrír no-match · þrjár no-match · þrjú no-match · önnur no-match · annað no-match
+    þriðja no-match · þriðji no-match
+Spell-outs were therefore applied file by file and re-checked. Where the Korean source has no digit at that
+spot the word form is safe; where it does, the digit had to stay. Applied (checker green):
+  001 "Þessar 4 gerðir"/"ofangreindar 4 gerðir" → fjórar gerðir · 002 "fangelsi allt að 1 ári" → einu ári
+  007 "## 1. 3 leiðir"/"í aðalatriðum 3 leiðir"/"þessara 3 leiða" → Þrjár/þrjár/þriggja ·
+      "2 eða fleiri vottar" (×2) → tveir · "undirritun 2 eða fleiri votta" → tveggja ·
+      "eftirfarandi 5 spurningar"/"þessum 5 spurningum" → fimm · "eftirfarandi 9 flokkar" → níu ·
+      "í 1 máli" → í einu máli
+  008 "er greiddur 1 mánaðar meðallaun" (×2, FAQ + blockquote) → "eru greidd ein mánaðarmeðallaun"
+  011 "eru 2 aðskilin fyrirkomulög" → tvö aðskilin fyrirkomulög
+  012 6 instances (2 ökutæki/flautumerki/fólksbílar/ökutækjunum/ökutækjum, and the image alt) → tvö/tveir/tveimur
+  013 "um 1 ár" → eitt ár · "leiga 2 mánaða" → tveggja mánaða
+  014 9 instances (4 spurningum/spurningar/skoðunarþættir/þáttum/spurningum, 2 lögbundin skilyrði,
+      "1 af 2" ×2, "sem 1 vandamál", "þótt 1 þeirra" ×2) → fjórum/fjórar/fjórir/tvö/eins af tveimur/eitt
+  016 "maki og 2 börn" (×3) → tvö börn · "erfa þessir 3 … hver 1/3" (×2) → "erfa þessi þrjú … hvert 1/3"
+  017 "greinir 3 aðstæður" → þrjár aðstæður
+  018 "með 1 eða fleiri einstaklingum" → einum eða fleiri · "eru 2 hluthafar eða fleiri krafðir" →
+      "er krafist tveggja hluthafa hið minnsta"
+Reverted to digits because the checker reported the number missing from the translation:
+  013 "tekur um **3 mánuði**"   (FAIL: missing 3 — src "약 **3개월**"); the neighbouring "**einn mánuð**" stays a word.
+  018 "Félagið hefur frá 1 til 3 stjórnarmenn"  and  "aðeins haft 1 eða 2 stjórnarmenn"  (FAIL: missing 2, 3).
+      is-b row 47's real point — the accusative participle — was still applied: "…stjórnarmenn, valda úr hópi
+      hluthafa." (was "valdir meðal hluthafa").
+  010 row 7 multipliers: "fimmföldu"/"þreföldu" FAILed (missing 3, 5 — the source has the digits). Rewritten
+      instead as "sem nema allt að 5 sinnum raunverulegu tjóni; við stórfellt gáleysi allt að 3 sinnum tjóninu",
+      which removes the non-Icelandic "5-földu/3-földu" hyphen form and keeps both digits.
+  017 row 43 deadlines kept their digits by design: "vera lokið á 6 mánuðum" → "vera lokið innan 6 mánaða",
+      "hefjast á 1 mánuði" → "hefjast innan 1 mánaðar" (the flagged defect was duration-vs-deadline, not the digit).
+  007 row 51: "skipta í 3 þrep" — "þrjú" is not matchable, digit kept.
+Statutory thresholds, amounts, percentages, limitation periods, article/judgment numbers and list numbering were
+left as digits throughout (R6/R14: the accepted number style for `is` is dot-thousands + decimal comma, and the
+checker must keep parsing them).
+
+## Things I believe the reviewer got wrong (not applied)
+1. is-a row 8 suggests the spelling "dómstigi"; the same row's own justification, and all 17 occurrences in the
+   `is` corpus, use "dómsstigi". Only the preposition (í → á) was changed.
+2. is-a row 39 suggests replacing "heimsæki" with "fari" ("…að fjárfestirinn fari"), which would leave the verb
+   without its complement ("fara í banka" is needed). The actual defect — the missing anticipatory "þess" after
+   "krefjast" — was fixed: "krefjast þess að jafnaði að fjárfestirinn heimsæki **persónulega** banka í Kóreu".
+3. is-a row 57 suggests merging two blocks into one sentence; that would change the block count (checker
+   `blocks`) and is forbidden by the WO. Fixed inside the existing block instead.
+4. is-b row 9 claims *greinast* carries "differ" wrongly in 014, 016, 017 (10 hits) and 018. Only the
+   "greinast í <list>" instance in 011 is wrong; "greinast frá e-u" and "greinast eftir e-u" are standard
+   Icelandic and were left alone.
+5. is-b row 24 says the "Öfugt" connector also occurs in 016; there is no occurrence of "Öfugt" in 016. The
+   eight real occurrences (002 ×2, 003, 007 ×3, 014, 017) were all swept.
+6. is-b row 18 (U+200B) — see Rows skipped: the checker requires ZWSP parity with the source, so deleting them
+   fails the build gate; is-a's reviewer reaches the same conclusion from the cross-locale evidence.
+7. is-b rows 4/7 and is-a rows 23/52 (spell out cardinals 1–10) can only be applied partially — see Numbers.
+   Two files had to keep digits for 1–3 because the translation checker cannot parse the Icelandic word forms.
+
+## §Verify output verbatim
+$ cd /Users/son7/Projects/tseng-law-fix-is-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-is --lang is 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=105
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-is src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      23
+
+(git status --short, for the record — WO-F-is.txt was already modified before this lane started and the two
+r5 review files are the supplied, untracked inputs; nothing was staged, committed or pushed:)
+ M docs/i18n/global-plan/WO-F-is.txt
+ M src/content/columns-is/001-taiwan-company-establishment-basics.md
+ M src/content/columns-is/002-withdraw-capital-taiwan-company.md
+ M src/content/columns-is/003-taiwan-traffic-accident-procedure.md
+ M src/content/columns-is/004-taiwan-company-subsidiary-vs-branch.md
+ M src/content/columns-is/005-taiwan-company-establishment-advanced-2.md
+ M src/content/columns-is/006-taiwan-massage-history-law.md
+ M src/content/columns-is/007-taiwan-divorce-lawsuit-qna.md
+ M src/content/columns-is/008-taiwan-labor-severance-law.md
+ M src/content/columns-is/010-taiwan-gym-injury-lawsuit.md
+ M src/content/columns-is/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+ M src/content/columns-is/012-taiwan-overtaking-accident-liability.md
+ M src/content/columns-is/013-taiwan-company-establishment-advanced-1.md
+ M src/content/columns-is/014-taiwan-mandatory-employment-period.md
+ M src/content/columns-is/015-taiwan-company-setup-pitch-location.md
+ M src/content/columns-is/016-taiwan-inheritance-custody-analysis.md
+ M src/content/columns-is/017-taiwan-logistics-business-setup.md
+ M src/content/columns-is/018-taiwan-semiconductor-market-entry.md
+ M src/data/international-guidance-baltic-atlantic.ts
+ M src/data/international-guidance-team.ts
+?? docs/i18n/global-plan/evidence/grok-F-is-r5.log
+?? docs/i18n/global-plan/reviews/native/rounds/r5/is-a.md
+?? docs/i18n/global-plan/reviews/native/rounds/r5/is-b.md
+(23rd entry is this log file itself.)
+
+## Pass criteria
+checker summary PASS 18/18 · markers 0 · TSC_OK · 3202/3202 tests passed. All four met.

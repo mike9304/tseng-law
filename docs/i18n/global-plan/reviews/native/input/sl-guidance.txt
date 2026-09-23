@@ -1,4 +1,4 @@
-# sl guidance pack strings (path → text). Generated 2026-09-22
+# sl guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.sl.languageName
     Slovenščina
@@ -28,7 +28,7 @@ guidanceContent.sl.nav.privacy
     Zasebnost
 
 guidanceContent.sl.nav.disclaimer
-    Izjava
+    Omejitev
 
 guidanceContent.sl.nav.columns
     Članki
@@ -40,10 +40,10 @@ guidanceContent.sl.footerNotice
     Ta slovenska stran vsebuje le splošne informacije o delu pisarne po tajvanskem pravu. Ni pravni nasvet za posamezno zadevo in samo pošiljanje sporočila ne vzpostavi razmerja med odvetnico ali odvetnikom in stranko.
 
 guidanceContent.sl.skipLink
-    Preskočite krmarjenje in pojdite na vsebino
+    Preskočite navigacijo in pojdite na vsebino
 
 guidanceContent.sl.menuLabel
-    Pregled strani
+    Meni
 
 guidanceContent.sl.languageLabel
     Jezik prikaza
@@ -145,16 +145,16 @@ guidanceContent.sl.pages.home.description
     Splošna pojasnila v slovenščini o obsegu dela Hovering International Law Firm na Tajvanu, o jezikih posveta in o prvem stiku.
 
 guidanceContent.sl.pages.home.intro
-    Hovering International Law Firm zastopa tuje stranke, tudi osebe z vezjo na Tajvan, v zadevah tajvanskega prava: naložbe in ustanavljanje družb, civilni spori, zakonska zveza, družina in dedovanje, delovno pravo, kazenske zadeve in intelektualna lastnina. Ta slovenski del vam pomaga prepoznati, katero delo spada v naš obseg, kaj pripraviti in kako nas poklicati. Gre za splošne informacije, ne za pravni nasvet za vaš primer.
+    Hovering International Law Firm zastopa tuje stranke, tudi osebe, povezane s Tajvanom, v zadevah tajvanskega prava: naložbe in ustanavljanje družb, civilni spori, zakonska zveza, družina in dedovanje, delovno pravo, kazenske zadeve in intelektualna lastnina. Ta slovenski del vam pomaga prepoznati, katero delo spada v naš obseg, kaj pripraviti in kako stopiti v stik z nami. Gre za splošne informacije, ne za pravni nasvet za vaš primer.
 
 guidanceContent.sl.pages.home.sections[0].heading
     S čim se ukvarjamo
 
 guidanceContent.sl.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm je odvetniška pisarna s sedežem na Tajvanu. Deluje po tajvanskem pravu in ima pisarne v Tajpeju (臺北), Gaosjungu (高雄), Tajdžongu (臺中) in Pingdongu (屏東). Svetujemo podjetjem, vodimo sodne postopke in zastopamo tuje stranke pri korakih, ki jih je treba opraviti na Tajvanu.
+    Hovering International Law Firm je odvetniška pisarna s sedežem na Tajvanu. Deluje po tajvanskem pravu in ima pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Svetujemo podjetjem, vodimo sodne postopke in spremljamo tuje stranke pri korakih, ki jih je treba opraviti na Tajvanu.
 
 guidanceContent.sl.pages.home.sections[0].paragraphs[1]
-    Vsa vsebina tukaj je splošna. Izid zadeve je odvisen od dejanskega stanja, od uporabnih predpisov in od trenutka. Ti napotki ne nadomeščajo pogovora z odvetnico ali odvetnikom o vaših dokumentih.
+    Vsa vsebina tukaj je splošna. Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo, in od trenutka presoje. Ti napotki ne nadomeščajo pogovora z odvetnico ali odvetnikom o vaših dokumentih.
 
 guidanceContent.sl.pages.home.sections[1].heading
     Jezik strani in jezik posveta nista isto
@@ -169,7 +169,7 @@ guidanceContent.sl.pages.home.sections[2].heading
     Področja pisarne
 
 guidanceContent.sl.pages.home.sections[2].paragraphs[0]
-    Obseg dela obsega naslednjih šest področij. Stran »Področja« vsako od njih opiše natančneje in navede, česa ne obljubljamo.
+    Delo obsega naslednjih šest področij. Stran »Področja« vsako od njih opiše natančneje in navede, česa ne obljubljamo.
 
 guidanceContent.sl.pages.home.sections[2].items[0]
     Naložbe in ustanavljanje družb na Tajvanu
@@ -196,7 +196,7 @@ guidanceContent.sl.pages.home.sections[3].paragraphs[0]
     Preberite stran »Področja« in preverite, ali vaša zadeva spada v naš obseg, nato »Stroški« in »Stik«, da veste, kako se določi obseg in kako se stroški potrdijo pred začetkom dela.
 
 guidanceContent.sl.pages.home.sections[3].paragraphs[1]
-    Pri pošiljanju sporočila smete povzetek napisati v svojem jeziku. Izvirno besedilo se shrani natanko tako, kot ste ga napisali, in se ne prevaja samodejno. Poslano sporočilo je prošnja, ki čaka na oceno: to še ni posvet in še ni potrjen sestanek.
+    Povzetek lahko napišete v svojem jeziku. Izvirno besedilo se shrani natanko tako, kot ste ga napisali, in se ne prevaja samodejno. Poslano sporočilo je prošnja, ki čaka na oceno: to še ni posvet in še ni potrjen sestanek.
 
 guidanceContent.sl.pages.services.eyebrow
     PODROČJA
@@ -232,7 +232,7 @@ guidanceContent.sl.pages.services.sections[2].heading
     Zakonska zveza, družina in dedovanje
 
 guidanceContent.sl.pages.services.sections[2].paragraphs[0]
-    Vodimo ločitev (離婚), delitev premoženja, izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok (未成年子女權利義務之行使或負擔), stike z otrokom (會面交往) in dedovanje (繼承), tudi kadar so stranke ali premoženje v različnih državah. Čezmejne družinske zadeve pogosto zahtevajo nadaljnjo oceno matičnih evidenc (戶籍), oblike listin in njihove dokazne moči na Tajvanu.
+    Vodimo ločitev (離婚), delitev premoženja, izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok (未成年子女權利義務之行使或負擔), stike z otrokom (會面交往) in dedovanje (繼承), tudi kadar so stranke ali premoženje v različnih državah. Čezmejne družinske zadeve pogosto zahtevajo nadaljnjo oceno tajvanske evidence gospodinjstev (戶籍), oblike listin in njihove dokazne moči na Tajvanu.
 
 guidanceContent.sl.pages.services.sections[2].paragraphs[1]
     Ker družinske zadeve pogosto prinašajo roke in vzporedne postopke, naj prvi povzetek navede razmerje med strankami, trenutno prebivališče in že potekajoče postopke.
@@ -283,34 +283,34 @@ guidanceContent.sl.pages.about.description
     Osnovni podatki o tej tajvanski odvetniški pisarni, o njenih pisarnah in o delu s tujimi strankami.
 
 guidanceContent.sl.pages.about.intro
-    Hovering International Law Firm je odvetniška pisarna na Tajvanu. Odvetnice in odvetniki delajo od svetovanja podjetjem do sodnih postopkov. Ta del opisuje nastanek pisarne, sedeže in delo s tujimi strankami.
+    Hovering International Law Firm je odvetniška pisarna na Tajvanu. Odvetnice in odvetniki svetujejo podjetjem in vodijo sodne postopke. Ta del opisuje nastanek pisarne, sedeže in delo s tujimi strankami.
 
 guidanceContent.sl.pages.about.sections[0].heading
     Ustanovitev in zgradba
 
 guidanceContent.sl.pages.about.sections[0].paragraphs[0]
-    Hovering International Law Firm (昊鼎國際法律事務所) so leta 2016 ustanovile odvetnice in odvetniki, ki so študirali na National Taiwan University (國立臺灣大學). Kitajsko ime 昊鼎 povezuje znak 昊 (»široko nebo«) z znakom 鼎 (»trdna podlaga«) in izraža usmeritev pisarne od njene ustanovitve.
+    Hovering International Law Firm (昊鼎國際法律事務所) so leta 2016 ustanovili odvetnice in odvetniki, ki so študirali na National Taiwan University (國立臺灣大學). Kitajsko ime 昊鼎 povezuje znak 昊 (»široko nebo«) z znakom 鼎 (»trdna podlaga«) in izraža usmeritev pisarne od njene ustanovitve.
 
 guidanceContent.sl.pages.about.sections[0].paragraphs[1]
-    Imamo pisarne v Tajpeju (臺北), Gaosjungu (高雄), Tajdžongu (臺中) in Pingdongu (屏東). Pisarna v Gaosjungu se osredotoča na vodenje podjetij in vodi civilne, kazenske in upravne spore. Pisarna v Tajdžongu vodi gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Pisarna v Pingdongu je bila odprta leta 2017 za lokalne potrebe.
+    Imamo pisarne v Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) in Pingtungu (屏東). Pisarna v Kaohsiungu se osredotoča na korporativno pravo in vodi civilne, kazenske in upravne spore. Pisarna v Taichungu vodi gradbene zadeve, intelektualno lastnino in zadeve, povezane s Korejo in Japonsko. Pisarna v Pingtungu je bila odprta leta 2017, da bi stranke v regiji sprejemala na kraju samem.
 
 guidanceContent.sl.pages.about.sections[0].paragraphs[2]
-    Poleg odvetniškega dela od leta 2020 deluje tudi Hovering Accounting Office, ki ponuja računovodstvo in davčno načrtovanje podjetnikom in zasebnim osebam s premoženjem.
+    Poleg odvetniškega dela od leta 2020 deluje tudi Hovering Accounting Office, ki ponuja računovodstvo in davčno načrtovanje podjetnikom in premožnim zasebnim osebam.
 
 guidanceContent.sl.pages.about.sections[1].heading
     Delo s tujimi strankami
 
 guidanceContent.sl.pages.about.sections[1].paragraphs[0]
-    Čezmejno delo obsega ustanavljanje družb, vizume, prijave znamk in patentov, oceno pravnega tveganja in davčno svetovanje podjetjem. Pisarna v Tajdžongu vodi zlasti gradbene zadeve, intelektualno lastnino in zadeve z vezjo na Korejo in Japonsko. Odvetnica Wei Tseng (曾雋崴) zastopa stranke iz Koreje, z Japonske in druge mednarodne stranke na navedenih področjih.
+    Čezmejno delo obsega ustanavljanje družb, vizume, prijave znamk in patentov, oceno pravnega tveganja in davčno svetovanje podjetjem. Pisarna v Taichungu vodi zlasti gradbene zadeve, intelektualno lastnino in zadeve, povezane s Korejo in Japonsko. Odvetnica Wei Tseng (曾雋崴) zastopa stranke iz Koreje, z Japonske in druge mednarodne stranke na navedenih področjih.
 
 guidanceContent.sl.pages.about.sections[1].paragraphs[1]
     Ali lahko zadevo prevzamemo, je odvisno od vsebine in od jezika sporazumevanja. Če vaša zadeva spada na navedena področja in jo je mogoče obravnavati v enem od štirih jezikov posveta, lahko pošljete povzetek v oceno.
 
 guidanceContent.sl.pages.about.sections[2].heading
-    Ko nas pokličete
+    Ko stopite v stik z nami
 
 guidanceContent.sl.pages.about.sections[2].paragraphs[0]
-    Po prejemu vašega povzetka odvetnica ali odvetnik oceni vsebino in nato govori o morebitnem obsegu dela, o še potrebnih dokumentih in o nadaljnjih korakih. Pri davčnih ali računovodskih vprašanjih lahko pisarna sodeluje z računovodskim oddelkom v enem povezanem postopku.
+    Po prejemu vašega povzetka odvetnica ali odvetnik oceni vsebino in nato z vami pretehta morebitni obseg dela, dokumente, ki so še potrebni, in nadaljnje korake. Pri davčnih ali računovodskih vprašanjih lahko pisarna sodeluje z računovodskim oddelkom v enem skupnem postopku.
 
 guidanceContent.sl.pages.about.sections[2].paragraphs[1]
     Izid vsake zadeve je odvisen od dejanskega stanja in od razpoložljivih dokumentov; izida ne obljubljamo. Če potrebujete zavezujoč odgovor za svoj položaj, morajo biti dokumenti obravnavani z odvetnico ali odvetnikom v enem od štirih jezikov posveta.
@@ -322,7 +322,7 @@ guidanceContent.sl.pages.lawyers.title
     Mednarodna ekipa Hovering
 
 guidanceContent.sl.pages.lawyers.description
-    Profili odvetnic in odvetnikov, operativnega vodenja in pridruženega računovodstva Hovering.
+    Profili odvetnic in odvetnikov, osebja za poslovanje in pridruženega računovodstva Hovering.
 
 guidanceContent.sl.pages.lawyers.intro
     
@@ -346,13 +346,13 @@ guidanceContent.sl.pages.pricing.sections[0].paragraphs[0]
     Zadeve iste vrste lahko zahtevajo zelo različno prizadevanje, glede na število strank, razpoložljive dokumente, roke, ki jih je treba upoštevati, in glede na to, ali je postopek že začet. Prvi korak je zato vedno določiti, kaj spada v delo in kaj ne.
 
 guidanceContent.sl.pages.pricing.sections[0].paragraphs[1]
-    Povzetek, ki ga na začetku pošljete, je podlaga tega obsega. Bolj ko jasno opiše potek, vašo zahtevo in roke, natančneje je mogoče obseg določiti.
+    Povzetek, ki ga na začetku pošljete, je podlaga tega obsega. Čim jasneje povzetek opiše potek, vašo zahtevo in roke, tem natančneje je mogoče obseg določiti.
 
 guidanceContent.sl.pages.pricing.sections[1].heading
     Stroški se potrdijo pred začetkom dela
 
 guidanceContent.sl.pages.pricing.sections[1].paragraphs[0]
-    Ko je obseg dela jasen, se višina in način izračuna stroškov z vami obravnavata in potrdita, preden delo začne. Če se obseg med potekom spremeni, mora biti potrjen znova.
+    Ko je obseg dela jasen, se višina in način izračuna stroškov z vami obravnavata in potrdita, preden se delo začne. Če se obseg med potekom spremeni, mora biti potrjen znova.
 
 guidanceContent.sl.pages.pricing.sections[1].paragraphs[1]
     Ta stran ni cenovna ponudba in ne vzpostavi obveznosti plačila. Tudi pošiljanje prošnje prek te strani je brezplačno.
@@ -361,7 +361,7 @@ guidanceContent.sl.pages.pricing.sections[2].heading
     Posvet je lahko plačljiv
 
 guidanceContent.sl.pages.pricing.sections[2].paragraphs[0]
-    Posvet z odvetnico ali odvetnikom je lahko plačljiva storitev. Ta stran ne pravi, da je prvi posvet brezplačen, in nobenega njenega dela ni mogoče razumeti v tem smislu.
+    Posvet z odvetnico ali odvetnikom je lahko plačljiva storitev. Ta stran ne navaja, da je prvi posvet brezplačen, in nobenega njenega dela ni mogoče razumeti v tem smislu.
 
 guidanceContent.sl.pages.pricing.sections[2].paragraphs[1]
     Če je posvet plačljiv, se višina in način plačila sporočita, preden se posvet opravi.
@@ -370,7 +370,7 @@ guidanceContent.sl.pages.pricing.sections[3].heading
     Zakaj ta stran ne navaja tarif
 
 guidanceContent.sl.pages.pricing.sections[3].paragraphs[0]
-    Stroški so odvisni od zadeve same: od prizadevanja, števila strank, dokumentov, rokov in od tega, ali postopek že teče. Številka, določena vnaprej, ne bi pokazala stroškov vašega spisa. Zato najprej določimo obseg dela in vam stroške sporočimo nato, preden delo začne.
+    Stroški so odvisni od zadeve same: od prizadevanja, števila strank, dokumentov, rokov in od tega, ali postopek že teče. Številka, določena vnaprej, ne bi pokazala stroškov vašega spisa. Zato najprej določimo obseg dela in vam stroške sporočimo nato, preden se delo začne.
 
 guidanceContent.sl.pages.pricing.sections[3].paragraphs[1]
     Poleg nagrade lahko nastanejo sodne takse, stroški organov ali tretjih oseb. Ti so od nagrade ločeni in so odvisni od ustreznega postopka.
@@ -379,7 +379,7 @@ guidanceContent.sl.pages.contact.eyebrow
     STIK
 
 guidanceContent.sl.pages.contact.title
-    Kako pisarno pokličete
+    Kako stopiti v stik s pisarno
 
 guidanceContent.sl.pages.contact.description
     Jezik strani, jeziki posveta, postopek, če ne obvladate nobenega od štirih jezikov, in česa ta stran ne obljublja.
@@ -400,16 +400,16 @@ guidanceContent.sl.pages.contact.sections[0].items[1]
     Jezik posveta: posvet poteka samo v angleščini, kitajščini (中文), japonščini in korejščini.
 
 guidanceContent.sl.pages.contact.sections[0].items[2]
-    Vaš jezik pisanja: povzetek smete napisati v svojem jeziku; izvirno besedilo se shrani nespremenjeno.
+    Vaš jezik pisanja: povzetek lahko napišete v svojem jeziku; izvirno besedilo se shrani nespremenjeno.
 
 guidanceContent.sl.pages.contact.sections[1].heading
     Če ne obvladate nobenega od štirih jezikov posveta
 
 guidanceContent.sl.pages.contact.sections[1].paragraphs[0]
-    V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.
+    V obrazcu za stik lahko izberete »Način sporazumevanja je treba potrditi«. Odgovorimo zato, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.
 
 guidanceContent.sl.pages.contact.sections[1].paragraphs[1]
-    Gre le za korak ocene, ne za obljubo. Ne obljubljamo tolmača, storitve v slovenščini niti v drugem jeziku zunaj štirih navedenih jezikov, niti tega, da vsako zadevo sprejmemo.
+    Gre le za oceno, ne za obljubo. Ne obljubljamo tolmača, storitve v slovenščini niti v drugem jeziku zunaj štirih navedenih jezikov, niti tega, da vsako zadevo sprejmemo.
 
 guidanceContent.sl.pages.contact.sections[2].heading
     Kaj naj vsebuje prvo sporočilo
@@ -427,7 +427,7 @@ guidanceContent.sl.pages.contact.sections[3].paragraphs[0]
     Ne obljubljamo roka za odgovor, ne potrjujemo sestanka prek te strani, ne obljubljamo določene odvetnice niti določenega odvetnika in ne zagotavljamo tolmača. Pisni prevod je nekaj drugega: vaše sporočilo se ne prevaja samodejno.
 
 guidanceContent.sl.pages.contact.sections[3].paragraphs[1]
-    Če pošljete prošnjo, se vsebina shrani in čaka na oceno. Če po nekaj časa ne prejmete odgovora, lahko znova pišete na e-naslov, naveden na strani za stik.
+    Če pošljete prošnjo, se vsebina shrani in čaka na oceno. Če po nekaj času ne prejmete odgovora, lahko znova pišete na e-naslov, naveden na strani za stik.
 
 guidanceContent.sl.pages.faq.eyebrow
     VPRAŠANJA
@@ -445,7 +445,7 @@ guidanceContent.sl.pages.faq.sections[0].heading
     Kako ta del uporabljati
 
 guidanceContent.sl.pages.faq.sections[0].paragraphs[0]
-    Če ne najdete odgovora za svoj položaj, je odgovor praviloma odvisen od posebnih dejstev. Zato jih napišite v povzetek, namesto da bi jih izpeljevali s te strani.
+    Če ne najdete odgovora za svoj položaj, je odgovor praviloma odvisen od posebnih dejstev. Zato jih napišite v povzetek, namesto da bi odgovor sklepali iz te strani.
 
 guidanceContent.sl.pages.faq.faqs[0].question
     Katere zadeve pisarna vodi?
@@ -457,7 +457,7 @@ guidanceContent.sl.pages.faq.faqs[1].question
     Kaj pripraviti pred stikom?
 
 guidanceContent.sl.pages.faq.faqs[1].answer
-    Pripravite kratek povzetek poteka, svoje zahteve, vezi s Tajvanom in roka, če obstaja. Če je že na voljo pisanje sodišča ali organa, navedite datum. V tej fazi še ni treba pošiljati osebnih dokumentov niti zbirke dokazov.
+    Pripravite kratek povzetek poteka, svojo zahtevo, vez s Tajvanom in rok, če obstaja. Če je že na voljo pisanje sodišča ali organa, navedite datum. V tej fazi še ni treba pošiljati osebnih dokumentov niti zbirke dokazov.
 
 guidanceContent.sl.pages.faq.faqs[2].question
     Ali je mogoč posvet v slovenščini?
@@ -469,7 +469,7 @@ guidanceContent.sl.pages.faq.faqs[3].question
     Kaj storiti, če ne morem uporabiti nobenega od štirih jezikov?
 
 guidanceContent.sl.pages.faq.faqs[3].answer
-    Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da ocenimo način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za korak ocene, ne za obljubo, da lahko delamo v drugem jeziku.
+    Pri pošiljanju prošnje izberite »Način sporazumevanja je treba potrditi«. Odgovorimo zato, da ocenimo način sporazumevanja, vendar storitev v drugem jeziku ni zagotovljena. Gre za oceno, ne za obljubo, da lahko delamo v drugem jeziku.
 
 guidanceContent.sl.pages.faq.faqs[4].question
     Kako se ravna z mojim besedilom v slovenščini?
@@ -487,13 +487,13 @@ guidanceContent.sl.pages.faq.faqs[6].question
     Kako se izračunajo stroški?
 
 guidanceContent.sl.pages.faq.faqs[6].answer
-    Najprej se določi obseg dela, nato se z vami potrdita višina in način izračuna stroškov, preden delo začne. Ta stran ne navaja zneskov in ne pravi, da je prvi posvet brezplačen.
+    Najprej se določi obseg dela, nato se z vami potrdita višina in način izračuna stroškov, preden se delo začne. Ta stran ne navaja zneskov in ne navaja, da je prvi posvet brezplačen.
 
 guidanceContent.sl.pages.faq.faqs[7].question
     Kaj storiti, če je moja zadeva zelo nujna?
 
 guidanceContent.sl.pages.faq.faqs[7].answer
-    Navedite rok ali datum z uradnega pisanja takoj na začetku povzetka, da bodo ti podatki pri oceni vidni. Ta stran nima nujnega kanala in ne zagotavlja roka za odgovor; če vaša zadeva ne more čakati, bi morali vzporedno iskati nadaljnje poti v svojem kraju.
+    Navedite rok ali datum z uradnega pisanja takoj na začetku povzetka, da bodo ti podatki pri oceni vidni. Ta stran nima stika za nujne primere in ne zagotavlja roka za odgovor; če vaša zadeva ne more čakati, poiščite vzporedno tudi drugo pomoč v svojem kraju.
 
 guidanceContent.sl.pages.privacy.eyebrow
     ZASEBNOST
@@ -502,7 +502,7 @@ guidanceContent.sl.pages.privacy.title
     Podatki, ki jih zbira obrazec za stik
 
 guidanceContent.sl.pages.privacy.description
-    Kaj zbira obrazec za stik v tem slovenskem delu, kako se ravna z izvirnim besedilom in kako nas pokličete glede vaših podatkov.
+    Kaj zbira obrazec za stik v tem slovenskem delu, kako se ravna z izvirnim besedilom in kako stopiti v stik z nami glede vaših podatkov.
 
 guidanceContent.sl.pages.privacy.intro
     Ta del se nanaša samo na obrazec za stik na teh napotilnih straneh. Opisuje ravnanje s podatki, ne pa tehničnega jamstva.
@@ -550,7 +550,7 @@ guidanceContent.sl.pages.privacy.sections[2].heading
     Kraj hrambe in dostop
 
 guidanceContent.sl.pages.privacy.sections[2].paragraphs[0]
-    Vsebina vaše pošiljke se hrani na mestu, ki ni javno dostopno. Dostop do nje imajo samo pooblaščene osebe v pisarni, in sicer zaradi obravnave prošnje.
+    Vsebina, ki ste jo poslali, se hrani na mestu, ki ni javno dostopno. Dostop do nje imajo samo pooblaščene osebe v pisarni, in sicer zaradi obravnave prošnje.
 
 guidanceContent.sl.pages.privacy.sections[2].paragraphs[1]
     Ta stran ne daje absolutnega jamstva varnosti. Nobena pot prenosa in nobeno mesto hrambe ni povsem varno; občutljive dokumente je zato treba pošiljati šele po posebnem navodilu odvetnice ali odvetnika.
@@ -586,13 +586,13 @@ guidanceContent.sl.pages.privacy.sections[6].heading
     Kraj hrambe in ponudniki
 
 guidanceContent.sl.pages.privacy.sections[6].paragraphs[0]
-    Te strani gosti družba Vercel in vaša pošiljka se hrani v nejavnem objektnem shrambišču te storitve. E-pošta se pošilja poštno storitvijo, ki jo pisarna uporablja.
+    Te strani gosti družba Vercel in kar ste poslali, se hrani v nejavni shrambi v oblaku te storitve. E-pošta se pošilja prek e-poštne storitve, ki jo pisarna uporablja.
 
 guidanceContent.sl.pages.privacy.sections[6].paragraphs[1]
-    Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po uporabnih predpisih, ostanejo za to obdobje. Prošnje za osebne podatke sprejema wei@hoveringlaw.com.tw.
+    Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po predpisih, ki se uporabljajo, ostanejo za to obdobje. Prošnje za osebne podatke sprejema wei@hoveringlaw.com.tw.
 
 guidanceContent.sl.pages.disclaimer.eyebrow
-    IZJAVA
+    OMEJITEV
 
 guidanceContent.sl.pages.disclaimer.title
     Obseg in meje informacij na tej strani
@@ -610,7 +610,7 @@ guidanceContent.sl.pages.disclaimer.sections[0].paragraphs[0]
     Vsebina teh strani je napisana kot splošna informacija. Ni pravni nasvet za vaš primer in ne nadomešča ocene vaših dokumentov.
 
 guidanceContent.sl.pages.disclaimer.sections[0].paragraphs[1]
-    Izid zadeve je odvisen od dejanskega stanja, od uporabnih predpisov in od trenutka; dve navidezno podobni situaciji se lahko končata različno.
+    Izid zadeve je odvisen od dejanskega stanja, od predpisov, ki se uporabljajo, in od trenutka presoje; dve navidezno podobni situaciji se lahko končata različno.
 
 guidanceContent.sl.pages.disclaimer.sections[1].heading
     Pravni okvir
@@ -619,7 +619,7 @@ guidanceContent.sl.pages.disclaimer.sections[1].paragraphs[0]
     Pisarna deluje po tajvanskem pravu in ta stran govori samo o delu v tem okviru.
 
 guidanceContent.sl.pages.disclaimer.sections[1].paragraphs[1]
-    Vsebina ni svetovanje po pravu drugega reda kot tajvanskega, vključno s pravom kraja vašega prebivanja. Če se del vaše zadeve nanaša na drug pravni red, z vami pojasnimo, katera usposobljena oseba je za ta del potrebna.
+    Vsebina ni svetovanje po pravu drugega pravnega reda kot tajvanskega, vključno s pravom kraja vašega prebivanja. Če se del vaše zadeve nanaša na drug pravni red, z vami pojasnimo, katera usposobljena oseba je za ta del potrebna.
 
 guidanceContent.sl.pages.disclaimer.sections[2].heading
     Razmerje med odvetnico ali odvetnikom in stranko ne nastane samo od sebe
@@ -631,7 +631,7 @@ guidanceContent.sl.pages.disclaimer.sections[2].paragraphs[1]
     To razmerje nastane šele, potem ko je zadeva ocenjena in sta obe strani potrdili prevzem dela.
 
 guidanceContent.sl.pages.disclaimer.sections[3].heading
-    Nobene obljube izida
+    Brez obljube o izidu
 
 guidanceContent.sl.pages.disclaimer.sections[3].paragraphs[0]
     Noben del te strani ni obljuba glede izida zadeve, ugoditve prijavi ali prošnji oziroma glede statusa prebivanja in dela.
@@ -646,7 +646,7 @@ guidanceContent.sl.pages.columns.title
     Članki o tajvanskem pravu
 
 guidanceContent.sl.pages.columns.description
-    Članki v slovenščini o pogostih vprašanjih tajvanskega prava. Vsebina je splošna informacija ob trenutku objave, ne pravni nasvet za vaš primer.
+    Članki v slovenščini o pogostih vprašanjih tajvanskega prava. Vsebina je splošna informacija v trenutku objave, ne pravni nasvet za vaš primer.
 
 guidanceContent.sl.pages.columns.intro
     Pisarna objavlja članke o pogostih vprašanjih tajvanskega prava. Članki, ki so na voljo v slovenščini, so na tej strani; poleg njih so štiri povezave, od katerih vsaka odpre seznam člankov v enem izvirnem jeziku.
@@ -670,13 +670,13 @@ guidanceContent.sl.pages.columns.sections[1].paragraphs[1]
     Ta stran vsebine člankov ne povzema in ne jamči, da je določena tema na voljo v vseh štirih jezikih. Vsak seznam vsebuje samo besedila, objavljena v tem jeziku.
 
 guidanceContent.sl.pages.columns.sections[2].heading
-    Koliko lahko članek služi za orientacijo
+    V kolikšni meri lahko članek služi za orientacijo
 
 guidanceContent.sl.pages.columns.sections[2].paragraphs[0]
-    Članki so splošne informacije ob trenutku objave. Predpisi in njihova uporaba se lahko spremenijo in članek ne vsebuje vseh okoliščin vašega primera.
+    Članki so splošne informacije v trenutku objave. Predpisi in njihova uporaba se lahko spremenijo in članek ne vsebuje vseh okoliščin vašega primera.
 
 guidanceContent.sl.pages.columns.sections[2].paragraphs[1]
-    Zato ne opirajte postopka v resnični zadevi samo na članek. Uporabite ga za pregled in svoje dokumente obravnavajte posebej z odvetnico ali odvetnikom; ta stran ni korak posveta.
+    Zato se v resnični zadevi ne opirajte samo na članek. Uporabite ga za pregled in o svojih dokumentih se posebej pogovorite z odvetnico ali odvetnikom; ta stran ni posvet.
 
 guidanceTeamCopy.sl.label
     EKIPA
@@ -685,7 +685,7 @@ guidanceTeamCopy.sl.title
     Mednarodna ekipa Hovering
 
 guidanceTeamCopy.sl.description
-    Profili odvetnic in odvetnikov, operativnega vodenja in pridruženega računovodstva Hovering.
+    Profili odvetnic in odvetnikov, osebja za poslovanje in pridruženega računovodstva Hovering.
 
 guidanceTeamCopy.sl.representativeTitle
     Vodilna odvetnica
@@ -703,7 +703,7 @@ guidanceTeamCopy.sl.educationLabel
     Izobrazba
 
 guidanceTeamCopy.sl.experienceLabel
-    Praksa
+    Delovne izkušnje
 
 guidanceTeamCopy.sl.photoAltPrefix
     Fotografija
@@ -718,7 +718,7 @@ guidanceTeamCopy.sl.keyFactsHeading
     Odvetnica Wei Tseng — Osnovni podatki
 
 guidanceTeamCopy.sl.qualificationLabel
-    Pooblastilo in pisarna
+    Kvalifikacija in pisarna
 
 guidanceTeamCopy.sl.qualificationSentence
     {name} je pooblaščena za opravljanje odvetništva na Tajvanu in je vodilna odvetnica pri {firm}.
@@ -730,34 +730,34 @@ guidanceTeamCopy.sl.consultationLanguagesLabel
     Jeziki posveta
 
 guidanceTeamCopy.sl.roles.tseng-junwei
-    Vodilna odvetnica na Tajvanu (Managing Attorney)
+    Vodilna odvetnica na Tajvanu
 
 guidanceTeamCopy.sl.roles.chang-rongxuan
-    Odvetnik na Tajvanu (Taiwan Attorney)
+    Odvetnik na Tajvanu
 
 guidanceTeamCopy.sl.roles.chang-fangyu
-    Paralegal
+    Pravna asistentka
 
 guidanceTeamCopy.sl.roles.son-jungmin
-    Vodenje poslovanja v Koreji (Korea Operations Manager)
+    Vodja poslovanja za Korejo
 
 guidanceTeamCopy.sl.roles.huang-shengping
-    Partnerski računovodja (Partner CPA)
+    Družbenik, pooblaščeni računovodja
 
 guidanceTeamBios.sl.tseng-junwei.intro[0]
     Pisarna vodi zadeve podjetij in zasebnih oseb na Tajvanu v angleščini, japonščini, korejščini in kitajščini.
 
 guidanceTeamBios.sl.tseng-junwei.intro[1]
-    Zastopala je korejskega študenta v odškodninskem zahtevku zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M.
+    Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M.
 
 guidanceTeamBios.sl.tseng-junwei.education[0]
-    Magistrica znanosti (M.S.), Institute of Finance, National Taiwan University
+    Magistrica (M.S.), Institute of Finance, National Taiwan University
 
 guidanceTeamBios.sl.tseng-junwei.education[1]
-    Univerzitetna diploma (B.A.) v dvojnem programu prava in financ, National Chengchi University
+    Univerzitetna diploma (B.A.) dvopredmetnega študija prava in financ, National Chengchi University
 
 guidanceTeamBios.sl.tseng-junwei.education[2]
-    Izmenjava na Kobe University in Waseda University
+    Izmenjavna študentka na Kobe University in Waseda University
 
 guidanceTeamBios.sl.tseng-junwei.experience[0]
     Trend Law Office
@@ -766,43 +766,43 @@ guidanceTeamBios.sl.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.sl.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Fundacija za pravno pomoč, podružnica Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.sl.chang-rongxuan.intro[0]
-    Prej na Ministry of Education, Legal Affairs Division, s poudarkom na upravnih in civilnih zadevah.
+    Prej je delal v oddelku za pravne zadeve Ministrstva za izobraževanje, s poudarkom na upravnih in civilnih zadevah.
 
 guidanceTeamBios.sl.chang-rongxuan.intro[1]
-    Izkušnje z zadevami univerz, pravicami pedagoškega osebja in upravnimi pritožbami.
+    Ima izkušnje z zadevami univerz, pravicami pedagoškega osebja in upravnimi pritožbami.
 
 guidanceTeamBios.sl.chang-rongxuan.education[0]
     Diplomirani pravnik (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.sl.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Oddelek za pravne zadeve, Ministrstvo za izobraževanje (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.sl.chang-rongxuan.experience[1]
     Odvetnik, Hovering International Law Firm
 
 guidanceTeamBios.sl.chang-fangyu.intro[0]
-    Paralegal z dolgoletno prakso; prej senior paralegal v več odvetniških pisarnah, s poudarkom na procesni podpori, korporativnem področju in tujih naložbah.
+    Pravna asistentka z dolgoletno prakso; prej višja pravna asistentka v več odvetniških pisarnah, s poudarkom na procesni podpori, korporativnem področju in tujih naložbah.
 
 guidanceTeamBios.sl.chang-fangyu.intro[1]
-    Podpora v sodnih postopkih, pri ustanavljanju družb, pri dovoljenjih tujih naložb, pri prošnjah za licence in pri sporazumevanju med Korejo in Tajvanom.
+    Podpora v sodnih postopkih, pri ustanavljanju družb, pri dovoljenjih tujih naložb, pri prošnjah za dovoljenja in pri sporazumevanju med Korejo in Tajvanom.
 
 guidanceTeamBios.sl.chang-fangyu.education[0]
-    Diplomirani pravnik (LL.B.), Tunghai University
+    Diplomirana pravnica (LL.B.), Tunghai University
 
 guidanceTeamBios.sl.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Višja pravna asistentka, Boyin Law Firm
 
 guidanceTeamBios.sl.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Višja pravna asistentka, Muyang International Law Firm
 
 guidanceTeamBios.sl.son-jungmin.intro[0]
     Usklajuje termine posvetov in sporazumevanje za stranke iz Koreje.
 
 guidanceTeamBios.sl.son-jungmin.intro[1]
-    Podpira medregijsko izmenjavo prek sistemov dokumentov in delovnih tokov, na podlagi informatike.
+    Podpira sporazumevanje med ekipami s sistemi za dokumente in potek dela, na podlagi izobrazbe iz informatike.
 
 guidanceTeamBios.sl.son-jungmin.education[0]
     Univerzitetna diploma (B.S.) iz informatike, National Cheng Kung University
@@ -811,7 +811,7 @@ guidanceTeamBios.sl.son-jungmin.experience[0]
     Oddelek korejskega poslovanja, Hovering International Law Firm
 
 guidanceTeamBios.sl.huang-shengping.intro[0]
-    Opravil je dodiplomski in magistrski program računovodstva na National Chengchi University in zdaj vodi računovodsko pisarno.
+    Na National Chengchi University je končal dodiplomski in magistrski študij računovodstva ter zdaj vodi računovodsko pisarno.
 
 guidanceTeamBios.sl.huang-shengping.intro[1]
     Podpira celostno analizo pravnih, davčnih in finančnih tveganj za poslovne stranke.
@@ -901,13 +901,13 @@ guidanceOfficeCopy.sl.officeTitles.taipei
     Tajpej
 
 guidanceOfficeCopy.sl.officeTitles.taichung
-    Tajdžong
+    Taichung
 
 guidanceOfficeCopy.sl.officeTitles.kaohsiung
-    Gaosjung
+    Kaohsiung
 
 guidanceOfficeCopy.sl.officeTitles.pingtung
-    Pingdong
+    Pingtung
 
 guidanceFooterCopy.sl.officeLabel
     Pisarne
@@ -943,10 +943,10 @@ internationalInquiryCopy.sl.consultationNotice
     Posvet poteka samo v štirih jezikih: v angleščini, kitajščini (中文), japonščini in korejščini.
 
 internationalInquiryCopy.sl.methodConfirmationNotice
-    Če ne obvladate nobenega od štirih jezikov posveta, izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.
+    Če ne obvladate nobenega od štirih jezikov posveta, izberite »Način sporazumevanja je treba potrditi«. Odgovorimo zato, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.
 
 internationalInquiryCopy.sl.preparationNotice
-    Povzetek smete napisati v svojem jeziku. Izvirno besedilo se shrani tako, kot ste ga napisali, in se ne prevaja samodejno.
+    Povzetek lahko napišete v svojem jeziku. Izvirno besedilo se shrani tako, kot ste ga napisali, in se ne prevaja samodejno.
 
 internationalInquiryCopy.sl.heading
     Pošljite prošnjo za pregled
@@ -1030,7 +1030,7 @@ internationalInquiryCopy.sl.languageOptions.ko
     Korejščina (한국어)
 
 internationalInquiryCopy.sl.languageOptions.needs-method-confirmation
-    Noben od štirih jezikov ni uporaben — način sporazumevanja je treba potrditi
+    Nobenega od štirih jezikov ne govorim — način sporazumevanja je treba potrditi
 
 guidanceAnswers.sl.services.answer
     Pisarna vodi šest področij po tajvanskem pravu: naložbe in ustanavljanje družb, civilne spore in odškodnino, zakonsko zvezo, družino in dedovanje, delovnopravne spore, kazenske zadeve in intelektualno lastnino. Obseg vsake zadeve se potrdi posebej, potem ko odvetnica ali odvetnik oceni poslano vsebino. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.
@@ -1042,7 +1042,7 @@ guidanceAnswers.sl.services.sources[1]
     /sl/contact
 
 guidanceAnswers.sl.about.answer
-    Hovering International Law Firm je tajvanska odvetniška pisarna, ki so jo leta 2016 ustanovili diplomanti National Taiwan University (國立臺灣大學), s pisarnami v Tajpeju, Gaosjungu, Tajdžongu in Pingdongu. Od leta 2020 deluje tudi računovodski oddelek; pisarna v Tajdžongu vodi zadeve z vezjo na Korejo in Japonsko. Pisarna ne obljublja izida. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.
+    Hovering International Law Firm je tajvanska odvetniška pisarna, ki so jo leta 2016 ustanovili odvetnice in odvetniki, diplomanti National Taiwan University (國立臺灣大學), s pisarnami v Tajpeju, Kaohsiungu, Taichungu in Pingtungu. Od leta 2020 deluje tudi računovodski oddelek; pisarna v Taichungu vodi zadeve, povezane s Korejo in Japonsko. Pisarna ne obljublja izida. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.
 
 guidanceAnswers.sl.about.sources[0]
     /sl/lawyers
@@ -1051,7 +1051,7 @@ guidanceAnswers.sl.about.sources[1]
     /sl/services
 
 guidanceAnswers.sl.lawyers.answer
-    Ta stran prikazuje profile odvetnic in odvetnikov Hovering, operativnega vodenja in pridruženega računovodstva. Odvetnica Wei Tseng (曾雋崴) je pooblaščena za opravljanje odvetništva na Tajvanu in je vodilna odvetnica pisarne; dela s strankami iz Koreje, z Japonske in z drugimi mednarodnimi strankami. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.
+    Ta stran prikazuje profile odvetnic in odvetnikov Hovering, osebja za poslovanje in pridruženega računovodstva. Odvetnica Wei Tseng (曾雋崴) je pooblaščena za opravljanje odvetništva na Tajvanu in je vodilna odvetnica pisarne; dela s strankami iz Koreje, z Japonske in z drugimi mednarodnimi strankami. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.
 
 guidanceAnswers.sl.lawyers.sources[0]
     /sl/about
@@ -1060,7 +1060,7 @@ guidanceAnswers.sl.lawyers.sources[1]
     /sl/contact
 
 guidanceAnswers.sl.pricing.answer
-    Ta stran ne objavlja cenika. Najprej se iz vašega povzetka potrdi obseg dela, nato se z vami potrdita višina in način izračuna, preden delo začne. Posvet z odvetnico ali odvetnikom je lahko plačljiv; poleg nagrade lahko nastanejo sodne ali upravne takse. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.
+    Ta stran ne objavlja cenika. Najprej se iz vašega povzetka potrdi obseg dela, nato se z vami potrdita višina in način izračuna, preden se delo začne. Posvet z odvetnico ali odvetnikom je lahko plačljiv; poleg nagrade lahko nastanejo sodne ali upravne takse. Posvet poteka samo v angleščini, kitajščini, japonščini in korejščini.
 
 guidanceAnswers.sl.pricing.sources[0]
     /sl/contact
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.sl.consultationNotice
     Ti napotki so napisani v slovenščini, vendar posvet z odvetnico ali odvetnikom poteka samo v angleščini, kitajščini (中文), japonščini in korejščini.
 
 GUIDANCE_LLMS_NOTICES.sl.discoveryNotice
-    Datoteka llms.txt je le zemljevid za iskanje javnih strani; ne obljublja vrstnega reda v iskanju, podpore, priporočila umetne inteligence niti vidnosti.
+    Datoteka llms.txt je le zemljevid za iskanje javnih strani; ne obljublja uvrstitve v iskanju, uradnega priporočila, priporočila umetne inteligence ali zagotovljene vidnosti.
 
 GUIDANCE_LLMS_NOTICES.sl.confidentialNotice
     Ker se izvirno besedilo shranjuje, v začetni fazi ne pišite tistega, kar še ni potrebno, na primer številke potnega lista, številke osebnega dokumenta ali podatkov o računu.

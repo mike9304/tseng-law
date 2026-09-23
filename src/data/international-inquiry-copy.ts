@@ -974,7 +974,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Abbiamo ricevuto la Sua richiesta; attende l’esame. Ciò non significa che la consulenza abbia avuto luogo o che un appuntamento sia confermato.',
     savedNotificationPendingMessage:
       'La Sua richiesta è conservata, ma la notifica allo studio non è ancora confermata. Quanto ha scritto non va perduto. Se non riceve risposta, può anche scrivere all’indirizzo di posta elettronica della pagina di contatto.',
-    receiptIdLabel: 'Numero di ricezione',
+    receiptIdLabel: 'Numero di ricevuta',
     failureMessage:
       'Non è stato possibile inviare la Sua richiesta. Riprovi o scriva all’indirizzo di posta elettronica della pagina di contatto.',
     originalLanguageLabel: 'Lingua in cui scrive',
@@ -1012,7 +1012,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'De consultatie vindt alleen plaats in vier talen: Engels, Chinees (中文), Japans en Koreaans.',
     methodConfirmationNotice:
-      'Als u geen van de vier talen spreekt, kies dan “Communicatiekanaal moet worden bevestigd”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
+      'Als u geen van de vier talen spreekt, kies dan “De manier van communiceren moet nog worden afgesproken”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
     preparationNotice:
       'U mag de samenvatting in uw eigen taal schrijven. De oorspronkelijke tekst wordt bewaard zoals u die hebt geschreven en niet automatisch vertaald.',
     heading: 'Een verzoek om advies sturen',
@@ -1053,7 +1053,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japans (日本語)',
       ko: 'Koreaans (한국어)',
       'needs-method-confirmation':
-        'Ik spreek geen van de vier talen — het communicatiekanaal moet worden bevestigd',
+        'Ik spreek geen van de vier talen — de manier van communiceren moet nog worden afgesproken',
     },
   },
   pl: {
@@ -1195,7 +1195,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Den här artikeln är publicerad endast på {language}; länken öppnar originalsidan.',
     unavailableTranslationNotice:
-      'Den här punkten är ännu inte tillgänglig på sidans språk. En länk med originalspråket öppnar originaltexten.',
+      'Den här texten finns ännu inte på sidans språk. En länk med originalspråket öppnar originaltexten.',
     unavailableLanguageNotice: 'Den här sidan erbjuds inte på {language}.',
     languageOptions: {
       en: 'Engelska (English)',
@@ -1212,7 +1212,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Rådgivningen foregår kun på fire sprog: engelsk, kinesisk (中文), japansk og koreansk.',
     methodConfirmationNotice:
-      'Hvis du ikke behersker noget af de fire sprog, skal du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
+      'Hvis du ikke behersker nogen af de fire sprog, skal du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
     preparationNotice:
       'Du må skrive resuméet på dit eget sprog. Originalteksten gemmes, som du har skrevet den, og oversættes ikke automatisk.',
     heading: 'Send en anmodning om rådgivning',
@@ -1253,7 +1253,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japansk (日本語)',
       ko: 'Koreansk (한국어)',
       'needs-method-confirmation':
-        'Jeg behersker ikke noget af de fire sprog — kommunikationsvejen skal bekræftes',
+        'Jeg behersker ikke nogen af de fire sprog — kommunikationsvejen skal bekræftes',
     },
   },
   nb: {
@@ -1295,7 +1295,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Denne artikkelen er publisert bare på {language}; lenken åpner originalsiden.',
     unavailableTranslationNotice:
-      'Dette punktet er ennå ikke tilgjengelig på sidens språk. En lenke med originalspråket åpner originalteksten.',
+      'Denne teksten finnes ennå ikke på sidens språk. En lenke merket med originalspråket åpner originalteksten.',
     unavailableLanguageNotice: 'Denne siden tilbys ikke på {language}.',
     languageOptions: {
       en: 'Engelsk (English)',
@@ -1321,7 +1321,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     submitLabel: 'Lähetä pyyntö',
     submittingLabel: 'Lähetetään…',
     successMessage:
-      'Olemme vastaanottaneet pyyntönne; se odottaa tarkastusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.',
+      'Olemme vastaanottaneet pyyntönne; se odottaa tarkistusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.',
     savedNotificationPendingMessage:
       'Pyyntönne on tallennettu, mutta ilmoitus toimistolle ei ole vielä vahvistettu. Kirjoittamanne ei katoa. Jos ette saa vastausta, voitte myös kirjoittaa yhteyssivun sähköpostiosoitteeseen.',
     receiptIdLabel: 'Vastaanottonumero',
@@ -1453,7 +1453,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japán (日本語)',
       ko: 'Koreai (한국어)',
       'needs-method-confirmation':
-        'A négy nyelv egyikét sem tudom használni — a kommunikáció módját meg kell erősíteni',
+        'A négy nyelv egyikét sem tudom használni – a kommunikáció módját meg kell erősíteni',
     },
   },
   ro: {
@@ -1717,13 +1717,13 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'آپ خلاصہ اپنی زبان میں لکھ سکتے ہیں۔ اصل متن ویسا ہی رکھا جاتا ہے جسے آپ نے لکھا اور خودکار ترجمہ نہیں کیا جاتا۔',
     heading: 'مشورے کی درخواست بھیجیں',
     intro:
-      'اپنے معاملے کا مختصر بیان کریں۔ اگلے مرحلے کی بات سے پہلے وکیل مواد کی جانچ کرتے ہیں۔',
+      'اپنا معاملہ مختصراً بیان کریں۔ اگلے مرحلے کی بات سے پہلے وکیل مواد کی جانچ کرتے ہیں۔',
     submitLabel: 'درخواست بھیجیں',
     submittingLabel: 'بھیجا جا رہا ہے…',
     successMessage:
       'ہم نے آپ کی درخواست وصول کر لی؛ وہ جانچ کا انتظار کرتی ہے۔ اس کا مطلب یہ نہیں کہ مشورہ ہو چکا یا ملاقات کے وقت کی تصدیق ہوئی ہے۔',
     savedNotificationPendingMessage:
-      'آپ کی درخواست محفوظ ہے، مگر دفتر کو اطلاع ابھی تصدیق نہیں ہوئی۔ جو آپ نے لکھا وہ کھو نہیں جاتا۔ اگر جواب نہ ملے تو رابطہ صفحے کے ای میل پتے پر بھی لکھ سکتے ہیں۔',
+      'آپ کی درخواست محفوظ ہے، مگر دفتر کو بھیجی گئی اطلاع کی ابھی تصدیق نہیں ہوئی۔ جو آپ نے لکھا وہ کھو نہیں جاتا۔ اگر جواب نہ ملے تو رابطہ صفحے کے ای میل پتے پر بھی لکھ سکتے ہیں۔',
     receiptIdLabel: 'وصولی نمبر',
     failureMessage:
       'آپ کی درخواست نہیں بھیجی جا سکی۔ دوبارہ کوشش کریں یا رابطہ صفحے کے ای میل پتے پر لکھیں۔',
@@ -1779,11 +1779,11 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'ارسال درخواست ممکن نشد. دوباره بکوشید، یا به رایانامهٔ درج‌شده در صفحهٔ تماس بنویسید.',
     originalLanguageLabel: 'زبانی که با آن می‌نویسید',
     originalLanguagePlaceholder:
-      'مثلاً فارسی یا فرانسه یا ترکی یا زبانی دیگر',
+      'مثلاً فارسی، فرانسوی، ترکی یا زبانی دیگر',
     preferredConsultationLanguageLabel: 'زبانی که برای مشاوره می‌خواهید',
     originalTextLabel: 'خلاصهٔ موضوع (به زبان شما)',
     originalTextPlaceholder:
-      'بگویید چه رخ داده، چه کمکی می‌خواهید، و مهلت را اگر هست. لطفاً شمارهٔ گذرنامه یا شناسنامه یا دادهٔ حساب بانکی ننویسید.',
+      'بگویید چه رخ داده، چه کمکی می‌خواهید، و مهلت را اگر هست. لطفاً شمارهٔ گذرنامه، شمارهٔ شناسنامه یا اطلاعات حساب بانکی ننویسید.',
     nameLabel: 'نام',
     emailLabel: 'رایانامه',
     consentLabel:
@@ -1793,9 +1793,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'لطفاً نشانی رایانامهٔ معتبر وارد کنید.',
     tooLongMessage: 'متن بسیار بلند است. کوتاه کنید و دوباره بفرستید.',
     sourceLanguageNotice:
-      'این نوشتار فقط به زبان {language} موجود است و پیوند، صفحهٔ متن اصلی را به همان زبان می‌گشاید.',
+      'این نوشتار فقط به زبان {language} موجود است و پیوند، صفحهٔ متن اصلی را به همان زبان باز می‌کند.',
     unavailableTranslationNotice:
-      'این مورد هنوز به زبان این صفحه ترجمه نشده است. پیوندی که زبان اصلی را می‌گوید متن اصلی را می‌گشاید.',
+      'این مورد هنوز به زبان این صفحه ترجمه نشده است. پیوندی که زبان اصلی را می‌گوید متن اصلی را باز می‌کند.',
     unavailableLanguageNotice: 'این صفحه به {language} موجود نیست.',
     languageOptions: {
       en: 'انگلیسی (English)',
@@ -1912,7 +1912,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'परामर्श चार भाषामा हुन्छ: अङ्ग्रेजी, चिनियाँ (中文), जापानी र कोरियाली।',
     methodConfirmationNotice:
-      'चार भाषा मध्ये कुनै प्रयोग गर्न सक्नुहुन्न भने “सञ्चार मार्ग पुष्टि गर्नुपर्छ” छान्नुहोस्। व्यवहार्य सञ्चारको बाटो छ कि छैन जाँच्न हामी उत्तर दिन्छौं; अर्को भाषामा सेवा सुनिश्चित छैन र जवाफको समयसीमाको वाचा छैन।',
+      'चार भाषामध्ये कुनै प्रयोग गर्न सक्नुहुन्न भने “सञ्चार मार्ग पुष्टि गर्नुपर्छ” छान्नुहोस्। व्यवहार्य सञ्चारको बाटो छ कि छैन जाँच्न हामी उत्तर दिन्छौं; अर्को भाषामा सेवा सुनिश्चित छैन र जवाफको समयसीमाको वाचा छैन।',
     preparationNotice:
       'सार आफ्नै भाषामा लेख्न सक्नुहुन्छ। मूल पाठ तपाईंले लेखेको रूपमा राखिन्छ र स्वतः अनुवाद गरिँदैन।',
     heading: 'परामर्श अनुरोध पठाउनुहोस्',
@@ -1921,13 +1921,13 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     submitLabel: 'अनुरोध पठाउनुहोस्',
     submittingLabel: 'पठाइँदै छ…',
     successMessage:
-      'हामीले तपाईंको अनुरोध प्राप्त गर्यौं; त्यो जाँचको प्रतीक्षा गर्छ। यसको अर्थ परामर्श भइसक्यो वा निर्धारित भेट पुष्टि भयो भन्ने होइन।',
+      'हामीले तपाईंको अनुरोध प्राप्त गर्‍यौं; त्यो जाँचको प्रतीक्षा गर्छ। यसको अर्थ परामर्श भइसक्यो वा निर्धारित भेट पुष्टि भयो भन्ने होइन।',
     savedNotificationPendingMessage:
       'तपाईंको अनुरोध सुरक्षित छ, तर फर्मलाई सूचना अझै पुष्टि भएको छैन। लेख्नुभएको कुरा हराउँदैन। उत्तर नआए सम्पर्क पृष्ठको इमेल ठेगानामा पनि लेख्न सक्नुहुन्छ।',
-    receiptIdLabel: 'प्राप्ति सङ्ख्या',
+    receiptIdLabel: 'प्राप्ति नम्बर',
     failureMessage:
       'तपाईंको अनुरोध पठाउन सकिएन। फेरि प्रयास गर्नुहोस् वा सम्पर्क पृष्ठको इमेल ठेगानामा लेख्नुहोस्।',
-    originalLanguageLabel: 'जुन भाषामा तपाईं लेख्नुहुन्छ',
+    originalLanguageLabel: 'तपाईंले लेख्ने भाषा',
     originalLanguagePlaceholder:
       'उदाहरणका लागि नेपाली, अङ्ग्रेजी, चिनियाँ वा अन्य कुनै भाषा',
     preferredConsultationLanguageLabel: 'परामर्शका लागि चाहेको भाषा',
@@ -1953,7 +1953,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'जापानी (日本語)',
       ko: 'कोरियाली (한국어)',
       'needs-method-confirmation':
-        'चार भाषा मध्ये कुनै प्रयोग गर्न मिल्दैन — सञ्चार मार्ग पुष्टि गर्नुपर्छ',
+        'चार भाषामध्ये कुनै प्रयोग गर्न मिल्दैन — सञ्चार मार्ग पुष्टि गर्नुपर्छ',
     },
   },
   km: {
@@ -2032,7 +2032,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     preferredConsultationLanguageLabel: 'Хүссэн зөвлөгөөний хэл',
     originalTextLabel: 'Хэргийн товч тойм (таны хэлээр)',
     originalTextPlaceholder:
-      'Юу болсныг, ямар тусламж хэрэгтэйг, хугацаа байвал түүнийг бичнэ үү. Паспортын дугаар, үнэмлэхийн дугаар, дансны мэдээлэл бичихгүй.',
+      'Юу болсныг, ямар тусламж хэрэгтэйг, хугацаа байвал түүнийг бичнэ үү. Паспортын дугаар, үнэмлэхийн дугаар, дансны мэдээллийг бичихгүй байгаарай.',
     nameLabel: 'Нэр',
     emailLabel: 'Цахим шуудан',
     consentLabel:
@@ -2059,18 +2059,18 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Táto stránka je napísaná po slovensky ako všeobecná orientácia, nie ako právna rada vo Vašej veci.',
     consultationNotice:
-      'Porada prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky.',
+      'Konzultácia prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky.',
     methodConfirmationNotice:
-      'Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
+      'Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme a posúdime, či existuje vhodný spôsob komunikácie; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
     preparationNotice:
       'Zhrnutie môžete napísať vo svojom jazyku. Pôvodný text sa uchová tak, ako ste ho napísali, a automaticky sa neprekladá.',
     heading: 'Odoslať žiadosť o posúdenie',
     intro:
-      'Opíšte svoju vec stručne. Advokátka alebo advokát posúdi obsah, kým sa prejde k ďalšiemu kroku.',
+      'Opíšte svoju vec stručne. Advokátka alebo advokát posúdi obsah skôr, než sa prejde k ďalšiemu kroku.',
     submitLabel: 'Odoslať žiadosť',
     submittingLabel: 'Odosiela sa…',
     successMessage:
-      'Obdržali sme Vašu žiadosť; čaká na posúdenie. Neznamená to, že porada prebehla alebo že bolo potvrdené stretnutie.',
+      'Vašu žiadosť sme prijali; čaká na posúdenie. Neznamená to, že konzultácia prebehla alebo že bolo potvrdené stretnutie.',
     savedNotificationPendingMessage:
       'Vaša žiadosť bola uložená, ale oznámenie kancelárii zatiaľ nie je overené. Čo ste napísali, sa nestratí. Ak nedostanete odpoveď, môžete napísať aj na e-mailovú adresu z kontaktnej stránky.',
     receiptIdLabel: 'Číslo podania',
@@ -2086,7 +2086,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Meno',
     emailLabel: 'E-mail',
     consentLabel:
-      'Prečítal(a) som stránku o ochrane osobných údajov a súhlasím s odoslaním tejto žiadosti.',
+      'Prečítal(a) som si stránku o ochrane osobných údajov a súhlasím s odoslaním tejto žiadosti.',
     privacyLinkLabel: 'Ochrana osobných údajov',
     requiredMessage: 'Toto pole je povinné.',
     invalidEmailMessage: 'Zadajte platnú e-mailovú adresu.',
@@ -2161,7 +2161,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Savjetovanje se odvija samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom.',
     methodConfirmationNotice:
-      'Ako ne govorite nijedan od četiri jezika savjetovanja, odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
+      'Ako ne govorite nijedan od četiri jezika savjetovanja, odaberite „Način komunikacije treba potvrditi”. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
     preparationNotice:
       'Sažetak možete napisati na svojem jeziku. Izvorni se tekst čuva onako kako ste ga napisali i ne prevodi se automatski.',
     heading: 'Pošaljite zahtjev za pregled',
@@ -2172,10 +2172,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     successMessage:
       'Primili smo Vaš zahtjev; čeka pregled. To ne znači da je savjetovanje održano ili da je sastanak potvrđen.',
     savedNotificationPendingMessage:
-      'Vaš je zahtjev spremljen, ali obavijest uredu još nije potvrđena. Ono što ste napisali ne gubi se. Ako ne primite odgovor, možete napisati i na adresu e-pošte s kontaktne stranice.',
+      'Vaš je zahtjev spremljen, ali obavijest uredu još nije potvrđena. Ono što ste napisali ne gubi se. Ako ne primite odgovor, možete se javiti i na adresu e-pošte s kontaktne stranice.',
     receiptIdLabel: 'Broj primitka',
     failureMessage:
-      'Vaš zahtjev nije bilo moguće poslati. Pokušajte ponovno ili napišite na adresu e-pošte s kontaktne stranice.',
+      'Vaš zahtjev nije bilo moguće poslati. Pokušajte ponovno ili se javite na adresu e-pošte s kontaktne stranice.',
     originalLanguageLabel: 'Jezik na kojemu pišete',
     originalLanguagePlaceholder:
       'Na primjer hrvatski, engleski, kineski ili drugi jezik',
@@ -2186,7 +2186,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Ime',
     emailLabel: 'E-pošta',
     consentLabel:
-      'Pročitao sam ili pročitala sam stranicu o osobnim podacima i pristajem na slanje ovog zahtjeva.',
+      'Pročitao/pročitala sam stranicu o osobnim podacima i pristajem na slanje ovog zahtjeva.',
     privacyLinkLabel: 'Osobni podaci',
     requiredMessage: 'Ovo je polje obvezno.',
     invalidEmailMessage: 'Unesite valjanu adresu e-pošte.',
@@ -2211,7 +2211,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Konsultacija se odvija samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom.',
     methodConfirmationNotice:
-      'Ako ne možete da koristite nijedan od četiri jezika konsultacije, izaberite „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
+      'Ako ne možete da koristite nijedan od četiri jezika konsultacije, izaberite „Način komunikacije treba potvrditi”. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
     preparationNotice:
       'Sažetak možete napisati na svom jeziku. Izvorni tekst čuva se onako kako ste ga napisali i automatski se ne prevodi.',
     heading: 'Pošaljite zahtev za ocenu',
@@ -2295,7 +2295,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Ta članek je objavljen samo v jeziku {language}; povezava odpre izvirno stran.',
     unavailableTranslationNotice:
       'Ta del v jeziku te strani še ni na voljo. Povezava v izvirnem jeziku odpre izvirno besedilo.',
-    unavailableLanguageNotice: 'Ta stran se v jeziku {language} ne ponuja.',
+    unavailableLanguageNotice: 'Ta stran ni na voljo v jeziku {language}.',
     languageOptions: {
       en: 'Angleščina (English)',
       'zh-hant': 'Kitajščina (中文)',
@@ -2316,7 +2316,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas toks, kokį parašėte, ir automatiškai neverčiamas.',
     heading: 'Pateikti prašymą įvertinti',
     intro:
-      'Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį, prieš pereinant prie kitos procedūros.',
+      'Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį ir tik tada bus pereinama prie tolesnių veiksmų.',
     submitLabel: 'Siųsti užklausą',
     submittingLabel: 'Siunčiama…',
     successMessage:
@@ -2392,10 +2392,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'Ievadiet derīgu e-pasta adresi.',
     tooLongMessage: 'Teksts ir pārāk garš. Saīsiniet to un nosūtiet no jauna.',
     sourceLanguageNotice:
-      'Šis raksts ir publicēts tikai valodā {language}; saite atver sākotnējo lapu.',
+      'Šis raksts ir publicēts tikai {language} valodā; saite atver sākotnējo lapu.',
     unavailableTranslationNotice:
       'Šī daļa šīs lapas valodā vēl nav pieejama. Saite sākotnējā valodā atver sākotnējo tekstu.',
-    unavailableLanguageNotice: 'Šī lapa valodā {language} netiek piedāvāta.',
+    unavailableLanguageNotice: 'Šī lapa {language} valodā netiek piedāvāta.',
     languageOptions: {
       en: 'Angļu (English)',
       'zh-hant': 'Ķīniešu (中文)',

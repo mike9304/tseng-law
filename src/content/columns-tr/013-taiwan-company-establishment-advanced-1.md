@@ -35,9 +35,9 @@ Yatırım planı yazılırken şirketin tam adresini yazmak gerekmez; bölgeyi b
 
 Daha sonra bankada şirket hazırlık hesabı (公司籌備處帳戶) açılırken ise pek çok banka kira sözleşmesini (租賃契約) inceler ve şirket adresini yerinde denetler.
 
-Bir Tayvan bankası çalışanı bana bizzat şunu söyledi.
+Bir Tayvan bankası çalışanı bana bizzat şunu söyledi:
 
-Son dönemde pek çok yabancı hesap açtıktan sonra kayboluyor, bu yüzden hesap açılışı giderek daha sıkı ele alınıyor.
+Son dönemde pek çok yabancı hesap açtıktan sonra kaybolduğu için hesap açılışı giderek daha sıkı inceleniyormuş.
 
 Temel bölümde de bir okur, hesap açılışının en zor adım olduğunu belirtmişti; katılıyorum.
 

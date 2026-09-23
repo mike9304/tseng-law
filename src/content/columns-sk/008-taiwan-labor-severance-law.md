@@ -13,7 +13,7 @@ faq:
   - q: "Musí spoločnosť vyplatiť odstupné aj pri kárnom prepustení?"
     a: "Nie. Ak sa zamestnanec dopustí protiprávneho činu, poruší pracovný poriadok (工作規則), alebo sa bez oprávneného dôvodu nedostaví 3 dni po sebe (článok 12 zákona o pracovných normách, 勞動基準法第12條), môže ho spoločnosť prepustiť bez predchádzajúcej výpovede a odstupné vyplácať nemusí. Naproti tomu hospodárske prepustenie (článok 11) vyžaduje predchádzajúcu výpoveď a výplatu odstupného."
   - q: "Ako sa na Taiwane odstupné počíta?"
-    a: "Za každý dokončený jeden rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemernej mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu."
+    a: "Za každý dokončený jeden rok praxe musí zamestnávateľ vyplatiť 0,5 mesiaca priemernej mzdy ako odstupné, najviac 6 mesiacov mzdy. Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); pri praxi, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu."
 ---
 
 # Pracovné právo na Taiwane: je odstupné na Taiwane naozaj ťažké získať?
@@ -62,7 +62,7 @@ Nasledujúca tabuľka to zhŕňa.
 
 > Na Taiwane musí zamestnávateľ za každý dokončený jeden rok praxe (年資)
 > vyplatiť 0,5 mesiaca priemernej mzdy (平均工資) ako odstupné, najviac však za 6 mesiacov mzdy.
-> Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); u praxe, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
+> Tento vzorec sa týka praxe, na ktorú sa uplatní článok 12 zákona o dôchodku pracovníkov (勞工退休金條例); pri praxi, na ktorú sa uplatní článok 17 zákona o pracovných normách (勞動基準法), sa za jeden rok vypláca jeden mesiac priemernej mzdy, bez stropu.
 
 ​
 
@@ -110,7 +110,7 @@ a náhle mu začal vyčítať, že nepracuje svedomito.
 
 Spoločnosť vraj má ťažkosti,
 
-Pán B sa má obetovať a dať príklad
+pán B sa má obetovať a ísť príkladom
 
 a prijať nižšiu mzdu aj funkciu.
 
@@ -154,7 +154,7 @@ znížila mzdy mnohým vedúcim zamestnancom
 
 a časť zamestnancov toto zaobchádzanie nezniesla
 
-a sama odišla
+a sama odišla.
 
 ​
 
@@ -166,7 +166,7 @@ a zistil to zavčasu.
 
 Pretože už pred odchodom zamestnancov našiel ponuky práce,
 
-Pán B v deň, keď šiel na pohovor,
+pán B v deň, keď šiel na pohovor,
 
 nahral celý priebeh mobilným telefónom
 
@@ -220,7 +220,7 @@ ani neprivádzala zamestnanca k vlastnému odchodu.
 
 Pri hospodárskom prepustení je odstupné zákonným nárokom zamestnanca.
 
-Pri dobrovoľnom odchode a pri kárnom prepustení podľa článku 12 ho zamestnávateľ zásadne nevypláca.
+Pri dobrovoľnom odchode a pri kárnom prepustení podľa článku 12 ho zamestnávateľ spravidla nevypláca.
 
 Aj vy si na Taiwane musíte strážiť svoje práva.
 

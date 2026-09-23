@@ -245,7 +245,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Esta página muestra los perfiles de los abogados, de la dirección de operaciones y del socio auditor, Partner CPA, de Hovering. La abogada Wei Tseng (曾雋崴) está habilitada para ejercer en Taiwán y es la abogada directora del despacho; trabaja con clientes de Corea, de Japón y con otros clientes internacionales. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
+        'Esta página muestra los perfiles de los abogados, de la dirección de operaciones y del socio auditor Partner CPA de Hovering. La abogada Wei Tseng (曾雋崴) está habilitada para ejercer en Taiwán y es la abogada directora del despacho; trabaja con clientes de Corea, de Japón y con otros clientes internacionales. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
       sources: ['/es/about', '/es/contact'],
     },
     pricing: {
@@ -501,7 +501,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Deze pagina toont de profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea en Japan en met andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+        'Deze pagina toont de profielen van de advocaten, de juridisch medewerker, de operationeel manager en de accountant-partner van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea en Japan en met andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
       sources: ['/nl/about', '/nl/contact'],
     },
     pricing: {
@@ -656,7 +656,7 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av jurister utdannet ved National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 har kontoret også en regnskapsavdeling; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av jurister utdannet ved National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 finnes også Hovering Accounting Office; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/lawyers', '/nb/services'],
     },
     lawyers: {
@@ -683,7 +683,7 @@ export const guidanceAnswers: Record<
   fi: {
     services: {
       answer:
-        'Toimisto käsittelee kuutta oikeudenalaa Taiwanin oikeuden mukaan: investoinnit ja yhtiön perustaminen, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työ, rikosasiat sekä immateriaalioikeus. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkastanut lähettämänne sisällön. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Toimisto käsittelee kuutta oikeudenalaa Taiwanin oikeuden mukaan: investoinnit ja yhtiön perustaminen, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työ, rikosasiat sekä immateriaalioikeus. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkistanut lähettämänne sisällön. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/faq', '/fi/contact'],
     },
     about: {
@@ -708,7 +708,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi oikeudenalaa, valmistautuminen ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkastusta; se ei ole oikeudellista neuvontaa eikä vahvistettu tapaaminen, eikä se synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi oikeudenalaa, valmistautuminen ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkistusta; se ei ole oikeudellista neuvontaa eikä vahvistettu tapaaminen, eikä se synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/contact', '/fi/services'],
     },
   },
@@ -779,7 +779,7 @@ export const guidanceAnswers: Record<
   ro: {
     services: {
       answer:
-        'Cabinetul acoperă șase domenii de practică din dreptul taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, muncă, cauze penale și proprietate intelectuală. Întinderea fiecărui mandat se confirmă separat, după ce un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        'Cabinetul acoperă șase domenii de practică din dreptul taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Întinderea fiecărui mandat se confirmă separat, după ce un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/faq', '/ro/contact'],
     },
     about: {
@@ -804,7 +804,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este nici o opinie juridică și nicio programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
+        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este nici opinie juridică, nici programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/services', '/ro/contact'],
     },
   },
@@ -954,12 +954,12 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'یہ صفحہ نرخ نامہ شائع نہیں کرتا۔ پہلے آپ کے بھیجے ہوئے خلاصے سے کام کا دائرہ طے ہوتا ہے، پھر لاگت کی رقم اور حساب کا طریقہ کام شروع ہونے سے پہلے آپ کے ساتھ تصدیق ہوتی ہے۔ وکیل سے بات معاوضے والی خدمت ہو سکتی ہے؛ وکیل کی فیس کے علاوہ عدالت یا ادارے کی لاگتیں بھی لگ سکتی ہیں۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔',
+        'یہ صفحہ نرخ نامہ شائع نہیں کرتا۔ پہلے آپ کے بھیجے ہوئے خلاصے سے کام کا دائرہ طے ہوتا ہے، پھر لاگت کی رقم اور حساب کے طریقے کی، کام شروع ہونے سے پہلے آپ کے ساتھ تصدیق ہوتی ہے۔ وکیل سے بات معاوضے والی خدمت ہو سکتی ہے؛ وکیل کی فیس کے علاوہ عدالت یا ادارے کی لاگتیں بھی لگ سکتی ہیں۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔',
       sources: ['/ur/contact', '/ur/faq'],
     },
     contact: {
       answer:
-        'رابطہ فارم سے اپنا خلاصہ بھیجیں: کیا ہوا، کس مدد کی ضرورت ہے، معاملے کا تائیوان سے کیا تعلق ہے اور اگر معلوم ہو تو مہلت۔ شروع میں شناختی دستاویز یا مکمل ثبوت بھیجنا ضروری نہیں۔ دفتر جواب کی مدت کا وعدہ نہیں کرتا اور اس صفحے سے ملاقات کا وقت تصدیق نہیں کرتا۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔',
+        'رابطہ فارم سے اپنا خلاصہ بھیجیں: کیا ہوا، کس مدد کی ضرورت ہے، معاملے کا تائیوان سے کیا تعلق ہے اور اگر معلوم ہو تو مہلت۔ شروع میں شناختی دستاویز یا مکمل ثبوت بھیجنا ضروری نہیں۔ دفتر جواب کی مدت کا وعدہ نہیں کرتا اور اس صفحے سے ملاقات کا وقت طے نہیں کرتا۔ مشورہ صرف انگریزی، چینی، جاپانی اور کوریائی میں ہوتا ہے۔',
       sources: ['/ur/faq', '/ur/pricing'],
     },
     faq: {
@@ -976,12 +976,12 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm دفتر وکالتی در تایوان است، در سال 2016 به دست فارغ‌التحصیلان National Taiwan University (國立臺灣大學) تأسیس شد، با دفاتر در تایپه، کائوشیونگ، تایچونگ و پینگتونگ. از سال 2020 بخش حسابداری دارد؛ دفتر تایچونگ امور مرتبط با کره و ژاپن را می‌پذیرد. دفتر هیچ تعهد به نتیجه نمی‌دهد. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.',
+        'Hovering International Law Firm دفتر وکالتی در تایوان است، در سال 2016 به دست فارغ‌التحصیلان National Taiwan University (國立臺灣大學) تأسیس شد، با دفاتر در تایپه، کائوشیونگ، تایچونگ و پینگتونگ. از سال 2020 بخش حسابداری دارد؛ دفتر تایچونگ امور مرتبط با کره و ژاپن را می‌پذیرد. دفتر هیچ تعهدی به نتیجه نمی‌دهد. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.',
       sources: ['/fa/lawyers', '/fa/services'],
     },
     lawyers: {
       answer:
-        'این صفحه نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering را نشان می‌دهد. وکیل Wei Tseng (曾雋崴) مجاز به وکالت در تایوان و وکیلِ مدیر دفتر است؛ با موکلان کره، ژاپن و دیگر موکلان بین‌المللی کار می‌کند. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.',
+        'این صفحه نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering را نشان می‌دهد. وکیل Wei Tseng (曾雋崴) مجاز به وکالت در تایوان و مدیر دفتر است؛ با موکلان کره، ژاپن و دیگر موکلان بین‌المللی کار می‌کند. مشاوره فقط به انگلیسی، چینی، ژاپنی و کره‌ای انجام می‌شود.',
       sources: ['/fa/about', '/fa/contact'],
     },
     pricing: {
@@ -1055,7 +1055,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'தொடர்புப் படிவத்தின் வழியாக உங்கள் சுருக்கத்தை அனுப்புங்கள்: என்ன நடந்தது, எந்த உதவி தேவை, வழக்கிற்கும் தைவானுக்கும் உள்ள தொடர்பு, தெரிந்தால் காலக்கெடு. தொடக்கத்தில் அடையாள ஆவணங்கள் அல்லது முழுச் சான்றையும் அனுப்ப வேண்டியதில்லை. அலுவலகம் பதிலளிக்கும் காலக்கெடுவை வாக்குறுதி அளிக்கவில்லை; இந்தப் பக்கத்திலிருந்து சந்திப்பையும் உறுதிப்படுத்தவில்லை. ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரிய மொழி ஆகியவற்றிலேயே நடைபெறும்.',
+        'தொடர்புப் படிவத்தின் வழியாக உங்கள் சுருக்கத்தை அனுப்புங்கள்: என்ன நடந்தது, எந்த உதவி தேவை, வழக்கிற்கும் தைவானுக்கும் உள்ள தொடர்பு, தெரிந்தால் காலக்கெடு. தொடக்கத்தில் அடையாள ஆவணங்கள் அல்லது முழுச் சான்றையும் அனுப்ப வேண்டியதில்லை. அலுவலகம் பதிலளிக்கும் காலக்கெடு எதையும் உறுதி அளிக்கவில்லை; இந்தப் பக்கத்திலிருந்து சந்திப்பையும் உறுதிப்படுத்தவில்லை. ஆலோசனை ஆங்கிலம், சீனம், ஜப்பானியம் மற்றும் கொரிய மொழி ஆகியவற்றிலேயே நடைபெறும்.',
       sources: ['/ta/faq', '/ta/pricing'],
     },
     faq: {
@@ -1099,7 +1099,7 @@ export const guidanceAnswers: Record<
   km: {
     services: {
       answer:
-        'ការិយាល័យទទួលធ្វើការងារ ៦ ក្រុមតាមច្បាប់តៃវ៉ាន់ គឺការវិនិយោគនិងការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់ វិវាទរដ្ឋប្បវេណីនិងសំណងការខូចខាត អាពាហ៍ពិពាហ៍ គ្រួសារ និងមរតក វិវាទពលកម្ម សំណុំរឿងព្រហ្មទណ្ឌ និងកម្មសិទ្ធិបញ្ញា។ វិសាលភាពនៃរឿងនីមួយៗត្រូវបានបញ្ជាក់ជាលក្ខណៈដាច់ដោយឡែក បន្ទាប់ពីមេធាវីពិនិត្យខ្លឹមសារដែលលោកអ្នកផ្ញើ។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។',
+        'ការិយាល័យទទួលធ្វើការងារ ៦ ក្រុមតាមច្បាប់តៃវ៉ាន់ គឺការវិនិយោគ និងការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់ វិវាទរដ្ឋប្បវេណី និងសំណងការខូចខាត អាពាហ៍ពិពាហ៍ គ្រួសារ និងមរតក វិវាទពលកម្ម សំណុំរឿងព្រហ្មទណ្ឌ និងកម្មសិទ្ធិបញ្ញា។ វិសាលភាពនៃរឿងនីមួយៗត្រូវបានបញ្ជាក់ជាលក្ខណៈដាច់ដោយឡែក បន្ទាប់ពីមេធាវីពិនិត្យខ្លឹមសារដែលលោកអ្នកផ្ញើ។ ការពិគ្រោះយោបល់ធ្វើឡើងតែជាភាសាអង់គ្លេស ភាសាចិន (中文) ភាសាជប៉ុន និងភាសាកូរ៉េ។',
       sources: ['/km/faq', '/km/contact'],
     },
     about: {
@@ -1178,7 +1178,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Táto stránka nezverejňuje cenník. Najprv sa z Vášho zhrnutia potvrdí rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu, skôr než práca začne. Konzultácia s advokátkou alebo advokátom môže byť odplatná; okrem odmeny môžu vzniknúť súdne alebo správne poplatky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+        'Táto stránka nezverejňuje cenník. Najprv sa z Vášho zhrnutia potvrdí rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu, skôr než práca začne. Konzultácia s advokátkou alebo advokátom môže byť spoplatnená; okrem odmeny môžu vzniknúť súdne alebo správne poplatky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
       sources: ['/sk/contact', '/sk/faq'],
     },
     contact: {
@@ -1242,7 +1242,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Ova stranica ne objavljuje cjenik. Najprije se iz Vašeg sažetka potvrđuje opseg rada, zatim se s Vama potvrđuju iznos i način izračuna, prije nego rad počne. Savjetovanje s odvjetnicom ili odvjetnikom može biti naplatno; uz nagradu mogu nastati sudske ili upravne pristojbe. Savjetovanje se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Ova stranica ne objavljuje cjenik. Najprije se iz Vašeg sažetka potvrđuje opseg rada, zatim se s Vama potvrđuju iznos i način izračuna, prije nego što rad počne. Savjetovanje s odvjetnicom ili odvjetnikom može biti naplatno; uz nagradu mogu nastati sudske ili upravne pristojbe. Savjetovanje se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/hr/contact', '/hr/faq'],
     },
     contact: {
@@ -1259,17 +1259,17 @@ export const guidanceAnswers: Record<
   sr: {
     services: {
       answer:
-        'Kancelarija vodi šest oblasti po tajvanskom pravu: investicije i osnivanje društava, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda poslati sadržaj. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Kancelarija pokriva šest oblasti po tajvanskom pravu: investicije i osnivanje društava, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda poslati sadržaj. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/faq', '/sr/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm je tajvanska advokatska kancelarija koju su 2016. osnovali diplomci National Taiwan University (國立臺灣大學), sa kancelarijama u Tajpeju, Kaohsiungu, Taichungu i Pingtungu. Od 2020. deluje i računovodstveno odeljenje; kancelarija u Taichungu vodi stvari sa vezom na Koreju i Japan. Kancelarija ne obećava ishod. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Hovering International Law Firm je tajvanska advokatska kancelarija koju su 2016. osnovali diplomci National Taiwan University (國立臺灣大學), sa kancelarijama u Tajpeju, Kaohsiungu, Taichungu i Pingtungu. Od 2020. deluje i računovodstveno odeljenje; kancelarija u Taichungu vodi stvari povezane sa Korejom i Japanom. Kancelarija ne obećava ishod. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/lawyers', '/sr/services'],
     },
     lawyers: {
       answer:
-        'Ova stranica pokazuje profile advokatkinja i advokata Hovering, operativnog rukovodstva i pridruženog računovodstva i revizije. Advokatkinja Wei Tseng (曾雋崴) ovlašćena je da obavlja advokatsku delatnost na Tajvanu i rukovodeća je advokatkinja kancelarije; radi sa klijentima iz Koreje, iz Japana i sa drugim međunarodnim klijentima. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Ova stranica prikazuje profile advokatkinja i advokata kancelarije Hovering, operativnog rukovodstva i pridruženog računovodstva i revizije. Advokatkinja Wei Tseng (曾雋崴) ovlašćena je da obavlja advokatsku delatnost na Tajvanu i rukovodeća je advokatkinja kancelarije; radi sa klijentima iz Koreje, iz Japana i sa drugim međunarodnim klijentima. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/about', '/sr/contact'],
     },
     pricing: {
@@ -1279,7 +1279,7 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Pošaljite sažetak kontaktnim obrascem: šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati isprave identiteta niti celokupne dokaze. Kancelarija ne obećava rok za odgovor i ne potvrđuje sastanak preko ove stranice. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Pošaljite sažetak kontaktnim obrascem: šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati lične isprave niti celokupne dokaze. Kancelarija ne obećava rok za odgovor i ne potvrđuje sastanak preko ove stranice. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/sr/faq', '/sr/pricing'],
     },
     faq: {
@@ -1323,7 +1323,7 @@ export const guidanceAnswers: Record<
   lt: {
     services: {
       answer:
-        'Kontora veda šešias sritis pagal Taivano teisę: investicijas ir įmonių steigimą, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina atsiųstą turinį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+        'Kontora pagal Taivano teisę dirba šešiose srityse: investicijų ir įmonių steigimo, civilinių ginčų ir žalos atlyginimo, santuokos, šeimos ir paveldėjimo, darbo ginčų, baudžiamųjų bylų ir intelektinės nuosavybės. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina atsiųstą turinį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
       sources: ['/lt/faq', '/lt/contact'],
     },
     about: {
@@ -1338,7 +1338,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; šalia atlygio gali atsirasti teismo ar administracinės rinkliavos. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+        'Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; be atlyginimo už teisines paslaugas, gali atsirasti teismo ar administracinių rinkliavų. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
       sources: ['/lt/contact', '/lt/faq'],
     },
     contact: {
@@ -1355,7 +1355,7 @@ export const guidanceAnswers: Record<
   lv: {
     services: {
       answer:
-        'Birojs ved sešas jomas saskaņā ar Taivānas tiesībām: ieguldījumus un sabiedrību dibināšanu, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Katras lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis nosūtīto saturu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
+        'Birojs strādā sešās jomās saskaņā ar Taivānas tiesībām: ieguldījumi un sabiedrību dibināšana, civillietas un zaudējumu atlīdzība, laulība, ģimene un mantojums, darba strīdi, krimināllietas un intelektuālais īpašums. Katras lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis nosūtīto saturu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
       sources: ['/lv/faq', '/lv/contact'],
     },
     about: {

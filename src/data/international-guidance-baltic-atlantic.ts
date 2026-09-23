@@ -24,7 +24,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
   languageLabel: 'Rodymo kalba',
   mega: {
     services: {
-      description: 'Kontora tvarko pagrindines Taivano teisės sritis.',
+      description: 'Kontora dirba pagrindinėse Taivano teisės srityse.',
       viewAllLabel: 'Rodyti visus',
     },
     columns: {
@@ -79,7 +79,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kuo užsiimame',
           paragraphs: [
-            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus per procedūras, kurias Taivane reikia atlikti.',
+            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo bylas ir padedame užsienio klientams atlikti Taivane reikalingas procedūras.',
             'Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir to, kada byla vertinama. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.',
           ],
         },
@@ -93,7 +93,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kontoros sritys',
           paragraphs: [
-            'Darbo apimtis apima šias šešias sritis. Puslapis „Paslaugos“ kiekvieną iš jų aprašo tiksliau ir nurodo, kas nėra žadama.',
+            'Darbas apima šias šešias sritis. Puslapis „Paslaugos“ kiekvieną iš jų aprašo tiksliau ir nurodo, kas nėra žadama.',
           ],
           items: [
             'Investicijos ir įmonių steigimas Taivane',
@@ -108,7 +108,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Nuo ko pradėti',
           paragraphs: [
             'Perskaitykite puslapį „Paslaugos“ ir patikrinkite, ar Jūsų byla patenka į mūsų apimtį, tada „Išlaidos“ ir „Kontaktai“, kad žinotumėte, kaip nustatoma apimtis ir kaip išlaidos patvirtinamos prieš pradedant darbą.',
-            'Siųsdami pranešimą santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas tiksliai toks, kokį parašėte, ir automatiškai neverčiamas. Išsiųstas pranešimas yra užklausa, laukianti įvertinimo: tai dar nėra konsultacija ir nėra patvirtintas susitikimas.',
+            'Siųsdami pranešimą, santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas tiksliai toks, kokį parašėte, ir automatiškai neverčiamas. Išsiųstas pranešimas yra užklausa, laukianti įvertinimo: tai dar nėra konsultacija ir nėra patvirtintas susitikimas.',
           ],
         },
       ],
@@ -117,15 +117,15 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'PASLAUGOS',
       title: 'Kokiose bylose atstovaujame klientams',
       description:
-        'Šešios sritys, kurias kontora veda Taivane, ir ribos, kurias naudinga žinoti pirmiausia.',
+        'Šešios sritys, kuriose kontora dirba Taivane, ir ribos, kurias naudinga žinoti pirmiausia.',
       intro:
-        'Toliau nurodytos sritys, kurias iš tikrųjų vedame, ir klausimai, dažniausiai kylantys pradiniame etape. Paaiškinimas padeda įvertinti, ar Jūsų byla patenka į mūsų apimtį; jis yra bendras ir nėra atskiros bylos teisinė analizė.',
+        'Toliau nurodytos sritys, kuriose iš tikrųjų dirbame, ir klausimai, dažniausiai kylantys pradiniame etape. Paaiškinimas padeda įvertinti, ar Jūsų byla patenka į mūsų apimtį; jis yra bendras ir nėra atskiros bylos teisinė analizė.',
       sections: [
         {
           heading: 'Investicijos ir įmonių steigimas Taivane',
           paragraphs: [
-            'Atstovaujame užsienio investuotojams ir įmonėms steigiant arba vedant bendrovę Taivane: teisinės formos pasirinkimas, dokumentų parengimas ir pateikimas, kapitalo įnašas, banko klausimai, buveinės vertinimas ir šakiniai reikalavimai. Taip pat padedame dėl apskaitos ir mokesčių, kylančių iš steigimo ir veiklos Taivane.',
-            'Eiga ir terminai skiriasi pagal formą, investuotoją, šaką, banką ir jau turimus dokumentus. Bendrovės įsteigimas savaime nesuteikia teisės gyventi (居留) ir leidimo dirbti (工作許可): tai atskiros procedūros, vertinamos pagal konkretaus asmens padėtį.',
+            'Atstovaujame užsienio investuotojams ir įmonėms steigiant arba valdant bendrovę Taivane: teisinės formos pasirinkimas, dokumentų parengimas ir pateikimas, kapitalo įnašas, banko klausimai, buveinės vertinimas ir sektoriaus reikalavimai. Taip pat padedame dėl apskaitos ir mokesčių, kylančių iš steigimo ir veiklos Taivane.',
+            'Eiga ir terminai skiriasi pagal formą, investuotoją, veiklos sektorių, banką ir jau turimus dokumentus. Bendrovės įsteigimas savaime nesuteikia teisės gyventi (居留) ir leidimo dirbti (工作許可): tai atskiros procedūros, vertinamos pagal konkretaus asmens padėtį.',
           ],
         },
         {
@@ -138,7 +138,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Santuoka, šeima ir paveldėjimas',
           paragraphs: [
-            'Vedame santuokos nutraukimą (離婚), turto padalijimą, nepilnamečių vaikų teisių ir pareigų įgyvendinimą ir prisiėmimą (未成年子女權利義務之行使或負擔), bendravimą su vaiku (會面交往) ir paveldėjimą (繼承), taip pat kai šalys arba turtas yra skirtingose valstybėse. Tarpvalstybinėms šeimos byloms dažnai reikia papildomai įvertinti namų ūkio registro (戶籍) įrašus, dokumentų formą ir jų įrodomąją galią Taivane.',
+            'Vedame santuokos nutraukimo (離婚), turto padalijimo, nepilnamečių vaikų teisių ir pareigų įgyvendinimo ir prisiėmimo (未成年子女權利義務之行使或負擔), bendravimo su vaiku (會面交往) ir paveldėjimo (繼承) bylas, taip pat tada, kai šalys arba turtas yra skirtingose valstybėse. Tarpvalstybinėms šeimos byloms dažnai reikia papildomai įvertinti namų ūkio registro (戶籍) įrašus, dokumentų formą ir jų įrodomąją galią Taivane.',
             'Kadangi šeimos bylos dažnai susijusios su terminais ir lygiagrečiomis procedūromis, pirmoji santrauka turėtų nurodyti šalių santykį, dabartinę gyvenamąją vietą ir jau vykstančias procedūras.',
           ],
         },
@@ -167,7 +167,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Apimtis ir jos patvirtinimas',
           paragraphs: [
             'Kontora dirba pagal Taivano teisę ir veda bylas iš pirmiau nurodytų sričių. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina Jūsų pranešimą.',
-            'Gyvenamosios vietos statusas, leidimas dirbti ir panašūs klausimai vertinami pagal dokumentus ir konkretaus asmens padėtį, o ne pagal pilietybę. Jei dalis Jūsų bylos paliečia šiuos punktus, nurodykite tai kreipdamiesi. Šis puslapis nežada nei rezultato, nei atsakymo termino.',
+            'Leidimo gyventi statusas, leidimas dirbti ir panašūs klausimai vertinami pagal dokumentus ir konkretaus asmens padėtį, o ne pagal pilietybę. Jei dalis Jūsų bylos paliečia šiuos punktus, nurodykite tai kreipdamiesi. Šis puslapis nežada nei rezultato, nei atsakymo termino.',
           ],
         },
       ],
@@ -244,7 +244,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kodėl šiame puslapyje nėra tarifų',
           paragraphs: [
             'Išlaidos priklauso nuo pačios bylos: nuo pastangų, šalių skaičiaus, dokumentų, terminų ir nuo to, ar procesas jau vyksta. Iš anksto nustatytas skaičius Jūsų bylos išlaidų neparodytų. Todėl pirmiausia nustatome darbo apimtį ir tada pranešame Jums išlaidas, prieš pradedant darbą.',
-            'Šalia atlygio gali atsirasti teismo rinkliavos, institucijų ar trečiųjų asmenų išlaidos. Jos atskirtos nuo atlygio ir priklauso nuo atitinkamo proceso.',
+            'Be atlyginimo už teisines paslaugas, gali atsirasti teismo rinkliavų, institucijų ar trečiųjų asmenų išlaidų. Jos yra atskirtos nuo atlyginimo ir priklauso nuo atitinkamo proceso.',
           ],
         },
       ],
@@ -302,7 +302,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kaip naudotis šia dalimi',
           paragraphs: [
-            'Jei atsakymo savo padėčiai nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne spręskite apie juos vien iš šio puslapio.',
+            'Jei atsakymo dėl savo padėties nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne spręskite apie juos vien iš šio puslapio.',
           ],
         },
       ],
@@ -310,7 +310,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kokias bylas kontora veda?',
           answer:
-            'Vedame šešias sritis: investicijas ir įmonių steigimą Taivane, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Ar byla bus priimta, sprendžiama įvertinus turinį.',
+            'Dirbame šešiose srityse: investicijų ir įmonių steigimo Taivane, civilinių ginčų ir žalos atlyginimo, santuokos, šeimos ir paveldėjimo, darbo ginčų, baudžiamųjų bylų ir intelektinės nuosavybės. Ar byla bus priimta, sprendžiama įvertinus turinį.',
         },
         {
           question: 'Ką pasirengti prieš kreipiantis?',
@@ -325,7 +325,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ką daryti, jei nemoku nė vienos iš keturių kalbų?',
           answer:
-            'Siųsdami užklausą pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai tik vertinimas, o ne pažadas, kad galime dirbti kita kalba.',
+            'Siųsdami užklausą, pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai tik vertinimas, o ne pažadas, kad galime dirbti kita kalba.',
         },
         {
           question: 'Kaip elgiamasi su mano tekstu lietuvių kalba?',
@@ -384,7 +384,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Saugojimo vieta ir prieiga',
           paragraphs: [
             'Jūsų pateikimo turinys saugomas vietoje, kuri nėra viešai prieinama. Prieigą prie jo turi tik įgalioti kontoros asmenys, ir tik užklausai nagrinėti.',
-            'Šis puslapis neduoda absoliučios saugumo garantijos. Joks perdavimo kelias ir jokia saugojimo vieta nėra visiškai saugi; jautrius dokumentus todėl reikėtų siųsti tik po atskiro advokatės arba advokato nurodymo.',
+            'Šis puslapis neduoda absoliučios saugumo garantijos. Joks perdavimo kelias ir jokia saugojimo vieta nėra visiškai saugūs; jautrius dokumentus todėl reikėtų siųsti tik po atskiro advokatės arba advokato nurodymo.',
           ],
         },
         {
@@ -449,7 +449,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Jokio pažado dėl rezultato',
           paragraphs: [
-            'Jokia šio puslapio dalis nėra pažadas dėl bylos rezultato, paraiškos ar prašymo patenkinimo ar dėl gyvenamosios vietos ir darbo statuso.',
+            'Jokia šio puslapio dalis nėra pažadas dėl bylos rezultato, paraiškos ar prašymo patenkinimo ar dėl leidimo gyventi ir darbo statuso.',
             'Išorinės nuorodos skirtos orientacijai; nežadame trečiųjų asmenų turinio teisingumo ar aktualumo.',
           ],
         },
@@ -474,7 +474,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kur veda nuorodos',
           paragraphs: [
             'Pasirinkus vieną iš keturių nuorodų, atsidaro straipsnių sąrašas ta kalba. Iš sąrašo tekstą pasirenkate patys; visas turinys rodomas straipsnio originalo kalba.',
-            'Šis puslapis straipsnių turinio nesutraukia ir negarantuoja, kad tam tikra tema prieinama visomis keturiomis kalbomis. Kiekviename sąraše yra tik tekstai, paskelbti ta kalba.',
+            'Šiame puslapyje straipsnių turinys nėra apibendrinamas ir negarantuojama, kad tam tikra tema prieinama visomis keturiomis kalbomis. Kiekviename sąraše yra tik tekstai, paskelbti ta kalba.',
           ],
         },
         {
@@ -574,7 +574,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lapas valoda un konsultācijas valoda nav viens un tas pats',
           paragraphs: [
             'Šī lapa ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu. Tas, ka lasāt informāciju latviešu valodā, nenozīmē, ka saruna ar advokāti vai advokātu notiks latviski.',
-            'Mēs nesolām tulku, atbildes termiņu un tikšanos, izmantojot šo lapu. Ja nevarat lietot nevienu no četrām konsultācijas valodām, lapa „Saziņa“ izskaidro, kā mēs izvērtējam saziņas veidu.',
+            'Ar šīs lapas starpniecību mēs nesolām ne tulku, ne atbildes termiņu, ne tikšanos. Ja nevarat lietot nevienu no četrām konsultācijas valodām, lapa „Saziņa“ izskaidro, kā mēs izvērtējam saziņas veidu.',
           ],
         },
         {
@@ -604,7 +604,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'PAKALPOJUMI',
       title: 'Kādās lietās mēs palīdzam',
       description:
-        'Sešas jomas, kurās birojs strādā Taivānā, un robežas, kas vispirms ir noderīgi zināt.',
+        'Sešas jomas, kurās birojs strādā Taivānā, un robežas, ko vispirms ir noderīgi zināt.',
       intro:
         'Zemāk ir jomas, kurās mēs patiešām strādājam, un jautājumi, kas sākumposmā tiek uzdoti visbiežāk. Izklāsts palīdz novērtēt, vai Jūsu lieta ietilpst mūsu jomā; tas ir vispārīgs un nav atsevišķas lietas juridiskā analīze.',
       sections: [
@@ -730,7 +730,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kāpēc šajā lapā nav tarifu',
           paragraphs: [
-            'Izmaksas ir atkarīgas no lietas pašas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikta summa neatspoguļotu Jūsu lietas izmaksas. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.',
+            'Izmaksas ir atkarīgas no pašas lietas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikta summa neatspoguļotu Jūsu lietas izmaksas. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.',
             'Līdzās honorāram var rasties tiesas nodevas, iestāžu vai trešo personu izmaksas. Tās ir nošķirtas no honorāra un ir atkarīgas no attiecīgās procedūras.',
           ],
         },
@@ -772,7 +772,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ko šī lapa nesola',
           paragraphs: [
-            'Mēs nesolām atbildes termiņu, neapstiprinām tikšanos, izmantojot šo lapu, nesolām konkrētu advokāti vai konkrētu advokātu un nenodrošinām tulku. Rakstisks tulkojums ir kas cits: Jūsu ziņojums netiek tulkots automātiski.',
+            'Ar šīs lapas starpniecību mēs nesolām ne atbildes termiņu, ne apstiprinātu tikšanos, ne konkrētu advokāti vai konkrētu advokātu, un mēs nenodrošinām tulku. Rakstisks tulkojums ir kas cits: Jūsu ziņojums netiek tulkots automātiski.',
             'Ja nosūtāt pieteikumu, saturs tiek saglabāts un gaida izvērtējumu. Ja pēc kāda laika atbildi nesaņemat, varat rakstīt no jauna uz e-pasta adresi, kas norādīta saziņas lapā.',
           ],
         },
@@ -789,7 +789,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kā lietot šo daļu',
           paragraphs: [
-            'Ja neatrodat atbildi savai situācijai, atbilde parasti ir atkarīga no īpašiem faktiem. Tāpēc ierakstiet tos kopsavilkumā, nevis izseciniet tos no šīs lapas.',
+            'Ja neatrodat atbildi savai situācijai, atbilde parasti ir atkarīga no īpašiem faktiem. Tāpēc ierakstiet tos kopsavilkumā un nemēģiniet tos izsecināt no šīs lapas.',
           ],
         },
       ],
@@ -797,7 +797,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kādas lietas birojs ved?',
           answer:
-            'Mēs vedam sešas jomas: ieguldījumus un sabiedrību dibināšanu Taivānā, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Vai lieta tiks pieņemta, izlemj pēc satura izvērtējuma.',
+            'Mēs strādājam sešās jomās: ieguldījumi un sabiedrību dibināšana Taivānā, civillietas un zaudējumu atlīdzība, laulība, ģimene un mantojums, darba strīdi, krimināllietas un intelektuālais īpašums. Vai lieta tiks pieņemta, izlemj pēc satura izvērtējuma.',
         },
         {
           question: 'Kas jāsagatavo pirms saziņas?',
@@ -1062,7 +1062,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lehe keel ja nõustamiskeel ei ole sama asi',
           paragraphs: [
             'See leht on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult neljas nõustamiskeeles: inglise, hiina (中文), jaapani ja korea keeles. Juhiste lugemine eesti keeles ei tähenda, et vestlus advokaadiga toimuks eesti keeles.',
-            'Me ei anna lubadust tõlgi, vastamise tähtaja ega kohtumise kohta selle lehe kaudu. Kui te ei oska ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.',
+            'Me ei anna selle lehe kaudu lubadust tõlgi, vastamise tähtaja ega kohtumise kohta. Kui te ei oska ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.',
           ],
         },
         {
@@ -1099,14 +1099,14 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investeeringud ja äriühingu asutamine Taiwanis',
           paragraphs: [
-            'Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Toetame ka raamatupidamist ja makse, mis tekivad asutamisest ja tegutsemisest Taiwanis.',
+            'Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Abistame ka raamatupidamis- ja maksuküsimustes, mis tekivad asutamisest ja tegutsemisest Taiwanis.',
             'Menetluse käik ja kestus erinevad vormi, investori, tegevusala, panga ja juba olemasolevate dokumentide järgi. Äriühingu asutamine iseenesest ei anna elamisluba (居留) ega tööluba (工作許可): need on eraldi menetlused, mida hinnatakse isiku olukorra järgi.',
           ],
         },
         {
           heading: 'Tsiviilvaidlused ja kahjuhüvitis',
           paragraphs: [
-            'Sellesse valdkonda kuuluvad lepinguvaidlused, lepinguväline kahjuõiguslik vastutus ja tarbijavaidlused. Töö algab tavaliselt sündmuste ajajärjestuse selgitamisest ning olemasolevate dokumentide ja tõendite läbivaatamisest ning alles seejärel lepitakse kokku järgmised sammud.',
+            'Sellesse valdkonda kuuluvad lepinguvaidlused, lepinguväline (deliktiline) vastutus ja tarbijavaidlused. Töö algab tavaliselt sündmuste ajajärjestuse selgitamisest ning olemasolevate dokumentide ja tõendite läbivaatamisest ning alles seejärel lepitakse kokku järgmised sammud.',
             'Tähtajad, sealhulgas aegumine, ja tõendite täielikkus mõjutavad kulgu otsustavalt. Nimetage seetõttu teadaolevad kuupäevad võimalikult varakult. Säilitage lepingud, teated, maksetõendid või fotod olukorrast kohapeal ja mainige neid esimeses teates.',
           ],
         },
@@ -1120,7 +1120,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tööõiguslikud vaidlused',
           paragraphs: [
-            'Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne seadusjärgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide lahkumishüvitise ega töötushüvitisega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.',
+            'Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide lahkumishüvitise ega töötushüvitisega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.',
             'Tööleping, töökorralduseeskiri (工作規則), palgalehed ja poolte kirjavahetus on tavaliselt määravad dokumendid. Kui need on teil veel olemas, mainige seda kokkuvõttes.',
           ],
         },
@@ -1142,7 +1142,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ulatus ja selle kinnitamine',
           paragraphs: [
             'Büroo töötab Taiwani õiguse järgi ja tegeleb eespool nimetatud valdkondade asjadega. Iga asja ulatus kinnitatakse eraldi pärast seda, kui advokaat on teie teate läbi vaadanud.',
-            'Elamisstaatus, tööluba ja sarnased küsimused hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei anna lubadust tulemuse ega vastamise tähtaja kohta.',
+            'Elamisstaatust, tööluba ja sarnaseid küsimusi hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei anna lubadust tulemuse ega vastamise tähtaja kohta.',
           ],
         },
       ],
@@ -1190,7 +1190,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'TASUD',
       title: 'Kuidas kinnitatakse töö ulatus ja tasud',
       description:
-        'Selgitus järjekorrast: esmalt töö ulatus, seejärel tasude kinnitamine, ja miks sellel lehel ei ole hinnakirja.',
+        'Selgitus järjekorrast: esmalt töö ulatus, seejärel tasude kinnitamine ja see, miks sellel lehel ei ole hinnakirja.',
       intro:
         'See leht selgitab, kuidas tasud kinnitatakse, mitte nende suurust. Suurus sõltub üksiku asja töö ulatusest ja on mõttekas alles siis, kui see ulatus on selge.',
       sections: [
@@ -1226,7 +1226,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
     },
     contact: {
       eyebrow: 'KONTAKT',
-      title: 'Kuidas bürooni jõuda',
+      title: 'Kuidas büroo poole pöörduda',
       description:
         'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei oska ühtegi neljast keelest, ja mida see leht ei luba.',
       intro:
@@ -1277,7 +1277,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kuidas seda osa kasutada',
           paragraphs: [
-            'Kui te ei leia vastust oma olukorrale, sõltub vastus tavaliselt erilistest asjaoludest. Kirjutage need asjaolud kokkuvõttesse, selle asemel et neid ise sellelt lehelt tuletada.',
+            'Kui te ei leia vastust oma olukorrale, sõltub vastus tavaliselt asja konkreetsetest asjaoludest. Kirjutage need asjaolud kokkuvõttesse, selle asemel et neid ise sellelt lehelt tuletada.',
           ],
         },
       ],
@@ -1387,7 +1387,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Säilitamiskoht ja teenuseosutajad',
           paragraphs: [
             'Neid veebilehti majutab Vercel ja teie saadetud andmed säilitatakse selle teenuse mitteavalikus andmesalvestuses. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.',
-            'Üksikute teenuseosutajate serverid võivad asuda väljaspool Taiwani, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused saab saata aadressile wei@hoveringlaw.com.tw.',
+            'Mõne teenuseosutaja serverid võivad asuda väljaspool Taiwanit, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused saab saata aadressile wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -1589,7 +1589,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Inversió i constitució de societats a Taiwan',
           paragraphs: [
             'Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, tràmits bancaris, comprovació del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.',
-            'L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sola un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.',
+            'L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sol un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.',
           ],
         },
         {
@@ -1602,14 +1602,14 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Matrimoni, família i successions',
           paragraphs: [
-            'Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte dels fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països distints. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre civil (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.',
+            'Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte dels fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països diferents. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre civil (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.',
             'Com que els assumptes de família solen anar units a terminis i a diversos tràmits en paral·lel, el resum inicial hauria d’indicar la relació entre les parts, el lloc de residència actual i els procediments ja iniciats.',
           ],
         },
         {
           heading: 'Conflictes laborals',
           paragraphs: [
-            'Aquesta àrea cobreix l’extinció del contracte de treball, la indemnització segons el dret de Taiwan (資遣費; no s’identifica amb institucions d’altres països), salaris i conflictes derivats del contracte de treball (勞動契約), tant del costat de la persona treballadora com de l’ocupador. En revisar l’assumpte separem el fonament de l’extinció de les qüestions de preavís, pagament i terminis.',
+            'Aquesta àrea cobreix l’extinció del contracte de treball, la indemnització segons el dret de Taiwan (資遣費; no s’equipara als règims d’indemnització o de protecció contra l’acomiadament d’altres països), salaris i conflictes derivats del contracte de treball (勞動契約), tant del costat de la persona treballadora com de l’ocupador. En revisar l’assumpte separem el fonament de l’extinció de les qüestions de preavís, pagament i terminis.',
             'El contracte de treball, el reglament intern (工作規則), les nòmines i l’intercanvi escrit entre les parts solen ser els documents decisius. Si encara els conserva, indiqui-ho en el resum.',
           ],
         },
@@ -1624,7 +1624,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Propietat intel·lectual',
           paragraphs: [
             'Ajudem en el registre de marques (商標) i patents (專利), en drets d’autor i en conflictes sobre aquests drets a Taiwan.',
-            'En aquesta àrea l’ordre dels passos és decisiu: l’abast de la protecció, el moment de la presentació i l’ús efectiu influeixen en l’estratègia. Presentar una sol·licitud no garanteix per si sola que es concedeixi.',
+            'En aquesta àrea l’ordre dels passos és decisiu: l’abast de la protecció, el moment de la presentació i l’ús efectiu influeixen en l’estratègia. Presentar una sol·licitud no garanteix per si sol que s’acabi concedint.',
           ],
         },
         {
@@ -1686,7 +1686,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'El primer pas és fixar l’abast del treball',
           paragraphs: [
-            'Assumptes del mateix tipus poden exigir un treball molt distint, segons el nombre de parts, els documents disponibles, els terminis que calgui complir i si un procediment ja ha començat. Per això el primer pas és sempre aclarir què entra en el treball i què no.',
+            'Assumptes del mateix tipus poden exigir un treball molt diferent, segons el nombre de parts, els documents disponibles, els terminis que calgui complir i si un procediment ja ha començat. Per això el primer pas és sempre aclarir què entra en el treball i què no.',
             'El resum que envia a l’inici és la base d’aquest abast. Com més clar descrigui els fets, el que espera i els terminis, més precís podrà ser l’abast.',
           ],
         },
@@ -1708,7 +1708,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Per què aquesta pàgina no publica tarifes',
           paragraphs: [
             'La quantia depèn de l’assumpte mateix: del treball que calgui fer, del nombre de parts, dels documents, dels terminis i de si un procediment ja ha començat. Un import indicat d’entrada no reflectiria el cost del seu expedient; per això, en lloc d’una llista de tarifes, fixem primer l’abast del seu assumpte i li comuniquem després els honoraris perquè els valori abans de començar.',
-            'A més dels honoraris de l’advocada o l’advocat, un assumpte pot generar taxes que s’hagin de pagar al tribunal, a una autoritat o a un tercer. Aquestes taxes són distintes dels honoraris i depenen del procediment que se segueixi.',
+            'A més dels honoraris de l’advocada o l’advocat, un assumpte pot generar taxes que s’hagin de pagar al tribunal, a una autoritat o a un tercer. Aquestes taxes són diferents dels honoraris i depenen del procediment que se segueixi.',
           ],
         },
       ],
@@ -1724,7 +1724,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tres coses que convé distingir',
           paragraphs: [
-            'L’idioma de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses distintes.',
+            'L’idioma de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses diferents.',
           ],
           items: [
             'Idioma de la pàgina: aquesta orientació està escrita en català.',
@@ -1868,7 +1868,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Els seus drets i com contactar-nos',
           paragraphs: [
-            'Pot demanar accés, rectificació o supressió de les seves dades, o retirar el consentiment, a través de l’adreça de correu que figura a la pàgina de contacte. Si existeix una obligació de conservació segons les normes aplicables o per un assumpte en curs, n’explicarem el motiu de la limitació.',
+            'Pot demanar accés, rectificació o supressió de les seves dades, o retirar el consentiment, a través de l’adreça de correu que figura a la pàgina de contacte. Si existeix una obligació de conservació segons les normes aplicables o per un assumpte en curs, n’explicarem el motiu.',
             'Aquesta pàgina no indica un termini fix de conservació, perquè la durada real depèn de si l’assumpte continua i de les obligacions de conservació associades. Si desitja que se suprimeixin abans, indiqui-ho en contactar-nos.',
           ],
         },
@@ -1893,7 +1893,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Només informació general',
           paragraphs: [
             'El contingut d’aquestes pàgines està escrit com a informació general. No és assessorament jurídic per al seu cas i no substitueix la revisió del seu propi expedient.',
-            'El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que dues situacions que semblen similars poden acabar de forma distinta.',
+            'El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que dues situacions que semblen similars poden acabar de manera diferent.',
           ],
         },
         {
@@ -2039,7 +2039,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Tungumál síðunnar og tungumál ráðgjafarinnar eru ekki það sama',
           paragraphs: [
             'Þessi síða er skrifuð á íslensku, en ráðgjöf við lögmann fer einungis fram á fjórum tungumálum ráðgjafar: ensku, kínversku (中文), japönsku og kóresku. Að lesa leiðbeiningarnar á íslensku þýðir ekki að samtalið við lögmanninn fari fram á íslensku.',
-            'Við heitum ekki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú talar ekkert af þessum fjórum tungumálum, útskýrir síðan „Hafa samband“ hvernig við könnum samskiptaleið.',
+            'Við heitum hvorki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú talar ekkert af þessum fjórum tungumálum, útskýrir síðan „Hafa samband“ hvernig við könnum samskiptaleið.',
           ],
         },
         {
@@ -2130,7 +2130,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       description:
         'Grunnupplýsingar um þessa taívönsku lögmannsstofu, skrifstofur hennar og vinnu með erlendum aðilum.',
       intro:
-        'Hovering International Law Firm er lögmannsstofa á Taívan. Lögmennirnir vinna allt frá ráðgjöf til fyrirtækja og til málflutnings fyrir dómstólum. Þessi hluti lýsir tilurð stofunnar, staðsetningum og vinnu með erlendum aðilum.',
+        'Hovering International Law Firm er lögmannsstofa á Taívan. Lögmennirnir sinna öllu frá ráðgjöf til fyrirtækja til málflutnings fyrir dómstólum. Þessi hluti lýsir tilurð stofunnar, staðsetningum og vinnu með erlendum aðilum.',
       sections: [
         {
           heading: 'Stofnun og uppbygging',
@@ -2181,7 +2181,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kostnaður er staðfestur áður en vinna hefst',
           paragraphs: [
-            'Þegar vinnuumfangið er ljóst eru fjárhæð og útreikningsaðferð ræddar við þig og staðfestar áður en vinna hefst. Breyti umfangið í vinnslunni verður það að vera staðfest að nýju.',
+            'Þegar vinnuumfangið er ljóst eru fjárhæð og útreikningsaðferð ræddar við þig og staðfestar áður en vinna hefst. Breytist umfangið í vinnslunni verður að staðfesta það að nýju.',
             'Þessi síða er ekki tilboð og stofnar ekki greiðsluskyldu. Að senda beiðni í gegnum þessa síðu er einnig án greiðslu.',
           ],
         },
@@ -2336,7 +2336,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Geymslustaður og aðgangur',
           paragraphs: [
             'Innihald sendingarinnar er geymt á stað sem er ekki opinn almenningi. Aðeins heimilaðir aðilar á skrifstofunni mega nálgast það til að vinna beiðnina.',
-            'Þessi síða veitir enga algjöra ábyrgð á öryggi. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.',
+            'Þessi síða ábyrgist ekki fullkomið öryggi. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.',
           ],
         },
         {
@@ -2364,7 +2364,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Geymslustaður og þjónustuaðilar',
           paragraphs: [
             'Þessi vefur er hýstur hjá Vercel og sendingin þín er geymd í gagnageymslu þessarar þjónustu sem ekki er opin almenningi. Tölvupóstur er sendur um póstþjónustuna sem skrifstofan notar.',
-            'Netþjónar einstakra þjónustuaðila geta staðið utan Taívan, svo gögnin þín geta verið geymd og unnin þar. Þegar geymslutilganginum er náð eru gögnin eydd án tafar; gögn sem varðveita ber samkvæmt gildandi reglum eru geymd þann tíma. Fyrirspurnir um persónuupplýsingar berast á wei@hoveringlaw.com.tw.',
+            'Netþjónar einstakra þjónustuaðila geta staðið utan Taívan, svo gögnin þín geta verið geymd og unnin þar. Þegar geymslutilganginum er náð er gögnunum eytt án tafar; gögn sem varðveita ber samkvæmt gildandi reglum eru geymd þann tíma. Fyrirspurnir um persónuupplýsingar berast á wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -2433,7 +2433,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hve langt grein getur þjónað sem leiðsögn',
           paragraphs: [
             'Greinar eru almennar upplýsingar á birtingarstundu. Reglur og beiting þeirra geta breyst og grein inniheldur ekki allar aðstæður málsins þíns.',
-            'Ekki byggðu ákvörðun í raunverulegu máli einungis á grein. Notaðu hana til yfirlits og ræddu skjölin þín sérstaklega við lögmann; þessi síða er ekki sjálf ráðgjöfin.',
+            'Byggðu ekki ákvörðun í raunverulegu máli einungis á grein. Notaðu hana til yfirlits og ræddu skjölin þín sérstaklega við lögmann; þessi síða er ekki sjálf ráðgjöfin.',
           ],
         },
       ],

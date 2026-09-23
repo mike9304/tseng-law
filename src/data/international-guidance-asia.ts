@@ -187,7 +187,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
       description:
         '关于这家台湾律师事务所、其办公室以及与境外当事人合作的基本说明。',
       intro:
-        'Hovering International Law Firm 是台湾的律师事务所。律师的工作从企业咨询到诉讼都有涉及。本部分说明事务所的成立、地点以及与境外当事人的合作。',
+        'Hovering International Law Firm 是台湾的律师事务所。律师为企业提供咨询，并代理诉讼。本部分说明事务所的成立、地点以及与境外当事人的合作。',
       sections: [
         {
           heading: '成立与组织',
@@ -201,7 +201,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           heading: '与境外当事人的合作',
           paragraphs: [
             '跨境工作包括公司设立、签证、商标与专利申请、法律风险审查以及企业税务咨询。台中办公室尤其处理营建、知识产权以及与韩国、日本有关的事项。律师曾雋崴（Wei Tseng）在上述各组中协助来自韩国、日本及其他国家的委托人。',
-            '能否承接取决于内容与沟通语言。若您的事项属于上述各组，并可以四种咨询语言之一讨论，您可以提交摘要供审阅。',
+            '能否承接取决于内容与沟通语言。若您的事项属于上述各组，并且可以用四种咨询语言之一讨论，您可以提交摘要供审阅。',
           ],
         },
         {
@@ -232,7 +232,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           heading: '首先确定工作范围',
           paragraphs: [
             '同类事项的工作量可能相差很大，取决于当事人人数、现有文件、须遵守的期限，以及程序是否已经开始。因此第一步始终是确定哪些事项属于工作范围、哪些不属于。',
-            '您一开始提交的摘要是确定该范围的基础。摘要越清楚说明经过、您的需求与期限，范围就能定得越准确。',
+            '您一开始提交的摘要是确定该范围的基础。摘要把经过、您的需求和期限写得越清楚，范围就能定得越准确。',
           ],
         },
         {
@@ -516,7 +516,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
   footerNotice:
     'Halaman bahasa Melayu ini hanya memberikan maklumat am tentang kerja firma menurut undang-undang Taiwan. Ia bukan nasihat undang-undang bagi suatu kes tertentu, dan penghantaran mesej dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.',
   skipLink: 'Langkau navigasi dan pergi ke kandungan',
-  menuLabel: 'Direktori halaman',
+  menuLabel: 'Menu',
   languageLabel: 'Bahasa paparan',
   mega: {
     services: {
@@ -682,7 +682,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) ditubuhkan pada 2016 oleh peguam yang belajar di National Taiwan University (國立臺灣大學). Nama Cina 昊鼎 menggabungkan aksara 昊 (“langit luas”) dengan 鼎 (“asas kukuh”) dan menggambarkan hala tuju firma sejak penubuhan.',
             'Kami mempunyai pejabat di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) dan Pingtung (屏東). Pejabat Kaohsiung menumpukan tadbir urus syarikat dan mengendalikan pertikaian sivil, jenayah dan pentadbiran. Pejabat Taichung mengendalikan hal pembinaan, harta intelek, dan hal yang berkaitan dengan Korea dan Jepun. Pejabat Pingtung dibuka pada 2017 untuk keperluan setempat.',
-            'Selain kerja peguam, sejak 2020 wujud juga Hovering Accounting Office, yang menawarkan perakaunan dan perancangan cukai untuk usahawan dan individu bernilai bersih tinggi.',
+            'Selain kerja peguam, sejak 2020 wujud juga Hovering Accounting Office, yang menawarkan perakaunan dan perancangan cukai untuk usahawan dan individu berharta.',
           ],
         },
         {
@@ -1123,7 +1123,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'विवाह, परिवार और उत्तराधिकार',
           paragraphs: [
-            'हम तलाक (離婚), संपत्ति विभाजन, नाबालिग बच्चों की अभिरक्षा तथा अभिभावकीय अधिकार और कर्तव्य (未成年子女權利義務之行使或負擔), मुलाक़ात और संपर्क का अधिकार (會面交往) और उत्तराधिकार (繼承) का कार्य करते हैं, तब भी जब पक्ष या संपत्ति भिन्न देशों में हों। सीमा-पार पारिवारिक मामलों में प्रायः गृह-पंजीकरण (戶籍), दस्तावेज़ों के रूप और ताइवान में उनके साक्ष्य बन पाने की अतिरिक्त जाँच चाहिए।',
+            'हम तलाक (離婚), संपत्ति विभाजन, नाबालिग बच्चों की अभिरक्षा तथा अभिभावकीय अधिकार और कर्तव्य (未成年子女權利義務之行使或負擔), मुलाक़ात और संपर्क का अधिकार (會面交往) और उत्तराधिकार (繼承) का कार्य करते हैं, तब भी जब पक्ष या संपत्ति भिन्न देशों में हों। सीमा-पार पारिवारिक मामलों में प्रायः गृह-पंजीकरण (戶籍), दस्तावेज़ों के रूप और ताइवान में उनके साक्ष्य के रूप में ग्राह्य होने की अतिरिक्त जाँच चाहिए।',
             'क्योंकि पारिवारिक मामलों में प्रायः समयसीमाएँ और समानांतर प्रक्रियाएँ होती हैं, प्रथम सार में पक्षों का संबंध, वर्तमान निवास और पहले से चल रही प्रक्रियाएँ बतानी चाहिए।',
           ],
         },
@@ -1215,7 +1215,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
           heading: 'कार्य आरंभ होने से पहले लागत पुष्ट होती है',
           paragraphs: [
             'जब कार्य-दायरा स्पष्ट हो, तो राशि और गणना का तरीका आपके साथ चर्चा करके कार्य आरंभ होने से पहले पुष्ट किया जाता है। कार्य के दौरान दायरा बदलने पर उसे फिर पुष्ट करना होता है।',
-            'यह पृष्ठ शुल्क का उद्धरण नहीं है और भुगतान का दायित्व नहीं बनाता। इस पृष्ठ से अनुरोध भेजना भी निःशुल्क है।',
+            'यह पृष्ठ शुल्क का प्रस्ताव नहीं है और भुगतान का दायित्व नहीं बनाता। इस पृष्ठ से अनुरोध भेजना भी निःशुल्क है।',
           ],
         },
         {
@@ -1271,7 +1271,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
           heading: 'यह पृष्ठ क्या नहीं कहता',
           paragraphs: [
             'हम उत्तर की समयसीमा नहीं कहते, इस पृष्ठ से नियुक्ति पुष्ट नहीं करते, किसी निश्चित अधिवक्ता का वादा नहीं करते और दुभाषिया नहीं देते। लिखित अनुवाद अलग बात है: आपके संदेश का स्वचालित अनुवाद नहीं होता।',
-            'जब आप अनुरोध भेजते हैं, सामग्री रखी जाती है और जाँच की प्रतीक्षा करती है। यदि कुछ समय बाद उत्तर न आए, तो आप संपर्क पृष्ठ पर बताए गए ई-मेल पते पर फिर लिख सकते हैं।',
+            'जब आप अनुरोध भेजते हैं, तो सामग्री रखी जाती है और जाँच की प्रतीक्षा करती है। यदि कुछ समय बाद उत्तर न आए, तो आप संपर्क पृष्ठ पर बताए गए ई-मेल पते पर फिर लिख सकते हैं।',
           ],
         },
       ],
@@ -1345,7 +1345,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'कौन-सी जानकारी एकत्र की जाती है',
           paragraphs: [
-            'जब आप इस भाग के फ़ॉर्म से अनुरोध भेजते हैं, निम्नलिखित दर्ज किए जाते हैं:',
+            'जब आप इस भाग के फ़ॉर्म से अनुरोध भेजते हैं, तो निम्नलिखित दर्ज किए जाते हैं:',
           ],
           items: [
             'आपके द्वारा बताया गया नाम',
@@ -1376,7 +1376,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
           heading: 'उपयोग का उद्देश्य',
           paragraphs: [
             'भेजी गई जानकारी अनुरोध की जाँच, आपको उत्तर देने, संचार का मार्ग तय करने और कार्य स्वीकार होने पर उसे चलाने के लिए उपयोग होती है।',
-            'अलग सहमति के बिना इस जानकारी का विपणन के लिए उपयोग नहीं होता।',
+            'अलग सहमति के बिना इस जानकारी का उपयोग विपणन के लिए नहीं होता।',
           ],
         },
         {
@@ -1458,7 +1458,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'कड़ियाँ कहाँ ले जाती हैं',
           paragraphs: [
-            'जब आप चार कड़ियों में से एक चुनते हैं, उस भाषा की लेख सूची खुलती है। सूची से आप स्वयं पाठ चुनते हैं; पूरी सामग्री लेख की मूल भाषा में दिखाई देती है।',
+            'जब आप चार कड़ियों में से एक चुनते हैं, तो उस भाषा की लेख सूची खुलती है। सूची से आप स्वयं पाठ चुनते हैं; पूरी सामग्री लेख की मूल भाषा में दिखाई देती है।',
             'यह पृष्ठ लेखों की सामग्री का सार नहीं देता और यह नहीं कहता कि कोई विषय चारों भाषाओं में उपलब्ध है। प्रत्येक सूची में केवल वे पाठ हैं जो उस भाषा में प्रकाशित हैं।',
           ],
         },

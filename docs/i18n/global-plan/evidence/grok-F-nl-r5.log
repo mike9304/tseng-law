@@ -1,0 +1,119 @@
+WO-F-nl r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-nl-r5
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: nl-a 35, nl-b 21 (56). No P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 54.
+Skipped: 2 numbered rows (both are the U+200B / heading-promotion pattern). Adaptations on applied rows are listed under that row, not as skips.
+
+Test edit: src/data/__tests__/guidance-disclosure-parity.test.ts `confirmation-is-not-a-promise` nl regex `/geen belofte/` → `/geen toezegging/`, because contact section 1 now says “geen toezegging”. No other test expectation was rewritten. consultationNotice and confidentialNotice were left; discoveryNotice still contains the token `llms.txt`. “TWD 1.57M” was not touched. Lawyers description and guidanceTeamCopy.nl.description were changed to the same string, with no parentheses.
+
+### Applied
+nl-a 1–12, 14–35.
+nl-b 1–4, 6–21.
+
+Adaptations (still applied):
+- nl-a 2. The link no longer calls the opened page artikel 10. The label is now “voorschrift betreffende het bronbelastingtarief op dividenden aan niet-inwoners (de geopende tekst is niet artikel 10)”. URL unchanged (`pcode=G0340028&flno=3`). The digit 10 stays: the Korean link text is 영업세법 제10조, and dropping 10 fails `numbers`. 001’s label for the same URL was already without an article number and was left.
+- nl-a 3. Restored “in de regel” for the English “generally”, and kept “dat is geen gegarandeerde uitkomst” on the 3-month sentence and on the 4- and 6-month sentence. Dropped “geen gebruikelijke uitkomst” / “in een deel van de uitspraken”, which denied the usual result the English states. The no-guarantee product rule stays. Digits 3, 4 and 6 stay.
+- nl-a 4. Did not write “het haalbare schadebedrag volledig te vorderen”. R3 forbids a maximum or full-recovery reading. The sentence now says the lawyer reviews every head of damages and helps claim the compensation the facts and the evidence support.
+- nl-a 8. “De 3 wegen” keeps the digit. “Een overeenstemming alleen vervangt niet de voorwaarden en de werking van elke weg.”
+- nl-a 12. “per gewonde persoon en per ongeval”. This round’s checker does not miss a 1 on 003 (numbers stay PASS, only the usual unparsed-Korean WARN). r4 had kept “per 1 ongeval”; the current bag accepts the drop.
+- nl-a 16. The fragment keeps its own block. “Hij was de verkoper met het hoogste resultaat in de regio Midden-Taiwan.” Merging it into the previous line would change the block count.
+- nl-a 18 (nl-b 18). “heeft elke aandeelhouder 1 stem, dus 1 stem per aandeelhouder”. “één” is not counted; both source 1s stay (Korean 주주 1인 1표).
+- nl-a 19 is the guidance heading “Bevestiging van de omvang”. nl-b 19 is “vennootschappen die aandelen openbaar hebben uitgegeven, volgen de effectenwetgeving”, not “openbare vennootschappen”. R8 and nl-a 26 use the public-offering wording for 公開發行公司. “effectenreglementering” → “effectenwetgeving”.
+- nl-a 26. Three places in 002: “een vennootschap die aandelen openbaar heeft uitgegeven”. The gloss (公開發行公司) stays where it already stood; it was not duplicated.
+- nl-b 8. “wiens tijd eraan werd besteed” and “dan wel”, not “is besteed” and “of”. “is” + two “of” made the sentence trip the English-stopword check.
+- nl-b 17. “een Taiwanees bijkantoor” ×2 and the table label “Taiwanees bijkantoor”. “het Taiwanese bijkantoor” and “een Taiwanese dochtervennootschap” were left (definite het-word, and de-word).
+
+### Skipped
+- nl-a 13. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003 (from Q16), 005 (including `**​**`), 006, 008 and 009 were not removed. Heading levels and ZWSP counts must match the Korean source. ACCEPTED-ROUND forbids new headings. English keeps Q16–Q20 as body paragraphs.
+- nl-b 5. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 (lines 58, 72, 86, 108) and 015 (lines 28, 36, 52), were left. Deleting them changes the ZWSP count. Instances removed: 0. Counts left: 003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3 (87).
+
+## Systemic patterns and how many instances changed
+
+Manager (經理人) still called bestuurder
+  001 body “buitenlandse bestuurders” → “een buitenlandse manager”                         1
+  001 source label “werkvergunning van bestuurders” → “van managers”                     1
+  Left: bestuurder (董事), drivers, and “enige bestuurder (董事)”.
+
+winstbeogend → ondernemingen met winstoogmerk (營利事業所得稅)
+  001                                                                                     3
+  002                                                                                     1
+  004 “inkomstenbelasting van …” ×6, sentence-initial “Ondernemingen met winstoogmerk” ×3, remaining “ondernemingen met winstoogmerk” ×2
+                                                                                         11
+  Total                                                                                 15
+  004 “rechtspersoon met winstoogmerk” was already native and was left.
+
+U+200B blank lines and 005 `**​**`
+  Removed: 0. See skipped rows.
+
+Communicatiekanaal (IT “channel”)
+  guidance FAQ quotes ×2, privacy “de manier van communiceren af te spreken” ×1,
+  inquiry notice ×1, option label ×1                                                    5
+  The refusal of a Dutch consultation, an interpreter and a reply time stays.
+  Contact “Dit is alleen een controle, geen belofte” and the FAQ “Dit is een controle, geen belofte …” → “afstemming” / “geen toezegging” (2). Disclosure regex updated.
+
+levenscentrum
+  007 “het centrum van hun leven”, checklist “het werkelijke centrum van hun leven”, 016 “het centrum van hun leven op het ogenblik van het overlijden”
+                                                                                          3
+
+ontslagopzegging (the worker’s resignation notice, not the employer’s dismissal)
+  014 question 4, heading 8, closing paragraph                                          3
+
+Indefinite het-word with a de-ending (bijkantoor)
+  018 “een Taiwanees bijkantoor” ×2, table label ×1                                      3
+
+Digit telegram for “each”
+  018 one sentence, both 1s kept. See adaptation nl-b 18.                                1
+
+Neighbouring nouns and flipped negation (the quoted rows, swept; no further hits)
+  010 aanwezigheidsstukken → loonstroken / belastingstukken / dienstverband              1
+  015 sector → bedrijfsactiviteit; tak → bedrijfsactiviteit                              2
+  016 peiling → referentiedatum; “Elke bevoegdheid ligt niet” → “moet worden uitgeoefend … en niet” 
+                                                                                          2
+  017 werktoelichting → bestuurlijke aanwijzingen                                        1
+
+R2–R10. Prior rounds already hold: u-address, feminine Wei Tseng where Dutch marks it (Advocaat is common gender; bios keep zij), consultation languages Engels / Chinees (中文) / Japans / Koreaans, no interpreter, no reply-time, no free first meeting, no result promise. Korea stays a labelled example. This round did not turn any of those sentences positive. “TWD 1.57M” and the bio’s “1,57 miljoen TWD” were not reformatted; only “fitnesszaal” → “sportschool”.
+
+## Reviewer points not followed
+
+- nl-a 13 and nl-b 5. The U+200B lines are the same count as the Korean source. Promoting Q16–Q20 to headings would also change heading levels. English does not use those headings either. The blanks are source scaffolding, not a Dutch-only defect that this checker can drop.
+- nl-a 2, the request to delete every trace of “10” from the label. The opened URL is flno=3 and was not changed. The Korean link text still contains 제10조. The label now says the opened text is not artikel 10, and the digit stays.
+- nl-a 3, if read as a request to drop every hedge. “geen gegarandeerde uitkomst” stays. “geen gebruikelijke uitkomst” was the part that contradicted “in de regel”.
+- nl-a 4, “volledig te vorderen”. That reads as a full recovery. The sentence claims the amount the facts and the evidence support.
+- nl-a 16, merging the two lines. That would drop a block.
+- nl-b 18, “één stem”. That drops a counted 1.
+- nl-b 19, “openbare vennootschappen”. In Dutch that is broader than a company that has made a public offering. The 002 wording was reused.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nl --lang nl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=113
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+```
+
+Checker `summary PASS 18/18` was re-run after the last wording edits (004 link label, 007 “vervangt niet”). TSC and vitest were run on the same tree before those two sentence-level touches; neither touches types or a pinned test string. Markers 0.

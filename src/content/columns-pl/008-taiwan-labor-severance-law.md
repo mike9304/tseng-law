@@ -56,7 +56,7 @@ Podsumowuję to w prostej tabeli.
 | Znaczenie | Jeśli u pracodawcy istnieje potrzeba korekty personelu z powodu sytuacji przedsiębiorstwa, przyczyna leży w sferze gospodarczej pracodawcy, a nie w odpowiedzialności zatrudnionej osoby. Dlatego pracodawca musi przestrzegać terminu wypowiedzenia (預告期間) i wypłacić odprawę, aby zrównoważyć niekorzyści zatrudnionej osoby. | Jeśli zatrudniona osoba popełnia czyn bezprawny lub niewłaściwy, pracodawca może natychmiast zakończyć umowę o pracę (勞動契約) bez wcześniejszego wypowiedzenia i nie musi wypłacać odprawy. Jest to jedna z prerogatyw dyscyplinarnych pracodawcy. | Zatrudniona osoba może w każdej chwili zakończyć umowę, lecz musi, według czasu zatrudnienia, przestrzegać terminu wypowiedzenia, aby pracodawca mógł przeprowadzić przekazanie i poszukiwanie zastępstwa. |
 | Warunki | Tak (art. 11 tajwańskiej ustawy o normach pracy) | Tak (art. 12 tajwańskiej ustawy o normach pracy) | Brak |
 | Wcześniejsze wypowiedzenie | Wymagane | Niewymagane | Wymagane |
-| Trudność (bez obietnicy wyniku) | Łatwa | Trudna | Łatwa |
+| Trudność (bez obietnicy wyniku) | Niska | Wysoka | Niska |
 | Czy spółka musi wypłacić odprawę (資遣費) | Wymagane | Niewymagane | Niewymagane |
 |  | Tajwańska ustawa o normach pracy, art. 11 (勞動基準法第11條): O ile nie wystąpi jeden z następujących przypadków, pracodawca nie może zakończyć umowy o pracę, nawet po wcześniejszym zawiadomieniu zatrudnionej osoby.  1. Zaprzestanie działalności (歇業) lub zbycie przedsiębiorstwa (轉讓)  2. Straty (虧損) lub ograniczenie działalności (業務緊縮)  3. Siła wyższa wymaga przerwy w działalności na jeden miesiąc lub dłużej  4. Charakter działalności wymaga redukcji personelu, a zwolnionej osoby nie można przenieść na inne odpowiednie stanowisko  5. Określona zatrudniona osoba nie może w sposób zadowalający wykonać pracy wymaganej przez stanowisko | Tajwańska ustawa o normach pracy, art. 12 (勞動基準法第12條): Pracodawca może zwolnić bez wcześniejszego zawiadomienia, jeśli zachodzi jedna z następujących okoliczności.  1. Kto przy zawarciu umowy o pracę składa nieprawdziwe oświadczenia, wprowadza pracodawcę w błąd i naraża przedsiębiorstwo na ryzyko szkody  2. Kto stosuje przemoc lub poważnie znieważa pracodawcę, jego rodzinę, jego przedstawiciela (代理人) lub innych współpracowników  3. Kogo prawomocnie skazano na karę pozbawienia wolności na czas oznaczony (有期徒刑) lub karę cięższą, bez orzeczenia warunkowego zawieszenia (緩刑) i bez zezwolenia na zamianę na grzywnę (易科罰金)  4. Poważne naruszenie umowy o pracę lub regulaminu pracy  5. Kto umyślnie zużywa maszyny, narzędzia, surowce, produkty lub inne mienie pracodawcy albo umyślnie ujawnia tajemnice techniczne i handlowe pracodawcy i wyrządza pracodawcy szkodę  6. Nieusprawiedliwiona nieobecność (曠工) bez uzasadnionej przyczyny przez 3 dni z rzędu albo przez 6 dni lub więcej w miesiącu |  |
 
@@ -106,7 +106,7 @@ spółka wzięła pana B za cel.
 
 Pewnego dnia kadra kierownicza wezwała pana B na rozmowę
 
-i nagle zaczęła go ganić, mówiąc, że pan B nie pracuje sumiennie.
+i nagle zaczęła go ganić, mówiąc, że pan B nie pracuje sumiennie,
 
 że spółka ma kłopoty,
 

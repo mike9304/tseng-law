@@ -1,0 +1,115 @@
+WO-F-hi r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-hi-r5
+date: 2026-09-23
+reviews: docs/i18n/global-plan/reviews/native/rounds/r5/hi-a.md (23 rows), hi-b.md (26 rows)
+
+## Rows applied (42)
+
+hi-a
+- 2 P1 004: withholding-rate link now says अनुच्छेद 3 of 各類所得扣繳率標準, and keeps “व्यवसाय कर अधिनियम का अनुच्छेद 10 नहीं”. Korean 영업세법 제10조 still contributes a 10; dropping it fails the checker. URL unchanged. Digit counts stayed sourceCount=95 targetCount=95.
+- 4 P2 003: “प्ररूपी सीमा” → “कोई तय सीमा परिणाम निर्धारित नहीं करती।”
+- 5 P2 002: “प्रथा में पहले” → “व्यवहार में पहले”.
+- 6 P2 002: suspension does not extinguish the company or settle existing rights and obligations.
+- 7 P2 002: directors’ responsibility for their own judgment, not a duty to make an assessment.
+- 8 P2 005: Korea example now says online-banking or relative remittance is not permitted. The wider “not everywhere” sentence stays.
+- 9 P2 008: the company is bound to pay statutory severance. One line; the line above still states the employee’s right.
+- 11 P2 guidance: तो after the जब-clause on the privacy form. Same fix on the two other quoted sentences (contact “जब आप अनुरोध भेजते हैं”, columns “जब आप चार कड़ियों में से एक चुनते हैं”).
+- 12 P2 privacy: “इस जानकारी का उपयोग विपणन के लिए नहीं होता।”
+- 13 P2 003: “समग्र रूप से आँकता है”.
+- 14 P2 pricing: शुल्क का प्रस्ताव. The free-inquiry sentence that follows is unchanged.
+- 15 P2 services: documents admissible as evidence in Taiwan.
+- 16 P2 003: अभिविन्यास → मार्गदर्शन on the transport, police, and Judicial Yuan link titles (3).
+- 17 P2 001: eligibility is not taken from the organizational name alone.
+- 18 P2 006: “पैसे वसूल थे।”
+- 19 P2 007: a marriage or divorce already completed abroad, or a judgment, is checked for effect and recognition.
+- 20 P2 007: the bare “(1)” is no longer a footnote. The sentence now says the list below starts at item 1. The digit stays because Korean “1차” is still counted (R11 does not exempt 1차).
+- 21 P2 004: निर्गमक → जारीकर्ता. 4 instances (FAQ answer, the repeated body sentence, and two later listing sentences).
+- 23 P2 005: gloss 台灣法人 → 臺灣法人. 1 instance.
+
+hi-b
+- 1 P2 010: शारीरिक हलचल और प्रतिक्रिया.
+- 2 P2 012: the vehicles ahead, and enough space both to pass and to return.
+- 3 P2 014: internal training is not ruled out across the board. Also “सदा न निकालें” → “सदा अयोग्य न ठहराएँ”. “निष्कर्ष न निकालें” / “परिणाम न निकालें” left; those mean “don’t draw a conclusion”.
+- 4 P2 016: registered title and length of marriage do not fix whether the claim exists or its amount.
+- 5 P2 017: changing the contract’s name does not avoid regulation.
+- 6 P2 018: ताइवान के उभरते शेयर बाज़ार (興櫃). One instance; no other emerging-board phrase in the Hindi columns.
+- 7 P2 018: कर्मचारी शेयर-विकल्प.
+- 8 P2 010: the relative clause now has a grammatical object (process, period, preservation methods, heads of damages).
+- 10 P2 014: नियोक्ता के माँग पत्र (पत्र is masculine). Also “नियोक्ता के वापसी माँग पत्र”.
+- 11 P2 015: उस परिचालन पते की भवन-पंजी श्रेणी 2 की प्रमाणित प्रति. The later “किसी पते की … प्रमाणित प्रति” already agrees with प्रति.
+- 12 P2 015: the pre-inquiry result is what must be attached to the registration application. Bold **अनिवार्यतः** kept.
+- 14 P2 010: the person liable to pay compensation, not a debtor.
+- 15 P2 010: कार्य-क्षमता की हानि (勞動能力減損).
+- 16 P2 010: these options need not be pursued in every case.
+- 17 P2 011: the relationship, the content, and the degree of brand involvement are all inside one “पुष्टि करनी चाहिए कि”.
+- 18 P2 011: the product is not exempt from the requirement merely because it is handmade or called soap.
+- 19 P2 014: the point should not be stated for the first time after a dispute following payment.
+- 20 P2 014: “पूरी सूची”, not a closed list.
+- 21 P2 014: साधन, not a piece of equipment.
+- 22 P2 016: FAQ question and section 3 heading now use अधिशेष संपत्ति के अंतर का वितरण अधिकार (剩餘財產差額分配), the name the same section’s body already uses. 007’s “अवशिष्ट संपत्ति अंतर वितरण” was not in this round’s rows and part a called 007 professional; left.
+- 23 P2 016: lifetime gifts or transfers may raise recovery, inclusion, or a reserved portion.
+- 24 P2 017: ग्राहक को बिल भेजना, आवंटन के आदेश.
+- 25 P2 018: काल्पनिक मूल्यांकन परिदृश्य विचार करने के लिए हैं.
+
+## Rows skipped (7)
+
+- hi-a 1 P1 003 sentencing. Not applied. RULEBOOK R3 and ACCEPTED-ROUND forbid turning the softened “some judgments / not a guaranteed or typical outcome” line back into “courts generally impose about 3 / 4 / 6 months”. Digits 3, 4, and 6 stay.
+- hi-a 3 P2 003 “अधिकतम क्षतिपूर्ति”. Not applied. R3 already replaced “pursue the maximum compensation” with compensation the facts and evidence support. Restoring अधिकतम is a result claim.
+- hi-a 10 P2 copyright gloss 著作權. Not applied. guidance-disclosure-parity.test.ts requires every locale in its list, including hi, to carry the same CJK gloss set as Vietnamese. The Vietnamese services sentence has no 著作權. A Hindi-only gloss fails that test, and this lane cannot edit the other locales. Same skip as r4.
+- hi-a 22 P2 and hi-b 26 P2 lakh/crore grouping (15,70,000 and the listed TWD/USD amounts, including the team-bio TWD 1,570,000). Not applied. ACCEPTED-ROUND skips lakh grouping because the checker cannot parse it. TWD 1.57M was not in these rows and stays byte-identical.
+- hi-b 9 P2 U+200B in 013 and 015. Not applied. checkBlocks requires the target ZWSP count to equal the Korean source, and the Korean 013/015 files have the same zero-width spaces, including lines whose only character is U+200B. Removing them fails blocks. The same characters in 008 and 009 were left for the same reason.
+- hi-b 13 P2 018 heading numbers 7→6 and 8→7. Not applied. The English and Korean sources skip 6 the same way. Renumbering changes digits the checker counts, and ACCEPTED-ROUND forbids changing numbers.
+
+No P3 rows in either review.
+
+## Systemic patterns
+
+- Amounts at or above one lakh, Western grouping: 0 changed (skip above).
+- Sentencing written as an uncommon result: 0 changed (R3).
+- Withholding link still saying only अनुच्छेद 10: 1 link rewritten to name अनुच्छेद 3 and to say it is not व्यवसाय कर अधिनियम का अनुच्छेद 10.
+- जब-clause whose result dropped तो: 7 instances. The three quoted guidance sentences, plus 004 (parent company entering Taiwan), 014 (notice when an indefinite-term contract ends), 017 (capital when a company starts motor freight), and 018 (name check when a foreign company forms a subsidiary). Left “तभी … जब”, “जब तक”, statutory “जब” list items in 009, and the 006 line break “जब मालिश की बात होती है,” — those are not a condition followed by a result in the same sentence.
+- “In practice” written as प्रथा: 2 instances (002 “व्यवहार में”; 005 Korea remittance rewritten as “अनुमत नहीं है”). “नवीनतम प्रथा” left; that is current administrative practice, not “in practice, it is useful”.
+- Exclude / rule out as निकालें: 2 instances, both in 014. 001’s “भागीदारी न निकालें” was row 17, a different mistranslation, and was rewritten separately.
+- U+200B: 0 removed (checker).
+- Emerging Stock Board without 興櫃: 1 instance in 018.
+- Issuer as निर्गमक: 4 instances in 004.
+- Simplified 台 inside the Traditional gloss 台灣法人: 1 instance in 005.
+- अभिविन्यास for official guidance links: 3 instances in 003.
+
+R2–R10 were already in this Hindi pack from earlier rounds (consultation lock, feminine forms for Wei Tseng, formal आप, Traditional Chinese glosses other than the 台 row above). This pass did not reopen them except where an r5 row or the जब-तो pattern was the same issue. R1/R11 were not redone. The fullwidth colon in 008 is inside the frontmatter `url:` and stays (R16).
+
+## Reviewer got these wrong (not applied)
+
+- hi-a 1: “courts generally impose about 3 / 4 / 6 months” is the advertising-risk sentence R3 already softened. The current line is the required form.
+- hi-a 3: “उपलब्ध अधिकतम क्षतिपूर्ति” puts back the maximum-compensation claim R3 removed.
+- hi-a 10: the missing 著作權 gloss is real, but a Hindi-only gloss fails the cross-locale gloss-parity test. Sister locales outside that test (ne, bn, ur, ta, my) already gloss it.
+- hi-a 22 and hi-b 26: Indian lakh grouping is what a Delhi editor would write, and the checker does not parse it.
+- hi-b 9: the zero-width spaces are in the Korean source. They are not a Hindi-only leak.
+- hi-b 13: the missing section 6 is in the English source as well. Renumbering would desync the digits from Korean.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      20
+```
+
+Commands (cwd /Users/son7/Projects/tseng-law-fix-hi-r5, PATH node v24.14.1):
+- node scripts/check-column-translation.mjs --dir src/content/columns-hi --lang hi 2>&1 | tail -8
+- grep -rn "\[변호사 검수 필요\]" src/content/columns-hi src/data | wc -l
+- npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+- npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+- git status --short | wc -l
+
+004 and 007 numbers stayed PASS/WARN-without-a-new-missing-digit after the article-3 line and the “मद 1” rephrase. Pre-existing number WARNs (ordinals such as 제3자, extra 2023/2020/2) were already on those files and were not introduced here. No Hindi test expectation needed changing; 3202 tests passed.

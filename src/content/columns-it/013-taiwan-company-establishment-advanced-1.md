@@ -31,15 +31,15 @@ Il Dipartimento di esame degli investimenti deve verificare se il capitale (資�
 
 Occorre anche verificare che i soggetti stranieri non introducano fondi con un altro pretesto.
 
-Nella redazione del piano di investimento, non è necessario indicare l’indirizzo esatto della società; l’indicazione della regione basta (esempio: città di Taipei). ​
+Nella redazione del piano di investimento, non è necessario indicare l’indirizzo esatto della società; l’indicazione della zona basta (esempio: città di Taipei). ​
 
 Quando più tardi il conto preparatorio della società (公司籌備處帳戶) è aperto in banca, numerose banche esaminano però il contratto di locazione (租賃契約) e ispezionano sul posto l’indirizzo della società.
 
 Un’impiegata o un impiegato di una banca taiwanese mi ha detto di persona quanto segue.
 
-Numerosi stranieri scompaiono di recente dopo l’apertura del conto, così che l’apertura dei conti è trattata in modo sempre più rigoroso.
+Di recente numerosi stranieri, dopo avere aperto il conto, sono scomparsi, così che l’apertura dei conti è trattata in modo sempre più rigoroso.
 
-Già nella parte fondamentale, una lettrice o un lettore ha indicato che l’apertura del conto era la tappa più difficile; concordo.
+Nell’articolo sui fondamenti, una lettrice o un lettore ha indicato che l’apertura del conto era la tappa più difficile; concordo.
 
 Poiché i casi di riciclaggio di denaro (洗錢) sono molto numerosi a Taiwan, l’apertura dei conti bancari diventa sempre più rigorosa.
 
@@ -49,7 +49,7 @@ Poiché l’esame del piano di investimento richiede anche tempo,
 
 conviene redigere il piano di investimento e cercare l’indirizzo di iscrizione della società allo stesso tempo.
 
-Secondo l’articolo 9 della Legge sull’investimento degli stranieri (外國人投資條例), l’apporto approvato deve arrivare per intero nel termine fissato dall’autorità competente (核定期限); il termine deve confermarsi nell’atto di approvazione di ciascun caso (nella pratica, è di frequente fissato intorno a 1 anno).
+Secondo l’articolo 9 della Legge sull’investimento degli stranieri (外國人投資條例), l’apporto approvato deve arrivare per intero nel termine fissato dall’autorità competente (核定期限); il termine deve confermarsi nell’atto di approvazione di ciascun caso (nella pratica, è di frequente fissato intorno a un anno).
 
 In questo termine, una volta trovato l’indirizzo della società e firmato il contratto di locazione,
 
@@ -103,7 +103,7 @@ i locatori esitano quindi a locare a stranieri.
 
 Se la negoziazione con il locatore non si svolge senza intoppi,
 
-si può, se del caso, proporre l’autenticazione del contratto di locazione (公證) o un deposito cauzionale supplementare.
+si può, se del caso, proporre la stipula del contratto di locazione per atto notarile (公證) o un deposito cauzionale supplementare.
 
 ​
 

@@ -19,7 +19,7 @@ Tayvan’da çalışanın kıdem tazminatı (資遣費) alması, genel olarak, k
 
 Özellikle çalışan kendi isteğiyle istifa ederse (自請離職),
 
-kıdem tazminatı (資遣費) alamaz (İş Standartları Kanunu 18. madde),
+kıdem tazminatı (資遣費) alamaz (İş Standartları Kanununun 18. maddesi),
 
 ve bu, bazı hukuk düzenlerinden — örneğin Kore’den — farklıdır.
 
@@ -29,7 +29,7 @@ Ancak **istisnai haller** vardır.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Aşağıdaki özel durumlarda, çalışan kendi isteğiyle istifa etse bile işveren kıdem tazminatı ödemelidir (İş Standartları Kanunu 14. madde, aynı madde 17. maddeyi kıyasen uygular; 勞動基準法第14條):
+Aşağıdaki özel durumlarda, çalışan kendi isteğiyle istifa etse bile işveren kıdem tazminatı ödemelidir (İş Standartları Kanununun 14. maddesi, aynı kanunun 17. maddesini kıyasen uygular; 勞動基準法第14條):
 
 1. İşveren, iş sözleşmesinin (勞動契約) kurulmasında gerçeğe aykırı irade beyanında (虛偽意思表示) bulunup çalışanı yanılgıya düşürür ve zarar görme riski varsa
 
@@ -73,9 +73,9 @@ veya (6. bent için) zarar sonucunu öğrendiği günden itibaren **30 gün** i�
 
 Başka bir deyişle,
 
-Tayvan hukuku, kusur şirkette olsa da
+Tayvan hukuku, kusur şirkette olsun,
 
-çalışanda olsa da,
+çalışanda olsun,
 
 kusur şirketteyse çalışan kıdem tazminatını isteyebilir; kusur çalışandaysa şirket ödemeyi reddedebilir.
 

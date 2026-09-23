@@ -1,0 +1,157 @@
+# WO-F-he — round 5 Hebrew fix lane
+worktree: /Users/son7/Projects/tseng-law-fix-he-r5 (branch fix/native-he-r5-20260922)
+inputs: RULEBOOK-FIX.md (R2–R17) · ACCEPTED-ROUND.md · rounds/r5/he-a.md · rounds/r5/he-b.md
+date: 2026-09-23 · no git add/commit/push performed
+
+## 1. Rows applied
+
+### he-a (guidance pack + columns 001–009)
+| row | sev | applied | what was written |
+|-----|-----|---------|------------------|
+| 1 | P1 | YES (adapted) | 007 `המקורות הרשמיים 1 שלהלן, עד 25/7/2026, הם נקודת מוצא` → `המקורות הרשמיים הראשוניים (1) שלהלן נבדקו ביום 25/7/2026, והם נקודת מוצא`. The substantive half (עד "until" → "were checked on") is applied in full; the digit is retained as a parenthetical numeral because the Korean source writes `1차 자료` and the checker's number-parity gate fails without it (see §4). |
+| 2 | P1 | YES | 007 `עבור תקופת הבקשה אינו מחזיר גירושין…` → `חלוף תקופת הבקשה אינו מבטל גירושין…`; `גם בקשה לאחר עבור תקופת הבקשה` → `גם בקשה שהוגשה לאחר תום תקופת הבקשה`. |
+| 3 | P2 | YES — systemic, 51 instances | `סעיף N של X` → `סעיף N לX` swept over every column. 44 by the generic rule (002×6, 003×26, 004×11, 005×1) + 7 rephrased by hand where a bare `ל` would have collided with a preceding `לפי/הסייג ל`: `הסייג שבסעיף 3, פסקה 1, לתקנות רישום החברות` (×2), `הפשרה (和解) שבסעיף 736 לקודקס האזרחי`, `קיזוז האשמות שבסעיף 217 לקודקס האזרחי`, `האחריות הפלילית לפי סעיף 284 לחוק העונשין`, `סעיף 10-1 העדכני שבחוק החדשנות התעשייתית`, `התוספת של 5% לפי סעיף 66-9 לחוק מס ההכנסה`. 007/008/009/010/012/013/014/016 already used the correct form and were left alone; every remaining `של` after a citation is the genuine possessive (`לחוק תקני העבודה של טאיוואן`, `קצבת הפרישה של העובדים`). |
+| 4 | P2 | YES — systemic, 33 instances (form adapted) | bare `1` before a noun replaced by the Hebrew numeral word; the digit is kept as a parenthetical numeral (`שנה אחת (1)`, Israeli legal-drafting convention) because every one of these digits exists in the Korean source and the checker fails otherwise (§4). 001 ×6 (`פחות משנה אחת (1)`, `שנה אחת (1) או יותר`, `על בסיס השנה האחרונה (1)`, sentence split to avoid nested parentheses), 002 ×5, 003 ×3 (`מוגבלת לפעם אחת (1)`, `לנפגע אחד (1) ולתאונה אחת (1)`), 005 ×1 (`יותר מאזרח זר אחד (1)`), 008 ×5 (`על כל שנה אחת (1) של ותק`, `משולם חודש אחד (1) של שכר ממוצע`, `הפסקת פעילות של חודש אחד (1)`), 012 ×1, 013 ×2, 014 ×2, 017 ×5, 018 ×4. 018's `לחברה דירקטורים מ-1 עד 3` was instead rewritten as the natural Hebrew range `לחברה 1 עד 3 דירקטורים` (plural noun after the range — no parenthetical needed). |
+| 5 | P2 | YES — 007 fully spelled out, 8 instances | In 007 the counts are words in the Korean source, so the digits could be deleted outright: `הן ככלל שלוש.`, `## 1. שלוש דרכי הגירושין בטאיוואן`, `יש להפריד את חמש השאלות הבאות`, `הקשורה לשתי מדינות`, `לשלוש שכבות`, `שני עדים או יותר` (×3). |
+| 6 | P2 | YES | 007 `יש לקשור 2 מועדים אלה` → `יש לקשור שני מועדים אלה`. |
+| 7 | P2 | YES ×2 | 004 `ההסכם מסדר … תושבי שני הטריטוריות` → `ההסכם מסדיר … תושבי שתי הטריטוריות`; `לוחות הזמנים של הדיווח של שתי הטריטוריות`. A sweep of `שני ה…` across all 18 files found no other feminine head noun. |
+| 8 | P2 | YES — all 4 instances | 004 `אין זה משום…ש…` rebuilt: `אין די בכך שדבר מה נראה תואם לשם התחום כדי שיינתן אישור אוטומטי`; `העובדה שימי מתן השירותים אינם עולים על 183 ימים אין פירושה ש…`; `והעובדה שמשך העבודות אינו עולה על 6 חודשים אין פירושה שנשללת אפשרות של מוסד קבע של סוכן`; `לכן מחיקת הסניף מן הפנקס אינה מלמדת שהאחריות בעבר נסגרה`. 0 occurrences left. |
+| 9 | P2 | **NO — see §5** | conflicts with RULEBOOK R3. |
+| 10 | P2 | HALF | The invented fact is removed: 008 `אך שאר העובדים שעזבו לא שמרו ראיות דומות.` → `אך שאר העובדים שעזבו לא זכו לתוצאה דומה.` (matches the Korean `그렇게 운이 좋지 못했습니다`). The other half — restoring "B received a substantial severance payment" — is **not** applied: RULEBOOK R3 mandates exactly the current wording (`בייצוג משפטי … לבסס את זכאותו לדמי פיטורים לפי הדין`). See §5. |
+| 11 | P2 | **NO — see §4** | Q16–Q20 as `##` headings and U+200B deletion both break the checker. |
+| 12 | P2 | YES | 002 `ולהקים מערכת שמירה של ספרים ואסמכתאות למשך החוקי` → `ולהקים מערכת לשמירת ספרים ואסמכתאות לתקופה הקבועה בחוק`. |
+| 13 | P2 | YES | 002 rebuilt as `בחברה שיש בה בעלי מניות זרים, על תוכן אישור ההשקעה או הדיווח עליה, על רשימת בעלי המניות, על שינוי סכום ההון ועל מסמכי מטבע החוץ וההעברה הבנקאית להיות תואמים זה לזה.` |
+| 14 | P2 | YES | 003 → `במקרים אלה אין הנפגע חש מצד המזיק לא חרטה ולא כנות.` |
+| 15 | P2 | YES | 003 sign-off → `**עורכת הדין Wei Tseng (曾雋崴), מוסמכת בטאיוואן.**` (matches the house form used in 011/014/016/017). |
+| 16 | P2 | YES | 008 `ועל החברה לשלמם מעיקרא.` → `ועל החברה לשלמם מלכתחילה.` |
+| 17 | P2 | YES | 007 → `יש לקבל בהם ייעוץ ולערוך ניתוח בכל סמכות שיפוט נוגעת, ולבחון את אפשרות הביצוע`. |
+| 18 | P2 | YES | `guidanceContent.he.pages.faq.faqs[3].question` → `מה לעשות אם איני יכול או יכולה להשתמש באף אחת מארבע השפות?` (first person, matching the pack's own `עורכת דין או עורך דין` double-gender style rather than a slash). The pinned consultation question `האם אפשר לקבל ייעוץ בעברית?` and the `^לא\.` answer opening are untouched. |
+| 19 | P2 | YES | `guidanceTeamBios.he.tseng-junwei.intro[1]` → `… בסך TWD 1.57M (1.57 מיליון דולר טאיוואני חדש).` `TWD 1.57M` stays byte-identical, so the ACCEPTED-ROUND pin holds. |
+| 20 | P3 | YES ×2 | 001 and 004 → `הערה בעניין מדינה מסוימת — הסכם מס ההכנסה בין טאיוואן לקוריאה. …` (one colon removed, label no longer repeats the noun phrase). |
+| 21 | P3 | YES | 003 `29/05/2026` → `29/5/2026`, `01/07/2026` → `1/7/2026`. Checker still parses both dates (numbers PASS). The other `dd/mm` dates in the set are genuinely two-digit. |
+| 22 | P3 | YES ×3 | `אישור התושב` → `אישור התושבות` (001 ×1, 004 ×2). |
+| 23 | P3 | YES | 006 `עורך דין מטאיוואן (律師)` → `עורך דין בטאיוואן (律師)`. |
+| 24 | P3 | YES ×2 | 004 `אופן הזקיפה, מגבלת צבירת הטבות, ותקרת המס` → `אופן הזקיפה, מגבלת צבירת ההטבות ותקרת המס` (FAQ + body). |
+| 25 | P3 | YES | 002 → `החיסול שלאחר הפירוק אינו שמור למקרים שבהם רכוש החברה עולה על חובותיה.` |
+
+### he-b (columns 010–018)
+| row | sev | applied | what was written |
+|-----|-----|---------|------------------|
+| 1 | P1 | YES | 011 → `ולכן יש לבחון גם את הטענות הבודדות וגם את הפרסומת הסופית כפי שהופקה.` |
+| 2 | P2 | YES | covered by the he-a #4 sweep above (012 ×1, 013 ×2, 014 ×2, 017 ×5, 018 ×4 — 14 of the 13 places the reviewer listed, plus 018's `לכל אחד (1) מבעלי החלקים יש קול אחד (1)`). |
+| 3 | P2 | **NO — see §4** | U+200B lines in 013/015 are pinned by the checker. |
+| 4 | P2 | **NO — see §5** | 018 heading renumbering. |
+| 5 | P2 | YES ×5 | 012: `title` and H1 → `כיצד נקבעת האחריות בתאונת עקיפה בטאיוואן?`; image alt → `תמונה המסבירה את קביעת האחריות…`; heading → `## מה יש לבדוק בקביעת האחריות לתאונה`; closing disclaimer → `ועל קביעת האחריות לתאונה`. |
+| 6 | P2 | YES | 012 `הרכב הנתיבים` → `מבנה הנתיבים`. |
+| 7 | P2 | YES | 012 `אחר כך מדליק רכב העקיפה` → `אחר כך מדליק הרכב העוקף`. |
+| 8 | P2 | YES ×4 | 012 every `פנס הפנייה` → `מחוון הכיוון` (the gloss `(方向燈)` kept). `פנסי החזית` left as the reviewer asked. |
+| 9 | P2 | YES ×2 | 014 `אין תמיד מחזירים את הסכום המלא.` → `לא בהכרח. לא תמיד יש להחזיר את מלוא הסכום.` (FAQ frontmatter + §6 body, same paragraph, block count unchanged). |
+| 10 | P2 | YES | 016 → `ההחלטות בדבר ההגנה היומיומית ובדבר הנציגות החוקית בהעברת רכוש משמעותית עשויות לדרוש בחינה נפרדת.` |
+| 11 | P2 | YES | 010 → `בתיק זה שימשתי כבאת כוחו של התובע (訴訟代理人), הסטודנט מקוריאה.` |
+| 12 | P2 | YES | 010 → `להלן תרגום לעברית של כותרות דיווחי התקשורת, הפרסומים המקוונים וההסברים המשפטיים שעסקו בתיק זה.` |
+| 13 | P2 | YES | 010 → `בהודעה רשמית בכתב או במכתב מטעם עורכת דין` (+ the following sentence's `כתב כזה` → `מכתב כזה` so the anaphora still resolves). |
+| 14 | P2 | YES | 011 → `לפחות 5 שנים מן היום שלמחרת היום האחרון שבו סופק המוצר לשוק`. |
+| 15 | P2 | YES | 013 → `וכרטיס שהייה (外僑居留證); אין בכך, עם זאת, כדי להבטיח תוצאה.` (no-guarantee point preserved). |
+| 16 | P2 | YES | 013 `לזר אינו קל לשכור בית עסק` → `לא קל לזר לשכור בית עסק`. |
+| 17 | P2 | YES ×5 | 013 `מרחב מסחרי למשרדים` → `שטח מסחרי המיועד למשרדים` (5 occurrences; the reviewer counted 4 lines, one line carries two). |
+| 18 | P2 | YES ×2 | 016 `title` + H1 → `ירושה וסמכות הורית בטאיוואן: מדריך משפטי לבני המשפחה שנותרו`. |
+| 19 | P2 | YES | 018 `אז קל לשאול תחילה:` → `במצב כזה עולה תחילה השאלה:`. |
+| 20 | P2 | YES | 018 → `על המסמכים להבהיר מי חב כלפי הלקוח ובמה.` |
+| 21 | P2 | YES | 017 FAQ `״לוגיסטיקה״` → ordinary quotes. Because this string sits inside a double-quoted YAML scalar, the quotes are written escaped (`\"לוגיסטיקה\"`); the parsed value is exactly `"לוגיסטיקה"`, identical to the body. Writing them unescaped broke the frontmatter parser (`can not read an implicit mapping pair`) — caught and fixed before the final run. |
+| 22 | P3 | YES | 015 `נדל"ן` → `נדל״ן`. |
+| 23 | P3 | YES ×2 | 014 `…וההכשרה שחובה לקיים לפי דין אינה יכולה לשמש יסוד` → `…אינן יכולות לשמש יסוד` (FAQ + body). |
+| 24 | P3 | YES | 016 → `גם על תכנון המשתמש בנאמנות או בביטוח אין להניח שהוא בטוח על יסוד תוכן החוזה בלבד.` |
+| 25 | P3 | YES | 013 `"**תקופת עיצוב פנים**" (裝潢期間)` → `"**תקופת התארגנות (שיפוצים)**" (裝潢期間)`. |
+| 26 | P3 | YES ×9 | `חלק מעמיק` → `מדריך מתקדם` in 013 (title, H1, the cross-reference sentence), 015 (title, H1) **and 005** (title, H1, plus the two cross-reference labels on 005's intro line, one of which is the link label pointing at 013) — the reviewer named 013/015 only, but 005 carries the identical phrase and 005's intro links to 013 by title, so leaving it would have desynchronised the label from the target page's title. |
+| 27 | P3 | YES ×2 | 017 `連江・馬祖` → `連江、馬祖` (FAQ frontmatter + §2). |
+
+### Extra systemic sweep (he-b verdict pattern "assess/determine written with the root שפט")
+The verdict names 012 / 014 §7 / 016 §5; per the WO ("sweep every file for every instance") the same misuse was fixed in 11 places:
+003 ×6 (`תחולתו נקבעת`, Q4 heading `כיצד נקבעות האחריות…`, `ההיקף … נקבע רק בגבולות`, Q13 heading `כיצד נקבע הפיצוי…`, `הפיצוי … נקבע בסכום הולם`, `האחריות הפלילית … נקבעת לפי הפרת חובת הזהירות`), 004 ×1 (`היקף האחריות … נקבע לפי צורת החברה`), 011 ×1 (heading `### הערכה לפי הביטוי השלם…`), 014 ×1 (`קביעת סיבת הסיום משפיעה…`), 017 ×2 (`ההערכה נבדלת לפי אם…`). Genuine judicial uses were left alone: `שיפוט בית המשפט` (010), `הליך שיפוט`/`המינוי השיפוטי` (016), `היואן השיפוטי` (003/016), `סמכות שיפוט` (007).
+
+### R5 chrome check (rulebook)
+No action needed — `guidanceTeamCopy.he.label = 'הצוות שלנו'`, `guidanceOfficeCopy.he.label = 'משרדים'`, `fullProfileLabel = 'פרופיל מלא (באנגלית)'`, no `Q&A` anywhere in the he pack or the he columns.
+
+## 2. Files touched
+src/content/columns-he/001,002,003,004,005,006,007,008,010,011,012,013,014,015,016,017,018 (009 had no row and no systemic hit),
+src/data/international-guidance-eastern.ts (`guidanceContent.he` FAQ question),
+src/data/international-guidance-team.ts (`guidanceTeamBios.he` bio gloss).
+src/lib/llms-txt.ts and src/data/international-inquiry-copy.ts were read but needed no change; no test file needed an update (no pinned Hebrew string was altered — all 3202 tests pass unmodified).
+
+## 3. Rows skipped, with reason
+
+* **he-a #11 (Q16–Q20 as `##` headings)** — `checkHeadings` compares the target's heading-level array against the Korean source. `src/content/columns/003-…md` has no heading after Q15 either, so promoting Q16–Q20 would add five `##` levels the source does not have and fail the `headings` check. Needs the same change in the source column, i.e. a supervisor/attorney decision, not a he-only fix.
+* **he-a #11 (U+200B lines) and he-b #3 (U+200B in 013/015)** — `checkBlocks` compares both `nonEmptyBlocks` and an exact `countZwsp(source) === countZwsp(target)`. Measured: the Korean source columns carry exactly the same 87 ZWSP characters as the Hebrew ones (003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3), so deleting them fails the gate twice over (`blocks n → n-k`, `ZWSP 52 → 0`). Same for the `**​**` empty bold lines in 005 — they are byte-identical to the source's. This is a source-column cleanup, not a Hebrew one.
+* **he-b #4 (018 `## 7.` → `## 6.`)** — the reviewer says the English source has the same skip "so it must be fixed in both". `checkNumbers` compares the source/target number multiset, so renumbering only the Hebrew heading produces `missing 7 / extra 6` and fails. ACCEPTED-ROUND also bars changing numbers unilaterally. Left for the supervisor to fix in ko/en/he together.
+* **he-a #4 / he-b #2, the "delete the digit entirely" half** — measured file by file (see §4): in 001/002/003/005/008/012/013/014/017/018 the `1` is present in the Korean source (`1년`, `1개월`, `1회`, `1대`, `1인 이상`, `1차`), and a plain spell-out fails `numbers` with `missing from translation: 1×N` (10 of 18 files went FAIL in the experiment). Per the WO ("prefer the form the checker accepts and note it in the log") the numeral word is written in full and the digit is kept as a parenthetical `(1)`. Only 007, where the Korean writes the counts as words, could be spelled out with no digit at all — and it was.
+
+## 4. Measurements behind those skips (sandbox runs, since discarded)
+```
+# plain spell-out of every bare 1 (no parenthetical digit), whole dir:
+FAIL 001  numbers FAIL  missing from translation (10): 1×10
+FAIL 002  numbers FAIL  missing from translation (7): 1×7
+FAIL 003  numbers FAIL  missing from translation (2): 1×2
+FAIL 005  numbers FAIL  missing from translation (1): 1
+FAIL 008  numbers FAIL  missing from translation (7): 1×7
+FAIL 012  numbers FAIL  missing from translation (1): 1
+FAIL 013  numbers FAIL  missing from translation (2): 1×2
+FAIL 014  numbers FAIL  missing from translation (2): 1×2
+FAIL 017  numbers FAIL  missing from translation (5): 1×5
+FAIL 018  numbers FAIL  missing from translation (6): 1×5, 2
+summary  FAIL  8/18 files
+# same edit written as "<word> אחת/אחד (1)":
+numbers        PASS   sourceCount=44 targetCount=44   (008)
+# 007 spelled out with no digit at all:
+numbers        WARN   extra in translation (2): 2023×2   -> summary PASS 1/1
+# ZWSP parity (chars, not lines):
+src/content/columns     total 87 {003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3}
+src/content/columns-he  total 87 {003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3}
+```
+
+## 5. Where I believe the reviewer is wrong (not applied)
+
+1. **he-a #9 (003, sentencing).** The reviewer asks to restore "בתי המשפט גוזרים כיום בדרך כלל … מאסר של כ-3 חודשים". RULEBOOK-FIX R3 prescribes the *opposite* rewrite verbatim for this exact sentence: *003 "courts currently impose about 3 months" → "in some judgments about 3 months has been imposed; there is no typical or guaranteed outcome"*. The present Hebrew (`בחלק מפסקי הדין נגזר … כ-3 חודשים; אין עונש טיפוסי ואין תוצאה מובטחת`) is the R3 form, and ACCEPTED-ROUND forbids making a result sentence more positive. The same applies to the 4-month / 6-month sentence below it. The reviewer appears to have compared against the English original, which R3 has not been applied to (it is listed under "Decisions for the user (not applied)").
+2. **he-a #10, first half (008, "B received a substantial severance payment").** Same reason: R3 prescribes *"with legal representation was able to establish the entitlement under the law"* for this anecdote, which is exactly the current Hebrew. Only the second half of the row — the Hebrew's invented `לא שמרו ראיות דומות` — was a real defect and was fixed.
+3. **he-b #4 (018 heading numbering)** is correctly observed but is a defect of the Korean/English sources, not of the Hebrew; fixing it in he alone would break the number gate and desynchronise he from the other 44 locales.
+4. **he-a #19 wording note.** The row is applied, but note the gloss had to be added *after* `TWD 1.57M` rather than replacing it: ACCEPTED-ROUND pins that token byte-identical.
+
+## 6. Verify output (verbatim)
+
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-he --lang he 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-he src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      22
+```
+
+`git status --short` detail (nothing staged, nothing committed):
+```
+ M docs/i18n/global-plan/WO-F-he.txt          <- pre-existing, not touched by this lane
+ M src/content/columns-he/001 … 018 (17 files, 009 unchanged)
+ M src/data/international-guidance-eastern.ts
+ M src/data/international-guidance-team.ts
+?? docs/i18n/global-plan/reviews/native/rounds/r5/he-a.md
+?? docs/i18n/global-plan/reviews/native/rounds/r5/he-b.md
+```
+(this log file adds one more untracked path once written.)
+
+## 7. Pass criteria
+checker `summary PASS 18/18` — met · markers 0 — met · TSC_OK — met · tests 3202 passed / 0 failed — met.

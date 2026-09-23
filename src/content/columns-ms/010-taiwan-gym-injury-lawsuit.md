@@ -1,5 +1,5 @@
 ---
-title: "Ganti rugi bagi kecederaan di pusat kecergasan di Taiwan: kes mahkamah peringkat pertama (一審), tempoh, bukti dan pos pampasan"
+title: "Ganti rugi bagi kecederaan di pusat kecergasan di Taiwan: kes mahkamah peringkat pertama (一審), tempoh, bukti dan jenis pampasan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "13 September 2025"
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
-# Ganti rugi bagi kecederaan di pusat kecergasan di Taiwan: kes mahkamah peringkat pertama (一審), tempoh, bukti dan pos pampasan
+# Ganti rugi bagi kecederaan di pusat kecergasan di Taiwan: kes mahkamah peringkat pertama (一審), tempoh, bukti dan jenis pampasan
 
 ![Imej utama](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Bermula daripada kes pelajar universiti Korea yang cedera semasa menerima arahan jurulatih (教練) di pusat kecergasan (健身房) di Taiwan, teks ini menjelaskan prosedur undang-undang yang boleh diteliti selepas kecederaan di pusat kecergasan, tempoh tuntutan, kaedah pemeliharaan bukti (保全證據) dan pos pampasan (損害賠償).
+Bermula daripada kes pelajar universiti Korea yang cedera semasa menerima arahan jurulatih (教練) di pusat kecergasan (健身房) di Taiwan, teks ini menjelaskan prosedur undang-undang yang boleh diteliti selepas kecederaan di pusat kecergasan, tempoh tuntutan, kaedah pemeliharaan bukti (保全證據) dan jenis pampasan (損害賠償).
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
@@ -61,7 +61,7 @@ Tajuk maklumat akhbar, terbitan dalam talian dan ulasan undang-undang berkaitan 
 
 **Adakah pelajar universiti lelaki Korea mengalami pecah cakera intervertebra semasa melakukan angkat mati 90 kg dalam latihan peribadi?**
 
-Kepentingan praktikal kes ini ialah ia menunjukkan bahawa tanggungjawab tidak ditentukan serta-merta oleh semata-mata hakikat bahawa kecederaan berlaku di pusat kecergasan. Kandungan kewajipan keselamatan (安全義務) yang membebankan penyedia, perbuatan arahan konkret dan pelanggaran kewajipan kewaspadaan (注意義務), kaitan sebab antara kecederaan dan kelakuan, serta skop kerugian dinilai daripada dokumen setiap kes. Syarat dan tempoh tatacara jenayah serta tatacara sivil juga berbeza, jadi rekod hendaklah disusun secara berasingan sejak selepas kemalangan.
+Kepentingan praktikal kes ini ialah ia menunjukkan bahawa tanggungjawab tidak ditentukan serta-merta oleh semata-mata hakikat bahawa kecederaan berlaku di pusat kecergasan. Kandungan kewajipan keselamatan (安全義務) yang membebankan penyedia, arahan khusus yang diberikan dan apa-apa pelanggaran kewajipan kewaspadaan (注意義務), kaitan sebab antara kecederaan dan kelakuan, serta skop kerugian dinilai daripada dokumen setiap kes. Syarat dan tempoh tatacara jenayah serta tatacara sivil juga berbeza, jadi rekod hendaklah disusun secara berasingan sejak selepas kemalangan.
 
 Berikut ialah maklumat umum untuk menjelaskan pertikaian kecederaan di pusat kecergasan di Taiwan; ini bukan nasihat undang-undang untuk kes konkret. Hak sebenar dan cara tindakan boleh berbeza menurut hubungan kontrak, keadaan kemalangan, sebab dan darjah kecederaan, kelakuan pihak, syarat polisi, bukti yang dipelihara dan undang-undang yang terpakai.
 
@@ -89,9 +89,9 @@ Imej boleh ditindih pada tamatnya tempoh pemeliharaan atau menjadi tidak boleh d
 
 Jika keadaan kemalangan boleh memenuhi unsur kesalahan, laporan boleh dibuat dengan pantas agar pihak berkuasa penyiasatan (偵查機關) menilai sama ada wujud asas yang sah untuk mendapatkan atau memelihara rakaman. Melapor tidak bermakna bahawa polis atau pendakwa akan merampas CCTV dengan semestinya, sehingga perlu juga mengumpulkan dokumen yang pihak boleh pelihara sendiri, seperti dokumen perubatan dan komunikasi.
 
-## 4. Pos kerugian apa yang boleh dituntut daripada pusat kecergasan?
+## 4. Jenis kerugian apa yang boleh dituntut daripada pusat kecergasan?
 
-Pos kerugian yang boleh diteliti tuntutannya adalah seperti berikut. Pengiktirafan sebenar dan jumlah bergantung pada keperluan setiap belanja, kaitan sebab dengan kemalangan, dokumen sokongan, nisbah tanggungjawab dan penilaian mahkamah.
+Jenis kerugian yang boleh diteliti tuntutannya adalah seperti berikut. Pengiktirafan sebenar dan jumlah bergantung pada keperluan setiap belanja, kaitan sebab dengan kemalangan, dokumen sokongan, nisbah tanggungjawab dan penilaian mahkamah.
 
 1. **Kos perubatan**: Kos yang benar-benar dibayar untuk konsultasi, pemeriksaan, rawatan, ubat dan pemulihan dibuktikan dengan resit dan rekod perubatan.
 2. **Kos jagaan atau bantuan**: Jika, memandangkan darjah kecederaan dan perkembangan rawatan, jagaan diperlukan, dan jika tempoh dan kos memadai, ini diteliti dengan dokumen perubatan dan belanja.
@@ -99,17 +99,17 @@ Pos kerugian yang boleh diteliti tuntutannya adalah seperti berikut. Pengiktiraf
 4. **Kerugian kerana kehilangan keupayaan kerja (勞動能力減損)**: Jika kemerosotan kekal dan pengurangan berterusan keupayaan kerja diakui, boleh dinilai secara bersama dengan dokumen perubatan dan profesional, darjah ketidakupayaan, profesion dan pendapatan, serta tempoh kerja yang tinggal. Peratusan ketidakupayaan semata-mata tidak menetapkan pampasan, dan kerugian tidak dikira secara automatik sehingga saat persaraan.
 5. **Kehilangan pendapatan semasa tempoh pemulihan (收入損失)**: Tempoh apabila seseorang benar-benar tidak dapat bekerja kerana rawatan atau rehat, dan pengurangan pendapatan yang terhasil, mesti dibuktikan dengan dokumen gaji, cukai, kehadiran kerja, dll.
 6. **Ganti rugi bukan berbentuk wang (非財產上損害)**: Jumlah bagi penderitaan mental ditetapkan mahkamah daripada faktor setiap kes, seperti darjah kecederaan, tempoh rawatan, kemerosotan kekal dan keadaan konkret pihak.
-7. **Ganti rugi punitif (懲罰性賠償金)**: Terdapat peruntukan yang, dalam pertikaian yang tertakluk kepada undang-undang perlindungan pengguna, membenarkan tuntutan sehingga 5 kali kerugian sebenar jika kerugian disebabkan niat jahat syarikat; jika kerana kecuaian berat, sehingga 3 kali; dan jika kerana kecuaian, sehingga 1 kali jumlah kerugian sebenar. Jika [perkara 51 undang-undang perlindungan pengguna Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) terpakai kepada kes dan jika terdapat pampasan sebenar dan bagi jumlah apa, ini bergantung pada penilaian mahkamah mengenai syarat konkret dan bukti.
+7. **Ganti rugi punitif (懲罰性賠償金)**: Terdapat peruntukan yang, dalam pertikaian yang tertakluk kepada undang-undang perlindungan pengguna, membenarkan tuntutan sehingga 5 kali kerugian sebenar jika kerugian disebabkan perbuatan sengaja syarikat; jika kerana kecuaian berat, sehingga 3 kali; dan jika kerana kecuaian, sehingga 1 kali jumlah kerugian sebenar. Jika [perkara 51 undang-undang perlindungan pengguna Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) terpakai kepada kes dan jika terdapat pampasan sebenar dan bagi jumlah apa, ini bergantung pada penilaian mahkamah mengenai syarat konkret dan bukti.
 
 ## 5. Walaupun pusat kecergasan mempunyai insurans tanggungjawab (責任保險), bolehkah pampasan dan jumlahnya masih dipertikaikan?
 
-Ya. Hakikat bahawa wujud insurans boleh relevan sebagai sumber dana pampasan, tetapi dengan sendirinya ia tidak mengakui tanggungjawab undang-undang pusat kecergasan atau jurulatih mahupun menetapkan jumlah yang perlu dibayar. Kontroversi boleh lahir antara penanggung insurans (保險人) dan pihak mengenai had liputan dan klausa pengecualian, kaitan sebab antara kemalangan dan kecederaan, serta keperluan dan jumlah setiap pos kerugian.
+Ya. Hakikat bahawa wujud insurans boleh relevan sebagai sumber dana pampasan, tetapi dengan sendirinya ia tidak mengakui tanggungjawab undang-undang pusat kecergasan atau jurulatih mahupun menetapkan jumlah yang perlu dibayar. Pertikaian boleh timbul antara penanggung insurans (保險人) dan pihak-pihak mengenai had liputan dan klausa pengecualian, kaitan sebab antara kemalangan dan kecederaan, serta keperluan dan jumlah setiap jenis kerugian.
 
 Khususnya, kehilangan keupayaan kerja, pengurangan pendapatan semasa tempoh pemulihan dan ganti rugi bukan berbentuk wang boleh memerlukan dokumen perubatan, bukti pendapatan dan profesion, atau pendapat pakar. Jumlah yang dicadangkan penanggung insurans atau yang dituntut mangsa tidak serta-merta menjadi jumlah yang diakui oleh mahkamah, dan hasil penilaian ketidakupayaan juga tidak menentukan secara automatik pampasan. Dalam tindakan sebenar, perlu disahkan bersama polisi dan syarat, kandungan pemberitahuan kemalangan, jawapan penanggung insurans, perkembangan rawatan dan dokumen kerugian.
 
 Jika anda mengalami kecederaan di pusat kecergasan, yang penting ialah menerima dahulu jagaan perubatan yang diperlukan, memelihara bahan yang masih ada sebelum ia hilang, dan mendapatkan seawal mungkin panduan individu mengenai tempoh dan prosedur yang boleh terpakai kepada kes. Rundingan, aduan pengguna (消費申訴) atau mediasi (調解), aduan jenayah dan tuntutan sivil ganti rugi ialah semua cara yang boleh dipilih menurut kes, dan bukan prosedur yang sentiasa mesti diikuti sepenuhnya.
 
-Jatuh di lantai premis, kerugian kesihatan kerana makanan dan kecederaan yang berlaku semasa menggunakan perkhidmatan profesional juga boleh sama-sama menimbulkan isu kewajipan keselamatan, kaitan sebab, kerugian dan bukti. Namun, kesimpulan kes pusat kecergasan tidak boleh diterapkan begitu sahaja kepada kemalangan lain, sehingga kontrak, kelakuan dan norma yang terpakai setiap kes mesti diteliti secara berasingan.
+Kemalangan jatuh di premis perniagaan, kemudaratan kesihatan kerana makanan dan kecederaan yang berlaku semasa menggunakan perkhidmatan profesional juga boleh sama-sama menimbulkan isu kewajipan keselamatan, kaitan sebab, kerugian dan bukti. Namun, kesimpulan kes pusat kecergasan tidak boleh diterapkan begitu sahaja kepada kemalangan lain, sehingga kontrak, kelakuan dan norma yang terpakai setiap kes mesti diteliti secara berasingan.
 
 ---
 

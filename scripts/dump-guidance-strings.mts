@@ -7,8 +7,8 @@ import { guidanceOfficeCopy, guidanceFooterCopy } from '../src/data/internationa
 import { internationalInquiryCopy } from '../src/data/international-inquiry-copy';
 import { guidanceAnswers } from '../src/data/international-guidance-answers';
 import { GUIDANCE_LLMS_NOTICES } from '../src/lib/llms-txt';
-const srcs: Record<string, any> = { guidanceContent, guidanceTeamCopy, guidanceTeamBios, guidanceLanguageNames, guidancePracticeAreaNames, guidanceOfficeCopy, guidanceFooterCopy, internationalInquiryCopy, guidanceAnswers, GUIDANCE_LLMS_NOTICES };
-const walk = (v: any, p: string, out: [string, string][]) => { if (typeof v === 'string') out.push([p, v]); else if (Array.isArray(v)) v.forEach((x, i) => walk(x, `${p}[${i}]`, out)); else if (v && typeof v === 'object') Object.entries(v).forEach(([k, x]) => walk(x, `${p}.${k}`, out)); };
+const srcs: Record<string, Record<string, unknown>> = { guidanceContent, guidanceTeamCopy, guidanceTeamBios, guidanceLanguageNames, guidancePracticeAreaNames, guidanceOfficeCopy, guidanceFooterCopy, internationalInquiryCopy, guidanceAnswers, GUIDANCE_LLMS_NOTICES };
+const walk = (v: unknown, p: string, out: [string, string][]) => { if (typeof v === 'string') out.push([p, v]); else if (Array.isArray(v)) v.forEach((x, i) => walk(x, `${p}[${i}]`, out)); else if (v && typeof v === 'object') Object.entries(v).forEach(([k, x]) => walk(x, `${p}.${k}`, out)); };
 const today = new Date().toISOString().slice(0, 10);
 for (const loc of process.argv[2].split(',')) {
   const out: [string, string][] = [];

@@ -9,9 +9,9 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tajvanon kap-e végkielégítést a munkavállaló, ha maga mond fel?"
-    a: "Nem. Egyes más jogrendszerektől — például Koreától — eltérően Tajvanon a végkielégítés (資遣費) fizetésének kötelezettsége csak akkor keletkezik, ha a társaság bocsátja el a foglalkoztatott személyt; ha a foglalkoztatott személy maga mond fel, a társaságnak nem kell végkielégítést fizetnie."
+    a: "Nem. Egyes más jogrendszerektől – például Koreától – eltérően Tajvanon a végkielégítés (資遣費) fizetésének kötelezettsége csak akkor keletkezik, ha a társaság bocsátja el a munkavállalót; ha a munkavállaló maga mond fel, a társaságnak nem kell végkielégítést fizetnie."
   - q: "Fegyelmi felmondáskor is kell a társaságnak végkielégítést fizetnie?"
-    a: "Nem. Ha a foglalkoztatott személy jogellenes cselekményt követ el, megsérti a belső szabályzatot, vagy indokolt ok nélkül 3 napon át egymás után hiányzik (a munkaügyi törvény 12. cikke, 勞動基準法第12條), a társaság előzetes felmondás nélkül elbocsáthat, és nem kell végkielégítést fizetnie. Ezzel szemben a gazdasági felmondás (11. cikk) előzetes felmondást és végkielégítés kifizetését igényli."
+    a: "Nem. Ha a munkavállaló jogellenes cselekményt követ el, megsérti a belső szabályzatot, vagy indokolt ok nélkül 3 napon át egymás után hiányzik (a munkaügyi törvény 12. cikke, 勞動基準法第12條), a társaság előzetes felmondás nélkül elbocsáthat, és nem kell végkielégítést fizetnie. Ezzel szemben a gazdasági felmondás (11. cikk) előzetes felmondást és végkielégítés kifizetését igényli."
   - q: "Hogyan számítják a tajvani végkielégítést?"
     a: "1 betöltött szolgálati évenként a munkáltató 0,5 havi átlagbért köteles végkielégítésként fizetni, legfeljebb 6 havi bérig. Ez a képlet arra a szolgálati időre vonatkozik, amelyre a munkavállalói nyugdíjról szóló törvény (勞工退休金條例) 12. cikke alkalmazandó; arra a szolgálati időre, amelyre a munkaügyi törvény (勞動基準法) 17. cikke alkalmazandó, 1 év szolgálati időnként 1 havi átlagbért fizetnek, felső határ nélkül."
 ---
@@ -28,17 +28,17 @@ A cikk a tajvani végkielégítést (資遣費) ismerteti.
 
 A végkielégítés szabálya jogrendszerenként eltér.
 
-Egyes jogrendszerekben — például Koreában — a társaság végkielégítést köteles fizetni, amikor a munkavállaló elhagyja a vállalkozást.
+Egyes jogrendszerekben – például Koreában – a társaság végkielégítést köteles fizetni, amikor a munkavállaló elhagyja a vállalkozást.
 
 Tajvanon ez másként van.
 
-A végkielégítés fizetésének kötelezettsége csak akkor keletkezik, ha a társaság bocsátja el a foglalkoztatott személyt.
+A végkielégítés fizetésének kötelezettsége csak akkor keletkezik, ha a társaság bocsátja el a munkavállalót.
 
-Ha a foglalkoztatott személy maga mond fel, a társaságnak nem kell végkielégítést fizetnie.
+Ha a munkavállaló maga mond fel, a társaságnak nem kell végkielégítést fizetnie.
 
 ​
 
-Ha a foglalkoztatott személy azonban jogellenes cselekményt követ el,
+Ha a munkavállaló azonban jogellenes cselekményt követ el,
 
 **megsérti a belső szabályzatot (工作規則),**
 
@@ -52,20 +52,20 @@ Az alábbi táblázat foglalja össze.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Fajta** | **Gazdasági felmondás (資遣員工, 經濟解僱)** | **Fegyelmi felmondás (解僱員工, 懲戒解僱)** | **A foglalkoztatott személy saját felmondása**  **員工自請離職** |
-| Jelentés | Ha a munkáltatónál a vállalkozás helyzete miatt személyzeti kiigazításra van szükség, az ok a munkáltató gazdasági körében van, nem a foglalkoztatott személy felelősségében. Ezért a munkáltatónak be kell tartania a felmondási időt (預告期間), és végkielégítést kell fizetnie, hogy kiegyenlítse a foglalkoztatott személy hátrányait. | Ha a foglalkoztatott személy jogellenes vagy helytelen cselekményt követ el, a munkáltató előzetes felmondás nélkül azonnal befejezheti a munkaszerződést (勞動契約), és nem kell végkielégítést fizetnie. Ez a munkáltató fegyelmi jogosítványainak egyike. | A foglalkoztatott személy bármikor befejezheti a szerződést, de a foglalkoztatás ideje szerint be kell tartania a felmondási időt, hogy a munkáltató átadást és helyettes keresést végezhessen. |
+| **Fajta** | **Gazdasági felmondás (資遣員工, 經濟解僱)** | **Fegyelmi felmondás (解僱員工, 懲戒解僱)** | **A munkavállaló saját felmondása**  **員工自請離職** |
+| Jelentés | Ha a munkáltatónál a vállalkozás helyzete miatt személyzeti kiigazításra van szükség, az ok a munkáltató gazdasági körében van, nem a munkavállaló felelősségében. Ezért a munkáltatónak be kell tartania a felmondási időt (預告期間), és végkielégítést kell fizetnie, hogy kiegyenlítse a munkavállaló hátrányait. | Ha a munkavállaló jogellenes vagy helytelen cselekményt követ el, a munkáltató előzetes felmondás nélkül, azonnali hatállyal megszüntetheti a munkaszerződést (勞動契約), és nem kell végkielégítést fizetnie. Ez a munkáltató fegyelmi jogosítványainak egyike. | A munkavállaló bármikor megszüntetheti a szerződést, de a foglalkoztatás ideje szerint be kell tartania a felmondási időt, hogy a munkáltató el tudja végezni az átadás-átvételt, és pótlást találjon. |
 | Feltételek | Van  (a tajvani munkaügyi törvény 11. cikke) | Van  (a tajvani munkaügyi törvény 12. cikke) | Nincs |
 | Előzetes felmondás | Szükséges | Nem szükséges | Szükséges |
 | Nehézség | könnyű | nehéz | könnyű |
 | Kell-e a társaságnak végkielégítést (資遣費) fizetnie | Szükséges | Nem szükséges | Nem szükséges |
-|  | Tajvani munkaügyi törvény, 11. cikk (勞動基準法第11條): Hacsak a következő esetek egyike nem következik be, a munkáltató még a foglalkoztatott személy előzetes értesítése után sem fejezheti be a munkaszerződést.  1. A tevékenység megszüntetése (歇業) vagy a vállalkozás átruházása (轉讓)  2. Veszteség (虧損) vagy a tevékenység szűkítése (業務緊縮)  3. Vis maior 1 hónapig vagy hosszabb ideig tartó működési szünetet igényel  4. A tevékenység jellege létszámcsökkentést igényel, és az elbocsátott személy más megfelelő munkakörbe nem helyezhető  5. Meghatározott foglalkoztatott személy a munkakör által követelt munkát kielégítően nem tudja elvégezni | Tajvani munkaügyi törvény, 12. cikk (勞動基準法第12條): A munkáltató előzetes értesítés nélkül elbocsáthat, ha a foglalkoztatott személynél a következő esetek valamelyike fennáll.  1. Aki a munkaszerződés megkötésekor valótlan nyilatkozatot tesz, a munkáltatót tévedésbe viszi, és a vállalkozást kár kockázatának teszi ki  2. Aki erőszakot alkalmaz, vagy súlyosan sérti a munkáltatót, családját, képviselőjét (代理人) vagy más munkatársakat  3. Akinek jogerősen határozott idejű szabadságvesztést (有期徒刑) vagy súlyosabb büntetést szabtak ki, a büntetés végrehajtásának felfüggesztése (緩刑) nélkül, és pénzbüntetésre váltást (易科罰金) sem engedélyeztek  4. A munkaszerződés vagy a munkaszabályzat súlyos megsértése  5. Aki szándékosan rongálja vagy elhasználja a munkáltató gépeit, szerszámait, nyersanyagait, termékeit vagy egyéb javait, vagy szándékosan felfedi a munkáltató műszaki és kereskedelmi titkait, és kárt okoz a munkáltatónak  6. Indokolt ok nélküli hiányzás (曠工) 3 napon át egymás után, vagy egy hónapban 6 napon vagy annál több napon |  |
+|  | Tajvani munkaügyi törvény, 11. cikk (勞動基準法第11條): Hacsak a következő esetek egyike nem következik be, a munkáltató még a munkavállaló előzetes értesítése után sem szüntetheti meg a munkaszerződést.  1. A tevékenység megszüntetése (歇業) vagy a vállalkozás átruházása (轉讓)  2. Veszteség (虧損) vagy a tevékenység szűkítése (業務緊縮)  3. Vis maior 1 hónapig vagy hosszabb ideig tartó működési szünetet igényel  4. A tevékenység jellege létszámcsökkentést igényel, és az elbocsátott személy más megfelelő munkakörbe nem helyezhető  5. Meghatározott munkavállaló a munkakör által követelt munkát kielégítően nem tudja elvégezni | Tajvani munkaügyi törvény, 12. cikk (勞動基準法第12條): A munkáltató előzetes értesítés nélkül elbocsáthat, ha a munkavállalónál a következő esetek valamelyike fennáll.  1. Aki a munkaszerződés megkötésekor valótlan nyilatkozatot tesz, a munkáltatót tévedésbe viszi, és a vállalkozást kár kockázatának teszi ki  2. Aki erőszakot alkalmaz, vagy súlyosan sérti a munkáltatót, családját, képviselőjét (代理人) vagy más munkatársakat  3. Akinek jogerősen határozott idejű szabadságvesztést (有期徒刑) vagy súlyosabb büntetést szabtak ki, a büntetés végrehajtásának felfüggesztése (緩刑) nélkül, és pénzbüntetésre váltást (易科罰金) sem engedélyeztek  4. A munkaszerződés vagy a munkaszabályzat súlyos megsértése  5. Aki szándékosan rongálja vagy elhasználja a munkáltató gépeit, szerszámait, nyersanyagait, termékeit vagy egyéb javait, vagy szándékosan felfedi a munkáltató műszaki és kereskedelmi titkait, és kárt okoz a munkáltatónak  6. Indokolt ok nélküli hiányzás (曠工) 3 napon át egymás után, vagy egy hónapban 6 napon vagy annál több napon |  |
 
 > Tajvanon, 1 betöltött év szolgálati idő (年資) után
 > a munkáltató 0,5 havi átlagbért (平均工資) köteles végkielégítésként fizetni, legfeljebb 6 havi bérig. Ez a képlet arra a szolgálati időre vonatkozik, amelyre a munkavállalói nyugdíjról szóló törvény (勞工退休金條例) 12. cikke alkalmazandó; arra a szolgálati időre, amelyre a munkaügyi törvény (勞動基準法) 17. cikke alkalmazandó, 1 év szolgálati időnként 1 havi átlagbért fizetnek, felső határ nélkül.
 
 ​
 
-Ha a foglalkoztatott személy bére magas, és bizonyos szolgálati időt elértek,
+Ha a munkavállaló bére magas, és bizonyos szolgálati időt elértek,
 
 a végkielégítés is viszonylag magasabb.
 
@@ -83,7 +83,7 @@ A munkavállalóknak óvatosnak kell lenniük,
 
 Az alábbiakban egy ügy szerepel, amelyben az iroda eljárt.
 
-Létezik az A társaság, ismert, fiókokkal egész Tajvanon.
+Vegyük A társaságot: ismert cég, Tajvan-szerte fiókhálózattal.
 
 Valamilyen okból a vezetés megváltozott,
 
@@ -91,7 +91,7 @@ Valamilyen okból a vezetés megváltozott,
 
 a személyzeti költségek csökkentése érdekében,
 
-egymás után hívta beszélgetésre a jól fizetett és régi munkavállalókat
+egymás után hívta beszélgetésre a jól fizetett, régi munkavállalókat.
 
 Az iroda egyik ügyében B úr több mint 10 éve dolgozott az A társaságnál
 
@@ -103,7 +103,7 @@ a társaság B urat vette célba.
 
 ​
 
-Egy napon a vezető állomány B-t beszélgetésre hívta
+Egy napon a vezető beszélgetésre hívta B-t,
 
 és hirtelen korholni kezdte, mondván, hogy B nem dolgozik lelkiismeretesen.
 
@@ -137,7 +137,7 @@ ezért erősen elutasította ezt az észszerűtlen követelést.
 
 B megtagadta ennek leírását,
 
-és végül a társaság állománya haragjában távozásra utasította.
+és végül a vezető dühében felszólította, hogy távozzon.
 
 B sérelem és szomorúság érzésével hagyta el
 
@@ -153,7 +153,7 @@ sok vezető munkavállaló bérét csökkentette,
 
 és a munkavállalók egy része nem viselte el ezt a bánásmódot,
 
-és maga mondott fel
+és maga mondott fel.
 
 ​
 
@@ -201,7 +201,7 @@ vagy a munkavállalókat különös munkakörbe helyezi,
 
 **a belső szabályzatot, a munkatársakkal és a felettesekkel folytatott e-mail-levelezést**
 
-**valamint a felettesekkel folytatott beszélgetések felvételeit —**
+**valamint a felettesekkel folytatott beszélgetések felvételeit –**
 
 **Őrizze meg a saját maga számára kedvező bizonyítékokat.**
 
@@ -217,7 +217,7 @@ Ne kössön könnyen egyezséget a társasággal,
 
 és ne késztesse saját felmondásra.
 
-A végkielégítés a foglalkoztatott személy törvényes joga,
+A végkielégítés a munkavállaló törvényes joga,
 
 és a társaságnak a törvényi feltételek teljesülése esetén kell fizetnie.
 

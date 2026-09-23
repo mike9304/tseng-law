@@ -3716,11 +3716,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'ရုံးသည် ထိုင်ဝမ်တွင် ကုမ္ပဏီနှင့် ပုဂ္ဂိုလ်ရေးကိစ္စများကို အင်္ဂလိပ်၊ ဂျပန်၊ ကိုရီးယားနှင့် တရုတ်ဘာသာဖြင့် ဆောင်ရွက်သည်။',
-        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး၊ ထိုကျောင်းသားအတွက် ပထမအဆင့်တရားရုံးက လျော်ကြေး 1.57 သန်း ထိုင်ဝမ်ဒေါ်လာအသစ် (TWD 1.57M) ပေးရန် စီရင်ချက် ရယူခဲ့သည်။',
+        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး၊ ထိုကျောင်းသားအတွက် ပထမအဆင့်တရားရုံးက လျော်ကြေးအဖြစ် ထိုင်ဝမ်ဒေါ်လာအသစ် 1.57 သန်း (TWD 1.57M) ပေးရန် စီရင်ချက် ရယူခဲ့သည်။',
       ],
       education: [
         'မဟာသိပ္ပံဘွဲ့ (M.S.), Institute of Finance, National Taiwan University',
-        'ဘွဲ့ (B.A.) ဥပဒေနှင့် ဘဏ္ဍာရေး နှစ်ဘာသာတွဲ, National Chengchi University',
+        'ဝိဇ္ဇာဘွဲ့ (B.A.) ဥပဒေနှင့် ဘဏ္ဍာရေး နှစ်ဘာသာတွဲ, National Chengchi University',
         'Kobe University နှင့် Waseda University တွင် ဖလှယ်ကျောင်းသူ',
       ],
       experience: [
@@ -3766,7 +3766,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'မဟာဝိဇ္ဇာဘွဲ့ (M.A.) စာရင်းကိုင်, National Chengchi University',
-        'ဘွဲ့ (B.A.) စာရင်းကိုင်, National Chengchi University',
+        'ဝိဇ္ဇာဘွဲ့ (B.A.) စာရင်းကိုင်, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

@@ -1,0 +1,202 @@
+# WO-F-my — round 5 Burmese fix lane (Claude Opus 5, 2026-09-23)
+
+worktree: /Users/son7/Projects/tseng-law-fix-my-r5  branch: fix/native-my-r5-20260922
+inputs: RULEBOOK-FIX.md (R1-R17) · ACCEPTED-ROUND.md · rounds/r5/my-a.md (23 rows) · rounds/r5/my-b.md (25 rows)
+files touched: src/content/columns-my/001..018 (18), src/data/international-guidance-southeast-central.ts,
+src/data/international-guidance-team.ts. No git add/commit/push. No other locale touched.
+
+## Rows applied
+
+### my-a (guidance pack + columns 001-009)
+- a1  P1 006 — wrong 漢字 gloss on a Korean statute removed: "ကိုရီးယား ဆေးကုသမှုဥပဒေ (醫療法) အရ" → "ကိုရီးယား ဆေးကုသမှုဥပဒေအရ".
+      NOT applied as suggested: the reviewer's replacement gloss is Hangul (의료법) and the WO forbids Korean
+      characters outside `url` (checker `hangul`), so the gloss is dropped instead of swapped. Same effect: no
+      Taiwanese-law signal on a Korean act.
+- a2  P1 004 — editor's denial removed from the public link label. "…(各類所得扣繳率標準) ပုဒ်မ 3၊ ပုဒ်မ 10 မဟုတ်"
+      → "…(各類所得扣繳率標準) ပုဒ်မ 3 (မူရင်းအညွှန်းတွင် ပုဒ်မ 10)". Dropping "10" entirely FAILS the checker
+      (evidence below), so the source label's article number is carried as a neutral parenthetical, the same
+      shape th/km already use. URL untouched.
+- a3  P1 007:176 — "အောက်ပါ 1 ခုမြောက် မူလအချက်အလက်သည် … အခြေခံဖြင့်" → "အောက်ပါ တရားဝင် မူလရင်းမြစ်များ (အဆင့် 1) သည် … အခြေအနေအရ".
+      "official" restored; "1차 자료" no longer reads as "the 1st source". The digit 1 has to stay somewhere in
+      the file (ko "1차" is counted), so it is carried as "(အဆင့် 1)" — the cs precedent "(1. úroveň)". Evidence below.
+- a6  P2 008:23 — self-applied honorific removed and the greeting restored:
+      "ကျွန်မသည် ရှေ့နေ ဒေါ် Wei Tseng (曾雋崴) ဖြစ်ပါသည်။" → "မင်္ဂလာပါ။ ကျွန်မသည် ထိုင်ဝမ်ရှေ့နေ Wei Tseng (曾雋崴) ဖြစ်ပါသည်။"
+      Third-person bylines "**ရှေ့နေ ဒေါ် Wei Tseng (曾雋崴)**" (10 files) keep ဒေါ် — correct feminine honorific (R4).
+- a8  P2 SYSTEMIC "transaction" → 37 instances. ငွေကြေးလွှဲပြောင်း(မှု) ("money transfer") → ငွေပေးငွေယူ in
+      001 (4), 002 (16), 004 (11), 016 (2), 018 (4). Every occurrence checked against the EN source first; all
+      are 交易/거래, none is a remittance.
+- a9  P2 003:326 — "ယာဉ်အန္တရာယ် မေးခွန်းနှင့် အဖြေကို ဤတွင် ပြီးပါပြီ။ ကျွန်မ အနေဖြင့် အထောက်အကူ ဖြစ်မည်ဟု မျှော်လင့်ပါသည်။"
+      → "…အဖြေများ ဤတွင် ပြီးဆုံးပါပြီ။ အထောက်အကူ ဖြစ်မည်ဟု ကျွန်မ မျှော်လင့်ပါသည်။"
+- a10 P2 006:106 — "ဤမှ တိုင်းပြည်များသည် …" → "ဤအချက်မှ တိုင်းပြည်အသီးသီးသည် … သုံးကြောင်း တွေ့နိုင်သည်။"
+- a11 P2 008:45 — 曠工 unified: "ဆက်တိုက် 3 ရက် အလုပ်မဆင်းခြင်း" → "ဆက်တိုက် 3 ရက် အလုပ်ပျက်ကွက်ခြင်း (曠工)",
+      matching the FAQ and the table. Digit kept (see skips).
+- a12 P2 SYSTEMIC dates — `date_display` D-M-Y → Myanmar Y-M-D in all 18 files
+      ("13 စက်တင်ဘာ 2025" → "2025 ခုနှစ် စက်တင်ဘာ 13 ရက်"; 011 → "2026 ခုနှစ် ဖေဖော်ဝါရီ 4 ရက်"; 018 → "2026 ခုနှစ် စက်တင်ဘာ 17 ရက်").
+      Now matches the body convention. Checker still PASS 18/18 (my month names are in DATE_MONTH_NAMES).
+- a13 P2 PARTIAL guidance team bio — English word order fixed, pinned token untouched:
+      "လျော်ကြေး 1.57 သန်း ထိုင်ဝမ်ဒေါ်လာအသစ် (TWD 1.57M)" → "လျော်ကြေးအဖြစ် ထိုင်ဝမ်ဒေါ်လာအသစ် 1.57 သန်း (TWD 1.57M)".
+      The duplicate and the "M" shorthand are NOT removed: ACCEPTED-ROUND + R12 pin "TWD 1.57M" byte-identical
+      (international-guidance-team.ts line 1858 pinned-token list, guidance-team-bios.test.ts). Doubling the amount
+      in local words plus the pinned token is the established pattern in vi/id/es/fr/pt/ar/ca/da too.
+- a14 P2 guidance disclaimer — the stranded clause folded back into its sentence:
+      "…အခြားဥပဒေစနစ်၏ ဥပဒေအရ အကြံပေးခြင်း မဟုတ်ပါ။ သင်နေထိုင်ရာနိုင်ငံ၏ ဥပဒေအပါအဝင် ဖြစ်သည်။"
+      → "…အခြားဥပဒေစနစ် — သင်နေထိုင်ရာဒေသ၏ ဥပဒေ အပါအဝင် — အရ အကြံပေးခြင်း မဟုတ်ပါ။" (Wohnort = ဒေသ, not နိုင်ငံ.)
+- a15 P2 001 + 004 — "မည်သည့် 12 လအတွင်း" → "မည်သည့် 12 လ ကာလအတွင်းမဆို" (2 instances).
+- a16 P2 001:25 — "မည်သူက အလုပ်လုပ်မည်အပေါ် မူတည်၍" → "မည်သူက အလုပ်လုပ်မည် ဆိုသည်တို့အပေါ် မူတည်၍".
+- a17 P2 004:65 — ASCII comma → ၊ on the tax table row, twice ("အထွေထွေနှုန်း 5%၊ ပုံမှန်အားဖြင့် 2 လ ကြေညာကာလ").
+- a18 P3 guidance team — "ဘွဲ့ (B.A.)" → "ဝိဇ္ဇာဘွဲ့ (B.A.)" in both education lines (tseng-junwei, huang-shengping),
+      parallel with မဟာသိပ္ပံဘွဲ့ / သိပ္ပံဘွဲ့ / မဟာဝိဇ္ဇာဘွဲ့ in the same block.
+- a19 P3 006 — "မစ္စတာ လင်း (林)" → "ဦးလင်း (林)", 3 instances (male shop owner stays male, R4).
+- a20 P3 007:156 — "ဟိဂ်" → "ဟိတ်ဂ်" (The Hague).
+- a21 P3 guidance — "…စနစ်နှင့် တူသည်ဟု မယူဆသင့်။" → "…မယူဆသင့်ပါ။" (every other negative in the pack closes with ပါ။).
+- a22 P3 007 + 008 — title/H1 ASCII colon → em dash, matching 001/004/005. Both frontmatter `title:` and the H1
+      changed together; no `my` test pins a column title (checked src/lib/__tests__, src/data/__tests__).
+- a23 P3 003 — currency form unified to the file's own first-mention form "ထိုင်ဝမ်ဒေါ်လာအသစ် (新臺幣, TWD) N"
+      at lines 178, 210 (was "ထိုင်ဝမ်ဒေါ်လာအသစ် TWD N") and 242 (was "(TWD)").
+
+### my-b (columns 010-018)
+- b1  P1 017 — 交割/closing was rendered as a money transfer. "### အခြေအနေစစ်ဆေးခြင်းနှင့် ငွေကြေးလွှဲပြောင်းမှု ဆောင်ရွက်ခြင်း"
+      → "### အခြေအနေစစ်ဆေးခြင်းနှင့် အရောင်းအဝယ် ပိတ်သိမ်းခြင်း"; 017:89 "…ငွေကြေးလွှဲပြောင်းမှု မတိုင်မီ" →
+      "…အရောင်းအဝယ် ပိတ်သိမ်းခြင်း မတိုင်မီ" (matches the file's own အရောင်းအဝယ်ပိတ်သည့် စည်းကမ်း). The
+      016/018 instances this row also lists are "transaction", handled under a8.
+- b2  P1 016 — 處分 rendered as "throw away". စွန့်ပစ် → လွှဲပြောင်းစီမံ, 12 instances in 016, swept to 002 (8),
+      004 (2) and 007 (3) where the EN reads "dispose of/disposal" — 25 total. 007's three genuine
+      惡意遺棄 "malicious abandonment" instances (မရိုးသားစွာ/မရိုးသားသော စွန့်ပစ်ခြင်း) deliberately kept.
+      016's "စွန့်ပစ်ငွေ" (= "disposition proceeds") → "လွှဲပြောင်းစီမံ၍ ရရှိသောငွေ" (2).
+- b3  P1 016:53 — unreadable sentence rewritten inside its block:
+      "ကျန်ရစ်သော အိမ်ထောင်ဖက်သည် အမွေဆက်ခံသူ ဖြစ်သောကြောင့် ရရှိသည့် အမွေဝေစုနှင့် နှိုင်းယှဉ်လျှင် ဤတောင်းဆိုခွင့်၏
+      ဥပဒေအခြေခံ၊ မည်သူ့အပေါ် တောင်းဆိုသည်နှင့် တွက်ချက်ရာတွင် ထည့်သွင်းသော ပိုင်ဆိုင်မှုတို့ မတူပါ။" (EN: "the party
+      against whom it is asserted").
+- b5/b6 P2 014 — compound negations split (5 instances): မအသိအမှတ်ပြုသင့်ပါ/နိုင်ပါ/ဘဲ → အသိအမှတ် မပြုသင့်ပါ/မပြုနိုင်ပါ/မပြုဘဲ;
+      "ခံမှု မသက်သေပြပါ။" → "ခံမှုကို သက်သေ မပြနိုင်ပါ။"; "ကို မအစားထိုးပါ။" → "ကို အစား မထိုးနိုင်ပါ။"
+      Swept: the same မအစားထိုးပါ fault in 007:118 fixed too (6 total).
+- b7  P2 SYSTEMIC — "on the other hand" calque အခြားတစ်ဖက်တွင် → ဆန့်ကျင်ဘက်အားဖြင့်: 017 (4), 011 (2), 014 (1) = 7.
+      007's 13 "အခြားတစ်ဖက်…" are the other spouse/party, not the connector — untouched (incl. 007:67
+      "အခြားတစ်ဖက်တွင် နောက်ပါ အကြောင်းရင်း ရှိသည့်အခါ" = "where the other party has one of the following grounds").
+- b8  P2 012:26 — "ဟွန်းကို … 2 ကြိမ် နှိုးရ … ရှေ့မီးကို 1 ကြိမ် မှိတ်တုတ်ပြရသည်" → "ဟွန်းကို … 2 ချက် တီးရ … ရှေ့မီးကို
+      1 ချက် မှိတ်ပြရသည်". Verb and classifier fixed; the digits stay (checker pins them — see skips).
+- b9  P2 012:34, 012:36 — bare ရုံး ("the office/court") → "ကျွန်ုပ်တို့ ရှေ့နေအဖွဲ့" in the heading and the first
+      sentence of the anonymised case study.
+- b10 P2 014:115 — "ပစ္စည်း နှစ်ခု အတူ တောင်းဆိုပါက … ပစ္စည်း တစ်ခုချင်း၏ သက်သေ" → "တောင်းဆိုချက် နှစ်ခု အတူ တင်ပါက …
+      တစ်ခုချင်းစီ၏ ထောက်ခံသက်သေ" (EN "if both are claimed … supporting evidence for each").
+- b11 P2 010:88 — chained သည့်အပြင် broken up: "…ဥပဒေတာဝန်အသစ် မတင်နိုင်သလို ဖျက်ခြင်းကိုလည်း မတားနိုင်ပါ။ ထို့အပြင် …".
+- b12 P2 010:88 — modality matched: "ပြန်ရေးသားခံရနိုင်သည်၊ သို့မဟုတ် အခြားအကြောင်းကြောင့် သုံး၍ မရတော့ဖြစ်နိုင်သည်။"
+- b13 P2 010:72 — embedded "whether…" calque → native A-not-A: ချိုးဖောက်ခဲ့သည် မချိုးဖောက်ခဲ့သည် / ရှိမရှိ …
+      ရှိမရှိ စသည်တို့ကို.
+- b14 P2 015:20 — "စားသောက်ဆိုင်လုပ်ငန်း စသည့်အခါ" → "စားသောက်ဆိုင်လုပ်ငန်း စတင်သည့်အခါ".
+- b15 P2 015:64 — "ကဏ္ဍ မခွဲဘဲ" → "လုပ်ငန်းအမျိုးအမည် မရွေး" (the file's own term for 營業項目).
+- b16 P2 011 — bare verb stems glued to nouns: ရောင်းလင့် → ရောင်းချရာ လင့်; ရောင်းစာမျက်နှာ → ရောင်းချရာ စာမျက်နှာ (3 total).
+- b17 P2 SYSTEMIC quotes — one convention for the whole Burmese set. 013 and 015 ASCII ' / " → curly (2+2 in 013,
+      8+10 in 015, body only; YAML frontmatter untouched), then all ‘ ’ in the set folded to “ ” so 018 (4) and
+      the converted 013/015 singles match 003/004/005/007/008/009/017. Result: “ ” only, in 10 files.
+- b18 P2 014:115 + 018:48 — "the front one … the back one" → ပထမတစ်ခုသည် … ဒုတိယတစ်ခုသည် (2 pairs).
+- b19 P2 015:74 — "ဆောင်းပါး ဤနေရာတွင် ပြီးပါပြီ။" → "ဤဆောင်းပါးကို ဤနေရာတွင် အဆုံးသတ်ပါသည်။"
+- b20 P3 013:40 — classical "ဟူ၏။" → "ဟု ဆိုပါသည်။"
+- b21 P3 014:95 — space inserted before the Burmese particle after a Chinese string: "…第1150141814號 သည်".
+- b22 P3 013:126 + 018:98 — consultation-language list made parallel and aligned with the pack's own wording:
+      "အင်္ဂလိပ်၊ တရုတ် (中文)၊ ဂျပန်နှင့် ကိုရီးယားဖြင့်သာ ဆောင်ရွက်သည်။" (ACCEPTED-ROUND: one form across pack and columns.)
+      The sentence stays negative/limiting — no new consultation claim.
+- b24 P3 013:102 — second paragraph no longer opens with the same ထို့ကြောင့်: "သို့ဖြစ်၍ လုပ်ငန်းနေရာကို စောစော ရှာရန်…".
+- b25 P3 015:48 — categorical "လက်မခံနိုင်ပါ။" → "လက်မခံခြင်း ဖြစ်နိုင်သည်။" (EN "may not accept"), matching the
+      013 sentence softened in round 4.
+
+## Rows skipped (with reason)
+
+- a4  P2 small cardinals as words (တစ်ကြိမ်/တစ်နှစ်/တစ်ဦး) — SKIPPED, checker-pinned.
+      Every one of the 18 files is at sourceCount == targetCount exactly (0 headroom), so removing any digit
+      fails `numbers`. Measured on the reviewer's own example (002, "1 ကြိမ်"→"တစ်ကြိမ်", "1 နှစ်"→"တစ်နှစ်"):
+          numbers  FAIL   missing from translation (5): 1×5
+      Same reason the digits were kept in a11 ("3 ရက်") and b8 ("2 ချက်", "1 ချက်").
+- a5 / b23  P2/P3 fractions သုံးပုံနှစ်ပုံ / သုံးပုံတစ်ပုံ — SKIPPED, checker-pinned. All 15 instances converted and
+      re-run; 5 files failed:
+          001  numbers FAIL missing from translation (4): 1×2, 3×2
+          002  numbers FAIL missing from translation (18): 2×9, 3×9
+          005  numbers FAIL missing from translation (1): 3
+          016  numbers FAIL missing from translation (4): 1×2, 3×2
+          018  numbers FAIL missing from translation (2): 2, 3
+          summary FAIL 13/18 files
+      Reverted; "3 ပုံ 2 ပုံ" / "3 ပုံ 1 ပုံ" kept.
+- a7 / b4  P2 zero-width spaces (52 in 003, 10 in 008, 8 in 005, 5 in 009, 4 in 006, 5 in 013, 3 in 015) —
+      SKIPPED, checker-pinned, and this is why rounds 4 and 5 both found them unfixed. The ZWSP count in every
+      my file is identical to its Korean source, and `checkBlocks` fails on any difference (it also counts a
+      lone-ZWSP line as a block). Measured on 006:
+          blocks  FAIL   blocks 59 → 55
+                         ZWSP 4 → 0
+          summary FAIL 0/1 files
+      The reviewers compared against the English file, which has none; the checker compares against the Korean
+      source, which has them. Supervisor decision needed if these should go — it requires the ko source to change.
+- a13 partially skipped — see above ("TWD 1.57M" is a pinned token; only the word order was fixed).
+- a2 partially adapted — "ပုဒ်မ 10" could not simply be deleted:
+          numbers  FAIL   missing from translation (1): 10
+          [10] src="- [대만 법무부 법령정보 — 영업세법 제10조](…flno=3)" tgt="…(各類所得扣繳率標準) ပုဒ်မ 3](…flno=3)"
+      so the number is carried as a neutral parenthetical instead of the reviewer's bare "ပုဒ်မ 3".
+- a1 adapted — reviewer's Hangul gloss (의료법) not usable (no Korean outside `url`); gloss removed instead.
+- a3 adapted — the ko source's "1차" is counted as a number, so "(အဆင့် 1)" carries it.
+
+## Systemic sweeps and instance counts
+| pattern | rule | instances changed |
+|---|---|---|
+| 交易 "transaction" as money transfer | a8 / b1 verdict | 37 (001×4, 002×16, 004×11, 016×2, 018×4) |
+| 交割 "closing" as money transfer | b1 | 2 (017) |
+| 處分 "disposition" as စွန့်ပစ် "throw away" | b2 / R8 | 25 (016×12, 002×8, 007×3, 004×2); 3 genuine 惡意遺棄 kept |
+| "on the other hand" calque အခြားတစ်ဖက်တွင် | b7 | 7 (017×4, 011×2, 014×1); 13 legitimate uses in 007 kept |
+| မ- prefixed on noun+verb compounds | b5 / b6 | 6 (014×5, 007×1) |
+| `date_display` D-M-Y → Myanmar Y-M-D | a12 / R6 | 18 (all files) |
+| quote marks → one convention “ ” | b17 | 24 ASCII pairs converted + 4 ‘ ’ pairs folded, across 013/015/018 |
+| "the former/the latter" as ရှေ့/နောက် | b18 | 2 pairs (014, 018) |
+| bare ရောင်း- verb stem glued to a noun | b16 | 3 (011) |
+| မစ္စတာ for a Taiwanese man | a19 | 3 (006) |
+| consultation-language list not parallel | b22 | 2 (013, 018) |
+
+Not swept, deliberately: bare ရုံး = "the firm" outside 012. The whole guidance pack (and the R1 link labels the
+supervisor generated from it, e.g. "[ရုံးထံ မည်သို့ စာပေးပို့နိုင်သနည်း]" in 005/007/013/015) uses ရုံး as the
+established Burmese term for the firm; changing it in 003/005/013/015 would desync the column link labels from
+the pack titles. Only 012 was changed, where a litigation context makes ရုံး read as တရားရုံး (the court) — which
+is the defect the reviewer actually described.
+
+## Things I believe the reviewers got wrong (not applied)
+1. my-a #1 — the suggested replacement gloss "(의료법)" is Hangul. The WO and the checker's `hangul` gate forbid
+   Korean characters outside `url` values. Fixed by removing the gloss, not by swapping it.
+2. my-a #7 / my-b #4 — "the English files have none [no U+200B]". True, but the checker's isomorphism baseline is
+   the Korean source, which has exactly the same ZWSP count as the Burmese. Removing them is a hard FAIL on
+   `blocks`, so this row cannot be closed inside the locale lane. Escalating rather than applying.
+3. my-a #4, #5, my-b #23 — writing small cardinals and fractions as Burmese words is correct Burmese but the
+   `numbers` check is a strict multiset comparison against the Korean source with zero headroom in all 18 files.
+   The WO's own fallback ("prefer the form the checker accepts") applies.
+4. my-a #3 — the reviewer judged the sentence against the EN ("were checked on 2026-07-25"); the Burmese was
+   translated from the ko source, which says "…을 확인하는 출발점입니다" (is the starting point). I fixed the real
+   defect ("1차 자료" mistranslated as "the 1st source", "official" dropped) and kept the ko framing rather than
+   silently re-basing the sentence on the EN.
+5. my-a #13 — "the amount is given twice and the second copy uses English shorthand M". The second copy is the
+   token "TWD 1.57M" that a unit test pins byte-identical for all 45 locales (international-guidance-team.ts
+   line 1858); vi/id/es/fr/pt/ar/ca/da all carry the same duplication. Only the word order was fixed.
+6. my-b #18 also lists 017's "နောက်တစ်ခုတွင်" as the same fault — it is not a "former/latter" pair there, it refers
+   back to the third of three listed thresholds, so ပထမ/ဒုတိယ would be wrong. Left as is.
+
+## §Verify output verbatim
+$ node scripts/check-column-translation.mjs --dir src/content/columns-my --lang my 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=72
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-my src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      23
+
+(git status = 23: 19 files edited by this WO + 2 untracked round-5 review files + docs/i18n/global-plan/WO-F-my.txt,
+which was already modified in the worktree before this lane started and was not touched here.
+After this report file was written it reads 24 — the extra entry is this log.)

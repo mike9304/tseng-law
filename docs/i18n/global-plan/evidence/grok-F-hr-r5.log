@@ -1,0 +1,195 @@
+# WO-F-hr round 5 — Croatian native-review fixes
+
+worktree: /Users/son7/Projects/tseng-law-fix-hr-r5 (branch fix/native-hr-r5-20260922)
+inputs: RULEBOOK-FIX.md (R2–R17), ACCEPTED-ROUND.md, rounds/r5/hr-a.md (75 rows), rounds/r5/hr-b.md (55 rows)
+files touched: src/content/columns-hr/001,002,003,004,005,006,007,008,009,010,011,013,014,015,016,017,018;
+src/data/international-guidance-central-europe.ts (croatianGuidanceContent), src/data/international-guidance-team.ts (hr bios),
+src/data/international-guidance-answers.ts (hr), src/data/international-inquiry-copy.ts (hr).
+012 is unchanged (hr-b: "native professional throughout; no remaining defects worth a row").
+No test file needed updating — the full suite passes unchanged, and no test pins a Croatian string that changed.
+Helper script lived in <worktree>/.tmp-hr/ and was deleted after the run.
+
+Totals: hr-a 75 rows → 71 applied, 3 skipped, 1 applied in a modified form.
+        hr-b 55 rows → 55 applied.
+
+## Systemic sweeps (swept across every file, not only the quoted instance)
+
+| pattern | rule / row | what changed | instances |
+|---|---|---|---|
+| German closing quote `“` → Croatian `”` | a-38, b-16 | every `„…“` pair in the pack and the columns | 38 (pack 10: guidance 9 + inquiry copy 1; columns 28: 004×2 005×3 008×1 009×1 013×2 014×1 015×9 016×1 017×3 018×5) |
+| 本公司 "glavna poslovnica" (= main *branch*) → "središnjica" | a-3 | all cases, incl. 011 and 018 which hr-b did not flag but use the same term | 59 (001×5, 004×30, 011×2, 018×22) |
+| "operacija" (surgery / military op) → "transakcija" / "podaci o …" | a-1 | every English/Chinese *transaction*; 007's "Operacije prijenosa/obroka/plaćanja" became "Podaci o prijenosima / o otplati obroka / o plaćanjima" (EN: transfer records, repayment records, payment records) | 30 (001×4, 002×16, 004×8, 007×2) |
+| 侵權行為 one rendering: "protupravna radnja" | a-7 | pack "protupravno djelovanje", 003 "delikt", 007 "protupravni čin", 010 "delikt" → one term (004/008 already used it) | 9 (pack 1, 003×1, 007×4, 010×3) |
+| "osobe oštećenog vida" → "osobe s oštećenjem vida"; "koje nisu oštećenog vida" → "bez oštećenja vida" | a-63 | whole of 006 | 21 |
+| impersonal `se` + accusative → nominative subject | a-17, a-18, a-23, a-26, b-12, b-13 | 002 (kapital/dugovi), 004 (Mjesni partneri…, Pokuša li se struktura…, tajvanska dobit…, Rizike koji…), 007 (uređuje institut), 010 + 003 headings (clitic to 2nd position) | 9 |
+| "nastaviti" without the reflexive `se` | a-19 | 002×2, 007×2 (the transitive "moći nastaviti djelatnost" left as is — correct) | 4 |
+| "prije nego" → "prije nego što" | a-14 | pack ×5 (+ the row-15 sentence rewritten), 018 ×1 | 7 |
+| Serbianisms: prijem→ulazak/uključivanje, zloupotrebljavati→zlorabiti, putevi→putovi | a-39 | 001×1, 002×1, 004×7 | 9 |
+| "predmet po predmet(u)" calque → "za svaki predmet posebno" | a-55 | 002, 003, 010 | 3 |
+| "napokon" as *ultimately* → "u konačnici" / "naposljetku" | a-52 | 002, 004, 006, 008, 014 | 5 |
+| "suprotno" as *conversely* → "obrnuto" | a-53 | 002, 007, 016 | 3 |
+| "na mreži" calque → "internetski/internetska" | a-50 | 001, 007 | 3 |
+| "mjesto" as *job position* → "radno mjesto"; "predaja mjesta" → "primopredaja poslova" | b-40, b-41 | 014, sections 3–9 | 8 |
+| permit "ostvariti" → "ishoditi" | b-51, b-29 | 017 (FAQ + §; "Nakon ostvarenja" → "Nakon ishođenja"; "poduzeti odobrenje" → "ishoditi odobrenje … i provesti postupak") | 6 |
+| "mjerodavan" for *responsible/related* → "nadležan / koja vodi predmet / povezan" | a-8, b-5 | 001 ×3, 011 ×1 (all other "mjerodavan" uses are correct = *applicable law/rules/procedure*) | 4 |
+| "bez propuštanja" calque | b-43 | 014 and 016 | 2 |
+| missing sentence-final punctuation in the line-broken narrative | a-31 | 008: after "…kada radnik sam ode", "…na razgovore", "i sam je otišao"; plus the two follow-on blocks the reordered sentence left dangling | 5 |
+
+## Rows applied — hr-a
+
+1 P1 002/001/004/007 transaction vocabulary — see sweep · 2 P1 002 "iz skrbi, otpisa" → "čuvanja, amortizacije" ·
+3 P1 004 head office — see sweep · 4 P1 009 the key rule now holds across the four short blocks:
+"Ponekad, kada je krivnja na objema stranama radnog odnosa, / a izbije spor, / odlučujuće je koja je strana prva otkazala: / strana koja prva otkaže…" (block count unchanged) ·
+5 pack "Podržavamo…" → "Pomažemo i u računovodstvenim i poreznim pitanjima…", "Pomažemo pri upisu žigova…", team bios "olakšava komunikaciju", "Pomaže u integriranoj analizi" (4 strings) ·
+6 pack "umjesto da odgovor izvodite iz ove stranice" · 7 tort term — see sweep · 8 001 "nadležne/odvjetnice koja vodi predmet" ·
+9 003 "izraz suosjećanja" · 10 004 "može zahtijevati pristanak ugovorne stranke te uređenje radnih odnosa…" ·
+11 006 "Zakon o skrbi za osobe s invaliditetom (殘障福利法)", "korejskom Zakonu o zdravstvenim uslugama (醫療法)" ·
+12 007 但書 "Zadrška" → "Odredba iznimke" (FAQ + §4) · 13 009 "nakon zapošljavanja" ·
+14 pack compound subject + "prije nego što" · 15 pack "Prije nego što nam se javite" ·
+16 pack + inquiry copy "javiti se" instead of perfective "napisati" (3 strings) ·
+17–19 002 see sweeps · 20 003 "Okolnost" · 21 004 "reinvestiranje" · 22 004 "konsolidirani ili zasebni računovodstveni tretman" ·
+23 004 "Rizike koji se mogu prenijeti" · 24 003 "da se šteta ne bi mogla spriječiti" ·
+25 007 "na Tajvanu sama po sebi primjenjuje" · 26 007 "uređuje institut koji" · 27 002 + 007 agent by relative clause ·
+28 002 "Ako društvo treba trajno prestati postojati … nije zamjena za raspuštanje i likvidaciju" ·
+29 006 "Bilo je nezakonito da to zanimanje obavlja osoba bez oštećenja vida (非視障者)" (and the parallel sentence about Korea) ·
+30 008 reported speech now holds across four blocks ("…prigovarati da ne radi savjesno, / rekavši da društvo ima teškoće, / da bi se g. B trebao žrtvovati…") ·
+31 008 missing full stops (see note below) · 32 008 "G. B" restored as subject in all five places ·
+33 008 "a to je shvatio rano / jer je već prije odlaska drugih radnika primijetio oglase za posao." ·
+34 008 "Budući da je takvih slučajeva mnogo," · 35 005 "A." label restored on the first list item ·
+36 SKIPPED (see below) · 37 SKIPPED (see below) · 38 quotes — see sweep · 39 Serbianisms — see sweep ·
+40 pack "počinje utvrđivanjem kronologije te pregledom isprava…, a tek potom slijede daljnji koraci" ·
+41 pack "Unaprijed navedeni iznos ne bi odražavao troškove Vašeg predmeta." ·
+42 pack "O prihvaćanju predmeta odlučujemo nakon pregleda sadržaja." + "Preuzimanje predmeta ovisi o sadržaju i o jeziku komunikacije." ·
+43 pack "ured može raditi zajedno s računovodstvenim odjelom" ·
+44 pack "…kako bismo strankama u toj regiji bili na raspolaganju na licu mjesta." ·
+45 inquiry copy "Pročitao/pročitala sam…" · 46 001 "tko posao obavlja na licu mjesta" ·
+47 001 word order of the pre-check sentence · 48 001 "Sam broj od 183 dana … ne može biti odlučujući za nastanak…" ·
+49 001 "pa ona snosi dugove" · 50 001 + 007 "na mreži" · 51 002 "Ne treba smatrati da s upisom prekida djelatnosti prestaju sve obveze prijave poreza." ·
+52–53 see sweeps · 54 002 "ugovor, podaci o transakciji, … čine osnovu" · 55 see sweep ·
+56 003 "Nesreću, prema okolnostima, prijavite i policiji." · 57 003 "Nemojte propustiti prikupiti kontaktne podatke…" (whole list put in the accusative) ·
+58 003 "koji bi jednako odgovarao svim predmetima" · 59 004 "kronološki prikazati … potrebu za operativnim sredstvima" ·
+60 004 the five fronted yes/no clauses now hang off "Odgovori na ta pitanja — … — čine prikladnu strukturu jasnijom." ·
+61 004 營利事業 single rendering "poduzeća koja posluju radi dobiti" · 62 006 "osloboditi se napetosti" (3×) ·
+63 006 see sweep · 64 007 "zajedno sudjelovati u medijaciji" (FAQ + §) · 65 007 "razloge razvoda na koje se pozivate" ·
+66 007 "Jedinstven popis ne vrijedi nepromijenjen za sve međunarodne stvari." ·
+67 008 "Riječ je o poznatom društvu A koje ima poslovnice diljem Tajvana." · 68 008 "uzelo na nišan" ·
+69 008 "da ne nasjednu na namjeru društva" · 70 008 "Na isti je način" · 71 008 "korespondenciju e-poštom" ·
+72 007 small counts spelled out where the checker parses them (see note) · 73 SKIPPED · 74 003 applied in modified form (see note) ·
+75 003 "ostaje duboko povrijeđena i ogorčena".
+
+## Rows applied — hr-b (all 55)
+
+1 P1 017 "ne postaje odmah poduzetnikom cestovnog prijevoza tereta automobilima" ·
+2 010 "postoji li zakoniti temelj da se snimke pribave ili sačuvaju" · 3 010 "uspjeh u bilo kojem od njih unaprijed izvjestan" ·
+4 011 "najnovije uvjete podnošenja zahtjeva" · 5 011 "podatke o odvjetnici koja vodi predmet" ·
+6 014 "uz obavijest poslodavcu 30 dana unaprijed" · 7 016 "brak sklopljen ili razvod proveden u inozemstvu" ·
+8 016 "s obzirom na oblik sastavljanja, materijalnu valjanost, prijevod i javnobilježničku ovjeru (認證)" ·
+9 018 "Za prijenos poslovnog udjela običnog člana" · 10 018 "Članovi koji ne vode poslove društva" ·
+11 010 "praktična mjera kojom se bilježi" · 12 010 + 003 "Koje se stavke/štete … mogu zahtijevati" (clitic) ·
+13 011 "ili ocjena sigurnosti (安全性評估)" · 14 011 "U poslu na PIF-u … može pomoći treća osoba" ·
+15 011 "Ne postaje, međutim, svaka osobna objava automatski reklama marke" · 16 quotes — see sweep ·
+17 014 "Kod trećeg čimbenika ne gleda se samo iznos naknade, nego i njezin opseg." ·
+18 014 "Tko se poziva na stručno-tehnički dio, taj podlogama treba objasniti" ·
+19 014 "usporediti dokaze svake stavke i provjeriti nije li isti trošak izračunan dvaput" ·
+20 015 "Za sve djelatnosti preporučuje se da se sustavom … potvrdi…" + the heading question reworded ·
+21 016 genitive series after "glede" · 22 016 "Treba također izbjegavati okolnosti" ·
+23 016 "Pri odluci o tome koji se postupak i u kojoj državi pokreće prvi treba odvagnuti najbolji interes djeteta (子女最佳利益) i mogućnost ovrhe." ·
+24 016 "prema istom sustavu razvrstavanja" · 25 016 semicolon + "ne smije se dvostruko prenijeti u drugi" ·
+26 017 "znači li to da Vašem društvu nisu potrebne ni poslovna dozvola … ni dozvola za rad?" ·
+27 017 "prvi put započinje cestovni prijevoz" · 28 017 "ne prolazi svako strano ulaganje kroz isto tijelo i isti postupak" ·
+29 017 "ishoditi odobrenje stranog ulaganja i provesti potrebni postupak…" (FAQ + §) ·
+30 018 "ili, ako je kapital niži od toga, poslovni prihod 100.000.000 TWD" · 31 018 "ili pruža li mjesno osoblje samo tehničku potporu" ·
+32 010 "zahtjev teretani za očuvanje snimaka pismom s ovjerom sadržaja (存證信函) ili pismom odvjetnice (律師函)" ·
+33 010 "konkretna uputa koja je dana" · 34 011 "Čak i kad treća osoba pomaže pri sastavljanju ili pruža uslugu čuvanja podloga" ·
+35 011 "računajući od prvog dana nakon posljednje isporuke" · 36 011 "Mjere koje se poduzimaju kad je utvrđen sigurnosni problem" ·
+37 011 "mogu se u biti ocijeniti kao reklama" · 38 011 "izraza koji povređuju propise" ·
+39 013 "provjerava obrazovanje i radno iskustvo ulagača" · 40–47 014 (see sweeps; 47 "pitanje su toga kada prestaje radni odnos") ·
+48 016 "mogu se zahtijevati dodatne podloge kojima se dokazuje da je riječ o istoj osobi" · 49 016 "roditelj koji vrši roditeljsku odgovornost (親權)" ·
+50 016 "da se nasljedstvo neće prihvatiti" · 51–53 017 (see sweep; 52 "Nije dovoljno provesti samo pregled…", 53 "osnovati novu djelatnost…") ·
+54 018 "može statutom odrediti da nema upravni odbor" / "odrediti i da nema nadzornika (監察人)" ·
+55 018 "Ovaj je članak opća informacija za strana poduzeća".
+
+## Rows skipped, and why
+
+- **a-36 (remove the U+200B lines and the empty `**​**` lines in 003/005/006/008/009)** — SKIPPED. `checkBlocks`
+  compares the ZWSP count against the Korean source, which carries exactly the same ZWSP paragraphs
+  (003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3, identical to the hr files). Removing them gives
+  `blocks FAIL: ZWSP 52 → 0` and changes the block count. Covered by ACCEPTED-ROUND "requests to
+  merge/split paragraphs … rephrase inside the existing block instead"; the same applies to hr-b's
+  below-P2 note about the ZWSP paragraphs in 013 and 015. All of those rows' sentences were instead
+  repaired *inside* their existing blocks (see a-4, a-30, a-33 above).
+- **a-37 (make Q16–Q20 of 003 `##` headings)** — SKIPPED. The Korean source and columns-en/003 both keep
+  Q16–Q20 as plain body lines; `checkHeadings` compares the level list byte for byte, so adding five `##`
+  gives `headings FAIL: levels source=[…] target=[…]`. Source-parity issue, not a translation defect.
+- **a-73 ("TWD 1.57M" → "1,57 milijuna TWD" in the lead-attorney bio)** — SKIPPED per ACCEPTED-ROUND / R12
+  (the figure is pinned byte-identical by `TEAM_PINNED_TERMS` in international-guidance-team.ts).
+
+## Rows applied in a modified form
+
+- **a-74 ("za 1 oštećenika i 1 nesreću" → "po oštećeniku i po nesreći")** — the preposition was fixed but the
+  two digits were kept: `po 1 oštećeniku i po 1 nesreći`. The Korean source reads "피해자 1명·사고 1건당",
+  so dropping both 1s makes `checkNumbers` report `missing from translation (2): 1` → FAIL.
+- **a-72 (small counts written as words)** — applied only where the checker's Croatian numeral lexicon can
+  parse the word back to a digit. `SMALL_LEXICON_WORDS.hr` holds only 1/2/3 (jedan, jedna, jedno, dva,
+  dvije, tri + prvi/drugi/treći), so these five were converted:
+  `## 1. Tri načina razvoda…`, `postoje načelno tri načina razvoda`, `učinke ta tri načina`,
+  `u tri sloja`, `Ta dva roka`. Left as digits because the word form is not parsed and the row would turn
+  into a `numbers FAIL`: 007 "tih 5 pitanja" / "sljedećih 5 pitanja" / "sljedećih 9 kategorija",
+  001 "Ta 4 tipa", 002 "na rok od 1 mjeseca" (the oblique "jednog/jednim" is not in the lexicon either).
+- **a-31, third item ("full stop missing after 'zaposlen više od 10 godina'")** — not applied. In the
+  line-broken narrative that block is continued by the next one ("i trgovac s najboljim rezultatom u
+  središnjoj regiji Tajvana."), which supplies the predicate and the full stop; adding a stop there would
+  strand the following line as a fragment. The other three items of the row were applied, and two further
+  blocks that the reordered sentence left dangling were closed as well.
+
+## Things I believe the reviewer got wrong (not applied)
+
+- **hr-a row 3** says 本公司 "glavna poslovnica" also occurs "1× in 008". 008's only hit is
+  "…s poslovnicama diljem Tajvana" — the company's *branches* across Taiwan, which is the correct word.
+  (That sentence was rewritten anyway under row 67.) Conversely, hr-a row 3 misses 011 (×2) and 018 (×22),
+  which hr-b did not flag; both were swept, since they are the same 本公司 contrast.
+- **hr-a row 18** quotes a third instance, `"izmjenu sporazuma ne može se smatrati"`, which does not exist in
+  004. The two real instances of the pattern in that file are `"Pokuša li se strukturu prilagoditi"` and
+  `"tajvansku dobit poduzeća podružnice ne može se smatrati odmah oslobođenom"`; both were fixed.
+- **hr-a row 61** asks to keep "poduzeća koja posluju radi dobiti (營利事業)" in both places. The second place
+  (the body paragraph) carries no Chinese gloss in the source layout, so only the wording was aligned —
+  adding a gloss there would change the file's han count against the checker.
+
+## §Verify output (verbatim)
+
+```
+### node scripts/check-column-translation.mjs --dir src/content/columns-hr --lang hr 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=145
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+### grep -rn "[변호사 검수 필요]" src/content/columns-hr src/data | wc -l
+       0
+
+### npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+### npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+### git status --short | wc -l
+      24
+```
+
+The count above (24) was taken before this log file was written; with the log it is 25:
+22 modified source files + the two untracked round-5 review files
+(docs/i18n/global-plan/reviews/native/rounds/r5/hr-a.md, hr-b.md) + this log. One of the 22,
+docs/i18n/global-plan/WO-F-hr.txt, was already modified in the worktree before this run and was not
+touched by me. Nothing was staged, committed or pushed.
+
+Regression control: the full checker output (every check line of all 18 files) was captured against
+`git show HEAD:` copies of the 18 columns and against the edited tree. `diff` of the two reports shows
+**only the file-path lines**; every PASS/WARN line is byte-identical. In particular the four pre-existing
+`numbers WARN`s (`extra in translation` and 007's `수사미해석` for the Korean 제N항/제3자 tokens) are
+unchanged — no check changed state in either direction.

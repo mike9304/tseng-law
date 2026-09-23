@@ -29,17 +29,17 @@ Treba provjeriti leži li adresa u zoni u kojoj restoran smije poslovati.
 
 Ako započinjete djelatnost u gradu Taipeiu, na raspolaganju je gradska usluga prethodne provjere.
 
-Možete rabiti sustav „prethodne provjere mjesta poslovanja“ (營業場所預先查詢) Trgovačkog ureda grada Taipeia (臺北市商業處).
+Možete rabiti sustav „prethodne provjere mjesta poslovanja” (營業場所預先查詢) Trgovačkog ureda grada Taipeia (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
 ​
 
-Bez naknade može se provjeriti je li na željenoj adresi otvaranje „restorana“ moguće.
+Bez naknade može se provjeriti je li na željenoj adresi otvaranje „restorana” moguće.
 
-Za tu je provjeru međutim potrebno učitati „izvadak iz evidencije zgrade vrste 2“ (建物登記第二類謄本, koji sadrži detaljne podatke o zgradi) adrese mjesta poslovanja.
+Za tu je provjeru međutim potrebno učitati „izvadak iz evidencije zgrade vrste 2” (建物登記第二類謄本, koji sadrži detaljne podatke o zgradi) adrese mjesta poslovanja.
 
-Svatko može u zemljišnoknjižnom uredu (地政事務所) zatražiti „izvadak iz evidencije zgrade vrste 2“ bilo koje adrese.
+Svatko može u zemljišnoknjižnom uredu (地政事務所) zatražiti „izvadak iz evidencije zgrade vrste 2” bilo koje adrese.
 
 Ako je teško osobno doći u zemljišnoknjižni ured (地政事務所), izvadak se može pribaviti i na drugi način.
 
@@ -51,9 +51,9 @@ Stoga ovoj stvari posvetite pozornost.
 
 ​
 
-**Pitanje. Moraju li sve djelatnosti sustavom „prethodne provjere mjesta poslovanja“ provjeravati je li poslovanje na tom mjestu dopušteno?**
+**Pitanje. Mora li se za sve djelatnosti sustavom „prethodne provjere mjesta poslovanja” provjeravati je li poslovanje na tom mjestu dopušteno?**
 
-Svim se djelatnostima preporučuje potvrditi sustavom „prethodne provjere mjesta poslovanja“ (營業場所預先查詢) je li poslovanje na tom mjestu dopušteno.
+Za sve djelatnosti preporučuje se da se sustavom „prethodne provjere mjesta poslovanja” (營業場所預先查詢) potvrdi je li poslovanje na tom mjestu dopušteno.
 
 Pri upisu društva međutim se često upisuje više djelatnosti odjednom i često se želi upisati oko 10 djelatnosti jednim podneskom.
 
@@ -63,13 +63,13 @@ Prema „[uputama o radu usluge potpomognute provjere mjesta poslovanja grada Ta
 
 Od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune djelatnosti društva ili samostalnog poslovnog subjekta (uključujući podružnicu (分公司) i pomoćnu jedinicu (分支機構)) rezultat prethodne provjere mjesta poslovanja **mora** biti priložen zahtjevu za upis, bez obzira na djelatnost.
 
-Niže navedeni popis „djelatnosti koje su predmetom službene provjere“ (主動查詢之營業項目) označuje djelatnosti koje Trgovački ured tijekom pregleda upisa provjerava po službenoj dužnosti dodatno (隨案主動查詢), kad djelatnost figurira u zahtjevu, a nedostaje u priloženom rezultatu; činjenica da djelatnost nije na tom popisu ne znači oslobođenje od provjere.
+Niže navedeni popis „djelatnosti koje su predmetom službene provjere” (主動查詢之營業項目) označuje djelatnosti koje Trgovački ured tijekom pregleda upisa provjerava po službenoj dužnosti dodatno (隨案主動查詢), kad djelatnost figurira u zahtjevu, a nedostaje u priloženom rezultatu; činjenica da djelatnost nije na tom popisu ne znači oslobođenje od provjere.
 
 Ako se restoran otvori na mjestu gdje to nije dopušteno, kasnije može uslijediti upravna novčana kazna (罰鍰) nadležnog tijela.
 
-![„djelatnosti koje su predmetom službene provjere“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![„djelatnosti koje su predmetom službene provjere” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-„djelatnosti koje su predmetom službene provjere“ (主動查詢之營業項目)
+„djelatnosti koje su predmetom službene provjere” (主動查詢之營業項目)
 
 Time je sažet bitan postupak; konkretan predmet treba ocijeniti zasebno s odvjetnicom ili odvjetnikom. Ured savjetuje samo na engleskom, kineskom (中文), japanskom i korejskom.
 

@@ -4181,7 +4181,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinira termine savjetovanja i komunikaciju za klijente iz Koreje.',
-        'Na temelju obrazovanja iz informatike podržava komunikaciju među timovima putem sustava dokumenata i radnih postupaka.',
+        'Na temelju obrazovanja iz informatike olakšava komunikaciju među timovima putem sustava dokumenata i radnih postupaka.',
       ],
       education: [
         'Prvostupnik (B.S.) informatike, National Cheng Kung University',
@@ -4193,7 +4193,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'Završio je preddiplomski i diplomski program računovodstva na National Chengchi University i sada vodi računovodstveni ured.',
-        'Podržava integriranu analizu pravnih, poreznih i financijskih rizika za korporativne klijente.',
+        'Pomaže u integriranoj analizi pravnih, poreznih i financijskih rizika za korporativne klijente.',
       ],
       education: [
         'Magistar (M.A.) računovodstva, National Chengchi University',

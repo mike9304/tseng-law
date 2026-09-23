@@ -33,7 +33,7 @@ U sljedećim posebnim situacijama, čak i kada radnik ode vlastitom voljom, posl
 
 1. Kada poslodavac pri sklapanju ugovora o radu (勞動契約) učini neistinitu izjavu volje (虛偽意思表示), pa se radnik prevari i postoji rizik pretrpljenja štete
 
-(na primjer kada poslodavac kaže radniku da će ga nakon primitka poslati u inozemnu podružnicu koja zapravo ne postoji)
+(na primjer kada poslodavac kaže radniku da će ga nakon zapošljavanja poslati u inozemnu podružnicu koja zapravo ne postoji)
 
 2. Kada poslodavac, član obitelji poslodavca ili zastupnik poslodavca (代理人) rabi nasilje ili nanese tešku uvredu (重大侮辱) radniku
 
@@ -81,15 +81,15 @@ jednoj strani daje mogućnost da otpremninu ne isplati, a drugoj da je zahtijeva
 
 Ponekad, kada je krivnja na objema stranama radnog odnosa,
 
-izbije li spor,
+a izbije spor,
 
-Tada je mjerodavno koja je strana prva otkazala.
+odlučujuće je koja je strana prva otkazala:
 
 strana koja prva otkaže ugovor s dostatnim razlogom može otpremninu ne isplatiti ili je zahtijevati.
 
 Stoga u sporovima rada (勞資糾紛) na Tajvanu
 
-„**vrijeme**“ je veoma važno.
+„**vrijeme**” je veoma važno.
 
 U sporovima o zakonskoj otpremnini odlučuje koja je strana ranije, s valjanim razlogom i dokazima, otkazala ugovor. U većini je slučajeva strana koja se unaprijed pripremila u boljem položaju da zaštiti svoja prava; sama priprema ne određuje ishod.
 

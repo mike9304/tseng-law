@@ -1062,13 +1062,13 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jezik stranice i jezik savjetovanja nisu isto',
           paragraphs: [
             'Ova je stranica napisana na hrvatskom, ali savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom. Čitanje informacija na hrvatskom ne znači da će se savjetovanje s odvjetnicom ili odvjetnikom održati na hrvatskom.',
-            'Ne obećavamo tumača, rok za odgovor ni sastanak putem ove stranice. Ako ne govorite nijedan od četiri jezika savjetovanja, stranica „Kontakt“ objašnjava kako procjenjujemo način komunikacije.',
+            'Ne obećavamo tumača, rok za odgovor ni sastanak putem ove stranice. Ako ne govorite nijedan od četiri jezika savjetovanja, stranica „Kontakt” objašnjava kako procjenjujemo način komunikacije.',
           ],
         },
         {
           heading: 'Područja rada ureda',
           paragraphs: [
-            'Opseg rada obuhvaća sljedećih šest područja. Stranica „Područja rada“ svako od njih opisuje točnije i navodi što se ne obećava.',
+            'Opseg rada obuhvaća sljedećih šest područja. Stranica „Područja rada” svako od njih opisuje točnije i navodi što se ne obećava.',
           ],
           items: [
             'Ulaganja i osnivanje društava na Tajvanu',
@@ -1082,7 +1082,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Gdje početi',
           paragraphs: [
-            'Pročitajte stranicu „Područja rada“ i provjerite spada li Vaš predmet u naš opseg, zatim „Troškovi“ i „Kontakt“, kako biste znali kako se utvrđuje opseg i kako se troškovi potvrđuju prije početka rada.',
+            'Pročitajte stranicu „Područja rada” i provjerite spada li Vaš predmet u naš opseg, zatim „Troškovi” i „Kontakt”, kako biste znali kako se utvrđuje opseg i kako se troškovi potvrđuju prije početka rada.',
             'Pri slanju poruke sažetak možete napisati na svojem jeziku. Izvorni se tekst čuva točno onako kako ste ga napisali i ne prevodi se automatski. Poslana poruka je zahtjev koji čeka pregled: to još nije savjetovanje ni potvrđeni sastanak.',
           ],
         },
@@ -1099,14 +1099,14 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ulaganja i osnivanje društava na Tajvanu',
           paragraphs: [
-            'Zastupamo strane ulagače i poduzeća pri osnivanju ili vođenju društva na Tajvanu: izbor pravnog oblika, priprema i podnošenje isprava, uplata kapitala, bankovna pitanja, procjena sjedišta i sektorski zahtjevi. Podržavamo i računovodstvo i poreze koji proizlaze iz osnivanja i poslovanja na Tajvanu.',
+            'Zastupamo strane ulagače i poduzeća pri osnivanju ili vođenju društva na Tajvanu: izbor pravnog oblika, priprema i podnošenje isprava, uplata kapitala, bankovna pitanja, procjena sjedišta i sektorski zahtjevi. Pomažemo i u računovodstvenim i poreznim pitanjima koja proizlaze iz osnivanja i poslovanja na Tajvanu.',
             'Tijek i rokovi razlikuju se prema obliku, ulagaču, djelatnosti, banci i već dostupnim ispravama. Osnivanje društva samo po sebi ne vodi do boravišnog statusa (居留) ni do dozvole za rad (工作許可): riječ je o zasebnim postupcima koji se procjenjuju prema situaciji konkretne osobe.',
           ],
         },
         {
           heading: 'Građanskopravni sporovi i naknada štete',
           paragraphs: [
-            'Ovo područje obuhvaća sporove iz ugovora, naknadu štete iz protupravnog djelovanja i potrošačke sporove. Rad u pravilu započinje vremenskim slijedom, procjenom isprava i postojećih dokaza, a tek potom slijede sljedeći koraci.',
+            'Ovo područje obuhvaća sporove iz ugovora, naknadu štete iz protupravnih radnji i potrošačke sporove. Rad u pravilu počinje utvrđivanjem kronologije te pregledom isprava i postojećih dokaza, a tek potom slijede daljnji koraci.',
             'Tijek određuju rokovi, uključujući zastarne, i potpunost dokaza. Stoga navedite poznate datume što ranije. Sačuvajte ugovore, poruke, dokaze o plaćanju ili fotografije s mjesta događaja i spomenite ih u prvoj poruci.',
           ],
         },
@@ -1134,7 +1134,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Intelektualno vlasništvo',
           paragraphs: [
-            'Podržavamo upis žigova (商標) i patenata (專利), autorsko pravo i sporove o tim pravima na Tajvanu.',
+            'Pomažemo pri upisu žigova (商標) i patenata (專利) te u pitanjima autorskog prava i u sporovima o tim pravima na Tajvanu.',
             'U ovom području odlučuje redoslijed koraka: opseg zaštite, trenutak podnošenja prijave i stvarna uporaba utječu na izbor. Podnošenje prijave samo po sebi ne znači da će joj se udovoljiti.',
           ],
         },
@@ -1158,8 +1158,8 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Osnivanje i struktura',
           paragraphs: [
-            'Odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學) osnovali su 2016. Hovering International Law Firm (昊鼎國際法律事務所). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.',
-            'Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na korporativno upravljanje i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. kako bi se skrbilo o strankama u toj regiji.',
+            'Odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學) osnovali su 2016. Hovering International Law Firm (昊鼎國際法律事務所). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo”) sa znakom 鼎 („čvrst temelj”) i izražava usmjerenje ureda od njegova osnivanja.',
+            'Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na korporativno upravljanje i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. kako bismo strankama u toj regiji bili na raspolaganju na licu mjesta.',
             'Uz odvjetnički rad od 2020. djeluje i Hovering Accounting Office, koji nudi računovodstvo i porezno planiranje poduzetnicima i imućnim privatnim osobama.',
           ],
         },
@@ -1167,13 +1167,13 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Rad sa stranim strankama',
           paragraphs: [
             'Prekogranični rad obuhvaća osnivanje društava, vize, prijave žigova i patenata, procjenu pravnog rizika i porezno savjetovanje poduzeća. Ured u Taichungu vodi osobito građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Odvjetnica Wei Tseng (曾雋崴) zastupa klijente iz Koreje, iz Japana i druge međunarodne klijente u navedenim područjima.',
-            'Možemo li predmet preuzeti, ovisi o sadržaju i o jeziku komunikacije. Ako Vaš predmet spada u navedena područja i može se raspraviti na jednom od četiri jezika savjetovanja, možete poslati sažetak na pregled.',
+            'Preuzimanje predmeta ovisi o sadržaju i o jeziku komunikacije. Ako Vaš predmet spada u navedena područja i može se raspraviti na jednom od četiri jezika savjetovanja, možete poslati sažetak na pregled.',
           ],
         },
         {
           heading: 'Kada nas kontaktirate',
           paragraphs: [
-            'Nakon primitka Vašeg sažetka odvjetnica ili odvjetnik pregledava sadržaj i zatim govori o mogućem opsegu rada, o još potrebnim ispravama i o sljedećim koracima. Kod poreznih ili računovodstvenih pitanja ured može s računovodstvenim odjelom raditi u jednom zajedničkom postupku.',
+            'Nakon primitka Vašeg sažetka odvjetnica ili odvjetnik pregledava sadržaj i zatim govori o mogućem opsegu rada, o još potrebnim ispravama i o sljedećim koracima. Kod poreznih ili računovodstvenih pitanja ured može raditi zajedno s računovodstvenim odjelom.',
             'Ishod svakog predmeta ovisi o činjenicama i o dostupnim ispravama; ishod ne obećavamo. Ako trebate obvezujući odgovor za svoju situaciju, isprave se moraju raspraviti s odvjetnicom ili odvjetnikom na jednom od četiri jezika savjetovanja.',
           ],
         },
@@ -1204,7 +1204,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Troškovi se potvrđuju prije početka rada',
           paragraphs: [
-            'Kada je opseg rada jasan, iznos i način izračuna troškova s Vama se raspravlja i potvrđuje prije nego rad počne. Ako se opseg tijekom rada promijeni, mora se ponovno potvrditi.',
+            'Kada je opseg rada jasan, iznos i način izračuna troškova raspravljaju se s Vama i potvrđuju prije nego što rad počne. Ako se opseg tijekom rada promijeni, mora se ponovno potvrditi.',
             'Ova stranica nije ponuda cijene i ne uspostavlja obvezu plaćanja.',
           ],
         },
@@ -1212,13 +1212,13 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Savjetovanje može biti naplatno',
           paragraphs: [
             'Savjetovanje s odvjetnicom ili odvjetnikom može biti naplatna usluga. Ova stranica ne kaže da je prvo savjetovanje besplatno i nijedan njezin dio ne smije se tako tumačiti.',
-            'Ako je savjetovanje naplatno, iznos i način plaćanja priopćuju se prije nego se savjetovanje održi.',
+            'Ako je savjetovanje naplatno, iznos i način plaćanja priopćuju se prije nego što se savjetovanje održi.',
           ],
         },
         {
           heading: 'Zašto ova stranica ne navodi tarife',
           paragraphs: [
-            'Troškovi ovise o samom predmetu: o trudu, broju stranaka, ispravama, rokovima i o tome je li postupak već u tijeku. Brojka unaprijed određena ne bi pokazala troškove Vašeg spisa. Stoga najprije utvrđujemo opseg rada i troškove Vam priopćujemo potom, prije nego rad počne.',
+            'Troškovi ovise o samom predmetu: o trudu, broju stranaka, ispravama, rokovima i o tome je li postupak već u tijeku. Unaprijed navedeni iznos ne bi odražavao troškove Vašeg predmeta. Stoga najprije utvrđujemo opseg rada i troškove Vam priopćujemo potom, prije nego što rad počne.',
             'Uz nagradu mogu nastati sudske pristojbe, troškovi tijela ili trećih osoba. Oni su od nagrade odvojeni i ovise o mjerodavnom postupku.',
           ],
         },
@@ -1230,7 +1230,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Jezik stranice, jezici savjetovanja, postupak ako ne govorite nijedan od četiri jezika i što ova stranica ne obećava.',
       intro:
-        'Prije nego nam napišete, razlikujte sljedeće tri točke. Često se miješaju, ali znače različite stvari.',
+        'Prije nego što nam se javite, razlikujte sljedeće tri točke. Često se miješaju, ali znače različite stvari.',
       sections: [
         {
           heading: 'Tri stvari koje treba držati odvojeno',
@@ -1246,7 +1246,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ako ne govorite nijedan od četiri jezika savjetovanja',
           paragraphs: [
-            'U kontaktnom obrascu možete odabrati „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
+            'U kontaktnom obrascu možete odabrati „Način komunikacije treba potvrditi”. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
             'Riječ je samo o procjeni, a ne o obećanju. Ne obećavamo tumača, uslugu na hrvatskom ni na drugom jeziku izvan četiri navedena jezika, niti da ćemo svaki predmet prihvatiti.',
           ],
         },
@@ -1261,7 +1261,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Što ova stranica ne obećava',
           paragraphs: [
             'Ne obećavamo rok za odgovor, ne potvrđujemo sastanak putem ove stranice, ne obećavamo određenu odvjetnicu ni određenog odvjetnika i ne osiguravamo tumača. Pisani prijevod je nešto drugo: Vaša se poruka ne prevodi automatski.',
-            'Ako pošaljete zahtjev, sadržaj se čuva i čeka pregled. Ako nakon nekog vremena ne primite odgovor, možete ponovno napisati na adresu e-pošte navedenu na kontaktnoj stranici.',
+            'Ako pošaljete zahtjev, sadržaj se čuva i čeka pregled. Ako nakon nekog vremena ne primite odgovor, možete se ponovno javiti na adresu e-pošte navedenu na kontaktnoj stranici.',
           ],
         },
       ],
@@ -1277,7 +1277,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kako rabiti ovaj dio',
           paragraphs: [
-            'Ako ne nađete odgovor za svoju situaciju, odgovor u pravilu ovisi o posebnim činjenicama. Napišite ih stoga u sažetak, umjesto da ih izvodite iz ove stranice.',
+            'Ako ne nađete odgovor za svoju situaciju, odgovor u pravilu ovisi o posebnim činjenicama. Napišite ih stoga u sažetak, umjesto da odgovor izvodite iz ove stranice.',
           ],
         },
       ],
@@ -1285,7 +1285,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Koje predmete ured vodi?',
           answer:
-            'Vodimo šest područja: ulaganja i osnivanje društava na Tajvanu, građanskopravne sporove i naknadu štete, brak, obitelj i nasljeđivanje, radnopravne sporove, kaznene predmete i intelektualno vlasništvo. Hoće li se predmet prihvatiti, odlučuje se nakon pregleda sadržaja.',
+            'Vodimo šest područja: ulaganja i osnivanje društava na Tajvanu, građanskopravne sporove i naknadu štete, brak, obitelj i nasljeđivanje, radnopravne sporove, kaznene predmete i intelektualno vlasništvo. O prihvaćanju predmeta odlučujemo nakon pregleda sadržaja.',
         },
         {
           question: 'Što pripremiti prije kontakta?',
@@ -1300,7 +1300,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Što učiniti ako se ne mogu služiti nijednim od četiri jezika?',
           answer:
-            'Pri slanju zahtjeva odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili način komunikacije, ali usluga na drugom jeziku nije zajamčena. Riječ je o procjeni, a ne o obećanju da možemo raditi na drugom jeziku.',
+            'Pri slanju zahtjeva odaberite „Način komunikacije treba potvrditi”. Odgovorit ćemo kako bismo procijenili način komunikacije, ali usluga na drugom jeziku nije zajamčena. Riječ je o procjeni, a ne o obećanju da možemo raditi na drugom jeziku.',
         },
         {
           question: 'Kako se postupa s mojim tekstom na hrvatskom?',
@@ -1315,7 +1315,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kako se izračunavaju troškovi?',
           answer:
-            'Najprije se utvrđuje opseg rada, zatim se s Vama potvrđuju iznos i način izračuna troškova, prije nego rad počne. Ova stranica ne navodi iznose i ne kaže da je prvo savjetovanje besplatno.',
+            'Najprije se utvrđuje opseg rada, zatim se s Vama potvrđuju iznos i način izračuna troškova, prije nego što rad počne. Ova stranica ne navodi iznose i ne kaže da je prvo savjetovanje besplatno.',
         },
         {
           question: 'Što učiniti ako je moj predmet vrlo hitan?',

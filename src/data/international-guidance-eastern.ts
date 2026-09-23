@@ -566,7 +566,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Ellenőrizte Wei Tseng ügyvédnő',
     columnsOriginalLanguageBadge: 'Eredeti nyelv',
     columnsOriginalLanguageNote:
-      'A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalom automatikusan nem kerül fordításra.',
+      'A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalmat automatikusan nem fordítjuk le.',
     imageBandAlt: 'Hagyományos tajvani háromszárnyú udvarház (三合院) és egy modern pavilon nappali fényben',
     videoPauseLabel: 'Videó szüneteltetése',
     videoPlayLabel: 'Videó lejátszása',
@@ -575,11 +575,11 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
   pages: {
     home: {
       eyebrow: 'TÁJÉKOZTATÁS',
-      title: 'Jogi szolgáltatások Tajvanon — magyar nyelvű tájékoztatás',
+      title: 'Jogi szolgáltatások Tajvanon – magyar nyelvű tájékoztatás',
       description:
         'Általános magyar nyelvű ismertetés a Hovering International Law Firm tajvani munkájának köréről, a tanácsadás nyelveiről és az első kapcsolatfelvételről.',
       intro:
-        'A Hovering International Law Firm külföldi ügyfeleket képvisel és támogat — köztük tajvani kötődésűeket — tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
+        'A Hovering International Law Firm külföldi ügyfeleket képvisel és támogat – köztük tajvani kötődésűeket – tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
       sections: [
         {
           heading: 'Mivel foglalkozunk',
@@ -637,7 +637,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Polgári jogviták és kártérítés',
           paragraphs: [
             'Ez a csoport szerződéses jogvitákat, jogellenes károkozásból eredő kártérítést és fogyasztói jogvitákat foglal magában. A munka rendszerint az események időrendjével, az iratok és a meglévő bizonyítékok áttekintésével kezdődik, és csak ezután következnek a további lépések.',
-            'A menetet a határidők — köztük az elévülés — és a bizonyítékok teljessége szabják meg. Ezért az ismert dátumokat minél előbb adja meg. Őrizze meg a szerződéseket, üzeneteket, fizetési bizonylatokat vagy a helyszínről készült fényképeket, és említse meg őket az első üzenetben.',
+            'A menetet a határidők – köztük az elévülés – és a bizonyítékok teljessége szabják meg. Ezért az ismert dátumokat minél előbb adja meg. Őrizze meg a szerződéseket, üzeneteket, fizetési bizonylatokat vagy a helyszínről készült fényképeket, és említse meg őket az első üzenetben.',
           ],
         },
         {
@@ -658,7 +658,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Büntetőügyek',
           paragraphs: [
             'A nyomozási szakaszban és a bíróság előtt egyaránt képviseljük az ügyfeleket, gyanúsítottakat és vádlottakat éppúgy, mint sértetteket, és vizsgáljuk az üzleti tevékenység büntetőjogi kockázatait.',
-            'A büntetőügyekben gyakran rövidek a határidők, és a szakaszok kötöttek. Ha már kapott iratot a nyomozó hatóságtól vagy a bíróságtól, adja meg időben az iraton szereplő dátumot, hogy a tartalom a megfelelő sorrendben kerüljön vizsgálatra.',
+            'A büntetőügyekben gyakran rövidek a határidők, és a szakaszok kötöttek. Ha már kapott iratot a nyomozó hatóságtól vagy a bíróságtól, adja meg időben az iraton szereplő dátumot, hogy a tartalmat a megfelelő sorrendben tudjuk megvizsgálni.',
           ],
         },
         {
@@ -688,7 +688,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Alapítás és felépítés',
           paragraphs: [
-            'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University-n (國立臺灣大學) végzett ügyvédek. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítása óta követett irányát fejezi ki.',
+            'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban a National Taiwan Universityn (國立臺灣大學) végzett ügyvédek alapították. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítása óta követett irányát fejezi ki.',
             'Irodáink Tajpejben (臺北), Kaohsziungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. A kaohsziungi iroda a vállalatirányításra összpontosít, és polgári, büntető- és közigazgatási jogvitákban jár el. A tajcsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
             'Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonos magánszemélyeknek.',
           ],
@@ -722,7 +722,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
       description:
         'A sorrend ismertetése: előbb a munka terjedelme, majd a költségek megerősítése, és hogy ez az oldal miért nem tartalmaz árlistát.',
       intro:
-        'Ez az oldal azt ismerteti, hogyan alakulnak a költségek, nem pedig azok összegét. Az összeg az adott ügy munkaterjedelmétől függ, és csak akkor mond valamit, ha ez a terjedelem világos.',
+        'Ez az oldal azt ismerteti, hogyan alakulnak a költségek, nem pedig azok összegét. Az összeg az adott ügy munkaterjedelmétől függ, és csak akkor értelmezhető, ha ez a terjedelem világos.',
       sections: [
         {
           heading: 'Először a munka terjedelmét rögzítjük',
@@ -791,7 +791,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Amit ez az oldal nem ígér',
           paragraphs: [
             'Nem ígérünk válaszadási határidőt, ezen az oldalon keresztül nem erősítünk meg időpontot, nem ígérünk meghatározott ügyvédet, és tolmácsot sem biztosítunk. Az írásbeli fordítás más kérdés: az üzenetét automatikusan nem fordítjuk le.',
-            'Ha megkeresést küld, a tartalom megőrzésre kerül, és vizsgálatra vár. Ha egy idő után nem kap választ, újra írhat a kapcsolatfelvételi oldalon megadott e-mail-címre.',
+            'Ha megkeresést küld, a tartalmát megőrizzük, és az vizsgálatra vár. Ha egy idő után nem kap választ, újra írhat a kapcsolatfelvételi oldalon megadott e-mail-címre.',
           ],
         },
       ],
@@ -807,7 +807,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hogyan használja ezt a részt',
           paragraphs: [
-            'Ha nem talál választ a saját helyzetére, a válasz rendszerint az ügy konkrét tényeitől függ. Ezeket írja bele az összefoglalóba ahelyett, hogy ebből az oldalból következtetne rájuk.',
+            'Ha nem talál választ a saját helyzetére, a válasz rendszerint az ügy konkrét tényeitől függ. Ezeket a tényeket írja bele az összefoglalóba, ahelyett hogy a választ vezetné le ebből az oldalból.',
           ],
         },
       ],
@@ -895,14 +895,14 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'A felhasználás célja',
           paragraphs: [
-            'Az elküldött adatok a megkeresés vizsgálatát, az Önnek adott választ, a kommunikáció módjának tisztázását és — ha a munkát elvállaljuk — az ügyintézést szolgálják.',
+            'Az elküldött adatok a megkeresés vizsgálatát, az Önnek adott választ, a kommunikáció módjának tisztázását és – ha a munkát elvállaljuk – az ügyintézést szolgálják.',
             'Az adatokat külön hozzájárulás nélkül nem használjuk marketingre.',
           ],
         },
         {
           heading: 'Értesítés és iktatószám',
           paragraphs: [
-            'Ha a megkeresés sikeresen elküldésre kerül, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.',
+            'Ha a megkeresés elküldése sikerül, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.',
             'Az iktatószám a megkeresés visszakeresésére szolgál a nyilvántartásunkban. A mentés után jelenik meg; új kapcsolatfelvételkor megadhatja.',
           ],
         },
@@ -926,9 +926,9 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'JOGI KÖZLEMÉNY',
       title: 'Az oldalon szereplő tájékoztatás köre és korlátai',
       description:
-        'A tájékoztatás általános jellege, a jogi keret, és az ügyvéd–ügyfél viszony létrejöttének feltételei.',
+        'A tájékoztatás általános jellege, a jogi keret és az ügyvéd–ügyfél viszony létrejöttének feltételei.',
       intro:
-        'Ez a rész tisztázza, mit tudnak ezek a magyar tájékoztató oldalak megtenni Önért, és mit nem.',
+        'Ez a rész tisztázza, mire jók ezek a magyar tájékoztató oldalak, és mire nem.',
       sections: [
         {
           heading: 'Csak általános tájékoztatás',
@@ -969,7 +969,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         'Az iroda cikkeket tesz közzé a tajvani jog gyakori kérdéseiről. A magyarul elérhető cikkek ezen az oldalon vannak; mellettük négy hivatkozás található, amelyek egy-egy eredeti nyelvű cikklistát nyitnak meg.',
       sections: [
         {
-          heading: 'Négy lista nyelvenként',
+          heading: 'Négy lista, nyelvek szerint',
           paragraphs: [
             'Ez a rész négy hivatkozást tartalmaz: a koreai, a kínai, az angol és a japán nyelvű cikkek listáját. Mindegyik hivatkozás megjelöli a lista nyelvét, így előre tudja, milyen nyelven nyílik meg a tartalom.',
             'Ez a négy lista a cikkek eredeti nyelve szerinti lista, nem a fordításoké. A magyarul elérhető cikkek külön, ezen az oldalon találhatók.',

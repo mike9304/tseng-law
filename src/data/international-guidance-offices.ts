@@ -597,7 +597,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapPreviewLabel: 'Térkép előnézete',
     koreaOfficeTitle: 'Koreai iroda',
     koreaAddressCardLabel: 'A koreai iroda címe',
-    koreaMapLinkLabel: 'Megtekintés a Naver Map-en',
+    koreaMapLinkLabel: 'Megtekintés a Naver Mapen',
     reviewCountWord: 'értékelés',
     phoneLabel: 'Telefon',
     faxLabel: 'Fax',

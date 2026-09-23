@@ -21,7 +21,7 @@ Különösen, ha a munkavállaló saját elhatározásából távozik (自請離
 
 nem kaphat végkielégítést (資遣費) (a munkaügyi törvény 18. cikke),
 
-ami egyes más jogrendszerektől — például Koreától — eltér.
+ami egyes más jogrendszerektől – például Koreától – eltér.
 
 ​
 
@@ -31,7 +31,7 @@ Vannak azonban **kivételes esetek**.
 
 A következő különös helyzetekben, még ha a munkavállaló saját elhatározásából távozik is, a munkáltató köteles végkielégítést fizetni (a munkaügyi törvény 14. cikke, amely megfelelően alkalmazza a 17. cikket; 勞動基準法第14條):
 
-1. Ha a munkáltató a munkaszerződés (勞動契約) megkötésekor színlelt akaratnyilatkozatot (虛偽意思表示) tesz, úgy hogy a munkavállaló tévedésbe esik, és kár bekövetkezésének kockázata áll fenn
+1. Ha a munkáltató a munkaszerződés (勞動契約) megkötésekor színlelt akaratnyilatkozatot (虛偽意思表示) tesz, és ezzel a munkavállalót tévedésbe ejti, továbbá kár bekövetkezésének kockázata áll fenn
 
 (például ha a munkáltató azt mondja a munkavállalónak, hogy belépéskor olyan külföldi fióktelepre küldi, amely valójában nem létezik)
 
@@ -41,9 +41,9 @@ A következő különös helyzetekben, még ha a munkavállaló saját elhatáro
 
 4. Ha a munkáltató, képviselője vagy más munkavállaló törvényes fertőző betegségben (法定傳染病) szenved, az együtt dolgozó munkavállalók fertőződésének kockázata áll fenn, és ez súlyos veszélyt jelent a munkavállaló egészségére
 
-5. Ha a munkáltató nem fizeti a munkaszerződés szerinti díjazást (工作報酬), vagy nem biztosít elegendő munkát annak a munkavállalónak, akinek a díjazása darabbérben számolódik (按件計酬)
+5. Ha a munkáltató nem fizeti a munkaszerződés szerinti díjazást (工作報酬), vagy nem biztosít elegendő munkát annak a munkavállalónak, akinek a díjazását darabbér szerint számítják (按件計酬)
 
-6. Ha a munkáltató megsérti a munkaszerződést vagy a munkaügyi jogot, úgy hogy a munkavállaló jogai és érdekei sérelmének kockázata áll fenn
+6. Ha a munkáltató megsérti a munkaszerződést vagy a munkaügyi jogot, és emiatt fennáll a munkavállaló jogai és érdekei sérelmének kockázata
 
 ​
 
@@ -55,15 +55,15 @@ nem fizeti a túlóra-pótlékot (加班費),
 
 vagy nem jelenti be a munkavállalót a munkaügyi biztosításba (勞保) vagy az egészségbiztosításba (健保).
 
-Ilyen esetekben, még ha a munkavállaló szokásos módon fejezi is be a munkaszerződést, a munkáltató köteles végkielégítést fizetni.
+Ilyen esetekben, még ha a munkavállaló a szokásos módon szünteti is meg a munkaszerződést, a munkáltató köteles végkielégítést fizetni.
 
 ​
 
 A munkaügyi törvény (勞動基準法) azonban úgy rendelkezik, hogy
 
-ha a munkavállaló a fenti 1. vagy 6. pont alapján kívánja befejezni a munkaszerződést (például azért, hogy a szerződés a biztosításba be nem jelentés miatt szűnjön meg),
+ha a munkavállaló a fenti 1. vagy 6. pont alapján kívánja megszüntetni a munkaszerződést (például azért, hogy a szerződés a biztosításba be nem jelentés miatt szűnjön meg),
 
-a munkaszerződést **30 napon** belül kell befejeznie attól a naptól, amikor e helyzetet megismerte,
+a munkaszerződést **30 napon** belül kell megszüntetnie attól a naptól számítva, amikor a helyzetről tudomást szerzett,
 
 vagy, a 6. pont esetén, **30 napon** belül attól a naptól, amikor a bekövetkezett kárról tudomást szerzett.
 
@@ -71,21 +71,21 @@ A munkavállalónak tehát jól kell kezelnie a határidőt.
 
 ​
 
-A szabály a hiba oldalától függ.
+Az a döntő, melyik felet terheli a felelősség.
 
-Tajvan joga aszerint ad jogot, hogy a hiba a munkáltató oldalán van-e,
+Tajvan joga aszerint ad jogot, hogy a felelősség a munkáltatót terheli-e,
 
-vagy a munkavállaló oldalán:
+vagy a munkavállalót:
 
-ha a munkavállaló a hibás, a munkáltató megtagadhatja a végkielégítést; ha a munkáltató a hibás, a munkavállaló követelheti.
+ha a munkavállaló a felelős, a munkáltató megtagadhatja a végkielégítést; ha a munkáltató a felelős, a munkavállaló követelheti.
 
-Néha, ha a munkaviszony mindkét oldalán van hiba,
+Néha, ha a munkaviszony mindkét oldalán fennáll felelősség,
 
 és vita robban ki,
 
-Azt kell nézni, ki fejezi be először a szerződést elegendő alappal.
+azt kell vizsgálni, ki szünteti meg először a szerződést elegendő alappal.
 
-Az a fél, amely először fejezi be a szerződést elegendő alappal, megtagadhatja a végkielégítés kifizetését, vagy követelheti azt.
+Az a fél, amely először szünteti meg a szerződést elegendő alappal, megtagadhatja a végkielégítés kifizetését, vagy követelheti azt.
 
 Ezért a tajvani munkaügyi vitákban (勞資糾紛)
 

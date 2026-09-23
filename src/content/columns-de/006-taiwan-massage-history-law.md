@@ -51,11 +51,11 @@ durften tatsächlich nur sehbehinderte Personen (視障者) im Massagegewerbe (�
 
 Für nicht sehbehinderte Personen (非視障者) war die Ausübung dieses Gewerbes rechtswidrig.
 
-Diese Regelung galt bis 2003 fort; damals beschäftigte Herr Lin, der einen Friseursalon betrieb,
+Diese Regelung galt bis 2003 fort. Damals betrieb Herr Lin einen Friseursalon.
 
-zwei nicht sehbehinderte Beschäftigte für Haarwäsche und Massage und wurde von der Polizei festgestellt.
+Die Polizei stellte fest, dass er zwei nicht sehbehinderte Beschäftigte für Haarwäsche und Massage beschäftigte.
 
-Nach dem damaligen Recht wurden Herr Lin und die zwei Beschäftigten jeweils mit Geldbußen (罰鍰) von TWD 40.000, TWD 10.000 und TWD 20.000 (新臺幣) belegt.
+Nach dem damaligen Recht wurde Herr Lin mit einer Geldbuße (罰鍰) von TWD 40.000 (新臺幣) belegt, die beiden Beschäftigten mit TWD 10.000 und TWD 20.000.
 
 Herr Lin hielt diese Sanktion für sehr ungerecht und beantragte eine Verfassungsauslegung.
 

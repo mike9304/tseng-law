@@ -37,7 +37,7 @@ Auch wenn diese vier Fragen in demselben Vertrag stehen, unterscheiden sich anwe
 
 Die Vereinbarung ist nicht automatisch unwirksam. Nach Artikel 15-1 des taiwanesischen Arbeitsstandardsgesetzes (勞動基準法) können die gesetzlichen Voraussetzungen der Vereinbarung über eine Mindestbeschäftigungsdauer erfüllt sein, wenn der Arbeitgeber fachlich-technische Schulung (專業技術培訓) durchführt und die Kosten trägt oder eine angemessene Gegenleistung (合理補償) dafür gewährt, dass die beschäftigte Person die Mindestbeschäftigungsdauer einhält. Beide Voraussetzungen müssen nicht zugleich vorliegen; liegt jedoch eine vor, darf die Vereinbarung nach den gesamten Umständen wie Schulungsdauer und -kosten, Ersetzbarkeit der Arbeitskraft (人力替補可能性) sowie Betrag und Umfang der Gegenleistung den angemessenen Rahmen nicht überschreiten.
 
-Artikel 15-1 Absatz 1 regelt zwei gesetzliche Voraussetzungen wahlweise. Die erste ist, dass der Arbeitgeber der beschäftigten Person fachlich-technische Schulung gewährt und deren Kosten trägt; die zweite ist, dass er für die Einhaltung der Mindestbeschäftigungsdauer eine angemessene Gegenleistung gewährt. Nicht die Bezeichnung im Vertrag, sondern welche Grundlage tatsächlich besteht, ist zu prüfen.
+Artikel 15-1 Absatz 1 nennt zwei alternative gesetzliche Voraussetzungen. Die erste ist, dass der Arbeitgeber der beschäftigten Person fachlich-technische Schulung gewährt und deren Kosten trägt; die zweite ist, dass er für die Einhaltung der Mindestbeschäftigungsdauer eine angemessene Gegenleistung gewährt. Nicht die Bezeichnung im Vertrag, sondern welche Grundlage tatsächlich besteht, ist zu prüfen.
 
 Artikel 15-1 verlangt eine der beiden gesetzlichen Voraussetzungen und eine gesonderte Angemessenheitsprüfung. Das bedeutet weder, dass fachlich-technische Schulung und angemessene Gegenleistung stets zugleich zu gewähren sind, noch, dass die bloße formelle Nennung einer von beiden die gesamte Vereinbarung automatisch wirksam macht.
 
@@ -126,13 +126,13 @@ Kündigung, einvernehmliche Beendigung und Behauptung der Verletzung von Arbeits
 
 Die Beurteilung der Beendigungsursache beeinflusst unmittelbar auch den Rückzahlungsumfang. Gilt Absatz 4, können der beschäftigten Person keine Haftung wegen Verletzung der Mindestbeschäftigungsdauer und keine Haftung auf Erstattung von Schulungskosten auferlegt werden; vor der Formelberechnung ist daher zuerst die Zurechnung zu prüfen. Gibt es im Voraus gezahlte Leistungen und sonstige gesonderte Ansprüche gemeinsam, sind rechtliche Natur und Grundlage jedes Anspruchs getrennt zu prüfen.
 
-## 8. Kündigungserklärung und Ankündigungsfrist sind eine gesonderte Frage
+## 8. Kündigungserklärung und Kündigungsfrist sind eine gesonderte Frage
 
-Die Vereinbarung über eine Mindestbeschäftigungsdauer ist kein Mittel, das die beschäftigte Person tatsächlich oder rechtlich am Ausscheiden hindert. Kündigungserklärung und Ankündigungsfrist betreffen, wann das Arbeitsverhältnis endet; Wirksamkeit der Mindestbeschäftigungsdauer und Haftung auf Kostenerstattung betreffen, ob mit der Beendigung vermögensrechtliche Haftung verbunden ist.
+Die Vereinbarung über eine Mindestbeschäftigungsdauer ist kein Mittel, das die beschäftigte Person tatsächlich oder rechtlich am Ausscheiden hindert. Kündigungserklärung und Kündigungsfrist betreffen, wann das Arbeitsverhältnis endet; Wirksamkeit der Mindestbeschäftigungsdauer und Haftung auf Kostenerstattung betreffen, ob mit der Beendigung vermögensrechtliche Haftung verbunden ist.
 
-Beendet die beschäftigte Person einen unbefristeten Arbeitsvertrag, gilt nach Artikel 15 des taiwanesischen Arbeitsstandardsgesetzes die Ankündigungsfrist des Artikels 16 Absatz 1 entsprechend. Artikel 16 ist eine Vorschrift über die Vertragsbeendigung durch den Arbeitgeber; auf die Kündigung durch die beschäftigte Person findet diese Ankündigungsfrist über Artikel 15 Anwendung.
+Beendet die beschäftigte Person einen unbefristeten Arbeitsvertrag, gilt nach Artikel 15 des taiwanesischen Arbeitsstandardsgesetzes die Kündigungsfrist des Artikels 16 Absatz 1 entsprechend. Artikel 16 ist eine Vorschrift über die Vertragsbeendigung durch den Arbeitgeber; auf die Kündigung durch die beschäftigte Person findet diese Kündigungsfrist über Artikel 15 Anwendung.
 
-Die Ankündigungsfristen nach ununterbrochener Beschäftigungsdauer sind wie folgt.
+Die Kündigungsfristen nach ununterbrochener Beschäftigungsdauer sind wie folgt.
 
 1. Bei 3 Monaten oder mehr und weniger als 1 Jahr: 10 Tage
 2. Bei 1 Jahr oder mehr und weniger als 3 Jahren: 20 Tage
@@ -140,13 +140,13 @@ Die Ankündigungsfristen nach ununterbrochener Beschäftigungsdauer sind wie fol
 
 Für befristete Arbeitsverträge zu einer bestimmten Aufgabe, deren Vertragsdauer 3 Jahre überschreitet, gilt eine gesonderte Regelung des Artikels 15. Die beschäftigte Person kann nach 3 Jahren Beschäftigung mit Ankündigung 30 Tage vorher gegenüber dem Arbeitgeber den Vertrag beenden. Diese Vorschrift ist von den nach ununterbrochener Beschäftigungsdauer geltenden Ankündigungsregeln unbefristeter Arbeitsverträge zu unterscheiden.
 
-Bei ununterbrochener Beschäftigung unter 3 Monaten, anderen Arten befristeter Verträge und geltend gemachten gesetzlichen Gründen sofortiger Beendigung sind anwendbare Vorschriften und Tatsachen einzeln zu prüfen. Allein weil der Vertrag eine längere Ankündigungsfrist nennt oder sofortige Übergabe verlangt, kann die gesetzliche Schlussfolgerung nicht vorab festgelegt werden.
+Bei ununterbrochener Beschäftigung unter 3 Monaten, anderen Arten befristeter Verträge und geltend gemachten gesetzlichen Gründen sofortiger Beendigung sind anwendbare Vorschriften und Tatsachen einzeln zu prüfen. Allein weil der Vertrag eine längere Kündigungsfrist nennt oder sofortige Übergabe verlangt, kann die gesetzliche Schlussfolgerung nicht vorab festgelegt werden.
 
 In der Praxis sind Inhalt und Übermittlungsdatum der Kündigungserklärung, der tatsächliche Empfangstag durch den Arbeitgeber und die Kommunikation der Parteien zum letzten Arbeitstag zu sichern. Trennt man den Zeitpunkt wirksamen Ausscheidens, die Wirksamkeit der Mindestbeschäftigungsdauer, die Erstattung von Schulungskosten oder im Voraus gezahlten Leistungen und den gesondert behaupteten Schaden in vier Fragen, verringert man den Fehler, aus einer Vertragsklausel alle Schlüsse zu ziehen.
 
 ## 9. Prüfliste für Arbeitgeber und Beschäftigte
 
-Zur Vorbeugung von Streit oder zur Prüfung bereits erhobener Ansprüche darf man nicht nur den Vertrag lesen, sondern muss zeitlich geordnete Unterlagen zu Schulung, Zahlung, Beschäftigung und Beendigung gemeinsam ordnen. Besonders hilft eine Tabelle, die zeigt, wie viel der vereinbarten Dauer erfüllt ist und wie viel verbleibt und welchen Unterlagen die behaupteten Kosten und Gegenleistungen entsprechen, die Streitpunkte zu trennen.
+Zur Vorbeugung von Streit oder zur Prüfung bereits erhobener Ansprüche darf man nicht nur den Vertrag lesen, sondern muss zeitlich geordnete Unterlagen zu Schulung, Zahlung, Beschäftigung und Beendigung gemeinsam ordnen. Besonders hilfreich ist eine Tabelle, die zeigt, wie viel der vereinbarten Dauer erfüllt ist, wie viel verbleibt und welchen Unterlagen die behaupteten Kosten und Gegenleistungen entsprechen. Sie hilft, die Streitpunkte zu trennen.
 
 ### Was der Arbeitgeber prüfen sollte
 
@@ -189,6 +189,6 @@ Beim zeitlichen Ordnen der Unterlagen sollten Vertragsschlussdatum, Schulungsbeg
 
 ---
 
-Dieser Beitrag ist Bildungsmaterial zur allgemeinen Erläuterung der Vereinbarung über eine Mindestbeschäftigungsdauer, der Erstattung von Schulungskosten und im Voraus gezahlten Leistungen sowie der Kündigungserklärung und der Ankündigungsfrist in Taiwan und keine Rechtsberatung für einzelne Arbeitssachen. Wirksamkeit der Vereinbarung und Haftungsumfang können nach Vertragstyp und Klausel, tatsächlicher Schulung und Kosten, Zweck und Mitteilung der Gegenleistung, Beschäftigungsdauer, Beendigungsursache und Beweisen abweichen. Vor einer Kündigungserklärung, Gehaltsabzug, Rückzahlungsvereinbarung oder Streitbearbeitung prüfen Sie bitte die neuesten amtlichen Unterlagen und die Umstände des Einzelfalls.
+Dieser Beitrag ist Bildungsmaterial zur allgemeinen Erläuterung der Vereinbarung über eine Mindestbeschäftigungsdauer, der Erstattung von Schulungskosten und im Voraus gezahlten Leistungen sowie der Kündigungserklärung und der Kündigungsfrist in Taiwan und keine Rechtsberatung für einzelne Arbeitssachen. Wirksamkeit der Vereinbarung und Haftungsumfang können nach Vertragstyp und Klausel, tatsächlicher Schulung und Kosten, Zweck und Mitteilung der Gegenleistung, Beschäftigungsdauer, Beendigungsursache und Beweisen abweichen. Vor einer Kündigungserklärung, Gehaltsabzug, Rückzahlungsvereinbarung oder Streitbearbeitung prüfen Sie bitte die neuesten amtlichen Unterlagen und die Umstände des Einzelfalls.
 
 **Rechtsanwältin Wei Tseng (曾雋崴)**

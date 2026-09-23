@@ -175,7 +175,7 @@ Die Versicherungspflicht nach Artikel 6 des Gesetzes über die obligatorische Kr
 
 Bei Alleinunfällen eines Fahrzeugs ist dessen Fahrer in der Regel nicht Leistungsempfänger der obligatorischen Versicherung dieses Fahrzeugs. Bei Unfällen mit mehreren Fahrzeugen kann der Fahrer jedoch Leistungen beim obligatorischen Versicherer eines anderen beteiligten Fahrzeugs verlangen.
 
-Der am 29. Mai 2026 geänderte Leistungsmaßstab (強制汽車責任保險給付標準) gilt für Unfälle ab dem 1. Juli 2026. Die Obergrenze erforderlicher angemessener Heilbehandlungskosten bei Verletzung beträgt TWD 200.000, Invaliditätsleistungen (失能) nach den gesetzlichen 15 Stufen TWD 80.000–3.000.000, die Todesleistung TWD 3.000.000, und der Höchstbetrag aus Tod, Invalidität und Heilbehandlungskosten je 1 verletzter Person und je 1 Unfall beträgt TWD 3.200.000. Für frühere Unfälle kann der frühere Maßstab gelten.
+Der am 29. Mai 2026 geänderte Leistungsmaßstab (強制汽車責任保險給付標準) gilt für Unfälle ab dem 1. Juli 2026. Die Obergrenze erforderlicher angemessener Heilbehandlungskosten bei Verletzung beträgt TWD 200.000, Invaliditätsleistungen (失能) nach den gesetzlichen 15 Stufen TWD 80.000–3.000.000, die Todesleistung TWD 3.000.000, und der Höchstbetrag aus Tod, Invalidität und Heilbehandlungskosten je verletzter Person und je Unfall (eine Person und 1 Unfall) beträgt TWD 3.200.000. Für frühere Unfälle kann der frühere Maßstab gelten.
 
 Haftpflichtversicherung gegenüber Dritten (第三人責任險), Fahrerunfallversicherung (駕駛人傷害險) und Kaskoversicherung (車體損失險) sind vertragliche Wahlprodukte. Die tatsächliche Deckung hängt von der versicherten Person, der Deckungssumme, dem Selbstbehalt (自負額), den Ausschlüssen, der Fahrlässigkeit und den sonstigen Bedingungen der Police ab; Versicherungsschein und Bedingungen sind einzeln zu prüfen.
 
@@ -299,7 +299,7 @@ Q20. Wie findet man einen Anwalt für Verkehrsunfälle?
 
 ​
 
-Verkehrsunfälle sind sehr häufige Sachen; ein allgemeiner Prozessanwalt kann nach wenigen Jahren Praxiserfahrung Verkehrsunfallsachen bearbeiten.
+Weil Verkehrsunfälle sehr häufige Sachen sind, kann eine Anwältin oder ein Anwalt mit allgemeiner Prozesserfahrung sie nach wenigen Jahren Praxis bearbeiten.
 
 ​
 
@@ -335,11 +335,11 @@ Nach der Bearbeitung vieler Verkehrsunfälle ist ein Punkt hervorzuheben.
 
 ​
 
-Durch Verletzung oder Tod erleiden die geschädigte Person selbst oder ihre Familie körperliches und seelisches Leid.
+Durch Verletzung oder Tod erleidet die geschädigte Person selbst oder ihre Familie körperliches und seelisches Leid.
 
 ​
 
-Viele Verursacher kümmern sich nicht darum, telefonisch nach dem Befinden zu fragen oder zu besuchen, und denken, die Versicherungsgesellschaft werde alles erledigen, sodass sie selbst nicht erscheinen. Dann werden Reue und Ernsthaftigkeit nicht gespürt.
+Viele Verursacher rufen nicht an, fragen nicht nach dem Befinden und kommen nicht zu Besuch. Sie meinen, die Versicherungsgesellschaft werde alles erledigen, und kommen selbst nicht persönlich. Dann nimmt die geschädigte Person weder Reue noch Ernsthaftigkeit wahr.
 
 ​
 
@@ -347,7 +347,7 @@ Viele Verursacher kümmern sich nicht darum, telefonisch nach dem Befinden zu fr
 
 ​
 
-Dadurch fühlt sich die geschädigte Person tief gekränkt und reagiert mit Zorn, gibt bei der Verhandlungssumme nicht nach oder beantragt Arrest (假扣押) und pfändet das Vermögen der Gegenseite bis zum Ende.
+Dadurch fühlt sich die geschädigte Person tief gekränkt und reagiert mit Zorn, gibt bei der Vergleichssumme nicht nach oder beantragt Arrest (假扣押) und pfändet das Vermögen der Gegenseite bis zum Ende.
 
 ​
 

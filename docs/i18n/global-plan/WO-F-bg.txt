@@ -1,14 +1,14 @@
-WO-F-bg — Apply the accepted native-review fixes to the Bulgarian content (Grok 4.7 fix lane, campaign round 4)
+WO-F-bg — Apply the accepted native-review fixes to the Bulgarian content (Grok 4.7 fix lane, campaign round 5)
 
-Workspace (yours alone): /Users/son7/Projects/tseng-law-fix-bg-r4
-Do NOT git add/commit/push. Write only inside: src/data/international-guidance-*.ts, src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts (the Bulgarian/`bg` strings only — never another locale's), src/content/columns-bg/*.md, and your log docs/i18n/global-plan/evidence/grok-F-bg-r4.log. If a test pins a Bulgarian string you changed (e.g. a FAQ question or a title in src/lib/__tests__/guidance-*bg*.test.ts), update that test's expected string to the new wording — nothing else in tests.
+Workspace (yours alone): /Users/son7/Projects/tseng-law-fix-bg-r5
+Do NOT git add/commit/push. Write only inside: src/data/international-guidance-*.ts, src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts (the Bulgarian/`bg` strings only — never another locale's), src/content/columns-bg/*.md, and your log docs/i18n/global-plan/evidence/grok-F-bg-r5.log. If a test pins a Bulgarian string you changed (e.g. a FAQ question or a title in src/lib/__tests__/guidance-*bg*.test.ts), update that test's expected string to the new wording — nothing else in tests.
 node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
 
 ## Input
 Read, in this order:
 1. docs/i18n/global-plan/reviews/native/RULEBOOK-FIX.md — cross-locale rules R2–R10 (R1/R11 are already done). Apply every rule to all 18 columns and the Bulgarian guidance pack.
 2. docs/i18n/global-plan/reviews/native/ACCEPTED-ROUND.md — the supervisor's standing decisions for this campaign (skip rules).
-3. docs/i18n/global-plan/reviews/native/rounds/r4/bg-a.md and bg-b.md — this round's native reviews (verdict + systemic patterns + finding rows with verbatim quotes and suggested rewrites).
+3. docs/i18n/global-plan/reviews/native/rounds/r5/bg-a.md and bg-b.md — this round's native reviews (verdict + systemic patterns + finding rows with verbatim quotes and suggested rewrites).
 Apply every P1 and P2 row unless ACCEPTED-ROUND.md says otherwise. The reviewer's suggested wording is a strong hint, not sacred: produce the most natural Bulgarian a native legal editor would write, keeping the meaning of the English source (src/content/columns-en/<same file name>) and the product facts below. "Systemic patterns" in the verdicts describe a pattern — sweep every file for every instance, not only the quoted one. P3 rows: apply when cheap.
 
 Where the Bulgarian guidance strings live: src/data/international-guidance-*.ts (find the export for Bulgarian, e.g. `grep -n "GuidanceContent" src/data/international-guidance-*.ts`), src/data/international-guidance-team.ts / -offices.ts / -answers.ts and src/data/international-inquiry-copy.ts (the `bg` key), src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.bg). The dump docs/i18n/global-plan/reviews/native/input/bg-guidance.txt maps every path → current text; edit the .ts sources, not the dump.
@@ -22,7 +22,7 @@ Where the Bulgarian guidance strings live: src/data/international-guidance-*.ts 
 - Guidance pack: keep the TypeScript structure; only string values change. Strings must remain valid TS string literals (escape quotes as the file already does).
 
 ## Verify (run all, paste output into your log)
-cd /Users/son7/Projects/tseng-law-fix-bg-r4 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+cd /Users/son7/Projects/tseng-law-fix-bg-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
 node scripts/check-column-translation.mjs --dir src/content/columns-bg --lang bg 2>&1 | tail -8
 grep -rn "\[변호사 검수 필요\]" src/content/columns-bg src/data | wc -l
 npx tsc --noEmit -p tsconfig.json && echo TSC_OK
@@ -31,7 +31,7 @@ git status --short | wc -l
 
 Pass criteria: checker `summary PASS 18/18`, markers 0, TSC_OK, tests passed. If the checker fails on a number/date, prefer the form the checker accepts and note it in the log.
 
-## Report (docs/i18n/global-plan/evidence/grok-F-bg-r4.log only)
+## Report (docs/i18n/global-plan/evidence/grok-F-bg-r5.log only)
 - rows applied / rows skipped (with reason) / systemic patterns and how many instances changed
 - §Verify output verbatim
 - anything you believe the reviewer got wrong (do not apply those; list them)

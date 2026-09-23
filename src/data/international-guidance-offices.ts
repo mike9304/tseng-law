@@ -954,7 +954,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Вижте на картата',
     photoAlts: [
       'Приемна на офиса в Тайпе, Hovering International Law Firm',
-      'Кабинет на адвокатката в офиса в Тайпе, Hovering International Law Firm',
+      'Кабинет на адвокат в офиса в Тайпе, Hovering International Law Firm',
       'Зала за срещи на офиса в Тайпе, Hovering International Law Firm',
     ],
     officeTitles: {

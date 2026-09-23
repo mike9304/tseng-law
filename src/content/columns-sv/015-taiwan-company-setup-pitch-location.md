@@ -51,9 +51,9 @@ Var därför uppmärksam på den punkten.
 
 ​
 
-**Fråga. Måste alla branscher kontrollera om driften är möjlig via systemet för förhandsfråga om driftställe (營業場所預先查詢)?**
+**Fråga. Måste varje typ av verksamhet kontrollera om driften är möjlig via systemet för förhandsfråga om driftställe (營業場所預先查詢)?**
 
-Rekommendationen är att alla branscher bekräftar om driften är möjlig via systemet för förhandsfråga om driftställe.
+Rekommendationen är att varje typ av verksamhet bekräftar om driften är möjlig via systemet för förhandsfråga om driftställe.
 
 Vid bolagsregistrering skrivs dock ofta flera grenar in samtidigt, och man vill ofta registrera omkring 10 grenar på en gång.
 
@@ -61,7 +61,7 @@ I praktiken behöver därför inte alla grenar kontrolleras vid bolagsregistreri
 
 Det följande utgår från [driftsanvisningen för Taipeis tjänst för assisterad förfrågan om driftställe](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) och från staden Taipeis gällande vägledning.
 
-Från och med den 1 januari 2023 ska, vid ansökan om registrering av bildande, flytt av säte eller tillägg av verksamhetsgrenar för bolag eller handel (inklusive filial (分公司) och underenhet (分支機構)), resultatet av förhandsfrågan om driftställe **obligatoriskt** fogas till registreringsansökan, oberoende av bransch.
+Från och med den 1 januari 2023 ska, vid ansökan om registrering av bildande, flytt av säte eller tillägg av verksamhetsgrenar för bolag eller handel (inklusive filial (分公司) och underenhet (分支機構)), resultatet av förhandsfrågan om driftställe **obligatoriskt** fogas till registreringsansökan, oavsett verksamhetsgren.
 
 Listan nedan över ”verksamhetsgrenar som handelskontoret kontrollerar på eget initiativ” (主動查詢之營業項目) avser de grenar som handelskontoret under registreringsprövningen på eget initiativ frågar extra (隨案主動查詢) när grenen står i ansökan men saknas i det bifogade resultatet; att en gren inte står på listan innebär inte att frågan är undantagen.
 

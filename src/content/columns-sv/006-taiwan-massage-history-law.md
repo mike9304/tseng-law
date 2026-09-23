@@ -55,7 +55,7 @@ Den lagen gällde fram till 2003; då anställde herr Lin, som drev en frisersal
 
 anställda utan synnedsättning för hårtvätt och massage, och polisen upptäckte det.
 
-Enligt den dåvarande rätten ålades herr Lin och de anställda sanktionsavgifter (罰鍰) om TWD 40.000, TWD 10.000 respektive TWD 20.000 i ny taiwanesisk dollar (新臺幣).
+Enligt den dåvarande rätten ålades herr Lin en sanktionsavgift (罰鍰) på TWD 40.000 och de två anställda TWD 10.000 respektive TWD 20.000 i ny taiwanesisk dollar (新臺幣).
 
 Herr Lin ansåg sanktionen orimlig och begärde en konstitutionell tolkning.
 

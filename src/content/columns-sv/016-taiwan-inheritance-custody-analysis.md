@@ -22,9 +22,9 @@ faq:
 
 ![Bild som symboliserar arvsplanering i Taiwan och skydd av omyndigs förmögenhet](../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp)
 
-När en familjemedlem avlider öppnas inte bara ett förfarande. Det ska prövas var för sig vilka som är arvingar (繼承人), vilken egendom och vilka skulder som är föremål för arv, om den efterlevande maken har en separat äktenskapsrättslig förmögenhetsrätt, vem som utövar rättigheter och skyldigheter enligt föräldraansvar (親權) mot det omyndiga barnet, om omyndigförmynderskap (未成年人監護) behövs, och hur förmögenhet som tillkommer barnet ska skyddas. Dessa frågor kan påverka varandra, men den rättsliga grunden och bedömningsordningen är inte densamma.
+När en familjemedlem avlider öppnas inte bara ett förfarande. Det ska prövas var för sig vilka som är arvingar (繼承人), vilken egendom och vilka skulder som är föremål för arv, om den efterlevande maken har en separat äktenskapsrättslig förmögenhetsrätt, vem som utövar rättigheter och skyldigheter enligt föräldraansvar (親權) mot det omyndiga barnet, om förmynderskap för den omyndiga (未成年人監護) behövs, och hur förmögenhet som tillkommer barnet ska skyddas. Dessa frågor kan påverka varandra, men den rättsliga grunden och bedömningsordningen är inte densamma.
 
-Särskilt ska arvslott och rätten till fördelning av skillnaden i makars restförmögenhet, föräldraansvar och omyndigförmynderskap, lagligt ställföreträdarskap (法定代理) och äganderätten till förmögenheten skiljas. Om slutsatsen i en fråga förs över oförändrad till en annan kan rättighetshavaren, beräkningsföremålet eller det nödvändiga domstolsförfarandet missförstås. Följande ordnar en allmän kontrollordning utifrån Taiwans civillag (民法) och officiellt förfarandematerial.
+Särskilt ska arvslott och rätten till fördelning av skillnaden i makars restförmögenhet, föräldraansvar och förmynderskap för den omyndiga, lagligt ställföreträdarskap (法定代理) och äganderätten till förmögenheten skiljas. Om slutsatsen i en fråga förs över oförändrad till en annan kan rättighetshavaren, beräkningsföremålet eller det nödvändiga domstolsförfarandet missförstås. Följande ordnar en allmän kontrollordning utifrån Taiwans civillag (民法) och officiellt förfarandematerial.
 
 ## 1. Lagstadgade arvingar och arvslott
 
@@ -32,7 +32,7 @@ Enligt artiklarna 1138 och 1144 i Taiwans civillag (民法) ärver maken gemensa
 
 Artikel 1138 i civillagen (民法) fastställer ordningen för lagstadgade arvingar utöver maken: bröstarvingar i rakt nedstigande led, föräldrar, syskon (兄弟姊妹) och far- och morföräldrar, i den ordningen. Finns arvingar i tidigare rang ärver arvingar i senare rang i princip inte före dem. Även inom samma rang ska dödsögonblick, släktskap, adoption och om istadarätt finns bekräftas; det är därför viktigt att först säkra material om familjeförhållandet.
 
-Den efterlevande maken är inte en arvinge i senare rang i släktarvsordningen enligt artikel 1138 i civillagen (民法); enligt artikel 1144 ärver maken gemensamt med arvingarna i den rang som faktiskt tillämpas. Den konkreta andelen vid gemensamt arv kan dock variera beroende på vilken rang arvet sker tillsammans med. Skäl till arvsoduglighet, ett lagligt avstående och istadarätt i stället för en tidigare avliden bröstarvinge påverkar också resultatet.
+Den efterlevande maken är inte en arvinge i senare rang i släktarvsordningen enligt artikel 1138 i civillagen (民法); enligt artikel 1144 ärver maken gemensamt med arvingarna i den rang som faktiskt tillämpas. Den konkreta andelen vid gemensamt arv kan dock variera beroende på den rang som maken ärver tillsammans med. Skäl till arvsoduglighet, ett lagligt avstående och istadarätt i stället för en tidigare avliden bröstarvinge påverkar också resultatet.
 
 Att arvet öppnats betyder inte att varje arvinge genast blir ensam ägare till visst innestående eller viss fastighet. I förhållandet av gemensamt arv bekräftas arvsförmögenhetens omfång, skulder och kostnader ordnas, och genom skiftesöverenskommelse eller rättegångsförfarande kan tillkomsten av varje egendom fastställas. Den abstrakta lagstadgade arvslotten (應繼分) och den slutliga tillkomsten av konkret egendom ska därför skiljas.
 
@@ -72,7 +72,7 @@ Deklaration av arvsskatt, anmälan till hushållsregistreringen (戶籍), namnby
 
 Enligt artikel 1089 i Taiwans civillag (民法) utövar, när den ena föräldern inte kan utöva föräldraansvaret (親權) för det omyndiga barnet, den andra föräldern i princip föräldraansvaret. Om den efterlevande föräldern behåller föräldraansvaret och det inte finns motsatt domstolsavgörande, fortsätter den föräldern i allmänhet att utöva rättigheter och skyldigheter enligt föräldraansvaret. Beroende på konkreta omständigheter såsom redan meddelat avgörande, skäl till begränsning eller vilandeförklaring av föräldraansvar, internationella inslag och barnets bästa (子女最佳利益) kan dock domstolens medverkan behövas.
 
-Rättigheter och skyldigheter enligt föräldraansvar kan omfatta skydd och fostran av det omyndiga barnet, beslut om bostad, lagligt ställföreträdarskap och förmögenhetsförvaltning, bland annat. Varje behörighet är inte till förälderns personliga intresse; den ska utövas i riktning att skydda barnets person och förmögenhetsintresse. Bedömningen av dagligt skydd och lagligt ställföreträdarskap vid viktigt förmögenhetsförfogande kan kräva skild prövning.
+Rättigheter och skyldigheter enligt föräldraansvar kan omfatta skydd och fostran av det omyndiga barnet, beslut om bostad, lagligt ställföreträdarskap och förmögenhetsförvaltning, bland annat. Varje behörighet ska utövas för att skydda barnets person och förmögenhet, inte i förälderns eget intresse. Bedömningen av dagligt skydd och lagligt ställföreträdarskap vid viktigt förmögenhetsförfogande kan kräva skild prövning.
 
 Det ska inte bara ses till familjeförhållandet före och efter dödsfallet; befintliga skilsmässoavgöranden eller avgöranden om utövande av föräldraansvar, och om rätten är begränsad eller vilandeförklarad, ska bekräftas. Finns avgörande från utländsk domstol är erkännande och verkan i Taiwan samt nödvändigt förfarande i annan stat också prövningsföremål. I en transaktion där föräldrars och barns intressen står mot varandra ska det ses separat om allmänt lagligt ställföreträdarskap räcker.
 
@@ -80,7 +80,7 @@ Föräldraansvar och arv är rättsligt skilda frågor. Även om den efterlevand
 
 ## 6. Förordnande av förmyndare och domstolens medverkan
 
-Omyndigförmynderskap enligt artikel 1091 i Taiwans civillag (民法) blir aktuellt när den omyndiga saknar föräldrar eller när båda inte kan utöva rättigheter och skyldigheter enligt föräldraansvar. Det kan inte slås fast att omyndigförmynderskap börjar genast bara för att den ena föräldern avlidit. Den efterlevande förälderns status enligt föräldraansvar, befintliga avgöranden och om rättigheterna faktiskt kan utövas ska först bekräftas.
+Förmynderskap för den omyndiga enligt artikel 1091 i Taiwans civillag (民法) blir aktuellt när den omyndiga saknar föräldrar eller när båda inte kan utöva rättigheter och skyldigheter enligt föräldraansvar. Det kan inte slås fast att förmynderskap för den omyndiga börjar genast bara för att den ena föräldern avlidit. Den efterlevande förälderns status enligt föräldraansvar, befintliga avgöranden och om rättigheterna faktiskt kan utövas ska först bekräftas.
 
 Enligt artikel 1093 i civillagen (民法) kan den förälder som sist utövar rättigheter och skyldigheter enligt föräldraansvar genom testamente förordna förmyndare (監護人) för den omyndiga. För att denna regel ska tillämpas ska testamentet uppfylla lagstadgad form och den förordnande föräldern ha behörighet att förordna förmyndare för den omyndiga. Även om förordnandeinnehåll finns ska villkoren för förmynderskapets inledande, förmyndarens behörighet och om denne godtar, samt anmälan till domstolen och övriga tillsynsförfaranden, ses tillsammans.
 
@@ -106,7 +106,7 @@ Planering som använder trust eller försäkring kan inte heller antas vara betr
 
 ## 8. Tillämplig lag och förfarande för den internationella familjen
 
-För en familj med internationellt inslag ska inte genast bara den inhemska regeln i Taiwans civillag (民法) tillämpas. Parternas nationalitet, hemvist och vanliga vistelseort (經常居所), livscentrum vid dödsfallet, förmögenhetens belägenhet, äktenskap eller skilsmässa som ingåtts utomlands och befintliga avgöranden om föräldraansvar kan påverka tillämplig lag och behörighet. Även inom samma familj kan arv, makars förmögenhetsordning, föräldraansvar, förmynderskap och egendomsregister underkastas skilda anknytningspunkter.
+För en familj med internationellt inslag ska inte genast bara den inhemska regeln i Taiwans civillag (民法) tillämpas. Parternas nationalitet, hemvist och vanliga vistelseort (經常居所), centrum för levnadsintressena vid dödsfallet, förmögenhetens belägenhet, äktenskap eller skilsmässa som ingåtts utomlands och befintliga avgöranden om föräldraansvar kan påverka tillämplig lag och behörighet. Även inom samma familj kan arv, makars förmögenhetsordning, föräldraansvar, förmynderskap och egendomsregister underkastas skilda anknytningspunkter.
 
 Taiwans lag om tillämpning av civilrätt med utländskt inslag (涉外民事法律適用法) är utgångspunkten för att fastställa tillämplig lag för civila förhållanden med utländskt inslag. Att bara bekräfta den lagen kan dock inte räcka; domstolens internationella behörighet, erkännande och verkställighet av utländska avgöranden samt fördrag eller den andra statens rätt ska prövas tillsammans. Huruvida en bedömning som gäller i Taiwan godtas för överlåtelse av egendom som finns utomlands ska prövas särskilt där egendomen är belägen.
 
@@ -149,6 +149,6 @@ På de officiella lagsidorna kan du bekräfta stadgandets ändringsdag och ikraf
 
 ---
 
-Den här artikeln är utbildningsmaterial som allmänt förklarar systemet för arv, makars förmögenhetsordning, föräldraansvar och omyndigförmynderskap i Taiwan; det är inte juridisk rådgivning för ett konkret arvs- eller familjeärende. Tillämplig lag, förfarande och resultat kan variera beroende på kretsen av arvingar, testamente, förmögenhet och skulder, äktenskapsförmögenhetsordning, befintliga domstolsavgöranden och internationella inslag. Innan du beräknar frister såsom avstående eller skattedeklaration, eller förfogar över förmögenhet, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
+Den här artikeln är utbildningsmaterial som allmänt förklarar systemet för arv, makars förmögenhetsordning, föräldraansvar och förmynderskap för den omyndiga i Taiwan; det är inte juridisk rådgivning för ett konkret arvs- eller familjeärende. Tillämplig lag, förfarande och resultat kan variera beroende på kretsen av arvingar, testamente, förmögenhet och skulder, äktenskapsförmögenhetsordning, befintliga domstolsavgöranden och internationella inslag. Innan du beräknar frister såsom avstående eller skattedeklaration, eller förfogar över förmögenhet, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
 
 **Advokat Wei Tseng (曾雋崴)**

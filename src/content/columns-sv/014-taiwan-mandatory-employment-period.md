@@ -29,7 +29,7 @@ Vid prövningen är det viktigt att inte blanda de följande 4 frågorna.
 1. Om avtalet i sig uppfyller de lagstadgade kraven i artikel 15-1
 2. Om den avtalade perioden och arbetstagarens börda ligger inom skälig ram
 3. Vem man kan lägga upphörandeskälet för anställningsavtalet till last
-4. Hur avgångsbeskedet och återbetalningens omfång ska bedömas
+4. Hur arbetstagarens uppsägning och återbetalningens omfång ska bedömas
 
 Även om dessa 4 frågor står tillsammans i samma avtal är tillämpligt stadgande och nödvändig bevisning skilda. Det ska därför prövas var för sig om avtalet är giltigt, när avgångsförklaringen får verkan, om det finns ansvar att återbetala förskottsbetalning (預付性給付) eller utbildningskostnad, och om en separat skada faktiskt har uppstått.
 
@@ -53,7 +53,7 @@ Prövningsunderlaget omfattar inte bara direkt kontrollerbara kostnader, såsom 
 
 Program, utbildningsschema, närvarolista, utvärderingsresultat, intyg om genomgång, fakturor och kvitton är grundmaterial för att bekräfta utbildningens realitet och kostnaden. Avtalet mellan arbetsgivare och utbildningsanstalt, betalningsverifikat och återbetalningsvillkor, sedda tillsammans, gör det möjligt att mer exakt fastställa vilken kostnad som faktiskt har burits. Om arbetstagaren själv betalat en del av kostnaden eller om tredje man burit den, ska det också skiljas vem som burit den slutliga kostnaden.
 
-Gränsen mellan allmän arbetsanpassning och yrkesinriktad teknisk utbildning dras inte bara utifrån utbildningsplats eller vem som anordnar utbildningen. En intern kurs kan ha konkret yrkesmässigt och tekniskt innehåll och vila på en avsevärd investering, och en lång kurs vid extern anstalt kan i realiteten vara allmän introduktionsutbildning. All intern utbildning ska därför inte enhetligt uteslutas, och det lagstadgade kravet ska inte erkännas bara för att kursen är dyr eller lång.
+Gränsen mellan allmän arbetsanpassning och yrkesinriktad teknisk utbildning dras inte bara utifrån utbildningsplats eller vem som anordnar utbildningen. En intern kurs kan ha konkret yrkesmässigt och tekniskt innehåll och vila på en avsevärd investering, och en lång kurs vid extern anstalt kan i realiteten vara allmän introduktionsutbildning. All intern utbildning ska därför inte enhetligt uteslutas, och det lagstadgade kravet ska inte anses uppfyllt bara för att kursen är dyr eller lång.
 
 Förhållandet mellan den avtalade perioden och utbildningsinvesteringen ska också kunna förklaras. Vilken kompetens som förvärvas, vilket samband den kompetensen har med målbefattningen och varför den föreslagna tjänstgöringstiden behövs mot utbildningens längd och kostnad prövas individuellt. Om det aktuella arbetet efter utbildningens slut faktiskt har utförts, och hur lång tid som redan har fullgjorts, har också betydelse när bördans omfång bedöms.
 
@@ -94,7 +94,7 @@ Enligt vägledningen från Taiwans arbetsministerium den 5 juni 2026 kan kostnad
 
 Arbetsministeriets vägledning 勞動關2字第1150141814號 skiljer och behandlar utbildning som ges regelbundet, vanlig befattningsutbildning, utbildning för att den nyanställda ska bli förtrogen med arbetsmiljö och rutiner, och utbildning som arbetsgivaren enligt lag ska ge. Eftersom sådan utbildning följer med drift av verksamheten eller fullgörande av lagstadgad skyldighet kan kostnaden inte omvandlas till grund för kvarstannandeskyldighet eller för en sanktion vid förtida upphörande.
 
-Kurser som en ny anställd vanligen ska få, såsom förklaring av arbetsregler (工作規則), presentation av organisation och system, vanlig överlämning av befattning och vägledning om grundläggande säkerhetsrutiner, ska bekräftas i sin substans. Allmän rekryterings- och förvaltningskostnad eller överlämningskostnad som arbetsgivaren ursprungligen skulle bära kan inte fastställas som återbetalningsobjekt bara genom att märkas som separat investering.
+Kurser som en ny anställd vanligen ska få, såsom förklaring av arbetsregler (工作規則), presentation av organisation och system, vanlig överlämning av befattning och vägledning om grundläggande säkerhetsrutiner, ska bekräftas i sin substans. Vanlig rekryterings-, förvaltnings- eller överlämningskostnad som arbetsgivaren normalt skulle bära kan inte fastställas som återbetalningsobjekt bara genom att märkas som separat investering.
 
 Utbildning utesluts dock inte alltid bara för att den givits internt. I ett och samma program kan allmän anpassningsdel och yrkesinriktad teknisk del blandas, så att tema, tid, kostnad och om lagstadgad skyldighet finns ska bekräftas per kurs. Den som åberopar den yrkesinriktade tekniska delen behöver med material förklara vilket innehåll som skiljer sig från vanlig utbildning och vem som faktiskt burit kostnaden.
 
@@ -118,7 +118,7 @@ Klausulen om återbetalning av hela beloppet, det fasta avtalsvitet som saknar s
 
 Artikel 15-1 stycke 4 i Taiwans lag om arbetsnormer föreskriver att om anställningsavtalet upphör innan den minsta tjänstgöringstiden löpt ut av skäl som inte kan läggas arbetstagaren till last, bär arbetstagaren varken ansvar för avtalsbrott mot avtalet om minsta tjänstgöringstid eller för återbetalning av utbildningskostnad. Upphörandeskäl och ansvarsfördelning ska dock bedömas utifrån konkret bevisning, såsom uppsägningsmeddelande, avgångsförklaring och material om brott mot arbetsvillkor.
 
-Arbetstagarens avtalsbrott kan därför inte erkännas bara för att anställningsförhållandet upphört före den avtalade perioden. Det ska bekräftas vem som gjort vilken viljeförklaring, vilken den rättsliga grunden för avtalets upphörande är, och till vilken part de faktiska omständigheter som framkallade upphörandet kan läggas till last.
+Att anställningsförhållandet upphört före den avtalade perioden fastställer därför inte i sig att arbetstagaren har begått avtalsbrott. Det ska bekräftas vem som gjort vilken viljeförklaring, vilken den rättsliga grunden för avtalets upphörande är, och till vilken part de faktiska omständigheter som framkallade upphörandet kan läggas till last.
 
 Prövningsmaterialet kan omfatta uppsägningsmeddelande, avgångsskrivelse, handling om överenskommet upphörande, e-post och meddelandelogg, material om ändring av arbetsvillkor samt närvaro- och arbetsregister. Även om hälsa eller arbetsomständigheter nämns dras inte slutsatsen bara utifrån det uttrycket, utan det faktiska förloppet, den lagliga grunden för upphörande och relaterad bevisning ses tillsammans.
 
@@ -126,7 +126,7 @@ Uppsägning, överenskommet upphörande och påstående om brott mot arbetsvillk
 
 Bedömningen av upphörandeskäl påverkar också direkt återbetalningens omfång. Om stycke 4 tillämpas kan arbetstagaren inte krävas på ansvar för avtalsbrott mot avtalet om minsta tjänstgöringstid eller återbetalning av utbildningskostnad, så tillräknandet ska bekräftas innan formeln tillämpas. Om det också finns förskottsbetalning och andra separata krav prövas varje kravs rättsliga karaktär och grund.
 
-## 8. Avgångsbeskedet är en skild fråga
+## 8. Arbetstagarens uppsägning är en skild fråga
 
 Avtalet om minsta tjänstgöringstid hindrar inte arbetstagaren från att säga upp sig, vare sig i praktiken eller rättsligt. Avgångsförklaring och uppsägningstid (預告期間) är frågan om när anställningsförhållandet upphör; giltigheten av avtalet om minsta tjänstgöringstid och ansvaret att återbetala kostnader är frågan om det finns förmögenhetsansvar till följd av upphörandet.
 
@@ -189,6 +189,6 @@ När materialet ordnas i tidsföljd bör avtalets ingångsdatum, utbildningens s
 
 ---
 
-Den här texten är utbildningsmaterial som allmänt förklarar avtalet om minsta tjänstgöringstid i Taiwan, återbetalning av utbildningskostnad och förskottsbetalning samt avgångsbeskedet; det är inte juridisk rådgivning för ett konkret arbetsärende. Avtalets giltighet och ansvarsomfånget kan variera beroende på avtals typ och lydelse, faktisk utbildning och kostnad, ersättningens syfte och underrättelse, tjänstgöringstid, upphörandeskäl och bevisning. Innan avgångsförklaring, löneavdrag, återbetalningsöverenskommelse eller tvistreaktion, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
+Den här texten är utbildningsmaterial som allmänt förklarar avtalet om minsta tjänstgöringstid i Taiwan, återbetalning av utbildningskostnad och förskottsbetalning samt arbetstagarens uppsägning; det är inte juridisk rådgivning för ett konkret arbetsärende. Avtalets giltighet och ansvarsomfånget kan variera beroende på avtals typ och lydelse, faktisk utbildning och kostnad, ersättningens syfte och underrättelse, tjänstgöringstid, upphörandeskäl och bevisning. Innan avgångsförklaring, löneavdrag, återbetalningsöverenskommelse eller tvistreaktion, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
 
 **Advokat Wei Tseng (曾雋崴)**

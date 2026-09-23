@@ -52,7 +52,7 @@ Detta sammanfattas i en enkel tabell.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Typ** | **Ekonomisk uppsägning (資遣員工, 經濟解僱)** | **Disciplinär uppsägning (解僱員工, 懲戒解僱)** | **Den anställdas egen uppsägning**  **員工自請離職** |
+| **Typ** | **Ekonomisk uppsägning (資遣員工, 經濟解僱)** | **Disciplinär uppsägning (解僱員工, 懲戒解僱)** | **Den anställdas egen uppsägning (員工自請離職)** |
 | Betydelse | Om det hos arbetsgivaren finns behov av personaljustering på grund av företagets situation, ligger skälet på arbetsgivarens sida och inte i den anställdas ansvar. Därför måste arbetsgivaren iaktta varseltiden (預告期間) och betala avgångsvederlag, för att på ett balanserat sätt kompensera den anställdas nackdel. | Om den anställda begår en olaglig eller olämplig handling kan arbetsgivaren omedelbart avsluta arbetsavtalet (勞動契約) utan förhandsvarsel och behöver inte betala avgångsvederlag. Detta är en av arbetsgivarens disciplinära befogenheter. | Den anställda är fri att avsluta avtalet när som helst, men måste, beroende på anställningstid, iaktta varseltiden, så att arbetsgivaren kan genomföra överlämning och söka ersättare. |
 | Villkor | Ja (artikel 11 i Taiwans lag om arbetsnormer) | Ja (artikel 12 i Taiwans lag om arbetsnormer) | Inga |
 | Förhandsvarsel | Krävs | Krävs inte | Krävs |

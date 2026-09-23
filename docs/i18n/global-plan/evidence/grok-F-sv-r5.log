@@ -1,0 +1,88 @@
+WO-F-sv r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-sv-r5
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: sv-a 31, sv-b 20 (51). No P3 rows.
+
+Applied: 45.
+Skipped: 6 numbered rows. Checker or test adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. No pinned Swedish expectation in `src/lib/__tests__/` or `src/data/__tests__/` matched a string this round changed. `GUIDANCE_LLMS_NOTICES.sv` still contains the literal `llms.txt`. `consultationNotice` and `confidentialNotice` were not rewritten, and they remain substrings of the FAQ answer and the privacy paragraph. "TWD 1.57M" was not touched. Disclosure-parity regexes were not touched.
+
+### Applied
+sv-a 1, 3–13, 15, 17–29, 31.
+sv-b 1–5, 7–9, 11–20.
+
+Adaptations (still applied):
+- sv-a 4. Added *fängelse* to the 3-, 4- and 6-month sentences and kept "något typiskt eller garanterat utfall finns inte". Did not restore *i regel*: RULEBOOK R3 forbids a typical-outcome claim. The denial of a guarantee stays.
+- sv-a 8. Who received which fine is now explicit. Period thousands stay (`TWD 40.000`, `TWD 10.000`, `TWD 20.000`); the suggested spaces would fail `NUMBER_THOUSAND_STYLE.sv` = `dot`. The gloss 罰鍰 stays.
+- sv-a 17. "för 1 skadad person och 1 olycka" → "per 1 skadad person och per 1 olycka". The two digits stay. "en olycka" is not in the Swedish lexicon, so the suggested wording without digits would fail `numbers`.
+- sv-a 24. The repeated *rekommendation* and the calque *säkrad synlighet* are gone. "garanterad" was not used: `SV_FORBIDDEN` in `guidance-hi-sv-da-nb-fi-content.test.ts` rejects the substring `garanti` anywhere in the Swedish pack, including a denial. The notice now says the file does not promise a place in the search results, a recommendation from people or from artificial intelligence, or that visibility is a given. The token `llms.txt` stays.
+
+Guidance pack (Swedish strings only):
+- `international-guidance-nordic.ts`: Kaohsiung *företagsledning* → *bolagsstyrning*; Pingtung "för det lokala behovet" → "för att ge juridiskt stöd anpassat till regionen"; "Listan stannar" → "Listan ligger kvar".
+- `international-inquiry-copy.ts` `sv.unavailableTranslationNotice`: "Den här punkten är ännu inte tillgänglig" → "Den här texten finns ännu inte".
+- `llms-txt.ts` `sv.discoveryNotice`: as in sv-a 24.
+
+### Skipped
+- sv-a 2. "(artikel 10)" stays on the withholding-rate label. The URL `flno=3` was not changed. Korean 영업세법 제10조 is a counted 10; dropping it fails `numbers` (`missing 10`). 001's same URL already has no article number. The r4 label (withholding, not business-tax article 10) was left as it is.
+- sv-a 14 and sv-b 10. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003, 005, 006, 008, 009, 013 and 015 were not removed. Heading levels and the ZWSP count match the Korean source. 005 `**​**` stays for the same reason. ACCEPTED-ROUND does not allow new headings or a block-count change.
+- sv-a 16. "1 månads genomsnittslön per ett år" stays, both in the FAQ answer and the blockquote. The lexicon parses "ett år" as 1. "per år" drops that 1 and fails `numbers`.
+- sv-a 30 and sv-b 6. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips space separators. `NUMBER_THOUSAND_STYLE.sv` is `dot`. Period thousands stay. Decimal commas (`1,57`, `0,5`) were already right.
+
+## Systemic patterns
+
+- Thousands still use a period (sv-a and sv-b). 0 changed. See Skipped.
+- 經理人 called *verkställande chef* (sv-a). 7 → *chef* / *chefen*: 001 ×5, 004 ×1, 005 ×1. 018 *företagsledare* for English "manager" was left; it is not the *verkställande* + *direktör* collocation.
+- *vinstsyftande* (sv-a). 17: "företag med vinstsyfte" ×12 (001 ×3, 002 ×1, 004 ×8), "Företag med vinstsyfte" ×3 (004), "verksamhet i vinstsyfte" ×2 (001).
+- U+200B blanks and 005 `**​**` (sv-a; sv-b 013/015). 0 deleted. Counts unchanged.
+- *Erkänna* where English means establish or accept, and Swedish *erkänna* means admit (sv-b). The quoted set: 010 ×4 ("har ansvar", "godtas", "fastställs", "fastställer inte i sig") and 014 ×2 (the course is not treated as meeting the statutory test; early ending does not itself establish breach). Sweep beyond the quotes: 003 ×4 (heads of damage *godtas*, family care is not automatically *godtagen*, the income claim *godtas*, the work connection is not treated as present merely because of working hours) and 001 ×2 ("särskilt erkännande" for English "special approval" → "särskilt godkännande"). Left on purpose: 007 and 016 *erkännande* of a foreign judgment (that is the legal term); 014 checklist "Erkänn inte ansvar" (the reviewer marked this imperative as correct); 002 *kostnadserkännande* (tax recognition of an expense, not this verb).
+- *Bransch* for a business item, and *onoterat* for a non-public company (sv-b). 015 ×3 ("varje typ av verksamhet" ×2, "oavsett verksamhetsgren" ×1). 018 ×1 ("bolag som inte har gjort en offentlig emission"). Industry uses of *bransch* (branschtillstånd, branschförening, "beroende på bransch" where English says industry) were left.
+- Coined *avgångsbesked* (sv-b). 3 in 014: opening list item 4, the section heading, and the closing paragraph → "arbetstagarens uppsägning". *Avgångsvederlag*, *avgångsförklaring* and *avgångsskrivelse* were left; they are different terms.
+- *Omyndigförmynderskap* (sv-b). 5 in 016 → "förmynderskap för den omyndiga". The gloss 未成年人監護 stays on the first mention.
+- *Livscentrum* (sv-a, same calque). 3: 007 body and checklist, plus 016 "centrum för levnadsintressena vid dödsfallet".
+- Weaker disclaimer verb (sv-b). 2: 011 "påstår inte" and 018 "slår fast" → "garanterar inte". These are column denials. The pack ban on the substring `garanti` does not scan columns.
+- 男大生 headlines missing *manlig* (sv-b). 8 headline pairs (alt text and the matching link or bold line): the two "En universitetsstudent" pairs, two "Koreansk universitetsstudent" pairs, the PTT line, the 70 kg blog line, the legal-commentary line, and the personal-training question. The gym-beginner pair (English does not say male) and the opening narrative sentence were left.
+- R2–R10. The round-5 verdicts say du-tilltal, no masculine form for Wei Tseng, day–month–year dates, decimal comma, and the four-language consultation lock already hold. This pass did not find a new Korea-as-default-reader, untranslated chrome, or fullwidth-punctuation leak outside the rows above. 008 "närvarouppgifter" stays: English there is attendance records. The only Hangul in columns-sv is inside the 008 and 009 frontmatter `url` values, which were not edited.
+
+## Reviewer points not followed
+
+- sv-a 30 and sv-b 6. A space as the thousands separator is normal Swedish. The checker does not parse it for `sv`, and ACCEPTED-ROUND says to skip it. Period thousands stay.
+- sv-a 14 and sv-b 10. The U+200B lines match the Korean source. Promoting Q16–Q20 would also change heading levels. They are not disposable blank lines.
+- sv-a 2. The opened page is article 3, and the withholding label is already the right description of that link. Korean 영업세법 제10조 is still counted, so "(artikel 10)" stays. The URL was not changed.
+- sv-a 16. "ett" in "per ett år" carries the digit 1. It is not a spare word next to *per*.
+- sv-a 17, in part. "per skadad person och per olycka" is the better Swedish. It deletes two digits the checker counts. "per 1 … och per 1 …" keeps both the preposition and the digits.
+- sv-a 4, in part. "I praxis utdöms i regel" restores the typical-outcome sentence R3 replaced. *Fängelse* was added. The denial that there is no typical or guaranteed outcome stays.
+- sv-a 24, in part. "garanterad synlighet" is the right denial, and the pack test bans that substring. The denial was rewritten without it.
+- *Ställföreträdarskap* is a real Swedish legal noun. The flagged "legal ställföreträdarskap" in 007 was still rewritten to "rättsligt företrädande av barnet", because the English adjective made the list item unclear. 016 "lagligt ställföreträdarskap" was not swept; part b did not flag it.
+
+Nothing else in the two verdicts looked factually wrong.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-sv --lang sv 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=82
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sv src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```

@@ -52,7 +52,7 @@ Det är inte samma förfarande. Produktregistrering är en separat formalitet so
 
 ### Tidpunkt för produktregistrering och giltighetstid
 
-Produktregistrering av kosmetika genomförs på TFDA:s plattform för registrering av kosmetikaprodukter. Tillverkaren eller importören av kosmetika måste slutföra produktregistreringen innan produkten tillhandahålls, säljs, ges bort, ställs ut offentligt (公開陳列) eller ställs till konsumentens förfogande för prov. Förberedelsen får inte inriktas bara på försäljning mot betalning; schemat för kampanjgåvor eller konsumentprov måste också hanteras tillsammans med registreringstidpunkten.
+Produktregistrering av kosmetika genomförs på TFDA:s plattform för registrering av kosmetikaprodukter. Tillverkaren eller importören av kosmetika måste slutföra produktregistreringen innan produkten tillhandahålls, säljs, ges bort, ställs ut offentligt (公開陳列) eller ställs till konsumentens förfogande för prov. Förberedelsen får inte inriktas bara på försäljning mot betalning; även kampanjgåvor och konsumentprov måste räknas in i registreringstidpunkten.
 
 Giltighetstiden för produktregistrering är 3 år. Om leveransen ska fortsätta måste ansökan om förlängning (展延) ges in inom 3 månader före utgången. Om registrerade uppgifter ändras, som produktnamn, användning, beredningsform (劑型), sammansättning och tillverkningsplats, måste man också bekräfta om en formalitet som motsvarar ändringens innehåll behövs.
 
@@ -129,6 +129,6 @@ Bolagets och filialens grundstruktur kan ses i [Grunderna för bolagsbildning i 
 - [Invest Taiwan — redogörelse för utländsk investering](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Avdelningen för investeringsprövning vid ekonomiministeriet — vägledning](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
-Den här texten är utbildningsmaterial som allmänt förklarar ordningen kring ett märkes inträde på Taiwans kosmetikamarknad; det är inte juridisk rådgivning om en konkret produkt eller reklam och det påstår inte att tillstånd eller registrering kommer att erhållas, att försäljning blir möjlig eller att en handläggningstid kommer att hållas. Inträdesformen, produktuppgifterna, innehållet i märkning och reklam samt den behöriga myndighetens senaste praxis måste bekräftas i varje ärende.
+Den här texten är utbildningsmaterial som allmänt förklarar ordningen kring ett märkes inträde på Taiwans kosmetikamarknad; det är inte juridisk rådgivning om en konkret produkt eller reklam och det garanterar inte att tillstånd eller registrering erhålls, att försäljning blir möjlig eller att en handläggningstid hålls. Inträdesformen, produktuppgifterna, innehållet i märkning och reklam samt den behöriga myndighetens senaste praxis måste bekräftas i varje ärende.
 
 **Advokat Wei Tseng (曾雋崴)**

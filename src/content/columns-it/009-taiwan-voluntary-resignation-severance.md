@@ -31,7 +31,7 @@ Esistono, tuttavia, **casi eccezionali**.
 
 Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di propria iniziativa, il datore di lavoro deve pagargli l’indennità di licenziamento (l’articolo 14 della legge sugli standard del lavoro, che applica per analogia l’articolo 17; 勞動基準法第14條):
 
-1. Quando il datore di lavoro, nella celebrazione del contratto di lavoro (勞動契約), fa una dichiarazione di volontà mendace (虛偽意思表示) così che il lavoratore si inganna e esiste un rischio di subire un pregiudizio
+1. Quando il datore di lavoro, nella celebrazione del contratto di lavoro (勞動契約), fa una dichiarazione di volontà mendace (虛偽意思表示) così che il lavoratore è indotto in errore ed esiste il rischio di un danno
 
 (per esempio quando il datore di lavoro dice al lavoratore che, dall’ingresso, lo invierà a una succursale all’estero che non esiste nella realtà)
 
@@ -39,7 +39,7 @@ Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di prop
 
 3. Quando il lavoro convenuto nel contratto può pregiudicare la salute del lavoratore, il lavoratore ha chiesto al datore di lavoro di porvi rimedio e il datore di lavoro non l’ha fatto
 
-4. Quando il datore di lavoro, il suo rappresentante o altro lavoratore è colpito da una malattia contagiosa legale (法定傳染病), esiste un rischio di contagio per i lavoratori che lavorano insieme e ciò costituisce un pericolo grave per la salute del lavoratore
+4. Quando il datore di lavoro, il suo rappresentante o altro lavoratore è colpito da una malattia contagiosa prevista dalla legge (法定傳染病), esiste un rischio di contagio per i lavoratori che lavorano insieme e ciò costituisce un pericolo grave per la salute del lavoratore
 
 5. Quando il datore di lavoro non paga la remunerazione (工作報酬) secondo il contratto di lavoro, o non fornisce un lavoro sufficiente al lavoratore la cui retribuzione è calcolata a cottimo (按件計酬)
 
@@ -55,13 +55,13 @@ non paga le ore straordinarie (加班費),
 
 o non affilia il lavoratore all’assicurazione del lavoro (勞保) o all’assicurazione di malattia (健保).
 
-In questi casi, anche se il lavoratore pone termine al contratto di lavoro in via ordinaria, il datore di lavoro deve pagargli l’indennità di licenziamento.
+In questi casi, anche se è il lavoratore a porre termine al contratto, il datore di lavoro deve pagargli l’indennità di licenziamento.
 
 ​
 
 Tuttavia, la legge sugli standard del lavoro (勞動基準法) dispone che,
 
-se il lavoratore desidera porre termine al contratto di lavoro a titolo dei punti 1 o 6 sopra (per esempio per terminare il contratto per mancanza di affiliazione all’assicurazione),
+se il lavoratore desidera porre termine al contratto di lavoro in base ai punti 1 o 6 sopra (per esempio per terminare il contratto per mancanza di affiliazione all’assicurazione),
 
 deve porre termine al contratto di lavoro in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto questa situazione,
 

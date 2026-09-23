@@ -88,8 +88,8 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Che cosa facciamo',
           paragraphs: [
-            'Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Lo studio fornisce consulenza alle imprese, le rappresenta in giudizio e accompagna i clienti dall’estero nei passi necessari a Taiwan.',
-            'Tutto il contenuto qui è generale. L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento. Queste indicazioni non sostituiscono il colloquio con un’avvocata o un avvocato sui Suoi documenti.',
+            'Hovering International Law Firm è uno studio legale con sede a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Lo studio fornisce consulenza alle imprese, le rappresenta in giudizio e accompagna i clienti dall’estero nei passi necessari a Taiwan.',
+            'Tutto il contenuto qui è generale. L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento in cui si agisce. Queste indicazioni non sostituiscono il colloquio con un’avvocata o un avvocato sui Suoi documenti.',
           ],
         },
         {
@@ -169,7 +169,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Proprietà intellettuale',
           paragraphs: [
             'Assistiamo nella registrazione di marchi (商標) e brevetti (專利), nel diritto d’autore e nelle controversie su questi diritti a Taiwan.',
-            'In quest’area decide l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.',
+            'In quest’area è decisivo l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.',
           ],
         },
         {
@@ -319,7 +319,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Quali questioni tratta lo studio?',
           answer:
-            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.',
+            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. L’accettazione di una questione si decide dopo l’esame del contenuto.',
         },
         {
           question: 'Che cosa dovrei preparare prima del contatto?',
@@ -354,7 +354,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Che fare se la mia questione è molto urgente?',
           answer:
-            'Indichi il termine o la data su uno scritto ufficiale all’inizio del riassunto, così quelle date sono visibili nell’esame. Questa pagina non ha un canale di emergenza e non assicura un termine di risposta; se la Sua questione non può attendere, dovrebbe cercare in parallelo altre vie nel Suo luogo.',
+            'Indichi il termine o la data su uno scritto ufficiale all’inizio del riassunto, così quelle date sono visibili nell’esame. Questa pagina non ha un canale di emergenza e non assicura un termine di risposta; se la Sua questione non può attendere, dovrebbe cercare in parallelo altre vie nel luogo in cui si trova.',
         },
       ],
     },
@@ -362,7 +362,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'PRIVACY',
       title: 'Dati raccolti tramite il modulo di contatto',
       description:
-        'Che cosa raccoglie il modulo di contatto in questa parte in italiano, come viene trattato il testo originale e come raggiungerci sui Suoi dati.',
+        'Che cosa raccoglie il modulo di contatto in questa parte in italiano, come viene trattato il testo originale e come raggiungerci per i Suoi dati.',
       intro:
         'Questa parte riguarda soltanto il modulo di contatto su queste pagine di indicazioni. Descrive il trattamento dei dati, non una garanzia tecnica.',
       sections: [
@@ -379,7 +379,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
             'La lingua di consulenza da Lei desiderata',
             'Il testo originale che ha scritto',
             'Il Suo consenso all’invio della richiesta',
-            'Un numero di ricezione per ritrovare la richiesta',
+            'Un numero di ricevuta per ritrovare la richiesta',
           ],
         },
         {
@@ -399,15 +399,15 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Scopo dell’uso',
           paragraphs: [
-            'I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento del canale di comunicazione e al trattamento, se il lavoro viene assunto.',
+            'I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento del canale di comunicazione e al trattamento, se l’incarico viene assunto.',
             'I dati non vengono usati per il marketing senza un consenso distinto.',
           ],
         },
         {
-          heading: 'Notifica e numero di ricezione',
+          heading: 'Notifica e numero di ricevuta',
           paragraphs: [
             'Se una richiesta viene inviata con successo, il sistema notifica lo studio. Se questa notifica non è ancora confermata, il Suo testo resta conservato e non va perduto.',
-            'Il numero di ricezione serve a ritrovare la Sua richiesta nei nostri atti. Viene mostrato dopo la conservazione; può indicarlo in un nuovo contatto.',
+            'Il numero di ricevuta serve a ritrovare la Sua richiesta nei nostri atti. Viene mostrato dopo la conservazione; può indicarlo in un nuovo contatto.',
           ],
         },
         {
@@ -420,7 +420,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Luogo di conservazione e fornitori',
           paragraphs: [
-            'Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio a oggetti non accessibile al pubblico, presso questo fornitore. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.',
+            'Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio non accessibile al pubblico, presso questo fornitore. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.',
             'I server di singoli fornitori possono trovarsi fuori da Taiwan, così i Suoi dati possono essere ivi conservati e trattati. Quando lo scopo di conservazione è soddisfatto, i dati vengono cancellati senza ritardo; i dati che devono essere conservati secondo le norme applicabili restano per quella durata. Per le richieste sui dati personali si scriva a wei@hoveringlaw.com.tw.',
           ],
         },
@@ -438,7 +438,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Soltanto indicazioni generali',
           paragraphs: [
             'Il contenuto di queste pagine è scritto come informazione generale. Non è una consulenza legale per il Suo caso e non sostituisce l’esame dei Suoi documenti.',
-            'L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento; due situazioni apparentemente simili possono finire in modo diverso.',
+            'L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento in cui si agisce; due situazioni apparentemente simili possono finire in modo diverso.',
           ],
         },
         {
@@ -452,7 +452,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Un rapporto tra avvocata o avvocato e cliente non sorge automaticamente',
           paragraphs: [
             'La lettura di questa pagina, l’invio di un modulo o di un’e-mail non costituisce di per sé un rapporto tra avvocata o avvocato e cliente.',
-            'Questo rapporto nasce soltanto dopo che la questione è stata esaminata e entrambe le parti hanno confermato l’assunzione del lavoro.',
+            'Questo rapporto nasce soltanto dopo che la questione è stata esaminata e entrambe le parti hanno confermato l’assunzione dell’incarico.',
           ],
         },
         {

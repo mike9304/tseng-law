@@ -1,0 +1,130 @@
+WO-F-it r5 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-it-r5
+date: 2026-09-23
+No git add/commit/push. Italian strings only. No test expectation was rewritten (nothing pinned the strings that changed; 3202 tests passed).
+
+## Rows applied
+
+Part A (it-a.md): 1–20, 22–38.
+Part B (it-b.md): 1–51.
+
+A3: the link label no longer calls the flno=3 page “articolo 10”. The digit stays, because the Korean anchor is 영업세법 제10조: “l’articolo 10 della legge sull’imposta sulle operazioni d’impresa non è questa disposizione”. URL unchanged.
+A5: FAQ answer and the repeated body sentence (2).
+A9: “un’ordinazione giudiziale applicabile” and “un’ordinazione esistenti”.
+A11: body “imposta taiwanese sulle vendite (營業稅)”, the 001 source label, and the 004 table header “Imposta sulle vendite (營業稅)”. The 004 body already said “imposta sulle operazioni d’impresa”.
+A16: 003 conversion into 易科罰金, and both “ammenda penale (罰金)” cells in 002.
+A18: both “persona altra dal coniuge” (the tort sentence and the later adultery sentence).
+A20: the question and “fondi in dollari di Taiwan”.
+A27: inquiry receiptIdLabel plus the three guidance strings (list item, heading, body).
+A28: “assunzione del lavoro” and “se il lavoro viene assunto”.
+A30: home disclaimer sentence and the disclaimer page sentence.
+A31: FAQ and body.
+A32: “lavori di collegamento” in the FAQ, the repeated body sentence, and the representative-office paragraph; “presa di ordini” → “raccolta di ordini”.
+A35: “sia occorso”, “incidenti occorsi”, and “insolvenza già occorsa”.
+A36: both “condizioni di nascita, un calcolo” and “condizioni di nascita della via di divorzio”.
+B5: both “come agente di vendita).”, “un distributore (銷售代理商)”, and the next sentence “Il distributore può agire…” (English: the distributor may also serve as the importer). “come agente, distributore” stays: English lists those contractual labels.
+B14: the four alt/link headlines.
+B16: “fino a una volta” → “in misura non superiore al danno effettivo (1 volta)”. The parenthetical keeps the parsed 1 (“una volta” is in the Italian number lexicon).
+B19: “correzione o complemento” and “di complemento dei dati” → integrazione.
+B25: “i 4 fattori” / “le 4 domande” / “con 4 domande” → quattro; “circa 10 voci” → dieci; “intorno a 1 anno” → “intorno a un anno”. Those word forms are parsed. Bare “un/una” is not, so “1 lampeggio”, “1 omissione” and “1 camion piccolo” stay digits, with “solo” added; “1 o 2 amministratori” is unchanged.
+B28: “regione” → “zona” in the flagged sentence. The U+200B after it was left (see skipped).
+B31: both “domanda di clausola penale”, the MOL link title “restituzione di clausola penale”, and the intro “chiedere separatamente una clausola penale”. The article title and “clausola penale fissa” stay: those name the clause, which the review says is the right word.
+B32: “estensione” as scope throughout 014 (ragionevole → misura; the other scope nouns → ambito), including the heading “Misura ragionevole”.
+B38: affiancamento / passaggio di consegne in the four handover phrases. “data di trasmissione della manifestazione di dimissione” stays: that is sending the notice, not a handover.
+B40: the flagged sentence was rephrased. The two neighbouring sentences were not deleted (that would drop blocks).
+B46: the six numbered items of section 9 open in the infinitive, and the Si + present inside those items was turned into the infinitive. The following prose sentence “Si esamina prima” → “Va esaminato prima” (same paragraph, not a new block).
+B47: all 7 “associazione di ramo”.
+B48: radiate / volturate; the gloss 過戶轉讓 stays on “nel registro del veicolo”.
+B50: share price in 017; “trasmissione delle quote” in the 018 heading; “trasmissioni tra vivi” in the 016 checklist. “trasmissione di immagini” (007) and “trasmissione di informazioni” (011) stay.
+
+## Rows skipped
+
+- A21, the ZWSP half of B28, and the verdict lines on U+200B in 003, 005, 006, 008, 009, 013 and 015, including the four `**​**` lines in 005.
+  Reason: zero-width counts already match the Korean source. Deleting them fails `blocks` (ZWSP parity). Instances removed: 0. Q16–Q20 were not promoted to `##` headings: heading levels must match the source. Adding headings fails `headings`.
+- B52 (outline 7 → 6 and 8 → 7).
+  Reason: the English source has the same skip, and ACCEPTED-ROUND forbids changing numbers. Renumbering would make the Italian outline diverge from the source. Instances changed: 0.
+- B25, the bare digit 1 in “1 lampeggio”, “1 omissione”, “1 camion piccolo”, and “1 o 2 amministratori”.
+  Reason: the Italian lexicon parses “un anno” and “quattro”/“dieci”, but not bare “uno”/“una”. “un solo lampeggio” / “un camion” / “uno o due” would drop those digits and fail `numbers`. The digit stays. See applied note for the wording that did change around them.
+
+## Systemic patterns and how many instances changed
+
+French calques (“a titolo del/dei” = au titre de, “entra in considerazione”, “occorrere” = to occur, “quando vi è luogo”)
+  “a titolo del permesso di lavoro” → “previste per il permesso di lavoro”     2 (001)
+  “a titolo dei punti 1 o 6” → “in base ai punti 1 o 6”                        1 (009)
+  “entra in considerazione” → “si applica”                                     1 (007)
+  “quando vi è luogo” → “ove ne ricorrono i presupposti”                       1 (003)
+  “sia occorso” / “incidenti occorsi” / “insolvenza già occorsa”               3 (003 ×2, 002 ×1)
+  Left: “a titolo di indennità”, “a titolo di esempio” (ordinary Italian).
+  Left: “occorre” / “occorrente” where the sense is “it is necessary” (011, 014, 015).
+
+Wrong institution labels (sales tax, full competition, ordinazione, set-off, ammenda)
+  imposta sulle vendite / Imposta sulle vendite → operazioni d’impresa        3 (001 ×2, 004 table)
+  piena concorrenza → libera concorrenza                                       1 (004)
+  ordinazione → provvedimento                                                  2 (007)
+  compensazione delle colpe → concorso di colpa                                1 (003)
+  ammenda penale / convertita in ammenda → multa                               3 (002 ×2, 003 ×1)
+
+“estensione” for scope in 014
+  ragionevole → misura (including the heading)                                 5
+  other scope nouns → ambito                                                   11
+  No “estensione” left in 014. Left in other columns where it is the extent of liability, activity or a mandate, not this calque.
+
+“aggiustare / aggiustamento” for a legal adjustment
+  adeguare / adeguamento                                                       3 (016 ripartizione, 016 doppia imposizione, 017 prezzo)
+
+“cauzione” for a guarantee or a security interest
+  obbligazioni di garanzia / garanzie / prestato una garanzia                  8 (016 ×6, 018 ×2)
+  Left: “deposito cauzionale” in 013 (a cash deposit; cauzione is the right word).
+
+“fiducia” for a trust
+  trust / trustee / contratto di trust / documenti di trust                    6 (016)
+  Left: “persona di fiducia” in 006 (a trusted companion, not a trustee).
+
+U+200B blank lines and 005 `**​**`
+  Removed: 0. Counts match Korean. See skipped rows.
+
+Small counts written as digits
+  Changed to parsed words: quattro (4 fattori, 4 domande ×2), dieci (10 voci), un anno (1)   5
+  Digit kept, with “solo”: lampeggio, omissione, camion (3 sites)                            4
+  Left unchanged: “1 o 2 amministratori” (018). See skipped rows.
+
+R2–R10 were already in this corpus (prior rounds). This round’s verdicts are 4/5 and 3–4/5 and confirm feminine Wei Tseng, the consultation lock (four languages, no interpreter, no reply-time promise, no free first meeting, no result promise), Italian of Italy with Lei, and Korea only as a labelled example. A sweep found no OUR TEAM / Q&A chrome, no fullwidth punctuation outside the Hangul `url` of 008 (left; R16), and no masculine reference to Wei Tseng. Hangul remains only inside frontmatter `url` of 008 and 009. The “gratuito” sentences are denials, not offers.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=77
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+       0
+```
+
+```
+TSC_OK
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+      23
+```
+
+(The status count includes this log, the pre-existing `WO-F-it.txt` modification, and the untracked r5 review files `it-a.md` / `it-b.md`. Column 006 was not edited. No other locale was touched.)
+
+## Reviewer points not applied
+
+- Deleting U+200B (and the 005 `**​**` lines) and turning Q16–Q20 into `##` headings. Those characters and heading levels match the Korean source. Removing or promoting them fails the checker. They are not stray Italian typos.
+- Renumbering section 7 to 6 and 8 to 7 in 018. The reviewer notes that the English source skips 6 as well. Changing the numbers would diverge from that outline, and the standing rules say not to change numbers.
+- The suggested 004 link text drops “10”. That fails `numbers`. The digit is kept in a clause that says article 10 of the business-tax act is not this provision. The reviewer’s statute name (各類所得扣繳率標準) is what the Italian label already said; the URL `pcode=G0340028` is the business-tax act, which is what the English and Korean labels name. The URL was not changed. The label was not rewritten into the business-tax act, because the review asked to keep the withholding-standards name and only to stop calling the linked page article 10.
+- Replacing “fino a una volta l’importo” with a wording that contains no “1”. “una volta” is parsed as 1; the cap is now “in misura non superiore al danno effettivo (1 volta)”.

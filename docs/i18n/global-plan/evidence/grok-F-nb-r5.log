@@ -1,0 +1,189 @@
+# WO-F-nb — Norwegian Bokmål fix lane, campaign round 5
+Worktree: /Users/son7/Projects/tseng-law-fix-nb-r5 (no git add/commit/push)
+Scope written: src/content/columns-nb/{001,002,003,004,005,006,007,008,010,011,012,013,014,015,016,017,018}.md,
+src/data/international-guidance-nordic.ts (nb pack only), src/data/international-guidance-answers.ts (nb.about only),
+src/data/international-inquiry-copy.ts (nb only), src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.nb only), this log.
+009 untouched: its only finding was the U+200B row, which the checker pins (see skipped rows).
+No test file edited — nothing in src/lib/__tests__ or src/data/__tests__ pinned a Norwegian string that changed
+(guidance-hi-sv-da-nb-fi-content.test.ts pins the nb language-FAQ question and `hun` in the bio; neither moved).
+
+Inputs read: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/nb-a.md (44 rows), rounds/r5/nb-b.md (37 rows).
+
+## Rows applied
+nb-a.md
+  a#1  guidance (nordic.ts about): «innrettet på virksomhetsledelse» → «innrettet på eierstyring og selskapsledelse» (corporate governance).
+  a#2  001 source list: the flno=3 link relabelled «Den alminnelige satsen for næringsavgiften» (the EN column calls the same URL the general business-tax rate). URL untouched.
+  a#4  董事 = board member. 002: «eneste direktør (董事)» → «eneste styremedlem (董事)»; «direktører og aksjeeiere» → «styremedlemmer …»; «direktørenes bedømmelsesansvar» → «styremedlemmenes …»; «en aksjeeier eller en direktør» → «… eller et styremedlem». 004: «Direktørers, lederes (經理人)» → «Styremedlemmenes, ledernes (經理人)». No «direktør» for 董事 is left in columns-nb.
+  a#5  004: 產業創新條例 is a statute — «forskriften om industriell innovasjon» → «loven om industriell innovasjon», 5 instances (body ×4 + source list). 公司登記辦法 stays a forskrift.
+  a#6  005: «Overføring via nettbank eller via en nærstående (匯款)» → «Overføring via nettbank eller stedfortredende overføring (匯款) via en slektning eller bekjent». Gloss kept where 送金/匯款 belongs (hanzi count is checked).
+  a#7  001: «beskattes i prinsippet på bostedsstatens side» → «beskattes i prinsippet bare i bostedsstaten».
+  a#8  001: «den organisasjonen som det utenlandske hovedsetet opptrer i Taiwan» → «den organisasjonen det utenlandske hovedsetet driver virksomhet gjennom i Taiwan».
+  a#9  002: «den prosessuelle likheten» → «rettferdigheten i fremgangsmåten».
+  a#11 003: «forklarer hva som kan kreves ut fra de bevisene som finnes» → «hjelper til med å kreve den erstatningen bevisene gir grunnlag for» (R3's accepted form of "maximum compensation").
+  a#12 003: «Da føles verken anger eller alvor.» → «Da oppfatter den skadelidte verken anger eller oppriktighet hos skadevolderen.»
+  a#13 004: listing standards — «spredning av aksjene, selskapsledelse, intern kontroll» → «… eierstyring og selskapsledelse, intern kontroll». «selskapsledelse» in 001/017 stays: there it means running a company (工作許可 context), not governance.
+  a#14 004: «skal fremtidige planer avbildes med.» → «skal fremtidige planer også tas med i vurderingen.»
+  a#15 004: a credit against tax — «tilskrives inntektsskatten» → «godskrives mot inntektsskatten»; «tilskrives årlig i 3 år» → «godskrives årlig i 3 år».
+  a#16 004: «Overenskomsten avstemmer dobbeltbeskatningen» → «Overenskomsten avhjelper dobbeltbeskatningen».
+  a#17 006: who got which fine — «herr Lin og de nevnte medarbeiderne hver sin administrative bot … 40.000, 10.000 og 20.000» → «herr Lin en administrativ bot (罰鍰) på 40.000 TWD, og de to medarbeiderne fikk 10.000 TWD og 20.000 TWD». Dot thousands kept (see a#31).
+  a#18 guidance: «Siden 2020 har kontoret også en regnskapsavdeling» → «Siden 2020 finnes også Hovering Accounting Office» (answers.ts); «arbeide sammen med regnskapsavdelingen» → «… med Hovering Accounting Office» (nordic.ts). The about paragraph in nordic.ts already named the office.
+  a#20 stray digits where Bokmål wants a word: 003 «pr. 1 skadelidt og pr. 1 ulykke» → «pr. skadelidt og pr. ulykke», «pr. 1 dag» → «pr. dag»; 002 «på 1 konto» → «på én konto», «med 1 oppgave» → «med én oppgave»; 006 «denne 1 anmodningen» → «denne ene anmodningen»; 007 «dette 1 ordet» → «dette ene ordet»; 008 «utbetales per 1 år 1 måneds gjennomsnittslønn» → «utbetales det per år 1 måneds …» (×2, frontmatter + body). 003 kept the file's own «pr.» abbreviation rather than the reviewer's «per», which the file does not otherwise use.
+  a#21 002: «eller disses heving er tillatt» → «, eller at aksjeeierne har fått heve den».
+  a#22 004: «ingen særskilt utbytte kildeskatt» → «ingen særskilt kildeskatt på utbytte».
+  a#23 002: «Registreringsregister, skatteregistrering, bankkonti, kontrakter, formue, fordringer og gjeld» → «Selskapsregistreringen, skatteregistreringen, bankkontiene, kontraktene, formuen, fordringene og gjelden».
+  a#24 004: «Derpå skal … konsernkontrakter legges for å bedømme virkelig eksponering og styringsmidler.» → «Deretter kommer kausjon, delikt (侵權行為), misbruk av rettssubjektiviteten, reguleringsansvar og konserninterne avtaler. Ut fra det bedømmes den faktiske ansvarseksponeringen og hvordan den styres.» Same block, two sentences.
+  a#25 004: «Det fortjener derfor anbefaling ikke kun at skissere» → «Derfor bør man ikke bare skissere».
+  a#26 004: «ledende sete» → «ledelsessted» ×2 (the PE term 001 already uses).
+  a#27 guidance: «Kontoret i Pingtung ble åpnet i 2017 for det lokale behovet.» → «… i 2017 for å gi juridisk bistand tilpasset regionen.»
+  a#28 llms-txt GUIDANCE_LLMS_NOTICES.nb.discoveryNotice: «ingen anbefaling, ingen anbefaling fra kunstig intelligens og ingen garantert synlighet» → «ingen godkjenning, ingen anbefaling og ingen garantert synlighet» (EN: endorsement, recommendation). The literal token `llms.txt` and the whole denial are intact.
+  a#29 inquiry copy nb.unavailableTranslationNotice: «Dette punktet er ennå ikke tilgjengelig på sidens språk. En lenke med originalspråket …» → «Denne teksten finnes ennå ikke på sidens språk. En lenke merket med originalspråket …».
+  a#30 002 FAQ question: «Hvilke er beslutningskravene ved oppløsning og registreringsfristen?» → «Hvilke beslutningskrav gjelder ved oppløsning, og hva er registreringsfristen?» (no test pins it).
+  a#32 Danish layer: «under hensyn til» → «ut fra» (001, 003). Fronted «Alene …» for "merely" rewritten in 003 ×3, 004 ×6, 007 ×7 (13 sentences: «Bare fordi …», «Bare det at …», «Arbeidstiden alene …», «Ut fra samlivets varighet alene …»). Post-posed «ikke alene etter …» is correct Bokmål and was left.
+  a#33 004: «kalles den undertiden avdeling» → «kalles den av og til en avdeling»; heading «## 7. Hvilken form der skal velges» → «… som skal velges»; 007 «betraktes rettslig undertiden» → «… av og til». Also 004 «hvilke inntekter og kostnader der henføres» → «… som henføres» (the only Danish relative *der* left; the other *der* are locative and correct).
+  a#34 007: «Alene kjensgjerningen om en enighet ombytter ikke betingelsene og virkningen av de 3 veier.» → «Enighet alene endrer ikke vilkårene og virkningene av de 3 veiene.»
+  a#35 007: «… eller den konkrete retlige gjenopprettelsen fastslås på forhånd.» → «Ut fra samlivets varighet alene kan verken en fordeling som forutsetter ekteskap, eller at et bestemt krav fører frem, loves på forhånd.»
+  a#36 007: «i barnets beste skal plikt og prosedyre hver behandles selvstendig» → «for å verne barnets hverdag skal hver plikt og hver fremgangsmåte behandles for seg». The ban on withholding/trading support and contact is untouched.
+  a#37 007: «en hos partene fullstendig uforutsigbar begivenhet» → «en begivenhet partene ikke kunne forutse da de først avtalte barnebidraget, eller da retten først traff avgjørelsen».
+  a#38 007: «motta; Hvis ingen søker» → «motta. Hvis ingen søker».
+  a#39 007: «det nåværende livssentrumet» → «det stedet der partene nå har sentrum for livsinteressene sine»; «virkelig livssentrum» → «hvor sentrum for livsinteressene faktisk er». No *livssent-* left anywhere in nb.
+  a#40 007: «formueforvaltning og lovlig representasjon» → «formueforvaltning og rettslig representasjon av barnet».
+  a#41 008: «Fratredelsesgodtgjørelse er en lovbestemt rett» → «Sluttvederlag er en lovbestemt rett» (the article's own term for 資遣費).
+  a#42 007: «i 2. ledd er utløpet» → «i 2. ledd er utløpt».
+  a#43 004: «kommandittselskaper med begrenset ansvar (有限合夥)» → «kommandittselskaper (有限合夥)».
+  a#44 008 table header: «**Arbeidstakerens egen oppsigelse**  **員工自請離職**» → «**Arbeidstakerens egen oppsigelse (員工自請離職)**». Table-row count unchanged.
+nb-b.md
+  b#1  010: «lønns-, skatte- og fremmøtedokumenter» → «lønns-, skatte- og ansettelsesdokumenter».
+  b#2  010: «det at opptakene ikke er tilbake, fører heller ikke automatisk retten til en ugunstig vurdering» → «det at opptakene ikke lenger finnes, fører heller ikke automatisk til at retten trekker en ugunstig slutning».
+  b#3  014: «opphever en tidsubegrenset arbeidskontrakt» → «sier opp en tidsubegrenset arbeidskontrakt»; «oppheve kontrakten med et varsel på 30 dager» → «si opp kontrakten …».
+  b#4  016: «om denne dommen er endelig om en rettmessig prosedyre er fulgt» → «… er endelig, om en rettmessig prosedyre er fulgt» (the third condition was already there).
+  b#5  016: «datoene for utstedelse og skjæring» → «utstedelsesdatoen og referansedatoen».
+  b#6  018: «registrering i den førbørslige handelen (興櫃)» → «registrering på markedet for aksjer før børsnotering (興櫃)» (see note on the reviewer's «emerging-markedet»).
+  b#7  018: 董事 → styremedlem, consistent with a#4: «fra 1 til 3 ledere» → «fra 1 til 3 styremedlemmer»; «kun ha 1 eller 2 ledere» → «… 1 eller 2 styremedlemmer»; «for en leder, 2/3 eller mer» → «for et styremedlem, 2/3 eller mer».
+  b#9  010: the exercise is *markløft* — «en deadlift-trening (硬舉)» → «en markløftøkt (硬舉)», and all 18 remaining «deadlift» in the headline/alt texts → «markløft» (gender corrected: «et markløft»). No «deadlift» left.
+  b#10 010: «fra den dagen da vedkommende kjenner gjerningsmannen» → «… får kjennskap til gjerningsmannen» (matches the civil sentence in the same file).
+  b#11 010: stranded «, sammen.» removed after «øvelsesplanen og treningsregisteret».
+  b#12 010: «det er sikrere tidlig og individuelt å etterprøve de mulige kravsgrunnlagene og referansedatoene» → «det er sikrere å etterprøve de mulige kravsgrunnlagene og referansedatoene tidlig og for hvert grunnlag».
+  b#13 011: «PIF er en fil som samler opplysninger om kvalitet» → «PIF er en samling av opplysninger om kvalitet» (×2: FAQ + section 2).
+  b#14 011: «de på hvert tiltak anvendelige lovbestemte betingelsene» → «de lovbestemte vilkårene som gjelder for hvert tiltak».
+  b#15 011: «avhjelpingens stand» → «hvor langt avhjelpingen er kommet».
+  b#17 013: «tallrike utlendinger nylig forsvinner etter kontoåpningen» → «tallrike utlendinger i det siste har forsvunnet etter kontoåpningen». Subordinate word order kept, because the previous block ends on «… har personlig sagt til meg at»; the reviewer's main-clause «I det siste har …» would break that link.
+  b#18 014: Bokmål employment-law terms — «Fratredelsesviljeserklæringen og varslingsfristen (預告期間)» → «Oppsigelsen og oppsigelsesfristen (預告期間)»; heading «## 8. Fratredelsesvarselet …» → «## 8. Oppsigelsesvarselet …»; «fratredelsesvarselet» ×2 (intro + closing paragraph) → «oppsigelsesvarselet»; «varslingsfristen/-ene» ×4 → «oppsigelsesfristen/-ene». 008's «varselfristen (預告期間)» left — that is a correct Norwegian form and was not flagged.
+  b#19 014: «det tidspunkt, hvor fratredelsen gyldig får virkning» → «tidspunktet da fratredelsen gyldig får virkning»; 016: «I en transaksjon, hvor foreldrenes og barnets interesse» → «I en transaksjon der …».
+  b#20 014: «tillater ikke å fastlegge den rettslige konklusjonen på forhånd» → «Bare fordi kontrakten nevner … , kan man ikke på forhånd fastlegge den rettslige konklusjonen.»
+  b#21 014: comma restored — «utdanningens faglige og tekniske innhold, om det dreier seg om alminnelig tilpasningsutdanning eller om lovpliktig utdanning, …».
+  b#22 014: «ikke ensartet utelukke enhver intern utdanning» → «ikke uten videre utelukke …».
+  b#23 015: «)»(臺北市營業場所協助查詢服務作業須知)» → «)» (臺北市…)» — the gloss is no longer glued to the guillemet. The link and its label are unchanged.
+  b#24 016: «den gjenlevende forelders» → «den gjenlevende forelderens» (FAQ question, section 6) and the section-5 heading «Den gjenlevende forelderens rettigheter …».
+  b#25 016: «Man skal bekrefte trustee (受託人)» → «… trustforvalteren (受託人)».
+  b#26 016: «livssenteret på dødstidspunktet» → «sentrum for livsinteressene på dødstidspunktet».
+  b#27 016: missing article — «testaments form» → «testamentets form»; «hvis testament kun nevner» → «hvis testamentet kun nevner»; «skal testament (遺囑) oppfylle» → «skal testamentet (遺囑) oppfylle».
+  b#28 017: «de i registreringen anførte bransjer» → «bransjene som er oppgitt i registreringen» (×2: FAQ + body).
+  b#29 017: heading «### Due diligence og gjennomføring av transaksjonen» → «### Aktsomhetsgjennomgang og gjennomføring av transaksjonen».
+  b#30 017: «og hva oppholdsstatus er.» → «og hvilken oppholdsstatus vedkommende har.» (×2: FAQ + body).
+  b#31 digit telegrams: 018 «gjelder 1 stemme per 1 deltaker» → «gjelder prinsippet 1 deltaker, 1 stemme»; 010 «for 1 ulykke» → «for én og samme ulykke»; 011 «hos 1 part» → «hos den ene parten», «etter 1 bestemt ord» → «etter ett bestemt ord»; 012 «1 utelatelse» → «én enkelt utelatelse».
+  b#32 018: «kreves 2 deltakere eller mer» → «kreves 2 eller flere deltakere» (countable → *flere*; the digit stays, the checker counts it).
+  b#33 018: «Handelsutviklingskontoret under Taiwans økonomidepartement (經濟部商業發展署)» → «Handelsavdelingen under …» (Department of Commerce). Unified with 001, where «Administrasjonen for handelsutvikling … (商業發展署)» became «Handelsavdelingen … (商業發展署)» — one name per locale (R8).
+  b#35 018: «behandler returneringer og utskiftinger» → «behandler returer og utskiftinger».
+  b#36 018: «Hvem skylder støtten til kunden» → «Hvem har støtteplikten overfor kunden».
+  b#37 018: «et ikke-offentlig emitterende selskap» → «et selskap uten offentlig emisjon».
+
+Applied in full (63): a#1 a#2 a#4 a#5 a#6 a#7 a#8 a#9 a#11 a#12 a#13 a#14 a#15 a#16 a#17 a#18 a#20 a#21 a#22 a#23 a#24 a#25 a#26 a#27 a#28 a#29 a#30 a#32 a#33 a#34 a#35 a#36 a#37 a#38 a#39 a#40 a#41 a#42 a#43 a#44 · b#1 b#2 b#3 b#4 b#5 b#6 b#7 b#9 b#10 b#11 b#12 b#13 b#14 b#15 b#17 b#18 b#19 b#20 b#21 b#22 b#23 b#24 b#25 b#26 b#27 b#28 b#29 b#30 b#31 b#32 b#33 b#35 b#36 b#37
+Applied in part: a#10 (only the missing «fengsel» in the 4/6-month sentence; see skipped rows).
+
+## Systemic patterns swept (not only the quoted instance)
+  P1 Danish comma before an object clause («undersøke, om …»): 36 commas removed across 001 (3), 002 (9), 003 (1), 004 (9), 007 (5), 011 (1), 014 (5), 016 (1), 017 (2). Commas that separate coordinated indirect questions in a list (010, 012, 014, 016) are correct Bokmål and were left; so were parentheticals («og, om nødvendig,»).
+  P2 Fronted Danish «Alene …» for "merely": 13 sentences (003 ×3, 004 ×6, 007 ×7 — 004 line 137 held two).
+  P3 董事 as *direktør/leder*: 8 tokens fixed (002 ×4, 004 ×1, 018 ×3). Zero left.
+  P4 U+200B: NOT removed — see skipped rows.
+  P5 «livssentrum / livssenter»: 3 instances (007 ×2, 016 ×1). Zero left.
+  P6 Digit telegrams («pr. 1 X», «1 X» for a word): 14 instances across 002, 003, 006, 007, 008, 010, 011, 012, 018.
+  Also swept: «under hensyn til» (2), «undertiden» (2), «disses» (1), «retlige» (1), Danish relative «der» (1),
+  «forskriften om industriell innovasjon» (5), «deadlift» (19), 商業發展署 name (2 files), 014's notice vocabulary (7 tokens).
+
+## Rows skipped (with reason)
+  a#3  004 link label «artikkel 10 i næringsavgiftsloven (營業稅法)» → «næringsavgiftsloven (營業稅法)».
+       The Korean source itself labels this flno=3 link «영업세법 제10조» and the English column
+       «Article 10 of the Value-Added and Non-Value-Added Business Tax Act». The mismatch between
+       the label and flno=3 is in the source, not in nb. Dropping the 10 also removes a number the
+       `numbers` check counts. Left as is; this is a source-level item for the attorney/supervisor.
+  a#10 (main part) «I praksis idømmes i dag som regel omkring 3 måneders fengsel».
+       RULEBOOK-FIX R3 prescribes exactly the wording that is in the file («i enkelte dommer …;
+       det finnes ikke noe typisk eller garantert utfall»), and ACCEPTED-ROUND forbids making a
+       result sentence positive again. Only the reviewer's second point was applied (the 4- and
+       6-month sentence had dropped «fengsel»).
+  a#19 003 (and the same in 005, 006, 008, 009): delete the U+200B blank lines / promote Q16–Q20 to «## » headings.
+  b#16 013/015: delete every U+200B.
+       `checkBlocks` compares `countZwsp(source) !== countZwsp(target)` — the Korean source carries
+       the identical 52/8/4/10/5/5/3 zero-width spaces, so deleting them FAILs `blocks`. Promoting
+       Q16+ to headings also fails `headings` (the Korean and English sources keep Q16–Q20 as plain
+       paragraphs). Both are checker/source-pinned, not an nb defect.
+  a#31 001–004, 006, 007 and b#8 010, 011, 017, 018: period thousands → space thousands.
+       ACCEPTED-ROUND skips space separators, and the checker confirms why:
+       `NUMBER_THOUSAND_STYLE.nb = 'dot'`, and a space-grouped «500 000» is read by the `\d+` pass as
+       500 and 000, so every grouped amount FAILs `numbers`. Dot grouping kept everywhere in the columns.
+       (The guidance pack's «1 570 000 TWD» is outside this checker and was left untouched.)
+  b#34 018: renumber «## 7.» to «## 6.» and «## 8.» to «## 7.».
+       The reviewer notes the English source has the same skip; so does the Korean source
+       (`## 5.`, `## 7.`, `## 8.`). ACCEPTED-ROUND forbids changing numbers, and the renumbering
+       would diverge from every other locale. Source-level item.
+
+## Checker-forced wording (noted per the work order)
+  002: removing the stray digits in «på 1 konto» / «med 1 oppgave» (a#20) left `numbers` short by
+       two 1s, because the nb text had dropped the digit of the Korean «1회 휴업 기간은 1년을 …».
+       Restored where the source has it: «hver driftsstans må ikke vare lenger enn 1 år» →
+       «1 driftsstansperiode kan ikke vare lenger enn 1 år» (frontmatter FAQ + body).
+  010: same mechanism for b#31. Korean «최대 1배까지» → the digit is now in the parallel series:
+       «inntil 5 ganger … inntil 3 ganger … og ved uaktsomhet inntil 1 gang det faktiske tapet».
+       The prior repair (punitive damages stop at the actual loss) is unchanged in substance.
+  018: Korean «주주 1인 1표» carries two digits, so b#31 could not drop both:
+       «gjelder prinsippet 1 deltaker, 1 stemme» keeps them and removes the «per 1» telegram.
+  008: «utbetales det per år 1 måneds gjennomsnittslønn» keeps the «1 måneds» digit (Korean «1개월분»).
+
+## Where I think the reviewer is wrong (not applied as suggested)
+  1. a#3 (004, article 10 label) — the label reproduces the Korean and English source, and the digit
+     is required by `numbers`. The defect, if any, is in the source pair, not in nb.
+  2. a#10 — restoring «som regel» would reverse RULEBOOK-FIX R3, which the supervisor applied
+     deliberately to remove the inherited result claim. Kept R3's wording; added only «fengsel».
+  3. a#19 / b#16 — the U+200B lines and the plain-paragraph Q16–Q20 are pinned to the Korean source
+     by the checker (`ZWSP` and `headings`). They cannot be "cleaned" per locale.
+  4. a#31 / b#8 — Norwegian would indeed use a space, but the checker cannot parse it and
+     ACCEPTED-ROUND already skips this row class.
+  5. b#34 — the heading skip 5 → 7 → 8 exists in the Korean and English sources.
+  6. b#7 suggested «direktører» for 董事, which contradicts a#4 in the same round («*direktør* is an
+     executive manager; 董事 is *styremedlem*»). Used «styremedlem» in 018 as well, so the whole
+     locale now uses one term.
+  7. b#6 suggested «emerging-markedet», which leaves an English stem in a Norwegian noun. Used
+     «markedet for aksjer før børsnotering (興櫃)» — same referent, no English, gloss kept.
+  8. b#17 suggested main-clause order («I det siste har tallrike utlendinger forsvunnet»), but the
+     block continues «… har personlig sagt til meg at», so the clause must stay subordinate.
+
+## §Verify output verbatim
+$ cd /Users/son7/Projects/tseng-law-fix-nb-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-nb --lang nb 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=144
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-nb src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      25
+
+(25 = the 21 content/data files this lane edited + this log, plus the two untracked review files
+docs/i18n/global-plan/reviews/native/rounds/r5/nb-{a,b}.md and the pre-existing
+modification of docs/i18n/global-plan/WO-F-nb.txt, which this lane did not touch.
+The run above reported 24 before this log file existed.)

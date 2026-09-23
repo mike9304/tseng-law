@@ -819,8 +819,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Керівна адвокатка на Тайвані (Managing Attorney)',
       'chang-rongxuan': 'Адвокат на Тайвані (Taiwan Attorney)',
-      'chang-fangyu': 'Помічник адвоката (paralegal)',
-      'son-jungmin': 'Керівництво операціями в Кореї (Korea Operations Manager)',
+      'chang-fangyu': 'Помічник адвоката (Paralegal)',
+      'son-jungmin': 'Керівник операцій у Кореї (Korea Operations Manager)',
       'huang-shengping': 'Партнер бухгалтерської фірми (Partner CPA)',
     },
   },
@@ -3332,7 +3332,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Фірма веде справи підприємств і приватних осіб на Тайвані англійською, японською, корейською та китайською.',
-        'Представляла корейського студента у вимозі про відшкодування шкоди через травму в спортзалі та здобула рішення першої інстанції на TWD 1.57M.',
+        'Представляла корейського студента у вимозі про відшкодування шкоди через травму в спортзалі та здобула рішення першої інстанції про відшкодування 1,57 млн нових тайванських доларів (TWD 1.57M).',
       ],
       education: [
         'Магістр (M.S.), Institute of Finance, National Taiwan University',

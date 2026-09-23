@@ -1886,7 +1886,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Văn phòng nhận các vụ việc doanh nghiệp và cá nhân tại Đài Loan, làm việc bằng tiếng Anh, tiếng Nhật, tiếng Hàn và tiếng Trung.',
-        'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường 1,57 triệu TWD (TWD 1.57M).',
+        'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường 1,57 triệu đài tệ mới (TWD 1.57M).',
       ],
       education: [
         'Thạc sĩ (M.S.), Viện Tài chính (Institute of Finance, National Taiwan University)',

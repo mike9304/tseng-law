@@ -1,0 +1,92 @@
+# WO-F-vi — Vietnamese fix lane (Grok 4.7), campaign round 5
+Worktree: /Users/son7/Projects/tseng-law-fix-vi-r5 (no git add/commit/push)
+Scope written: src/content/columns-vi/{003,006,010,011,012,014,016,017,018}.md,
+src/data/international-guidance-content.ts (vi criminal paragraph),
+src/data/international-guidance-team.ts (vi bio only; token `TWD 1.57M` kept byte-identical),
+this log. No test file edited (nothing pinned the strings that changed).
+R2–R10 were already in this text: both round-5 verdicts score 4/5 and say the earlier defects are closed. No further unflagged rewrite.
+
+## Rows applied
+vi-a.md
+  a#1  guidance criminal paragraph: "đúng thứ tự ưu tiên" → "theo đúng trình tự".
+  a#3  006: "mức độ đáng đồng tiền quả thực rất cao" → "quả thực rất đáng đồng tiền".
+  a#4  team bio: "1,57 triệu TWD (TWD 1.57M)" → "1,57 triệu đài tệ mới (TWD 1.57M)".
+  a#5  003: "1.000.000 TWD theo Đài tệ mới" → "1.000.000 đài tệ mới (新臺幣, TWD)";
+       "200.000 TWD theo Đài tệ mới" → "200.000 đài tệ mới (新臺幣, TWD)".
+       Left "80.000–3.000.000 TWD theo 15 cấp độ luật định" ("theo" = across the grades).
+vi-b.md
+  b#1  010: "điều đó không công nhận trách nhiệm" → "việc đó không xác lập trách nhiệm".
+  b#2  012: "A bị phán định là người chịu trách nhiệm chính" → "A được xác định là…".
+  b#3  016: guardian is the parent exercising parental rights, not "một khái niệm đồng nhất".
+  b#4  016: "không phản ánh trùng lặp kết quả tính của bên này sang bên kia"
+       → "không tính trùng kết quả của chế độ này sang chế độ kia".
+  b#5  010: "coi tin thỏa thuận mà báo chí đưa" → "coi thông tin về thỏa thuận mà báo chí đưa tin
+       … của bản án sơ thẩm".
+  b#6  011: "chịu trách nhiệm trung tâm" → "chịu trách nhiệm chính".
+  b#7  012: "biển báo chỉ đường cong" → "biển báo đường cong".
+  b#8  014: "khó thay thế được cho" → "khó thay thế cho".
+  b#9  018 market-entry calque → "cấu trúc gia nhập thị trường Đài Loan" (5 instances; see sweep).
+  b#11 P3  curly single quotes → Vietnamese “…”: 014 “tiền phạt vi phạm hợp đồng”;
+       017 “Hậu cần” (FAQ + body) and “công ty hậu cần”.
+  b#12 P3  012: "đi qua về phía bên trái … 0,5 mét" → "vượt bên trái … 0,5 mét" (digit kept).
+
+Applied 15 (a#1, a#3, a#4, a#5, b#1–b#9, b#11, b#12). No P1 in this round.
+
+## Rows skipped
+a#2  004 link label "(không phải Điều 10 Luật Thuế kinh doanh)".
+     The suggested label drops the digit 10. The column checker compares against the Korean
+     source label "영업세법 제10조"; without that 10, `numbers` FAILs
+     `missing from translation (1): 10`. URL left unchanged. Parenthetical kept so the
+     file still passes. The note is still a translator aside; the checker will not allow it to go.
+b#10 013 and 015 U+200B, including lines whose only character is U+200B.
+     `checkBlocks` requires the same ZWSP count and the same block count as
+     src/content/columns (Korean). Those characters are in the Korean source
+     (013: 5, 015: 3, and the same parity in 003/005/006/008/009). Deleting them
+     fails `blocks` / `ZWSP`. Left in place. 0 instances removed.
+
+## Systemic patterns
+- "N TWD theo Đài tệ mới", or the same sum doubled with English "M":
+  swept columns-vi + vi guidance. Changed 3 (003 ×2, team bio ×1).
+  No other "TWD theo Đài tệ mới". Amounts already written "N triệu TWD" / "N TWD"
+  without "theo" were left (not this calque).
+- Translator correction in a public source title "(không phải Điều …)":
+  1 instance (004). Not changed; see a#2.
+- Market-entry structure "vào" Taiwan ("cấu trúc vào"):
+  5 instances in 018 changed (body, "cấu trúc vào Đài Loan", heading,
+  image alt, sample subject line). Other "vào Đài Loan" are capital transfers
+  or market entry itself (001, 004, 013), not this calque; left.
+- Appraisal worded as a court ruling ("bị phán định"): 1 instance (012) changed.
+  Other "phán định" means "determine" (003, 007, headings); left.
+- Guardian turned into a concept ("khái niệm đồng nhất"): 1 instance (016) changed.
+- English-style single quotes ‘…’ in Vietnamese running text:
+  4 pairs changed (014 ×1, 017 ×3). No other ‘…’ quotes in columns-vi.
+- U+200B: 87 characters, all matching the Korean source
+  (003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3). Changed 0. See b#10.
+- 007 "không thay thế được cho" is ordinary "cannot substitute for"
+  (không + được). Not the "khó … được cho" stack in b#8. Left.
+
+## Reviewer got wrong (not applied)
+None. a#2 and b#10 are right as prose and blocked by the checker, not by a bad reading.
+"phán định" outside b#2 is not a court ruling. "TWD theo 15 cấp độ" is not the currency calque.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=31
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      13
+```
+Commands were the work-order set (`check-column-translation.mjs --dir src/content/columns-vi --lang vi | tail -8`, marker grep, `tsc --noEmit`, vitest on src/lib/__tests__ and src/data/__tests__, `git status --short | wc -l`). The `13` was counted before this log file existed. After this file was written, `git status --short | wc -l` is 14.

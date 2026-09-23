@@ -175,7 +175,7 @@ Pienākums slēgt līgumu saskaņā ar Obligātās automašīnu civiltiesiskās 
 
 Viena transportlīdzekļa negadījumā šā transportlīdzekļa vadītājs principā nav šā transportlīdzekļa obligātās apdrošināšanas pabalsta adresāts. Tomēr negadījumā, kurā piedalās vairāki transportlīdzekļi, ir gadījumi, kuros vadītājs var prasīt pabalstu pie cita iesaistītā transportlīdzekļa obligātā apdrošinātāja.
 
-Pabalstu standarts (強制汽車責任保險給付標準), kas grozīts 2026. gada 29. maijā, piemērojams negadījumiem, kuri notikuši 2026. gada 1. jūlijā vai pēc tam. Samērīgo un nepieciešamo medicīnisko izdevumu griesti par ievainojumu ir TWD 200.000 jauno Taivānas dolāru; pabalsts par invaliditāti (失能) ir no TWD 80.000 līdz TWD 3.000.000 pēc 15 likumā noteiktajām pakāpēm; pabalsts par nāvi ir TWD 3.000.000, un kopējais nāves, invaliditātes un medicīnisko izdevumu maksimums 1 cietušajam un 1 negadījumam ir TWD 3.200.000. Uz agrākiem negadījumiem var piemērot iepriekšējo standartu.
+Pabalstu standarts (強制汽車責任保險給付標準), kas grozīts 2026. gada 29. maijā, piemērojams negadījumiem, kuri notikuši 2026. gada 1. jūlijā vai pēc tam. Samērīgo un nepieciešamo medicīnisko izdevumu griesti par ievainojumu ir TWD 200.000; pabalsts par invaliditāti (失能) ir no TWD 80.000 līdz TWD 3.000.000 pēc 15 likumā noteiktajām pakāpēm; pabalsts par nāvi ir TWD 3.000.000, un kopējais nāves, invaliditātes un medicīnisko izdevumu maksimums 1 cietušajam un 1 negadījumam ir TWD 3.200.000. Uz agrākiem negadījumiem var piemērot iepriekšējo standartu.
 
 Trešo personu civiltiesiskās atbildības apdrošināšana (第三人責任險), vadītāja nelaimes gadījumu apdrošināšana (駕駛人傷害險) un paša transportlīdzekļa bojājumu apdrošināšana (車體損失險) ir fakultatīvi līgumiska rakstura produkti. Faktiskais segums atšķiras pēc apdrošinātā, griestiem, pašriska (自負額), izņēmumiem, neuzmanības un citiem polises nosacījumiem, tāpēc polise un nosacījumi jāpārbauda katrā lietā atsevišķi.
 
@@ -339,7 +339,7 @@ Cietušā ievainojums vai nāve viņam pašam un viņa ģimenei nes fiziskas un 
 
 ​
 
-Vainīgais bieži nerūpējas par zvanīšanu ar jautājumu par cietušā stāvokli un par apmeklējumu, un daudzi vainīgie pieņem, ka apdrošinātājs visu nokārtos, un paši neparādās. Šādos gadījumos cietušais nejūt ne nožēlu, ne sirsnību.
+Vainīgais bieži vien ne piezvana, lai painteresētos par cietušā veselību, ne arī viņu apmeklē, un daudzi vainīgie pieņem, ka apdrošinātājs visu nokārtos, un paši neparādās. Šādos gadījumos cietušais nesaskata ne nožēlu, ne sirsnīgu attieksmi.
 
 ​
 
@@ -347,7 +347,7 @@ Vainīgais bieži nerūpējas par zvanīšanu ar jautājumu par cietušā stāvo
 
 ​
 
-Cietušais tādējādi paliek dziļi ievainots un nonāk dusmās, tāpēc bieži neatkāpjas sarunu summā, piesakās uz pagaidu mantas nodrošinājumu (假扣押) un ved otras puses mantas arestu līdz galam.
+Cietušais tādējādi jūtas dziļi aizvainots un sadusmojas, tāpēc bieži neatkāpjas sarunu summā, iesniedz pieteikumu par pagaidu mantas nodrošinājumu (假扣押) un ved otras puses mantas arestu līdz galam.
 
 ​
 

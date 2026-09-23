@@ -1355,7 +1355,7 @@ export const guidanceAnswers: Record<
   lv: {
     services: {
       answer:
-        'Birojs ved sešas jomas saskaņā ar Taivānas tiesībām: ieguldījumus un sabiedrību dibināšanu, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Katras lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis nosūtīto saturu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
+        'Birojs strādā sešās jomās saskaņā ar Taivānas tiesībām: ieguldījumi un sabiedrību dibināšana, civillietas un zaudējumu atlīdzība, laulība, ģimene un mantojums, darba strīdi, krimināllietas un intelektuālais īpašums. Katras lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis nosūtīto saturu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
       sources: ['/lv/faq', '/lv/contact'],
     },
     about: {

@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Sākot ēdināšanas darbību, pirmais jautājums ir atrast darbības adresi (營業地址).
 
-Līdzās tirgus situācijai jānoskaidro, vai adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
+Līdzās tirgus situācijai
 
-Atsevišķi jāpārbauda, vai izvēlētā adrese vispār pieļauj ēdināšanas darbību.
+vēl viens būtisks apsvērums ir tas,
 
-Jānoskaidro, vai šī adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
+vai adrese atrodas zonā, kur „restorāna“ darbība ir iespējama.
 
 ​
 
@@ -55,7 +55,7 @@ Tāpēc pievērsiet šai lietai uzmanību.
 
 Visām nozarēm ieteicams ar sistēmu „darbības vietas iepriekšēja pārbaude“ (營業場所預先查詢) apstiprināt, vai darbība ir iespējama.
 
-Tomēr, reģistrējot sabiedrību, bieži reģistrē vairākas nozares uzreiz un bieži vēlas vienā iesniegumā reģistrēt aptuveni 10 nozaru.
+Tomēr, reģistrējot sabiedrību, bieži reģistrē vairākas nozares uzreiz un bieži vēlas vienā iesniegumā reģistrēt aptuveni 10 nozares.
 
 Tāpēc praksē, reģistrējot sabiedrību, nav jāpārbauda visas nozares.
 
@@ -63,7 +63,7 @@ Saskaņā ar „[Taipejas pilsētas darbības vietu palīdzības pārbaudes paka
 
 no 2023. gada 1. janvāra, piesakot sabiedrības vai komercdarbības (tostarp filiāles (分公司) un struktūrvienības (分支機構)) dibināšanas, atrašanās vietas pārcelšanas vai darbības nozaru papildināšanas reģistrāciju, darbības vietas iepriekšējās pārbaudes iznākums **jāpievieno** reģistrācijas pieteikumam, neatkarīgi no nozares.
 
-Turpmākais saraksts „nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目) apzīmē nozares, kuras Tirdzniecības pārvalde reģistrācijas izskatīšanas gaitā pārbauda pēc amata papildus (隨案主動查詢), kad nozare figūrē pieteikumā, bet pievienotajā iznākumā tās trūkst; apstāklis, ka nozares šajā sarakstā nav, nenozīmē atbrīvojumu no pārbaudes.
+Turpmākais saraksts „nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目) apzīmē nozares, kuras Tirdzniecības pārvalde reģistrācijas izskatīšanas gaitā papildus pārbauda pēc savas iniciatīvas (隨案主動查詢), kad nozare ir norādīta pieteikumā, bet pievienotajā iznākumā tās trūkst; apstāklis, ka nozares šajā sarakstā nav, nenozīmē atbrīvojumu no pārbaudes.
 
 Ja restorānu atver vietā, kur restorāna darbība nav iespējama, vēlāk var sekot kompetentās iestādes administratīvais naudas sods (罰鍰).
 
@@ -71,7 +71,7 @@ Ja restorānu atver vietā, kur restorāna darbība nav iespējama, vēlāk var 
 
 „nozare, kuru iestāde pārbauda pēc savas iniciatīvas“ (主動查詢之營業項目)
 
-Ar to ir apkopota būtiskā gaita; konkrēta lieta jāizvērtē atsevišķi ar advokāti vai advokātu. Birojs konsultē tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.
+Ar to izklāsts ir noslēgts; konkrēta lieta jāizvērtē atsevišķi ar advokāti vai advokātu. Birojs konsultē tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.
 
 Administratīvo iestāžu noteikumi var bieži mainīties; pirms juridiskās personas reģistrācijas ir lietderīgi pārbaudīt jaunākos noteikumus.
 

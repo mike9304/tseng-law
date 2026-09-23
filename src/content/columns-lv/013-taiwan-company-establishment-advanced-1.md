@@ -119,9 +119,9 @@ Turklāt galīgajā sabiedrības reģistrācijā pilsētas valdība (市政府) 
 
 Ja tā ir biroja telpa, sabiedrības reģistrācija (公司登記) tad nav iespējama.
 
-Piemēram, ja nozare ir iespējama biroja telpā, piemēram, reklāma vai vairumtirdzniecība, sabiedrību var dibināt biroja telpā. Pirms nomas līguma noslēgšanas to pārbaudiet.
+Turpretī, ja nozare ir veicama biroja telpā (piemēram, reklāma vai vairumtirdzniecība), sabiedrību var dibināt biroja telpā.
 
-To iepriekš pārbaudiet pie kompetentās iestādes.
+Pirms nomas līguma noslēgšanas to pārbaudiet kompetentajā iestādē.
 
 *Ja vajadzīga konsultācija par Taivānas tiesībām, birojs konsultē tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā; komentāri vietnē netiek uzturēti.*
 

@@ -55,7 +55,7 @@ patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masi
 
 nodarbināja divus darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas pakalpojumiem, un policija to konstatēja.
 
-Saskaņā ar tolaik spēkā esošajām tiesībām Lin kungam un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 jauno Taivānas dolāru (新臺幣).
+Saskaņā ar tolaik spēkā esošajām tiesībām Lin kungam un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 (新臺幣).
 
 Lin kungs uzskatīja šo sankciju par ļoti netaisnīgu un pieprasīja konstitucionālo iztulkošanu.
 
@@ -71,7 +71,7 @@ Tāpēc tolaik likumdevējs, lai aizsargātu personas ar redzes traucējumiem, k
 
 izstrādāja likumu, kas aizsargāja personu ar redzes traucējumiem nodarbinātību un tiesības uz pastāvēšanu (生存權).
 
-Tomēr ar laika gaitu un patēriņa tirgus paplašināšanos
+Tomēr laika gaitā un līdz ar patēriņa tirgus paplašināšanos
 
 parādījās viedoklis, ka tikai personu ar redzes traucējumiem tiesību aizsardzība pārāk ierobežo personu bez redzes traucējumiem tiesības uz darbu.
 
@@ -89,7 +89,7 @@ Līdzīgi Korejā, kur daudzas personas ar redzes traucējumiem pelna iztiku ar 
 
 principā tikai personas ar redzes traucējumiem, kuras ieguvušas kvalifikācijas apliecību, var veikt masiera profesiju.
 
-Tā ir taisnība, ka Korejas valdība sāka izsniegt masāžas apliecības arī personām bez redzes traucējumiem,
+Savulaik Korejas valdība sāka izsniegt masāžas apliecības arī personām bez redzes traucējumiem,
 
 un daudzas personas ar redzes traucējumiem, baidoties zaudēt iztikas līdzekli, rīkoja intensīvus protestus.
 
@@ -97,9 +97,9 @@ Pašlaik Koreja joprojām ļauj tikai personām ar redzes traucējumiem ar kvali
 
 un, ja kāds no citas personas iekasē atlīdzību par masāžu bez šīs kvalifikācijas,
 
-saskaņā ar Korejas likumu par veselības pakalpojumiem (醫療法) var tikt uzlikta brīvības atņemšana līdz 3 gadiem.
+saskaņā ar Korejas Medicīnisko pakalpojumu likumu var piespriest brīvības atņemšanu uz laiku līdz 3 gadiem.
 
-Ja kāds bez redzes traucējumiem vada masāžas darbību, var tikt uzlikta brīvības atņemšana līdz 5 gadiem.
+Ja kāds bez redzes traucējumiem vada masāžas darbību, var piespriest brīvības atņemšanu uz laiku līdz 5 gadiem.
 
 ​
 
@@ -117,12 +117,12 @@ tomēr šajā procesā joprojām notiek seksuālas uzmākšanās (性騷擾) vai
 
 Tas, kam sākotnēji vajadzēja būt tikai masāžas saņemšanai saspringuma atbrīvošanai,
 
-var kļūt par traumu visai dzīvei, ja tiek ciesta seksuāla uzmākšanās.
+var kļūt par traumu visai dzīvei, ja nākas ciest no seksuālas uzmākšanās.
 
 Ja masāžas laikā Taivānā jūtat diskomfortu vai kaut ko īpatnēju,
 
 nekavējoties to paziņojiet vai lūdziet pārtraukt, lai sevi aizsargātu.
 
-Ja uzskatāt, ka esat cietis(-usi) seksuālu uzmākšanos,
+Ja uzskatāt, ka esat cietis(-usi) no seksuālas uzmākšanās,
 
 dodieties uz policijas iecirkni kopā ar uzticamu draugu vai ar advokātu Taivānā (律師), lai iesniegtu ziņojumu.

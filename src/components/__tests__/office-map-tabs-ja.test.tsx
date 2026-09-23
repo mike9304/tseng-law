@@ -25,11 +25,12 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
     expect(html).toContain('>事務所所在地<');
     expect(html).toContain('role="tablist" aria-label="事務所所在地"');
     expect(html).toContain('>事務所<');
-    expect(html).toContain('>電話:');
     expect(html).toContain('>Google マップで見る（写真・口コミ）<');
     expect(html).toContain('>地図プレビュー<');
     expect(html).toContain('>地図を開く<');
-    expect(html).toContain('>韓国事務所の所在地<');
+    // WO-X1 (J02/J08): the Korea office card became one line plus the time zone.
+    expect(html).not.toContain('>韓国事務所の所在地<');
+    expect(html).toContain('>事務所の時間帯：台湾時間（日本時間−1時間）<');
     expect(html).toContain('title="台北事務所の地図"');
     expect(html).toContain('>5.0・クチコミ17件<');
     expect(html).not.toContain('aria-label="Googleでの評価は5.0、クチコミは17件です"');
@@ -68,7 +69,7 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
   it('derives Japanese Taiwan and Korea records from the verified Traditional Chinese records with Japanese address copy', () => {
     expect(componentSource).toContain("'zh-hant': zhHantTaiwanOffices");
     expect(componentSource).toMatch(
-      /ja: zhHantTaiwanOffices\.map\(\(office\) => \(\{\s+\.\.\.office,\s+title: japaneseTaiwanOfficeTitles\[office\.id\],\s+address: japaneseTaiwanOfficeAddresses\[office\.id\],\s+\}\)\)/,
+      /ja: zhHantTaiwanOffices\.map\(\(office\) => \(\{\s+\.\.\.office,\s+title: japaneseTaiwanOfficeTitles\[office\.id\],\s+address: japaneseTaiwanOfficeAddresses\[office\.id\],\s+\.\.\.taiwanOfficeInternationalNumbers\[office\.id\],\s+\}\)\)/,
     );
     expect(componentSource).toContain("'zh-hant': zhHantKoreaOffice");
     expect(componentSource).toMatch(
@@ -99,23 +100,15 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
     expect(html).toContain('alt="昊鼎国際法律事務所 台北事務所の会議室"');
   });
 
-  it('reuses the verified Korea office contact and NAVER destination with Japanese copy', () => {
+  it('reduces the verified Korea office to one Japanese address line without phone or NAVER link (WO-X1 J02/J07)', () => {
     const html = render('ja');
-    const naverHref =
-      'https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%EC%A3%BC%EC%8B%9C%20%EC%98%A5%EC%A0%95%EB%8F%99%EB%A1%9C%20177%20%EC%88%98%ED%98%84%ED%94%84%EB%9D%BC%EC%9E%90%204%EC%B8%B5';
 
-    expect(html).toContain('>韓国事務所<');
-    expect(html).toContain('韓国京畿道楊州市玉井東路177 Suhyeon Plaza 4階');
+    expect(html).toContain('韓国事務所：韓国京畿道楊州市玉井東路177 Suhyeon Plaza 4階');
     expect(html).not.toContain('韓國京畿道楊州市玉井東路177號 Suhyeon Plaza 4樓');
-    expect(html).toContain('>+82-10-2992-9304<');
-    expect(html).toContain('>NAVERマップで見る<');
-    // WO-DS1 F: the Korea office is a single card, so the NAVER link renders once.
-    expect((html.match(new RegExp(`href="${naverHref}"`, 'g')) ?? [])).toHaveLength(1);
-    expect(html).toMatch(
-      new RegExp(
-        `href="${naverHref}" target="_blank" rel="noopener noreferrer"`,
-      ),
-    );
+    expect(html).not.toContain('+82-10-2992-9304');
+    expect(html).not.toContain('tel:+82');
+    expect(html).not.toContain('map.naver.com');
+    expect(html).not.toContain('>NAVERマップで見る<');
   });
 
   it.each([

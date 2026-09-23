@@ -6,6 +6,7 @@ import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import {
   taipeiPhotos,
   taiwanOfficeData,
+  taiwanOfficeInternationalNumbers,
   taiwanOfficeSeoRecords,
   TAIPEI_MAPS_URL,
   YANGJU_NAVER_MAP_URL,
@@ -77,6 +78,13 @@ const koreaOfficeData: Record<SiteLocale, OfficeInfo> = {
 
 /** Canonical Taiwan records, with only the city name written in the page language. */
 function taiwanOfficesFor(locale: PublicLocale8, guidance: GuidanceOfficeCopy | null): OfficeInfo[] {
+  if (locale === 'en') {
+    // WO-X1 (EN-06): EN shows the published numbers in international form.
+    return taiwanOfficeData.en.map((office) => ({
+      ...office,
+      ...taiwanOfficeInternationalNumbers[office.id as TaiwanOfficeId],
+    }));
+  }
   if (!guidance || isSiteLocale(locale)) return taiwanOfficeData[locale as SiteLocale];
   return taiwanOfficeData.en.map((office) => ({
     ...office,
@@ -99,6 +107,23 @@ function telHref(office: OfficeInfo): string {
   const dial = taiwan?.telephone ?? office.phone ?? '';
   return `tel:${dial.replace(/[^+\d]/g, '')}`;
 }
+
+/**
+ * WO-X1 (EN-03 · J02 · J07 · J08): EN/JA keep the four Taiwan offices as the
+ * office section and reduce the Korea office to one address line (no phone
+ * link, no map button), plus the office time zone. ko/zh-hant and the
+ * guidance locales keep the Korea office card.
+ */
+const compactKoreaOfficeCopy = {
+  en: {
+    timeZone: 'Office time zone: Taipei (GMT+8).',
+    koreaPrefix: 'Korea office:',
+  },
+  ja: {
+    timeZone: '事務所の時間帯：台湾時間（日本時間−1時間）',
+    koreaPrefix: '韓国事務所：',
+  },
+} as const;
 
 function koreaOfficeFor(locale: PublicLocale8, guidance: GuidanceOfficeCopy | null): OfficeInfo {
   if (!guidance || isSiteLocale(locale)) return koreaOfficeData[locale as SiteLocale];
@@ -323,6 +348,14 @@ export default function OfficeMapTabs({
           </article>
         </div>
 
+        {locale === 'en' || locale === 'ja' ? (
+          <div className="office-korea office-korea--compact" data-office-korea-compact>
+            <p className="card-copy">{compactKoreaOfficeCopy[locale].timeZone}</p>
+            <p className="card-copy">
+              {`${compactKoreaOfficeCopy[locale].koreaPrefix}${locale === 'en' ? ' ' : ''}${koreaOffice.address}`}
+            </p>
+          </div>
+        ) : (
         <div className="office-korea">
           <div className="section-label">{officeLabel}</div>
           {presentation === 'editorial' ? (
@@ -375,6 +408,7 @@ export default function OfficeMapTabs({
             </article>
           )}
         </div>
+        )}
       </div>
     </section>
   );

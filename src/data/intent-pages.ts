@@ -694,7 +694,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'English speaking lawyer Taipei'],
       heroPoints: [
         'This page connects overseas and international clients to Taiwan legal support for company setup, investment, and disputes.',
-        'The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese.',
+        'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, in person in Taipei or by video.',
         'The firm assists with Taiwan company formation, litigation across practice areas, residence-permit procedures, and tax-accounting assistance.',
         'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
         'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
@@ -789,7 +789,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         'Entity choice, investment approval, capital remittance, registration, and operating contracts should be reviewed as one Taiwan-law process.',
         'This page explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan — not limited to one home country.',
-        'The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese. Initial review can start remotely.',
+        'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, in person in Taipei or by video. Initial review can start remotely.',
         'After registration, the firm can assist with residence-permit procedures and tax-accounting assistance for the Taiwan operation.',
         'Official government pages are linked as reference destinations; they do not decide eligibility on their own.',
       ],
@@ -881,7 +881,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan debt recovery', 'sue a Taiwanese company'],
       heroPoints: [
         'We handle Taiwan contract disputes and unpaid invoices, as well as civil claims, criminal matters, and family disputes according to the case.',
-        'The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese. Early review can start from outside Taiwan.',
+        'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, in person in Taipei or by video. Early review can start from outside Taiwan.',
         'Foreign-national matters often require combined review of evidence, translation, service, deadlines, and immigration-related issues.',
         'Attorney Wei Tseng’s related case references and columns are linked directly for context.',
       ],
@@ -968,10 +968,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-semiconductor-supplier-legal': {
       slug: 'taiwan-semiconductor-supplier-legal',
       label: 'SEARCH GUIDE',
-      title: 'Legal guidance for overseas semiconductor materials and equipment suppliers in Taiwan',
+      title: 'Taiwan Legal Counsel for Semiconductor Suppliers',
       seoTitle: 'Taiwan Semiconductor Supplier Legal Support',
       description:
-        'A briefing for overseas semiconductor materials and equipment suppliers that sell into Taiwan fabs and packaging houses: local entity choice, supply contracts, technician stays, and collections. Consultations are in English, Chinese, Korean, and Japanese.',
+        'A briefing for overseas semiconductor materials and equipment suppliers that sell into Taiwan fabs and packaging houses: local entity choice, supply contracts, technician stays, and collections.',
       keywords: [
         'Taiwan semiconductor supplier legal',
         'semiconductor materials equipment Taiwan',
@@ -1293,7 +1293,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       title: '台湾の半導体材料・装置サプライヤー向け法務案内',
       seoTitle: '台湾の半導体素材・装置サプライヤー法務 | 会社設立・契約・労務・売掛',
       description:
-        '台湾のファブやパッケージング先へ材料・装置を納入する日本のサプライヤーが、現地法人、供給契約、技術者の滞在、代金回収をどう準備するかを整理した案内です。相談は英語・中国語・韓国語・日本語で行います。',
+        '台湾のファブやパッケージング先へ材料・装置を納入する日本のサプライヤーが、現地法人、供給契約、技術者の滞在、代金回収をどう準備するかを整理した案内です。相談は日本語・中国語・英語・韓国語で行います。',
       keywords: [
         '台湾 半導体 素材 装置',
         '台湾 半導体 サプライヤー 法務',

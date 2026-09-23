@@ -36,14 +36,15 @@ function getConfig(locale: SiteLocale): MessengerConfig {
   if (locale === 'en') {
     return {
       sectionTitle: 'Email Consultation',
-      sectionDescription: 'Please send consultation inquiries to our official email address for follow-up.',
+      sectionDescription:
+        'Send your inquiry to our official email address. We reply in the language you write in. Office time zone: Taipei (GMT+8).',
       primaryLabel: 'Official consultation email',
       primaryDescription: CONSULTATION_EMAIL,
       features: [
-        'Incorporation and investment inquiries',
-        'Litigation and dispute booking',
+        'Company setup and investment',
+        'Litigation and disputes',
         'Visa and residency questions',
-        'Official email intake',
+        'Consultation format and scheduling (in person in Taipei or by video)',
       ],
       featuresTitle: 'What You Can Ask by Email',
     };
@@ -52,7 +53,8 @@ function getConfig(locale: SiteLocale): MessengerConfig {
   if (locale === 'ja') {
     return {
       sectionTitle: 'メールでのご相談',
-      sectionDescription: 'ご相談は公式メールアドレス宛にお送りください。確認後ご案内します。',
+      sectionDescription:
+        'ご相談は公式メールアドレス宛にお送りください。ご返信は日本語で行います。事務所の時間帯は台湾時間（日本時間−1時間）です。',
       primaryLabel: '公式相談メール',
       primaryDescription: CONSULTATION_EMAIL,
       features: [

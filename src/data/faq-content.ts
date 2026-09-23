@@ -198,9 +198,9 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── Family / Divorce ──
     {
-      question: 'What procedures does a Korean national need for divorce in Taiwan?',
+      question: 'What is the process for a foreign national to divorce in Taiwan?',
       answer:
-        'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce between Korea and Taiwan involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with both legal systems is essential.'
+        'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce raises questions of applicable law, jurisdiction, property division, and custody, which need to be reviewed case by case.'
     },
     {
       question: 'How is child custody determined in Taiwan?',
@@ -271,9 +271,9 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── 家事・離婚 ──
     {
-      question: '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
+      question: '外国籍の方が台湾で離婚する場合、どのような手続きが必要ですか？',
       answer:
-        '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。韓国・台湾間の国際離婚では、台湾で手続できるか、どの法が適用されるか、両地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。'
+        '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。国際離婚では、台湾で手続できるか、どの法が適用されるか、関係する国・地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。'
     },
     {
       question: '台湾で未成年の子の親権・監護はどのように決まりますか？',
@@ -290,7 +290,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '相談はどのような方式で行われますか？',
       answer:
-        '台北事務所での対面相談またはビデオ通話による相談に対応しており、英語・韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずは案件の簡潔な概要をお送りください。その他の資料は弁護士の案内後にご提出ください。連絡はメールから行えます。'
+        '台北事務所での対面相談またはビデオ通話による相談に対応しており、日本語・中国語・英語・韓国語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずは案件の簡潔な概要をお送りください。その他の資料は弁護士の案内後にご提出ください。連絡はメールから行えます。'
     },
     {
       question: '物流・化粧品などの規制業種でも台湾で会社を設立できますか？',

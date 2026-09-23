@@ -59,7 +59,7 @@ const NON_EN_TEMPLATES = {
       '電話番号：',
       'ご相談分野：',
       '案件または業務の概要：',
-      'ご希望の言語：日本語 / 中文 / 한국어 / English',
+      'ご希望の言語：日本語', // WO-X1 (J31): page language only
       '',
       '※ 初回のお問い合わせには、旅券番号、身分証番号、銀行口座情報、身分証明書の原本などの機微情報を記載しません。必要な資料は、弁護士から案内を受けた後、安全な方法で提出します。',
       '',
@@ -86,7 +86,7 @@ describe('public-contact English intake alignment', () => {
       'Taiwan connection (counterparty, entity, property, residence, etc.):',
       'Deadline or key dates, if any:',
       'Brief description:',
-      'Preferred language: English / Korean / Chinese / Japanese',
+      'Preferred language: English', // WO-X1 (EN-10): page language only
       'Where you are located, time zone, and preferred contact method (optional):',
       'How you found us (optional):',
     ];

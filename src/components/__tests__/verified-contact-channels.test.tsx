@@ -108,7 +108,8 @@ describe('verified public contact channels', () => {
     for (const line of [
       'EMAIL',
       'メールでのご相談',
-      'ご相談は公式メールアドレス宛にお送りください。確認後ご案内します。',
+      // WO-X1 (J08, user decision 2026-09-23): reply language and time zone.
+      'ご相談は公式メールアドレス宛にお送りください。ご返信は日本語で行います。事務所の時間帯は台湾時間（日本時間−1時間）です。',
       '公式相談メール',
       'wei@hoveringlaw.com.tw',
       'メールでご相談いただける内容',
@@ -141,7 +142,7 @@ describe('verified public contact channels', () => {
     const expectations = [
       ['ko', '이메일 상담', '상담 문의는 공식 이메일로 보내주시면 확인 후 안내해 드립니다.'],
       ['zh-hant', '電子郵件諮詢', '請將諮詢內容寄至官方電子郵件信箱，我們確認後回覆。'],
-      ['en', 'Email Consultation', 'Please send consultation inquiries to our official email address for follow-up.'],
+      ['en', 'Email Consultation', 'Send your inquiry to our official email address. We reply in the language you write in. Office time zone: Taipei (GMT+8).'],
     ] as const;
 
     for (const [locale, title, description] of expectations) {

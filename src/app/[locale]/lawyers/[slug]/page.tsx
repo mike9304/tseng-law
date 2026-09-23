@@ -298,16 +298,20 @@ export default async function LawyerProfilePage(
                 </div>
               </div>
 
-              <article className={`profile-entity-card ${styles.entityCard}`}>
-                <div className="section-label">{labels.searchTerms}</div>
-                <div className="profile-chip-group">
-                  {profile.searchTerms.map((term) => (
-                    <span key={term} className="profile-chip profile-chip--entity">
-                      {term}
-                    </span>
-                  ))}
-                </div>
-              </article>
+              {/* WO-X1 (EN-08 · J23): search-term chips read as SEO labels to
+                  EN/JA visitors, so they stay in metadata only there. */}
+              {locale === 'en' || locale === 'ja' ? null : (
+                <article className={`profile-entity-card ${styles.entityCard}`}>
+                  <div className="section-label">{labels.searchTerms}</div>
+                  <div className="profile-chip-group">
+                    {profile.searchTerms.map((term) => (
+                      <span key={term} className="profile-chip profile-chip--entity">
+                        {term}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              )}
 
               <div className={`profile-proof-grid ${styles.proofGrid}`}>
                 {profile.proofPoints.map((item) => (

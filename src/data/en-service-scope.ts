@@ -3,7 +3,7 @@
 export { EN_HOME_HERO_TITLE } from '@/data/en-international-paths';
 
 export const EN_HOME_HERO_SUBTITLE =
-  'Office consultations are available in English, Chinese, Korean, and Japanese on Taiwan company formation, litigation, residence permits, and tax and accounting support. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese.';
+  'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese on Taiwan company formation, litigation, residence permits, and tax and accounting support — in person in Taipei or by video.';
 
 export const EN_HOME_SERVICES_DESCRIPTION =
   'Taiwan company formation, litigation, residence permits, and tax and accounting support.';

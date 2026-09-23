@@ -67,7 +67,7 @@ const expectedCivilIntros = {
   ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
   'zh-hant':
     '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以事務所諮詢語言（中文、韓文、日文、英文）支援外國當事人在台灣的訴訟程序。',
-  en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.',
+  en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a gym injury claim, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.',
 } as const;
 
 const expectedSiteCivilDescriptions = {
@@ -99,7 +99,7 @@ const expectedCivilKeyPoints = {
     'Consumer Protection Act Article 7 requires a business operator providing services to ensure that the service meets the safety reasonably expected under the professional or technical standard prevailing at the time, but a gym injury does not by itself establish liability, which depends on the applicable duty, breach, causation, damage, defenses, and evidence, while a preliminary assessment or fault-appraisal opinion does not automatically determine final responsibility.',
     'Under Criminal Code Article 287, negligent injury under Article 284 is prosecutable only upon complaint, and Code of Criminal Procedure Article 237 generally requires the complaint within six months after the entitled complainant learns the offender’s identity; under Civil Code Article 197, a tort claim generally expires two years after the claimant learns both of the injury and the person liable, subject to a ten-year longstop from the wrongful act, while other causes of action and timing rules remain fact-dependent and an ancillary civil action is available only when its relationship to the criminal case and other procedural requirements are satisfied, with its cost treatment requiring individual review.',
     'Before settling, the parties should identify the claims covered, the scope of any release, payment terms, and remedies for breach, and ongoing treatment or unresolved future loss should be considered because undoing the agreement or pursuing rights already released may be difficult after signature.',
-    'In Taichung District Court case 109年度消字第7號, a Korean student was injured while performing a trainer-led deadlift, and the first-instance court awarded exactly TWD 1,579,589; the official judgment identifies Attorney 曾雋崴 as the plaintiff’s litigation representative, while the statement that the parties later settled on appeal is attributable only to media reports.',
+    'In Taichung District Court case 109年度消字第7號, an international student was injured while performing a trainer-led deadlift, and the first-instance court awarded exactly TWD 1,579,589; the official judgment identifies Attorney 曾雋崴 as the plaintiff’s litigation representative, while the statement that the parties later settled on appeal is attributable only to media reports.',
   ],
 } as const;
 

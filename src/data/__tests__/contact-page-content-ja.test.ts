@@ -59,15 +59,16 @@ describe('Japanese contact page data', () => {
         },
         {
           title: '台中事務所',
-          details: ['40453 台中市北区館前路19号6F-1', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863'],
+          // WO-X1 (J07): same published numbers in international form.
+          details: ['40453 台中市北区館前路19号6F-1', 'Tel: +886-4-2326-1862', 'Fax: +886-4-2326-1863'],
         },
         {
           title: '高雄事務所',
-          details: ['81358 高雄市左営区安吉街233号', 'Tel: 07-557-9797', 'Fax: 07-557-7171'],
+          details: ['81358 高雄市左営区安吉街233号', 'Tel: +886-7-557-9797', 'Fax: +886-7-557-7171'],
         },
         {
           title: '屏東事務所',
-          details: ['90443 屏東県九如郷九如路三段46号', 'Tel: 08-739-1689', 'Fax: 08-739-7362'],
+          details: ['90443 屏東県九如郷九如路三段46号', 'Tel: +886-8-739-1689', 'Fax: +886-8-739-7362'],
         },
       ],
       cta: {
@@ -351,24 +352,25 @@ describe('Japanese contact page data', () => {
             title: 'Taichung Office',
             details: [
               '40453, 6F-1, No. 19, Guanqian Rd., North Dist., Taichung City',
-              'Tel: 04-2326-1862',
-              'Fax: 04-2326-1863',
+              // WO-X1 (EN-06): same published numbers in international form.
+              'Tel: +886-4-2326-1862',
+              'Fax: +886-4-2326-1863',
             ],
           },
           {
             title: 'Kaohsiung Office',
             details: [
               '81358, No. 233, Anji St., Zuoying Dist., Kaohsiung City',
-              'Tel: 07-557-9797',
-              'Fax: 07-557-7171',
+              'Tel: +886-7-557-9797',
+              'Fax: +886-7-557-7171',
             ],
           },
           {
             title: 'Pingtung Office',
             details: [
               'No. 46, Sec. 3, Jiuru Rd., Jiuru Township, Pingtung County 90443',
-              'Tel: 08-739-1689',
-              'Fax: 08-739-7362',
+              'Tel: +886-8-739-1689',
+              'Fax: +886-8-739-7362',
             ],
           },
         ],

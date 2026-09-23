@@ -254,6 +254,22 @@ export function installPublicHeaderContentFit(header: HTMLElement): () => void {
   };
 }
 
+/**
+ * WO-X1 (J22): Japanese readers cannot read 「昊鼎」, so the JA logo carries
+ * the firm's existing English name as a small second line.
+ */
+const JA_BRAND_SUBLABEL = 'Hovering International Law Firm';
+const JA_BRAND_SUBLABEL_STYLE = {
+  display: 'block',
+  fontFamily: 'var(--font-body, inherit)',
+  fontSize: '0.6875rem',
+  fontWeight: 500,
+  lineHeight: 1.2,
+  letterSpacing: '0.02em',
+  color: '#4a544f',
+  whiteSpace: 'nowrap',
+} as const;
+
 function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
   if (isGuidanceLocale4(locale)) {
     return guidanceHeaderNavItems(locale);
@@ -261,7 +277,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
   if (locale === 'ja') {
     return [
       { key: 'services', label: '取扱業務', href: '/ja/services' },
-      { key: 'lawyers', label: '日本チーム', href: '/ja/lawyers' },
+      { key: 'lawyers', label: 'チーム紹介', href: '/ja/lawyers' },
       { key: 'pricing', label: '費用案内', href: '/ja/pricing' },
       { key: 'insights', label: 'コラム', href: '/ja/columns' },
       { key: 'videos', label: 'メディア', href: '/ja/videos' },
@@ -295,7 +311,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
     { key: 'lawyers', label: 'Our Team', href: '/en/lawyers' },
     { key: 'pricing', label: 'Pricing', href: '/en/pricing' },
     { key: 'insights', label: 'Insights', href: '/en/columns' },
-    { key: 'videos', label: 'Media Center', href: '/en/videos' },
+    { key: 'videos', label: 'Videos', href: '/en/videos' },
     { key: 'directions', label: 'Locations', href: '/en/contact#offices' }
   ];
 }
@@ -418,7 +434,7 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
     }),
     withMegaIntro(locale, {
       key: 'videos',
-      title: 'Media Center',
+      title: 'Videos',
       links: [
         { label: 'YouTube @weilawyer', href: 'https://www.youtube.com/@weilawyer' },
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
@@ -430,7 +446,7 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
       title: 'About',
       links: [
         { label: 'Firm Overview', href: '/en/about' },
-        { label: 'International Team', href: '/en/lawyers' },
+        { label: 'Our Team', href: '/en/lawyers' },
         { label: 'Office Locations', href: '/en/contact#offices' },
         { label: 'Contact Us', href: getConsultationPublicMailto('en') }
       ]
@@ -534,8 +550,9 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
               { label: 'アクセス', href: '/ja/contact#offices' }
             ]
           : [
-              { label: 'Contact', href: '/en/contact' },
-              { label: 'Offices', href: '/en/contact#offices' }
+              // WO-X1 (EN-17): "Offices" duplicated the main-nav "Locations"
+              // item (both /en/contact#offices), so only Contact stays here.
+              { label: 'Contact', href: '/en/contact' }
             ];
 
   const mainNavItems = useMemo(() => buildMainNavItems(locale), [locale]);
@@ -857,7 +874,10 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
                 {item.label}
               </Link>
             ))}
-            {locale !== 'ja' && !isGuidance ? (
+            {/* WO-X1 (EN-17): the public EN header no longer shows "Log in" to
+                signed-out visitors; the login link lives in the EN footer.
+                Signed-in members still get account/logout here. */}
+            {locale !== 'ja' && !isGuidance && (locale !== 'en' || memberNav.status === 'signed-in') ? (
               <div className="utility-member-nav" data-member-nav-state={memberNav.status}>
                 {memberNav.status === 'signed-in' ? (
                   <>
@@ -902,7 +922,10 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
                   <span className={styles.brandLine}>Law Firm</span>
                 </span>
               ) : (
-                <span className={styles.contentFitProbeBrand}>{brandText}</span>
+                <span className={styles.contentFitProbeBrand}>
+                  {brandText}
+                  {locale === 'ja' ? <span style={JA_BRAND_SUBLABEL_STYLE}>{JA_BRAND_SUBLABEL}</span> : null}
+                </span>
               )}
             </span>
             <span className={styles.contentFitProbeNav}>
@@ -928,7 +951,14 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
                 <span className={styles.brandLine}>Law Firm</span>
               </span>
             ) : (
-              <span className={`logo-kr ${styles.brandText}`}>{brandText}</span>
+              <span className={`logo-kr ${styles.brandText}`}>
+                {brandText}
+                {locale === 'ja' ? (
+                  <span lang="en" style={JA_BRAND_SUBLABEL_STYLE} data-ja-brand-sublabel>
+                    {JA_BRAND_SUBLABEL}
+                  </span>
+                ) : null}
+              </span>
             )}
           </Link>
 

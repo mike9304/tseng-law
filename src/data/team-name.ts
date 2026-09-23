@@ -7,8 +7,8 @@ import type { PublicLocale8 } from '@/lib/public-guidance';
  *   ko       — Taiwan · Korea team
  *   zh-hant  — Korea · Taiwan team, written in the traditional-Chinese house
  *              style used by `昊鼎國際團隊` (firm prefix, no separators)
- *   en       — English-language team
- *   ja       — Japanese-language team
+ *   en       — "Our Team", matching the EN nav label (WO-X1 EN-12)
+ *   ja       — 「チーム紹介」, matching the JA nav label (WO-X1 J04)
  *   vi/id/th/fil/ar — the international team. The guidance packs never
  *              translate `Hovering International Law Firm`, so the team name
  *              stays in the same untranslated brand form for those guidance
@@ -22,8 +22,8 @@ import type { PublicLocale8 } from '@/lib/public-guidance';
 export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   ko: '호정 대만·한국 팀',
   'zh-hant': '昊鼎韓國台灣團隊',
-  en: 'Hovering English Team',
-  ja: '昊鼎日本語チーム',
+  en: 'Our Team',
+  ja: 'チーム紹介',
   vi: 'Hovering International Team',
   id: 'Hovering International Team',
   th: 'Hovering International Team',

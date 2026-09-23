@@ -16,14 +16,17 @@ import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 
 describe('English nav and page labels', () => {
-  it('labels the columns route Insights and the offices hash Locations, and keeps the Offices utility item', () => {
+  // WO-X1 (EN-17): "Offices" duplicated "Locations", so only Locations stays.
+  it('labels the columns route Insights and the offices hash Locations once, without an Offices utility item', () => {
     navigationState.pathname = '/en/services';
     const html = renderToStaticMarkup(<Header locale="en" />);
 
     expect(html).toContain('href="/en/columns"');
     expect(html).toContain('>Insights</a>');
     expect(html).toContain('href="/en/contact#offices">Locations</a>');
-    expect(html).toContain('href="/en/contact#offices">Offices</a>');
+    expect(html).not.toContain('>Offices</a>');
+    expect(html).toContain('href="/en/videos">Videos</a>');
+    expect(html).not.toContain('>Media Center</a>');
     expect(html).not.toContain('>Columns</a>');
     expect(html).not.toContain('>Directions</a>');
   });
@@ -36,7 +39,7 @@ describe('English nav and page labels', () => {
       { label: 'Our Team', href: '/en/lawyers' },
       { label: 'Pricing', href: '/en/pricing' },
       { label: 'Insights', href: '/en/columns' },
-      { label: 'Media Center', href: '/en/videos' },
+      { label: 'Videos', href: '/en/videos' },
       { label: 'Locations', href: '/en/contact#offices' },
     ]);
   });
@@ -60,6 +63,7 @@ describe('English nav and page labels', () => {
     expect(serviceDetail).toContain("breadcrumbServices: 'Services'");
     expect(header).toContain("{ key: 'insights', label: 'Insights', href: '/en/columns' }");
     expect(header).toContain("{ key: 'directions', label: 'Locations', href: '/en/contact#offices' }");
-    expect(header).toContain("{ label: 'Offices', href: '/en/contact#offices' }");
+    expect(header).not.toContain("{ label: 'Offices', href: '/en/contact#offices' }");
+    expect(header).toContain("{ key: 'videos', label: 'Videos', href: '/en/videos' }");
   });
 });

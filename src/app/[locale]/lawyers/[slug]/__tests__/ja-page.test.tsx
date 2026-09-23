@@ -117,12 +117,17 @@ describe('Japanese lawyer-profile integration', () => {
       '関連サービス・コンテンツ',
       '外部プロフィール・チャンネル',
       '相談を申し込む',
-      'よく検索されるテーマ',
       'ホーム',
       '弁護士紹介',
     ]) {
       expect(html).toContain(label);
     }
+    // WO-X1 (J23/J22/J06): no SEO chip block on screen; H1 carries the English
+    // name and the lede surfaces JLPT N1 and the exchange study.
+    expect(html).not.toContain('よく検索されるテーマ');
+    expect(html).not.toContain('profile-entity-card');
+    expect(html).toContain('曾雋崴（Wei Tseng）台湾弁護士');
+    expect(html).toContain('日本語能力試験（JLPT）N1を取得し');
 
     expect(html).toContain(profile.name);
     expect(html).toContain(profile.description);

@@ -21,6 +21,8 @@ type PricingContent = {
   currency: string;
   items: PricingItem[];
   disclaimer: string;
+  /** EN/JA only (WO-X1 EN-07 · J12): billing currency and how to ask about it. */
+  currencyNote?: string;
   ctaLabel: string;
   ctaNote: string;
 };
@@ -155,7 +157,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         price: 'NT$ 3,000',
         unit: '/ 1 hour',
         details: [
-          'In-person or video consultation',
+          'In person in Taipei or by video',
           'Available in English, Chinese, Korean, and Japanese',
           'Legal issue analysis & guidance',
           'Appointment required'
@@ -203,6 +205,8 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       'Fees above are baseline standards and may vary based on case characteristics, complexity, and urgency. Exact fees will be provided in writing after the initial consultation.',
+    currencyNote:
+      'Fees are quoted and billed in New Taiwan Dollars (NT$). We can explain USD estimates and overseas payment methods on request.',
     ctaLabel: 'Email to arrange a consultation',
     ctaNote: 'Your consultation time is confirmed after arranging it by email.',
   },
@@ -215,8 +219,8 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         price: 'NT$ 3,000',
         unit: '/ 1時間',
         details: [
-          '対面またはオンライン（ビデオ通話）での相談',
-          '韓国語・英語・中国語・日本語での相談に対応',
+          '台北事務所での対面相談、またはビデオ通話でのご相談',
+          '日本語・中国語・英語・韓国語での相談に対応',
           '法的問題の分析と対応方針の提案',
           '事前予約制'
         ]
@@ -265,6 +269,8 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       '上記の費用は基本的な目安であり、案件の性質、複雑性、緊急性により変動する場合があります。正確な費用は、初回相談後に書面によるお見積りでご案内します。',
+    currencyNote:
+      '料金は新台湾ドル（NT$）建てです。日本円での概算やお支払い方法はお問い合わせ時にご案内します。',
     ctaLabel: 'メールで相談日程を問い合わせる',
     ctaNote: '相談日時はメールで調整した後に確定します。',
   },
@@ -302,6 +308,7 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
 
         <div className="pricing-disclaimer">
           <p>{data.disclaimer}</p>
+          {data.currencyNote ? <p>{data.currencyNote}</p> : null}
         </div>
 
         <div className="pricing-cta">

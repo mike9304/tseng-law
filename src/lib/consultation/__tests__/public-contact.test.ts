@@ -53,10 +53,10 @@ describe('public consultation contact single source of truth', () => {
       '希望使用的語言：中文 / 한국어 / English / 日本語',
     );
     expect(getConsultationEmailTemplate('en').body).toContain(
-      'Preferred language: English / Korean / Chinese / Japanese',
+      'Preferred language: English\n', // WO-X1 (EN-10): page language only
     );
     expect(getConsultationEmailTemplate('ja').body).toContain(
-      'ご希望の言語：日本語 / 中文 / 한국어 / English',
+      'ご希望の言語：日本語\n', // WO-X1 (J31): page language only
     );
     expect(getConsultationEmailTemplate('ko').body).toContain('민감정보');
     expect(getConsultationEmailTemplate('zh-hant').body).toContain('敏感資訊');

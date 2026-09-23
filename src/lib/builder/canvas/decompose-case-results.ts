@@ -26,12 +26,12 @@ const copyByLocale = {
   },
   en: {
     label: 'CASE STUDY',
-    title: 'Korean Student Gym Injury Case\nTWD 1.57M Ruling, Then Appeal Settlement',
+    title: 'Gym Injury Claim —\nTWD 1.57M First-Instance Ruling, Settled on Appeal',
     description:
-      'A Korean university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
+      'A university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
     summary:
       'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
-    cta: 'View Case Studies',
+    cta: 'Read the case write-up',
     imageAlt: 'Courthouse exterior in a calm, low-saturation style',
   },
 } as const;
@@ -252,7 +252,8 @@ export function createCaseResultsDecomposedNodes(
     parentId: contentId,
     content: {
       label: `${copy.cta} →`,
-      href: `/${locale}/columns`,
+      // WO-X1 (EN-16): mirrors HomeCaseResultsSplit — EN links the case write-up.
+      href: locale === 'en' ? '/en/columns/taiwan-gym-injury-lawsuit' : `/${locale}/columns`,
       style: 'link',
       className: 'link-underline home-results-link',
       as: 'a',

@@ -1,8 +1,11 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 import { describe, expect, it } from 'vitest';
 
+import IntentLandingPage from '@/components/IntentLandingPage';
 import { getIntentPage, intentPageSlugs } from '@/data/intent-pages';
 import { siteLocales, type SiteLocale } from '@/lib/locales';
 
@@ -90,9 +93,8 @@ describe('semiconductor supplier intent page', () => {
     expect(getIntentPage('ko', slug)?.seoTitle).toBe(
       '대만 반도체 소재·장비 공급사 법무 | 법인설립·계약·고용·미수금',
     );
-    expect(getIntentPage('en', slug)?.title).toBe(
-      'Legal guidance for overseas semiconductor materials and equipment suppliers in Taiwan',
-    );
+    // WO-X1 (EN-19): shorter EN H1.
+    expect(getIntentPage('en', slug)?.title).toBe('Taiwan Legal Counsel for Semiconductor Suppliers');
     // WO-X2 (EN-20): shortened so `<title>` (with " | Hovering Law") stays ≤ 60.
     expect(getIntentPage('en', slug)?.seoTitle).toBe('Taiwan Semiconductor Supplier Legal Support');
     expect(getIntentPage('ja', slug)?.title).toBe(
@@ -297,14 +299,19 @@ describe('semiconductor supplier intent page', () => {
       serialized.split(needle).length - 1;
 
     const en = JSON.stringify(getIntentPage('en', slug));
-    expect(occurrences(en, 'English, Chinese, Korean, and Japanese')).toBe(1);
+    // WO-X1 (EN-19): the lede no longer repeats the language list right above
+    // the page-header consultation line that states it.
+    expect(occurrences(en, 'English, Chinese, Korean, and Japanese')).toBe(0);
+    const enHtml = renderToStaticMarkup(createElement(IntentLandingPage, { locale: 'en', slug }));
+    expect(enHtml).toContain('Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese.');
     expect(occurrences(en, 'around three months')).toBe(1);
     expect(occurrences(en, 'NT$3,000')).toBe(1);
     expect(occurrences(en, 'NT$50,000')).toBe(1);
     expect(en).toContain('in person or by video');
 
     const ja = JSON.stringify(getIntentPage('ja', slug));
-    expect(occurrences(ja, '英語・中国語・韓国語・日本語')).toBe(1);
+    // WO-X1 (J28): Japanese first.
+    expect(occurrences(ja, '日本語・中国語・英語・韓国語')).toBe(1);
     expect(occurrences(ja, '約3か月')).toBe(1);
     expect(occurrences(ja, 'NT$3,000')).toBe(1);
     // WO-X2 (JA-17): first currency mention on the ja page spells out 新台湾ドル（NT$）.

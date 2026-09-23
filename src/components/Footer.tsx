@@ -155,7 +155,9 @@ export default function Footer({
           { label: 'Privacy Policy', href: '/en/privacy' },
           { label: 'Disclaimer', href: '/en/disclaimer' },
           { label: 'Accessibility', href: '/en/accessibility' },
-          { label: 'Sitemap', href: '/sitemap.xml' }
+          { label: 'Sitemap', href: '/sitemap.xml' },
+          // WO-X1 (EN-17): member login moved out of the public EN header.
+          { label: 'Client log in', href: '/en/login' }
         ];
   const socialLabels =
     locale === 'ko'

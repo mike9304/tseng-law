@@ -214,8 +214,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.',
-          'Represented a Korean student in a gym injury case and obtained a TWD 1.57M first-instance damages ruling.'
+          'Consults directly in English, Chinese, Korean, and Japanese — in person in Taipei or by video.',
+          'Advises overseas companies on Taiwan company setup, investment, contracts, and employment.'
         ],
         education: [
           'M.S., Institute of Finance, National Taiwan University',
@@ -247,7 +247,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
           'A veteran paralegal with many years of experience as a senior paralegal at several law firms, covering litigation support, corporate legal affairs, and foreign investment matters.',
-          'Supports litigation, company formation, foreign investment approvals, permit applications, and Korea-Taiwan communications.'
+          'Supports litigation, company formation, foreign investment approvals, permit applications, and communications with overseas clients.'
         ],
         education: ['LL.B., Tunghai University'],
         experience: ['Senior Paralegal, Boyin Law Firm', 'Senior Paralegal, Muyang International Law Firm']
@@ -255,12 +255,12 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
       {
         id: 'son-jungmin',
         name: 'Jungmin Son',
-        role: 'Korea Operations Manager',
+        role: 'Operations Manager, Korea Office',
         email: '',
         photo: '/images/team/son-jungmin.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
         intro: [
-          'Coordinates consultation scheduling and communications for Korean clients.',
+          'Coordinates consultation scheduling and communications through the Korea office.',
           'Supports cross-team communication with document and workflow systems based on a computer science background.'
         ],
         education: ['B.S., Computer Science, National Cheng Kung University'],
@@ -283,11 +283,11 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     ]
   },
   ja: {
-    label: 'チーム紹介',
+    label: 'OUR TEAM',
     title: TEAM_NAME_BY_LOCALE['ja'],
     description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
     story: [
-      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',
+      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。日本語・中国語・英語・韓国語でご相談いただけます。',
       '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
     ],
     members: [
@@ -300,8 +300,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '企業・個人の幅広い案件を担当しています。当事務所では日本語・英語・韓国語・中国語でご相談いただけます。',
-          '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審でNT$157万の損害賠償を認める判決を得た実績があります。',
+          '企業・個人の幅広い案件を担当しています。日本語・中国語・英語・韓国語で直接ご相談いただけます。',
+          '日本企業をはじめとする海外企業に、台湾での会社設立、投資、契約、労務について助言しています。',
         ],
         education: [
           '国立台湾大学財務金融研究所 修士号取得',
@@ -333,7 +333,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
           '複数の法律事務所で長年にわたりシニアパラリーガルを務め、訴訟支援、企業法務、外国人投資関連業務など、幅広い法律実務の経験を積んでいます。',
-          '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、韓国・台湾間のコミュニケーションを支援します。',
+          '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、海外クライアントとのコミュニケーションを支援します。',
         ],
         education: ['東海大学法律学科 学士号取得'],
         experience: ['博胤法律事務所 シニアパラリーガル', '慕陽國際法律事務所 シニアパラリーガル'],
@@ -341,12 +341,12 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
       {
         id: 'son-jungmin',
         name: '孫貞旻',
-        role: '韓国事務長',
+        role: '事務長（韓国事務所）',
         email: '',
         photo: '/images/team/son-jungmin.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
         intro: [
-          '韓国のクライアントからのお問い合わせ対応と相談日程の調整を担当しています。',
+          '韓国事務所での相談日程の調整と連絡業務を担当しています。',
           '情報工学の知見を生かして文書・業務システムを管理し、弁護士チームとクライアントの円滑なコミュニケーションを支えています。',
         ],
         education: ['国立成功大学でコンピュータサイエンスを専攻（学士）'],

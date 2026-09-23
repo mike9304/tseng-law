@@ -43,7 +43,7 @@ describe('intent landing EN/JA contact paths', () => {
       expect(header).toContain('Email about your Taiwan matter');
       expect(header).toContain('href="/en/pricing"');
       expect(header).toContain('Fees and scope');
-      expect(header).toContain('Consultations in English, Chinese, Korean, and Japanese');
+      expect(header).toContain('Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese.');
       expect(header).toContain('brief overview');
       expect(header).toContain('Sensitive materials only after attorney instructions');
       expect(header).not.toContain('intent-chip');
@@ -69,7 +69,7 @@ describe('intent landing EN/JA contact paths', () => {
       expect(header).toContain('台湾の法律問題をメールで相談');
       expect(header).toContain('href="/ja/pricing"');
       expect(header).toContain('費用・対応範囲');
-      expect(header).toContain('英語・日本語・韓国語');
+      expect(header).toContain('曾雋崴弁護士に日本語で直接ご相談いただけます（中国語・英語・韓国語にも対応）。');
       expect(header).toContain('簡潔な概要');
       expect(header).toContain('機微情報は弁護士の指示後');
       expect(header).not.toContain('intent-chip');

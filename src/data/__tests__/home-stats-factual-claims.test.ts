@@ -45,10 +45,11 @@ const expectedStats = {
       { target: 2, label: '最高級別語言資格' },
     ],
   },
+  // WO-X1 (EN-03/J28): labels localized, JA lists Japanese first; counts unchanged.
   en: {
     title: 'Cross-Border Practice at a Glance',
     description:
-      'The firm provides Taiwan legal services in four languages: English, Chinese, Korean, and Japanese. Based on the official attorney profile: four Taiwan offices, seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
+      'The firm provides Taiwan legal services in four languages: English, Chinese, Korean, and Japanese. Based on the official attorney profile: four Taiwan offices, seven principal practice areas, and two top-level language qualifications, JLPT N1 and TOPIK Level 6.',
     highlightWords: [
       'four Taiwan offices',
       'four languages',
@@ -57,36 +58,36 @@ const expectedStats = {
       'Korean',
       'Japanese',
       'seven principal practice areas',
-      'TOPIK Level 6',
       'JLPT N1',
+      'TOPIK Level 6',
     ],
     items: [
       { target: 4, label: 'Taiwan Offices' },
-      { target: 4, label: 'Working Languages' },
+      { target: 4, label: 'Consultation Languages' },
       { target: 7, label: 'Principal Practice Areas' },
-      { target: 2, label: 'Top-Level Language Qualifications' },
+      { target: 2, label: 'Top-Level Language Qualifications (JLPT N1, TOPIK 6)' },
     ],
   },
   ja: {
-    title: '公式プロフィールで見る国際業務の基盤',
+    title: '数字で見る昊鼎',
     description:
-      '当事務所では英語・中国語・韓国語・日本語の4言語で台湾の法律相談に対応しています。公式弁護士プロフィールに基づき、台湾4拠点、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
+      '日本語・中国語・英語・韓国語の4言語で台湾法のご相談に対応しています。公式弁護士プロフィールに基づき、台湾4拠点、7つの主要取扱分野、JLPT N1・TOPIK 6級の2つの最上位級資格をまとめています。',
     highlightWords: [
-      '台湾4拠点',
       '4言語',
-      '英語',
-      '中国語',
-      '韓国語',
       '日本語',
+      '中国語',
+      '英語',
+      '韓国語',
+      '台湾4拠点',
       '7つの主要取扱分野',
-      'TOPIK 6級',
       'JLPT N1',
+      'TOPIK 6級',
     ],
     items: [
       { target: 4, label: '台湾の事務所' },
-      { target: 4, label: '業務対応言語' },
+      { target: 4, label: '相談対応言語' },
       { target: 7, label: '主要取扱分野' },
-      { target: 2, label: '最上位級の語学資格' },
+      { target: 2, label: '語学資格（JLPT N1・TOPIK 6級）' },
     ],
   },
 } satisfies Record<

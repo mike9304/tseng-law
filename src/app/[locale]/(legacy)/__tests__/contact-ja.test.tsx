@@ -147,7 +147,7 @@ describe('Japanese contact route integration', () => {
       'ご用意いただきたい資料',
       'ご相談の流れ',
       'メールでのご相談',
-      'ご相談は公式メールアドレス宛にお送りください。確認後ご案内します。',
+      'ご相談は公式メールアドレス宛にお送りください。ご返信は日本語で行います。事務所の時間帯は台湾時間（日本時間−1時間）です。',
       'メールでのご相談',
       'お問い合わせ種別',
       'ビジネス・投資',
@@ -180,7 +180,9 @@ describe('Japanese contact route integration', () => {
     expect(html).not.toContain('pf.kakao.com');
     expect(html).not.toMatch(/line\.me|lin\.ee/i);
     expect(html).toContain(`href="${CONSULTATION_MAILTO_HREF}"`);
-    expect(html).toContain(`href="${OFFICE_PHONE_HREF}"`);
+    // WO-X1 (J02/J07): JA no longer links the Korea mobile number.
+    expect(html).not.toContain(`href="${OFFICE_PHONE_HREF}"`);
+    expect(html).not.toContain('tel:+82');
     expect(
       html.match(
         new RegExp(
@@ -196,8 +198,8 @@ describe('Japanese contact route integration', () => {
           'g',
         ),
       ) ?? [],
-      // WO-DS1 F: the Korea office is a single card, so NAVER renders once.
-    ).toHaveLength(1);
+      // WO-X1 (J02): the Korea office is one address line without a NAVER button.
+    ).toHaveLength(0);
   });
 
   it('renders three office tabs with Taipei selected and exact Japanese media alternatives', () => {

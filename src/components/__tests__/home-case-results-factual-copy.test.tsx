@@ -24,23 +24,24 @@ const reviewedCopy = {
       '案件結果會因具體事實與證據而異；本案例僅說明一件過往案件的處理經過。',
     cta: '查看訴訟案例',
   },
+  // WO-X1 (EN-03/J01): nationality removed from the headline and body.
   en: {
     label: 'CASE STUDY',
-    title: 'Korean Student Gym Injury Case\nTWD 1.57M Ruling, Then Appeal Settlement',
+    title: 'Gym Injury Claim —\nTWD 1.57M First-Instance Ruling, Settled on Appeal',
     description:
-      'A Korean university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
+      'A university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
     summary:
       'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
-    cta: 'View Case Studies',
+    cta: 'Read the case write-up',
   },
   ja: {
     label: '事例紹介',
-    title: '韓国人留学生のジム負傷事件\n一審NT$157万判決後、控訴審で和解',
+    title: 'ジムでの負傷事故 —\n一審NT$157万判決、控訴審で和解',
     description:
-      '台湾のジムでトレーナーの指導を受けて運動中に負傷した韓国人大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
+      '台湾のジムでトレーナーの指導を受けて運動中に負傷した大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
     summary:
       '結果は具体的な事実関係や証拠により異なります。本事例は、過去の一案件の経過を紹介するものです。',
-    cta: '取扱事例を見る',
+    cta: '事例の解説を読む',
   },
 } as const satisfies Record<
   SiteLocale,
@@ -120,7 +121,12 @@ describe('homepage gym case factual copy', () => {
     expect(html).toContain(expected.description);
     expect(html).toContain(expected.summary);
     expect(html).toContain(`${expected.cta} →`);
-    expect(html).toContain(`href="/${locale}/columns"`);
+    // WO-X1 (EN-16): EN/JA open the write-up of this case; ko/zh-hant the archive.
+    expect(html).toContain(
+      locale === 'en' || locale === 'ja'
+        ? `href="/${locale}/columns/taiwan-gym-injury-lawsuit"`
+        : `href="/${locale}/columns"`,
+    );
   });
 
   it.each(siteLocales)('separates first-instance and appeal stages for %s', (locale) => {
@@ -157,7 +163,10 @@ describe('homepage gym case factual copy', () => {
     const cta = createCaseResultsDecomposedNodes(0, locale, 0).find(
       ({ id }) => id === 'home-case-results-cta',
     );
-    expect(cta?.content).toHaveProperty('href', `/${locale}/columns`);
+    expect(cta?.content).toHaveProperty(
+      'href',
+      locale === 'en' ? '/en/columns/taiwan-gym-injury-lawsuit' : `/${locale}/columns`,
+    );
   });
 
   it('keeps Japanese public-only and excludes unsupported outcome claims', () => {

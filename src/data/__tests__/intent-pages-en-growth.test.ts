@@ -39,7 +39,9 @@ describe('EN intent pages growth copy', () => {
 
     expect(blob).not.toMatch(/English-speaking attorneys/i);
     expect(blob).toMatch(/English, Chinese, Korean, and Japanese/);
-    expect(blob).toMatch(/Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese/);
+    // WO-X1 (EN-01): English is now one of the attorney's direct languages.
+    expect(blob).toMatch(/Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese/);
+    expect(blob).not.toMatch(/works with clients directly in Korean, Chinese, and Japanese/);
     expect(blob).toMatch(/residence-permit assistance/i);
     expect(blob).toMatch(/tax-accounting assistance/i);
     expect(blob).not.toMatch(/tax-accounting coordination/i);
@@ -96,7 +98,7 @@ describe('EN intent pages growth copy', () => {
     expect(EN_HOME_HERO_SUBTITLE).not.toMatch(/English-speaking attorneys/i);
     expect(EN_HOME_HERO_SUBTITLE).not.toMatch(/\battorneys\b/i);
     expect(EN_HOME_HERO_SUBTITLE).toMatch(/English, Chinese, Korean, and Japanese/);
-    expect(EN_HOME_HERO_SUBTITLE).toMatch(/Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese/);
+    expect(EN_HOME_HERO_SUBTITLE).toMatch(/Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese/);
   });
 
   it('exposes the existing EN intent slugs without inventing routes', () => {

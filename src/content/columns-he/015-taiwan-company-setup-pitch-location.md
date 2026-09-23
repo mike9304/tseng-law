@@ -1,5 +1,5 @@
 ---
-title: "הקמת חברה בטאיוואן – חלק מעמיק 3: איתור מקום הפעילות"
+title: "הקמת חברה בטאיוואן – מדריך מתקדם 3: איתור מקום הפעילות"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
 date_display: "13 בספטמבר 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 
-# הקמת חברה בטאיוואן – חלק מעמיק 3: איתור מקום הפעילות
+# הקמת חברה בטאיוואן – מדריך מתקדם 3: איתור מקום הפעילות
 
 ![תמונה ראשית](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
@@ -43,7 +43,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 אם קשה להגיע בעצמכם למשרד רישום המקרקעין (地政事務所),
 
-ניתן לבקש עזרה ממכר בטאיוואן, מהמשכיר, מסוכן נדל"ן או מעורכת דין או עורך דין.
+ניתן לבקש עזרה ממכר בטאיוואן, מהמשכיר, מסוכן נדל״ן או מעורכת דין או עורך דין.
 
 אם תוצאת הבדיקה מציינת שבית עסק להסעדה אינו אפשרי, בהמשך, ברישום החברה (公司登記), עלולה העירייה שלא לקבל את הרישום.
 

@@ -26077,13 +26077,100 @@ html[lang='zh-hant'],
 .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-paths,
 .hero[data-presentation='editorial'] .hero-copy .en-home-paths {
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch; /* both path buttons keep one row height */
   gap: 12px;
-  margin: 1.25rem 0 0;
+  margin: 0;
 }
 
-.hero[data-presentation='editorial'] .hero-copy .en-home-paths {
-  gap: 12px 20px;
+/* WO-X3b (EN-09 · J10) — hero CTA hierarchy. Primary (the only solid button)
+   comes first, then the two outlined path buttons on the same row when they
+   fit, then the guide as a text link on its own line. */
+.hero .hero-copy .hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 1.25rem;
+}
+
+.hero .hero-copy .hero-cta-group > .hero-cta-actions {
+  margin-top: 0;
+}
+
+.hero .hero-copy .hero-cta-group > .en-home-paths {
+  flex: 0 1 auto;
+}
+
+.hero .hero-copy .hero-cta-group .en-home-path-guide {
+  flex-basis: 100%;
+  justify-content: flex-start;
+  min-height: 44px;
+  padding: 0.2rem 0;
+}
+
+.hero[data-presentation='editorial'] .hero-copy .hero-cta-group .en-home-path-guide {
+  color: var(--primary);
+}
+
+.hero-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* A marker before each fact (not a separator), so a wrapped line never
+   starts with a dangling "·". The rating keeps its star instead. */
+.hero-trust-item + .hero-trust-item::before {
+  content: '';
+  flex: none;
+  width: 4px;
+  height: 4px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.hero-trust-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-trust-star {
+  color: #f2b01e;
+}
+
+.hero-trust-strip--dark {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-trust-strip--light {
+  color: var(--text-secondary, #4a5553);
+}
+
+.hero-trust-strip--dark .hero-trust-rating:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.92);
+  outline-offset: 3px;
+}
+
+.hero-trust-strip--light .hero-trust-rating:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-button {
@@ -26155,6 +26242,21 @@ html[lang='zh-hant'],
 
   .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-paths {
     width: min(100%, 420px);
+  }
+
+  .hero .hero-copy .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero .hero-copy .hero-cta-group > .hero-cta-actions,
+  .hero .hero-copy .hero-cta-group > .en-home-paths {
+    width: min(100%, 420px);
+  }
+
+  .hero[data-presentation='editorial'] .hero-copy .hero-cta-group > .hero-cta-actions,
+  .hero[data-presentation='editorial'] .hero-copy .hero-cta-group > .en-home-paths {
+    width: 100%;
   }
 
   .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-path-button,

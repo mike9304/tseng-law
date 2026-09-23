@@ -113,7 +113,7 @@ function elementType(node: unknown) {
 }
 
 describe('home editorial presentation opt-in', () => {
-  it('keeps the default hero email-then-columns contract without a services CTA', () => {
+  it('keeps the default hero email-first contract without services or columns CTAs', () => {
     for (const locale of locales) {
       const html = renderToStaticMarkup(createElement(HeroSearch, { locale }));
       const mailto = getConsultationPublicMailto(locale).replace(/&/g, '&amp;');
@@ -122,11 +122,12 @@ describe('home editorial presentation opt-in', () => {
       expect(html).toContain('hero-search-bar overlap');
       expect(html).toContain(emailConsultationCtaLabels[locale]);
       expect(html).toContain(`href="${mailto}"`);
-      expect(html).toContain(`href="/${locale}/columns"`);
-      expect(html).toContain(columnCtaLabels[locale]);
+      // WO-X3b (EN-09 · J10): services and columns are left to the header nav.
+      expect(html).not.toContain(`href="/${locale}/columns"`);
+      expect(html).not.toContain(columnCtaLabels[locale]);
       expect(html).not.toContain(`href="/${locale}/services"`);
       expect(html.indexOf(emailConsultationCtaLabels[locale])).toBeLessThan(
-        html.indexOf(columnCtaLabels[locale]),
+        html.indexOf('en-home-path-button'),
       );
       expect(html.indexOf('hero-media')).toBeLessThan(html.indexOf('hero-copy'));
       expect(html).toContain(`action="/${locale}/search"`);
@@ -146,27 +147,27 @@ describe('home editorial presentation opt-in', () => {
     expect(html.indexOf('hero-media')).toBeLessThan(html.indexOf('hero-search'));
     expect(html).not.toContain('hero-search-bar overlap');
     expect(html).toContain('이메일 상담 신청');
-    expect(html).toContain('업무분야');
-    expect(html).toContain('호정칼럼 보기');
+    // WO-X3b: no services / columns CTAs inside the hero any more.
+    expect(html).not.toContain('href="/ko/services"');
+    expect(html).not.toContain('호정칼럼 보기');
   });
 
-  it.each(locales)('uses separate %s email, services, columns, and q GET destinations', (locale) => {
+  it.each(locales)('uses separate %s email and q GET destinations without services/columns CTAs', (locale) => {
     const html = renderToStaticMarkup(
       createElement(HeroSearch, { locale, presentation: 'editorial' }),
     );
     const mailto = getConsultationPublicMailto(locale).replace(/&/g, '&amp;');
     const services = heroQuickMenus[locale].find((item) => item.href === `/${locale}/services`);
     const lead = teamContent[locale].members[0];
-    const servicesAnchor = html.match(new RegExp(`<a[^>]*href="/${locale}/services"[^>]*>`));
 
+    // The quick menu (shown on search focus) still offers services.
     expect(services).toBeDefined();
     expect(html).toContain(emailConsultationCtaLabels[locale]);
     expect(html).toContain(`href="${mailto}"`);
-    expect(html).toContain(`href="/${locale}/services"`);
-    expect(html).toContain(services?.label ?? '');
-    expect(html).toContain(`href="/${locale}/columns"`);
-    expect(html).toContain(`data-builder-surface-key="${homeHeroButtonSurfaceIds[0]}"`);
-    expect(servicesAnchor?.[0]).not.toContain('data-builder-surface-key');
+    // WO-X3b (EN-09 · J10): services and columns CTAs left the hero.
+    expect(html).not.toContain(`href="/${locale}/services"`);
+    expect(html).not.toContain(`href="/${locale}/columns"`);
+    expect(html).not.toContain(`data-builder-surface-key="${homeHeroButtonSurfaceIds[0]}"`);
     expect(html).toContain(`action="/${locale}/search"`);
     expect(html).toMatch(/method="get"/);
     expect(html).toMatch(/name="q"/);
@@ -176,7 +177,7 @@ describe('home editorial presentation opt-in', () => {
     expect(html).toContain(siteContent[locale].hero.searchPlaceholder);
   });
 
-  it('preserves authored and intentionally empty hero title and columns overrides in editorial mode', () => {
+  it('preserves authored and intentionally empty hero title overrides in editorial mode', () => {
     const customTitle = renderToStaticMarkup(
       <BuilderSurfaceProvider
         nodeId="home-hero"
@@ -203,6 +204,8 @@ describe('home editorial presentation opt-in', () => {
     expect(headingText(emptyTitle)).toBe('');
     expect(emptyTitle).not.toContain('分かりやすく。');
 
+    // WO-X3b: the hero no longer renders the columns link, so a stored
+    // `columns-link` override has nothing to label.
     const customColumns = renderToStaticMarkup(
       <BuilderSurfaceProvider
         nodeId="home-hero"
@@ -213,38 +216,23 @@ describe('home editorial presentation opt-in', () => {
         <HeroSearch locale="en" presentation="editorial" />
       </BuilderSurfaceProvider>,
     );
-    expect(customColumns).toContain('Custom Columns Label');
-    expect(customColumns).not.toContain('View Columns');
-    expect(customColumns).not.toContain('View Insights');
-    expect(customColumns).toContain('Services');
-    expect(customColumns).toContain('href="/en/services"');
-    expect(customColumns).toContain('href="/en/columns"');
-
-    const emptyColumns = renderToStaticMarkup(
-      <BuilderSurfaceProvider
-        nodeId="home-hero"
-        mode="published"
-        overrides={{ [homeHeroButtonSurfaceIds[0]]: '' }}
-        selectedSurfaceKey={null}
-      >
-        <HeroSearch locale="en" presentation="editorial" />
-      </BuilderSurfaceProvider>,
-    );
-    expect(emptyColumns).toContain('href="/en/columns"');
-    expect(emptyColumns).not.toContain('View Columns');
-    expect(emptyColumns).not.toContain('View Insights');
-    expect(emptyColumns).toContain('Services');
-    expect(emptyColumns).toContain('href="/en/services"');
+    expect(customColumns).not.toContain('Custom Columns Label');
+    expect(customColumns).not.toContain('href="/en/columns"');
+    expect(customColumns).not.toContain('href="/en/services"');
   });
 
-  it('keeps the Japanese default phrase grouping in editorial mode', () => {
+  it('renders the Japanese offer title (J11) in editorial mode', () => {
     const html = renderToStaticMarkup(
       createElement(HeroSearch, { locale: 'ja', presentation: 'editorial', headingLevel: 2 }),
     );
-    expect(headingText(html)).toBe('台湾法を、分かりやすく。');
+    // WO-X3 (J11): phrase breaking comes from the ja `word-break: auto-phrase` heading rule.
+    expect(headingText(html)).toBe('台湾の会社設立・労務・紛争を、日本語で。');
     expect(html).toContain('<h2');
-    expect(html).toContain('台湾法を、');
-    expect(html).toContain('分かりやすく。');
+    expect(html).not.toContain('分かりやすく。');
+    // Phrase grouping keeps 労務 (and every other phrase) on one line.
+    for (const phrase of ['台湾の会社設立・', '労務・', '紛争を、', '日本語で。']) {
+      expect(html).toContain(`<span style="display:inline-block;max-width:100%">${phrase}</span>`);
+    }
     expect(html).toContain('<wbr');
   });
 

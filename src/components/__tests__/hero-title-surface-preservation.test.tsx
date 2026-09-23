@@ -14,7 +14,7 @@ describe('Japanese hero title surface content', () => {
   it('preserves the default title text at both supported heading levels', () => {
     for (const headingLevel of [1, 2] as const) {
       const html = renderToStaticMarkup(createElement(HeroSearch, { locale: 'ja', headingLevel }));
-      expect(headingText(html)).toBe('台湾法を、分かりやすく。');
+      expect(headingText(html)).toBe('台湾の会社設立・労務・紛争を、日本語で。');
     }
   });
 

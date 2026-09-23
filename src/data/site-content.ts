@@ -2656,9 +2656,10 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
     hero: {
       ...base.hero,
       label: 'TAIWAN LEGAL',
-      title: '台湾法を、分かりやすく。',
+      // WO-X3 (J11): the JA offer — Japanese-language consultation directly with the attorney.
+      title: '台湾の会社設立・労務・紛争を、日本語で。',
       subtitle:
-        '多言語対応の法律チームが、台湾投資・紛争対応・クロスボーダー案件を実務的にサポートします。',
+        '台北の台湾弁護士・曾雋崴（JLPT N1）が、日本企業の台湾進出から現地の契約・労務トラブル、在台日本人の方の家事・交通事故まで、日本語で直接ご相談を承ります。',
       typingPhrases: [
         '台湾進出を、確かな一歩から',
         '台湾訴訟の実務経験',

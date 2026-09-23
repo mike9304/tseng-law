@@ -210,7 +210,9 @@ describe('published current9 editorial render', () => {
     ]);
     expect(html).toContain('action="/ko/search"');
     expect(html).toMatch(/name="q"/);
-    expect(html).toContain('href="/ko/services"');
+    // WO-X3b: the hero's services/columns CTAs were removed (header nav keeps them).
+    expect(html).not.toContain('href="/ko/services"');
+    expect(html).not.toContain('hero-cta-secondary');
     expect(html).toContain('href="/ko/columns"');
     expect(html).toContain('href="/ko/columns/one"');
     expect(html).toContain('1 / 2');
@@ -316,7 +318,9 @@ describe('published July editorial hero strings', () => {
     expect(visibleText(compositeHero)).toContain(titleText);
     expect(visibleText(compositeHero)).toContain(labelText);
     expect(visibleText(compositeHero)).toContain(subtitleText);
-    expect(visibleText(compositeHero)).toContain(columnsLabel);
+    // WO-X3b: the composite hero no longer renders the columns link; the
+    // granular desktop hero above still carries the authored primitive.
+    expect(visibleText(compositeHero)).not.toContain(columnsLabel);
     for (const item of derived!.quickMenus) {
       expect(wired.publishedHeroQuickMenus).toContainEqual(item);
     }

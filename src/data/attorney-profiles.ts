@@ -69,7 +69,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         '당사무소는 한국어·중국어·일본어·영어로 상담을 제공하며, 초기 상담부터 실행 및 분쟁 대응까지 한 흐름으로 지원합니다.',
         '한국 유학생 헬스장 손해배상 사건에서 157만 TWD 1심 판결을 이끈 대표 사례가 있으며, WEI Lawyer 채널과 외부 매체를 통해 대만 법률을 설명하고 있습니다.',
       ],
-      languages: ['한국어', '중국어', '일본어'],
+      languages: ['한국어', '중국어', '일본어', '영어'],
       practiceAreas: ['대만 회사설립', '대만 투자 법률자문', '민사소송·손해배상', '상표·특허', '비자·체류', '가족·노동 분쟁'],
       education: [
         '국립 타이완 대학교 재무금융연구소 석사',
@@ -140,7 +140,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         '事務所可提供韓文、中文、日文、英文溝通，將諮詢、申請與爭議處理整合為同一策略流程。',
         '曾代理韓國留學生健身房受傷損害賠償案件，取得 157 萬 TWD 一審判決，並持續透過 WEI Lawyer 與外部媒體說明台灣法律議題。',
       ],
-      languages: ['韓文', '中文', '日文'],
+      languages: ['韓文', '中文', '日文', '英文'],
       practiceAreas: ['台灣公司設立', '在台投資法律顧問', '民事訴訟與損害賠償', '商標與專利', '簽證與居留', '家事與勞動爭議'],
       education: [
         '國立臺灣大學財務金融研究所碩士',

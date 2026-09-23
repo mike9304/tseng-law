@@ -8,16 +8,14 @@ import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent } from '@/data/team-members';
 import SectionLabel from '@/components/SectionLabel';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
-import {
-  homeHeroButtonSurfaceIds,
-  homeHeroTextSurfaceIds,
-} from '@/lib/builder/registry';
+import { homeHeroTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import LocaleHomePathNav from '@/components/LocaleHomePathNav';
+import HeroTrustStrip from '@/components/HeroTrustStrip';
 import styles from './HomeEditorial.module.css';
 
 export const heroQuickMenus = {
@@ -54,13 +52,6 @@ export const heroQuickMenus = {
     { label: '連絡先', href: '/ja/contact' },
   ],
 } as const;
-
-const columnCtaLabels: Record<SiteLocale, string> = {
-  ko: '호정칼럼 보기',
-  'zh-hant': '查看專欄內容',
-  en: 'View Insights',
-  ja: 'コラムを見る',
-};
 
 const emailConsultationCtaLabels: Record<SiteLocale, string> = {
   ko: '이메일 상담 신청',
@@ -114,15 +105,26 @@ export function handleLegacyZhHeroScroll(event: ReactMouseEvent<HTMLAnchorElemen
   });
 }
 
+// Default ja hero titles, split into phrases that must not break internally
+// (e.g. 労/務). Builder overrides replace the whole body and are not affected.
+const jaHeroTitlePhrases: Record<string, readonly string[]> = {
+  '台湾法を、分かりやすく。': ['台湾法を、', '分かりやすく。'],
+  // WO-X3 (J11)
+  '台湾の会社設立・労務・紛争を、日本語で。': ['台湾の会社設立・', '労務・', '紛争を、', '日本語で。'],
+};
+
 function HeroTitleBody({ locale, title }: { locale: SiteLocale; title: string }) {
-  return locale === 'ja' && title === '台湾法を、分かりやすく。' ? (
+  const phrases = locale === 'ja' ? jaHeroTitlePhrases[title] : undefined;
+  if (!phrases) return <>{title}</>;
+  return (
     <>
-      <span style={{ display: 'inline-block', maxWidth: '100%' }}>台湾法を、</span>
-      <wbr />
-      <span style={{ display: 'inline-block', maxWidth: '100%' }}>分かりやすく。</span>
+      {phrases.map((phrase, index) => (
+        <span key={phrase}>
+          {index > 0 ? <wbr /> : null}
+          <span style={{ display: 'inline-block', maxWidth: '100%' }}>{phrase}</span>
+        </span>
+      ))}
     </>
-  ) : (
-    title
   );
 }
 
@@ -148,7 +150,6 @@ export default function HeroSearch({
   const inputRef = useRef<HTMLInputElement>(null);
   const editorial = presentation === 'editorial';
   const menus = quickMenus ?? heroQuickMenus[locale];
-  const servicesItem = menus.find((item) => item.href === `/${locale}/services`) ?? menus[0];
   const lead = teamContent[locale].members[0];
   const profilePath = getAttorneyProfilePath(locale);
   const searchInputId = `hero-search-${locale}`;
@@ -211,6 +212,24 @@ export default function HeroSearch({
     </form>
   );
 
+  // WO-X3b (EN-09 · J10): one solid primary first, the two path buttons as
+  // outlined secondaries, the guide as a text link. Services and columns are
+  // left to the header navigation and the sections directly below the hero.
+  const ctaGroup = (tone: 'dark' | 'light') => (
+    <div className="hero-cta-group">
+      <div className="hero-links-minimal hero-cta-actions">
+        <a
+          href={getConsultationPublicMailto(locale)}
+          className="button hero-cta-primary"
+          aria-label={`${emailConsultationCtaLabels[locale]} — ${getConsultationCtaLabel(locale)}`}
+        >
+          {emailConsultationCtaLabels[locale]}
+        </a>
+      </div>
+      <LocaleHomePathNav locale={locale} tone={tone} />
+    </div>
+  );
+
   const quickMenu = focused ? (
     <nav className="hero-quick-menu">
       {menus.map((item) => (
@@ -254,28 +273,8 @@ export default function HeroSearch({
                 <strong>{lead.name}</strong> · {lead.role}
               </Link>
             ) : null}
-            <LocaleHomePathNav locale={locale} tone="light" />
-            <div className="hero-links-minimal hero-cta-actions">
-              <a
-                href={getConsultationPublicMailto(locale)}
-                className="button hero-cta-primary"
-                aria-label={`${emailConsultationCtaLabels[locale]} — ${getConsultationCtaLabel(locale)}`}
-              >
-                {emailConsultationCtaLabels[locale]}
-              </a>
-              <Link href={servicesItem.href} className="button hero-cta-secondary">
-                {servicesItem.label}
-              </Link>
-              <Link
-                href={`/${locale}/columns`}
-                className={styles.ctaTertiary}
-                data-builder-surface-key={homeHeroButtonSurfaceIds[0]}
-              >
-                <SurfaceText surfaceKey={homeHeroButtonSurfaceIds[0]}>
-                  {columnCtaLabels[locale]}
-                </SurfaceText>
-              </Link>
-            </div>
+            {ctaGroup('light')}
+            <HeroTrustStrip locale={locale} tone="light" />
           </div>
           <div className={styles.heroMediaFrame}>
             <HeroMediaBackground locale={locale} />
@@ -311,25 +310,8 @@ export default function HeroSearch({
           <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
             <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
           </p>
-          <LocaleHomePathNav locale={locale} tone="dark" />
-          <div className="hero-links-minimal hero-cta-actions">
-            <a
-              href={getConsultationPublicMailto(locale)}
-              className="button hero-cta-primary"
-              aria-label={`${emailConsultationCtaLabels[locale]} — ${getConsultationCtaLabel(locale)}`}
-            >
-              {emailConsultationCtaLabels[locale]}
-            </a>
-            <Link
-              href={`/${locale}/columns`}
-              className="button hero-cta-secondary"
-              data-builder-surface-key={homeHeroButtonSurfaceIds[0]}
-            >
-              <SurfaceText surfaceKey={homeHeroButtonSurfaceIds[0]}>
-                {columnCtaLabels[locale]}
-              </SurfaceText>
-            </Link>
-          </div>
+          {ctaGroup('dark')}
+          <HeroTrustStrip locale={locale} tone="dark" />
         </div>
       </div>
       <div className="hero-search-wrapper">

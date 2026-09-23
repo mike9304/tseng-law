@@ -21,11 +21,12 @@ const HANGUL = /[\uac00-\ud7af]/;
 const SITE_URL = 'https://tseng-law.com';
 const locales = ['ko', 'zh-hant', 'en', 'ja'] as const satisfies readonly SiteLocale[];
 
+// WO-X3b: the hero's localized CTA is now the email primary (columns CTA removed).
 const heroLabels = {
-  ko: { cta: '호정칼럼 보기', scroll: '아래로 스크롤' },
-  'zh-hant': { cta: '查看專欄內容', scroll: '向下滾動' },
-  en: { cta: 'View Insights', scroll: 'Scroll down' },
-  ja: { cta: 'コラムを見る', scroll: '下へスクロール' },
+  ko: { cta: '이메일 상담 신청', scroll: '아래로 스크롤' },
+  'zh-hant': { cta: '申請電子郵件諮詢', scroll: '向下滾動' },
+  en: { cta: 'Request an Email Consultation', scroll: 'Scroll down' },
+  ja: { cta: 'メール相談を申し込む', scroll: '下へスクロール' },
 } as const;
 
 const scrollTopLabels = {
@@ -163,7 +164,7 @@ describe('legacy home four-locale localization', () => {
       renderToStaticMarkup(<ScrollTopButton locale="ja" />),
     ].join('');
 
-    expect(japaneseHtml).toContain('コラムを見る');
+    expect(japaneseHtml).toContain('メール相談を申し込む');
     expect(japaneseHtml).toContain('下へスクロール');
     expect(japaneseHtml).toContain('台湾の法律問題を、日本語でご相談ください。');
     expect(japaneseHtml).not.toContain('迅速に');

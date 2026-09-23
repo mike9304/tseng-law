@@ -22,7 +22,11 @@ describe('EN-INTERNATIONAL-v1 candidate copy', () => {
   it('keeps the English home title international without claiming every attorney speaks English', () => {
     expect(siteContent.en.hero.title).toBe(EN_HOME_HERO_TITLE);
     // WO-X1 (EN-01, user decision 2026-09-23): the attorney consults directly in English.
-    expect(siteContent.en.hero.subtitle).toMatch(/Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese/);
+    // WO-X3 (EN-09): the lead now opens with the English offer (same fact, reordered).
+    expect(siteContent.en.hero.subtitle).toMatch(
+      /^English consultations with Attorney Wei Tseng — in person in Taipei or by video\./,
+    );
+    expect(siteContent.en.hero.subtitle).toMatch(/Chinese, Korean, and Japanese/);
     expect(siteContent.en.hero.subtitle).not.toMatch(/works with clients directly in Korean, Chinese, and Japanese/);
     expect(siteContent.en.hero.subtitle).not.toMatch(/English-speaking attorneys/i);
   });

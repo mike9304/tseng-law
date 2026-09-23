@@ -97,8 +97,11 @@ describe('EN intent pages growth copy', () => {
   it('states office consultation languages without claiming plural English-speaking attorneys', () => {
     expect(EN_HOME_HERO_SUBTITLE).not.toMatch(/English-speaking attorneys/i);
     expect(EN_HOME_HERO_SUBTITLE).not.toMatch(/\battorneys\b/i);
-    expect(EN_HOME_HERO_SUBTITLE).toMatch(/English, Chinese, Korean, and Japanese/);
-    expect(EN_HOME_HERO_SUBTITLE).toMatch(/Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese/);
+    // WO-X3 (EN-09, Fable R1): the lead opens with the English offer, then the other languages.
+    expect(EN_HOME_HERO_SUBTITLE).toMatch(
+      /^English consultations with Attorney Wei Tseng — in person in Taipei or by video\./,
+    );
+    expect(EN_HOME_HERO_SUBTITLE).toMatch(/She also consults in Chinese, Korean, and Japanese/);
   });
 
   it('exposes the existing EN intent slugs without inventing routes', () => {

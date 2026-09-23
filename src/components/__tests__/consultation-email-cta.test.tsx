@@ -48,13 +48,16 @@ function linkContent(nodes: ReturnType<typeof createHeroDecomposedNodes>, id: st
 }
 
 describe('consultation email CTAs', () => {
-  it('renders the Korean hero primary email CTA before the columns link', () => {
+  it('renders the Korean hero primary email CTA before the path buttons and without a columns link', () => {
     const html = renderToStaticMarkup(createElement(HeroSearch, { locale: 'ko' }));
     const href = getConsultationPublicMailto('ko').replace(/&/g, '&amp;');
 
     expect(html).toContain('이메일 상담 신청');
     expect(html).toContain(`href="${href}"`);
-    expect(html.indexOf('이메일 상담 신청')).toBeLessThan(html.indexOf('호정칼럼 보기'));
+    // WO-X3b: the primary comes first; the columns CTA left the hero.
+    expect(html.indexOf('이메일 상담 신청')).toBeGreaterThan(-1);
+    expect(html.indexOf('이메일 상담 신청')).toBeLessThan(html.indexOf('대만 회사설립 상담하기'));
+    expect(html).not.toContain('호정칼럼 보기');
     expect(html).not.toContain('/images/hero-bg-01.webp');
     expect(html).toContain(
       encodeURIComponent(

@@ -128,8 +128,8 @@ describe('buildBuilderRecordJsonLd', () => {
         siteUrl: SITE_URL,
       });
       // WO-X1 (EN-01, user decision 2026-09-23): the attorney consults directly
-      // in English, and the EN profile says so; ko/zh-hant profiles are unchanged.
-      const expectedCount = locale === 'en' ? 4 : 3;
+      // in English. WO-X3 v2 item 8: the ko/zh-hant profiles now list it too.
+      const expectedCount = 4;
 
       expect(profile?.languages).toHaveLength(expectedCount);
       expect(payload).toMatchObject({
@@ -140,7 +140,7 @@ describe('buildBuilderRecordJsonLd', () => {
       if (locale === 'en') {
         expect((payload as { knowsLanguage?: unknown[] }).knowsLanguage?.[0]).toBe('English');
       } else {
-        expect(JSON.stringify((payload as { knowsLanguage?: unknown }).knowsLanguage)).not.toMatch(
+        expect(JSON.stringify((payload as { knowsLanguage?: unknown }).knowsLanguage)).toMatch(
           INDIVIDUAL_ENGLISH_MARKERS,
         );
       }

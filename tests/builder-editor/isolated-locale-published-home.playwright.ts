@@ -8,7 +8,7 @@ const EXPECTED_H1: Record<SiteLocale, string> = {
   ko: '대만 법률을 한국어로 명확하게.',
   'zh-hant': '台灣法律，清楚說明。',
   en: 'Taiwan Legal Support for International Businesses and Individuals',
-  ja: '台湾法を、分かりやすく。',
+  ja: '台湾の会社設立・労務・紛争を、日本語で。',
 };
 
 async function measurePublicHome(page: Page) {

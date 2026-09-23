@@ -22,9 +22,9 @@ describe('WO-X1 EN/JA audience copy', () => {
   it('lists English first on EN and Japanese first on JA for the attorney', () => {
     expect(attorneyProfiles.en['wei-tseng'].languages).toEqual(['English', 'Chinese', 'Korean', 'Japanese']);
     expect(attorneyProfiles.ja['wei-tseng'].languages).toEqual(['日本語', '中国語', '英語', '韓国語']);
-    // ko/zh-hant stay as published.
-    expect(attorneyProfiles.ko['wei-tseng'].languages).toEqual(['한국어', '중국어', '일본어']);
-    expect(attorneyProfiles['zh-hant']['wei-tseng'].languages).toEqual(['韓文', '中文', '日文']);
+    // WO-X3 v2 item 8 (user-confirmed fact): ko/zh-hant also list English, appended.
+    expect(attorneyProfiles.ko['wei-tseng'].languages).toEqual(['한국어', '중국어', '일본어', '영어']);
+    expect(attorneyProfiles['zh-hant']['wei-tseng'].languages).toEqual(['韓文', '中文', '日文', '英文']);
   });
 
   it('keeps Korea-centric framing out of the EN profile, team, FAQ and home case', () => {

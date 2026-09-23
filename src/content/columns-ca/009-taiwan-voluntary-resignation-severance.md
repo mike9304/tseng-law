@@ -17,11 +17,11 @@ A Taiwan no és fàcil, per regla general, que el treballador obtingui la indemn
 
 ​
 
-En particular, si el treballador dimiteix de forma voluntària (自請離職),
+En particular, la dimissió voluntària del treballador (自請離職) segueix una regla pròpia.
 
-no pot percebre la indemnització per acomiadament (資遣費) (article 18 de la Llei de normes laborals),
+No pot percebre la indemnització per acomiadament (資遣費) (article 18 de la Llei de normes laborals).
 
-i això difereix d’alguns ordenaments, com el coreà.
+Això difereix d’alguns ordenaments, com el coreà.
 
 ​
 
@@ -35,9 +35,9 @@ En les situacions especials següents, tot i que el treballador dimiteixi de for
 
 (per exemple, quan l’ocupador diu al treballador que, en ingressar, l’enviarà a una sucursal a l’estranger que en realitat no existeix)
 
-2. Quan l’ocupador, un familiar de l’ocupador o un representant de l’ocupador (代理人) exerceix violència o infligeix un insult greu (重大侮辱) al treballador
+2. Quan l’ocupador, un familiar de l’ocupador o un representant de l’ocupador (代理人) exerceix violència contra el treballador o li dirigeix un insult greu (重大侮辱)
 
-3. Quan el treball pactat en el contracte pot ser perjudicial per a la salut del treballador, s’ha demanat a l’ocupador que el millori i no hi ha efecte
+3. Quan el treball pactat en el contracte pot ser perjudicial per a la salut del treballador, s’ha demanat a l’ocupador que ho esmeni i no ho ha fet
 
 4. Quan l’ocupador, el seu representant o un altre treballador pateix una malaltia contagiosa de declaració obligatòria (法定傳染病), existeix risc de contagi als treballadors que treballen junts i això suposa un perill greu per a la salut del treballador
 
@@ -47,49 +47,49 @@ En les situacions especials següents, tot i que el treballador dimiteixi de for
 
 ​
 
-L’exemple més freqüent és que l’ocupador
+L’exemple més freqüent afecta l’ocupador.
 
-no pagui el salari (工資) a temps,
+No paga el salari (工資) a temps.
 
-no pagui les hores extraordinàries (加班費),
+No paga les hores extraordinàries (加班費).
 
-o no afiliï el treballador a l’assegurança laboral (勞保) o a l’assegurança de salut (健保).
+O no afilia el treballador a l’assegurança laboral (勞保) o a l’assegurança de salut (健保).
 
 En aquests casos, tot i que el treballador posi fi al contracte de treball de forma ordinària, l’ocupador li ha de pagar la indemnització per acomiadament.
 
 ​
 
-Tanmateix, la Llei de normes laborals (勞動基準法) disposa que,
+Tanmateix, la Llei de normes laborals (勞動基準法) disposa un termini.
 
-si el treballador desitja posar fi al contracte de treball pels apartats 1 o 6 anteriors (per exemple, per acabar el contracte per manca d’afiliació a l’assegurança),
+Si el treballador desitja posar fi al contracte de treball pels apartats 1 o 6 anteriors (per exemple, per acabar el contracte per manca d’afiliació a l’assegurança), el termini és curt.
 
-ha de posar fi al contracte de treball dins de **30 dies** des del dia en què va conèixer aquesta situació,
+Ha de posar fi al contracte de treball dins de **30 dies** des del dia en què va conèixer aquesta situació.
 
-o, en el cas de l’apartat 6, dins de **30 dies** des del dia en què va conèixer el resultat del dany.
+O, en el cas de l’apartat 6, dins de **30 dies** des del dia en què va conèixer el resultat del dany.
 
 Per això el treballador ha de controlar bé el termini.
 
 ​
 
-És a dir,
+És a dir, el criteri és la imputació.
 
-el dret de Taiwan, segons si la falta és de l’ocupador
+El dret de Taiwan distingeix si la falta és de l’ocupador.
 
-o del treballador,
+També distingeix si la falta és del treballador.
 
-atribueix a una de les parts el dret a no pagar la indemnització per acomiadament i a l’altra el dret a exigir-la.
+Atribueix a una de les parts el dret a no pagar la indemnització per acomiadament i a l’altra el dret a exigir-la.
 
-A vegades, quan hi ha falta en ambdues parts de la relació laboral,
+A vegades hi ha falta en ambdues parts de la relació laboral.
 
-si sorgeix la controvèrsia,
+Si sorgeix la controvèrsia, el desenllaç no és automàtic.
 
-segons qui posi fi primer al contracte amb raó suficient
+Segons qui posi fi primer al contracte amb raó suficient, el resultat canvia.
 
-es pot no pagar la indemnització o es pot exigir.
+Es pot no pagar la indemnització o es pot exigir.
 
-Per això, en els conflictes laborals (勞資糾紛) de Taiwan,
+Per això, en els conflictes laborals (勞資糾紛) de Taiwan el calendari compta.
 
-el **temps** és molt important.
+El **temps** és molt important.
 
 En la majoria dels casos, qui es prepara per endavant està en millor posició per defensar els seus drets; això no promet un resultat.
 

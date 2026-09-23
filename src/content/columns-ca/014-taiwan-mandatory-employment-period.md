@@ -27,7 +27,7 @@ El pacte de període mínim de treball (最低服務年限約定) del contracte 
 En examinar-lo, és important no barrejar les 4 preguntes següents.
 
 1. Si el pacte mateix reuneix els requisits legals de l’article 15-1
-2. Si el període pactat i la càrrega del treballador estan en un abast raonable
+2. Si el període pactat i la càrrega del treballador es mantenen dins d’un abast raonable
 3. A qui s’imputa la causa d’extinció del contracte de treball
 4. Com es valoren el preavís de dimissió i l’abast de la devolució
 
@@ -55,7 +55,7 @@ El programa, el calendari de formació, la llista d’assistència, el resultat 
 
 El límit entre l’adaptació general a la feina i la formació tècnica especialitzada no es divideix només pel lloc de la formació o per qui l’organitza. Un curs intern pot acreditar contingut professional i tècnic concret i una inversió considerable, i un curs llarg d’un centre extern pot ser, en realitat, una formació introductòria general. Per això no s’ha d’excloure de forma uniforme tota formació interna ni reconèixer el requisit legal només perquè el curs sigui costós o llarg.
 
-També s’ha de poder explicar la relació entre el període pactat i la inversió formativa. Quina competència s’adquireix, quina relació té aquesta competència amb el lloc de destinació i per què és necessari el període de treball proposat davant la durada i el cost de la formació s’examinen de forma individual. Si després d’acabar la formació es va exercir realment aquesta feina i el període ja treballat també són dades per valorar l’abast de la càrrega.
+També s’ha de poder explicar la relació entre el període pactat i la inversió formativa. Quina competència s’adquireix, quina relació té aquesta competència amb el lloc de destinació i per què és necessari el període de treball proposat davant la durada i el cost de la formació s’examinen de forma individual. Que, acabada la formació, s’hagi exercit realment aquesta feina, i el temps ja treballat, també són dades per valorar l’abast de la càrrega.
 
 ## 3. Segon requisit legal: compensació raonable
 

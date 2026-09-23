@@ -1,0 +1,98 @@
+WO-F-ca r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ca-r4
+date: 2026-09-23
+no git add/commit/push
+
+## Rows applied (26)
+
+ca-a
+3 P2 — mid-sentence blank lines completed inside the existing blocks (not merged). 006, 008, 009, and the same pattern in 013 and 015. See systemic count.
+5 P2 — bare "intèrpret": "No prometem cap intèrpret" (home), "No prometem cap intèrpret, no prometem cap servei en català" (contact), "no oferim cap intèrpret", "Tampoc no prometem cap intèrpret" (FAQ). consultationNotice substring unchanged, so llms.txt ca notices were left. Disclosure regex /intèrpret/ still matches.
+6 P2 009 — "s’ha demanat a l’ocupador que el millori i no hi ha efecte" → "s’ha demanat a l’ocupador que ho esmeni i no ho ha fet".
+7 P2 — "infligeix un insult greu" dropped. 009: violence against the worker, or a serious insult directed at the worker. 008 article 12 item 2: violence or a serious insult directed at the employer, a family member, the agent, or co-workers.
+9 P3 008 — table header "**Dimissió voluntària del treballador**  **員工自請離職**" → "**Dimissió voluntària del treballador (員工自請離職)**".
+
+ca-b
+1 P2 011 — "l’obtenció de la qualificació d’importador" → "l’obtenció de la condició d’importador".
+2 P2 016 — "la relació de la titularitat efectiva" → "la titularitat real" (body and checklist).
+3 P2 016 — "El fonament de naixement, la contrapart i l’objecte de càlcul" → "El fonament jurídic, la persona contra qui es reclama i els béns inclosos en el càlcul". Kept "que neix perquè el cònjuge supervivent és hereu".
+4 P2 013 — "«**període d’adequació**» (裝潢期間)" → "«**període de condicionament del local**» (裝潢期間)".
+5 P2 017 — plate surrender is no longer "devolució". "no es poden lliurar per a la baixa (繳銷)"; the next sentence uses "el lliurament de la placa d’ús comercial per a la baixa".
+6 P2 018 — "opcions d’empleats" → "opcions sobre accions per a empleats".
+7 P2 014 — "estan en un abast raonable" → "es mantenen dins d’un abast raonable". Existing "dins d’un abast raonable" left.
+8 P2 014 — "Si després d’acabar la formació es va exercir realment aquesta feina i el període ja treballat també són dades" → "Que, acabada la formació, s’hagi exercit realment aquesta feina, i el temps ja treballat, també són dades…".
+10 P2 016 — "Prestacions amb beneficiari…" → "Les prestacions amb beneficiari…". The rest of the sentence, including "segons el contracte i la llei aplicable", stays.
+11 P2 010 — the court no longer "extreu una inferència". "no duu el tribunal a presumir automàticament en contra d’aquesta part".
+12 P2 010 — "tenir com a controvèrsia" → "plantejar qüestions d’obligació de seguretat, de nexe causal, de dany i de prova".
+13 P2 011 — "correcció o complement de documents" → "es demanen documents complementaris" (FAQ + body). The shortened "si hi ha correcció o complement" is now "si es demanen documents complementaris".
+14 P2 011 — "influenciadors i d’altres" → "influenciadors i d’altres persones" (FAQ + body). "entre d’altres" left.
+15 P2 011 — link label "l’àmbit objecte del registre" → "l’àmbit del registre". URL unchanged.
+16 P2 011 — "l’àmbit de suport relacionat" → "l’abast de l’assistència relacionada". Link target unchanged.
+17 P2 — "de manera natural" removed or replaced. 016 calculation ×2 ("entren en el càlcul"). 016 guardian ×1 ("es converteixi en tutor"). 007 ×3, where English says "automatically" ("automàticament").
+18 P2 016 — "un contingut de designació" → "aquesta designació".
+19 P2 016 — "el paper de protecció i el d’administració patrimonial" → "la funció de cura personal i la d’administració del patrimoni".
+20 P2 016 — waiver "es constitueix" → "queda formalitzada". Claim "es constitueix" → "queda acreditada". Representation "es constitueix" → "escau la successió per representació". "relació de representació" in the same sentence → "successió per representació". "Si es constitueix una filial" (018, FAQ + body) and "garanties constituïdes" left (incorporation and created security interests).
+21 P2 017 — "la subencomana" → "la subcontractació".
+22 P2 018 — "per al control de conflictes" → "per a la comprovació de conflictes d’interès".
+
+No Catalan test expectation needed updating. llms.txt `ca` notices were not rewritten.
+
+## Rows skipped (5)
+
+ca-a 1 P2 — do not promote Q16–Q20 from bold body lines to ## headings. See reviewer-wrong.
+ca-a 2 P2 and ca-b 9 P2 — do not delete U+200B lines or 005 `**​**`. checkBlocks requires the Catalan ZWSP count to equal the Korean source. 0 removed.
+ca-a 4 P2 — the aside "(no és l’article 10)" stays. Removing it failed the checker: `numbers missing from translation (1): 10`. The Korean link label is still "영업세법 제10조". Visible statute name stays the withholding-rate standard, article 3. URL not touched. Restored after the failed check.
+ca-a 8 P3 — "TWD 1.57M" left byte-identical (ACCEPTED-ROUND pin). Suggested "1,57 milions de dòlars de Taiwan (TWD 1,57 milions)" would replace the pinned token. The Catalan parenthetical already sits beside it.
+
+## Systemic patterns
+
+- Mid-sentence breaks whose next block continued the sentence, completed inside the existing blocks (not merged): 91 chains.
+  006 ×17, 008 ×45, 009 ×15, 013 ×11, 015 ×3.
+  Includes the quoted "si es parla de massatge," / "a Taiwan", the 009 voluntary-resignation opening, and the 008 "si el treballador comet un acte il·lícit" list.
+  003 and 005 still carry the source's ZWSP lineation. Those lines were not deleted. Their spoken sentences were already closed.
+- "de manera natural" as automatic inclusion or "automatically": 6.
+  016 calculation ×2, 016 guardian ×1, 007 ×3.
+- Completed waiver, claim, or representation as "es constitueix": 3 (016). Company-formation "constituir / es constitueix una filial" left.
+- "infligeix un insult greu": 2 (008, 009).
+- Bare "intèrpret": 4. Parallel bare "servei" in the same contact sentence: 1 ("cap servei").
+- Plate "devolució" for 繳銷: 2. "devolució de la despesa de formació" (014) left; that is a refund of training costs.
+- "influenciadors i d’altres": 2. "correcció o complement": 3. "titularitat efectiva" phrases: 2.
+- U+200B and 005 empty bold lines: 0 removed (checker).
+- R2–R17 otherwise already held from prior rounds. Rechecked the 18 columns and the Catalan guidance pack: Korea stays a labelled example; consultation stays English, Chinese (中文), Japanese, and Korean; no interpreter, reply-time, free-meeting, or result promise was turned positive; Wei Tseng stays feminine; the male manager and senyor B stay male; EL NOSTRE EQUIP / OFICINES / "Perfil complet (en anglès)" already in Catalan; pinned bio English institution strings kept because GUIDANCE_BIO_PRESERVED_TERMS requires them; no Czech leakage; no `[변호사 검수 필요]`. No Hangul in column bodies.
+
+## §Verify
+
+```
+hanzi          PASS   han=85
+numbers        WARN   extra in translation (5): 1×5
+                      sourceCount=25 targetCount=30
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      16
+```
+
+Commands, in order:
+
+cd /Users/son7/Projects/tseng-law-fix-ca-r4 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ca --lang ca 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ca src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+The number WARN on the last file is extra digit 1, not a missing number, and does not fail the file. The git count is before this log file.
+
+## Reviewer got wrong (not applied)
+
+- Q16–Q20 should not become markdown headings. Korean source is plain "Q16." and English is the same body line, not `##`. checkHeadings compares heading levels to the Korean source. The bold "**16.**" form is what keeps the outline count.
+- U+200B blank lines and the four `**​**` lines in 005 cannot be deleted. They are in the Korean source. checkBlocks fails if the ZWSP count or the block count moves. The spoken columns were repaired by closing each block as a sentence instead.
+- "(no és l’article 10)" cannot be deleted. The suggested label drops the digit 10, and the checker then reports `missing from translation (1): 10`. The Korean label still says article 10 of the business-tax act; the URL is flno=3 of the withholding-rate standard. Article 3 and the statute name stay; the digit stays with them.
+- The suggested join of "si es parla de massatge," with the next paragraph would merge two blocks. Each block was closed on its own.
+- Reformatting "TWD 1.57M" would break the pinned bio token. The Catalan gloss "(1,57 milions de dòlars taiwanesos)" is already next to it.

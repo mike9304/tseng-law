@@ -3405,7 +3405,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Μεταπτυχιακό (M.S.), Institute of Finance, National Taiwan University',
-        'Πτυχίο (B.A.) νομικής και χρηματοοικονομικών, με δύο γνωστικά αντικείμενα, National Chengchi University',
+        'Πτυχίο (B.A.) διπλής κατεύθυνσης στη νομική και στα χρηματοοικονομικά, National Chengchi University',
         'Φοιτήτρια ανταλλαγής στο Kobe University και στο Waseda University',
       ],
       experience: [

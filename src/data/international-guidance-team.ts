@@ -520,7 +520,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ONS TEAM',
     title: 'Internationaal team van Hovering',
     description:
-      'Profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering.',
+      'Profielen van de advocaten, de juridisch medewerker, de operationeel manager en de accountant-partner van Hovering.',
     representativeTitle: 'Leidinggevend advocaat',
     teamTitle: 'Advocaten en medewerkers',
     partnerTitle: 'Aangesloten accountantskantoor',
@@ -2712,7 +2712,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Het kantoor behandelt ondernemings- en individuele zaken in Taiwan in het Engels, Japans, Koreaans en Chinees.',
-        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens een letsel in een fitnesszaal en verkreeg een vonnis in eerste aanleg van 1,57 miljoen TWD.',
+        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens letsel in een sportschool en verkreeg een vonnis in eerste aanleg van 1,57 miljoen TWD.',
       ],
       education: [
         'Masterdiploma (M.S.) financiën, Institute of Finance, National Taiwan University',

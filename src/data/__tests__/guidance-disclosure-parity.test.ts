@@ -209,7 +209,7 @@ const ELEMENTS = {
     ru: /не обещание/,
     tr: /vaat değil/,
     it: /non è una promessa/,
-    nl: /geen belofte/,
+    nl: /geen toezegging/,
     pl: /nie jest obietnicą/,
     hi: /वादा नहीं/,
     sv: /inte ett löfte/,

@@ -29,7 +29,7 @@ Bij de toetsing is het belangrijk de volgende 4 vragen niet te vermengen.
 1. Of de afspraak zelf de wettelijke vereisten van artikel 15-1 vervult.
 2. Of de overeengekomen periode en de last van de werknemer binnen een redelijke omvang liggen.
 3. Aan wie de beëindigingsoorzaak van de arbeidsovereenkomst toerekenbaar is.
-4. Hoe de ontslagopzegging en de omvang van de teruggave worden beoordeeld.
+4. Hoe de opzegging bij vertrek van de werknemer en de omvang van de teruggave worden beoordeeld.
 
 Zelfs indien deze 4 kwesties samen in hetzelfde contract staan, zijn het toepasselijke voorschrift en het nodige bewijs onderscheiden. Men moet daarom afzonderlijk toetsen of de afspraak geldig is, wanneer de ontslagwilsuiting uitwerking heeft, of er aansprakelijkheid bestaat om de vooruitbetaalde prestatie (預付性給付) of de opleidingskosten terug te geven, en of een afzonderlijke schade werkelijk is ontstaan.
 
@@ -49,7 +49,7 @@ De omstandigheid dat de werknemer het contract heeft ondertekend, kan een stuk z
 
 Om de afspraak op de opleiding te gronden, moet de werkgever de werknemer werkelijk een gespecialiseerde technische opleiding (專業技術培訓) hebben geleverd en de kosten hebben gedragen. Het volstaat niet in het opleidingsplan te schrijven dat het om een professionele cursus gaat of in het contract geraamde kosten te vermelden (專業技術培訓). Men moet met stukken het thema van de opleiding, het voor de functie nodige professionele en technische karakter, de concrete duur, of zij is voltooid en de werkelijke uitgave kunnen verbinden.
 
-Wat wordt getoetst, omvat niet alleen rechtstreeks verifieerbare kosten, zoals de honoraria van externe opleiders, de inschrijvingsgelden van een opleidingscentrum en de tarieven van materialen of uitrusting, maar ook de berekeningsgrondslag van de interne kosten die de werkgever aanvoert. Heeft intern personeel de opleiding verzorgd, dan moet men zien van wie de tijd is en hoeveel tijd het betreft, waarin dat zich van het gebruikelijke toezicht dan wel de functieoverdracht onderscheidt, en of er een grondslag bestaat om die kosten aan die werknemer toe te rekenen. Een geraamd bedrag of een globale verdeling bewijst op zich de werkelijke last niet.
+Wat wordt getoetst, omvat niet alleen rechtstreeks verifieerbare kosten, zoals de honoraria van externe opleiders, de inschrijvingsgelden van een opleidingscentrum en de tarieven van materialen of uitrusting, maar ook de berekeningsgrondslag van de interne kosten die de werkgever aanvoert. Heeft intern personeel de opleiding verzorgd, dan moet men zien wiens tijd eraan werd besteed en hoeveel tijd het betreft, waarin dat zich van het gebruikelijke toezicht dan wel de functieoverdracht onderscheidt, en of er een grondslag bestaat om die kosten aan die werknemer toe te rekenen. Een geraamd bedrag of een globale verdeling bewijst op zich de werkelijke last niet.
 
 Het programma, het opleidingsrooster, de presentielijst, het evaluatieresultaat, het voltooiingscertificaat, de facturen en de kwitanties zijn basisstukken om de werkelijkheid van de opleiding en de kosten te bevestigen. Het contract tussen de werkgever en het opleidingscentrum, de betalingsbewijzen en de terugbetalingsvoorwaarden, samen bekeken, laten toe de werkelijke last nauwkeuriger te vatten. Indien de werknemer een deel van de kosten rechtstreeks heeft betaald of een derde die kosten heeft gedragen, moet men ook onderscheiden wie de kosten uiteindelijk heeft gedragen.
 
@@ -94,7 +94,7 @@ Volgens de toelichting van het ministerie van Arbeid van Taiwan van 5 juni 2026 
 
 De toelichting 勞動關2字第1150141814號 van het ministerie van Arbeid onderscheidt en behandelt de opleiding die periodiek wordt verstrekt, de gebruikelijke functieopleiding, de opleiding opdat de nieuwkomer vertrouwd raakt met de werkomgeving en de procedures, en de opleiding die de werkgever volgens de wet moet verstrekken. Omdat deze opleiding de exploitatie van de activiteit of de nakoming van een wettelijke verplichting begeleidt, kunnen die kosten niet worden omgezet in de grondslag van een retentieverplichting of van een sanctie wegens vroegtijdige beëindiging (勞動部).
 
-De cursussen die een nieuwe werknemer gewoonlijk ontvangt, zoals de toelichting van het arbeidsreglement (工作規則), de introductie van de organisatie en de regelingen, de gebruikelijke functieoverdracht en de gids van de basisveiligheidsprocedures, moeten in hun wezen worden bevestigd. De algemene aanwervings- en beheerskost of de overdrachtskost die de werkgever van oorsprong moest dragen, kunnen niet als terug te geven post worden vastgelegd door ze alleen als afzonderlijke investering te etiketteren.
+De cursussen die een nieuwe werknemer gewoonlijk ontvangt, zoals de toelichting van het arbeidsreglement (工作規則), de introductie van de organisatie en de regelingen, de gebruikelijke functieoverdracht en de gids van de basisveiligheidsprocedures, moeten in hun wezen worden bevestigd. Gewone aanwervings-, beheers- of overdrachtskosten die de werkgever normaliter droeg, kunnen niet als afzonderlijke terugvorderbare investering worden geëtiketteerd.
 
 Toch sluit men een opleiding niet altijd uit alleen omdat zij binnen de onderneming is verstrekt. In eenzelfde programma kunnen een algemeen adaptatiedeel en een gespecialiseerd technisch deel worden gemengd, zodat het thema, de tijd, de kosten en of er een wettelijke verplichting is per cursus moeten worden bevestigd (專業技術培訓). Wie het gespecialiseerde technische deel aanvoert, moet met stukken toelichten welke inhoud zich van de gebruikelijke opleiding onderscheidt en wie de kosten werkelijk heeft gedragen.
 
@@ -118,7 +118,7 @@ Men moet ook de teruggave van de opleidingskosten en de teruggave van de vooruit
 
 Artikel 15-1, lid 4, van de Taiwanese wet op de arbeidsnormen (勞動基準法) bepaalt dat, indien de arbeidsovereenkomst vóór het einde van de minimale arbeidsperiode eindigt door een oorzaak die niet aan de werknemer toerekenbaar is, de werknemer geen aansprakelijkheid voor inbreuk op de afspraak van een minimale arbeidsperiode noch voor teruggave van de opleidingskosten draagt. De beëindigingsoorzaak en de toerekening van aansprakelijkheid moeten echter worden beoordeeld op grond van concrete bewijzen, zoals de ontslagkennisgeving, de ontslagwilsuiting en de stukken van inbreuk op de arbeidsvoorwaarden.
 
-Men kan daarom de inbreuk van de werknemer niet erkennen door het enkele feit dat de arbeidsverhouding vóór de overeengekomen periode is geëindigd. Men moet toetsen wie welke wilsuiting heeft geformuleerd, welke de juridische grondslag van de beëindiging van het contract is en aan welke partij de werkelijke omstandigheden toerekenbaar zijn die haar hebben voortgebracht.
+Het enkele feit dat de arbeidsverhouding vóór de overeengekomen periode is geëindigd, stelt niet vast dat de werknemer inbreuk heeft gemaakt. Men moet toetsen wie welke wilsuiting heeft geformuleerd, welke de juridische grondslag van de beëindiging van het contract is en aan welke partij de werkelijke omstandigheden toerekenbaar zijn die haar hebben voortgebracht.
 
 De toetsingsstukken kunnen de ontslagkennisgeving, de ontslagbrief, het stuk van beëindiging in onderlinge overeenstemming, de elektronische post en het berichtenregister, de stukken van wijziging van arbeidsvoorwaarden en het aanwezigheids- en werkregister omvatten. Zelfs indien de gezondheid of de werkomstandigheden worden vermeld, bepaalt die bewoording alleen niet de uitkomst; men ziet samen het werkelijke verloop, de wettelijke beëindigingsgrondslag en de verbonden bewijzen.
 
@@ -126,7 +126,7 @@ Het ontslag, de beëindiging in onderlinge overeenstemming en de aanvoering van 
 
 De beoordeling van de beëindigingsoorzaak beïnvloedt rechtstreeks ook de omvang van de teruggave. Indien lid 4 van toepassing is, kan de werknemer niet aansprakelijk worden gehouden voor inbreuk op de afspraak van een minimale arbeidsperiode, en evenmin voor teruggave van de opleidingskosten, zodat de toerekening moet worden vastgesteld vóór het toepassen van de formule. Indien er ook een vooruitbetaalde prestatie en andere afzonderlijke vorderingen zijn, toetst men het juridische karakter en de grondslag van elke vordering.
 
-## 8. De ontslagopzegging is een onderscheiden kwestie
+## 8. De opzegging bij vertrek van de werknemer is een onderscheiden kwestie
 
 De afspraak van een minimale arbeidsperiode is geen regeling die de werknemer feitelijk of juridisch belet ontslag te nemen. De ontslagwilsuiting en de opzeggingstermijn (預告期間) zijn de kwestie van wanneer de arbeidsverhouding eindigt; de geldigheid van de afspraak van een minimale arbeidsperiode en de aansprakelijkheid tot teruggave van kosten zijn de kwestie of er vermogensrechtelijke aansprakelijkheid uit de beëindiging voortvloeit.
 
@@ -189,6 +189,6 @@ Bij het ordenen van de stukken in tijdsvolgorde dient men samen de datum van con
 
 ---
 
-Deze tekst is een document met educatief doel om algemeen de afspraak van een minimale arbeidsperiode in Taiwan, de teruggave van de opleidingskosten en van de vooruitbetaalde prestatie en de ontslagopzegging toe te lichten; zij is geen juridisch advies voor een concreet arbeidsdossier (最低服務年限約定). De geldigheid van de afspraak en de omvang van de aansprakelijkheid kunnen variëren volgens het type en de inhoud van het contract, de werkelijke opleiding en kosten, het doel van de tegenprestatie en haar mededeling, de arbeidsperiode, de beëindigingsoorzaak en de bewijzen. Vóór het formuleren van het ontslag, het aanvaarden van een looninhouding, het overeenkomen van een teruggave of het beantwoorden van een geschil, dient men de meest recente officiële bronnen en de individuele omstandigheden na te gaan.
+Deze tekst is een document met educatief doel om algemeen de afspraak van een minimale arbeidsperiode in Taiwan, de teruggave van de opleidingskosten en van de vooruitbetaalde prestatie en de opzegging bij vertrek van de werknemer toe te lichten; zij is geen juridisch advies voor een concreet arbeidsdossier (最低服務年限約定). De geldigheid van de afspraak en de omvang van de aansprakelijkheid kunnen variëren volgens het type en de inhoud van het contract, de werkelijke opleiding en kosten, het doel van de tegenprestatie en haar mededeling, de arbeidsperiode, de beëindigingsoorzaak en de bewijzen. Vóór het formuleren van het ontslag, het aanvaarden van een looninhouding, het overeenkomen van een teruggave of het beantwoorden van een geschil, dient men de meest recente officiële bronnen en de individuele omstandigheden na te gaan.
 
 **Advocaat Wei Tseng (曾雋崴)**

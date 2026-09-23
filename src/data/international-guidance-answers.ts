@@ -501,7 +501,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Deze pagina toont de profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea en Japan en met andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+        'Deze pagina toont de profielen van de advocaten, de juridisch medewerker, de operationeel manager en de accountant-partner van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea en Japan en met andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
       sources: ['/nl/about', '/nl/contact'],
     },
     pricing: {

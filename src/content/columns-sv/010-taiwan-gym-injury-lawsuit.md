@@ -23,43 +23,43 @@ Jag var ombud (訴訟代理人) för käranden, den koreanska studenten. Distrik
 
 Därefter har pressen uppgett att parterna förliktes (和解) i andra instans. Enbart den officiella domen i första instans gör det inte möjligt att bekräfta utfallet i andra instans eller förlikningsbeloppet; den förlikning som pressen uppgett får inte läsas som ett bekräftat avslut av målet i första instans.
 
-Rubrikerna på nyhetsartiklar, nätinlägg och rättskommentarer om detta ärende, översatta till svenska, är följande. Rubrikerna nedan syftar bara till att presentera innehållet i varje länk; de betyder inte att denna text själv fastställer faktum.
+Rubrikerna på nyhetsartiklar, nätinlägg och rättskommentarer om detta ärende, översatta till svenska, är följande. Rubrikerna nedan syftar bara till att presentera innehållet i varje länk; de betyder inte att denna text själv slår fast de sakförhållanden som beskrivs.
 
-![En universitetsstudent, diskbråck (椎間盤破裂) efter marklyft på 90 kg… yrkar skadestånd mot gymmet](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
+![En manlig universitetsstudent, diskbråck (椎間盤破裂) efter marklyft på 90 kg… yrkar skadestånd mot gymmet](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
-[En universitetsstudent, diskbråck (椎間盤破裂) efter marklyft på 90 kg… yrkar skadestånd mot gymmet](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
+[En manlig universitetsstudent, diskbråck (椎間盤破裂) efter marklyft på 90 kg… yrkar skadestånd mot gymmet](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Manlig koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Manlig koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Koreansk universitetsstudent, skada under marklyft på 90 kg… första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Manlig koreansk universitetsstudent, skada under marklyft på 90 kg… första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Koreansk universitetsstudent, skada under marklyft på 90 kg… första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Manlig koreansk universitetsstudent, skada under marklyft på 90 kg… första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
-![En universitetsstudent, diskbråck efter marklyft på 90 kg… yrkar skadestånd mot gymmet](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
+![En manlig universitetsstudent, diskbråck efter marklyft på 90 kg… yrkar skadestånd mot gymmet](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
-[En universitetsstudent, diskbråck efter marklyft på 90 kg… yrkar skadestånd mot gymmet](https://news.ebc.net.tw/news/living/362075)
+[En manlig universitetsstudent, diskbråck efter marklyft på 90 kg… yrkar skadestånd mot gymmet](https://news.ebc.net.tw/news/living/362075)
 
-![Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, dom som förpliktar gymmet att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Inlägg på PTT: manlig koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, dom som förpliktar gymmet att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, dom som förpliktar gymmet att betala 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Inlägg på PTT: manlig koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, dom som förpliktar gymmet att betala 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blogg: skada vid marklyft på 90 kg hos en manlig koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](https://blog.udn.com/blackjack/179081715)
+[Blogg: skada vid marklyft på 90 kg hos en manlig koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](https://blog.udn.com/blackjack/179081715)
 
-![Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, dom som förpliktar ett känt gym att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Rättskommentar: en manlig universitetsstudent, diskbråck under marklyft… i första instans, dom som förpliktar ett känt gym att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, dom som förpliktar ett känt gym att betala 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Rättskommentar: en manlig universitetsstudent, diskbråck under marklyft… i första instans, dom som förpliktar ett känt gym att betala 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Domskommentar: ärende om akut diskbråck efter att en nybörjare på gymmet fått anvisning om marklyft på 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
 [Domskommentar: ärende om akut diskbråck efter att en nybörjare på gymmet fått anvisning om marklyft på 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
 
-![Fick en koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
+![Fick en manlig koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Fick en koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?**
+**Fick en manlig koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?**
 
 Det praktiska intresset i det här ärendet är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisning som gavs och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att handlingarna redan efter olyckan bör ordnas var för sig.
 
@@ -69,9 +69,9 @@ Det som följer är allmän information för att förklara tvister om gymskador 
 
 [Artikel 7 i Taiwans lag om konsumentskydd (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) föreskriver att företaget, när det tillhandahåller en tjänst, ska se till att tjänsten har den säkerhet som skäligen kan förväntas enligt den yrkesmässiga eller tekniska standarden vid tillhandahållandet.
 
-Det betyder inte att företagets eller tränarens ansvar erkänns varje gång en skada uppstår på gymmet. Det måste bedömas, ärende för ärende, vilken aktsamhetsplikt som konkret fanns, om den överträddes, om det finns orsakssamband mellan överträdelsen och skadan, om en verklig skada uppstod, vilka invändningar motparten har, och om det finns bevis som stöder varje påstående och varje invändning.
+Det betyder inte att företaget eller tränaren har ansvar varje gång en skada uppstår på gymmet. Det måste bedömas, ärende för ärende, vilken aktsamhetsplikt som konkret fanns, om den överträddes, om det finns orsakssamband mellan överträdelsen och skadan, om en verklig skada uppstod, vilka invändningar motparten har, och om det finns bevis som stöder varje påstående och varje invändning.
 
-Om de lagstadgade rekvisiten för brottet vållande till kroppsskada (過失傷害) är uppfyllda kan straffrättslig anmälan (告訴) prövas. Civilrättsligt skadeståndsyrkande kan också prövas, men vilken grund som gäller bland avtalsansvar, utomobligatoriskt ansvar (侵權行為) och konsumentskyddsansvar, samt ansvarets omfattning, varierar beroende på de konkreta fakta. Att flera förfaranden kan prövas för samma olycka betyder inte att alla måste följas, och inte heller att den ena sidans utgång skulle vara given.
+Om de lagstadgade rekvisiten för brottet vållande till kroppsskada (過失傷害) är uppfyllda kan straffrättslig anmälan (告訴) prövas. Civilrättsligt skadeståndsyrkande kan också prövas, men vilken grund som gäller bland avtalsansvar, utomobligatoriskt ansvar (侵權行為) och konsumentskyddsansvar, samt ansvarets omfattning, varierar beroende på de konkreta fakta. Att flera förfaranden kan prövas för samma olycka betyder inte att alla måste följas, och inte heller att något av förfarandena får ett givet utfall.
 
 ## 2. Vilka frister gäller för straffrättslig anmälan och civilt skadestånd?
 
@@ -91,19 +91,19 @@ Om olycksförloppet kan uppfylla rekvisiten för ett brott kan man snabbt anmäl
 
 ## 4. Vilka skadeposter kan yrkas mot gymmet?
 
-De skadeposter vars yrkande kan prövas är följande. Det faktiska erkännandet och beloppet beror på varje utgifts nödvändighet, orsakssambandet med olyckan, verifikationerna, ansvarsandelen och domstolens bedömning.
+De skadeposter vars yrkande kan prövas är följande. Om varje post faktiskt godtas, och till vilket belopp, beror på varje utgifts nödvändighet, orsakssambandet med olyckan, verifikationerna, ansvarsandelen och domstolens bedömning.
 
 1. **Vårdkostnader**: Kostnader som faktiskt lagts ut för besök, undersökningar, behandling, läkemedel och rehabilitering bevisas med kvitton och journal.
 2. **Omvårdnads- eller omsorgskostnader**: Om omvårdnad, sett till skadans grad och behandlingsförloppet, var nödvändig, och om tid och kostnad är skäliga, granskas det med vård- och utgiftshandlingar.
 3. **Resekostnader**: Kostnader som behövs för att åka till och från vårdinrättningen för behandling bevisas med reseunderlag, kvitton och liknande handlingar.
-4. **Skada för nedsatt arbetsförmåga (勞動能力減損)**: Om följdskador och varaktig nedsättning av arbetsförmågan erkänns kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetsliv. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
-5. **Inkomstbortfall under återhämtningsperioden (收入損失)**: Den period då man faktiskt inte kunde arbeta på grund av behandling eller vila, och den inkomstminskning som följde, måste bevisas med lönehandlingar, skattedokument, närvarouppgifter med mera.
+4. **Skada för nedsatt arbetsförmåga (勞動能力減損)**: Om följdskador och varaktig nedsättning av arbetsförmågan fastställs kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetsliv. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
+5. **Inkomstbortfall under återhämtningsperioden (收入損失)**: Den period då man faktiskt inte kunde arbeta på grund av behandling eller vila, och den inkomstminskning som följde, måste bevisas med lönehandlingar, skattedokument, anställningshandlingar med mera.
 6. **Icke-ekonomisk skada (非財產上損害)**: Beloppet för det psykiska lidandet fastställs av domstolen utifrån faktorer i varje ärende, som skadans grad, behandlingstid, följdtillstånd och partens konkreta omständigheter.
 7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till 1 gång den faktiska skadan. Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
 
 ## 5. Även om gymmet har ansvarsförsäkring (責任保險), kan ersättningens existens och belopp bestridas?
 
-Ja. Att en försäkring finns kan vara relevant när ersättningskällan prövas, men den erkänner inte i sig gymmets eller tränarens rättsliga ansvar och fastställer inte beloppet som ska betalas. Tvister kan uppstå mellan försäkringsgivaren (保險人) och parterna om täckningsgräns och undantagsklausuler, orsakssambandet mellan olycka och skada, samt varje skadeposts nödvändighet och belopp.
+Ja. Att en försäkring finns kan vara relevant när ersättningskällan prövas, men den fastställer inte i sig gymmets eller tränarens rättsliga ansvar och fastställer inte beloppet som ska betalas. Tvister kan uppstå mellan försäkringsgivaren (保險人) och parterna om täckningsgräns och undantagsklausuler, orsakssambandet mellan olycka och skada, samt varje skadeposts nödvändighet och belopp.
 
 Särskilt nedsatt arbetsförmåga, inkomstminskning under återhämtningsperioden och icke-ekonomisk skada kan kräva medicinska, inkomst- och yrkeshandlingar, eller ett sakkunnigutlåtande. Det belopp som försäkringsgivaren föreslår eller det som den skadelidande kräver blir inte omedelbart det belopp som domstolen godkänner, och resultatet av invaliditetsbedömningen avgör inte heller automatiskt ersättningen. I den faktiska hanteringen måste försäkringsbrevet och villkoren, innehållet i olycksanmälan, försäkringsgivarens svar, behandlingsförloppet och skadehandlingarna kontrolleras tillsammans.
 

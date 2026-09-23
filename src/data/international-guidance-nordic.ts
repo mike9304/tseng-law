@@ -71,7 +71,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Granskad av advokat Wei Tseng',
     columnsOriginalLanguageBadge: 'Originalspråk',
     columnsOriginalLanguageNote:
-      'Följande artiklar finns ännu inte på svenska. Listan stannar på originalspråket och öppnar den aktuella språksidan; innehållet översätts inte automatiskt.',
+      'Följande artiklar finns ännu inte på svenska. Listan ligger kvar på originalspråket och öppnar den aktuella språksidan; innehållet översätts inte automatiskt.',
     imageBandAlt: 'Traditionell taiwanesisk sanheyuan (三合院) och en modern paviljong i dagsljus',
     videoPauseLabel: 'Pausa videon',
     videoPlayLabel: 'Spela videon',
@@ -194,7 +194,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Grundande och uppbyggnad',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) grundades 2016 av advokater som studerat vid National Taiwan University (國立臺灣大學). Det kinesiska namnet 昊鼎 förenar tecknet 昊 (”den vida himlen”) med 鼎 (”fast grund”) och beskriver byråns inriktning sedan grundandet.',
-            'Vi har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Kontoret i Kaohsiung är inriktat på företagsledning och behandlar civil-, straff- och förvaltningsrättsliga tvister. Kontoret i Taichung behandlar byggärenden, immaterialrätt och ärenden med anknytning till Korea och Japan. Kontoret i Pingtung öppnades 2017 för det lokala behovet.',
+            'Vi har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Kontoret i Kaohsiung är inriktat på bolagsstyrning och behandlar civil-, straff- och förvaltningsrättsliga tvister. Kontoret i Taichung behandlar byggärenden, immaterialrätt och ärenden med anknytning till Korea och Japan. Kontoret i Pingtung öppnades 2017 för att ge juridiskt stöd anpassat till regionen.',
             'Vid sidan av advokatverksamheten finns sedan 2020 också Hovering Accounting Office, som erbjuder bokföring och skatteplanering för företagare och förmögna privatpersoner.',
           ],
         },

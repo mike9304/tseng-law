@@ -69,7 +69,7 @@ Vissa banker kan ställa ytterligare krav, till exempel en användningstid för 
 
 **5. Kan bolaget anställa utländska medborgare som arbetstagare?**
 
-A. Första arbetstagaren: ansökan görs som ledningsarbete i ett vanligt företag med utlandskinesisk eller utländsk investering (一般僑外投資事業主管工作). Måttet ”arbete av specialiserad eller teknisk karaktär” under B nedan tillämpas inte, men adressatvillkoren gäller, bland annat det att vara verkställande chef (經理人) i ett bolag där utlandskinesers eller utlänningars insats överstiger 1/3, samt arbetsgivarens resultatvillkor om kapital och omsättning (prövningsnormerna artikel 38 och artikel 39).
+A. Första arbetstagaren: ansökan görs som ledningsarbete i ett vanligt företag med utlandskinesisk eller utländsk investering (一般僑外投資事業主管工作). Måttet ”arbete av specialiserad eller teknisk karaktär” under B nedan tillämpas inte, men adressatvillkoren gäller, bland annat det att vara chef (經理人) i ett bolag där utlandskinesers eller utlänningars insats överstiger 1/3, samt arbetsgivarens resultatvillkor om kapital och omsättning (prövningsnormerna artikel 38 och artikel 39).
 
 B. Från och med den andra arbetstagaren finns begränsningar: om bolaget anställer mer än 1 utländsk medborgare behandlas den anställdas utbildning och erfarenhet, kravet på genomsnittlig lön samt bolagets kapital och omsättning enligt reglerna för ”specialiserat eller tekniskt arbete” (專門性或技術性工作).
 

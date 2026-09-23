@@ -62,4 +62,4 @@ Papildomai galima žiūrėti [lenkimo taisyklių ir eigos iliustraciją](https:/
 > - [Tarptautinė Hovering komanda](/lt/lawyers)
 > - [Klausimai ir atsakymai dėl eigos po eismo įvykio Taivane: veiksmai vietoje, kaltė, taikos susitarimas ir žalos atlyginimas](/lt/columns/taiwan-traffic-accident-procedure)
 
-Šis tekstas yra bendra teisinė informacija apie lenkimo taisykles ir atsakomybės vertinimą po eismo įvykio Taivane; jis nėra konsultacija konkrečiai bylai ir nežada nustatyto rezultato. Faktinė atsakomybė gali skirtis pagal įvykio vietą, transporto priemonių judėjimą, greitį, signalus, įrodymus, ekspertizę (鑑定) ir galiojančią teisę; konkrečias bylas reikia vertinti atskirai pagal atitinkamus dokumentus.
+Šis tekstas yra bendra teisinė informacija apie lenkimo taisykles ir atsakomybės vertinimą po eismo įvykio Taivane; jis nėra konsultacija konkrečioje byloje ir nežada nustatyto rezultato. Faktinė atsakomybė gali skirtis pagal įvykio vietą, transporto priemonių judėjimą, greitį, signalus, įrodymus, ekspertizę (鑑定) ir galiojančią teisę; konkrečias bylas reikia vertinti atskirai pagal atitinkamus dokumentus.

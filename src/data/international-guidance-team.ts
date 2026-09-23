@@ -1788,7 +1788,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan investment counsel': 'Investicijų į Taivaną konsultacijos',
     'Civil litigation and damages': 'Civiliniai ginčai ir žalos atlyginimas',
     'Trademark and patent filings': 'Prekių ženklų ir patentų paraiškos',
-    'Visa and residency': 'Vizos ir gyvenamoji vieta',
+    'Visa and residency': 'Vizos ir leidimai gyventi',
     'Family and labor disputes': 'Šeimos ir darbo ginčai',
   },
   lv: {
@@ -4346,7 +4346,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kontora veda įmonių ir privačių asmenų bylas Taivane anglų, japonų, korėjiečių ir kinų kalbomis.',
-        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje ir pasiekė pirmosios instancijos sprendimą priteisti TWD 1.57M.',
+        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje; pirmosios instancijos teismas priteisė TWD 1.57M.',
       ],
       education: [
         'Magistrė (M.S.), Institute of Finance, National Taiwan University',

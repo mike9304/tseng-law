@@ -19,9 +19,9 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Pradedant maitinimo veiklą pirmasis klausimas — rasti veiklos adresą (營業地址).
 
-Be rinkos sąlygų reikia atsižvelgti ir į kitą dalyką.
+Be rinkos sąlygų reikia atsižvelgti ir į kitą svarbų dalyką:
 
-Kitas svarbus klausimas yra šis:
+būtina patikrinti,
 
 ar šis adresas yra zonoje, kurioje galima vykdyti restorano veiklą.
 
@@ -35,7 +35,7 @@ galite naudoti Taipėjaus miesto Prekybos tarnybos (臺北市商業處) sistemą
 
 ​
 
-Be mokesčio galima patikrinti, ar norimu adresu galima atidaryti „restoraną“.
+Nemokamai galima patikrinti, ar norimu adresu galima atidaryti „restoraną“.
 
 Tačiau šiai patikrai reikia įkelti veiklos adreso „2 tipo pastato registro nuorašą“ (建物登記第二類謄本, kuriame nurodyta išsami pastato informacija).
 
@@ -45,15 +45,15 @@ Jei sunku asmeniškai nuvykti į žemės registro įstaigą (地政事務所),
 
 galima prašyti pagalbos pažįstamo Taivane, nuomotojo, nekilnojamojo turto tarpininko arba advokato.
 
-Jei patikros rezultatas rodo, kad restorano veikla negalima, vėliau juridinio asmens registracijos (公司登記) metu miesto savivaldybė gali registracijos nepriimti.
+Jei patikros rezultatas rodo, kad restorano veikla negalima, vėliau įmonės registracijos (公司登記) metu miesto savivaldybė gali registracijos nepriimti.
 
-Todėl šiam dalykui skirkite dėmesį.
+Todėl į tai atkreipkite dėmesį.
 
 ​
 
 **Ar kiekvienai veiklos sričiai per sistemą „išankstinė veiklos vietos patikra“ reikia tikrinti, ar veikla galima?**
 
-Visoms veiklos sritims rekomenduojama sistema „išankstinė veiklos vietos patikra“ (營業場所預先查詢) patvirtinti, ar veikla galima.
+Visoms veiklos sritims rekomenduojama sistemoje „išankstinė veiklos vietos patikra“ (營業場所預先查詢) patikrinti, ar veikla galima.
 
 Tačiau registruojant bendrovę dažnai įrašomos kelios registruotos veiklos sritys (營業項目) vienu metu ir dažnai norima vienu prašymu įrašyti apie 10 veiklos sričių.
 
@@ -73,7 +73,7 @@ Jei atidaroma vietoje, kur restorano veikla negalima, vėliau kompetentinga inst
 
 Tuo šis paaiškinimas ir baigiamas. Jei turite daugiau klausimų, galite pateikti užklausą per kontaktinę formą; atsakymo terminas nėra žadamas. Kontora konsultuoja tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.
 
-Administracinių institucijų taisyklės gali dažnai keistis; prieš juridinio asmens registraciją tikslinga patikrinti naujausius teisės aktus.
+Administracinių institucijų taisyklės gali dažnai keistis; prieš įmonės registraciją tikslinga patikrinti naujausius teisės aktus.
 
 ---
 

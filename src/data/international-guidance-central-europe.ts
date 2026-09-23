@@ -2006,7 +2006,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceLinkLabel: 'Stik',
     servicesAssistanceAfter: ' pojasnjuje, kako sestaviti povzetek, ki ga bo ocenila odvetnica ali odvetnik.',
     columnsViewAllLabel: 'Oglejte si vse članke',
-    columnsReadMoreLabel: 'Berite dalje',
+    columnsReadMoreLabel: 'Preberite več',
     columnsReviewLabel: 'Pregledala odvetnica Wei Tseng',
     columnsOriginalLanguageBadge: 'Izvirni jezik',
     columnsOriginalLanguageNote:
@@ -2033,7 +2033,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Jezik strani in jezik posveta nista isto',
+          heading: 'Jezik strani in jezik posveta nista eno in isto',
           paragraphs: [
             'Ta stran je napisana v slovenščini, vendar posvet z odvetnico ali odvetnikom poteka samo v štirih jezikih: v angleščini, kitajščini (中文), japonščini in korejščini. Branje napotkov v slovenščini ne pomeni, da bo posvet z odvetnico ali odvetnikom potekal v slovenščini.',
             'Ne obljubljamo tolmača, roka za odgovor niti sestanka prek te strani. Če ne obvladate nobenega od štirih jezikov posveta, stran »Stik« pojasnjuje, kako ocenjujemo način sporazumevanja.',
@@ -2361,7 +2361,7 @@ export const slovenianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kraj hrambe in ponudniki',
           paragraphs: [
             'Te strani gosti družba Vercel in kar ste poslali, se hrani v nejavni shrambi v oblaku te storitve. E-pošta se pošilja prek e-poštne storitve, ki jo pisarna uporablja.',
-            'Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po predpisih, ki se uporabljajo, ostanejo za to obdobje. Prošnje za osebne podatke sprejema wei@hoveringlaw.com.tw.',
+            'Strežniki posameznih ponudnikov so lahko zunaj Tajvana, zato se vaši podatki tam lahko hranijo in obdelujejo. Ko je namen hrambe izpolnjen, se podatki brez nepotrebnega odlašanja izbrišejo; podatki, ki jih je treba hraniti po predpisih, ki se uporabljajo, ostanejo za to obdobje. Zahteve v zvezi z vašimi osebnimi podatki pošljite na wei@hoveringlaw.com.tw.',
           ],
         },
       ],

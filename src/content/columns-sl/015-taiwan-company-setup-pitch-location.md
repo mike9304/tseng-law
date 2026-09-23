@@ -53,9 +53,9 @@ Zato tej zadevi namenite pozornost.
 
 **Q. Ali morajo vse panoge uporabiti sistem »predhodnega preverjanja kraja dejavnosti« in preveriti, ali je obratovanje mogoče?**
 
-Vsem panogam se priporoča, da s sistemom »predhodnega preverjanja kraja dejavnosti« (營業場所預先查詢) potrdijo, ali je obratovanje mogoče.
+Vsakemu podjetju priporočamo, da s sistemom »predhodnega preverjanja kraja dejavnosti« (營業場所預先查詢) potrdi, ali je obratovanje mogoče.
 
-Pri vpisu družbe pa se pogosto vpiše več panog hkrati in se pogosto želi z enim vložkom vpisati približno 10 panog.
+Pri vpisu družbe pa se pogosto vpiše več panog hkrati in se pogosto želi z eno vlogo vpisati približno 10 panog.
 
 Zato v praksi pri vpisu družbe ni nujno preverjati vseh panog.
 
@@ -63,7 +63,7 @@ Po »[operativnih navodilih storitve pomoči pri poizvedbi o kraju dejavnosti me
 
 od 1. 1. 2023 pri vlogi za vpis ustanovitve, premestitve sedeža ali dopolnitve panog dejavnosti družbe ali podjetja (vključno s podružnico (分公司) in izpostavo (分支機構)) rezultat predhodnega preverjanja kraja dejavnosti **mora** biti priložen vlogi za vpis, ne glede na panogo.
 
-Spodnji seznam »panog dejavnosti, ki so predmet uradnega preverjanja« (主動查詢之營業項目) označuje panoge, ki jih Trgovinski urad med pregledom vpisa dodatno preveri po uradni dolžnosti (隨案主動查詢), kadar panoga figurira v vlogi, v priloženem rezultatu pa manjka; okoliščina, da panoge na tem seznamu ni, ne pomeni oprostitve preverjanja.
+Spodnji seznam »panog dejavnosti, ki so predmet uradnega preverjanja« (主動查詢之營業項目) označuje panoge, ki jih Trgovinski urad med pregledom vpisa dodatno preveri po uradni dolžnosti (隨案主動查詢), kadar je panoga navedena v vlogi, v priloženem rezultatu pa je ni; okoliščina, da panoge na tem seznamu ni, ne pomeni oprostitve preverjanja.
 
 Če se restavracija odpre na kraju, kjer obratovanje ni mogoče, lahko pozneje sledi upravna globa (罰鍰) pristojnega organa.
 

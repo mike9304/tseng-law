@@ -31,13 +31,13 @@ Tomēr pastāv **izņēmuma gadījumi**.
 
 Turpmākajos īpašajos gadījumos, pat ja darbinieks aiziet pēc paša gribas, darba devējam viņam jāizmaksā atlaišanas pabalsts (Darba standartu likuma 14. pants, kas atbilstoši piemēro 17. pantu; 勞動基準法第14條):
 
-1. Kad darba devējs, slēdzot darba līgumu (勞動契約), izsaka nepatiesu gribas izpausmi (虛偽意思表示), tā ka darbinieks kļūdās un pastāv risks ciest zaudējumus
+1. Kad darba devējs, slēdzot darba līgumu (勞動契約), sniedz nepatiesu gribas izteikumu (虛偽意思表示), tā ka darbinieks kļūdās un pastāv risks ciest zaudējumus
 
 (piemēram, kad darba devējs darbiniekam saka, ka pēc pieņemšanas viņu nosūtīs uz ārvalstu filiāli, kura faktiski nepastāv)
 
 2. Kad darba devējs, darba devēja ģimenes loceklis vai darba devēja pārstāvis (代理人) lieto vardarbību vai nodara smagu apvainojumu (重大侮辱) darbiniekam
 
-3. Kad līgumā noteiktais darbs var kaitēt darbinieka veselībai, no darba devēja ir pieprasīta labošana, bet labojums nav noticis
+3. Kad līgumā noteiktais darbs var kaitēt darbinieka veselībai, darbinieks ir pieprasījis darba devējam novērst šos apstākļus, bet darba devējs to nav izdarījis
 
 4. Kad darba devējs, viņa pārstāvis vai cits darbinieks saslimst ar likumā noteiktu lipīgu slimību (法定傳染病), pastāv risks inficēt kopā strādājošos darbiniekus un tas ir nopietns apdraudējums darbinieka veselībai
 
@@ -55,7 +55,7 @@ nemaksā piemaksu par virsstundām (加班費)
 
 vai neieraksta darbinieku darba apdrošināšanā (勞保) vai veselības apdrošināšanā (健保).
 
-Šādos gadījumos, pat ja darbinieks parasti izbeidz darba līgumu, darba devējam viņam jāizmaksā atlaišanas pabalsts.
+Šādos gadījumos, pat ja darba līgumu izbeidz pats darbinieks, darba devējam viņam jāizmaksā atlaišanas pabalsts.
 
 ​
 
@@ -67,7 +67,7 @@ darba līgums jāizbeidz **30 dienu** termiņā no dienas, kad viņš šo situā
 
 vai, 6. punktā, **30 dienu** termiņā no dienas, kad viņš uzzināja zaudējuma sekas.
 
-Tāpēc darbiniekam termiņš labi jāpārvalda.
+Tāpēc darbiniekam rūpīgi jāseko šim termiņam.
 
 ​
 
@@ -83,13 +83,13 @@ Dažkārt, ja vaina ir abām darba attiecību pusēm,
 
 ja izceļas strīds,
 
-Izšķiroši ir, kura puse līgumu izbeidz pirmā ar pietiekamu pamatu.
+izšķiroši ir, kura puse līgumu izbeidz pirmā ar pietiekamu pamatu.
 
 Puse, kas līgumu izbeidz pirmā ar pietiekamu pamatu, var atlaišanas pabalstu neizmaksāt vai to prasīt.
 
-Tāpēc darba strīdos (勞資糾紛) Taivānā
+Tāpēc Taivānas darba strīdos (勞資糾紛)
 
-laiks šeit ir izšķirošs. Parasti puse, kas sagatavojas laikus, ir labākā situācijā, lai aizsargātu savas tiesības; pati sagatavošanās iznākumu nenolemj.
+izšķirošs ir laiks. Parasti puse, kas sagatavojas laikus, ir labākā situācijā, lai aizsargātu savas tiesības; pati sagatavošanās iznākumu nenolemj.
 
 Atlaišanas pabalsta strīdos tātad izšķir, kura puse agrāk izbeidz līgumu ar pienācīgu pamatu un ar pierādījumiem.
 

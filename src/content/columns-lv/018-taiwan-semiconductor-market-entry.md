@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Ja klienti ir Taivānā, vai tur vienmēr jādibina sabiedrība?"
-    a: "To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktisko uzņēmējdarbību, iekārtas, personālu un darījumu struktūru Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts."
+    a: "To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktiskā uzņēmējdarbība, iekārtas, personāls un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts."
   - q: "Vai mātes sabiedrības atbildība pilnībā izzūd, kad dibināta Taivānas sabiedrība?"
     a: "Ja dibināt meitas sabiedrību, nevis filiāli, galvenais birojs principā nenes pienākumus no līgumiem, kas parakstīti meitas sabiedrības vārdā. Tomēr jāpārbauda izņēmumi par juridiskās personības ļaunprātīgu izmantošanu un tas, vai galvenais birojs ir devis galvojumu vai uzņēmies pašus līgumiskos pienākumus."
   - q: "Vai var sākt ar izplatītāju un pēc tam pāriet uz sabiedrību Taivānā?"
@@ -23,7 +23,7 @@ Kad sākas darījumi ar Taivānas klientiem, ārvalstu galvenais birojs var saņ
 
 Vispirms jānoskaidro, kurš Taivānā ko kārto. Izvērtējamā struktūra mainās pēc tā, vai ārvalstu galvenais birojs turpina slēgt pirkuma līgumus, vai Taivānas sabiedrība preces iegādājas un tālāk pārdod, vai vietējais personāls sniedz tikai tehnisko atbalstu.
 
-Šis teksts ir vispārīgs izklāsts ārvalstu pusvadītāju materiālu, sastāvdaļu un iekārtu uzņēmumiem, kuri izstrādā ienākšanas struktūru Taivānā. Turpmākās darbības situācijas un pārbaudes punkti ir hipotētiski piemēri un izvērtējuma priekšlikumi, nevis konkrēta uzņēmuma faktisks mandāts un arī ne vienota dibināšanas prasība. Nodokļi, eksporta kontrole, atļaujas pēc izstrādājuma un ieguldītāja klasifikācija prasa vēl atsevišķu analīzi.
+Šis teksts ir vispārīgs izklāsts ārvalstu pusvadītāju materiālu, sastāvdaļu un iekārtu uzņēmumiem, kuri izstrādā ienākšanas struktūru Taivānā. Turpmākās darbības situācijas un pārbaudes punkti ir hipotētiski piemēri un izvērtējuma priekšlikumi, nevis konkrēta uzņēmuma faktisks mandāts vai vienota dibināšanas prasība. Nodokļi, eksporta kontrole, atļaujas pēc izstrādājuma un ieguldītāja klasifikācija prasa vēl atsevišķu analīzi.
 
 ## 1. Pirms reģistrācijas formas izvēles vispirms jāsakārto „tirdzniecības un darbības sadale“
 
@@ -69,7 +69,7 @@ Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk akcionāri, taču va
 
 ## 4. Filiāles un meitas sabiedrības kārtība atšķiras; tikai meitas sabiedrības dibināšanu izskata Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments
 
-Kad ārvalstu sabiedrība dibina Taivānas meitas sabiedrību, nosaukumu principā iepriekš pārbauda un pieteicas ieguldījuma atļaujai pie Ekonomikas ministrijas Ieguldījumu izskatīšanas departamenta (經濟部投資審議司). Pēc apstiprinājuma pārskaita līdzekļus, nosaka ieguldījuma apjomu un zvērināts revidents (會計師) pārbauda kapitālu, pēc tam pabeidz dibināšanu un nodokļu reģistrāciju.
+Kad ārvalstu sabiedrība dibina Taivānas meitas sabiedrību, nosaukumu principā iepriekš pārbauda un piesakās ieguldījuma atļaujai pie Ekonomikas ministrijas Ieguldījumu izskatīšanas departamenta (經濟部投資審議司). Pēc apstiprinājuma pārskaita līdzekļus, nosaka ieguldījuma apjomu un zvērināts revidents (會計師) pārbauda kapitālu, pēc tam pabeidz dibināšanu un nodokļu reģistrāciju.
 
 Turpretī, dibinot parastas ārvalstu sabiedrības Taivānas filiāli, principā nav vajadzīga Ieguldījumu izskatīšanas departamenta ieguldījuma atļauja; Ekonomikas ministrijas Komercdarbības attīstības pārvalde (經濟部商業發展署) veic filiāles reģistrāciju un saistīto kapitāla noteikšanu. Joprojām vajadzīga nosaukuma iepriekšēja pārbaude, apgrozāmā kapitāla pārskaitījums, kapitāla pārbaude un nodokļu reģistrācija; reģistrācijas grafiks parasti ir īsāks.
 
@@ -85,7 +85,7 @@ Taivānas meitas sabiedrības un ārvalstu sabiedrības filiāles vadītājam da
 
 Turpmākās situācijas ir hipotētiskas, lai atbalstītu pārdomas; tās nesola noteiktu iznākumu, ka kāds veids ir likumīgs vai labāks.
 
-**Ārvalstu uzņēmumi, kas vērsti uz sākotnējo eksportu.** Ja Taivānā vēl nav darbinieku un arī krājumu un vēlaties pārbaudīt pieprasījumu caur neatkarīgu izplatītāju, vispirms var vērtēt piegādes, izplatīšanas attiecības un darbības apjomu Taivānā. Tomēr pats izplatīšanas līgums neatrisina visus regulējuma jautājumus Taivānā.
+**Ārvalstu uzņēmumi, kas vērsti uz sākotnējo eksportu.** Ja Taivānā vēl nav ne darbinieku, ne krājumu un vēlaties pārbaudīt pieprasījumu caur neatkarīgu izplatītāju, vispirms var vērtēt piegādes, izplatīšanas attiecības un darbības apjomu Taivānā. Tomēr pats izplatīšanas līgums neatrisina visus regulējuma jautājumus Taivānā.
 
 **Ārvalstu uzņēmumi, kas Taivānā pakāpeniski paplašina pārdošanu un tehnisko atbalstu.** Ja plānojat pieņemt darbā Taivānā un turpināt pārvaldīt krājumus, maksājumu iekasēšanu un klientu atbalstu, ir lietderīgi konkrēti salīdzināt meitas sabiedrības un filiāles struktūru un kopā izvērtēt arī līguma atbildību, galvenā biroja darbības veidu, nodokļus un personāla plānu.
 
@@ -101,7 +101,7 @@ Pirmajā saziņā nav vajadzīgs pievienot visus klienta konfidenciālos materi�
 
 ### Ja klienti ir Taivānā, vai tur vienmēr jādibina sabiedrība?
 
-To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktisko uzņēmējdarbību, iekārtas, personālu un darījumu struktūru Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts.
+To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāvērtē klienta prasības un faktiskā uzņēmējdarbība, iekārtas, personāls un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts.
 
 ### Vai mātes sabiedrības atbildība pilnībā izzūd, kad dibināta Taivānas sabiedrība?
 

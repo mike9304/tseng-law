@@ -2392,10 +2392,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'Ievadiet derīgu e-pasta adresi.',
     tooLongMessage: 'Teksts ir pārāk garš. Saīsiniet to un nosūtiet no jauna.',
     sourceLanguageNotice:
-      'Šis raksts ir publicēts tikai valodā {language}; saite atver sākotnējo lapu.',
+      'Šis raksts ir publicēts tikai {language} valodā; saite atver sākotnējo lapu.',
     unavailableTranslationNotice:
       'Šī daļa šīs lapas valodā vēl nav pieejama. Saite sākotnējā valodā atver sākotnējo tekstu.',
-    unavailableLanguageNotice: 'Šī lapa valodā {language} netiek piedāvāta.',
+    unavailableLanguageNotice: 'Šī lapa {language} valodā netiek piedāvāta.',
     languageOptions: {
       en: 'Angļu (English)',
       'zh-hant': 'Ķīniešu (中文)',

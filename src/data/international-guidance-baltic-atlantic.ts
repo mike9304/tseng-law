@@ -574,7 +574,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lapas valoda un konsultācijas valoda nav viens un tas pats',
           paragraphs: [
             'Šī lapa ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu. Tas, ka lasāt informāciju latviešu valodā, nenozīmē, ka saruna ar advokāti vai advokātu notiks latviski.',
-            'Mēs nesolām tulku, atbildes termiņu un tikšanos, izmantojot šo lapu. Ja nevarat lietot nevienu no četrām konsultācijas valodām, lapa „Saziņa“ izskaidro, kā mēs izvērtējam saziņas veidu.',
+            'Ar šīs lapas starpniecību mēs nesolām ne tulku, ne atbildes termiņu, ne tikšanos. Ja nevarat lietot nevienu no četrām konsultācijas valodām, lapa „Saziņa“ izskaidro, kā mēs izvērtējam saziņas veidu.',
           ],
         },
         {
@@ -604,7 +604,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'PAKALPOJUMI',
       title: 'Kādās lietās mēs palīdzam',
       description:
-        'Sešas jomas, kurās birojs strādā Taivānā, un robežas, kas vispirms ir noderīgi zināt.',
+        'Sešas jomas, kurās birojs strādā Taivānā, un robežas, ko vispirms ir noderīgi zināt.',
       intro:
         'Zemāk ir jomas, kurās mēs patiešām strādājam, un jautājumi, kas sākumposmā tiek uzdoti visbiežāk. Izklāsts palīdz novērtēt, vai Jūsu lieta ietilpst mūsu jomā; tas ir vispārīgs un nav atsevišķas lietas juridiskā analīze.',
       sections: [
@@ -730,7 +730,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kāpēc šajā lapā nav tarifu',
           paragraphs: [
-            'Izmaksas ir atkarīgas no lietas pašas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikta summa neatspoguļotu Jūsu lietas izmaksas. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.',
+            'Izmaksas ir atkarīgas no pašas lietas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikta summa neatspoguļotu Jūsu lietas izmaksas. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.',
             'Līdzās honorāram var rasties tiesas nodevas, iestāžu vai trešo personu izmaksas. Tās ir nošķirtas no honorāra un ir atkarīgas no attiecīgās procedūras.',
           ],
         },
@@ -772,7 +772,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ko šī lapa nesola',
           paragraphs: [
-            'Mēs nesolām atbildes termiņu, neapstiprinām tikšanos, izmantojot šo lapu, nesolām konkrētu advokāti vai konkrētu advokātu un nenodrošinām tulku. Rakstisks tulkojums ir kas cits: Jūsu ziņojums netiek tulkots automātiski.',
+            'Ar šīs lapas starpniecību mēs nesolām ne atbildes termiņu, ne apstiprinātu tikšanos, ne konkrētu advokāti vai konkrētu advokātu, un mēs nenodrošinām tulku. Rakstisks tulkojums ir kas cits: Jūsu ziņojums netiek tulkots automātiski.',
             'Ja nosūtāt pieteikumu, saturs tiek saglabāts un gaida izvērtējumu. Ja pēc kāda laika atbildi nesaņemat, varat rakstīt no jauna uz e-pasta adresi, kas norādīta saziņas lapā.',
           ],
         },
@@ -789,7 +789,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kā lietot šo daļu',
           paragraphs: [
-            'Ja neatrodat atbildi savai situācijai, atbilde parasti ir atkarīga no īpašiem faktiem. Tāpēc ierakstiet tos kopsavilkumā, nevis izseciniet tos no šīs lapas.',
+            'Ja neatrodat atbildi savai situācijai, atbilde parasti ir atkarīga no īpašiem faktiem. Tāpēc ierakstiet tos kopsavilkumā un nemēģiniet tos izsecināt no šīs lapas.',
           ],
         },
       ],
@@ -797,7 +797,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kādas lietas birojs ved?',
           answer:
-            'Mēs vedam sešas jomas: ieguldījumus un sabiedrību dibināšanu Taivānā, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Vai lieta tiks pieņemta, izlemj pēc satura izvērtējuma.',
+            'Mēs strādājam sešās jomās: ieguldījumi un sabiedrību dibināšana Taivānā, civillietas un zaudējumu atlīdzība, laulība, ģimene un mantojums, darba strīdi, krimināllietas un intelektuālais īpašums. Vai lieta tiks pieņemta, izlemj pēc satura izvērtējuma.',
         },
         {
           question: 'Kas jāsagatavo pirms saziņas?',

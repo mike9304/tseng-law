@@ -71,7 +71,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ​
 
-أي أن
+بعبارة أخرى:
 
 فإذا كان الخطأ من صاحب العمل، كان للعامل حق المطالبة ببدل إنهاء الخدمة،
 

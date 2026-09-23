@@ -2101,7 +2101,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Inaayos ang iskedyul ng konsultasyon at ang pakikipag-ugnayan para sa mga kliyenteng Koreano.',
-        'Sinusuportahan ang komunikasyon sa pagitan ng mga bahagi sa pamamagitan ng sistema ng dokumento at daloy ng trabaho, batay sa pinag-aralang agham pangkompyuter.',
+        'Sinusuportahan ang komunikasyon sa pagitan ng mga bahagi sa pamamagitan ng sistema ng dokumento at daloy ng trabaho; agham pangkompyuter ang pinag-aralan niya.',
       ],
       education: ['Batsilyer (B.S.) sa Agham Pangkompyuter, National Cheng Kung University'],
       experience: ['Bahaging pangnegosyo para sa Korea, Hovering International Law Firm'],

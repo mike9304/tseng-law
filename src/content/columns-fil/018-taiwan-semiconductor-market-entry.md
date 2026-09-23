@@ -27,7 +27,7 @@ Ang artikulong ito ay pangkalahatang paliwanag para sa mga kompanya ng mga mater
 
 ## 1. Linawin ang “paghahati ng transaksyon at operasyon” bago piliin ang anyo ng pagpaparehistro
 
-Ipagpalagay na isang tagagawa ng komponent na may mataas na katumpakan sa ibang bansa ang nagbebenta sa mga kliyente sa Taiwan. Una, direkta ang pagpapadala mula sa punong tanggapan, ngunit humiling ang kliyente na mag-imbak ng pyesa sa Taiwan at magbigay ng suportang teknikal ng inhinyero sa lugar. Hindi sapat ang adres, kundi isang katawang magpapatakbo na kayang magbenta, mag-angkat, mag-imbak, kumuha ng tauhan, magbigay ng suportang teknikal, at tumanggap ng pananagutan.
+Ipagpalagay na isang tagagawa ng komponent na may mataas na katumpakan sa ibang bansa ang nagbebenta sa mga kliyente sa Taiwan. Una, direkta ang pagpapadala mula sa punong tanggapan, ngunit humiling ang kliyente na mag-imbak ng pyesa sa Taiwan at magbigay ng suportang teknikal ng inhinyero sa lugar. Hindi sapat ang adres, kundi isang entidad na kayang magbenta, mag-angkat, mag-imbak, kumuha ng tauhan, magbigay ng suportang teknikal, at tumanggap ng pananagutan.
 
 Bago magpasya sa istruktura ng pagpasok sa Taiwan, maaaring linawin muna ng punong tanggapan sa loob:
 
@@ -37,7 +37,7 @@ Bago magpasya sa istruktura ng pagpasok sa Taiwan, maaaring linawin muna ng puno
 | Kwotasyon at orden | Sino ang pinal na nagkukumpirma ng presyo at petsa ng paghahatid, at hanggang saan ang awtoridad ng kinatawan sa Taiwan? |
 | Kalakal at imbentaryo | Sino ang nag-aangkat, may hawak, at namamahala ng imbentaryo, at humahawak ng pagbabalik at kapalit? |
 | Tauhan | Gagaling ba sa punong tanggapan, hihirangin sa Taiwan, o ikokontrata sa kontratista? |
-| Pag-install at suportang teknikal | Sino ang may obligasyong sumuporta sa kliyente, at sino ang humahawak ng problema sa gawaing sa lugar? |
+| Pag-install at suportang teknikal | Sino ang may obligasyong sumuporta sa kliyente, at sino ang humahawak ng problema sa gawain sa lugar? |
 | Bayad at gastos | Sino ang nagbibigay ng invoice at nangongolekta, at paano pinag-aayos ang gastos ng punong tanggapan at ng organisasyon sa Taiwan? |
 | Kalidad at alitan | Sino ang nagkukumpirma ng resulta ng inspeksiyon, at sino ang tumatanggap ng habol sa depekto o danyos? |
 
@@ -95,7 +95,7 @@ Ang sumusunod ay hipotetikong senaryo para tumulong sa pag-iisip. Hindi nito tin
 
 Sa unang konsultasyon, maaaring tipunin ang pangunahing impormasyon sa punong tanggapan at mga mamumuhunan, pangkalahatang paglalarawan ng produkto o serbisyo, inaasahang daloy ng transaksyon, plano sa tauhan at pasilidad sa Taiwan, at mga tuntunin sa kontrata at suportang hinihingi ng kliyente. Ang hindi pa napagpapasyahan ay maaaring markahan na “hindi pa napagpapasyahan.”
 
-Hindi kailangang ilakip ang lahat ng materyal na kumpidensiyal sa kliyente o ang detalyadong datos ng proseso sa unang pakikipag-ugnayan. Pagkatapos ibigay ang pangalan ng kompanya ng kabilang panig para sa pagsusuri ng salungatan ng interes, sundin ang tagubilin ng responsable kung anong materyales at paano ipapadala.
+Hindi kailangang ilakip ang lahat ng materyal na kumpidensiyal sa kliyente o ang detalyadong datos ng proseso sa unang pakikipag-ugnayan. Pagkatapos ibigay ang pangalan ng kompanya ng kabilang panig para sa pagsusuri ng salungatan ng interes, sundin ang tagubilin ng abogada o abogadong responsable kung anong materyales at paano ipapadala.
 
 ## Mga madalas itanong
 

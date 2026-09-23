@@ -1735,7 +1735,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         'Kung hindi pa tiyak kung saang larangan nabibilang ang inyong usapin, ipinapaliwanag ng pahinang ',
       servicesAssistanceLinkLabel: 'Makipag-ugnayan',
       servicesAssistanceAfter:
-        ' kung paano isulat ang buod na susuriin ng abogado.',
+        'kung paano isulat ang buod na susuriin ng abogado.',
       columnsViewAllLabel: 'Tingnan ang lahat ng artikulo',
       columnsReadMoreLabel: 'Basahin pa',
       columnsReviewLabel: 'Sinuri ni Abogada Wei Tseng',

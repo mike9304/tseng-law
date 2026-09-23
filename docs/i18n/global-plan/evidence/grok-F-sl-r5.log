@@ -1,0 +1,207 @@
+# WO-F-sl — Slovene native-quality fix lane, campaign round 5
+
+worktree: /Users/son7/Projects/tseng-law-fix-sl-r5 (branch fix/native-sl-r5-20260922)
+inputs: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/sl-a.md (70 rows), rounds/r5/sl-b.md (75 rows)
+scope touched: src/content/columns-sl/001–018, src/data/international-guidance-central-europe.ts (sl),
+src/data/international-guidance-team.ts (sl), src/data/international-inquiry-copy.ts (sl). No test file needed an edit.
+
+--------------------------------------------------------------------------------
+## 1. Rows applied
+
+### sl-a (guidance pack + columns 001–009)
+Applied in full: 1 (partially, see §4), 2, 3, 4, 5, 6, 7, 8 (systemic), 9, 10, 11, 12, 13, 14,
+15 (partially, see §4), 16, 17 (partially), 18, 19, 20, 21, 22, 23, 24, 25 (both instances: 003 and 007),
+26, 27 (both instances), 28, 29 (systemic), 30, 31 (both files), 32, 33, 34, 35 (partially), 36, 37, 38, 39,
+40 (systemic), 41 (items 2, 3 and 4), 42 (all 4 instances), 43 (all 3 instances), 44, 45, 46 (both halves),
+47 (partially), 48, 49 (both instances), 50, 51 (007 + 016), 52, 53 (both instances), 54, 55, 56, 57 (both
+instances), 58, 59, 60, 61, 62, 63, 64, 66, 67, 68 (systemic), 69, 70.
+
+### sl-b (columns 010–018)
+Applied in full: 1 (both instances), 2, 3 (all 3), 4 (all 3 instances), 5, 6 (both instances), 7 (all 3
+instances), 8, 9 (both instances), 10 (both instances), 11 (all 3), 12 (both unit counts), 13, 14, 15,
+16 (partially, see §4), 17 (all 5 "ovadba" instances), 19, 20 (partially), 21, 22, 23, 24, 25, 26, 27, 28,
+29, 30, 31 (all fine ranges in 011 + the 018 audit thresholds), 32, 33, 34 (all three list items), 35, 36,
+37, 38, 39, 40, 41 (partially), 42, 43, 44, 45, 46 (partially), 47, 48 (010 + 018), 49 (systemic, all 7
+instances), 50 (both headings), 51 (010 + 011), 52, 53 (011 ×2 + 014), 54, 55, 56 (systemic), 57 (all 4),
+58 (both), 59, 60, 61, 62, 64, 65, 66, 67, 68 (systemic, all 4), 69 (systemic), 70, 71, 72, 73, 74,
+75 (systemic).
+
+Guidance pack rows (a5, a62, a63, a64, a66, a67) all applied:
+- privacy: "Prošnje za osebne podatke sprejema …" → "Zahteve v zvezi z vašimi osebnimi podatki pošljite na …"
+- columnsReadMoreLabel: "Berite dalje" → "Preberite več"
+- inquiry unavailableLanguageNotice: "Ta stran se v jeziku {language} ne ponuja." → "Ta stran ni na voljo v jeziku {language}."
+- team bio: "… v višini TWD 1.57M." → "… v višini TWD 1.57M (1,57 milijona novih tajvanskih dolarjev)."
+  (the pinned token TWD 1.57M is byte-identical; only a gloss was added, as da/es/fr/pt/uk/vi do)
+- "Izmenjavna študentka na Kobe University …" → "Študentka na izmenjavi na Kobe University …"
+- heading "Jezik strani in jezik posveta nista isto" → "… nista eno in isto"
+
+R12 (English role/institution chrome in the team bios) needed no work: the sl pack already carries
+"Pravna asistentka", "Vodja poslovanja za Korejo", "Družbenik, pooblaščeni računovodja",
+"Oddelek za pravne zadeve, Ministrstvo za izobraževanje (…)" etc. The dump
+docs/i18n/global-plan/reviews/native/input/sl-guidance.txt is stale on these fields (it still shows
+"Paralegal", "Ministry of Education, Legal Affairs Division", "Izmenjava na Kobe University"); the .ts
+sources were the ones edited and checked.
+
+--------------------------------------------------------------------------------
+## 2. Rows skipped, with reason
+
+- **a65 (P3) and b18 (P2) — delete the U+200B lines / characters.** NOT APPLIED. The checker's `blocks`
+  check compares the ZWSP count of the Korean source with the target (`ZWSP <src> → <tgt>` = FAIL), and the
+  Korean source carries exactly the same zero-width characters (e.g. columns/013 line 34 ends with " ​").
+  Removing them fails the gate. Both reviewers themselves identify this as a shared upstream pipeline
+  artifact ("no Slovene change", "the same artefact exists in de/fr/cs"). It needs a pipeline-wide fix on
+  the Korean source, not a per-locale one.
+- **b63 (P2) — join the sentences that are chopped across three paragraphs in 013 and 015.** NOT APPLIED.
+  The Korean source has the identical block split, and the `blocks` check compares block counts;
+  ACCEPTED-ROUND also lists "requests to merge/split paragraphs" as a skip. Same upstream origin as above.
+- **Numeral spell-outs the checker cannot parse.** See §4 — the digit was kept and the sentence repaired
+  around it, per the WO instruction "prefer the form the checker accepts and note it in the log".
+- **a1 (P1) — delete the dangling ", člen 10" from the 004 source-list label.** APPLIED ONLY IN PART; see §4.
+- No row was skipped for a product-fact reason: the consultation lock, the interpreter/reply-time/free-
+  consultation/result wording and the gender of attorney Wei Tseng were already correct and were not touched
+  except where a row asked for more natural phrasing (b64, a60).
+
+--------------------------------------------------------------------------------
+## 3. Systemic patterns swept (instances changed)
+
+1. **"ter" as the default "and"** (a8; heaviest in 003/004/007, also 005/006/008/009).
+   410 automatic replacements across those 7 files, 20 of them backed off again to stay inside the
+   `english` gate (see §4), then 45 hand fixes so that "in" sits at the inner level and "ter" at the outer
+   one (including 10 block-initial "ter" in 006/008 that the automatic pass could not reach).
+   Remaining "ter" per file: 001 23 · 002 19 · 003 16 · 004 37 · 005 1 · 006 0 · 007 64 · 008 0 · 009 0 ·
+   010 10 · 011 14 · 012 2 · 013 0 · 014 13 · 015 0 · 016 21 · 017 16 · 018 11.
+   (001/002/010–018 were already within normal Slovene ratios and were not swept; the residue in 003/004/007
+   is forced by the `english` gate — see §4.)
+2. **"smeti" standing in for epistemic "lahko"** (a4, a7, a21, a25, a53). 77 of 112 occurrences rewritten
+   (002 17, 003 17, 004 2, 007 33, 008 5, 014 1, 016 2). The 35 left are genuine deontic uses
+   ("ne sme presegati", "ne smejo prosto dvigovati", "poklici, ki jih smejo opravljati", …).
+3. **Statute citations in English order** (a40 and the a-verdict systemic row). ~48 citations rewritten to
+   the Slovene order ("Po 371. členu …", "Prvi odstavek 1052. člena …", "4. odstavek 15-1. člena …"):
+   002 6, 003 4, 004 16, 007 9, 011 1, 012 1, 014 11. Two constraints shaped the wording:
+   a sentence may not *start* with "N. člen" (markdown would read it as an ordered-list item and the
+   `blocks` check counts list items — this actually fired on 004), so those were recast as
+   "Po N. členu …" / "Določba N. člena …"; and the 012 source-list label had to keep the source's own order
+   (see §4).
+4. **Small numerals left as digits** (a15, a47, b34, b46). Written out wherever the checker's Slovene
+   lexicon can parse the form (ena/eno/dva/dve/tri/trije, prvi/prva/prvo/prvega/prve, drugi/druga/drugo/
+   drugega, tretji/tretja/tretje): 12 instances — "enkrat na dva meseca", "Vsaka od teh štirih vrst",
+   "vse štiri zgoraj navedene vrste", "Tri poti", "tri poti", "tri plasti", "Ta dva roka",
+   "Če traja tri mesece…", "Če traja tri leta…", "manj kot tri leta", "sta potrebna dva delničarja",
+   "z eno vlogo". The rest kept digits (§4).
+5. **"stran" for a litigant → "stranka"** (a29, 003): 13 instances. "Po drugi strani" (idiom) and
+   "na strani stika" (a page) left alone.
+6. **"videti" for *examine*** (b56): 14 rewrites to presoditi/ugotoviti/preveriti/spremljati
+   (004 3, 007 2, 014 2, 016 5, 018 2). Zero left (the one hit that remains is "predvideti").
+7. **"k" + dative for what an opinion/notice is *about*** (b49): 14 rewrites to "o"/"za"/"glede"
+   (001 3 link labels, 007 1, 010 2, 011 1, 012 2, 014 1, 016 1, 017 3).
+8. **"enotno" (一律)** (b68): 7 rewrites ("na splošno", "v celoti", "za vse zadeve enako primeren"). Zero left.
+9. **"s strani" as agent** (b53): 3 rewrites (002, 007, 011). Zero left.
+10. **"zadevo za zadevo" / "posel za poslom" / "izdelek za izdelkom"** (a18, b51): 5 rewrites to
+    "od primera do primera" / "za vsak posel posebej" / "za vsak izdelek posebej".
+11. **"krajeven" (parish-level)** (a68): 13 rewrites to "lokalen"/"tamkajšnji" (004 5, 007 1, 011 3, 016 1,
+    018 3). Zero left.
+12. **"tvoriti" as a calque of *constitute*** (b11): 5 rewrites to "pomeniti"/"postati" (002 1, 004 1, 017 3).
+13. **"trditi" with a thing as object** (b57): 4 rewrites to "zatrjevati" (014).
+14. **Nominalised neuter adjective as subject** (b48): 2 (010 "Spodnje je…", 018 "Zgornje je…").
+15. **Fronted topic + comma + wh-question** (b50): 2 headings in 010.
+16. **"A in B in C" at two coordination levels** (b75): 38 sentences repaired so the outer level takes "ter";
+    2 of them had to be put back to "ter" because of the `english` gate.
+17. **Currency**: 011's four fine ranges and 018's audit thresholds moved to "od X do Y TWD" with the code
+    after the amount (b31, b47); 003's two "… v novem tajvanskem dolarju … TWD" double namings removed (a27).
+18. **Term unification** (R8): 拘役 = "kratkotrajni zapor" everywhere (a16); 有期徒刑 = "zaporna kazen"
+    (the calque "kazen zapora za določen čas" removed in 002 ×2, 007, 008); 慰撫金 = "denarna odškodnina za
+    nepremoženjsko škodo" (a51, 007 + 016); 告訴 in 010 = "predlog za pregon" (5 instances, b17);
+    連江・馬祖 katakana middle dot → 、 (b1, 2 instances); 公司及商業登記 = "vpis družbe ali samostojnega
+    podjetnika" (b3, 3 instances).
+19. **"podjetnik" (= sole trader) for a licensed carrier** (b69/b70, 017): 9 rewrites to
+    "prevoznik"/"podizvajalec".
+20. **"masažist" (Croatian/Serbian)** (a42, 006): 4 rewrites to "maser".
+
+--------------------------------------------------------------------------------
+## 4. Where the reviewer is (in my view) wrong, or the gate overrode the suggestion
+
+1. **a65 / b18 (U+200B) and b63 (chopped paragraphs).** Not Slovene defects and not fixable in this locale:
+   the Korean source carries the same ZWSP characters and the same block split, and the checker pins both
+   (`blocks` compares block count, list items, table rows, quote blocks *and* ZWSP count). Applying either
+   row turns the gate red. Both reviewers say as much themselves. These need an upstream fix.
+
+2. **a1 — "člen 10" in the 004 source-list label is not a duplication of Article 3.** The Korean source
+   label reads "대만 법무부 법령정보 — 영업세법 제10조" (Business Tax Act, Article 10) while the URL points at
+   各類所得扣繳率標準 flno=3. The Slovene had merged the two. Deleting "člen 10" drops a digit the `numbers`
+   check requires from the source, so the label was made grammatical instead of truncated:
+   "… — 3. člen standardov stopenj odtegljaja pri viru za posamezne vrste dohodka (各類所得扣繳率標準) in
+   10. člen zakona o poslovnem davku". The stray comma splice the reviewer objected to is gone.
+
+3. **Numerals the checker cannot parse.** `SMALL_LEXICON_WORDS.sl` in scripts/check-column-translation.mjs
+   only knows ena/eno/dva/dve/tri/trije and the 1./2./3. ordinals. Writing any other numeral as a word
+   deletes a digit the Korean source has and the `numbers` check FAILs ("missing from translation").
+   Verified empirically (001 failed with "missing from translation (4): 3, 5×2, 6" and was reverted).
+   Digits therefore kept, with the surrounding grammar repaired instead:
+   - a4 "zaporna kazen do 1 leta" (not "do enega leta"); a17 "ne sme presegati 1 leta" (genitive fixed).
+   - a12 "samo to, da ima nekdo 5 let delovno dovoljenje …"; a15 "po povprečju zadnjih 3 let",
+     "dlje kot 6 mesecev", "prebivanje na Tajvanu 5 let".
+   - a35 "vsako leto v obdobju 3 let"; a47 "teh 5 vprašanj", "9 kategorij", "učinkov 3 poti";
+     "z 2 ali več državami".
+   - b16 "približno 10 panog"; b20 "do 3-kratnika"; b41 "1 lastni mali tovornjak, ki ni starejši od 2 let";
+     b46 "ima 1 družbenik 1 glas", "z 1 ali več fizičnimi osebami", "pristanek 2/3 ali več",
+     "dedujejo 3 osebe načeloma vsaka 1/3".
+   Note that a15's "štiri/štirih" *did* pass: the Korean writes 네 유형 as a word there, so no digit is lost.
+
+4. **The `english` check limits how far "ter" can go.** `findEnglishSentences` flags any Latin-only chunk of
+   ≥12 words with ≥3 "English stopwords", and `englishStopwordCount` strips every non-ASCII letter before
+   the lookup — so Slovene **in** → "in", **to** → "to" and **čas** → "as" all count as English stopwords.
+   Three of them in one Chinese-gloss-free sentence = FAIL. This fired four times during the sweep (004's
+   comparison table, 007 §6, 012 §1, 017 §2, 018's operative table) and is why "ter" survives in exactly
+   those sentences that already carry two of those tokens. It also means the 003/004/007 "ter" residue
+   cannot be driven to zero without rewriting the sentences wholesale. Worth raising with the supervisor:
+   the tokenizer's `replace(/[^a-z']/g, '')` makes "čas" a false positive in every Slavic locale.
+
+5. **a29's own suggested rewrite keeps the pattern it flags.** The reviewer proposes
+   "datum, kraj ter stranke nesreče"; that is the same default-"ter" the same review flags in row 8. Written
+   as "datum, kraj in stranke nesreče ter zapisati znesek in trenutek plačila" — "in" at the inner level,
+   "ter" at the outer, per row 8 and per b75.
+
+6. **b16's "z eno vlogo … približno deset panog".** The first half applied ("vložek" → "vloga"); the numeral
+   kept as "10" (§4.3).
+
+7. **a60 (009 "čas") could not be merged into one sentence.** The Korean source splits it across two blocks
+   ("따라서 대만의 노동 분쟁에서는" / "''**시간**''이 매우 중요합니다."). The duplication the reviewer spotted was
+   real and is removed, but by matching the source's split — "Zato je v delovnih sporih (勞資糾紛) na Tajvanu" /
+   "»**čas**« zelo pomemben." — not by merging blocks.
+
+8. **b62 "Vsem panogam se priporoča …".** Applied as "Vsakemu podjetju priporočamo, da … potrdi", i.e. the
+   firm speaks in the first person plural, which is the register the rest of the pack uses.
+
+--------------------------------------------------------------------------------
+## 5. §Verify output (verbatim)
+
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-sl --lang sl 2>&1 | tail -8
+neighbour      PASS
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-sl src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      24
+```
+
+Pass criteria: checker `summary PASS 18/18` ✔ · markers 0 ✔ · TSC_OK ✔ · 3202/3202 tests passed ✔.
+
+`git status --short` was 24 at the moment the block above ran (21 modified sl files + the pre-existing
+` M docs/i18n/global-plan/WO-F-sl.txt` + the two untracked review files sl-a.md / sl-b.md); writing this log
+adds one more untracked path, so a re-run reports 25. Nothing was staged, committed or pushed.

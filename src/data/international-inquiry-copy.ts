@@ -2295,7 +2295,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Ta članek je objavljen samo v jeziku {language}; povezava odpre izvirno stran.',
     unavailableTranslationNotice:
       'Ta del v jeziku te strani še ni na voljo. Povezava v izvirnem jeziku odpre izvirno besedilo.',
-    unavailableLanguageNotice: 'Ta stran se v jeziku {language} ne ponuja.',
+    unavailableLanguageNotice: 'Ta stran ni na voljo v jeziku {language}.',
     languageOptions: {
       en: 'Angleščina (English)',
       'zh-hant': 'Kitajščina (中文)',

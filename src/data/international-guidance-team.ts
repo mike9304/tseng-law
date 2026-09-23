@@ -4277,12 +4277,12 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Pisarna vodi zadeve podjetij in zasebnih oseb na Tajvanu v angleščini, japonščini, korejščini in kitajščini.',
-        'Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M.',
+        'Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M (1,57 milijona novih tajvanskih dolarjev).',
       ],
       education: [
         'Magistrica (M.S.), Institute of Finance, National Taiwan University',
         'Univerzitetna diploma (B.A.) dvopredmetnega študija prava in financ, National Chengchi University',
-        'Izmenjavna študentka na Kobe University in Waseda University',
+        'Študentka na izmenjavi na Kobe University in Waseda University',
       ],
       experience: [
         'Trend Law Office',

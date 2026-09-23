@@ -1,0 +1,243 @@
+# WO-F-ta — Tamil fix lane, campaign round 5, 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-ta-r5 (no git add/commit/push run)
+Files touched: src/content/columns-ta/001–018 (all 18);
+src/data/international-guidance-south-asia.ts (tamilGuidanceContent only),
+src/data/international-guidance-answers.ts (guidanceAnswers.ta only),
+src/data/international-guidance-team.ts (ta bio only),
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.ta.discoveryNotice only); this log.
+No test file was edited — no pinned Tamil expectation had to change (guidance-disclosure-parity's
+`ta` regex tokens were all preserved by construction; that test's LOCALES list does not include ta).
+"TWD 1.57M" is byte-identical. consultationNotice and confidentialNotice were NOT rewritten
+(the FAQ sentence that carries consultationNotice was edited only after the pinned substring).
+The discovery notice still contains the literal token `llms.txt`.
+Hangul appears only inside frontmatter `url:` values (008, 009) — untouched per R16.
+Fullwidth punctuation remaining (008 「，」, 017 「、」) is inside Chinese glosses only — kept per R6b.
+
+## Rows applied
+
+### ta-a (guidance pack + columns 001–009) — 35 of 38
+1  P1 008 "…அதே நிலையில் தாமாக வந்துவிட மாட்டார்கள்." → "ஆனால் தானாக விலகிய பிற பணியாளர்களுக்கு அந்த வாய்ப்பு
+   கிடைக்கவில்லை." (see disagreements: I did not use "அதிர்ஷ்டம்".)
+2  P1 007 "காப்பகம்" (shelter/orphanage) → "பிள்ளைக் காப்புரிமை" in the 親權 shorthand sentence.
+3  P2 003 — partially applied, see disagreements. The self-contradiction was removed by rewriting only the
+   disclaimer half: "…; இது வழக்கமான அல்லது உத்தரவாதமான முடிவல்ல." → "…; இது உங்கள் வழக்கின் முடிவை முன்கூட்டியே
+   சொல்வதில்லை." Both the 3-month and the 4-/6-month sentences. Digits 3/4/6 kept.
+4  P2 003 "…வழக்கறிஞரைக் கவனியுங்கள்." → "…வழக்கறிஞரிடம் எச்சரிக்கையாக இருங்கள்."
+   008 "நிறுவனம் உங்களை நியாயமற்ற முறையில் நீக்காமல் இருக்கக் கவனியுங்கள் / தானாக விலகும்படி நிர்ப்பந்திக்காமலும்"
+   → "…நீக்க முயல்வதையும் / …நிர்ப்பந்திப்பதையும் எச்சரிக்கையுடன் கவனியுங்கள்" (2 blocks, count unchanged).
+5  P2 003 மனமாற்றம் → வருத்தம், and the perceiver restored: "…பாதிக்கப்பட்டவருக்குத் தெரிவதில்லை."
+7  P2 007 "உரை உள்ளது; பொதுவாக முடியும்…" → "விதிவிலக்குக் கூறின் உரை இன்னும் சட்டத்தில் இருப்பதால், பொறுப்பான
+   துணைவரின் கோரிக்கை தானாகச் சாத்தியம் என்றோ தானாகத் தடை என்றோ கொள்ளக் கூடாது;" — 2 instances (frontmatter FAQ + body).
+8  P2 民法 named one way site-wide: 007's "சிவில் சட்ட*" → "உரிமையியல் சட்ட*" (22). For internal consistency the same
+   column's 民事訴訟法 "சிவில் நடைமுறை*" → "உரிமையியல் நடைமுறை*" (4, matching 010), plus "சிவில் முடிவுகளிலிருந்து",
+   "சிவில் விஷயங்களுக்குப்" (1 each) and 016 "சிவில் உறவின்" (涉外民事法律適用法, 1).
+9  P2 guidance privacy "முந்தைய நீக்கம் வேண்டுமானால், தொடர்பில் கூறுங்கள்." → "அதற்கு முன்பே நீக்க வேண்டும் என
+   விரும்பினால், தொடர்பு கொள்ளும்போது கூறுங்கள்."
+10 P2 "சிறுவர் பிள்ளை*" → "பருவமடையாத பிள்ளை*" — 12 instances (001×1, 007×7, 016×5 incl. the 001 pair rewritten as
+   "வெளிநாட்டினரின் துணைவரும் பருவமடையாத பிள்ளையும்"). "சிறுவர் காப்பு*" (custody) → "பிள்ளையின் பாதுகாப்பு உரிமை*"
+   — 7 instances (007×6 incl. the §8 heading, guidance services page ×1).
+11 P2 004 "ஒரே தோற்ற நாடு அல்ல" → "தாய் நிறுவனம் அமையக்கூடிய ஒரே நாடு அல்ல" (+ "ஒரு குறிக்கப்பட்ட எடுத்துக்காட்டு").
+12 P2 coined noun "தரப்பி" → "தரப்பினர்" — all 6: 002 "எதிர்த் தரப்பினரும்"; 004 "வழக்கின் தரப்பினராக",
+   "ஒப்பந்தத் தரப்பினரையும்", "இணைத் தரப்பினராகக்", "எதிர்த் தரப்பினருக்குத்", "எதிர்த் தரப்பினரின்".
+13 P2 006 1980 Act tense: "…செய்ய முடியும்." → "…செய்ய முடிந்தது." (+ sandhi "தொழிலைச்").
+14 P2 guidance "பன்னாட்டுக் வாடிக்கையாளர்" → "பன்னாட்டு வாடிக்கையாளர்".
+15 P2 "X-ஐ வாக்குறுதி அளி" case fixed in all 7 pack strings:
+   - contact/1  "மொழிபெயர்ப்பாளர், … சந்திப்பை வாக்குறுதி அளிக்க மாட்டோம்" → "மொழிபெயர்ப்பாளர் தருவதாகவோ,
+     பதிலளிக்கும் காலக்கெடு குறித்தோ, சந்திப்பு நடைபெறும் என்றோ உறுதி அளிக்க மாட்டோம்."
+   - faq        "மொழிபெயர்ப்பாளரை / சேவையை வாக்குறுதி அளிக்க" → "மொழிபெயர்ப்பாளர் தருவதாக / சேவை வழங்குவதாக உறுதி அளிக்க"
+   - contact/3  "குறிப்பிட்ட வழக்கறிஞரை வாக்குறுதி அளிக்க" → "…நியமிப்பதாக உறுதி அளிக்க"
+   - faq q2     "மொழிபெயர்ப்பாளரையும் வாக்குறுதி அளிக்க" → "மொழிபெயர்ப்பாளர் தருவதாகவும் உறுதி அளிக்க"
+   - privacy    "முழுப் பாதுகாப்பை வாக்குறுதி அளிக்கவில்லை" → "முழுப் பாதுகாப்புக்கு உத்தரவாதம் அளிக்கவில்லை"
+   - answers.ta.contact "பதிலளிக்கும் காலக்கெடுவை வாக்குறுதி அளிக்கவில்லை" → "…காலக்கெடு எதையும் உறுதி அளிக்கவில்லை"
+   - llms discoveryNotice "தெரிவுநிலையை வாக்குறுதி அளிக்காது" → "தெரிவுநிலைக்கு உத்தரவாதம் அளிக்காது"
+   Same pattern swept into the columns: 001 and 004 "உறுதியான முடிவையும் வாக்குறுதி அளிக்காது." →
+   "…முடிவுக்கு உத்தரவாதமும் அளிக்காது." (2). The remaining 4 corpus hits are already well-governed
+   (nominative "…காலக்கெடு வாக்குறுதி அளிக்கப்படவில்லை" 005; dative "பகிர்வுக்கு…" 007; adverbial
+   "முன்கூட்டியே…" 007; interrogative "என்ன வாக்குறுதி அளிக்கப்படுவதில்லை" pack) and were left alone.
+16 P2 sandhi — all 6 named instances: pack "வழியைச் சரிபார்க்க", "வாடிக்கையாளர்களுக்குத் தைவானில்",
+   "பேசிப் பணி"; 002 rewritten as "நிறுவன வைப்பையோ சொத்தையோ சுதந்திரமாக"; 007 "பிள்ளைக்குப் பாதகமான";
+   009 "தரப்புக்குச் சட்டப்பூர்வ". A full corpus scan for dative-க்கு / accusative + க ச த ப found no further
+   genuine cases (the other -க்கு hits are lexical: கணக்கு, வழக்கு, விலக்கு, செல்வாக்கு).
+17 P2 pack "ஒப்புகை எண் … கண்டறிய." → "ஒப்புகை எண், … கண்டறியப் பயன்படுகிறது."
+18 P2 pack "உங்கள் அனுப்பிய" → "நீங்கள் அனுப்பிய".
+19 P2 001 "அமைப்பு வடிவத்தை ஒப்பிடும்போது எனவே பொறுப்பின் எல்லை மட்டுமல்ல," → "எனவே அமைப்பு வடிவத்தை
+   ஒப்பிடும்போது பொறுப்பின் எல்லையை மட்டுமல்ல,".
+20 P2 004 stray ப் before ம: "ஆகியவற்றைப் முதலீட்டு" → "ஆகியவற்றை முதலீட்டு" (2: frontmatter FAQ + body).
+21 P2 004 head-office conditional restored with -ஆக இருந்தால் — all 3 (frontmatter FAQ, body §, table cell)
+   plus the §"நிதி அமைச்சகக் குறிப்பு" body sentence = 4 instances. 5% kept.
+22 P2 005 "(公司設立)யையும்" → "(公司設立) என்ற கட்டுரையையும்".
+23 P2 006 "மசாஜ் போது" → "மசாஜ் செய்யும் போது" (+ "அசௌகரியமோ … விநோதமோ தோன்றினால்").
+24 P2 008 "நான் நானே" → "நானே".
+25 P2 009 "கூறு 6-க்குச்" → "உட்பிரிவு 6-இன் அடிப்படையில்," (matches "உட்பிரிவு 6" two lines above).
+26 P2 Schriftwechsel calque: pack "தரப்பினரின் கடிதப் போக்குவரத்து" → "தரப்பினருக்கு இடையிலான கடிதத் தொடர்பு
+   ஆகியவையே"; 008 "…அதிகாரிகளுடனான மின்னஞ்சல் போக்குவரத்து" → "…அதிகாரிகளுடன் பரிமாறிய மின்னஞ்சல்கள்".
+27 P2 team bio (chang-rongxuan) verbless fragment → "…பணி செய்தார்; நிர்வாக மற்றும் உரிமையியல் வழக்குகளில்
+   கவனம் செலுத்துகிறார்."
+28 P2 pack columns/2 word order → "எனவே கட்டுரையை மட்டுமே அடிப்படையாகக் கொண்டு உண்மையான வழக்கில் எந்த
+   நடவடிக்கையும் எடுக்காதீர்கள்."
+29 P2 008 trailing conditional: the three line-blocks now run in the English order —
+   "இத்தகைய வழக்குகள் பல உள்ளதால்," / "நிறுவனம் நியாயமற்ற வழிகளைப் பயன்படுத்தினால்," / "சான்றைப் பாதுகாத்து
+   வைக்க வேண்டும்." Blocks were swapped, not merged; block count unchanged.
+30 P2 008 dangling purpose infinitives, both table cells: "…பணியாளரின் பாதகத்தைச் சமநிலையாகச் சரிக்கட்ட,
+   அறிவிப்புக் காலத்தைப் … செலுத்த வேண்டும்." and "ஆனால் முதலாளி பணி ஒப்படைப்பையும் மாற்று நபரையும் தேடும்
+   வகையில், … பின்பற்ற வேண்டும்."
+31 P2 003 "அப்போது முக்கியம் வழக்கறிஞரின்…" → "அங்கு முக்கியமானவை வழக்கறிஞரின் கவனமும் நேர்மையும்."
+32 P2 003 "தாமே தோன்ற மாட்டார்கள்" → "நேரில் வருவதே இல்லை" (in the same rewrite as row 5).
+33 P2 004 "அனுமதிகளையும் சட்ட நபர் நிலையை மட்டும் வைத்து முடிவு செய்ய முடியாது." → "சட்ட நபர் நிலையை மட்டும்
+   வைத்து அனுமதிகளையும் தீர்மானிக்க முடியாது."
+35 P3 007 扶養 → "பருவமடையாத பிள்ளைக்கான ஜீவனாம்சக் கடமை" (ஊட்டம் removed from that sentence).
+36 P3 007 慰撫金 → "மன ஆறுதல் தொகையும்" (now matches 003).
+37 P3 009 "வழக்கமாக முடித்தாலும்" → "வழக்கமான முறையில் … முடித்தாலும்".
+38 P3 001 "பணி ஆர்டர் எடுத்தல், கட்டணம் பெறுதல்" → "பணி ஆணைகளைப் பெறுதல், கட்டணம் வசூலித்தல்".
+
+### ta-b (columns 010–018) — 36 of 38
+1  P1 018 reversed rule fixed: "எல்லாப் பங்கு நிறுவனங்களுக்கும் (股份有限公司) ஆண்டு நிதி அறிக்கைத் தணிக்கை
+   தேவைப்படுவதில்லை."
+2  P1 018 "பொருள் எடுத்துக்காட்டு:" → "மின்னஞ்சல் தலைப்புக்கு எடுத்துக்காட்டு:" (1 instance in the file).
+3  P1 012 標誌 அறிகுறி → பலகை: "சந்திப்பைக் காட்டும் பலகை உள்ள பகுதிகள்", "பள்ளி அல்லது மருத்துவமனைக்
+   குறியீட்டுப் பலகை உள்ள இடம் அல்லது சாலைப் பகுதி", "பிற முந்திச் செல்லத் தடைப் பலகை அல்லது சாலைக் குறி".
+4  P2 012 turn/hand signals: "கைச் சைகையாலோ வலது திசைக் காட்டி விளக்காலோ", "இடது/வலது திசைக் காட்டியை இயக்கி",
+   "முன்விளக்குச் சைகை", "நிர்ணயிக்கப்பட்ட சைகை 1 முறை தவறினால்", "வழிவிடல் சைகைக்குக் காத்திருந்து",
+   "அதே பாதையில் சைகையும் வழிவிடலும்", "திசைக் காட்டியை இயக்கிய 1 வினாடி", and the two generic lists
+   ("சைகைகள்"). 12 அறிகுறி instances changed; none left in 012.
+5  P2 "specific" உறுதியான → குறிப்பிட்ட across 010–018 — 26 instances (010×4, 011×2, 012×1, 013×1, 014×6,
+   016×9, 017×2, 018×1). "உறுதியான சான்று" (014×2) left standing as the reviewer allowed. 001–009 left
+   unchanged (see disagreements).
+6  P2 010 "அப்போது அளிக்கப்பட்ட குறிப்பிட்ட வழிகாட்டலும் கவனக் கடமை (注意義務) மீறலும்".
+7  P2 "require" கேள் → தேவை/கோரு — 016 trust sentence ("…உறுதிப்படுத்துவது தேவை"), 018 "தனி ஆய்வைத்
+   தேவைப்படுத்துகின்றன", 014 "தனி நியாய ஆய்வையும் தேவைப்படுத்துகிறது" and "…ஒப்படைப்பைக் கோருகிறது",
+   016 "வேறு ஆய்வைத்/மொழிபெயர்ப்பையும் தேவைப்படுத்தலாம்", "சட்டம் கோரும் காரணிகள்", 018 "எல்லைகளைக் கோரும்".
+   Genuine "ask/FAQ" uses (அடிக்கடி கேட்கப்படும் கேள்விகள், கூடுதல் ஆவணம் கேட்கப்படுகிறதா) were left alone.
+8  P2 018 "கொள்கையளவில் முதலாளியே பணி அனுமதிக்கும் பொருந்தும் தங்கல் அட்டைக்கும் விண்ணப்பிக்கிறார்."
+9  P2 013 "இரட்டை அடையாளம்" → "இரண்டு அடையாள ஆவணங்களைக் கோரும்".
+10 P2 013 comma splice + "2 மாதம்" → "…எளிதல்ல. தைவானில் காப்புத் தொகை (押金) ஒப்பீட்டளவில் குறைவு — பொதுவாக
+   2 மாத வாடகை — எனவே உரிமையாளருக்குக் கிடைக்கும் பாதுகாப்பும் வரம்புள்ளது;". Digit 2 kept.
+11 P2 013 சமாதானப்படுத்து → "நம்பவைக்கும் அளவுக்கு".
+12 P2 013 second "எடுத்துக்காட்டு:" → "மாறாக," (English "By contrast"), + "நடத்தக்கூடிய பொருள்கள்".
+13 P2 016 நினைவுகொள்ளுங்கள் → "உடன் பார்த்துத் தீர்மானியுங்கள்".
+14 P2 017 "நிறைவு," → "விண்ணப்பக் குறைகளை நிரப்புதல்,".
+15 P2 017 "மேசை வழிப் பத்திரங்களில் (櫃檯買賣)" → "கவுன்ட்டர் வழி (OTC) பத்திரங்களில் (櫃檯買賣)".
+16 P2 011 "கட்டாயமாகச் சரியாகாது" → "தானாகச் சரியாகிவிடாது".
+17 P2 016 நிர்ணயிக்குங்கள் → நிர்ணயியுங்கள்.
+18 P2 016 அமைக்குங்கள் → அமையுங்கள்.
+19 P2 014 இணைக்குங்கள் → இணையுங்கள். (A corpus scan of every -ுங்கள் imperative found exactly these three
+   malformed forms and no others.)
+20 P2 016 "வேட்பாளருக்குப் கூடுதல்" — the wrong doubling is gone with row 33's rewrite (single instance;
+   ta-b lists it twice).
+21 P2 011 "உட்பத்தி 7" → "உட்பிரிவு 7".
+22 P2 014 "…உடன் பார்த்து வரும்." → "உண்மையான முடிவு, செலுத்தும் நோக்கம், ஒப்பந்த உள்ளடக்கம், ஏற்கனவே செய்த
+   பணி மற்றும் முடிவுக் காரணம் ஆகியவற்றை உடன் ஆய்வு செய்தே தீர்மானிக்கப்படும்." (2: FAQ + body).
+23 P2 014 "இரண்டும் உடன் கோரப்பட்டால், ஒவ்வொரு இனத்தின் சான்றையும் தனியாகப் பொருத்தி, செலவு இரு முறை
+   எண்ணப்படவில்லை என்பதை உறுதிப்படுத்துங்கள்."
+24 P2 011 disclaimer made parallel and firm: "…கிடைக்கும் என்றோ, விற்பனை சாத்தியமாகும் என்றோ, நடைமுறை ஒரு
+   குறிப்பிட்ட காலத்தில் முடியும் என்றோ உத்தரவாதம் அளிக்கவில்லை." (still a negative statement).
+25 P2 011 purpose clause moved in front: "தகுதியான அதிகார அமைப்பு கேட்டால் … சமர்ப்பிக்கும் வகையில், அணுகல்
+   அதிகாரம், … நிர்ணயிக்கப்பட வேண்டும்."
+26 P2 011 "பொருளுக்குப் பொருள்" → "ஒவ்வொரு பொருளுக்கும் தனித்தனியே" (2).
+27 P2 011 heading → "### தனிச் சொல் அல்ல — முழு வெளிப்பாடே ஆய்வுக்கு அடிப்படை". Heading count unchanged.
+28 P2 "point" புள்ளி → விஷயம்/அம்சம்/காரணி — 013 "இது குறித்துத் …", 015 "எனவே இதில் கவனமாக இருங்கள்",
+   018 "ஆய்வு அம்சங்களும்", "| இயக்க அம்சம் |", "முதல் அம்சம்", 016 "வேறு இணைப்புக் காரணிகள்",
+   017 "பின்வரும் அம்சங்களில்", 011 "தனி இணக்க அம்சங்களாக", 003 "ஒரு முக்கியமான விஷயம்", "இந்த அம்சத்தை",
+   005 "(இந்த விஷயம் …)". 11 changed. "தொடக்கப் புள்ளி" left everywhere (natural per the reviewer).
+29 P2 017 "…ஒப்பிட்டுத் தவறாமல் உறுதிப்படுத்துங்கள்" (root repetition gone; "மூலப் பொருள்" → "மூல ஆவணங்கள்").
+30 P2 017 comparative rebuilt with விட: "சொந்தமாக வாகனமும் நிறுத்துமிடமும் தயாரிப்பதை விட, ஒப்படைக்கும்
+   முறைக்குத் தொடக்க நிலையான முதலீடு குறைவாகத் தேவைப்படலாம்".
+31 P2 018 "இந்த உரை" → "இந்தக் கட்டுரை".
+32 P2 011 "பின்வருவன …" → "பின்வரும் பகுதிகளில் … தனியாக விளக்கப்படுகின்றன."
+33 P2 016 வேட்பாளர் (election candidate) → "பாதுகாவலராகப் பரிசீலிக்கப்படுபவர்" / "பரிசீலிக்கப்படும் ஒருவர்" /
+   bare relative clauses — all 5 instances; no வேட்பாளர் left in the corpus.
+34 P2 015 duplicated filler line rewritten inside the existing three blocks (NOT deleted — block parity):
+   "சந்தை நிலையைத் தவிர," / "இன்னொரு முக்கியமான அம்சமாகப் பார்க்க வேண்டியது" / "அந்த முகவரி “உணவகம்”
+   நடத்தக்கூடிய பகுதியில் உள்ளதா என்பதே." This mirrors the English line split exactly.
+35 P3 012 "துணைப் பொருளாக" → "கூடுதல் வாசிப்புக்கு".
+38 P3 017 "நாளாந்திரப் பணி" → "அன்றாடப் பணி"; the same Sri-Lanka-only form was also swept out of 001
+   ("அன்றாட நிர்வாகம்") and 007 ("அன்றாடப் பராமரிப்பு"). No நாளாந்திர left in the corpus.
+
+### Systemic sweeps (beyond the quoted instance)
+- "X-ஐ வாக்குறுதி அளி" — 7 pack strings + 2 columns fixed; 4 already-correct hits left (row 15 above).
+- sandhi — 6 fixed; full corpus rescan clean (row 16 above).
+- "தரப்பி" — 6/6. "காப்பகம்" — 1/1. "சிறுவர் பிள்ளை" 12, "சிறுவர் காப்பு" 7.
+- 民法 one name — 28 strings in 007/016 renamed to உரிமையியல்.
+- "உறுதியான" as "specific" — 26 in 010–018.
+- "கேள்" as "require" — 9.
+- "புள்ளி" as "point" — 11.
+- malformed -க்குங்கள் imperatives — 3/3 (corpus-wide scan).
+- "அறிகுறி" as sign/signal — 12/12 in 012.
+- "உறுதிப்படுத்துங்கள்" stock ending — 16 of the 43 in 010–018 varied to "சரிபார்த்துக் கொள்ளுங்கள்" (and
+  017's "உறுதியாக உறுதிப்படுத்துங்கள்" → "ஒப்பிட்டுத் தவறாமல் உறுதிப்படுத்துங்கள்"), leaving the phrase where
+  it is the precise verb. Not swept to zero on purpose — it is the right verb in most of those sentences.
+
+## Rows skipped (with reason)
+ta-a 6  (003 restore "அதிகபட்ச" / maximum compensation). SKIP. RULEBOOK-FIX R3 explicitly rewrote this exact
+        sentence to "the compensation the facts and evidence support", and ACCEPTED-ROUND forbids making a
+        result sentence positive again. The reviewer is asking to revert a supervisor rule.
+ta-a 34 ("TWD 1.57M" → TWD 15,70,000). SKIP per ACCEPTED-ROUND and R12: the figure is pinned byte-identical by
+        a test, and lakh grouping is not parsed by the checker (R14).
+ta-b 36 (strip the U+200B zero-width spaces in 013 and 015). SKIP — the checker asserts ZWSP parity against the
+        Korean source (checkBlocks: `ZWSP ${sourceZwsp} → ${targetZwsp}` is a FAIL, not a warning) and the
+        Korean originals carry exactly 5 in 013 and 3 in 015 (003:52, 005:8, 006:4, 008:10, 009:5 likewise).
+        Removing them turns 18/18 PASS into 2 FAILs. Verified by reading scripts/check-column-translation.mjs
+        lines 2615–2642 and counting ZWSP in src/content/columns/013,015.
+ta-b 37 (make the four-language list uniform: "…ஜப்பானியம், கொரியம் ஆகிய மொழிகளில்"). SKIP — ACCEPTED-ROUND:
+        "Requests to translate the four consultation language names differently from the locale's own
+        established form → keep one consistent form across the pack and columns." The pack's established form
+        is "கொரிய மொழி" (and the picker label "கொரிய மொழி (한국어)"); changing only the columns would break that
+        consistency, and changing the pack too would touch the pinned consultation-notice strings.
+ta-a 3  — applied only in part, see the disagreements section.
+
+## Rows I believe the reviewer got wrong (not applied as written)
+1. ta-a 3 — "restore 'generally' (தற்போது நீதிமன்றங்கள் பொதுவாகச் சுமார் 3 மாதச் சிறை விதிக்கின்றன)". The
+   contradiction the reviewer names is real, but the fix he proposes re-states current sentencing practice as a
+   general rule, which is what R3 was written to remove ("in some judgments about 3 months has been imposed;
+   there is no typical or guaranteed outcome"). I removed the contradiction from the other half instead: the
+   disclaimer no longer says "not a usual result" (which clashed with "in some judgments") but "does not
+   predict the outcome of your case". Meaning kept, R3 kept, digits kept.
+2. ta-a 6 — "restore அதிகபட்ச / maximum compensation". Same conflict with R3; not applied (see skips).
+3. ta-a 1 — the suggested "அந்த அதிர்ஷ்டம் கிடைக்கவில்லை" (that luck) sits badly next to the preceding sentence,
+   which R3 had already rewritten from "obtained a high severance" to "was able to establish the entitlement
+   under the law": law-based entitlement immediately followed by "luck" reads as undercutting it, and R8 rules
+   out 'luck' as a rendering of a favourable outcome elsewhere. I used "அந்த வாய்ப்பு கிடைக்கவில்லை" (did not get
+   that opportunity), which carries "were not as fortunate" without the luck frame.
+4. ta-b 5 — the reviewer scopes "உறுதியான = specific" to 010–018 (28×). ta-a reviewed 001–009 and did not flag a
+   single one there, and several of those are genuinely "fixed/definite" (001 "உறுதியான வரிசை அல்லது கால அளவு
+   அல்ல", 002 "உறுதியான காலத்தை வைத்து", 003 "பாதுகாப்பு உறுதியான பிறகு"). I therefore swept 010–018 only and
+   left 001–009 for a later round rather than guess at 22 unflagged instances.
+5. ta-b 22 — the suggested rewrite reads "உண்மையான முடிவு" as a list item. The English is "The actual outcome
+   requires a review of …", i.e. it is the subject. I kept the reviewer's surface wording (comma after
+   "உண்மையான முடிவு", closing "ஆகியவற்றை … தீர்மானிக்கப்படும்") but the four-item object list is what is reviewed.
+6. ta-b 20/33 — listed as two rows but it is a single occurrence in 016; fixed once.
+
+## §Verify output verbatim
+
+$ cd /Users/son7/Projects/tseng-law-fix-ta-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ta src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      25
+
+(25 = the 22 files I edited + docs/i18n/global-plan/WO-F-ta.txt, which was already modified in this worktree
+before I started, + the two untracked round-5 review files ta-a.md / ta-b.md. It reads 26 after this log file
+itself is written. No git add/commit/push was run.)
+
+## Pass criteria
+checker summary PASS 18/18 — yes.  markers 0 — yes.  TSC_OK — yes.  tests passed (3202/3202) — yes.
+No number or date format had to be reverted for the checker.

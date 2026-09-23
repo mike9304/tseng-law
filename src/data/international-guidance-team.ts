@@ -1052,7 +1052,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ក្រុម',
     title: 'ក្រុមអន្ដរជាតិ Hovering',
     description:
-      'ប្រវត្ដិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្ដិ និងគណនេយ្យករសាធារណៈដៃគូនៃ Hovering',
+      'ប្រវត្ដិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្ដិ និងគណនេយ្យករសាធារណៈដៃគូនៃ Hovering។',
     representativeTitle: 'មេធាវីគ្រប់គ្រង',
     teamTitle: 'មេធាវី និងបុគ្គលិក',
     partnerTitle: 'គណនេយ្យករសាធារណៈដៃគូ',

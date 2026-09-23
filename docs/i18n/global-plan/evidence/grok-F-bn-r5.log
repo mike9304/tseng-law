@@ -1,0 +1,185 @@
+# WO-F-bn — round 5 native-quality fix log (bn)
+worktree: /Users/son7/Projects/tseng-law-fix-bn-r5   branch: fix/native-bn-r5-20260922
+inputs: RULEBOOK-FIX.md (R1–R17) · ACCEPTED-ROUND.md · rounds/r5/bn-a.md (33 rows) · rounds/r5/bn-b.md (34 rows)
+date: 2026-09-23
+
+## Summary
+rows applied: 63 of 67 (bn-a 30/33, bn-b 33/34)
+rows skipped: 4 (bn-a 1, 13, 30; bn-b 20) — all four are checker/test-pinned or rulebook conflicts, detail below
+files touched: 15 columns (001 002 003 004 006 007 008 010 011 013 014 015 016 017 018)
+              + src/data/international-guidance-south-asia.ts (bengaliGuidanceContent) + src/data/international-guidance-team.ts (bn office line)
+no git add/commit/push · no other worktree touched · no other locale's strings touched
+
+## Rows applied
+
+### bn-a
+2   003 Q19 answer "বাধ্যতামূলক নয়।" → "সবসময় নয়।" (English "Not necessarily.")
+3   001 heading তথা → comma: "### কোম্পানি গঠন, কর্ম অনুমতি ও অবস্থানের যোগ্যতা"
+4   003 Q20 "তথ্য ও প্রমাণ যে ক্ষতিপূরণ সমর্থন করে…" → "তথ্য ও প্রমাণের ভিত্তিতে যত ক্ষতিপূরণ পাওয়া যায়, তার জন্য চেষ্টা করবেন।"
+    (restores the degree the English carries while keeping R3's "facts and evidence" framing — no maximum/result promise)
+5   003 প্রতিগমন → "সেই অর্থ আদায় করতে পারেন" (employer's recourse against the employee)
+6   003/001/004 স্থির সুবিধা (calque of "fixed facility") → স্থায়ী ব্যবসাস্থল — 6 instances (001 §3 ×1, 001 §8 ×1, 004 §? ×4); the
+    "fixed-place PE" clause in 004 rewritten as "স্থায়ী ব্যবসাস্থল হিসেবে স্থায়ী প্রতিষ্ঠান গঠন করে" to avoid স্থায়ী×2 stacking
+7   008 "চলে যাওয়া অন্য কর্মীরা নিজেরাই একই অবস্থায় পড়েন না" → "যাঁরা আগে চলে গিয়েছিলেন, তাঁদের বেলায় ফল এমন হয়নি;
+    এটি কোনো নির্দিষ্ট ফলের প্রতিশ্রুতি নয়।" (past fact restored, disclaimer kept)
+8   003 "কার বিরুদ্ধে মুখ করা যায়" → "কার বিরুদ্ধে করা যাবে"
+9   "neither … nor" with clause-initial না → …ও নয়, …ও নয় / …ও … না — 4 instances (003 §? ×1, 007 ×2, 008 ×1; the 008 one
+    became "বা নিজে থেকে পদত্যাগ করতে বাধ্য না করে")
+10  003 মান্য (respected) for "recognised/established" → স্বীকৃত / প্রতিষ্ঠিত — 6 instances. Amount kept as TWD 1,000,000
+    (Western grouping; see skip note on row 13)
+11  003 দেখা দেওয়া (to appear/manifest) → দেখা করা, কল করা → ফোন করা — 2 instances in one paragraph
+12  003 "কেবল মীমাংসা দলিলে ছাড়া সীমায়" → "কেবল মীমাংসা দলিলের ভাষায় যে অধিকার ছেড়ে দেওয়া হয়েছে, সেই সীমাতেই"
+14  guidance-team.ts bn office line: "চীনায়" (in China) → "চীনা ভাষায়" (in Chinese)
+15  004 চূক → গাফিলতি (lapse in safety management)
+16  সিদ্ধ করা ("to boil") for prove → প্রমাণ করা / প্রমাণিত হওয়া — 3 instances (008 ×1, 007 ×2)
+17  007 orphan "(1)" — see note below; rewritten as "প্রাথমিক (1ম স্তরের) উৎস" (matches de/fr/pl "Primärquellen (1. Stufe)")
+18  007 body version of the 112-Hsien-Pan-4 holding aligned with the FAQ version (verb + subject restored)
+19  দক্ষ predicating "efficient" → 001 "…ঠিক করে নেওয়া ভালো।", 004 "কাঠামো কার্যকর কি না" — 2 instances
+20  "থেকে এটা বেরোয় না যে" ("it does not follow") → "…ধরে নেওয়া যায় না যে" / "…এ সিদ্ধান্তে আসা যায় না যে" — 4 instances (001 ×1, 004 ×3)
+21  002 "এমন বেরোবেন না।" → "এমন সিদ্ধান্তে আসবেন না।"
+22  002 কাজ স্থগন sentence given a finite verb: "কাজ স্থগনের মাধ্যমে কোম্পানি আইনি ব্যক্তিত্ব রেখেই … পরিচালনা থামাতে পারে।"
+23  "আলাদা এতে:" / "শর্ত আলাদা হয় এতে:" / "ফল আলাদা হতে পারে এতে:" list intro → Bengali list-first order — 3 instances
+    (004 ×2, 002 ×1); the 002 one also converts its ", না" disjunction to "নাকি"
+24  004 "একে এ অর্থ দেবেন না যে" → "এর অর্থ এই নয় যে" (the form the same article already uses 3×)
+25  008 "কোম্পানির অভিপ্রায়ে পড়া" → "কোম্পানির ফাঁদে পা দেওয়া"
+26  guidance pack German apposition "পাতা “X”" → "“X” পাতায়" — 3 instances (contact/FAQ notice, practice-area intro, scope paragraph)
+27  guidance privacy: trailing "নির্ভর করে যে …" relative clause resolved before the main verb
+28  guidance privacy: "ই-মেইল কার্যালয় যে …" garden path → "কার্যালয় যে ই-মেইল সেবা ব্যবহার করে, ই-মেইল সেই সেবার মাধ্যমেই পাঠানো হয়।"
+29  guidance inquiry: কিছুক্ষণ (a few moments) → কিছুদিন (some days) — consistent with the no-reply-deadline line above it
+31  003 copular fragment → "তখন গুরুত্বপূর্ণ হলো আইনজীবীর সতর্কতা ও সততা।" (P3)
+32  006 "মূল্যের তুলনায় সুবিধা" → "দামের তুলনায় সেবা", "উচ্চ স্তরের" → "উঁচু মানের" (P3)
+33  guidance heading 'কর্মক্ষেত্রের দল' → 'কর্মক্ষেত্র' (P3)
+
+### bn-b
+1   016 "বিশেষ সম্পত্তি সেই সম্পত্তি যা নাবালক নিজের।" → "বিশেষ সম্পত্তি বলতে নাবালকের নিজের সম্পত্তি বোঝায়।"
+2   016 relative-plus-because clause reordered: "জীবিত স্বামী বা স্ত্রী উত্তরাধিকারী হওয়ায় যে উত্তরাধিকার অংশ সৃষ্টি হয়,
+    তার থেকে এই দাবির আইনি ভিত্তি, দাবির প্রতিপক্ষ এবং হিসাবে ধরা সম্পত্তি আলাদা।"
+3   015 "এখানেই সার;" → "এখানেই এই নির্দেশ শেষ;"
+4+5 011 "ছোট অক্ষরের অস্বীকৃতি লিখে অগত্যা" → "ছোট অক্ষরের দায়-অস্বীকারের বিবৃতি লিখলেই অবশ্যম্ভাবীভাবে"
+6   011 "প্রশাসনিক জরিমানা ওঠে" → "প্রশাসনিক জরিমানা আরোপ করা হতে পারে" (also restores "may be imposed")
+7   017 "তাইওয়ান ছাড়ার আদেশ … লাগতে পারে" → "… আরোপ করা হতে পারে"
+8+9 "in practice" → বাস্তবে — 3 instances (010 "প্রকৃত প্রতিক্রিয়ায়" ×1, 014 "ব্যবহারে" ×2)
+10  010 "প্রতিষ্ঠানের মেঝেতে পড়ে যাওয়া" → "ব্যবসায়িক প্রাঙ্গণে পড়ে গিয়ে আঘাত"
+11  016 "…জাতীয় তখনই যাচাইযোগ্য পরিস্থিতি দেখুন" → "…মতো যেসব বিষয়ে এখনই নজর দেওয়া দরকার, সেগুলো দেখুন"
+12  010 "কোরীয় বিশ্ববিদ্যালয়ের ছাত্র" (parses as "student of a Korean university") → "কোরিয়ার (এক) বিশ্ববিদ্যালয়-ছাত্র"
+    — 11 instances (lead + 8 headline captions in alt text and link text + 2 genitive forms)
+13  010 "কোনো পক্ষের সাফল্য নিশ্চিত" → "তার কোনোটিতে সাফল্য নিশ্চিত" (success in any of the procedures)
+14  018 institution takes the inanimate verb: "স্বাক্ষর করে যাবেন" → "যাবে", "করবেন/নেবেন" → "করবে/নেবে" — 2 sentences
+15  018 "কোম্পানিতে বেশি মিলে" → "কোম্পানির জন্য এটি বেশি উপযোগী"
+16  014 "not only … but also" correlative repaired with কেবল: "যাচাইয়ে কেবল … ব্যয়ই নয়, … ভিত্তিও দেখতে হয়"
+17  017 "কি, না কি" → নাকি — 3 instances (FAQ answer, body §?, §? ) (+1 same-pattern ", না" → "নাকি" in 018 §1, sentence already touched)
+18  013 verbless "…খোঁজার পরামর্শ।" → "…খুঁজে রাখার পরামর্শ দিই।"
+19  018 "বিতরণ ও এজেন্সি লেনদেন ও চুক্তির কাঠামো" → "বিতরণ ও এজেন্সি হলো লেনদেন ও চুক্তির কাঠামো … এগুলো মেশাবেন না।"
+21  "merely because X" right-branching ("কেবল এজন্য/এ কারণে … যে …") → reason-first ("… বলেই …") — 14 instances
+    (014 ×5, 018 ×2, 011 ×1, 004 ×5, 002 ×1). 004/002 swept as the same systemic pattern.
+22  011 সারে → বস্তুত — 3 instances
+23  প্রতিক্রিয়া (a reaction) for "response/handling" → মোকাবিলা — 3 instances (017 ×1, 014 ×1, 010 ×1).
+    Left alone: 010 §1 "নড়াচড়া ও প্রতিক্রিয়া" (physical reaction) and 011 "প্রতিকূল প্রতিক্রিয়া" (adverse reaction) — correct there.
+24  018 bare স্থানে ("on-site") → কাজের স্থানে — 3 instances
+25  চরিত্র → প্রকৃতি — 5 instances (014 "আইনি চরিত্র" ×3 + "কাজের চরিত্র" ×1, 016 "আইনি চরিত্র" ×1)
+26  011 "দায়িত্বও নিয়োগ করতে হয়" → "দায়িত্বও ভাগ করে দিতে হয়"
+27  017 "শর্তে এটি পড়ে যে …" → "শর্তগুলো হলো: … থাকতে হবে, … থাকতে হবে, এবং … ব্যবহার করতে হবে" (digits 1টি / 2 বছর kept)
+28  016 "…পিতা বা মাতার মতো ধারণা নন" → "অভিভাবক আর পিতামাতার অধিকার প্রয়োগকারী পিতা বা মাতা এক নন"
+29  014 "ধরে থাকার অঙ্গীকার" → "কর্মে বহাল থাকার অঙ্গীকার" — 2 instances (§5 lead + employer checklist item 1)
+30  017 "এই বিষয়ে বদলায় যে …" → whether-clause resolved first, then the main verb
+31  013 sentence-initial এবং → আর — 2 instances
+32  018 ‘ ’ used as primary quotes → “ ” — 3 pairs (P3)
+33  016 detached মাত্রে → হওয়ামাত্রই / হলেই — 2 instances (P3)
+34  016 স্বামী/স্ত্রী → স্বামী বা স্ত্রী — 12 instances in the file (P3). Left in 001 (not flagged, other reviewer's file).
+
+## Rows skipped (with reason)
+bn-a 1  (P1) "কিছু রায়ে প্রায় 3 মাস …; এটি কোনো নিশ্চিত বা সাধারণ ফল নয়।" — the reviewer asks to restore
+        "courts currently GENERALLY impose about 3 months" and to drop "সাধারণ ফল নয়". That is precisely the wording
+        RULEBOOK-FIX R3 mandates removing: 'courts currently impose about 3 months / 4 months / 6 months →
+        "in some judgments about 3 months has been imposed; there is no typical or guaranteed outcome"'.
+        The two are logically contradictory ("generally about 3 months" vs "no typical outcome"), so the supervisor's
+        R3 form was kept. Same for the 4-month / 6-month sentence. Flagging for the supervisor: if R3 is relaxed for
+        this locale, the reviewer's sentence is the better Bengali.
+bn-a 13 (P2) "TWD 1.57M" → "TWD 15,70,000" and lakh grouping generally — skipped twice over:
+        R12 / ACCEPTED-ROUND pin "TWD 1.57M" byte-identical (src/data/__tests__/guidance-team-bios.test.ts), and
+        R14 / ACCEPTED-ROUND forbid lakh/crore grouping because the checker cannot parse it. Western grouping kept
+        in 001 / 002 / 003 / 004 / 010 / 011 as before.
+bn-a 30 (P2) 004 source-list label "অনুচ্ছেদ 3 (ব্যবসায়িক কর আইনের অনুচ্ছেদ 10 নয়)" — tried removing the parenthetical;
+        the checker then fails: `numbers FAIL missing from translation (1): 10`, because the Korean source label is
+        "영업세법 제10조" and the digit 10 is counted. Per the WO ("prefer the form the checker accepts") the original
+        form was restored. All 15 other locales checked (de, fr, es, ru, pl, th, vi, id, ar, it, nl, sv, cs, tr, pt)
+        keep the 10 in that label too. Needs a source-side fix (the Korean label itself is wrong), not a bn-side one.
+bn-b 20 (P2) U+200B removal in 013 (5) and 015 (3) — the checker pins ZWSP count against src/content/columns
+        (the Korean source), which contains exactly 5 in 013 and 3 in 015; removing any fails `blocks`. Four of the
+        five in 013 and all three in 015 are lines whose only character is the ZWSP, i.e. they are blocks. The
+        reviewer's premise ("the English sources contain none") is true but the gate compares against the Korean
+        source, not the English one. Needs a source-side decision.
+
+## Partially applied
+bn-a 17 (P2) 007 orphan "(1)". Removing it outright fails the checker
+        (`numbers FAIL missing from translation (1): 1` — the Korean source says "아래 1차 자료는 …" and the 1 is counted;
+        the ordinal matcher does not blank "1차"). Rewritten instead as "নিচের সরকারি প্রাথমিক (1ম স্তরের) উৎস 25 জুলাই
+        2026-এ যাচাই করা হয়েছে", which keeps the digit but reads as a description of the source tier rather than a
+        footnote marker — the same solution de ("Primärquellen (1. Stufe)"), fr ("(1er niveau)") and pl ("(1. poziom)") use.
+
+## Things I believe the reviewer got wrong (not applied)
+1. bn-a 1 — see skip note: the request contradicts RULEBOOK-FIX R3, which the ACCEPTED-ROUND says applies in full.
+2. bn-b 20 — "The English sources contain none" is not the operative comparison; the structural gate compares the
+   Bengali against src/content/columns (Korean), which does contain them, and 003 / 005 / 006 / 008 / 009 carry the
+   same ZWSP blocks for the same reason. Removing them is a source-wide change, not a bn fix.
+3. bn-a 13 / bn-a 30 — both ask for changes the repository's own gates reject (pinned bio figure; source-label digit).
+4. bn-a 10's suggested rewrite embeds "TWD 10,00,000" (lakh grouping). The lexical half (মান্য → স্বীকৃত) was applied;
+   the number was left as TWD 1,000,000 per R14.
+
+## Things deliberately left alone (checked, correct as-is)
+- 012 "অনুচ্ছেদ 101 মান্য করা" — মান্য করা = to comply with; correct verb, not the flagged "recognised" sense.
+- 016 "স্বার্থের সংঘাত দেখা দিতে পারে" — দেখা দেওয়া = to arise; correct idiom, not the flagged "visit" sense.
+- 002 "অর্থ … হিসাব থেকে বেরোতে পারে", 008 "সেই কোম্পানি থেকে বেরোলেন" — literal "leave/flow out"; correct.
+- 012 "সাধারণ পছন্দ", 014 "পেশাগত দক্ষতা প্রশিক্ষণ" — correct senses of পছন্দ / দক্ষতা, not the flagged calques.
+- 001 "স্বামী/স্ত্রী", 013 ‘ ’ quotes, detached মাত্রে in 001 / 002 / 003 / 007 — the same forms exist outside the files
+  the reviewers flagged; left unchanged to stay inside the "do not change unflagged wording" rule. Candidates for a
+  future sweep if the supervisor wants one standard across all 18 files.
+
+## §Verify output verbatim
+
+$ cd /Users/son7/Projects/tseng-law-fix-bn-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-bn --lang bn 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=99
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-bn src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      21
+
+(re-run after this log file was created; it was 20 before the log existed.
+ git status detail — 21 = 17 modified source files + 1 pre-existing modified WO file
+ + 2 untracked review files + this log:
+ M docs/i18n/global-plan/WO-F-bn.txt                     <- pre-existing, not touched by this lane
+ M src/content/columns-bn/001..004,006,007,008,010,011,013,014,015,016,017,018  (15 files)
+ M src/data/international-guidance-south-asia.ts
+ M src/data/international-guidance-team.ts
+ ?? docs/i18n/global-plan/reviews/native/rounds/r5/bn-a.md
+ ?? docs/i18n/global-plan/reviews/native/rounds/r5/bn-b.md
+ ?? docs/i18n/global-plan/evidence/grok-F-bn-r5.log)
+
+## Hard-rule checks
+- consultation languages: unchanged everywhere (EN / 中文 / JA / KO only); no Bengali-consultation, interpreter,
+  reply-time, free-first-meeting, 24/7, result or win-rate claim added. 015 / 013 / 018 keep their negative wording.
+- attorney Wei Tseng: no gendered form introduced; Bengali finite verbs do not mark gender and no masculine title,
+  pronoun or honorific was added. জনাব লিন (006) and জনাব B (008) stay male; the 010 client stays male.
+- Traditional-Chinese glosses: all preserved (hanzi PASS han=99, unchanged from baseline).
+- frontmatter keys, url, lastmod, featured_image, image paths, external links, numbers, dates, block counts:
+  unchanged (checker blocks/images/links/numbers all PASS; `git diff --stat` shows 127 insertions / 127 deletions,
+  i.e. line-for-line replacement with no line added or removed).
+- no Hangul outside url values: `grep -rn "[가-힣]" src/content/columns-bn | grep -v ':url:' | wc -l` → 0

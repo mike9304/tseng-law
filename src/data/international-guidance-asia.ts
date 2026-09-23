@@ -187,7 +187,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
       description:
         '关于这家台湾律师事务所、其办公室以及与境外当事人合作的基本说明。',
       intro:
-        'Hovering International Law Firm 是台湾的律师事务所。律师的工作从企业咨询到诉讼都有涉及。本部分说明事务所的成立、地点以及与境外当事人的合作。',
+        'Hovering International Law Firm 是台湾的律师事务所。律师为企业提供咨询，并代理诉讼。本部分说明事务所的成立、地点以及与境外当事人的合作。',
       sections: [
         {
           heading: '成立与组织',
@@ -201,7 +201,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           heading: '与境外当事人的合作',
           paragraphs: [
             '跨境工作包括公司设立、签证、商标与专利申请、法律风险审查以及企业税务咨询。台中办公室尤其处理营建、知识产权以及与韩国、日本有关的事项。律师曾雋崴（Wei Tseng）在上述各组中协助来自韩国、日本及其他国家的委托人。',
-            '能否承接取决于内容与沟通语言。若您的事项属于上述各组，并可以四种咨询语言之一讨论，您可以提交摘要供审阅。',
+            '能否承接取决于内容与沟通语言。若您的事项属于上述各组，并且可以用四种咨询语言之一讨论，您可以提交摘要供审阅。',
           ],
         },
         {
@@ -232,7 +232,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           heading: '首先确定工作范围',
           paragraphs: [
             '同类事项的工作量可能相差很大，取决于当事人人数、现有文件、须遵守的期限，以及程序是否已经开始。因此第一步始终是确定哪些事项属于工作范围、哪些不属于。',
-            '您一开始提交的摘要是确定该范围的基础。摘要越清楚说明经过、您的需求与期限，范围就能定得越准确。',
+            '您一开始提交的摘要是确定该范围的基础。摘要把经过、您的需求和期限写得越清楚，范围就能定得越准确。',
           ],
         },
         {

@@ -21,7 +21,7 @@ Owner: Claude(설계·검수·커밋) · 구현: 서브에이전트 워커 · �
 - [x] **G3 EN 홈·핵심 랜딩 영어권 적합화** ✅사이클8(히어로 CTA 위계는 X3b로 추가 개선): 히어로·오퍼·신뢰 신호·CTA가 E1/E2(미국 포함) 기준 카피로, 한국 고객용 직역 흔적 0(자동 스캔: 한국/Korean client 전제 문구 0), 라이브 확인.
 - [x] **G4 JA 홈·핵심 랜딩 일본어 사용자 적합화** ✅사이클9(잔여: /ja/services/investment 한국 송금 절차 J15 = 변호사 검수): J1/J2 기준 카피·구성(日本語で直接相談・料金明示・対応業務), EN 대비 정보 밀도 격차 해소(단어/문자 수·내부링크 수 측정), 한국 고객 전제 0, 라이브 확인.
 - [ ] **G5 전환 경로**: EN/JA 문의(이메일·폼) 경로가 각 언어로 완결(안내·준비물·응답 언어·시간대 표기), 전 단계 문구 현지어, 라이브 E2E(발송 제외) 확인.
-- [ ] **G6 미국·일본 기업 타깃 진입점**: E2(미국 기업)·J1(日系企業)용 진입 페이지/섹션이 기존 검수 콘텐츠로 구성되어 홈·내비에서 도달 가능, 새 법률 주장 0.
+- [x] **G6 미국·일본 기업 타깃 진입점** ✅사이클10: E2(미국 기업)·J1(日系企業)용 진입 페이지/섹션이 기존 검수 콘텐츠로 구성되어 홈·내비에서 도달 가능, 새 법률 주장 0.
 - [ ] **G7 EN/JA 기술 SEO**: title/description/OG/hreflang/구조화데이터 inLanguage가 현지 쿼리 기준으로 정합(자동 점검 결과 첨부).
 - [ ] **G8 배포·기록**: 각 배치 main push→Vercel success→라이브 재측정, 볼트·이 파일 Progress 갱신.
 
@@ -39,6 +39,7 @@ Owner: Claude(설계·검수·커밋) · 구현: 서브에이전트 워커 · �
 - [사이클 7 · 2026-09-24 01:0x] **배치 2 라이브**(재배포 `b18b5b9d` Vercel success): areaServed 3로케일 모두 Taiwan·United States·South Korea·Japan, knowsLanguage /en en 첫째·/ja ja 첫째·/ko 불변 — curl 라이브 JSON-LD 확인. M0 `inquiry_submitted`는 실제 문의 발생 시에만 기록(테스트 제출은 사무소 실메일 발송이라 미실시) → 첫 실문의 후 `visit-report ⑪`로 확인 필요. G7 부분 충족(Person knowsLanguage English·EN 프로필 description은 X1).
 - [사이클 8 · 2026-09-24 05:3x] **WO-X1 배포**: 워커 2회 스트림 정체 → 규약대로 재개 중단, Claude가 검증 마무리(tsc 0·lint 0·전체 vitest 실패 16파일을 단독 재실행 → 14 통과, 잔여 2 = origin 기존). 커밋 `5d97ff58`, main 병합 후 겹침 테스트 5파일 69 통과·tsc 0·build OK → push `5738521a` → Vercel success. 라이브(`.design-audit/x1-live-verify.mjs`, en/ja/ko × 13경로): EN 한국 전제 문구 12/13 페이지 0(잔여 1 = 헬스장 사례 칼럼 본문 사실), EN/JA tel:+82 0(ko 유지), Person knowsLanguage EN "English,Chinese,Korean,Japanese"·JA 「日本語」 첫째, 오버플로 0. JA 잔여 「韓国」은 언어 목록·한국 사무소 한 줄·한국 사무소 담당 소개·폼 선택지 = 의도, 예외 /ja/services/investment 한국 송금 절차(J15 변호사 검수). **발견**: /ko 프로필 Person 언어에 영어 없음(한국어·중국어·일본어) → 후속.
 - [사이클 9 · 2026-09-24 07:xx] **WO-X3(a+b) 배포** `a35e0068` Vercel success. 리뷰에서 EN 리드 "He also consults" → **"She"** 정정(대표 변호사 여성, 766363b). 라이브(1440·390): ko/en/ja 히어로 CTA 4개(이메일 primary 첫째·경로 2·가이드), 신뢰 띠(Google 5.0·17 출처 링크·대만 변호사·4사무소·언어 페이지 언어 첫째), JA H1 「台湾の会社設立・労務・紛争を、日本語で。」+J1/J2 리드, EN 리드 영어 직접 상담·타이베이 또는 화상, h1=1, 오버플로 0. ko/zh 프로필 언어 영어 추가. **zh-hant 홈은 빌더 발행 문서(구 granular 히어로)가 렌더 — h1=2·신뢰 띠 없음·리드 「具備韓國、日本跨境實務經驗」(HOME-02 기존, 빌더 재발행 필요, 이번 목표 대상 외).**
+- [사이클 10 · 2026-09-24 07:xx] **WO-G6 배포** `c57b560b` Vercel success — 라이브: /en 「For overseas companies and international clients」 카드 5·/ja 「日系企業・在台日本人の方へ」 카드 6(full), /en·/ja/services compact, /ko 없음, h1=1·오버플로 0. 링크 전부 기존 공개 페이지 200, 새 URL·법률 주장 0. ⚠️ **Opus 워커 주간 한도 도달(9/28 02:00 KST 리셋)** — G6 워커는 보고 후 정리 단계에서 중단(산출물 무손상, Claude 검수·커밋). 이후 구현 워커는 sonnet/fable 서브에이전트 또는 Studio Codex로.
 
 ## Open
 - zh-hant 홈 빌더 발행본 노후(h1 2개, 코드 히어로 미반영) — 빌더 재발행 필요(사용자/빌더 레인).

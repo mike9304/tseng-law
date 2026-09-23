@@ -1242,7 +1242,7 @@ export const guidanceAnswers: Record<
     },
     pricing: {
       answer:
-        'Ova stranica ne objavljuje cjenik. Najprije se iz Vašeg sažetka potvrđuje opseg rada, zatim se s Vama potvrđuju iznos i način izračuna, prije nego rad počne. Savjetovanje s odvjetnicom ili odvjetnikom može biti naplatno; uz nagradu mogu nastati sudske ili upravne pristojbe. Savjetovanje se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+        'Ova stranica ne objavljuje cjenik. Najprije se iz Vašeg sažetka potvrđuje opseg rada, zatim se s Vama potvrđuju iznos i način izračuna, prije nego što rad počne. Savjetovanje s odvjetnicom ili odvjetnikom može biti naplatno; uz nagradu mogu nastati sudske ili upravne pristojbe. Savjetovanje se odvija samo na engleskom, kineskom, japanskom i korejskom.',
       sources: ['/hr/contact', '/hr/faq'],
     },
     contact: {

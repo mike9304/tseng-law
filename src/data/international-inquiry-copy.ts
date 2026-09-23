@@ -2161,7 +2161,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Savjetovanje se odvija samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom.',
     methodConfirmationNotice:
-      'Ako ne govorite nijedan od četiri jezika savjetovanja, odaberite „Način komunikacije treba potvrditi“. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
+      'Ako ne govorite nijedan od četiri jezika savjetovanja, odaberite „Način komunikacije treba potvrditi”. Odgovorit ćemo kako bismo procijenili provediv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zajamčena i rok za odgovor se ne obećava.',
     preparationNotice:
       'Sažetak možete napisati na svojem jeziku. Izvorni se tekst čuva onako kako ste ga napisali i ne prevodi se automatski.',
     heading: 'Pošaljite zahtjev za pregled',
@@ -2172,10 +2172,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     successMessage:
       'Primili smo Vaš zahtjev; čeka pregled. To ne znači da je savjetovanje održano ili da je sastanak potvrđen.',
     savedNotificationPendingMessage:
-      'Vaš je zahtjev spremljen, ali obavijest uredu još nije potvrđena. Ono što ste napisali ne gubi se. Ako ne primite odgovor, možete napisati i na adresu e-pošte s kontaktne stranice.',
+      'Vaš je zahtjev spremljen, ali obavijest uredu još nije potvrđena. Ono što ste napisali ne gubi se. Ako ne primite odgovor, možete se javiti i na adresu e-pošte s kontaktne stranice.',
     receiptIdLabel: 'Broj primitka',
     failureMessage:
-      'Vaš zahtjev nije bilo moguće poslati. Pokušajte ponovno ili napišite na adresu e-pošte s kontaktne stranice.',
+      'Vaš zahtjev nije bilo moguće poslati. Pokušajte ponovno ili se javite na adresu e-pošte s kontaktne stranice.',
     originalLanguageLabel: 'Jezik na kojemu pišete',
     originalLanguagePlaceholder:
       'Na primjer hrvatski, engleski, kineski ili drugi jezik',
@@ -2186,7 +2186,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Ime',
     emailLabel: 'E-pošta',
     consentLabel:
-      'Pročitao sam ili pročitala sam stranicu o osobnim podacima i pristajem na slanje ovog zahtjeva.',
+      'Pročitao/pročitala sam stranicu o osobnim podacima i pristajem na slanje ovog zahtjeva.',
     privacyLinkLabel: 'Osobni podaci',
     requiredMessage: 'Ovo je polje obvezno.',
     invalidEmailMessage: 'Unesite valjanu adresu e-pošte.',

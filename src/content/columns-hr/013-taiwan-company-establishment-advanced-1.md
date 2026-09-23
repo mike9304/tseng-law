@@ -63,7 +63,7 @@ Moguće je.
 
 Banka općenito zahtijeva dvije isprave za utvrđivanje identiteta.
 
-A bez boravišne iskaznice može se kod tajvanske imigracijske uprave zatražiti „**obrazac osnovnih podataka jedinstvenog identifikacijskog broja**“ (統一證號基本資料表).
+A bez boravišne iskaznice može se kod tajvanske imigracijske uprave zatražiti „**obrazac osnovnih podataka jedinstvenog identifikacijskog broja**” (統一證號基本資料表).
 
 Izdavanje je moguće istoga dana.
 
@@ -73,7 +73,7 @@ Imigracijska uprava (移民署) međutim je vrlo opterećena; stoga treba doći 
 
 **3. Pri pregledu ulagačkog plana (投資計畫書) navodno se navodi obrazovanje i radno iskustvo. Ako moje obrazovanje i iskustvo ne odgovaraju djelatnosti društva koje želim osnovati, postoji li teškoća?**
 
-Povjerenstvo Ministarstva gospodarstva pregledava pozadinu ulagača.
+Povjerenstvo Ministarstva gospodarstva provjerava obrazovanje i radno iskustvo ulagača.
 
 Pregled međutim nije pretjerano strog.
 
@@ -91,7 +91,7 @@ Osnivanje društva traje približno **3 mjeseca**, a stjecanje dozvole za rad (�
 
 Stoga početak ugovora treba odrediti što kasnije.
 
-Nadalje, u ugovorima o najmu poslovnih lokala na Tajvanu najmodavac često najmoprimcu daje „**razdoblje uređenja interijera**“ (裝潢期間).
+Nadalje, u ugovorima o najmu poslovnih lokala na Tajvanu najmodavac često najmoprimcu daje „**razdoblje uređenja interijera**” (裝潢期間).
 
 Riječ je o razdoblju oslobođenom od najamnine; o njemu se može pregovarati.
 

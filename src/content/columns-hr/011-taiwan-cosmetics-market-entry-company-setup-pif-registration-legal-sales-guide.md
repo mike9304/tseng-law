@@ -40,11 +40,11 @@ U ugovoru je primjereno konkretno utvrditi opseg uporabe intelektualnog vlasniš
 
 ### Kad djelatnost na Tajvanu vodite sami
 
-Tajvansko kćerinsko društvo i podružnica stranog društva nisu ista organizacija. Kćerinsko društvo samostalna je pravna osoba osnovana prema pravu Tajvana, dok se podružnica upisuje kao dio glavne poslovnice (本公司) stranog društva. Razlikuju se pravna osobnost, odgovornost glavne poslovnice, računovodstveni i porezni tretman, prijenos dobiti, ovlaštenje za zastupanje i način unutarnje kontrole, pa se oblik organizacije ne smije birati samo prema nadzoru nad prodajom.
+Tajvansko kćerinsko društvo i podružnica stranog društva nisu ista organizacija. Kćerinsko društvo samostalna je pravna osoba osnovana prema pravu Tajvana, dok se podružnica upisuje kao dio središnjice (本公司) stranog društva. Razlikuju se pravna osobnost, odgovornost središnjice, računovodstveni i porezni tretman, prijenos dobiti, ovlaštenje za zastupanje i način unutarnje kontrole, pa se oblik organizacije ne smije birati samo prema nadzoru nad prodajom.
 
-Ako je potreban postupak stranog ulaganja, treba provjeriti upute **Odjela za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司)** kao trenutačno nadležnog tijela. Rok potreban za odobrenje ulaganja, prijenos sredstava, upis društva ili podružnice, otvaranje bankovnog računa, poreznu registraciju (稅籍登記) i stjecanje kvalifikacije uvoznika razlikuje se prema ulagaču, djelatnosti, obliku organizacije, predloženim podlogama i prema tome dolazi li do ispravka ili dopune. Stoga umjesto utvrđivanja datuma stavljanja na tržište uz pretpostavku određenog fiksnog roka treba najprije provjeriti primjenjuje li se svaka radnja te najnovije uvjete primitka.
+Ako je potreban postupak stranog ulaganja, treba provjeriti upute **Odjela za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司)** kao trenutačno nadležnog tijela. Rok potreban za odobrenje ulaganja, prijenos sredstava, upis društva ili podružnice, otvaranje bankovnog računa, poreznu registraciju (稅籍登記) i stjecanje kvalifikacije uvoznika razlikuje se prema ulagaču, djelatnosti, obliku organizacije, predloženim podlogama i prema tome dolazi li do ispravka ili dopune. Stoga umjesto utvrđivanja datuma stavljanja na tržište uz pretpostavku određenog fiksnog roka treba najprije provjeriti primjenjuje li se svaka radnja te najnovije uvjete podnošenja zahtjeva.
 
-Koja god se struktura odabere, središnji je subjekt odgovornosti u regulaciji kozmetike **proizvođač ili uvoznik kozmetike**. Uređivanje podloga o proizvodu ili ocjenu sigurnosti (安全性評估) može se povjeriti vanjskom stručnjaku, no samo povjeravanje posla ne prenosi pravnu odgovornost proizvođača ili uvoznika. Razlikovanje ugovorne podjele rada od zakonskog subjekta odgovornosti polazna je točka pregleda strukture stupanja.
+Koja god se struktura odabere, središnji je subjekt odgovornosti u regulaciji kozmetike **proizvođač ili uvoznik kozmetike**. Uređivanje podloga o proizvodu ili ocjena sigurnosti (安全性評估) može se povjeriti vanjskom stručnjaku, no samo povjeravanje posla ne prenosi pravnu odgovornost proizvođača ili uvoznika. Razlikovanje ugovorne podjele rada od zakonskog subjekta odgovornosti polazna je točka pregleda strukture stupanja.
 
 ## 2. Registracija proizvoda i PIF dva su različita režima
 
@@ -64,13 +64,13 @@ PIF je zbirka podloga uređena tako da se kakvoća i sigurnost proizvoda mogu tr
 
 Režim PIF-a primjenjivao se stupnjevito prema skupinama proizvoda. Od 1. srpnja 2026. u predmet primjene uključeni su i preostali kozmetički pripravci, pa se načelno odnosi na svu kozmetiku. Iznimka se ograničava na kruti ručno izrađeni sapun proizveden na mjestu proizvodnje oslobođenom od upisa tvornice. Proizvod nije izuzet samo zato što je ručni ili što rabi naziv sapuna; treba provjeriti oboje, kruti oblik i pretpostavku oslobođenja mjesta proizvodnje od upisa tvornice.
 
-Posao na PIF-u, uključujući ocjenu sigurnosti, može potpomognuti treća osoba koja ima potrebnu kvalifikaciju i sposobnost. Čak i kad se rabi potpora sastavljanja trećom osobom ili usluga čuvanja podloga, pravna odgovornost proizvođača ili uvoznika kozmetike ostaje. Treba izgraditi sustav koji izvornom proizvođaču, ispitnom laboratoriju, ocjenjivatelju sigurnosti i tajvanskom društvu omogućuje međusobno prosljeđivanje informacija o izmjenama i najnovijih potpisanih podloga.
+U poslu na PIF-u, uključujući ocjenu sigurnosti, može pomoći treća osoba koja ima potrebnu kvalifikaciju i sposobnost. Čak i kad treća osoba pomaže pri sastavljanju ili pruža uslugu čuvanja podloga, pravna odgovornost proizvođača ili uvoznika kozmetike ostaje. Treba izgraditi sustav koji izvornom proizvođaču, ispitnom laboratoriju, ocjenjivatelju sigurnosti i tajvanskom društvu omogućuje međusobno prosljeđivanje informacija o izmjenama i najnovijih potpisanih podloga.
 
 ### Ažuriranje i čuvanje
 
 Ako se promijene sirovina ili receptura, način i mjesto proizvodnje, označavanje uključujući etiketu, tvrdnja o funkciji ili sigurnosne informacije, treba pregledati i ažurirati zahvaćene podloge PIF-a. Treba također ocijeniti utječu li pritužbe potrošača, neželjeni događaji i novi rezultati ispitivanja na postojeću ocjenu, pa je i nakon prvog sastavljanja nužan postupak upravljanja izmjenama.
 
-Prema članku 7. Pravilnika o upravljanju informacijskim spisom kozmetičkih proizvoda razdoblje čuvanja iznosi najmanje 5 godina računajući od dana sljedećeg nakon dana posljednje isporuke proizvoda na tržište. Prema članku 8. istog pravilnika mjesto čuvanja jest adresa proizvođača ili uvoznika kozmetike utvrđena u članku 7. stavku 1. točki 7. Zakona o upravljanju higijenom i sigurnošću kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje razdoblje i odredbu koja utvrđuje mjesto treba voditi odvojeno.
+Prema članku 7. Pravilnika o upravljanju informacijskim spisom kozmetičkih proizvoda razdoblje čuvanja iznosi najmanje 5 godina računajući od prvog dana nakon posljednje isporuke proizvoda na tržište. Prema članku 8. istog pravilnika mjesto čuvanja jest adresa proizvođača ili uvoznika kozmetike utvrđena u članku 7. stavku 1. točki 7. Zakona o upravljanju higijenom i sigurnošću kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje razdoblje i odredbu koja utvrđuje mjesto treba voditi odvojeno.
 
 Čak i kad izvorni proizvođač čuva izvornik ili se rabi sigurna elektronička pohrana ili pohrana u oblaku, proizvođač ili uvoznik mora imati pristup potpunim podlogama. Treba utvrditi prava pristupa, sigurnosne kopije, upravljanje inačicama, oblik datoteka i odgovornu osobu tako da se podloge mogu brzo pronaći i predočiti kad ih nadležno tijelo zatraži. U ugovoru je također važno urediti koje se podloge predaju, kako predaja teče i ostaje li pravo pristupa na snazi, kako bi se podloge održale tijekom zakonskog razdoblja čuvanja i nakon prestanka ugovora s prodajnim partnerom ili davateljem usluge.
 
@@ -80,7 +80,7 @@ Kad nadležno tijelo pregledava PIF, načelno o tome obavješćuje proizvođača
 
 Prijava neistinitih podataka pri registraciji proizvoda ili upis neistinitih podataka u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 novih tajvanskih dolara (新臺幣, TWD). Ako su naprotiv podloge PIF-a nepotpune, nadležno tijelo obično naloži ispravak u utvrđenom roku (限期改正), a upravna novčana kazna može se izreći tek tada kad se u tom roku ne ispravi. Neistinite podatke i nepotpunost podloga koju još treba dopuniti ne treba tretirati kao da vode istoj posljedici.
 
-Povlačenje ili uništenje (銷毀) nije mjera koja bi automatski slijedila svaku nepotpunost podloga PIF-a. Sigurnost proizvoda, sadržaj povrede, stanje ispravka i zakonske pretpostavke koje se primjenjuju na svaku mjeru treba ocijeniti odvojeno. Mjeru kad je utvrđen sigurnosni problem treba razlikovati od zahtjeva za dopunu isprava, a postupanje se vodi prema obavijesti nadležnog tijela i primijenjenoj odredbi.
+Povlačenje ili uništenje (銷毀) nije mjera koja bi automatski slijedila svaku nepotpunost podloga PIF-a. Sigurnost proizvoda, sadržaj povrede, stanje ispravka i zakonske pretpostavke koje se primjenjuju na svaku mjeru treba ocijeniti odvojeno. Mjere koje se poduzimaju kad je utvrđen sigurnosni problem treba razlikovati od zahtjeva za dopunu isprava, a postupanje se vodi prema obavijesti nadležnog tijela i primijenjenoj odredbi.
 
 ## 3. Regulacija označavanja, promocije i reklame
 
@@ -96,9 +96,9 @@ Upravna novčana kazna za neistinitu ili pretjeranu reklamu (虛偽誇大廣告)
 
 ### Influenceri, autori recenzija i prodajni partneri
 
-Objave influencera, autora recenzija ili prodajnih partnera prema sadržaju i trgovačkom kontekstu mogu se ocijeniti kao reklama u biti. Isplata naknade, davanje proizvoda, prodajna poveznica, uputa marke za objavu i ponavljana suradnja čimbenici su koji se u toj ocjeni uzimaju u obzir. Naprotiv, svaka osobna objava ne postaje automatski reklama marke, pa treba provjeriti odnos između onoga tko objavljuje i marke, konkretni sadržaj i stupanj sudjelovanja marke.
+Objave influencera, autora recenzija ili prodajnih partnera prema sadržaju i trgovačkom kontekstu mogu se u biti ocijeniti kao reklama. Isplata naknade, davanje proizvoda, prodajna poveznica, uputa marke za objavu i ponavljana suradnja čimbenici su koji se u toj ocjeni uzimaju u obzir. Ne postaje, međutim, svaka osobna objava automatski reklama marke, pa treba provjeriti odnos između onoga tko objavljuje i marke, konkretni sadržaj i stupanj sudjelovanja marke.
 
-U ugovoru o suradnji i u operativnim uputama može se utvrditi opseg dopuštenih izraza i potporne podloge, pregled prije objave te postupak izmjene i brisanja povređujućih izraza. U opseg upravljanja primjereno je uključiti i izraze dodane u komentarima, usmeno tumačenje pri izravnom prijenosu ili kratkim snimkama te nesklad između prodajne stranice i etikete. Pregledani nacrt, povijest odobrenja, zahtjeve za izmjenu i konačnu objavu treba sačuvati, kako bi se kasnije mogle provjeriti činjenične okolnosti.
+U ugovoru o suradnji i u operativnim uputama može se utvrditi opseg dopuštenih izraza i potporne podloge, pregled prije objave te postupak izmjene i brisanja izraza koji povređuju propise. U opseg upravljanja primjereno je uključiti i izraze dodane u komentarima, usmeno tumačenje pri izravnom prijenosu ili kratkim snimkama te nesklad između prodajne stranice i etikete. Pregledani nacrt, povijest odobrenja, zahtjeve za izmjenu i konačnu objavu treba sačuvati, kako bi se kasnije mogle provjeriti činjenične okolnosti.
 
 ### Redoslijed provjere pripreme prodaje
 
@@ -111,7 +111,7 @@ Ako se priprema prodaje na Tajvanu provjeri ovim redoslijedom, smanjuje se opasn
 5. Pregledati etiketu, prodajnu stranicu, reklamu i objave iz suradnje prema mjerilu cijelog izraza.
 6. Voditi postupak za odgovor na inspekcije i zahtjeve za ispravak, pritužbe, sigurnosne informacije i potrebne sljedeće korake.
 
-Osnovnu strukturu društva i podružnice možete vidjeti u [Osnove osnivanja društva na Tajvanu](/hr/columns/taiwan-company-establishment-basics), opseg povezane potpore u [Koje predmete vodimo](/hr/services), a podatke o mjerodavnoj odvjetnici u [Međunarodni tim Hovering](/hr/lawyers).
+Osnovnu strukturu društva i podružnice možete vidjeti u [Osnove osnivanja društva na Tajvanu](/hr/columns/taiwan-company-establishment-basics), opseg povezane potpore u [Koje predmete vodimo](/hr/services), a podatke o odvjetnici koja vodi predmet u [Međunarodni tim Hovering](/hr/lawyers).
 
 ### Službene podloge
 

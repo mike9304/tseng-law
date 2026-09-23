@@ -1084,7 +1084,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Limba paginii și limba consultanței nu sunt același lucru',
           paragraphs: [
             'Această pagină este scrisă în limba română, dar consultanța cu un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocatul va avea loc în limba română.',
-            'Nu promitem nici un interpret, nici un termen de răspuns și nicio programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
+            'Nu promitem interpret, termen de răspuns sau programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
           ],
         },
         {
@@ -1105,7 +1105,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'De unde să începeți',
           paragraphs: [
             'Citiți pagina „Servicii” pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi „Costuri” și „Contact”, pentru a afla cum se stabilește obiectul mandatului și cum se confirmă onorariile înainte de începerea lucrării.',
-            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă nici o consultanță și nicio programare confirmată.',
+            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă nici consultanță, nici programare confirmată.',
           ],
         },
       ],
@@ -1269,7 +1269,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță',
           paragraphs: [
             'În formularul de contact puteți alege „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
-            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem nici un interpret, nici o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
+            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem interpret și nicio prestație în limba română sau în altă limbă în afara celor patru arătate; nu preluăm orice cauză.',
           ],
         },
         {
@@ -1381,7 +1381,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Locul păstrării și accesul',
           paragraphs: [
             'Conținutul trimiterii dumneavoastră se păstrează într-un loc care nu este accesibil publicului. Numai persoanele autorizate din cabinet au acces la el, pentru soluționarea solicitării.',
-            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; de aceea, documentele sensibile ar trebui trimise abia după o îndrumare anume din partea avocatului.',
+            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu sunt pe deplin sigure; de aceea, documentele sensibile ar trebui trimise abia după o îndrumare anume din partea avocatului.',
           ],
         },
         {
@@ -1463,7 +1463,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Patru liste după limbă',
           paragraphs: [
-            'Această parte cuprinde patru legături: lista articolelor în coreeană, în chineză, în engleză și în japoneză. Fiecare legătură arată limba listei, astfel încât știți dinainte în ce limbă se deschide conținutul.',
+            'Această parte cuprinde patru legături: lista articolelor în coreeană, în chineză, în engleză și în japoneză. Fiecare legătură arată limba listei, astfel încât să știți dinainte în ce limbă se deschide conținutul.',
             'Aceste patru liste sunt liste după limba originală a articolelor, nu liste de traduceri. Articolele disponibile în limba română se află separat, pe această pagină.',
           ],
         },

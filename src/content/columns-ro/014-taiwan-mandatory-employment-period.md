@@ -8,7 +8,7 @@ categories:
   - "Informații juridice despre Taiwan"
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
 faq:
-  - q: "Clauza de durată minimă a muncii (最低服務年限約定) a contractului de muncă în Taiwan este automat nul?"
+  - q: "Clauza de durată minimă a muncii (最低服務年限約定) a contractului de muncă în Taiwan este automat nulă?"
     a: "Nu. Potrivit art. 15-1 din legea taiwaneză a standardelor muncii (勞動基準法), dacă angajatorul oferă o formare tehnică specializată (專業技術培訓) și îi suportă costul, sau furnizează o contraprestație rezonabilă (合理補償) în schimbul angajamentului lucrătorului de a rămâne pe durata minimă de muncă, clauza poate întruni condițiile legale. Nu este necesar ca ambele condiții să fie întrunite deodată, dar, chiar dacă există una, clauza nu trebuie să depășească întinderea rezonabilă în lumina ansamblului împrejurărilor, precum durata și costul formării, posibilitatea de a înlocui personalul (人力替補可能性) și suma și întinderea contraprestației."
   - q: "Formarea noilor veniți sau formarea legal obligatorie sunt considerate formare tehnică specializată?"
     a: "Potrivit orientării Ministerului Muncii din Taiwan (勞動部) din 5 iunie 2026, costul formării periodice, al formării generale a postului, al adaptării la muncă a noilor veniți și al formării pe care legea obligă angajatorul să o asigure nu poate fi luat ca temei al clauzei de durată minimă a muncii nici al unei cereri de clauză penală (違約金) sau de restituire de cheltuieli. Nu trebuie văzut numai numele formării, ci programul concret, conținutul profesional și tehnic, durata, costul realmente suportat de angajator și justificările."
@@ -53,7 +53,7 @@ Obiectul de examinare cuprinde nu numai costuri direct verificabile, precum onor
 
 Programul, calendarul de formare, lista de prezență, rezultatul evaluării, certificatul de încheiere, facturile și chitanțele sunt documente de bază pentru a confirma realitatea formării și costul. Contractul dintre angajator și centrul de formare, justificările de plată și condițiile de rambursare, văzute împreună, permit să se cuprindă mai exact sarcina reală. Dacă lucrătorul a plătit o parte a costului în mod direct sau dacă un terț l-a luat în sarcină, trebuie distins și cine a suportat costul final.
 
-Limita dintre adaptarea generală la muncă și formarea tehnică specializată nu depinde numai de locul formării sau de cine o organizează. Un curs intern poate stabili un conținut profesional și tehnic concret și o investiție considerabilă, iar un curs lung al unui centru extern poate fi, în realitate, o formare introductivă generală. Nu trebuie deci exclusă în mod uniform orice formare internă, nici recunoscută condiția legală numai pentru că cursul este costisitor sau lung.
+Limita dintre adaptarea generală la muncă și formarea tehnică specializată nu depinde numai de locul formării sau de cine o organizează. Un curs intern poate presupune un conținut profesional și tehnic concret și o investiție considerabilă, iar un curs lung al unui centru extern poate fi, în realitate, o formare introductivă generală. Nu trebuie deci exclusă în mod uniform orice formare internă, nici recunoscută condiția legală numai pentru că cursul este costisitor sau lung.
 
 Trebuie și să se poată explica relația dintre perioada convenită și investiția de formare. Ce competență se dobândește, ce relație are această competență cu postul pentru care se face formarea și de ce perioada de muncă propusă este necesară față de durata și costul formării se examinează individual. Faptul că, după încheierea formării, munca a fost realmente exercitată, precum și durata perioadei deja lucrate, contează și ele la aprecierea întinderii sarcinii.
 
@@ -63,7 +63,7 @@ A doua condiție legală este ca angajatorul să furnizeze o contraprestație re
 
 Trebuie confirmată mai întâi finalitatea viramentului. Dacă este vorba de o condiție salarială generală de angajare, de o contraprestație a promisiunii de a rămâne o perioadă determinată sau de o recompensă pentru atingerea rezultatelor, aceasta trebuie să fie clară în contract și în documentele de comunicare. Se examinează și dacă data viramentului, suma, data la care dreptul se consolidează, legătura cu perioada de menținere, cauzele restituirii și formula au fost prezentate astfel încât lucrătorul să le poată înțelege înainte de contract.
 
-Orientarea (函釋) a Ministerului Muncii din Taiwan (勞動部) din 5 iunie 2026 explică că, dacă se ia ca contraprestație rezonabilă a clauzei de durată minimă a muncii o primă de menținere în post, o primă de semnare sau o altă prestație anticipată, acest rol trebuie comunicat clar. Reinterpretarea ulterioară, de către angajator, a finalității plății, sau reclasificarea unei părți din salariu drept contraprestație, nu poate înlocui comunicarea făcută la încheierea contractului.
+Orientarea (函釋) Ministerului Muncii din Taiwan (勞動部) din 5 iunie 2026 explică că, dacă se ia ca contraprestație rezonabilă a clauzei de durată minimă a muncii o primă de menținere în post, o primă de semnare sau o altă prestație anticipată, acest rol trebuie comunicat clar. Reinterpretarea ulterioară, de către angajator, a finalității plății, sau reclasificarea unei părți din salariu drept contraprestație, nu poate înlocui comunicarea făcută la încheierea contractului.
 
 Rezonabilitatea contraprestației nu se apreciază numai după sumă. Se vede împreună dacă lucrătorul obține realmente un beneficiu suplimentar, dacă condițiile de virament sunt clare, cum se atribuie partea corespunzătoare perioadei deja lucrate și dacă întinderea restituirii nu este excesivă. Chiar dacă există o contraprestație, nu se autorizează fără limită orice durată de menținere nici orice sumă de răspundere de restituire.
 
@@ -80,9 +80,9 @@ Chiar dacă există una dintre condițiile legale, perioada convenită și răsp
 
 La primul factor, se vede cât timp a durat realmente formarea și cât a suportat angajatorul. Nu este suficient să se prezinte totalul; este potrivit să se confirme împreună justificările defalcate, suma imputată fiecărui lucrător, competența pe care formarea a furnizat-o și partea de investiție deja recuperată.
 
-Al doilea factor, posibilitatea de înlocuire, nu se fixează numai cu invocarea angajatorului a dificultății de recrutare. Se examinează dacă este posibil să se obțină personal al aceluiași post sau al unui post similar, ce calificare și ce nivel de expertiză sunt necesare, care este perioada obișnuită de acoperire și dacă nevoia operațională invocată de angajator se acordă cu documente obiective.
+Al doilea factor, posibilitatea de înlocuire, nu se stabilește numai prin simpla invocare, de către angajator, a dificultății de recrutare. Se examinează dacă este posibil să se obțină personal al aceluiași post sau al unui post similar, ce calificare și ce nivel de expertiză sunt necesare, care este perioada obișnuită de acoperire și dacă nevoia operațională invocată de angajator se acordă cu documente obiective.
 
-Al treilea factor vede nu numai suma contraprestației, ci și întinderea. Importă când se virează și în ce condiții se atribuie definitiv lucrătorului, cum corespunde perioadei convenite în ansamblu și dacă, la stingerea pe parcurs, se reflectă perioada deja îndeplinită. O primă cu același nume se poate aprecia distinct după structura contractului și realitate.
+Al treilea factor privește nu numai suma contraprestației, ci și întinderea ei. Importă când se virează și în ce condiții se atribuie definitiv lucrătorului, cum corespunde perioadei convenite în ansamblu și dacă, la stingerea pe parcurs, se reflectă perioada deja îndeplinită. O primă cu același nume se poate aprecia distinct după structura contractului și realitate.
 
 Al patrulea factor poate include diverse împrejurări care influențează rezonabilitatea, precum cursul încheierii clauzei, natura muncii, ceea ce s-a explicat părților, perioada realmente lucrată și cauza stingerii. Importanța fiecărui factor poate varia după cauză, iar împrejurările de considerat nu se limitează la exemplele precedente. Trebuie deci examinate fără a omite faptele pertinente care apar în dosar.
 
@@ -96,9 +96,9 @@ Orientarea 勞動關2字第1150141814號 a Ministerului Muncii distinge și trat
 
 Cursurile pe care un angajat nou le primește de obicei, precum explicarea regulamentului de muncă (工作規則), prezentarea organizației și a sistemelor, transmiterea obișnuită a postului și ghidul procedurilor de bază de siguranță, trebuie confirmate în substanța lor. Costul general de angajare și de gestiune sau costul transmiterii postului pe care angajatorul trebuia oricum să le suporte nu se pot fixa ca obiect de restituire etichetându-le numai ca investiție separată.
 
-Totuși, nu se exclude întotdeauna o formare numai pentru că a fost asigurată în interiorul întreprinderii. Într-un același program se pot amesteca o parte de adaptare generală și o parte tehnică specializată, astfel că tema, timpul, costul și dacă există obligație legală trebuie confirmate pe curs. Cine invocă partea tehnică specializată are nevoie să explice prin documente ce conținut se distinge de formarea obișnuită și cine a suportat realmente costul.
+Totuși, nu se exclude întotdeauna o formare numai pentru că a fost asigurată în interiorul întreprinderii. Într-un același program se pot amesteca o parte de adaptare generală și o parte tehnică specializată, astfel că tema, timpul, costul și dacă există obligație legală trebuie confirmate pe curs. Cine invocă partea tehnică specializată trebuie să explice prin documente ce conținut se distinge de formarea obișnuită și cine a suportat realmente costul.
 
-În practică, nu se privește numai acoperirea materialului de formare, ci se confruntă indexul detaliat cu registrul real al formării. Trebuie verificat dacă este vorba de un curs periodic care se repetă, de un curs pentru o calificare sau o competență de operare a unor echipamente concrete, de o formare legal obligatorie, dacă lucrătorul a participat realmente și dacă suma cerută coincide cu justificările cheltuielilor de formare.
+În practică, nu se privește numai coperta materialului de formare, ci se confruntă cuprinsul detaliat cu registrul real al formării. Trebuie verificat dacă este vorba de un curs periodic care se repetă, de un curs pentru o calificare sau o competență de operare a unor echipamente concrete, de o formare legal obligatorie, dacă lucrătorul a participat realmente și dacă suma cerută coincide cu justificările cheltuielilor de formare.
 
 ## 6. Restituirea primelor și demisia anticipată
 
@@ -112,7 +112,7 @@ Chestiunea restituirii trebuie confirmată în ordine: valabilitatea clauzei, ca
 
 Clauza de restituire integrală, clauza penală fixă străină de pierderea reală și reținerea unilaterală a salariului nu se apreciază ca o singură problemă. Temeiul juridic, conținutul acordului, limitele din dreptul muncii și legalitatea reținerii trebuie confirmate separat. Suma scrisă în somația angajatorului sau faptul că lucrătorul a plătit o parte nu fixează nici ele restul chestiunilor juridice.
 
-Trebuie distinse și restituirea cheltuielilor de formare și restituirea prestației anticipate. Prima privește formarea tehnică specializată efectuată efectiv și pe suportarea costului; a doua privește finalitatea plății, comunicarea, condițiile de consolidare a dreptului și proporția cu perioada neîndeplinită. Dacă se cer ambele capete împreună, trebuie confruntate separat justificările fiecărui capăt și trebuie verificat dacă vreun cost a fost calculat de 2 ori.
+Trebuie distinse și restituirea cheltuielilor de formare și restituirea prestației anticipate. Prima privește formarea tehnică specializată efectiv realizată și suportarea costului ei; a doua privește finalitatea plății, comunicarea, condițiile de consolidare a dreptului și proporția cu perioada neîndeplinită. Dacă se cer ambele capete împreună, trebuie confruntate separat justificările fiecărui capăt și trebuie verificat dacă vreun cost a fost calculat de 2 ori.
 
 ## 7. Când contractul se stinge pentru o cauză neimputabilă lucrătorului
 
@@ -135,10 +135,10 @@ Când lucrătorul stinge un contract de muncă pe durată nedeterminată (不定
 Perioada de preaviz după vechimea continuă este următoarea.
 
 1. Dacă este de 3 luni sau mai mult și de mai puțin de 1 an: 10 zile
-2. Dacă este de 1 an sau mai mult și de mai puțin de 3 ani: 20 zile
-3. Dacă este de 3 ani sau mai mult: 30 zile
+2. Dacă este de 1 an sau mai mult și de mai puțin de 3 ani: 20 de zile
+3. Dacă este de 3 ani sau mai mult: 30 de zile
 
-Dacă perioada unui contract de muncă pe durată determinată pentru o muncă specifică (特定性定期契約) depășește 3 ani, se aplică norma separată a art. 15. Lucrătorul, după ce a lucrat 3 ani, poate stinge contractul cu un preaviz de 30 zile către angajator. Această normă trebuie distinsă de cea de preaviz după vechimea continuă aplicabilă contractului pe durată nedeterminată.
+Dacă perioada unui contract de muncă pe durată determinată pentru o muncă specifică (特定性定期契約) depășește 3 ani, se aplică norma separată a art. 15. Lucrătorul, după ce a lucrat 3 ani, poate stinge contractul cu un preaviz de 30 de zile adresat angajatorului. Această normă trebuie distinsă de cea de preaviz după vechimea continuă aplicabilă contractului pe durată nedeterminată.
 
 Dacă vechimea continuă este mai mică de 3 luni, dacă este vorba de un alt tip de contract pe durată determinată sau dacă se invocă o cauză legală de stingere imediată, dispoziția aplicabilă și faptele trebuie examinate individual. Simplul fapt că contractul consemnează un preaviz mai lung sau cere o transmitere imediată a postului nu permite să se fixeze dinainte concluzia juridică.
 
@@ -146,7 +146,7 @@ Dacă vechimea continuă este mai mică de 3 luni, dacă este vorba de un alt ti
 
 ## 9. Listă de verificare pentru angajator și lucrător
 
-Pentru a preveni un litigiu sau a examina o cerere deja pusă, nu trebuie citit numai contractul, ci ordonate împreună documentele de formare, de virament, de muncă și de stingere în ordine temporală. În special, a organiza într-un tablou cât s-a îndeplinit din perioada convenită și cât rămâne, și căror documente le corespund costul și contraprestația invocată, ajută la separarea controverselor.
+Pentru a preveni un litigiu sau a examina o cerere deja pusă, nu trebuie citit numai contractul, ci ordonate împreună documentele de formare, de virament, de muncă și de stingere în ordine temporală. În special, a organiza într-un tabel cât s-a îndeplinit din perioada convenită și cât rămâne, și căror documente le corespund costul și contraprestația invocată, ajută la separarea controverselor.
 
 ### Aspecte pe care angajatorul trebuie să le verifice
 

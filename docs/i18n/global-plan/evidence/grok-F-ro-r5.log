@@ -1,0 +1,200 @@
+# WO-F-ro — round 5 fix lane (ro), worktree /Users/son7/Projects/tseng-law-fix-ro-r5
+branch: fix/native-ro-r5-20260922 · date: 2026-09-23 · no git add/commit/push performed
+inputs read: RULEBOOK-FIX.md (R1–R17), ACCEPTED-ROUND.md, rounds/r5/ro-a.md (51 rows), rounds/r5/ro-b.md (56 rows)
+files touched: src/content/columns-ro/{001,002,003,004,006,007,008,009,010,011,012,013,014,015,016,017,018}.md,
+               src/data/international-guidance-eastern.ts (romanianGuidanceContent), src/data/international-guidance-answers.ts (ro),
+               src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.ro), this log.
+005 was not touched: its only two rows (a-30 ZWSP padding, empty bold) are skips — see below.
+
+## Rows applied
+
+### ro-a (part a) — 49 of 51 applied, 2 skipped
+1  001 "o putere de a încheia" → "împuternicirea de a încheia contracte"; also §5 "puterea de a încheia a reprezentantului" → "împuternicirea reprezentantului de a încheia contracte".
+2  001 "Singurul rezultat al acestei consultări nu satisface…" → "Rezultatul acestei consultări nu ține totuși loc, prin el însuși, de celelalte autorizații sau de cerințele…".
+3  001 list item 2 → "Autentificarea notarială sau supralegalizarea actelor străine, precum procura (委任書), și… verificarea de către o reprezentanță…"; body "un act autentic, o legalizare sau o autentificare" → "o autentificare notarială, o supralegalizare sau o verificare"; "calea de legalizare" → "calea de autentificare".
+4  002 "scadența, scrierea și folosirea reală" → "scadența, înregistrările contabile și folosirea reală".
+5  004 "Nu pentru că sediul a plătit toate cheltuielile pot valora…" → "O cheltuială nu devine automat deductibilă la sucursala taiwaneză numai pentru că a fost plătită de sediu".
+6  004 "o cotare este împinsă" → "se are în vedere, mai târziu, o cesiune de părți sau o listare" (whole sentence rebuilt, see row 32).
+7  004 "atașamentul de impunere" → "legătura de impunere (nexus)".
+8  004 "societate-releu (導管公司)" → "societate interpusă (導管公司)" ("Dacă în lanțul de operațiuni există…").
+9  008 art. 12 item 5 → "Deteriorează sau consumă intenționat utilaje, unelte, materii prime…".
+10 009 "boală contagioasă legală (法定傳染病)" → "boală transmisibilă cu declarare obligatorie (法定傳染病)".
+11 007 ground 9 "Viața sau moartea este necunoscută…" → "Nu se știe de mai mult de 3 ani dacă soțul mai este în viață" (both occurrences: list + §4 paragraph).
+12 007 "teama unui plec unilateral" → "temerea concretă a unei plecări unilaterale".
+13 SYSTEMIC "Singurul/singura" = "the only" where English has "mere/alone" → "Simplul/simpla" (or a rebuilt clause). 17 instances changed: 001×3, 002×2, 003×4, 004×3, 007×4, 011×1. Instances that genuinely mean "the only / a single" were left (003 "nu este singurul mijloc de probă", 002 "singurul administrator (董事)", 004 "singura soluție", 012 "o singură omisiune", 016 "un singur calendar", 014 "o singură clauză", …).
+14 004 SYSTEMIC French "ce n'est pas parce que … que": all 4 "Nu pentru că …" sentences rebuilt as "Faptul că … nu …" / "O cheltuială nu devine automat…". 0 left in the corpus.
+15 002 "ținute ca toate dispărute" → "considerate stinse toate prin simpla înregistrare"; also 002 "ținute ca încheiate" → "considerate încheiate"; 004 "ținut ca de la început exonerat" → "considerat scutit din start". 0 "a ține ca" left.
+16 SYSTEMIC determiner: guidance "Nu promitem nici un interpret, nici un termen de răspuns și nicio programare…" → "Nu promitem interpret, termen de răspuns sau programare prin această pagină."; "nu este încă nici o consultanță și nicio programare" → "nu este încă nici consultanță, nici programare confirmată"; answers.ro.faq "nu este nici o opinie juridică și nicio programare" → "nu este nici opinie juridică, nici programare confirmată"; llms notice "nici o susținere, nici o recomandare … și nicio vizibilitate" → "nici susținere, nici recomandare … și nici vizibilitate garantată"; 003 "nu este nici un temei autonom" → "nu constituie nici temei autonom"; 007 "Nu există nici o condiție generală" → "Nu există nicio condiție generală". Remaining "nici X, nici un Y" strings are the correlative conjunction (001 FAQ/§4, 004 table + disclaimer, 012, 017) and are correct Romanian — left as they are.
+17 SKIPPED — see "Rows skipped".
+18 003 "este 200.000 TWD" → "este de 200.000 TWD"; same for 3.000.000, 3.200.000 and 1.000.000 (4 amounts).
+19 007 stacked genitive "ale art. 1056/1057" → "prevăzute de art. 1056" / "prevăzută de art. 1057" (6 places, incl. the FAQ answer).
+20 002 "prezupunând" → "presupunând".
+21 007 "Legăți" → "Legați" (list items 4 and 8); item 4 "repertoriul de ansamblu" → "lista de ansamblu".
+22 002 "restante de impozit … încâlcită" → "restanțe fiscale … complexă"; 007 "restantele" → "restanțele".
+23 006 "salonelor" → "saloanelor".
+24 006 "dizabilitate vizuală" → "dizabilități vizuale" (20 instances, whole file).
+25 008 art. 12 items 1, 2, 3, 5 rebuilt verb-first ("Face declarații inexacte…", "Exercită violențe…", "A fost condamnat…", "Deteriorează sau consumă…").
+26 003 comma after fronted "potrivit art. …": art. 197, art. 237, art. 238. (007 line 49 "potrivit art. 48 din legea evidenței gospodăriilor" is a post-posed modifier of "Termenul general de cerere", not a fronted adverbial, so no comma is required — left.)
+27 guidance privacy "…nu este pe deplin sigur" → "…nu sunt pe deplin sigure".
+28 guidance "astfel încât știți dinainte" → "astfel încât să știți dinainte".
+29 008 "A folosit telefonul mobil pentru toată desfășurarea." → "A folosit telefonul mobil pentru a înregistra toată discuția" (stop removed so the lowercase continuation reads); "Nu încheiați ușor o tranzacție cu societatea." → stop removed; "și a demisionat ea însăși" → "și a demisionat din proprie inițiativă." (missing stop added). Block count unchanged.
+30 SKIPPED — see "Rows skipped".
+31 007 "o persoană alta decât soțul" → "o altă persoană decât soțul" (3 instances; 0 left).
+32 007 "Că acest fapt există nu fixează…" → "Faptul că această împrejurare există nu tranșează totodată…"; 004 "Că sediul furnizează totalul, că …, face structura…" → "Faptul că sediul furnizează totalul, că sunt primiți …, și că se are în vedere … o cesiune de părți sau o listare face structura potrivită mai netă."
+33 004 "personalitățile … nu se topesc pentru atât" → "personalitatea juridică a celor două societăți nu se confundă din acest motiv".
+34 007 "Prin comoditate" → "Pentru simplificare"; "niciun termen singur" → "niciun termen luat singur".
+35 007 "extra-patrimonial(e)" → "nepatrimonial(e)" (2 instances; 0 left).
+36 SYSTEMIC corporate "beneficiu" (fr. bénéfice) → "profit": 001×5, 002×4, 003×1, 004×27 (incl. the §2 heading, both table rows, both official-source link labels). "beneficiar real / dreptul la beneficii (trust, 016) / un beneficiu suplimentar pentru lucrător (014) / 股息和紅利 (005)" were left — they are not the corporate-tax sense.
+37 001 "Orașul Taipei exploatează" → "Orașul Taipei pune la dispoziție" (kept "Orașul Taipei" rather than the reviewer's "Municipiul", because 013/015 and the source-link label use "orașul Taipei").
+38 001 "nu înseamnă nicio ordine și nicio durată fixă" → "nu reprezintă o ordine sau o durată fixă, valabile la fel în toate cazurile"; same sentence "un tablou de ansamblu" → "o privire de ansamblu".
+39 008 "B recunoscuse totuși" → "B își dăduse totuși seama"; the following lines re-worded ("să îi facă pe salariați să plece", "și observase acest lucru de timpuriu").
+40 007 "Nu se poate limita că…" → "Nu se poate susține că orice modificare trebuie precedată de un eveniment pe care părțile nu-l puteau prevedea."
+41 007 "mijloace pe care să le poți schimba răzbunându-te reciproc" → "mijloace de schimb prin care părțile să se răzbune una pe alta".
+42 guidance "…și nici că preluăm orice cauză." → "Nu promitem interpret și nicio prestație în limba română sau în altă limbă în afara celor patru arătate; nu preluăm orice cauză."
+43 guidanceAnswers.ro.services "…succesiuni, muncă, cauze penale…" → "…succesiuni, litigii de muncă, cauze penale…".
+44 002 "Spre exterior, bani pot în fiecare caz să părăsească…" → "Din exterior, în toate cazurile se vede că banii ies din contul societății".
+45 002 "dacă reluarea a dispărut" → "dacă perspectiva reluării a dispărut"; "trebuie să fie definitiv terminată" → "trebuie desființată definitiv".
+46 004 "aptitudinea la cotare" → "eligibilitatea pentru listare" ("Simpla existență a unei filiale taiwaneze nu creează…"); table cell "Amenajabilă prin statut…" → "Se poate configura prin statut, prin cercul de acționari și printr-un pact de acționari".
+47 003 "merge de la 80.000 TWD la 3.000.000 TWD după 15 grade" → "variază între 80.000 TWD și 3.000.000 TWD, pe 15 grade legale".
+48 003 "Autorul nu se preocupă adesea să telefoneze … nici să-i facă vizită" → "Adesea autorul nu se ostenește să sune pentru a afla vești despre victimă și nici să-i facă o vizită".
+49 008 "a-l blameze, spunând că B nu lucra cu conștiință" → "să-i reproșeze că B nu își face treaba conștiincios"; "cerință nerațională" → "cerință nerezonabilă"; "a respins puternic" → "a respins ferm".
+50 007 SYSTEMIC 會面交往: "relațiile/relațiilor personale" → "legăturile/legăturilor personale" (4 instances), so headings, FAQ and body now use one term.
+51 008 "Prin comparație cu unele state — Coreea fiind un exemplu —, acolo societatea…" → "În unele state, precum Coreea, societatea trebuie de regulă să plătească o indemnizație…" (main clause restored; Korea stays a labelled example per R2c).
+
+### ro-b (part b) — 56 of 56 applied (row 8 partially reverted for the checker, see "Checker constraints")
+1  016 "un candidat având un interes economic cu copilul" → "un candidat al cărui interes economic este în conflict cu cel al copilului".
+2  SYSTEMIC "singur(ul/a)" for English "alone/mere" → 010 "Hotărârea oficială de primă instanță nu permite, prin ea însăși, confirmarea…", 010 "Procentul de incapacitate nu stabilește, singur, despăgubirea", 011 "prin simpla mențiune restrictivă", 016 "prin simpla legătură de rudenie", 017 "Simplul fapt de a fi semnat contractul", 017 "prin simpla denumire aleasă", 018 "Un contract de distribuție nu elimină, prin el însuși, …". Counted in row a-13's sweep total.
+3  017 "10.000.000 TWD și cel puțin 8 unități" → "10.000.000 TWD și cel puțin 8 camioane noi" (and the Kinmen/Lienchiang limb "5 camioane noi"), in both the FAQ answer and the body.
+4  017 "singura calitate de acționar sau de investitor" → "simpla calitate…" (both occurrences, lines 18 and 109).
+5  014 "acoperirea materialului de formare … indexul detaliat" → "coperta materialului de formare … cuprinsul detaliat".
+6  014 FAQ question "este automat nul?" → "este automat nulă?".
+7  016 digit-for-article: "1 dintre părinți"×3 → "unul dintre părinți", "la 1 chestiune" → "la o chestiune", "că 1 părinte a decedat" → "că un părinte a decedat" (checker still PASS on numbers for 016).
+8  017/018 digit-for-article — see "Checker constraints": the digit had to stay; the surrounding wording was still repaired ("1 camion mic aflat în proprietate proprie, cu o vechime care nu depășește 2 ani", "să înceapă în termen de 1 lună", "Se poate forma cu 1 sau mai multe persoane fizice").
+9  014 "30 zile"×2 și "20 zile" → "30 de zile" / "20 de zile" ("preaviz de 30 de zile adresat angajatorului").
+10 011 "de 10.000 până la 1.000.000 dolari din Taiwan" → "de la 10.000 la 1.000.000 de dolari taiwanezi"; same for the 40.000–200.000 amount on line 16.
+11 018 "100 lucrători la regimul de asigurare a muncii" → "100 de lucrători înscriși la asigurarea de muncă".
+12 010 "până la 5 ori prejudiciul real; … până la 3 ori" → "până la de 5 ori prejudiciul efectiv; … până la de 3 ori" (and "cuantumul prejudiciului efectiv").
+13 010 "prin el însuși" → "prin ea însăși" (antecedent "Această cerere scrisă").
+14 010 "să reții" → "să rețineți".
+15 014 "Orientarea (函釋) a Ministerului Muncii" → "Orientarea (函釋) Ministerului Muncii".
+16 014 "nu se fixează numai cu invocarea angajatorului a dificultății" → "nu se stabilește numai prin simpla invocare, de către angajator, a dificultății".
+17 014 "efectuată efectiv și pe suportarea costului" → "efectiv realizată și suportarea costului ei".
+18 016 "Trebuie confirmat mai întâi starea" → "Trebuie confirmată mai întâi starea".
+19 016 "cercul contribuabililor poate diferi" → "…pot diferi".
+20 016 "Care procedură a cărei țări…" → "Ordinea în care se tratează procedurile din fiecare țară trebuie apreciată în raport cu interesul superior al copilului și cu posibilitatea de executare."
+21 017 "Printre cerințe figurează că…" → "Printre cerințe se numără: solicitantul trebuie să aibă …, să posede …, să folosească…".
+22 011 checklist item 1 → "1. Stabilirea formei de intrare: dacă înființați dumneavoastră o filială sau o sucursală în Taiwan ori dacă încredințați importul și vânzarea unui importator local." (kept the nominal form the other five items use, instead of the reviewer's imperative, so the list stays parallel).
+23 011 "orice publicație personală nu devine automat o publicitate" → "nu orice publicație personală devine automat publicitate".
+24 017 "orice investiție străină nu urmează" → "nu orice investiție străină urmează".
+25 015 "Potrivit „[Instrucțiunile…" → "Potrivit „[Instrucțiunilor…" (link target untouched).
+26 015 "Dacă se deschide într-un loc unde localul de alimentație nu este posibil, o amendă… poate fi aplicată" → "Dacă localul de alimentație este deschis într-un loc în care nu este permis, autoritatea competentă poate aplica ulterior o amendă administrativă (罰鍰)."
+27 018 "Dacă prevedeați" → "Dacă intenționați" (all 3 occurrences).
+28 018 "modul de a opera al sediului" → "modul de operare al sediului".
+29 016 "Facultățile de administrare, de uz, de fructe și de dispoziție ale art. 1088" → "Drepturile de administrare, de folosință, de culegere a fructelor și de dispoziție prevăzute la art. 1088".
+30 016 "cărțile societății" → "registrele societății"; checklist "conturile, cărțile" → "conturile, registrele".
+31 011 SYSTEMIC "subiect" = company → "entitate": frontmatter title, H1, §1 heading ("alegerea entității importatoare" ×3), FAQ + body "entitatea care va asuma răspunderea" ×2, "entitatea răspunzătoare din punct de vedere juridic", "entitatea răspunzătoare centrală", checklist item 2. 018 "trebuie un subiect care să poată vinde" → "trebuie o entitate…". 0 left in 011. ("subiect de drept / subiect juridic" in 001, 004, 017, 018 is correct Romanian legal usage and was left.)
+32 017 infinitive headings → nouns: "## 2. Înființarea unei noi întreprinderi de transport de mărfuri cu autovehicule", "## 3. Achiziționarea unui antreprenor existent", "## 4. Încredințarea transportului și a expedierii către altcineva și munca străinilor".
+33 017 SYSTEMIC "comerț" = undertaking → "întreprindere"/"activitate": "întreprinderea consacrată numai mutărilor"×2, "întreprinderea exploatată la Kinmen"×2, "gestiunea întreprinderii"×2, "întinderea activității"×2, "în limitele activității aprobate", "criteriul aplicabil activității". 018 "## 7. … după etapa de dezvoltare a activității", "activitatea comercială reală"×2, "Asociații care nu administrează societatea". Left untouched: "fond de comerț"/"fondul de comerț" (correct Romanian for the going concern), "registrul societăților și al comerțului", "Departamentul comerțului al Ministerului Economiei (經濟部商業發展署)" (proper name). Also 006 "exploatează un comerț de masaj" → "exploatează o unitate de masaj".
+34 017 "transportul real" → "transportul propriu-zis" (all 4 occurrences, FAQ + body).
+35 018 "Asociații care nu execută comerțul" → "Asociații care nu administrează societatea".
+36 014 "Un curs intern poate stabili" → "…poate presupune".
+37 SYSTEMIC "tablou" for a table → "tabel": 001 "privire de ansamblu", 002, 003×4 (道路交通事故初步分析研判表), 004×3, 007 "tabel cronologic", 008 "tabel simplu", 014. 0 "tablou" left in columns-ro.
+38 014 "Al treilea factor vede" → "Al treilea factor privește … ci și întinderea ei".
+39 014 "are nevoie să explice" → "trebuie să explice".
+40 016 "printre alte conținuturi" → "printre altele".
+41 010 "să se reunească împreună" → "să se strângă".
+42 012 "A a pierdut cunoștința" → "A și-a pierdut cunoștința".
+43 012 "Apropiații lui A și B au văzut … ca cauza principală" → "Familiile lui A și B au crezut la început că … a fost cauza principală".
+44 012 "o singură omisiune … fixează întotdeauna răspunderea" → "… stabilește întotdeauna răspunderea".
+45 012 "Răspunderea reală" → "Răspunderea concretă".
+46 013 "să se refere și la această parte aprofundată mai detaliată" → "pot consulta apoi și această parte aprofundată".
+47 013 "O angajată sau un angajat al unei bănci" → "Un angajat al unei bănci".
+48 013 heading 4 → "**4. La ce trebuie să fiți atent când luați în locațiune adresa de înregistrare a societății (de exemplu un local de alimentație)?**".
+49 013 "ramurile de activitate (營業項目) ale societății" → "obiectul de activitate (營業項目) al societății".
+50 013 "exploatarea unui restaurant" → "exploatarea unui local de alimentație".
+51 013 "Înainte de încheierea contractului de locațiune / ar trebui să verificați dinainte." → "Înainte de a semna contractul de locațiune / ar trebui să verificați acest aspect." (two blocks kept as two blocks).
+52 011 "după împrejurarea că autoritatea cere sau nu" → "după cum autoritatea cere sau nu" (all 3 occurrences; "variază după fiecare cauză" → "variază de la caz la caz" in 2 of them).
+53 011 "A distinge împărțirea muncii după contract de subiectul de răspundere…" → "Distincția dintre împărțirea contractuală a muncii și entitatea răspunzătoare potrivit reglementării este punctul de plecare…".
+54 017 "La lucrul fără permis se pot aplica…" → "Munca fără permis poate atrage o amendă administrativă și un ordin de a părăsi Taiwanul (限令出國)."
+55 017 "prin singura denumire" → "prin simpla denumire aleasă".
+56 010 "Singurul procent de incapacitate nu fixează despăgubirea" → "Procentul de incapacitate nu stabilește, singur, despăgubirea".
+
+## Rows skipped (with reason)
+
+- ro-a row 17 (restore 23 `###` subheadings in 007) — SKIPPED. ACCEPTED-ROUND forbids adding headings, and the checker pins heading levels to the KOREAN source, not to columns-en: `src/content/columns/007` has 0 `###` and `src/content/columns-ro/007` has 0, so adding 23 headings fails `checkHeadings` ("levels source=[…] target=[…]") for that file. The reviewer compared against columns-en, which is a different (richer) layout. This is an upstream/source-layout decision for the supervisor, not something the ro lane can fix without breaking the gate.
+- ro-a row 30 (delete the U+200B-only lines in 003/008/005/006 and the empty `**​**` in 005) — SKIPPED. The checker compares ZWSP counts against the Korean source and requires equality (`ZWSP source → target`): ko/ro are 52/52 (003), 10/10 (008), 8/8 (005), 4/4 (006), and the four `**​**` lines in 005 exist byte-identically in `src/content/columns/005`. Deleting them makes `blocks` FAIL. The padding is inherited from the Korean source (English has none), i.e. a pipeline/source artefact, exactly as ro-b's verdict says for 013/015. Supervisor decision needed upstream.
+- Frontmatter `url:` Hangul in 008/009 and the fullwidth colon inside that url — SKIPPED per ACCEPTED-ROUND / R16. Verified that these are the ONLY Hangul and the ONLY fullwidth punctuation left anywhere in columns-ro.
+- The pinned bio figure "1,57 mil. TWD" (guidance team bio) — untouched.
+- ro-a row 26's "007 line 49" instance — not applied: "Termenul general de cerere de înscriere în evidența gospodăriilor potrivit art. 48 din legea evidenței gospodăriilor (戶籍法) este de 30 de zile…" is a post-posed attributive to "Termenul", not a fronted adverbial, so no comma is required. The three genuinely fronted instances in 003 were fixed.
+
+## Checker constraints hit (and how they were resolved)
+
+- ro-b rows 7/8 ask for the digit `1` to become the article/pronoun. Doing that everywhere made `numbers` FAIL:
+  017 "missing from translation (4): 1×4  sourceCount=44 targetCount=40"; 018 "missing from translation (1): 1  sourceCount=25 targetCount=24".
+  Resolution per the work order ("prefer the form the checker accepts"): the digit was kept in 017 ("în special 1 camion mic…"×2, "să folosească 1 camion mic…", "să înceapă în termen de 1 lună") and in 018 ("Se poate forma cu 1 sau mai multe persoane fizice"), while the rest of each phrase was still repaired ("aflat în proprietate proprie", "cu o vechime care nu depășește 2 ani", "în termen de"). The same change in 016 (5 instances) did NOT break the checker and was kept as words.
+- No other number/date format had to be reverted; the Romanian dot-thousands / decimal-comma forms already in place were left alone.
+
+## Systemic patterns swept (instances changed)
+
+| pattern | instances |
+|---|---|
+| "Singurul/singura" (= mere/alone) → "Simplul/simpla" or rebuilt clause | 24 (001×3, 002×2, 003×4, 004×3, 007×4, 010×2, 011×1, 016×1, 017×3, 018×1) |
+| French "Nu pentru că … " frame (004) | 4 |
+| "a ține ca" → "a considera" | 3 (002×2, 004×1) |
+| corporate "beneficiu" → "profit" | 37 (001×5, 002×4, 003×1, 004×27) |
+| "tablou" (table) → "tabel" / "privire de ansamblu" | 12 |
+| determiner "nici un / nici o" (non-correlative) → "niciun/nicio" or rebuilt | 6 (guidance×4, 003, 007) |
+| "o persoană alta decât" → "o altă persoană decât" (007) | 3 |
+| "extra-patrimonial" → "nepatrimonial" (007) | 2 |
+| "ale art. 105x" stacked genitive → "prevăzut(ă/e) de art. 105x" (007) | 6 |
+| 會面交往 "relații personale" → "legături personale" (007) | 4 |
+| "dizabilitate vizuală" → "dizabilități vizuale" (006) | 20 |
+| digit-for-article "1" → "unul/o/un" (016) | 5 |
+| numerals ≥ 20 without "de" (014, 011, 018) | 5 |
+| "orice X nu Y" → "nu orice X Y" (011, 017) | 2 |
+| "subiect" (company) → "entitate" (011, 018) | 10 |
+| "comerț" (undertaking) → "întreprindere/activitate" (017, 018, 006) | 13 |
+| "transportul real" → "transportul propriu-zis" (017) | 4 |
+| "după împrejurarea că" → "după cum" (011) | 3 |
+| infinitive headings → nouns (017) | 3 |
+| "Dacă prevedeați" → "Dacă intenționați" (018) | 3 |
+
+Product-fact checks re-verified after the edits: consultation languages remain EN/中文/JA/KO only; no interpreter / reply-time / free-consultation / 24-7 / result / win-rate / "best-only" claim was introduced; Traditional-Chinese glosses, frontmatter keys, `url`, `lastmod`, `featured_image`, image paths, external links, numbers, dates and block/heading/list/table counts unchanged (checker `blocks`, `headings`, `images`, `links`, `numbers` all PASS); attorney Wei Tseng stays feminine; the male manager (008) and male client (010) stay male.
+Disclosure parity: the guidance rewrites kept every `src/data/__tests__/guidance-disclosure-parity.test.ts` ro marker (`/interpret/`, `/termen de răspuns/`, `/programare/`, `/orice cauză/`, `/opinie juridică/`, `/căsătorie/i`, …), `GUIDANCE_LLMS_NOTICES.ro.discoveryNotice` still contains the literal `llms.txt`, and `consultationNotice` / `confidentialNotice` were not touched, so they remain verbatim substrings of the FAQ answer and the privacy paragraph. No test file needed editing — `guidance-cs-hu-ro-uk-el-he-content.test.ts` ('Este posibilă o consultanță în limba română?', /^Nu\./) and `international-guidance-answers.test.ts` ('este preluată', 'se hotărăște') pin strings that were not changed.
+
+## Things I believe the reviewer got wrong (NOT applied)
+
+1. ro-a row 17 — the 23 missing `###` subheadings in 007 are not a Romanian defect: the Korean source (`src/content/columns/007-taiwan-divorce-lawsuit-qna.md`) has 0 `###` too, and the checker pins heading levels to that source. Only columns-en has them. Upstream/source-layout item.
+2. ro-a row 30 — the U+200B-only lines in 003 (52), 008 (10), 005 (8), 006 (4) and the four `**​**` lines in 005 are byte-identical to the Korean source and the checker pins ZWSP counts to it. The reviewer's own note that the same artefact is "a pipeline defect, not a Romanian one" for 013/015 applies here as well; the claim that "009's five ZWSP match the English but 003's 52 are Romanian-only" is not borne out — all of them match the Korean source.
+3. ro-a row 37 — the verb "a exploata" was indeed wrong and was fixed, but the reviewer's "Municipiul Taipei" was not adopted: the same entity is called "orașul Taipei" in 013, 015 and in 001's own official-source link label, so renaming it in one paragraph would break the term consistency the rulebook asks for.
+4. ro-b row 22 — the checklist item was fixed, but as a nominalization ("Stabilirea formei de intrare: dacă …") rather than the reviewer's imperative ("Stabiliți dacă …"): items 2–6 of the same list are all nominalizations, so an imperative in item 1 alone would break the parallelism the reviewer praises elsewhere.
+5. ro-b row 8 (and part of row 7) — correct as Romanian, but not applicable in 017/018 where the Korean source carries the digit and the checker counts it; see "Checker constraints".
+6. ro-a row 26 — one of the four listed instances (007 line 49) is not a fronted adverbial and does not take a comma; the other three were fixed.
+
+## §Verify output verbatim
+
+$ cd /Users/son7/Projects/tseng-law-fix-ro-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=74
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ro src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      24
+(21 tracked files modified + 2 untracked round-5 review files + this log = 24; docs/i18n/global-plan/WO-F-ro.txt was already modified before this lane started and was not touched.)

@@ -2798,7 +2798,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Konunuz çok acilse ne olur?',
           answer:
-            'Süreyi veya resmi bir yazıdaki tarihi özetinizin başında belirtin ki incelemede görülsün. Bu sayfanın ivedi bir kanalı yoktur ve yanıt süresi sağlanmaz; işiniz bekleyemiyorsa bulunduğunuz yerde paralel başka yollar aramalısınız.',
+            'Süreyi veya resmi bir yazıdaki tarihi özetinizin başında belirtin ki incelemede görülsün. Bu sayfanın ivedi bir kanalı yoktur ve yanıt süresi sağlanmaz; işiniz bekleyemiyorsa bulunduğunuz yerde başka bir yola da başvurmalısınız.',
         },
       ],
     },

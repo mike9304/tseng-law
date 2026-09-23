@@ -67,7 +67,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 该表当天即可发给。
 
-但移民署窗口人非常多，宜早到并取号。
+但移民署办事窗口往往要排很久，宜早到并取号。
 
 ​
 

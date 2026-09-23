@@ -13,7 +13,7 @@ faq:
   - q: "Hvað er PIF, og er það sama málsmeðferð og vöruskráning hjá TFDA?"
     a: "Vöruskráning og PIF eru tvö aðskilin fyrirkomulög. Vöruskráning (產品登錄) er sérstök formleg meðferð á vöruskráningarvettvangi TFDA fyrir snyrtivörur (衛生福利部食品藥物管理署). PIF er skrá sem safnar gögnum um gæði, öryggi, samsetningu, fullyrta virkni, framleiðsluaðferð, prófunarniðurstöður og öryggismat o.fl., og sem framleiðandi eða innflytjandi snyrtivara semur, uppfærir og varðveitir; PIF sjálft er ekki skjal sem skal lagt fram fyrir fram til TFDA (產品資訊檔案). Frá 1. júlí 2026 falla að jafnaði allar snyrtivörur undir PIF-fyrirkomulagið, að undanskildum föstum handunnum sápum sem framleiddar eru á framleiðslustað sem er undanþeginn verksmiðjuskráningu (工廠登記)."
   - q: "Hvaða orðalagi skal gæta sérstaklega í auglýsingum snyrtivara á Taívan?"
-    a: "Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæft eða ofdrifið orðalag og fullyrðing um læknandi verkun eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin (罰鍰) er 40.000 TWD til 200.000 TWD (新臺幣) vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknandi verkun. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í raun auglýsing."
+    a: "Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Rangt eða ýkt orðalag og fullyrðing um læknandi verkun eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin (罰鍰) er 40.000 TWD til 200.000 TWD (新臺幣) vegna rangra eða ýktra auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknandi verkun. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í raun auglýsing."
 ---
 
 # Innkoma á snyrtivörumarkað Taívan: val á innflytjanda, vöruskráning, gerð og varðveisla PIF og auglýsingareglur
@@ -40,13 +40,13 @@ Við hönnun raunverulegrar verkaskiptingar er það sem fyrst skal staðfesta, 
 
 ### Þegar starfsemin á Taívan er rekin beint
 
-Taívanskt dótturfélag og útibú erlends félags eru ekki sama skipulagið. Dótturfélagið er sérstakur lögaðili stofnaður samkvæmt rétti Taívan, en útibúið er skráð sem hluti höfuðstöðva (本公司) hins erlenda félags. Þau greinast í lögaðilastöðu, ábyrgð höfuðstöðva, bókhalds- og skattalega meðferð, flutning hagnaðar, fyrirsvarsrétt og innra eftirlit, svo skipulagsformið má ekki velja einungis eftir því hversu mikilli stjórn á sölunni er óskað.
+Taívanskt dótturfélag og útibú erlends félags eru ekki sama skipulagið. Dótturfélagið er sérstakur lögaðili stofnaður samkvæmt rétti Taívan, en útibúið er skráð sem hluti höfuðstöðva (本公司) hins erlenda félags. Þau eru ólík hvað varðar lögaðilastöðu, ábyrgð höfuðstöðva, bókhalds- og skattalega meðferð, flutning hagnaðar, fyrirsvarsrétt og innra eftirlit, svo skipulagsformið má ekki velja einungis eftir því hversu mikilli stjórn á sölunni er óskað.
 
 Sé málsmeðferð erlendrar fjárfestingar nauðsynleg skal staðfesta leiðbeiningar **fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司)** sem nú er lögbær stofnun. Sá tími sem þarf til fjárfestingarheimildar, millifærslu fjár, skráningar félags eða útibús, opnunar bankareiknings, skattaskráningar (稅籍登記) og öflunar innflytjandastöðu er misjafn eftir fjárfesti, atvinnugrein, skipulagsformi, framlögðum gögnum og því hvort leiðrétting eða viðbót kemur til. Því skal, í stað þess að ákveða dagsetningu markaðssetningar út frá einum föstum tímaramma, fyrst staðfesta beitingu hverrar formlegrar meðferðar og nýjustu skilakröfur.
 
 Hvaða skipulag sem valið er, er miðlægi ábyrgðaraðilinn í snyrtivörureglunum **framleiðandi eða innflytjandi snyrtivara (化粧品製造或輸入業者)**. Röðun vörugagna eða öryggismat (安全性評估) má fela utanaðkomandi sérfræðingi, en það eitt að fela verkið flytur ekki lögbundna ábyrgð framleiðanda eða innflytjanda. Að greina milli verkaskiptingar samkvæmt samningi og ábyrgðaraðila samkvæmt reglunum er upphafspunktur könnunar innkomuskipulagsins.
 
-## 2. Vöruskráning og PIF eru 2 aðskilin fyrirkomulög
+## 2. Vöruskráning og PIF eru tvö aðskilin fyrirkomulög
 
 Vöruskráning og PIF eru tvö aðskilin fyrirkomulög. Vöruskráning er sérstök formleg meðferð á vöruskráningarvettvangi TFDA fyrir snyrtivörur (衛生福利部食品藥物管理署). PIF er skrá sem safnar gögnum um gæði, öryggi, samsetningu, fullyrta virkni, framleiðsluaðferð, prófunarniðurstöður og öryggismat o.fl., og sem framleiðandi eða innflytjandi snyrtivara semur, uppfærir og varðveitir; PIF sjálft er ekki skjal sem skal lagt fram fyrir fram til TFDA (產品資訊檔案). Frá 1. júlí 2026 falla að jafnaði allar snyrtivörur undir PIF-fyrirkomulagið, að undanskildum föstum handunnum sápum (固態手工香皂) sem framleiddar eru á framleiðslustað sem er undanþeginn verksmiðjuskráningu (工廠登記).
 
@@ -56,7 +56,7 @@ Vöruskráning snyrtivara fer fram á vöruskráningarvettvangi TFDA fyrir snyrt
 
 Gildistími vöruskráningar er 3 ár. Ætlir þú að halda afhendingu áfram skal umsókn um framlengingu (展延) lögð fram innan 3 mánaða fyrir lokin. Breyti skráðar upplýsingar, svo sem vöruheiti, notkun, skammtaformið (劑型), innihaldsefni og framleiðslustaður, skal einnig staðfesta hvort formleg meðferð sem svarar innihaldi breytingarinnar sé nauðsynleg.
 
-Vöruskráning er formleg meðferð til að tilkynna tilteknar upplýsingar á vettvanginum. Það að skráningu sé lokið þýðir ekki að öll gögn sem PIF krefst séu fullkomin, og er ekki mat um að merking eða auglýsing vörunnar samræmist rétti. Áætlun vöruskráningar, stjórnun PIF og skoðun merkingar og auglýsinga skulu reknar sem aðskilin eftirfylgnisatriði.
+Vöruskráning er formleg meðferð til að tilkynna tilteknar upplýsingar á vettvanginum. Það að skráningu sé lokið þýðir ekki að öll gögn sem PIF krefst séu tæmandi, og felur ekki í sér mat á því hvort merking eða auglýsing vörunnar samræmist lögum. Áætlun vöruskráningar, stjórnun PIF og skoðun merkingar og auglýsinga skulu reknar sem aðskilin eftirfylgnisatriði.
 
 ### Gögn PIF og beiting í áföngum
 
@@ -64,7 +64,7 @@ PIF er skipulagt safn gagna, þannig uppbyggt að áfram megi lýsa gæðum og �
 
 PIF-fyrirkomulagið hefur verið beitt í áföngum eftir vöruhópum. Frá 1. júlí 2026 falla einnig þær snyrtivörur sem eftir eru undir beitingarsviðið, svo það gildir að jafnaði um allar snyrtivörur. Undanþágan takmarkast við fasta handunna sápu sem framleidd er á framleiðslustað sem er undanþeginn verksmiðjuskráningu. Vara er ekki undanþegin af því einu að hún sé handunnin, eða að hún beri heitið sápa; staðfesta skal hvort tveggja, fasta formið og skilyrði undanþágu framleiðslustaðarins frá verksmiðjuskráningu (工廠登記).
 
-Starf við PIF, þar á meðal öryggismat, má styðja þriðji aðili sem hefur nauðsynlegt hæfi og getu. Einnig þegar þriðji aðili styður við gerð gagnanna eða hjálpar til við að varðveita þau, stendur lögbundin ábyrgð framleiðanda eða innflytjanda snyrtivara. Koma skal á skipulagi sem leyfir upprunaframleiðanda, prófunarstofu, öryggismatsaðila og fyrirtækinu á Taívan að miðla innbyrðis breytingaupplýsingum og nýjustu undirrituðu gögnum.
+Starf við PIF, þar á meðal öryggismat, má styðja þriðji aðili sem hefur nauðsynlegt hæfi og getu. Jafnvel þótt þriðji aðili styðji við gerð gagnanna eða hjálpi til við að varðveita þau, stendur lögbundin ábyrgð framleiðanda eða innflytjanda snyrtivara. Koma skal á skipulagi sem leyfir upprunaframleiðanda, prófunarstofu, öryggismatsaðila og fyrirtækinu á Taívan að miðla innbyrðis breytingaupplýsingum og nýjustu undirrituðu gögnum.
 
 ### Uppfærsla og varðveisla
 
@@ -72,27 +72,27 @@ Breyti hráefni eða formúla, framleiðsluaðferð og framleiðslustaður, merk
 
 Samkvæmt 7. gr. reglna um stjórnun vöruupplýsingaskrár snyrtivara er varðveislufresturinn að lágmarki 5 ár, talinn frá deginum eftir síðustu afhendingu vörunnar á markað. Samkvæmt 8. gr. sömu reglna er varðveislustaðurinn heimilisfang framleiðanda eða innflytjanda snyrtivara, ákveðið í 7. gr. 1. mgr. 7. tölul. laga um hollustuhætti og öryggi snyrtivara (化粧品衛生安全管理法). Ákvæðið sem ákveður tímabilið og ákvæðið sem ákveður staðinn skal aðgreina hvort frá öðru.
 
-Einnig þegar upprunaframleiðandi varðveitir frumritið, eða þegar örugg rafræn geymsla eða skýjageymsla er notuð, skal framleiðandi eða innflytjandi geta náð í fullkomin gögn (產品資訊檔案). Aðgangsréttindi, öryggisafrit, útgáfustjórnun, skráarsnið og ábyrgðaraðili skulu ákveðin, svo gögnin megi fljótt finna og leggja fram þegar lögbær stofnun óskar. Einnig er mikilvægt í samningnum að kveða á um hvaða gögn eru afhent, hvernig afhendingin fer fram, og hvort aðgangsrétturinn haldist, svo gögnin haldist á lögbundnum varðveislufresti, einnig eftir lok samnings við söluaðila eða þjónustuveitanda.
+Jafnvel þótt upprunaframleiðandi varðveiti frumritið, eða þótt örugg rafræn geymsla eða skýjageymsla sé notuð, skal framleiðandi eða innflytjandi geta náð í gögnin í heild (產品資訊檔案). Aðgangsréttindi, öryggisafrit, útgáfustjórnun, skráarsnið og ábyrgðaraðili skulu ákveðin, svo gögnin megi fljótt finna og leggja fram þegar lögbær stofnun óskar. Einnig er mikilvægt í samningnum að kveða á um hvaða gögn eru afhent, hvernig afhendingin fer fram, og hvort aðgangsrétturinn haldist, svo gögnin haldist á lögbundnum varðveislufresti, einnig eftir lok samnings við söluaðila eða þjónustuveitanda.
 
 ### Skoðun, úrbætur og stjórnsýsluráðstafanir
 
-Þegar lögbær stofnun skoðar PIF tilkynnir hún að jafnaði framleiðanda eða innflytjanda snyrtivara (化粧品製造或輸入業者) eigi síðar en 7 dögum fyrir skoðunardag. Falli málið þó undir lögbundna undanþágu sem tengdar reglur kveða á um, má skoðunin fara fram án fyrirframtilkynningar. Hvort tilkynning sé til staðar eða ekki skal ávallt viðhalda því ástandi sem leyfir að finna og leggja fram fullkomin uppfærð gögn.
+Þegar lögbær stofnun skoðar PIF tilkynnir hún að jafnaði framleiðanda eða innflytjanda snyrtivara (化粧品製造或輸入業者) eigi síðar en 7 dögum fyrir skoðunardag. Falli málið þó undir lögbundna undanþágu sem tengdar reglur kveða á um, má skoðunin fara fram án fyrirframtilkynningar. Hvort sem tilkynning berst eða ekki skal ávallt viðhalda því ástandi sem leyfir að finna og leggja fram uppfærð gögn í heild.
 
-Tilkynning rangra upplýsinga í vöruskráningunni eða færsla rangra upplýsinga í PIF getur verið háð stjórnvaldssekt (罰鍰) að fjárhæð 10.000 TWD til 1.000.000 TWD (新臺幣). Séu PIF-gögnin hins vegar ófullkomin leggur lögbær stofnun að jafnaði fyrir úrbætur innan tiltekins frests (限期改正), og stjórnvaldssektin kemur fyrst til þegar ekki er bætt úr innan þess frests. Ekki má fella rangar upplýsingar og ágalla í gögnum, sem enn má bæta úr, undir sömu niðurstöðu.
+Tilkynning rangra upplýsinga í vöruskráningunni eða færsla rangra upplýsinga í PIF getur varðað stjórnvaldssekt (罰鍰) að fjárhæð 10.000 TWD til 1.000.000 TWD (新臺幣). Séu PIF-gögnin hins vegar ófullkomin leggur lögbær stofnun að jafnaði fyrir úrbætur innan tiltekins frests (限期改正), og stjórnvaldssektin kemur fyrst til þegar ekki er bætt úr innan þess frests. Ekki má fella rangar upplýsingar og ágalla í gögnum, sem enn má bæta úr, undir sömu niðurstöðu.
 
 Endurköllun eða förgun (銷毀) er ekki ráðstöfun sem sjálfkrafa fylgir hverjum ágalla í PIF-gögnum. Öryggi vörunnar, innihald brotsins, staða úrbóta og lögbundin skilyrði sem gilda um hverja ráðstöfun skal meta aðskilið. Ráðstöfunina þegar öryggisvandamál er staðfest, og beiðni um viðbót skjala, skal kanna hvora í sínu lagi, og viðbrögðin fylgja tilkynningu lögbærrar stofnunar og því ákvæði sem beitt er.
 
 ## 3. Reglur um merkingu, kynningu og auglýsingu
 
-Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæft eða ofdrifið orðalag og fullyrðing um læknandi verkun eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin er 40.000 TWD til 200.000 TWD vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknandi verkun. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í raun auglýsing.
+Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Rangt eða ýkt orðalag og fullyrðing um læknandi verkun eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin er 40.000 TWD til 200.000 TWD vegna rangra eða ýktra auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknandi verkun. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í raun auglýsing.
 
 ### Mat eftir heild framsetningarinnar, ekki eftir hverju orði
 
-Hvort merking, kynning (宣傳) eða auglýsing sé röng eða ofdrifin, eða hvort þær fullyrði læknandi verkun (醫療效能), er ekki metið eftir einu tilteknu orði. Saman eru skoðuð vöruheiti, setning, mynd, tákn, hljóð, samhengi fyrir og eftir og heildarinntrykk sem neytandinn fær. Það inntrykk sem miðlæg auglýsingaframsetning myndar hverfur ekki við fyrirvara í smáu letri einum saman, svo bæði hvern texta og auglýsinguna eins og hún birtist skal skoða.
+Hvort merking, kynning (宣傳) eða auglýsing sé röng eða ýkt, eða hvort þær fullyrði læknandi verkun (醫療效能), er ekki metið eftir einu tilteknu orði. Saman eru skoðuð vöruheiti, setning, mynd, tákn, hljóð, samhengi fyrir og eftir og heildaráhrifin sem neytandinn verður fyrir. Þau áhrif sem miðlæg auglýsingaframsetning myndar hverfa ekki við fyrirvara í smáu letri einum saman, svo bæði hvern texta og auglýsinguna eins og hún birtist skal skoða.
 
 Sé til dæmis sagt að snyrtivara meðhöndli unglingabólur, hafi bólgueyðandi virkni eða bakteríudrepandi virkni, getur þetta verið fullyrðing um læknandi verkun. Einnig skal saman staðfesta háttinn á að sameina heiti sjúkdóms við vöruna, myndir fyrir og eftir notkun, framsetningu sem vekur hugmynd um heilbrigðisstarfsmann, og samhengið sem tengir skýringu innihaldsefnisins við lækningavirkni vörunnar.
 
-Stjórnvaldssekt vegna ranghæfra eða ofdrifinna auglýsinga (虛偽誇大廣告) er 40.000 TWD til 200.000 TWD, og stjórnvaldssekt vegna fullyrðingar um læknandi verkun er 600.000 TWD til 5.000.000 TWD. Vegna þess að bilið greinist eftir brotategund skal heild auglýsingaframsetningarinnar fyrir birtingu borin saman við stoðgögnin.
+Stjórnvaldssekt vegna rangra eða ýktra auglýsinga (虛偽誇大廣告) er 40.000 TWD til 200.000 TWD, og stjórnvaldssekt vegna fullyrðingar um læknandi verkun er 600.000 TWD til 5.000.000 TWD. Vegna þess að bilið greinist eftir brotategund skal heild auglýsingaframsetningarinnar fyrir birtingu borin saman við stoðgögnin.
 
 ### Áhrifavaldar, umsagnaraðilar og söluaðilar
 

@@ -27,7 +27,7 @@ Spurningarnar og svörin hér á eftir eiga að hjálpa þeim sem íhuga að sto
 
 **1. Að hverju skal gæta þegar hlutafé (資本額) er millifært frá útlöndum á undirbúningsreikning taívanska félagsins (公司籌備處帳戶)? (dæmið hér á eftir lýsir kóreska kerfinu og kóreskri bankaframkvæmd)**
 
-Kóreskir bankar (銀行) krefjast að jafnaði að fjárfestirinn heimsæki **persónulega** banka í Kóreu og millifæri féð af reikningi í eigin nafni.
+Kóreskir bankar (銀行) krefjast þess að jafnaði að fjárfestirinn heimsæki **persónulega** banka í Kóreu og millifæri féð af reikningi í eigin nafni.
 
 Millifærsla með netbanka eða í gegnum nákominn aðila í Kóreu (匯款) er ekki möguleg.
 

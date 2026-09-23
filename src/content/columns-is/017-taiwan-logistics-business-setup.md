@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Þarf öll starfsemi sem tengist flutningum á Taívan að öðlast leyfi til vöruflutninga með vélknúnum ökutækjum (汽車貨運業)?"
-    a: "Ekki alltaf. „Flutningastarfsemi“ er vítt viðskiptahugtak; leyfisskyldan ræðst ekki einungis af félagsheitinu eða skráðum starfsgreinum (汽車貨運業). Fái félagið endurgjald og flytji vörur annarra með vörubíl, getur þessi starfsemi fallið undir vöruflutninga með vélknúnum ökutækjum. Hins vegar skal vörugeymsla, pökkun, kerfisrekstur, sending sem sendingaraðili (貨主), farmiðlun (運送承攬) og sambærileg starfsemi metin hvert um sig út frá samningssambandi, flutningsábyrgð, innihaldi endurgjalds og raunverulegri akstri ökutækja."
+    a: "Ekki alltaf. „Flutningastarfsemi“ er vítt viðskiptahugtak; leyfisskyldan ræðst ekki einungis af félagsheitinu eða skráðum starfsgreinum (汽車貨運業). Fái félagið endurgjald og flytji vörur annarra með vörubíl, getur þessi starfsemi fallið undir vöruflutninga með vélknúnum ökutækjum. Hins vegar skal vörugeymsla, pökkun, kerfisrekstur, sending sem sendingaraðili (貨主), farmiðlun (運送承攬) og sambærileg starfsemi metin hvert um sig út frá samningssambandi, flutningsábyrgð, innihaldi endurgjalds og raunverulegum akstri ökutækja."
   - q: "Hvaða kröfur um hlutafé og ökutæki og hvaða málsmeðferð gilda um nýja stofnun almennrar starfsemi vöruflutninga með vélknúnum ökutækjum?"
     a: "Um almenna vöruflutninga með vélknúnum ökutækjum gildir að jafnaði lágmarkshlutafé 25.000.000 TWD (新臺幣) og að minnsta kosti 20 nýir vörubílar. Um starfsemi sem aðeins varðar heimilisflutninga (搬家) gildir 10.000.000 TWD og að minnsta kosti 8 nýir vörubílar, og um starfsemi sem rekin er á Kinmen (金門) eða í Lienchiang (Matsu, 連江、馬祖) 10.000.000 TWD og að minnsta kosti 5 nýir vörubílar, með takmörkun rekstrarsvæðis í síðara tilvikinu. Um flutninga með litlum vörubíl sem einstaklingur rekur gilda sérstakar takmarkaðar undantekningar, það er 1 lítill vörubíll í eigu, aldur ökutækis sem fer ekki yfir 2 ár, atvinnuökuskírteini fyrir smábíla (小型車職業駕駛執照) og heimilisskrá (戶籍) í lögbæru umdæmi. Erlenda fjárfestinguna, samþykki samgönguráðuneytisins (交通部), undirbúningsleyfi (籌設許可), félaga- og verslunarskráningu, undirbúning ökutækja og aðstöðu, rekstrarleyfi (營業執照) og inngöngu í atvinnugreinafélag (同業公會) skal staðfesta hvert um sig."
   - q: "Öðlast kaupandi sjálfkrafa rekstrarleyfi til vöruflutninga með vélknúnum ökutækjum við yfirtöku félags sem þegar hefur leyfið?"
@@ -24,15 +24,15 @@ faq:
 
 Þegar starfsemi sem tengist sendingu er skipulögð á Taívan má ekki ákveða leyfisskyldu einungis af heitinu „flutningafélag“. Vörugeymsla, pökkun, flutningskerfi, farmiðlun (運送承攬), sending eigin vara og flutningur vara annarra með vélknúnu ökutæki gegn endurgjaldi geta lotið ólíku skipulagi.
 
-Þessi grein greinir 3 aðstæður (汽車貨運業): að stofna nýja starfsemi vöruflutninga með vélknúnum ökutækjum, að kaupa hlutabréf í fyrirliggjandi rekstraraðila eða taka við framsali starfsemi hans og eigna, og að fela flutninginn leyfishafa. Við könnun tiltekinnar viðskiptaáætlunar skal ekki aðeins staðfesta samningsorðalag, heldur einnig raunverulega rekstraraðferð, svo sem hver tekur við farmgjaldinu, hver ber ábyrgð á vörutjóni, hver úthlutar ökutækjum og hver stýrir ökumönnum og ökutækjum.
+Þessi grein greinir þrjár aðstæður (汽車貨運業): að stofna nýja starfsemi vöruflutninga með vélknúnum ökutækjum, að kaupa hlutabréf í fyrirliggjandi rekstraraðila eða taka við framsali starfsemi hans og eigna, og að fela flutninginn leyfishafa. Við könnun tiltekinnar viðskiptaáætlunar skal ekki aðeins staðfesta samningsorðalag, heldur einnig raunverulega rekstraraðferð, svo sem hver tekur við farmgjaldinu, hver ber ábyrgð á vörutjóni, hver úthlutar ökutækjum og hver stýrir ökumönnum og ökutækjum.
 
 ![Mynd til að greina leyfi, ökutæki og samningssamband](../images/017-taiwan-logistics-business-setup/img-01.jpg)
 
 ## 1. Umfang flutningastarfsemi og vöruflutninga með vélknúnum ökutækjum (汽車貨運業)
 
-„Flutningastarfsemi“ er vítt viðskiptahugtak; leyfisskyldan ræðst ekki einungis af félagsheitinu eða skráðum starfsgreinum (汽車貨運業). Fái félagið endurgjald og flytji vörur annarra með vörubíl, getur þessi starfsemi fallið undir vöruflutninga með vélknúnum ökutækjum. Hins vegar skal vörugeymsla, pökkun, kerfisrekstur, sending sem sendingaraðili (貨主), farmiðlun og sambærileg starfsemi metin hvert um sig út frá samningssambandi, flutningsábyrgð, innihaldi endurgjalds og raunverulegri akstri ökutækja.
+„Flutningastarfsemi“ er vítt viðskiptahugtak; leyfisskyldan ræðst ekki einungis af félagsheitinu eða skráðum starfsgreinum (汽車貨運業). Fái félagið endurgjald og flytji vörur annarra með vörubíl, getur þessi starfsemi fallið undir vöruflutninga með vélknúnum ökutækjum. Hins vegar skal vörugeymsla, pökkun, kerfisrekstur, sending sem sendingaraðili (貨主), farmiðlun og sambærileg starfsemi metin hvert um sig út frá samningssambandi, flutningsábyrgð, innihaldi endurgjalds og raunverulegum akstri ökutækja.
 
-Vegalög Taívan (公路法) skilgreina starfsemi vélknúinna flutninga (汽車運輸業) sem þá starfsemi sem flytur farþega eða vörur með vélknúnu ökutæki gegn endurgjaldi. Félagið verður því ekki, af því einu, flutningsaðili í vöruflutningum með vélknúnum ökutækjum, þótt það veiti flutningsþjónustu í víðum skilningi. Öfugt, þótt samningurinn sé orðaður sem farmiðlun eða rekstur vettvangs, getur félagið, taki það raunverulega við farmgjaldi sem flutningsaðili (運送人) og beri ábyrgð á úthlutun, akstri og vörutjóni, ekki komist hjá eftirliti með því einu að samningurinn sé nefndur farmiðlun eða rekstur vettvangs.
+Vegalög Taívan (公路法) skilgreina starfsemi vélknúinna flutninga (汽車運輸業) sem þá starfsemi sem flytur farþega eða vörur með vélknúnu ökutæki gegn endurgjaldi. Félagið verður því ekki, af því einu, flutningsaðili í vöruflutningum með vélknúnum ökutækjum, þótt það veiti flutningsþjónustu í víðum skilningi. Á hinn bóginn, þótt samningurinn sé orðaður sem farmiðlun eða rekstur vettvangs, getur félagið, taki það raunverulega við farmgjaldi sem flutningsaðili (運送人) og beri ábyrgð á úthlutun, akstri og vörutjóni, ekki komist hjá eftirliti með því einu að samningurinn sé nefndur farmiðlun eða rekstur vettvangs.
 
 Við ákvörðun starfssviðs skal að minnsta kosti eftirfarandi samband skipulagt tiltekið.
 
@@ -50,7 +50,7 @@ Um almenna vöruflutninga með vélknúnum ökutækjum gildir að jafnaði lágm
 
 ### Kröfur um hlutafé og ökutæki og takmarkaðar undantekningar
 
-Þegar almennt félag hefur vöruflutninga með vélknúnum ökutækjum nýtt gildir að jafnaði lágmarkshlutafé 25.000.000 TWD og að minnsta kosti 20 nýir vörubílar. Um þann sem aðeins sinnir heimilisflutningum gildir sérstakt viðmið um lágmarkshlutafé 10.000.000 TWD og að minnsta kosti 8 nýir vörubílar, og um þann sem rekur á Kinmen eða í Lienchiang (Matsu) lágmarkshlutafé 10.000.000 TWD og að minnsta kosti 5 nýir vörubílar. Rekstraraðili sem notar viðmið Kinmen eða Lienchiang lýtur því að rekstrarsvæðið er landfræðilega takmarkað við samþykkta svæðið.
+Þegar almennt félag hefur vöruflutninga með vélknúnum ökutækjum nýtt gildir að jafnaði lágmarkshlutafé 25.000.000 TWD og að minnsta kosti 20 nýir vörubílar. Um þann sem aðeins sinnir heimilisflutningum gildir sérstakt viðmið um lágmarkshlutafé 10.000.000 TWD og að minnsta kosti 8 nýir vörubílar, og um þann sem rekur á Kinmen eða í Lienchiang (Matsu) lágmarkshlutafé 10.000.000 TWD og að minnsta kosti 5 nýir vörubílar. Rekstraraðili sem notar viðmið Kinmen eða Lienchiang sætir þeirri takmörkun að rekstrarsvæðið er landfræðilega bundið við samþykkta svæðið.
 
 Flutningar með litlum vörubíl (小貨車), sem einstaklingur rekur, eru þröngt skipulag, aðskilið frá almennri félagastofnun. Meðal krafna er að umsækjandi hafi heimilisskrá í lögbæru umdæmi, hafi atvinnuökuskírteini fyrir smábíla og noti 1 lítinn vörubíl í eigu, sem er ekki eldri en 2 ára. Þetta er ekki sú venjulega leið sem erlendur lögaðili notar til að koma inn í vöruflutninga með vélknúnum ökutækjum.
 
@@ -76,7 +76,7 @@ Röðun skrefanna og framlagningaryfirvald skal staðfesta að nýju eftir hverj
 
 Starfsstöð og bílastæðaaðstaða skulu uppfylla viðmið sem gildir um viðkomandi starfsemi, og gögn sem votta eignarrétt eða notkunarrétt skulu lögð fram. Ekki má slá því föstu eins í öllum tilvikum að hver rekstraraðili verði nauðsynlega að leigja eigið sérstakt bílastæði. Samþykktir, hluthafaskrá, samþykkisgögn bílastæðaaðstöðu (停車設施), sönnun um eign eða notkun starfsstöðvar og bílastæðaaðstöðu, viðhaldssamningur, kaupvottorð ökutækja og ökutækjalisti skulu bornir saman við gildandi gátlista vegamálastofnunarinnar á umsóknartíma.
 
-Að undirbúningsleyfi fengnu skal undirbúningnum að jafnaði vera lokið á 6 mánuðum. Framlenging, þegar sérstakar aðstæður eru fyrir hendi, er möguleg í að hámarki 6 viðbótarmánuði. Að rekstrarleyfi gefnu út skal rekstur að jafnaði hefjast á 1 mánuði, og tilkynnt er til lögbærs vegaeftirlits með afriti gilds félagsskírteinis sem viðeigandi atvinnugreinafélag hefur gefið út. Þar sem sá tími sem þarf til að ljúka málinu, lóð og aðstöðu, ökutækjum og tryggingum er misjafn eftir máli, má ekki fyrirfram ákveða lokatíma allrar málsmeðferðarinnar. Þótt hlutlægur frestur stjórnsýsluskoðunar samkvæmt reglum um erlenda fjárfestingu sé kynntur, merkir hann ekki tímalengd allrar nýrrar stofnunar vöruflutninga með vélknúnum ökutækjum.
+Að undirbúningsleyfi fengnu skal undirbúningnum að jafnaði vera lokið innan 6 mánaða. Framlenging, þegar sérstakar aðstæður eru fyrir hendi, er möguleg í að hámarki 6 viðbótarmánuði. Að rekstrarleyfi gefnu út skal rekstur að jafnaði hefjast innan 1 mánaðar, og tilkynnt er til lögbærs vegaeftirlits með afriti gilds félagsskírteinis sem viðeigandi atvinnugreinafélag hefur gefið út. Þar sem sá tími sem þarf til að ljúka málinu, lóð og aðstöðu, ökutækjum og tryggingum er misjafn eftir máli, má ekki fyrirfram ákveða lokatíma allrar málsmeðferðarinnar. Þótt hlutlægur frestur stjórnsýsluskoðunar samkvæmt reglum um erlenda fjárfestingu sé kynntur, merkir hann ekki tímalengd allrar nýrrar stofnunar vöruflutninga með vélknúnum ökutækjum.
 
 ## 3. Yfirtaka fyrirliggjandi rekstraraðila
 
@@ -95,14 +95,14 @@ Framsal starfsemi og breyting skipulags, heitis, heimilisfangs, ábyrgðarmanns,
 Að minnsta kosti eftirfarandi atriði skal efnislega staðfesta með því að bera sönnunargögn og frumgögn saman við skrár lögbærs yfirvalds.
 
 - Gildi rekstrarleyfisins, samþykktar starfsgreinar, svæði og skilmálar, og breytingar sem enn eru ómeðhöndlaðar.
-- Samband eignar og notkunar ökutækja, skráningarmerki til atvinnunota, aldur, lotubundin skoðun, slys og brot.
+- Samband eignar og notkunar ökutækja, skráningarmerki til atvinnunota, aldur, reglubundin skoðun, slys og brot.
 - Samþykki starfsstöðvar og bílastæðaaðstöðu, eignarréttur eða notkunarréttur, og viðhaldskerfi.
 - Innganga í atvinnugreinafélag, stjórnvaldsákvarðanir (行政處分) og hvort vanskil skatta, gjalda og stjórnvaldssekta (罰鍰) séu fyrir hendi.
 - Ráðningarsamband ökumanna og annarra starfsmanna, vinnuskilyrði, atvinnuleyfi og félagslegar tryggingar.
 - Tryggingar ökutækis, vöru og ábyrgðar, tryggingarréttindi, leiga og fjármögnun.
-- Veigamikla samninga og ákvæði um stjórnendabreytingu varðandi sendingaraðila, rekstraraðila sem taka við verkefni, kerfi og vörugeymslur.
+- Veigamiklir samningar og ákvæði um stjórnendabreytingu varðandi sendingaraðila, rekstraraðila sem taka við verkefni, kerfi og vörugeymslur.
 
-Í samningnum eru ákveðnar yfirlýsingar og loforð, frestunarskilmálar, meðferð ef leyfið fæst ekki, verðaðlögun, skaðabætur, afhending, rekstrarfé og aðferð við framsal ökutækja og samninga. Röðun nauðsynlegs samþykkis erlendrar fjárfestingar, atvinnugreinasamþykkis samgönguráðuneytisins, breytingarsamþykkis lögbærs vegaeftirlits og félagsskrefanna skal samræmd lokaskilmálum lögskiptanna.
+Í samningnum skal kveða á um yfirlýsingar og ábyrgðir, frestunarskilmála, meðferð ef leyfið fæst ekki, verðaðlögun, skaðabætur, afhendingu, rekstrarfé og aðferð við framsal ökutækja og samninga. Röðun nauðsynlegs samþykkis erlendrar fjárfestingar, atvinnugreinasamþykkis samgönguráðuneytisins, breytingarsamþykkis lögbærs vegaeftirlits og félagsskrefanna skal samræmd lokaskilmálum lögskiptanna.
 
 ## 4. Að fela flutning og sendingu öðrum og störf útlendinga
 
@@ -112,7 +112,7 @@ Ekki má dæma eins í öllum tilvikum. Matið greinist eftir því hvort sá se
 
 Sendingaraðili eða flutningsþjónustufélag getur einnig falið raunverulegan flutning leyfishafa vöruflutninga með vélknúnum ökutækjum á Taívan. Leyfisþörf og ábyrgðarskipting greinast þó eftir því hvort sá sem felur sé aðeins sendingaraðili eða farmiðlari, eða hvort hann sjálfur verði flutningsaðili í flutningssamningnum (運送人) og taki við farmgjaldi. Samningshlutverk, innheimta gagnvart viðskiptavini, úthlutunarfyrirmæli, stýring ökumanna og ökutækja og viðbrögð við vörutjóni skulu samræmast raunverulegum rekstri.
 
-Staðfesta skal gildi rekstrarleyfis rekstraraðilans sem tekur við verkefninu og umfang leyfisins, ökutæki til atvinnunota sem raunverulega eru notuð, ökumenn, tryggingar og rekstraraðila við undirverktöku. Hvorki má leyfa nafnlán rekstrarleyfis né raunverulegan flutning rekstraraðila án leyfis. Aðferðin að fela flutninginn getur krafist minni upphaflegrar fastrar fjárfestingar en að undirbúa sjálfur ökutæki og bílastæðaaðstöðu, en í samningnum skal meðhöndla háð við leyfishafann, þjónustustig, tap, skemmd og töf vörunnar, tryggingu, persónu- og flutningsgögn, undirverkakaup, skaðabætur og afhendingarmeðferð gagna, vöru og viðskiptaþjónustu við lok samningsins, sem og tengda áhættu.
+Staðfesta skal gildi rekstrarleyfis rekstraraðilans sem tekur við verkefninu og umfang leyfisins, ökutæki til atvinnunota sem raunverulega eru notuð, ökumenn, tryggingar og rekstraraðila við undirverktöku. Hvorki má leyfa nafnlán rekstrarleyfis né raunverulegan flutning rekstraraðila án leyfis. Aðferðin að fela flutninginn getur krafist minni upphaflegrar fastrar fjárfestingar en að undirbúa sjálfur ökutæki og bílastæðaaðstöðu, en í samningnum skal taka á því hversu háður reksturinn er leyfishafanum, þjónustustigi, tapi, skemmd og töf vörunnar, tryggingu, persónu- og flutningsgögnum, undirverktöku, skaðabótum og afhendingarmeðferð gagna, vöru og viðskiptaþjónustu við lok samningsins, sem og tengdri áhættu.
 
 ### Fjárfesting, atvinnuleyfi og dvöl eru sérstök skref
 

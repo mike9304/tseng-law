@@ -8,8 +8,8 @@ categories:
   - "Lagaupplýsingar um Taívan"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
 faq:
-  - q: "Ef engin erfðaskrá er til og erfingjarnir eru aðeins maki og 2 börn, hvernig skiptist arfshlutinn?"
-    a: "Samkvæmt 1138. gr. og 1144. gr. almennra borgaralaga Taívan (民法) erfir maki sameiginlega með erfingjum viðkomandi röðunar, og niðjar í beinum ættlegg (直系血親卑親屬) eru 1. röð lögbundinnar erfðar. Sé engin gild erfðaskrá (遺囑) til, séu viðkomandi erfingjar aðeins maki og 2 börn, og sé hvorki arfafsal (拋棄繼承), missir arfsréttar (喪失繼承權), arfur með erfð í stað niðja (代位繼承) né önnur atvik sem breyta niðurstöðunni fyrir hendi, erfa þessir 3 að jafnaði hver 1/3. Þetta er aðeins tilgáta til skýringar á reglunni, ekki niðurstaða tiltekins arfsmáls."
+  - q: "Ef engin erfðaskrá er til og erfingjarnir eru aðeins maki og tvö börn, hvernig skiptist arfshlutinn?"
+    a: "Samkvæmt 1138. gr. og 1144. gr. almennra borgaralaga Taívan (民法) erfir maki sameiginlega með erfingjum viðkomandi röðunar, og niðjar í beinum ættlegg (直系血親卑親屬) eru 1. röð lögbundinnar erfðar. Sé engin gild erfðaskrá (遺囑) til, séu viðkomandi erfingjar aðeins maki og tvö börn, og sé hvorki arfafsal (拋棄繼承), missir arfsréttar (喪失繼承權), arfur með erfð í stað niðja (代位繼承) né önnur atvik sem breyta niðurstöðunni fyrir hendi, erfa þessi þrjú að jafnaði hvert 1/3. Þetta er aðeins tilgáta til skýringar á reglunni, ekki niðurstaða tiltekins arfsmáls."
   - q: "Er réttur maka til skiptingar eftirstöðva eigna sami réttur og arfshlutinn?"
     a: "Nei. Rétturinn til skiptingar mismunar eftirstöðva eigna (剩餘財產差額分配) samkvæmt 1030-1. gr. almennra borgaralaga Taívan (民法) er réttur sem maki getur krafist sérstaklega þegar lögbundin skilyrði eru uppfyllt, og skal hann reiknaður aðskilinn frá arfshlutanum. Ekki falla allar eignir sem aflað er í hjónabandinu af sjálfu sér inn í útreikninginn, og eftirlifandi maki fær ekki endilega helming dánarbúsins. Meta skal eftir að eignaskipulag hjóna, ástæða og tími öflunar hverrar eignar, skuldir og lögbundnir undanþáguþættir hafa verið kannaðir."
   - q: "Hvað verður um forsjá eftirlifandi foreldris þegar annað foreldrið fellur frá?"
@@ -28,7 +28,7 @@ Einkum skal greina á milli arfshlutans og réttarins til skiptingar mismunar ef
 
 ## 1. Lögbundnir erfingjar og arfshluti
 
-Samkvæmt 1138. gr. og 1144. gr. almennra borgaralaga Taívan (民法) erfir maki sameiginlega með erfingjum viðkomandi röðunar, og niðjar í beinum ættlegg (直系血親卑親屬) eru 1. röð lögbundinnar erfðar. Sé engin gild erfðaskrá (遺囑) til, séu viðkomandi erfingjar aðeins maki og 2 börn, og sé hvorki arfafsal (拋棄繼承), missir arfsréttar (喪失繼承權), arfur með erfð í stað niðja (代位繼承) né önnur atvik sem breyta niðurstöðunni fyrir hendi, erfa þessir 3 að jafnaði hver 1/3. Þetta er aðeins tilgáta til skýringar á reglunni, ekki niðurstaða tiltekins arfsmáls.
+Samkvæmt 1138. gr. og 1144. gr. almennra borgaralaga Taívan (民法) erfir maki sameiginlega með erfingjum viðkomandi röðunar, og niðjar í beinum ættlegg (直系血親卑親屬) eru 1. röð lögbundinnar erfðar. Sé engin gild erfðaskrá (遺囑) til, séu viðkomandi erfingjar aðeins maki og tvö börn, og sé hvorki arfafsal (拋棄繼承), missir arfsréttar (喪失繼承權), arfur með erfð í stað niðja (代位繼承) né önnur atvik sem breyta niðurstöðunni fyrir hendi, erfa þessi þrjú að jafnaði hvert 1/3. Þetta er aðeins tilgáta til skýringar á reglunni, ekki niðurstaða tiltekins arfsmáls.
 
 Ákvæði 1138. gr. almennra borgaralaga (民法) ákveður röðun lögbundinna erfingja annarra en maka: niðjar í beinum ættlegg, foreldrar, systkini (兄弟姊妹) og afi og amma, í þessari röð. Séu erfingjar í fyrri röð fyrir hendi erfa erfingjar í síðari röð að jafnaði ekki á undan þeim. Einnig innan sömu raðar skal kanna andlátstíma, skyldleika, ættleiðingu og tilvist erfðar í stað niðja; því er mikilvægt að tryggja fyrst gögn um fjölskyldutengsl.
 
@@ -40,7 +40,7 @@ Eftirlifandi maki er ekki erfingi í síðari röð ættartengdrar erfðaraðar 
 
 Gild erfðaskrá getur ákveðið skiptingaraðferð sem greinist frá lögbundinni erfð. Kanna skal þó form erfðaskrárinnar, hæfi til að gera erfðaskrá, túlkun og framkvæmanleika, og jafnframt takmörk ófrávíkjanlegra reglna, þar á meðal skylduarf (特留分). Tilvist erfðaskrár ein og sér ákveður ekki tilheyrslu alls dánarbúsins; öfugt, séu aðeins tilteknar eignir nefndar í erfðaskránni, getur lögbundin erfð gilt um restina.
 
-Áður en arfshlutinn er reiknaður skal fyrst ákveða skrá og lagalegt eðli dánarbúsins. Með gögnum skal ekki aðeins staðfesta fasteignir, innlán, verðbréf, félagshlut, kröfur og lausafé, heldur einnig skuldir arfleifanda (被繼承人), ábyrgðarskyldu, ógreidda skatta og byrðar vegna útfarar. Ekki má slá niðurstöðu einungis af skráningar- eða reikningsnafni; einnig skal rannsaka raunverulegt eignarhald, hlut í sameign, réttindi þriðja aðila og stofnaðar tryggingarréttindi.
+Áður en arfshlutinn er reiknaður skal fyrst ákveða skrá og lagalegt eðli dánarbúsins. Með gögnum skal ekki aðeins staðfesta fasteignir, innlán, verðbréf, félagshlut, kröfur og lausafé, heldur einnig skuldir arfleifanda (被繼承人), ábyrgðarskyldu, ógreidda skatta og byrðar vegna útfarar. Ekki má slá niðurstöðu einungis af skráningar- eða reikningsnafni; einnig skal rannsaka raunverulegt eignarhald, hlut í sameign, réttindi þriðja aðila og stofnuð tryggingarréttindi.
 
 Greiðslur þar sem ávinningshafi er sérstaklega tilgreindur, svo sem tryggingarfé eða eftirlaun (退休金), geta eftir samningi og gildandi rétti verið meðhöndlaðar öðruvísi en dánarbúið. Eignir í trúnaðarumsýslu (信託) krefjast staðfestingar á skipulagi trúnaðarsamningsins og ávinningsrétti; gjafir eða framsal á lífstíð geta tengst endurkröfu, innfærslu eða skylduarfi. Séu reikningar eða fasteignir erlendis fyrir hendi skal jafnframt kanna lög staðarins og lagavalsreglur Taívan.
 
@@ -66,7 +66,7 @@ Erfingi sem vill afsala arfi skal, samkvæmt 1174. gr. almennra borgaralaga (民
 
 Leiðbeining um umsóknarmeðferð arfsmála á skattagátt fjármálaráðuneytis Taívan (財政部) var uppfærð 25. júní 2026 og skýrir almennan 3 mánaða frest dómstólsmeðferðar vegna framlagningar eignaskrár og arfafsals, sem og almennan 6 mánaða frest skila á arfskatti (遺產稅). Upphafspunkt, framlengingu, undanþágur og varnarþing skal þó staðfesta í hverju máli, og má þetta ekki nota til útreiknings persónulegs lokadags.
 
-Skil á arfskatti, tilkynning til heimilisskrár (戶籍), nafnbreyting fasteigna og ökutækja og greiðslumeðferð fjármálastofnana geta haft ólík ábyrgðaryfirvöld og skjöl. Ekki má ætla að afsalsskjalið sem lagt er fyrir dómstól og skil á arfskatti til skattayfirvalds séu sama málsmeðferð. Þar sem fleiri frestir geta runnið samtímis er öruggara að stýra upphafspunkti og sönnunargögnum hverrar málsmeðferðar á sérstakri dagskrá.
+Skil á arfskatti, tilkynning til heimilisskrár (戶籍), nafnbreyting fasteigna og ökutækja og greiðslumeðferð fjármálastofnana geta haft ólík ábyrgðaryfirvöld og skjöl. Ekki má ætla að afsalsskjalið sem lagt er fyrir dómstól og skil á arfskatti til skattayfirvalds séu sama málsmeðferð. Þar sem fleiri frestir geta runnið samtímis er öruggara að halda utan um upphafspunkt og sönnunargögn hverrar málsmeðferðar í sérstöku dagatali.
 
 ## 5. Réttindi og skyldur eftirlifandi foreldris samkvæmt forsjá
 
@@ -80,7 +80,7 @@ Forsjá og erfðir eru lagalega ólík atriði. Þótt eftirlifandi foreldri bei
 
 ## 6. Skipun lögráðamanns og þátttaka dómstóls
 
-Lögráð ólögráða samkvæmt 1091. gr. almennra borgaralaga Taívan (民法) kemur til þegar ólögráða barnið hefur ekki foreldra, eða þegar hvorki getur beitt réttindum og skyldum forsjárinnar. Ekki má slá því föstu að lögráð ólögráða (未成年人監護) hefjist þegar við það eitt að annað foreldrið sé fallið frá. Fyrst skal staðfesta stöðu forsjár eftirlifandi foreldris, fyrirliggjandi dóma og hvort réttindunum megi raunverulega beita.
+Lögráð ólögráða samkvæmt 1091. gr. almennra borgaralaga Taívan (民法) kemur til þegar ólögráða barnið hefur ekki foreldra, eða þegar hvorugt foreldranna getur beitt réttindum og skyldum forsjárinnar. Ekki má slá því föstu að lögráð ólögráða (未成年人監護) hefjist þegar við það eitt að annað foreldrið sé fallið frá. Fyrst skal staðfesta stöðu forsjár eftirlifandi foreldris, fyrirliggjandi dóma og hvort réttindunum megi raunverulega beita.
 
 Samkvæmt 1093. gr. almennra borgaralaga (民法) getur það foreldri, sem síðast beitir réttindum og skyldum forsjárinnar, með erfðaskrá skipað lögráðamann (監護人) fyrir ólögráða barnið. Til að þessi regla gildi skal erfðaskráin (遺囑) uppfylla lögbundið form, og skipandi foreldri hafa heimild til að skipa lögráðamann ólögráða. Þótt skipunarinnihald sé fyrir hendi skal jafnframt horft til skilyrða opnunar lögráðs, hæfis lögráðamanns og hvort hann taki við, sem og tilkynningar til dómstóls og annarrar eftirlitsmeðferðar.
 
@@ -102,13 +102,13 @@ Séu foreldri og barn sameiginlegir erfingjar sama dánarbús eða verði samnin
 
 Þegar lögráðamaður ólögráða stýrir eignum getur gerð eignaskrár, varðveisla sönnunargagna, aðskilnaður tekna og gjalda sem og reglur um skýrslugjöf og eftirlit dómstóls gilt. Fjármálareikningum og fjárfestingareignum skal stýrt svo að þær megi merkja sem eignir barnsins, og hvert gjald skal skráð með tilgangi og grundvelli (特有財產). Til að eignir og stýringarskrá megi auðveldlega afhenda þegar lögráði lýkur, eða ólögráða barnið nær lögræði, skal gögnunum frá upphafi raðað kerfisbundið.
 
-Skipulag sem notar trúnaðarumsýslu eða tryggingu má ekki heldur telja öruggt eftir samningsinnihaldinu einu. Staðfesta skal umsjónarmann (受託人) og ávinningshafa, greiðsluskilmála, stýringarþóknun, eftirlitsráðstafanir og skilmála um breytingu og lok, og jafnframt kanna skylduarf og skattaleg atriði. Núverandi þörf barnsins og framtíðarlíf þess skal speglað í jafnvægi; þægindi eignastýrandans mega ekki ganga framar hagsmunum barnsins.
+Skipulag sem notar trúnaðarumsýslu eða tryggingu má ekki heldur telja öruggt eftir samningsinnihaldinu einu. Staðfesta skal umsjónarmann (受託人) og ávinningshafa, greiðsluskilmála, stýringarþóknun, eftirlitsráðstafanir og skilmála um breytingu og lok, og jafnframt kanna skylduarf og skattaleg atriði. Gæta skal jafnvægis milli núverandi þarfa barnsins og framtíðar þess; þægindi eignastýrandans mega ekki ganga framar hagsmunum barnsins.
 
 ## 8. Gildandi réttur og málsmeðferð fjölskyldu með erlendum þætti
 
-Á fjölskyldu með erlendum þætti má ekki þegar beita aðeins innlendri reglu almennra borgaralaga Taívan (民法). Ríkisfang aðila, lögheimili og venjulegur dvalarstaður (經常居所), lífsmiðstöð á andlátstíma, staðsetning eigna, hjónaband eða skilnaður sem komið hefur til erlendis og fyrirliggjandi dómar um forsjá geta haft áhrif á gildandi rétt og varnarþing. Einnig innan sömu fjölskyldu geta erfðir, eignaskipulag hjóna, forsjá, lögráð og skráning eigna lotið ólíkum tengipunktum.
+Á fjölskyldu með erlendum þætti má ekki umsvifalaust beita innlendum reglum almennra borgaralaga Taívan (民法) einum. Ríkisfang aðila, lögheimili og venjulegur dvalarstaður (經常居所), lífsmiðstöð á andlátstíma, staðsetning eigna, hjónaband eða skilnaður sem komið hefur til erlendis og fyrirliggjandi dómar um forsjá geta haft áhrif á gildandi rétt og varnarþing. Einnig innan sömu fjölskyldu geta erfðir, eignaskipulag hjóna, forsjá, lögráð og skráning eigna lotið ólíkum tengipunktum.
 
-Lög Taívan um lagaval í einkamálum með erlendum þætti (涉外民事法律適用法) eru upphafspunktur til að ákveða gildandi rétt í einkaréttarlegum samböndum með erlendum þætti. Aðeins að staðfesta þessi lög getur þó ekki nægt; jafnframt skal kanna alþjóðlegt varnarþing dómstóls, viðurkenningu og fullnustu erlendra dóma sem og samninga eða rétt hins ríkisins. Hvort mat sem gildir á Taívan verði viðurkennt við framsal eignar sem er staðsett erlendis skal staðfesta sérstaklega þar sem eignin er (涉外民事法律適用法).
+Lög Taívan um lagaval í einkamálum með erlendum þætti (涉外民事法律適用法) eru upphafspunktur til að ákveða gildandi rétt í einkaréttarlegum samböndum með erlendum þætti. Þó nægir ekki að staðfesta þessi lög ein; jafnframt skal kanna alþjóðlegt varnarþing dómstóls, viðurkenningu og fullnustu erlendra dóma sem og samninga eða rétt hins ríkisins. Hvort mat sem gildir á Taívan verði viðurkennt við framsal eignar sem er staðsett erlendis skal staðfesta sérstaklega þar sem eignin er (涉外民事法律適用法).
 
 Erfðaskrá sem gerð er erlendis skal könnuð að gerðarformi, efnislegu gildi, þýðingu og vottun (認證) sem og staðfestingu erfðaskrár fyrir dómstóli (檢認) eða fullnustumeðferð. Erlend hjónabands- og skilnaðarvottorð og skyldleikaskjöl geta krafist apostille eða ræðisvottunar og þýðingar. Greinist ritháttur nafns, vegabréfsupplýsingar og heimilisskrá innbyrðis, má krefjast viðbótargagna við auðkenningu sama aðila.
 
@@ -129,7 +129,7 @@ Eftirfarandi röð er grunnrammi til að safna atvikum án þess að sleppa nein
 
 Við söfnun gagna ætti að skrá varðveislustað frumrits og útgáfu- og viðmiðunardaga, og raða rafrænum skrám og pappírsskjölum eftir sama flokkunarkerfi. Séu sameiginlegir erfingjar eða eignastýrendur fleiri, skal skrá hver varðveiti hvaða gögn og hvaða athafnir hafi verið samþykktar. Persónu- og fjármálaupplýsingum ólögráða barnsins skal stýrt með aðgangsstýringu svo að þær séu aðeins veittar þeim aðilum og yfirvöldum sem þurfa á þeim að halda.
 
-Einnig skal greina eignir sem krefjast bráðrar varðveislu og venjulega skilameðferð. Kannaðu fyrst hvort atvik séu fyrir hendi sem staðfesta skal þegar í stað, svo sem hætta á rofi reiknings eða rekstrar, skemmd fasteignar eða fyrningu kröfu, en ekki má ráðstafa án heimildar undir yfirskini bráðaþarfar. Það er gagnlegt að stýra framvindu dómstólsmeðferðar og skatta-, heimilisskrár- og skráningarmeðferðar saman á einni dagskrá.
+Einnig skal greina eignir sem krefjast bráðrar varðveislu og venjulega skilameðferð. Kannaðu fyrst hvort atvik séu fyrir hendi sem staðfesta skal þegar í stað, svo sem hætta á rofi reiknings eða rekstrar, skemmd fasteignar eða fyrningu kröfu, en ekki má ráðstafa án heimildar undir yfirskini bráðaþarfar. Það er gagnlegt að stýra framvindu dómstólsmeðferðar og skatta-, heimilisskrár- og skráningarmeðferðar saman í einu dagatali.
 
 ## 10. Opinberar heimildir
 

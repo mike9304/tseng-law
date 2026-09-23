@@ -2039,7 +2039,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Tungumál síðunnar og tungumál ráðgjafarinnar eru ekki það sama',
           paragraphs: [
             'Þessi síða er skrifuð á íslensku, en ráðgjöf við lögmann fer einungis fram á fjórum tungumálum ráðgjafar: ensku, kínversku (中文), japönsku og kóresku. Að lesa leiðbeiningarnar á íslensku þýðir ekki að samtalið við lögmanninn fari fram á íslensku.',
-            'Við heitum ekki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú talar ekkert af þessum fjórum tungumálum, útskýrir síðan „Hafa samband“ hvernig við könnum samskiptaleið.',
+            'Við heitum hvorki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú talar ekkert af þessum fjórum tungumálum, útskýrir síðan „Hafa samband“ hvernig við könnum samskiptaleið.',
           ],
         },
         {
@@ -2130,7 +2130,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
       description:
         'Grunnupplýsingar um þessa taívönsku lögmannsstofu, skrifstofur hennar og vinnu með erlendum aðilum.',
       intro:
-        'Hovering International Law Firm er lögmannsstofa á Taívan. Lögmennirnir vinna allt frá ráðgjöf til fyrirtækja og til málflutnings fyrir dómstólum. Þessi hluti lýsir tilurð stofunnar, staðsetningum og vinnu með erlendum aðilum.',
+        'Hovering International Law Firm er lögmannsstofa á Taívan. Lögmennirnir sinna öllu frá ráðgjöf til fyrirtækja til málflutnings fyrir dómstólum. Þessi hluti lýsir tilurð stofunnar, staðsetningum og vinnu með erlendum aðilum.',
       sections: [
         {
           heading: 'Stofnun og uppbygging',
@@ -2181,7 +2181,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kostnaður er staðfestur áður en vinna hefst',
           paragraphs: [
-            'Þegar vinnuumfangið er ljóst eru fjárhæð og útreikningsaðferð ræddar við þig og staðfestar áður en vinna hefst. Breyti umfangið í vinnslunni verður það að vera staðfest að nýju.',
+            'Þegar vinnuumfangið er ljóst eru fjárhæð og útreikningsaðferð ræddar við þig og staðfestar áður en vinna hefst. Breytist umfangið í vinnslunni verður að staðfesta það að nýju.',
             'Þessi síða er ekki tilboð og stofnar ekki greiðsluskyldu. Að senda beiðni í gegnum þessa síðu er einnig án greiðslu.',
           ],
         },
@@ -2336,7 +2336,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Geymslustaður og aðgangur',
           paragraphs: [
             'Innihald sendingarinnar er geymt á stað sem er ekki opinn almenningi. Aðeins heimilaðir aðilar á skrifstofunni mega nálgast það til að vinna beiðnina.',
-            'Þessi síða veitir enga algjöra ábyrgð á öryggi. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.',
+            'Þessi síða ábyrgist ekki fullkomið öryggi. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.',
           ],
         },
         {
@@ -2364,7 +2364,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Geymslustaður og þjónustuaðilar',
           paragraphs: [
             'Þessi vefur er hýstur hjá Vercel og sendingin þín er geymd í gagnageymslu þessarar þjónustu sem ekki er opin almenningi. Tölvupóstur er sendur um póstþjónustuna sem skrifstofan notar.',
-            'Netþjónar einstakra þjónustuaðila geta staðið utan Taívan, svo gögnin þín geta verið geymd og unnin þar. Þegar geymslutilganginum er náð eru gögnin eydd án tafar; gögn sem varðveita ber samkvæmt gildandi reglum eru geymd þann tíma. Fyrirspurnir um persónuupplýsingar berast á wei@hoveringlaw.com.tw.',
+            'Netþjónar einstakra þjónustuaðila geta staðið utan Taívan, svo gögnin þín geta verið geymd og unnin þar. Þegar geymslutilganginum er náð er gögnunum eytt án tafar; gögn sem varðveita ber samkvæmt gildandi reglum eru geymd þann tíma. Fyrirspurnir um persónuupplýsingar berast á wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -2433,7 +2433,7 @@ export const icelandicGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hve langt grein getur þjónað sem leiðsögn',
           paragraphs: [
             'Greinar eru almennar upplýsingar á birtingarstundu. Reglur og beiting þeirra geta breyst og grein inniheldur ekki allar aðstæður málsins þíns.',
-            'Ekki byggðu ákvörðun í raunverulegu máli einungis á grein. Notaðu hana til yfirlits og ræddu skjölin þín sérstaklega við lögmann; þessi síða er ekki sjálf ráðgjöfin.',
+            'Byggðu ekki ákvörðun í raunverulegu máli einungis á grein. Notaðu hana til yfirlits og ræddu skjölin þín sérstaklega við lögmann; þessi síða er ekki sjálf ráðgjöfin.',
           ],
         },
       ],

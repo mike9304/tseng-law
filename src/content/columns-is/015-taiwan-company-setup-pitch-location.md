@@ -51,9 +51,9 @@ Ef könnunarniðurstaðan tilgreinir að veitingastarfsemi sé ekki möguleg get
 
 ​
 
-**Spurning.** Þurfa allar starfsgreinar, í gegnum kerfi fyrirframfyrirspurnar um starfsstöð (營業場所預先查詢), að kanna hvort rekstur sé mögulegur?
+**Spurning.** Þarf að kanna, fyrir allar starfsgreinar, í kerfi fyrirframfyrirspurnar um starfsstöð (營業場所預先查詢), hvort rekstur sé mögulegur?
 
-Mælt er með að allar starfsgreinar, í gegnum kerfi „fyrirframfyrirspurnar um starfsstöð“ (營業場所預先查詢), staðfesti hvort rekstur sé mögulegur.
+Mælt er með að fyrir allar starfsgreinar sé staðfest, í kerfi „fyrirframfyrirspurnar um starfsstöð“ (營業場所預先查詢), hvort rekstur sé mögulegur.
 
 Við félagaskráningu eru þó oft skráðar fleiri starfsgreinar samtímis, og oft er ætlunin að skrá um 10 starfsgreinar í einu.
 
@@ -61,7 +61,7 @@ Við félagaskráningu eru þó oft skráðar fleiri starfsgreinar samtímis, og
 
 Samkvæmt „[vinnuleiðbeiningum um aðstoð við fyrirspurn um starfsstöð í borginni Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“(臺北市營業場所協助查詢服務作業須知) og gildandi leiðbeiningum borgarinnar Taipei
 
-skal, frá 1. janúar 2023, við umsókn um skráningu stofnunar, flutnings aðseturs eða viðbótar skráðra starfsgreina fyrir félag eða verslun (þar á meðal útibú (分公司) og aðrar starfseiningar (分支機構)) niðurstaða fyrirframfyrirspurnar um starfsstöð **skyldubundin** fylgja skráningarumsókninni, án tillits til starfsgreinar.
+skal, frá 1. janúar 2023, við umsókn um skráningu stofnunar, flutnings aðseturs eða viðbótar skráðra starfsgreina fyrir félag eða verslun (þar á meðal útibú (分公司) og aðrar starfseiningar (分支機構)) niðurstaða fyrirframfyrirspurnar um starfsstöð **ávallt** fylgja skráningarumsókninni, án tillits til starfsgreinar.
 
 Listinn hér á eftir yfir „starfsgreinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目) merkir þær starfsgreinar sem verslunarstofan kannar að eigin frumkvæði við skráningarskoðun (隨案主動查詢), þegar starfsgreinin stendur í umsókninni en vantar í meðfylgjandi niðurstöðu; það að starfsgrein standi ekki á þessum lista þýðir ekki að könnunin sé undanþegin.
 

@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
 faq:
   - q: "Er samkomulag um lágmarksstarfstímabil (最低服務年限約定) í ráðningarsamningi á Taívan sjálfkrafa ógilt?"
-    a: "Nei. Samkvæmt 15-1. gr. laga um vinnustaðla á Taívan (勞動基準法) getur samkomulagið uppfyllt lögbundin skilyrði, ef vinnuveitandi veitir faglega tækniþjálfun (專業技術培訓) og ber kostnaðinn, eða veitir hæfilegar bætur (合理補償) svo starfsmaðurinn haldi lágmarksstarfstímabilið. Ekki er nauðsynlegt að uppfylla bæði skilyrðin samtímis, en jafnvel þótt 1 þeirra sé til staðar má samkomulagið ekki fara út fyrir hæfilegt umfang í ljósi allra atvika, svo sem lengdar og kostnaðar þjálfunarinnar, möguleika á að leysa starfsmann af (人力替補可能性) og fjárhæðar og sviðs bótanna."
+    a: "Nei. Samkvæmt 15-1. gr. laga um vinnustaðla á Taívan (勞動基準法) getur samkomulagið uppfyllt lögbundin skilyrði, ef vinnuveitandi veitir faglega tækniþjálfun (專業技術培訓) og ber kostnaðinn, eða veitir hæfilegar bætur (合理補償) svo starfsmaðurinn haldi lágmarksstarfstímabilið. Ekki er nauðsynlegt að uppfylla bæði skilyrðin samtímis, en jafnvel þótt eitt þeirra sé til staðar má samkomulagið ekki fara út fyrir hæfilegt umfang í ljósi allra atvika, svo sem lengdar og kostnaðar þjálfunarinnar, möguleika á að leysa starfsmann af (人力替補可能性) og fjárhæðar og sviðs bótanna."
   - q: "Telst þjálfun nýráðinna eða lögbundin þjálfun sem fagleg tækniþjálfun?"
     a: "Samkvæmt leiðbeiningum vinnumálaráðuneytis Taívan (勞動部) frá 5. júní 2026 má kostnaður við reglulega fræðslu, almenna starfsþjálfun, aðlögun nýráðinna að starfinu og þjálfun sem lög kveða á um að veita, ekki vera grundvöllur samkomulags um lágmarksstarfstímabil eða kröfu um samningssekt (違約金) eða endurgreiðslu kostnaðar. Ekki skal aðeins horfa á heiti þjálfunarinnar, heldur tiltekið námskeið, faglegt og tæknilegt innihald, tímabil, þann kostnað sem vinnuveitandi bar raunverulega, og fylgiskjöl."
   - q: "Ef starfsmaður lætur af störfum snemma, skal undirritunarbónus (簽約金) eða starfshaldsbónus (留任獎金) endurgreiddur að fullu?"
@@ -24,26 +24,26 @@ faq:
 
 Samkomulag um lágmarksstarfstímabil (最低服務年限約定) í ráðningarsamningi á Taívan (勞動契約) er, ásamt loforði um að starfa tiltekið tímabil, notað til að ákveða hvort við snemmbúin starfslok sé skylda til að endurgreiða þjálfunarkostnað, undirritunarbónus (簽約金) eða starfshaldsbónus (留任獎金), og hvort sérstaklega megi krefjast samningssektar (違約金). Það eitt að undirritaður texti sé til staðar festir þó hvorki gildi samkomulagsins né þá fjárhæð sem endurgreiða skal. Fremur en heiti samningsins skal kanna lögbundin skilyrði og raunverulegt ferli greiðslna, þjálfunar og lokunar, skref fyrir skref.
 
-Við könnunina er mikilvægt að blanda ekki eftirfarandi 4 spurningum saman.
+Við könnunina er mikilvægt að blanda ekki eftirfarandi fjórum spurningum saman.
 
 1. Hvort samkomulagið sjálft uppfylli lögbundin skilyrði 15-1. gr.
 2. Hvort umsamið tímabil og byrði starfsmannsins séu innan hæfilegs sviðs.
 3. Hverjum ástæða lokunar ráðningarsamningsins verði rakin.
 4. Hvernig uppsagnarfrestur og umfang endurgreiðslu eru metin.
 
-Jafnvel þótt þessar 4 spurningar standi saman í sama samningi eru gildandi ákvæði og nauðsynleg sönnun ólík. Því skal sérstaklega kanna hvort samkomulagið sé gilt, hvenær uppsögnin öðlast gildi, hvort ábyrgð sé til staðar á endurgreiðslu fyrirframgreiddra hlunninda (預付性給付) eða þjálfunarkostnaðar, og hvort sérstakt tjón hafi raunverulega orðið.
+Jafnvel þótt þessar fjórar spurningar standi saman í sama samningi eru gildandi ákvæði og nauðsynleg sönnun ólík. Því skal sérstaklega kanna hvort samkomulagið sé gilt, hvenær uppsögnin öðlast gildi, hvort ábyrgð sé til staðar á endurgreiðslu fyrirframgreiddra hlunninda (預付性給付) eða þjálfunarkostnaðar, og hvort sérstakt tjón hafi raunverulega orðið.
 
 ## 1. Hvenær öðlast samkomulag um lágmarksstarfstímabil gildi?
 
-Samkvæmt 15-1. gr. laga um vinnustaðla á Taívan (勞動基準法) getur samkomulagið uppfyllt lögbundin skilyrði, ef vinnuveitandi veitir faglega tækniþjálfun (專業技術培訓) og ber kostnaðinn, eða veitir hæfilegar bætur (合理補償) svo starfsmaðurinn haldi lágmarksstarfstímabilið. Ekki er nauðsynlegt að uppfylla bæði skilyrðin samtímis, en jafnvel þótt 1 þeirra sé til staðar má samkomulagið ekki fara út fyrir hæfilegt umfang í ljósi allra atvika, svo sem lengdar og kostnaðar þjálfunarinnar, möguleika á að leysa starfsmann af (人力替補可能性) og fjárhæðar og sviðs bótanna.
+Samkvæmt 15-1. gr. laga um vinnustaðla á Taívan (勞動基準法) getur samkomulagið uppfyllt lögbundin skilyrði, ef vinnuveitandi veitir faglega tækniþjálfun (專業技術培訓) og ber kostnaðinn, eða veitir hæfilegar bætur (合理補償) svo starfsmaðurinn haldi lágmarksstarfstímabilið. Ekki er nauðsynlegt að uppfylla bæði skilyrðin samtímis, en jafnvel þótt eitt þeirra sé til staðar má samkomulagið ekki fara út fyrir hæfilegt umfang í ljósi allra atvika, svo sem lengdar og kostnaðar þjálfunarinnar, möguleika á að leysa starfsmann af (人力替補可能性) og fjárhæðar og sviðs bótanna.
 
-15-1. gr. 1. mgr. setur fram 2 lögbundin skilyrði til vara. Hið fyrra er að vinnuveitandi hafi veitt starfsmanninum faglega tækniþjálfun (專業技術培訓) og borið kostnaðinn; hið síðara, að hæfilegar bætur (合理補償) hafi verið veittar gegn því að lágmarksstarfstímabilinu sé haldið. Kanna skal ekki hvaða heiti samningurinn fékk, heldur hvaða grundvöllur er raunverulega til staðar.
+15-1. gr. 1. mgr. setur fram tvö lögbundin skilyrði til vara. Hið fyrra er að vinnuveitandi hafi veitt starfsmanninum faglega tækniþjálfun (專業技術培訓) og borið kostnaðinn; hið síðara, að hæfilegar bætur (合理補償) hafi verið veittar gegn því að lágmarksstarfstímabilinu sé haldið. Kanna skal ekki hvaða heiti samningurinn fékk, heldur hvaða grundvöllur er raunverulega til staðar.
 
-15-1. gr. krefst 1 af 2 lögbundnum skilyrðum og þar að auki sérstakrar sanngirnisskoðunar. Það þýðir ekki að alltaf skuli samtímis veita faglega tækniþjálfun og hæfilegar bætur, né að allt samkomulagið verði sjálfkrafa gilt af því einu að 1 af 2 sé formlega tilgreint.
+15-1. gr. krefst eins af tveimur lögbundnum skilyrðum og þar að auki sérstakrar sanngirnisskoðunar. Það þýðir ekki að alltaf skuli samtímis veita faglega tækniþjálfun og hæfilegar bætur, né að allt samkomulagið verði sjálfkrafa gilt af því einu að annað þeirra tveggja sé formlega tilgreint.
 
 Að lögbundnu skilyrði staðfestu er samkvæmt 2. mgr. sérstaklega kannað hvort umsamið tímabil og umfang ábyrgðar séu hæfileg. Samkomulag sem brýtur lögbundið skilyrði 1. mgr. eða sanngirnisviðmið 2. mgr. er ógilt samkvæmt 3. mgr. Þessi regla er þó viðmið til að kanna innihald og atvik hvers samkomulags, ekki regla sem frá upphafi lýsir öllum samkomulögum um lágmarksstarfstímabil gildum eða ógildum.
 
-Það atvik að starfsmaðurinn hafi undirritað samninginn getur verið fylgiskjal sem staðfestir tilvist samkomulagsins, en kemur ekki í stað lögbundinna skilyrða. Öfugt, í stað þess að slá þegar niðurstöðu af því einu að samkomulagið sé langvarandi, skal kanna hvaða fjárfesting eða bætur voru, og hvers vegna þetta tímabil var ákveðið (最低服務年限約定).
+Það atvik að starfsmaðurinn hafi undirritað samninginn getur verið fylgiskjal sem staðfestir tilvist samkomulagsins, en kemur ekki í stað lögbundinna skilyrða. Á hinn bóginn skal, í stað þess að slá því föstu af því einu að samkomulagið sé langvarandi, kanna hvaða fjárfesting eða bætur voru, og hvers vegna þetta tímabil var ákveðið (最低服務年限約定).
 
 ## 2. Fyrsta lögbundna skilyrðið: fagleg tækniþjálfun og greiðsla kostnaðar
 
@@ -51,7 +51,7 @@ Til að grundvalla samkomulagið á þjálfuninni skal vinnuveitandi raunveruleg
 
 Könnunarefnið nær ekki aðeins til beint sannanlegs kostnaðar, svo sem þóknunar utanaðkomandi kennara, námskeiðsgjalda hjá þjálfunarstofnun og gjalda fyrir efni eða búnað, heldur einnig til útreikningsgrundvallar innri kostnaðar sem vinnuveitandi ber fyrir sig. Hafi innri starfsmenn kennt skal skoða hvers tími var notaður, og hvernig hann greinist frá venjulegu eftirliti eða starfsskilum, og hvort grundvöllur sé til að rekja þann kostnað til viðkomandi starfsmanns. Áætluð fjárhæð eða heildarúthlutun sanna ekki eitt og sér raunverulega byrði.
 
-Námskrá, þjálfunaráætlun, mætingarskrá, matarniðurstaða, lokavottorð, reikningar og kvittanir eru grunngögn til að staðfesta raunveruleika þjálfunarinnar og kostnaðinn. Samningur milli vinnuveitanda og þjálfunarstofnunar, greiðslugögn og endurgreiðsluskilmálar, skoðuð saman, gera kleift að átta sig nánar á raunverulegri byrði. Hafi starfsmaðurinn greitt hluta kostnaðarins beint, eða þriðji aðili borið hann, skal einnig greina hver bar lokakostnaðinn.
+Námskrá, þjálfunaráætlun, mætingarskrá, matsniðurstöður, lokavottorð, reikningar og kvittanir eru grunngögn til að staðfesta raunveruleika þjálfunarinnar og kostnaðinn. Samningur milli vinnuveitanda og þjálfunarstofnunar, greiðslugögn og endurgreiðsluskilmálar, skoðuð saman, gera kleift að átta sig nánar á raunverulegri byrði. Hafi starfsmaðurinn greitt hluta kostnaðarins beint, eða þriðji aðili borið hann, skal einnig greina hver bar lokakostnaðinn.
 
 Mörkin milli almennrar starfsaðlögunar og faglegrar tækniþjálfunar greinast ekki aðeins eftir þjálfunarstað eða eftir því hver stýrir henni. Innra námskeið getur haft tiltekið faglegt og tæknilegt innihald og umtalsverða fjárfestingu, og langt námskeið hjá utanaðkomandi stofnun getur í raun verið almenn inngangsfræðsla. Því skal ekki í einu lagi útiloka alla innri þjálfun og ekki heldur viðurkenna lögbundna skilyrðið af því einu að námskeiðið sé dýrt eða langt.
 
@@ -65,13 +65,13 @@ Fyrst skal staðfesta greiðslutilganginn. Hvort um almenn launakjör við ráð
 
 Leiðbeiningarnar (函釋) vinnumálaráðuneytis Taívan (勞動部) frá 5. júní 2026 skýra að, séu starfshaldsbónus, undirritunarbónus eða önnur fyrirframgreidd hlunnindi notuð sem hæfilegar bætur vegna samkomulags um lágmarksstarfstímabil, skuli þetta hlutverk skýrt tilkynnt. Að vinnuveitandi túlki greiðslutilganginn síðar að nýju eða flokki hluta launa sem bætur kemur tæpast í stað tilkynningarinnar á samningstímanum.
 
-Sanngirni bótanna er ekki metin eftir fjárhæðinni einni. Saman er skoðað hvort starfsmaðurinn fái raunverulega viðbótarávinning, hvort greiðsluskilmálar séu skýrir, hvernig sá hluti sem svarar til þegar unnins tímabils er eignað, og hvort umfang endurgreiðslu sé ekki ósanngjarnt (合理補償). Jafnvel þótt bætur séu til staðar er ekki án takmarkana leyfð hvaða dvalarlengd sem er eða hvaða fjárhæð sem er vegna endurgreiðsluábyrgðar.
+Sanngirni bótanna er ekki metin eftir fjárhæðinni einni. Saman er skoðað hvort starfsmaðurinn fái raunverulega viðbótarávinning, hvort greiðsluskilmálar séu skýrir, hvernig sá hluti sem svarar til þegar unnins tímabils er eignaður, og hvort umfang endurgreiðslu sé ekki ósanngjarnt (合理補償). Jafnvel þótt bætur séu til staðar er ekki án takmarkana leyfð hvaða dvalarlengd sem er eða hvaða fjárhæð sem er vegna endurgreiðsluábyrgðar.
 
 Einnig er mikilvægt að samningstextinn og raunveruleg greiðsla fari saman. Að kanna hvort greiðslan hafi dregist eða verið greidd í áföngum, hvort hún sé skilyrt, hver fjárhæðin sem raunverulega barst eftir skatta og frádrátt sé, og hvort sérstök skrifleg tilkynning hafi verið, hjálpar til að meta umfang bótanna og raunverulegan ávinning starfsmannsins (預付性給付).
 
-## 4. Hæfilegt umfang og 4 skoðunarþættir
+## 4. Hæfilegt umfang og fjórir skoðunarþættir
 
-Jafnvel þótt 1 af lögbundnu skilyrðunum sé til staðar skulu umsamið tímabil og ábyrgðin vera innan hæfilegs sviðs. 15-1. gr. 2. mgr. gefur ekki fast svar eftir heiti eða starfsgrein, en kveður á um að tiltekinn samningur og skipulag fjárfestingar og bóta séu könnuð með eftirfarandi 4 þáttum.
+Jafnvel þótt eitt af lögbundnu skilyrðunum sé til staðar skulu umsamið tímabil og ábyrgðin vera innan hæfilegs sviðs. 15-1. gr. 2. mgr. gefur ekki fast svar eftir heiti eða starfsgrein, en kveður á um að tiltekinn samningur og skipulag fjárfestingar og bóta séu könnuð með eftirfarandi fjórum þáttum.
 
 1. Lengd og kostnaður faglegrar tækniþjálfunar.
 2. Möguleiki á að leysa af starfsmann í sama starfi eða sambærilegu starfi.
@@ -110,15 +110,15 @@ Hlutfallsreglan um óuppfyllta tímabilið (預付性給付) krefst fyrst ákvö
 
 Endurgreiðsluspurningin skal staðfest í röð: gildi samkomulagsins, lagalegt eðli greiddrar fjárhæðar, þegar unnið tímabil, ástæða lokunar og endurgreiðsluformúla; sú fjárhæð sem krafist er ræðst ekki af því einu að samningurinn noti orðið „samningssekt“ (違約金).
 
-Ákvæði um fulla endurgreiðslu, föst samningssekt án tengsla við raunverulegt tjón og einhliða frádráttur af launum eru ekki metin sem 1 vandamál. Lagagrundvöllur, innihald samkomulagsins, takmarkanir vinnuréttar og lögmæti frádráttarins skulu staðfest sérstaklega. Fjárhæðin sem skráð er á kröfubréfi vinnuveitanda, eða það atvik að starfsmaðurinn hafi greitt hluta, ræður ekki heldur öðrum lagalegum spurningum.
+Ákvæði um fulla endurgreiðslu, föst samningssekt án tengsla við raunverulegt tjón og einhliða frádráttur af launum eru ekki metin sem eitt vandamál. Lagagrundvöllur, innihald samkomulagsins, takmarkanir vinnuréttar og lögmæti frádráttarins skulu staðfest sérstaklega. Fjárhæðin sem skráð er á kröfubréfi vinnuveitanda, eða það atvik að starfsmaðurinn hafi greitt hluta, ræður ekki heldur öðrum lagalegum spurningum.
 
-Einnig skal greina milli endurgreiðslu þjálfunarkostnaðar og endurgreiðslu fyrirframgreiddra hlunninda. Hið fyrra er skoðað með miðju í raunverulegri faglegri tækniþjálfun og greiðslu kostnaðarins; hið síðara, í greiðslutilgangi, tilkynningu, eignunarskilyrðum og hlutfalli við óuppfyllta tímabilið. Séu báðir liðir krafðir saman skal sérstaklega kanna hvort kostnaðurinn sé tvíreiknaður, og fylgiskjöl hvers liðar.
+Einnig skal greina milli endurgreiðslu þjálfunarkostnaðar og endurgreiðslu fyrirframgreiddra hlunninda. Hið fyrra er skoðað með áherslu á raunverulega faglega tækniþjálfun og greiðslu kostnaðarins; hið síðara, í greiðslutilgangi, tilkynningu, eignunarskilyrðum og hlutfalli við óuppfyllta tímabilið. Séu báðir liðir krafðir saman skal sérstaklega kanna hvort kostnaðurinn sé tvíreiknaður, og fylgiskjöl hvers liðar.
 
 ## 7. Þegar samningnum lýkur af ástæðu sem ekki verður rakin til starfsmannsins
 
 15-1. gr. 4. mgr. laga um vinnustaðla á Taívan (勞動基準法) kveður á um að, ljúki ráðningarsamningi áður en lágmarksstarfstímabilinu lýkur af ástæðu sem ekki verður rakin til starfsmannsins, beri starfsmaðurinn hvorki ábyrgð vegna brots á samkomulagi um lágmarksstarfstímabil né vegna endurgreiðslu þjálfunarkostnaðar. Ástæðu lokunar, og hverjum ábyrgðin er kennd, skal þó meta á grundvelli tiltekinna sönnunargagna, svo sem uppsagnartilkynningar, uppsagnar og gagna um brot á starfskjörum.
 
-Því má ekki viðurkenna brot starfsmannsins af því einu að ráðningarsambandinu hafi lokið fyrir umsamið tímabil. Kanna skal hver hafi sett fram hvaða viljayfirlýsingu, hver lagagrundvöllur lokunar samningsins sé, og hvorum aðila raunveruleg atvik sem ollið henni verði rakin.
+Því má ekki viðurkenna brot starfsmannsins af því einu að ráðningarsambandinu hafi lokið fyrir umsamið tímabil. Kanna skal hver hafi sett fram hvaða viljayfirlýsingu, hver lagagrundvöllur lokunar samningsins sé, og hvorum aðila raunveruleg atvik sem ollu henni verði rakin.
 
 Könnunargögnin geta náð til uppsagnartilkynningar, starfslokabréfs, skjals um lokun með gagnkvæmu samkomulagi, tölvupósts og skilaboðaskrár, gagna um breytingu starfskjara og mætingar- og vinnuskrár. Jafnvel þótt heilsu eða vinnuaðstæðum sé getið, er niðurstöðunni ekki slegið föstu eftir orðalaginu einu, heldur skoðuð saman raunveruleg atburðarás, lögbundinn lokunargrundvöllur og tengd sönnunargögn.
 
@@ -140,9 +140,9 @@ Uppsagnarfresturinn eftir samfelldan starfsaldur er eftirfarandi.
 
 Fari tímabil tímabundins ráðningarsamnings vegna tiltekins verks (特定性定期契約) yfir 3 ár, gildir sérstök regla 15. gr. Starfsmaðurinn má, að 3 árum í starfi loknum, slíta samningnum með 30 daga fyrirvara til vinnuveitanda. Þessa reglu skal greina frá þeirri um fyrirvara eftir samfelldan starfsaldur sem gildir um ótímabundinn samning.
 
-Sé samfelldur starfsaldur skemur en 3 mánuðir, sé um aðra tegund tímabundins samnings að ræða, eða sé lögbundin ástæða til þegar-í-stað-lokunar borin fyrir, skal gildandi ákvæði og atvikin könnuð hvert um sig. Það eitt að samningurinn nefni lengri fyrirvara eða krefjist þegar-í-stað-starfsskila leyfir ekki að slá lagalegri niðurstöðu föstu fyrir fram.
+Sé samfelldur starfsaldur skemur en 3 mánuðir, sé um aðra tegund tímabundins samnings að ræða, eða sé lögbundin ástæða til fyrirvaralausrar riftunar borin fyrir, skal gildandi ákvæði og atvikin könnuð hvert um sig. Það eitt að samningurinn nefni lengri fyrirvara eða krefjist þess að starfi verði skilað þegar í stað leyfir ekki að slá lagalegri niðurstöðu föstu fyrir fram.
 
-Í framkvæmd skal varðveita innihald og sendingardag uppsagnarinnar, þann dag sem vinnuveitandi tók hana raunverulega við, og samskipti aðila um síðasta vinnudag. Sé í 4 spurningum greint á milli þess tíma er starfslokin öðlast gildi, gildis samkomulagsins um lágmarksstarfstímabil, endurgreiðslu þjálfunarkostnaðar eða fyrirframgreiddra hlunninda og tjónsins sem borið er sérstaklega fyrir, minnkar villan að draga allar niðurstöður af einu samningsákvæði.
+Í framkvæmd skal varðveita innihald og sendingardag uppsagnarinnar, þann dag sem vinnuveitandi tók hana raunverulega við, og samskipti aðila um síðasta vinnudag. Sé í fjórum spurningum greint á milli þess tíma er starfslokin öðlast gildi, gildis samkomulagsins um lágmarksstarfstímabil, endurgreiðslu þjálfunarkostnaðar eða fyrirframgreiddra hlunninda og tjónsins sem borið er sérstaklega fyrir, minnka líkurnar á því að allar niðurstöður séu dregnar af einu samningsákvæði.
 
 ## 9. Gátlisti fyrir vinnuveitanda og starfsmann
 
@@ -156,10 +156,10 @@ Til að koma í veg fyrir deilu eða kanna kröfu sem þegar er sett fram má ek
 4. Tilgangur bótanna, greiðsludagur, fjárhæð, eignunarskilyrði, tilkynningin sem veitt var starfsmanninum, og endurgreiðsluformúla óuppfyllta tímabilsins eru skýrt tengd skriflega.
 5. Útreikningsgrundvöllur umsamins tímabils, möguleiki á að leysa af starfsfólk í sama starfi eða sambærilegu starfi (人力替補可能性) og tengsl rekstrarþarfar vinnuveitanda og raunverulegrar fjárfestingar eru skjalfest.
 6. Kannað er hvort umsamið tímabil og endurgreiðslufjárhæð séu í hlutfalli við umfang þjálfunarkostnaðar eða bóta, og þegar unnið tímabil endurspeglað í uppgjöri (合理補償).
-7. Að einstaklingsbundinni staðfestingu ástæðu lokunar og þess hverjum ábyrgðin er kennd er raunverulegur lokunardagur, uppfyllt tímabil og óuppfyllt tímabil reiknað.
+7. Þegar ástæða lokunar og það hverjum ábyrgðin er kennd hefur verið staðfest í hverju máli er raunverulegur lokunardagur, uppfyllt tímabil og óuppfyllt tímabil reiknað.
 8. Áður en frádráttur af launum eða krafa um endurgreiðslu er gerð eru samningur, greiðslugögn, launaseðill, samskipti aðila, kröfubréf og frádráttarskrá könnuð til að staðfesta lagagrundvöll og málsmeðferð.
 
-Jafnvel þótt staðlaður samningur sé notaður má ekki vélrænt beita sama tímabili og sömu fjárhæð á hvert starf og hvern starfsmann. Ákvæðin skulu hönnuð með endurspeglun raunverulegrar þjálfunarfjárfestingar, bóta og möguleika á að leysa af, og greiðslutilgangur og hlutfallsformúla skulu tilkynnt skiljanlega fyrir gerð samningsins.
+Jafnvel þótt staðlaður samningur sé notaður má ekki vélrænt beita sama tímabili og sömu fjárhæð á hvert starf og hvern starfsmann. Ákvæðin skulu samin þannig að þau endurspegli raunverulega þjálfunarfjárfestingu, bætur og möguleika á að leysa af, og greiðslutilgangur og hlutfallsformúla skulu tilkynnt skiljanlega fyrir gerð samningsins.
 
 ### Atriði sem starfsmaðurinn skal kanna
 

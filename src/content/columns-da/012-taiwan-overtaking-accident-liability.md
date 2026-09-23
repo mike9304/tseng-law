@@ -25,7 +25,7 @@ Desuden må du ikke overhale på steder eller strækninger med skole- eller hosp
 
 For i samme vognbane at overhale et forankørende køretøj skal den bagvedkørende først give 2 korte hornsignaler eller blinke med forlygterne 1 gang. Horn og forlygter må ikke bruges gentagne gange for at tvinge det forankørende køretøj til at vige (超車).
 
-Det bagvedkørende køretøj må først overhale, efter at det forankørende køretøj har nedsat farten og veget til siden, eller ved håndtegn eller højre blinklys har vist vilje til at vige (超車).
+Det bagvedkørende køretøj må først overhale, efter at det forankørende køretøj har nedsat farten og veget til siden, eller ved håndtegn eller højre blinklys har tilkendegivet, at det viger (超車).
 
 Derefter skal det overhalende køretøj tænde det venstre blinklys, køre forbi til venstre med en afstand på mindst 0,5 meter til det forankørende køretøj og, når en sikker afstand er sikret, tænde det højre blinklys og sikkert vende tilbage til den oprindelige vognbane.
 
@@ -51,7 +51,7 @@ At der i enkelte sager kommer sådanne sagkyndige resultater, betyder ikke, at �
 
 Før overhaling bør du først undersøge, om stedet eller trafiksituationen falder ind under overhalingsforbuddet. Gælder proceduren for samme vognbane, så giv det foreskrevne horn- eller forlygtesignal uden at tvinge det forankørende køretøj til at vige, vent på et tydeligt tegn på, at det forankørende køretøj viger, og fuldfør overhalingen med tilstrækkelig sideafstand og sikker afstand til at komme tilbage (超車).
 
-Overholdelsen af artikel 101 er vigtig, men sikrer i sig selv hverken undgåelse af en ulykke eller et senere resultat af sagkyndig undersøgelse eller retssag. Førere skal holde en ekstra sikkerhedsmargin og tilpasse sig situationen foran sig.
+Overholdelsen af artikel 101 er vigtig, men sikrer i sig selv hverken undgåelse af en ulykke eller et bestemt udfald af en senere sagkyndig undersøgelse eller retssag. Førere skal holde en ekstra sikkerhedsmargin og tilpasse sig situationen foran sig.
 
 Som supplement kan du se [illustrationen af overhalingsreglerne og -proceduren](https://gonews.com.tw/car/daily/21934/). Da det er en sekundær kilde, bør du ved vurderingen af de juridiske betingelser også læse de gældende officielle forskrifter (道路交通安全規則).
 

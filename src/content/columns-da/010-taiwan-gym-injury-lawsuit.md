@@ -23,7 +23,7 @@ Jeg førte denne sag som procesfuldmægtig (訴訟代理人) for sagsøgeren, de
 
 Derefter meddelte pressen, at parterne i ankeinstansen havde indgået et forlig (和解). Den officielle dom i 1. instans oplyser i sig selv hverken udfaldet af anken eller et forligsbeløb; det forlig, pressen har omtalt, må ikke læses som en bekræftet afslutning af sagen i 1. instans.
 
-Overskrifterne på medieomtaler, netopslag og juridiske kommentarer om denne sag, overført til dansk, er følgende. Titlerne nedenfor tjener kun til at fremstille indholdet af hvert link; de betyder ikke, at denne tekst selv fastslår kendsgerningerne.
+Overskrifterne på medieomtaler, netopslag og juridiske kommentarer om denne sag gengives nedenfor på dansk. Titlerne nedenfor tjener kun til at fremstille indholdet af hvert link; de betyder ikke, at denne tekst selv fastslår kendsgerningerne.
 
 ![En mandlig studerende, diskusprolaps (椎間盤破裂) efter en deadlift på 90 kg… kræver erstatning af fitnesscentret](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
@@ -63,7 +63,7 @@ Overskrifterne på medieomtaler, netopslag og juridiske kommentarer om denne sag
 
 Det praktisk vigtige ved denne sag er, at den viser, at ansvaret ikke straks fastlægges ved det blotte forhold, at en skade er opstået i et fitnesscenter (健身房). Indholdet af sikkerhedspligten (安全義務) hos tjenesteyderen, den konkrete ledelseshandling og tilsidesættelsen af omhyggelighedspligten (注意義務), årsagsforbindelsen mellem skade og adfærd samt skadens omfang vurderes på grundlag af dokumenterne i hver sag. Betingelserne og fristerne for straffesagen (刑事) og for den civile sag (民事) adskiller sig ligeledes. Dokumenterne bør derfor ordnes hver for sig straks efter ulykken.
 
-Det følgende er almindelig information til belysning af tvister om skader i et fitnesscenter i Taiwan; det er ikke juridisk rådgivning om en konkret sag. Den konkrete ret og fremgangsmåde kan variere efter kontraktforholdet, ulykkens forløb, skadens årsag og grad, parternes adfærd, policevilkårene, de sikrede beviser og den anvendelige ret.
+Det følgende er almindelig information til belysning af tvister om skader i et fitnesscenter i Taiwan; det er ikke juridisk rådgivning om en konkret sag. De faktiske rettigheder og de mulige reaktioner kan variere efter kontraktforholdet, ulykkens forløb, skadens årsag og grad, parternes adfærd, policevilkårene, de sikrede beviser og den anvendelige ret.
 
 ## 1. Hvilke juridiske procedurer kan efter en skade i et fitnesscenter i Taiwan undersøges?
 
@@ -75,7 +75,7 @@ Er gerningsindholdet i uagtsom legemsbeskadigelse (過失傷害) opfyldt, kan st
 
 ## 2. Hvilke frister gælder for straffeanmeldelsen og den civile erstatning?
 
-Ifølge [artikel 287 i den taiwanske straffelov (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) er forbrydelsen uagtsom legemsbeskadigelse i artikel 284 i straffeloven en forbrydelse, der kræver anmeldelse for at kunne retsforfølges (告訴乃論之罪). Ifølge [artikel 237 i den taiwanske retsplejelov i straffesager (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) skal den anmeldelsesberettigede i princippet indgive anmeldelsen inden 6 måneder fra den dag, hvor vedkommende kender gerningsmanden.
+Ifølge [artikel 287 i den taiwanske straffelov (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) er forbrydelsen uagtsom legemsbeskadigelse i artikel 284 i straffeloven en forbrydelse, der kræver anmeldelse for at kunne retsforfølges (告訴乃論之罪). Ifølge [artikel 237 i den taiwanske retsplejelov i straffesager (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) skal den anmeldelsesberettigede i princippet indgive anmeldelsen inden 6 måneder fra den dag, hvor vedkommende fik kendskab til gerningsmanden.
 
 Retten til erstatning uden for kontrakt (侵權行為) ifølge [artikel 197 i den taiwanske civillov (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) forældes som udgangspunkt, hvis den ikke gøres gældende inden 2 år fra det tidspunkt, hvor skadelidte får kendskab til skaden og den erstatningspligtige, og den ophører også, når der er gået 10 år fra den skadegørende handling.
 
@@ -99,7 +99,7 @@ De erstatningsposter, hvis krav kan undersøges, er følgende. Den faktiske aner
 4. **Tab af erhvervsevne (勞動能力減損)**: Anerkendes restskader og en vedvarende nedsættelse af arbejdsevnen, kan der vurderes i sammenhæng med lægelige og erhvervsmæssige dokumenter, uarbejdsdygtighedens grad, erhvervet og indkomsten samt det resterende arbejdsliv. Alene uarbejdsdygtighedsprocenten fastlægger ikke erstatningen, og tabet beregnes ikke automatisk indtil pensionstidspunktet.
 5. **Indkomsttab i rekonvalescensperioden (收入損失)**: Den periode, hvor der på grund af behandling eller hvile faktisk ikke kunne arbejdes, og den deraf følgende nedsættelse af indkomsten, skal bevises ved løn-, skatte- og ansættelsesdokumenter.
 6. **Ikke-formueretligt tab (非財產上損害)**: Godtgørelsen for tort fastlægges af retten ud fra faktorer i hver sag, såsom skadens grad, behandlingsperioden, restskaderne og partens konkrete omstændigheder.
-7. **Pønal erstatning (懲罰性賠償金)**: Der findes en regel, hvorefter der i en tvist, hvor loven om forbrugerbeskyttelse finder anvendelse, hvis tabet er forårsaget af virksomhedens forsæt, kan kræves indtil 5 gange det faktiske tab; hvis ved grov uagtsomhed, indtil 3 gange; og ved uagtsomhed op til det faktiske tabs beløb. Om [artikel 51 i den taiwanske lov om forbrugerbeskyttelse](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) finder anvendelse på sagen, og om der faktisk tilkendes pønal erstatning, og med hvilket beløb, afhænger af rettens vurdering af de konkrete betingelser og beviserne (消費者保護法).
+7. **Pønal erstatning (懲罰性賠償金)**: Der findes en regel, hvorefter der i en tvist, hvor loven om forbrugerbeskyttelse finder anvendelse, kan kræves indtil 5 gange det faktiske tab, hvis tabet er forårsaget af virksomhedens forsæt, indtil 3 gange ved grov uagtsomhed og op til det faktiske tabs beløb ved uagtsomhed. Om [artikel 51 i den taiwanske lov om forbrugerbeskyttelse](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) finder anvendelse på sagen, og om der faktisk tilkendes pønal erstatning, og med hvilket beløb, afhænger af rettens vurdering af de konkrete betingelser og beviserne (消費者保護法).
 
 ## 5. Kan, også når fitnesscentret har en ansvarsforsikring (責任保險), erstatningens eksistens og beløb bestrides?
 

@@ -1,4 +1,4 @@
-# id guidance pack strings (path → text). Generated 2026-09-21
+# id guidance pack strings (path → text). Generated 2026-09-22
 
 guidanceContent.id.languageName
     Bahasa Indonesia
@@ -43,13 +43,13 @@ guidanceContent.id.skipLink
     Lewati navigasi, langsung ke isi utama
 
 guidanceContent.id.menuLabel
-    Daftar halaman
+    Menu navigasi
 
 guidanceContent.id.languageLabel
-    Bahasa tampilan
+    Bahasa
 
 guidanceContent.id.mega.services.description
-    Kantor menangani kelompok pekerjaan utama menurut hukum Taiwan.
+    Kantor menangani bidang layanan utama menurut hukum Taiwan.
 
 guidanceContent.id.mega.services.viewAllLabel
     Lihat semua
@@ -100,13 +100,13 @@ guidanceContent.id.home.servicesDetailLabel
     Lihat detail
 
 guidanceContent.id.home.servicesAssistanceBefore
-    Jika Anda belum yakin perkara Anda termasuk kelompok yang mana, halaman 
+    Jika Anda belum yakin perkara Anda termasuk bidang layanan yang mana, halaman 
 
 guidanceContent.id.home.servicesAssistanceLinkLabel
     Kontak
 
 guidanceContent.id.home.servicesAssistanceAfter
-     menjelaskan cara menyusun ringkasan yang akan ditinjau advokat.
+    menjelaskan cara menyusun ringkasan yang akan ditinjau advokat.
 
 guidanceContent.id.home.columnsViewAllLabel
     Lihat semua artikel
@@ -145,13 +145,13 @@ guidanceContent.id.pages.home.description
     Penjelasan umum dalam bahasa Indonesia mengenai lingkup pekerjaan Hovering International Law Firm di Taiwan, bahasa konsultasi, dan cara memulai kontak.
 
 guidanceContent.id.pages.home.intro
-    Hovering International Law Firm mendampingi klien dari luar negeri, termasuk mereka yang berada di Taiwan, dalam perkara menurut hukum Taiwan: investasi dan pendirian perusahaan, sengketa perdata, perkara perkawinan dan keluarga, ketenagakerjaan, pidana, dan kekayaan intelektual. Bagian berbahasa Indonesia ini membantu Anda mengetahui pekerjaan apa yang termasuk dalam lingkup kami, apa yang perlu disiapkan, dan bagaimana cara menghubungi kami. Ini keterangan umum, bukan nasihat hukum untuk perkara Anda sendiri.
+    Hovering International Law Firm mendampingi klien dari luar negeri, termasuk mereka yang memiliki kaitan dengan Taiwan, dalam perkara menurut hukum Taiwan: investasi dan pendirian perusahaan, sengketa perdata, perkara perkawinan dan keluarga, ketenagakerjaan, pidana, dan kekayaan intelektual. Bagian berbahasa Indonesia ini membantu Anda mengetahui pekerjaan apa yang termasuk dalam lingkup kami, apa yang perlu disiapkan, dan bagaimana cara menghubungi kami. Ini keterangan umum, bukan nasihat hukum untuk perkara Anda sendiri.
 
 guidanceContent.id.pages.home.sections[0].heading
     Apa yang kami kerjakan
 
 guidanceContent.id.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm adalah kantor advokat yang berkedudukan di Taiwan, bekerja berdasarkan hukum Taiwan, dan memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), serta Pingtung (屏東). Kami menangani konsultasi hukum bagi perusahaan sekaligus perkara yang beracara di pengadilan, dan mendampingi klien dari luar negeri dalam proses yang harus ditempuh di Taiwan.
+    Hovering International Law Firm adalah kantor advokat yang berkedudukan di Taiwan, bekerja berdasarkan hukum Taiwan, dan memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), serta Pingtung (屏東). Kami menangani konsultasi hukum bagi perusahaan sekaligus beracara di pengadilan, dan mendampingi klien dari luar negeri dalam proses yang harus ditempuh di Taiwan.
 
 guidanceContent.id.pages.home.sections[0].paragraphs[1]
     Seluruh isi di sini bersifat umum. Kesimpulan sebuah perkara bergantung pada fakta, ketentuan yang berlaku, dan waktunya, sehingga panduan ini tidak menggantikan pembicaraan langsung dengan advokat mengenai berkas Anda.
@@ -160,16 +160,16 @@ guidanceContent.id.pages.home.sections[1].heading
     Bahasa halaman dan bahasa konsultasi adalah dua hal berbeda
 
 guidanceContent.id.pages.home.sections[1].paragraphs[0]
-    Halaman ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Membaca panduan dalam bahasa Indonesia tidak berarti pembicaraan dengan advokat akan berlangsung dalam bahasa Indonesia.
+    Halaman ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea. Membaca panduan dalam bahasa Indonesia tidak berarti pembicaraan dengan advokat akan berlangsung dalam bahasa Indonesia.
 
 guidanceContent.id.pages.home.sections[1].paragraphs[1]
-    Kami tidak menjanjikan penerjemah, tidak menjanjikan balasan dalam jangka waktu tertentu, dan tidak memastikan janji temu melalui halaman ini. Jika keempat bahasa tersebut tidak dapat Anda gunakan, halaman “Kontak” menjelaskan cara kami memastikan cara berkomunikasi.
+    Kami tidak menjanjikan penerjemah, tidak menjanjikan balasan dalam jangka waktu tertentu, dan tidak memastikan janji temu melalui halaman ini. Jika keempat bahasa tersebut tidak dapat Anda gunakan, halaman “Kontak” menjelaskan bagaimana kami memastikan apakah ada cara berkomunikasi yang memungkinkan.
 
 guidanceContent.id.pages.home.sections[2].heading
     Jenis perkara yang kami tangani
 
 guidanceContent.id.pages.home.sections[2].paragraphs[0]
-    Lingkup pekerjaan kantor mencakup enam kelompok berikut. Halaman “Bidang layanan” menjelaskan masing-masing kelompok lebih rinci sekaligus menyebutkan hal-hal yang tidak dijamin.
+    Lingkup pekerjaan kantor mencakup enam bidang layanan berikut. Halaman “Bidang layanan” menjelaskan masing-masing bidang lebih rinci sekaligus menyebutkan hal-hal yang tidak dijamin.
 
 guidanceContent.id.pages.home.sections[2].items[0]
     Investasi dan pendirian perusahaan di Taiwan
@@ -205,16 +205,16 @@ guidanceContent.id.pages.services.title
     Bidang perkara yang kami tangani
 
 guidanceContent.id.pages.services.description
-    Enam kelompok pekerjaan yang termasuk dalam lingkup layanan kantor di Taiwan, beserta batasan yang perlu Anda ketahui lebih dulu.
+    Enam bidang layanan yang ditangani kantor di Taiwan, beserta batasan yang perlu Anda ketahui lebih dulu.
 
 guidanceContent.id.pages.services.intro
-    Berikut kelompok pekerjaan yang benar-benar kami tangani, beserta hal-hal yang biasa ditanyakan pada tahap awal. Uraian ini membantu Anda menilai apakah perkara Anda termasuk dalam lingkup kami; sifatnya keterangan umum, bukan analisis hukum atas satu berkas tertentu.
+    Berikut bidang layanan yang benar-benar kami tangani, beserta hal-hal yang biasa ditanyakan pada tahap awal. Uraian ini membantu Anda menilai apakah perkara Anda termasuk dalam lingkup kami; sifatnya keterangan umum, bukan analisis hukum atas satu berkas tertentu.
 
 guidanceContent.id.pages.services.sections[0].heading
     Investasi dan pendirian perusahaan di Taiwan
 
 guidanceContent.id.pages.services.sections[0].paragraphs[0]
-    Kami mendampingi investor dan perusahaan asing yang mendirikan atau menjalankan badan usaha di Taiwan: pemilihan bentuk badan usaha, penyiapan dan pengajuan berkas, pengiriman modal, urusan perbankan, penilaian tempat usaha, serta persyaratan yang khusus berlaku bagi bidang usaha tertentu. Kami juga membantu urusan akuntansi dan perpajakan yang timbul dari pendirian dan pengoperasian perusahaan di Taiwan.
+    Kami mendampingi investor dan perusahaan asing yang mendirikan atau menjalankan badan usaha di Taiwan: pemilihan bentuk badan usaha, penyiapan dan pengajuan berkas, penyetoran modal, urusan perbankan, penilaian tempat usaha, serta persyaratan yang khusus berlaku bagi bidang usaha tertentu. Kami juga membantu urusan akuntansi dan perpajakan yang timbul dari pendirian dan pengoperasian perusahaan di Taiwan.
 
 guidanceContent.id.pages.services.sections[0].paragraphs[1]
     Urutan dan lamanya proses berbeda-beda menurut bentuk badan usaha yang dipilih, investornya, bidang usahanya, bank yang terlibat, dan dokumen yang tersedia. Pendirian perusahaan tidak dengan sendirinya menghasilkan izin tinggal (居留) atau izin kerja (工作許可): keduanya adalah proses tersendiri yang dinilai menurut keadaan masing-masing orang.
@@ -232,7 +232,7 @@ guidanceContent.id.pages.services.sections[2].heading
     Perkawinan, keluarga, dan waris
 
 guidanceContent.id.pages.services.sections[2].paragraphs[0]
-    Kami menangani perkara perceraian (離婚), pembagian harta, pelaksanaan dan pemikulan hak serta kewajiban terhadap anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak menjenguk anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.
+    Kami menangani perkara perceraian (離婚), pembagian harta, hak asuh anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak kunjungan dan hak bertemu anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.
 
 guidanceContent.id.pages.services.sections[2].paragraphs[1]
     Karena perkara keluarga sering disertai tenggat waktu dan beberapa prosedur yang berjalan bersamaan, ringkasan awal sebaiknya menyebutkan hubungan antarpihak, tempat tinggal saat ini, dan prosedur yang sudah atau sedang berjalan.
@@ -253,7 +253,7 @@ guidanceContent.id.pages.services.sections[4].paragraphs[0]
     Kami mendampingi pada tahap penyidikan maupun pemeriksaan di pengadilan, baik bagi tersangka atau terdakwa maupun bagi korban, serta menilai risiko pidana yang timbul dalam kegiatan usaha.
 
 guidanceContent.id.pages.services.sections[4].paragraphs[1]
-    Perkara pidana umumnya memiliki tenggat waktu pendek dan tahapan yang sudah tertentu, jadi apabila Anda sudah menerima surat dari aparat penegak hukum atau pengadilan, sebutkan tanggal pada surat itu sejak awal agar isinya ditinjau menurut urutan kepentingannya.
+    Perkara pidana umumnya memiliki tenggat waktu pendek dan tahapan yang sudah tertentu, jadi apabila Anda sudah menerima surat dari aparat penegak hukum atau pengadilan, sebutkan tanggal pada surat itu sejak awal agar isinya ditinjau menurut urutan yang benar.
 
 guidanceContent.id.pages.services.sections[5].heading
     Kekayaan intelektual
@@ -271,7 +271,7 @@ guidanceContent.id.pages.services.sections[6].paragraphs[0]
     Kantor kami bekerja berdasarkan hukum Taiwan dan menangani perkara yang termasuk dalam kelompok di atas. Lingkup setiap perkara dipastikan tersendiri setelah advokat meninjau isi pesan Anda.
 
 guidanceContent.id.pages.services.sections[6].paragraphs[1]
-    Status tinggal, izin kerja, dan hal-hal sejenis dinilai dari berkas dan keadaan masing-masing orang, tidak disimpulkan dari kewarganegaraan. Jika ada bagian perkara Anda yang menyangkut hal-hal itu, sebutkanlah saat menghubungi kami agar advokat dapat menentukan kelompok pekerjaannya; halaman ini tidak menjanjikan hasil maupun waktu balasan.
+    Status tinggal, izin kerja, dan hal-hal sejenis dinilai dari berkas dan keadaan masing-masing orang, tidak disimpulkan dari kewarganegaraan. Jika ada bagian perkara Anda yang menyangkut hal-hal itu, sebutkanlah saat menghubungi kami agar advokat dapat menentukan bidang layanannya; halaman ini tidak menjanjikan hasil maupun waktu balasan.
 
 guidanceContent.id.pages.about.eyebrow
     TENTANG KANTOR
@@ -292,25 +292,25 @@ guidanceContent.id.pages.about.sections[0].paragraphs[0]
     Hovering International Law Firm (昊鼎國際法律事務所) didirikan pada 2016 oleh para advokat lulusan Universitas Nasional Taiwan (國立臺灣大學). Nama Tionghoanya, 昊鼎, menggabungkan aksara 昊 yang berarti “langit yang luas” dan aksara 鼎 yang berarti “dasar yang kokoh”, yang mencerminkan arah kantor sejak awal berdiri.
 
 guidanceContent.id.pages.about.sections[0].paragraphs[1]
-    Kami memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), dan Pingtung (屏東). Kantor Kaohsiung berfokus pada tata kelola perusahaan dan menangani sengketa perdata, pidana, serta administrasi secara umum. Kantor Taichung menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea dan Jepang. Kantor Pingtung dibuka pada 2017 untuk melayani kebutuhan setempat.
+    Kami memiliki kantor di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), dan Pingtung (屏東). Kantor Kaohsiung berfokus pada tata kelola perusahaan dan menangani sengketa perdata, pidana, dan administrasi. Kantor Taichung menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea dan Jepang. Kantor Pingtung dibuka pada 2017 untuk melayani kebutuhan setempat.
 
 guidanceContent.id.pages.about.sections[0].paragraphs[2]
-    Selain pekerjaan advokat, pada 2020 berdiri pula Hovering Accounting Office, yang menyediakan layanan akuntansi dan perencanaan pajak bagi pemilik usaha dan perorangan berkekayaan besar.
+    Selain pekerjaan advokat, pada 2020 berdiri pula Hovering Accounting Office, yang menyediakan layanan akuntansi dan perencanaan pajak bagi pemilik usaha dan orang pribadi yang berkekayaan tinggi.
 
 guidanceContent.id.pages.about.sections[1].heading
     Pekerjaan yang melibatkan pihak asing
 
 guidanceContent.id.pages.about.sections[1].paragraphs[0]
-    Pekerjaan lintas negara kami mencakup pendirian perusahaan, pengurusan visa, pendaftaran merek dan paten, penilaian risiko hukum, dan konsultasi pajak perusahaan. Kantor Taichung secara khusus menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea serta Jepang. Advokat Wei Tseng (曾雋崴) mendampingi klien dari Korea, Jepang, dan klien internasional lainnya pada kelompok pekerjaan di atas.
+    Pekerjaan lintas negara kami mencakup pendirian perusahaan, pengurusan visa, pendaftaran merek dan paten, penilaian risiko hukum, dan konsultasi pajak perusahaan. Kantor Taichung secara khusus menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea serta Jepang. Advokat Wei Tseng (曾雋崴) mendampingi klien dari Korea, Jepang, dan klien internasional lainnya pada bidang layanan di atas.
 
 guidanceContent.id.pages.about.sections[1].paragraphs[1]
-    Dapat atau tidaknya kami menangani suatu perkara bergantung pada isi perkara itu dan pada bahasa yang dipakai berkomunikasi. Jika perkara Anda termasuk kelompok pekerjaan di atas dan dapat dibicarakan dalam salah satu dari empat bahasa konsultasi, Anda dapat mengirimkan ringkasannya untuk ditinjau advokat.
+    Dapat atau tidaknya kami menangani suatu perkara bergantung pada isi perkara itu dan pada bahasa yang dipakai berkomunikasi. Jika perkara Anda termasuk bidang layanan di atas dan dapat dibicarakan dalam salah satu dari empat bahasa konsultasi, Anda dapat mengirimkan ringkasannya untuk ditinjau advokat.
 
 guidanceContent.id.pages.about.sections[2].heading
     Ketika Anda menghubungi kami
 
 guidanceContent.id.pages.about.sections[2].paragraphs[0]
-    Setelah ringkasan Anda kami terima, advokat meninjau isinya lalu membicarakan lingkup pekerjaan yang dapat dikerjakan, dokumen yang masih diperlukan, dan langkah selanjutnya. Untuk perkara yang menimbulkan persoalan akuntansi atau perpajakan, kantor dapat bekerja bersama bagian akuntansi dalam satu alur penanganan.
+    Setelah ringkasan Anda kami terima, advokat meninjau isinya lalu membicarakan lingkup pekerjaan yang dapat dikerjakan, dokumen yang masih diperlukan, dan langkah selanjutnya. Bila timbul pertanyaan akuntansi atau perpajakan, kantor dapat menangani urusan itu bersama bagian akuntansi secara terpadu.
 
 guidanceContent.id.pages.about.sections[2].paragraphs[1]
     Hasil setiap perkara bergantung pada faktanya dan pada berkas yang ada, sehingga kami tidak menjanjikan hasil. Bila Anda memerlukan jawaban yang pasti untuk keadaan Anda, berkas itu perlu dibicarakan langsung dengan advokat dalam salah satu dari empat bahasa konsultasi.
@@ -343,7 +343,7 @@ guidanceContent.id.pages.pricing.sections[0].heading
     Langkah pertama adalah menetapkan lingkup pekerjaan
 
 guidanceContent.id.pages.pricing.sections[0].paragraphs[0]
-    Perkara yang jenisnya sama dapat sangat berbeda beban kerjanya, tergantung jumlah pihak, dokumen yang tersedia, tenggat waktu yang harus dipenuhi, dan apakah suatu prosedur sudah dimulai. Karena itu langkah pertama selalu memperjelas apa yang termasuk dan apa yang tidak termasuk dalam pekerjaan.
+    Perkara yang jenisnya sama dapat sangat berbeda beban kerjanya, bergantung pada jumlah pihak, dokumen yang tersedia, tenggat waktu yang harus dipenuhi, dan apakah suatu prosedur sudah dimulai. Karena itu langkah pertama selalu memperjelas apa yang termasuk dan apa yang tidak termasuk dalam pekerjaan.
 
 guidanceContent.id.pages.pricing.sections[0].paragraphs[1]
     Ringkasan yang Anda kirim pada tahap awal menjadi dasar penetapan lingkup ini. Semakin jelas ringkasan itu menerangkan kejadian, harapan Anda, dan tenggat waktunya, semakin tepat lingkup yang dapat ditetapkan.
@@ -373,7 +373,7 @@ guidanceContent.id.pages.pricing.sections[3].paragraphs[0]
     Besarnya biaya bergantung pada perkaranya sendiri: banyaknya pekerjaan yang harus dilakukan, jumlah pihak, dokumen yang tersedia, tenggat waktu yang berlaku, dan apakah suatu prosedur sudah dimulai. Angka yang dipasang di muka tidak akan menunjukkan biaya untuk berkas Anda; karena itu, alih-alih memuat daftar tarif, kami menetapkan lebih dulu lingkup pekerjaan bagi perkara Anda lalu menyampaikan biayanya untuk Anda pertimbangkan sebelum pekerjaan dimulai.
 
 guidanceContent.id.pages.pricing.sections[3].paragraphs[1]
-    Selain honorarium advokat, sebuah perkara dapat menimbulkan pungutan yang harus dibayarkan kepada pengadilan, instansi pemerintah, atau pihak ketiga. Pungutan itu terpisah dari honorarium advokat dan bergantung pada prosedur yang ditempuh.
+    Selain honorarium advokat, sebuah perkara dapat menimbulkan biaya yang harus dibayarkan kepada pengadilan, instansi pemerintah, atau pihak ketiga. Biaya itu terpisah dari honorarium advokat dan bergantung pada prosedur yang ditempuh.
 
 guidanceContent.id.pages.contact.eyebrow
     KONTAK
@@ -397,7 +397,7 @@ guidanceContent.id.pages.contact.sections[0].items[0]
     Bahasa halaman: panduan ini ditulis dalam bahasa Indonesia.
 
 guidanceContent.id.pages.contact.sections[0].items[1]
-    Bahasa konsultasi: konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Bahasa konsultasi: konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 guidanceContent.id.pages.contact.sections[0].items[2]
     Bahasa tulisan Anda: Anda boleh menulis ringkasan dalam bahasa Anda sendiri, dan teks aslinya disimpan apa adanya.
@@ -406,7 +406,7 @@ guidanceContent.id.pages.contact.sections[1].heading
     Jika keempat bahasa konsultasi itu tidak dapat Anda gunakan
 
 guidanceContent.id.pages.contact.sections[1].paragraphs[0]
-    Pada formulir kontak Anda dapat memilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi jika ada cara yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.
+    Pada formulir kontak Anda dapat memilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.
 
 guidanceContent.id.pages.contact.sections[1].paragraphs[1]
     Ini hanyalah langkah pemastian, bukan janji. Kami tidak menjanjikan penerjemah, tidak menjanjikan layanan dalam bahasa Indonesia atau bahasa lain di luar keempat bahasa tersebut, dan tidak menjanjikan bahwa setiap perkara dapat kami terima.
@@ -463,13 +463,13 @@ guidanceContent.id.pages.faq.faqs[2].question
     Bisakah saya berkonsultasi dalam bahasa Indonesia?
 
 guidanceContent.id.pages.faq.faqs[2].answer
-    Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.
+    Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.
 
 guidanceContent.id.pages.faq.faqs[3].question
     Bagaimana jika keempat bahasa itu tidak dapat saya gunakan?
 
 guidanceContent.id.pages.faq.faqs[3].answer
-    Pilihlah “Perlu konfirmasi cara berkomunikasi” ketika mengirim permintaan. Kami akan membalas untuk memastikan cara berkomunikasi, tetapi layanan dalam bahasa lain tidak dijamin. Ini langkah pemastian, bukan janji bahwa kami dapat melayani dalam bahasa lain.
+    Pilihlah “Perlu konfirmasi cara berkomunikasi” ketika mengirim permintaan. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin. Ini langkah pemastian, bukan janji bahwa kami dapat melayani dalam bahasa lain.
 
 guidanceContent.id.pages.faq.faqs[4].question
     Bagaimana tulisan saya dalam bahasa Indonesia diperlakukan?
@@ -586,7 +586,7 @@ guidanceContent.id.pages.privacy.sections[6].heading
     Tempat penyimpanan data dan penyedia layanan
 
 guidanceContent.id.pages.privacy.sections[6].paragraphs[0]
-    Situs ini dihosting di Vercel, dan kiriman Anda disimpan di penyimpanan objek yang tidak terbuka untuk umum pada layanan tersebut. Email dikirim melalui layanan email yang digunakan kantor kami.
+    Situs ini diselenggarakan di Vercel, dan kiriman Anda disimpan di penyimpanan yang tidak terbuka untuk umum pada layanan tersebut. Email dikirim melalui layanan email yang digunakan kantor kami.
 
 guidanceContent.id.pages.privacy.sections[6].paragraphs[1]
     Server sebagian penyedia layanan dapat berada di luar Taiwan, sehingga data Anda dapat disimpan dan diproses di sana. Setelah tujuan penyimpanannya tercapai, data dihapus tanpa penundaan; data yang wajib disimpan menurut ketentuan yang berlaku disimpan selama jangka waktu tersebut. Permintaan yang berkaitan dengan data pribadi diterima di wei@hoveringlaw.com.tw.
@@ -619,7 +619,7 @@ guidanceContent.id.pages.disclaimer.sections[1].paragraphs[0]
     Kantor kami berpraktik menurut hukum Taiwan, dan halaman ini hanya membicarakan pekerjaan dalam lingkup itu.
 
 guidanceContent.id.pages.disclaimer.sections[1].paragraphs[1]
-    Isi halaman-halaman ini bukan nasihat menurut hukum yurisdiksi mana pun selain Taiwan, termasuk hukum tempat Anda tinggal. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami memastikan bersama Anda tenaga profesional berkualifikasi mana yang diperlukan untuk bagian tersebut.
+    Isi halaman-halaman ini bukan nasihat menurut hukum yurisdiksi mana pun selain Taiwan, termasuk hukum tempat Anda tinggal. Jika ada bagian perkara Anda yang tunduk pada yurisdiksi lain, kami pastikan bersama Anda tenaga profesional berkualifikasi yang diperlukan untuk bagian itu.
 
 guidanceContent.id.pages.disclaimer.sections[2].heading
     Hubungan advokat dan klien tidak terbentuk dengan sendirinya
@@ -628,7 +628,7 @@ guidanceContent.id.pages.disclaimer.sections[2].paragraphs[0]
     Membaca halaman ini, mengirim formulir, atau mengirim email dengan sendirinya tidak membentuk hubungan antara advokat dan klien.
 
 guidanceContent.id.pages.disclaimer.sections[2].paragraphs[1]
-    Hubungan itu baru terbentuk setelah perkara ditinjau dan kedua pihak sama-sama memastikan penerimaan pekerjaan tersebut.
+    Hubungan itu baru terbentuk setelah perkara ditinjau dan kedua pihak sama-sama memastikan secara tertulis bahwa kantor menerima perkara itu.
 
 guidanceContent.id.pages.disclaimer.sections[3].heading
     Tidak ada jaminan hasil
@@ -655,7 +655,7 @@ guidanceContent.id.pages.columns.sections[0].heading
     Empat daftar menurut bahasa
 
 guidanceContent.id.pages.columns.sections[0].paragraphs[0]
-    Bagian ini berisi empat tautan: daftar artikel berbahasa Korea, daftar berbahasa Tionghoa, daftar berbahasa Inggris, dan daftar berbahasa Jepang. Setiap tautan mencantumkan bahasa daftarnya, sehingga Anda tahu lebih dulu isi dalam bahasa apa yang akan terbuka.
+    Bagian ini berisi empat tautan: daftar artikel berbahasa Korea, daftar berbahasa Mandarin, daftar berbahasa Inggris, dan daftar berbahasa Jepang. Setiap tautan mencantumkan bahasa daftarnya, sehingga Anda tahu lebih dulu isi dalam bahasa apa yang akan terbuka.
 
 guidanceContent.id.pages.columns.sections[0].paragraphs[1]
     Keempat daftar itu adalah daftar menurut bahasa asli artikelnya, bukan daftar terjemahan. Artikel yang sudah tersedia dalam bahasa Indonesia dimuat tersendiri di halaman ini.
@@ -679,7 +679,7 @@ guidanceContent.id.pages.columns.sections[2].paragraphs[1]
     Karena itu, mohon jangan menjadikan sebuah artikel sebagai dasar untuk bertindak dalam perkara yang sebenarnya. Gunakan artikel untuk memahami gambaran umumnya, lalu bicarakan berkas Anda secara tersendiri dengan advokat; halaman ini bukan tahap konsultasi.
 
 guidanceTeamCopy.id.label
-    OUR TEAM
+    TIM KAMI
 
 guidanceTeamCopy.id.title
     Tim Internasional Hovering
@@ -712,7 +712,7 @@ guidanceTeamCopy.id.workingLanguagesLabel
     Bahasa kerja
 
 guidanceTeamCopy.id.fullProfileLabel
-    Profil lengkap (English)
+    Profil lengkap (bahasa Inggris)
 
 guidanceTeamCopy.id.keyFactsHeading
     Advokat Wei Tseng — Fakta utama
@@ -730,25 +730,25 @@ guidanceTeamCopy.id.consultationLanguagesLabel
     Bahasa konsultasi
 
 guidanceTeamCopy.id.roles.tseng-junwei
-    Advokat pengelola di Taiwan (Managing Attorney)
+    Advokat pengelola di Taiwan
 
 guidanceTeamCopy.id.roles.chang-rongxuan
-    Advokat di Taiwan (Taiwan Attorney)
+    Advokat di Taiwan
 
 guidanceTeamCopy.id.roles.chang-fangyu
     Paralegal
 
 guidanceTeamCopy.id.roles.son-jungmin
-    Manajer operasional Korea (Korea Operations Manager)
+    Manajer operasional Korea
 
 guidanceTeamCopy.id.roles.huang-shengping
-    Akuntan mitra (Partner CPA)
+    Akuntan mitra
 
 guidanceTeamBios.id.tseng-junwei.intro[0]
-    Kantor menangani perkara korporasi dan perorangan di Taiwan dalam bahasa Inggris, bahasa Jepang, bahasa Korea, dan bahasa Tionghoa.
+    Kantor menangani perkara korporasi dan perorangan di Taiwan dalam bahasa Inggris, bahasa Jepang, bahasa Korea, dan bahasa Mandarin.
 
 guidanceTeamBios.id.tseng-junwei.intro[1]
-    Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M.
+    Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M (1,57 juta dolar baru Taiwan).
 
 guidanceTeamBios.id.tseng-junwei.education[0]
     Magister (M.S.), Institute of Finance, National Taiwan University
@@ -766,10 +766,10 @@ guidanceTeamBios.id.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.id.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Yayasan Bantuan Hukum, Cabang Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.id.chang-rongxuan.intro[0]
-    Sebelumnya bertugas di Ministry of Education, Legal Affairs Division, dengan fokus pada sengketa administrasi dan perdata.
+    Sebelumnya bertugas di Kementerian Pendidikan, Bagian Urusan Hukum (Ministry of Education, Legal Affairs Division), dengan fokus pada sengketa administrasi dan perdata.
 
 guidanceTeamBios.id.chang-rongxuan.intro[1]
     Berpengalaman dalam perkara perguruan tinggi, hak dosen, dan keberatan administratif.
@@ -778,13 +778,13 @@ guidanceTeamBios.id.chang-rongxuan.education[0]
     Sarjana Hukum (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.id.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Kementerian Pendidikan, Bagian Urusan Hukum (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.id.chang-rongxuan.experience[1]
     Advokat, Hovering International Law Firm
 
 guidanceTeamBios.id.chang-fangyu.intro[0]
-    Paralegal berpengalaman yang bertahun-tahun menjabat paralegal senior di beberapa kantor advokat, meliputi dukungan litigasi, hukum korporasi, dan perkara penanaman modal asing.
+    Paralegal senior di beberapa kantor advokat, yang bertahun-tahun menangani dukungan litigasi, hukum korporasi, dan perkara penanaman modal asing.
 
 guidanceTeamBios.id.chang-fangyu.intro[1]
     Mendukung litigasi, pendirian perusahaan, persetujuan penanaman modal asing, permohonan izin, serta komunikasi Korea-Taiwan.
@@ -829,7 +829,7 @@ guidanceLanguageNames.id.Korean
     bahasa Korea
 
 guidanceLanguageNames.id.Chinese
-    bahasa Tionghoa
+    bahasa Mandarin
 
 guidanceLanguageNames.id.Japanese
     bahasa Jepang
@@ -853,7 +853,7 @@ guidancePracticeAreaNames.id.Family and labor disputes
     Sengketa keluarga dan ketenagakerjaan
 
 guidanceOfficeCopy.id.label
-    OFFICES
+    KANTOR
 
 guidanceOfficeCopy.id.title
     Kantor
@@ -889,7 +889,7 @@ guidanceOfficeCopy.id.mapLinkLabel
     Lihat di peta
 
 guidanceOfficeCopy.id.photoAlts[0]
-    Ruang tamu kantor Taipei, Hovering International Law Firm
+    Ruang resepsi kantor Taipei, Hovering International Law Firm
 
 guidanceOfficeCopy.id.photoAlts[1]
     Ruang kerja advokat di kantor Taipei, Hovering International Law Firm
@@ -940,10 +940,10 @@ internationalInquiryCopy.id.guidanceNotice
     Halaman ini ditulis dalam bahasa Indonesia sebagai panduan umum, bukan nasihat hukum untuk perkara Anda sendiri.
 
 internationalInquiryCopy.id.consultationNotice
-    Konsultasi dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Konsultasi hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 internationalInquiryCopy.id.methodConfirmationNotice
-    Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi jika ada cara yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.
+    Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.
 
 internationalInquiryCopy.id.preparationNotice
     Anda boleh menulis ringkasan perkara dalam bahasa Anda sendiri. Teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.
@@ -976,7 +976,7 @@ internationalInquiryCopy.id.originalLanguageLabel
     Bahasa yang Anda pakai untuk menulis
 
 internationalInquiryCopy.id.originalLanguagePlaceholder
-    Misalnya: bahasa Indonesia, bahasa Vietnam, bahasa Thai, bahasa Filipino, atau bahasa lain
+    Misalnya: bahasa Indonesia, bahasa Vietnam, bahasa Thailand, bahasa Filipino, atau bahasa lain
 
 internationalInquiryCopy.id.preferredConsultationLanguageLabel
     Bahasa konsultasi yang Anda inginkan
@@ -1021,7 +1021,7 @@ internationalInquiryCopy.id.languageOptions.en
     Inggris (English)
 
 internationalInquiryCopy.id.languageOptions.zh-hant
-    Tionghoa (中文)
+    Mandarin (中文)
 
 internationalInquiryCopy.id.languageOptions.ja
     Jepang (日本語)
@@ -1033,7 +1033,7 @@ internationalInquiryCopy.id.languageOptions.needs-method-confirmation
     Keempat bahasa itu tidak dapat saya gunakan — perlu konfirmasi cara berkomunikasi
 
 guidanceAnswers.id.services.answer
-    Kantor menangani enam kelompok perkara berdasarkan hukum Taiwan: investasi dan pendirian perusahaan di Taiwan, sengketa perdata dan ganti rugi, perkara perkawinan, keluarga, dan waris, sengketa ketenagakerjaan, perkara pidana, serta kekayaan intelektual. Lingkup setiap perkara dipastikan tersendiri setelah advokat meninjau isi pesan Anda. Konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Kantor menangani enam kelompok perkara berdasarkan hukum Taiwan: investasi dan pendirian perusahaan di Taiwan, sengketa perdata dan ganti rugi, perkara perkawinan, keluarga, dan waris, sengketa ketenagakerjaan, perkara pidana, serta kekayaan intelektual. Lingkup setiap perkara dipastikan tersendiri setelah advokat meninjau isi pesan Anda. Konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 guidanceAnswers.id.services.sources[0]
     /id/faq
@@ -1042,7 +1042,7 @@ guidanceAnswers.id.services.sources[1]
     /id/contact
 
 guidanceAnswers.id.about.answer
-    Hovering International Law Firm adalah kantor advokat di Taiwan yang didirikan pada 2016 oleh para advokat lulusan Universitas Nasional Taiwan (國立臺灣大學), dengan kantor di Taipei, Kaohsiung, Taichung, dan Pingtung. Sejak 2020 kantor juga memiliki bagian akuntansi, dan kantor Taichung menangani urusan yang berkaitan dengan Korea dan Jepang. Hasil setiap perkara bergantung pada faktanya, sehingga kami tidak menjanjikan hasil. Konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Hovering International Law Firm adalah kantor advokat di Taiwan yang didirikan pada 2016 oleh para advokat lulusan Universitas Nasional Taiwan (國立臺灣大學), dengan kantor di Taipei, Kaohsiung, Taichung, dan Pingtung. Sejak 2020 kantor juga memiliki bagian akuntansi, dan kantor Taichung menangani urusan yang berkaitan dengan Korea dan Jepang. Hasil setiap perkara bergantung pada faktanya, sehingga kami tidak menjanjikan hasil. Konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 guidanceAnswers.id.about.sources[0]
     /id/lawyers
@@ -1051,7 +1051,7 @@ guidanceAnswers.id.about.sources[1]
     /id/services
 
 guidanceAnswers.id.lawyers.answer
-    Halaman ini memuat profil para advokat, manajer operasional, dan akuntan mitra Hovering. Wei Tseng (曾雋崴) adalah advokat berizin praktik di Taiwan dan advokat pengelola di Hovering International Law Firm, yang bekerja untuk klien dari Korea, Jepang, dan klien internasional lainnya. Konsultasi di kantor dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Halaman ini memuat profil para advokat, manajer operasional, dan akuntan mitra Hovering. Wei Tseng (曾雋崴) adalah advokat berizin praktik di Taiwan dan advokat pengelola di Hovering International Law Firm, yang bekerja untuk klien dari Korea, Jepang, dan klien internasional lainnya. Konsultasi di kantor hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 guidanceAnswers.id.lawyers.sources[0]
     /id/about
@@ -1060,7 +1060,7 @@ guidanceAnswers.id.lawyers.sources[1]
     /id/contact
 
 guidanceAnswers.id.pricing.answer
-    Halaman ini tidak memuat daftar tarif. Lingkup pekerjaan ditetapkan lebih dulu berdasarkan ringkasan yang Anda kirim, lalu besaran dan cara penghitungan biaya dipastikan bersama Anda sebelum pekerjaan dimulai. Pertemuan dengan advokat dapat merupakan layanan berbayar, dan selain honorarium advokat dapat timbul pungutan untuk pengadilan atau instansi pemerintah. Konsultasi dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Halaman ini tidak memuat daftar tarif. Lingkup pekerjaan ditetapkan lebih dulu berdasarkan ringkasan yang Anda kirim, lalu besaran dan cara penghitungan biaya dipastikan bersama Anda sebelum pekerjaan dimulai. Pertemuan dengan advokat dapat merupakan layanan berbayar, dan selain honorarium advokat dapat timbul biaya untuk pengadilan atau instansi pemerintah. Konsultasi hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 guidanceAnswers.id.pricing.sources[0]
     /id/contact
@@ -1069,7 +1069,7 @@ guidanceAnswers.id.pricing.sources[1]
     /id/faq
 
 guidanceAnswers.id.contact.answer
-    Kirimkan ringkasan melalui formulir kontak: apa yang terjadi, bantuan apa yang Anda perlukan, apa kaitan perkara itu dengan Taiwan, dan tenggat waktu jika Anda mengetahuinya. Pada tahap awal Anda belum perlu mengirim dokumen identitas atau seluruh bukti. Kantor tidak menjanjikan waktu balasan dan tidak memastikan janji temu melalui halaman ini. Konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Kirimkan ringkasan melalui formulir kontak: apa yang terjadi, bantuan apa yang Anda perlukan, apa kaitan perkara itu dengan Taiwan, dan tenggat waktu jika Anda mengetahuinya. Pada tahap awal Anda belum perlu mengirim dokumen identitas atau seluruh bukti. Kantor tidak menjanjikan waktu balasan dan tidak memastikan janji temu melalui halaman ini. Konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 guidanceAnswers.id.contact.sources[0]
     /id/faq
@@ -1078,7 +1078,7 @@ guidanceAnswers.id.contact.sources[1]
     /id/pricing
 
 guidanceAnswers.id.faq.answer
-    Bagian tanya jawab menjelaskan pada tingkat keterangan umum: enam kelompok perkara, persiapan sebelum menghubungi kantor, cara biaya ditetapkan, dan arti dari mengirim permintaan. Permintaan yang terkirim berarti permintaan yang menunggu ditinjau advokat; itu bukan nasihat hukum, bukan janji temu, dan tidak membentuk hubungan antara advokat dan klien. Konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Bagian tanya jawab menjelaskan pada tingkat keterangan umum: enam kelompok perkara, persiapan sebelum menghubungi kantor, cara biaya ditetapkan, dan arti dari mengirim permintaan. Permintaan yang terkirim berarti permintaan yang menunggu ditinjau advokat; itu bukan nasihat hukum, bukan janji temu, dan tidak membentuk hubungan antara advokat dan klien. Konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 guidanceAnswers.id.faq.sources[0]
     /id/contact
@@ -1087,10 +1087,10 @@ guidanceAnswers.id.faq.sources[1]
     /id/services
 
 GUIDANCE_LLMS_NOTICES.id.consultationNotice
-    Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.
+    Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.
 
 GUIDANCE_LLMS_NOTICES.id.discoveryNotice
-    Berkas llms.txt ini hanya peta penelusuran halaman publik; berkas ini tidak menjanjikan peringkat pencarian, dukungan, rekomendasi AI, atau jaminan untuk ditampilkan.
+    Berkas llms.txt ini hanya peta penelusuran halaman publik; berkas ini tidak menjanjikan peringkat pencarian, dukungan resmi, rekomendasi AI, atau jaminan untuk ditampilkan.
 
 GUIDANCE_LLMS_NOTICES.id.confidentialNotice
     Karena teks asli disimpan, mohon jangan menuliskan hal yang belum diperlukan pada tahap awal, seperti nomor paspor, nomor identitas, atau data rekening bank.

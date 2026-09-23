@@ -1,4 +1,4 @@
-# de guidance pack strings (path → text). Generated 2026-09-21
+# de guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.de.languageName
     Deutsch
@@ -37,37 +37,37 @@ guidanceContent.de.contactCta
     Beratungsanfrage senden
 
 guidanceContent.de.footerNotice
-    Diese deutsche Seite enthält nur allgemeine Hinweise zur Arbeit der Kanzlei nach taiwanischem Recht. Sie ist keine Rechtsberatung für einen konkreten Fall, und das Absenden einer Nachricht begründet für sich kein Mandatsverhältnis.
+    Diese deutsche Seite enthält nur allgemeine Hinweise zur Arbeit der Kanzlei nach taiwanesischem Recht. Sie ist keine Rechtsberatung für einen konkreten Fall, und das Absenden einer Nachricht begründet für sich kein Mandatsverhältnis.
 
 guidanceContent.de.skipLink
-    Navigation überspringen und zum Inhalt
+    Navigation überspringen und zum Inhalt springen
 
 guidanceContent.de.menuLabel
-    Seitenverzeichnis
+    Menü
 
 guidanceContent.de.languageLabel
     Anzeigesprache
 
 guidanceContent.de.mega.services.description
-    Die Kanzlei bearbeitet die wesentlichen Tätigkeitsgruppen nach taiwanischem Recht.
+    Die Kanzlei bearbeitet die wesentlichen Tätigkeitsfelder des taiwanesischen Rechts.
 
 guidanceContent.de.mega.services.viewAllLabel
     Alle anzeigen
 
 guidanceContent.de.mega.columns.description
-    Beiträge zu häufigen Fragen des taiwanischen Rechts.
+    Beiträge zu häufigen Fragen des taiwanesischen Rechts.
 
 guidanceContent.de.mega.columns.viewAllLabel
     Alle anzeigen
 
 guidanceContent.de.mega.lawyers.description
-    Vorstellung der tätigen Anwältinnen und Anwälte und der Kontaktwege.
+    Vorstellung der Anwältinnen und Anwälte und der Kontaktwege.
 
 guidanceContent.de.mega.lawyers.viewAllLabel
     Alle anzeigen
 
 guidanceContent.de.mega.pricing.description
-    Diese Seite erklärt den Arbeitsumfang und, wie Kosten geklärt werden.
+    Diese Seite erklärt den Arbeitsumfang und wie die Kosten geklärt werden.
 
 guidanceContent.de.mega.pricing.viewAllLabel
     Alle anzeigen
@@ -124,7 +124,7 @@ guidanceContent.de.home.columnsOriginalLanguageNote
     Die folgenden Beiträge liegen noch nicht auf Deutsch vor. Die Liste bleibt in der Originalsprache und öffnet die jeweilige Sprachseite; der Inhalt wird nicht automatisch übersetzt.
 
 guidanceContent.de.home.imageBandAlt
-    Traditionelles taiwanisches Sanheyuan (三合院) und ein moderner Pavillon bei Tageslicht
+    Traditionelles taiwanesisches Sanheyuan (三合院) und ein moderner Pavillon bei Tageslicht
 
 guidanceContent.de.home.videoPauseLabel
     Video anhalten
@@ -145,13 +145,13 @@ guidanceContent.de.pages.home.description
     Allgemeine Erläuterungen auf Deutsch zum Tätigkeitsbereich von Hovering International Law Firm in Taiwan, zu den Beratungssprachen und zum ersten Kontakt.
 
 guidanceContent.de.pages.home.intro
-    Hovering International Law Firm begleitet Mandanten aus dem Ausland, auch solche mit Bezug zu Taiwan, in Angelegenheiten nach taiwanischem Recht: Investition und Gesellschaftsgründung, zivilrechtliche Streitigkeiten, Ehe-, Familien- und Erbsachen, Arbeitsrecht, Strafsachen und geistiges Eigentum. Dieser deutsche Teil hilft Ihnen zu erkennen, welche Arbeit in unseren Tätigkeitsbereich fällt, was vorzubereiten ist und wie Sie uns erreichen. Es handelt sich um allgemeine Angaben, nicht um Rechtsberatung für Ihren eigenen Fall.
+    Hovering International Law Firm begleitet Mandanten aus dem Ausland, auch solche mit Bezug zu Taiwan, in Angelegenheiten nach taiwanesischem Recht: Investition und Gesellschaftsgründung, zivilrechtliche Streitigkeiten, Ehe-, Familien- und Erbsachen, Arbeitsrecht, Strafsachen und geistiges Eigentum. Dieser deutsche Teil hilft Ihnen zu erkennen, welche Arbeit in unseren Tätigkeitsbereich fällt, was vorzubereiten ist und wie Sie uns erreichen. Es handelt sich um allgemeine Angaben, nicht um Rechtsberatung für Ihren eigenen Fall.
 
 guidanceContent.de.pages.home.sections[0].heading
     Was wir tun
 
 guidanceContent.de.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm ist eine in Taiwan niedergelassene Anwaltskanzlei. Sie arbeitet nach taiwanischem Recht und unterhält Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Wir beraten Unternehmen und führen Verfahren vor Gericht und begleiten Mandanten aus dem Ausland durch die in Taiwan erforderlichen Schritte.
+    Hovering International Law Firm ist eine in Taiwan niedergelassene Anwaltskanzlei. Sie arbeitet nach taiwanesischem Recht und unterhält Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Wir beraten Unternehmen und führen Verfahren vor Gericht und begleiten Mandanten aus dem Ausland durch die in Taiwan erforderlichen Schritte.
 
 guidanceContent.de.pages.home.sections[0].paragraphs[1]
     Der gesamte Inhalt hier ist allgemein. Der Ausgang einer Sache hängt von den Tatsachen, den anwendbaren Vorschriften und dem Zeitpunkt ab. Diese Hinweise ersetzen nicht das Gespräch mit einer Anwältin oder einem Anwalt über Ihre Unterlagen.
@@ -163,10 +163,10 @@ guidanceContent.de.pages.home.sections[1].paragraphs[0]
     Diese Seite ist auf Deutsch geschrieben, aber die Beratung durch eine Anwältin oder einen Anwalt erfolgt nur in den vier Beratungssprachen Englisch, Chinesisch (中文), Japanisch und Koreanisch. Das Lesen der deutschen Hinweise bedeutet nicht, dass das Gespräch mit der Anwältin oder dem Anwalt auf Deutsch stattfindet.
 
 guidanceContent.de.pages.home.sections[1].paragraphs[1]
-    Wir versprechen keinen Dolmetscher, keine Antwortfrist und keinen Termin über diese Seite. Wenn Sie keine der vier Sprachen nutzen können, erläutert die Seite „Kontakt“, wie wir eine Kommunikationsweise prüfen.
+    Wir versprechen keinen Dolmetscher, keine Antwortfrist und keinen Termin über diese Seite. Wenn Sie keine der vier Sprachen sprechen können, erläutert die Seite „Kontakt“, wie wir eine Kommunikationsweise prüfen.
 
 guidanceContent.de.pages.home.sections[2].heading
-    Tätigkeitsgruppen
+    Tätigkeitsfelder
 
 guidanceContent.de.pages.home.sections[2].paragraphs[0]
     Der Tätigkeitsbereich umfasst die folgenden sechs Gruppen. Die Seite „Tätigkeitsfelder“ beschreibt jede Gruppe genauer und nennt, was nicht zugesagt wird.
@@ -205,7 +205,7 @@ guidanceContent.de.pages.services.title
     Welche Angelegenheiten wir bearbeiten
 
 guidanceContent.de.pages.services.description
-    Sechs Tätigkeitsgruppen der Kanzlei in Taiwan und die Grenzen, die Sie zuerst kennen sollten.
+    Sechs Tätigkeitsfelder der Kanzlei in Taiwan und die Grenzen, die Sie zuerst kennen sollten.
 
 guidanceContent.de.pages.services.intro
     Nachfolgend die Gruppen, die wir tatsächlich bearbeiten, und Fragen, die in der Anfangsphase häufig gestellt werden. Die Darstellung hilft Ihnen zu beurteilen, ob Ihr Anliegen in unseren Tätigkeitsbereich fällt; sie ist allgemein und keine rechtliche Analyse eines einzelnen Vorgangs.
@@ -232,7 +232,7 @@ guidanceContent.de.pages.services.sections[2].heading
     Ehe, Familie und Erbrecht
 
 guidanceContent.de.pages.services.sections[2].paragraphs[0]
-    Wir bearbeiten Scheidung (離婚), Vermögensauseinandersetzung, Ausübung und Tragung der Rechte und Pflichten gegenüber minderjährigen Kindern (未成年子女權利義務之行使或負擔), Umgang (會面交往) und Erbrecht (繼承), auch wenn Parteien oder Vermögen in verschiedenen Staaten liegen. Grenzüberschreitende Familiensachen erfordern oft zusätzliche Prüfung von Haushaltsregisterunterlagen (戶籍), der Form von Urkunden und ihrer Beweisbarkeit in Taiwan.
+    Wir bearbeiten Scheidung (離婚), Vermögensauseinandersetzung, elterliche Sorge für minderjährige Kinder (未成年子女權利義務之行使或負擔), Umgang (會面交往) und Erbrecht (繼承), auch wenn Parteien oder Vermögen in verschiedenen Staaten liegen. Grenzüberschreitende Familiensachen erfordern oft zusätzliche Prüfung von Haushaltsregisterunterlagen (戶籍), der Form von Urkunden und ihrer Beweisbarkeit in Taiwan.
 
 guidanceContent.de.pages.services.sections[2].paragraphs[1]
     Weil Familiensachen häufig Fristen und parallele Verfahren mit sich bringen, sollte die erste Zusammenfassung das Verhältnis der Parteien, den aktuellen Wohnort und bereits laufende Verfahren nennen.
@@ -241,7 +241,7 @@ guidanceContent.de.pages.services.sections[3].heading
     Arbeitsrechtliche Streitigkeiten
 
 guidanceContent.de.pages.services.sections[3].paragraphs[0]
-    Diese Gruppe umfasst Beendigung des Arbeitsverhältnisses, Abfindung nach taiwanischem Recht (資遣費; nicht mit Instituten anderer Staaten gleichzusetzen), Lohn und Streitigkeiten aus dem Arbeitsvertrag (勞動契約), sowohl auf Arbeitnehmer- als auch auf Arbeitgeberseite. Bei der Prüfung trennen wir den Beendigungsgrund von Fragen der Ankündigung, der Zahlung und der Fristen.
+    Diese Gruppe umfasst Beendigung des Arbeitsverhältnisses, Abfindung nach taiwanesischem Recht (資遣費; nicht mit Abfindungs- oder Kündigungsschutzregelungen anderer Staaten gleichzusetzen), Lohn und Streitigkeiten aus dem Arbeitsvertrag (勞動契約), sowohl auf Arbeitnehmer- als auch auf Arbeitgeberseite. Bei der Prüfung trennen wir den Beendigungsgrund von Fragen der Ankündigung, der Zahlung und der Fristen.
 
 guidanceContent.de.pages.services.sections[3].paragraphs[1]
     Arbeitsvertrag, Betriebsordnung (工作規則), Gehaltsabrechnungen und der Schriftwechsel der Parteien sind meist die entscheidenden Unterlagen. Wenn Sie sie noch haben, erwähnen Sie das in der Zusammenfassung.
@@ -250,7 +250,7 @@ guidanceContent.de.pages.services.sections[4].heading
     Strafsachen
 
 guidanceContent.de.pages.services.sections[4].paragraphs[0]
-    Wir begleiten im Ermittlungsverfahren und vor Gericht, für Beschuldigte oder Angeklagte ebenso wie für Verletzte, und bewerten strafrechtliche Risiken unternehmerischer Tätigkeit.
+    Wir vertreten Beschuldigte, Angeklagte und Verletzte im Ermittlungsverfahren und vor Gericht und bewerten strafrechtliche Risiken unternehmerischer Tätigkeit.
 
 guidanceContent.de.pages.services.sections[4].paragraphs[1]
     Strafsachen haben oft kurze Fristen und festgelegte Stufen. Wenn Sie bereits ein Schreiben der Strafverfolgungsbehörde oder des Gerichts erhalten haben, nennen Sie das Datum auf dem Schreiben früh, damit der Inhalt in der richtigen Reihenfolge geprüft wird.
@@ -268,7 +268,7 @@ guidanceContent.de.pages.services.sections[6].heading
     Umfang und seine Bestätigung
 
 guidanceContent.de.pages.services.sections[6].paragraphs[0]
-    Die Kanzlei arbeitet nach taiwanischem Recht und bearbeitet Angelegenheiten der oben genannten Gruppen. Der Umfang jeder Sache wird gesondert bestätigt, nachdem eine Anwältin oder ein Anwalt Ihre Nachricht geprüft hat.
+    Die Kanzlei arbeitet nach taiwanesischem Recht und bearbeitet Angelegenheiten der oben genannten Gruppen. Der Umfang jeder Sache wird gesondert bestätigt, nachdem eine Anwältin oder ein Anwalt Ihre Nachricht geprüft hat.
 
 guidanceContent.de.pages.services.sections[6].paragraphs[1]
     Aufenthaltsstatus, Arbeitserlaubnis und vergleichbare Fragen werden aus den Unterlagen und der Lage der jeweiligen Person beurteilt, nicht aus der Staatsangehörigkeit. Wenn ein Teil Ihres Anliegens solche Fragen berührt, nennen Sie das bei der Kontaktaufnahme. Diese Seite verspricht weder ein Ergebnis noch eine Antwortfrist.
@@ -280,19 +280,19 @@ guidanceContent.de.pages.about.title
     Über Hovering International Law Firm
 
 guidanceContent.de.pages.about.description
-    Grundangaben zu dieser taiwanischen Anwaltskanzlei, ihren Büros und der Arbeit mit ausländischen Beteiligten.
+    Grundangaben zu dieser taiwanesischen Anwaltskanzlei, ihren Büros und der Arbeit mit ausländischen Beteiligten.
 
 guidanceContent.de.pages.about.intro
-    Hovering International Law Firm ist eine Anwaltskanzlei in Taiwan. Die Anwältinnen und Anwälte arbeiten von der Unternehmensberatung bis zum Gerichtsverfahren. Dieser Teil beschreibt die Entstehung der Kanzlei, die Standorte und die Arbeit mit ausländischen Beteiligten.
+    Hovering International Law Firm ist eine Anwaltskanzlei in Taiwan. Die Anwältinnen und Anwälte beraten Unternehmen und vertreten sie im Gerichtsverfahren. Dieser Teil beschreibt die Entstehung der Kanzlei, die Standorte und die Arbeit mit ausländischen Beteiligten.
 
 guidanceContent.de.pages.about.sections[0].heading
     Gründung und Aufbau
 
 guidanceContent.de.pages.about.sections[0].paragraphs[0]
-    Hovering International Law Firm (昊鼎國際法律事務所) wurde 2016 von Anwältinnen und Anwälten gegründet, die an der National Taiwan University (國立臺灣大學) studiert haben. Der chinesische Name 昊鼎 verbindet das Schriftzeichen 昊 („weiter Himmel“) mit 鼎 („fester Grund“) und beschreibt die Ausrichtung der Kanzlei seit der Gründung.
+    Hovering International Law Firm (昊鼎國際法律事務所) wurde 2016 von Anwältinnen und Anwälten gegründet, die an der National Taiwan University (國立臺灣大學) studiert haben. Der chinesische Name 昊鼎 verbindet das Schriftzeichen 昊 („der weite Himmel“) mit 鼎 („fester Grund“) und beschreibt die Ausrichtung der Kanzlei seit der Gründung.
 
 guidanceContent.de.pages.about.sections[0].paragraphs[1]
-    Wir haben Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Das Büro Kaohsiung konzentriert sich auf Unternehmensführung und bearbeitet zivil-, straf- und verwaltungsrechtliche Streitigkeiten. Das Büro Taichung bearbeitet Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Das Büro Pingtung wurde 2017 für den örtlichen Bedarf eröffnet.
+    Wir haben Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Das Büro Kaohsiung konzentriert sich auf Unternehmensführung und bearbeitet zivil-, straf- und verwaltungsrechtliche Streitigkeiten. Das Büro Taichung bearbeitet Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Das Büro Pingtung wurde 2017 eröffnet, um Mandantinnen und Mandanten in der Region vor Ort zu betreuen.
 
 guidanceContent.de.pages.about.sections[0].paragraphs[2]
     Neben der anwaltlichen Arbeit besteht seit 2020 auch Hovering Accounting Office, das Buchhaltung und Steuerplanung für Unternehmer und vermögende Privatpersonen anbietet.
@@ -301,7 +301,7 @@ guidanceContent.de.pages.about.sections[1].heading
     Arbeit mit ausländischen Beteiligten
 
 guidanceContent.de.pages.about.sections[1].paragraphs[0]
-    Die grenzüberschreitende Arbeit umfasst Gesellschaftsgründung, Visa, Marken- und Patentanmeldungen, rechtliche Risikoprüfung und steuerliche Beratung von Unternehmen. Das Büro Taichung bearbeitet insbesondere Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Rechtsanwältin Wei Tseng (曾雋崴) begleitet Mandanten aus Korea, Japan und andere internationale Mandanten in den genannten Gruppen.
+    Die grenzüberschreitende Arbeit umfasst Gesellschaftsgründung, Visa, Marken- und Patentanmeldungen, rechtliche Risikoprüfung und steuerliche Beratung von Unternehmen. Das Büro Taichung bearbeitet insbesondere Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Rechtsanwältin Wei Tseng (曾雋崴) begleitet Mandanten aus Korea und Japan sowie weitere internationale Mandanten in den genannten Gruppen.
 
 guidanceContent.de.pages.about.sections[1].paragraphs[1]
     Ob wir eine Sache übernehmen können, hängt vom Inhalt und von der Sprache der Kommunikation ab. Fällt Ihr Anliegen in die genannten Gruppen und kann es in einer der vier Beratungssprachen besprochen werden, können Sie eine Zusammenfassung zur Prüfung senden.
@@ -310,7 +310,7 @@ guidanceContent.de.pages.about.sections[2].heading
     Wenn Sie uns kontaktieren
 
 guidanceContent.de.pages.about.sections[2].paragraphs[0]
-    Nach Eingang Ihrer Zusammenfassung prüft eine Anwältin oder ein Anwalt den Inhalt und spricht dann über den möglichen Arbeitsumfang, noch benötigte Unterlagen und die nächsten Schritte. Bei steuerlichen oder buchhalterischen Fragen kann die Kanzlei mit der Buchhaltungsabteilung in einem Ablauf arbeiten.
+    Nach Eingang Ihrer Zusammenfassung prüft eine Anwältin oder ein Anwalt den Inhalt und spricht dann über den möglichen Arbeitsumfang, noch benötigte Unterlagen und die nächsten Schritte. Bei steuerlichen oder buchhalterischen Fragen kann die Kanzlei gemeinsam mit der Buchhaltungsabteilung arbeiten.
 
 guidanceContent.de.pages.about.sections[2].paragraphs[1]
     Das Ergebnis jeder Sache hängt von den Tatsachen und den vorhandenen Unterlagen ab; wir versprechen kein Ergebnis. Wenn Sie eine verbindliche Antwort für Ihre Lage brauchen, müssen die Unterlagen in einer der vier Beratungssprachen mit einer Anwältin oder einem Anwalt besprochen werden.
@@ -322,7 +322,7 @@ guidanceContent.de.pages.lawyers.title
     Internationales Team von Hovering
 
 guidanceContent.de.pages.lawyers.description
-    Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering.
+    Profile der Anwältinnen und Anwälte, der Leitung Korea und der Wirtschaftsprüfungspartner von Hovering.
 
 guidanceContent.de.pages.lawyers.intro
     
@@ -343,7 +343,7 @@ guidanceContent.de.pages.pricing.sections[0].heading
     Zuerst wird der Arbeitsumfang festgelegt
 
 guidanceContent.de.pages.pricing.sections[0].paragraphs[0]
-    Sachen derselben Art können sehr unterschiedlichen Aufwand haben, je nach Zahl der Beteiligten, vorhandenen Unterlagen, einzuhaltenden Fristen und danach, ob ein Verfahren bereits begonnen hat. Deshalb ist der erste Schritt stets, festzulegen, was zur Arbeit gehört und was nicht.
+    Sachen derselben Art können einen sehr unterschiedlichen Aufwand haben, je nach Zahl der Beteiligten, vorhandenen Unterlagen, einzuhaltenden Fristen und danach, ob ein Verfahren bereits begonnen hat. Deshalb ist der erste Schritt stets, festzulegen, was zur Arbeit gehört und was nicht.
 
 guidanceContent.de.pages.pricing.sections[0].paragraphs[1]
     Die Zusammenfassung, die Sie am Anfang senden, ist die Grundlage für diesen Umfang. Je klarer sie den Ablauf, Ihr Anliegen und die Fristen beschreibt, desto genauer kann der Umfang bestimmt werden.
@@ -352,7 +352,7 @@ guidanceContent.de.pages.pricing.sections[1].heading
     Kosten werden vor Beginn der Arbeit bestätigt
 
 guidanceContent.de.pages.pricing.sections[1].paragraphs[0]
-    Ist der Arbeitsumfang klar, werden Höhe und Berechnungsweise der Kosten mit Ihnen besprochen und bestätigt, bevor die Arbeit beginnt. Ändert sich der Umfang unterwegs, muss das erneut bestätigt werden.
+    Ist der Arbeitsumfang klar, werden Höhe und Berechnungsweise der Kosten mit Ihnen besprochen und bestätigt, bevor die Arbeit beginnt. Ändert sich der Umfang im Verlauf der Bearbeitung, muss das erneut bestätigt werden.
 
 guidanceContent.de.pages.pricing.sections[1].paragraphs[1]
     Diese Seite ist kein Preisangebot und begründet keine Zahlungspflicht. Das Senden einer Anfrage über diese Seite ist ebenfalls kostenfrei.
@@ -361,7 +361,7 @@ guidanceContent.de.pages.pricing.sections[2].heading
     Die Beratung kann entgeltlich sein
 
 guidanceContent.de.pages.pricing.sections[2].paragraphs[0]
-    Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und kein Teil darf so gelesen werden.
+    Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und nichts auf dieser Seite ist in diesem Sinn zu verstehen.
 
 guidanceContent.de.pages.pricing.sections[2].paragraphs[1]
     Ist die Beratung entgeltlich, werden Höhe und Zahlungsweise mitgeteilt, bevor sie stattfindet.
@@ -370,10 +370,10 @@ guidanceContent.de.pages.pricing.sections[3].heading
     Warum diese Seite keine Tarife nennt
 
 guidanceContent.de.pages.pricing.sections[3].paragraphs[0]
-    Die Kosten hängen von der Sache selbst ab: vom Aufwand, der Zahl der Beteiligten, den Unterlagen, den Fristen und davon, ob ein Verfahren bereits läuft. Eine vorab gesetzte Zahl würde die Kosten für Ihren Vorgang nicht zeigen. Deshalb legen wir zuerst den Arbeitsumfang fest und teilen Ihnen dann die Kosten mit, bevor die Arbeit beginnt.
+    Die Kosten hängen von der Sache selbst ab: vom Aufwand, der Zahl der Beteiligten, den Unterlagen, den Fristen und davon, ob ein Verfahren bereits läuft. Ein im Voraus genannter Betrag gibt die Kosten Ihres Vorgangs nicht wieder. Deshalb legen wir zuerst den Arbeitsumfang fest und teilen Ihnen dann die Kosten mit, bevor die Arbeit beginnt.
 
 guidanceContent.de.pages.pricing.sections[3].paragraphs[1]
-    Neben dem Anwaltshonorar können Gerichts-, Behörden- oder Drittkosten entstehen. Diese sind vom Honorar getrennt und hängen vom jeweiligen Verfahren ab.
+    Neben dem Anwaltshonorar können Gerichts- und Behördenkosten oder Kosten Dritter entstehen. Diese sind vom Honorar getrennt und hängen vom jeweiligen Verfahren ab.
 
 guidanceContent.de.pages.contact.eyebrow
     KONTAKT
@@ -382,7 +382,7 @@ guidanceContent.de.pages.contact.title
     Wie Sie die Kanzlei erreichen
 
 guidanceContent.de.pages.contact.description
-    Seitensprache, Beratungssprachen, das Vorgehen, wenn Sie keine der vier Sprachen nutzen können, und was diese Seite nicht zusagt.
+    Seitensprache, Beratungssprachen, das Vorgehen, wenn Sie keine der vier Sprachen sprechen können, und was diese Seite nicht zusagt.
 
 guidanceContent.de.pages.contact.intro
     Bevor Sie uns schreiben, unterscheiden Sie bitte die folgenden drei Punkte. Sie werden oft vermischt, bedeuten aber Unterschiedliches.
@@ -397,19 +397,19 @@ guidanceContent.de.pages.contact.sections[0].items[0]
     Seitensprache: Diese Hinweise sind auf Deutsch geschrieben.
 
 guidanceContent.de.pages.contact.sections[0].items[1]
-    Beratungssprache: Die Beratung erfolgt auf Englisch, Chinesisch (中文), Japanisch und Koreanisch.
+    Beratungssprache: Die Beratung erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch.
 
 guidanceContent.de.pages.contact.sections[0].items[2]
     Ihre Schreibsprache: Sie dürfen die Zusammenfassung in Ihrer eigenen Sprache schreiben; der Originaltext wird unverändert gespeichert.
 
 guidanceContent.de.pages.contact.sections[1].heading
-    Wenn Sie keine der vier Beratungssprachen nutzen können
+    Wenn Sie keine der vier Beratungssprachen sprechen können
 
 guidanceContent.de.pages.contact.sections[1].paragraphs[0]
-    Im Kontaktformular können Sie „Kommunikationsweise muss bestätigt werden“ wählen. Wir antworten, um eine gangbare Kommunikationsweise zu prüfen, wenn eine solche besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.
+    Im Kontaktformular können Sie „Kommunikationsweise muss bestätigt werden“ wählen. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.
 
 guidanceContent.de.pages.contact.sections[1].paragraphs[1]
-    Das ist nur ein Prüfungsschritt, kein Versprechen. Wir versprechen keinen Dolmetscher, keine Leistung auf Deutsch oder in einer anderen Sprache außerhalb der vier genannten Sprachen, und nicht, dass wir jede Sache annehmen.
+    Das ist nur ein Prüfungsschritt, kein Versprechen. Wir versprechen keinen Dolmetscher und keine Leistung auf Deutsch oder in einer anderen Sprache außerhalb der vier genannten Sprachen, und wir übernehmen nicht jede Sache.
 
 guidanceContent.de.pages.contact.sections[2].heading
     Was in der ersten Nachricht stehen sollte
@@ -445,7 +445,7 @@ guidanceContent.de.pages.faq.sections[0].heading
     Wie Sie diesen Teil nutzen
 
 guidanceContent.de.pages.faq.sections[0].paragraphs[0]
-    Finden Sie keine Antwort auf Ihre Lage, hängt die Antwort meist von besonderen Tatsachen ab. Schreiben Sie diese Tatsachen dann in die Zusammenfassung, statt sie selbst aus dieser Seite abzuleiten.
+    Finden Sie hier keine Antwort für Ihre Situation, hängt sie meist von besonderen Tatsachen ab. Schreiben Sie diese Tatsachen dann in die Zusammenfassung, statt die Antwort selbst aus dieser Seite abzuleiten.
 
 guidanceContent.de.pages.faq.faqs[0].question
     Welche Angelegenheiten bearbeitet die Kanzlei?
@@ -466,7 +466,7 @@ guidanceContent.de.pages.faq.faqs[2].answer
     Nein. Diese Hinweise sind auf Deutsch geschrieben, aber die Beratung durch eine Anwältin oder einen Anwalt erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch. Wir versprechen auch keinen Dolmetscher. Schriftliche Übersetzung ist etwas anderes: Der Originaltext, den Sie schreiben, wird so gespeichert und nicht automatisch übersetzt.
 
 guidanceContent.de.pages.faq.faqs[3].question
-    Was, wenn ich keine der vier Sprachen nutzen kann?
+    Was, wenn ich keine der vier Sprachen sprechen kann?
 
 guidanceContent.de.pages.faq.faqs[3].answer
     Wählen Sie beim Senden der Anfrage „Kommunikationsweise muss bestätigt werden“. Wir antworten, um eine Kommunikationsweise zu prüfen, aber eine Leistung in einer anderen Sprache wird nicht gewährleistet. Das ist ein Prüfungsschritt, kein Versprechen, dass wir in einer anderen Sprache arbeiten können.
@@ -493,7 +493,7 @@ guidanceContent.de.pages.faq.faqs[7].question
     Was, wenn mein Anliegen sehr eilig ist?
 
 guidanceContent.de.pages.faq.faqs[7].answer
-    Nennen Sie die Frist oder das Datum auf einem amtlichen Schreiben am Anfang Ihrer Zusammenfassung, damit diese Daten bei der Prüfung sichtbar sind. Diese Seite hat keinen Notfallkanal und gewährleistet keine Antwortfrist; wenn Ihr Anliegen nicht warten kann, sollten Sie parallel andere Wege an Ihrem Ort suchen.
+    Nennen Sie die Frist oder das Datum auf einem amtlichen Schreiben am Anfang Ihrer Zusammenfassung, damit diese Daten bei der Prüfung sichtbar sind. Diese Seite hat keinen Notfallkontakt und sagt keine Antwortfrist zu; wenn Ihr Anliegen nicht warten kann, sollten Sie parallel anderweitig Hilfe an Ihrem Wohnort suchen.
 
 guidanceContent.de.pages.privacy.eyebrow
     DATENSCHUTZ
@@ -568,7 +568,7 @@ guidanceContent.de.pages.privacy.sections[4].heading
     Benachrichtigung und Empfangsnummer
 
 guidanceContent.de.pages.privacy.sections[4].paragraphs[0]
-    Wird eine Anfrage erfolgreich gesendet, benachrichtigt das System die Kanzlei. Ist diese Benachrichtigung noch nicht bestätigt, bleibt Ihr Text gespeichert und geht nicht verloren.
+    Wird eine Anfrage erfolgreich gesendet, benachrichtigt das System die Kanzlei. Ist der Eingang dieser Meldung bei der Kanzlei noch nicht bestätigt, bleibt Ihr Text gespeichert und geht nicht verloren.
 
 guidanceContent.de.pages.privacy.sections[4].paragraphs[1]
     Die Empfangsnummer dient dazu, Ihre Anfrage in unseren Unterlagen wiederzufinden. Sie wird nach dem Speichern angezeigt; Sie können sie bei einer erneuten Kontaktaufnahme nennen.
@@ -589,7 +589,7 @@ guidanceContent.de.pages.privacy.sections[6].paragraphs[0]
     Diese Website wird bei Vercel gehostet, und Ihre Sendung wird in einem nicht öffentlichen Objektspeicher dieses Dienstes gespeichert. E-Mails werden über den von der Kanzlei genutzten E-Mail-Dienst versendet.
 
 guidanceContent.de.pages.privacy.sections[6].paragraphs[1]
-    Server einzelner Dienstleister können außerhalb Taiwans stehen, sodass Ihre Daten dort gespeichert und verarbeitet werden können. Ist der Speicherzweck erfüllt, werden die Daten ohne Verzögerung gelöscht; Daten, die nach geltenden Vorschriften aufbewahrt werden müssen, bleiben für diese Dauer. Anfragen zu personenbezogenen Daten nimmt wei@hoveringlaw.com.tw entgegen.
+    Server einzelner Dienstleister können außerhalb Taiwans stehen, sodass Ihre Daten dort gespeichert und verarbeitet werden können. Ist der Speicherzweck erfüllt, werden die Daten ohne Verzögerung gelöscht; Daten, die nach geltenden Vorschriften aufbewahrt werden müssen, bleiben für diese Dauer. Anfragen zu personenbezogenen Daten richten Sie an wei@hoveringlaw.com.tw.
 
 guidanceContent.de.pages.disclaimer.eyebrow
     HAFTUNGSAUSSCHLUSS
@@ -616,7 +616,7 @@ guidanceContent.de.pages.disclaimer.sections[1].heading
     Rechtlicher Geltungsbereich
 
 guidanceContent.de.pages.disclaimer.sections[1].paragraphs[0]
-    Die Kanzlei praktiziert nach taiwanischem Recht, und diese Seite spricht nur über Arbeit in diesem Rahmen.
+    Die Kanzlei ist nach taiwanesischem Recht tätig, und diese Seite betrifft nur Arbeit in diesem Rahmen.
 
 guidanceContent.de.pages.disclaimer.sections[1].paragraphs[1]
     Der Inhalt ist keine Beratung nach dem Recht einer anderen Rechtsordnung als Taiwan, einschließlich des Rechts Ihres Wohnorts. Betrifft ein Teil Ihrer Sache eine andere Rechtsordnung, klären wir mit Ihnen, welche qualifizierte Fachperson für diesen Teil nötig ist.
@@ -643,13 +643,13 @@ guidanceContent.de.pages.columns.eyebrow
     BEITRÄGE
 
 guidanceContent.de.pages.columns.title
-    Beiträge zum taiwanischen Recht
+    Beiträge zum taiwanesischen Recht
 
 guidanceContent.de.pages.columns.description
-    Deutsche Beiträge zu häufigen Fragen des taiwanischen Rechts. Der Inhalt ist allgemeine Information zum Zeitpunkt der Veröffentlichung, keine Rechtsberatung für Ihren Fall.
+    Deutsche Beiträge zu häufigen Fragen des taiwanesischen Rechts. Der Inhalt ist allgemeine Information zum Zeitpunkt der Veröffentlichung, keine Rechtsberatung für Ihren Fall.
 
 guidanceContent.de.pages.columns.intro
-    Die Kanzlei veröffentlicht Beiträge zu häufigen Fragen des taiwanischen Rechts. Beiträge, die auf Deutsch vorliegen, stehen auf dieser Seite; daneben gibt es vier Links, die jeweils die Beitragsliste einer Originalsprache öffnen.
+    Die Kanzlei veröffentlicht Beiträge zu häufigen Fragen des taiwanesischen Rechts. Beiträge, die auf Deutsch vorliegen, stehen auf dieser Seite; daneben gibt es vier Links, die jeweils die Beitragsliste einer Originalsprache öffnen.
 
 guidanceContent.de.pages.columns.sections[0].heading
     Vier Listen nach Sprache
@@ -658,7 +658,7 @@ guidanceContent.de.pages.columns.sections[0].paragraphs[0]
     Dieser Teil enthält vier Links: die Beitragsliste auf Koreanisch, auf Chinesisch, auf Englisch und auf Japanisch. Jeder Link nennt die Sprache der Liste, damit Sie vorher wissen, in welcher Sprache der Inhalt öffnet.
 
 guidanceContent.de.pages.columns.sections[0].paragraphs[1]
-    Diese vier Listen sind Listen nach der Originalsprache der Beiträge, keine Übersetzungslisten. Beiträge, die auf Deutsch vorliegen, stehen gesondert auf dieser Seite.
+    Diese vier Listen sind Listen nach der Originalsprache der Beiträge, keine Übersetzungen. Beiträge, die auf Deutsch vorliegen, stehen gesondert auf dieser Seite.
 
 guidanceContent.de.pages.columns.sections[1].heading
     Wohin die Links führen
@@ -676,16 +676,16 @@ guidanceContent.de.pages.columns.sections[2].paragraphs[0]
     Beiträge sind allgemeine Angaben zum Zeitpunkt der Veröffentlichung. Vorschriften und ihre Anwendung können sich ändern, und ein Beitrag enthält nicht alle Umstände Ihres Falls.
 
 guidanceContent.de.pages.columns.sections[2].paragraphs[1]
-    Bitte stützen Sie daher keine Handlung in einer echten Sache allein auf einen Beitrag. Nutzen Sie ihn für den Überblick und besprechen Sie Ihre Unterlagen gesondert mit einer Anwältin oder einem Anwalt; diese Seite ist nicht der Beratungsschritt.
+    Bitte stützen Sie daher keine Handlung in einer echten Sache allein auf einen Beitrag. Nutzen Sie ihn für den Überblick und besprechen Sie Ihre Unterlagen gesondert mit einer Anwältin oder einem Anwalt; diese Seite ersetzt die Beratung nicht.
 
 guidanceTeamCopy.de.label
-    OUR TEAM
+    UNSER TEAM
 
 guidanceTeamCopy.de.title
     Internationales Team von Hovering
 
 guidanceTeamCopy.de.description
-    Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering.
+    Profile der Anwältinnen und Anwälte, der Leitung Korea und der Wirtschaftsprüfungspartner von Hovering.
 
 guidanceTeamCopy.de.representativeTitle
     Geschäftsführende Anwältin
@@ -694,7 +694,7 @@ guidanceTeamCopy.de.teamTitle
     Anwältinnen, Anwälte und Mitarbeitende
 
 guidanceTeamCopy.de.partnerTitle
-    Partner-Wirtschaftsprüfung
+    Wirtschaftsprüfungspartner
 
 guidanceTeamCopy.de.introLabel
     Vorstellung
@@ -712,7 +712,7 @@ guidanceTeamCopy.de.workingLanguagesLabel
     Arbeitssprachen
 
 guidanceTeamCopy.de.fullProfileLabel
-    Vollständiges Profil (English)
+    Vollständiges Profil (auf Englisch)
 
 guidanceTeamCopy.de.keyFactsHeading
     Rechtsanwältin Wei Tseng — Wesentliche Angaben
@@ -730,31 +730,31 @@ guidanceTeamCopy.de.consultationLanguagesLabel
     Beratungssprachen
 
 guidanceTeamCopy.de.roles.tseng-junwei
-    Geschäftsführende Anwältin in Taiwan (Managing Attorney)
+    Leitende Anwältin in Taiwan
 
 guidanceTeamCopy.de.roles.chang-rongxuan
-    Anwalt in Taiwan (Taiwan Attorney)
+    Anwalt in Taiwan
 
 guidanceTeamCopy.de.roles.chang-fangyu
-    Paralegal
+    Juristische Fachkraft
 
 guidanceTeamCopy.de.roles.son-jungmin
-    Betriebsleitung Korea (Korea Operations Manager)
+    Leitung Korea
 
 guidanceTeamCopy.de.roles.huang-shengping
-    Partner-Wirtschaftsprüfer (Partner CPA)
+    Wirtschaftsprüfungspartner
 
 guidanceTeamBios.de.tseng-junwei.intro[0]
     Die Kanzlei bearbeitet Unternehmens- und Individualangelegenheiten in Taiwan auf Englisch, Japanisch, Koreanisch und Chinesisch.
 
 guidanceTeamBios.de.tseng-junwei.intro[1]
-    Sie vertrat einen koreanischen Studenten in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte ein erstinstanzliches Urteil über TWD 1.57M.
+    Sie vertrat einen koreanischen Studenten in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte ein erstinstanzliches Urteil über 1,57 Millionen TWD.
 
 guidanceTeamBios.de.tseng-junwei.education[0]
-    Magister (M.S.), Institute of Finance, National Taiwan University
+    Masterabschluss (M.S.) am Institute of Finance der National Taiwan University
 
 guidanceTeamBios.de.tseng-junwei.education[1]
-    Bachelor (B.A.) mit Doppelstudium Recht und Finanzen, National Chengchi University
+    Bachelorabschluss (B.A.) im Doppelstudium Recht und Finanzen, National Chengchi University
 
 guidanceTeamBios.de.tseng-junwei.education[2]
     Austauschstudierende an der Kobe University und der Waseda University
@@ -766,61 +766,61 @@ guidanceTeamBios.de.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.de.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Stiftung für Prozesskostenhilfe, Zweigstelle Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.de.chang-rongxuan.intro[0]
-    Tätig zuvor im Ministry of Education, Legal Affairs Division, mit Schwerpunkt auf Verwaltungs- und Zivilsachen.
+    Zuvor tätig im Bildungsministerium, Abteilung Rechtsangelegenheiten (Ministry of Education, Legal Affairs Division), mit Schwerpunkt auf Verwaltungs- und Zivilsachen.
 
 guidanceTeamBios.de.chang-rongxuan.intro[1]
     Erfahrung mit Angelegenheiten zu Hochschulen, Rechten von Lehrkräften und Verwaltungsbeschwerden.
 
 guidanceTeamBios.de.chang-rongxuan.education[0]
-    Bachelor of Laws (LL.B.), National Chung Hsing University
+    Bachelor der Rechtswissenschaft (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.de.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Bildungsministerium, Abteilung Rechtsangelegenheiten (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.de.chang-rongxuan.experience[1]
     Anwalt, Hovering International Law Firm
 
 guidanceTeamBios.de.chang-fangyu.intro[0]
-    Paralegal mit langjähriger Tätigkeit als Senior Paralegal in mehreren Kanzleien, zuständig für Prozessunterstützung, Unternehmensrecht und ausländische Investitionen.
+    Juristische Fachkraft mit langjähriger Tätigkeit als leitende juristische Fachkraft in mehreren Kanzleien, zuständig für Prozessunterstützung, Unternehmensrecht und ausländische Investitionen.
 
 guidanceTeamBios.de.chang-fangyu.intro[1]
     Unterstützung bei Verfahren, Gesellschaftsgründung, Genehmigungen ausländischer Investitionen, Lizenzanträgen und dem Austausch zwischen Korea und Taiwan.
 
 guidanceTeamBios.de.chang-fangyu.education[0]
-    Bachelor of Laws (LL.B.), Tunghai University
+    Bachelor der Rechtswissenschaft (LL.B.), Tunghai University
 
 guidanceTeamBios.de.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Leitende juristische Fachkraft, Boyin Law Firm
 
 guidanceTeamBios.de.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Leitende juristische Fachkraft, Muyang International Law Firm
 
 guidanceTeamBios.de.son-jungmin.intro[0]
     Koordiniert Beratungstermine und die Kommunikation für Mandanten aus Korea.
 
 guidanceTeamBios.de.son-jungmin.intro[1]
-    Unterstützt den Austausch zwischen den Bereichen über Dokumentensysteme und Arbeitsabläufe, auf Grundlage der Informatik.
+    Unterstützt die Abstimmung zwischen den Bereichen mithilfe von Dokumenten- und Ablaufsystemen; der Hintergrund ist ein Informatikstudium.
 
 guidanceTeamBios.de.son-jungmin.education[0]
-    Bachelor (B.S.) Informatik, National Cheng Kung University
+    Bachelorabschluss (B.S.) in Informatik, National Cheng Kung University
 
 guidanceTeamBios.de.son-jungmin.experience[0]
-    Bereich Korea-Betrieb, Hovering International Law Firm
+    Leitung Korea, Hovering International Law Firm
 
 guidanceTeamBios.de.huang-shengping.intro[0]
-    Hat Bachelor- und Masterprogramme in Rechnungswesen an der National Chengchi University abgeschlossen und leitet derzeit eine Wirtschaftsprüfungskanzlei.
+    Hat an der National Chengchi University ein Bachelor- und ein Masterstudium im Rechnungswesen abgeschlossen und leitet derzeit eine Wirtschaftsprüfungskanzlei.
 
 guidanceTeamBios.de.huang-shengping.intro[1]
     Unterstützt die integrierte Analyse rechtlicher, steuerlicher und finanzieller Risiken für Unternehmenskunden.
 
 guidanceTeamBios.de.huang-shengping.education[0]
-    Magister (M.A.) Rechnungswesen, National Chengchi University
+    Masterabschluss (M.A.) im Rechnungswesen, National Chengchi University
 
 guidanceTeamBios.de.huang-shengping.education[1]
-    Bachelor (B.A.) Rechnungswesen, National Chengchi University
+    Bachelorabschluss (B.A.) im Rechnungswesen, National Chengchi University
 
 guidanceTeamBios.de.huang-shengping.experience[0]
     Chinshin CPA Firm
@@ -853,7 +853,7 @@ guidancePracticeAreaNames.de.Family and labor disputes
     Familien- und Arbeitsstreitigkeiten
 
 guidanceOfficeCopy.de.label
-    OFFICES
+    BÜROS
 
 guidanceOfficeCopy.de.title
     Büros
@@ -940,10 +940,10 @@ internationalInquiryCopy.de.guidanceNotice
     Diese Seite ist auf Deutsch als allgemeine Orientierung geschrieben, nicht als Rechtsberatung für Ihren eigenen Fall.
 
 internationalInquiryCopy.de.consultationNotice
-    Die Beratung erfolgt in vier Sprachen: Englisch, Chinesisch (中文), Japanisch und Koreanisch.
+    Die Beratung erfolgt nur in vier Sprachen: Englisch, Chinesisch (中文), Japanisch und Koreanisch.
 
 internationalInquiryCopy.de.methodConfirmationNotice
-    Wenn Sie keine der vier Sprachen nutzen können, wählen Sie „Kommunikationsweise muss bestätigt werden“. Wir antworten, um eine gangbare Kommunikationsweise zu prüfen, wenn eine solche besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.
+    Wenn Sie keine der vier Sprachen sprechen können, wählen Sie „Kommunikationsweise muss bestätigt werden“. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.
 
 internationalInquiryCopy.de.preparationNotice
     Sie dürfen die Zusammenfassung in Ihrer eigenen Sprache schreiben. Der Originaltext wird so gespeichert, wie Sie ihn geschrieben haben, und nicht automatisch übersetzt.
@@ -1012,7 +1012,7 @@ internationalInquiryCopy.de.sourceLanguageNotice
     Dieser Beitrag ist nur auf {language} veröffentlicht; der Link öffnet die Originalseite.
 
 internationalInquiryCopy.de.unavailableTranslationNotice
-    Dieser Punkt liegt in der Sprache dieser Seite noch nicht vor. Ein Link mit der Originalsprache öffnet den Originaltext.
+    Dieser Inhalt liegt in der Sprache dieser Seite noch nicht vor. Ein Link mit der Originalsprache öffnet den Originaltext.
 
 internationalInquiryCopy.de.unavailableLanguageNotice
     Diese Seite wird nicht auf {language} angeboten.
@@ -1030,10 +1030,10 @@ internationalInquiryCopy.de.languageOptions.ko
     Koreanisch (한국어)
 
 internationalInquiryCopy.de.languageOptions.needs-method-confirmation
-    Keine der vier Sprachen ist nutzbar — Kommunikationsweise muss bestätigt werden
+    Ich spreche keine der vier Sprachen — die Kommunikationsweise muss bestätigt werden
 
 guidanceAnswers.de.services.answer
-    Die Kanzlei bearbeitet sechs Tätigkeitsgruppen nach taiwanischem Recht: Investition und Gesellschaftsgründung, Zivilsachen und Schadensersatz, Ehe, Familie und Erbrecht, Arbeitsrecht, Strafsachen und geistiges Eigentum. Der Umfang jeder Sache wird gesondert bestätigt, nachdem eine Anwältin oder ein Anwalt den Inhalt geprüft hat. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.
+    Die Kanzlei bearbeitet sechs Tätigkeitsfelder des taiwanesischen Rechts: Investition und Gesellschaftsgründung, Zivilsachen und Schadensersatz, Ehe, Familie und Erbrecht, Arbeitsrecht, Strafsachen und geistiges Eigentum. Der Umfang jeder Sache wird gesondert bestätigt, nachdem eine Anwältin oder ein Anwalt den Inhalt geprüft hat. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.
 
 guidanceAnswers.de.services.sources[0]
     /de/faq
@@ -1051,7 +1051,7 @@ guidanceAnswers.de.about.sources[1]
     /de/services
 
 guidanceAnswers.de.lawyers.answer
-    Diese Seite zeigt die Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering. Rechtsanwältin Wei Tseng (曾雋崴) ist in Taiwan zur anwaltlichen Tätigkeit zugelassen und geschäftsführende Anwältin der Kanzlei; sie arbeitet mit Mandanten aus Korea, Japan und anderen internationalen Mandanten. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.
+    Diese Seite zeigt die Profile der Anwältinnen und Anwälte, der Leitung Korea und der Wirtschaftsprüfungspartner von Hovering. Rechtsanwältin Wei Tseng (曾雋崴) ist in Taiwan zur anwaltlichen Tätigkeit zugelassen und geschäftsführende Anwältin der Kanzlei; sie arbeitet mit Mandanten aus Korea und Japan sowie mit weiteren internationalen Mandanten. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.
 
 guidanceAnswers.de.lawyers.sources[0]
     /de/about
@@ -1078,7 +1078,7 @@ guidanceAnswers.de.contact.sources[1]
     /de/pricing
 
 guidanceAnswers.de.faq.answer
-    Dieser Teil beantwortet häufige Fragen auf der Ebene allgemeiner Angaben: die sechs Tätigkeitsgruppen, die Vorbereitung vor dem Kontakt, die Festlegung der Kosten und die Bedeutung einer gesendeten Nachricht. Eine gesendete Anfrage wartet auf Prüfung durch eine Anwältin oder einen Anwalt; sie ist keine Rechtsberatung, kein Termin und begründet kein Mandatsverhältnis. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.
+    Dieser Teil beantwortet häufige Fragen auf der Ebene allgemeiner Angaben: die sechs Tätigkeitsfelder, die Vorbereitung vor dem Kontakt, die Festlegung der Kosten und die Bedeutung einer gesendeten Nachricht. Eine gesendete Anfrage wartet auf Prüfung durch eine Anwältin oder einen Anwalt; sie ist keine Rechtsberatung, kein Termin und begründet kein Mandatsverhältnis. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.
 
 guidanceAnswers.de.faq.sources[0]
     /de/contact
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.de.consultationNotice
     Diese Hinweise sind auf Deutsch geschrieben, aber die Beratung durch eine Anwältin oder einen Anwalt erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch.
 
 GUIDANCE_LLMS_NOTICES.de.discoveryNotice
-    Die Datei llms.txt ist nur eine Suchkarte öffentlicher Seiten; sie verspricht keine Suchplatzierung, keine Empfehlung, keine KI-Empfehlung und keine Anzeige.
+    Die Datei llms.txt ist nur eine Übersicht zum Auffinden öffentlicher Seiten; sie verspricht keine Suchplatzierung, keine Empfehlung, keine KI-Empfehlung und keine garantierte Sichtbarkeit.
 
 GUIDANCE_LLMS_NOTICES.de.confidentialNotice
     Weil der Originaltext gespeichert wird, schreiben Sie in der Anfangsphase bitte nichts, das noch nicht nötig ist, etwa Passnummer, Ausweisnummer oder Kontodaten.

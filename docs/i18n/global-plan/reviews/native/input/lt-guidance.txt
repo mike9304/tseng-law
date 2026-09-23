@@ -1,4 +1,4 @@
-# lt guidance pack strings (path → text). Generated 2026-09-22
+# lt guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.lt.languageName
     Lietuvių
@@ -28,7 +28,7 @@ guidanceContent.lt.nav.privacy
     Privatumas
 
 guidanceContent.lt.nav.disclaimer
-    Įspėjimas
+    Atsakomybė
 
 guidanceContent.lt.nav.columns
     Straipsniai
@@ -151,10 +151,10 @@ guidanceContent.lt.pages.home.sections[0].heading
     Kuo užsiimame
 
 guidanceContent.lt.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus žingsniais, kuriuos Taivane reikia atlikti.
+    Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus per procedūras, kurias Taivane reikia atlikti.
 
 guidanceContent.lt.pages.home.sections[0].paragraphs[1]
-    Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir momento. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.
+    Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir to, kada byla vertinama. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.
 
 guidanceContent.lt.pages.home.sections[1].heading
     Puslapio kalba ir konsultacijos kalba nėra tas pats
@@ -163,7 +163,7 @@ guidanceContent.lt.pages.home.sections[1].paragraphs[0]
     Šis puslapis parašytas lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik keturiomis kalbomis: anglų, kinų (中文), japonų ir korėjiečių. Informacijos skaitymas lietuvių kalba nereiškia, kad pokalbis su advokate arba advokatu vyks lietuviškai.
 
 guidanceContent.lt.pages.home.sections[1].paragraphs[1]
-    Nežadame vertėjo žodžiu, atsakymo termino ir susitikimo per šį puslapį. Jei nemokate nė vienos iš keturių konsultacijos kalbų, puslapis „Kontaktai“ paaiškina, kaip vertiname bendravimo būdą.
+    Nežadame vertimo žodžiu, atsakymo termino ir susitikimo per šį puslapį. Jei nemokate nė vienos iš keturių konsultacijos kalbų, puslapis „Kontaktai“ paaiškina, kaip vertiname bendravimo būdą.
 
 guidanceContent.lt.pages.home.sections[2].heading
     Kontoros sritys
@@ -223,10 +223,10 @@ guidanceContent.lt.pages.services.sections[1].heading
     Civiliniai ginčai ir žalos atlyginimas
 
 guidanceContent.lt.pages.services.sections[1].paragraphs[0]
-    Ši sritis apima ginčus iš sutarčių, žalos atlyginimą dėl neteisėtų veiksmų ir vartotojų ginčus. Darbas paprastai prasideda chronologija, turimų dokumentų ir įrodymų vertinimu, ir tik tada seka tolesni žingsniai.
+    Ši sritis apima ginčus iš sutarčių, žalos atlyginimą dėl neteisėtų veiksmų ir vartotojų ginčus. Darbas paprastai pradedamas nuo įvykių eigos ir nuo turimų dokumentų bei įrodymų vertinimo, ir tik tada seka tolesni veiksmai.
 
 guidanceContent.lt.pages.services.sections[1].paragraphs[1]
-    Eigą lemia terminai, įskaitant senaties terminus, ir įrodymų visuma. Todėl žinomas datas nurodykite kuo anksčiau. Išsaugokite sutartis, pranešimus, mokėjimo dokumentus arba vietos būklės nuotraukas ir paminėkite juos pirmajame pranešime.
+    Eigą lemia terminai, įskaitant senaties terminus, ir įrodymų visuma. Todėl žinomas datas nurodykite kuo anksčiau. Išsaugokite sutartis, pranešimus, mokėjimo dokumentus arba nuotraukas iš įvykio vietos ir paminėkite juos pirmajame pranešime.
 
 guidanceContent.lt.pages.services.sections[2].heading
     Santuoka, šeima ir paveldėjimas
@@ -253,16 +253,16 @@ guidanceContent.lt.pages.services.sections[4].paragraphs[0]
     Atstovaujame ikiteisminiame tyrime ir teisme įtariamuosius ir kaltinamuosius bei nukentėjusiuosius ir vertiname baudžiamąją riziką verslo veikloje.
 
 guidanceContent.lt.pages.services.sections[4].paragraphs[1]
-    Baudžiamosiose bylose terminai dažnai trumpi, o etapai nustatyti. Jei jau gavote ikiteisminio tyrimo institucijos arba teismo raštą, nurodykite datą rašte laiku, kad turinys būtų įvertintas tinkama tvarka.
+    Baudžiamosiose bylose terminai dažnai trumpi, o etapai nustatyti. Jei jau gavote ikiteisminio tyrimo institucijos arba teismo raštą, kuo anksčiau nurodykite datą, įrašytą rašte, kad turinys būtų įvertintas tinkama tvarka.
 
 guidanceContent.lt.pages.services.sections[5].heading
     Intelektinė nuosavybė
 
 guidanceContent.lt.pages.services.sections[5].paragraphs[0]
-    Padedame registruoti prekių ženklus (商標) ir patentus (專利), autorių teisės ir ginčų dėl šių teisių Taivane klausimais.
+    Padedame registruoti prekių ženklus (商標) ir patentus (專利) bei spręsti autorių teisių ir ginčų dėl šių teisių Taivane klausimus.
 
 guidanceContent.lt.pages.services.sections[5].paragraphs[1]
-    Šioje srityje lemia žingsnių eilė: apsaugos apimtis, paraiškos pateikimo momentas ir faktinis naudojimas daro įtaką pasirinkimui. Paraiškos pateikimas savaime nereiškia, kad jai bus pritarta.
+    Šioje srityje lemia veiksmų seka: apsaugos apimtis, paraiškos pateikimo momentas ir faktinis naudojimas daro įtaką pasirinkimui. Paraiškos pateikimas savaime nereiškia, kad jai bus pritarta.
 
 guidanceContent.lt.pages.services.sections[6].heading
     Apimtis ir jos patvirtinimas
@@ -280,10 +280,10 @@ guidanceContent.lt.pages.about.title
     Apie Hovering International Law Firm
 
 guidanceContent.lt.pages.about.description
-    Pagrindiniai duomenys apie šią Taivano advokatų kontorą, jos biurus ir darbą su užsienio šalimis.
+    Pagrindiniai duomenys apie šią Taivano advokatų kontorą, jos biurus ir tarptautinį darbą.
 
 guidanceContent.lt.pages.about.intro
-    Hovering International Law Firm yra advokatų kontora Taivane. Advokatės ir advokatai dirba nuo konsultacijų įmonėms iki teismo proceso. Ši dalis aprašo kontoros atsiradimą, buveines ir darbą su užsienio šalimis.
+    Hovering International Law Firm yra advokatų kontora Taivane. Advokatės ir advokatai dirba nuo konsultacijų įmonėms iki teismo proceso. Ši dalis aprašo kontoros atsiradimą, buveines ir tarptautinį darbą.
 
 guidanceContent.lt.pages.about.sections[0].heading
     Įsteigimas ir struktūra
@@ -292,13 +292,13 @@ guidanceContent.lt.pages.about.sections[0].paragraphs[0]
     Hovering International Law Firm (昊鼎國際法律事務所) 2016 m. įsteigė advokatės ir advokatai, studijavę National Taiwan University (國立臺灣大學). Kinų pavadinimas 昊鼎 jungia ženklą 昊 („platus dangus“) su ženklu 鼎 („tvirtas pagrindas“) ir nusako kontoros kryptį nuo įsteigimo.
 
 guidanceContent.lt.pages.about.sections[0].paragraphs[1]
-    Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdymą ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui.
+    Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdyseną ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui tenkinti.
 
 guidanceContent.lt.pages.about.sections[0].paragraphs[2]
-    Be advokatų darbo nuo 2020 m. veikia ir Hovering Accounting Office, teikianti apskaitą ir mokesčių planavimą verslininkams ir privatiems asmenims, turintiems turto.
+    Nuo 2020 m. šalia advokatų darbo veikia ir „Hovering Accounting Office“, teikiantis apskaitą ir mokesčių planavimą verslininkams ir pasiturintiems privatiems asmenims.
 
 guidanceContent.lt.pages.about.sections[1].heading
-    Darbas su užsienio šalimis
+    Tarptautinis darbas
 
 guidanceContent.lt.pages.about.sections[1].paragraphs[0]
     Tarpvalstybinis darbas apima įmonių steigimą, vizas, prekių ženklų ir patentų paraiškas, teisinės rizikos vertinimą ir mokesčių konsultacijas įmonėms. Taidžongo biuras ypač veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Advokatė Wei Tseng (曾雋崴) atstovauja klientams iš Korėjos, iš Japonijos ir kitiems tarptautiniams klientams nurodytose srityse.
@@ -310,7 +310,7 @@ guidanceContent.lt.pages.about.sections[2].heading
     Kai į mus kreipiatės
 
 guidanceContent.lt.pages.about.sections[2].paragraphs[0]
-    Gavus Jūsų santrauką, advokatė arba advokatas įvertina turinį ir tada kalba apie galimą darbo apimtį, dar reikalingus dokumentus ir tolesnius žingsnius. Mokesčių ar apskaitos klausimais kontora gali eiti su apskaitos padaliniu viena nuoseklia eiga.
+    Gavus Jūsų santrauką, advokatė arba advokatas įvertina turinį ir tada kalba apie galimą darbo apimtį, dar reikalingus dokumentus ir tolesnius veiksmus. Mokesčių ar apskaitos klausimais kontora gali tą pačią bylą tvarkyti kartu su apskaitos padaliniu.
 
 guidanceContent.lt.pages.about.sections[2].paragraphs[1]
     Kiekvienos bylos rezultatas priklauso nuo faktinių aplinkybių ir turimų dokumentų; rezultato nežadame. Jei Jums reikia saistančio atsakymo dėl savo padėties, dokumentus reikia aptarti su advokate arba advokatu viena iš keturių konsultacijos kalbų.
@@ -322,7 +322,7 @@ guidanceContent.lt.pages.lawyers.title
     Tarptautinė Hovering komanda
 
 guidanceContent.lt.pages.lawyers.description
-    Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profiliai.
+    Hovering advokačių ir advokatų, Korėjos operacijų vadovo ir susijusios apskaitos bei audito profiliai.
 
 guidanceContent.lt.pages.lawyers.intro
     
@@ -334,7 +334,7 @@ guidanceContent.lt.pages.pricing.title
     Kaip nustatoma darbo apimtis ir išlaidos
 
 guidanceContent.lt.pages.pricing.description
-    Eilės paaiškinimas: pirmiausia darbo apimtis, tada išlaidų patvirtinimas, ir kodėl šiame puslapyje nėra kainyno.
+    Eigos paaiškinimas: pirmiausia darbo apimtis, tada išlaidų patvirtinimas, ir kodėl šiame puslapyje nėra kainyno.
 
 guidanceContent.lt.pages.pricing.intro
     Šis puslapis paaiškina, kaip nustatomos išlaidos, o ne jų dydį. Dydis priklauso nuo darbo apimties konkrečioje byloje ir turi prasmę tik tada, kai ši apimtis aiški.
@@ -343,7 +343,7 @@ guidanceContent.lt.pages.pricing.sections[0].heading
     Pirmiausia nustatoma darbo apimtis
 
 guidanceContent.lt.pages.pricing.sections[0].paragraphs[0]
-    Tos pačios rūšies bylos gali reikalauti labai skirtingų pastangų, pagal šalių skaičių, turimus dokumentus, terminus, kurių reikia laikytis, ir pagal tai, ar procesas jau pradėtas. Todėl pirmasis žingsnis visada yra nustatyti, kas į darbą įeina ir kas ne.
+    Tos pačios rūšies bylos gali reikalauti labai skirtingų pastangų, priklausomai nuo šalių skaičiaus, turimų dokumentų ir terminų, kurių reikia laikytis, ir nuo to, ar procesas jau pradėtas. Todėl pirmasis žingsnis visada yra nustatyti, kas į darbą įeina ir kas ne.
 
 guidanceContent.lt.pages.pricing.sections[0].paragraphs[1]
     Santrauka, kurią atsiunčiate pradžioje, yra šios apimties pagrindas. Kuo aiškiau ji aprašo eigą, Jūsų prašymą ir terminus, tuo tiksliau galima nustatyti apimtį.
@@ -361,7 +361,7 @@ guidanceContent.lt.pages.pricing.sections[2].heading
     Konsultacija gali būti mokama
 
 guidanceContent.lt.pages.pricing.sections[2].paragraphs[0]
-    Konsultacija su advokate arba advokatu gali būti mokama paslauga. Šis puslapis nesako, kad pirmoji konsultacija nemokama, ir jokios jo dalies negalima taip skaityti.
+    Konsultacija su advokate arba advokatu gali būti mokama paslauga. Šis puslapis nesako, kad pirmoji konsultacija nemokama, ir jokios šio puslapio dalies nereikėtų taip suprasti.
 
 guidanceContent.lt.pages.pricing.sections[2].paragraphs[1]
     Jei konsultacija mokama, dydis ir mokėjimo būdas pranešami prieš jai įvykstant.
@@ -373,7 +373,7 @@ guidanceContent.lt.pages.pricing.sections[3].paragraphs[0]
     Išlaidos priklauso nuo pačios bylos: nuo pastangų, šalių skaičiaus, dokumentų, terminų ir nuo to, ar procesas jau vyksta. Iš anksto nustatytas skaičius Jūsų bylos išlaidų neparodytų. Todėl pirmiausia nustatome darbo apimtį ir tada pranešame Jums išlaidas, prieš pradedant darbą.
 
 guidanceContent.lt.pages.pricing.sections[3].paragraphs[1]
-    Be atlygio gali atsirasti teismo rinkliavos, institucijų ar trečiųjų asmenų išlaidos. Jos atskirtos nuo atlygio ir priklauso nuo atitinkamo proceso.
+    Šalia atlygio gali atsirasti teismo rinkliavos, institucijų ar trečiųjų asmenų išlaidos. Jos atskirtos nuo atlygio ir priklauso nuo atitinkamo proceso.
 
 guidanceContent.lt.pages.contact.eyebrow
     KONTAKTAI
@@ -409,13 +409,13 @@ guidanceContent.lt.pages.contact.sections[1].paragraphs[0]
     Kontaktinėje formoje galite pasirinkti „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume, ar yra tinkamas bendravimo būdas; paslauga kita kalba nėra garantuojama ir atsakymo terminas nežadamas.
 
 guidanceContent.lt.pages.contact.sections[1].paragraphs[1]
-    Tai tik vertinimo žingsnis, o ne pažadas. Nežadame vertėjo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.
+    Tai tik vertinimas, o ne pažadas. Nežadame vertimo žodžiu, paslaugos lietuvių kalba ar kita kalba už keturių nurodytų kalbų ribų ir to, kad priimsime kiekvieną bylą.
 
 guidanceContent.lt.pages.contact.sections[2].heading
     Ką turėtų apimti pirmasis pranešimas
 
 guidanceContent.lt.pages.contact.sections[2].paragraphs[0]
-    Nurodykite, kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Jei jau gavote teismo ar institucijos raštą, nurodykite datą rašte.
+    Nurodykite, kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Jei jau gavote teismo ar institucijos raštą, nurodykite datą, įrašytą rašte.
 
 guidanceContent.lt.pages.contact.sections[2].paragraphs[1]
     Pradiniame etape dar nereikia siųsti paso numerio, dokumento numerio, sąskaitos duomenų, sveikatos dokumentacijos ar viso įrodymų rinkinio. Palaukite advokatės arba advokato nurodymų ir jautrius dokumentus tada siųskite saugiu keliu.
@@ -424,7 +424,7 @@ guidanceContent.lt.pages.contact.sections[3].heading
     Ko šis puslapis nežada
 
 guidanceContent.lt.pages.contact.sections[3].paragraphs[0]
-    Nežadame atsakymo termino, nepatvirtiname susitikimo per šį puslapį, nežadame konkrečios advokatės ar konkretaus advokato ir neteikiame vertėjo žodžiu. Rašytinis vertimas yra kas kita: Jūsų pranešimas automatiškai neverčiamas.
+    Nežadame atsakymo termino, nepatvirtiname susitikimo per šį puslapį, nežadame konkrečios advokatės ar konkretaus advokato ir vertimo žodžiu neteikiame. Rašytinis vertimas yra kas kita: Jūsų pranešimas automatiškai neverčiamas.
 
 guidanceContent.lt.pages.contact.sections[3].paragraphs[1]
     Jei išsiųsite užklausą, turinys išsaugomas ir laukia įvertinimo. Jei po kurio laiko atsakymo negausite, galite vėl parašyti el. pašto adresu, nurodytu kontaktų puslapyje.
@@ -445,7 +445,7 @@ guidanceContent.lt.pages.faq.sections[0].heading
     Kaip naudotis šia dalimi
 
 guidanceContent.lt.pages.faq.sections[0].paragraphs[0]
-    Jei atsakymo savo padėčiai nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne išveskite juos iš šio puslapio.
+    Jei atsakymo savo padėčiai nerandate, atsakymas paprastai priklauso nuo ypatingų faktų. Todėl įrašykite juos į santrauką, o ne spręskite apie juos vien iš šio puslapio.
 
 guidanceContent.lt.pages.faq.faqs[0].question
     Kokias bylas kontora veda?
@@ -463,13 +463,13 @@ guidanceContent.lt.pages.faq.faqs[2].question
     Ar galima konsultacija lietuvių kalba?
 
 guidanceContent.lt.pages.faq.faqs[2].answer
-    Ne. Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Nežadame ir vertėjo žodžiu. Rašytinis vertimas yra kas kita: originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas.
+    Ne. Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis. Nežadame ir vertimo žodžiu. Rašytinis vertimas yra kas kita: originalus tekstas, kurį parašote, išsaugomas toks, koks yra, ir automatiškai neverčiamas.
 
 guidanceContent.lt.pages.faq.faqs[3].question
-    Ką daryti, jei negaliu naudoti nė vienos iš keturių kalbų?
+    Ką daryti, jei nemoku nė vienos iš keturių kalbų?
 
 guidanceContent.lt.pages.faq.faqs[3].answer
-    Siųsdami užklausą pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai vertinimo žingsnis, o ne pažadas, kad galime dirbti kita kalba.
+    Siųsdami užklausą pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume bendravimo būdą, bet paslauga kita kalba nėra garantuojama. Tai tik vertinimas, o ne pažadas, kad galime dirbti kita kalba.
 
 guidanceContent.lt.pages.faq.faqs[4].question
     Kaip elgiamasi su mano tekstu lietuvių kalba?
@@ -493,7 +493,7 @@ guidanceContent.lt.pages.faq.faqs[7].question
     Ką daryti, jei mano byla labai skubi?
 
 guidanceContent.lt.pages.faq.faqs[7].answer
-    Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis neturi skubos kanalo ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, lygiagrečiai turėtumėte ieškoti kitų kelių savo vietoje.
+    Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis nėra skubios pagalbos kontaktas ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, kartu ieškokite pagalbos ir ten, kur gyvenate.
 
 guidanceContent.lt.pages.privacy.eyebrow
     PRIVATUMAS
@@ -505,7 +505,7 @@ guidanceContent.lt.pages.privacy.description
     Ką renka kontaktinė forma šioje lietuviškoje dalyje, kaip elgiamasi su originaliu tekstu ir kaip kreiptis dėl Jūsų duomenų.
 
 guidanceContent.lt.pages.privacy.intro
-    Ši dalis taikoma tik kontaktinei formai šiuose informaciniuose puslapiuose. Ji aprašo elgesį su duomenimis, o ne techninę garantiją.
+    Ši dalis taikoma tik kontaktinei formai šiuose informaciniuose puslapiuose. Ji aprašo duomenų tvarkymą, o ne techninę garantiją.
 
 guidanceContent.lt.pages.privacy.sections[0].heading
     Kokie duomenys renkami
@@ -577,7 +577,7 @@ guidanceContent.lt.pages.privacy.sections[5].heading
     Jūsų teisės ir kreipimosi kelias
 
 guidanceContent.lt.pages.privacy.sections[5].paragraphs[0]
-    Galite prašyti prieigos prie savo duomenų, jų taisymo ar ištrynimo, arba atšaukti sutikimą, per el. pašto adresą, nurodytą kontaktų puslapyje. Jei yra įstatyminė ar procesinė saugojimo pareiga, paaiškinsime apribojimą.
+    Galite prašyti prieigos prie savo duomenų, jų taisymo ar ištrynimo arba atšaukti sutikimą el. pašto adresu, nurodytu kontaktų puslapyje. Jei yra įstatyminė ar procesinė saugojimo pareiga, paaiškinsime apribojimą.
 
 guidanceContent.lt.pages.privacy.sections[5].paragraphs[1]
     Šis puslapis nenumato fiksuoto saugojimo termino, nes faktinė trukmė priklauso nuo tolesnės bylos eigos ir susijusių pareigų. Jei pageidaujate ankstesnio ištrynimo, nurodykite tai kreipdamiesi.
@@ -586,22 +586,22 @@ guidanceContent.lt.pages.privacy.sections[6].heading
     Saugojimo vieta ir paslaugų teikėjai
 
 guidanceContent.lt.pages.privacy.sections[6].paragraphs[0]
-    Ši svetainė talpinama Vercel, o Jūsų pateikimas saugomas neviešoje šios paslaugos objektų saugykloje. El. laiškai siunčiami pašto paslauga, kuria naudojasi kontora.
+    Ši svetainė talpinama „Vercel“ platformoje, o Jūsų pateikimas saugomas neviešoje šios paslaugos duomenų saugykloje. El. laiškai siunčiami pašto paslauga, kuria naudojasi kontora.
 
 guidanceContent.lt.pages.privacy.sections[6].paragraphs[1]
     Atskiri paslaugų teikėjų serveriai gali būti už Taivano ribų, todėl Jūsų duomenys ten gali būti saugomi ir tvarkomi. Kai saugojimo tikslas įvykdytas, duomenys ištrinami nedelsiant; duomenys, kuriuos reikia saugoti pagal taikomus teisės aktus, lieka šiam laikotarpiui. Prašymus dėl asmens duomenų priima wei@hoveringlaw.com.tw.
 
 guidanceContent.lt.pages.disclaimer.eyebrow
-    ĮSPĖJIMAS
+    ATSAKOMYBĖS APRIBOJIMAS
 
 guidanceContent.lt.pages.disclaimer.title
     Šio puslapio informacijos apimtis ir ribos
 
 guidanceContent.lt.pages.disclaimer.description
-    Bendra informacijos prigimtis, teisinė sistema ir prielaidos, kad susidarytų advokato ir kliento santykiai.
+    Bendra informacijos prigimtis, teisinė sistema ir sąlygos, kurioms esant atsiranda advokato ir kliento santykiai.
 
 guidanceContent.lt.pages.disclaimer.intro
-    Ši dalis paaiškina, ką šie lietuviški informaciniai puslapiai Jums gali padaryti ir ko negali.
+    Ši dalis paaiškina, kuo šie lietuviški informaciniai puslapiai gali padėti ir kuo negali.
 
 guidanceContent.lt.pages.disclaimer.sections[0].heading
     Tik bendra informacija
@@ -610,7 +610,7 @@ guidanceContent.lt.pages.disclaimer.sections[0].paragraphs[0]
     Šių puslapių turinys parašytas kaip bendra informacija. Tai nėra teisinė konsultacija Jūsų byloje ir nepakeičia Jūsų dokumentų vertinimo.
 
 guidanceContent.lt.pages.disclaimer.sections[0].paragraphs[1]
-    Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir momento; dvi panašiai atrodančios padėtys gali baigtis skirtingai.
+    Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir to, kada byla vertinama; dvi panašiai atrodančios padėtys gali baigtis skirtingai.
 
 guidanceContent.lt.pages.disclaimer.sections[1].heading
     Teisinė sistema
@@ -619,16 +619,16 @@ guidanceContent.lt.pages.disclaimer.sections[1].paragraphs[0]
     Kontora veikia pagal Taivano teisę ir šis puslapis kalba tik apie darbą šioje sistemoje.
 
 guidanceContent.lt.pages.disclaimer.sections[1].paragraphs[1]
-    Turinys nėra konsultacija pagal kitos nei Taivano teisės sistemos teisę, įskaitant Jūsų gyvenamosios vietos teisę. Jei dalis Jūsų bylos liečia kitą teisės sistemą, su Jumis išsiaiškinsime, koks kvalifikuotas asmuo šiai daliai reikalingas.
+    Turinys nėra konsultacija pagal kitos nei Taivanas valstybės teisę, įskaitant Jūsų gyvenamosios vietos teisę. Jei dalis Jūsų bylos liečia kitą teisės sistemą, su Jumis išsiaiškinsime, koks kvalifikuotas asmuo šiai daliai reikalingas.
 
 guidanceContent.lt.pages.disclaimer.sections[2].heading
-    Advokato ir kliento santykiai patys savaime nesusidaro
+    Advokato ir kliento santykiai patys savaime neatsiranda
 
 guidanceContent.lt.pages.disclaimer.sections[2].paragraphs[0]
     Šio puslapio perskaitymas, formos ar el. laiško išsiuntimas pats savaime nesukuria advokato ir kliento santykių.
 
 guidanceContent.lt.pages.disclaimer.sections[2].paragraphs[1]
-    Šie santykiai susidaro tik po to, kai byla įvertinta ir abi šalys patvirtino darbo priėmimą.
+    Šie santykiai atsiranda tik po to, kai byla įvertinta ir abi šalys patvirtino darbo priėmimą.
 
 guidanceContent.lt.pages.disclaimer.sections[3].heading
     Jokio pažado dėl rezultato
@@ -676,7 +676,7 @@ guidanceContent.lt.pages.columns.sections[2].paragraphs[0]
     Straipsniai yra bendra informacija paskelbimo metu. Teisės aktai ir jų taikymas gali keistis, ir straipsnis neapima visų Jūsų bylos aplinkybių.
 
 guidanceContent.lt.pages.columns.sections[2].paragraphs[1]
-    Todėl tikros bylos eigos nesiremkite vien straipsniu. Naudokite jį apžvalgai, o savo dokumentus aptarkite atskirai su advokate arba advokatu; šis puslapis nėra konsultacijos žingsnis.
+    Todėl konkrečioje byloje nesiremkite vien straipsniu. Naudokite jį apžvalgai, o savo dokumentus aptarkite atskirai su advokate arba advokatu; šis puslapis nėra konsultacija.
 
 guidanceTeamCopy.lt.label
     KOMANDA
@@ -685,7 +685,7 @@ guidanceTeamCopy.lt.title
     Tarptautinė Hovering komanda
 
 guidanceTeamCopy.lt.description
-    Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profiliai.
+    Hovering advokačių ir advokatų, Korėjos operacijų vadovo ir susijusios apskaitos bei audito profiliai.
 
 guidanceTeamCopy.lt.representativeTitle
     Vadovaujančioji advokatė
@@ -718,7 +718,7 @@ guidanceTeamCopy.lt.keyFactsHeading
     Advokatė Wei Tseng — pagrindiniai duomenys
 
 guidanceTeamCopy.lt.qualificationLabel
-    Įgaliojimas ir kontora
+    Kvalifikacija ir kontora
 
 guidanceTeamCopy.lt.qualificationSentence
     {name} turi teisę verstis advokatės praktika Taivane ir yra vadovaujančioji advokatė kontoroje {firm}.
@@ -730,31 +730,31 @@ guidanceTeamCopy.lt.consultationLanguagesLabel
     Konsultacijos kalbos
 
 guidanceTeamCopy.lt.roles.tseng-junwei
-    Vadovaujančioji advokatė Taivane (Managing Attorney)
+    Vadovaujančioji advokatė Taivane
 
 guidanceTeamCopy.lt.roles.chang-rongxuan
-    Advokatas Taivane (Taiwan Attorney)
+    Advokatas Taivane
 
 guidanceTeamCopy.lt.roles.chang-fangyu
-    Paralegal
+    Teisininko padėjėjas
 
 guidanceTeamCopy.lt.roles.son-jungmin
-    Korėjos operacijų vadovybė (Korea Operations Manager)
+    Korėjos operacijų vadovas
 
 guidanceTeamCopy.lt.roles.huang-shengping
-    Partneris buhalteris (Partner CPA)
+    Partneris auditorius
 
 guidanceTeamBios.lt.tseng-junwei.intro[0]
     Kontora veda įmonių ir privačių asmenų bylas Taivane anglų, japonų, korėjiečių ir kinų kalbomis.
 
 guidanceTeamBios.lt.tseng-junwei.intro[1]
-    Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje ir pasiekė pirmosios instancijos sprendimą dėl TWD 1.57M.
+    Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje ir pasiekė pirmosios instancijos sprendimą priteisti TWD 1.57M.
 
 guidanceTeamBios.lt.tseng-junwei.education[0]
     Magistrė (M.S.), Institute of Finance, National Taiwan University
 
 guidanceTeamBios.lt.tseng-junwei.education[1]
-    Bakalaurė (B.A.) dviguboje teisės ir finansų programoje, National Chengchi University
+    Teisės ir finansų dvigubos specialybės bakalaurė (B.A.), National Chengchi University
 
 guidanceTeamBios.lt.tseng-junwei.education[2]
     Mainų studijos Kobe University ir Waseda University
@@ -766,10 +766,10 @@ guidanceTeamBios.lt.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.lt.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Teisinės pagalbos fondas, Taidžongo skyrius (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.lt.chang-rongxuan.intro[0]
-    Anksčiau Ministry of Education, Legal Affairs Division, daugiausia administracinėse ir civilinėse bylose.
+    Anksčiau dirbo Švietimo ministerijos Teisės skyriuje (Ministry of Education, Legal Affairs Division), daugiausia administracinėse ir civilinėse bylose.
 
 guidanceTeamBios.lt.chang-rongxuan.intro[1]
     Patirtis universitetų bylose, pedagogų teisėse ir administraciniuose skunduose.
@@ -778,13 +778,13 @@ guidanceTeamBios.lt.chang-rongxuan.education[0]
     Teisės bakalauras (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.lt.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Švietimo ministerijos Teisės skyrius (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.lt.chang-rongxuan.experience[1]
     Advokatas, Hovering International Law Firm
 
 guidanceTeamBios.lt.chang-fangyu.intro[0]
-    Paralegal su ilgamete patirtimi; anksčiau vyresnysis paralegal keliose advokatų kontorose, daugiausia procesinei pagalbai, bendrovių darbotvarkei ir užsienio investicijoms.
+    Teisininko padėjėjas su ilgamete patirtimi; anksčiau vyresnysis teisininko padėjėjas keliose advokatų kontorose, daugiausia procesinei pagalbai, bendrovių teisės klausimams ir užsienio investicijoms.
 
 guidanceTeamBios.lt.chang-fangyu.intro[1]
     Pagalba teismo procesuose, steigiant įmones, užsienio investicijų leidimuose, licencijų prašymuose ir komunikacijoje tarp Korėjos ir Taivano.
@@ -793,16 +793,16 @@ guidanceTeamBios.lt.chang-fangyu.education[0]
     Teisės bakalauras (LL.B.), Tunghai University
 
 guidanceTeamBios.lt.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Vyresnysis teisininko padėjėjas, Boyin Law Firm
 
 guidanceTeamBios.lt.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Vyresnysis teisininko padėjėjas, Muyang International Law Firm
 
 guidanceTeamBios.lt.son-jungmin.intro[0]
     Koordinuoja konsultacijų terminus ir komunikaciją klientams iš Korėjos.
 
 guidanceTeamBios.lt.son-jungmin.intro[1]
-    Palaiko tarpregioninius mainus dokumentų ir darbo eigos sistemomis, remdamasis informatika.
+    Koordinuoja dokumentų ir darbo eigų mainus tarp padalinių, remdamasis informatikos išsilavinimu.
 
 guidanceTeamBios.lt.son-jungmin.education[0]
     Bakalauras (B.S.) informatikoje, National Cheng Kung University
@@ -811,10 +811,10 @@ guidanceTeamBios.lt.son-jungmin.experience[0]
     Korėjos operacijų padalinys, Hovering International Law Firm
 
 guidanceTeamBios.lt.huang-shengping.intro[0]
-    Baigė bakalauro ir magistro apskaitos programas National Chengchi University ir dabar vadovauja apskaitos kontorai.
+    Baigė bakalauro ir magistro apskaitos studijas National Chengchi University ir dabar vadovauja apskaitos kontorai.
 
 guidanceTeamBios.lt.huang-shengping.intro[1]
-    Palaiko integruotą teisinės, mokestinės ir finansinės rizikos analizę įmonių klientams.
+    Rengia integruotą teisinės, mokestinės ir finansinės rizikos analizę įmonių klientams.
 
 guidanceTeamBios.lt.huang-shengping.education[0]
     Magistras (M.A.) apskaitoje, National Chengchi University
@@ -913,7 +913,7 @@ guidanceFooterCopy.lt.officeLabel
     Biurai
 
 guidanceFooterCopy.lt.officeQuickLinksLabel
-    Sparčiosios biurų nuorodos
+    Sparčiosios nuorodos į biurus
 
 guidanceFooterCopy.lt.followLabel
     Sekite mus
@@ -925,7 +925,7 @@ guidanceFooterCopy.lt.websiteLabel
     Oficiali svetainė
 
 guidanceFooterCopy.lt.sitemapLabel
-    Svetainės medis
+    Svetainės žemėlapis
 
 guidanceFooterCopy.lt.copyEmailLabel
     Kopijuoti el. pašto adresą
@@ -952,7 +952,7 @@ internationalInquiryCopy.lt.heading
     Pateikti prašymą įvertinti
 
 internationalInquiryCopy.lt.intro
-    Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį, prieš pereinant prie kito žingsnio.
+    Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį, prieš pereinant prie kitos procedūros.
 
 internationalInquiryCopy.lt.submitLabel
     Siųsti užklausą
@@ -1009,13 +1009,13 @@ internationalInquiryCopy.lt.tooLongMessage
     Tekstas per ilgas. Sutrumpinkite jį ir siųskite iš naujo.
 
 internationalInquiryCopy.lt.sourceLanguageNotice
-    Šis straipsnis paskelbtas tik kalba {language}; nuoroda atveria originalų puslapį.
+    Šis straipsnis paskelbtas tik {language} kalba; nuoroda atveria originalų puslapį.
 
 internationalInquiryCopy.lt.unavailableTranslationNotice
     Ši dalis šio puslapio kalba dar nepateikiama. Nuoroda originalo kalba atveria originalų tekstą.
 
 internationalInquiryCopy.lt.unavailableLanguageNotice
-    Šis puslapis kalba {language} nesiūlomas.
+    Šis puslapis {language} kalba nėra siūlomas.
 
 internationalInquiryCopy.lt.languageOptions.en
     Anglų (English)
@@ -1030,7 +1030,7 @@ internationalInquiryCopy.lt.languageOptions.ko
     Korėjiečių (한국어)
 
 internationalInquiryCopy.lt.languageOptions.needs-method-confirmation
-    Nė viena iš keturių kalbų netinka — bendravimo būdą reikia patvirtinti
+    Nemoku nė vienos iš keturių kalbų — bendravimo būdą reikia patvirtinti
 
 guidanceAnswers.lt.services.answer
     Kontora veda šešias sritis pagal Taivano teisę: investicijas ir įmonių steigimą, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina atsiųstą turinį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
@@ -1042,7 +1042,7 @@ guidanceAnswers.lt.services.sources[1]
     /lt/contact
 
 guidanceAnswers.lt.about.answer
-    Hovering International Law Firm yra Taivano advokatų kontora, kurią 2016 m. įsteigė National Taiwan University (國立臺灣大學) absolventai, su biurais miestuose Taipėjus, Gaosiongas, Taidžongas ir Pingdongas. Nuo 2020 m. veikia ir apskaitos padalinys; Taidžongo biuras veda bylas, susijusias su Korėja ir Japonija. Kontora nežada rezultato. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+    Hovering International Law Firm yra Taivano advokatų kontora, kurią 2016 m. įsteigė National Taiwan University (國立臺灣大學) absolventai, su biurais Taipėjuje, Gaosionge, Taidžonge ir Pingdonge. Nuo 2020 m. veikia ir apskaitos padalinys; Taidžongo biuras veda bylas, susijusias su Korėja ir Japonija. Kontora nežada rezultato. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
 
 guidanceAnswers.lt.about.sources[0]
     /lt/lawyers
@@ -1051,7 +1051,7 @@ guidanceAnswers.lt.about.sources[1]
     /lt/services
 
 guidanceAnswers.lt.lawyers.answer
-    Šis puslapis rodo Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profilius. Advokatė Wei Tseng (曾雋崴) turi teisę verstis advokatės praktika Taivane ir yra vadovaujančioji advokatė kontoroje; dirba su klientais iš Korėjos, iš Japonijos ir su kitais tarptautiniais klientais. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+    Šis puslapis rodo Hovering advokačių ir advokatų, Korėjos operacijų vadovo ir susijusios apskaitos bei audito profilius. Advokatė Wei Tseng (曾雋崴) turi teisę verstis advokatės praktika Taivane ir yra vadovaujančioji advokatė kontoroje; dirba su klientais iš Korėjos, iš Japonijos ir su kitais tarptautiniais klientais. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
 
 guidanceAnswers.lt.lawyers.sources[0]
     /lt/about
@@ -1060,7 +1060,7 @@ guidanceAnswers.lt.lawyers.sources[1]
     /lt/contact
 
 guidanceAnswers.lt.pricing.answer
-    Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; be atlygio gali atsirasti teismo ar administracinės rinkliavos. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
+    Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; šalia atlygio gali atsirasti teismo ar administracinės rinkliavos. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.
 
 guidanceAnswers.lt.pricing.sources[0]
     /lt/contact
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.lt.consultationNotice
     Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.
 
 GUIDANCE_LLMS_NOTICES.lt.discoveryNotice
-    Failas llms.txt yra tik viešųjų puslapių radimo žemėlapis; jis nežada vietos paieškoje, palaikymo, dirbtinio intelekto rekomendacijos ar matomumo.
+    Failas llms.txt yra tik žemėlapis, pagal kurį randami viešieji puslapiai; jis nežada vietos paieškos rezultatuose, pritarimo, dirbtinio intelekto rekomendacijos ar garantuoto matomumo.
 
 GUIDANCE_LLMS_NOTICES.lt.confidentialNotice
     Kadangi originalus tekstas išsaugomas, pradiniame etape nerašykite to, ko dar nereikia, pavyzdžiui, paso numerio, dokumento numerio ar sąskaitos duomenų.

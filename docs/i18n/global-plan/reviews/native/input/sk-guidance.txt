@@ -1,4 +1,4 @@
-# sk guidance pack strings (path → text). Generated 2026-09-22
+# sk guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.sk.languageName
     Slovenčina
@@ -16,7 +16,7 @@ guidanceContent.sk.nav.lawyers
     Náš tím
 
 guidanceContent.sk.nav.pricing
-    Náklady práce
+    Odmena
 
 guidanceContent.sk.nav.contact
     Napíšte nám
@@ -25,7 +25,7 @@ guidanceContent.sk.nav.faq
     Časté otázky
 
 guidanceContent.sk.nav.privacy
-    Súkromie
+    Ochrana údajov
 
 guidanceContent.sk.nav.disclaimer
     Upozornenie
@@ -124,7 +124,7 @@ guidanceContent.sk.home.columnsOriginalLanguageNote
     Nasledujúce príspevky zatiaľ nie sú k dispozícii v slovenčine. Zoznam ostáva v pôvodnom jazyku a otvorí príslušnú jazykovú stránku; obsah sa automaticky neprekladá.
 
 guidanceContent.sk.home.imageBandAlt
-    Tradičný taiwanský dvor sanheyuan (三合院) a moderný pavilón za denného svetla
+    Tradičný taiwanský dom typu sanheyuan (三合院) a moderný pavilón za denného svetla
 
 guidanceContent.sk.home.videoPauseLabel
     Pozastaviť video
@@ -151,10 +151,10 @@ guidanceContent.sk.pages.home.sections[0].heading
     Čím sa zaoberáme
 
 guidanceContent.sk.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm je advokátska kancelária so sídlom na Taiwane. Pracuje podľa taiwanského práva a má sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Radíme podnikom, vedieme súdne konania a zastupujeme zahraničných klientov v krokoch, ktoré je na Taiwane potrebné urobiť.
+    Hovering International Law Firm je advokátska kancelária so sídlom na Taiwane. Pracuje podľa taiwanského práva a má sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Radíme podnikom, vedieme súdne konania a sprevádzame zahraničných klientov pri úkonoch, ktoré treba na Taiwane urobiť.
 
 guidanceContent.sk.pages.home.sections[0].paragraphs[1]
-    Celý tu uvedený obsah je všeobecný. Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu. Tieto informácie nenahrádzajú konzultáciu s advokátkou alebo advokátom nad Vašimi dokumentmi.
+    Celý tu uvedený obsah je všeobecný. Výsledok veci závisí od skutkového stavu, od uplatniteľných predpisov a od rozhodného času. Tieto informácie nenahrádzajú konzultáciu s advokátkou alebo advokátom nad Vašimi dokumentmi.
 
 guidanceContent.sk.pages.home.sections[1].heading
     Jazyk stránky a jazyk konzultácie nie sú to isté
@@ -193,7 +193,7 @@ guidanceContent.sk.pages.home.sections[3].heading
     Kde začať
 
 guidanceContent.sk.pages.home.sections[3].paragraphs[0]
-    Prečítajte si stránku „Právne služby“ a overte, či Vaša vec spadá do nášho rozsahu, potom „Náklady práce“ a „Napíšte nám“, aby ste vedeli, ako sa stanoví rozsah a ako sa náklady potvrdzujú pred začatím práce.
+    Prečítajte si stránku „Právne služby“ a overte, či Vaša vec spadá do nášho rozsahu, potom „Odmena“ a „Napíšte nám“, aby ste vedeli, ako sa stanoví rozsah a ako sa náklady potvrdzujú pred začatím práce.
 
 guidanceContent.sk.pages.home.sections[3].paragraphs[1]
     Pri odoslaní správy môžete zhrnutie napísať vo svojom jazyku. Pôvodný text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Odoslaná správa je žiadosťou čakajúcou na posúdenie: nie je to ešte porada ani potvrdené stretnutie.
@@ -223,7 +223,7 @@ guidanceContent.sk.pages.services.sections[1].heading
     Občianskoprávne spory a náhrada škody
 
 guidanceContent.sk.pages.services.sections[1].paragraphs[0]
-    Táto oblasť zahŕňa spory zo zmlúv, náhradu škody z protiprávneho konania a spotrebiteľské spory. Práca spravidla začína časovou osou, posúdením dokumentov a existujúcich dôkazov a až potom nasledujú ďalšie kroky.
+    Táto oblasť zahŕňa spory zo zmlúv, náhradu škody z protiprávneho konania a spotrebiteľské spory. Práca spravidla začína chronológiou udalostí, posúdením dokumentov a existujúcich dôkazov a až potom nasledujú ďalšie kroky.
 
 guidanceContent.sk.pages.services.sections[1].paragraphs[1]
     Priebeh určujú lehoty, vrátane premlčacích, a úplnosť dôkazov. Uveďte preto známe dátumy čo najskôr. Uschovajte zmluvy, správy, doklady o platbe alebo fotografie stavu na mieste a spomeňte ich v prvej správe.
@@ -232,7 +232,7 @@ guidanceContent.sk.pages.services.sections[2].heading
     Manželstvo, rodina a dedenie
 
 guidanceContent.sk.pages.services.sections[2].paragraphs[0]
-    Vedeme rozvod (離婚), vysporiadanie majetku, výkon a prevzatie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie matričných záznamov (戶籍), formy listín a ich preukaznosti na Taiwane.
+    Vedeme rozvod (離婚), vysporiadanie majetku, výkon práv a znášanie povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie záznamov evidencie obyvateľov (戶籍), formy listín a ich preukaznosti na Taiwane.
 
 guidanceContent.sk.pages.services.sections[2].paragraphs[1]
     Pretože rodinné veci so sebou často nesú lehoty a súbežné konania, prvé zhrnutie by malo uviesť vzťah medzi stranami, súčasné bydlisko a už prebiehajúce konania.
@@ -292,10 +292,10 @@ guidanceContent.sk.pages.about.sections[0].paragraphs[0]
     Hovering International Law Firm (昊鼎國際法律事務所) bola založená v roku 2016 advokátkami a advokátmi, ktorí študovali na National Taiwan University (國立臺灣大學). Čínsky názov 昊鼎 spája znak 昊 („širé nebo“) so znakom 鼎 („pevný základ“) a vystihuje zameranie kancelárie od jej založenia.
 
 guidanceContent.sk.pages.about.sections[0].paragraphs[1]
-    Máme sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Sídlo v Kaohsiungu sa sústreďuje na vedenie podnikov a vedie občianskoprávne, trestné a správne spory. Sídlo v Taichungu vedie stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Sídlo v Pingtungu bolo otvorené v roku 2017 pre miestnu potrebu.
+    Máme sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Sídlo v Kaohsiungu sa sústreďuje na správu a riadenie spoločností a vedie občianskoprávne, trestné a správne spory. Sídlo v Taichungu vedie stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Sídlo v Pingtungu bolo otvorené v roku 2017 pre miestnu potrebu.
 
 guidanceContent.sk.pages.about.sections[0].paragraphs[2]
-    Vedľa advokátskej práce pôsobí od roku 2020 aj Hovering Accounting Office, ktorá ponúka účtovníctvo a daňové plánovanie podnikateľom a súkromným osobám s majetkom.
+    Vedľa advokátskej práce pôsobí od roku 2020 aj Hovering Accounting Office, ktorá ponúka účtovníctvo a daňové plánovanie podnikateľom a zámožným súkromným osobám.
 
 guidanceContent.sk.pages.about.sections[1].heading
     Práca so zahraničnými stranami
@@ -310,7 +310,7 @@ guidanceContent.sk.pages.about.sections[2].heading
     Keď nás oslovíte
 
 guidanceContent.sk.pages.about.sections[2].paragraphs[0]
-    Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom hovorí o možnom rozsahu práce, o doteraz potrebných dokumentoch a o ďalších krokoch. Pri daňových alebo účtovných otázkach môže kancelária postupovať s účtovným úsekom v jednom nadväzujúcom postupe.
+    Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom s Vami preberie možný rozsah práce, dokumenty, ktoré sú ešte potrebné, a ďalšie kroky. Pri daňových alebo účtovných otázkach môže kancelária postupovať spoločne s účtovným úsekom.
 
 guidanceContent.sk.pages.about.sections[2].paragraphs[1]
     Výsledok každej veci závisí od skutkového stavu a od dostupných dokumentov; výsledok nesľubujeme. Ak potrebujete záväznú odpoveď pre svoju situáciu, dokumenty treba prebrať s advokátkou alebo advokátom v niektorom zo štyroch jazykov konzultácie.
@@ -328,7 +328,7 @@ guidanceContent.sk.pages.lawyers.intro
     
 
 guidanceContent.sk.pages.pricing.eyebrow
-    NÁKLADY PRÁCE
+    ODMENA
 
 guidanceContent.sk.pages.pricing.title
     Ako sa stanoví rozsah práce a náklady
@@ -406,10 +406,10 @@ guidanceContent.sk.pages.contact.sections[1].heading
     Ak neovládate žiadny zo štyroch jazykov konzultácie
 
 guidanceContent.sk.pages.contact.sections[1].paragraphs[0]
-    V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schodný spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.
+    V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.
 
 guidanceContent.sk.pages.contact.sections[1].paragraphs[1]
-    Ide iba o krok posúdenia, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.
+    Ide iba o posúdenie, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.
 
 guidanceContent.sk.pages.contact.sections[2].heading
     Čo by mala obsahovať prvá správa
@@ -457,7 +457,7 @@ guidanceContent.sk.pages.faq.faqs[1].question
     Čo si pripraviť pred kontaktom?
 
 guidanceContent.sk.pages.faq.faqs[1].answer
-    Pripravte si krátke zhrnutie priebehu, svojej požiadavky, väzby na Taiwan a lehoty, ak nejaká existuje. Ak je už k dispozícii písomnosť súdu alebo úradu, uveďte dátum. V tejto fáze zatiaľ nemusíte zasielať doklady totožnosti ani súbor dôkazov.
+    Pripravte si krátke zhrnutie priebehu, svojej požiadavky, väzby na Taiwan a lehotu, ak nejaká existuje. Ak je už k dispozícii písomnosť súdu alebo úradu, uveďte dátum. V tejto fáze zatiaľ nemusíte zasielať doklady totožnosti ani súbor dôkazov.
 
 guidanceContent.sk.pages.faq.faqs[2].question
     Je možná porada v slovenčine?
@@ -469,7 +469,7 @@ guidanceContent.sk.pages.faq.faqs[3].question
     Čo robiť, ak nemôžem použiť žiadny zo štyroch jazykov?
 
 guidanceContent.sk.pages.faq.faqs[3].answer
-    Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili spôsob komunikácie, ale služba v inom jazyku zaručená nie je. Ide o krok posúdenia, nie o prísľub, že môžeme pracovať v inom jazyku.
+    Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili spôsob komunikácie, ale služba v inom jazyku zaručená nie je. Ide o posúdenie, nie o prísľub, že môžeme pracovať v inom jazyku.
 
 guidanceContent.sk.pages.faq.faqs[4].question
     Ako sa nakladá s mojím textom v slovenčine?
@@ -493,10 +493,10 @@ guidanceContent.sk.pages.faq.faqs[7].question
     Čo robiť, ak je moja vec veľmi naliehavá?
 
 guidanceContent.sk.pages.faq.faqs[7].answer
-    Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nemá núdzový kanál a nezabezpečuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať ďalšie cesty vo svojom mieste.
+    Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nemá núdzový kanál a nezabezpečuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať aj inú pomoc tam, kde sa nachádzate.
 
 guidanceContent.sk.pages.privacy.eyebrow
-    SÚKROMIE
+    OCHRANA ÚDAJOV
 
 guidanceContent.sk.pages.privacy.title
     Údaje zbierané kontaktným formulárom
@@ -586,10 +586,10 @@ guidanceContent.sk.pages.privacy.sections[6].heading
     Miesto uchovania a poskytovatelia
 
 guidanceContent.sk.pages.privacy.sections[6].paragraphs[0]
-    Tieto stránky sú hostované u spoločnosti Vercel a Vaše podanie sa uchováva v neverejnom objektovom úložisku tejto služby. E-maily sa odosielajú poštovou službou, ktorú kancelária používa.
+    Tieto stránky sú hostované u spoločnosti Vercel a Vaše podanie sa uchováva v neverejnom objektovom úložisku tejto služby. E-maily sa odosielajú e-mailovou službou, ktorú kancelária používa.
 
 guidanceContent.sk.pages.privacy.sections[6].paragraphs[1]
-    Servery jednotlivých poskytovateľov sa môžu nachádzať mimo Taiwanu, takže Vaše údaje tam môžu byť uchovávané a spracúvané. Ak je účel uchovania naplnený, údaje sa bez zbytočného odkladu vymažú; údaje, ktoré treba uchovávať podľa použiteľných predpisov, ostávajú po túto dobu. Žiadosti o osobné údaje prijíma wei@hoveringlaw.com.tw.
+    Servery jednotlivých poskytovateľov sa môžu nachádzať mimo Taiwanu, takže Vaše údaje tam môžu byť uchovávané a spracúvané. Ak je účel uchovania naplnený, údaje sa bez zbytočného odkladu vymažú; údaje, ktoré treba uchovávať podľa uplatniteľných predpisov, ostávajú po túto dobu. Žiadosti o osobné údaje prijíma wei@hoveringlaw.com.tw.
 
 guidanceContent.sk.pages.disclaimer.eyebrow
     UPOZORNENIE
@@ -610,7 +610,7 @@ guidanceContent.sk.pages.disclaimer.sections[0].paragraphs[0]
     Obsah týchto stránok je napísaný ako všeobecná informácia. Nie je právnou radou k Vášmu prípadu a nenahrádza posúdenie Vašich dokumentov.
 
 guidanceContent.sk.pages.disclaimer.sections[0].paragraphs[1]
-    Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu; dve zdanlivo podobné situácie môžu skončiť rôzne.
+    Výsledok veci závisí od skutkového stavu, od uplatniteľných predpisov a od rozhodného času; dve zdanlivo podobné situácie môžu skončiť rôzne.
 
 guidanceContent.sk.pages.disclaimer.sections[1].heading
     Právny rámec
@@ -619,7 +619,7 @@ guidanceContent.sk.pages.disclaimer.sections[1].paragraphs[0]
     Kancelária pôsobí podľa taiwanského práva a táto stránka hovorí iba o práci v tomto rámci.
 
 guidanceContent.sk.pages.disclaimer.sections[1].paragraphs[1]
-    Obsah nie je poradenstvom podľa práva iného poriadku než taiwanského, vrátane práva miesta Vášho pobytu. Ak sa časť Vašej veci týka iného právneho poriadku, ujasníme s Vami, aká kvalifikovaná osoba je pre túto časť potrebná.
+    Obsah nie je poradenstvom podľa iného právneho poriadku než taiwanského, vrátane práva miesta Vášho pobytu. Ak sa časť Vašej veci týka iného právneho poriadku, ujasníme s Vami, aká kvalifikovaná osoba je pre túto časť potrebná.
 
 guidanceContent.sk.pages.disclaimer.sections[2].heading
     Vzťah medzi advokátkou alebo advokátom a klientom nevzniká sám od seba
@@ -667,7 +667,7 @@ guidanceContent.sk.pages.columns.sections[1].paragraphs[0]
     Ak zvolíte jeden zo štyroch odkazov, otvorí sa zoznam príspevkov v danom jazyku. Zo zoznamu si text vyberiete sami; celý obsah sa zobrazí v pôvodnom jazyku príspevku.
 
 guidanceContent.sk.pages.columns.sections[1].paragraphs[1]
-    Táto stránka obsah príspevkov nezhrňuje a nezaručuje, že určité téma je k dispozícii vo všetkých štyroch jazykoch. Každý zoznam obsahuje iba texty zverejnené v danom jazyku.
+    Táto stránka obsah príspevkov nezhrňuje a nezaručuje, že určitá téma je k dispozícii vo všetkých štyroch jazykoch. Každý zoznam obsahuje iba texty zverejnené v danom jazyku.
 
 guidanceContent.sk.pages.columns.sections[2].heading
     Nakoľko môže príspevok slúžiť na orientáciu
@@ -676,7 +676,7 @@ guidanceContent.sk.pages.columns.sections[2].paragraphs[0]
     Príspevky sú všeobecnými informáciami k okamihu zverejnenia. Predpisy a ich používanie sa môžu zmeniť a príspevok neobsahuje všetky okolnosti Vášho prípadu.
 
 guidanceContent.sk.pages.columns.sections[2].paragraphs[1]
-    Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nie je krokom porady.
+    Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nenahrádza poradu.
 
 guidanceTeamCopy.sk.label
     NÁŠ TÍM
@@ -694,7 +694,7 @@ guidanceTeamCopy.sk.teamTitle
     Právnici a spolupracovníci
 
 guidanceTeamCopy.sk.partnerTitle
-    Pridružené účtovníctvo
+    Partner (audítor)
 
 guidanceTeamCopy.sk.introLabel
     Predstavenie
@@ -730,31 +730,31 @@ guidanceTeamCopy.sk.consultationLanguagesLabel
     Jazyky konzultácie
 
 guidanceTeamCopy.sk.roles.tseng-junwei
-    Riadiaca advokátka na Taiwane (Managing Attorney)
+    Riadiaca advokátka na Taiwane
 
 guidanceTeamCopy.sk.roles.chang-rongxuan
-    Advokát na Taiwane (Taiwan Attorney)
+    Advokát na Taiwane
 
 guidanceTeamCopy.sk.roles.chang-fangyu
-    Paralegal
+    Právna asistentka
 
 guidanceTeamCopy.sk.roles.son-jungmin
-    Vedenie prevádzky v Kórei (Korea Operations Manager)
+    Vedenie prevádzky pre Kóreu
 
 guidanceTeamCopy.sk.roles.huang-shengping
-    Partnerský účtovník (Partner CPA)
+    Partner (audítor)
 
 guidanceTeamBios.sk.tseng-junwei.intro[0]
     Kancelária vedie veci podnikov a súkromných osôb na Taiwane v angličtine, japončine, kórejčine a čínštine.
 
 guidanceTeamBios.sk.tseng-junwei.intro[1]
-    Zastupovala kórejského študenta v nároku na náhradu škody za úraz v posilňovni a dosiahla rozsudok prvého stupňa vo výške TWD 1.57M.
+    Zastupovala kórejského študenta v konaní o náhradu škody za úraz v posilňovni a na prvom stupni dosiahla priznanie náhrady vo výške TWD 1.57M.
 
 guidanceTeamBios.sk.tseng-junwei.education[0]
-    Magister (M.S.), Institute of Finance, National Taiwan University
+    Magisterský titul (M.S.), Institute of Finance, National Taiwan University
 
 guidanceTeamBios.sk.tseng-junwei.education[1]
-    Bakalár (B.A.) v dvojodborovom programe práva a financií, National Chengchi University
+    Bakalársky titul (B.A.) v dvojodborovom programe práva a financií, National Chengchi University
 
 guidanceTeamBios.sk.tseng-junwei.education[2]
     Výmenné štúdium na Kobe University a Waseda University
@@ -766,10 +766,10 @@ guidanceTeamBios.sk.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.sk.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Nadácia právnej pomoci, pobočka v Taichungu
 
 guidanceTeamBios.sk.chang-rongxuan.intro[0]
-    Predtým pôsobil na Ministry of Education, Legal Affairs Division, so zameraním na správne a občianskoprávne veci.
+    Predtým pôsobil na ministerstve školstva, v odbore právnych vecí, so zameraním na správne a občianskoprávne veci.
 
 guidanceTeamBios.sk.chang-rongxuan.intro[1]
     Skúsenosť s vecami univerzít, práv pedagógov a správnych odvolaní.
@@ -778,13 +778,13 @@ guidanceTeamBios.sk.chang-rongxuan.education[0]
     Bakalár práv (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.sk.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Ministerstvo školstva, odbor právnych vecí
 
 guidanceTeamBios.sk.chang-rongxuan.experience[1]
     Advokát, Hovering International Law Firm
 
 guidanceTeamBios.sk.chang-fangyu.intro[0]
-    Paralegal s dlhoročnou praxou; predtým senior paralegal vo viacerých advokátskych kanceláriách, so zameraním na procesnú podporu, korporátnu agendu a zahraničné investície.
+    Právna asistentka s dlhoročnou praxou; predtým vedúca právna asistentka vo viacerých advokátskych kanceláriách, so zameraním na procesnú podporu, korporátnu agendu a zahraničné investície.
 
 guidanceTeamBios.sk.chang-fangyu.intro[1]
     Podpora v súdnych konaniach, pri zakladaní spoločností, pri povoleniach zahraničných investícií, pri žiadostiach o licencie a pri komunikácii medzi Kóreou a Taiwanom.
@@ -793,25 +793,25 @@ guidanceTeamBios.sk.chang-fangyu.education[0]
     Bakalár práv (LL.B.), Tunghai University
 
 guidanceTeamBios.sk.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Vedúca právna asistentka, Boyin Law Firm
 
 guidanceTeamBios.sk.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Vedúca právna asistentka, Muyang International Law Firm
 
 guidanceTeamBios.sk.son-jungmin.intro[0]
     Koordinuje termíny porád a komunikáciu pre klientov z Kórey.
 
 guidanceTeamBios.sk.son-jungmin.intro[1]
-    Podporuje medziregionálnu výmenu prostredníctvom systémov dokumentov a pracovných postupov, na základe informatiky.
+    Na základe vzdelania v informatike podporuje komunikáciu medzi tímami pomocou dokumentových systémov a pracovných postupov.
 
 guidanceTeamBios.sk.son-jungmin.education[0]
-    Bakalár (B.S.) v informatike, National Cheng Kung University
+    Bakalársky titul (B.S.) v informatike, National Cheng Kung University
 
 guidanceTeamBios.sk.son-jungmin.experience[0]
-    Úsek kórejských operácií, Hovering International Law Firm
+    Úsek prevádzky pre Kóreu, Hovering International Law Firm
 
 guidanceTeamBios.sk.huang-shengping.intro[0]
-    Absolvoval bakalársky a magisterský program účtovníctva na National Chengchi University a teraz vedie účtovnú kanceláriu.
+    Absolvoval bakalársky a magisterský program účtovníctva na National Chengchi University a teraz vedie audítorskú kanceláriu.
 
 guidanceTeamBios.sk.huang-shengping.intro[1]
     Podporuje integrovanú analýzu právnych, daňových a finančných rizík pre firemných klientov.
@@ -898,7 +898,7 @@ guidanceOfficeCopy.sk.photoAlts[2]
     Rokovacia miestnosť v sídle v Taipeji, Hovering International Law Firm
 
 guidanceOfficeCopy.sk.officeTitles.taipei
-    Taipei
+    Taipej
 
 guidanceOfficeCopy.sk.officeTitles.taichung
     Taichung
@@ -943,7 +943,7 @@ internationalInquiryCopy.sk.consultationNotice
     Porada prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky.
 
 internationalInquiryCopy.sk.methodConfirmationNotice
-    Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schodný spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.
+    Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.
 
 internationalInquiryCopy.sk.preparationNotice
     Zhrnutie môžete napísať vo svojom jazyku. Pôvodný text sa uchová tak, ako ste ho napísali, a automaticky sa neprekladá.
@@ -994,10 +994,10 @@ internationalInquiryCopy.sk.emailLabel
     E-mail
 
 internationalInquiryCopy.sk.consentLabel
-    Prečítal(a) som stránku o súkromí a súhlasím s odoslaním tejto žiadosti.
+    Prečítal(a) som stránku o ochrane osobných údajov a súhlasím s odoslaním tejto žiadosti.
 
 internationalInquiryCopy.sk.privacyLinkLabel
-    Súkromie
+    Ochrana osobných údajov
 
 internationalInquiryCopy.sk.requiredMessage
     Toto pole je povinné.
@@ -1030,7 +1030,7 @@ internationalInquiryCopy.sk.languageOptions.ko
     Kórejčina (한국어)
 
 internationalInquiryCopy.sk.languageOptions.needs-method-confirmation
-    Žiadny zo štyroch jazykov nie je použiteľný — spôsob komunikácie treba potvrdiť
+    Žiadny zo štyroch jazykov neovládam — spôsob komunikácie treba potvrdiť
 
 guidanceAnswers.sk.services.answer
     Kancelária vedie šesť oblastí podľa taiwanského práva: investície a zakladanie spoločností, občianskoprávne spory a náhradu škody, manželstvo, rodinu a dedenie, pracovnoprávne spory, trestné veci a duševné vlastníctvo. Rozsah každej veci sa potvrdzuje osobitne potom, čo advokátka alebo advokát posúdi zaslaný obsah. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
@@ -1069,7 +1069,7 @@ guidanceAnswers.sk.pricing.sources[1]
     /sk/faq
 
 guidanceAnswers.sk.contact.answer
-    Zašlite zhrnutie kontaktným formulárom: čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. V počiatočnej fáze zatiaľ nie je treba zasielať doklady totožnosti ani celý dôkazný materiál. Kancelária nesľubuje lehotu na odpoveď a nepotvrdzuje stretnutie prostredníctvom tejto stránky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
+    Zašlite zhrnutie kontaktným formulárom: čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. V počiatočnej fáze zatiaľ netreba zasielať doklady totožnosti ani celý dôkazný materiál. Kancelária nesľubuje lehotu na odpoveď a nepotvrdzuje stretnutie prostredníctvom tejto stránky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.
 
 guidanceAnswers.sk.contact.sources[0]
     /sk/faq
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.sk.consultationNotice
     Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.
 
 GUIDANCE_LLMS_NOTICES.sk.discoveryNotice
-    Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje poradie vo vyhľadávaní, podporu, odporúčanie umelej inteligencie ani viditeľnosť.
+    Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje poradie vo vyhľadávaní, záštitu, odporúčanie umelej inteligencie ani zaručenú viditeľnosť.
 
 GUIDANCE_LLMS_NOTICES.sk.confidentialNotice
     Pretože sa pôvodný text uchováva, nepíšte v počiatočnej fáze to, čo zatiaľ nie je potrebné, napríklad číslo pasu, číslo dokladu alebo údaje o účte.

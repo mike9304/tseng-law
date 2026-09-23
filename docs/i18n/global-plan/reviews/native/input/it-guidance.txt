@@ -1,10 +1,10 @@
-# it guidance pack strings (path → text). Generated 2026-09-21
+# it guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.it.languageName
     Italiano
 
 guidanceContent.it.nav.home
-    Inizio
+    Home
 
 guidanceContent.it.nav.services
     Servizi
@@ -43,13 +43,13 @@ guidanceContent.it.skipLink
     Saltare la navigazione e andare al contenuto
 
 guidanceContent.it.menuLabel
-    Indice delle pagine
+    Menu
 
 guidanceContent.it.languageLabel
     Lingua di visualizzazione
 
 guidanceContent.it.mega.services.description
-    Lo studio tratta i gruppi essenziali di lavoro secondo il diritto di Taiwan.
+    Lo studio tratta le principali aree di attività secondo il diritto di Taiwan.
 
 guidanceContent.it.mega.services.viewAllLabel
     Mostra tutti
@@ -100,7 +100,7 @@ guidanceContent.it.home.servicesDetailLabel
     Vedere i dettagli
 
 guidanceContent.it.home.servicesAssistanceBefore
-    Se non è chiaro a quale gruppo appartiene la Sua questione, la pagina 
+    Se non è chiaro a quale area di attività appartenga la Sua questione, la pagina 
 
 guidanceContent.it.home.servicesAssistanceLinkLabel
     Contatti
@@ -112,7 +112,7 @@ guidanceContent.it.home.columnsViewAllLabel
     Vedere tutti gli articoli
 
 guidanceContent.it.home.columnsReadMoreLabel
-    Leggere oltre
+    Continua a leggere
 
 guidanceContent.it.home.columnsReviewLabel
     Verificato dall’avvocata Wei Tseng
@@ -145,13 +145,13 @@ guidanceContent.it.pages.home.description
     Spiegazioni generali in italiano sull’ambito di lavoro di Hovering International Law Firm a Taiwan, sulle lingue di consulenza e sul primo contatto.
 
 guidanceContent.it.pages.home.intro
-    Hovering International Law Firm accompagna clienti dall’estero, anche con un nesso con Taiwan, in questioni di diritto taiwanese: investimento e costituzione di società, controversie civili, matrimonio, famiglia e successioni, diritto del lavoro, penale e proprietà intellettuale. Questa parte in italiano La aiuta a riconoscere quale lavoro rientra nel nostro ambito, che cosa preparare e come raggiungerci. Si tratta di indicazioni generali, non di una consulenza legale per il Suo caso.
+    Hovering International Law Firm accompagna clienti dall’estero, anche quelli che hanno un collegamento con Taiwan, in questioni di diritto taiwanese: investimento e costituzione di società, controversie civili, matrimonio, famiglia e successioni, diritto del lavoro, penale e proprietà intellettuale. Questa parte in italiano La aiuta a riconoscere quale lavoro rientra nel nostro ambito, che cosa preparare e come raggiungerci. Si tratta di indicazioni generali, non di una consulenza legale per il Suo caso.
 
 guidanceContent.it.pages.home.sections[0].heading
     Che cosa facciamo
 
 guidanceContent.it.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Consuliamo imprese e conduciamo procedimenti in giudizio e accompagniamo clienti dall’estero nei passi necessari a Taiwan.
+    Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Lo studio fornisce consulenza alle imprese, le rappresenta in giudizio e accompagna i clienti dall’estero nei passi necessari a Taiwan.
 
 guidanceContent.it.pages.home.sections[0].paragraphs[1]
     Tutto il contenuto qui è generale. L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento. Queste indicazioni non sostituiscono il colloquio con un’avvocata o un avvocato sui Suoi documenti.
@@ -163,13 +163,13 @@ guidanceContent.it.pages.home.sections[1].paragraphs[0]
     Questa pagina è scritta in italiano, ma la consulenza con un’avvocata o un avvocato si svolge soltanto nelle quattro lingue di consulenza inglese, cinese (中文), giapponese e coreano. Leggere le indicazioni in italiano non significa che il colloquio con l’avvocata o l’avvocato avvenga in italiano.
 
 guidanceContent.it.pages.home.sections[1].paragraphs[1]
-    Non promettiamo un interprete, un termine di risposta né un appuntamento tramite questa pagina. Se non può usare nessuna delle quattro lingue, la pagina «Contatti» spiega come esaminiamo una via di comunicazione.
+    Non promettiamo un interprete, né un termine di risposta, né un appuntamento tramite questa pagina. Se non può usare nessuna delle quattro lingue, la pagina «Contatti» spiega come esaminiamo un canale di comunicazione.
 
 guidanceContent.it.pages.home.sections[2].heading
-    Gruppi di lavoro
+    Aree di attività
 
 guidanceContent.it.pages.home.sections[2].paragraphs[0]
-    L’ambito di lavoro comprende i sei gruppi seguenti. La pagina «Servizi» descrive ogni gruppo con più precisione e indica che cosa non viene promesso.
+    L’ambito di lavoro comprende le sei aree seguenti. La pagina «Servizi» descrive ogni area con più precisione e indica che cosa non viene promesso.
 
 guidanceContent.it.pages.home.sections[2].items[0]
     Investimento e costituzione di società a Taiwan
@@ -196,7 +196,7 @@ guidanceContent.it.pages.home.sections[3].paragraphs[0]
     Legga la pagina «Servizi» per verificare se la Sua questione rientra nel nostro ambito, poi «Costi» e «Contatti» per sapere come si fissa l’ambito e come i costi vengono confermati prima dell’inizio del lavoro.
 
 guidanceContent.it.pages.home.sections[3].paragraphs[1]
-    Nell’inviare un messaggio può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come Lo ha scritto e non viene tradotto automaticamente. Un messaggio inviato è una richiesta in attesa di esame: non è ancora una consulenza né un appuntamento confermato.
+    Nell’inviare un messaggio può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come lo ha scritto e non viene tradotto automaticamente. Un messaggio inviato è una richiesta in attesa di esame: non è ancora una consulenza né un appuntamento confermato.
 
 guidanceContent.it.pages.services.eyebrow
     SERVIZI
@@ -205,16 +205,16 @@ guidanceContent.it.pages.services.title
     Quali questioni trattiamo
 
 guidanceContent.it.pages.services.description
-    Sei gruppi di lavoro dello studio a Taiwan e i limiti che conviene conoscere per primi.
+    Le sei aree di attività dello studio a Taiwan e i limiti che conviene conoscere per primi.
 
 guidanceContent.it.pages.services.intro
-    Di seguito i gruppi che trattiamo davvero e le domande che nella fase iniziale si pongono spesso. L’esposizione La aiuta a valutare se la Sua questione rientra nel nostro ambito; è generale e non è un’analisi giuridica di un singolo fascicolo.
+    Di seguito le aree di cui ci occupiamo e le domande che nella fase iniziale si pongono spesso. L’esposizione La aiuta a valutare se la Sua questione rientra nel nostro ambito; è generale e non è un’analisi giuridica di un singolo fascicolo.
 
 guidanceContent.it.pages.services.sections[0].heading
     Investimento e costituzione di società a Taiwan
 
 guidanceContent.it.pages.services.sections[0].paragraphs[0]
-    Accompagniamo investitori e imprese straniere nella costituzione o nella gestione di una società a Taiwan: scelta della forma giuridica, preparazione e deposito di documenti, conferimento del capitale, questioni bancarie, esame della sede e requisiti di settore. Sosteniamo anche la contabilità e le imposte che derivano dalla costituzione e dalla gestione a Taiwan.
+    Accompagniamo investitori e imprese straniere nella costituzione o nella gestione di una società a Taiwan: scelta della forma giuridica, preparazione e deposito di documenti, conferimento del capitale, questioni bancarie, esame della sede e requisiti di settore. Assistiamo anche in materia contabile e fiscale per quanto deriva dalla costituzione e dalla gestione a Taiwan.
 
 guidanceContent.it.pages.services.sections[0].paragraphs[1]
     Il percorso e i tempi differiscono secondo la forma, l’investitore, il settore, la banca e i documenti già disponibili. La costituzione di una società non porta da sola a un titolo di soggiorno (居留) o a un permesso di lavoro (工作許可): sono procedimenti distinti, valutati secondo la situazione della persona.
@@ -223,16 +223,16 @@ guidanceContent.it.pages.services.sections[1].heading
     Controversie civili e risarcimento
 
 guidanceContent.it.pages.services.sections[1].paragraphs[0]
-    Questo gruppo comprende controversie contrattuali, risarcimento da illecito e controversie dei consumatori. Il lavoro inizia di regola con una cronologia, l’esame dei documenti e delle prove esistenti e soltanto dopo con i passi successivi.
+    Quest’area comprende controversie contrattuali, risarcimento da illecito e controversie dei consumatori. Il lavoro inizia di regola con una cronologia, l’esame dei documenti e delle prove esistenti e soltanto dopo con i passi successivi.
 
 guidanceContent.it.pages.services.sections[1].paragraphs[1]
-    I termini, comprese le prescrizioni, e la completezza delle prove segnano il corso. Indichi quindi le date note il più presto possibile. Conservi contratti, messaggi, ricevute di pagamento o fotografie della situazione sul posto e li menzioni nel primo messaggio.
+    I termini, comprese le prescrizioni, e la completezza delle prove determinano l’andamento della pratica. Indichi quindi le date note il più presto possibile. Conservi contratti, messaggi, ricevute di pagamento o fotografie della situazione sul posto e li menzioni nel primo messaggio.
 
 guidanceContent.it.pages.services.sections[2].heading
     Matrimonio, famiglia e successioni
 
 guidanceContent.it.pages.services.sections[2].paragraphs[0]
-    Trattiamo il divorzio (離婚), la divisione patrimoniale, l’esercizio e l’assunzione dei diritti e dei doveri verso i figli minori (未成年子女權利義務之行使或負擔), i rapporti (會面交往) e le successioni (繼承), anche quando le parti o i beni si trovano in Stati diversi. Le questioni familiari transfrontaliere richiedono spesso un esame ulteriore dei registri anagrafici (戶籍), della forma degli atti e della loro prova a Taiwan.
+    Trattiamo il divorzio (離婚), la divisione patrimoniale, l’affidamento e la responsabilità genitoriale sui figli minori (未成年子女權利義務之行使或負擔), il diritto di visita (會面交往) e le successioni (繼承), anche quando le parti o i beni si trovano in Stati diversi. Le questioni familiari transfrontaliere richiedono spesso un esame ulteriore dei registri anagrafici (戶籍), della forma degli atti e della loro prova a Taiwan.
 
 guidanceContent.it.pages.services.sections[2].paragraphs[1]
     Poiché le questioni familiari portano spesso termini e procedimenti paralleli, il primo riassunto dovrebbe indicare il rapporto tra le parti, il domicilio attuale e i procedimenti già in corso.
@@ -241,10 +241,10 @@ guidanceContent.it.pages.services.sections[3].heading
     Controversie di lavoro
 
 guidanceContent.it.pages.services.sections[3].paragraphs[0]
-    Questo gruppo comprende la cessazione del rapporto di lavoro, l’indennità secondo il diritto di Taiwan (資遣費; non da equiparare a istituti di altri Stati), la retribuzione e le controversie dal contratto di lavoro (勞動契約), tanto dal lato del lavoratore quanto dal lato del datore. Nell’esame distinguiamo il motivo della cessazione dalle questioni di preavviso, di pagamento e di termini.
+    Quest’area comprende la cessazione del rapporto di lavoro, l’indennità secondo il diritto di Taiwan (資遣費; da non equiparare a istituti di altri Stati), la retribuzione e le controversie dal contratto di lavoro (勞動契約), sia dal lato del lavoratore sia da quello del datore di lavoro. Nell’esame distinguiamo il motivo della cessazione dalle questioni di preavviso, di pagamento e di termini.
 
 guidanceContent.it.pages.services.sections[3].paragraphs[1]
-    Il contratto di lavoro, il regolamento interno (工作規則), le buste paga e la corrispondenza delle parti sono di solito i documenti decisivi. Se li ha ancora, lo menzioni nel riassunto.
+    Il contratto di lavoro, il regolamento interno (工作規則), le buste paga e la corrispondenza delle parti sono di solito i documenti decisivi. Se li ha ancora, li menzioni nel riassunto.
 
 guidanceContent.it.pages.services.sections[4].heading
     Questioni penali
@@ -259,16 +259,16 @@ guidanceContent.it.pages.services.sections[5].heading
     Proprietà intellettuale
 
 guidanceContent.it.pages.services.sections[5].paragraphs[0]
-    Sosteniamo la registrazione di marchi (商標) e brevetti (專利), il diritto d’autore e le controversie su questi diritti a Taiwan.
+    Assistiamo nella registrazione di marchi (商標) e brevetti (專利), nel diritto d’autore e nelle controversie su questi diritti a Taiwan.
 
 guidanceContent.it.pages.services.sections[5].paragraphs[1]
-    In questo gruppo decide l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.
+    In quest’area decide l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.
 
 guidanceContent.it.pages.services.sections[6].heading
     Ambito e sua conferma
 
 guidanceContent.it.pages.services.sections[6].paragraphs[0]
-    Lo studio lavora secondo il diritto di Taiwan e tratta questioni dei gruppi sopra indicati. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il Suo messaggio.
+    Lo studio lavora secondo il diritto di Taiwan e tratta questioni delle aree sopra indicate. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il Suo messaggio.
 
 guidanceContent.it.pages.services.sections[6].paragraphs[1]
     Lo status di soggiorno, il permesso di lavoro e questioni analoghe si valutano dai documenti e dalla situazione della persona, non dalla nazionalità. Se una parte della Sua questione tocca tali punti, lo indichi nel contatto. Questa pagina non promette un risultato né un termine di risposta.
@@ -292,25 +292,25 @@ guidanceContent.it.pages.about.sections[0].paragraphs[0]
     Hovering International Law Firm (昊鼎國際法律事務所) è stato fondato nel 2016 da avvocate e avvocati che hanno studiato alla National Taiwan University (國立臺灣大學). Il nome cinese 昊鼎 unisce il carattere 昊 («cielo ampio») con 鼎 («base solida») e descrive l’orientamento dello studio dalla fondazione.
 
 guidanceContent.it.pages.about.sections[0].paragraphs[1]
-    Abbiamo uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). L’ufficio di Kaohsiung si concentra sulla gestione d’impresa e tratta controversie civili, penali e amministrative. L’ufficio di Taichung tratta questioni edilizie, proprietà intellettuale e questioni con nesso con la Corea e il Giappone. L’ufficio di Pingtung è stato aperto nel 2017 per il fabbisogno locale.
+    Abbiamo uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). L’ufficio di Kaohsiung si concentra sulla gestione d’impresa e tratta controversie civili, penali e amministrative. L’ufficio di Taichung tratta questioni edilizie, proprietà intellettuale e questioni collegate alla Corea e al Giappone. L’ufficio di Pingtung è stato aperto nel 2017 per le esigenze del territorio.
 
 guidanceContent.it.pages.about.sections[0].paragraphs[2]
-    Oltre al lavoro forense esiste dal 2020 anche Hovering Accounting Office, che offre contabilità e pianificazione fiscale a imprenditori e privati con patrimonio.
+    Oltre al lavoro forense esiste dal 2020 anche Hovering Accounting Office, che offre contabilità e pianificazione fiscale a imprenditori e privati con patrimoni rilevanti.
 
 guidanceContent.it.pages.about.sections[1].heading
     Lavoro con parti straniere
 
 guidanceContent.it.pages.about.sections[1].paragraphs[0]
-    Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’ufficio di Taichung tratta in particolare questioni edilizie, proprietà intellettuale e questioni con nesso con la Corea e il Giappone. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea, dal Giappone e altri clienti internazionali nei gruppi indicati.
+    Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’ufficio di Taichung tratta in particolare questioni edilizie, proprietà intellettuale e questioni collegate alla Corea e al Giappone. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea e dal Giappone e altri clienti internazionali nelle aree indicate.
 
 guidanceContent.it.pages.about.sections[1].paragraphs[1]
-    Se possiamo assumere una questione dipende dal contenuto e dalla lingua della comunicazione. Se la Sua questione rientra nei gruppi indicati e può essere discussa in una delle quattro lingue di consulenza, può inviare un riassunto per l’esame.
+    Se possiamo assumere una questione dipende dal contenuto e dalla lingua della comunicazione. Se la Sua questione rientra nelle aree indicate e può essere discussa in una delle quattro lingue di consulenza, può inviare un riassunto per l’esame.
 
 guidanceContent.it.pages.about.sections[2].heading
     Quando ci contatta
 
 guidanceContent.it.pages.about.sections[2].paragraphs[0]
-    Dopo l’arrivo del Suo riassunto un’avvocata o un avvocato esamina il contenuto e parla poi del possibile ambito di lavoro, dei documenti ancora necessari e dei passi successivi. Per questioni fiscali o contabili lo studio può lavorare con la sezione di contabilità in un unico flusso.
+    Dopo l’arrivo del Suo riassunto un’avvocata o un avvocato esamina il contenuto e parla poi del possibile ambito di lavoro, dei documenti ancora necessari e dei passi successivi. Per questioni fiscali o contabili lo studio può lavorare con la sezione di contabilità in modo integrato.
 
 guidanceContent.it.pages.about.sections[2].paragraphs[1]
     Il risultato di ciascuna questione dipende dai fatti e dai documenti disponibili; non promettiamo un risultato. Se ha bisogno di una risposta vincolante per la Sua situazione, i documenti devono essere discussi in una delle quattro lingue di consulenza con un’avvocata o un avvocato.
@@ -322,7 +322,7 @@ guidanceContent.it.pages.lawyers.title
     Team internazionale di Hovering
 
 guidanceContent.it.pages.lawyers.description
-    Profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering.
+    Profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering.
 
 guidanceContent.it.pages.lawyers.intro
     
@@ -343,10 +343,10 @@ guidanceContent.it.pages.pricing.sections[0].heading
     Prima si fissa l’ambito di lavoro
 
 guidanceContent.it.pages.pricing.sections[0].paragraphs[0]
-    Questioni dello stesso tipo possono avere un impegno molto diverso, secondo il numero delle parti, i documenti disponibili, i termini da rispettare e se un procedimento è già iniziato. Perciò il primo passo è sempre fissare che cosa appartiene al lavoro e che cosa no.
+    Questioni dello stesso tipo possono richiedere un impegno molto diverso, secondo il numero delle parti, i documenti disponibili, i termini da rispettare e se un procedimento è già iniziato. Perciò il primo passo è sempre fissare che cosa appartiene al lavoro e che cosa no.
 
 guidanceContent.it.pages.pricing.sections[0].paragraphs[1]
-    Il riassunto che invia all’inizio è la base di questo ambito. Quanto più chiaramente descrive il corso, la Sua richiesta e i termini, tanto più precisamente si può determinare l’ambito.
+    Il riassunto che invia all’inizio è la base di questo ambito. Quanto più chiaramente descrive il corso dei fatti, la Sua richiesta e i termini, tanto più precisamente si può determinare l’ambito.
 
 guidanceContent.it.pages.pricing.sections[1].heading
     I costi si confermano prima dell’inizio del lavoro
@@ -361,7 +361,7 @@ guidanceContent.it.pages.pricing.sections[2].heading
     La consulenza può essere a pagamento
 
 guidanceContent.it.pages.pricing.sections[2].paragraphs[0]
-    La consulenza con un’avvocata o un avvocato può essere una prestazione a pagamento. Questa pagina non dice che il primo colloquio è gratuito, e nessuna parte può essere letta in quel senso.
+    La consulenza con un’avvocata o un avvocato può essere una prestazione a pagamento. Questa pagina non dice che il primo colloquio è gratuito, e nulla in questa pagina va inteso in quel senso.
 
 guidanceContent.it.pages.pricing.sections[2].paragraphs[1]
     Se la consulenza è a pagamento, l’importo e il modo di pagamento vengono comunicati prima che essa abbia luogo.
@@ -370,7 +370,7 @@ guidanceContent.it.pages.pricing.sections[3].heading
     Perché questa pagina non indica tariffe
 
 guidanceContent.it.pages.pricing.sections[3].paragraphs[0]
-    I costi dipendono dalla questione stessa: dall’impegno, dal numero delle parti, dai documenti, dai termini e dal fatto che un procedimento sia già in corso. Un numero fissato in anticipo non mostrerebbe i costi del Suo fascicolo. Perciò fissiamo prima l’ambito di lavoro e Le comunichiamo poi i costi, prima che il lavoro inizi.
+    I costi dipendono dalla questione stessa: dall’impegno, dal numero delle parti, dai documenti, dai termini e dal fatto che un procedimento sia già in corso. Un importo indicato in anticipo non corrisponde al costo del Suo fascicolo. Perciò fissiamo prima l’ambito di lavoro e Le comunichiamo poi i costi, prima che il lavoro inizi.
 
 guidanceContent.it.pages.pricing.sections[3].paragraphs[1]
     Oltre all’onorario possono sorgere costi di tribunale, di autorità o di terzi. Questi sono distinti dall’onorario e dipendono dal rispettivo procedimento.
@@ -406,10 +406,10 @@ guidanceContent.it.pages.contact.sections[1].heading
     Se non può usare nessuna delle quattro lingue di consulenza
 
 guidanceContent.it.pages.contact.sections[1].paragraphs[0]
-    Nel modulo di contatto può scegliere «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via praticabile di comunicazione, se una tale via esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.
+    Nel modulo di contatto può scegliere «Il canale di comunicazione deve essere confermato». Rispondiamo per esaminare un canale di comunicazione praticabile, se un canale del genere esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.
 
 guidanceContent.it.pages.contact.sections[1].paragraphs[1]
-    Questo è soltanto un passo di esame, non è una promessa. Non promettiamo un interprete, una prestazione in italiano o in un’altra lingua fuori dalle quattro lingue indicate, e non che accettiamo ogni questione.
+    Questo è soltanto un passo di esame, non è una promessa. Non promettiamo un interprete, una prestazione in italiano o in un’altra lingua fuori dalle quattro lingue indicate, né promettiamo di accettare ogni questione.
 
 guidanceContent.it.pages.contact.sections[2].heading
     Che cosa dovrebbe contenere il primo messaggio
@@ -418,7 +418,7 @@ guidanceContent.it.pages.contact.sections[2].paragraphs[0]
     Indichi che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se ne conosce uno. Se ha già ricevuto uno scritto di un tribunale o di un’autorità, indichi la data sullo scritto.
 
 guidanceContent.it.pages.contact.sections[2].paragraphs[1]
-    Nella fase iniziale non deve ancora inviare il numero di passaporto, il numero di documento, i dati di un conto, cartelle cliniche o l’insieme delle prove. Attenda le indicazioni dell’avvocata o dell’avvocato e invii allora i documenti sensibili su una via sicura.
+    Nella fase iniziale non deve ancora inviare il numero di passaporto, il numero di documento, i dati di un conto, cartelle cliniche o l’insieme delle prove. Attenda le indicazioni dell’avvocata o dell’avvocato e invii allora i documenti sensibili attraverso un canale sicuro.
 
 guidanceContent.it.pages.contact.sections[3].heading
     Che cosa questa pagina non promette
@@ -439,19 +439,19 @@ guidanceContent.it.pages.faq.description
     Spiegazioni su ambito di lavoro, preparazione, lingue, costi e sul significato di una richiesta inviata.
 
 guidanceContent.it.pages.faq.intro
-    Le domande seguenti sono risposte al livello di indicazioni generali. Una risposta per il Suo caso è possibile soltanto dopo che un’avvocata o un avvocato ha esaminato i documenti.
+    Alle domande seguenti si risponde a livello di indicazioni generali. Una risposta per il Suo caso è possibile soltanto dopo che un’avvocata o un avvocato ha esaminato i documenti.
 
 guidanceContent.it.pages.faq.sections[0].heading
     Come usare questa parte
 
 guidanceContent.it.pages.faq.sections[0].paragraphs[0]
-    Se non trova una risposta per la Sua situazione, la risposta dipende di solito da fatti particolari. Scriva allora quei fatti nel riassunto, invece di dedurli da questa pagina.
+    Se non trova una risposta per la Sua situazione, la risposta dipende di solito da fatti particolari. Scriva allora quei fatti nel riassunto, invece di dedurre da questa pagina la risposta.
 
 guidanceContent.it.pages.faq.faqs[0].question
     Quali questioni tratta lo studio?
 
 guidanceContent.it.pages.faq.faqs[0].answer
-    Trattiamo sei gruppi: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.
+    Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.
 
 guidanceContent.it.pages.faq.faqs[1].question
     Che cosa dovrei preparare prima del contatto?
@@ -469,7 +469,7 @@ guidanceContent.it.pages.faq.faqs[3].question
     Che fare se non posso usare nessuna delle quattro lingue?
 
 guidanceContent.it.pages.faq.faqs[3].answer
-    Scelga, nell’inviare la richiesta, «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via di comunicazione, ma una prestazione in un’altra lingua non è garantita. Questo è un passo di esame, non è una promessa che possiamo lavorare in un’altra lingua.
+    Scelga, nell’inviare la richiesta, «Il canale di comunicazione deve essere confermato». Rispondiamo per esaminare un canale di comunicazione, ma una prestazione in un’altra lingua non è garantita. Questo è un passo di esame, non è una promessa che possiamo lavorare in un’altra lingua.
 
 guidanceContent.it.pages.faq.faqs[4].question
     Come viene trattato il mio testo in italiano?
@@ -541,7 +541,7 @@ guidanceContent.it.pages.privacy.sections[1].heading
     Il testo originale viene conservato senza modifiche
 
 guidanceContent.it.pages.privacy.sections[1].paragraphs[0]
-    Il Suo testo viene conservato esattamente come Lo ha scritto e non viene tradotto automaticamente. Se una traduzione è necessaria per il trattamento, ciò viene discusso con Lei a parte.
+    Il Suo testo viene conservato esattamente come lo ha scritto e non viene tradotto automaticamente. Se una traduzione è necessaria per il trattamento, ciò viene discusso con Lei a parte.
 
 guidanceContent.it.pages.privacy.sections[1].paragraphs[1]
     Poiché il testo originale viene conservato, nella fase iniziale non scriva ciò che non è ancora necessario, ad esempio il numero di passaporto, il numero di documento o i dati di un conto.
@@ -553,13 +553,13 @@ guidanceContent.it.pages.privacy.sections[2].paragraphs[0]
     Il contenuto del Suo invio viene conservato in un luogo non accessibile al pubblico. Soltanto persone autorizzate nello studio possono accedervi per trattare la richiesta.
 
 guidanceContent.it.pages.privacy.sections[2].paragraphs[1]
-    Questa pagina non dà una garanzia assoluta di sicurezza. Nessuna via di trasmissione e nessun luogo di conservazione è del tutto sicuro; i documenti sensibili dovrebbero quindi essere inviati soltanto dopo un’istruzione particolare dell’avvocata o dell’avvocato.
+    Questa pagina non dà una garanzia assoluta di sicurezza. Nessun canale di trasmissione e nessun luogo di conservazione è del tutto sicuro; i documenti sensibili dovrebbero quindi essere inviati soltanto dopo un’istruzione particolare dell’avvocata o dell’avvocato.
 
 guidanceContent.it.pages.privacy.sections[3].heading
     Scopo dell’uso
 
 guidanceContent.it.pages.privacy.sections[3].paragraphs[0]
-    I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento della via di comunicazione e al trattamento, se il lavoro viene assunto.
+    I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento del canale di comunicazione e al trattamento, se il lavoro viene assunto.
 
 guidanceContent.it.pages.privacy.sections[3].paragraphs[1]
     I dati non vengono usati per il marketing senza un consenso distinto.
@@ -574,22 +574,22 @@ guidanceContent.it.pages.privacy.sections[4].paragraphs[1]
     Il numero di ricezione serve a ritrovare la Sua richiesta nei nostri atti. Viene mostrato dopo la conservazione; può indicarlo in un nuovo contatto.
 
 guidanceContent.it.pages.privacy.sections[5].heading
-    I Suoi diritti e la via di contatto
+    I Suoi diritti e il canale di contatto
 
 guidanceContent.it.pages.privacy.sections[5].paragraphs[0]
     Può chiedere accesso, rettifica o cancellazione dei Suoi dati o revocare il consenso, tramite l’indirizzo di posta elettronica indicato nella pagina di contatto. Se esiste un obbligo legale o processuale di conservazione, spieghiamo la limitazione.
 
 guidanceContent.it.pages.privacy.sections[5].paragraphs[1]
-    Questa pagina non indica un termine fisso di conservazione, perché la durata effettiva dipende dal seguito della questione e dagli obblighi connessi. Se desidera una cancellazione anteriore, lo comunichi nel contatto.
+    Questa pagina non indica un termine fisso di conservazione, perché la durata effettiva dipende dal seguito della questione e dagli obblighi connessi. Se desidera una cancellazione anticipata, lo comunichi nel contatto.
 
 guidanceContent.it.pages.privacy.sections[6].heading
     Luogo di conservazione e fornitori
 
 guidanceContent.it.pages.privacy.sections[6].paragraphs[0]
-    Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio di oggetti non pubblico di questo servizio. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.
+    Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio a oggetti non accessibile al pubblico, presso questo fornitore. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.
 
 guidanceContent.it.pages.privacy.sections[6].paragraphs[1]
-    I server di singoli fornitori possono trovarsi fuori da Taiwan, così i Suoi dati possono essere ivi conservati e trattati. Quando lo scopo di conservazione è soddisfatto, i dati vengono cancellati senza ritardo; i dati che devono essere conservati secondo le norme applicabili restano per quella durata. Le richieste sui dati personali sono accolte da wei@hoveringlaw.com.tw.
+    I server di singoli fornitori possono trovarsi fuori da Taiwan, così i Suoi dati possono essere ivi conservati e trattati. Quando lo scopo di conservazione è soddisfatto, i dati vengono cancellati senza ritardo; i dati che devono essere conservati secondo le norme applicabili restano per quella durata. Per le richieste sui dati personali si scriva a wei@hoveringlaw.com.tw.
 
 guidanceContent.it.pages.disclaimer.eyebrow
     AVVERTENZE
@@ -622,7 +622,7 @@ guidanceContent.it.pages.disclaimer.sections[1].paragraphs[1]
     Il contenuto non è una consulenza secondo il diritto di un altro ordinamento diverso da Taiwan, compreso il diritto del Suo luogo di residenza. Se una parte della Sua questione riguarda un altro ordinamento, chiariremo con Lei quale persona qualificata è necessaria per quella parte.
 
 guidanceContent.it.pages.disclaimer.sections[2].heading
-    Un rapporto tra avvocata o avvocato e cliente non nasce da sé
+    Un rapporto tra avvocata o avvocato e cliente non sorge automaticamente
 
 guidanceContent.it.pages.disclaimer.sections[2].paragraphs[0]
     La lettura di questa pagina, l’invio di un modulo o di un’e-mail non costituisce di per sé un rapporto tra avvocata o avvocato e cliente.
@@ -649,7 +649,7 @@ guidanceContent.it.pages.columns.description
     Articoli in italiano su domande frequenti del diritto di Taiwan. Il contenuto è informazione generale al momento della pubblicazione, non una consulenza legale per il Suo caso.
 
 guidanceContent.it.pages.columns.intro
-    Lo studio pubblica articoli su domande frequenti del diritto di Taiwan. Gli articoli disponibili in italiano stanno su questa pagina; accanto ci sono quattro collegamenti che aprono ciascuno l’elenco degli articoli di una lingua originale.
+    Lo studio pubblica articoli su domande frequenti del diritto di Taiwan. Gli articoli disponibili in italiano si trovano su questa pagina; accanto ci sono quattro collegamenti che aprono ciascuno l’elenco degli articoli di una lingua originale.
 
 guidanceContent.it.pages.columns.sections[0].heading
     Quattro elenchi per lingua
@@ -658,7 +658,7 @@ guidanceContent.it.pages.columns.sections[0].paragraphs[0]
     Questa parte contiene quattro collegamenti: l’elenco degli articoli in coreano, in cinese, in inglese e in giapponese. Ogni collegamento indica la lingua dell’elenco, così sa in anticipo in quale lingua si apre il contenuto.
 
 guidanceContent.it.pages.columns.sections[0].paragraphs[1]
-    Questi quattro elenchi sono elenchi secondo la lingua originale degli articoli, non elenchi di traduzione. Gli articoli disponibili in italiano stanno a parte su questa pagina.
+    Questi quattro elenchi seguono la lingua originale degli articoli; non sono traduzioni. Gli articoli disponibili in italiano si trovano a parte su questa pagina.
 
 guidanceContent.it.pages.columns.sections[1].heading
     Dove portano i collegamenti
@@ -676,25 +676,25 @@ guidanceContent.it.pages.columns.sections[2].paragraphs[0]
     Gli articoli sono indicazioni generali al momento della pubblicazione. Le norme e la loro applicazione possono cambiare, e un articolo non contiene tutte le circostanze del Suo caso.
 
 guidanceContent.it.pages.columns.sections[2].paragraphs[1]
-    Non fondi quindi un’azione in una questione reale soltanto su un articolo. Lo usi per la visione d’insieme e discuta i Suoi documenti a parte con un’avvocata o un avvocato; questa pagina non è il passo di consulenza.
+    Non fondi quindi una decisione su un caso reale soltanto su un articolo. Lo usi per la visione d’insieme e discuta i Suoi documenti a parte con un’avvocata o un avvocato; questa pagina non sostituisce la consulenza.
 
 guidanceTeamCopy.it.label
-    OUR TEAM
+    IL NOSTRO TEAM
 
 guidanceTeamCopy.it.title
     Team internazionale di Hovering
 
 guidanceTeamCopy.it.description
-    Profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering.
+    Profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering.
 
 guidanceTeamCopy.it.representativeTitle
-    Avvocata dirigente
+    Avvocata responsabile
 
 guidanceTeamCopy.it.teamTitle
     Avvocate, avvocati e collaboratori
 
 guidanceTeamCopy.it.partnerTitle
-    Revisione associata
+    Commercialista partner
 
 guidanceTeamCopy.it.introLabel
     Presentazione
@@ -712,7 +712,7 @@ guidanceTeamCopy.it.workingLanguagesLabel
     Lingue di lavoro
 
 guidanceTeamCopy.it.fullProfileLabel
-    Profilo completo (English)
+    Profilo completo (in inglese)
 
 guidanceTeamCopy.it.keyFactsHeading
     Avvocata Wei Tseng — Dati essenziali
@@ -721,7 +721,7 @@ guidanceTeamCopy.it.qualificationLabel
     Qualifica e studio
 
 guidanceTeamCopy.it.qualificationSentence
-    {name} è abilitata all’esercizio della professione a Taiwan ed è l’avvocata dirigente di {firm}.
+    {name} è abilitata all’esercizio della professione a Taiwan ed è l’avvocata responsabile di {firm}.
 
 guidanceTeamCopy.it.practiceLabel
     Ambiti principali
@@ -730,31 +730,31 @@ guidanceTeamCopy.it.consultationLanguagesLabel
     Lingue di consulenza
 
 guidanceTeamCopy.it.roles.tseng-junwei
-    Avvocata dirigente a Taiwan (Managing Attorney)
+    Avvocata responsabile a Taiwan (Managing Attorney)
 
 guidanceTeamCopy.it.roles.chang-rongxuan
     Avvocato a Taiwan (Taiwan Attorney)
 
 guidanceTeamCopy.it.roles.chang-fangyu
-    Paralegal
+    Collaboratrice legale (paralegal)
 
 guidanceTeamCopy.it.roles.son-jungmin
-    Direzione operativa Corea (Korea Operations Manager)
+    Responsabile delle operazioni in Corea (Korea Operations Manager)
 
 guidanceTeamCopy.it.roles.huang-shengping
-    Revisore associato (Partner CPA)
+    Commercialista partner a Taiwan (Partner CPA)
 
 guidanceTeamBios.it.tseng-junwei.intro[0]
     Lo studio tratta questioni di imprese e di privati a Taiwan in inglese, giapponese, coreano e cinese.
 
 guidanceTeamBios.it.tseng-junwei.intro[1]
-    Ha rappresentato uno studente coreano in una domanda di risarcimento per una lesione in una palestra e ha ottenuto una sentenza di primo grado di TWD 1.57M.
+    Ha seguito in primo grado la domanda di risarcimento di uno studente coreano per una lesione in palestra, definita con una sentenza di 1,57 milioni di TWD.
 
 guidanceTeamBios.it.tseng-junwei.education[0]
-    Master (M.S.), Institute of Finance, National Taiwan University
+    Master (M.S.) in finanza, Institute of Finance, National Taiwan University
 
 guidanceTeamBios.it.tseng-junwei.education[1]
-    Laurea (B.A.) con doppio percorso in diritto e finanza, National Chengchi University
+    Laurea (B.A.) a doppio indirizzo in diritto e finanza, National Chengchi University
 
 guidanceTeamBios.it.tseng-junwei.education[2]
     Studentessa in scambio alla Kobe University e alla Waseda University
@@ -766,10 +766,10 @@ guidanceTeamBios.it.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.it.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Fondazione di assistenza legale, sede di Taichung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.it.chang-rongxuan.intro[0]
-    Precedentemente al Ministry of Education, Legal Affairs Division, con attenzione a questioni amministrative e civili.
+    In precedenza ha lavorato presso il Ministero dell’Istruzione, Divisione affari giuridici (Ministry of Education, Legal Affairs Division), con particolare riguardo alle controversie amministrative e civili.
 
 guidanceTeamBios.it.chang-rongxuan.intro[1]
     Esperienza in questioni relative alle università, ai diritti del personale docente e ai ricorsi amministrativi.
@@ -778,43 +778,43 @@ guidanceTeamBios.it.chang-rongxuan.education[0]
     Laurea in giurisprudenza (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.it.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Ministero dell’Istruzione, Divisione affari giuridici (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.it.chang-rongxuan.experience[1]
     Avvocato, Hovering International Law Firm
 
 guidanceTeamBios.it.chang-fangyu.intro[0]
-    Paralegal con lunga attività come senior paralegal in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.
+    Collaboratrice legale (paralegal), con lunga attività come collaboratrice legale senior in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.
 
 guidanceTeamBios.it.chang-fangyu.intro[1]
-    Supporto a procedimenti, costituzione di società, autorizzazioni di investimenti esteri, domande di licenza e allo scambio tra Corea e Taiwan.
+    Supporto nei procedimenti, nella costituzione di società, nelle autorizzazioni di investimenti esteri, nelle domande di licenza e nello scambio tra Corea e Taiwan.
 
 guidanceTeamBios.it.chang-fangyu.education[0]
     Laurea in giurisprudenza (LL.B.), Tunghai University
 
 guidanceTeamBios.it.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Collaboratrice legale senior, Boyin Law Firm
 
 guidanceTeamBios.it.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Collaboratrice legale senior, Muyang International Law Firm
 
 guidanceTeamBios.it.son-jungmin.intro[0]
     Coordina gli appuntamenti di consulenza e la comunicazione per i clienti dalla Corea.
 
 guidanceTeamBios.it.son-jungmin.intro[1]
-    Sostiene lo scambio tra le aree tramite sistemi documentali e flussi di lavoro, sulla base dell’informatica.
+    Agevola la comunicazione tra i team tramite sistemi documentali e flussi di lavoro, sulla base di una formazione in informatica.
 
 guidanceTeamBios.it.son-jungmin.education[0]
     Laurea (B.S.) in informatica, National Cheng Kung University
 
 guidanceTeamBios.it.son-jungmin.experience[0]
-    Area operazioni Corea, Hovering International Law Firm
+    Area delle operazioni in Corea, Hovering International Law Firm
 
 guidanceTeamBios.it.huang-shengping.intro[0]
-    Ha concluso i programmi di laurea e master in contabilità alla National Chengchi University e dirige attualmente uno studio di revisione.
+    Ha conseguito la laurea e il master in contabilità alla National Chengchi University e dirige attualmente uno studio di commercialisti a Taiwan.
 
 guidanceTeamBios.it.huang-shengping.intro[1]
-    Sostiene l’analisi integrata dei rischi giuridici, fiscali e finanziari per i clienti d’impresa.
+    Contribuisce all’analisi integrata dei rischi giuridici, fiscali e finanziari per i clienti d’impresa.
 
 guidanceTeamBios.it.huang-shengping.education[0]
     Master (M.A.) in contabilità, National Chengchi University
@@ -853,7 +853,7 @@ guidancePracticeAreaNames.it.Family and labor disputes
     Controversie familiari e di lavoro
 
 guidanceOfficeCopy.it.label
-    OFFICES
+    SEDI
 
 guidanceOfficeCopy.it.title
     Uffici
@@ -868,7 +868,7 @@ guidanceOfficeCopy.it.mapPreviewLabel
     Anteprima della mappa
 
 guidanceOfficeCopy.it.koreaOfficeTitle
-    Ufficio Corea
+    Ufficio in Corea
 
 guidanceOfficeCopy.it.koreaAddressCardLabel
     Indirizzo dell’ufficio in Corea
@@ -943,10 +943,10 @@ internationalInquiryCopy.it.consultationNotice
     La consulenza si svolge soltanto in quattro lingue: inglese, cinese (中文), giapponese e coreano.
 
 internationalInquiryCopy.it.methodConfirmationNotice
-    Se non può usare nessuna delle quattro lingue, scelga «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via praticabile di comunicazione, se una tale via esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.
+    Se non può usare nessuna delle quattro lingue, scelga «Il canale di comunicazione deve essere confermato». Rispondiamo per esaminare un canale di comunicazione praticabile, se un canale del genere esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.
 
 internationalInquiryCopy.it.preparationNotice
-    Può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come Lo ha scritto e non viene tradotto automaticamente.
+    Può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come lo ha scritto e non viene tradotto automaticamente.
 
 internationalInquiryCopy.it.heading
     Inviare una richiesta di consulenza
@@ -1030,10 +1030,10 @@ internationalInquiryCopy.it.languageOptions.ko
     Coreano (한국어)
 
 internationalInquiryCopy.it.languageOptions.needs-method-confirmation
-    Nessuna delle quattro lingue è utilizzabile — la via di comunicazione deve essere confermata
+    Nessuna delle quattro lingue è utilizzabile — il canale di comunicazione deve essere confermato
 
 guidanceAnswers.it.services.answer
-    Lo studio tratta sei gruppi di lavoro secondo il diritto di Taiwan: investimento e costituzione di società, controversie civili e risarcimento, matrimonio, famiglia e successioni, lavoro, penale e proprietà intellettuale. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il contenuto che Lei invia. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
+    Lo studio tratta sei aree di attività secondo il diritto di Taiwan: investimento e costituzione di società, controversie civili e risarcimento, matrimonio, famiglia e successioni, lavoro, penale e proprietà intellettuale. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il contenuto che Lei invia. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
 
 guidanceAnswers.it.services.sources[0]
     /it/faq
@@ -1042,7 +1042,7 @@ guidanceAnswers.it.services.sources[1]
     /it/contact
 
 guidanceAnswers.it.about.answer
-    Hovering International Law Firm è uno studio legale a Taiwan, fondato nel 2016 da laureate e laureati della National Taiwan University (國立臺灣大學), con uffici a Taipei, Kaohsiung, Taichung e Pingtung. Dal 2020 esiste una sezione di contabilità; l’ufficio di Taichung tratta questioni con nesso con la Corea e il Giappone. Lo studio non promette un risultato. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
+    Hovering International Law Firm è uno studio legale a Taiwan, fondato nel 2016 da laureate e laureati della National Taiwan University (國立臺灣大學), con uffici a Taipei, Kaohsiung, Taichung e Pingtung. Dal 2020 esiste una sezione di contabilità; l’ufficio di Taichung tratta questioni collegate alla Corea e al Giappone. Lo studio non promette un risultato. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
 
 guidanceAnswers.it.about.sources[0]
     /it/lawyers
@@ -1051,7 +1051,7 @@ guidanceAnswers.it.about.sources[1]
     /it/services
 
 guidanceAnswers.it.lawyers.answer
-    Questa pagina mostra i profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering. L’avvocata Wei Tseng (曾雋崴) è abilitata a Taiwan ed è l’avvocata dirigente dello studio; lavora con clienti dalla Corea, dal Giappone e con altri clienti internazionali. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
+    Questa pagina mostra i profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering. L’avvocata Wei Tseng (曾雋崴) è abilitata a Taiwan ed è l’avvocata responsabile dello studio; lavora con clienti dalla Corea, dal Giappone e con altri clienti internazionali. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
 
 guidanceAnswers.it.lawyers.sources[0]
     /it/about
@@ -1069,7 +1069,7 @@ guidanceAnswers.it.pricing.sources[1]
     /it/faq
 
 guidanceAnswers.it.contact.answer
-    Invii il riassunto tramite il modulo di contatto: che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se Lo conosce. Nella fase iniziale non deve ancora inviare documenti di identità o l’insieme delle prove. Lo studio non promette un termine di risposta e non conferma un appuntamento tramite questa pagina. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
+    Invii il riassunto tramite il modulo di contatto: che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se lo conosce. Nella fase iniziale non deve ancora inviare documenti di identità o l’insieme delle prove. Lo studio non promette un termine di risposta e non conferma un appuntamento tramite questa pagina. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
 
 guidanceAnswers.it.contact.sources[0]
     /it/faq
@@ -1078,7 +1078,7 @@ guidanceAnswers.it.contact.sources[1]
     /it/pricing
 
 guidanceAnswers.it.faq.answer
-    Questa parte risponde a domande frequenti al livello di indicazioni generali: i sei gruppi di lavoro, la preparazione prima del contatto, la fissazione dei costi e il significato di un messaggio inviato. Una richiesta inviata attende l’esame di un’avvocata o di un avvocato; non è un parere giuridico, non è un appuntamento e non costituisce un rapporto tra avvocata o avvocato e cliente. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
+    Questa parte risponde a domande frequenti al livello di indicazioni generali: le sei aree di attività, la preparazione prima del contatto, la fissazione dei costi e il significato di un messaggio inviato. Una richiesta inviata attende l’esame di un’avvocata o di un avvocato; non è un parere giuridico, non è un appuntamento e non costituisce un rapporto tra avvocata o avvocato e cliente. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.
 
 guidanceAnswers.it.faq.sources[0]
     /it/contact
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.it.consultationNotice
     Queste indicazioni sono scritte in italiano, ma la consulenza con un’avvocata o un avvocato si svolge soltanto in inglese, cinese (中文), giapponese e coreano.
 
 GUIDANCE_LLMS_NOTICES.it.discoveryNotice
-    Il file llms.txt è soltanto una mappa per trovare le pagine pubbliche; non promette collocazione nei motori di ricerca, sostegno, raccomandazione da intelligenza artificiale né visibilità.
+    Il file llms.txt è soltanto una mappa per trovare le pagine pubbliche; non promette posizionamento nei motori di ricerca, avallo, raccomandazione di un’intelligenza artificiale o visibilità garantita.
 
 GUIDANCE_LLMS_NOTICES.it.confidentialNotice
     Poiché il testo originale viene conservato, nella fase iniziale non scriva ciò che non è ancora necessario, ad esempio il numero di passaporto, il numero di documento o i dati di un conto.

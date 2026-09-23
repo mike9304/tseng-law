@@ -1,4 +1,4 @@
-# vi guidance pack strings (path → text). Generated 2026-09-21
+# vi guidance pack strings (path → text). Generated 2026-09-22
 
 guidanceContent.vi.languageName
     Tiếng Việt
@@ -43,13 +43,13 @@ guidanceContent.vi.skipLink
     Bỏ qua phần điều hướng, đến nội dung chính
 
 guidanceContent.vi.menuLabel
-    Danh mục trang
+    Trình đơn
 
 guidanceContent.vi.languageLabel
-    Ngôn ngữ hiển thị
+    Ngôn ngữ của trang
 
 guidanceContent.vi.mega.services.description
-    Văn phòng hỗ trợ những nhóm công việc chính theo pháp luật Đài Loan.
+    Văn phòng hỗ trợ những lĩnh vực công việc chính theo pháp luật Đài Loan.
 
 guidanceContent.vi.mega.services.viewAllLabel
     Xem tất cả
@@ -151,7 +151,7 @@ guidanceContent.vi.pages.home.sections[0].heading
     Văn phòng hỗ trợ những gì
 
 guidanceContent.vi.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm là văn phòng luật sư có trụ sở tại Đài Loan, hành nghề theo pháp luật Đài Loan và có các cơ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng nhận cả công việc tư vấn cho doanh nghiệp lẫn các vụ việc tranh tụng, và hỗ trợ khách hàng nước ngoài trong những thủ tục cần thực hiện tại Đài Loan.
+    Hovering International Law Firm là văn phòng luật sư có trụ sở tại Đài Loan, hành nghề theo pháp luật Đài Loan và có các văn phòng tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng nhận cả công việc tư vấn cho doanh nghiệp lẫn các vụ việc tranh tụng, và hỗ trợ khách hàng nước ngoài trong những thủ tục cần thực hiện tại Đài Loan.
 
 guidanceContent.vi.pages.home.sections[0].paragraphs[1]
     Toàn bộ nội dung ở đây mang tính tham khảo chung. Kết luận của một vụ việc phụ thuộc vào tình tiết cụ thể, quy định được áp dụng và thời điểm phát sinh, nên phần hướng dẫn này không thay thế cho việc trao đổi trực tiếp với luật sư về hồ sơ của quý vị.
@@ -160,16 +160,16 @@ guidanceContent.vi.pages.home.sections[1].heading
     Ngôn ngữ của trang và ngôn ngữ tư vấn là hai việc khác nhau
 
 guidanceContent.vi.pages.home.sections[1].paragraphs[0]
-    Trang này được viết bằng tiếng Việt, nhưng việc tư vấn thực tế với luật sư chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Đọc được hướng dẫn bằng tiếng Việt không có nghĩa là buổi trao đổi với luật sư sẽ diễn ra bằng tiếng Việt.
+    Trang này được viết bằng tiếng Việt, nhưng việc tư vấn thực tế với luật sư chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn. Đọc được hướng dẫn bằng tiếng Việt không có nghĩa là buổi trao đổi với luật sư sẽ diễn ra bằng tiếng Việt.
 
 guidanceContent.vi.pages.home.sections[1].paragraphs[1]
     Chúng tôi không cam kết bố trí phiên dịch, không cam kết trả lời trong một khoảng thời gian nhất định và không xác nhận lịch hẹn qua trang này. Nếu quý vị không sử dụng được cả bốn ngôn ngữ nêu trên, phần “Liên hệ” giải thích cách chúng tôi xác nhận phương thức trao đổi.
 
 guidanceContent.vi.pages.home.sections[2].heading
-    Những nhóm công việc mà văn phòng nhận xử lý
+    Những lĩnh vực công việc mà văn phòng nhận xử lý
 
 guidanceContent.vi.pages.home.sections[2].paragraphs[0]
-    Phạm vi công việc của văn phòng gồm sáu nhóm dưới đây. Trang “Lĩnh vực dịch vụ” trình bày chi tiết hơn từng nhóm và nêu rõ những điều không được bảo đảm.
+    Phạm vi công việc của văn phòng gồm sáu lĩnh vực dưới đây. Trang “Lĩnh vực dịch vụ” trình bày chi tiết hơn từng lĩnh vực và nêu rõ những điều không được bảo đảm.
 
 guidanceContent.vi.pages.home.sections[2].items[0]
     Đầu tư và thành lập doanh nghiệp tại Đài Loan
@@ -205,10 +205,10 @@ guidanceContent.vi.pages.services.title
     Các lĩnh vực mà văn phòng nhận xử lý
 
 guidanceContent.vi.pages.services.description
-    Sáu nhóm công việc thuộc phạm vi dịch vụ của văn phòng tại Đài Loan, cùng những giới hạn cần biết trước khi liên hệ.
+    Sáu lĩnh vực công việc thuộc phạm vi dịch vụ của văn phòng tại Đài Loan, cùng những giới hạn cần biết trước khi liên hệ.
 
 guidanceContent.vi.pages.services.intro
-    Dưới đây là các nhóm công việc mà văn phòng thực tế nhận xử lý, kèm những điểm thường được hỏi ở giai đoạn đầu. Phần mô tả này giúp quý vị xác định vụ việc của mình có thuộc phạm vi hỗ trợ hay không; đây là thông tin chung, không phải phân tích pháp lý cho một hồ sơ cụ thể.
+    Dưới đây là các lĩnh vực công việc mà văn phòng thực tế nhận xử lý, kèm những điểm thường được hỏi ở giai đoạn đầu. Phần mô tả này giúp quý vị xác định vụ việc của mình có thuộc phạm vi hỗ trợ hay không; đây là thông tin chung, không phải phân tích pháp lý cho một hồ sơ cụ thể.
 
 guidanceContent.vi.pages.services.sections[0].heading
     Đầu tư và thành lập doanh nghiệp tại Đài Loan
@@ -232,7 +232,7 @@ guidanceContent.vi.pages.services.sections[2].heading
     Hôn nhân, gia đình và thừa kế
 
 guidanceContent.vi.pages.services.sections[2].paragraphs[0]
-    Văn phòng nhận các vụ việc về ly hôn (離婚), phân chia tài sản, việc thực hiện và gánh vác quyền, nghĩa vụ đối với con chưa thành niên (未成年子女權利義務之行使或負擔), thăm nom con (會面交往) và thừa kế (繼承), kể cả khi các bên hoặc tài sản ở nhiều quốc gia khác nhau. Những vụ việc có yếu tố nước ngoài thường cần xem xét thêm về giấy tờ hộ tịch (戶籍), hình thức văn bản và cách chứng minh tại Đài Loan.
+    Văn phòng nhận các vụ việc về ly hôn (離婚), phân chia tài sản, việc thực hiện quyền và gánh vác nghĩa vụ đối với con chưa thành niên (未成年子女權利義務之行使或負擔), thăm nom con (會面交往) và thừa kế (繼承), kể cả khi các bên hoặc tài sản ở nhiều quốc gia khác nhau. Những vụ việc có yếu tố nước ngoài thường cần xem xét thêm về giấy tờ đăng ký hộ khẩu (戶籍), hình thức văn bản và cách chứng minh tại Đài Loan.
 
 guidanceContent.vi.pages.services.sections[2].paragraphs[1]
     Vì các vấn đề gia đình thường đi kèm thời hạn và nhiều thủ tục song song, phần tóm tắt ban đầu nên nêu rõ quan hệ giữa các bên, nơi cư trú hiện tại và những thủ tục đã hoặc đang tiến hành.
@@ -241,7 +241,7 @@ guidanceContent.vi.pages.services.sections[3].heading
     Tranh chấp lao động và việc làm
 
 guidanceContent.vi.pages.services.sections[3].paragraphs[0]
-    Nhóm này gồm chấm dứt hợp đồng lao động (勞動契約), trợ cấp thôi việc theo pháp luật Đài Loan (資遣費; xin đừng coi là đồng nhất với các chế độ tương tự của nước khác), tiền lương và các tranh chấp phát sinh từ điều khoản của hợp đồng lao động, cho cả phía người lao động và phía người sử dụng lao động. Khi xem xét, chúng tôi tách bạch căn cứ chấm dứt quan hệ lao động với các vấn đề về thông báo, khoản phải trả và thời hạn.
+    Nhóm này gồm chấm dứt hợp đồng lao động (勞動契約), trợ cấp thôi việc theo pháp luật Đài Loan (資遣費; không đồng nhất với khoản trợ cấp thôi việc theo pháp luật nước khác), tiền lương và các tranh chấp phát sinh từ điều khoản của hợp đồng lao động, cho cả phía người lao động và phía người sử dụng lao động. Khi xem xét, chúng tôi tách bạch căn cứ chấm dứt quan hệ lao động với các vấn đề về thông báo, khoản phải trả và thời hạn.
 
 guidanceContent.vi.pages.services.sections[3].paragraphs[1]
     Hợp đồng lao động, nội quy lao động (工作規則), bảng lương và trao đổi giữa hai bên thường là tài liệu quyết định. Nếu quý vị còn giữ những tài liệu này, hãy nêu trong phần tóm tắt để việc xem xét ban đầu chính xác hơn.
@@ -280,10 +280,10 @@ guidanceContent.vi.pages.about.title
     Về Hovering International Law Firm
 
 guidanceContent.vi.pages.about.description
-    Thông tin cơ bản về văn phòng luật sư tại Đài Loan, các cơ sở của văn phòng và công việc có yếu tố nước ngoài.
+    Thông tin cơ bản về văn phòng luật sư tại Đài Loan, các văn phòng và công việc có yếu tố nước ngoài.
 
 guidanceContent.vi.pages.about.intro
-    Hovering International Law Firm là văn phòng luật sư tại Đài Loan với đội ngũ luật sư làm việc ở nhiều lĩnh vực khác nhau, từ tư vấn doanh nghiệp đến tranh tụng. Phần này giới thiệu quá trình hình thành, các cơ sở và mảng công việc có yếu tố nước ngoài của văn phòng.
+    Hovering International Law Firm là văn phòng luật sư tại Đài Loan với đội ngũ luật sư làm việc ở nhiều lĩnh vực khác nhau, từ tư vấn doanh nghiệp đến tranh tụng. Phần này giới thiệu quá trình hình thành, các văn phòng và mảng công việc có yếu tố nước ngoài của văn phòng.
 
 guidanceContent.vi.pages.about.sections[0].heading
     Thành lập và cơ cấu
@@ -292,7 +292,7 @@ guidanceContent.vi.pages.about.sections[0].paragraphs[0]
     Hovering International Law Firm (昊鼎國際法律事務所) được thành lập năm 2016 bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學). Tên gọi trong tiếng Trung ghép chữ 昊 mang nghĩa “bầu trời rộng lớn” và chữ 鼎 mang nghĩa “nền móng vững chắc”, thể hiện định hướng của văn phòng khi thành lập.
 
 guidanceContent.vi.pages.about.sections[0].paragraphs[1]
-    Văn phòng có các cơ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Cơ sở Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự, hành chính thông thường. Cơ sở Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Cơ sở Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.
+    Văn phòng có trụ sở tại Đài Bắc (臺北), Cao Hùng (高雄), Đài Trung (臺中) và Bình Đông (屏東). Văn phòng Cao Hùng tập trung vào quản trị doanh nghiệp và các tranh chấp dân sự, hình sự và hành chính. Văn phòng Đài Trung xử lý các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Văn phòng Bình Đông được mở năm 2017 để phục vụ nhu cầu của địa phương.
 
 guidanceContent.vi.pages.about.sections[0].paragraphs[2]
     Bên cạnh hoạt động luật sư, năm 2020 văn phòng kế toán Hovering Accounting Office được thành lập, cung cấp dịch vụ kế toán và hoạch định thuế cho chủ doanh nghiệp và cá nhân có tài sản lớn.
@@ -301,10 +301,10 @@ guidanceContent.vi.pages.about.sections[1].heading
     Công việc có yếu tố nước ngoài
 
 guidanceContent.vi.pages.about.sections[1].paragraphs[0]
-    Công việc có yếu tố nước ngoài của văn phòng gồm thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp. Cơ sở Đài Trung chuyên trách các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Luật sư Wei Tseng (曾雋崴) phụ trách khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong các nhóm việc nêu trên.
+    Công việc có yếu tố nước ngoài của văn phòng gồm thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp. Văn phòng Đài Trung chuyên trách các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Luật sư Wei Tseng (曾雋崴) phụ trách khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong các nhóm việc nêu trên.
 
 guidanceContent.vi.pages.about.sections[1].paragraphs[1]
-    Việc chúng tôi có thể tiếp nhận một vụ việc hay không phụ thuộc vào nội dung vụ việc và ngôn ngữ trao đổi. Nếu vụ việc của quý vị thuộc các nhóm công việc nêu trên và có thể trao đổi bằng một trong bốn ngôn ngữ tư vấn, quý vị có thể gửi tóm tắt để luật sư xem xét.
+    Việc chúng tôi có thể tiếp nhận một vụ việc hay không phụ thuộc vào nội dung vụ việc và ngôn ngữ trao đổi. Nếu vụ việc của quý vị thuộc các lĩnh vực công việc nêu trên và có thể trao đổi bằng một trong bốn ngôn ngữ tư vấn, quý vị có thể gửi tóm tắt để luật sư xem xét.
 
 guidanceContent.vi.pages.about.sections[2].heading
     Khi quý vị liên hệ với văn phòng
@@ -313,7 +313,7 @@ guidanceContent.vi.pages.about.sections[2].paragraphs[0]
     Sau khi nhận được tóm tắt của quý vị, luật sư sẽ xem xét nội dung rồi trao đổi về phạm vi công việc có thể thực hiện, tài liệu cần bổ sung và các bước tiếp theo. Với những vụ việc phát sinh vấn đề kế toán hoặc thuế, văn phòng có thể phối hợp cùng bộ phận kế toán để xử lý trong cùng một quy trình.
 
 guidanceContent.vi.pages.about.sections[2].paragraphs[1]
-    Kết quả của mỗi vụ việc phụ thuộc vào tình tiết và hồ sơ cụ thể, nên chúng tôi không đưa ra cam kết về kết quả. Khi quý vị cần một câu trả lời chắc chắn cho trường hợp của mình, cách duy nhất là trao đổi trực tiếp với luật sư về hồ sơ đó bằng một trong bốn ngôn ngữ tư vấn.
+    Kết quả của mỗi vụ việc phụ thuộc vào tình tiết và hồ sơ cụ thể, nên chúng tôi không đưa ra cam kết về kết quả. Khi quý vị cần một câu trả lời chắc chắn cho trường hợp của mình, hồ sơ đó phải được trao đổi trực tiếp với luật sư bằng một trong bốn ngôn ngữ tư vấn.
 
 guidanceContent.vi.pages.lawyers.eyebrow
     LUẬT SƯ
@@ -322,7 +322,7 @@ guidanceContent.vi.pages.lawyers.title
     Đội ngũ quốc tế Hovering
 
 guidanceContent.vi.pages.lawyers.description
-    Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên hợp tác của Hovering.
+    Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán sư hợp tác của Hovering.
 
 guidanceContent.vi.pages.lawyers.intro
     
@@ -391,13 +391,13 @@ guidanceContent.vi.pages.contact.sections[0].heading
     Ba điều cần phân biệt
 
 guidanceContent.vi.pages.contact.sections[0].paragraphs[0]
-    Ngôn ngữ hiển thị của trang, ngôn ngữ tư vấn với luật sư và ngôn ngữ quý vị dùng để viết tin nhắn là ba việc độc lập với nhau.
+    Ngôn ngữ của trang, ngôn ngữ tư vấn với luật sư và ngôn ngữ quý vị dùng để viết tin nhắn là ba việc độc lập với nhau.
 
 guidanceContent.vi.pages.contact.sections[0].items[0]
     Ngôn ngữ của trang: phần hướng dẫn này được viết bằng tiếng Việt.
 
 guidanceContent.vi.pages.contact.sections[0].items[1]
-    Ngôn ngữ tư vấn: việc tư vấn với luật sư được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Ngôn ngữ tư vấn: việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 guidanceContent.vi.pages.contact.sections[0].items[2]
     Ngôn ngữ quý vị viết: quý vị có thể viết tóm tắt bằng ngôn ngữ của mình, và nội dung gốc được giữ nguyên.
@@ -424,7 +424,7 @@ guidanceContent.vi.pages.contact.sections[3].heading
     Những điều trang này không bảo đảm
 
 guidanceContent.vi.pages.contact.sections[3].paragraphs[0]
-    Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: tin nhắn quý vị gửi không được dịch tự động.
+    Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không bố trí phiên dịch. Việc dịch văn bản là một việc khác: tin nhắn quý vị gửi không được dịch tự động.
 
 guidanceContent.vi.pages.contact.sections[3].paragraphs[1]
     Khi quý vị gửi yêu cầu, nội dung được lưu lại và chờ xem xét. Nếu sau một thời gian quý vị chưa nhận được phản hồi, quý vị có thể gửi lại qua địa chỉ thư điện tử được nêu trên trang liên hệ.
@@ -463,7 +463,7 @@ guidanceContent.vi.pages.faq.faqs[2].question
     Tôi có thể được tư vấn bằng tiếng Việt không?
 
 guidanceContent.vi.pages.faq.faqs[2].answer
-    Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.
+    Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là một việc khác: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.
 
 guidanceContent.vi.pages.faq.faqs[3].question
     Nếu tôi không dùng được cả bốn ngôn ngữ đó thì sao?
@@ -502,7 +502,7 @@ guidanceContent.vi.pages.privacy.title
     Thông tin được thu thập qua biểu mẫu liên hệ
 
 guidanceContent.vi.pages.privacy.description
-    Những thông tin biểu mẫu liên hệ ở phần tiếng Việt thu thập, cách xử lý nội dung gốc và cách quý vị liên hệ về dữ liệu của mình.
+    Những thông tin mà biểu mẫu liên hệ ở phần tiếng Việt thu thập, cách xử lý nội dung gốc và cách quý vị liên hệ về dữ liệu của mình.
 
 guidanceContent.vi.pages.privacy.intro
     Phần này chỉ nói về biểu mẫu liên hệ trên các trang hướng dẫn này. Nội dung ở đây mô tả cách thông tin được xử lý, không phải một cam kết kỹ thuật.
@@ -520,7 +520,7 @@ guidanceContent.vi.pages.privacy.sections[0].items[1]
     Địa chỉ thư điện tử để liên hệ lại
 
 guidanceContent.vi.pages.privacy.sections[0].items[2]
-    Ngôn ngữ hiển thị của trang khi quý vị gửi
+    Ngôn ngữ của trang khi quý vị gửi
 
 guidanceContent.vi.pages.privacy.sections[0].items[3]
     Ngôn ngữ quý vị dùng để viết nội dung
@@ -586,10 +586,10 @@ guidanceContent.vi.pages.privacy.sections[6].heading
     Nơi lưu trữ dữ liệu và các nhà cung cấp dịch vụ
 
 guidanceContent.vi.pages.privacy.sections[6].paragraphs[0]
-    Trang web này được lưu trữ trên Vercel, và nội dung quý vị gửi được giữ trong kho lưu trữ đối tượng không công khai của dịch vụ đó. Thư điện tử được gửi qua dịch vụ thư mà văn phòng đang sử dụng.
+    Trang web này được lưu trữ trên Vercel, và nội dung quý vị gửi được giữ trong kho lưu trữ không công khai của dịch vụ đó. Thư điện tử được gửi qua dịch vụ thư mà văn phòng đang sử dụng.
 
 guidanceContent.vi.pages.privacy.sections[6].paragraphs[1]
-    Máy chủ của một số nhà cung cấp dịch vụ có thể đặt ngoài Đài Loan, khi đó thông tin của quý vị có thể được lưu và xử lý tại nơi đó. Khi mục đích lưu giữ đã đạt được, thông tin được xóa không chậm trễ; thông tin có nghĩa vụ lưu giữ theo quy định thì được giữ trong thời hạn tương ứng. Mọi yêu cầu liên quan đến dữ liệu cá nhân được tiếp nhận tại wei@hoveringlaw.com.tw.
+    Máy chủ của một số nhà cung cấp dịch vụ có thể nằm ngoài Đài Loan, khi đó thông tin của quý vị có thể được lưu và xử lý tại nơi đó. Khi mục đích lưu giữ đã đạt được, thông tin được xóa không chậm trễ; thông tin có nghĩa vụ lưu giữ theo quy định thì được giữ trong thời hạn tương ứng. Mọi yêu cầu liên quan đến dữ liệu cá nhân được tiếp nhận tại wei@hoveringlaw.com.tw.
 
 guidanceContent.vi.pages.disclaimer.eyebrow
     TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM
@@ -619,7 +619,7 @@ guidanceContent.vi.pages.disclaimer.sections[1].paragraphs[0]
     Văn phòng hành nghề theo pháp luật Đài Loan, và các trang này chỉ nói về công việc trong phạm vi đó.
 
 guidanceContent.vi.pages.disclaimer.sections[1].paragraphs[1]
-    Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật của bất kỳ thẩm quyền nào khác ngoài Đài Loan, kể cả pháp luật nơi quý vị cư trú. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận phần đó cần đến chuyên gia có tư cách phù hợp nào.
+    Nội dung trên các trang này không phải ý kiến pháp lý theo pháp luật của bất kỳ thẩm quyền nào khác ngoài Đài Loan, kể cả pháp luật nơi quý vị cư trú. Nếu vụ việc của quý vị có phần thuộc thẩm quyền của nước khác, chúng tôi sẽ cùng quý vị xác nhận cần chuyên gia có tư cách phù hợp nào cho phần đó.
 
 guidanceContent.vi.pages.disclaimer.sections[2].heading
     Không tự động phát sinh quan hệ luật sư – khách hàng
@@ -679,13 +679,13 @@ guidanceContent.vi.pages.columns.sections[2].paragraphs[1]
     Vì vậy, xin đừng dựa vào một bài viết để quyết định hành động trong vụ việc thật. Hãy dùng bài viết để hiểu bối cảnh chung; quyết định trong vụ việc thật cần trao đổi riêng với luật sư về hồ sơ đó, và trang này không phải bước tư vấn.
 
 guidanceTeamCopy.vi.label
-    OUR TEAM
+    ĐỘI NGŨ CỦA CHÚNG TÔI
 
 guidanceTeamCopy.vi.title
     Đội ngũ quốc tế Hovering
 
 guidanceTeamCopy.vi.description
-    Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên hợp tác của Hovering.
+    Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán sư hợp tác của Hovering.
 
 guidanceTeamCopy.vi.representativeTitle
     Luật sư điều hành
@@ -694,7 +694,7 @@ guidanceTeamCopy.vi.teamTitle
     Luật sư và nhân viên
 
 guidanceTeamCopy.vi.partnerTitle
-    Kế toán viên hợp tác
+    Kế toán sư hợp tác
 
 guidanceTeamCopy.vi.introLabel
     Giới thiệu
@@ -712,7 +712,7 @@ guidanceTeamCopy.vi.workingLanguagesLabel
     Ngôn ngữ làm việc
 
 guidanceTeamCopy.vi.fullProfileLabel
-    Hồ sơ đầy đủ (English)
+    Hồ sơ đầy đủ (tiếng Anh)
 
 guidanceTeamCopy.vi.keyFactsHeading
     Luật sư Wei Tseng — Thông tin cơ bản
@@ -730,28 +730,28 @@ guidanceTeamCopy.vi.consultationLanguagesLabel
     Ngôn ngữ tư vấn
 
 guidanceTeamCopy.vi.roles.tseng-junwei
-    Luật sư điều hành tại Đài Loan (Managing Attorney)
+    Luật sư điều hành tại Đài Loan
 
 guidanceTeamCopy.vi.roles.chang-rongxuan
-    Luật sư tại Đài Loan (Taiwan Attorney)
+    Luật sư tại Đài Loan
 
 guidanceTeamCopy.vi.roles.chang-fangyu
-    Trợ lý pháp lý (Paralegal)
+    Trợ lý pháp lý
 
 guidanceTeamCopy.vi.roles.son-jungmin
-    Quản lý nghiệp vụ Hàn Quốc (Korea Operations Manager)
+    Quản lý nghiệp vụ Hàn Quốc
 
 guidanceTeamCopy.vi.roles.huang-shengping
-    Kế toán viên hợp tác (Partner CPA)
+    Kế toán sư hợp tác (會計師, CPA)
 
 guidanceTeamBios.vi.tseng-junwei.intro[0]
     Văn phòng nhận các vụ việc doanh nghiệp và cá nhân tại Đài Loan, làm việc bằng tiếng Anh, tiếng Nhật, tiếng Hàn và tiếng Trung.
 
 guidanceTeamBios.vi.tseng-junwei.intro[1]
-    Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường TWD 1.57M.
+    Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường 1,57 triệu TWD (TWD 1.57M).
 
 guidanceTeamBios.vi.tseng-junwei.education[0]
-    Thạc sĩ (M.S.), Institute of Finance, National Taiwan University
+    Thạc sĩ (M.S.), Viện Tài chính (Institute of Finance, National Taiwan University)
 
 guidanceTeamBios.vi.tseng-junwei.education[1]
     Cử nhân (B.A.) song ngành Luật và Tài chính, National Chengchi University
@@ -766,10 +766,10 @@ guidanceTeamBios.vi.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.vi.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Quỹ Trợ giúp Pháp lý, chi nhánh Đài Trung (Legal Aid Foundation, Taichung Branch)
 
 guidanceTeamBios.vi.chang-rongxuan.intro[0]
-    Từng công tác tại Ministry of Education, Legal Affairs Division, tập trung vào tranh chấp hành chính và dân sự.
+    Từng công tác tại Vụ Pháp chế, Bộ Giáo dục, tập trung vào tranh chấp hành chính và dân sự.
 
 guidanceTeamBios.vi.chang-rongxuan.intro[1]
     Có kinh nghiệm với các vụ việc về trường đại học, quyền của giảng viên và khiếu nại hành chính.
@@ -778,13 +778,13 @@ guidanceTeamBios.vi.chang-rongxuan.education[0]
     Cử nhân Luật (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.vi.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Vụ Pháp chế, Bộ Giáo dục (Ministry of Education, Legal Affairs Division)
 
 guidanceTeamBios.vi.chang-rongxuan.experience[1]
     Luật sư, Hovering International Law Firm
 
 guidanceTeamBios.vi.chang-fangyu.intro[0]
-    Trợ lý pháp lý kỳ cựu với nhiều năm ở vị trí trợ lý pháp lý cao cấp tại nhiều văn phòng luật, phụ trách hỗ trợ tố tụng, pháp chế doanh nghiệp và các vụ việc đầu tư nước ngoài.
+    Trợ lý pháp lý cao cấp, nhiều năm hỗ trợ tố tụng, pháp chế doanh nghiệp và các vụ việc đầu tư nước ngoài tại nhiều văn phòng luật.
 
 guidanceTeamBios.vi.chang-fangyu.intro[1]
     Hỗ trợ tố tụng, thành lập công ty, thủ tục chấp thuận đầu tư nước ngoài, xin giấy phép và việc trao đổi giữa Hàn Quốc và Đài Loan.
@@ -802,7 +802,7 @@ guidanceTeamBios.vi.son-jungmin.intro[0]
     Điều phối lịch tư vấn và việc liên lạc cho khách hàng Hàn Quốc.
 
 guidanceTeamBios.vi.son-jungmin.intro[1]
-    Hỗ trợ trao đổi giữa các bộ phận bằng hệ thống tài liệu và quy trình công việc, trên nền tảng khoa học máy tính.
+    Hỗ trợ trao đổi giữa các bộ phận bằng hệ thống tài liệu và quy trình công việc, với nền tảng khoa học máy tính.
 
 guidanceTeamBios.vi.son-jungmin.education[0]
     Cử nhân (B.S.) Khoa học máy tính, National Cheng Kung University
@@ -853,7 +853,7 @@ guidancePracticeAreaNames.vi.Family and labor disputes
     Tranh chấp gia đình và lao động
 
 guidanceOfficeCopy.vi.label
-    OFFICES
+    VĂN PHÒNG
 
 guidanceOfficeCopy.vi.title
     Văn phòng
@@ -928,19 +928,19 @@ guidanceFooterCopy.vi.sitemapLabel
     Sơ đồ trang web
 
 guidanceFooterCopy.vi.copyEmailLabel
-    Sao chép địa chỉ email
+    Sao chép địa chỉ thư điện tử
 
 guidanceFooterCopy.vi.emailCopiedMessage
-    Đã sao chép địa chỉ email.
+    Đã sao chép địa chỉ thư điện tử.
 
 guidanceFooterCopy.vi.officialConsultationEmailLabel
-    Email tư vấn chính thức
+    Thư điện tử tư vấn chính thức
 
 internationalInquiryCopy.vi.guidanceNotice
     Trang này được viết bằng tiếng Việt để cung cấp thông tin hướng dẫn chung, không phải ý kiến pháp lý cho vụ việc cụ thể của quý vị.
 
 internationalInquiryCopy.vi.consultationNotice
-    Việc tư vấn được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Việc tư vấn chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 internationalInquiryCopy.vi.methodConfirmationNotice
     Nếu quý vị không dùng được ngôn ngữ nào trong bốn ngôn ngữ đó, hãy chọn “Cần xác nhận cách liên hệ”. Văn phòng xác nhận phương thức trao đổi bằng thư trả lời khi có phương thức khả thi; không bảo đảm hỗ trợ bằng ngôn ngữ khác và không cam kết thời gian phản hồi.
@@ -964,13 +964,13 @@ internationalInquiryCopy.vi.successMessage
     Chúng tôi đã nhận được yêu cầu của quý vị và đang chờ xem xét. Điều này không có nghĩa là buổi tư vấn đã diễn ra hay lịch hẹn đã được xác nhận.
 
 internationalInquiryCopy.vi.savedNotificationPendingMessage
-    Yêu cầu của quý vị đã được lưu, nhưng chưa xác nhận được thông báo gửi tới văn phòng. Nội dung quý vị viết không bị mất. Nếu chưa nhận được phản hồi, quý vị cũng có thể gửi thư tới địa chỉ email trên trang liên hệ.
+    Yêu cầu của quý vị đã được lưu, nhưng chưa xác nhận được thông báo gửi tới văn phòng. Nội dung quý vị viết không bị mất. Nếu chưa nhận được phản hồi, quý vị cũng có thể gửi thư tới địa chỉ thư điện tử trên trang liên hệ.
 
 internationalInquiryCopy.vi.receiptIdLabel
     Mã tiếp nhận
 
 internationalInquiryCopy.vi.failureMessage
-    Không gửi được yêu cầu của quý vị. Vui lòng thử lại, hoặc gửi tới địa chỉ email trên trang liên hệ.
+    Không gửi được yêu cầu của quý vị. Vui lòng thử lại, hoặc gửi tới địa chỉ thư điện tử trên trang liên hệ.
 
 internationalInquiryCopy.vi.originalLanguageLabel
     Ngôn ngữ quý vị dùng để viết
@@ -1003,7 +1003,7 @@ internationalInquiryCopy.vi.requiredMessage
     Mục này là bắt buộc.
 
 internationalInquiryCopy.vi.invalidEmailMessage
-    Vui lòng nhập địa chỉ email hợp lệ.
+    Vui lòng nhập địa chỉ thư điện tử hợp lệ.
 
 internationalInquiryCopy.vi.tooLongMessage
     Nội dung quá dài. Vui lòng rút ngắn rồi gửi lại.
@@ -1033,7 +1033,7 @@ internationalInquiryCopy.vi.languageOptions.needs-method-confirmation
     Không dùng được bốn ngôn ngữ trên — cần xác nhận cách liên hệ
 
 guidanceAnswers.vi.services.answer
-    Văn phòng nhận sáu nhóm công việc theo pháp luật Đài Loan: đầu tư và thành lập doanh nghiệp, tranh chấp dân sự và bồi thường, hôn nhân, gia đình và thừa kế, tranh chấp lao động, hình sự và sở hữu trí tuệ. Phạm vi từng vụ việc được xác nhận riêng sau khi luật sư xem xét nội dung quý vị gửi. Tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Văn phòng nhận sáu lĩnh vực theo pháp luật Đài Loan: đầu tư và thành lập doanh nghiệp, tranh chấp dân sự và bồi thường, hôn nhân, gia đình và thừa kế, tranh chấp lao động, hình sự và sở hữu trí tuệ. Phạm vi từng vụ việc được xác nhận riêng sau khi luật sư xem xét nội dung quý vị gửi. Tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 guidanceAnswers.vi.services.sources[0]
     /vi/faq
@@ -1042,7 +1042,7 @@ guidanceAnswers.vi.services.sources[1]
     /vi/contact
 
 guidanceAnswers.vi.about.answer
-    Hovering International Law Firm là văn phòng luật tại Đài Loan, thành lập năm 2016 bởi luật sư Đại học Quốc lập Đài Loan (國立臺灣大學), cơ sở tại Đài Bắc, Cao Hùng, Đài Trung và Bình Đông. Từ 2020 có bộ phận kế toán; cơ sở Đài Trung phụ trách việc liên quan đến Hàn Quốc, Nhật Bản. Văn phòng không cam kết kết quả. Tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Hovering International Law Firm là văn phòng luật Đài Loan, thành lập năm 2016 bởi luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學), có văn phòng tại Đài Bắc, Cao Hùng, Đài Trung, Bình Đông. Từ 2020 có bộ phận kế toán; văn phòng Đài Trung phụ trách việc liên quan đến Hàn Quốc, Nhật Bản. Văn phòng không cam kết kết quả. Tư vấn chỉ bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 guidanceAnswers.vi.about.sources[0]
     /vi/lawyers
@@ -1051,7 +1051,7 @@ guidanceAnswers.vi.about.sources[1]
     /vi/services
 
 guidanceAnswers.vi.lawyers.answer
-    Trang này giới thiệu các luật sư, quản lý nghiệp vụ và kế toán viên hợp tác của Hovering. Luật sư Wei Tseng (曾雋崴) có tư cách hành nghề tại Đài Loan và là luật sư điều hành của văn phòng, làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế. Việc tư vấn của văn phòng được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Trang này giới thiệu các luật sư, quản lý nghiệp vụ và kế toán sư hợp tác của Hovering. Luật sư Wei Tseng (曾雋崴) có tư cách hành nghề tại Đài Loan và là luật sư điều hành của văn phòng, làm việc với khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế. Việc tư vấn của văn phòng chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 guidanceAnswers.vi.lawyers.sources[0]
     /vi/about
@@ -1060,7 +1060,7 @@ guidanceAnswers.vi.lawyers.sources[1]
     /vi/contact
 
 guidanceAnswers.vi.pricing.answer
-    Trang này không công bố bảng giá. Phạm vi công việc được xác định từ tóm tắt quý vị gửi, sau đó mức phí và cách tính được xác nhận trước khi bắt đầu. Buổi tư vấn có thể là dịch vụ có thu phí. Ngoài thù lao luật sư có thể có khoản nộp cho tòa án hoặc cơ quan nhà nước. Việc tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Trang này không công bố bảng giá. Phạm vi công việc được xác định từ tóm tắt quý vị gửi, rồi mức phí và cách tính được xác nhận trước khi bắt đầu. Buổi tư vấn có thể là dịch vụ có thu phí. Ngoài thù lao luật sư có thể có khoản nộp cho tòa án hoặc cơ quan nhà nước. Việc tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 guidanceAnswers.vi.pricing.sources[0]
     /vi/contact
@@ -1069,7 +1069,7 @@ guidanceAnswers.vi.pricing.sources[1]
     /vi/faq
 
 guidanceAnswers.vi.contact.answer
-    Hãy gửi tóm tắt qua biểu mẫu liên hệ: chuyện gì đã xảy ra, cần hỗ trợ gì, vụ việc liên quan đến Đài Loan ra sao và thời hạn nếu có. Bước đầu chưa cần gửi giấy tờ tùy thân hay toàn bộ chứng cứ. Văn phòng không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này. Việc tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Hãy gửi tóm tắt qua biểu mẫu liên hệ: chuyện gì đã xảy ra, cần hỗ trợ gì, vụ việc liên quan đến Đài Loan ra sao và thời hạn nếu có. Bước đầu chưa cần gửi giấy tờ tùy thân hay toàn bộ chứng cứ. Văn phòng không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua đây. Việc tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 guidanceAnswers.vi.contact.sources[0]
     /vi/faq
@@ -1078,7 +1078,7 @@ guidanceAnswers.vi.contact.sources[1]
     /vi/pricing
 
 guidanceAnswers.vi.faq.answer
-    Phần hỏi đáp trả lời ở mức thông tin chung: sáu nhóm công việc, cách chuẩn bị tóm tắt, chi phí và ý nghĩa của việc gửi yêu cầu. Yêu cầu đã gửi đang chờ luật sư xem xét; không phải ý kiến pháp lý, không phải lịch hẹn, và không tạo lập quan hệ giữa luật sư và khách hàng. Việc tư vấn được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Phần hỏi đáp trả lời ở mức thông tin chung: sáu lĩnh vực công việc, cách chuẩn bị tóm tắt, chi phí và ý nghĩa của việc gửi yêu cầu. Yêu cầu đã gửi đang chờ luật sư xem xét; không phải ý kiến pháp lý, không phải lịch hẹn, và không tạo lập quan hệ giữa luật sư và khách hàng. Việc tư vấn chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 guidanceAnswers.vi.faq.sources[0]
     /vi/contact
@@ -1087,10 +1087,10 @@ guidanceAnswers.vi.faq.sources[1]
     /vi/services
 
 GUIDANCE_LLMS_NOTICES.vi.consultationNotice
-    Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.
+    Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.
 
 GUIDANCE_LLMS_NOTICES.vi.discoveryNotice
-    Tệp llms.txt này chỉ là bản đồ tra cứu các trang công khai; nó không hứa hẹn thứ hạng tìm kiếm, sự chứng thực, khuyến nghị của AI hay việc được hiển thị.
+    Tệp llms.txt này chỉ là mục lục để tìm các trang công khai; nó không hứa hẹn thứ hạng trên công cụ tìm kiếm, không phải lời giới thiệu hay khuyến nghị của trí tuệ nhân tạo, và cũng không bảo đảm mức độ hiển thị.
 
 GUIDANCE_LLMS_NOTICES.vi.confidentialNotice
     Vì nội dung gốc được lưu giữ, xin đừng viết những thông tin chưa cần thiết ở bước đầu, chẳng hạn số hộ chiếu, số giấy tờ tùy thân hay thông tin tài khoản ngân hàng.

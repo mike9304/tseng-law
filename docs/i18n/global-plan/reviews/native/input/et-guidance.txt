@@ -1,4 +1,4 @@
-# et guidance pack strings (path → text). Generated 2026-09-22
+# et guidance pack strings (path → text). Generated 2026-09-23
 
 guidanceContent.et.languageName
     Eesti
@@ -28,7 +28,7 @@ guidanceContent.et.nav.privacy
     Privaatsus
 
 guidanceContent.et.nav.disclaimer
-    Vastutus
+    Lahtiütlus
 
 guidanceContent.et.nav.columns
     Artiklid
@@ -46,37 +46,37 @@ guidanceContent.et.menuLabel
     Menüü
 
 guidanceContent.et.languageLabel
-    Kuva keel
+    Lehe keel
 
 guidanceContent.et.mega.services.description
     Büroo tegeleb Taiwani õiguse põhiliste valdkondadega.
 
 guidanceContent.et.mega.services.viewAllLabel
-    Kuva kõik
+    Vaadake kõiki
 
 guidanceContent.et.mega.columns.description
     Artikleid Taiwani õiguse korduvatest küsimustest.
 
 guidanceContent.et.mega.columns.viewAllLabel
-    Kuva kõik
+    Vaadake kõiki
 
 guidanceContent.et.mega.lawyers.description
     Büroo advokaatide tutvustus ja ühenduse võtmise viisid.
 
 guidanceContent.et.mega.lawyers.viewAllLabel
-    Kuva kõik
+    Vaadake kõiki
 
 guidanceContent.et.mega.pricing.description
     See leht selgitab töö ulatust ja seda, kuidas tasud kinnitatakse.
 
 guidanceContent.et.mega.pricing.viewAllLabel
-    Kuva kõik
+    Vaadake kõiki
 
 guidanceContent.et.mega.faq.description
     Korduvad küsimused büroo töö kohta Taiwanis.
 
 guidanceContent.et.mega.faq.viewAllLabel
-    Kuva kõik
+    Vaadake kõiki
 
 guidanceContent.et.notFoundTitle
     Lehte ei leitud
@@ -121,7 +121,7 @@ guidanceContent.et.home.columnsOriginalLanguageBadge
     Algkeel
 
 guidanceContent.et.home.columnsOriginalLanguageNote
-    Järgmisi artikleid ei ole veel eesti keeles. Loend jääb algkeelde ja avab vastava keelelehe; sisu ei tõlgita automaatselt.
+    Järgmisi artikleid ei ole veel eesti keeles. Loend on algkeeles ja avab vastava keele lehe; sisu ei tõlgita automaatselt.
 
 guidanceContent.et.home.imageBandAlt
     Traditsiooniline taiwani sanheyuan (三合院) ja kaasaegne paviljon päevavalguses
@@ -142,7 +142,7 @@ guidanceContent.et.pages.home.title
     Õigusteenused Taiwanis — juhised eesti keeles
 
 guidanceContent.et.pages.home.description
-    Üldine seletus eesti keeles Hovering International Law Firmi töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese ühenduse kohta.
+    Üldine seletus eesti keeles büroo Hovering International Law Firm’i töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese pöördumise kohta.
 
 guidanceContent.et.pages.home.intro
     Hovering International Law Firm abistab välismaiseid kliente, sealhulgas Taiwaniga seotud isikuid, Taiwani õiguse asjades: investeeringud ja äriühingu asutamine, tsiviilvaidlused, abielu, perekond ja pärimine, tööõigus, kriminaalasjad ning intellektuaalomand. See eestikeelne osa aitab teil näha, milline töö kuulub meie valdkonda, mida ette valmistada ja kuidas meieni jõuda. Tegemist on üldise teabega, mitte õigusnõuga teie asjas.
@@ -151,7 +151,7 @@ guidanceContent.et.pages.home.sections[0].heading
     Millega tegeleme
 
 guidanceContent.et.pages.home.sections[0].paragraphs[0]
-    Hovering International Law Firm on Taiwanis asutatud advokaadibüroo. Ta töötab Taiwani õiguse järgi ning tal on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Nõustame ettevõtteid, viime läbi kohtumenetlusi ja abistame välismaiseid kliente sammudes, mida Taiwanis on vaja teha.
+    Hovering International Law Firm on Taiwanis asutatud advokaadibüroo. Ta töötab Taiwani õiguse järgi ning tal on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Nõustame ettevõtteid, viime läbi kohtumenetlusi ja aitame välismaistel klientidel teha samme, mida Taiwanis on vaja.
 
 guidanceContent.et.pages.home.sections[0].paragraphs[1]
     Kogu siinne sisu on üldine. Asja tulemus sõltub asjaoludest, kohalduvatest sätetest ja ajast. Need juhised ei asenda vestlust advokaadiga teie dokumentide üle.
@@ -163,13 +163,13 @@ guidanceContent.et.pages.home.sections[1].paragraphs[0]
     See leht on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult neljas nõustamiskeeles: inglise, hiina (中文), jaapani ja korea keeles. Juhiste lugemine eesti keeles ei tähenda, et vestlus advokaadiga toimuks eesti keeles.
 
 guidanceContent.et.pages.home.sections[1].paragraphs[1]
-    Me ei luba tõlki, vastamise tähtaega ega kohtumist selle lehe kaudu. Kui te ei saa kasutada ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.
+    Me ei anna selle lehe kaudu lubadust tõlgi, vastamise tähtaja ega kohtumise kohta. Kui te ei oska ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.
 
 guidanceContent.et.pages.home.sections[2].heading
     Töövaldkonnad
 
 guidanceContent.et.pages.home.sections[2].paragraphs[0]
-    Töövaldkond hõlmab järgmisi kuut rühma. Leht „Teenused“ kirjeldab iga rühma täpsemalt ja ütleb, mida ei lubata.
+    Töövaldkond hõlmab järgmisi kuut rühma. Leht „Teenused“ kirjeldab iga rühma täpsemalt ja ütleb, mille kohta lubadust ei anta.
 
 guidanceContent.et.pages.home.sections[2].items[0]
     Investeeringud ja äriühingu asutamine Taiwanis
@@ -214,16 +214,16 @@ guidanceContent.et.pages.services.sections[0].heading
     Investeeringud ja äriühingu asutamine Taiwanis
 
 guidanceContent.et.pages.services.sections[0].paragraphs[0]
-    Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Toetame ka raamatupidamist ja makse, mis tekivad asutamisest ja tegutsemisest Taiwanis.
+    Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Abistame ka raamatupidamis- ja maksuküsimustes, mis tekivad asutamisest ja tegutsemisest Taiwanis.
 
 guidanceContent.et.pages.services.sections[0].paragraphs[1]
-    Menetluse käik ja kestus erinevad vormi, investori, tegevusala, panga ja juba olemasolevate dokumentide järgi. Äriühingu asutamine iseenesest ei too kaasa elamisõigust (居留) ega tööluba (工作許可): need on eraldi menetlused, mida hinnatakse isiku olukorra järgi.
+    Menetluse käik ja kestus erinevad vormi, investori, tegevusala, panga ja juba olemasolevate dokumentide järgi. Äriühingu asutamine iseenesest ei anna elamisluba (居留) ega tööluba (工作許可): need on eraldi menetlused, mida hinnatakse isiku olukorra järgi.
 
 guidanceContent.et.pages.services.sections[1].heading
     Tsiviilvaidlused ja kahjuhüvitis
 
 guidanceContent.et.pages.services.sections[1].paragraphs[0]
-    Sellesse valdkonda kuuluvad lepinguvaidlused, lepinguväline kahjuõiguslik vastutus ja tarbijavaidlused. Töö algab tavaliselt sündmuste ajajärjestuse selgitamisest ning olemasolevate dokumentide ja tõendite läbivaatamisest ning alles seejärel lepitakse kokku järgmised sammud.
+    Sellesse valdkonda kuuluvad lepinguvaidlused, lepinguväline (deliktiline) vastutus ja tarbijavaidlused. Töö algab tavaliselt sündmuste ajajärjestuse selgitamisest ning olemasolevate dokumentide ja tõendite läbivaatamisest ning alles seejärel lepitakse kokku järgmised sammud.
 
 guidanceContent.et.pages.services.sections[1].paragraphs[1]
     Tähtajad, sealhulgas aegumine, ja tõendite täielikkus mõjutavad kulgu otsustavalt. Nimetage seetõttu teadaolevad kuupäevad võimalikult varakult. Säilitage lepingud, teated, maksetõendid või fotod olukorrast kohapeal ja mainige neid esimeses teates.
@@ -232,7 +232,7 @@ guidanceContent.et.pages.services.sections[2].heading
     Abielu, perekond ja pärimine
 
 guidanceContent.et.pages.services.sections[2].paragraphs[0]
-    Tegeleme abielulahutusega (離婚), vara jagamisega, alaealiste laste hooldusõiguse ja vanemliku vastutusega (未成年子女權利義務之行使或負擔), suhtlusõigusega (會面交往) ja pärimisega (繼承), ka siis, kui pooled või vara asuvad eri riikides. Piiriülesed perekonnaasjad nõuavad sageli täiendavat kontrolli leibkonnaregistri (戶籍), dokumentide vormi ja nende tõendusväärtuse kohta Taiwanis.
+    Tegeleme abielulahutusega (離婚), vara jagamisega, alaealiste laste õiguste teostamise ja kohustuste kandmisega (未成年子女權利義務之行使或負擔), suhtlusõigusega (會面交往) ja pärimisega (繼承), ka siis, kui pooled või vara asuvad eri riikides. Piiriülesed perekonnaasjad nõuavad sageli täiendavat kontrolli leibkonnaregistri (戶籍), dokumentide vormi ja nende tõendusväärtuse kohta Taiwanis.
 
 guidanceContent.et.pages.services.sections[2].paragraphs[1]
     Kuna perekonnaasjadega kaasnevad sageli tähtajad ja paralleelsed menetlused, peaks esimene kokkuvõte nimetama poolte suhte, praeguse elukoha ja juba käimasolevad menetlused.
@@ -241,7 +241,7 @@ guidanceContent.et.pages.services.sections[3].heading
     Tööõiguslikud vaidlused
 
 guidanceContent.et.pages.services.sections[3].paragraphs[0]
-    Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne seadusjärgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide sarnaste korraldustega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.
+    Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide lahkumishüvitise ega töötushüvitisega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.
 
 guidanceContent.et.pages.services.sections[3].paragraphs[1]
     Tööleping, töökorralduseeskiri (工作規則), palgalehed ja poolte kirjavahetus on tavaliselt määravad dokumendid. Kui need on teil veel olemas, mainige seda kokkuvõttes.
@@ -271,28 +271,28 @@ guidanceContent.et.pages.services.sections[6].paragraphs[0]
     Büroo töötab Taiwani õiguse järgi ja tegeleb eespool nimetatud valdkondade asjadega. Iga asja ulatus kinnitatakse eraldi pärast seda, kui advokaat on teie teate läbi vaadanud.
 
 guidanceContent.et.pages.services.sections[6].paragraphs[1]
-    Elamisstaatus, tööluba ja sarnased küsimused hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei luba tulemust ega vastamise tähtaega.
+    Elamisstaatust, tööluba ja sarnaseid küsimusi hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei anna lubadust tulemuse ega vastamise tähtaja kohta.
 
 guidanceContent.et.pages.about.eyebrow
     BÜROO
 
 guidanceContent.et.pages.about.title
-    Hovering International Law Firmist
+    Teave büroo Hovering International Law Firm kohta
 
 guidanceContent.et.pages.about.description
     Põhiandmed selle Taiwani advokaadibüroo, selle büroode ja välismaiste osapooltega tehtava töö kohta.
 
 guidanceContent.et.pages.about.intro
-    Hovering International Law Firm on advokaadibüroo Taiwanis. Advokaadid töötavad ettevõtete nõustamisest kuni kohtumenetluseni. See osa kirjeldab büroo teket, asukohti ja tööd välismaiste osapooltega.
+    Hovering International Law Firm on advokaadibüroo Taiwanis. Advokaadid tegelevad nii ettevõtete nõustamise kui ka kohtumenetlusega. See osa kirjeldab büroo teket, asukohti ja tööd välismaiste osapooltega.
 
 guidanceContent.et.pages.about.sections[0].heading
     Asutamine ja ülesehitus
 
 guidanceContent.et.pages.about.sections[0].paragraphs[0]
-    Hovering International Law Firm (昊鼎國際法律事務所) asutasid 2016. aastal advokaadid, kes on õppinud National Taiwan Universitys (國立臺灣大學). Hiinakeelne nimi 昊鼎 ühendab märgi 昊 („lai taevas“) märgiga 鼎 („kindel alus“) ja kirjeldab büroo suunda asutamisest saadik.
+    Hovering International Law Firm (昊鼎國際法律事務所) asutasid 2016. aastal advokaadid, kes on õppinud National Taiwan University’s (國立臺灣大學). Hiinakeelne nimi 昊鼎 ühendab märgi 昊 („lai taevas“) märgiga 鼎 („kindel alus“) ja kirjeldab büroo suunda asutamisest saadik.
 
 guidanceContent.et.pages.about.sections[0].paragraphs[1]
-    Meil on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Kaohsiungi büroo keskendub ettevõtte juhtimisele ning tegeleb tsiviil-, kriminaal- ja haldusvaidlustega. Taichungi büroo tegeleb ehitusasjade, intellektuaalomandi ning Korea ja Jaapaniga seotud asjadega. Pingtungi büroo avati 2017. aastal kohaliku vajaduse jaoks.
+    Meil on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Kaohsiungi büroo keskendub ettevõtte juhtimisele ning tegeleb tsiviil-, kriminaal- ja haldusvaidlustega. Taichungi büroo tegeleb ehitusasjade, intellektuaalomandi ning Korea ja Jaapaniga seotud asjadega. Pingtungi büroo avati 2017. aastal kohalike klientide teenindamiseks.
 
 guidanceContent.et.pages.about.sections[0].paragraphs[2]
     Advokaaditöö kõrval tegutseb alates 2020. aastast ka Hovering Accounting Office, mis pakub raamatupidamist ja maksude planeerimist ettevõtjatele ja varakatele eraisikutele.
@@ -310,10 +310,10 @@ guidanceContent.et.pages.about.sections[2].heading
     Kui võtate meiega ühendust
 
 guidanceContent.et.pages.about.sections[2].paragraphs[0]
-    Kui teie kokkuvõte on saabunud, vaatab advokaat sisu läbi ja räägib seejärel võimalikust töö ulatusest, veel vajalikest dokumentidest ja järgmistest sammudest. Maksu- või raamatupidamisküsimustes võib büroo töötada raamatupidamisüksusega ühes menetluses.
+    Kui teie kokkuvõte on saabunud, vaatab advokaat sisu läbi ja räägib seejärel võimalikust töö ulatusest, veel vajalikest dokumentidest ja järgmistest sammudest. Maksu- või raamatupidamisküsimustes võib büroo teha koostööd raamatupidamisüksusega.
 
 guidanceContent.et.pages.about.sections[2].paragraphs[1]
-    Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemust me ei luba. Kui vajate siduvat vastust oma olukorrale, tuleb dokumendid arutada advokaadiga ühes neljast nõustamiskeelest.
+    Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemuse kohta me lubadust ei anna. Kui vajate siduvat vastust oma olukorrale, tuleb dokumente advokaadiga arutada ühes neljast nõustamiskeelest.
 
 guidanceContent.et.pages.lawyers.eyebrow
     ADVOKAADID
@@ -322,7 +322,7 @@ guidanceContent.et.pages.lawyers.title
     Hoveringi rahvusvaheline meeskond
 
 guidanceContent.et.pages.lawyers.description
-    Hoveringi advokaatide, tegevjuhtimise ja seotud audiitorbüroo profiilid.
+    Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid.
 
 guidanceContent.et.pages.lawyers.intro
     
@@ -334,7 +334,7 @@ guidanceContent.et.pages.pricing.title
     Kuidas kinnitatakse töö ulatus ja tasud
 
 guidanceContent.et.pages.pricing.description
-    Selgitus järjekorrast: esmalt töö ulatus, seejärel tasude kinnitamine, ja miks sellel lehel ei ole hinnakirja.
+    Selgitus järjekorrast: esmalt töö ulatus, seejärel tasude kinnitamine ja see, miks sellel lehel ei ole hinnakirja.
 
 guidanceContent.et.pages.pricing.intro
     See leht selgitab, kuidas tasud kinnitatakse, mitte nende suurust. Suurus sõltub üksiku asja töö ulatusest ja on mõttekas alles siis, kui see ulatus on selge.
@@ -346,7 +346,7 @@ guidanceContent.et.pages.pricing.sections[0].paragraphs[0]
     Sama liiki asjades võib töömaht olla väga erinev, olenevalt poolte arvust, olemasolevatest dokumentidest, järgitavatest tähtaegadest ja sellest, kas menetlus on juba alanud. Seepärast on esimene samm alati kindlaks määrata, mis kuulub töösse ja mis mitte.
 
 guidanceContent.et.pages.pricing.sections[0].paragraphs[1]
-    Kokkuvõte, mille alguses saadate, on selle ulatuse alus. Mida selgemalt see kirjeldab sündmuste käiku, teie soovi ja tähtaegu, seda täpsemalt saab ulatuse määrata.
+    Kokkuvõte, mille te alguses saadate, on selle ulatuse alus. Mida selgemalt see kirjeldab sündmuste käiku, teie soovi ja tähtaegu, seda täpsemalt saab ulatuse määrata.
 
 guidanceContent.et.pages.pricing.sections[1].heading
     Tasud kinnitatakse enne töö algust
@@ -355,7 +355,7 @@ guidanceContent.et.pages.pricing.sections[1].paragraphs[0]
     Kui töö ulatus on selge, arutatakse summa ja arvutusviis teiega läbi ja kinnitatakse enne töö algust. Kui ulatus muutub töö käigus, tuleb see uuesti kinnitada.
 
 guidanceContent.et.pages.pricing.sections[1].paragraphs[1]
-    See leht ei ole hinnapakkumine ega tekita maksekohustust.
+    See leht ei ole hinnapakkumine ega tekita maksekohustust. Taotluse saatmine sellelt lehelt on samuti tasuta.
 
 guidanceContent.et.pages.pricing.sections[2].heading
     Nõustamine võib olla tasuline
@@ -367,10 +367,10 @@ guidanceContent.et.pages.pricing.sections[2].paragraphs[1]
     Kui nõustamine on tasuline, teatatakse summa ja makseviis enne selle toimumist.
 
 guidanceContent.et.pages.pricing.sections[3].heading
-    Miks sellel lehel ei ole tariife
+    Miks sellel lehel ei ole hinnakirja
 
 guidanceContent.et.pages.pricing.sections[3].paragraphs[0]
-    Tasud sõltuvad asjast endast: töömahust, poolte arvust, dokumentidest, tähtaegadest ja sellest, kas menetlus juba käib. Eelnevalt öeldud number ei näitaks, millised oleksid tasud teie asjas. Seepärast kinnitame esmalt töö ulatuse ja teatame teile seejärel tasud, enne kui töö algab.
+    Tasud sõltuvad asjast endast: töömahust, poolte arvust, dokumentidest, tähtaegadest ja sellest, kas menetlus juba käib. Ette kindlaks määratud summa ei näitaks, millised oleksid tasud teie asjas. Seepärast kinnitame esmalt töö ulatuse ja teatame teile seejärel tasud, enne kui töö algab.
 
 guidanceContent.et.pages.pricing.sections[3].paragraphs[1]
     Lisaks advokaaditasule võivad tekkida kohtu-, asutuse- või kolmanda isiku kulud. Need on tasust eraldi ja sõltuvad vastavast menetlusest.
@@ -379,10 +379,10 @@ guidanceContent.et.pages.contact.eyebrow
     KONTAKT
 
 guidanceContent.et.pages.contact.title
-    Kuidas bürooni jõuda
+    Kuidas büroo poole pöörduda
 
 guidanceContent.et.pages.contact.description
-    Lehe keel, nõustamiskeeled, toimimisviis, kui te ei saa kasutada ühtegi neljast keelest, ja mida see leht ei luba.
+    Lehe keel, nõustamiskeeled, toimimisviis, kui te ei oska ühtegi neljast keelest, ja mida see leht ei luba.
 
 guidanceContent.et.pages.contact.intro
     Enne kui meile kirjutate, eristage järgmised kolm asja. Neid aetakse sageli segi, kuid need tähendavad erinevaid asju.
@@ -391,7 +391,7 @@ guidanceContent.et.pages.contact.sections[0].heading
     Kolm asja, mida tuleb hoida lahus
 
 guidanceContent.et.pages.contact.sections[0].paragraphs[0]
-    Lehe kuva keel, nõustamiskeel advokaadiga ja keel, milles te kirjutate, on kolm eri asja.
+    Lehe kuvakeel, nõustamiskeel advokaadiga ja keel, milles te kirjutate, on kolm eri asja.
 
 guidanceContent.et.pages.contact.sections[0].items[0]
     Lehe keel: need juhised on kirjutatud eesti keeles.
@@ -400,16 +400,16 @@ guidanceContent.et.pages.contact.sections[0].items[1]
     Nõustamiskeel: nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles.
 
 guidanceContent.et.pages.contact.sections[0].items[2]
-    Teie kirjutamiskeel: kokkuvõtte võite kirjutada oma keeles; algtekst säilitatakse muutmata kujul.
+    Keel, milles kirjutate: kokkuvõtte võite kirjutada oma keeles; algtekst säilitatakse muutmata kujul.
 
 guidanceContent.et.pages.contact.sections[1].heading
-    Kui te ei saa kasutada ühtegi neljast nõustamiskeelest
+    Kui te ei oska ühtegi neljast nõustamiskeelest
 
 guidanceContent.et.pages.contact.sections[1].paragraphs[0]
-    Kontaktvormil võite valida „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaega ei lubata.
+    Kontaktvormil võite valida „Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaja kohta lubadust ei anta.
 
 guidanceContent.et.pages.contact.sections[1].paragraphs[1]
-    See on üksnes kontroll, mitte lubadus. Me ei luba tõlki, teenust eesti keeles ega muus keeles väljaspool neid nelja keelt, ega seda, et võtame iga asja vastu.
+    See on üksnes kontroll, mitte lubadus. Me ei anna lubadust tõlgi, teenuse eesti keeles ega muus keeles väljaspool neid nelja keelt ega selle kohta, et võtame iga asja vastu.
 
 guidanceContent.et.pages.contact.sections[2].heading
     Mis peaks olema esimeses teates
@@ -418,13 +418,13 @@ guidanceContent.et.pages.contact.sections[2].paragraphs[0]
     Nimetage, mis on juhtunud, millist abi vajate, milline side on asjal Taiwaniga, ja tähtaeg, kui te selle teate. Kui olete juba saanud kirja kohtult või asutuselt, nimetage kirjal olev kuupäev.
 
 guidanceContent.et.pages.contact.sections[2].paragraphs[1]
-    Algfaasis ei ole veel vaja saata passinumbrit, isikutunnistuse numbrit, kontonumbreid, haiguslugu ega kogu tõendusmaterjali. Oodake advokaadi juhiseid ja saatke tundlikud dokumendid seejärel turvalist teed pidi.
+    Algfaasis ei ole veel vaja saata passinumbrit, isikutunnistuse numbrit, kontonumbreid, haiguslugu ega kogu tõendusmaterjali. Oodake advokaadi juhiseid ja saatke tundlikud dokumendid seejärel turvalist kanalit pidi.
 
 guidanceContent.et.pages.contact.sections[3].heading
     Mida see leht ei luba
 
 guidanceContent.et.pages.contact.sections[3].paragraphs[0]
-    Me ei luba vastamise tähtaega, ei kinnita kohtumist selle lehe kaudu, ei luba konkreetset advokaati ega korralda tõlki. Kirjalik tõlge on midagi muud: teie teadet ei tõlgita automaatselt.
+    Me ei anna lubadust vastamise tähtaja kohta, ei kinnita kohtumist selle lehe kaudu, ei anna lubadust konkreetse advokaadi kohta ega korralda tõlki. Kirjalik tõlge on midagi muud: teie teadet ei tõlgita automaatselt.
 
 guidanceContent.et.pages.contact.sections[3].paragraphs[1]
     Kui saadate taotluse, säilitatakse sisu ja see ootab läbivaatamist. Kui te mõne aja pärast vastust ei saa, võite kirjutada uuesti kontaktlehel nimetatud e-posti aadressile.
@@ -445,7 +445,7 @@ guidanceContent.et.pages.faq.sections[0].heading
     Kuidas seda osa kasutada
 
 guidanceContent.et.pages.faq.sections[0].paragraphs[0]
-    Kui te ei leia vastust oma olukorrale, sõltub vastus tavaliselt erilistest asjaoludest. Kirjutage need asjaolud kokkuvõttesse, selle asemel et neid ise sellelt lehelt tuletada.
+    Kui te ei leia vastust oma olukorrale, sõltub vastus tavaliselt asja konkreetsetest asjaoludest. Kirjutage need asjaolud kokkuvõttesse, selle asemel et neid ise sellelt lehelt tuletada.
 
 guidanceContent.et.pages.faq.faqs[0].question
     Milliste asjadega büroo tegeleb?
@@ -463,13 +463,13 @@ guidanceContent.et.pages.faq.faqs[2].question
     Kas ma saan nõu eesti keeles?
 
 guidanceContent.et.pages.faq.faqs[2].answer
-    Ei. Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles. Me ei luba ka tõlki. Kirjalik tõlge on midagi muud: algtekst, mille kirjutate, säilitatakse nii, nagu see on, ja seda ei tõlgita automaatselt.
+    Ei. Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles. Me ei anna lubadust ka tõlgi kohta. Kirjalik tõlge on midagi muud: algtekst, mille kirjutate, säilitatakse nii, nagu see on, ja seda ei tõlgita automaatselt.
 
 guidanceContent.et.pages.faq.faqs[3].question
-    Mis siis, kui ma ei saa kasutada ühtegi neljast keelest?
+    Mis siis, kui ma ei oska ühtegi neljast keelest?
 
 guidanceContent.et.pages.faq.faqs[3].answer
-    Valige saatmisel „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida suhtlusviisi, kuid teenust muus keeles ei tagata. See on kontroll, mitte lubadus, et saame töötada muus keeles.
+    Valige saatmisel „Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada“. Vastame, et kontrollida suhtlusviisi, kuid teenust muus keeles ei tagata. See on kontroll, mitte lubadus, et saame töötada muus keeles.
 
 guidanceContent.et.pages.faq.faqs[4].question
     Kuidas minu eestikeelset teksti käsitletakse?
@@ -487,13 +487,13 @@ guidanceContent.et.pages.faq.faqs[6].question
     Kuidas tasud arvutatakse?
 
 guidanceContent.et.pages.faq.faqs[6].answer
-    Esmalt kinnitatakse töö ulatus, seejärel kinnitatakse teiega summa ja arvutusviis enne töö algust. See leht ei nimeta arve ega ütle, et esimene vestlus on tasuta.
+    Esmalt kinnitatakse töö ulatus, seejärel kinnitatakse teiega summa ja arvutusviis enne töö algust. See leht ei nimeta summasid ega ütle, et esimene vestlus on tasuta.
 
 guidanceContent.et.pages.faq.faqs[7].question
     Mis siis, kui minu asi on väga kiireloomuline?
 
 guidanceContent.et.pages.faq.faqs[7].answer
-    Nimetage tähtaeg või ametikiri kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole valvesidet ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite paralleelselt otsima muid teid oma asukohas.
+    Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole erakorralist kontakti ega anta vastamise tähtaja kohta lubadust; kui teie asi ei saa oodata, peaksite samal ajal otsima muud abi oma asukohas.
 
 guidanceContent.et.pages.privacy.eyebrow
     PRIVAATSUS
@@ -520,7 +520,7 @@ guidanceContent.et.pages.privacy.sections[0].items[1]
     E-posti aadress vastuse jaoks
 
 guidanceContent.et.pages.privacy.sections[0].items[2]
-    Lehe kuva keel saatmise hetkel
+    Lehe kuvakeel saatmise hetkel
 
 guidanceContent.et.pages.privacy.sections[0].items[3]
     Keel, milles te kirjutasite
@@ -550,7 +550,7 @@ guidanceContent.et.pages.privacy.sections[2].heading
     Säilitamiskoht ja juurdepääs
 
 guidanceContent.et.pages.privacy.sections[2].paragraphs[0]
-    Teie saadetise sisu säilitatakse kohas, mis ei ole avalikult kättesaadav. Juurdepääs on ainult büroo volitatud isikutel taotluse menetlemiseks.
+    Teie saadetud andmete sisu säilitatakse kohas, mis ei ole avalikult kättesaadav. Juurdepääs on ainult büroo volitatud isikutel taotluse menetlemiseks.
 
 guidanceContent.et.pages.privacy.sections[2].paragraphs[1]
     See leht ei anna absoluutset turvagarantiid. Ükski edastustee ega ükski säilitamiskoht ei ole täielikult turvaline; tundlikud dokumendid tuleks seetõttu saata alles pärast advokaadi erijuhist.
@@ -559,7 +559,7 @@ guidanceContent.et.pages.privacy.sections[3].heading
     Kasutamise eesmärk
 
 guidanceContent.et.pages.privacy.sections[3].paragraphs[0]
-    Saadetud andmed teenivad taotluse läbivaatamist, tagasisidet teile, suhtlusviisi selgitamist ja menetlemist, kui töö võetakse vastu.
+    Saadetud andmeid kasutatakse taotluse läbivaatamiseks, teile vastamiseks, suhtlusviisi selgitamiseks ja menetlemiseks, kui töö võetakse vastu.
 
 guidanceContent.et.pages.privacy.sections[3].paragraphs[1]
     Andmeid ei kasutata turunduseks ilma eraldi nõusolekuta.
@@ -571,13 +571,13 @@ guidanceContent.et.pages.privacy.sections[4].paragraphs[0]
     Kui taotlus saadetakse edukalt, teavitab süsteem bürood. Kui seda teadet ei ole veel kinnitatud, jääb teie tekst alles ega kao.
 
 guidanceContent.et.pages.privacy.sections[4].paragraphs[1]
-    Vastuvõtunumber aitab teie taotlust meie toimikutest leida. See kuvatakse pärast säilitamist; võite selle uuel ühendusel nimetada.
+    Vastuvõtunumber aitab teie taotlust meie toimikutest leida. See kuvatakse pärast säilitamist; võite selle uuesti ühendust võttes nimetada.
 
 guidanceContent.et.pages.privacy.sections[5].heading
     Teie õigused ja ühenduse võtmise viis
 
 guidanceContent.et.pages.privacy.sections[5].paragraphs[0]
-    Võite taotleda oma andmete tutvustamist, parandamist või kustutamist või nõusoleku tagasi võtta kontaktlehel nimetatud e-posti aadressi kaudu. Kui on seaduslik või menetlusest tulenev säilitamiskohustus, selgitame piirangut.
+    Võite taotleda oma andmetega tutvumist, nende parandamist või kustutamist või võtta nõusoleku tagasi kontaktlehel nimetatud e-posti aadressi kaudu. Kui on seaduslik või menetlusest tulenev säilitamiskohustus, selgitame piirangut.
 
 guidanceContent.et.pages.privacy.sections[5].paragraphs[1]
     See leht ei nimeta kindlat säilitamistähtaega, sest tegelik kestus sõltub sellest, kas asja jätkatakse, ja sellega seotud kohustustest. Kui soovite varasemat kustutamist, teatage sellest ühendust võttes.
@@ -586,22 +586,22 @@ guidanceContent.et.pages.privacy.sections[6].heading
     Säilitamiskoht ja teenuseosutajad
 
 guidanceContent.et.pages.privacy.sections[6].paragraphs[0]
-    Neid veebilehti majutab Vercel ja teie saadetis säilitatakse selle teenuse mitteavalikus objektisalves. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.
+    Neid veebilehti majutab Vercel ja teie saadetud andmed säilitatakse selle teenuse mitteavalikus andmesalvestuses. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.
 
 guidanceContent.et.pages.privacy.sections[6].paragraphs[1]
-    Üksikute teenuseosutajate serverid võivad asuda väljaspool Taiwani, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused võtab vastu wei@hoveringlaw.com.tw.
+    Mõne teenuseosutaja serverid võivad asuda väljaspool Taiwanit, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused saab saata aadressile wei@hoveringlaw.com.tw.
 
 guidanceContent.et.pages.disclaimer.eyebrow
-    VASTUTUS
+    LAHTIÜTLUS
 
 guidanceContent.et.pages.disclaimer.title
     Selle lehe teabe ulatus ja piirid
 
 guidanceContent.et.pages.disclaimer.description
-    Teabe üldine iseloom, õiguslik kohaldamisala ja eeldused suhtele advokaadi ja kliendi vahel.
+    Teabe üldine iseloom, õiguslik kohaldamisala ja eeldused advokaadi ja kliendi suhte tekkimiseks.
 
 guidanceContent.et.pages.disclaimer.intro
-    See osa teeb selgeks, mida need eestikeelsed juhislehed saavad teie heaks teha ja mida mitte.
+    See osa teeb selgeks, milleks need eestikeelsed juhislehed sobivad ja milleks mitte.
 
 guidanceContent.et.pages.disclaimer.sections[0].heading
     Ainult üldine teave
@@ -619,7 +619,7 @@ guidanceContent.et.pages.disclaimer.sections[1].paragraphs[0]
     Büroo tegutseb Taiwani õiguse järgi ja see leht räägib ainult tööst selles raamistikus.
 
 guidanceContent.et.pages.disclaimer.sections[1].paragraphs[1]
-    Sisu ei ole nõustamine muu õiguskorra kui Taiwani õiguse järgi, sealhulgas teie elukoha õiguse järgi. Kui osa teie asjast puudutab teist õiguskorda, selgitame teiega, millist pädevat asjatundjat selle osa jaoks vaja on.
+    Sisu ei ole nõustamine muu õiguskorra kui Taiwani õiguse järgi, sealhulgas teie elukoha õiguse järgi. Kui osa teie asjast puudutab teist õiguskorda, arutame teiega, millist pädevat asjatundjat selle osa jaoks vaja on.
 
 guidanceContent.et.pages.disclaimer.sections[2].heading
     Suhe advokaadi ja kliendi vahel ei teki iseenesest
@@ -631,7 +631,7 @@ guidanceContent.et.pages.disclaimer.sections[2].paragraphs[1]
     See suhe tekib alles pärast seda, kui asi on läbi vaadatud ja mõlemad pooled on kinnitanud, et büroo võtab töö vastu.
 
 guidanceContent.et.pages.disclaimer.sections[3].heading
-    Tulemust ei lubata
+    Tulemuse kohta lubadust ei anta
 
 guidanceContent.et.pages.disclaimer.sections[3].paragraphs[0]
     Ükski osa sellest lehest ei ole lubadus asja tulemuse, taotluse rahuldamise ega elamis- ja tööstaatuse kohta.
@@ -658,7 +658,7 @@ guidanceContent.et.pages.columns.sections[0].paragraphs[0]
     Selles osas on neli linki: artiklite loend korea, hiina, inglise ja jaapani keeles. Iga link nimetab loendi keele, et te teaksite ette, millises keeles sisu avaneb.
 
 guidanceContent.et.pages.columns.sections[0].paragraphs[1]
-    Need neli loendit on loendid artiklite algkeele järgi, mitte tõlkeloendid. Eestikeelsed artiklid on eraldi sellel lehel.
+    Need neli loendit järgivad artiklite algkeelt; need ei ole tõlked. Eestikeelsed artiklid on eraldi sellel lehel.
 
 guidanceContent.et.pages.columns.sections[1].heading
     Kuhu lingid viivad
@@ -670,13 +670,13 @@ guidanceContent.et.pages.columns.sections[1].paragraphs[1]
     See leht ei võta artiklite sisu kokku ega taga, et teema on kättesaadav kõigis neljas keeles. Iga loend sisaldab ainult selles keeles avaldatud tekste.
 
 guidanceContent.et.pages.columns.sections[2].heading
-    Kui kaugele saab artikkel orienteerida
+    Kui kaugele artikkel orienteerumiseks sobib
 
 guidanceContent.et.pages.columns.sections[2].paragraphs[0]
     Artiklid on üldine teave avaldamise hetkel. Sätted ja nende kohaldamine võivad muutuda ning artikkel ei kata kõiki teie asja asjaolusid.
 
 guidanceContent.et.pages.columns.sections[2].paragraphs[1]
-    Ärge seetõttu tehke tegelikus asjas otsuseid üksnes artikli põhjal. Kasutage seda ülevaate saamiseks ja arutage oma dokumente eraldi advokaadiga; see leht ei ole nõustamissamm.
+    Ärge seetõttu tehke tegelikus asjas otsuseid üksnes artikli põhjal. Kasutage seda ülevaate saamiseks ja arutage oma dokumente eraldi advokaadiga; see leht ei ole nõustamine.
 
 guidanceTeamCopy.et.label
     MEESKOND
@@ -685,7 +685,7 @@ guidanceTeamCopy.et.title
     Hoveringi rahvusvaheline meeskond
 
 guidanceTeamCopy.et.description
-    Hoveringi advokaatide, tegevjuhtimise ja seotud audiitorbüroo profiilid.
+    Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid.
 
 guidanceTeamCopy.et.representativeTitle
     Juhtiv advokaat
@@ -718,7 +718,7 @@ guidanceTeamCopy.et.keyFactsHeading
     Advokaat Wei Tseng — Põhiandmed
 
 guidanceTeamCopy.et.qualificationLabel
-    Kutseõigus ja büroo
+    Kvalifikatsioon ja büroo
 
 guidanceTeamCopy.et.qualificationSentence
     {name} on Taiwani advokatuuri liige ja {firm} juhtiv advokaat.
@@ -736,28 +736,28 @@ guidanceTeamCopy.et.roles.chang-rongxuan
     Advokaat Taiwanis
 
 guidanceTeamCopy.et.roles.chang-fangyu
-    Paralegal
+    Jurist-assistent
 
 guidanceTeamCopy.et.roles.son-jungmin
-    Korea tegevjuht
+    Korea tegevuse juht
 
 guidanceTeamCopy.et.roles.huang-shengping
-    Partneraudiitor
+    Partner ja audiitor
 
 guidanceTeamBios.et.tseng-junwei.intro[0]
     Büroo tegeleb Taiwanis ettevõtete ja eraisikute asjadega inglise, jaapani, korea ja hiina keeles.
 
 guidanceTeamBios.et.tseng-junwei.intro[1]
-    Ta esindas korea üliõpilast treeningsaalis saadud vigastuse kahjuhüvitisnõudes ja sai esimese astme otsuse summas TWD 1.57M.
+    Ta esindas korea üliõpilast treeningsaalis saadud vigastuse kahjuhüvitisnõudes ja esimese astme kohus mõistis välja TWD 1.57M.
 
 guidanceTeamBios.et.tseng-junwei.education[0]
-    Magister (M.S.), Institute of Finance, National Taiwan University
+    Magistrikraad (M.S.), National Taiwan University rahanduse instituut
 
 guidanceTeamBios.et.tseng-junwei.education[1]
-    Bakalaureus (B.A.) õiguse ja rahanduse kaksikprogrammis, National Chengchi University
+    Bakalaureusekraad (B.A.), õigusteaduse ja rahanduse topelteriala, National Chengchi University
 
 guidanceTeamBios.et.tseng-junwei.education[2]
-    Vahetusüliõpilane Kobe Universitys ja Waseda Universitys
+    Vahetusüliõpilane Kobe University’s ja Waseda University’s
 
 guidanceTeamBios.et.tseng-junwei.experience[0]
     Trend Law Office
@@ -766,10 +766,10 @@ guidanceTeamBios.et.tseng-junwei.experience[1]
     Hovering International Law Firm
 
 guidanceTeamBios.et.tseng-junwei.experience[2]
-    Legal Aid Foundation, Taichung Branch
+    Õigusabi sihtasutus, Taichungi filiaal
 
 guidanceTeamBios.et.chang-rongxuan.intro[0]
-    Varem Ministry of Education, Legal Affairs Divisionis, rõhuasetusega haldus- ja tsiviilasjadele.
+    Varem Haridusministeeriumi õigusosakonnas, rõhuasetusega haldus- ja tsiviilasjadele.
 
 guidanceTeamBios.et.chang-rongxuan.intro[1]
     Kogemus ülikoole, õppejõudude õigusi ja halduskaebusi puudutavates asjades.
@@ -778,13 +778,13 @@ guidanceTeamBios.et.chang-rongxuan.education[0]
     Õigusteaduse bakalaureus (LL.B.), National Chung Hsing University
 
 guidanceTeamBios.et.chang-rongxuan.experience[0]
-    Ministry of Education, Legal Affairs Division
+    Haridusministeeriumi õigusosakond
 
 guidanceTeamBios.et.chang-rongxuan.experience[1]
     Advokaat, Hovering International Law Firm
 
 guidanceTeamBios.et.chang-fangyu.intro[0]
-    Paralegal pikaajalise kogemusega; varem vanem paralegal mitmes advokaadibüroos, rõhuasetusega protsessitoele, ühinguõigusele ja välisinvesteeringutele.
+    Jurist-assistent pikaajalise kogemusega; varem vanemjurist-assistent mitmes advokaadibüroos, rõhuasetusega protsessitoele, ühinguõigusele ja välisinvesteeringutele.
 
 guidanceTeamBios.et.chang-fangyu.intro[1]
     Tugi kohtumenetlustes, äriühingu asutamisel, välisinvesteeringute lubades, loataotlustes ning Korea ja Taiwani suhtluses.
@@ -793,28 +793,28 @@ guidanceTeamBios.et.chang-fangyu.education[0]
     Õigusteaduse bakalaureus (LL.B.), Tunghai University
 
 guidanceTeamBios.et.chang-fangyu.experience[0]
-    Senior Paralegal, Boyin Law Firm
+    Vanemjurist-assistent, Boyin Law Firm
 
 guidanceTeamBios.et.chang-fangyu.experience[1]
-    Senior Paralegal, Muyang International Law Firm
+    Vanemjurist-assistent, Muyang International Law Firm
 
 guidanceTeamBios.et.son-jungmin.intro[0]
     Koordineerib nõustamisaegu ja suhtlust Koreast tulevatele klientidele.
 
 guidanceTeamBios.et.son-jungmin.intro[1]
-    Toetab piirkondadevahelist vahetust dokumendisüsteemide ja töövoogude kaudu, arvutiteaduse taustal.
+    Toetab üksustevahelist koostööd dokumendisüsteemide ja töövoogude kaudu; tema taust on arvutiteaduses.
 
 guidanceTeamBios.et.son-jungmin.education[0]
     Bakalaureus (B.S.) arvutiteaduses, National Cheng Kung University
 
 guidanceTeamBios.et.son-jungmin.experience[0]
-    Korea tegevuste üksus, Hovering International Law Firm
+    Korea tegevuse üksus, Hovering International Law Firm
 
 guidanceTeamBios.et.huang-shengping.intro[0]
-    Lõpetas bakalaureuse- ja magistriprogrammi raamatupidamises National Chengchi Universitys ja juhib nüüd audiitorbürood.
+    Lõpetas bakalaureuse- ja magistriprogrammi raamatupidamises National Chengchi University’s ja juhib nüüd audiitorbürood.
 
 guidanceTeamBios.et.huang-shengping.intro[1]
-    Toetab õiguslike, maksu- ja finantsriskide ühendatud analüüsi ettevõtteklientidele.
+    Toetab ettevõtteklientide õiguslike, maksu- ja finantsriskide koondhindamist.
 
 guidanceTeamBios.et.huang-shengping.education[0]
     Magister (M.A.) raamatupidamises, National Chengchi University
@@ -847,7 +847,7 @@ guidancePracticeAreaNames.et.Trademark and patent filings
     Kaubamärgi- ja patenditaotlused
 
 guidancePracticeAreaNames.et.Visa and residency
-    Viisa ja elamine
+    Viisa ja elamisluba
 
 guidancePracticeAreaNames.et.Family and labor disputes
     Perekonna- ja töövaidlused
@@ -859,7 +859,7 @@ guidanceOfficeCopy.et.title
     Bürood
 
 guidanceOfficeCopy.et.description
-    Hovering International Law Firmi Taiwani büroode aadressid.
+    Büroo Hovering International Law Firm’i Taiwani büroode aadressid.
 
 guidanceOfficeCopy.et.officeLabel
     Büroo
@@ -943,7 +943,7 @@ internationalInquiryCopy.et.consultationNotice
     Nõustamine toimub ainult neljas keeles: inglise, hiina (中文), jaapani ja korea keeles.
 
 internationalInquiryCopy.et.methodConfirmationNotice
-    Kui te ei saa kasutada ühtegi neljast nõustamiskeelest, valige „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaega ei lubata.
+    Kui te ei oska ühtegi neljast nõustamiskeelest, valige „Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaja kohta lubadust ei anta.
 
 internationalInquiryCopy.et.preparationNotice
     Kokkuvõtte võite kirjutada oma keeles. Algtekst säilitatakse nii, nagu te selle kirjutasite, ja seda ei tõlgita automaatselt.
@@ -979,7 +979,7 @@ internationalInquiryCopy.et.originalLanguagePlaceholder
     Näiteks eesti, inglise, hiina või muu keel
 
 internationalInquiryCopy.et.preferredConsultationLanguageLabel
-    Keel, mida soovite nõustamiseks
+    Soovitud nõustamiskeel
 
 internationalInquiryCopy.et.originalTextLabel
     Lühikirjeldus asjast (teie keeles)
@@ -1009,13 +1009,13 @@ internationalInquiryCopy.et.tooLongMessage
     Tekst on liiga pikk. Lühendage see ja saatke uuesti.
 
 internationalInquiryCopy.et.sourceLanguageNotice
-    See artikkel on avaldatud ainult keeles {language}; link avab alglehe.
+    See artikkel on avaldatud ainult {language} keeles; link avab alglehe.
 
 internationalInquiryCopy.et.unavailableTranslationNotice
     See osa ei ole veel selle lehe keeles kättesaadav. Link algkeeles avab algteksti.
 
 internationalInquiryCopy.et.unavailableLanguageNotice
-    Seda lehte keeles {language} ei pakuta.
+    Seda lehte ei pakuta {language} keeles.
 
 internationalInquiryCopy.et.languageOptions.en
     Inglise (English)
@@ -1030,7 +1030,7 @@ internationalInquiryCopy.et.languageOptions.ko
     Korea (한국어)
 
 internationalInquiryCopy.et.languageOptions.needs-method-confirmation
-    Ükski neljast keelest ei ole kasutatav — suhtlusviis tuleb kinnitada
+    Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada
 
 guidanceAnswers.et.services.answer
     Büroo tegeleb Taiwani õiguse järgi kuue valdkonnaga: investeeringud ja äriühingu asutamine, tsiviilvaidlused ja kahjuhüvitis, abielu, perekond ja pärimine, töövaidlused, kriminaalasjad ning intellektuaalomand. Iga asja ulatus kinnitatakse eraldi pärast seda, kui advokaat on saadetud sisu läbi vaadanud. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.
@@ -1042,7 +1042,7 @@ guidanceAnswers.et.services.sources[1]
     /et/contact
 
 guidanceAnswers.et.about.answer
-    Hovering International Law Firm on Taiwani advokaadibüroo, mille asutasid 2016. aastal National Taiwan University (國立臺灣大學) vilistlased, büroodega Taipeis, Kaohsiungis, Taichungis ja Pingtungis. Alates 2020. aastast tegutseb ka raamatupidamisüksus; Taichungi büroo tegeleb Koreaga ja Jaapaniga seotud asjadega. Büroo ei luba tulemust. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.
+    Hovering International Law Firm on Taiwani advokaadibüroo, mille asutasid 2016. aastal National Taiwan University (國立臺灣大學) vilistlased, büroodega Taipeis, Kaohsiungis, Taichungis ja Pingtungis. Alates 2020. aastast tegutseb ka raamatupidamisüksus; Taichungi büroo tegeleb Koreaga ja Jaapaniga seotud asjadega. Büroo ei anna lubadust tulemuse kohta. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.
 
 guidanceAnswers.et.about.sources[0]
     /et/lawyers
@@ -1051,7 +1051,7 @@ guidanceAnswers.et.about.sources[1]
     /et/services
 
 guidanceAnswers.et.lawyers.answer
-    Sellel lehel on Hoveringi advokaatide, tegevjuhtimise ja seotud audiitorbüroo profiilid. Advokaat Wei Tseng (曾雋崴) on Taiwani advokatuuri liige ja büroo juhtiv advokaat; ta töötab klientidega Koreast, Jaapanist ja teiste riikide klientidega. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.
+    Sellel lehel on Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid. Advokaat Wei Tseng (曾雋崴) on Taiwani advokatuuri liige ja büroo juhtiv advokaat; ta töötab klientidega Koreast, Jaapanist ja teistest riikidest. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.
 
 guidanceAnswers.et.lawyers.sources[0]
     /et/about
@@ -1069,7 +1069,7 @@ guidanceAnswers.et.pricing.sources[1]
     /et/faq
 
 guidanceAnswers.et.contact.answer
-    Saatke kokkuvõte kontaktvormiga: mis juhtus, millist abi vajate, milline on asja side Taiwaniga, ja tähtaeg, kui see on teada. Algfaasis ei ole vaja saata isikut tõendavaid dokumente ega kogu tõendusmaterjali. Büroo ei luba vastamise tähtaega ega kinnita kohtumist selle lehe kaudu. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.
+    Saatke kokkuvõte kontaktvormiga: mis juhtus, millist abi vajate, milline on asja side Taiwaniga, ja tähtaeg, kui see on teada. Algfaasis ei ole vaja saata isikut tõendavaid dokumente ega kogu tõendusmaterjali. Büroo ei anna lubadust vastamise tähtaja kohta ega kinnita kohtumist selle lehe kaudu. Nõustamine toimub ainult inglise, hiina, jaapani ja korea keeles.
 
 guidanceAnswers.et.contact.sources[0]
     /et/faq
@@ -1078,7 +1078,7 @@ guidanceAnswers.et.contact.sources[1]
     /et/pricing
 
 guidanceAnswers.et.faq.answer
-    Selles osas vastatakse korduvatele küsimustele üldise teabe tasemel: büroo kuus valdkonda, ettevalmistus enne ühendust, tasude kinnitamine ja saadetud teate tähendus. Saadetud teade ootab läbivaatamist; see ei ole õiguslik seisukoht ega kinnitatud kohtumine ja iseenesest ei tekita suhet advokaadi ja kliendi vahel. Nõustamine toimub ainult neljas keeles: inglise, hiina, jaapani ja korea keeles.
+    Selles osas vastatakse korduvatele küsimustele üldise teabe tasemel: büroo kuus valdkonda, ettevalmistus enne ühendust, tasude kinnitamine ja saadetud teate tähendus. Saadetud teade ootab läbivaatamist; see ei ole õigusnõu, ei ole kinnitatud kohtumine ega tekita iseenesest suhet advokaadi ja kliendi vahel. Nõustamine toimub ainult neljas keeles: inglise, hiina, jaapani ja korea keeles.
 
 guidanceAnswers.et.faq.sources[0]
     /et/services
@@ -1090,7 +1090,7 @@ GUIDANCE_LLMS_NOTICES.et.consultationNotice
     Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles.
 
 GUIDANCE_LLMS_NOTICES.et.discoveryNotice
-    Fail llms.txt on üksnes kaart avalike lehtede leidmiseks; see ei luba kohta otsingutulemustes, tuge, tehisintellekti soovitust ega nähtavust.
+    Fail llms.txt on üksnes ülevaade avalike lehtede leidmiseks; see ei anna lubadust otsingukoha, soovituse, tehisintellekti soovituse ega nähtavuse kohta.
 
 GUIDANCE_LLMS_NOTICES.et.confidentialNotice
     Kuna algtekst säilitatakse, ärge kirjutage algfaasis seda, mida veel vaja ei ole, näiteks passinumbrit, isikutunnistuse numbrit ega kontonumbreid.

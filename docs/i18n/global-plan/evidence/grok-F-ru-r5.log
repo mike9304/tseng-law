@@ -1,0 +1,68 @@
+WO-F-ru — Grok 4.7 fix lane, campaign round 5
+workspace: /Users/son7/Projects/tseng-law-fix-ru-r5
+date: 2026-09-23
+
+## Rows
+Reviews: ru-a 13 rows + ru-b 26 rows = 39.
+Applied: 34 (ru-a 9 is partial). Skipped: 5.
+No test file edited. Nothing in src/lib/__tests__ or src/data/__tests__ pinned a Russian sentence this round changed (vitest stayed green). Guidance pack, inquiry copy, and llms.txt were not rewritten: part a rates the pack 5/5 and client-ready, and this round’s rows are all in the columns. R2–R10 were already in the pack and the columns (formal Вы, feminine Wei Tseng, consultation lock negative, Korea only as a labelled example, dates already Russian, «НАША КОМАНДА» / «ОФИСЫ» / «Полный профиль (на английском)» already translated). «TWD 1.57M» was not touched.
+
+Applied with a wording adjustment (still the row’s meaning):
+- ru-a 6. «Стандарт выплат» for 給付標準, including the source title and «прежний стандарт». Dates stay «29 мая 2026» / «1 июля 2026». Dot thousands in the same paragraph were not retouched (see skip).
+- ru-a 9. 001 FAQ and body: «за последний один год» → «за последний год» (2). The same paragraph already has «менее 1 года», so the checker still passes. 008 blockquote: «за каждый полный год стажа». 008 FAQ keeps «За каждый полный один год»: that «один» is the lexical 1 for Korean 1년; dropping both the FAQ and the blockquote fails `numbers` (missing 1). «За один год выплачивается 1 месяц» stays, as the reviewer allowed.
+- ru-a 12 + ru-a 3. One block: the hospital visit is in the sentence, and the victim is the one who does not see remorse or sincerity. Blocks were not split.
+- ru-b 7. «(не более чем в 1 раз)» → «не выше 1-кратного размера фактического вреда». The digit 1 stays (dropping it failed in round 4). Parallel to «5-кратного» / «3-кратного» in the same sentence.
+- ru-b 9. «Падение на территории предприятия» (English: falls on business premises). Not «в помещении», which would still limit the fall to indoors.
+- ru-b 18. The table sentence now has a subject. «так проще разделить спорные вопросы» keeps the English “keep the issues separate”. Same block.
+
+## Skipped
+- ru-a 1. Dropping «статья 10» from the withholding-rate label removes the numeral in Korean «영업세법 제10조». Round 4 measured `numbers` FAIL `missing from translation (1): 10`. URL (flno=3) was not changed. The label stays identical to 001. See Reviewer got it wrong for the statute name.
+- ru-a 2 and ru-b 10. Space thousands («1 000», «90 000 TWD», «1 579 589 TWD») and currency after the amount. ACCEPTED-ROUND skips a space separator. The checker’s Russian thousands style is a dot (`NUMBER_THOUSAND_STYLE.ru = 'dot'`). Decimal comma in 0,5 and 1,57 left as it was. 0 instances changed.
+- ru-a 8 and ru-b 16. U+200B blank lines, 005 `**​**`, and promoting Q16–Q20 to `##` headings. `checkBlocks` requires the same block count, heading levels, and ZWSP count as src/content/columns. Those characters are in the Korean source (003: 52). 0 instances removed. Q16–Q20 stay body lines.
+
+## Systemic patterns
+- Dot thousands a Russian reader can parse as a decimal, currency code before the amount: 0 changed (see skip). Still in 001, 002, 003, 004, 006, 007, 010, 011, 017, 018.
+- U+200B blog padding (003, 005, 006, 008, 009, 013, 015): 0 changed.
+- «один» glued to «год»: 3 changed (001 FAQ, 001 body, 008 blockquote). 008 FAQ «полный один год» kept (lexical 1). «за один год выплачивается» kept (008 FAQ and blockquote formula).
+- «сжатие деятельности (業務緊縮)»: 1 (008 table cell) → «сокращение деятельности».
+- Criminal-law «вменить» for “attributable to”: 14. 014: the FAQ question, FAQ answer, heading, matching body, the checklist item «От кого зависит причина», «от какой стороны зависят», «вопрос о том, зависит ли причина», and the two checklist lines that said «вменение ответственности» / «вменению прекращения» (12). 007 FAQ and body: «относится лишь к одной стороне» (2). No «вмен» left in columns-ru.
+- A legal consequence said to «вставать» / «встаёт»: 4. 016 «может потребоваться назначение…» (FAQ and body), «становится актуальной» for guardianship, and 010 «если возникает иное основание требования».
+- Katakana middle dot in the Lienchiang gloss (連江・馬祖): 2 (017 FAQ and body) → 連江、馬祖. No other ・ in columns-ru or the ru guidance strings.
+- «Управление развития торговли» for 經濟部商業發展署: 2. 018 body (the flagged sentence) and 001’s registration-link label, same office, now «Управление коммерции».
+
+## Reviewer got it wrong — not applied as suggested
+- ru-a 1. The URL’s pcode G0340028 is the Business Tax Act. English says “Article 10 of the Value-Added and Non-Value-Added Business Tax Act”; Korean says «영업세법 제10조». The withholding-rate title is not that statute. It was left anyway: the reviewer called that title right, 001 uses it for the same URL, and the article numeral cannot be deleted (see skip). flno=3 versus «статья 10» is in the source link; the URL was not edited.
+- ru-a 2 / ru-b 10. A dot can be read as a decimal. The checker cannot parse a space thousands separator, so the amounts were left.
+- ru-a 9, 008 FAQ only. «один» there is redundant Russian and also the checker’s lexical 1. The blockquote could drop it; the FAQ could not, without failing `numbers`.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-ru-r5 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ru --lang ru 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ru src/data | wc -l
+```
+       0
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+git status --short | wc -l
+```
+      15
+```
+(This log is written after that count. 12 column files changed; the other 3 lines are the pre-existing WO-F-ru.txt edit and the untracked r5 review files.)

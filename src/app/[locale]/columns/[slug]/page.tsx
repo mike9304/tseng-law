@@ -295,6 +295,10 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       {showHero ? (
         <section className={`blog-hero ${styles.hero}`} data-tone="dark">
           <div className="blog-hero-bg">
+            {/* Blurred copy fills the frame so the contained photo never sits in flat letterbox bars
+                (contain keeps text-bearing thumbnails uncropped). */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={post.featuredImage} alt="" aria-hidden="true" className={styles.heroBackdrop} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={post.featuredImage} alt={post.title} className="blog-hero-img" />
             <div className="blog-hero-overlay" />

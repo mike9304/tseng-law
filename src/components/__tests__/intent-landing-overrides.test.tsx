@@ -16,7 +16,7 @@ function renderLanding(locale: SiteLocale, slug: IntentPageSlug): string {
 // 공용 로케일 문구(덮어쓰기가 없을 때 그대로 나와야 하는 값).
 const koSharedAttorneyHeading = '이 검색어와 가장 가까운 담당 대만 변호사';
 const koSharedCtaText =
-  '회사설립, 투자, 소송, 가족 분쟁처럼 성격이 다른 사건은 초기에 구조를 잡는 방식이 달라집니다. 자료를 보내주시면 증준외 대만 변호사와 연결되는 상담 흐름을 먼저 안내합니다.';
+  '회사설립, 투자, 소송, 가족 분쟁은 초기 검토 방식이 다릅니다. 먼저 사건 개요, 대만과의 관련성, 기한, 연락처를 간단히 알려 주세요. 적합성·이해충돌을 확인한 뒤 업무 범위와 비용을 안내합니다. 민감한 서류는 변호사 안내 후 보내 주세요.';
 
 describe('intent landing page-level overrides', () => {
   it('renders the semiconductor Korean overrides instead of the shared strings', () => {
@@ -26,7 +26,7 @@ describe('intent landing page-level overrides', () => {
     expect(html).toContain(page.attorneyHeadingOverride!);
     expect(html).toContain('현지 법인이 정말 필요한지, 계약서만 손보면 되는지');
     expect(html).not.toContain(koSharedAttorneyHeading);
-    expect(html).not.toContain('가족 분쟁처럼 성격이 다른 사건은');
+    expect(html).not.toContain(koSharedCtaText);
   });
 
   it('renders the page H1 without the SEO pipe title', () => {

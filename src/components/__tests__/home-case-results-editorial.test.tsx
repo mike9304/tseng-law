@@ -121,9 +121,8 @@ describe('HomeCaseResultsSplit editorial plate', () => {
     expect(source).toContain(
       'mobileMp4Src={HOME_RESULTS_EDITORIAL_MOBILE_VIDEO_MP4_SRC}',
     );
-    expect(source).toContain(
-      'controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}',
-    );
+    expect(source).toContain('const controlLabels = override?.controlLabels ?? DECORATIVE_VIDEO_CONTROL_LABELS[locale]');
+    expect(source).toContain('controlLabels={controlLabels}');
   });
 
   it('keeps the editorial plate flush: zero section padding + media-img fill, no hover zoom', () => {

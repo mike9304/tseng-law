@@ -48,11 +48,15 @@ describe('intent landing EN/JA contact paths', () => {
       expect(header).toContain('Sensitive materials only after attorney instructions');
       expect(header).not.toContain('intent-chip');
       expect(header).not.toMatch(/Book Consultation|booked|message has been sent/i);
+      if (slug === 'taiwan-lawyer') {
+        expect(header).toContain('href="/en/contact"');
+        expect(header).toContain('Send an inquiry');
+      }
 
       expect(html).toContain('Do not send passport or identification numbers');
       expect(cta).toContain(`href="${mailto}"`);
       expect(cta).toContain('href="/en/pricing"');
-      expect(cta).toContain('Email a brief initial summary');
+      expect(cta).toContain('Send a brief initial summary');
       expect(cta).not.toMatch(/Book Consultation|booked|message has been sent/i);
     },
   );
@@ -74,11 +78,15 @@ describe('intent landing EN/JA contact paths', () => {
       expect(header).toContain('機微情報は弁護士の指示後');
       expect(header).not.toContain('intent-chip');
       expect(header).not.toMatch(/Book Consultation|予約完了|送信済み/);
+      if (slug === 'taiwan-lawyer') {
+        expect(header).toContain('href="/ja/contact"');
+        expect(header).toContain('お問い合わせを送る');
+      }
 
       expect(html).toContain('旅券番号、身分証番号、銀行口座情報');
       expect(cta).toContain(`href="${mailto}"`);
       expect(cta).toContain('href="/ja/pricing"');
-      expect(cta).toContain('簡潔な概要、期限、連絡先をメールでお送りください');
+      expect(cta).toContain('簡潔な概要、期限、連絡先をお送りください');
       expect(cta).not.toMatch(/Book Consultation|予約完了|送信済み/);
     },
   );

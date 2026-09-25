@@ -104,7 +104,7 @@ const labels = {
     attorneyHeading: 'Lead attorney most relevant to this search',
     ctaLabel: 'NEXT STEP',
     ctaTitle: 'If you want the direction clarified quickly',
-    ctaText: 'Company setup, litigation, residence-permit assistance, and tax-accounting assistance are reviewed as Taiwan-law matters. Email a brief initial summary of the issue, the Taiwan connection, any deadline, and how we can reach you. Other documents can follow after attorney instructions. Use Fees and scope for the current consultation structure.',
+    ctaText: 'Company setup, litigation, residence-permit assistance, and tax-accounting assistance are reviewed as Taiwan-law matters. Send a brief initial summary of the issue, the Taiwan connection, any deadline, and how we can reach you. Other documents can follow after attorney instructions. Use Fees and scope for the current consultation structure.',
     contact: 'Email about your Taiwan matter',
     profile: 'View Wei Tseng Profile',
     pricing: 'Fees and scope',
@@ -130,7 +130,7 @@ const labels = {
     attorneyHeading: 'この検索テーマに最も近い担当台湾弁護士',
     ctaLabel: '次のステップ',
     ctaTitle: '案件に合った方向性をすぐ整理したい場合',
-    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。まずは案件の簡潔な概要、期限、連絡先をメールでお送りください。その他の資料は弁護士の案内後にご提出ください。',
+    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。まずは案件の簡潔な概要、期限、連絡先をお送りください。その他の資料は弁護士の案内後にご提出ください。',
     contact: '台湾の法律問題をメールで相談',
     profile: '曾雋崴台湾弁護士のプロフィールを見る',
     pricing: '費用・対応範囲',
@@ -141,12 +141,12 @@ const intentDirectContact = {
   en: {
     support: 'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese.',
     initialNote:
-      'First email: a brief overview of the issue or business, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Sensitive materials only after attorney instructions.',
+      'First inquiry: a brief overview of the issue or business, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Sensitive materials only after attorney instructions.',
   },
   ja: {
     support: '曾雋崴弁護士に日本語で直接ご相談いただけます（中国語・英語・韓国語にも対応）。',
     initialNote:
-      '初回メールでは、争点または事業の簡潔な概要、期限、連絡先のみをお送りください。機微情報は弁護士の指示後に提出してください。',
+      '初回のお問い合わせでは、争点または事業の簡潔な概要、期限、連絡先のみをお送りください。機微情報は弁護士の指示後に提出してください。',
   },
 } as const;
 

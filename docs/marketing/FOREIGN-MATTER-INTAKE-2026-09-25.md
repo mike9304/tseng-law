@@ -25,7 +25,7 @@ The contact flow asks for only an issue summary, Taiwan connection, deadline and
 - Four localized matter routers on `/{en,ja,ko,zh-hant}/taiwan-lawyer`, each with five existing service destinations and a residence/immigration inquiry path.
 - A same-language contact-form action in the EN/JA hero and broad lawyer page closing action; official email remains available as a secondary path.
 - Clearer first-inquiry copy for Korean and Traditional Chinese closing sections.
-- No new public API, form storage or service claim. Existing inquiry deduplication and server-side event remain the source of received-form counts.
+- No new public API, form storage or service claim. The existing durable inquiry store is authoritative for received-form counts; the server-side event is best-effort telemetry.
 
 ## Two-week operating loop after live release
 

@@ -8,6 +8,8 @@ import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
+import ColumnToc from '@/components/ColumnToc';
+import { extractColumnToc } from '@/lib/column-toc';
 import JsonLd from '@/components/JsonLd';
 import {
   isBuilderDynamicTemplateBlockVisible,
@@ -27,6 +29,9 @@ import { guidanceContent } from '@/data/international-guidance-content';
 
 export const dynamic = 'force-dynamic';
 
+/** Show "In this article" only when a column has at least this many level-2 sections. */
+const MIN_TOC_SECTIONS = 3;
+
 const copy: Record<SiteLocale, {
   backLabel: string;
   attorneyHeading: string;
@@ -35,6 +40,7 @@ const copy: Record<SiteLocale, {
   consultationText: string;
   consultationButton: string;
   faqHeading: string;
+  tocLabel: string;
 }> = {
   ko: {
     backLabel: '← 칼럼 목록으로',
@@ -44,6 +50,7 @@ const copy: Record<SiteLocale, {
     consultationText: '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.',
     consultationButton: '문의하기',
     faqHeading: '자주 묻는 질문',
+    tocLabel: '이 글의 목차',
   },
   'zh-hant': {
     backLabel: '← 返回專欄列表',
@@ -53,6 +60,7 @@ const copy: Record<SiteLocale, {
     consultationText: '如有任何台灣法律相關問題，歡迎隨時聯繫我們。',
     consultationButton: '聯絡我們',
     faqHeading: '常見問題',
+    tocLabel: '本文目錄',
   },
   en: {
     backLabel: '← Back to Insights',
@@ -62,6 +70,7 @@ const copy: Record<SiteLocale, {
     consultationText: 'If you have any questions about Taiwan law, feel free to contact us.',
     consultationButton: 'Contact Us',
     faqHeading: 'Frequently Asked Questions',
+    tocLabel: 'In this article',
   },
   ja: {
     backLabel: '← コラム一覧へ',
@@ -71,6 +80,7 @@ const copy: Record<SiteLocale, {
     consultationText: '台湾法務についてご不明点があれば、お気軽にお問い合わせください。',
     consultationButton: 'お問い合わせ',
     faqHeading: 'よくある質問',
+    tocLabel: 'この記事の目次',
   },
 };
 
@@ -168,6 +178,9 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         consultationButton: guidancePack.contactCta,
       }
     : copy[locale];
+  // Guidance locales borrow the English shell labels, so they get no TOC label
+  // (and no TOC) until the translation lane supplies one.
+  const tocEntries = guidancePack ? [] : extractColumnToc(post.content);
   const authorName =
     locale === 'ko'
       ? '증준외 변호사'
@@ -309,6 +322,9 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
               data-column-typography={typography.presetId}
               style={typography.cssVars as CSSProperties}
             >
+              {tocEntries.length >= MIN_TOC_SECTIONS ? (
+                <ColumnToc entries={tocEntries} label={t.tocLabel} />
+              ) : null}
               <ColumnContent content={post.content} locale={locale} />
               {showBody && showFaq ? (
                 <section className="column-faq" aria-label={t.faqHeading}>

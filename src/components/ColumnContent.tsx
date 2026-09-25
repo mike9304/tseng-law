@@ -10,6 +10,7 @@ import remarkGfm from 'remark-gfm';
 import { remarkUnderline } from '@/lib/builder/columns/remark-underline';
 import type { SiteLocale } from '@/lib/locales';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { remarkColumnSectionIds } from '@/lib/column-toc';
 
 const CONSULTATION_CTA_LABELS: Record<SiteLocale, ReadonlySet<string>> = {
   ko: new Set([
@@ -158,7 +159,7 @@ export default function ColumnContent({
   return (
     <div className="column-markdown" data-column-content="markdown">
       <ReactMarkdown
-        remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkUnderline]}
+        remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkUnderline, remarkColumnSectionIds]}
         remarkRehypeOptions={
           locale
             ? { footnoteLabel: FOOTNOTE_LABELS[locale] }
@@ -174,7 +175,12 @@ export default function ColumnContent({
               </span>
             );
           },
-          h2: ({ children }) => <h2 className="blog-heading">{children}</h2>,
+          // `id` comes from remarkColumnSectionIds (sec-1…n, document order).
+          h2: ({ children, id }) => (
+            <h2 className="blog-heading" id={id}>
+              {children}
+            </h2>
+          ),
           h3: ({ children }) => <h3 className="blog-heading">{children}</h3>,
           p: ({ children }) => {
             // Imported spacer-only paragraphs must not add blank reading lines.

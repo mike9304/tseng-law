@@ -487,3 +487,68 @@
     transition: none;
   }
 }
+
+/* Design lead 2026-09-25: "In this article" box at the top of long columns. */
+.article :global(.column-toc) {
+  margin: 0 0 2.5rem;
+  padding: 1.25rem 1.5rem 1.35rem;
+  border: 1px solid var(--purple-border, #cfddd3);
+  border-left: 3px solid var(--primary);
+  border-radius: 4px;
+  background: #f7faf6;
+}
+
+.article :global(.column-toc-label) {
+  margin: 0 0 0.75rem;
+  color: #725f38;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.article :global(.column-toc-list) {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article :global(.column-toc-link) {
+  color: var(--text-heading);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.article :global(.column-toc-link):hover {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article :global(.column-toc-link):focus-visible {
+  outline: 2px solid #16382d;
+  outline-offset: 2px;
+}
+
+.article :global(.column-markdown) :global(h2[id]) {
+  scroll-margin-top: 150px;
+}
+
+@media (min-width: 900px) {
+  .article :global(.column-toc-list--long) {
+    display: block;
+    columns: 2;
+    column-gap: 2rem;
+  }
+
+  .article :global(.column-toc-list--long) > :global(li) {
+    break-inside: avoid;
+    margin-bottom: 0.55rem;
+  }
+}

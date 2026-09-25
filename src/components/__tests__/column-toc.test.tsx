@@ -45,6 +45,42 @@ describe('column "In this article" navigation', () => {
     expect(html).toContain('<h3 class="blog-heading">Sub</h3>');
   });
 
+  it('keeps anchors aligned for builder-serialized edge cases (quoted, empty, nested, setext headings)', () => {
+    const markdown = [
+      '## Alpha',
+      '',
+      '> ## Quoted heading',
+      '> quote text',
+      '',
+      '##',
+      '',
+      '- item',
+      '',
+      '  ## Nested in a list',
+      '',
+      'Setext Heading',
+      '---',
+      '',
+      '## Omega',
+    ].join('\n');
+
+    const toc = extractColumnToc(markdown);
+    expect(toc).toEqual([
+      { id: 'sec-1', text: 'Alpha' },
+      { id: 'sec-3', text: 'Setext Heading' },
+      { id: 'sec-4', text: 'Omega' },
+    ]);
+
+    const html = renderToStaticMarkup(<ColumnContent locale="en" content={markdown} />);
+    expect(renderedSectionIds(html)).toEqual(['sec-1', 'sec-2', 'sec-3', 'sec-4']);
+    for (const entry of toc) {
+      expect(html).toContain(`<h2 class="blog-heading" id="${entry.id}">${entry.text}</h2>`);
+    }
+    // Headings inside quotes/lists render without a section id and are not listed.
+    expect(html).toContain('<h2 class="blog-heading">Quoted heading</h2>');
+    expect(html).toContain('<h2 class="blog-heading">Nested in a list</h2>');
+  });
+
   it('renders anchors that point at those ids', () => {
     const html = renderToStaticMarkup(
       <ColumnToc
@@ -56,7 +92,8 @@ describe('column "In this article" navigation', () => {
       />,
     );
 
-    expect(html).toContain('<nav class="column-toc" aria-label="In this article">');
+    expect(html).toContain('<nav class="column-toc" aria-labelledby="column-toc-label">');
+    expect(html).toContain('<p class="column-toc-label" id="column-toc-label">In this article</p>');
     expect(html).toContain('<a href="#sec-1" class="column-toc-link">First</a>');
     expect(html).toContain('<a href="#sec-2" class="column-toc-link">Second</a>');
     expect(html).not.toContain('column-toc-list--long');

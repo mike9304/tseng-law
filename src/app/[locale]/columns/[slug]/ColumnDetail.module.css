@@ -537,7 +537,7 @@
 }
 
 .article :global(.column-markdown) :global(h2[id]) {
-  scroll-margin-top: 150px;
+  scroll-margin-top: calc(var(--header-offset-desktop) + 16px);
 }
 
 @media (min-width: 900px) {

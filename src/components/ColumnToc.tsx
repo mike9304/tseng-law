@@ -12,8 +12,10 @@ export default function ColumnToc({
 }) {
   const long = entries.length >= LONG_TOC_THRESHOLD;
   return (
-    <nav className="column-toc" aria-label={label}>
-      <p className="column-toc-label">{label}</p>
+    <nav className="column-toc" aria-labelledby="column-toc-label">
+      <p className="column-toc-label" id="column-toc-label">
+        {label}
+      </p>
       <ol className={long ? 'column-toc-list column-toc-list--long' : 'column-toc-list'}>
         {entries.map((entry) => (
           <li key={entry.id}>

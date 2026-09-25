@@ -1,4 +1,4 @@
 date,channel,language,source,landing_url,qualified,matter_type,how_heard,notes
-# Fill one row per inquiry. channel=email|phone|messenger|in_person. language=en|ja|ko|zh. qualified=yes|no|unknown.
+# Fill one row per received inquiry. channel=form|email|phone|messenger|in_person. language=en|ja|ko|zh. qualified=yes|no|unknown.
 # how_heard=gsc|gbp|koryu-list|ait-list|amcham|referral|sos|linkedin|other
 # Do not store passport, ID, bank, or case-secret details here.

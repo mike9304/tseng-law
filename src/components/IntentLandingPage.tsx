@@ -23,6 +23,8 @@ import {
 } from '@/lib/consultation/public-contact';
 import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 import { LITIGATION_SITUATION_NAV } from '@/data/multilingual-international-v2';
+import ForeignMatterRouter from '@/components/ForeignMatterRouter';
+import { getForeignMatterRouter } from '@/data/foreign-matter-router';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -50,7 +52,7 @@ const labels = {
     attorneyHeading: '이 검색어와 가장 가까운 담당 대만 변호사',
     ctaLabel: '다음 단계',
     ctaTitle: '사안에 맞는 방향을 바로 정리하려면',
-    ctaText: '회사설립, 투자, 소송, 가족 분쟁처럼 성격이 다른 사건은 초기에 구조를 잡는 방식이 달라집니다. 자료를 보내주시면 증준외 대만 변호사와 연결되는 상담 흐름을 먼저 안내합니다.',
+    ctaText: '회사설립, 투자, 소송, 가족 분쟁은 초기 검토 방식이 다릅니다. 먼저 사건 개요, 대만과의 관련성, 기한, 연락처를 간단히 알려 주세요. 적합성·이해충돌을 확인한 뒤 업무 범위와 비용을 안내합니다. 민감한 서류는 변호사 안내 후 보내 주세요.',
     contact: '상담 문의',
     profile: '증준외 대만 변호사 프로필 보기',
     pricing: '비용안내 보기',
@@ -76,7 +78,7 @@ const labels = {
     attorneyHeading: '最適合處理此搜尋主題的律師',
     ctaLabel: '下一步',
     ctaTitle: '若想先快速整理方向',
-    ctaText: '公司設立、投資、訴訟與家事爭議的初期處理方式都不同。先提供資料後，我們可以先協助安排與曾雋崴律師相關的諮詢流程。',
+    ctaText: '公司設立、投資、訴訟與家事爭議的初期檢視方式不同。請先簡述事項、與台灣的關聯、期限及聯絡方式。我們會先確認承接適合性及有無利益衝突，再說明服務範圍與費用。敏感文件請待律師指示後再提供。',
     contact: '聯絡諮詢',
     profile: '查看曾雋崴律師簡介',
     pricing: '查看收費',
@@ -617,7 +619,12 @@ export default function IntentLandingPage({
           <div className="contact-email-actions">
             <p className="contact-email-actions__label">{intentDirectContact[locale].support}</p>
             <div className="contact-email-actions__row">
-              <a href={getConsultationPublicMailto(locale)} className="button">
+              {slug === 'taiwan-lawyer' ? (
+                <Link href={`/${locale}/contact`} className="button">
+                  {getForeignMatterRouter(locale).inquiryAction}
+                </Link>
+              ) : null}
+              <a href={getConsultationPublicMailto(locale)} className={slug === 'taiwan-lawyer' ? 'button button--outline' : 'button'}>
                 {l.contact}
               </a>
               <Link href={`/${locale}/pricing`} className="button button--outline">
@@ -636,6 +643,8 @@ export default function IntentLandingPage({
           </div>
         )}
       </PageHeader>
+
+      {slug === 'taiwan-lawyer' ? <ForeignMatterRouter locale={locale} /> : null}
 
       <section className={`section section--light ${styles.root}`}>
         <div className={`container intent-layout ${styles.layout}`}>
@@ -824,9 +833,14 @@ export default function IntentLandingPage({
             <p className="section-lede">{ctaText}</p>
             {ai.enabled ? <p className="section-lede">{ai.supportingCopy}</p> : null}
             <div className={`intent-cta-actions ${styles.ctaActions}`}>
+              {slug === 'taiwan-lawyer' ? (
+                <Link href={`/${locale}/contact`} className="button">
+                  {getForeignMatterRouter(locale).inquiryAction}
+                </Link>
+              ) : null}
               <a
                 href={getConsultationPublicMailto(locale)}
-                className="button"
+                className={slug === 'taiwan-lawyer' ? 'button button--outline' : 'button'}
                 aria-label={`${l.contact} — ${getConsultationCtaLabel(locale)}`}
               >
                 {l.contact}

@@ -55,7 +55,40 @@ describe('Lawyers team structured-data identity', () => {
     expect(html).not.toContain(ATTORNEY_PERSON_ID);
   });
 
-  it.each(['ko', 'zh-hant', 'ja'] as const)(
+  it('uses the zh-hant profile identity shared with the Korean-speaking-lawyer landing', () => {
+    const profile = getAttorneyProfile('zh-hant', primaryAttorneySlug)!;
+    const { html, person } = renderTeamPerson('zh-hant');
+    const employee = buildLegalServiceJsonLd('zh-hant').employee;
+
+    expect(person['@id']).toBe('https://tseng-law.com/zh-hant/lawyers/wei-tseng#person');
+    expect(person['@id']).toBe(employee['@id']);
+    expect(person.name).toBe(profile.name);
+    expect(person.gender).toBe('Female');
+    expect(person.knowsLanguage).toEqual(['ko', 'zh-Hant', 'ja', 'en']);
+    expect((person.hasCredential as Array<{ name: string }>).map((item) => item.name)).toEqual([
+      'TOPIK 6',
+      'JLPT N1',
+    ]);
+    expect(html).not.toContain(ATTORNEY_PERSON_ID);
+  });
+
+  it('links the zh-hant consultation-languages fact to the Korean-speaking-lawyer landing', () => {
+    const html = renderToStaticMarkup(
+      <LawyersLegacyPageBody locale="zh-hant" visibleBlockIds={['attorney-profiles.list.repeater']} />,
+    );
+    expect(html).toContain('href="/zh-hant/korean-lawyer-in-taiwan"');
+    expect(html).toContain('會說韓文的台灣律師（台北）');
+    expect(html).toContain('韓語／韓文法律服務');
+
+    for (const locale of ['ko', 'en', 'ja'] as const) {
+      const other = renderToStaticMarkup(
+        <LawyersLegacyPageBody locale={locale} visibleBlockIds={['attorney-profiles.list.repeater']} />,
+      );
+      expect(other).not.toContain('korean-lawyer-in-taiwan');
+    }
+  });
+
+  it.each(['ko', 'ja'] as const)(
     'preserves the shared standalone Person identity for %s',
     (locale) => {
       const { person } = renderTeamPerson(locale);

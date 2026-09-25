@@ -74,3 +74,35 @@ export function filterFaqItems(
     ].some((value) => value.toLowerCase().includes(normalizedQuery));
   });
 }
+
+export type FaqRelatedLink = {
+  readonly lead: string;
+  readonly label: string;
+  readonly href: string;
+};
+
+/**
+ * Internal "see also" links rendered inside an answer panel, keyed by FAQ id.
+ * The answer text (and therefore FAQPage JSON-LD) is untouched, and panels are
+ * collapsed by default, so the page's initial height does not change.
+ */
+export const faqRelatedLinks: Partial<Record<SiteLocale, Readonly<Record<string, FaqRelatedLink>>>> = {
+  'zh-hant': {
+    // 韓國人在台灣離婚需要什麼程序？
+    'seed-zh-hant-9': {
+      lead: '可以用韓文找台灣律師嗎？',
+      label: '會說韓文的台灣律師（台北）',
+      href: '/zh-hant/korean-lawyer-in-taiwan',
+    },
+    // 諮詢方式如何進行？
+    'seed-zh-hant-12': {
+      lead: '可以用韓文找台灣律師嗎？',
+      label: '會說韓文的台灣律師（台北）',
+      href: '/zh-hant/korean-lawyer-in-taiwan',
+    },
+  },
+};
+
+export function getFaqRelatedLink(locale: SiteLocale, faqId: string): FaqRelatedLink | null {
+  return faqRelatedLinks[locale]?.[faqId] ?? null;
+}

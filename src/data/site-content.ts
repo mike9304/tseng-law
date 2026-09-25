@@ -1759,11 +1759,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           links: [
             { label: '台灣律師', href: '/zh-hant/taiwan-lawyer' },
             { label: '台灣公司設立', href: '/zh-hant/taiwan-company-setup-lawyer' },
+            // Third slot = last visible link (BASE_FOOTER_LINK_LIMIT). ZH-TW
+            // Korean-speaking-lawyer intent takes it (2026-09-25).
+            { label: '台北韓語律師', href: '/zh-hant/korean-lawyer-in-taiwan' },
             { label: '台灣半導體材料與設備供應商法務', href: '/zh-hant/taiwan-semiconductor-supplier-legal' },
             { label: '半導體企業實務指南', href: '/zh-hant/semiconductor' },
             { label: '台灣訴訟', href: '/zh-hant/taiwan-litigation-lawyer' },
-            { label: '台灣公司設立完整指南', href: '/zh-hant/guides/taiwan-company-setup' },
-            { label: '會說韓文的台灣律師', href: '/zh-hant/korean-lawyer-in-taiwan' }
+            { label: '台灣公司設立完整指南', href: '/zh-hant/guides/taiwan-company-setup' }
           ]
         }
       ],

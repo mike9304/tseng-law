@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { BuilderFaqCategory, BuilderFaqItem } from '@/lib/builder/faq/faq-shared';
 import type { SiteLocale } from '@/lib/locales';
@@ -10,6 +11,7 @@ import {
   decodeHash,
   faqPublicExplorerCopy,
   filterFaqItems,
+  getFaqRelatedLink,
 } from './FaqPublicExplorer.logic';
 import styles from './FaqPublicExplorer.module.css';
 
@@ -206,6 +208,7 @@ export default function FaqPublicExplorer({
             const isOpen = openId === item.faqId;
             const buttonId = `faq-app-${item.faqId}-button`;
             const panelId = `faq-app-${item.faqId}-panel`;
+            const relatedLink = getFaqRelatedLink(locale, item.faqId);
             return (
               <article
                 key={item.faqId}
@@ -238,6 +241,12 @@ export default function FaqPublicExplorer({
                   hidden={!isOpen}
                 >
                   <p>{item.answer}</p>
+                  {relatedLink ? (
+                    <p className={styles.related} data-faq-related-link="true">
+                      {relatedLink.lead}
+                      <Link href={relatedLink.href}>{relatedLink.label}</Link>
+                    </p>
+                  ) : null}
                 </div>
                 {index < filteredItems.length - 1 ? <span className={styles.divider} /> : null}
               </article>

@@ -30,6 +30,7 @@ const requiredFirmPaths = [
 ] as const;
 const requiredIntentPaths = [
   '/taiwan-lawyer',
+  '/korean-lawyer-in-taiwan',
   '/taiwan-company-setup-lawyer',
   '/taiwan-litigation-lawyer',
   '/guides/taiwan-company-setup',

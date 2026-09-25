@@ -74,6 +74,7 @@ const localeCopy: Record<SiteLocale, LocaleCopy> = {
     ],
     intentEntries: [
       ['대만 변호사 안내', '대만 변호사 서비스에 관한 공개 안내입니다.'],
+      ['한국어 가능한 대만 변호사 · 타이베이', '한국어로 상담하는 대만 변호사 증준외에 관한 공개 안내와 자주 묻는 질문입니다.'],
       ['대만 회사설립 변호사', '대만 회사설립 법률지원에 관한 공개 안내입니다.'],
       ['대만 소송 변호사', '대만 소송 법률지원에 관한 공개 안내입니다.'],
       ['대만 회사설립 가이드', '대만 회사설립 절차에 관한 공개 가이드입니다.'],
@@ -106,6 +107,7 @@ const localeCopy: Record<SiteLocale, LocaleCopy> = {
     ],
     intentEntries: [
       ['台灣律師服務', '台灣律師服務的公開說明。'],
+      ['會說韓文的台灣律師（台北）', '台北會韓文／韓語律師曾雋崴的公開說明與常見問題。'],
       ['台灣公司設立律師', '台灣公司設立法律協助的公開說明。'],
       ['台灣訴訟律師', '台灣訴訟法律協助的公開說明。'],
       ['台灣公司設立指南', '台灣公司設立流程的公開指南。'],
@@ -138,6 +140,7 @@ const localeCopy: Record<SiteLocale, LocaleCopy> = {
     ],
     intentEntries: [
       ['Taiwan lawyer', 'Public information about Taiwan lawyer services.'],
+      ['Korean-speaking Taiwan lawyer in Taipei', 'Public information and FAQ about Attorney Wei Tseng, a Taiwan lawyer who consults in Korean.'],
       ['Taiwan company setup lawyer', 'Public information about legal support for Taiwan company setup.'],
       ['Taiwan litigation lawyer', 'Public information about legal support for Taiwan litigation.'],
       ['Taiwan company setup guide', 'A public guide to the Taiwan company setup process.'],
@@ -170,6 +173,7 @@ const localeCopy: Record<SiteLocale, LocaleCopy> = {
     ],
     intentEntries: [
       ['台湾の弁護士', '台湾の弁護士サービスに関する公開案内です。'],
+      ['韓国語対応の台湾弁護士（台北）', '韓国語で相談できる台湾弁護士・曾雋崴に関する公開案内とよくある質問です。'],
       ['台湾会社設立弁護士', '台湾会社設立の法的支援に関する公開案内です。'],
       ['台湾訴訟弁護士', '台湾での訴訟支援に関する公開案内です。'],
       ['台湾会社設立ガイド', '台湾会社設立手続に関する公開ガイドです。'],
@@ -194,6 +198,7 @@ const firmPaths = [
 
 const intentPaths = [
   '/taiwan-lawyer',
+  '/korean-lawyer-in-taiwan',
   '/taiwan-company-setup-lawyer',
   '/taiwan-litigation-lawyer',
   '/guides/taiwan-company-setup',

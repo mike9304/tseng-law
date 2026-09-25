@@ -7,7 +7,21 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
-import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildLegalServiceJsonLd, buildSeoMetadata } from '@/lib/seo';
+import {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
+  buildLegalServiceJsonLd,
+  buildPersonJsonLd,
+  buildSeoMetadata,
+} from '@/lib/seo';
+import AttorneyCredentialCard from '@/components/AttorneyCredentialCard';
+import { getAttorneyProfile, getAttorneyProfilePath, primaryAttorneySlug } from '@/data/attorney-profiles';
+import {
+  PRIMARY_ATTORNEY_GENDER,
+  PRIMARY_ATTORNEY_LANGUAGE_TAGS,
+  getAttorneyCredentialBlock,
+  getAttorneyCredentialJsonLd,
+} from '@/data/attorney-credentials';
 import { LANDING_SLUG, landingContent } from './content';
 import styles from './landing.module.css';
 
@@ -42,6 +56,31 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
     serviceType: locale === 'ko' ? '대만 변호사·회사설립·소송·투자 자문' : locale === 'zh-hant' ? '台灣律師·公司設立·訴訟·投資顧問' : locale === 'ja' ? '台湾弁護士・会社設立・訴訟・投資顧問' : 'Taiwan lawyer, company setup, litigation, investment advisory',
   });
 
+  // The credential card and its Person node ship only where a verified
+  // credential wording exists (zh-hant); other locales keep their prior output.
+  const credentials = getAttorneyCredentialBlock(locale);
+  const attorney = credentials ? getAttorneyProfile(locale, primaryAttorneySlug) : undefined;
+  const attorneyProfilePath = getAttorneyProfilePath(locale);
+  const personJsonLd = attorney
+    ? buildPersonJsonLd({
+        locale,
+        // Same `@id` as the profile page, the lawyers page and LegalService.employee.
+        path: attorneyProfilePath,
+        name: attorney.name,
+        alternateName: attorney.alternateNames,
+        description: attorney.description,
+        image: attorney.image,
+        email: attorney.email,
+        jobTitle: attorney.role,
+        gender: PRIMARY_ATTORNEY_GENDER,
+        sameAs: attorney.sameAs,
+        knowsLanguage: PRIMARY_ATTORNEY_LANGUAGE_TAGS,
+        knowsAbout: attorney.practiceAreas,
+        hasCredential: getAttorneyCredentialJsonLd(locale),
+        alumniOf: attorney.education,
+      })
+    : null;
+
   const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
   const lawyersLabel = locale === 'ko' ? '변호사' : locale === 'zh-hant' ? '律師' : locale === 'ja' ? '弁護士' : 'Lawyers';
 
@@ -55,6 +94,7 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
         ])}
       />
       <JsonLd data={legalServiceJsonLd} />
+      {personJsonLd ? <JsonLd data={personJsonLd} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
 
       <section className={styles.page}>
@@ -74,6 +114,31 @@ export default async function KoreanLawyerInTaiwanPage(props: { params: Promise<
                 ))}
               </ul>
             </section>
+
+            {c.why ? (
+              <section className={styles.section}>
+                <h2 className={styles.heading}>{c.why.heading}</h2>
+                {c.why.paragraphs.map((paragraph, index) => (
+                  <p className={styles.paragraph} key={index}>
+                    {paragraph}
+                  </p>
+                ))}
+              </section>
+            ) : null}
+
+            {credentials ? (
+              <div className={styles.section}>
+                <AttorneyCredentialCard
+                  block={credentials}
+                  id="attorney-credentials"
+                  link={
+                    c.profileLinkLabel
+                      ? { label: c.profileLinkLabel, href: attorneyProfilePath }
+                      : undefined
+                  }
+                />
+              </div>
+            ) : null}
 
             <section className={styles.section}>
               <h2 className={styles.heading}>{c.servicesHeading}</h2>

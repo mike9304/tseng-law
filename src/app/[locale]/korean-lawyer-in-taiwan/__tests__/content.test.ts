@@ -3,6 +3,9 @@ import { buildFaqJsonLd, buildLegalServiceJsonLd } from '@/lib/seo';
 import { siteLocales } from '@/lib/locales';
 import { landingContent } from '../content';
 
+/** zh-hant carries the expanded 會韓文律師 FAQ set; the other locales keep five. */
+const expectedFaqCount = { ko: 5, 'zh-hant': 6, en: 5, ja: 5 } as const;
+
 describe('korean-lawyer-in-taiwan content', () => {
   it('keeps organization brands out of all localized meta titles', () => {
     for (const locale of siteLocales) {
@@ -18,13 +21,13 @@ describe('korean-lawyer-in-taiwan content', () => {
     }
   });
 
-  it('has a declarative lead, non-empty services/languages, and 5 FAQ items per locale', () => {
+  it('has a declarative lead, non-empty services/languages, and the expected FAQ items per locale', () => {
     for (const locale of siteLocales) {
       const c = landingContent[locale];
       expect(c.lead.length).toBeGreaterThanOrEqual(3);
       expect(c.services.length).toBeGreaterThan(0);
       expect(c.languages.length).toBeGreaterThan(0);
-      expect(c.faq).toHaveLength(5);
+      expect(c.faq).toHaveLength(expectedFaqCount[locale]);
       expect(c.relatedResources).toHaveLength(5);
       for (const item of c.faq) {
         expect(item.q.trim()).not.toBe('');
@@ -47,13 +50,13 @@ describe('korean-lawyer-in-taiwan content', () => {
     }
   });
 
-  it('builds a non-null FAQPage JSON-LD with 5 entities per locale', () => {
+  it('builds a non-null FAQPage JSON-LD with the expected entities per locale', () => {
     for (const locale of siteLocales) {
       const c = landingContent[locale];
       const faq = buildFaqJsonLd(c.faq, locale);
       expect(faq).not.toBeNull();
       expect(faq).toMatchObject({ '@type': 'FAQPage' });
-      expect((faq!.mainEntity as unknown[]).length).toBe(5);
+      expect((faq!.mainEntity as unknown[]).length).toBe(expectedFaqCount[locale]);
     }
   });
 
@@ -80,7 +83,7 @@ describe('korean-lawyer-in-taiwan content', () => {
     for (const locale of siteLocales) {
       const c = landingContent[locale];
       const consultationFaq = c.faq.find((item) =>
-        /상담은 어떻게|如何預約諮詢|How do I request a consultation|相談はどのよう/.test(item.q),
+        /상담은 어떻게|如何預約(?:韓語法律)?諮詢|How do I request a consultation|相談はどのよう/.test(item.q),
       );
       const consultationSurface = JSON.stringify({
         office: c.office,

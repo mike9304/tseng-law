@@ -80,6 +80,17 @@
   font-weight: 500;
 }
 
+.paragraph {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .list {
   list-style: none;
   margin: 0;

@@ -439,3 +439,7 @@
     width: min(20rem, 100%);
   }
 }
+
+.credentialCard {
+  margin: 1.75rem 0 0;
+}

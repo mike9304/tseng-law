@@ -78,9 +78,13 @@ type PersonProfileJsonLdInput = {
   email?: string;
   jobTitle?: string;
   sameAs?: string[];
-  knowsLanguage?: string[];
+  knowsLanguage?: readonly string[];
   knowsAbout?: string[];
   alumniOf?: string[];
+  /** schema.org `gender` (e.g. `Female`). Omitted from the output when absent. */
+  gender?: string;
+  /** schema.org `hasCredential` nodes. Omitted from the output when absent. */
+  hasCredential?: ReadonlyArray<Record<string, unknown>>;
 };
 
 type CollectionPageJsonLdInput = {
@@ -658,6 +662,8 @@ export function buildPersonJsonLd({
   knowsLanguage,
   knowsAbout,
   alumniOf,
+  gender,
+  hasCredential,
 }: PersonProfileJsonLdInput) {
   const pageUrl = buildAbsoluteUrl(path);
 
@@ -671,9 +677,11 @@ export function buildPersonJsonLd({
     image: buildAbsoluteUrl(image),
     email: email ? `mailto:${email}` : undefined,
     jobTitle,
+    ...(gender ? { gender } : {}),
     sameAs,
     knowsLanguage,
     knowsAbout,
+    ...(hasCredential?.length ? { hasCredential } : {}),
     worksFor: {
       '@type': 'Organization',
       '@id': ORGANIZATION_ID,
@@ -706,6 +714,8 @@ export function buildProfilePageJsonLd({
   knowsLanguage,
   knowsAbout,
   alumniOf,
+  gender,
+  hasCredential,
 }: PersonProfileJsonLdInput) {
   const pageUrl = buildAbsoluteUrl(path);
 
@@ -725,9 +735,11 @@ export function buildProfilePageJsonLd({
       image: buildAbsoluteUrl(image),
       email: email ? `mailto:${email}` : undefined,
       jobTitle,
+      ...(gender ? { gender } : {}),
       sameAs,
       knowsLanguage,
       knowsAbout,
+      ...(hasCredential?.length ? { hasCredential } : {}),
       worksFor: {
         '@type': 'Organization',
         '@id': ORGANIZATION_ID,

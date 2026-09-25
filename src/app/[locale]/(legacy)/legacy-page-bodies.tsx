@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import ContactBlocks from '@/components/ContactBlocks';
 import ContactEmailActions from '@/components/ContactEmailActions';
@@ -20,6 +21,11 @@ import { pageCopy } from '@/data/page-copy';
 import { faqContent } from '@/data/faq-content';
 import { legalPageContent } from '@/data/legal-pages';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import {
+  PRIMARY_ATTORNEY_GENDER,
+  PRIMARY_ATTORNEY_LANGUAGE_TAGS,
+  getAttorneyCredentialJsonLd,
+} from '@/data/attorney-credentials';
 import {
   ATTORNEY_PERSON_ID,
   buildBreadcrumbJsonLd,
@@ -133,6 +139,25 @@ const attorneyFactLabels = {
   },
 } as const;
 
+/**
+ * Inline link appended to the consultation-languages row. It sits on the same
+ * line as the language list, so the canvas-modelled page height is unchanged.
+ */
+const attorneyLanguageDeskLink: Partial<Record<SiteLocale, { label: string; href: string }>> = {
+  'zh-hant': {
+    label: '會說韓文的台灣律師（台北）',
+    href: '/zh-hant/korean-lawyer-in-taiwan',
+  },
+};
+
+/**
+ * Locales whose lawyers-page Person node shares the attorney-profile `@id`
+ * (`/{locale}/lawyers/{slug}#person`), matching the profile page, the
+ * Korean-speaking-lawyer landing and `LegalService.employee`. ko/ja keep the
+ * locale-independent {@link ATTORNEY_PERSON_ID} used by the guidance surface.
+ */
+const PROFILE_PERSON_ID_LOCALES: ReadonlySet<SiteLocale> = new Set(['en', 'zh-hant']);
+
 function buildAttorneyQualificationSentence(locale: SiteLocale, name: string, firm: string): string {
   switch (locale) {
     case 'ko':
@@ -165,6 +190,7 @@ function AttorneyFactSummary({ locale }: { locale: SiteLocale }) {
   const labels = attorneyFactLabels[locale];
   const firm = getOrganizationName(locale);
   const separator = locale === 'ko' || locale === 'en' ? ', ' : '、';
+  const languageDeskLink = attorneyLanguageDeskLink[locale];
 
   return (
     <section className="section section--light attorney-facts-section" id="attorney-facts">
@@ -180,7 +206,17 @@ function AttorneyFactSummary({ locale }: { locale: SiteLocale }) {
         </div>
         <div className="attorney-card-section">
           <div className="attorney-card-label">{labels.languages}</div>
-          <p>{profile.languages.join(separator)}</p>
+          <p>
+            {profile.languages.join(separator)}
+            {languageDeskLink ? (
+              <>
+                {'　｜　'}
+                <Link href={languageDeskLink.href} className="link-underline">
+                  {languageDeskLink.label}
+                </Link>
+              </>
+            ) : null}
+          </p>
         </div>
       </div>
     </section>
@@ -228,17 +264,20 @@ export function LawyersLegacyPageBody({
                 data={buildPersonJsonLd({
                   locale,
                   path: `/${locale}/lawyers/${profile.slug}`,
-                  // One canonical Person node across ko/zh-hant/ja lawyers pages.
-                  id: locale === 'en' ? undefined : ATTORNEY_PERSON_ID,
+                  // en/zh-hant: the attorney-profile `@id`; ko/ja: the shared
+                  // locale-independent Person node.
+                  id: PROFILE_PERSON_ID_LOCALES.has(locale) ? undefined : ATTORNEY_PERSON_ID,
                   name: profile.name,
                   alternateName: profile.alternateNames,
                   description: profile.description,
                   image: profile.image,
                   email: profile.email,
                   jobTitle: profile.role,
+                  gender: PRIMARY_ATTORNEY_GENDER,
                   sameAs: profile.sameAs,
-                  knowsLanguage: profile.languages,
+                  knowsLanguage: PRIMARY_ATTORNEY_LANGUAGE_TAGS,
                   knowsAbout: profile.practiceAreas,
+                  hasCredential: getAttorneyCredentialJsonLd(locale),
                   alumniOf: profile.education,
                 })}
               />

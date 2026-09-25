@@ -5,12 +5,19 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import FAQAccordion from '@/components/FAQAccordion';
+import AttorneyCredentialCard from '@/components/AttorneyCredentialCard';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import {
   attorneyProfiles,
   primaryAttorneySlug,
   type AttorneyProfile,
 } from '@/data/attorney-profiles';
+import {
+  PRIMARY_ATTORNEY_GENDER,
+  PRIMARY_ATTORNEY_LANGUAGE_TAGS,
+  getAttorneyCredentialBlock,
+  getAttorneyCredentialJsonLd,
+} from '@/data/attorney-credentials';
 import {
   normalizeAttorneyProfileSlug,
   readAttorneyProfileSourceRecordBySlug,
@@ -61,6 +68,7 @@ const sectionLabels = {
     externalProfiles: '外部簡介與頻道',
     contact: '聯絡諮詢',
     searchTerms: '常見搜尋主題',
+    koreanDeskLink: '韓語諮詢專頁：會說韓文的台灣律師（台北）',
   },
   en: {
     pageLabel: 'PROFILE',
@@ -166,6 +174,9 @@ export default async function LawyerProfilePage(
   }
 
   const profilePath = `/${locale}/lawyers/${profile.slug}`;
+  const isPrimaryAttorney = profile.sourceSlug === primaryAttorneySlug;
+  const credentials = isPrimaryAttorney ? getAttorneyCredentialBlock(locale) : null;
+  const koreanDeskLinkLabel = 'koreanDeskLink' in labels ? labels.koreanDeskLink : undefined;
   const templateVisibility = locale === 'ja'
     ? null
     : await readBuilderDynamicTemplatePublishedBlockVisibility(
@@ -235,9 +246,12 @@ export default async function LawyerProfilePage(
               email: profile.email,
               jobTitle: profile.role,
               sameAs: profile.sameAs,
-              knowsLanguage: profile.languages,
+              // BCP-47 tags in JSON-LD; the visible chips keep localized labels.
+              knowsLanguage: isPrimaryAttorney ? PRIMARY_ATTORNEY_LANGUAGE_TAGS : profile.languages,
               knowsAbout: profile.practiceAreas,
               alumniOf: profile.education,
+              gender: isPrimaryAttorney ? PRIMARY_ATTORNEY_GENDER : undefined,
+              hasCredential: isPrimaryAttorney ? getAttorneyCredentialJsonLd(locale) : undefined,
             })}
           />
           <JsonLd data={faqSchema} />
@@ -297,6 +311,19 @@ export default async function LawyerProfilePage(
                   </a>
                 </div>
               </div>
+
+              {credentials ? (
+                <AttorneyCredentialCard
+                  block={credentials}
+                  id="attorney-credentials"
+                  className={styles.credentialCard}
+                  link={
+                    koreanDeskLinkLabel
+                      ? { label: koreanDeskLinkLabel, href: `/${locale}/korean-lawyer-in-taiwan` }
+                      : undefined
+                  }
+                />
+              ) : null}
 
               {/* WO-X1 (EN-08 · J23): search-term chips read as SEO labels to
                   EN/JA visitors, so they stay in metadata only there. */}

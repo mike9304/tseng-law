@@ -261,6 +261,20 @@
   min-width: 0;
 }
 
+.panel p.related {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.panel p.related a {
+  margin-left: 0.35em;
+  color: #16382d;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .divider {
   display: block;
   height: 1px;

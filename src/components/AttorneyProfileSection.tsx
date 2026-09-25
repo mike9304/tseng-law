@@ -52,10 +52,20 @@ const labels = {
   },
 } as const;
 
+/**
+ * Extra action on the managing attorney's card, next to the existing
+ * profile/consultation buttons (same row, so the card height is unchanged).
+ * zh-hant only: it points ZH-TW readers at the Korean-speaking-lawyer landing.
+ */
+const leadDeskLinks: Partial<Record<SiteLocale, { label: string; href: string }>> = {
+  'zh-hant': { label: '韓語／韓文法律服務', href: '/zh-hant/korean-lawyer-in-taiwan' },
+};
+
 function MemberCard({ member, locale, size }: { member: TeamMember; locale: SiteLocale; size: 'large' | 'small' }) {
   const l = labels[locale];
   const isLarge = size === 'large';
   const profileHref = member.profileSlug ? getAttorneyProfilePath(locale, member.profileSlug) : null;
+  const deskLink = isLarge ? leadDeskLinks[locale] : undefined;
   const imageAlt = locale === 'ko'
     ? `${member.role.includes('변호사') ? '대만변호사' : member.role} ${member.name} — 법무법인 호정 ${member.role}`
     : `${member.name} ${member.role}`;
@@ -114,6 +124,11 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Site
           >
             {l.consult}
           </a>
+          {deskLink ? (
+            <Link href={deskLink.href} className="button button--outline attorney-card-cta">
+              {deskLink.label}
+            </Link>
+          ) : null}
         </div>
       </div>
   );

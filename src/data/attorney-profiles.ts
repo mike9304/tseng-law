@@ -132,7 +132,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '台灣律師 · 代表律師',
       title: '曾雋崴台灣律師簡介',
       description:
-        '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，涵蓋在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。事務所可提供韓文、中文、日文、英文諮詢。',
+        '曾雋崴為女性台灣執業律師，通過最高等級韓國語能力測驗 TOPIK 6，並為駐台北韓國代表部韓文法律服務參考名單律師。本頁整理其學經歷與主要服務領域，涵蓋在台公司設立、投資、訴訟、簽證與智慧財產。可用韓文、中文、日文、英文諮詢。',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
@@ -155,6 +155,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       internalLinks: [
         { label: '台灣律師指南', href: '/zh-hant/taiwan-lawyer' },
+        { label: '韓語諮詢專頁：會說韓文的台灣律師（台北）', href: '/zh-hant/korean-lawyer-in-taiwan' },
         { label: '台灣公司設立律師指南', href: '/zh-hant/taiwan-company-setup-lawyer' },
         { label: '台灣公司設立服務', href: '/zh-hant/services/investment' },
         { label: '民事訴訟服務', href: '/zh-hant/services/civil' },
@@ -185,7 +186,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         {
           question: '可以用韓文與曾雋崴律師諮詢嗎？',
           answer:
-            '可以。曾雋崴律師可用韓文、中文、日文協助整理事實、文件與程序安排；事務所另可提供英文諮詢，讓韓國客戶更容易理解台灣法律流程。',
+            '可以。曾雋崴律師通過最高等級韓國語能力測驗 TOPIK 6，可用韓文、中文、日文協助整理事實、文件與程序安排；事務所另可提供英文諮詢，讓韓國客戶更容易理解台灣法律流程。',
         },
         {
           question: '如何開始與曾雋崴律師的諮詢？',

@@ -60,7 +60,7 @@ export const firmIntroductionContent: Record<SiteLocale, FirmIntroductionContent
       'Also in 2024, Attorney Wei Tseng joined Hovering and has been providing comprehensive legal services for overseas clients, including those from Japan and Korea, covering company setup, visa applications, trademark/patent filings, legal risk assessments, and corporate tax consultation.',
       'Our members also remain committed to social service. In addition to annual public-interest and legal-aid cases, we continue to provide pro bono services and legal consultations to put fairness and justice into practice.'
     ],
-    logo: '/images/brand/hovering-logo-ko.png',
+    logo: '/images/brand/hovering-logo-zh.png',
     logoAlt: 'Hovering International Law Firm logo',
     sourceUrl: 'https://www.hoveringlaw.com.tw/kr/about.html',
     sourceLabel: 'Source: hoveringlaw.com.tw (Korean-language original)'

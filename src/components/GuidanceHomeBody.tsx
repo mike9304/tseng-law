@@ -510,6 +510,7 @@ export default function GuidanceHomeBody({
             sectionClassName="section section--gray"
             headingLabel="FAQ"
             headingTitle={pack.nav.faq}
+            layout="split"
           />
         </Reveal>
       ) : null}

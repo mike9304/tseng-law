@@ -249,7 +249,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, in person in Taipei or by video.',
         'Attorney Wei Tseng\'s practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
         'A public representative case includes a TWD 1.57M first-instance damages ruling in a gym injury claim.',
-        'Also on the Hovering firm profile and the WEI Lawyer YouTube channel, where he explains Taiwan law.',
+        'Also on the Hovering firm profile and the WEI Lawyer YouTube channel, where she explains Taiwan law.',
       ],
       faq: [
         {

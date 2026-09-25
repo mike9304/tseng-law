@@ -289,6 +289,17 @@
   background: var(--gray-200);
 }
 
+/* Design lead 2026-09-25: from tablet width up the media column carries half
+   of the first screen. A portrait frame about as tall as the copy replaces the
+   small floating 16:10 card that left the right column mostly empty. */
+@media (min-width: 769px) {
+  .heroMediaFrame {
+    aspect-ratio: 4 / 5;
+    max-height: min(620px, 76vh);
+    border-radius: 16px;
+  }
+}
+
 .heroEditorial :global(.hero-media) {
   position: absolute !important;
   inset: 0 !important;

@@ -25663,6 +25663,30 @@ html[lang='zh-hant'],
   visibility: visible;
 }
 
+/* Design lead 2026-09-25: "at a glance" figures read as figures. Display
+   serif numerals at headline size instead of body-size underlined digits. */
+.stats-section .stat-card {
+  padding: 1.25rem 1.25rem 1.1rem;
+}
+
+.stats-section .stat-number {
+  font-family: var(--font-display, var(--font-heading-ko));
+  font-size: clamp(2.5rem, 2.4vw + 1.5rem, 3.5rem);
+  line-height: 1;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.stats-section .stat-card.done .stat-number {
+  text-decoration: none;
+}
+
+.stats-section .stat-label {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
 /* FAQ label is an eyebrow ("FAQ"), title is the sole localized heading. */
 #faq {
   min-height: 0;

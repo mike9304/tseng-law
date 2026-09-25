@@ -5636,8 +5636,9 @@
 
 .stage[data-builder-canvas-viewport='desktop'] :global([data-node-id='home-stats'] .stat-number),
 .stage[data-builder-canvas-viewport='desktop'] :global([data-node-id='home-stats-root'] .stat-number) {
-  font-size: 1.8rem !important;
-  line-height: 1.2 !important;
+  /* mirrors the published display numerals (globals .stats-section .stat-number at ~1280px) */
+  font-size: 3.4rem !important;
+  line-height: 1 !important;
 }
 
 .stage[data-builder-canvas-viewport='desktop'] :global([data-node-id='home-faq'] .faq-question button),
@@ -5878,8 +5879,8 @@
 }
 
 .stage[data-builder-canvas-viewport='mobile'] :global([data-node-id='home-stats'] .stat-number) {
-  font-size: 23.2px !important;
-  line-height: 1.2 !important;
+  font-size: 40px !important;
+  line-height: 1 !important;
 }
 
 .stage[data-builder-canvas-viewport='mobile'] :global([data-node-id='home-offices'] .office-tabs) {

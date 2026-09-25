@@ -174,15 +174,24 @@ export default function Footer({
             }
         : { blog: 'Blog', youtube: 'YouTube', website: 'Website' };
 
+  // Korean and Taiwanese readers keep the Seoul–Taipei skyline (the firm's
+  // Korea–Taiwan bridge). Every other locale is someone coming to Taiwan, so it
+  // shows Taiwan landmarks only (Presidential Office, 85 Sky Tower, CKS
+  // Memorial Hall, Taipei 101) in the same pen-and-ink style.
+  const skyline =
+    locale === 'ko' || locale === 'zh-hant'
+      ? { src: '/images/footer-ground-skyline-v2.webp', width: 2600, height: 778 }
+      : { src: '/images/footer-ground-skyline-taiwan.webp', width: 1856, height: 550 };
+
   return (
     <>
       <section className={`footer-skyline ${styles.skyline}`} aria-hidden>
         <div className="skyline-image">
           <Image
-            src="/images/footer-ground-skyline-v2.webp"
+            src={skyline.src}
             alt=""
-            width={2600}
-            height={778}
+            width={skyline.width}
+            height={skyline.height}
             loading="eager"
             fetchPriority="low"
             sizes="100vw"

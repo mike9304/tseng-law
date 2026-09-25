@@ -814,7 +814,7 @@ export default function IntentLandingPage({
         </div>
       </section>
 
-      <FAQAccordion locale={locale} items={page.faq} sectionClassName="section section--gray" />
+      <FAQAccordion locale={locale} items={page.faq} sectionClassName="section section--gray" layout="split" />
 
       <section className={`section section--light ${styles.root}`}>
         <div className="container">

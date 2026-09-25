@@ -30,7 +30,8 @@ export default function FAQAccordion({
   sectionClassName,
   tone = 'light',
   headingLabel,
-  headingTitle
+  headingTitle,
+  layout = 'stack'
 }: {
   locale: PublicLocale8;
   items: FAQItem[];
@@ -40,6 +41,8 @@ export default function FAQAccordion({
   /** Overrides the built-in heading pair (used by locales outside `SiteLocale`). */
   headingLabel?: string;
   headingTitle?: string;
+  /** `split`: from 1024px the heading sits in a left column beside the list. */
+  layout?: 'stack' | 'split';
 }) {
   const [openIndex, setOpenIndex] = useState<number>(-1);
   const defaults = faqHeadings[chromeSiteLocale(locale)];
@@ -48,7 +51,12 @@ export default function FAQAccordion({
   const sectionClass = sectionClassName ?? 'section';
 
   return (
-    <section className={`${sectionClass} ${styles.root}`} id={id} data-tone={tone}>
+    <section
+      className={`${sectionClass} ${styles.root}${layout === 'split' ? ` ${styles.split}` : ''}`}
+      id={id}
+      data-tone={tone}
+      data-faq-layout={layout}
+    >
       <div className="container">
         <SectionLabel data-builder-surface-key={homeFaqTextSurfaceIds[0]}>
           <SurfaceText surfaceKey={homeFaqTextSurfaceIds[0]}>{sectionLabel}</SurfaceText>

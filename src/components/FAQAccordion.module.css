@@ -203,3 +203,38 @@
     transform: none;
   }
 }
+
+/* Design lead 2026-09-25: editorial split. At desktop the eyebrow and title
+   hold a left column and the questions fill the right, instead of a 680px
+   list that leaves half of the section empty. */
+@media (min-width: 1024px) {
+  .split :global(.container) {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: clamp(40px, 5vw, 96px);
+    align-items: start;
+  }
+
+  .split :global(.container) > :global(.section-label) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .split :global(.container) > :global(.section-title) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .split :global(.container) > :global(.faq-list) {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    max-width: none !important;
+    margin-top: 0;
+    border-top: 1px solid #d7e0d8;
+  }
+
+  .split[data-tone='dark'] :global(.container) > :global(.faq-list) {
+    border-top-color: rgba(255, 255, 255, 0.18);
+  }
+}

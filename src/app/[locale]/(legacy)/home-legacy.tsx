@@ -96,7 +96,7 @@ export function LegacyHomePageBody({
         <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
       </Reveal>
       <Reveal>
-        <FAQAccordion locale={locale} items={faqItems} id="faq" sectionClassName="section section--gray" />
+        <FAQAccordion locale={locale} items={faqItems} id="faq" sectionClassName="section section--gray" layout="split" />
       </Reveal>
       <Reveal>
         <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" presentation="editorial" />

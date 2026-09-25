@@ -389,7 +389,7 @@ export default async function LawyerProfilePage(
             </div>
           </section>
 
-          <FAQAccordion locale={locale} items={profile.faq} sectionClassName="section section--gray" />
+          <FAQAccordion locale={locale} items={profile.faq} sectionClassName="section section--gray" layout="split" />
         </>
       ) : null}
     </>

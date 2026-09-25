@@ -92,7 +92,8 @@ export default function HomeStatsSection({
     setDone(stats.items.map(() => false));
 
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    const duration = isMobile ? 1500 : 2000;
+    // Design lead 2026-09-25: single-digit figures read as "0/2/2/3" for ~2s after scroll-in; count fast.
+    const duration = isMobile ? 800 : 900;
     const rafIds: number[] = [];
     const timeouts: number[] = [];
 
@@ -116,7 +117,7 @@ export default function HomeStatsSection({
     // small delay so 0-state paint is intentional after intersect
     const kickoff = window.setTimeout(() => {
       stats.items.forEach((item, index) => {
-        const timeout = window.setTimeout(() => animate(index, item.target), index * 200);
+        const timeout = window.setTimeout(() => animate(index, item.target), index * 90);
         timeouts.push(timeout);
       });
     }, 16);

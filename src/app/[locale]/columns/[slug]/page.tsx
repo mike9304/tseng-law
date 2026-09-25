@@ -38,6 +38,7 @@ import styles from './ColumnDetail.module.css';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
+import { typesetTitle } from '@/lib/ko-middot';
 
 export const dynamic = 'force-dynamic';
 
@@ -364,7 +365,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
               </Link>
             ) : null}
             <span className="blog-category-badge">{post.categoryLabel}</span>
-            <h1 className="blog-hero-title">{post.title}</h1>
+            <h1 className="blog-hero-title">{typesetTitle(locale, post.title)}</h1>
             <div className="blog-meta">
               {aiAuthor ? (
                 <span data-column-byline="ai">{aiAuthor.label}</span>

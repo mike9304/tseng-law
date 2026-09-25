@@ -38,6 +38,7 @@ import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buil
 import styles from './ServiceDetail.module.css';
 import zhStyles from './ZhHantServiceDetail.module.css';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
+import { typesetTitle } from '@/lib/ko-middot';
 
 export const dynamic = 'force-dynamic';
 
@@ -411,7 +412,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                           <div className="svc-col-card-overlay" />
                           <span className="svc-col-badge">{col.categoryLabel}</span>
                         </div>
-                        <h3 className="svc-col-card-title">{col.title}</h3>
+                        <h3 className="svc-col-card-title">{typesetTitle(locale, col.title)}</h3>
                         <p className="svc-col-card-summary">{col.summary}</p>
                         <span className="svc-col-card-meta">
                           <time>{col.dateDisplay || col.date}</time>

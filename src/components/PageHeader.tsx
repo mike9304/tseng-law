@@ -3,6 +3,7 @@ import SectionLabel from '@/components/SectionLabel';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import type { PublicLocale8 } from '@/lib/public-guidance';
 import styles from './PublicChrome.module.css';
+import { typesetTitle } from '@/lib/ko-middot';
 
 const JA_PROTECTED_TERM = '弁護士';
 const EN_PROTECTED_TERM = 'Korea-Taiwan';
@@ -11,7 +12,7 @@ function renderProtectedTitle(locale: PublicLocale8, title: string) {
   const token =
     locale === 'ja' ? JA_PROTECTED_TERM : locale === 'en' ? EN_PROTECTED_TERM : null;
   if (!token || !title.includes(token)) {
-    return title;
+    return typesetTitle(locale, title);
   }
 
   const segments = title.split(token);

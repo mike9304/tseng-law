@@ -21,6 +21,7 @@ import {
 import { RECOMMENDED_SECTION_TITLE, splitRecommendedColumns } from '@/lib/en-recommended-columns';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import styles from './ColumnsGrid.module.css';
+import { typesetTitle } from '@/lib/ko-middot';
 
 const searchCopy = {
   ko: {
@@ -668,7 +669,7 @@ export default function ColumnsGrid({
           <span className="columns-card-byline">{isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : post.authorName || byline}</span>
           {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
         </div>
-        <h3 className="columns-card-title">{post.title}</h3>
+        <h3 className="columns-card-title">{typesetTitle(locale, post.title)}</h3>
         <p className="columns-card-summary">{post.summary}</p>
         <span className="columns-card-linkhint">
           {columnCardCtaLabel(locale)}

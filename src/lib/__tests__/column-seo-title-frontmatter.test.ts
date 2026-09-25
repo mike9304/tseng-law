@@ -147,7 +147,7 @@ describe('seoTitle accessor wiring', () => {
       'utf8',
     );
 
-    expect(pageSrc).toMatch(/<h1 className="blog-hero-title">\{post\.title\}<\/h1>/);
+    expect(pageSrc).toMatch(/<h1 className="blog-hero-title">\{(?:typesetTitle\(locale, )?post\.title\)?\}<\/h1>/);
     expect(pageSrc).toMatch(/title:\s*post\.title/);
     expect(pageSrc).toMatch(/title:\s*post\.seoTitle\s*\|\|\s*post\.title/);
     const metadataTitleAssignments = pageSrc.match(/title:\s*post\.seoTitle\s*\|\|\s*post\.title/g) ?? [];

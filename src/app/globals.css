@@ -1894,12 +1894,30 @@ section.home-results-panel--editorial {
   overflow-wrap: anywhere;
 }
 
+/* Design lead 2026-09-25: EN inserts a residence/tax assistance note between
+   the grid and CorporateAdvisoryLink, so the adjacent-sibling (+) hook styled
+   the note as the callout and left the advisory line bare. The note now has its
+   own quiet class and the hook uses the general sibling (~). */
+.services-bento > .container > .services-assistance-note {
+  margin: 1.5rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.services-bento > .container > .services-assistance-note a {
+  color: var(--purple);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* WI-10 (2026-09-07): CorporateAdvisoryLink renders a bare
    <p><a class="link-underline">headline</a> — summary</p> after the services
    grid and inside the retainer pricing card. Its markup is owned by another
    lane, so the callout is hooked from the parents: it is the only class-less
    <p> in either container. */
-.services-bento > .container > .services-card-grid + p:not([class]),
+.services-bento > .container > .services-card-grid ~ p:not([class]),
 .pricing-card > p:not([class]) {
   margin: 1.5rem 0 0;
   padding: 1rem 1.25rem;
@@ -1915,22 +1933,22 @@ section.home-results-panel--editorial {
   overflow-wrap: anywhere;
 }
 
-.services-bento > .container > .services-card-grid + p:not([class]) {
+.services-bento > .container > .services-card-grid ~ p:not([class]) {
   /* R5: span the full 1200px grid like the cards above it (72ch read as a
      ~600px orphan under the grid). */
   max-width: none;
   width: 100%;
 }
 
-.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline,
+.services-bento > .container > .services-card-grid ~ p:not([class]) > a.link-underline,
 .pricing-card > p:not([class]) > a.link-underline {
   display: inline;
   color: var(--purple);
   font-weight: 700;
 }
 
-.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline:hover,
-.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline:focus-visible,
+.services-bento > .container > .services-card-grid ~ p:not([class]) > a.link-underline:hover,
+.services-bento > .container > .services-card-grid ~ p:not([class]) > a.link-underline:focus-visible,
 .pricing-card > p:not([class]) > a.link-underline:hover,
 .pricing-card > p:not([class]) > a.link-underline:focus-visible {
   color: var(--purple-dark);
@@ -6094,6 +6112,31 @@ section.home-results-panel--editorial {
   html[dir='rtl'] .header[data-public-site-header] .header-actions {
     position: relative;
     z-index: 2;
+  }
+}
+
+
+/* Design lead 2026-09-25: from 1360px the header track has room again, so
+   vi/id/th get back readable spacing (was ~12px between items at 1440).
+   fil keeps the tight 1025px values — its labels are the longest. */
+@media (min-width: 1360px) {
+  html[lang='vi'] .nav-list,
+  html[lang='th'] .nav-list {
+    gap: 0.3rem;
+  }
+
+  html[lang='vi'] .nav-link,
+  html[lang='th'] .nav-link {
+    padding: 0 0.55rem;
+  }
+
+  /* id labels run longer: a smaller step keeps the header out of compact mode up to 1920px (measured). */
+  html[lang='id'] .nav-list {
+    gap: 0.15rem;
+  }
+
+  html[lang='id'] .nav-link {
+    padding: 0 0.44rem;
   }
 }
 
@@ -26899,7 +26942,7 @@ html[dir='rtl'] .pricing-card-details li::before {
   right: 0;
 }
 
-html[dir='rtl'] .services-bento > .container > .services-card-grid + p:not([class]),
+html[dir='rtl'] .services-bento > .container > .services-card-grid ~ p:not([class]),
 html[dir='rtl'] .pricing-card > p:not([class]) {
   border-left: none;
   border-right: 3px solid var(--gold);

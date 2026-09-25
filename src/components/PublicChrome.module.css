@@ -179,6 +179,16 @@
   hyphens: none;
 }
 
+/* Design lead 2026-09-25: every locale except ko/zh-hant/ja shows the Latin
+   wordmark "Hovering International Law Firm", but script locales (th, ar, hi,
+   …) remap --font-display to their script sans, so the wordmark fell back to
+   e.g. Noto Sans Thai while vi/id/ru showed the serif. Pin it (and the width
+   probe that sizes the header) to the Latin serif everywhere it is Latin. */
+:global(html:not([lang='ko']):not([lang='zh-Hant']):not([lang='zh-hant']):not([lang='ja']):not([lang='en'])) .brandText:global(.logo-kr),
+:global(html:not([lang='ko']):not([lang='zh-Hant']):not([lang='zh-hant']):not([lang='ja']):not([lang='en'])) .contentFitProbeBrand {
+  font-family: var(--font-heading-latin);
+}
+
 .brandWord,
 .brandUnit,
 .brandLine {

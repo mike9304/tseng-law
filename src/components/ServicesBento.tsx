@@ -121,7 +121,7 @@ export default function ServicesBento({
           })}
         </div>
         {locale === 'en' ? (
-          <p>
+          <p className="services-assistance-note">
             {EN_HOME_SERVICES_ASSISTANCE.beforeContact}
             <Link href={`/${locale}/contact`}>
               {EN_HOME_SERVICES_ASSISTANCE.contactLabel}

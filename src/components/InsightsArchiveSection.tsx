@@ -21,6 +21,7 @@ import {
   INSIGHTS_IMAGE_FALLBACK,
   resolveInsightsImageSrc,
 } from '@/components/insights-image';
+import { typesetTitle } from '@/lib/ko-middot';
 
 interface ArchivePost {
   slug: string;
@@ -185,6 +186,7 @@ export default function InsightsArchiveSection({
           ? '曾雋崴弁護士監修'
           : 'Reviewed by Wei Tseng';
   const protectInsightTitle = (title: string) => {
+    if (locale === 'ko') return typesetTitle(locale, title);
     if (presentation !== 'editorial') return title;
     const units = locale === 'ja' ? ['選択', '支店', '財産'] : locale === 'zh-hant' ? ['進口'] : [];
     if (units.length === 0) return title;

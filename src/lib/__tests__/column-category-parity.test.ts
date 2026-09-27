@@ -21,10 +21,10 @@ describe('column category parity with English', () => {
   const english = new Map(getAllColumnPosts('en').map((post) => [post.slug, post.category]));
 
   it('has the English baseline this test compares against', () => {
-    expect(english.size).toBe(21);
+    expect(english.size).toBe(23);
     const counts = { formation: 0, legal: 0, case: 0 };
     for (const category of english.values()) counts[category] += 1;
-    expect(counts).toEqual({ formation: 9, legal: 11, case: 1 });
+    expect(counts).toEqual({ formation: 9, legal: 13, case: 1 });
   });
 
   for (const locale of GUIDANCE_LOCALES_4) {

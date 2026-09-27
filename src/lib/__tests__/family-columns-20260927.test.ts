@@ -1,0 +1,44 @@
+import { describe, expect, it } from 'vitest';
+import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
+import { collectColumnSitemapRecords } from '@/lib/column-locales';
+
+const locales = ['ko', 'ja', 'en', 'vi', 'id', 'th', 'fil', 'zh-hant', 'zh-hans'] as const;
+const slugs = [
+  'marrying-taiwanese-national-registration-checklist',
+  'baby-taiwan-nationality-birth-registration',
+];
+
+describe('native marriage and birth columns September 2026', () => {
+  it.each(locales)('loads two dated, independently authored articles with FAQ and contact in %s', (locale) => {
+    const posts = getAllColumnPosts(locale);
+    expect(posts.slice(3, 5).map(post => post.slug)).toEqual(slugs);
+    for (const slug of slugs) {
+      const post = getColumnPost(slug, locale);
+      expect(post, `${locale}/${slug}`).toBeDefined();
+      expect(post?.publicationDate).toBe('2026-09-27');
+      expect(post?.dateDisplay).not.toBe('');
+      expect(post?.content.length).toBeGreaterThan(800);
+      expect(post?.faq?.length).toBeGreaterThanOrEqual(2);
+      expect(post?.content).toContain('mailto:wei@hoveringlaw.com.tw');
+      expect(post?.content).toContain('曾雋崴');
+      expect(post?.content).not.toContain('02-2992-9304');
+      expect(post?.featuredImage).toBe('/images/blog/007-taiwan-divorce-lawsuit-qna/featured-01.jpg');
+      expect(post?.summary.length).toBeGreaterThanOrEqual(150);
+      expect(post?.summary.length).toBeLessThanOrEqual(160);
+      const sources = [...(post?.content ?? '').matchAll(/\]\((https:\/\/[^)]+)\)/g)];
+      expect(sources.length).toBeGreaterThanOrEqual(2);
+      expect(post?.category).toBe('legal');
+    }
+  });
+
+  it('includes exactly the nine authored locales in sitemap alternates for each new article', () => {
+    const records = collectColumnSitemapRecords({
+      postsForLocale: locale => getAllColumnPosts(locale).filter(post => slugs.includes(post.slug)),
+    });
+    expect(records).toHaveLength(18);
+    for (const record of records) {
+      expect(record.alternateLocales.slice().sort()).toEqual([...locales].sort());
+      expect(record.lastModified).toBe('2026-09-27');
+    }
+  });
+});

@@ -10,6 +10,12 @@
     { "locale": "en", "slug": "taiwanese-spouse-divorce-cross-border-parenting" },
     { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-agreement-registration" },
     { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-from-abroad" },
-    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-cross-border-parenting" }
+    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-cross-border-parenting" },
+    { "locale": "ko", "slug": "marrying-taiwanese-national-registration-checklist" },
+    { "locale": "ko", "slug": "baby-taiwan-nationality-birth-registration" },
+    { "locale": "en", "slug": "marrying-taiwanese-national-registration-checklist" },
+    { "locale": "en", "slug": "baby-taiwan-nationality-birth-registration" },
+    { "locale": "zh-hant", "slug": "marrying-taiwanese-national-registration-checklist" },
+    { "locale": "zh-hant", "slug": "baby-taiwan-nationality-birth-registration" }
   ]
 }

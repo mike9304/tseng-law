@@ -142,9 +142,9 @@ describe('sitemap column lastModified', () => {
       // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
       // Public semiconductor guide board adds 4 more URLs.
       beforeFiltering:
-        405 + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
+        413 + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
       afterFiltering:
-        396 + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
+        404 + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
       removed: 9,
     });
 

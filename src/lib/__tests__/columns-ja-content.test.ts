@@ -34,9 +34,9 @@ describe('Japanese full column corpus + site locale', () => {
     expect(jaFiles).toEqual(koFiles);
   });
 
-  it('loads 21 Japanese posts with full bodies and kana', () => {
+  it('loads 23 Japanese posts with full bodies and kana', () => {
     const posts = getAllColumnPosts('ja');
-    expect(posts).toHaveLength(21);
+    expect(posts).toHaveLength(23);
     for (const post of posts) {
       expect(post.content.length).toBeGreaterThan(600);
       expect(KANA.test(post.title + post.content)).toBe(true);

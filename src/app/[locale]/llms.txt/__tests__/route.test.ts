@@ -268,8 +268,8 @@ describe('guidance llms.txt lists the translated columns', () => {
     const columnUrls = [...body.matchAll(/https:\/\/tseng-law\.com\/[a-z-]+\/columns\/[^)\s]+/g)].map(
       (m) => m[0],
     );
-    expect(columnUrls.length).toBe(21);
-    expect(new Set(columnUrls).size).toBe(21);
+    expect(columnUrls.length).toBe(23);
+    expect(new Set(columnUrls).size).toBe(23);
     // Every column URL must stay inside its own locale, not fall back to /en or /ko.
     for (const url of columnUrls) {
       expect(url.startsWith(`https://tseng-law.com/${locale}/columns/`)).toBe(true);

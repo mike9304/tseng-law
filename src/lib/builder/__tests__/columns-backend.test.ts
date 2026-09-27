@@ -135,22 +135,22 @@ describe('builder column storage backend', () => {
 
         const posts = await getAllColumnPostsIncludingBlob(locale);
 
-        expect(posts).toHaveLength(21);
+        expect(posts).toHaveLength(23);
         expect(posts.slice(0, 3).map((post) => post.slug)).toEqual([
           'taiwanese-spouse-divorce-agreement-registration',
           'taiwanese-spouse-divorce-from-abroad',
           'taiwanese-spouse-divorce-cross-border-parenting',
         ]);
         expect(posts.slice(0, 3).every((post) => post.publicationDate === '2026-09-27')).toBe(true);
-        expect(posts[3]?.slug).toBe('taiwan-semiconductor-market-entry');
-        expect(posts[3]?.publicationDate).toBe('2026-09-17');
-        expect(posts[4]?.slug).toBe(
+        expect(posts[5]?.slug).toBe('taiwan-semiconductor-market-entry');
+        expect(posts[5]?.publicationDate).toBe('2026-09-17');
+        expect(posts[6]?.slug).toBe(
           'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
         );
-        expect(posts[4]?.publicationDate).toBe('2026-02-04');
-        expect(posts[5]?.slug).toBe('taiwan-company-establishment-basics');
+        expect(posts[6]?.publicationDate).toBe('2026-02-04');
+        expect(posts[7]?.slug).toBe('taiwan-company-establishment-basics');
         expect(posts.at(-1)?.slug).toBe('taiwan-logistics-business-setup');
-        expect(posts.slice(5).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
+        expect(posts.slice(7).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
       } finally {
         await rm(root, { recursive: true, force: true });
       }

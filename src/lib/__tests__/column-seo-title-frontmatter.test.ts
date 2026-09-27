@@ -112,7 +112,7 @@ describe('English column corpus seoTitle', () => {
   const titleSuffix = ' | Hovering Law';
 
   it('adds a seoTitle only when the display title would push <title> past 60 characters', () => {
-    expect(files).toHaveLength(21);
+    expect(files).toHaveLength(23);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');

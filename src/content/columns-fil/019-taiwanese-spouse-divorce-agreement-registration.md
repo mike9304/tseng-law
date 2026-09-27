@@ -17,34 +17,36 @@ faq:
 
 # Napagkasunduang diborsiyo sa asawang Taiwanese: bago pumirma sa kasunduan
 
-Nagkasundo kayong maghiwalay, pero dumating ang dokumentong nakasulat sa Chinese. Maaaring kasama rito ang pagbabayad, pag-alis sa bahay at pagsuko ng ilang paghahabol. Bago ipirma at ibalik, kailangang malinaw kung ano talaga ang pinapangako ng bawat isa.
+Kung may ipinadalang kasunduan sa Chinese matapos ninyong pag-usapan ang paghihiwalay, ano ang dapat malinaw bago ito ibalik? Bukod sa pagwawakas ng kasal, maaaring nakasaad ang pagbabayad, pag-alis sa bahay at pagsuko ng mga paghahabol. Ang bawat bahagi ay may sariling epekto sa mga karapatan at obligasyon ninyo.
 
-Gabay ito sa paghahanda ng konsultasyon, hindi pasya na batas ng Taiwan ang sasaklaw sa bawat mag-asawa. Itala ang nasyonalidad, tirahan, lugar ng pagpaparehistro ng kasal at anumang kasong nasimulan. Para sa pangkalahatang paliwanag, tingnan ang [mga tanong tungkol sa diborsiyo sa Taiwan](/fil/columns/taiwan-divorce-lawsuit-qna).
+## Ano ang ibig sabihin ng “wala nang paghahabol”?
 
-## Hindi sapat ang pagpirma lang
+Hindi sapat ang paliwanag na tapos na ang lahat kapag may ibinayad. Kailangang maunawaan kung aling karapatan ang isinusuko at kung sakop ang mga paghahabol na lumitaw sa isang takdang panahon o bago ang isang petsa. Kapag kulang pa ang impormasyon tungkol sa ari-arian, mahalagang malaman kung kasama rin sa pagsuko ang mga usaping hindi pa natutukoy. Kung mas malawak ang nakasulat kaysa sa paliwanag ng asawa, dapat malutas ang pagkakaibang iyon bago pumirma. Sa kasunduang may dalawang wika, dapat magkatugma ang kahulugan at malinaw kung aling bersiyon ang masusunod kapag may pagkakaiba.
 
-Sa paraan ng diborsiyo sa Article 1050, kailangan ang nakasulat na kasunduan, pirma ng hindi bababa sa dalawang saksi at pagpaparehistro. Ang pribadong pagpirma ng mag-asawa lamang ay hindi nagpapabisa sa diborsiyo sa paraang ito. [Opisyal na Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+Sa pagbabayad, dapat malinaw kung kailan magbabayad, anong salapi ang gagamitin, saang account ipadadala at sino ang sasagot sa gastos sa pagpapadala. Ang pagkuha ng gamit at pag-alis sa bahay ay maaari namang mangailangan ng magkaibang iskedyul. Kung may utang, ang kasunduan kung sino sa inyong dalawa ang sasagot ay hindi kusang nagpapalit ng obligasyon sa bangko o ibang nagpautang.
 
-Ayon sa [opisyal na paliwanag](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf), kailangan ng mga saksi ang ganap na legal na kakayahan at personal na makita o marinig ang tunay na hangarin ng parehong asawa na magdiborsiyo. Hindi sapat na ipahiram lamang ang pangalan.
+Ang tirahan, pangangalaga, pakikipag-ugnayan at suporta sa anak ay kailangang suriin ayon sa batas at mga umiiral na utos. Kung balak ilipat ang anak sa ibang bansa, dapat munang matukoy kung sino ang may kapangyarihang magpasya, kaninong pahintulot ang kailangan at anong limitasyon ang dapat sundin. Ang pagsang-ayon sa diborsiyo ay hindi pangkalahatang pahintulot sa paglipat ng anak.
 
-Linawin ang halaga, currency na gagamitin, takdang petsa ng pagbabayad at bayad sa pagpapadala ng pera; pagkuha ng gamit at pag-alis sa bahay; saklaw ng mga paghahabol na isinusuko; at pangangalaga, pakikipag-ugnayan at gastos ng anak. Mga tanong sa pagsusuri ang mga ito, hindi garantiya ng bisa ng mga kondisyon. Ang paghahati ng utang sa pagitan ninyo ay dapat ding ihiwalay sa obligasyon sa nagpautang.
+## Kailan nagkakabisa ang diborsiyo sa paraang ito?
 
-Kung hindi tugma ang paliwanag ng asawa at ang nakasulat, humingi muna ng paglilinaw. Sa dalawang wikang kasunduan, kailangang suriin ang pagkakatugma at kung paano haharapin ang magkaibang kahulugan.
+Kung Article 1050 ng Civil Code ng Taiwan ang naaangkop, kailangan ang nakasulat na kasunduan, pirma ng hindi bababa sa dalawang saksi at pagpaparehistro sa awtoridad sa household registration. Hindi kumpleto ang paraang ito sa pirma lamang ng mag-asawa. Nasa [Opisyal na Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print) ang mga rekisito.
 
-## Itanong muna ang mga dokumentong gagawin sa labas ng Taiwan
+Ayon sa [opisyal na paliwanag](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf), kailangang may ganap na legal na kakayahan ang mga saksi at personal nilang nakita o narinig ang tunay na hangarin ng parehong asawa na magdiborsiyo. Kaya mahalaga kung paano nila nalaman ang hangaring iyon, hindi lamang kung sino ang madaling makapipirma.
 
-Sa [gabay sa pagpaparehistro](https://www.ris.gov.tw/documents/html/2/3/1/384.html), parehong asawa ang aplikante para sa napagkasunduang diborsiyo. Ang nakasulat na awtorisasyon ay nangangailangan ng makatuwirang dahilan at pag-apruba ng tanggapan. May mga tuntunin din sa pagpapatunay ng dokumentong ginawa sa ibang bansa at sertipikadong salin sa Chinese. Ipaliwanag ang dokumento, lugar ng paggawa at balak na pagsusumite bago magpadala ng orihinal.
+Sa kasal na may ugnayan sa ibang bansa, kailangang matukoy ang batas na namamahala sa diborsiyo. Ang nasyonalidad, tirahan, mga lugar kung saan kayo nanirahang magkasama, tala ng kasal at anumang nasimulang kaso ay mahalagang impormasyon para sa pagsusuri. May paliwanag sa mga hakbang sa [mga tanong tungkol sa diborsiyo sa Taiwan](/fil/columns/taiwan-divorce-lawsuit-qna).
 
-Iba ang pagpaparehistro ng diborsiyong nagkabisa na sa ibang bansa sa pagsasagawa ng bagong diborsiyo sa Taiwan. Hiwalay ding ipasuri sa angkop na propesyonal o awtoridad sa Pilipinas ang pagkilala at pagwawasto ng tala, ayon sa iyong kalagayan at nasyonalidad. Hindi nangangahulugang maaaring gamitin ng bawat Pilipino ang iisang proseso. Ang Taiwan registration ay hindi awtomatikong nagtatapos sa lahat ng usapin sa Pilipinas.
+## Kung nasa Pilipinas ka habang inaayos ang pagpaparehistro
 
-Kung may anak na lilipat ng bansa, suriin nang hiwalay ang kapangyarihang magpasya, kinakailangang pahintulot o utos at mga umiiral na limitasyon. Ang pagsang-ayon sa diborsiyo ay hindi pangkalahatang pahintulot sa paglipat ng anak. Suriin kung aling bansa ang may hukuman na maaaring magpasya, kasama ang tirahan ng anak at umiiral na kaso o utos. Hindi itinatakda ng Taiwan divorce registration lamang ang hurisdiksiyon sa anak.
+Sa [gabay sa pagpaparehistro](https://www.ris.gov.tw/documents/html/2/3/1/384.html), parehong asawa ang aplikante para sa diborsiyo ayon sa kasunduan. Ang pagpaparehistro sa pamamagitan ng kinatawan ay nangangailangan ng nakasulat na awtorisasyon, makatuwirang dahilan at pag-apruba ng tanggapan. Hindi kapalit ng pag-aprubang iyon ang paninirahan sa ibang bansa.
 
-## Konsultasyon sa kasunduan
+May hiwalay na rekisito sa pagpapatunay ng dokumentong ginawa sa ibang bansa at ng salin sa Chinese. Bago ipadala ang orihinal, maaaring itanong sa tanggapan ang pagpapatunay na kailangan para sa dokumentong ilalagda o kukunin sa Pilipinas, at kung paano ito isusumite. Makabubuting ayusin ang pagkakasunod-sunod at iskedyul ng pagpirma, pagpapatunay at pagpaparehistro bago magpadala ng orihinal.
 
-Ipadala sa Hovering International Law Firm ang maikling salaysay, sitwasyon ng anak, napagkasunduan at petsa ng paglalakbay. Sabihin ang nais na wika; availability, saklaw at singil ay kukumpirmahin matapos makipag-ugnayan at suriin ang posibleng salungatan ng interes. Sundin ang tagubilin bago magpadala ng pribadong dokumento.
+Kung nagkabisa na ang diborsiyo sa ibang bansa, ang susuriin ay ang bisa nito at ang pagtatala sa Taiwan. Iba iyon sa pagkuha ng diborsiyo sa Taiwan sa pamamagitan ng kasunduan. Ang pagkilala sa diborsiyo at pagtatala o paglalagay ng kaukulang annotation sa mga rekord sa Pilipinas ay kailangan ding ipasuri sa angkop na awtoridad o tagapayo ayon sa nasyonalidad at aktuwal na kalagayan.
 
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Tirahan ng tanggapan sa Taipei: 103 臺北市大同區承德路一段35號7樓之2
-- Abogadang responsable sa patalastas: 曾雋崴 (Wei Tseng)
+### Konsultasyon tungkol sa pinipirmahan
 
-Pangkalahatang impormasyon batay sa sangguniang sinuri noong 27 Setyembre 2026, walang garantiya ng resulta.
+Kung may kondisyon sa kasunduang hindi malinaw, maaaring mag-email sa Hovering International Law Firm ng maikling paglalarawan bago ipadala ang buong dokumento. Isama ang nais na wika at planong paglalakbay. Sa unang pakikipag-ugnayan, itanong ang saklaw at singil; susuriin muna ng tanggapan kung may interes ng ibang kliyenteng salungat sa iyo bago tumanggap ng sensitibong rekord.
+
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Tanggapan sa Taipei: 103 臺北市大同區承德路一段35號7樓之2. Abogadang responsable sa patalastas: 曾雋崴 (Wei Tseng).
+
+Sinuri ang mga opisyal na sanggunian noong 27 Setyembre 2026.

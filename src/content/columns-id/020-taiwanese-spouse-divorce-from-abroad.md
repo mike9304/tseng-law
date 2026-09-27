@@ -17,40 +17,40 @@ faq:
 
 # Tinggal di Indonesia, pasangan di Taiwan: menyiapkan konsultasi perceraian
 
-Setelah kembali ke Indonesia, Anda mungkin masih harus menyelesaikan perkawinan dengan pasangan yang berada di Taiwan. Sebelum memesan perjalanan, buat ringkasan untuk konsultasi: kewarganegaraan, domisili, tempat hidup bersama dan pencatatan perkawinan.
+Apakah Anda harus kembali ke Taiwan untuk menyelesaikan perceraian? Jawabannya bergantung pada langkah yang akan ditempuh dan apa yang telah disepakati. Persetujuan untuk berpisah, kesediaan mengurus pencatatan dan kewajiban hadir di pengadilan adalah tiga persoalan yang berbeda. Memahaminya sejak awal membantu menentukan apakah perjalanan memang diperlukan.
 
-Kewenangan pengadilan, hukum yang berlaku dan akibat hukum putusan dari negara lain harus diperiksa masing-masing. Kewarganegaraan Taiwan pasangan tidak menentukan semuanya. Lihat [panduan umum perceraian](/id/columns/taiwan-divorce-lawsuit-qna).
+## Sudah sepakat berpisah, tetapi prosedurnya belum jelas
 
-## Catat apa yang benar-benar disepakati
+Misalnya, pasangan membalas pesan bahwa ia setuju bercerai, tetapi belum bersedia menandatangani dokumen atau mengatur pencatatan. Balasan itu menyatakan kesediaan untuk bercerai, tetapi persyaratan dokumen dan pencatatan masih harus dipenuhi.
 
-Pisahkan persetujuan untuk bercerai, kesediaan mengurus dokumen dan pencatatan, serta kesepakatan tentang harta atau anak. Pasal 1050 KUH Perdata Taiwan mensyaratkan kesepakatan tertulis, tanda tangan sedikitnya dua saksi dan pencatatan untuk cara perceraian berdasarkan kesepakatan. Pesan singkat tentang berpisah saja tidak cukup. Saksi harus mengetahui secara langsung niat kedua pihak; jangan sekadar meminjam nama. [KUH Perdata resmi](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+Jika Pasal 1050 KUH Perdata Taiwan berlaku, cara perceraian ini mensyaratkan dokumen tertulis, tanda tangan sedikitnya dua saksi dan pencatatan. Saksi harus mengetahui langsung kehendak kedua pihak untuk bercerai. Dasar formalitasnya dapat dibaca pada [KUH Perdata resmi](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print).
 
-Jika tidak ada kesepakatan, alasan dan bukti untuk perkara perceraian perlu dinilai. Lama berpisah saja tidak menentukan hasil perkara.
+Tanpa kesepakatan, pengacara perlu menilai alasan hukum dan bukti untuk mengajukan perceraian melalui pengadilan. Lamanya perpisahan tidak menentukan hasil dengan sendirinya. Jika salah satu pasangan merupakan warga negara Republik Tiongkok, pengadilan Taiwan mempunyai dasar untuk menangani perceraian, kecuali berperkara di Taiwan menimbulkan kesulitan nyata bagi pihak tergugat. Pengadilan tertentu yang menangani perkara dan hukum yang mengatur perceraian masih perlu ditentukan; kewarganegaraan salah satu pihak tidak otomatis menentukan hukum perceraian. [panduan umum perceraian](/id/columns/taiwan-divorce-lawsuit-qna) memberi gambaran tentang prosesnya.
 
-## Tandai alamat lama dan informasi yang belum pasti
+## Alamat terakhir berguna, meskipun belum tentu alamat sekarang
 
-Catat rumah terakhir bersama, alamat dan tempat kerja yang diketahui, serta kontak, dengan tanggal verifikasi. Simpan surat yang dikembalikan dan catatan komunikasi. Jangan mengakses akun pasangan tanpa izin atau melacaknya diam-diam untuk memperoleh bukti.
+Alamat yang pernah digunakan pasangan dapat menjadi titik awal penelusuran. Tanggal terakhir Anda mengetahui pasangan tinggal di sana membantu menilai apakah alamat itu masih dapat dipakai. Informasi tempat kerja, nomor telepon dan email juga perlu dibedakan antara yang baru dikonfirmasi dengan yang sudah lama tidak diketahui kepastiannya. Surat yang dikembalikan dan riwayat komunikasi membantu menunjukkan upaya menghubungi pasangan.
 
-Tidak adanya jawaban bukan berarti dokumen pengadilan tidak perlu disampaikan secara sah. Metode yang sesuai bergantung pada perkara, lokasi, penelusuran dan penilaian pengadilan.
+Dokumen pengadilan tetap harus disampaikan secara sah meskipun pasangan tidak menjawab pesan. Ketika alamat tidak diketahui, cara penyampaian yang tepat bergantung pada lokasi, upaya penelusuran, prosedur perkara dan penilaian pengadilan. Pengumpulan informasi pun harus dilakukan secara sah; mengakses akun tanpa izin atau melacak pasangan secara diam-diam dapat menimbulkan persoalan tersendiri.
 
-## Beritahukan proses di Indonesia atau negara lain
+## Jika sudah ada perkara atau putusan di Indonesia
 
-Jika perkara telah dimulai, berikan instansi, nomor perkara dan tahapnya, termasuk status penyampaian dokumen. Bila sudah ada putusan, siapkan salinan lengkap dan dokumen tentang kekuatan hukumnya. Efek status perkawinan harus dibedakan dari pelaksanaan pembayaran uang.
+Proses yang sudah dimulai di Indonesia atau negara lain perlu dijelaskan sejak konsultasi pertama: instansi yang menangani, nomor perkara, tahap proses, serta apakah dokumen sudah disampaikan kepada pasangan. Untuk putusan yang sudah terbit, salinan lengkap dan dokumen yang menunjukkan apakah putusan sudah berkekuatan hukum tetap diperlukan untuk menilai akibat putusan tersebut di Taiwan.
 
-[Panduan Taiwan](https://www.ris.gov.tw/documents/html/2/3/1/384.html) membahas dokumen perceraian luar negeri, autentikasi dan terjemahan. Panduan pencatatan ini bukan keseluruhan aturan pengakuan dan eksekusi putusan. Jangan menganggap proses pengakuan, pencatatan dan pelaksanaan otomatis selesai sekaligus.
+Akibat putusan terhadap status perkawinan berbeda dari pelaksanaan kewajiban pembayaran. [Panduan Taiwan](https://www.ris.gov.tw/documents/html/2/3/1/384.html) membahas pencatatan perceraian luar negeri serta persyaratan autentikasi dan terjemahan. Pengesahan dokumen belum menentukan apakah putusan itu diakui di Taiwan atau kewajiban pembayarannya dapat dipaksakan. Kedua hal tersebut tunduk pada ketentuan masing-masing.
 
-## Bahas kuasa dan kehadiran secara terpisah
+## Pengacara dapat mewakili, tetapi kehadiran pribadi tetap mungkin diperlukan
 
-[Pasal 13 resmi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=13) memungkinkan perintah kehadiran pribadi. Jelaskan kesulitan perjalanan, kesehatan atau keselamatan sejak awal. Tanyakan dokumen kuasa yang dibuat di luar negeri; kuasa untuk pengadilan berbeda dari pencatatan perceraian pada kantor administrasi kependudukan Taiwan (戶政事務所). Untuk pencatatan perceraian berdasarkan kesepakatan melalui wakil, panduan resmi mensyaratkan alasan yang dapat dibenarkan dan persetujuan kantor administrasi kependudukan.
+[Pasal 13 resmi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=13) memungkinkan pengadilan memerintahkan pihak atau wakil yang kewenangannya timbul berdasarkan hukum untuk hadir langsung, kecuali undang-undang menentukan lain. Sesuai sifat perkara, pengadilan juga dapat menggunakan cara yang tepat untuk memperoleh keterangan atau melakukan pemeriksaan. Wakil ini, misalnya orang tua atau wali yang mewakili anak menurut hukum, berbeda dari pengacara yang ditunjuk melalui surat kuasa. Kesulitan perjalanan, kesehatan atau keselamatan dapat dibicarakan dengan pengacara untuk menilai permohonan mengenai cara mengikuti pemeriksaan. Pengadilan yang memutuskan permohonan itu.
 
-Jika ada anak, siapkan tempat tinggal, pengasuhan dan putusan terkait. Perceraian tidak otomatis memberi hak memindahkan anak ke negara lain. Simpan amplop dan tanggal surat pengadilan; jangan menunggu kunjungan berikutnya bila ada tenggat.
+Persyaratan surat kuasa yang dibuat di Indonesia perlu disesuaikan dengan perkara dan kantor penerima. Kuasa beracara berbeda dari kuasa untuk pencatatan kependudukan Taiwan. Untuk pencatatan perceraian berdasarkan kesepakatan melalui wakil, panduan resmi mensyaratkan alasan yang dapat dibenarkan serta persetujuan kantor administrasi kependudukan Taiwan (戶政事務所).
 
-## Konsultasi awal
+Surat pengadilan perlu segera disampaikan kepada pengacara, disertai amplop dan tanggal penerimaan, agar tenggat tidak terlewat.
 
-Hubungi Hovering International Law Firm dengan ringkasan perkara dan bahasa pilihan. Ruang lingkup, bahasa yang tersedia dan biaya akan dikonfirmasi. Setelah pemeriksaan konflik kepentingan, ikuti petunjuk pengiriman dokumen.
+Jika ada anak, kewarganegaraan dan tempat tinggal anak, pengasuhan, serta kesepakatan atau putusan yang ada juga perlu disampaikan. Pengadilan yang berwenang dan hukum yang mengatur hubungan orang tua–anak harus dinilai masing-masing. Perceraian atau pemberian kuasa kepada pengacara belum menentukan boleh tidaknya anak pindah negara.
 
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Alamat Taipei: 103 臺北市大同區承德路一段35號7樓之2
-- Pengacara penanggung jawab iklan: 曾雋崴 (Wei Tseng)
+### Menghubungi pengacara dari Indonesia
 
-Panduan persiapan umum, tanpa jaminan kewenangan, pembebasan hadir atau hasil.
+Sampaikan ringkasan situasi dan tenggat yang sudah diketahui kepada Hovering International Law Firm, disertai bahasa pilihan. Ketersediaan bahasa, ruang lingkup layanan dan biaya dapat ditanyakan saat kontak awal. Pengiriman dokumen sensitif mengikuti petunjuk kantor setelah pemeriksaan konflik kepentingan.
+
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Alamat Taipei: 103 臺北市大同區承德路一段35號7樓之2. Pengacara penanggung jawab iklan: 曾雋崴 (Wei Tseng).

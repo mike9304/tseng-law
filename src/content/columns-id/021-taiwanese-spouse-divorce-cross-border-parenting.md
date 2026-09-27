@@ -17,36 +17,36 @@ faq:
 
 # Bercerai dengan pasangan Taiwan: rencana pengasuhan anak di dua negara
 
-Bantuan keluarga di Indonesia mungkin membuat kehidupan setelah perceraian terasa lebih mudah. Namun, kepindahan anak juga memengaruhi sekolah, layanan kesehatan dan hubungan dengan orang tua yang tetap di Taiwan. Persiapan perlu mencakup semuanya.
+Bantuan keluarga di Indonesia dapat menjadi bagian penting dari rencana hidup setelah perceraian. Untuk anak, rencana itu juga berarti sekolah baru, kemungkinan perubahan bahasa dan cara berbeda untuk berhubungan dengan orang tua yang tinggal di Taiwan. Sebelum menentukan tanggal pindah, perlu diketahui siapa yang berwenang memutuskan tempat tinggal anak dan persetujuan atau putusan apa yang diperlukan.
 
-Tulisan ini bukan izin relokasi. Pengadilan yang berwenang, hukum yang berlaku serta akibat hukum, pengakuan, dan pelaksanaan kesepakatan atau putusan di kedua negara harus diperiksa terpisah. Uraian hukum Taiwan di bawah tidak otomatis berlaku pada setiap keluarga internasional. Baca juga [tanya jawab perceraian](/id/columns/taiwan-divorce-lawsuit-qna) dan [analisis hukum keluarga](/id/columns/taiwan-inheritance-custody-analysis).
+## Dukungan keluarga perlu terlihat dalam keseharian anak
 
-## Periksa kewenangan sebelum menentukan keberangkatan
+Misalnya, kakek dan nenek bersedia membantu mengasuh, tetapi masih bekerja pada hari sekolah. Siapa yang menjemput anak dan mendampinginya sampai mereka pulang? Pertanyaan seperti ini membuat dukungan keluarga lebih konkret daripada sekadar menyebut adanya rumah dan kerabat di Indonesia.
 
-Bawa kesepakatan, putusan dan informasi perkara yang masih berlangsung. Catat kewarganegaraan, paspor, domisili serta sekolah anak. Mengasuh sendiri atau memiliki kewenangan orang tua secara tunggal bukan izin umum untuk berpindah negara. Periksa persetujuan, putusan dan batasan yang diperlukan; jangan menyelesaikan perselisihan dengan memindahkan anak sepihak. Jika ada kekerasan atau bahaya segera, utamakan keselamatan dan konsultasikan perlindungan.
+Pengasuhan saat ini dapat dijelaskan melalui kegiatan sehari-hari: antar-jemput, makan, pengobatan dan penjagaan selama orang tua bekerja. Rencana sesudah pindah perlu menunjukkan bagaimana kebutuhan tersebut akan dipenuhi, termasuk bantuan belajar jika bahasa sekolah berubah dan penyerahan catatan medis jika anak menjalani perawatan. Bagian yang belum pasti sebaiknya dinyatakan apa adanya. Anak tidak boleh diarahkan untuk memberikan jawaban tertentu atau diminta menolak salah satu orang tua demi kepentingan pihak lain dalam sengketa.
 
-## Jelaskan kehidupan sehari-hari anak
+Jika hukum Taiwan berlaku, Pasal 1055 mengatur hak dan kewajiban orang tua terhadap anak di bawah umur serta hubungan dengan anak setelah perceraian. Pasal 1055-1 mengharuskan pengadilan menilai kepentingan terbaik anak berdasarkan berbagai keadaan: usia, kesehatan, keinginan dan perkembangan anak, kemampuan dan sikap pengasuhan orang tua, serta hubungan emosional anak dengan orang tua dan orang yang tinggal bersamanya. Penghasilan atau kesalahan dalam perkawinan bukan satu-satunya penentu. [Sumber resmi](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
 
-Pasal 1055 dan 1055-1 KUH Perdata Taiwan membahas hak dan kewajiban orang tua, hubungan dengan anak dan kepentingan terbaik anak. Untuk anak di bawah umur, penilaian mempertimbangkan usia, kesehatan, keinginan dan perkembangan anak; keadaan, kemampuan serta sikap pengasuhan orang tua; dan hubungan emosional anak dengan orang tua serta orang yang tinggal bersamanya. Penghasilan atau kesalahan dalam perkawinan saja tidak menentukan hasil. [Sumber resmi](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+## Rencana yang baik dan kewenangan untuk pindah
 
-Siapkan catatan tentang antar-jemput, pengobatan, makan dan pengasuhan saat bekerja. Jelaskan rumah serta bantuan yang tersedia setelah pindah. Catatan ini membantu pengacara memahami kebutuhan nyata anak saat konsultasi, bukan rumus untuk memenangkan perkara. Jangan mengarahkan jawaban anak atau memintanya menolak orang tua lain.
+Menjadi pengasuh utama atau menjalankan kewenangan orang tua secara tunggal belum berarti seluruh persyaratan perpindahan lintas negara telah terpenuhi. Kesepakatan dan putusan yang berlaku dapat mengatur tempat tinggal, perjalanan atau pembatasan lain. Informasi kewarganegaraan, paspor, domisili dan sekolah anak membantu menilai langkah yang dibutuhkan; perkara yang masih berlangsung juga perlu diketahui.
 
-## Buat hubungan lintas negara dapat dijalankan
+Pengadilan yang dapat menangani persoalan anak dan hukum yang berlaku adalah dua pertanyaan tersendiri. Setelah itu, perlu dinilai bagaimana kesepakatan atau putusan dapat diakui dan dilaksanakan di kedua negara. [tanya jawab perceraian](/id/columns/taiwan-divorce-lawsuit-qna) dan [analisis hukum keluarga](/id/columns/taiwan-inheritance-custody-analysis) memberi latar belakangnya. Persetujuan bercerai tidak otomatis mencakup relokasi. Sebelum syarat persetujuan dan pembatasan dipastikan, jangan menjadikan kepindahan sepihak sebagai cara mendahului penyelesaian sengketa. Bila ada kekerasan atau bahaya segera, keselamatan dan langkah perlindungan perlu ditangani terlebih dahulu.
 
-Pertimbangkan sekolah, bahasa, catatan kesehatan dan masa transisi. Tandai hal yang belum pasti. Untuk hubungan dengan orang tua yang tinggal di Taiwan, diskusikan jadwal panggilan, liburan bersama, lokasi penjemputan dan pengantaran anak, pendamping perjalanan dan biaya, serta cara menangani perubahan dan berbagi informasi sekolah.
+## Hubungan dengan orang tua yang tetap di Taiwan
 
-Ini contoh perencanaan, bukan syarat yang selalu cukup secara hukum. Masalah keselamatan, pengaturan perlindungan dan kemungkinan pelaksanaan lintas negara tetap perlu diperiksa. Rencana yang rinci tidak menjamin persetujuan relokasi.
+Janji bahwa anak dapat menelepon kapan saja belum tentu cocok dengan jam sekolah, waktu tidur dan pekerjaan orang tua. Jadwal panggilan perlu memakai waktu setempat yang jelas. Untuk liburan, tanggal mulai dan akhir, lokasi penjemputan serta pengantaran, dan siapa yang mendampingi perjalanan menentukan apakah rencana dapat dijalankan.
 
-## Pisahkan biaya anak dari penyelesaian harta
+Biaya tiket dan pendamping, kesiapan dokumen perjalanan serta cara memberi kabar ketika anak sakit atau penerbangan dibatalkan perlu dibahas bersama. Berbagi informasi sekolah dan kesehatan membantu orang tua yang tinggal jauh tetap mengikuti kehidupan anak. Bila ada persoalan keselamatan, pengaturan pertemuan dan langkah perlindungan perlu disesuaikan. Kesepakatan praktis ini juga harus dinilai kekuatan hukumnya dan kemungkinan pelaksanaannya lintas negara; rincian rencana saja tidak menjamin izin pindah.
 
-Buat daftar biaya pendidikan, kesehatan dan hidup sehari-hari. Pisahkan pembayaran rutin dari pengeluaran besar yang tidak rutin; bahas mata uang, tanggal pembayaran dan biaya transfer. Ini bukan rumus nafkah anak. Besaran, perubahan serta pembayaran atau pelaksanaan kewajiban nafkah di luar negeri memerlukan penilaian kasus.
+## Nafkah anak mempunyai tujuan tersendiri
 
-## Minta penilaian sebelum pindah
+Daftar pengeluaran pendidikan, kesehatan dan hidup sehari-hari membantu menjelaskan kebutuhan anak. Dari situ, orang tua dapat membahas biaya yang dicakup oleh pembayaran rutin dan pengeluaran besar yang perlu diatur tersendiri. Mata uang, tanggal pembayaran dan biaya transfer menentukan jumlah yang benar-benar diterima.
 
-Kirim ringkasan kewarganegaraan, tempat tinggal, usia anak, pengasuhan, dokumen yang ada dan rencana waktu kepada Hovering International Law Firm. Sebutkan bahasa pilihan. Layanan, bahasa dan biaya dikonfirmasi setelah kontak; kirim data sensitif setelah pemeriksaan konflik kepentingan dan petunjuk kantor.
+Menggabungkan nafkah dengan penyelesaian harta dalam satu angka dapat mengaburkan tujuan pembayaran. Besaran kewajiban nafkah, perubahan jumlahnya dan pelaksanaan pembayaran di luar negeri tetap membutuhkan penilaian berdasarkan keadaan keluarga, hukum yang berlaku serta dokumen yang ada.
 
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Alamat Taipei: 103 臺北市大同區承德路一段35號7樓之2
-- Pengacara penanggung jawab iklan: 曾雋崴 (Wei Tseng)
+### Konsultasi sebelum mengubah tempat tinggal anak
 
-Informasi umum tanpa jaminan legalitas relokasi atau hasil pengasuhan. Periksa kasus sebelum mengubah negara tempat tinggal anak.
+Hovering International Law Firm dapat dihubungi dengan ringkasan kewarganegaraan keluarga, tempat tinggal, usia dan kebutuhan anak, dokumen yang ada serta rencana waktu pindah. Sertakan bahasa pilihan dan tanyakan ketersediaan bahasa, lingkup layanan serta biaya. Data sensitif disampaikan setelah pemeriksaan konflik kepentingan melalui cara yang diarahkan kantor.
+
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Alamat Taipei: 103 臺北市大同區承德路一段35號7樓之2. Pengacara penanggung jawab iklan: 曾雋崴 (Wei Tseng).

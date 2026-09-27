@@ -20,32 +20,38 @@ faq:
 
 # Kết hôn với người Đài Loan: đăng ký ở đâu, xác minh giấy tờ và phỏng vấn thế nào?
 
-Nhiều cặp đôi chuẩn bị giấy tờ theo kinh nghiệm của người quen rồi mới hỏi nơi tiếp nhận. Cách làm này dễ khiến một giấy xác nhận được xin đúng tên nhưng lại không dùng được cho thủ tục đang cần. Trước khi đặt vé hoặc xin bản dịch, hãy kiểm tra đúng đường đi của hồ sơ. Với công dân Việt Nam thuộc diện quốc tịch được chỉ định, trình tự thông thường là đăng ký kết hôn tại Việt Nam, làm thủ tục phỏng vấn và xác minh tại cơ quan đại diện Đài Loan, rồi đăng ký hôn nhân trên hộ tịch Đài Loan. Ngoại lệ phải được cơ quan có thẩm quyền xác nhận; không nên xem hai nơi kết hôn là lựa chọn tự do trong mọi trường hợp.
+Người Việt muốn kết hôn với công dân Đài Loan có thể chọn đăng ký ở đâu tùy ý không? Đài Loan áp dụng quy định riêng đối với công dân Việt Nam; trình tự thông thường là đăng ký kết hôn tại Việt Nam, phỏng vấn và xác minh giấy tờ ở cơ quan đại diện Đài Loan, rồi ghi nhận hôn nhân trong hồ sơ hộ tịch Đài Loan. Muốn áp dụng ngoại lệ để kết hôn trực tiếp tại Đài Loan, phải xác định mình đáp ứng điều kiện nào trước khi chuẩn bị hồ sơ.
 
-## Phân biệt đăng ký kết hôn với ghi nhận cuộc hôn nhân đã có
+## Đăng ký kết hôn và ghi chú cuộc hôn nhân đã có
 
-Nếu dự định kết hôn tại Việt Nam, hãy hỏi cơ quan có thẩm quyền về hồ sơ của công dân Việt Nam kết hôn với người nước ngoài. Nếu đã kết hôn hợp pháp tại Đài Loan, vấn đề phía Việt Nam là xem xét **ghi chú kết hôn** vào sổ hộ tịch theo trường hợp áp dụng. [Cổng Dịch vụ công Quốc gia](https://dichvucong.gov.vn/p/home/dvc-chi-tiet-thu-tuc-hanh-chinh.html?ma_thu_tuc=2.002189) hướng dẫn việc ghi vào sổ hộ tịch một cuộc hôn nhân đã được giải quyết ở nước ngoài khi đáp ứng các điều kiện áp dụng. Hai tên thủ tục không nên dùng thay cho nhau.
+Nếu kết hôn tại Việt Nam, cơ quan có thẩm quyền sẽ xử lý việc công dân Việt Nam kết hôn với người nước ngoài. Còn nếu đã kết hôn hợp pháp ở Đài Loan, thủ tục phía Việt Nam có thể là ghi chú kết hôn đã được giải quyết ở nước ngoài. [Cổng Dịch vụ công Quốc gia](https://dichvucong.gov.vn/p/home/dvc-chi-tiet-thu-tuc-hanh-chinh.html?ma_thu_tuc=2.002189) nêu điều kiện ghi vào sổ hộ tịch. Đây là ghi vào sổ hộ tịch một cuộc hôn nhân đã có hiệu lực, không phải đăng ký một cuộc hôn nhân mới.
 
-Phía Đài Loan cũng phân biệt kết hôn tại Đài Loan với đăng ký một cuộc hôn nhân đã có hiệu lực ở nước ngoài. [Hướng dẫn đăng ký kết hôn của cơ quan hộ chính](https://www.ris.gov.tw/documents/html/2/3/1/383.html) là căn cứ để hỏi hộ chính sự vụ sở tiếp nhận hồ sơ. Giấy tờ về tình trạng hôn nhân, hộ tịch, tên tiếng Hoa và chứng nhận kết hôn phục vụ các mục đích khác nhau; không có một danh sách duy nhất áp dụng cho mọi cặp đôi. Nếu được áp dụng đường kết hôn trong nước tại Đài Loan, cần văn bản kết hôn, chữ ký của ít nhất hai người làm chứng và đăng ký tại cơ quan hộ chính. Đó là việc làm cho hôn nhân có hiệu lực theo đường trong nước, khác với ghi nhận hôn nhân đã có hiệu lực ở nước ngoài. Công dân Việt Nam phải kiểm tra ngoại lệ phù hợp trước khi dùng đường này; miễn phỏng vấn không đồng nghĩa với được phép trực tiếp kết hôn tại Đài Loan.
+[Hướng dẫn đăng ký kết hôn của cơ quan hộ chính](https://www.ris.gov.tw/documents/html/2/3/1/383.html) cũng phân biệt hai tình huống đó tại Đài Loan. Cơ quan hộ chính, hay hộ chính sự vụ sở, là nơi đăng ký hộ tịch và hộ khẩu. Khi được áp dụng thủ tục kết hôn trực tiếp tại Đài Loan, hai bên phải lập văn bản kết hôn có chữ ký hoặc dấu của ít nhất hai người làm chứng, rồi cùng đăng ký tại cơ quan này.
 
-## Kiểm tra xác minh bản gốc và bản dịch trước khi xin giấy
+Miễn phỏng vấn không đồng nghĩa được phép chọn đăng ký tại Đài Loan. Đối với hôn nhân đã có hiệu lực ở nước ngoài, người nộp hồ sơ có thể được miễn nộp giấy chứng minh tình trạng hôn nhân nếu giấy kết hôn đã được cơ quan đại diện Đài Loan xác minh và có ghi chú rằng hôn nhân phù hợp với pháp luật nơi kết hôn. Đây là điều kiện về hồ sơ đăng ký, khác với miễn phỏng vấn.
 
-Thông tin trong hộ chiếu, giấy tờ hộ tịch và giấy kết hôn phải cho thấy đúng cùng một người. Hãy báo trước nếu tên có dấu, thứ tự họ tên hoặc ngày sinh giữa các giấy tờ không thống nhất. Người từng ly hôn hoặc có vợ, chồng đã mất cần hỏi cách chứng minh cuộc hôn nhân trước đã chấm dứt.
+## Tên trên giấy tờ và bước xác minh
 
-Đừng coi việc dịch sang tiếng Hoa là đã hoàn thành xác minh. Hỏi nơi tiếp nhận và cơ quan đại diện Đài Loan phụ trách địa bàn về bản gốc, bản dịch, cơ quan chứng thực và thứ tự xác minh. [Danh mục cơ quan phụ trách thủ tục hôn nhân do BOCA công bố](https://www.boca.gov.tw/fp-403-11-c3094-1.html) có liên kết tới văn phòng ở Hà Nội và Thành phố Hồ Chí Minh. Cần xác định đúng nơi phụ trách hồ sơ của mình, thay vì dùng quy trình của văn phòng tại một nước khác.
+Dấu tiếng Việt, thứ tự họ tên hoặc ngày sinh khác nhau có thể khiến cơ quan tiếp nhận cần thêm chứng cứ cho thấy các giấy tờ xác định cùng một người. Sai khác nên được giải quyết trước khi gửi hồ sơ. Với người từng ly hôn hoặc có vợ, chồng đã mất, hồ sơ còn phải có chứng cứ về việc hôn nhân trước đã chấm dứt.
 
-## Phỏng vấn tại cơ quan đại diện là một bước riêng
+Khi đăng ký hôn nhân tại cơ quan hộ chính Đài Loan, giấy tờ lập ở nước ngoài phải qua xác minh của cơ quan đại diện Đài Loan theo quy định; tài liệu bằng tiếng nước ngoài cần bản dịch tiếng Hoa được cơ quan đại diện xác minh hoặc công chứng viên tại Đài Loan chứng nhận. Dịch xong chưa có nghĩa đã hoàn tất bước đó. Trước khi gửi bản gốc, có thể cho nơi tiếp nhận biết loại văn bản và nơi cấp để được hướng dẫn cơ quan nào thực hiện xác minh.
 
-[Hướng dẫn BOCA về người thuộc một số quốc tịch kết hôn với công dân Đài Loan](https://www.boca.gov.tw/fp-212-4295-61dd5-1.html) quy định việc xin xác minh giấy kết hôn và thị thực thuộc diện phải đăng ký phỏng vấn tại cơ quan đại diện ở nước ngoài. Việt Nam thuộc nhóm cần kiểm tra theo hướng dẫn này. Theo mục 3, cả hai bên phải trực tiếp đến phỏng vấn, trừ trường hợp đủ điều kiện miễn theo mục 7. Hãy xác nhận cách hẹn và chứng cứ với cơ quan tiếp nhận.
+[Danh mục cơ quan phụ trách thủ tục hôn nhân do BOCA công bố](https://www.boca.gov.tw/fp-403-11-c3094-1.html) có liên kết tới văn phòng ở Hà Nội và Thành phố Hồ Chí Minh. Văn phòng phụ trách địa bàn sẽ hướng dẫn cách đặt lịch, xác minh giấy tờ và chuẩn bị tài liệu chứng minh cho hồ sơ cụ thể.
 
-Hướng dẫn có các trường hợp được xem xét miễn phỏng vấn; đây không phải lời bảo đảm miễn cho mọi người đã có con hoặc đã kết hôn lâu. Cần nộp đúng chứng cứ và chờ cơ quan có thẩm quyền xác định. Bài viết không tự đặt thời gian chờ, số lần phỏng vấn hay mức phí.
+## Tham dự và miễn phỏng vấn
 
-## Đăng ký hộ tịch không thay thế thị thực và cư trú
+[Hướng dẫn BOCA về người thuộc một số quốc tịch kết hôn với công dân Đài Loan](https://www.boca.gov.tw/fp-212-4295-61dd5-1.html) điều chỉnh việc phỏng vấn khi xin xác minh giấy kết hôn và thị thực. Theo mục 3, cả hai bên phải trực tiếp đến, trừ trường hợp đủ điều kiện miễn theo mục 7.
 
-Sau khi hồ sơ hôn nhân được xử lý, kiểm tra việc đăng ký trên hộ tịch Đài Loan và việc ghi nhận ở Việt Nam theo đúng đường đi của hồ sơ. Nếu muốn sống tại Đài Loan, đối chiếu [hướng dẫn thị thực cư trú dành cho vợ, chồng người Đài Loan](https://www.boca.gov.tw/fp-398-696-550e9-1.html), rồi hỏi Cơ quan Di dân về giấy phép cư trú phù hợp. Việc kết hôn không tự cấp thẻ cư trú hoặc quốc tịch.
+Có con ruột của cả hai người là một căn cứ có thể được miễn phỏng vấn khi cơ quan đại diện chấp nhận chứng cứ. Nếu hai người từng không đạt phỏng vấn liên quan đến chính cuộc hôn nhân này thì không được miễn theo mục đó. Được miễn nghĩa là không phải tham dự buổi phỏng vấn theo quy định này; việc xác minh văn bản và xét thị thực vẫn có yêu cầu riêng.
 
-Trước khi tư vấn, nên ghi ngắn gọn quốc tịch và nơi ở của hai người, tình trạng hôn nhân trước đây, hộ tịch của người Đài Loan, nơi dự định kết hôn, giấy tờ đã có và tình trạng lưu trú hiện tại. Nếu sắp có con, xem thêm [quốc tịch và đăng ký khai sinh của trẻ trong gia đình Việt–Đài](/vi/columns/baby-taiwan-nationality-birth-registration).
+## Xin cư trú sau khi đăng ký hôn nhân
 
-Luật sư 曾雋崴 của Văn phòng luật quốc tế Hovering có thể tư vấn về vấn đề pháp lý phía Đài Loan. Liên hệ [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) để trình bày sơ bộ và hỏi cách gửi tài liệu nhạy cảm. Địa chỉ văn phòng tại Đài Bắc: **103 臺北市大同區承德路一段35號7樓之2**. Thủ tục pháp lý phía Việt Nam cần được kiểm tra với cơ quan Việt Nam có thẩm quyền.
+Đăng ký hôn nhân không làm người nước ngoài tự động được cấp thẻ cư trú hoặc có quốc tịch. [Hướng dẫn thị thực cư trú dành cho vợ, chồng người Đài Loan](https://www.boca.gov.tw/fp-398-696-550e9-1.html) nêu hồ sơ cho người có vợ hoặc chồng Đài Loan đã có hộ tịch tại đây, trong đó hộ tịch phải ghi cuộc hôn nhân. Cơ quan Di dân giải quyết giấy phép cư trú. Tùy tình trạng nhập cảnh và điều kiện của người xin, thủ tục thị thực hoặc cư trú cần làm có thể khác nhau. Bạn cần theo dõi ngày hết hạn lưu trú trong lúc chuẩn bị hồ sơ.
 
-Nguồn chính thức được kiểm tra ngày 27 tháng 9 năm 2026. Xác nhận hồ sơ, lịch hẹn, thời hạn và phí theo hướng dẫn mới nhất của nơi tiếp nhận.
+Gia đình sắp có con có thể đọc [quốc tịch và đăng ký khai sinh của trẻ trong gia đình Việt–Đài](/vi/columns/baby-taiwan-nationality-birth-registration).
+
+### Tư vấn về phần pháp luật Đài Loan
+
+Khi liên hệ luật sư 曾雋崴 của Văn phòng luật quốc tế Hovering, hãy nêu ngắn gọn quốc tịch, nơi ở, hộ tịch Đài Loan, hôn nhân trước, nơi dự định kết hôn và giấy tờ đã có. Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Tài liệu nhạy cảm gửi theo hướng dẫn của văn phòng. Địa chỉ: 103 臺北市大同區承德路一段35號7樓之2. Các vấn đề pháp lý Việt Nam cần được kiểm tra với cơ quan Việt Nam có thẩm quyền.
+
+Nguồn chính thức được kiểm tra ngày 27 tháng 9 năm 2026. Hồ sơ, lịch hẹn, thời hạn và phí cần đối chiếu hướng dẫn mới nhất của nơi tiếp nhận.

@@ -20,38 +20,48 @@ faq:
 
 # Pagpapakasal sa Taiwanese: mga hakbang para sa Pilipino, mula dokumento hanggang pagpaparehistro
 
-Ang pagpili ng petsa ng seremonya ay isang usapin; ang pagtukoy kung paano magiging legal at maitatala ang kasal ay iba. Para sa Pilipino at Taiwanese na magkapareha, kailangang malinaw kung may kasal nang naganap, saan ito naging legal, at aling tanggapan ang susunod na tatanggap ng mga dokumento.
+Kung magpapakasal kayo sa isang Taiwanese, saang bansa dapat unang gawin ang legal na proseso? Karaniwan, sa Pilipinas muna ikinakasal ang magkapareha bago ang panayam, pagpapatunay ng dokumento at pagpaparehistro sa Taiwan. May mga eksepsiyon para sa gustong direktang magpakasal sa Taiwan, ngunit dapat malaman muna kung kwalipikado kayo bago magplano ng biyahe.
 
-## Unahin ang rutang naaangkop sa nasyonalidad
+## Ang karaniwang proseso para sa Pilipino
 
-Ipinapakita ng [gabay ng household registration authority ng Taiwan](https://www.ris.gov.tw/documents/html/2/3/1/383.html) ang pagkakaiba ng kasal na isinasagawa sa Taiwan at pagtatala ng kasal na legal nang naganap sa ibang bansa. May espesyal na kondisyon para sa mga itinakdang nasyonalidad. Para sa Pilipinong saklaw nito, ang karaniwang ruta ay kasal sa sariling bansa, panayam at pagpapatunay sa kinauukulang tanggapan ng Taiwan, at pagpaparehistro ng kasal sa Taiwan. Hindi malayang mapagpipilian ng bawat magkapareha ang anumang ruta; ipasuri muna ang posibleng eksepsiyon.
+Sa [gabay ng household registration authority ng Taiwan](https://www.ris.gov.tw/documents/html/2/3/1/383.html), may espesyal na kondisyon para sa mga mamamayan ng itinakdang bansa, kabilang ang Pilipinas. Magkaiba ang dokumentong kailangan para sa pagpapakasal sa Taiwan at para sa pagtatala roon ng kasal na naganap na sa Pilipinas.
 
-Kung naaangkop ang rutang kasal sa loob ng Taiwan, kailangan ang nakasulat na kasunduan sa kasal, mga pirma ng hindi bababa sa dalawang saksi, at pagpaparehistro sa tanggapan ng household registration. Hindi katumbas nito ang seremonya o pirma lamang ng magkapareha. Iba naman ang dokumentong kailangan upang itala ang kasal na may bisa na sa Pilipinas.
+Kung kwalipikado ang magkapareha na magpakasal sa Taiwan, kailangan ang nakasulat na kasunduan sa kasal na may pirma o selyo ng hindi bababa sa dalawang saksi, at parehong partido ang magpaparehistro ng kasal sa tanggapan ng household registration. Karaniwang personal ang pagharap; pinapayagan lamang ang nakasulat na awtorisasyon sa kinatawan kung may makatuwirang dahilan at inaprubahan ng tanggapan ng household registration. Hindi sapat ang seremonya o pirma lamang ng magkapareha. Kung legal na ang kasal sa Pilipinas, ang kasal na iyon ang ipatatala, gamit ang mga dokumentong kailangan para sa kasal na naganap sa ibang bansa.
 
-## Ihiwalay ang pagpapatunay sa pagsasalin ng dokumento
+## Pag-uulat sa MECO
 
-Ihambing ang mga pangalan, petsa ng kapanganakan at detalye sa pasaporte, marriage certificate at rekord ng Taiwanese na kapareha. Ipaalam agad kung may dating kasal, diborsiyo o pagkamatay ng dating asawa. Ang patunay na maaari nang magpakasal muli ay hindi laging kapareho ng dokumentong ginagamit upang patunayan ang bagong kasal.
+Ang Report of Marriage sa Manila Economic and Cultural Office, o MECO, ay para sa pag-uulat ng kasal na naganap sa Taiwan kung Pilipino ang isa sa mag-asawa. Kung sa Pilipinas naganap ang kasal at ipinatala lamang sa Taiwan, hindi iyon ang kasal na saklaw ng serbisyong ito. Kung sa Taiwan mismo nagpakasal, kailangan pang iulat ng mag-asawa sa MECO para maitala sa Philippine Statistics Authority, o PSA; hindi sapat ang pagkuha lamang ng Taiwan marriage record. Lugar at paraan ng kasal ang kailangang ipaliwanag sa MECO upang matukoy ang serbisyong naaangkop.
 
-Itanong sa tatanggap na tanggapan kung aling orihinal at salin ang kailangan, at sino ang dapat magpatunay sa bawat isa. Hindi awtomatikong napapatunayan ang dokumento dahil may salin na ito sa Chinese. Gamitin ang [opisyal na listahan ng BOCA ng mga tanggapan para sa usaping kasal](https://www.boca.gov.tw/fp-403-11-c3094-1.html) upang matukoy ang kinauukulang tanggapan sa Pilipinas. Huwag gumamit ng listahan para sa ibang bansa bilang tiyak na panuntunan sa sariling aplikasyon.
+## Kung may dating kasal
 
-## Alamin ang tuntunin sa panayam bago bumiyahe
+Kung may dating kasal, kailangan ang mga rekord na nagpapakita kung paano ito natapos at kung maaari nang magpakasal muli. Ang marriage certificate ng bagong kasal ay hindi kapalit ng mga rekord na iyon.
 
-Sa [patakaran ng BOCA sa panayam para sa mga itinakdang bansa](https://www.boca.gov.tw/fp-212-4295-61dd5-1.html), kailangang magpatala para sa panayam sa mga aplikasyong saklaw nito. Parehong dapat personal na humarap ang dalawang partido maliban kung may naaangkop na eksepsiyon sa patakaran.
+Para sa Pilipinong dating kasal sa Taiwanese at nagdiborsiyo sa Taiwan, kailangan ang pagkilala ng korte sa Pilipinas sa foreign divorce bago iulat ang kasunod na kasal. Ayon sa [Report of Marriage ng MECO](https://www.meco.org.tw/services/notarial-services/report-of-marriage), kailangang iharap ang kaukulang PSA marriage record na may anotasyon ng pagkilala sa diborsiyo. Ang diborsiyo sa Taiwan ay hindi awtomatikong nagbibigay sa Pilipino ng kakayahang magpakasal muli sa ilalim ng batas ng Pilipinas. Sa pagsusuri ng abogado o awtoridad sa Pilipinas, mahalaga kung ano ang nasyonalidad ng bawat asawa, kung legal nang natapos ang dating kasal at kung paano ito nakatala sa mga rekord sa Pilipinas.
 
-Maaaring maging batayan ng eksepsiyon ang pagkakaroon ng magkasamang biological na anak at iba pang nakalistang kalagayan, ngunit kailangan pa rin ang pagsusuri ng awtoridad. Hindi magagamit ang eksepsiyon kung dati nang hindi pumasa sa panayam para sa parehong kasal. Ang eksepsiyon sa panayam ay hindi awtomatikong eksepsiyon sa pagpapatunay ng dokumento o pahintulot na direktang magpakasal sa Taiwan. Kumpirmahin ang iskedyul at katibayan; walang takdang bayad o tagal na ipinapangako rito.
 
-## May hiwalay na pag-uulat sa Pilipinas
 
-Para sa kasal na naganap sa Taiwan at saklaw ng serbisyo nito, tingnan ang [Report of Marriage ng MECO](https://www.meco.org.tw/services/notarial-services/report-of-marriage). Ang rekord sa Taiwan ay hindi awtomatikong kapalit ng ulat na ito o ng kaugnay na rekord sa PSA. Itanong sa MECO kung aling ruta ang naaangkop sa lugar at paraan ng inyong kasal.
+## Ang salin at ang pagpapatunay ng dokumento
 
-Mahalaga ang dating kasal. Inilalahad ng MECO ang kaugnay na kinakailangan kapag may foreign divorce, kabilang ang pagkilala ng korte sa Pilipinas sa mga kasong saklaw nito. Huwag ituring na lahat ng diborsiyo sa Taiwan ay sapat na agad para sa muling pagpapakasal ng Pilipino. Kailangang masuri ang mga partido, dating kasal at mga rekord sa Pilipinas ng tamang awtoridad o tagapayo sa batas ng Pilipinas.
+Dapat magkatugma ang mga pangalan at petsa ng kapanganakan sa pasaporte, marriage certificate at tala ng Taiwanese na kapareha. Kapag may pagkakaiba, kailangan itong maipaliwanag upang makita ng tumatanggap na tanggapan na iisang tao ang tinutukoy ng mga dokumento.
 
-## Hindi awtomatikong pahintulot sa paninirahan ang kasal
+Ang mga dokumentong inisyu sa ibang bansa na gagamitin sa pagpaparehistro ng kasal sa Taiwan ay kailangang patunayan ng kinauukulang tanggapan ng Taiwan ayon sa mga rekisito. Ang salin sa Chinese ay kailangang ipa-authenticate sa tanggapang iyon o ipa-certify sa notaryo sa Taiwan. Ang pagsasalin ay hindi kapalit ng pagpapatunay ng orihinal. Ang [opisyal na listahan ng BOCA ng mga tanggapan para sa usaping kasal](https://www.boca.gov.tw/fp-403-11-c3094-1.html) ay tumutulong matukoy ang tanggapan para sa Pilipinas.
 
-Kung balak manirahan sa Taiwan, hiwalay na tingnan ang [BOCA resident-visa guidance para sa foreign spouse](https://www.boca.gov.tw/fp-398-696-550e9-1.html) at ang naaangkop na pahintulot sa NIA. Maaaring gamitin ang marriage record sa aplikasyon, ngunit hindi ito mismo ang ARC, visa o pagkakaloob ng nasyonalidad. Bantayan ang kasalukuyang pinahihintulutang pananatili habang inaayos ang mga dokumento.
+## Kailan maaaring hindi na humarap sa panayam?
 
-Para sa konsultasyon, ihanda ang nasyonalidad at tirahan ng dalawa, dating kasal, household-registration status ng Taiwanese na kapareha, lugar ng kasal at mga dokumentong mayroon na. Kung naghahanda para sa sanggol, tingnan ang [nasyonalidad at birth registration ng anak ng Pilipino at Taiwanese](/fil/columns/baby-taiwan-nationality-birth-registration).
+Sa [patakaran ng BOCA sa panayam para sa mga itinakdang bansa](https://www.boca.gov.tw/fp-212-4295-61dd5-1.html), parehong partido ang kailangang personal na humarap kapag humihiling ng pagpapatunay ng marriage certificate o visa batay sa kasal, maliban kung pinayagan ang interview exemption. Mula sa tanggapan makukuha ang appointment at impormasyon tungkol sa katibayang dapat ihanda.
 
-Maaaring konsultahin si abogada 曾雋崴 ng Hovering International Law Office tungkol sa batas ng Taiwan. Magpadala muna ng maikling paglalarawan sa [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) at itanong ang paraan ng pagsusumite ng sensitibong dokumento. Ang tanggapan sa Taipei ay nasa **103 臺北市大同區承德路一段35號7樓之2**. Ang usaping batas ng Pilipinas ay dapat kumpirmahin sa naaangkop na awtoridad o tagapayo roon.
+Kung parehong biyolohikal na magulang ng bata ang mag-asawa, maaari itong maging batayan ng interview exemption matapos suriin ng tanggapan ang katibayan. Wala sa mga nakalistang exemption ang magagamit kung dati nang hindi pumasa sa panayam para sa parehong kasal.
 
-Sinuri ang mga opisyal na sanggunian noong 27 Setyembre 2026. Kumpirmahin ang kasalukuyang dokumento, appointment, bayad at deadline sa tanggapang hahawak sa inyong kaso.
+Kahit pinayagan kayong hindi na humarap sa panayam, kailangan pa ring ipa-authenticate ang mga dokumento. Hindi rin binabago ng interview exemption ang mga kondisyon para sa direktang pagpapakasal sa Taiwan.
+
+## Pagtira sa Taiwan pagkatapos ng kasal
+
+Kung may household registration sa Taiwan ang asawang Taiwanese, nakasaad sa [gabay ng BOCA sa resident visa para sa dayuhang asawa](https://www.boca.gov.tw/fp-398-696-550e9-1.html) ang mga rekisito para sa aplikante. Kabilang dito ang household registration record ng asawang Taiwanese na may nakatalang kasal. Ang angkop na proseso ng visa o paninirahan ay nakasalalay rin sa kasalukuyang katayuan sa imigrasyon. Ang aplikasyon para sa permiso sa paninirahan ay isinusumite sa National Immigration Agency, o NIA. Susuriin nito ang pagiging kwalipikado batay sa katayuan sa imigrasyon at relasyon sa asawa.
+
+Maaaring gamitin ang marriage record bilang ebidensiya sa hiwalay na aplikasyon para sa visa o ARC. Ang pagkakaroon ng marriage record ay hindi rin nagbibigay agad ng nasyonalidad. Habang inaasikaso ang mga papeles, bantayan kung kailan matatapos ang panahong pinahihintulutan kayong manatili. Kung naghahanda rin ng mga dokumento para sa isisilang na anak, tingnan ang [nasyonalidad at birth registration ng anak ng Pilipino at Taiwanese](/fil/columns/baby-taiwan-nationality-birth-registration).
+
+### Tanong sa batas ng Taiwan
+
+Maaaring makipag-ugnayan kay abogada 曾雋崴 ng Hovering International Law Office sa [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) gamit ang maikling paglalarawan ng nasyonalidad, tirahan, dating kasal, household registration ng Taiwanese na kapareha at mga dokumentong mayroon na. Tanggapan sa Taipei: 103 臺北市大同區承德路一段35號7樓之2. Itanong muna ang paraan ng pagpapadala ng sensitibong dokumento. Ang batas ng Pilipinas ay dapat talakayin sa naaangkop na awtoridad o tagapayo roon.
+
+Sinuri ang mga opisyal na sanggunian noong 27 Setyembre 2026. Sa tumatanggap na tanggapan kinukumpirma ang listahan ng dokumento, appointment, bayad at deadline.

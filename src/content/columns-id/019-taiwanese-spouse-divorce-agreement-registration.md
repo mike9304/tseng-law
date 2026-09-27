@@ -17,32 +17,36 @@ faq:
 
 # Sepakat bercerai dengan pasangan Taiwan: periksa dokumen sebelum menandatangani
 
-Pasangan Anda mengirim kesepakatan berbahasa Mandarin sebelum jadwal pulang ke Indonesia. Jangan hanya memeriksa kalimat tentang perceraian. Dokumen tersebut mungkin juga mengatur uang, tempat tinggal, utang atau anak.
+Misalnya, pasangan mengirim rancangan kesepakatan sebelum Anda pulang ke Indonesia. Jumlah pembayaran sudah dibicarakan, tetapi dokumennya juga menyebut bahwa kedua pihak melepaskan tuntutan lain. Apa yang sebenarnya akan Anda lepaskan? Setuju untuk bercerai belum berarti Anda juga menerima setiap ketentuan dalam dokumen itu.
 
-Tulisan ini membantu menyiapkan pemeriksaan dokumen, bukan menentukan bahwa hukum Taiwan berlaku untuk setiap pasangan. Catat kewarganegaraan, tempat tinggal, tempat perkawinan dicatat dan perkara yang sudah berjalan. Untuk gambaran umum, baca [tanya jawab perceraian Taiwan](/id/columns/taiwan-divorce-lawsuit-qna).
+## Klausul pembayaran belum tentu menjelaskan seluruh penyelesaian
 
-## Pahami isi, kemudian atur penandatanganan
+Jumlah yang tertulis perlu dikaitkan dengan tujuan pembayaran: pembagian harta, penggantian pengeluaran, atau kewajiban lain. Untuk klausul pelepasan tuntutan, perlu diketahui hak atau tuntutan apa yang tercakup dan kapan tuntutan itu timbul. Jika penjelasan lisan lebih sempit daripada teks Mandarin, perbedaan itu perlu diselesaikan dalam dokumen. Dalam kesepakatan dua bahasa, kesesuaian makna dan ketentuan tentang versi yang berlaku saat terjadi perbedaan sama pentingnya.
 
-Untuk perceraian berdasarkan Pasal 1050, diperlukan tulisan, sedikitnya dua saksi dan pencatatan; penandatanganan pribadi saja tidak membuat perceraian melalui cara ini berlaku. [Sumber resmi KUH Perdata](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+Tanggal pembayaran, mata uang, rekening penerima dan biaya transfer menentukan cara kewajiban dilaksanakan. Kepulangan ke Indonesia dapat membuat pengambilan barang atau penyerahan rumah perlu dijadwalkan tersendiri. Pembagian utang antarpasangan pun belum tentu mengubah kewajiban kepada bank atau pemberi pinjaman; pihak yang menanggungnya menurut kesepakatan tidak selalu menjadi satu-satunya pihak yang dapat ditagih kreditur.
 
-[Penjelasan resmi tentang saksi](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf) mensyaratkan kecakapan hukum penuh serta pengetahuan langsung, melalui melihat atau mendengar, tentang niat sungguh-sungguh kedua pihak untuk bercerai. Saksi bukan sekadar orang yang meminjamkan nama.
+Jika ada anak, persoalan tempat tinggal, pengasuhan, hubungan dengan orang tua dan nafkah perlu dinilai berdasarkan hukum serta putusan yang berlaku. Persetujuan bercerai saja tidak memberikan izin umum untuk membawa anak pindah negara. Rencana perjalanan anak memerlukan pemeriksaan atas kewenangan mengambil keputusan, persetujuan yang diperlukan dan pembatasan yang ada.
 
-Sebagai daftar pertanyaan, periksa jumlah dan mata uang pembayaran, tanggal serta biaya transfer; pengembalian barang dan pengosongan rumah; cakupan pelepasan tuntutan; dan pengaturan kehidupan serta biaya anak. Efek hukum setiap klausul perlu diperiksa tersendiri. Pembagian utang antara suami istri juga tidak boleh disamakan begitu saja dengan kewajiban terhadap pemberi pinjaman.
+## Kapan perceraian berdasarkan kesepakatan berlaku?
 
-Mintalah penjelasan apabila isi Mandarin berbeda dari penjelasan lisan. Jika memakai dua bahasa, periksa kesesuaian makna dan aturan ketika teks berbeda.
+Jika Pasal 1050 KUH Perdata Taiwan berlaku bagi perceraian tersebut, diperlukan dokumen tertulis, tanda tangan sedikitnya dua saksi dan pencatatan pada instansi kependudukan. Tanda tangan suami istri saja belum memenuhi cara perceraian ini. Ketentuannya tersedia dalam [Sumber resmi KUH Perdata](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print).
 
-## Jangan menunggu pulang untuk menanyakan dokumen
+Menurut [Penjelasan resmi tentang saksi](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf), saksi harus memiliki kecakapan hukum penuh dan mengetahui langsung, dengan melihat atau mendengar, kehendak sungguh-sungguh kedua pihak untuk bercerai. Karena itu, pemilihan saksi perlu mempertimbangkan pengetahuan mereka tentang kehendak kedua pasangan, bukan sekadar kesediaan membubuhkan tanda tangan.
 
-[Panduan pencatatan resmi](https://www.ris.gov.tw/documents/html/2/3/1/384.html) menetapkan kedua pihak sebagai pemohon; kuasa tertulis membutuhkan alasan yang dapat dibenarkan dan persetujuan kantor. Dokumen yang dibuat di luar negeri dan terjemahan Mandarin dokumen asing juga memiliki persyaratan autentikasi. Sampaikan jenis dokumen dan tempat pembuatannya kepada kantor terkait sebelum menandatangani atau mengirim aslinya.
+Pada perkawinan lintas negara, hukum yang mengatur perceraian harus ditentukan berdasarkan keadaan pasangan. Kewarganegaraan, domisili, riwayat kehidupan bersama dan perkara yang sudah berjalan membantu pengacara menilai persoalan itu serta langkah yang tersedia. [tanya jawab perceraian Taiwan](/id/columns/taiwan-divorce-lawsuit-qna) menjelaskan latar belakang prosedurnya.
 
-Perceraian yang sudah berlaku di negara lain perlu dibedakan dari perceraian baru berdasarkan kesepakatan di Taiwan. Tanyakan secara terpisah kepada instansi berwenang di Indonesia tentang pengakuan dan pembaruan catatan yang sesuai dengan keadaan Anda. Pencatatan Taiwan tidak menyelesaikan semua urusan lintas negara secara otomatis. Persetujuan bercerai juga bukan izin umum untuk membawa anak pindah negara.
+## Berada di Indonesia saat pencatatan dilakukan
 
-## Hubungi kantor hukum
+[Panduan pencatatan resmi](https://www.ris.gov.tw/documents/html/2/3/1/384.html) menetapkan kedua pihak sebagai pemohon untuk perceraian berdasarkan kesepakatan. Penggunaan kuasa tertulis membutuhkan alasan yang dapat dibenarkan dan persetujuan kantor pencatatan; tinggal di luar negeri saja belum menjamin persetujuan tersebut.
 
-Sampaikan latar belakang singkat, ada tidaknya anak, bagian yang disepakati dan rencana perjalanan kepada Hovering International Law Firm. Sebutkan bahasa yang diinginkan; ketersediaan bahasa, ruang lingkup bantuan dan biaya dikonfirmasi setelah pemeriksaan konflik kepentingan. Kirim dokumen pribadi sesuai petunjuk kantor.
+Dokumen yang dibuat di luar negeri harus memenuhi persyaratan autentikasi. Terjemahan Mandarin dari dokumen berbahasa asing juga harus disahkan sesuai ketentuan. Jenis dokumen, tempat penerbitan dan cara permohonan menentukan apa yang harus diserahkan. Menanyakan persyaratan kepada kantor penerima sebelum menandatangani atau mengirim dokumen asli membantu menyelaraskan penandatanganan, autentikasi dan pencatatan.
 
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Alamat Taipei: 103 臺北市大同區承德路一段35號7樓之2
-- Pengacara penanggung jawab iklan: 曾雋崴 (Wei Tseng)
+Jika perceraian sudah berlaku di negara lain, yang harus dinilai adalah akibat hukum perceraian itu dan pencatatannya di Taiwan. Keadaan tersebut berbeda dari bercerai melalui kesepakatan di Taiwan. Pengakuan dan pembaruan catatan di Indonesia juga perlu dibahas dengan instansi Indonesia yang berwenang, karena pencatatan Taiwan tidak menuntaskan seluruh urusan di negara lain.
 
-Informasi umum berdasarkan sumber yang diperiksa pada 27 September 2026; hasil setiap perkara memerlukan penilaian tersendiri.
+### Konsultasi tentang kesepakatan
+
+Untuk menghubungi Hovering International Law Firm, jelaskan singkat latar belakang pasangan, bagian kesepakatan yang belum jelas, keberadaan anak dan jadwal perjalanan. Cantumkan bahasa yang diinginkan, lalu tanyakan ketersediaan bahasa, ruang lingkup bantuan dan biaya. Dokumen pribadi dikirim mengikuti petunjuk kantor setelah pemeriksaan konflik kepentingan.
+
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Alamat Taipei: 103 臺北市大同區承德路一段35號7樓之2. Pengacara penanggung jawab iklan: 曾雋崴 (Wei Tseng).
+
+Sumber resmi diperiksa pada 27 September 2026.

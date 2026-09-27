@@ -17,32 +17,36 @@ faq:
 
 # Thuận tình ly hôn với vợ hoặc chồng Đài Loan: kiểm tra gì trước khi ký?
 
-Hai người đã thống nhất chấm dứt hôn nhân nhưng bản thỏa thuận bằng tiếng Hoa có thể còn nhiều điều khoản khó hiểu. Nếu sắp về Việt Nam, đừng để lịch bay khiến mình ký khi chưa rõ nghĩa của khoản tiền, việc trả nhà hay nội dung từ bỏ yêu cầu.
+Giả sử bạn sắp về Việt Nam và nhận được bản thỏa thuận ly hôn bằng tiếng Hoa. Số tiền giống như đã trao đổi, nhưng văn bản còn ghi rằng hai bên không yêu cầu gì thêm. Trước khi ký, cần hiểu khoản tiền được trả để dàn xếp vấn đề gì giữa hai vợ chồng và bạn sẽ từ bỏ những quyền nào. Dù ngày về Việt Nam đã gần, không nên vì vội mà ký những điều khoản chưa hiểu rõ.
 
-Bài viết này giúp chuẩn bị việc xem xét văn bản, không khẳng định pháp luật Đài Loan áp dụng cho mọi cặp vợ chồng. Hãy ghi quốc tịch, nơi ở, nơi đăng ký kết hôn và các vụ việc đã bắt đầu. Xem thêm [hỏi đáp về ly hôn tại Đài Loan](/vi/columns/taiwan-divorce-lawsuit-qna).
+## Khoản thanh toán giải quyết những yêu cầu nào?
 
-## Hiểu văn bản trước khi hẹn ngày ký
+Khi đọc điều khoản từ bỏ quyền yêu cầu, hãy kiểm tra xem có nêu rõ tài sản liên quan và khoảng thời gian phát sinh các yêu cầu được từ bỏ hay không. Nếu thông tin về tài sản còn thiếu, bạn có thể chưa biết hết những quyền mình đang từ bỏ. Nếu lời giải thích của người kia khác với câu chữ, nên thống nhất nội dung và sửa lại câu chữ trong văn bản trước khi ký. Với thỏa thuận song ngữ, cần đối chiếu nội dung của hai bản và kiểm tra điều khoản quy định cách giải quyết khi hai bản khác nhau.
 
-Theo Điều 1050, cách ly hôn này cần văn bản, ít nhất hai người làm chứng ký và đăng ký hộ chính; chỉ hai vợ chồng ký riêng chưa làm phát sinh hiệu lực ly hôn theo cách đó. [Bộ luật Dân sự chính thức](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+Một con số chưa cho biết bạn sẽ nhận được bao nhiêu nếu chưa ghi đồng tiền thanh toán và người chịu phí chuyển tiền. Ngày thanh toán cũng quan trọng: nếu tiền đến sau khi bạn về Việt Nam, tài khoản nhận phải còn sử dụng được. Những chi tiết này giúp hai bên tránh tranh cãi khi thanh toán khoản tiền đã thỏa thuận.
 
-[Hướng dẫn chính thức](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf) nêu người làm chứng phải có đầy đủ năng lực hành vi và trực tiếp nhìn thấy hoặc nghe được ý chí ly hôn thật sự của cả hai bên. Không nên chỉ mượn tên để điền vào mẫu.
+Bạn có thể chuyển ra khỏi nơi ở chung vào một ngày và nhận lại đồ đạc vào một ngày khác. Hai bên nên ghi rõ ai giao gì, cho ai và khi nào. Nếu thỏa thuận chuyển quyền đối với tài sản, hãy chỉ rõ đó là tài sản nào, quyền nào được chuyển cho bên nào và mỗi người phải làm gì để hoàn tất.
 
-Khi đọc thỏa thuận, hãy đánh dấu số tiền, loại tiền, ngày trả và phí chuyển; ngày chuyển nhà, giao đồ và phối hợp chuyển quyền; phạm vi từ bỏ yêu cầu; nơi sống, chăm sóc, liên lạc và chi phí của con. Đây là câu hỏi để rà soát, không phải kết luận về hiệu lực điều khoản. Thỏa thuận chia nợ giữa hai người cần được xem riêng với nghĩa vụ đối với chủ nợ.
+Hai người có thể thống nhất ai trả nợ, nhưng nghĩa vụ với ngân hàng hoặc chủ nợ khác vẫn cần được xem xét riêng. Thỏa thuận về nơi con sinh sống, việc chăm sóc, liên lạc với cha hoặc mẹ và chi phí nuôi con cũng phải được đánh giá theo pháp luật áp dụng và quyết định hiện có. Đồng ý ly hôn không tự tạo quyền đưa con sang nước khác sinh sống.
 
-Nếu lời giải thích khác nội dung tiếng Hoa, hãy yêu cầu làm rõ trước khi ký. Văn bản song ngữ cũng cần kiểm tra sự thống nhất và cách xử lý khi hai bản khác nghĩa.
+## Ký xong, ly hôn đã có hiệu lực chưa?
 
-## Hỏi cơ quan nhận hồ sơ trước khi làm giấy tờ ở Việt Nam
+Khi áp dụng Điều 1050 Bộ luật Dân sự Đài Loan, thuận tình ly hôn cần văn bản, chữ ký của ít nhất hai người làm chứng và đăng ký tại cơ quan hộ chính. Chỉ có chữ ký của hai vợ chồng thì chưa đủ để ly hôn có hiệu lực theo cách này. Quy định nằm trong [Bộ luật Dân sự chính thức](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print).
 
-[Hướng dẫn đăng ký ly hôn của Đài Loan](https://www.ris.gov.tw/documents/html/2/3/1/384.html) xác định cả hai là người nộp đơn; ủy quyền cần lý do chính đáng và sự chấp thuận của cơ quan. Giấy tờ lập ở nước ngoài và bản dịch tiếng Hoa có yêu cầu xác thực riêng. Hãy nói rõ loại giấy tờ, nơi lập và cách nộp với cơ quan hộ chính cùng cơ quan đại diện liên quan trước khi gửi bản gốc.
+Theo [Hướng dẫn chính thức](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf), người làm chứng phải có đầy đủ năng lực hành vi và trực tiếp chứng kiến hoặc nghe cả hai bày tỏ ý chí ly hôn thật sự. Vì vậy, cần chọn người trực tiếp biết ý chí của cả hai và sắp xếp việc ký văn bản. Việc điền tên vào mẫu không thay thế yêu cầu về người làm chứng.
 
-Ly hôn đã có hiệu lực ở một nơi khác không đồng nhất với thực hiện ly hôn theo thỏa thuận tại Đài Loan. Việc công nhận và cập nhật hồ sơ ở Việt Nam nên hỏi riêng cơ quan có thẩm quyền theo hoàn cảnh cụ thể. Đăng ký ở Đài Loan không tự giải quyết mọi vấn đề ở nước khác. Đồng ý ly hôn cũng không mặc nhiên cho phép đưa con chuyển quốc gia.
+Theo quy tắc chọn luật của Đài Loan, việc ly hôn trước hết áp dụng pháp luật của nước mà cả hai vợ chồng có quốc tịch tại thời điểm thỏa thuận hoặc khởi kiện. Nếu hai người không có cùng quốc tịch, bước tiếp theo là pháp luật nơi cả hai có nơi cư trú pháp lý (domicile) thuộc cùng một nước hoặc hệ thống pháp luật; không đòi hỏi hai người ở cùng địa chỉ. Nếu không có nơi cư trú pháp lý chung theo nghĩa này thì áp dụng pháp luật có mối liên hệ mật thiết nhất với hôn nhân. Vì vậy, có vợ hoặc chồng Đài Loan chưa đủ để kết luận mọi quy định trên đều áp dụng. Phần [hỏi đáp về ly hôn tại Đài Loan](/vi/columns/taiwan-divorce-lawsuit-qna) cung cấp bối cảnh chung.
 
-## Liên hệ để xem xét thỏa thuận
+## Giấy tờ ký ở Việt Nam sẽ được tiếp nhận thế nào?
 
-Gửi thông tin ngắn về hai bên, nơi đăng ký kết hôn, con, mức độ đồng thuận và lịch đi lại cho Hovering International Law Firm. Nêu ngôn ngữ mong muốn; khả năng hỗ trợ, phạm vi và phí sẽ được xác nhận sau khi liên hệ và kiểm tra xung đột lợi ích. Gửi hồ sơ riêng tư theo hướng dẫn.
+[Hướng dẫn đăng ký ly hôn của Đài Loan](https://www.ris.gov.tw/documents/html/2/3/1/384.html) xác định cả hai bên là người nộp đơn trong trường hợp đăng ký thuận tình ly hôn tại Đài Loan. Muốn ủy quyền bằng văn bản phải có lý do chính đáng và được cơ quan hộ chính chấp thuận; ở nước ngoài không thay thế điều kiện đó.
 
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2
-- Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng)
+Cơ quan hộ chính là cơ quan đăng ký hộ tịch, hộ khẩu tại Đài Loan. Nếu dự định lập văn bản tại Việt Nam, bạn nên hỏi cơ quan hộ chính và cơ quan đại diện liên quan về yêu cầu đối với loại văn bản đó, nơi lập và cách nộp. Giấy tờ nước ngoài phải được xác thực theo yêu cầu, bản dịch tiếng Hoa cũng có yêu cầu xác thực riêng. Hoàn thành ly hôn theo thỏa thuận tại Đài Loan khác với đăng ký một cuộc ly hôn đã có hiệu lực ở nước ngoài.
 
-Thông tin chung dựa trên nguồn kiểm tra ngày 27 tháng 9 năm 2026, không bảo đảm kết quả vụ việc.
+Việc ly hôn có được công nhận và đủ điều kiện ghi chú ly hôn tại Việt Nam hay không phụ thuộc vào quy định Việt Nam và hồ sơ cụ thể. Đăng ký tại Đài Loan không tự hoàn tất thủ tục ở nơi khác.
+
+### Trước ngày ký và ngày về Việt Nam
+
+Nếu dự thảo còn điều khoản chưa rõ, thời điểm phù hợp để trao đổi là trước ngày ký, khi hai bên còn có thể sửa nội dung. Bạn có thể liên hệ Hovering International Law Firm để hỏi về việc xem xét thỏa thuận theo pháp luật Đài Loan, nêu rõ ngày ký và ngày dự kiến về Việt Nam. Tài liệu chứa thông tin cá nhân nên được gửi theo cách đã trao đổi với văn phòng.
+
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2. Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng). Nguồn chính thức được kiểm tra ngày 27 tháng 9 năm 2026; hiệu lực của từng điều khoản cần được đánh giá trên văn bản và sự việc cụ thể.

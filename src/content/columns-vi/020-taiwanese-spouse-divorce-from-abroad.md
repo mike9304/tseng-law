@@ -17,42 +17,40 @@ faq:
 
 # Ở Việt Nam, vợ hoặc chồng ở Đài Loan: chuẩn bị buổi tư vấn ly hôn đầu tiên
 
-Sau khi về Việt Nam, bạn có thể vẫn cần xử lý hôn nhân với người đang ở Đài Loan. Người kia không trả lời hoặc không hợp tác làm giấy tờ khiến việc chuẩn bị khó hơn. Trước khi mua vé đi lại, hãy viết một bản tóm tắt có thể dùng trong buổi tư vấn.
+Có cần sang Đài Loan để giải quyết ly hôn không? Câu trả lời phụ thuộc vào thủ tục đang cần thực hiện và mức độ hợp tác của hai bên. Việc ủy quyền cho luật sư, đăng ký tại cơ quan hộ chính (nơi đăng ký hộ tịch, hộ khẩu Đài Loan) và trực tiếp có mặt theo yêu cầu của tòa không phải cùng một việc.
 
-Tòa nào có thẩm quyền, pháp luật nào áp dụng và quyết định ở nơi khác có hiệu lực ra sao phải được xem riêng. Quốc tịch Đài Loan của người kia không quyết định tất cả. Xem [hỏi đáp ly hôn](/vi/columns/taiwan-divorce-lawsuit-qna) để có bối cảnh chung.
+## Người kia đồng ý đến đâu?
 
-## Làm rõ ba vấn đề hai bên đã thống nhất đến đâu
+Giả sử người kia nhắn rằng đồng ý ly hôn nhưng chưa chịu ký văn bản hoặc phối hợp đăng ký. Người kia đã bày tỏ ý định ly hôn, nhưng hai bên chưa thống nhất cách hoàn thành thủ tục. Phân chia tài sản và chăm sóc con cũng có thể còn tranh chấp.
 
-Ghi rõ có đồng ý chấm dứt hôn nhân không, có phối hợp ký và đăng ký không, đã thống nhất việc phân chia tài sản và chăm sóc con chưa. Điều 1050 Bộ luật Dân sự Đài Loan yêu cầu văn bản, ít nhất hai người làm chứng ký và đăng ký cho cách ly hôn theo thỏa thuận. Người làm chứng cần trực tiếp biết ý chí thật sự của cả hai; không chỉ cho mượn tên. [Nguồn chính thức](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+Nếu áp dụng Điều 1050 Bộ luật Dân sự Đài Loan, hai bên phải lập văn bản ly hôn, có chữ ký của ít nhất hai người làm chứng và đăng ký tại cơ quan hộ chính. Người làm chứng phải trực tiếp biết ý chí ly hôn thật sự của cả hai, không chỉ cho mượn tên. [Nguồn chính thức](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print) nêu yêu cầu về hình thức.
 
-Nếu không đạt thỏa thuận, cần xem căn cứ, chứng cứ và thẩm quyền. Sống riêng lâu không phải lời bảo đảm ly hôn được chấp nhận.
+Nếu không đạt thỏa thuận, căn cứ ly hôn, chứng cứ và thẩm quyền cần được đánh giá. Chỉ từ thời gian sống riêng, chưa thể kết luận tòa sẽ chấp nhận yêu cầu. Quốc tịch của một bên chưa đủ để xác định luật nào điều chỉnh việc ly hôn. Xem [hỏi đáp ly hôn](/vi/columns/taiwan-divorce-lawsuit-qna) về các thủ tục.
 
-## Địa chỉ cần kèm thời điểm xác nhận
+## Địa chỉ cũ cần được ghi là thông tin cũ
 
-Liệt kê nơi từng sống chung, địa chỉ hiện biết, nơi làm việc và liên hệ, ghi rõ thông tin cũ hay chưa chắc chắn. Giữ thư bị trả lại và lịch sử liên lạc. Không tự ý truy cập tài khoản hoặc theo dõi vị trí để lấy thông tin; cách thu thập chứng cứ cũng cần hợp pháp.
+Địa chỉ từng sống chung, nơi làm việc và địa chỉ hiện biết có thể giúp tìm nơi tống đạt. Với mỗi địa chỉ, số điện thoại hoặc email, hãy ghi nguồn thông tin và lần cuối bạn xác nhận còn đúng. Nhờ vậy, luật sư có thể phân biệt địa chỉ hiện tại với thông tin đã cũ. Nếu thư bị trả lại, giữ thư và phong bì, đồng thời ghi ngày gửi, ngày trả và lý do trả thư.
 
-Không trả lời tin nhắn không có nghĩa là bỏ được tống đạt giấy tờ tòa án. Phương thức phù hợp phải xem theo nơi ở, việc tìm địa chỉ, vụ việc và đánh giá của tòa.
+Tống đạt là thủ tục đưa giấy tờ của tòa đến đương sự theo quy định. Giấy tờ của tòa vẫn phải được tống đạt hợp lệ dù người kia không trả lời tin nhắn. Nếu không biết địa chỉ hiện tại của người kia, tòa sẽ xem những nỗ lực tìm địa chỉ đã thực hiện và thông tin về nơi người đó có thể đang sống để quyết định cách tống đạt phù hợp. Không tự truy cập tài khoản hoặc theo dõi vị trí để thu thập thông tin; phương pháp lấy chứng cứ cần hợp pháp.
 
-## Cho biết những thủ tục đã làm
+## Đã có quyết định ở Việt Nam: cần xem nội dung và hiệu lực
 
-Nếu đã nộp hồ sơ ở Việt Nam hay nơi khác, cung cấp cơ quan, số vụ việc, tình trạng tống đạt và tiến độ. Có quyết định thì chuẩn bị toàn bộ văn bản và giấy tờ về việc quyết định đã có hiệu lực. Hiệu lực chấm dứt hôn nhân khác với việc thi hành khoản tiền.
+Nếu đã nộp hồ sơ tại Việt Nam hoặc nơi khác, luật sư cần biết tên cơ quan giải quyết, số vụ việc, tiến độ và tình trạng tống đạt. Khi đã có quyết định, hãy cung cấp bản đầy đủ cùng giấy tờ về hiệu lực của quyết định. Luật sư sẽ kiểm tra hiệu lực và điều kiện công nhận việc ly hôn tại Đài Loan, rồi xác định còn cần đăng ký hay đưa ra yêu cầu tại tòa.
 
-[Hướng dẫn hộ chính](https://www.ris.gov.tw/documents/html/2/3/1/384.html) đề cập giấy tờ ly hôn nước ngoài, xác thực và bản dịch, không thay thế toàn bộ quy định về công nhận và thi hành. Đừng mặc định công nhận, đăng ký và thi hành hoàn tất cùng lúc.
+[Hướng dẫn hộ chính](https://www.ris.gov.tw/documents/html/2/3/1/384.html) giải thích giấy tờ nước ngoài, xác thực và bản dịch cho việc đăng ký tại cơ quan hộ tịch, hộ khẩu Đài Loan. Để ghi nhận hai người đã ly hôn, cơ quan tiếp nhận phải xem quyết định nước ngoài có được công nhận hay không và hồ sơ đăng ký có đủ hay không. Muốn buộc người kia thực hiện nghĩa vụ thanh toán trong quyết định còn phải đáp ứng điều kiện thi hành; đăng ký ly hôn không tự hoàn tất việc này.
 
-Cơ quan hộ chính ở đây là cơ quan đăng ký hộ tịch, hộ khẩu của Đài Loan (戶政事務所).
+## Khi tòa yêu cầu trực tiếp có mặt
 
-## Trao đổi về ủy quyền và việc có mặt
+[Điều 13 chính thức](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=13) cho phép tòa, trừ trường hợp pháp luật có quy định khác, yêu cầu đương sự hoặc người đại diện theo pháp luật trực tiếp có mặt, hoặc lấy lời trình bày, hỏi đương sự bằng phương thức phù hợp với tính chất vụ việc. Người đại diện theo pháp luật ở đây khác với luật sư được ủy quyền. Khó khăn về đi lại, sức khỏe hay an toàn nên được trao đổi sớm với luật sư. Từ lý do và tài liệu bạn cung cấp, luật sư có thể giúp đề nghị cách lấy lời trình bày hoặc tham gia phiên làm việc phù hợp. Tòa sẽ quyết định có chấp thuận hay không.
 
-[Điều 13 chính thức](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=13) cho phép yêu cầu có mặt trực tiếp. Nêu sớm khó khăn về đi lại, sức khỏe hoặc an toàn để hỏi những biện pháp thủ tục có thể đề nghị. Xác nhận giấy ủy quyền lập ở đâu, xác thực thế nào và cần bản gốc không. Đại diện tại tòa khác với nộp đăng ký hộ chính; ủy quyền đăng ký ly hôn theo thỏa thuận cần lý do chính đáng và cơ quan chấp thuận.
+Trước khi lập giấy ủy quyền tố tụng ở Việt Nam, hãy hỏi luật sư liệu tòa có yêu cầu bản gốc và xác thực hay không. Sau đó sắp xếp cách gửi để giấy đến nơi kịp hạn. Ủy quyền đăng ký thuận tình ly hôn tại cơ quan hộ chính lại cần lý do chính đáng và sự chấp thuận của cơ quan. Giữ phong bì và ghi lại ngày nhận giấy tờ tòa án; nếu có thời hạn thì liên hệ ngay, không đợi chuyến đi Đài Loan tiếp theo.
 
-Có con thì ghi nơi sống, cách chăm sóc và quyết định liên quan; kiểm tra riêng thẩm quyền và pháp luật về con. Ly hôn không tự cho phép đưa con sang nước khác sinh sống. Giữ phong bì và ngày nhận văn bản của tòa án; nếu có thời hạn tố tụng cần tuân thủ, hãy liên hệ sớm, không đợi lần sang Đài Loan tiếp theo.
+## Nếu còn vấn đề về con
 
-## Tư vấn ban đầu
+Với con, cần đánh giá riêng tòa nào có thẩm quyền và pháp luật nào điều chỉnh quan hệ cha mẹ–con. Quốc tịch và nơi cư trú của con giúp xác định thẩm quyền và luật áp dụng. Thông tin về người đang chăm sóc, cùng thỏa thuận hoặc quyết định về con, giúp luật sư xác định hai bên còn tranh chấp việc chăm sóc, cấp dưỡng hay nơi sống của con. Ly hôn không tự cho phép đưa con sang nước khác sinh sống.
 
-Liên hệ Hovering International Law Firm với bản tóm tắt và ngôn ngữ mong muốn. Phạm vi hỗ trợ, ngôn ngữ và phí được xác nhận sau liên hệ. Sau kiểm tra xung đột lợi ích, gửi hồ sơ theo hướng dẫn.
+### Tư vấn ban đầu
 
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2
-- Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng)
+Khi liên hệ Hovering International Law Firm, hãy gửi mô tả ngắn về vụ việc và cho biết ngôn ngữ muốn sử dụng. Nếu đã nhận giấy tờ của tòa, nêu rõ ngày nhận và thời hạn trong văn bản để trao đổi kịp thời. Hỏi văn phòng cách gửi hồ sơ chi tiết.
 
-Hướng dẫn chuẩn bị chung, không bảo đảm thẩm quyền, miễn có mặt hoặc kết quả.
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2. Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng).

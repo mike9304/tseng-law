@@ -20,38 +20,38 @@ faq:
 
 # Menikah dengan warga Taiwan: urutan pencatatan, legalisasi dan wawancara bagi WNI
 
-Rencana pesta tidak selalu sama dengan rencana pencatatan perkawinan. Bagi pasangan Indonesia–Taiwan, pertanyaan pertama sebaiknya adalah jalur hukum yang dapat digunakan, bukan berapa lembar terjemahan yang harus dibeli. Riwayat perkawinan, kewarganegaraan dan status tinggal dapat memengaruhi dokumen yang diterima.
+Sudah memilih tanggal pesta di Taiwan, tetapi belum tahu di mana perkawinan harus dicatat? Bagi warga negara Indonesia, lokasi pesta tidak dengan sendirinya menentukan tempat dan prosedur pencatatan perkawinan. Jalur yang berlaku perlu diketahui sebelum mengurus dokumen dan perjalanan, karena perkawinan di Indonesia lalu pencatatan di Taiwan mempunyai urutan berbeda dari menikah langsung di Taiwan.
 
-## Periksa jalur untuk WNI sebelum memilih tempat menikah
+## Jalur biasa bagi pasangan Indonesia–Taiwan
 
-[Panduan pencatatan perkawinan Taiwan](https://www.ris.gov.tw/documents/html/2/3/1/383.html) membedakan perkawinan yang dilangsungkan di Taiwan dengan pencatatan perkawinan sah yang sudah berlangsung di luar negeri. Untuk warga negara tertentu, termasuk Indonesia, ada aturan khusus yang perlu diperiksa bersama perwakilan Taiwan. Jalur biasa adalah menikah dan memperoleh dokumen perkawinan di negara asal, menjalani wawancara serta verifikasi yang berlaku, kemudian mencatatkan perkawinan di Taiwan. Jangan menyimpulkan bahwa setiap pasangan dapat memilih jalur langsung di Taiwan tanpa memenuhi pengecualian.
+[Panduan pencatatan perkawinan Taiwan](https://www.ris.gov.tw/documents/html/2/3/1/383.html) membedakan perkawinan yang dilangsungkan di Taiwan dari pencatatan perkawinan yang sudah sah di luar negeri. Indonesia termasuk negara yang dikenai aturan khusus. Jalur biasa melibatkan perkawinan di negara asal, wawancara serta verifikasi di perwakilan Taiwan, lalu pencatatan perkawinan di Taiwan. Pasangan yang ingin menikah langsung di Taiwan perlu memastikan apakah keadaan mereka memenuhi pengecualian yang berlaku untuk jalur tersebut.
 
-Apabila jalur perkawinan dalam negeri Taiwan memang berlaku, persyaratan mencakup dokumen tertulis, tanda tangan sedikitnya dua saksi dan pencatatan di kantor pencatatan kependudukan Taiwan (戶政事務所). Pesta atau tanda tangan berdua saja tidak menyelesaikan persyaratan itu. Mencatatkan perkawinan yang sudah sah di Indonesia merupakan keadaan berbeda; tanyakan dokumen mana yang diperlukan untuk jalur tersebut.
+Jika pasangan memenuhi syarat untuk menikah langsung di Taiwan, mereka harus menyiapkan dokumen perkawinan tertulis yang memuat tanda tangan atau cap sedikitnya dua saksi, dan kedua pihak melakukan pencatatan pada kantor pencatatan kependudukan Taiwan (戶政事務所). Pesta dan penandatanganan oleh pasangan saja belum membuat perkawinan sah melalui cara ini. Untuk perkawinan yang sudah sah di Indonesia, dokumen yang diperlukan adalah bukti perkawinan tersebut, dengan persyaratan verifikasi sesuai jalurnya.
 
-Untuk sisi Indonesia, hubungi instansi pencatat perkawinan sesuai keadaan pasangan dan tanyakan layanan pelaporan kepada [KDEI Taipei melalui layanan administrasi kependudukannya](https://www.kdei-taipei.org/news/pelayanan-administrasi-kependudukan-kdei-taipei-2581.html). Jangan menggunakan prosedur Indonesia di negara lain sebagai daftar final untuk Taiwan. Artikel ini tidak menetapkan satu tata cara Indonesia untuk semua agama atau semua lokasi perkawinan.
+Di Indonesia, instansi pencatat dan persyaratannya perlu ditentukan berdasarkan keadaan pasangan, termasuk agama dan tempat perkawinan. Untuk informasi pelaporan perkawinan yang dilangsungkan di Taiwan kepada instansi Indonesia, [layanan administrasi kependudukan KDEI Taipei](https://www.kdei-taipei.org/news/pelayanan-administrasi-kependudukan-kdei-taipei-2581.html) dapat dihubungi. Daftar layanan perwakilan Indonesia di negara lain belum tentu berlaku untuk pengajuan di Taiwan.
 
-## Bedakan legalisasi dokumen dari terjemahan
+## Dokumen asli dan terjemahannya mempunyai fungsi berbeda
 
-Siapkan informasi tentang paspor, identitas, status perkawinan dan dokumen perkawinan yang sudah ada. Jika pernah bercerai atau pasangan sebelumnya meninggal, jelaskan sejak awal agar kantor penerima dapat menentukan bukti bahwa perkawinan sebelumnya telah berakhir.
+Riwayat perkawinan terdahulu memengaruhi bukti yang perlu diserahkan. Instansi pencatat menentukan dokumen perceraian atau kematian pasangan sebelumnya yang dapat diterima sebagai bukti berakhirnya perkawinan terdahulu. Nama dan tanggal lahir pada paspor, catatan Indonesia serta catatan Taiwan juga harus dapat dicocokkan; perbedaan ejaan perlu dijelaskan sebelum pengajuan.
 
-Nama dalam paspor, dokumen Indonesia dan catatan Taiwan harus dapat dicocokkan. Beri tahu petugas bila ejaan, urutan nama atau tanggal lahir berbeda. Terjemahan bahasa Mandarin tidak otomatis berarti dokumen sudah diverifikasi. Tanyakan kepada kantor penerima dan perwakilan Taiwan mengenai otoritas yang memeriksa dokumen asli dan terjemahannya. [Daftar kantor yang menangani urusan perkawinan dari BOCA](https://www.boca.gov.tw/fp-403-11-c3094-1.html) mengarahkan pemohon ke kantor perwakilan yang sesuai, termasuk Indonesia.
+Autentikasi memeriksa keaslian tanda tangan, cap atau bentuk dokumen, bukan memastikan kebenaran seluruh isinya. Terjemahan dokumen ke dalam bahasa Mandarin juga harus disahkan oleh perwakilan Taiwan atau notaris di Taiwan untuk pengajuan kepada instansi pencatatan kependudukan. Karena itu, sebelum mengajukan dokumen, pastikan bukan hanya terjemahannya yang sudah siap, tetapi pengesahan dokumen asli dan terjemahannya juga sudah dilakukan. [Daftar kantor yang menangani urusan perkawinan dari BOCA](https://www.boca.gov.tw/fp-403-11-c3094-1.html) mengarahkan pasangan ke perwakilan yang sesuai, termasuk kantor untuk Indonesia.
 
-## Wawancara di luar negeri memiliki syarat sendiri
+## Siapa yang harus hadir dalam wawancara?
 
-[Ketentuan BOCA tentang wawancara pasangan dari negara tertentu](https://www.boca.gov.tw/fp-212-4295-61dd5-1.html) mengatur permohonan verifikasi dokumen dan visa berdasarkan perkawinan. Pada jalur yang wajib wawancara, kedua pihak harus hadir sendiri di perwakilan atau tempat yang ditetapkan, kecuali memenuhi pengecualian dalam ketentuan tersebut. Mintalah petunjuk janji temu dan bukti yang diperlukan dari kantor yang benar-benar menangani kasus Anda.
+[Ketentuan BOCA tentang wawancara pasangan dari negara tertentu](https://www.boca.gov.tw/fp-212-4295-61dd5-1.html) mengatur permohonan verifikasi dokumen dan visa berdasarkan perkawinan. Bila wajib menjalani wawancara, kedua pihak harus hadir sendiri di perwakilan atau tempat yang ditetapkan, kecuali memenuhi pengecualian. Kantor yang menangani permohonan memberi informasi jadwal dan jenis bukti yang harus disiapkan pasangan.
 
-Memiliki anak kandung bersama dapat menjadi dasar pengecualian wawancara setelah diperiksa oleh otoritas. Pengecualian ini tidak berlaku jika pasangan sebelumnya tidak lolos wawancara untuk perkawinan yang sama. Keadaan lain dalam daftar pengecualian juga perlu dibuktikan. Pengecualian wawancara tidak otomatis membebaskan legalisasi dokumen, dan tidak otomatis menentukan bahwa Anda boleh langsung menikah di Taiwan. Hindari menjadwalkan perjalanan dengan asumsi hasil atau tanggal selesai yang belum dikonfirmasi.
+Memiliki anak kandung bersama dapat menjadi dasar pengecualian setelah otoritas memeriksa buktinya. Pengecualian ini tidak berlaku bagi pasangan yang sebelumnya tidak lolos wawancara untuk perkawinan yang sama. Dasar pengecualian lain pun harus dibuktikan sesuai ketentuan.
 
-## Urus pencatatan dan izin tinggal sebagai dua pekerjaan
+Pengecualian tersebut berkaitan dengan kewajiban wawancara. Persyaratan legalisasi dokumen tetap berlaku, dan kelayakan menikah langsung di Taiwan perlu diperiksa dengan aturan tersendiri. Karena itu, jadwal perjalanan sebaiknya mengikuti tahap yang sudah dipastikan, bukan perkiraan bahwa pengecualian akan disetujui.
 
-Sesudah pencatatan, periksa apakah nama dan keadaan perkawinan tercantum benar dalam register kependudukan Taiwan. Pastikan juga urusan pelaporan Indonesia yang berlaku telah ditanyakan kepada instansi Indonesia.
+## Sesudah perkawinan tercatat, bagaimana dengan izin tinggal?
 
-Jika akan tinggal bersama di Taiwan, lihat [panduan BOCA untuk visa tinggal pasangan asing](https://www.boca.gov.tw/fp-398-696-550e9-1.html) dan konfirmasikan proses izin tinggal kepada NIA. Dokumen perkawinan dapat menjadi bagian berkas, tetapi tidak dengan sendirinya memberikan ARC ataupun kewarganegaraan. Perhatikan masa tinggal yang saat ini diizinkan.
+Catatan kependudukan Taiwan perlu mencerminkan nama dan status perkawinan dengan benar. Bila perkawinan dilangsungkan di Taiwan, pelaporan perkawinan itu kepada instansi Indonesia merupakan proses tersendiri. Perkawinan yang sudah dicatat di Indonesia tidak menjadi perkawinan baru hanya karena kemudian dicatat di Taiwan.
 
-## Informasi untuk konsultasi
+Jika akan tinggal bersama di Taiwan, [panduan BOCA untuk visa tinggal pasangan asing](https://www.boca.gov.tw/fp-398-696-550e9-1.html) memuat jalur visa dengan persyaratan tertentu, termasuk kewajiban bahwa pasangan Taiwan memiliki registrasi rumah tangga (戶籍) di Taiwan. Status keimigrasian pemohon saat ini juga menentukan apakah prosedur visa tersebut diperlukan. Izin tinggal ditangani oleh Badan Imigrasi Nasional Taiwan (NIA). Pencatatan perkawinan tidak langsung memberikan kartu izin tinggal ARC atau kewarganegaraan, sehingga tanggal berakhirnya izin tinggal saat ini tetap perlu diperhatikan.
 
-Catat kewarganegaraan kedua pihak, tempat tinggal, status pencatatan kependudukan pasangan Taiwan, riwayat perkawinan, tempat perkawinan dan dokumen yang sudah dimiliki. Jika sedang mempersiapkan kelahiran anak, baca [kewarganegaraan dan pencatatan kelahiran anak Indonesia–Taiwan](/id/columns/baby-taiwan-nationality-birth-registration).
+### Pertanyaan hukum Taiwan
 
-Untuk persoalan hukum Taiwan, Anda dapat menghubungi pengacara 曾雋崴 di Hovering International Law Office melalui [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Alamat kantor Taipei: **103 臺北市大同區承德路一段35號7樓之2**. Sampaikan ringkasan lebih dahulu dan tanyakan cara menyerahkan dokumen pribadi. Urusan hukum Indonesia perlu dikonfirmasi kepada instansi atau penasihat Indonesia yang berwenang.
+Untuk menghubungi pengacara 曾雋崴 di Hovering International Law Office, jelaskan kewarganegaraan, tempat tinggal, status pencatatan pasangan Taiwan, riwayat dan rencana perkawinan, serta dokumen yang sudah ada. Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Alamat Taipei: 103 臺北市大同區承德路一段35號7樓之2. Tanyakan cara menyerahkan dokumen pribadi. Persoalan hukum Indonesia perlu dibahas dengan instansi atau penasihat Indonesia yang berwenang.
 
-Rujukan resmi diperiksa pada 27 September 2026. Syarat berkas, biaya, waktu layanan dan janji temu mengikuti petunjuk terbaru kantor penerima.
+Keluarga yang menyiapkan kelahiran dapat membaca [kewarganegaraan dan pencatatan kelahiran anak Indonesia–Taiwan](/id/columns/baby-taiwan-nationality-birth-registration). Sumber resmi diperiksa pada 27 September 2026; syarat berkas, biaya dan jadwal mengikuti petunjuk terbaru kantor penerima.

@@ -17,48 +17,38 @@ faq:
 
 # Divorce from a Taiwanese spouse: planning your child’s life across two countries
 
-A move home after divorce may promise family support, work and a familiar school system. For your child, it can also change daily care and access to the other parent. A workable plan starts before booking travel.
+A home overseas may be ready for you and your child, but a divorce agreement does not by itself establish permission to relocate. Before making the move, work out who has authority over the child's residence, what consent may be needed and what existing agreements or orders require. The child's new daily routine needs planning alongside those legal questions.
 
-This article offers consultation preparation for an international family, rather than permission to relocate. Which court can decide, which law applies, and how an existing agreement or child-related decision operates and can be enforced in each country need separate review. The Taiwan provisions below do not automatically govern every cross-border family. See the [divorce Q&A](/en/columns/taiwan-divorce-lawsuit-qna) and [family-law analysis](/en/columns/taiwan-inheritance-custody-analysis) for related context.
+## A move changes the child's ordinary week
 
-## Check authority before discussing flight dates
+Suppose the proposed home is near family who can help, but school starts several weeks after arrival. Who will care for the child during that gap? Thinking through an ordinary week reveals needs that a statement such as “family will support us” leaves open.
 
-Agreement to divorce is not necessarily consent to a child’s overseas residence. Bring existing agreements and court documents, including restrictions or pending cases. Note the child’s nationality, passport, current residence and school.
+School runs, appointments and care while a parent works show how the child's present routine is sustained. A change of school language may call for learning support; continuing treatment may require medical records and a new provider. These details show whether care will continue after the move and which needs remain unmet. They keep the discussion focused on the child rather than an attack on the other parent. The child should not be coached to reject a parent or give a preferred answer for the dispute.
 
-Sole caregiving or sole parental authority should not be treated as blanket authorization for an international move. Review necessary consent, orders and existing limits before acting. Do not use unilateral relocation to resolve a dispute. If there is violence or immediate risk, prioritize safety and ask about protective measures without delay.
+Where Taiwan law applies, Civil Code Articles 1055 and 1055-1 address who will make decisions and take responsibility for a minor child, contact with the parents and the court's best-interests assessment. Under the [Official Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print), the court must consider factors including the child's age, health, wishes and development, the parents' ability and attitude toward care and emotional relationships. Income or responsibility for the marital breakdown does not decide the question alone.
 
-## Describe care in concrete terms
+## Who can decide where the child will live?
 
-Taiwan Civil Code Articles 1055 and 1055-1 address parental rights and responsibilities, contact and the child’s best interests. Age, health, wishes and development, parental caregiving capacity and attitudes, and emotional relationships are among relevant considerations. Income or responsibility for marital breakdown alone does not decide the result. [Official Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+Read any agreement or court decision for provisions about residence, parental authority and travel restrictions. Being the sole caregiver, or holding particular parental rights, does not automatically resolve every international relocation issue. Possessing a passport does not establish authority to relocate the child.
 
-Prepare a simple account of school runs, appointments, meals and care during working hours. Explain the proposed home and available support. These records help describe the child’s actual life; they are not a formula for winning a case. Do not pressure a child to reject a parent or coach answers for the dispute.
+The child's nationality, residence, school and care history matter. So do the court's jurisdiction, applicable law and the effect or enforceability of an existing agreement or decision in each country. The Taiwan-law explanation here applies when Taiwan law governs; it cannot determine every foreign-law question.
 
-## Make the proposed move a complete plan
+The proposed routine helps explain how the child would be cared for after relocation. Authority to relocate must be established under the relevant law and documents. If violence or an urgent safety risk is involved, seek advice about immediate protection before treating the matter as an ordinary move. The [divorce Q&A](/en/columns/taiwan-divorce-lawsuit-qna) and [family-law analysis](/en/columns/taiwan-inheritance-custody-analysis) provide further background.
 
-Consider school admission, language, medical records, childcare and any gap before the new routine begins. Mark uncertain matters as unresolved. Preparing a detailed plan does not guarantee permission or approval.
+## Visits need more than an agreed frequency
 
-For contact with the parent staying in Taiwan, possible planning questions include:
+“Regular visits” still leaves someone to book flights and arrange leave. Call times must fit both time zones and the child's school day. Holiday visits need dates, places, duration and a workable handover. The accompanying adult's leave and travel costs may affect whether a proposed visit is possible. Arrangements for illness or cancellations make a changed flight easier to manage, while a dependable channel for school and health information helps the absent parent stay involved.
 
-- When can calls take place without disrupting the child’s routine?
-- Where and for how long will holiday visits occur?
-- Who arranges travel, accompanies the child and pays the costs?
-- How will illness, school events or flight changes be handled?
-- How will school and health updates reach both parents?
+The appropriate arrangements depend on safety and the child's needs. Whether the resulting agreement has legal effect and can be enforced across borders requires separate review.
 
-These are examples to discuss, not legally sufficient terms for every family. Safety concerns may require different contact arrangements. The agreement’s legal effect and cross-border enforceability need their own assessment.
+## Child support has a different purpose from a property settlement
 
-## Keep child expenses distinct
+A monthly payment may cover routine living, school and medical costs while leaving major occasional expenses to be agreed separately. Clear currency, due-date and transfer-fee terms help avoid disputes over payment. A distinct child-support provision also lets both parents understand which payments support the child and which settle their property interests.
 
-List routine education, healthcare and living costs separately from exceptional expenses. Discuss currency, payment dates, transfer charges and communication about additional costs. Avoid mixing child support with a single unexplained property settlement or payment for a former spouse.
+The legally appropriate support amount, its adjustment and overseas enforcement depend on applicable law, the family's circumstances and existing documents. A proposed budget explains which needs the requested support would meet; it does not by itself determine the legal amount.
 
-This is not a child-support calculation. Actual obligations, changes and overseas payment or enforcement depend on the family’s circumstances, applicable law and existing documents.
+### Discussing the Taiwan legal issues
 
-## Ask for a parenting review before the move
+Provide Hovering International Law Firm with the family's nationalities and residences, the child's age and care history, existing agreements or proceedings and the proposed move date. State your preferred consultation language; the firm can explain which languages it can offer and the proposed scope and fees. Detailed records should be sent after the conflict check, using the method the firm provides.
 
-Contact Hovering International Law Firm with the family’s nationalities and residences, the child’s age, present care arrangements, existing agreements or decisions and the proposed move date. State your preferred language. Scope, availability and fees will be confirmed after contact and a conflict check; send sensitive child records only as instructed.
-
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Taipei address: 103 臺北市大同區承德路一段35號7樓之2
-- Lawyer responsible for this advertisement: 曾雋崴 (Wei Tseng)
-
-General information. Obtain an individual assessment before changing the child’s country of residence; no relocation or parenting outcome is guaranteed.
+Contact [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The Taipei office is at 103 臺北市大同區承德路一段35號7樓之2. Attorney 曾雋崴 (Wei Tseng) is responsible for this advertisement.

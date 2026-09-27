@@ -17,42 +17,38 @@ faq:
 
 # Living abroad while your Taiwanese spouse is in Taiwan: preparing for a divorce consultation
 
-You returned home after separating, but your spouse remains in Taiwan. They may answer ordinary messages while avoiding divorce discussions, or you may no longer know where they live. Before arranging a flight, prepare the information an adviser needs to assess your options.
+Can the divorce proceed while you stay overseas? The answer starts with the procedure you need. A representative may be able to handle parts of it, while the household registration office or court may still need something from you personally. Before arranging an authorization, establish what your spouse has agreed to and whether proceedings are already under way.
 
-This is a consultation checklist, not a conclusion that a Taiwan court has jurisdiction or that Taiwanese law governs every issue. Nationality, residence, existing proceedings and the relief sought need individual assessment. See the [Taiwan divorce Q&A](/en/columns/taiwan-divorce-lawsuit-qna) for a broader overview.
+## What does “we agree” actually cover?
 
-## Separate consent from cooperation
+Suppose your spouse agrees by message to end the marriage but has not agreed to sign the documents or appear at the household registration office for divorce registration. That leaves a practical obstacle. Agreement to divorce, cooperation with signatures and registration, and agreement about money or children are separate questions.
 
-Record whether your spouse agrees to end the marriage, will cooperate with documents and registration, and agrees on property or children. Those are different questions. An informal message agreeing to separate does not complete divorce by agreement under Taiwan Civil Code Article 1050, which requires writing, at least two witnesses’ signatures and household registration. [Official Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+An Article 1050 divorce under the [Official Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print) requires a written agreement, at least two witnesses' signatures and household registration. An exchange of messages does not complete that procedure. The [official household registration guidance](https://www.ris.gov.tw/documents/html/2/3/1/384.html) addresses the joint-application rule and the conditions for an approved written authorization, as well as verification and translation of overseas documents.
 
-If agreement is unavailable, discuss the grounds, evidence and jurisdiction for a contested procedure. Long separation or a Taiwanese spouse should not be treated as a guaranteed basis for a successful claim.
+If agreement is not achievable, a consultation needs to consider grounds for a court divorce, evidence, jurisdiction and applicable law. A connection through Taiwanese nationality may matter to jurisdiction, but it does not alone determine applicable law or entitlement to divorce. A long separation must also be assessed against the applicable grounds and evidence. The broader routes are discussed in the [Taiwan divorce Q&A](/en/columns/taiwan-divorce-lawsuit-qna).
 
-## Put dates beside address information
+## When was the address last confirmed?
 
-List the last shared home, any known current address, workplace and contact details, with the date each was confirmed. Mark old or uncertain information clearly. Keep returned mail and relevant communication records.
+A spouse's silence creates two distinct concerns: communication between you and service of court documents. The court still needs a lawful way to notify the other party.
 
-Do not obtain information through unauthorized access to accounts or covert tracking. Ask how evidence may lawfully be collected. Failure to answer messages is not the same as permission to dispense with lawful service. The appropriate service route depends on the proceedings, the spouse’s location, available information and the court’s assessment.
+Record the last shared address, any known current home or workplace, telephone numbers and email addresses. For each, say when you obtained it and whether it is confirmed or only suspected. Keep returned mail and dated communication records. These materials explain what is known without presenting an old address as current.
 
-## Tell your adviser about proceedings elsewhere
+Do not access a spouse's account without permission or use covert tracking to fill a gap. Discuss lawful methods of obtaining information. The response to an unknown address depends on the circumstances and the court's decisions; a lack of reply does not dispense with service.
 
-Provide the court, case number, filing and service status of any existing divorce proceedings overseas. If a decision has been made, supply the actual decision and documents concerning its finality. Do not rely only on your summary of what it says.
+## What has already happened in the foreign case?
 
-Seeking a new divorce in Taiwan and dealing with the effect of a foreign divorce are different tasks. The [official household registration guidance](https://www.ris.gov.tw/documents/html/2/3/1/384.html) includes overseas divorce documents and authentication and translation requirements. Foreign recognition, registration and enforcement still need case-specific review; none should be assumed automatic.
+If a case has begun in another country, supply the court and case number, filing documents, service information and current stage. If a decision has been issued, include the actual decision and any evidence of finality. A summary saying “the divorce is done” leaves too many questions unanswered.
 
-## Discuss attendance before committing to travel
+Seeking a new divorce in Taiwan and dealing with a foreign divorce result are different matters. The result's effect, household registration and enforcement each need examination based on the documents. None should be assumed to follow automatically from the others.
 
-Taiwan Family Act Article 13 permits the court to require a party or legal representative to attend personally. Hiring a lawyer does not guarantee that every personal appearance will be unnecessary. [Official Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=13)
+## Personal attendance can remain necessary
 
-Explain travel difficulties, health or safety concerns early and ask which procedural arrangements can be requested. Separately confirm how an overseas power of attorney should be made, authenticated and delivered. Authorization for household registration should not be confused with representation in litigation.
+[Official Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010048&flno=13) of Taiwan's Family Act allows the court to require the personal attendance of a party or statutory representative, such as a guardian. It also provides for appropriate ways of taking statements or questioning according to the case. Raise travel, health and safety difficulties early so your lawyer can consider what to request from the court.
 
-Keep envelopes and dates for court papers you receive. If a deadline may apply, seek advice promptly rather than waiting for your next visit to Taiwan.
+For an authorization appointing your lawyer in the proceedings, signed overseas, agree with your lawyer which original document is needed and how it must be authenticated and delivered. A written authorization for household registration must satisfy that office's separate conditions. Keep any court envelope as well as its contents, and tell your adviser about a deadline promptly rather than waiting for your next Taiwan trip.
 
-## Send a short account before detailed private records
+### First contact
 
-For an initial enquiry to Hovering International Law Firm, identify both spouses’ nationalities and countries of residence, marriage registration locations, last shared residence, agreement status, children and existing proceedings. State your preferred consultation language. After a conflict check, the firm can explain available scope, language arrangements, fees and document delivery. No particular language or outcome is promised in advance.
+When contacting Hovering International Law Firm, give a short account of the spouses' nationalities and residences, marriage records, children, points of agreement and existing cases. Add any deadline and intended travel date. A conflict check comes before detailed document submission; consultation language, scope and fees can then be discussed.
 
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Taipei address: 103 臺北市大同區承德路一段35號7樓之2
-- Lawyer responsible for this advertisement: 曾雋崴 (Wei Tseng)
-
-General preparation guidance. Jurisdiction, applicable law, service and the effect of foreign decisions depend on the facts and current rules.
+Email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The office is at 103 臺北市大同區承德路一段35號7樓之2. Attorney 曾雋崴 (Wei Tseng) is responsible for this advertisement.

@@ -17,51 +17,34 @@ faq:
 
 # Divorcing a Taiwanese spouse by agreement: what to check before signing
 
-You and your Taiwanese spouse have agreed to separate. Then a Chinese-language agreement arrives, and you are asked to sign before your flight home. Agreement on ending the marriage is a starting point; it does not tell you whether the document also settles money, housing or your child’s future.
+Suppose you have agreed to end the marriage, and your spouse sends a Chinese-language agreement for signature before your flight home. The payment figure looks familiar, but a later paragraph says you will make no further claims. Agreeing to divorce does not tell you what that paragraph covers. You need to understand the promises you are signing and how the divorce will take effect.
 
-This article focuses on preparation before signing an agreed divorce. For the wider framework, see our [Taiwan divorce Q&A](/en/columns/taiwan-divorce-lawsuit-qna). The checklist below is a planning aid, not a universal set of legal requirements for every international marriage.
+## What does the release cover?
 
-## Start with your existing marriage records
+A release deserves more attention than its length might suggest. Which claims does it cover? What happens to assets for which neither spouse has supplied records? If an oral explanation differs from the Chinese wording, resolve the difference in the document before signing. With a bilingual agreement, compare both versions and any clause choosing which version prevails.
 
-List where the marriage was registered, both spouses’ nationalities and current addresses, where you lived together, and any existing court proceedings. Taiwanese nationality alone does not answer which law governs the divorce or which authority can process your case. Explain any differences between your records in Taiwan and overseas before choosing a procedure.
+Payment arrangements work better when the amount, currency, due date, account and responsibility for transfer fees are clear. If you will receive money after leaving Taiwan, arrange a usable account and a way to communicate about payment. If one spouse will move out, an agreement can specify when belongings will be collected. A transfer of a house or other property may also require the other spouse to supply documents or take part in the transfer; the agreement should identify that cooperation.
 
-Where Article 1050 applies, divorce by agreement requires writing, at least two witnesses’ signatures and registration with the household registration authority. Signing privately does not itself make that form of divorce effective. See the [official Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print).
+A promise between spouses about a loan or guarantee needs separate examination of the obligations owed to the lender. For children, the agreement should address their home and care, contact with the other parent, expenses and school or medical decisions. Its legal effect depends on the applicable law and any existing orders; a divorce agreement alone does not settle permission to move a child abroad.
 
-The witnesses are not merely names to fill two spaces. The [official guidance accompanying the agreement form](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf) explains that witnesses must have full legal capacity and personally see or hear both spouses’ genuine intention to divorce. Arrange how that confirmation and signing will take place.
+## The legal route determines the formalities
 
-## Read the settlement, not just the heading
+The law governing your divorce cannot be selected simply from your spouse's Taiwanese nationality. Each spouse's nationality, domicile and shared living history matter. Marriage records and any pending proceedings also help identify which procedures remain. The [Taiwan divorce Q&A](/en/columns/taiwan-divorce-lawsuit-qna) explains the wider framework.
 
-Before signing, identify what each clause asks you to give, receive or waive. Useful questions include:
+Where Taiwan Civil Code Article 1050 applies, divorce by agreement requires a written agreement, signatures of at least two witnesses and household registration. The [official Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print) makes registration part of this form of divorce. Signing the agreement is therefore not its final step.
 
-- What amount is payable, in which currency, by what date, and who pays transfer charges?
-- Who moves out, collects belongings or assists with a title transfer?
-- What claims does a release cover, and what happens to assets you have not yet identified?
-- How does the agreement address your child’s home, care, contact and expenses?
+The witnesses must have full legal capacity and personally ascertain, by seeing or hearing the spouses themselves, that both genuinely intend to divorce, according to the [official guidance accompanying the agreement form](https://www.ris.gov.tw/documents/data/2/09e9582e-9b91-437a-b01a-3d033eed2bc5.pdf). Plan how the witnesses will ascertain that intention, as well as when they will sign.
 
-These are drafting questions. The legal effect of a property or parenting clause needs a separate assessment under the applicable law. An arrangement between spouses about debt should also be checked separately from obligations to a lender or other third party.
+## Can registration wait until after departure?
 
-If your spouse’s explanation differs from the written Chinese, seek clarification before signing. A bilingual document can help you understand the terms, but the versions need to be checked for consistency and any proposed rule about which text prevails.
+The [Ministry of the Interior’s divorce registration guidance](https://www.ris.gov.tw/documents/html/2/3/1/384.html) sets joint application as the rule. A written authorization for a representative requires a good reason and the household office's approval. Living abroad does not by itself establish that exception.
 
-## Plan registration before booking travel
+For documents signed overseas, the office needs to know what will be submitted and where it will be executed. Its guidance addresses verification of foreign-issued documents and authenticated Chinese translations. Settle the original-document, verification and translation arrangements before relying on a return flight as the registration deadline.
 
-The [Ministry of the Interior’s divorce registration guidance](https://www.ris.gov.tw/documents/html/2/3/1/384.html) identifies both spouses as applicants for an agreed divorce. Written delegation is possible for good reason with the household registration office’s approval. Do not assume that being abroad automatically permits an agent to attend for you.
+Recording a divorce already concluded abroad is a different task from concluding an Article 1050 divorce in Taiwan. Likewise, Taiwan registration does not automatically complete recognition, reporting or enforcement in another country. Review the relevant foreign requirements while choosing the Taiwan route, rather than discovering them after registration.
 
-The same guidance addresses authentication of documents made overseas and certified Chinese translations of foreign-language documents. Tell the office and relevant representative office what document you will sign, where it will be made and how you intend to submit it. Confirm originals, authentication and translation before sending papers between countries.
+### Arranging a consultation
 
-Registering a divorce that has already taken effect abroad is a different situation from completing an agreed divorce in Taiwan. Have the actual documents reviewed rather than applying the same checklist to both.
+Send Hovering International Law Firm a brief account of the spouses' nationalities and residences, marriage records, children, points of agreement and proposed departure date. State your preferred language. After a conflict check, the firm can explain document submission, available consultation language, scope and fees.
 
-## Keep the overseas record question open
-
-Ask the responsible authority in the other country how its records should be updated following your chosen form of divorce. Taiwan registration should not be treated as proof that all foreign recognition, reporting or enforcement questions have been resolved.
-
-Also consider what must happen after departure. A payment due later needs workable banking details. A proposed move with a child needs its own review of decision-making authority, required consent or orders and existing restrictions. Agreement to divorce is not blanket permission for relocation.
-
-## Request a review of your proposed agreement
-
-For an initial enquiry to Hovering International Law Firm, give your nationalities, current countries of residence, marriage registration locations, whether there are children, the scope of agreement and any planned departure date. Include your preferred language; availability, scope and fees will be confirmed after contact and a conflict check. Follow the firm’s instructions before sending detailed private documents.
-
-- Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)
-- Taipei address: 103 臺北市大同區承德路一段35號7樓之2
-- Lawyer responsible for this advertisement: 曾雋崴 (Wei Tseng)
-
-General information based on sources checked on September 27, 2026. It does not determine your applicable law or guarantee any outcome.
+Contact [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The Taipei office is at 103 臺北市大同區承德路一段35號7樓之2. Attorney 曾雋崴 (Wei Tseng) is responsible for this advertisement. Official sources were checked September 27, 2026; advice on an individual agreement requires its wording and the family's circumstances.

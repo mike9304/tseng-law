@@ -117,7 +117,7 @@ describe('English column corpus summaries', () => {
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
 
   it('gives every EN column a 150–160 character authored summary without Korean-company framing or an ellipsis', () => {
-    expect(files).toHaveLength(18);
+    expect(files).toHaveLength(21);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
@@ -139,7 +139,7 @@ describe('English column corpus summaries', () => {
 
   it('reuses those summaries in EN meta description, Article JSON-LD, and llms.txt annotations', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts).toHaveLength(18);
+    expect(posts).toHaveLength(21);
     const llms = buildLocaleLlmsTxt('en');
 
     for (const post of posts) {
@@ -168,7 +168,7 @@ describe('English column corpus summaries', () => {
     }
   });
 
-  it('does not add a summary key to other locale column files, so they keep extractSummary', () => {
+  it('preserves legacy extractSummary and accepts native summaries in the new batch', () => {
     const otherDirs = [
       'src/content/columns',
       'src/content/columns-zh',
@@ -184,7 +184,11 @@ describe('English column corpus summaries', () => {
       expect(names.length, relativeDir).toBeGreaterThan(0);
       for (const name of names) {
         const raw = fs.readFileSync(path.join(dir, name), 'utf8');
-        expect(raw, `${relativeDir}/${name}`).not.toMatch(/^summary\s*:/m);
+        if (/^(019|020|021)-/.test(name)) {
+          expect(matter(raw).data.summary, `${relativeDir}/${name}`).toBeTruthy();
+        } else {
+          expect(raw, `${relativeDir}/${name}`).not.toMatch(/^summary\s*:/m);
+        }
       }
     }
 

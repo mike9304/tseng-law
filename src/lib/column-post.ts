@@ -93,6 +93,8 @@ export function formatColumnPublicationDate(
 ): string {
   const isoDate = parseColumnPublicationDate(publicationDate);
   if (!isoDate) return fallback;
+  // Additional locales author their own display labels; ISO metadata handles sorting.
+  if (!['ko', 'zh-hant', 'ja', 'en'].includes(locale) && fallback) return fallback;
   const [year, month, day] = isoDate.split('-').map(Number);
   if (locale === 'ko') return `${year}년 ${month}월 ${day}일`;
   if (locale === 'zh-hant' || locale === 'ja') return `${year}年${month}月${day}日`;

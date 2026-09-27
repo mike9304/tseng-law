@@ -64,3 +64,6 @@ tmp/
 
 # symlink as well as directory
 node_modules
+
+# Private drafting and individual Astra review evidence for this content batch.
+/work/divorce-columns-20260927/

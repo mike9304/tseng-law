@@ -25,6 +25,9 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '016': '2025-09-13',
   '017': '2025-09-13',
   '018': '2026-09-17',
+  '019': '2026-09-27',
+  '020': '2026-09-27',
+  '021': '2026-09-27',
 };
 
 const CONTENT_DIR_BY_LOCALE = {
@@ -48,7 +51,14 @@ function expectedDisplay(locale: keyof typeof CONTENT_DIR_BY_LOCALE, publication
 
 const SEMICONDUCTOR_SLUG = 'taiwan-semiconductor-market-entry';
 
+const NEW_DIVORCE_SLUGS = [
+  'taiwanese-spouse-divorce-agreement-registration',
+  'taiwanese-spouse-divorce-from-abroad',
+  'taiwanese-spouse-divorce-cross-border-parenting',
+];
+
 const EXPECTED_ARCHIVE_ORDER = [
+  ...NEW_DIVORCE_SLUGS,
   SEMICONDUCTOR_SLUG,
   COSMETICS_SLUG,
   'taiwan-company-establishment-basics',
@@ -91,15 +101,16 @@ describe('Korean column publication dates', () => {
     const posts = getAllColumnPosts('ko');
 
     expect(posts.map((post) => post.slug)).toEqual(EXPECTED_ARCHIVE_ORDER);
-    expect(posts[0]?.slug).toBe(SEMICONDUCTOR_SLUG);
-    expect(posts[1]?.slug).toBe(COSMETICS_SLUG);
-    expect(posts.slice(2).every((post) => post.dateDisplay === '2025년 9월 13일')).toBe(true);
+    expect(posts.slice(0, 3).map((post) => post.slug)).toEqual(NEW_DIVORCE_SLUGS);
+    expect(posts[3]?.slug).toBe(SEMICONDUCTOR_SLUG);
+    expect(posts[4]?.slug).toBe(COSMETICS_SLUG);
+    expect(posts.slice(5).every((post) => post.dateDisplay === '2025년 9월 13일')).toBe(true);
   });
 
   it('formats every Korean archive date as YYYY년 M월 D일', () => {
     const posts = getAllColumnPosts('ko');
 
-    expect(posts).toHaveLength(18);
+    expect(posts).toHaveLength(21);
     expect(posts.every((post) => /^\d{4}년 \d{1,2}월 \d{1,2}일$/.test(post.dateDisplay))).toBe(true);
   });
 });
@@ -112,7 +123,7 @@ describe('localized column publication ordering', () => {
       const contentDir = path.join(process.cwd(), 'src', 'content', directory);
       const files = fs.readdirSync(contentDir).filter((file) => file.endsWith('.md'));
 
-      expect(files).toHaveLength(18);
+      expect(files).toHaveLength(21);
       for (const file of files) {
         const prefix = file.slice(0, 3);
         const verifiedDate = VERIFIED_PUBLICATION_DATES[prefix];
@@ -131,16 +142,19 @@ describe('localized column publication ordering', () => {
   ] as const)('uses the verified publication date in %s', (locale, expectedDateDisplay) => {
     const posts = getAllColumnPosts(locale);
 
-    expect(posts[0]).toMatchObject({
+    expect(posts.slice(0, 3).map((post) => post.publicationDate)).toEqual([
+      '2026-09-27', '2026-09-27', '2026-09-27',
+    ]);
+    expect(posts[3]).toMatchObject({
       slug: SEMICONDUCTOR_SLUG,
       publicationDate: '2026-09-17',
       dateDisplay: expectedDateDisplay,
     });
-    expect(posts[1]).toMatchObject({
+    expect(posts[4]).toMatchObject({
       slug: COSMETICS_SLUG,
       publicationDate: '2026-02-04',
     });
-    expect(posts.slice(2).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
+    expect(posts.slice(5).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
   });
 
   it('keeps input order for equal publication dates regardless of lastmod', () => {

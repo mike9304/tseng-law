@@ -1,0 +1,15 @@
+{
+  "reason": "API embedding calls are not authorized. These published columns use the existing public text-search index; genuine vectors may be backfilled only with future authorization.",
+  "recordedAt": "2026-09-27",
+  "columns": [
+    { "locale": "ko", "slug": "taiwanese-spouse-divorce-agreement-registration" },
+    { "locale": "ko", "slug": "taiwanese-spouse-divorce-from-abroad" },
+    { "locale": "ko", "slug": "taiwanese-spouse-divorce-cross-border-parenting" },
+    { "locale": "en", "slug": "taiwanese-spouse-divorce-agreement-registration" },
+    { "locale": "en", "slug": "taiwanese-spouse-divorce-from-abroad" },
+    { "locale": "en", "slug": "taiwanese-spouse-divorce-cross-border-parenting" },
+    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-agreement-registration" },
+    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-from-abroad" },
+    { "locale": "zh-hant", "slug": "taiwanese-spouse-divorce-cross-border-parenting" }
+  ]
+}

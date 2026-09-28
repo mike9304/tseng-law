@@ -2,7 +2,7 @@
 title: "Divorcing a Taiwanese spouse by agreement: what to check before signing"
 seoTitle: "Taiwan Divorce Agreement: Before You Sign"
 summary: "Before signing a divorce agreement with a Taiwanese spouse, check terms, witnesses, registration and overseas documents, plus any separate child arrangements."
-lastmod: "2026-09-27"
+lastmod: "2026-09-28"
 date_display: "September 27, 2026"
 read_time: "5 min read"
 categories:

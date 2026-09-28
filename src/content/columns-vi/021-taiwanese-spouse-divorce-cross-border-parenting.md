@@ -2,8 +2,8 @@
 title: "Ly hôn với người Đài Loan: lập kế hoạch chăm sóc con giữa hai nước"
 summary: "Trước khi chuyển nơi sống của con, hãy kiểm tra quyền quyết định, sự đồng ý và quyết định hiện có, rồi chuẩn bị trường học, chăm sóc, liên lạc và chi phí."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 tháng 9 năm 2026"
+lastmod: "2026-09-28"
+date_display: "28 tháng 9 năm 2026"
 read_time: "4 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"

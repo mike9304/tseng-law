@@ -3,8 +3,8 @@ title: "Kết hôn với người Đài Loan: đăng ký ở đâu, xác nhận 
 seoTitle: "Kết hôn với người Đài Loan: giấy tờ và đăng ký"
 summary: "Người Việt kết hôn với người Đài Loan cần tách việc đăng ký kết hôn, xác nhận giấy tờ, phỏng vấn tại cơ quan đại diện và thủ tục xin thị thực, cư trú."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "Ngày 27 tháng 9 năm 2026"
+lastmod: "2026-09-28"
+date_display: "Ngày 28 tháng 9 năm 2026"
 read_time: "5 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"

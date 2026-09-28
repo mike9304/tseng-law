@@ -2,8 +2,8 @@
 title: "Ở Việt Nam, vợ hoặc chồng ở Đài Loan: chuẩn bị buổi tư vấn ly hôn đầu tiên"
 summary: "Ghi rõ những vấn đề hai bên đã thống nhất, địa chỉ liên hệ, vụ việc đã tiến hành và giấy tờ nhận được để tư vấn về ly hôn khi hai người ở hai nước."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 tháng 9 năm 2026"
+lastmod: "2026-09-28"
+date_display: "28 tháng 9 năm 2026"
 read_time: "4 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"

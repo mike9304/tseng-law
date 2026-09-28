@@ -3,8 +3,8 @@ title: "Con của cha mẹ Việt–Đài: quốc tịch, khai sinh và hộ t�
 seoTitle: "Con Việt–Đài: quốc tịch, khai sinh và hộ tịch Đài Loan"
 summary: "Gia đình Việt–Đài cần xác định quốc tịch của con, làm khai sinh và kiểm tra hộ tịch Đài Loan riêng biệt; nơi sinh và tình trạng cha mẹ quyết định hướng xử lý."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "Ngày 27 tháng 9 năm 2026"
+lastmod: "2026-09-28"
+date_display: "Ngày 28 tháng 9 năm 2026"
 read_time: "5 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"

@@ -2,8 +2,8 @@
 title: "Napagkasunduang diborsiyo sa asawang Taiwanese: bago pumirma sa kasunduan"
 summary: "Ano ang dapat linawin sa kasunduan, mga saksi, pagpaparehistro sa Taiwan at mga dokumentong gagawin sa ibang bansa bago pumirma sa napagkasunduang diborsiyo."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 Setyembre 2026"
+lastmod: "2026-09-28"
+date_display: "28 Setyembre 2026"
 read_time: "4 minutong pagbasa"
 categories:
   - "Impormasyong Legal sa Taiwan"

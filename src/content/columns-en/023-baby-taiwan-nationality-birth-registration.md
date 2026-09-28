@@ -2,7 +2,7 @@
 title: "A Baby in a U.S.–Taiwan Family: Citizenship, Birth Records and Taiwan Household Registration"
 seoTitle: "U.S.–Taiwan Baby: Citizenship and Birth"
 summary: "Expecting a baby in a U.S.–Taiwan family? Separate citizenship, birth records, Taiwan household registration and passports, with official guidance at each step."
-lastmod: "2026-09-27"
+lastmod: "2026-09-28"
 date_display: "September 27, 2026"
 read_time: "5 min read"
 categories:

@@ -3,8 +3,8 @@ title: "Menikah dengan warga Taiwan: urutan pencatatan, legalisasi dan wawancara
 seoTitle: "WNI menikah dengan warga Taiwan: pencatatan dan dokumen"
 summary: "WNI menikah dengan warga Taiwan perlu memeriksa pencatatan di Indonesia, legalisasi, wawancara perwakilan Taiwan, serta izin tinggal sebagai proses terpisah."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 September 2026"
+lastmod: "2026-09-28"
+date_display: "28 September 2026"
 read_time: "5 menit baca"
 categories:
   - "Informasi hukum Taiwan"

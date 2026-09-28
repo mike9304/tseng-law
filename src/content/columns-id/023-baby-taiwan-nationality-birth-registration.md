@@ -3,8 +3,8 @@ title: "Bayi Indonesia–Taiwan: kewarganegaraan, akta kelahiran, dan pencatatan
 seoTitle: "Bayi Indonesia–Taiwan: kewarganegaraan dan kelahiran"
 summary: "Untuk bayi Indonesia–Taiwan, bedakan kewarganegaraan, akta lahir, pencatatan kependudukan Taiwan dan paspor. Periksa pula aturan kewarganegaraan ganda terbatas."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 September 2026"
+lastmod: "2026-09-28"
+date_display: "28 September 2026"
 read_time: "5 menit baca"
 categories:
   - "Informasi hukum Taiwan"

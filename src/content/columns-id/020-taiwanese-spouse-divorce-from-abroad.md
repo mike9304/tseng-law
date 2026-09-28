@@ -2,8 +2,8 @@
 title: "Tinggal di Indonesia, pasangan di Taiwan: menyiapkan konsultasi perceraian"
 summary: "Pisahkan persoalan kesepakatan, alamat pasangan, perkara yang sudah berjalan dan kehadiran di pengadilan sebelum memilih langkah perceraian lintas negara."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 September 2026"
+lastmod: "2026-09-28"
+date_display: "28 September 2026"
 read_time: "4 menit"
 categories:
   - "Informasi Hukum Taiwan"

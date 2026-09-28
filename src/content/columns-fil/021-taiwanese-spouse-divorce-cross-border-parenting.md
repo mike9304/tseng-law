@@ -2,8 +2,8 @@
 title: "Diborsiyo sa asawang Taiwanese: plano sa pag-aalaga ng anak sa dalawang bansa"
 summary: "Bago ilipat ang tirahan ng anak, suriin ang kapangyarihan, pahintulot at mga utos, at gumawa ng konkretong plano sa paaralan, pakikipag-ugnayan at gastos."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 Setyembre 2026"
+lastmod: "2026-09-28"
+date_display: "28 Setyembre 2026"
 read_time: "4 minutong pagbasa"
 categories:
   - "Impormasyong Legal sa Taiwan"

@@ -2,8 +2,8 @@
 title: "Thuận tình ly hôn với vợ hoặc chồng Đài Loan: kiểm tra gì trước khi ký?"
 summary: "Khi đã đồng ý ly hôn, người Việt có vợ hoặc chồng Đài Loan nên xem kỹ thỏa thuận, người làm chứng, đăng ký và giấy tờ lập ở nước ngoài trước khi ký."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 tháng 9 năm 2026"
+lastmod: "2026-09-28"
+date_display: "28 tháng 9 năm 2026"
 read_time: "4 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"

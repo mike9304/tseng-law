@@ -2,8 +2,8 @@
 title: "Bercerai dengan pasangan Taiwan: rencana pengasuhan anak di dua negara"
 summary: "Sebelum anak pindah dari Taiwan, periksa hak asuh, persetujuan dan putusan yang ada, lalu susun rencana sekolah, pengasuhan, hak kunjung dan biaya."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 September 2026"
+lastmod: "2026-09-28"
+date_display: "28 September 2026"
 read_time: "4 menit"
 categories:
   - "Informasi Hukum Taiwan"

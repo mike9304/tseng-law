@@ -8,6 +8,12 @@ const slugs = [
   'baby-taiwan-nationality-birth-registration',
 ];
 
+const UNCHANGED_PASS = new Set([
+  'ja/marrying-taiwanese-national-registration-checklist',
+  'ja/baby-taiwan-nationality-birth-registration',
+  'fil/marrying-taiwanese-national-registration-checklist',
+]);
+
 describe('native marriage and birth columns September 2026', () => {
   it.each(locales)('loads two dated, independently authored articles with FAQ and contact in %s', (locale) => {
     const posts = getAllColumnPosts(locale);
@@ -38,7 +44,10 @@ describe('native marriage and birth columns September 2026', () => {
     expect(records).toHaveLength(18);
     for (const record of records) {
       expect(record.alternateLocales.slice().sort()).toEqual([...locales].sort());
-      expect(record.lastModified).toBe('2026-09-27');
+      // Columns revised after the 2026-09-28 Fable review carry the revision date;
+      // the review's unchanged PASS files keep the original date.
+      const slug = record.path.replace('/columns/', '');
+      expect(record.lastModified).toBe(UNCHANGED_PASS.has(`${record.locale}/${slug}`) ? '2026-09-27' : '2026-09-28');
     }
   });
 });

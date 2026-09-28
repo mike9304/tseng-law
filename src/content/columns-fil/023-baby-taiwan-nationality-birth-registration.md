@@ -3,8 +3,8 @@ title: "Anak ng Pilipino at Taiwanese: nasyonalidad, Report of Birth at househol
 seoTitle: "Anak ng Pilipino at Taiwanese: nasyonalidad at kapanganakan"
 summary: "Hiwa-hiwalay na usapin ang nasyonalidad, Report of Birth, household registration sa Taiwan at pasaporte ng anak. Iba ang proseso ayon sa lugar ng kapanganakan."
 published: "2026-09-27"
-lastmod: "2026-09-27"
-date_display: "27 Setyembre 2026"
+lastmod: "2026-09-28"
+date_display: "28 Setyembre 2026"
 read_time: "5 minutong pagbasa"
 categories:
   - "Impormasyon sa batas ng Taiwan"

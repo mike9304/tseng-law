@@ -60,6 +60,6 @@ faq:
 
 ### 亲子与设籍咨询
 
-联系昊鼎国际法律事务所曾雋崴律师时，简述出生地和日期、出生时父母身份与户籍、婚姻或认领记录、大陆户口和护照情况，以及公证验证进度与来台计划。邮箱：[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。敏感资料依事务所指示交付。地址：103 臺北市大同區承德路一段35號7樓之2。婚姻材料尚未处理的，可看[两岸结婚登记与赴台团聚的衔接](/zh-hans/columns/marrying-taiwanese-national-registration-checklist)。大陆国籍、户籍及出入境事项还须向当地主管机关核实。
+联系昊鼎国际法律事务所曾雋崴律师时，简述出生地和日期、出生时父母身份与户籍、婚姻或认领记录、大陆户口和护照情况，以及公证验证进度与来台计划。邮箱：[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。敏感资料依事务所指示交付。地址：103 臺北市大同區承德路一段35號7樓之2。婚姻材料尚未处理的，可看[两岸结婚登记与赴台团聚的衔接](/zh-hans/columns/marrying-taiwanese-national-registration-checklist)。大陆一侧的户口、证件及出入境事项，还须向大陆主管机关核实。
 
 官方资料确认日：2026年9月27日。文件、费用与办理安排依承办机关最新说明核对。

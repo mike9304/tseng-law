@@ -5,6 +5,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { guidanceContent } from '@/data/international-guidance-content';
 import { guidanceColumnCategoryLabel } from '@/lib/columns';
 import { GUIDANCE_LOCALES_4, type GuidanceLocale4 } from '@/lib/public-guidance';
+import { COLUMN_TOPIC_LABELS } from '@/lib/column-topics';
 import ColumnsGrid, { type ColumnListItem } from '../ColumnsGrid';
 
 vi.mock('next/navigation', () => ({
@@ -248,22 +249,34 @@ describe('ColumnsGrid guidance filter and card CTA labels', () => {
     },
   );
 
-  it('keeps the existing English filter and CTA copy on en', () => {
+  it('keeps the existing English CTA copy on en and switches the chips to topics', () => {
     const html = renderGrid('en');
-    expect(filterButtonLabels(html)).toEqual([...ENGLISH_FILTER_LABELS]);
+    // Core locales group by topic (2026-09-29): formation→company, case→litigation, legal→other.
+    expect(filterButtonLabels(html).map((label) => label.replace(/&amp;/g, '&'))).toEqual([
+      'All',
+      COLUMN_TOPIC_LABELS.en.company,
+      COLUMN_TOPIC_LABELS.en.litigation,
+      COLUMN_TOPIC_LABELS.en.other,
+    ]);
     expect(html).toContain('Open column →');
     expect(html).not.toContain('Tất cả');
     expect(html).not.toContain('Đọc tiếp');
   });
 
-  it('does not change ko/zh-hant/ja filter or CTA bytes', () => {
-    expect(filterButtonLabels(renderGrid('ko'))).toEqual(['전체', '법인설립', '법률정보', '소송사례']);
-    expect(renderGrid('ko')).toContain('칼럼 보기 →');
-
-    expect(filterButtonLabels(renderGrid('zh-hant'))).toEqual(['全部', '公司設立', '法律資訊', '訴訟案例']);
-    expect(renderGrid('zh-hant')).toContain('查看專欄 →');
-
-    expect(filterButtonLabels(renderGrid('ja'))).toEqual(['すべて', '台湾会社設立', '台湾法律情報', '訴訟事例分析']);
-    expect(renderGrid('ja')).toContain('コラムを読む →');
+  it('uses reviewed topic chips and unchanged CTA bytes on ko/zh-hant/ja', () => {
+    for (const [locale, all, cta] of [
+      ['ko', '전체', '칼럼 보기 →'],
+      ['zh-hant', '全部', '查看專欄 →'],
+      ['ja', 'すべて', 'コラムを読む →'],
+    ] as const) {
+      const html = renderGrid(locale);
+      expect(filterButtonLabels(html)).toEqual([
+        all,
+        COLUMN_TOPIC_LABELS[locale].company,
+        COLUMN_TOPIC_LABELS[locale].litigation,
+        COLUMN_TOPIC_LABELS[locale].other,
+      ]);
+      expect(html).toContain(cta);
+    }
   });
 });

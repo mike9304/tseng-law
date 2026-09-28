@@ -150,10 +150,12 @@ describe('public columns filter recovery', () => {
       expect(preventDefault).not.toHaveBeenCalled(); // Next Link owns navigation/history.
       await screen.commitUrl('');
       expect(screen.control('data-columns-search-input').value).toBe('');
-      expect(screen.control('className', 'columns-grid')['data-columns-visible-count']).toBe(17);
+      // Unfiltered archive renders the topic-grouped index over all 17 columns.
+      expect(screen.control('data-columns-grouped')['data-columns-visible-count']).toBe(17);
       expect(screen.control('className', 'columns-search-status')['data-columns-search-results']).toBe(17);
-      const cards = screen.control('className', 'columns-grid').children as ReactElement<ControlProps>[];
-      expect(cards.map((card) => card.props.href)).toEqual(archive.map((post) => `/${locale}/columns/${post.slug}`));
+      const company = screen.control('data-columns-topic-section', 'company');
+      expect(company).toBeTruthy();
+      expect(screen.control('data-columns-topic-more', 'company')).toBeTruthy();
 
       // A later back/forward URL commit must still control query and category.
       await screen.commitUrl('q=registration&category=formation');
@@ -161,7 +163,7 @@ describe('public columns filter recovery', () => {
       expect(screen.control('className', 'columns-grid')['data-columns-visible-count']).toBe(9);
       await screen.commitUrl('');
       expect(screen.control('data-columns-search-input').value).toBe('');
-      expect(screen.control('className', 'columns-grid')['data-columns-visible-count']).toBe(17);
+      expect(screen.control('data-columns-grouped')['data-columns-visible-count']).toBe(17);
     },
   );
 
@@ -170,12 +172,13 @@ describe('public columns filter recovery', () => {
     const screen = await mountColumns('en');
     await act(async () => screen.control('data-columns-search-input').onChange?.({ target: { value: 'registration' } }));
     await act(async () => screen.control('data-columns-search').onSubmit?.({ preventDefault: vi.fn() }));
-    await act(async () => screen.control('children', 'Company Setup').onClick?.());
-    expect(Object.fromEntries(screen.url.searchParams)).toEqual({ campaign: 'public-guide', q: 'registration', category: 'formation' });
-    expect(navigation.replace).toHaveBeenLastCalledWith('/en/columns?campaign=public-guide&q=registration&category=formation', { scroll: false });
+    await act(async () => screen.control('data-columns-topic-chip', 'company').onClick?.());
+    expect(Object.fromEntries(screen.url.searchParams)).toEqual({ campaign: 'public-guide', q: 'registration', topic: 'company' });
+    expect(navigation.replace).toHaveBeenLastCalledWith('/en/columns?campaign=public-guide&q=registration&topic=company', { scroll: false });
     await screen.commitUrl(screen.url.search);
+    expect(screen.control('className', 'columns-grid')['data-columns-visible-count']).toBe(1);
     await act(async () => screen.control('data-columns-search-clear').onClick?.());
-    expect(Object.fromEntries(screen.url.searchParams)).toEqual({ campaign: 'public-guide', category: 'formation' });
+    expect(Object.fromEntries(screen.url.searchParams)).toEqual({ campaign: 'public-guide', topic: 'company' });
     expect(screen.control('data-columns-search-input').value).toBe('');
   });
 
@@ -196,7 +199,8 @@ describe('public columns filter recovery', () => {
     expect(html).toContain(emptyCopy);
     expect(html).toContain(resetCopy);
     expect(html).toMatch(new RegExp(`<a[^>]*data-columns-filter-reset="true"[^>]*href="/${locale}/columns"`));
-    expect(html.match(/class="columns-filter-btn/g)).toHaveLength(4);
+    // All + one chip per topic present (company, other).
+    expect(html.match(/class="columns-filter-btn/g)).toHaveLength(3);
     expect(html).not.toContain('disabled=');
   });
 
@@ -213,7 +217,8 @@ describe('public columns filter recovery', () => {
     expect(html).toContain('Category: </span>Company Setup');
     expect(html).toContain('Author: </span>Wei Tseng');
     expect(html).toContain('Search: </span>registration');
-    expect(html).toMatch(/aria-pressed="true"[^>]*class="columns-filter-btn active"[^>]*>Company Setup</);
+    // Legacy ?category= links still filter; topic chips stay unpressed.
+    expect(html).not.toContain('aria-pressed="true"');
     expect(html).toContain('data-columns-search-clear="true"');
     expect(html).not.toContain('disabled=');
   });

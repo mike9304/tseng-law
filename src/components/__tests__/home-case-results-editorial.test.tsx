@@ -48,13 +48,15 @@ describe('HomeCaseResultsSplit editorial plate', () => {
     expect(html).toContain('data-video-mounted="false"');
     expect(html).not.toContain('<video');
     expect(html).toContain('사례 분석');
-    expect(html).toContain('1심 157만 TWD 판결·항소심 화해');
+    expect(html).toContain('1심 승소·항소심 화해');
     expect(html).toContain('항소심에서 당사자 간 화해로 종결');
     expect(html).toContain(
       '사건 결과는 구체적인 사실관계와 증거에 따라 달라질 수 있으며, 이 사례는 과거 한 사건의 진행 경과를 소개합니다.',
     );
     expect(html).toContain('/ko/columns');
-    expect(html).not.toContain('승소');
+    // User decision 2026-09-28 (1A): first-instance win + appeal settlement,
+    // with no award amount.
+    expect(html).not.toMatch(/157만|1\.57|TWD|대만달러/);
     expect(html).toContain('data-builder-node-key="media"');
     expect(html).toContain('data-builder-node-key="copy"');
     // Text must not be an overlay child of the image plate.

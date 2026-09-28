@@ -150,8 +150,10 @@ describe('guidance team biographies', () => {
   }
 
   it('every preserved term is a string the canonical record actually publishes', () => {
-    // WO-X1 (EN-12): the EN roster card no longer repeats the gym-injury ruling;
-    // the TWD 1.57M figure stays published in the canonical EN attorney profile.
+    // WO-X1 (EN-12): the EN roster card no longer repeats the gym-injury
+    // matter, so the canonical record also includes the EN attorney profile's
+    // notable matters. The award amount is no longer a preserved term (user
+    // decision 2026-09-28): see the "gym-injury past-matter line" suite below.
     const canonical = JSON.stringify([
       teamContent.en,
       getAttorneyProfile('en', primaryAttorneySlug)?.notableMatters,
@@ -206,6 +208,88 @@ describe('guidance team biographies', () => {
         });
       }
     }
+  });
+});
+
+/**
+ * User decision 2026-09-28 (1A, Taiwan attorney-advertising ethics): the lead
+ * attorney's gym-injury line states no award amount in any guidance language.
+ * It keeps the representation, says the claim was won at first instance, and
+ * that the case later settled on appeal. The markers are each language's own
+ * words for "first instance" and "appeal" as the reviewed line uses them.
+ */
+const GYM_LINE_MARKERS: Record<GuidanceLocale, readonly [firstInstance: string, appeal: string]> = {
+  vi: ['sơ thẩm', 'phúc thẩm'],
+  id: ['tingkat pertama', 'banding'],
+  th: ['ศาลชั้นต้น', 'อุทธรณ์'],
+  fil: ['unang hukuman', 'apela'],
+  ar: ['ابتدائي', 'الاستئناف'],
+  de: ['erster Instanz', 'Berufung'],
+  es: ['primera instancia', 'apelación'],
+  fr: ['première instance', 'appel'],
+  pt: ['primeira instância', 'recurso'],
+  'zh-hans': ['一审胜诉', '二审'],
+  ms: ['peringkat pertama', 'rayuan'],
+  ru: ['первой инстанции', 'апелляц'],
+  tr: ['ilk derece', 'istinaf'],
+  it: ['primo grado', 'appello'],
+  nl: ['eerste aanleg', 'hoger beroep'],
+  pl: ['pierwszej instancji', 'apelacji'],
+  hi: ['प्रथम न्यायालय', 'अपील'],
+  sv: ['första instans', 'överklagande'],
+  da: ['første instans', 'anken'],
+  nb: ['første instans', 'anke'],
+  fi: ['ensimmäinen oikeusaste', 'muutoksenhaku'],
+  cs: ['prvním stupni', 'odvolací'],
+  hu: ['első fokon', 'fellebbezési'],
+  ro: ['instanța de fond', 'apel'],
+  uk: ['першій інстанції', 'апеляц'],
+  el: ['πρωτόδικη', 'έφεσης'],
+  he: ['ערכאה ראשונה', 'ערעור'],
+  bn: ['প্রথম আদালত', 'আপিল'],
+  ur: ['ابتدائی عدالت', 'اپیل'],
+  fa: ['حکم بدوی', 'تجدیدنظر'],
+  my: ['ပထမအဆင့်တရားရုံး', 'အယူခံ'],
+  ta: ['முதல் நிலை நீதிமன்ற', 'மேல்முறையீ'],
+  ne: ['प्रथम तहको अदालत', 'पुनरावेदन'],
+  km: ['សាលាដំបូង', 'ឧទ្ធរណ៍'],
+  mn: ['нэгдүгээр шатны шүүх', 'давж заалдах'],
+  sk: ['prvom stupni', 'odvolac'],
+  bg: ['първоинстанционно', 'въззив'],
+  hr: ['prvog stupnja', 'žalben'],
+  sr: ['prvog stepena', 'žalben'],
+  sl: ['prvi stopnji', 'pritožben'],
+  lt: ['pirmosios instancijos', 'apeliacin'],
+  lv: ['pirmās instances', 'apelācijas'],
+  et: ['esimese astme', 'apellatsiooni'],
+  ca: ['primera instància', 'apel·lació'],
+  is: ['fyrsta dómsstigi', 'áfrýjun'],
+};
+
+describe('gym-injury past-matter line', () => {
+  const allBioLocales = Object.keys(guidanceTeamBios) as GuidanceLocale[];
+
+  it('covers every guidance language that carries a biography', () => {
+    expect(Object.keys(GYM_LINE_MARKERS).sort()).toEqual([...allBioLocales].sort());
+  });
+
+  it('the award amount is not a preserved term', () => {
+    expect(GUIDANCE_BIO_PRESERVED_TERMS.join(' ')).not.toMatch(/\d|TWD/);
+  });
+
+  it.each(allBioLocales)('%s lead biography states no figure and no currency', (locale) => {
+    for (const line of guidanceTeamBios[locale]['tseng-junwei'].intro) {
+      expect(line, `${locale}: ${line}`).not.toMatch(/\p{Nd}/u);
+      expect(line, `${locale}: ${line}`).not.toMatch(/TWD|NT\$|新台币|新臺幣|新台幣/);
+    }
+  });
+
+  it.each(allBioLocales)('%s gym line keeps the first-instance win and the appeal settlement', (locale) => {
+    const [firstInstance, appeal] = GYM_LINE_MARKERS[locale];
+    const line = guidanceTeamBios[locale]['tseng-junwei'].intro[1];
+    expect(line).toContain(firstInstance);
+    expect(line).toContain(appeal);
+    expect(line.indexOf(firstInstance)).toBeLessThan(line.lastIndexOf(appeal));
   });
 });
 

@@ -14,6 +14,7 @@ import {
   type TaiwanOfficeId,
 } from '@/data/office-locations';
 import SectionLabel from '@/components/SectionLabel';
+import { heroTrustCopy } from '@/components/HeroTrustStrip';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { guidanceOfficeCopy, type GuidanceOfficeCopy } from '@/data/international-guidance-offices';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
@@ -29,16 +30,12 @@ import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
  * and fax numbers, map URLs and photographs stay canonical.
  */
 
-// Google 플레이스 2026-07-21 기준, 수동 갱신
-const TAIPEI_RATING_VALUE = '5.0';
-const TAIPEI_REVIEW_COUNT = 17;
-
-function taipeiRatingSummary(locale: PublicLocale8, guidance: GuidanceOfficeCopy | null) {
-  if (locale === 'ko') return `${TAIPEI_RATING_VALUE} · 리뷰 ${TAIPEI_REVIEW_COUNT}개`;
-  if (locale === 'zh-hant') return `${TAIPEI_RATING_VALUE} · ${TAIPEI_REVIEW_COUNT} 則評論`;
-  if (locale === 'ja') return `${TAIPEI_RATING_VALUE}・クチコミ${TAIPEI_REVIEW_COUNT}件`;
-  if (guidance) return `${TAIPEI_RATING_VALUE} · ${TAIPEI_REVIEW_COUNT} ${guidance.reviewCountWord}`;
-  return `${TAIPEI_RATING_VALUE} · ${TAIPEI_REVIEW_COUNT} reviews`;
+// Link to the Taipei office's Google reviews without restating a rating or count: the figure
+// changes on Google, and a stale number on the site could mislead (user decision 2026-09-28).
+// HeroTrustStrip uses the same wording and the same Maps URL.
+function taipeiReviewsLabel(locale: PublicLocale8, guidance: GuidanceOfficeCopy | null) {
+  if (guidance) return guidance.googleReviewsLabel;
+  return heroTrustCopy[isSiteLocale(locale) ? locale : 'en'].reviewsLink;
 }
 
 const zhHantKoreaOffice: OfficeInfo = {
@@ -317,10 +314,7 @@ export default function OfficeMapTabs({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="office-rating-stars" aria-hidden="true">
-                    ★★★★★
-                  </span>
-                  <span className="office-rating-text">{taipeiRatingSummary(locale, guidance)}</span>
+                  <span className="office-rating-text">{taipeiReviewsLabel(locale, guidance)}</span>
                 </a>
                 <div className="office-gallery">
                   {taipeiPhotos.map((photo, photoIndex) => (

@@ -7437,13 +7437,6 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   text-underline-offset: 0.18em;
 }
 
-.office-rating-stars {
-  color: var(--gold);
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-
 .office-rating-text {
   font-size: 0.85rem;
   font-weight: 700;
@@ -26401,10 +26394,6 @@ html[lang='zh-hant'],
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-
-.hero-trust-star {
-  color: #f2b01e;
 }
 
 .hero-trust-strip--dark {

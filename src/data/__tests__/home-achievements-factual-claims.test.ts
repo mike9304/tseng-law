@@ -11,8 +11,8 @@ const expectedAchievements = {
   ko: [
     {
       title: '헬스장 부상 손해배상',
-      amount: '1심 157만 TWD',
-      summary: '1심에서 157만 TWD 배상 판결 후 항소심에서 화해로 종결된 사례.',
+      amount: '1심 승소',
+      summary: '1심에서 승소한 뒤 항소심에서 화해로 종결된 사례.',
       tag: '민사',
     },
     {
@@ -49,8 +49,8 @@ const expectedAchievements = {
   'zh-hant': [
     {
       title: '健身房受傷求償',
-      amount: '一審新台幣157萬元',
-      summary: '一審判賠新台幣157萬元，二審和解結案。',
+      amount: '一審勝訴',
+      summary: '一審勝訴，二審和解結案。',
       tag: '民事',
     },
     {
@@ -87,8 +87,8 @@ const expectedAchievements = {
   en: [
     {
       title: 'Gym Injury Damages',
-      amount: 'TWD 1.57M · First Instance',
-      summary: 'A TWD 1.57M damages ruling was issued at first instance; the matter later settled on appeal.',
+      amount: 'First-instance win',
+      summary: 'Won at first instance; the matter later settled on appeal.',
       tag: 'Civil',
     },
     {
@@ -125,8 +125,8 @@ const expectedAchievements = {
   ja: [
     {
       title: 'ジム負傷の損害賠償',
-      amount: '一審157万TWD',
-      summary: '一審でNT$157万の損害賠償を認める判決後、控訴審で和解により終結した事例。',
+      amount: '一審勝訴',
+      summary: '一審で勝訴した後、控訴審で和解により終結した事例。',
       tag: '民事',
     },
     {
@@ -199,6 +199,19 @@ const thirdPartyDamagesTerms: Record<SiteLocale, readonly [string, string]> = {
   ja: ['第三者', '慰謝料'],
 };
 
+/**
+ * User decision 2026-09-28 (1A, Taiwan attorney-advertising ethics): the gym
+ * card drops its award amount and says only that the claim was won at first
+ * instance and later settled on appeal. These are the only win phrases the
+ * achievements may carry; every other win framing stays prohibited.
+ */
+const approvedFirstInstanceWinPhrases: Record<SiteLocale, readonly string[]> = {
+  ko: ['1심에서 승소', '1심 승소'],
+  'zh-hant': ['一審勝訴'],
+  en: ['First-instance win', 'Won at first instance'],
+  ja: ['一審で勝訴', '一審勝訴'],
+};
+
 const prohibitedAchievementFraming = [
   /\bwin\b/i,
   /\bvictory\b/i,
@@ -235,7 +248,7 @@ describe('homepage achievement factual claims', () => {
     expect(items.map(({ href }) => href)).toEqual(Array(6).fill(`/${locale}/columns`));
   });
 
-  it.each(siteLocales)('qualifies the gym amount as first-instance before appeal settlement for %s', (locale) => {
+  it.each(siteLocales)('describes the gym case as a first-instance win settled on appeal, without an award amount, for %s', (locale) => {
     const card = siteContent[locale].achievements.items[0];
     const combinedCopy = `${card.amount} ${card.summary}`.toLocaleLowerCase(locale);
     const [firstInstanceTerm, appealSettlementTerm] = firstInstanceAndAppealTerms[locale];
@@ -247,6 +260,22 @@ describe('homepage achievement factual claims', () => {
     expect(combinedCopy).toContain(firstInstanceTerm.toLocaleLowerCase(locale));
     expect(combinedCopy).toContain(normalizedAppealSettlementTerm);
     expect(copyAfterAppealSettlement).not.toMatch(/\d/);
+    expect(JSON.stringify(card)).not.toMatch(/\d{2,}|\d[.,]\d|TWD|NT\$|[0-9]\s*(?:萬|万|만)/i);
+    expect(approvedFirstInstanceWinPhrases[locale].some((phrase) => combinedCopy.includes(
+      phrase.toLocaleLowerCase(locale),
+    ))).toBe(true);
+  });
+
+  it.each(siteLocales)('keeps the approved first-instance win phrase on the gym card only for %s', (locale) => {
+    const [gymCard, ...otherCards] = siteContent[locale].achievements.items;
+    const phrases = approvedFirstInstanceWinPhrases[locale];
+
+    expect(phrases.some((phrase) => JSON.stringify(gymCard).includes(phrase))).toBe(true);
+    for (const card of otherCards) {
+      for (const phrase of phrases) {
+        expect(JSON.stringify(card)).not.toContain(phrase);
+      }
+    }
   });
 
   it.each(siteLocales)('maps TWD 2.9 million only to traffic-accident damages for %s', (locale) => {
@@ -268,7 +297,10 @@ describe('homepage achievement factual claims', () => {
   });
 
   it.each(siteLocales)('excludes prohibited outcome framing from %s achievements', (locale) => {
-    const serializedAchievements = JSON.stringify(siteContent[locale].achievements);
+    const serializedAchievements = approvedFirstInstanceWinPhrases[locale].reduce(
+      (serialized, phrase) => serialized.split(phrase).join(''),
+      JSON.stringify(siteContent[locale].achievements),
+    );
 
     for (const phrase of prohibitedAchievementFraming) {
       expect(serializedAchievements).not.toMatch(phrase);

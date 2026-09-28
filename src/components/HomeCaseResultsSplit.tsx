@@ -45,9 +45,9 @@ export type HomeCaseResultsOverride = {
 const copyByLocale = {
   ko: {
     label: '사례 분석',
-    title: '한국 유학생 헬스장 부상 사건\n1심 157만 TWD 판결·항소심 화해',
+    title: '한국 유학생 헬스장 부상 사건\n1심 승소·항소심 화해',
     description:
-      '대만 헬스장에서 트레이너의 지도를 받아 운동하던 중 다친 한국인 대학생이 손해배상을 청구한 사건입니다. 1심에서 157만 TWD의 배상을 인정하는 판결이 내려졌고, 이후 항소심에서 당사자 간 화해로 종결되었습니다.',
+      '대만 헬스장에서 트레이너의 지도를 받아 운동하던 중 다친 한국인 대학생이 손해배상을 청구한 사건입니다. 1심에서 손해배상을 인정받아 승소했고, 이후 항소심에서 당사자 간 화해로 종결되었습니다.',
     summary:
       '사건 결과는 구체적인 사실관계와 증거에 따라 달라질 수 있으며, 이 사례는 과거 한 사건의 진행 경과를 소개합니다.',
     cta: '소송사례 분석 보기',
@@ -55,9 +55,9 @@ const copyByLocale = {
   },
   'zh-hant': {
     label: '案例解析',
-    title: '韓國留學生健身房受傷案\n一審判賠新台幣157萬元，二審和解',
+    title: '韓國留學生健身房受傷案\n一審勝訴，二審和解',
     description:
-      '韓國大學生在台灣健身房接受教練指導運動時受傷，提起損害賠償訴訟。一審判決賠償新台幣157萬元，其後雙方於二審和解。',
+      '韓國大學生在台灣健身房接受教練指導運動時受傷，提起損害賠償訴訟。一審原告勝訴，其後雙方於二審和解。',
     summary:
       '個案結果因具體事實與證據而異；本案例僅說明過往個案的處理經過。',
     cta: '查看訴訟案例',
@@ -65,9 +65,9 @@ const copyByLocale = {
   },
   en: {
     label: 'CASE STUDY',
-    title: 'Gym Injury Claim —\nTWD 1.57M First-Instance Ruling, Settled on Appeal',
+    title: 'Gym Injury Claim —\nWon at First Instance, Settled on Appeal',
     description:
-      'A university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court issued a TWD 1.57 million damages ruling; the case later concluded through a settlement on appeal.',
+      'A university student sought damages after being injured while training under an instructor’s supervision at a Taiwan gym. The first-instance court ruled in the student’s favor and awarded damages; the case later concluded through a settlement on appeal.',
     summary:
       'Outcomes depend on the specific facts and evidence; this case study describes the course of one past matter.',
     cta: 'Read the case write-up',
@@ -75,9 +75,9 @@ const copyByLocale = {
   },
   ja: {
     label: '事例紹介',
-    title: 'ジムでの負傷事故 —\n一審NT$157万判決、控訴審で和解',
+    title: 'ジムでの負傷事故 —\n一審勝訴、控訴審で和解',
     description:
-      '台湾のジムでトレーナーの指導を受けて運動中に負傷した大学生が、損害賠償を請求した事例です。一審ではNT$157万の損害賠償を認める判決が出され、その後、控訴審で当事者間の和解により終結しました。',
+      '台湾のジムでトレーナーの指導を受けて運動中に負傷した大学生が、損害賠償を請求した事例です。一審で損害賠償が認められて勝訴し、その後、控訴審で当事者間の和解により終結しました。',
     summary:
       '結果は具体的な事実関係や証拠により異なります。本事例は、過去の一案件の経過を紹介するものです。',
     cta: '事例の解説を読む',

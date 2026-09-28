@@ -379,8 +379,9 @@ describe('editorial heading unit grouping', () => {
     );
     // The legacy heading retains a break after each source line, including the final line.
     // WO-X1 (EN-03/J01): nationality-neutral case headlines.
-    const jaTitle = 'ジムでの負傷事故 —\n一審NT$157万判決、控訴審で和解\n';
-    const enTitle = 'Gym Injury Claim —\nTWD 1.57M First-Instance Ruling, Settled on Appeal\n';
+    // User decision 2026-09-28 (1A): no award amount in the headline.
+    const jaTitle = 'ジムでの負傷事故 —\n一審勝訴、控訴審で和解\n';
+    const enTitle = 'Gym Injury Claim —\nWon at First Instance, Settled on Appeal\n';
     const editorialHeading = headingEntries(editorial, 'h2', 'home-results-title')[0];
     const standardHeading = headingEntries(standard, 'h2', 'home-results-title')[0];
     const englishHeading = headingEntries(english, 'h2', 'home-results-title')[0];

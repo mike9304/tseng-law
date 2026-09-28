@@ -25,8 +25,9 @@ export const firmIntroductionContent: Record<SiteLocale, FirmIntroductionContent
       '2024년, 증준외 변호사가 법무법인 호정에 정식으로 합류하여 한국 및 일본 고객에게 회사 설립, 비자 신청, 상표 및 특허 신청, 법적 위험 평가, 회사 세무 상담 등 전방위적 법률 서비스를 제공하고 있습니다.',
       '또한, 본 사무소 구성원들은 장기간에 걸쳐 사회 서비스에 헌신하고 있으며, 매년 공익 사건을 담당하고 다양한 유형의 무료 서비스 및 법률 상담을 통해 공정하고 정의로운 법의 핵심 원칙을 실천하고 있습니다.'
     ],
-    logo: '/images/brand/hovering-logo-ko.png',
-    logoAlt: '법무법인 호정 로고',
+    // Same official Taiwan logo (昊鼎國際法律事務所) as zh-hant/en/ja — user decision 2026-09-28.
+    logo: '/images/brand/hovering-logo-zh.png',
+    logoAlt: '昊鼎國際法律事務所(법무법인 호정) 로고',
     sourceUrl: 'https://www.hoveringlaw.com.tw/kr/about.html',
     sourceLabel: '출처: hoveringlaw.com.tw'
   },

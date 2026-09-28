@@ -75,9 +75,9 @@ export const serviceAreas: ServiceArea[] = [
       en: 'Comprehensive support for contract disputes, damages claims, and accident litigation'
     },
     intro: {
-      ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
-      'zh-hant': '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以中文、韓文、日文或英文與外國當事人溝通，協助其進行在台訴訟。',
-      en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a gym injury claim, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.'
+      ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 사례가 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
+      'zh-hant': '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，一審勝訴，二審和解結案，並以中文、韓文、日文或英文與外國當事人溝通，協助其進行在台訴訟。',
+      en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a gym injury claim, we won at first instance before the case settled on appeal, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.'
     },
     keyPoints: {
       ko: [
@@ -86,7 +86,7 @@ export const serviceAreas: ServiceArea[] = [
         '소비자보호법 제7조는 사업자가 서비스를 제공할 때 당시의 전문·기술 수준에서 합리적으로 기대되는 안전성을 갖추도록 요구하지만 모든 헬스장 부상이 곧바로 책임으로 이어지는 것은 아니며, 구체적 책임은 안전의무, 위반, 인과관계, 손해, 항변과 증거를 종합해 판단하고 초기분석이나 과실감정 의견도 최종 책임을 자동으로 결정하지 않습니다.',
         '형법 제287조에 따라 제284조의 과실상해는 고소가 있어야 공소를 제기할 수 있고 형사소송법 제237조상 고소는 원칙적으로 범인을 안 날부터 6개월 안에 해야 하며, 민법 제197조상 불법행위 손해배상청구권은 손해와 배상의무자를 안 날부터 2년 또는 불법행위 시점부터 10년이 지나면 원칙적으로 소멸하고, 다른 청구원인과 기간 규칙은 사실관계에 따라 달라지며 형사부대민사소송도 형사사건과 청구의 관련성 등 요건과 절차 단계가 맞는 경우에만 이용할 수 있어 비용 취급까지 개별 확인해야 합니다.',
         '화해 전에는 대상 청구, 권리포기 범위, 지급 조건과 불이행 시 조치를 확인해야 하며, 치료가 계속되거나 장래 손해가 아직 확정되지 않았다면 그 범위까지 검토해야 하고 서명 뒤에는 합의 내용을 번복하기 어려울 수 있습니다.',
-        '대만 타이중지방법원 109年度消字第7號 판결은 트레이너의 지도로 데드리프트를 하던 한국인 유학생이 다친 사건에서 1심이 TWD 1,579,589의 배상을 명한 사례이고 공식 판결문에는 曾雋崴 변호사가 원고 소송대리인으로 기재되어 있으며, 이후 항소심에서 당사자들이 화해했다는 내용은 언론 보도에 따른 것입니다.',
+        '대만 타이중지방법원 109年度消字第7號 판결은 트레이너의 지도로 데드리프트를 하던 한국인 유학생이 다친 사건에서 1심이 손해배상을 인정해 원고가 승소한 사례이고 공식 판결문에는 曾雋崴 변호사가 원고 소송대리인으로 기재되어 있으며, 이후 항소심에서 당사자들이 화해했다는 내용은 언론 보도에 따른 것입니다.',
       ],
       'zh-hant': [
         '可能主張的損害項目包括醫療費用、必要的看護或照護費用、必要交通費用、復原期間有證明的收入損失、有持續性障礙並經相關證據證明的勞動能力減損，以及依個案情形酌定的非財產上損害；消費者保護法第51條的懲罰性賠償，須以適用該法並符合法定要件為前提，並由法院依個案判斷，故意為損害額五倍以下、重大過失為三倍以下、過失為一倍以下。',
@@ -94,7 +94,7 @@ export const serviceAreas: ServiceArea[] = [
         '消費者保護法第7條要求提供服務的企業經營者確保其服務符合當時科技或專業水準可合理期待的安全性，但健身房發生受傷事故不當然成立責任，仍須綜合判斷安全義務、違反情形、因果關係、損害、抗辯與證據，初步研判或過失鑑定意見也不會自動決定最終責任。',
         '依刑法第287條，第284條過失傷害罪屬告訴乃論，刑事訴訟法第237條原則上要求告訴權人自知悉犯人時起六個月內提出告訴；依民法第197條，侵權行為損害賠償請求權原則上自知有損害及賠償義務人時起二年、最長自侵權行為時起十年不行使而消滅，其他請求權基礎與期間規則須依個案確認，刑事附帶民事訴訟須符合與刑事案件的關聯性等法定要件，並在法定程序階段提起；相關費用亦應個別確認。',
         '和解前應確認納入的請求、權利拋棄範圍、付款條件及違約處理方式；如治療仍在進行或將來損害尚未明確，亦應一併評估，因簽署後可能難以推翻或另行主張已納入和解範圍的權利。',
-        '臺灣臺中地方法院109年度消字第7號判決涉及一名韓國留學生在教練指導下進行硬舉訓練時受傷，一審判命賠償新臺幣1,579,589元，官方判決並記載曾雋崴律師為原告訴訟代理人；雙方其後在上訴程序成立和解的說法，僅依媒體報導。',
+        '臺灣臺中地方法院109年度消字第7號判決涉及一名韓國留學生在教練指導下進行硬舉訓練時受傷，一審判決認可損害賠償、原告勝訴，官方判決並記載曾雋崴律師為原告訴訟代理人；雙方其後在上訴程序成立和解的說法，僅依媒體報導。',
       ],
       en: [
         'Potential damages may include medical expenses, necessary nursing or care costs, necessary transportation, documented earnings lost during recovery, loss of earning capacity where lasting impairment and supporting evidence are established, and non-pecuniary loss assessed from the individual circumstances; punitive damages under Consumer Protection Act Article 51 require the Act and its statutory conditions to apply and remain subject to court assessment, with ceilings of five times the proven loss for intent, three times for gross negligence, and one time for negligence.',
@@ -102,7 +102,7 @@ export const serviceAreas: ServiceArea[] = [
         'Consumer Protection Act Article 7 requires a business operator providing services to ensure that the service meets the safety reasonably expected under the professional or technical standard prevailing at the time, but a gym injury does not by itself establish liability, which depends on the applicable duty, breach, causation, damage, defenses, and evidence, while a preliminary assessment or fault-appraisal opinion does not automatically determine final responsibility.',
         'Under Criminal Code Article 287, negligent injury under Article 284 is prosecutable only upon complaint, and Code of Criminal Procedure Article 237 generally requires the complaint within six months after the entitled complainant learns the offender’s identity; under Civil Code Article 197, a tort claim generally expires two years after the claimant learns both of the injury and the person liable, subject to a ten-year longstop from the wrongful act, while other causes of action and timing rules remain fact-dependent and an ancillary civil action is available only when its relationship to the criminal case and other procedural requirements are satisfied, with its cost treatment requiring individual review.',
         'Before settling, the parties should identify the claims covered, the scope of any release, payment terms, and remedies for breach, and ongoing treatment or unresolved future loss should be considered because undoing the agreement or pursuing rights already released may be difficult after signature.',
-        'In Taichung District Court case 109年度消字第7號, an international student was injured while performing a trainer-led deadlift, and the first-instance court awarded exactly TWD 1,579,589; the official judgment identifies Attorney 曾雋崴 as the plaintiff’s litigation representative, while the statement that the parties later settled on appeal is attributable only to media reports.',
+        'In Taichung District Court case 109年度消字第7號, an international student was injured while performing a trainer-led deadlift, and the first-instance court ruled in the student’s favor and awarded damages; the official judgment identifies Attorney 曾雋崴 as the plaintiff’s litigation representative, while the statement that the parties later settled on appeal is attributable only to media reports.',
       ]
     },
     columnSlugs: [

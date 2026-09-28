@@ -319,9 +319,9 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
     expect(officeTabs).toContain("title: 'Korea Office'");
     expect(officeTabs).not.toContain("title: '대만 사업 컨설팅 사무실'");
     expect(officeTabs).toContain('map.naver.com/p/search/');
-    expect(officeTabs).toContain("const TAIPEI_RATING_VALUE = '5.0'");
-    expect(officeTabs).toContain('const TAIPEI_REVIEW_COUNT = 17');
-    expect(officeTabs).toContain('Google 플레이스 2026-07-21 기준, 수동 갱신');
+    // Google rating/count is no longer restated (user decision 2026-09-28); the card links to the reviews.
+    expect(officeTabs).not.toMatch(/TAIPEI_(RATING_VALUE|REVIEW_COUNT)/);
+    expect(officeTabs).toContain('function taipeiReviewsLabel(');
     expect(officeTabs).toContain('/images/office/taipei-01.jpg');
     expect(officeTabs).toContain('/images/office/taipei-02.jpg');
     expect(officeTabs).toContain('/images/office/taipei-03.jpg');

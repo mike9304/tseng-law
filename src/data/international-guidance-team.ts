@@ -25,8 +25,8 @@ import type { GuidanceLocale } from '@/data/international-guidance-content';
  *
  * WHAT STAYS BYTE-IDENTICAL TO THE ENGLISH CANONICAL RECORD
  *   Roman personal names; the official English names of institutions and
- *   firms ({@link GUIDANCE_BIO_PRESERVED_TERMS}); figures and currency codes
- *   ("TWD 1.57M"); e-mail addresses. Degree abbreviations keep the original in
+ *   firms ({@link GUIDANCE_BIO_PRESERVED_TERMS}); figures and currency codes;
+ *   e-mail addresses. Degree abbreviations keep the original in
  *   brackets once, after the local degree word — "Magister (M.S.), Institute
  *   of Finance, National Taiwan University".
  *
@@ -36,6 +36,10 @@ import type { GuidanceLocale } from '@/data/international-guidance-content';
  *   publish. `src/data/__tests__/guidance-team-bios.test.ts` enforces the line
  *   counts, the preserved terms, the figures and the language purity rules
  *   against `teamContent.en` on every run.
+ *   No award amount for the gym-injury matter (user decision 2026-09-28,
+ *   Taiwan attorney-advertising ethics): the lead attorney's past-matter line
+ *   says only that the claim was won at first instance and later settled on
+ *   appeal, in every language.
  *
  * CONSULTATION LANGUAGES
  *   The roster still makes no claim about which languages a consultation
@@ -1813,7 +1817,6 @@ export const GUIDANCE_BIO_PRESERVED_TERMS: readonly string[] = [
   'Boyin Law Firm',
   'Muyang International Law Firm',
   'Chinshin CPA Firm',
-  'TWD 1.57M',
 ];
 
 /**
@@ -1844,7 +1847,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Văn phòng nhận các vụ việc doanh nghiệp và cá nhân tại Đài Loan, làm việc bằng tiếng Anh, tiếng Nhật, tiếng Hàn và tiếng Trung.',
-        'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và đạt được bản án sơ thẩm buộc bồi thường 1,57 triệu đài tệ mới (TWD 1.57M).',
+        'Đã đại diện một sinh viên Hàn Quốc trong vụ việc bồi thường thương tích tại phòng tập và thắng kiện ở cấp sơ thẩm; sau đó, vụ việc kết thúc bằng hòa giải ở cấp phúc thẩm.',
       ],
       education: [
         'Thạc sĩ (M.S.), Viện Tài chính (Institute of Finance, National Taiwan University)',
@@ -1903,7 +1906,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kantor menangani perkara korporasi dan perorangan di Taiwan dalam bahasa Inggris, bahasa Jepang, bahasa Korea, dan bahasa Mandarin.',
-        'Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M (1,57 juta dolar baru Taiwan).',
+        'Mewakili seorang mahasiswa asal Korea dalam perkara ganti rugi atas cedera di pusat kebugaran dan menang di pengadilan tingkat pertama; perkara tersebut kemudian berakhir dengan perdamaian di tingkat banding.',
       ],
       education: [
         'Magister (M.S.), Institute of Finance, National Taiwan University',
@@ -1962,7 +1965,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'สำนักงานรับดำเนินการเรื่องของบริษัทและบุคคลในไต้หวัน โดยใช้ภาษาอังกฤษ ภาษาญี่ปุ่น ภาษาเกาหลี และภาษาจีน',
-        'เคยเป็นทนายความให้แก่นักศึกษาชาวเกาหลีในคดีเรียกค่าเสียหายจากการบาดเจ็บที่ฟิตเนส และศาลชั้นต้นพิพากษาให้นักศึกษาผู้นั้นได้รับค่าเสียหาย TWD 1.57M',
+        'เคยเป็นทนายความให้แก่นักศึกษาชาวเกาหลีในคดีเรียกค่าเสียหายจากการบาดเจ็บที่ฟิตเนส โดยศาลชั้นต้นพิพากษาให้นักศึกษาผู้นั้นชนะคดี และต่อมาคดียุติลงด้วยการประนีประนอมยอมความในชั้นอุทธรณ์',
       ],
       education: [
         'ปริญญาโท (M.S.), Institute of Finance, National Taiwan University',
@@ -2021,7 +2024,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Tinatanggap ng tanggapan ang mga usaping pangkorporasyon at pang-indibidwal sa Taiwan, sa Ingles, Hapon, Koreano, at Tsino.',
-        'Kinatawan niya ang isang mag-aaral mula sa Korea sa usapin ng pinsalang natamo sa gym, na nagbunga ng hatol sa unang hukuman para sa danyos na TWD 1.57M.',
+        'Kinatawan niya ang isang mag-aaral mula sa Korea sa usapin ng pinsalang natamo sa gym; nanalo ang mag-aaral sa unang hukuman, at kalaunan ay natapos ang kaso sa kasunduan sa yugto ng apela.',
       ],
       education: [
         'Masterado (M.S.), Institute of Finance, National Taiwan University',
@@ -2080,7 +2083,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.',
-        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في صالة رياضية، وصدر حكم ابتدائي بالتعويض بمبلغ 1.57 مليون دولار تايواني جديد (TWD 1.57M).',
+        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في صالة رياضية، وصدر حكم ابتدائي لصالحه، ثم انتهت القضية بالصلح في مرحلة الاستئناف.',
       ],
       education: [
         'ماجستير (M.S.)، Institute of Finance, National Taiwan University',
@@ -2139,7 +2142,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Die Kanzlei bearbeitet Unternehmens- und Individualangelegenheiten in Taiwan auf Englisch, Japanisch, Koreanisch und Chinesisch.',
-        'Sie vertrat einen koreanischen Studenten in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte ein erstinstanzliches Urteil über 1,57 Millionen TWD.',
+        'Sie vertrat einen koreanischen Studenten in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte in erster Instanz ein obsiegendes Urteil; im Berufungsverfahren endete der Fall später mit einem Vergleich.',
       ],
       education: [
         'Masterabschluss (M.S.) am Institute of Finance der National Taiwan University',
@@ -2198,7 +2201,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'El despacho atiende asuntos de empresas y de particulares en Taiwán en inglés, japonés, coreano y chino.',
-        'Representó a un estudiante coreano en una reclamación de daños por una lesión en un gimnasio y obtuvo una sentencia de primera instancia de TWD 1.57M (1,57 millones de dólares taiwaneses).',
+        'Representó a un estudiante coreano en una reclamación de daños por una lesión en un gimnasio y obtuvo una sentencia favorable en primera instancia; posteriormente, el caso concluyó con un acuerdo en la fase de apelación.',
       ],
       education: [
         'Máster (M.S.), Institute of Finance, National Taiwan University',
@@ -2257,7 +2260,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Le cabinet traite des affaires d’entreprises et de particuliers à Taïwan en anglais, en japonais, en coréen et en chinois.',
-        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport. Un jugement de première instance a fixé le montant à 1,57 million de dollars taïwanais (TWD 1.57M). Ce n’est pas un résultat promis.',
+        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport. Le jugement de première instance lui a donné gain de cause, puis l’affaire s’est conclue par une transaction en appel. Ce n’est pas un résultat promis.',
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',
@@ -2316,7 +2319,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'O escritório trata assuntos de empresas e de particulares em Taiwan em inglês, japonês, coreano e chinês.',
-        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhão de novos dólares de Taiwan (TWD 1.57M).',
+        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença favorável em primeira instância; o caso terminou depois com um acordo na fase de recurso.',
       ],
       education: [
         'Mestrado (M.S.), Institute of Finance, National Taiwan University',
@@ -2375,7 +2378,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         '事务所在台湾以英语、日语、韩语和中文处理企业与个人事项。',
-        '她曾代理一名韩国学生，就健身房受伤请求损害赔偿，并取得新台币157万元的一审判决。',
+        '她曾代理一名韩国学生，就健身房受伤请求损害赔偿，一审胜诉，其后于二审和解结案。',
       ],
       education: [
         '硕士（M.S.），国立台湾大学财务金融研究所（Institute of Finance, National Taiwan University）',
@@ -2434,7 +2437,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Firma mengendalikan hal syarikat dan individu di Taiwan dalam bahasa Inggeris, Jepun, Korea dan Cina.',
-        'Mewakili seorang pelajar Korea dalam tuntutan ganti rugi kerana kecederaan di pusat kecergasan dan memperoleh penghakiman peringkat pertama sebanyak TWD 1,570,000.',
+        'Mewakili seorang pelajar Korea dalam tuntutan ganti rugi kerana kecederaan di pusat kecergasan dan menang di mahkamah peringkat pertama; kes itu kemudian berakhir dengan penyelesaian di peringkat rayuan.',
       ],
       education: [
         'Sarjana (M.S.), Institut Kewangan (Institute of Finance), National Taiwan University',
@@ -2493,7 +2496,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Фирма ведёт дела компаний и частных лиц на Тайване на английском, японском, корейском и китайском языках.',
-        'Она представляла студента из Кореи в требовании о возмещении вреда из-за травмы в спортивном зале и добилась решения первой инстанции на 1,57 млн TWD.',
+        'Она представляла студента из Кореи в требовании о возмещении вреда из-за травмы в спортивном зале и добилась решения в его пользу в первой инстанции; позднее, на стадии апелляции, дело завершилось мировым соглашением.',
       ],
       education: [
         'Магистр (M.S.), Institute of Finance, National Taiwan University',
@@ -2552,7 +2555,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Büro, Tayvan’da şirket ve kişi işlerini İngilizce, Japonca, Korece ve Çince yürütür.',
-        'Spor salonunda yaralanma nedeniyle bir Koreli öğrenciyi tazminat isteminde temsil etti ve TWD 1.57M tutarında ilk derece tazminat kararı elde etti.',
+        'Spor salonunda yaralanma nedeniyle bir Koreli öğrenciyi tazminat isteminde temsil etti ve ilk derece mahkemesinden öğrenci lehine karar aldı; dava daha sonra istinaf aşamasında sulhle sona erdi.',
       ],
       education: [
         'National Taiwan University Institute of Finance’de yüksek lisans (M.S.)',
@@ -2611,7 +2614,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Lo studio tratta questioni di imprese e di privati a Taiwan in inglese, giapponese, coreano e cinese.',
-        'Ha seguito in primo grado la domanda di risarcimento di uno studente coreano per una lesione in palestra, definita con una sentenza di 1,57 milioni di TWD.',
+        'Ha seguito la domanda di risarcimento di uno studente coreano per una lesione in palestra, accolta in primo grado; in appello la causa si è poi chiusa con una transazione.',
       ],
       education: [
         'Master (M.S.) in finanza, Institute of Finance, National Taiwan University',
@@ -2670,7 +2673,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Het kantoor behandelt ondernemings- en individuele zaken in Taiwan in het Engels, Japans, Koreaans en Chinees.',
-        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens letsel in een sportschool en verkreeg een vonnis in eerste aanleg van 1,57 miljoen TWD.',
+        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens letsel in een sportschool en verkreeg in eerste aanleg een toewijzend vonnis; in hoger beroep eindigde de zaak later met een schikking.',
       ],
       education: [
         'Masterdiploma (M.S.) financiën, Institute of Finance, National Taiwan University',
@@ -2729,7 +2732,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelaria prowadzi sprawy przedsiębiorstw i osób prywatnych na Tajwanie po angielsku, japońsku, koreańsku i chińsku.',
-        'Reprezentowała koreańskiego studenta w żądaniu odszkodowania z powodu urazu na siłowni i uzyskała wyrok pierwszej instancji zasądzający 1,57 mln TWD.',
+        'Reprezentowała koreańskiego studenta w żądaniu odszkodowania z powodu urazu na siłowni i uzyskała korzystny wyrok w pierwszej instancji; sprawa zakończyła się później ugodą na etapie apelacji.',
       ],
       education: [
         'Magister (M.S.), Institute of Finance, National Taiwan University',
@@ -2788,7 +2791,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'कार्यालय ताइवान में उद्यमों और व्यक्तियों के मामलों का अंग्रेज़ी, जापानी, कोरियाई और चीनी में कार्य करता है।',
-        'उन्होंने जिम में लगी चोट के हर्जाने के एक दावे में कोरियाई छात्र का प्रतिनिधित्व किया और निचली अदालत (प्रथम न्यायालय) से TWD 1,570,000 का निर्णय दिलाया।',
+        'उन्होंने जिम में लगी चोट के हर्जाने के एक दावे में कोरियाई छात्र का प्रतिनिधित्व किया और निचली अदालत (प्रथम न्यायालय) से छात्र के पक्ष में निर्णय दिलाया; बाद में अपील के चरण में मामला समझौते से समाप्त हुआ।',
       ],
       education: [
         'स्नातकोत्तर (M.S.), वित्त संस्थान (Institute of Finance, National Taiwan University)',
@@ -2847,7 +2850,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Byrån behandlar företags- och enskilda ärenden i Taiwan på engelska, japanska, koreanska och kinesiska.',
-        'Hon företrädde en koreansk student i ett skadeståndsanspråk efter en skada på ett gym och fick i första instans en dom på 1,57 miljoner TWD.',
+        'Hon företrädde en koreansk student i ett skadeståndsanspråk efter en skada på ett gym och vann i första instans; efter överklagande avslutades målet senare genom förlikning.',
       ],
       education: [
         'Masterexamen (M.S.) vid Institute of Finance, National Taiwan University',
@@ -2906,7 +2909,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kontoret behandler virksomheds- og individuelle sager i Taiwan på engelsk, japansk, koreansk og kinesisk.',
-        'Hun repræsenterede en koreansk studerende i et erstatningskrav efter en skade i et fitnesscenter og fik i første instans en dom på TWD 1.57M (1,57 mio. TWD).',
+        'Hun repræsenterede en koreansk studerende i et erstatningskrav efter en skade i et fitnesscenter og fik medhold i første instans; sagen blev senere afsluttet med et forlig under anken.',
       ],
       education: [
         'Kandidat (M.S.), Institute of Finance, National Taiwan University',
@@ -2965,7 +2968,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kontoret behandler saker for virksomheter og privatpersoner i Taiwan på engelsk, japansk, koreansk og kinesisk.',
-        'Hun representerte en koreansk student i et erstatningskrav etter en skade på et treningssenter; saken endte med dom i første instans på 1 570 000 TWD.',
+        'Hun representerte en koreansk student i et erstatningskrav etter en skade på et treningssenter og fikk medhold i første instans; saken ble senere avsluttet med forlik under ankebehandlingen.',
       ],
       education: [
         'Mastergrad (M.S.) ved Institute of Finance, National Taiwan University',
@@ -3024,7 +3027,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Toimisto käsittelee yritysten ja yksityishenkilöiden asioita Taiwanissa englanniksi, japaniksi, koreaksi ja kiinaksi.',
-        'Hän ajoi korealaisen opiskelijan vahingonkorvausasian kuntosalilla sattuneesta vammasta, ja ensimmäinen oikeusaste tuomitsi päämiehen hyväksi 1,57 miljoonan TWD:n korvauksen.',
+        'Hän ajoi korealaisen opiskelijan vahingonkorvausasian kuntosalilla sattuneesta vammasta, ja ensimmäinen oikeusaste ratkaisi asian päämiehen hyväksi; muutoksenhakuvaiheessa asia päättyi myöhemmin sovintoon.',
       ],
       education: [
         'Maisterintutkinto (M.S.) National Taiwan Universityn Institute of Financesta',
@@ -3083,7 +3086,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelář vede věci podniků a soukromých osob na Tchaj-wanu v angličtině, japonštině, korejštině a čínštině.',
-        'Zastupovala korejského studenta v řízení o náhradu škody za úraz v posilovně a dosáhla rozsudku prvního stupně ve výši 1,57 mil. TWD.',
+        'Zastupovala korejského studenta v řízení o náhradu škody za úraz v posilovně a v prvním stupni uspěla; v odvolacím řízení věc později skončila smírem.',
       ],
       education: [
         'Magistr (M.S.), Institute of Finance, National Taiwan University',
@@ -3152,7 +3155,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Az iroda vállalatok és magánszemélyek tajvani ügyeiben jár el angolul, japánul, koreaiul és kínaiul.',
-        'Koreai hallgatót képviselt edzőtermi sérülés miatti kártérítési igényben, és első fokon 1,57 millió TWD megítélését érte el.',
+        'Koreai hallgatót képviselt edzőtermi sérülés miatti kártérítési igényben, és első fokon pernyertességet ért el; az ügy később a fellebbezési szakaszban egyezséggel zárult.',
       ],
       education: [
         'Mesterfokozat (M.S.), Institute of Finance, National Taiwan University',
@@ -3221,7 +3224,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Cabinetul tratează cauze ale întreprinderilor și ale persoanelor fizice în Taiwan în engleză, japoneză, coreeană și chineză.',
-        'A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sala de sport, iar instanța de fond a pronunțat o hotărâre de 1,57 mil. TWD.',
+        'A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sala de sport, iar instanța de fond i-a dat câștig de cauză; ulterior, în apel, cauza s-a încheiat printr-o tranzacție.',
       ],
       education: [
         'Master (M.S.) în finanțe, Institute of Finance, National Taiwan University',
@@ -3290,7 +3293,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Фірма веде справи підприємств і приватних осіб на Тайвані англійською, японською, корейською та китайською.',
-        'Представляла корейського студента у вимозі про відшкодування шкоди через травму в спортзалі та здобула рішення першої інстанції про відшкодування 1,57 млн нових тайванських доларів (TWD 1.57M).',
+        'Представляла корейського студента у вимозі про відшкодування шкоди через травму в спортзалі та здобула рішення на його користь у першій інстанції; згодом на стадії апеляції справу було завершено мировою угодою.',
       ],
       education: [
         'Магістр (M.S.), Institute of Finance, National Taiwan University',
@@ -3359,7 +3362,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Το γραφείο χειρίζεται υποθέσεις επιχειρήσεων και ιδιωτών στην Ταϊβάν στα αγγλικά, ιαπωνικά, κορεατικά και κινεζικά.',
-        'Εκπροσώπησε Κορεάτη φοιτητή σε αγωγή αποζημίωσης για τραυματισμό σε γυμναστήριο και πέτυχε πρωτόδικη απόφαση ύψους 1,57 εκατ. TWD.',
+        'Εκπροσώπησε Κορεάτη φοιτητή σε αγωγή αποζημίωσης για τραυματισμό σε γυμναστήριο και πέτυχε ευνοϊκή πρωτόδικη απόφαση. Στη συνέχεια, στο στάδιο της έφεσης, η υπόθεση έληξε με συμβιβασμό.',
       ],
       education: [
         'Μεταπτυχιακό (M.S.), Institute of Finance, National Taiwan University',
@@ -3428,7 +3431,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'המשרד מטפל בעניינים של עסקים ושל יחידים בטאיוואן באנגלית, ביפנית, בקוריאנית ובסינית.',
-        'ייצגה סטודנט קוריאני בתביעת פיצויים בשל פגיעה במכון כושר והשיגה פסק דין בערכאה ראשונה בסך TWD 1.57M (1.57 מיליון דולר טאיוואני חדש).',
+        'ייצגה סטודנט קוריאני בתביעת פיצויים בשל פגיעה במכון כושר, והתביעה התקבלה בערכאה ראשונה; בהמשך, בשלב הערעור, הסתיים התיק בפשרה.',
       ],
       education: [
         'מוסמכת (M.S.), Institute of Finance, National Taiwan University',
@@ -3497,7 +3500,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'কার্যালয় তাইওয়ানে ব্যবসা ও ব্যক্তিগত বিষয়ে ইংরেজি, জাপানি, কোরীয় ও চীনা ভাষায় কাজ করে।',
-        'তিনি জিমে আঘাতজনিত ক্ষতিপূরণের দাবিতে একজন কোরীয় শিক্ষার্থীর প্রতিনিধিত্ব করেছেন এবং প্রথম আদালত থেকে TWD 1.57M রায় আদায় করেছেন।',
+        'তিনি জিমে আঘাতজনিত ক্ষতিপূরণের দাবিতে একজন কোরীয় শিক্ষার্থীর প্রতিনিধিত্ব করেছেন এবং প্রথম আদালত থেকে শিক্ষার্থীর পক্ষে রায় আদায় করেছেন; পরে আপিল পর্যায়ে মামলাটি আপস-মীমাংসার মাধ্যমে নিষ্পত্তি হয়।',
       ],
       education: [
         'স্নাতকোত্তর (M.S.), ফিন্যান্স ইনস্টিটিউট, ন্যাশনাল তাইওয়ান বিশ্ববিদ্যালয় (Institute of Finance, National Taiwan University)',
@@ -3556,7 +3559,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'دفتر تائیوان میں کاروباروں اور افراد کے معاملات کا انگریزی، جاپانی، کوریائی اور چینی میں کام کرتا ہے۔',
-        'انہوں نے جم میں لگی چوٹ کے ہرجانے کے ایک دعوے میں کوریائی طالب علم کی نمائندگی کی اور ابتدائی عدالت (پہلے درجے کی عدالت) سے TWD 1.57M کا فیصلہ دلایا۔',
+        'انہوں نے جم میں لگی چوٹ کے ہرجانے کے ایک دعوے میں کوریائی طالب علم کی نمائندگی کی اور ابتدائی عدالت (پہلے درجے کی عدالت) سے طالب علم کے حق میں فیصلہ دلایا؛ بعد میں اپیل کے مرحلے پر مقدمہ مصالحت کے ذریعے ختم ہوا۔',
       ],
       education: [
         'ماسٹر (M.S.)، Institute of Finance, National Taiwan University',
@@ -3615,7 +3618,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'دفتر پرونده‌های شرکت‌ها و اشخاص را در تایوان می‌پذیرد و به انگلیسی، ژاپنی، کره‌ای و چینی کار می‌کند.',
-        'او نمایندگی یک دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت 1.57 میلیون دلار جدید تایوان (TWD 1.57M) صادر شد.',
+        'او نمایندگی یک دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به نفع موکل صادر شد؛ سپس پرونده در مرحله تجدیدنظر با سازش پایان یافت.',
       ],
       education: [
         'کارشناسی ارشد (M.S.)، Institute of Finance, National Taiwan University',
@@ -3674,7 +3677,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'ရုံးသည် ထိုင်ဝမ်တွင် ကုမ္ပဏီနှင့် ပုဂ္ဂိုလ်ရေးကိစ္စများကို အင်္ဂလိပ်၊ ဂျပန်၊ ကိုရီးယားနှင့် တရုတ်ဘာသာဖြင့် ဆောင်ရွက်သည်။',
-        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး၊ ထိုကျောင်းသားအတွက် ပထမအဆင့်တရားရုံးက လျော်ကြေးအဖြစ် ထိုင်ဝမ်ဒေါ်လာအသစ် 1.57 သန်း (TWD 1.57M) ပေးရန် စီရင်ချက် ရယူခဲ့သည်။',
+        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး၊ ပထမအဆင့်တရားရုံးက ထိုကျောင်းသားဘက်မှ အနိုင်ရသည့် စီရင်ချက် ချမှတ်ခဲ့သည်။ နောက်ပိုင်းတွင် အယူခံအဆင့်၌ နှစ်ဖက်ညှိနှိုင်းပြေလည်မှုဖြင့် အမှုပြီးဆုံးခဲ့သည်။',
       ],
       education: [
         'မဟာသိပ္ပံဘွဲ့ (M.S.), Institute of Finance, National Taiwan University',
@@ -3733,7 +3736,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'அலுவலகம் தைவானில் நிறுவனங்கள் மற்றும் தனிநபர்களின் வழக்குகளை ஆங்கிலம், ஜப்பானியம், கொரிய மொழி மற்றும் சீனம் ஆகியவற்றில் கையாள்கிறது.',
-        'உடற்பயிற்சிக் கூடத்தில் ஏற்பட்ட காயத்திற்கான இழப்பீட்டு வழக்கில் ஒரு கொரிய மாணவரை அவர் பிரதிநிதித்துவப்படுத்தி, முதல் நிலை நீதிமன்றத்தில் TWD 1.57M வழங்கும் தீர்ப்பைப் பெற்றார்.',
+        'உடற்பயிற்சிக் கூடத்தில் ஏற்பட்ட காயத்திற்கான இழப்பீட்டு வழக்கில் ஒரு கொரிய மாணவரை அவர் பிரதிநிதித்துவப்படுத்தி, முதல் நிலை நீதிமன்றத்தில் மாணவருக்குச் சாதகமான தீர்ப்பைப் பெற்றார்; பின்னர் மேல்முறையீட்டு நிலையில் வழக்கு சமரசம் மூலம் முடிவுக்கு வந்தது.',
       ],
       education: [
         'முதுகலை (M.S.), Institute of Finance, National Taiwan University',
@@ -3792,7 +3795,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'फर्म ताइवानमा उद्यम र व्यक्तिका मुद्दा अङ्ग्रेजी, जापानी, कोरियाली र चिनियाँमा हेर्छ।',
-        'उहाँले जिममा लागेको चोटको क्षतिपूर्ति दाबीमा कोरियाली विद्यार्थीको प्रतिनिधित्व गर्नुभयो र प्रथम तहको अदालतबाट TWD 1.57M को फैसला दिलाउनुभयो।',
+        'उहाँले जिममा लागेको चोटको क्षतिपूर्ति दाबीमा कोरियाली विद्यार्थीको प्रतिनिधित्व गर्नुभयो र प्रथम तहको अदालतबाट विद्यार्थीको पक्षमा फैसला दिलाउनुभयो; पछि पुनरावेदन तहमा मुद्दा मिलापत्रमार्फत टुङ्गियो।',
       ],
       education: [
         'स्नातकोत्तर (M.S.), Institute of Finance, National Taiwan University',
@@ -3851,7 +3854,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'ការិយាល័យទទួលរឿងរបស់សហគ្រាស និងបុគ្គលនៅតៃវ៉ាន់ ជាភាសាអង់គ្លេស ភាសាជប៉ុន ភាសាកូរ៉េ និងភាសាចិន',
-        'លោកស្រីធ្លាប់តំណាងឱ្យនិស្សិតជនជាតិកូរ៉េក្នុងរឿងសំណងពីរបួសនៅកន្លែងហាត់ប្រាណ ហើយសាលាដំបូងបានកាត់ឱ្យនិស្សិតនោះទទួលបានសំណង TWD 1.57M',
+        'លោកស្រីធ្លាប់តំណាងឱ្យនិស្សិតជនជាតិកូរ៉េក្នុងរឿងសំណងពីរបួសនៅកន្លែងហាត់ប្រាណ ហើយសាលាដំបូងបានកាត់ឱ្យនិស្សិតនោះឈ្នះក្ដី។ ក្រោយមក នៅដំណាក់កាលបណ្ដឹងឧទ្ធរណ៍ រឿងក្ដីបានបញ្ចប់ដោយការផ្សះផ្សា។',
       ],
       education: [
         'បរិញ្ញាបត្រជាន់ខ្ពស់ (M.S.) វិទ្យាស្ថានហិរញ្ញវត្ថុ សាកលវិទ្យាល័យជាតិតៃវ៉ាន់ (Institute of Finance, National Taiwan University)',
@@ -3910,7 +3913,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Фирм Тайвань дахь компани болон хувь хүний хэргийг англи, япон, солонгос, хятад хэлээр хөтөлнө.',
-        'Тэрбээр спорт зааланд бэртсэн Солонгосын оюутныг төлөөлж, хохирол нөхөн төлүүлэх нэхэмжлэлээр TWD 1.57M-ийн нэгдүгээр шатны шийдвэр гаргуулсан.',
+        'Тэрбээр спорт зааланд бэртсэн Солонгосын оюутныг төлөөлж, хохирол нөхөн төлүүлэх нэхэмжлэлээр нэгдүгээр шатны шүүхээр оюутны талд шийдвэр гаргуулсан бөгөөд дараа нь давж заалдах шатанд хэрэг эвлэрлээр дууссан.',
       ],
       education: [
         'Магистр (M.S.), Institute of Finance, National Taiwan University (Санхүүгийн хүрээлэн)',
@@ -3969,7 +3972,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelária vedie veci podnikov a súkromných osôb na Taiwane v angličtine, japončine, kórejčine a čínštine.',
-        'Zastupovala kórejského študenta v konaní o náhradu škody za úraz v posilňovni a na prvom stupni dosiahla priznanie náhrady vo výške TWD 1.57M.',
+        'Zastupovala kórejského študenta v konaní o náhradu škody za úraz v posilňovni a na prvom stupni dosiahla priznanie náhrady; v odvolacom konaní sa vec neskôr skončila zmierom.',
       ],
       education: [
         'Magisterský titul (M.S.), Institute of Finance, National Taiwan University',
@@ -4038,7 +4041,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Кантората води дела на дружества и частни лица в Тайван на английски, японски, корейски и китайски.',
-        'Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала първоинстанционно решение за 1,57 млн. нови тайвански долара (TWD 1.57M).',
+        'Представлявала е корейски студент в иск за обезщетение поради травма във фитнес зала и е постигнала благоприятно първоинстанционно решение; впоследствие, във въззивното производство, делото е приключило със спогодба.',
       ],
       education: [
         'Магистър (M.S.), Институт по финанси, Национален тайвански университет (National Taiwan University)',
@@ -4097,7 +4100,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Ured vodi predmete poduzeća i privatnih osoba na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
-        'Zastupala je korejskog studenta u predmetu naknade štete zbog ozljede u teretani i ishodila je presudu prvog stupnja u iznosu TWD 1.57M.',
+        'Zastupala je korejskog studenta u predmetu naknade štete zbog ozljede u teretani i ishodila je povoljnu presudu prvog stupnja; predmet je kasnije u žalbenom postupku okončan nagodbom.',
       ],
       education: [
         'Magistra (M.S.), Institute of Finance, National Taiwan University',
@@ -4166,7 +4169,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelarija vodi stvari preduzeća i fizičkih lica na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
-        'Zastupala je korejskog studenta u sporu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.',
+        'Zastupala je korejskog studenta u sporu za naknadu štete zbog povrede u teretani i postigla povoljnu presudu prvog stepena; spor je kasnije u žalbenom postupku okončan poravnanjem.',
       ],
       education: [
         'Master (M.S.), Institut za finansije, National Taiwan University',
@@ -4235,7 +4238,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Pisarna vodi zadeve podjetij in zasebnih oseb na Tajvanu v angleščini, japonščini, korejščini in kitajščini.',
-        'Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M (1,57 milijona novih tajvanskih dolarjev).',
+        'Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in na prvi stopnji dosegla ugodno sodbo; v pritožbenem postopku se je zadeva pozneje končala s poravnavo.',
       ],
       education: [
         'Magistrica (M.S.), Institute of Finance, National Taiwan University',
@@ -4304,7 +4307,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kontora veda įmonių ir privačių asmenų bylas Taivane anglų, japonų, korėjiečių ir kinų kalbomis.',
-        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje; pirmosios instancijos teismas priteisė TWD 1.57M.',
+        'Atstovavo korėjiečių studentui ieškinyje dėl žalos atlyginimo už traumą sporto salėje; pirmosios instancijos teismas ieškinį patenkino, o vėliau apeliacinėje instancijoje byla baigėsi taikos sutartimi.',
       ],
       education: [
         'Magistrė (M.S.), Institute of Finance, National Taiwan University',
@@ -4373,7 +4376,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Birojs ved uzņēmumu un privātpersonu lietas Taivānā angļu, japāņu, korejiešu un ķīniešu valodā.',
-        'Viņa pārstāvēja korejiešu studentu zaudējumu atlīdzības prasībā par traumu sporta zālē un ieguva pirmās instances spriedumu TWD 1.57M apmērā.',
+        'Viņa pārstāvēja korejiešu studentu zaudējumu atlīdzības prasībā par traumu sporta zālē un panāca labvēlīgu pirmās instances spriedumu; vēlāk apelācijas instancē lieta noslēdzās ar izlīgumu.',
       ],
       education: [
         'Maģistre (M.S.), Institute of Finance, National Taiwan University',
@@ -4442,7 +4445,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Büroo tegeleb Taiwanis ettevõtete ja eraisikute asjadega inglise, jaapani, korea ja hiina keeles.',
-        'Ta esindas korea üliõpilast treeningsaalis saadud vigastuse kahjuhüvitisnõudes ja esimese astme kohus mõistis välja TWD 1.57M.',
+        'Ta esindas korea üliõpilast treeningsaalis saadud vigastuse kahjuhüvitisnõudes ja esimese astme kohus rahuldas nõude; hiljem lõppes asi apellatsioonimenetluses kompromissiga.',
       ],
       education: [
         'Magistrikraad (M.S.), National Taiwan University rahanduse instituut',
@@ -4511,7 +4514,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'El despatx atén assumptes d’empreses i de particulars a Taiwan en anglès, japonès, coreà i xinès.',
-        'Va representar un estudiant coreà en una reclamació de danys per una lesió en un gimnàs i va obtenir una sentència de primera instància de TWD 1.57M (1,57 milions de dòlars taiwanesos).',
+        'Va representar un estudiant coreà en una reclamació de danys per una lesió en un gimnàs i va obtenir una sentència favorable en primera instància; posteriorment, el cas es va tancar amb un acord en fase d’apel·lació.',
       ],
       education: [
         'Màster (M.S.), Institute of Finance, National Taiwan University',
@@ -4570,7 +4573,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Skrifstofan vinnur mál fyrirtækja og einstaklinga á Taívan á ensku, japönsku, kóresku og kínversku.',
-        'Hún fór með mál kóresks námsmanns um skaðabætur vegna meiðsla í líkamsræktarstöð og fékk dóm á fyrsta dómsstigi um TWD 1.57M.',
+        'Hún fór með mál kóresks námsmanns um skaðabætur vegna meiðsla í líkamsræktarstöð og vann málið á fyrsta dómsstigi; síðar lauk málinu með sátt á áfrýjunarstigi.',
       ],
       education: [
         'Meistarapróf (M.S.), Institute of Finance, National Taiwan University',

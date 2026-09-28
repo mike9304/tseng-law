@@ -123,9 +123,19 @@ describe('Japanese team content', () => {
 
   it('preserves representative Korean, Traditional Chinese, and English copy', () => {
     expect(teamContent.ko.title).toBe('증준외 변호사와 팀');
+    // User decision 2026-09-28 (1A): first-instance win + appeal settlement,
+    // no award amount.
     expect(teamContent.ko.members[0].intro[1]).toBe(
-      '한국 유학생 헬스장 손해배상 사건에서 1심 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
+      '한국 유학생 헬스장 손해배상 사건에서 1심 승소 후 항소심에서 화해로 종결된 사례가 있습니다.',
     );
+    expect(teamContent['zh-hant'].members[0].intro[1]).toBe(
+      '曾代理韓國留學生健身傷害求償案，一審勝訴，其後於二審和解結案。',
+    );
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      expect(JSON.stringify(teamContent[locale].members)).not.toMatch(
+        /157|1\.57|1,579,589|대만달러|新台幣|新臺幣|新台湾ドル/,
+      );
+    }
     expect(teamContent['zh-hant'].members[2]).toMatchObject({
       name: '張芳瑀',
       role: '法務專員',

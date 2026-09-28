@@ -32,10 +32,10 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
     expect(html).not.toContain('>韓国事務所の所在地<');
     expect(html).toContain('>事務所の時間帯：台湾時間（日本時間−1時間）<');
     expect(html).toContain('title="台北事務所の地図"');
-    expect(html).toContain('>5.0・クチコミ17件<');
-    expect(html).not.toContain('aria-label="Googleでの評価は5.0、クチコミは17件です"');
+    // No rating or count is restated (user decision 2026-09-28); the card links to the Google reviews.
+    expect(html).not.toContain('クチコミ17件');
     expect(html).toMatch(
-      /class="office-rating-link"[^>]*>[\s\S]*?<span class="office-rating-text">5\.0・クチコミ17件<\/span>/,
+      /class="office-rating-link"[^>]*>[\s\S]*?<span class="office-rating-text">Googleのクチコミを見る<\/span>/,
     );
     expect(componentSource).toContain("locale === 'ja' ? 'FAX' : 'Fax'");
   });

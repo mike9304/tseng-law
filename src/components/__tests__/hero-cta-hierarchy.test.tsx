@@ -5,11 +5,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
 import HeroSearch from '@/components/HeroSearch';
-import {
-  HERO_TRUST_RATING_VALUE,
-  HERO_TRUST_REVIEW_COUNT,
-  heroTrustCopy,
-} from '@/components/HeroTrustStrip';
+import { heroTrustCopy } from '@/components/HeroTrustStrip';
 import { TAIPEI_MAPS_URL } from '@/data/office-locations';
 import { siteContent } from '@/data/site-content';
 import type { SiteLocale } from '@/lib/locales';
@@ -49,10 +45,11 @@ describe('WO-X3b hero CTA hierarchy', () => {
 });
 
 describe('WO-X3a hero trust strip', () => {
-  it('uses the same Google figures as the Taipei office card', () => {
+  it('links to the Google reviews without restating a rating or count, like the Taipei office card', () => {
     const source = readFileSync(join(process.cwd(), 'src/components/OfficeMapTabs.tsx'), 'utf8');
-    expect(source).toContain(`const TAIPEI_RATING_VALUE = '${HERO_TRUST_RATING_VALUE}';`);
-    expect(source).toContain(`const TAIPEI_REVIEW_COUNT = ${HERO_TRUST_REVIEW_COUNT};`);
+    expect(source).toContain('heroTrustCopy[isSiteLocale(locale) ? locale : \'en\'].reviewsLink');
+    expect(source).not.toMatch(/TAIPEI_(RATING_VALUE|REVIEW_COUNT)|★/);
+    for (const locale of locales) expect(heroTrustCopy[locale].reviewsLink).not.toMatch(/\d|★/);
   });
 
   for (const presentation of presentations) {
@@ -63,8 +60,9 @@ describe('WO-X3a hero trust strip', () => {
 
       expect(strip).toContain(`href="${TAIPEI_MAPS_URL.replace(/&/g, '&amp;')}"`);
       expect(strip).toContain('rel="noopener noreferrer"');
-      expect(copy.rating.startsWith('Google ')).toBe(true);
-      expect(strip).toContain(copy.rating);
+      expect(copy.reviewsLink).toContain('Google');
+      expect(strip).toContain(copy.reviewsLink);
+      expect(strip).not.toMatch(/★|\d\.\d/);
       for (const fact of copy.facts) expect(strip).toContain(fact);
       expect(strip).not.toMatch(/#1|No\.\s?1|best|最高|1위|第一|ナンバーワン|incentive|gift/i);
     });

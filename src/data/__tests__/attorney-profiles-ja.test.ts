@@ -64,8 +64,8 @@ describe('Japanese attorney profile', () => {
       '趨勢法律事務所',
       '昊鼎国際法律事務所',
       '法律扶助基金会台中分会',
-      'NT$157万',
-      '一審判決',
+      '一審勝訴',
+      '控訴審で和解',
       '韓国語',
       '中国語',
       '日本語',
@@ -86,11 +86,13 @@ describe('Japanese attorney profile', () => {
     expect(japaneseProfile.practiceAreas).toContain('台湾投資に関する法務顧問');
     expect(japaneseProfile.faq[0].answer).toContain('台湾投資に関する法務顧問');
     expect(japaneseProfile.summary[1]).toContain('各種手続の遂行');
+    // User decision 2026-09-28 (1A): first-instance win + appeal settlement,
+    // no award amount.
     expect(japaneseProfile.summary[2]).toContain(
-      'NT$157万の損害賠償を認める一審判決を獲得',
+      '一審勝訴を得た後、控訴審で和解により終結',
     );
     expect(japaneseProfile.proofPoints[2]).toContain(
-      'NT$157万の損害賠償を認める一審判決を獲得',
+      '一審勝訴を得た後、控訴審で和解により終結',
     );
     expect(japaneseProfile.internalLinks).toContainEqual({
       label: 'お問い合わせ・ご相談',
@@ -152,8 +154,20 @@ describe('Japanese attorney profile', () => {
         'https://blog.naver.com/wei_lawyer/223461663913',
         'https://www.threads.com/@lawyer.wei',
       ]);
-      expect(JSON.stringify(profile)).toContain(
-        locale === 'en' ? 'TWD 1.57M' : '157',
+      // User decision 2026-09-28 (1A, Taiwan attorney-advertising ethics):
+      // the gym case is described as a first-instance win later settled on
+      // appeal; no profile surface states the award amount.
+      const serializedProfile = JSON.stringify(profile);
+      const [firstInstanceWin, appealSettlement] = ({
+        ko: ['1심 승소', '항소심에서 화해'],
+        'zh-hant': ['一審勝訴', '二審和解'],
+        en: ['won at first instance', 'settled on appeal'],
+        ja: ['一審勝訴', '控訴審で和解'],
+      } as const)[locale];
+      expect(serializedProfile.toLowerCase()).toContain(firstInstanceWin.toLowerCase());
+      expect(serializedProfile).toContain(appealSettlement);
+      expect(serializedProfile).not.toMatch(
+        /157|1\.57|1,579,589|TWD|NT\$|新台幣|新臺幣|대만달러|新台湾ドル/,
       );
     },
   );

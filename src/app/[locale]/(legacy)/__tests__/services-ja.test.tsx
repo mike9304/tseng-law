@@ -148,13 +148,15 @@ describe('Japanese services-list integration', () => {
       .join(' ');
     for (const reviewedFact of [
       '経済部投資審議司',
-      '157万新台湾ドル',
+      '一審で勝訴',
       '残余財産差額分配請求',
       '最低勤務期間',
       '先行商標調査',
     ]) {
       expect(japaneseServiceCopy).toContain(reviewedFact);
     }
+    // User decision 2026-09-28 (1A): the gym case states no award amount.
+    expect(japaneseServiceCopy).not.toMatch(/157万|NT\$157|1\.57/);
 
     for (const serviceTitle of siteContent.ja.services.items.map((item) => item.title)) {
       expect(html).toContain(serviceTitle);

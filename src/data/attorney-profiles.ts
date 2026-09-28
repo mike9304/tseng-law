@@ -67,7 +67,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       summary: [
         '증준외 변호사는 한국·일본 고객의 대만 투자, 회사설립, 소송, 지식재산, 비자 및 리스크 검토 업무를 수행합니다.',
         '당사무소는 한국어·중국어·일본어·영어로 상담을 제공하며, 초기 상담부터 실행 및 분쟁 대응까지 한 흐름으로 지원합니다.',
-        '한국 유학생 헬스장 손해배상 사건에서 157만 TWD 1심 판결을 이끈 대표 사례가 있으며, WEI Lawyer 채널과 외부 매체를 통해 대만 법률을 설명하고 있습니다.',
+        '한국 유학생 헬스장 손해배상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 대표 사례가 있으며, WEI Lawyer 채널과 외부 매체를 통해 대만 법률을 설명하고 있습니다.',
       ],
       languages: ['한국어', '중국어', '일본어', '영어'],
       practiceAreas: ['대만 회사설립', '대만 투자 법률자문', '민사소송·손해배상', '상표·특허', '비자·체류', '가족·노동 분쟁'],
@@ -78,7 +78,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       experience: ['추세법률사무소', '법무법인 호정', '법률지원재단 타이중지부 지원 변호사'],
       notableMatters: [
-        '한국 유학생 헬스장 부상 사건에서 157만 TWD 손해배상 1심 판결',
+        '한국 유학생 헬스장 부상 사건 1심 승소, 이후 항소심에서 화해로 종결',
         '한국 기업의 대만 회사설립, 투자, 비자 및 운영 리스크 검토 지원',
         '상표·특허 신청, 기업 계약 검토, 민사·가사·노동 분쟁 자문',
       ],
@@ -102,7 +102,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       proofPoints: [
         '증준외 변호사는 한국어·중국어·일본어로 한국 고객 사건을 직접 소통하며, 당사무소 상담은 한국어·중국어·일본어·영어로 가능합니다.',
         '대만 회사설립, 투자, 비자, 소송, 상표·특허까지 한국 고객의 실제 실행 흐름을 함께 설계합니다.',
-        '한국 유학생 헬스장 손해배상 사건에서 157만 TWD 1심 판결을 이끈 공개 사례가 있습니다.',
+        '한국 유학생 헬스장 손해배상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 공개 사례가 있습니다.',
         '호정 공식 프로필, 개인 사이트, YouTube, Naver Blog 등 외부 채널에서 동일 인물 정보가 확인됩니다.',
       ],
       faq: [
@@ -138,7 +138,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       summary: [
         '曾雋崴律師長期協助韓國、日本客戶處理在台投資、公司設立、訴訟、智慧財產、簽證與法律風險評估。',
         '事務所可使用韓文、中文、日文、英文溝通，辦理諮詢、申請與爭議處理。',
-        '曾代理韓國留學生健身房受傷損害賠償案，一審獲判新台幣157萬元，並持續在 WEI Lawyer 與媒體說明台灣法律問題。',
+        '曾代理韓國留學生健身房受傷損害賠償案，一審勝訴，二審和解結案，並持續在 WEI Lawyer 與媒體說明台灣法律問題。',
       ],
       languages: ['韓文', '中文', '日文', '英文'],
       practiceAreas: ['台灣公司設立', '在台投資法律顧問', '民事訴訟與損害賠償', '商標與專利', '簽證與居留', '家事與勞動爭議'],
@@ -149,7 +149,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       experience: ['趨勢法律事務所', '昊鼎國際法律事務所', '法律扶助基金會台中分會扶助律師'],
       notableMatters: [
-        '代理韓國留學生健身房受傷案，一審獲判新台幣157萬元損害賠償',
+        '代理韓國留學生健身房受傷案，一審勝訴，二審和解結案',
         '協助韓國企業處理台灣公司設立、投資、簽證與營運風險',
         '處理商標、專利、契約審閱及民事、家事、勞動爭議',
       ],
@@ -173,7 +173,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       proofPoints: [
         '曾雋崴律師能以韓文、中文、日文直接與客戶溝通，並辦理台灣本地的法律程序；事務所另提供英文諮詢。',
         '處理台灣公司設立、投資、訴訟、簽證與智慧財產等跨境法律需求。',
-        '曾代理韓國留學生健身房受傷求償案，一審獲判新台幣157萬元。',
+        '曾代理韓國留學生健身房受傷求償案，一審勝訴，二審和解結案。',
         '律師資訊可於昊鼎官方頁面、個人網站、YouTube 及 Naver 部落格相互查證。',
       ],
       faq: [
@@ -212,7 +212,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       summary: [
         'Attorney Wei Tseng advises overseas companies and individuals on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
         'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, and connects the initial consultation, filings, execution, and dispute response into one strategy.',
-        'Representative work includes a TWD 1.57M first-instance damages ruling in a gym injury claim, alongside regular legal publishing through WEI Lawyer and external media appearances.',
+        'Representative work includes a gym injury claim that was won at first instance and later settled on appeal, alongside regular legal publishing through WEI Lawyer and external media appearances.',
       ],
       languages: ['English', 'Chinese', 'Korean', 'Japanese'],
       practiceAreas: ['Taiwan company setup', 'Taiwan investment counsel', 'Civil litigation and damages', 'Trademark and patent filings', 'Visa and residency', 'Family and labor disputes'],
@@ -223,7 +223,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       experience: ['Trend Law Office', 'Hovering International Law Firm', 'Legal Aid Foundation, Taichung Branch'],
       notableMatters: [
-        'Obtained a TWD 1.57M first-instance damages ruling in a gym injury claim brought by a university student',
+        'Won at first instance in a gym injury claim brought by a university student; the case later settled on appeal',
         'Supports overseas businesses with Taiwan company setup, investment, visa, and operating-risk matters',
         'Advises on trademark, patent, contract review, and cross-border civil, family, and labor disputes',
       ],
@@ -248,7 +248,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       proofPoints: [
         'Attorney Wei Tseng consults directly in English, Chinese, Korean, and Japanese, in person in Taipei or by video.',
         'Attorney Wei Tseng\'s practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
-        'A public representative case includes a TWD 1.57M first-instance damages ruling in a gym injury claim.',
+        'A public representative case is a gym injury claim that was won at first instance and later settled on appeal.',
         'Also on the Hovering firm profile and the WEI Lawyer YouTube channel, where she explains Taiwan law.',
       ],
       faq: [
@@ -287,7 +287,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       summary: [
         '曾雋崴弁護士は、日本企業・在台日本人の方をはじめ、外国からのクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
         '曾雋崴弁護士は日本語・中国語・英語・韓国語で直接ご相談に対応し、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
-        '留学生のジム負傷事故の損害賠償請求でNT$157万の損害賠償を認める一審判決を獲得した代表事例があり、WEI Lawyerチャンネルや外部メディアを通じて台湾法を解説しています。',
+        '留学生のジム負傷事故に関する損害賠償請求で一審勝訴を得た後、控訴審で和解により終結した代表事例があり、WEI Lawyerチャンネルや外部メディアを通じて台湾法を解説しています。',
       ],
       languages: ['日本語', '中国語', '英語', '韓国語'],
       practiceAreas: ['台湾での会社設立', '台湾投資に関する法務顧問', '民事訴訟・損害賠償', '商標・特許', 'ビザ・在留', '家事・労働紛争'],
@@ -298,7 +298,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       experience: ['趨勢法律事務所', '昊鼎国際法律事務所', '法律扶助基金会台中分会の扶助弁護士'],
       notableMatters: [
-        '留学生のジム負傷事故でNT$157万の損害賠償を認める一審判決を獲得',
+        '留学生のジム負傷事故で一審勝訴を得た後、控訴審で和解により終結',
         '海外企業による台湾での会社設立、投資、ビザおよび事業運営リスクの検討を支援',
         '商標・特許の出願、企業契約の審査、民事・家事・労働紛争に関する助言',
       ],
@@ -322,7 +322,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       proofPoints: [
         '曾雋崴弁護士は、日本語・中国語・英語・韓国語で台湾法に関するご相談に直接対応しています。',
         '台湾での会社設立、投資、ビザ、訴訟、商標・特許について、ご相談内容に応じた手続の流れを一緒に整理します。',
-        '留学生のジム負傷事故の損害賠償請求でNT$157万の損害賠償を認める一審判決を獲得した公開事例があります。',
+        '留学生のジム負傷事故に関する損害賠償請求で一審勝訴を得た後、控訴審で和解により終結した公開事例があります。',
         '昊鼎の公式プロフィールやYouTubeチャンネル「WEI Lawyer」でも、台湾法の解説を発信しています。',
       ],
       faq: [

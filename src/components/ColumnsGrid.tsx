@@ -10,6 +10,14 @@ import {
   type GuidanceLocale4,
   type PublicLocale8,
 } from '@/lib/public-guidance';
+import {
+  COLUMN_TOPIC_LABELS,
+  COLUMN_TOPIC_SECTION_PREVIEW,
+  COLUMN_TOPIC_UI_COPY,
+  isColumnTopic,
+  resolveColumnTopic,
+  type ColumnTopic,
+} from '@/lib/column-topics';
 import styles from './ColumnsGrid.module.css';
 
 const searchCopy = {
@@ -85,6 +93,7 @@ export interface ColumnListItem {
   readTime: string;
   category: ColumnCategory;
   categoryLabel: string;
+  topic?: ColumnTopic;
   blogCategory?: string;
   authorName?: string;
   tags?: string[];
@@ -94,6 +103,7 @@ export interface ColumnListItem {
 
 export interface ColumnsGridFilters {
   category?: string;
+  topic?: string;
   author?: string;
   q?: string;
   year?: string;
@@ -502,6 +512,7 @@ export default function ColumnsGrid({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const requestedCategory = normalizeFilterValue(searchParams ? searchParams.get('category') : initialFilters.category);
+  const requestedTopic = normalizeFilterValue(searchParams ? searchParams.get('topic') : initialFilters.topic);
   const requestedAuthor = normalizeFilterValue(searchParams ? searchParams.get('author') : initialFilters.author);
   const requestedQuery = normalizeFilterValue(searchParams ? searchParams.get('q') : initialFilters.q);
   const requestedYear = normalizeFilterValue(searchParams ? searchParams.get('year') : initialFilters.year);
@@ -512,6 +523,13 @@ export default function ColumnsGrid({
   const [searchInput, setSearchInput] = useState(requestedQuery);
   const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
   const searchLabels = searchCopy[uiLocale];
+  // Core site locales group the index by topic; translated guidance locales
+  // group by the reviewed category labels they already carry.
+  const topicMode = isExistingSiteLocale4(locale);
+  const topicLabels = COLUMN_TOPIC_LABELS[uiLocale];
+  const topicCopy = COLUMN_TOPIC_UI_COPY[uiLocale];
+  const topicOf = (post: ColumnListItem): ColumnTopic => post.topic ?? resolveColumnTopic(post.slug, undefined, post.category);
+  const activeTopic: ColumnTopic | null = topicMode && isColumnTopic(requestedTopic) ? requestedTopic : null;
 
   useEffect(() => {
     setSearchInput(requestedQuery);
@@ -551,6 +569,7 @@ export default function ColumnsGrid({
           ? post.blogCategory === requestedCategory || post.category === requestedCategory
           : true;
         if (!categoryMatches) return false;
+        if (requestedTopic && topicMode && topicOf(post) !== requestedTopic) return false;
         if (requestedAuthor && post.authorName !== requestedAuthor) return false;
         if (requestedYear && !post.date.startsWith(requestedYear)) return false;
         if (requestedMonth) {
@@ -559,7 +578,8 @@ export default function ColumnsGrid({
         }
         return postMatchesQuery(post, appliedQuery);
       }),
-    [appliedQuery, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear],
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- topicOf is derived from props only
+    [appliedQuery, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear, requestedTopic, topicMode],
   );
 
   const cats: { id: ColumnCategory | 'all'; label: string }[] = [
@@ -570,12 +590,70 @@ export default function ColumnsGrid({
   ];
   const activeFilters = [
     { key: 'category', label: searchLabels.category, value: requestedCategory ? (active ? labels[active] : requestedCategory) : '' },
+    { key: 'topic', label: topicCopy.nav, value: requestedTopic && topicMode ? (activeTopic ? topicLabels[activeTopic] : requestedTopic) : '' },
     { key: 'author', label: searchLabels.author, value: requestedAuthor },
     { key: 'year', label: searchLabels.year, value: requestedYear },
     { key: 'month', label: searchLabels.month, value: requestedMonth },
     { key: 'query', label: searchLabels.query, value: appliedQuery },
   ].filter((filter) => filter.value);
   const hasActiveFilters = activeFilters.length > 0;
+
+  // Grouped view (no filter): every topic gets its own section so one busy
+  // topic can no longer push the rest of the archive below the fold.
+  const groups = useMemo(() => {
+    const order: string[] = [];
+    const buckets = new Map<string, ColumnListItem[]>();
+    for (const post of posts) {
+      const key = topicMode ? topicOf(post) : post.category;
+      if (!buckets.has(key)) {
+        buckets.set(key, []);
+        order.push(key);
+      }
+      buckets.get(key)!.push(post);
+    }
+    const canonical: string[] = topicMode
+      ? (Object.keys(topicLabels) as ColumnTopic[])
+      : ['formation', 'legal', 'case'];
+    return canonical.filter((key) => buckets.has(key)).map((key) => ({ key, posts: buckets.get(key)! }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- labels/topicOf derive from locale
+  }, [posts, topicMode, uiLocale]);
+  const groupLabel = (key: string): string =>
+    topicMode ? topicLabels[key as ColumnTopic] : labels[key as ColumnCategory];
+  const topicChips: { id: ColumnTopic | 'all'; label: string; count: number }[] = [
+    { id: 'all', label: labels.all, count: posts.length },
+    ...groups.map((group) => ({ id: group.key as ColumnTopic, label: topicLabels[group.key as ColumnTopic], count: group.posts.length })),
+  ];
+  const selectTopic = (topic: ColumnTopic | 'all', navigation: 'push' | 'replace' = 'replace') => {
+    updateUrlSearchParams((next) => {
+      if (topic === 'all') next.delete('topic');
+      else next.set('topic', topic);
+      next.delete('category');
+      next.delete('page');
+    }, navigation);
+  };
+  const renderCard = (post: ColumnListItem) => (
+    <Link key={post.slug} href={`/${locale}/columns/${post.slug}`} className="columns-card" data-column-topic={topicMode ? topicOf(post) : post.category}>
+      <div className="columns-card-img">
+        <Image src={post.featuredImage} alt={post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+        <div className="columns-card-image-overlay" />
+        <div className="columns-card-image-meta">
+          <span className="columns-category-badge columns-category-badge--image">{topicMode ? topicLabels[topicOf(post)] : post.categoryLabel}</span>
+          {post.dateDisplay ? <time className="columns-card-datechip">{post.dateDisplay}</time> : null}
+        </div>
+      </div>
+      <div className="columns-card-body">
+        <div className="columns-card-meta">
+          <span className="columns-card-byline">{post.authorName || byline}</span>
+          {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
+        </div>
+        <h3 className="columns-card-title">{post.title}</h3>
+        <p className="columns-card-summary">{post.summary}</p>
+        <span className="columns-card-linkhint">
+          {columnCardCtaLabel(locale)}
+        </span>
+      </div>
+    </Link>
+  );
 
   return (
     <section className={`section section--light ${styles.root}`}>
@@ -650,50 +728,74 @@ export default function ColumnsGrid({
             </Link>
           ) : null}
         </div>
-        <div className="columns-filters">
-          {cats.map((cat) => (
-            <button
-              key={cat.id}
-              type="button"
-              aria-pressed={active === cat.id}
-              onClick={() => {
-                updateUrlSearchParams((next) => {
-                  if (cat.id === 'all') next.delete('category');
-                  else next.set('category', cat.id);
-                  next.delete('page');
-                });
-              }}
-              className={`columns-filter-btn ${active === cat.id ? 'active' : ''}`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-        <div className="columns-grid" data-columns-visible-count={filtered.length}>
-          {filtered.map((post) => (
-            <Link key={post.slug} href={`/${locale}/columns/${post.slug}`} className="columns-card">
-              <div className="columns-card-img">
-                <Image src={post.featuredImage} alt={post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
-                <div className="columns-card-image-overlay" />
-                <div className="columns-card-image-meta">
-                  <span className="columns-category-badge columns-category-badge--image">{post.categoryLabel}</span>
-                  {post.dateDisplay ? <time className="columns-card-datechip">{post.dateDisplay}</time> : null}
-                </div>
-              </div>
-              <div className="columns-card-body">
-                <div className="columns-card-meta">
-                  <span className="columns-card-byline">{post.authorName || byline}</span>
-                  {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
-                </div>
-                <h3 className="columns-card-title">{post.title}</h3>
-                <p className="columns-card-summary">{post.summary}</p>
-                <span className="columns-card-linkhint">
-                  {columnCardCtaLabel(locale)}
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
+        {topicMode ? (
+          <nav className="columns-filters columns-topic-nav" aria-label={topicCopy.nav} data-columns-topic-nav="true">
+            {topicChips.map((chip) => (
+              <button
+                key={chip.id}
+                type="button"
+                aria-pressed={chip.id === 'all' ? !activeTopic && !requestedCategory : activeTopic === chip.id}
+                onClick={() => selectTopic(chip.id)}
+                className={`columns-filter-btn ${(chip.id === 'all' ? !activeTopic && !requestedCategory : activeTopic === chip.id) ? 'active' : ''}`}
+                data-columns-topic-chip={chip.id}
+              >
+                {chip.label}
+                <span className="columns-filter-count" aria-hidden="true">{chip.count}</span>
+              </button>
+            ))}
+          </nav>
+        ) : (
+          <div className="columns-filters">
+            {cats.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                aria-pressed={active === cat.id}
+                onClick={() => {
+                  updateUrlSearchParams((next) => {
+                    if (cat.id === 'all') next.delete('category');
+                    else next.set('category', cat.id);
+                    next.delete('page');
+                  });
+                }}
+                className={`columns-filter-btn ${active === cat.id ? 'active' : ''}`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        )}
+        {!hasActiveFilters && posts.length > 0 ? (
+          <div className="columns-topic-sections" data-columns-grouped="true" data-columns-visible-count={posts.length}>
+            {groups.map((group) => {
+              const preview = topicMode ? group.posts.slice(0, COLUMN_TOPIC_SECTION_PREVIEW) : group.posts;
+              const headingId = `columns-topic-${group.key}`;
+              return (
+                <section key={group.key} className="columns-topic-section" aria-labelledby={headingId} data-columns-topic-section={group.key}>
+                  <header className="columns-topic-header">
+                    <h2 id={headingId} className="columns-topic-title">{groupLabel(group.key)}</h2>
+                    {topicMode ? <span className="columns-topic-count">{topicCopy.count(group.posts.length)}</span> : null}
+                  </header>
+                  <div className="columns-grid">{preview.map(renderCard)}</div>
+                  {topicMode && group.posts.length > preview.length ? (
+                    <button
+                      type="button"
+                      className="columns-topic-more link-underline"
+                      onClick={() => selectTopic(group.key as ColumnTopic, 'push')}
+                      data-columns-topic-more={group.key}
+                    >
+                      {topicCopy.viewAll(groupLabel(group.key), group.posts.length)} →
+                    </button>
+                  ) : null}
+                </section>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="columns-grid" data-columns-visible-count={filtered.length}>
+            {filtered.map(renderCard)}
+          </div>
+        )}
         {filtered.length === 0 && (
           <p className="columns-empty">
             {hasActiveFilters ? searchLabels.noMatches : searchLabels.noPosts}

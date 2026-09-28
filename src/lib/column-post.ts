@@ -1,4 +1,5 @@
 import type { Locale, SiteLocale } from './locales';
+import type { ColumnTopic } from './column-topics';
 
 export type ColumnCategory = 'formation' | 'legal' | 'case';
 
@@ -17,6 +18,8 @@ export interface ColumnPost {
   readTime: string;
   category: ColumnCategory;
   categoryLabel: string;
+  /** Topic used to group the public column index (frontmatter `topic`, or legacy slug map). */
+  topic?: ColumnTopic;
   blogCategory?: string;
   authorName?: string;
   tags?: string[];

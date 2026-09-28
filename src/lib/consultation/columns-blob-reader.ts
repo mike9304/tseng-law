@@ -10,6 +10,7 @@ import {
 import { estimateColumnReadTimeLabel, listColumnBundles } from '@/lib/builder/columns/storage';
 import type { ColumnDocument } from '@/lib/builder/columns/types';
 import { filterPublicColumnPosts } from '@/lib/builder/columns/public-post-filter';
+import { resolveColumnTopic } from '@/lib/column-topics';
 
 /**
  * Blob-aware column reader that merges file-based legal columns
@@ -118,6 +119,7 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     readTime: doc.frontmatter?.readTime || estimateReadTime(content, doc.locale),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
+    topic: resolveColumnTopic(doc.slug, (doc.frontmatter as { topic?: unknown } | undefined)?.topic, category),
     blogCategory: doc.frontmatter?.blogCategory || legacyCategoryToBlogCategory(category),
     authorName: doc.frontmatter?.author?.name,
     tags: doc.frontmatter?.tags ?? [],
@@ -156,6 +158,7 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     readTime: doc.frontmatter.readTime || estimateReadTime(content, doc.locale),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
+    topic: resolveColumnTopic(doc.slug, (doc.frontmatter as { topic?: unknown }).topic, category),
     blogCategory: doc.frontmatter.blogCategory || legacyCategoryToBlogCategory(category),
     authorName: doc.frontmatter.author?.name,
     tags: doc.frontmatter.tags ?? [],

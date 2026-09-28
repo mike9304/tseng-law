@@ -11,6 +11,7 @@ import {
   type PublicLocale8,
 } from './public-guidance';
 import { insightsArchive } from '../data/insights-archive';
+import { resolveColumnTopic } from './column-topics';
 import {
   formatColumnPublicationDate,
   parseColumnPublicationDate,
@@ -417,6 +418,7 @@ export function getAllColumnPosts(
         readTime,
         category: cat,
         categoryLabel: categoryLabelFn(cat, locale),
+        topic: resolveColumnTopic(slug, data.topic, cat),
         blogCategory: cat === 'formation' ? 'company-formation' : 'general',
         tags: [],
         featuredImage,

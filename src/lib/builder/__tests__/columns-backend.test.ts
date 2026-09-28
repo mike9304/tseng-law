@@ -141,7 +141,8 @@ describe('builder column storage backend', () => {
           'taiwanese-spouse-divorce-from-abroad',
           'taiwanese-spouse-divorce-cross-border-parenting',
         ]);
-        expect(posts.slice(0, 3).every((post) => post.publicationDate === '2026-09-27')).toBe(true);
+        // Re-dated to 2026-09-28 after the Fable review (user decision 2026-09-28).
+        expect(posts.slice(0, 3).every((post) => post.publicationDate === '2026-09-28')).toBe(true);
         expect(posts[5]?.slug).toBe('taiwan-semiconductor-market-entry');
         expect(posts[5]?.publicationDate).toBe('2026-09-17');
         expect(posts[6]?.slug).toBe(

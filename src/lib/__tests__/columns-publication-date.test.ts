@@ -32,6 +32,20 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '023': '2026-09-27',
 };
 
+// Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
+// decision 2026-09-28); these locales derive the publication date from date_display.
+// The review's unchanged PASS files (ja 021-023) keep 2026-09-27.
+const REDATED_20260928: Record<string, readonly string[]> = {
+  ko: ['019', '020', '021', '022', '023'],
+  'zh-hant': ['019', '020', '021', '022', '023'],
+  en: ['019', '020', '021', '022', '023'],
+  ja: ['019', '020'],
+};
+
+function verifiedPublicationDate(locale: string, prefix: string): string {
+  return REDATED_20260928[locale]?.includes(prefix) ? '2026-09-28' : VERIFIED_PUBLICATION_DATES[prefix];
+}
+
 const CONTENT_DIR_BY_LOCALE = {
   ko: 'columns',
   'zh-hant': 'columns-zh',
@@ -130,7 +144,7 @@ describe('localized column publication ordering', () => {
       expect(files).toHaveLength(23);
       for (const file of files) {
         const prefix = file.slice(0, 3);
-        const verifiedDate = VERIFIED_PUBLICATION_DATES[prefix];
+        const verifiedDate = verifiedPublicationDate(locale, prefix);
         const { data } = matter(fs.readFileSync(path.join(contentDir, file), 'utf8'));
 
         expect(data.date_display, file).toBe(expectedDisplay(locale, verifiedDate));
@@ -146,9 +160,9 @@ describe('localized column publication ordering', () => {
   ] as const)('uses the verified publication date in %s', (locale, expectedDateDisplay) => {
     const posts = getAllColumnPosts(locale);
 
-    expect(posts.slice(0, 3).map((post) => post.publicationDate)).toEqual([
-      '2026-09-27', '2026-09-27', '2026-09-27',
-    ]);
+    expect(posts.slice(0, 3).map((post) => post.publicationDate)).toEqual(
+      ['019', '020', '021'].map((prefix) => verifiedPublicationDate(locale, prefix)),
+    );
     expect(posts[5]).toMatchObject({
       slug: SEMICONDUCTOR_SLUG,
       publicationDate: '2026-09-17',

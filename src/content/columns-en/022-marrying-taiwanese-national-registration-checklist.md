@@ -3,7 +3,7 @@ title: "Marrying a Taiwanese National: A U.S. Citizen's Registration Checklist"
 seoTitle: "Marrying a Taiwanese National: U.S. Guide"
 summary: "Planning a U.S.–Taiwan marriage? Plan where to marry, document verification, household registration and spouse visas before booking travel and appointments."
 lastmod: "2026-09-28"
-date_display: "September 27, 2026"
+date_display: "September 28, 2026"
 read_time: "5 min read"
 categories:
   - "Taiwan Legal Information"

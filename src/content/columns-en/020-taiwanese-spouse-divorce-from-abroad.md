@@ -3,7 +3,7 @@ title: "Living abroad while your Taiwanese spouse is in Taiwan: preparing for a 
 seoTitle: "Taiwan Divorce: Preparing from Abroad"
 summary: "Prepare for a Taiwan divorce consultation from abroad: organize consent, address details, existing proceedings and documents, then check service and attendance."
 lastmod: "2026-09-28"
-date_display: "September 27, 2026"
+date_display: "September 28, 2026"
 read_time: "4 min read"
 categories:
   - "Taiwan Legal Information"

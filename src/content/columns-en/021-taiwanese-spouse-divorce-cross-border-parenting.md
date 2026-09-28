@@ -3,7 +3,7 @@ title: "Divorce from a Taiwanese spouse: planning your child’s life across two
 seoTitle: "Taiwan Divorce: Cross-Border Parenting"
 summary: "Plan a child’s life across two countries after divorce from a Taiwanese spouse: check authority and orders, then prepare care, contact and child expense plans."
 lastmod: "2026-09-28"
-date_display: "September 27, 2026"
+date_display: "September 28, 2026"
 read_time: "4 min read"
 categories:
   - "Taiwan Legal Information"

@@ -14,6 +14,12 @@ const UNCHANGED_PASS = new Set([
   'fil/marrying-taiwanese-national-registration-checklist',
 ]);
 
+// Revised columns in locales without a separate `published` field were re-dated to
+// 2026-09-28 (user decision 2026-09-28); locales with `published` keep 2026-09-27.
+const REDATED_PUBLICATION = new Set([
+  ...['ko', 'en', 'zh-hant'].flatMap((locale) => slugs.map((slug) => `${locale}/${slug}`)),
+]);
+
 describe('native marriage and birth columns September 2026', () => {
   it.each(locales)('loads two dated, independently authored articles with FAQ and contact in %s', (locale) => {
     const posts = getAllColumnPosts(locale);
@@ -21,7 +27,7 @@ describe('native marriage and birth columns September 2026', () => {
     for (const slug of slugs) {
       const post = getColumnPost(slug, locale);
       expect(post, `${locale}/${slug}`).toBeDefined();
-      expect(post?.publicationDate).toBe('2026-09-27');
+      expect(post?.publicationDate).toBe(REDATED_PUBLICATION.has(`${locale}/${slug}`) ? '2026-09-28' : '2026-09-27');
       expect(post?.dateDisplay).not.toBe('');
       expect(post?.content.length).toBeGreaterThan(800);
       expect(post?.faq?.length).toBeGreaterThanOrEqual(2);

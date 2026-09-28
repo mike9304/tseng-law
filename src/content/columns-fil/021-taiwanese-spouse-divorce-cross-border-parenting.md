@@ -10,14 +10,14 @@ categories:
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
 faq:
   - q: "Ako ang mag-isang nag-aalaga; puwede ko na bang dalhin ang anak sa Pilipinas?"
-    a: "Huwag itong ipagpalagay. Suriin ang kapangyarihang magpasya, kinakailangang pahintulot o utos, umiiral na limitasyon at mga kailangan sa destinasyon. Ang pagsang-ayon sa diborsiyo ay hindi awtomatikong pagpayag sa paglipat ng anak."
+    a: "Alamin muna kung sino ang may custody o parental authority, kung may kailangang pahintulot o utos ng hukuman, kung may umiiral na limitasyon sa paglalakbay at kung ano ang hinihingi ng bansang pupuntahan. Ang pagpayag ng asawa sa diborsiyo ay hindi pa pagpayag sa paglipat ng anak."
   - q: "Mas malaking kita ba ang awtomatikong batayan ng custody sa Taiwan?"
-    a: "Sa Article 1055-1, maraming salik ang isinasaalang-alang para sa pinakamabuting interes ng anak. Isa lamang ang pananalapi; kailangan ding suriin ang naaangkop na batas na naaangkop sa pamilyang may kaugnayan sa dalawang bansa."
+    a: "Sa Article 1055-1, maraming salik ang isinasaalang-alang para sa pinakamabuting interes ng anak. Isa lamang ang pananalapi; kailangan ding suriin kung aling batas ang naaangkop sa pamilyang may kaugnayan sa dalawang bansa."
 ---
 
 # Diborsiyo sa asawang Taiwanese: plano sa pag-aalaga ng anak sa dalawang bansa
 
-May pamilya sa Pilipinas na makatutulong sa pag-aalaga, pero paano ang paaralan, pagpapatingin sa doktor at pakikipagkita sa magulang na mananatili sa Taiwan? Ang paglipat ay pagbabago sa araw-araw na buhay ng anak. Bago pumili ng petsa, kailangan ding malaman kung sino ang may kapangyarihang magpasya sa tirahan niya at anong pahintulot o utos ang kailangan.
+May pamilya ka sa Pilipinas na handang tumulong sa pag-aalaga. Pero kailangan ding maplano ang paaralan, ang pagpapatingin sa doktor at ang pakikipagkita ng anak sa magulang na maiiwan sa Taiwan, dahil mababago ng paglipat ang araw-araw niyang buhay. Bago pumili ng petsa, alamin din kung sino ang may kapangyarihang magpasya sa tirahan niya (custody o parental authority) at anong pahintulot o utos ang kailangan.
 
 ## Sino ang makakasama ng anak pagkagaling sa klase?
 
@@ -25,13 +25,13 @@ Halimbawa lamang, handang tumulong ang lolo at lola ngunit nagtatrabaho pa sila 
 
 Ang kasalukuyang paghahatid sa paaralan, pagpapatingin sa doktor, paghahanda ng pagkain at pag-aalaga habang nagtatrabaho ang magulang ay nagpapakita kung anong pangangalaga at gawain ang dapat maipagpatuloy. Kung magbabago ang wika sa paaralan, maaaring mangailangan ang bata ng tulong sa pag-aaral. Kung may nagpapatuloy na paggamot, mahalaga ang paglipat ng medical records. Kung wala pang susundo sa bata o mag-aalaga habang nagtatrabaho ka, ilahad iyon upang makahanap ng maaasahang kaayusan. Kapag tinatanong ang bata tungkol sa nais niyang kaayusan, pakinggan ang sariling sagot niya. Huwag siyang turuang sumagot ayon sa gusto mo o piliting tumanggi sa pakikipagkita sa kabilang magulang; ang panganib sa kaligtasan ay tatalakayin nang hiwalay sa ibaba.
 
-Kung batas ng Taiwan ang naaangkop, tinatalakay ng Articles 1055 at 1055-1 ang karapatan at tungkulin sa menor de edad na anak, pakikipagkita at pinakamabuting interes niya. Isinasaalang-alang ang edad, kalusugan, kagustuhan at pag-unlad ng bata, kakayahan at saloobin ng mga magulang sa pag-aalaga, at ugnayang emosyonal. Ang kita o pagkakamali sa kasal ay hindi maaaring maging tanging batayan ng desisyon tungkol sa anak. [Opisyal na Civil Code](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print)
+Kung batas ng Taiwan ang naaangkop, tinatalakay ng Articles 1055 at 1055-1 ang karapatan at tungkulin sa menor de edad na anak, ang pakikipagkita (visitation) at ang pinakamabuting interes niya. Sa Article 1055-1, tinitingnan ng hukuman ang lahat ng kalagayan, kabilang ang edad, kasarian, bilang at kalusugan ng mga anak; ang kagustuhan ng bata at ang pangangailangan ng kanyang pag-unlad; ang edad, trabaho, pag-uugali, kalusugan, kakayahang pinansiyal at pamumuhay ng bawat magulang; ang kahandaan at saloobin ng magulang sa pag-aalaga at pagpapalaki; ang ugnayang emosyonal ng bata sa mga magulang at sa iba pang kasama niya sa bahay; kung hinahadlangan ng isang magulang ang kabilang magulang sa pagganap ng mga karapatan at tungkulin nito sa anak; at ang tradisyon, kultura at pagpapahalaga ng pangkat-etniko. Isa lamang sa mga salik ang kakayahang pinansiyal ng magulang; tinitingnan ng hukuman ang kabuuang kalagayan. Hindi rin awtomatikong napagpapasyahan ang usapin sa anak batay sa kung sino ang may kasalanan sa pagkasira ng pagsasama. Nasa [Civil Code ng Taiwan](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=3&lawNumber=1049&lsid=fl001351&media=print) ang teksto ng mga probisyong ito.
 
 ## Pangunahing tagapag-alaga at kapangyarihang maglipat
 
-Ang magulang na araw-araw na nag-aalaga ay hindi laging siya lamang ang may legal na kapangyarihang magpasya para sa anak. Kahit siya lamang ang may kapangyarihang magpasya at tungkuling mangalaga sa anak, kailangan pa ring alamin ang mga kondisyon ng paglipat sa ibang bansa. Maaaring may itinakda sa kasunduan o utos ng hukuman tungkol sa tirahan o paglalakbay. Mahalaga rin ang nasyonalidad, pasaporte, tirahan at paaralan ng anak, at kalagayan ng anumang kasong nagpapatuloy.
+Maaaring ikaw ang araw-araw na nag-aalaga sa anak, pero hindi ibig sabihin na ikaw lamang ang may legal na custody o parental authority. At kahit ikaw lamang ang may hawak nito, kailangan mo pa ring alamin ang mga kondisyon ng paglipat sa ibang bansa. Maaaring may itinakda sa kasunduan o utos ng hukuman tungkol sa tirahan o paglalakbay. Mahalaga rin ang nasyonalidad, pasaporte, tirahan at paaralan ng anak, at kalagayan ng anumang kasong nagpapatuloy.
 
-Dapat munang matukoy kung aling hukuman ang may kapangyarihang humawak ng usapin at kung aling batas ang naaangkop. Kung may kasunduan o desisyon, mahalaga kung may bisa ito at kung maaari itong ipatupad sa mga bansang sangkot. May paliwanag sa [diborsiyo Q&A](/fil/columns/taiwan-divorce-lawsuit-qna) at [pagsusuri sa batas pampamilya](/fil/columns/taiwan-inheritance-custody-analysis). Hangga’t hindi pa malinaw kaninong pahintulot ang kailangan at anong limitasyon ang umiiral, hindi makabubuting basta ilipat ang anak upang baguhin ang sitwasyon bago maresolba ang alitan. Kung may karahasan o agarang panganib, kaligtasan at mga hakbang sa proteksiyon ang dapat unang talakayin.
+Dapat munang matukoy kung aling hukuman ang may kapangyarihang humawak ng usapin at kung aling batas ang naaangkop. Kung may kasunduan o desisyon, mahalaga kung may bisa ito at kung maaari itong ipatupad sa mga bansang sangkot. May paliwanag sa [Q&A tungkol sa diborsiyo sa Taiwan](/fil/columns/taiwan-divorce-lawsuit-qna) at sa [gabay tungkol sa mana at karapatan sa anak](/fil/columns/taiwan-inheritance-custody-analysis). Hangga’t hindi pa malinaw kaninong pahintulot ang kailangan at anong limitasyon ang umiiral, huwag munang ilipat ang anak para lang mabago ang sitwasyon habang hindi pa naaayos ang alitan. Kung may karahasan o agarang panganib, kaligtasan at mga hakbang sa proteksiyon ang dapat unang talakayin.
 
 ## Pakikipagkita na kayang isagawa ng dalawang panig
 
@@ -46,7 +46,7 @@ Maaaring pag-usapan ang mga sumusunod, kasama ang mga puntong hindi pa napagkaka
 - Pagbabahagi ng impormasyon sa paaralan at kalusugan.
 - Mga pahintulot, utos o usaping legal na kailangan pang linawin.
 
-Bago lagdaan ang planong ito, mahalagang maunawaan kung alin sa mga pangako ang magiging obligasyong legal at paano maaaring hilingin ang pagtupad sa mga iyon. Maaaring mangailangan ng ibang paraan ng pakikipagkita kung may panganib sa kaligtasan. Ang pagpapatupad sa ibang bansa ay nakasalalay rin sa mga tuntunin ng pagkilala at pagpapatupad doon. Ang maayos na plano sa buhay ng anak ay hindi kapalit ng kinakailangang kapangyarihan o pahintulot sa paglipat.
+Bago lagdaan ang planong ito, alamin kung alin sa mga pangako ang magiging obligasyong legal at paano maipapatupad ang mga iyon. Kung may panganib sa kaligtasan, maaaring kailanganin ang ibang paraan ng pakikipagkita. Ang pagpapatupad sa ibang bansa ay nakasalalay rin sa mga tuntunin ng recognition at enforcement doon. At gaano man kaayos ang plano, kailangan pa rin ang legal na kapangyarihan o pahintulot para sa paglipat.
 
 ## Suporta sa anak at paghahati ng ari-arian
 
@@ -58,4 +58,4 @@ Kapag isinama ang suporta sa kabuuang halagang napagkasunduan sa paghahati ng ar
 
 Kung hindi pa malinaw kung sino ang maaaring magpasya sa paglipat, dalhin sa konsultasyon ang kasunduan o utos tungkol sa anak. Ipaliwanag kung saan siya titira at kailan siya aalis, upang maunawaan ng abogado ang mismong paglipat na nais mong gawin. Para sa mga tanong sa batas ng Taiwan, nasa ibaba ang contact ng Hovering International Law Firm.
 
-Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Tanggapan sa Taipei: 103 臺北市大同區承德路一段35號7樓之2. Abogadang responsable sa patalastas: 曾雋崴 (Wei Tseng).
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Tanggapan sa Taipei: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103). Abogadang responsable sa patalastas: 曾雋崴 (Wei Tseng).

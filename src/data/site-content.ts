@@ -421,8 +421,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '교통사고 손해배상',
-          amount: '290만 TWD',
-          summary: '교통사고 피해자가 290만 TWD 손해배상을 받은 사례.',
+          amount: '손해배상 확보',
+          summary: '교통사고 피해자가 손해배상을 받은 사례.',
           image: '/images/feature-2.svg',
           tag: '교통사고',
           href: '/ko/columns'
@@ -1186,8 +1186,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '交通事故求償',
-          amount: '新台幣290萬元',
-          summary: '交通事故被害人獲賠新台幣290萬元。',
+          amount: '取得損害賠償',
+          summary: '交通事故被害人取得損害賠償。',
           image: '/images/feature-2.svg',
           tag: '交通',
           href: '/zh-hant/columns'
@@ -1967,8 +1967,8 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: 'Traffic Accident Damages',
-          amount: 'TWD 2.9M',
-          summary: 'A traffic accident victim received TWD 2.9M in damages.',
+          amount: 'Damages recovered',
+          summary: 'A traffic accident victim recovered damages.',
           image: '/images/feature-2.svg',
           tag: 'Traffic',
           href: '/en/columns'
@@ -2748,8 +2748,8 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: '交通事故の損害賠償',
-          amount: '290万TWD',
-          summary: '交通事故の被害者がNT$290万の損害賠償を受けた事例。',
+          amount: '損害賠償を獲得',
+          summary: '交通事故の被害者が損害賠償を受けた事例。',
           image: '/images/feature-2.svg',
           tag: '交通事故',
           href: '/ja/columns'

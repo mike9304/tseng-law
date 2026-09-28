@@ -29,8 +29,8 @@ const expectedAchievements = {
     },
     {
       title: '교통사고 손해배상',
-      amount: '290만 TWD',
-      summary: '교통사고 피해자가 290만 TWD 손해배상을 받은 사례.',
+      amount: '손해배상 확보',
+      summary: '교통사고 피해자가 손해배상을 받은 사례.',
       tag: '교통사고',
     },
     {
@@ -67,8 +67,8 @@ const expectedAchievements = {
     },
     {
       title: '交通事故求償',
-      amount: '新台幣290萬元',
-      summary: '交通事故被害人獲賠新台幣290萬元。',
+      amount: '取得損害賠償',
+      summary: '交通事故被害人取得損害賠償。',
       tag: '交通',
     },
     {
@@ -105,8 +105,8 @@ const expectedAchievements = {
     },
     {
       title: 'Traffic Accident Damages',
-      amount: 'TWD 2.9M',
-      summary: 'A traffic accident victim received TWD 2.9M in damages.',
+      amount: 'Damages recovered',
+      summary: 'A traffic accident victim recovered damages.',
       tag: 'Traffic',
     },
     {
@@ -143,8 +143,8 @@ const expectedAchievements = {
     },
     {
       title: '交通事故の損害賠償',
-      amount: '290万TWD',
-      summary: '交通事故の被害者がNT$290万の損害賠償を受けた事例。',
+      amount: '損害賠償を獲得',
+      summary: '交通事故の被害者が損害賠償を受けた事例。',
       tag: '交通事故',
     },
     {
@@ -278,9 +278,12 @@ describe('homepage achievement factual claims', () => {
     }
   });
 
-  it.each(siteLocales)('maps TWD 2.9 million only to traffic-accident damages for %s', (locale) => {
+  it.each(siteLocales)('keeps the traffic-accident damages card without an award amount for %s', (locale) => {
     const card = siteContent[locale].achievements.items[3];
     const serializedCard = JSON.stringify(card).toLocaleLowerCase(locale);
+
+    // User decision 2026-09-28 (2A): no award amount on this card, only the description.
+    expect(serializedCard).not.toMatch(/290|2\.9|\d+\s*(?:만|萬|万|m\b|million)/i);
 
     expect(serializedCard).toContain(trafficTerms[locale].toLocaleLowerCase(locale));
     expect(serializedCard).not.toMatch(/의료과실|醫療過失|medical (?:malpractice|negligence)|医療過誤/i);

@@ -86,6 +86,7 @@ const forbiddenClaims = [
   /won on appeal|appeal (?:win|victory)/i,
   /控訴審[^。]*勝訴/,
   /157|1\.57|1,579,589/,
+  /승소율|勝訴率|勝率|win rate/i,
 ] as const;
 
 function expectNoForbiddenClaims(serialized: string) {

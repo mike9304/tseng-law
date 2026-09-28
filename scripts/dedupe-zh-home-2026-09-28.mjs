@@ -2,21 +2,31 @@
 /**
  * Remove the legacy static copy of every section from the published zh-hant home.
  *
- * The published zh-hant home carries each section twice: a decomposed static
- * tree (`home-<section>-root` and its descendants, from the July decomposition)
- * and the live composite (`home-<section>`, rendered from code). Both are flow
- * sections, so the page shows the hero title, the stats band and every other
- * section twice, and the stale static copy still has the old case amount and a
- * Korean mobile number as the contact button. The ko home already has only the
- * nine composites. User decision 2026-09-28 (5A): remove the duplicates and
- * republish; the composite contact block offers e-mail consultation.
+ * The published zh-hant home still carries the July decomposition: a static
+ * tree per section (`home-<section>-root` and its descendants) next to the live
+ * composite (`home-<section>`, rendered from code). The public renderer shows
+ * one of the two per section and viewport, so desktop visitors see the stale
+ * static copy (old case amount, a Korean mobile number as the contact button)
+ * while other widths see the composites. The ko/en homes are already in the
+ * "current9" shape: exactly the nine composites, nothing else. User decision
+ * 2026-09-28 (5A): clean up and republish; the composite contact block offers
+ * e-mail consultation.
+ *
+ * The kept composites are rebuilt in the exact current9 shape that
+ * matchCurrent9PublishedHomeEditorial() recognises (section order, zIndex,
+ * zh-hant heights and stage height, default style, no anchorName). Keeping
+ * them unchanged is not enough: their `mobile-parity-home-*` anchors are
+ * hidden on desktop once the July fingerprint no longer matches.
  *
  * Safety contract (same as patch-zh-hero-2026-07-21.mjs):
  * - dry-run is the default and performs no persistence write;
  * - the plan aborts unless the top level is exactly the composites of the ko
  *   home (same ids and component keys, zh-hant config) plus one
  *   `<composite-id>-root` container per composite, and nothing else;
- * - composites are kept unchanged; only the root trees are removed;
+ * - only the root trees are removed; the nine composites keep their ids and
+ *   component keys and are normalised to the current9 geometry;
+ * - --apply refuses to write unless matchCurrent9PublishedHomeEditorial()
+ *   accepts the validated document;
  * - --apply validates the schema, runs publish checks, writes a complete
  *   published-document backup, saves a guarded draft and calls publishPage.
  *
@@ -122,11 +132,67 @@ export function planZhHomeDedupe(zhDocument, koDocument, options = {}) {
     return fail('nodes outside the root trees would remain; refusing a partial dedupe.');
   }
 
-  const document = structuredClone(zhDocument);
-  document.nodes = structuredClone(kept);
-  document.updatedAt = now;
-  document.updatedBy = SCRIPT_UPDATED_BY;
-  return { ok: true, document, removed, keptIds: kept.map((node) => node.id) };
+  // Rebuild the composites in the current9 published shape (see file header).
+  const layout = options.layout;
+  if (!layout) return fail('current9 layout (section ids, heights, stage height, style) is required.');
+  const byId = new Map(zhComposites.map((node) => [node.id, node]));
+  if (!isDeepStrictEqual([...byId.keys()].sort(), [...layout.sectionIds].sort())) {
+    return fail(`zh-hant composites are not the nine current9 sections: ${[...byId.keys()].join(', ')}`);
+  }
+  let y = 0;
+  const rebuilt = layout.sectionIds.map((id, index) => {
+    const height = layout.heights[id];
+    const node = {
+      id,
+      kind: 'composite',
+      rect: { x: 0, y, width: layout.stageWidth, height },
+      style: structuredClone(layout.style),
+      zIndex: index,
+      rotation: 0,
+      locked: false,
+      visible: true,
+      content: { componentKey: byId.get(id).content.componentKey, config: { locale: TARGET_LOCALE } },
+    };
+    y += height;
+    return node;
+  });
+  if (y !== layout.stageHeight) {
+    return fail(`current9 section heights sum to ${y}, expected stage height ${layout.stageHeight}.`);
+  }
+
+  const document = {
+    version: zhDocument.version,
+    locale: TARGET_LOCALE,
+    updatedAt: now,
+    updatedBy: SCRIPT_UPDATED_BY,
+    stageWidth: layout.stageWidth,
+    stageHeight: layout.stageHeight,
+    nodes: rebuilt,
+  };
+  return { ok: true, document, removed, keptIds: rebuilt.map((node) => node.id) };
+}
+
+/** current9 layout for zh-hant, read from the same modules the public renderer uses. */
+export function current9LayoutFrom(parity, createDefaultCanvasNodeStyle) {
+  const keyById = {
+    'home-hero': 'hero',
+    'home-insights': 'insights',
+    'home-services': 'services',
+    'home-attorney': 'attorney',
+    'home-case-results': 'caseResults',
+    'home-stats': 'stats',
+    'home-faq': 'faq',
+    'home-offices': 'offices',
+    'home-contact': 'contact',
+  };
+  const localeHeights = parity.PUBLISHED_HOME_COMPOSITE_HEIGHTS_BY_LOCALE[TARGET_LOCALE];
+  return {
+    sectionIds: [...parity.HOME_COMPOSITE_SECTION_IDS],
+    heights: Object.fromEntries(parity.HOME_COMPOSITE_SECTION_IDS.map((id) => [id, localeHeights[keyById[id]]])),
+    stageWidth: 1280,
+    stageHeight: parity.PUBLISHED_HOME_COMPOSITE_STAGE_HEIGHT_BY_LOCALE[TARGET_LOCALE],
+    style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
+  };
 }
 
 function validatePatchedDocument(document, schemas) {
@@ -153,9 +219,9 @@ export function formatDedupePlan(plan, mode = 'dry-run') {
   }
   for (const entry of plan.removed) {
     lines.push(`- remove ${entry.rootId} (${entry.nodeCount} nodes)`);
-    for (const text of entry.flagged) lines.push(`    removes: ${JSON.stringify(text).slice(0, 160)}`);
+    for (const text of entry.flagged) lines.push(`    notable text removed: ${JSON.stringify(text).slice(0, 160)}`);
   }
-  lines.push(`keep ${plan.keptIds.length} composites: ${plan.keptIds.join(', ')}`);
+  lines.push(`keep ${plan.keptIds.length} composites, rebuilt in the current9 shape (stage height ${plan.document.stageHeight}): ${plan.keptIds.join(', ')}`);
   if (mode !== 'apply') lines.push('Dry-run complete; no persistence write was attempted.');
   return lines.join('\n');
 }
@@ -205,7 +271,11 @@ async function loadRuntimeDependencies() {
   const publishedCanvas = await import('../src/lib/builder/site/published-canvas.ts');
   const publish = await import('../src/lib/builder/site/publish.ts');
   const schemas = await import('../src/lib/builder/canvas/types.ts');
+  const parity = await import('../src/lib/builder/canvas/home-composite-parity.ts');
+  const editorial = await import('../src/lib/builder/site/published-home-editorial.ts');
   return {
+    current9Layout: current9LayoutFrom(parity, schemas.createDefaultCanvasNodeStyle),
+    matchCurrent9PublishedHomeEditorial: editorial.matchCurrent9PublishedHomeEditorial,
     ...persistence,
     ...publishedCanvas,
     publishPageThroughPipeline: publish.publishPage,
@@ -228,12 +298,16 @@ export async function runZhHomeDedupe(options, deps, io = {}) {
   if (!zhDocument) throw new Error('Published zh-hant home canvas was not found.');
   if (!koDocument) throw new Error('Published ko home canvas was not found.');
 
-  const plan = planZhHomeDedupe(zhDocument, koDocument);
+  const plan = planZhHomeDedupe(zhDocument, koDocument, { layout: deps.current9Layout });
   stdout.write(`${formatDedupePlan(plan, options.apply ? 'apply' : 'dry-run')}\n`);
   if (!plan.ok) return { ok: false, applied: false, plan };
   const validated = validatePatchedDocument(plan.document, deps);
   if (!validated.ok) throw new Error(`${validated.error}: ${JSON.stringify(validated.issues)}`);
   stdout.write(`Schema validation: PASS (${validated.document.nodes.length} nodes)\n`);
+  if (!deps.matchCurrent9PublishedHomeEditorial({ document: validated.document, locale: TARGET_LOCALE, slugPath: '' })) {
+    throw new Error('The cleaned document is not recognised as a current9 home; refusing to publish.');
+  }
+  stdout.write('current9 match: PASS\n');
   if (!options.apply) return { ok: true, applied: false, plan };
 
   assertDraftCanBeReplaced(zhPage, zhDraftState, zhPublishedState);

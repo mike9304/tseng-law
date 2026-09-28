@@ -297,6 +297,8 @@ describe('homepage achievement factual claims', () => {
   });
 
   it.each(siteLocales)('excludes prohibited outcome framing from %s achievements', (locale) => {
+    // Checked before the approved phrases are stripped, so "1심 승소율" cannot hide as "율".
+    expect(JSON.stringify(siteContent[locale].achievements)).not.toMatch(/승소율|勝訴率|勝率|win rate/i);
     const serializedAchievements = approvedFirstInstanceWinPhrases[locale].reduce(
       (serialized, phrase) => serialized.split(phrase).join(''),
       JSON.stringify(siteContent[locale].achievements),

@@ -6,6 +6,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost, resolveColumnSummary } from '@/lib/columns';
 import { buildLocaleLlmsTxt } from '@/lib/llms-txt';
 import { buildArticleJsonLd, buildSeoMetadata } from '@/lib/seo';
+import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnFile } from './native-locale-columns';
 
 const AUTHORED_SUMMARY =
   'Foreign companies may enter Taiwan through a subsidiary, branch, or representative office. Company setup does not grant a work permit or ARC.';
@@ -117,7 +118,8 @@ describe('English column corpus summaries', () => {
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
 
   it('gives every EN column a 150–160 character authored summary without Korean-company framing or an ellipsis', () => {
-    expect(files).toHaveLength(31);
+    // 31 translated EN columns plus the English-only native columns (same rules apply).
+    expect(files).toHaveLength(31 + NATIVE_LOCALE_COLUMN_FILES.en.length);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
@@ -139,7 +141,7 @@ describe('English column corpus summaries', () => {
 
   it('reuses those summaries in EN meta description, Article JSON-LD, and llms.txt annotations', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts).toHaveLength(31);
+    expect(posts).toHaveLength(31 + NATIVE_LOCALE_COLUMN_FILES.en.length);
     const llms = buildLocaleLlmsTxt('en');
 
     for (const post of posts) {
@@ -184,7 +186,8 @@ describe('English column corpus summaries', () => {
       expect(names.length, relativeDir).toBeGreaterThan(0);
       for (const name of names) {
         const raw = fs.readFileSync(path.join(dir, name), 'utf8');
-        if (/^(019|020|021|022|023|024|025|026|027|028|029|030|031)-/.test(name)) {
+        // 019–031 (gap batch included) and the native single-locale columns (032–040) author their own summaries.
+        if (/^(019|020|021|022|023|024|025|026|027|028|029|030|031)-/.test(name) || isNativeLocaleColumnFile(name)) {
           expect(matter(raw).data.summary, `${relativeDir}/${name}`).toBeTruthy();
         } else {
           expect(raw, `${relativeDir}/${name}`).not.toMatch(/^summary\s*:/m);

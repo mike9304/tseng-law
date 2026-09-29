@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { collectColumnSitemapRecords } from '@/lib/column-locales';
+import { NATIVE_LOCALE_COLUMN_FILES, type NativeColumnLocale } from './native-locale-columns';
 
 const locales = ['ko', 'ja', 'en', 'vi', 'id', 'th', 'fil', 'zh-hant', 'zh-hans'] as const;
 const slugs = [
@@ -38,8 +39,13 @@ const GAP_COLUMN_COUNT = 8;
 
 describe('native divorce columns September 2026', () => {
   it.each(locales)('loads three dated, independently authored articles with FAQ and contact in %s', (locale) => {
+    // The gap columns (024-031, ko/ja/en/zh-hant) and the single-locale native columns
+    // (032-040) share the 2026-09-29 date, so equal-date source order puts them ahead.
     const posts = getAllColumnPosts(locale);
-    const offset = GAP_COLUMN_LOCALES.has(locale) ? GAP_COLUMN_COUNT : 0;
+    const nativeCount = locale in NATIVE_LOCALE_COLUMN_FILES
+      ? NATIVE_LOCALE_COLUMN_FILES[locale as NativeColumnLocale].length
+      : 0;
+    const offset = (GAP_COLUMN_LOCALES.has(locale) ? GAP_COLUMN_COUNT : 0) + nativeCount;
     expect(posts.slice(offset, offset + 3).map(post => post.slug)).toEqual(slugs);
     for (const slug of slugs) {
       const post = getColumnPost(slug, locale);

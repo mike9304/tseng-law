@@ -40,6 +40,9 @@
     { "locale": "zh-hant", "slug": "taiwan-foreign-spouse-residence" },
     { "locale": "zh-hant", "slug": "taiwan-permanent-residence-aprc" },
     { "locale": "zh-hant", "slug": "enforce-foreign-judgment-in-taiwan" },
-    { "locale": "zh-hant", "slug": "hire-taiwan-lawyer-from-abroad" }
+    { "locale": "zh-hant", "slug": "hire-taiwan-lawyer-from-abroad" },
+    { "locale": "en", "slug": "taiwan-exit-ban-foreigners" },
+    { "locale": "en", "slug": "taiwan-police-questioning-foreigner-rights" },
+    { "locale": "en", "slug": "foreign-professional-dismissed-taiwan" }
   ]
 }

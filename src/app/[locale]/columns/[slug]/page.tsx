@@ -100,6 +100,8 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
       type: 'article',
       noindex: false,
       alternateLocales: fileBackedColumnAlternateLocales(post.slug),
+      // Single-locale columns have no English twin for x-default.
+      xDefaultWithinCluster: true,
     });
   }
 
@@ -137,6 +139,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     type: 'article',
     noindex: false,
     alternateLocales: fileBackedColumnAlternateLocales(post.slug),
+    xDefaultWithinCluster: true,
   });
 }
 

@@ -19,6 +19,7 @@ import {
   absentOptionalColumnLocales,
   presentOptionalColumnLocales,
 } from '@/data/__tests__/column-alternate-expectations';
+import { NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 
 const sourceMocks = vi.hoisted(() => ({
   readAttorneyProfileSourceRecords: vi.fn<
@@ -56,6 +57,33 @@ describe('sitemap column lastModified', () => {
     sourceMocks.readServiceAreaSourceRecords.mockClear();
     sourceMocks.collectAllBuilderSitemapEntries.mockReset();
     sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
+  });
+
+  it('lists every native single-locale column under its own locale only', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const urls = new Set(entries.map((entry) => entry.url));
+
+    for (const [locale, files] of Object.entries(NATIVE_LOCALE_COLUMN_FILES)) {
+      for (const file of files) {
+        const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
+        // English-only columns have no Korean twin; they must not be mistaken
+        // for builder drafts and dropped as English-noindex.
+        expect(urls.has(`https://tseng-law.com/${locale}/columns/${slug}`), `${locale}/${slug}`).toBe(true);
+        for (const other of PUBLIC_LOCALES_8) {
+          if (other === locale) continue;
+          expect(urls.has(`https://tseng-law.com/${other}/columns/${slug}`), `${other}/${slug}`).toBe(false);
+        }
+        // x-default must name the page that exists, not a missing English twin.
+        const entry = entries.find((e) => e.url === `https://tseng-law.com/${locale}/columns/${slug}`);
+        expect(entry?.alternates?.languages?.['x-default'], `${locale}/${slug} x-default`).toBe(
+          `https://tseng-law.com/${locale}/columns/${slug}`,
+        );
+      }
+    }
+    // Columns that do have an English version keep English as x-default.
+    const shared = entries.find((e) => e.url === 'https://tseng-law.com/vi/columns/taiwan-divorce-lawsuit-qna');
+    expect(shared?.alternates?.languages?.['x-default']).toBe('https://tseng-law.com/en/columns/taiwan-divorce-lawsuit-qna');
   });
 
   it('uses each column frontmatter lastmod and preserves distinct dates', async () => {
@@ -141,10 +169,14 @@ describe('sitemap column lastModified', () => {
       // assertion tracks the growing corpus).
       // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
       // Public semiconductor guide board adds 4 more URLs.
+      // Native single-locale columns: EN ones are file-backed in columns-en and
+      // must stay indexable (no Korean twin); JA ones join the JA details.
       beforeFiltering:
-        445 + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
+        445 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+          + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
       afterFiltering:
-        436 + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
+        436 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+          + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
       removed: 9,
     });
 

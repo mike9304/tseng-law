@@ -126,4 +126,16 @@ describe('multilingual SEO language alternates', () => {
     expect(getLanguageAlternates('/store')).not.toHaveProperty('en');
     expect(getLanguageAlternates('/store')).not.toHaveProperty('vi');
   });
+
+  it('keeps x-default inside the cluster only when a caller opts in (single-locale columns)', () => {
+    expect(getLanguageAlternates('/columns/x', ['vi'], { xDefaultWithinCluster: true })).toEqual({
+      vi: 'https://tseng-law.com/vi/columns/x',
+      'x-default': 'https://tseng-law.com/vi/columns/x',
+    });
+    // English present: the usual English x-default is kept.
+    expect(getLanguageAlternates('/columns/x', ['ko', 'en', 'vi'], { xDefaultWithinCluster: true })['x-default'])
+      .toBe('https://tseng-law.com/en/columns/x');
+    // Without the option, the existing caller-subset behaviour is unchanged.
+    expect(getLanguageAlternates('/columns/x', ['vi'])['x-default']).toBe('https://tseng-law.com/en/columns/x');
+  });
 });

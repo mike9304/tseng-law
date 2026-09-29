@@ -166,7 +166,9 @@ function isFileBackedEnglishColumnPath(path: string): boolean {
   const match = path.match(/^\/columns\/([^/]+)$/);
   if (!match) return false;
   const rawSlug = match[1];
-  const known = new Set(getAllColumnPosts('ko').map((post) => post.slug));
+  // columns-en is the source of truth: English-only native columns have no
+  // Korean file but are full, indexable English articles.
+  const known = new Set(getAllColumnPosts('en').map((post) => post.slug));
   // Accept both real slugs and short aliases that resolve to file-backed posts.
   if (known.has(rawSlug) || known.has(resolveSlug(rawSlug))) return true;
   if (getAliasSlugs().includes(rawSlug) && known.has(resolveSlug(rawSlug))) return true;
@@ -254,6 +256,7 @@ function createEntry(
     priority?: number;
     alternateLocales?: readonly PublicLocale8[];
     lastmod?: SitemapLastmodResolver;
+    xDefaultWithinCluster?: boolean;
   }
 ): MetadataRoute.Sitemap[number] {
   const resolver = options?.lastmod ?? activeSitemapLastmod;
@@ -264,7 +267,9 @@ function createEntry(
     ...(lastModified == null ? {} : { lastModified }),
     priority: options?.priority ?? 0.8,
     alternates: {
-      languages: getLanguageAlternates(path, options?.alternateLocales ?? locales),
+      languages: getLanguageAlternates(path, options?.alternateLocales ?? locales, {
+        xDefaultWithinCluster: options?.xDefaultWithinCluster,
+      }),
     },
   };
 }
@@ -313,6 +318,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: record.lastModified || undefined,
         priority: 0.68,
         alternateLocales: record.alternateLocales,
+        // Single-locale columns have no English twin for x-default.
+        xDefaultWithinCluster: true,
       }),
     );
   }

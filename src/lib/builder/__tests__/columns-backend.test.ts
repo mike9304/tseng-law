@@ -4,6 +4,7 @@ import path from 'path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { estimateColumnReadTimeLabel, getColumnsStorageBackend } from '@/lib/builder/columns/storage';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
+import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug } from '@/lib/__tests__/native-locale-columns';
 
 describe('builder column storage backend', () => {
   afterEach(() => {
@@ -133,9 +134,13 @@ describe('builder column storage backend', () => {
         vi.stubEnv('CONSULTATION_LOG_BACKEND', '');
         vi.stubEnv('NODE_ENV', 'development');
 
-        const posts = await getAllColumnPostsIncludingBlob(locale);
+        const allPosts = await getAllColumnPostsIncludingBlob(locale);
+        const nativeCount = locale === 'en' ? NATIVE_LOCALE_COLUMN_FILES.en.length : 0;
 
-        expect(posts).toHaveLength(31);
+        expect(allPosts).toHaveLength(31 + nativeCount);
+        // English-only native columns (2026-09-29) follow the gap columns in source order.
+        expect(allPosts.slice(8, 8 + nativeCount).every((post) => isNativeLocaleColumnSlug(post.slug))).toBe(true);
+        const posts = allPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
         // The 2026-09-29 gap columns (024-031) lead the archive, in source order.
         expect(posts.slice(0, 8).map((post) => post.slug)).toEqual([
           'taiwan-income-tax-residency',

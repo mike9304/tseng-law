@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
+import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnFile, isNativeLocaleColumnSlug } from './native-locale-columns';
 
 const HANGUL = /[\uac00-\ud7af]/;
 const root = process.cwd();
@@ -32,15 +33,17 @@ const koFiles = fs
   .sort();
 
 describe('English full column corpus', () => {
-  it('has one EN file per KO file with identical filenames', () => {
+  it('has one EN file per KO file with identical filenames, plus the English-only native columns', () => {
     expect(fs.existsSync(enDir)).toBe(true);
     const enFiles = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
-    expect(enFiles).toEqual(koFiles);
+    expect(enFiles.filter((name) => !isNativeLocaleColumnFile(name))).toEqual(koFiles);
+    expect(enFiles.filter(isNativeLocaleColumnFile)).toEqual([...NATIVE_LOCALE_COLUMN_FILES.en]);
   });
 
-  it('loads 31 English posts with full bodies (not Overview stubs only)', () => {
+  it('loads 31 translated plus 3 native English posts with full bodies (not Overview stubs only)', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts).toHaveLength(31);
+    expect(posts.filter((post) => !isNativeLocaleColumnSlug(post.slug))).toHaveLength(31);
+    expect(posts).toHaveLength(31 + NATIVE_LOCALE_COLUMN_FILES.en.length);
 
     for (const post of posts) {
       expect(post.title.trim().length).toBeGreaterThan(8);

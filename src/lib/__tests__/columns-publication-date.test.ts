@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, sortColumnPostsNewestFirst, type ColumnPost } from '@/lib/columns';
+import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug } from './native-locale-columns';
 
 const COSMETICS_SLUG = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
 
@@ -38,6 +39,16 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '029': '2026-09-29',
   '030': '2026-09-29',
   '031': '2026-09-29',
+  // Native en/ja/vi columns (one locale each), published 2026-09-29.
+  '032': '2026-09-29',
+  '033': '2026-09-29',
+  '034': '2026-09-29',
+  '035': '2026-09-29',
+  '036': '2026-09-29',
+  '037': '2026-09-29',
+  '038': '2026-09-29',
+  '039': '2026-09-29',
+  '040': '2026-09-29',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
@@ -164,7 +175,11 @@ describe('localized column publication ordering', () => {
       const contentDir = path.join(process.cwd(), 'src', 'content', directory);
       const files = fs.readdirSync(contentDir).filter((file) => file.endsWith('.md'));
 
-      expect(files).toHaveLength(31);
+      const nativeCount =
+        locale in NATIVE_LOCALE_COLUMN_FILES
+          ? NATIVE_LOCALE_COLUMN_FILES[locale as keyof typeof NATIVE_LOCALE_COLUMN_FILES].length
+          : 0;
+      expect(files).toHaveLength(31 + nativeCount);
       for (const file of files) {
         const prefix = file.slice(0, 3);
         const verifiedDate = verifiedPublicationDate(locale, prefix);
@@ -181,7 +196,13 @@ describe('localized column publication ordering', () => {
     ['en', 'September 17, 2026'],
     ['ja', '2026年9月17日'],
   ] as const)('uses the verified publication date in %s', (locale, expectedDateDisplay) => {
-    const posts = getAllColumnPosts(locale);
+    const allPosts = getAllColumnPosts(locale);
+    // Native single-locale columns share the 2026-09-29 date with the gap columns (024-031),
+    // so equal-date source order places them right after that batch; the shared corpus follows.
+    const natives = allPosts.filter((post) => isNativeLocaleColumnSlug(post.slug));
+    expect(allPosts.slice(GAP, GAP + natives.length)).toEqual(natives);
+    expect(natives.every((post) => post.publicationDate === '2026-09-29')).toBe(true);
+    const posts = allPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
 
     expect(posts.slice(0, GAP).map((post) => post.publicationDate)).toEqual(
       ['024', '025', '026', '027', '028', '029', '030', '031'].map((prefix) =>

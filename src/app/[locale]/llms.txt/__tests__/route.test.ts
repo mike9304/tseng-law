@@ -12,6 +12,7 @@ import { GUIDANCE_LOCALES_4, PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
 import { getOrganizationName } from '@/lib/seo';
 import { GET, generateStaticParams } from '../route';
 import { UNROUTABLE_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
+import { NATIVE_LOCALE_COLUMN_FILES } from '@/lib/__tests__/native-locale-columns';
 
 const canonicalOrigin = 'https://tseng-law.com';
 const contentLanguage: Record<SiteLocale, string> = {
@@ -268,8 +269,10 @@ describe('guidance llms.txt lists the translated columns', () => {
     const columnUrls = [...body.matchAll(/https:\/\/tseng-law\.com\/[a-z-]+\/columns\/[^)\s]+/g)].map(
       (m) => m[0],
     );
-    expect(columnUrls.length).toBe(23);
-    expect(new Set(columnUrls).size).toBe(23);
+    // vi additionally publishes its three Vietnamese-only native columns (2026-09-29).
+    const expected = 23 + (locale === 'vi' ? NATIVE_LOCALE_COLUMN_FILES.vi.length : 0);
+    expect(columnUrls.length).toBe(expected);
+    expect(new Set(columnUrls).size).toBe(expected);
     // Every column URL must stay inside its own locale, not fall back to /en or /ko.
     for (const url of columnUrls) {
       expect(url.startsWith(`https://tseng-law.com/${locale}/columns/`)).toBe(true);

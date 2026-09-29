@@ -64,22 +64,23 @@ describe('decomposed home insights publication order', () => {
   );
 
   it.each([
-    ['ko', '2026년 2월 4일'],
-    ['zh-hant', '2026年2月4日'],
-    ['en', 'February 4, 2026'],
+    ['ko', 'taiwan-income-tax-residency'],
+    ['zh-hant', 'taiwan-income-tax-residency'],
+    // The English-only native columns (032-034) share the 2026-09-29 date and follow
+    // the gap columns in source order, so the gap batch still leads.
+    ['en', 'taiwan-income-tax-residency'],
   ] satisfies ReadonlyArray<readonly [Locale, string]>)(
     'keeps the newest gap-column article first for %s',
-    (locale, publicationDate) => {
+    (locale, newestSlug) => {
       const nodes = createInsightsDecomposedNodes(0, locale, 0);
       const nodesById = new Map(nodes.map((node) => [node.id, node]));
 
       // The September 29 batch (024-031) leads the feed by actual publication date;
       // the topic interleave starts from the newest post overall.
       expect(buttonHref(nodesById.get('home-insights-featured-link'))).toBe(
-        `/${locale}/columns/taiwan-income-tax-residency`,
+        `/${locale}/columns/${newestSlug}`,
       );
       expect(textNodeText(nodesById.get('home-insights-featured-date'))).not.toBe('');
-      void publicationDate;
     },
   );
 });

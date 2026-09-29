@@ -33,6 +33,8 @@ type SeoMetadataInput = {
   follow?: boolean;
   type?: 'website' | 'article';
   alternateLocales?: readonly PublicSeoLocale[];
+  /** See `LanguageAlternatesOptions.xDefaultWithinCluster`. */
+  xDefaultWithinCluster?: boolean;
 };
 
 type BreadcrumbItem = {
@@ -326,9 +328,20 @@ function seoPathToSlugPath(path = ''): string {
  * the ten published core paths; untranslated details, US landings, account,
  * store, and other real surfaces keep the caller-specified availability set.
  */
+type LanguageAlternatesOptions = {
+  /**
+   * Point x-default at a locale inside the cluster when the usual fallback
+   * locale has no version of this page. Single-locale columns (for example a
+   * Vietnamese-only article) have no English twin, so the default English
+   * x-default would name a 404.
+   */
+  xDefaultWithinCluster?: boolean;
+};
+
 export function getLanguageAlternates(
   path = '',
   alternateLocales: readonly PublicSeoLocale[] = siteLocales,
+  options: LanguageAlternatesOptions = {},
 ): Record<string, string> {
   const pageKey = guidancePageKeyFromSlugPath(seoPathToSlugPath(path));
   if (pageKey) {
@@ -350,9 +363,15 @@ export function getLanguageAlternates(
     ? alternateLocales.filter((locale) => getLocaleLanguageTag(locale).toLowerCase() !== 'en')
     : alternateLocales;
   const entries = effectiveLocales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
+  const preferredXDefault: PublicSeoLocale = englishNoindex ? defaultLocale : HREFLANG_X_DEFAULT_LOCALE;
+  const xDefaultLocale = options.xDefaultWithinCluster
+    && effectiveLocales.length > 0
+    && !effectiveLocales.includes(preferredXDefault)
+    ? effectiveLocales[0]
+    : preferredXDefault;
   return {
     ...Object.fromEntries(entries),
-    'x-default': buildAbsoluteUrl(getLocalizedPath(englishNoindex ? defaultLocale : HREFLANG_X_DEFAULT_LOCALE, path)),
+    'x-default': buildAbsoluteUrl(getLocalizedPath(xDefaultLocale, path)),
   };
 }
 
@@ -367,13 +386,14 @@ export function buildSeoMetadata({
   follow,
   type = 'website',
   alternateLocales = siteLocales,
+  xDefaultWithinCluster = false,
 }: SeoMetadataInput): Metadata {
   const chromeLocale = chromeSiteLocale(locale);
   const canonicalPath = getLocalizedPath(locale, path);
   const canonicalUrl = buildAbsoluteUrl(canonicalPath);
   const socialImages = normalizeImages(images);
   const pageTitle = stripOrganizationNameSuffix(title);
-  const languages = getLanguageAlternates(path, alternateLocales);
+  const languages = getLanguageAlternates(path, alternateLocales, { xDefaultWithinCluster });
   const shouldFollow = follow ?? !noindex;
 
   return {

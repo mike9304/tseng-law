@@ -11,6 +11,7 @@ import {
 import { getAllColumnPosts, getColumnPost, hasColumnTranslation } from '@/lib/columns';
 import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
 import { getLanguageAlternates } from '@/lib/seo';
+import { isNativeLocaleColumnSlug } from './native-locale-columns';
 
 const GYM_SLUG = 'taiwan-gym-injury-lawsuit';
 const GYM_FILENAME = '010-taiwan-gym-injury-lawsuit.md';
@@ -164,9 +165,11 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
     const koPosts = getAllColumnPosts('ko');
     const koOnlyGapSlugs = koPosts.filter((post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug));
     expect(koOnlyGapSlugs).toHaveLength(GAP_COLUMN_SLUGS_20260929.length);
-    expect(viPosts.length + koOnlyGapSlugs.length).toBe(koPosts.length);
+    // Vietnamese-only native columns have no Korean counterpart by design.
+    const translatedViPosts = viPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
+    expect(translatedViPosts.length + koOnlyGapSlugs.length).toBe(koPosts.length);
     expect(viPosts.some((post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug))).toBe(false);
-    for (const viPost of viPosts) {
+    for (const viPost of translatedViPosts) {
       const koPost = koPosts.find((post) => post.slug === viPost.slug);
       expect(koPost, `ko counterpart for ${viPost.slug}`).toBeDefined();
       expect(viPost.title, `${viPost.slug} title is not the Korean one`).not.toBe(koPost!.title);

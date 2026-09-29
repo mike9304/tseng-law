@@ -25733,14 +25733,15 @@ html[lang='zh-hant'],
   position: absolute;
   inset: 0;
   z-index: 1;
-  border-radius: inherit;
+  border-radius: 12px;
 }
 .card-stretched-link:focus-visible {
   outline: none;
 }
+/* Drawn inside the card: cards clip overflow, so an outer ring would be cut. */
 .card-stretched-link:focus-visible::after {
-  outline: 2px solid var(--wine, #7a2230);
-  outline-offset: 2px;
+  outline: 3px solid var(--wine, #7a2230);
+  outline-offset: -3px;
 }
 .insights-featured,
 .insights-list-item,
@@ -25788,7 +25789,7 @@ html[lang='zh-hant'],
 }
 .recommended-for-you-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1rem;
   list-style: none;
   margin: 0;
@@ -25841,10 +25842,13 @@ html[lang='zh-hant'],
   font-size: 0.78rem;
   color: var(--text-secondary, #6b7280);
 }
-@media (max-width: 860px) {
-  .recommended-for-you-grid {
-    grid-template-columns: 1fr;
-  }
+/* End of a column (narrow article body): a simple stacked list. */
+.recommended-for-you[data-recommended-for-you='column'] .recommended-for-you-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+.recommended-for-you[data-recommended-for-you='column'] .recommended-for-you-card {
+  min-height: 88px;
 }
 
 /* Locale suggestion (fixed, so it never shifts the layout) */

@@ -28,7 +28,7 @@ describe('Traditional Chinese full column corpus', () => {
   });
 
   it('loads all 18 Traditional Chinese posts', () => {
-    expect(getAllColumnPosts('zh-hant')).toHaveLength(23);
+    expect(getAllColumnPosts('zh-hant')).toHaveLength(31);
   });
 
   it('contains no Hangul in public Traditional Chinese column copy', () => {

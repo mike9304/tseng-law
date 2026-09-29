@@ -111,7 +111,7 @@ describe('builder column storage backend', () => {
       const posts = await getAllColumnPostsIncludingBlob('ko');
       const post = posts.find((item) => item.slug === 'taiwan-logistics-business-setup');
 
-      expect(posts[0]?.slug).toBe('taiwanese-spouse-divorce-agreement-registration');
+      expect(posts[0]?.slug).toBe('taiwan-income-tax-residency');
       expect(post?.dateDisplay).toBe('2025년 9월 13일');
       expect(post?.publicationDate).toBe('2025-09-13');
       expect(post?.readTime).toBe('9분 분량');
@@ -135,23 +135,35 @@ describe('builder column storage backend', () => {
 
         const posts = await getAllColumnPostsIncludingBlob(locale);
 
-        expect(posts).toHaveLength(23);
-        expect(posts.slice(0, 3).map((post) => post.slug)).toEqual([
+        expect(posts).toHaveLength(31);
+        // The 2026-09-29 gap columns (024-031) lead the archive, in source order.
+        expect(posts.slice(0, 8).map((post) => post.slug)).toEqual([
+          'taiwan-income-tax-residency',
+          'taiwan-estate-tax-foreign-decedent',
+          'foreign-heir-taiwan-succession-law-land',
+          'taiwan-employment-gold-card',
+          'taiwan-foreign-spouse-residence',
+          'taiwan-permanent-residence-aprc',
+          'enforce-foreign-judgment-in-taiwan',
+          'hire-taiwan-lawyer-from-abroad',
+        ]);
+        expect(posts.slice(0, 8).every((post) => post.publicationDate === '2026-09-29')).toBe(true);
+        expect(posts.slice(8, 11).map((post) => post.slug)).toEqual([
           'taiwanese-spouse-divorce-agreement-registration',
           'taiwanese-spouse-divorce-from-abroad',
           'taiwanese-spouse-divorce-cross-border-parenting',
         ]);
         // Re-dated to 2026-09-28 after the Fable review (user decision 2026-09-28).
-        expect(posts.slice(0, 3).every((post) => post.publicationDate === '2026-09-28')).toBe(true);
-        expect(posts[5]?.slug).toBe('taiwan-semiconductor-market-entry');
-        expect(posts[5]?.publicationDate).toBe('2026-09-17');
-        expect(posts[6]?.slug).toBe(
+        expect(posts.slice(8, 11).every((post) => post.publicationDate === '2026-09-28')).toBe(true);
+        expect(posts[13]?.slug).toBe('taiwan-semiconductor-market-entry');
+        expect(posts[13]?.publicationDate).toBe('2026-09-17');
+        expect(posts[14]?.slug).toBe(
           'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
         );
-        expect(posts[6]?.publicationDate).toBe('2026-02-04');
-        expect(posts[7]?.slug).toBe('taiwan-company-establishment-basics');
+        expect(posts[14]?.publicationDate).toBe('2026-02-04');
+        expect(posts[15]?.slug).toBe('taiwan-company-establishment-basics');
         expect(posts.at(-1)?.slug).toBe('taiwan-logistics-business-setup');
-        expect(posts.slice(7).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
+        expect(posts.slice(15).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
       } finally {
         await rm(root, { recursive: true, force: true });
       }

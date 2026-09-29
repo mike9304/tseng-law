@@ -31,10 +31,16 @@ const REDATED_PUBLICATION = new Set([
   'ja/taiwanese-spouse-divorce-from-abroad',
 ]);
 
+// The eight 2026-09-29 gap columns (024-031) sit ahead of these in the newest-first
+// archive of the four locales that received them.
+const GAP_COLUMN_LOCALES = new Set(['ko', 'ja', 'en', 'zh-hant']);
+const GAP_COLUMN_COUNT = 8;
+
 describe('native divorce columns September 2026', () => {
   it.each(locales)('loads three dated, independently authored articles with FAQ and contact in %s', (locale) => {
     const posts = getAllColumnPosts(locale);
-    expect(posts.slice(0, 3).map(post => post.slug)).toEqual(slugs);
+    const offset = GAP_COLUMN_LOCALES.has(locale) ? GAP_COLUMN_COUNT : 0;
+    expect(posts.slice(offset, offset + 3).map(post => post.slug)).toEqual(slugs);
     for (const slug of slugs) {
       const post = getColumnPost(slug, locale);
       expect(post, `${locale}/${slug}`).toBeDefined();

@@ -117,7 +117,7 @@ describe('English column corpus summaries', () => {
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
 
   it('gives every EN column a 150–160 character authored summary without Korean-company framing or an ellipsis', () => {
-    expect(files).toHaveLength(23);
+    expect(files).toHaveLength(31);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
@@ -139,7 +139,7 @@ describe('English column corpus summaries', () => {
 
   it('reuses those summaries in EN meta description, Article JSON-LD, and llms.txt annotations', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts).toHaveLength(23);
+    expect(posts).toHaveLength(31);
     const llms = buildLocaleLlmsTxt('en');
 
     for (const post of posts) {
@@ -184,7 +184,7 @@ describe('English column corpus summaries', () => {
       expect(names.length, relativeDir).toBeGreaterThan(0);
       for (const name of names) {
         const raw = fs.readFileSync(path.join(dir, name), 'utf8');
-        if (/^(019|020|021|022|023)-/.test(name)) {
+        if (/^(019|020|021|022|023|024|025|026|027|028|029|030|031)-/.test(name)) {
           expect(matter(raw).data.summary, `${relativeDir}/${name}`).toBeTruthy();
         } else {
           expect(raw, `${relativeDir}/${name}`).not.toMatch(/^summary\s*:/m);

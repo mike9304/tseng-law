@@ -15,6 +15,18 @@ import { getLanguageAlternates } from '@/lib/seo';
 const GYM_SLUG = 'taiwan-gym-injury-lawsuit';
 const GYM_FILENAME = '010-taiwan-gym-injury-lawsuit.md';
 
+// 2026-09-29 gap columns 024-031: authored for ko/en/ja/zh-hant only.
+const GAP_COLUMN_SLUGS_20260929 = [
+  'taiwan-income-tax-residency',
+  'taiwan-estate-tax-foreign-decedent',
+  'foreign-heir-taiwan-succession-law-land',
+  'taiwan-employment-gold-card',
+  'taiwan-foreign-spouse-residence',
+  'taiwan-permanent-residence-aprc',
+  'enforce-foreign-judgment-in-taiwan',
+  'hire-taiwan-lawyer-from-abroad',
+];
+
 const MINIMAL_VI_COLUMN = `---
 title: "Vụ kiện chấn thương phòng gym Đài Loan"
 lastmod: "2026-07-25"
@@ -147,8 +159,13 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
     // WO-O22 D: vi now has a file for every Korean slug, so "did not leak the
     // Korean corpus" can no longer be a count comparison. Assert the stronger
     // property instead: same slugs, but the body really is the vi file.
+    // The 2026-09-29 gap columns (024-031) ship only in ko/en/ja/zh-hant, so vi
+    // covers every Korean slug except those eight.
     const koPosts = getAllColumnPosts('ko');
-    expect(viPosts.length).toBe(koPosts.length);
+    const koOnlyGapSlugs = koPosts.filter((post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug));
+    expect(koOnlyGapSlugs).toHaveLength(GAP_COLUMN_SLUGS_20260929.length);
+    expect(viPosts.length + koOnlyGapSlugs.length).toBe(koPosts.length);
+    expect(viPosts.some((post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug))).toBe(false);
     for (const viPost of viPosts) {
       const koPost = koPosts.find((post) => post.slug === viPost.slug);
       expect(koPost, `ko counterpart for ${viPost.slug}`).toBeDefined();

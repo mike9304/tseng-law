@@ -30,6 +30,14 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '021': '2026-09-27',
   '022': '2026-09-27',
   '023': '2026-09-27',
+  '024': '2026-09-29',
+  '025': '2026-09-29',
+  '026': '2026-09-29',
+  '027': '2026-09-29',
+  '028': '2026-09-29',
+  '029': '2026-09-29',
+  '030': '2026-09-29',
+  '031': '2026-09-29',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
@@ -73,7 +81,21 @@ const NEW_DIVORCE_SLUGS = [
   'taiwanese-spouse-divorce-cross-border-parenting',
 ];
 
+// 2026-09-29 gap columns (024-031): newest in the archive, in source order.
+const GAP_COLUMN_SLUGS = [
+  'taiwan-income-tax-residency',
+  'taiwan-estate-tax-foreign-decedent',
+  'foreign-heir-taiwan-succession-law-land',
+  'taiwan-employment-gold-card',
+  'taiwan-foreign-spouse-residence',
+  'taiwan-permanent-residence-aprc',
+  'enforce-foreign-judgment-in-taiwan',
+  'hire-taiwan-lawyer-from-abroad',
+];
+const GAP = GAP_COLUMN_SLUGS.length;
+
 const EXPECTED_ARCHIVE_ORDER = [
+  ...GAP_COLUMN_SLUGS,
   ...NEW_DIVORCE_SLUGS,
   'marrying-taiwanese-national-registration-checklist',
   'baby-taiwan-nationality-birth-registration',
@@ -119,16 +141,17 @@ describe('Korean column publication dates', () => {
     const posts = getAllColumnPosts('ko');
 
     expect(posts.map((post) => post.slug)).toEqual(EXPECTED_ARCHIVE_ORDER);
-    expect(posts.slice(0, 3).map((post) => post.slug)).toEqual(NEW_DIVORCE_SLUGS);
-    expect(posts[5]?.slug).toBe(SEMICONDUCTOR_SLUG);
-    expect(posts[6]?.slug).toBe(COSMETICS_SLUG);
-    expect(posts.slice(7).every((post) => post.dateDisplay === '2025년 9월 13일')).toBe(true);
+    expect(posts.slice(0, GAP).map((post) => post.slug)).toEqual(GAP_COLUMN_SLUGS);
+    expect(posts.slice(GAP, GAP + 3).map((post) => post.slug)).toEqual(NEW_DIVORCE_SLUGS);
+    expect(posts[GAP + 5]?.slug).toBe(SEMICONDUCTOR_SLUG);
+    expect(posts[GAP + 6]?.slug).toBe(COSMETICS_SLUG);
+    expect(posts.slice(GAP + 7).every((post) => post.dateDisplay === '2025년 9월 13일')).toBe(true);
   });
 
   it('formats every Korean archive date as YYYY년 M월 D일', () => {
     const posts = getAllColumnPosts('ko');
 
-    expect(posts).toHaveLength(23);
+    expect(posts).toHaveLength(31);
     expect(posts.every((post) => /^\d{4}년 \d{1,2}월 \d{1,2}일$/.test(post.dateDisplay))).toBe(true);
   });
 });
@@ -141,7 +164,7 @@ describe('localized column publication ordering', () => {
       const contentDir = path.join(process.cwd(), 'src', 'content', directory);
       const files = fs.readdirSync(contentDir).filter((file) => file.endsWith('.md'));
 
-      expect(files).toHaveLength(23);
+      expect(files).toHaveLength(31);
       for (const file of files) {
         const prefix = file.slice(0, 3);
         const verifiedDate = verifiedPublicationDate(locale, prefix);
@@ -160,19 +183,24 @@ describe('localized column publication ordering', () => {
   ] as const)('uses the verified publication date in %s', (locale, expectedDateDisplay) => {
     const posts = getAllColumnPosts(locale);
 
-    expect(posts.slice(0, 3).map((post) => post.publicationDate)).toEqual(
+    expect(posts.slice(0, GAP).map((post) => post.publicationDate)).toEqual(
+      ['024', '025', '026', '027', '028', '029', '030', '031'].map((prefix) =>
+        verifiedPublicationDate(locale, prefix),
+      ),
+    );
+    expect(posts.slice(GAP, GAP + 3).map((post) => post.publicationDate)).toEqual(
       ['019', '020', '021'].map((prefix) => verifiedPublicationDate(locale, prefix)),
     );
-    expect(posts[5]).toMatchObject({
+    expect(posts[GAP + 5]).toMatchObject({
       slug: SEMICONDUCTOR_SLUG,
       publicationDate: '2026-09-17',
       dateDisplay: expectedDateDisplay,
     });
-    expect(posts[6]).toMatchObject({
+    expect(posts[GAP + 6]).toMatchObject({
       slug: COSMETICS_SLUG,
       publicationDate: '2026-02-04',
     });
-    expect(posts.slice(7).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
+    expect(posts.slice(GAP + 7).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
   });
 
   it('keeps input order for equal publication dates regardless of lastmod', () => {

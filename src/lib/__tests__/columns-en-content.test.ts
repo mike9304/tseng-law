@@ -38,9 +38,9 @@ describe('English full column corpus', () => {
     expect(enFiles).toEqual(koFiles);
   });
 
-  it('loads 23 English posts with full bodies (not Overview stubs only)', () => {
+  it('loads 31 English posts with full bodies (not Overview stubs only)', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts).toHaveLength(23);
+    expect(posts).toHaveLength(31);
 
     for (const post of posts) {
       expect(post.title.trim().length).toBeGreaterThan(8);

@@ -16,6 +16,8 @@ faq:
     a: "The estate-tax test looks at the two years before the death. A person with no domicile, who had a residence in Taiwan and stayed more than 365 days in those two years, can be habitually resident. A person engaged by the Taiwan government for a fixed period of stay is outside that 365-day limb. The test matters only if the deceased was a national of the Republic of China, or gave up that nationality within the two years before death (Article 3-1). The 183-day figure belongs to income tax, which is a different statute."
   - q: "Can the family transfer the Taipei flat before filing?"
     a: "Article 8 bars division of the estate, delivery of a legacy, and transfer registration until the estate tax is paid, unless the tax office has issued an exemption certificate, a certificate excluding the property, or advance consent to transfer. Article 42 requires a tax-payment certificate or one of the alternative certificates above before transfer registration."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # When Someone Who Lived Abroad Dies Holding Assets in Taiwan

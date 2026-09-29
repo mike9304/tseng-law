@@ -10,6 +10,7 @@ import MessengerChatSection from '@/components/MessengerChatSection';
 import PricingCards from '@/components/PricingCards';
 import ReviewBoard from '@/components/ReviewBoard';
 import ColumnsGrid, { type ColumnsGridFilters } from '@/components/ColumnsGrid';
+import { toColumnListItems } from '@/lib/column-list-items';
 import AttorneyMediaHubView from '@/components/AttorneyMediaHubView';
 import LegalPageSections from '@/components/LegalPageSections';
 import ServicesBento from '@/components/ServicesBento';
@@ -342,7 +343,7 @@ export function ColumnsLegacyPageBody({
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
       {showRepeater ? (
-        <ColumnsGrid locale={locale} posts={posts} initialFilters={toColumnGridFilters(searchParams)} />
+        <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} />
       ) : null}
     </>
   );

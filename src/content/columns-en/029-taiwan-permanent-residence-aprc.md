@@ -16,6 +16,8 @@ faq:
     a: "Under Article 25(1), the foreign spouse of a national with Taiwan household registration may qualify through either five continuous years of lawful residence with at least 183 days each year, or at least ten years of lawful residence including five years with at least 183 days each. A spouse does not necessarily have to wait ten years; confirm which route fits your case with the National Immigration Agency or an attorney. A spouse is exempt from the self-support requirement."
   - q: "Can I lose my APRC if I live abroad for long periods?"
     a: "Yes. Under Article 33, item 4, the APRC can be revoked if, over the most recent five years, you lived in Taiwan fewer than 183 days a year on average, unless the National Immigration Agency approved the absence for study, medical treatment or another special reason. For professionals, special professionals, senior professionals and qualifying family members covered by Article 21 of the Foreign Professionals Act, a separate rule applies: permanent residence may be revoked after five years or more abroad without re-entry."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # When Can You Apply for Permanent Residence (APRC) in Taiwan? General, Spouse and Professional Routes

@@ -101,6 +101,9 @@ export interface ColumnListItem {
   tags?: string[];
   featuredImage: string;
   summary: string;
+  publicationDate?: string;
+  audience?: string[];
+  aiAuthored?: boolean;
 }
 
 export interface ColumnsGridFilters {
@@ -653,7 +656,7 @@ export default function ColumnsGrid({
       </div>
       <div className="columns-card-body">
         <div className="columns-card-meta">
-          <span className="columns-card-byline">{isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : post.authorName || byline}</span>
+          <span className="columns-card-byline">{isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : post.authorName || byline}</span>
           {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
         </div>
         <h3 className="columns-card-title">{post.title}</h3>

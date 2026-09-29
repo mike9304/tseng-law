@@ -73,13 +73,16 @@ describe('Japanese column locale integrity', () => {
     expect(html).not.toContain('/en/lawyers/wei-tseng');
   });
 
-  it('links the Japanese reviewed-by byline to the Japanese attorney profile', () => {
+  it('shows the Japanese reviewed-by byline inside a card with a single column link', () => {
     const html = renderToStaticMarkup(
       <InsightsArchiveSection locale="ja" posts={[samplePost]} />,
     );
 
     expect(html).toContain('曾雋崴弁護士監修');
-    expect(html).toContain('href="/ja/lawyers/wei-tseng"');
+    // Whole-card link: the byline is text, so the card has no nested links.
+    const card = html.slice(html.indexOf('<article class="insights-featured"'), html.indexOf('</article>'));
+    expect(card.match(/<a /g)).toHaveLength(1);
+    expect(card).toContain('class="card-stretched-link" href="/ja/columns/');
     expect(html).not.toContain('/en/lawyers/wei-tseng');
     expect(html).not.toContain('Reviewed by Wei Tseng');
   });

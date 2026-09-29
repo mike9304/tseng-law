@@ -16,6 +16,8 @@ faq:
     a: "Không cần. Vợ chồng đang chung sống hay đã ly hôn đều là thành viên gia đình theo Luật Phòng chống bạo lực gia đình, và bạo lực ở đây gồm cả quấy rối, kiểm soát, đe dọa về tinh thần hoặc kinh tế, không chỉ gây thương tích. Giấy khám thương tích, tin nhắn hay hồ sơ báo công an giúp chứng minh, nhưng tòa chỉ cấp lệnh khi nhận định có bạo lực và thấy cần thiết."
   - q: "Đang chờ nhập tịch mà ly hôn thì hồ sơ có mất không?"
     a: "Hồ sơ nộp với tư cách vợ, chồng công dân Đài Loan dựa trên hôn nhân, nên khi ly hôn bạn cần một căn cứ khác theo Điều 4 Luật Quốc tịch, như ly hôn vì bạo lực gia đình mà chưa tái hôn, hoặc đang nuôi, thăm nom con có quốc tịch Đài Loan. Khi đó bạn còn phải chứng minh có tài sản hoặc kỹ năng đủ tự lập, điều mà người đang là vợ, chồng được miễn. Hãy báo ngay cho cơ quan hộ chính (戶政事務所) nơi bạn nộp để hỏi cần bổ sung hay nộp lại."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Ly hôn hoặc bị chồng Đài Loan đánh: tôi có phải về Việt Nam không?

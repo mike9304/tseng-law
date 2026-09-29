@@ -36,8 +36,16 @@ export const AI_AUTHORED_COLUMN_SLUGS: ReadonlySet<string> = new Set([
   'vietnamese-spouse-taiwan-residence-after-divorce-domestic-violence',
 ]);
 
-export function isAiAuthoredColumn(slug: string | undefined | null): boolean {
-  return Boolean(slug) && AI_AUTHORED_COLUMN_SLUGS.has(slug as string);
+/**
+ * True for AI-written columns: frontmatter `author: legal-ai-assistant`
+ * (posts carry `aiAuthored`), or a slug in the list above.
+ */
+export function isAiAuthoredColumn(
+  slugOrPost: string | { slug: string; aiAuthored?: boolean } | undefined | null,
+): boolean {
+  if (!slugOrPost) return false;
+  if (typeof slugOrPost === 'string') return AI_AUTHORED_COLUMN_SLUGS.has(slugOrPost);
+  return slugOrPost.aiAuthored === true || AI_AUTHORED_COLUMN_SLUGS.has(slugOrPost.slug);
 }
 
 export const LEGAL_AI_ASSISTANT_AVATAR = '/images/authors/legal-ai-assistant.webp';

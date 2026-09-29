@@ -17,6 +17,8 @@ faq:
     a: "Theo Điều 9 Quy định quản lý tài khoản tiền gửi nghi ngờ bất hợp pháp hoặc giao dịch bất thường, thời hạn cảnh báo tự hết hiệu lực sau hai năm, cơ quan đã thông báo có thể thông báo kéo dài một lần, tối đa một năm. Nếu bạn còn bị cảnh cáo theo Điều 22, các hạn chế ngân hàng khác kéo dài 5 năm kể từ ngày cảnh cáo."
   - q: "Người nước ngoài bị cảnh sát gọi lên làm việc có được yêu cầu phiên dịch và luật sư không?"
     a: "Có. Điều 99 Bộ luật Tố tụng hình sự quy định người không thông thạo ngôn ngữ phải được người phiên dịch dịch lại, và Điều 100-2 áp dụng quy định này cho cả lúc cảnh sát lấy lời khai. Người bị tình nghi cũng có quyền im lặng và có quyền chọn luật sư theo Điều 95 và Điều 27."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Cho mượn tài khoản ngân hàng ở Đài Loan: bị phong tỏa, cảnh sát gọi lên thì làm gì

@@ -16,6 +16,8 @@ faq:
     a: "The four-in-one card is issued to the applicant. A spouse, a minor child, and an adult child who cannot live independently because of a disability may apply for their own residence if they enter visa-free or on a visitor visa. Lineal ascendants use the visitor-visa rule in Article 20."
   - q: "Does holding the card halve my income tax?"
     a: "The salary concession is Article 22, plus the Ministry of Finance regulation. It applies only if separate conditions are met, including employment in the recognized work during the card's validity, a 183-day year, and salary above NT$3 million. It is not the test for receiving the card. Some official FAQ pages still name Article 20, which is the visitor-visa article."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # The Taiwan Employment Gold Card, Filed by the Applicant

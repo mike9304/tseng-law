@@ -16,6 +16,8 @@ faq:
     a: "Yes. Article 48(1)(2) of the Employment Service Act says no work permit is needed to employ a foreigner who is married to a national with household registration in Taiwan and has been granted residence."
   - q: "Do I have to leave Taiwan if we divorce?"
     a: "Not necessarily, but the default is that residence ends when its basis ends. Article 31(4) of the Immigration Act lists situations where the agency may let you stay, including the death of your spouse, a divorce caused by domestic violence where you have not remarried, and caring for or having contact with a minor child who has Taiwan household registration. The agency decides each case."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Residence in Taiwan as the Foreign Spouse of a Taiwanese National: From ARC to Divorce or Bereavement

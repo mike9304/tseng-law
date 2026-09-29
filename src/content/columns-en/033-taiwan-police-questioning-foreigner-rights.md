@@ -17,6 +17,8 @@ faq:
     a: "For an investigation-stage arrest, the prosecutor has to ask the court to detain you within 24 hours of the arrest or release you, though certain waiting times such as for a lawyer or an interpreter do not count. Detention itself is a separate court decision. What applies to you depends on the facts of your case."
   - q: "Can a criminal case affect my residence permit in Taiwan?"
     a: "It can. A court may order a foreigner sentenced to imprisonment to be deported after the sentence is served, and the National Immigration Agency has its own powers under the Immigration Act. A final sentence of one year or more, unless suspended or for a negligence offence, leads to revocation of a residence permit. Whether your status is at risk depends on the offence, the outcome and your permit type."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Summoned by Taiwan police or prosecutors as a foreigner: rights, the first 24 hours and bail

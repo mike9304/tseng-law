@@ -16,6 +16,8 @@ faq:
     a: "Hindi. Tingnan ang Report of Marriage ng MECO para sa kasal sa Taiwan na saklaw ng serbisyong iyon. Hiwalay ang pagpaparehistro sa Taiwan at pag-uulat sa panig ng Pilipinas."
   - q: "Sapat ba ang foreign divorce decree para sa lahat ng muling pagpapakasal ng Pilipino?"
     a: "Hindi dapat ipagpalagay. Sa mga kasong saklaw nito, hinihingi ng MECO ang pagkilala ng korte sa Pilipinas sa foreign divorce at kaugnay na rekord. Ipakumpirma ang sariling sitwasyon bago magplano ng bagong kasal."
+audience: ["fil"]
+author: "legal-ai-assistant"
 ---
 
 # Pagpapakasal sa Taiwanese: mga hakbang para sa Pilipino, mula dokumento hanggang pagpaparehistro

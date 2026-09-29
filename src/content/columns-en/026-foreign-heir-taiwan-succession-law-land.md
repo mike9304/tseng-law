@@ -16,6 +16,8 @@ faq:
     a: "Inheritance can pass land rights to a foreigner, but two limits apply. Under Article 18 of the Land Act, the heir's country must give Taiwan nationals the same right (reciprocity). If the land is one of the restricted types in Article 17, such as forest or fishery land, the heir must sell it to a Taiwan national within three years of completing the inheritance registration."
   - q: "Do we have to settle estate tax before registering the inheritance?"
     a: "Yes. Under Articles 8 and 42 of the Estate and Gift Tax Act, the land office will not register the transfer without proof that estate tax has been paid, or an exemption, exclusion or transfer-consent certificate. Article 119 of the Land Registration Rules also lists the estate tax certificate among the documents for inheritance registration."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Inheriting Taiwan Property as a Foreigner: Which Law Applies and How Land Is Registered

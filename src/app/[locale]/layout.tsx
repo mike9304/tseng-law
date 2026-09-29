@@ -12,6 +12,7 @@ import QuickContactWidget from '@/components/QuickContactWidget';
 import CinematicRouteShell from '@/components/CinematicRouteShell';
 import VisitTracker from '@/components/metrics/VisitTracker';
 import { PublicColumnSlugsProvider } from '@/components/PublicColumnSlugsContext';
+import LocaleSuggestion from '@/components/LocaleSuggestion';
 import { publicColumnSlugsByLocale } from '@/lib/columns';
 import {
   getLocaleFontClassName,
@@ -142,6 +143,7 @@ export default async function LocaleLayout(
         >
           {children}
         </CinematicRouteShell>
+        <LocaleSuggestion locale={publicLocale} />
       </PublicColumnSlugsProvider>
     );
   }
@@ -174,6 +176,7 @@ export default async function LocaleLayout(
         {children}
       </CinematicRouteShell>
       <VisitTracker locale={locale} />
+      <LocaleSuggestion locale={locale} />
     </PublicColumnSlugsProvider>
   );
 }

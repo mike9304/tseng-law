@@ -55,6 +55,9 @@ type InsightsSectionPost = {
   featuredImage: string;
   summary: string;
   topic?: ColumnPost['topic'];
+  publicationDate?: string;
+  audience?: string[];
+  aiAuthored?: boolean;
 };
 
 function resolveLocale(config: Record<string, unknown> | undefined): Locale {
@@ -100,6 +103,9 @@ function mapColumnPostsToInsightsPosts(posts: readonly ColumnPost[]): InsightsSe
     featuredImage: post.featuredImage,
     summary: post.summary,
     topic: post.topic,
+    publicationDate: post.publicationDate,
+    audience: post.audience,
+    aiAuthored: post.aiAuthored,
   }));
 }
 

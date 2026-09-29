@@ -13,6 +13,8 @@ faq:
     a: "No. Under Article 1050 of Taiwan's Civil Code, a divorce by agreement requires a written agreement signed by at least two witnesses, and it takes effect only once the divorce is registered at a household registration office. Whether Taiwan law governs your divorce, and what must be reported in your own country, are separate questions."
   - q: "Can I authorize someone to register the divorce while I am abroad?"
     a: "Only in limited cases. The Ministry of the Interior's guidance allows a spouse to appoint a representative in writing if there is good reason and the household registration office approves. Living overseas does not automatically qualify, so check the proposed arrangement with the office before signing."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Divorcing a Taiwanese spouse by agreement: what to check before signing

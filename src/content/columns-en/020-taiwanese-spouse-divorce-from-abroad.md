@@ -13,6 +13,8 @@ faq:
     a: "Not necessarily. Under Article 13 of Taiwan's Family Act, the court can order a party to appear in person even when a lawyer represents them. Tell your lawyer early where you live and whether travel would be difficult."
   - q: "Can a divorce proceed without checking my spouse’s address?"
     a: "Having grounds for divorce does not remove the need to serve your spouse lawfully, even if your messages go unanswered. Give your lawyer every address you know and when you last confirmed it."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Living abroad while your Taiwanese spouse is in Taiwan: preparing for a divorce consultation

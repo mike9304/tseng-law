@@ -29,6 +29,13 @@ export interface ColumnPost {
   /** Optional shorter title for <title>/og:title. Display/H1 title stays `title`. */
   seoTitle?: string;
   faq?: ColumnFaqItem[];
+  /**
+   * Who this locale file was written for (frontmatter `audience`): locale codes
+   * and/or `global`. Drives per-locale recommendations; see column-audience.ts.
+   */
+  audience?: string[];
+  /** Frontmatter `author: legal-ai-assistant` → written by AI, no attorney byline. */
+  aiAuthored?: boolean;
   /** Allowlisted body typography preset id (e.g. ko-body-readable). */
   typographyPresetId?: string;
   typography?: {

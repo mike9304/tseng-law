@@ -13,6 +13,8 @@ faq:
     a: "Para sa diborsiyo ayon sa kasunduan sa ilalim ng Article 1050 ng Civil Code ng Taiwan, kailangan ang nakasulat na kasunduan, pirma ng hindi bababa sa dalawang saksi at pagpaparehistro sa household registration office. Para sa Pilipino, kailangan pa ang judicial recognition ng korte sa Pilipinas bago makapagpakasal muli sa ilalim ng batas ng Pilipinas."
   - q: "Puwede bang may kumatawan sa akin kung nasa Pilipinas ako?"
     a: "Ayon sa gabay ng household registration authority ng Taiwan, puwede ang nakasulat na awtorisasyon kapag may makatuwirang dahilan at inaprubahan ito ng tanggapan. Kahit nasa ibang bansa ka, kailangan pa rin ang pag-aprubang iyon."
+audience: ["fil"]
+author: "legal-ai-assistant"
 ---
 
 # Napagkasunduang diborsiyo sa asawang Taiwanese: bago pumirma sa kasunduan

@@ -16,6 +16,8 @@ faq:
     a: "The bank account is not the test. Article 8(3) generally treats pay for work performed in Taiwan as Taiwan-source; its exception concerns a nonresident staying no more than 90 days in the tax year and receiving that pay from an employer outside Taiwan."
   - q: "Must I file before leaving Taiwan?"
     a: "It depends on your tax status, the type of income and when you leave. Article 73 requires a nonresident with income outside withholding to file before departure if leaving before the annual filing period begins. Article 71-1 separately addresses a resident who ends a Taiwan domicile or residence and departs during the year."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Taiwan Income Tax Residence When You Arrive or Leave Midyear

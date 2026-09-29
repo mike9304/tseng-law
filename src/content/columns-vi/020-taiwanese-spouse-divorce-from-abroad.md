@@ -13,6 +13,8 @@ faq:
     a: "Không thể bảo đảm. Điều 13 Luật về các vụ việc gia đình của Đài Loan cho phép tòa yêu cầu đương sự hoặc người đại diện theo pháp luật trực tiếp có mặt. Việc ủy quyền và việc có mặt cần kiểm tra riêng."
   - q: "Không biết địa chỉ hiện tại của người kia thì có thể bỏ qua việc tống đạt không?"
     a: "Không nên suy luận như vậy. Căn cứ ly hôn và việc tống đạt hợp lệ là hai vấn đề khác nhau. Bạn nên cung cấp các địa chỉ mình biết, kèm thời điểm gần nhất xác nhận địa chỉ đó còn đúng, để luật sư xem xét cách tống đạt phù hợp."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Ở Việt Nam, vợ hoặc chồng ở Đài Loan: chuẩn bị buổi tư vấn ly hôn đầu tiên

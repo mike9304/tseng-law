@@ -16,6 +16,8 @@ faq:
     a: "Không nên cho rằng dữ liệu được tự chuyển. Cần hỏi cơ quan hộ tịch Việt Nam về thủ tục ghi chú kết hôn đã được giải quyết ở nước ngoài, thay vì coi đó là một lần đăng ký kết hôn mới."
   - q: "Có thể miễn phỏng vấn nếu hai người đã có con không?"
     a: "Hướng dẫn BOCA có các trường hợp có thể được xem xét miễn, nhưng không phải cứ có con là tự động được miễn. Cơ quan đại diện kiểm tra điều kiện và chứng cứ của từng hồ sơ."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Kết hôn với người Đài Loan: đăng ký ở đâu, xác nhận giấy tờ và phỏng vấn thế nào?

@@ -13,6 +13,8 @@ faq:
     a: "Tidak ada jaminan. Pasal 13 Undang-Undang Perkara Keluarga Taiwan (家事事件法) memungkinkan pengadilan memerintahkan pihak untuk hadir sendiri. Kuasa kepada pengacara dan kewajiban hadir adalah dua hal yang dinilai terpisah."
   - q: "Pasangan tidak membalas pesan. Apakah prosedur penyampaian dokumen bisa dilewati?"
     a: "Tidak. Alasan perceraian dan penyampaian dokumen secara sah adalah dua persoalan berbeda. Berikan alamat yang Anda ketahui beserta kapan terakhir kali alamat itu dipastikan."
+audience: ["id"]
+author: "legal-ai-assistant"
 ---
 
 # Tinggal di Indonesia, pasangan di Taiwan: menyiapkan konsultasi perceraian

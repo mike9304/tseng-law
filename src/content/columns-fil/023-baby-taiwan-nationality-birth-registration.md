@@ -16,6 +16,8 @@ faq:
     a: "Ayon sa MECO, ang anak na may ama o inang Pilipino noong kapanganakan ay Pilipino. Kailangang maipakita ang nasyonalidad ng magulang at kaugnayan sa anak, at ayusin ang Report of Birth ayon sa naaangkop na sitwasyon."
   - q: "Ang Report of Birth ba ang lumilikha ng household registration sa Taiwan?"
     a: "Magkahiwalay na proseso ang pag-uulat sa MECO at ang pagpaparehistro sa Taiwan. Kung sa ibang bansa ipinanganak ang bata, alamin muna ang naaangkop na settlement route sa NIA bago ang initial household registration."
+audience: ["fil"]
+author: "legal-ai-assistant"
 ---
 
 # Anak ng Pilipino at Taiwanese: nasyonalidad, Report of Birth at household registration sa Taiwan

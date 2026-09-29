@@ -13,6 +13,8 @@ faq:
     a: "Not necessarily. Before relocating, check who holds decision-making authority, whether the other parent's consent or a court order is needed, any existing restrictions and the proposed destination. Agreeing to a divorce does not answer these questions."
   - q: "Does the higher-earning parent automatically receive custody in Taiwan?"
     a: "No. Article 1055-1 of the Civil Code requires the court to decide based on the child's best interests, weighing many factors. Financial circumstances are one of them, not a deciding rule. In an international case, which law applies must also be checked."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Divorce from a Taiwanese spouse: planning your child’s life across two countries

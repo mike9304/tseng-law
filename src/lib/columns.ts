@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { normalizeColumnAudience } from './column-audience';
 import path from 'path';
 import matter from 'gray-matter';
 import type { Locale, SiteLocale } from './locales';
@@ -403,6 +404,8 @@ function parseColumnPostsFromDir(locale: ColumnContentLocale, dir: string): Colu
     const fallbackSummary = resolveColumnSummary(data.summary, fixedContent);
     const fallbackSeoTitle = resolveColumnSeoTitle(data.seoTitle, fallbackTitle);
     const faq = normalizeColumnFaq(data.faq);
+    const audience = normalizeColumnAudience(data.audience);
+    const aiAuthored = String(data.author ?? '').trim().toLowerCase() === 'legal-ai-assistant';
 
     // When EN files live in columns-en/, frontmatter and body are already English.
     // Legacy fallback: if EN still resolves to KO directory (no columns-en), overlay
@@ -450,6 +453,8 @@ function parseColumnPostsFromDir(locale: ColumnContentLocale, dir: string): Colu
         summary,
         seoTitle,
         ...(faq.length ? { faq } : {}),
+        ...(audience.length ? { audience } : {}),
+        ...(aiAuthored ? { aiAuthored } : {}),
       },
     };
   });

@@ -13,6 +13,8 @@ faq:
     a: "Hindi iyon maipapangako. Pinapayagan ng Article 13 ng Family Act ng Taiwan ang hukuman na mag-utos ng personal na pagharap. Ang pagkakaroon ng kinatawan at sariling pagharap ay magkaibang usapin."
   - q: "Hindi sumasagot ang asawa; maaari bang laktawan ang paghahatid ng dokumento ng hukuman?"
     a: "Huwag itong ipagpalagay. Magkaiba ang batayan ng diborsiyo at ang wastong paghahatid ng dokumento. Ibigay ang mga alam na address at kailan huling natiyak ang mga ito."
+audience: ["fil"]
+author: "legal-ai-assistant"
 ---
 
 # Nasa Pilipinas ka, nasa Taiwan ang asawa: paghahanda sa konsultasyon sa diborsiyo

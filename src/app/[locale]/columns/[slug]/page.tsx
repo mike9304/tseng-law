@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import AiAuthorBox from '@/components/AiAuthorBox';
+import RecommendedForYou from '@/components/RecommendedForYou';
+import { prioritizeRecommendedColumns } from '@/lib/column-audience';
 import {
   AI_COLUMN_ATTORNEY_HEADING,
   buildAiAuthorJsonLd,
@@ -201,7 +203,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           : 'Attorney Wei Tseng';
   // AI-written columns: no attorney byline or review claim; the Legal AI
   // Assistant author box closes the article instead.
-  const aiAuthored = isAiAuthoredColumn(post.slug);
+  const aiAuthored = isAiAuthoredColumn(post);
   const aiAuthor = aiAuthored ? getAiAuthorCopy(urlLocale) : null;
   const attorneyHeading = aiAuthored
     ? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en
@@ -245,6 +247,24 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
               { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
               { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
             ];
+
+  // "Recommended for you" at the end: static order = same topic (newest
+  // first), then this locale's recommended columns, then the rest. The client
+  // may reorder by session interests (sessionStorage only).
+  const otherPosts = prioritizeRecommendedColumns(urlLocale, allPosts.filter((p) => p.slug !== post.slug));
+  const recommendedItems = [
+    ...otherPosts.filter((p) => p.topic && p.topic === post.topic),
+    ...otherPosts.filter((p) => !p.topic || p.topic !== post.topic),
+  ]
+    .slice(0, 15)
+    .map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      featuredImage: p.featuredImage,
+      topic: p.topic,
+      dateDisplay: p.dateDisplay || p.date,
+      readTime: p.readTime,
+    }));
 
   const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
   const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
@@ -366,6 +386,13 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
                 </section>
               ) : null}
               {aiAuthored ? <AiAuthorBox locale={urlLocale} /> : null}
+              <RecommendedForYou
+                locale={urlLocale}
+                hrefBase={`/${urlLocale}/columns`}
+                items={recommendedItems}
+                currentSlug={post.slug}
+                currentTopic={post.topic}
+              />
             </div>
             <aside className="blog-sidebar">
               <div className="blog-sidebar-card">

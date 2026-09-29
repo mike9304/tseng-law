@@ -16,6 +16,8 @@ faq:
     a: "Not automatically. Article 402 addresses a losing defendant who did not appear, but makes an exception where notice or an order starting the case was lawfully served in that country with adequate time, or served through judicial assistance under Taiwan law."
   - q: "Which Taiwan court hears the permission action?"
     a: "Under Article 4-1, it is the court of the debtor's domicile. If the debtor has no domicile in Taiwan, the court where the asset is located or enforcement is to take place has jurisdiction."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Enforcing a Foreign Judgment Against Assets in Taiwan

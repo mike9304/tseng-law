@@ -13,6 +13,8 @@ faq:
     a: "Jangan diasumsikan. Sebelum pindah, periksa hak asuh, persetujuan atau putusan yang diperlukan, pembatasan yang ada, dan persyaratan di negara tujuan. Kesepakatan bercerai tidak otomatis mencakup kepindahan anak."
   - q: "Apakah orang tua berpenghasilan tertinggi otomatis mendapat hak asuh di Taiwan?"
     a: "Tidak. Menurut Pasal 1055-1 KUH Perdata Taiwan, pengadilan menilai kepentingan terbaik anak dari berbagai faktor, dan penghasilan bukan satu-satunya penentu. Dalam perkara lintas negara, hukum yang berlaku juga harus dinilai."
+audience: ["id"]
+author: "legal-ai-assistant"
 ---
 
 # Bercerai dengan pasangan Taiwan: rencana pengasuhan anak di dua negara

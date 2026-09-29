@@ -6,7 +6,6 @@ import type { SiteLocale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';
-import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import {
   homeInsightsButtonSurfaceIds,
   homeInsightsImageSurfaceIds,
@@ -15,7 +14,8 @@ import {
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import { interleaveColumnsByTopic, type ColumnTopic } from '@/lib/column-topics';
-import { splitRecommendedColumns } from '@/lib/en-recommended-columns';
+import { splitRecommendedColumns } from '@/lib/column-audience';
+import RecommendedForYou from '@/components/RecommendedForYou';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import {
   INSIGHTS_IMAGE_FALLBACK,
@@ -32,6 +32,9 @@ interface ArchivePost {
   featuredImage: string;
   summary: string;
   topic?: ColumnTopic;
+  publicationDate?: string;
+  audience?: string[];
+  aiAuthored?: boolean;
 }
 
 export { INSIGHTS_IMAGE_FALLBACK, resolveInsightsImageSrc } from '@/components/insights-image';
@@ -149,6 +152,17 @@ const copyByLocale = {
   },
 } as const;
 
+function toRecommendedItem(post: ArchivePost) {
+  return {
+    slug: post.slug,
+    title: post.title,
+    featuredImage: post.featuredImage,
+    topic: post.topic,
+    dateDisplay: post.dateDisplay,
+    readTime: post.readTime,
+  };
+}
+
 export default function InsightsArchiveSection({
   locale,
   posts,
@@ -169,7 +183,6 @@ export default function InsightsArchiveSection({
         : locale === 'ja'
           ? '曾雋崴弁護士監修'
           : 'Reviewed by Wei Tseng';
-  const authorHref = getAttorneyProfilePath(locale);
   const protectInsightTitle = (title: string) => {
     if (presentation !== 'editorial') return title;
     const units = locale === 'ja' ? ['選択', '支店', '財産'] : locale === 'zh-hant' ? ['進口'] : [];
@@ -264,18 +277,20 @@ export default function InsightsArchiveSection({
                 </time>
                 {featured.readTime ? <span className="insights-readtime">{featured.readTime}</span> : null}
               </div>
-              {isAiAuthoredColumn(featured.slug) ? (
-                <span className="insights-byline">{getAiAuthorCopy(locale).label}</span>
-              ) : (
-                <SmartLink className="insights-byline" href={authorHref}>
-                  {authorLabel}
+              {/* Whole card opens the column: one stretched link on the title,
+                  no other interactive element inside the card. */}
+              <span className="insights-byline">
+                {isAiAuthoredColumn(featured) ? getAiAuthorCopy(locale).label : authorLabel}
+              </span>
+              <h3 className="insights-featured-title">
+                <SmartLink className="card-stretched-link" href={`/${locale}/columns/${featured.slug}`}>
+                  {protectInsightTitle(featured.title)}
                 </SmartLink>
-              )}
-              <h3 className="insights-featured-title">{protectInsightTitle(featured.title)}</h3>
+              </h3>
               <p className="insights-featured-summary">{featured.summary}</p>
-              <SmartLink className="link-underline" href={`/${locale}/columns/${featured.slug}`}>
+              <span className="link-underline insights-card-cta" aria-hidden="true">
                 {copy.readMore} →
-              </SmartLink>
+              </span>
             </div>
           </article>
           <div className="insights-list-wrap">
@@ -335,15 +350,11 @@ export default function InsightsArchiveSection({
                       </time>
                       {post.readTime ? <span className="insights-readtime">{post.readTime}</span> : null}
                     </div>
-                    {isAiAuthoredColumn(post.slug) ? (
-                      <span className="insights-byline">{getAiAuthorCopy(locale).label}</span>
-                    ) : (
-                      <SmartLink className="insights-byline" href={authorHref}>
-                        {authorLabel}
-                      </SmartLink>
-                    )}
+                    <span className="insights-byline">
+                      {isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : authorLabel}
+                    </span>
                     <h4 className="insights-list-title">
-                      <SmartLink className="link-underline" href={`/${locale}/columns/${post.slug}`}>
+                      <SmartLink className="card-stretched-link" href={`/${locale}/columns/${post.slug}`}>
                         {protectInsightTitle(post.title)}
                       </SmartLink>
                     </h4>
@@ -354,6 +365,13 @@ export default function InsightsArchiveSection({
             </div>
           </div>
         </div>
+        {/* Static fallback = the next recommended columns after the ones shown
+            above; the client may reorder by this session's interests. */}
+        <RecommendedForYou
+          locale={locale}
+          hrefBase={`/${locale}/columns`}
+          items={listItems.slice(pageSize).slice(0, 24).map(toRecommendedItem)}
+        />
         <div style={{ marginTop: '2rem', textAlign: 'center' }} data-builder-node-key="footer">
           <SmartLink
             className="button button--outline"

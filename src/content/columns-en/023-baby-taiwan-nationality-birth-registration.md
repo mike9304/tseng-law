@@ -15,6 +15,8 @@ faq:
     a: "No. U.S. rules for passing citizenship to a child born abroad depend on the parents' circumstances, including physical-presence and parentage requirements. Ask AIT which rule applies to your child and what evidence it needs."
   - q: "Does a U.S. birth certificate automatically create Taiwan household registration?"
     a: "No. A child born abroad may first need a settlement certificate from the National Immigration Agency and then initial household registration. Eligibility depends on the parent's household status, the child's documents and other conditions."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # A Baby in a U.S.–Taiwan Family: Citizenship, Birth Records and Taiwan Household Registration

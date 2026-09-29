@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { interleaveColumnsByTopic } from '@/lib/column-topics';
-import { splitRecommendedColumns } from '@/lib/en-recommended-columns';
+import { splitRecommendedColumns } from '@/lib/column-audience';
+import RecommendedForYou from '@/components/RecommendedForYou';
 import Link from 'next/link';
 
 import FAQAccordion from '@/components/FAQAccordion';
@@ -238,6 +239,14 @@ function GuidanceColumnArchive({
   const [featured, ...rest] = [...split.recommended, ...interleaveColumnsByTopic(split.rest)];
   if (!featured) return null;
   const listItems = rest.slice(0, 3);
+  const recommendedItems = rest.slice(3, 27).map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    featuredImage: resolveInsightsImageSrc(post.featuredImage),
+    topic: post.topic,
+    dateDisplay: post.dateDisplay || post.date,
+    readTime: post.readTime,
+  }));
   const columnHref = (slug: string) => `/${source.sourceLocale}/columns/${slug}`;
 
   return (
@@ -277,13 +286,17 @@ function GuidanceColumnArchive({
                 ) : null}
               </div>
               <span className="insights-byline">
-                {isAiAuthoredColumn(featured.slug) ? getAiAuthorCopy(locale).label : pack.home.columnsReviewLabel}
+                {isAiAuthoredColumn(featured) ? getAiAuthorCopy(locale).label : pack.home.columnsReviewLabel}
               </span>
-              <h3 className="insights-featured-title">{featured.title}</h3>
+              <h3 className="insights-featured-title">
+                <SmartLink className="card-stretched-link" href={columnHref(featured.slug)}>
+                  {featured.title}
+                </SmartLink>
+              </h3>
               <p className="insights-featured-summary">{featured.summary}</p>
-              <SmartLink className="link-underline" href={columnHref(featured.slug)}>
+              <span className="link-underline insights-card-cta" aria-hidden="true">
                 {pack.home.columnsReadMoreLabel} →
-              </SmartLink>
+              </span>
             </div>
           </article>
           <div className="insights-list-wrap">
@@ -313,10 +326,10 @@ function GuidanceColumnArchive({
                       <GuidanceColumnLanguageTag locale={locale} source={source} />
                     </div>
                     <span className="insights-byline">
-                      {isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : pack.home.columnsReviewLabel}
+                      {isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : pack.home.columnsReviewLabel}
                     </span>
                     <h4 className="insights-list-title">
-                      <SmartLink className="link-underline" href={columnHref(post.slug)}>
+                      <SmartLink className="card-stretched-link" href={columnHref(post.slug)}>
                         {post.title}
                       </SmartLink>
                     </h4>
@@ -327,6 +340,11 @@ function GuidanceColumnArchive({
             </div>
           </div>
         </div>
+        <RecommendedForYou
+          locale={locale}
+          hrefBase={`/${source.sourceLocale}/columns`}
+          items={recommendedItems}
+        />
         <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <SmartLink
             className="button button--outline"

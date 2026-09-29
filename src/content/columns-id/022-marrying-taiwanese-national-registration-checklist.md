@@ -16,6 +16,8 @@ faq:
     a: "Tidak. Pengecualian wawancara, legalisasi dokumen dan boleh tidaknya menikah langsung di Taiwan adalah tiga hal yang berbeda. Perwakilan Taiwan dan kantor penerima memeriksa syaratnya masing-masing."
   - q: "Apakah pencatatan perkawinan otomatis memberikan ARC?"
     a: "Tidak. Pencatatan perkawinan, visa tinggal dan izin tinggal diurus melalui proses yang berbeda. Periksa status masuk dan masa tinggal Anda saat ini serta status pencatatan kependudukan pasangan Taiwan."
+audience: ["id"]
+author: "legal-ai-assistant"
 ---
 
 # Menikah dengan warga Taiwan: urutan pencatatan, legalisasi dan wawancara bagi WNI

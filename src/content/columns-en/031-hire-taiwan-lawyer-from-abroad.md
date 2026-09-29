@@ -16,6 +16,8 @@ faq:
     a: "Under Article 68 of the Code of Civil Procedure, the litigation agent in a civil case must be a lawyer, unless the presiding judge permits someone who is not a lawyer. The judge may revoke that permission at any time. A power of attorney is filed at the agent's first step in the case, and a fresh appointment is made at each instance, unless the power of attorney states, for a specific case, that the appointment is not limited by instance and it has been notarized."
   - q: "If I have no address in Taiwan, who receives court papers?"
     a: "Article 133, paragraph 2 of the Code of Civil Procedure applies to a plaintiff, a petitioner, an appellant, or a person bringing an interlocutory appeal, who has no place of service in Taiwan. That person appoints a service agent with a place of service in Taiwan. The duty is not imposed on every party."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Instructing a Taiwan Lawyer From Outside Taiwan

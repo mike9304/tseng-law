@@ -17,6 +17,8 @@ faq:
     a: "A work permit is tied to the employer, and the Immigration Act requires the National Immigration Agency to revoke your residence when the reason for it ends. Some routes exist, including a six-month extension of residence and an exception while a labor dispute is in litigation, but timing matters. Contact the Agency's service station right away and get its answer in writing."
   - q: "Does an Employment Gold Card holder need a new work permit after losing a job?"
     a: "The Gold Card combines a work permit, residence visa, ARC and re-entry permit in one personal card, and the official Gold Card site describes it as allowing you to job-seek, take up work and change jobs. You still have the same labor-law rights against the employer that dismissed you."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Told your Taiwan job is ending? What foreign professionals should check in the first week

@@ -16,6 +16,8 @@ faq:
     a: "Tidak secara otomatis. Indonesia menerapkan kewarganegaraan ganda terbatas bagi kategori anak tertentu. Pernyataan memilih kewarganegaraan wajib disampaikan paling lambat tiga tahun setelah anak berusia 18 tahun atau sudah menikah."
   - q: "Apakah akta lahir Indonesia langsung membuat anak terdaftar dalam pencatatan kependudukan Taiwan (戶籍)?"
     a: "Tidak. Untuk anak yang lahir di luar Taiwan, NIA menentukan kategori permohonan yang berlaku. Jika memenuhi syarat, proses izin menetap (定居) dilanjutkan dengan pencatatan kependudukan pertama di kantor Taiwan."
+audience: ["id"]
+author: "legal-ai-assistant"
 ---
 
 # Bayi Indonesia–Taiwan: kewarganegaraan, akta kelahiran, dan pencatatan kependudukan Taiwan

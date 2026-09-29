@@ -13,6 +13,8 @@ faq:
     a: "Alamin muna kung sino ang may custody o parental authority, kung may kailangang pahintulot o utos ng hukuman, kung may umiiral na limitasyon sa paglalakbay at kung ano ang hinihingi ng bansang pupuntahan. Ang pagpayag ng asawa sa diborsiyo ay hindi pa pagpayag sa paglipat ng anak."
   - q: "Mas malaking kita ba ang awtomatikong batayan ng custody sa Taiwan?"
     a: "Sa Article 1055-1, maraming salik ang isinasaalang-alang para sa pinakamabuting interes ng anak. Isa lamang ang pananalapi; kailangan ding suriin kung aling batas ang naaangkop sa pamilyang may kaugnayan sa dalawang bansa."
+audience: ["fil"]
+author: "legal-ai-assistant"
 ---
 
 # Diborsiyo sa asawang Taiwanese: plano sa pag-aalaga ng anak sa dalawang bansa

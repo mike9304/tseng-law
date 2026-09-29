@@ -13,6 +13,8 @@ faq:
     a: "Untuk perceraian berdasarkan kesepakatan menurut Pasal 1050 KUH Perdata Taiwan, diperlukan dokumen tertulis, tanda tangan sedikitnya dua saksi, dan pencatatan perceraian di kantor administrasi kependudukan Taiwan (戶政事務所). Pada perkawinan lintas negara, hukum yang berlaku juga harus diperiksa."
   - q: "Bisakah pencatatan diwakilkan ketika saya di Indonesia?"
     a: "Panduan pencatatan perceraian Taiwan membolehkan kuasa tertulis jika ada alasan yang dapat dibenarkan dan kantor administrasi kependudukan menyetujuinya. Tinggal di luar Taiwan tidak otomatis menjamin persetujuan itu."
+audience: ["id"]
+author: "legal-ai-assistant"
 ---
 
 # Sepakat bercerai dengan pasangan Taiwan: periksa dokumen sebelum menandatangani

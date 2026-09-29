@@ -17,6 +17,8 @@ faq:
     a: "Yes, Article 24 of the Tax Collection Act allows it for people living in Taiwan and for the responsible persons of companies once tax and fines above set amounts are overdue and other conditions are met. Paying in full or providing acceptable security is one of the listed grounds for lifting the ban."
   - q: "How long can a criminal exit ban last?"
     a: "During an investigation a prosecutor can impose up to eight months, and the court can extend it twice, by four and then two months. At trial each order lasts up to eight months, with a total cap of five years for offenses punishable by up to ten years and ten years for more serious ones. Bring every document you have received so your lawyer can see which stage applies."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Exit ban in Taiwan: what a foreigner should do at the airport

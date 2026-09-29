@@ -15,6 +15,8 @@ faq:
     a: "No. A marriage validly concluded abroad must still be registered in Taiwan, using the documents and authentication the household registration office requires."
   - q: "Does Taiwan marriage registration give the American spouse an ARC?"
     a: "Not by itself. Marriage registration is separate from a resident visa and residence permit. Which visa and immigration route applies depends on your current status and your spouse's household registration."
+audience: ["en"]
+author: "legal-ai-assistant"
 ---
 
 # Marrying a Taiwanese National: A U.S. Citizen's Registration Checklist

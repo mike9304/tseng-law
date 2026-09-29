@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
+import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
@@ -190,7 +191,7 @@ export default async function ColumnsPage(
             name: copy.title,
             description: copy.description,
             items: posts.slice(0, 20).map((post) => ({
-              name: `${post.title} · ${isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : byline}`,
+              name: `${post.title} · ${isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : byline}`,
               path: `/${locale}/columns/${post.slug}`,
               description: post.summary,
             })),
@@ -202,7 +203,7 @@ export default async function ColumnsPage(
           title={copy.title}
           description={copy.description}
         />
-        <ColumnsGrid locale={locale} posts={posts} initialFilters={toColumnGridFilters(searchParams)} />
+        <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} />
         <div className="container">
           <OriginalLanguageColumnsSection locale={locale} remainingPosts={remainingPosts} />
         </div>
@@ -292,7 +293,7 @@ export default async function ColumnsPage(
               name: copy.title,
               description: copy.description,
               items: posts.slice(0, 20).map((post) => ({
-                name: `${post.title} · ${isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : byline}`,
+                name: `${post.title} · ${isAiAuthoredColumn(post) ? getAiAuthorCopy(locale).label : byline}`,
                 path: `/${locale}/columns/${post.slug}`,
                 description: post.summary,
               })),
@@ -303,7 +304,7 @@ export default async function ColumnsPage(
       {showHero ? (
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
-      {showRepeater ? <ColumnsGrid locale={locale} posts={posts} initialFilters={toColumnGridFilters(searchParams)} /> : null}
+      {showRepeater ? <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} /> : null}
       <EnAcquisitionGuideLinks locale={locale} />
     </>
   );

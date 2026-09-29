@@ -13,6 +13,8 @@ faq:
     a: "Thuận tình ly hôn theo Điều 1050 Bộ luật Dân sự Đài Loan cần văn bản, chữ ký của ít nhất hai người làm chứng và đăng ký tại cơ quan hộ chính. Trường hợp có yếu tố nước ngoài còn phải xác định pháp luật áp dụng."
   - q: "Ở Việt Nam thì có thể nhờ người khác đăng ký thay không?"
     a: "Hướng dẫn đăng ký ly hôn của cơ quan hộ chính Đài Loan cho phép ủy quyền bằng văn bản khi có lý do chính đáng và được cơ quan hộ chính chấp thuận. Việc bạn đang ở nước ngoài không có nghĩa là chắc chắn được chấp thuận."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Thuận tình ly hôn với vợ hoặc chồng Đài Loan: kiểm tra gì trước khi ký?

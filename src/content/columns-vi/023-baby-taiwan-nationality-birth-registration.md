@@ -16,6 +16,8 @@ faq:
     a: "Không nên kết luận như vậy cho mọi trường hợp có cha hoặc mẹ là người nước ngoài. Cha mẹ phải kiểm tra thỏa thuận lựa chọn quốc tịch và trường hợp ghi chú khai sinh ở nước ngoài. Nếu trẻ sinh tại Việt Nam và cha mẹ không thỏa thuận được khi khai sinh, trẻ có quốc tịch Việt Nam; cần bản cam đoan theo quy định."
   - q: "Sinh tại Việt Nam rồi sang Đài Loan có thể đăng ký hộ tịch ngay không?"
     a: "Cần kiểm tra với Sở Di dân Đài Loan xem trẻ thuộc diện nào, dựa trên quốc tịch, hộ tịch của cha mẹ lúc sinh và giấy tờ nhập cảnh. Trẻ đủ điều kiện có thể làm thủ tục định cư rồi đăng ký hộ tịch lần đầu; không phải trẻ nào cũng làm theo cùng một trình tự."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Con của cha mẹ Việt–Đài: quốc tịch, khai sinh và hộ tịch Đài Loan là những việc khác nhau

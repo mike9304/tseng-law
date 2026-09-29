@@ -13,6 +13,8 @@ faq:
     a: "Không nên mặc định như vậy. Cần kiểm tra quyền quyết định, sự đồng ý hoặc quyết định của tòa cần có, các hạn chế hiện có và yêu cầu ở nơi đến. Đồng ý ly hôn không đồng nghĩa với việc đồng ý cho con ra nước ngoài sinh sống."
   - q: "Thu nhập cao hơn thì chắc chắn giành được quyền nuôi con ở Đài Loan?"
     a: "Điều 1055-1 Bộ luật Dân sự Đài Loan xem xét lợi ích tốt nhất của con qua nhiều yếu tố. Thu nhập không phải yếu tố duy nhất; với gia đình có yếu tố nước ngoài, còn phải xác định pháp luật áp dụng."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Ly hôn với người Đài Loan: lập kế hoạch chăm sóc con giữa hai nước

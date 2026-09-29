@@ -17,6 +17,8 @@ faq:
     a: "Không có nghĩa vụ ký ngay. Trước khi ký cần biết mình nhận những khoản nào và có từ bỏ quyền đòi thêm hay không. Bạn có thể gọi 1955, xin cơ quan lao động địa phương hòa giải hoặc hỏi luật sư trước khi quyết định."
   - q: "Người nhà ở Việt Nam có đòi được tiền khi người lao động tử vong ở Đài Loan không?"
     a: "Thân nhân thuộc diện được hưởng có thể nhận tiền tuất từ bảo hiểm tai nạn lao động, tiền bồi thường tử vong của chủ thuê nếu người mất thuộc Luật Tiêu chuẩn lao động, và bồi thường dân sự nếu có người có lỗi. Giấy tờ làm ở Việt Nam phải được cơ quan đại diện của Đài Loan chứng thực và kèm bản dịch tiếng Trung, nên hãy hỏi trước khi chuẩn bị."
+audience: ["vi"]
+author: "legal-ai-assistant"
 ---
 
 # Bị tai nạn lao động ở Đài Loan: người lao động Việt Nam và gia đình được đòi những khoản nào?

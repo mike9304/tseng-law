@@ -54,6 +54,8 @@ type ArticleJsonLdInput = {
   authorUrl?: string;
   authorSameAs?: string[];
   authorAlternateNames?: string[];
+  /** Replaces the default Person author (used for AI-written columns). */
+  authorEntity?: Record<string, unknown>;
   articleSection?: string;
 };
 
@@ -631,6 +633,7 @@ export function buildArticleJsonLd({
   authorUrl,
   authorSameAs,
   authorAlternateNames,
+  authorEntity,
   articleSection,
 }: ArticleJsonLdInput) {
   return {
@@ -644,7 +647,7 @@ export function buildArticleJsonLd({
     dateModified,
     mainEntityOfPage: buildAbsoluteUrl(path),
     articleSection,
-    author: {
+    author: authorEntity ?? {
       '@type': 'Person',
       '@id': authorUrl ? `${buildAbsoluteUrl(authorUrl)}#person` : undefined,
       name: authorName,

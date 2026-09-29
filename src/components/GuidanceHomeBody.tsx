@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { interleaveColumnsByTopic } from '@/lib/column-topics';
 import Link from 'next/link';
 
@@ -272,7 +273,9 @@ function GuidanceColumnArchive({
                   <span className="insights-readtime">{featured.readTime}</span>
                 ) : null}
               </div>
-              <span className="insights-byline">{pack.home.columnsReviewLabel}</span>
+              <span className="insights-byline">
+                {isAiAuthoredColumn(featured.slug) ? getAiAuthorCopy(locale).label : pack.home.columnsReviewLabel}
+              </span>
               <h3 className="insights-featured-title">{featured.title}</h3>
               <p className="insights-featured-summary">{featured.summary}</p>
               <SmartLink className="link-underline" href={columnHref(featured.slug)}>
@@ -306,7 +309,9 @@ function GuidanceColumnArchive({
                       ) : null}
                       <GuidanceColumnLanguageTag locale={locale} source={source} />
                     </div>
-                    <span className="insights-byline">{pack.home.columnsReviewLabel}</span>
+                    <span className="insights-byline">
+                      {isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : pack.home.columnsReviewLabel}
+                    </span>
                     <h4 className="insights-list-title">
                       <SmartLink className="link-underline" href={columnHref(post.slug)}>
                         {post.title}

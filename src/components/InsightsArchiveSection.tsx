@@ -15,6 +15,8 @@ import {
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import { interleaveColumnsByTopic, type ColumnTopic } from '@/lib/column-topics';
+import { splitEnRecommendedColumns } from '@/lib/en-recommended-columns';
+import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import {
   INSIGHTS_IMAGE_FALLBACK,
   resolveInsightsImageSrc,
@@ -199,8 +201,12 @@ export default function InsightsArchiveSection({
       ),
     );
   };
-  // Newest first, then mixed across topics so the home archive shows a spread.
-  const sortedPosts = useMemo(() => interleaveColumnsByTopic(sortInsightsPostsNewestFirst(posts)), [posts]);
+  // English: columns recommended to English-speaking readers lead. Then
+  // newest first, mixed across topics so the home archive shows a spread.
+  const sortedPosts = useMemo(() => {
+    const { recommended, rest } = splitEnRecommendedColumns(locale, posts);
+    return [...recommended, ...interleaveColumnsByTopic(sortInsightsPostsNewestFirst(rest))];
+  }, [locale, posts]);
   const [featured, ...rest] = sortedPosts;
   const listItems = rest;
   const pageSize = 3;
@@ -258,9 +264,13 @@ export default function InsightsArchiveSection({
                 </time>
                 {featured.readTime ? <span className="insights-readtime">{featured.readTime}</span> : null}
               </div>
-              <SmartLink className="insights-byline" href={authorHref}>
-                {authorLabel}
-              </SmartLink>
+              {isAiAuthoredColumn(featured.slug) ? (
+                <span className="insights-byline">{getAiAuthorCopy(locale).label}</span>
+              ) : (
+                <SmartLink className="insights-byline" href={authorHref}>
+                  {authorLabel}
+                </SmartLink>
+              )}
               <h3 className="insights-featured-title">{protectInsightTitle(featured.title)}</h3>
               <p className="insights-featured-summary">{featured.summary}</p>
               <SmartLink className="link-underline" href={`/${locale}/columns/${featured.slug}`}>
@@ -325,9 +335,13 @@ export default function InsightsArchiveSection({
                       </time>
                       {post.readTime ? <span className="insights-readtime">{post.readTime}</span> : null}
                     </div>
-                    <SmartLink className="insights-byline" href={authorHref}>
-                      {authorLabel}
-                    </SmartLink>
+                    {isAiAuthoredColumn(post.slug) ? (
+                      <span className="insights-byline">{getAiAuthorCopy(locale).label}</span>
+                    ) : (
+                      <SmartLink className="insights-byline" href={authorHref}>
+                        {authorLabel}
+                      </SmartLink>
+                    )}
                     <h4 className="insights-list-title">
                       <SmartLink className="link-underline" href={`/${locale}/columns/${post.slug}`}>
                         {protectInsightTitle(post.title)}

@@ -90,6 +90,11 @@ function expectLandmarksOnce(markup: string, label: string) {
 }
 
 const EXPECTED_SEQUENCE = [...ENGLISH_HOME_LANDMARK_ORDER];
+/**
+ * The English home now puts the column archive right under the hero, like the
+ * Korean builder home. Every other landmark keeps the shared order.
+ */
+const ENGLISH_HOME_SEQUENCE = ['hero', 'insights', ...EXPECTED_SEQUENCE.filter((id) => id !== 'hero' && id !== 'insights')];
 
 function fixturePost(index: number): ColumnPost {
   return {
@@ -140,7 +145,10 @@ describe('guidance home matches the English home composition', () => {
       />,
     );
     expectLandmarksOnce(markup, 'en');
-    expect(homeLandmarkSequence(markup)).toEqual(EXPECTED_SEQUENCE);
+    expect(homeLandmarkSequence(markup)).toEqual(ENGLISH_HOME_SEQUENCE);
+    // Archive is not wrapped in a scroll reveal on the English home.
+    const archiveAt = markup.search(/<section\b[^>]*\bid="insights"/);
+    expect(markup.slice(Math.max(0, archiveAt - 40), archiveAt)).not.toContain('reveal');
   });
 
   it('renders the same landmark sequence for every guidance locale', () => {
@@ -381,7 +389,7 @@ describe('the existing four languages keep their exact home markup', () => {
         />,
       );
       expectLandmarksOnce(markup, locale);
-      expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(EXPECTED_SEQUENCE);
+      expect(homeLandmarkSequence(markup), `${locale} order`).toEqual(locale === 'en' ? ENGLISH_HOME_SEQUENCE : EXPECTED_SEQUENCE);
     }
   });
 });

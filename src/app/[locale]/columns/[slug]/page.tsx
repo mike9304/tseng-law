@@ -3,6 +3,13 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
+import AiAuthorBox from '@/components/AiAuthorBox';
+import {
+  AI_COLUMN_ATTORNEY_HEADING,
+  buildAiAuthorJsonLd,
+  getAiAuthorCopy,
+  isAiAuthoredColumn,
+} from '@/lib/ai-authored-columns';
 import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost } from '@/lib/columns';
@@ -192,6 +199,13 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         : locale === 'ja'
           ? '曾雋崴弁護士'
           : 'Attorney Wei Tseng';
+  // AI-written columns: no attorney byline or review claim; the Legal AI
+  // Assistant author box closes the article instead.
+  const aiAuthored = isAiAuthoredColumn(post.slug);
+  const aiAuthor = aiAuthored ? getAiAuthorCopy(urlLocale) : null;
+  const attorneyHeading = aiAuthored
+    ? AI_COLUMN_ATTORNEY_HEADING[locale] ?? AI_COLUMN_ATTORNEY_HEADING.en
+    : t.attorneyHeading;
   const authorProfilePath = getAttorneyProfilePath(locale);
   const authorHref = guidanceLocale
     ? guidancePublicPath(guidanceLocale, 'lawyers')
@@ -280,8 +294,9 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
               image: post.featuredImage,
               datePublished: post.publicationDate || post.date,
               dateModified: post.date,
-              authorName,
+              authorName: aiAuthor ? aiAuthor.label : authorName,
               authorUrl: authorHref,
+              authorEntity: aiAuthored ? buildAiAuthorJsonLd(urlLocale) : undefined,
               authorSameAs: [
                 'https://www.hoveringlaw.com.tw/en/wei.html',
                 'https://www.wei-wei-lawyer.com/lawyertseng',
@@ -311,9 +326,13 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
             <span className="blog-category-badge">{post.categoryLabel}</span>
             <h1 className="blog-hero-title">{post.title}</h1>
             <div className="blog-meta">
-              <Link href={authorHref} className="link-underline">
-                {authorName}
-              </Link>
+              {aiAuthor ? (
+                <span data-column-byline="ai">{aiAuthor.label}</span>
+              ) : (
+                <Link href={authorHref} className="link-underline">
+                  {authorName}
+                </Link>
+              )}
               <time>{post.dateDisplay || post.date}</time>
               {post.readTime ? <span>{post.readTime}</span> : null}
             </div>
@@ -346,6 +365,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
                   </dl>
                 </section>
               ) : null}
+              {aiAuthored ? <AiAuthorBox locale={urlLocale} /> : null}
             </div>
             <aside className="blog-sidebar">
               <div className="blog-sidebar-card">
@@ -360,7 +380,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
                 </a>
               </div>
               <div className="blog-sidebar-card blog-sidebar-card--attorney">
-                <AttorneyAuthorityCard locale={locale} heading={t.attorneyHeading} />
+                <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
               </div>
               <div className="blog-sidebar-card">
                 <h3 className="blog-sidebar-title">{t.guideTitle}</h3>

@@ -74,6 +74,11 @@ export function LegacyHomePageBody({
   return (
     <div className={homeEditorialStyles.root}>
       <HeroSearch locale={locale} presentation="editorial" />
+      {locale === 'en' ? (
+        // Same place as the Korean home: the column archive sits right under
+        // the hero and is visible without waiting for a scroll reveal.
+        <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
+      ) : null}
       {locale === 'en' || locale === 'ja' ? (
         <Reveal>
           <EnAcquisitionGuideLinks locale={locale} variant="full" />
@@ -92,9 +97,11 @@ export function LegacyHomePageBody({
       <Reveal>
         <HomeStatsSection locale={locale} />
       </Reveal>
-      <Reveal>
-        <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
-      </Reveal>
+      {locale === 'en' ? null : (
+        <Reveal>
+          <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
+        </Reveal>
+      )}
       <Reveal>
         <FAQAccordion locale={locale} items={faqItems} id="faq" sectionClassName="section section--gray" layout="split" />
       </Reveal>

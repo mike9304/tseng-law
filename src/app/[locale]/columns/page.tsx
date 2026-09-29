@@ -4,6 +4,8 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import { getAllColumnPosts } from '@/lib/columns';
+import { prioritizeEnRecommendedColumns } from '@/lib/en-recommended-columns';
+import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { pageCopy } from '@/data/page-copy';
 import { toBuilderLocale } from '@/lib/locales';
@@ -188,7 +190,7 @@ export default async function ColumnsPage(
             name: copy.title,
             description: copy.description,
             items: posts.slice(0, 20).map((post) => ({
-              name: `${post.title} · ${byline}`,
+              name: `${post.title} · ${isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : byline}`,
               path: `/${locale}/columns/${post.slug}`,
               description: post.summary,
             })),
@@ -251,10 +253,12 @@ export default async function ColumnsPage(
   }
 
   const copy = pageCopy[locale].insights;
-  const posts =
+  const posts = prioritizeEnRecommendedColumns(
+    locale,
     locale === 'ja'
       ? getAllColumnPosts('ja')
-      : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
+      : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale)),
+  );
   const byline =
     locale === 'ko'
       ? '증준외 변호사'
@@ -288,7 +292,7 @@ export default async function ColumnsPage(
               name: copy.title,
               description: copy.description,
               items: posts.slice(0, 20).map((post) => ({
-                name: `${post.title} · ${byline}`,
+                name: `${post.title} · ${isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : byline}`,
                 path: `/${locale}/columns/${post.slug}`,
                 description: post.summary,
               })),

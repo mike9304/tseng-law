@@ -18,6 +18,8 @@ import {
   resolveColumnTopic,
   type ColumnTopic,
 } from '@/lib/column-topics';
+import { splitEnRecommendedColumns } from '@/lib/en-recommended-columns';
+import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import styles from './ColumnsGrid.module.css';
 
 const searchCopy = {
@@ -491,13 +493,20 @@ function postMatchesQuery(post: ColumnListItem, query: string): boolean {
 
 export default function ColumnsGrid({
   locale,
-  posts,
+  posts: incomingPosts,
   initialFilters = {},
 }: {
   locale: PublicLocale8;
   posts: ColumnListItem[];
   initialFilters?: ColumnsGridFilters;
 }) {
+  // English: posts recommended to English-speaking readers come first (also in
+  // filtered lists) and get their own section above the topic groups.
+  const { recommended, rest: nonRecommended } = useMemo(
+    () => splitEnRecommendedColumns(locale, incomingPosts),
+    [locale, incomingPosts],
+  );
+  const posts = useMemo(() => [...recommended, ...nonRecommended], [recommended, nonRecommended]);
   const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
   const labels = categoryFilterLabels(locale);
   const byline =
@@ -643,7 +652,7 @@ export default function ColumnsGrid({
       </div>
       <div className="columns-card-body">
         <div className="columns-card-meta">
-          <span className="columns-card-byline">{post.authorName || byline}</span>
+          <span className="columns-card-byline">{isAiAuthoredColumn(post.slug) ? getAiAuthorCopy(locale).label : post.authorName || byline}</span>
           {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
         </div>
         <h3 className="columns-card-title">{post.title}</h3>
@@ -767,8 +776,24 @@ export default function ColumnsGrid({
         )}
         {!hasActiveFilters && posts.length > 0 ? (
           <div className="columns-topic-sections" data-columns-grouped="true" data-columns-visible-count={posts.length}>
+            {recommended.length > 0 ? (
+              <section
+                className="columns-topic-section"
+                aria-labelledby="columns-recommended-en"
+                data-columns-recommended="en"
+              >
+                <header className="columns-topic-header">
+                  <h2 id="columns-recommended-en" className="columns-topic-title">Recommended for English-speaking readers</h2>
+                  <span className="columns-topic-count">{recommended.length} columns</span>
+                </header>
+                <div className="columns-grid">{recommended.map(renderCard)}</div>
+              </section>
+            ) : null}
             {groups.map((group) => {
-              const preview = topicMode ? group.posts.slice(0, COLUMN_TOPIC_SECTION_PREVIEW) : group.posts;
+              // Recommended posts are already shown above; preview the others.
+              const pool = recommended.length > 0 ? group.posts.filter((post) => !recommended.includes(post)) : group.posts;
+              if (pool.length === 0) return null;
+              const preview = topicMode ? pool.slice(0, COLUMN_TOPIC_SECTION_PREVIEW) : pool;
               const headingId = `columns-topic-${group.key}`;
               return (
                 <section key={group.key} className="columns-topic-section" aria-labelledby={headingId} data-columns-topic-section={group.key}>

@@ -58,6 +58,7 @@ type InsightsSectionPost = {
   publicationDate?: string;
   audience?: string[];
   aiAuthored?: boolean;
+  columnNumber?: number;
 };
 
 function resolveLocale(config: Record<string, unknown> | undefined): Locale {
@@ -106,6 +107,7 @@ function mapColumnPostsToInsightsPosts(posts: readonly ColumnPost[]): InsightsSe
     publicationDate: post.publicationDate,
     audience: post.audience,
     aiAuthored: post.aiAuthored,
+      columnNumber: post.columnNumber,
   }));
 }
 

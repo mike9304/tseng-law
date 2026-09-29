@@ -39,6 +39,10 @@ index ("recommended" section) and the "recommended for you" fallback:
 2. columns whose `audience` contains `global`, newest first
 3. all other columns in the usual order (topic mix / topic groups)
 
+If a column is later edited/published through the builder, the published copy
+keeps `audience`, `author` and the file number from the .md file (see
+src/lib/consultation/columns-blob-reader.ts), so the rule still applies.
+
 Only the locale's own files are used, so a locale never shows another
 language's text. A new column appears at the top of its locale automatically
 once its file carries the field; nothing else needs to change.

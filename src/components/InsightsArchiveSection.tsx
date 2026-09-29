@@ -35,6 +35,7 @@ interface ArchivePost {
   publicationDate?: string;
   audience?: string[];
   aiAuthored?: boolean;
+  columnNumber?: number;
 }
 
 export { INSIGHTS_IMAGE_FALLBACK, resolveInsightsImageSrc } from '@/components/insights-image';

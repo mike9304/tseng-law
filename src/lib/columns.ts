@@ -455,6 +455,7 @@ function parseColumnPostsFromDir(locale: ColumnContentLocale, dir: string): Colu
         ...(faq.length ? { faq } : {}),
         ...(audience.length ? { audience } : {}),
         ...(aiAuthored ? { aiAuthored } : {}),
+        ...(Number.isFinite(Number.parseInt(file, 10)) ? { columnNumber: Number.parseInt(file, 10) } : {}),
       },
     };
   });

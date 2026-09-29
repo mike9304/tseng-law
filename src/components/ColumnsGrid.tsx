@@ -104,6 +104,7 @@ export interface ColumnListItem {
   publicationDate?: string;
   audience?: string[];
   aiAuthored?: boolean;
+  columnNumber?: number;
 }
 
 export interface ColumnsGridFilters {

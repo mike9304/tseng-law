@@ -335,10 +335,22 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
       nextSourceOrder += 1;
     }
   }
+  // Likewise `audience`, `author: legal-ai-assistant` and the file number are
+  // frontmatter/file-only: keep them when a builder/Blob copy shadows the file
+  // so per-locale recommendations and AI bylines survive publishing.
+  const fileBySlug = new Map(filePosts.map((post) => [post.slug, post]));
   for (const post of filterPublicColumnPosts([...builderPosts, ...blobPosts, ...filePosts])) {
     if (seen.has(post.slug)) continue;
     const faq = post.faq ?? fileFaqBySlug.get(post.slug);
-    merged.push(faq ? { ...post, faq } : post);
+    const file = fileBySlug.get(post.slug);
+    const fileMeta = file && file !== post
+      ? {
+        ...(post.audience ?? file.audience ? { audience: post.audience ?? file.audience } : {}),
+        ...(post.aiAuthored ?? file.aiAuthored ? { aiAuthored: true } : {}),
+        ...(post.columnNumber ?? file.columnNumber ? { columnNumber: post.columnNumber ?? file.columnNumber } : {}),
+      }
+      : {};
+    merged.push(faq || Object.keys(fileMeta).length ? { ...post, ...fileMeta, ...(faq ? { faq } : {}) } : post);
     seen.add(post.slug);
   }
   return sortColumnPostsNewestFirst(merged, sourceOrderBySlug);

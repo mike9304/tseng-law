@@ -66,6 +66,13 @@ describe('audience frontmatter recommendations', () => {
     }
   });
 
+  it('breaks same-day ties by column number regardless of input order', () => {
+    const ko = getAllColumnPosts('ko');
+    expect(prioritizeRecommendedColumns('ko', [...ko].reverse())[0]?.slug).toBe('hire-taiwan-lawyer-from-abroad');
+    expect(prioritizeRecommendedColumns('zh-hant', [...getAllColumnPosts('zh-hant')].reverse())[0]?.slug)
+      .toBe('hire-taiwan-lawyer-from-abroad');
+  });
+
   it('puts own-audience columns before shared ones, each newest first', () => {
     const posts = [
       { slug: 'shared-new', date: '2026-09-30', audience: ['global'] },

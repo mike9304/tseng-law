@@ -36,6 +36,8 @@ export interface ColumnPost {
   audience?: string[];
   /** Frontmatter `author: legal-ai-assistant` → written by AI, no attorney byline. */
   aiAuthored?: boolean;
+  /** Numeric file prefix (NNN-slug.md): tie-break for same-day columns (higher = newer). */
+  columnNumber?: number;
   /** Allowlisted body typography preset id (e.g. ko-body-readable). */
   typographyPresetId?: string;
   typography?: {

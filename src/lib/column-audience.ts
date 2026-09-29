@@ -67,6 +67,7 @@ type AudiencePost = {
   audience?: readonly string[];
   publicationDate?: string;
   date?: string;
+  columnNumber?: number;
 };
 
 function sortKey(post: AudiencePost): string {
@@ -77,7 +78,11 @@ function sortKey(post: AudiencePost): string {
 function newestFirst<T extends AudiencePost>(posts: readonly T[]): T[] {
   return posts
     .map((post, index) => ({ post, index }))
-    .sort((a, b) => sortKey(b.post).localeCompare(sortKey(a.post)) || b.index - a.index)
+    .sort((a, b) => (
+      sortKey(b.post).localeCompare(sortKey(a.post))
+      || (b.post.columnNumber ?? -1) - (a.post.columnNumber ?? -1)
+      || b.index - a.index
+    ))
     .map(({ post }) => post);
 }
 

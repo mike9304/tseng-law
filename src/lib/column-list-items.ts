@@ -24,5 +24,6 @@ export function toColumnListItems(posts: readonly ColumnPost[]): ColumnListItem[
     publicationDate: post.publicationDate,
     audience: post.audience,
     aiAuthored: post.aiAuthored,
+      columnNumber: post.columnNumber,
   }));
 }

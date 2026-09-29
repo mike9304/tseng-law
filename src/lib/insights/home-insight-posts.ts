@@ -17,5 +17,6 @@ export function mapColumnPostsToHomeInsights(posts: readonly ColumnPost[]) {
       publicationDate: post.publicationDate,
       audience: post.audience,
       aiAuthored: post.aiAuthored,
+      columnNumber: post.columnNumber,
     }));
 }

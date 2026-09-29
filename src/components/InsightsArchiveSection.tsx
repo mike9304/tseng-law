@@ -14,6 +14,7 @@ import {
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
+import { interleaveColumnsByTopic, type ColumnTopic } from '@/lib/column-topics';
 import {
   INSIGHTS_IMAGE_FALLBACK,
   resolveInsightsImageSrc,
@@ -28,6 +29,7 @@ interface ArchivePost {
   categoryLabel: string;
   featuredImage: string;
   summary: string;
+  topic?: ColumnTopic;
 }
 
 export { INSIGHTS_IMAGE_FALLBACK, resolveInsightsImageSrc } from '@/components/insights-image';
@@ -197,7 +199,8 @@ export default function InsightsArchiveSection({
       ),
     );
   };
-  const sortedPosts = useMemo(() => sortInsightsPostsNewestFirst(posts), [posts]);
+  // Newest first, then mixed across topics so the home archive shows a spread.
+  const sortedPosts = useMemo(() => interleaveColumnsByTopic(sortInsightsPostsNewestFirst(posts)), [posts]);
   const [featured, ...rest] = sortedPosts;
   const listItems = rest;
   const pageSize = 3;

@@ -54,6 +54,7 @@ type InsightsSectionPost = {
   categoryLabel: string;
   featuredImage: string;
   summary: string;
+  topic?: ColumnPost['topic'];
 };
 
 function resolveLocale(config: Record<string, unknown> | undefined): Locale {
@@ -98,6 +99,7 @@ function mapColumnPostsToInsightsPosts(posts: readonly ColumnPost[]): InsightsSe
     categoryLabel: post.categoryLabel,
     featuredImage: post.featuredImage,
     summary: post.summary,
+    topic: post.topic,
   }));
 }
 

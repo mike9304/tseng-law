@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { resolveHomeInsightsCardLabels } from '@/lib/builder/home-insights-card-format';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
+import { interleaveColumnsByTopic } from '@/lib/column-topics';
 import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import {
   HOME_STAGE_WIDTH,
@@ -63,6 +64,7 @@ const INSIGHTS_IMAGE_FALLBACK =
 
 type HomeInsightPost = {
   slug: string;
+  topic?: ColumnPost['topic'];
   title: string;
   dateDisplay: string;
   readTime: string;
@@ -153,7 +155,7 @@ function resolveInsightsPosts(
   sourcePosts: readonly ColumnPost[] = getAllColumnPosts(locale),
 ): HomeInsightPost[] {
   const copy = copyByLocale[locale];
-  return sourcePosts
+  const sorted = sourcePosts
     .map((post, sourceIndex) => {
       const labels = resolveHomeInsightsCardLabels(post, copy.dateFallback);
       return {
@@ -162,6 +164,7 @@ function resolveInsightsPosts(
           parseInsightsDate(post.dateDisplay) ?? parseInsightsDate(post.date),
         post: {
           slug: post.slug,
+          topic: post.topic,
           title: post.title,
           dateDisplay: labels.date,
           readTime: labels.readTime,
@@ -182,6 +185,8 @@ function resolveInsightsPosts(
         || a.sourceIndex - b.sourceIndex;
     })
     .map(({ post }) => post);
+  // Mix topics so the home archive is not filled by one topic.
+  return interleaveColumnsByTopic(sorted);
 }
 
 export function createInsightsDecomposedNodes(

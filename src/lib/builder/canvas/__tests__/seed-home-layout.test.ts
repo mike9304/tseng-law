@@ -11,6 +11,7 @@ import {
 } from '../tree';
 import { HERO_SEARCH_WRAPPER_Y } from '../decompose-hero';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
+import { interleaveColumnsByTopic, resolveColumnTopic } from '@/lib/column-topics';
 import { createInsightsDecomposedNodes } from '../decompose-insights';
 import { computeTopLevelFlowSectionMetrics } from '../flow';
 
@@ -144,7 +145,7 @@ describe('home seed canvas layout', () => {
     const listWrap = nodesById.get('home-insights-list-wrap');
     const featuredTitle = nodesById.get('home-insights-featured-title');
     const firstListTitle = nodesById.get('home-insights-item-0-title');
-    const publicHomePosts = getAllColumnPosts('ko');
+    const publicHomePosts = interleaveColumnsByTopic(getAllColumnPosts('ko'));
     const expectedPageCount = Math.max(1, Math.ceil(Math.max(publicHomePosts.length - 1, 0) / 3));
 
     expect(controls).toBeDefined();
@@ -159,6 +160,8 @@ describe('home seed canvas layout', () => {
     expect(firstListTitle?.rect.width).toBe(408);
     expect(textNodeText(featuredTitle)).toBe(publicHomePosts[0]?.title);
     expect(textNodeText(firstListTitle)).toBe(publicHomePosts[1]?.title);
+    const firstFourTopics = publicHomePosts.slice(0, 4).map((post) => post.topic ?? resolveColumnTopic(post.slug));
+    expect(new Set(firstFourTopics).size).toBeGreaterThan(1);
   });
 
   it('uses a supplied insights source for decomposed public preview metadata', () => {

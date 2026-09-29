@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { interleaveColumnsByTopic } from '@/lib/column-topics';
 import Link from 'next/link';
 
 import FAQAccordion from '@/components/FAQAccordion';
@@ -230,7 +231,7 @@ function GuidanceColumnArchive({
 }) {
   const pack = guidanceContent[locale];
   const archivePage = pack.pages.columns;
-  const [featured, ...rest] = source.posts;
+  const [featured, ...rest] = interleaveColumnsByTopic(source.posts);
   if (!featured) return null;
   const listItems = rest.slice(0, 3);
   const columnHref = (slug: string) => `/${source.sourceLocale}/columns/${slug}`;

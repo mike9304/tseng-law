@@ -164,3 +164,30 @@ export function groupColumnsByTopic<T extends { topic?: ColumnTopic; slug: strin
   }
   return COLUMN_TOPICS.filter((topic) => buckets.has(topic)).map((topic) => ({ topic, posts: buckets.get(topic)! }));
 }
+
+/**
+ * Round-robin mix for home-page archives: takes newest-first posts and
+ * interleaves topics (topic order = order of each topic's newest post), so
+ * one busy topic cannot fill the whole home archive. Within a topic the
+ * newest-first order is kept. Posts without a topic resolve via the legacy map.
+ */
+export function interleaveColumnsByTopic<T extends { slug: string; topic?: ColumnTopic }>(posts: readonly T[]): T[] {
+  const order: ColumnTopic[] = [];
+  const queues = new Map<ColumnTopic, T[]>();
+  for (const post of posts) {
+    const topic = post.topic ?? resolveColumnTopic(post.slug);
+    if (!queues.has(topic)) {
+      queues.set(topic, []);
+      order.push(topic);
+    }
+    queues.get(topic)!.push(post);
+  }
+  const mixed: T[] = [];
+  while (mixed.length < posts.length) {
+    for (const topic of order) {
+      const next = queues.get(topic)!.shift();
+      if (next) mixed.push(next);
+    }
+  }
+  return mixed;
+}

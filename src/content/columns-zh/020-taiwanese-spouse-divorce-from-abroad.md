@@ -6,7 +6,7 @@ date_display: "2026年9月28日"
 read_time: "約4分鐘"
 categories:
   - "台灣法律資訊"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "委任律師後就完全不用本人出庭嗎？"
     a: "不一定。家事事件法第13條規定，法院得命當事人或法定代理人本人到場。委任律師與本人是否須出庭要分別確認，住在海外也未必當然免予到場。"

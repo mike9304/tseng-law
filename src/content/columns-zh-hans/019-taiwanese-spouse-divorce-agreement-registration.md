@@ -6,7 +6,7 @@ date_display: "2026年9月28日"
 read_time: "约4分钟"
 categories:
   - "台湾法律资讯"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "台湾配偶发来协议，签好寄回就算离婚了吗？"
     a: "按台湾民法第1050条办理协议离婚，需要书面、至少两名证人签名和户政登记。涉外或跨地区案件还须确认适用法律，不能仅凭签署判断全部手续已完成。"

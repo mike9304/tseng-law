@@ -7,7 +7,7 @@ date_display: "September 28, 2026"
 read_time: "5 min read"
 categories:
   - "Taiwan Legal Information"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "Does birth in Taiwan make every baby a Taiwanese national?"
     a: "No. Being born in Taiwan does not by itself make a child a national. Taiwan's Nationality Act generally looks to whether a parent was a Republic of China national at the child's birth, with a few other statutory categories. You will need evidence of nationality and legal parentage."

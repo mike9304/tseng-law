@@ -7,7 +7,7 @@ date_display: "28 tháng 9 năm 2026"
 read_time: "4 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "Đang nuôi con một mình thì được đưa con về Việt Nam luôn không?"
     a: "Không nên mặc định như vậy. Cần kiểm tra quyền quyết định, sự đồng ý hoặc quyết định của tòa cần có, các hạn chế hiện có và yêu cầu ở nơi đến. Đồng ý ly hôn không đồng nghĩa với việc đồng ý cho con ra nước ngoài sinh sống."

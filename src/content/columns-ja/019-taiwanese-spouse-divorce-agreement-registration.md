@@ -7,7 +7,7 @@ date_display: "2026年9月28日"
 read_time: "約5分"
 categories:
   - "台湾法律情報"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "中国語の合意書に署名すれば台湾の離婚は成立しますか？"
     a: "署名だけでは成立しません。台湾民法第1050条の協議離婚には、書面、2人以上の証人の署名、戸政機関での離婚登記の三つがそろう必要があります。国際結婚の場合は、準拠法（どの国・地域の法律が適用されるか）もあわせて確認してください。"

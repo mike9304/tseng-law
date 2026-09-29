@@ -8,7 +8,7 @@ date_display: "Ngày 28 tháng 9 năm 2026"
 read_time: "5 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "Có giấy kết hôn là được sang Đài Loan ngay không?"
     a: "Không. Giấy kết hôn, xác nhận giấy tờ, phỏng vấn, thị thực và giấy phép cư trú là những việc khác nhau. Cần kiểm tra yêu cầu của cơ quan Đài Loan phụ trách hồ sơ tại Việt Nam."

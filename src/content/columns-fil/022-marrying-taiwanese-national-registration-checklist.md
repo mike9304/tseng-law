@@ -8,7 +8,7 @@ date_display: "27 Setyembre 2026"
 read_time: "5 minutong pagbasa"
 categories:
   - "Impormasyon sa batas ng Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "Puwede bang dumiretso sa Taiwan para magparehistro ng kasal ang lahat ng Pilipino?"
     a: "Hindi dapat ipagpalagay iyon. May natatanging patakaran para sa mga itinakdang nasyonalidad, kabilang ang Pilipinas. Karaniwang kailangang magpakasal sa sariling bansa, dumaan sa panayam at pagpapatunay ng dokumento, at saka iparehistro sa Taiwan; kailangang kumpirmahin ang anumang eksepsiyon."

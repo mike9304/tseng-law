@@ -7,7 +7,7 @@ date_display: "2026년 9월 28일"
 read_time: "5분 분량"
 categories:
   - "대만 법률정보"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "한국 국적 부모라면 아이를 한국에 데려갈 수 있나요?"
     a: "부모의 국적으로 정해지는 문제가 아닙니다. 누가 친권·양육권을 갖는지, 기존 합의나 재판에서 무엇을 정했는지, 상대 부모의 동의나 법원 결정이 필요한지, 출국과 이사에 어떤 절차가 필요한지를 먼저 확인한 뒤 계획하셔야 합니다."

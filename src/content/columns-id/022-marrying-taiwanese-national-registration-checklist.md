@@ -8,7 +8,7 @@ date_display: "28 September 2026"
 read_time: "5 menit baca"
 categories:
   - "Informasi hukum Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "Bolehkah setiap WNI langsung menikah di kantor administrasi kependudukan Taiwan (戶政事務所)?"
     a: "Tidak selalu. Bagi warga dari negara tertentu yang ditetapkan Kementerian Luar Negeri Taiwan, termasuk Indonesia, perkawinan wajib dicatat lebih dahulu di negara asal, lalu pasangan menjalani wawancara dan legalisasi di perwakilan Taiwan sebelum pencatatan di Taiwan. Menikah langsung di Taiwan hanya mungkin dalam keadaan yang dikecualikan, jadi pastikan dulu kepada perwakilan Taiwan atau kantor administrasi kependudukan."

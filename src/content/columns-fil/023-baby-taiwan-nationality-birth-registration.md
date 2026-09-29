@@ -8,7 +8,7 @@ date_display: "28 Setyembre 2026"
 read_time: "5 minutong pagbasa"
 categories:
   - "Impormasyon sa batas ng Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "Lahat ba ng sanggol na ipinanganak sa Taiwan ay Taiwanese?"
     a: "Hindi. Itinatakda ng Nationality Act ang mga kategoryang may kaugnayan sa nasyonalidad ng ama o ina noong kapanganakan at iba pang tinukoy na sitwasyon. Hindi sapat ang lugar ng kapanganakan lamang para sa lahat ng sanggol."

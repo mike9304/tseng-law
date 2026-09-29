@@ -7,7 +7,7 @@ date_display: "27 Setyembre 2026"
 read_time: "4 minutong pagbasa"
 categories:
   - "Impormasyong Legal sa Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "Kapag may abogado sa Taiwan, hindi na ba ako kailangang humarap?"
     a: "Hindi iyon maipapangako. Pinapayagan ng Article 13 ng Family Act ng Taiwan ang hukuman na mag-utos ng personal na pagharap. Ang pagkakaroon ng kinatawan at sariling pagharap ay magkaibang usapin."

@@ -7,7 +7,7 @@ date_display: "28 Setyembre 2026"
 read_time: "4 minutong pagbasa"
 categories:
   - "Impormasyong Legal sa Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "Tapos na ba ang diborsiyo sa Taiwan kapag nakapirma na kami?"
     a: "Para sa diborsiyo ayon sa kasunduan sa ilalim ng Article 1050 ng Civil Code ng Taiwan, kailangan ang nakasulat na kasunduan, pirma ng hindi bababa sa dalawang saksi at pagpaparehistro sa household registration office. Para sa Pilipino, kailangan pa ang judicial recognition ng korte sa Pilipinas bago makapagpakasal muli sa ilalim ng batas ng Pilipinas."

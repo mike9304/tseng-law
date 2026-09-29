@@ -8,7 +8,7 @@ date_display: "Ngày 28 tháng 9 năm 2026"
 read_time: "5 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "Sinh ở Đài Loan là chắc chắn có quốc tịch Đài Loan không?"
     a: "Không. Luật Quốc tịch Đài Loan có quy định về cha hoặc mẹ là công dân Trung Hoa Dân Quốc tại thời điểm sinh và các trường hợp luật định khác. Chỉ nơi sinh không tạo quốc tịch cho mọi trẻ."

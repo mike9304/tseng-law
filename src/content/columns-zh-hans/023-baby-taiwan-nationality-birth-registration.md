@@ -8,7 +8,7 @@ date_display: "2026年9月28日"
 read_time: "约5分钟阅读"
 categories:
   - "台湾法律信息"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "有台湾父母，孩子就一定能按同一流程设籍吗？"
     a: "不能一概而论。出生地、出生时父母户籍、亲子关系、年龄，以及大陆户籍和护照情况，都会影响移民署适用的类别。国籍与台湾户籍不能混为一谈。"

@@ -7,7 +7,7 @@ date_display: "2026년 9월 28일"
 read_time: "5분 분량"
 categories:
   - "대만 법률정보"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "한국에서 먼저 혼인신고를 해야 하나요?"
     a: "모든 부부에게 똑같이 적용되는 순서는 없습니다. 한국 방식으로 먼저 혼인할지, 대만에서 먼저 혼인할지를 정하면 그에 맞는 서류가 정해집니다. 방식을 정한 뒤 양쪽 기관에 해당 경로의 서류를 확인하세요."

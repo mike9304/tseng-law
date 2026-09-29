@@ -7,7 +7,7 @@ date_display: "2026년 9월 28일"
 read_time: "5분 분량"
 categories:
   - "대만 법률정보"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "한국에 있으면 대만 변호사에게 맡기고 모든 출석을 피할 수 있나요?"
     a: "장담할 수 없습니다. 대리인을 선임해도 법원은 가사사건법 제13조에 따라 당사자 본인의 출석을 명할 수 있습니다. 다만 사건의 성질에 따라 다른 적당한 방법으로 진술하게 할 수도 있으므로, 해외에 산다는 사정을 미리 알리고 가능한 방법을 상의해 보세요."

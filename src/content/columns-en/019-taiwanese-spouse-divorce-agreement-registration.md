@@ -7,7 +7,7 @@ date_display: "September 28, 2026"
 read_time: "5 min read"
 categories:
   - "Taiwan Legal Information"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "Does signing a divorce agreement end the marriage in Taiwan?"
     a: "No. Under Article 1050 of Taiwan's Civil Code, a divorce by agreement requires a written agreement signed by at least two witnesses, and it takes effect only once the divorce is registered at a household registration office. Whether Taiwan law governs your divorce, and what must be reported in your own country, are separate questions."

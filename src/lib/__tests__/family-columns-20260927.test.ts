@@ -8,6 +8,14 @@ const slugs = [
   'baby-taiwan-nationality-birth-registration',
 ];
 
+const FEATURED_NUMBER: Record<string, string> = {
+  'taiwanese-spouse-divorce-agreement-registration': '019',
+  'taiwanese-spouse-divorce-from-abroad': '020',
+  'taiwanese-spouse-divorce-cross-border-parenting': '021',
+  'marrying-taiwanese-national-registration-checklist': '022',
+  'baby-taiwan-nationality-birth-registration': '023',
+};
+
 const UNCHANGED_PASS = new Set([
   'ja/marrying-taiwanese-national-registration-checklist',
   'ja/baby-taiwan-nationality-birth-registration',
@@ -34,7 +42,9 @@ describe('native marriage and birth columns September 2026', () => {
       expect(post?.content).toContain('mailto:wei@hoveringlaw.com.tw');
       expect(post?.content).toContain('曾雋崴');
       expect(post?.content).not.toContain('02-2992-9304');
-      expect(post?.featuredImage).toBe('/images/blog/007-taiwan-divorce-lawsuit-qna/featured-01.jpg');
+      // Each column has its own topic-appropriate hero image (no shared wedding-ring photo).
+      const number = post?.slug ? FEATURED_NUMBER[post.slug] : undefined;
+      expect(post?.featuredImage).toBe(`/images/blog/${number}-${slug}/featured-01.webp`);
       expect(post?.summary.length).toBeGreaterThanOrEqual(150);
       expect(post?.summary.length).toBeLessThanOrEqual(160);
       const sources = [...(post?.content ?? '').matchAll(/\]\((https:\/\/[^)]+)\)/g)];

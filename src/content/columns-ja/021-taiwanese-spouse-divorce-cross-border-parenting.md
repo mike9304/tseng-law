@@ -6,7 +6,7 @@ date_display: "2026年9月27日"
 read_time: "約4分"
 categories:
   - "台湾法律情報"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "日本人の親であれば子どもを日本へ連れて帰れますか？"
     a: "親の国籍だけでは判断できません。子どもに関する権限、既存の合意や裁判、相手の同意と移動に必要な手続きを事前に確認してください。"

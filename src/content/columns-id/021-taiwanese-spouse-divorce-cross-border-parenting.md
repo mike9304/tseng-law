@@ -7,7 +7,7 @@ date_display: "28 September 2026"
 read_time: "4 menit"
 categories:
   - "Informasi Hukum Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "Apakah orang tua yang mengasuh sendiri bebas membawa anak pindah negara?"
     a: "Jangan diasumsikan. Sebelum pindah, periksa hak asuh, persetujuan atau putusan yang diperlukan, pembatasan yang ada, dan persyaratan di negara tujuan. Kesepakatan bercerai tidak otomatis mencakup kepindahan anak."

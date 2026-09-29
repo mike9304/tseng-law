@@ -7,7 +7,7 @@ date_display: "September 28, 2026"
 read_time: "4 min read"
 categories:
   - "Taiwan Legal Information"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "Will appointing a lawyer remove every need to attend in person?"
     a: "Not necessarily. Under Article 13 of Taiwan's Family Act, the court can order a party to appear in person even when a lawyer represents them. Tell your lawyer early where you live and whether travel would be difficult."

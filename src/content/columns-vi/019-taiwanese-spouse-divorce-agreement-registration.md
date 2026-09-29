@@ -7,7 +7,7 @@ date_display: "28 tháng 9 năm 2026"
 read_time: "4 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "Ký thỏa thuận rồi gửi lại là đã ly hôn ở Đài Loan chưa?"
     a: "Thuận tình ly hôn theo Điều 1050 Bộ luật Dân sự Đài Loan cần văn bản, chữ ký của ít nhất hai người làm chứng và đăng ký tại cơ quan hộ chính. Trường hợp có yếu tố nước ngoài còn phải xác định pháp luật áp dụng."

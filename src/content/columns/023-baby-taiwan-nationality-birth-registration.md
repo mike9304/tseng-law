@@ -7,7 +7,7 @@ date_display: "2026년 9월 28일"
 read_time: "5분 분량"
 categories:
   - "대만 법률정보"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "대만에서 태어나면 누구나 대만 국적을 얻나요?"
     a: "아닙니다. 대만 국적법 제2조는 출생 당시 부 또는 모가 중화민국 국민인 경우 등을 정하고 있습니다. 그래서 대만에서 태어났는지보다 부모의 국적과 법적 친자관계를 먼저 확인해야 합니다."

@@ -7,7 +7,7 @@ date_display: "2026年9月28日"
 read_time: "約5分鐘閱讀"
 categories:
   - "台灣法律資訊"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "在海外結婚，台灣戶籍就會自動更新嗎？"
     a: "不會自動完成台灣的結婚登記。應依海外已生效婚姻的途徑，確認婚姻證明、驗證及中文譯本等資料，再向戶政機關辦理。"

@@ -7,7 +7,7 @@ date_display: "2026년 9월 28일"
 read_time: "6분 분량"
 categories:
   - "대만 법률정보"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "대만인 배우자가 보낸 중국어 합의서에 먼저 서명해도 될까요?"
     a: "문구를 모두 이해하기 전에는 서명하지 않는 것이 좋습니다. 합의서에는 이혼 의사 외에도 재산청구 포기, 채무 부담, 자녀 문제와 금전 지급 조건이 함께 들어 있을 수 있으므로, 뜻이 분명하지 않은 조항은 번역과 설명을 받은 뒤 결정하세요."

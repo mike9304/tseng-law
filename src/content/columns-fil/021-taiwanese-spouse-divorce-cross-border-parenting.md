@@ -7,7 +7,7 @@ date_display: "28 Setyembre 2026"
 read_time: "4 minutong pagbasa"
 categories:
   - "Impormasyong Legal sa Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "Ako ang mag-isang nag-aalaga; puwede ko na bang dalhin ang anak sa Pilipinas?"
     a: "Alamin muna kung sino ang may custody o parental authority, kung may kailangang pahintulot o utos ng hukuman, kung may umiiral na limitasyon sa paglalakbay at kung ano ang hinihingi ng bansang pupuntahan. Ang pagpayag ng asawa sa diborsiyo ay hindi pa pagpayag sa paglipat ng anak."

@@ -7,7 +7,7 @@ date_display: "September 28, 2026"
 read_time: "5 min read"
 categories:
   - "Taiwan Legal Information"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "Will AIT issue a certificate proving that I am free to marry?"
     a: "No. The U.S. State Department says U.S. embassies and consulates cannot attest to marital status. Ask the household registration office what evidence it accepts, and check AIT's current notarial procedures before relying on an affidavit."

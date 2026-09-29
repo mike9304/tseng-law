@@ -8,7 +8,7 @@ date_display: "28 กันยายน 2026"
 read_time: "อ่านประมาณ 5 นาที"
 categories:
   - "ข้อมูลกฎหมายไต้หวัน"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "จัดงานแต่งแล้วถือว่าจดทะเบียนในไต้หวันเสร็จหรือไม่?"
     a: "ไม่ควรถือเช่นนั้น การสมรสที่มีผลตามกฎหมายกับการบันทึกทะเบียนในไต้หวันเป็นคนละเรื่อง หากจะจดทะเบียนสมรสในไต้หวัน ต้องเข้าเงื่อนไขที่กำหนดและทำตามข้อกำหนดเรื่องเอกสาร พยาน และการจดทะเบียน"

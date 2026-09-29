@@ -8,7 +8,7 @@ date_display: "28 September 2026"
 read_time: "5 menit baca"
 categories:
   - "Informasi hukum Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "Apakah setiap bayi yang lahir di Taiwan memperoleh kewarganegaraan Taiwan?"
     a: "Tidak. Pasal 2 Undang-Undang Kewarganegaraan Taiwan memuat kategori berdasarkan kewarganegaraan ayah atau ibu saat kelahiran dan keadaan tertentu lainnya. Tempat lahir saja bukan dasar umum untuk semua bayi."

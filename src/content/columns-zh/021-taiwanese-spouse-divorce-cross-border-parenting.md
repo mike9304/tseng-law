@@ -6,7 +6,7 @@ date_display: "2026年9月28日"
 read_time: "約4分鐘"
 categories:
   - "台灣法律資訊"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "單獨行使親權就一定可以帶孩子移居嗎？"
     a: "未必。應先確認是否需要他方同意或法院裁判、既有裁判有無限制，以及目的地的要求；同意離婚，也不代表同意孩子移居。"

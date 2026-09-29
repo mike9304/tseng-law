@@ -7,7 +7,7 @@ date_display: "2026年9月27日"
 read_time: "約5分"
 categories:
   - "台湾法律情報"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "日本台湾交流協会に婚姻届を提出できますか？"
     a: "同協会は戸籍の婚姻届を受け付けていません。証明書の発行と婚姻届の提出は別の業務です。日本側の届出は本籍地などの市区町村に確認してください。"

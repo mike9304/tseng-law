@@ -7,7 +7,7 @@ date_display: "September 28, 2026"
 read_time: "4 min read"
 categories:
   - "Taiwan Legal Information"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "Does being the sole caregiver allow me to move my child overseas?"
     a: "Not necessarily. Before relocating, check who holds decision-making authority, whether the other parent's consent or a court order is needed, any existing restrictions and the proposed destination. Agreeing to a divorce does not answer these questions."

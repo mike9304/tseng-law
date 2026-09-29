@@ -7,7 +7,7 @@ date_display: "2026年9月27日"
 read_time: "約5分"
 categories:
   - "台湾法律情報"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "台湾で生まれた日台の子どもには国籍留保が必要ですか？"
     a: "日本国外で生まれ、出生により日本国籍と外国国籍を同時に取得する場合は、出生の日から3か月以内に出生届とともに日本国籍の留保を届け出る必要があります。個別の国籍・親子関係を確認してください。"

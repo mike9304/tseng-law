@@ -8,7 +8,7 @@ date_display: "2026年9月28日"
 read_time: "约5分钟阅读"
 categories:
   - "台湾法律信息"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/022-marrying-taiwanese-national-registration-checklist/featured-01.webp"
 faq:
   - q: "大陆配偶可以照越南或美国配偶的签证清单办理吗？"
     a: "不应直接套用。台湾方面对大陆地区人民有专门的入境、团聚、面谈及居留制度，应按实际身份向移民署确认，而不是一律申请一般外国人配偶签证。"

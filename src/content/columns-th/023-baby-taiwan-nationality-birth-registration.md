@@ -8,7 +8,7 @@ date_display: "28 กันยายน 2026"
 read_time: "อ่านประมาณ 5 นาที"
 categories:
   - "ข้อมูลกฎหมายไต้หวัน"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "เด็กทุกคนที่เกิดในไต้หวันได้สัญชาติไต้หวันหรือไม่?"
     a: "ไม่ใช่ มาตรา 2 แห่งกฎหมายสัญชาติไต้หวันมีเงื่อนไขเกี่ยวกับสัญชาติของบิดาหรือมารดาในวันที่เด็กเกิดและกรณีอื่นที่กฎหมายระบุ การเกิดในไต้หวันอย่างเดียวจึงไม่ทำให้เด็กทุกคนมีสัญชาติไต้หวัน"

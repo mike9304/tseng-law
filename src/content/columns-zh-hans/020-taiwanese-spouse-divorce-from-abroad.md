@@ -6,7 +6,7 @@ date_display: "2026年9月28日"
 read_time: "约4分钟"
 categories:
   - "台湾法律资讯"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "找台湾律师后就无需本人到场吗？"
     a: "不一定。台湾家事事件法第13条规定，法院可以命当事人或法定代理人本人到场，也可以按事件性质以适当方法命其陈述；委任律师和本人出庭要分别确认。"

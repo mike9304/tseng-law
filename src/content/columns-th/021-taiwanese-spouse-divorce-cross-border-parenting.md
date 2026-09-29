@@ -7,7 +7,7 @@ date_display: "27 กันยายน 2026"
 read_time: "อ่านประมาณ 4 นาที"
 categories:
   - "ข้อมูลกฎหมายไต้หวัน"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "ดูแลลูกคนเดียวแล้วพากลับไทยได้เลยหรือไม่"
     a: "ไม่ควรสันนิษฐานเช่นนั้น ต้องตรวจอำนาจตัดสินใจ ความยินยอมหรือคำสั่งที่จำเป็น ข้อจำกัดเดิมและข้อกำหนดปลายทาง ความยินยอมหย่าไม่เท่ากับอนุญาตให้ลูกย้ายประเทศ"

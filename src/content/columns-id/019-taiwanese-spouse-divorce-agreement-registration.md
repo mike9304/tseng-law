@@ -7,7 +7,7 @@ date_display: "28 September 2026"
 read_time: "4 menit"
 categories:
   - "Informasi Hukum Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "Apakah tanda tangan saja sudah mengakhiri perkawinan di Taiwan?"
     a: "Untuk perceraian berdasarkan kesepakatan menurut Pasal 1050 KUH Perdata Taiwan, diperlukan dokumen tertulis, tanda tangan sedikitnya dua saksi, dan pencatatan perceraian di kantor administrasi kependudukan Taiwan (戶政事務所). Pada perkawinan lintas negara, hukum yang berlaku juga harus diperiksa."

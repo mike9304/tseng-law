@@ -7,7 +7,7 @@ date_display: "2026年9月28日"
 read_time: "約5分鐘閱讀"
 categories:
   - "台灣法律資訊"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/023-baby-taiwan-nationality-birth-registration/featured-01.webp"
 faq:
   - q: "在台灣出生就一定有中華民國國籍嗎？"
     a: "我國國籍法並未採一般性的出生地主義。國籍法第2條以出生時父或母為中華民國國民等法定情形為準，只憑出生地無法判定孩子的國籍。"

@@ -6,7 +6,7 @@ date_display: "2026年9月28日"
 read_time: "約4分"
 categories:
   - "台湾法律情報"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "台湾の弁護士に依頼すれば出席はすべて不要になりますか？"
     a: "弁護士に依頼しても、本人の出席が必ず不要になるわけではありません。台湾の家事事件法第13条により、裁判所は当事者本人の出席を命じることができ、代理人がいるだけで一律に免除されるとはいえません。"

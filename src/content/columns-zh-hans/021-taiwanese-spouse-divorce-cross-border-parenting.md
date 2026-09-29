@@ -6,7 +6,7 @@ date_display: "2026年9月28日"
 read_time: "约4分钟"
 categories:
   - "台湾法律资讯"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/021-taiwanese-spouse-divorce-cross-border-parenting/featured-01.webp"
 faq:
   - q: "单独照顾孩子，就能决定带孩子离开台湾、到另一地居住吗？"
     a: "不能直接推定。应审查决定权限、必要同意或裁判、既有限制和目的地要求；同意离婚不等于同意孩子移居。"

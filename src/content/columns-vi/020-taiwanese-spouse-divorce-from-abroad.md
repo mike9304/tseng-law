@@ -7,7 +7,7 @@ date_display: "28 tháng 9 năm 2026"
 read_time: "4 phút đọc"
 categories:
   - "Thông tin pháp luật Đài Loan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "Có luật sư rồi thì chắc chắn không cần đến tòa ở Đài Loan?"
     a: "Không thể bảo đảm. Điều 13 Luật về các vụ việc gia đình của Đài Loan cho phép tòa yêu cầu đương sự hoặc người đại diện theo pháp luật trực tiếp có mặt. Việc ủy quyền và việc có mặt cần kiểm tra riêng."

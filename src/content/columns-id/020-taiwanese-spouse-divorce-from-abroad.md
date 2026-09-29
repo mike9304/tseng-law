@@ -7,7 +7,7 @@ date_display: "28 September 2026"
 read_time: "4 menit"
 categories:
   - "Informasi Hukum Taiwan"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 faq:
   - q: "Jika ada pengacara, apakah saya pasti tidak perlu hadir?"
     a: "Tidak ada jaminan. Pasal 13 Undang-Undang Perkara Keluarga Taiwan (家事事件法) memungkinkan pengadilan memerintahkan pihak untuk hadir sendiri. Kuasa kepada pengacara dan kewajiban hadir adalah dua hal yang dinilai terpisah."

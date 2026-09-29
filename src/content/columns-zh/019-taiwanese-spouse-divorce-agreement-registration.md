@@ -6,7 +6,7 @@ date_display: "2026年9月28日"
 read_time: "約4分鐘"
 categories:
   - "台灣法律資訊"
-featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+featured_image: "../images/019-taiwanese-spouse-divorce-agreement-registration/featured-01.webp"
 faq:
   - q: "簽好離婚協議書就完成台灣的協議離婚了嗎？"
     a: "依民法第1050條辦理兩願離婚，須有書面、二人以上證人簽名及戶政機關離婚登記。跨國案件還要另行確認準據法與其他國家或地區的登記。"

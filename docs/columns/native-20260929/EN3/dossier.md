@@ -4,7 +4,7 @@ Access date for every row: 2026-09-29. Source of law text: 全國法規資料庫
 
 Confirmation key: (a) statute text; (b) agency guidance/other official page.
 
-| 主張 | 出處 URL | 原文 | 確認 | 
+| 主張 | 出處 URL | 原文 | 確認 |
 |---|---|---|---|
 | Employer may end with notice only on 5 grounds | https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11 | 勞基法第11條：「非有左列情事之一者，雇主不得預告勞工終止勞動契約：一、歇業或轉讓時。二、虧損或業務緊縮時。三、不可抗力暫停工作在一個月以上時。四、業務性質變更，有減少勞工之必要，又無適當工作可供安置時。五、勞工對於所擔任之工作確不能勝任時。」 | a (b: 最高法院109年度台上字第1516號 only via secondary search result, NOT used in draft) |
 | Dismissal without notice grounds; employer must act within 30 days of knowing | https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12 | 第12條：「勞工有左列情形之一者，雇主得不經預告終止契約：…六、無正當理由繼續曠工三日，或一個月內曠工達六日者。雇主依前項第一款、第二款及第四款至第六款規定終止契約者，應自知悉其情形之日起，三十日內為之。」 | a |

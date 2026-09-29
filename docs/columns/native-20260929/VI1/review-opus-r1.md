@@ -40,10 +40,10 @@ verdict: REVISE
 - 근거: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=18 「移民署得禁止其入國：…七、在我國或外國有犯罪紀錄。…十三、有危害我國利益、公共安全或公共秩序之虞。」
 - 수정안:
   > "…nếu có hồ sơ phạm tội (犯罪紀錄) ở Đài Loan hoặc nước ngoài (điểm 7 khoản 1 Điều 18), hoặc có nguy cơ gây hại cho lợi ích, an ninh, trật tự công cộng của Đài Loan (điểm 13). Đây là quyền cân nhắc của Sở Di dân, không phải tự động cấm."
-  
+
   뒤 문장은 1인칭 표현을 빼고 다음처럼 바꾼다.
   > "Luật không nói rõ một quyết định cảnh cáo hành chính (告誡) có được tính là 'hồ sơ phạm tội' hay không; cảnh cáo là xử phạt hành chính, không phải bản án hình sự, nhưng cách Sở Di dân áp dụng cần được hỏi theo từng hồ sơ."
-  
+
   告誡가 행정벌이라는 근거는 行政罰法 §2 제4호다(P1-6 참조).
 
 ### P1-4. 체류증(ARC)·취업허가 영향에 대해 "근거 없음"이라고 썼지만 공식 근거가 있음
@@ -55,7 +55,7 @@ verdict: REVISE
   - https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=73 「雇主聘僱之外國人，有下列情事之一者，廢止其聘僱許可：…六、違反其他中華民國法令，情節重大。」
 - 수정안(해당 문장 교체):
   > "Về thẻ cư trú, Điều 32 Luật Xuất nhập cảnh và di dân quy định Sở Di dân thu hồi giấy phép cư trú và hủy thẻ ARC khi người nước ngoài bị kết án tù từ 1 năm trở lên và bản án đã có hiệu lực; tội vô ý hoặc được hưởng án treo (緩刑) thì không thuộc trường hợp này. Với lao động, Điều 73 Luật Dịch vụ việc làm (就業服務法) cho phép thu hồi giấy phép tuyển dụng nếu vi phạm pháp luật Đài Loan ở mức nghiêm trọng (情節重大). Một quyết định cảnh cáo hành chính có bị xem là 'nghiêm trọng' hay không thì chưa có hướng dẫn chính thức, nên hãy hỏi luật sư trước khi gia hạn ARC, đổi chủ hay xuất cảnh."
-  
+
   §32 링크를 추가하면 §36 링크는 빼는 편이 낫다(링크 수 조정, 아래 P2-17 참조).
 
 ### P1-5. "rút tiền hộ"(車手) 시나리오가 §22 2단 구조 설명에 섞여 있음

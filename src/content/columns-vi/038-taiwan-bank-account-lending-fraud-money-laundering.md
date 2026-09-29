@@ -53,7 +53,7 @@ Có hai kiểu hạn chế. Kiểu thứ nhất là tài khoản cảnh báo (�
 
 Theo Điều 9, thời hạn cảnh báo tính từ lúc thông báo, quá hai năm thì tự hết hiệu lực; nếu cần, cơ quan đã thông báo phải thông báo lại trước khi hết hạn, chỉ kéo dài một lần, tối đa một năm. Ngân hàng không tự gỡ được, nhưng cho bạn biết đơn vị đã thông báo (原通報機關). Cục Cảnh sát hình sự (刑事警察局) có [hướng dẫn xin gỡ cảnh báo](https://www.cib.npa.gov.tw/ch/app/faq/view?module=faq&id=18233&serno=8eefc13f-6bf6-4532-b1ac-154167fe59d9).
 
-Kiểu thứ hai là hạn chế do đã bị cảnh cáo theo Điều 22, nêu trong [Biện pháp quản lý theo khoản 6 Điều 22 (洗錢防制法第二十二條第六項帳戶帳號暫停限制功能或逕予關閉管理辦法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0030062). Hạn chế có hiệu lực 5 năm từ ngày cảnh cáo: thẻ ATM của mỗi tài khoản chỉ được chuyển tối đa 10.000 Đài tệ và rút tối đa 10.000 Đài tệ mỗi ngày (tính riêng; quẹt thẻ tính chung hạn mức), không dùng được ngân hàng trực tuyến, ngân hàng qua điện thoại hay liên kết ví điện tử. Tại quầy vẫn rút, chuyển được, nhưng ngân hàng có thể đòi giấy tờ chứng minh giao dịch hợp lý. Vi phạm lại thì sau 5 năm đầu bị tính thêm 5 năm.
+Kiểu thứ hai là hạn chế do đã bị cảnh cáo theo Điều 22, nêu trong [Biện pháp quản lý theo khoản 6 Điều 22 (洗錢防制法第二十二條第六項帳戶帳號暫停限制功能或逕予關閉管理辦法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0030062). Hạn chế có hiệu lực 5 năm từ ngày cảnh cáo: thẻ ATM của mỗi tài khoản chỉ được chuyển tối đa 10.000 Đài tệ và rút tối đa 10.000 Đài tệ mỗi ngày (tính riêng; quẹt thẻ tính chung hạn mức), không dùng được ngân hàng trực tuyến, ngân hàng qua điện thoại hay liên kết ví điện tử. Tại quầy vẫn rút, chuyển được, nhưng ngân hàng có thể đòi giấy tờ chứng minh giao dịch hợp lý. Nếu vi phạm lại trong thời gian hạn chế đang có hiệu lực, thêm 5 năm được tính từ ngày hết hạn của thời hạn đầu.
 
 ## Nạn nhân lừa đảo có thể đòi tiền bạn không
 
@@ -77,10 +77,25 @@ Nếu bạn vừa nhận ra mình đã đưa thẻ cho người lạ: gọi ngâ
 
 Khi bị hỏi, theo [Điều 95 Bộ luật Tố tụng hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95), người hỏi phải báo trước bạn bị tình nghi tội gì, bạn có quyền im lặng, không phải nói trái ý mình, có quyền chọn luật sư và yêu cầu điều tra chứng cứ có lợi. Điều 100-2 áp dụng các quy định này cả khi cảnh sát lấy lời khai. Theo Điều 27, bạn có thể mời luật sư ngay từ lúc cảnh sát hỏi. Theo Điều 99, người không thông thạo tiếng phải có phiên dịch. Bạn có quyền yêu cầu đọc lại biên bản (筆錄) và yêu cầu sửa, bổ sung trước khi ký (Điều 41); đừng ký khi chưa hiểu từng câu.
 
-Dịch vụ luật sư miễn phí đi cùng khi lấy lời khai lần đầu của [Quỹ Hỗ trợ pháp lý (法律扶助基金會)](https://www.laf.org.tw/service-project-detail/19) chỉ dành cho tội có mức phạt tù tối thiểu từ 3 năm, người dân tộc nguyên trú (原住民) hoặc người khuyết tật không tự trình bày đầy đủ được, nên vụ cho mượn tài khoản thông thường ít khi thuộc diện này. Người nước ngoài cư trú hợp pháp, thu nhập thấp vẫn có thể xin Quỹ cử luật sư (申請法扶律師) cho giai đoạn điều tra hoặc xét xử; Quỹ xét cả tài chính lẫn nội dung vụ việc.
+Dịch vụ luật sư miễn phí đi cùng khi lấy lời khai lần đầu của [Quỹ Trợ giúp pháp lý (法律扶助基金會)](https://www.laf.org.tw/service-project-detail/19) chỉ dành cho tội có mức phạt tù tối thiểu từ 3 năm, người dân tộc nguyên trú (原住民) hoặc người khuyết tật không tự trình bày đầy đủ được, nên vụ cho mượn tài khoản thông thường ít khi thuộc diện này. Người nước ngoài cư trú hợp pháp, thu nhập thấp vẫn có thể xin Quỹ cử luật sư (申請法扶律師) cho giai đoạn điều tra hoặc xét xử; Quỹ xét cả tài chính lẫn nội dung vụ việc.
 
 ### Tư vấn ban đầu
 
 Khi liên hệ Hovering International Law Firm (昊鼎國際法律事務所), hãy gửi mô tả ngắn: bạn đã đưa hoặc bán gì (tài khoản, thẻ ATM, mật khẩu ngân hàng điện tử), khi nào, có nhận tiền không, tài khoản bị khóa từ ngày nào và giấy mời hẹn bạn đến ngày nào. Hãy cho biết ngôn ngữ bạn muốn dùng. Không gửi mật khẩu hoặc mã OTP qua email.
 
-Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103). Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng). Các nguồn pháp lý trích dẫn trong bài được kiểm tra ngày 29 tháng 9 năm 2026; hiệu lực của từng điều khoản cần được đánh giá dựa trên văn bản và sự việc cụ thể.
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103). Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng).
+
+## Nguồn tham khảo chính thức
+
+- Luật Phòng chống rửa tiền, Điều 22: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=22
+- Bộ luật Hình sự, Điều 30: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=30
+- Quy định quản lý tài khoản tiền gửi nghi ngờ bất hợp pháp hoặc giao dịch bất thường (存款帳戶及其疑似不法或顯屬異常交易管理辦法): https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380199
+- Cục Điều tra hình sự, hướng dẫn xin gỡ cảnh báo: https://www.cib.npa.gov.tw/ch/app/faq/view?module=faq&id=18233&serno=8eefc13f-6bf6-4532-b1ac-154167fe59d9
+- Biện pháp quản lý theo khoản 6 Điều 22 Luật Phòng chống rửa tiền (洗錢防制法第二十二條第六項帳戶帳號暫停限制功能或逕予關閉管理辦法): https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0030062
+- Bộ luật Hình sự, Điều 95: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=95
+- Luật Xuất nhập cảnh và di dân, Điều 32: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=32
+- Luật Xuất nhập cảnh và di dân, Điều 18: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=18
+- Bộ luật Tố tụng hình sự, Điều 95: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95
+- Quỹ Trợ giúp pháp lý (法律扶助基金會), dịch vụ luật sư đi cùng khi bị hỏi cung: https://www.laf.org.tw/service-project-detail/19
+
+Ngày kiểm tra: 29/9/2026. Hiệu lực của từng điều khoản cần được đánh giá dựa trên văn bản và sự việc cụ thể.

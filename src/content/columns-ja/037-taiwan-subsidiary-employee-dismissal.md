@@ -145,4 +145,17 @@ faq:
 
 昊鼎国際法律事務所の弁護士・曾雋崴への相談では、従業員の勤続年数と適用される退職金制度、解雇を考える事情、面談や警告の記録、事業所の従業員数を簡潔に伝えてください。ご希望の相談言語もお知らせください。メール：[wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)。所在地：103 臺北市大同區承德路一段35號7樓之2。広告責任弁護士：曾雋崴。最低勤務期間条項が絡む場合は、[台湾の最低勤務期間条項](/ja/columns/taiwan-mandatory-employment-period)も参考になります。
 
-公式資料の確認日は2026年9月29日です。条文・手続きは改正があり得るため、実行前に最新の内容を確認します。
+## 参照した公式資料
+
+- 勞動基準法第11条: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11
+- 司法院の裁判書（最高法院109年度台上字第1516號）: https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPSV%2C109%2C%E5%8F%B0%E4%B8%8A%2C1516%2C20200813%2C1
+- 勞動基準法第12条: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=12
+- 勞動部Q&A: https://www.mol.gov.tw/2623/2625/2627/qaList
+- 勞動基準法第17条: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=17
+- 勞工退休金條例第12条: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12
+- 就業服務法第33条: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=33
+- 勞動部Q&A（その2）: https://www.mol.gov.tw/2623/2625/2628/qaList
+- 大量解僱勞工保護法第2条: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020012&flno=2
+- 勞動事件法第49条: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=49
+
+確認日：2026年9月29日。 条文・手続きは改正があり得るため、実行前に最新の内容を確認します。

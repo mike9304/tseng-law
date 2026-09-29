@@ -34,9 +34,9 @@ verdict: **REVISE**
   - 제93-2조 제3항 단서 "但於通知前已訊問被告者，應當庭告知，並付與前項之書面。"
 - 수정안: 제93-2조 문단 첫 두 문장을 아래로 교체.
   > In a criminal case the ban can arrive in two ways. A prosecutor or judge can impose it directly, even before you have been questioned, under [Article 93-2 of the Code of Criminal Procedure](…93-2) when you are seriously suspected and either have no fixed residence, give good reason to fear flight, or give good reason to fear destruction of evidence or collusion with witnesses. That direct route is not available for offenses punishable at most by short-term detention (拘役) or a fine. A ban can also be added after you are questioned: if the prosecutor or judge releases you on bail or with restricted residence, Article 93-6 allows an exit ban at the same time. Both routes follow the same time limits and remedies.
-  
+
   (주의: "usually/more often" 같은 빈도 표현은 근거가 없으므로 쓰지 말 것. "逕行"을 "even before you have been questioned"로 옮기는 근거는 제93-2조 제3항 구조다. 이 조항은 신문 전 부과를 전제하고, 이미 신문한 경우에만 당정 고지를 요구한다.)
-  
+
   그리고 통지 문장 뒤에 추가: "If you were questioned before the notice was sent, you must be told in the hearing and handed the written decision there."
 
 ### P1-2. 입출국법 제31조 제4항 제8호 설명이 틀림(체류 만료 위험)

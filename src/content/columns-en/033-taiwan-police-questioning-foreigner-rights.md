@@ -93,4 +93,17 @@ If you or someone close to you has received a police notice or prosecutor's summ
 
 Email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The Taipei office is at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan (103 臺北市大同區承德路一段35號7樓之2). Attorney Wei Tseng (曾雋崴) is responsible for this advertisement.
 
-Official sources checked September 29, 2026. Statutes change; check the current text and your own dates with a lawyer or with the office named on your paper.
+## Official sources
+
+- Code of Criminal Procedure, Article 95: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95
+- Code of Criminal Procedure, Article 99: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99
+- Code of Criminal Procedure, Article 93-1: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-1
+- Legal Aid Foundation, lawyer accompaniment for police and prosecutor questioning: https://www.laf.org.tw/service-project-detail/19
+- Legal Aid Foundation, eligibility page: https://www.laf.org.tw/service-assistance-des
+- Code of Criminal Procedure, Article 93: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93
+- Code of Criminal Procedure, Article 101: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=101
+- Code of Criminal Procedure, Article 31-1: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=31-1
+- Criminal Code, Article 95: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=95
+- Immigration Act, Article 36: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=36
+
+Checked: September 29, 2026. Statutes change; check the current text and your own dates with a lawyer or with the office named on your paper.

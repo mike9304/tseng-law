@@ -162,13 +162,24 @@ function reconcileGuidanceLanguageAlternates(
  * seo-visibility.ts must stay importable from the client bundle through
  * src/lib/seo.ts. Injected into isEnglishNoindexPath below.
  */
+// Parsed once per sitemap build: this check runs for every candidate path, and
+// re-reading the English corpus each time made sitemap generation very slow.
+let englishColumnSlugsCache: { at: number; slugs: Set<string> } | null = null;
+function getEnglishColumnSlugs(): Set<string> {
+  const now = Date.now();
+  if (!englishColumnSlugsCache || now - englishColumnSlugsCache.at > 5_000) {
+    englishColumnSlugsCache = { at: now, slugs: new Set(getAllColumnPosts('en').map((post) => post.slug)) };
+  }
+  return englishColumnSlugsCache.slugs;
+}
+
 function isFileBackedEnglishColumnPath(path: string): boolean {
   const match = path.match(/^\/columns\/([^/]+)$/);
   if (!match) return false;
   const rawSlug = match[1];
   // columns-en is the source of truth: English-only native columns have no
   // Korean file but are full, indexable English articles.
-  const known = new Set(getAllColumnPosts('en').map((post) => post.slug));
+  const known = getEnglishColumnSlugs();
   // Accept both real slugs and short aliases that resolve to file-backed posts.
   if (known.has(rawSlug) || known.has(resolveSlug(rawSlug))) return true;
   if (getAliasSlugs().includes(rawSlug) && known.has(resolveSlug(rawSlug))) return true;

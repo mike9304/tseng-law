@@ -79,4 +79,17 @@ When contacting Hovering International Law Firm, say which airport and date the 
 
 Email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The Taipei office is at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan (103 臺北市大同區承德路一段35號7樓之2). Attorney Wei Tseng (曾雋崴) is responsible for this advertisement.
 
-Official sources checked September 29, 2026. What applies to you depends on the authority and the wording of your notice.
+## Official sources
+
+- Immigration Act, Article 21: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=21
+- Code of Criminal Procedure, Article 93-2: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-2
+- Code of Criminal Procedure, Article 93-3: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=93-3
+- Tax Collection Act, Article 24: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340001&flno=24
+- Ministry of Finance, guidelines on restricting and lifting exit restrictions for tax debtors: https://law-out.mof.gov.tw/LawContent.aspx?id=GL009873
+- Compulsory Enforcement Act, Article 22: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010004&flno=22
+- Judicial Yuan, directions to enforcement courts: https://legal.judicial.gov.tw/FLAW/dat02.aspx?lsid=FL001393
+- Administrative Execution Act, Article 17: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030023&flno=17
+- National Immigration Agency, online check: https://egate.immigration.gov.tw/NIA_OnlineApply_inter/personVoucher/personVoucherForeign.action
+- National Immigration Agency, service center: https://www.immigration.gov.tw/5385/7244/7250/7254/15553/16511/
+
+Checked: September 29, 2026. What applies to you depends on the authority and the wording of your notice.

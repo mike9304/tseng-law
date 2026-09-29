@@ -43,7 +43,7 @@ Two situations get muddied. The Ministry of Labor's guidance is that an employer
 
 ## Notice pay, severance and the certificate you will need
 
-If the dismissal is lawful under Article 11, the employer still owes notice and severance. Article 16 sets notice at 10 days for three months to a year of service, 20 days for one to three years and 30 days beyond that; short notice means wages for the notice period. During the notice period you may take time off to look for work, up to two days' worth of working hours per week, with pay.
+If the dismissal is lawful under Article 11, the employer still owes severance. Statutory notice is separate and depends on length of service. Article 16 requires notice of 10 days where service is at least three months but less than one year, 20 days where it is at least one year but less than three years, and 30 days where it is three years or more. There is no statutory notice period for service of less than three months, though the contract or work rules may still set one. If the employer ends the contract without giving the statutory notice, it must pay wages for the notice period that should have been given. During the notice period you may take time off to look for work, up to two days' worth of working hours per week, with pay.
 
 Severance depends on which pension system covers each year of your service. Under the old Labor Standards Act system, Article 17 gives one month of average wages per year, with no cap. Under the new system, [Article 12 of the Labor Pension Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12) gives half a month per year, prorated and capped at six months. Since January 1, 2026, Article 24 of the Foreign Professionals Act has put foreign professionals on the new system, whether or not they hold permanent residence. Those already employed on that date had until June 30, 2026 to tell their employer in writing that they wanted to stay under the old rules, and that window has now closed. Switching does not wipe out earlier years. Under Article 11 of the Labor Pension Act, service with the same employer before the switch is preserved, and on a dismissal under Article 11 of the Labor Standards Act it is paid at the old rate of one month per year, based on your average wage when the contract ends. Only the years from 2026 onward use the half-month formula. Permanent residents and spouses of Taiwanese citizens may have switched earlier. Ask HR for the year-by-year calculation in writing; the Ministry of Labor's [Q&A](https://www.mol.gov.tw/1607/28690/2282/2302/2316/86977/post) explains the transition. The broader picture is in our [severance overview](/en/columns/taiwan-labor-severance-law). Severance is due within 30 days after the contract ends.
 
@@ -57,7 +57,7 @@ Formal mediation starts with an application under the [Labor Dispute Resolution 
 
 At the labor court, [Article 16 of the Labor Case Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=16) requires court mediation before a lawsuit is heard, and filing directly is treated as a request for mediation. It should finish within three months and three sessions, and a settlement has the effect of a final judgment. In suits over the employment relationship, wages or severance, two-thirds of the court fee is provisionally waived for the employee. If you challenge the dismissal and are likely to win, the court can also order continued employment and wages while the case goes on, if keeping you on is not a serious hardship for the employer (Article 49).
 
-The statutes set no short deadline for challenging a dismissal, but limitation periods apply to money claims, so do not wait. Legal aid is worth checking: once mediation at the labor bureau has failed, the Ministry of Labor subsidizes lawyers' fees in court for workers whose monthly income is at most NT$65,000 and assets at most NT$3 million, and the Legal Aid Foundation (法律扶助基金會) can also assist foreigners living here lawfully.
+The statutes set no short deadline for challenging a dismissal, but limitation periods apply to money claims, so do not wait. Legal aid is worth checking: once mediation at the labor bureau has failed, the Ministry of Labor subsidizes lawyers' fees in court for workers whose monthly income is at most NT$65,000 and assets at most NT$3 million (not counting your owner-occupied home), and the Legal Aid Foundation (法律扶助基金會) can also assist foreigners living here lawfully.
 
 ## What happens to your permit and ARC
 
@@ -81,4 +81,17 @@ When you write to Hovering International Law Firm, tell us your nationality, you
 
 Email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The Taipei office is at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan (103 臺北市大同區承德路一段35號7樓之2). Attorney Wei Tseng (曾雋崴) is responsible for this advertisement.
 
-Official sources checked September 29, 2026. Confirm current requirements, processing times and your own status with the National Immigration Agency and the Ministry of Labor.
+## Official sources
+
+- Labor Standards Act, Article 18: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=18
+- Labor Standards Act, Article 11: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=11
+- Labor Pension Act, Article 12: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030020&flno=12
+- Ministry of Labor, Q&A on the pension-system transition: https://www.mol.gov.tw/1607/28690/2282/2302/2316/86977/post
+- Labor Dispute Resolution Act, Article 9: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=9
+- Labor Case Act, Article 16: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=16
+- Immigration Act, Article 31: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31
+- Regulations on residence, Article 10: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080129&flno=10
+- Employment Service Act, Article 53: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=53
+- Foreign Professionals Act, Article 9: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9
+
+Checked: September 29, 2026. Confirm current requirements, processing times and your own status with the National Immigration Agency and the Ministry of Labor.

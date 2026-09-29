@@ -34,7 +34,7 @@ Luật không trả lời gọn bằng “có” hay “không”. Thẻ cư tr�
 
 Khoản 4 có chín điểm (bản hiện hành, hiệu lực từ 1/1/2024); đây là các điểm hay gặp.
 
-Chồng qua đời (điểm 1: 因依親對象死亡). Nếu đang ở Đài Loan, đây là căn cứ để xin ở tiếp, và luật không đòi phải có con. Nếu đã phải về Việt Nam mà vẫn nuôi hoặc thăm con chưa thành niên có hộ tịch Đài Loan, [Điều 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) (điểm 9 cho người góa, điểm 10 cho người đã ly hôn từng cư trú hợp pháp) cho phép người đã vào Đài Loan bằng thị thực lưu trú ngắn hạn (停留簽證) từ 60 ngày trở lên xin thẻ cư trú tại Sở Di dân.
+Chồng qua đời (điểm 1: 因依親對象死亡). Nếu đang ở Đài Loan, đây là căn cứ để xin ở tiếp, và luật không đòi phải có con. Nếu đã phải về Việt Nam mà vẫn nuôi hoặc thăm con chưa thành niên có hộ tịch Đài Loan, [Điều 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) (điểm 9 cho người góa, điểm 10 cho người đã ly hôn từng cư trú hợp pháp) cho phép người nhập cảnh bằng thị thực còn hiệu lực với thời hạn lưu trú từ 60 ngày trở lên, và thị thực đó không bị ghi chú cấm gia hạn hay hạn chế khác, xin cư trú tại Sở Di dân, với điều kiện về con chưa thành niên có hộ tịch Đài Loan. Thẻ cư trú chỉ được cấp khi Sở Di dân chấp thuận đơn.
 
 Ly hôn vì bạo lực gia đình (điểm 2). Nguyên văn: “因遭受家庭暴力離婚，且未再婚”, tức là ly hôn vì bị bạo lực gia đình và chưa tái hôn. Luật không đòi phải có con, cũng không đòi có lệnh bảo vệ. [Thông cáo của Sở Di dân ngày 30/5/2023](https://www.immigration.gov.tw/5385/7229/7238/345995/cp_news) khi sửa luật cũng xác nhận điều này. Trước đó phải có bản án ly hôn và có con ruột chưa thành niên có hộ tịch Đài Loan.
 
@@ -52,7 +52,7 @@ Nếu đã có bạo lực, Điều 43 Luật Phòng chống bạo lực gia đ�
 
 ## Đang chờ nhập tịch, hoặc đã thôi quốc tịch Việt Nam
 
-[Điều 4 Luật Quốc tịch (國籍法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=4) cho phép người cư trú hợp pháp liên tục ba năm, mỗi năm ít nhất 183 ngày, xin nhập tịch nếu thuộc một nhóm được liệt kê. Hồ sơ nộp với tư cách vợ của công dân Đài Loan (điểm 1 khoản 1) dựa trên hôn nhân; ly hôn khi hồ sơ đang xét thì căn cứ mất, và bạn chỉ đi tiếp nếu thuộc điểm 2 (ly hôn vì bạo lực gia đình mà chưa tái hôn; hoặc góa, chưa tái hôn và vẫn qua lại với gia đình chồng, trừ khi hôn nhân đã từ hai năm trở lên) hoặc điểm 3 (nuôi, thăm nom con có quốc tịch Đài Loan dưới 18 tuổi). Ít người để ý: người đang là vợ, chồng được miễn điều kiện tài sản hoặc kỹ năng đủ tự lập, còn người đã ly hôn phải chứng minh (điểm 4 khoản 1 Điều 3). Hãy báo ngay cho cơ quan hộ chính nơi nộp hồ sơ, mang giấy tờ về căn cứ mới và thu nhập, rồi hỏi cần bổ sung hay nộp lại.
+[Điều 4 Luật Quốc tịch (國籍法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=4) cho phép người cư trú hợp pháp liên tục ba năm, mỗi năm ít nhất 183 ngày, xin nhập tịch nếu thuộc một nhóm được liệt kê. Hồ sơ nộp với tư cách vợ của công dân Đài Loan (điểm 1 khoản 1) dựa trên hôn nhân; ly hôn khi hồ sơ đang xét thì căn cứ mất, và bạn chỉ đi tiếp nếu thuộc điểm 2 (ly hôn vì bạo lực gia đình mà chưa tái hôn; hoặc góa, chưa tái hôn và vẫn qua lại với gia đình chồng; nếu hôn nhân đã kéo dài từ hai năm trở lên thì không cần điều kiện vẫn qua lại này) hoặc điểm 3 (nuôi, thăm nom con có quốc tịch Đài Loan dưới 18 tuổi). Ít người để ý: người đang là vợ, chồng được miễn điều kiện tài sản hoặc kỹ năng đủ tự lập, còn người đã ly hôn phải chứng minh (điểm 4 khoản 1 Điều 3). Hãy báo ngay cho cơ quan hộ chính nơi nộp hồ sơ, mang giấy tờ về căn cứ mới và thu nhập, rồi hỏi cần bổ sung hay nộp lại.
 
 Sau khi được phép nhập tịch, bạn xin thẻ cư trú dành cho công dân chưa có hộ tịch (臺灣地區居留證), nộp giấy thôi quốc tịch cũ trong một năm, ở đủ thời gian quy định rồi mới xin giấy định cư (定居證) và đăng ký hộ tịch. Quá một năm mà chưa nộp, và không được gia hạn vì lý do phía Việt Nam (có Bộ Ngoại giao xác nhận), thì phép nhập tịch bị hủy; chưa nộp thì cũng chưa được định cư (Điều 9). Nếu đã mất quốc tịch Việt Nam mà chưa được duyệt nhập tịch, điểm 2 Điều 26 Luật Xuất nhập cảnh buộc bạn xin cư trú trong 30 ngày, tính từ ngày hôm sau ngày mất quốc tịch. Ngoài trường hợp trên, Điều 19 chỉ cho hủy khi việc nhập tịch không đúng luật (chẳng hạn kết hôn giả có bản án); ly hôn thật sự về sau không phải căn cứ hủy.
 
@@ -76,7 +76,7 @@ Mỗi thành phố, huyện có trung tâm phòng chống bạo lực gia đình
 
 ## Vì sao thứ tự các bước lại quyết định nhiều điều
 
-[Thuận tình ly hôn](/vi/columns/taiwanese-spouse-divorce-agreement-registration) chỉ cần văn bản, hai người làm chứng và đăng ký ở hộ chính (Điều 1050), không cần tòa, nên có thể xong rất nhanh. Vì vậy nhiều người bị ép ký khi hoảng loạn.
+[Thuận tình ly hôn](/vi/columns/taiwanese-spouse-divorce-agreement-registration) chỉ cần văn bản, ít nhất hai người làm chứng và đăng ký ở hộ chính (Điều 1050), không cần tòa, nên có thể xong rất nhanh. Vì vậy nhiều người bị ép ký khi hoảng loạn.
 
 Thứ tự nên cân nhắc: an toàn trước, rồi chứng cứ, lệnh bảo vệ nếu có bạo lực, thỏa thuận về con, và ký sau cùng. Luật không còn đòi ly hôn bằng bản án, nhưng vẫn phải là ly hôn vì bạo lực gia đình, nên hãy giữ chứng cứ độc lập như biên bản báo công an, giấy chứng nhận thương tích, hồ sơ của trung tâm phòng chống bạo lực gia đình hoặc lệnh bảo vệ, và đưa thỏa thuận cho luật sư xem trước khi ký. Nếu căn cứ là con (điểm 3), điều khoản quyền nuôi con và thăm nom phải rõ ràng, vì đó là thứ bạn đưa cho Sở Di dân. Xem thêm về [con cái khi cha mẹ ở hai nước](/vi/columns/taiwanese-spouse-divorce-cross-border-parenting) và [hỏi đáp ly hôn](/vi/columns/taiwan-divorce-lawsuit-qna).
 
@@ -84,4 +84,18 @@ Thứ tự nên cân nhắc: an toàn trước, rồi chứng cứ, lệnh bảo
 
 Nếu bạn cân nhắc ly hôn hoặc bị bạo hành và lo về thẻ cư trú, có thể liên hệ Hovering International Law Firm (昊鼎國際法律事務所), cho biết loại thẻ cư trú và ngày hết hạn, có con có hộ tịch Đài Loan không, đã có lệnh bảo vệ hoặc báo công an chưa, có thỏa thuận ly hôn nào đang chờ ký không, ngôn ngữ bạn muốn dùng và cách liên lạc an toàn (email người khác không xem được, hoặc khung giờ thuận tiện).
 
-Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103). Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng). Các nguồn pháp lý trích dẫn trong bài được kiểm tra ngày 29 tháng 9 năm 2026; hiệu lực của từng điều khoản cần đánh giá theo văn bản và sự việc cụ thể.
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103). Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng).
+
+## Nguồn tham khảo chính thức
+
+- Luật Xuất nhập cảnh và Di dân, Điều 31: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31
+- Luật Xuất nhập cảnh và Di dân, Điều 23: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23
+- Sở Di dân, thông cáo ngày 30/5/2023: https://www.immigration.gov.tw/5385/7229/7238/345995/cp_news
+- Bộ luật Dân sự, Điều 1055: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1055
+- Luật Quốc tịch, Điều 4: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0030001&flno=4
+- Luật Phòng chống bạo lực gia đình, Điều 14: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=14
+- Đường dây 113 (Bộ Y tế và Phúc lợi): https://dep.mohw.gov.tw/DOPS/cp-1183-6499-105.html
+- Sở Di dân, đường dây 1990: https://www.immigration.gov.tw/7072/7006/142639/167507/167513/
+- Quỹ Trợ giúp pháp lý (法律扶助基金會): https://www.laf.org.tw/service-assistance-des
+
+Ngày kiểm tra: 29/9/2026. Hiệu lực của từng điều khoản cần đánh giá theo văn bản và sự việc cụ thể.

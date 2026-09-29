@@ -21,9 +21,9 @@ faq:
 
 # Bị tai nạn lao động ở Đài Loan: người lao động Việt Nam và gia đình được đòi những khoản nào?
 
-Máy ép kẹp tay, anh Tuấn mất một đốt ngón trỏ. Hai ngày sau, người bên công ty môi giới đến giường bệnh, đưa tờ giấy tiếng Trung: "Ký đi, công ty cho một khoản tiền, anh về nước dưỡng thương."
+Giả sử một người lao động bị máy ép kẹp tay và mất một đốt ngón trỏ. Khi còn nằm viện, người đó được đưa một tờ giấy thỏa thuận bằng tiếng Trung, đề nghị nhận một khoản tiền rồi về nước dưỡng thương.
 
-Chuyện này không hiếm với người làm nhà máy, công trình, tàu cá hay chăm sóc người bệnh. Có ba nguồn tiền: bồi thường của chủ thuê theo Luật Tiêu chuẩn lao động (nếu bạn thuộc luật này), trợ cấp bảo hiểm tai nạn lao động, và bồi thường dân sự nếu có người có lỗi. Ba nguồn này một phần được trừ vào nhau, và ký tờ giấy kia có thể làm bạn mất một phần trong số đó.
+Tình huống này có thể xảy ra với người làm nhà máy, công trình, tàu cá hay chăm sóc người bệnh. Có ba nguồn tiền: bồi thường của chủ thuê theo Luật Tiêu chuẩn lao động (nếu bạn thuộc luật này), trợ cấp bảo hiểm tai nạn lao động, và bồi thường dân sự nếu có người có lỗi. Ba nguồn này một phần được trừ vào nhau, và ký tờ giấy kia có thể làm bạn mất một phần trong số đó.
 
 ## Chủ thuê phải trả gì theo Điều 59
 
@@ -45,9 +45,9 @@ Người chăm sóc làm cho viện dưỡng lão, trung tâm chăm sóc tư nh�
 
 Cục Bảo hiểm lao động (勞保局) chi trả theo luật bảo hiểm này, có hiệu lực từ ngày 1/5/2022. Điều 11 ghi rõ người tham gia bao gồm cả người nước ngoài.
 
-Chủ thuê phải cấp giấy khám do tai nạn lao động (醫療書單); nếu không, bạn xin thẳng Cục Bảo hiểm lao động. Trợ cấp nghỉ điều trị (傷病給付, Điều 42) tính từ ngày thứ tư không đi làm được: hai tháng đầu theo mức lương đóng bảo hiểm bình quân, từ tháng thứ ba 70%, tối đa hai năm. Thương tật vĩnh viễn (失能) được trả một lần hoặc trợ cấp hằng tháng (年金) tùy mức độ. Nếu tử vong, có trợ cấp mai táng 5 tháng lương đóng bảo hiểm và trợ cấp cho thân nhân đủ điều kiện (hằng tháng hoặc một lần 40 tháng).
+Chủ thuê phải cấp giấy khám do tai nạn lao động (醫療書單); nếu không, bạn xin thẳng Cục Bảo hiểm lao động. Trợ cấp nghỉ điều trị (傷病給付, Điều 42) tính từ ngày thứ tư không đi làm được: hai tháng đầu theo mức lương đóng bảo hiểm bình quân, từ tháng thứ ba 70%, tối đa hai năm. Thương tật vĩnh viễn (失能) được trả một lần hoặc trợ cấp hằng tháng (年金) tùy mức độ. Nếu tử vong, trợ cấp mai táng thông thường bằng 5 tháng lương đóng bảo hiểm bình quân; nếu người mất không có thân nhân thuộc diện hưởng thì mức này là 10 tháng. Thân nhân đủ điều kiện có thể nhận trợ cấp hằng tháng hoặc khoản một lần 40 tháng, tùy điều kiện luật định.
 
-Cơ quan bảo hiểm xét có phải tai nạn lao động không theo Quy tắc xét duyệt tai nạn, bệnh nghề nghiệp (職業傷病審查準則). Về bảo hiểm, Điều 4 quy tắc này coi tai nạn trên đường đi, về giữa nơi ở và nơi làm việc, vào giờ hợp lý, đúng đường cần đi, cũng là tai nạn lao động. Điều 17 loại trừ đi việc riêng, lái xe không bằng, vượt đèn đỏ và vài trường hợp khác. Về thủ tục giao thông xem [hỏi đáp tai nạn giao thông](/vi/columns/taiwan-traffic-accident-procedure). Khi chưa có kết luận, Điều 88 luật bảo hiểm cho bạn xin nghỉ bệnh thông thường trước, sau đó chuyển thành nghỉ do tai nạn lao động nếu được công nhận.
+Cơ quan bảo hiểm xét có phải tai nạn lao động không theo Quy tắc xét duyệt tai nạn, bệnh nghề nghiệp (職業傷病審查準則). Về bảo hiểm, Điều 4 quy tắc này coi tai nạn trên đường đi, về giữa nơi ở và nơi làm việc, vào giờ hợp lý, đúng đường cần đi, cũng là tai nạn lao động. Điều 17 loại trừ hành vi riêng tư không cần thiết cho sinh hoạt hằng ngày, lái xe khi không có giấy phép đúng hạng xe, vượt đèn đỏ tại ngã tư có đèn tín hiệu, và một số vi phạm giao thông khác được liệt kê trong điều này. Về thủ tục giao thông xem [hỏi đáp tai nạn giao thông](/vi/columns/taiwan-traffic-accident-procedure). Khi chưa có kết luận, Điều 88 luật bảo hiểm cho bạn xin nghỉ bệnh thông thường trước, sau đó chuyển thành nghỉ do tai nạn lao động nếu được công nhận.
 
 Còn nếu chủ thuê chưa đóng? [Điều 36](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=36) viết rằng khi chủ thuê không làm thủ tục tham gia mà người lao động bị tai nạn xin trợ cấp, cơ quan bảo hiểm chi trả xong sẽ ra quyết định buộc chủ thuê nộp lại số tiền tương ứng. Theo Điều 28, không có chứng từ lương thì lương tính trợ cấp lấy theo bậc thấp nhất, nên phải giữ bảng lương.
 
@@ -55,7 +55,7 @@ Quyền xin trợ cấp bảo hiểm mất sau 5 năm kể từ ngày có thể 
 
 ## Đang chữa bệnh: bị đuổi việc, thẻ cư trú và chuyển chủ thuê
 
-Với người thuộc Luật Tiêu chuẩn lao động, Điều 13 cấm chủ thuê chấm dứt hợp đồng trong thời gian điều trị nói ở Điều 59, trừ khi bất khả kháng và đã được cơ quan có thẩm quyền phê duyệt. Với mọi người, kể cả người chăm sóc tại nhà, [Điều 84 luật bảo hiểm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=84) chỉ cho báo trước chấm dứt hợp đồng khi đóng cửa hoặc lỗ nặng đã được cơ quan lao động phê duyệt, khi sau điều trị bệnh viện đạt chuẩn xác nhận bạn khuyết tật không đủ sức làm, hoặc khi bất khả kháng. "Công ty thấy tốn kém" hay "nên về nước" không nằm trong danh sách. Xem thêm bài [luật tiền thôi việc ở Đài Loan](/vi/columns/taiwan-labor-severance-law).
+Với người thuộc Luật Tiêu chuẩn lao động, Điều 13 cấm chủ thuê chấm dứt hợp đồng trong thời gian điều trị nói ở Điều 59, trừ khi bất khả kháng và đã được cơ quan có thẩm quyền phê duyệt. Với mọi người, kể cả người chăm sóc tại nhà, [Điều 84 luật bảo hiểm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=84) chỉ cho báo trước chấm dứt hợp đồng trong ba trường hợp: đóng cửa hoặc lỗ nặng đã được cơ quan chủ quản phê duyệt; sau khi kết thúc điều trị, bệnh viện đạt chuẩn đánh giá của cơ quan y tế trung ương xác nhận bạn bị khuyết tật và không còn đủ sức làm công việc; hoặc thiên tai, biến cố hay bất khả kháng khác khiến việc kinh doanh không thể tiếp tục, và việc đó cũng đã được cơ quan chủ quản phê duyệt. "Công ty thấy tốn kém" hay "nên về nước" không nằm trong danh sách. Xem thêm bài [luật tiền thôi việc ở Đài Loan](/vi/columns/taiwan-labor-severance-law).
 
 Thẻ cư trú gắn với giấy phép lao động, và việc ở lại khi đang điều trị hay đang tranh chấp được xét theo từng trường hợp. Hãy mang giấy chẩn đoán hỏi Sở Di dân (移民署) hoặc 1955 trước khi thẻ cư trú (ARC) hết hạn. Điều 57 khoản 8 Luật Dịch vụ việc làm (就業服務法) cấm chủ thuê giữ hộ chiếu, giấy tờ cư trú của bạn.
 
@@ -89,4 +89,19 @@ Quỹ Trợ giúp pháp lý (法律扶助基金會) nhận người nước ngo�
 
 Khi liên hệ Hovering International Law Firm, hãy gửi tóm tắt gồm ngày xảy ra tai nạn, bệnh viện đang điều trị, chủ thuê đã đóng bảo hiểm hay chưa, giấy nào chủ thuê hoặc môi giới yêu cầu ký, và ngôn ngữ bạn muốn sử dụng.
 
-Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103). Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng). Các nguồn pháp lý trích dẫn trong bài được kiểm tra ngày 29 tháng 9 năm 2026.
+Email: [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Địa chỉ Đài Bắc: 103 臺北市大同區承德路一段35號7樓之2 (7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103). Luật sư chịu trách nhiệm quảng cáo: 曾雋崴 (Wei Tseng).
+
+## Nguồn tham khảo chính thức
+
+- Luật Tiêu chuẩn lao động, Điều 59: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=59
+- Luật Tiêu chuẩn lao động, Điều 61: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=61
+- Cục Bảo hiểm lao động, danh sách không áp dụng luật: https://www.bli.gov.tw/0007341.html
+- Bộ Lao động, hướng dẫn: https://www.mol.gov.tw/1607/1632/1640/50670/
+- Luật Bảo hiểm tai nạn lao động, Điều 36: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=36
+- Luật Bảo hiểm tai nạn lao động, Điều 84: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=84
+- Luật Xử lý tranh chấp lao động, Điều 9: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=9
+- Luật Bảo hiểm tai nạn lao động, Điều 91: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=91
+- Cục Phát triển lực lượng lao động: https://www.wda.gov.tw/News_Content.aspx?n=277&s=18960
+- Quỹ Hỗ trợ pháp lý, dự án hỗ trợ tố tụng lao động của Bộ Lao động: https://www.laf.org.tw/service-project-detail/9
+
+Ngày kiểm tra: 29/9/2026.

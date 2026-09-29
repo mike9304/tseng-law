@@ -18,7 +18,7 @@ import {
   resolveColumnTopic,
   type ColumnTopic,
 } from '@/lib/column-topics';
-import { splitEnRecommendedColumns } from '@/lib/en-recommended-columns';
+import { RECOMMENDED_SECTION_TITLE, splitRecommendedColumns } from '@/lib/en-recommended-columns';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import styles from './ColumnsGrid.module.css';
 
@@ -500,11 +500,12 @@ export default function ColumnsGrid({
   posts: ColumnListItem[];
   initialFilters?: ColumnsGridFilters;
 }) {
-  // English: posts recommended to English-speaking readers come first (also in
-  // filtered lists) and get their own section above the topic groups.
+  // Posts recommended to this locale's readers come first (also in filtered
+  // lists) and get their own section above the topic groups.
+  const recommendedTitle = RECOMMENDED_SECTION_TITLE[locale];
   const { recommended, rest: nonRecommended } = useMemo(
-    () => splitEnRecommendedColumns(locale, incomingPosts),
-    [locale, incomingPosts],
+    () => (recommendedTitle ? splitRecommendedColumns(locale, incomingPosts) : { recommended: [], rest: [...incomingPosts] }),
+    [locale, incomingPosts, recommendedTitle],
   );
   const posts = useMemo(() => [...recommended, ...nonRecommended], [recommended, nonRecommended]);
   const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
@@ -779,12 +780,14 @@ export default function ColumnsGrid({
             {recommended.length > 0 ? (
               <section
                 className="columns-topic-section"
-                aria-labelledby="columns-recommended-en"
-                data-columns-recommended="en"
+                aria-labelledby="columns-recommended"
+                data-columns-recommended={locale}
               >
                 <header className="columns-topic-header">
-                  <h2 id="columns-recommended-en" className="columns-topic-title">Recommended for English-speaking readers</h2>
-                  <span className="columns-topic-count">{recommended.length} columns</span>
+                  <h2 id="columns-recommended" className="columns-topic-title">{recommendedTitle}</h2>
+                  <span className="columns-topic-count">
+                    {topicMode ? topicCopy.count(recommended.length) : recommended.length}
+                  </span>
                 </header>
                 <div className="columns-grid">{recommended.map(renderCard)}</div>
               </section>

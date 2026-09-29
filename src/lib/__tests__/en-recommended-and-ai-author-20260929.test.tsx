@@ -5,8 +5,10 @@ import { describe, expect, it, vi } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
 import {
   EN_RECOMMENDED_COLUMN_SLUGS,
+  RECOMMENDED_SECTION_TITLE,
   prioritizeEnRecommendedColumns,
-  splitEnRecommendedColumns,
+  prioritizeRecommendedColumns,
+  splitRecommendedColumns,
 } from '@/lib/en-recommended-columns';
 import {
   AI_AUTHORED_COLUMN_SLUGS,
@@ -29,13 +31,29 @@ describe('English recommended columns', () => {
     for (const slug of EN_RECOMMENDED_COLUMN_SLUGS) expect(slugs.has(slug), slug).toBe(true);
   });
 
-  it('puts the recommended columns first, in order, on English only', () => {
+  it('puts the recommended columns first, in order', () => {
     const en = prioritizeEnRecommendedColumns('en', getAllColumnPosts('en'));
     expect(en.slice(0, EN_RECOMMENDED_COLUMN_SLUGS.length).map((post) => post.slug)).toEqual([...EN_RECOMMENDED_COLUMN_SLUGS]);
     expect(en).toHaveLength(getAllColumnPosts('en').length);
-    const ko = getAllColumnPosts('ko');
-    expect(prioritizeEnRecommendedColumns('ko', ko)).toEqual(ko);
-    expect(splitEnRecommendedColumns('ja', getAllColumnPosts('ja')).recommended).toHaveLength(0);
+  });
+
+  it('leads each locale with columns written for its readers, using only that locale\'s files', () => {
+    const first = (locale: NonNullable<Parameters<typeof getAllColumnPosts>[0]>) =>
+      prioritizeRecommendedColumns(locale, getAllColumnPosts(locale))[0]?.slug;
+    expect(first('en')).toBe('taiwan-exit-ban-foreigners');
+    expect(first('ja')).toBe('taiwan-unpaid-invoice-debt-collection');
+    expect(first('vi')).toBe('taiwan-bank-account-lending-fraud-money-laundering');
+    expect(first('ko')).toBe('taiwan-employment-gold-card');
+    expect(first('zh-hant')).toBe('taiwan-employment-gold-card');
+    expect(first('th')).toBe('taiwanese-spouse-divorce-agreement-registration');
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'zh-hans', 'id', 'th', 'fil'] as const) {
+      const posts = getAllColumnPosts(locale);
+      const { recommended, rest } = splitRecommendedColumns(locale, posts);
+      expect(recommended.length + rest.length, locale).toBe(posts.length);
+      const own = new Set(posts.map((post) => post.slug));
+      for (const post of recommended) expect(own.has(post.slug), `${locale}/${post.slug}`).toBe(true);
+      expect(RECOMMENDED_SECTION_TITLE[locale], locale).toBeTruthy();
+    }
   });
 });
 

@@ -13,6 +13,8 @@ import {
 import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
 import { readPublishedPageCanvas } from '@/lib/builder/site/published-canvas';
 import { getComponent } from '@/lib/builder/components/registry';
+import InsightsArchiveSection from '@/components/InsightsArchiveSection';
+import { mapColumnPostsToHomeInsights } from '@/lib/insights/home-insight-posts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
 import type {
   BuilderCanvasNode,
@@ -1044,6 +1046,27 @@ export async function PublishedSitePageView({
       slugPath,
       locale,
     );
+    // A home canvas whose column archive was decomposed into static nodes (the
+    // zh-hant home) froze the posts it was built with. Render the live archive
+    // there instead, like the Korean home's composite section.
+    if (isHomePage && renderedNode.id === 'home-insights-root' && resolved.columnPosts.length > 0) {
+      return (
+        <div
+          key={renderedNode.id}
+          className="builder-pub-node"
+          data-node-id="home-insights"
+          data-builder-flow-section="true"
+          data-builder-live-insights="true"
+          style={{ position: 'relative', width: '100%', height: 'auto', marginTop: 0, overflow: 'visible' }}
+        >
+          <InsightsArchiveSection
+            locale={locale}
+            posts={mapColumnPostsToHomeInsights(resolved.columnPosts)}
+            presentation="editorial"
+          />
+        </div>
+      );
+    }
     const component = getComponent(renderedNode.kind);
     const legacyZhFluidStyle = isHomePage ? getLegacyZhHantFluidContainerStyle(renderedNode, locale) : undefined;
     const decorativeVideo = resolvePublishedDecorativeVideo(renderedNode, locale);

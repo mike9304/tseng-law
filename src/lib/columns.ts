@@ -350,12 +350,36 @@ export function getAliasSlugs(): string[] {
   return Object.keys(SLUG_ALIASES);
 }
 
+/**
+ * Markdown columns are part of the deployment and never change while a
+ * production server runs, but every request used to re-read and re-parse all
+ * of them (the locale layout alone parses eight locales for the language
+ * switcher). Parse once per locale/dir in production; tests and dev keep
+ * reading from disk so edits and temp fixture dirs are always seen.
+ */
+const parsedColumnsCache = new Map<string, ColumnPost[]>();
+function shouldCacheParsedColumns(options?: ColumnLoadOptions): boolean {
+  return process.env.NODE_ENV === 'production' && !process.env.VITEST && !options?.columnsDir && !options?.cwd;
+}
+
 export function getAllColumnPosts(
   locale: ColumnContentLocale = 'ko',
   options?: ColumnLoadOptions,
 ): ColumnPost[] {
   const dir = getColumnsDir(locale, options);
   if (!dir) return [];
+  const cacheable = shouldCacheParsedColumns(options);
+  const cacheKey = `${locale}\u0000${dir}`;
+  if (cacheable) {
+    const cached = parsedColumnsCache.get(cacheKey);
+    if (cached) return cached.slice();
+  }
+  const posts = parseColumnPostsFromDir(locale, dir);
+  if (cacheable) parsedColumnsCache.set(cacheKey, posts);
+  return cacheable ? posts.slice() : posts;
+}
+
+function parseColumnPostsFromDir(locale: ColumnContentLocale, dir: string): ColumnPost[] {
   const files = fs.readdirSync(dir)
     .filter((f) => f.endsWith('.md'))
     .sort((a, b) => a.localeCompare(b, 'en'));

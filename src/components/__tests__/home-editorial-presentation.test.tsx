@@ -293,7 +293,7 @@ describe('ServicesBento editorial full descriptions', () => {
 });
 
 describe('legacy home editorial composition', () => {
-  it('wraps retained sections in editorial order with Insights after Stats', () => {
+  it('wraps retained sections in editorial order with Insights right after the hero', () => {
     const posts = [
       {
         slug: 'sample',
@@ -310,66 +310,61 @@ describe('legacy home editorial composition', () => {
     const body = LegacyHomePageBody({ locale: 'ja', posts, faqItems });
     const allChildren = Children.toArray(body.props.children);
 
-    // WO-G6: the JA 日系企業 entry block sits directly after the hero.
+    // The column archive sits directly under the hero (no scroll reveal), as on
+    // the Korean home; WO-G6's JA 日系企業 entry block follows it.
     expect(allChildren).toHaveLength(11);
-    expect(elementType(allChildren[1])).toBe(Reveal);
-    expect(elementType(revealChild(allChildren[1]))).toBe(EnAcquisitionGuideLinks);
-    expect(
-      (revealChild(allChildren[1]) as ReactElement<{ locale: SiteLocale; variant?: string }>).props,
-    ).toMatchObject({ locale: 'ja', variant: 'full' });
-    const children = allChildren.filter((_, index) => index !== 1);
-
-    expect(children).toHaveLength(10);
-    expect(elementType(children[0])).toBe(HeroSearch);
-    expect((children[0] as ReactElement<{ presentation?: string; locale: SiteLocale }>).props.presentation).toBe(
+    expect(elementType(allChildren[0])).toBe(HeroSearch);
+    expect((allChildren[0] as ReactElement<{ presentation?: string; locale: SiteLocale }>).props.presentation).toBe(
       'editorial',
     );
-    expect((children[0] as ReactElement<{ locale: SiteLocale }>).props.locale).toBe('ja');
-
-    expect(elementType(children[1])).toBe(Reveal);
-    expect(elementType(revealChild(children[1]))).toBe(ServicesBento);
+    expect((allChildren[0] as ReactElement<{ locale: SiteLocale }>).props.locale).toBe('ja');
+    expect(elementType(allChildren[1])).toBe(InsightsArchiveSection);
+    expect((allChildren[1] as ReactElement<{ posts: unknown }>).props.posts).toBe(posts);
+    expect((allChildren[1] as ReactElement<{ presentation?: string }>).props.presentation).toBe('editorial');
+    expect(elementType(allChildren[2])).toBe(Reveal);
+    expect(elementType(revealChild(allChildren[2]))).toBe(EnAcquisitionGuideLinks);
     expect(
-      (revealChild(children[1]) as ReactElement<{ presentation?: string; id?: string; variant?: string }>).props,
+      (revealChild(allChildren[2]) as ReactElement<{ locale: SiteLocale; variant?: string }>).props,
+    ).toMatchObject({ locale: 'ja', variant: 'full' });
+    const children = allChildren.slice(3);
+
+    expect(elementType(children[0])).toBe(Reveal);
+    expect(elementType(revealChild(children[0]))).toBe(ServicesBento);
+    expect(
+      (revealChild(children[0]) as ReactElement<{ presentation?: string; id?: string; variant?: string }>).props,
     ).toMatchObject({
       presentation: 'editorial',
       id: 'practice',
       variant: 'default',
     });
 
-    expect(elementType(children[2])).toBe(TaiwanHeritageInterlude);
-    expect(elementType(revealChild(children[3]))).toBe(HomeAttorneySplit);
+    expect(elementType(children[1])).toBe(TaiwanHeritageInterlude);
+    expect(elementType(revealChild(children[2]))).toBe(HomeAttorneySplit);
+    expect(
+      (revealChild(children[2]) as ReactElement<{ presentation?: string }>).props.presentation,
+    ).toBe('editorial');
+    expect(elementType(revealChild(children[3]))).toBe(HomeCaseResultsSplit);
     expect(
       (revealChild(children[3]) as ReactElement<{ presentation?: string }>).props.presentation,
     ).toBe('editorial');
-    expect(elementType(revealChild(children[4]))).toBe(HomeCaseResultsSplit);
+    expect(elementType(revealChild(children[4]))).toBe(HomeStatsSection);
+    expect(elementType(revealChild(children[5]))).toBe(FAQAccordion);
     expect(
-      (revealChild(children[4]) as ReactElement<{ presentation?: string }>).props.presentation,
-    ).toBe('editorial');
-    expect(elementType(revealChild(children[5]))).toBe(HomeStatsSection);
-    expect(elementType(revealChild(children[6]))).toBe(InsightsArchiveSection);
-    expect(
-      (revealChild(children[6]) as ReactElement<{ posts: unknown; locale: SiteLocale; presentation?: string }>).props.posts,
-    ).toBe(posts);
-    expect(
-      (revealChild(children[6]) as ReactElement<{ presentation?: string }>).props.presentation,
-    ).toBe('editorial');
-    expect(elementType(revealChild(children[7]))).toBe(FAQAccordion);
-    expect(
-      (revealChild(children[7]) as ReactElement<{ items: FAQItem[]; id?: string; sectionClassName?: string }>).props,
+      (revealChild(children[5]) as ReactElement<{ items: FAQItem[]; id?: string; sectionClassName?: string }>).props,
     ).toMatchObject({
       items: faqItems,
       id: 'faq',
       sectionClassName: 'section section--gray',
     });
-    expect(elementType(revealChild(children[8]))).toBe(OfficeMapTabs);
+    expect(elementType(revealChild(children[6]))).toBe(OfficeMapTabs);
     expect(
-      (revealChild(children[8]) as ReactElement<{ id?: string; sectionClassName?: string }>).props,
+      (revealChild(children[6]) as ReactElement<{ id?: string; sectionClassName?: string }>).props,
     ).toMatchObject({
       id: 'offices',
       sectionClassName: 'section section--light',
       presentation: 'editorial',
     });
-    expect(elementType(revealChild(children[9]))).toBe(HomeContactCta);
+    expect(elementType(revealChild(children[7]))).toBe(HomeContactCta);
   });
 });
 

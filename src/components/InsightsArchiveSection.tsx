@@ -15,7 +15,7 @@ import {
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import { interleaveColumnsByTopic, type ColumnTopic } from '@/lib/column-topics';
-import { splitEnRecommendedColumns } from '@/lib/en-recommended-columns';
+import { splitRecommendedColumns } from '@/lib/en-recommended-columns';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import {
   INSIGHTS_IMAGE_FALLBACK,
@@ -201,10 +201,10 @@ export default function InsightsArchiveSection({
       ),
     );
   };
-  // English: columns recommended to English-speaking readers lead. Then
-  // newest first, mixed across topics so the home archive shows a spread.
+  // Columns recommended to this locale's readers lead. Then newest first,
+  // mixed across topics so the home archive shows a spread.
   const sortedPosts = useMemo(() => {
-    const { recommended, rest } = splitEnRecommendedColumns(locale, posts);
+    const { recommended, rest } = splitRecommendedColumns(locale, posts);
     return [...recommended, ...interleaveColumnsByTopic(sortInsightsPostsNewestFirst(rest))];
   }, [locale, posts]);
   const [featured, ...rest] = sortedPosts;

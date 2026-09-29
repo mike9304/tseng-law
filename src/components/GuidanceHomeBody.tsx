@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { interleaveColumnsByTopic } from '@/lib/column-topics';
+import { splitRecommendedColumns } from '@/lib/en-recommended-columns';
 import Link from 'next/link';
 
 import FAQAccordion from '@/components/FAQAccordion';
@@ -232,7 +233,9 @@ function GuidanceColumnArchive({
 }) {
   const pack = guidanceContent[locale];
   const archivePage = pack.pages.columns;
-  const [featured, ...rest] = interleaveColumnsByTopic(source.posts);
+  // Columns written for this locale's readers first, then the topic mix.
+  const split = splitRecommendedColumns(source.sourceLocale, source.posts);
+  const [featured, ...rest] = [...split.recommended, ...interleaveColumnsByTopic(split.rest)];
   if (!featured) return null;
   const listItems = rest.slice(0, 3);
   const columnHref = (slug: string) => `/${source.sourceLocale}/columns/${slug}`;
@@ -482,6 +485,8 @@ export default function GuidanceHomeBody({
       <JsonLd data={legalServiceJsonLd} />
       {personJsonLd ? <JsonLd data={personJsonLd} /> : null}
       <GuidanceHero locale={locale} />
+      {/* Column archive right under the hero, as on the Korean home, without a scroll reveal. */}
+      <GuidanceColumnArchive locale={locale} source={columns} />
       <Reveal>
         <GuidanceServices locale={locale} />
       </Reveal>
@@ -504,9 +509,6 @@ export default function GuidanceHomeBody({
         <HomeStatsSection locale="en" stats={guidanceHomeStats(locale)} plainLede />
       </Reveal>
       <GuidanceHomeDetail locale={locale} />
-      <Reveal>
-        <GuidanceColumnArchive locale={locale} source={columns} />
-      </Reveal>
       {pack.pages.faq.faqs && pack.pages.faq.faqs.length > 0 ? (
         <Reveal>
           <FAQAccordion

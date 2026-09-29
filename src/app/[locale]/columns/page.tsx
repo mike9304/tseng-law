@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import { getAllColumnPosts } from '@/lib/columns';
-import { prioritizeEnRecommendedColumns } from '@/lib/en-recommended-columns';
+import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
 import { getAiAuthorCopy, isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { pageCopy } from '@/data/page-copy';
@@ -149,7 +149,7 @@ export default async function ColumnsPage(
 
   if (isGuidanceLocale4(params.locale)) {
     const locale = params.locale;
-    const posts = getAllColumnPosts(locale);
+    const posts = prioritizeRecommendedColumns(locale, getAllColumnPosts(locale));
     const copy = guidanceContent[locale].pages.columns;
     if (posts.length === 0) {
       // Body only: `[locale]/layout.tsx` already wraps guidance locales in the
@@ -253,7 +253,7 @@ export default async function ColumnsPage(
   }
 
   const copy = pageCopy[locale].insights;
-  const posts = prioritizeEnRecommendedColumns(
+  const posts = prioritizeRecommendedColumns(
     locale,
     locale === 'ja'
       ? getAllColumnPosts('ja')

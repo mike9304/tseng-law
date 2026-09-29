@@ -20,6 +20,7 @@ import { resolveLiveRouteSeoDefault } from '@/lib/builder/seo/live-route-default
 import { buildFaqJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import type { SiteLocale } from '@/lib/locales';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
+import { mapColumnPostsToHomeInsights as mapHomeInsights } from '@/lib/insights/home-insight-posts';
 
 type HomeInsightArchivePosts = Parameters<typeof InsightsArchiveSection>[0]['posts'];
 
@@ -74,11 +75,9 @@ export function LegacyHomePageBody({
   return (
     <div className={homeEditorialStyles.root}>
       <HeroSearch locale={locale} presentation="editorial" />
-      {locale === 'en' ? (
-        // Same place as the Korean home: the column archive sits right under
-        // the hero and is visible without waiting for a scroll reveal.
-        <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
-      ) : null}
+      {/* Same place as the Korean home: the column archive sits right under
+          the hero and is visible without waiting for a scroll reveal. */}
+      <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
       {locale === 'en' || locale === 'ja' ? (
         <Reveal>
           <EnAcquisitionGuideLinks locale={locale} variant="full" />
@@ -97,11 +96,6 @@ export function LegacyHomePageBody({
       <Reveal>
         <HomeStatsSection locale={locale} />
       </Reveal>
-      {locale === 'en' ? null : (
-        <Reveal>
-          <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
-        </Reveal>
-      )}
       <Reveal>
         <FAQAccordion locale={locale} items={faqItems} id="faq" sectionClassName="section section--gray" layout="split" />
       </Reveal>
@@ -116,18 +110,7 @@ export function LegacyHomePageBody({
 }
 
 export function mapColumnPostsToHomeInsights(posts: readonly ColumnPost[]): HomeInsightArchivePosts {
-  return posts
-    .filter((post) => Boolean(post.date) && Boolean(post.dateDisplay))
-    .map((post) => ({
-      slug: post.slug,
-      title: post.title,
-      date: post.date,
-      dateDisplay: post.dateDisplay,
-      readTime: post.readTime,
-      categoryLabel: post.categoryLabel,
-      featuredImage: post.featuredImage,
-      summary: post.summary,
-    }));
+  return mapHomeInsights(posts);
 }
 
 function resolveLegacyHomeInsightPosts(locale: SiteLocale): HomeInsightArchivePosts {

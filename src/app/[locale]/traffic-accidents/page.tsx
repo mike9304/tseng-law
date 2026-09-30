@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { isSiteLocale, siteLocales } from '@/lib/locales';
 import { getColumnPost } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
-import { TRAFFIC_COLUMN_SLUGS, TRAFFIC_DIAGRAM_ID, TRAFFIC_IMAGE, TRAFFIC_PATH, trafficHubCopy } from '@/data/traffic-hub';
-import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
+import { TRAFFIC_COLUMN_SLUGS, TRAFFIC_PATH, trafficHubCopy } from '@/data/traffic-hub';
 import styles from './traffic.module.css';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -40,11 +39,6 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
             <span className={styles.number}>0{index + 1}</span><h2>{stage.title}</h2><p>{stage.text}</p>
           </li>)}
         </ol>
-        <section className={styles.visual} aria-labelledby="visual-title">
-          <div className={styles.visualIntro}><p className={styles.kicker}>01 / {copy.nav}</p><h2 id="visual-title">{copy.visualTitle}</h2><p>{copy.visualText}</p></div>
-          <TrafficDiagramFigure diagramId={TRAFFIC_DIAGRAM_ID} locale={locale}
-            enlarge={{ href: TRAFFIC_IMAGE.src, label: copy.enlarge }} />
-        </section>
         <section className={styles.section} id="articles" aria-labelledby="articles-title">
           <div className={styles.heading}><h2 id="articles-title">{copy.columns}</h2><Link href={`/${locale}/columns`}>{copy.allColumns} →</Link></div>
           <div className={styles.articles}>{posts.map((post, index) => post && (

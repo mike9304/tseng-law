@@ -34,21 +34,17 @@ try {
       const response = await page.goto(`${base}/${locale}/traffic-accidents`, { waitUntil: 'networkidle' });
       if (response?.status() !== 200) throw new Error(`${locale} HTTP ${response?.status()}`);
       if (await page.locator('h1').count() !== 1 || await page.locator('main').count() !== 1) throw new Error(`${locale} headings/landmarks`);
-      await page.locator('figure').scrollIntoViewIfNeeded();
-      await page.locator('figure img').evaluate(image => image.decode());
       const metrics = await page.evaluate(() => ({
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
-        image: [...document.images].find(image => image.currentSrc.includes('overtaking-012-poster'))?.naturalWidth,
-        assumptionNote: Boolean(document.querySelector('figure[data-traffic-diagram] [data-traffic-diagram-assumption]')?.textContent?.trim()),
+        withdrawn: /overtaking-012|overtaking-diagram|data-traffic-diagram/.test(document.documentElement.outerHTML),
         media: document.querySelectorAll('video,canvas,model-viewer').length,
         canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href'),
         alternates: [...document.querySelectorAll('link[rel="alternate"][hreflang]')].map(link => link.getAttribute('hreflang')),
         headingColor: getComputedStyle(document.querySelector('h1')).color,
-        imageTransferBytes: performance.getEntriesByType('resource').filter(entry => entry.name.includes('overtaking-012-poster')).map(entry => entry.transferSize),
       }));
       if (metrics.scrollWidth > metrics.width + 1) throw new Error(`${locale} horizontal overflow`);
-      // Reduced motion: poster only, no <video> mounted.
-      if (!metrics.image || metrics.media || !metrics.assumptionNote) throw new Error(`${locale} media contract`);
+      // The overtaking-012 reconstruction was withdrawn (no consent): nothing of it may render.
+      if (metrics.withdrawn || metrics.media) throw new Error(`${locale} withdrawn case visual still present`);
       if (!metrics.canonical?.endsWith(`/${locale}/traffic-accidents`)) throw new Error(`${locale} canonical`);
       if (metrics.headingColor !== 'rgb(255, 255, 255)') throw new Error(`${locale} hero heading contrast`);
       await page.evaluate(() => window.scrollTo(0, 0));
@@ -83,8 +79,7 @@ try {
         await page.waitForURL(`**/columns/${slug}`);
         const articleText = await page.locator('main').innerText();
         if (slug === 'taiwan-overtaking-accident-liability') {
-          if (await page.locator('.blog-body figure[data-traffic-diagram="overtaking-012"]').count() !== 1) throw new Error(`${locale}/${slug}: diagram figure`);
-          if (await page.locator('.blog-body video').count()) throw new Error(`${locale}/${slug}: video under reduced motion`);
+          if (await page.locator('figure[data-traffic-diagram], video').count()) throw new Error(`${locale}/${slug}: withdrawn diagram present`);
         }
         for (const fragment of expected) {
           if (!articleText.includes(fragment)) throw new Error(`${locale}/${slug}: missing ${fragment}`);
@@ -103,36 +98,36 @@ try {
     }
     await context.close();
   }
-  // Motion allowed: the diagram video lazy-mounts, autoplays muted and loops.
-  const playback = [];
-  for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844 }]) {
-    const context = await newContext({ viewport, reducedMotion: 'no-preference' });
-    const page = await context.newPage();
-    page.on('pageerror', error => findings.push(error.message));
-    for (const path of ['/ko/traffic-accidents', '/en/columns/taiwan-overtaking-accident-liability']) {
-      await page.goto(`${base}${path}`, { waitUntil: 'load' });
-      const before = await page.locator('video').count();
-      const figure = page.locator('figure[data-traffic-diagram]');
-      await figure.scrollIntoViewIfNeeded();
-      await page.locator('figure[data-traffic-diagram] [data-video-ready="true"]').waitFor({ timeout: 15000 });
-      const t0 = await page.locator('figure[data-traffic-diagram] video').evaluate(video => video.currentTime);
-      await page.waitForTimeout(1200);
-      const state = await page.locator('figure[data-traffic-diagram] video').evaluate(video => ({
-        currentTime: video.currentTime, paused: video.paused, muted: video.muted, loop: video.loop,
-        autoplay: video.autoplay, playsInline: video.playsInline, preload: video.preload, src: video.currentSrc,
-        width: video.videoWidth, height: video.videoHeight,
+  // Withdrawal check with motion allowed: no figure/video/poster of the removed
+  // overtaking-012 scene on the hubs, column 012 or column 050, and every former
+  // asset URL answers 404 (cache-busted).
+  const withdrawal = [];
+  const context = await newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'no-preference' });
+  const page = await context.newPage();
+  page.on('pageerror', error => findings.push(error.message));
+  for (const locale of ['ko', 'zh-hant', 'en', 'ja']) {
+    for (const path of [`/${locale}/traffic-accidents`, `/${locale}/columns/taiwan-overtaking-accident-liability`, `/${locale}/columns/taiwan-accident-police-records`]) {
+      const response = await page.goto(`${base}${path}`, { waitUntil: 'load' });
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+      await page.waitForTimeout(600);
+      const state = await page.evaluate(() => ({
+        figures: document.querySelectorAll('figure[data-traffic-diagram]').length,
+        videos: document.querySelectorAll('video').length,
+        html: /overtaking-012|overtaking-diagram|\/videos\/traffic\/|\/images\/traffic\//.test(document.documentElement.outerHTML),
+        ogImage: document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '',
       }));
-      const bytes = await page.evaluate(() => performance.getEntriesByType('resource')
-        .filter(entry => entry.name.includes('/videos/traffic/')).map(entry => ({ name: entry.name.split('/').pop(), transfer: entry.transferSize })));
-      if (before && path.includes('/columns/')) throw new Error(`${path}: video mounted before scrolling near it`);
-      if (state.paused || !(state.currentTime > t0) || !state.muted || !state.loop || !state.playsInline) throw new Error(`${path}: playback ${JSON.stringify(state)}`);
-      if (viewport.width === 390 && !state.src.includes('-mobile.')) throw new Error(`${path}: mobile source not selected`);
-      await page.screenshot({ path: `${out}/motion-${viewport.width}${path.replaceAll('/', '_')}.png` });
-      playback.push({ viewport: viewport.width, path, mountedBeforeScroll: before > 0, t0, ...state, bytes });
+      if (response?.status() !== 200 || state.figures || state.videos || state.html || /overtaking-012|overtaking-diagram|\/images\/traffic\//.test(state.ogImage)) throw new Error(`${path}: withdrawn visual ${JSON.stringify(state)}`);
+      withdrawal.push({ path, status: response.status(), ...state });
     }
-    await context.close();
   }
-  results.push({ playback });
+  await context.close();
+  const assets = [];
+  for (const asset of ['/videos/traffic/overtaking-012.mp4', '/videos/traffic/overtaking-012.webm', '/videos/traffic/overtaking-012-mobile.mp4', '/videos/traffic/overtaking-012-mobile.webm', '/images/traffic/overtaking-012-poster.webp', '/images/traffic/overtaking-012-poster-mobile.webp', '/images/traffic/overtaking-diagram.webp']) {
+    const response = await fetch(`${base}${asset}?cb=${Date.now()}`, { redirect: 'manual' });
+    if (response.status !== 404) throw new Error(`${asset}: HTTP ${response.status}, expected 404`);
+    assets.push({ asset, status: response.status });
+  }
+  results.push({ withdrawal, assets });
   if (findings.length) throw new Error(findings.join('\n'));
   await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, findings, results }, null, 2));
   console.log(JSON.stringify({ ok: true, journeys: results.length, out }));

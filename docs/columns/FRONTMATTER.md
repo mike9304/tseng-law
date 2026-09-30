@@ -76,7 +76,7 @@ author: "legal-ai-assistant"
 ## `diagram_video` (animated traffic diagrams)
 
 ```yaml
-diagram_video: "overtaking-012"                     # id in src/data/traffic-diagrams.ts
+diagram_video: "<id>"                               # id in src/data/traffic-diagrams.ts (hypothetical scenes only; never a real case without consent)
 diagram_video_after: "기존 칼럼에 소개된 익명 사고 사례"  # optional: exact `##` heading text
 ```
 

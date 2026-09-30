@@ -6,17 +6,11 @@ export const TRAFFIC_COLUMN_SLUGS = [
   'taiwan-traffic-accident-procedure',
   'taiwan-overtaking-accident-liability',
 ] as const;
-/** Animated diagram shown on the hub (src/data/traffic-diagrams.ts). */
-export const TRAFFIC_DIAGRAM_ID = 'overtaking-012' as const;
-/** Full-size still of the same scene, linked from the figure caption. */
-export const TRAFFIC_IMAGE = {
-  src: '/images/traffic/overtaking-diagram.webp', width: 1920, height: 1080,
-} as const;
 
 type CountryGuide = { id: 'tw' | 'us' | 'jp' | 'kr'; name: string; text: string; linkLabel: string; href: string };
 type TrafficCopy = {
   nav: string; kicker: string; title: string; description: string; read: string;
-  columns: string; visualTitle: string; visualText: string; enlarge: string;
+  columns: string;
   stages: { title: string; text: string }[];
   countriesTitle: string; countriesIntro: string; countries: CountryGuide[];
   contactTitle: string; contactText: string; contact: string; allColumns: string;
@@ -24,12 +18,9 @@ type TrafficCopy = {
 
 export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
   ko: {
-    enlarge: '도해 크게 보기',
     nav: '교통사고', kicker: '교통사고 법률 안내', title: '대만에서 난 교통사고,\n사고 직후부터 손해배상까지',
     description: '대만에서 난 교통사고에서는 경찰 기록과 치료비, 보험 처리와 합의를 함께 봅니다. 한국·일본·미국으로 돌아갈 예정이라면 출국 일정과 남은 절차도 같이 봐야 합니다.',
     read: '칼럼 읽기', columns: '대만 교통사고 칼럼',
-    visualTitle: '추월 사고는 차량이 어떻게 움직였는지부터 봅니다',
-    visualText: '앞차 1을 뒤따르던 차량 2와 오토바이 A가 추월하려는 상황입니다. 어느 차가 먼저 차로에 들어갔는지, 서로를 볼 수 있었는지, 회피할 공간이 있었는지가 증거로 확인할 쟁점입니다.',
     stages: [
       { title: '사고 직후', text: '안전과 구호가 먼저입니다. 신고·진료 기록과 현장 자료도 남깁니다.' },
       { title: '책임과 손해', text: '차량의 움직임, 진단서, 지출 자료를 대조하며 과실과 배상 항목을 살펴봅니다.' },
@@ -48,12 +39,9 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     contact: '상담 문의', allColumns: '전체 칼럼',
   },
   'zh-hant': {
-    enlarge: '查看大圖',
     nav: '交通事故', kicker: '交通事故法律指南', title: '台灣車禍，\n從事故現場到損害賠償',
     description: '警方資料、醫療費用、保險與和解：整理處理台灣交通事故所需的資訊。若即將前往美國、日本或韓國，也應一併安排離台後的聯絡與後續程序。',
     read: '閱讀專欄', columns: '台灣交通事故專欄',
-    visualTitle: '超車事故，先看車輛如何移動',
-    visualText: '車輛 2 與機車 A 都想超越前方的車輛 1。誰先進入車道、能否看見彼此，以及有無避讓空間，都是需要以證據釐清的問題。',
     stages: [
       { title: '事故現場', text: '先確保安全與救護，留下報案、就醫紀錄及現場資料。' },
       { title: '責任與損害', text: '比對車輛動向、診斷證明與支出資料，釐清過失及賠償項目。' },
@@ -72,12 +60,9 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     contact: '聯絡事務所', allColumns: '所有專欄',
   },
   en: {
-    enlarge: 'View full-size diagram',
     nav: 'Traffic accidents', kicker: 'Traffic accident guidance', title: 'A traffic accident in Taiwan.\nWhat happens next?',
     description: 'Police records, medical costs, insurance and settlement: practical reading for dealing with an accident in Taiwan, including when you will be returning to the United States, Japan or Korea.',
     read: 'Read article', columns: 'Taiwan accident articles',
-    visualTitle: 'An overtaking collision starts with vehicle movements',
-    visualText: 'Car 2 and motorcycle A attempt to overtake car 1. Evidence needs to establish who entered the lane first, what each driver could see, and whether there was room to avoid contact.',
     stages: [
       { title: 'At the scene', text: 'Prioritize safety and assistance, then preserve police, medical and scene records.' },
       { title: 'Liability and loss', text: 'Compare vehicle movements, medical evidence and expenses when assessing fault and damages.' },
@@ -96,12 +81,9 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     contact: 'Contact the firm', allColumns: 'All articles',
   },
   ja: {
-    enlarge: '図を拡大して見る',
     nav: '交通事故', kicker: '交通事故の法律ガイド', title: '台湾での交通事故。\n事故直後から損害賠償まで',
     description: '警察の記録、治療費、保険と示談。台湾での交通事故に対応するための情報をまとめました。日本・韓国・米国へ戻る予定がある方は、帰国日とその後の手続きもあわせて考えましょう。',
     read: 'コラムを読む', columns: '台湾の交通事故コラム',
-    visualTitle: '追越し事故は、車両の動きから考えます',
-    visualText: '先行車 1 を追い越そうとする車両 2 と二輪車 A。どちらが先に車線へ入ったか、互いの動きが見えていたか、回避する余地があったかが、証拠で確かめるべき点です。',
     stages: [
       { title: '事故直後', text: '安全と救護を優先し、通報・受診の記録と現場資料を残します。' },
       { title: '責任と損害', text: '車両の動き、診断書、支出資料を照らし合わせ、過失と賠償項目を考えます。' },

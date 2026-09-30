@@ -3,6 +3,7 @@ import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-c
 import {
   TRAFFIC_DIAGRAMS,
   TRAFFIC_DIAGRAM_MOBILE_QUERY,
+  type TrafficDiagram,
   type TrafficDiagramId,
   type TrafficDiagramLocale,
 } from '@/data/traffic-diagrams';
@@ -30,7 +31,7 @@ export default function TrafficDiagramFigure({
   sizes?: string;
   enlarge?: { href: string; label: string };
 }) {
-  const diagram = TRAFFIC_DIAGRAMS[diagramId];
+  const diagram: TrafficDiagram = (TRAFFIC_DIAGRAMS as Record<string, TrafficDiagram>)[diagramId];
   const copy = diagram.copy[locale];
   const captionId = `traffic-diagram-${diagram.id}-caption`;
   return (

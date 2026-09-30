@@ -90,8 +90,6 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
       read_time: '3分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
-      diagram_video: 'overtaking-012',
-      diagram_video_after: '原文介紹的匿名事故案例',
     });
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),

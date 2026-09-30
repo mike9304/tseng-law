@@ -6,20 +6,19 @@ import { getColumnPost } from '../columns';
 import { extractColumnToc } from '../column-toc';
 import { siteLocales } from '../locales';
 import ColumnContent from '@/components/ColumnContent';
-import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import {
   TRAFFIC_DIAGRAMS,
+  type TrafficDiagram,
   normalizeColumnDiagramVideo,
   splitColumnContentAfterHeading,
 } from '@/data/traffic-diagrams';
-import { TRAFFIC_DIAGRAM_ID } from '@/data/traffic-hub';
 
 const publicFile = (src: string) => path.join(process.cwd(), 'public', src);
 const MAX_VIDEO_BYTES = 1.5 * 1024 * 1024;
 
 describe('animated traffic diagrams', () => {
   it('ships bounded MP4/WebM loops and WebP posters for every diagram', () => {
-    for (const diagram of Object.values(TRAFFIC_DIAGRAMS)) {
+    for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
       for (const src of [diagram.mp4, diagram.mobileMp4]) {
         const bytes = fs.readFileSync(publicFile(src));
         expect(bytes.length, src).toBeLessThan(MAX_VIDEO_BYTES);
@@ -42,7 +41,7 @@ describe('animated traffic diagrams', () => {
 
   it('captions every locale with the illustrative-assumption note', () => {
     const markers = { ko: '설명용 가정값', 'zh-hant': '說明用假設值', en: 'Illustrative assumptions', ja: '説明用の仮定値' } as const;
-    for (const diagram of Object.values(TRAFFIC_DIAGRAMS)) {
+    for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
       for (const locale of siteLocales) {
         const copy = diagram.copy[locale];
         expect(copy.assumption.startsWith(markers[locale]), `${diagram.id}/${locale}`).toBe(true);
@@ -52,20 +51,20 @@ describe('animated traffic diagrams', () => {
     }
   });
 
-  it('renders a poster-first figure with the localized caption (video mounts on the client only)', () => {
-    const html = renderToStaticMarkup(<TrafficDiagramFigure diagramId={TRAFFIC_DIAGRAM_ID} locale="ko" />);
-    expect(html).toContain('data-traffic-diagram="overtaking-012"');
-    expect(html).toContain('overtaking-012-poster-mobile.webp');
-    expect(html).toContain('설명용 가정값');
-    expect(html).not.toContain('<video');
-  });
-
-  it('opts column 012 in through frontmatter in all four languages and survives stripInlineImages', () => {
+  it('keeps the withdrawn overtaking-012 reconstruction out of every column and the registry', () => {
+    expect(Object.keys(TRAFFIC_DIAGRAMS)).not.toContain('overtaking-012');
     for (const locale of siteLocales) {
       const post = getColumnPost('taiwan-overtaking-accident-liability', locale)!;
-      expect(post.diagramVideo?.id, locale).toBe('overtaking-012');
-      expect(post.content).not.toMatch(/!\[[^\]]*\]\(/);
-      const split = splitColumnContentAfterHeading(post.content, post.diagramVideo!.afterHeading!);
+      expect(post.diagramVideo, locale).toBeUndefined();
+    }
+  });
+
+  it('splits a column body after a section heading without breaking TOC anchors', () => {
+    for (const locale of siteLocales) {
+      const post = getColumnPost('taiwan-overtaking-accident-liability', locale)!;
+      const heading = [...post.content.matchAll(/^## (.+)$/gm)][1]?.[1];
+      expect(heading, locale).toBeTruthy();
+      const split = splitColumnContentAfterHeading(post.content, heading!);
       expect(split, locale).not.toBeNull();
       const [before, after] = split!;
       expect(`${before}\n\n${after}`.replace(/\s+/g, '')).toBe(post.content.replace(/\s+/g, ''));
@@ -84,7 +83,7 @@ describe('animated traffic diagrams', () => {
 
   it('drops unknown diagram ids and falls back when the heading is missing', () => {
     expect(normalizeColumnDiagramVideo('unknown', 'x')).toBeUndefined();
-    expect(normalizeColumnDiagramVideo(' overtaking-012 ', '')).toEqual({ id: 'overtaking-012' });
+    expect(normalizeColumnDiagramVideo('overtaking-012', 'x')).toBeUndefined();
     expect(splitColumnContentAfterHeading('## A\n\npara\n\n## B\n\nx', 'Missing')).toBeNull();
     expect(splitColumnContentAfterHeading('## A\n\npara one\nline two\n\nnext\n\n## B', 'A')).toEqual([
       '## A\n\npara one\nline two',

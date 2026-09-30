@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getColumnPost } from '../columns';
 import { siteLocales } from '../locales';
-import { TRAFFIC_COLUMN_SLUGS, TRAFFIC_IMAGE, trafficHubCopy } from '@/data/traffic-hub';
+import { TRAFFIC_COLUMN_SLUGS, trafficHubCopy } from '@/data/traffic-hub';
 
 describe('traffic hub publication contracts', () => {
   it('links to real localized columns, never another language fallback', () => {
@@ -17,11 +17,19 @@ describe('traffic hub publication contracts', () => {
     }
   });
 
-  it('ships a bounded static image instead of a public Blender asset', () => {
-    const asset = path.join(process.cwd(), 'public', TRAFFIC_IMAGE.src);
-    expect(fs.statSync(asset).size).toBeLessThan(100 * 1024);
-    expect(fs.readFileSync(asset).subarray(8, 12).toString()).toBe('WEBP');
-    expect(TRAFFIC_IMAGE.width / TRAFFIC_IMAGE.height).toBe(16 / 9);
+  it('ships no visual derived from the withdrawn overtaking-012 case', () => {
+    for (const dir of ['public/images/traffic', 'public/videos/traffic']) {
+      const abs = path.join(process.cwd(), dir);
+      const names = fs.existsSync(abs) ? fs.readdirSync(abs) : [];
+      expect(names.filter((name) => /overtaking/i.test(name)), dir).toEqual([]);
+    }
+    for (const locale of siteLocales) {
+      for (const slug of TRAFFIC_COLUMN_SLUGS) {
+        const post = getColumnPost(slug, locale);
+        expect(post?.featuredImage ?? '', `${locale}/${slug}`).not.toMatch(/\/images\/traffic\//);
+        expect(post?.diagramVideo, `${locale}/${slug}`).toBeUndefined();
+      }
+    }
   });
 
   it('keeps the new article honestly AI-authored and source-linked in all four languages', () => {

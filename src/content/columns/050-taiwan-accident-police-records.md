@@ -6,7 +6,7 @@ date_display: "2026년 9월 30일"
 read_time: "4분 분량"
 categories: ["대만 법률정보"]
 topic: "litigation"
-featured_image: "/images/traffic/overtaking-diagram.webp"
+featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 author: "legal-ai-assistant"
 audience: ["ko"]
 ---

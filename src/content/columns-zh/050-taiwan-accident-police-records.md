@@ -6,7 +6,7 @@ date_display: "2026年9月30日"
 read_time: "閱讀約4分鐘"
 categories: ["法律資訊"]
 topic: "litigation"
-featured_image: "/images/traffic/overtaking-diagram.webp"
+featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 author: "legal-ai-assistant"
 audience: ["zh-hant"]
 ---

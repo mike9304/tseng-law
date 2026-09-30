@@ -215,8 +215,8 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'AVVOCATI',
-      title: 'Team internazionale di Hovering',
-      description: 'Profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering.',
+      title: 'L’avvocata Wei Tseng e il suo team',
+      description: 'Il team guidato dall’avvocata Wei Tseng si occupa di questioni legali a Taiwan e di casi che coinvolgono Corea e Taiwan.',
       intro: '',
       sections: [],
     },
@@ -703,8 +703,8 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ADVOCATEN',
-      title: 'Internationaal team van Hovering',
-      description: 'Profielen van de advocaten, de juridisch medewerker, de operationeel manager en de accountant-partner van Hovering.',
+      title: 'Advocaat Wei Tseng en haar team',
+      description: 'Het team onder leiding van advocaat Wei Tseng behandelt juridische zaken in Taiwan en zaken met betrekking tot Korea en Taiwan.',
       intro: '',
       sections: [],
     },
@@ -1191,8 +1191,8 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ADWOKACI',
-      title: 'Międzynarodowy zespół Hovering',
-      description: 'Profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering.',
+      title: 'Adwokatka Wei Tseng i jej zespół',
+      description: 'Zespół pod kierownictwem adwokatki Wei Tseng zajmuje się sprawami prawnymi na Tajwanie oraz sprawami związanymi z Koreą i Tajwanem.',
       intro: '',
       sections: [],
     },

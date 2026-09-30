@@ -47,11 +47,11 @@ describe('WO-X1 EN/JA audience copy', () => {
     expect(profile.proofPoints.join(' ')).not.toMatch(/corroborated/);
   });
 
-  it('names the team pages after the nav labels', () => {
-    expect(TEAM_NAME_BY_LOCALE.en).toBe('Our Team');
-    expect(TEAM_NAME_BY_LOCALE.ja).toBe('チーム紹介');
-    expect(TEAM_NAME_BY_LOCALE.ko).toBe('호정 대만·한국 팀');
-    expect(TEAM_NAME_BY_LOCALE['zh-hant']).toBe('昊鼎韓國台灣團隊');
+  it('names Wei Tseng and her team in every core locale', () => {
+    expect(TEAM_NAME_BY_LOCALE.en).toBe('Attorney Wei Tseng and Her Team');
+    expect(TEAM_NAME_BY_LOCALE.ja).toBe('曾雋崴弁護士とチーム');
+    expect(TEAM_NAME_BY_LOCALE.ko).toBe('증준외 변호사와 팀');
+    expect(TEAM_NAME_BY_LOCALE['zh-hant']).toBe('曾雋崴律師與團隊');
   });
 
   it('links the EN/JA home case study to its write-up, not the archive', () => {

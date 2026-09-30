@@ -12,22 +12,22 @@ describe('createAttorneyProfileSectionNodes', () => {
     const document = STANDARD_PAGE_DECOMPOSERS.lawyers('ko');
     const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
 
-    expect(document.stageHeight).toBe(3167); // +24: zh-hant intro-2에 "於一審"(1심) 사실 교정 추가로 텍스트 행 증가 (O6/O7)
+    expect(document.stageHeight).toBe(3235); // Named-team descriptions add one line to each of the two headings.
     // 148 decomposed nodes + the 2 standalone publish-parity overlays (desktop/mobile)
     expect(document.nodes).toHaveLength(150);
     expect(nodesById.get('page-lawyers-attorney-root')?.rect).toMatchObject({
-      y: 428,
+      y: 462,
       width: 1280,
-      height: 2721, // +24 (stageHeight 3167 참조)
+      height: 2755,
     });
     expect(nodesById.get('page-lawyers-attorney-container')?.rect).toMatchObject({
       x: 51,
       y: 88,
       width: 1178,
-      height: 2610,
+      height: 2644,
     });
     expect(nodesById.get('page-lawyers-lead-wrap')?.rect).toMatchObject({
-      y: 278,
+      y: 312,
       height: 669,
     });
     expect(nodesById.get('page-lawyers-lead-card')?.rect).toMatchObject({
@@ -41,7 +41,7 @@ describe('createAttorneyProfileSectionNodes', () => {
       height: 575, // 리드 카드와 동일 (info 열이 카드 높이를 결정)
     });
     expect(nodesById.get('page-lawyers-staff-wrap')?.rect).toMatchObject({
-      y: 989, // +26: 리드 카드 성장분 하류 이동
+      y: 1023,
       height: 1037,
     });
     expect(nodesById.get('page-lawyers-staff-grid')?.rect).toMatchObject({
@@ -66,7 +66,7 @@ describe('createAttorneyProfileSectionNodes', () => {
       height: 438,
     });
     expect(nodesById.get('page-lawyers-partner-wrap')?.rect).toMatchObject({
-      y: 2102, // +26: 리드 카드 성장분 하류 이동
+      y: 2136,
       height: 503,
     });
     expect(nodesById.get('page-lawyers-partner-card')?.rect).toMatchObject({
@@ -234,7 +234,7 @@ describe('createAttorneyProfileSectionNodes', () => {
     expect(secondStaffCard?.responsive?.mobile?.rect?.y).toBeGreaterThan(
       (staffCard?.responsive?.mobile?.rect?.height ?? 0) + 16,
     );
-    expect(attorneyRoot?.responsive?.mobile?.rect?.height).toBeLessThan(4400);
+    expect(attorneyRoot?.responsive?.mobile?.rect?.height).toBe(4435);
   });
 
   it('keeps generated tablet attorney cards stacked with full-height photos', () => {

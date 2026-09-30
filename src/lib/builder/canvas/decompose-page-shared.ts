@@ -65,8 +65,8 @@ const attorneyLabels = {
     source: '원문 페이지',
     fullProfile: '상세 프로필',
     consult: '상담 문의',
-    representative: '대표 변호사',
-    teamTitle: '소속 변호사 · 직원',
+    representative: '파트너 변호사',
+    teamTitle: '팀 구성원',
     partnerTitle: '협력 회계사',
   },
   'zh-hant': {
@@ -76,8 +76,8 @@ const attorneyLabels = {
     source: '原始頁面',
     fullProfile: '完整簡介',
     consult: '電子郵件諮詢',
-    representative: '代表律師',
-    teamTitle: '本所律師與同仁',
+    representative: '合夥律師',
+    teamTitle: '團隊成員',
     partnerTitle: '合作會計師',
   },
   en: {
@@ -87,8 +87,8 @@ const attorneyLabels = {
     source: 'Source page',
     fullProfile: 'Full profile',
     consult: 'Book consultation',
-    representative: 'Managing Attorney',
-    teamTitle: 'Lawyers & Staff',
+    representative: 'Partner',
+    teamTitle: 'Team Members',
     partnerTitle: 'Partner CPA',
   },
 } as const;

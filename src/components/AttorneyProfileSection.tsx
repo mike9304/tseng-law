@@ -16,8 +16,8 @@ const labels = {
     experience: '경력',
     fullProfile: '상세 프로필',
     consult: '상담 문의',
-    representative: '대표 변호사',
-    teamTitle: '소속 변호사 · 직원',
+    representative: '파트너 변호사',
+    teamTitle: '팀 구성원',
     partnerTitle: '협력 회계사',
   },
   'zh-hant': {
@@ -26,8 +26,8 @@ const labels = {
     experience: '經歷',
     fullProfile: '完整簡介',
     consult: '電子郵件諮詢',
-    representative: '代表律師',
-    teamTitle: '本所律師與同仁',
+    representative: '合夥律師',
+    teamTitle: '團隊成員',
     partnerTitle: '合作會計師',
   },
   en: {
@@ -36,8 +36,8 @@ const labels = {
     experience: 'Experience',
     fullProfile: 'Full profile',
     consult: 'Book consultation',
-    representative: 'Managing Attorney',
-    teamTitle: 'Lawyers & Staff',
+    representative: 'Partner',
+    teamTitle: 'Team Members',
     partnerTitle: 'Partner CPA',
   },
   ja: {
@@ -46,8 +46,8 @@ const labels = {
     experience: '経歴',
     fullProfile: '詳細プロフィール',
     consult: '相談を申し込む',
-    representative: '代表弁護士',
-    teamTitle: '所属弁護士・スタッフ',
+    representative: 'パートナー弁護士',
+    teamTitle: 'チームメンバー',
     partnerTitle: '提携会計士',
   },
 } as const;
@@ -177,7 +177,7 @@ export default function AttorneyProfileSection({
           </>
         ) : null}
 
-        {/* 대표 변호사 */}
+        {/* 파트너 변호사 */}
         {lead && (
           <div className="attorney-lead-wrap">
             <h3 className="attorney-group-title">
@@ -187,7 +187,7 @@ export default function AttorneyProfileSection({
           </div>
         )}
 
-        {/* 소속 변호사 · 직원 */}
+        {/* 팀 구성원 */}
         {staff.length > 0 && (
           <div className="attorney-staff-wrap">
             <h3 className="attorney-group-title">{l.teamTitle}</h3>

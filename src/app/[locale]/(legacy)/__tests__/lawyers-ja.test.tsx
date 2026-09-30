@@ -98,7 +98,7 @@ describe('Japanese lawyers-list integration', () => {
       '昊鼎国際法律事務所',
       '日本語対応の台湾弁護士',
       '韓国語対応の台湾弁護士',
-      'チーム紹介',
+      '曾雋崴弁護士とチーム',
     ]);
   });
 
@@ -137,8 +137,8 @@ describe('Japanese lawyers-list integration', () => {
     expect(html).toContain(pageCopy.ja.lawyers.title);
     expect(html).toContain(pageCopy.ja.lawyers.description);
     expect(html).toContain('曾雋崴弁護士');
-    expect(html).toContain('台湾弁護士・代表弁護士');
-    expect(html).toContain('所属弁護士・スタッフ');
+    expect(html).toContain('台湾弁護士・パートナー弁護士');
+    expect(html).toContain('チームメンバー');
     expect(html).toContain('提携会計士');
     expect(html).toContain('href="/ja/lawyers/wei-tseng"');
     expect(html).toContain('https://tseng-law.com/ja/lawyers');

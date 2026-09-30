@@ -26,10 +26,9 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   ko: {
     label: 'OUR TEAM',
     title: TEAM_NAME_BY_LOCALE['ko'],
-    description:
-      '변호사·법무전문원·사무장·협력 회계사를 소개합니다.',
+    description: '증준외 변호사가 이끄는 팀으로, 대만 법률업무와 한국·대만 관련 사건을 담당합니다.',
     story: [
-      '법무법인 호정은 한국·일본 고객의 대만 투자, 소송, 법률 자문을 지원하는 통합 실무팀을 운영합니다.',
+      '한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
       '법률, 회계, 세무 및 행정 실무를 연결해 사건 초기 검토부터 분쟁 대응까지 일관된 전략을 제공합니다.',
     ],
     members: [
@@ -37,12 +36,12 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         id: 'tseng-junwei',
         profileSlug: 'wei-tseng',
         name: '증준외',
-        role: '대표 변호사',
+        role: '파트너 변호사',
         email: 'wei@hoveringlaw.com.tw',
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '기업·개인 사건을 폭넓게 수행합니다. 당사무소에서는 한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
+          '한국·대만 법률업무와 기업·개인 사건을 담당합니다. 당사무소에서는 한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
           '한국 유학생 헬스장 손해배상 사건에서 1심 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
         ],
         education: [
@@ -113,9 +112,9 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   'zh-hant': {
     label: 'OUR TEAM',
     title: TEAM_NAME_BY_LOCALE['zh-hant'],
-    description: '昊鼎國際法律事務所律師、事務長及會計師簡介。',
+    description: '團隊由曾雋崴律師帶領，處理台灣法律事務及韓台跨境案件。',
     story: [
-      '昊鼎以中文、韓文、日文及英文提供在台法律服務，範圍涵蓋公司設立、訴訟與法令遵循顧問。',
+      '事務所提供中文、韓文、日文及英文諮詢。',
       '團隊結合法律、會計與行政實務，協助處理相關跨領域問題。',
     ],
     members: [
@@ -123,12 +122,12 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         id: 'tseng-junwei',
         profileSlug: 'wei-tseng',
         name: '曾雋崴',
-        role: '代表律師',
+        role: '合夥律師',
         email: 'wei@hoveringlaw.com.tw',
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '專精企業與個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
+          '承辦韓台法律事務及企業、個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
           '曾代理韓國留學生健身房受傷求償案，一審獲判新台幣157萬元。',
         ],
         education: [
@@ -199,9 +198,9 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   en: {
     label: 'OUR TEAM',
     title: TEAM_NAME_BY_LOCALE['en'],
-    description: 'Profiles of our lawyers, paralegal, operations manager, and accounting partner.',
+    description: 'Led by Attorney Wei Tseng, the team handles Taiwan legal matters and Korea–Taiwan cases.',
     story: [
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Chinese, Korean, and Japanese available.',
+      'Consultations are available in English, Chinese, Korean, and Japanese.',
       'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.'
     ],
     members: [
@@ -209,7 +208,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         id: 'tseng-junwei',
         profileSlug: 'wei-tseng',
         name: 'Wei Tseng',
-        role: 'Managing Attorney',
+        role: 'Partner',
         email: 'wei@hoveringlaw.com.tw',
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
@@ -285,9 +284,9 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   ja: {
     label: 'OUR TEAM',
     title: TEAM_NAME_BY_LOCALE['ja'],
-    description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
+    description: '曾雋崴弁護士が率いるチームが、台湾の法律業務と韓国・台湾に関わる案件を担当します。',
     story: [
-      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。日本語・中国語・英語・韓国語でご相談いただけます。',
+      '日本語・中国語・英語・韓国語でご相談いただけます。',
       '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
     ],
     members: [
@@ -295,7 +294,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         id: 'tseng-junwei',
         profileSlug: 'wei-tseng',
         name: '曾雋崴弁護士',
-        role: '台湾弁護士・代表弁護士',
+        role: '台湾弁護士・パートナー弁護士',
         email: 'wei@hoveringlaw.com.tw',
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',

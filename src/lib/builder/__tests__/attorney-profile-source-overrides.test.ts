@@ -63,6 +63,19 @@ describe('attorney profile source overrides', () => {
     });
   });
 
+  it('projects the outdated primary-attorney role while keeping custom roles', () => {
+    const legacy = mergeAttorneyProfileSourceRecords([{
+      sourceSlug: 'wei-tseng', localized: { en: { role: 'Taiwan Attorney · Managing Attorney' } },
+      imageAltText: 'Attorney Wei Tseng Taiwan Attorney · Managing Attorney',
+    }], 'en')[0];
+    expect(legacy.role).toBe('Taiwan Attorney · Partner');
+    expect(legacy.imageAltText).not.toContain('Managing Attorney');
+    const custom = mergeAttorneyProfileSourceRecords([{
+      sourceSlug: 'wei-tseng', localized: { en: { role: 'Taiwan Attorney · Corporate matters' } },
+    }], 'en')[0];
+    expect(custom.role).toBe('Taiwan Attorney · Corporate matters');
+  });
+
   it('writes a site-level override for attorney profile edits', async () => {
     vi.mocked(readSiteDocument).mockResolvedValue(baseSite());
 

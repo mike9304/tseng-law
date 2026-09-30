@@ -23,6 +23,7 @@ import {
   type LocalizedAttorneyPatch,
 } from '@/lib/builder/lawyers/source-normalizers';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { projectTsengPartnerRole } from '@/data/attorney-role';
 
 export interface AttorneyProfileSourceRecord extends Omit<AttorneyProfile, 'slug'> {
   sourceSlug: AttorneyProfileSlug;
@@ -72,8 +73,12 @@ export function mergeAttorneyProfileSourceRecords(
 
     const localized = override?.localized?.[locale];
     const name = localized?.name?.trim() || base.name;
-    const role = localized?.role?.trim() || base.role;
-    const imageAltText = normalizeImageAltText(override?.imageAltText) ?? buildDefaultAttorneyImageAltText(name, role);
+    const storedRole = localized?.role?.trim() || base.role;
+    const role = sourceSlug === 'wei-tseng' ? projectTsengPartnerRole(locale, storedRole) : storedRole;
+    const storedAlt = normalizeImageAltText(override?.imageAltText);
+    const imageAltText = !storedAlt || (role !== storedRole && storedAlt === buildDefaultAttorneyImageAltText(name, storedRole))
+      ? buildDefaultAttorneyImageAltText(name, role)
+      : storedAlt;
 
     const internalLinks = localized && Object.prototype.hasOwnProperty.call(localized, 'internalLinks')
       ? normalizeProfileLinks(localized.internalLinks, 20)

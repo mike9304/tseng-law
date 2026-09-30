@@ -58,7 +58,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       slug: 'wei-tseng',
       name: '증준외 변호사',
       alternateNames: ['증준외', '曾雋崴', 'Wei Tseng', 'Attorney Wei Tseng'],
-      role: '대만 변호사 · 대표 변호사',
+      role: '대만 변호사 · 파트너 변호사',
       title: '증준외 대만변호사 프로필',
       description:
         '한국 고객의 대만 회사설립, 투자, 소송, 비자, 상표·특허, 법률자문을 지원하는 증준외 대만변호사의 경력과 대표 사례를 정리한 프로필 페이지입니다. 당사무소에서는 한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
@@ -129,7 +129,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       slug: 'wei-tseng',
       name: '曾雋崴律師',
       alternateNames: ['曾雋崴', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
-      role: '台灣律師 · 代表律師',
+      role: '台灣律師 · 合夥律師',
       title: '曾雋崴台灣律師簡介',
       description:
         '台灣律師曾雋崴的學經歷、主要服務領域與代表案件，涵蓋在台公司設立、投資、訴訟、簽證及智慧財產等法律事務。事務所提供韓文、中文、日文、英文諮詢。',
@@ -200,7 +200,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       slug: 'wei-tseng',
       name: 'Attorney Wei Tseng',
       alternateNames: ['Wei Tseng', '증준외', '曾雋崴'],
-      role: 'Taiwan Attorney · Managing Attorney',
+      role: 'Taiwan Attorney · Partner',
       title: 'Wei Tseng Taiwan Attorney Profile',
       heading: 'Wei Tseng',
       lede:
@@ -275,7 +275,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       slug: 'wei-tseng',
       name: '曾雋崴弁護士',
       alternateNames: ['曾雋崴', '증준외', 'Wei Tseng', 'Attorney Wei Tseng'],
-      role: '台湾弁護士・代表弁護士',
+      role: '台湾弁護士・パートナー弁護士',
       title: '曾雋崴台湾弁護士プロフィール',
       heading: '曾雋崴（Wei Tseng）台湾弁護士',
       lede:

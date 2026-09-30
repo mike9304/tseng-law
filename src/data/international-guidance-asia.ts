@@ -215,8 +215,8 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: '律师',
-      title: 'Hovering 国际团队',
-      description: 'Hovering 律师、运营主管与合作会计师的简介。',
+      title: '曾雋崴律师与团队',
+      description: '团队由曾雋崴律师带领，处理台湾法律事务及韩台跨境案件。',
       intro: '',
       sections: [],
     },
@@ -703,8 +703,8 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'PEGUAM',
-      title: 'Pasukan antarabangsa Hovering',
-      description: 'Profil peguam, pengurusan operasi dan akauntan rakan kongsi Hovering.',
+      title: 'Peguam Wei Tseng dan pasukannya',
+      description: 'Pasukan yang diketuai peguam Wei Tseng mengendalikan urusan undang-undang Taiwan dan kes yang melibatkan Korea dan Taiwan.',
       intro: '',
       sections: [],
     },
@@ -1191,8 +1191,8 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'अधिवक्ता',
-      title: 'Hovering की अंतरराष्ट्रीय टीम',
-      description: 'Hovering के अधिवक्ताओं, कोरिया संचालन के नेतृत्व और साझेदार लेखाकार की रूपरेखा।',
+      title: 'अधिवक्ता Wei Tseng और उनकी टीम',
+      description: 'अधिवक्ता Wei Tseng के नेतृत्व में टीम ताइवान के कानूनी मामलों और कोरिया–ताइवान से जुड़े मामलों को संभालती है।',
       intro: '',
       sections: [],
     },

@@ -137,13 +137,13 @@ const attorneyFactLabels = {
 function buildAttorneyQualificationSentence(locale: SiteLocale, name: string, firm: string): string {
   switch (locale) {
     case 'ko':
-      return `${name}는 대만 변호사 자격을 보유한 ${firm}의 대표 변호사입니다.`;
+      return `${name}는 대만 변호사 자격을 보유한 ${firm}의 파트너 변호사입니다.`;
     case 'zh-hant':
-      return `${name}為具備台灣律師資格的${firm}代表律師。`;
+      return `${name}為具備台灣律師資格的${firm}合夥律師。`;
     case 'ja':
-      return `${name}は、台湾弁護士の資格を有する${firm}の代表弁護士です。`;
+      return `${name}は、台湾弁護士の資格を有する${firm}のパートナー弁護士です。`;
     default:
-      return `${name} is a qualified Taiwan attorney and the managing attorney of ${firm}.`;
+      return `${name} is a qualified Taiwan attorney and a partner at ${firm}.`;
   }
 }
 

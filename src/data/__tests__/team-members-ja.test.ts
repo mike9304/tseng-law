@@ -11,7 +11,7 @@ const canonicalIds = [
 ] as const;
 
 const expectedJapaneseIdentity = {
-  'tseng-junwei': ['曾雋崴弁護士', '台湾弁護士・代表弁護士'],
+  'tseng-junwei': ['曾雋崴弁護士', '台湾弁護士・パートナー弁護士'],
   'chang-rongxuan': ['張容瑄', '台湾弁護士'],
   'chang-fangyu': ['張芳瑀', 'パラリーガル'],
   // WO-X1 (J04): role stays factual, worded as the Korea office post.
@@ -98,9 +98,10 @@ describe('Japanese team content', () => {
     const operations = japanese.members.find(({ id }) => id === 'son-jungmin');
     const accountant = japanese.members.find(({ id }) => id === 'huang-shengping');
 
-    expect(japanese.description).toContain('パラリーガル');
-    expect(japanese.story[0]).toBe(
-      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。日本語・中国語・英語・韓国語でご相談いただけます。',
+    expect(japanese.description).toContain('曾雋崴弁護士が率いるチーム');
+    expect(paralegal?.role).toBe('パラリーガル');
+    expect(japanese.story[1]).toBe(
+      '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
     );
     // WO-X1 (J04): the lead card states existing overseas-company advisory
     // facts instead of the gym case (still published on the profile page).
@@ -121,7 +122,7 @@ describe('Japanese team content', () => {
   });
 
   it('preserves representative Korean, Traditional Chinese, and English copy', () => {
-    expect(teamContent.ko.title).toBe('호정 대만·한국 팀');
+    expect(teamContent.ko.title).toBe('증준외 변호사와 팀');
     expect(teamContent.ko.members[0].intro[1]).toBe(
       '한국 유학생 헬스장 손해배상 사건에서 1심 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
     );
@@ -130,8 +131,8 @@ describe('Japanese team content', () => {
       role: '法務專員',
       education: ['東海大學法律學系學士'],
     });
-    expect(teamContent.en.story[0]).toBe(
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Chinese, Korean, and Japanese available.',
+    expect(teamContent.en.story[1]).toBe(
+      'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.',
     );
   });
 });

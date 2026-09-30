@@ -9,7 +9,7 @@ const EN_SCREEN_HEADING = 'Wei Tseng';
 // WO-X1 (EN-01/EN-08): the lede leads with the direct consultation languages.
 const EN_SCREEN_LEDE =
   'Taiwan attorney who consults directly in English, Chinese, Korean, and Japanese, advising overseas companies and individuals on company setup, investment, litigation, residence, and IP matters.';
-const EN_JOB_TITLE = 'Taiwan Attorney · Managing Attorney';
+const EN_JOB_TITLE = 'Taiwan Attorney · Partner';
 
 const sourceMocks = vi.hoisted(() => ({
   readBySlug: vi.fn(),
@@ -110,7 +110,7 @@ describe('English lawyer profile screen copy', () => {
       /<span aria-current="page"[^>]*>Wei Tseng<\/span>/,
     );
     expect(header).toMatch(
-      /<div class="section-label"[^>]*>Taiwan Attorney · Managing Attorney<\/div>/,
+      /<div class="section-label"[^>]*>Taiwan Attorney · Partner<\/div>/,
     );
     expect(header).toContain(EN_SCREEN_LEDE);
     expect(header).not.toContain('Wei Tseng Taiwan Attorney Profile');

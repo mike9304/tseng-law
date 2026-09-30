@@ -36,7 +36,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     lawyers: {
       label: 'OUR TEAM',
       title: TEAM_NAME_BY_LOCALE['ko'],
-      description: '변호사·사무장·회계사의 이력과 실무 분야를 확인합니다.'
+      description: '증준외 변호사가 이끄는 팀으로, 대만 법률업무와 한국·대만 관련 사건을 담당합니다.'
     },
     insights: {
       label: 'INSIGHTS',
@@ -88,7 +88,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     lawyers: {
       label: 'OUR TEAM',
       title: TEAM_NAME_BY_LOCALE['zh-hant'],
-      description: '律師、法務專員、事務長與會計師介紹。'
+      description: '團隊由曾雋崴律師帶領，處理台灣法律事務及韓台跨境案件。'
     },
     insights: {
       label: 'INSIGHTS',
@@ -140,7 +140,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     lawyers: {
       label: 'OUR TEAM',
       title: TEAM_NAME_BY_LOCALE['en'],
-      description: 'View profiles of our lawyers, operations manager, and accounting partner.'
+      description: 'Led by Attorney Wei Tseng, the team handles Taiwan legal matters and Korea–Taiwan cases.'
     },
     insights: {
       label: 'INSIGHTS',
@@ -192,7 +192,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     lawyers: {
       label: 'OUR TEAM',
       title: TEAM_NAME_BY_LOCALE['ja'],
-      description: '台湾弁護士、パラリーガル、事務長、提携会計士で構成される昊鼎国際法律事務所のチームについて、各メンバーの経歴・専門分野・連絡先をご確認いただけるページです。'
+      description: '曾雋崴弁護士が率いるチームが、台湾の法律業務と韓国・台湾に関わる案件を担当します。'
     },
     insights: {
       label: 'INSIGHTS',

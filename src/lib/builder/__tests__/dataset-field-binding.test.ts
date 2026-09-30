@@ -238,7 +238,7 @@ describe('builder dataset field binding', () => {
       context,
       targetId: 'home.attorney.profile',
       fieldId: 'role',
-    })).toContain('대표 변호사');
+    })).toContain('파트너 변호사');
   });
 
   it('binds gallery images from column records while preserving layout controls', () => {

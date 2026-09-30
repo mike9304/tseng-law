@@ -8,6 +8,7 @@ import {
   type PublicBookingApiErrorCode,
 } from '@/lib/builder/bookings/bookings-copy';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { projectTsengPartnerRole } from '@/data/attorney-role';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -27,11 +28,19 @@ function toPublicStaff(member: Staff, locale: Locale): Staff & {
   const name = member.staffId === 'staff-tseng'
     ? { ...member.name, ...CANONICAL_STAFF_TSENG_NAME }
     : member.name;
+  const title = member.staffId === 'staff-tseng'
+    ? {
+        ko: projectTsengPartnerRole('ko', member.title.ko),
+        'zh-hant': projectTsengPartnerRole('zh-hant', member.title['zh-hant']),
+        en: projectTsengPartnerRole('en', member.title.en),
+      }
+    : member.title;
   return {
     ...member,
     name,
+    title,
     displayName: name[locale] || name.ko,
-    displayTitle: member.title[locale] || member.title.ko,
+    displayTitle: title[locale] || title.ko,
     displayBio: member.bio?.[locale] || member.bio?.ko || '',
   };
 }

@@ -613,7 +613,7 @@ function seedStaff(timestamp: string): Staff[] {
     {
       staffId: 'staff-tseng',
       name: { ko: '증준외', 'zh-hant': '曾雋崴', en: 'Wei Tseng' },
-      title: { ko: '대표 변호사', 'zh-hant': '主持律師', en: 'Managing Attorney' },
+      title: { ko: '파트너 변호사', 'zh-hant': '合夥律師', en: 'Partner' },
       bio: {
         ko: '대만 법인 설립, 투자, 계약 및 분쟁 대응을 총괄합니다.',
         'zh-hant': '專精公司設立、投資、契約與爭議處理。',

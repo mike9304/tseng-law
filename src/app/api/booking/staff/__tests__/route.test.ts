@@ -101,7 +101,7 @@ describe('/api/booking/staff', () => {
     expect(listStaffMock).not.toHaveBeenCalled();
   });
 
-  it('hides seed fake lawyers and canonicalizes staff-tseng names', async () => {
+  it('hides seed fake lawyers and canonicalizes staff-tseng names and outdated titles', async () => {
     listStaffMock.mockResolvedValue([
       {
         staffId: 'staff-lee',
@@ -136,12 +136,14 @@ describe('/api/booking/staff', () => {
 
     const response = await GET(request('serviceId=svc-1&locale=ko'));
     const payload = await response.json() as {
-      staff: Array<{ staffId: string; name: Record<string, string>; displayName: string }>;
+      staff: Array<{ staffId: string; name: Record<string, string>; displayName: string; displayTitle: string; title: Record<string, string> }>;
     };
 
     expect(response.status).toBe(200);
     expect(payload.staff.map((member) => member.staffId)).toEqual(['staff-tseng']);
     expect(payload.staff[0]?.displayName).toBe('증준외');
+    expect(payload.staff[0]?.displayTitle).toBe('파트너 변호사');
+    expect(payload.staff[0]?.title).toEqual({ ko: '파트너 변호사', 'zh-hant': '合夥律師', en: 'Partner' });
     expect(payload.staff[0]?.name).toEqual({
       ko: '증준외',
       'zh-hant': '曾雋崴',

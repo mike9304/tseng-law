@@ -216,8 +216,8 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ADVOKATER',
-      title: 'Hoverings internationella team',
-      description: 'Profiler för Hoverings advokater, operativ ledning för Korea och anknuten revisionsbyrå.',
+      title: 'Advokat Wei Tseng och hennes team',
+      description: 'Teamet som leds av advokat Wei Tseng hanterar juridiska ärenden i Taiwan och ärenden med anknytning till Korea och Taiwan.',
       intro: '',
       sections: [],
     },
@@ -704,8 +704,8 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ADVOKATER',
-      title: 'Hoverings internationale team',
-      description: 'Profiler for Hoverings advokater, den operative ledelse og det tilknyttede revisionskontor.',
+      title: 'Advokat Wei Tseng og hendes team',
+      description: 'Teamet under ledelse af advokat Wei Tseng håndterer juridiske sager i Taiwan og sager med tilknytning til Korea og Taiwan.',
       intro: '',
       sections: [],
     },
@@ -1192,8 +1192,8 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ADVOKATER',
-      title: 'Hoverings internasjonale team',
-      description: 'Profiler for Hoverings advokater, den operative ledelsen og revisjonspartneren.',
+      title: 'Advokat Wei Tseng og hennes team',
+      description: 'Teamet ledet av advokat Wei Tseng håndterer juridiske saker i Taiwan og saker med tilknytning til Korea og Taiwan.',
       intro: '',
       sections: [],
     },
@@ -1680,8 +1680,8 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ASIANAJAJAT',
-      title: 'Hoveringin kansainvälinen tiimi',
-      description: 'Hoveringin asianajajien, Korean toimintojen johdon ja tilintarkastajaosakkaan profiilit.',
+      title: 'Asianajaja Wei Tseng ja hänen tiiminsä',
+      description: 'Asianajaja Wei Tsengin johtama tiimi hoitaa Taiwanin oikeudellisia asioita sekä Koreaan ja Taiwaniin liittyviä tapauksia.',
       intro: '',
       sections: [],
     },

@@ -10,10 +10,10 @@ import { AboutLegacyPageBody, LawyersLegacyPageBody } from '../legacy-page-bodie
 // "International Team" string. Kept literal (not imported) so a silent edit to
 // `TEAM_NAME_BY_LOCALE` cannot make this test agree with itself.
 const names = {
-  ko: '호정 대만·한국 팀',
-  en: 'Our Team', // WO-X1 (EN-12): matches the nav label
-  'zh-hant': '昊鼎韓國台灣團隊',
-  ja: 'チーム紹介', // WO-X1 (J04): matches the nav label
+  ko: '증준외 변호사와 팀',
+  en: 'Attorney Wei Tseng and Her Team', // WO-X1 (EN-12): matches the nav label
+  'zh-hant': '曾雋崴律師與團隊',
+  ja: '曾雋崴弁護士とチーム', // WO-X1 (J04): matches the nav label
 };
 
 describe('International team branding across public routes', () => {

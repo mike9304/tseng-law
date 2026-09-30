@@ -208,8 +208,8 @@ describe('it/nl/pl attorney gender and language FAQ', () => {
     expect(text).toMatch(/[Aa]dwokatka Wei Tseng/);
     expect(text).not.toMatch(/[Aa]dwokat Wei Tseng/);
     expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/uprawniona/);
-    expect(guidanceTeamCopy.pl.representativeTitle).toBe('Adwokatka kierująca kancelarią');
-    expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/kieruje kancelarią/);
+    expect(guidanceTeamCopy.pl.representativeTitle).toBe('Adwokatka, partnerka');
+    expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/jest partnerką w kancelarii/);
     expect(guidanceTeamCopy.pl.representativeTitle).not.toMatch(/kierujący/);
   });
 

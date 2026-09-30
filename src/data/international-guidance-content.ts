@@ -402,9 +402,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'LUẬT SƯ',
-        title: 'Đội ngũ quốc tế Hovering',
-        description:
-          'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán sư hợp tác của Hovering.',
+        title: 'Luật sư Wei Tseng và đội ngũ',
+        description: 'Đội ngũ do luật sư Wei Tseng phụ trách xử lý các vấn đề pháp luật Đài Loan và vụ việc giữa Hàn Quốc và Đài Loan.',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a
@@ -897,9 +896,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'ADVOKAT',
-        title: 'Tim Internasional Hovering',
-        description:
-          'Profil para advokat, manajer operasional, dan akuntan mitra Hovering.',
+        title: 'Advokat Wei Tseng dan tim',
+        description: 'Tim yang dipimpin advokat Wei Tseng menangani urusan hukum Taiwan dan perkara Korea–Taiwan.',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a
@@ -1392,9 +1390,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'ทนายความ',
-        title: 'ทีมงานระหว่างประเทศ Hovering',
-        description:
-          'ประวัติของทนายความ ผู้จัดการฝ่ายปฏิบัติการ และหุ้นส่วนผู้สอบบัญชีของ Hovering',
+        title: 'ทนายความ Wei Tseng และทีมงาน',
+        description: 'ทีมงานที่นำโดยทนายความ Wei Tseng ดูแลงานกฎหมายไต้หวันและคดีที่เกี่ยวข้องกับเกาหลีและไต้หวัน',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a
@@ -1887,9 +1884,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'MGA ABOGADO',
-        title: 'Pandaigdigang pangkat ng Hovering',
-        description:
-          'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong CPA ng Hovering.',
+        title: 'Abogada Wei Tseng at ang kaniyang pangkat',
+        description: 'Pinamumunuan ni Abogada Wei Tseng ang pangkat na humahawak ng mga usaping legal sa Taiwan at mga kasong may kaugnayan sa Korea at Taiwan.',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a
@@ -2382,9 +2378,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'المحامون',
-        title: 'فريق Hovering الدولي',
-        description:
-          'ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.',
+        title: 'المحامية Wei Tseng وفريقها',
+        description: 'يتولى الفريق بقيادة المحامية Wei Tseng الشؤون القانونية في تايوان والقضايا المرتبطة بكوريا وتايوان.',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a

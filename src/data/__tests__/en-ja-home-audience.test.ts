@@ -104,16 +104,16 @@ describe('Indexed EN/JA landings crawl to attorney profile', () => {
 });
 
 describe('English and Japanese general-page copy residue', () => {
-  it('retargets About and lawyers page chrome away from Korea-Taiwan framing', () => {
-    // WO-X1 (EN-12/J04): team pages are named after the nav labels.
+  it('keeps firm information separate from Wei Tseng’s team', () => {
+    // The user confirmed this is Wei Tseng’s team, not the entire firm.
     expect(pageCopy.en.about.description).toBe(
       "Learn about Hovering's background and meet our team.",
     );
-    expect(pageCopy.en.lawyers.title).toBe('Our Team');
+    expect(pageCopy.en.lawyers.title).toBe('Attorney Wei Tseng and Her Team');
     expect(pageCopy.ja.about.description).toBe(
       '台湾を拠点とする国際的な法律実務と、弁護士・スタッフをご紹介します。',
     );
-    expect(pageCopy.ja.lawyers.title).toBe('チーム紹介');
+    expect(pageCopy.ja.lawyers.title).toBe('曾雋崴弁護士とチーム');
     expect(JSON.stringify({ en: pageCopy.en, ja: pageCopy.ja })).not.toMatch(
       /Korea-Taiwan|韓国・台湾業務チーム/,
     );

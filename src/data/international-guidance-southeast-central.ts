@@ -207,8 +207,8 @@ export const nepaliGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'अधिवक्ता',
-      title: 'Hovering को अन्तर्राष्ट्रिय टोली',
-      description: 'Hovering का अधिवक्ता, कोरिया सञ्चालनको नेतृत्व र साझेदार चार्टर्ड एकाउन्टेन्टका प्रोफाइल।',
+      title: 'अधिवक्ता Wei Tseng र उहाँको टोली',
+      description: 'अधिवक्ता Wei Tseng को नेतृत्वमा टोलीले ताइवानका कानुनी विषय र कोरिया–ताइवानसँग सम्बन्धित मुद्दाहरू हेर्छ।',
       intro: '',
       sections: [],
     },
@@ -697,9 +697,8 @@ export const burmeseGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ရှေ့နေများ',
-      title: 'Hovering ၏ နိုင်ငံတကာအဖွဲ့',
-      description:
-        'Hovering ၏ ရှေ့နေများ၊ ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲမှုနှင့် မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
+      title: 'ရှေ့နေ Wei Tseng နှင့် အဖွဲ့',
+      description: 'ရှေ့နေ Wei Tseng ဦးဆောင်သောအဖွဲ့သည် ထိုင်ဝမ်ဥပဒေရေးရာများနှင့် ကိုရီးယား–ထိုင်ဝမ် ဆက်နွှယ်သောအမှုများကို ကိုင်တွယ်သည်။',
       intro: '',
       sections: [],
     },
@@ -1188,9 +1187,8 @@ export const khmerGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'មេធាវី',
-      title: 'ក្រុមអន្ដរជាតិ Hovering',
-      description:
-        'ប្រវត្ដិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្ដិ និងគណនេយ្យករសាធារណៈដៃគូនៃ Hovering។',
+      title: 'មេធាវី Wei Tseng និងក្រុមការងារ',
+      description: 'ក្រុមការងារដឹកនាំដោយមេធាវី Wei Tseng ដោះស្រាយការងារច្បាប់នៅតៃវ៉ាន់ និងសំណុំរឿងពាក់ព័ន្ធនឹងកូរ៉េ និងតៃវ៉ាន់។',
       intro: '',
       sections: [],
     },
@@ -1677,8 +1675,8 @@ export const mongolianGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'ӨМГӨӨЛӨГЧ',
-      title: 'Hovering-ийн олон улсын баг',
-      description: 'Hovering-ийн өмгөөлөгч, үйл ажиллагаа хариуцсан менежер, түнш нягтлан бодогчийн танилцуулга.',
+      title: 'Өмгөөлөгч Wei Tseng болон түүний баг',
+      description: 'Өмгөөлөгч Wei Tseng-ийн удирдсан баг Тайванийн хууль зүйн асуудал болон Солонгос–Тайваньтай холбоотой хэргүүдийг хариуцдаг.',
       intro: '',
       sections: [],
     },

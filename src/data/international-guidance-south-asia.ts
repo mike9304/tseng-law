@@ -207,8 +207,8 @@ export const bengaliGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'আইনজীবী',
-      title: 'Hovering-এর আন্তর্জাতিক দল',
-      description: 'Hovering-এর আইনজীবী, কোরিয়া পরিচালনা ও অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্টের পরিচিতি।',
+      title: 'আইনজীবী Wei Tseng ও তাঁর দল',
+      description: 'আইনজীবী Wei Tseng-এর নেতৃত্বে দলটি তাইওয়ানের আইনি বিষয় এবং কোরিয়া–তাইওয়ান সংক্রান্ত মামলা নিয়ে কাজ করে।',
       intro: '',
       sections: [],
     },
@@ -695,8 +695,8 @@ export const urduGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'وکلا',
-      title: 'Hovering کی بین الاقوامی ٹیم',
-      description: 'Hovering کے وکلا، کوریا کے امور کی قیادت اور شراکت دار سرٹیفائیڈ پبلک اکاؤنٹنٹ کی پروفائلز۔',
+      title: 'وکیلہ Wei Tseng اور ان کی ٹیم',
+      description: 'وکیلہ Wei Tseng کی قیادت میں ٹیم تائیوان کے قانونی امور اور کوریا و تائیوان سے متعلق مقدمات سنبھالتی ہے۔',
       intro: '',
       sections: [],
     },
@@ -1185,9 +1185,8 @@ export const persianGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'وکلا',
-      title: 'تیم بین‌المللی Hovering',
-      description:
-        'نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering.',
+      title: 'وکیل Wei Tseng و تیم او',
+      description: 'تیم به سرپرستی وکیل Wei Tseng به امور حقوقی تایوان و پرونده‌های مرتبط با کره و تایوان رسیدگی می‌کند.',
       // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
       // prose cards this page used to carry were a duplicate of the key-facts
       // rows, a third copy of the consultation-language notice, and a
@@ -1679,8 +1678,8 @@ export const tamilGuidanceContent: GuidanceLocaleContent = {
     },
     lawyers: {
       eyebrow: 'வழக்கறிஞர்கள்',
-      title: 'Hovering-இன் பன்னாட்டுக் குழு',
-      description: 'Hovering வழக்கறிஞர்கள், கொரியா செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் பட்டயக் கணக்காளரின் சுயவிவரங்கள்.',
+      title: 'வழக்கறிஞர் Wei Tseng மற்றும் அவரது குழு',
+      description: 'வழக்கறிஞர் Wei Tseng தலைமையிலான குழு தைவான் சட்ட விவகாரங்களையும் கொரியா–தைவான் தொடர்புடைய வழக்குகளையும் கையாள்கிறது.',
       intro: '',
       sections: [],
     },

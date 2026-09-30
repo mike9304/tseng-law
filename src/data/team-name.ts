@@ -1,72 +1,54 @@
 import type { PublicLocale8 } from '@/lib/public-guidance';
 
-/**
- * WO-O22 C: the team name is no longer the same "International Team" in every
- * language. Each language names the team it actually serves:
- *
- *   ko       — Taiwan · Korea team
- *   zh-hant  — Korea · Taiwan team, written in the traditional-Chinese house
- *              style used by `昊鼎國際團隊` (firm prefix, no separators)
- *   en       — "Our Team", matching the EN nav label (WO-X1 EN-12)
- *   ja       — 「チーム紹介」, matching the JA nav label (WO-X1 J04)
- *   vi/id/th/fil/ar — the international team. The guidance packs never
- *              translate `Hovering International Law Firm`, so the team name
- *              stays in the same untranslated brand form for those guidance
- *              languages too, Arabic included.
- *
- * Single source of truth: `teamContent` (team section heading) and
- * `pageCopy.lawyers` (page heading, breadcrumb label via
- * `projectTeamBreadcrumbLabel`, and the JSON-LD/SEO titles derived from it)
- * all read from here, so the name can never drift between surfaces.
- */
+/** Wei Tseng’s own team; not a roster of the entire firm. */
 export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
-  ko: '호정 대만·한국 팀',
-  'zh-hant': '昊鼎韓國台灣團隊',
-  en: 'Our Team',
-  ja: 'チーム紹介',
-  vi: 'Hovering International Team',
-  id: 'Hovering International Team',
-  th: 'Hovering International Team',
-  fil: 'Hovering International Team',
-  ar: 'Hovering International Team',
-  de: 'Hovering International Team',
-  es: 'Hovering International Team',
-  fr: 'Hovering International Team',
-  pt: 'Hovering International Team',
-  'zh-hans': 'Hovering International Team',
-  ms: 'Hovering International Team',
-  ru: 'Hovering International Team',
-  tr: 'Hovering International Team',
-  it: 'Hovering International Team',
-  nl: 'Hovering International Team',
-  pl: 'Hovering International Team',
-  hi: 'Hovering International Team',
-  sv: 'Hovering International Team',
-  da: 'Hovering International Team',
-  nb: 'Hovering International Team',
-  fi: 'Hovering International Team',
-  cs: 'Tchajwansko-korejský tým Hovering',
-  hu: 'A Hovering tajvani–koreai csapata',
-  ro: 'Echipa Taiwan–Coreea a Hovering',
-  uk: 'Тайвансько-корейська команда Hovering',
-  el: 'Η ομάδα Ταϊβάν–Κορέας της Hovering',
-  he: 'צוות טאיוואן–קוריאה של Hovering',
-  bn: 'Hovering International Team',
-  ur: 'Hovering کی بین الاقوامی ٹیم',
-  fa: 'تیم بین‌المللی Hovering',
-  my: 'Hovering International Team',
-  ta: 'Hovering பன்னாட்டுக் குழு',
-  ne: 'Hovering International Team',
-  km: 'Hovering International Team',
-  mn: 'Hovering International Team',
-  sk: 'Taiwansko-kórejský tím Hovering',
-  bg: 'Международен екип Hovering',
-  hr: 'Tajvansko-korejski tim Hovering',
-  sr: 'Tajvansko-korejski tim Hovering',
-  sl: 'Tajvansko-korejska ekipa Hovering',
-  lt: 'Hovering Taivano ir Korėjos komanda',
-  lv: 'Hovering Taivānas–Korejas komanda',
-  et: 'Hoveringi Taiwani–Korea meeskond',
-  ca: 'Hovering International Team',
-  is: 'Hovering International Team',
+  'ko': '증준외 변호사와 팀',
+  'zh-hant': '曾雋崴律師與團隊',
+  'en': 'Attorney Wei Tseng and Her Team',
+  'ja': '曾雋崴弁護士とチーム',
+  'vi': 'Luật sư Wei Tseng và đội ngũ',
+  'id': 'Advokat Wei Tseng dan tim',
+  'th': 'ทนายความ Wei Tseng และทีมงาน',
+  'fil': 'Abogada Wei Tseng at ang kaniyang pangkat',
+  'ar': 'المحامية Wei Tseng وفريقها',
+  'de': 'Rechtsanwältin Wei Tseng und ihr Team',
+  'es': 'La abogada Wei Tseng y su equipo',
+  'fr': 'L’avocate Wei Tseng et son équipe',
+  'pt': 'A advogada Wei Tseng e a sua equipa',
+  'zh-hans': '曾雋崴律师与团队',
+  'ms': 'Peguam Wei Tseng dan pasukannya',
+  'ru': 'Адвокат Wei Tseng и её команда',
+  'tr': 'Avukat Wei Tseng ve ekibi',
+  'it': 'L’avvocata Wei Tseng e il suo team',
+  'nl': 'Advocaat Wei Tseng en haar team',
+  'pl': 'Adwokatka Wei Tseng i jej zespół',
+  'hi': 'अधिवक्ता Wei Tseng और उनकी टीम',
+  'sv': 'Advokat Wei Tseng och hennes team',
+  'da': 'Advokat Wei Tseng og hendes team',
+  'nb': 'Advokat Wei Tseng og hennes team',
+  'fi': 'Asianajaja Wei Tseng ja hänen tiiminsä',
+  'cs': 'Advokátka Wei Tseng a její tým',
+  'hu': 'Wei Tseng ügyvédnő és csapata',
+  'ro': 'Avocata Wei Tseng și echipa sa',
+  'uk': 'Адвокатка Wei Tseng та її команда',
+  'el': 'Η δικηγόρος Wei Tseng και η ομάδα της',
+  'he': 'עורכת הדין Wei Tseng והצוות שלה',
+  'bn': 'আইনজীবী Wei Tseng ও তাঁর দল',
+  'ur': 'وکیلہ Wei Tseng اور ان کی ٹیم',
+  'fa': 'وکیل Wei Tseng و تیم او',
+  'my': 'ရှေ့နေ Wei Tseng နှင့် အဖွဲ့',
+  'ta': 'வழக்கறிஞர் Wei Tseng மற்றும் அவரது குழு',
+  'ne': 'अधिवक्ता Wei Tseng र उहाँको टोली',
+  'km': 'មេធាវី Wei Tseng និងក្រុមការងារ',
+  'mn': 'Өмгөөлөгч Wei Tseng болон түүний баг',
+  'sk': 'Advokátka Wei Tseng a jej tím',
+  'bg': 'Адвокат Wei Tseng и нейният екип',
+  'hr': 'Odvjetnica Wei Tseng i njezin tim',
+  'sr': 'Advokatkinja Wei Tseng i njen tim',
+  'sl': 'Odvetnica Wei Tseng in njena ekipa',
+  'lt': 'Advokatė Wei Tseng ir jos komanda',
+  'lv': 'Advokāte Wei Tseng un viņas komanda',
+  'et': 'Advokaat Wei Tseng ja tema meeskond',
+  'ca': 'L’advocada Wei Tseng i el seu equip',
+  'is': 'Lögmaðurinn Wei Tseng og teymi hennar',
 };

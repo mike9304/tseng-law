@@ -35,8 +35,6 @@ Tämä merkinanto- ja väistämisjärjestys samalla kaistalla ei merkitse, että
 
 Tämän toimiston anonymisoidussa asiassa moottoripyöräilijä A ajoi matkustajan B kanssa vuoristotiellä. Heidän edessään ajoi 2 henkilöautoa; etummainen ajoneuvo 1 liikkui hitaasti, joten myös ajoneuvo 2 ja moottoripyörä etenivät alhaisella nopeudella.
 
-![Onnettomuuspiirros, joka näyttää moottoripyörän ohitusreitin ja 2 edellä ajavaa ajoneuvoa vuoristotiellä](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A yritti ohittaa 2 ajoneuvoa, ajoi vastakkaiselle kaistalle ja kiihdytti. Myös ajoneuvo 2 valmistautui ohittamaan ajoneuvon 1: alle 1 sekunnin kuluttua vilkun sytyttämisestä se ajoi vastakkaiselle kaistalle. Moottoripyörällä ei ollut riittävästi aikaa jarruttaa, ja se törmäsi ajoneuvoon 2.
 
 B sai vakavia pään vammoja ja kuoli paikalla; A menetti tajuntansa ja vietiin sairaalaan.

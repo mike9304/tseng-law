@@ -35,8 +35,6 @@ To zaporedje signalov in sprostitve na istem pasu ne pomeni, da bi bilo prehitev
 
 V anonimizirani zadevi, ki jo je vodila ta pisarna, je motorist A po gorski cesti vozil s sopotnikom B. Spredaj sta vozili 2 osebni vozili; vozilo št. 1, najbolj spredaj, se je gibalo počasi, zato sta tudi vozilo št. 2 in motor vozila počasi.
 
-![Shema nesreče, ki kaže pot prehitevanja motorja in 2 vozil spredaj na gorski cesti](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A je poskusil prehiteti obe vozili, zapeljal na nasprotni pas in pospešil. Tudi vozilo št. 2 se je pripravljalo prehiteti vozilo št. 1: manj kot 1 sekundo po vklopu smernika je zapeljalo na nasprotni pas. Motor ni imel dovolj časa za zaviranje in se je zaletel v vozilo št. 2.
 
 B je utrpel hudo poškodbo glave in umrl na mestu; A je izgubil zavest in so ga prepeljali v bolnišnico.

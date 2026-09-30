@@ -122,7 +122,7 @@ try {
   }
   await context.close();
   const assets = [];
-  for (const asset of ['/videos/traffic/overtaking-012.mp4', '/videos/traffic/overtaking-012.webm', '/videos/traffic/overtaking-012-mobile.mp4', '/videos/traffic/overtaking-012-mobile.webm', '/images/traffic/overtaking-012-poster.webp', '/images/traffic/overtaking-012-poster-mobile.webp', '/images/traffic/overtaking-diagram.webp']) {
+  for (const asset of ['/videos/traffic/overtaking-012.mp4', '/videos/traffic/overtaking-012.webm', '/videos/traffic/overtaking-012-mobile.mp4', '/videos/traffic/overtaking-012-mobile.webm', '/images/traffic/overtaking-012-poster.webp', '/images/traffic/overtaking-012-poster-mobile.webp', '/images/traffic/overtaking-diagram.webp', '/images/blog/012-taiwan-overtaking-accident-liability/img-01.jpg', '/images/012-taiwan-overtaking-accident-liability/img-01.jpg']) {
     const response = await fetch(`${base}${asset}?cb=${Date.now()}`, { redirect: 'manual' });
     if (response.status !== 404) throw new Error(`${asset}: HTTP ${response.status}, expected 404`);
     assets.push({ asset, status: response.status });

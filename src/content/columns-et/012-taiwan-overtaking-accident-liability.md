@@ -35,8 +35,6 @@ See signaali ja teedandmise järjekord samal sõidurajal ei tähenda, et mööda
 
 Meie büroo anonüümseks muudetud asjas sõitis mootorrattur A kaasreisija B-ga mägiteel. Nende ees sõitis 2 sõiduautot; eesmine sõiduk 1 liikus aeglaselt, seega liikusid ka sõiduk 2 ja mootorratas madala kiirusega.
 
-![Õnnetuse skeem, mis näitab mootorratta möödasõiduteed ja 2 eesolevat sõidukit mägiteel](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A üritas mööduda 2 sõidukist, sisenes vastassuunarajale ja kiirendas. Ka sõiduk 2 valmistus mööduma sõidukist 1: alla 1 sekundi pärast suunatule lülitamist sisenes ta vastassuunarajale. Mootorrattal ei olnud piisavalt aega pidurdada ja ta põrkas kokku sõidukiga 2.
 
 B sai raske peavigastuse ja suri sündmuskohal; A kaotas teadvuse ja viidi haiglasse.

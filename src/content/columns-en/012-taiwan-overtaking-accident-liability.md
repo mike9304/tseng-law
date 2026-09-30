@@ -37,8 +37,6 @@ Following this signaling and yielding sequence for overtaking in the same lane d
 
 In the anonymized case described in the original article, a motorcyclist, referred to here as A, was riding with passenger B on a mountain road. Two passenger cars were traveling ahead. The first car, Vehicle 1, was moving slowly, so Vehicle 2 and the motorcycle behind it were also traveling slowly.
 
-![Diagram of a motorcycle and two cars during a mountain-road overtaking collision](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A attempted to pass both cars, entered the oncoming lane, and accelerated. Vehicle 2 was also preparing to overtake Vehicle 1 and entered the oncoming lane less than one second after activating its turn signal. The motorcycle had too little time to brake and collided with Vehicle 2.
 
 B suffered a severe head injury and died at the scene. A lost consciousness and was taken to the hospital.

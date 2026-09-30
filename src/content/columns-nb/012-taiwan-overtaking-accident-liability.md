@@ -35,8 +35,6 @@ Denne rekkefølgen av signal og vikning i samme kjørefelt betyr ikke at forbikj
 
 I en anonymisert sak fra dette kontoret kjørte motorsyklisten A med passasjeren B på en fjellvei. Foran dem kjørte 2 personbiler; det fremste kjøretøyet nummer 1 beveget seg langsomt, så også kjøretøy nummer 2 og motorsykkelen kom frem med lav hastighet.
 
-![Ulykkesskisse som viser motorsykkelens forbikjøringssti og de 2 forankjørende kjøretøyene på en fjellvei](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A forsøkte å forbikjøre de 2 kjøretøyene, kjørte inn i det motsatte kjørefeltet og akselererte. Også kjøretøy nummer 2 forberedte seg på å forbikjøre kjøretøy nummer 1: mindre enn 1 sekund etter tenning av blinklyset kjørte det inn i det motsatte kjørefeltet. Motorsykkelen hadde for liten tid til å bremse og kolliderte med kjøretøy nummer 2.
 
 B pådro seg alvorlige hodeskader og omkom på stedet; A mistet bevisstheten og ble brakt til sykehuset.

@@ -35,8 +35,6 @@ Tada lenkianti transporto priemonė privalo įjungti kairįjį posūkio signalą
 
 Anonimizuotoje byloje, kurią nagrinėjo ši kontora, motociklininkas A važiavo kalnų keliu su keleiviu B. Priekyje važiavo du lengvieji automobiliai; priekyje esanti 1-oji transporto priemonė judėjo lėtai, todėl 2-oji transporto priemonė ir motociklas taip pat važiavo nedideliu greičiu.
 
-![Eismo įvykio schema, rodanti motociklo ir dviejų priekyje važiavusių automobilių lenkimo kelią kalnų kelyje](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A bandė aplenkti abu automobilius, įvažiavo į priešpriešinio eismo juostą ir padidino greitį. 2-oji transporto priemonė taip pat ruošėsi lenkti 1-ąją: praėjus mažiau nei 1 sekundei po posūkio signalo įjungimo įvažiavo į priešpriešinio eismo juostą. Motociklas turėjo per mažai laiko stabdyti ir susidūrė su 2-ąja transporto priemone.
 
 B patyrė sunkų galvos sužalojimą ir mirė vietoje; A prarado sąmonę ir buvo nuvežtas į ligoninę.

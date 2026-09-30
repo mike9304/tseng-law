@@ -35,8 +35,6 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 原文介紹的一件匿名案件中，機車駕駛人A載著乘客B行駛於山路。前方有兩輛小客車，最前面的1號車行駛緩慢，因此2號車與機車也以較慢速度行進。
 
-![顯示山路上機車與前方兩輛汽車超車路徑的事故示意圖](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A試圖一次超越前方兩車，駛入對向車道並加速。2號車也準備超越1號車：開啟方向燈後不到一秒即駛入對向車道。機車欠缺煞車餘裕，因而與2號車碰撞。
 
 B頭部受重傷，當場死亡；A失去意識，被送往醫院。

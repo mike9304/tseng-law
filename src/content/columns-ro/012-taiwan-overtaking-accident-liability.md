@@ -35,8 +35,6 @@ Această ordine de semnale și de cedare pe aceeași bandă nu înseamnă că de
 
 Într-o cauză anonimizată tratată de acest cabinet, motociclistul A circula pe un drum de munte cu pasagerul B. În față circulau 2 autoturisme; vehiculul nr. 1, cel mai din față, înainta încet, astfel că vehiculul nr. 2 și motocicleta înaintau și ele cu viteză mică.
 
-![Schemă de accident care arată traiectoria de depășire a motocicletei și a 2 vehicule din față pe un drum de munte](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A a încercat să depășească ambele vehicule, s-a angajat pe banda opusă și a accelerat. Vehiculul nr. 2 se pregătea și el să depășească vehiculul nr. 1: la mai puțin de 1 secundă după ce a aprins semnalizatorul, s-a angajat pe banda opusă. Motocicleta nu avea timp suficient pentru a frâna și a intrat în coliziune cu vehiculul nr. 2.
 
 B a suferit leziuni grave la cap și a decedat pe loc; A și-a pierdut cunoștința și a fost transportat la spital.

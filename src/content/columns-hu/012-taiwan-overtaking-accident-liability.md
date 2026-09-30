@@ -35,8 +35,6 @@ Ez az ugyanazon sávbeli jelzés- és elsőbbségátadási sorrend nem jelenti a
 
 Az iroda által kezelt, anonimizált ügyben A motorkerékpár-vezető B utassal hegyi úton haladt. Előttük két személygépkocsi volt; a legelöl haladó 1. számú jármű lassan mozgott, ezért a 2. számú jármű és a motorkerékpár is lassú sebességgel haladt.
 
-![Baleseti ábra, amely a motorkerékpár és az elöl haladó két jármű előzési pályáját mutatja hegyi úton](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 „A” mindkét járművet meg akarta előzni, az ellenkező sávba hajtott és gyorsított. A 2. számú jármű is készült az 1. számú jármű előzésére: az irányjelző bekapcsolása után 1 másodperc sem telt el, amikor az ellenkező sávba lépett. A motorkerékpárnak nem volt elég ideje a fékezésre, és összeütközött a 2. számú járművel.
 
 B súlyos fejsérülést szenvedett, és a helyszínen meghalt; A eszméletét vesztette, és kórházba szállították.

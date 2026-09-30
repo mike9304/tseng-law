@@ -35,8 +35,6 @@ Urutan pemberian isyarat dan pemberian jalan pada jalur yang sama ini tidak bera
 
 Dalam sebuah perkara anonim yang ditangani kantor ini, pengendara sepeda motor A sedang melaju di jalan pegunungan sambil membonceng penumpang B. Di depannya terdapat dua mobil penumpang; mobil nomor 1 yang berada paling depan bergerak lambat sehingga mobil nomor 2 dan sepeda motor itu pun berjalan dengan kecepatan rendah.
 
-![Diagram kecelakaan yang menunjukkan jalur mendahului sepeda motor dan dua kendaraan di depannya di jalan pegunungan](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A berusaha melewati kedua mobil itu sekaligus sehingga masuk ke jalur berlawanan dan menambah kecepatan. Mobil nomor 2 pun bersiap mendahului mobil nomor 1: kurang dari satu detik setelah menyalakan lampu penunjuk arah, mobil itu masuk ke jalur berlawanan. Sepeda motor tidak sempat mengerem sehingga bertabrakan dengan mobil nomor 2.
 
 B mengalami luka berat pada kepala dan meninggal dunia di tempat kejadian, sedangkan A kehilangan kesadaran dan dibawa ke rumah sakit.

@@ -35,8 +35,6 @@ Toto pořadí signálů a uvolnění ve stejném pruhu neznamená, že by předj
 
 V anonymizované věci vedené touto kanceláří jel motocyklista A po horské silnici se spolujezdcem B. Vpředu jela 2 osobní vozidla; vozidlo č. 1, nejvíce vpředu, se pohybovalo pomalu, takže vozidlo č. 2 i motocykl postupovaly rovněž nízkou rychlostí.
 
-![Schéma nehody ukazující dráhu předjíždění motocyklu a 2 vozidel vpředu na horské silnici](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A se pokusil předjet obě vozidla, vjel do protisměrného pruhu a zrychlil. Vozidlo č. 2 se rovněž chystalo předjet vozidlo č. 1: méně než 1 sekundu po zapnutí blinkru vjelo do protisměrného pruhu. Motocykl neměl dost času zabrzdit a srazil se s vozidlem č. 2.
 
 B utrpěl těžké poranění hlavy a zemřel na místě; A ztratil vědomí a byl převezen do nemocnice.

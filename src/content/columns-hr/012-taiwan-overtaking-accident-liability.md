@@ -35,8 +35,6 @@ Taj redoslijed signala i ustupanja u istom traku ne znači da je pretjecanje dop
 
 U anonimiziranom predmetu koji je vodio ovaj ured, motociklist A vozio se planinskom cestom sa suvozačem B. Ispred su se kretala 2 osobna vozila; vozilo broj 1, najviše sprijeda, kretalo se sporo, pa su i vozilo broj 2 i motocikl napredovali malom brzinom.
 
-![Shema nesreće koja pokazuje putanju pretjecanja motocikla i 2 vozila ispred na planinskoj cesti](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A je pokušao pretjecati oba vozila, ušao u suprotni trak i ubrzao. Vozilo broj 2 također se spremalo pretjecati vozilo broj 1: manje od 1 sekunde nakon uključivanja pokazivača smjera ušlo je u suprotni trak. Motocikl nije imao dovoljno vremena za kočenje i sudario se s vozilom broj 2.
 
 B je pretrpio tešku ozljedu glave i umro na mjestu; A je izgubio svijest i prevezen je u bolnicu.

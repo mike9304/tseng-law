@@ -35,8 +35,6 @@ Trình tự ra tín hiệu và nhường đường trong cùng một làn đư�
 
 Trong một vụ việc ẩn danh do văn phòng luật sư chúng tôi xử lý, người lái xe máy (機車) là A chở người ngồi sau là B chạy trên đường núi. Phía trước có hai xe ô tô con (小客車); xe số 1 đi đầu di chuyển chậm, nên xe số 2 và xe máy cũng đi với tốc độ chậm.
 
-![Sơ đồ minh họa vụ tai nạn cho thấy đường vượt của xe máy và hai xe ô tô phía trước trên đường núi](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A định vượt cả hai xe nên đã đi vào làn ngược chiều (對向車道) và tăng tốc. Xe số 2 cũng đang chuẩn bị vượt xe số 1: sau khi bật đèn báo rẽ chưa đầy một giây, xe này đã đi vào làn ngược chiều. Xe máy không còn đủ khoảng thời gian để phanh nên đã va chạm với xe số 2.
 
 B bị chấn thương nặng ở vùng đầu và tử vong ngay tại hiện trường; A bất tỉnh và được đưa tới bệnh viện.

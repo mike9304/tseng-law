@@ -52,7 +52,7 @@ const internalLinks = [
 const disclaimer =
   '이 글은 대만의 추월 규정과 사고 책임 판단에 관한 일반적인 법률정보이며, 특정 사건에 대한 법률자문이나 결과 보장이 아닙니다. 실제 책임은 사고 장소, 차량 움직임, 속도, 신호, 증거, 감정 및 최신 법령에 따라 달라질 수 있으므로 구체적인 사건은 관련 자료를 바탕으로 개별 검토해야 합니다.';
 
-const EXPECTED_VISIBLE_EOJEOL = 552;
+const EXPECTED_VISIBLE_EOJEOL = 540;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -92,7 +92,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
       url: sourceUrl,
       lastmod: '2026-09-30',
       date_display: '2025년 9월 13일',
-      read_time: '4분 분량',
+      read_time: '3분 분량',
       categories: ['대만 법률정보'],
       featured_image: featuredImage,
     });
@@ -112,7 +112,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     const calculatedMinutes = Math.ceil(visibleEojeolCount / 180);
 
     expect(visibleEojeolCount).toBe(EXPECTED_VISIBLE_EOJEOL);
-    expect(calculatedMinutes).toBe(4);
+    expect(calculatedMinutes).toBe(3);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);
   });
@@ -175,16 +175,17 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     expect(raw).not.toContain('자동으로 책임이');
   });
 
-  it('uses the contracted featured and incident images with exact Korean alts and drops the legacy graphic', () => {
+  it('uses the contracted featured and incident images with exact Korean alts; the case sketch and legacy graphic stay removed', () => {
     const imageBlocks = Array.from(
       parsed.content.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g),
       (match) => ({ alt: match[1], src: match[2] }),
     );
     expect(imageBlocks).toEqual([
       { alt: featuredAlt, src: featuredImage },
-      { alt: incidentAlt, src: incidentImage },
     ]);
-    expect(countOccurrences(raw, incidentImage)).toBe(1);
+    // The case sketch (img-01) was withdrawn on 2026-09-30: no consent from the party.
+    expect(countOccurrences(raw, incidentImage)).toBe(0);
+    expect(raw).not.toContain(incidentAlt);
     expect(raw).not.toContain('img-02.jpg');
     expect(raw).not.toContain('한국어버전');
     expect(raw).not.toContain('한국어 버전');
@@ -218,7 +219,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
       title,
       date: '2026-09-30',
       dateDisplay: '2025년 9월 13일',
-      readTime: '4분 분량',
+      readTime: '3분 분량',
       category: 'legal',
       categoryLabel: '법률정보',
       featuredImage:
@@ -271,6 +272,6 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     expect(visibleLabelsAndProse).toContain(officialLabel);
     expect(visibleLabelsAndProse).toContain(supplementaryLabel);
     expect(visibleLabelsAndProse).toContain(featuredAlt);
-    expect(visibleLabelsAndProse).toContain(incidentAlt);
+    expect(visibleLabelsAndProse).not.toContain(incidentAlt);
   });
 });

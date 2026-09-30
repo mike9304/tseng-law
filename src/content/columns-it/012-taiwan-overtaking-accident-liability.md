@@ -35,8 +35,6 @@ Quest’ordine di segnali e di precedenza nella stessa corsia non significa che 
 
 In un caso anonimizzato trattato da questo studio, il motociclista A circolava su una strada di montagna con il passeggero B. Davanti circolavano 2 autovetture; il veicolo n. 1, il più avanti, avanzava lentamente, così che il veicolo n. 2 e la motocicletta avanzavano anch’essi a bassa velocità.
 
-![Schema di incidente che mostra la traiettoria di sorpasso della motocicletta e dei 2 veicoli davanti su una strada di montagna](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A ha tentato di sorpassare i 2 veicoli, è entrato nella corsia di senso opposto e ha accelerato. Il veicolo n. 2 si preparava anche a sorpassare il veicolo n. 1: meno di 1 secondo dopo avere acceso l’indicatore, è entrato nella corsia di senso opposto. La motocicletta non aveva tempo sufficiente per frenare ed è entrata in collisione con il veicolo n. 2.
 
 B ha sofferto lesioni gravi alla testa ed è deceduto sul luogo; A ha perso la coscienza ed è stato trasportato all’ospedale.

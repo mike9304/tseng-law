@@ -35,8 +35,6 @@ Taj redosled signala i ustupanja u istoj traci ne znači da bi preticanje bilo d
 
 U anonimizovanoj stvari koju je vodila ova kancelarija, motociklista A vozio je planinskim putem s putnikom B. Ispred su vozila dva putnička vozila; vozilo broj 1, najdalje napred, kretalo se sporo, pa su se i vozilo broj 2 i motocikl kretali malom brzinom.
 
-![Šema nezgode koja pokazuje putanju preticanja motocikla i dva vozila ispred na planinskom putu](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A je pokušao da pretekne oba vozila, ušao je u traku suprotnog smera i ubrzao. Vozilo broj 2 takođe se spremalo da pretekne vozilo broj 1: manje od 1 sekunde nakon uključivanja pokazivača pravca ušlo je u traku suprotnog smera. Motocikl nije imao dovoljno vremena da zakoči i sudario se s vozilom broj 2.
 
 B je zadobio tešku povredu glave i preminuo na licu mesta; A je izgubio svest i prevezen je u bolnicu.

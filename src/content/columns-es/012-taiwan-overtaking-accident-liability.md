@@ -35,8 +35,6 @@ Ese orden de señales y de ceder el paso en el mismo carril no significa que el 
 
 En un asunto anónimo tramitado por este despacho, el conductor de la motocicleta A circulaba por una carretera de montaña con el pasajero B. Delante iban dos automóviles; el vehículo n.º 1, el que iba en cabeza, se movía despacio, de modo que el vehículo n.º 2 y la motocicleta también avanzaban a baja velocidad.
 
-![Esquema del accidente que muestra la trayectoria de adelantamiento de la motocicleta y de los 2 vehículos de delante en una carretera de montaña](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A intentó rebasar ambos vehículos a la vez, de modo que se internó en el carril contrario y aceleró. El vehículo n.º 2 también se preparó para adelantar al n.º 1: menos de 1 segundo después de encender el indicador de dirección, se internó en el carril contrario. La motocicleta no tuvo margen suficiente para frenar y colisionó con el vehículo n.º 2.
 
 B sufrió una lesión grave en la cabeza y falleció en el lugar; A perdió el conocimiento y fue trasladado al hospital.

@@ -35,8 +35,6 @@ Pēc tam apdzenošajam transportlīdzeklim jāieslēdz kreisais virzienrādītā
 
 Anonimizētā lietā, ko kārtoja šis birojs, motocikla vadītājs A ar pasažieri B brauca pa kalnu ceļu. Priekšā brauca 2 vieglie automobiļi; vispriekšējais 1. transportlīdzeklis kustējās lēni, tā ka arī 2. transportlīdzeklis un motocikls turpināja ar zemu ātrumu.
 
-![Negadījuma shēma, kas rāda motocikla un 2 priekšā braucošo transportlīdzekļu apdzīšanas ceļu kalnu ceļā](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A mēģināja apdzīt abus transportlīdzekļus, iegāja pretējā joslā un paātrinājās. Arī 2. transportlīdzeklis gatavojās apdzīt 1. transportlīdzekli: mazāk nekā 1 sekundi pēc virzienrādītāja ieslēgšanas tas iegāja pretējā joslā. Motociklam nepietika laika nobremzēt, un tas sadūrās ar 2. transportlīdzekli.
 
 B guva smagu galvas traumu un mira notikuma vietā; A zaudēja samaņu un tika nogādāts slimnīcā.

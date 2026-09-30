@@ -35,8 +35,6 @@ Síðan skal ökutækið sem ekur fram úr kveikja vinstra stefnuljósið, aka f
 
 Í nafnlausu máli frá skrifstofunni ók mótorhjólamaðurinn A með farþegann B á fjallvegi. Á undan þeim óku tveir fólksbílar; fremsta ökutækið nr. 1 hreyfðist hægt, svo einnig ökutæki nr. 2 og mótorhjólið komust áfram á lágum hraða.
 
-![Slysaskissa sem sýnir framúrakstursleið mótorhjólsins og ökutækin tvö á undan á fjallvegi](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A reyndi að aka fram úr ökutækjunum tveimur, fór inn á akreinina á móti og jók hraðann. Ökutæki nr. 2 bjó sig einnig undir að aka fram úr ökutæki nr. 1: innan við 1 sekúndu eftir kveikingu stefnuljóssins fór það inn á akreinina á móti. Mótorhjólið hafði of skamman tíma til að hemla og rakst á ökutæki nr. 2.
 
 B hlaut alvarlega höfuðáverka og lést á staðnum; A missti meðvitund og var fluttur á sjúkrahús.

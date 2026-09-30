@@ -35,8 +35,6 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 在本事务所处理的匿名案件中，摩托车驾驶人A载乘客B行驶于山路。前方有2辆轿车；最前方的第1号车辆开得很慢，所以第2号车辆和摩托车也以低速跟随。
 
-![显示山路上摩托车与前方2辆车超车轨迹的事故图解](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A试图超越该2辆车，进入对向车道并加速。第2号车辆也准备超越第1号车辆：开启方向灯后未满1秒即进入对向车道。摩托车来不及刹车，与第2号车辆碰撞。
 
 B头部受重伤并当场死亡；A失去意识被送往医院。

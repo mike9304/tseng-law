@@ -53,11 +53,11 @@ const internalLinks = [
 const disclaimer =
   '本稿は、台湾の追い越し規則および事故責任の判断に関する一般的な法律情報であり、特定の事案に対する法律上の助言や結果の保証ではありません。実際の責任は、事故地点、車両の動き、速度、合図、証拠、鑑定および最新の法令によって異なり得るため、具体的な事案については、関連資料に基づき個別に検討する必要があります。';
 
-const EXPECTED_VISIBLE_JAPANESE = 1_743;
-const EXPECTED_VISIBLE_KANA = 898;
+const EXPECTED_VISIBLE_JAPANESE = 1_712;
+const EXPECTED_VISIBLE_KANA = 884;
 const EXPECTED_READ_MINUTES = 4;
 const EXPECTED_SOURCE_SHA256 =
-  'd6ad716755035a665172155a5952beb2d5a4a7b95a7a39ff303b346edbe5b7d7';
+  'ab7fe2d550a5e209360216d06b2cd95a46ac12b85f0441895ca588cf7dfd9ba1';
 
 const article101Groups = [
   '曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',
@@ -203,16 +203,17 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(raw).not.toContain('同意を得てから');
   });
 
-  it('uses the contracted featured and incident images with exact alts and drops img-02', () => {
+  it('uses the contracted featured image with exact alts; img-01 case sketch and img-02 stay removed', () => {
     const imageBlocks = Array.from(
       parsed.content.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g),
       (match) => ({ alt: match[1], src: match[2] }),
     );
     expect(imageBlocks).toEqual([
       { alt: featuredAlt, src: featuredImage },
-      { alt: incidentAlt, src: incidentImage },
     ]);
-    expect(countOccurrences(raw, incidentImage)).toBe(1);
+    // The case sketch (img-01) was withdrawn on 2026-09-30: no consent from the party.
+    expect(countOccurrences(raw, incidentImage)).toBe(0);
+    expect(raw).not.toContain(incidentAlt);
     expect(raw).not.toContain('img-02.jpg');
     expect(raw).not.toContain('韓国語版に翻訳');
     expect(raw).not.toContain('韓国語版');
@@ -222,9 +223,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
       parsed.content.indexOf(`## ${headings[1]}`),
       parsed.content.indexOf(`## ${headings[2]}`),
     );
-    expect(incidentSection).toContain(
-      `![${incidentAlt}](${incidentImage})`,
-    );
+    expect(incidentSection).not.toContain(incidentImage);
   });
 
   it('preserves the secondary reading link and the three Japanese internal links once each', () => {

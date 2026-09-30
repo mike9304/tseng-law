@@ -50,7 +50,7 @@ const internalLinks = [
 const disclaimer =
   '本文僅提供台灣超車規則與事故責任判斷的一般法律資訊，不構成特定案件的法律意見或結果保證。實際責任可能因事故地點、車輛動態、速度、燈號、證據、鑑定結果及現行法規而異，具體案件仍應依相關資料個別分析。';
 
-const EXPECTED_VISIBLE_HAN = 1_072;
+const EXPECTED_VISIBLE_HAN = 1_048;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -176,9 +176,10 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
     );
     expect(imageBlocks).toEqual([
       { alt: featuredAlt, src: featuredImage },
-      { alt: incidentAlt, src: incidentImage },
     ]);
-    expect(countOccurrences(raw, incidentImage)).toBe(1);
+    // The case sketch (img-01) was withdrawn on 2026-09-30: no consent from the party.
+    expect(countOccurrences(raw, incidentImage)).toBe(0);
+    expect(raw).not.toContain(incidentAlt);
     expect(raw).not.toContain('img-02.jpg');
     expect(raw).not.toContain('中文版');
     expect(raw).not.toContain('翻譯成了中文');

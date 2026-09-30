@@ -3,7 +3,7 @@ title: "대만 추월 사고의 책임은 어떻게 판단하나요?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-30"
 date_display: "2025년 9월 13일"
-read_time: "4분 분량"
+read_time: "3분 분량"
 categories:
   - "대만 법률정보"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
@@ -34,8 +34,6 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 ## 기존 칼럼에 소개된 익명 사고 사례
 
 기존 칼럼에 소개된 익명 사건에서, 오토바이 운전자 A는 동승자 B를 태우고 산길을 달리고 있었습니다. 앞에는 승용차 두 대가 있었고, 가장 앞의 1호 차량이 천천히 움직여 2호 차량과 오토바이도 함께 느린 속도로 진행하고 있었습니다.
-
-![산길에서 오토바이와 앞선 차량 두 대의 추월 경로를 보여 주는 사고 도해](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
 A는 두 차량을 모두 앞지르려고 반대 차로에 들어가 가속했습니다. 2호 차량 역시 1호 차량을 추월하려고 준비하면서, 방향지시등을 켠 뒤 1초도 되지 않아 반대 차로로 진입했습니다. 오토바이는 제동할 여유가 부족해 2호 차량과 충돌했습니다.
 

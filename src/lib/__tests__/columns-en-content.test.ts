@@ -146,9 +146,9 @@ describe('English full column corpus', () => {
     expect(countOccurrences(raw, officialRegulationsUrl)).toBe(1);
     expect(countOccurrences(raw, supplementaryUrl)).toBe(1);
     expect(countOccurrences(raw, featuredImage)).toBe(2);
-    expect(countOccurrences(raw, incidentImage)).toBe(1);
+    expect(countOccurrences(raw, incidentImage)).toBe(0); // case sketch withdrawn 2026-09-30 (no consent)
     expect(countOccurrences(raw, featuredImageBlock)).toBe(1);
-    expect(countOccurrences(raw, incidentImageBlock)).toBe(1);
+    expect(countOccurrences(raw, incidentImageBlock)).toBe(0);
     expect(countOccurrences(raw, disclaimer)).toBe(1);
     expect(loadedPublicContent).toContain(disclaimer);
     for (const link of internalLinks) {

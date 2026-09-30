@@ -35,8 +35,6 @@ Denna ordning av signaler och företräde i samma körfält betyder inte att omk
 
 I ett anonymiserat ärende som denna byrå har hanterat körde motorcyklisten A på en bergsväg med passageraren B. Framför dem körde 2 personbilar; fordon nr 1, längst fram, rörde sig långsamt, så att även fordon nr 2 och motorcykeln fortsatte i låg fart.
 
-![Olycksskiss som visar omkörningsbanan för motorcykeln och de 2 fordonen framför på en bergsväg](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A försökte köra om båda fordonen, gick in i mötande körfält och accelererade. Fordon nr 2 förberedde sig också för att köra om fordon nr 1: mindre än 1 sekund efter att blinkers tänts gick det in i mötande körfält. Motorcykeln hade för lite tid att bromsa och kolliderade med fordon nr 2.
 
 B fick allvarliga huvudskador och avled på plats; A förlorade medvetandet och fördes till sjukhus.

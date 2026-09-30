@@ -256,7 +256,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     countrySpecificItems: [
       {
         title: '韓國：匯款與海外直接投資申報',
-        text: '依公開專欄所載，若資金由韓國銀行匯出，須由本人臨櫃匯款並申報海外直接投資。',
+        text: '若資金由韓國銀行匯出，公開專欄記載本人臨櫃匯款與海外直接投資申報，常是韓國投資人需要另行確認的事項。這不是所有外國投資人的共通匯款規則。',
       },
     ],
     procedureHeading: '台灣公司設立流程（5階段）',

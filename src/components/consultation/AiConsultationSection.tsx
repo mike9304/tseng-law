@@ -120,9 +120,9 @@ function getFreshnessLabel(locale: Locale, freshness: 'fresh' | 'review_needed' 
   }
 
   if (locale === 'zh-hant') {
-    if (freshness === 'fresh') return '文章內容為最新';
-    if (freshness === 'review_needed') return '建議確認文章是否已更新';
-    return '尚未確認文章是否為最新';
+    if (freshness === 'fresh') return '文章時效正常';
+    if (freshness === 'review_needed') return '建議再次確認時效';
+    return '時效尚未確認';
   }
 
   if (freshness === 'fresh') return 'Source freshness checked';

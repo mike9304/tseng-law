@@ -21,7 +21,7 @@ import type { PublicLocale8 } from '@/lib/public-guidance';
  */
 export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   ko: '호정 대만·한국 팀',
-  'zh-hant': '昊鼎韓台團隊',
+  'zh-hant': '昊鼎韓國台灣團隊',
   en: 'Our Team',
   ja: 'チーム紹介',
   vi: 'Hovering International Team',

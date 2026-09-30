@@ -12,7 +12,7 @@ import { AboutLegacyPageBody, LawyersLegacyPageBody } from '../legacy-page-bodie
 const names = {
   ko: '호정 대만·한국 팀',
   en: 'Our Team', // WO-X1 (EN-12): matches the nav label
-  'zh-hant': '昊鼎韓台團隊',
+  'zh-hant': '昊鼎韓國台灣團隊',
   ja: 'チーム紹介', // WO-X1 (J04): matches the nav label
 };
 

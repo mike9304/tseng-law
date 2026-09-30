@@ -144,7 +144,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '有哪些諮詢方式？',
       answer:
-        '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓文、中文、日文、英文皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。'
+        '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語、中文、日語、英語皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。'
     },
     {
       question: '物流業、化粧品等特殊產業也能設立公司嗎？',

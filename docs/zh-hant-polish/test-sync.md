@@ -92,3 +92,7 @@ npx vitest run \
 - 專欄 003 標題還原為 main 的「台灣交通事故應對 Q&A…」（site-content、md、columns-zh-traffic-003 測試），以符合 column-embeddings 記錄；不動向量。
 - about 版面：firm-introduction 段落縮短，firm-intro 高度 1027→933，attorney y 1455→1361，contact y 4060→3966，stageHeight 5315→5221（decompose-about、zh-hant-standalone-baseline）。
 - 衝突處理：041、issues/zh-hant 07、09 採用 main 46dcb536 版本；traffic-hub.ts 圖解區塊採用 main 結構。
+
+## 最終 Astra 審閱後（21:45）
+- faq-content-ja-factual-consistency：還原鎖定的 FAQ 諮詢方式答覆後，雜湊同步為 bd802d1d…66ac。
+- 團隊名稱還原為「昊鼎韓國台灣團隊」，4 個測試檔的預期字串同步還原。

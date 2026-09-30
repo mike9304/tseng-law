@@ -75,7 +75,7 @@ const expectedJapaneseFaq = [
 
 const untouchedLocaleHashes = {
   ko: '398347fb5e2c2246704d93f79a299389aa1e4423ffd0ce7edfe363cceee80d3c',
-  'zh-hant': '25a64af0b834a16ccc66568265acff4dd5935e3036e46072bb519fc7f7e7f8c1',
+  'zh-hant': 'bd802d1de62d36bf55043f442873beaa5041c9730b23987e3744b25d8d8066ac',
 } as const;
 
 // WO-X1 (EN-03): re-baselined after the divorce FAQ subject became

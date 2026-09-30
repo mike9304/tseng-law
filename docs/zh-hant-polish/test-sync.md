@@ -86,3 +86,9 @@ npx vitest run \
 ## gate 階段（20:40）
 - about-ja.test.tsx：zh-hant 介紹頁 description 改為「認識事務所背景與昊鼎韓台團隊成員。」（core-gate3 Fable 第1筆），測試字串同步更新。
 - home-stats-factual-claims.test.ts：統計說明還原為鎖定版本（與 home-zh-hant-parity after 一致），修正 home-zh-hant-editor-read.test.ts 4 項失敗。
+
+## rebase 後最終同步（21:10，origin/main 46dcb536）
+- 專欄可見漢字數：004 7,918→7,931；005 3,693→3,699；011 3,763→3,777；008 1,598→1,601（read_time 4→5分鐘，md 與測試同步）；012 1,048→962。
+- 專欄 003 標題還原為 main 的「台灣交通事故應對 Q&A…」（site-content、md、columns-zh-traffic-003 測試），以符合 column-embeddings 記錄；不動向量。
+- about 版面：firm-introduction 段落縮短，firm-intro 高度 1027→933，attorney y 1455→1361，contact y 4060→3966，stageHeight 5315→5221（decompose-about、zh-hant-standalone-baseline）。
+- 衝突處理：041、issues/zh-hant 07、09 採用 main 46dcb536 版本；traffic-hub.ts 圖解區塊採用 main 結構。

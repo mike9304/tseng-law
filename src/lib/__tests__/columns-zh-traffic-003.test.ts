@@ -12,7 +12,7 @@ const rawBytes = fs.readFileSync(columnPath);
 const raw = rawBytes.toString('utf8');
 const parsed = matter(raw);
 
-const title = '台灣交通事故因應 Q&A：現場處置、過失、和解與損害賠償';
+const title = '台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償';
 const sourceUrl =
   'https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure';
 const featuredImage =

@@ -272,7 +272,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_693);
+    expect(visibleHanCount).toBe(3_699);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

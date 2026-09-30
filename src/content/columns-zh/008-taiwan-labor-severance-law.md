@@ -3,7 +3,7 @@ title: "台灣勞動法：在台灣領資遣費真的很難嗎？"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "2025年9月13日"
-read_time: "4分鐘閱讀"
+read_time: "5分鐘閱讀"
 categories:
   - "台灣法律資訊"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"

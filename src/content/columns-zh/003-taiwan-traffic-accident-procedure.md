@@ -1,5 +1,5 @@
 ---
-title: "台灣交通事故因應 Q&A：現場處置、過失、和解與損害賠償"
+title: "台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-30"
 date_display: "2025年9月13日"
@@ -11,7 +11,7 @@ diagram: "claim-records-3d"
 diagram_after: "Q7. 事故後可以向對方請求哪些損害？"
 ---
 
-# 台灣交通事故因應 Q&A：現場處置、過失、和解與損害賠償
+# 台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償
 
 ![說明台灣交通事故後現場安全處置與證據保全的圖片](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 

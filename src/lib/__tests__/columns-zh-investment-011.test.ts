@@ -360,7 +360,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     const hanCount = visibleText.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(hanCount / 400);
 
-    expect(hanCount).toBe(3_763);
+    expect(hanCount).toBe(3_777);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

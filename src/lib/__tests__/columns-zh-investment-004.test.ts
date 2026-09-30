@@ -320,7 +320,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(5_000);
-    expect(visibleHanCount).toBe(7_918);
+    expect(visibleHanCount).toBe(7_931);
     expect(calculatedMinutes).toBe(20);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

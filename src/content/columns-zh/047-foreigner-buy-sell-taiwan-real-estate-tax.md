@@ -29,7 +29,7 @@ author: "legal-ai-assistant"
 
 ## 外國人購屋的互惠條件與土地限制
 
-依[土地法第18條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=18)，外國人在中華民國取得或設定土地權利，以依條約或其本國法律，中華民國人民在該國享有同樣權利者為限。內政部的[英文常見問答](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124868)指出，買方國籍若不在「外國人在我國取得或設定土地權利互惠國家一覽表」（英文問答稱 List of Reciprocal Nations for Foreigners Acquiring Land in Taiwan, R.O.C.）內，應附上證明該國同樣給予中華民國人民相同權利的文件。問答引的是台內地字第0960192146號，2007年12月11日發布；證明文件須經我國駐外館處、代表處，或外交部認可的機構認證。若該國已列入互惠名單，依[購買文件的常見問答](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124867)，便不需要互惠證明書。簽約前，還得向地政事務所確認目前採用的名單。
+依[土地法第18條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=18)，外國人在中華民國取得或設定土地權利，以依條約或其本國法律，中華民國人民在該國享有同樣權利者為限。內政部的[英文常見問答](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124868)指出，買方國籍若不在「外國人在我國取得或設定土地權利互惠國家一覽表」（英文問答稱 List of Reciprocal Nations for Foreigners Acquiring Land in Taiwan, R.O.C.）內，應附上證明該國同樣給予中華民國人民相同權利的文件。問答引的是台內地字第0960192146號，2007年12月11日發布；證明文件須經我國駐外館處、代表處，或外交部認可的機構認證。若該國已列入互惠名單，依[購屋所需文件的常見問答](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124867)，便不需要互惠證明書。簽約前，還得向地政事務所確認目前採用的名單。
 
 國籍這一關過了，還得看土地本身。[第17條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=17)禁止將林地、漁地、狩獵地、鹽地、礦地、水源地，以及要塞軍備區域和領域邊境的土地，移轉、設定負擔或出租給外國人。要買的土地是否屬於這些範圍，須向土地所在地的地政事務所查明。第2項對繼承另有例外，繼承取得土地的後續處理，前面那篇繼承說明寫過。
 

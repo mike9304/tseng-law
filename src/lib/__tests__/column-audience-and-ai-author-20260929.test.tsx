@@ -25,6 +25,7 @@ import {
 } from '@/lib/ai-authored-columns';
 import { buildArticleJsonLd } from '@/lib/seo';
 import AiAuthorBox from '@/components/AiAuthorBox';
+import { expertiseSlugsFor } from './native-locale-columns';
 
 vi.mock('next/image', () => ({
   // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
@@ -49,9 +50,11 @@ describe('audience frontmatter recommendations', () => {
   it('leads each locale with its own-audience columns newest first, then shared, from its own files only', () => {
     const first = (locale: NonNullable<Parameters<typeof getAllColumnPosts>[0]>) =>
       prioritizeRecommendedColumns(locale, getAllColumnPosts(locale))[0]?.slug;
-    expect(first('en')).toBe('foreign-professional-dismissed-taiwan');
-    expect(first('ja')).toBe('taiwan-subsidiary-employee-dismissal');
-    expect(first('ko')).toBe('hire-taiwan-lawyer-from-abroad');
+    // 2026-09-30 expertise columns (041-048) lead where a locale has them: same-day ties go to the
+    // higher column number, so the last file of the batch comes first.
+    expect(first('en')).toBe(expertiseSlugsFor('en').at(-1));
+    expect(first('ja')).toBe(expertiseSlugsFor('ja').at(-1));
+    expect(first('ko')).toBe(expertiseSlugsFor('ko').at(-1));
     expect(first('th')).toBe('baby-taiwan-nationality-birth-registration');
     for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'zh-hans', 'id', 'th', 'fil'] as const) {
       const posts = getAllColumnPosts(locale);
@@ -68,9 +71,9 @@ describe('audience frontmatter recommendations', () => {
 
   it('breaks same-day ties by column number regardless of input order', () => {
     const ko = getAllColumnPosts('ko');
-    expect(prioritizeRecommendedColumns('ko', [...ko].reverse())[0]?.slug).toBe('hire-taiwan-lawyer-from-abroad');
+    expect(prioritizeRecommendedColumns('ko', [...ko].reverse())[0]?.slug).toBe(expertiseSlugsFor('ko').at(-1));
     expect(prioritizeRecommendedColumns('zh-hant', [...getAllColumnPosts('zh-hant')].reverse())[0]?.slug)
-      .toBe('hire-taiwan-lawyer-from-abroad');
+      .toBe(expertiseSlugsFor('zh-hant').at(-1));
   });
 
   it('puts own-audience columns before shared ones, each newest first', () => {

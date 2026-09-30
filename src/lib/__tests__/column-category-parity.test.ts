@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
 import { COLUMN_CONTENT_DIR_BY_LOCALE } from '@/lib/column-locales';
 import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
-import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug } from './native-locale-columns';
+import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug, isNativeOrExpertiseNativeSlug } from './native-locale-columns';
 
 /**
  * Every translated column carries the same category as its English source —
@@ -23,15 +23,16 @@ describe('column category parity with English', () => {
   // the translated corpus every other locale mirrors.
   const english = new Map(
     getAllColumnPosts('en')
-      .filter((post) => !isNativeLocaleColumnSlug(post.slug))
+      .filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))
       .map((post) => [post.slug, post.category]),
   );
 
   it('has the English baseline this test compares against', () => {
-    expect(english.size).toBe(31);
+    // 31 + 048 (the 2026-09-30 column that has a Korean twin in English).
+    expect(english.size).toBe(32);
     const counts = { formation: 0, legal: 0, case: 0 };
     for (const category of english.values()) counts[category] += 1;
-    expect(counts).toEqual({ formation: 9, legal: 21, case: 1 });
+    expect(counts).toEqual({ formation: 9, legal: 22, case: 1 });
   });
 
   it.each(Object.keys(NATIVE_LOCALE_COLUMN_FILES) as (keyof typeof NATIVE_LOCALE_COLUMN_FILES)[])(

@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
-import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnFile, isNativeLocaleColumnSlug } from './native-locale-columns';
+import { allNativeFiles, isNativeOrExpertiseNativeSlug, koFilesAbsentFromLocale } from './native-locale-columns';
 
 const HANGUL = /[\uac00-\ud7af]/;
 const root = process.cwd();
@@ -32,18 +32,23 @@ const koFiles = fs
   .filter((name) => name.endsWith('.md'))
   .sort();
 
+// Korean files the 2026-09-30 batch never carried into English (see native-locale-columns.ts).
+const koFilesInEn = koFiles.filter((name) => !koFilesAbsentFromLocale('en').includes(name));
+
 describe('English full column corpus', () => {
-  it('has one EN file per KO file with identical filenames, plus the English-only native columns', () => {
+  it('has one EN file per KO file with identical filenames (except the Korean-only 2026-09-30 columns), plus the English-only native columns', () => {
     expect(fs.existsSync(enDir)).toBe(true);
     const enFiles = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
-    expect(enFiles.filter((name) => !isNativeLocaleColumnFile(name))).toEqual(koFiles);
-    expect(enFiles.filter(isNativeLocaleColumnFile)).toEqual([...NATIVE_LOCALE_COLUMN_FILES.en]);
+    const nativeFiles = allNativeFiles('en');
+    expect(enFiles.filter((name) => !nativeFiles.includes(name))).toEqual(koFilesInEn);
+    expect(enFiles.filter((name) => nativeFiles.includes(name))).toEqual(nativeFiles);
   });
 
-  it('loads 31 translated plus 3 native English posts with full bodies (not Overview stubs only)', () => {
+  it('loads 32 translated plus 5 native English posts with full bodies (not Overview stubs only)', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts.filter((post) => !isNativeLocaleColumnSlug(post.slug))).toHaveLength(31);
-    expect(posts).toHaveLength(31 + NATIVE_LOCALE_COLUMN_FILES.en.length);
+    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))).toHaveLength(32);
+    expect(koFilesInEn).toHaveLength(32);
+    expect(posts).toHaveLength(32 + allNativeFiles('en').length);
 
     for (const post of posts) {
       expect(post.title.trim().length).toBeGreaterThan(8);
@@ -79,7 +84,7 @@ describe('English full column corpus', () => {
   });
 
   it('EN body is not dramatically shorter than KO for each slug', () => {
-    for (const file of koFiles) {
+    for (const file of koFilesInEn) {
       const slug = file.replace(/\.md$/, '').replace(/^\d{3}-/, '');
       const ko = getColumnPost(slug, 'ko');
       const en = getColumnPost(slug, 'en');

@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, getColumnPost } from '@/lib/columns';
-import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnFile, isNativeLocaleColumnSlug } from './native-locale-columns';
+import { allNativeFiles, isNativeOrExpertiseNativeSlug, koFilesAbsentFromLocale } from './native-locale-columns';
 import { isSiteLocale, siteLocales } from '@/lib/locales';
 
 const HANGUL = /[\uac00-\ud7af]/;
@@ -23,23 +23,28 @@ const koFiles = fs
   .filter((name) => name.endsWith('.md'))
   .sort();
 
+// Korean files the 2026-09-30 batch never carried into Japanese (see native-locale-columns.ts).
+const koFilesInJa = koFiles.filter((name) => !koFilesAbsentFromLocale('ja').includes(name));
+
 describe('Japanese full column corpus + site locale', () => {
   it('recognizes ja as a public site locale', () => {
     expect(siteLocales).toContain('ja');
     expect(isSiteLocale('ja')).toBe(true);
   });
 
-  it('has one JA file per KO file, plus the Japanese-only native columns', () => {
+  it('has one JA file per KO file (except the Korean-only 2026-09-30 columns), plus the Japanese-only native columns', () => {
     expect(fs.existsSync(jaDir)).toBe(true);
     const jaFiles = fs.readdirSync(jaDir).filter((name) => name.endsWith('.md')).sort();
-    expect(jaFiles.filter((name) => !isNativeLocaleColumnFile(name))).toEqual(koFiles);
-    expect(jaFiles.filter(isNativeLocaleColumnFile)).toEqual([...NATIVE_LOCALE_COLUMN_FILES.ja]);
+    const nativeFiles = allNativeFiles('ja');
+    expect(jaFiles.filter((name) => !nativeFiles.includes(name))).toEqual(koFilesInJa);
+    expect(jaFiles.filter((name) => nativeFiles.includes(name))).toEqual(nativeFiles);
   });
 
-  it('loads 31 translated plus 3 native Japanese posts with full bodies and kana', () => {
+  it('loads 32 translated plus 4 native Japanese posts with full bodies and kana', () => {
     const posts = getAllColumnPosts('ja');
-    expect(posts.filter((post) => !isNativeLocaleColumnSlug(post.slug))).toHaveLength(31);
-    expect(posts).toHaveLength(31 + NATIVE_LOCALE_COLUMN_FILES.ja.length);
+    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('ja', post.slug))).toHaveLength(32);
+    expect(koFilesInJa).toHaveLength(32);
+    expect(posts).toHaveLength(32 + allNativeFiles('ja').length);
     for (const post of posts) {
       expect(post.content.length).toBeGreaterThan(600);
       expect(KANA.test(post.title + post.content)).toBe(true);

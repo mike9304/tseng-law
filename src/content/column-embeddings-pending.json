@@ -43,6 +43,18 @@
     { "locale": "zh-hant", "slug": "hire-taiwan-lawyer-from-abroad" },
     { "locale": "en", "slug": "taiwan-exit-ban-foreigners" },
     { "locale": "en", "slug": "taiwan-police-questioning-foreigner-rights" },
-    { "locale": "en", "slug": "foreign-professional-dismissed-taiwan" }
+    { "locale": "en", "slug": "foreign-professional-dismissed-taiwan" },
+    { "locale": "ko", "slug": "korea-crypto-tax-2027-taiwan-residents" },
+    { "locale": "ko", "slug": "taiwan-marital-property-regime-international-couples" },
+    { "locale": "ko", "slug": "taiwan-stocks-direct-investment-tax" },
+    { "locale": "en", "slug": "taiwan-crypto-exchange-vasp-dispute" },
+    { "locale": "en", "slug": "foreigner-buy-sell-taiwan-real-estate-tax" },
+    { "locale": "en", "slug": "taiwan-stocks-direct-investment-tax" },
+    { "locale": "zh-hant", "slug": "taiwan-crypto-exchange-vasp-dispute" },
+    { "locale": "zh-hant", "slug": "taiwan-investment-scam-recovery" },
+    { "locale": "zh-hant", "slug": "taiwan-payment-order-provisional-attachment" },
+    { "locale": "zh-hant", "slug": "taiwan-overseas-income-us-stocks-crypto-amt" },
+    { "locale": "zh-hant", "slug": "taiwan-marital-property-regime-international-couples" },
+    { "locale": "zh-hant", "slug": "foreigner-buy-sell-taiwan-real-estate-tax" }
   ]
 }

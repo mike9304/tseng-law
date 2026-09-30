@@ -3,7 +3,12 @@ import path from 'path';
 import matter from 'gray-matter';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, sortColumnPostsNewestFirst, type ColumnPost } from '@/lib/columns';
-import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug } from './native-locale-columns';
+import {
+  EXPERTISE_COLUMN_FILES_20260930,
+  NATIVE_LOCALE_COLUMN_FILES,
+  expertiseSlugsFor,
+  isNativeLocaleColumnSlug,
+} from './native-locale-columns';
 
 const COSMETICS_SLUG = 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide';
 
@@ -49,6 +54,15 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '038': '2026-09-29',
   '039': '2026-09-29',
   '040': '2026-09-29',
+  // Locale-specific expertise columns (ko/en/ja/zh-hant subsets), published 2026-09-30.
+  '041': '2026-09-30',
+  '042': '2026-09-30',
+  '043': '2026-09-30',
+  '044': '2026-09-30',
+  '045': '2026-09-30',
+  '046': '2026-09-30',
+  '047': '2026-09-30',
+  '048': '2026-09-30',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
@@ -105,7 +119,12 @@ const GAP_COLUMN_SLUGS = [
 ];
 const GAP = GAP_COLUMN_SLUGS.length;
 
+// 2026-09-30 expertise columns in the Korean archive (043, 046, 048): newest, in source order.
+const KO_EXPERTISE_SLUGS = expertiseSlugsFor('ko');
+const KO_LEAD = KO_EXPERTISE_SLUGS.length;
+
 const EXPECTED_ARCHIVE_ORDER = [
+  ...KO_EXPERTISE_SLUGS,
   ...GAP_COLUMN_SLUGS,
   ...NEW_DIVORCE_SLUGS,
   'marrying-taiwanese-national-registration-checklist',
@@ -152,17 +171,18 @@ describe('Korean column publication dates', () => {
     const posts = getAllColumnPosts('ko');
 
     expect(posts.map((post) => post.slug)).toEqual(EXPECTED_ARCHIVE_ORDER);
-    expect(posts.slice(0, GAP).map((post) => post.slug)).toEqual(GAP_COLUMN_SLUGS);
-    expect(posts.slice(GAP, GAP + 3).map((post) => post.slug)).toEqual(NEW_DIVORCE_SLUGS);
-    expect(posts[GAP + 5]?.slug).toBe(SEMICONDUCTOR_SLUG);
-    expect(posts[GAP + 6]?.slug).toBe(COSMETICS_SLUG);
-    expect(posts.slice(GAP + 7).every((post) => post.dateDisplay === '2025년 9월 13일')).toBe(true);
+    expect(posts.slice(0, KO_LEAD).map((post) => post.slug)).toEqual(KO_EXPERTISE_SLUGS);
+    expect(posts.slice(KO_LEAD, KO_LEAD + GAP).map((post) => post.slug)).toEqual(GAP_COLUMN_SLUGS);
+    expect(posts.slice(KO_LEAD + GAP, KO_LEAD + GAP + 3).map((post) => post.slug)).toEqual(NEW_DIVORCE_SLUGS);
+    expect(posts[KO_LEAD + GAP + 5]?.slug).toBe(SEMICONDUCTOR_SLUG);
+    expect(posts[KO_LEAD + GAP + 6]?.slug).toBe(COSMETICS_SLUG);
+    expect(posts.slice(KO_LEAD + GAP + 7).every((post) => post.dateDisplay === '2025년 9월 13일')).toBe(true);
   });
 
   it('formats every Korean archive date as YYYY년 M월 D일', () => {
     const posts = getAllColumnPosts('ko');
 
-    expect(posts).toHaveLength(31);
+    expect(posts).toHaveLength(31 + KO_LEAD);
     expect(posts.every((post) => /^\d{4}년 \d{1,2}월 \d{1,2}일$/.test(post.dateDisplay))).toBe(true);
   });
 });
@@ -179,7 +199,8 @@ describe('localized column publication ordering', () => {
         locale in NATIVE_LOCALE_COLUMN_FILES
           ? NATIVE_LOCALE_COLUMN_FILES[locale as keyof typeof NATIVE_LOCALE_COLUMN_FILES].length
           : 0;
-      expect(files).toHaveLength(31 + nativeCount);
+      const expertiseCount = EXPERTISE_COLUMN_FILES_20260930[locale].length;
+      expect(files).toHaveLength(31 + nativeCount + expertiseCount);
       for (const file of files) {
         const prefix = file.slice(0, 3);
         const verifiedDate = verifiedPublicationDate(locale, prefix);
@@ -197,12 +218,19 @@ describe('localized column publication ordering', () => {
     ['ja', '2026年9月17日'],
   ] as const)('uses the verified publication date in %s', (locale, expectedDateDisplay) => {
     const allPosts = getAllColumnPosts(locale);
+    // The 2026-09-30 expertise columns (a per-locale subset of 041-048) lead the archive.
+    const expertiseSlugs = expertiseSlugsFor(locale);
+    const lead = expertiseSlugs.length;
+    expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
+    expect(allPosts.slice(0, lead).every((post) => post.publicationDate === '2026-09-30')).toBe(true);
     // Native single-locale columns share the 2026-09-29 date with the gap columns (024-031),
     // so equal-date source order places them right after that batch; the shared corpus follows.
     const natives = allPosts.filter((post) => isNativeLocaleColumnSlug(post.slug));
-    expect(allPosts.slice(GAP, GAP + natives.length)).toEqual(natives);
+    expect(allPosts.slice(lead + GAP, lead + GAP + natives.length)).toEqual(natives);
     expect(natives.every((post) => post.publicationDate === '2026-09-29')).toBe(true);
-    const posts = allPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
+    const posts = allPosts.filter(
+      (post) => !isNativeLocaleColumnSlug(post.slug) && !expertiseSlugs.includes(post.slug),
+    );
 
     expect(posts.slice(0, GAP).map((post) => post.publicationDate)).toEqual(
       ['024', '025', '026', '027', '028', '029', '030', '031'].map((prefix) =>

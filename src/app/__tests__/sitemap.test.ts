@@ -169,13 +169,15 @@ describe('sitemap column lastModified', () => {
       // assertion tracks the growing corpus).
       // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
       // Public semiconductor guide board adds 4 more URLs.
+      // 2026-09-30 expertise columns 041-048 add 14 URLs (ko 3, en 3, ja 2, zh-hant 6), one per
+      // locale file; none of them is emitted for a locale that lacks the file (base 445 -> 459).
       // Native single-locale columns: EN ones are file-backed in columns-en and
       // must stay indexable (no Korean twin); JA ones join the JA details.
       beforeFiltering:
-        445 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        459 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
       afterFiltering:
-        436 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        450 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
       removed: 9,
     });

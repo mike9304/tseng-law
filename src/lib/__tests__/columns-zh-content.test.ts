@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
+import { allNativeFiles, koFilesAbsentFromLocale } from './native-locale-columns';
 
 const root = process.cwd();
 const koDir = path.join(root, 'src/content/columns');
@@ -20,15 +21,22 @@ const koFiles = fs
   .filter((name) => name.endsWith('.md'))
   .sort();
 
+// Korean files the 2026-09-30 batch never carried into zh-hant, and zh-hant files with no Korean twin.
+const koFilesInZh = koFiles.filter((name) => !koFilesAbsentFromLocale('zh-hant').includes(name));
+
 describe('Traditional Chinese full column corpus', () => {
-  it('has one ZH-Hant file per KO file with identical filenames', () => {
+  it('has one ZH-Hant file per KO file with identical filenames (except the Korean-only 2026-09-30 columns), plus the zh-hant-only native columns', () => {
     expect(fs.existsSync(zhDir)).toBe(true);
     const zhFiles = fs.readdirSync(zhDir).filter((name) => name.endsWith('.md')).sort();
-    expect(zhFiles).toEqual(koFiles);
+    const nativeFiles = allNativeFiles('zh-hant');
+    expect(zhFiles.filter((name) => !nativeFiles.includes(name))).toEqual(koFilesInZh);
+    expect(zhFiles.filter((name) => nativeFiles.includes(name))).toEqual(nativeFiles);
   });
 
-  it('loads all 18 Traditional Chinese posts', () => {
-    expect(getAllColumnPosts('zh-hant')).toHaveLength(31);
+  it('loads all Traditional Chinese posts (32 translated plus 5 native)', () => {
+    expect(koFilesInZh).toHaveLength(32);
+    expect(getAllColumnPosts('zh-hant')).toHaveLength(koFilesInZh.length + allNativeFiles('zh-hant').length);
+    expect(getAllColumnPosts('zh-hant')).toHaveLength(37);
   });
 
   it('contains no Hangul in public Traditional Chinese column copy', () => {

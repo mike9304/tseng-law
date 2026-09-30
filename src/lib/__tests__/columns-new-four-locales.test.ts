@@ -11,7 +11,11 @@ import {
 import { getAllColumnPosts, getColumnPost, hasColumnTranslation } from '@/lib/columns';
 import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
 import { getLanguageAlternates } from '@/lib/seo';
-import { isNativeLocaleColumnSlug } from './native-locale-columns';
+import {
+  EXPERTISE_COLUMN_FILES_20260930,
+  isExpertiseColumnSlug20260930,
+  isNativeLocaleColumnSlug,
+} from './native-locale-columns';
 
 const GYM_SLUG = 'taiwan-gym-injury-lawsuit';
 const GYM_FILENAME = '010-taiwan-gym-injury-lawsuit.md';
@@ -163,8 +167,13 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
     // The 2026-09-29 gap columns (024-031) ship only in ko/en/ja/zh-hant, so vi
     // covers every Korean slug except those eight.
     const koPosts = getAllColumnPosts('ko');
-    const koOnlyGapSlugs = koPosts.filter((post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug));
-    expect(koOnlyGapSlugs).toHaveLength(GAP_COLUMN_SLUGS_20260929.length);
+    // The 2026-09-30 expertise columns are locale-specific and none of them was translated into vi.
+    const koOnlyGapSlugs = koPosts.filter(
+      (post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug) || isExpertiseColumnSlug20260930(post.slug),
+    );
+    expect(koOnlyGapSlugs).toHaveLength(
+      GAP_COLUMN_SLUGS_20260929.length + EXPERTISE_COLUMN_FILES_20260930.ko.length,
+    );
     // Vietnamese-only native columns have no Korean counterpart by design.
     const translatedViPosts = viPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
     expect(translatedViPosts.length + koOnlyGapSlugs.length).toBe(koPosts.length);

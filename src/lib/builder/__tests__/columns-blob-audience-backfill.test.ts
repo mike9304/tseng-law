@@ -4,6 +4,7 @@ import path from 'path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { prioritizeRecommendedColumns } from '@/lib/column-audience';
+import { expertiseSlugsFor } from '@/lib/__tests__/native-locale-columns';
 
 describe('published column copies keep file-only recommendation metadata', () => {
   afterEach(() => {
@@ -57,7 +58,8 @@ describe('published column copies keep file-only recommendation metadata', () =>
       const shadowed = posts.find((post) => post.slug === 'taiwan-income-tax-residency');
       expect(shadowed?.summary).toBe('published copy without audience');
       expect(shadowed).toMatchObject({ audience: ['ko'], aiAuthored: true, columnNumber: 24 });
-      expect(prioritizeRecommendedColumns('ko', posts)[0]?.slug).toBe('hire-taiwan-lawyer-from-abroad');
+      // Same-day ties go to the higher column number: the last 2026-09-30 ko column (048) leads.
+      expect(prioritizeRecommendedColumns('ko', posts)[0]?.slug).toBe(expertiseSlugsFor('ko').at(-1));
     } finally {
       await rm(root, { recursive: true, force: true });
     }

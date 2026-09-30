@@ -3,6 +3,7 @@ import type { BuilderCanvasNode } from '../types';
 import { createInsightsDecomposedNodes } from '../decompose-insights';
 import type { ColumnPost } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
+import { expertiseSlugsFor } from '@/lib/__tests__/native-locale-columns';
 
 function createColumnPost(
   slug: string,
@@ -64,18 +65,19 @@ describe('decomposed home insights publication order', () => {
   );
 
   it.each([
-    ['ko', 'taiwan-income-tax-residency'],
-    ['zh-hant', 'taiwan-income-tax-residency'],
-    // The English-only native columns (032-034) share the 2026-09-29 date and follow
-    // the gap columns in source order, so the gap batch still leads.
-    ['en', 'taiwan-income-tax-residency'],
-  ] satisfies ReadonlyArray<readonly [Locale, string]>)(
-    'keeps the newest gap-column article first for %s',
-    (locale, newestSlug) => {
+    'ko',
+    'zh-hant',
+    'en',
+  ] satisfies ReadonlyArray<Locale>)(
+    'keeps the newest expertise-column article first for %s',
+    (locale) => {
+      // The 2026-09-30 expertise columns (041-048) lead each locale in source order; the gap
+      // batch (024-031) and the English-only natives (032-034) share 2026-09-29 and follow.
+      const newestSlug = expertiseSlugsFor(locale)[0];
       const nodes = createInsightsDecomposedNodes(0, locale, 0);
       const nodesById = new Map(nodes.map((node) => [node.id, node]));
 
-      // The September 29 batch (024-031) leads the feed by actual publication date;
+      // The September 30 batch (041-048) leads the feed by actual publication date;
       // the topic interleave starts from the newest post overall.
       expect(buttonHref(nodesById.get('home-insights-featured-link'))).toBe(
         `/${locale}/columns/${newestSlug}`,

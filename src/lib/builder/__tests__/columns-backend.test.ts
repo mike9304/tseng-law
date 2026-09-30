@@ -4,7 +4,11 @@ import path from 'path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { estimateColumnReadTimeLabel, getColumnsStorageBackend } from '@/lib/builder/columns/storage';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
-import { NATIVE_LOCALE_COLUMN_FILES, isNativeLocaleColumnSlug } from '@/lib/__tests__/native-locale-columns';
+import {
+  NATIVE_LOCALE_COLUMN_FILES,
+  expertiseSlugsFor,
+  isNativeLocaleColumnSlug,
+} from '@/lib/__tests__/native-locale-columns';
 
 describe('builder column storage backend', () => {
   afterEach(() => {
@@ -112,7 +116,8 @@ describe('builder column storage backend', () => {
       const posts = await getAllColumnPostsIncludingBlob('ko');
       const post = posts.find((item) => item.slug === 'taiwan-logistics-business-setup');
 
-      expect(posts[0]?.slug).toBe('taiwan-income-tax-residency');
+      // The 2026-09-30 expertise columns (041-048) lead the ko archive.
+      expect(posts[0]?.slug).toBe(expertiseSlugsFor('ko')[0]);
       expect(post?.dateDisplay).toBe('2025년 9월 13일');
       expect(post?.publicationDate).toBe('2025-09-13');
       expect(post?.readTime).toBe('9분 분량');
@@ -136,11 +141,20 @@ describe('builder column storage backend', () => {
 
         const allPosts = await getAllColumnPostsIncludingBlob(locale);
         const nativeCount = locale === 'en' ? NATIVE_LOCALE_COLUMN_FILES.en.length : 0;
+        const expertiseSlugs = expertiseSlugsFor(locale);
+        const lead = expertiseSlugs.length;
 
-        expect(allPosts).toHaveLength(31 + nativeCount);
+        expect(allPosts).toHaveLength(31 + nativeCount + lead);
+        // The 2026-09-30 expertise columns (041-048) lead the archive, in source order.
+        expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
+        expect(allPosts.slice(0, lead).every((post) => post.publicationDate === '2026-09-30')).toBe(true);
         // English-only native columns (2026-09-29) follow the gap columns in source order.
-        expect(allPosts.slice(8, 8 + nativeCount).every((post) => isNativeLocaleColumnSlug(post.slug))).toBe(true);
-        const posts = allPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));
+        expect(
+          allPosts.slice(lead + 8, lead + 8 + nativeCount).every((post) => isNativeLocaleColumnSlug(post.slug)),
+        ).toBe(true);
+        const posts = allPosts.filter(
+          (post) => !isNativeLocaleColumnSlug(post.slug) && !expertiseSlugs.includes(post.slug),
+        );
         // The 2026-09-29 gap columns (024-031) lead the archive, in source order.
         expect(posts.slice(0, 8).map((post) => post.slug)).toEqual([
           'taiwan-income-tax-residency',

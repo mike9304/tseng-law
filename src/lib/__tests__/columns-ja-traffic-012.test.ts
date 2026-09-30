@@ -53,11 +53,11 @@ const internalLinks = [
 const disclaimer =
   '本稿は、台湾の追い越し規則および事故責任の判断に関する一般的な法律情報であり、特定の事案に対する法律上の助言や結果の保証ではありません。実際の責任は、事故地点、車両の動き、速度、合図、証拠、鑑定および最新の法令によって異なり得るため、具体的な事案については、関連資料に基づき個別に検討する必要があります。';
 
-const EXPECTED_VISIBLE_JAPANESE = 1_712;
-const EXPECTED_VISIBLE_KANA = 884;
+const EXPECTED_VISIBLE_JAPANESE = 1_641;
+const EXPECTED_VISIBLE_KANA = 851;
 const EXPECTED_READ_MINUTES = 4;
 const EXPECTED_SOURCE_SHA256 =
-  'b12d6c8ec259aa2bb54ee324f24ad3892ef7f95e86b5f9276f557f4391d6eeaf';
+  'c37198269c130ab4f0c63e5b15f51ac689a4a17d0a1addff2569017670ba2e86';
 
 const article101Groups = [
   '曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',

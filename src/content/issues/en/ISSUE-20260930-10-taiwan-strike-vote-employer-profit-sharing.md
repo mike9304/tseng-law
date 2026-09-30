@@ -1,6 +1,6 @@
 ---
 title: "Taiwan Union Plans Strike Vote Over Profit Sharing"
-seoTitle: "Taiwan Strike Votes, Union Rights and Employee Pay"
+seoTitle: "Taiwan Strike Votes, Unions and Employee Pay"
 summary: "A Taiwan union strike vote raises questions about lawful strike procedure and employee pay. Company articles and existing records guide employers' responses."
 published: "2026-09-30"
 lastmod: "2026-09-30"
@@ -16,7 +16,7 @@ faq:
   - q: "Can an employer dismiss workers over the dispute or a strike vote?"
     a: "Not on those prohibited grounds. During mediation, arbitration or adjudication, Article 8 prohibits closing the business, stopping work, ending contracts or taking other action adverse to workers because of that dispute. Labor Union Act Article 35 protects union activities at every stage, including a union strike ballot, collective bargaining, and taking part in or supporting dispute action. Dismissal, demotion or a pay cut on those prohibited grounds is void."
   - q: "Does Company Act Article 235-1 require quarterly bonuses at a fixed share of operating profit?"
-    a: "No. For a Taiwan company limited by shares, Article 235-1 requires the articles of incorporation to state a fixed amount or ratio of employee compensation based on annual profit, and only after accumulated losses are covered. Article 110 also applies the provision to a Taiwan limited company, although different decision-making rules apply. A foreign company's Taiwan branch is not a separate Taiwan company. These provisions do not prescribe the percentage or quarterly operating-profit formula proposed by the union in the reports."
+    a: "No. For a Taiwan company limited by shares, Article 235-1 requires the articles of incorporation to state a fixed amount or ratio of employee compensation based on annual profit, subject to covering accumulated losses first. Article 110 also applies the provision to a Taiwan limited company, although different decision-making rules apply. A foreign company's Taiwan branch is not a separate Taiwan company. These provisions do not prescribe the percentage or quarterly operating-profit formula proposed by the union in the reports."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
@@ -37,7 +37,7 @@ Management needs the notice defining the dispute, the mediation result and any m
 
 ## Employer conduct during the dispute
 
-During **mediation, arbitration or adjudication**, [Article 8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8) prohibits an employer from closing the business, stopping work, ending employment contracts or taking other action adverse to workers **because of that dispute**. It also restricts dispute action by the worker side because of the dispute while those proceedings are pending. The restriction turns on the reason for the action. Not every management decision in that period is prohibited, but the rule does require the employer to explain a legitimate, independent reason for a decision affecting workers.
+During **mediation, arbitration or adjudication**, [Article 8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=8) prohibits an employer from closing the business, stopping work, ending employment contracts or taking other action adverse to workers **because of that dispute**. While those proceedings are pending, Article 8 also restricts workers from taking dispute action because of that dispute. The restriction turns on the reason for the action. Not every management decision in that period is prohibited, but the rule does require the employer to explain a legitimate, independent reason for a decision affecting workers.
 
 Article 8 applies only while mediation, arbitration or adjudication is pending. When mediation ends without agreement and no other procedure is pending, [Labor Union Act Article 35](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020001&flno=35) still applies. It prohibits an employer, or anyone exercising management authority on its behalf, from dismissing or demoting a worker, cutting the worker's pay or taking other adverse action because the worker participates in union activities or collective bargaining, or takes part in or supports dispute action. A union strike ballot has to be considered under the union-activity protection in Article 35(1)(1), not only under the dispute-action protection in Article 35(1)(4). Under Article 35(2), dismissal, demotion or a pay cut on those prohibited grounds is void.
 

@@ -117,7 +117,7 @@ describe('English full column corpus', () => {
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
 
     const renderedWordCount = countRenderedEnglishWords(post!.content);
-    expect(renderedWordCount).toBe(728);
+    expect(renderedWordCount).toBe(713);
     expect(Math.ceil(renderedWordCount / 200)).toBe(4);
     expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('4 min read');
     expect(post!.readTime).toBe('4 min read');

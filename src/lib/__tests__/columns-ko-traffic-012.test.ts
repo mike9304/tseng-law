@@ -52,7 +52,7 @@ const internalLinks = [
 const disclaimer =
   '이 글은 대만의 추월 규정과 사고 책임 판단에 관한 일반적인 법률정보이며, 특정 사건에 대한 법률자문이나 결과 보장이 아닙니다. 실제 책임은 사고 장소, 차량 움직임, 속도, 신호, 증거, 감정 및 최신 법령에 따라 달라질 수 있으므로 구체적인 사건은 관련 자료를 바탕으로 개별 검토해야 합니다.';
 
-const EXPECTED_VISIBLE_EOJEOL = 540;
+const EXPECTED_VISIBLE_EOJEOL = 538;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;

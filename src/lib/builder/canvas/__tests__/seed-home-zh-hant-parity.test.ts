@@ -43,7 +43,7 @@ describe('zh-hant decomposed home parity nodes', () => {
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
 
     expect(textNodeText(nodesById.get('home-stats-label'))).toBe('ABOUT');
-    expect(textNodeText(nodesById.get('home-stats-title'))).toBe('從官方資料看跨境服務基礎');
+    expect(textNodeText(nodesById.get('home-stats-title'))).toBe('事務所基本資料一覽');
     expect(nodesById.get('home-stats-container')?.rect).toMatchObject({ x: 51, width: 1178 });
     expect(nodesById.get('home-stats-title')?.rect).toMatchObject({ width: 1178, height: 54 });
     expect(nodesById.get('home-stats-description')?.rect).toMatchObject({ y: 106, width: 720, height: 64 });
@@ -57,7 +57,7 @@ describe('zh-hant decomposed home parity nodes', () => {
       progressBarText: textNodeText(nodesById.get(`home-stats-progress-bar-${index}`)),
     }))).toEqual([
       { number: '4', label: '台灣辦公據點', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
-      { number: '4', label: '業務溝通語言', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
+      { number: '4', label: '諮詢語言', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
       { number: '7', label: '主要執業領域', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
       { number: '2', label: '最高級別語言資格', progressKind: 'divider', progressBarKind: undefined, progressBarText: undefined },
     ]);
@@ -103,7 +103,7 @@ describe('zh-hant decomposed home parity nodes', () => {
     });
     expect(textNodeText(nodesById.get('home-offices-layout-1-card-fax'))).toBe('傳真: 04-2326-1863');
     expect(nodesById.get('home-offices-layout-1-card-map-link')?.content).toMatchObject({
-      label: '在 Google 地圖查看 (照片·評論)',
+      label: '在 Google 地圖查看（照片、評論）',
     });
     expect(textNodeText(nodesById.get('home-offices-layout-3-card-title'))).toBe('屏東');
     expect(textNodeText(nodesById.get('home-offices-layout-3-card-address'))).toBe('90443屏東縣九如鄉九如路三段46號');

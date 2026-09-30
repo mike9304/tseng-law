@@ -18,7 +18,7 @@ const findings = [];
 const results = [];
 const contentChecks = {
   ko: { qa: ['다음 날부터 30일 안에', '직접 위임하고 비용을 부담', '0을 누르면 경찰 110', '다시 고소할 수 없습니다'], case: '원래 칼럼의 사례 설명에 따르면' },
-  'zh-hant': { qa: ['翌日起30日內', '費用由委任者負擔', '按0轉接警察110', '不得再行告訴'], case: '依原文的案例敘述' },
+  'zh-hant': { qa: ['翌日起30日內', '費用由委任者負擔', '按0轉接警察110', '不得再行告訴'], case: '依這件案例的敘述' },
   en: { qa: ['30 days starting the day after receipt', "at that party's expense", 'press 0 for police', 'cannot complain again'], case: 'According to the original case account' },
   ja: { qa: ['翌日から30日以内', '直接委任し、その費用を負担', '0を押すと警察の110', '再び告訴できません', '第三者賠償責任保険（対人・対物）'], case: '元の事例紹介によると' },
 };

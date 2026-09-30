@@ -685,7 +685,7 @@ export const CIVIL_COMMERCIAL_COPY: Record<
   },
   'zh-hant': {
     heading: '企業契約與貨款爭議',
-    body: '未付款、預付款後未交貨、驗收與品質爭議、交期或契約違反、以及對方停止聯絡，均依契約與貨款問題整理，與人身傷害請求分開。',
+    body: '未付款、預付貨款後未交貨、驗收與品質爭議、交期或契約違反、以及對方停止聯絡，均依契約與貨款問題整理，與人身傷害請求分開。',
     debtLinkLabel: '台灣企業交易糾紛與應收帳款諮詢',
     injuryHeading: '傷害、交通事故及其他損害賠償',
     injuryBody:

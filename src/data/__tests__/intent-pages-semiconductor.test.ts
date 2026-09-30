@@ -107,7 +107,7 @@ describe('semiconductor supplier intent page', () => {
       '海外半導體材料與設備供應商的台灣法務說明',
     );
     expect(getIntentPage('zh-hant', slug)?.seoTitle).toBe(
-      '台灣半導體材料與設備供應商法務 | 公司設立、契約、勞動、欠款追索',
+      '海外半導體材料與設備供應商在台法務 | 公司設立、契約、勞動、帳款回收',
     );
   });
 
@@ -221,7 +221,7 @@ describe('semiconductor supplier intent page', () => {
 
     const zh = getIntentPage('zh-hant', slug);
     expect(zh?.attorneyHeadingOverride).toBe('處理半導體供應商案件的台灣律師');
-    expect(zh?.ctaTextOverride).toContain('報價單、供應契約、以及客戶寄來的供應商登錄文件');
+    expect(zh?.ctaTextOverride).toContain('報價單、供應契約及客戶寄來的供應商登錄文件');
     expect(Object.keys(zh?.serviceBlurbs ?? {})).toEqual(['investment', 'civil', 'labor', 'ip']);
     expect(zh?.serviceBlurbs?.civil).toContain('貨已交完但帳款未進');
   });
@@ -289,7 +289,7 @@ describe('semiconductor supplier intent page', () => {
     }
 
     const zh = JSON.stringify(getIntentPage('zh-hant', slug));
-    for (const token of ['OSAT', '供應商登錄', '代理商', '品質保證', '召回', 'NDA', '投審會']) {
+    for (const token of ['OSAT', '供應商登錄', '代理商', '品質保證', '召回', 'NDA', '經濟部投資審議司']) {
       expect(zh).toContain(token);
     }
   });
@@ -319,7 +319,7 @@ describe('semiconductor supplier intent page', () => {
     expect(ja).toContain('対面またはビデオ');
 
     const zh = JSON.stringify(getIntentPage('zh-hant', slug));
-    expect(occurrences(zh, '英語、中文、韓語、日語')).toBe(1);
+    expect(occurrences(zh, '英文、中文、韓文、日文')).toBe(1);
     expect(occurrences(zh, '約 3 個月')).toBe(1);
     expect(occurrences(zh, 'NT$3,000')).toBe(1);
     expect(occurrences(zh, 'NT$50,000')).toBe(1);

@@ -115,8 +115,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     title: TEAM_NAME_BY_LOCALE['zh-hant'],
     description: '昊鼎國際法律事務所律師、事務長及會計師簡介。',
     story: [
-      '昊鼎提供中文、韓文、日文及英文溝通的在台法律服務，涵蓋公司設立、訴訟與合規顧問。',
-      '團隊整合法律、會計與行政實務，可在同一流程處理跨領域問題。',
+      '昊鼎以中文、韓文、日文及英文提供在台法律服務，範圍涵蓋公司設立、訴訟與法令遵循顧問。',
+      '團隊結合法律、會計與行政實務，協助處理相關跨領域問題。',
     ],
     members: [
       {
@@ -129,7 +129,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
           '專精企業與個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
-          '曾代理韓國留學生健身傷害求償案，於一審獲判新台幣 157 萬元。',
+          '曾代理韓國留學生健身房受傷求償案，一審獲判新台幣157萬元。',
         ],
         education: [
           '國立臺灣大學財務金融研究所碩士',
@@ -160,8 +160,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/chang-fangyu.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
-          '曾於多家法律事務所擔任資深法務專員多年，累積訴訟支援、公司法務及外國人投資等多元法律實務經驗，是一位經驗豐富的法務專員。',
-          '協助訴訟支援、公司設立、外國人投資核准、各類許可申請及韓台溝通。',
+          '曾於多家法律事務所擔任資深法務專員多年，在訴訟支援、公司法務及外國人投資等領域累積法律實務經驗。',
+          '負責訴訟支援、公司設立、外國人投資核准、各類許可申請及台韓聯繫。',
         ],
         education: ['東海大學法律學系學士'],
         experience: ['博胤法律事務所 資深法務專員', '慕陽國際法律事務所 資深法務專員'],
@@ -174,8 +174,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/son-jungmin.jpg',
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-1',
         intro: [
-          '負責韓國客戶諮詢安排與需求對接。',
-          '以資訊工程背景支援文件流程與跨語系溝通。',
+          '負責安排韓國客戶諮詢並確認需求。',
+          '具資訊工程背景，協助處理文件作業與跨語言溝通。',
         ],
         education: ['國立成功大學資訊相關學士'],
         experience: ['昊鼎國際法律事務所 韓國業務團隊'],
@@ -189,7 +189,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/복제-대표변호사-증준외-2',
         intro: [
           '政大會計學士與碩士，現為會計師事務所負責人。',
-          '協助整合法律、稅務與財務風險評估。',
+          '協助法律、稅務與財務風險的整體評估。',
         ],
         education: ['國立政治大學會計學碩士', '國立政治大學會計學學士'],
         experience: ['勤信聯合會計師事務所'],

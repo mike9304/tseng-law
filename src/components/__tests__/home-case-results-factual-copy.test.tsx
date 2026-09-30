@@ -17,11 +17,11 @@ const reviewedCopy = {
   },
   'zh-hant': {
     label: '案例解析',
-    title: '韓國留學生健身房受傷案\n一審判賠157萬TWD，二審和解',
+    title: '韓國留學生健身房受傷案\n一審判賠新台幣157萬元，二審和解',
     description:
-      '韓國大學生在台灣健身房接受教練指導運動時受傷，因而提起損害賠償請求。一審判決賠償157萬TWD，其後於二審由雙方和解結案。',
+      '韓國大學生在台灣健身房接受教練指導運動時受傷，提起損害賠償訴訟。一審判決賠償新台幣157萬元，其後雙方於二審和解。',
     summary:
-      '案件結果會因具體事實與證據而異；本案例僅說明一件過往案件的處理經過。',
+      '個案結果因具體事實與證據而異；本案例僅說明過往個案的處理經過。',
     cta: '查看訴訟案例',
   },
   // WO-X1 (EN-03/J01): nationality removed from the headline and body.
@@ -56,7 +56,7 @@ const reviewedCopy = {
 
 const stageMarkers: Record<SiteLocale, [string, string]> = {
   ko: ['1심 157만 TWD', '항소심에서 당사자 간 화해'],
-  'zh-hant': ['一審判決賠償157萬TWD', '二審由雙方和解'],
+  'zh-hant': ['一審判決賠償新台幣157萬元', '雙方於二審和解'],
   en: ['first-instance court issued a TWD 1.57 million', 'settlement on appeal'],
   ja: ['一審ではNT$157万', '控訴審で当事者間の和解'],
 };

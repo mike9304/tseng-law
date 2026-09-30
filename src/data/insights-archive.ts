@@ -225,7 +225,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
   'zh-hant': {
     label: 'INSIGHTS',
     title: '昊鼎專欄',
-    description: '整理台灣公司設立、法律資訊與訴訟案例重點內容。',
+    description: '整理台灣公司設立、法律資訊與訴訟案例重點。',
     categories: {
       formation: '台灣公司設立',
       legal: '台灣法律資訊',
@@ -240,7 +240,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         href: '/zh-hant/insights/semiconductor-market-entry',
         category: 'formation',
         date: '2026.09.17',
-        readTime: '8分',
+        readTime: '8分鐘閱讀',
         image: '/images/018-taiwan-semiconductor-market-entry/featured-01.jpg',
         keywords: ['半導體', '子公司', '分公司', '代理商', '公司設立']
       },
@@ -251,31 +251,31 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         href: '/zh-hant/insights/gym-injury-lawsuit',
         category: 'case',
         date: '2025.09.13',
-        readTime: '7分',
+        readTime: '7分鐘閱讀',
         image: '/images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
         keywords: ['健身房受傷', '損害賠償', '求償期限', '證據保存', '賠償項目']
       },
       {
         id: 'cosmetics-market-entry',
-        title: '台灣化妝品市場進入：公司設立到產品登錄與 PIF 建立、保存',
+        title: '台灣化粧品市場進入：公司設立到產品登錄與 PIF 建立、保存',
         summary: '整理市場進入模式、產品登錄與 PIF 文件要求，以及廣告法規風險。',
         href: '/zh-hant/insights/cosmetics-market-entry',
         category: 'formation',
         date: '2026.02.04',
-        readTime: '3分',
+        readTime: '3分鐘閱讀',
         image: '/images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
-        keywords: ['化妝品', 'PIF', 'TFDA', '公司設立']
+        keywords: ['化粧品', 'PIF', 'TFDA', '公司設立']
       },
       {
         id: 'company-advanced-2',
         title: '台灣公司設立進階篇 2',
-        summary: '以 Q&A 說明資本額匯款、籌備帳戶與正式帳戶轉換重點。',
+        summary: '以 Q&A 說明資本額匯款、籌備處帳戶與正式帳戶轉換重點。',
         href: '/zh-hant/insights/company-advanced-2',
         category: 'formation',
         date: '2025.09.13',
-        readTime: '2分',
+        readTime: '2分鐘閱讀',
         image: '/images/005-taiwan-company-establishment-advanced-2/featured-01.jpg',
-        keywords: ['資本額', '籌備帳戶', '公司設立']
+        keywords: ['資本額', '籌備處帳戶', '公司設立']
       },
       {
         id: 'withdraw-capital',
@@ -289,7 +289,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       {
         id: 'logistics-business',
         title: '在台經營物流業的方法',
-        summary: '整理物流業在台落地時需要留意的法律與程序。',
+        summary: '整理物流業在台經營時需要留意的法律與程序。',
         href: '/zh-hant/insights/logistics-business',
         category: 'formation',
         image: '/images/017-taiwan-logistics-business-setup/featured-01.jpg',
@@ -344,7 +344,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         id: 'overtaking-accident',
         title: '台灣超車事故的責任如何判斷？',
         summary:
-          '整理台灣《道路交通安全規則》第101條的禁止超車條件、同車道程序及匿名事故案例的責任判斷因素，不保證個案結果。',
+          '整理台灣《道路交通安全規則》第101條所列禁止超車的情形、同車道超車程序及經匿名處理的事故案例責任判斷因素，不保證個案結果。',
         href: '/zh-hant/insights/overtaking-accident',
         category: 'legal',
         readTime: '3分鐘閱讀',
@@ -394,7 +394,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       {
         id: 'mandatory-employment',
         title: '台灣最低服務年限約定：效力、培訓費用與違約金判斷',
-        summary: '說明兩項擇一的法定基礎及另行的合理範圍審查，區分培訓費用與預付性給付的返還，並說明契約終止的可歸責性對第15條之1第4項培訓費用返還責任的影響。',
+        summary: '說明兩項法定基礎（擇一），以及符合其中一項後仍須進行的合理範圍審查，區分培訓費用與預付性給付的返還，並說明契約終止的可歸責性對第15條之1第4項培訓費用返還責任的影響。',
         href: '/zh-hant/insights/taiwan-mandatory-employment-period',
         category: 'legal',
         image: '/images/014-taiwan-mandatory-employment-period/featured-01.jpg',
@@ -407,7 +407,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         href: '/zh-hant/insights/labor-severance',
         category: 'legal',
         image: '/images/008-대만-노동법-대만에서-퇴직금-받기-어렵다고/featured-01.jpg',
-        keywords: ['勞動法', '資遣費', '解雇']
+        keywords: ['勞動法', '資遣費', '解僱']
       },
       {
         id: 'traffic-accident-procedure',

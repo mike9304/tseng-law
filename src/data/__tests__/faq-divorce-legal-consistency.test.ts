@@ -15,7 +15,7 @@ const divorceFaqCases = [
     question: '韓國人在台灣離婚需要什麼程序？',
     prohibitedWording: '法院公證',
     article1050Elements: ['書面', '二人以上證人簽名', '向戶政機關辦理離婚登記'],
-    crossBorderGuidance: ['跨國離婚', '準據法', '管轄法院', '財產分割', '親權'],
+    crossBorderGuidance: ['跨國離婚', '準據法', '管轄法院', '夫妻財產分配', '親權'],
   },
   {
     locale: 'en',

@@ -34,7 +34,7 @@ export const taipeiPhotos: TaipeiPhoto[] = [
     src: '/images/office/taipei-01.jpg',
     alt: {
       ko: '법무법인 호정 타이베이 사무소 응접실',
-      'zh-hant': '昊鼎國際法律事務所台北辦公室接待室',
+      'zh-hant': '昊鼎國際法律事務所台北所接待室',
       en: 'Hovering International Law Firm Taipei office reception room',
       ja: '昊鼎国際法律事務所 台北事務所の応接室',
     },
@@ -43,7 +43,7 @@ export const taipeiPhotos: TaipeiPhoto[] = [
     src: '/images/office/taipei-02.jpg',
     alt: {
       ko: '법무법인 호정 타이베이 사무소 집무실',
-      'zh-hant': '昊鼎國際法律事務所台北辦公室律師辦公室',
+      'zh-hant': '昊鼎國際法律事務所台北所律師辦公室',
       en: "Hovering International Law Firm Taipei office attorney's office",
       ja: '昊鼎国際法律事務所 台北事務所の執務室',
     },
@@ -52,7 +52,7 @@ export const taipeiPhotos: TaipeiPhoto[] = [
     src: '/images/office/taipei-03.jpg',
     alt: {
       ko: '법무법인 호정 타이베이 사무소 회의실',
-      'zh-hant': '昊鼎國際法律事務所台北辦公室會議室',
+      'zh-hant': '昊鼎國際法律事務所台北所會議室',
       en: 'Hovering International Law Firm Taipei office meeting room',
       ja: '昊鼎国際法律事務所 台北事務所の会議室',
     },

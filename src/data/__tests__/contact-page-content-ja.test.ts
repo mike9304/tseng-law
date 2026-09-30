@@ -224,12 +224,12 @@ describe('Japanese contact page data', () => {
       pageCopy: {
         label: 'CONTACT',
         title: '聯絡與諮詢',
-        description: '一次查看詢問類型、聯絡方式與事務所據點。',
+        description: '詢問類型、聯絡方式與事務所據點。',
       },
       siteContent: {
         label: 'CONTACT',
         title: '聯絡與諮詢',
-        description: '依照詢問類型提供聯絡方式。',
+        description: '請依詢問類型與我們聯繫。',
         inquiriesLabel: '詢問類型',
         inquiries: [
           {
@@ -240,14 +240,14 @@ describe('Japanese contact page data', () => {
             title: '媒體詢問',
             details: [
               'Email: wei@hoveringlaw.com.tw',
-              '來信標題請註明 [媒體詢問]',
+              '來信主旨請註明「媒體詢問」',
             ],
           },
           {
             title: '招募詢問',
             details: [
               'Email: wei@hoveringlaw.com.tw',
-              '來信標題請註明 [招募詢問]',
+              '來信主旨請註明「招募詢問」',
             ],
           },
           {

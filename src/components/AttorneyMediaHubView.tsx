@@ -31,18 +31,18 @@ const mediaHubLabels = {
     label: 'PUBLIC PROFILE',
     title: '曾雋崴律師公開簡介與頻道',
     description:
-      '集中整理曾雋崴律師的官方簡介、外部介紹、YouTube、部落格與主要法律主題。',
+      '彙整曾雋崴律師的官方簡介、外部介紹、YouTube、部落格及主要法律主題。',
     stats: {
-      languages: '可服務語言',
+      languages: '服務語言',
       services: '核心服務領域',
       columns: '公開專欄',
-      channels: '可驗證頻道',
+      channels: '可查證頻道',
     },
     channels: '官方簡介與頻道',
-    topics: '主要說明主題',
+    topics: '主要解說主題',
     matters: '代表案例',
     profile: '查看曾雋崴律師簡介',
-    contact: '媒體與諮詢聯絡',
+    contact: '媒體採訪與法律諮詢',
   },
   en: {
     label: 'PUBLIC PROFILE',

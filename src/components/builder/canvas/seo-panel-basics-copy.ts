@@ -39,7 +39,7 @@ export function getSeoPanelBasicsCopy(locale: Locale): SeoPanelBasicsCopy {
       title: 'SEO 標題',
       titlePlaceholder: '建議 30-60 字 · 例：國際訴訟專業律師事務所 | Tseng Law',
       description: '中繼描述',
-      descriptionPlaceholder: '建議 120-160 字 · 例：台灣第一家韓語法律事務所，企業設立·投資·移民一站式服務。',
+      descriptionPlaceholder: '建議 120-160 字 · 例：台灣第一家韓文法律事務所，企業設立·投資·移民一站式服務。',
       noIndex: 'noindex',
       noIndexBody: '從搜尋結果中排除。',
       noFollow: 'nofollow',

@@ -192,7 +192,7 @@ describe('Japanese services-list copy', () => {
       '대만 내 투자, 소송, 자문 전반을 구조화하여 제공합니다.',
     );
     expect(siteContent['zh-hant'].services.description).toBe(
-      '涵蓋在台投資、訴訟與法律顧問全流程。',
+      '服務範圍涵蓋在台投資、訴訟與法律顧問。',
     );
     expect(siteContent.en.services.description).toBe(
       'Taiwan company formation, litigation, residence permits, and tax and accounting support.',
@@ -201,7 +201,7 @@ describe('Japanese services-list copy', () => {
       '한국 기업의 대만 진출',
     );
     expect(siteContent['zh-hant'].services.items[0]?.description).toContain(
-      '全程協助外國投資人（包含韓國企業）在台落地',
+      '協助外國投資人（含韓國企業）在台設立營運據點',
     );
     expect(siteContent['zh-hant'].services.items[0]?.description).not.toContain(
       '全程協助韓國企業落地台灣',

@@ -33,22 +33,22 @@ const HEADER_MEGA_TEMPLATES: HeaderMegaTemplate[] = [
     links: [
       {
         id: 'investment',
-        label: { ko: '투자·법인설립', 'zh-hant': '投資·公司設立', en: 'Investment & Company Setup' },
+        label: { ko: '투자·법인설립', 'zh-hant': '投資與公司設立', en: 'Investment & Company Setup' },
         href: '/services/investment',
       },
       {
         id: 'civil',
-        label: { ko: '민사소송·손해배상', 'zh-hant': '民事訴訟·損害賠償', en: 'Civil Litigation & Damages' },
+        label: { ko: '민사소송·손해배상', 'zh-hant': '民事訴訟與損害賠償', en: 'Civil Litigation & Damages' },
         href: '/services/civil',
       },
       {
         id: 'family',
-        label: { ko: '가사소송', 'zh-hant': '家事訴訟', en: 'Family Litigation' },
+        label: { ko: '가사소송', 'zh-hant': '家事事件', en: 'Family Litigation' },
         href: '/services/family',
       },
       {
         id: 'labor',
-        label: { ko: '노동법·고용분쟁', 'zh-hant': '勞動法·僱傭爭議', en: 'Labor & Employment' },
+        label: { ko: '노동법·고용분쟁', 'zh-hant': '勞動與僱傭爭議', en: 'Labor & Employment' },
         href: '/services/labor',
       },
       {
@@ -58,7 +58,7 @@ const HEADER_MEGA_TEMPLATES: HeaderMegaTemplate[] = [
       },
       {
         id: 'ip',
-        label: { ko: '지적재산·금융분쟁', 'zh-hant': '智慧財產·金融爭議', en: 'IP & Financial Disputes' },
+        label: { ko: '지적재산·금융분쟁', 'zh-hant': '智慧財產與金融爭議', en: 'IP & Financial Disputes' },
         href: '/services/ip',
       },
       {
@@ -70,7 +70,7 @@ const HEADER_MEGA_TEMPLATES: HeaderMegaTemplate[] = [
   },
   {
     key: 'videos',
-    title: { ko: '미디어센터', 'zh-hant': '媒體中心', en: 'Media Center' },
+    title: { ko: '미디어센터', 'zh-hant': '影音', en: 'Media Center' },
     links: [
       {
         id: 'youtube',
@@ -84,7 +84,7 @@ const HEADER_MEGA_TEMPLATES: HeaderMegaTemplate[] = [
       },
       {
         id: 'videos',
-        label: { ko: '영상/채널 페이지', 'zh-hant': '影音頁面', en: 'Videos / Channels' },
+        label: { ko: '영상/채널 페이지', 'zh-hant': '影音專區', en: 'Videos / Channels' },
         href: '/videos',
       },
     ],

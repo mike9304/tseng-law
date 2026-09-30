@@ -59,7 +59,7 @@ const COPY: Record<'ko' | 'zh-hant' | 'en', AiSectionGeneratorCopy> = {
     sectionKindLabel: '區段類型',
     autoKindLabel: '自動選擇',
     sectionDescriptionLabel: '區段描述',
-    promptPlaceholder: '例如：為進軍台灣的韓國企業法律顧問事務所建立首頁主視覺區段。強調韓語諮詢、5 個工作天內回覆與專業度。',
+    promptPlaceholder: '例如：為進軍台灣的韓國企業法律顧問事務所建立首頁主視覺區段。強調韓文諮詢、5 個工作天內回覆與專業度。',
     generatingLabel: '產生中...',
     regenerateLabel: '重新產生',
     generateLabel: '產生',

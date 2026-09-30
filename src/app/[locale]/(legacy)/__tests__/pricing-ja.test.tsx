@@ -152,7 +152,7 @@ describe('Japanese pricing integration', () => {
 
   it.each([
     ['ko', 'NTD (대만달러)', '일반 법률상담', '견적 문의', '이메일로 상담 일정 문의', '상담 일정은 이메일로 협의한 뒤 확정됩니다.'],
-    ['zh-hant', 'NTD (新台幣)', '一般法律諮詢', '報價諮詢', '以電子郵件洽詢諮詢時間', '諮詢時間將於電子郵件協調後確認。'],
+    ['zh-hant', '新台幣', '一般法律諮詢', '個案報價', '以電子郵件預約諮詢時間', '諮詢時間以電子郵件聯繫後確定。'],
     ['en', 'NTD (New Taiwan Dollar)', 'General Legal Consultation', 'Request a Quote', 'Email to arrange a consultation', 'Your consultation time is confirmed after arranging it by email.'],
   ] as const)(
     'preserves representative %s pricing, mailto CTA, and booking clarification',

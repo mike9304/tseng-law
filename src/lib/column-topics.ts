@@ -87,7 +87,7 @@ export const COLUMN_TOPIC_LABELS: Record<ColumnTopicUiLocale, Record<ColumnTopic
     family: '跨國婚姻與離婚',
     inheritance: '繼承',
     litigation: '訴訟與糾紛',
-    labor: '勞動與僱用',
+    labor: '勞動與僱傭',
     lawyer: '委任台灣律師',
     other: '其他法律資訊',
   },

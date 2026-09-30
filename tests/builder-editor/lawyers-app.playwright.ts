@@ -13,7 +13,7 @@ test('localizes public lawyer profile shell labels for ko and zh-hant', async ({
 
   await page.goto('/zh-hant/lawyers/wei-tseng', { waitUntil: 'domcontentloaded' });
   await expect(page.locator('section.page-header [data-builder-surface-key="section-label"]')).toContainText('律師簡介');
-  await expect(page.locator('.profile-hero-cta')).toContainText('聯絡諮詢');
+  await expect(page.locator('.profile-hero-cta')).toContainText('電子郵件諮詢');
   await expect(
     page.locator('.profile-info-card').filter({ hasText: '相關服務與內容' })
   ).toContainText('相關服務與內容');

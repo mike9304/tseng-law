@@ -11,13 +11,13 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 # 員工自願離職也能領資遣費的例外情形
 
-![代表圖片](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
+![台灣自願離職與資遣費](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-如同之前所提到的，在台灣員工要領到資遣費並不容易。
+如同前一篇所說的，在台灣員工要領到資遣費並不容易。
 
 ​
 
-尤其是員工自願離職的情況下，
+尤其是在員工自願提出離職時，
 
 無法領取資遣費（勞動基準法第18條），
 
@@ -33,7 +33,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 1. 雇主於訂立勞動契約時為虛偽之意思表示，使勞工誤信而有受損害之虞者
 
-（例如雇主向勞工承諾入職後將派往根本不存在的海外分公司）
+（例如雇主向勞工承諾到職後將派往根本不存在的海外分公司）
 
 2. 雇主、雇主家屬、雇主代理人對勞工實施暴行或有重大侮辱之行為者
 
@@ -53,7 +53,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 未支付加班費、
 
-或未為員工投保勞保或健保的情況。
+或未替員工辦理勞保或健保的投保。
 
 這種情況下，即使勞工主動終止勞動契約，雇主仍須支付資遣費。
 
@@ -67,7 +67,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 或（第6款情形）自知悉損害結果之日起**30日**內終止勞動契約。
 
-因此勞工必須掌握好時間。
+因此勞工務必留意該期限。
 
 ​
 
@@ -81,7 +81,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 有時候勞資雙方都有過錯時，
 
-一旦發生爭議，
+當爭議發生時，
 
 就看誰先以充分的理由終止契約，
 
@@ -97,5 +97,5 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 > 相關文章:
 > - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
-> - [可用韓語溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
+> - [可用韓文溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
 > - [服務項目 — 勞動法](/zh-hant/services/labor)

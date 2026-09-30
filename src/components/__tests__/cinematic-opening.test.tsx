@@ -63,7 +63,7 @@ const expectedOpeningCopy = {
     scroll: '向下捲動',
     skip: '略過',
     mediaAlt: '明亮自然光下飛越臺灣中央山脈與雲海的空中景觀',
-    service: '台灣法律諮詢 · 韓語、日語、英語溝通',
+    service: '台灣法律諮詢 · 韓文、日文、英文溝通',
     contact: '諮詢聯絡方式',
   },
   en: {

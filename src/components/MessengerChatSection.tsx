@@ -69,14 +69,14 @@ function getConfig(locale: SiteLocale): MessengerConfig {
 
   return {
     sectionTitle: '電子郵件諮詢',
-    sectionDescription: '請將諮詢內容寄至官方電子郵件信箱，我們確認後回覆。',
+    sectionDescription: '請將諮詢內容寄至本所官方信箱，我們確認後會回覆您。',
     primaryLabel: '官方諮詢信箱',
     primaryDescription: CONSULTATION_EMAIL,
     features: [
-      '公司設立·投資相關詢問',
-      '訴訟·爭議諮詢預約',
-      '簽證·居留相關詢問',
-      '官方電子郵件收件',
+      '公司設立與投資相關問題',
+      '訴訟與爭議諮詢預約',
+      '簽證與居留相關問題',
+      '諮詢方式與時間安排',
     ],
     featuresTitle: '可透過電子郵件詢問的事項',
   };

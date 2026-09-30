@@ -32,7 +32,7 @@ export const heroQuickMenus = {
     { label: '專欄', href: '/zh-hant/columns' },
     { label: '律師', href: '/zh-hant/lawyers' },
     { label: '常見問題', href: '/zh-hant/faq' },
-    { label: '影音/頻道', href: '/zh-hant/videos' },
+    { label: '影音', href: '/zh-hant/videos' },
     { label: '聯絡資訊', href: '/zh-hant/contact' },
   ],
   en: [
@@ -62,7 +62,7 @@ const emailConsultationCtaLabels: Record<SiteLocale, string> = {
 
 const scrollArrowLabels: Record<SiteLocale, string> = {
   ko: '아래로 스크롤',
-  'zh-hant': '向下滾動',
+  'zh-hant': '向下捲動',
   en: 'Scroll down',
   ja: '下へスクロール',
 };

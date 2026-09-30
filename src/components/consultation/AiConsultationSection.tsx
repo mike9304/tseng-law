@@ -120,9 +120,9 @@ function getFreshnessLabel(locale: Locale, freshness: 'fresh' | 'review_needed' 
   }
 
   if (locale === 'zh-hant') {
-    if (freshness === 'fresh') return '文章時效正常';
-    if (freshness === 'review_needed') return '建議再次確認時效';
-    return '時效尚未確認';
+    if (freshness === 'fresh') return '文章內容為最新';
+    if (freshness === 'review_needed') return '建議確認文章是否已更新';
+    return '尚未確認文章是否為最新';
   }
 
   if (freshness === 'fresh') return 'Source freshness checked';
@@ -138,9 +138,9 @@ function getConfidenceLabel(locale: Locale, confidence: 'high' | 'medium' | 'low
   }
 
   if (locale === 'zh-hant') {
-    if (confidence === 'high') return '依據可信度高';
-    if (confidence === 'medium') return '依據可信度中';
-    return '依據可信度低';
+    if (confidence === 'high') return '依據可信度：高';
+    if (confidence === 'medium') return '依據可信度：中';
+    return '依據可信度：低';
   }
 
   if (confidence === 'high') return 'High source confidence';

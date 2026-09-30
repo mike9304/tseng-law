@@ -25,9 +25,9 @@ const labels = {
     education: '學歷',
     experience: '經歷',
     fullProfile: '完整簡介',
-    consult: '聯絡諮詢',
+    consult: '電子郵件諮詢',
     representative: '代表律師',
-    teamTitle: '所屬律師 · 職員',
+    teamTitle: '本所律師與同仁',
     partnerTitle: '合作會計師',
   },
   en: {

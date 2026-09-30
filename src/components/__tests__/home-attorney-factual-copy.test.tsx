@@ -7,7 +7,7 @@ import { locales, siteLocales, type Locale, type SiteLocale } from '@/lib/locale
 
 const reviewedSummaries = {
   ko: '법원 소송 실무와 기업 법률고문 경험을 바탕으로, SBS 뉴스에 법률 의견과 해설을 제공하고 WEI Lawyer를 통해 법률정보를 꾸준히 발행하고 있습니다.',
-  'zh-hant': '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。',
+  'zh-hant': '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續在 WEI Lawyer 發布法律資訊。',
   // WO-X1 (EN-21/J24): scan-friendly EN summary; JA leads with JLPT N1 and exchange study.
   en: 'Experienced in court litigation and corporate advisory work; has provided legal commentary to Korea’s SBS News and publishes Taiwan-law explainers on the WEI Lawyer channel.',
   ja: '日本語能力試験（JLPT）N1を取得し、神戸大学・早稲田大学への交換留学経験があります。訴訟実務と企業の法律顧問としての経験を生かし、WEI Lawyerを通じて台湾法の情報を継続的に発信しています。',

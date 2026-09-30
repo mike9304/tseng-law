@@ -110,16 +110,16 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
 
   it('covers supplementation, incompatible results, item limit, and fallback', () => {
     const required = [
-      '主管機關會以輔導函通知申請人補充結果',
-      '於補充後續行登記程序',
+      '主管機關會以輔導函通知申請人補送查詢結果',
+      '補送後，再續行登記程序',
       '評估變更營業場所',
       '將不符合規定的營業項目自登記申請中移除',
-      '一次查詢申請可受理的營業項目最多五項',
+      '一次查詢申請最多可受理五項營業項目',
       '應選擇主要營業項目作為審查對象',
       '隨案主動查詢',
       '包含餐廳及其他餐飲服務在內的特定營業項目',
-      '由台北市商業處隨登記案件主動啟動查詢的補充機制',
-      '第五點清單並非恢復「僅清單所列行業才需要預先查詢」的舊有觀念',
+      '由臺北市商業處隨登記案件主動啟動查詢的補充機制',
+      '第五點清單不代表恢復「僅清單所列行業才需要預先查詢」的舊有觀念',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -132,7 +132,7 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
       '申請日前三個月內核發的建物登記謄本（含第二類）或建物所有權狀',
       '台北市各地政事務所或便民工作站等窗口',
       '政府的電子謄本系統',
-      '無須一律透過特定熟人或律師辦理',
+      '不必一律找熟人或律師代辦',
       '以住宅為主兼作辦公室',
       '住宅使用部分超過總面積五分之三',
       '辦公室使用部分未達五分之二',
@@ -152,7 +152,7 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
       '不代表已確認該場所對任何營業項目在土地使用分區、建築、消防或衛生上均屬合法',
       '借址登記',
       '虛擬辦公室',
-      '即認定一律不得使用，同樣不適當',
+      '也不能只因「借址登記」或「虛擬辦公室」的服務名稱，就認定一律不得使用',
       '登記地址以外的地點實際營業',
       '僅備齊登記地址的相關資料，並不代表已滿足另一實際營業場所的要件',
     ];
@@ -165,9 +165,9 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
   it('limits inquiry scope and keeps separate operating requirements', () => {
     const required = [
       '不代表出租人權限、租賃條件、消防、衛生、環境、招牌、食品業者登錄、行業別許可及其他要件均已獲核准',
-      '並非全面核准租賃契約的效力',
+      '並非租賃契約效力、出租人權限、設備工程、消防安全設備、排煙排水、廢棄物、噪音、招牌設置或各行業法規所定資格均已獲確認的證明文件',
       '消防安全設備、排煙排水、廢棄物、噪音、招牌設置',
-      '食品衛生管理、食品業者登錄、從業人員與設備相關要件、營業型態別許可',
+      '食品衛生管理、食品業者登錄、從業人員與設備相關要件、營業型態所需許可',
       '未必能沿用已取得的結果',
       '各有不同的目的和審查範圍',
     ];
@@ -181,10 +181,10 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
     const required = [
       '一般案件5日（曆日）、需函詢外部機關案件11日（曆日）的處理目標',
       '並非完成日期的保證',
-      '均非工作日，而是以曆日計算的行政處理目標',
+      '是按曆日而非工作天計算的行政處理目標',
       '實際天數可能因申請文件的補正、其他機關的回覆、案件數量、物件或營業項目的複雜程度而變動',
       '查詢結果自審查完成日起六個月內有效',
-      '以審查完成日為起算點',
+      '自審查完成日起算',
       '逾有效期間或查詢內容有變更',
     ];
     for (const phrase of required) {
@@ -258,7 +258,7 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_314);
+    expect(visibleHanCount).toBe(3_302);
     expect(calculatedMinutes).toBe(9);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

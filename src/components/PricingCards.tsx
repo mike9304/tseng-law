@@ -89,7 +89,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ctaNote: '상담 일정은 이메일로 협의한 뒤 확정됩니다.',
   },
   'zh-hant': {
-    currency: 'NTD (新台幣)',
+    currency: '新台幣',
     items: [
       {
         icon: 'consultation',
@@ -98,21 +98,21 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         unit: '/ 1小時',
         details: [
           '面談或視訊諮詢',
-          '韓語·英語·中文·日語諮詢皆可',
-          '法律問題分析與方向建議',
+          '可使用韓文、英文、中文、日文',
+          '分析法律問題並建議處理方向',
           '須事先預約'
         ]
       },
       {
         icon: 'litigation',
-        title: '民事·刑事訴訟',
-        price: '報價諮詢',
+        title: '民刑事訴訟',
+        price: '個案報價',
         unit: '',
         details: [
-          '民事訴訟（損害賠償、合約糾紛等）',
+          '民事訴訟（損害賠償、契約糾紛等）',
           '刑事訴訟（告訴、辯護）',
-          '依案件類型與複雜度費用有所不同',
-          '確切報價於諮詢後提供'
+          '費用依案件類型與複雜程度而定',
+          '諮詢後提供具體報價'
         ],
         note: '確認案件內容後提供報價，請先預約諮詢。'
       },
@@ -122,13 +122,13 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         price: 'NT$ 50,000',
         unit: '',
         details: [
-          '資本額 400萬 NTD 以下',
+          '資本額新台幣400萬元以下',
           '單一股東',
-          '含投資許可 + 公司登記 + 營業登記',
-          '銀行陪同另計費用',
+          '含投資許可、公司登記及營業登記',
+          '陪同赴銀行辦理另計費用',
           '居留證（ARC）代辦另計費用'
         ],
-        note: '資本額超過、多位股東或特殊法人（分公司、合資等）需另行詢價。'
+        note: '資本額超過上述金額、多位股東，或分公司、合資等特殊型態，須另行報價。'
       },
       {
         icon: 'retainer',
@@ -136,17 +136,17 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         price: 'NT$ 50,000',
         unit: '/ 1年',
         details: [
-          '常態法律諮詢服務',
-          '合約審閱與風險分析',
-          '勞動法·商法相關常態顧問',
-          '可商議按月分期付款'
+          '日常法律諮詢',
+          '契約審閱與風險分析',
+          '勞動法、商事法日常顧問',
+          '可洽談按月分期付款'
         ]
       }
     ],
     disclaimer:
-      '以上費用為基本標準，依案件特性、複雜度及急迫程度可能有所調整。確切費用於初次諮詢後以書面報價方式提供。',
-    ctaLabel: '以電子郵件洽詢諮詢時間',
-    ctaNote: '諮詢時間將於電子郵件協調後確認。',
+      '以上為基本收費標準，實際費用可能依案件性質、複雜程度及急迫性調整；確切費用於初次諮詢後以書面報價。',
+    ctaLabel: '以電子郵件預約諮詢時間',
+    ctaNote: '諮詢時間以電子郵件聯繫後確定。',
   },
   en: {
     currency: 'NTD (New Taiwan Dollar)',

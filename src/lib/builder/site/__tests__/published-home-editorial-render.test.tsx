@@ -223,7 +223,7 @@ describe('published current9 editorial render', () => {
     const zhHtml = renderToStaticMarkup(
       await PublishedSitePageView({ resolved: publishedHomeResolved('zh-hant') }),
     );
-    expect(visibleText(zhHtml)).toContain('曾雋崴律師，在地與跨境客戶的台灣法律夥伴');
+    expect(visibleText(zhHtml)).toContain('曾雋崴律師：服務在地與跨境客戶的台灣律師');
     expect(visibleText(zhHtml)).not.toContain('曾雋崴律師，專注服務韓國客戶的台灣法律夥伴');
   });
 

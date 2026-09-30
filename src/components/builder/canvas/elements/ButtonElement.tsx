@@ -64,7 +64,7 @@ export default function ButtonElement({
       (props.style as React.CSSProperties).pointerEvents = 'auto';
     }
     if (legacyHeroIcon) {
-      props['aria-label'] = node.content.ariaLabel ?? (legacyHeroIcon === 'search' ? '搜尋' : '向下滾動');
+      props['aria-label'] = node.content.ariaLabel ?? (legacyHeroIcon === 'search' ? '搜尋' : '向下捲動');
     }
     return (
       <Tag {...(props as Record<string, never>)}>

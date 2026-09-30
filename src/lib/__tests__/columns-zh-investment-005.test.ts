@@ -15,14 +15,14 @@ const post = getColumnPost(
   'zh-hant',
 );
 
-const title = '台灣公司設立：資本金匯款、銀行帳戶與外國人聘僱實務Q&A';
+const title = '台灣公司設立：出資款匯款、銀行帳戶與外國人聘僱實務Q&A';
 const headings = [
-  '1. 從韓國向台灣公司的籌備處帳戶匯出資本金時，應確認什麼？',
+  '1. 從韓國向台灣公司的籌備處帳戶匯出出資款時，應確認什麼？',
   '2. 可以將在台灣持有的新臺幣存入公司的籌備處帳戶嗎？',
   '3. 公司籌備處帳戶何時可以轉換為正式的公司帳戶？',
   '4. 轉換為正式帳戶後，可以立即使用網路銀行嗎？',
   '5. 台灣公司聘僱韓國人時，應確認哪些工作許可要件？',
-  '進行程序前的確認',
+  '辦理程序前的確認',
   '官方資料',
   '相關服務',
 ];
@@ -121,15 +121,15 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       '韓國銀行要求投資人本人親自前往銀行，並從本人帳戶匯款',
       '網路銀行或由韓國親友代為匯款均不可行',
       '必須辦理「海外直接投資申報」',
-      '申報必須於匯出台灣法人資本金時獲受理',
+      '申報必須於匯出台灣法人出資款時獲受理',
       '未申報可能因違反外匯管理法規而受制裁',
-      '匯出資本金前，請向往來銀行確認申報受理機關、指定外匯銀行、申報時點、匯款名義、應備文件及匯款方式',
+      '匯出出資款前，請向往來銀行確認申報受理機關、指定外匯銀行、申報時點、匯款名義、應備文件及匯款方式',
       '海外直接投資交易須透過指定外匯銀行辦理',
-      '海外直接投資申報為必須，並須在匯出台灣法人資本金時獲受理',
+      '海外直接投資申報為必須，並須在匯出台灣法人出資款時獲受理',
       '韓國銀行一般要求投資人本人親自到行，以本人帳戶辦理匯款',
-      '海外直接投資申報必須在匯出資本金時獲受理',
+      '海外直接投資申報必須在匯出出資款時獲受理',
       '由於可能須先經文件審查、補正或指定銀行確認，應事先確認申報與匯款的順序，並與台灣方面的投資核准及繳款期限調整時程',
-      '請勿一概預測具體措施，而應在匯款前確認最新制度與個別交易內容',
+      '具體處置不宜一概而論，而應在匯款前確認最新制度與個別交易內容',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -139,7 +139,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
 
   it('locks Taiwan-dollar evidence and the Korean-bank remittance exemption', () => {
     const required = [
-      '需確認核准的投資內容、資金取得經過、匯款或存入方式及往來銀行的要求',
+      '需確認核准的投資內容、資金取得過程、匯款或存入方式及往來銀行的要求',
       '使用在台灣取得的新臺幣時，須提交資金來源證明文件',
       '薪資所得扣繳憑單影本',
       '股息和紅利扣繳憑單影本',
@@ -150,7 +150,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       '若從韓國銀行帳戶匯款，無須附上資金來源相關文件',
       '請將銀行要求的資料、投資核准文件及實際資金移動紀錄相互對應保存',
       '須申報投資款已匯入，再辦理投資額審定',
-      '最終能完成申報與審定程序的方式設計資金流程',
+      '應妥善安排資金流程，以便後續能完成申報與審定程序',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -166,7 +166,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       '資金可提領的時點，未必是同一天',
       '與開始使用網路銀行及行動銀行，未必是同一程序',
       '將經辦人員與核決人員分離的機制',
-      '無法作為所有銀行共通的條件來說明',
+      '不能一概說成是所有銀行都會要求的相同條件',
     ];
     for (const phrase of required) {
       expect(raw).toContain(phrase);
@@ -226,7 +226,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       '本人親自到行、代理申請或線上程序是否可行，無法就所有銀行一概而論',
       '由代理人申請而獲准的情形',
       '部分程序在線上辦理的情形',
-      '不應假設申報會在匯出資本金的同時當然受理',
+      '不應假設申報會在匯出出資款的同時當然受理',
       '自國外匯款時，仍可能需要提出資金來源資料',
       '即使是自國外匯款，仍可能需要提出資金來源資料',
       '不會僅因匯款來源是韓國的銀行就免除證明',
@@ -272,7 +272,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_692);
+    expect(visibleHanCount).toBe(3_693);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

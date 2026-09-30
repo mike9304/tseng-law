@@ -179,7 +179,7 @@ export default function OfficeMapTabs({
     : locale === 'ko'
       ? 'Google 지도에서 보기 (사진·리뷰)'
       : locale === 'zh-hant'
-        ? '在 Google 地圖查看 (照片·評論)'
+        ? '在 Google 地圖查看（照片、評論）'
         : locale === 'ja'
           ? 'Google マップで見る（写真・口コミ）'
           : 'View on Google Maps (photos & reviews)';

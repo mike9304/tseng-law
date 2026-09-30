@@ -79,17 +79,17 @@ const routerCopy: Record<SiteLocale, RouterCopy> = {
     intro: '請先選擇最接近的主題，了解相關服務。個案是否承接，仍須在收到詢問後評估。',
     matters: [
       { href: 'services/investment', title: '企業與投資', description: '公司設立、投資及在台營運。' },
-      { href: 'services/labor', title: '勞動與雇用', description: '勞動契約、解僱及職場爭議。' },
+      { href: 'services/labor', title: '勞動與僱傭', description: '勞動契約、解僱及職場爭議。' },
       { href: 'services/civil', title: '契約與民事爭議', description: '契約、款項及其他民事請求。' },
       { href: 'services/family', title: '家事', description: '婚姻、離婚及跨境家庭問題。' },
       { href: 'services/criminal', title: '刑事案件', description: '在台灣涉及偵查、告訴或刑事程序。' },
-      { href: 'contact', title: '居留與移民', description: '請簡述與台灣相關的情況，以便確認是否能協助。' },
+      { href: 'contact', title: '居留與移民', description: '與在台居留或停留有關的問題，請簡述情況，以便確認是否能協助。' },
     ],
-    inquiryTitle: '先告訴我們必要資訊',
+    inquiryTitle: '請先提供基本資訊',
     inquiryText: '請簡述事項、與台灣的關聯、期限及聯絡方式。我們將確認是否適合承接及有無利益衝突；服務範圍、費用與諮詢安排須另行確認。敏感文件請待律師指示後再提供。',
     inquiryAction: '送出詢問',
-    process: '詢問 → 承接適合性及利益衝突確認 → 服務範圍與費用確認 → 雙方同意後進行諮詢',
-    languageNote: '律師可直接以中文、英文、韓文及日文諮詢。',
+    process: '來信詢問 → 評估能否承接及有無利益衝突 → 確認服務範圍與費用 → 雙方同意後進行諮詢',
+    languageNote: '律師可直接以中文、英文、韓文及日文提供諮詢。',
   },
 };
 

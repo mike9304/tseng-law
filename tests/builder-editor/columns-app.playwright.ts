@@ -61,7 +61,7 @@ test('localizes public column detail shell labels for ko and zh-hant', async ({ 
   await expect(page.locator('.authority-card-eyebrow')).toContainText('承辦律師');
   await expect(page.locator('.blog-back-link')).toContainText('返回專欄列表');
   await expect(page.locator('.blog-sidebar-title').filter({ hasText: '預約諮詢' })).toContainText('預約諮詢');
-  await expect(page.locator('.blog-sidebar-btn')).toContainText('聯絡我們');
+  await expect(page.locator('.blog-sidebar-btn')).toContainText('電子郵件諮詢');
   await expect(page.locator('.authority-card-heading')).toContainText('審閱本文的律師');
   await expect(page.locator('.blog-sidebar-title').filter({ hasText: '延伸主題' })).toContainText('延伸主題');
 });

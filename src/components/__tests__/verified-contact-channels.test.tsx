@@ -127,7 +127,7 @@ describe('verified public contact channels', () => {
   it('preserves representative Korean, Traditional Chinese, and English guide copy', () => {
     const expectations = [
       ['ko', '상담 전 확인 사항', '이메일로 문의를 접수할 수 있습니다.'],
-      ['zh-hant', '諮詢前可先確認的事項', '可透過電子郵件提出詢問。'],
+      ['zh-hant', '諮詢前可先確認的事項', '可用電子郵件詢問。'],
       ['en', 'Before You Contact Us', 'You can reach us through email.'],
     ] as const;
 
@@ -141,7 +141,7 @@ describe('verified public contact channels', () => {
   it('preserves representative Korean, Traditional Chinese, and English messenger copy', () => {
     const expectations = [
       ['ko', '이메일 상담', '상담 문의는 공식 이메일로 보내주시면 확인 후 안내해 드립니다.'],
-      ['zh-hant', '電子郵件諮詢', '請將諮詢內容寄至官方電子郵件信箱，我們確認後回覆。'],
+      ['zh-hant', '電子郵件諮詢', '請將諮詢內容寄至本所官方信箱，我們確認後會回覆您。'],
       ['en', 'Email Consultation', 'Send your inquiry to our official email address. We reply in the language you write in. Office time zone: Taipei (GMT+8).'],
     ] as const;
 

@@ -246,7 +246,7 @@ describe('home editorial presentation opt-in', () => {
       }),
     );
     expect(html).toContain('href="#faq"');
-    expect(html).toContain('aria-label="向下滾動"');
+    expect(html).toContain('aria-label="向下捲動"');
   });
 });
 
@@ -414,7 +414,7 @@ describe('editorial heading unit grouping', () => {
     const koHeading = headingEntries(koEditorial, 'h2', 'split-title')[0];
 
     expect(jaHeading.text).toBe('曾雋崴弁護士 — 日本語で相談できる台湾法務パートナー');
-    expect(zhHeading.text).toBe('曾雋崴律師，在地與跨境客戶的台灣法律夥伴');
+    expect(zhHeading.text).toBe('曾雋崴律師：服務在地與跨境客戶的台灣律師');
     expect(jaDefaultHeading.text).toBe(jaHeading.text);
     expect(headingHasNowrapUnit(jaHeading.inner, '相談')).toBe(true);
     expect(headingHasNowrapUnit(zhHeading.inner, '韓國')).toBe(false);

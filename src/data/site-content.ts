@@ -1022,7 +1022,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         { label: '律師介紹', href: '/zh-hant/lawyers' },
         { label: '收費標準', href: '/zh-hant/pricing' },
         { label: '昊鼎專欄', href: '/zh-hant/columns' },
-        { label: '媒體中心', href: '/zh-hant/videos' },
+        { label: '影音', href: '/zh-hant/videos' },
         { label: '交通位置', href: '/zh-hant/contact#offices' }
       ],
       servicesMenu: {
@@ -1035,26 +1035,26 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           { label: '稅務諮詢', href: '/zh-hant/services#investment' },
           { label: '不動產/工程', href: '/zh-hant/services#real-estate' },
           { label: '金融/保險', href: '/zh-hant/services#finance' },
-          { label: '勞資/刑民/家事', href: '/zh-hant/services#labor' }
+          { label: '勞資／民事／刑事／家事', href: '/zh-hant/services#labor' }
         ],
         featured: [
           {
-            title: '投資與訴訟全流程協助',
-            description: '協助韓國、日本企業來台投資，並為相關訴訟提供全流程支援。',
+            title: '投資與訴訟協助',
+            description: '協助韓國、日本企業來台投資，並處理相關訴訟。',
             href: '/zh-hant/services'
           },
           {
             title: '跨境法律溝通',
-            description: '以韓語、日語、英語及中文提供清楚的法律說明。',
+            description: '以韓文、日文、英文及中文提供清楚的法律說明。',
             href: '/zh-hant/about'
           }
         ],
         topics: ['在台投資', '公司設立', '簽證申請', '智慧財產權']
       },
       insightsMenu: {
-        label: '洞見',
+        label: '法律資訊',
         categories: [
-          { label: '部落格', href: '/zh-hant/columns' },
+          { label: '專欄', href: '/zh-hant/columns' },
           { label: 'YouTube 頻道', href: '/zh-hant/videos' },
           { label: 'FAQ', href: '/zh-hant/faq' },
           { label: '服務領域', href: '/zh-hant/services' },
@@ -1063,12 +1063,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         featured: [
           {
             title: 'WEI Lawyer YouTube 頻道',
-            description: '以影片方式整理台灣法律要點。',
+            description: '以影片解說台灣法律重點。',
             href: '/zh-hant/videos'
           },
           {
             title: 'Naver 部落格',
-            description: '在部落格查看相關文章。',
+            description: '在部落格閱讀相關文章。',
             href: '/zh-hant/columns'
           }
         ],
@@ -1087,7 +1087,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           viewAllLabel: '查看全部',
         },
         videos: {
-          description: '可在 YouTube 與部落格查看台灣法律資訊。',
+          description: '在 YouTube 與部落格分享台灣法律資訊。',
           viewAllLabel: '查看全部',
         },
         about: {
@@ -1099,22 +1099,22 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     hero: {
       label: 'TAIWAN LEGAL',
       title: '台灣法律，清楚說明。',
-      subtitle: '具備韓國、日本跨境實務經驗的專業團隊，協助處理台灣法律議題。',
+      subtitle: '以韓、日跨境實務經驗，協助處理台灣法律問題。',
       typingPhrases: [
-        '台灣投資與公司設立起點',
-        '台灣訴訟與實務經驗',
-        '台灣、韓國跨境法律的可靠夥伴',
-        '韓國企業在台拓展夥伴'
+        '在台投資與公司設立',
+        '台灣訴訟實務',
+        '台韓跨境法律事務',
+        '協助韓國企業在台發展'
       ],
       searchPlaceholder: '我們可以如何協助您？',
       searchButton: '搜尋',
       keywordsLabel: '推薦關鍵字',
-      keywords: ['在台投資', '公司設立', '簽證申請', '商標/專利', '不動產訴訟', '金融/保險', '勞資爭議', '刑民家事'],
-      quickLinksLabel: '推薦分類',
+      keywords: ['在台投資', '公司設立', '簽證申請', '商標/專利', '不動產訴訟', '金融/保險', '勞資爭議', '民事、刑事、家事'],
+      quickLinksLabel: '快速連結',
       quickLinks: [
         { label: '服務領域', href: '/zh-hant/services' },
         { label: '律師', href: '/zh-hant/lawyers' },
-        { label: '洞見', href: '/zh-hant/columns' },
+        { label: '專欄', href: '/zh-hant/columns' },
         { label: '影音', href: '/zh-hant/videos' },
         { label: 'FAQ', href: '/zh-hant/faq' }
       ],
@@ -1148,8 +1148,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           image: '/images/feature-3.svg'
         },
         {
-          title: '勞資/刑民/家事',
-          summary: '勞資與刑民家事案件。',
+          title: '勞資／民事／刑事／家事',
+          summary: '勞資、民事、刑事與家事案件。',
           meta: 'Guide',
           href: '/zh-hant/services#labor',
           image: '/images/feature-2.svg'
@@ -1162,48 +1162,48 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '健身房受傷求償',
-          amount: '一審157萬 TWD',
-          summary: '一審判賠157萬 TWD，其後於二審和解結案。',
+          amount: '一審新台幣157萬元',
+          summary: '一審判賠新台幣157萬元，二審和解結案。',
           image: '/images/feature-1.svg',
           tag: '民事',
           href: '/zh-hant/columns'
         },
         {
           title: '醫療糾紛求償',
-          amount: '300萬 TWD',
-          summary: '醫療糾紛被害家屬獲大學醫院賠償300萬 TWD。',
+          amount: '新台幣300萬元',
+          summary: '醫療糾紛被害人家屬獲大學附設醫院賠償新台幣300萬元。',
           image: '/images/feature-2.svg',
           tag: '醫療',
           href: '/zh-hant/columns'
         },
         {
           title: '負油價期貨爭議',
-          amount: '數百萬 TWD',
-          summary: '2020年負油價期貨事件中，多名投資人取得數百萬 TWD補償。',
+          amount: '新台幣數百萬元',
+          summary: '2020年負油價期貨事件中，多名投資人獲得新台幣數百萬元補償。',
           image: '/images/feature-3.svg',
           tag: '金融',
           href: '/zh-hant/columns'
         },
         {
           title: '交通事故求償',
-          amount: '290萬 TWD',
-          summary: '交通事故被害人取得290萬 TWD損害賠償。',
+          amount: '新台幣290萬元',
+          summary: '交通事故被害人獲賠新台幣290萬元。',
           image: '/images/feature-2.svg',
           tag: '交通',
           href: '/zh-hant/columns'
         },
         {
           title: '夫妻剩餘財產分配',
-          amount: '600萬 TWD',
-          summary: '日本籍配偶自前配偶取得600萬 TWD夫妻剩餘財產分配。',
+          amount: '新台幣600萬元',
+          summary: '日本籍配偶向前配偶請求夫妻剩餘財產分配，獲得新台幣600萬元。',
           image: '/images/feature-1.svg',
           tag: '家事',
           href: '/zh-hant/columns'
         },
         {
-          title: '對第三人慰撫金請求',
-          amount: '30萬 TWD',
-          summary: '日本籍配偶向第三人取得30萬 TWD慰撫金。',
+          title: '向第三人請求慰撫金',
+          amount: '新台幣30萬元',
+          summary: '日本籍配偶向第三人請求慰撫金，獲賠新台幣30萬元。',
           image: '/images/feature-3.svg',
           tag: '家事',
           href: '/zh-hant/columns'
@@ -1212,7 +1212,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     stats: {
       label: 'ABOUT',
-      title: '從官方資料看跨境服務基礎',
+      title: '事務所基本資料一覽',
       description:
         '事務所提供中文／韓文／日文／英文4種語言的台灣法律諮詢。並依官方律師簡介整理：4個台灣辦公據點、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
       highlightWords: [
@@ -1227,7 +1227,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       ],
       items: [
         { target: 4, label: '台灣辦公據點' },
-        { target: 4, label: '業務溝通語言' },
+        { target: 4, label: '諮詢語言' },
         { target: 7, label: '主要執業領域' },
         { target: 2, label: '最高級別語言資格' }
       ]
@@ -1238,21 +1238,21 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '在台投資與公司設立指南',
-          summary: '提供公司設立、簽證申請、商標/專利與稅務諮詢等協助。',
+          summary: '協助公司設立、簽證申請、商標/專利及稅務諮詢。',
           date: '常設',
           tag: '指南',
           href: '/zh-hant/services#investment'
         },
         {
           title: '不動產/工程/金融爭議處理',
-          summary: '不動產、工程與金融保險相關訴訟與爭議應對。',
+          summary: '處理不動產、工程及金融保險相關訴訟與爭議。',
           date: '常設',
           tag: '指南',
           href: '/zh-hant/services#real-estate'
         },
         {
-          title: '智慧財產與勞資、刑民家事',
-          summary: '涵蓋專利、商標、著作權與勞資、刑民家事案件。',
+          title: '智慧財產與勞資、民事、刑事、家事',
+          summary: '涵蓋專利、商標、著作權，以及勞資、民事、刑事與家事案件。',
           date: '常設',
           tag: '指南',
           href: '/zh-hant/services#ip'
@@ -1261,14 +1261,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     firmUpdates: {
       label: 'UPDATES',
-      title: '事務所更新',
+      title: '事務所動態',
       tabs: [
         {
           id: 'news',
           label: '事務所消息',
           items: [
             {
-              title: '在台投資諮詢指南說明',
+              title: '在台投資諮詢指南',
               meta: '說明',
               tag: '公告',
               href: '/zh-hant/services#investment'
@@ -1315,12 +1315,12 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     featured: {
       label: 'FEATURED',
-      title: '核心服務範圍',
+      title: '核心服務',
       items: [
         {
           title: '在台投資與公司設立',
           summary:
-            '提供公司設立、簽證申請、商標/專利申請、法律風險評估與稅務諮詢等協助。',
+            '協助公司設立、簽證申請、商標/專利申請、法律風險評估及稅務諮詢。',
           meta: '服務',
           tag: '投資/顧問',
           href: '/zh-hant/services#investment',
@@ -1335,8 +1335,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           image: '/images/feature-2.svg'
         },
         {
-          title: '智慧財產與勞資、刑民家事',
-          summary: '涵蓋專利、商標、著作權與勞資、刑民家事案件。',
+          title: '智慧財產與勞資、民事、刑事、家事',
+          summary: '涵蓋專利、商標、著作權，以及勞資、民事、刑事與家事案件。',
           meta: '訴訟',
           tag: '專業領域',
           href: '/zh-hant/services#ip',
@@ -1347,18 +1347,18 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     services: {
       label: 'SERVICES',
       title: '主要服務',
-      description: '涵蓋在台投資、訴訟與法律顧問全流程。',
+      description: '服務範圍涵蓋在台投資、訴訟與法律顧問。',
       items: [
         {
-          title: '投資·公司設立',
-          description: '從公司型態選擇（子公司、分公司、有限公司）到投審會審查、資本匯入、銀行開戶、營業場所確認，全程協助外國投資人（包含韓國企業）在台落地。涵蓋化妝品產品登錄與PIF建立、保存，物流業運輸執照等特殊行業許可，以及解散清算程序。',
+          title: '投資與公司設立',
+          description: '從公司型態選擇（子公司、分公司、有限公司）、經濟部投資審議司審查、資本匯入、銀行開戶到營業場所確認，協助外國投資人（含韓國企業）在台設立營運據點。另處理化粧品產品登錄與PIF建立、保存，物流業運輸執照等特殊行業許可，以及解散清算程序。',
           href: '/zh-hant/services#investment',
           details: [
             '公司型態比較：子公司、分公司、有限公司',
-            '投審會核准程序代辦',
-            '資本額匯入、籌備帳戶與正式帳戶轉換',
-            '營業場所土地使用分區預先確認',
-            '特殊行業許可：化妝品（PIF）、物流（運輸執照）等',
+            '經濟部投資審議司核准程序代辦',
+            '資本額匯入、籌備處帳戶轉為正式帳戶',
+            '營業場所土地使用分區事先確認',
+            '特殊行業許可：化粧品（PIF）、物流（運輸執照）等',
             '解散清算程序與合法資本回收',
           ],
           relatedColumns: [
@@ -1367,38 +1367,38 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             { title: '進階篇 1：簽證與居留', slug: 'taiwan-company-establishment-advanced-1' },
             { title: '進階篇 2：資本與帳戶', slug: 'taiwan-company-establishment-advanced-2' },
             { title: '進階篇 3：營業場所', slug: 'taiwan-company-setup-pitch-location' },
-            { title: '化妝品市場進入指南', slug: 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide' },
+            { title: '化粧品市場進入指南', slug: 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide' },
             { title: '物流業經營方式', slug: 'taiwan-logistics-business-setup' },
             { title: '資本額回收方法', slug: 'withdraw-capital-taiwan-company' },
           ]
         },
         {
-          title: '民事訴訟·損害賠償',
-          description: '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以事務所諮詢語言（中文、韓文、日文、英文）全程支援外國當事人之台灣訴訟程序。',
+          title: '民事訴訟與損害賠償',
+          description: '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，一審獲判新台幣157萬元賠償。外國當事人在台灣的訴訟程序，可全程以中文、韓文、日文或英文溝通。',
           href: '/zh-hant/services#civil',
           details: [
             '人身傷害與財產損害賠償訴訟',
-            '契約違約與商務糾紛應對',
+            '契約違約與商業糾紛處理',
             '消費者保護與企業訴訟',
             '交通事故過失比例分析與求償',
-            '外國當事人訴訟支援（事務所諮詢語言：中文、韓文、日文、英文）',
+            '外國當事人訴訟協助（可使用中文、韓文、日文、英文）',
           ],
           relatedColumns: [
             { title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
-            { title: '台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償', slug: 'taiwan-traffic-accident-procedure' },
+            { title: '台灣交通事故因應 Q&A：現場處置、過失、和解與損害賠償', slug: 'taiwan-traffic-accident-procedure' },
             { title: '台灣超車事故的責任如何判斷？', slug: 'taiwan-overtaking-accident-liability' },
           ]
         },
         {
-          title: '家事訴訟',
-          description: '處理離婚、財產分配、親權、繼承等家事案件。因應跨國婚姻增加，協助協議離婚程序、法院調解與裁判離婚，外籍配偶戶籍登記問題，以及法定繼承順位與剩餘財產分配請求。',
+          title: '家事事件',
+          description: '處理離婚、財產分配、親權、繼承等家事案件。因應跨國婚姻增加，協助辦理協議離婚、法院調解與裁判離婚，並處理外籍配偶戶籍登記、法定繼承順位及剩餘財產差額分配請求等問題。',
           href: '/zh-hant/services#family',
           details: [
-            '協議離婚：二位證人及戶政登記',
+            '協議離婚：兩位證人與戶政登記',
             '調解離婚與裁判離婚程序代理',
-            '親權（監護權）與探視權',
-            '台灣繼承法：配偶與子女應繼分計算',
-            '剩餘財產分配請求權（婚姻存續期間差異）',
+            '親權（監護權）與會面交往',
+            '民法繼承編：配偶與子女應繼分計算',
+            '剩餘財產差額分配請求權（婚後財產差額）',
           ],
           relatedColumns: [
             { title: '台灣離婚程序 Q&A：調解、訴訟、財產分配與子女', slug: 'taiwan-divorce-lawsuit-qna' },
@@ -1406,14 +1406,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           ]
         },
         {
-          title: '勞動法·僱傭爭議',
-          description: '處理台灣法下的解僱、資遣費與勞動契約爭議。依個案區分契約終止的法定依據、預告、資遣費與期限，並按新舊制年資計算，檢視勞工終止契約的法定事由、最低服務年限約定的法定基礎與合理性，以及費用返還和終止責任歸屬。',
+          title: '勞動與僱傭爭議',
+          description: '處理解僱、資遣費與勞動契約爭議。依個案釐清終止契約的法定依據、預告、資遣費與期限，並按新舊制年資分別計算。另檢視勞工終止契約的法定事由、最低服務年限約定的法定基礎與合理性，以及費用返還與終止責任歸屬。',
           href: '/zh-hant/services#labor',
           details: [
             '依新舊制年資分段計算資遣費並檢視法定上限',
-            '勞工依第14條終止契約：法定事由、期間限制與資遣費',
-            '最低服務年限約定：擇一法定基礎、合理範圍、費用返還及責任歸屬審查',
-            '在台外國企業（含韓國企業）僱用相關勞動法諮詢',
+            '勞工依勞基法第14條終止契約：法定事由、期間限制與資遣費',
+            '最低服務年限約定：法定基礎（二擇一）、合理範圍、費用返還及責任歸屬',
+            '在台外國企業（含韓國企業）僱用勞工之勞動法諮詢',
           ],
           relatedColumns: [
             { title: '台灣資遣費制度比較', slug: 'taiwan-labor-severance-law' },
@@ -1423,22 +1423,22 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '刑事訴訟',
-          description: '台灣刑事程序中偵查應對、被告與被害人代理、律師接見。提供法規違反刑事風險預檢（非法提取資本最高5年有期徒刑、無照營業等）與防禦策略。',
+          description: '協助台灣刑事程序中的偵查應對、被告與被害人代理及律師接見；並事先評估違反法規的刑事風險（如違法抽回資本最重可處5年有期徒刑、無照營業等），擬定防禦策略。',
           href: '/zh-hant/services#criminal',
           details: [
             '偵查階段律師接見與諮詢',
             '被害人代理與告訴程序',
-            '法規違反刑事風險預檢',
-            '外籍被告與被害人諮詢對應（事務所諮詢語言：中文、韓文、日文、英文）',
+            '違反法規之刑事風險評估',
+            '外籍被告與被害人諮詢（可使用中文、韓文、日文、英文）',
           ]
         },
         {
-          title: '智慧財產·金融爭議',
-          description: '商標、專利、著作權等智慧財產保護，以及金融投資相關爭議處理。協助確認台灣商標先申請狀態、品牌保護策略、金融商品與投資契約爭議之分析與訴訟。',
+          title: '智慧財產與金融爭議',
+          description: '處理商標、專利、著作權等智慧財產保護，以及金融投資相關爭議。協助查詢台灣商標申請情形、規劃品牌保護策略，並分析金融商品與投資契約爭議，代理相關訴訟。',
           href: '/zh-hant/services#ip',
           details: [
-            '台灣商標先申請確認與註冊代辦',
-            '專利與著作權侵權爭議應對',
+            '台灣商標檢索與註冊代辦',
+            '專利與著作權侵權爭議處理',
             '金融商品與投資契約爭議訴訟',
             '品牌與設計保護策略諮詢',
           ]
@@ -1447,15 +1447,15 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: '曾雋崴律師，台灣在地與跨境法律的實務夥伴',
-      summary: '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。',
+      title: '曾雋崴律師：服務在地與跨境客戶的台灣律師',
+      summary: '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續在 WEI Lawyer 發布法律資訊。',
       ctaLabel: '查看律師簡介'
     },
     homeResults: {
       label: '案例解析',
-      title: '韓國留學生健身房受傷案\n一審判賠157萬TWD，二審和解',
-      description: '韓國大學生在台灣健身房接受教練指導運動時受傷，因而提起損害賠償請求。一審判決賠償157萬TWD，其後於二審由雙方和解結案。',
-      summary: '案件結果會因具體事實與證據而異；本案例僅說明一件過往案件的處理經過。',
+      title: '韓國留學生健身房受傷案\n一審判賠新台幣157萬元，二審和解',
+      description: '韓國大學生在台灣健身房接受教練指導運動時受傷，提起損害賠償訴訟。一審判決賠償新台幣157萬元，其後雙方於二審和解。',
+      summary: '個案結果因具體事實與證據而異；本案例僅說明過往個案的處理經過。',
       ctaLabel: '查看訴訟案例'
     },
     updates: {
@@ -1467,7 +1467,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           label: '學歷',
           items: [
             {
-              title: '國立台灣大學財務金融研究所 碩士',
+              title: '國立臺灣大學財務金融研究所碩士',
               meta: '碩士',
               tag: '學歷',
               href: '/zh-hant/about'
@@ -1533,13 +1533,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
               href: '/zh-hant/services#finance'
             },
             {
-              title: '不動產訴訟(買賣、租賃、都更、工程)',
+              title: '不動產訴訟（買賣、租賃、都更、工程）',
               meta: '不動產',
               tag: '執業',
               href: '/zh-hant/services#real-estate'
             },
             {
-              title: '智慧財產權訴訟(專利、商標、著作權)',
+              title: '智慧財產權訴訟（專利、商標、著作權）',
               meta: '智財',
               tag: '執業',
               href: '/zh-hant/services#ip'
@@ -1560,7 +1560,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       description: '整理投資與訴訟流程的實務重點。',
       items: [
         {
-          title: '在台投資與公司設立清單',
+          title: '在台投資與公司設立檢核表',
           summary: '公司設立前的準備事項與流程重點。',
           tag: '指南',
           href: '/zh-hant/services#investment'
@@ -1581,16 +1581,16 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     newsletters: {
       label: 'NEWSLETTER',
-      title: '法律簡報',
+      title: '法律快訊',
       items: [
         {
-          title: '投資法規簡報（準備中）',
+          title: '投資法規快訊（準備中）',
           summary: '整理投資相關重點與注意事項。',
           date: '準備中',
           href: '/zh-hant/columns'
         },
         {
-          title: '不動產/工程簡報（準備中）',
+          title: '不動產/工程快訊（準備中）',
           summary: '整理不動產爭議的實務重點。',
           date: '準備中',
           href: '/zh-hant/columns'
@@ -1600,7 +1600,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     videos: {
       label: 'CHANNELS',
       title: '曾雋崴律師公開頻道',
-      description: '集中整理曾雋崴律師的 YouTube、部落格、個人網站與官方簡介。',
+      description: '彙整曾雋崴律師的 YouTube、部落格、個人網站與官方簡介。',
       featured: {
         title: 'WEI Lawyer YouTube 頻道',
         duration: 'YouTube',
@@ -1648,7 +1648,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     warning: {
       label: 'NOTICE',
       title: '防詐與冒名提醒',
-      message: '若遇到疑似冒名或釣魚訊息，請勿開啟連結或檔案，並透過官方管道確認。',
+      message: '如收到疑似冒名或釣魚訊息，請勿點選連結或開啟附件，並透過本所官方管道查證。',
       cta: { label: '查看聯絡方式', href: '/zh-hant/contact' }
     },
     quickContact: {
@@ -1662,7 +1662,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     contact: {
       label: 'CONTACT',
       title: '聯絡與諮詢',
-      description: '依照詢問類型提供聯絡方式。',
+      description: '請依詢問類型與我們聯繫。',
       inquiriesLabel: '詢問類型',
       inquiries: [
         {
@@ -1673,14 +1673,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '媒體詢問',
           details: [
             'Email: wei@hoveringlaw.com.tw',
-            '來信標題請註明 [媒體詢問]'
+            '來信主旨請註明「媒體詢問」'
           ]
         },
         {
           title: '招募詢問',
           details: [
             'Email: wei@hoveringlaw.com.tw',
-            '來信標題請註明 [招募詢問]'
+            '來信主旨請註明「招募詢問」'
           ]
         },
         {
@@ -1724,8 +1724,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       cta: { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] }
     },
     homeContactCta: {
-      title: '台灣法律議題，立即諮詢。',
-      description: '依案件類型安排投資、訴訟與公司設立諮詢流程。'
+      title: '台灣法律問題，歡迎來信諮詢。',
+      description: '依案件類型安排投資、訴訟及公司設立諮詢。'
     },
     footer: {
       note: '承辦台灣各地的法律顧問與爭議案件，並具備韓國、日本跨境案件的實務經驗。',
@@ -1742,15 +1742,15 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '主要服務',
           links: [
             { label: '台灣投資與公司設立', href: '/zh-hant/services#investment' },
-            { label: '勞動法·僱傭爭議', href: '/zh-hant/services#labor' },
+            { label: '勞動與僱傭爭議', href: '/zh-hant/services#labor' },
             { label: '商標與智慧財產', href: '/zh-hant/services#ip' }
           ]
         },
         {
-          title: '資料',
+          title: '法律資訊',
           links: [
             { label: '法律專欄', href: '/zh-hant/columns' },
-            { label: '影音內容', href: '/zh-hant/videos' },
+            { label: '影音', href: '/zh-hant/videos' },
             { label: '常見問題', href: '/zh-hant/faq' }
           ]
         },
@@ -1759,7 +1759,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           links: [
             { label: '台灣律師', href: '/zh-hant/taiwan-lawyer' },
             { label: '台灣公司設立', href: '/zh-hant/taiwan-company-setup-lawyer' },
-            { label: '台灣半導體材料與設備供應商法務', href: '/zh-hant/taiwan-semiconductor-supplier-legal' },
+            { label: '海外半導體材料與設備供應商在台法務', href: '/zh-hant/taiwan-semiconductor-supplier-legal' },
             { label: '半導體企業實務指南', href: '/zh-hant/semiconductor' },
             { label: '台灣訴訟', href: '/zh-hant/taiwan-litigation-lawyer' },
             { label: '台灣公司設立完整指南', href: '/zh-hant/guides/taiwan-company-setup' },
@@ -1774,7 +1774,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       placeholder: '我們可以如何協助您？',
       tabs: [
         { id: 'services', label: '服務' },
-        { id: 'insights', label: '洞見' },
+        { id: 'insights', label: '專欄' },
         { id: 'videos', label: '影音' },
         { id: 'faq', label: 'FAQ' }
       ],

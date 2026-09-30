@@ -19,7 +19,7 @@ describe('P2-1 EN columns listing description', () => {
       '호정칼럼 전체 글을 카테고리별로 확인할 수 있습니다.',
     );
     expect(pageCopy['zh-hant'].insights.description).toBe(
-      '依分類整理昊鼎專欄文章，快速查看重點主題。',
+      '依主題分類整理昊鼎專欄文章。',
     );
     expect(pageCopy.ja.insights.description).toBe(
       '台湾進出を検討する日系企業や在台日本人向けに、会社設立、訴訟、労務、家事事件など台湾法務に関する実務コラムをカテゴリ別にまとめてご覧いただけます。',

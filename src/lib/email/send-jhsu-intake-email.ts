@@ -87,12 +87,12 @@ export function buildJhsuIntakeEmail(payload: JhsuIntakePayload, intakeId: strin
     ${row('諮詢身分', payload.role)}
     ${row('目前階段', payload.stage)}
     ${row('公司規模', payload.orgSize)}
-    ${row('對方當事人（利益衝突確認用）', payload.counterparty)}
+    ${row('對方當事人（確認有無利益衝突）', payload.counterparty)}
     ${row('方便聯絡時段', payload.preferredTime)}
     ${row('簡述情況', payload.message)}
     ${row('來源頁面', payload.pageUrl)}
   </table>
-  <p style="margin:14px 0 0;color:#5b6472;font-size:12px;">本信由網站表單自動寄出，同時寄給徐嘉駿律師與曾雋崴律師。受任前請先進行利益衝突確認。回覆時請直接聯絡當事人，勿回覆本信。</p>
+  <p style="margin:14px 0 0;color:#5b6472;font-size:12px;">本信由網站表單自動寄出，同時寄給徐嘉駿律師與曾雋崴律師。受任前請先確認有無利益衝突。回覆時請直接聯絡當事人，勿回覆本信。</p>
 </div>`;
   const text = [
     `徐嘉駿律師網站（son-7.com）諮詢表單 ${intakeId} ${submittedAt}`,

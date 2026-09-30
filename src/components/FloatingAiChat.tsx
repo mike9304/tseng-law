@@ -302,7 +302,7 @@ function freshnessLabel(freshness: FloatingChatReference['freshness'], locale: L
   }
   if (locale === 'zh-hant') {
     if (freshness === 'fresh') return '最新';
-    if (freshness === 'review_needed') return '需重新檢閱';
+    if (freshness === 'review_needed') return '需重新審閱';
     return '待確認';
   }
   if (freshness === 'fresh') return 'Fresh';
@@ -391,35 +391,35 @@ const COPY: Record<
     title: 'AI 諮詢',
     subtitle: '昊鼎國際法律事務所',
     greeting:
-      '您好，我是昊鼎國際法律事務所的 AI 諮詢助理。請問需要什麼法律協助？無論是公司設立、車禍、勞動、離婚繼承、刑事等任何主題，都歡迎詢問。',
+      '您好，我是昊鼎國際法律事務所的 AI 諮詢助理。請問有什麼法律問題？公司設立、車禍、勞資、離婚、繼承、刑事等問題，都可以直接詢問。',
     placeholder: '請輸入您的問題...',
-    showForm: '正式預約諮詢',
-    formTitle: '諮詢預約',
+    showForm: '預約正式諮詢',
+    formTitle: '預約諮詢',
     nameLabel: '姓名',
     contactLabel: '回覆電子郵件',
-    summaryLabel: '案件摘要 (選填)',
-    consentLabel: '同意個資處理與律師檢閱',
+    summaryLabel: '案件摘要（選填）',
+    consentLabel: '同意個資處理及律師審閱',
     submit: '送出',
     submitting: '送出中...',
-    success: (id) => `預約已完成。律師檢閱後將盡快回覆。預約編號: ${id}`,
-    error: '發生暫時性錯誤，請直接寄信聯繫。',
+    success: (id) => `已收到您的諮詢預約申請。律師審閱後將盡快回覆。預約編號：${id}`,
+    error: '系統暫時發生錯誤，請直接寄信與我們聯繫。',
     closeLabel: '關閉',
     contactsTitle: '直接聯繫',
-    emailLabel: '律師電子郵件諮詢',
+    emailLabel: '電子郵件諮詢',
     officesLabel: '據點',
-    requireBoth: '請輸入姓名與聯絡方式',
+    requireBoth: '請輸入姓名與回覆電子郵件',
     typingHint: 'Enter 送出',
     sendLabel: '傳送訊息',
     feedbackHelpful: '有幫助',
     feedbackUnhelpful: '沒有幫助',
     feedbackPending: '傳送中...',
-    feedbackThanks: '感謝您的回饋，將協助我們持續改善。',
+    feedbackThanks: '感謝您的回饋，我們會持續改善。',
     feedbackError: '回饋送出失敗，請稍後再試。',
-    sourcesTitle: '參考文章',
-    sourceLastVerified: (date) => `最近更新: ${date}`,
+    sourcesTitle: '參考專欄',
+    sourceLastVerified: (date) => `最近更新：${date}`,
     sourceReadMore: '閱讀全文',
-    knowledgeTitle: '律師檢閱 Q&A',
-    knowledgeReviewed: (date) => `檢閱日: ${date}`,
+    knowledgeTitle: '律師審閱 Q&A',
+    knowledgeReviewed: (date) => `審閱日：${date}`,
     disclaimerBar: 'AI 回覆僅供參考，最終判斷應由台灣律師確認。',
     resetLabel: '回到選單',
     resetTitle: '清除目前對話並回到初始選單',
@@ -1256,7 +1256,7 @@ export default function FloatingAiChat({
                 {locale === 'ko'
                   ? '변호사가 직접 검토 후 회신드립니다'
                   : locale === 'zh-hant'
-                    ? '律師將親自檢閱後回覆'
+                    ? '律師將親自審閱後回覆'
                     : 'An attorney will personally review and respond'}
               </span>
             </div>

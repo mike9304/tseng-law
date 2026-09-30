@@ -132,13 +132,13 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '台灣律師 · 代表律師',
       title: '曾雋崴台灣律師簡介',
       description:
-        '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，涵蓋在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。事務所可提供韓文、中文、日文、英文諮詢。',
+        '台灣律師曾雋崴的學經歷、主要服務領域與代表案件，涵蓋在台公司設立、投資、訴訟、簽證及智慧財產等法律事務。事務所提供韓文、中文、日文、英文諮詢。',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '曾雋崴律師長期協助韓國、日本客戶處理在台投資、公司設立、訴訟、智慧財產、簽證與法律風險評估。',
-        '事務所可提供韓文、中文、日文、英文溝通，將諮詢、申請與爭議處理整合為同一策略流程。',
-        '曾代理韓國留學生健身房受傷損害賠償案件，取得 157 萬 TWD 一審判決，並持續透過 WEI Lawyer 與外部媒體說明台灣法律議題。',
+        '事務所可使用韓文、中文、日文、英文溝通，辦理諮詢、申請與爭議處理。',
+        '曾代理韓國留學生健身房受傷損害賠償案，一審獲判新台幣157萬元，並持續在 WEI Lawyer 與媒體說明台灣法律問題。',
       ],
       languages: ['韓文', '中文', '日文', '英文'],
       practiceAreas: ['台灣公司設立', '在台投資法律顧問', '民事訴訟與損害賠償', '商標與專利', '簽證與居留', '家事與勞動爭議'],
@@ -149,7 +149,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       ],
       experience: ['趨勢法律事務所', '昊鼎國際法律事務所', '法律扶助基金會台中分會扶助律師'],
       notableMatters: [
-        '代理韓國留學生健身房受傷案，獲判 157 萬 TWD 損害賠償',
+        '代理韓國留學生健身房受傷案，一審獲判新台幣157萬元損害賠償',
         '協助韓國企業處理台灣公司設立、投資、簽證與營運風險',
         '處理商標、專利、契約審閱及民事、家事、勞動爭議',
       ],
@@ -159,38 +159,38 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: '台灣公司設立服務', href: '/zh-hant/services/investment' },
         { label: '民事訴訟服務', href: '/zh-hant/services/civil' },
         { label: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', href: '/zh-hant/columns/taiwan-gym-injury-lawsuit' },
-        { label: '聯絡諮詢', href: getConsultationPublicMailto('zh-hant') },
+        { label: '電子郵件諮詢', href: getConsultationPublicMailto('zh-hant') },
       ],
       externalProfiles: [
         { label: '昊鼎官方律師頁面', href: 'https://www.hoveringlaw.com.tw/zh/wei.html' },
         { label: '個人網站簡介', href: 'https://www.wei-wei-lawyer.com/lawyertseng' },
-        { label: 'WEI Lawyer YouTube', href: 'https://www.youtube.com/@weilawyer' },
-        { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
+        { label: 'WEI Lawyer YouTube 頻道', href: 'https://www.youtube.com/@weilawyer' },
+        { label: 'Naver 部落格', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
       sameAs: commonSameAs,
       keywords: ['曾雋崴 律師', '曾雋崴台灣律師', '台灣律師', '韓文 台灣律師', '台灣公司設立 律師', '台灣訴訟 律師'],
       searchTerms: ['曾雋崴台灣律師', '曾雋崴 律師', '韓文 台灣律師', '台灣公司設立 律師 曾雋崴'],
       proofPoints: [
-        '曾雋崴律師可用韓文、中文、日文直接對接韓國客戶與台灣在地程序，事務所諮詢另可使用英文。',
+        '曾雋崴律師能以韓文、中文、日文直接與客戶溝通，並辦理台灣本地的法律程序；事務所另提供英文諮詢。',
         '處理台灣公司設立、投資、訴訟、簽證與智慧財產等跨境法律需求。',
-        '曾代理韓國留學生健身房受傷求償案件，取得 157 萬 TWD 一審判決。',
-        '昊鼎官方頁面、個人網站、YouTube 與 Naver Blog 都可交叉驗證律師資訊。',
+        '曾代理韓國留學生健身房受傷求償案，一審獲判新台幣157萬元。',
+        '律師資訊可於昊鼎官方頁面、個人網站、YouTube 及 Naver 部落格相互查證。',
       ],
       faq: [
         {
           question: '曾雋崴律師主要處理哪些案件？',
           answer:
-            '以台灣公司設立、投資法律顧問、民事訴訟與損害賠償、商標專利、簽證居留、家事與勞動爭議為核心。',
+            '主要處理台灣公司設立、投資法律顧問、民事訴訟與損害賠償、商標專利、簽證居留，以及家事與勞動爭議。',
         },
         {
-          question: '可以用韓文與曾雋崴律師諮詢嗎？',
+          question: '可以用韓文向曾雋崴律師諮詢嗎？',
           answer:
-            '可以。曾雋崴律師可用韓文、中文、日文協助整理事實、文件與程序安排；事務所另可提供英文諮詢，讓韓國客戶更容易理解台灣法律流程。',
+            '可以。曾雋崴律師能以韓文、中文、日文協助整理事實與文件、安排程序。事務所另提供英文諮詢。',
         },
         {
-          question: '如何開始與曾雋崴律師的諮詢？',
+          question: '如何向曾雋崴律師諮詢？',
           answer:
-            '可先透過聯絡頁面提供案件背景與文件，我們會依公司設立、投資、訴訟等不同需求安排初步檢視與後續流程。',
+            '請先依聯絡頁面的方式提供案件背景與相關文件，我們會依公司設立、投資、訴訟等不同需求，先做初步評估，再說明可能的後續做法。',
         },
       ],
     },

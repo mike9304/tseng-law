@@ -33,7 +33,7 @@ const expectedArchiveRecords = {
   'zh-hant': {
     title: expectedTitles['zh-hant'],
     summary:
-      '說明兩項擇一的法定基礎及另行的合理範圍審查，區分培訓費用與預付性給付的返還，並說明契約終止的可歸責性對第15條之1第4項培訓費用返還責任的影響。',
+      '說明兩項法定基礎（擇一），以及符合其中一項後仍須進行的合理範圍審查，區分培訓費用與預付性給付的返還，並說明契約終止的可歸責性對第15條之1第4項培訓費用返還責任的影響。',
     href: '/zh-hant/insights/taiwan-mandatory-employment-period',
     keywords: ['最低服務年限', '培訓費用', '預付性給付', '責任歸屬'],
   },
@@ -49,7 +49,7 @@ const expectedArchiveRecords = {
 const expectedServiceIntros = {
   ko: '대만의 퇴직금(資遣費) 제도는 한국과 적용 사유와 산정 방식이 다릅니다. 계약 종료의 법적 근거, 신제와 구제(舊制)가 적용되는 근속기간, 예고와 기간 제한을 구분해 검토해야 하며, 법무법인 호정은 한국 기업과 한국인 근로자 양측에 해고·퇴직금·근로계약 분쟁 자문을 제공합니다.',
   'zh-hant':
-    '台灣資遣費制度與韓國在適用事由及計算方式上不同，應依契約終止的法定依據、新舊制年資、預告與期間限制分別檢視。昊鼎協助韓國企業及韓籍勞工處理解僱、資遣費與勞動契約爭議。',
+    '台灣與韓國的資遣費制度，在適用事由及計算方式上不同，應依契約終止的法定依據、新舊制年資、預告與期間限制分別檢視。昊鼎協助韓國企業及韓籍勞工處理解僱、資遣費與勞動契約爭議。',
   en: 'Taiwan’s severance rules require separate review of the legal basis for ending the contract, service under the new and old systems, notice requirements, and statutory time limits. We advise employers and employees on dismissal, severance, and employment-contract disputes in Taiwan.',
 } as const;
 
@@ -60,7 +60,7 @@ const expectedSiteDetails = {
   ],
   'zh-hant': [
     '依新舊制年資分段計算資遣費並檢視法定上限',
-    '勞工依第14條終止契約：法定事由、期間限制與資遣費',
+    '勞工依勞基法第14條終止契約：法定事由、期間限制與資遣費',
   ],
   en: [
     'Severance calculations under Taiwan’s new and old systems',
@@ -77,7 +77,7 @@ const expectedSeveranceFaqRecords = {
   'zh-hant': {
     question: '在台灣終止勞動契約時，一定要給付資遣費嗎？',
     answer:
-      '不一定。雇主依《勞動基準法》第11條、第13條但書或第20條等規定終止契約，或勞工依第14條法定事由終止契約時，原則上應給付資遣費。依第12條懲戒解僱時原則上無須給付，通常的自願離職也不會當然產生資遣費。仍應就終止事由、預告、給付期限及新舊制年資分別確認。',
+      '不一定。雇主依《勞動基準法》第11條、第13條但書或第20條等規定終止契約，或勞工依第14條法定事由終止契約時，原則上應給付資遣費。依第12條懲戒解僱時原則上無須給付，一般自願離職也不會當然產生資遣費。仍應就終止事由、預告、給付期限及新舊制年資分別確認。',
   },
   en: {
     question: 'Is severance always required when an employment contract ends in Taiwan?',
@@ -215,7 +215,7 @@ describe('column 014 public reference synchronization', () => {
     expect(zh).toContain('兩款均應自知悉該情形之日起30日內行使');
     expect(zh).toContain('另得自知悉該結果之日起30日內行使');
     expect(zh).toMatch(/專業技術培訓[\s\S]*負擔費用[\s\S]*或[\s\S]*合理補償/);
-    expect(zh).toMatch(/合法原始格式[\s\S]*錄音並非在任何情況都合法/);
+    expect(zh).toMatch(/應以合法方式、可辨識日期與來源的原始形式保存[\s\S]*錄音並非在任何情況都合法/);
     expect(zh).toMatch(/滿3個月未滿1年者應於10日前[\s\S]*滿1年未滿3年者於20日前[\s\S]*滿3年以上者於30日前/);
 
     const en = labor?.keyPoints.en.join('\n') ?? '';

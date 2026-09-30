@@ -40,7 +40,7 @@ const quickMenus = {
     { label: '專欄', href: '/zh-hant/columns' },
     { label: '律師', href: '/zh-hant/lawyers' },
     { label: '常見問題', href: '/zh-hant/faq' },
-    { label: '影音/頻道', href: '/zh-hant/videos' },
+    { label: '影音', href: '/zh-hant/videos' },
     { label: '聯絡資訊', href: '/zh-hant/contact' },
   ],
   en: [

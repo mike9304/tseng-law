@@ -116,7 +116,7 @@ const attorneyFactLabels = {
   },
   'zh-hant': {
     heading: '曾雋崴律師 基本資料',
-    qualification: '資格與所屬',
+    qualification: '資格與現職',
     practice: '主要服務領域',
     languages: '諮詢語言',
   },

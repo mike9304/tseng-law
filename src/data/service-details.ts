@@ -14,7 +14,7 @@ export interface ServiceArea {
 export const serviceAreas: ServiceArea[] = [
   {
     slug: 'investment',
-    title: { ko: '투자·법인설립', 'zh-hant': '投資·公司設立', en: 'Investment & Company Setup' },
+    title: { ko: '투자·법인설립', 'zh-hant': '投資與公司設立', en: 'Investment & Company Setup' },
     subtitle: {
       ko: '한국 기업의 대만 진출을 위한 법인 설립 전 과정 지원',
       'zh-hant': '協助台灣本地企業與外國投資人辦理在台公司設立與投資程序',
@@ -22,7 +22,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     intro: {
       ko: '법무법인 호정은 한국 기업의 대만 시장 진출을 위해 법인 형태 선택부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보, 업종별 인허가까지 전 과정을 한국어로 밀착 지원합니다.',
-      'zh-hant': '昊鼎國際法律事務所協助台灣本地企業與外國投資人（包含韓國企業）選擇公司型態、投審會審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可。',
+      'zh-hant': '昊鼎國際法律事務所協助台灣本地企業與外國投資人（含韓國企業）選擇公司型態，並處理經濟部投資審議司審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可。',
       en: 'Hovering supports overseas companies and investors entering or operating in Taiwan, including entity structuring, investment approval, registration, capital remittance, banking, and permitted-business review. We also assist with the tax and accounting matters that arise from establishing and operating a Taiwan company, coordinating with external accountants where needed.'
     },
     keyPoints: {
@@ -38,13 +38,13 @@ export const serviceAreas: ServiceArea[] = [
       ],
       'zh-hant': [
         '公司型態分為子公司（股份/有限公司）、分公司及聯絡處，在稅負與政府採購參與資格等方面有所差異。',
-        '設立流程約10個步驟、耗時約3個月，包含公司名稱預查、委託書公證、投審會申請、銀行開戶、資本匯入、公司登記及稅籍登記等。',
-        '單一股東取得工作許可之最低資本額為50萬TWD，維持工作許可須年營收達300萬TWD以上。',
-        '資本匯入的手續依資金來源地與往來銀行而異，應在匯款前個別確認。若由韓國銀行匯出，公開說明記載本人臨櫃與海外直接投資申報，此為韓國相關例外而非所有外國投資人的共通規則。',
-        '營業場所須透過台北市「營業場所預查系統」確認業種適合性。',
-        '除免辦理工廠登記之製造場所生產之固態手工香皂外，法定範圍內之化粧品製造或輸入業者應就適用產品另行完成產品登錄，並建立、更新產品資訊檔案（PIF），存放於標示地址以供查核；PIF本身無須向主管機關登錄。廣告違規最高罰500萬TWD。',
-        '物流業執照門檻包含資本額2,500萬TWD及20輛新車等要件。',
-        '停止營運時須經解散清算程序，違法抽逃資金最高處5年有期徒刑。',
+        '設立流程約10個步驟、耗時約3個月，包含公司名稱預查、委託書公證、經濟部投資審議司申請、銀行開戶、資本匯入、公司登記及稅籍登記等。',
+        '單一股東取得工作許可的最低資本額為新台幣50萬元；維持工作許可，年營收須達新台幣300萬元以上。',
+        '資本匯入的手續依資金來源地與往來銀行而異，應於匯款前個別確認。若由韓國銀行匯出，依公開資料須由本人臨櫃辦理並申報海外直接投資；此為韓國方面的規定，並非所有外國投資人共通的規則。',
+        '營業場所須先透過台北市「營業場所預查系統」，確認擬經營的業別是否符合規定。',
+        '除免辦理工廠登記之製造場所生產之固態手工香皂外，法定範圍內之化粧品製造或輸入業者應就適用產品另行完成產品登錄，並建立、更新產品資訊檔案（PIF），存放於標示地址以供查核；PIF本身無須向主管機關登錄。違規廣告最高可處新台幣500萬元罰鍰。',
+        '物流業執照門檻包括資本額新台幣2,500萬元及20輛新車等要件。',
+        '停止營運時須經解散清算程序；違法抽回資本，最重可處5年有期徒刑。',
       ],
       en: [
         'Entity choice among a Taiwan subsidiary, a branch of the overseas parent, or a representative office affects legal personality and responsibility.',
@@ -68,7 +68,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: 'civil',
-    title: { ko: '민사소송·손해배상', 'zh-hant': '民事訴訟·損害賠償', en: 'Civil Litigation & Damages' },
+    title: { ko: '민사소송·손해배상', 'zh-hant': '民事訴訟與損害賠償', en: 'Civil Litigation & Damages' },
     subtitle: {
       ko: '계약 분쟁, 손해배상, 교통사고 등 민사 사건 전반 대응',
       'zh-hant': '契約糾紛、人身傷害、交通事故等民事案件',
@@ -76,7 +76,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     intro: {
       ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
-      'zh-hant': '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以事務所諮詢語言（中文、韓文、日文、英文）支援外國當事人在台灣的訴訟程序。',
+      'zh-hant': '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以中文、韓文、日文或英文與外國當事人溝通，協助其進行在台訴訟。',
       en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a gym injury claim, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.'
     },
     keyPoints: {
@@ -89,12 +89,12 @@ export const serviceAreas: ServiceArea[] = [
         '대만 타이중지방법원 109年度消字第7號 판결은 트레이너의 지도로 데드리프트를 하던 한국인 유학생이 다친 사건에서 1심이 TWD 1,579,589의 배상을 명한 사례이고 공식 판결문에는 曾雋崴 변호사가 원고 소송대리인으로 기재되어 있으며, 이후 항소심에서 당사자들이 화해했다는 내용은 언론 보도에 따른 것입니다.',
       ],
       'zh-hant': [
-        '可能主張的損害項目包括醫療費用、必要的看護或照護費用、必要交通費用、復原期間有證明的收入損失、持續性障礙及相關證據成立時的勞動能力減損，以及依個案情形酌定的非財產上損害；消費者保護法第51條的懲罰性賠償，則須以該法及法定要件適用為前提，並由法院依個案判斷，故意為損害額五倍以下、重大過失為三倍以下、過失為一倍以下。',
-        'CCTV、病歷、收據、通訊紀錄、證人陳述及訓練紀錄宜以可確認原始來源與時間的形式保存；正式書面保全請求或律師函只能記錄請求內容與時間，不能強制對方保存、阻止刪除或當然產生不利推定，如事實可能涉及犯罪，及時報案可由偵查機關判斷是否具備合法調取或保全影像的依據，但不能斷定警方一定會取得CCTV。',
+        '可能主張的損害項目包括醫療費用、必要的看護或照護費用、必要交通費用、復原期間有證明的收入損失、有持續性障礙並經相關證據證明的勞動能力減損，以及依個案情形酌定的非財產上損害；消費者保護法第51條的懲罰性賠償，須以適用該法並符合法定要件為前提，並由法院依個案判斷，故意為損害額五倍以下、重大過失為三倍以下、過失為一倍以下。',
+        '監視器畫面、病歷、收據、通訊紀錄、證人陳述及訓練紀錄宜以可確認原始來源與時間的形式保存；正式書面保全請求或律師函只能記錄請求內容與時間，不能強制對方保存、阻止刪除或當然產生不利推定，如事實可能涉及犯罪，可及時報案。是否具備合法調取或保全影像的依據，由偵查機關判斷；但不能斷定警方一定會取得監視器畫面。',
         '消費者保護法第7條要求提供服務的企業經營者確保其服務符合當時科技或專業水準可合理期待的安全性，但健身房發生受傷事故不當然成立責任，仍須綜合判斷安全義務、違反情形、因果關係、損害、抗辯與證據，初步研判或過失鑑定意見也不會自動決定最終責任。',
-        '依刑法第287條，第284條過失傷害罪屬告訴乃論，刑事訴訟法第237條原則上要求告訴權人自知悉犯人時起六個月內提出告訴；依民法第197條，侵權行為損害賠償請求權原則上自知有損害及賠償義務人時起二年、最長自侵權行為時起十年不行使而消滅，其他請求權基礎與期間規則須依個案確認，而刑事附帶民事訴訟也僅能在與刑事案件的關聯性等法定要件及程序階段均符合時利用，費用效果亦應個別確認。',
+        '依刑法第287條，第284條過失傷害罪屬告訴乃論，刑事訴訟法第237條原則上要求告訴權人自知悉犯人時起六個月內提出告訴；依民法第197條，侵權行為損害賠償請求權原則上自知有損害及賠償義務人時起二年、最長自侵權行為時起十年不行使而消滅，其他請求權基礎與期間規則須依個案確認，刑事附帶民事訴訟須符合與刑事案件的關聯性等法定要件，並在法定程序階段提起；相關費用亦應個別確認。',
         '和解前應確認納入的請求、權利拋棄範圍、付款條件及違約處理方式；如治療仍在進行或將來損害尚未明確，亦應一併評估，因簽署後可能難以推翻或另行主張已納入和解範圍的權利。',
-        '臺灣臺中地方法院109年度消字第7號判決涉及一名韓國留學生在教練指導下進行硬舉訓練時受傷，一審判命賠償新臺幣1,579,589元，官方判決並記載曾雋崴律師為原告訴訟代理人；其後雙方於上訴程序成立和解之說法則僅依媒體報導。',
+        '臺灣臺中地方法院109年度消字第7號判決涉及一名韓國留學生在教練指導下進行硬舉訓練時受傷，一審判命賠償新臺幣1,579,589元，官方判決並記載曾雋崴律師為原告訴訟代理人；雙方其後在上訴程序成立和解的說法，僅依媒體報導。',
       ],
       en: [
         'Potential damages may include medical expenses, necessary nursing or care costs, necessary transportation, documented earnings lost during recovery, loss of earning capacity where lasting impairment and supporting evidence are established, and non-pecuniary loss assessed from the individual circumstances; punitive damages under Consumer Protection Act Article 51 require the Act and its statutory conditions to apply and remain subject to court assessment, with ceilings of five times the proven loss for intent, three times for gross negligence, and one time for negligence.',
@@ -114,7 +114,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: 'family',
-    title: { ko: '가사소송', 'zh-hant': '家事訴訟', en: 'Family Litigation' },
+    title: { ko: '가사소송', 'zh-hant': '家事事件', en: 'Family Litigation' },
     subtitle: {
       ko: '이혼, 재산분할, 친권, 상속 등 가사 사건 전략적 대응',
       'zh-hant': '離婚、財產分配、親權、繼承等家事案件',
@@ -122,7 +122,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     intro: {
       ko: '한국-대만 국제결혼 증가에 따라 이혼·친권·상속 관련 분쟁이 늘고 있습니다. 법무법인 호정은 대만 가사소송법과 국제사법을 함께 검토하여, 한국인 의뢰인에게 최적의 전략을 제공합니다.',
-      'zh-hant': '因應韓台跨國婚姻增加，協助協議離婚、調解離婚、裁判離婚程序，以及法定繼承順位與剩餘財產分配請求。',
+      'zh-hant': '因應台韓跨國婚姻增加，協助辦理協議離婚、調解離婚及裁判離婚，並處理法定繼承順位與剩餘財產分配請求。',
       en: 'Cross-border marriages bring divorce, custody, and inheritance questions that involve more than one country\'s law. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.'
     },
     keyPoints: {
@@ -135,7 +135,7 @@ export const serviceAreas: ServiceArea[] = [
         '법원이 본인 출석을 명령한 경우 정당한 이유 없는 불출석에는 첫 과태료가 3만 대만달러 이하이고 강제구인할 수 없으며, 이혼판결 확정일 또는 법원 조정·화해 성립일부터 일반적으로 30일 안에 호적 신고하되 기간 후 신청도 수리되고 요건을 갖추면 서면 최고 후 호정기관이 직접 등기할 수 있습니다.',
       ],
       'zh-hant': [
-        '台灣離婚應區分：依民法第1050條具備書面、兩名以上親自見聞並確認雙方真實離婚意思之證人簽名及戶政登記的協議離婚；法院調解或和解離婚；以及裁判離婚。',
+        '台灣離婚應區分：依民法第1050條具備書面、二人以上親自見聞並確認雙方真實離婚意思之證人簽名及戶政登記的協議離婚；法院調解或和解離婚；以及裁判離婚。',
         '跨國婚姻或外國離婚應分別確認台灣的司法管轄與行政權限、準據法、外國身分行為或裁判在台灣的承認及效力、台灣戶籍程序，以及其他國家或地區的程序。',
         '特定財產的登記與所有權，以及贈與、借名登記、借貸、返還等個別請求，應與民法第1030條之1夫妻剩餘財產差額分配分開分析；該請求的二年及五年期間不得一律套用於損害賠償、離婚後扶養或子女扶養費。',
         '配偶在有其他繼承人時，與民法所定相應順位的繼承人共同繼承；四個順序均無繼承人時，由配偶繼承全部遺產。應繼分依繼承人組成而異，繼承與配偶的剩餘財產相關請求也應分別計算。',
@@ -158,7 +158,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: 'labor',
-    title: { ko: '노동법·고용분쟁', 'zh-hant': '勞動法·僱傭爭議', en: 'Labor & Employment Disputes' },
+    title: { ko: '노동법·고용분쟁', 'zh-hant': '勞動與僱傭爭議', en: 'Labor & Employment Disputes' },
     subtitle: {
       ko: '대만 노동기준법에 따른 해고·퇴직금·근로계약 분쟁 전문',
       'zh-hant': '台灣勞基法下的解僱、資遣費與勞動契約爭議',
@@ -166,7 +166,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     intro: {
       ko: '대만의 퇴직금(資遣費) 제도는 한국과 적용 사유와 산정 방식이 다릅니다. 계약 종료의 법적 근거, 신제와 구제(舊制)가 적용되는 근속기간, 예고와 기간 제한을 구분해 검토해야 하며, 법무법인 호정은 한국 기업과 한국인 근로자 양측에 해고·퇴직금·근로계약 분쟁 자문을 제공합니다.',
-      'zh-hant': '台灣資遣費制度與韓國在適用事由及計算方式上不同，應依契約終止的法定依據、新舊制年資、預告與期間限制分別檢視。昊鼎協助韓國企業及韓籍勞工處理解僱、資遣費與勞動契約爭議。',
+      'zh-hant': '台灣與韓國的資遣費制度，在適用事由及計算方式上不同，應依契約終止的法定依據、新舊制年資、預告與期間限制分別檢視。昊鼎協助韓國企業及韓籍勞工處理解僱、資遣費與勞動契約爭議。',
       en: 'Taiwan’s severance rules require separate review of the legal basis for ending the contract, service under the new and old systems, notice requirements, and statutory time limits. We advise employers and employees on dismissal, severance, and employment-contract disputes in Taiwan.'
     },
     keyPoints: {
@@ -180,10 +180,10 @@ export const serviceAreas: ServiceArea[] = [
       ],
       'zh-hant': [
         '台灣勞動契約的終止不能只概括為經濟性資遣、懲戒解僱與自願離職三類。應區分雇主依《勞動基準法》第11條預告終止、第12條不經預告終止、勞工依第14條不經預告終止，以及定期契約期滿等情形，並依契約類型、終止原因與程序，個別確認預告、資遣費及必要證明文件。',
-        '資遣費的計算須依新制、舊制所適用的年資分別處理。新制年資因法定事由終止契約時，原則上每滿一年發給二分之一個月平均工資，未滿一年按比例計算，最高以六個月平均工資為限；舊制年資原則上以每滿一年發給一個月平均工資為基礎。新舊制年資並存時，應拆分各段年資計算。',
+        '資遣費的計算須依新制、舊制所適用的年資分別處理。新制年資部分，契約因法定事由終止時，原則上每滿一年發給二分之一個月平均工資，未滿一年按比例計算，最高以六個月平均工資為限；舊制年資原則上以每滿一年發給一個月平均工資為基礎。新舊制年資並存時，應拆分各段年資計算。',
         '《勞動基準法》第14條列有工資未付、雇主一方施暴或重大侮辱、對有危害健康之虞的工作未為必要改善、雇主違反勞動契約或勞工法令而有損害勞工權益之虞等勞工得不經預告終止契約的事由。30日期間限制僅適用於第1項第1款及第6款。兩款均應自知悉該情形之日起30日內行使；第6款如損害結果已發生，另得自知悉該結果之日起30日內行使，因此須分別確認適用款次與起算點。',
         '最低服務年限約定須依《勞動基準法》第15條之1，符合雇主為勞工進行專業技術培訓並負擔費用，或為使勞工遵守約定而提供合理補償兩項法定基礎之一。其後仍須另依培訓期間及成本、人力替補可能性、補償額度及範圍等因素審查合理範圍；違反要件的約定無效。契約因不可歸責於勞工之事由於期間屆滿前終止時，勞工不負違反約定或返還培訓費用之責任。',
-        '證據應將勞動契約、工作規則、薪資明細與匯款紀錄、出勤與加班紀錄、考核資料、調職、減薪或契約終止通知、電子郵件及通訊原始資料，以可辨識日期與來源的合法原始格式保存並按時序整理。錄音並非在任何情況都合法，也不必然獲採為證據；應個別確認錄音者是否參與談話、取得方式、隱私與通訊秘密、內部規範及使用目的，避免未經授權存取帳號、裝設設備、變造資料或過度攜出營業秘密及個人資料。',
+        '勞動契約、工作規則、薪資明細與匯款紀錄、出勤與加班紀錄、考核資料、調職、減薪或契約終止通知、電子郵件及通訊原始資料，應以合法方式、可辨識日期與來源的原始形式保存，並按時序整理。錄音並非在任何情況都合法，也不必然獲採為證據；應個別確認錄音者是否參與談話、取得方式、隱私與通訊秘密、內部規範及使用目的，避免未經授權存取帳號、裝設設備、變造資料或過度攜出營業秘密及個人資料。',
         '離職預告期間與最低服務年限約定的效力、費用返還責任是不同問題。不定期契約依《勞動基準法》第15條準用第16條第1項，年資滿3個月未滿1年者應於10日前、滿1年未滿3年者於20日前、滿3年以上者於30日前預告。年資未滿3個月、其他定期契約或依法得不經預告終止的情形，須另依契約類型與適用法條審查。',
       ],
       en: [
@@ -211,7 +211,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     intro: {
       ko: '법무법인 호정은 대만 형사 절차에서 한국인 의뢰인의 권리를 보호합니다. 수사 단계 변호인 접견, 피해자 대리, 규제 위반에 따른 형사 리스크 사전 점검 등을 수행합니다.',
-      'zh-hant': '昊鼎在台灣刑事程序中保障韓國當事人權益，提供偵查階段律師接見、被害人代理及法規違反風險預檢。',
+      'zh-hant': '昊鼎在台灣刑事程序中維護韓國當事人權益，提供偵查階段律師接見、被害人代理，以及違反法規的刑事風險評估。',
       en: 'We protect client rights throughout Taiwan criminal procedure, including investigation response, attorney interviews, victim representation, and pre-risk checks for potential regulatory offenses.'
     },
     keyPoints: {
@@ -223,11 +223,11 @@ export const serviceAreas: ServiceArea[] = [
         '형사 고소 기한은 6개월이며, 이 기한을 놓치면 민사만 가능하므로 사고 직후 빠른 상담이 중요합니다.',
       ],
       'zh-hant': [
-        '偵查階段律師接見及陳述諮詢、被害人代理（告訴程序）、外籍被告韓語口譯訴訟支援。',
-        '非法抽逃資金：公司法第9條——最高5年有期徒刑或50萬至250萬TWD罰金。',
-        '肇事逃逸：刑法第185條之4——1年以上7年以下有期徒刑。',
+        '偵查階段律師接見及陳述諮詢、被害人代理（告訴程序），以及外籍被告的韓文口譯與訴訟協助。',
+        '違法抽回資本（公司法第9條）：最重5年有期徒刑，或新台幣50萬元至250萬元罰金。',
+        '肇事逃逸（刑法第185條之4）：1年以上7年以下有期徒刑。',
         '無工作許可在台工作被查獲者，3年內禁止入境。',
-        '刑事告訴期限為6個月，逾期僅能提起民事訴訟，故事故後應儘速諮詢律師。',
+        '刑事告訴期限為6個月，逾期僅能提起民事訴訟，因此事故發生後應儘速諮詢律師。',
       ],
       en: [
         'Support includes investigation-stage attorney consultation, victim complaint procedure support, and multilingual communication assistance for foreign nationals.',
@@ -241,7 +241,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: 'ip',
-    title: { ko: '지적재산·금융분쟁', 'zh-hant': '智慧財產·金融爭議', en: 'IP & Financial Disputes' },
+    title: { ko: '지적재산·금융분쟁', 'zh-hant': '智慧財產與金融爭議', en: 'IP & Financial Disputes' },
     subtitle: {
       ko: '상표·특허·저작권 보호 및 금융·투자 분쟁 대응',
       'zh-hant': '商標、專利、著作權保護與金融投資爭議處理',
@@ -249,7 +249,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     intro: {
       ko: '대만에 진출하는 한국 기업의 브랜드 보호와 지적재산 관리, 금융·투자 관련 분쟁을 지원합니다.',
-      'zh-hant': '協助在台韓國企業之品牌保護、智慧財產管理，以及金融投資相關爭議。',
+      'zh-hant': '協助在台韓國企業保護品牌、管理智慧財產，並處理金融投資相關爭議。',
       en: 'We support brand protection and IP management for international businesses entering Taiwan, as well as disputes involving financial products and investment contracts.'
     },
     keyPoints: {
@@ -261,9 +261,9 @@ export const serviceAreas: ServiceArea[] = [
       ],
       'zh-hant': [
         '台灣採先申請主義，進入市場前須確認商標是否已被註冊。韓國已註冊商標在台灣須另行申請。',
-        '商標申請、審查、註冊一站式代辦；侵權時可發警告函、行政救濟或提起民刑事訴訟。',
-        '協助台灣市場進入時的專利申請策略及著作權侵權監控。',
-        '金融商品爭議事實分析與訴訟策略、投資契約違約損害賠償、股東間經營權爭議處理。',
+        '代辦商標申請、審查至註冊；遭侵權時，可寄發警告函、提起行政救濟或民刑事訴訟。',
+        '進入台灣市場時，協助規劃專利申請策略並監控著作權侵權。',
+        '分析金融商品爭議的事實並擬定訴訟策略，處理投資契約違約的損害賠償，以及股東間的經營權爭議。',
       ],
       en: [
         'Taiwan follows a first-to-file system, so trademark availability and early filing are critical before launch.',

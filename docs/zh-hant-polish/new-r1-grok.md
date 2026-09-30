@@ -1,0 +1,37 @@
+文案後半被截斷了，我先把省略的段落讀完，再依潤飾規範審實質問題。後半還有一段沒讀完，我接著把剩下的文案和最新指示對上。幾處法律用語可能會誤導讀者，我對一下現行條文再決定要不要列入。- src/content/columns-zh/050-taiwan-accident-police-records.md:22 | 應救護、通知警方並保存現場證據；移動車輛亦須符合相關規定 | 道路交通管理處罰條例第62條第3項要求即時救護、依規定處置、通知警方，且不得任意移動肇事汽車及現場痕跡證據。寫成「保存現場證據」，讀者會以為留下照片就可以移車。同條但書只在受傷且當事人都同意時，才可標繪後移到不妨礙交通的地方。 | 改為「有人受傷或死亡時，應即救護、依規定處置並通知警方，不得任意移動肇事汽車和現場痕跡。受傷案件若當事人都同意，才可標繪後把車移到不妨礙交通的地方。」罰鍰數字不要加。
+- src/content/columns-zh/041-taiwan-crypto-exchange-vasp-dispute.md:54 | 金錢請求方面，第522條讓債權人可以聲請假扣押 | 上一段剛引民法第227條、第229條。這裡不寫法律名稱，第522條會被讀成民法第522條（定金）。連結與內容是民事訴訟法的假扣押。 | 改為「民事訴訟法第522條」。同段第523條、第526條也寫明民事訴訟法。
+- src/content/columns-zh/041-taiwan-crypto-exchange-vasp-dispute.md:38 | 須先完成洗錢防制登記……被廢止登記後仍繼續提供的，最重可處二年以下有期徒刑 | 所引洗錢防制法第6條現文並列「洗錢防制、服務能量登記或登錄」；處罰也包括登記經撤銷，以及服務能量登錄廢止或失效後仍提供服務。正文寫成只查洗錢防制登記、只涵蓋廢止，讀者會漏掉同條已有的義務。第17行問答同樣只寫「未完成登記」。「最重可處二年以下」把上限和「以下」疊在一起。 | 對一下所連結的第6條現文。若服務能量登記或登錄與撤銷、登錄失效已在同一條，正文應寫上；二年、500萬元不要改，刪掉「最重可處二年以下」。同條法人罰金若要寫，照條文，不要自行換算金額。若該修正尚未施行，寫明施行日，不要把舊範圍寫成條文全文。
+- src/content/columns-zh/047-foreigner-buy-sell-taiwan-real-estate-tax.md:36 | 第一項就是住宅 | 土地法第19條第1項是整段用途清單，住宅只是第1款，同項還有營業處所、教堂、醫院等款。寫成「第一項就是住宅」，會讓人以為這條前段只規範住宅。 | 改為「第1項第1款是住宅，同項另有其他用途。」
+- src/content/columns-zh/042-taiwan-investment-scam-recovery.md:46 | 後文的規費規定，便依此定義判斷適用範圍 | 後文第54條是暫免訴訟費用、執行費和假扣押擔保上限，不是規費法上的規費。名稱指錯制度。 | 改為「後文暫免訴訟費用、執行費，以及假扣押擔保上限的規定，都要先看是否落入第2條的詐欺犯罪。」
+- src/content/columns-zh/044-taiwan-payment-order-provisional-attachment.md:54 | 同一條第77條之19規定，聲請假扣押徵收裁判費新臺幣1,000元 | 「同一條」承接前句第526條，讀起來像裁判費規定在第526條裡面。第77條之19是同一部民事訴訟法的另一條。 | 改為「同法第77條之19」。金額不要改。
+- src/content/issues/zh-hant/ISSUE-20260930-09-taiwan-mainland-travel-permission-family-company.md:57 | 第84條對此處六個月以下有期徒刑 | 「對此處」連在一起，會讀成「這個地方」。條文的動詞是「處」。刑罰句子因此斷不開。 | 改為「第84條對違反第15條第2款者，處六個月以下有期徒刑、拘役，或科或併科新臺幣10萬元以下罰金。」六個月與10萬元不要改。
+- src/content/issues/zh-hant/ISSUE-20260930-09-taiwan-mainland-travel-permission-family-company.md:4 | 國人赴陸失聯、遭留置與關押的案件累計449件 | 同篇第28行的媒體數字是失蹤168件、留置盤查39件、關押242件。摘要把「失蹤」寫成「失聯」，三類案件的範圍會被看錯。第79行的「失聯者」是家屬聯絡不上的說法，可留。 | 摘要改為「赴陸失蹤、遭留置與關押」。件數不要改。
+- src/content/columns-zh/041-taiwan-crypto-exchange-vasp-dispute.md:58 | 考慮向警察或檢察官報案 | 報案是向警察機關。向檢察官提出的是告訴或告發。同段後文已用「告訴」，前後名稱不一致。 | 改為「向警察機關報案，或向檢察官、司法警察官提出告訴或告發。」
+- src/content/columns-zh/047-foreigner-buy-sell-taiwan-real-estate-tax.md:46 | 收到繳款書後30日內繳納 | 契稅條例第19條的起算點是核定繳款書送達後30日。送達和實際收到可能不是同一天，期限會算錯。 | 改為「核定繳款書送達後30日內繳納。」30日不要改。
+- src/content/columns-zh/044-taiwan-payment-order-provisional-attachment.md:52 | 為保全金錢請求，或可以換算成金錢的請求的強制執行 | 「或」把「保全」的受詞拆斷，句子讀不成。第522條的用語是「金錢請求或得易為金錢請求之請求」。042篇已用這個用語。 | 改為「債權人就金錢請求，或得易為金錢請求的請求，要保全強制執行時，可以聲請假扣押。」
+- src/content/columns-zh/047-foreigner-buy-sell-taiwan-real-estate-tax.md:38 | 受理後14日內核定，核准後再報中央地政主管機關 | 第20條是14日內准駁，核准或駁回都算，不是14日內一定核准。核准後是報請中央地政機關備查，不是再送中央批准。 | 改為「直轄市或縣（市）政府應於受理後14日內准駁；核准的，再報請中央地政機關備查。」14日不要改。
+- src/content/issues/zh-hant/ISSUE-20260930-07-marriage-leave-fourteen-days-employer-subsidy.md:28 | 雇主可從10月1日起申請 | 同篇第52行寫明，須勞工請完婚假或契約提前終止，而且雇主已給付工資後才能申請。10月1日是開始受理的日期。開頭這句會讓人以為當天就能送件。 | 改為「勞保局自10月1日起受理；雇主須先給付工資，並等到婚假請完或勞動契約提前終止。」日期不要改。
+- src/content/issues/zh-hant/ISSUE-20260930-07-marriage-leave-fourteen-days-employer-subsidy.md:17 | 契約在請完前終止後 | 「請完前」和「終止後」套在一起，讀不出是勞動契約在婚假請完之前結束。第52行同樣壓縮。 | 改為「或勞動契約在婚假請完之前終止，且雇主已給付工資之後」。
+- src/content/issues/zh-hant/ISSUE-20260930-07-marriage-leave-fourteen-days-employer-subsidy.md:15 | 仍在請假期間內且8天尚未請完 | 「請假期間」可被讀成人正在休假。同篇第42行說的是可請婚假的期間，人已回公司上班、期間還沒過的，也算。 | 改為「8天尚未請完，且10月1日時仍在可請婚假的期間內」。
+- src/content/columns-zh/041-taiwan-crypto-exchange-vasp-dispute.md:40 | 這些義務讓你能立刻解除有文件依據且合法的帳戶限制 | 修飾語疊太深，讀不出結論：有申訴義務，不表示已有文件且合法的帳戶限制會立刻被拿掉。 | 改為「有申訴義務，不表示已有文件且合法的帳戶限制會立刻解除，仍要先確認限制原因。」
+- src/content/columns-zh/041-taiwan-crypto-exchange-vasp-dispute.md:62 | 聲請暫時性的保全處分 | 台灣民事保全程序的名稱是假扣押、假處分。「暫時性的保全處分」無法對應到聲請種類。 | 改為「聲請假扣押或假處分」。
+- src/content/columns-zh/047-foreigner-buy-sell-taiwan-real-estate-tax.md:40 | 非都市土地以外的使用分區證明 | 雙重否定，看不出要附的是都市土地使用分區證明，還是非都市土地免附。買方會備錯文件。 | 依內政部問答的文件名稱改寫清楚，例如「都市土地另附使用分區證明」。不要自創證明文件名稱。
+- src/content/columns-zh/047-foreigner-buy-sell-taiwan-real-estate-tax.md:40 | 《Operational Directions for Foreigners to Acquire Land Rights in Taiwan》這份作業要點 | 中文專欄只留英文名稱，讀者無法用中文检索這份內政部作業要點。 | 補上官方中文名稱，英文名稱放括號。名稱以內政部現稱為準，不要另造。
+- src/content/columns-zh/012-taiwan-overtaking-accident-liability.md:34 | 原文介紹的匿名事故案例 | 中文讀者看不到韓文原文。「原文介紹」是翻譯殘留。第36行、第46行同樣寫「原文」。 | 標題改為「一件匿名事故案例」。第36行改為「有一件匿名案件」，第46行改為「依這件案例的敘述」。
+- src/content/columns-zh/012-taiwan-overtaking-accident-liability.md:40 | 機車欠缺煞車餘裕 | 「煞車餘裕」是外文直譯。台灣交通用語是煞車距離不夠。第54行「安全餘裕」同樣不自然。 | 第40行改為「機車沒有足夠的煞車距離」。第54行改為「仍應多留安全距離」。
+- src/content/columns-zh/012-taiwan-overtaking-accident-liability.md:48 | 規定示意 | 不成詞，看不出是指按喇叭、變換燈光或方向燈。 | 改為「有沒有依法示意」。
+- src/content/columns-zh/045-taiwan-overseas-income-us-stocks-crypto-amt.md:48 | 也沒有免除海外證券交易所得 | 「免除」沒有著落，讀起來像把所得本身拿掉。原意是最低稅負沒有把這類所得排除。 | 改為「也沒有把海外證券交易所得排除在基本所得額之外」。
+- src/content/columns-zh/044-taiwan-payment-order-provisional-attachment.md:34 | 就想想手上有哪些證據可以支持。逾依法計算的不變期間 | 「支持」沒有受詞，話沒說完。「逾依法計算」黏在一起，要重讀才懂。 | 改為「就先整理能證明已清償、找錯人或金額不符的證據。超過依法計算的不變期間才提出的異議……」
+- src/content/columns-zh/044-taiwan-payment-order-provisional-attachment.md:46 | 法院應不訊問債務人，就聲請裁定 | 第512條是「就支付命令之聲請為裁定」。少了「為」，句子沒有動詞。 | 改為「法院不訊問債務人，就支付命令的聲請為裁定」。
+- src/content/columns-zh/012-taiwan-overtaking-accident-liability.md:65 | 本文僅提供……不構成……。實際責任可能因……個別分析。 | 兩句都在說不能當成個案意見，第二句把因素再列一次。保留語過長。 | 留一句：「本文只說明超車規則和責任判斷的一般資訊，不能代替個案分析，也不保證結果。」
+- src/content/issues/zh-hant/ISSUE-20260930-09-taiwan-mainland-travel-permission-family-company.md:3 | 赴中國大陸前的法律檢查 | 「法律檢查」像清單直譯，不像台灣專欄標題。 | 改為「赴中國大陸前要先看的法律問題」。許可、家屬、公司責任可留。
+- src/data/traffic-hub.ts:52 | 整理處理台灣交通事故所需的資訊 | 「整理處理」兩個動詞疊在一起，動作不清楚。 | 改為「說明處理台灣交通事故時要掌握的資訊」。
+- src/content/columns-zh/012-taiwan-overtaking-accident-liability.md:44 | 案件進入訴訟，過程中並進行多次事故鑑定 | 「過程中並進行」是外文連接方式直譯，主語也不清楚。 | 改為「案件進入訴訟後，做過多次事故鑑定。」
+- src/content/columns-zh/012-taiwan-overtaking-accident-liability.md:16 | 超車本身也伴隨相當程度的風險……雙向交通 | 前半是空泛風險句。「雙向交通」不是台灣說法，這裡指對向來車。 | 改為「超車前要看路段、對向來車、前車動態，以及超完能否回到原來的車道。」
+- src/data/traffic-hub.ts:55 | 誰先進入車道 | 車輛本來就在車道上。「進入車道」看不出是變更車道，還是駛入超車用的車道。責任爭點會糊掉。 | 改為「誰先變更車道」。若圖意是超車車道，寫「誰先駛入超車車道」，不要另加圖上沒有的方向。
+- src/content/columns-zh/044-taiwan-payment-order-provisional-attachment.md:60 | 不要以為走支付命令就能取代 | 「取代」沒有受詞。上一句說的是外國確定判決還要另取得許可執行的判決。 | 改為「不要以為改走支付命令，就可以取代許可執行的判決。」
+- src/content/columns-zh/042-taiwan-investment-scam-recovery.md:48 | 該條例有部分或全部條文尚未生效，並指出是第39條、第40條 | 「部分或全部」表示範圍還沒確定，下一句卻已指明第39條、第40條。讀者會以為報案、圈存條文也可能還沒生效。 | 改為「法規資料庫註記第39條、第40條的網路流量措施尚未生效。本文引用的報案、帳戶和被害人條文不在其中。」
+- src/content/columns-zh/012-taiwan-overtaking-accident-liability.md:20 | 臺灣《道路交通安全規則》 | 這部規則的名稱沒有「臺灣」。同篇標題和正文用「台灣」，同一頁兩種寫法。 | 連結文字改為「《道路交通安全規則》第101條」。
+- src/content/columns-zh/050-taiwan-accident-police-records.md:7 | 法律資訊 | 其他專欄同一欄位是「台灣法律資訊」。這裡少了「台灣」，列表會分成兩類。 | 改為「台灣法律資訊」。
+- src/content/columns-zh/046-taiwan-marital-property-regime-international-couples.md:28 | 可以另外參考本站已刊登的文章，文中也會附上連結 | 沒指出是哪幾篇，又預告「文中會附連結」，像譯者說明。第62行已有具體連結。 | 刪掉這句，具體連結留在第62行。
+VERDICT: ISSUES 36

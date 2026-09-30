@@ -25,7 +25,7 @@ const expectedStats = {
     ],
   },
   'zh-hant': {
-    title: '從官方資料看跨境服務基礎',
+    title: '事務所基本資料一覽',
     description:
       '事務所提供中文／韓文／日文／英文4種語言的台灣法律諮詢。並依官方律師簡介整理：4個台灣辦公據點、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
     highlightWords: [
@@ -40,7 +40,7 @@ const expectedStats = {
     ],
     items: [
       { target: 4, label: '台灣辦公據點' },
-      { target: 4, label: '業務溝通語言' },
+      { target: 4, label: '諮詢語言' },
       { target: 7, label: '主要執業領域' },
       { target: 2, label: '最高級別語言資格' },
     ],

@@ -112,7 +112,7 @@ describe('gallery render localization', () => {
 
     expect(html).toContain('諮詢空間');
     expect(html).toContain('企業法務');
-    expect(html).toContain('韓語諮詢');
+    expect(html).toContain('韓文諮詢');
     expect(html).toContain('辦公室');
     expect(html).toContain('alt="圖庫天際線"');
     expect(html).not.toContain('상담 공간');

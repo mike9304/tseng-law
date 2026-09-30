@@ -23,11 +23,11 @@ export const sectionLabelsByLocale: Record<Locale, Record<HomeSectionId, string>
   },
   'zh-hant': {
     hero: '首頁',
-    insights: '洞見',
+    insights: '專欄',
     practice: '服務',
     about: '律師',
     results: '案例',
-    stats: '成果',
+    stats: '事務所資訊',
     faq: '常見問題',
     offices: '據點',
     contact: '聯絡',

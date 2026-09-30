@@ -11,7 +11,7 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
   it('describes streets lined with massage shops without a literal compound', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
-    expect(raw).toContain('總之，說到按摩，');
+    expect(raw).toContain('說到按摩，');
     expect(raw).toContain(
       '台灣也有不少街道兩旁林立著各式各樣的按摩店。',
     );
@@ -40,7 +40,7 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain(
-      '只要剪一次頭髮，就能享受到這麼多優質服務，CP值真的很高。',
+      '剪一次頭髮就包含這些服務。',
     );
     expect(raw).not.toContain('性價比非常高');
   });
@@ -114,7 +114,7 @@ describe('Traditional Chinese massage column 006 — localized wording', () => {
     const raw = fs.readFileSync(articlePath, 'utf8');
 
     expect(raw).toContain('依韓國《醫療法》可處3年以下有期徒刑。');
-    expect(raw).toContain('非視障者經營按摩業者，可處5年以下有期徒刑。');
+    expect(raw).toContain('非視障者經營按摩業，可處5年以下有期徒刑。');
     expect(raw).not.toContain('最高3年以下');
     expect(raw).not.toContain('最高5年以下');
     expect(raw).toContain('3年以下');

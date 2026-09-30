@@ -29,13 +29,13 @@ const faqItems: Record<Locale, { title: string; description: string; href: strin
   ],
   'zh-hant': [
     {
-      title: '諮詢流程 FAQ',
+      title: '諮詢流程常見問題',
       description: '查看諮詢流程與準備事項。',
       href: '/zh-hant/faq'
     },
     {
-      title: '聯絡方式 FAQ',
-      description: '查看可聯絡的管道。',
+      title: '聯絡方式',
+      description: '查看本所的聯絡管道。',
       href: '/zh-hant/contact'
     }
   ],

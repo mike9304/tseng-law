@@ -21,7 +21,7 @@ const featuredImage =
   '../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg';
 const inlineImage =
   '../images/004-taiwan-company-subsidiary-vs-branch/img-01.jpg';
-const featuredImageAlt = '比較台灣子公司與外國公司分公司的代表圖片';
+const featuredImageAlt = '台灣子公司與外國公司分公司的比較';
 const faq1Answer =
   '分公司是外國公司的一部分，因此分公司本身不存在股東。若要與第三人共同出資經營台灣事業，應評估設立台灣子公司並決定股東組成等方法。責任、表決權、資金籌措、許可與稅務，應依出資關係與事業計畫確認。';
 const faq2Answer =
@@ -194,8 +194,8 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       expect(raw).toContain(phrase);
       expect(post?.content).toContain(phrase);
     }
-    expect(parsed.content.indexOf('外國本公司的一部分')).toBe(
-      parsed.content.indexOf('外國本公司'),
+    expect(parsed.content.indexOf('該外國公司的一部分')).toBe(
+      parsed.content.indexOf('該外國公司'),
     );
   });
 
@@ -210,7 +210,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
       '居住者證明',
       '受益所有人',
       '將稅後分公司盈餘匯回本公司的行為與股利有別',
-      '在分公司階段原則上無追加股利扣繳',
+      '在分公司階段原則上無另行股利扣繳',
       '利息、權利金、服務對價、資產價款或對第三人的支付',
       '未分配盈餘加徵5%稅額',
       '本公司在台灣境外的營利事業，不屬於該未分配盈餘申報對象',
@@ -274,12 +274,12 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
   it('keeps every contracted selection and exit checklist topic', () => {
     const checklistPhrases = [
       '出資人是誰，表決權與重大事項決定權如何分配',
-      '外國本公司或母公司在契約上、法律上負擔何種範圍的責任',
+      '該外國公司或母公司在契約上、法律上須在什麼範圍內負責',
       '客戶契約、僱用、智慧財產、營業場所與許可歸屬哪一主體',
       '營業額與費用在何處認列，盈餘保留、股利分配或匯回本公司如何處理',
       '投資核准、銀行帳戶、資金匯入、外匯與對外匯款資料如何準備',
-      '會計帳簿、查核、移轉訂價文件與韓國端申報、外國稅額扣抵如何管理',
-      '是否計畫增資、本地夥伴、員工股權獎酬、上市、合併重整與股權移轉',
+      '會計帳簿、查核、移轉訂價文件與韓國的申報、外國稅額扣抵如何管理',
+      '是否計畫增資、引進本地夥伴、提供員工股權獎酬、上市、合併重整與移轉股權',
       '停止營業時，契約終止、勞動關係、稅務申報、資產處分與退場程序由誰執行',
     ];
     const section =
@@ -320,7 +320,7 @@ describe('Traditional Chinese investment column 004 — subsidiary versus branch
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
     expect(visibleHanCount).toBeGreaterThanOrEqual(5_000);
-    expect(visibleHanCount).toBe(7_912);
+    expect(visibleHanCount).toBe(7_918);
     expect(calculatedMinutes).toBe(20);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

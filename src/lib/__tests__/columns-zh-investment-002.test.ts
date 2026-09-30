@@ -147,7 +147,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '公司財產歸屬於公司，並非股東個人財產。',
       '即使股東持有公司全部股權，或同時是唯一董事，此基本原則亦不因此而改變。',
       '股東不得僅以過去曾經出資為由，自由提領公司存款或資產。',
-      '永久消滅公司的解散及清算、公司存續中減少資本的減資、正常營業費用的支付、以盈餘為前提的股利分配，以及公司實際負擔借款的清償，屬於不同的法律及稅務範疇。',
+      '使公司永久消滅的解散及清算、公司存續中減少資本的減資、正常營業費用的支付、以盈餘為前提的股利分配，以及公司實際負擔借款的清償，屬於不同的法律及稅務範疇。',
       '僅停止公司營運，法人格及申報義務亦不會因此消滅。',
       article9Paragraph,
       article90Paragraph,
@@ -192,7 +192,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     }
 
     const stepLeads = [
-      '1. **調查結束前的現況。**',
+      '1. **結束前的現況調查。**',
       '2. **依公司種類作成解散決議。**',
       '3. **於期限內申請解散變更登記。**',
       '4. **辦理解散時點的當期決算申報。**',
@@ -215,9 +215,9 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
   it('preserves every native-review Taiwanese legal phrasing correction', () => {
     const correctedPhrases = [
-      '若選擇永久結束，應連結解散登記與清算，整理公司的契約、債權、債務、稅捐及剩餘財產。',
-      '本文就檢討結束台灣公司時經常混淆的公司財產、已繳股款、減資、解散、清算、破產聲請、剩餘財產分配及停業，分別說明。',
-      '1. **調查結束前的現況。** 取得公司章程、股東名簿、最新登記事項、會計帳簿、財務報表及稅務申報資料。',
+      '若選擇永久結束，應辦理解散登記與清算，整理公司的契約、債權、債務、稅捐及剩餘財產。',
+      '本文分別說明結束台灣公司時經常混淆的公司財產、已繳股款、減資、解散、清算、破產聲請、剩餘財產分配及停業。',
+      '1. **結束前的現況調查。** 取得公司章程、股東名簿、最新登記事項、會計帳簿、財務報表及稅務申報資料。',
       '並非所有公司均適用相同的文件與順序',
       '應避免事後將出資改記為借款的做法',
       '清算人應編造財產目錄及資產負債表、了結公司現存事務，收取尚未受償的債權，並決定資產的保全及變現方式。',
@@ -263,7 +263,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '資不抵債一般是比較資產與負債的財務狀態問題；無力清償則涉及到期債務能否支付的問題。',
       '擔保權、租稅債權、工資等債權種類及優先關係，應依各該適用法律確認',
       '若僅優先支付特定債權人或股東，可能損害其他債權人的利益及程序公平。',
-      '不應僅依舊版說明所見的簡化公式或複數要件，決定是否聲請宣告破產。',
+      '不應僅依舊版說明中的簡化公式或多項要件，決定是否聲請宣告破產。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -275,7 +275,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
   it('qualifies capital reduction, ordinary payments, dividends, and real loans', () => {
     const requiredPhrases = [
-      '減資可作為公司存續中依法返還部分出資的方法予以評估',
+      '可以評估在公司存續期間，依法採行減資程序返還部分出資',
       '減資並非股東隨時取走公司存款的非正式提款手段，亦非任何時候均可採行。',
       '債權人保護、資本查核及會計處理、外國投資、稅務、匯款及變更登記',
       '有外國股東的公司',
@@ -306,9 +306,9 @@ describe('Traditional Chinese investment column 002 — company exit and capital
       '依法處理勞動關係',
       '各業別許可的維持條件及換發期限',
       '管理銀行帳戶及稅務電子資料的負責人',
-      '於法定期間保存會計帳簿及憑證的體制',
+      '在法定期間保存會計帳簿及憑證的作法',
       '停業年度仍有年度所得稅結算申報義務',
-      '停業期間屆滿前，應決定是否恢復營業、重新檢討停業要件，或轉為永久結束。',
+      '停業期間屆滿前，應決定是否恢復營業、重新評估停業要件，或轉為永久結束。',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -356,7 +356,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     const calculatedMinutes = Math.ceil(hanCount / 400);
 
     expect(hanCount).toBeGreaterThanOrEqual(4_000);
-    expect(hanCount).toBe(5_978);
+    expect(hanCount).toBe(5_968);
     expect(calculatedMinutes).toBe(15);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

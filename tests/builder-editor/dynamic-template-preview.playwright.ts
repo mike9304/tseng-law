@@ -257,10 +257,10 @@ test('publishes dynamic template block visibility to public service routes', asy
   await expect(page.locator('.svc-keypoints-title')).toContainText('重點摘要');
   await expect(page.locator('.svc-columns-heading')).toContainText('相關專欄');
   await expect(page.locator('.authority-card-eyebrow')).toContainText('承辦律師');
-  await expect(page.locator('.svc-sidebar-card--attorney')).toContainText('此領域承辦律師');
+  await expect(page.locator('.svc-sidebar-card--attorney')).toContainText('本領域承辦律師');
   const bookingCardZh = page.locator('.svc-sidebar-card').filter({ hasText: '預約諮詢' });
   await expect(bookingCardZh).toContainText('預約諮詢');
-  await expect(bookingCardZh).toContainText('聯絡我們');
+  await expect(bookingCardZh).toContainText('電子郵件諮詢');
 });
 
 async function readPublishedVisibleBlockIds(page: Page): Promise<string[]> {

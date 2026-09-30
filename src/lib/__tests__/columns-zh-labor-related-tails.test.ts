@@ -8,7 +8,7 @@ const relatedTail = `---
 
 > 相關文章:
 > - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
-> - [可用韓語溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
+> - [可用韓文溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
 > - [服務項目 — 勞動法](/zh-hant/services/labor)`;
 
 const targets = [
@@ -16,14 +16,14 @@ const targets = [
     slug: 'taiwan-labor-severance-law',
     filename: '008-taiwan-labor-severance-law.md',
     finalBodyParagraph: '大家在台灣也要保護好自己的權益。',
-    visibleHanCount: 1_621,
-    readTime: '5分鐘閱讀',
+    visibleHanCount: 1_598,
+    readTime: '4分鐘閱讀',
   },
   {
     slug: 'taiwan-voluntary-resignation-severance',
     filename: '009-taiwan-voluntary-resignation-severance.md',
     finalBodyParagraph: '大多數情況下，事先做好準備的一方才能保障自己的權利。',
-    visibleHanCount: 640,
+    visibleHanCount: 646,
     readTime: '2分鐘閱讀',
   },
 ];

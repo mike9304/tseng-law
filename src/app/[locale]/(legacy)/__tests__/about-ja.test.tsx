@@ -153,7 +153,7 @@ describe('Japanese About integration', () => {
 
   it.each([
     ['ko', '호정 소개', '호정의 이야기와 호정 대만·한국 팀 구성원을 소개합니다.'],
-    ['zh-hant', '昊鼎介紹', '認識昊鼎的團隊背景與昊鼎韓國台灣團隊成員。'],
+    ['zh-hant', '昊鼎介紹', '認識事務所背景與昊鼎韓台團隊成員。'],
     ['en', 'About Hovering', 'Learn about Hovering\'s background and meet our team.'],
   ] as const)('preserves representative %s About metadata', (locale, title, description) => {
     const metadata = getAboutLegacyMetadata(locale);

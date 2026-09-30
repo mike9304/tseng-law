@@ -24,7 +24,7 @@ function renderHeader(locale: SiteLocale): string {
 describe('Header consultation and contact links', () => {
   it.each([
     ['ko', '문의하기'],
-    ['zh-hant', '聯絡我們'],
+    ['zh-hant', '電子郵件諮詢'],
     ['en', 'Contact Us'],
   ] as const)(
     'routes the %s high-intent link to the locale consultation email',

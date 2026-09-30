@@ -111,7 +111,7 @@ export function createOfficesDecomposedNodes(
     locale === 'ko'
       ? 'Google 지도에서 보기 (사진·리뷰)'
       : locale === 'zh-hant'
-        ? '在 Google 地圖查看 (照片·評論)'
+        ? '在 Google 地圖查看（照片、評論）'
         : 'View on Google Maps (photos & reviews)';
   const mapPreviewCopy = getOfficeMapPreviewCopy(locale);
 

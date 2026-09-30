@@ -78,7 +78,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎介紹',
-      description: `認識昊鼎的團隊背景與${TEAM_NAME_BY_LOCALE['zh-hant']}成員。`
+      description: `認識事務所背景與${TEAM_NAME_BY_LOCALE['zh-hant']}成員。`
     },
     services: {
       label: 'SERVICES',
@@ -88,27 +88,27 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     lawyers: {
       label: 'OUR TEAM',
       title: TEAM_NAME_BY_LOCALE['zh-hant'],
-      description: '查看律師、法務專員、事務長與會計師的完整資料。'
+      description: '律師、法務專員、事務長與會計師介紹。'
     },
     insights: {
       label: 'INSIGHTS',
       title: '專欄',
-      description: '依分類整理昊鼎專欄文章，快速查看重點主題。'
+      description: '依主題分類整理昊鼎專欄文章。'
     },
     videos: {
       label: 'VIDEOS',
-      title: '曾雋崴律師影音·頻道',
-      description: '集中查看曾雋崴律師的官方簡介、YouTube、部落格與外部介紹。'
+      title: '曾雋崴律師影音與頻道',
+      description: '彙整曾雋崴律師的官方簡介、YouTube、部落格與外部介紹。'
     },
     faq: {
       label: 'FAQ',
       title: '常見問題',
-      description: '提供諮詢流程相關 FAQ。'
+      description: '諮詢流程相關常見問題。'
     },
     contact: {
       label: 'CONTACT',
       title: '聯絡與諮詢',
-      description: '一次查看詢問類型、聯絡方式與事務所據點。'
+      description: '詢問類型、聯絡方式與事務所據點。'
     },
     search: {
       label: 'SEARCH',
@@ -117,13 +117,13 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     pricing: {
       label: 'PRICING',
-      title: '服務費用說明',
-      description: '昊鼎國際法律事務所主要服務項目收費標準。'
+      title: '收費標準',
+      description: '昊鼎國際法律事務所主要服務項目的收費說明。'
     },
     reviews: {
       label: 'REVIEWS',
       title: '客戶評價',
-      description: '昊鼎國際法律事務所客戶的真實評價與回饋。'
+      description: '昊鼎國際法律事務所客戶的評價與回饋。'
     }
   },
   en: {

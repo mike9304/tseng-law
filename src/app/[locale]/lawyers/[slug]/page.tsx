@@ -56,10 +56,10 @@ const sectionLabels = {
     facts: '重點資訊',
     education: '學歷',
     experience: '經歷',
-    matters: '代表業務與案例',
+    matters: '主要業務與代表案例',
     internalLinks: '相關服務與內容',
     externalProfiles: '外部簡介與頻道',
-    contact: '聯絡諮詢',
+    contact: '電子郵件諮詢',
     searchTerms: '常見搜尋主題',
   },
   en: {

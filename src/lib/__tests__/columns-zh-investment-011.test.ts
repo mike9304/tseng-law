@@ -45,11 +45,11 @@ const title =
 const faq = [
   {
     q: '在台灣銷售化粧品，是否一定要設立子公司或分公司？',
-    a: '不一定。若由台灣進口業者（包括同時擔任銷售代理商者）負責進口及銷售，外國品牌可以不另設台灣子公司或分公司。若品牌要自行在台灣經營，台灣子公司與外國公司在台分公司的設立或登記、責任及稅務架構不同；僑外投資核准及公司或分公司登記所需時間，也會依個案及補件情形而異。應先確定商業模式，以及由誰擔任化粧品製造或輸入業者並承擔法定責任。',
+    a: '外國品牌若委由台灣進口業者（包括同時擔任銷售代理商者）負責進口及銷售，便可以不另設台灣子公司或分公司。若品牌要自行在台灣經營，台灣子公司與外國公司在台分公司的設立或登記、責任及稅務架構不同；僑外投資核准及公司或分公司登記所需時間，也會依個案及補件情形而異。應先確定商業模式，以及由誰擔任化粧品製造或輸入業者並承擔法定責任。',
   },
   {
     q: 'PIF 是什麼？與向 TFDA 辦理產品登錄是同一程序嗎？',
-    a: '不是。產品登錄是化粧品製造或輸入業者透過 TFDA 化粧品產品登錄平台辦理的獨立程序。PIF 是彙整產品品質、安全、成分、功能、製造方法、試驗結果及安全性評估等資料的產品資訊檔案，由化粧品製造或輸入業者建立、更新並保存；PIF 本身無須事前提交 TFDA。自 2026 年 7 月 1 日起，其餘化粧品也納入 PIF 制度，原則上所有化粧品均受規範；僅免辦理工廠登記之化粧品製造場所生產的固態手工香皂例外。',
+    a: '化粧品產品登錄是化粧品製造或輸入業者透過 TFDA 化粧品產品登錄平台辦理的獨立程序。PIF 是彙整產品品質、安全、成分、功能、製造方法、試驗結果及安全性評估等資料的產品資訊檔案，由化粧品製造或輸入業者建立、更新並保存；PIF 本身無須事前提交 TFDA。自 2026 年 7 月 1 日起，其餘化粧品也納入 PIF 制度，原則上所有化粧品均受規範；僅免辦理工廠登記之化粧品製造場所生產的固態手工香皂例外。',
   },
   {
     q: '化粧品廣告應注意哪些表現？',
@@ -172,7 +172,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       '分公司則是外國公司本體在台灣登記的營業據點',
       '法人格、本公司責任、會計與稅務處理、盈餘移轉、代表權限',
       '經濟部投資審議司',
-      '不宜以固定天數安排上市',
+      '不宜以固定天數安排產品上市',
       '化粧品製造或輸入業者',
     ];
 
@@ -184,14 +184,14 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
 
   it('separates product registration from PIF and locks timing, platform, and validity', () => {
     const requiredPhrases = [
-      '產品登錄是化粧品製造或輸入業者透過 TFDA 化粧品產品登錄平台辦理的獨立程序。',
+      '化粧品產品登錄是化粧品製造或輸入業者透過 TFDA 化粧品產品登錄平台辦理的獨立程序。',
       '化粧品產品登錄在 TFDA 化粧品產品登錄平台辦理',
       '供應、販賣、贈送、公開陳列或提供消費者試用以前，即應完成產品登錄',
       '產品登錄的效期為三年。',
       '效期屆滿前三個月內辦理展延',
       '不代表 PIF 所需資料已全部齊備',
       '也不是產品標示或廣告合法的判斷',
-      '應分別作為獨立的法令遵循項目管理',
+      '應分開處理，各自確認是否符合規定',
       'PIF 本身無須事前提交 TFDA',
     ];
 
@@ -212,7 +212,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       '能相互傳遞變更資訊與最新簽署資料的機制',
       '化粧品製造或輸入業者的法律責任仍然維持',
       '即使利用第三人的撰寫協助或資料保存服務',
-      '原製造者、試驗機構、安全性評估人員與台灣端業者',
+      '原製造者、試驗機構、安全性評估人員與台灣的業者',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -227,14 +227,14 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       '消費者申訴、不良反應案例、新的試驗結果是否影響既有評估',
       '依《化粧品產品資訊檔案管理辦法》第 7 條，PIF 應自產品最後上市日之次日起至少保存五年',
       '保存場所則依同辦法第 8 條，為《化粧品衛生安全管理法》第 7 條第 1 項第 7 款所定之化粧品製造或輸入業者標示地址',
-      '規定期間的條文與規定場所的條文，應區分管理',
+      '保存期間與保存地點分屬不同條文，應分開檢視',
       '即使原製造者保有原本，或使用安全的電子或雲端儲存',
       '製造或輸入業者仍須能取用完整資料',
       '應訂定存取權限、備份、版本管理、檔案格式與負責人',
       '迅速檢索、提出資料',
       '與銷售夥伴或服務提供者的契約結束後',
       '法定保存期間內繼續維持',
-      '宜在契約中處理移交對象、方式與存取權限是否存續',
+      '宜在契約中寫明移交對象、移交方式與存取權限是否存續',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -251,7 +251,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       '新臺幣 1 萬元以上 100 萬元以下行政罰鍰',
       'PIF 資料不完整時，通常由主管機關命限期改正',
       '未於期限內改正時，才生罰鍰問題',
-      '回收或銷毀並非所有 PIF 資料不齊時自動伴隨的措施',
+      '回收或銷毀並非 PIF 資料不齊時必然採取的措施',
       '應區分產品安全性、違規內容、改正情形與各措施適用的法定要件，分別判斷',
     ];
 
@@ -289,7 +289,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
       '在供應、販賣、贈送、公開陳列或提供消費者試用前，完成產品登錄',
       '依產品別建立 PIF',
       '依整體表現標準檢視標籤',
-      '建立應對查核與改正要求',
+      '建立程序，處理查核與改正要求',
     ];
     const positions = sequence.map((step) => readinessSection.indexOf(step));
 
@@ -360,7 +360,7 @@ describe('Traditional Chinese investment column 011 — cosmetics registration, 
     const hanCount = visibleText.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(hanCount / 400);
 
-    expect(hanCount).toBe(3_765);
+    expect(hanCount).toBe(3_763);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

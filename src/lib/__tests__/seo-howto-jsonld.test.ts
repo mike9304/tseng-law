@@ -59,7 +59,7 @@ describe('buildHowToJsonLd', () => {
   it('adds totalTime and inLanguage when supplied', () => {
     const node = buildHowToJsonLd({
       name: '台灣公司設立',
-      steps: [{ name: '投審會核准', text: '提交投資計畫書' }],
+      steps: [{ name: '經濟部投資審議司核准', text: '提交投資計畫書' }],
       totalTime: 'P4M',
       locale: 'zh-hant',
     });

@@ -98,7 +98,7 @@ describe('WO-I18N-P02 Japanese videos components', () => {
     ].map((file) => readFileSync(path.join(process.cwd(), file), 'utf8'));
 
     expect(japaneseHome).toContain('曾雋崴弁護士 — 日本語で相談できる台湾法務パートナー');
-    expect(traditionalChineseHome).toContain('曾雋崴律師，在地與跨境客戶的台灣法律夥伴');
+    expect(traditionalChineseHome).toContain('曾雋崴律師：服務在地與跨境客戶的台灣律師');
     expect(JSON.stringify(siteContent)).not.toContain('曾俊瑋');
     expect(JSON.stringify(pageCopy)).not.toContain('曾俊瑋');
     for (const source of publicCopySources) {

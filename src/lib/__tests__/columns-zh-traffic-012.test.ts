@@ -26,11 +26,11 @@ const incidentImage =
   '../images/012-taiwan-overtaking-accident-liability/img-01.jpg';
 const featuredAlt = '說明台灣超車事故責任判斷與安全超車程序的圖片';
 const incidentAlt = '顯示山路上機車與前方兩輛汽車超車路徑的事故示意圖';
-const officialLabel = '臺灣《道路交通安全規則》第101條';
+const officialLabel = '《道路交通安全規則》第101條';
 const supplementaryLabel = '超車法規與步驟圖解';
 const headings = [
   '道路交通安全規則第101條的超車要件',
-  '原文介紹的匿名事故案例',
+  '一件經匿名處理的事故案例',
   '判斷超車事故責任時應確認的事項',
 ] as const;
 const internalLinks = [
@@ -39,7 +39,7 @@ const internalLinks = [
     href: '/zh-hant/taiwan-litigation-lawyer',
   },
   {
-    label: '台灣韓語律師服務',
+    label: '可用韓文溝通的台灣律師',
     href: '/zh-hant/korean-lawyer-in-taiwan',
   },
   {
@@ -48,7 +48,7 @@ const internalLinks = [
   },
 ] as const;
 const disclaimer =
-  '本文僅提供台灣超車規則與事故責任判斷的一般法律資訊，不構成特定案件的法律意見或結果保證。實際責任可能因事故地點、車輛動態、速度、燈號、證據、鑑定結果及現行法規而異，具體案件仍應依相關資料個別分析。';
+  '本文只提供台灣超車規則與事故責任判斷的一般法律資訊，不能代替個案分析，也不保證結果。';
 
 const EXPECTED_VISIBLE_HAN = 1_052;
 
@@ -146,15 +146,15 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
 
   it('keeps the anonymized matter fact-specific and rejects a universal one-signal fault rule', () => {
     const requiredCaseFacts = [
-      '原文介紹的一件匿名案件中，機車駕駛人A載著乘客B行駛於山路。',
+      '有一件經匿名處理的案件，機車駕駛人A載著乘客B行駛於山路。',
       '前方有兩輛小客車，最前面的1號車行駛緩慢，因此2號車與機車也以較慢速度行進。',
       'A試圖一次超越前方兩車，駛入對向車道並加速。',
       '開啟方向燈後不到一秒即駛入對向車道。',
       '機車欠缺煞車餘裕，因而與2號車碰撞。',
       'B頭部受重傷，當場死亡；A失去意識，被送往醫院。',
       'A與B的家屬起初認為，2號車急速變換車道是碰撞的主要原因。',
-      '案件進入訴訟，過程中並進行多次事故鑑定。',
-      '依原文的案例敘述，鑑定認定A為本件碰撞的主要肇因。',
+      '案件進入訴訟後，做過多次事故鑑定。',
+      '依這件案例的敘述，鑑定認定A為本件碰撞的主要肇因。',
       '該結論僅限於本件事實。',
       '並不表示任何單一因素必然決定過失歸屬。',
     ];

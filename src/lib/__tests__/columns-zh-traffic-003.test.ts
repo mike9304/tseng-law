@@ -12,7 +12,7 @@ const rawBytes = fs.readFileSync(columnPath);
 const raw = rawBytes.toString('utf8');
 const parsed = matter(raw);
 
-const title = '台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償';
+const title = '台灣交通事故因應 Q&A：現場處置、過失、和解與損害賠償';
 const sourceUrl =
   'https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure';
 const featuredImage =
@@ -67,7 +67,7 @@ const approvedQ7WorkInabilityClause =
 const staleQ7TemporaryWorkInabilityClause =
   '以及經證明因暫時不能工作所生的收入損失與勞動能力減損；';
 const approvedQ11ContinuedWorkBasisParagraph =
-  '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題，亦非單獨判斷勞動能力減損的依據；勞動能力減損應於 Q12 另行判斷。';
+  '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題，亦非單獨判斷勞動能力減損的依據；勞動能力減損應另行判斷，詳見 Q12。';
 const staleQ11ContinuedWorkBasisParagraph =
   '繼續工作或薪資未減少的事實，與治療或恢復期間收入損失的判斷相關，但該事實不當然決定勞動能力減損問題；勞動能力減損應於 Q12 另行判斷。';
 const approvedQ14JointClaimParagraph =
@@ -986,7 +986,7 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
       },
       {
         label: 'employer confirmation',
-        pattern: /僱用人.{0,8}(?:證明|確認|說明)/,
+        pattern: /雇主.{0,8}(?:證明|確認|說明)/,
       },
       {
         label: 'self-employed business records',
@@ -1019,7 +1019,7 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
       },
       {
         label: 'Q12 separately determines capacity loss',
-        pattern: /勞動能力減損應於\s*Q12\s*另行判斷/,
+        pattern: /勞動能力減損應另行判斷，詳見\s*Q12/,
       },
     ]);
   });
@@ -1236,12 +1236,12 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
       {
         label: 'amendment and effective accident dates',
         pattern:
-          /2026-05-29.{0,30}(?:修正|發布).{0,30}2026-07-01.{0,24}(?:事故|發生)/s,
+          /2026年5月29日.{0,30}(?:修正|發布).{0,30}2026年7月1日.{0,24}(?:事故|發生)/s,
       },
       {
         label: 'earlier accidents may use earlier standard',
         pattern:
-          /2026-07-01.{0,24}(?:以前|前).{0,16}(?:事故|發生).{0,24}(?:先前|舊|原).{0,8}(?:標準|規定)/s,
+          /2026年7月1日.{0,24}(?:以前|前).{0,16}(?:事故|發生).{0,24}(?:先前|舊|原).{0,8}(?:標準|規定)/s,
       },
       {
         label: 'necessary and reasonable medical expense',
@@ -1275,10 +1275,10 @@ describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boun
       },
     ]);
 
-    expect(section).toContain('新臺幣 TWD 200,000');
-    expect(section).toContain('TWD 80,000–3,000,000');
-    expect(section).toContain('TWD 3,000,000');
-    expect(section).toContain('TWD 3,200,000');
+    expect(section).toContain('新臺幣200,000元');
+    expect(section).toContain('新臺幣80,000元至3,000,000元');
+    expect(section).toContain('新臺幣3,000,000元');
+    expect(section).toContain('新臺幣3,200,000元');
   });
 
   it('uses all 13 Q11–Q15 official URLs exactly once and in order with Traditional Chinese labels', () => {

@@ -1,0 +1,15 @@
+src/data/intent-pages.ts   (只改 'zh-hant' 區塊：台灣律師／公司設立律師／訴訟律師等意圖落地頁)
+src/app/[locale]/korean-lawyer-in-taiwan/content.ts
+src/app/[locale]/taiwan-debt-recovery-lawyer/content.ts
+src/app/[locale]/guides/taiwan-company-setup/content.ts
+src/data/legal-pages.ts   (只改 zh-hant：隱私權政策、免責聲明)
+src/data/foreign-matter-router.ts
+src/lib/semiconductor-public.ts
+src/components/consultation/AiConsultationSection.tsx
+src/components/MessengerChatSection.tsx
+src/components/FloatingAiChat.tsx
+src/components/floating-ai-quick-replies.ts
+src/components/ReviewBoard.tsx
+src/components/faq/FaqPublicExplorer.logic.ts
+src/lib/search.ts
+src/app/[locale]/search/page.tsx

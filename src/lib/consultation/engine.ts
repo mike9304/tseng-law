@@ -1160,7 +1160,7 @@ function buildFallbackAssistantMessage(context: Omit<ConsultationChatResponse, '
       divorce_family: '離婚與親權問題往往比流程本身更需要先確認具體事實與財產、子女情況。',
       inheritance: '繼承問題通常要先確認財產結構、家屬關係與目前程序狀態。',
       logistics: '物流或運輸業通常比一般公司設立更需要先看許可與管制要求。',
-      cosmetics: '化妝品進入市場除了設立流程外，也常需要一併確認登錄與銷售規範。',
+      cosmetics: '化粧品進入市場除了設立流程外，也常需要一併確認登錄與銷售規範。',
       general: '這個問題可以先在一般說明的範圍內整理。',
       unknown: '請先用一句話說明問題核心，我再用更安全的方式協助整理。',
     },

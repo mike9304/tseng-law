@@ -342,7 +342,7 @@ export function getContainerGalleryCopy(locale: Locale): ContainerGalleryCopy {
           {
             src: '/images/team/son-jungmin.jpg',
             alt: '圖庫律師',
-            caption: '韓語諮詢',
+            caption: '韓文諮詢',
             tags: ['團隊'],
           },
         ],

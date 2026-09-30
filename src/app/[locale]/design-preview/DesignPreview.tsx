@@ -172,7 +172,7 @@ const COPY: Record<SiteLocale, PreviewCopy> = {
 const SERVICES = [
   { index: '01', ko: '투자·법인설립', zh: '投資・公司設立', en: 'Investment & company setup', ja: '投資・会社設立', tone: 'sand' },
   { index: '02', ko: '민사소송·손해배상', zh: '民事訴訟・損害賠償', en: 'Civil litigation & damages', ja: '民事訴訟・損害賠償', tone: 'blue' },
-  { index: '03', ko: '가사소송', zh: '家事訴訟', en: 'Family disputes', ja: '家事訴訟', tone: 'clay' },
+  { index: '03', ko: '가사소송', zh: '家事事件', en: 'Family disputes', ja: '家事訴訟', tone: 'clay' },
   { index: '04', ko: '노동법·고용분쟁', zh: '勞動法・僱傭爭議', en: 'Employment & labor', ja: '労働法・雇用紛争', tone: 'mist' },
   { index: '05', ko: '형사소송', zh: '刑事訴訟', en: 'Criminal defense', ja: '刑事訴訟', tone: 'blue' },
   { index: '06', ko: '지적재산·금융분쟁', zh: '智慧財產・金融爭議', en: 'IP & financial disputes', ja: '知的財産・金融紛争', tone: 'sand' },

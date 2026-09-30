@@ -24,7 +24,7 @@ const locales = ['ko', 'zh-hant', 'en', 'ja'] as const satisfies readonly SiteLo
 // WO-X3b: the hero's localized CTA is now the email primary (columns CTA removed).
 const heroLabels = {
   ko: { cta: '이메일 상담 신청', scroll: '아래로 스크롤' },
-  'zh-hant': { cta: '申請電子郵件諮詢', scroll: '向下滾動' },
+  'zh-hant': { cta: '申請電子郵件諮詢', scroll: '向下捲動' },
   en: { cta: 'Request an Email Consultation', scroll: 'Scroll down' },
   ja: { cta: 'メール相談を申し込む', scroll: '下へスクロール' },
 } as const;
@@ -42,8 +42,8 @@ const contactCopy = {
     description: '사업·소송·법인설립 문의를 유형별로 빠르게 연결해드립니다.',
   },
   'zh-hant': {
-    title: '台灣法律議題，立即諮詢。',
-    description: '依案件類型安排投資、訴訟與公司設立諮詢流程。',
+    title: '台灣法律問題，歡迎來信諮詢。',
+    description: '依案件類型安排投資、訴訟及公司設立諮詢。',
   },
   en: {
     // WO-X1 (EN-06/J27): no unsupported urgency; reply language and time zone.

@@ -1,0 +1,33 @@
+摘錄後半還沒進上下文，我先把省略的專欄段落讀完，再依潤飾規範只挑實質問題。- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:43 | 全額匯入，並就該匯款向主管機關申報接受審查，再於投資實施後申請投資總額的審定 | 同句引用的《外國人投資條例》第9條，程序是核准出資於期限內全部到達、將到達情形報請查核，實行出資後申請審定投資額。現文寫成匯入、申報接受審查、投資總額，現金以外的出資會被漏掉，程序名稱也與同篇第55行「投資額審定」不一致。 | 經核准的出資應於核定期限內全部到達，並將到達情形報請主管機關查核，再於實行出資後申請審定投資額。
+- src/content/columns-zh/018-taiwan-semiconductor-market-entry.md:76 | 以上是契約設計建議。單純備有某一份表單，並不能保證交易合法 | 上面兩段是子公司與分公司的設立程序，沒有契約設計。這句把程序說明貼錯成寫約建議。 | 以上是設立程序的一般說明。單純備有某一份表單，並不能保證交易合法，也不能保證避免爭議。
+- src/content/columns-zh/018-taiwan-semiconductor-market-entry.md:70 | 設立子公司才須要經過經濟部投資審議司的審查 | 「須要」是「須」與「需要」寫混。標題的「才」又把投審司審查寫成設立子公司的必然步驟，同段正文用的是「原則上」。 | 設立分公司與子公司的程序不同，設立子公司原則上須經經濟部投資審議司審查
+- src/content/columns-zh/018-taiwan-semiconductor-market-entry.md:82 | 經理人，申請工作許可較容易。但為第2人以上的外國人 | 「較容易」沒有比較基準，讀起來像在保證經理人許可較好取得。「第2人以上」不像中文，也看不出門檻從哪一名外國人起算。 | 子公司及分公司經理人的工作許可，仍須依實際職務確認要件。自第二名外國人起，勞動部會依產業別要求資本額、營業額等門檻，設立前應先核對規劃的資本額。
+- src/content/columns-zh/018-taiwan-semiconductor-market-entry.md:98 | 再依負責人的指示，決定必要資料及傳送方式 | 本篇「負責人」都指公司負責人。這裡其實是本所告訴客戶下一步，會被讀成客戶公司的法定負責人。 | 再依本所律師的指示，決定必要資料及傳送方式
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:53 | 這並不表示備有這些文件任何銀行都會受理 | 「備有這些文件」和「任何銀行」黏在一起，句子讀不斷。 | 這並不表示備齊這些文件，任何銀行都會受理
+- src/content/columns-zh/014-taiwan-mandatory-employment-period.md:14 | 不得作為約定最低服務年限，或請求違約金、返還費用的依據 | 逗號把句子切成「費用不得作為最低服務年限」本身，語意不通。第99行相同。 | 其費用均不得作為約定最低服務年限的依據，也不得作為請求違約金或返還費用的依據。
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:18 | 租金減免、保證、額外押金及是否需要公證 | 同篇第79行是「保證人、押金、額外押金」。這裡的「保證」會被看成保證金。第69行同一句。 | 租金減免、保證人、押金、額外押金，以及是否需要公證
+- src/content/columns-zh/016-taiwan-inheritance-custody-analysis.md:65 | 向法院陳報清冊、聲請公示催告 | 繼承人是向法院陳報遺產清冊。公示催告是法院在陳報後公告，寫成另一件聲請，可能走去民事公示催告。 | 視個案向法院陳報遺產清冊，由法院依公示催告程序公告，再依程序通知債權人及依序清償
+- src/content/columns-zh/014-taiwan-mandatory-employment-period.md:38 | 不是。依《勞動基準法》第15條之1 | 本節標題是「何時可能有效」，開頭「不是」沒有對應的問題。第99行「不能。」、第125行「不必。」也是把問答的答句直接貼到正文。 | 刪去開頭的「不是。」，從「依《勞動基準法》第15條之1」寫起。第99行、第125行同樣刪去單獨的「不能。」「不必。」，直接寫函釋和條文。
+- src/content/columns-zh/016-taiwan-inheritance-custody-analysis.md:51 | 不同。《民法》第1030條之1 | 本節標題不是問句，「不同」沒有對照對象。第95行「不可以。」也是問答答句直接當正文開頭。 | 刪去「不同。」，從「《民法》第1030條之1所定……必須與繼承權及應繼分分開計算」寫起。第95行刪去「不可以。」，直接寫特有財產的歸屬。
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:41 | 公司登記所需的所在地使用權限 | 「權限」多指權限範圍。登記要證明的是使用權源。同篇第45、91行「出租人權限」，以及015篇第16、69、71、73、89、105行的「使用權限」，會和主管機關權限混在一起。 | 所在地使用權源；出租人是否有權出租
+- src/content/columns-zh/018-taiwan-semiconductor-market-entry.md:84 | ## 7. 依業務發展階段，比較適合的架構 | 上一節是第5節，中間沒有第6節，讀起來像漏了一節。 | 「## 7」改為「## 6」，下一節「## 8」改為「## 7」
+- src/content/columns-zh/015-taiwan-company-setup-pitch-location.md:49 | 請注意與第五點所定項目的隨案主動查詢加以區分 | 「請注意與……加以區分」接不起來，讀不成句。 | 請與作業須知第五點的隨案主動查詢區分開來。
+- src/content/columns-zh/018-taiwan-semiconductor-market-entry.md:74 | 設立時程較快 | 沒有比較基準，讀起來像保證分公司一定較快設完。前面已說明程序不同。 | 刪去「設立時程較快」，句末停在仍須完成名稱預查、營運資金匯入、驗資及稅籍登記等程序。
+- src/content/columns-zh/015-taiwan-company-setup-pitch-location.md:91 | 營業型態別許可 | 「型態別」是外文「～別」的直譯，台灣漢語不這樣講。同段第89行「個別行業法上資格」也是同一類直譯。 | 依營業型態另須取得的許可；各行業法規所定的資格
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:91 | 應分開進行多項法律與契約上的確認 | 「進行確認」是翻譯腔，動作被寫成名詞。 | 選擇營業場所時，下列法律與契約事項應分開確認
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:63 | 專業領域或職歷……不必然僅憑這一點就決定結果 | 「職歷」不是本篇用語，前後文都用「工作經歷」。「不必然僅憑這一點」是韓文句構。第16行問答相同。 | 過去的專業領域或工作經歷與新事業不同，不會只因這一點就決定審查結果。
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:27 | 工作許可及居留，需要分別準備 | 「準備」沒有受詞，這些程序不能說「準備」。 | 工作許可及居留，要分開辦理，文件也分開準備。
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:20 | 公司及商業登記營業場所預先查詢機制 | 把登記種類和制度名稱黏成一個專有名詞。015篇的名稱是「營業場所預先查詢」。第89行相同。 | 台北市對適用案件設有營業場所預先查詢
+- src/content/columns-zh/015-taiwan-company-setup-pitch-location.md:31 | 請確認管轄所在地的地方政府與各行業主管機關的最新說明 | 「管轄所在地」是外文語序，看不出是向營業所在地的地方政府確認。 | 請向營業所在地的地方政府與各行業主管機關確認最新說明。
+- src/content/columns-zh/016-taiwan-inheritance-custody-analysis.md:55 | 反之，婚姻期間較短或財產名義分散 | 「反之」接的不是前句的反面。前句是登記名義不能單獨定性，後句是另一個仍須查資料的情形，連接詞會把推論帶歪。 | 婚姻期間較短，或財產登記在不同人名下，也不能尚未核對資料就認定沒有請求權。
+- src/content/columns-zh/016-taiwan-inheritance-custody-analysis.md:97 | 也不是該財產的實質所有權人 | 前句已說父母不會因此成為所有權人。「實質所有」會多出借名、受益人一層意思。 | 父母或監護人縱使負責管理，也不是該財產的所有人
+- src/content/columns-zh/021-taiwanese-spouse-divorce-cross-border-parenting.md:29 | 民法第1055條規定對未成年子女權利義務的行使或負擔及會面交往 | 「規定對」少了動詞，句子在這裡斷掉。 | 民法第1055條規定的是未成年子女權利義務的行使或負擔，以及會面交往
+- src/content/columns-zh/014-taiwan-mandatory-employment-period.md:131 | 並不是不可歸責於勞工事由的封閉清單 | 「封閉清單」是 closed list 的直譯，台灣判決和律師文章不用這個詞。 | 這些只是必須檢視的情形，並沒有列舉完畢
+- src/content/columns-zh/014-taiwan-mandatory-employment-period.md:58 | 款項由雇主、勞工或第三人中的何者實際支付 | 「中的何者」是直譯句構。 | 款項實際上是雇主、勞工還是第三人支付
+- src/content/columns-zh/014-taiwan-mandatory-employment-period.md:56 | 可以回答勞工實際接受多少培訓 | 「回答……多少培訓」動賓不搭配。 | 可以看出這名勞工實際受訓多久
+- src/content/columns-zh/017-taiwan-logistics-business-setup.md:18 | 也不因此取得在臺工作資格 | 同篇第111行也寫「在臺」，第121行寫「在台」。同一頁應統一用「台」。 | 也不因此取得在台工作資格
+- src/content/columns-zh/016-taiwan-inheritance-custody-analysis.md:25 | 由誰行使負擔未成年子女的權利義務 | 法定用語是「行使、負擔」兩件事，少了頓號就黏成一個動作。同篇第75行有頓號。 | 由誰行使、負擔對未成年子女的權利義務
+- src/content/columns-zh/016-taiwan-inheritance-custody-analysis.md:89 | 財產利益衝突及支持網絡 | 「支持」是應改掉的用法，這裡指可協助照顧的親友。 | 財產上的利益衝突，以及可協助照顧的親友
+- src/content/columns-zh/013-taiwan-company-establishment-advanced-1.md:33 | 及申請時點的制度而異 | 「申請時點的制度」不成詞，也看不出是在修飾整句的哪一項。 | 會因投資申請人、事業內容、資金流向、公司組織形式、所在地、金融機構，以及申請當時的規定而不同。
+- src/content/columns-zh/018-taiwan-semiconductor-market-entry.md:42 | 並接收瑕疵主張或損害賠償請求 | 「接收瑕疵主張」是直譯。台灣契約文本說瑕疵異議、損害賠償。 | 並處理瑕疵異議或損害賠償請求
+VERDICT: ISSUES 32

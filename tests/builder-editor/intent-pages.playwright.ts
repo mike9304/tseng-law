@@ -17,5 +17,5 @@ test('localizes public intent landing page shell labels for ko and zh-hant', asy
   await expect(page.locator('.section-label').filter({ hasText: '相關服務' })).toContainText('相關服務');
   await expect(page.locator('.section-label').filter({ hasText: '相關專欄' })).toContainText('相關專欄');
   await expect(page.locator('.section-label').filter({ hasText: '下一步' })).toContainText('下一步');
-  await expect(page.locator('.authority-card-actions .button').filter({ hasText: '聯絡諮詢' })).toContainText('聯絡諮詢');
+  await expect(page.locator('.authority-card-actions .button').filter({ hasText: '電子郵件諮詢' })).toContainText('電子郵件諮詢');
 });

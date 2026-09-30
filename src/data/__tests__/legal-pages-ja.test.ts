@@ -130,7 +130,7 @@ describe('Japanese legal-page content', () => {
     );
 
     expect(legalPageContent['zh-hant'].privacy.sections[2]?.paragraphs[0]).toContain(
-      '以 90 日為保存基準予以刪除',
+      '保存 90 日，期滿後刪除',
     );
     expect(legalPageContent['zh-hant'].privacy.sections[6]?.paragraphs[0]).toContain(
       '請勿透過電子郵件或一般諮詢表單傳送身分證字號、護照號碼、銀行帳戶資料',

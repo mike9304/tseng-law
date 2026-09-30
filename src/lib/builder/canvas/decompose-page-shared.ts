@@ -75,9 +75,9 @@ const attorneyLabels = {
     experience: '經歷',
     source: '原始頁面',
     fullProfile: '完整簡介',
-    consult: '聯絡諮詢',
+    consult: '電子郵件諮詢',
     representative: '代表律師',
-    teamTitle: '所屬律師 · 職員',
+    teamTitle: '本所律師與同仁',
     partnerTitle: '合作會計師',
   },
   en: {
@@ -128,20 +128,20 @@ const consultationGuideCopy = {
   'zh-hant': {
     label: 'GUIDE',
     title: '諮詢前可先確認的事項',
-    description: '先整理聯絡方式與案件資料，可讓諮詢安排與後續回覆更有效率。',
+    description: '事先整理聯絡方式與案件資料，有助於安排諮詢並加快回覆。',
     cards: [
       {
         title: '可使用的聯絡方式',
         items: [
           '可透過電子郵件與電話提出詢問。',
           '提供台北面談，以及 Zoom 或 Google Meet 視訊諮詢。',
-          '以韓文、中文、英文、日文為主進行基本諮詢安排。',
+          '可使用韓文、中文、英文、日文安排諮詢。',
         ],
       },
       {
         title: '建議先準備的資料',
         items: [
-          '契約、報價單、公文、電子郵件與訊息紀錄等核心文件',
+          '契約、報價單、公文、電子郵件與訊息紀錄等主要文件',
           '公司名稱或當事人資訊、事件發生時間、目前進度',
           '照片、影片、判決、申報文件等可佐證事實的資料',
         ],
@@ -151,7 +151,7 @@ const consultationGuideCopy = {
         items: [
           '收到詢問後，先確認案件類型與急迫程度。',
           '如有需要，會請您補充資料並安排適合的諮詢方式。',
-          '預約確認後，再由律師或實務團隊進行正式諮詢。',
+          '預約確認後，由律師或事務所同仁進行正式諮詢。',
         ],
       },
     ],

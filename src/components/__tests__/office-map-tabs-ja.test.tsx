@@ -113,7 +113,7 @@ describe('WO-I18N-JA-C02B Japanese office maps', () => {
 
   it.each([
     ['ko', '오시는길', '타이베이', '타이베이 map', 'Google 지도에서 보기 (사진·리뷰)'],
-    ['zh-hant', '事務所據點', '台北', '台北 map', '在 Google 地圖查看 (照片·評論)'],
+    ['zh-hant', '事務所據點', '台北', '台北 map', '在 Google 地圖查看（照片、評論）'],
     ['en', 'Office Locations', 'Taipei', 'Taipei map', 'View on Google Maps (photos &amp; reviews)'],
   ] as const)(
     'preserves representative %s office output',

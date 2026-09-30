@@ -304,7 +304,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
       { key: 'pricing', label: '收費標準', href: '/zh-hant/pricing' },
       { key: 'insights', label: '昊鼎專欄', href: '/zh-hant/columns' },
       { key: 'traffic', label: '交通事故', href: '/zh-hant/traffic-accidents' },
-      { key: 'videos', label: '媒體中心', href: '/zh-hant/videos' },
+      { key: 'videos', label: '影音', href: '/zh-hant/videos' },
       { key: 'directions', label: '交通位置', href: '/zh-hant/contact#offices' }
     ];
   }
@@ -391,32 +391,32 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
         key: 'services',
         title: '服務領域',
         links: [
-          { label: '投資·公司設立', href: '/zh-hant/services/investment' },
-          { label: '民事訴訟·損害賠償', href: '/zh-hant/services/civil' },
-          { label: '家事訴訟', href: '/zh-hant/services/family' },
-          { label: '勞動法·僱傭爭議', href: '/zh-hant/services/labor' },
+          { label: '投資與公司設立', href: '/zh-hant/services/investment' },
+          { label: '民事訴訟與損害賠償', href: '/zh-hant/services/civil' },
+          { label: '家事事件', href: '/zh-hant/services/family' },
+          { label: '勞動與僱傭爭議', href: '/zh-hant/services/labor' },
           { label: '刑事訴訟', href: '/zh-hant/services/criminal' },
-          { label: '智慧財產·金融爭議', href: '/zh-hant/services/ip' },
+          { label: '智慧財產與金融爭議', href: '/zh-hant/services/ip' },
           { label: '查看全部', href: '/zh-hant/services' }
         ]
       }),
       withMegaIntro(locale, {
         key: 'videos',
-        title: '媒體中心',
+        title: '影音',
         links: [
           { label: 'YouTube @weilawyer', href: 'https://www.youtube.com/@weilawyer' },
           { label: 'Naver 部落格', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
-          { label: '影音頁面', href: '/zh-hant/videos' }
+          { label: '影音專區', href: '/zh-hant/videos' }
         ]
       }),
       withMegaIntro(locale, {
         key: 'about',
         title: '事務所介紹',
         links: [
-          { label: '事務所概覽', href: '/zh-hant/about' },
+          { label: '事務所簡介', href: '/zh-hant/about' },
           { label: '律師介紹', href: '/zh-hant/lawyers' },
           { label: '據點資訊', href: '/zh-hant/contact#offices' },
-          { label: '聯絡我們', href: getConsultationPublicMailto('zh-hant') }
+          { label: '電子郵件諮詢', href: getConsultationPublicMailto('zh-hant') }
         ]
       })
     ];

@@ -45,9 +45,9 @@ const copyByLocale: Record<
   },
   'zh-hant': {
     title: '找不到頁面',
-    description: '您所查找的網址可能已變更或不存在。',
+    description: '您要找的網頁可能已移動，或網址不存在。',
     home: '返回首頁',
-    contact: '聯絡諮詢',
+    contact: '電子郵件諮詢',
     brand: '昊鼎國際法律事務所',
   },
   en: {

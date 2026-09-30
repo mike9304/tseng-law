@@ -45,7 +45,7 @@ const expectedArchiveRecords = {
     href: '/zh-hant/insights/gym-injury-lawsuit',
     category: 'case',
     date: '2025.09.13',
-    readTime: '7分',
+    readTime: '7分鐘閱讀',
     image: '/images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
     keywords: ['健身房受傷', '損害賠償', '求償期限', '證據保存', '賠償項目'],
   },
@@ -66,14 +66,14 @@ const expectedArchiveRecords = {
 const expectedCivilIntros = {
   ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
   'zh-hant':
-    '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以事務所諮詢語言（中文、韓文、日文、英文）支援外國當事人在台灣的訴訟程序。',
+    '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以中文、韓文、日文或英文與外國當事人溝通，協助其進行在台訴訟。',
   en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a gym injury claim, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.',
 } as const;
 
 const expectedSiteCivilDescriptions = {
   ko: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
   'zh-hant':
-    '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以事務所諮詢語言（中文、韓文、日文、英文）全程支援外國當事人之台灣訴訟程序。',
+    '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，一審獲判新台幣157萬元賠償。外國當事人在台灣的訴訟程序，可全程以中文、韓文、日文或英文溝通。',
 } as const;
 
 const expectedCivilKeyPoints = {
@@ -86,12 +86,12 @@ const expectedCivilKeyPoints = {
     '대만 타이중지방법원 109年度消字第7號 판결은 트레이너의 지도로 데드리프트를 하던 한국인 유학생이 다친 사건에서 1심이 TWD 1,579,589의 배상을 명한 사례이고 공식 판결문에는 曾雋崴 변호사가 원고 소송대리인으로 기재되어 있으며, 이후 항소심에서 당사자들이 화해했다는 내용은 언론 보도에 따른 것입니다.',
   ],
   'zh-hant': [
-    '可能主張的損害項目包括醫療費用、必要的看護或照護費用、必要交通費用、復原期間有證明的收入損失、持續性障礙及相關證據成立時的勞動能力減損，以及依個案情形酌定的非財產上損害；消費者保護法第51條的懲罰性賠償，則須以該法及法定要件適用為前提，並由法院依個案判斷，故意為損害額五倍以下、重大過失為三倍以下、過失為一倍以下。',
-    'CCTV、病歷、收據、通訊紀錄、證人陳述及訓練紀錄宜以可確認原始來源與時間的形式保存；正式書面保全請求或律師函只能記錄請求內容與時間，不能強制對方保存、阻止刪除或當然產生不利推定，如事實可能涉及犯罪，及時報案可由偵查機關判斷是否具備合法調取或保全影像的依據，但不能斷定警方一定會取得CCTV。',
+    '可能主張的損害項目包括醫療費用、必要的看護或照護費用、必要交通費用、復原期間有證明的收入損失、有持續性障礙並經相關證據證明的勞動能力減損，以及依個案情形酌定的非財產上損害；消費者保護法第51條的懲罰性賠償，須以適用該法並符合法定要件為前提，並由法院依個案判斷，故意為損害額五倍以下、重大過失為三倍以下、過失為一倍以下。',
+    '監視器畫面、病歷、收據、通訊紀錄、證人陳述及訓練紀錄宜以可確認原始來源與時間的形式保存；正式書面保全請求或律師函只能記錄請求內容與時間，不能強制對方保存、阻止刪除或當然產生不利推定，如事實可能涉及犯罪，可及時報案。是否具備合法調取或保全影像的依據，由偵查機關判斷；但不能斷定警方一定會取得監視器畫面。',
     '消費者保護法第7條要求提供服務的企業經營者確保其服務符合當時科技或專業水準可合理期待的安全性，但健身房發生受傷事故不當然成立責任，仍須綜合判斷安全義務、違反情形、因果關係、損害、抗辯與證據，初步研判或過失鑑定意見也不會自動決定最終責任。',
-    '依刑法第287條，第284條過失傷害罪屬告訴乃論，刑事訴訟法第237條原則上要求告訴權人自知悉犯人時起六個月內提出告訴；依民法第197條，侵權行為損害賠償請求權原則上自知有損害及賠償義務人時起二年、最長自侵權行為時起十年不行使而消滅，其他請求權基礎與期間規則須依個案確認，而刑事附帶民事訴訟也僅能在與刑事案件的關聯性等法定要件及程序階段均符合時利用，費用效果亦應個別確認。',
+    '依刑法第287條，第284條過失傷害罪屬告訴乃論，刑事訴訟法第237條原則上要求告訴權人自知悉犯人時起六個月內提出告訴；依民法第197條，侵權行為損害賠償請求權原則上自知有損害及賠償義務人時起二年、最長自侵權行為時起十年不行使而消滅，其他請求權基礎與期間規則須依個案確認，刑事附帶民事訴訟須符合與刑事案件的關聯性等法定要件，並在法定程序階段提起；相關費用亦應個別確認。',
     '和解前應確認納入的請求、權利拋棄範圍、付款條件及違約處理方式；如治療仍在進行或將來損害尚未明確，亦應一併評估，因簽署後可能難以推翻或另行主張已納入和解範圍的權利。',
-    '臺灣臺中地方法院109年度消字第7號判決涉及一名韓國留學生在教練指導下進行硬舉訓練時受傷，一審判命賠償新臺幣1,579,589元，官方判決並記載曾雋崴律師為原告訴訟代理人；其後雙方於上訴程序成立和解之說法則僅依媒體報導。',
+    '臺灣臺中地方法院109年度消字第7號判決涉及一名韓國留學生在教練指導下進行硬舉訓練時受傷，一審判命賠償新臺幣1,579,589元，官方判決並記載曾雋崴律師為原告訴訟代理人；雙方其後在上訴程序成立和解的說法，僅依媒體報導。',
   ],
   en: [
     'Potential damages may include medical expenses, necessary nursing or care costs, necessary transportation, documented earnings lost during recovery, loss of earning capacity where lasting impairment and supporting evidence are established, and non-pecuniary loss assessed from the individual circumstances; punitive damages under Consumer Protection Act Article 51 require the Act and its statutory conditions to apply and remain subject to court assessment, with ceilings of five times the proven loss for intent, three times for gross negligence, and one time for negligence.',

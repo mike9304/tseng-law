@@ -22,7 +22,7 @@ const cardLabels = {
     practice: '主要服務領域',
     channels: '公開簡介與頻道',
     profile: '完整簡介',
-    contact: '聯絡諮詢',
+    contact: '電子郵件諮詢',
   },
   en: {
     eyebrow: 'Lead Attorney',

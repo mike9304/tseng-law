@@ -34,7 +34,7 @@ export const reviewCopy = {
     formTitle: '撰寫評價',
     moderationNote: '評價送出後會先審核再公開。請勿填寫個資、案件編號或外部連結。',
     nickname: '暱稱',
-    nicknamePh: '您的名字或暱稱',
+    nicknamePh: '請填寫暱稱，勿使用真實姓名。',
     rating: '評分',
     service: '使用服務',
     servicePh: '請選擇',

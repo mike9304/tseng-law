@@ -136,7 +136,7 @@ const expectedFamilyKeyPoints = {
     '법원이 본인 출석을 명령한 경우 정당한 이유 없는 불출석에는 첫 과태료가 3만 대만달러 이하이고 강제구인할 수 없으며, 이혼판결 확정일 또는 법원 조정·화해 성립일부터 일반적으로 30일 안에 호적 신고하되 기간 후 신청도 수리되고 요건을 갖추면 서면 최고 후 호정기관이 직접 등기할 수 있습니다.',
   ],
   'zh-hant': [
-    '台灣離婚應區分：依民法第1050條具備書面、兩名以上親自見聞並確認雙方真實離婚意思之證人簽名及戶政登記的協議離婚；法院調解或和解離婚；以及裁判離婚。',
+    '台灣離婚應區分：依民法第1050條具備書面、二人以上親自見聞並確認雙方真實離婚意思之證人簽名及戶政登記的協議離婚；法院調解或和解離婚；以及裁判離婚。',
     '跨國婚姻或外國離婚應分別確認台灣的司法管轄與行政權限、準據法、外國身分行為或裁判在台灣的承認及效力、台灣戶籍程序，以及其他國家或地區的程序。',
     '特定財產的登記與所有權，以及贈與、借名登記、借貸、返還等個別請求，應與民法第1030條之1夫妻剩餘財產差額分配分開分析；該請求的二年及五年期間不得一律套用於損害賠償、離婚後扶養或子女扶養費。',
     '配偶在有其他繼承人時，與民法所定相應順位的繼承人共同繼承；四個順序均無繼承人時，由配偶繼承全部遺產。應繼分依繼承人組成而異，繼承與配偶的剩餘財產相關請求也應分別計算。',
@@ -156,7 +156,7 @@ const expectedFamilyKeyPoints = {
 const expectedFamilyIntros = {
   ko: '한국-대만 국제결혼 증가에 따라 이혼·친권·상속 관련 분쟁이 늘고 있습니다. 법무법인 호정은 대만 가사소송법과 국제사법을 함께 검토하여, 한국인 의뢰인에게 최적의 전략을 제공합니다.',
   'zh-hant':
-    '因應韓台跨國婚姻增加，協助協議離婚、調解離婚、裁判離婚程序，以及法定繼承順位與剩餘財產分配請求。',
+    '因應台韓跨國婚姻增加，協助辦理協議離婚、調解離婚及裁判離婚，並處理法定繼承順位與剩餘財產分配請求。',
   en: 'Cross-border marriages bring divorce, custody, and inheritance questions that involve more than one country\'s law. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.',
 } as const;
 
@@ -513,7 +513,7 @@ describe('column 007 public reference synchronization', () => {
 
     expect(family?.title).toEqual({
       ko: '가사소송',
-      'zh-hant': '家事訴訟',
+      'zh-hant': '家事事件',
       en: 'Family Litigation',
     });
     expect(family?.columnSlugs).toEqual([
@@ -532,7 +532,7 @@ describe('column 007 public reference synchronization', () => {
     const civil = serviceAreas.find((area) => area.slug === 'civil');
     expect(civil?.title).toEqual({
       ko: '민사소송·손해배상',
-      'zh-hant': '民事訴訟·損害賠償',
+      'zh-hant': '民事訴訟與損害賠償',
       en: 'Civil Litigation & Damages',
     });
   });

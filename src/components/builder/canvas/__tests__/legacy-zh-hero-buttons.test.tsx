@@ -18,7 +18,7 @@ describe('saved ZH home button presentation', () => {
   it('retains the original scroll destination and provides a localized name', () => {
     const html = renderToStaticMarkup(<ButtonElement node={SCROLL} mode="published" locale="zh-hant" />);
     expect(html).toContain('href="#insights"');
-    expect(html).toContain('aria-label="向下滾動"');
+    expect(html).toContain('aria-label="向下捲動"');
     expect(html).toContain('pointer-events:auto');
     expect(html).toContain('<polyline points="6,10 14,18 22,10"');
   });

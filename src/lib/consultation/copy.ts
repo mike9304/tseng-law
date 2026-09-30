@@ -268,7 +268,7 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
       divorce_family: '離婚・親權・家事',
       inheritance: '繼承・遺囑',
       logistics: '物流業・運輸業',
-      cosmetics: '化妝品進入市場・登錄',
+      cosmetics: '化粧品進入市場・登錄',
       general: '一般詢問',
       unknown: '尚未分類',
     },

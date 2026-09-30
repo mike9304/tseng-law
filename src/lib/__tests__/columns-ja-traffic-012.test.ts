@@ -57,7 +57,7 @@ const EXPECTED_VISIBLE_JAPANESE = 1_743;
 const EXPECTED_VISIBLE_KANA = 898;
 const EXPECTED_READ_MINUTES = 4;
 const EXPECTED_SOURCE_SHA256 =
-  'd6ad716755035a665172155a5952beb2d5a4a7b95a7a39ff303b346edbe5b7d7';
+  '8144129c3ba288e838a121d60eb311a6a7da2abec1ad00157eb34be2fd7c83f4';
 
 const article101Groups = [
   '曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',
@@ -125,6 +125,8 @@ function countVisibleKana(content: string) {
 describe('Japanese traffic column 012 — overtaking accident liability', () => {
   it('publishes the exact frontmatter, sole H1, dates, category, and featured image', () => {
     expect(parsed.data).toEqual({
+      diagram: 'passing-stages-3d',
+      diagram_after: '道路交通安全規則第101条が定める追い越しの要件',
       title,
       url: sourceUrl,
       lastmod: '2026-09-30',

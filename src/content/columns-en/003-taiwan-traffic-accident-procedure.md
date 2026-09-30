@@ -9,6 +9,8 @@ categories:
   - "Taiwan Legal Information"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 summary: "After a Taiwan traffic accident, first secure the scene, report, and preserve evidence. Then review fault, claim deadlines, settlement, and compensation."
+diagram: "claim-records-3d"
+diagram_after: "Q7. What losses can I claim after an accident?"
 ---
 
 # Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation

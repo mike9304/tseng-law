@@ -18,8 +18,8 @@ type TrafficCopy = {
 
 export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
   ko: {
-    nav: '교통사고', kicker: '교통사고 법률 안내', title: '대만에서 난 교통사고,\n사고 직후부터 손해배상까지',
-    description: '대만에서 난 교통사고에서는 경찰 기록과 치료비, 보험 처리와 합의를 함께 봅니다. 한국·일본·미국으로 돌아갈 예정이라면 출국 일정과 남은 절차도 같이 봐야 합니다.',
+    nav: '교통사고', kicker: '호정 법률 칼럼', title: '대만 교통사고',
+    description: '경찰 자료 신청, 과실 판단, 보험과 손해배상. 사고를 겪은 뒤 생기는 질문과 귀국 후 남은 절차를 다룹니다.',
     read: '칼럼 읽기', columns: '대만 교통사고 칼럼',
     stages: [
       { title: '사고 직후', text: '안전과 구호가 먼저입니다. 신고·진료 기록과 현장 자료도 남깁니다.' },

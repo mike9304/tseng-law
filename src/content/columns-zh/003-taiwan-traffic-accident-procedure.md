@@ -7,6 +7,8 @@ read_time: "13分鐘閱讀"
 categories:
   - "台灣法律資訊"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
+diagram: "claim-records-3d"
+diagram_after: "Q7. 事故後可以向對方請求哪些損害？"
 ---
 
 # 台灣交通事故應對 Q&A：現場處置、過失、和解與損害賠償

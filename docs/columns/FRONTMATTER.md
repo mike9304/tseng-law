@@ -88,3 +88,16 @@ after the first paragraph of the named section, or before the body when no
 heading is given or found. Captions, including the illustrative-assumption
 note, live in the registry per locale (ko, zh-hant, en, ja). Builder/Blob copies
 keep the field from the .md file.
+
+## 칼럼별 Blender 도해
+
+교통사고 허브의 각 칼럼은 해당 글을 설명하는 도해를 하나씩 연결한다. 특정 사건의 미동의 재현물을 재사용하지 않는다. 본문 Markdown 이미지를 전역 허용하는 방식도 사용하지 않는다.
+
+```yaml
+diagram: "police-documents-3d"
+diagram_after: "경찰 자료별 신청 시점"
+```
+
+`diagram_after`는 해당 언어의 실제 H2와 일치해야 한다. `src/data/traffic-still-diagrams.ts`에서 새 WebP와 4개 언어의 설명을 등록한다. 정적 도해는 이미지로만 로딩하며, 기존 영상용 `diagram_video` 키도 계속 지원한다. 렌더 원본은 `scripts/blender/column-diagrams.py`; 생성 명령은 파일 머리말에 있다. 서류 양식이나 차량 배치를 실제 사건의 자료로 오인하지 않도록 필요한 설명을 붙인다.
+
+`src/lib/__tests__/traffic-diagrams.test.tsx`는 허브에 연결한 모든 교통사고 칼럼의 4개 언어 도해와 삽입 위치를 검사한다. 새 글을 추가할 때도 이 검사를 통과해야 한다.

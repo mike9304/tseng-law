@@ -88,6 +88,8 @@ function stripUrlsAndAssetPaths(value: string) {
 describe('Korean traffic column 012 — overtaking accident liability', () => {
   it('publishes the exact frontmatter, sole H1, dates, category, and featured image', () => {
     expect(parsed.data).toEqual({
+      diagram: 'passing-stages-3d',
+      diagram_after: '도로교통안전규칙 제101조가 정한 추월 요건',
       title,
       url: sourceUrl,
       lastmod: '2026-09-30',

@@ -9,11 +9,11 @@ topic: "litigation"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 author: "legal-ai-assistant"
 audience: ["zh-hant"]
+diagram: "police-documents-3d"
+diagram_after: "不同資料有不同申請時間。"
 ---
 
 # 台灣車禍警方資料怎麼申請？從現場紀錄到離臺前準備
-
-封面為假設情境示意圖，並非實際事故鑑定。
 
 發生事故後，應先照顧傷者並確保現場安全，再保留足以協助後續處理的紀錄。本文整理警方資料申請方式與諮詢前可準備的項目。
 

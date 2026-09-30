@@ -7,6 +7,8 @@ read_time: "4분 분량"
 categories:
   - "대만 법률정보"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
+diagram: "passing-stages-3d"
+diagram_after: "도로교통안전규칙 제101조가 정한 추월 요건"
 ---
 
 # 대만 추월 사고의 책임은 어떻게 판단하나요?

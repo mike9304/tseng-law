@@ -83,6 +83,8 @@ function countVisibleHan(content: string) {
 describe('Traditional Chinese traffic column 012 — overtaking accident liability', () => {
   it('publishes the exact frontmatter, sole H1, dates, category, and featured image', () => {
     expect(parsed.data).toEqual({
+      diagram: 'passing-stages-3d',
+      diagram_after: '道路交通安全規則第101條的超車要件',
       title,
       url: sourceUrl,
       lastmod: '2026-09-30',

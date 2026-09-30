@@ -204,7 +204,7 @@ export default async function ColumnsPage(
           title={copy.title}
           description={copy.description}
         />
-        <IssueBoardTabs locale={locale} active="expert" showTeaser />
+        <IssueBoardTabs locale={locale} active="expert" />
         <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} />
         <div className="container">
           <OriginalLanguageColumnsSection locale={locale} remainingPosts={remainingPosts} />
@@ -249,7 +249,7 @@ export default async function ColumnsPage(
 
     return (
       <>
-        <IssueBoardTabs locale={locale} active="expert" showTeaser />
+        <IssueBoardTabs locale={locale} active="expert" />
         <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />
         <EnAcquisitionGuideLinks locale={locale} />
       </>
@@ -307,7 +307,7 @@ export default async function ColumnsPage(
       {showHero ? (
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
-      <IssueBoardTabs locale={locale} active="expert" showTeaser />
+      <IssueBoardTabs locale={locale} active="expert" />
       {showRepeater ? <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} /> : null}
       <EnAcquisitionGuideLinks locale={locale} />
     </>

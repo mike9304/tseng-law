@@ -37,8 +37,8 @@ export interface ColumnPost {
   /** Frontmatter `author: legal-ai-assistant` → written by AI, no attorney byline. */
   aiAuthored?: boolean;
   /**
-   * Frontmatter `diagram_video` (+ optional `diagram_video_after` heading): an
-   * animated diagram from src/data/traffic-diagrams.ts rendered outside the
+   * Frontmatter `diagram` (+ optional `diagram_after` heading), or legacy
+   * `diagram_video` keys: a still or animated diagram rendered outside the
    * markdown body, so it survives `stripInlineImages`.
    */
   diagramVideo?: { id: string; afterHeading?: string };

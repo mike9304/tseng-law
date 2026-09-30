@@ -34,16 +34,11 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
         </div>
       </section>
       <div className={styles.container}>
-        <ol className={styles.stages}>
-          {copy.stages.map((stage, index) => <li key={stage.title}>
-            <span className={styles.number}>0{index + 1}</span><h2>{stage.title}</h2><p>{stage.text}</p>
-          </li>)}
-        </ol>
         <section className={styles.section} id="articles" aria-labelledby="articles-title">
           <div className={styles.heading}><h2 id="articles-title">{copy.columns}</h2><Link href={`/${locale}/columns`}>{copy.allColumns} →</Link></div>
-          <div className={styles.articles}>{posts.map((post, index) => post && (
+          <div className={styles.articles}>{posts.map((post) => post && (
             <Link className={styles.article} key={post.slug} href={`/${locale}/columns/${post.slug}`}>
-              <span className={styles.number}>0{index + 1}</span><h3>{post.title}</h3><p>{post.summary}</p><span className={styles.read}>{copy.read} →</span>
+              <h3>{post.title}</h3><p>{post.summary}</p><span className={styles.read}>{copy.read} →</span>
             </Link>
           ))}</div>
         </section>

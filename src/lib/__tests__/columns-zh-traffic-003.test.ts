@@ -344,6 +344,8 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
 
   it('uses the exact frontmatter, sole H1, and two contracted images', () => {
     expect(parsed.data).toEqual({
+      diagram: 'claim-records-3d',
+      diagram_after: 'Q7. 事故後可以向對方請求哪些損害？',
       title,
       url: sourceUrl,
       lastmod: '2026-09-30',

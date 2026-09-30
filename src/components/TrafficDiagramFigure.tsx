@@ -1,4 +1,5 @@
 import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
+import Image from 'next/image';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import {
   TRAFFIC_DIAGRAMS,
@@ -40,8 +41,10 @@ export default function TrafficDiagramFigure({
       data-traffic-diagram={diagram.id}
       aria-describedby={captionId}
     >
-      <div className={styles.frame}>
-        <DecorativeAutoplayVideo
+      <div className={diagram.kind === 'still' ? styles.stillFrame : styles.frame}>
+        {diagram.kind === 'still' ? (
+          <Image src={diagram.poster} alt={copy.alt} width={diagram.width} height={diagram.height} sizes={sizes} loading="lazy" />
+        ) : <DecorativeAutoplayVideo
           mp4Src={diagram.mp4}
           webmSrc={diagram.webm}
           poster={diagram.poster}
@@ -53,7 +56,7 @@ export default function TrafficDiagramFigure({
           sizes={sizes}
           rootMargin="200px 0px"
           controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}
-        />
+        />}
       </div>
       <figcaption id={captionId} className={styles.caption}>
         <strong className={styles.legend}>{copy.legend}</strong>

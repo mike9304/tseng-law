@@ -37,6 +37,15 @@ const posts: ColumnListItem[] = [
 ];
 
 describe('ColumnsGrid topic grouping', () => {
+  it('limits the opening recommendations to three without losing the remaining topic links', () => {
+    nav.params = new URLSearchParams();
+    const many = Array.from({ length: 8 }, (_, i) => ({ ...post(`r${i}`, 'family'), audience: ['ko'] }));
+    const html = renderToStaticMarkup(<ColumnsGrid locale="ko" posts={many} />);
+    const opening = html.split('data-columns-recommended="ko"')[1]?.split('</section>')[0] ?? '';
+    expect(opening.match(/class="columns-card"/g)).toHaveLength(3);
+    expect(html).toContain('data-columns-topic-section="family"');
+    expect(html).toContain('data-columns-topic-more="family"');
+  });
   it('renders one section per topic in canonical order, previewing at most 3 cards each', () => {
     nav.params = new URLSearchParams();
     const html = renderToStaticMarkup(<ColumnsGrid locale="ko" posts={posts} />);

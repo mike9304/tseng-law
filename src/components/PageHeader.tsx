@@ -50,7 +50,9 @@ export default function PageHeader({
       <div className="container">
         <div className={styles.pageHeaderCopy}>
           <Breadcrumbs locale={locale} current={title} />
-          <SectionLabel data-builder-surface-key="section-label">{label}</SectionLabel>
+          {label.trim().toLocaleLowerCase() !== title.trim().toLocaleLowerCase() ? (
+            <SectionLabel data-builder-surface-key="section-label">{label}</SectionLabel>
+          ) : null}
           <h1 className="hero-title page-header-title" data-builder-surface-key="headline">
             {renderProtectedTitle(locale, title)}
           </h1>

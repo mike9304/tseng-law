@@ -360,6 +360,8 @@ describe('Japanese traffic column 003 — metadata and introduction localization
 
   it('uses the exact contracted frontmatter and one matching H1', () => {
     expect(parsedPrefix.data).toEqual({
+      diagram: 'claim-records-3d',
+      diagram_after: 'Q7. 事故後、どのような損害を請求できますか？',
       title: expectedTitle,
       url: sourceUrl,
       lastmod: '2026-09-30',

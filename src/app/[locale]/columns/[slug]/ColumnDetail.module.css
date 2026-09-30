@@ -142,7 +142,7 @@
   max-width: 760px;
   width: 100%;
   padding: 0;
-  background: #fff;
+  background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -164,8 +164,8 @@
 
 .article :global(.column-markdown) :global(h2.blog-heading),
 .article :global(.column-faq-heading) {
-  font-size: 34px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 38px;
   font-weight: var(--column-typo-heading-weight, 700);
   color: var(--text-heading);
   margin-top: 2.5rem;

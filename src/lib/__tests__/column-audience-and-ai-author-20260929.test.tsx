@@ -133,7 +133,7 @@ describe('client reading signals', () => {
     );
     expect(html).toContain('data-recommended-for-you="home"');
     expect(html).toContain('data-personalized="false"');
-    expect(html).toContain('맞춤 추천 칼럼');
+    expect(html).toContain('함께 읽을 글');
     expect(html.match(/<a /g)).toHaveLength(3);
     expect(html.match(/card-stretched-link/g)).toHaveLength(3);
     expect(html).not.toContain('/ko/columns/four');

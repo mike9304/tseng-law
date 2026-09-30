@@ -519,6 +519,7 @@ export default function ColumnsGrid({
     [locale, incomingPosts, recommendedTitle],
   );
   const posts = useMemo(() => [...recommended, ...nonRecommended], [recommended, nonRecommended]);
+  const openingPosts = recommended.slice(0, COLUMN_TOPIC_SECTION_PREVIEW);
   const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
   const labels = categoryFilterLabels(locale);
   const byline =
@@ -797,15 +798,15 @@ export default function ColumnsGrid({
                 <header className="columns-topic-header">
                   <h2 id="columns-recommended" className="columns-topic-title">{recommendedTitle}</h2>
                   <span className="columns-topic-count">
-                    {topicMode ? topicCopy.count(recommended.length) : recommended.length}
+                    {topicMode ? topicCopy.count(openingPosts.length) : openingPosts.length}
                   </span>
                 </header>
-                <div className="columns-grid">{recommended.map(renderCard)}</div>
+                <div className="columns-grid">{openingPosts.map(renderCard)}</div>
               </section>
             ) : null}
             {groups.map((group) => {
               // Recommended posts are already shown above; preview the others.
-              const pool = recommended.length > 0 ? group.posts.filter((post) => !recommended.includes(post)) : group.posts;
+              const pool = openingPosts.length > 0 ? group.posts.filter((post) => !openingPosts.includes(post)) : group.posts;
               if (pool.length === 0) return null;
               const preview = topicMode ? pool.slice(0, COLUMN_TOPIC_SECTION_PREVIEW) : pool;
               const headingId = `columns-topic-${group.key}`;

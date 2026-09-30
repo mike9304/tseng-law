@@ -9,6 +9,8 @@ categories:
   - "Taiwan Legal Information"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
 summary: "Taiwan overtaking liability turns on Article 101, the location, and space to pass and return safely. This article reviews the rule and an anonymized case."
+diagram: "passing-stages-3d"
+diagram_after: "What Article 101 requires"
 ---
 
 # How Is Liability Assessed After an Overtaking Accident in Taiwan?

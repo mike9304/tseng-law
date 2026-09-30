@@ -354,6 +354,8 @@ describe('English traffic column 003 — metadata and introduction localization 
 
   it('uses the exact contracted frontmatter and sole matching H1', () => {
     expect(parsed.data).toEqual({
+      diagram: 'claim-records-3d',
+      diagram_after: 'Q7. What losses can I claim after an accident?',
       title,
       seoTitle: 'Taiwan Traffic Accident Fault & Compensation',
       url: sourceUrl,

@@ -6,6 +6,7 @@ import { getColumnPost } from '../columns';
 import { extractColumnToc } from '../column-toc';
 import { siteLocales } from '../locales';
 import ColumnContent from '@/components/ColumnContent';
+import { TRAFFIC_COLUMN_SLUGS } from '@/data/traffic-hub';
 import {
   TRAFFIC_DIAGRAMS,
   type TrafficDiagram,
@@ -17,8 +18,30 @@ const publicFile = (src: string) => path.join(process.cwd(), 'public', src);
 const MAX_VIDEO_BYTES = 1.5 * 1024 * 1024;
 
 describe('animated traffic diagrams', () => {
+  it('gives each core-language traffic column its own original diagram', () => {
+    const slugs = TRAFFIC_COLUMN_SLUGS;
+    for (const locale of siteLocales) {
+      const ids = slugs.map(slug => getColumnPost(slug, locale)?.diagramVideo?.id);
+      expect(ids.every(Boolean), locale).toBe(true);
+      expect(new Set(ids).size, locale).toBe(slugs.length);
+      expect(ids).not.toContain('overtaking-012');
+      for (const slug of slugs) {
+        const post = getColumnPost(slug, locale)!;
+        expect(post.diagramVideo?.afterHeading, `${locale}/${slug}`).toBeTruthy();
+        expect(splitColumnContentAfterHeading(post.content, post.diagramVideo!.afterHeading!), `${locale}/${slug}`).not.toBeNull();
+      }
+    }
+  });
   it('ships bounded MP4/WebM loops and WebP posters for every diagram', () => {
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
+      if (diagram.kind === 'still') {
+        for (const src of [diagram.poster, diagram.mobilePoster]) {
+          const bytes = fs.readFileSync(publicFile(src));
+          expect(bytes.length, src).toBeLessThan(120 * 1024);
+          expect(bytes.subarray(8, 12).toString(), src).toBe('WEBP');
+        }
+        continue;
+      }
       for (const src of [diagram.mp4, diagram.mobileMp4]) {
         const bytes = fs.readFileSync(publicFile(src));
         expect(bytes.length, src).toBeLessThan(MAX_VIDEO_BYTES);
@@ -44,7 +67,11 @@ describe('animated traffic diagrams', () => {
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
       for (const locale of siteLocales) {
         const copy = diagram.copy[locale];
-        expect(copy.assumption.startsWith(markers[locale]), `${diagram.id}/${locale}`).toBe(true);
+        if (diagram.kind === 'still') {
+          expect(copy.assumption.length).toBeGreaterThan(15);
+        } else {
+          expect(copy.assumption.startsWith(markers[locale]), `${diagram.id}/${locale}`).toBe(true);
+        }
         expect(copy.caption.length).toBeGreaterThan(20);
         expect(copy.alt.length).toBeGreaterThan(20);
       }
@@ -55,7 +82,7 @@ describe('animated traffic diagrams', () => {
     expect(Object.keys(TRAFFIC_DIAGRAMS)).not.toContain('overtaking-012');
     for (const locale of siteLocales) {
       const post = getColumnPost('taiwan-overtaking-accident-liability', locale)!;
-      expect(post.diagramVideo, locale).toBeUndefined();
+      expect(post.diagramVideo?.id, locale).not.toBe('overtaking-012');
     }
   });
 

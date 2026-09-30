@@ -10,11 +10,11 @@ topic: "litigation"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 author: "legal-ai-assistant"
 audience: ["en"]
+diagram: "police-documents-3d"
+diagram_after: "When can you request police records?"
 ---
 
 # Taiwan accident police records: what to collect before leaving
-
-The cover is a hypothetical illustration, not a forensic reconstruction.
 
 After a traffic accident in Taiwan, prioritize care and safety, then organize records for follow-up. Drivers involved in injury or death accidents must take rescue measures, notify police and preserve scene evidence. [Road Traffic Management and Penalty Act, Article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
 

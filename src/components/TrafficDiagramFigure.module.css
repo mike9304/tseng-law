@@ -1,4 +1,6 @@
 .figure { margin: 28px 0 0; }
+.stillFrame { background: #eeece4; overflow: hidden; }
+.stillFrame img { display: block; width: 100%; height: auto; }
 .frame {
   position: relative;
   width: 100%;

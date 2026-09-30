@@ -1,4 +1,5 @@
 import type { SiteLocale } from '@/lib/locales';
+import { TRAFFIC_STILL_DIAGRAMS } from './traffic-still-diagrams';
 
 /**
  * Animated Blender diagrams for the traffic-accident pages.
@@ -10,10 +11,9 @@ import type { SiteLocale } from '@/lib/locales';
  *   diagram_video_after: "<## heading text>"   # optional: place the figure after
  *                                              # the first paragraph of that section
  *
- * Rules (tseng-blender-pilot/traffic/ROUTINE.md): no text inside the frames
- * (number badges only), the clip freezes just before contact, only facts from
- * the source account are drawn, and every caption carries the
- * illustrative-assumption note.
+ * Only original generic explanations are permitted. Never restore the withdrawn
+ * overtaking-012 reconstruction. Numbers in the render refer to localized captions.
+ * New content may use `diagram` / `diagram_after`; legacy video keys still work.
  */
 export type TrafficDiagramLocale = Extract<SiteLocale, 'ko' | 'zh-hant' | 'en' | 'ja'>;
 
@@ -26,29 +26,23 @@ export type TrafficDiagramCopy = {
 
 export type TrafficDiagram = {
   id: string;
-  mp4: string;
-  webm: string;
-  mobileMp4: string;
-  mobileWebm: string;
   poster: string;
   mobilePoster: string;
   width: number;
   height: number;
   mobileWidth: number;
   mobileHeight: number;
-  durationSeconds: number;
   copy: Record<TrafficDiagramLocale, TrafficDiagramCopy>;
-};
+} & ({ kind: 'still' } | { kind?: 'video'; mp4: string; webm: string; mobileMp4: string; mobileWebm: string; durationSeconds: number });
 
 export const TRAFFIC_DIAGRAM_MOBILE_QUERY = '(max-width: 640px)';
 
 /**
- * Registry is intentionally empty: the overtaking-012 reconstruction was withdrawn
+ * The overtaking-012 reconstruction was withdrawn
  * on 2026-09-30 (the party in that case did not consent). Only generic,
  * hypothetical scenes that cannot be linked to a real case may be added here.
  */
-export const TRAFFIC_DIAGRAMS = {
-} as const satisfies Record<string, TrafficDiagram>;
+export const TRAFFIC_DIAGRAMS = TRAFFIC_STILL_DIAGRAMS satisfies Record<string, TrafficDiagram>;
 
 export type TrafficDiagramId = keyof typeof TRAFFIC_DIAGRAMS;
 

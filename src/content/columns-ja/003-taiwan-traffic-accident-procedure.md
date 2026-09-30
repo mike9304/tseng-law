@@ -7,6 +7,8 @@ read_time: "約8分"
 categories:
   - "台湾法律情報"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
+diagram: "claim-records-3d"
+diagram_after: "Q7. 事故後、どのような損害を請求できますか？"
 ---
 
 # 台湾交通事故対応Q&A：現場対応・過失・示談・損害賠償

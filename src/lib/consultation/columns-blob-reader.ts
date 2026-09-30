@@ -119,7 +119,8 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     readTime: doc.frontmatter?.readTime || estimateReadTime(content, doc.locale),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
-    topic: resolveColumnTopic(doc.slug, (doc.frontmatter as { topic?: unknown } | undefined)?.topic, category),
+    topic: resolveColumnTopic(doc.slug, (doc.frontmatter as { topic?: unknown } | undefined)?.topic
+      ?? getAllColumnPosts(doc.locale).find((post) => post.slug === doc.slug)?.topic, category),
     blogCategory: doc.frontmatter?.blogCategory || legacyCategoryToBlogCategory(category),
     authorName: doc.frontmatter?.author?.name,
     tags: doc.frontmatter?.tags ?? [],
@@ -158,7 +159,8 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     readTime: doc.frontmatter.readTime || estimateReadTime(content, doc.locale),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
-    topic: resolveColumnTopic(doc.slug, (doc.frontmatter as { topic?: unknown }).topic, category),
+    topic: resolveColumnTopic(doc.slug, (doc.frontmatter as { topic?: unknown }).topic
+      ?? getAllColumnPosts(doc.locale).find((post) => post.slug === doc.slug)?.topic, category),
     blogCategory: doc.frontmatter.blogCategory || legacyCategoryToBlogCategory(category),
     authorName: doc.frontmatter.author?.name,
     tags: doc.frontmatter.tags ?? [],

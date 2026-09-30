@@ -191,6 +191,8 @@ function q11ToQ15QuestionSection(questionNumber: number) {
 describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
   it('uses the contracted frontmatter, sole H1, and two descriptive images', () => {
     expect(parsed.data).toEqual({
+      diagram: 'claim-records-3d',
+      diagram_after: 'Q7. 사고 발생 뒤 어떤 손해를 청구할 수 있나요?',
       title,
       url: sourceUrl,
       lastmod: '2026-09-30',

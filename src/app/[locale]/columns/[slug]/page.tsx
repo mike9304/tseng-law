@@ -266,10 +266,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // first), then this locale's recommended columns, then the rest. The client
   // may reorder by session interests (sessionStorage only).
   const otherPosts = prioritizeRecommendedColumns(urlLocale, allPosts.filter((p) => p.slug !== post.slug));
-  const recommendedItems = [
+  const isTrafficColumn = (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(post.slug);
+  const recommendedItems = (isTrafficColumn ? otherPosts.filter((p) => (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(p.slug)) : [
     ...otherPosts.filter((p) => p.topic && p.topic === post.topic),
     ...otherPosts.filter((p) => !p.topic || p.topic !== post.topic),
-  ]
+  ])
     .slice(0, 15)
     .map((p) => ({
       slug: p.slug,
@@ -433,6 +434,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
                 items={recommendedItems}
                 currentSlug={post.slug}
                 currentTopic={post.topic}
+                preserveOrder={isTrafficColumn}
               />
             </div>
             <aside className="blog-sidebar">

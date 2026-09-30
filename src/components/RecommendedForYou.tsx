@@ -20,10 +20,10 @@ export type RecommendedItem = {
 };
 
 const HEADING: Record<string, string> = {
-  ko: '맞춤 추천 칼럼',
-  en: 'Recommended for you',
-  ja: 'あなたへのおすすめ',
-  'zh-hant': '為您推薦',
+  ko: '함께 읽을 글',
+  en: 'Related reading',
+  ja: 'あわせて読みたい記事',
+  'zh-hant': '延伸閱讀',
   'zh-hans': '为您推荐',
   vi: 'Gợi ý cho bạn',
   id: 'Rekomendasi untuk Anda',
@@ -47,6 +47,7 @@ export default function RecommendedForYou({
   count = 3,
   currentSlug,
   currentTopic,
+  preserveOrder = false,
 }: {
   locale: string;
   /** e.g. `/ko/columns` */
@@ -57,17 +58,20 @@ export default function RecommendedForYou({
   /** Set on a column page: records the view and excludes the column itself. */
   currentSlug?: string;
   currentTopic?: string;
+  /** Keep editorial subject relevance ahead of session interests. */
+  preserveOrder?: boolean;
 }) {
   const pool = useMemo(() => items.filter((item) => item.slug !== currentSlug), [items, currentSlug]);
   const [ordered, setOrdered] = useState<readonly RecommendedItem[] | null>(null);
 
   useEffect(() => {
+    if (preserveOrder) return;
     const signals = currentSlug ? recordColumnView(currentSlug, currentTopic) : captureLanding();
     if (!hasTopicSignals(signals) && signals.viewed.length === 0) return;
     setOrdered(personalizeOrder(pool, signals));
-  }, [pool, currentSlug, currentTopic]);
+  }, [pool, currentSlug, currentTopic, preserveOrder]);
 
-  const visible = (ordered ?? pool).slice(0, count);
+  const visible = (preserveOrder ? pool : ordered ?? pool).slice(0, count);
   if (visible.length === 0) return null;
   const heading = HEADING[locale] ?? HEADING.en;
 
@@ -76,7 +80,7 @@ export default function RecommendedForYou({
       className="recommended-for-you"
       aria-label={heading}
       data-recommended-for-you={currentSlug ? 'column' : 'home'}
-      data-personalized={ordered ? 'true' : 'false'}
+      data-personalized={!preserveOrder && ordered ? 'true' : 'false'}
     >
       <h2 className="recommended-for-you-title">{heading}</h2>
       <ul className="recommended-for-you-grid">

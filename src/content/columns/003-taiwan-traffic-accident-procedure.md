@@ -7,6 +7,8 @@ read_time: "8분 분량"
 categories:
   - "대만 법률정보"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
+diagram: "claim-records-3d"
+diagram_after: "Q7. 사고 발생 뒤 어떤 손해를 청구할 수 있나요?"
 ---
 
 # 대만 교통사고 대응 Q&A: 현장조치·과실·합의·손해배상

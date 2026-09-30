@@ -160,3 +160,9 @@ files touched). Diff: 6 files, +62 / −26.
 - `next start -p 3471`, then `shoot.mjs` into `/Users/son7/tseng-design-20260930/after/`: 40 shots on 10 pages × desktop/mobile × fold/full.
 - The before shots in `/Users/son7/tseng-design-20260930/before/` were taken on b02f8178. The zh-traffic and zh-column-detail differences therefore also include main's traffic animation changes, which are not part of this branch. After shots were taken on 4c18f162 + this branch.
 - Service detail (investment), desktop full: page height went from 4970px to 4450px because related-column summaries are clamped to 4 lines. Card bottoms are aligned.
+
+## Final merge note (21:50 KST)
+- Before merging, `origin/main` 03bcbc53 (21:35) arrived with its own editorial redesign of the column cards in `ColumnsGrid.module.css`: borderless cards with a bottom rule, 3-line summary clamp, 16px/26px summary. It conflicted with item 2 of this branch (equal-height column cards).
+- To avoid clobbering that work, this branch keeps main's `ColumnsGrid.module.css` unchanged. The column-card part of the refresh (item 2) has been dropped.
+- The other items (hero CTA, home service cards, service-detail related columns, pricing, insights tags, blur removal, issue board) remain.
+- Final Astra (GPT-6 Astra, xhigh) review of this branch: APPROVE (`DESIGN-FINAL-ASTRA.md`).

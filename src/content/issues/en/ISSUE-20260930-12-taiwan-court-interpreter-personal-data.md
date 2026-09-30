@@ -1,6 +1,6 @@
 ---
 title: "When a Taiwan Court Hearing Goes Ahead Without an Interpreter"
-seoTitle: "Court Interpreter Rights and Personal Data Law in Taiwan"
+seoTitle: "Taiwan Court Interpreters and Personal Data"
 summary: "Taiwan law requires interpreters when defendants cannot understand the language. Posting personal data during a dispute can also carry criminal penalties."
 published: "2026-09-30"
 lastmod: "2026-09-30"

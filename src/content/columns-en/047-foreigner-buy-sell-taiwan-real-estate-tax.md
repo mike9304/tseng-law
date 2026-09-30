@@ -1,7 +1,7 @@
 ---
-title: "Buying, Holding, and Selling a Taiwan Flat as a Foreigner"
-seoTitle: "Foreign Buyer Tax on a Taiwan Flat"
-summary: "A foreign buyer of a Taiwan flat needs a Land Act reciprocity check and pays deed tax; on a sale, tax residence decides the house-and-land income-tax rates."
+title: "Buying and Selling a Flat in Taiwan as a Foreigner"
+seoTitle: "Taiwan Property Taxes for Foreign Buyers"
+summary: "A foreign buyer of a flat in Taiwan needs a Land Act reciprocity check and pays deed tax. On sale, tax residence sets the house-and-land income-tax rates."
 published: "2026-09-30"
 lastmod: "2026-09-30"
 date_display: "September 30, 2026"
@@ -12,77 +12,98 @@ topic: "tax"
 featured_image: "../images/047-foreigner-buy-sell-taiwan-real-estate-tax/featured-01.webp"
 faq:
   - q: "Can any foreign individual buy a flat in Taiwan?"
-    a: "Land Act Article 18 allows a foreigner to acquire land rights only if, by treaty or under that person's national law, Taiwan nationals enjoy the same rights in that country. Article 17 bars some land types, including forest and water-source land. Article 19 allows listed uses such as a residence, subject to area and location limits set by the local government, and Article 20 requires that government's approval. This column does not name countries. Confirm the reciprocity list the land office is using before you sign."
+    a: "Under Land Act Article 18, a foreigner may acquire land rights only if, by treaty or under that person's national law, Taiwan nationals enjoy the same rights in that country. Article 17 bars the transfer, encumbrance or lease of certain land types, including forest and water-source land, to foreigners. Article 19 permits specified uses, including residential use, subject to area and location limits set by the local government. Article 20 requires local government approval. Before signing, a buyer needs to establish whether their country is on the reciprocity list the land office is using."
   - q: "Is the purchase deed tax 6 percent of the contract price?"
-    a: "Deed Tax Act Article 3 sets the sale-deed rate at 6 percent of the deed price. Article 13 says that deed price is the standard price set by the local real estate assessment committee, except where Article 11 applies and the transfer price is lower. Article 2 exempts land in an area where land value increment tax is levied. The buyer files and pays the sale deed tax."
+    a: "Deed Tax Act Article 3 sets deed tax on a sale at 6 percent of the deed price. Under Article 13, the deed price is the standard price set by the local real estate assessment committee, unless Article 11 applies and the transfer price is lower. Article 2 exempts land in an area where land value increment tax is levied. The buyer files and pays the sale deed tax."
   - q: "What income-tax rate applies if I am not a Taiwan tax resident when I sell?"
-    a: "Income Tax Act Article 14-4 sets two rates for an individual who is not a resident of the Republic of China: 45 percent if the holding period is within two years, and 35 percent if the holding period exceeds two years. Article 14-5 requires a filing within 30 days from the day after ownership-transfer registration, whether or not tax is due. A resident uses a different rate list in the same article."
+    a: "Income Tax Act Article 14-4 sets two rates for an individual who is not a resident of the Republic of China: 45 percent if the holding period is within two years, and 35 percent if the holding period exceeds two years. Article 14-5 requires a filing within 30 days, counting from the day after the ownership transfer is registered, whether or not tax is due. Different rates apply to residents under Article 14-4."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
 
-# Buying, Holding, and Selling a Taiwan Flat as a Foreigner
+# Buying and Selling a Flat in Taiwan as a Foreigner
 
-You are a foreign individual looking at a flat in Taiwan, to live in or to sell later. Whether you can take the land right, what is due when you buy, what is due while you own it, and what is due when you sell are separate questions.
+If you are a foreign individual looking at a flat in Taiwan, either to live in or to sell later, the right to acquire the land and the taxes due at each stage are separate questions. Tax on the purchase, tax during ownership and tax on a sale each follow their own rules.
 
-This column does not name countries. If the flat comes by inheritance, start with the [guide for a foreign heir of Taiwan land](/en/columns/foreign-heir-taiwan-succession-law-land).
+For a flat acquired by inheritance, the starting point is the [guide for a foreign heir of Taiwan land](/en/columns/foreign-heir-taiwan-succession-law-land).
 
-## Can I buy the flat at all?
+## Acquiring the land right
 
-[Land Act Article 18](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=18) allows a foreigner to acquire or create land rights in the Republic of China only if, by treaty or under that person's own law, ROC nationals enjoy the same rights there. The Ministry of the Interior's [English FAQ on nationals outside the reciprocal list](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124868) says a buyer whose country is not on the "List of Reciprocal Nations for Foreigners Acquiring Land in Taiwan, R.O.C." (in Chinese, 外國人在我國取得或設定土地權利互惠國家一覽表) should attach proof that the country gives ROC nationals the same rights. It identifies that list as Tai-Nei-Tzu-Ti No. 0960192146, promulgated on December 11, 2007, and says the proof is notarized by a Taiwan embassy, consular office, representative office, or another agency accredited by the Ministry of Foreign Affairs. The [purchase-documents FAQ](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124867) says a reciprocity certificate is unnecessary when the country is already in the reciprocal table. Confirm the list the land office is using now.
+A foreigner may acquire or create land rights in the Republic of China only if, by treaty or under that person's own law, ROC nationals enjoy the same rights there ([Land Act Article 18](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=18)).
 
-[Article 17](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=17) bars transfer, encumbrance, or lease to a foreigner of forest, fishery, hunting, salt, mining, and water-source land, and of land in a fortress or military area or on the border. Check this lot's registration against that list. The second paragraph excepts inheritance. The heir guide covers what follows.
+The Ministry of the Interior's [English FAQ for buyers whose countries are not on the reciprocity list](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124868) says a buyer whose country is not on the list should attach proof that the country gives ROC nationals the same rights. The FAQ identifies the "List of Reciprocal Nations for Foreigners Acquiring Land in Taiwan, R.O.C." (外國人在我國取得或設定土地權利互惠國家一覽表) as Tai-Nei-Tzu-Ti No. 0960192146, promulgated on December 11, 2007. It says the proof is notarized by a Taiwan embassy, consular office, representative office, or another agency accredited by the Ministry of Foreign Affairs. According to the [purchase-documents FAQ](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124867), a reciprocity certificate is unnecessary when the buyer's country is already on the list. Before signing, a buyer needs to establish whether their country is on the reciprocity list the land office is using.
 
-[Article 19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=19) allows listed uses for self-use, investment, or a public-interest purpose. Residence is the first listed use. The same article lists other uses, and an investment category for major construction, the economy, or farming or grazing, which needs approval from the central authority for that sector. The local government sets area and location limits. Article 19 does not state the numbers.
+[Article 17](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=17) prohibits transferring, encumbering or leasing forest, fishery, hunting, salt, mining and water-source land to foreigners. The prohibition also covers land in a fortress or military area or on the border. A buyer needs to check the lot's registration against those categories. The second paragraph makes an exception for inheritance; the inheritance guide explains what follows.
 
-[Article 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=20) requires an application to the municipal or county (city) government. The same approval is required if the use changes, or if the land is later transferred other than by inheritance. The investment category also needs prior consent from that central authority. The local government decides within 14 days after it accepts the application, then reports an approval to the central land authority. Fourteen days is that decision period, not a closing date. Your own later sale needs approval again.
+[Article 19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=19) allows specified uses for self-use, investment or a public-interest purpose. Residence is the first listed use. The article also lists other permitted uses and a category of investment involving major construction, the economy, or farming or grazing. Investments in that category require approval from the central authority for that sector. Area and location limits are set by the local government; Article 19 itself gives no numerical limits.
 
-The documents FAQ says the buyer files at the land office where the land is: a registration application, identification of both sides, the contract, tax papers, a reciprocity certificate unless the country is already in the table, a zoning certificate unless the land is non-urban, the ownership certificate, and a power of attorney if you do not apply in person. It also names the Operational Directions for Foreigners to Acquire Land Rights in Taiwan.
+An application to the municipal or county (city) government is required under [Article 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=20). Local government approval is also required for a change of use or a later transfer, unless the transfer is by inheritance. The investment category needs prior consent from that sector's central authority as well.
 
-## What tax do I pay when I buy?
+The local government has 14 days to decide after accepting the application and then reports any approval to the central land authority. That period covers the government's decision; it does not set the closing date. A later sale by the foreign owner also requires approval.
 
-[Deed Tax Act Article 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=2) requires a filing and deed tax when real estate is acquired by sale, dien, exchange, gift, partition, or possession. Land in an area where land value increment tax is levied is exempt. On a flat that is both a building and a land share, that exemption covers the land in such an area, not the building.
+The documents FAQ says the buyer submits the application to the land office responsible for the property. The documents comprise a registration application, identification for both parties, the contract, tax documents and the ownership certificate. A reciprocity certificate is required unless the buyer's country is already on the list, and a zoning certificate unless the land is non-urban. A buyer who does not apply in person also needs a power of attorney. The FAQ refers to the Operational Directions for Foreigners to Acquire Land Rights in Taiwan.
 
-[Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=3) sets the sale-deed rate at 6 percent of the deed price (契價). [Article 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=4) says the buyer files and pays. [Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=13) says the deed price is the standard price set by the local real estate assessment committee, unless the transfer is one in [Article 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=11) (public property, or a court auction) and the transfer price is lower. An ordinary private purchase is not 6 percent of the contract price. [Article 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=16) gives 30 days from the contract date to file the prescribed-form contract. It sets a different start when a building sold before completion has the buyer as the original permit applicant and the buyer later receives the occupancy permit. [Article 19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=19) gives 30 days to pay after the bill is served.
+## Deed tax when you buy
 
-## What taxes apply while I own the flat?
+[Deed Tax Act Article 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=2) requires a filing and deed tax when real estate is acquired by sale, dien, exchange, gift, partition or possession. Land in an area where land value increment tax is levied is exempt. For a flat consisting of a building and a share of the land, that exemption covers the land share in such an area, not the building.
 
-[House Tax Act Article 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340102&flno=4) charges house tax to the building owner, with special rules for a use-right house, a dien holder, co-owners, and a trustee. [Land Tax Act Article 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=1) divides land tax into land value tax, agricultural land tax, and land value increment tax. [Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=14) charges land value tax on land for which a value has been prescribed, except where Article 22 imposes agricultural land tax. This column does not restate the rate tables.
+The rate on a sale is 6 percent of the deed price (契價), under [Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=3). Under [Article 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=4), the buyer files and pays.
 
-## What income tax applies when I sell, if I am not a resident?
+“Deed price” does not ordinarily mean the price agreed in the contract. [Article 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=13) defines it as the standard price set by the local real estate assessment committee. The exception is a transfer covered by [Article 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=11)—a transfer of public property or a court auction—where the transfer price is lower. For an ordinary private purchase, deed tax is therefore not calculated as 6 percent of the contract price.
 
-[Income Tax Act Article 4-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-4) applies to the transaction of a house, a house and its land, or land eligible for a building permit that was **acquired** on or after January 1, 2016. A presale with its land, and a house-use right created by superficies, acquired on or after that date, is treated the same way. A purchase now falls on or after that date.
+Under [Article 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=16), the prescribed-form contract must be filed within 30 days of the contract date. A different starting point applies when a building is sold before completion, the buyer was the original permit applicant, and the buyer later receives the occupancy permit. Payment is due within 30 days after the tax bill is served, under [Article 19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340105&flno=19).
 
-[Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=7) calls someone a resident if they have a Taiwan domicile and habitually live here, or if they have no Taiwan domicile but stay 183 days or more in the tax year. Everyone else is a non-resident. The [column on Taiwan income-tax residence](/en/columns/taiwan-income-tax-residency) walks through that test. Use the resident list below if you are a resident in the year of sale.
+## Taxes during ownership
 
-On a purchase, [Article 14-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=14-4) takes the transaction price, minus original cost and the expenses of acquisition, improvement, and transfer. Inherited or gifted property uses a different base in the same article. Land value increment tax paid is not a cost, except the tax on the part of the land-value-increase total that this sale did not subtract. The article then subtracts the land-value-increase total computed from the announced present value under [Land Tax Act Article 30, paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=30). That balance is taxed apart from consolidated income.
+The building owner is liable for house tax under [House Tax Act Article 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340102&flno=4). Special rules cover a house held under a right of use, a dien holder, co-owners and a trustee.
 
-For an individual who is not a resident of the Republic of China, the rates on that balance are:
+Land is taxed separately. [Land Tax Act Article 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=1) divides land tax into land value tax, agricultural land tax and land value increment tax. Under [Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=14), land with an officially prescribed value is subject to land value tax, except where Article 22 imposes agricultural land tax.
 
-- 45 percent if the house-and-land holding period is within two years.
-- 35 percent if the holding period exceeds two years.
+## The rate on a sale depends on tax residence
 
-There is no further non-resident split at five or ten years. A resident uses a different list in the same article. One resident case, self-use house and land that meets Article 4-5, paragraph 1, item 1, is 10 percent on the part of the balance over NT$4 million. That list does not apply to a non-resident. If you inherited the flat, or received it by bequest, the decedent's holding period, or the holding period of the person who made the bequest, may be combined with yours.
+[Income Tax Act Article 4-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-4) covers transactions involving a house, a house and its land, or land eligible for a building permit, **acquired** on or after January 1, 2016. It also covers a presale property together with its land, and a house-use right created by superficies, acquired on or after that date. A purchase now falls on or after that date.
 
-[Article 14-5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=14-5) requires a filing even when no tax is due. After a completed ownership transfer, the 30 days start the day after registration. File with the tax office, attach the contract and related papers, and attach the payment receipt if tax is due. For a presale and its land, the 30 days start the day after the transaction date.
+Under [Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=7), a resident is someone who has a Taiwan domicile and habitually lives in Taiwan, or who has no Taiwan domicile but stays 183 days or more in the tax year. Everyone else is a non-resident. The [column on Taiwan income-tax residence](/en/columns/taiwan-income-tax-residency) explains that test. A seller who is a resident in the year of sale is subject to the resident rates in Article 14-4.
 
-## What about land value increment tax when I sell?
+For property acquired by purchase, the calculation under [Article 14-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=14-4) starts with the transaction price, less the original cost and the expenses of acquisition, improvement and transfer. A different base applies to inherited or gifted property under the same article.
 
-This tax is separate from the income tax above. [Land Tax Act Article 28](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=28) levies it when ownership of land with a prescribed value transfers, on the total increase in that value. Article 28 exempts transfers by inheritance, a government's sale or lawful gift of public land, and private land donated to a government (see the [Ministry of Finance manual](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-saving-manual/local/land-value-increment-tax/noaGA0q)). It does not generally exempt gifts between private persons. An ordinary private sale of the flat is not within those Article 28 exemptions. [Article 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=5) names the original owner as the taxpayer on a compensated transfer, which includes a sale. A contract clause about who hands over the cash does not change that.
+Land value increment tax paid is not deductible as a cost, except for the tax attributable to the portion of the total land value increase not deducted in calculating income from this sale. The calculation then deducts the total land value increase computed from the announced present value under [Land Tax Act Article 30, paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=30). The remaining balance is taxed separately from consolidated income.
 
-[Article 33](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=33) uses progressive rates and reduces the tax above the lowest rate after a holding period of more than 20, 30, or 40 years. The brackets are not restated here. Under [Article 30, paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=30), a declaration within 30 days of the contract is audited against the announced present value for the period in which the contract date falls. A later declaration uses the announced present value for the period of the day the office receives the filing.
+For an individual who is not a resident of the Republic of China, the rate on that balance is 45 percent if the house-and-land holding period is within two years, and 35 percent if the holding period exceeds two years.
 
-## What should I check before I pay?
+A non-resident gets no further rate reduction at five or ten years. Residents are subject to a different schedule under the same article. For a resident selling a house and its land that satisfy the self-use conditions in Article 4-5, paragraph 1, item 1, the rate is 10 percent on the portion of the balance above NT$4 million. That resident schedule does not apply to a non-resident.
 
-Before the deposit is hard to unwind, check nationality against Article 18 and the list the land office is using, and check the lot against Article 17. Have a residence use under Article 19 and an Article 20 approval, or a filing that office has accepted. Read the registered owner and the rights on the title. Then apply the deed-tax, land-value, and non-resident income-tax rules above. If your days in Taiwan may make you a resident, read the residence column before you rely on 35 percent. If the contract includes a land share, these land rules apply to it. If it mentions only the building, ask whether a land right moves as well.
+If you inherited the flat, or received it by bequest, the holding period of the deceased owner, or of the person who made the bequest, may be combined with yours.
 
-## How we can help
+A filing is required under [Article 14-5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=14-5), even when no tax is due. Once an ownership transfer is completed, the 30-day filing period begins the day after registration. The seller files with the tax office, attaching the contract and supporting documents, and the payment receipt if tax is due. For a transaction involving a presale property and its land, the 30 days begin the day after the transaction date.
 
-Hovering International Law Firm can review the Land Act path and the Taiwan tax points on a foreign buyer's purchase or sale. Attorney Wei Tseng (曾雋崴) handles the consultation. In a first email, send your nationality, whether you live in Taiwan and about how many days you spend here, the address or lot number, whether you are buying or selling, and the draft contract if you have it. She will say how to send identification and title papers.
+## Land value increment tax on a sale
 
-Email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The office is at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan. This is general information.
+Land value increment tax is separate from the income tax on the sale. Under [Land Tax Act Article 28](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=28), it is levied when ownership of land with a prescribed value is transferred, on the total increase in that value.
 
-## Official sources
+Article 28 exempts transfers by inheritance, the sale or lawful gift of public land by a government, and private land donated to a government. These exemptions are also described in the [Ministry of Finance manual](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-saving-manual/local/land-value-increment-tax/noaGA0q). Article 28 does not generally exempt gifts between private persons, and its exemptions do not cover an ordinary private sale of a flat.
+
+[Article 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=5) names the original owner as the taxpayer on a compensated transfer, which includes a sale. A contract clause about who hands over the cash does not change that.
+
+The progressive rates are set out in [Article 33](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=33). After a holding period of more than 20, 30 or 40 years, the amount of tax exceeding the amount calculated at the lowest rate is reduced.
+
+Under [Article 30, paragraph 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=30), a declaration filed within 30 days of the contract date is audited against the announced present value for the period in which the contract date falls. A later declaration uses the announced present value for the period in which the office receives the filing.
+
+## Before you commit
+
+Before a deposit becomes difficult to recover, a buyer needs to check nationality against Article 18 and the list the land office is using, and the lot's registration against Article 17. The intended residential use must fall within Article 19, with an Article 20 approval or a filing the office has accepted. That review also includes the registered owner and the rights on the title, followed by the taxes due under the deed-tax, land-value and non-resident income-tax rules above.
+
+If your days in Taiwan may make you a resident, the residence test matters before you rely on the 35 percent rate. If the contract includes a land share, these land rules apply to it. If it mentions only the building, you still need to establish whether any land rights are also being transferred.
+
+## Advice on your Taiwan purchase or sale
+
+Hovering International Law Firm can review the Land Act requirements and Taiwan tax implications of a foreign buyer's purchase or sale. Attorney Wei Tseng (曾雋崴) handles the consultation.
+
+This is general information. For advice on your Taiwan case, your first email should include your nationality, whether you live in Taiwan and about how many days you spend here, the address or lot number, whether you are buying or selling, and the draft contract if you have one. She will explain how to submit identification and title documents.
+
+Email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The office is at 7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City 103, Taiwan (103 臺北市大同區承德路一段35號7樓之2).
+
+## Sources and related reading
 
 - [Land Act, Article 17](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=17), [Article 18](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=18), [Article 19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=19), and [Article 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=20).
 - [Ministry of the Interior English FAQ: documents for a foreign national's purchase](https://www.moi.gov.tw/english/News_Content.aspx?n=8353&s=124867).
@@ -92,5 +113,7 @@ Email [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). The office is at 
 - [Ministry of Finance: land value increment tax manual](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-saving-manual/local/land-value-increment-tax/noaGA0q).
 - [Land Tax Act, Article 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=1), [Article 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=5), [Article 14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=14), [Article 28](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=28), [Article 30](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=30), and [Article 33](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340096&flno=33).
 - [Income Tax Act, Article 4-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=4-4), [Article 7](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=7), [Article 14-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=14-4), and [Article 14-5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=14-5).
+- [Guide for a foreign heir of Taiwan land](/en/columns/foreign-heir-taiwan-succession-law-land).
+- [Taiwan income-tax residence](/en/columns/taiwan-income-tax-residency).
 
 Checked: September 30, 2026

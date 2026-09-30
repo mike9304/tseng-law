@@ -3,12 +3,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getColumnPost } from '../columns';
 import { siteLocales } from '../locales';
-import { TRAFFIC_COLUMN_SLUGS, trafficHubCopy } from '@/data/traffic-hub';
+import { trafficColumnSlugsFor, trafficHubCopy } from '@/data/traffic-hub';
 
 describe('traffic hub publication contracts', () => {
   it('links to real localized columns, never another language fallback', () => {
     for (const locale of siteLocales) {
-      for (const slug of TRAFFIC_COLUMN_SLUGS) {
+      for (const slug of trafficColumnSlugsFor(locale)) {
         const post = getColumnPost(slug, locale);
         expect(post, `${locale}/${slug}`).toBeTruthy();
         expect(post?.slug).toBe(slug);
@@ -24,11 +24,29 @@ describe('traffic hub publication contracts', () => {
       expect(names.filter((name) => /overtaking/i.test(name)), dir).toEqual([]);
     }
     for (const locale of siteLocales) {
-      for (const slug of TRAFFIC_COLUMN_SLUGS) {
+      for (const slug of trafficColumnSlugsFor(locale)) {
         const post = getColumnPost(slug, locale);
         expect(post?.featuredImage ?? '', `${locale}/${slug}`).not.toMatch(/\/images\/traffic\//);
         expect(post?.diagramVideo?.id, `${locale}/${slug}`).not.toBe('overtaking-012');
       }
+    }
+  });
+
+  it('ships Korean-first column 051 only where its file exists, AI-authored and source-linked', () => {
+    const slug = 'taiwan-left-turn-vs-straight-motorcycle';
+    expect(trafficColumnSlugsFor('ko')[0]).toBe(slug);
+    const post = getColumnPost(slug, 'ko')!;
+    expect(post.aiAuthored).toBe(true);
+    expect(post.diagramVideo?.id).toBe('left-turn-hypothetical');
+    // statutes (law.moj.gov.tw) and the six public judgments it cites (judgment.judicial.gov.tw)
+    for (const source of ['pcode=K0040013&flno=102', 'pcode=K0040012&flno=48', 'pcode=B0000001&flno=217', 'pcode=K0040045&flno=3',
+      'SJEV%2c114', 'ULDV%2c114', 'TCEV%2c114', 'TCDV%2c115', 'SCDM%2c112', 'TPTA%2c114']) {
+      expect(post.content, source).toContain(source);
+    }
+    expect(post.content).not.toMatch(/tel:|\+886|\+82|변호사[^\n]{0,20}(검토|감수)/);
+    for (const locale of ['zh-hant', 'en', 'ja'] as const) {
+      expect(trafficColumnSlugsFor(locale)).not.toContain(slug);
+      expect(getColumnPost(slug, locale), locale).toBeFalsy();
     }
   });
 

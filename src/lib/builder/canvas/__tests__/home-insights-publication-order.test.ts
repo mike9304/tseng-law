@@ -3,7 +3,7 @@ import type { BuilderCanvasNode } from '../types';
 import { createInsightsDecomposedNodes } from '../decompose-insights';
 import type { ColumnPost } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
-import { expertiseSlugsFor } from '@/lib/__tests__/native-locale-columns';
+import { archiveLeadSlugsFor } from '@/lib/__tests__/native-locale-columns';
 
 function createColumnPost(
   slug: string,
@@ -73,7 +73,7 @@ describe('decomposed home insights publication order', () => {
     (locale) => {
       // The 2026-09-30 expertise columns (041-048) lead each locale in source order; the gap
       // batch (024-031) and the English-only natives (032-034) share 2026-09-29 and follow.
-      const newestSlug = expertiseSlugsFor(locale)[0];
+      const newestSlug = archiveLeadSlugsFor(locale)[0];
       const nodes = createInsightsDecomposedNodes(0, locale, 0);
       const nodesById = new Map(nodes.map((node) => [node.id, node]));
 

@@ -85,6 +85,49 @@ export const TRAFFIC_DIAGRAMS = {
       },
     },
   },
+  // Generic rule illustration for column 051 (道路交通安全規則 102-1-7). It does not
+  // reproduce any judgment cited in the column; lanes, signals and speeds are assumed.
+  'left-turn-hypothetical': {
+    kind: 'video',
+    id: 'left-turn-hypothetical',
+    mp4: '/videos/traffic/left-turn-hypothetical.mp4',
+    webm: '/videos/traffic/left-turn-hypothetical.webm',
+    mobileMp4: '/videos/traffic/left-turn-hypothetical-mobile.mp4',
+    mobileWebm: '/videos/traffic/left-turn-hypothetical-mobile.webm',
+    poster: '/images/traffic/left-turn-hypothetical-poster.webp',
+    mobilePoster: '/images/traffic/left-turn-hypothetical-poster-mobile.webp',
+    width: 1920,
+    height: 1080,
+    mobileWidth: 1080,
+    mobileHeight: 1350,
+    durationSeconds: 6,
+    copy: {
+      ko: {
+        alt: '신호등이 있는 교차로를 위에서 내려다본 장면입니다. 황토색 1번 승용차가 좌측 방향지시등을 켜고 교차로 안에서 왼쪽으로 돌고, 맞은편에서는 초록불을 받은 2번 오토바이가 곧장 달려옵니다. 오토바이가 승용차 옆에 닿기 직전에 화면이 멈추고, 두 진로가 겹치는 자리에 붉은 원이 나타납니다.',
+        legend: '1번 · 황토색 승용차: 좌회전하는 차. 2번 · 짙은 초록색 오토바이: 맞은편에서 직진하는 오토바이. 주황색 불빛은 방향지시등, 붉은 원은 두 진로가 겹치는 자리입니다.',
+        caption: '방향지시등을 켰더라도 좌회전하는 1번 차는 맞은편에서 직진해 오는 2번 오토바이가 먼저 지나가게 해야 합니다(도로교통안전규칙 제102조 제1항 제7호). 그림은 두 진로가 겹치기 직전에서 멈춥니다.',
+        assumption: '가상 예시: 본문에 소개한 판결이나 실제 사건을 재현한 장면이 아니며, 과실 비율을 판단하는 도해도 아닙니다. 차로 모양·신호·속도·거리·시각은 설명을 위해 정한 값입니다.',
+      },
+      'zh-hant': {
+        alt: '從上方俯瞰設有號誌的路口。土黃色的1號小客車打左方向燈，在路口內左轉；對向的2號機車在綠燈下直行而來。畫面停在機車即將碰到小客車側面之前，兩車路線交會處以紅圈標示。',
+        legend: '1號・土黃色小客車：左轉的車輛。2號・深綠色機車：對向直行的機車。橘色閃光是方向燈，紅圈是兩車路線交會的位置。',
+        caption: '左轉的1號車即使已打方向燈，仍應讓對向直行的2號機車先行（道路交通安全規則第102條第1項第7款）。畫面停在兩車路線交會之前。',
+        assumption: '假設示例：並非重現本文所引判決或任何實際案件，也不作為判斷過失比例的依據。車道配置、號誌、速度、距離與時間均為說明用的假設。',
+      },
+      en: {
+        alt: 'Overhead view of an intersection with traffic lights. Ochre car 1, left turn signal on, turns left inside the intersection while motorcycle 2 comes straight through from the opposite direction on a green light. The frame stops just before the motorcycle reaches the side of the car, and a red circle marks where their paths cross.',
+        legend: '1 · Ochre car: turning left. 2 · Dark green motorcycle: going straight from the opposite direction. Amber flashes are turn signals; the red circle marks where the two paths cross.',
+        caption: 'Even with its turn signal on, car 1 must let oncoming motorcycle 2 go straight through first (Road Traffic Safety Regulations, Article 102(1)(7)). The animation stops before the paths meet.',
+        assumption: 'Hypothetical example: it does not reconstruct the judgments discussed in the article or any real case, and it is not a basis for apportioning fault. Lane layout, signals, speeds, distances and timing are illustrative assumptions.',
+      },
+      ja: {
+        alt: '信号機のある交差点を上から見た場面です。黄土色の乗用車1が左ウインカーを出して交差点内で左折し、対向車線からは青信号でバイク2が直進してきます。バイクが乗用車の側面に届く直前で画面が止まり、二台の進路が交わる位置に赤い円が表示されます。',
+        legend: '1・黄土色の乗用車：左折する車。2・濃い緑色のバイク：対向から直進してくるバイク。オレンジ色の点滅はウインカー、赤い円は二台の進路が交わる位置です。',
+        caption: 'ウインカーを出していても、左折する1は対向から直進してくるバイク2を先に通さなければなりません（道路交通安全規則第102条第1項第7号）。画面は進路が交わる直前で止まります。',
+        assumption: '仮想の例：本文で紹介した判決や実際の事件を再現したものではなく、過失割合を判断するための図解でもありません。車線の配置・信号・速度・距離・時刻は説明用の仮定です。',
+      },
+    },
+  },
 } as const satisfies Record<string, TrafficDiagram>;
 
 export type TrafficDiagramId = keyof typeof TRAFFIC_DIAGRAMS;

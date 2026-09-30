@@ -9,6 +9,26 @@ export const TRAFFIC_COLUMN_SLUGS = [
   'taiwan-overtaking-accident-liability',
 ] as const;
 
+/**
+ * Traffic columns released Korean-first (column routine: ko → zh-Hant → en).
+ * A slug is listed only for locales whose file already exists, so the hub never
+ * falls back to another language. Add a locale here when its translation ships.
+ * Newest first.
+ */
+export const TRAFFIC_LOCALE_COLUMN_SLUGS: Partial<Record<SiteLocale, readonly string[]>> = {
+  ko: ['taiwan-left-turn-vs-straight-motorcycle'],
+};
+
+/** Hub order for `locale`: locale-specific releases first, then the four-locale core. */
+export function trafficColumnSlugsFor(locale: string): readonly string[] {
+  const extra = (TRAFFIC_LOCALE_COLUMN_SLUGS as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  return [...extra, ...TRAFFIC_COLUMN_SLUGS];
+}
+
+export function isTrafficColumnSlug(slug: string, locale: string): boolean {
+  return trafficColumnSlugsFor(locale).includes(slug);
+}
+
 type CountryGuide = { id: 'tw' | 'us' | 'jp' | 'kr'; name: string; text: string; linkLabel: string; href: string };
 type TrafficCopy = {
   nav: string; kicker: string; title: string; description: string; read: string;

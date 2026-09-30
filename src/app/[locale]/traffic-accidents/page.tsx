@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { isSiteLocale, siteLocales } from '@/lib/locales';
 import { getColumnPost } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
-import { TRAFFIC_COLUMN_SLUGS, TRAFFIC_DIAGRAM_ID, TRAFFIC_PATH, trafficHubCopy } from '@/data/traffic-hub';
+import { TRAFFIC_DIAGRAM_ID, TRAFFIC_PATH, trafficColumnSlugsFor, trafficHubCopy } from '@/data/traffic-hub';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import styles from './traffic.module.css';
 
@@ -20,7 +20,7 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
   const { locale } = await params;
   if (!isSiteLocale(locale)) notFound();
   const copy = trafficHubCopy[locale];
-  const posts = TRAFFIC_COLUMN_SLUGS.map(slug => getColumnPost(slug, locale));
+  const posts = trafficColumnSlugsFor(locale).map(slug => getColumnPost(slug, locale));
   return (
     <div className={styles.page}>
       <section className={styles.hero}>

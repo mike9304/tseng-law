@@ -87,11 +87,23 @@ export const TRAFFIC_COLUMN_FILES_20260930 = {
   'zh-hant': ['050-taiwan-accident-police-records.md'],
 } as const;
 
-/** Every 2026-09-30 column file of `locale` (041–048 expertise + 050 traffic), in filename order. */
+/**
+ * Korean-first traffic column 051 (2026-10-01; traffic column routine ko → zh-Hant → en).
+ * Korean only until its translations ship. It is newer than the 2026-09-30 batch and so
+ * leads the Korean archive; the helpers below fold it in with that batch because every
+ * assertion built on them is about "files not mirrored in every locale that lead the
+ * newest-first archive". Add its other locales here when their files ship.
+ */
+export const TRAFFIC_COLUMN_FILES_20261001 = {
+  ko: ['051-taiwan-left-turn-vs-straight-motorcycle.md'],
+} as const;
+
+/** Every 2026-09-30 column file of `locale` (041–048 expertise + 050 traffic) plus the 2026-10-01 051, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...(TRAFFIC_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
+    ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -104,6 +116,23 @@ function expertiseFilesOf(locale: string): readonly string[] {
 /** Slugs of the 2026-09-30 batch in `locale`, in source (filename) order; they lead the newest-first archive. */
 export function expertiseSlugsFor(locale: string): string[] {
   return expertiseFilesOf(locale).map(slugOf);
+}
+
+/**
+ * Archive lead of `locale`, newest first: the 2026-10-01 column(s), then the 2026-09-30
+ * batch in source (filename) order. Use this for newest-first ordering assertions;
+ * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
+ */
+export function archiveLeadSlugsFor(locale: string): string[] {
+  const newer: readonly string[] = (TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const newerSlugs = [...newer].sort().reverse().map(slugOf);
+  return [...newerSlugs, ...expertiseSlugsFor(locale).filter((slug) => !newerSlugs.includes(slug))];
+}
+
+/** Publication date of an archive-lead slug: 2026-10-01 for the newer column(s), otherwise 2026-09-30. */
+export function archiveLeadPublicationDate(slug: string): string {
+  const newer = Object.values(TRAFFIC_COLUMN_FILES_20261001).flat().map(slugOf);
+  return newer.includes(slug) ? '2026-10-01' : '2026-09-30';
 }
 
 /** Files of the 2026-09-30 batch in `locale` that have no Korean twin. */
@@ -125,7 +154,11 @@ export function allNativeFiles(locale: string): string[] {
 }
 
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
-  [...Object.values(EXPERTISE_COLUMN_FILES_20260930), ...Object.values(TRAFFIC_COLUMN_FILES_20260930)].flat().map(slugOf),
+  [
+    ...Object.values(EXPERTISE_COLUMN_FILES_20260930),
+    ...Object.values(TRAFFIC_COLUMN_FILES_20260930),
+    ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
+  ].flat().map(slugOf),
 );
 
 /** True for any file/slug of the 2026-09-30 batch, in any locale. */

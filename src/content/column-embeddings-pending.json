@@ -58,6 +58,7 @@
     { "locale": "zh-hant", "slug": "foreigner-buy-sell-taiwan-real-estate-tax" },
     { "locale": "ko", "slug": "taiwan-accident-police-records" },
     { "locale": "zh-hant", "slug": "taiwan-accident-police-records" },
-    { "locale": "en", "slug": "taiwan-accident-police-records" }
+    { "locale": "en", "slug": "taiwan-accident-police-records" },
+    { "locale": "ko", "slug": "taiwan-left-turn-vs-straight-motorcycle" }
   ]
 }

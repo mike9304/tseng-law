@@ -5,6 +5,8 @@ import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, sortColumnPostsNewestFirst, type ColumnPost } from '@/lib/columns';
 import {
   NATIVE_LOCALE_COLUMN_FILES,
+  archiveLeadPublicationDate,
+  archiveLeadSlugsFor,
   expertiseSlugsFor,
   isNativeLocaleColumnSlug,
 } from './native-locale-columns';
@@ -63,6 +65,7 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '047': '2026-09-30',
   '048': '2026-09-30',
   '050': '2026-09-30', // traffic police-records column (049 in its lane)
+  '051': '2026-10-01', // Korean-first traffic column (left turn vs straight motorcycle)
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
@@ -120,7 +123,7 @@ const GAP_COLUMN_SLUGS = [
 const GAP = GAP_COLUMN_SLUGS.length;
 
 // 2026-09-30 expertise columns in the Korean archive (043, 046, 048): newest, in source order.
-const KO_EXPERTISE_SLUGS = expertiseSlugsFor('ko');
+const KO_EXPERTISE_SLUGS = archiveLeadSlugsFor('ko'); // 051 (2026-10-01) first, then the 2026-09-30 batch
 const KO_LEAD = KO_EXPERTISE_SLUGS.length;
 
 const EXPECTED_ARCHIVE_ORDER = [
@@ -219,10 +222,12 @@ describe('localized column publication ordering', () => {
   ] as const)('uses the verified publication date in %s', (locale, expectedDateDisplay) => {
     const allPosts = getAllColumnPosts(locale);
     // The 2026-09-30 expertise columns (a per-locale subset of 041-048) lead the archive.
-    const expertiseSlugs = expertiseSlugsFor(locale);
+    const expertiseSlugs = archiveLeadSlugsFor(locale);
     const lead = expertiseSlugs.length;
     expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
-    expect(allPosts.slice(0, lead).every((post) => post.publicationDate === '2026-09-30')).toBe(true);
+    expect(allPosts.slice(0, lead).map((post) => post.publicationDate)).toEqual(
+      expertiseSlugs.map(archiveLeadPublicationDate),
+    );
     // Native single-locale columns share the 2026-09-29 date with the gap columns (024-031),
     // so equal-date source order places them right after that batch; the shared corpus follows.
     const natives = allPosts.filter((post) => isNativeLocaleColumnSlug(post.slug));

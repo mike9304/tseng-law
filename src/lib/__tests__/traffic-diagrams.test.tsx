@@ -7,7 +7,7 @@ import { extractColumnToc } from '../column-toc';
 import { siteLocales } from '../locales';
 import ColumnContent from '@/components/ColumnContent';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
-import { TRAFFIC_DIAGRAM_ID, TRAFFIC_COLUMN_SLUGS } from '@/data/traffic-hub';
+import { TRAFFIC_DIAGRAM_ID, trafficColumnSlugsFor } from '@/data/traffic-hub';
 import {
   TRAFFIC_DIAGRAMS,
   type TrafficDiagram,
@@ -20,8 +20,8 @@ const MAX_VIDEO_BYTES = 1.5 * 1024 * 1024;
 
 describe('animated traffic diagrams', () => {
   it('gives each core-language traffic column its own original diagram', () => {
-    const slugs = TRAFFIC_COLUMN_SLUGS;
     for (const locale of siteLocales) {
+      const slugs = trafficColumnSlugsFor(locale);
       const ids = slugs.map(slug => getColumnPost(slug, locale)?.diagramVideo?.id);
       expect(ids.every(Boolean), locale).toBe(true);
       expect(new Set(ids).size, locale).toBe(slugs.length);

@@ -6,7 +6,8 @@ import { estimateColumnReadTimeLabel, getColumnsStorageBackend } from '@/lib/bui
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import {
   NATIVE_LOCALE_COLUMN_FILES,
-  expertiseSlugsFor,
+  archiveLeadPublicationDate,
+  archiveLeadSlugsFor,
   isNativeLocaleColumnSlug,
 } from '@/lib/__tests__/native-locale-columns';
 
@@ -117,7 +118,7 @@ describe('builder column storage backend', () => {
       const post = posts.find((item) => item.slug === 'taiwan-logistics-business-setup');
 
       // The 2026-09-30 expertise columns (041-048) lead the ko archive.
-      expect(posts[0]?.slug).toBe(expertiseSlugsFor('ko')[0]);
+      expect(posts[0]?.slug).toBe(archiveLeadSlugsFor('ko')[0]);
       expect(post?.dateDisplay).toBe('2025년 9월 13일');
       expect(post?.publicationDate).toBe('2025-09-13');
       expect(post?.readTime).toBe('9분 분량');
@@ -141,13 +142,15 @@ describe('builder column storage backend', () => {
 
         const allPosts = await getAllColumnPostsIncludingBlob(locale);
         const nativeCount = locale === 'en' ? NATIVE_LOCALE_COLUMN_FILES.en.length : 0;
-        const expertiseSlugs = expertiseSlugsFor(locale);
+        const expertiseSlugs = archiveLeadSlugsFor(locale);
         const lead = expertiseSlugs.length;
 
         expect(allPosts).toHaveLength(31 + nativeCount + lead);
         // The 2026-09-30 expertise columns (041-048) lead the archive, in source order.
         expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
-        expect(allPosts.slice(0, lead).every((post) => post.publicationDate === '2026-09-30')).toBe(true);
+        expect(allPosts.slice(0, lead).map((post) => post.publicationDate)).toEqual(
+          expertiseSlugs.map(archiveLeadPublicationDate),
+        );
         // English-only native columns (2026-09-29) follow the gap columns in source order.
         expect(
           allPosts.slice(lead + 8, lead + 8 + nativeCount).every((post) => isNativeLocaleColumnSlug(post.slug)),

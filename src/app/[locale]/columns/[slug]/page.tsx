@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
-import { TRAFFIC_COLUMN_SLUGS, trafficHubCopy } from '@/data/traffic-hub';
+import { isTrafficColumnSlug, trafficHubCopy } from '@/data/traffic-hub';
 import { isTrafficDiagramId, isTrafficDiagramLocale, splitColumnContentAfterHeading } from '@/data/traffic-diagrams';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import { notFound } from 'next/navigation';
@@ -173,7 +173,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   const modifiedDate = parseColumnPublicationDate(post.date);
   const publicationDate = getColumnPublicationDate(post);
   const showTrafficUpdate = urlLocale in trafficHubCopy
-    && (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(post.slug)
+    && isTrafficColumnSlug(post.slug, urlLocale)
     && Boolean(modifiedDate && publicationDate && modifiedDate !== publicationDate);
 
   const currentIndex = allPosts.indexOf(post);
@@ -266,8 +266,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // first), then this locale's recommended columns, then the rest. The client
   // may reorder by session interests (sessionStorage only).
   const otherPosts = prioritizeRecommendedColumns(urlLocale, allPosts.filter((p) => p.slug !== post.slug));
-  const isTrafficColumn = (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(post.slug);
-  const recommendedItems = (isTrafficColumn ? otherPosts.filter((p) => (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(p.slug)) : [
+  const isTrafficColumn = isTrafficColumnSlug(post.slug, urlLocale);
+  const recommendedItems = (isTrafficColumn ? otherPosts.filter((p) => isTrafficColumnSlug(p.slug, urlLocale)) : [
     ...otherPosts.filter((p) => p.topic && p.topic === post.topic),
     ...otherPosts.filter((p) => !p.topic || p.topic !== post.topic),
   ])
@@ -358,7 +358,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           </div>
           <div className="container blog-hero-inner">
             <Link href={`/${urlLocale}/columns`} className="blog-back-link">{t.backLabel}</Link>
-            {urlLocale in trafficHubCopy && (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(post.slug) ? (
+            {urlLocale in trafficHubCopy && isTrafficColumnSlug(post.slug, urlLocale) ? (
               <Link href={`/${urlLocale}/traffic-accidents`} className="blog-back-link" style={{ marginInlineStart: '1.5rem' }}>
                 {trafficHubCopy[urlLocale as keyof typeof trafficHubCopy].nav} →
               </Link>

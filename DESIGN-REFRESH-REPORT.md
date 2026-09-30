@@ -153,3 +153,10 @@ files touched). Diff: 6 files, +62 / −26.
   animation, `4c18f162` Korean issue-column copy). Neither commit touches any
   of the 6 CSS files changed here (checked with `git diff --name-only`), but
   rebase before merging.
+
+## Production verification (added by the orchestrator, 2026-09-30 20:10 KST)
+- Rebased onto `origin/main` 4c18f162 (includes cd713099 traffic autoplay, 4c18f162 ko rewrite). No conflicts.
+- `npm run build` passed (about 66 s, cached).
+- `next start -p 3471`, then `shoot.mjs` into `/Users/son7/tseng-design-20260930/after/`: 40 shots on 10 pages × desktop/mobile × fold/full.
+- The before shots in `/Users/son7/tseng-design-20260930/before/` were taken on b02f8178. The zh-traffic and zh-column-detail differences therefore also include main's autoplay change (cd713099), which is not part of this branch.
+- Service detail (investment), desktop full: page height went from 4970px to 4450px because related-column summaries are clamped to 4 lines. Card bottoms are aligned.

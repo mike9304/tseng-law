@@ -2487,7 +2487,9 @@ section.home-results-panel--editorial {
   border: 1px solid rgba(244, 240, 231, 0.56);
   border-radius: 999px;
   color: #fff;
-  background: rgba(7, 19, 27, 0.72);
+  /* Design refresh 2026-09-30: solid fill instead of backdrop blur — the blur
+     sat over a playing video and had to be recomputed every frame. */
+  background: rgba(7, 19, 27, 0.84);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   font: inherit;
   font-size: 0.75rem; /* WI-5: 12px floor */
@@ -2496,7 +2498,6 @@ section.home-results-panel--editorial {
   text-align: left;
   pointer-events: auto;
   cursor: pointer;
-  backdrop-filter: blur(8px);
   transition:
     color 180ms ease,
     border-color 180ms ease,
@@ -26314,7 +26315,10 @@ html[lang='zh-hant'],
 }
 
 .hero[data-presentation='editorial'] .hero-copy .hero-cta-group .en-home-path-guide {
+  min-height: 44px;
   color: var(--primary);
+  font-size: 0.9375rem;
+  text-underline-offset: 3px;
 }
 
 .hero-trust-strip {
@@ -26406,16 +26410,19 @@ html[lang='zh-hant'],
   outline-offset: 3px;
 }
 
+/* Design refresh 2026-09-30: the path buttons read as secondary next to the
+   solid primary — 44px (still a full tap target), lighter type, tinted
+   hairline border. Hover/focus restore the full primary border below. */
 .hero[data-presentation='editorial'] .hero-copy .en-home-path-button {
-  min-height: 48px;
-  padding: 0.72rem 1.25rem;
+  min-height: 44px;
+  padding: 0.55rem 1.1rem;
   border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.9375rem;
+  font-weight: 600;
   line-height: 1.5;
   color: var(--primary);
-  background: transparent;
-  border: 1px solid var(--primary);
+  background: #fff;
+  border: 1px solid rgba(22, 56, 45, 0.32);
   box-shadow: none;
 }
 
@@ -26447,6 +26454,10 @@ html[lang='zh-hant'],
 
   .hero[data-tone='dark'] .hero-copy[data-builder-node-key='copy'] .en-home-paths {
     width: min(100%, 420px);
+  }
+
+  .hero[data-presentation='editorial'] .hero-copy .en-home-paths {
+    gap: 8px;
   }
 
   .hero .hero-copy .hero-cta-group {

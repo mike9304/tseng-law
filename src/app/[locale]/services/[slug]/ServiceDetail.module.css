@@ -274,19 +274,22 @@
   display: block;
 }
 
+/* Design refresh 2026-09-30: legacy summaries run 9-11 lines; a 4-line teaser
+   keeps cards scannable (full text stays in the DOM, the card links to it).
+   Meta + link are pinned to the card bottom so rows end on one line. */
 .root :global(.svc-col-card p.svc-col-card-summary),
 .root :global(.svc-col-card-summary) {
-  display: block;
+  display: -webkit-box;
   margin: 0;
   padding: 0 1.25rem;
   font-size: 1rem;
   line-height: 1.625;
   color: var(--text-body);
-  overflow: visible;
+  overflow: hidden;
   max-height: none;
-  -webkit-line-clamp: unset;
-  line-clamp: unset;
-  -webkit-box-orient: initial;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
   white-space: normal;
   overflow-wrap: anywhere;
 }
@@ -295,6 +298,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  margin-top: auto;
   padding: 0 1.25rem;
   font-size: 0.875rem;
   line-height: 1.43;

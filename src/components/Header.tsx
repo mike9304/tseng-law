@@ -280,6 +280,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
       { key: 'lawyers', label: 'チーム紹介', href: '/ja/lawyers' },
       { key: 'pricing', label: '費用案内', href: '/ja/pricing' },
       { key: 'insights', label: 'コラム', href: '/ja/columns' },
+      { key: 'traffic', label: '交通事故', href: '/ja/traffic-accidents' },
       { key: 'videos', label: 'メディア', href: '/ja/videos' },
       { key: 'directions', label: 'アクセス', href: '/ja/contact#offices' },
     ];
@@ -290,6 +291,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
       { key: 'lawyers', label: '변호사소개', href: '/ko/lawyers' },
       { key: 'pricing', label: '비용안내', href: '/ko/pricing' },
       { key: 'insights', label: '호정칼럼', href: '/ko/columns' },
+      { key: 'traffic', label: '교통사고', href: '/ko/traffic-accidents' },
       { key: 'videos', label: '미디어센터', href: '/ko/videos' },
       { key: 'directions', label: '오시는길', href: '/ko/contact#offices' }
     ];
@@ -301,6 +303,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
       { key: 'lawyers', label: '律師介紹', href: '/zh-hant/lawyers' },
       { key: 'pricing', label: '收費標準', href: '/zh-hant/pricing' },
       { key: 'insights', label: '昊鼎專欄', href: '/zh-hant/columns' },
+      { key: 'traffic', label: '交通事故', href: '/zh-hant/traffic-accidents' },
       { key: 'videos', label: '媒體中心', href: '/zh-hant/videos' },
       { key: 'directions', label: '交通位置', href: '/zh-hant/contact#offices' }
     ];
@@ -311,6 +314,7 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
     { key: 'lawyers', label: 'Our Team', href: '/en/lawyers' },
     { key: 'pricing', label: 'Pricing', href: '/en/pricing' },
     { key: 'insights', label: 'Insights', href: '/en/columns' },
+      { key: 'traffic', label: 'Traffic accidents', href: '/en/traffic-accidents' },
     { key: 'videos', label: 'Videos', href: '/en/videos' },
     { key: 'directions', label: 'Locations', href: '/en/contact#offices' }
   ];

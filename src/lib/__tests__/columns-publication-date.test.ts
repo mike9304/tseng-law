@@ -4,7 +4,6 @@ import matter from 'gray-matter';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, sortColumnPostsNewestFirst, type ColumnPost } from '@/lib/columns';
 import {
-  EXPERTISE_COLUMN_FILES_20260930,
   NATIVE_LOCALE_COLUMN_FILES,
   expertiseSlugsFor,
   isNativeLocaleColumnSlug,
@@ -63,6 +62,7 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '046': '2026-09-30',
   '047': '2026-09-30',
   '048': '2026-09-30',
+  '050': '2026-09-30', // traffic police-records column (049 in its lane)
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
@@ -162,7 +162,7 @@ describe('Korean column publication dates', () => {
     });
     expect(updatedTrafficGuide).toMatchObject({
       publicationDate: '2025-09-13',
-      date: '2026-09-10',
+      date: '2026-09-30',
       dateDisplay: '2025년 9월 13일',
     });
   });
@@ -199,7 +199,7 @@ describe('localized column publication ordering', () => {
         locale in NATIVE_LOCALE_COLUMN_FILES
           ? NATIVE_LOCALE_COLUMN_FILES[locale as keyof typeof NATIVE_LOCALE_COLUMN_FILES].length
           : 0;
-      const expertiseCount = EXPERTISE_COLUMN_FILES_20260930[locale].length;
+      const expertiseCount = expertiseSlugsFor(locale).length; // 041–048 subset + 050 traffic
       expect(files).toHaveLength(31 + nativeCount + expertiseCount);
       for (const file of files) {
         const prefix = file.slice(0, 3);

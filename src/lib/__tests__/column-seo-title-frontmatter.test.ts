@@ -114,7 +114,7 @@ describe('English column corpus seoTitle', () => {
 
   it('adds a seoTitle only when the display title would push <title> past 60 characters', () => {
     // 32 translated EN columns plus the English-only native columns (same rules apply).
-    expect(files).toHaveLength(32 + allNativeFiles('en').length);
+    expect(files).toHaveLength(33 + allNativeFiles('en').length);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');

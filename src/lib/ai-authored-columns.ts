@@ -9,6 +9,7 @@
  * byline.
  */
 export const AI_AUTHORED_COLUMN_SLUGS: ReadonlySet<string> = new Set([
+  'taiwan-accident-police-records',
   // 019–023: family columns (2026-09-27)
   'taiwanese-spouse-divorce-agreement-registration',
   'taiwanese-spouse-divorce-from-abroad',

@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
+import { TRAFFIC_COLUMN_SLUGS, trafficHubCopy } from '@/data/traffic-hub';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
@@ -14,7 +15,7 @@ import {
 } from '@/lib/ai-authored-columns';
 import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
-import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost } from '@/lib/columns';
+import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost, getColumnPublicationDate, parseColumnPublicationDate } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
 import ColumnToc from '@/components/ColumnToc';
@@ -167,6 +168,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
   const post = allPosts.find((p) => p.slug === params.slug);
   if (!post) return notFound();
+  const modifiedDate = parseColumnPublicationDate(post.date);
+  const publicationDate = getColumnPublicationDate(post);
+  const showTrafficUpdate = urlLocale in trafficHubCopy
+    && (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(post.slug)
+    && Boolean(modifiedDate && publicationDate && modifiedDate !== publicationDate);
 
   const currentIndex = allPosts.indexOf(post);
   const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
@@ -343,6 +349,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           </div>
           <div className="container blog-hero-inner">
             <Link href={`/${urlLocale}/columns`} className="blog-back-link">{t.backLabel}</Link>
+            {urlLocale in trafficHubCopy && (TRAFFIC_COLUMN_SLUGS as readonly string[]).includes(post.slug) ? (
+              <Link href={`/${urlLocale}/traffic-accidents`} className="blog-back-link" style={{ marginInlineStart: '1.5rem' }}>
+                {trafficHubCopy[urlLocale as keyof typeof trafficHubCopy].nav} →
+              </Link>
+            ) : null}
             <span className="blog-category-badge">{post.categoryLabel}</span>
             <h1 className="blog-hero-title">{post.title}</h1>
             <div className="blog-meta">
@@ -354,6 +365,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
                 </Link>
               )}
               <time>{post.dateDisplay || post.date}</time>
+              {showTrafficUpdate ? (
+                <time dateTime={modifiedDate} data-column-updated>
+                  {{ ko: '수정', 'zh-hant': '更新', en: 'Updated', ja: '更新' }[urlLocale as keyof typeof trafficHubCopy]} {modifiedDate}
+                </time>
+              ) : null}
               {post.readTime ? <span>{post.readTime}</span> : null}
             </div>
           </div>

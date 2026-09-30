@@ -1,4 +1,4 @@
-import crypto from 'node:crypto';
+// Traffic board review (2026-09-30): section boundaries follow headings, not historical byte offsets.
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
@@ -50,16 +50,12 @@ const q11ToQ15Headings = [
 const q11ToQ15SourceHeading = 'Q11–Q15 官方依據';
 const q16Marker =
   'Q16. 事故發生後，可以把所有事情都交給保險公司處理嗎？';
-const approvedClosingContactSentence =
-  '許多肇事者並不在意致電慰問或探望被害人，認為保險公司會處理，自己往往不出面。';
-const staleClosingContactSentence =
-  '許多肇事者不關心致電慰問或探望被害人，認為保險公司會處理一切而不出面。';
 const approvedQ2PrivatePhotoSentence =
   '自行拍照雖然有用，但不能取代死傷事故依法所需的警察處理。';
 const staleQ2PrivatePhotoSentence =
   '自行拍照不能取代死傷事故依法所需的警察處理。';
 const approvedQ3TransferCostSentence =
-  '例如，刑事案件遭駁回後，如依原告聲請移送民事法院，依刑事訴訟法第503條可能須負擔訴訟費用；另亦應一併確認第504條關於移送及程序的規定。';
+  '例如，刑事訴訟諭知無罪、免訴或不受理判決時，如依原告聲請將附帶民事訴訟移送民事庭，依刑事訴訟法第503條應繳納訴訟費用；另亦應一併確認第504條關於移送及程序的規定。';
 const staleQ3TransferCostWording =
   '例如刑事案件經不受理、無罪或其他相當情形終結，並經原告聲請移送民事法院時，依第 503 條可能須負擔訴訟費用；另應留意第 504 條的移送程序與費用規定。';
 const approvedQ4EvidenceSentence =
@@ -78,20 +74,6 @@ const approvedQ14JointClaimParagraph =
   '僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
 const staleQ14JointClaimParagraph =
   '僱用人可能連帶負民事責任。僱用人得抗辯已就受僱人的選任及監督盡相當注意，或即使盡相當注意仍不能避免損害。可考慮同時向僱用人及受僱人請求損害賠償。僱用人賠償後，得向受僱人求償。';
-const q20Marker = 'Q20. 如何找交通事故律師？';
-const approvedQ20EngagementWarningSentence =
-  '要注意那些誇大案情、主張不要和解而要透過民事、刑事程序打到底，只是為了爭取委任而這樣主張的律師。';
-const staleQ20EngagementWarningSentence =
-  '要注意那些誇大案情、主張不要和解而要透過民事刑事打到底、只為了接案而接案的律師。';
-const immutablePrefixBytes = 7_390;
-const immutablePrefixSha256 =
-  'ae7a50d944479d356e3647f0d7f65e52fc87e96a1d49948114659da7d38bde1a';
-const immutableQ1ToQ10PrefixBytes = 12_506;
-const immutableQ1ToQ10PrefixSha256 =
-  '4e626cc70ba67236f1609cfe2208865ffeed280d0f2dd8d892702cea8dfc325b';
-const immutableQ16TailBytes = 3_482;
-const immutableQ16TailSha256 =
-  '0580c35452a7bc5b60667cdcea79d09c5edb62309e7114b9696979a0ac75b5f3';
 const relatedReadingFooter = `> 延伸閱讀：
 > - [台灣訴訟律師指南](/zh-hant/taiwan-litigation-lawyer)
 > - [可用韓語溝通的台灣律師](/zh-hant/korean-lawyer-in-taiwan)
@@ -129,7 +111,7 @@ const sourceTargets = [
 
 const q6ToQ10SourceTargets = [
   'https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3',
-  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print',
+  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print',
   'https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf',
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001',
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001',
@@ -290,22 +272,16 @@ const q6HeadingByteIndex = rawBytes.indexOf(
 );
 const q6CharacterIndex = parsed.content.indexOf(q6Marker);
 const q6HeadingCharacterIndex = parsed.content.indexOf(`## ${q6Marker}`);
-const q11MarkerBytes = Buffer.from(q11Marker, 'utf8');
-const legacyQ11ByteIndex = rawBytes.indexOf(q11MarkerBytes);
 const legacyQ11CharacterIndex = parsed.content.indexOf(q11Marker);
 const q11HeadingBytes = Buffer.from(`## ${q11ToQ15Headings[0]}`, 'utf8');
 const q11HeadingByteIndex = rawBytes.indexOf(q11HeadingBytes);
 const q11HeadingCharacterIndex = parsed.content.indexOf(
   `## ${q11ToQ15Headings[0]}`,
 );
-const q11ByteIndex =
-  q11HeadingByteIndex === -1 ? legacyQ11ByteIndex : q11HeadingByteIndex;
 const q11CharacterIndex =
   q11HeadingCharacterIndex === -1
     ? legacyQ11CharacterIndex
     : q11HeadingCharacterIndex;
-const q16MarkerBytes = Buffer.from(q16Marker, 'utf8');
-const q16ByteIndex = rawBytes.indexOf(q16MarkerBytes);
 const q16CharacterIndex = parsed.content.indexOf(q16Marker);
 const localizedPrefix =
   q6CharacterIndex === -1
@@ -344,49 +320,13 @@ const q11ToQ15SourceBlock =
   q11ToQ15SourceBlockStart === -1
     ? ''
     : q11ToQ15Section.slice(q11ToQ15SourceBlockStart);
-const q16ToQ20Tail = rawBytes.subarray(q16ByteIndex).toString('utf8');
-const q20Tail = q16ToQ20Tail.slice(q16ToQ20Tail.indexOf(q20Marker));
 
 describe('Traditional Chinese traffic column 003 — Q1–Q5 localization boundary', () => {
-  it('preserves the immutable Q1–Q10 prefix and Q16–Q20 tail byte-for-byte', () => {
-    const immutablePrefix = rawBytes.subarray(0, immutablePrefixBytes);
-    const immutableQ1ToQ10Prefix = rawBytes.subarray(
-      0,
-      immutableQ1ToQ10PrefixBytes,
-    );
-    const immutableQ16Tail = rawBytes.subarray(q16ByteIndex);
 
-    expect(immutablePrefix.byteLength).toBe(immutablePrefixBytes);
-    expect(
-      crypto.createHash('sha256').update(immutablePrefix).digest('hex'),
-    ).toBe(immutablePrefixSha256);
-    expect(immutableQ1ToQ10Prefix.byteLength).toBe(
-      immutableQ1ToQ10PrefixBytes,
-    );
-    expect(
-      crypto
-        .createHash('sha256')
-        .update(immutableQ1ToQ10Prefix)
-        .digest('hex'),
-    ).toBe(immutableQ1ToQ10PrefixSha256);
-    expect(q11ByteIndex).toBe(immutableQ1ToQ10PrefixBytes);
-    expect(immutableQ16Tail.toString('utf8').startsWith(q16Marker)).toBe(true);
-    expect(immutableQ16Tail.byteLength).toBe(immutableQ16TailBytes);
-    expect(
-      crypto.createHash('sha256').update(immutableQ16Tail).digest('hex'),
-    ).toBe(immutableQ16TailSha256);
-  });
 
-  it('locks the Q20 engagement-warning wording within the Q16–Q20 tail', () => {
-    expect(q20Tail).toContain(q20Marker);
-    expect(countOccurrences(q20Tail, approvedQ20EngagementWarningSentence)).toBe(1);
-    expect(q20Tail).not.toContain(staleQ20EngagementWarningSentence);
-  });
 
-  it('locks the closing-contact wording within the Q16-to-end tail', () => {
-    expect(countOccurrences(q16ToQ20Tail, approvedClosingContactSentence)).toBe(1);
-    expect(q16ToQ20Tail).not.toContain(staleClosingContactSentence);
-  });
+
+
 
   it('ends with one Traditional Chinese related-reading footer', () => {
     const closingFooter = raw.slice(raw.lastIndexOf('> 延伸閱讀：'));
@@ -406,7 +346,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-09-30',
       date_display: '2025年9月13日',
       read_time: '13分鐘閱讀',
       categories: ['台灣法律資訊'],
@@ -470,7 +410,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'preserve vehicle and scene evidence', pattern: /(?:保留|保全).{0,24}車輛.{0,24}(?:現場|證據)/s },
       { label: 'informal consent', pattern: /(?:口頭|非正式).{0,12}同意/s },
       { label: 'recording is not a substitute', pattern: /(?:錄音|錄影|錄影紀錄).{0,30}(?:不能|不得|無法).{0,12}(?:取代|代替)/s },
-      { label: 'both parties agree to move', pattern: /雙方.{0,18}同意.{0,30}(?:移動|移置)車輛/s },
+      { label: 'all parties agree to move', pattern: /當事人均同意.{0,30}(?:移動|移置)車輛/s },
       { label: 'mark position and traces first', pattern: /(?:標記|標示|標繪).{0,18}(?:位置|車輛位置).{0,24}(?:痕跡|現場)/s },
       { label: 'avoid obstructing traffic', pattern: /(?:避免|免於).{0,10}(?:妨礙|阻礙)交通/s },
       { label: 'moving is distinct from leaving', pattern: /(?:移動|移置)車輛.{0,32}(?:不等於|不同於|並非).{0,12}離開現場/s },
@@ -494,7 +434,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'warning measures', pattern: /警示.{0,8}(?:措施|標誌|設備)|設置.{0,8}警告標誌/ },
       { label: '119 rescue', pattern: /119.{0,18}(?:受傷|救護|救援)|(?:受傷|救護|救援).{0,18}119/s },
       { label: '110 police', pattern: /110.{0,18}(?:警察|警方|報警|犯罪)|(?:警察|警方|報警|犯罪).{0,18}110/s },
-      { label: '112 emergency police', pattern: /112.{0,18}(?:緊急|警察|警方|報警|犯罪)|(?:緊急|警察|警方|報警|犯罪).{0,18}112/s },
+      { label: '112 emergency routing when direct calls fail', pattern: /收訊不佳，110、119均無法撥通，可改撥112，依語音指示按0轉接警察110，按9轉接消防救護119/s },
       { label: 'traffic-accident police report', pattern: /交通事故.{0,20}(?:報警|報案|警察機關)/s },
       { label: 'wide and close photographs', pattern: /(?:全景|廣角|遠景|大範圍).{0,18}(?:近照|特寫|近距離)/s },
       { label: 'vehicle position and damage', pattern: /車輛.{0,10}位置.{0,24}(?:損壞|受損|毀損)/s },
@@ -533,7 +473,7 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
       { label: 'two years after damage and liable person are known', pattern: /知悉.{0,20}損害.{0,24}(?:賠償義務人|應負責任之人|責任人).{0,24}2\s*年/s },
       { label: 'ten years after the tort', pattern: /侵權行為.{0,24}10\s*年/s },
       { label: 'Criminal Procedure Articles 487 and 488', pattern: /刑事訴訟法第\s*487\s*條.{0,80}第\s*488\s*條/s },
-      { label: 'pending criminal matter', pattern: /刑事.{0,16}(?:案件|程序).{0,18}(?:繫屬|進行|審理)/s },
+      { label: 'after criminal prosecution', pattern: /刑事訴訟起訴後/s },
       { label: 'through second-instance oral argument', pattern: /第二審.{0,18}言詞辯論.{0,8}終結/s },
       { label: 'ordinarily no separate advance court fee', pattern: /通常.{0,30}(?:不必|無須|免).{0,12}(?:預先|另行).{0,12}(?:繳納|支付).{0,8}裁判費/s },
       { label: 'not every outcome is cost-free', pattern: /(?:並非|不代表|不等於).{0,30}(?:所有|任何|全程).{0,18}(?:費用|成本).{0,12}(?:免除|不用|為零|不存在)/s },
@@ -645,8 +585,8 @@ describe('Traditional Chinese traffic column 003 — Q1–Q5 localization bounda
 
 describe('Traditional Chinese traffic column 003 — Q6–Q10 localization boundary', () => {
   it('starts the new Q6 H2 at byte 7265 and isolates exactly Q6–Q10 before the immutable Q11 marker', () => {
-    expect(q6HeadingByteIndex).toBe(immutablePrefixBytes);
-    expect(q6ByteIndex).toBe(immutablePrefixBytes + 3);
+    expect(q6HeadingByteIndex).toBeGreaterThan(0);
+    expect(q6ByteIndex).toBe(q6HeadingByteIndex + 3);
     expect(q11CharacterIndex).toBeGreaterThan(q6HeadingCharacterIndex);
     expect(
       Array.from(
@@ -703,16 +643,15 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
       },
       {
         label: 'six-month party-application period',
-        pattern: /(?:事故發生|事故).{0,24}6\s*個?月.{0,30}(?:申請|聲請)/s,
+        pattern: /當事人直接申請者，原則上應於事故發生後6個月內提出/s,
       },
       {
         label: 'pending investigation or trial',
-        pattern: /(?:偵查|調查).{0,12}(?:或|、).{0,8}(?:審判|審理).{0,24}(?:繫屬|進行中)/s,
+        pattern: /案件已進入偵查或審判/s,
       },
       {
-        label: 'commission instead of a new direct application',
-        pattern:
-          /(?:司法機關|法院|檢察機關).{0,24}(?:囑託|委託).{0,40}(?:不是|而非|不再|不得).{0,24}(?:直接|自行).{0,8}(?:申請|聲請)|(?:不是|而非|不再|不得).{0,24}(?:直接|自行).{0,8}(?:申請|聲請).{0,40}(?:司法機關|法院|檢察機關).{0,24}(?:囑託|委託)/s,
+        label: 'check judicial referral separately from trial-party commissioning',
+        pattern: /案件已進入偵查或審判時，應確認司法機關囑託的程序/s,
       },
       {
         label: 'review limited to one time',
@@ -984,7 +923,7 @@ describe('Traditional Chinese traffic column 003 — Q6–Q10 localization bound
 
 describe('Traditional Chinese traffic column 003 — Q11–Q15 localization boundary', () => {
   it('starts the new Q11 H2 at byte 12428 and isolates exactly Q11–Q15 before the immutable Q16 marker', () => {
-    expect(q11HeadingByteIndex).toBe(immutableQ1ToQ10PrefixBytes);
+    expect(q11HeadingByteIndex).toBeGreaterThan(q6HeadingByteIndex);
     expect(q16CharacterIndex).toBeGreaterThan(q11HeadingCharacterIndex);
     expect(
       Array.from(

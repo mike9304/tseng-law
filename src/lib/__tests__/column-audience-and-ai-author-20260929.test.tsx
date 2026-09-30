@@ -142,7 +142,7 @@ describe('client reading signals', () => {
 
 describe('AI-written columns', () => {
   it('covers 019–040 and not the attorney columns 001–018', () => {
-    expect(AI_AUTHORED_COLUMN_SLUGS.size).toBe(22);
+    expect(AI_AUTHORED_COLUMN_SLUGS.size).toBe(23);
     expect(isAiAuthoredColumn('taiwan-semiconductor-market-entry')).toBe(false);
     expect(isAiAuthoredColumn('taiwan-divorce-lawsuit-qna')).toBe(false);
     expect(isAiAuthoredColumn('taiwan-exit-ban-foreigners')).toBe(true);

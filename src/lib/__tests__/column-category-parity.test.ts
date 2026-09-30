@@ -28,11 +28,11 @@ describe('column category parity with English', () => {
   );
 
   it('has the English baseline this test compares against', () => {
-    // 31 + 048 (the 2026-09-30 column that has a Korean twin in English).
-    expect(english.size).toBe(32);
+    // 31 + 048 and 050 (2026-09-30 columns that have a Korean twin in English).
+    expect(english.size).toBe(33);
     const counts = { formation: 0, legal: 0, case: 0 };
     for (const category of english.values()) counts[category] += 1;
-    expect(counts).toEqual({ formation: 9, legal: 22, case: 1 });
+    expect(counts).toEqual({ formation: 9, legal: 23, case: 1 });
   });
 
   it.each(Object.keys(NATIVE_LOCALE_COLUMN_FILES) as (keyof typeof NATIVE_LOCALE_COLUMN_FILES)[])(

@@ -9,6 +9,9 @@ import { publicSiteContent } from '@/lib/public-site-chrome';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import styles from './PublicChrome.module.css';
+import { isSiteLocale } from '@/lib/locales';
+
+const trafficLabel = { ko: '교통사고', 'zh-hant': '交通事故', en: 'Traffic accidents', ja: '交通事故' };
 
 type MemberNavState = {
   status: 'loading' | 'signed-out' | 'signed-in';
@@ -228,6 +231,11 @@ export default function MobileNavDrawer({
               {item.label}
             </Link>
           ))}
+          {isSiteLocale(locale) ? (
+            <Link href={`/${locale}/traffic-accidents`} className="drawer-nav-link" onClick={onClose}>
+              {trafficLabel[locale]}
+            </Link>
+          ) : null}
         </nav>
         <div className="drawer-footer">
           {isGuidance ? null : (

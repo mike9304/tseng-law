@@ -180,11 +180,12 @@ describe('sitemap column lastModified', () => {
       // locale file; none of them is emitted for a locale that lacks the file (base 445 -> 459).
       // Native single-locale columns: EN ones are file-backed in columns-en and
       // must stay indexable (no Korean twin); JA ones join the JA details.
+      // Traffic hub (4 core-language URLs) + 050 police-records article (4 locale files) add 8.
       beforeFiltering:
-        459 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        467 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        450 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        458 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });

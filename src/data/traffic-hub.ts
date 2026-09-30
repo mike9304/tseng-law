@@ -1,0 +1,127 @@
+import type { SiteLocale } from '@/lib/locales';
+
+export const TRAFFIC_PATH = '/traffic-accidents';
+export const TRAFFIC_COLUMN_SLUGS = [
+  'taiwan-accident-police-records',
+  'taiwan-traffic-accident-procedure',
+  'taiwan-overtaking-accident-liability',
+] as const;
+export const TRAFFIC_IMAGE = {
+  src: '/images/traffic/overtaking-diagram.webp', width: 1920, height: 1080,
+} as const;
+
+type CountryGuide = { id: 'tw' | 'us' | 'jp' | 'kr'; name: string; text: string; linkLabel: string; href: string };
+type TrafficCopy = {
+  nav: string; kicker: string; title: string; description: string; read: string;
+  columns: string; visualTitle: string; visualText: string; alt: string; caption: string; legend: string; enlarge: string;
+  stages: { title: string; text: string }[];
+  countriesTitle: string; countriesIntro: string; countries: CountryGuide[];
+  contactTitle: string; contactText: string; contact: string; allColumns: string;
+};
+
+export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
+  ko: {
+    legend: '1 흰색 앞차 · 2 노란색 차량 · A 초록색 오토바이', enlarge: '도해 크게 보기',
+    nav: '교통사고', kicker: '교통사고 법률 안내', title: '대만 교통사고,\n사고 직후부터 손해배상까지',
+    description: '경찰 기록, 치료비, 보험과 합의. 대만에서 난 사고를 해결할 때 필요한 정보를 모았습니다. 한국·일본·미국으로 돌아갈 예정이라면 출국 일정과 남은 절차도 함께 살펴보세요.',
+    read: '칼럼 읽기', columns: '대만 교통사고 칼럼',
+    visualTitle: '추월 사고, 차량의 움직임부터 살펴봅니다',
+    visualText: '앞차 1을 뒤따르던 차량 2와 오토바이 A가 추월하려는 상황입니다. 어느 차가 먼저 차로에 들어갔는지, 서로를 볼 수 있었는지, 회피할 공간이 있었는지가 증거로 확인할 쟁점입니다.',
+    alt: '흰색 앞차 1, 노란색 차량 2, 초록색 오토바이 A의 추월 경로가 겹치는 설명용 3D 도해',
+    caption: '설명용 가상 도해입니다. 도로 형태·차량 위치·속도·거리는 가정이며 실제 사고의 감정 결과나 과실비율을 나타내지 않습니다. 숫자와 A는 차량을 구분하는 표시입니다.',
+    stages: [
+      { title: '사고 직후', text: '안전과 구호를 우선하고, 신고·진료 기록과 사고 현장 자료를 남깁니다.' },
+      { title: '책임과 손해', text: '차량 움직임, 진단서, 지출 자료를 맞춰 과실과 배상 항목을 살펴봅니다.' },
+      { title: '합의와 이후 절차', text: '보험금과 합의금의 관계, 청구 포기 문구, 각 절차의 기한을 구분합니다.' },
+    ],
+    countriesTitle: '사고가 난 나라를 먼저 확인하세요',
+    countriesIntro: '대만 사고 안내는 대만 절차를 중심으로 합니다. 미국·일본·한국에서 난 사고는 아래 공식 안내와 현지 법률상담을 출발점으로 삼으세요.',
+    countries: [
+      { id: 'tw', name: '대만', text: '대만 사고의 현장 대응, 과실, 보험·합의·손해배상을 칼럼에서 자세히 설명합니다.', linkLabel: '대만 사고 대응 Q&A', href: '/columns/taiwan-traffic-accident-procedure' },
+      { id: 'us', name: '미국', text: '신고와 보험 절차는 주별로 확인해야 합니다. 아래 자료는 캘리포니아 안내이며 미국 전체의 공통 규칙이 아닙니다.', linkLabel: '캘리포니아 DMV 사고 안내', href: 'https://www.dmv.ca.gov/portal/dmv-virtual-office/accident-reporting/' },
+      { id: 'jp', name: '일본', text: '일본에서 난 사고는 현지 경찰의 사고 처리 안내부터 확인합니다. 대만의 신고·합의 절차와 구분하세요.', linkLabel: '오사카부경찰 사고 대응 안내', href: 'https://www.police.pref.osaka.lg.jp/kotsu/anzen/trafficrules/22200.html' },
+      { id: 'kr', name: '한국', text: '한국 사고의 현장 조치와 신고는 도로교통법을 확인합니다. 치료·보험·손해배상은 개별 사정에 맞춰 검토합니다.', linkLabel: '국가법령정보센터 도로교통법', href: 'https://www.law.go.kr/법령/도로교통법/제54조' },
+    ],
+    contactTitle: '대만 교통사고 상담',
+    contactText: '사고 날짜와 장소, 부상 여부, 현재 거주국, 경찰·보험 진행 상황과 출국 예정일을 알려 주세요. 첫 문의에는 비기밀 개요만 적고, 진료기록이나 신분증은 전달 방법을 안내받은 뒤 보내세요.',
+    contact: '상담 문의하기', allColumns: '전체 칼럼',
+  },
+  'zh-hant': {
+    legend: '1 白色前車 · 2 黃色車輛 · A 綠色機車', enlarge: '查看大圖',
+    nav: '交通事故', kicker: '交通事故法律指南', title: '台灣車禍，\n從事故現場到損害賠償',
+    description: '警方資料、醫療費用、保險與和解：整理處理台灣交通事故所需的資訊。若即將前往美國、日本或韓國，也應一併安排離台後的聯絡與後續程序。',
+    read: '閱讀專欄', columns: '台灣交通事故專欄',
+    visualTitle: '超車事故，先看車輛如何移動',
+    visualText: '車輛 2 與機車 A 都想超越前方的車輛 1。誰先進入車道、能否看見彼此，以及有無避讓空間，都是需要以證據釐清的問題。',
+    alt: '白色車輛 1、黃色車輛 2 與綠色機車 A 的超車路徑交會示意圖',
+    caption: '本圖為說明用的假設情境。道路形狀、車輛位置、速度與距離均為假設，不是實際事故鑑定，也不表示肇事責任比例。數字及 A 僅用於辨識車輛。',
+    stages: [
+      { title: '事故現場', text: '先確保安全與救護，留下報案、就醫紀錄及現場資料。' },
+      { title: '責任與損害', text: '比對車輛動向、診斷證明與支出資料，釐清過失及賠償項目。' },
+      { title: '和解與後續程序', text: '區分保險給付、和解金、放棄請求的條款，以及各程序的期限。' },
+    ],
+    countriesTitle: '先從事故發生地開始',
+    countriesIntro: '本站以台灣事故的處理為主。若事故發生在美國、日本或韓國，可從下列官方資訊及當地法律諮詢著手。',
+    countries: [
+      { id: 'tw', name: '台灣', text: '現場處理、過失、保險、和解與損害賠償，詳見台灣交通事故專欄。', linkLabel: '台灣交通事故問答', href: '/columns/taiwan-traffic-accident-procedure' },
+      { id: 'us', name: '美國', text: '報案與保險程序須依事故所在州確認。以下是加州指引，不是全美通用規則。', linkLabel: '加州 DMV 事故指引', href: 'https://www.dmv.ca.gov/portal/dmv-virtual-office/accident-reporting/' },
+      { id: 'jp', name: '日本', text: '在日本發生事故，可先查閱當地警方資訊；請勿直接套用台灣的報案或和解程序。', linkLabel: '大阪府警察事故處理指引', href: 'https://www.police.pref.osaka.lg.jp/kotsu/anzen/trafficrules/22200.html' },
+      { id: 'kr', name: '韓國', text: '現場處置與報案可查韓國道路交通法。醫療、保險及賠償仍須依具體情況處理。', linkLabel: '韓國道路交通法第54條', href: 'https://www.law.go.kr/법령/도로교통법/제54조' },
+    ],
+    contactTitle: '諮詢台灣交通事故',
+    contactText: '請提供事故日期、地點、有無受傷、目前居住國家、警方與保險處理進度，以及預計離台日期。初次聯繫請先提供非機密概要；病歷或身分文件請在確認傳送方式後提供。',
+    contact: '聯絡事務所', allColumns: '所有專欄',
+  },
+  en: {
+    legend: '1 White lead car · 2 Yellow car · A Green motorcycle', enlarge: 'View full-size diagram',
+    nav: 'Traffic accidents', kicker: 'Traffic accident guidance', title: 'A traffic accident in Taiwan.\nWhat happens next?',
+    description: 'Police records, medical costs, insurance and settlement: practical reading for dealing with an accident in Taiwan, including when you will be returning to the United States, Japan or Korea.',
+    read: 'Read article', columns: 'Taiwan accident articles',
+    visualTitle: 'An overtaking collision starts with vehicle movements',
+    visualText: 'Car 2 and motorcycle A attempt to overtake car 1. Evidence needs to establish who entered the lane first, what each driver could see, and whether there was room to avoid contact.',
+    alt: 'Illustrative 3D scene showing overlapping overtaking paths of white car 1, yellow car 2 and green motorcycle A',
+    caption: 'Hypothetical illustration. Road geometry, vehicle positions, speeds and distances are assumed. This is not a forensic reconstruction or a finding of fault. Numbers and A identify the vehicles only.',
+    stages: [
+      { title: 'At the scene', text: 'Prioritize safety and assistance, then preserve police, medical and scene records.' },
+      { title: 'Liability and loss', text: 'Compare vehicle movements, medical evidence and expenses when assessing fault and damages.' },
+      { title: 'Settlement and next steps', text: 'Distinguish insurance payments, settlement terms, releases and the deadlines for each procedure.' },
+    ],
+    countriesTitle: 'Start with where the accident happened',
+    countriesIntro: 'Our accident guidance focuses on Taiwan. For a collision in the United States, Japan or Korea, start with the official resources below and legal advice in that jurisdiction.',
+    countries: [
+      { id: 'tw', name: 'Taiwan', text: 'Read about the accident scene, fault, insurance, settlement and civil compensation in Taiwan.', linkLabel: 'Taiwan accident questions answered', href: '/columns/taiwan-traffic-accident-procedure' },
+      { id: 'us', name: 'United States', text: 'Reporting and insurance procedures must be checked for the state involved. This resource is for California, not a nationwide rule.', linkLabel: 'California DMV accident guidance', href: 'https://www.dmv.ca.gov/portal/dmv-virtual-office/accident-reporting/' },
+      { id: 'jp', name: 'Japan', text: 'Consult local police information for an accident in Japan. Taiwan reporting and settlement procedures should not be assumed to apply.', linkLabel: 'Osaka Police accident guidance', href: 'https://www.police.pref.osaka.lg.jp/kotsu/anzen/trafficrules/22200.html' },
+      { id: 'kr', name: 'Korea', text: 'See Korea’s Road Traffic Act for duties at the scene and reporting. Treatment, insurance and compensation require assessment of the individual circumstances.', linkLabel: 'Korea Road Traffic Act, Article 54', href: 'https://www.law.go.kr/법령/도로교통법/제54조' },
+    ],
+    contactTitle: 'Discuss an accident in Taiwan',
+    contactText: 'Tell us when and where it happened, whether anyone was injured, your current country, the status of police and insurance proceedings, and any departure date. Begin with a non-confidential outline; ask how to send medical records and identification securely.',
+    contact: 'Contact the firm', allColumns: 'All articles',
+  },
+  ja: {
+    legend: '1 白い先行車 · 2 黄色の車両 · A 緑色の二輪車', enlarge: '図を拡大して見る',
+    nav: '交通事故', kicker: '交通事故の法律ガイド', title: '台湾での交通事故。\n事故直後から損害賠償まで',
+    description: '警察の記録、治療費、保険と示談。台湾での交通事故に対応するための情報をまとめました。日本・韓国・米国へ戻る予定がある方は、帰国日とその後の手続きもあわせて考えましょう。',
+    read: 'コラムを読む', columns: '台湾の交通事故コラム',
+    visualTitle: '追越し事故は、車両の動きから考えます',
+    visualText: '先行車 1 を追い越そうとする車両 2 と二輪車 A。どちらが先に車線へ入ったか、互いの動きが見えていたか、回避する余地があったかが、証拠で確かめるべき点です。',
+    alt: '白い車両 1、黄色の車両 2、緑色の二輪車 A の追越し経路が重なる説明用3D図',
+    caption: '説明のための仮想図です。道路形状・車両位置・速度・距離は仮定であり、実際の事故鑑定や過失割合を示すものではありません。数字と A は車両の識別記号です。',
+    stages: [
+      { title: '事故直後', text: '安全と救護を優先し、通報・受診の記録と現場資料を残します。' },
+      { title: '責任と損害', text: '車両の動き、診断書、支出資料を照らし合わせ、過失と賠償項目を考えます。' },
+      { title: '示談とその後', text: '保険金と示談金の関係、請求放棄の条項、各手続きの期限を区別します。' },
+    ],
+    countriesTitle: 'まず、事故が起きた国を確認',
+    countriesIntro: 'この案内は台湾での事故対応が中心です。米国・日本・韓国で起きた事故は、下記の公的情報と現地での法律相談を出発点にしてください。',
+    countries: [
+      { id: 'tw', name: '台湾', text: '現場対応、過失、保険、示談、損害賠償を台湾の交通事故コラムで説明しています。', linkLabel: '台湾の交通事故 Q&A', href: '/columns/taiwan-traffic-accident-procedure' },
+      { id: 'us', name: '米国', text: '届出や保険の手続きは州ごとに確認します。以下はカリフォルニア州の案内で、全米共通の規則ではありません。', linkLabel: 'カリフォルニア州 DMV 事故案内', href: 'https://www.dmv.ca.gov/portal/dmv-virtual-office/accident-reporting/' },
+      { id: 'jp', name: '日本', text: '日本での事故は現地の警察情報から確認しましょう。台湾の通報や示談の手続きとは区別が必要です。', linkLabel: '大阪府警の事故対応案内', href: 'https://www.police.pref.osaka.lg.jp/kotsu/anzen/trafficrules/22200.html' },
+      { id: 'kr', name: '韓国', text: '現場での措置や届出は韓国の道路交通法を参照し、治療・保険・損害賠償は個別の事情に応じて検討します。', linkLabel: '韓国道路交通法第54条', href: 'https://www.law.go.kr/법령/도로교통법/제54조' },
+    ],
+    contactTitle: '台湾の交通事故について相談',
+    contactText: '事故の日時と場所、けがの有無、現在の居住国、警察・保険手続きの状況、帰国予定日をお知らせください。初回は非機密の概要のみとし、診療記録や身分証は送付方法の案内後にお送りください。',
+    contact: '事務所に相談する', allColumns: 'すべてのコラム',
+  },
+};

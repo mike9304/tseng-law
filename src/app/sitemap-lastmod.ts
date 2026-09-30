@@ -15,6 +15,7 @@ export const STATIC_PATH_SOURCE_FILES: Record<string, string> = {
   '/services': 'src/data/page-copy.ts',
   '/pricing': 'src/data/page-copy.ts',
   '/lawyers': 'src/data/page-copy.ts',
+  '/traffic-accidents': 'src/data/traffic-hub.ts',
   '/columns': 'src/data/page-copy.ts',
   '/videos': 'src/data/page-copy.ts',
   '/faq': 'src/data/page-copy.ts',

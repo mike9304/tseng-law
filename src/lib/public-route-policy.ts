@@ -42,6 +42,7 @@ export const JA_DEDICATED_ROUTE_PATHS = new Set([
   'taiwan-litigation-lawyer',
   'taiwan-semiconductor-supplier-legal',
   'semiconductor',
+  'traffic-accidents',
   'korean-lawyer-in-taiwan',
   'guides/taiwan-company-setup',
   'ai-intake',

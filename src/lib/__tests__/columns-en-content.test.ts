@@ -46,9 +46,9 @@ describe('English full column corpus', () => {
 
   it('loads 32 translated plus 5 native English posts with full bodies (not Overview stubs only)', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))).toHaveLength(32);
-    expect(koFilesInEn).toHaveLength(32);
-    expect(posts).toHaveLength(32 + allNativeFiles('en').length);
+    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('en', post.slug))).toHaveLength(33);
+    expect(koFilesInEn).toHaveLength(33);
+    expect(posts).toHaveLength(33 + allNativeFiles('en').length);
 
     for (const post of posts) {
       expect(post.title.trim().length).toBeGreaterThan(8);
@@ -105,11 +105,11 @@ describe('English full column corpus', () => {
     expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
     expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
     expect(post!.title).toBe(exactTitle);
-    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-09-10');
+    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-09-30');
     expect(raw.match(/^date_display:\s*"([^"]+)"$/m)?.[1]).toBe(
       'September 13, 2025',
     );
-    expect(post!.date).toBe('2026-09-10');
+    expect(post!.date).toBe('2026-09-30');
     expect(post!.dateDisplay).toBe('September 13, 2025');
 
     const loadedPublicContent = `${post!.title}\n${post!.content}`;
@@ -117,7 +117,7 @@ describe('English full column corpus', () => {
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
 
     const renderedWordCount = countRenderedEnglishWords(post!.content);
-    expect(renderedWordCount).toBe(781);
+    expect(renderedWordCount).toBe(728);
     expect(Math.ceil(renderedWordCount / 200)).toBe(4);
     expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('4 min read');
     expect(post!.readTime).toBe('4 min read');
@@ -176,16 +176,14 @@ describe('English full column corpus', () => {
       expect(loadedPublicContent).toContain(rule);
     }
 
-    expect(raw).toContain('In an anonymized case handled by this firm');
+    expect(raw).toContain('In the anonymized case described in the original article');
     expect(raw).toContain(
-      'According to those assessments, A was assessed as bearing primary responsibility for the collision.',
+      'According to the original case account, the assessments identified A as the primary cause of the collision.',
     );
     expect(raw).toContain('That conclusion was limited to the facts of this case.');
+    expect(raw).not.toContain('The assessments considered together');
     expect(raw).toContain(
-      "The assessments considered together A's attempt to pass two vehicles traveling in a line ahead, entry into the oncoming lane, speed that left too little time to brake, and failure to give the prescribed horn or headlight signal, as well as Vehicle 2's lane-change maneuver, the road and lane configuration, and the other available evidence.",
-    );
-    expect(raw).toContain(
-      'This case-specific result does not mean that one omitted signal will always determine liability.',
+      'This case-specific result does not mean that any single factor will always determine liability.',
     );
 
     const forbiddenFormerClaims = [

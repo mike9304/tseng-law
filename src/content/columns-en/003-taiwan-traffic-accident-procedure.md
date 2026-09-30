@@ -2,7 +2,7 @@
 title: "Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation"
 seoTitle: "Taiwan Traffic Accident Fault & Compensation"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-09-10"
+lastmod: "2026-09-30"
 date_display: "September 13, 2025"
 read_time: "8 min read"
 categories:
@@ -23,7 +23,7 @@ After a traffic accident in Taiwan, first secure safety, make the appropriate re
 
 In an accident involving injury or death, the driver must immediately provide aid, notify the police, and preserve the vehicles and scene evidence. Informal consent from the other party or a recording alone does not replace the required measures.
 
-In an injury accident, if all parties agree, record the vehicle positions and scene marks; only then may the vehicles be moved to avoid obstruction of traffic. The duty to provide aid and the reporting requirement still apply.
+In an injury accident, if all parties agree, record the vehicle positions and scene marks; the vehicles must then be moved to avoid obstruction of traffic. The duty to provide aid and the reporting requirement still apply.
 
 Where there is property damage only and the vehicles can be moved, record their positions and the scene marks with photographs or video, then move them promptly to a safe place. Leaving without taking the required measures can result in administrative sanctions.
 
@@ -31,11 +31,11 @@ Criminal Code Article 185-4 addresses a driver's departure after a traffic accid
 
 ## Q2. What evidence should I preserve first?
 
-Personal safety and warning measures come first. For injury or rescue, call 119; for a crime or urgent public-safety situation, call 110 or 112. Also make the appropriate police report for the traffic accident.
+Personal safety and warning measures come first. For injury or rescue in Taiwan, call 119; to report a traffic accident to the police, call 110. If poor mobile reception prevents calls to 110 or 119 in an emergency, try 112: follow the voice prompt and press 0 for police or 9 for fire and rescue. [National Fire Agency emergency numbers](https://www.nfa.gov.tw/cht/?code=list&ids=66)
 
 Once safety is secured, take wide and close-up photographs of the vehicle positions and damage, road markings, signals, and weather conditions. Preserve witness contact details, request preservation of CCTV and dashcam footage, and collect the parties’ identifying details, vehicle and insurance information, and medical records. Personal recordings are useful, but they do not replace the police handling required in accidents involving injury or death.
 
-The police may provide a traffic-accident party registration and contact form at the scene. The scene diagram and scene photographs may be requested from day 7 after the accident; the preliminary analysis form may be requested from day 30. Confirm availability and application requirements with the competent police agency.
+The police may provide a traffic-accident party registration and contact form at the scene. The scene diagram and scene photographs may be requested after seven days from the accident; the preliminary analysis form may be requested after thirty days. Confirm availability and application requirements with the competent police agency.
 
 ## Q3. If I was injured, what claims and deadlines should I check?
 
@@ -43,7 +43,7 @@ Criminal Code Article 284 defines negligent injury and negligent serious injury,
 
 Under Civil Code Article 197, a civil damages claim is generally subject to a period of two years from knowledge of the damage and the person liable, and ten years from the tort. Whether particular facts interrupt or otherwise affect a limitation period must be assessed separately.
 
-Under Criminal Procedure Code Articles 487 and 488, a crime victim may file an attached civil action while the criminal case is pending, no later than the close of second-instance oral argument, except that it may not be filed after the close of first-instance oral argument and before an appeal is lodged. This route usually provides a filing-fee advantage, but it does not guarantee a cost-free result. Under Article 503, if the criminal case is dismissed and the matter is transferred to a civil court at the plaintiff's request, costs may be payable. Article 504 also governs aspects of transfer and procedure.
+Under Criminal Procedure Code Articles 487 and 488, a crime victim may file an attached civil action after criminal prosecution has begun, no later than the close of second-instance oral argument, except that it may not be filed after the close of first-instance oral argument and before an appeal is lodged. This route usually provides a filing-fee advantage, but it does not guarantee a cost-free result. Under Article 503, if the criminal judgment is an acquittal, a judgment barring prosecution, or a judgment declining to entertain the prosecution, and the attached civil action is transferred to the civil division at the plaintiff's request, court fees are payable. Article 504 also governs aspects of transfer and procedure.
 
 The appropriate route depends on interruption of the limitation period, the defendants, evidence, insurance, and venue. There is no universally best route for every case.
 
@@ -61,7 +61,7 @@ A settlement agreement should identify the accident date and place and the parti
 
 Under Civil Code Articles 736 and 737, settlement involves mutual concession, and the extinguishment of rights is limited to the rights waived by the wording of the agreement. The agreement does not necessarily make every future claim disappear.
 
-For a complaint-based offense, Criminal Procedure Code Article 238 permits withdrawal before the close of first-instance oral argument. A withdrawn complaint cannot be refiled. Private settlement does not automatically terminate prosecution for a non-complaint offense, and settlement does not invariably require complaint withdrawal.
+For a complaint-based offense, Criminal Procedure Code Article 238 permits withdrawal before the close of first-instance oral argument. The person who withdraws cannot file a complaint again. Private settlement does not automatically terminate prosecution for a non-complaint offense, and settlement does not invariably require complaint withdrawal.
 
 ### Q1–Q5 Official Sources
 
@@ -87,9 +87,11 @@ For a complaint-based offense, Criminal Procedure Code Article 238 permits withd
 
 The Road Traffic Accident Preliminary Analysis Determination Form is a preliminary police analysis based on evidence gathered at the scene. It is not a court judgment: it neither binds the court nor fixes a fault percentage. Because the evidence needed and the scope of the dispute vary from one accident to another, the preliminary analysis, statutory appraisal, and review do not form an automatic or mandatory sequence.
 
-Under the applicable rules, an eligible party may apply for a vehicle-accident appraisal, a handling authority may refer the matter, or a judicial authority may commission an appraisal. A party application is ordinarily made within six months after the accident. If an investigation or trial is already pending, the appraisal is generally commissioned by the judicial authority rather than pursued through a new direct application.
+Under the applicable rules, an eligible party may apply for a vehicle-accident appraisal, a handling authority may refer the matter, or a judicial authority may commission an appraisal. A direct party application is ordinarily made within six months after the accident. If an investigation or trial is already pending, check the judicial-referral procedure. [Appraisal and review rules, Article 3](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)
 
-A party dissatisfied with an appraisal opinion may seek review, but only one review is available. Appraisal and review opinions serve as evidence or reference material. The court independently evaluates statements, video, scene records, and the record as a whole.
+During a criminal trial, Article 208 of the Code of Criminal Procedure also allows a party to commission a qualified institution to conduct an appraisal or review another appraisal at that party's expense. This route should be distinguished from an application to the accident appraisal committee; the appropriate procedure depends on the stage and institution. [Code of Criminal Procedure, Article 208](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=208)
+
+For an ordinary direct application for committee review, give reasons and apply within 30 days starting the day after receipt of the appraisal opinion. Only one review is available. Cases already in judicial proceedings require checking the judicial-referral route and applicable deadline. Appraisal and review opinions serve as evidence or reference material. The court independently evaluates statements, video, scene records, and the record as a whole. [Appraisal and review rules, Articles 10 and 11](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040045)
 
 ## Q7. What losses can I claim after an accident?
 
@@ -122,7 +124,7 @@ Receipts, fare records, route records, and treatment records are possible eviden
 ### Q6–Q10 Official Sources
 
 - [Vehicle Accident Appraisal and Review Rules Article 3](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
-- [Vehicle Accident Appraisal and Review Rules Articles 11–15](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
+- [Vehicle Accident Appraisal and Review Rules Articles 10–15](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print)
 - [Directorate General of Highways vehicle-accident appraisal review application form](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
 - [Civil Code Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
 - [Civil Code Article 192](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)
@@ -196,71 +198,25 @@ Third-party liability, driver injury, and own-damage insurance are optional insu
 - [Compulsory Automobile Liability Insurance benefit standards](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Financial Supervisory Commission standard personal automobile insurance contract](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. After an accident, can you leave everything to the insurance company?
+## Q16. After an accident, can you leave everything to the insurance company?
 
-In my experience, insurers often fail to give enough attention to the emotional needs of the people involved in an accident.
+Confirm what the insurer will handle, which documents it needs and the notice deadlines. Before signing a settlement, check how it treats payments already received, further treatment costs and any release of claims.
 
-They may neglect important ways of addressing the other party’s feelings, including an apology and expressions of concern.
+## Q17. What criminal liability does an at-fault party face for negligent injury in a traffic accident?
 
-Paying an additional TWD 500,000 or TWD 1,000,000 in one case may have little effect on an insurer’s overall profit, but for the person involved in the accident, that amount may affect whether the case leaves them with a criminal record.
+Negligent injury and serious injury are addressed by Criminal Code Article 284; negligent homicide by Article 276. Actual sentencing depends on the circumstances, not a fixed number of months. Conversion to a fine under Article 41 is subject to eligibility requirements and exceptions. [284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=284) · [276](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=276) · [41](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=41)
 
-Conflicts of interest may also arise between the insurer and the person involved, and because insurers handle many cases, they may struggle to devote enough time to each individual matter.
+## Q18. If you settle with the other party, can you withdraw the criminal complaint?
 
-Therefore, I do not recommend entrusting all litigation to the insurance company.
+A complaint-dependent complaint may be withdrawn before first-instance argument closes; the withdrawing person cannot complain again. Check payment and withdrawal arrangements separately. Private settlement does not automatically end prosecution for negligent homicide or other offenses that do not require a complaint. [238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=238) · [287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=287)
 
-If you do entrust the matter to the insurer, you should continuously track its handling and carefully review documents from both sides.
+## Q19. If you leave the scene after an accident, does criminal hit-and-run always apply?
 
-Q17. What criminal liability does an at-fault party face for negligent injury in a traffic accident?
+Criminal Code Article 185-4 addresses fleeing an injury or death accident. Property-only accidents still require separate consideration of handling duties and administrative consequences under the Road Traffic Management and Penalty Act, Article 62. [185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-4) · [62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=62)
 
-Courts currently generally impose about 3 months’ imprisonment for negligent injury.
+## Q20. How do you find a traffic accident attorney?
 
-If the sentence is converted to a fine, Criminal Code Article 41, paragraph 1 sets the rate at TWD 1,000, 2,000, or 3,000 per day; at TWD 1,000 per day, a 3-month sentence converts to 3 × 30 × TWD 1,000 = TWD 90,000.
-
-Negligent serious injury generally results in about 4 months’ imprisonment, while negligent death generally results in about 6 months’ imprisonment.
-
-Q18. If you settle with the other party, can you withdraw the criminal complaint?
-
-Negligent injury and negligent serious injury are offenses prosecutable only upon complaint (告訴乃論之罪), so the complainant may withdraw the complaint.
-
-In a negligent-death case, withdrawing the complaint is not available. However, if you settle with the other party’s family, the court may reduce the sentence.
-
-You may receive a suspended sentence and avoid imprisonment.
-
-Q19. If you leave the scene after an accident, does criminal hit-and-run always apply?
-
-Not necessarily.
-
-Criminal hit-and-run liability requires that someone have been injured or killed.
-
-If the accident caused only vehicle damage, criminal hit-and-run does not apply.
-
-Q20. How do you find a traffic accident attorney?
-
-Because traffic-accident cases are common, a general litigation attorney with a few years of practical experience can handle them.
-
-What matters is the attorney’s care and honesty.
-
-The attorney should carefully review every head of damages and help you pursue the maximum compensation available.
-
-The attorney should also explain your position clearly and outline the risks of not settling.
-
-Be wary of attorneys who exaggerate a case and urge you to reject settlement and fight both civil and criminal proceedings through to the end merely to secure the engagement.
-
-This concludes the Q&A on traffic accidents. I hope it is helpful to you.
-
-Having handled many traffic-accident cases, I want to emphasize one important point.
-
-Because of the victim’s injury or death, the victim or their family suffers physical and mental pain.
-
-At-fault parties often fail to call and check on the victim or visit them in the hospital. Many assume that the insurance company will handle everything and do not appear in person. In such cases, the victim perceives neither remorse nor sincerity on the part of the at-fault party.
-
-As a result, victims often feel deeply hurt and angry, refuse to compromise on settlement amounts, apply for provisional attachment, and pursue seizure of the other party’s assets to the end.
-
-This point must never be overlooked, and it is best to consult an attorney based on the circumstances.
-
-If you have additional questions, please leave them in the comments.
-
-Wei Tseng (曾雋崴), Taiwan Attorney
+Ask how the lawyer will assess evidence and damages, which deadlines remain, what the fee covers and how you will communicate. No particular outcome or compensation amount can be guaranteed in advance.
 
 ---
 

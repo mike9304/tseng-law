@@ -141,6 +141,7 @@ export const PUBLIC_FILE_ROUTES = [
   "/taiwan-lawyer",
   "/taiwan-litigation-lawyer",
   "/taiwan-semiconductor-supplier-legal",
+  "/traffic-accidents",
   "/videos",
 ] as const;
 // Retain the accepted FN39 authentication reservation even when its staged

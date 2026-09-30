@@ -42,9 +42,9 @@ describe('Japanese full column corpus + site locale', () => {
 
   it('loads 32 translated plus 4 native Japanese posts with full bodies and kana', () => {
     const posts = getAllColumnPosts('ja');
-    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('ja', post.slug))).toHaveLength(32);
-    expect(koFilesInJa).toHaveLength(32);
-    expect(posts).toHaveLength(32 + allNativeFiles('ja').length);
+    expect(posts.filter((post) => !isNativeOrExpertiseNativeSlug('ja', post.slug))).toHaveLength(33);
+    expect(koFilesInJa).toHaveLength(33);
+    expect(posts).toHaveLength(33 + allNativeFiles('ja').length);
     for (const post of posts) {
       expect(post.content.length).toBeGreaterThan(600);
       expect(KANA.test(post.title + post.content)).toBe(true);

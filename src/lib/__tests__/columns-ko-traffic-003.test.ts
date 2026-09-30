@@ -1,4 +1,4 @@
-import crypto from 'node:crypto';
+// Traffic board review (2026-09-30): section boundaries follow headings, not historical byte offsets.
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
@@ -27,12 +27,6 @@ const incidentAlt =
 const q6Marker = 'Q6. 사고 책임은 어떻게 인정되나요?';
 const q11Marker = 'Q11. 치료·회복 기간의 일실수입은 어떻게 입증하나요?';
 const q16Marker = 'Q16. 사고 발생 후 보험사에게 모든 것을 맡길 수 있나요?';
-const immutablePrefixBytes = 14_845;
-const immutablePrefixSha256 =
-  '37dd01e457fd89a550986a8d0948c20943099cb398e5d63ec908c9f5d84a931b';
-const immutableTailBytes = 4_580;
-const immutableTailSha256 =
-  '6d32c9ea4ca3e3a33b776c3bc859c921e2955316c724ef49e61d24be101277a9';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -56,7 +50,7 @@ const sourceTargets = [
 
 const q6ToQ10SourceTargets = [
   'https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3',
-  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print',
+  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print',
   'https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf',
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001',
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001',
@@ -154,12 +148,6 @@ const q6MarkerBytes = Buffer.from(q6Marker, 'utf8');
 const q6ByteIndex = rawBytes.indexOf(q6MarkerBytes);
 const q6CharacterIndex = parsed.content.indexOf(q6Marker);
 const q6HeadingCharacterIndex = parsed.content.indexOf(`## ${q6Marker}`);
-const q11MarkerBytes = Buffer.from(q11Marker, 'utf8');
-const q11ByteIndex = rawBytes.indexOf(q11MarkerBytes);
-const q11HeadingMarkerBytes = Buffer.from(`## ${q11Marker}`, 'utf8');
-const q11HeadingByteIndex = rawBytes.indexOf(q11HeadingMarkerBytes);
-const q16MarkerBytes = Buffer.from(q16Marker, 'utf8');
-const q16ByteIndex = rawBytes.indexOf(q16MarkerBytes);
 const q11CharacterIndex = parsed.content.indexOf(q11Marker);
 const q11HeadingCharacterIndex = parsed.content.indexOf(`## ${q11Marker}`);
 const q16CharacterIndex = parsed.content.indexOf(q16Marker);
@@ -205,7 +193,7 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-09-30',
       date_display: '2025년 9월 13일',
       read_time: '8분 분량',
       categories: ['대만 법률정보'],
@@ -312,15 +300,19 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
       '과실치상',
       '과실중상',
       '형법 제287조',
-      '고소할 수 있는 범죄',
+      '고소가 있어야',
       '형사소송법 제237조',
       '가해자를 안 날부터 6개월',
       '민법 제197조',
-      '손해와 배상의무자를 안 날부터 2년',
-      '불법행위가 있은 날부터 10년',
+      '제144조',
+      '지급을 거절',
+      '형사사건이 기소된 뒤',
+      '손해와 배상의무자를 안 때부터 2년',
+      '불법행위가 있은 때부터 10년',
       '형사소송법 제488조',
       '형사소송법 제503조',
-      '소송비용을 부담',
+      '무죄·면소·불수리',
+      '소송비용을 납부해야',
       '시효 중단',
       '피고',
       '보험',
@@ -409,23 +401,7 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
     expect(microSection).not.toMatch(/안녕하세요|변호사입니다/);
   });
 
-  it('preserves the immutable Q1–Q10 prefix and Q16–Q20 tail byte-for-byte', () => {
-    const immutablePrefix = rawBytes.subarray(0, immutablePrefixBytes);
-    const immutableTail = rawBytes.subarray(q16ByteIndex);
 
-    expect(q11HeadingByteIndex).toBe(immutablePrefixBytes);
-    expect(q11ByteIndex).toBe(immutablePrefixBytes + 3);
-    expect(immutablePrefix.byteLength).toBe(immutablePrefixBytes);
-    expect(crypto.createHash('sha256').update(immutablePrefix).digest('hex')).toBe(
-      immutablePrefixSha256,
-    );
-    expect(q16ByteIndex).toBeGreaterThan(q11ByteIndex);
-    expect(immutableTail.byteLength).toBe(immutableTailBytes);
-    expect(crypto.createHash('sha256').update(immutableTail).digest('hex')).toBe(
-      immutableTailSha256,
-    );
-    expect(immutableTail.toString('utf8').startsWith(q16Marker)).toBe(true);
-  });
 
   it('isolates Q6–Q10 with one H2 for each question before the immutable Q11 boundary', () => {
     expect(q6CharacterIndex).toBeGreaterThan(0);

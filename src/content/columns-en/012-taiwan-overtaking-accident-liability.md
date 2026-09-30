@@ -2,7 +2,7 @@
 title: "How Is Liability Assessed After an Overtaking Accident in Taiwan?"
 seoTitle: "Overtaking Accident Liability in Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
-lastmod: "2026-09-10"
+lastmod: "2026-09-30"
 date_display: "September 13, 2025"
 read_time: "4 min read"
 categories:
@@ -33,9 +33,9 @@ The passing driver must then signal left, pass on the left while keeping at leas
 
 Following this signaling and yielding sequence for overtaking in the same lane does not permit a driver to overtake in a prohibited location or under prohibited conditions. Drivers must assess all of Article 101's requirements before beginning the maneuver.
 
-## An anonymized accident case handled by the firm
+## An anonymized case described in the original article
 
-In an anonymized case handled by this firm, a motorcyclist, referred to here as A, was riding with passenger B on a mountain road. Two passenger cars were traveling ahead. The first car, Vehicle 1, was moving slowly, so Vehicle 2 and the motorcycle behind it were also traveling slowly.
+In the anonymized case described in the original article, a motorcyclist, referred to here as A, was riding with passenger B on a mountain road. Two passenger cars were traveling ahead. The first car, Vehicle 1, was moving slowly, so Vehicle 2 and the motorcycle behind it were also traveling slowly.
 
 ![Diagram of a motorcycle and two cars during a mountain-road overtaking collision](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -45,9 +45,9 @@ B suffered a severe head injury and died at the scene. A lost consciousness and 
 
 The families of A and B initially believed that Vehicle 2's rapid lane change was the primary cause of the collision. The matter proceeded to litigation, during which multiple expert assessments of the accident were conducted.
 
-According to those assessments, A was assessed as bearing primary responsibility for the collision. That conclusion was limited to the facts of this case. The assessments considered together A's attempt to pass two vehicles traveling in a line ahead, entry into the oncoming lane, speed that left too little time to brake, and failure to give the prescribed horn or headlight signal, as well as Vehicle 2's lane-change maneuver, the road and lane configuration, and the other available evidence.
+According to the original case account, the assessments identified A as the primary cause of the collision. That conclusion was limited to the facts of this case.
 
-This case-specific result does not mean that one omitted signal will always determine liability. Fault in an overtaking collision depends on the location, lane configuration, speed, vehicle movements, signals, timing, visibility, and other available evidence.
+This case-specific result does not mean that any single factor will always determine liability. Fault in an overtaking collision depends on the location, lane configuration, speed, vehicle movements, signals, timing, visibility, and other available evidence.
 
 ## Key factors in assessing accident liability
 

@@ -12,7 +12,7 @@ import { getAllColumnPosts, getColumnPost, hasColumnTranslation } from '@/lib/co
 import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
 import { getLanguageAlternates } from '@/lib/seo';
 import {
-  EXPERTISE_COLUMN_FILES_20260930,
+  expertiseSlugsFor,
   isExpertiseColumnSlug20260930,
   isNativeLocaleColumnSlug,
 } from './native-locale-columns';
@@ -172,7 +172,7 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
       (post) => GAP_COLUMN_SLUGS_20260929.includes(post.slug) || isExpertiseColumnSlug20260930(post.slug),
     );
     expect(koOnlyGapSlugs).toHaveLength(
-      GAP_COLUMN_SLUGS_20260929.length + EXPERTISE_COLUMN_FILES_20260930.ko.length,
+      GAP_COLUMN_SLUGS_20260929.length + expertiseSlugsFor('ko').length,
     );
     // Vietnamese-only native columns have no Korean counterpart by design.
     const translatedViPosts = viPosts.filter((post) => !isNativeLocaleColumnSlug(post.slug));

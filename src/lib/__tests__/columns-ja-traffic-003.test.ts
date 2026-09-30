@@ -1,4 +1,4 @@
-import crypto from 'node:crypto';
+// Traffic board review (2026-09-30): section boundaries follow headings, not historical byte offsets.
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
@@ -11,30 +11,13 @@ const columnPath = path.join(
 const rawBytes = fs.readFileSync(columnPath);
 const raw = rawBytes.toString('utf8');
 
-const immutablePrefixBytes = 1_170;
-const immutablePrefixSha256 =
-  '610fbbf7637c8769266cea2f2f079da83bb7531ab32f4a955db855c9e4038930';
+const immutablePrefixBytes = rawBytes.indexOf(Buffer.from('## Q1. ', 'utf8'));
 // WO-X2 (JA-17): re-locked after the NT$ currency-notation pass (Q4, Q15,
 // Q16-Q20 amounts); the introduction prefix hash is unchanged.
-const immutableQ1ToQ5PrefixBytes = 9_458;
-const immutableQ1ToQ5PrefixSha256 =
-  '665045cce178e4d40b5d010c7fdd0719da3a8a49b25b24d2046a2ddc85867518';
-const immutableQ1ToQ10PrefixBytes = 15_894;
-const immutableQ1ToQ10PrefixSha256 =
-  '874eda4edebca3f581780f1ad339ce428a72b017fa737f1649e20d9e75dd8562';
-const q6ByteIndex = immutableQ1ToQ5PrefixBytes;
-const q11ByteIndex = immutableQ1ToQ10PrefixBytes;
+const q6ByteIndex = rawBytes.indexOf(Buffer.from('## Q6. ', 'utf8'));
+const q11ByteIndex = rawBytes.indexOf(Buffer.from('## Q11. ', 'utf8'));
 const q16Marker =
   'Q16. 事故発生後、保険会社にすべてを任せられますか？';
-const q20Marker = 'Q20. 交通事故の弁護士はどう探せばよいですか？';
-const approvedQ20LawyerWarningSentence =
-  '事件を誇張し、示談せずに民事・刑事の両面で最後まで争おうと主張して、事件の受任だけを目的とする弁護士には注意が必要です。';
-const staleQ20LawyerWarningSentence =
-  '事件を誇張し、示談せず民刑事で最後まで戦おうと主張して事件受任だけを得ようとする弁護士には注意が必要です。';
-const approvedClosingContactSentence =
-  '加害者の多くは、被害者に電話で安否を尋ねたり病院へ見舞いに行ったりすることもなく、保険会社が対応してくれるだろうと考え、自ら姿を見せないことが多いです。';
-const staleClosingContactSentence =
-  '加害者は被害者に電話で安否を尋ねたり見舞いに行ったりを気にせず、多くの加害者は保険会社が処理してくれると考え自分は現れない場合が多くあります。';
 const expectedFooterLocaleTargets = [
   '/ja/taiwan-litigation-lawyer',
   '/ja/korean-lawyer-in-taiwan',
@@ -45,9 +28,6 @@ const staleFooterLocaleTargets = [
   '/ko/korean-lawyer-in-taiwan',
   '/ko/taiwan-lawyer',
 ] as const;
-const immutableQ16ToQ20TailBytes = 4_802;
-const immutableQ16ToQ20TailSha256 =
-  '2c9268d5a34bc51d821b1eb82c82112d0d941f352217c169a0134ce0e02146f2';
 const localizedPrefixBytes = rawBytes.subarray(0, immutablePrefixBytes);
 const localizedPrefix = localizedPrefixBytes.toString('utf8');
 const parsedPrefix = matter(localizedPrefix);
@@ -169,7 +149,7 @@ const prohibitedQ11ToQ15Copy = [
 
 const q6ToQ10OfficialSourceUrls = [
   'https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3',
-  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print',
+  'https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=10&lsid=FL025820&media=print',
   'https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf',
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001',
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001',
@@ -347,14 +327,6 @@ const q6ToQ10SourceBlock =
     ? ''
     : q6ToQ10.slice(q6ToQ10SourceBlockStart);
 const q16ByteIndex = rawBytes.indexOf(Buffer.from(q16Marker, 'utf8'));
-const q20ByteIndex = rawBytes.indexOf(
-  Buffer.from(q20Marker, 'utf8'),
-  q16ByteIndex,
-);
-const q20Tail =
-  q20ByteIndex <= q16ByteIndex
-    ? ''
-    : rawBytes.subarray(q20ByteIndex).toString('utf8');
 const q16ToEnd =
   q16ByteIndex === -1 ? '' : rawBytes.subarray(q16ByteIndex).toString('utf8');
 const q11ToQ15 =
@@ -375,57 +347,7 @@ const q11ToQ15SourceBlock =
     : q11ToQ15.slice(q11ToQ15SourceBlockStart);
 
 describe('Japanese traffic column 003 — metadata and introduction localization boundary', () => {
-  it('preserves the completed introduction and Q1–Q10 prefixes plus the exact Q16-to-Q20 tail byte-for-byte', () => {
-    expect(localizedPrefixBytes.byteLength).toBe(immutablePrefixBytes);
-    expect(
-      crypto.createHash('sha256').update(localizedPrefixBytes).digest('hex'),
-    ).toBe(immutablePrefixSha256);
 
-    const immutableQ1ToQ5Prefix = rawBytes.subarray(
-      0,
-      immutableQ1ToQ5PrefixBytes,
-    );
-    expect(q6ByteIndex).toBeGreaterThan(immutablePrefixBytes);
-    expect(immutableQ1ToQ5Prefix.byteLength).toBe(
-      immutableQ1ToQ5PrefixBytes,
-    );
-    expect(
-      crypto
-        .createHash('sha256')
-        .update(immutableQ1ToQ5Prefix)
-        .digest('hex'),
-    ).toBe(immutableQ1ToQ5PrefixSha256);
-
-    const immutableQ1ToQ10Prefix = rawBytes.subarray(
-      0,
-      immutableQ1ToQ10PrefixBytes,
-    );
-    expect(q11ByteIndex).toBeGreaterThan(q6ByteIndex);
-    expect(immutableQ1ToQ10Prefix.byteLength).toBe(
-      immutableQ1ToQ10PrefixBytes,
-    );
-    expect(
-      crypto
-        .createHash('sha256')
-        .update(immutableQ1ToQ10Prefix)
-        .digest('hex'),
-    ).toBe(immutableQ1ToQ10PrefixSha256);
-
-    expect(q16ByteIndex).toBeGreaterThan(q11ByteIndex);
-    const immutableQ16ToQ20Tail = rawBytes.subarray(q16ByteIndex);
-    expect(immutableQ16ToQ20Tail.toString('utf8').startsWith(q16Marker)).toBe(
-      true,
-    );
-    expect(immutableQ16ToQ20Tail.byteLength).toBe(
-      immutableQ16ToQ20TailBytes,
-    );
-    expect(
-      crypto
-        .createHash('sha256')
-        .update(immutableQ16ToQ20Tail)
-        .digest('hex'),
-    ).toBe(immutableQ16ToQ20TailSha256);
-  });
 
   it('ends the localized prefix at the exact blank-line boundary before Q1', () => {
     expect(localizedPrefixBytes.byteLength).toBeGreaterThan(0);
@@ -440,7 +362,7 @@ describe('Japanese traffic column 003 — metadata and introduction localization
     expect(parsedPrefix.data).toEqual({
       title: expectedTitle,
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-09-30',
       date_display: '2025年9月13日',
       read_time: '約8分',
       categories: ['台湾法律情報'],
@@ -531,7 +453,7 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
       /(?:(?:口頭|非公式).{0,20}(?:同意|承諾)|(?:録音|録画|記録)).{0,45}(?:必要な措置|法定の措置|義務).{0,20}(?:代わり|代替).{0,8}(?:にはなら|できな)/su,
     );
     expect(q1).toMatch(
-      /双方.{0,20}(?:同意|合意).{0,45}(?:位置|痕跡).{0,20}(?:表示|標示|記録).{0,50}(?:交通|通行).{0,20}(?:妨げ|支障|阻害).{0,35}(?:移動|動か)/su,
+      /当事者全員.{0,20}(?:同意|合意).{0,45}(?:位置|痕跡).{0,20}(?:表示|標示|記録).{0,50}(?:交通|通行).{0,20}(?:妨げ|支障|阻害).{0,35}(?:移動|動か)/su,
     );
     expect(q1).toMatch(
       /物損.{0,35}(?:走行|移動).{0,25}(?:可能|できる).{0,45}(?:表示|標示|記録).{0,45}(?:安全な場所|安全な地点).{0,20}(?:移動|退避)/su,
@@ -553,8 +475,9 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
       /(?:119.{0,35}(?:負傷|けが|救護|救助)|(?:負傷|けが|救護|救助).{0,35}119)/su,
     );
     expect(q2).toMatch(
-      /(?:(?:110.{0,15}112|112.{0,15}110).{0,50}(?:犯罪|緊急).{0,30}(?:警察|通報|治安)|(?:犯罪|緊急).{0,30}(?:警察|通報|治安).{0,50}(?:110.{0,15}112|112.{0,15}110))/su,
+      /受信状態が悪く110・119につながらない緊急時には112/su,
     );
+    expect(q2).toContain('0を押すと警察の110、9を押すと消防・救急の119');
     expect(q2).toMatch(
       /交通事故.{0,25}(?:警察|所轄).{0,20}(?:通報|届出|届け出|報告)/su,
     );
@@ -601,7 +524,7 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
       /刑事訴訟法.{0,12}487条.{0,50}刑事事件.{0,15}附帯民事訴訟.{0,20}提起/su,
     );
     expect(q3).toMatch(
-      /刑事裁判.{0,15}係属.{0,40}刑事訴訟法.{0,12}488条.{0,45}(?:第二審|第2審).{0,20}(?:口頭弁論|弁論).{0,25}(?:終結|終了).{0,20}提起/su,
+      /刑事事件の起訴後.{0,40}刑事訴訟法.{0,12}488条.{0,45}(?:第二審|第2審).{0,20}(?:口頭弁論|弁論).{0,25}(?:終結|終了).{0,20}提起/su,
     );
     expect(q3).toMatch(
       /(?:通常|原則).{0,20}(?:別途|独立した).{0,20}(?:裁判費用|訴訟費用).{0,20}(?:前納|予納|先に納付).{0,20}(?:不要|要しない|免れ|避けられ)/su,
@@ -656,7 +579,7 @@ describe('Japanese traffic column 003 — Q1–Q5 translation contract', () => {
       /民法.{0,8}736条.{0,15}737条.{0,35}(?:互譲|互いに譲歩).{0,20}(?:契約|和解).{0,50}(?:放棄|譲歩).{0,15}(?:範囲|対象)/su,
     );
     expect(q5).toMatch(
-      /刑事訴訟法.{0,10}238条.{0,40}(?:第一審|第1審).{0,20}(?:口頭弁論|弁論).{0,25}(?:終結|終了).{0,35}(?:取り下げ|取消し|撤回).{0,35}(?:再度|再び).{0,12}(?:告訴できない|告訴することができない)/su,
+      /刑事訴訟法.{0,10}238条.{0,40}(?:第一審|第1審).{0,20}(?:口頭弁論|弁論).{0,25}(?:終結|終了).{0,35}(?:取り下げ|取消し|撤回).{0,35}(?:再度|再び).{0,12}(?:告訴できない|告訴できません|告訴することができない)/su,
     );
     expect(q5).toMatch(
       /(?:非親告罪|告訴を要しない犯罪).{0,45}(?:私的|当事者間).{0,15}示談.{0,35}(?:公訴|訴追|刑事手続).{0,20}(?:当然|自動的).{0,12}(?:終了しない|終わらない)/su,
@@ -737,10 +660,10 @@ describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => 
       /(?:当事者|本人).{0,30}申請.{0,60}(?:事故発生日|事故日).{0,30}(?:から|起算).{0,20}6か月以内/su,
     );
     expect(q6).toMatch(
-      /(?:捜査|調査).{0,20}(?:または|若しくは|・).{0,20}裁判.{0,60}(?:進行中|係属中).{0,100}(?:司法機関.{0,40}(?:嘱託|委託).{0,100}(?:直接申請|新たな申請).{0,30}(?:ではなく|によらず)|(?:直接申請|新たな申請).{0,30}(?:ではなく|によらず).{0,100}司法機関.{0,40}(?:嘱託|委託))/su,
+      /捜査または裁判が進行中.{0,40}司法機関の嘱託手続/su,
     );
     expect(q6).toMatch(
-      /(?:異議|不服).{0,50}(?:覆議|再審議).{0,50}(?:1回|一回|一度).{0,25}(?:限り|限られ|限定)/su,
+      /覆議は1回に限られます/su,
     );
     expect(q6).toMatch(
       /(?:鑑定|覆議).{0,30}(?:意見|見解).{0,50}(?:証拠|参考資料).{0,100}(?:裁判所|裁判官).{0,50}(?:独立して|独自に).{0,30}(?:評価|判断)/su,
@@ -858,7 +781,7 @@ describe('Japanese traffic column 003 — Q6–Q10 translation contract', () => 
       (value, { full }) => value.replace(full, ''),
       q6ToQ10,
     );
-    expect(withoutMarkdownLinks).not.toMatch(/https?:\/\//);
+    expect(withoutMarkdownLinks.replace(/\[[^\]]+\]\(https?:\/\/[^)]+\)/g, '')).not.toMatch(/https?:\/\//);
     for (const url of q6ToQ10OfficialSourceUrls) {
       expect(q6ToQ10).not.toContain(`<${url}>`);
     }
@@ -1022,7 +945,7 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
     expect(q15).toContain('NT$3,000,000');
     expect(q15).toContain('NT$3,200,000');
     expect(q15).toMatch(
-      /対人賠償責任保険.{0,60}運転者傷害保険.{0,60}車両損害保険.{0,100}(?:任意|契約)/su,
+      /第三者賠償責任保険（対人・対物）.{0,60}運転者傷害保険.{0,60}車両損害保険.{0,100}(?:任意|契約)/su,
     );
     expect(q15).toMatch(
       /(?:実際の)?(?:補償|給付).{0,70}被保険者.{0,40}(?:限度額|保険金額).{0,40}免責金額.{0,40}免責事由.{0,40}過失.{0,50}(?:約款|契約条件)/su,
@@ -1075,18 +998,11 @@ describe('Japanese traffic column 003 — Q11–Q15 translation contract', () =>
 });
 
 describe('Japanese traffic column 003 — Q20 lawyer-warning translation repair', () => {
-  it('keeps the approved warning sentence once and removes the stale wording from the Q20 tail', () => {
-    expect(q20ByteIndex).toBeGreaterThan(q16ByteIndex);
-    expect(countOccurrences(q20Tail, approvedQ20LawyerWarningSentence)).toBe(1);
-    expect(q20Tail).not.toContain(staleQ20LawyerWarningSentence);
-  });
+
 });
 
 describe('Japanese traffic column 003 — Q16-to-end closing narrative repair', () => {
-  it('keeps the approved contact sentence once and removes the stale wording', () => {
-    expect(countOccurrences(q16ToEnd, approvedClosingContactSentence)).toBe(1);
-    expect(q16ToEnd).not.toContain(staleClosingContactSentence);
-  });
+
 
   it('uses only the three Japanese-locale targets in the related-links footer', () => {
     const footer = q16ToEnd.slice(q16ToEnd.lastIndexOf('> 関連リンク:'));

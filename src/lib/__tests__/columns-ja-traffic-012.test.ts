@@ -33,7 +33,7 @@ const officialLabel = '台湾の「道路交通安全規則」第101条';
 const supplementaryLabel = '追い越し法規と手順の図解';
 const headings = [
   '道路交通安全規則第101条が定める追い越しの要件',
-  '当事務所が扱った匿名の事故事例',
+  '元のコラムで紹介された匿名の事故事例',
   '追い越し事故の責任を判断するときに確認すべき点',
 ] as const;
 const internalLinks = [
@@ -53,11 +53,11 @@ const internalLinks = [
 const disclaimer =
   '本稿は、台湾の追い越し規則および事故責任の判断に関する一般的な法律情報であり、特定の事案に対する法律上の助言や結果の保証ではありません。実際の責任は、事故地点、車両の動き、速度、合図、証拠、鑑定および最新の法令によって異なり得るため、具体的な事案については、関連資料に基づき個別に検討する必要があります。';
 
-const EXPECTED_VISIBLE_JAPANESE = 1_863;
-const EXPECTED_VISIBLE_KANA = 948;
+const EXPECTED_VISIBLE_JAPANESE = 1_743;
+const EXPECTED_VISIBLE_KANA = 898;
 const EXPECTED_READ_MINUTES = 4;
 const EXPECTED_SOURCE_SHA256 =
-  '77a7edfc505385b2c4b0ba6ba191ae171b2f59fe260526d61cd51a3aca842c5c';
+  'd6ad716755035a665172155a5952beb2d5a4a7b95a7a39ff303b346edbe5b7d7';
 
 const article101Groups = [
   '曲線、急勾配、狭橋、トンネル、交差点を示す標識が設けられた区間、ならびに鉄道の踏切や道路工事区間では、追い越しは禁止されます。',
@@ -70,7 +70,7 @@ const article101Groups = [
 ] as const;
 
 const requiredCaseFacts = [
-  '当事務所が扱った匿名の一件では、オートバイ運転者Aが同乗者Bを乗せ、山道を走行していました。',
+  '元のコラムで紹介された匿名の一件では、オートバイ運転者Aが同乗者Bを乗せ、山道を走行していました。',
   '前方には乗用車が二台あり、先頭の1号車は低速で進行していたため、2号車とオートバイも遅い速度で続いていました。',
   'Aは前方の二台をまとめて追い越そうとし、対向車線に入って加速しました。',
   '方向指示器を出してから一秒未満で対向車線に入りました。',
@@ -78,10 +78,9 @@ const requiredCaseFacts = [
   'Bは頭部に重傷を負い、現場で死亡しました。Aは意識を失い、病院へ搬送されました。',
   'AとBの家族は当初、2号車の急な車線変更が衝突の主因だと考えていました。',
   '事案は訴訟に至り、事故鑑定が複数回行われました。',
-  '鑑定の結果、この衝突の主たる責任はAにあると判断されました。',
+  '元の事例紹介によると、鑑定ではAがこの衝突の主因と判断されました。',
   'この結論は、本件の事実関係に限ったものです。',
-  'Aが連続して走行していた前方の二台を追い越そうとしたこと、対向車線へ進入したこと、制動の余裕を確保することが難しい速度で走行したこと、規定された警音器・前照灯による合図を行わなかったこと、2号車の車線変更動作、道路・車線の構造、その他の証拠資料が総合的に考慮されました。',
-  '規定された合図を一度怠れば常に責任が定まるという意味ではありません。',
+  'いずれか一つの要素だけで常に責任が定まるという意味ではありません。',
   '追い越し事故の過失は、事故地点、車線構成、速度、車両の動き、合図、時間的間隔、視界、その他の証拠によって異なります。',
 ] as const;
 
@@ -128,7 +127,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-09-30',
       date_display: '2025年9月13日',
       read_time: `約${EXPECTED_READ_MINUTES}分`,
       categories: ['台湾法律情報'],
@@ -185,7 +184,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     }
   });
 
-  it('keeps the anonymized matter fact-specific with multi-factor appraisal limits', () => {
+  it('keeps the anonymized matter fact-specific without inventing appraisal findings', () => {
     for (const fact of requiredCaseFacts) {
       expect(raw).toContain(fact);
       expect(post?.content).toContain(fact);
@@ -193,11 +192,12 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
 
     expect(raw).toContain('この結論は、本件の事実関係に限ったものです。');
     expect(raw).toContain(
-      '規定された合図を一度怠れば常に責任が定まるという意味ではありません。',
+      'いずれか一つの要素だけで常に責任が定まるという意味ではありません。',
     );
     expect(raw).toContain(
       '第101条の遵守は重要ですが、それだけで事故を避けられるとは限らず、後の鑑定や訴訟結果を保証するものでもありません。',
     );
+    expect(raw).not.toContain('その他の証拠資料が総合的に考慮されました。');
     expect(raw).not.toContain('前の車の同意');
     expect(raw).not.toContain('前車の同意');
     expect(raw).not.toContain('同意を得てから');
@@ -256,7 +256,7 @@ describe('Japanese traffic column 012 — overtaking accident liability', () => 
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-09-10',
+      date: '2026-09-30',
       dateDisplay: '2025年9月13日',
       readTime: `約${EXPECTED_READ_MINUTES}分`,
       category: 'legal',

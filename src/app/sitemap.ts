@@ -44,6 +44,7 @@ const STATIC_PATHS = [
   '/taiwan-litigation-lawyer',
   '/taiwan-semiconductor-supplier-legal',
   '/semiconductor',
+  '/traffic-accidents',
   '/guides/taiwan-company-setup',
   '/korean-lawyer-in-taiwan',
   '/ai-intake',
@@ -424,6 +425,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),
   );
+  pages.push(createEntry('ja', '/traffic-accidents', {
+    priority: 0.8, alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+  }));
   pages.push(
     createEntry('ja', '/semiconductor', {
       priority: 0.8,

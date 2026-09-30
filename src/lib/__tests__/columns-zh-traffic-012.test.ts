@@ -30,7 +30,7 @@ const officialLabel = '臺灣《道路交通安全規則》第101條';
 const supplementaryLabel = '超車法規與步驟圖解';
 const headings = [
   '道路交通安全規則第101條的超車要件',
-  '本所處理的匿名事故案例',
+  '原文介紹的匿名事故案例',
   '判斷超車事故責任時應確認的事項',
 ] as const;
 const internalLinks = [
@@ -50,7 +50,7 @@ const internalLinks = [
 const disclaimer =
   '本文僅提供台灣超車規則與事故責任判斷的一般法律資訊，不構成特定案件的法律意見或結果保證。實際責任可能因事故地點、車輛動態、速度、燈號、證據、鑑定結果及現行法規而異，具體案件仍應依相關資料個別分析。';
 
-const EXPECTED_VISIBLE_HAN = 1_141;
+const EXPECTED_VISIBLE_HAN = 1_072;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -85,7 +85,7 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-09-30',
       date_display: '2025年9月13日',
       read_time: '3分鐘閱讀',
       categories: ['台灣法律資訊'],
@@ -144,7 +144,7 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
 
   it('keeps the anonymized matter fact-specific and rejects a universal one-signal fault rule', () => {
     const requiredCaseFacts = [
-      '本所處理的一件匿名案件中，機車駕駛人A載著乘客B行駛於山路。',
+      '原文介紹的一件匿名案件中，機車駕駛人A載著乘客B行駛於山路。',
       '前方有兩輛小客車，最前面的1號車行駛緩慢，因此2號車與機車也以較慢速度行進。',
       'A試圖一次超越前方兩車，駛入對向車道並加速。',
       '開啟方向燈後不到一秒即駛入對向車道。',
@@ -152,16 +152,16 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
       'B頭部受重傷，當場死亡；A失去意識，被送往醫院。',
       'A與B的家屬起初認為，2號車急速變換車道是碰撞的主要原因。',
       '案件進入訴訟，過程中並進行多次事故鑑定。',
-      '依該等鑑定結果，A被認定為本件碰撞的主要肇因。',
+      '依原文的案例敘述，鑑定認定A為本件碰撞的主要肇因。',
       '該結論僅限於本件事實。',
-      '鑑定綜合考量：A試圖超越連續行駛的前方兩車、駛入對向車道、車速使煞車餘裕不足、未為規定之喇叭或燈光示意、2號車的車道動態、道路與車道配置，以及其他既有證據。',
-      '並不表示漏做一次規定示意就必然決定過失歸屬。',
+      '並不表示任何單一因素必然決定過失歸屬。',
     ];
     for (const fact of requiredCaseFacts) {
       expect(raw).toContain(fact);
       expect(post?.content).toContain(fact);
     }
 
+    expect(raw).not.toContain('鑑定綜合考量：');
     expect(raw).not.toContain('前車同意');
     expect(raw).not.toContain('前車的同意');
     expect(raw).not.toContain('必須取得同意');
@@ -210,7 +210,7 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-09-10',
+      date: '2026-09-30',
       dateDisplay: '2025年9月13日',
       readTime: '3分鐘閱讀',
       category: 'legal',

@@ -74,10 +74,31 @@ export const EXPERTISE_COLUMN_FILES_20260930 = {
 
 export type ExpertiseColumnLocale = keyof typeof EXPERTISE_COLUMN_FILES_20260930;
 
-const EXPERTISE_KO_FILES: readonly string[] = EXPERTISE_COLUMN_FILES_20260930.ko;
+/**
+ * Traffic police-records column (2026-09-30; numbered 049 in its lane, 050 on
+ * release). Same publication day as 041–048 and present in all four core
+ * locales with a Korean twin, so the same-day ordering/count helpers below
+ * include it alongside the expertise batch.
+ */
+export const TRAFFIC_COLUMN_FILES_20260930 = {
+  ko: ['050-taiwan-accident-police-records.md'],
+  en: ['050-taiwan-accident-police-records.md'],
+  ja: ['050-taiwan-accident-police-records.md'],
+  'zh-hant': ['050-taiwan-accident-police-records.md'],
+} as const;
+
+/** Every 2026-09-30 column file of `locale` (041–048 expertise + 050 traffic), in filename order. */
+function sameDayFilesOf(locale: string): readonly string[] {
+  return [
+    ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
+    ...(TRAFFIC_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
+  ].sort();
+}
+
+const EXPERTISE_KO_FILES: readonly string[] = sameDayFilesOf('ko');
 
 function expertiseFilesOf(locale: string): readonly string[] {
-  return EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? [];
+  return sameDayFilesOf(locale);
 }
 
 /** Slugs of the 2026-09-30 batch in `locale`, in source (filename) order; they lead the newest-first archive. */
@@ -104,7 +125,7 @@ export function allNativeFiles(locale: string): string[] {
 }
 
 const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
-  Object.values(EXPERTISE_COLUMN_FILES_20260930).flat().map(slugOf),
+  [...Object.values(EXPERTISE_COLUMN_FILES_20260930), ...Object.values(TRAFFIC_COLUMN_FILES_20260930)].flat().map(slugOf),
 );
 
 /** True for any file/slug of the 2026-09-30 batch, in any locale. */

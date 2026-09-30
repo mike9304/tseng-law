@@ -1,0 +1,190 @@
+{
+  "ok": true,
+  "findings": [],
+  "results": [
+    {
+      "locale": "ko",
+      "viewport": 1440,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "image": 1120,
+      "media": 0,
+      "canonical": "https://tseng-law.com/ko/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        14182
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ja"
+    },
+    {
+      "locale": "zh-hant",
+      "viewport": 1440,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "image": 1120,
+      "media": 0,
+      "canonical": "https://tseng-law.com/zh-hant/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        300
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ja"
+    },
+    {
+      "locale": "en",
+      "viewport": 1440,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "image": 1120,
+      "media": 0,
+      "canonical": "https://tseng-law.com/en/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        300
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ja"
+    },
+    {
+      "locale": "ja",
+      "viewport": 1440,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "image": 1120,
+      "media": 0,
+      "canonical": "https://tseng-law.com/ja/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        300
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ko"
+    },
+    {
+      "locale": "ko",
+      "viewport": 390,
+      "width": 390,
+      "scrollWidth": 375,
+      "image": 350,
+      "media": 0,
+      "canonical": "https://tseng-law.com/ko/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        4402
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ja"
+    },
+    {
+      "locale": "zh-hant",
+      "viewport": 390,
+      "width": 390,
+      "scrollWidth": 375,
+      "image": 350,
+      "media": 0,
+      "canonical": "https://tseng-law.com/zh-hant/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        300
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ja"
+    },
+    {
+      "locale": "en",
+      "viewport": 390,
+      "width": 390,
+      "scrollWidth": 375,
+      "image": 350,
+      "media": 0,
+      "canonical": "https://tseng-law.com/en/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        300
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ja"
+    },
+    {
+      "locale": "ja",
+      "viewport": 390,
+      "width": 390,
+      "scrollWidth": 375,
+      "image": 350,
+      "media": 0,
+      "canonical": "https://tseng-law.com/ja/traffic-accidents",
+      "alternates": [
+        "ko",
+        "zh-Hant",
+        "en",
+        "ja",
+        "x-default"
+      ],
+      "headingColor": "rgb(255, 255, 255)",
+      "imageTransferBytes": [
+        300
+      ],
+      "articleRoundTrip": true,
+      "correctedArticles": true,
+      "languageSwitch": "ko"
+    }
+  ]
+}

@@ -32,7 +32,7 @@ const officialLabel = '대만 도로교통안전규칙 제101조';
 const supplementaryLabel = '추월 규정과 절차 도해';
 const headings = [
   '도로교통안전규칙 제101조가 정한 추월 요건',
-  '사무소가 처리한 익명 사고 사례',
+  '기존 칼럼에 소개된 익명 사고 사례',
   '사고 책임을 판단할 때 확인할 사항',
 ] as const;
 const internalLinks = [
@@ -52,7 +52,7 @@ const internalLinks = [
 const disclaimer =
   '이 글은 대만의 추월 규정과 사고 책임 판단에 관한 일반적인 법률정보이며, 특정 사건에 대한 법률자문이나 결과 보장이 아닙니다. 실제 책임은 사고 장소, 차량 움직임, 속도, 신호, 증거, 감정 및 최신 법령에 따라 달라질 수 있으므로 구체적인 사건은 관련 자료를 바탕으로 개별 검토해야 합니다.';
 
-const EXPECTED_VISIBLE_EOJEOL = 589;
+const EXPECTED_VISIBLE_EOJEOL = 552;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -90,7 +90,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-09-10',
+      lastmod: '2026-09-30',
       date_display: '2025년 9월 13일',
       read_time: '4분 분량',
       categories: ['대만 법률정보'],
@@ -151,7 +151,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
 
   it('keeps the anonymized matter fact-specific and rejects a universal one-signal fault rule', () => {
     const requiredCaseFacts = [
-      '이 사무소가 처리한 익명 사건에서, 오토바이 운전자 A는 동승자 B를 태우고 산길을 달리고 있었습니다.',
+      '기존 칼럼에 소개된 익명 사건에서, 오토바이 운전자 A는 동승자 B를 태우고 산길을 달리고 있었습니다.',
       '앞에는 승용차 두 대가 있었고, 가장 앞의 1호 차량이 천천히 움직여 2호 차량과 오토바이도 함께 느린 속도로 진행하고 있었습니다.',
       'A는 두 차량을 모두 앞지르려고 반대 차로에 들어가 가속했습니다.',
       '방향지시등을 켠 뒤 1초도 되지 않아 반대 차로로 진입했습니다.',
@@ -159,16 +159,16 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
       'B는 심각한 두부 손상을 입고 현장에서 사망했고, A는 의식을 잃은 채 병원으로 옮겨졌습니다.',
       'A와 B의 가족들은 처음에 2호 차량의 급격한 차로 변경이 충돌의 주된 원인이라고 보았습니다.',
       '사건은 소송으로 이어졌고, 그 과정에서 사고에 관한 감정 평가가 여러 차례 진행되었습니다.',
-      '감정 결과에 따르면 이 충돌의 주된 책임은 A에게 있다고 판단되었습니다.',
+      '원래 칼럼의 사례 설명에 따르면, 감정에서 A가 이 충돌의 주된 책임을 지는 것으로 판단되었습니다.',
       '그 결론은 이 사건의 사실관계에 한정된 것이었습니다.',
-      '감정에서는 A가 연속해 진행하던 앞선 차량 두 대를 추월하려 한 점, 반대 차로로 진입한 점, 제동할 여유를 확보하기 어려운 속도로 주행한 점, 규정된 경적·전조등 신호를 하지 않았던 점, 2호 차량의 차로 변경 동작, 도로·차로 구조와 그 밖에 확보된 증거를 함께 고려했습니다.',
-      '규정된 신호를 한 번 빠뜨리면 언제나 책임이 정해진다는 뜻은 아닙니다.',
+      '어떤 한 가지 요소만으로 언제나 책임이 정해진다는 뜻은 아닙니다.',
     ];
     for (const fact of requiredCaseFacts) {
       expect(raw).toContain(fact);
       expect(post?.content).toContain(fact);
     }
 
+    expect(raw).not.toContain('감정에서는 A가');
     expect(raw).not.toContain('앞 차의 동의');
     expect(raw).not.toContain('동의를 얻어야');
     expect(raw).not.toContain('보편적인 책임 원인');
@@ -216,7 +216,7 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-09-10',
+      date: '2026-09-30',
       dateDisplay: '2025년 9월 13일',
       readTime: '4분 분량',
       category: 'legal',

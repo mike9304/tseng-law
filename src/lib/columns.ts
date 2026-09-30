@@ -380,15 +380,32 @@ export function getAllColumnPosts(
   return cacheable ? posts.slice() : posts;
 }
 
-function parseColumnPostsFromDir(locale: ColumnContentLocale, dir: string): ColumnPost[] {
+type ParseDirOptions = {
+  slugFromFile?: (filename: string) => string;
+  numberFromFile?: (filename: string) => number | undefined;
+};
+
+function defaultColumnNumber(file: string): number | undefined {
+  const value = Number.parseInt(file, 10);
+  return Number.isFinite(value) ? value : undefined;
+}
+
+function parseColumnPostsFromDir(
+  locale: ColumnContentLocale,
+  dir: string,
+  parseOptions: ParseDirOptions = {},
+): ColumnPost[] {
+  const toSlug = parseOptions.slugFromFile ?? slugFromFilename;
+  const toNumber = parseOptions.numberFromFile ?? defaultColumnNumber;
   const files = fs.readdirSync(dir)
     .filter((f) => f.endsWith('.md'))
     .sort((a, b) => a.localeCompare(b, 'en'));
-  const sourceOrder = new Map(files.map((file, index) => [slugFromFilename(file), index]));
+  const sourceOrder = new Map(files.map((file, index) => [toSlug(file), index]));
   const postsWithArchiveDate = files.map((file) => {
     const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
     const { data, content } = matter(raw);
-    const slug = slugFromFilename(file);
+    const slug = toSlug(file);
+    const columnNumber = toNumber(file);
     const categories = (data.categories as string[]) || [];
     const cat = categoryFromString(categories[0] || '');
     const fixedContent = fixImagePaths(content);
@@ -455,7 +472,7 @@ function parseColumnPostsFromDir(locale: ColumnContentLocale, dir: string): Colu
         ...(faq.length ? { faq } : {}),
         ...(audience.length ? { audience } : {}),
         ...(aiAuthored ? { aiAuthored } : {}),
-        ...(Number.isFinite(Number.parseInt(file, 10)) ? { columnNumber: Number.parseInt(file, 10) } : {}),
+        ...(columnNumber !== undefined ? { columnNumber } : {}),
       },
     };
   });
@@ -507,4 +524,66 @@ export function fileBackedColumnAlternateLocales(slug: string): PublicLocale8[] 
   return getColumnAlternateLocales(realSlug, {
     hasTranslation: (locale, value) => hasColumnTranslation(locale, value),
   });
+}
+
+/* ------------------------------------------------------------------------ *
+ * Issue columns (이슈 칼럼): news-hook Taiwan-law explainers, kept on their
+ * own board at /[locale]/columns/issues, separate from the expertise columns.
+ *
+ * They live in src/content/issues/<locale>/ so that every existing consumer
+ * of the expertise corpus (columns index, home archive, llms.txt, AI
+ * consultation, guidance pages, sitemap column rows, pinned-count tests)
+ * excludes them by default. The file name keeps the internal publication id
+ * (ISSUE-YYYYMMDD-NN-<slug>.md); the public slug drops that prefix so URLs are
+ * lowercase and carry no date.
+ * ------------------------------------------------------------------------ */
+
+export const ISSUE_BOARD_LOCALES = ['ko', 'zh-hant', 'en', 'ja', 'vi'] as const;
+export type IssueBoardLocale = (typeof ISSUE_BOARD_LOCALES)[number];
+export const ISSUE_CONTENT_ROOT = 'src/content/issues';
+const ISSUE_FILE_PREFIX_RE = /^ISSUE-(\d{8})-(\d{2})-/;
+
+export function isIssueBoardLocale(value?: string | null): value is IssueBoardLocale {
+  return (ISSUE_BOARD_LOCALES as readonly string[]).includes(value ?? '');
+}
+
+export function issueSlugFromFilename(filename: string): string {
+  return filename.replace(/\.md$/, '').replace(ISSUE_FILE_PREFIX_RE, '');
+}
+
+/** Internal publication id, e.g. `ISSUE-20260930-11`, or null for other names. */
+export function issueIdFromFilename(filename: string): string | null {
+  const match = filename.match(ISSUE_FILE_PREFIX_RE);
+  return match ? `ISSUE-${match[1]}-${match[2]}` : null;
+}
+
+function issueSequenceNumber(filename: string): number | undefined {
+  const match = filename.match(ISSUE_FILE_PREFIX_RE);
+  return match ? Number(`${match[1]}${match[2]}`) : undefined;
+}
+
+export function getIssueColumnsDir(locale: IssueBoardLocale, options?: ColumnLoadOptions): string {
+  return options?.columnsDir ?? path.join(options?.cwd ?? process.cwd(), ISSUE_CONTENT_ROOT, locale);
+}
+
+export function getAllIssuePosts(locale: string, options?: ColumnLoadOptions): ColumnPost[] {
+  if (!isIssueBoardLocale(locale)) return [];
+  const dir = getIssueColumnsDir(locale, options);
+  if (!fs.existsSync(dir)) return [];
+  const cacheable = shouldCacheParsedColumns(options);
+  const cacheKey = `issues\u0000${locale}\u0000${dir}`;
+  if (cacheable) {
+    const cached = parsedColumnsCache.get(cacheKey);
+    if (cached) return cached.slice();
+  }
+  const posts = parseColumnPostsFromDir(locale, dir, {
+    slugFromFile: issueSlugFromFilename,
+    numberFromFile: issueSequenceNumber,
+  });
+  if (cacheable) parsedColumnsCache.set(cacheKey, posts);
+  return cacheable ? posts.slice() : posts;
+}
+
+export function getIssuePost(slug: string, locale: string, options?: ColumnLoadOptions): ColumnPost | undefined {
+  return getAllIssuePosts(locale, options).find((post) => post.slug === slug);
 }

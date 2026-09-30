@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
-import { getAllColumnPosts } from '@/lib/columns';
+import { ISSUE_BOARD_LOCALES, getAllColumnPosts, getAllIssuePosts } from '@/lib/columns';
 import type { AttorneyProfileSourceRecord } from '@/lib/builder/lawyers/source';
 import type { ServiceAreaSourceRecord } from '@/lib/builder/services/source';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
@@ -49,6 +49,13 @@ const guidanceTranslatedColumnCount = [...GUIDANCE_LOCALES_4].reduce((total, loc
   const dir = path.join(process.cwd(), 'src/content', `columns-${locale}`);
   if (!existsSync(dir)) return total;
   return total + readdirSync(dir).filter((name) => name.endsWith('.md')).length;
+}, 0);
+
+// Issue board (/[locale]/columns/issues): one list URL per board locale that
+// has issues, plus one URL per issue article (counted from disk).
+const issueBoardUrlCount = ISSUE_BOARD_LOCALES.reduce((total, locale) => {
+  const count = getAllIssuePosts(locale).length;
+  return total + (count > 0 ? count + 1 : 0);
 }, 0);
 
 describe('sitemap column lastModified', () => {
@@ -175,10 +182,10 @@ describe('sitemap column lastModified', () => {
       // must stay indexable (no Korean twin); JA ones join the JA details.
       beforeFiltering:
         459 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
-          + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
+          + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
         450 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
-          + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount,
+          + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });
 

@@ -25,7 +25,8 @@ export function isEnglishNoindexPath(
   // Builder/Blob EN column drafts without a file translation stay excluded.
   // Without a checker (client bundle / page metadata) column paths keep
   // their previous behavior; the sitemap always passes one.
-  if (/^\/columns\/[^/]+$/.test(path)) {
+  // `/columns/issues` is the issue-column board index, not a column slug.
+  if (/^\/columns\/[^/]+$/.test(path) && path !== '/columns/issues') {
     if (!isFileBackedEnglishColumn) return false;
     return !isFileBackedEnglishColumn(path);
   }

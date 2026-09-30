@@ -113,6 +113,8 @@ export const PUBLIC_FILE_ROUTES = [
   "/bookings/manage/[token]",
   "/builder-fixtures/decomposed-home",
   "/columns/[slug]",
+  "/columns/issues/[slug]",
+  "/columns/issues",
   "/columns",
   "/events/[slug]",
   "/events",

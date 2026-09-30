@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
+import IssueBoardTabs from '@/components/IssueBoardTabs';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { getAllColumnPosts } from '@/lib/columns';
 import { prioritizeRecommendedColumns } from '@/lib/en-recommended-columns';
@@ -203,6 +204,7 @@ export default async function ColumnsPage(
           title={copy.title}
           description={copy.description}
         />
+        <IssueBoardTabs locale={locale} active="expert" showTeaser />
         <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} />
         <div className="container">
           <OriginalLanguageColumnsSection locale={locale} remainingPosts={remainingPosts} />
@@ -247,6 +249,7 @@ export default async function ColumnsPage(
 
     return (
       <>
+        <IssueBoardTabs locale={locale} active="expert" showTeaser />
         <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />
         <EnAcquisitionGuideLinks locale={locale} />
       </>
@@ -304,6 +307,7 @@ export default async function ColumnsPage(
       {showHero ? (
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
+      <IssueBoardTabs locale={locale} active="expert" showTeaser />
       {showRepeater ? <ColumnsGrid locale={locale} posts={toColumnListItems(posts)} initialFilters={toColumnGridFilters(searchParams)} /> : null}
       <EnAcquisitionGuideLinks locale={locale} />
     </>

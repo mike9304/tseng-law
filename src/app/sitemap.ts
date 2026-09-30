@@ -3,7 +3,7 @@ import { primaryAttorneySlug } from '@/data/attorney-profiles';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
 import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
-import { getAllColumnPosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
+import { ISSUE_BOARD_LOCALES, getAllColumnPosts, getAllIssuePosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
 import { collectColumnSitemapRecords } from '@/lib/column-locales';
 import { locales } from '@/lib/locales';
 import {
@@ -333,6 +333,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         xDefaultWithinCluster: true,
       }),
     );
+  }
+
+  // Issue board (이슈 칼럼, /[locale]/columns/issues): list pages cluster across
+  // the board locales that have issues; each issue article exists in one
+  // locale only, so it carries no hreflang siblings.
+  const issueLocales = ISSUE_BOARD_LOCALES.filter((locale) => getAllIssuePosts(locale).length > 0);
+  for (const locale of issueLocales) {
+    const issues = getAllIssuePosts(locale);
+    pages.push(
+      createEntry(locale, '/columns/issues', {
+        lastModified: issues[0]?.date || undefined,
+        priority: 0.7,
+        alternateLocales: issueLocales,
+      }),
+    );
+    for (const post of issues) {
+      pages.push(
+        createEntry(locale, `/columns/issues/${post.slug}`, {
+          lastModified: post.date || undefined,
+          priority: 0.6,
+          alternateLocales: [locale],
+          // Single-locale article: x-default is the article itself.
+          xDefaultWithinCluster: true,
+        }),
+      );
+    }
   }
 
   // Japanese public static and file-backed surfaces.

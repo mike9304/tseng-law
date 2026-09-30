@@ -499,14 +499,21 @@ export default function ColumnsGrid({
   locale,
   posts: incomingPosts,
   initialFilters = {},
+  hrefBase,
+  recommendedTitleOverride,
 }: {
   locale: PublicLocale8;
   posts: ColumnListItem[];
   initialFilters?: ColumnsGridFilters;
+  /** Card/reset link base; defaults to `/${locale}/columns` (issue board: `/${locale}/columns/issues`). */
+  hrefBase?: string;
+  /** Heading for the locale-first section (issue board uses its own wording). */
+  recommendedTitleOverride?: string;
 }) {
+  const listHref = hrefBase ?? `/${locale}/columns`;
   // Posts recommended to this locale's readers come first (also in filtered
   // lists) and get their own section above the topic groups.
-  const recommendedTitle = RECOMMENDED_SECTION_TITLE[locale];
+  const recommendedTitle = recommendedTitleOverride ?? RECOMMENDED_SECTION_TITLE[locale];
   const { recommended, rest: nonRecommended } = useMemo(
     () => (recommendedTitle ? splitRecommendedColumns(locale, incomingPosts) : { recommended: [], rest: [...incomingPosts] }),
     [locale, incomingPosts, recommendedTitle],
@@ -646,7 +653,7 @@ export default function ColumnsGrid({
     }, navigation);
   };
   const renderCard = (post: ColumnListItem) => (
-    <Link key={post.slug} href={`/${locale}/columns/${post.slug}`} className="columns-card" data-column-topic={topicMode ? topicOf(post) : post.category}>
+    <Link key={post.slug} href={`${listHref}/${post.slug}`} className="columns-card" data-column-topic={topicMode ? topicOf(post) : post.category}>
       <div className="columns-card-img">
         <Image src={post.featuredImage} alt={post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
         <div className="columns-card-image-overlay" />
@@ -729,7 +736,7 @@ export default function ColumnsGrid({
           </div>
           {hasActiveFilters ? (
             <Link
-              href={`/${locale}/columns`}
+              href={listHref}
               className="columns-filter-reset link-underline"
               data-columns-filter-reset="true"
               onNavigate={() => {

@@ -1,6 +1,8 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
 import { TRAFFIC_COLUMN_SLUGS, trafficHubCopy } from '@/data/traffic-hub';
+import { isTrafficDiagramId, isTrafficDiagramLocale, splitColumnContentAfterHeading } from '@/data/traffic-diagrams';
+import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
@@ -199,6 +201,12 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   // Guidance locales borrow the English shell labels, so they get no TOC label
   // (and no TOC) until the translation lane supplies one.
   const tocEntries = guidancePack ? [] : extractColumnToc(post.content);
+  const diagramVideo = post.diagramVideo && isTrafficDiagramId(post.diagramVideo.id) && isTrafficDiagramLocale(urlLocale)
+    ? { id: post.diagramVideo.id, locale: urlLocale }
+    : null;
+  const diagramSplit = diagramVideo && post.diagramVideo?.afterHeading
+    ? splitColumnContentAfterHeading(post.content, post.diagramVideo.afterHeading)
+    : null;
   const authorName =
     locale === 'ko'
       ? '증준외 변호사'
@@ -387,7 +395,24 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
               {tocEntries.length >= MIN_TOC_SECTIONS ? (
                 <ColumnToc entries={tocEntries} label={t.tocLabel} />
               ) : null}
-              <ColumnContent content={post.content} locale={locale} />
+              {diagramVideo && diagramSplit ? (
+                <>
+                  <ColumnContent content={diagramSplit[0]} locale={locale} />
+                  <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
+                  <ColumnContent
+                    content={diagramSplit[1]}
+                    locale={locale}
+                    sectionIdOffset={extractColumnToc(diagramSplit[0]).length}
+                  />
+                </>
+              ) : (
+                <>
+                  {diagramVideo ? (
+                    <TrafficDiagramFigure diagramId={diagramVideo.id} locale={diagramVideo.locale} sizes="(max-width: 640px) calc(100vw - 40px), 760px" />
+                  ) : null}
+                  <ColumnContent content={post.content} locale={locale} />
+                </>
+              )}
               {showBody && showFaq ? (
                 <section className="column-faq" aria-label={t.faqHeading}>
                   <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>

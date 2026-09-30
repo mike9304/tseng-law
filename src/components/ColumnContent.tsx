@@ -152,14 +152,17 @@ function getColumnTableScrollHint(locale?: SiteLocale): string {
 export default function ColumnContent({
   content,
   locale,
+  sectionIdOffset = 0,
 }: {
   content: string;
   locale?: SiteLocale;
+  /** Number of section headings already rendered by an earlier part of the same body. */
+  sectionIdOffset?: number;
 }) {
   return (
     <div className="column-markdown" data-column-content="markdown">
       <ReactMarkdown
-        remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkUnderline, remarkColumnSectionIds]}
+        remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkUnderline, [remarkColumnSectionIds, { offset: sectionIdOffset }]]}
         remarkRehypeOptions={
           locale
             ? { footnoteLabel: FOOTNOTE_LABELS[locale] }

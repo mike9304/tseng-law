@@ -60,12 +60,15 @@ export function extractColumnToc(markdown: string): ColumnTocEntry[] {
  * (see sectionHeadings) while the tree is transformed. Pure, so React
  * StrictMode double renders cannot skew the numbering.
  */
-export function remarkColumnSectionIds() {
+export function remarkColumnSectionIds(options?: { offset?: number }) {
+  // `offset` continues the numbering when one body is rendered in several
+  // parts (e.g. around a diagram figure), so ids still match the TOC.
+  const offset = options?.offset ?? 0;
   return (tree: MdastNode) => {
     sectionHeadings(tree).forEach((node, index) => {
       node.data = {
         ...node.data,
-        hProperties: { ...node.data?.hProperties, id: columnSectionId(index + 1) },
+        hProperties: { ...node.data?.hProperties, id: columnSectionId(offset + index + 1) },
       };
     });
   };

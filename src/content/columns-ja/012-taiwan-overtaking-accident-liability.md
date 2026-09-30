@@ -7,6 +7,8 @@ read_time: "約4分"
 categories:
   - "台湾法律情報"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
+diagram_video: "overtaking-012"
+diagram_video_after: "元のコラムで紹介された匿名の事故事例"
 ---
 
 # 台湾の追い越し事故、責任はどう判断されるか

@@ -72,3 +72,19 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 ---
 ```
+
+## `diagram_video` (animated traffic diagrams)
+
+```yaml
+diagram_video: "overtaking-012"                     # id in src/data/traffic-diagrams.ts
+diagram_video_after: "기존 칼럼에 소개된 익명 사고 사례"  # optional: exact `##` heading text
+```
+
+The loader strips inline markdown images, so looping Blender diagrams are
+attached through frontmatter. The column page renders `TrafficDiagramFigure`
+(poster first; `<video autoplay muted loop playsinline preload="metadata">`
+mounted near the viewport, never under `prefers-reduced-motion` or Save-Data)
+after the first paragraph of the named section, or before the body when no
+heading is given or found. Captions, including the illustrative-assumption
+note, live in the registry per locale (ko, zh-hant, en, ja). Builder/Blob copies
+keep the field from the .md file.

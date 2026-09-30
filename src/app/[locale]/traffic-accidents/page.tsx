@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { isSiteLocale, siteLocales } from '@/lib/locales';
 import { getColumnPost } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
-import { TRAFFIC_COLUMN_SLUGS, TRAFFIC_IMAGE, TRAFFIC_PATH, trafficHubCopy } from '@/data/traffic-hub';
+import { TRAFFIC_COLUMN_SLUGS, TRAFFIC_DIAGRAM_ID, TRAFFIC_IMAGE, TRAFFIC_PATH, trafficHubCopy } from '@/data/traffic-hub';
+import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import styles from './traffic.module.css';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -42,13 +42,8 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
         </ol>
         <section className={styles.visual} aria-labelledby="visual-title">
           <div className={styles.visualIntro}><p className={styles.kicker}>01 / {copy.nav}</p><h2 id="visual-title">{copy.visualTitle}</h2><p>{copy.visualText}</p></div>
-          <figure>
-            <Image src={TRAFFIC_IMAGE.src} width={TRAFFIC_IMAGE.width} height={TRAFFIC_IMAGE.height}
-              sizes="(max-width: 760px) calc(100vw - 40px), 1120px" alt={copy.alt} loading="lazy" />
-            <figcaption><strong>{copy.legend}</strong><br />{copy.caption}<br />
-              <a href={TRAFFIC_IMAGE.src} target="_blank" rel="noopener noreferrer">{copy.enlarge} ↗</a>
-            </figcaption>
-          </figure>
+          <TrafficDiagramFigure diagramId={TRAFFIC_DIAGRAM_ID} locale={locale}
+            enlarge={{ href: TRAFFIC_IMAGE.src, label: copy.enlarge }} />
         </section>
         <section className={styles.section} id="articles" aria-labelledby="articles-title">
           <div className={styles.heading}><h2 id="articles-title">{copy.columns}</h2><Link href={`/${locale}/columns`}>{copy.allColumns} →</Link></div>

@@ -36,6 +36,12 @@ export interface ColumnPost {
   audience?: string[];
   /** Frontmatter `author: legal-ai-assistant` → written by AI, no attorney byline. */
   aiAuthored?: boolean;
+  /**
+   * Frontmatter `diagram_video` (+ optional `diagram_video_after` heading): an
+   * animated diagram from src/data/traffic-diagrams.ts rendered outside the
+   * markdown body, so it survives `stripInlineImages`.
+   */
+  diagramVideo?: { id: string; afterHeading?: string };
   /** Numeric file prefix (NNN-slug.md): tie-break for same-day columns (higher = newer). */
   columnNumber?: number;
   /** Allowlisted body typography preset id (e.g. ko-body-readable). */

@@ -5,6 +5,15 @@ const base = process.env.TRAFFIC_QA_BASE || 'http://127.0.0.1:43172';
 const out = process.env.TRAFFIC_QA_OUT || '/tmp/traffic-browser-qa';
 await fs.mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true });
+// Local-only escape hatch: some dev machines stall on first AVIF encodes in the
+// Next image optimizer; TRAFFIC_QA_NO_AVIF=1 asks for WebP instead.
+const newContext = async (options) => {
+  const context = await browser.newContext(options);
+  if (process.env.TRAFFIC_QA_NO_AVIF === '1') {
+    await context.route('**/_next/image**', route => route.continue({ headers: { ...route.request().headers(), accept: 'image/webp,image/*;q=0.8' } }));
+  }
+  return context;
+};
 const findings = [];
 const results = [];
 const contentChecks = {
@@ -15,7 +24,7 @@ const contentChecks = {
 };
 try {
   for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844 }]) {
-    const context = await browser.newContext({ viewport, reducedMotion: 'reduce' });
+    const context = await newContext({ viewport, reducedMotion: 'reduce' });
     const page = await context.newPage();
     page.on('pageerror', error => findings.push(error.message));
     page.on('console', message => {
@@ -29,15 +38,17 @@ try {
       await page.locator('figure img').evaluate(image => image.decode());
       const metrics = await page.evaluate(() => ({
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
-        image: [...document.images].find(image => image.currentSrc.includes('overtaking-diagram'))?.naturalWidth,
+        image: [...document.images].find(image => image.currentSrc.includes('overtaking-012-poster'))?.naturalWidth,
+        assumptionNote: Boolean(document.querySelector('figure[data-traffic-diagram] [data-traffic-diagram-assumption]')?.textContent?.trim()),
         media: document.querySelectorAll('video,canvas,model-viewer').length,
         canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href'),
         alternates: [...document.querySelectorAll('link[rel="alternate"][hreflang]')].map(link => link.getAttribute('hreflang')),
         headingColor: getComputedStyle(document.querySelector('h1')).color,
-        imageTransferBytes: performance.getEntriesByType('resource').filter(entry => entry.name.includes('overtaking-diagram')).map(entry => entry.transferSize),
+        imageTransferBytes: performance.getEntriesByType('resource').filter(entry => entry.name.includes('overtaking-012-poster')).map(entry => entry.transferSize),
       }));
       if (metrics.scrollWidth > metrics.width + 1) throw new Error(`${locale} horizontal overflow`);
-      if (!metrics.image || metrics.media) throw new Error(`${locale} media contract`);
+      // Reduced motion: poster only, no <video> mounted.
+      if (!metrics.image || metrics.media || !metrics.assumptionNote) throw new Error(`${locale} media contract`);
       if (!metrics.canonical?.endsWith(`/${locale}/traffic-accidents`)) throw new Error(`${locale} canonical`);
       if (metrics.headingColor !== 'rgb(255, 255, 255)') throw new Error(`${locale} hero heading contrast`);
       await page.evaluate(() => window.scrollTo(0, 0));
@@ -71,6 +82,10 @@ try {
         await page.locator(`#articles a[href$="/${slug}"]`).click();
         await page.waitForURL(`**/columns/${slug}`);
         const articleText = await page.locator('main').innerText();
+        if (slug === 'taiwan-overtaking-accident-liability') {
+          if (await page.locator('.blog-body figure[data-traffic-diagram="overtaking-012"]').count() !== 1) throw new Error(`${locale}/${slug}: diagram figure`);
+          if (await page.locator('.blog-body video').count()) throw new Error(`${locale}/${slug}: video under reduced motion`);
+        }
         for (const fragment of expected) {
           if (!articleText.includes(fragment)) throw new Error(`${locale}/${slug}: missing ${fragment}`);
         }
@@ -88,6 +103,36 @@ try {
     }
     await context.close();
   }
+  // Motion allowed: the diagram video lazy-mounts, autoplays muted and loops.
+  const playback = [];
+  for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844 }]) {
+    const context = await newContext({ viewport, reducedMotion: 'no-preference' });
+    const page = await context.newPage();
+    page.on('pageerror', error => findings.push(error.message));
+    for (const path of ['/ko/traffic-accidents', '/en/columns/taiwan-overtaking-accident-liability']) {
+      await page.goto(`${base}${path}`, { waitUntil: 'load' });
+      const before = await page.locator('video').count();
+      const figure = page.locator('figure[data-traffic-diagram]');
+      await figure.scrollIntoViewIfNeeded();
+      await page.locator('figure[data-traffic-diagram] [data-video-ready="true"]').waitFor({ timeout: 15000 });
+      const t0 = await page.locator('figure[data-traffic-diagram] video').evaluate(video => video.currentTime);
+      await page.waitForTimeout(1200);
+      const state = await page.locator('figure[data-traffic-diagram] video').evaluate(video => ({
+        currentTime: video.currentTime, paused: video.paused, muted: video.muted, loop: video.loop,
+        autoplay: video.autoplay, playsInline: video.playsInline, preload: video.preload, src: video.currentSrc,
+        width: video.videoWidth, height: video.videoHeight,
+      }));
+      const bytes = await page.evaluate(() => performance.getEntriesByType('resource')
+        .filter(entry => entry.name.includes('/videos/traffic/')).map(entry => ({ name: entry.name.split('/').pop(), transfer: entry.transferSize })));
+      if (before && path.includes('/columns/')) throw new Error(`${path}: video mounted before scrolling near it`);
+      if (state.paused || !(state.currentTime > t0) || !state.muted || !state.loop || !state.playsInline) throw new Error(`${path}: playback ${JSON.stringify(state)}`);
+      if (viewport.width === 390 && !state.src.includes('-mobile.')) throw new Error(`${path}: mobile source not selected`);
+      await page.screenshot({ path: `${out}/motion-${viewport.width}${path.replaceAll('/', '_')}.png` });
+      playback.push({ viewport: viewport.width, path, mountedBeforeScroll: before > 0, t0, ...state, bytes });
+    }
+    await context.close();
+  }
+  results.push({ playback });
   if (findings.length) throw new Error(findings.join('\n'));
   await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, findings, results }, null, 2));
   console.log(JSON.stringify({ ok: true, journeys: results.length, out }));

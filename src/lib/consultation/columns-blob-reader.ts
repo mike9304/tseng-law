@@ -348,6 +348,7 @@ export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<Co
         ...(post.audience ?? file.audience ? { audience: post.audience ?? file.audience } : {}),
         ...(post.aiAuthored ?? file.aiAuthored ? { aiAuthored: true } : {}),
         ...(post.columnNumber ?? file.columnNumber ? { columnNumber: post.columnNumber ?? file.columnNumber } : {}),
+        ...(post.diagramVideo ?? file.diagramVideo ? { diagramVideo: post.diagramVideo ?? file.diagramVideo } : {}),
       }
       : {};
     merged.push(faq || Object.keys(fileMeta).length ? { ...post, ...fileMeta, ...(faq ? { faq } : {}) } : post);

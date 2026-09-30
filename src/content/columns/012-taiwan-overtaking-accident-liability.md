@@ -7,6 +7,8 @@ read_time: "4분 분량"
 categories:
   - "대만 법률정보"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
+diagram_video: "overtaking-012"
+diagram_video_after: "기존 칼럼에 소개된 익명 사고 사례"
 ---
 
 # 대만 추월 사고의 책임은 어떻게 판단하나요?

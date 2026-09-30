@@ -95,6 +95,8 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
       read_time: '4분 분량',
       categories: ['대만 법률정보'],
       featured_image: featuredImage,
+      diagram_video: 'overtaking-012',
+      diagram_video_after: '기존 칼럼에 소개된 익명 사고 사례',
     });
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { normalizeColumnAudience } from './column-audience';
+import { normalizeColumnDiagramVideo } from '@/data/traffic-diagrams';
 import path from 'path';
 import matter from 'gray-matter';
 import type { Locale, SiteLocale } from './locales';
@@ -423,6 +424,7 @@ function parseColumnPostsFromDir(
     const faq = normalizeColumnFaq(data.faq);
     const audience = normalizeColumnAudience(data.audience);
     const aiAuthored = String(data.author ?? '').trim().toLowerCase() === 'legal-ai-assistant';
+    const diagramVideo = normalizeColumnDiagramVideo(data.diagram_video, data.diagram_video_after);
 
     // When EN files live in columns-en/, frontmatter and body are already English.
     // Legacy fallback: if EN still resolves to KO directory (no columns-en), overlay
@@ -472,6 +474,7 @@ function parseColumnPostsFromDir(
         ...(faq.length ? { faq } : {}),
         ...(audience.length ? { audience } : {}),
         ...(aiAuthored ? { aiAuthored } : {}),
+        ...(diagramVideo ? { diagramVideo } : {}),
         ...(columnNumber !== undefined ? { columnNumber } : {}),
       },
     };

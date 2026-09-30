@@ -155,8 +155,8 @@ files touched). Diff: 6 files, +62 / −26.
   rebase before merging.
 
 ## Production verification (added by the orchestrator, 2026-09-30 20:10 KST)
-- Rebased onto `origin/main` 4c18f162 (includes cd713099 traffic autoplay, 4c18f162 ko rewrite). No conflicts.
+- Rebased onto `origin/main` 4c18f162, then again onto 46dcb536 (21:00 KST, includes the traffic-animation changes 18f6b275/11e4a610/8c072504). No conflicts. The build was re-run after the second rebase.
 - `npm run build` passed (about 66 s, cached).
 - `next start -p 3471`, then `shoot.mjs` into `/Users/son7/tseng-design-20260930/after/`: 40 shots on 10 pages × desktop/mobile × fold/full.
-- The before shots in `/Users/son7/tseng-design-20260930/before/` were taken on b02f8178. The zh-traffic and zh-column-detail differences therefore also include main's autoplay change (cd713099), which is not part of this branch.
+- The before shots in `/Users/son7/tseng-design-20260930/before/` were taken on b02f8178. The zh-traffic and zh-column-detail differences therefore also include main's traffic animation changes, which are not part of this branch. After shots were taken on 4c18f162 + this branch.
 - Service detail (investment), desktop full: page height went from 4970px to 4450px because related-column summaries are clamped to 4 lines. Card bottoms are aligned.

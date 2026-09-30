@@ -55,8 +55,9 @@ const nextConfig = {
   // so Vercel's file tracing can no longer see the directories statically. Without this,
   // production lambdas lack src/content/columns-* and en/ja/zh-hant home + /columns 500
   // (2026-09-09 outage after 81a4cfe1). Keep every column locale directory bundled.
+  // The issue board reads src/content/issues/<locale>/ the same way (2026-09-30).
   outputFileTracingIncludes: {
-    '/**': ['./src/content/columns*/**/*'],
+    '/**': ['./src/content/columns*/**/*', './src/content/issues/**/*'],
   },
   webpack(config, { dev }) {
     if (dev) {

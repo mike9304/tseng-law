@@ -1,6 +1,8 @@
 import type { SiteLocale } from '@/lib/locales';
 
 export const TRAFFIC_PATH = '/traffic-accidents';
+/** Hypothetical animated diagram shown on the hub (src/data/traffic-diagrams.ts). */
+export const TRAFFIC_DIAGRAM_ID = 'passing-hypothetical' as const;
 export const TRAFFIC_COLUMN_SLUGS = [
   'taiwan-accident-police-records',
   'taiwan-traffic-accident-procedure',
@@ -10,7 +12,7 @@ export const TRAFFIC_COLUMN_SLUGS = [
 type CountryGuide = { id: 'tw' | 'us' | 'jp' | 'kr'; name: string; text: string; linkLabel: string; href: string };
 type TrafficCopy = {
   nav: string; kicker: string; title: string; description: string; read: string;
-  columns: string;
+  columns: string; visualTitle: string; visualText: string;
   stages: { title: string; text: string }[];
   countriesTitle: string; countriesIntro: string; countries: CountryGuide[];
   contactTitle: string; contactText: string; contact: string; allColumns: string;
@@ -18,6 +20,8 @@ type TrafficCopy = {
 
 export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
   ko: {
+    visualTitle: '앞차가 양보한 뒤의 추월',
+    visualText: '제101조의 신호·양보·좌측 통과·복귀 순서를 승용차 두 대로 보여 줍니다. 실제 사건이 아닌 가상 예시이며, 속도·거리·시각은 설명용 가정값입니다. 과실 판단을 위한 영상은 아닙니다.',
     nav: '교통사고', kicker: '교통사고 법률 안내', title: '대만에서 난 교통사고,\n사고 직후부터 손해배상까지',
     description: '대만에서 난 교통사고에서는 경찰 기록과 치료비, 보험 처리와 합의를 함께 봅니다. 한국·일본·미국으로 돌아갈 예정이라면 출국 일정과 남은 절차도 같이 봐야 합니다.',
     read: '칼럼 읽기', columns: '대만 교통사고 칼럼',
@@ -39,6 +43,8 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     contact: '상담 문의', allColumns: '전체 칼럼',
   },
   'zh-hant': {
+    visualTitle: '前車允讓後，如何完成超車',
+    visualText: '兩輛小客車示範第101條的警示、允讓、從左側超越及返回原車道的順序。這是假設示例，並非實際案件；速度、距離與時間均為說明用假設值，不作為肇事責任判斷。',
     nav: '交通事故', kicker: '交通事故法律指南', title: '台灣車禍，\n從事故現場到損害賠償',
     description: '警方資料、醫療費用、保險與和解：整理處理台灣交通事故所需的資訊。若即將前往美國、日本或韓國，也應一併安排離台後的聯絡與後續程序。',
     read: '閱讀專欄', columns: '台灣交通事故專欄',
@@ -60,6 +66,8 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     contact: '聯絡事務所', allColumns: '所有專欄',
   },
   en: {
+    visualTitle: 'When the car ahead lets you pass',
+    visualText: 'Two passenger cars show Article 101\'s sequence: signal, wait for the lead car to yield, pass on the left and return to the original lane. This is a hypothetical example, not an actual case; speeds, distances and timing are illustrative assumptions, with no assessment of fault.',
     nav: 'Traffic accidents', kicker: 'Traffic accident guidance', title: 'A traffic accident in Taiwan.\nWhat happens next?',
     description: 'Police records, medical costs, insurance and settlement: practical reading for dealing with an accident in Taiwan, including when you will be returning to the United States, Japan or Korea.',
     read: 'Read article', columns: 'Taiwan accident articles',
@@ -81,6 +89,8 @@ export const trafficHubCopy: Record<SiteLocale, TrafficCopy> = {
     contact: 'Contact the firm', allColumns: 'All articles',
   },
   ja: {
+    visualTitle: '追い越す前の合図と、元の車線への戻り方',
+    visualText: '2台の乗用車で、第101条の合図、進路譲り、左側からの追い越し、元の車線への復帰という流れを示します。実際の事件ではない仮想の例で、速度・距離・時刻は説明用の仮定値です。過失の判断を示す映像ではありません。',
     nav: '交通事故', kicker: '交通事故の法律ガイド', title: '台湾での交通事故。\n事故直後から損害賠償まで',
     description: '警察の記録、治療費、保険と示談。台湾での交通事故に対応するための情報をまとめました。日本・韓国・米国へ戻る予定がある方は、帰国日とその後の手続きもあわせて考えましょう。',
     read: 'コラムを読む', columns: '台湾の交通事故コラム',

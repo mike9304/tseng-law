@@ -27,7 +27,7 @@ describe('traffic hub publication contracts', () => {
       for (const slug of TRAFFIC_COLUMN_SLUGS) {
         const post = getColumnPost(slug, locale);
         expect(post?.featuredImage ?? '', `${locale}/${slug}`).not.toMatch(/\/images\/traffic\//);
-        expect(post?.diagramVideo, `${locale}/${slug}`).toBeUndefined();
+        expect(post?.diagramVideo?.id, `${locale}/${slug}`).not.toBe('overtaking-012');
       }
     }
   });

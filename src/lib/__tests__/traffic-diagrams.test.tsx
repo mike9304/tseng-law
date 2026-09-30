@@ -6,6 +6,8 @@ import { getColumnPost } from '../columns';
 import { extractColumnToc } from '../column-toc';
 import { siteLocales } from '../locales';
 import ColumnContent from '@/components/ColumnContent';
+import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
+import { TRAFFIC_DIAGRAM_ID } from '@/data/traffic-hub';
 import {
   TRAFFIC_DIAGRAMS,
   type TrafficDiagram,
@@ -39,8 +41,8 @@ describe('animated traffic diagrams', () => {
     }
   });
 
-  it('captions every locale with the illustrative-assumption note', () => {
-    const markers = { ko: '설명용 가정값', 'zh-hant': '說明用假設值', en: 'Illustrative assumptions', ja: '説明用の仮定値' } as const;
+  it('labels every locale as a hypothetical example', () => {
+    const markers = { ko: '가상 예시:', 'zh-hant': '假設示例：', en: 'Hypothetical example:', ja: '仮想の例：' } as const;
     for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
       for (const locale of siteLocales) {
         const copy = diagram.copy[locale];
@@ -51,11 +53,30 @@ describe('animated traffic diagrams', () => {
     }
   });
 
-  it('keeps the withdrawn overtaking-012 reconstruction out of every column and the registry', () => {
+  it('keeps the withdrawn overtaking-012 reconstruction out of the registry and public assets', () => {
     expect(Object.keys(TRAFFIC_DIAGRAMS)).not.toContain('overtaking-012');
+    for (const diagram of Object.values(TRAFFIC_DIAGRAMS) as TrafficDiagram[]) {
+      for (const src of [diagram.mp4, diagram.webm, diagram.mobileMp4, diagram.mobileWebm, diagram.poster, diagram.mobilePoster]) {
+        expect(src).not.toMatch(/overtaking/);
+      }
+    }
+  });
+
+  it('renders the hub diagram poster-first with the hypothetical-example note (video mounts on the client only)', () => {
+    const html = renderToStaticMarkup(<TrafficDiagramFigure diagramId={TRAFFIC_DIAGRAM_ID} locale="ko" />);
+    expect(html).toContain('data-traffic-diagram="passing-hypothetical"');
+    expect(html).toContain('passing-hypothetical-poster-mobile.webp');
+    expect(html).toContain('가상 예시:');
+    expect(html).not.toContain('<video');
+  });
+
+  it('places the hypothetical diagram in column 012 after the Article 101 section opening, never in the case section', () => {
     for (const locale of siteLocales) {
       const post = getColumnPost('taiwan-overtaking-accident-liability', locale)!;
-      expect(post.diagramVideo, locale).toBeUndefined();
+      expect(post.diagramVideo?.id, locale).toBe('passing-hypothetical');
+      const headings = [...post.content.matchAll(/^## (.+)$/gm)].map((match) => match[1]);
+      expect(post.diagramVideo?.afterHeading, locale).toBe(headings[0]);
+      expect(splitColumnContentAfterHeading(post.content, post.diagramVideo!.afterHeading!), locale).not.toBeNull();
     }
   });
 
@@ -84,6 +105,7 @@ describe('animated traffic diagrams', () => {
   it('drops unknown diagram ids and falls back when the heading is missing', () => {
     expect(normalizeColumnDiagramVideo('unknown', 'x')).toBeUndefined();
     expect(normalizeColumnDiagramVideo('overtaking-012', 'x')).toBeUndefined();
+    expect(normalizeColumnDiagramVideo(' passing-hypothetical ', '')).toEqual({ id: 'passing-hypothetical' });
     expect(splitColumnContentAfterHeading('## A\n\npara\n\n## B\n\nx', 'Missing')).toBeNull();
     expect(splitColumnContentAfterHeading('## A\n\npara one\nline two\n\nnext\n\n## B', 'A')).toEqual([
       '## A\n\npara one\nline two',

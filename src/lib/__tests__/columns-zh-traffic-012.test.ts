@@ -90,6 +90,8 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
       read_time: '3分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
+      diagram_video: 'passing-hypothetical',
+      diagram_video_after: '道路交通安全規則第101條的超車要件',
     });
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),

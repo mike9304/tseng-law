@@ -95,6 +95,8 @@ describe('Korean traffic column 012 — overtaking accident liability', () => {
       read_time: '3분 분량',
       categories: ['대만 법률정보'],
       featured_image: featuredImage,
+      diagram_video: 'passing-hypothetical',
+      diagram_video_after: '도로교통안전규칙 제101조가 정한 추월 요건',
     });
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),

@@ -36,7 +36,8 @@ try {
       if (await page.locator('h1').count() !== 1 || await page.locator('main').count() !== 1) throw new Error(`${locale} headings/landmarks`);
       const metrics = await page.evaluate(() => ({
         width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
-        withdrawn: /overtaking-012|overtaking-diagram|data-traffic-diagram/.test(document.documentElement.outerHTML),
+        withdrawn: /overtaking-012|overtaking-diagram/.test(document.documentElement.outerHTML),
+        hypothetical: document.querySelectorAll('figure[data-traffic-diagram="passing-hypothetical"] [data-traffic-diagram-assumption]').length,
         media: document.querySelectorAll('video,canvas,model-viewer').length,
         canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href'),
         alternates: [...document.querySelectorAll('link[rel="alternate"][hreflang]')].map(link => link.getAttribute('hreflang')),
@@ -44,7 +45,9 @@ try {
       }));
       if (metrics.scrollWidth > metrics.width + 1) throw new Error(`${locale} horizontal overflow`);
       // The overtaking-012 reconstruction was withdrawn (no consent): nothing of it may render.
-      if (metrics.withdrawn || metrics.media) throw new Error(`${locale} withdrawn case visual still present`);
+      if (metrics.withdrawn) throw new Error(`${locale} withdrawn case visual still present`);
+      // Reduced motion: hypothetical diagram poster + note only, no <video> mounted.
+      if (metrics.hypothetical !== 1 || metrics.media) throw new Error(`${locale} hypothetical diagram contract ${JSON.stringify(metrics)}`);
       if (!metrics.canonical?.endsWith(`/${locale}/traffic-accidents`)) throw new Error(`${locale} canonical`);
       if (metrics.headingColor !== 'rgb(255, 255, 255)') throw new Error(`${locale} hero heading contrast`);
       await page.evaluate(() => window.scrollTo(0, 0));
@@ -79,7 +82,9 @@ try {
         await page.waitForURL(`**/columns/${slug}`);
         const articleText = await page.locator('main').innerText();
         if (slug === 'taiwan-overtaking-accident-liability') {
-          if (await page.locator('figure[data-traffic-diagram], video').count()) throw new Error(`${locale}/${slug}: withdrawn diagram present`);
+          if (await page.locator('figure[data-traffic-diagram="overtaking-012"]').count()) throw new Error(`${locale}/${slug}: withdrawn diagram present`);
+          if (await page.locator('.blog-body figure[data-traffic-diagram="passing-hypothetical"]').count() !== 1) throw new Error(`${locale}/${slug}: hypothetical diagram missing`);
+          if (await page.locator('.blog-body video').count()) throw new Error(`${locale}/${slug}: video under reduced motion`);
         }
         for (const fragment of expected) {
           if (!articleText.includes(fragment)) throw new Error(`${locale}/${slug}: missing ${fragment}`);
@@ -111,9 +116,9 @@ try {
       await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
       await page.waitForTimeout(600);
       const state = await page.evaluate(() => ({
-        figures: document.querySelectorAll('figure[data-traffic-diagram]').length,
-        videos: document.querySelectorAll('video').length,
-        html: /overtaking-012|overtaking-diagram|\/videos\/traffic\/|\/images\/traffic\//.test(document.documentElement.outerHTML),
+        figures: document.querySelectorAll('figure[data-traffic-diagram="overtaking-012"]').length,
+        videos: [...document.querySelectorAll('video')].filter(video => /overtaking/.test(video.currentSrc || video.src)).length,
+        html: /overtaking-012|overtaking-diagram|012-taiwan-overtaking-accident-liability\/img-01/.test(document.documentElement.outerHTML),
         ogImage: document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '',
       }));
       if (response?.status() !== 200 || state.figures || state.videos || state.html || /overtaking-012|overtaking-diagram|\/images\/traffic\//.test(state.ogImage)) throw new Error(`${path}: withdrawn visual ${JSON.stringify(state)}`);
@@ -128,6 +133,36 @@ try {
     assets.push({ asset, status: response.status });
   }
   results.push({ withdrawal, assets });
+  // Motion allowed: the hypothetical diagram lazy-mounts, autoplays muted and loops.
+  const playback = [];
+  for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844 }]) {
+    const context = await newContext({ viewport, reducedMotion: 'no-preference' });
+    const page = await context.newPage();
+    page.on('pageerror', error => findings.push(error.message));
+    for (const path of ['/ko/traffic-accidents', '/en/columns/taiwan-overtaking-accident-liability']) {
+      await page.goto(`${base}${path}`, { waitUntil: 'load' });
+      const before = await page.locator('video').count();
+      await page.locator('figure[data-traffic-diagram="passing-hypothetical"]').scrollIntoViewIfNeeded();
+      await page.locator('figure[data-traffic-diagram] [data-video-ready="true"]').waitFor({ timeout: 15000 });
+      const t0 = await page.locator('figure[data-traffic-diagram] video').evaluate(video => video.currentTime);
+      await page.waitForTimeout(1200);
+      const state = await page.locator('figure[data-traffic-diagram] video').evaluate(video => ({
+        currentTime: video.currentTime, paused: video.paused, muted: video.muted, loop: video.loop,
+        autoplay: video.autoplay, playsInline: video.playsInline, preload: video.preload, src: video.currentSrc,
+        width: video.videoWidth, height: video.videoHeight,
+      }));
+      const bytes = await page.evaluate(() => performance.getEntriesByType('resource')
+        .filter(entry => entry.name.includes('/videos/traffic/')).map(entry => ({ name: entry.name.split('/').pop(), transfer: entry.transferSize })));
+      if (before && path.includes('/columns/')) throw new Error(`${path}: video mounted before scrolling near it`);
+      if (!state.src.includes('passing-hypothetical')) throw new Error(`${path}: unexpected video ${state.src}`);
+      if (state.paused || !(state.currentTime > t0) || !state.muted || !state.loop || !state.playsInline) throw new Error(`${path}: playback ${JSON.stringify(state)}`);
+      if (viewport.width === 390 && !state.src.includes('-mobile.')) throw new Error(`${path}: mobile source not selected`);
+      await page.screenshot({ path: `${out}/motion-${viewport.width}${path.replaceAll('/', '_')}.png` });
+      playback.push({ viewport: viewport.width, path, mountedBeforeScroll: before > 0, t0, ...state, bytes });
+    }
+    await context.close();
+  }
+  results.push({ playback });
   if (findings.length) throw new Error(findings.join('\n'));
   await fs.writeFile(`${out}/report.json`, JSON.stringify({ ok: true, findings, results }, null, 2));
   console.log(JSON.stringify({ ok: true, journeys: results.length, out }));

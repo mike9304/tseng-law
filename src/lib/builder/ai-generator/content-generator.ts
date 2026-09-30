@@ -1,4 +1,5 @@
 import type { Locale } from '@/lib/locales';
+import { EDITORIAL_VOICE } from '@/lib/editorial-voice.generated';
 import type { SiteSpec } from './site-spec';
 import type { SiteBlueprint } from './template-selector';
 
@@ -237,7 +238,7 @@ async function callOpenAi(spec: SiteSpec, blueprint: SiteBlueprint): Promise<Llm
         temperature: 0.4,
         response_format: { type: 'json_object' },
         messages: [
-          { role: 'system', content: 'You are a senior brand copywriter. Return compact JSON only.' },
+          { role: 'system', content: `${EDITORIAL_VOICE}\nApply these rules to the site copy. Return compact JSON only, without a review or explanatory preface.` },
           { role: 'user', content: buildLlmPrompt(spec, blueprint) },
         ],
       }),

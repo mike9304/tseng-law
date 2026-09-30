@@ -50,7 +50,7 @@ const internalLinks = [
 const disclaimer =
   '本文僅提供台灣超車規則與事故責任判斷的一般法律資訊，不構成特定案件的法律意見或結果保證。實際責任可能因事故地點、車輛動態、速度、燈號、證據、鑑定結果及現行法規而異，具體案件仍應依相關資料個別分析。';
 
-const EXPECTED_VISIBLE_HAN = 1_072;
+const EXPECTED_VISIBLE_HAN = 1_048;
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -83,8 +83,6 @@ function countVisibleHan(content: string) {
 describe('Traditional Chinese traffic column 012 — overtaking accident liability', () => {
   it('publishes the exact frontmatter, sole H1, dates, category, and featured image', () => {
     expect(parsed.data).toEqual({
-      diagram: 'passing-stages-3d',
-      diagram_after: '道路交通安全規則第101條的超車要件',
       title,
       url: sourceUrl,
       lastmod: '2026-09-30',
@@ -92,6 +90,8 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
       read_time: '3分鐘閱讀',
       categories: ['台灣法律資訊'],
       featured_image: featuredImage,
+      diagram_video: 'passing-hypothetical',
+      diagram_video_after: '道路交通安全規則第101條的超車要件',
     });
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),
@@ -178,9 +178,10 @@ describe('Traditional Chinese traffic column 012 — overtaking accident liabili
     );
     expect(imageBlocks).toEqual([
       { alt: featuredAlt, src: featuredImage },
-      { alt: incidentAlt, src: incidentImage },
     ]);
-    expect(countOccurrences(raw, incidentImage)).toBe(1);
+    // The case sketch (img-01) was withdrawn on 2026-09-30: no consent from the party.
+    expect(countOccurrences(raw, incidentImage)).toBe(0);
+    expect(raw).not.toContain(incidentAlt);
     expect(raw).not.toContain('img-02.jpg');
     expect(raw).not.toContain('中文版');
     expect(raw).not.toContain('翻譯成了中文');

@@ -35,8 +35,6 @@ Diese Reihenfolge von Signal und Ausweichen auf derselben Fahrspur bedeutet nich
 
 In einem anonymisierten Fall dieser Kanzlei fuhr Motorradfahrer A mit Beifahrer B auf einer Bergstraße. Vor ihnen fuhren zwei Personenkraftwagen; das vorderste Fahrzeug Nr. 1 bewegte sich langsam, sodass auch Fahrzeug Nr. 2 und das Motorrad mit geringer Geschwindigkeit vorankamen.
 
-![Unfallskizze, die den Überholweg des Motorrads und der zwei vorausfahrenden Fahrzeuge auf einer Bergstraße zeigt](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A versuchte, beide Fahrzeuge zu überholen, fuhr auf die Gegenfahrbahn und beschleunigte. Auch Fahrzeug Nr. 2 bereitete sich darauf vor, Fahrzeug Nr. 1 zu überholen: weniger als 1 Sekunde nach Setzen des Blinkers fuhr es auf die Gegenfahrbahn. Dem Motorrad blieb zu wenig Zeit zum Bremsen, sodass es mit Fahrzeug Nr. 2 zusammenstieß.
 
 B erlitt schwere Kopfverletzungen und verstarb am Unfallort; A verlor das Bewusstsein und wurde ins Krankenhaus gebracht.

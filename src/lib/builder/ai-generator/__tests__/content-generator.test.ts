@@ -5,6 +5,7 @@ import {
 } from '@/lib/builder/ai-generator/content-generator';
 import type { SiteSpec } from '@/lib/builder/ai-generator/site-spec';
 import type { SiteBlueprint } from '@/lib/builder/ai-generator/template-selector';
+import { EDITORIAL_VOICE } from '@/lib/editorial-voice.generated';
 
 const spec: SiteSpec = {
   industry: 'law',
@@ -81,6 +82,21 @@ describe('generateSiteContent production truthfulness', () => {
 
     expectSanitizedFailure(error, 'ai_content_provider_unconfigured');
     expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('sends the complete editorial policy to the site-copy provider', async () => {
+    vi.stubEnv('OPENAI_API_KEY', 'test-key');
+    const fetchSpy = vi.fn(async () => providerResponse({
+      hero: { sectionId: 'hero', headline: 'Title', body: 'Body' },
+      sections: [{ sectionId: 'services', headline: 'Services', body: 'Body' }],
+      metaDescription: 'Description',
+    }));
+    vi.stubGlobal('fetch', fetchSpy);
+    await generateSiteContent(spec, blueprint);
+    const request = (fetchSpy.mock.calls[0] as unknown as [string, RequestInit])[1];
+    const body = JSON.parse(request.body as string);
+    expect(body.messages[0].content).toContain(EDITORIAL_VOICE);
+    expect(body.response_format).toEqual({ type: 'json_object' });
   });
 
   it('rejects provider non-2xx without exposing the provider body', async () => {

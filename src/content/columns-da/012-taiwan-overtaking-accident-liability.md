@@ -35,8 +35,6 @@ Denne rækkefølge af signal og vigemanøvre ved overhaling i samme vognbane bet
 
 I en anonymiseret sag fra kontoret kørte motorcyklisten A med passageren B på en bjergvej. Foran dem kørte 2 personbiler; det forreste køretøj nummer 1 bevægede sig langsomt, så også køretøj nummer 2 og motorcyklen kom frem med lav hastighed.
 
-![Ulykkesskitse, der viser motorcyklens overhalingssti og de 2 forankørende køretøjer på en bjergvej](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A forsøgte at overhale de 2 køretøjer, kørte ind på den modsatte vognbane og accelererede. Også køretøj nummer 2 forberedte sig på at overhale køretøj nummer 1: mindre end 1 sekund efter tænding af blinklyset kørte det ind på den modsatte vognbane. Motorcyklen havde for lidt tid til at bremse og kolliderede med køretøj nummer 2.
 
 B pådrog sig alvorlige hovedskader og afgik ved døden på stedet; A mistede bevidstheden og blev bragt til hospitalet.

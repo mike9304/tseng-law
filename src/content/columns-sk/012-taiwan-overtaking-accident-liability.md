@@ -35,8 +35,6 @@ Toto poradie signálov a uvoľnenia v tom istom pruhu neznamená, že by predch�
 
 V anonymizovanej veci vedenej touto kanceláriou išiel motocyklista A po horskej ceste so spolujazdcom B. Vpredu išli 2 osobné vozidlá; vozidlo č. 1, najviac vpredu, sa pohybovalo pomaly, takže vozidlo č. 2 i motocykel postupovali takisto nízkou rýchlosťou.
 
-![Schéma nehody ukazujúca dráhu predchádzania motocykla a 2 vozidiel vpredu na horskej ceste](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A sa pokúsil predísť obe vozidlá, vošiel do protismerného pruhu a zrýchlil. Vozidlo č. 2 sa takisto chystalo predísť vozidlo č. 1: menej než 1 sekundu po zapnutí smerovky vošlo do protismerného pruhu. Motocykel nemal dosť času zabrzdiť a zrazil sa s vozidlom č. 2.
 
 B utrpel ťažké poranenie hlavy a zomrel na mieste; A stratil vedomie a bol prevezený do nemocnice.

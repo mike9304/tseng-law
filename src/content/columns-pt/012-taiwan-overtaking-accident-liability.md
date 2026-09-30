@@ -35,8 +35,6 @@ Esta ordem de sinais e de cedência de passagem na mesma via não significa que 
 
 Num caso anonimizado tratado por este escritório, o motociclista A circulava numa estrada de montanha com o passageiro B. À frente circulavam 2 automóveis particulares; o veículo n.º 1, o mais à frente, avançava lentamente, de modo que o veículo n.º 2 e a motocicleta progrediam também a baixa velocidade.
 
-![Esquema de acidente que mostra a trajetória de ultrapassagem da motocicleta e dos dois veículos da frente numa estrada de montanha](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A tentou ultrapassar os dois veículos, entrou na via oposta e acelerou. O veículo n.º 2 preparava-se também para ultrapassar o veículo n.º 1: menos de 1 segundo depois de ter acendido o intermitente, entrou na via oposta. A motocicleta não tinha margem de travagem suficiente e entrou em colisão com o veículo n.º 2.
 
 B sofreu lesões graves na cabeça e faleceu no local; A perdeu a consciência e foi transportado para o hospital.

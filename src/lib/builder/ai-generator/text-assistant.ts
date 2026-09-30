@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { Locale } from '@/lib/locales';
+import { EDITORIAL_VOICE } from '@/lib/editorial-voice.generated';
 
 export const TEXT_ASSISTANT_ACTIONS = [
   'rewrite',
@@ -101,6 +102,7 @@ export function buildTextAssistantPrompt(input: TextAssistantInput): {
   const outputLocale = describeOutputLocale(input);
   const systemLines = [
     'You are an expert website copy assistant working inside a Wix-style visual builder.',
+    EDITORIAL_VOICE,
     'Return only the rewritten text. Do not include quote marks, explanations, prefaces, or markdown fences.',
     'Preserve any existing line breaks unless the user explicitly requests a structural change.',
     `Respond in ${outputLocale}.`,

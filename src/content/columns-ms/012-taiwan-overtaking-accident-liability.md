@@ -35,8 +35,6 @@ Urutan isyarat dan penyerahan pada lorong yang sama ini tidak bermakna bahawa pe
 
 Dalam kes yang dianonimkan yang diurus pejabat ini, penunggang motosikal A bergerak di jalan gunung bersama penumpang B. Di hadapan mereka bergerak dua buah kereta; kenderaan nombor 1, yang paling di hadapan, maju perlahan, sehingga kenderaan nombor 2 dan motosikal juga maju pada kelajuan rendah.
 
-![Rajah kemalangan yang menunjukkan trajektori pemotongan motosikal dan 2 kenderaan di hadapan di jalan gunung](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A cuba memotong 2 kenderaan, masuk ke lorong bertentangan dan memecut. Kenderaan nombor 2 juga bersedia memotong kenderaan nombor 1: kurang daripada 1 saat selepas menyalakan isyarat belok, ia masuk ke lorong bertentangan. Motosikal tidak sempat membrek dan bertembung dengan kenderaan nombor 2.
 
 B mengalami kecederaan berat di kepala dan meninggal di tempat; A hilang kesedaran dan dihantar ke hospital.

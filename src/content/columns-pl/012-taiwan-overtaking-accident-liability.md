@@ -35,8 +35,6 @@ Ta kolejność sygnałów i ustąpienia na tym samym pasie nie oznacza, że wypr
 
 W zanonimizowanej sprawie prowadzonej przez tę kancelarię motocyklista A jechał drogą górską z pasażerem B. Z przodu jechały dwa samochody osobowe; pojazd nr 1, najbardziej z przodu, poruszał się wolno, więc pojazd nr 2 i motocykl też posuwały się z małą prędkością.
 
-![Schemat wypadku pokazujący tor wyprzedzania motocykla i 2 pojazdów z przodu na drodze górskiej](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A próbował wyprzedzić oba pojazdy, wjechał na przeciwny pas i przyspieszył. Pojazd nr 2 też przygotowywał się do wyprzedzenia pojazdu nr 1: mniej niż 1 sekundę po włączeniu kierunkowskazu wjechał na przeciwny pas. Motocykl nie miał dość czasu na hamowanie i zderzył się z pojazdem nr 2.
 
 B doznał ciężkich obrażeń głowy i zmarł na miejscu; A stracił przytomność i został przewieziony do szpitala.

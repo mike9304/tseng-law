@@ -117,7 +117,7 @@ describe('English full column corpus', () => {
     expect(loadedPublicContent).not.toMatch(CJK_SCRIPTS);
 
     const renderedWordCount = countRenderedEnglishWords(post!.content);
-    expect(renderedWordCount).toBe(728);
+    expect(renderedWordCount).toBe(713);
     expect(Math.ceil(renderedWordCount / 200)).toBe(4);
     expect(raw.match(/^read_time:\s*"([^"]+)"$/m)?.[1]).toBe('4 min read');
     expect(post!.readTime).toBe('4 min read');
@@ -146,9 +146,9 @@ describe('English full column corpus', () => {
     expect(countOccurrences(raw, officialRegulationsUrl)).toBe(1);
     expect(countOccurrences(raw, supplementaryUrl)).toBe(1);
     expect(countOccurrences(raw, featuredImage)).toBe(2);
-    expect(countOccurrences(raw, incidentImage)).toBe(1);
+    expect(countOccurrences(raw, incidentImage)).toBe(0); // case sketch withdrawn 2026-09-30 (no consent)
     expect(countOccurrences(raw, featuredImageBlock)).toBe(1);
-    expect(countOccurrences(raw, incidentImageBlock)).toBe(1);
+    expect(countOccurrences(raw, incidentImageBlock)).toBe(0);
     expect(countOccurrences(raw, disclaimer)).toBe(1);
     expect(loadedPublicContent).toContain(disclaimer);
     for (const link of internalLinks) {

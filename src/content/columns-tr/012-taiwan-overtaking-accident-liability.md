@@ -35,8 +35,6 @@ Aynı şeritteki sinyal ve yol verme sırası, yasak bir yerde veya şartta soll
 
 Bu büronun ele aldığı anonimleştirilmiş bir işte motosiklet sürücüsü A, yolcu B ile dağ yolunda gidiyordu. Önde 2 binek otomobil vardı; en öndeki 1 numaralı araç yavaş ilerlediği için 2 numaralı araç ve motosiklet de düşük hızda ilerliyordu.
 
-![Dağ yolunda motosikletin ve öndeki 2 aracın sollama yörüngesini gösteren kaza şeması](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A, 2 aracı da geçmek istedi, karşı şeride girdi ve hızlandı. 2 numaralı araç da 1 numaralı aracı sollamaya hazırlanıyordu: sinyali yaktıktan sonra 1 saniyeden kısa sürede karşı şeride girdi. Motosikletin frenlemek için yeterli zamanı yoktu ve 2 numaralı araçla çarpıştı.
 
 B ağır kafa yaralanması geçirdi ve yerinde öldü; A bilincini kaybetti ve hastaneye götürüldü.

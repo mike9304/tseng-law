@@ -7,8 +7,8 @@ read_time: "約4分"
 categories:
   - "台湾法律情報"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
-diagram: "passing-stages-3d"
-diagram_after: "道路交通安全規則第101条が定める追い越しの要件"
+diagram_video: "passing-hypothetical"
+diagram_video_after: "道路交通安全規則第101条が定める追い越しの要件"
 ---
 
 # 台湾の追い越し事故、責任はどう判断されるか
@@ -36,8 +36,6 @@ diagram_after: "道路交通安全規則第101条が定める追い越しの要�
 ## 元のコラムで紹介された匿名の事故事例
 
 元のコラムで紹介された匿名の一件では、オートバイ運転者Aが同乗者Bを乗せ、山道を走行していました。前方には乗用車が二台あり、先頭の1号車は低速で進行していたため、2号車とオートバイも遅い速度で続いていました。
-
-![山道でオートバイと前方を走る二台の車両の追い越し経路を示す事故図](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
 Aは前方の二台をまとめて追い越そうとし、対向車線に入って加速しました。2号車も1号車を追い越す準備をし、方向指示器を出してから一秒未満で対向車線に入りました。オートバイには十分な制動の余裕がなく、2号車と衝突しました。
 

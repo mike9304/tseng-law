@@ -35,8 +35,6 @@ Ang pagkakasunod-sunod na ito ng pagsenyas at pagbibigay-daan sa iisang lane ay 
 
 Sa isang anonimong kaso na hinawakan ng tanggapang ito, ang nagmamaneho ng motorsiklo (機車) na tatawagin ditong A ay tumatakbo sa daang bundok kasama ang pasaherong si B. May dalawang sasakyang pampasahero (小客車) sa unahan, at dahil mabagal ang takbo ng pinakaunang sasakyan na Sasakyan 1, mabagal ding tumatakbo ang Sasakyan 2 at ang motorsiklo.
 
-![Diagram ng aksidenteng nagpapakita ng ruta ng paglampas ng motorsiklo gayundin ng dalawang sasakyan sa unahan sa daang bundok](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 Sinubukan ni A na lampasan nang sabay ang dalawang sasakyan, kaya pumasok siya sa kabilang lane (對向車道) saka binilisan ang takbo. Naghahanda rin ang Sasakyan 2 na lampasan ang Sasakyan 1: wala pang isang segundo matapos buksan ang senyas ng liko ay pumasok na ito sa kabilang lane. Kulang ang oras ng motorsiklo upang makapreno, kaya bumangga ito sa Sasakyan 2.
 
 Nagtamo si B ng malubhang pinsala sa ulo at namatay sa mismong pinangyarihan; nawalan naman ng malay si A saka dinala sa ospital.

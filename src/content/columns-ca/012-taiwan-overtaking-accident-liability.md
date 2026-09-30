@@ -35,8 +35,6 @@ Aquest ordre de senyals i de cedir el pas en el mateix carril no significa que l
 
 En un assumpte anònim tramitat per aquest despatx, el motorista A circulava per una carretera de muntanya amb el passatger B. Davant hi havia 2 turismes; el vehicle núm. 1, el que anava més al davant, es movia a poc a poc, de manera que el vehicle núm. 2 i la motocicleta també circulaven a baixa velocitat.
 
-![Esquema de l’accident que mostra la trajectòria d’avançament de la motocicleta i dels 2 vehicles del davant en una carretera de muntanya](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A va intentar ultrapassar tots dos vehicles alhora, de manera que va envair el carril contrari i va accelerar. El vehicle núm. 2 també es va preparar per avançar el núm. 1: menys d’un segon després d’encendre l’intermitent, va envair el carril contrari. La motocicleta no va tenir marge suficient per frenar i va col·lidir amb el vehicle núm. 2.
 
 B va patir una lesió greu al cap i va morir a l’acte; A va perdre el coneixement i va ser traslladat a l’hospital.

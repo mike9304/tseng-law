@@ -35,8 +35,6 @@ Cet ordre de signaux et l’obligation de céder le passage sur la même voie ne
 
 Dans une affaire anonymisée traitée par ce cabinet, le motocycliste A circulait sur une route de montagne avec le passager B. Devant eux circulaient deux voitures particulières ; le véhicule n° 1, le plus en avant, avançait lentement, de sorte que le véhicule n° 2 et la motocyclette progressaient aussi à faible vitesse.
 
-![Schéma d’accident montrant la trajectoire de dépassement de la motocyclette et des deux véhicules de devant sur une route de montagne](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A tenta de dépasser les deux véhicules, s’engagea sur la voie opposée et accéléra. Le véhicule n° 2 se préparait aussi à dépasser le véhicule n° 1 : moins d’une seconde après avoir allumé le clignotant, il s’engagea sur la voie opposée. La motocyclette n’avait pas le temps de freiner et entra en collision avec le véhicule n° 2.
 
 B subit de graves lésions à la tête et décéda sur place ; A perdit conscience et fut transporté à l’hôpital.

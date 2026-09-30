@@ -35,8 +35,6 @@ Deze volgorde van sein en wijken op dezelfde rijstrook betekent niet dat inhalen
 
 In een geanonimiseerde zaak van dit kantoor reed motorrijder A met passagier B op een bergweg. Voor hen reden 2 personenauto's; het voorste voertuig nr. 1 bewoog zich langzaam, zodat ook voertuig nr. 2 en de motorfiets langzaam reden.
 
-![Ongevalschets die het inhaalpad van de motorfiets en de 2 voorliggende voertuigen op een bergweg toont](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
-
 A probeerde de 2 voertuigen in te halen, reed de tegengestelde rijstrook op en versnelde. Ook voertuig nr. 2 bereidde zich erop voor voertuig nr. 1 in te halen: minder dan 1 seconde na het aanzetten van de richtingaanwijzer reed het de tegengestelde rijstrook op. De motorrijder had te weinig tijd om te remmen en botste tegen voertuig nr. 2.
 
 B liep ernstige hoofdletsels op en overleed ter plaatse; A verloor het bewustzijn en werd naar het ziekenhuis gebracht.

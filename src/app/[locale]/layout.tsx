@@ -11,9 +11,9 @@ import ScrollTopButton from '@/components/ScrollTopButton';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import CinematicRouteShell from '@/components/CinematicRouteShell';
 import VisitTracker from '@/components/metrics/VisitTracker';
-import { PublicColumnSlugsProvider } from '@/components/PublicColumnSlugsContext';
+import { PublicColumnLanguageLinksProvider } from '@/components/PublicColumnLanguageLinksContext';
 import LocaleSuggestion from '@/components/LocaleSuggestion';
-import { publicColumnSlugsByLocale } from '@/lib/columns';
+import { publicColumnSwitcherData } from '@/lib/column-language-links';
 import {
   getLocaleFontClassName,
   getManagedLocaleFontClassNames,
@@ -113,9 +113,10 @@ export default async function LocaleLayout(
   } = props;
 
   const publicLocale = resolvePublicLocaleOrNotFound(params.locale);
-  // WO-O22 A: read once per render so the client language switcher can point at
-  // the same article in every language instead of dropping four options.
-  const columnSlugsByLocale = publicColumnSlugsByLocale();
+  // WO-O22 A: read once per render so the client language switchers can link a
+  // column article to its published versions and leave out languages without
+  // one. Only this language's columns are sent, not the whole column index.
+  const { index: columnIndex, columnLocales } = publicColumnSwitcherData(publicLocale);
 
   if (isGuidanceLocale4(publicLocale)) {
     // Same chrome as the other four languages: shared header, footer and
@@ -124,7 +125,7 @@ export default async function LocaleLayout(
     // guidance surface publishes ten pages and no member/search routes.
     const language = publicDocumentLanguage(publicLocale);
     return (
-      <PublicColumnSlugsProvider slugsByLocale={columnSlugsByLocale}>
+      <PublicColumnLanguageLinksProvider index={columnIndex} columnLocales={columnLocales}>
         {/* WO-O28: the site-wide `WebSite` / `Organization` / logo
             `ImageObject` the four site locales emit below. Without it every
             guidance page was missing those three types. `SearchAction` is
@@ -144,7 +145,7 @@ export default async function LocaleLayout(
           {children}
         </CinematicRouteShell>
         <LocaleSuggestion locale={publicLocale} />
-      </PublicColumnSlugsProvider>
+      </PublicColumnLanguageLinksProvider>
     );
   }
 
@@ -153,7 +154,7 @@ export default async function LocaleLayout(
   // Hide non-JA product widgets on Japanese public surface (plan: columns+core pages first).
   const hideJaProductChrome = locale === 'ja';
   return (
-    <PublicColumnSlugsProvider slugsByLocale={columnSlugsByLocale}>
+    <PublicColumnLanguageLinksProvider index={columnIndex} columnLocales={columnLocales}>
       <link rel="describedby" href={`/${locale}/llms.txt`} />
       <DocumentLocaleSync
         language={language}
@@ -177,6 +178,6 @@ export default async function LocaleLayout(
       </CinematicRouteShell>
       <VisitTracker locale={locale} />
       <LocaleSuggestion locale={locale} />
-    </PublicColumnSlugsProvider>
+    </PublicColumnLanguageLinksProvider>
   );
 }

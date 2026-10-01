@@ -66,6 +66,23 @@ describe('sitemap column lastModified', () => {
     sourceMocks.collectAllBuilderSitemapEntries.mockImplementation(async () => []);
   });
 
+  it('advertises column 051 only in its three published languages', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const slug = 'taiwan-left-turn-vs-straight-motorcycle';
+    const languages = {
+      ko: `https://tseng-law.com/ko/columns/${slug}`,
+      'zh-Hant': `https://tseng-law.com/zh-hant/columns/${slug}`,
+      en: `https://tseng-law.com/en/columns/${slug}`,
+      'x-default': `https://tseng-law.com/en/columns/${slug}`,
+    };
+    for (const locale of ['ko', 'zh-hant', 'en']) {
+      const entry = entries.find((item) => item.url === `https://tseng-law.com/${locale}/columns/${slug}`);
+      expect(entry?.alternates?.languages, locale).toEqual(languages);
+    }
+    expect(entries.some((item) => item.url === `https://tseng-law.com/ja/columns/${slug}`)).toBe(false);
+  });
+
   it('lists every native single-locale column under its own locale only', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();

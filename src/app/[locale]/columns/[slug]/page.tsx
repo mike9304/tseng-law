@@ -17,7 +17,8 @@ import {
 } from '@/lib/ai-authored-columns';
 import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
-import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost, getColumnPublicationDate, parseColumnPublicationDate } from '@/lib/columns';
+import { getAllColumnPosts, getColumnPost, getColumnPublicationDate, parseColumnPublicationDate } from '@/lib/columns';
+import { columnAlternateLocales } from '@/lib/column-language-links';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
 import ColumnToc from '@/components/ColumnToc';
@@ -117,7 +118,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
       images: post.featuredImage,
       type: 'article',
       noindex: false,
-      alternateLocales: fileBackedColumnAlternateLocales(post.slug),
+      alternateLocales: columnAlternateLocales(post.slug, params.locale),
       // Single-locale columns have no English twin for x-default.
       xDefaultWithinCluster: true,
     });
@@ -156,7 +157,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     images: post.featuredImage,
     type: 'article',
     noindex: false,
-    alternateLocales: fileBackedColumnAlternateLocales(post.slug),
+    alternateLocales: columnAlternateLocales(post.slug, locale),
     xDefaultWithinCluster: true,
   });
 }

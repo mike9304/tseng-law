@@ -3,7 +3,11 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { usePublicColumnSlugs } from '@/components/PublicColumnSlugsContext';
+import {
+  usePublicColumnLanguageLinks,
+  usePublicColumnLocales,
+} from '@/components/PublicColumnLanguageLinksContext';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 import {
   captureLanding,
   dismissLocaleSuggestion,
@@ -32,15 +36,14 @@ const COPY: Record<string, { text: string; link: string; close: string }> = {
  * the server HTML.
  */
 export default function LocaleSuggestion({ locale }: { locale: string }) {
-  const slugsByLocale = usePublicColumnSlugs();
   const pathname = usePathname() ?? '';
+  const columnLocales = usePublicColumnLocales();
+  const columnLinks = usePublicColumnLanguageLinks(pathname);
   const [target, setTarget] = useState<{ locale: string; href: string } | null>(null);
 
   useEffect(() => {
-    if (!slugsByLocale || isLocaleSuggestionDismissed()) return;
-    const known = Object.entries(slugsByLocale)
-      .filter(([code, slugs]) => Boolean(slugs && slugs.length > 0 && COPY[code]))
-      .map(([code]) => code);
+    if (columnLocales.length === 0 || isLocaleSuggestionDismissed()) return;
+    const known = columnLocales.filter((code) => Boolean(COPY[code]));
     const languages = (navigator.languages?.length ? navigator.languages : [navigator.language]).filter(Boolean);
     const preferred = languages
       .map((tag) => localeFromLanguageTag(tag, known))
@@ -48,14 +51,10 @@ export default function LocaleSuggestion({ locale }: { locale: string }) {
     if (preferred.includes(locale)) return;
     const signals = captureLanding();
     const next = preferred[0] ?? localeHintFromReferrer(signals.refHost);
-    if (!next || next === locale || !known.includes(next)) return;
-    const match = pathname.match(/^\/[^/]+\/columns\/([^/?#]+)/);
-    const slug = match?.[1];
-    const href = slug && slugsByLocale[next as keyof typeof slugsByLocale]?.includes(slug)
-      ? `/${next}/columns/${slug}`
-      : `/${next}/columns`;
+    if (!next || next === locale || !known.includes(next as PublicLocale8)) return;
+    const href = columnLinks?.[next as PublicLocale8] ?? `/${next}/columns`;
     setTarget({ locale: next, href });
-  }, [locale, pathname, slugsByLocale]);
+  }, [locale, pathname, columnLinks, columnLocales]);
 
   if (!target) return null;
   const copy = COPY[target.locale];

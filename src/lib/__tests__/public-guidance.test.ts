@@ -18,7 +18,9 @@ import {
   hreflangTagForPublicLocale,
   isGuidanceCoreSlugPath,
   isGuidanceLocale4,
+  isPublicLanguageSwitchTargetListed,
   isPublicLocale8,
+  parsePublicColumnArticlePathname,
   publicDocumentLanguage,
   resolveGuidanceMiddlewareRewrite,
   resolvePublicDocumentLanguage,
@@ -364,27 +366,32 @@ describe('language switch targets', () => {
     });
   });
 
-  it('links the same article when the target language has that translation on disk', () => {
-    const columnSlugsByLocale = { vi: ['taiwan-labor-severance-law'], th: [] };
+  it('links the same article when the target language publishes it', () => {
+    const columnLinksByLocale = {
+      ja: '/ja/columns/taiwan-labor-severance-law',
+      vi: '/vi/columns/taiwan-labor-severance-law',
+    };
     expect(
       resolvePublicLanguageSwitchTarget('/ja/columns/taiwan-labor-severance-law', 'vi', {
-        columnSlugsByLocale,
+        columnLinksByLocale,
       }),
     ).toEqual({
       status: 'available',
       href: '/vi/columns/taiwan-labor-severance-law',
       fallback: 'exact',
     });
-    // th has no such file, so it degrades to the th column index, not a 404.
+    // th does not publish the article: the switchers leave th out instead of
+    // linking it to a 404 or to the th column index.
     expect(
-      resolvePublicLanguageSwitchTarget('/ja/columns/taiwan-labor-severance-law', 'th', {
-        columnSlugsByLocale,
+      isPublicLanguageSwitchTargetListed('/ja/columns/taiwan-labor-severance-law', 'th', {
+        columnLinksByLocale,
       }),
-    ).toEqual({
-      status: 'available',
-      href: '/th/columns',
-      fallback: 'columns-list',
-    });
+    ).toBe(false);
+    expect(
+      isPublicLanguageSwitchTargetListed('/ja/columns/taiwan-labor-severance-law', 'vi', {
+        columnLinksByLocale,
+      }),
+    ).toBe(true);
   });
 
   it('does not invent same-language fake article links for the new four', () => {
@@ -395,17 +402,39 @@ describe('language switch targets', () => {
       href: '/vi/columns',
       fallback: 'columns-list',
     });
+    // …and on a column article the switchers do not list vi at all.
+    expect(isPublicLanguageSwitchTargetListed('/ko/columns/some-slug', 'vi')).toBe(false);
     expect(
-      resolvePublicLanguageSwitchTarget('/ko/columns/some-slug', 'vi', {
-        columnSlugsByLocale: { vi: ['taiwan-labor-severance-law'] },
+      isPublicLanguageSwitchTargetListed('/ko/columns/some-slug', 'vi', {
+        columnLinksByLocale: { ko: '/ko/columns/some-slug' },
       }),
-    ).toEqual({
-      status: 'available',
-      href: '/vi/columns',
-      fallback: 'columns-list',
-    });
+    ).toBe(false);
     expect(guidancePublicPath('vi', 'columns')).toBe('/vi/columns');
     expect(guidancePublicPath('vi', 'home')).toBe('/vi');
+  });
+
+  it('lists only published languages on column articles and every language elsewhere', () => {
+    // The current language always stays listed, even before links are known.
+    expect(isPublicLanguageSwitchTargetListed('/ko/columns/some-slug', 'ko')).toBe(true);
+    // Issue-board articles are column articles; the board and the indexes are not.
+    expect(isPublicLanguageSwitchTargetListed('/ko/columns/issues/some-issue', 'en')).toBe(false);
+    for (const pathname of ['/ko/columns', '/ko/columns/issues', '/ko/videos', '/ko', '/vi/about']) {
+      expect(isPublicLanguageSwitchTargetListed(pathname, 'en'), pathname).toBe(true);
+      expect(isPublicLanguageSwitchTargetListed(pathname, 'th'), pathname).toBe(true);
+    }
+    expect(parsePublicColumnArticlePathname('/ko/columns/some-slug')).toEqual({
+      locale: 'ko',
+      slug: 'some-slug',
+      board: 'columns',
+    });
+    expect(parsePublicColumnArticlePathname('/vi/columns/issues/some-issue/')).toEqual({
+      locale: 'vi',
+      slug: 'some-issue',
+      board: 'issues',
+    });
+    expect(parsePublicColumnArticlePathname('/ko/columns/issues')).toBeNull();
+    expect(parsePublicColumnArticlePathname('/ko/columns/a/b')).toBeNull();
+    expect(parsePublicColumnArticlePathname('/columns/some-slug')).toBeNull();
   });
 
   it('consults Japanese public-route-policy for existing JA targets', () => {

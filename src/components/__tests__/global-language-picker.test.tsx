@@ -1,7 +1,7 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { fallbackLanguageNotice, localeFlagHref } from '@/components/LocaleFlagSwitcher';
-import type { PublicColumnSlugsByLocale } from '@/components/PublicColumnSlugsContext';
+import type { PublicColumnLanguageLinks } from '@/lib/public-guidance';
 
 const navigationState = vi.hoisted(() => ({
   pathname: '/ko',
@@ -34,14 +34,14 @@ function renderView(
     onOpen?: () => void;
     onClose?: () => void;
     onClosed?: () => void;
-    columnSlugsByLocale?: PublicColumnSlugsByLocale | null;
+    columnLinksByLocale?: PublicColumnLanguageLinks | null;
   } = {},
 ): string {
   return renderToStaticMarkup(
     <GlobalLanguagePickerView
       locale={locale}
       pathname={options.pathname ?? navigationState.pathname}
-      columnSlugsByLocale={options.columnSlugsByLocale}
+      columnLinksByLocale={options.columnLinksByLocale}
       open={options.open ?? false}
       onOpen={options.onOpen ?? (() => undefined)}
       onClose={options.onClose ?? (() => undefined)}
@@ -121,16 +121,43 @@ describe('GlobalLanguagePicker', () => {
     }
   });
 
-  it('links a JA column detail to the same vi article when columnSlugsByLocale is provided', () => {
+  it('links a JA column detail to the same vi article when its published URL is provided', () => {
     const slug = 'taiwan-company-establishment-basics';
     const pathname = `/ja/columns/${slug}`;
     const html = renderView('ja', {
       open: true,
       pathname,
-      columnSlugsByLocale: { vi: [slug], ja: [slug] },
+      columnLinksByLocale: { vi: `/vi/columns/${slug}`, ja: pathname },
     });
     const viLink = linkForLocale(html, 'vi');
     expect(viLink).toContain(`href="/vi/columns/${slug}"`);
+  });
+
+  it('lists only the published languages of a column and drops regions left empty', () => {
+    const slug = 'taiwan-left-turn-vs-straight-motorcycle';
+    const html = renderView('ko', {
+      open: true,
+      pathname: `/ko/columns/${slug}`,
+      columnLinksByLocale: {
+        ko: `/ko/columns/${slug}`,
+        'zh-hant': `/zh-hant/columns/${slug}`,
+        en: `/en/columns/${slug}`,
+      },
+    });
+    const hrefs = renderedLinks(html).map((link) => link.match(/href="([^"]+)"/)?.[1]);
+
+    expect(hrefs.sort()).toEqual(
+      [`/en/columns/${slug}`, `/ko/columns/${slug}`, `/zh-hant/columns/${slug}`].sort(),
+    );
+    expect(linkForLocale(html, 'ko')).toContain('aria-current="page"');
+    expect(html).not.toContain('href="/ja');
+    // Regions with no published language are not rendered as empty headings.
+    const listedRegions = groupedPublicLanguages('ko')
+      .filter((group) => group.entries.some((entry) => ['ko', 'zh-hant', 'en'].includes(entry.locale)))
+      .map((group) => group.region);
+    const renderedRegions = [...html.matchAll(/<section data-region="([^"]+)"/g)].map((match) => match[1]);
+    expect(renderedRegions).toEqual(listedRegions);
+    expect(renderedRegions.length).toBeLessThan(groupedPublicLanguages('ko').length);
   });
 
   it('falls back to the Thai home from /ko/videos and shows the notice', () => {

@@ -6,12 +6,13 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import {
   PUBLIC_LANGUAGE_AUTONYMS,
   PUBLIC_LOCALES_8,
+  isPublicLanguageSwitchTargetListed,
   resolvePublicLanguageSwitchTarget,
   visiblePublicPathname,
   type PublicLanguageSwitchOptions,
   type PublicLocale8,
 } from '@/lib/public-guidance';
-import { usePublicColumnSlugs } from '@/components/PublicColumnSlugsContext';
+import { usePublicColumnLanguageLinks } from '@/components/PublicColumnLanguageLinksContext';
 
 export default function PublicLanguageSwitcher({
   locale,
@@ -21,21 +22,24 @@ export default function PublicLanguageSwitcher({
   className?: string;
 }) {
   const pathname = visiblePublicPathname(usePathname() ?? `/${locale}`);
-  const columnSlugsByLocale = usePublicColumnSlugs();
-  const switchOptions: PublicLanguageSwitchOptions | undefined = columnSlugsByLocale
-    ? { columnSlugsByLocale }
+  const columnLinksByLocale = usePublicColumnLanguageLinks(pathname);
+  const switchOptions: PublicLanguageSwitchOptions | undefined = columnLinksByLocale
+    ? { columnLinksByLocale }
     : undefined;
   const rootClassName = ['public-language-switcher', className].filter(Boolean).join(' ');
 
   return (
     <div className={rootClassName}>
-      {PUBLIC_LOCALES_8.map((target) => {
+      {PUBLIC_LOCALES_8.filter((target) =>
+        isPublicLanguageSwitchTargetListed(pathname, target, switchOptions),
+      ).map((target) => {
         const result = resolvePublicLanguageSwitchTarget(pathname, target, switchOptions);
         const autonym = PUBLIC_LANGUAGE_AUTONYMS[target];
         const isCurrent = target === locale;
-        // WO-O22 A: no language is ever dropped or disabled. A page missing in
-        // the target language links to the nearest existing page instead, and
-        // the accessible label says so in this page's language.
+        // WO-O22 A: no language is disabled. A page missing in the target
+        // language links to the nearest existing page instead, and the
+        // accessible label says so in this page's language. Column articles
+        // list only the languages they are published in.
         const notice = result.fallback === 'exact'
           ? null
           : (

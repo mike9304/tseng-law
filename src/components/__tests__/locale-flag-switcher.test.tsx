@@ -20,6 +20,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import {
   PUBLIC_LANGUAGE_AUTONYMS,
   PUBLIC_LOCALES_8,
+  type PublicColumnLanguageLinks,
   type PublicLocale8,
 } from '@/lib/public-guidance';
 
@@ -29,6 +30,14 @@ function renderedHtml(locale: PublicLocale8): string {
 
 function renderedLinks(locale: PublicLocale8): string[] {
   return renderedHtml(locale).match(/<a\b[\s\S]*?<\/a>/g) ?? [];
+}
+
+/** The pure view on a column article, given where that article is published. */
+function renderedLinksWithColumnLinks(locale: PublicLocale8, links: PublicColumnLanguageLinks): string[] {
+  const html = renderToStaticMarkup(
+    <LocaleFlagSwitcherView locale={locale} pathname={navigationState.pathname} columnLinksByLocale={links} />,
+  );
+  return html.match(/<a\b[\s\S]*?<\/a>/g) ?? [];
 }
 
 /** WO-O22 A: the pure view, with no provider — the conservative fallback path. */
@@ -206,7 +215,10 @@ describe('LocaleFlagSwitcher', () => {
 
   it('marks only the active locale as the current page', () => {
     navigationState.pathname = '/ja/columns/taiwan-investment';
-    const links = renderedLinks('ja');
+    const links = renderedLinksWithColumnLinks('ja', {
+      ja: '/ja/columns/taiwan-investment',
+      ko: '/ko/columns/taiwan-investment',
+    });
 
     expect(links.find((link) => link.includes('href="/ja/columns/taiwan-investment"'))).toContain(
       'aria-current="page"',
@@ -239,37 +251,30 @@ describe('LocaleFlagSwitcher', () => {
     expect(disabled).toHaveLength(0);
   });
 
-  it('keeps every guidance language selectable on a column detail page', () => {
+  it('lists only the current language on a column article whose translations are unknown', () => {
     navigationState.pathname = '/ko/columns/taiwan-investment';
     const onLocaleSelect = vi.fn();
-    const switcher = switcherTree('ko', onLocaleSelect);
-    const elements = collectElements(switcher);
-    // No provider here, so the switcher refuses to guess an article URL and
-    // degrades to each language's column index — a real page, never a 404.
-    const fallbackLinks = elements.filter(
-      (element) => element.props['data-locale-switch-fallback'] === 'columns-list',
-    );
+    const elements = collectElements(switcherTree('ko', onLocaleSelect));
+    // No provider here, so nothing says where the article is published: the
+    // switcher neither guesses an article URL nor sends other languages to
+    // their column index.
+    const links = elements.filter((element) => typeof element.props.href === 'string');
 
-    expect(fallbackLinks).toHaveLength(GUIDANCE_LOCALES_4.length);
-    fallbackLinks.forEach((element) => {
-      expect(element.props['aria-disabled']).toBeUndefined();
-      // Built from the registry: a new guidance batch must not need this list edited.
-      expect(element.props.href).toMatch(
-        new RegExp(`^/(${GUIDANCE_LOCALES_4.join('|')})/columns$`),
-      );
-      element.props.onClick?.();
-    });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sk', 'bg', 'hr', 'sr', 'sl', 'lt', 'lv', 'et', 'ca', 'is']);
+    expect(links.map((element) => element.props.href)).toEqual(['/ko/columns/taiwan-investment']);
+    expect(
+      elements.some((element) => element.props['data-locale-switch-fallback'] !== undefined),
+    ).toBe(false);
+    links[0]?.props.onClick?.();
+    expect(onLocaleSelect).toHaveBeenCalledWith('ko');
     const guidanceColumnsHref = new RegExp(
-      `href="/(${GUIDANCE_LOCALES_4.join('|')})/columns/`,
+      `href="/(${GUIDANCE_LOCALES_4.join('|')})/columns`,
     );
-    expect(renderedLinks('ko').some((link) => guidanceColumnsHref.test(link))).toBe(
-      false,
-    );
+    expect(renderedLinks('ko').some((link) => guidanceColumnsHref.test(link))).toBe(false);
+    expect(renderedLinks('ko')).toHaveLength(1);
   });
 
   it('names the target language in the fallback notice, not this page language', () => {
-    navigationState.pathname = '/ko/columns/taiwan-investment';
+    navigationState.pathname = '/ko/videos';
     const html = renderedHtml('ko');
     const expected = internationalInquiryCopy.ko.unavailableLanguageNotice
       .split('{language}')
@@ -278,7 +283,7 @@ describe('LocaleFlagSwitcher', () => {
       .split('{language}')
       .join(PUBLIC_LANGUAGE_AUTONYMS.ko);
     const viFallback = collectElements(switcherTree('ko')).find(
-      (element) => element.props.href === '/vi/columns',
+      (element) => element.props.href === '/vi',
     );
 
     expect(expected).toContain('Tiếng Việt');
@@ -291,7 +296,7 @@ describe('LocaleFlagSwitcher', () => {
     expect(viFallback).toBeDefined();
     expect(viFallback?.props['aria-label']).toBe(`${PUBLIC_LANGUAGE_AUTONYMS.vi}. ${expected}`);
     expect(viFallback?.props.title).toBe(expected);
-    expect(renderedLinks('ko').some((link) => link.includes('href="/vi/columns/'))).toBe(false);
+    expect(renderedLinks('ko').some((link) => link.includes('href="/vi/videos'))).toBe(false);
   });
 
   it('links a column detail straight to the same article when the translation exists', () => {
@@ -299,11 +304,12 @@ describe('LocaleFlagSwitcher', () => {
     const switcher = LocaleFlagSwitcherView({
       locale: 'ja',
       pathname: navigationState.pathname,
-      columnSlugsByLocale: {
-        vi: ['taiwan-labor-severance-law'],
-        id: ['taiwan-labor-severance-law'],
-        th: ['taiwan-labor-severance-law'],
-        fil: ['taiwan-labor-severance-law'],
+      columnLinksByLocale: {
+        ja: '/ja/columns/taiwan-labor-severance-law',
+        vi: '/vi/columns/taiwan-labor-severance-law',
+        id: '/id/columns/taiwan-labor-severance-law',
+        th: '/th/columns/taiwan-labor-severance-law',
+        fil: '/fil/columns/taiwan-labor-severance-law',
       },
     });
     const elements = collectElements(switcher);
@@ -316,5 +322,15 @@ describe('LocaleFlagSwitcher', () => {
       expect(link?.props['data-locale-switch-fallback']).toBeUndefined();
       expect(link?.props['aria-label']).toBeUndefined();
     }
+    // Languages that do not publish the article are not listed at all.
+    expect(
+      elements.filter((element) => typeof element.props.href === 'string').map((element) => element.props.href),
+    ).toEqual([
+      '/ja/columns/taiwan-labor-severance-law',
+      '/vi/columns/taiwan-labor-severance-law',
+      '/id/columns/taiwan-labor-severance-law',
+      '/th/columns/taiwan-labor-severance-law',
+      '/fil/columns/taiwan-labor-severance-law',
+    ]);
   });
 });

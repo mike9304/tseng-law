@@ -11,15 +11,15 @@ import {
   PUBLIC_LANGUAGE_AUTONYMS,
   PUBLIC_LOCALES_8,
   isGuidanceLocale4,
+  isPublicLanguageSwitchTargetListed,
+  parsePublicColumnArticlePathname,
   parsePublicLocaleFromPathname,
   resolvePublicLanguageSwitchTarget,
+  type PublicColumnLanguageLinks,
   type PublicLanguageSwitchOptions,
   type PublicLocale8,
 } from '@/lib/public-guidance';
-import {
-  usePublicColumnSlugs,
-  type PublicColumnSlugsByLocale,
-} from '@/components/PublicColumnSlugsContext';
+import { usePublicColumnLanguageLinks } from '@/components/PublicColumnLanguageLinksContext';
 import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
 import styles from './LocaleFlagSwitcher.module.css';
 
@@ -83,6 +83,11 @@ export function localeFlagHref(
     return pathname || `/${targetLocale}`;
   }
 
+  // A column article links to its published version in that language.
+  if (parsePublicColumnArticlePathname(pathname)) {
+    return switchTarget.href;
+  }
+
   const pathWithoutLocale = stripLocaleFromPath(pathname);
   const familyList = restrictedPublicFamilyListPath(pathWithoutLocale);
   if (familyList) {
@@ -110,16 +115,16 @@ export type LocaleFlagSwitcherProps = {
 export function LocaleFlagSwitcherView({
   locale,
   pathname,
-  columnSlugsByLocale,
+  columnLinksByLocale,
   className,
   linkClassName,
   onLocaleSelect,
 }: LocaleFlagSwitcherProps & {
   pathname: string;
-  columnSlugsByLocale?: PublicColumnSlugsByLocale | null;
+  columnLinksByLocale?: PublicColumnLanguageLinks | null;
 }) {
-  const switchOptions: PublicLanguageSwitchOptions | undefined = columnSlugsByLocale
-    ? { columnSlugsByLocale }
+  const switchOptions: PublicLanguageSwitchOptions | undefined = columnLinksByLocale
+    ? { columnLinksByLocale }
     : undefined;
   const rootClassName = ['locale-flag-switcher', styles.root, className].filter(Boolean).join(' ');
   const itemClassName = ['locale-flag-switcher-link', styles.option, linkClassName]
@@ -134,17 +139,19 @@ export function LocaleFlagSwitcherView({
           <span>{currentAutonym}</span>
         </summary>
         <ul className={styles.menu}>
-          {LOCALE_FLAG_OPTIONS.map((option) => {
+          {LOCALE_FLAG_OPTIONS.filter((option) =>
+            isPublicLanguageSwitchTargetListed(pathname, option.locale, switchOptions),
+          ).map((option) => {
             const switchTarget = resolvePublicLanguageSwitchTarget(
               pathname,
               option.locale,
               switchOptions,
             );
             const isCurrent = locale === option.locale;
-            // WO-O22 A: every locale is always a real link. When the exact page
+            // WO-O22 A: every listed locale is a real link. When the exact page
             // is missing in that language the href degrades to the nearest
-            // existing page and the label says so — never a 404, never a
-            // dropped option.
+            // existing page and the label says so — never a 404. Column
+            // articles list only the languages they are published in.
             const isFallback = switchTarget.fallback !== 'exact';
             const notice = isFallback ? fallbackLanguageNotice(locale, option.locale) : undefined;
 
@@ -172,12 +179,12 @@ export function LocaleFlagSwitcherView({
 
 export default function LocaleFlagSwitcher(props: LocaleFlagSwitcherProps) {
   const pathname = usePathname() ?? `/${props.locale}`;
-  const columnSlugsByLocale = usePublicColumnSlugs();
+  const columnLinksByLocale = usePublicColumnLanguageLinks(pathname);
   return (
     <LocaleFlagSwitcherView
       {...props}
       pathname={pathname}
-      columnSlugsByLocale={columnSlugsByLocale}
+      columnLinksByLocale={columnLinksByLocale}
     />
   );
 }

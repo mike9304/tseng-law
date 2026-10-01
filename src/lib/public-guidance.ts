@@ -547,7 +547,9 @@ export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMidd
 /**
  * WO-O22 A: the switcher must offer all eight languages on every public page
  * and must never link to a 404. When the exact page does not exist in the
- * target language we degrade to the nearest page that does, and say so:
+ * target language we degrade to the nearest page that does, and say so
+ * (column articles instead hide such languages, see
+ * {@link isPublicLanguageSwitchTargetListed}):
  *
  *   `exact`        — the same page in the target language
  *   `columns-list` — the target language's `/columns` index
@@ -561,34 +563,101 @@ export type PublicLanguageSwitchTarget = {
   fallback: PublicLanguageSwitchFallback;
 };
 
-export type PublicLanguageSwitchOptions = {
-  /**
-   * Column slugs that actually have a markdown file in the target language.
-   * Injected by the caller (the public layout reads them off disk) so this
-   * module stays pure and client-safe. When it is omitted the resolver refuses
-   * to guess an article URL and lands on the target language's column index
-   * instead — a real page, never a 404.
-   */
-  readonly columnSlugsByLocale?: Partial<
-    Record<PublicLocale8, readonly string[] | ReadonlySet<string>>
-  >;
+/**
+ * The published versions of one column article: language → URL of that
+ * version. A language that is missing has no version of the article.
+ */
+export type PublicColumnLanguageLinks = Partial<Record<PublicLocale8, string>>;
+
+/**
+ * Which languages publish each column of one language, built on the server
+ * (`@/lib/column-language-links`) from the same markdown cluster as the column
+ * pages' hreflang. The locale layout hands it to the client language
+ * switchers, which cannot read `src/content/columns-*` themselves. Only the
+ * columns of `locale` are listed, and identical language sets are stored once.
+ */
+export type PublicColumnLanguageIndex = {
+  /** Language of the pages this index serves. */
+  readonly locale: PublicLocale8;
+  /** Distinct sets of languages that publish a column, each in `PUBLIC_LOCALES_8` order. */
+  readonly clusters: readonly (readonly PublicLocale8[])[];
+  /** Slug of each column published in `locale` → its entry in `clusters`. */
+  readonly columns: Readonly<Record<string, number>>;
 };
 
-function hasKnownColumnSlug(
-  options: PublicLanguageSwitchOptions | undefined,
-  targetLocale: PublicLocale8,
-  slug: string,
-): boolean {
-  const known = options?.columnSlugsByLocale?.[targetLocale];
-  if (!known) return false;
-  return known instanceof Set ? known.has(slug) : (known as readonly string[]).includes(slug);
+export type PublicLanguageSwitchOptions = {
+  /**
+   * On a column article page: where that article is published. The switchers
+   * list only these languages (plus the current one) and link straight to
+   * these URLs. Not used on any other page.
+   */
+  readonly columnLinksByLocale?: PublicColumnLanguageLinks | null;
+};
+
+/** Issue-board segment under `/columns`: `columns/issues` is the board, `columns/issues/<slug>` an article. */
+const ISSUE_BOARD_SEGMENT = 'issues';
+
+export type PublicColumnArticlePath = {
+  readonly locale: PublicLocale8;
+  readonly slug: string;
+  readonly board: 'columns' | 'issues';
+};
+
+/** `columns/<slug>` or `columns/issues/<slug>`; the column and issue-board indexes are not articles. */
+function columnArticleFromSlugPath(slugPath: string): Omit<PublicColumnArticlePath, 'locale'> | null {
+  const segments = slugPath.split('/');
+  if (segments[0] !== 'columns' || segments.some((segment) => !segment)) return null;
+  if (segments.length === 2 && segments[1] !== ISSUE_BOARD_SEGMENT) {
+    return { slug: segments[1], board: 'columns' };
+  }
+  if (segments.length === 3 && segments[1] === ISSUE_BOARD_SEGMENT) {
+    return { slug: segments[2], board: 'issues' };
+  }
+  return null;
 }
 
-/** `columns/<slug>` → `<slug>`; anything deeper or shorter → null. */
-function columnDetailSlug(slugPath: string): string | null {
-  const segments = slugPath.split('/');
-  if (segments.length !== 2 || segments[0] !== 'columns' || !segments[1]) return null;
-  return segments[1];
+export function parsePublicColumnArticlePathname(pathname: string): PublicColumnArticlePath | null {
+  const visible = visiblePublicPathname(pathname);
+  const locale = parsePublicLocaleFromPathname(visible);
+  if (!locale) return null;
+  const article = columnArticleFromSlugPath(stripPublicLocaleFromPath(visible).replace(/^\//, ''));
+  return article ? { locale, ...article } : null;
+}
+
+/**
+ * Published versions of the column article at `pathname`, or `null` when the
+ * page is not a column article listed in `index` (issue-board articles are
+ * written for one language and have no translations; builder/Blob-only
+ * columns have no markdown cluster). `null` lists only the current language.
+ */
+export function columnLanguageLinksFromIndex(
+  pathname: string,
+  index: PublicColumnLanguageIndex | null | undefined,
+): PublicColumnLanguageLinks | null {
+  const article = parsePublicColumnArticlePathname(pathname);
+  if (!article || article.board !== 'columns' || !index || index.locale !== article.locale) return null;
+  if (!Object.prototype.hasOwnProperty.call(index.columns, article.slug)) return null;
+  const cluster = index.clusters[index.columns[article.slug]];
+  if (!cluster) return null;
+  return Object.fromEntries(cluster.map((locale) => [locale, `/${locale}/columns/${article.slug}`]));
+}
+
+/**
+ * A column article exists only in the languages it was published in. On a
+ * column article page the switchers therefore list the current language and
+ * the languages in `columnLinksByLocale`, and leave every other language out
+ * instead of linking it to a 404 or to that language's column index. When the
+ * links are not known (yet), only the current language is listed. Every other
+ * page keeps listing all languages.
+ */
+export function isPublicLanguageSwitchTargetListed(
+  pathname: string,
+  targetLocale: PublicLocale8,
+  options?: PublicLanguageSwitchOptions,
+): boolean {
+  const article = parsePublicColumnArticlePathname(pathname);
+  if (!article || article.locale === targetLocale) return true;
+  return Boolean(options?.columnLinksByLocale?.[targetLocale]);
 }
 
 export function resolvePublicLanguageSwitchTarget(
@@ -605,6 +674,13 @@ export function resolvePublicLanguageSwitchTarget(
     return { status: 'available', href: visible || `/${targetLocale}`, fallback: 'exact' };
   }
 
+  const columnHref = columnArticleFromSlugPath(slugPath)
+    ? options?.columnLinksByLocale?.[targetLocale]
+    : undefined;
+  if (columnHref) {
+    return { status: 'available', href: columnHref, fallback: 'exact' };
+  }
+
   if (isGuidanceLocale4(targetLocale)) {
     const pageKey = guidancePageKeyFromSlugPath(slugPath);
     if (pageKey) {
@@ -615,14 +691,6 @@ export function resolvePublicLanguageSwitchTarget(
       };
     }
 
-    const columnSlug = columnDetailSlug(slugPath);
-    if (columnSlug && hasKnownColumnSlug(options, targetLocale, columnSlug)) {
-      return {
-        status: 'available',
-        href: `/${targetLocale}/columns/${columnSlug}`,
-        fallback: 'exact',
-      };
-    }
     if (slugPath === 'columns' || slugPath.startsWith('columns/')) {
       return {
         status: 'available',

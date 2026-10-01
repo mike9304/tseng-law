@@ -5,9 +5,11 @@ import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
+  isPublicLanguageSwitchTargetListed,
   isRtlPublicLocale,
   publicDocumentLanguage,
   resolvePublicLanguageSwitchTarget,
+  type PublicColumnLanguageLinks,
   type PublicLanguageSwitchOptions,
   type PublicLocale8,
 } from '@/lib/public-guidance';
@@ -17,10 +19,7 @@ import {
   PUBLIC_LANGUAGE_REGISTRY,
 } from '@/lib/public-language-registry';
 import { fallbackLanguageNotice, localeFlagHref } from '@/components/LocaleFlagSwitcher';
-import {
-  usePublicColumnSlugs,
-  type PublicColumnSlugsByLocale,
-} from '@/components/PublicColumnSlugsContext';
+import { usePublicColumnLanguageLinks } from '@/components/PublicColumnLanguageLinksContext';
 import {
   resolvePublishedOverlayOpener,
   usePublishedOverlayFocus,
@@ -79,7 +78,7 @@ function CheckIcon() {
 export function GlobalLanguagePickerView({
   locale,
   pathname,
-  columnSlugsByLocale,
+  columnLinksByLocale,
   className,
   open,
   onOpen,
@@ -89,7 +88,7 @@ export function GlobalLanguagePickerView({
   returnFocusTo,
 }: GlobalLanguagePickerProps & {
   pathname: string;
-  columnSlugsByLocale?: PublicColumnSlugsByLocale | null;
+  columnLinksByLocale?: PublicColumnLanguageLinks | null;
   open: boolean;
   onOpen: () => void;
   onClose: () => void;
@@ -98,10 +97,17 @@ export function GlobalLanguagePickerView({
   const titleId = useId();
   const currentAutonym =
     PUBLIC_LANGUAGE_REGISTRY.find((entry) => entry.locale === locale)?.autonym ?? locale;
-  const switchOptions: PublicLanguageSwitchOptions | undefined = columnSlugsByLocale
-    ? { columnSlugsByLocale }
+  const switchOptions: PublicLanguageSwitchOptions | undefined = columnLinksByLocale
+    ? { columnLinksByLocale }
     : undefined;
-  const groups = groupedPublicLanguages(locale);
+  const groups = groupedPublicLanguages(locale)
+    .map((group) => ({
+      ...group,
+      entries: group.entries.filter((entry) =>
+        isPublicLanguageSwitchTargetListed(pathname, entry.locale, switchOptions),
+      ),
+    }))
+    .filter((group) => group.entries.length > 0);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
@@ -300,14 +306,14 @@ export function GlobalLanguagePickerView({
 
 export default function GlobalLanguagePicker(props: GlobalLanguagePickerProps) {
   const pathname = usePathname() ?? `/${props.locale}`;
-  const columnSlugsByLocale = usePublicColumnSlugs();
+  const columnLinksByLocale = usePublicColumnLanguageLinks(pathname);
   const [open, setOpen] = useState(false);
 
   return (
     <GlobalLanguagePickerView
       {...props}
       pathname={pathname}
-      columnSlugsByLocale={columnSlugsByLocale}
+      columnLinksByLocale={columnLinksByLocale}
       open={open}
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}

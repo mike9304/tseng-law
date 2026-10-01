@@ -262,7 +262,7 @@
 .root:global([data-ja-design]) :global(.page-header)::after {
   height: var(--ja-strip); border-top: 1px solid var(--ja-line-strong);
   background:
-    linear-gradient(var(--ja-shu), var(--ja-shu)) max(32px, calc((100% - 1240px) / 2)) 0 / 96px 4px no-repeat,
+    linear-gradient(var(--ja-shu), var(--ja-shu)) max(32px, calc((100% - 1144px) / 2)) 0 / 96px 4px no-repeat,
     linear-gradient(180deg, rgb(250 248 244 / 34%), rgb(250 248 244 / 0%) 60%),
     url('/images/editorial/ja-tea-terrace-morning-hero.webp') 50% 68% / cover no-repeat;
 }

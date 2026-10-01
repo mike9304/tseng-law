@@ -6,6 +6,8 @@ import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
 import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import jaFaqStyles from '@/components/ja-design/JaFaq.module.css';
+import EnFaqShell, { EnFaqGlance } from '@/components/en-design/EnFaqShell';
+import { orderEnFaq } from '@/components/en-design/en-design-data';
 import { pageCopy } from '@/data/page-copy';
 import {
   buildPublishedSitePageMetadata,
@@ -149,19 +151,24 @@ export default async function FaqPage(
     q: firstSearchParamValue(searchParams?.q),
   });
   const schemaItems = faqItemsToSchemaItems(items);
+  // en: consultation, work, family and criminal questions first (display order only; JSON-LD keeps the source order).
+  const shown = locale === 'en' ? orderEnFaq(categories, items) : { categories, items };
 
   const body = (
     <>
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
+        {locale === 'en' ? <EnFaqGlance count={items.length} /> : null}
+      </PageHeader>
       <FaqPublicExplorer
         locale={locale}
-        categories={categories}
-        items={items}
+        categories={shown.categories}
+        items={shown.items}
         initialCategory={firstSearchParamValue(searchParams?.category)}
         initialQuery={firstSearchParamValue(searchParams?.q)}
       />
       {schemaItems.length > 0 ? <JsonLd data={generateFAQSchema(schemaItems)} /> : null}
     </>
   );
-  return locale === 'zh-hant' ? <ZhHantFaqShell>{body}</ZhHantFaqShell> : body;
+  if (locale === 'zh-hant') return <ZhHantFaqShell>{body}</ZhHantFaqShell>;
+  return locale === 'en' ? <EnFaqShell>{body}</EnFaqShell> : body;
 }

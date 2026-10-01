@@ -120,6 +120,18 @@ export const EN_HOME_FAQ_ORDER: readonly string[] = [
   'Can I claim damages for an injury at a gym or facility?',
 ];
 
+/** FAQ category order on the English FAQ page (category ids from lib/builder/faq/faq-shared.ts). */
+export const EN_FAQ_CATEGORY_ORDER = ['consultation', 'labor-law', 'family-divorce', 'criminal-defense', 'civil-traffic', 'company-setup'] as const;
+
+/** English FAQ display order: categories in EN_FAQ_CATEGORY_ORDER, items keep their order inside each category. */
+export function orderEnFaq<C extends { categoryId: string }, I extends { categoryId: string }>(categories: readonly C[], items: readonly I[]) {
+  const order = EN_FAQ_CATEGORY_ORDER as readonly string[];
+  return {
+    categories: orderByList(categories, (category) => category.categoryId, order),
+    items: orderByList(items, (item) => item.categoryId, order),
+  };
+}
+
 export function orderByList<T>(items: readonly T[], keyOf: (item: T) => string, order: readonly string[]): T[] {
   const rank = (item: T, index: number) => {
     const position = order.indexOf(keyOf(item));

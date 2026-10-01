@@ -14,6 +14,8 @@ import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
 import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
+import EnFaqShell, { EnFaqGlance } from '@/components/en-design/EnFaqShell';
+import { orderEnFaq } from '@/components/en-design/en-design-data';
 import {
   AboutLegacyPageBody,
   ServicesLegacyPageBody,
@@ -328,19 +330,25 @@ export default function CompositeRender({
         return <LawyersLegacyPageBody locale={locale} />;
       case 'legacy-page-faq': {
         const copy = pageCopy[locale].faq;
+        const faqList = faqItems ?? fallbackFaqItems(locale);
+        // en: consultation, work, family and criminal questions first (display order only).
+        const shownFaq = locale === 'en' ? orderEnFaq(faqCategories, faqList) : { categories: faqCategories, items: faqList };
         const faqBody = (
           <>
-            <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+            <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
+              {locale === 'en' ? <EnFaqGlance count={faqList.length} /> : null}
+            </PageHeader>
             <FaqPublicExplorer
               locale={locale}
-              categories={faqCategories}
-              items={faqItems ?? fallbackFaqItems(locale)}
+              categories={shownFaq.categories}
+              items={shownFaq.items}
               initialCategory={typeof searchParams?.category === 'string' ? searchParams.category : undefined}
               initialQuery={typeof searchParams?.q === 'string' ? searchParams.q : undefined}
             />
           </>
         );
-        return locale === 'zh-hant' ? <ZhHantFaqShell>{faqBody}</ZhHantFaqShell> : faqBody;
+        if (locale === 'zh-hant') return <ZhHantFaqShell>{faqBody}</ZhHantFaqShell>;
+        return locale === 'en' ? <EnFaqShell>{faqBody}</EnFaqShell> : faqBody;
       }
       case 'legacy-page-pricing':
         return <PricingLegacyPageBody locale={locale} />;

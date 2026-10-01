@@ -40,7 +40,7 @@ The police preliminary analysis sheet (道路交通事故初步分析研判表) 
 
 ### Yunlin: an unproved speeding claim, 60:40
 
-At a signal-controlled junction in Yunlin, a left-turning car collided with an oncoming motorcycle. The accident appraisal committee (行車事故鑑定) identified the car's failure to yield as the primary cause (肇事主因) and the rider's failure to watch the road ahead as a secondary cause (肇事次因).
+At a signal-controlled junction in Yunlin, a left-turning car collided with an oncoming motorcycle. The accident appraisal committee (行車事故鑑定會) identified the car's failure to yield as the primary cause (肇事主因) and the rider's failure to watch the road ahead as a secondary cause (肇事次因).
 
 The car driver used CCTV timing and distance to argue that the rider had run a red light and exceeded the speed limit. The Taiwan Yunlin District Court (臺灣雲林地方法院) described that claim as 「僅係其個人片面臆測之詞」—the driver's unproved, one-sided speculation. The committee had compared the signal-control record with the footage and found that both vehicles entered on green. The court assigned 60% of the fault to the car driver and 40% to the rider. [Case 114 Jian 80, January 29, 2026](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=ULDV%2c114%2c%e7%b0%a1%2c80%2c20260129%2c1)
 
@@ -68,7 +68,7 @@ In a Taipei administrative case, a motorcycle hit the right rear side of a left-
 
 ## Accident appraisal has its own deadlines
 
-The Regulations on Vehicle Accident Appraisal and Review (車輛行車事故鑑定及覆議作業辦法) allow an appraisal of a police-handled road accident on application by a party, heir, legal representative or vehicle owner, or through referral by the agency that handled the scene or a judicial commission. A case already under investigation or trial requires a judicial commission. Applications or police referrals made more than six months after the accident are generally not accepted; a delay caused by a natural disaster or another circumstance beyond the applicant's control is an exception. Accidents outside the statutory road scope and accidents already appraised are also excluded. [Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040045&flno=3)
+The Regulations on Vehicle Accident Appraisal and Review (車輛行車事故鑑定及覆議作業辦法) allow an appraisal of a police-handled road accident on application by a party, heir, legal representative or vehicle owner, or through referral by the agency that handled the scene or a judicial commission. A case already under investigation or trial requires a judicial commission. Applications or referrals by the police or military police made more than six months after the accident are generally not accepted; a delay caused by a natural disaster or another circumstance beyond the applicant's control is an exception. Accidents outside the statutory road scope and accidents already appraised are also excluded. [Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040045&flno=3)
 
 Where both drivers were at fault, an appraisal describes the greater contributor as the primary cause and the lesser as the secondary cause. If their degrees of fault are equal, it describes both as causes (同為肇事原因). [Article 8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040045&flno=8)
 

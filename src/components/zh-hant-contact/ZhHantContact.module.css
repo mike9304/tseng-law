@@ -1,0 +1,74 @@
+/* zh-hant contact, second pass (son7-87 / Opus 5.5, 2026-10-01). */
+.root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-gold-text: #8a6a2a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --zh-paper: #f7f5ef; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
+
+/* Header: green, title left, email actions as a cream panel on the right */
+.root:global(#zh-hant-contact) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 72px; border-bottom: none; }
+.root:global(#zh-hant-contact) :global(.page-header > .container) { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 32px 72px; align-items: center; }
+.root:global(#zh-hant-contact) :global(.page-header [data-page-header-slot='copy']) { text-align: left; align-items: flex-start; }
+.root:global(#zh-hant-contact) :global(.page-header [data-page-header-slot='children']) { margin: 0; }
+.root:global(#zh-hant-contact) :global(.page-header-title),
+.root:global(#zh-hant-contact) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
+.root:global(#zh-hant-contact) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
+.root:global(#zh-hant-contact) :global(.page-header .section-label) { color: var(--zh-gold); }
+.root:global(#zh-hant-contact) :global(.page-header .section-label::before) { background: var(--zh-gold); }
+.root:global(#zh-hant-contact) :global(.page-header .breadcrumb),
+.root:global(#zh-hant-contact) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
+.root:global(#zh-hant-contact) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) { background: var(--zh-cream); color: var(--zh-ink); padding: 32px 36px; border-radius: 2px; box-shadow: 14px 14px 0 rgb(212 185 122 / 35%); text-align: left; max-width: none; margin: 0; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__label) { font-size: 13px; letter-spacing: 0.14em; color: #6b5a33; font-weight: 700; margin: 0; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__address) { font-family: var(--font-serif-tc); font-size: clamp(24px, 2.4vw, 32px); font-weight: 700; color: var(--zh-ink); margin: 6px 0 18px; overflow-wrap: anywhere; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row) { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button) { min-height: 50px; background: var(--zh-ink); border-color: var(--zh-ink); color: #fff; font-weight: 700; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button.secondary) { background: transparent; color: var(--zh-ink); border: 1px solid var(--zh-ink); }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) :focus-visible { outline: 3px solid var(--zh-ink); outline-offset: 3px; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__note) { font-size: 14.5px; line-height: 1.8; color: #3c4a43; margin: 10px 0 0; text-align: left; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__note:first-of-type) { margin-top: 18px; padding-top: 16px; border-top: 1px solid #ddd3bb; }
+
+/* Form beside the preparation guide */
+.main { background: #fff; padding: 80px 0; }
+.mainGrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 48px 64px; align-items: start; }
+.formCol { min-width: 0; border-top: 4px solid var(--zh-ink); }
+.formCol > * { margin-top: 0; }
+.formCol h2 { font-family: var(--font-serif-tc); color: var(--zh-ink); }
+.guideCol { min-width: 0; position: sticky; top: calc(var(--header-offset-desktop, 64px) + 24px); }
+.guideCol :global(.consultation-guide-section) { padding: 0; background: none; }
+.guideCol :global(.consultation-guide-section > .container) { padding: 0; max-width: none; width: auto; }
+.guideCol :global(.consultation-guide-section .section-title) { font-family: var(--font-serif-tc); font-size: 26px; line-height: 1.45; color: var(--zh-ink); }
+.guideCol :global(.consultation-guide-section .section-lede) { font-size: 15.5px; margin-bottom: 20px; }
+.guideCol :global(.contact-grid) { display: flex; flex-direction: column; gap: 0; }
+.guideCol :global(.legal-card) { padding: 20px 0; background: none; border: none; border-top: 1px solid var(--zh-line); border-radius: 0; box-shadow: none; }
+.guideCol :global(.legal-card .card-title) { font-size: 17px; color: var(--zh-ink); margin-bottom: 8px; }
+.guideCol :global(.legal-card-list li) { font-size: 15px; line-height: 1.8; }
+
+/* Email / AI options */
+.root:global(#zh-hant-contact) :global(.messenger-chat-section) { background: var(--zh-paper); padding: 72px 0; }
+.root:global(#zh-hant-contact) :global(.messenger-chat-section .section-title) { font-family: var(--font-serif-tc); color: var(--zh-ink); }
+.root:global(#zh-hant-contact) :global(.messenger-card) { background: #fff; border: 1px solid var(--zh-line); border-left: 4px solid var(--zh-ink); border-radius: 2px; }
+.root:global(#zh-hant-contact) :global(.messenger-card:focus-visible) { outline: 3px solid var(--zh-ink); outline-offset: 3px; }
+
+/* Inquiry types and offices: compact rows instead of boxed cards */
+.root:global(#zh-hant-contact) :global(p[role='note'] + .contact-grid),
+.root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid) { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 32px; }
+.root:global(#zh-hant-contact) :global(p[role='note'] + .contact-grid > .card),
+.root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid > .card) { padding: 20px 0 8px; background: none; border: none; border-top: 2px solid var(--zh-ink); border-radius: 0; box-shadow: none; }
+.root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid > .card) { border-top-color: var(--zh-gold); }
+.root:global(#zh-hant-contact) :global(.contact-grid .card-title) { font-family: var(--font-serif-tc); font-size: 20px; color: var(--zh-ink); }
+.root:global(#zh-hant-contact) :global(.contact-grid .contact-list li) { font-size: 15px; line-height: 1.8; }
+
+@media (max-width: 1000px) {
+  .root:global(#zh-hant-contact) :global(.page-header > .container) { grid-template-columns: minmax(0, 1fr); }
+  .mainGrid { grid-template-columns: minmax(0, 1fr); }
+  .guideCol { position: static; }
+  .root:global(#zh-hant-contact) :global(p[role='note'] + .contact-grid),
+  .root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .root:global(#zh-hant-contact) :global(.page-header) { padding: 40px 0 48px; }
+  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) { padding: 24px 20px; box-shadow: 8px 8px 0 rgb(212 185 122 / 35%); margin-right: 8px; }
+  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button) { flex: 1 1 100%; justify-content: center; }
+  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__address) { font-size: 21px; overflow-wrap: normal; }
+  .main { padding: 40px 0; }
+  .root:global(#zh-hant-contact) :global(p[role='note'] + .contact-grid),
+  .root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid) { grid-template-columns: minmax(0, 1fr); }
+}

@@ -18,6 +18,7 @@ import ZhHantServicesBody from '@/components/ZhHantServicesBody';
 import ZhHantPricingBody from '@/components/zh-hant-pricing/ZhHantPricingBody';
 import ZhHantAboutBody from '@/components/zh-hant-about/ZhHantAboutBody';
 import ZhHantTeam from '@/components/zh-hant-team/ZhHantTeam';
+import ZhHantContactBody from '@/components/zh-hant-contact/ZhHantContactBody';
 import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
@@ -95,6 +96,7 @@ export function ServicesLegacyPageBody({
 }
 
 export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
+  if (locale === 'zh-hant') return <ZhHantContactBody />;
   const copy = pageCopy[locale].contact;
   return (
     <>

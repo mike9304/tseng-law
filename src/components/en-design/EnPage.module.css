@@ -152,7 +152,8 @@
 .root[data-en-design][id] :global(.page-header)::after { content: ''; display: block; position: absolute; inset: auto 0 0 0; z-index: 1; height: 3px; background: var(--en-signal); pointer-events: none; }
 /* Plate crops differ by page family; pricing, FAQ, team, about, contact and profiles stay plain ink. */
 .root[data-en-design='services'] { --en-plate: url('/images/editorial/en-night-taxi-hero.webp') 24% 78% / 170% auto no-repeat; }
-.root[data-en-design='columns'] { --en-plate: url('/images/editorial/en-night-taxi-hero.webp') 100% 8% / 190% auto no-repeat; }
+.root:is([data-en-design='columns'], [data-en-design='issues']) { --en-plate: url('/images/editorial/en-night-taxi-hero.webp') 100% 8% / 190% auto no-repeat; }
+.root[data-en-design='videos'] { --en-plate: url('/images/editorial/en-night-taxi-hero.webp') 78% 52% / cover no-repeat; }
 .root[data-en-design][id] :global(.page-header > .container) {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);

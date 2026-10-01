@@ -27217,11 +27217,16 @@ html[dir='rtl'] .guidance-answer {
     max-height: none !important;
   }
 
-  /* The zh-hant home is published straight into the main (no scaffold node), so on phones and tablets
-     the main's 16px gutter boxed its full-width bands; let them reach the screen edges like the footer. */
+  /* The zh-hant home is published straight into the main (no scaffold node), and the services composite
+     pins its node to 100% width, so on phones and tablets the main's 16px gutter boxed their full-width
+     bands; let them reach the screen edges like the footer. */
   @media (max-width: 1279px) {
-    .site .builder-pub-main:has(> #zh-hant-home[data-zh-hant-design='home']) {
+    .site .builder-pub-main:has(> #zh-hant-home[data-zh-hant-design='home']),
+    .site .builder-pub-main:has(#zh-hant-services[data-zh-hant-design='services']) {
       padding-inline: 0 !important;
+    }
+    .site .builder-pub-main:has(#zh-hant-services[data-zh-hant-design='services']) .builder-pub-node:has(#zh-hant-services) {
+      margin-inline: 0 !important;
     }
   }
 

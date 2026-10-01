@@ -497,6 +497,12 @@
   .root:global(#ja-home) :global(#practice .services-card-grid-item:nth-child(even)) { border-left: 1px solid var(--ja-line); }
 }
 @media (max-width: 767px) {
+  /* On phones the closing photo is a strip above the text, so no copy sits over the image. */
+  .root:global(#ja-home) :global(.home-contact-cta) { padding-top: 220px; }
+  .root:global(#ja-home) :global(.home-contact-cta)::after {
+    inset: 0 0 auto 0; height: 190px; opacity: 0.6;
+    -webkit-mask-image: linear-gradient(180deg, #000 35%, transparent 100%); mask-image: linear-gradient(180deg, #000 35%, transparent 100%);
+  }
   .personalInner { grid-template-columns: minmax(0, 1fr); }
   .personalLink { padding: 0 16px; font-size: 14.5px; }
   .root:global(#ja-home) :global([data-overseas-entry='full'] ul) { grid-template-columns: minmax(0, 1fr); }

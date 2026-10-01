@@ -311,26 +311,24 @@ describe('legacy home editorial composition', () => {
       },
     ];
     const faqItems = [{ question: 'Q', answer: 'A' } as FAQItem];
-    const body = LegacyHomePageBody({ locale: 'en', posts, faqItems });
+    // zh-hant, ja and en each render their own home body (2026-10-01 lanes), so the shared body is
+    // pinned on ko, the one locale that still renders it. WO-G6's EN overseas entry block now lives in
+    // EnHomeBody / the ja home and is no longer part of the shared body.
+    const body = LegacyHomePageBody({ locale: 'ko', posts, faqItems });
     const allChildren = Children.toArray(body.props.children);
 
-    // The column archive sits directly under the hero (no scroll reveal), as on
-    // the Korean home; WO-G6's EN overseas entry block follows it.
-    expect(allChildren).toHaveLength(11);
+    // The column archive sits directly under the hero (no scroll reveal), as on the Korean home.
+    expect(allChildren).toHaveLength(10);
     expect(elementType(allChildren[0])).toBe(HeroSearch);
     expect((allChildren[0] as ReactElement<{ presentation?: string; locale: SiteLocale }>).props.presentation).toBe(
       'editorial',
     );
-    expect((allChildren[0] as ReactElement<{ locale: SiteLocale }>).props.locale).toBe('en');
+    expect((allChildren[0] as ReactElement<{ locale: SiteLocale }>).props.locale).toBe('ko');
     expect(elementType(allChildren[1])).toBe(InsightsArchiveSection);
     expect((allChildren[1] as ReactElement<{ posts: unknown }>).props.posts).toBe(posts);
     expect((allChildren[1] as ReactElement<{ presentation?: string }>).props.presentation).toBe('editorial');
-    expect(elementType(allChildren[2])).toBe(Reveal);
-    expect(elementType(revealChild(allChildren[2]))).toBe(EnAcquisitionGuideLinks);
-    expect(
-      (revealChild(allChildren[2]) as ReactElement<{ locale: SiteLocale; variant?: string }>).props,
-    ).toMatchObject({ locale: 'en', variant: 'full' });
-    const children = allChildren.slice(3);
+    expect(Children.toArray(body.props.children).some((child) => elementType(revealChild(child)) === EnAcquisitionGuideLinks)).toBe(false);
+    const children = allChildren.slice(2);
 
     expect(elementType(children[0])).toBe(Reveal);
     expect(elementType(revealChild(children[0]))).toBe(ServicesBento);

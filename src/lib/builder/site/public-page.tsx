@@ -35,6 +35,8 @@ import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-han
 import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead, omitOverlayOwnedDesktopLandmarkIds } from '@/lib/builder/canvas/home-zh-hant-parity';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import ZhHantHomeBody from '@/components/ZhHantHomeBody';
+import { ZH_HANT_HERO_MEDIA } from '@/components/zh-hant-home/ZhHantHeroMedia';
+import { getImageProps } from 'next/image';
 import { faqContent } from '@/data/faq-content';
 import { readZhHantStockHomeCopy } from '@/lib/builder/site/zh-hant-stock-home-copy';
 import {
@@ -1516,6 +1518,18 @@ export async function PublishedSitePageView({
       />
       {useBuilderChrome ? <div data-builder-published-page="true" style={{ display: 'none' }} /> : null}
       {(() => {
+        // The redesigned zh-hant home paints its own dawn poster (DecorativeAutoplayVideo: next/image fill,
+        // sizes 100vw on wide screens; the raw portrait file on phones), so preload exactly those and not the
+        // stock canvas hero, which that home never shows (post-deploy check 2026-10-01: ~285 KB wasted).
+        if (redesignedZhHome) {
+          const { props: desktopPoster } = getImageProps({ src: ZH_HANT_HERO_MEDIA.poster, alt: '', fill: true, sizes: '100vw' });
+          return (
+            <>
+              <link rel="preload" as="image" imageSrcSet={desktopPoster.srcSet} imageSizes="100vw" media="(min-width: 768px)" fetchPriority="high" />
+              <link rel="preload" as="image" href={ZH_HANT_HERO_MEDIA.mobilePoster} media={ZH_HANT_HERO_MEDIA.mobileMediaQuery} fetchPriority="high" />
+            </>
+          );
+        }
         const heroImage = canvas.nodes
           .filter((node) => node.kind === 'image' && node.visible !== false)
           .sort((a, b) => a.zIndex - b.zIndex)[0];

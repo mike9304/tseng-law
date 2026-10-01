@@ -1,7 +1,7 @@
 ---
 title: "加班費沒給或少給：計算方式、出勤紀錄與時效"
-seoTitle: "加班費計算、出勤紀錄推定與五年時效"
-summary: "勞動基準法第24條定有延長工時與休息日工作的加給下限，勞雇約定不得低於法定最低標準。雇主應置備出勤紀錄並保存五年，勞工申請副本時不得拒絕；在勞動事件中，出勤紀錄記載的出勤時間，推定是經雇主同意而執行職務。有判決依民法第126條，認為加班費屬按月給付的薪資，適用五年時效。"
+seoTitle: "加班費計算、出勤紀錄推定與請求時效"
+summary: "勞動基準法第24條定有延長工時與休息日工作的加給下限，勞雇約定不得低於法定最低標準。雇主應置備出勤紀錄並保存五年，勞工申請副本時不得拒絕；在勞動事件中，出勤紀錄記載的出勤時間，推定是經雇主同意而執行職務。有判決依民法第126條，認為休息日加班費屬按月給付的薪資債權，適用五年時效。"
 published: "2026-10-01"
 lastmod: "2026-10-01"
 date_display: "2026年10月1日"
@@ -14,9 +14,9 @@ faq:
   - q: "公司說月薪已經包含加班費，還能請求加班費嗎？"
     a: "要看雇主能不能證明。勞動基準法第1條第2項規定，勞雇所訂勞動條件不得低於本法所定之最低標準。臺灣高等法院高雄分院114年度勞上字第19號民事判決（民國115年2月25日）認為，除雇主已證明約定薪資確已包含例假及休息日的延長工資，不能只因約定薪資高於基本工資，就反推薪資已包含延長工時工資；主張已包含的一方負舉證責任。這是個案判決的見解，結果仍依契約內容與證據判斷。"
   - q: "加班費可以追溯幾年？"
-    a: "民法第126條規定，一年或不及一年之定期給付債權，其各期給付請求權，因五年間不行使而消滅。上述高雄分院判決引用最高法院97年度台上字第2178號判決意旨，認為休息日加班費具有薪資債權之性質，且屬按月給付之一部分，適用五年時效；雇主提出時效抗辯後，勞工只能請求五年內的部分。每一期各自計算，越早的部分越先到期。"
+    a: "民法第126條規定，一年或不及一年之定期給付債權，其各期給付請求權，因五年間不行使而消滅。臺灣高等法院高雄分院114年度勞上字第19號民事判決引用最高法院97年度台上字第2178號判決意旨，認為休息日加班費具有薪資債權之性質，且屬按月給付之一部分，適用五年時效；雇主提出時效抗辯後，勞工只能請求五年內的部分。每一期各自計算，越早的那幾期越先罹於時效。"
   - q: "公司規定加班要事先申請，沒申請就不算加班嗎？"
-    a: "勞動事件法第38條規定，出勤紀錄內記載之勞工出勤時間，推定勞工於該時間內經雇主同意而執行職務。推定可以用反證推翻，所以雇主要拿出資料證明那段時間不是經其同意而執行職務，不能只說沒有申請。勞動基準法第30條第6項也規定，勞工申請出勤紀錄副本或影本時，雇主不得拒絕。"
+    a: "勞動事件法第38條規定，出勤紀錄內記載之勞工出勤時間，推定勞工於該時間內經雇主同意而執行職務。這個推定可以用反證推翻，所以公司主張沒申請就不算加班，要提出反證，證明那段時間不是經其同意而執行職務；哪些資料足以推翻推定，仍看個案。勞動基準法第30條第6項也規定，勞工申請出勤紀錄副本或影本時，雇主不得拒絕。"
 audience: ["zh-hant"]
 author: "legal-ai-assistant"
 ---
@@ -36,15 +36,15 @@ author: "legal-ai-assistant"
 | 因天災、事變或突發事件，依第32條第4項延長 | 按平日每小時工資額加倍發給 | 第24條第1項第3款 |
 | 休息日工作，二小時以內 | 按平日每小時工資額另再加給一又三分之一以上 | 第24條第2項 |
 | 休息日工作二小時後繼續工作 | 按平日每小時工資額另再加給一又三分之二以上 | 第24條第2項 |
-| 雇主經徵得勞工同意於休假日工作 | 工資加倍發給 | [第39條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=39) |
+| 雇主經徵得勞工同意，於[第37條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=37)所定休假日工作 | 工資加倍發給 | [第39條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=39) |
 
-加班也有上限。雇主延長工作時間，須經工會同意，無工會的，經勞資會議同意；延長的工作時間連同正常工作時間，一日不得超過十二小時，延長的工作時間一個月不得超過四十六小時。雇主經工會或勞資會議同意後，延長的工作時間一個月不得超過五十四小時，每三個月不得超過一百三十八小時（[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32)）。休息日工作的時間，也計入延長工作時間的總數；因天災、事變或突發事件而有必要的，不受這個總數限制（[第36條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=36)第3項）。
+加班也有上限。雇主延長工作時間，須經工會同意；事業單位無工會的，經勞資會議同意。延長的工作時間連同正常工作時間，一日不得超過十二小時，延長的工作時間一個月不得超過四十六小時；但雇主經工會同意，事業單位無工會的經勞資會議同意後，延長的工作時間一個月不得超過五十四小時，每三個月不得超過一百三十八小時。僱用勞工人數在三十人以上的雇主，依這項但書延長工作時間，應報當地主管機關備查（[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32)第1項至第3項）。休息日工作的時間，也計入延長工作時間的總數；因天災、事變或突發事件而有必要的，不受這個總數限制（[第36條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=36)第3項）。
 
 ## 選擇補休，時數也要算足
 
 勞工延長工作時間或在休息日工作後，依勞工意願選擇補休並經雇主同意的，應依勞工工作的時數計算補休時數。補休期限由勞雇雙方協商；期限屆滿或契約終止時還沒補休的時數，應依延長工作時間或休息日工作當日的工資計算標準發給工資，未發給的，依違反第24條論處（[第32條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32-1)）。
 
-補休依加班事實發生的先後順序補休。期限屆滿未補休的工資，於契約約定的工資給付日發給，或於補休期限屆期後三十日內發給；契約終止的，依施行細則第9條，雇主應即結清工資。勞工依第32條之1主張權利時，雇主如認為其權利不存在，應負舉證責任（[施行細則第22條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=22-2)、[第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9)）。
+補休依加班事實發生的先後順序補休。補休期限如果約定得比依施行細則[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=24)第2項所約定年度（也就是勞雇雙方為特別休假約定的年度）的末日還晚，以該年度末日為期限。期限屆滿未補休的工資，於契約約定的工資給付日發給，或於補休期限屆期後三十日內發給；契約終止的，依施行細則第9條，雇主應即結清工資。勞工依第32條之1主張權利時，雇主如認為其權利不存在，應負舉證責任（[施行細則第22條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=22-2)、[第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9)）。
 
 ## 「月薪已經包含加班費」
 
@@ -74,7 +74,7 @@ author: "legal-ai-assistant"
 
 勞工請求的事件，雇主就其依法令應備置的文書，有提出的義務（[勞動事件法第35條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=35)）。持有人無正當理由不從法院之命提出的，法院得處新臺幣三萬元以下罰鍰；當事人無正當理由不從的，法院得認依該證物應證之事實為真實（[第36條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=36)）。
 
-出勤紀錄內記載的勞工出勤時間，推定勞工於該時間內經雇主同意而執行職務（[第38條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=38)）。法律上推定的事實無反證者，無庸舉證（[民事訴訟法第281條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=281)）。公司如果主張「沒有事先申請就不算加班」，要拿出反證，證明那段時間不是經其同意而執行職務。
+出勤紀錄內記載的勞工出勤時間，推定勞工於該時間內經雇主同意而執行職務（[第38條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=38)）。法律上推定的事實無反證者，無庸舉證（[民事訴訟法第281條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=281)）。公司如果主張「沒有事先申請就不算加班」，要提出反證，證明那段時間不是經其同意而執行職務；哪些資料足以推翻推定，仍看個案。
 
 計算加班費時，平日每小時工資額的基礎也可能有爭執。勞工與雇主間關於工資的爭執，經證明勞工本於勞動關係自雇主所受領的給付，推定為勞工因工作而獲得的報酬（[第37條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37)）。
 
@@ -82,7 +82,7 @@ author: "legal-ai-assistant"
 
 利息、紅利、租金、贍養費、退職金及其他一年或不及一年之定期給付債權，其各期給付請求權，因五年間不行使而消滅（[民法第126條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)）。
 
-前面那件高雄分院判決引用最高法院97年度台上字第2178號判決意旨，認為所稱定期給付債權包括薪資請求權在內；休息日加班費具有薪資債權之性質，且屬於按月給付之一部分，適用五年時效。雇主在該案提出時效抗辯，勞工只能請求五年的休息日加班費。加班費是一期一期算的，拖得越久，最早那幾個月越先過期。
+前面那件高雄分院判決引用最高法院97年度台上字第2178號判決意旨，認為所稱定期給付債權包括薪資請求權在內；休息日加班費具有薪資債權之性質，且屬於按月給付之一部分，適用五年時效。雇主在該案提出時效抗辯，勞工只能請求五年的休息日加班費。加班費是一期一期算的，拖得越久，最早那幾個月越先罹於時效。
 
 ## 申訴、調解與勞動調解
 
@@ -102,8 +102,8 @@ author: "legal-ai-assistant"
 
 ## 官方參考資料
 
-- [勞動基準法第1條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=1)、[第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=21)、[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23)、[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24)、[第30條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30)、[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32)、[第32條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32-1)、[第36條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=36)、[第39條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=39)、[第74條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74)、[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)、[第84條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=84-1)。
-- [勞動基準法施行細則第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9)、[第20條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=20-1)、[第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=21)、[第22條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=22-2)。
+- [勞動基準法第1條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=1)、[第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=21)、[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23)、[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24)、[第30條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30)、[第32條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32)、[第32條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=32-1)、[第36條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=36)、[第37條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=37)、[第39條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=39)、[第74條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=74)、[第79條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=79)、[第84條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=84-1)。
+- [勞動基準法施行細則第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9)、[第20條之1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=20-1)、[第21條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=21)、[第22條之2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=22-2)、[第24條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=24)。
 - [勞動事件法第16條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=16)、[第35條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=35)、[第36條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=36)、[第37條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37)、[第38條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=38)。
 - [勞資爭議處理法第9條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=9)、[第23條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=23)。
 - [民法第126條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126)；[民事訴訟法第281條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=281)。

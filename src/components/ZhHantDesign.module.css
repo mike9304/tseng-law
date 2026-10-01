@@ -259,7 +259,7 @@
 .doors { margin-top: 40px; padding-top: 28px; border-top: 1px solid rgb(244 239 226 / 22%); }
 .doorsLabel { margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; color: var(--zh-gold); }
 .doorList { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
-.door { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 4px 20px; align-items: baseline; }
+.door { display: grid; grid-template-columns: 10.5em minmax(0, 1fr); gap: 4px 20px; align-items: baseline; }
 .doorTitle { margin: 0; font-size: 16px; font-weight: 700; color: var(--zh-cream); }
 .doorText { margin: 0; font-size: 15px; line-height: 1.75; color: var(--zh-muted-on-dark); }
 .doorLinks { grid-column: 2; margin: 2px 0 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
@@ -348,4 +348,17 @@
 @media (max-width: 900px) {
   .home:global(#zh-hant-home) :global(.hero .container.hero-inner) { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .home:global(#zh-hant-home) :global(.hero .hero-title) { max-width: none; }
+}
+
+/* Fable S4: the copy column (title + CTA + reader doors) outgrows the photo on desktop; let the photo fill the column height. */
+@media (min-width: 901px) {
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame']) { align-self: stretch; height: auto; max-height: none; }
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame'] .hero-media),
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame'] .hero-media-item) { height: 100%; }
+  .home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame'] img) { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+}
+
+/* Fable S1: keep keyboard focus clear of the fixed mobile consultation bar. */
+@media (max-width: 767px) {
+  .home:global(#zh-hant-home) :is(:global(a), :global(button), :global(input), :global(summary), :global([tabindex])) { scroll-margin-bottom: calc(88px + env(safe-area-inset-bottom)); }
 }

@@ -5,6 +5,7 @@ import {
   getConsultationPublicEmail,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import { EN_FONT_CLASSES } from './en-fonts';
 import styles from './EnPage.module.css';
 
 /**
@@ -14,7 +15,7 @@ import styles from './EnPage.module.css';
  */
 export default function EnPageShell({ page, children }: { page: string; children: ReactNode }) {
   return (
-    <div className={styles.root} id={`en-${page}`} data-en-design={page}>
+    <div className={`${styles.root} ${EN_FONT_CLASSES}`} id={`en-${page}`} data-en-design={page}>
       {children}
     </div>
   );

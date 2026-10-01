@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroTrustStrip from '@/components/HeroTrustStrip';
 import { getPricingContent } from '@/components/PricingCards';
 import { getConsultationGuideCopy } from '@/components/ConsultationGuideSection';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
@@ -8,55 +9,58 @@ import { resolveEnSituations } from './en-design-data';
 import styles from './EnHome.module.css';
 
 /**
- * Hero side panel for the en home (replaces the building photo): who the reader will speak
- * with, how, and what the first consultation costs. Every value restates existing data:
- * attorney profile (name, role, image, languages), pricing (consultation price, unit and
- * details) and the office time zone stated on the home and contact pages.
+ * Hero spec rail for the en home (replaces the building photo): who the reader will speak with,
+ * how, and what the first consultation costs, as one row along the bottom of the first screen.
+ * Every value restates existing data: attorney profile (name, role, image, languages), pricing
+ * (consultation price, unit and details). Rendered through HeroSearch's `trustContent` slot,
+ * after the read link, so the shared hero markup is unchanged.
  */
-export function EnHeroBrief() {
+export function EnHeroTrust() {
   const profile = getAttorneyProfile('en', primaryAttorneySlug);
   const consultation = getPricingContent('en').items.find((item) => item.icon === 'consultation');
   if (!profile) return null;
   const displayName = profile.heading ?? profile.name;
   return (
-    <div className={styles.brief} data-en-hero-brief>
-      <div className={styles.briefPerson}>
-        <Image src={profile.image} alt={displayName} width={96} height={96} className={styles.briefPhoto} sizes="96px" />
-        <div>
-          <p className={styles.briefName}>{displayName}</p>
-          <p className={styles.briefRole}>{profile.role}</p>
-        </div>
+    <>
+      <Link href="/en/columns" className={styles.heroReadLink}>
+        Read the columns <span aria-hidden>→</span>
+      </Link>
+      <div className={styles.rail} data-en-hero-brief>
+        <Link href={`/en/lawyers/${profile.slug}`} className={styles.railPerson} aria-label={`${displayName}, ${profile.role}`}>
+          <Image src={profile.image} alt="" width={96} height={96} className={styles.railPhoto} sizes="56px" />
+          <span>
+            <span className={styles.railName}>{displayName}</span>
+            <span className={styles.railRole}>{profile.role}</span>
+          </span>
+        </Link>
+        <dl className={styles.railFacts}>
+          <div>
+            <dt>Languages</dt>
+            <dd>{profile.languages.join(', ')}</dd>
+          </div>
+          {consultation ? (
+            <>
+              <div>
+                <dt>Meet</dt>
+                <dd>{consultation.details[0]}</dd>
+              </div>
+              <div>
+                <dt>{consultation.title}</dt>
+                <dd>
+                  <Link href="/en/pricing" className={styles.railFee} aria-label={`${consultation.price} ${consultation.unit}, ${pageCopy.en.pricing.title}`}>
+                    <span className={styles.railPrice}>{consultation.price}</span>
+                    <span className={styles.railUnit}> {consultation.unit} <span aria-hidden>→</span></span>
+                  </Link>
+                </dd>
+              </div>
+            </>
+          ) : null}
+        </dl>
       </div>
-      <dl className={styles.briefFacts}>
-        <div>
-          <dt>Languages</dt>
-          <dd>{profile.languages.join(', ')}</dd>
-        </div>
-        {consultation ? (
-          <>
-            <div>
-              <dt>Meet</dt>
-              <dd>{consultation.details[0]}</dd>
-            </div>
-            <div>
-              <dt>{consultation.title}</dt>
-              <dd>
-                <span className={styles.briefPrice}>{consultation.price}</span> {consultation.unit}
-                <small>{consultation.details[3]}</small>
-              </dd>
-            </div>
-          </>
-        ) : null}
-        <div>
-          <dt>Time zone</dt>
-          <dd>Taipei (GMT+8)</dd>
-        </div>
-      </dl>
-      <div className={styles.briefLinks}>
-        <Link href={`/en/lawyers/${profile.slug}`}>View Lawyer Profile <span aria-hidden>→</span></Link>
-        <Link href="/en/pricing">{pageCopy.en.pricing.title} <span aria-hidden>→</span></Link>
+      <div className={styles.heroTrustLine}>
+        <HeroTrustStrip locale="en" tone="light" />
       </div>
-    </div>
+    </>
   );
 }
 

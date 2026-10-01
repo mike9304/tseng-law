@@ -10,7 +10,10 @@ import HomeContactCta from '@/components/HomeContactCta';
 import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import type { FAQItem } from '@/data/faq-content';
 import { EN_HOME_FAQ_ORDER, EN_SERVICE_ORDER, orderByList } from './en-design-data';
-import { EnHeroBrief, EnProcessAndFees, EnSituationIndex } from './EnHomeParts';
+import { EnHeroTrust, EnProcessAndFees, EnSituationIndex } from './EnHomeParts';
+import EnHeroMedia from './EnHeroMedia';
+import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
+import { EN_FONT_CLASSES } from './en-fonts';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import pageStyles from './EnPage.module.css';
 import styles from './EnHome.module.css';
@@ -28,11 +31,43 @@ type Props = {
  * figures, FAQ (consultation, work, accident, family and criminal questions first), offices,
  * contact. Copy, links and JSON-LD are unchanged (the FAQ JSON-LD keeps the source order).
  */
+/**
+ * Display-only hero copy (the saved canvas is not modified): a short headline, the former headline kept as
+ * the eyebrow line, and a two-line supporting sentence built from facts already on the page.
+ */
+const EN_HERO_OVERRIDES = {
+  'section-label': 'Taiwan legal support for international businesses and individuals',
+  headline: 'Taiwan law, in plain English.',
+  subtitle:
+    'Work, family, police and accident matters, residence permits, company setup. Email Attorney Wei Tseng and meet in Taipei or by video.',
+};
+
+/** Situation shortcuts under the first screen; each goes to the page that already covers it. */
+const EN_HERO_CHIPS = [
+  { label: 'Work', href: '/en/services/labor' },
+  { label: 'Family', href: '/en/services/family' },
+  { label: 'Police', href: '/en/services/criminal' },
+  { label: 'Accident', href: '/en/traffic-accidents' },
+  { label: 'ARC & APRC', href: '/en/columns?topic=visa' },
+  { label: 'Inheritance', href: '/en/columns?topic=inheritance' },
+  { label: 'Company', href: '/en/services/investment' },
+];
+
 export default function EnHomeBody({ posts, faqItems }: Props) {
   const orderedFaq = orderByList(faqItems, (item) => item.question, EN_HOME_FAQ_ORDER);
   return (
-    <div className={`${homeEditorialStyles.root} ${pageStyles.root} ${styles.home}`} id="en-home" data-en-design="home">
-      <HeroSearch locale="en" presentation="editorial" scrollHref="#start" media={<EnHeroBrief />} />
+    <div className={`${homeEditorialStyles.root} ${pageStyles.root} ${styles.home} ${EN_FONT_CLASSES}`} id="en-home" data-en-design="home">
+      <BuilderSurfaceProvider nodeId="home-hero" mode="published" overrides={EN_HERO_OVERRIDES} selectedSurfaceKey={null}>
+        <HeroSearch
+          locale="en"
+          presentation="editorial"
+          scrollHref="#start"
+          quickMenus={EN_HERO_CHIPS}
+          persistentQuickMenus
+          media={<EnHeroMedia />}
+          trustContent={<EnHeroTrust />}
+        />
+      </BuilderSurfaceProvider>
       <div className={styles.start} id="start">
         <div className={`container ${styles.startGrid}`}>
           <EnSituationIndex posts={posts} />

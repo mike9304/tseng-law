@@ -5,16 +5,22 @@
  * other locales never render this wrapper.
  */
 .root {
-  --en-ink: #0d221a;
-  --en-text: #22332a;
-  --en-muted: #4b5e53;
-  --en-line: #c9d4c8;
-  --en-mist: #eef3ec;
-  --en-mist-strong: #e2eadf;
-  --en-signal: #9f8752;
-  --en-signal-text: #725f38;
-  --en-sage: #50684a;
+  --en-ink: #0a0b0d;
+  --en-ink-2: #14171b;
+  --en-ink-3: #1f2227;
+  --en-text: #1b1e22;
+  --en-muted: #565b62;
+  --en-line: #dedbd1;
+  --en-line-dark: rgb(255 255 255 / 16%);
+  --en-mist: #f4f2ec;
+  --en-mist-strong: #ebe8df;
+  --en-signal: #ffc61a;
+  --en-signal-text: #0a0b0d;
+  --en-sage: #0a0b0d;
   --en-sans: var(--font-body);
+  --en-display: var(--en-font-display-loaded, var(--font-body)), var(--font-body), system-ui, sans-serif;
+  --en-mono: var(--en-font-mono-loaded, ui-monospace), ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --en-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   color: var(--en-text);
   background: #fff;
 }

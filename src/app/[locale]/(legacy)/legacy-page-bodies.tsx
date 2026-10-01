@@ -14,6 +14,7 @@ import { toColumnListItems } from '@/lib/column-list-items';
 import AttorneyMediaHubView from '@/components/AttorneyMediaHubView';
 import LegalPageSections from '@/components/LegalPageSections';
 import ServicesBento from '@/components/ServicesBento';
+import ZhHantServicesBody from '@/components/ZhHantServicesBody';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
@@ -74,6 +75,7 @@ export function ServicesLegacyPageBody({
     || isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.hero');
   const showRepeater = locale === 'ja'
     || isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.repeater');
+  if (locale === 'zh-hant') return <ZhHantServicesBody showHero={showHero} showRepeater={showRepeater} />;
   return (
     <>
       {showHero ? (

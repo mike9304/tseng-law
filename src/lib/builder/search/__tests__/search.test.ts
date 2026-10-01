@@ -88,3 +88,34 @@ describe('search index + query engine', () => {
     expect(hits[0].doc.title).toContain('소송');
   });
 });
+
+describe('search result excerpts', () => {
+  it('leave builder style values (colours, alignment, font stacks) out of the excerpt', () => {
+    const doc: SearchDoc = {
+      id: 'page:zh-hant:home',
+      kind: 'page',
+      locale: 'zh-hant',
+      title: '首頁',
+      url: '/zh-hant',
+      body: '#0f172a\nregular\nleft\nsystem-ui\n先聽您說完，再談怎麼做。車禍、離婚、繼承的案件，請先來信簡述案情。\n16px\nNoto Sans TC, system-ui, sans-serif',
+    };
+    const [hit] = runSearchQuery({ index: buildSearchIndex([doc]), query: '車禍', locale: 'zh-hant' });
+    expect(hit.highlights[0]).toContain('車禍');
+    expect(hit.highlights[0]).not.toMatch(/#0f172a|system-ui|sans-serif|\bregular\b|\bleft\b|16px/);
+  });
+
+  it('show column markdown as plain text', () => {
+    const doc: SearchDoc = {
+      id: 'blog:zh-hant:traffic',
+      kind: 'blog',
+      locale: 'zh-hant',
+      title: '車禍後的處理',
+      url: '/zh-hant/columns/traffic',
+      body: '## 事故現場怎麼處理\n- 先報警並**拍照**留存\n1. 確認對方的 `保險` 資料\n> 和解前先了解賠償項目\n[看更多說明](/zh-hant/contact)\n| 項目 | 說明 |\n|---|---|\n| 報警 | 現場 |',
+    };
+    const hits = runSearchQuery({ index: buildSearchIndex([doc]), query: '報警 拍照 和解 說明', locale: 'zh-hant' });
+    const text = hits[0].highlights.join(' ');
+    expect(text).toContain('報警');
+    expect(text).not.toMatch(/##|\*\*|`|\]\(|^\s*[-*>]\s|\|/m);
+  });
+});

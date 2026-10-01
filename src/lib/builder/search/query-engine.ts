@@ -15,8 +15,39 @@ function parseEntry(entry: string): { docIdx: number; tf: number } {
   return { docIdx: Number(docIdx), tf: Number(tf) };
 }
 
+// Builder page bodies also carry style values (colour tokens, alignment, sizes, font stacks) and column
+// bodies carry raw markdown. Excerpts are display-only, so they read from a cleaned copy; scoring keeps
+// using the raw doc text.
+const STYLE_VALUE_LINE = new RegExp(
+  '^(?:#[0-9a-f]{3,8}|(?:rgba?|hsla?)\\([^)]*\\)|var\\(--[^)]*\\)|-?\\d+(?:\\.\\d+)?(?:px|rem|em|%|vh|vw|ms|s)?'
+  + '|left|right|center|justify|start|end|top|bottom|middle|regular|normal|bold|bolder|lighter|light|medium|semibold'
+  + '|italic|none|auto|inherit|initial|unset|transparent|solid|dashed|dotted|cover|contain|uppercase|lowercase|capitalize'
+  + '|[\\w"\' ,-]*(?:system-ui|sans-serif|serif|monospace)[\\w"\' ,-]*'
+  + '|(?:https?:)?//\\S+|/[\\w\\-./%]+\\.(?:png|jpe?g|webp|avif|gif|svg|mp4|webm|pdf))$',
+  'i',
+);
+const MARKDOWN_RULE_LINE = /^(?:\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)*\|?|-{3,}|\*{3,}|_{3,})$/;
+
+function excerptSource(text: string): string {
+  return text
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0 && !STYLE_VALUE_LINE.test(line) && !MARKDOWN_RULE_LINE.test(line))
+    .map((line) => line
+      .replace(/^>\s?/, '')
+      .replace(/^#{1,6}\s+/, '')
+      .replace(/^(?:[-*+]|\d+[.)])\s+/, '')
+      .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+      .replace(/\*\*|__|`|\*/g, '')
+      .replace(/\s*\|\s*/g, ' ')
+      .trim())
+    .filter((line) => line.length > 0)
+    .join('\n');
+}
+
 function makeHighlights(doc: SearchDoc, terms: string[]): string[] {
-  const haystack = `${doc.summary ?? ''}\n${doc.body}`;
+  const haystack = excerptSource(`${doc.summary ?? ''}\n${doc.body}`);
   const out: string[] = [];
   for (const term of terms) {
     const idx = haystack.toLowerCase().indexOf(term);

@@ -24,7 +24,7 @@ export function EnFaqGlance({ count }: { count: number }) {
     <EnGlance
       items={[
         { term: 'Questions', value: String(count) },
-        ...(consultation ? [{ term: consultation.title, value: `${consultation.price} ${consultation.unit}`.trim(), note: consultation.details[1] }] : []),
+        ...(consultation ? [{ term: consultation.title, value: `${consultation.price} ${consultation.unit}`.trim(), note: consultation.details[3] }] : []),
       ]}
       actions={<EnEmailButton label="Email Consultation" />}
     />

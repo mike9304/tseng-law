@@ -13,7 +13,7 @@
 .root:global(#zh-hant-faq) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
 
 /* Explorer: search + categories as a left rail, questions wide on the right */
-.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 20px 64px; align-items: start; margin: 64px auto 88px; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 20px 64px; align-items: start; margin: 64px auto 56px; }
 .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :first-child) { grid-column: 1; grid-row: 1; grid-template-columns: minmax(0, 1fr); max-width: none; }
 .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; align-items: stretch; gap: 4px; padding-top: 16px; border-top: 2px solid var(--zh-ink); }
 .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { display: flex; align-items: center; justify-content: flex-start; text-align: left; min-height: 44px; padding: 8px 14px; border-radius: 2px; border-color: transparent; background: transparent; font-size: 15.5px; }
@@ -25,16 +25,16 @@
 .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region']) { font-size: 16.5px; line-height: 1.95; }
 .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) :focus-visible { outline: 2px solid var(--zh-ink); outline-offset: 3px; }
 
-/* Closing contact band */
-.band { background: var(--zh-ink); color: var(--zh-cream); padding: 64px 0; }
+/* Closing contact band: cream, so it reads as part of the page rather than the green footer */
+.band { background: var(--zh-cream); color: var(--zh-ink); padding: 56px 0; border-top: 4px solid var(--zh-ink); }
 .bandInner { display: flex; align-items: center; justify-content: space-between; gap: 24px 48px; flex-wrap: wrap; }
-.bandTitle { margin: 0 0 8px; font-family: var(--font-serif-tc); font-size: clamp(26px, 2.8vw, 36px); line-height: 1.45; color: var(--zh-cream); }
-.bandText { margin: 0; font-size: 17px; color: var(--zh-muted-on-dark); }
+.bandTitle { margin: 0 0 8px; font-family: var(--font-serif-tc); font-size: clamp(26px, 2.8vw, 36px); line-height: 1.45; color: var(--zh-ink); }
+.bandText { margin: 0; font-size: 17px; color: #3c4a43; }
 .bandEmail { margin: 16px 0 0; font-family: var(--font-serif-tc); font-size: clamp(21px, 2.2vw, 26px); font-weight: 700; overflow-wrap: anywhere; }
-.bandEmail a { color: var(--zh-cream); text-decoration: underline; text-decoration-color: var(--zh-gold); text-underline-offset: 6px; }
-.band :global(.button) { background: var(--zh-gold); border-color: var(--zh-gold); color: var(--zh-ink); font-weight: 700; min-height: 54px; padding: 14px 28px; }
-.band :global(.button:hover) { background: #e3cc94; border-color: #e3cc94; }
-.band a:focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+.bandEmail a { color: var(--zh-ink); text-decoration: underline; text-decoration-color: var(--zh-gold-text); text-underline-offset: 6px; }
+.band :global(.button) { background: var(--zh-ink); border-color: var(--zh-ink); color: #fff; font-weight: 700; min-height: 54px; padding: 14px 28px; }
+.band :global(.button:hover) { background: #0f2a21; border-color: #0f2a21; }
+.band a:focus-visible { outline: 3px solid var(--zh-ink); outline-offset: 3px; }
 
 @media (max-width: 900px) {
   .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(0, 1fr); margin: 36px auto 56px; }

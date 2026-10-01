@@ -32,7 +32,9 @@
 /* Search-term chips: quiet strip */
 .root:global(#zh-hant-lawyer-profile) :global(.profile-entity-card) { margin-top: 64px; padding: 20px 24px; background: var(--zh-paper); border: none; border-radius: 2px; box-shadow: none; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
 .root:global(#zh-hant-lawyer-profile) :global(.profile-entity-card .section-label) { margin: 0; color: var(--zh-gold-text); }
-.root:global(#zh-hant-lawyer-profile) :global(.profile-chip--entity) { background: transparent; border-color: #cfd8cf; color: #3c4a43; }
+.root:global(#zh-hant-lawyer-profile) :global(.profile-chip--entity) { background: transparent; border: none; border-radius: 0; padding: 0; color: #3c4a43; font-size: 15px; }
+/* Search topics are labels, not links: plain text joined by middle dots. */
+.root:global(#zh-hant-lawyer-profile) :global(.profile-chip--entity + .profile-chip--entity)::before { content: '・'; margin-right: 4px; color: var(--zh-gold-text); }
 
 /* Proof points: numbered highlights */
 .root:global(#zh-hant-lawyer-profile) :global(.profile-proof-grid) { counter-reset: zh-proof; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; margin-top: 56px; }

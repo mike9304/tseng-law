@@ -67,7 +67,7 @@
   .root:global(#zh-hant-contact) :global(.page-header) { padding: 40px 0 48px; }
   .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) { padding: 24px 20px; box-shadow: 8px 8px 0 rgb(212 185 122 / 35%); margin-right: 8px; }
   .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button) { flex: 1 1 100%; justify-content: center; }
-  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__address) { font-size: 21px; overflow-wrap: normal; }
+  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__address) { font-size: clamp(18px, 5.3vw, 21px); overflow-wrap: normal; }
   .main { padding: 40px 0; }
   .root:global(#zh-hant-contact) :global(p[role='note'] + .contact-grid),
   .root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid) { grid-template-columns: minmax(0, 1fr); }

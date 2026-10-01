@@ -27193,37 +27193,47 @@ html[dir='rtl'] .guidance-answer {
 /*
  * Redesigned locale bodies (zh-hant / ja / en, marked with data-<locale>-design) size themselves.
  * When one is published through the builder, the saved two-node scaffold (root container + legacy
- * composite) still carries the old fixed canvas height and the 1280px stage width, which left blank
- * bands or let the body run under the footer, and boxed the full-width bands. Let only the nodes that
- * contain such a body follow their content and span the page. Other pages and locales are untouched.
+ * composite) still carries the old fixed canvas height, which left blank bands or let the body run under
+ * the footer; on wide screens the 1280px stage width also boxed the full-width bands. Only nodes that
+ * contain such a body follow their content height; the width release applies only where the builder pins
+ * the 1280px stage (>=1280px), so the builder's own mobile/tablet breakout (calc(100% + 32px), -16px
+ * margins) is left alone. Browsers without :has() keep today's behaviour as a whole.
  */
-.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
-  min-height: 0 !important;
-  height: auto !important;
-  max-width: none !important;
-}
-.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
-  position: relative !important;
-  left: auto !important;
-  top: auto !important;
-  height: auto !important;
-  min-height: 0 !important;
-  max-height: none !important;
-  width: 100% !important;
-  max-width: 100% !important;
-}
-.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > .builder-layout-absolute,
-.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > div:not(.builder-pub-node) {
-  height: auto !important;
-  min-height: 0 !important;
-  max-height: none !important;
-}
-/* Columns: the locale wrapper sits outside the published page, around it. */
-.site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main {
-  max-width: none !important;
-}
-.site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main .builder-pub-node:has(.page-header) {
-  width: 100% !important;
-  max-width: 100% !important;
-  left: auto !important;
+@supports selector(:has(*)) {
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > .builder-layout-absolute,
+  .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > div:not(.builder-pub-node) {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  @media (min-width: 1280px) {
+    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+      max-width: none !important;
+    }
+    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+      width: 100% !important;
+      max-width: 100% !important;
+      left: auto !important;
+    }
+    /* Columns: the locale wrapper sits outside the published page, around it. */
+    .site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main {
+      max-width: none !important;
+    }
+    .site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main .builder-pub-node:has(.page-header) {
+      width: 100% !important;
+      max-width: 100% !important;
+      left: auto !important;
+    }
+  }
 }

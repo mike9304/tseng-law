@@ -107,6 +107,28 @@ export function syncDecorativeVideoPlayback(
   });
 }
 
+/**
+ * A breakpoint change remounts the <video> with the other encoding (keyed element). The new
+ * element must inherit the visitor's choice: it may not autoplay, and its canplay must not
+ * resume, while the control says the video is paused or finished.
+ */
+export function shouldAutoplayDecorativeVideo({
+  userPaused,
+  ended,
+}: DecorativeVideoPlaybackState): boolean {
+  return !userPaused && !ended;
+}
+
+export function handleDecorativeVideoCanPlay(
+  video: Pick<HTMLVideoElement, 'pause'> | null | undefined,
+  state: DecorativeVideoPlaybackState & { inViewport: boolean },
+): void {
+  if (!video) return;
+  if (!state.inViewport || !shouldAutoplayDecorativeVideo(state)) {
+    video.pause();
+  }
+}
+
 export function runDecorativeVideoControlActivation(
   video: Pick<HTMLVideoElement, 'currentTime' | 'pause' | 'play'>,
   state: DecorativeVideoPlaybackState,
@@ -408,7 +430,8 @@ export function DecorativeAutoplayVideo({
       inViewport,
       ...playbackState,
     });
-  }, [inViewport, playbackState, shouldMountVideo]);
+    // useMobileSources keys the <video>: re-apply the state to the replacement element.
+  }, [inViewport, playbackState, shouldMountVideo, useMobileSources]);
 
   const imageSizing =
     typeof width === 'number' && typeof height === 'number'
@@ -481,7 +504,7 @@ export function DecorativeAutoplayVideo({
           )}
           aria-hidden="true"
           muted
-          autoPlay
+          autoPlay={shouldAutoplayDecorativeVideo(playbackState)}
           loop={loop}
           playsInline
           controls={false}
@@ -489,9 +512,10 @@ export function DecorativeAutoplayVideo({
           preload="metadata"
           onCanPlay={() => {
             setVideoReady(true);
-            if (!inViewport) {
-              videoRef.current?.pause();
-            }
+            handleDecorativeVideoCanPlay(videoRef.current, {
+              inViewport,
+              ...playbackState,
+            });
           }}
           onEnded={() => {
             if (!loop) {

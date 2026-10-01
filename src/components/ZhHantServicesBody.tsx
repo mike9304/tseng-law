@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import ZhHantServiceGroups from '@/components/zh-hant-home/ZhHantServiceGroups';
+import ZhHantSnapRowFocus from '@/components/zh-hant-home/ZhHantSnapRowFocus';
 import { ZH_HANT_DOMESTIC_SERVICE_ORDER } from '@/components/zh-hant-home/zh-hant-service-scenarios';
 import { getServiceSlugs } from '@/data/service-details';
 import { pageCopy } from '@/data/page-copy';
@@ -46,6 +47,7 @@ export default function ZhHantServicesBody({ showHero, showRepeater }: { showHer
           </section>
         </>
       ) : null}
+      <ZhHantSnapRowFocus rootSelector="#zh-hant-services" />
     </div>
   );
 }

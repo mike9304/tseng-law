@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import ZhHantSnapRowFocus from '@/components/zh-hant-home/ZhHantSnapRowFocus';
 import styles from './ZhHantColumns.module.css';
 
 /**
@@ -10,6 +11,7 @@ export default function ZhHantColumnsShell({ children }: { children: ReactNode }
   return (
     <div className={styles.root} id="zh-hant-columns" data-zh-hant-design="columns">
       {children}
+      <ZhHantSnapRowFocus rootSelector="#zh-hant-columns" />
     </div>
   );
 }

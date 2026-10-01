@@ -175,6 +175,16 @@ export function shouldWaitForDecorativeVideoPosterPaint({
   );
 }
 
+/** Mount the video only once the viewport for source selection is known (when a mobile encoding exists). */
+export function isDecorativeVideoSourceViewportResolved(hasMobileVideo: boolean, sourceViewportMobile: boolean | null): boolean {
+  return !hasMobileVideo || sourceViewportMobile !== null;
+}
+
+/** Use the mobile encoding only when it exists and script measured a mobile viewport. */
+export function shouldUseMobileDecorativeVideoSources(hasMobileVideo: boolean, sourceViewportMobile: boolean | null): boolean {
+  return hasMobileVideo && sourceViewportMobile === true;
+}
+
 function joinClassNames(...values: Array<string | undefined>) {
   return values.filter(Boolean).join(' ');
 }
@@ -217,6 +227,11 @@ export function DecorativeAutoplayVideo({
   const [nearViewport, setNearViewport] = useState(false);
   const [inViewport, setInViewport] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
+  // Which encoding to mount, measured with matchMedia after hydration. WebKit 26.4 evaluates
+  // <source media> as false before layout when the video is inserted by script, so it played the
+  // desktop file on phones; choosing in script mounts exactly one matching set of sources.
+  const [sourceViewportMobile, setSourceViewportMobile] = useState<boolean | null>(null);
+  const hasMobileVideo = Boolean(mobileMp4Src || mobileWebmSrc);
   const [playbackState, setPlaybackState] =
     useState<DecorativeVideoPlaybackState>({
       userPaused: false,
@@ -366,6 +381,15 @@ export function DecorativeAutoplayVideo({
     };
   }, [enabled, rootMargin]);
 
+  useEffect(() => {
+    if (!hasMobileVideo) return;
+    const sourceQuery = window.matchMedia(mobileMediaQuery);
+    const updateSourceViewport = () => setSourceViewportMobile(sourceQuery.matches);
+    updateSourceViewport();
+    sourceQuery.addEventListener('change', updateSourceViewport);
+    return () => sourceQuery.removeEventListener('change', updateSourceViewport);
+  }, [hasMobileVideo, mobileMediaQuery]);
+
   const shouldMountVideo = shouldMountDecorativeVideo({
     enabled,
     eagerVideoMount,
@@ -373,7 +397,8 @@ export function DecorativeAutoplayVideo({
     nearViewport,
     inViewport,
     waitForPosterPaint,
-  });
+  }) && isDecorativeVideoSourceViewportResolved(hasMobileVideo, sourceViewportMobile);
+  const useMobileSources = shouldUseMobileDecorativeVideoSources(hasMobileVideo, sourceViewportMobile);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -448,6 +473,7 @@ export function DecorativeAutoplayVideo({
       </picture>
       {shouldMountVideo ? (
         <video
+          key={useMobileSources ? 'mobile' : 'desktop'}
           ref={videoRef}
           className={joinClassNames(
             'decorative-autoplay-video__video',
@@ -474,22 +500,20 @@ export function DecorativeAutoplayVideo({
           }}
           onError={() => setVideoReady(false)}
         >
-          {mobileMp4Src ? (
+          {useMobileSources && mobileMp4Src ? (
             <source
-              media={mobileMediaQuery}
               src={mobileMp4Src}
               type="video/mp4"
             />
           ) : null}
-          {mobileWebmSrc ? (
+          {useMobileSources && mobileWebmSrc ? (
             <source
-              media={mobileMediaQuery}
               src={mobileWebmSrc}
               type="video/webm"
             />
           ) : null}
-          <source src={mp4Src} type="video/mp4" />
-          <source src={webmSrc} type="video/webm" />
+          {useMobileSources ? null : <source src={mp4Src} type="video/mp4" />}
+          {useMobileSources ? null : <source src={webmSrc} type="video/webm" />}
         </video>
       ) : null}
       {isVideoReady ? (

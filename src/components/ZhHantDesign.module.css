@@ -885,6 +885,7 @@
   background: #000;
 }
 .home:global(#zh-hant-home) :global(#results .split-image) { min-height: 0; height: auto; aspect-ratio: 16 / 11; border-radius: var(--ap-radius); overflow: hidden; }
+.home:global(#zh-hant-home) :global(#results) { border: none !important; outline: none; box-shadow: none !important; }
 .home:global(#zh-hant-home) :global(#results .home-results-content) { padding: 0; background: transparent; }
 .home:global(#zh-hant-home) :global(#results .section-label) { color: #8fd3b6 !important; letter-spacing: 0.2em; }
 .home:global(#zh-hant-home) :global(#results .section-label)::before { display: none; }
@@ -953,6 +954,7 @@
 /* ---------- Motion ---------- */
 @media (prefers-reduced-motion: no-preference) {
   .heroBackdropPlayer { animation: zhHeroSettle 2.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .heroBackdropPlayer :global(.decorative-autoplay-video__control) { animation: zhHeroRise 0.5s 2.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
   .home:global(#zh-hant-home) :global(.hero .hero-copy > *) { animation: zhHeroRise 1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
   .home:global(#zh-hant-home) :global(.hero .hero-copy > :nth-child(2)) { animation-delay: 0.08s; }
   .home:global(#zh-hant-home) :global(.hero .hero-copy > :nth-child(3)) { animation-delay: 0.2s; }
@@ -971,10 +973,6 @@
 @keyframes zhRiseIn { from { opacity: 0; transform: translateY(48px) scale(0.98); } to { opacity: 1; transform: none; } }
 @keyframes zhCopyAway { to { opacity: 0.15; transform: translateY(-56px) scale(0.97); } }
 @keyframes zhBackdropAway { to { transform: scale(1.08); } }
-@keyframes zhCtaReveal {
-  0%, 72% { opacity: 0; transform: translateY(110%); visibility: hidden; }
-  100% { opacity: 1; transform: none; visibility: visible; }
-}
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .door,
@@ -1081,8 +1079,12 @@
   .mobileCtaPrimary, .mobileCtaSecondary { border-radius: 999px; }
   .mobileCta { background: rgb(255 255 255 / 86%); -webkit-backdrop-filter: blur(18px) saturate(150%); backdrop-filter: blur(18px) saturate(150%); }
 }
-@supports (animation-timeline: scroll()) {
-  @media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
-    .mobileCta { animation: zhCtaReveal linear both; animation-timeline: scroll(root block); animation-range: 0 90vh; }
-  }
+/* The bar hides while the first screen is visible (ZhHantMobileCta sets data-hero-visible via an
+   IntersectionObserver; works with reduced motion and without scroll-driven animations). */
+@media (max-width: 767px) {
+  .mobileCta[data-hero-visible='true'] { visibility: hidden; opacity: 0; transform: translateY(110%); pointer-events: none; }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .mobileCta { transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s linear 0s; }
+  .mobileCta[data-hero-visible='true'] { transition: opacity 0.25s ease, transform 0.3s ease, visibility 0s linear 0.3s; }
 }

@@ -27228,6 +27228,22 @@ html[dir='rtl'] .guidance-answer {
     .site .builder-pub-main:has(#zh-hant-services[data-zh-hant-design='services']) .builder-pub-node:has(#zh-hant-services) {
       margin-inline: 0 !important;
     }
+    /* Post-deploy check 2026-10-01: published redesigned pages (zh-hant pricing/about/lawyers/contact/faq…)
+       kept their composite node at the builder's 375px phone width, leaving a white strip on 390–430px
+       phones; let the composite follow its breakout root instead. */
+    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node[data-node-id$='-page-root-composite']:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+      width: 100% !important;
+      max-width: 100% !important;
+      left: auto !important;
+    }
+    /* The zh home is published straight into the main, which the builder zooms to 0.80–0.95 at 1024–1279px
+       (iPad landscape, small laptops) with a 1280px width; the redesigned home is responsive on its own. */
+    .site .builder-pub-main:has(> #zh-hant-home[data-zh-hant-design='home']) {
+      zoom: 1 !important;
+      width: auto !important;
+      max-width: none !important;
+      margin-inline: 0 !important;
+    }
   }
 
   @media (min-width: 1280px) {
@@ -27256,6 +27272,14 @@ html[dir='rtl'] .guidance-answer {
   .site:has(#zh-hant-home) .scroll-top {
     bottom: calc(84px + env(safe-area-inset-bottom));
   }
+}
+
+/* zh-hant pages: the decorative video pause control sits on bright footage (courtroom) where the cream
+   ring measured ~1.2:1 — a dark ring with a white halo stays visible on light and dark frames. */
+.site [data-zh-hant-design] .decorative-autoplay-video__control:focus-visible {
+  outline: 3px solid #0b1712;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #fff;
 }
 
 /* zh-hant pages incl. home: secondary text on the stone/paper bands needs ≥4.5:1 (#5f7869 gave 4.33). */

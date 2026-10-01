@@ -429,6 +429,11 @@ describe('exact stock ZH decorative hero alternatives', () => {
     expect(hero).toMatch(/<img\b[^>]*\balt=""/);
     expect(hero).not.toContain(`alt="${stockHeroAlt}"`);
     expect(hero).toContain(encodeURIComponent(ZH_HANT_HERO_MEDIA.poster));
+    // Preload the dawn poster that this home actually paints (phone file raw, desktop srcset), never the
+    // stock canvas hero it no longer shows.
+    expect(html).toContain(`<link rel="preload" as="image" href="${ZH_HANT_HERO_MEDIA.mobilePoster}" media="${ZH_HANT_HERO_MEDIA.mobileMediaQuery}"`);
+    expect(html).toMatch(/<link rel="preload" as="image" imageSrcSet="[^"]*taiwan-dawn-cloud-sea-hero\.webp/);
+    expect(html).not.toContain(`<link rel="preload" as="image" href="${PUBLISHED_HOME_HERO_POSTER}"`);
     expect(doc.nodes.filter((node) => stockHeroImageIds.includes(node.id))).toHaveLength(3);
     expect(doc).toEqual(before);
   });

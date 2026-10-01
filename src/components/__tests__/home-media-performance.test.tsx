@@ -8,6 +8,8 @@ import DecorativeAutoplayVideo, {
   shouldEnableDecorativeVideo,
   shouldMountDecorativeVideo,
   shouldWaitForDecorativeVideoPosterPaint,
+  isDecorativeVideoSourceViewportResolved,
+  shouldUseMobileDecorativeVideoSources,
 } from '../DecorativeAutoplayVideo';
 import HeroMediaBackground from '../HeroMediaBackground';
 import HomeAttorneySplit from '../HomeAttorneySplit';
@@ -127,6 +129,20 @@ describe('home media loading', () => {
     expect(componentSource).toContain('tabIndex={-1}');
     expect(componentSource).toContain('className="decorative-autoplay-video__control"');
     expect(componentSource).toContain('aria-label={controlLabel}');
+  });
+
+  it('picks one encoding in script so WebKit cannot fall back to the desktop file on phones', () => {
+    // No mobile encoding: mount at once, desktop sources.
+    expect(isDecorativeVideoSourceViewportResolved(false, null)).toBe(true);
+    expect(shouldUseMobileDecorativeVideoSources(false, true)).toBe(false);
+    // Mobile encoding: wait until matchMedia has run, then choose exactly one set.
+    expect(isDecorativeVideoSourceViewportResolved(true, null)).toBe(false);
+    expect(isDecorativeVideoSourceViewportResolved(true, false)).toBe(true);
+    expect(shouldUseMobileDecorativeVideoSources(true, true)).toBe(true);
+    expect(shouldUseMobileDecorativeVideoSources(true, false)).toBe(false);
+    const source = readFileSync(path.join(process.cwd(), 'src/components/DecorativeAutoplayVideo.tsx'), 'utf8');
+    expect(source).toContain("key={useMobileSources ? 'mobile' : 'desktop'}");
+    expect(source).not.toContain('media={mobileMediaQuery}\n              src={mobileMp4Src}');
   });
 
   it('gates video for reduced motion and data saving before idle/viewport mounting', () => {

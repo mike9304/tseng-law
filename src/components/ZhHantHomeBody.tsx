@@ -12,6 +12,7 @@ import ZhHantMobileCta from '@/components/zh-hant-home/ZhHantMobileCta';
 import ZhHantEngagement from '@/components/zh-hant-home/ZhHantEngagement';
 import ZhHantHeroMedia from '@/components/zh-hant-home/ZhHantHeroMedia';
 import ZhHantHeroTrust from '@/components/zh-hant-home/ZhHantHeroTrust';
+import ZhHantPracticeFocus from '@/components/zh-hant-home/ZhHantPracticeFocus';
 import { ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 import { ZH_HANT_DOMESTIC_SERVICE_ORDER, ZH_HANT_SERVICE_SCENARIOS } from '@/components/zh-hant-home/zh-hant-service-scenarios';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
@@ -76,6 +77,7 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
       </BuilderSurfaceProvider>
       <ZhHantAudienceDoors />
       <ServicesBento locale="zh-hant" id="practice" variant="default" presentation="editorial" scenarioTags={ZH_HANT_SERVICE_SCENARIOS} order={ZH_HANT_DOMESTIC_SERVICE_ORDER} />
+      <ZhHantPracticeFocus />
       <InsightsArchiveSection locale="zh-hant" posts={posts} presentation="editorial" pinnedSlugs={ZH_HANT_FEATURED_COLUMN_SLUGS} />
       <ZhHantEngagement />
       <BuilderSurfaceProvider nodeId="home-attorney" mode="published" overrides={attorneyIntro === undefined ? {} : { 'intro-primary': attorneyIntro }} selectedSurfaceKey={null}>

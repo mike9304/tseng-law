@@ -1,0 +1,152 @@
+/*
+ * ja home (Opus 5.5 ja lane, 2026-10-01). Existing home components, re-ordered for Japanese
+ * readers (needs first: business entry block + individual matters row, then practice areas,
+ * cornerstone columns, attorney, facts, case, FAQ, offices, contact). Visual identity: paper hero
+ * with a vertical firm-name label and a matted (額装) photo, numbered 目次-style indexes,
+ * ruled facts instead of cards. Tokens come from JaDesign.module.css.
+ */
+
+/* ---------- Hero ---------- */
+.root:global(#ja-home) :global(#hero) { background: var(--ja-paper); border-top: 3px solid var(--ja-green); }
+.root:global(#ja-home) :global(#hero .hero-copy) {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: clamp(16px, 2.4vw, 32px); align-content: start;
+}
+.root:global(#ja-home) :global(#hero .hero-copy > *) { grid-column: 2; }
+.root:global(#ja-home) :global(#hero .hero-copy > .section-label) {
+  grid-column: 1; grid-row: 1 / span 6; align-self: start; justify-self: center; margin: 8px 0 0;
+  writing-mode: vertical-rl; text-orientation: mixed; gap: 14px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.32em; color: var(--ja-gold-text); text-transform: none;
+}
+.root:global(#ja-home) :global(#hero .hero-copy > .section-label)::before { width: 1px; height: 48px; background: var(--ja-gold); opacity: 1; }
+.root:global(#ja-home) :global(#hero .hero-title) {
+  font-family: var(--ja-mincho); font-weight: 600; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.38;
+  letter-spacing: 0.06em; font-feature-settings: 'palt' 1; color: var(--ja-ink);
+}
+.root:global(#ja-home) :global(#hero .hero-subtitle) { font-size: 16.5px; line-height: 2; letter-spacing: 0.04em; color: var(--ja-text); max-width: 34em; }
+.root:global(#ja-home) :global(#hero [data-hero-slot='byline']) { color: var(--ja-green); letter-spacing: 0.06em; }
+.root:global(#ja-home) :global(#hero .hero-cta-primary) { border-radius: 2px; min-height: 54px; padding-inline: 32px; letter-spacing: 0.12em; background: var(--ja-green); border-color: var(--ja-green); }
+.root:global(#ja-home) :global(#hero .locale-home-paths a) { border-radius: 2px; }
+.root:global(#ja-home) :global(#hero .hero-trust-strip) { padding-top: 14px; border-top: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global(#hero [data-hero-slot='media-frame']) {
+  border-radius: 0; box-shadow: none; background: #fff; border: 1px solid var(--ja-line); outline: 10px solid #fff; outline-offset: 0;
+}
+.root:global(#ja-home) :global(#hero [data-hero-slot='media-frame'] img),
+.root:global(#ja-home) :global(#hero [data-hero-slot='media-frame'] video) { border-radius: 0; }
+.root:global(#ja-home) :global(#hero .hero-search-wrapper) { background: var(--ja-paper-2); border-top: 1px solid var(--ja-line); border-bottom: 5px double var(--ja-line-strong); }
+.root:global(#ja-home) :global(#hero .hero-search-input) { border-radius: 0; }
+.root:global(#ja-home) :global(#hero .hero-search-btn) { border-radius: 0; }
+
+/* ---------- Needs: 日系企業 entry block as a numbered index ---------- */
+.root:global(#ja-home) :global([data-overseas-entry='full']) { background: #fff; padding-bottom: 24px; }
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul) { counter-reset: ja-need; gap: 0; border-top: 2px solid var(--ja-ink); }
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li) { counter-increment: ja-need; border-bottom: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li:not(:nth-child(3n + 1))) { border-left: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li > a) {
+  position: relative; height: 100%; padding: 52px 26px 26px; border: 0; border-radius: 0; box-shadow: none; background: transparent;
+}
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li > a)::before {
+  content: counter(ja-need, decimal-leading-zero); position: absolute; top: 20px; left: 26px;
+  font-family: Georgia, 'Times New Roman', serif; font-size: 18px; letter-spacing: 0.08em; color: var(--ja-gold-text);
+}
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li > a:hover) { background: var(--ja-paper); transform: none; }
+.root:global(#ja-home) :global([data-overseas-entry='full'] ul > li > a > span:first-child) { font-size: 17.5px; font-weight: 700; letter-spacing: 0.06em; color: var(--ja-ink); }
+
+/* Individual matters row (JaPersonalPaths) */
+.personal { background: #fff; padding: 0 0 clamp(48px, 5vw, 80px); }
+.personalInner { display: grid; grid-template-columns: minmax(160px, 220px) minmax(0, 1fr); gap: 16px 32px; align-items: center; padding-top: 22px; border-top: 1px solid var(--ja-line); }
+.personalHeading { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: 0.2em; color: var(--ja-ink); }
+.personalHeading::before { content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 12px; background: var(--ja-gold); vertical-align: 2px; }
+.personalList { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.personalLink {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 18px;
+  border: 1px solid var(--ja-line-strong); background: var(--ja-paper); color: var(--ja-ink);
+  font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-decoration: none;
+}
+.personalLink:hover { border-color: var(--ja-green); background: #fff; }
+.personalLink:focus-visible { outline: 3px solid var(--ja-green); outline-offset: 3px; }
+.personalArrow { color: var(--ja-gold-text); }
+
+/* ---------- Practice areas: numbered compact grid ---------- */
+.root:global(#ja-home) :global(#practice) { background: var(--ja-paper); }
+.root:global(#ja-home) :global(#practice .services-card-grid) { counter-reset: ja-practice; gap: 0; border-top: 2px solid var(--ja-ink); border-left: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global(#practice .services-card-grid-item) { counter-increment: ja-practice; }
+.root:global(#ja-home) :global(#practice .services-detail-card) {
+  height: 100%; padding: 26px 26px 24px; border: 0; border-right: 1px solid var(--ja-line); border-bottom: 1px solid var(--ja-line);
+  border-radius: 0; box-shadow: none; background: #fff;
+}
+.root:global(#ja-home) :global(#practice .services-detail-header)::before {
+  content: counter(ja-practice, decimal-leading-zero); margin-right: 4px;
+  font-family: Georgia, 'Times New Roman', serif; font-size: 18px; color: var(--ja-gold-text);
+}
+.root:global(#ja-home) :global(#practice .service-icon) { border-radius: 0; background: var(--ja-paper); }
+.root:global(#ja-home) :global(#practice .services-detail-title) { font-size: 19px; letter-spacing: 0.08em; color: var(--ja-ink); }
+.root:global(#ja-home) :global(#practice .services-detail-header) { display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: center; gap: 12px; }
+.root:global(#ja-home) :global(#practice .services-detail-desc) { font-size: 14.5px; line-height: 1.95; color: var(--ja-text); }
+.root:global(#ja-home) :global(#practice .container > p:not(.section-lede)) { padding: 16px 20px; background: #fff; border: 0; border-left: 3px solid var(--ja-gold); border-radius: 0; }
+.root:global(#ja-home) :global(#practice .services-detail-more) { color: var(--ja-green); font-weight: 700; letter-spacing: 0.08em; min-height: 44px; display: inline-flex; align-items: center; }
+
+/* ---------- Columns archive ---------- */
+.root:global(#ja-home) :global(#insights) { background: #fff; }
+.root:global(#ja-home) :global(#insights .insights-featured),
+.root:global(#ja-home) :global(#insights .insights-list-wrap),
+.root:global(#ja-home) :global(#insights .insights-featured-media),
+.root:global(#ja-home) :global(#insights .insights-featured-media img),
+.root:global(#ja-home) :global(#insights .recommended-for-you-card) { border-radius: 0; box-shadow: none; }
+.root:global(#ja-home) :global(#insights .insights-featured) { border: 0; border-top: 3px solid var(--ja-green); background: var(--ja-paper); }
+.root:global(#ja-home) :global(#insights .insights-list-wrap) { border: 0; border-top: 2px solid var(--ja-ink); background: transparent; }
+.root:global(#ja-home) :global(#insights .insights-featured-title) { font-size: clamp(21px, 1.9vw, 25px); line-height: 1.6; letter-spacing: 0.05em; }
+.root:global(#ja-home) :global(#insights .insights-list-title) { font-size: 16px; line-height: 1.65; letter-spacing: 0.04em; }
+.root:global(#ja-home) :global(#insights .insights-category-badge) { border-radius: 0; }
+.root:global(#ja-home) :global(#insights .button--outline) { border-radius: 2px; letter-spacing: 0.1em; }
+
+/* ---------- Attorney ---------- */
+.root:global(#ja-home) :global(#about) { background: var(--ja-paper); }
+.root:global(#ja-home) :global(#about .split-image),
+.root:global(#ja-home) :global(#about .split-image img) { border-radius: 0; }
+.root:global(#ja-home) :global(#about .split-image) { outline: 10px solid #fff; border: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global(#about .split-portrait-badge) { border-radius: 0; }
+.root:global(#ja-home) :global(#about .split-title) { letter-spacing: 0.06em; line-height: 1.55; }
+.root:global(#ja-home) :global(#about .split-divider) { background: var(--ja-green); }
+.root:global(#ja-home) :global(#about .split-text) { font-size: 15.5px; line-height: 2; color: var(--ja-text); }
+
+/* ---------- Facts: ruled columns, Mincho numerals ---------- */
+.root:global(#ja-home) :global(#stats) { background: #fff; }
+.root:global(#ja-home) :global(#stats .stats-grid) { gap: 0; border-top: 2px solid var(--ja-ink); border-bottom: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global(#stats .stat-card) { border: 0; border-radius: 0; box-shadow: none; background: transparent; padding: 26px 24px; }
+.root:global(#ja-home) :global(#stats .stat-card + .stat-card) { border-left: 1px solid var(--ja-line); }
+.root:global(#ja-home) :global(#stats .stat-card *) { border-color: transparent; }
+
+/* ---------- Case result ---------- */
+.root:global(#ja-home) :global(#results .split-image),
+.root:global(#ja-home) :global(#results .split-image img) { border-radius: 0; }
+
+/* ---------- FAQ (Q markers) ---------- */
+.root:global(#ja-home) :global(#faq) { background: var(--ja-paper); }
+
+/* ---------- Offices ---------- */
+.root:global(#ja-home) :global(#offices .tab-button) { border-radius: 0; letter-spacing: 0.08em; min-height: 48px; }
+.root:global(#ja-home) :global(#offices .office-card),
+.root:global(#ja-home) :global(#offices .office-map-wrap) { border-radius: 0; box-shadow: none; }
+
+@media (max-width: 1000px) {
+  .root:global(#ja-home) :global([data-overseas-entry='full'] ul > li) { border-left: 0 !important; }
+}
+@media (max-width: 767px) {
+  .root:global(#ja-home) :global(#hero .hero-copy) { grid-template-columns: minmax(0, 1fr); }
+  .root:global(#ja-home) :global(#hero .hero-copy > *) { grid-column: 1; }
+  .root:global(#ja-home) :global(#hero .hero-copy > .section-label) {
+    grid-row: auto; writing-mode: horizontal-tb; justify-self: start; margin: 0 0 12px; letter-spacing: 0.2em;
+  }
+  .root:global(#ja-home) :global(#hero .hero-copy > .section-label)::before { width: 28px; height: 1px; }
+  .root:global(#ja-home) :global(#hero .hero-title) { font-size: clamp(30px, 8.4vw, 38px); letter-spacing: 0.04em; }
+  /* The copy column is a grid here, so the column-flex path list gets a definite height and the guide's
+     flex-basis: 100% would wrap it into a second column; keep it on its own line instead. */
+  .root:global(#ja-home) :global(#hero .hero-cta-group .en-home-path-guide) { flex-basis: auto; }
+  .root:global(#ja-home) :global(#hero [data-hero-slot='media-frame']) { outline-width: 6px; }
+  .personalInner { grid-template-columns: minmax(0, 1fr); }
+  .personalLink { padding: 0 14px; font-size: 14.5px; }
+  .root:global(#ja-home) :global([data-overseas-entry='full'] ul > li > a) { padding: 46px 18px 20px; }
+  .root:global(#ja-home) :global([data-overseas-entry='full'] ul > li > a)::before { left: 18px; top: 16px; }
+  .root:global(#ja-home) :global(#stats .stat-card + .stat-card) { border-left: 0; }
+  .root:global(#ja-home) :global(#about .split-image) { outline-width: 6px; }
+}

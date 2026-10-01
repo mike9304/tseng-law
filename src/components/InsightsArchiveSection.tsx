@@ -176,7 +176,7 @@ export default function InsightsArchiveSection({
   posts: ArchivePost[];
   presentation?: 'editorial';
   omitLandmarkId?: boolean;
-  /** Optional editorial picks shown first, in order (zh-hant home). Other locales omit it. */
+  /** Optional slugs that lead the archive in this order (zh-hant home, ja design). Omitted elsewhere: order unchanged. */
   pinnedSlugs?: readonly string[];
 }) {
   const copy = copyByLocale[locale];
@@ -225,11 +225,10 @@ export default function InsightsArchiveSection({
   const sortedPosts = useMemo(() => {
     const { recommended, rest } = splitRecommendedColumns(locale, posts);
     const ordered = [...recommended, ...interleaveColumnsByTopic(sortInsightsPostsNewestFirst(rest))];
-    if (!pinnedSlugs || pinnedSlugs.length === 0) return ordered;
-    const pinned = pinnedSlugs
-      .map((slug) => ordered.find((post) => post.slug === slug))
-      .filter((post): post is ArchivePost => Boolean(post));
-    return [...pinned, ...ordered.filter((post) => !pinned.includes(post))];
+    if (!pinnedSlugs?.length) return ordered;
+    const bySlug = new Map(ordered.map((post) => [post.slug, post] as const));
+    const head = pinnedSlugs.map((slug) => bySlug.get(slug)).filter((post): post is ArchivePost => Boolean(post));
+    return [...head, ...ordered.filter((post) => !head.includes(post))];
   }, [locale, posts, pinnedSlugs]);
   const [featured, ...rest] = sortedPosts;
   const listItems = rest;

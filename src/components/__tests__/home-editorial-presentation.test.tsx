@@ -16,6 +16,8 @@ import HomeContactCta from '@/components/HomeContactCta';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
 import Reveal from '@/components/Reveal';
 import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
+import JaPersonalPaths from '@/components/ja-design/JaPersonalPaths';
+import { JA_PINNED_COLUMN_SLUGS, JA_SERVICE_ORDER } from '@/components/ja-design/ja-arrangement';
 import { LegacyHomePageBody } from '@/app/[locale]/(legacy)/home-legacy';
 import {
   homeAttorneyTextSurfaceIds,
@@ -293,6 +295,8 @@ describe('ServicesBento editorial full descriptions', () => {
 });
 
 describe('legacy home editorial composition', () => {
+  // ja design (Opus 5.5 ja lane, 2026-10-01): the shared order below stays pinned on the shared
+  // legacy body (en); ja now has its own Japanese-reader order, pinned in the next test.
   it('wraps retained sections in editorial order with Insights right after the hero', () => {
     const posts = [
       {
@@ -307,17 +311,17 @@ describe('legacy home editorial composition', () => {
       },
     ];
     const faqItems = [{ question: 'Q', answer: 'A' } as FAQItem];
-    const body = LegacyHomePageBody({ locale: 'ja', posts, faqItems });
+    const body = LegacyHomePageBody({ locale: 'en', posts, faqItems });
     const allChildren = Children.toArray(body.props.children);
 
     // The column archive sits directly under the hero (no scroll reveal), as on
-    // the Korean home; WO-G6's JA 日系企業 entry block follows it.
+    // the Korean home; WO-G6's EN overseas entry block follows it.
     expect(allChildren).toHaveLength(11);
     expect(elementType(allChildren[0])).toBe(HeroSearch);
     expect((allChildren[0] as ReactElement<{ presentation?: string; locale: SiteLocale }>).props.presentation).toBe(
       'editorial',
     );
-    expect((allChildren[0] as ReactElement<{ locale: SiteLocale }>).props.locale).toBe('ja');
+    expect((allChildren[0] as ReactElement<{ locale: SiteLocale }>).props.locale).toBe('en');
     expect(elementType(allChildren[1])).toBe(InsightsArchiveSection);
     expect((allChildren[1] as ReactElement<{ posts: unknown }>).props.posts).toBe(posts);
     expect((allChildren[1] as ReactElement<{ presentation?: string }>).props.presentation).toBe('editorial');
@@ -325,7 +329,7 @@ describe('legacy home editorial composition', () => {
     expect(elementType(revealChild(allChildren[2]))).toBe(EnAcquisitionGuideLinks);
     expect(
       (revealChild(allChildren[2]) as ReactElement<{ locale: SiteLocale; variant?: string }>).props,
-    ).toMatchObject({ locale: 'ja', variant: 'full' });
+    ).toMatchObject({ locale: 'en', variant: 'full' });
     const children = allChildren.slice(3);
 
     expect(elementType(children[0])).toBe(Reveal);
@@ -365,6 +369,55 @@ describe('legacy home editorial composition', () => {
       presentation: 'editorial',
     });
     expect(elementType(revealChild(children[7]))).toBe(HomeContactCta);
+  });
+
+  it('orders the ja home for Japanese readers: needs first, then practice areas, pinned columns, trust, FAQ, offices, contact', () => {
+    const posts = [
+      {
+        slug: 'sample',
+        title: 'Sample insight',
+        date: '2024-01-01',
+        dateDisplay: '2024-01-01',
+        readTime: '3 min',
+        categoryLabel: 'News',
+        featuredImage: '/images/example.webp',
+        summary: 'Summary',
+      },
+    ];
+    const faqItems = [{ question: 'Q', answer: 'A' } as FAQItem];
+    const body = LegacyHomePageBody({ locale: 'ja', posts, faqItems });
+    expect(body.props).toMatchObject({ page: 'home' });
+    const children = Children.toArray(body.props.children);
+
+    expect(children).toHaveLength(11);
+    // 0: hero inside a display-only surface provider (kicker shows the firm name).
+    const hero = revealChild(children[0]) as ReactElement<{ locale: SiteLocale; presentation?: string }>;
+    expect(elementType(children[0])).toBe(BuilderSurfaceProvider);
+    expect(elementType(hero)).toBe(HeroSearch);
+    expect(hero.props).toMatchObject({ locale: 'ja', presentation: 'editorial' });
+    // 1–2: needs — the 日系企業 entry block, then the individual-matters row.
+    expect(elementType(revealChild(children[1]))).toBe(EnAcquisitionGuideLinks);
+    expect((revealChild(children[1]) as ReactElement).props).toMatchObject({ locale: 'ja', variant: 'full' });
+    expect(elementType(children[2])).toBe(JaPersonalPaths);
+    // 3: practice areas in Japanese demand order.
+    expect(elementType(revealChild(children[3]))).toBe(ServicesBento);
+    expect((revealChild(children[3]) as ReactElement).props).toMatchObject({
+      locale: 'ja', id: 'practice', variant: 'default', presentation: 'editorial', order: JA_SERVICE_ORDER,
+    });
+    // 4: column archive with the cornerstone picks pinned (same posts passed through).
+    expect(elementType(children[4])).toBe(InsightsArchiveSection);
+    expect((children[4] as ReactElement<{ posts: unknown; pinnedSlugs?: unknown }>).props.posts).toBe(posts);
+    expect((children[4] as ReactElement<{ pinnedSlugs?: unknown }>).props.pinnedSlugs).toBe(JA_PINNED_COLUMN_SLUGS);
+    // 5–10: attorney, facts, case, FAQ, offices, contact. No decorative heritage band on ja.
+    expect(children.map((child) => elementType(child)).includes(TaiwanHeritageInterlude)).toBe(false);
+    expect(elementType(revealChild(children[5]))).toBe(HomeAttorneySplit);
+    expect(elementType(revealChild(children[6]))).toBe(HomeStatsSection);
+    expect(elementType(revealChild(children[7]))).toBe(HomeCaseResultsSplit);
+    expect(elementType(revealChild(children[8]))).toBe(FAQAccordion);
+    expect((revealChild(children[8]) as ReactElement).props).toMatchObject({ items: faqItems, id: 'faq', sectionClassName: 'section section--gray' });
+    expect(elementType(revealChild(children[9]))).toBe(OfficeMapTabs);
+    expect((revealChild(children[9]) as ReactElement).props).toMatchObject({ id: 'offices', sectionClassName: 'section section--light', presentation: 'editorial' });
+    expect(elementType(revealChild(children[10]))).toBe(HomeContactCta);
   });
 });
 

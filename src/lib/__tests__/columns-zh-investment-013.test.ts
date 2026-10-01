@@ -40,7 +40,7 @@ const faq = [
 ];
 const headings = [
   ...faq.map(({ q }, index) => `${index + 1}. ${q}`),
-  '辦理程序前的確認',
+  '各程序的文件與時程',
   '官方資料',
   '相關服務',
 ];
@@ -134,7 +134,7 @@ describe('Traditional Chinese investment column 013 — company-setup practice Q
 
   it('states the current agency and qualified Article 9 sequence', () => {
     const article9Paragraph =
-      '外國人投資條例（Statute for Investment by Foreign Nationals）第9條要求，經核准的投資額應於規定期間內全額匯入，並就該匯款向主管機關申報接受審查，再於投資實施後申請投資總額的審定。實際適用的期限、匯款方式、申報文件及審定申請所需文件，請依個別核准內容與最新說明確認。';
+      '外國人投資條例（Statute for Investment by Foreign Nationals）第9條要求，經核准的出資應於核定期限內全部到達，並將到達情形報請主管機關查核；實行出資後，再向主管機關申請審定投資額。實際適用的期限、匯款方式、申報文件及審定申請所需文件，請依個別核准內容與最新說明確認。';
     const required = [
       '經濟部投資審議司（Department of Investment Review, MOEA）',
       '投資計畫、投資申請人相關資訊、資金來源與用途、預定事業活動、出資方式及所提出文件的內容',
@@ -147,7 +147,7 @@ describe('Traditional Chinese investment column 013 — company-setup practice Q
       expect(post?.content).toContain(phrase);
     }
 
-    const sequence = ['全額匯入', '申報接受審查', '投資實施後', '投資總額的審定'];
+    const sequence = ['全部到達', '報請主管機關查核', '實行出資後', '審定投資額'];   // 外國人投資條例§9 원문 순서(law.moj.gov.tw J0040002 curl, 2026-10-01)
     const positions = sequence.map((step) => article9Paragraph.indexOf(step));
     expect(positions.every((position) => position >= 0)).toBe(true);
     expect(positions).toEqual([...positions].sort((a, b) => a - b));
@@ -274,7 +274,7 @@ describe('Traditional Chinese investment column 013 — company-setup practice Q
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_114);
+    expect(visibleHanCount).toBe(3_064);
     expect(calculatedMinutes).toBe(8);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

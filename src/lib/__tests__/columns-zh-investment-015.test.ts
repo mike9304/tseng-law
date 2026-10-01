@@ -132,7 +132,7 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
       '申請日前三個月內核發的建物登記謄本（含第二類）或建物所有權狀',
       '台北市各地政事務所或便民工作站等窗口',
       '政府的電子謄本系統',
-      '不必一律找熟人或律師代辦',
+      '不必一律委託他人代辦',
       '以住宅為主兼作辦公室',
       '住宅使用部分超過總面積五分之三',
       '辦公室使用部分未達五分之二',
@@ -258,7 +258,7 @@ describe('Traditional Chinese investment column 015 — Taipei business-location
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_302);
+    expect(visibleHanCount).toBe(3_247);
     expect(calculatedMinutes).toBe(9);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

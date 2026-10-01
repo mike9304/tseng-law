@@ -36,6 +36,7 @@ import {
 import CivilCommercialBlock from '@/components/CivilCommercialBlock';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './ServiceDetail.module.css';
+import zhStyles from './ZhHantServiceDetail.module.css';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
 
 export const dynamic = 'force-dynamic';
@@ -264,6 +265,27 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
   const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.hero');
   const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.body');
   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.seo');
+  const zhHant = locale === 'zh-hant';
+  const heroCopy = (
+    <>
+      <Link href={`/${locale}/services`} className="svc-back-link">{t.backLabel}</Link>
+      <h1 className="svc-hero-title">{locale === 'ja' ? protectJapaneseHeadingUnits(area.title) : area.title}</h1>
+      <p className="svc-hero-subtitle">{area.subtitle}</p>
+    </>
+  );
+  const contactCard = (
+    <div className={`svc-sidebar-card ${styles.contactCard}${zhHant ? ` ${zhStyles.contactPanel}` : ''}`}>
+      <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
+      <p className="svc-sidebar-text">{t.contactDesc}</p>
+      <a
+        href={getConsultationPublicMailto(locale)}
+        className="button svc-sidebar-btn"
+        aria-label={`${t.contactLabel}: ${CONSULTATION_EMAIL}`}
+      >
+        {t.contactBtn}
+      </a>
+    </div>
+  );
 
   return (
     <>
@@ -305,18 +327,32 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
         </>
       ) : null}
       {showHero ? (
-        <section className={`svc-hero ${styles.hero}`} data-tone="dark">
+        <section className={`svc-hero ${styles.hero}${zhHant ? ` ${zhStyles.hero}` : ''}`} data-tone="dark" data-zh-hant-design={zhHant ? 'service-detail' : undefined}>
           <div className={`container svc-hero-inner ${styles.heroInner}`}>
-            <Link href={`/${locale}/services`} className="svc-back-link">{t.backLabel}</Link>
-            <h1 className="svc-hero-title">{locale === 'ja' ? protectJapaneseHeadingUnits(area.title) : area.title}</h1>
-            <p className="svc-hero-subtitle">{area.subtitle}</p>
+            {zhHant ? (
+              <>
+                <div className={zhStyles.heroCopy}>
+                  {heroCopy}
+                  <a href={getConsultationPublicMailto(locale)} className={`button ${zhStyles.heroCta}`}>{t.contactBtn} <span aria-hidden>↗</span></a>
+                  {attorney ? <Link href={`/${locale}/lawyers/${attorney.slug}`} className={zhStyles.byline}>{attorney.name} · {attorney.role}</Link> : null}
+                  <nav className={zhStyles.contents} aria-label={t.breadcrumbServices}>
+                    {showBody && points.length > 0 ? <a href="#service-keypoints">{t.keyPointsLabel} <span aria-hidden>↓</span></a> : null}
+                    {showBody && columns.length > 0 ? <a href="#service-columns">{t.columnsLabel} <span aria-hidden>↓</span></a> : null}
+                  </nav>
+                </div>
+                <div className={zhStyles.heroImage}>
+                  <Image src="/images/editorial/taichung-courthouse-civic-daylight-v2.webp" alt="" width={960} height={640} sizes="(max-width: 767px) 100vw, 38vw" priority />
+                </div>
+              </>
+            ) : heroCopy}
           </div>
         </section>
       ) : null}
 
       {showBody ? (
-        <article className={`svc-article ${styles.root}`}>
+        <article className={`svc-article ${styles.root}${zhHant ? ` ${zhStyles.root}` : ''}`}>
           <div className={`container svc-container ${styles.layout}`}>
+            {zhHant ? contactCard : null}
             <div className={`svc-body ${styles.body}`}>
               <p className="svc-intro">{area.intro}</p>
               {area.slug === 'investment' ? (
@@ -348,7 +384,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               ) : null}
 
               {points.length > 0 && (
-                <div className="svc-keypoints">
+                <div className="svc-keypoints" id={zhHant ? 'service-keypoints' : undefined}>
                   <h2 className="svc-keypoints-title">{t.keyPointsLabel}</h2>
                   <ul className="svc-keypoints-list">
                     {points.map((point, i) => (
@@ -359,7 +395,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               )}
 
               {columns.length > 0 && (
-                <div className="svc-columns-section">
+                <div className="svc-columns-section" id={zhHant ? 'service-columns' : undefined}>
                   <h2 className="svc-columns-heading">{t.columnsLabel}</h2>
                   <div className={`svc-columns-grid ${styles.columnsGrid}`}>
                     {columns.map((col) => (
@@ -394,17 +430,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
             </div>
 
             <aside className={`svc-sidebar ${styles.sidebar}`}>
-              <div className={`svc-sidebar-card ${styles.contactCard}`}>
-                <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
-                <p className="svc-sidebar-text">{t.contactDesc}</p>
-                <a
-                  href={getConsultationPublicMailto(locale)}
-                  className="button svc-sidebar-btn"
-                  aria-label={`${t.contactLabel}: ${CONSULTATION_EMAIL}`}
-                >
-                  {t.contactBtn}
-                </a>
-              </div>
+              {!zhHant ? contactCard : null}
               <div className="svc-sidebar-card svc-sidebar-card--attorney">
                 <AttorneyAuthorityCard locale={locale} heading={t.attorneyHeading} />
               </div>

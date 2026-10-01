@@ -5,6 +5,8 @@ import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
 import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaColumnsStyles from '@/components/ja-design/JaColumns.module.css';
 import ZhHantBoardSwitch from '@/components/zh-hant-columns/ZhHantBoardSwitch';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { ISSUE_BOARD_LOCALES, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
@@ -85,5 +87,6 @@ export default async function IssueBoardPage(props: {
     </>
   );
   // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside the columns shell (header, tabs, grid styling).
+  if (locale === 'ja') return <JaPageShell page="columns" className={jaColumnsStyles.root}>{body}</JaPageShell>;
   return locale === 'zh-hant' ? <ZhHantColumnsShell>{body}</ZhHantColumnsShell> : body;
 }

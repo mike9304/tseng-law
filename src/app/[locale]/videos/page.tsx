@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaVideosStyles from '@/components/ja-design/JaVideos.module.css';
 import JsonLd from '@/components/JsonLd';
 import {
   normalizeSiteLocale,
@@ -114,7 +116,13 @@ function renderStaticVideosPage(locale: SiteLocale) {
           })}
         />
       ) : null}
-      <VideosLegacyPageBody locale={locale} columnCount={columnCount} />
+      {locale === 'ja' ? (
+        <JaPageShell page="videos" className={jaVideosStyles.root}>
+          <VideosLegacyPageBody locale={locale} columnCount={columnCount} />
+        </JaPageShell>
+      ) : (
+        <VideosLegacyPageBody locale={locale} columnCount={columnCount} />
+      )}
     </>
   );
 }

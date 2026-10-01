@@ -177,7 +177,14 @@ describe('videos route builder parity', () => {
         React.isValidElement<{ readonly data: Record<string, unknown> }>(child)
         && child.type === mocks.JsonLd,
     );
-    const bodyElement = children.find(
+    // ja wraps the legacy body in JaPageShell (round 2 of the ja design); look through the wrapper.
+    const flatChildren = children.flatMap((child) => (
+      React.isValidElement<{ readonly children?: React.ReactNode }>(child) && child.type !== mocks.VideosLegacyPageBody
+        && child.type !== mocks.JsonLd
+        ? React.Children.toArray(child.props.children)
+        : [child]
+    ));
+    const bodyElement = flatChildren.find(
       (child) => React.isValidElement(child) && child.type === mocks.VideosLegacyPageBody,
     );
 

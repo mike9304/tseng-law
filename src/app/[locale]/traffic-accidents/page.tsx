@@ -5,6 +5,8 @@ import { isSiteLocale, siteLocales } from '@/lib/locales';
 import { getColumnPost } from '@/lib/columns';
 import { buildSeoMetadata } from '@/lib/seo';
 import { TRAFFIC_DIAGRAM_ID, TRAFFIC_PATH, trafficColumnSlugsFor, trafficHubCopy } from '@/data/traffic-hub';
+import JaPageShell from '@/components/ja-design/JaPageShell';
+import jaTrafficStyles from '@/components/ja-design/JaTraffic.module.css';
 import TrafficDiagramFigure from '@/components/TrafficDiagramFigure';
 import styles from './traffic.module.css';
 import zhStyles from './ZhHantTraffic.module.css';
@@ -22,7 +24,7 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
   if (!isSiteLocale(locale)) notFound();
   const copy = trafficHubCopy[locale];
   const posts = trafficColumnSlugsFor(locale).map(slug => getColumnPost(slug, locale));
-  return (
+  const page = (
     <div className={locale === 'zh-hant' ? `${styles.page} ${zhStyles.zh}` : styles.page}>
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -65,4 +67,5 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
       </div>
     </div>
   );
+  return locale === 'ja' ? <JaPageShell page="traffic" className={jaTrafficStyles.root}>{page}</JaPageShell> : page;
 }

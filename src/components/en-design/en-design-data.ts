@@ -8,7 +8,7 @@
  */
 
 /** Practice-area order on English pages (service slugs from data/service-details.ts). */
-export const EN_SERVICE_ORDER = ['labor', 'civil', 'family', 'criminal', 'investment', 'ip'] as const;
+export const EN_SERVICE_ORDER = ['labor', 'family', 'criminal', 'civil', 'investment', 'ip'] as const;
 
 export type EnSituation = {
   id: string;
@@ -32,6 +32,24 @@ export const EN_SITUATIONS: readonly EnSituation[] = [
     guides: ['foreign-professional-dismissed-taiwan', 'taiwan-labor-severance-law', 'taiwan-voluntary-resignation-severance'],
   },
   {
+    id: 'family',
+    label: 'Marriage, divorce or children with a Taiwanese spouse',
+    href: '/en/services/family',
+    hrefLabel: 'Family Litigation',
+    guides: [
+      'taiwanese-spouse-divorce-agreement-registration',
+      'taiwanese-spouse-divorce-from-abroad',
+      'taiwanese-spouse-divorce-cross-border-parenting',
+    ],
+  },
+  {
+    id: 'police',
+    label: 'A police summons, criminal complaint or exit ban',
+    href: '/en/services/criminal',
+    hrefLabel: 'Criminal Litigation',
+    guides: ['taiwan-police-questioning-foreigner-rights', 'taiwan-exit-ban-foreigners'],
+  },
+  {
     id: 'accident',
     label: 'After a scooter or car accident',
     href: '/en/traffic-accidents',
@@ -46,22 +64,11 @@ export const EN_SITUATIONS: readonly EnSituation[] = [
     guides: ['taiwan-permanent-residence-aprc', 'taiwan-employment-gold-card', 'taiwan-foreign-spouse-residence'],
   },
   {
-    id: 'family',
-    label: 'Marriage, divorce or children with a Taiwanese spouse',
-    href: '/en/services/family',
-    hrefLabel: 'Family Litigation',
-    guides: [
-      'taiwanese-spouse-divorce-agreement-registration',
-      'taiwanese-spouse-divorce-from-abroad',
-      'taiwanese-spouse-divorce-cross-border-parenting',
-    ],
-  },
-  {
-    id: 'police',
-    label: 'Questioned by police, charged, or stopped at the airport',
-    href: '/en/services/criminal',
-    hrefLabel: 'Criminal Litigation',
-    guides: ['taiwan-police-questioning-foreigner-rights', 'taiwan-exit-ban-foreigners'],
+    id: 'estate',
+    label: 'A death, inheritance or property in Taiwan',
+    href: '/en/columns?topic=inheritance',
+    hrefLabel: 'Inheritance',
+    guides: ['taiwan-estate-tax-foreign-decedent', 'foreign-heir-taiwan-succession-law-land', 'foreigner-buy-sell-taiwan-real-estate-tax'],
   },
   {
     id: 'money',
@@ -69,13 +76,6 @@ export const EN_SITUATIONS: readonly EnSituation[] = [
     href: '/en/services/civil',
     hrefLabel: 'Civil Litigation & Damages',
     guides: ['taiwan-criminal-accessory-civil-suit-fraud', 'taiwan-online-consumer-dispute-foreigners', 'taiwan-crypto-exchange-vasp-dispute'],
-  },
-  {
-    id: 'estate',
-    label: 'A death, inheritance or property in Taiwan',
-    href: '/en/columns?topic=inheritance',
-    hrefLabel: 'Inheritance',
-    guides: ['taiwan-estate-tax-foreign-decedent', 'foreign-heir-taiwan-succession-law-land', 'foreigner-buy-sell-taiwan-real-estate-tax'],
   },
   {
     id: 'injury',
@@ -106,29 +106,19 @@ export const EN_SERVICE_EXTRA_COLUMNS: Readonly<Record<string, readonly string[]
 };
 
 /** Column topic order on the English columns index (topic ids from lib/column-topics.ts). */
-export const EN_COLUMN_TOPIC_ORDER = ['labor', 'visa', 'family', 'litigation', 'inheritance', 'tax', 'company', 'lawyer', 'other'] as const;
+export const EN_COLUMN_TOPIC_ORDER = ['labor', 'family', 'litigation', 'visa', 'inheritance', 'company', 'tax', 'lawyer', 'other'] as const;
 
 /** Home FAQ display order (question text, exact). Questions not listed keep their order after these. */
 export const EN_HOME_FAQ_ORDER: readonly string[] = [
   'How are consultations conducted?',
   'Is severance always required when an employment contract ends in Taiwan?',
-  'What should I do if I have a traffic accident in Taiwan?',
+  'Is a minimum-service-period clause in Taiwan automatically void?',
   'What is the process for a foreign national to divorce in Taiwan?',
   'How is child custody determined in Taiwan?',
   'What should I do if involved in a criminal case in Taiwan?',
-  'Is a minimum-service-period clause in Taiwan automatically void?',
+  'What should I do if I have a traffic accident in Taiwan?',
   'Can I claim damages for an injury at a gym or facility?',
 ];
-
-/** Search shortcuts under the home search box: queries an English-speaking reader types. */
-export const EN_SEARCH_SHORTCUTS: readonly { label: string; href: string }[] = [
-  'severance',
-  'traffic accident',
-  'divorce',
-  'APRC',
-  'Gold Card',
-  'company setup',
-].map((q) => ({ label: q, href: `/en/search?q=${encodeURIComponent(q)}` }));
 
 export function orderByList<T>(items: readonly T[], keyOf: (item: T) => string, order: readonly string[]): T[] {
   const rank = (item: T, index: number) => {

@@ -30,6 +30,8 @@ import JaServicesBody from '@/components/ja-design/JaServicesBody';
 import zhLawyersStyles from '@/components/zh-hant-team/ZhHantLawyers.module.css';
 import EnServicesBody from '@/components/en-design/EnServicesBody';
 import EnPricingBody from '@/components/en-design/EnPricingBody';
+import EnAboutBody from '@/components/en-design/EnAboutBody';
+import { EnLawyersGlance, EnLawyersShell } from '@/components/en-design/EnLawyers';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
@@ -68,6 +70,7 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams): ColumnsGridFil
 
 export function AboutLegacyPageBody({ locale }: { locale: SiteLocale }) {
   if (locale === 'zh-hant') return <ZhHantAboutBody />;
+  if (locale === 'en') return <EnAboutBody />;
   const copy = pageCopy[locale].about;
   if (locale === 'ja') {
     // ja design (Opus 5.5 ja lane): same four blocks, scoped by the ja about/team modules.
@@ -299,7 +302,9 @@ export function LawyersLegacyPageBody({
         </>
       ) : null}
       {showHero ? (
-        <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+        <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
+          {locale === 'en' ? <EnLawyersGlance /> : null}
+        </PageHeader>
       ) : null}
       {showRepeater ? (
         locale === 'zh-hant' ? <ZhHantTeam showIntro={false} /> : <AttorneyProfileSection locale={locale} showIntro={false} />
@@ -312,9 +317,11 @@ export function LawyersLegacyPageBody({
     // ja design (Opus 5.5 ja lane): same blocks, 履歴書-style team rows from the shared ja team module.
     return <JaPageShell page="lawyers" className={jaTeamStyles.team}>{body}</JaPageShell>;
   }
-  return locale === 'zh-hant'
-    ? <div className={zhLawyersStyles.root} id="zh-hant-lawyers" data-zh-hant-design="lawyers">{body}</div>
-    : body;
+  if (locale === 'zh-hant') {
+    return <div className={zhLawyersStyles.root} id="zh-hant-lawyers" data-zh-hant-design="lawyers">{body}</div>;
+  }
+  // en redesign (Opus 5.5 en lane): same blocks inside the scoped en wrapper.
+  return locale === 'en' ? <EnLawyersShell>{body}</EnLawyersShell> : body;
 }
 
 export function FaqLegacyPageBody({ locale }: { locale: Locale }) {

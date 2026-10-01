@@ -89,12 +89,15 @@
 .article.article :global(.svc-sidebar-card:first-child) { border-top: 2px solid var(--ja-ink); background: var(--ja-paper); }
 .article.article :global(.svc-sidebar-title) { font-size: 17px; letter-spacing: 0.1em; color: var(--ja-ink); }
 .article.article :global(.svc-sidebar-text) { font-size: 14.5px; line-height: 1.9; color: var(--ja-text); }
-.article.article :global(.svc-sidebar-btn) { border-radius: 999px; letter-spacing: 0.1em; }
+.article.article :global(.svc-sidebar-card a.button.svc-sidebar-btn) { border-radius: 999px; letter-spacing: 0.1em; transition: background 0.3s var(--ja-ease), border-color 0.3s var(--ja-ease); }
+.article.article :global(.svc-sidebar-card a.button.svc-sidebar-btn:hover) { background: var(--ja-shu); border-color: var(--ja-shu); color: #fff; }
 .article.article :global(.svc-related-link) { font-size: 14px; line-height: 1.75; color: var(--ja-green); }
 .article.article :global(.authority-card),
 .article.article :global(.authority-chip),
 .article.article :global(.authority-card-photo),
 .article.article :global(.authority-card-photo img) { border-radius: 0; }
+/* the attorney card sits inside a sidebar card: drop its own frame so the two do not double up */
+.article.article :global(.svc-sidebar-card .authority-card) { border: 0; padding: 0; box-shadow: none; background: transparent; }
 
 @media (max-width: 1100px) {
   .article.article :global(.svc-container) { grid-template-columns: minmax(0, 1fr) 300px; }

@@ -65,3 +65,13 @@
 
 /* Inline text links in running copy: the padding enlarges the hit area to 44px without changing the line box. */
 .root:global(#ja-services) :global(.services-bento .container > p a) { padding-block: 12px; }
+
+/* Note under the list and the compact entry row: sumi text, pill links (they inherited the green shared styles) */
+.root:global(#ja-services) :global(.services-bento .container > p) { color: var(--ja-text); }
+.root:global(#ja-services) :global([data-overseas-entry='compact'] h2) { color: var(--ja-ink); }
+.root:global(#ja-services) :global([data-overseas-entry='compact'] ul a) {
+  border-radius: 999px; border-color: var(--ja-line-strong); background: #fff; color: var(--ja-ink); padding-inline: 20px;
+  transition: border-color 0.25s var(--ja-ease), background 0.25s var(--ja-ease);
+}
+.root:global(#ja-services) :global([data-overseas-entry='compact'] ul a:hover) { border-color: var(--ja-ink); background: var(--ja-paper); }
+.root:global(#ja-services) :global([data-overseas-entry='compact'] ul a span) { color: var(--ja-shu); }

@@ -364,6 +364,8 @@
 .root:global(#ja-home) :global(#insights .insights-featured-body) { padding: clamp(24px, 2.6vw, 40px); }
 .root:global(#ja-home) :global(#insights .insights-list-wrap) { border: 0; border-top: 2px solid var(--ja-ink); background: transparent; }
 .root:global(#ja-home) :global(#insights .insights-featured-title) { font-size: clamp(21px, 2vw, 28px); line-height: 1.55; letter-spacing: 0.05em; }
+.root:global(#ja-home) :global(#insights .insights-list-title),
+.root:global(#ja-home) :global(#insights .insights-list-title a) { font-family: var(--ja-gothic); font-weight: 600; }
 .root:global(#ja-home) :global(#insights .insights-list-title) { font-size: 16px; line-height: 1.65; letter-spacing: 0.04em; }
 .root:global(#ja-home) :global(#insights .insights-list-thumb),
 .root:global(#ja-home) :global(#insights .insights-list-thumb img) { border-radius: 2px; }
@@ -382,7 +384,7 @@
   content: ''; position: absolute; z-index: 0; inset: 22px -22px -22px 22px; border: 1px solid var(--ja-shu); border-radius: 0; pointer-events: none;
 }
 .root:global(#ja-home) :global(#about .split-image img) { position: relative; z-index: 1; border-radius: 0; }
-.root:global(#ja-home) :global(#about .split-portrait-badge) { z-index: 2; border-radius: 0; background: rgb(250 248 244 / 94%); border: 0; color: var(--ja-ink); }
+.root:global(#ja-home) :global(#about .split-portrait-badge) { z-index: 2; border-radius: 0; background: var(--ja-paper); border: 0; border-top: 2px solid var(--ja-shu); color: var(--ja-ink); }
 .root:global(#ja-home) :global(#about .split-portrait-badge strong) { color: var(--ja-ink); }
 .root:global(#ja-home) :global(#about .split-portrait-badge span) { color: var(--ja-sub); }
 .root:global(#ja-home) :global(#about .split-title) { margin-bottom: 20px; letter-spacing: 0.05em; line-height: 1.45; font-size: clamp(28px, 3.2vw, 46px); }
@@ -436,10 +438,20 @@
 .root:global(#ja-home) :global(#offices .section-title) { padding-bottom: 0; font-size: clamp(28px, 3.4vw, 46px); }
 .root:global(#ja-home) :global(#offices .section-title)::after { display: none; }
 .root:global(#ja-home) :global(#offices .tab-button) { border-radius: 999px; letter-spacing: 0.08em; min-height: 48px; }
+.root:global(#ja-home) :global(#offices .tab-button)::after { display: none; }
 .root:global(#ja-home) :global(#offices .tab-button.active) { background: var(--ja-ink); border-color: var(--ja-ink); color: #fff; }
 .root:global(#ja-home) :global(#offices .office-card),
 .root:global(#ja-home) :global(#offices .office-map-wrap) { border-radius: 0; box-shadow: none; }
 .root:global(#ja-home) :global(#offices .office-card) { border-color: var(--ja-line-strong); }
+.root:global(#ja-home) :global(#offices .office-map-fallback) {
+  background:
+    linear-gradient(22deg, transparent 0 43%, rgb(27 24 20 / 10%) 44% 46%, transparent 47% 100%),
+    linear-gradient(132deg, transparent 0 52%, rgb(200 16 46 / 14%) 53% 55%, transparent 56% 100%),
+    repeating-linear-gradient(0deg, rgb(27 24 20 / 6%) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgb(27 24 20 / 5%) 0 1px, transparent 1px 52px), var(--ja-paper);
+}
+.root:global(#ja-home) :global(#offices .office-map-fallback)::after { background: var(--ja-shu); box-shadow: 0 0 0 7px rgb(200 16 46 / 16%); }
+.root:global(#ja-home) :global(#offices .office-map-fallback-panel) { border-color: var(--ja-line-strong); border-radius: 0; background: #fff; box-shadow: none; }
 .root:global(#ja-home) :global(#offices .button) { background: var(--ja-ink); border-color: var(--ja-ink); color: #fff; }
 
 /* ---------- 10 · Closing: one sentence on sumi, one vermilion action ---------- */

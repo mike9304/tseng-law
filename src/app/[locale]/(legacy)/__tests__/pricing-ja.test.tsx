@@ -162,8 +162,10 @@ describe('Japanese pricing integration', () => {
       expect(html).toContain(currency);
       expect(html).toContain(consultationTitle);
       expect(html).toContain(litigationPrice);
-      expect(html).toContain('NT$ 3,000');
-      expect(html.match(/NT\$ 50,000/g)).toHaveLength(2);
+      // the EN design splits the currency into its own span, so compare the visible text
+      const text = html.replace(/<[^>]+>/g, '');
+      expect(text).toContain('NT$ 3,000');
+      expect(text.match(/NT\$ 50,000/g)).toHaveLength(2);
       expect(html).toContain(ctaLabel);
       expect(html).toContain(ctaNote);
       expect(html).toContain('href="mailto:wei@hoveringlaw.com.tw?subject=');

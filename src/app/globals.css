@@ -27325,17 +27325,31 @@ html[dir='rtl'] .guidance-answer {
 .site[data-locale='en'] header.header[data-public-site-header] .nav-link:hover,
 .site[data-locale='en'] header.header[data-public-site-header] .nav-link:focus-visible,
 .site[data-locale='en'] header.header[data-public-site-header] .nav-item.active .nav-link { color: #fff; background: rgb(255 255 255 / 10%); }
-.site[data-locale='en'] header.header[data-public-site-header] .nav-indicator { background: #ffc61a; }
 .site[data-locale='en'] header.header[data-public-site-header] .header-search-btn,
 .site[data-locale='en'] header.header[data-public-site-header] .icon-button { border-color: rgb(255 255 255 / 28%); background: transparent; color: #fff; }
 .site[data-locale='en'] header.header[data-public-site-header] .header-search-btn:hover,
 .site[data-locale='en'] header.header[data-public-site-header] .icon-button:hover { background: rgb(255 255 255 / 12%); }
 .site[data-locale='en'] header.header[data-public-site-header] :focus-visible { outline: 3px solid #ffc61a; outline-offset: 2px; }
-.site[data-locale='en'] header.header[data-public-site-header] .mega-menu { background: #f4f2ec; border-bottom: 1px solid #dedbd1; }
-.site[data-locale='en'] header.header[data-public-site-header] .mega-title { font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; color: #0a0b0d; }
-.site[data-locale='en'] header.header[data-public-site-header] .mega-description { color: #565b62; }
-.site[data-locale='en'] header.header[data-public-site-header] .mega-links a { color: #0a0b0d; }
-.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover { color: #0a0b0d; background: #ebe8df; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-menu { background: transparent; border-bottom: 0; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-panel { background: #14171b; border-bottom: 1px solid rgb(255 255 255 / 14%); color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-title { font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-description { color: rgb(255 255 255 / 72%); }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links li { border-color: rgb(255 255 255 / 14%); }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a { color: rgb(255 255 255 / 92%); font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 500; letter-spacing: -0.01em; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:focus-visible { color: #fff; background: transparent; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-chevron { color: rgb(255 255 255 / 55%); }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:hover .mega-chevron,
+.site[data-locale='en'] header.header[data-public-site-header] .mega-links a:focus-visible .mega-chevron { color: #ffc61a; }
+.site[data-locale='en'] header.header[data-public-site-header] .mega-view-all { color: #ffc61a; font-weight: 700; }
+/* current page: a clean 2px signal underline (the shared rule drew an inset shadow on a pill, which rendered as a half-faded bracket);
+   the hover indicator is white so it never reads as a second current page */
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link { position: relative; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page'],
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']:hover,
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']:focus-visible { box-shadow: none; color: #fff; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-link[aria-current='page']::after { content: ''; position: absolute; left: 0.5rem; right: 0.5rem; bottom: 7px; height: 2px; border-radius: 2px; background: #ffc61a; }
+.site[data-locale='en'] header.header[data-public-site-header] .nav-indicator { background: rgb(255 255 255 / 72%); }
 .site[data-locale='en'] .footer-skyline { display: none; }
 .site[data-locale='en'] footer.site-footer {
   background: #0a0b0d;
@@ -27349,3 +27363,85 @@ html[dir='rtl'] .guidance-answer {
 .site[data-locale='en'] .scroll-top { background: #0a0b0d; border-color: rgb(255 255 255 / 30%); color: #ffc61a; }
 .site[data-locale='en'] .scroll-top:hover,
 .site[data-locale='en'] .scroll-top:focus-visible { background: #ffc61a; border-color: #ffc61a; color: #0a0b0d; }
+
+/* =====================================================================================================
+   en overlays (en lane round 3): the mobile sheet, the search modal and the language picker were still the
+   forest-green serif UI. They are portaled to <body> (outside .site), so they are scoped by html[lang='en'].
+   Ink panel, Inter Tight type, yellow signal for primary actions and focus. Colours and type only.
+   ===================================================================================================== */
+@font-face { font-family: 'EN Inter Tight'; font-style: normal; font-weight: 500 800; font-display: swap; src: url('/fonts/en/inter-tight-latin-var.woff2') format('woff2'); }
+
+/* mobile sheet */
+html[lang='en'] #public-mobile-nav-drawer { background: rgb(0 0 0 / 62%); }
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-panel.drawer-panel { background: #0a0b0d; color: #fff; border-left: 1px solid rgb(255 255 255 / 14%); }
+html[lang='en'] #public-mobile-nav-drawer .drawer-header,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link { border-color: rgb(255 255 255 / 14%); }
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-brand .logo-kr.logo-kr,
+html[lang='en'] .drawer#public-mobile-nav-drawer .drawer-brand .logo-kr.logo-kr span { color: #fff; font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.005em; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link { color: #fff; font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 700; letter-spacing: -0.025em; font-size: clamp(1.45rem, 6.4vw, 1.85rem); }
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-nav-link:focus-visible { color: #ffc61a; }
+html[lang='en'] #public-mobile-nav-drawer .icon-button,
+html[lang='en'] #public-mobile-nav-drawer .chip,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav a,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav button { background: transparent; border-color: rgb(255 255 255 / 28%); color: #fff; border-radius: 999px; }
+html[lang='en'] #public-mobile-nav-drawer .icon-button:hover,
+html[lang='en'] #public-mobile-nav-drawer .chip:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav a:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-member-nav button:hover { background: rgb(255 255 255 / 12%); color: #fff; border-color: rgb(255 255 255 / 45%); }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button { background: #ffc61a; border-color: #ffc61a; color: #0a0b0d; font-weight: 700; border-radius: 999px; }
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button:hover,
+html[lang='en'] #public-mobile-nav-drawer .drawer-footer .button:focus-visible { background: #ffd54d; border-color: #ffd54d; color: #0a0b0d; }
+html[lang='en'] #public-mobile-nav-drawer :focus-visible { outline: 3px solid #ffc61a; outline-offset: 2px; }
+
+/* search modal */
+html[lang='en'] .search-overlay { background: rgb(0 0 0 / 66%); }
+html[lang='en'] .search-panel { background: #0a0b0d; color: #fff; border: 1px solid rgb(255 255 255 / 16%); border-top: 3px solid #ffc61a; border-radius: 22px; box-shadow: 0 30px 80px rgb(0 0 0 / 55%); font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; }
+html[lang='en'] .search-panel header strong { color: #fff; font-weight: 800; letter-spacing: -0.02em; font-size: 1.25rem; }
+html[lang='en'] .search-panel .icon-button { background: transparent; border: 1px solid rgb(255 255 255 / 28%); border-radius: 999px; color: #fff; }
+html[lang='en'] .search-panel .icon-button:hover { background: rgb(255 255 255 / 12%); }
+html[lang='en'] .search-panel .search-bar { background: #14171b; border: 1.5px solid rgb(255 255 255 / 22%); border-radius: 16px; box-shadow: none; }
+html[lang='en'] .search-panel .search-bar:focus-within { border-color: #ffc61a; box-shadow: 0 0 0 3px rgb(255 198 26 / 30%); }
+html[lang='en'] .search-panel .search-input { color: #fff; }
+html[lang='en'] .search-panel .search-input::placeholder { color: rgb(255 255 255 / 62%); }
+html[lang='en'] .search-panel .search-submit { background: #ffc61a; color: #0a0b0d; border-radius: 999px; font-weight: 700; padding-inline: 1.5rem; }
+html[lang='en'] .search-panel .search-submit:hover,
+html[lang='en'] .search-panel .search-submit:focus-visible { background: #ffd54d; color: #0a0b0d; }
+html[lang='en'] .search-panel .search-tabs button,
+html[lang='en'] .search-panel .search-tabs a { background: transparent; border-color: rgb(255 255 255 / 28%); color: rgb(255 255 255 / 86%); }
+html[lang='en'] .search-panel .search-tabs .active { background: #ffc61a; border-color: #ffc61a; color: #0a0b0d; font-weight: 700; }
+html[lang='en'] .search-panel .search-tabs button:hover,
+html[lang='en'] .search-panel .search-tabs button:focus-visible { border-color: #ffc61a; color: #ffc61a; }
+html[lang='en'] .search-panel .search-tabs .active:hover,
+html[lang='en'] .search-panel .search-tabs .active:focus-visible { color: #0a0b0d; }
+html[lang='en'] .search-panel .chip { background: transparent; border-color: rgb(255 255 255 / 28%); color: rgb(255 255 255 / 86%); border-radius: 999px; }
+html[lang='en'] .search-panel .chip:hover,
+html[lang='en'] .search-panel .chip:focus-visible { background: rgb(255 198 26 / 14%); border-color: #ffc61a; color: #fff; }
+html[lang='en'] .search-panel .section-label { color: rgb(255 255 255 / 70%); }
+html[lang='en'] .search-panel .section-label::before { background: rgb(255 255 255 / 35%); }
+html[lang='en'] .search-panel .search-result { color: #fff; border-color: rgb(255 255 255 / 14%); }
+html[lang='en'] .search-panel .search-result-meta,
+html[lang='en'] .search-panel .search-empty { color: rgb(255 255 255 / 68%); }
+html[lang='en'] .search-panel :focus-visible { outline: 3px solid #ffc61a; outline-offset: 2px; }
+
+/* language picker (CSS module classes, matched by their stable file-name prefix) */
+html[lang='en'] [class*='GlobalLanguagePicker_overlay'] { background: rgb(0 0 0 / 70%); }
+html[lang='en'] [class*='GlobalLanguagePicker_panel'] { background: #0a0b0d; color: #fff; border: 1px solid rgb(255 255 255 / 16%); border-top: 3px solid #ffc61a; border-radius: 22px; box-shadow: 0 30px 80px rgb(0 0 0 / 55%); }
+html[lang='en'] [class*='GlobalLanguagePicker_title'] { color: #fff; font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; }
+html[lang='en'] [class*='GlobalLanguagePicker_close'] { color: #fff; border: 1px solid rgb(255 255 255 / 28%); border-radius: 999px; }
+html[lang='en'] [class*='GlobalLanguagePicker_close']:hover,
+html[lang='en'] [class*='GlobalLanguagePicker_close']:focus-visible { background: rgb(255 255 255 / 12%); }
+html[lang='en'] [class*='GlobalLanguagePicker_regionTitle'] { color: rgb(255 255 255 / 62%); font-family: 'EN Inter Tight', var(--font-body), system-ui, sans-serif; }
+html[lang='en'] [class*='GlobalLanguagePicker_item']:hover,
+html[lang='en'] [class*='GlobalLanguagePicker_item']:focus-visible { background: rgb(255 255 255 / 9%); }
+html[lang='en'] [class*='GlobalLanguagePicker_item'][aria-current='page'] { background: rgb(255 198 26 / 14%); box-shadow: inset 0 0 0 1px #ffc61a; }
+html[lang='en'] [class*='GlobalLanguagePicker_autonym'] { color: #fff; flex-wrap: wrap; }
+html[lang='en'] [class*='GlobalLanguagePicker_englishName'] { color: rgb(255 255 255 / 70%); }
+html[lang='en'] [class*='GlobalLanguagePicker_notice'] { color: rgb(255 255 255 / 76%); }
+html[lang='en'] [class*='GlobalLanguagePicker_badge'] { background: #ffc61a; color: #0a0b0d; margin-inline-start: 0; }
+html[lang='en'] [class*='GlobalLanguagePicker_panel'] :focus-visible { outline: 3px solid #ffc61a; outline-offset: 2px; }
+html[lang='en'] .search-panel .icon-button,
+html[lang='en'] .search-panel .search-tabs button,
+html[lang='en'] .search-panel .search-tabs a,
+html[lang='en'] .search-panel .chip { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }

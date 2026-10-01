@@ -51,10 +51,15 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
   // Display-only: the saved canvas is not modified.
   // The saved subtitle leads with Korea/Japan cross-border work; Taiwanese readers see their own matters
   // and the four local offices instead. Display-only as well.
+  // Headline (operator 2026-10-01: a line that makes Taiwanese readers trust the firm with their matter;
+  // chosen by a writer/judge panel for naturalness, the bar's advertising rules and trust): it describes
+  // the real intake — the firm reads the reader's account first — and promises no outcome. The subline
+  // keeps 台灣律師 for search and hands off to the email action. Display-only, like the label and subline.
   const overrides = {
     ...heroOverrides,
     'section-label': '昊鼎國際法律事務所',
-    subtitle: '律師團隊承辦車禍、離婚、繼承、勞資爭議與刑事案件，事務所在台北、台中、高雄及屏東設有據點。',
+    headline: '先聽您說完，\n再談怎麼做。',
+    subtitle: '台灣律師團隊承辦車禍、離婚、繼承、勞資爭議與刑事案件，請先來信說明案情。',
   };
   return (
     <div className={styles.home} id="zh-hant-home" data-zh-hant-design="home">

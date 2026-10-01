@@ -40,6 +40,7 @@ export default function LocaleSuggestion({ locale }: { locale: string }) {
   const columnLocales = usePublicColumnLocales();
   const columnLinks = usePublicColumnLanguageLinks(pathname);
   const [target, setTarget] = useState<{ locale: string; href: string } | null>(null);
+  const [clearOfHero, setClearOfHero] = useState(false);
 
   useEffect(() => {
     if (columnLocales.length === 0 || isLocaleSuggestionDismissed()) return;
@@ -56,7 +57,25 @@ export default function LocaleSuggestion({ locale }: { locale: string }) {
     setTarget({ locale: next, href });
   }, [locale, pathname, columnLinks, columnLocales]);
 
-  if (!target) return null;
+  // Pages that open on a first screen (#hero) keep it clear: the hint waits until the hero has left
+  // the viewport (Fable 2026-10-01: on the zh-hant home at 390 it covered the search bar).
+  useEffect(() => {
+    if (!target) return;
+    const hero = document.getElementById('hero');
+    if (!hero || typeof IntersectionObserver === 'undefined') {
+      setClearOfHero(true);
+      return;
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry?.isIntersecting) return;
+      setClearOfHero(true);
+      observer.disconnect();
+    });
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, [target]);
+
+  if (!target || !clearOfHero) return null;
   const copy = COPY[target.locale];
   return (
     <aside className="locale-suggestion" lang={target.locale} data-locale-suggestion={target.locale}>

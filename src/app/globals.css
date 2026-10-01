@@ -25910,6 +25910,12 @@ html[lang='zh-hant'],
   font-weight: 700;
   white-space: nowrap;
 }
+/* zh-hant home on phones: sit above the sticky consultation bar once it is showing. */
+@media (max-width: 767px) {
+  body:has(#zh-hant-home nav[data-hero-visible='false']) .locale-suggestion {
+    bottom: calc(68px + 0.75rem + env(safe-area-inset-bottom));
+  }
+}
 .locale-suggestion button {
   border: 0;
   background: transparent;

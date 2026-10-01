@@ -9,7 +9,7 @@
 /* Hero: paper header, photo plate under the title */
 .root:global(#ja-column) :global(.blog-hero) {
   display: flex; flex-direction: column; align-items: stretch; min-height: 0;
-  background: var(--ja-paper); border-top: 3px solid var(--ja-green); border-bottom: 5px double var(--ja-line-strong);
+  background: var(--ja-paper); border-top: 0; border-bottom: 1px solid var(--ja-line-strong);
 }
 .root:global(#ja-column) :global(.blog-hero .blog-hero-inner) {
   order: 1; align-self: center; width: min(var(--max-width, 1200px), calc(100% - 2 * var(--page-gutter, 24px))); max-width: none;
@@ -34,7 +34,7 @@
 }
 .root:global(#ja-column) :global(.blog-hero h1.blog-hero-title) {
   max-width: 21em; margin: 0 0 22px; color: var(--ja-ink); font-family: var(--ja-mincho); font-weight: 600;
-  font-size: clamp(28px, 3vw, 42px); line-height: 1.5; letter-spacing: 0.06em; font-feature-settings: 'palt' 1;
+  font-size: clamp(28px, 3.5vw, 50px); line-height: 1.45; letter-spacing: 0.05em; font-feature-settings: 'palt' 1;
 }
 .root:global(#ja-column) :global(.blog-hero .blog-meta) { gap: 6px 22px; padding-top: 14px; border-top: 1px solid var(--ja-line-strong); max-width: 760px; }
 .root:global(#ja-column) :global(.blog-hero .blog-meta),
@@ -44,12 +44,12 @@
 .root:global(#ja-column) :global(.blog-hero .blog-meta a) { color: var(--ja-green); }
 .root:global(#ja-column) :global(.blog-hero .blog-meta a),
 .root:global(#ja-column) :global(.blog-sidebar a.authority-card-name) { display: inline-flex; align-items: center; min-height: 44px; }
-.root:global(#ja-column) :global(.blog-hero) :focus-visible { outline: 3px solid var(--ja-green); outline-offset: 3px; }
+.root:global(#ja-column) :global(.blog-hero) :focus-visible { outline: 2px solid var(--ja-ink); outline-offset: 3px; }
 
 /* Article */
 .root:global(#ja-column) :global(.blog-article) { background: #fff; }
 .root:global(#ja-column) :global(.column-toc) {
-  border: 0; border-top: 3px double var(--ja-ink); border-bottom: 3px double var(--ja-ink); border-radius: 0; background: transparent; padding: 20px 4px;
+  border: 0; border-top: 2px solid var(--ja-ink); border-bottom: 1px solid var(--ja-line-strong); border-radius: 0; background: transparent; padding: 20px 4px;
 }
 .root:global(#ja-column) :global(.column-toc-label) { font-size: 13px; font-weight: 700; letter-spacing: 0.24em; color: var(--ja-gold-text); }
 .root:global(#ja-column) :global(.column-toc a) { color: var(--ja-ink); }
@@ -70,9 +70,9 @@
 
 /* Sidebar */
 .root:global(#ja-column) :global(.blog-sidebar-card) { border-radius: 0; box-shadow: none; border-color: var(--ja-line); }
-.root:global(#ja-column) :global(.blog-sidebar > .blog-sidebar-card:first-child) { background: var(--ja-paper); border-top: 3px solid var(--ja-green); }
+.root:global(#ja-column) :global(.blog-sidebar > .blog-sidebar-card:first-child) { background: var(--ja-paper); border-top: 2px solid var(--ja-ink); }
 .root:global(#ja-column) :global(.blog-sidebar-title) { letter-spacing: 0.1em; color: var(--ja-ink); }
-.root:global(#ja-column) :global(.blog-sidebar .button) { border-radius: 2px; letter-spacing: 0.1em; }
+.root:global(#ja-column) :global(.blog-sidebar .button) { border-radius: 999px; letter-spacing: 0.1em; }
 .root:global(#ja-column) :global(.authority-card),
 .root:global(#ja-column) :global(.authority-card-photo),
 .root:global(#ja-column) :global(.authority-card-photo img),

@@ -36,7 +36,7 @@
 .root:global(#ja-columns) :global(.columns-topic-header) { align-items: baseline; gap: 16px; padding-bottom: 14px; margin-bottom: 22px; border-bottom: 2px solid var(--ja-ink); }
 .root:global(#ja-columns) :global(.columns-topic-title) { font-size: clamp(20px, 1.9vw, 25px); font-weight: 700; letter-spacing: 0.1em; color: var(--ja-ink); font-feature-settings: 'palt' 1; }
 .root:global(#ja-columns) :global(.columns-topic-section[data-columns-topic-section] .columns-topic-title)::before {
-  content: counter(ja-topic, decimal-leading-zero); margin-right: 14px; font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--ja-gold-text);
+  content: counter(ja-topic, decimal-leading-zero); margin-right: 14px; font-family: var(--ja-mincho); font-weight: 400; color: var(--ja-shu);
 }
 .root:global(#ja-columns) :global(.columns-topic-count) { color: var(--ja-sub); letter-spacing: 0.1em; }
 .root:global(#ja-columns) :global(.columns-topic-more) { margin-top: 18px; color: var(--ja-green); font-weight: 700; letter-spacing: 0.06em; min-height: 44px; }
@@ -48,7 +48,7 @@
 .root:global(#ja-columns) :global(.columns-card-title) { font-size: 17px; line-height: 1.65; letter-spacing: 0.05em; color: var(--ja-ink); }
 .root:global(#ja-columns) :global(.columns-card-summary) { font-size: 14.5px; line-height: 1.9; color: var(--ja-sub); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .root:global(#ja-columns) :global(.columns-card-byline) { color: var(--ja-gold-text); letter-spacing: 0.08em; }
-.root:global(#ja-columns) :global(.columns-card:focus-visible) { outline: 3px solid var(--ja-green); outline-offset: 4px; }
+.root:global(#ja-columns) :global(.columns-card:focus-visible) { outline: 2px solid var(--ja-ink); outline-offset: 4px; }
 
 /* Opening picks: two-column 目次 with small thumbnails */
 .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended]) { padding-top: 36px; background: transparent; }

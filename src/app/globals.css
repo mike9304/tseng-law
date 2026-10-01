@@ -27277,3 +27277,19 @@ html[dir='rtl'] .guidance-answer {
 .site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-lawyer-profile, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns, #zh-hant-column, [data-zh-hant-design='service-detail']) .button {
   border-radius: 2px !important;
 }
+
+/* ja shell (Opus 5.5 ja lane, 2026-10-01): pages that render the ja design (data-ja-design wrapper) carry the
+   間 palette — sumi ink and one vermilion — into the shared header action and footer. Other locales never match. */
+.site:has([data-ja-design]) .header .nav-cta {
+  border-radius: 999px;
+  background: #1b1814;
+  border-color: #1b1814;
+  color: #fff;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.site:has([data-ja-design]) .header .nav-cta:hover,
+.site:has([data-ja-design]) .header .nav-cta:focus-visible {
+  background: #c8102e;
+  border-color: #c8102e;
+}
+.site:has([data-ja-design]) .site-footer { background: #17140f; }

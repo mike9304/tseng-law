@@ -31,13 +31,13 @@
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button) { position: relative; padding: 22px 8px 22px 52px; font-size: 17px; line-height: 1.7; letter-spacing: 0.05em; }
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button)::before {
   content: 'Q'; position: absolute; left: 4px; top: 20px; display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; background: var(--ja-green); color: #fff; font-family: Georgia, 'Times New Roman', serif; font-size: 17px;
+  width: 32px; height: 32px; background: var(--ja-green); color: #fff; font-family: var(--ja-mincho); font-size: 17px;
 }
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] h3 button small) { color: var(--ja-gold-text); letter-spacing: 0.12em; }
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region']) { position: relative; padding: 4px 8px 24px 52px; }
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'])::before {
   content: 'A'; position: absolute; left: 4px; top: 4px; display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; border: 1px solid var(--ja-gold); color: var(--ja-gold-text); font-family: Georgia, 'Times New Roman', serif; font-size: 17px;
+  width: 32px; height: 32px; border: 1px solid var(--ja-gold); color: var(--ja-shu); font-family: var(--ja-mincho); font-size: 17px;
 }
 .root:global(#ja-faq) :global([data-public-faq-explorer='true'] [role='region'] p) { margin: 0 0 12px; font-size: 16px; line-height: 2; color: var(--ja-text); max-width: 40em; }
 

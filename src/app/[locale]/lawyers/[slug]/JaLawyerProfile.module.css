@@ -10,7 +10,7 @@
   grid-template-columns: minmax(0, min(21rem, 38%)) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px);
   padding: 0 0 clamp(36px, 4vw, 56px); border-bottom: 1px solid var(--ja-line);
 }
-.root:global(#ja-lawyer-profile) :global(.profile-hero-photo) { border-radius: 0; border-top: 3px solid var(--ja-green); }
+.root:global(#ja-lawyer-profile) :global(.profile-hero-photo) { border-radius: 0; border-top: 2px solid var(--ja-ink); }
 .root:global(#ja-lawyer-profile) :global(.profile-hero-photo img) { border-radius: 0; }
 .root:global(#ja-lawyer-profile) :global(.section-title.profile-hero-title) {
   font-size: clamp(28px, 2.6vw, 36px); letter-spacing: 0.12em; padding-bottom: 16px;
@@ -21,7 +21,7 @@
   border-radius: 0; border: 1px solid var(--ja-line-strong); background: var(--ja-paper); color: var(--ja-ink);
   font-size: 13.5px; letter-spacing: 0.1em; min-height: 36px;
 }
-.root:global(#ja-lawyer-profile) :global(a.button.profile-hero-cta) { border-radius: 2px; min-height: 52px; padding-inline: 32px; letter-spacing: 0.12em; }
+.root:global(#ja-lawyer-profile) :global(a.button.profile-hero-cta) { border-radius: 999px; min-height: 52px; padding-inline: 32px; letter-spacing: 0.12em; }
 
 /* Four summary points: numbered, ruled 2×2 */
 .root:global(#ja-lawyer-profile) :global(.profile-proof-grid) {
@@ -33,7 +33,7 @@
 }
 .root:global(#ja-lawyer-profile) :global(.profile-proof-card)::before {
   content: counter(ja-proof, decimal-leading-zero); position: static; width: auto; height: auto; background: none; transform: none;
-  font-family: Georgia, 'Times New Roman', serif; font-size: 20px; line-height: 1.5; color: var(--ja-gold-text);
+  font-family: var(--ja-mincho); font-size: 20px; line-height: 1.5; color: var(--ja-shu);
 }
 .root:global(#ja-lawyer-profile) :global(.profile-proof-text) { margin: 0; font-size: 15.5px; line-height: 1.95; color: var(--ja-text); }
 

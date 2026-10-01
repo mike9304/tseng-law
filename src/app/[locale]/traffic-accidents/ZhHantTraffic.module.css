@@ -20,3 +20,8 @@
 @media (max-width: 600px) {
   .zh :global(#articles) > div:last-child { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Fable R6 S2: exactly four columns → 2 × 2 instead of 3 + 1. */
+@media (min-width: 961px) {
+  .zh :global(#articles) > div:last-child:has(> a:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

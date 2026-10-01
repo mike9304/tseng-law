@@ -65,3 +65,12 @@
   .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-card:not(:first-child) .columns-card-body) { padding-top: 12px; }
   .root:global(#zh-hant-columns) :global([data-issue-board-tabs] nav.columns-filters .columns-filter-btn) { margin-right: 16px; font-size: 15px; }
 }
+
+/* Fable R6 S1: with exactly two recommended items (e.g. the issue board) use two equal columns, no empty mosaic slot. */
+@media (min-width: 768px) {
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-grid:has(> .columns-card:nth-child(2):last-child)) { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-grid:has(> .columns-card:nth-child(2):last-child) > .columns-card) { grid-row: auto; display: flex; flex-direction: column; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-grid:has(> .columns-card:nth-child(2):last-child) > .columns-card .columns-card-img) { aspect-ratio: 16 / 10; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-grid:has(> .columns-card:nth-child(2):last-child) > .columns-card .columns-card-body) { padding-top: 16px; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-grid:has(> .columns-card:nth-child(2):last-child) > .columns-card .columns-card-title) { font-size: clamp(22px, 2vw, 26px); }
+}

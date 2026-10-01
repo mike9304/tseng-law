@@ -2,9 +2,9 @@
    the rest of the zh-hant redesign. Shared hub markup and other locales unchanged. */
 .zh { --zh-ink: #16382d; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
 
-/* Serif headings; CJK glyphs need neutral or slightly open tracking, not the shared negative letter-spacing. */
-.zh h1, .zh h2, .zh h3 { font-family: var(--font-serif-tc); }
-.zh h1 { font-weight: 700; letter-spacing: 0.03em; }
+/* Serif only on the H1 (the site's serif allowlist; public H2/H3 stay sans by the globals.css policy).
+   CJK glyphs need neutral or slightly open tracking, not the shared negative letter-spacing. */
+.zh h1 { font-family: var(--font-serif-tc); font-weight: 700; letter-spacing: 0.03em; }
 .zh h2 { font-weight: 700; letter-spacing: 0.02em; }
 .zh h3 { font-weight: 700; letter-spacing: 0.01em; }
 

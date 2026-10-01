@@ -50,6 +50,16 @@
 
 .root:global(#zh-hant-columns) :global(.columns-card:focus-visible) { outline: 3px solid var(--zh-ink); outline-offset: 4px; }
 
+/* Astra R5: below 1100px the side-by-side secondary cards get too narrow for their image badges —
+   lead card spans the row, the other two become ordinary stacked cards side by side. */
+@media (max-width: 1100px) {
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-card:first-child) { grid-column: 1 / -1; grid-row: auto; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-card:not(:first-child)) { display: flex; flex-direction: column; gap: 0; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-card:not(:first-child) .columns-card-img) { aspect-ratio: 16 / 10; width: 100%; max-width: none; }
+  .root:global(#zh-hant-columns) :global(.columns-topic-section:first-child .columns-card:not(:first-child) .columns-card-body) { padding-top: 14px; }
+}
+
 @media (max-width: 1000px) {
   .root:global(#zh-hant-columns) :global(.columns-topic-section:not(:first-child)) { grid-template-columns: minmax(0, 1fr); }
   .root:global(#zh-hant-columns) :global(.columns-topic-section:not(:first-child) > .columns-grid) { grid-column: 1; grid-row: auto; }

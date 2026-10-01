@@ -73,6 +73,10 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '057': '2026-10-01',
   '058': '2026-10-01',
   '059': '2026-10-01',
+  // zh-hant-only domestic columns (inheritance renunciation, defamation, overtime pay).
+  '060': '2026-10-01',
+  '061': '2026-10-01',
+  '062': '2026-10-01',
   '051': '2026-10-01', // Korean-first traffic column (left turn vs straight motorcycle)
 };
 

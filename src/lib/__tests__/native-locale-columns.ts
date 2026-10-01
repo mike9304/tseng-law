@@ -136,6 +136,19 @@ export const EXPERTISE_COLUMN_FILES_20261001 = {
   ],
 } as const;
 
+/**
+ * Domestic-interest columns 060–062 (2026-10-01), written natively for Taiwanese readers
+ * (zh-hant only, no Korean twin): inheritance renunciation, public insult / defamation
+ * complaints, unpaid overtime pay. Same day as 052–059, so they join the same-day helpers.
+ */
+export const DOMESTIC_ZH_COLUMN_FILES_20261001 = {
+  'zh-hant': [
+    '060-taiwan-inheritance-renunciation-debt.md',
+    '061-taiwan-defamation-public-insult-complaint.md',
+    '062-taiwan-unpaid-overtime-pay.md',
+  ],
+} as const;
+
 /** Every 2026-09-30 column file of `locale` (041–048 expertise + 050 traffic) plus the 2026-10-01 051, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
@@ -143,6 +156,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...(TRAFFIC_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
     ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERTISE_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ].sort();
 }
 
@@ -166,6 +180,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const newer: readonly string[] = [
     ...((TRAFFIC_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERTISE_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((DOMESTIC_ZH_COLUMN_FILES_20261001 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   // Same calendar day → source (filename) order, matching sortColumnPostsNewestFirst.
   const newerSlugs = [...newer].sort().map(slugOf);
@@ -177,6 +192,7 @@ export function archiveLeadPublicationDate(slug: string): string {
   const newer = [
     ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
     ...Object.values(EXPERTISE_COLUMN_FILES_20261001),
+    ...Object.values(DOMESTIC_ZH_COLUMN_FILES_20261001),
   ].flat().map(slugOf);
   return newer.includes(slug) ? '2026-10-01' : '2026-09-30';
 }
@@ -205,6 +221,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(TRAFFIC_COLUMN_FILES_20260930),
     ...Object.values(TRAFFIC_COLUMN_FILES_20261001),
     ...Object.values(EXPERTISE_COLUMN_FILES_20261001),
+    ...Object.values(DOMESTIC_ZH_COLUMN_FILES_20261001),
   ].flat().map(slugOf),
 );
 

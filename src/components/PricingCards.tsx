@@ -5,9 +5,10 @@ import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import ZhHantPricingSchedule from '@/components/zh-hant-pricing/ZhHantPricingSchedule';
 import styles from './PricingCards.module.css';
 
-type PricingItem = {
+export type PricingItem = {
   icon: PricingIconName;
   title: string;
   price: string;
@@ -17,7 +18,7 @@ type PricingItem = {
   highlighted?: boolean;
 };
 
-type PricingContent = {
+export type PricingContent = {
   currency: string;
   items: PricingItem[];
   disclaimer: string;
@@ -276,8 +277,13 @@ const pricingData: Record<SiteLocale, PricingContent> = {
   },
 };
 
+export function getPricingContent(locale: SiteLocale): PricingContent {
+  return pricingData[locale];
+}
+
 export default function PricingCards({ locale }: { locale: SiteLocale }) {
   const data = pricingData[locale];
+  if (locale === 'zh-hant') return <ZhHantPricingSchedule data={data} />;
 
   return (
     <section className={`section pricing-section ${styles.root}`}>

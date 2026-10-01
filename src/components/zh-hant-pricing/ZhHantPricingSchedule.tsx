@@ -1,0 +1,65 @@
+import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
+import PricingIcon from '@/components/PricingIcon';
+import type { PricingContent } from '@/components/PricingCards';
+import {
+  getConsultationCtaLabel,
+  getConsultationPublicEmail,
+  getConsultationPublicMailto,
+} from '@/lib/consultation/public-contact';
+import styles from './ZhHantPricing.module.css';
+
+/**
+ * zh-hant pricing, second pass (son7-87 / Opus 5.5, 2026-10-01): the four fees as a
+ * fee schedule (one row each) instead of a 2×2 card grid. Every amount, detail and note
+ * comes from the shared zh-hant pricing data; nothing is added or reworded.
+ */
+
+/** Litigation quote flow: restates the card note (確認案件內容後提供報價，請先預約諮詢) and the disclaimer's 書面報價. */
+const QUOTE_STEPS = ['預約諮詢', '確認案件內容', '書面報價'] as const;
+
+export default function ZhHantPricingSchedule({ data }: { data: PricingContent }) {
+  const mailto = getConsultationPublicMailto('zh-hant');
+  return (
+    <section className={styles.schedule}>
+      <div className="container">
+        <p className={styles.currency}>{data.currency}</p>
+        {data.items.map((item) => (
+          <article key={item.icon} id={`fee-${item.icon}`} className={styles.row}>
+            <div className={styles.rowHead}>
+              <span className={styles.rowIcon} aria-hidden><PricingIcon name={item.icon} /></span>
+              <h2 className={styles.rowTitle}>{item.title}</h2>
+              <p className={styles.rowPrice}>
+                <span className={styles.amount}>{item.price}</span>
+                {item.unit ? <span className={styles.unit}>{item.unit}</span> : null}
+              </p>
+            </div>
+            <div className={styles.rowBody}>
+              <ul className={styles.details}>
+                {item.details.map((detail) => <li key={detail}>{detail}</li>)}
+              </ul>
+              {item.icon === 'litigation' ? (
+                <ol className={styles.steps} aria-label="報價流程">
+                  {QUOTE_STEPS.map((step, index) => (
+                    <li key={step}><span className={styles.stepNo} aria-hidden>{index + 1}</span>{step}</li>
+                  ))}
+                </ol>
+              ) : null}
+              {item.note ? <p className={styles.note}>{item.note}</p> : null}
+              {item.icon === 'retainer' ? <div className={styles.advisory}><CorporateAdvisoryLink locale="zh-hant" /></div> : null}
+            </div>
+          </article>
+        ))}
+        <p className={styles.disclaimer}>{data.disclaimer}</p>
+        <div className={styles.cta}>
+          <div className={styles.ctaCopy}>
+            <p className={styles.ctaNote}>{data.ctaNote}</p>
+            <p className={styles.ctaEmail}><a href={mailto}>{getConsultationPublicEmail()}</a></p>
+          </div>
+          <a href={mailto} className="button" aria-label={`${data.ctaLabel} — ${getConsultationCtaLabel('zh-hant')}`}>
+            {data.ctaLabel}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}

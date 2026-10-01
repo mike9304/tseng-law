@@ -15,6 +15,7 @@ import AttorneyMediaHubView from '@/components/AttorneyMediaHubView';
 import LegalPageSections from '@/components/LegalPageSections';
 import ServicesBento from '@/components/ServicesBento';
 import ZhHantServicesBody from '@/components/ZhHantServicesBody';
+import ZhHantPricingBody from '@/components/zh-hant-pricing/ZhHantPricingBody';
 import FAQAccordion from '@/components/FAQAccordion';
 import VideoChannel from '@/components/VideoChannel';
 import JsonLd from '@/components/JsonLd';
@@ -299,6 +300,7 @@ export function FaqLegacyPageBody({ locale }: { locale: Locale }) {
 }
 
 export function PricingLegacyPageBody({ locale }: { locale: SiteLocale }) {
+  if (locale === 'zh-hant') return <ZhHantPricingBody />;
   const copy = pageCopy[locale].pricing;
   return (
     <>

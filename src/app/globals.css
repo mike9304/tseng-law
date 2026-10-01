@@ -27251,6 +27251,13 @@ html[dir='rtl'] .guidance-answer {
   }
 }
 
+/* zh-hant home, phones: keep the shared back-to-top button clear of the sticky consultation bar. */
+@media (max-width: 767px) {
+  .site:has(#zh-hant-home) .scroll-top {
+    bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+}
+
 /* zh-hant pages incl. home: secondary text on the stone/paper bands needs ≥4.5:1 (#5f7869 gave 4.33). */
 .site [data-zh-hant-design] {
   --text-secondary: #4f5b55;

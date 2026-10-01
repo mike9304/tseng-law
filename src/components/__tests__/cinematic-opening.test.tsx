@@ -195,6 +195,11 @@ describe('cinematic opening client-route gate', () => {
   ] as const)('includes the exact homepage pathname %s', (pathname, locale) => {
     expect(isCinematicHomepagePath(pathname, locale)).toBe(true);
     const html = renderRouteShell(pathname, locale);
+    // zh-hant opens on its own cinematic hero instead of the gate (CINEMATIC_OPENING_SKIPPED_LOCALES).
+    if (locale === 'zh-hant') {
+      expect(html).not.toContain('class="cinematic-opening"');
+      return;
+    }
     expect(html).toContain('data-cinematic-home="true"');
     expect(html).toContain('class="cinematic-opening"');
   });
@@ -264,6 +269,16 @@ describe('cinematic opening client-route gate', () => {
         </CinematicRouteShell>,
       );
       expect(services, `${locale} services`).not.toContain('data-cinematic-home="true"');
+    }
+  });
+
+  it('opens the zh-hant home on its own hero (no gate) while ko/en/ja keep the opening', () => {
+    const zh = renderRouteShell('/zh-hant', 'zh-hant');
+    expect(zh).not.toContain('data-cinematic-home="true"');
+    expect(zh).not.toContain('class="cinematic-opening"');
+    expect(zh).toContain('PAGE_CONTENT');
+    for (const locale of ['ko', 'en', 'ja'] as const) {
+      expect(renderRouteShell(`/${locale}`, locale), locale).toContain('class="cinematic-opening"');
     }
   });
 
@@ -469,7 +484,7 @@ describe('cinematic opening content and semantics', () => {
     );
 
     expect(layoutSource).toContain(
-      "const isLocaleHome = /^\\/(?:ko|zh-hant|en|ja)\\/?$/i.test(pathname ?? '');",
+      "const isLocaleHome = /^\\/(?:ko|en|ja)\\/?$/i.test(pathname ?? '');",
     );
     expect(layoutSource).toContain(
       'href="/images/brand/hovering-seal-official-opening.webp"',

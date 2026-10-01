@@ -1,4 +1,5 @@
 import { renderToStaticMarkup } from 'react-dom/server';
+import { ZH_HANT_HERO_MEDIA } from '@/components/zh-hant-home/ZhHantHeroMedia';
 import { describe, expect, it, vi } from 'vitest';
 import savedZhHome from '@/lib/builder/canvas/__tests__/fixtures/legacy-zh-home-july.json';
 import { normalizeCanvasDocument, type BuilderCanvasDocument } from '@/lib/builder/canvas/types';
@@ -422,10 +423,12 @@ describe('exact stock ZH decorative hero alternatives', () => {
     const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: stockPublishedHome(doc) }));
     expect(html).toContain('data-zh-hant-design="home"');
     const hero = html.slice(html.indexOf('<section'), html.indexOf('</section>'));
-    expect((hero.match(/class="hero-media"/g) ?? [])).toHaveLength(1);
+    // zh-hant Apple pass (2026-10-01): the hero carries its own full-bleed dawn backdrop (one decorative
+    // poster + loop) instead of the stock hero media; the saved stock images stay untouched in storage.
+    expect((hero.match(/class="decorative-autoplay-video[ "]/g) ?? [])).toHaveLength(1);
     expect(hero).toMatch(/<img\b[^>]*\balt=""/);
     expect(hero).not.toContain(`alt="${stockHeroAlt}"`);
-    expect(html).toContain(PUBLISHED_HOME_HERO_POSTER);
+    expect(hero).toContain(encodeURIComponent(ZH_HANT_HERO_MEDIA.poster));
     expect(doc.nodes.filter((node) => stockHeroImageIds.includes(node.id))).toHaveLength(3);
     expect(doc).toEqual(before);
   });

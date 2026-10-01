@@ -11,6 +11,14 @@ import CinematicOpening from '@/components/CinematicOpening';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
 
+/**
+ * Locales whose home opens straight onto its own cinematic first screen instead of the full-screen
+ * opening gate. zh-hant (2026-10-01, operator direction for Taiwanese readers): the home hero itself
+ * carries the moving dawn cloud sea, the headline, the email action and search, so a separate gate
+ * in front of it only delays the content.
+ */
+export const CINEMATIC_OPENING_SKIPPED_LOCALES: readonly PublicLocale8[] = ['zh-hant'];
+
 export function isCinematicHomepagePath(
   pathname: string | null,
   locale: PublicLocale8,
@@ -56,7 +64,8 @@ export default function CinematicRouteShell({
   // WO-O22 B: CINEMATIC_OPENING_COPY now covers all eight public languages, so
   // vi/id/th/fil play the same opening as ko/zh-hant/en/ja instead of dropping
   // straight onto the hero.
-  const showCinematicOpening = isCinematicHomepagePath(pathname, locale);
+  const showCinematicOpening = isCinematicHomepagePath(pathname, locale)
+    && !CINEMATIC_OPENING_SKIPPED_LOCALES.includes(locale);
 
   return (
     <div

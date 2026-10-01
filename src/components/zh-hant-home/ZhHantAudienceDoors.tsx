@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../ZhHantDesign.module.css';
 
@@ -5,11 +6,12 @@ import styles from '../ZhHantDesign.module.css';
  * zh-hant home: entry points by reader type, as their own band directly under the hero. Taiwanese readers'
  * everyday disputes come first; company setup sits with foreign clients (2026-10-01 direction).
  * Navigation only — every line restates existing services, routes and the firm's consultation
- * languages; no new claims.
+ * languages; no new claims. Apple pass: a bento of three tiles; two carry decorative editorial photographs.
  */
 const DOORS = [
   {
     title: '個人與家庭',
+    image: '/images/editorial/taiwan-sanheyuan-modern-daylight-v2.webp',
     text: '車禍與損害賠償、離婚與繼承、刑事案件。',
     links: [
       { label: '車禍處理', href: '/zh-hant/traffic-accidents' },
@@ -28,13 +30,14 @@ const DOORS = [
   },
   {
     title: '在台外國人與外國企業',
+    image: '/images/editorial/light-of-qilou-opening.webp',
     text: '在台設立公司與投資審查，可用中文、韓文、日文或英文溝通。',
     links: [
       { label: '投資與公司設立', href: '/zh-hant/services/investment' },
       { label: '會說韓文的台灣律師', href: '/zh-hant/korean-lawyer-in-taiwan' },
     ],
   },
-] as const;
+] as const satisfies ReadonlyArray<{ title: string; text: string; image?: string; links: ReadonlyArray<{ label: string; href: string }> }>;
 
 export default function ZhHantAudienceDoors() {
   return (
@@ -43,12 +46,17 @@ export default function ZhHantAudienceDoors() {
       <p className={styles.doorsLabel}>依需求選擇</p>
       <ul className={styles.doorList}>
         {DOORS.map((door) => (
-          <li key={door.title} className={styles.door}>
+          <li key={door.title} className={`${styles.door} ${'image' in door ? styles.doorDark : styles.doorLight}`}>
+            {'image' in door ? (
+              <span className={styles.doorMedia} aria-hidden>
+                <Image src={door.image} alt="" fill sizes="(max-width: 767px) 100vw, 50vw" />
+              </span>
+            ) : null}
             <p className={styles.doorTitle}>{door.title}</p>
             <p className={styles.doorText}>{door.text}</p>
             <p className={styles.doorLinks}>
               {door.links.map((link) => (
-                <Link key={link.href} href={link.href}>{link.label}</Link>
+                <Link key={link.href} href={link.href}>{link.label}<span aria-hidden> ›</span></Link>
               ))}
             </p>
           </li>

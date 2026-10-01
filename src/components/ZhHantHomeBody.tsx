@@ -10,6 +10,8 @@ import HomeContactCta from '@/components/HomeContactCta';
 import ZhHantAudienceDoors from '@/components/zh-hant-home/ZhHantAudienceDoors';
 import ZhHantMobileCta from '@/components/zh-hant-home/ZhHantMobileCta';
 import ZhHantEngagement from '@/components/zh-hant-home/ZhHantEngagement';
+import ZhHantHeroMedia from '@/components/zh-hant-home/ZhHantHeroMedia';
+import ZhHantHeroTrust from '@/components/zh-hant-home/ZhHantHeroTrust';
 import { ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 import { ZH_HANT_DOMESTIC_SERVICE_ORDER, ZH_HANT_SERVICE_SCENARIOS } from '@/components/zh-hant-home/zh-hant-service-scenarios';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
@@ -63,6 +65,8 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
           scrollHref="#practice"
           quickMenus={SEARCH_CHIPS}
           persistentQuickMenus
+          media={<ZhHantHeroMedia />}
+          trustContent={<ZhHantHeroTrust />}
         />
       </BuilderSurfaceProvider>
       <ZhHantAudienceDoors />

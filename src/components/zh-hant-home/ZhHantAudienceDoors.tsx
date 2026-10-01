@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from '../ZhHantDesign.module.css';
 
 /**
- * zh-hant home: entry points by reader type, placed under the hero CTA. Taiwanese readers'
+ * zh-hant home: entry points by reader type, as their own band directly under the hero. Taiwanese readers'
  * everyday disputes come first; company setup sits with foreign clients (2026-10-01 direction).
  * Navigation only — every line restates existing services, routes and the firm's consultation
  * languages; no new claims.
@@ -39,6 +39,7 @@ const DOORS = [
 export default function ZhHantAudienceDoors() {
   return (
     <nav className={styles.doors} aria-label="依需求選擇服務">
+      <div className={`container ${styles.doorsInner}`}>
       <p className={styles.doorsLabel}>依需求選擇</p>
       <ul className={styles.doorList}>
         {DOORS.map((door) => (
@@ -53,6 +54,7 @@ export default function ZhHantAudienceDoors() {
           </li>
         ))}
       </ul>
+      </div>
     </nav>
   );
 }

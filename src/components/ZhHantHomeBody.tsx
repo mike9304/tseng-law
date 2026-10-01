@@ -63,9 +63,9 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
           scrollHref="#practice"
           quickMenus={SEARCH_CHIPS}
           persistentQuickMenus
-          trustContent={<ZhHantAudienceDoors />}
         />
       </BuilderSurfaceProvider>
+      <ZhHantAudienceDoors />
       <ServicesBento locale="zh-hant" id="practice" variant="default" presentation="editorial" scenarioTags={ZH_HANT_SERVICE_SCENARIOS} order={ZH_HANT_DOMESTIC_SERVICE_ORDER} />
       <InsightsArchiveSection locale="zh-hant" posts={posts} presentation="editorial" pinnedSlugs={ZH_HANT_FEATURED_COLUMN_SLUGS} />
       <ZhHantEngagement />

@@ -27217,6 +27217,14 @@ html[dir='rtl'] .guidance-answer {
     max-height: none !important;
   }
 
+  /* The zh-hant home is published straight into the main (no scaffold node), so on phones and tablets
+     the main's 16px gutter boxed its full-width bands; let them reach the screen edges like the footer. */
+  @media (max-width: 1279px) {
+    .site .builder-pub-main:has(> #zh-hant-home[data-zh-hant-design='home']) {
+      padding-inline: 0 !important;
+    }
+  }
+
   @media (min-width: 1280px) {
     .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
       max-width: none !important;

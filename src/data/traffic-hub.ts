@@ -17,6 +17,8 @@ export const TRAFFIC_COLUMN_SLUGS = [
  */
 export const TRAFFIC_LOCALE_COLUMN_SLUGS: Partial<Record<SiteLocale, readonly string[]>> = {
   ko: ['taiwan-left-turn-vs-straight-motorcycle'],
+  'zh-hant': ['taiwan-left-turn-vs-straight-motorcycle'],
+  en: ['taiwan-left-turn-vs-straight-motorcycle'],
 };
 
 /** Hub order for `locale`: locale-specific releases first, then the four-locale core. */

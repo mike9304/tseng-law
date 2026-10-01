@@ -111,13 +111,13 @@ export const TRAFFIC_DIAGRAMS = {
       'zh-hant': {
         alt: '從上方俯瞰設有號誌的路口。土黃色的1號小客車打左方向燈，在路口內左轉；對向的2號機車在綠燈下直行而來。畫面停在機車即將碰到小客車側面之前，兩車路線交會處以紅圈標示。',
         legend: '1號・土黃色小客車：左轉的車輛。2號・深綠色機車：對向直行的機車。橘色閃光是方向燈，紅圈是兩車路線交會的位置。',
-        caption: '左轉的1號車即使已打方向燈，仍應讓對向直行的2號機車先行（道路交通安全規則第102條第1項第7款）。畫面停在兩車路線交會之前。',
+        caption: '左轉的1號車即使已打方向燈，仍應讓對向直行的2號機車先行（道路交通安全規則第102條第1項第7款）。畫面停在兩車路線交會之前。這是假設示意，並非重現本文任何事故或判決。',
         assumption: '假設示例：並非重現本文所引判決或任何實際案件，也不作為判斷過失比例的依據。車道配置、號誌、速度、距離與時間均為說明用的假設。',
       },
       en: {
         alt: 'Overhead view of an intersection with traffic lights. Ochre car 1, left turn signal on, turns left inside the intersection while motorcycle 2 comes straight through from the opposite direction on a green light. The frame stops just before the motorcycle reaches the side of the car, and a red circle marks where their paths cross.',
         legend: '1 · Ochre car: turning left. 2 · Dark green motorcycle: going straight from the opposite direction. Amber flashes are turn signals; the red circle marks where the two paths cross.',
-        caption: 'Even with its turn signal on, car 1 must let oncoming motorcycle 2 go straight through first (Road Traffic Safety Regulations, Article 102(1)(7)). The animation stops before the paths meet.',
+        caption: 'Even with its turn signal on, car 1 must let oncoming motorcycle 2 go straight through first (Road Traffic Safety Regulations, Article 102(1)(7)). The animation stops before the paths meet. This hypothetical illustration does not reconstruct any accident or judgment in the article.',
         assumption: 'Hypothetical example: it does not reconstruct the judgments discussed in the article or any real case, and it is not a basis for apportioning fault. Lane layout, signals, speeds, distances and timing are illustrative assumptions.',
       },
       ja: {

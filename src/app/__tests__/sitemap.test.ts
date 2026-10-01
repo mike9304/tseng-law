@@ -181,14 +181,14 @@ describe('sitemap column lastModified', () => {
       // Native single-locale columns: EN ones are file-backed in columns-en and
       // must stay indexable (no Korean twin); JA ones join the JA details.
       // Traffic hub (4 core-language URLs) + 050 police-records article (4 locale files) add 8.
-      // 2026-10-01 traffic column 051 ships in ko only and adds 1 (467 -> 468, 458 -> 459).
+      // 2026-10-01 traffic column 051 ships in ko, zh-hant and en and adds 3 URLs.
       // 2026-10-01 expertise columns 052-059 add 24 URLs (ko 6, en 8, ja 3, zh-hant 7).
       // 2026-10-01 zh-hant-only domestic columns 060-062 add 3 URLs (zh-hant 3).
       beforeFiltering:
-        495 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        497 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       afterFiltering:
-        486 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
+        488 + NATIVE_LOCALE_COLUMN_FILES.en.length + NATIVE_LOCALE_COLUMN_FILES.ja.length
           + (GUIDANCE_LOCALES_4.length - 21) * 10 + guidanceTranslatedColumnCount + issueBoardUrlCount,
       removed: 9,
     });

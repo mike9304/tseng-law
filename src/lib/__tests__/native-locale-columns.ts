@@ -89,13 +89,15 @@ export const TRAFFIC_COLUMN_FILES_20260930 = {
 
 /**
  * Korean-first traffic column 051 (2026-10-01; traffic column routine ko → zh-Hant → en).
- * Korean only until its translations ship. It is newer than the 2026-09-30 batch and so
- * leads the Korean archive; the helpers below fold it in with that batch because every
+ * Available in Korean, Traditional Chinese and English. It is newer than the 2026-09-30 batch and so
+ * leads those archives; the helpers below fold it in with that batch because every
  * assertion built on them is about "files not mirrored in every locale that lead the
  * newest-first archive". Add its other locales here when their files ship.
  */
 export const TRAFFIC_COLUMN_FILES_20261001 = {
   ko: ['051-taiwan-left-turn-vs-straight-motorcycle.md'],
+  'zh-hant': ['051-taiwan-left-turn-vs-straight-motorcycle.md'],
+  en: ['051-taiwan-left-turn-vs-straight-motorcycle.md'],
 } as const;
 
 /**

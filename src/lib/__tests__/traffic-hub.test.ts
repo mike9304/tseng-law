@@ -1,11 +1,32 @@
 import { describe, expect, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { getColumnPost } from '../columns';
+import { getAllColumnPosts, getColumnPost } from '../columns';
 import { siteLocales } from '../locales';
+import { collectColumnSitemapRecords } from '../column-locales';
 import { trafficColumnSlugsFor, trafficHubCopy } from '@/data/traffic-hub';
 
 describe('traffic hub publication contracts', () => {
+  it('publishes column 051 on the Korean, Traditional Chinese and English hubs with reciprocal sitemap locales', () => {
+    const slug = 'taiwan-left-turn-vs-straight-motorcycle';
+    const expectedLocales = ['ko', 'zh-hant', 'en'] as const;
+    for (const locale of expectedLocales) {
+      expect(trafficColumnSlugsFor(locale)[0], locale).toBe(slug);
+      const post = getColumnPost(slug, locale)!;
+      expect(post?.aiAuthored, locale).toBe(true);
+      expect(post?.diagramVideo?.id, locale).toBe('left-turn-hypothetical');
+      expect(post?.content, locale).toContain(`/${locale}/traffic-accidents`);
+    }
+    expect(trafficColumnSlugsFor('ja')).not.toContain(slug);
+    const records = collectColumnSitemapRecords({
+      postsForLocale: (locale) => getAllColumnPosts(locale).filter((post) => post.slug === slug),
+    });
+    expect(records.map((record) => record.locale).sort()).toEqual([...expectedLocales].sort());
+    for (const record of records) {
+      expect([...record.alternateLocales].sort(), record.locale).toEqual([...expectedLocales].sort());
+    }
+  });
+
   it('links to real localized columns, never another language fallback', () => {
     for (const locale of siteLocales) {
       for (const slug of trafficColumnSlugsFor(locale)) {
@@ -32,7 +53,7 @@ describe('traffic hub publication contracts', () => {
     }
   });
 
-  it('ships Korean-first column 051 only where its file exists, AI-authored and source-linked', () => {
+  it('keeps column 051 AI-authored and source-linked without a Japanese fallback', () => {
     const slug = 'taiwan-left-turn-vs-straight-motorcycle';
     expect(trafficColumnSlugsFor('ko')[0]).toBe(slug);
     const post = getColumnPost(slug, 'ko')!;
@@ -44,10 +65,8 @@ describe('traffic hub publication contracts', () => {
       expect(post.content, source).toContain(source);
     }
     expect(post.content).not.toMatch(/tel:|\+886|\+82|변호사[^\n]{0,20}(검토|감수)/);
-    for (const locale of ['zh-hant', 'en', 'ja'] as const) {
-      expect(trafficColumnSlugsFor(locale)).not.toContain(slug);
-      expect(getColumnPost(slug, locale), locale).toBeFalsy();
-    }
+    expect(trafficColumnSlugsFor('ja')).not.toContain(slug);
+    expect(getColumnPost(slug, 'ja')).toBeFalsy();
   });
 
   it('keeps the new article honestly AI-authored and source-linked in all four languages', () => {

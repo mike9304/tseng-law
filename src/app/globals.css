@@ -27293,3 +27293,150 @@ html[dir='rtl'] .guidance-answer {
   border-color: #c8102e;
 }
 .site:has([data-ja-design]) .site-footer { background: #17140f; }
+
+/* ja shell tokens (Opus 5.5 ja lane): the header, its overlays (mega panel, language picker, mobile menu, search page) and the
+   footer sit outside the ja wrapper, so the 間 palette is remapped on <body> whenever the page renders the ja design.
+   Other locales never match. Keep in step with the token block in JaDesign.module.css. */
+body:has([data-ja-design]) {
+  --purple: #1b1814;
+  --purple-light: #3b352d;
+  --purple-dark: #0e0c09;
+  --purple-bg: #f1ede4;
+  --purple-border: #dcd5c6;
+  --primary: #1b1814;
+  --gold: #c8102e;
+  --gold-light: #e0384f;
+  --gold-dim: #a50d26;
+  --warm-bg: #f2eee5;
+  --warm-bg-alt: #ebe6da;
+  --warm-border: #d8d0c0;
+  --warm-surface: #e8e2d6;
+  --warm-muted: #ddd6c7;
+  --warm-text: #5a544a;
+  --warm-text-dark: #38332c;
+  --off-white: #faf8f4;
+  --cream: #f4f0e7;
+  --gray-50: #f7f4ee;
+  --gray-100: #ede9df;
+  --gray-200: #e2ddd0;
+  --gray-300: #cdc6b6;
+  --gray-400: #a39b8b;
+  --gray-500: #7a7266;
+  --gray-600: #5d564c;
+  --gray-700: #433e36;
+  --gray-800: #2d2a24;
+  --gray-900: #1b1814;
+  --text-heading: #1b1814;
+  --text-body: #38332c;
+  --text-secondary: #5a544a;
+  --text-caption: #8a8274;
+  --text-meta: #5a544a;
+  --text-link: #1b1814;
+  --text-link-hover: #a50d26;
+  --dark-bg: #17140f;
+  --dark-bg-secondary: #100d0a;
+  --dark-card: #221e18;
+  --dark-text: #f5f1e8;
+  --dark-text-secondary: #cfc8ba;
+  --border-light: #e6e0d4;
+  --border-medium: #cdc4b2;
+  --border-dark: #2e2922;
+  --divider: #ece7dc;
+  /* aliases resolved at :root in globals.css do not follow the remap above; rebind the ones the shared blocks use */
+  --accent: #1b1814;
+  --accent-strong: #0e0c09;
+  --accent-purple: #1b1814;
+  --accent-purple-light: #3b352d;
+  --accent-purple-dark: #0e0c09;
+  --accent-purple-bg: #f1ede4;
+  --accent-purple-border: #dcd5c6;
+  --accent-gold: #c8102e;
+  --accent-gold-light: #e0384f;
+  --accent-gold-dim: #a50d26;
+  --highlight: #c8102e;
+  --border-purple: #dcd5c6;
+  --line: #e6e0d4;
+  --line-strong: #cdc4b2;
+  --ink-strong: #1b1814;
+  --ink: #1b1814;
+  --ink-muted: #38332c;
+  --ink-subtle: #5a544a;
+  --text: #38332c;
+  --text-strong: #1b1814;
+  --text-muted: #5a544a;
+  --text-primary: #1b1814;
+  --surface-tint: #faf8f4;
+  --surface-elevated: #f7f4ee;
+  --surface-hero: #faf8f4;
+  --bg-off-white: #faf8f4;
+  --bg-cream: #f4f0e7;
+  --bg-light-purple: #f7f4ee;
+  --shadow-sm: 0 1px 3px rgba(27, 24, 20, 0.05);
+  --shadow-md: 0 6px 14px rgba(27, 24, 20, 0.06);
+  --shadow-lg: 0 14px 32px rgba(27, 24, 20, 0.08);
+  --shadow-card-hover: 0 16px 34px rgba(27, 24, 20, 0.1);
+  --wine: #c8102e;
+  --wine-light: #e0384f;
+  --wine-dark: #a50d26;
+  --wine-muted: #a39b8b;
+}
+
+/* ja shell chrome (Opus 5.5 ja lane): PublicChrome.module.css hard-codes the green ink, so the header, mega panel,
+   mobile drawer, language picker overlay and footer text are re-pointed to sumi and one vermilion here. ja design pages only. */
+body:has([data-ja-design]) .header { border-bottom-color: #e6e0d4; color: #1b1814; }
+body:has([data-ja-design]) .header .header-utility,
+body:has([data-ja-design]) .header .utility-lang,
+body:has([data-ja-design]) .header .header-search-btn,
+body:has([data-ja-design]) .header .mobile-toggle { border-color: #e6e0d4; }
+body:has([data-ja-design]) .header .header-accent-line { background: #e6e0d4; }
+body:has([data-ja-design]) .header .logo-kr,
+body:has([data-ja-design]) .header .nav-link,
+body:has([data-ja-design]) .header .header-search-btn,
+body:has([data-ja-design]) .header .mobile-toggle,
+body:has([data-ja-design]) .header .mega-links a,
+body:has([data-ja-design]) .drawer .drawer-nav-link,
+body:has([data-ja-design]) .drawer .logo-kr { color: #1b1814; }
+body:has([data-ja-design]) .header .utility-nav > a,
+body:has([data-ja-design]) .header .utility-nav > * > a,
+body:has([data-ja-design]) .header .utility-nav > * > button,
+body:has([data-ja-design]) .header .utility-lang > a,
+body:has([data-ja-design]) .header .utility-lang .locale-flag-switcher-link { color: #38332c; }
+body:has([data-ja-design]) .header .nav-link:hover,
+body:has([data-ja-design]) .header .nav-link:focus-visible,
+body:has([data-ja-design]) .header .nav-item.active .nav-link,
+body:has([data-ja-design]) .header .nav-link[aria-current='page'],
+body:has([data-ja-design]) .header .nav-link[aria-current='page']:hover,
+body:has([data-ja-design]) .header .utility-nav > a:hover,
+body:has([data-ja-design]) .header .utility-nav > * > a:hover,
+body:has([data-ja-design]) .header .utility-nav > * > button:hover,
+body:has([data-ja-design]) .header .utility-lang .locale-flag-switcher-link:hover,
+body:has([data-ja-design]) .header .header-search-btn:focus-visible,
+body:has([data-ja-design]) .header .mega-title,
+body:has([data-ja-design]) .header .mega-view-all,
+body:has([data-ja-design]) .header .mega-links a:hover,
+body:has([data-ja-design]) .header .mega-links a:focus-visible { color: #1b1814; }
+body:has([data-ja-design]) .header .nav-link:hover,
+body:has([data-ja-design]) .header .nav-item.active .nav-link { background: rgba(27, 24, 20, 0.05); }
+body:has([data-ja-design]) .header .nav-link[aria-current='page'],
+body:has([data-ja-design]) .header .nav-link[aria-current='page']:hover,
+body:has([data-ja-design]) .header .nav-link[aria-current='page']:focus-visible { box-shadow: inset 0 -2px 0 #c8102e; background: transparent; }
+body:has([data-ja-design]) .header .nav-indicator { background: #c8102e; }
+body:has([data-ja-design]) .header .nav-link:focus-visible,
+body:has([data-ja-design]) .header .header-search-btn:focus-visible { outline-color: #c8102e; border-color: #1b1814; }
+body:has([data-ja-design]) .header .mega-description { color: #5a544a; }
+body:has([data-ja-design]) .header .mega-panel { background: #f2eee5; border-bottom-color: #d8d0c0; }
+body:has([data-ja-design]) .header .mega-links li { border-color: #d8d0c0; }
+body:has([data-ja-design]) .drawer#public-mobile-nav-drawer { background: rgba(27, 24, 20, 0.5); }
+body:has([data-ja-design]) [class*='GlobalLanguagePicker_overlay'] { background: rgba(27, 24, 20, 0.5); }
+body:has([data-ja-design]) .footer .office-link,
+body:has([data-ja-design]) .site-footer .office-link,
+body:has([data-ja-design]) .site-footer .office-link-address,
+body:has([data-ja-design]) .site-footer .footer-main-note,
+body:has([data-ja-design]) .site-footer .footer-link-list a,
+body:has([data-ja-design]) .site-footer .footer-legal-links a,
+body:has([data-ja-design]) .site-footer .social-label,
+body:has([data-ja-design]) .site-footer .footer-copyright-row { color: #d9d3c6; }
+body:has([data-ja-design]) .site-footer .footer-locale-switch .locale-flag-switcher-link { color: #ece7dc; }
+body:has([data-ja-design]) .footer-skyline { background: linear-gradient(180deg, #faf8f4 0%, #f2eee5 100%); }
+body:has([data-ja-design]) .footer-skyline .skyline-image img { filter: grayscale(100%) sepia(0.12) contrast(1.02) brightness(0.99); }
+body:has([data-ja-design]) { background: linear-gradient(180deg, #faf8f4 0%, #fff 220px); }

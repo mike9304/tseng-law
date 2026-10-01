@@ -35,6 +35,7 @@ import { resolveTypography } from '@/lib/builder/columns/typography';
 import type { ColumnTypography } from '@/lib/builder/columns/types';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './ColumnDetail.module.css';
+import zhStyles from './ZhHantColumnDetail.module.css';
 import { isGuidanceLocale4 } from '@/lib/public-guidance';
 import { guidancePublicPath } from '@/lib/public-guidance';
 import { guidanceContent } from '@/data/international-guidance-content';
@@ -310,7 +311,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
         : undefined),
   );
 
-  return (
+  const content = (
     <>
       {showSeo ? (
         <>
@@ -527,4 +528,8 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
       )}
     </>
   );
+  // zh-hant second pass (son7-87 / Opus 5.5): same article inside a scoped wrapper for the split hero and sidebar styling.
+  return locale === 'zh-hant'
+    ? <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="column">{content}</div>
+    : content;
 }

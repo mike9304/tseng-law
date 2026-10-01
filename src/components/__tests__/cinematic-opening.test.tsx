@@ -195,8 +195,8 @@ describe('cinematic opening client-route gate', () => {
   ] as const)('includes the exact homepage pathname %s', (pathname, locale) => {
     expect(isCinematicHomepagePath(pathname, locale)).toBe(true);
     const html = renderRouteShell(pathname, locale);
-    // zh-hant opens on its own cinematic hero instead of the gate (CINEMATIC_OPENING_SKIPPED_LOCALES).
-    if (locale === 'zh-hant') {
+    // zh-hant, ja and en open on their own heroes instead of the gate (CINEMATIC_OPENING_SKIPPED_LOCALES).
+    if (locale === 'zh-hant' || locale === 'ja' || locale === 'en') {
       expect(html).not.toContain('class="cinematic-opening"');
       return;
     }
@@ -272,14 +272,14 @@ describe('cinematic opening client-route gate', () => {
     }
   });
 
-  it('opens the zh-hant home on its own hero (no gate) while ko/en/ja keep the opening', () => {
-    const zh = renderRouteShell('/zh-hant', 'zh-hant');
-    expect(zh).not.toContain('data-cinematic-home="true"');
-    expect(zh).not.toContain('class="cinematic-opening"');
-    expect(zh).toContain('PAGE_CONTENT');
-    for (const locale of ['ko', 'en', 'ja'] as const) {
-      expect(renderRouteShell(`/${locale}`, locale), locale).toContain('class="cinematic-opening"');
+  it('opens the zh-hant, ja and en homes on their own heroes (no gate) while ko keeps the opening', () => {
+    for (const locale of ['zh-hant', 'ja', 'en'] as const) {
+      const html = renderRouteShell(`/${locale}`, locale);
+      expect(html, locale).not.toContain('data-cinematic-home="true"');
+      expect(html, locale).not.toContain('class="cinematic-opening"');
+      expect(html, locale).toContain('PAGE_CONTENT');
     }
+    expect(renderRouteShell('/ko', 'ko')).toContain('class="cinematic-opening"');
   });
 
   it('re-evaluates home → subpage → home instead of caching the first layout path', () => {
@@ -484,7 +484,7 @@ describe('cinematic opening content and semantics', () => {
     );
 
     expect(layoutSource).toContain(
-      "const isLocaleHome = /^\\/(?:ko|en|ja)\\/?$/i.test(pathname ?? '');",
+      "const isLocaleHome = /^\\/(?:ko)\\/?$/i.test(pathname ?? '');",
     );
     expect(layoutSource).toContain(
       'href="/images/brand/hovering-seal-official-opening.webp"',

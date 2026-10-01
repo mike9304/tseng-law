@@ -27189,3 +27189,41 @@ html[dir='rtl'] .guidance-answer {
   border-left: none;
   border-right: 3px solid var(--gold-dim);
 }
+
+/*
+ * Redesigned locale bodies (zh-hant / ja / en, marked with data-<locale>-design) size themselves.
+ * When one is published through the builder, the saved two-node scaffold (root container + legacy
+ * composite) still carries the old fixed canvas height and the 1280px stage width, which left blank
+ * bands or let the body run under the footer, and boxed the full-width bands. Let only the nodes that
+ * contain such a body follow their content and span the page. Other pages and locales are untouched.
+ */
+.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+  min-height: 0 !important;
+  height: auto !important;
+  max-width: none !important;
+}
+.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > .builder-layout-absolute,
+.site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) > div:not(.builder-pub-node) {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+/* Columns: the locale wrapper sits outside the published page, around it. */
+.site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main {
+  max-width: none !important;
+}
+.site :is([data-zh-hant-design], [data-ja-design], [data-en-design]) .builder-pub-main .builder-pub-node:has(.page-header) {
+  width: 100% !important;
+  max-width: 100% !important;
+  left: auto !important;
+}

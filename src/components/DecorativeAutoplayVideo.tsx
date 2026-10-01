@@ -42,6 +42,11 @@ export type DecorativeAutoplayVideoProps = {
    * the video. Defaults to false so below-fold consumers keep their behavior.
    */
   deferVideoUntilPosterPaint?: boolean;
+  /**
+   * With deferVideoUntilPosterPaint, wait for the poster paint on every
+   * viewport, not only mobile. Defaults to false (unchanged behavior).
+   */
+  deferVideoUntilPosterPaintOnAllViewports?: boolean;
   priority?: boolean;
   width?: number;
   height?: number;
@@ -154,15 +159,18 @@ export function shouldWaitForDecorativeVideoPosterPaint({
   mobileViewport,
   posterPainted,
   pageLoadPainted = true,
+  allViewports = false,
 }: {
   deferVideoUntilPosterPaint: boolean;
   mobileViewport: boolean;
   posterPainted: boolean;
   pageLoadPainted?: boolean;
+  /** Also wait on wide viewports (zh-hant home first screen: the poster is the LCP on desktop too). */
+  allViewports?: boolean;
 }): boolean {
   return (
     deferVideoUntilPosterPaint
-    && mobileViewport
+    && (mobileViewport || allViewports)
     && (!posterPainted || !pageLoadPainted)
   );
 }
@@ -186,6 +194,7 @@ export function DecorativeAutoplayVideo({
   sizes = '100vw',
   eagerVideoMount = false,
   deferVideoUntilPosterPaint = false,
+  deferVideoUntilPosterPaintOnAllViewports = false,
   priority = false,
   width,
   height,
@@ -293,6 +302,7 @@ export function DecorativeAutoplayVideo({
     mobileViewport,
     posterPainted,
     pageLoadPainted,
+    allViewports: deferVideoUntilPosterPaintOnAllViewports,
   });
 
   useEffect(() => {

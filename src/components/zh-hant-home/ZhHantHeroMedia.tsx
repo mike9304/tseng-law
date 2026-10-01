@@ -36,6 +36,7 @@ export default function ZhHantHeroMedia() {
         sizes="100vw"
         priority
         deferVideoUntilPosterPaint
+        deferVideoUntilPosterPaintOnAllViewports
         rootMargin="0px"
         controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS['zh-hant']}
       />

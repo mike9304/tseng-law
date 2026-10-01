@@ -224,6 +224,20 @@ describe('home media loading', () => {
       posterPainted: true,
       pageLoadPainted: true,
     })).toBe(false);
+    // zh-hant home first screen: the poster is the LCP on desktop too, so it opts into waiting everywhere.
+    expect(shouldWaitForDecorativeVideoPosterPaint({
+      deferVideoUntilPosterPaint: true,
+      mobileViewport: false,
+      posterPainted: false,
+      allViewports: true,
+    })).toBe(true);
+    expect(shouldWaitForDecorativeVideoPosterPaint({
+      deferVideoUntilPosterPaint: true,
+      mobileViewport: false,
+      posterPainted: true,
+      pageLoadPainted: true,
+      allViewports: true,
+    })).toBe(false);
     expect(shouldMountDecorativeVideo({
       ...eagerMount,
       waitForPosterPaint: true,

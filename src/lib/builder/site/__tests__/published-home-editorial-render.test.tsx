@@ -319,7 +319,12 @@ describe('published July editorial hero strings', () => {
     const labelText = contentString(canvas.nodes.find((node) => node.id === 'home-hero-label'), ['text', 'label']);
     const subtitleText = contentString(canvas.nodes.find((node) => node.id === 'home-hero-subtitle'), ['text', 'label']);
     const columnsLabel = contentString(canvas.nodes.find((node) => node.id === 'home-hero-columns-link'), ['label', 'text']);
-    expect(visibleText(html)).toContain(titleText);
+    // zh-hant Apple pass (2026-10-01): the projected home shows the new display-only headline
+    // (operator: a line that makes Taiwanese readers trust the firm); the saved canvas keeps its text.
+    expect(titleText).toBe('台灣法律，清楚說明。');
+    expect(visibleText(html)).toContain('先聽您說完，');
+    expect(visibleText(html)).toContain('再談怎麼做。');
+    expect(visibleText(html)).not.toContain(titleText);
     // zh-hant second pass (2026-10-01): the projected home shows the firm name as its kicker
     // instead of the saved English label. Display-only; the saved canvas keeps its text.
     expect(labelText).toBe('TAIWAN LEGAL');
@@ -329,7 +334,7 @@ describe('published July editorial hero strings', () => {
     // subtitle with the domestic one. Display-only; the saved canvas keeps its text, and the composite
     // hero below still renders the saved subtitle.
     expect(subtitleText).toBe('具備韓國、日本跨境實務經驗的專業團隊，協助處理台灣法律議題。');
-    expect(visibleText(html)).toContain('律師團隊承辦車禍、離婚、繼承、勞資爭議與刑事案件，事務所在台北、台中、高雄及屏東設有據點。');
+    expect(visibleText(html)).toContain('台灣律師團隊承辦車禍、離婚、繼承、勞資爭議與刑事案件，請先來信說明案情。');
     expect(visibleText(html)).not.toContain(subtitleText);
     // The saved columns-link label belonged to the removed wayfinding strip; the columns
     // section still links the archive.

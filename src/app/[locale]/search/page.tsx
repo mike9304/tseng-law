@@ -9,6 +9,8 @@ import { buildSeoMetadata } from '@/lib/seo';
 import { searchCurrentPublication } from '@/lib/builder/search/current-search';
 import type { SearchDocKind } from '@/lib/builder/search/types';
 import styles from './SearchPage.module.css';
+import zhPageShellStyles from '@/components/zh-hant-pages/ZhHantPageShell.module.css';
+import zhSearchStyles from './ZhHantSearch.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -115,7 +117,7 @@ export default async function SearchPage(
     label: searchKindLabel(id, locale),
   }));
 
-  return (
+  const body = (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
         <form className={`search-bar ${styles.searchBar}`} action={`/${locale}/search`} method="get">
@@ -181,4 +183,13 @@ export default async function SearchPage(
       </section>
     </>
   );
+  // zh-hant Apple pass (2026-10-01): the same page inside a scoped wrapper; other locales render unchanged.
+  if (locale === 'zh-hant') {
+    return (
+      <div className={`${zhPageShellStyles.shell} ${zhSearchStyles.root}`} id="zh-hant-search" data-zh-hant-design="search">
+        {body}
+      </div>
+    );
+  }
+  return body;
 }

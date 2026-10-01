@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { normalizeSiteLocale, siteLocales, type SiteLocale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
+import JaPageShell from '@/components/ja-design/JaPageShell';
 import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
@@ -115,7 +116,7 @@ export default async function SearchPage(
     label: searchKindLabel(id, locale),
   }));
 
-  return (
+  const body = (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
         <form className={`search-bar ${styles.searchBar}`} action={`/${locale}/search`} method="get">
@@ -181,4 +182,7 @@ export default async function SearchPage(
       </section>
     </>
   );
+
+  // ja: the shared 間 shell carries the palette and page header treatment; other locales render as before.
+  return locale === 'ja' ? <JaPageShell page="search">{body}</JaPageShell> : body;
 }

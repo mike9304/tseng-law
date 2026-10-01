@@ -26,7 +26,7 @@
 /* Firm history */
 .firm { padding: 88px 0; background: #fff; }
 .firmGrid { display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr); gap: 48px 80px; align-items: start; }
-.firmAside { position: sticky; top: 112px; }
+.firmAside { position: sticky; top: calc(var(--header-offset-desktop, 64px) + 24px); }
 /* The logo PNG is light text on transparent: keep it on its green plate. */
 .firmLogo { display: inline-block; max-width: 360px; padding: 16px 20px; background: var(--zh-ink); border-radius: 2px; }
 .firmLogo img { width: 100%; height: auto; display: block; }
@@ -76,8 +76,8 @@
   .root:global(#zh-hant-about) :global(.page-header) { padding: 40px 0 44px; }
   .fact { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 14px 0; }
   .fact dd { font-size: 22px; }
-  .jumps { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
-  .jumps a { flex: 0 0 auto; }
+  .jumps { gap: 8px; }
+  .jumps a { padding: 6px 14px; font-size: 14px; }
   .firm { padding: 56px 0; }
   .entry { grid-template-columns: minmax(0, 1fr); padding: 0 0 28px 22px; }
   .entryYear:empty { display: none; }

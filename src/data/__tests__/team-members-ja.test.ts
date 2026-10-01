@@ -129,7 +129,7 @@ describe('Japanese team content', () => {
       '한국 유학생 헬스장 손해배상 사건에서 1심 승소 후 항소심에서 화해로 종결된 사례가 있습니다.',
     );
     expect(teamContent['zh-hant'].members[0].intro[1]).toBe(
-      '曾代理韓國留學生健身傷害求償案，一審勝訴，其後於二審和解結案。',
+      '曾代理韓國留學生健身房受傷求償案，一審勝訴，二審和解結案。',
     );
     for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
       expect(JSON.stringify(teamContent[locale].members)).not.toMatch(

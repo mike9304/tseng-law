@@ -89,3 +89,8 @@
   .detail:global(.en-column) :global(.column-faq-answer) { margin-left: 0; }
 }
 .detail :global(.column-toc-link) { display: inline-block; padding-block: 4px; }
+/* Phones: every "In this article" entry is a 44px target (one-line entries measured 31px at 390). */
+@media (max-width: 767px) {
+  .detail :global(.column-toc-link) { display: flex; align-items: center; min-height: 44px; padding-block: 6px; }
+  .detail:global(.en-column) :global(.column-toc-list) { gap: 2px; }
+}

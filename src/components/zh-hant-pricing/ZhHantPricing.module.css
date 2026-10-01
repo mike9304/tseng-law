@@ -84,3 +84,25 @@
   .cta { padding: 28px 22px; }
   .cta :global(.button) { width: 100%; justify-content: center; }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.headerActions :global(.button),
+.cta :global(.button) { background: #f4efe2; border-color: #f4efe2; color: var(--zh-ink); border-radius: 2px; letter-spacing: 0.04em; }
+.headerActions :global(.button:hover),
+.cta :global(.button:hover) { background: #fff; border-color: #fff; }
+.headerActions :global(.button svg) { display: none; }
+.board { box-shadow: none; }
+.rowHead { grid-template-columns: minmax(0, 1fr); }
+.rowIcon { display: none; }
+.rowTitle, .rowPrice { grid-column: 1; }
+.details li { padding-left: 20px; }
+.details li::before { top: 0.88em; width: 10px; height: 1px; background: #8f9893; transform: none; }
+.steps { gap: 0 24px; }
+.steps li { padding: 14px 0 0; border-top: 1px solid var(--zh-line); }
+.steps li:not(:last-child)::after { content: none; }
+.stepNo { width: auto; height: auto; justify-content: flex-start; border-radius: 0; background: none; color: #7a5c20; font-size: 15px; }
+.note { border-left-color: var(--zh-ink); background: #f5f3ee; }
+.cta { border-radius: 2px; }
+@media (max-width: 767px) {
+  .board { box-shadow: none; margin-right: 0; }
+}

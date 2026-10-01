@@ -137,3 +137,11 @@ a.switchCard:hover, .switchCard:not(.switchActive):hover { border-color: #8aa592
   .switchText, .switchLatest { display: none; }
   .root:global(#zh-hant-columns) :global(.page-header) { padding: 28px 0 60px; }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.root:global(#zh-hant-columns) :global(.columns-filters .columns-filter-btn) { border-radius: 2px; }
+.switchCard { border-radius: 2px; box-shadow: none; }
+.switchActive { border-width: 1px; border-top: 3px solid var(--zh-ink); }
+.switchActive .switchTitle::before { content: none; }
+.switchCount { border-radius: 2px; }
+.switchLatest li::before { width: 8px; height: 1px; top: 0.85em; transform: none; }

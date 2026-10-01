@@ -86,3 +86,16 @@
   .contactActions :global(.button) { width: 100%; justify-content: center; }
   .officeList li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.jumps { gap: 0 28px; }
+.jumps a { padding: 0; border: none; border-radius: 0; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgb(244 239 226 / 45%); text-underline-offset: 6px; }
+.jumps a:hover { background: transparent; text-decoration-color: currentColor; }
+.contactLabel { display: none; }
+.contactActions :global(.button) { background: #f4efe2; border-color: #f4efe2; color: var(--zh-ink); border-radius: 2px; }
+.contactActions :global(.button:hover) { background: #fff; border-color: #fff; }
+.entry:has(.entryYear:not(:empty))::before { background: var(--zh-ink); border-color: var(--zh-ink); }
+@media (max-width: 767px) {
+  .jumps { gap: 0 22px; }
+  .jumps a { padding: 0; }
+}

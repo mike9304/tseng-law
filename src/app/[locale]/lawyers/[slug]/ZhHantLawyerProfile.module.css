@@ -63,3 +63,11 @@
   .root:global(#zh-hant-lawyer-profile) :global(.profile-proof-card) { padding-left: 52px; }
   .root:global(#zh-hant-lawyer-profile) :global(.profile-proof-card)::before { font-size: 24px; }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.root:global(#zh-hant-lawyer-profile) :global(.profile-hero-photo) { box-shadow: none; }
+.root:global(#zh-hant-lawyer-profile) :global(.profile-chip:not(.profile-chip--entity)) { border-radius: 2px; }
+.root:global(#zh-hant-lawyer-profile) :global(.profile-hero-cta) { border-radius: 2px; }
+@media (max-width: 767px) {
+  .root:global(#zh-hant-lawyer-profile) :global(.profile-hero-photo) { box-shadow: none; max-width: 100%; }
+}

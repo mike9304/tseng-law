@@ -48,3 +48,9 @@
   .band { padding: 48px 0; }
   .band :global(.button) { width: 100%; justify-content: center; }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.band :global(.button) { border-radius: 2px; }
+@media (max-width: 1000px) {
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { border-radius: 2px; }
+}

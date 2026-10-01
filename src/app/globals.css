@@ -27245,3 +27245,24 @@ html[dir='rtl'] .guidance-answer {
     }
   }
 }
+
+/* zh-hant pages incl. home: secondary text on the stone/paper bands needs ≥4.5:1 (#5f7869 gave 4.33). */
+.site [data-zh-hant-design] {
+  --text-secondary: #4f5b55;
+}
+
+/* zh-hant pages (pro pass, son7-87 / Opus 5.5, 2026-10-01): a Chinese page carries no English eyebrows
+   (SERVICES, OUR TEAM, GUIDE, EMAIL, OFFICES, FAQ…), and every action has the same 2px corner. The home
+   has its own rules in ZhHantDesign.module.css. */
+.site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns) .page-header .section-label,
+.site #zh-hant-about .attorney-team-section > .container > .section-label,
+.site #zh-hant-lawyer-profile .section[class*='FAQAccordion'] > .container > .section-label,
+.site #zh-hant-contact :is(.consultation-guide-section, #offices) > .container > .section-label,
+.site #zh-hant-contact .messenger-header .section-label-text,
+.site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-lawyer-profile, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns, #zh-hant-column, [data-zh-hant-design='service-detail']) :is(.ornament-divider, .split-divider) {
+  display: none !important;
+}
+.site :is(#zh-hant-services, #zh-hant-pricing, #zh-hant-about, #zh-hant-lawyers, #zh-hant-lawyer-profile, #zh-hant-contact, #zh-hant-faq, #zh-hant-columns, #zh-hant-column, [data-zh-hant-design='service-detail']) .button {
+  border-radius: 2px !important;
+}
+

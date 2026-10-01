@@ -122,3 +122,14 @@
 /* Visible focus on the green hero (default ring is green-on-green). */
 /* (0,3,1): beats the shared module's later .hero .svc-back-link:focus-visible. */
 .hero:global(.svc-hero) :is(a, button):focus-visible { outline: 3px solid var(--zh-cream, #f4efe2); outline-offset: 3px; }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.heroCta { background: #f4efe2 !important; border-color: #f4efe2 !important; border-radius: 2px; letter-spacing: 0.04em; }
+.heroCta:hover { background: #fff !important; border-color: #fff !important; }
+.heroCta svg { display: none; }
+.root :global(.svc-col-card) { border-radius: 2px; }
+.root :global(.svc-col-card:hover) { box-shadow: none; border-color: var(--zh-ink, #16382d); }
+.root :global(.svc-sidebar-card) { border-radius: 2px; }
+.root .contactPanel :global(a.svc-sidebar-btn) { border-radius: 2px; }
+.root :global(.authority-card) { border-radius: 2px; box-shadow: none; }
+.root :global(.svc-col-badge) { display: none; }

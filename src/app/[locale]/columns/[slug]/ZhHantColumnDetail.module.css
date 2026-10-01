@@ -44,3 +44,7 @@
 @media (max-width: 767px) {
   .root:global(#zh-hant-column) :global(.blog-hero .blog-hero-title) { font-size: 28px; }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.root:global(#zh-hant-column) :global(.blog-sidebar > .blog-sidebar-card:first-child .button) { background: #f4efe2; border-color: #f4efe2; color: var(--zh-ink); border-radius: 2px; }
+.root:global(#zh-hant-column) :global(.blog-hero .blog-category-badge) { background: transparent; color: var(--zh-gold); border-color: transparent; padding-inline: 0; letter-spacing: 0.12em; }

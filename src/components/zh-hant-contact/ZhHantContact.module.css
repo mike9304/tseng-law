@@ -72,3 +72,15 @@
   .root:global(#zh-hant-contact) :global(p[role='note'] + .contact-grid),
   .root:global(#zh-hant-contact) :global([data-builder-surface-key='locations-label'] + .contact-grid) { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) { box-shadow: none; }
+.root:global(#zh-hant-contact) :global(.page-header .contact-email-actions__row .button) { border-radius: 2px; }
+.root:global(#zh-hant-contact) :global(.messenger-card) { border: none; border-top: 1px solid var(--zh-line); border-left: none; background: transparent; }
+@media (max-width: 767px) {
+  .root:global(#zh-hant-contact) :global(.page-header .contact-email-actions) { box-shadow: none; margin-right: 0; }
+}
+.root:global(#zh-hant-contact) :global(.messenger-features) { padding: 20px 0 0; border: none; border-top: 1px solid var(--zh-line); border-radius: 0; background: transparent; }
+.root:global(#zh-hant-contact) :global(.contact-grid > .card) { border-radius: 2px; box-shadow: none; }
+.root:global(#zh-hant-contact) :global(p[role='note'] ~ .contact-grid > .card),
+.root:global(#zh-hant-contact) :global(.contact-grid > .card:only-child) { padding: 20px 0 0; border: none; border-top: 1px solid var(--zh-line); background: transparent; }

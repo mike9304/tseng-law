@@ -49,3 +49,9 @@
   .team:global(#team) :global(.attorney-card--sub .attorney-card-info) { padding: 18px 20px 20px; }
   .team:global(#team) :global(.attorney-partner-wrap .attorney-card--sub .attorney-card-info) { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.team:global(#team) :global(.attorney-card--lead) { box-shadow: none; border-top-width: 1px; }
+.team:global(#team) :global(.attorney-card--sub) { border: none; border-top: 1px solid var(--zh-line); background: transparent; }
+.team:global(#team) :global(.attorney-group-badge) { padding: 0; background: none; color: #7a5c20; letter-spacing: 0.12em; }
+.team:global(#team) :global(.attorney-card .button) { border-radius: 2px; }

@@ -150,3 +150,27 @@
 
 /* Visible focus on the green page header (default ring is green-on-green). */
 .root:global(#zh-hant-services) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream, #f4efe2); outline-offset: 3px; }
+
+/* ===== Pro pass (son7-87 / Opus 5.5, 2026-10-01): quiet authority — cream 2px actions on ink, no offset shadows, hairlines over boxes. ===== */
+.heroActions :global(.button) { background: #f4efe2; border-color: #f4efe2; color: var(--zh-ink); border-radius: 2px; letter-spacing: 0.04em; }
+.heroActions :global(.button:hover) { background: #fff; border-color: #fff; }
+.heroActions :global(.button svg) { display: none; }
+.practiceNav { gap: 0 28px; padding-block: 12px; border-bottom-color: #dcd7cb; }
+.practiceNav a { padding: 0; border: none; border-radius: 0; background: transparent; font-size: 15px; font-weight: 600; color: var(--zh-ink); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgb(22 56 45 / 30%); text-underline-offset: 6px; }
+.practiceNav a:hover { background: transparent; text-decoration-color: currentColor; }
+.groupHead { border-bottom: 1px solid var(--zh-ink); }
+.groupGrid { gap: 8px 48px; }
+.card > article { padding: 26px 0 10px; background: transparent; border: none; border-top: 1px solid #dcd7cb; border-radius: 0; }
+.card > article:hover { box-shadow: inset 0 2px 0 var(--zh-ink); }
+.cardIcon { display: none; }
+.cardTags { gap: 0; }
+.cardTags li { padding: 0; border-radius: 0; background: none; font-size: 14px; color: #4f5b55; }
+.cardTags li + li::before { content: '·'; margin: 0 8px; color: #8f9893; }
+.cardLink { border-top: none; padding-top: 0; }
+.contact { border-left: none; border-top: 1px solid var(--zh-ink); background: #f5f3ee; }
+.contact :global(.button) { border-radius: 2px; }
+.contact :global(.button svg) { display: none; }
+@media (max-width: 767px) {
+  .card > article { padding: 20px 0 6px; }
+  .practiceNav { gap: 0 22px; }
+}

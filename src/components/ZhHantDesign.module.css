@@ -266,7 +266,7 @@
 .doorTitle { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.5; color: var(--zh-ink, #16382d); }
 .doorText { margin: 0; font-size: 15px; line-height: 1.8; color: var(--zh-muted, #4f5b55); }
 .doorLinks { margin: 4px 0 0; display: flex; flex-direction: column; align-items: flex-start; font-size: 15px; }
-.doorLinks a { display: inline-flex; align-items: center; min-height: 40px; color: var(--zh-ink, #16382d); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgb(22 56 45 / 30%); text-underline-offset: 6px; }
+.doorLinks a { display: inline-flex; align-items: center; min-height: 44px; color: var(--zh-ink, #16382d); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgb(22 56 45 / 30%); text-underline-offset: 6px; }
 .doorLinks a:hover { text-decoration-color: currentColor; }
 .doorLinks a:focus-visible { outline: 3px solid var(--zh-ink, #16382d); outline-offset: 2px; border-radius: 2px; }
 
@@ -447,6 +447,10 @@
   text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgb(22 56 45 / 30%); text-underline-offset: 6px;
 }
 .home:global(#zh-hant-home) :global(.hero .hero-quick-menu a:hover) { background: transparent; text-decoration-color: currentColor; }
+.home:global(#zh-hant-home) :global(.hero .hero-quick-menu a) { min-width: 44px; justify-content: center; }
+.home:global(#zh-hant-home) :global(.hero .hero-trust-rating),
+.home:global(#zh-hant-home) :global(.hero a[data-hero-slot='byline']),
+.home:global(#zh-hant-home) :global(.split-content .link-underline) { display: inline-flex; align-items: center; min-height: 44px; }
 .home:global(#zh-hant-home) :global(.hero .hero-quick-menu svg) { display: none; }
 
 /* Services: open columns ruled by a hairline, no icons, counters or pills */
@@ -548,7 +552,6 @@
   .doorList { grid-template-columns: minmax(0, 1fr); }
   .door { padding: 20px 0; border-left: none; border-top: 1px solid var(--zh-line, #dcd7cb); }
   .door:first-child { padding-top: 8px; border-top: none; }
-  .doorLinks a { min-height: 44px; }
   .home:global(#zh-hant-home) :global(.hero[data-presentation='editorial']) { padding-top: 44px; }
   .home:global(#zh-hant-home) :global(.hero .container.hero-inner) { padding-bottom: 0 !important; }
   .home:global(#zh-hant-home) :global(.hero [data-hero-slot='media-frame']) { width: calc(100% + 48px); max-width: none; }

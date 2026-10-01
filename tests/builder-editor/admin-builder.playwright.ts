@@ -1234,7 +1234,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(mapAddressInput).not.toHaveValue('');
     const originalMapAddress = await mapAddressInput.inputValue();
     const temporaryMapAddress = originalMapAddress.includes('承德路')
-      ? '臺中市北區館前路19號樓之1'
+      ? '臺中市北區館前路19號6樓之1'
       : '台北市大同區承德路一段35號7樓之2';
     const officeCardAddress = page.locator('[data-node-id="home-offices-layout-0-card-address"]').first();
     const officeMapUrlInput = page.getByLabel(/Office map URL|사무소 지도 URL/);

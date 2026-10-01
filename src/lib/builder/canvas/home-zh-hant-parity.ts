@@ -142,6 +142,9 @@ function addMissingEmailCta(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
   return result;
 }
 
+// Read-time matchers for the July-2026 stored home (see fixtures/legacy-zh-home-july.json).
+// The Taichung value is intentionally the old, wrong stored string (missing 「6」); a match is
+// projected to preset.address (correct: 19號6樓之1, confirmed 2026-10-01). Do not "fix" it here.
 const LEGACY_OFFICE_ADDRESSES: Record<string, string> = {
   taipei: '台北市大同區承德路一段35號7樓之2',
   taichung: '臺中市北區館前路19號樓之1',

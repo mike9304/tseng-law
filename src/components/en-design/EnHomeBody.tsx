@@ -13,7 +13,6 @@ import { EN_HOME_FAQ_ORDER, EN_SERVICE_ORDER, orderByList } from './en-design-da
 import { EnHeroTrust, EnProcessAndFees, EnSituationIndex } from './EnHomeParts';
 import EnHeroMedia from './EnHeroMedia';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
-import { EN_FONT_CLASSES } from './en-fonts';
 import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import pageStyles from './EnPage.module.css';
 import styles from './EnHome.module.css';
@@ -56,7 +55,10 @@ const EN_HERO_CHIPS = [
 export default function EnHomeBody({ posts, faqItems }: Props) {
   const orderedFaq = orderByList(faqItems, (item) => item.question, EN_HOME_FAQ_ORDER);
   return (
-    <div className={`${homeEditorialStyles.root} ${pageStyles.root} ${styles.home} ${EN_FONT_CLASSES}`} id="en-home" data-en-design="home">
+    <div className={`${homeEditorialStyles.root} ${pageStyles.root} ${styles.home}`} id="en-home" data-en-design="home">
+      {/* First-screen faces: fetched with the document so the headline does not swap after paint. */}
+      <link rel="preload" href="/fonts/en/inter-tight-latin-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/en/ibm-plex-mono-500-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <BuilderSurfaceProvider nodeId="home-hero" mode="published" overrides={EN_HERO_OVERRIDES} selectedSurfaceKey={null}>
         <HeroSearch
           locale="en"

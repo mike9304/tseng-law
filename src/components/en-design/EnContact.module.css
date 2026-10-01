@@ -7,8 +7,8 @@
 .contact :global(.page-header .contact-email-actions__row) { display: flex; flex-wrap: wrap; gap: 10px; }
 .contact :global(.page-header .contact-email-actions__row a),
 .contact :global(.page-header .contact-email-actions__row button) { min-height: 48px; padding: 10px 22px; border-radius: 999px; font-weight: 700; flex: 0 1 auto; width: auto; }
-.contact :global(.page-header .contact-email-actions__row a) { border: 2px solid var(--en-signal); background: var(--en-signal); color: var(--en-ink); }
-.contact :global(.page-header .contact-email-actions__row button) { border: 2px solid rgb(255 255 255 / 70%); background: transparent; color: #fff !important; }
+.contact :global(.page-header .contact-email-actions__row a) { border: 2px solid var(--en-signal) !important; background: var(--en-signal) !important; color: var(--en-ink) !important; }
+.contact :global(.page-header .contact-email-actions__row button) { border: 2px solid rgb(255 255 255 / 70%) !important; background: transparent !important; color: #fff !important; }
 .contact :global(.page-header .contact-email-actions__row button *) { color: #fff !important; }
 .contact :global(.page-header .contact-email-actions__status) { color: #d3d6da; }
 .contact :global(.page-header .contact-email-actions__note) { font-size: 15px; line-height: 1.6; color: #d3d6da; }

@@ -4,6 +4,10 @@
  * Scoped to `.root[data-en-design][id]` (specificity beats the shared `.site[data-locale='en']` rules);
  * other locales never render this wrapper.
  */
+/* Self-hosted en faces (Inter Tight variable 500-800 for display, IBM Plex Mono 500 for labels; both SIL OFL, latin subset). */
+@font-face { font-family: 'EN Inter Tight'; font-style: normal; font-weight: 500 800; font-display: swap; src: url('/fonts/en/inter-tight-latin-var.woff2') format('woff2'); }
+@font-face { font-family: 'EN Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/en/ibm-plex-mono-500-latin.woff2') format('woff2'); }
+
 .root {
   --en-ink: #0a0b0d;
   --en-ink-2: #14171b;
@@ -18,8 +22,8 @@
   --en-signal-text: #0a0b0d;
   --en-sage: #0a0b0d;
   --en-sans: var(--font-body);
-  --en-display: var(--en-font-display-loaded, var(--font-body)), var(--font-body), system-ui, sans-serif;
-  --en-mono: var(--en-font-mono-loaded, ui-monospace), ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --en-display: 'EN Inter Tight', var(--font-body), system-ui, sans-serif;
+  --en-mono: 'EN Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
   --en-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   /* Remap the shared green/gold palette to the en neutrals so shared components (accordions, tabs, cards,
      buttons) pick up ink / paper / signal without markup changes. Scoped to this wrapper only. */

@@ -27306,3 +27306,6 @@ html[dir='rtl'] .guidance-answer {
 .site[data-locale='en'] footer.site-footer .footer-main,
 .site[data-locale='en'] footer.site-footer .footer-copyright-row,
 .site[data-locale='en'] footer.site-footer .footer-bottom-bar { border-color: rgb(255 255 255 / 14%); background: transparent; }
+.site[data-locale='en'] .scroll-top { background: #0a0b0d; border-color: rgb(255 255 255 / 30%); color: #ffc61a; }
+.site[data-locale='en'] .scroll-top:hover,
+.site[data-locale='en'] .scroll-top:focus-visible { background: #ffc61a; border-color: #ffc61a; color: #0a0b0d; }

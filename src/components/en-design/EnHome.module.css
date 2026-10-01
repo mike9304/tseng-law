@@ -392,7 +392,7 @@
   .heroBackdropImage { object-position: 50% 50%; }
   .heroBackdropPlayer::after {
     background:
-      linear-gradient(180deg, rgb(5 7 9 / 70%) 0%, rgb(5 7 9 / 40%) 40%, rgb(5 7 9 / 30%) 62%, rgb(5 7 9 / 86%) 100%);
+      linear-gradient(180deg, rgb(5 7 9 / 72%) 0%, rgb(5 7 9 / 56%) 38%, rgb(5 7 9 / 66%) 58%, rgb(5 7 9 / 90%) 100%);
   }
 }
 

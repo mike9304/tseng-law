@@ -112,7 +112,10 @@
 .heroActions :global(.button) { background: var(--zh-gold); border-color: var(--zh-gold); color: var(--zh-ink); font-weight: 700; }
 .heroActions > a:last-child:not(:global(.button)) { color: var(--zh-cream); }
 .heroVisual { border-radius: 2px; }
-.practiceNav { position: sticky; top: 0; z-index: 5; background: #fff; }
+/* Sticks just below the fixed site header (--header-offset-desktop tracks its height: 137px desktop, 65px narrow). */
+.practiceNav { position: sticky; top: var(--header-offset-desktop, 64px); z-index: 5; background: #fff; }
+/* Anchor targets clear the header and the sticky nav (~92px). */
+.root:global(#zh-hant-services) :global([id]) { scroll-margin-top: calc(var(--header-offset-desktop, 64px) + 108px); }
 
 .groups { padding: 64px 0 24px; background: #fff; }
 .group + .group { margin-top: 64px; }
@@ -121,7 +124,7 @@
 .groupText { margin: 0; font-size: 16px; color: #4d5b54; }
 .groupGrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .card { display: flex; min-width: 0; }
-.card > article { display: flex; flex-direction: column; gap: 14px; width: 100%; padding: 28px; background: #fafbf8; border: 1px solid #dbe1d7; border-top: 3px solid var(--zh-ink); border-radius: 4px; scroll-margin-top: 96px; }
+.card > article { display: flex; flex-direction: column; gap: 14px; width: 100%; padding: 28px; background: #fafbf8; border: 1px solid #dbe1d7; border-top: 3px solid var(--zh-ink); border-radius: 4px; }
 .cardIcon { display: inline-flex; width: 36px; height: 36px; color: var(--zh-ink); }
 .cardTitle { margin: 0; font-family: var(--font-serif-tc); font-size: 22px; line-height: 1.5; color: var(--zh-ink); }
 .cardText { margin: 0; font-size: 15.5px; line-height: 1.85; color: #3c4a43; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -141,7 +144,7 @@
   .groupTitle { font-size: 26px; }
   .groupGrid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .card > article { padding: 22px; }
-  .practiceNav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-inline: 24px; }
+  .practiceNav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 10px 24px; }
   .practiceNav a { flex: 0 0 auto; }
 }
 

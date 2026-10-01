@@ -102,7 +102,7 @@
 }
 .root :global(.svc-keypoints-list li:last-child) { border-bottom: 1px solid #dbe1d7; }
 .root :global(.svc-keypoints-list li::before) {
-  top: 20px; left: 0; font-family: var(--font-serif-tc); font-size: 28px; line-height: 1.2; color: var(--zh-gold); font-weight: 700;
+  top: 20px; left: 0; font-family: var(--font-serif-tc); font-size: 28px; line-height: 1.2; color: #8a6a2a; font-weight: 700; /* 5.03:1 on white */
 }
 .root :global(.svc-review-note) { border-left-color: var(--zh-gold); }
 
@@ -113,8 +113,8 @@
 
 @media (max-width: 767px) {
   .hero:global(.svc-hero) { padding: 40px 0; }
-  .root :global(.svc-keypoints-list li) { padding-left: 48px; font-size: 16px; }
-  .root :global(.svc-keypoints-list li::before) { font-size: 22px; }
+  .root :global(.svc-keypoints-list li) { padding-left: 0; font-size: 16px; }
+  .root :global(.svc-keypoints-list li::before) { position: static; display: block; margin-bottom: 6px; font-size: 22px; }
 }
 /* The shared ServiceDetail module paints the hero after this file; win explicitly. */
 .hero.hero:global(.svc-hero) { background: var(--zh-ink) !important; }

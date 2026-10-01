@@ -24,7 +24,7 @@
 .jumps a:hover { background: rgb(244 239 226 / 12%); }
 
 /* Firm history */
-.firm { padding: 88px 0; background: #fff; scroll-margin-top: 88px; }
+.firm { padding: 88px 0; background: #fff; }
 .firmGrid { display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr); gap: 48px 80px; align-items: start; }
 .firmAside { position: sticky; top: 112px; }
 /* The logo PNG is light text on transparent: keep it on its green plate. */
@@ -44,7 +44,6 @@
 .entryLead p { font-family: var(--font-serif-tc); font-size: 19px; line-height: 1.9; color: var(--zh-ink); }
 
 /* Team (shared AttorneyProfileSection, restyled inside the zh-hant about page only) */
-.team { scroll-margin-top: 88px; }
 .root:global(#zh-hant-about) .team :global(.attorney-team-section) { background: var(--zh-paper); padding: 88px 0; }
 .root:global(#zh-hant-about) .team :global(.section-title) { font-family: var(--font-serif-tc); font-size: clamp(30px, 3vw, 40px); line-height: 1.4; color: var(--zh-ink); }
 .root:global(#zh-hant-about) .team :global(.section-lede) { font-size: 17px; color: #4d5b54; margin-bottom: 40px; }
@@ -78,7 +77,7 @@
 .root:global(#zh-hant-about) .team :global(.attorney-card a:focus-visible) { outline: 3px solid var(--zh-ink); outline-offset: 3px; }
 
 /* Compact contact band */
-.contact { padding: 80px 0; background: var(--zh-ink); color: var(--zh-cream); scroll-margin-top: 88px; }
+.contact { padding: 80px 0; background: var(--zh-ink); color: var(--zh-cream); }
 .contactGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 80px; align-items: start; }
 .contactLabel { margin: 0 0 10px; font-size: 13px; letter-spacing: 0.16em; color: var(--zh-gold); }
 .contactTitle { margin: 0 0 10px; font-family: var(--font-serif-tc); font-size: clamp(30px, 3vw, 40px); line-height: 1.4; color: var(--zh-cream); }

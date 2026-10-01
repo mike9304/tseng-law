@@ -4,9 +4,12 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
+  APPLY_DISABLED_MESSAGE,
   current9LayoutFrom,
   formatDedupePlan,
+  parseArgs,
   planZhHomeDedupe,
+  runZhHomeDedupe,
 } from '../scripts/dedupe-zh-home-2026-09-28.mjs';
 import * as parity from '../src/lib/builder/canvas/home-composite-parity.ts';
 import { createHomePageCanvasDocument } from '../src/lib/builder/canvas/seed-home.ts';
@@ -102,5 +105,69 @@ describe('dedupe-zh-home-2026-09-28 planner', () => {
     const clean = { ...zhDocument, nodes: zhDocument.nodes.filter((node) => !node.parentId && node.kind === 'composite') };
     expect(plan(clean).error).toMatch(/already deduplicated/);
     expect(planZhHomeDedupe(zhDocument, koFrom(zhDocument)).error).toMatch(/current9 layout/);
+  });
+});
+
+describe('dedupe-zh-home-2026-09-28 writes are disabled (A4 P1)', () => {
+  const quiet = { stdout: { write() {} } };
+  const pages = [
+    { pageId: 'zh-home', locale: 'zh-hant', isHomePage: true },
+    { pageId: 'ko-home', locale: 'ko', isHomePage: true },
+  ];
+
+  function recordingDeps(overrides = {}) {
+    const writes = [];
+    const forbidden = (name) => async () => {
+      writes.push(name);
+      throw new Error(`${name} must not be called`);
+    };
+    return {
+      writes,
+      deps: {
+        readSiteDocument: async () => ({ pages }),
+        readPublishedPageCanvas: async (page) => (page.locale === 'zh-hant' ? zhDocument : koFrom(zhDocument)),
+        current9Layout: layout,
+        matchCurrent9PublishedHomeEditorial,
+        builderCanvasDocumentSchema,
+        // Write-capable functions a caller might still pass; none may be reached.
+        updatePageCanvasRecord: forbidden('updatePageCanvasRecord'),
+        publishPageThroughPipeline: forbidden('publishPageThroughPipeline'),
+        runPublishChecks: forbidden('runPublishChecks'),
+        ...overrides,
+      },
+    };
+  }
+
+  it('rejects --apply on the CLI and keeps the dry-run default', () => {
+    expect(() => parseArgs(['--apply'])).toThrow(APPLY_DISABLED_MESSAGE);
+    expect(() => parseArgs(['--dry-run', '--apply'])).toThrow(APPLY_DISABLED_MESSAGE);
+    expect(parseArgs([]).apply).toBe(false);
+    expect(() => parseArgs(['--backup-dir=/tmp/x'])).toThrow(/Unknown argument/);
+  });
+
+  it('rejects { apply: true } on the exported runner before any read or write', async () => {
+    const reads = [];
+    const { deps, writes } = recordingDeps({
+      readSiteDocument: async () => {
+        reads.push('readSiteDocument');
+        return { pages };
+      },
+    });
+    await expect(runZhHomeDedupe({ apply: true, siteId: 'tseng-law-main-site' }, deps, quiet)).rejects.toThrow(APPLY_DISABLED_MESSAGE);
+    expect(reads).toEqual([]);
+    expect(writes).toEqual([]);
+  });
+
+  it('a dry run through the runner validates the plan and never reaches a write or publish function', async () => {
+    const { deps, writes } = recordingDeps();
+    const result = await runZhHomeDedupe({ apply: false, siteId: 'tseng-law-main-site' }, deps, quiet);
+    expect(result.ok).toBe(true);
+    expect(result.applied).toBe(false);
+    expect(writes).toEqual([]);
+  });
+
+  it('leaves no persistence write, backup or publish call in the script source', () => {
+    const source = readFileSync(path.join(process.cwd(), 'scripts/dedupe-zh-home-2026-09-28.mjs'), 'utf8');
+    expect(source).not.toMatch(/updatePageCanvasRecord|publishPage|runPublishChecks|writeFile|mkdir|\.\.\.persistence/);
   });
 });

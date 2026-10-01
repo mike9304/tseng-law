@@ -25,18 +25,17 @@
  *   `<composite-id>-root` container per composite, and nothing else;
  * - only the root trees are removed; the nine composites keep their ids and
  *   component keys and are normalised to the current9 geometry;
- * - --apply refuses to write unless matchCurrent9PublishedHomeEditorial()
- *   accepts the validated document;
- * - --apply validates the schema, runs publish checks, writes a complete
- *   published-document backup, saves a guarded draft and calls publishPage.
+ * - writes are disabled (2026-10-01): the stock zh-hant home is rendered through a
+ *   read-only display projection (public-page.tsx), and GPT-6 Astra showed that
+ *   rebuilding the composites can drop newer published edits (config.overrides,
+ *   visible flags). Both the CLI (--apply) and the exported runner ({ apply: true })
+ *   refuse; there is no storage write or publish path left in this script.
  *
  * Usage:
- *   node scripts/dedupe-zh-home-2026-09-28.mjs            # dry run
- *   node scripts/dedupe-zh-home-2026-09-28.mjs --apply
+ *   node scripts/dedupe-zh-home-2026-09-28.mjs            # dry run (read-only)
  */
 
 import { spawnSync } from 'node:child_process';
-import { mkdir, writeFile } from 'node:fs/promises';
 import { isDeepStrictEqual } from 'node:util';
 import path from 'node:path';
 import process from 'node:process';
@@ -48,10 +47,10 @@ const TARGET_LOCALE = 'zh-hant';
 const SOURCE_LOCALE = 'ko';
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..');
-const DEFAULT_BACKUP_DIR = path.join(REPO_ROOT, 'runtime-data', 'backups');
 const VITE_NODE_PATH = path.join(REPO_ROOT, 'node_modules', 'vite-node', 'vite-node.mjs');
 const VITE_CONFIG_PATH = path.join(REPO_ROOT, 'vitest.config.ts');
 const VITE_NODE_SENTINEL = 'ZH_HOME_DEDUPE_VITE_NODE';
+export const APPLY_DISABLED_MESSAGE = '--apply is disabled: superseded by the read-only zh-hant stock-home projection.';
 
 function topLevel(document) {
   return (document?.nodes ?? []).filter((node) => !node.parentId);
@@ -226,20 +225,14 @@ export function formatDedupePlan(plan, mode = 'dry-run') {
   return lines.join('\n');
 }
 
-function parseArgs(argv) {
-  const options = { apply: false, help: false, siteId: DEFAULT_SITE_ID, backupDir: DEFAULT_BACKUP_DIR };
+export function parseArgs(argv) {
+  const options = { apply: false, help: false, siteId: DEFAULT_SITE_ID };
   for (const arg of argv) {
-    // Superseded 2026-10-01: the stock zh-hant home is rendered through a read-only
-    // display projection (public-page.tsx), and GPT-6 Astra found that rebuilding the
-    // composites here can drop newer published edits (config.overrides, visible
-    // flags). Dry-run stays available for inspection; writes are disabled.
-    if (arg === '--apply') {
-      throw new Error('--apply is disabled: superseded by the read-only zh-hant stock-home projection.');
-    }
+    // Superseded 2026-10-01 (see header): dry-run stays available for inspection; writes are disabled.
+    if (arg === '--apply') throw new Error(APPLY_DISABLED_MESSAGE);
     else if (arg === '--dry-run') options.apply = false;
     else if (arg === '--help' || arg === '-h') options.help = true;
     else if (arg.startsWith('--site=')) options.siteId = arg.slice('--site='.length);
-    else if (arg.startsWith('--backup-dir=')) options.backupDir = path.resolve(arg.slice('--backup-dir='.length));
     else throw new Error(`Unknown argument: ${arg}`);
   }
   if (!/^[A-Za-z0-9][A-Za-z0-9_-]*$/.test(options.siteId)) {
@@ -248,8 +241,8 @@ function parseArgs(argv) {
   return options;
 }
 
-const HELP = 'Usage: node scripts/dedupe-zh-home-2026-09-28.mjs [--apply] [--site=<siteId>] [--backup-dir=<path>]\n'
-  + 'Dry run by default. Storage selection is delegated to the builder-site persistence layer; no credential is printed.';
+const HELP = 'Usage: node scripts/dedupe-zh-home-2026-09-28.mjs [--site=<siteId>]\n'
+  + 'Read-only dry run; --apply is disabled. Storage selection is delegated to the builder-site persistence layer; no credential is printed.';
 
 function findHomePageMeta(pages, locale) {
   const matches = pages.filter((page) => page.locale === locale && page.isHomePage);
@@ -257,55 +250,37 @@ function findHomePageMeta(pages, locale) {
   return matches[0];
 }
 
-function sameRecordGeneration(left, right) {
-  if (!left || !right) return left === right;
-  return left.record.revision === right.record.revision && left.record.savedAt === right.record.savedAt;
-}
-
-function assertDraftCanBeReplaced(page, draftState, publishedState) {
-  if (!draftState) return;
-  if (page.lastPublishedDraftRevision === draftState.record.revision) return;
-  if (publishedState && isDeepStrictEqual(draftState.record.document, publishedState.record.document)) return;
-  throw new Error(
-    `Refusing to replace unpublished zh-hant draft revision ${draftState.record.revision}. `
-      + 'Publish or discard that draft explicitly before applying this patch.',
-  );
-}
-
 async function loadRuntimeDependencies() {
   const persistence = await import('../src/lib/builder/site/persistence.ts');
   const publishedCanvas = await import('../src/lib/builder/site/published-canvas.ts');
-  const publish = await import('../src/lib/builder/site/publish.ts');
   const schemas = await import('../src/lib/builder/canvas/types.ts');
   const parity = await import('../src/lib/builder/canvas/home-composite-parity.ts');
   const editorial = await import('../src/lib/builder/site/published-home-editorial.ts');
   return {
     current9Layout: current9LayoutFrom(parity, schemas.createDefaultCanvasNodeStyle),
     matchCurrent9PublishedHomeEditorial: editorial.matchCurrent9PublishedHomeEditorial,
-    ...persistence,
-    ...publishedCanvas,
-    publishPageThroughPipeline: publish.publishPage,
-    runPublishChecks: publish.runPublishChecks,
+    // Read-only whitelist: no persistence write or publish function is handed to the runner.
+    readSiteDocument: persistence.readSiteDocument,
+    readPublishedPageCanvas: publishedCanvas.readPublishedPageCanvas,
     builderCanvasDocumentSchema: schemas.builderCanvasDocumentSchema,
   };
 }
 
 export async function runZhHomeDedupe(options, deps, io = {}) {
+  if (options?.apply) throw new Error(APPLY_DISABLED_MESSAGE);
   const stdout = io.stdout ?? process.stdout;
   const site = await deps.readSiteDocument(options.siteId, TARGET_LOCALE);
   const zhPage = findHomePageMeta(site.pages, TARGET_LOCALE);
   const koPage = findHomePageMeta(site.pages, SOURCE_LOCALE);
-  const [zhDocument, koDocument, zhPublishedState, zhDraftState] = await Promise.all([
+  const [zhDocument, koDocument] = await Promise.all([
     deps.readPublishedPageCanvas(zhPage, options.siteId),
     deps.readPublishedPageCanvas(koPage, options.siteId),
-    deps.readPageCanvasRecordState(options.siteId, zhPage.pageId, 'published'),
-    deps.readPageCanvasRecordState(options.siteId, zhPage.pageId, 'draft'),
   ]);
   if (!zhDocument) throw new Error('Published zh-hant home canvas was not found.');
   if (!koDocument) throw new Error('Published ko home canvas was not found.');
 
   const plan = planZhHomeDedupe(zhDocument, koDocument, { layout: deps.current9Layout });
-  stdout.write(`${formatDedupePlan(plan, options.apply ? 'apply' : 'dry-run')}\n`);
+  stdout.write(`${formatDedupePlan(plan, 'dry-run')}\n`);
   if (!plan.ok) return { ok: false, applied: false, plan };
   const validated = validatePatchedDocument(plan.document, deps);
   if (!validated.ok) throw new Error(`${validated.error}: ${JSON.stringify(validated.issues)}`);
@@ -314,46 +289,7 @@ export async function runZhHomeDedupe(options, deps, io = {}) {
     throw new Error('The cleaned document is not recognised as a current9 home; refusing to publish.');
   }
   stdout.write('current9 match: PASS\n');
-  if (!options.apply) return { ok: true, applied: false, plan };
-
-  assertDraftCanBeReplaced(zhPage, zhDraftState, zhPublishedState);
-  const checks = await deps.runPublishChecks(validated.document, zhPage.pageId, options.siteId, TARGET_LOCALE);
-  if (!checks.passed) throw new Error(`Publish checks blocked the patch: ${JSON.stringify(checks.errors)}`);
-
-  await mkdir(options.backupDir, { recursive: true, mode: 0o700 });
-  const backupPath = path.join(options.backupDir, `zh-home-dedupe-${new Date().toISOString().replace(/[:.]/g, '-')}.json`);
-  await writeFile(backupPath, `${JSON.stringify({
-    kind: 'zh-home-published-backup',
-    createdAt: new Date().toISOString(),
-    siteId: options.siteId,
-    pageId: zhPage.pageId,
-    pageMeta: zhPage,
-    publishedRecord: zhPublishedState?.record ?? null,
-    resolvedPublishedDocument: zhDocument,
-  }, null, 2)}\n`, { encoding: 'utf8', mode: 0o600, flag: 'wx' });
-  stdout.write(`Backup written: ${backupPath}\n`);
-
-  const latestPublished = await deps.readPageCanvasRecordState(options.siteId, zhPage.pageId, 'published');
-  if (!sameRecordGeneration(latestPublished, zhPublishedState)) {
-    throw new Error(`Published zh-hant home changed after backup; aborting. Backup kept at ${backupPath}`);
-  }
-  const draft = await deps.updatePageCanvasRecord(options.siteId, zhPage.pageId, 'draft', (currentState) => {
-    if (!sameRecordGeneration(currentState, zhDraftState)) {
-      throw new Error('Draft changed after preflight; aborting without publish.');
-    }
-    return {
-      revision: currentState ? currentState.record.revision + 1 : 0,
-      savedAt: new Date().toISOString(),
-      updatedBy: SCRIPT_UPDATED_BY,
-      document: validated.document,
-    };
-  });
-  stdout.write(`Draft saved: revision ${draft.revision}\n`);
-  const published = await deps.publishPageThroughPipeline(options.siteId, zhPage.pageId, {
-    expectedDraftRevision: draft.revision,
-  });
-  stdout.write(`Published: revision ${published.publishedRevision}, id ${published.publishedRevisionId}\n`);
-  return { ok: true, applied: true, plan, backupPath, draft, published };
+  return { ok: true, applied: false, plan };
 }
 
 function reexecWithViteNode(argv) {

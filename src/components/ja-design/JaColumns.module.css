@@ -89,3 +89,8 @@
   .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card) { grid-template-columns: 112px minmax(0, 1fr); gap: 0 14px; padding: 16px 0; }
   .root:global(#ja-columns) :global(.columns-topic-section[data-columns-recommended] .columns-card-summary) { display: none; }
 }
+
+@media (max-width: 767px) {
+  .root:global(#ja-columns) :global(.columns-search-input) { padding-inline: 16px; font-size: 15px; }
+  .root:global(#ja-columns) :global(.columns-search-submit) { padding-inline: 20px; }
+}

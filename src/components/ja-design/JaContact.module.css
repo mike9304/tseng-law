@@ -68,3 +68,14 @@
 /* Consent checkbox: the whole row is the 44px target, the box itself is a little larger. */
 .root:global(#ja-contact) > :global(section.section:nth-child(2) form label:has(input[type='checkbox'])) { display: flex; align-items: center; gap: 12px; min-height: 44px; }
 .root:global(#ja-contact) > :global(section.section:nth-child(2) form input[type='checkbox']) { width: 24px; height: 24px; margin: 0; accent-color: var(--ja-ink); }
+
+/* Map placeholder in sumi and one vermilion pin (the shared facade is green) */
+.root:global(#ja-contact) :global(#offices .office-map-fallback) {
+  background:
+    linear-gradient(22deg, transparent 0 43%, rgb(27 24 20 / 10%) 44% 46%, transparent 47% 100%),
+    linear-gradient(132deg, transparent 0 52%, rgb(200 16 46 / 14%) 53% 55%, transparent 56% 100%),
+    repeating-linear-gradient(0deg, rgb(27 24 20 / 6%) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgb(27 24 20 / 5%) 0 1px, transparent 1px 52px), var(--ja-paper);
+}
+.root:global(#ja-contact) :global(#offices .office-map-fallback)::after { background: var(--ja-shu); box-shadow: 0 0 0 7px rgb(200 16 46 / 16%); }
+.root:global(#ja-contact) :global(#offices .office-map-fallback-panel) { border-color: var(--ja-line-strong); background: #fff; }

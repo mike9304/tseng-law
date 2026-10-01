@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { revealSnapRowItem } from '@/components/zh-hant-home/ZhHantSnapRowFocus';
 
 /**
  * zh-hant home, phones: the practice tiles form a horizontal scroll-snap row. When keyboard focus
@@ -15,11 +16,7 @@ export default function ZhHantPracticeFocus() {
       if (grid.scrollWidth <= grid.clientWidth + 1) return;
       const item = (event.target as HTMLElement | null)?.closest<HTMLElement>('.services-card-grid-item');
       if (!item) return;
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      // Next frame: a smooth scroll started inside focusin is cancelled by WebKit's own focus scroll.
-      window.requestAnimationFrame(() => {
-        item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: reduce ? 'auto' : 'smooth' });
-      });
+      revealSnapRowItem(item, grid);
     };
     grid.addEventListener('focusin', onFocusIn);
     return () => grid.removeEventListener('focusin', onFocusIn);

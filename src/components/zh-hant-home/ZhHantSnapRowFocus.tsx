@@ -2,6 +2,27 @@
 
 import { useEffect } from 'react';
 
+/**
+ * Scroll a row item into view on the frame after focus (a smooth scroll started inside focusin is
+ * cancelled by WebKit's own focus scroll), and, if a smooth scroll was still cut short, place it
+ * instantly while focus is still in that item.
+ */
+export function revealSnapRowItem(item: Element, row: Element): void {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.requestAnimationFrame(() => {
+    item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: reduce ? 'auto' : 'smooth' });
+    if (reduce) return;
+    window.setTimeout(() => {
+      if (!item.contains(document.activeElement)) return;
+      const box = item.getBoundingClientRect();
+      const frame = row.getBoundingClientRect();
+      if (box.left < frame.left - 1 || box.right > frame.right + 1) {
+        item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: 'auto' });
+      }
+    }, 600);
+  });
+}
+
 /** The horizontal scroll-snap row that holds `target`, if it overflows (phones). */
 export function findOverflowingSnapRow(target: Element, root: Element): HTMLElement | null {
   for (let el = target.parentElement; el && el !== root; el = el.parentElement) {
@@ -31,11 +52,7 @@ export default function ZhHantSnapRowFocus({ rootSelector }: { rootSelector: str
       if (!row) return;
       let item: Element = target;
       while (item.parentElement && item.parentElement !== row) item = item.parentElement;
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      // Next frame: a smooth scroll started inside focusin is cancelled by WebKit's own focus scroll.
-      window.requestAnimationFrame(() => {
-        item.scrollIntoView({ block: 'nearest', inline: 'start', behavior: reduce ? 'auto' : 'smooth' });
-      });
+      revealSnapRowItem(item, row);
     };
     root.addEventListener('focusin', onFocusIn);
     return () => root.removeEventListener('focusin', onFocusIn);

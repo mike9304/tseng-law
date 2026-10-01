@@ -59,19 +59,34 @@ export default function LocaleSuggestion({ locale }: { locale: string }) {
     setTarget({ locale: next, href });
   }, [locale, pathname, columnLinks, columnLocales]);
 
-  // Pages that open on a first screen (#hero) keep it clear: the hint shows only while the hero is out
-  // of the viewport (Fable 2026-10-01: on the zh-hant home at 390 it covered the search bar), hides
-  // again when the visitor scrolls back up, and starts over after a client-side navigation.
+  // Pages that open on a first screen keep it clear: the hint shows only while #hero is out of the
+  // viewport and no cinematic opening is up (Fable/Astra 2026-10-01: it covered the zh-hant search
+  // bar and the ko opening), hides again when the visitor scrolls back up, and starts over after a
+  // client-side navigation.
   useEffect(() => {
     if (!target) return;
     const hero = document.getElementById('hero');
-    if (!hero || typeof IntersectionObserver === 'undefined') {
-      setClearPath(pathname);
-      return;
-    }
-    const observer = new IntersectionObserver(([entry]) => setClearPath(entry?.isIntersecting ? null : pathname));
-    observer.observe(hero);
-    return () => observer.disconnect();
+    const site = document.querySelector<HTMLElement>('.site[data-cinematic-intro-visible]');
+    let heroInView = Boolean(hero);
+    const update = () => {
+      const introVisible = site?.dataset.cinematicIntroVisible === 'true';
+      setClearPath(!heroInView && !introVisible ? pathname : null);
+    };
+    const intersection = hero && typeof IntersectionObserver !== 'undefined'
+      ? new IntersectionObserver(([entry]) => {
+        heroInView = Boolean(entry?.isIntersecting);
+        update();
+      })
+      : null;
+    if (hero && intersection) intersection.observe(hero);
+    else heroInView = false;
+    const mutation = site && typeof MutationObserver !== 'undefined' ? new MutationObserver(update) : null;
+    if (site && mutation) mutation.observe(site, { attributes: true, attributeFilter: ['data-cinematic-intro-visible'] });
+    update();
+    return () => {
+      intersection?.disconnect();
+      mutation?.disconnect();
+    };
   }, [target, pathname]);
 
   if (!target || clearPath !== pathname) return null;

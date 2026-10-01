@@ -446,9 +446,11 @@ export function DecorativeAutoplayVideo({
   }) && isDecorativeVideoSourceViewportResolved(hasMobileVideo, sourceViewportMobile);
   const useMobileSources = shouldUseMobileDecorativeVideoSources(hasMobileVideo, sourceViewportMobile);
   const sourceKey: DecorativeVideoSourceKey = useMobileSources ? 'mobile' : 'desktop';
-  // The <video> is keyed by its encoding; count mounts so readiness never carries over to a new element.
-  const [mount, setMount] = useState<{ sourceKey: DecorativeVideoSourceKey; id: number }>({ sourceKey, id: 0 });
-  if (mount.sourceKey !== sourceKey) setMount({ sourceKey, id: mount.id + 1 });
+  // Count <video> mounts so readiness never carries over to a new element: one per encoding switch
+  // (the element is keyed by encoding) and one per unmount, e.g. reduced motion on and off again.
+  const mountKey = shouldMountVideo ? sourceKey : null;
+  const [mount, setMount] = useState<{ key: DecorativeVideoSourceKey | null; id: number }>({ key: mountKey, id: 0 });
+  if (mount.key !== mountKey) setMount({ key: mountKey, id: mount.id + 1 });
 
   useEffect(() => {
     const video = videoRef.current;

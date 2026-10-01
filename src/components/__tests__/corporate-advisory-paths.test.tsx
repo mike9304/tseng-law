@@ -204,7 +204,7 @@ describe('corporate advisory discovery paths', () => {
     expect(retainerSlice(ja, '年間法律顧問')).toContain(
       'href="/ja/taiwan-lawyer#corporate-advisory"',
     );
-    // the EN design splits the currency into its own span, so compare the visible text
+    // the EN design (en only) splits the currency into its own span, so compare the visible text
     const enText = en.replace(/<[^>]+>/g, '');
     expect(enText).toContain('NT$ 3,000');
     expect(enText.match(/NT\$ 50,000/g)).toHaveLength(2);

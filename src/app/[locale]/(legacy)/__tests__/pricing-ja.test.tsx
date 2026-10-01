@@ -162,8 +162,8 @@ describe('Japanese pricing integration', () => {
       expect(html).toContain(currency);
       expect(html).toContain(consultationTitle);
       expect(html).toContain(litigationPrice);
-      // the EN design splits the currency into its own span, so compare the visible text
-      const text = html.replace(/<[^>]+>/g, '');
+      // only the EN design splits the currency into its own span; ko and zh-hant keep strict markup
+      const text = locale === 'en' ? html.replace(/<[^>]+>/g, '') : html;
       expect(text).toContain('NT$ 3,000');
       expect(text.match(/NT\$ 50,000/g)).toHaveLength(2);
       expect(html).toContain(ctaLabel);

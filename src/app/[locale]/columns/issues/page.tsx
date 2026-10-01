@@ -4,6 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import IssueBoardTabs from '@/components/IssueBoardTabs';
+import ZhHantColumnsShell from '@/components/zh-hant-columns/ZhHantColumnsShell';
 import { toColumnListItems } from '@/lib/column-list-items';
 import { ISSUE_BOARD_LOCALES, getAllIssuePosts, isIssueBoardLocale } from '@/lib/columns';
 import { getAiAuthorCopy } from '@/lib/ai-authored-columns';
@@ -42,7 +43,7 @@ export default async function IssueBoardPage(props: {
   const copy = issueBoardCopy[locale];
   const posts = getAllIssuePosts(locale);
   const boardPath = issueBoardPath(locale);
-  return (
+  const body = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -82,4 +83,6 @@ export default async function IssueBoardPage(props: {
       />
     </>
   );
+  // zh-hant second pass (son7-87 / Opus 5.5): same blocks inside the columns shell (header, tabs, grid styling).
+  return locale === 'zh-hant' ? <ZhHantColumnsShell>{body}</ZhHantColumnsShell> : body;
 }

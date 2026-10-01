@@ -17,6 +17,7 @@ import { issueBoardCopy, issueBoardPath } from '@/data/issue-board';
 import type { SiteLocale } from '@/lib/locales';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from '../../[slug]/ColumnDetail.module.css';
+import zhStyles from '../../[slug]/ZhHantColumnDetail.module.css';
 import boardStyles from '@/components/IssueBoard.module.css';
 
 export const dynamic = 'force-dynamic';
@@ -130,7 +131,7 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
     gap: '0.25rem',
   };
 
-  return (
+  const content = (
     <>
       <JsonLd
         data={buildBreadcrumbJsonLd(locale, [
@@ -250,4 +251,8 @@ export default async function IssueColumnPage(props: { params: Promise<{ locale:
       ) : null}
     </>
   );
+  // zh-hant second pass (son7-87 / Opus 5.5): same article inside the zh-hant column-detail wrapper (split hero, sidebar).
+  return locale === 'zh-hant'
+    ? <div className={zhStyles.root} id="zh-hant-column" data-zh-hant-design="issue">{content}</div>
+    : content;
 }

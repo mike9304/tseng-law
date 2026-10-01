@@ -22,8 +22,10 @@ export default async function TrafficAccidentPage({ params }: { params: Promise<
   if (!isSiteLocale(locale)) notFound();
   const copy = trafficHubCopy[locale];
   const posts = trafficColumnSlugsFor(locale).map(slug => getColumnPost(slug, locale));
+  // zh-hant only: the Apple-pass wrapper (id + data-zh-hant-design) that ZhHantTraffic.module.css is scoped to.
+  const zhWrapper = locale === 'zh-hant' ? { id: 'zh-hant-traffic', 'data-zh-hant-design': 'traffic' } : {};
   return (
-    <div className={locale === 'zh-hant' ? `${styles.page} ${zhStyles.zh}` : styles.page}>
+    <div className={locale === 'zh-hant' ? `${styles.page} ${zhStyles.zh}` : styles.page} {...zhWrapper}>
       <section className={styles.hero}>
         <div className={styles.container}>
           <p className={styles.kicker}>{copy.kicker}</p>

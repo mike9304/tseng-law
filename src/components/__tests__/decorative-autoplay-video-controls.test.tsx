@@ -1,9 +1,13 @@
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it, vi } from 'vitest';
 import DecorativeAutoplayVideo, {
   DECORATIVE_VIDEO_CONTROL_LABELS,
+  handleDecorativeVideoCanPlay,
   resolveDecorativeVideoControlLabel,
   runDecorativeVideoControlActivation,
+  shouldAutoplayDecorativeVideo,
   syncDecorativeVideoPlayback,
   type DecorativeVideoPlaybackState,
 } from '../DecorativeAutoplayVideo';
@@ -52,6 +56,47 @@ describe('DecorativeAutoplayVideo playback controls', () => {
     );
     expect(resumed).toEqual({ userPaused: false, ended: false });
     expect(video.play).toHaveBeenCalledTimes(1);
+  });
+
+  it('keeps a pause across a breakpoint change that remounts the other encoding', () => {
+    // Visitor pauses at 390x844, then rotates to 844x390: the keyed <video> remounts with
+    // the desktop encoding. The replacement must not autoplay or resume on canplay.
+    const playing: DecorativeVideoPlaybackState = { userPaused: false, ended: false };
+    const paused = runDecorativeVideoControlActivation(createVideoDouble(), playing, true);
+    expect(paused).toEqual({ userPaused: true, ended: false });
+
+    const replacement = createVideoDouble(0);
+    expect(shouldAutoplayDecorativeVideo(paused)).toBe(false);
+    syncDecorativeVideoPlayback(replacement, { inViewport: true, ...paused });
+    handleDecorativeVideoCanPlay(replacement, { inViewport: true, ...paused });
+    expect(replacement.play).not.toHaveBeenCalled();
+    expect(replacement.pause).toHaveBeenCalledTimes(2);
+    expect(resolveDecorativeVideoControlLabel(paused, DECORATIVE_VIDEO_CONTROL_LABELS['zh-hant'])).toBe(
+      DECORATIVE_VIDEO_CONTROL_LABELS['zh-hant'].play,
+    );
+
+    const finished: DecorativeVideoPlaybackState = { userPaused: false, ended: true };
+    const replay = createVideoDouble(0);
+    expect(shouldAutoplayDecorativeVideo(finished)).toBe(false);
+    handleDecorativeVideoCanPlay(replay, { inViewport: true, ...finished });
+    expect(replay.pause).toHaveBeenCalledTimes(1);
+
+    // Playing visitors still get autoplay, and canplay leaves an in-view video alone.
+    const live = createVideoDouble(0);
+    expect(shouldAutoplayDecorativeVideo(playing)).toBe(true);
+    handleDecorativeVideoCanPlay(live, { inViewport: true, ...playing });
+    expect(live.pause).not.toHaveBeenCalled();
+    handleDecorativeVideoCanPlay(live, { inViewport: false, ...playing });
+    expect(live.pause).toHaveBeenCalledTimes(1);
+  });
+
+  it('re-applies playback state to the replacement element after a source switch', () => {
+    const source = readFileSync(
+      path.join(process.cwd(), 'src/components/DecorativeAutoplayVideo.tsx'),
+      'utf8',
+    );
+    expect(source).toContain('}, [inViewport, playbackState, shouldMountVideo, useMobileSources]);');
+    expect(source).toContain('handleDecorativeVideoCanPlay(videoRef.current, {');
   });
 
   it('replays a completed one-shot from the beginning', () => {

@@ -37,6 +37,7 @@ import CivilCommercialBlock from '@/components/CivilCommercialBlock';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './ServiceDetail.module.css';
 import zhStyles from './ZhHantServiceDetail.module.css';
+import ZhHantSnapRowFocus from '@/components/zh-hant-home/ZhHantSnapRowFocus';
 import jaStyles from './JaServiceDetail.module.css';
 import JaPageShell from '@/components/ja-design/JaPageShell';
 import enStyles from './EnServiceDetail.module.css';
@@ -508,6 +509,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               )}
             </aside>
           </div>
+          {zhHant ? <ZhHantSnapRowFocus rootSelector="article.svc-article" /> : null}
         </article>
       ) : null}
     </>

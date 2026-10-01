@@ -5,6 +5,7 @@ import {
   getConsultationPublicEmail,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import ZhHantSnapRowFocus from '@/components/zh-hant-home/ZhHantSnapRowFocus';
 import styles from './ZhHantFaq.module.css';
 
 /**
@@ -18,6 +19,7 @@ export default function ZhHantFaqShell({ children }: { children: ReactNode }) {
   return (
     <div className={styles.root} id="zh-hant-faq" data-zh-hant-design="faq">
       {children}
+      <ZhHantSnapRowFocus rootSelector="#zh-hant-faq" />
       <section className={styles.band} aria-labelledby="zh-hant-faq-contact">
         <div className={`container ${styles.bandInner}`}>
           <h2 id="zh-hant-faq-contact" className={styles.bandTitle}>{homeContactCta.title}</h2>

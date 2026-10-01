@@ -27230,8 +27230,9 @@ html[dir='rtl'] .guidance-answer {
     }
     /* Post-deploy check 2026-10-01: published redesigned pages (zh-hant pricing/about/lawyers/contact/faq…)
        kept their composite node at the builder's 375px phone width, leaving a white strip on 390–430px
-       phones; let the composite follow its breakout root instead. */
-    .site .builder-pub-main:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) .builder-pub-node[data-node-id$='-page-root-composite']:has(:is([data-zh-hant-design], [data-ja-design], [data-en-design])) {
+       phones; let the composite follow its breakout root instead. zh-hant only: ja/en bring their own
+       evidence when their redesign lands (Astra 2026-10-01). */
+    .site .builder-pub-main:has([data-zh-hant-design]) .builder-pub-node[data-node-id$='-page-root-composite']:has([data-zh-hant-design]) {
       width: 100% !important;
       max-width: 100% !important;
       left: auto !important;

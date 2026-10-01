@@ -121,7 +121,8 @@ describe('home media loading', () => {
     expect(componentSource).toContain('srcSet={mobilePoster}');
     expect(componentSource).toContain('aria-hidden="true"');
     expect(componentSource).toMatch(/\n\s+muted\n/);
-    expect(componentSource).toMatch(/\n\s+autoPlay\n/);
+    // Autoplays while playing; a remount after a pause/end keeps the visitor's choice.
+    expect(componentSource).toContain('autoPlay={shouldAutoplayDecorativeVideo(playbackState)}');
     expect(componentSource).toContain('loop = true');
     expect(componentSource).toContain('loop={loop}');
     expect(componentSource).toMatch(/\n\s+playsInline\n/);

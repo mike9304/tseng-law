@@ -81,7 +81,7 @@ const ACTION_DIRECTIVE: Record<TextAssistantAction, (input: TextAssistantInput) 
     'Shorten the source text. Keep the key meaning but cut redundancy and filler so the result is meaningfully tighter.',
   translate: (input) => {
     const target = input.targetLocale ? LOCALE_NAME[input.targetLocale] : LOCALE_NAME.ko;
-    return `Translate the source text into ${target}. Preserve formatting, line breaks, and inline punctuation. Do not transliterate proper nouns unless natural.`;
+    return `Translate the source text into ${target}. Preserve formatting, line breaks, and inline punctuation, except decorative bold wrappers in column content: remove those wrappers under the editorial no-bold rule while preserving their text and links. Preserve literal symbols in code and source quotations. Do not transliterate proper nouns unless natural.`;
   },
   tone: (input) => {
     const tone = input.tone ? TONE_LABEL[input.tone] : TONE_LABEL.formal;

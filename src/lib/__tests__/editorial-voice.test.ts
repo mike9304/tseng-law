@@ -18,4 +18,18 @@ describe('editorial rules reach AI providers', () => {
       expect(buildTextAssistantPrompt(input).systemPrompt, action).toContain(EDITORIAL_VOICE);
     }
   });
+  it('makes the column no-bold rule an exception to translation formatting preservation', () => {
+    const source = '**기한**과 <strong>신청 자격</strong>';
+    const prompts = [
+      buildPrompt('ko', 'en', source),
+      buildBatchPrompt('ko', 'en', [{ key: 'body', sourceText: source }]),
+      buildTextAssistantPrompt(textAssistantSchema.parse({ action: 'translate', text: source, targetLocale: 'en' })).userPrompt,
+    ];
+    for (const prompt of prompts) {
+      expect(prompt).toContain('except decorative bold wrappers in column content');
+      expect(prompt).toContain('preserving their text and links');
+      expect(prompt).toContain('Preserve literal symbols in code and source quotations');
+    }
+    expect(EDITORIAL_VOICE).toContain('칼럼의 굵은 강조 금지 (2026-10-01 사용자 지시)');
+  });
 });

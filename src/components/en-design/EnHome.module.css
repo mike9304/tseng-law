@@ -718,3 +718,9 @@
 .home[data-en-design][id] :global(#offices .office-map-fallback-link:hover) { background: #fff; }
 .home[data-en-design][id] :global(#offices .office-map-fallback-link:focus-visible) { outline: 3px solid #fff; outline-offset: 3px; }
 .home[data-en-design][id] :global(#offices .office-gallery-item) { background: var(--en-ink-3); border-color: transparent; border-radius: 12px; }
+
+/* Insights list and Related reading on phones: slightly larger titles, up to 3 lines before any ellipsis (polish) */
+@media (max-width: 640px) {
+  .home[data-en-design][id] :global(#insights .insights-list-title) { font-size: 17.5px; line-height: 1.3; }
+  .home[data-en-design][id] :global(#insights .recommended-for-you-card-title) { font-size: 16.5px; line-height: 1.3; -webkit-line-clamp: 3; line-clamp: 3; }
+}

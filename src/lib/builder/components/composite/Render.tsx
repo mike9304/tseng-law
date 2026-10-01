@@ -13,6 +13,7 @@ import HomeStatsSection from '@/components/HomeStatsSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
+import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
 import {
   AboutLegacyPageBody,
   ServicesLegacyPageBody,
@@ -327,7 +328,7 @@ export default function CompositeRender({
         return <LawyersLegacyPageBody locale={locale} />;
       case 'legacy-page-faq': {
         const copy = pageCopy[locale].faq;
-        return (
+        const faqBody = (
           <>
             <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
             <FaqPublicExplorer
@@ -339,6 +340,7 @@ export default function CompositeRender({
             />
           </>
         );
+        return locale === 'zh-hant' ? <ZhHantFaqShell>{faqBody}</ZhHantFaqShell> : faqBody;
       }
       case 'legacy-page-pricing':
         return <PricingLegacyPageBody locale={locale} />;

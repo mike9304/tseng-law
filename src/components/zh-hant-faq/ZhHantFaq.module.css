@@ -1,0 +1,50 @@
+/* zh-hant FAQ, second pass (son7-87 / Opus 5.5, 2026-10-01). FaqPublicExplorer markup unchanged; layout via its data attribute and roles. */
+.root { --zh-ink: #16382d; --zh-cream: #f4efe2; --zh-gold: #d4b97a; --zh-gold-text: #8a6a2a; --zh-muted-on-dark: #c9d6cd; --zh-line: #dbe1d7; --zh-paper: #f7f5ef; --font-serif-tc: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; }
+
+/* Header */
+.root:global(#zh-hant-faq) :global(.page-header) { background: var(--zh-ink); color: var(--zh-cream); padding: 72px 0 64px; border-bottom: none; }
+.root:global(#zh-hant-faq) :global(.page-header-title),
+.root:global(#zh-hant-faq) :global(.page-header-title *) { color: var(--zh-cream) !important; font-family: var(--font-serif-tc); font-weight: 700; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.3; letter-spacing: 0.04em; }
+.root:global(#zh-hant-faq) :global(.page-header .section-lede) { color: var(--zh-muted-on-dark); font-size: 18px; }
+.root:global(#zh-hant-faq) :global(.page-header .section-label) { color: var(--zh-gold); }
+.root:global(#zh-hant-faq) :global(.page-header .section-label::before) { background: var(--zh-gold); }
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb),
+.root:global(#zh-hant-faq) :global(.page-header .breadcrumb *) { color: var(--zh-muted-on-dark); }
+.root:global(#zh-hant-faq) :global(.page-header) :focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+
+/* Explorer: search + categories as a left rail, questions wide on the right */
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 20px 64px; align-items: start; margin: 64px auto 88px; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :first-child) { grid-column: 1; grid-row: 1; grid-template-columns: minmax(0, 1fr); max-width: none; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; align-items: stretch; gap: 4px; padding-top: 16px; border-top: 2px solid var(--zh-ink); }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { display: flex; align-items: center; justify-content: flex-start; text-align: left; min-height: 44px; padding: 8px 14px; border-radius: 2px; border-color: transparent; background: transparent; font-size: 15.5px; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a:hover) { background: #eef2ec; border-color: transparent; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a[class*='categoryActive']) { background: var(--zh-ink); border-color: var(--zh-ink); color: #fff; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 2; grid-row: 1 / span 3; min-width: 0; border-top: 2px solid var(--zh-ink); }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button) { font-size: 18px; line-height: 1.6; padding-block: 20px; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region'] p),
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] [role='region']) { font-size: 16.5px; line-height: 1.95; }
+.root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) :focus-visible { outline: 2px solid var(--zh-ink); outline-offset: 3px; }
+
+/* Closing contact band */
+.band { background: var(--zh-ink); color: var(--zh-cream); padding: 64px 0; }
+.bandInner { display: flex; align-items: center; justify-content: space-between; gap: 24px 48px; flex-wrap: wrap; }
+.bandTitle { margin: 0 0 8px; font-family: var(--font-serif-tc); font-size: clamp(26px, 2.8vw, 36px); line-height: 1.45; color: var(--zh-cream); }
+.bandText { margin: 0; font-size: 17px; color: var(--zh-muted-on-dark); }
+.bandEmail { margin: 16px 0 0; font-family: var(--font-serif-tc); font-size: clamp(21px, 2.2vw, 26px); font-weight: 700; overflow-wrap: anywhere; }
+.bandEmail a { color: var(--zh-cream); text-decoration: underline; text-decoration-color: var(--zh-gold); text-underline-offset: 6px; }
+.band :global(.button) { background: var(--zh-gold); border-color: var(--zh-gold); color: var(--zh-ink); font-weight: 700; min-height: 54px; padding: 14px 28px; }
+.band :global(.button:hover) { background: #e3cc94; border-color: #e3cc94; }
+.band a:focus-visible { outline: 3px solid var(--zh-cream); outline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true']) { grid-template-columns: minmax(0, 1fr); margin: 36px auto 56px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group']) { flex-direction: row; flex-wrap: wrap; border-top: none; padding-top: 0; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > [role='group'] > a) { border-color: #c8d2c6; border-radius: 999px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] > :last-child) { grid-column: 1; grid-row: auto; }
+}
+@media (max-width: 767px) {
+  .root:global(#zh-hant-faq) :global(.page-header) { padding: 40px 0 44px; }
+  .root:global(#zh-hant-faq) :global([data-public-faq-explorer='true'] h3 button) { font-size: 16.5px; }
+  .band { padding: 48px 0; }
+  .band :global(.button) { width: 100%; justify-content: center; }
+}

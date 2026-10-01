@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import PageHeader from '@/components/PageHeader';
 import JsonLd from '@/components/JsonLd';
 import FaqPublicExplorer from '@/components/faq/FaqPublicExplorer';
+import ZhHantFaqShell from '@/components/zh-hant-faq/ZhHantFaqShell';
 import { pageCopy } from '@/data/page-copy';
 import {
   buildPublishedSitePageMetadata,
@@ -146,7 +147,7 @@ export default async function FaqPage(
   });
   const schemaItems = faqItemsToSchemaItems(items);
 
-  return (
+  const body = (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <FaqPublicExplorer
@@ -159,4 +160,5 @@ export default async function FaqPage(
       {schemaItems.length > 0 ? <JsonLd data={generateFAQSchema(schemaItems)} /> : null}
     </>
   );
+  return locale === 'zh-hant' ? <ZhHantFaqShell>{body}</ZhHantFaqShell> : body;
 }
